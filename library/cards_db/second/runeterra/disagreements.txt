@@ -1,0 +1,1172 @@
+219 cards read twice, 131 agree, 88 differ
+
+## Shark Chariot 750779
+  TEXT: Keywords: Can't Block, Ephemeral, Last Breath. Last Breath: The next time an Ephemeral ally attacks, revive me attacking.
+  FIRST:
+  WHEN attacks by mine unit [state is ephemeral]
+     revive -> self
+     and start_attack -> self
+  SECOND:
+  WHEN attacks by mine unit [state is ephemeral] [once_per_game]
+     revive -> self in discard
+  unsure: when
+
+## Ethereal Remitter 750781
+  TEXT: Play: Kill an ally to summon a random follower that costs 2 more.
+  FIRST:
+  WHEN played of self
+     kill -> chosen mine unit in board
+     if_done summon -> random mine unit [category is follower] [cost eq {'x': 'sum', 'items': [{'x': 'stat', 'attr': 'cost', 'of': {'pick': 'it'}}, 2]}] into board
+  SECOND:
+  WHEN played of self
+     kill -> chosen mine unit in board
+     if_done summon -> random unit [category is follower]
+  unsure: with
+
+## Black Market Merchant 750837
+  TEXT: Keywords: Plunder. When you draw an enemy card, reduce its cost by 1. Plunder: Nab 1.
+  FIRST:
+  WHEN drawn by mine player of enemy card
+     cost_change -> it cost=-1 (permanent)
+  WHEN played of self IF keyword_condition Plunder
+     keyword_action Nab -> enemy card in deck amount=1
+  SECOND:
+  WHEN drawn by mine player of enemy card
+     cost_change -> it cost=-1 (permanent)
+  WHEN played of self IF keyword_condition Plunder
+     keyword_action Nab -> mine player amount=1
+
+## Riptide 750852
+  TEXT: Stun an enemy. Place that unit into the enemy deck if you have a Nautilus.
+  FIRST:
+  WHEN played of self
+     stun -> chosen enemy unit in board (this_round)
+  WHEN played of self IF have mine unit in board [card is Nautilus] is
+     shuffle_into_deck -> it enemy unit in board into deck
+  SECOND:
+  WHEN played of self IF have mine unit in board [card is Nautilus] not
+     stun -> chosen enemy unit in board (this_round)
+  WHEN played of self IF have mine unit in board [card is Nautilus] is
+     stun -> chosen enemy unit in board (this_round)
+     and shuffle_into_deck -> it into deck
+
+## Sap Magic 750894
+  TEXT: Toss 3. Heal allies 3.
+  FIRST:
+  WHEN played of self
+     keyword_action Toss -> random mine card in deck amount=3
+     and heal -> all mine unit in board amount=3
+  SECOND:
+  WHEN played of self
+     keyword_action Toss -> mine player amount=3
+     and heal -> all mine unit in board amount=3
+
+## Bayou Brunch 750928
+  TEXT: An ally Captures another ally and gains the captured ally's stats.
+  FIRST:
+  WHEN played of self
+     capture -> chosen mine unit in board to chosen mine unit in board
+     then stat_change -> chosen mine unit in board power=stat power of (it) health=stat health of (it) (permanent)
+  SECOND:
+  WHEN played of self
+     capture -> chosen mine unit in board to chosen mine unit in board
+     then stat_change -> actor mine unit power=stat power of (it) health=stat health of (it) (permanent)
+
+## Tahm Kench 750930
+  TEXT: When I'm summoned or Round Start: Create an An Acquired Taste in hand. Level up: I've Captured 3+ units. When I level up, Obliterate my Captured enemies and release my allies.
+  FIRST:
+  WHEN summoned of self
+     create "An Acquired Taste" into hand
+  WHEN round_start
+     create "An Acquired Taste" into hand
+  WHEN always IF event_count keyword_used by self of [keyword is Capture] ge 3 this_game
+     level_up -> self
+  WHEN levels_up of self
+     obliterate -> all enemy unit in removed
+     and keyword_action Release -> all mine unit in removed
+  unsure: zone
+  SECOND:
+  WHEN summoned of self
+     create "An Acquired Taste" into hand
+  WHEN round_start
+     create "An Acquired Taste" into hand
+  WHEN always IF count unit in removed ge 3
+     level_up -> self
+  WHEN levels_up of self
+     obliterate -> all enemy unit in removed
+     and move -> all mine unit in removed into board
+  unsure: test
+
+## Divergent Paths 750944
+  TEXT: Draw a landmark or destroy a landmark.
+  FIRST:
+  WHEN played of self
+     draw -> mine landmark in deck amount=1
+     or kill -> chosen any landmark in board
+  SECOND:
+  WHEN played of self
+     choose_one
+     or draw -> mine card in deck [category is landmark] amount=1
+     or kill -> chosen any landmark in board
+
+## Targon's Peak 750952
+  TEXT: Keywords: Landmark. Round Start: Reduce the cost of a random card in ALL players' hands to 0 this round.
+  FIRST:
+  WHEN round_start
+     cost_change -> random any card in hand cost=0 (this_round)
+  SECOND:
+  WHEN round_start
+     cost_change -> random any card in hand cost=minus (stat cost of (it)) (this_round)
+
+## Starshaping 750958
+  TEXT: Invoke a Celestial card that costs 7 or more, then heal an ally or your Nexus 5.
+  FIRST:
+  WHEN played of self
+     keyword_action Invoke -> mine card in hand [type is Celestial] [cost ge 7]
+     then heal -> chosen mine unit in board amount=5
+     or heal -> mine player amount=5
+  SECOND:
+  WHEN played of self
+     keyword_action Invoke -> card [type is Celestial] [cost ge 7] into hand
+     then heal -> chosen mine any amount=5
+
+## Tyari the Traveler 750992
+  TEXT: Keywords: Support. Support: Grant my supported ally +0|+2.
+  FIRST:
+  WHEN attacks by self
+     stat_change -> right_of_self power=0 health=2 (permanent)
+  SECOND:
+  WHEN played of self
+     stat_change -> right_of_self power=0 health=2 (permanent)
+
+## Mountain Sojourners 751023
+  TEXT: Keywords: Support. Support: Grant my supported ally +2|+2. If it has Support, grant its supported ally +2|+2 and continue for each supported ally in succession.
+  FIRST:
+  WHEN supports by self
+     stat_change -> it power=2 health=2 (permanent)
+     if_done repeat -> it mine unit in board [keyword is Support]
+  SECOND:
+  WHEN played of self
+     stat_change -> right_of_self power=2 health=2 (permanent)
+     if_done repeat -> right_of_self [keyword is Support]
+
+## Sleepy Trouble Bubble 751030
+  TEXT: Stun an enemy. Create a Fleeting Paddle Star in hand.
+  FIRST:
+  WHEN played of self
+     stun -> chosen enemy unit in board (this_round)
+     and create "Paddle Star" into hand
+     and give_keyword Fleeting -> it mine card in hand (permanent)
+  SECOND:
+  WHEN played of self
+     stun -> chosen enemy unit in board (this_round)
+     and create Fleeting "Paddle Star" into hand
+
+## Gluttony 751050
+  TEXT: Kill an ally with Last Breath to summon a follower from your deck that costs 1 more.
+  FIRST:
+  WHEN played of self
+     kill -> chosen mine unit in board [keyword is Last Breath]
+     if_done summon -> random mine unit in deck [category is follower] [cost eq {'x': 'sum', 'items': [{'x': 'stat', 'attr': 'cost', 'of': {'pick': 'it'}}, 1]}] into board
+  SECOND:
+  WHEN played of self
+     kill -> chosen mine unit in board [keyword is Last Breath]
+     if_done summon -> chosen mine unit in deck [category is follower]
+  unsure: with
+
+## Whimsy! 751064
+  TEXT: Transform a follower into a 1|1 Squirrel and Silence it this round.
+  FIRST:
+  WHEN played of self
+     transform "Squirrel" -> chosen any unit in board [state is follower]
+     and silence -> it (this_round)
+  SECOND:
+  WHEN played of self
+     transform "Squirrel" -> chosen unit in board [category is follower]
+     and silence -> it (this_round)
+
+## Fuzzy Caretaker 751075
+  TEXT: Keywords: Support. When I'm supported, give me +0|+3 this round. Support: Give my supported ally +3|+0 this round.
+  FIRST:
+  WHEN keyword_used of self [keyword is Support]
+     stat_change -> self power=0 health=3 (this_round)
+  WHEN attacks by self
+     stat_change -> right_of_self mine unit power=3 health=0 (this_round)
+  SECOND:
+  WHEN given_keyword of self
+     stat_change -> self power=0 health=3 (this_round)
+  WHEN played of self
+     stat_change -> right_of_self power=3 health=0 (this_round)
+  unsure: event
+
+## Strafing Strike 751081
+  TEXT: An ally and an enemy strike each other. Then, if the ally is a Dragon, heal it 5.
+  FIRST:
+  WHEN played of self
+     strike -> chosen mine unit in board to chosen enemy unit in board
+     and strike -> chosen enemy unit in board to chosen mine unit in board
+     then heal -> it mine unit [type is Dragon] amount=5
+  SECOND:
+  WHEN played of self
+     strike -> chosen mine unit in board to chosen enemy unit in board
+     and strike -> it enemy unit to it mine unit
+     then heal -> it mine unit [type is Dragon] amount=5
+
+## Dragonguard Lookout 751083
+  TEXT: When I'm summoned, if you Behold a Dragon, Rally.
+  FIRST:
+  WHEN summoned of self IF have mine card [type is Dragon] is
+     gain_attack_token -> mine player
+  SECOND:
+  WHEN summoned of self IF have mine card in hand [type is Dragon] is Behold
+     keyword_action Rally -> mine player
+
+## Voices of the Old Ones 751100
+  TEXT: Get 2 empty mana gems. For the top 5 cards in your deck, draw each card that costs 8+. Then place the rest into your deck.
+  FIRST:
+  WHEN played of self
+     mana_gain -> mine mana amount=2
+     then draw -> 5 all mine card in deck_top [cost ge 8]
+     then shuffle_into_deck -> all mine card in deck_top
+  SECOND:
+  WHEN played of self
+     mana_gain -> mine mana amount=2
+     then draw -> 5 top mine card in deck [cost ge 8]
+     then move -> it mine card in deck_top into deck
+  unsure: act
+
+## Defiant Dance 751133
+  TEXT: Recall a unit. Blade Dance 1.
+  FIRST:
+  WHEN played of self
+     return_to_hand -> chosen any unit in board
+     then keyword_action Blade Dance amount=1
+  SECOND:
+  WHEN played of self
+     keyword_action Recall -> chosen any unit in board
+     and keyword_action Blade Dance -> mine player amount=1
+
+## Scattered Pod 751135
+  TEXT: Play: Draw a Slow, Fast, or Burst spell. Enlightened: I have Elusive.
+  FIRST:
+  WHEN played of self
+     draw -> chosen mine card in deck [category in ['slow_spell', 'fast_spell', 'burst_spell']] amount=1
+  WHEN always IF keyword_condition Enlightened
+     give_keyword Elusive -> self (while)
+  SECOND:
+  WHEN played of self
+     draw -> mine card in deck [category in ['slow_spell', 'fast_spell', 'burst_spell']] amount=1
+  WHEN always IF keyword_condition Enlightened
+     give_keyword Elusive -> self (while)
+
+## Lead and Follow 751142
+  TEXT: Recall an ally to create a Flawless Duet in hand.
+  FIRST:
+  WHEN played of self
+     return_to_hand -> chosen mine unit in board
+     if_done create "Flawless Duet" into hand
+  SECOND:
+  WHEN played of self
+     keyword_action Recall -> chosen mine unit in board
+     if_done create "Flawless Duet" into hand
+
+## Shadows of the Past 751144
+  TEXT: Recall each ally and summon a Living Shadow in its place.
+  FIRST:
+  WHEN played of self
+     return_to_hand -> all mine unit in board
+     for_each summon "Living Shadow"
+  SECOND:
+  WHEN played of self
+     keyword_action Recall -> all mine unit in board
+     for_each summon "Living Shadow"
+
+## Arise! 751184
+  TEXT: Summon a Sand Soldier. Create a Fleeting Arise! in hand.
+  FIRST:
+  WHEN played of self
+     summon "Sand Soldier" into board
+     and create "Arise!" into hand
+     and give_keyword Fleeting -> it (permanent)
+  SECOND:
+  WHEN played of self
+     summon "Sand Soldier"
+     and create Fleeting "Arise!" into hand
+
+## Nasus 751200
+  TEXT: Keywords: Fearsome. I have +1|+1 for each unit you've slain this game. Level up: I've struck for 10+ damage in one strike.
+  FIRST:
+  WHEN always
+     stat_change -> self power=event_count of (killed by mine player of unit) this_game health=event_count of (killed by mine player of unit) this_game (while)
+  WHEN always IF event_count strikes by self [damage ge 10] ge 1 this_game
+     level_up -> self
+  SECOND:
+  WHEN always
+     stat_change -> self power=event_count of (killed by mine player of unit) this_game health=event_count of (killed by mine player of unit) this_game (while)
+  WHEN strikes by self IF stat self power ge 10
+     level_up -> self
+
+## Stoneweaving 751233
+  TEXT: Manifest a landmark you can afford.
+  FIRST:
+  WHEN played of self
+     keyword_action Manifest -> mine landmark
+  SECOND:
+  WHEN played of self
+     keyword_action Manifest -> card [category is landmark] into hand
+
+## Lamb's Respite 751278
+  TEXT: Give the weakest ally "I can't take damage or die" this round.
+  FIRST:
+  WHEN played of self
+     cant -> weakest mine unit in board event=damaged (this_round)
+     and cant -> it mine unit event=dies (this_round)
+  SECOND:
+  WHEN played of self
+     cant -> weakest mine unit in board event=damaged (this_round)
+     and cant -> it event=dies (this_round)
+
+## Bouncing Bomb 751352
+  TEXT: Deal 2 to a unit or deal 1 to two enemies.
+  FIRST:
+  WHEN played of self
+     choose_one -> chosen any unit in board
+     or damage -> chosen any unit in board amount=2
+     or damage -> 2 chosen enemy unit in board amount=1
+  SECOND:
+  WHEN played of self
+     choose_one
+     or damage -> chosen any unit in board amount=2
+     or damage -> 2 chosen enemy unit in board amount=1
+
+## Avatar of the Tides 751489
+  TEXT: Keywords: Imbue. If you would get a mana gem, instead refill your spell mana. When you play a spell, create in hand a random spell that costs 3 or less and grant it Fleeting.
+  FIRST:
+  WHEN always
+     instead mana_gain -> mine spell_mana amount=1
+  WHEN played by mine player of spell
+     create -> random mine card [category is spell] [cost le 3] into hand
+     and give_keyword Fleeting -> it (permanent)
+  unsure: event
+  SECOND:
+  WHEN always
+     instead mana_gain -> mine spell_mana amount=1
+  WHEN played by mine player of spell
+     create Fleeting -> random spell [cost le 3] into hand
+  unsure: event
+
+## Mistkeepers 751519
+  TEXT: Each round, the first time you kill a unit with a spell, summon an Ephemeral Mistwraith.
+  FIRST:
+  WHEN killed by mine spell of unit [first_each_round]
+     summon "Mistwraith"
+     and give_keyword Ephemeral -> it (permanent)
+  SECOND:
+  WHEN killed by mine spell of unit [first_each_round]
+     summon Ephemeral "Mistwraith"
+
+## The Winding Light 751573
+  TEXT: Nightfall: Give other allies +2|+1 and Overwhelm this round.
+  FIRST:
+  WHEN played of self IF keyword_condition Nightfall
+     stat_change -> all mine unit in board power=2 health=1 (this_round)
+     and give_keyword Overwhelm -> all mine unit in board (this_round)
+  SECOND:
+  WHEN played of self IF keyword_condition Nightfall
+     stat_change -> all mine unit in board power=2 health=1 (this_round)
+     and give_keyword Overwhelm -> it (this_round)
+
+## Mikhael's Blessing 751576
+  TEXT: Grant an ally +1|+2 and remove all negative keywords from it.
+  FIRST:
+  WHEN played of self
+     stat_change -> chosen mine unit in board power=1 health=2 (permanent)
+     and remove_keyword -> it
+  unsure: keyword
+  SECOND:
+  WHEN played of self
+     stat_change -> chosen mine unit in board power=1 health=2 (permanent)
+     and remove_keyword -> all keyword [state not positive]
+
+## Bandle Tellstones 751589
+  TEXT: Create a Fleeting Electro Harpoon, Heroic Refrain, or Yordle Contraption in hand.
+  FIRST:
+  WHEN played of self
+     choose_one -> mine player
+     or create "Electro Harpoon" -> mine card [state is fleeting] into hand
+     or create "Heroic Refrain" -> mine card [state is fleeting] into hand
+     or create "Yordle Contraption" -> mine card [state is fleeting] into hand
+  SECOND:
+  WHEN played of self
+     choose_one
+     or create Fleeting "Electro Harpoon" into hand
+     or create Fleeting "Heroic Refrain" into hand
+     or create Fleeting "Yordle Contraption" into hand
+
+## Discreet Invitation 751610
+  TEXT: Create a Fleeting Shady Character or Chempunk Shredder in hand and reduce its cost by 1.
+  FIRST:
+  WHEN played of self
+     choose_one -> mine player
+     or create "Shady Character" -> mine card [state is fleeting] into hand
+     or create "Chempunk Shredder" -> mine card [state is fleeting] into hand
+     then cost_change -> it mine card in hand cost=-1 (permanent)
+  SECOND:
+  WHEN played of self
+     choose_one
+     or create Fleeting "Shady Character" into hand
+     or create Fleeting "Chempunk Shredder" into hand
+     and cost_change -> it mine card in hand cost=-1 (permanent)
+
+## Scavenged Camocloaker 751611
+  TEXT: Grant an ally Elusive and "Nexus Strike: Draw 1."
+  FIRST:
+  WHEN played of self
+     give_keyword Elusive -> chosen mine unit in board (permanent)
+     and give_ability -> it (permanent)
+  SECOND:
+  WHEN played of self
+     give_keyword Elusive -> chosen mine unit in board (permanent)
+     and give_keyword Nexus Strike -> it (permanent)
+  unsure: act
+
+## Buhru Lookout 751626
+  TEXT: When I'm summoned, Spawn 3.
+  FIRST:
+  WHEN summoned of self
+     keyword_action Spawn -> mine unit in board amount=3
+  SECOND:
+  WHEN summoned of self
+     keyword_action Spawn -> mine player amount=3
+
+## Royal Decree 751647
+  TEXT: Give an ally +2|+2 and Challenger this round or summon an Honored Lord.
+  FIRST:
+  WHEN played of self
+     choose_one -> mine player
+     or stat_change -> chosen mine unit in board power=2 health=2 (this_round)
+     and give_keyword Challenger -> it (this_round)
+     or summon "Honored Lord" into board
+  SECOND:
+  WHEN played of self
+     choose_one
+     or stat_change -> chosen mine unit in board power=2 health=2 (this_round)
+     and give_keyword Challenger -> it (this_round)
+     or summon "Honored Lord"
+
+## Allure 751651
+  TEXT: Summon a random Husk and grant it +1|+0. Level up: Missing Translation
+  FIRST:
+  WHEN played of self
+     summon -> random mine unit in board [name_has is Husk]
+     and stat_change -> it power=1 health=0 (permanent)
+  SECOND:
+  WHEN played of self
+     summon -> random unit [name_has is Husk]
+     and stat_change -> it power=1 health=0 (permanent)
+
+## Gwen 751652
+  TEXT: Keywords: Hallowed, Quick Attack. Attack: When another ally gains Power from Hallowed, so do I. Drain 2 from the enemy Nexus. Level up: I've dealt 10+ damage.
+  FIRST:
+  WHEN attacks by self
+     give_keyword Drain -> enemy player amount=2 (unstated)
+  WHEN stat_changed of mine unit [card not Gwen] IF keyword_condition Hallowed
+     stat_change -> self power=event_amount health=0 (while)
+  WHEN always IF event_count damaged by self damage ge 10 this_game
+     level_up -> self
+  SECOND:
+  WHEN stat_changed of mine unit
+     stat_change -> self power=event_amount health=0 (permanent)
+  WHEN attacks by self
+     give_keyword Drain -> enemy player amount=2 (unstated)
+  WHEN always IF event_count damaged by self health ge 10 this_game
+     level_up -> self
+  unsure: attr
+
+## Ornn 751704
+  TEXT: Keywords: Tough. Play: Equip me with an exact copy of an ally's equipment or the strongest equipment from hand. Attack: Forge me twice. Level up: An ally has struck for 8+ damage in one strike.
+  FIRST:
+  WHEN played of self
+     choose_one
+     or copy -> chosen mine equipment in attached to self into attached
+     or attach -> strongest mine equipment in hand to self
+  WHEN attacks by self
+     keyword_action Forge -> self times=2
+  WHEN always IF event_count strikes by mine unit damage ge 8 this_game
+     level_up -> self
+  unsure: if
+  SECOND:
+  WHEN played of self
+     choose_one
+     or attach -> chosen mine equipment in attached to self
+     or attach -> strongest mine equipment in hand to self
+  WHEN attacks by self
+     keyword_action Forge -> self times=2
+  WHEN strikes by mine unit IF stat actor power ge 8
+     level_up -> self
+
+## The Darkin Staff 751728
+  TEXT: Keywords: Equipment, Impact. Strike: Refill 1 spell mana. You may spend 8 mana to play me as Baalkux.
+  FIRST:
+  WHEN strikes by attached_to
+     mana_gain -> mine spell_mana amount=1
+  WHEN played of self
+     transform "Baalkux" -> self cost=8
+  SECOND:
+  WHEN strikes by attached_to
+     mana_gain -> mine spell_mana amount=1
+  WHEN activated
+     mana_gain -> mine mana amount=-8
+     then transform "Baalkux" -> self
+
+## Skrappy's Partsapalooza 751736
+  TEXT: Keywords: Landmark. When I'm discarded, summon me. When you summon a Mecha Yordle, grant it a random keyword.
+  FIRST:
+  WHEN discarded of self
+     summon -> self
+  WHEN summoned of mine unit [type is Yordle]
+     give_random_keyword -> it amount=1
+  unsure: with
+  SECOND:
+  WHEN discarded of self
+     summon -> self
+  WHEN summoned by mine player of mine unit [type is Mecha]
+     give_keyword -> it (permanent)
+  unsure: keyword
+
+## The Darkin Fan 751744
+  TEXT: Keywords: Equipment. Attack: Summon an attacking Dragonling. You may spend 9 mana to play me as Praa the Breachwalker.
+  FIRST:
+  WHEN attacks by attached_to
+     summon "Dragonling" into board
+  WHEN played of self
+     transform "Praa the Breachwalker" -> self cost=9
+  SECOND:
+  WHEN attacks by attached_to
+     summon "Dragonling" -> mine unit [state is attacking]
+  WHEN activated
+     mana_gain -> mine mana amount=-9
+     then transform "Praa the Breachwalker" -> self
+
+## Master Yi 751749
+  TEXT: Keywords: Quick Attack, Flow. Round Start: Reduce the cost of a spell in your hand by 1 and Flow: Grant all allied Master Yis Everywhere +2|+0. Level up: Allied Master Yis have dealt 12+ damage.
+  FIRST:
+  WHEN round_start
+     cost_change -> chosen mine card in hand [category is spell] cost=-1 (permanent)
+  WHEN round_start IF keyword_condition Flow
+     stat_change -> all mine unit in everywhere [card is Master Yi] power=2 health=0 (permanent)
+  WHEN always IF event_count damaged by mine unit [card is Master Yi] damage ge 12 this_game
+     level_up -> self
+  SECOND:
+  WHEN round_start
+     cost_change -> chosen mine card in hand [category in ['spell', 'burst_spell', 'fast_spell', 'slow_spell', 'focus_spell']] cost=-1 (permanent)
+  WHEN round_start IF keyword_condition Flow
+     stat_change -> all mine unit in everywhere [name_has is Master Yi] power=2 health=0 (permanent)
+  WHEN always IF amount ge 12
+     level_up -> self
+
+## Entrancing Lure 751755
+  TEXT: Give an ally Challenger this round. If it's Equipped, draw 1.
+  FIRST:
+  WHEN played of self
+     give_keyword Challenger -> chosen mine unit in board (this_round)
+  WHEN played of self IF it_matches [state is equipped]
+     draw -> mine card in deck_top amount=1
+  SECOND:
+  WHEN played of self
+     give_keyword Challenger -> chosen mine unit in board (this_round)
+     if_done draw -> mine card in deck_top amount=1
+
+## Rockbear Shepherd 751802
+  TEXT: When you summon another ally, advance your highest Countdown landmark 1 round. When I'm summoned, summon a Hibernating Rockbear.
+  FIRST:
+  WHEN summoned by mine player of mine unit [card not Rockbear Shepherd]
+     countdown_advance -> highest mine landmark amount=1
+  WHEN summoned of self
+     summon "Hibernating Rockbear"
+  SECOND:
+  WHEN summoned by mine player of mine unit
+     countdown_advance -> strongest mine landmark in board [keyword is Countdown] amount=1
+  WHEN summoned of self
+     summon "Hibernating Rockbear"
+  unsure: pick
+
+## The Darkin Bloodletters 751804
+  TEXT: Keywords: Equipment. Last Breath: If my bearer is not a Darkinthrall, summon a Darkinthrall. You may spend 6 mana and kill an ally to play me as Xolaani.
+  FIRST:
+  WHEN dies of attached_to IF it_matches [card not Darkinthrall]
+     summon "Darkinthrall"
+  WHEN played of self
+     spend_mana -> mine mana amount=6
+     and kill -> chosen mine unit in board
+     if_done transform "Xolaani" -> self
+  SECOND:
+  WHEN dies of self IF have attached_to unit [card is Darkinthrall] not
+     summon "Darkinthrall"
+  WHEN activated
+     mana_gain -> mine mana amount=-6
+     then kill -> chosen mine unit in board
+     then transform "Xolaani" -> self
+
+## The Darkin Aegis 751810
+  TEXT: Keywords: Equipment, Tough. You may spend 5 mana to play me as Joraal.
+  FIRST:
+  WHEN played of self
+     spend_mana -> mine mana amount=5
+     if_done transform "Joraal" -> self
+  SECOND:
+  WHEN activated
+     mana_gain -> mine mana amount=-5
+     then transform "Joraal" -> self
+
+## Vayne 751811
+  TEXT: When I'm summoned or Round Start: Create a Tumble in hand or if you have one, reduce its cost by 1. Level up: I've seen you attack 4 times.
+  FIRST:
+  WHEN summoned of self IF have mine card in hand [card is Tumble] not
+     create "Tumble" into hand
+  WHEN round_start IF have mine card in hand [card is Tumble] not
+     create "Tumble" into hand
+  WHEN summoned of self IF have mine card in hand [card is Tumble] is
+     cost_change -> chosen mine card in hand [card is Tumble] cost=-1 (permanent)
+  WHEN round_start IF have mine card in hand [card is Tumble] is
+     cost_change -> chosen mine card in hand [card is Tumble] cost=-1 (permanent)
+  WHEN always IF event_count attacks by mine player ge 4 this_game
+     level_up -> self
+  SECOND:
+  WHEN summoned of self IF have mine card in hand [card is Tumble] not
+     create "Tumble" into hand
+  WHEN summoned of self IF have mine card in hand [card is Tumble] is
+     cost_change -> mine card in hand [card is Tumble] cost=-1 (permanent)
+  WHEN round_start IF have mine card in hand [card is Tumble] not
+     create "Tumble" into hand
+  WHEN round_start IF have mine card in hand [card is Tumble] is
+     cost_change -> mine card in hand [card is Tumble] cost=-1 (permanent)
+  WHEN always IF event_count attacks by mine player ge 4 this_game
+     level_up -> self
+
+## Tempting Prospect 751818
+  TEXT: Pick a follower or equipment from the top 4 cards of your deck. Draw it, place the rest into your deck.
+  FIRST:
+  WHEN played of self
+     look -> 4 all mine card in deck_top amount=4
+     then choose_card -> chosen mine card in deck_top [category in ['follower', 'equipment']]
+     then draw -> it amount=1
+     then shuffle_into_deck -> all mine card in deck_top into deck
+  SECOND:
+  WHEN played of self
+     look -> 4 top mine card in deck
+     then choose_card -> chosen mine card in deck [category in ['follower', 'equipment']]
+     then draw -> it mine card in deck amount=1
+     then shuffle_into_deck -> all mine card in deck
+
+## Bloodcursed Harpy 751819
+  TEXT: Keywords: Scout. Play: Equip me with an equipment that costs 2 or less from hand. The first time I would die while Equipped, fully heal me and destroy the equipment instead.
+  FIRST:
+  WHEN played of self
+     attach -> chosen mine equipment in hand [cost le 2] to self
+  WHEN dies of self [once_per_game] IF have self [state is equipped] is
+     heal -> self amount=full
+     and kill -> attached_to mine equipment in attached
+  SECOND:
+  WHEN played of self
+     attach -> chosen mine equipment in hand [cost le 2] to self
+  WHEN dies of self [once_per_game] IF it_matches [state is equipped]
+     heal -> self amount=full
+     and kill -> attached_to equipment in attached
+
+## Blades of the Fallen 751832
+  TEXT: Give an ally "Last Breath: Summon a Icathian Mirage with my equipment" this round.
+  FIRST:
+  WHEN played of self
+     give_ability -> chosen mine unit in board (this_round)
+  SECOND:
+  WHEN played of self
+     give_keyword Last Breath -> chosen mine unit in board (this_round)
+  unsure: keyword
+
+## Daring Demolisher 751853
+  TEXT: Play: Deal 1 to the enemy Nexus or activate an ally's Plunder effect.
+  FIRST:
+  WHEN played of self
+     choose_one
+     or damage -> enemy player amount=1
+     or keyword_action Plunder -> chosen mine unit in board
+  SECOND:
+  WHEN played of self
+     choose_one -> mine player
+     or damage -> enemy player amount=1
+     or keyword_action Plunder -> chosen mine unit in board
+
+## Father Fury 751865
+  TEXT: Keywords: Plunder, Elusive. Plunder: Refill 1 spell mana and create a random 1 cost spell from your regions in hand.
+  FIRST:
+  WHEN played of self IF keyword_condition Plunder
+     mana_gain -> mine spell_mana amount=1
+     and create -> random mine spell in hand [cost eq 1] [region is own_regions] into hand
+  SECOND:
+  WHEN played of self IF keyword_condition Plunder
+     mana_gain -> mine spell_mana amount=1
+     and create -> random spell [cost eq 1] [region is own_regions] into hand
+
+## Prize Fight 751866
+  TEXT: An ally and an enemy strike each other. They can't drop below 1 Health from this strike.
+  FIRST:
+  WHEN played of self
+     strike -> chosen mine unit in board to chosen enemy unit in board
+     and strike -> it enemy unit in board to it mine unit in board
+     and cant -> all any unit in board [state is in_combat] to self event=dies (this_round)
+  SECOND:
+  WHEN played of self
+     strike -> chosen mine unit in board to chosen enemy unit in board
+     and strike -> it enemy unit in board to it mine unit in board
+     and negate_damage -> it unit in board amount=1
+
+## Altar to Unity 751899
+  TEXT: Keywords: Landmark. When I'm summoned, draw a unit. When you summon an ally, grow its stats to equal its cost.
+  FIRST:
+  WHEN summoned of self
+     draw -> random mine card in deck [category is unit] amount=1
+  WHEN summoned by mine player of mine unit
+     stat_set -> it unit power=stat cost of (it) health=stat cost of (it)
+  SECOND:
+  WHEN summoned of self
+     draw -> random mine card in deck [category is unit] amount=1
+  WHEN summoned by mine player of mine unit
+     stat_set -> it power=stat cost of (it) health=stat cost of (it) (permanent)
+
+## Ingvar the Younger 751934
+  TEXT: Play: Pick an ally. Grant it and all other allies that share a subtype with it +1|+1 or Manifest a follower that shares a subtype with it.
+  FIRST:
+  WHEN played of self
+     choose_one
+     or stat_change -> chosen mine unit in board power=1 health=1 (permanent)
+     and stat_change -> all mine unit in board power=1 health=1 (permanent)
+     or keyword_action Manifest -> card [state is follower]
+  unsure: with
+  SECOND:
+  WHEN played of self
+     choose_one -> mine player
+     or stat_change -> all mine unit in board power=1 health=1 (permanent)
+     or keyword_action Manifest -> mine card [category is follower]
+  unsure: with
+
+## Lonely Chimeslime 751956
+  TEXT: Keywords: Last Breath. When another ally dies, or Last Breath: Plant 4 Chimes in your deck.
+  FIRST:
+  WHEN dies of mine unit [card not Lonely Chimeslime]
+     keyword_action Plant "Chime" -> mine card in deck amount=4
+  WHEN dies of self
+     keyword_action Plant "Chime" -> mine card in deck amount=4
+  SECOND:
+  WHEN dies of mine unit
+     keyword_action Plant "Chime" -> mine player into deck amount=4
+  WHEN dies of self
+     keyword_action Plant "Chime" -> mine player into deck amount=4
+
+## Exalted Cloudwinder 751993
+  TEXT: Keywords: Quick Attack. If you've drawn 3+ cards this round, I cost 2 less. When I'm summoned, draw 2 at the next Round Start.
+  FIRST:
+  WHEN always IF event_count drawn by mine player ge 3 this_round
+     cost_change -> self cost=-2 (while)
+  WHEN summoned of self
+     give_ability -> mine player
+  SECOND:
+  WHEN always IF event_count drawn by mine player ge 3 this_round
+     cost_change -> self cost=-2 (while)
+  WHEN summoned of self
+     draw -> mine card in deck_top amount=2 (next_round)
+
+## Lux: Illuminated 752066
+  TEXT: Keywords: Spirit, Support. Support: Grant my supported ally Spirit and give me Barrier this round. Level up: Allies have attacked with or have gained while attacking 20+ total positive keywords.
+  FIRST:
+  WHEN supports by self
+     give_keyword Spirit -> it (permanent)
+     and give_keyword Barrier -> self (this_round)
+  WHEN always IF event_count attacks by mine unit keyword ge 20 this_game
+     level_up -> self
+  unsure: if
+  SECOND:
+  WHEN attacks by self
+     give_keyword Spirit -> right_of_self (permanent)
+     and give_keyword Barrier -> self (this_round)
+  WHEN always IF event_count given_keyword of mine unit [state is attacking] ge 20 this_game
+     level_up -> self
+  unsure: test
+
+## Steel Gale 752093
+  TEXT: Stun an enemy and Stun it again at the next Round Start.
+  FIRST:
+  WHEN played of self
+     stun -> chosen enemy unit in board (this_round)
+     and give_ability -> mine player
+  SECOND:
+  WHEN played of self
+     stun -> chosen enemy unit in board (this_round)
+     and stun -> it (next_round)
+
+## Faulty Blasting Sigil 752132
+  TEXT: Double damage, but cost 1 more
+  FIRST:
+  WHEN played of self
+     increase_effect -> self percent=100
+     and cost_change -> self cost=1 (permanent)
+  SECOND:
+  WHEN always
+     increase_effect -> self percent=100
+     and cost_change -> self cost=1 (while)
+
+## Ardent Censer 752204
+  TEXT: Grant the top ally in your deck +3|+3.
+  FIRST:
+  WHEN played of self
+     stat_change -> top mine card in deck [category is unit] power=3 health=3 (permanent)
+  SECOND:
+  WHEN played of self
+     stat_change -> top mine unit in deck power=3 health=3 (permanent)
+
+## Elite's Crest 752294
+  TEXT: +1|+1, Tough and I am an Elite.
+  FIRST:
+  WHEN played of self
+     stat_change -> attached_to power=1 health=1 (while_attached)
+     and give_keyword Tough -> attached_to (while_attached)
+     and give_type -> attached_to
+  SECOND:
+  WHEN always
+     stat_change -> attached_to power=1 health=1 (while_attached)
+     and give_keyword Tough -> attached_to (while_attached)
+     and give_keyword Elite -> attached_to (while_attached)
+  unsure: act
+
+## Kalista (level 2) 796490
+  TEXT: Keywords: Fearsome. Each round, the first time I attack revive an attacking Ephemeral copy of the strongest dead allied follower. This round, we're bonded and it takes damage for me.
+  FIRST:
+  WHEN attacks by self [first_each_round]
+     revive -> strongest mine unit in discard [state is follower]
+     and give_keyword Ephemeral -> it (permanent)
+     then start_attack -> it
+     and negate_damage -> self amount=event_amount
+  unsure: act
+  SECOND:
+  WHEN attacks by self [first_each_round]
+     revive Ephemeral -> strongest mine unit in discard [category is follower]
+     and mark -> self (this_round)
+  unsure: act
+
+## Vi (level 2) 796492
+  TEXT: Keywords: Challenger, Tough. When I strike a unit while attacking, deal 5 to the enemy Nexus.
+  FIRST:
+  WHEN strikes by self of unit IF count self [state is attacking] ge 1
+     damage -> enemy player amount=5
+  SECOND:
+  WHEN strikes by self of unit IF have self [state is attacking] is
+     damage -> enemy player amount=5
+
+## Jarvan IV (level 2) 796536
+  TEXT: Keywords: Barrier. When you attack, pay my cost to summon me Challenging the strongest enemy. Round Start: Create a Fleeting Cataclysm in hand. When I Challenge an enemy, give me Barrier this round.
+  FIRST:
+  WHEN attacks by mine player
+     spend_mana -> mine player amount=stat cost of (self)
+     if_done summon -> self
+     then challenge -> self to strongest enemy unit in board
+  WHEN round_start
+     create "Cataclysm" into hand
+     and give_keyword Fleeting -> it (permanent)
+  WHEN challenges by self of enemy unit in board
+     give_keyword Barrier -> self (this_round)
+  SECOND:
+  WHEN attacks by mine player
+     mana_gain -> mine mana amount=minus (stat cost of (self))
+     if_done summon -> self
+     then challenge -> self to strongest enemy unit in board
+  WHEN round_start
+     create "Cataclysm" into hand
+     then give_keyword Fleeting -> it (permanent)
+  WHEN blocks by self
+     give_keyword Barrier -> self (this_round)
+  unsure: event
+
+## Jayce (other form) 796557
+  TEXT: Play: Grant me Quick Attack or Challenger. Each round, the first time you play a 6+ cost spell, copy it with the same targets.
+  FIRST:
+  WHEN played of self
+     choose_one
+     or give_keyword Quick Attack -> self (permanent)
+     or give_keyword Challenger -> self (permanent)
+  WHEN played by mine player of spell [cost ge 6] [first_each_round]
+     repeat -> it effect
+  SECOND:
+  WHEN played of self
+     choose_one -> self
+     or give_keyword Quick Attack -> self (permanent)
+     or give_keyword Challenger -> self (permanent)
+  WHEN played by mine player of spell [cost ge 6] [first_each_round]
+     repeat -> it
+
+## Seraphine (level 2) 796573
+  TEXT: Keywords: Missing Translation. When I'm summoned, create a random new 2 cost spell in hand. When you play a new spell that costs 2 or less, copy it with the same targets.
+  FIRST:
+  WHEN summoned of self
+     create -> random mine spell [state is new] [cost eq 2] into hand
+  WHEN played by mine player of spell [state is new] [cost le 2]
+     repeat -> it spell
+  SECOND:
+  WHEN summoned of self
+     create -> random spell [cost eq 2] into hand
+  WHEN played by mine player of spell [cost le 2]
+     repeat -> it
+
+## Vayne (level 2) 796574
+  TEXT: When I'm summoned or Round Start: Create a 0 cost Tumble in hand or if you have one, reduce its cost to 0.
+  FIRST:
+  WHEN summoned of self IF have mine card in hand [card is Tumble] not
+     create "Tumble" into hand
+     and stat_set -> mine card in hand [card is Tumble] cost=0
+  WHEN summoned of self IF have mine card in hand [card is Tumble] is
+     stat_set -> mine card in hand [card is Tumble] cost=0
+  WHEN round_start IF have mine card in hand [card is Tumble] not
+     create "Tumble" into hand
+     and stat_set -> mine card in hand [card is Tumble] cost=0
+  WHEN round_start IF have mine card in hand [card is Tumble] is
+     stat_set -> mine card in hand [card is Tumble] cost=0
+  SECOND:
+  WHEN summoned of self IF have mine card in hand [card is Tumble] not
+     create "Tumble" into hand
+     then cost_change -> it cost=minus (stat cost of (it)) (permanent)
+  WHEN summoned of self IF have mine card in hand [card is Tumble] is
+     cost_change -> mine card in hand [card is Tumble] cost=minus (stat cost of (mine card in hand [card is Tumble])) (permanent)
+  WHEN round_start IF have mine card in hand [card is Tumble] not
+     create "Tumble" into hand
+     then cost_change -> it cost=minus (stat cost of (it)) (permanent)
+  WHEN round_start IF have mine card in hand [card is Tumble] is
+     cost_change -> mine card in hand [card is Tumble] cost=minus (stat cost of (mine card in hand [card is Tumble])) (permanent)
+
+## Volibear (level 2) 796582
+  TEXT: Keywords: Overwhelm, Missing Translation. Play or Attack: Play Relentless Storm 3 times. Each one targets a different random enemy or the enemy Nexus if none. Other allies have Overwhelm.
+  FIRST:
+  WHEN played of self
+     play_card "Relentless Storm" -> random enemy any times=3
+  WHEN attacks by self
+     play_card "Relentless Storm" -> random enemy any times=3
+  WHEN always
+     give_keyword Overwhelm -> all mine unit in board [card not Volibear] (while)
+  unsure: pick
+  SECOND:
+  WHEN played of self
+     repeat "Relentless Storm" -> 3 random enemy unit in board times=3
+  WHEN attacks by self
+     repeat "Relentless Storm" -> 3 random enemy unit in board times=3
+  WHEN always
+     give_keyword Overwhelm -> all mine unit in board (while)
+  unsure: act
+
+## Twisted Fate's Pick a Card 796674
+  TEXT: Keywords: Burst. To play, place a card from hand into your deck. Draw 2 at the next Round Start and grant them Fleeting. Create a Twisted Fate in your deck.
+  FIRST:
+  WHEN played of self
+     shuffle_into_deck -> chosen mine card in hand into deck
+     then give_ability -> mine player (permanent)
+     and create "Twisted Fate" into deck
+  SECOND:
+  WHEN played of self
+     shuffle_into_deck -> chosen mine card in hand
+     then draw -> mine card in deck_top amount=2 (next_round)
+     then give_keyword Fleeting -> it (permanent)
+     and create "Twisted Fate" into deck
+
+## Return 796692
+  TEXT: Keywords: Burst, Fleeting. Summon an ally that costs 3 or less from hand.
+  FIRST:
+  WHEN played of self
+     summon -> chosen mine unit in hand [cost le 3]
+  SECOND:
+  WHEN played of self
+     summon -> chosen mine card in hand [category in ['unit']] [cost le 3]
+
+## Calibrum 796729
+  TEXT: Keywords: Slow. Deal 3 to a follower. Phase Severum or Gravitum.
+  FIRST:
+  WHEN played of self
+     damage -> chosen any unit in board [category is follower] amount=3
+     and keyword_action Phase -> chosen mine card [card in ['Severum', 'Gravitum']]
+  SECOND:
+  WHEN played of self
+     damage -> chosen unit in board [category is follower] amount=3
+     and choose_one -> self
+     or keyword_action Phase "Severum" -> mine card
+     or keyword_action Phase "Gravitum" -> mine card
+
+## Help, Pix! 796759
+  TEXT: Keywords: Focus, Fleeting. Give an ally Barrier or an enemy Vulnerable this round.
+  FIRST:
+  WHEN played of self
+     choose_one
+     or give_keyword Barrier -> chosen mine unit in board (permanent)
+     or give_keyword Vulnerable -> chosen enemy unit in board (this_round)
+  SECOND:
+  WHEN played of self
+     choose_one -> self
+     or give_keyword Barrier -> chosen mine unit in board (this_round)
+     or give_keyword Vulnerable -> chosen enemy unit in board (unstated)
+
+## Blade 796782
+  TEXT: Obliterate me when I leave combat.
+  FIRST:
+  WHEN always
+     obliterate -> self
+  unsure: event
+  SECOND:
+  WHEN leaves_play of self
+     obliterate -> self
+  unsure: event
+
+## Ascended's Call 796805
+  TEXT: Keywords: Slow. Rally. Summon Renekton and Nasus. Immediately level them up to level 3.
+  FIRST:
+  WHEN played of self
+     gain_attack_token -> mine player
+     then summon "Renekton"
+     and summon "Nasus"
+     then level_up -> all mine unit in board [card is Renekton] times=2
+     and level_up -> all mine unit in board [card is Nasus] times=2
+  SECOND:
+  WHEN played of self
+     gain_attack_token -> mine player
+     then summon "Renekton"
+     and summon "Nasus"
+     then level_up -> all mine unit in board [card in ['Renekton', 'Nasus']] times=2
+
+## Akshan's Grappling Hook 796807
+  TEXT: Keywords: Slow. An ally you've targeted this round strikes an enemy. Create an Akshan in your deck.
+  FIRST:
+  WHEN played of self
+     strike -> chosen mine unit in board [state is targeted_this_round] to chosen enemy unit in board
+  SECOND:
+  WHEN played of self
+     strike -> chosen mine unit in board to chosen enemy unit in board
+     and create "Akshan" into deck
+  unsure: with
+
+## Relic of Power (created) 796817
+  TEXT: Keywords: Focus, Fleeting. Predict, then draw 1.
+  FIRST:
+  WHEN played of self
+     keyword_action Predict
+     then draw -> mine card in deck_top amount=1
+  SECOND:
+  WHEN played of self
+     keyword_action Predict -> mine player
+     then draw -> mine card in deck_top amount=1
+
+## Lissandra's Entomb 796852
+  TEXT: Keywords: Fast. Obliterate a unit to summon a Frozen Tomb in place with the unit stored inside. Create a Lissandra in your deck.
+  FIRST:
+  WHEN played of self
+     obliterate -> chosen any unit in board
+     then summon "Frozen Tomb" into board
+     and create "Lissandra" into deck
+  SECOND:
+  WHEN played of self
+     obliterate -> chosen unit in board
+     if_done summon "Frozen Tomb"
+     and create "Lissandra" into deck
+
+## Ziggs' Bouncing Bomb 796894
+  TEXT: Keywords: Slow. Deal 2 to a unit or deal 1 to two enemies. Create a Ziggs in your deck.
+  FIRST:
+  WHEN played of self
+     choose_one
+     or damage -> chosen any unit in board amount=2
+     or damage -> 2 chosen enemy unit in board amount=1
+     and create "Ziggs" into deck
+  SECOND:
+  WHEN played of self
+     choose_one -> self
+     or damage -> chosen unit in board amount=2
+     or damage -> 2 chosen enemy unit in board amount=1
+     and create "Ziggs" into deck
+
+## Molten Shield (created) 796981
+  TEXT: Keywords: Elemental Skill. Deal 3 and Stun Annie's blocker. If it's dead or gone, deal 3 to the enemy Nexus instead.
+  FIRST:
+  WHEN played of self
+     damage -> chosen enemy unit in board [state is blocking] amount=3
+     and stun -> chosen enemy unit in board [state is blocking] (this_round)
+     otherwise damage -> enemy player amount=3
+  SECOND:
+  WHEN played of self
+     damage -> chosen enemy unit in board [state is blocking] amount=3
+     and stun -> it (this_round)
+     instead damage -> enemy player amount=3
+
+## Desperate Husk 796993
+  TEXT: Keywords: Immobile, Challenger. When you play an ally, kill me to grant it my stats and positive keywords.
+  FIRST:
+  WHEN played by mine player of mine unit
+     kill -> self
+     if_done stat_change -> it power=stat power of (self) health=stat health of (self) (permanent)
+     and give_keyword Challenger -> it (permanent)
+  SECOND:
+  WHEN played by mine player of mine unit
+     kill -> self
+     if_done stat_change -> it power=stat power of (self) health=stat health of (self) (permanent)
+     if_done give_keyword -> it (permanent)
+  unsure: keyword
+
+## Seraphine's High Note 797054
+  TEXT: Keywords: Fast. Deal 2 to a unit. If you've played 6+ other new spells this game, deal 1 to another unit. Create a Seraphine in your deck.
+  FIRST:
+  WHEN played of self
+     damage -> chosen any unit in board amount=2
+     and create "Seraphine" into deck
+  WHEN played of self IF event_count played by mine player of spell ge 6 this_game
+     damage -> chosen any unit in board amount=1
+  SECOND:
+  WHEN played of self
+     damage -> chosen unit in board amount=2
+     and create "Seraphine" into deck
+  WHEN played of self IF event_count played by mine player of spell ge 6 this_game
+     damage -> chosen unit in board amount=1
+
+## Taarosh 797078
+  TEXT: Keywords: Fearsome. Each round, the first time I attack, fill your attackers with revived Ephemeral copies of the strongest followers you've slain this game.
+  FIRST:
+  WHEN attacks by self [first_each_round]
+     revive -> strongest mine unit [state is follower]
+     and give_keyword Ephemeral -> it unit (permanent)
+  unsure: n, with
+  SECOND:
+  WHEN attacks by self [first_each_round]
+     revive Ephemeral -> strongest mine unit in discard [category is follower] amount=count of (all mine unit in board [state is attacking])
+
+## Thrall Bulwark 797097
+  TEXT: I don't take damage from allied spells or Skills.
+  FIRST:
+  WHEN damaged by mine spell of self
+     negate_damage -> it
+  SECOND:
+  WHEN always
+     negate_damage -> self
+  unsure: act
+
+## Aurora Hallunatis's Ambush 797116
+  TEXT: Keywords: Burst. Transform my Shadow in the Brush into an Aurora Hallunatis. If my Shadow in the Brush leaves play, Obliterate me.
+  FIRST:
+  WHEN played of self
+     transform "Aurora Hallunatis" -> chosen mine unit in board [card is Shadow in the Brush]
+  WHEN leaves_play of mine unit in board [card is Shadow in the Brush]
+     obliterate -> self
+  SECOND:
+  WHEN played of self
+     transform "Aurora Hallunatis" -> mine unit in board [card is Shadow in the Brush]
+  WHEN leaves_play of mine unit [card is Shadow in the Brush]
+     obliterate -> self
+
+## Stormcarved Spire 797204
+  TEXT: Keywords: Landmark, Countdown. Countdown : Summon an exact copy of the unit stored inside.
+  FIRST:
+  WHEN countdown_done
+     copy -> it mine unit in attached into board
+  SECOND:
+  WHEN countdown_done of self
+     copy -> unit in removed into board

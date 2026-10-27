@@ -16,6 +16,7 @@ are the source; `cards.sqlite` is rebuilt from them.
 | `CHANGES.md` | Every change to the shapes or values, with the card that caused it |
 | `STATUS.md` | Which batches are done, partial or still to read (made by `status.py <game>` from the files) |
 | `status.py`, `show.py`, `compare.py`, `queries.py` | Progress from the files; cards with their records for checking by eye; first vs second reading; connection queries |
+| `rows.py` | A card's rows from `cards.sqlite` as a table with names (what Kaptain checks) |
 | `reread.py`, `normalize.py` | Re-reading chosen records under the current brief (old readings kept in `replaced/`); one canonical form for equal meanings |
 | `second/<game>/` | Independent second reading of a 10% sample, to measure how often readers disagree |
 
