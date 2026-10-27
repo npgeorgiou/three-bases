@@ -5,8 +5,10 @@ and second readings). Safe to run any number of times. Each rule is listed in CH
      and give_keyword when it is a status the target then has (Frostbite, Stun-like keywords given "this round").
   N3 null values and empty lists/objects are dropped.
   N4 "follower" and "champion" are categories, not states; a category filter "unit" on a target of kind unit is dropped.
+  N5 when the text says "another ally" / "other allies", the event object and the effect targets of my units get the
+     not-this-card filter if they lack it.
 Usage: normalize.py <game> <file.jsonl> [...]   rewrites the files in place, prints how many records changed."""
-import json, os, sys
+import glob, json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 def keyword_kinds(game):
@@ -50,14 +52,32 @@ def fix_effect(e, kinds):
 def fix_ability(ab, kinds):
     for e in ab.get('do', []): fix_effect(e, kinds)
 
+ANOTHER = re.compile(r"\b(?:another|other) (?:allied |\w+ )?(?:all(?:y|ies)|units?|followers?)\b", re.I)
+
+def not_self(t, name):
+    if not isinstance(t, dict) or t.get('side') != 'mine' or t.get('pick') in ('self', 'it', 'attached_to', 'right_of_self', 'left_of_self'): return
+    if t.get('kind') not in (None, 'unit'): return
+    if any(f.get('attr') == 'card' and f.get('op') == 'not' for f in t.get('with', [])): return
+    t.setdefault('with', []).append({'attr': 'card', 'op': 'not', 'ref': name})
+
+def another(r, inputs):
+    x = inputs.get(r.get('id'))
+    if not x or not ANOTHER.search(x['text']): return
+    for ab in r.get('abilities', []):
+        not_self((ab.get('when') or {}).get('object'), x['name'])
+        for e in ab.get('do', []): not_self(e.get('on'), x['name'])
+
 def main():
     game = sys.argv[1]; kinds = keyword_kinds(game)
+    inputs = {}
+    for f in glob.glob(os.path.join(HERE, 'input', game, '*.jsonl')):
+        for l in open(f): x = json.loads(l); inputs[x['id']] = x
     for path in sys.argv[2:]:
         L = [json.loads(l) for l in open(path) if l.strip()]; out = []; n = 0
         for r in L:
             r2 = clean(json.loads(json.dumps(r)))
             for ab in r2.get('abilities', []): fix_ability(ab, kinds)
-            fix_filters(r2)
+            fix_filters(r2); another(r2, inputs)
             n += r2 != r; out.append(r2)
         open(path, 'w').write(''.join(json.dumps(r, separators=(',', ':')) + '\n' for r in out))
         print(f'{os.path.basename(path)}: {n} of {len(L)} records changed')

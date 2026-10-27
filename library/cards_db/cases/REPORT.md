@@ -1,7 +1,7 @@
 # Case tests: runeterra
 
 Made by `cases/run.py runeterra`.
-**246 of 248 cases pass.**
+**247 of 248 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -40,14 +40,14 @@ Made by `cases/run.py runeterra`.
 | m30 | Rally (attack token) | 25 | 25 | 100% | 18 | yes |
 | m31 | Predict | 20 | 20 | 100% | 62 | yes |
 | m32 | reduces costs | 125 | 123 | 98% | 54 | yes |
-| m33 | copies cards or spells (incl. becoming an exact copy) | 98 | 97 | 99% | 61 | yes |
+| m33 | copies cards or spells (incl. becoming an exact copy) | 98 | 97 | 99% | 60 | yes |
 | m34 | Behold (have a card) | 15 | 15 | 100% | 101 | yes |
 | m35 | Daybreak / Nightfall | 42 | 42 | 100% | 1 | yes |
 | m36 | can't block | 8 | 8 | 100% | 321 | yes |
 | m37 | summons units or cares about summoning | 273 | 273 | 100% | 175 | yes |
 | m38 | revives | 23 | 22 | 96% | 7 | yes |
 | m39 | silences | 11 | 11 | 100% | 37 | yes |
-| m40 | shuffles cards into a deck | 20 | 19 | 95% | 179 | yes |
+| m40 | shuffles cards into a deck | 20 | 20 | 100% | 179 | yes |
 | m41 | triggers when you draw | 7 | 7 | 100% | 9 | yes |
 | m42 | When I'm summoned triggers | 279 | 279 | 100% | 29 | yes |
 | m43 | Strike triggers | 35 | 35 | 100% | 241 | yes |
@@ -62,7 +62,7 @@ Made by `cases/run.py runeterra`.
 | m52 | SpellShield negates enemy spells | 26 | 26 | 100% | 35 | yes |
 | m53 | Spirit / Gloom / Impact stacking keywords | 32 | 32 | 100% | 45 | yes |
 | m54 | damage equal to a stat or count | 9 | 9 | 100% | 14 | yes |
-| m55 | effects scaling with a count (for each) | 85 | 80 | 94% | 235 | NO |
+| m55 | effects scaling with a count (for each) | 85 | 83 | 98% | 235 | yes |
 | m56 | temporary buffs this round | 120 | 120 | 100% | 44 | yes |
 | m57 | Invoke | 19 | 18 | 95% | 0 | NO |
 | m58 | Manifest | 32 | 32 | 100% | 0 | yes |
@@ -91,7 +91,6 @@ Made by `cases/run.py runeterra`.
 
 Missed cards (first 8 per failing case):
 
-- m55 effects scaling with a count (for each): Buried Sun Disc, Dreamlight Alina, Mountain Sojourners, Ravenbloom Conservatory, Wraith of Echoes
 - m57 Invoke: Dragonsong Dreamer
 
 ## Combos (the enabler must set off the payoff)
@@ -269,5 +268,5 @@ Missed cards (first 8 per failing case):
 | r127 | Shadow Isles | archetype (library) | swarm | 36 | 69 | yes |
 | r128 | Shurima | archetype (library) | trickery | 5 | 8 | yes |
 | r129 | Shurima | archetype (library) | swarm | 30 | 89 | yes |
-| r130 | Targon | archetype (library) | spellslinger | 18 | 37 | yes |
+| r130 | Targon | archetype (library) | spellslinger | 18 | 36 | yes |
 | r131 | Targon | archetype (library) | card_advantage | 15 | 43 | yes |

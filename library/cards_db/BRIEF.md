@@ -1,4 +1,4 @@
-# Reader brief: describe each card as a record (version 3)
+# Reader brief: describe each card as a record (version 4)
 
 You read card texts and write what each card DOES as JSON records. Every value is a number, a value from
 `vocab.tsv` (column `value`, grouped by `field`), or the exact name of another card, keyword or type (the script turns names into
@@ -76,7 +76,11 @@ AMOUNT   a number, or `{"x": x, "of": TARGET, "attr": attr, "event": EVENT, "spa
    "op": "ge", "n": 5}`.
 14. Delayed effects ("At the next Round Start, ...", "the next time an ally attacks this round") = an ability with that
    event and limit next_time. "A new card" (not played before) = state new. Damage totals = attr damage.
-15. Read every sentence. Remarks, reminders and flavour have no effect: skip them. Never add an effect the text does not state.
+15. Keywords passed between units ("grant its keywords to all allies", "we share keywords", "gains the positive keywords of")
+   = act copy_keywords: "on" receives, "to" is the unit whose keywords are copied; which keywords as a filter on "to"
+   (`{"attr": "state", "op": "is", "val": "positive"}`). "Remove all negative keywords" = remove_keywords with that filter.
+   "Another ally" / "other allies" always carries `{"attr": "card", "op": "not", "ref": "<this card's name>"}`.
+16. Read every sentence. Remarks, reminders and flavour have no effect: skip them. Never add an effect the text does not state.
 
 ## Keyword entries (category keyword)
 A keyword's record says what the keyword means, so that every card with it inherits that meaning. Four kinds:

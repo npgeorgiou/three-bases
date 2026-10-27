@@ -64,6 +64,8 @@ def main():
         r = recs.get(i)
         if not r: continue
         t = ' '.join(x['text'].split()); m = KWFIELD.match(t); rest = (t[m.end():] if m else t).lower()
+        for nm in sorted(x.get('names_in_text', []), key=len, reverse=True):  # words inside other cards' names do not count
+            if nm.lower() not in kwnames: rest = rest.replace(nm.lower(), ' ')
         got = {'event': set(), 'act': set(), 'name': set(), 'value': set()}; walk(r, got)
         miss = []
         for p, (kind, val) in TRIGGERS:

@@ -332,3 +332,6 @@ keyword	Disguise	concept of having, using or giving this keyword	stealth		28 Oct
 keyword	Lurk	concept of having, using or giving this keyword	tribal		28 Oct 2026, v3
 keyword	Scout	concept of having, using or giving this keyword	multi_attack		28 Oct 2026, v3
 keyword	Sleep	concept of using this keyword (a unit is removed for a round)	disable		28 Oct 2026, v3
+act	copy_keywords	"the ""on"" target gets the keywords of the ""to"" target (filter which: state positive / negative)"	buff	given_keyword	28 Oct 2026, v4
+act	remove_keywords	"remove all keywords of a kind from the target (filter in ""to"": state positive / negative)"	debuff		28 Oct 2026, v4
+state	negative	a negative keyword or effect			28 Oct 2026, v4
