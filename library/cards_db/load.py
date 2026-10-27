@@ -5,7 +5,7 @@ import csv, glob, json, os, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from check import Checker, DB
-from build_input import types_of, speed_of, KWFIELD
+from build_input import types_of, speed_of, KWFIELD, excluded
 
 SCHEMA = """
 create table vocab(field text, value text, meaning text, tree text, causes text, added text, primary key(field, value));
@@ -108,9 +108,10 @@ class Loader:
                     else: self.ins('param', effect=eid, param=p, amount=self.amount(a))
 
     def game_data(self, game):
-        lib = sqlite3.connect(DB); self.game = game; self.games.append(game); self.stubs = {}; self.ch = Checker(game); self.types = {}
+        lib = sqlite3.connect(DB); skip = excluded(lib, game); self.skip = skip; self.game = game; self.games.append(game); self.stubs = {}; self.ch = Checker(game); self.types = {}
         for i, n, cat, sub, cost, stats, fac, extra, rar in lib.execute(
                 "select id, name, category, subtypes, cost_num, stats, faction, extra, rarity from entities where game=?", (game,)):
+            if i in skip: continue
             st = json.loads(stats) if stats and stats.startswith('{') else {}
             regs = (json.loads(extra).get('regions') if extra and extra.startswith('{') else None) or ([fac] if fac else [])
             num = lambda *ks: next((float(st[k]) for k in ks if str(st.get(k, '')).lstrip('-').replace('.', '').isdigit()), None)

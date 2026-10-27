@@ -1,0 +1,290 @@
+  card id=751917 game=runeterra name=All-Seeing Oracle category=unit cost=4.0 power=4.0 health=3.0 regions=Ionia rarity=rare is_keyword=0 is_stub=0
+  card_link src=751917 rel=generates dst=797103
+  ability id=1719 card=751917 seq=0 event=1952
+  event id=1952 event=played object=4269
+  target id=4269 pick=self
+  effect id=2454 ability=1719 seq=0 act=choose_card on_target=4270
+  target id=4270 kind=card side=enemy zone=deck
+  filter id=875 target=4270 attr=category op=in val=fast_spell
+  filter id=876 target=4270 attr=category op=in val=slow_spell
+  param effect=2454 param=options amount=1986
+  amount id=1986 x=n value=3.0
+  effect id=2455 ability=1719 seq=1 act=create zone=hand card_ref=797103 link=then
+
+  card id=751162 game=runeterra name=Hibernating Rockbear category=building cost=2.0 regions=Shurima rarity=common is_keyword=0 is_stub=0
+  card_keyword card=751162 keyword=750370
+  card_keyword card=751162 keyword=750372
+  ability id=754 card=751162 seq=0 event=847
+  event id=847 event=countdown_done object=1814
+  target id=1814 pick=self
+  effect id=1011 ability=754 seq=0 act=summon zone=board card_ref=-1026
+
+  card id=750699 game=runeterra name=Ashe category=hero cost=4.0 power=5.0 health=3.0 regions=Freljord rarity=champion is_keyword=0 is_stub=0
+  card_link src=750699 rel=generates dst=796486
+  card_link src=750699 rel=generates dst=796636
+  card_link src=750699 rel=generates dst=796637
+  card_link src=750699 rel=transforms_into dst=796486
+  ability id=223 card=750699 seq=0 event=253
+  event id=253 event=attacks actor=543
+  target id=543 pick=self
+  effect id=281 ability=223 seq=0 act=keyword_action on_target=544 keyword_ref=750414
+  target id=544 kind=unit side=enemy pick=strongest zone=board
+  ability id=224 card=750699 seq=1 event=254
+  event id=254 event=always
+  cond id=42 ability=224 test=event_count op=ge n=276 span=this_game event=255
+  amount id=276 x=n value=5.0
+  event id=255 event=stat_changed actor=545 object=546
+  target id=545 kind=player side=mine
+  target id=546 kind=unit side=enemy
+  filter id=113 target=546 attr=power op=eq n=277
+  amount id=277 x=n value=0.0
+  effect id=282 ability=224 seq=0 act=level_up on_target=547
+  target id=547 pick=self
+  ability id=225 card=750699 seq=2 event=256
+  event id=256 event=levels_up object=548
+  target id=548 pick=self
+  effect id=283 ability=225 seq=0 act=create on_target=549 zone=deck_top card_ref=796636
+  target id=549 kind=card side=mine
+
+  card id=750811 game=runeterra name=Shipwreck Hoarder category=unit cost=7.0 power=7.0 health=5.0 regions=Bilgewater rarity=epic is_keyword=0 is_stub=0
+  card_keyword card=750811 keyword=-1003
+  card_type card=750811 type=19
+  card_link src=750811 rel=generates dst=796657
+  card_link src=750811 rel=generates dst=796658
+  card_link src=750811 rel=generates dst=796659
+  card_link src=750811 rel=generates dst=796660
+  ability id=336 card=750811 seq=0 event=381
+  event id=381 event=summoned object=808
+  target id=808 pick=self
+  effect id=427 ability=336 seq=0 act=keyword_action on_target=809 keyword_ref=750443
+  target id=809 kind=card side=mine pick=random zone=deck
+  param effect=427 param=amount amount=411
+  amount id=411 x=n value=2.0
+  effect id=428 ability=336 seq=1 act=create zone=deck card_ref=-1020 link=and
+  param effect=428 param=amount amount=412
+  amount id=412 x=n value=2.0
+
+  card id=797064 game=runeterra name=Xolaani category=unit cost=6.0 regions=Shurima is_keyword=0 is_stub=0
+  card_keyword card=797064 keyword=750368
+  card_keyword card=797064 keyword=750388
+  card_type card=797064 type=14
+  card_link src=797064 rel=generates dst=751804
+  ability id=2689 card=797064 seq=0 event=2997
+  event id=2997 event=played object=6735
+  target id=6735 pick=self
+  effect id=3981 ability=2689 seq=0 act=kill on_target=6736
+  target id=6736 kind=unit side=mine pick=chosen zone=board
+  ability id=2690 card=797064 seq=1 event=2998
+  event id=2998 event=dies object=6737
+  target id=6737 pick=self
+  effect id=3982 ability=2690 seq=0 act=create zone=hand card_ref=751804
+
+  card id=750908 game=runeterra name=Eye of the Dragon category=unit cost=2.0 power=1.0 health=3.0 regions=Ionia rarity=epic is_keyword=0 is_stub=0
+  card_keyword card=750908 keyword=750398
+  card_keyword card=750908 keyword=750384
+  card_link src=750908 rel=generates dst=796690
+  ability id=451 card=750908 seq=0 event=511
+  event id=511 event=round_start
+  cond id=88 ability=451 test=keyword_condition ref_keyword=750384
+  effect id=578 ability=451 seq=0 act=summon zone=board card_ref=796690
+
+  card id=752095 game=runeterra name=Brynhir Thundersong category=unit cost=3.0 power=3.0 health=3.0 regions=Freljord rarity=epic is_keyword=0 is_stub=0
+  card_link src=752095 rel=generates dst=797204
+  ability id=1960 card=752095 seq=0 event=2220
+  event id=2220 event=played object=4861
+  target id=4861 pick=self
+  effect id=2790 ability=1960 seq=0 act=obliterate on_target=4862
+  target id=4862 kind=card side=mine pick=chosen zone=hand
+  filter id=1010 target=4862 attr=category op=is val=follower
+  effect id=2791 ability=1960 seq=1 act=summon on_target=4863 card_ref=797204 link=if_done
+  target id=4863 kind=unit side=mine
+  effect id=2792 ability=1960 seq=2 act=give_ability on_target=4864 link=and
+  target id=4864 pick=it
+  ability id=1961 seq=0 event=2221 given_by_effect=2792
+  event id=2221 event=countdown_done object=4865
+  target id=4865 pick=self
+  effect id=2793 ability=1961 seq=0 act=copy on_target=4866 zone=board
+  target id=4866 kind=card pick=it
+
+  card id=750744 game=runeterra name=Soul Shepherd category=unit cost=2.0 power=2.0 health=3.0 regions=Shadow Isles rarity=common is_keyword=0 is_stub=0
+  ability id=268 card=750744 seq=0 event=301
+  event id=301 event=summoned actor=642 object=643
+  target id=642 kind=player side=mine
+  target id=643 kind=unit side=mine
+  filter id=140 target=643 attr=state op=is val=ephemeral
+  effect id=335 ability=268 seq=0 act=stat_change on_target=644 lasts=permanent
+  target id=644 pick=it
+  param effect=335 param=power amount=330
+  amount id=330 x=n value=1.0
+  param effect=335 param=health amount=331
+  amount id=331 x=n value=1.0
+
+  card id=796926 game=runeterra name=Bouncing Bomb (created) category=spell cost=3.0 regions=Bandle City is_keyword=0 is_stub=0
+  card_keyword card=796926 keyword=750394
+  ability id=2561 card=796926 seq=0 event=2861
+  event id=2861 event=played object=6358
+  target id=6358 pick=self
+  effect id=3750 ability=2561 seq=0 act=damage on_target=6359
+  target id=6359 kind=unit side=any pick=chosen zone=board
+  param effect=3750 param=amount amount=2920
+  amount id=2920 x=n value=2.0
+
+  card id=751440 game=runeterra name=Inner Beast category=spell speed=burst cost=2.0 regions=Freljord rarity=common is_keyword=0 is_stub=0
+  card_link src=751440 rel=generates dst=796932
+  card_link src=751440 rel=generates dst=796933
+  card_link src=751440 rel=generates dst=796934
+  card_link src=751440 rel=generates dst=796935
+  card_link src=751440 rel=generates dst=796936
+  ability id=1115 card=751440 seq=0 event=1275
+  event id=1275 event=played object=2695
+  target id=2695 pick=self
+  effect id=1513 ability=1115 seq=0 act=stat_change on_target=2696 lasts=this_round
+  target id=2696 kind=unit side=mine pick=chosen zone=board
+  param effect=1513 param=power amount=1248
+  amount id=1248 x=n value=1.0
+  param effect=1513 param=health amount=1249
+  amount id=1249 x=n value=1.0
+  effect id=1514 ability=1115 seq=1 act=create zone=hand card_ref=796932 link=and
+
+  card id=750652 game=runeterra name=Jae Medarda category=unit cost=6.0 power=5.0 health=5.0 regions=Piltover & Zaun rarity=epic is_keyword=0 is_stub=0
+  ability id=176 card=750652 seq=0 event=201
+  event id=201 event=targeted object=432
+  target id=432 pick=self
+  effect id=220 ability=176 seq=0 act=draw on_target=433
+  target id=433 kind=card side=mine zone=deck_top
+  param effect=220 param=amount amount=215
+  amount id=215 x=n value=1.0
+
+  card id=750869 game=runeterra name=Ursine Spiritwalker category=unit cost=5.0 power=4.0 health=6.0 regions=Freljord rarity=common is_keyword=0 is_stub=0
+  card_keyword card=750869 keyword=750401
+  card_link src=750869 rel=generates dst=796678
+  ability id=409 card=750869 seq=0 event=463
+  event id=463 event=played object=974
+  target id=974 pick=self
+  cond id=80 ability=409 test=keyword_condition ref_keyword=750401
+  effect id=524 ability=409 seq=0 act=transform on_target=975 card_ref=796678
+  target id=975 pick=self
+
+  card id=796575 game=runeterra name=Samira (level 2) category=hero cost=2.0 regions=Noxus is_keyword=0 is_stub=0
+  card_keyword card=796575 keyword=750415
+  card_keyword card=796575 keyword=750401
+  card_link src=796575 rel=generates dst=751848
+  card_link src=796575 rel=generates dst=797081
+  card_link src=796575 rel=generates dst=797084
+  ability id=2201 card=796575 seq=0 event=2483
+  event id=2483 event=played object=5452
+  target id=5452 pick=self
+  cond id=553 ability=2201 test=keyword_condition ref_keyword=750401
+  cond id=554 ability=2201 test=have of_target=5453 op=not
+  target id=5453 kind=card side=mine zone=hand
+  filter id=1143 target=5453 attr=card op=is ref_card=797081
+  effect id=3137 ability=2201 seq=0 act=create zone=hand card_ref=797081
+  ability id=2202 card=796575 seq=1 event=2484
+  event id=2484 event=strikes actor=5454
+  target id=5454 pick=self
+  cond id=555 ability=2202 test=have of_target=5455 op=not
+  target id=5455 kind=card side=mine zone=hand
+  filter id=1144 target=5455 attr=card op=is ref_card=797081
+  effect id=3138 ability=2202 seq=0 act=create zone=hand card_ref=797081
+  ability id=2203 card=796575 seq=2 event=2485
+  event id=2485 event=played actor=5456
+  target id=5456 kind=player side=mine
+  cond id=556 ability=2203 test=event_count op=ge n=2535 span=this_game event=2486
+  amount id=2535 x=n value=6.0
+  event id=2486 event=played actor=5457
+  target id=5457 kind=player side=mine
+  effect id=3139 ability=2203 seq=0 act=gain_attack_token on_target=5458
+  target id=5458 kind=player side=mine
+
+  card id=796508 game=runeterra name=Zoe (level 2) category=hero cost=1.0 regions=Targon is_keyword=0 is_stub=0
+  card_keyword card=796508 keyword=750404
+  card_keyword card=796508 keyword=-1001
+  card_link src=796508 rel=generates dst=750960
+  card_link src=796508 rel=generates dst=750986
+  card_link src=796508 rel=generates dst=750988
+  card_link src=796508 rel=generates dst=796742
+  ability id=2067 card=796508 seq=0 event=2339
+  event id=2339 event=levels_up object=5122
+  target id=5122 pick=self
+  effect id=2941 ability=2067 seq=0 act=give_ability on_target=5123
+  target id=5123 kind=player side=mine
+  ability id=2068 seq=0 event=2340 given_by_effect=2941
+  event id=2340 event=summoned object=5124
+  target id=5124 kind=unit side=mine zone=board
+  effect id=2942 ability=2068 seq=0 act=give_keyword on_target=5125 to_target=5126 lasts=permanent
+  target id=5125 kind=unit side=mine pick=all zone=board
+  target id=5126 kind=keyword pick=all
+  ability id=2069 card=796508 seq=1 event=2341
+  event id=2341 event=strikes_nexus actor=5127
+  target id=5127 pick=self
+  effect id=2943 ability=2069 seq=0 act=create zone=hand card_ref=750986
+  effect id=2944 ability=2069 seq=1 act=cost_set on_target=5128 link=and
+  target id=5128 pick=it
+  param effect=2944 param=cost amount=2396
+  amount id=2396 x=n value=0.0
+
+  card id=750797 game=runeterra name=Insightful Investigator category=unit cost=4.0 power=3.0 health=4.0 regions=Piltover & Zaun rarity=rare is_keyword=0 is_stub=0
+  ability id=324 card=750797 seq=0 event=368
+  event id=368 event=played actor=776 object=777
+  target id=776 kind=player side=mine
+  target id=777 kind=card
+  filter id=161 target=777 attr=cost op=eq n=392
+  amount id=392 x=n value=2.0
+  effect id=410 ability=324 seq=0 act=draw on_target=778
+  target id=778 kind=card side=mine zone=deck_top
+  param effect=410 param=amount amount=393
+  amount id=393 x=n value=1.0
+  effect id=411 ability=324 seq=1 act=give_keyword on_target=779 keyword_ref=750378 lasts=permanent link=and
+  target id=779 kind=card side=mine pick=it zone=hand
+
+  card id=751550 game=runeterra name=Petricite Broadwing category=unit cost=2.0 power=0.0 health=3.0 regions=Demacia rarity=rare is_keyword=0 is_stub=0
+  card_keyword card=751550 keyword=750428
+  ability id=1256 card=751550 seq=0 event=1443
+  event id=1443 event=summoned object=3086
+  target id=3086 kind=unit side=mine
+  effect id=1728 ability=1256 seq=0 act=give_keyword on_target=3087 keyword_ref=750431 lasts=permanent
+  target id=3087 pick=self
+
+  card id=750893 game=runeterra name=Concerted Strike category=spell speed=fast cost=5.0 regions=Demacia rarity=common is_keyword=0 is_stub=0
+  ability id=433 card=750893 seq=0 event=489
+  event id=489 event=played object=1024
+  target id=1024 pick=self
+  effect id=553 ability=433 seq=0 act=strike on_target=1025 to_target=1026
+  target id=1025 kind=unit side=mine pick=chosen n=513 zone=board
+  amount id=513 x=n value=2.0
+  target id=1026 kind=unit side=enemy pick=chosen zone=board
+
+  card id=797134 game=runeterra name=Maryam, Temple Caretaker (created) category=unit cost=2.0 regions=Piltover & Zaun is_keyword=0 is_stub=0
+  ability id=2767 card=797134 seq=0 event=3076
+  event id=3076 event=played object=6918
+  target id=6918 pick=self
+  effect id=4086 ability=2767 seq=0 act=keyword_action on_target=6919 keyword_ref=750451
+  target id=6919 kind=card side=mine zone=hand
+  param effect=4086 param=amount amount=3148
+  amount id=3148 x=n value=1.0
+  effect id=4087 ability=2767 seq=1 act=mana_gain on_target=6920 link=if_done
+  target id=6920 kind=spell_mana side=mine
+  param effect=4087 param=amount amount=3149
+  amount id=3149 x=full
+
+  card id=796535 game=runeterra name=Malphite (level 2) category=hero cost=7.0 regions=Targon is_keyword=0 is_stub=0
+  card_keyword card=796535 keyword=750417
+  card_link src=796535 rel=generates dst=751290
+  card_link src=796535 rel=generates dst=796865
+  card_link src=796535 rel=generates dst=796866
+  card_link src=796535 rel=generates dst=796867
+  ability id=2121 card=796535 seq=0 event=2397
+  event id=2397 event=played object=5248
+  target id=5248 pick=self
+  effect id=3025 ability=2121 seq=0 act=stun on_target=5249 lasts=this_round
+  target id=5249 kind=unit side=enemy pick=chosen zone=board
+  ability id=2122 card=796535 seq=1 event=2398
+  event id=2398 event=summoned object=5250
+  target id=5250 pick=self
+  cond id=529 ability=2122 test=attack_token op=is
+  effect id=3026 ability=2122 seq=0 act=create zone=hand card_ref=796865
+  ability id=2123 card=796535 seq=2 event=2399
+  event id=2399 event=round_start
+  cond id=530 ability=2123 test=attack_token op=is
+  effect id=3027 ability=2123 seq=0 act=create zone=hand card_ref=796865
+

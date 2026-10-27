@@ -17,6 +17,9 @@ are the source; `cards.sqlite` is rebuilt from them.
 | `RESULTS.md`, `CHECK_20.md` | What the Runeterra test showed (accuracy, cost, batch size); 20 random cards with their rows |
 | `STATUS.md` | Which batches are done, partial or still to read (made by `status.py <game>` from the files) |
 | `status.py`, `show.py`, `compare.py`, `queries.py` | Progress from the files; cards with their records for checking by eye; first vs second reading; connection queries |
+| `raw.py`, `CHECK_20_RAW.txt` | A card's stored rows exactly as in the database (ids, values, numbers) |
+| `pattern_check.py` | Plain wording (Round Start:, Stun, a named keyword...) must show up somewhere in the card's record |
+| `exclude.tsv`, `excluded/` | Entries left out on purpose (Runeterra: Path of Champions items) and their old records |
 | `rows.py` | A card's rows from `cards.sqlite` as a table with names (what Kaptain checks) |
 | `reread.py`, `normalize.py` | Re-reading chosen records under the current brief (old readings kept in `replaced/`); one canonical form for equal meanings |
 | `second/<game>/` | Independent second reading of a 10% sample, to measure how often readers disagree |
@@ -37,5 +40,5 @@ Nothing about the run lives only in a chat. Everything needed to continue is in 
 5. The reader prompt is in `READER_PROMPT.md`; a new chat uses it unchanged, filling in the batch name.
 6. `reread.py merge` and `normalize.py` run only on batches whose reader has finished (a running reader rewrites a file
    that disappears under it).
-7. Order of work for a game: all batches -> `normalize.py` on all records -> `reread.py make <game> unsure` and read the
+7. Order of work for a game: all batches -> `normalize.py` on all records -> `pattern_check.py` and re-read what it flags -> `reread.py make <game> unsure` and read the
    fix batches -> `reread.py merge` -> `normalize.py` again -> `compare.py` on the second-reading sample -> `load.py`.

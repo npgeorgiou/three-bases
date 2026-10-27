@@ -1,0 +1,371 @@
+[
+{
+"id": 751251,
+"word_check_says_missing": [
+"keyword Fury"
+]
+},
+{
+"id": 751636,
+"word_check_says_missing": [
+"keyword Spirit"
+]
+},
+{
+"id": 751649,
+"word_check_says_missing": [
+"keyword Barrier"
+]
+},
+{
+"id": 751651,
+"word_check_says_missing": [
+"act level_up"
+]
+},
+{
+"id": 751655,
+"word_check_says_missing": [
+"keyword Spirit"
+]
+},
+{
+"id": 752013,
+"word_check_says_missing": [
+"keyword Support"
+]
+},
+{
+"id": 752036,
+"word_check_says_missing": [
+"keyword Titanic"
+]
+},
+{
+"id": 796882,
+"word_check_says_missing": [
+"act return_to_hand"
+]
+},
+{
+"id": 796900,
+"word_check_says_missing": [
+"act return_to_hand"
+]
+},
+{
+"id": 796916,
+"word_check_says_missing": [
+"act return_to_hand"
+]
+},
+{
+"id": 796941,
+"word_check_says_missing": [
+"act return_to_hand"
+]
+},
+{
+"id": 796958,
+"word_check_says_missing": [
+"keyword Flow"
+]
+},
+{
+"id": 750826,
+"word_check_says_missing": [
+"act damage"
+]
+},
+{
+"id": 750830,
+"word_check_says_missing": [
+"act damage"
+]
+},
+{
+"id": 750848,
+"word_check_says_missing": [
+"act kill"
+]
+},
+{
+"id": 750856,
+"word_check_says_missing": [
+"act kill"
+]
+},
+{
+"id": 751373,
+"word_check_says_missing": [
+"act damage"
+]
+},
+{
+"id": 751406,
+"word_check_says_missing": [
+"act return_to_hand"
+]
+},
+{
+"id": 751446,
+"word_check_says_missing": [
+"event attacks"
+]
+},
+{
+"id": 750927,
+"word_check_says_missing": [
+"keyword Sleep"
+]
+},
+{
+"id": 751017,
+"word_check_says_missing": [
+"keyword Barrier"
+]
+},
+{
+"id": 751493,
+"word_check_says_missing": [
+"keyword Trap"
+]
+},
+{
+"id": 751495,
+"word_check_says_missing": [
+"keyword Forge"
+]
+},
+{
+"id": 751507,
+"word_check_says_missing": [
+"keyword Forge"
+]
+},
+{
+"id": 751520,
+"word_check_says_missing": [
+"act damage"
+]
+},
+{
+"id": 751571,
+"word_check_says_missing": [
+"keyword Behold"
+]
+},
+{
+"id": 750552,
+"word_check_says_missing": [
+"act damage"
+]
+},
+{
+"id": 751334,
+"word_check_says_missing": [
+"event round_start"
+]
+},
+{
+"id": 796544,
+"word_check_says_missing": [
+"act damage"
+]
+},
+{
+"id": 796550,
+"word_check_says_missing": [
+"event attacks"
+]
+},
+{
+"id": 796562,
+"word_check_says_missing": [
+"act damage",
+"act kill"
+]
+},
+{
+"id": 796569,
+"word_check_says_missing": [
+"keyword Double Attack"
+]
+},
+{
+"id": 796570,
+"word_check_says_missing": [
+"keyword Spirit"
+]
+},
+{
+"id": 796578,
+"word_check_says_missing": [
+"keyword Ambush",
+"keyword Toss"
+]
+},
+{
+"id": 796490,
+"word_check_says_missing": [
+"act damage"
+]
+},
+{
+"id": 796508,
+"word_check_says_missing": [
+"keyword Behold"
+]
+},
+{
+"id": 796511,
+"word_check_says_missing": [
+"act damage"
+]
+},
+{
+"id": 796516,
+"word_check_says_missing": [
+"keyword Behold"
+]
+},
+{
+"id": 751051,
+"word_check_says_missing": [
+"act summon"
+]
+},
+{
+"id": 751071,
+"word_check_says_missing": [
+"act create"
+]
+},
+{
+"id": 751115,
+"word_check_says_missing": [
+"act create"
+]
+},
+{
+"id": 796982,
+"word_check_says_missing": [
+"act damage"
+]
+},
+{
+"id": 797087,
+"word_check_says_missing": [
+"act kill"
+]
+},
+{
+"id": 750673,
+"word_check_says_missing": [
+"act damage"
+]
+},
+{
+"id": 750769,
+"word_check_says_missing": [
+"act summon"
+]
+},
+{
+"id": 751919,
+"word_check_says_missing": [
+"keyword Ambush"
+]
+},
+{
+"id": 751922,
+"word_check_says_missing": [
+"keyword Ambush"
+]
+},
+{
+"id": 751923,
+"word_check_says_missing": [
+"keyword Ambush"
+]
+},
+{
+"id": 751924,
+"word_check_says_missing": [
+"keyword Ambush"
+]
+},
+{
+"id": 751925,
+"word_check_says_missing": [
+"keyword Ambush"
+]
+},
+{
+"id": 751926,
+"word_check_says_missing": [
+"keyword Ambush"
+]
+},
+{
+"id": 751929,
+"word_check_says_missing": [
+"keyword Ambush"
+]
+},
+{
+"id": 751940,
+"word_check_says_missing": [
+"event attacks",
+"keyword Hallowed"
+]
+},
+{
+"id": 751968,
+"word_check_says_missing": [
+"keyword Fleeting"
+]
+},
+{
+"id": 751974,
+"word_check_says_missing": [
+"act damage"
+]
+},
+{
+"id": 751843,
+"word_check_says_missing": [
+"keyword Trap"
+]
+},
+{
+"id": 751863,
+"word_check_says_missing": [
+"act kill"
+]
+},
+{
+"id": 796650,
+"word_check_says_missing": [
+"act summon"
+]
+},
+{
+"id": 796665,
+"word_check_says_missing": [
+"act kill"
+]
+},
+{
+"id": 751738,
+"word_check_says_missing": [
+"keyword Trap"
+]
+},
+{
+"id": 751780,
+"word_check_says_missing": [
+"act damage"
+]
+}
+]

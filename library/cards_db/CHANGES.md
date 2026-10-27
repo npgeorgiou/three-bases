@@ -25,3 +25,4 @@ Each change: date, what changed, the card that caused it, and which records were
   decided by the keyword's own record; N3 empty values dropped. Vulnerable's record corrected to a status (the enemy can
   challenge it). Applied to all records read so far (575 records changed).
 - 28 Oct 2026: N4 in normalize.py (follower/champion are categories; redundant category unit dropped), from the judged disagreements; queries count a used or given keyword as doing what the keyword's record does.
+- 28 Oct 2026: Path of Champions items excluded (exclude.tsv; 156 entries; their records moved to excluded/). pattern_check.py: plain wording (triggers, verbs, keywords named in the text) must show up in the record; 61 flagged cards re-read as fix_007.

@@ -1,0 +1,15 @@
+{"id": 752118, "name": "Warding Charm", "category": "item", "speed": "", "types": [], "keywords": [], "text": "SpellShield", "names_in_text": ["SpellShield"]}
+{"id": 752124, "name": "Health Potion", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Heal your Nexus equal to my cost.", "names_in_text": []}
+{"id": 752132, "name": "Faulty Blasting Sigil", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Double damage, but cost 1 more", "names_in_text": []}
+{"id": 752136, "name": "Ante Up", "category": "item", "speed": "", "types": [], "keywords": [], "text": "-2 cost and Fleeting", "names_in_text": ["Fleeting"]}
+{"id": 752151, "name": "Mark of Medarda", "category": "item", "speed": "", "types": [], "keywords": [], "text": "-1 Cost and draw 1.", "names_in_text": []}
+{"id": 752199, "name": "Oracle's Lens", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Predict", "names_in_text": ["Predict"]}
+{"id": 752204, "name": "Ardent Censer", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Grant the top ally in your deck +3|+3.", "names_in_text": []}
+{"id": 752223, "name": "Skirmisher's Sabre", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Challenger", "names_in_text": ["Challenger"]}
+{"id": 752236, "name": "Stout Shield", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Give targeted allies Barrier this round.", "names_in_text": ["Barrier"]}
+{"id": 752237, "name": "Serrated Dirk", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Fearsome", "names_in_text": ["Fearsome"]}
+{"id": 752242, "name": "Elixir of Skill", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Draw 1.", "names_in_text": []}
+{"id": 752252, "name": "Quickstrike Blade", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Play: I start a free attack.", "names_in_text": ["Attack", "Play"]}
+{"id": 752278, "name": "Eye of the Aspect", "category": "item", "speed": "", "types": [], "keywords": [], "text": "When I'm destroyed, create a copy of me in hand.", "names_in_text": []}
+{"id": 752294, "name": "Elite's Crest", "category": "item", "speed": "", "types": [], "keywords": [], "text": "+1|+1, Tough and I am an Elite.", "names_in_text": ["Elite", "Tough"]}
+{"id": 752297, "name": "The Mist", "category": "item", "speed": "", "types": [], "keywords": [], "text": "When I'm summoned and Round Start: Summon an Encroaching Mist.", "names_in_text": ["Encroaching Mist", "Round Start"]}

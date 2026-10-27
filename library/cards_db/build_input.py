@@ -19,15 +19,26 @@ def speed_of(subtypes):
     return m.group(1) if m else ''
 
 
+def excluded(c, game):
+    """ids left out of the reading (exclude.tsv: whole editions or sources Kaptain does not want)."""
+    import csv
+    out = set()
+    for r in csv.DictReader(open(os.path.join(HERE, 'exclude.tsv')), delimiter='\t'):
+        if r['game'] == game and r['column'] in ('edition', 'source_type', 'category'):
+            out |= {i for (i,) in c.execute(f"select id from entities where game=? and {r['column']}=?", (game, r['value']))}
+    return out
+
+
 def cards(c, game):
     names = {}
     for i, n, cat in c.execute("select id, name, category from entities where game=?", (game,)):
         if n and len(n) > 2: names.setdefault(n.lower(), n)
     # one pattern for all names, longest first, so each text is scanned once
     pat = re.compile(r'\b(?:' + '|'.join(re.escape(k) for k in sorted(names, key=len, reverse=True)) + r')\b')
-    out = []
+    out = []; skip = excluded(c, game)
     for i, n, cat, sub, t in c.execute("select id, name, category, subtypes, text from entities where game=? and category "
                                         "not in ('keyword','tribe') order by id", (game,)):
+        if i in skip: continue
         t = ' '.join((t or '').split())
         m = KWFIELD.match(t)
         kws = [k.strip() for k in m.group(1).split(',')] if m else []
