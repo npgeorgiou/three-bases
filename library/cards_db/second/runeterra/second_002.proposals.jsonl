@@ -1,0 +1,15 @@
+{"id": 751736, "field": "keyword", "need": "random_keyword"}
+{"id": 751802, "field": "pick", "need": "highest_countdown"}
+{"id": 751832, "field": "keyword", "need": "granted_ability"}
+{"id": 751934, "field": "with", "need": "shares_subtype_with_chosen"}
+{"id": 752066, "field": "test", "need": "keywords_gained_or_held_while_attacking"}
+{"id": 752294, "field": "act", "need": "grant_type"}
+{"id": 796490, "field": "act", "need": "bond"}
+{"id": 796536, "field": "event", "need": "challenges"}
+{"id": 796582, "field": "act", "need": "cast_spell"}
+{"id": 796782, "field": "event", "need": "leaves_combat"}
+{"id": 796807, "field": "with", "need": "targeted_this_round"}
+{"id": 796825, "field": "lasts", "need": "unspecified_duration"}
+{"id": 796826, "field": "lasts", "need": "unspecified_duration"}
+{"id": 796993, "field": "keyword", "need": "own_positive_keywords"}
+{"id": 797097, "field": "act", "need": "ignore_damage_from_allied_spells_skills"}
