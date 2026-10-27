@@ -1,0 +1,15 @@
+{"id": 751896, "field": "act", "need": "cost_set"}
+{"id": 751901, "field": "attr", "need": "different_subtype_than_allies"}
+{"id": 751908, "field": "x", "need": "count_distinct_subtypes"}
+{"id": 751913, "field": "attr", "need": "different_subtype_than_allies"}
+{"id": 751926, "field": "event", "need": "next_block_after_transform"}
+{"id": 751934, "field": "attr", "need": "shares_subtype"}
+{"id": 751936, "field": "test", "need": "ally_has_different_subtype"}
+{"id": 751938, "field": "test", "need": "ally_has_different_subtype"}
+{"id": 751947, "field": "attr", "need": "has_subtype"}
+{"id": 751949, "field": "test", "need": "ally_has_different_subtype"}
+{"id": 751950, "field": "act", "need": "cost_set"}
+{"id": 751955, "field": "event", "need": "next_revive_after_death"}
+{"id": 751975, "field": "attr", "need": "cost_equal_to_spent"}
+{"id": 751981, "field": "act", "need": "grant_ability"}
+{"id": 751985, "field": "attr", "need": "cost_reduced"}
