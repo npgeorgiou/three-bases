@@ -1,0 +1,12 @@
+{"id":750922,"field":"params","need":"cannot_drop_below_1_health"}
+{"id":750930,"field":"event","need":"captures"}
+{"id":750932,"field":"event","need":"next_round_start"}
+{"id":750945,"field":"filter","need":"cost_one_more_than_killed"}
+{"id":750976,"field":"act","need":"activate_effect"}
+{"id":750977,"field":"on","need":"last_spell_played_on_only_me"}
+{"id":750983,"field":"event","need":"next_round_start"}
+{"id":750988,"field":"if","need":"different_names"}
+{"id":751009,"field":"lasts","need":"next_card_only"}
+{"id":751017,"field":"act","need":"make_temporary_buffs_permanent"}
+{"id":751023,"field":"act","need":"chain_support_to_next"}
+{"id":751033,"field":"keyword","need":"random_changing_keyword"}
