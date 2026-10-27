@@ -189,11 +189,15 @@ class Game:
             if s0.startswith('(') or '(same as the unevolved form' in s0: skip.add(i)
             elif DATA.fullmatch(s0.strip(' .;')) and not re.search(r'\b(?:deal|damage|gain|draw|give|summon|destroy|push)', s0): skip.add(i)
             elif re.match(r"traits?: ", s0): skip.add(i); traits.append(s0)  # what the card is, kept as card facts
-            elif kwre is not None and kwre.fullmatch(LABELS.sub('', s0.strip(' .,'))):
+            elif re.match(r"sigils?: ", s0) or (kwre is not None and kwre.fullmatch(LABELS.sub('', s0.strip(' .,')))):
                 skip.add(i)
                 for w in re.split(r"[,.]| and ", LABELS.sub('', s0.strip(' .,'))):
                     w = re.sub(r"[: ]*[+-]?\d+\+?$| x$|\s*\([^)]*\)$", '', w.strip())
                     if w in self.kwid: named.add(self.kwid[w])
+                    else:  # "green mox" is the sigil "mox sigils"
+                        hit = next((i for n, i in self.kwid.items() if re.sub(r"\s*(?:\(sigil\)|sigils?)$", '', n) and
+                                    re.search(rf"\b{re.escape(re.sub(r'\s*(?:\(sigil\)|sigils?)$', '', n))}\b", w) and n.endswith(('sigils', 'sigil'))), None)
+                        if hit: named.add(hit)
         hint = collections.defaultdict(lambda: collections.defaultdict(set))  # sentence -> concept -> hint kinds
         pos = collections.defaultdict(dict)                                    # sentence -> concept -> first position
         role = {}
@@ -361,7 +365,8 @@ class Game:
         uses = [('has_keyword', d) for d in sorted(named)]
         for rel, d in self.links.get(e, []):
             nm = self.kwname.get(d, '')
-            if d not in named and nm and re.search(rf"\b{re.escape(nm)}\b", rt): uses.append((rel, d))  # a link counts only where the text names it
+            base = re.sub(r"\s*(?:\(sigil\)|sigils?)$", '', nm)  # "Mox Sigils" is named on cards as "Green Mox"
+            if d not in named and nm and re.search(rf"\b{re.escape(base)}\b", rt): uses.append((rel, d))  # a link counts only where the text names it
         for rel, d in uses:
             nm = self.kwname.get(d, '')
             for kr in self.kwrows.get(d, []):
