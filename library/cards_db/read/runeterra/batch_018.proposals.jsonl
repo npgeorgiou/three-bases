@@ -1,0 +1,15 @@
+{"id":796629,"field":"with","need":"new_card"}
+{"id":796646,"field":"with","need":"other_than_self"}
+{"id":796650,"field":"with","need":"summoned_this_round"}
+{"id":796656,"field":"with","need":"health_less_than_self"}
+{"id":796658,"field":"params","need":"set_cost_to_value"}
+{"id":796674,"field":"when","need":"delay_to_next_round_start"}
+{"id":796678,"field":"with","need":"other_than_self"}
+{"id":796705,"field":"kind","need":"unit_or_landmark"}
+{"id":796709,"field":"with","need":"other_than_self"}
+{"id":796712,"field":"kind","need":"unit_or_landmark"}
+{"id":796715,"field":"with","need":"other_than_chosen"}
+{"id":796723,"field":"with","need":"different_cards"}
+{"id":796724,"field":"lasts","need":"next_card_only"}
+{"id":796730,"field":"when","need":"delay_to_next_round_start"}
+{"id":796736,"field":"kind","need":"unit_or_landmark"}

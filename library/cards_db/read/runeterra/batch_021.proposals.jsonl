@@ -1,0 +1,8 @@
+{"id": 797005, "field": "keyword", "need": "keywords_of_target"}
+{"id": 797011, "field": "pick", "need": "lowest_health"}
+{"id": 797012, "field": "keyword", "need": "positive_keywords_of_target"}
+{"id": 797017, "field": "params", "need": "min_max_times"}
+{"id": 797027, "field": "keyword", "need": "positive_keywords_of_self"}
+{"id": 797071, "field": "act", "need": "unequip"}
+{"id": 797078, "field": "pick", "need": "fill_attackers"}
+{"id": 797080, "field": "with", "need": "total_power_and_health"}

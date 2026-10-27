@@ -1,0 +1,16 @@
+{"id":796548,"field":"with","need":"power_less_than_self"}
+{"id":796555,"field":"with","need":"other_than_self"}
+{"id":796562,"field":"with","need":"damage_or_kill_spell"}
+{"id":796563,"field":"keyword","need":"random_keyword"}
+{"id":796564,"field":"with","need":"other_than_self"}
+{"id":796567,"field":"pick","need":"lowest_health"}
+{"id":796568,"field":"with","need":"other_than_self"}
+{"id":796571,"field":"act","need":"change_summon_pool"}
+{"id":796573,"field":"with","need":"new_card"}
+{"id":796579,"field":"with","need":"other_than_self"}
+{"id":796580,"field":"act","need":"cannot_drop_below_1_health"}
+{"id":796582,"field":"act","need":"play_card"}
+{"id":796582,"field":"with","need":"other_than_self"}
+{"id":796585,"field":"with","need":"other_than_self"}
+{"id":796598,"field":"with","need":"right_of_named_card"}
+{"id":796600,"field":"with","need":"other_than_chosen"}
