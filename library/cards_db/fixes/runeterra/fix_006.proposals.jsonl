@@ -1,0 +1,8 @@
+{"id":751489,"field":"event","need":"mana_gem_gained"}
+{"id":751576,"field":"with","need":"state negative (negative keyword)"}
+{"id":751866,"field":"params","need":"cant_drop_below_1_health"}
+{"id":751934,"field":"with","need":"shares_type_with (a target)"}
+{"id":796782,"field":"event","need":"leaves_combat"}
+{"id":797054,"field":"with","need":"not_previous_target (another unit)"}
+{"id":797078,"field":"with","need":"state slain_by_you"}
+{"id":797078,"field":"n","need":"free_attack_slots"}

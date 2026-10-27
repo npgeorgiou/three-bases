@@ -1,6 +1,6 @@
 # Reading status: runeterra
 
-Made by `status.py runeterra` from the files. done 30, problems 0, partial 0, todo 0.
+Made by `status.py runeterra` from the files. done 31, problems 0, partial 0, todo 0.
 
 | batch | cards | read | state |
 |---|---|---|---|
@@ -31,6 +31,7 @@ Made by `status.py runeterra` from the files. done 30, problems 0, partial 0, to
 | fix_003 | 77 | 77 | merged |
 | fix_004 | 80 | 80 | merged |
 | fix_005 | 39 | 39 | merged |
+| fix_006 | 19 | 19 | merged |
 | keywords | 104 | 104 | done |
 | second_001 | 109 | 109 | done |
 | second_002 | 110 | 110 | done |
