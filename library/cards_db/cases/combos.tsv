@@ -1,0 +1,24 @@
+id	game	enabler	payoff	why	source
+c01	runeterra	Hecarim	Shark Chariot	attacking with Ephemeral allies revives the Chariot	combos.tsv (library)
+c02	runeterra	Thresh	Kalista	revive the strongest dead champion	combos.tsv (library)
+c03	runeterra	Ezreal	Mystic Shot	Nexus Strike creates Mystic Shot	combos.tsv (library)
+c04	runeterra	Elise	Frenzied Skitterer	spider tribal	combos.tsv (library)
+c05	runeterra	Get Excited!	Jinx	discarding empties the hand for Jinx's level up	combos.tsv (library)
+c06	runeterra	Thresh (level 2)	Kalista (level 2)	summon a champion attacking; Kalista's attack payoff	combos.tsv (library)
+c07	runeterra	Vladimir	Legion Veteran	Vladimir damages allies; Veteran buffs allies that survive damage	Claude, from the texts
+c08	runeterra	Puffcap Peddler	Teemo	Peddler plants Puffcaps; Teemo levels on Puffcaps planted	Claude, from the texts
+c09	runeterra	Atrocity	Lucian	Atrocity kills an ally; Lucian levels on allies dying	Claude, from the texts
+c10	runeterra	Spectral Rider	Soul Shepherd	an Ephemeral ally is summoned; Shepherd buffs it	Claude, from the texts
+c11	runeterra	Twin Disciplines	Lee Sin	playing a spell gives Lee Sin Challenger	Claude, from the texts
+c12	runeterra	Brittle Steel	Ashe	Frostbite sets enemy Power to 0; Ashe levels on that	Claude, from the texts
+c13	runeterra	Gnar	Pokey Stick	Strike creates Pokey Stick	Claude, from the texts
+c14	runeterra	Pokey Stick	Swain (level 2)	non-combat damage to the enemy Nexus stuns	Claude, from the texts
+c15	runeterra	Coin	Jack	refilling mana heals Jack	Claude, from the texts
+c16	runeterra	Culling Strike	Kindred	killing a unit lets Kindred mark	Claude, from the texts
+c17	runeterra	Draven	Spinning Axe	Draven creates Spinning Axes	Claude, from the texts
+c18	runeterra	Vladimir	Braum	damaging Braum makes him survive damage and summon a Poro	Claude, from the texts
+c19	runeterra	Shadow Assassin	Twisted Fate	drawing cards levels Twisted Fate	Claude, from the texts
+c20	runeterra	Mystic Shot	Annie	playing Fast spells levels Annie	Claude, from the texts
+c21	runeterra	Aurelion Sol	The Scourge	Invoked Celestial cards grow The Scourge	Claude, from the texts
+c22	runeterra	Noxian Fervor	Legion Veteran	damaging an ally that survives	Claude, from the texts
+c23	runeterra	Mystic Shot	Lux	playing spells levels Lux	Claude, from the texts

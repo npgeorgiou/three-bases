@@ -1,0 +1,41 @@
+id	kind	question	expected	query
+m01	mechanic	rewards an ally dying (event)	text:\bwhen (?:an?|another|other|your|allied) (?:\w+ )?all(?:y|ies) (?:dies|die)\b|\bwhen (?:an?|another) ally dies	select card from flat_when where event='dies' and obj_side='mine' and coalesce(obj_pick,'')!='self'
+m02	mechanic	cares whether allies died (condition)	text:\b(?:if|once|after) (?:an? |another |\d\+? )?all(?:y|ies) (?:has |have )?died	select card from flat_if where event='dies'
+m03	mechanic	triggers when you play a spell	text:\bwhen you (?:play|cast) (?:a |an |your )?(?:\w+ ){0,2}spell	select card from flat_when where event in ('played','spell_resolves') and actor_side='mine' and (obj_kind='spell' or obj_with like '%spell%')
+m04	mechanic	triggers when you summon an ally	text:\bwhen you summon\b	select card from flat_when where event='summoned' and coalesce(obj_pick,'')!='self' and (actor_side='mine' or obj_side='mine')
+m05	mechanic	kills own units	text:\bkill (?:an? |another |)all(?:y|ies)\b|\bto play me,? kill\b	select card from flat_do where act='kill' and on_side='mine'
+m06	mechanic	stuns	text:\bstuns?\b(?! (?:units?|enemies|allies)\b)(?!ned)	select card from flat_do where act='stun' or (act='cant' and param_event='attacks' and lasts='this_round' and on_side in ('enemy','any'))
+m07	mechanic	frostbites (power to 0)	text:\bfrostbite\b(?!n)	select card from flat_do where act='stat_set' and params like '%power=0%'
+m08	mechanic	recalls units	text:\brecall\b(?!ed)	select card from flat_do where act='return_to_hand'
+m09	mechanic	draws cards	text:\bdraw (?:\d|a |an |\w+ (?:card|champion|unit|spell|follower))|\bdraws? (?:\d|1)	select card from flat_do where act='draw'
+m10	mechanic	creates cards	text:\bcreate\b	select card from flat_do where act in ('create','copy','choose_card') or (act='keyword_action' and keyword_ref in (select id from card where name in ('Invoke','Manifest','Reforge')))
+m11	mechanic	damages the enemy Nexus	text:\b(?:deal|deals) \d+ to (?:the enemy nexus|each player's nexus|both nexuses|all enemies and the enemy nexus|an enemy or the enemy nexus|anything|the enemy nexus and)	select card from flat_do where act in ('damage','excess_damage') and on_kind in ('player','any')
+m12	mechanic	heals	text:\bheals?\b	select card from flat_do where act='heal'
+m13	mechanic	discards	text:\bdiscard\b(?!s from)(?!ed)	select card from flat_do where act='discard'
+m14	mechanic	obliterates	text:\bobliterate\b	select card from flat_do where act='obliterate'
+m15	mechanic	levels up (champion level-up condition)	text:\blevel up:	select card from flat_do where act='level_up'
+m16	mechanic	grants lasting stats	text:\bgrant (?:\w+ ){0,4}\+\d+\|\+\d+	select card from flat_do where act='stat_change' and lasts in ('permanent','while','while_attached','unstated')
+m17	mechanic	gives Barrier (damage prevention)	text:\b(?:give|grant)s? (?:\w+ ){0,5}barrier\b	select card from flat_do where act='negate_damage' and origin='uses_keyword'
+m18	mechanic	Nexus Strike triggers	text:\bnexus strike:	select card from flat_when where event='strikes_nexus'
+m19	mechanic	Last Breath (dies) triggers	text:\blast breath:	select card from flat_when where event='dies' and obj_pick='self'
+m20	mechanic	Round Start triggers	text:\bround start\b	select card from flat_when where event='round_start'
+m21	mechanic	Round End triggers	text:\bround end\b	select card from flat_when where event='round_end'
+m22	mechanic	Attack triggers	text:(?:^|\. )attack:	select card from flat_when where event='attacks'
+m23	mechanic	Overwhelm units deal excess damage	kw:Overwhelm	select card from flat_do where act='excess_damage'
+m24	mechanic	Elusive units can't be blocked by most units	kw:Elusive	select card from flat_do where act='cant' and param_event='blocks'
+m25	mechanic	Ephemeral units die at round end	kw:Ephemeral	select w.card from flat_when w join flat_do d on d.ability=w.ability and d.card=w.card where w.event in ('round_end','strikes') and d.act='kill'
+m26	mechanic	Plunder: needs damage to the enemy Nexus this round	kw:Plunder	select card from flat_if where event='nexus_damaged'
+m27	mechanic	Countdown landmarks	text:\bcountdown \d+:	select card from flat_when where event='countdown_done'
+m28	mechanic	refills or gains mana	text:\brefill\b|\bgain (?:an? |\d )?(?:empty )?mana gem	select card from flat_do where act in ('mana_gain','max_mana_change')
+m29	mechanic	Toss (obliterate own deck)	text:\btoss \d	select card from flat_do where act='obliterate' and on_side='mine' and on_zone in ('deck','deck_bottom')
+m30	mechanic	Rally (attack token)	text:\brally\b	select card from flat_do where act='gain_attack_token'
+m31	mechanic	Predict	text:\bpredict\b	select card from flat_do where act='choose_card' and origin='uses_keyword'
+m32	mechanic	reduces costs	text:\breduce (?:the |its |their )?cost|\bcosts? \d less\b|\bcost (?:\d )?less\b	select card from flat_do where act in ('cost_change','cost_set')
+m33	mechanic	copies cards or spells	text:\b(?:copy|copies)\b	select card from flat_do where act='copy'
+m34	mechanic	Behold (have a card)	text:\bbehold\b	select card from flat_if where test='have'
+m35	mechanic	Daybreak / Nightfall	text:\b(?:daybreak|nightfall):	select card from flat_if where test='first_card'
+m36	mechanic	can't block	text:\bcan'?t block\b	select card from flat_do where act='cant' and param_event='blocks'
+m37	mechanic	summons units	text:\bsummon (?:a|an|\d|two|three|it|me|them|the|that|exact|copies)\b	select card from flat_do where act in ('summon','revive','copy','play_card')
+m38	mechanic	revives	text:\brevive\b	select card from flat_do where act='revive'
+m39	mechanic	silences	text:\bsilence\b	select card from flat_do where act='silence'
+m40	mechanic	shuffles cards into a deck	text:\bshuffle\b|\binto (?:your|the enemy|their) deck\b|\bplace (?:it|that unit|them) into\b	select card from flat_do where on_zone in ('deck','deck_top','deck_bottom') and act in ('shuffle_into_deck','put_on_top','create','copy','move')

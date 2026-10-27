@@ -279,3 +279,21 @@ lasts	unstated	the text does not say how long			28 Oct 2026, v3
 pick	highest	"highest value of the target key ""by"" (an attr)"			28 Oct 2026, v3
 pick	lowest	"lowest value of the target key ""by"" (an attr)"			28 Oct 2026, v3
 param	except	"how many are left out (""obliterate the enemy deck, leaving 3"")"			28 Oct 2026, v3
+keyword	Trap	concept of using or giving this keyword	trap_secret		28 Oct 2026, v3
+keyword	Boon	concept of using or giving this keyword	trap_secret		28 Oct 2026, v3
+keyword	Plant	concept of using or giving this keyword	trap_secret		28 Oct 2026, v3
+keyword	Recall	concept of using or giving this keyword	return_to_hand		28 Oct 2026, v3
+keyword	Obliterate	concept of using or giving this keyword	banish		28 Oct 2026, v3
+keyword	Invoke	concept of using or giving this keyword	selection		28 Oct 2026, v3
+keyword	Manifest	concept of using or giving this keyword	selection		28 Oct 2026, v3
+keyword	Predict	concept of using or giving this keyword	selection		28 Oct 2026, v3
+keyword	Toss	concept of using or giving this keyword	self_mill		28 Oct 2026, v3
+keyword	Nab	concept of using or giving this keyword	steal		28 Oct 2026, v3
+keyword	Rally	concept of using or giving this keyword	extra_turn		28 Oct 2026, v3
+keyword	Frostbite	concept of using or giving this keyword	stat_loss		28 Oct 2026, v3
+keyword	Stun	concept of using or giving this keyword	disable		28 Oct 2026, v3
+keyword	Silence	concept of using or giving this keyword	silence		28 Oct 2026, v3
+keyword	Capture	concept of using or giving this keyword	banish		28 Oct 2026, v3
+keyword	Terrify	concept of using or giving this keyword	mill		28 Oct 2026, v3
+keyword	Blade Dance	concept of using or giving this keyword	attack_now		28 Oct 2026, v3
+keyword	Can't Block	concept of using or giving this keyword	cant_block		28 Oct 2026, v3

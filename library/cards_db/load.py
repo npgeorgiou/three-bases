@@ -88,7 +88,7 @@ class Loader:
                  op=c.get('op'), n=self.amount(c.get('n')), span=c.get('span'), event=self.event(c.get('event')),
                  ref_keyword=self.ref('keyword', c['ref']) if 'ref' in c else None, value=self.amount(c.get('value')))
     def record(self, rec):
-        cid = rec['id']
+        cid = rec['id'] if 'id' in rec else self.ref('keyword', rec['name'])  # a keyword the library lacks, by its name
         if 'trigger' in rec: self.ins('keyword_trigger', keyword=cid, event=self.event(rec['trigger']))
         for c in rec.get('condition', []): self.cond(c, keyword=cid)
         for f in rec.get('unsure', []): self.ins('unsure', card=cid, field=f)
@@ -150,6 +150,7 @@ def main():
             for line in open(f):
                 if line.strip(): L.record(json.loads(line)); n += 1
         print(game, n, 'records loaded')
+    import flat; flat.build(out)  # the query layer: general rows with keywords expanded and concepts
     out.commit()
 
 

@@ -33,7 +33,7 @@ class Names:
 
 
 SHAPES = {
-    'card': {'id', 'abilities', 'unsure', 'trigger', 'condition'},
+    'card': {'id', 'name', 'abilities', 'unsure', 'trigger', 'condition'},
     'ability': {'when', 'limit', 'if', 'do'},
     'event': {'event', 'actor', 'object'},
     'target': {'kind', 'side', 'pick', 'n', 'zone', 'with', 'by'},

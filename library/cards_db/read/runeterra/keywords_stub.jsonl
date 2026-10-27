@@ -1,0 +1,1 @@
+{"name":"Can't Block","abilities":[{"when":{"event":"always"},"do":[{"act":"cant","on":{"pick":"self"},"params":{"event":"blocks"},"lasts":"while"}]}]}
