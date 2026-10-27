@@ -1,6 +1,6 @@
 # Card database (what cards do, as a network)
 
-Start here for a new game: GUIDE.md. What Runeterra showed: RESULTS.md. Example questions: QUERIES.md.
+Start here: HANDOFF.md. For a new game: GUIDE.md. What Runeterra showed: RESULTS.md. Example questions: QUERIES.md.
 
 Each card is described as abilities: an event (when), conditions (if) and effects (do). Every field is a value from
 `vocab.tsv`, a number, or a link (id) to another card, keyword or type. No free text. The reader records in `read/<game>/`
@@ -17,17 +17,19 @@ are the source; `cards.sqlite` is rebuilt from them.
 | `connections.py` | How one card sets off another (event, made card, zone, keyword or type asked for) |
 | `cases/` | Case tests: mechanics.tsv, combos.tsv, regions.tsv, run.py, REPORT.md, DROPPED.md (cases dropped and why) |
 | `GUIDE.md`, `RESULTS.md`, `QUERIES.md`, `examples.py` | How to do the next game; the Runeterra findings; example queries with real answers |
+| `HANDOFF.md` | Where the work stands and what is open (read first in a new chat) |
 | `input/<game>/` | Reader input batches |
 | `read/<game>/` | Reader output: one JSON record per card (the source of truth), plus proposals for new values |
 | `CHANGES.md` | Every change to the shapes or values, with the card that caused it |
-| `RESULTS.md`, `CHECK_20.md` | What the Runeterra test showed (accuracy, cost, batch size); 20 random cards with their rows |
+| `CHECK_20.md` | 19 random cards with their rows, names put back (for Kaptain's check) |
 | `STATUS.md` | Which batches are done, partial or still to read (made by `status.py <game>` from the files) |
-| `status.py`, `show.py`, `compare.py`, `queries.py` | Progress from the files; cards with their records for checking by eye; first vs second reading; connection queries |
+| `status.py`, `show.py`, `compare.py` | Progress from the files; cards with their records for checking by eye; first vs second reading |
 | `raw.py`, `CHECK_20_RAW.txt` | A card's stored rows exactly as in the database (ids, values, numbers) |
 | `pattern_check.py` | Plain wording (Round Start:, Stun, a named keyword...) must show up somewhere in the card's record |
 | `exclude.tsv`, `excluded/` | Entries left out on purpose (Runeterra: Path of Champions items) and their old records |
 | `rows.py` | A card's rows from `cards.sqlite` as a table with names (what Kaptain checks) |
 | `reread.py`, `normalize.py` | Re-reading chosen records under the current brief (old readings kept in `replaced/`); one canonical form for equal meanings |
+| `fixes/`, `replaced/` | Re-read batches after merging; the old readings they replaced |
 | `second/<game>/` | Independent second reading of a 10% sample, to measure how often readers disagree |
 
 Tables in `cards.sqlite`: card, type, card_type, card_keyword, card_link (levels into, generates), ability (given_by_effect
