@@ -1,0 +1,5 @@
+{"id": 796772, "field": "act", "need": "swap_stats"}
+{"id": 796773, "field": "act", "need": "share_keywords"}
+{"id": 796782, "field": "event", "need": "leaves_combat"}
+{"id": 796832, "field": "keyword", "need": "buff_choice"}
+{"id": 796844, "field": "act", "need": "set_level"}
