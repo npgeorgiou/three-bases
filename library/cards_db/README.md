@@ -47,6 +47,6 @@ Nothing about the run lives only in a chat. Everything needed to continue is in 
 5. The reader prompt is in `READER_PROMPT.md`; a new chat uses it unchanged, filling in the batch name.
 6. `reread.py merge` and `normalize.py` run only on batches whose reader has finished (a running reader rewrites a file
    that disappears under it).
-8. After every rebuild: `cases/run.py <game>` must pass; `examples.py` refreshes QUERIES.md.
 7. Order of work for a game: all batches -> `normalize.py` on all records -> `pattern_check.py` and re-read what it flags -> `reread.py make <game> unsure` and read the
    fix batches -> `reread.py merge` -> `normalize.py` again -> `compare.py` on the second-reading sample -> `load.py`.
+8. After every rebuild: `cases/run.py <game>` must pass; `examples.py` refreshes QUERIES.md.
