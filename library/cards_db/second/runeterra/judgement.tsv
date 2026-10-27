@@ -1,0 +1,89 @@
+id	name	verdict	note
+750779	Shark Chariot	both_wrong	FIRST lacks next-time limit (fires every time); SECOND drops reviving attacking
+750781	Ethereal Remitter	second_wrong	summoned follower lacks the cost +2 filter
+750837	Black Market Merchant	same	Nab target as enemy deck card vs player
+750852	Riptide	same	unconditional stun plus conditional place vs two conditional abilities
+750894	Sap Magic	same	Toss target as deck cards vs player
+750928	Bayou Brunch	same	stat gainer repeated as chosen vs actor
+750930	Tahm Kench	second_wrong	level-up counts units currently captured, not units I captured
+750944	Divergent Paths	same	or link without choose_one vs choose_one; landmark as kind vs category
+750952	Targon's Peak	first_wrong	cost_change by 0 instead of reducing cost to 0
+750958	Starshaping	first_wrong	Invoke target taken from hand instead of created into hand
+750992	Tyari the Traveler	second_wrong	Support triggers on play instead of attack
+751023	Mountain Sojourners	second_wrong	Support triggers on play instead of attack
+751030	Sleepy Trouble Bubble	same	Fleeting as separate give_keyword vs on create
+751050	Gluttony	second_wrong	summoned follower chosen and lacks the cost +1 filter
+751064	Whimsy!	same	follower as state vs category
+751075	Fuzzy Caretaker	second_wrong	wrong triggers: given_keyword for being supported, played for Support
+751081	Strafing Strike	same	target repeated vs pick it
+751083	Dragonguard Lookout	second_wrong	Behold limited to hand (Behold also counts board)
+751100	Voices of the Old Ones	second_wrong	the rest placed as 'it' (the drawn cards) instead of the remaining cards
+751133	Defiant Dance	same	Recall as return_to_hand vs keyword_action; Blade Dance target omitted vs player
+751135	Scattered Pod	first_wrong	drawn spell is chosen instead of drawn
+751142	Lead and Follow	same	Recall as return_to_hand vs keyword_action
+751144	Shadows of the Past	same	Recall as return_to_hand vs keyword_action
+751184	Arise!	same	Fleeting as separate give_keyword vs on create
+751200	Nasus	same	level-up as strike event count vs strike trigger with power check
+751233	Stoneweaving	both_wrong	neither limits to a landmark you can afford
+751278	Lamb's Respite	same	target repeated vs pick it
+751352	Bouncing Bomb	same	choose_one with target vs without
+751489	Avatar of the Tides	both_wrong	both refill only 1 spell mana, not the whole spell mana, with no mana-gem trigger
+751519	Mistkeepers	same	Ephemeral as separate give_keyword vs on summon
+751573	The Winding Light	same	target repeated vs pick it
+751576	Mikhael's Blessing	both_wrong	FIRST removes keywords without the negative filter; SECOND removes them unattached to the ally
+751589	Bandle Tellstones	same	Fleeting as state filter vs on create; choose_one target
+751610	Discreet Invitation	same	Fleeting as state filter vs on create; then vs and link
+751611	Scavenged Camocloaker	second_wrong	gives Nexus Strike keyword without the Draw 1 effect
+751626	Buhru Lookout	same	Spawn target as unit vs player
+751647	Royal Decree	same	choose_one target; summon zone shown vs omitted
+751651	Allure	same	summoned Husk with side/zone vs bare
+751652	Gwen	second_wrong	Power copy fires on any ally stat change, not from Hallowed; level-up counts health not damage
+751704	Ornn	second_wrong	attaches the ally's equipment itself instead of a copy
+751728	The Darkin Staff	same	alternate cost as transform param on play vs activated spend
+751736	Skrappy's Partsapalooza	both_wrong	FIRST filters Yordle not Mecha Yordle; SECOND drops the random keyword
+751744	The Darkin Fan	first_wrong	Dragonling not summoned attacking
+751749	Master Yi	second_wrong	level-up condition has no amount (Master Yi damage missing)
+751755	Entrancing Lure	second_wrong	draw lacks the Equipped condition
+751802	Rockbear Shepherd	second_wrong	includes self as another ally; strongest instead of highest Countdown
+751804	The Darkin Bloodletters	second_wrong	Last Breath on the equipment dying instead of the bearer
+751810	The Darkin Aegis	same	alternate cost as spend on play vs activated negative mana_gain
+751811	Vayne	same	chosen Tumble vs unspecified pick
+751818	Tempting Prospect	second_wrong	pick not limited to the top 4 cards; shuffles whole deck
+751819	Bloodcursed Harpy	both_wrong	neither replaces the death (no instead): heal after dying
+751832	Blades of the Fallen	second_wrong	gives Last Breath keyword without the summon effect
+751853	Daring Demolisher	same	choose_one target vs none
+751865	Father Fury	same	created spell with side/zone vs bare
+751866	Prize Fight	both_wrong	FIRST bars dying for in-combat units this round; SECOND negates 1 damage; neither floors Health at 1 for this strike
+751899	Altar to Unity	same	lasts omitted vs permanent
+751934	Ingvar the Younger	both_wrong	neither limits to allies or followers sharing a subtype
+751956	Lonely Chimeslime	second_wrong	another-ally trigger includes self, double firing on own death
+751993	Exalted Cloudwinder	same	delayed draw as given ability vs draw lasting next_round
+752066	Lux: Illuminated	second_wrong	level-up counts only keywords gained while attacking, not attacked with
+752093	Steel Gale	same	delayed stun as given ability vs stun lasting next_round
+752132	Faulty Blasting Sigil	same	played trigger with permanent vs static while
+752204	Ardent Censer	same	ally as card category unit vs kind unit
+752294	Elite's Crest	second_wrong	Elite given as keyword instead of type
+796490	Kalista (level 2)	second_wrong	revived copy not attacking; damage-taking bond missing (only mark)
+796492	Vi (level 2)	same	count ge 1 vs have
+796536	Jarvan IV (level 2)	second_wrong	Barrier on blocking instead of on challenging
+796557	Jayce (other form)	same	repeat with effect param vs bare; choose_one target
+796573	Seraphine (level 2)	second_wrong	drops the 'new' filter on both abilities
+796574	Vayne (level 2)	same	stat_set cost 0 vs cost reduced by own cost
+796582	Volibear (level 2)	both_wrong	FIRST may hit the Nexus while enemies exist; SECOND lacks the Nexus fallback
+796674	Twisted Fate's Pick a Card	same	delayed draw as given ability vs draw lasting next_round
+796692	Return	same	ally as kind unit vs card category unit
+796729	Calibrum	same	Phase choice as card filter vs choose_one
+796759	Help, Pix!	both_wrong	FIRST Barrier permanent; SECOND Vulnerable not this round
+796782	Blade	both_wrong	FIRST obliterates always; SECOND on leaving play, not leaving combat
+796805	Ascended's Call	same	two level_ups vs one with a card list
+796807	Akshan's Grappling Hook	both_wrong	FIRST misses creating Akshan; SECOND misses the targeted-this-round filter
+796817	Relic of Power (created)	same	Predict target omitted vs player
+796852	Lissandra's Entomb	both_wrong	neither stores the obliterated unit inside the Frozen Tomb
+796894	Ziggs' Bouncing Bomb	same	choose_one target vs none; side any vs omitted
+796981	Molten Shield (created)	same	target repeated vs pick it; otherwise vs instead link
+796993	Desperate Husk	second_wrong	granted keywords unnamed (Challenger missing)
+797054	Seraphine's High Note	both_wrong	both miss 'new' and 'other' spells and 'another' unit
+797078	Taarosh	both_wrong	FIRST revives one, side mine only; SECOND counts attackers instead of filling free slots
+797097	Thrall Bulwark	second_wrong	negates all damage, not only from allied spells or Skills
+797116	Aurora Hallunatis's Ambush	same	chosen vs unspecified Shadow in the Brush
+797204	Stormcarved Spire	same	stored unit as attached vs removed zone

@@ -1,0 +1,78 @@
+[
+{
+"id": 750779,
+"what_was_wrong": "FIRST lacks next-time limit (fires every time); SECOND drops reviving attacking"
+},
+{
+"id": 750952,
+"what_was_wrong": "cost_change by 0 instead of reducing cost to 0"
+},
+{
+"id": 750958,
+"what_was_wrong": "Invoke target taken from hand instead of created into hand"
+},
+{
+"id": 751135,
+"what_was_wrong": "drawn spell is chosen instead of drawn"
+},
+{
+"id": 751233,
+"what_was_wrong": "neither limits to a landmark you can afford"
+},
+{
+"id": 751489,
+"what_was_wrong": "both refill only 1 spell mana, not the whole spell mana, with no mana-gem trigger"
+},
+{
+"id": 751576,
+"what_was_wrong": "FIRST removes keywords without the negative filter; SECOND removes them unattached to the ally"
+},
+{
+"id": 751736,
+"what_was_wrong": "FIRST filters Yordle not Mecha Yordle; SECOND drops the random keyword"
+},
+{
+"id": 751744,
+"what_was_wrong": "Dragonling not summoned attacking"
+},
+{
+"id": 751819,
+"what_was_wrong": "neither replaces the death (no instead): heal after dying"
+},
+{
+"id": 751866,
+"what_was_wrong": "FIRST bars dying for in-combat units this round; SECOND negates 1 damage; neither floors Health at 1 for this strike"
+},
+{
+"id": 751934,
+"what_was_wrong": "neither limits to allies or followers sharing a subtype"
+},
+{
+"id": 796582,
+"what_was_wrong": "FIRST may hit the Nexus while enemies exist; SECOND lacks the Nexus fallback"
+},
+{
+"id": 796759,
+"what_was_wrong": "FIRST Barrier permanent; SECOND Vulnerable not this round"
+},
+{
+"id": 796782,
+"what_was_wrong": "FIRST obliterates always; SECOND on leaving play, not leaving combat"
+},
+{
+"id": 796807,
+"what_was_wrong": "FIRST misses creating Akshan; SECOND misses the targeted-this-round filter"
+},
+{
+"id": 796852,
+"what_was_wrong": "neither stores the obliterated unit inside the Frozen Tomb"
+},
+{
+"id": 797054,
+"what_was_wrong": "both miss 'new' and 'other' spells and 'another' unit"
+},
+{
+"id": 797078,
+"what_was_wrong": "FIRST revives one, side mine only; SECOND counts attackers instead of filling free slots"
+}
+]

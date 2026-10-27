@@ -4,6 +4,7 @@ and second readings). Safe to run any number of times. Each rule is listed in CH
   N2 a keyword used on a target is keyword_action when the keyword's own record is an action (an "activated" ability),
      and give_keyword when it is a status the target then has (Frostbite, Stun-like keywords given "this round").
   N3 null values and empty lists/objects are dropped.
+  N4 "follower" and "champion" are categories, not states; a category filter "unit" on a target of kind unit is dropped.
 Usage: normalize.py <game> <file.jsonl> [...]   rewrites the files in place, prints how many records changed."""
 import json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -21,6 +22,20 @@ def clean(x):
     if isinstance(x, dict): return {k: clean(v) for k, v in x.items() if v is not None and (k == 'abilities' or (v != [] and v != {}))}
     if isinstance(x, list): return [clean(v) for v in x]
     return x
+
+def fix_filters(x):
+    if isinstance(x, dict):
+        if isinstance(x.get('with'), list):
+            w = []
+            for f in x['with']:
+                if f.get('attr') == 'state' and f.get('val') in ('follower', 'champion'): f['attr'] = 'category'
+                if f.get('attr') == 'category' and f.get('val') == 'unit' and f.get('op') == 'is' and x.get('kind') == 'unit': continue
+                w.append(f)
+            x['with'] = w
+            if not w: x.pop('with')
+        for v in x.values(): fix_filters(v)
+    elif isinstance(x, list):
+        for v in x: fix_filters(v)
 
 def fix_effect(e, kinds):
     act = e.get('act')
@@ -42,6 +57,7 @@ def main():
         for r in L:
             r2 = clean(json.loads(json.dumps(r)))
             for ab in r2.get('abilities', []): fix_ability(ab, kinds)
+            fix_filters(r2)
             n += r2 != r; out.append(r2)
         open(path, 'w').write(''.join(json.dumps(r, separators=(',', ':')) + '\n' for r in out))
         print(f'{os.path.basename(path)}: {n} of {len(L)} records changed')

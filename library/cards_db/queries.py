@@ -18,9 +18,13 @@ def target(tid):
 def results():
     """(card, ability, effect, act, event, kind, side, pick, via card) for every effect, including effects of cards it creates."""
     out = []
-    for cid, aid, eid, act, on, ref in c.execute('select a.card, a.id, e.id, e.act, e.on_target, e.card_ref from effect e join ability a on a.id=e.ability'):
+    for cid, aid, eid, act, on, ref, kw in c.execute('select a.card, a.id, e.id, e.act, e.on_target, e.card_ref, e.keyword_ref from effect e join ability a on a.id=e.ability'):
         k, s, p = target(on)
-        for (ev,) in c.execute('select event from causes where act=?', (act,)): out.append((cid, aid, eid, act, ev, k, s, p, cid))
+        acts = [act]
+        if act in ('keyword_action', 'give_keyword') and kw:  # a keyword used or given causes what the keyword's own record does
+            acts += [a for (a,) in c.execute('select e2.act from effect e2 join ability a2 on a2.id=e2.ability where a2.card=?', (kw,))]
+        for a in acts:
+            for (ev,) in c.execute('select event from causes where act=?', (a,)): out.append((cid, aid, eid, a, ev, k, s, p, cid))
         if ref and act in ('create', 'summon'):
             for cid2, aid2, eid2, act2, on2 in c.execute('select a.card, a.id, e.id, e.act, e.on_target from effect e join ability a on a.id=e.ability where a.card=?', (ref,)):
                 k2, s2, p2 = target(on2)
