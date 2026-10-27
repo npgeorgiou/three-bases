@@ -1,5 +1,12 @@
 # Tagging per effect
 
+## Reading test: Runeterra (agreed with Kaptain, 27 Oct 2026, evening)
+- Runeterra is read completely, by reading, in a table of fixed values (no free text), keywords described once by their effect
+  and inherited by every card, created cards, keywords and tribes as links to their entries.
+- The table and its value lists are made perfect gradually while reading: when a card does not fit, the table or a list is
+  changed then (new value, new column, clearer meaning), the change is written down with the card that caused it, and the
+  cards already read that it touches are corrected before reading on.
+
 ## Instructions for the next chat (26 Oct 2026, evening): a library that describes cards
 Read this section only; the sections below it are the earlier test and its history.
 
