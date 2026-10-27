@@ -1,0 +1,16 @@
+{"id": 796582, "field": "pick", "need": "different_random"}
+{"id": 796598, "field": "attr", "need": "right_of_card"}
+{"id": 796723, "field": "with", "need": "different_names"}
+{"id": 796881, "field": "act", "need": "shuffle_stats"}
+{"id": 796887, "field": "pick", "need": "all_copies_of_it"}
+{"id": 796888, "field": "pick", "need": "all_copies_of_it"}
+{"id": 796941, "field": "state", "need": "recalled_this_game"}
+{"id": 797005, "field": "keyword", "need": "copy_all_keywords"}
+{"id": 797011, "field": "with", "need": "keywords_of_holder"}
+{"id": 797012, "field": "keyword", "need": "copy_positive_keywords"}
+{"id": 797017, "field": "x", "need": "clamp_min_max"}
+{"id": 797027, "field": "keyword", "need": "copy_positive_keywords"}
+{"id": 797071, "field": "act", "need": "unequip"}
+{"id": 797078, "field": "n", "need": "open_attack_slots"}
+{"id": 797078, "field": "with", "need": "slain_by_you_this_game"}
+{"id": 797080, "field": "with", "need": "total_power_and_health"}
