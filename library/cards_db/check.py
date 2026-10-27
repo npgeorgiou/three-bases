@@ -36,10 +36,10 @@ SHAPES = {
     'card': {'id', 'abilities', 'unsure', 'trigger', 'condition'},
     'ability': {'when', 'limit', 'if', 'do'},
     'event': {'event', 'actor', 'object'},
-    'target': {'kind', 'side', 'pick', 'n', 'zone', 'with'},
+    'target': {'kind', 'side', 'pick', 'n', 'zone', 'with', 'by'},
     'filter': {'attr', 'op', 'n', 'ref', 'val', 'vals', 'refs'},
     'cond': {'test', 'of', 'attr', 'op', 'n', 'span', 'event', 'ref', 'value'},
-    'effect': {'act', 'on', 'to', 'zone', 'card', 'keyword', 'params', 'lasts', 'link'},
+    'effect': {'act', 'on', 'to', 'zone', 'card', 'keyword', 'params', 'lasts', 'link', 'ability', 'type'},
     'amount': {'x', 'of', 'attr', 'event', 'span', 'inner', 'items'},
 }
 NEEDS_LASTS = {'stat_change', 'give_keyword', 'cant', 'can', 'cost_change'}
@@ -78,18 +78,20 @@ class Checker:
         for f in ('kind', 'side', 'pick', 'zone'):
             if f in t: self.enum(cid, f'{path}.{f}', f, t[f])
         if 'n' in t: self.amount(cid, path + '.n', t['n'])
+        if 'by' in t: self.enum(cid, path + '.by', 'attr', t['by'])
         for k, f in enumerate(t.get('with', [])): self.filt(cid, f'{path}.with[{k}]', f)
     def filt(self, cid, path, f):
         if not self.keys(cid, path, 'filter', f): return
         a = f.get('attr'); self.enum(cid, path + '.attr', 'attr', a); self.enum(cid, path + '.op', 'op', f.get('op'))
         if a in ('keyword', 'type', 'card'):
             for r in (f['refs'] if 'refs' in f else [f.get('ref')]): self.link(cid, path + '.ref', a, r)
-        elif a in ('state', 'category', 'region', 'origin'):
+        elif a in ('state', 'category', 'region', 'origin', 'rarity'):
             for x in (f['vals'] if 'vals' in f else [f.get('val')]): self.enum(cid, path + '.val', 'state' if a == 'origin' else a, x)
         elif a == 'name_has':
             if not isinstance(f.get('ref'), str) or not f['ref'].strip(): self.err(cid, path + '.ref', 'name word expected')
-        elif a in ('power', 'health', 'cost', 'count', 'base_power', 'base_health'):
-            if not isinstance(f.get('n'), (int, float)): self.err(cid, path + '.n', 'number expected')
+        elif a in ('power', 'health', 'cost', 'count', 'base_power', 'base_health', 'damage', 'countdown'):
+            if 'n' not in f: self.err(cid, path + '.n', 'number or amount expected')
+            else: self.amount(cid, path + '.n', f['n'])
     def event(self, cid, path, e):
         if not self.keys(cid, path, 'event', e): return
         self.enum(cid, path + '.event', 'event', e.get('event'))
@@ -114,6 +116,8 @@ class Checker:
         if 'zone' in e: self.enum(cid, path + '.zone', 'zone', e['zone'])
         if 'card' in e: self.link(cid, path + '.card', 'card', e['card'])
         if 'keyword' in e: self.link(cid, path + '.keyword', 'keyword', e['keyword'])
+        if 'type' in e: self.link(cid, path + '.type', 'type', e['type'])
+        if 'ability' in e: self.ability(cid, path + '.ability', e['ability'])
         for p, a in (e.get('params') or {}).items():
             if p == 'event': self.enum(cid, f'{path}.params.event', 'event', a)
             elif p == 'attr': self.enum(cid, f'{path}.params.attr', 'attr', a)
@@ -128,15 +132,15 @@ class Checker:
         if not isinstance(rec.get('abilities'), list): self.err(cid, 'abilities', 'list expected'); return
         if 'trigger' in rec: self.event(cid, 'trigger', rec['trigger'])
         for j, c in enumerate(rec.get('condition', [])): self.cond(cid, f'condition[{j}]', c)
-        for k, ab in enumerate(rec['abilities']):
-            p = f'abilities[{k}]'
-            if not self.keys(cid, p, 'ability', ab): continue
-            if 'when' not in ab: self.err(cid, p, 'when missing')
-            else: self.event(cid, p + '.when', ab['when'])
-            if 'limit' in ab: self.enum(cid, p + '.limit', 'limit', ab['limit'])
-            for j, c in enumerate(ab.get('if', [])): self.cond(cid, f'{p}.if[{j}]', c)
-            if not ab.get('do'): self.err(cid, p, 'do missing')
-            for j, e in enumerate(ab.get('do', [])): self.effect(cid, f'{p}.do[{j}]', e, j == 0)
+        for k, ab in enumerate(rec['abilities']): self.ability(cid, f'abilities[{k}]', ab)
+    def ability(self, cid, p, ab):
+        if not self.keys(cid, p, 'ability', ab): return
+        if 'when' not in ab: self.err(cid, p, 'when missing')
+        else: self.event(cid, p + '.when', ab['when'])
+        if 'limit' in ab: self.enum(cid, p + '.limit', 'limit', ab['limit'])
+        for j, c in enumerate(ab.get('if', [])): self.cond(cid, f'{p}.if[{j}]', c)
+        if not ab.get('do'): self.err(cid, p, 'do missing')
+        for j, e in enumerate(ab.get('do', [])): self.effect(cid, f'{p}.do[{j}]', e, j == 0)
 
 
 def main():

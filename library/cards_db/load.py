@@ -16,18 +16,18 @@ create table card_type(card integer, type integer);
 create table card_keyword(card integer, keyword integer);
 create table card_link(src integer, rel text, dst integer);
 create table event(id integer primary key, event text, actor integer, object integer);
-create table target(id integer primary key, kind text, side text, pick text, n integer, zone text);
-create table filter(id integer primary key, target integer, attr text, op text, n real, ref_card integer, ref_keyword integer,
+create table target(id integer primary key, kind text, side text, pick text, n integer, zone text, by_attr text);
+create table filter(id integer primary key, target integer, attr text, op text, n integer, ref_card integer, ref_keyword integer,
   ref_type integer, ref_word integer, val text);
 create table amount(id integer primary key, x text, value real, of_target integer, attr text, event integer, span text,
   inner integer);
 create table amount_item(amount integer, item integer);
-create table ability(id integer primary key, card integer, seq integer, event integer, lim text);
+create table ability(id integer primary key, card integer, seq integer, event integer, lim text, given_by_effect integer);
 create table cond(id integer primary key, ability integer, keyword integer, test text, of_target integer, attr text, op text,
   n integer, span text, event integer, ref_keyword integer, value integer);
 create table keyword_trigger(keyword integer primary key, event integer);
 create table effect(id integer primary key, ability integer, seq integer, act text, on_target integer, to_target integer,
-  zone text, card_ref integer, keyword_ref integer, lasts text, link text);
+  zone text, card_ref integer, keyword_ref integer, type_ref integer, lasts text, link text);
 create table param(effect integer, param text, amount integer, value text);
 create table unsure(card integer, field text);
 create table name_part(id integer primary key, game text, word text);
@@ -67,7 +67,8 @@ class Loader:
         return aid
     def target(self, t):
         if t is None: return None
-        tid = self.ins('target', kind=t.get('kind'), side=t.get('side'), pick=t.get('pick'), n=self.amount(t.get('n')), zone=t.get('zone'))
+        tid = self.ins('target', kind=t.get('kind'), side=t.get('side'), pick=t.get('pick'), n=self.amount(t.get('n')), zone=t.get('zone'),
+                       by_attr=t.get('by'))
         for f in t.get('with', []):
             a = f.get('attr')
             for one in (f['refs'] if 'refs' in f else f['vals'] if 'vals' in f else [f.get('ref', f.get('val'))]):
@@ -75,7 +76,7 @@ class Loader:
                 if a in ('keyword', 'type', 'card'): row['ref_' + a] = self.ref(a, one)
                 elif a == 'name_has': row['ref_word'] = self.word(one)
                 elif one is not None: row['val'] = one
-                if 'n' in f: row['n'] = f['n']
+                if 'n' in f: row['n'] = self.amount(f['n'])  # filter n is an amount id (a number or an expression)
                 if f.get('op') == 'in': row['op'] = 'in'
                 self.ins('filter', **row)
         return tid
@@ -91,13 +92,17 @@ class Loader:
         if 'trigger' in rec: self.ins('keyword_trigger', keyword=cid, event=self.event(rec['trigger']))
         for c in rec.get('condition', []): self.cond(c, keyword=cid)
         for f in rec.get('unsure', []): self.ins('unsure', card=cid, field=f)
-        for k, ab in enumerate(rec['abilities']):
-            aid = self.ins('ability', card=cid, seq=k, event=self.event(ab['when']), lim=ab.get('limit'))
+        for k, ab in enumerate(rec['abilities']): self.ability(cid, k, ab)
+
+    def ability(self, cid, k, ab, given_by=None):
+            aid = self.ins('ability', card=cid, seq=k, event=self.event(ab['when']), lim=ab.get('limit'), given_by_effect=given_by)
             for c in ab.get('if', []): self.cond(c, ability=aid)
             for j, e in enumerate(ab['do']):
                 eid = self.ins('effect', ability=aid, seq=j, act=e['act'], on_target=self.target(e.get('on')), to_target=self.target(e.get('to')),
                                zone=e.get('zone'), card_ref=self.ref('card', e['card']) if 'card' in e else None,
-                               keyword_ref=self.ref('keyword', e['keyword']) if 'keyword' in e else None, lasts=e.get('lasts'), link=e.get('link'))
+                               keyword_ref=self.ref('keyword', e['keyword']) if 'keyword' in e else None,
+                               type_ref=self.ref('type', e['type']) if 'type' in e else None, lasts=e.get('lasts'), link=e.get('link'))
+                if 'ability' in e: self.ability(None, 0, e['ability'], given_by=eid)  # an ability this effect gives to its target
                 for p, a in (e.get('params') or {}).items():
                     if p in ('event', 'attr'): self.ins('param', effect=eid, param=p, value=a)
                     else: self.ins('param', effect=eid, param=p, amount=self.amount(a))

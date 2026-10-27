@@ -250,3 +250,31 @@ x	listed	the number the card writes after the keyword (Empowered 5, Toss 2, Coun
 state	from_hand	played from hand (not created into play or summoned)			27 Oct 2026, v2
 x	minus	"the negative of the inner amount (""1 less for each ..."": cost = minus of count)"			27 Oct 2026, v2
 test	amount	"the amount in value compares op n (totals: ""5+ units Stunned or Recalled"")"			27 Oct 2026, v2
+act	give_ability	"give the target the ability in the effect key ""ability"" (a whole ABILITY)"	buff	given_keyword	28 Oct 2026, v3
+act	give_random_keyword	"give the target a random keyword (filters on the keyword in ""on"" are not used; use params amount)"	random_ability	given_keyword	28 Oct 2026, v3
+act	give_type	"give the target the type in the effect key ""type"""	type_grant		28 Oct 2026, v3
+act	cost_set	set the target's cost to params cost	cost_set		28 Oct 2026, v3
+act	max_mana_change	gain or lose mana gems (params amount, signed; empty gem = not refilled)	resource_gain		28 Oct 2026, v3
+act	spend_mana	spend mana (params amount)			28 Oct 2026, v3
+act	play_card	play the target or the linked card without paying (cast it)	free_play	played	28 Oct 2026, v3
+event	challenges	a unit challenges (forces a blocker)			28 Oct 2026, v3
+event	supports	a unit supports the ally to its right (actor the supporter, object the supported)			28 Oct 2026, v3
+event	attack_token_gained	a player gains the attack token			28 Oct 2026, v3
+event	trap_activated	a Trap or Boon attached to a card activates	trap_secret		28 Oct 2026, v3
+state	new	a card with a different name than all cards played (or seen) before this game			28 Oct 2026, v3
+state	multi_region	a card from 2+ regions			28 Oct 2026, v3
+state	summoned_this_round	summoned this round			28 Oct 2026, v3
+state	targeted_this_round	targeted this round			28 Oct 2026, v3
+attr	damage	the damage dealt (for event_count and stat sums)			28 Oct 2026, v3
+attr	rarity	a rarity (value from rarity)			28 Oct 2026, v3
+attr	countdown	a Countdown value			28 Oct 2026, v3
+rarity	common	common			28 Oct 2026, v3
+rarity	rare	rare			28 Oct 2026, v3
+rarity	epic	epic			28 Oct 2026, v3
+rarity	champion	champion			28 Oct 2026, v3
+x	distinct	the number of different values of attr (type, region, name...) among of or among event objects in span	variety_payoff		28 Oct 2026, v3
+limit	next_time	"only the next time the event happens (delayed effects: ""next round start"", ""the next time ... this round"")"	delayed		28 Oct 2026, v3
+lasts	next_card	until the next card is played			28 Oct 2026, v3
+lasts	unstated	the text does not say how long			28 Oct 2026, v3
+pick	highest	"highest value of the target key ""by"" (an attr)"			28 Oct 2026, v3
+pick	lowest	"lowest value of the target key ""by"" (an attr)"			28 Oct 2026, v3

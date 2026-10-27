@@ -13,3 +13,9 @@ Each change: date, what changed, the card that caused it, and which records were
   Spiderling, Living Shadow, Plant, Turret); rules 10-12 in BRIEF.md.
 - 27 Oct 2026, v2: x listed (Empowered N: the number the card writes; Empowered corrected), state from_hand (Improvise).
 - 27 Oct 2026, v2: x minus (Remembrance, "1 less for each"); rule 13 and test amount with cond key value: stat sums over events (Heimerdinger), one total over two events (Yasuo).
+- 28 Oct 2026, v3 (from 284 reader proposals over batches 1-15, the recurring ones): acts give_ability (nested ability in
+  the effect), give_random_keyword, give_type (effect key type), cost_set, max_mana_change, spend_mana, play_card; events
+  challenges, supports, attack_token_gained, trap_activated; states new, multi_region, summoned_this_round,
+  targeted_this_round; attrs damage, rarity (field rarity), countdown; x distinct; limit next_time; lasts next_card,
+  unstated; picks highest/lowest with target key by; filter n may be an amount (relative to another stat); rule 14.
+  Records marked unsure under v2 are re-read under v3 after all batches are in.

@@ -1,4 +1,4 @@
-# Reader brief: describe each card as a record (version 2)
+# Reader brief: describe each card as a record (version 3)
 
 You read card texts and write what each card DOES as JSON records. Every value is a number, a value from
 `vocab.tsv` (column `value`, grouped by `field`), or the exact name of another card, keyword or type (the script turns names into
@@ -21,18 +21,22 @@ ABILITY  `{"when": EVENT, "limit": limit, "if": [COND, ...], "do": [EFFECT, ...]
 EVENT    `{"event": event, "actor": TARGET, "object": TARGET}`  actor = who does it, object = to whom it happens (omit what the text
          leaves open). A spell's effect and a unit's "Play:" use `{"event": "played", "object": {"pick": "self"}}`.
          Static abilities ("Allies have +1|+0", "I can't be blocked") use `{"event": "always"}`.
-TARGET   `{"kind": kind, "side": side, "pick": pick, "n": AMOUNT, "zone": zone, "with": [FILTER, ...]}`  n defaults to 1;
+TARGET   `{"kind": kind, "side": side, "pick": pick, "n": AMOUNT, "zone": zone, "with": [FILTER, ...], "by": attr}`
+         ("by" only with pick highest / lowest: "the ally with the highest Countdown" = pick highest, by countdown)  n defaults to 1;
          "all" targets use pick all and omit n. `{"pick": "self"}` alone means the card itself.
-FILTER   `{"attr": "power|health|cost|base_power|base_health", "op": op, "n": number}`
+FILTER   `{"attr": "power|health|cost|base_power|base_health|damage|countdown", "op": op, "n": AMOUNT}` (n can compare to
+         another value: "with less Power than me" = op lt, n `{"x": "stat", "attr": "power", "of": {"pick": "self"}}`)
          `{"attr": "keyword|type|card", "op": "is|not", "ref": "<exact name>"}`
-         `{"attr": "state|category|region|origin", "op": "is|not", "val": <value of that field>}`
+         `{"attr": "state|category|region|origin|rarity", "op": "is|not", "val": <value of that field>}`
          one of several: `"op": "in"` with `"vals": [...]` or `"refs": [...]` ("a Fast spell, Slow spell, or Skill")
          card families by name: `{"attr": "name_has", "op": "is", "ref": "Crimson"}` ("Crimson allies", "Storm Conduits")
 COND     `{"test": test, "of": TARGET, "attr": attr, "op": op, "n": AMOUNT, "span": span, "event": EVENT, "ref": "<name>",
           "value": AMOUNT}`
          (only the keys the test needs)
 EFFECT   `{"act": act, "on": TARGET, "to": TARGET, "zone": zone, "card": "<exact name>", "keyword": "<exact name>",
-          "params": {param: AMOUNT}, "lasts": lasts, "link": link}`
+          "type": "<exact type name>", "ability": ABILITY, "params": {param: AMOUNT}, "lasts": lasts, "link": link}`
+         "ability" (with act give_ability): the whole ability given ("Grant allies 'Round End: Recall me'"); "type" (with
+         act give_type). Numbers can be negative ("-1|-0", "costs 2 less" = cost -2).
          on = what the effect acts on; to = second target (strike X to Y, move to); zone = where a created or moved card goes;
          card = the card created, summoned or transformed into; keyword = the keyword given, removed or used.
          lasts is required for stat_change, give_keyword, cant, can, cost_change; link is required from the 2nd effect on.
@@ -70,7 +74,9 @@ AMOUNT   a number, or `{"x": x, "of": TARGET, "attr": attr, "event": EVENT, "spa
    events). One total over two events ("5+ units Stunned or Recalled") = `{"test": "amount", "value": {"x": "sum", "items":
    [{"x": "event_count", "event": EVENT1, "span": "this_game"}, {"x": "event_count", "event": EVENT2, "span": "this_game"}]},
    "op": "ge", "n": 5}`.
-14. Read every sentence. Remarks, reminders and flavour have no effect: skip them. Never add an effect the text does not state.
+14. Delayed effects ("At the next Round Start, ...", "the next time an ally attacks this round") = an ability with that
+   event and limit next_time. "A new card" (not played before) = state new. Damage totals = attr damage.
+15. Read every sentence. Remarks, reminders and flavour have no effect: skip them. Never add an effect the text does not state.
 
 ## Keyword entries (category keyword)
 A keyword's record says what the keyword means, so that every card with it inherits that meaning. Four kinds:
