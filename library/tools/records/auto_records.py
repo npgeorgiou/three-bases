@@ -21,7 +21,7 @@ SKIP = {'effect', 'helps_me', 'hurts_enemy', 'suppress', 'combat', 'structure', 
 ONE_OFF = ('spell', 'event', 'item', 'ability', 'modifier', 'status')
 
 U = r"(?:creatures?|units?|minions?|characters?|followers?|allies|ally|permanents?|heroes|monsters?|models?|vek|mechs?|lands?|artifacts?|enchantments?|planeswalkers?|tokens?|landmarks?|structures?|items?|locations?|attackers?|blockers?)"
-ZONE = r"(?:in|from) (?:your |their |your opponent's |the opponent's |its owner's |each player's |a player's )?(hand|deck|library|graveyard|discard pile)"
+ZONE = r"(?:in|from) (?:your |their |your opponent's |the opponent's |its owner's |each player's |a player's )?(hand|deck|library|graveyard|discard pile|action bar)"
 TARGETS = [  # (pattern, target); within a span the earliest match wins, ties go to the longer one
     (rf"\b(?:an?|one|two|three|\d+) random [\w' -]{{0,50}}? {ZONE}", 'card:{zone} random {n}'),
     (rf"\b(?:all|each|every|the) [\w' -]{{0,50}}? {ZONE}|\b\w+s {ZONE}", 'card:{zone} all'),
@@ -36,7 +36,9 @@ TARGETS = [  # (pattern, target); within a span the earliest match wins, ties go
     (rf"\b(?:target|an?|another|chosen|up to one|one) (?:other )?(?:friendly|allied) {U}|\btarget {U} you control\b|\b(?:an?|another) ally\b|\bchosen character of yours\b", 'ally_unit chosen'),
     (rf"\b(?:an?|one|two|three|\d+) random (?:other )?{U}", 'any_unit random {n}'),
     (rf"\b(?:each|all|every) (?:other )?{U}|\beverything\b|\bboth sides\b", 'any_unit all'),
-    (rf"\badjacent {U}|\b{U} (?:adjacent|next) to\b|\badjacent\b|\bneighbou?r", 'ally_unit adjacent'),
+    (rf"\b(?:adjacent|nearby) (?:friendly|allied) {U}|\b(?:friendly|allied) {U} (?:adjacent|next) to\b", 'ally_unit adjacent'),
+    (rf"\b(?:adjacent|nearby) (?:enem(?:y|ies)|opposing)(?: {U})?\b", 'enemy_unit adjacent'),
+    (rf"\badjacent {U}|\b{U} (?:adjacent|next) to\b|\badjacent\b|\bneighbou?r", 'any_unit adjacent'),
     (rf"\b(?:target|chosen|an?|any|another|up to one|up to (?:two|three|\d+)) (?:other )?(?:[\w-]+,? )?(?:\w+ )?{U}\b|\bany target\b|\btarget\b", 'any_unit chosen'),
     (rf"\b{U} attacking you\b|\battacking {U}\b", 'enemy_unit all'),
     (r"\b(?:each opponent|target opponent|target player|your opponent|the opponent|the enemy (?:hero|nexus|player|base|leader|general)|enemy (?:hero|nexus|base|leader|general)|opponent's (?:hero|nexus|base|leader))\b|\bdefending player\b", 'enemy_player'),
@@ -121,7 +123,7 @@ def target(span, before):
     t = best[2]
     if '{zone}' in t:
         z = re.search(ZONE, best[3]).group(1)
-        t = t.replace('{zone}', {'library': 'deck', 'graveyard': 'discard', 'discard pile': 'discard'}.get(z, z))
+        t = t.replace('{zone}', {'library': 'deck', 'graveyard': 'discard', 'discard pile': 'discard', 'action bar': 'hand'}.get(z, z))
     if '{n}' in t:
         w = best[3].split()[0]
         t = t.replace('{n}', WORDNUM.get(w, w if w.isdigit() else '1'))
@@ -139,7 +141,8 @@ OBJECT_FX = {'summon', 'generate_cards', 'copy', 'transform', 'polymorph', 'tuto
 DD_STAT = re.compile(r"^([+-]?\d+(?:\.\d+)?%?) ([a-z_' ]+?)(?: (while|with|vs|when|on|in|at) (.*?))?(?:\. (class: \w+))?$")
 DD_STATK = {'dodge': 'defence_gain', 'protection': 'defence_gain', 'max hp': 'defence_gain', 'damage': 'attack_gain',
             'accuracy': 'attack_gain', 'crit': 'attack_gain', 'speed': 'speed'}  # which stat goes up
-DD_WHO = {'(self)': 'self', '(party_other)': 'ally_unit all', '(party)': 'ally_unit all', '(global)': 'each_player', '(target)': 'ally_unit chosen'}
+DD_WHO = {'(self)': 'self', '(party_other)': 'ally_unit all', '(party)': 'ally_unit all', '(global)': 'each_player', '(target)': 'ally_unit chosen',
+          '(individual)': 'ally_unit chosen'}
 DD_FX = [  # (words, effect) for skill and camping effects the stat reader does not cover; the rest of the item is the amount
     (r"^(?:relieve stress|stress heal|reduce stress)", 'stress_morale'), (r"^(?:health heal|heal)", 'heal'),
     (r"^health damage", 'damage'), (r"^(?:inflict )?disease", 'debuff'), (r"^summon\b", 'summon'),
@@ -170,11 +173,16 @@ def dd_records(e, cat, text):
             if k: out.append((e, 1, 'activated', k, who, it2[:50], 'instant' if k != 'temporary_buff' else 'this_combat', 'camping', 'script'))
             else: unread += 1
         return out, unread
+    if cat == 'monster':  # the monster's own lines before its skills
+        head = t.split('skills:')[0]
+        if (m := re.search(r"acts (\d+) times per round", head)): out.append((e, 'card', 'passive', 'multi_attack', 'self', m.group(1) + ' actions', 'permanent', '', 'script'))
+        if 'summons allies' in head: out.append((e, 'card', 'passive', 'summon', 'position chosen', 'allies', 'permanent', '', 'script'))
     if 'skill.' in t or cat == 'ability':
         for ab, sk in enumerate(re.split(r" \| ", re.sub(r"^skills: ", "", t)), 1):
             sk = re.sub(r"^[^.:]+: (?=(?:melee|ranged) skill)", "", sk)
             tm = re.search(r"targets (all of )?(enemy|ally) ranks", sk)
-            tg = (('enemy_unit' if tm.group(2) == 'enemy' else 'ally_unit') + (' all' if tm.group(1) else ' chosen')) if tm else 'self'
+            tg = (('enemy_unit' if tm.group(2) == 'enemy' else 'ally_unit') + (' all' if tm.group(1) else ' chosen')) if tm \
+                else 'enemy_unit chosen' if re.search(r"deals damage", sk) else 'self'
             dm = re.search(r"deals damage(?: \(modifier ([+-]?\d+%)\)| (\d+-\d+))?", sk)
             if dm and '-100%' not in dm.group(0): out.append((e, ab, 'activated', 'aoe_damage' if tm and tm.group(1) else 'damage', tg, dm.group(1) or dm.group(2) or '', 'instant', '', 'script'))
             hm = re.search(r"\bheals (\d+)(?: (\d+))?", sk)
@@ -182,7 +190,7 @@ def dd_records(e, cat, text):
             if re.search(r"moves self", sk): out.append((e, ab, 'activated', 'movement', 'self', '', 'instant', '', 'script'))
             fx = sk.split('effects:')[1] if 'effects:' in sk else ''
             for it in [x.strip(' .') for x in re.split(r"[;,]", fx) if x.strip(' .')]:
-                own = 'self' if '(self)' in it else tg
+                own = next((v for kk, v in DD_WHO.items() if kk in it), tg)
                 it = it.replace('(self)', '').strip()
                 rm = re.search(r"for (\d+) rounds?", it); dur, rn = ('n_rounds', '; ' + rm.group(1)) if rm else (None, '')
                 if m := re.match(r"(bleed|blight) (\d+)", it): out.append((e, ab, 'activated', 'damage_over_time', own, m.group(2) + rn, dur or 'n_rounds', m.group(1), 'script'))
@@ -196,7 +204,8 @@ def dd_records(e, cat, text):
                     k = DD_STATK.get(next((w for w in DD_STATK if w in m.group(2)), ''), 'stat_gain') if m.group(1).startswith('+') else 'stat_loss'
                     out.append((e, ab, 'activated', k, own, f'{m.group(1)} {m.group(2)}' + rn, dur or 'n_rounds', '', 'script'))
                 elif it.startswith('only if '): pass  # a condition of the skill, kept by the tags
-                elif (k := next((k for rx, k in DD_FX if rx.search(it)), None)): out.append((e, ab, 'activated', k, own, it[:50], dur or 'instant', '', 'script'))
+                elif (k := next((k for rx, k in DD_FX if rx.search(it)), None)):
+                    out.append((e, ab, 'activated', k, 'position chosen' if k == 'summon' else own, it[:50], dur or 'instant', '', 'script'))
                 else: unread += 1
         if out or unread: return out, unread
     for ln in [x.strip(' .') for x in re.split(r"[;\n]", t) if x.strip(' .')]:

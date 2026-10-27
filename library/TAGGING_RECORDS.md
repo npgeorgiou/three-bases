@@ -52,6 +52,17 @@ Read this section only; the sections below it are the earlier test and its histo
    `tools/records/key_score.py`: the effect field against the hand answer keys (tools/key/<game>/key.json), no reading needed;
    27 Oct night: effect precision 67-94% per game (Faeria 94, Darkest Dungeon 88, Shadowverse 87, Hearthstone 80, Magic 78),
    recall 39-79%. Targets are checked by hand (about 20 covered cards per game).
+   Agreed later (Kaptain, 27 Oct 2026, morning): the card text is the only truth; tags, the key, keyword rows and patterns are
+   hints. `tools/records/build_records.py`: each tag placed at the words it stores; a row where hints agree and the words
+   support it (in the five checked games a pattern alone is only "maybe:"); keyword rows only for keywords the text names;
+   new columns shape (row, line, lane, adjacent, ranks...) and extra (every other concept, card facts, traits), so no tag is
+   dropped silently. Checked by reader agents: 50 random + 50 complicated cards per game, stored as fixed test sets
+   (`tools/records/tests/<game>.json`, scored by `testset.py score`). Five checked games, 27 Oct morning:
+   first reader pass (before fixes): cards fully right ITB 9, Inscryption 61, Faeria 22, Duelyst 24, Darkest Dungeon 31 of ~100;
+   after fixes, scored against the test sets: 25, 67, 37, 41, 63 of 100; expected rows met 70, 80, 72, 75, 89%.
+   Tags found nowhere in the rows: 15 of 1197, 52 of 769, 37 of 1779, 66 of 2630, 135 of 5564.
+   Main errors left: who is hit in long or unusual sentences, wiki prose (ITB) and "Choose one" cards; the test sets carry
+   the reader's own mistakes (some expected targets are wrong), so a second reader pass is needed for a true number.
    Scripts per game: the effect from today's patterns, plus new patterns for target, amount and duration. A card the script
    covers completely is not read. Start with the games with fixed wording (Magic, Hearthstone, Runeterra, Lorcana, SWU).
 4. Repeats read once: texts that differ only in name or numbers share one reading.
