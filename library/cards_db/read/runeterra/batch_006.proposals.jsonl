@@ -1,0 +1,12 @@
+{"id": 751173, "field": "if", "need": "damage_amount_total"}
+{"id": 751187, "field": "if", "need": "damage_amount_total"}
+{"id": 751200, "field": "if", "need": "damage_amount_in_one_strike"}
+{"id": 751206, "field": "act", "need": "grant_ability"}
+{"id": 751208, "field": "act", "need": "trigger_named_effect"}
+{"id": 751228, "field": "with", "need": "targeted_this_round"}
+{"id": 751235, "field": "act", "need": "grant_ability"}
+{"id": 751237, "field": "if", "need": "countdown_remaining"}
+{"id": 751240, "field": "act", "need": "gain_empty_mana_gem"}
+{"id": 751248, "field": "keyword", "need": "random_keyword"}
+{"id": 751259, "field": "with", "need": "struck_this_round"}
+{"id": 751261, "field": "if", "need": "damage_amount_total"}
