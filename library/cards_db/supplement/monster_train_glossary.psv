@@ -1,0 +1,83 @@
+Status Effects#Effects#Armor#Damage is dealt to Armor before health. Each point of Armor blocks one point of damage and is then removed.
+Status Effects#Effects#Buffet#This unit can be eaten multiple times.
+Status Effects#Effects#Burnout#Counts down every turn. When Burnout runs out, the unit dies.
+Status Effects#Effects#Cardless#This unit was not summoned from a unit card. It won't go to the Consume pile upon death and can't gain Endless.
+Status Effects#Effects#Enchant#Other friendly units on the same floor gain a bonus.
+Status Effects#Effects#Endless#When this unit dies, return its card to the top of the draw pile.
+Status Effects#Effects#Fragile#If this unit loses health, it dies.
+Status Effects#Effects#Fuel#Negates the effect of Inert. Loses 1 stack every turn.
+Status Effects#Effects#Haste#Moves directly from the first floor to the third floor.
+Status Effects#Effects#Immobile#Can't move between floors or change position on this floor.
+Status Effects#Effects#Inert#This unit cannot attack unless it has Fuel.
+Status Effects#Effects#Multistrike#Attacks an additional time each turn.
+Status Effects#Effects#Phased#Cannot attack. Cannot be damaged or targeted in any way.
+Status Effects#Effects#Purify#Removes all damaging debuffs from this unit at the end of turn.
+Status Effects#Effects#Quick#Attacks before enemy units during combat.
+Status Effects#Effects#Relentless#Combat in this room continues until all enemies are defeated. This unit cannot be Rooted.
+Status Effects#Effects#Shard#Powers Solgard the Martyr's abilities.
+Status Effects#Effects#Shell#At end of turn, remove Echo from the floor to remove Shell from the front unit with Shell. When all Shell is removed, the unit will Hatch.
+Status Effects#Effects#Silence#Disables Triggered Abilities.
+Status Effects#Effects#Sweep#Attacks all enemy units.
+Status Effects#Effects#Trample#When attacking, excess damage is applied to the subsequent enemy unit.
+Status Effects#Triggers#Action#Triggers at the start of this unit's turn.
+Status Effects#Triggers#Armored#Triggers when Armor is added to this unit.
+Status Effects#Triggers#Eaten#After the next round of combat, this unit will be eaten by the front unit without an Eaten ability.
+Status Effects#Triggers#End of Turn#Triggers at end of turn.
+Status Effects#Triggers#Etch#Triggers when a card is Consumed on this floor.
+Status Effects#Triggers#Extinguish#Triggers on death.
+Status Effects#Triggers#Gorge#Triggers when this unit eats a Morsel unit.
+Status Effects#Triggers#Harvest#Triggers when a unit on this floor dies.
+Status Effects#Triggers#Hatch#Once all Shell is removed, the unit dies, triggering its Hatch ability. Apply the Egg unit's upgrades and stat changes to the summoned unit.
+Status Effects#Triggers#Hellborne Harvest#Triggers when one of your units dies on this floor.
+Status Effects#Triggers#Hunger#Triggers when a unit with Eaten is summoned.
+Status Effects#Triggers#Incant#Triggers when you cast a spell on this floor.
+Status Effects#Triggers#Inspire#Triggers when you gain Echo on this floor, once per Echo.
+Status Effects#Triggers#Rally#Triggers when you play a non-Morsel unit card on this floor.
+Status Effects#Triggers#Rejuvenate#Triggers when healed, even at full health.
+Status Effects#Triggers#Resolve#Triggers after combat.
+Status Effects#Triggers#Revenge#Triggers when damaged.
+Status Effects#Triggers#Slay#Triggers after dealing a killing blow.
+Status Effects#Triggers#Strike#Triggers when attacking.
+Status Effects#Triggers#Summon#Triggers when played.
+Status Effects#Buffs#Damage Shield#Nullify the next source of damage.
+Status Effects#Buffs#Lifesteal#When a unit with Lifesteal attacks, it restores health equal to the damage dealt.
+Status Effects#Buffs#Rage#+2 Attack per stack. Decreases every turn.
+Status Effects#Buffs#Regen#Restores 1 health per stack at the end of turn. Decreases every turn.
+Status Effects#Buffs#Soul#Modifies the damage of Devourer of Death's Extinguish ability.
+Status Effects#Buffs#Spell Shield#Absorbs the next damage spell.
+Status Effects#Buffs#Spikes#When a unit with Spikes is attacked, the attacker takes 1 damage per stack.
+Status Effects#Buffs#Stealth#Not a target in combat. Loses 1 stack every turn.
+Status Effects#Debuffs#Dazed#As long as a unit is Dazed, it can't attack or use any Action or Resolve abilities.
+Status Effects#Debuffs#Emberdrain#At the start of turn, you lose 1 Ember for every stack of Emberdrain. Decreases every turn.
+Status Effects#Debuffs#Frostbite#Unit takes 1 damage per stack at the end of turn. Decreases every turn.
+Status Effects#Debuffs#Heartless#A unit with Heartless cannot be healed.
+Status Effects#Debuffs#Melee Weakness#The next time the unit is attacked, it takes that much damage again for each stack of Melee Weakness.
+Status Effects#Debuffs#Reap#Unit takes 1 damage per stack of Echo after combat ends. Does not decrease.
+Status Effects#Debuffs#Rooted#Prevents the next time a unit would move between floors. Bosses are immune.
+Status Effects#Debuffs#Sap#-2 Attack per stack. Decreases every turn.
+Status Effects#Debuffs#Spell Weakness#The next time the unit is hit by a damage spell, it takes that much damage again for each stack of Spell Weakness.
+Status Effects#Enemy Only Effects#Recover#Restore health to friendly units after combat.
+Card Effects#Unit Effects#Ascend#Move up a floor and to the back of that floor.
+Card Effects#Unit Effects#Descend#Move down a floor and to the back of that floor.
+Card Effects#Unit Effects#Reform#Return a defeated friendly unit to your hand. Enhance with Burnout 1, +5 Attack, +5 Health, and 0 Ember.
+Card Effects#Unit Effects#Sacrifice#Kill a friendly unit (of the required type in order) to play this card.
+Card Effects#Unit Effects#Cultivate#Increase the attack and health of the friendly unit with the lowest health by the Cultivate value.
+Card Effects#Spell Effects#Attuned#Multiply the effects of Magic Power by 5.
+Card Effects#Spell Effects#Consume#Can only be played once per battle.
+Card Effects#Spell Effects#Extract#Lose Echo after you play this card. If you cannot, the card cannot be played.
+Card Effects#Spell Effects#Frozen#A Frozen card is not discarded at end of turn. Frozen is removed when the card is played.
+Card Effects#Spell Effects#Infused#When played, the current floor will gain 1 Echo.
+Card Effects#Spell Effects#Magic Power#Increases the amount of damage dealt and health restored by spells.
+Card Effects#Spell Effects#Offering#If discarded before the end of your turn, it will instead be played.
+Card Effects#Spell Effects#Permafrost#Gain Frozen when drawn.
+Card Effects#Spell Effects#Piercing#Damage dealt by this card ignores armor and shield.
+Card Effects#Spell Effects#Purge#Once played, this card is removed from your deck for the rest of the run.
+Card Effects#Spell Effects#Pyrebound#Can only be played in the Pyre Room and the floor below it.
+Card Effects#Spell Effects#Reserve#Triggers if this card remains in hand at the end of turn.<!-- Technically purple -->
+Card Effects#Spell Effects#Spellchain#When played, a copy of this card will be added to hand. The copy costs +1 Ember and gains Purge.
+Card Effects#Spell Effects#Unplayable#Card cannot be played.
+Card Effects#Spell Effects#Unpurgeable#Card cannot be purged by shops or Unstable Vortexes.
+Card Effects#Spell Effects#{{Value#X Cost}} Cost
+Card Effects#Other Effects#Add#Add a card for the duration of battle.<!-- Not in-game description -->
+Card Effects#Other Effects#Intrinsic#Starts in your opening hand.
+Charged Echoes#Effects#Charged Echo#A resource of the Wurmkin clan, stored on each floor (symbol Echo). Infused cards add it; Wurmkin spells and abilities use it. Each floor starts with 4 Echo slots; Echo can exceed the slots, but the excess is removed at the end of turn. Some effects add unremovable Echo for the rest of combat.
