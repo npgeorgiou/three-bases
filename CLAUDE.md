@@ -2,6 +2,12 @@
 
 Kaptain's browser card game. Work on the clone, commit and push every change to `main`.
 
+## How to talk to Kaptain
+- Short sentences. Plain everyday words. Say what happened and what you need, nothing else.
+- Never use words Kaptain hasn't used or agreed to (no "happening", "payoff", "generic layer", "flat_ref", etc.); explain with a card example instead.
+- One question at a time, answerable with yes/no or a choice. Put it last, alone, clearly marked as the question.
+- No recaps, no lists of everything done, no caveats unless they change what Kaptain must decide.
+
 ## Start of a chat (token budget: read nothing else)
 - Clone without the 121 MB library unless the task is about it:
   `git clone -q --depth 1 --filter=blob:none --no-checkout https://github.com/npgeorgiou/three-bases /home/claude/three-bases && cd /home/claude/three-bases && git sparse-checkout set --no-cone '/*' '!/library/' && git checkout -q main`
