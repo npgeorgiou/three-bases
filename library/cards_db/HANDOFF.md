@@ -2,7 +2,8 @@
 
 ## Start of a chat
 1. Clone with the library (CLAUDE.md "Start of a chat", then `git sparse-checkout disable`). Read only this file.
-2. `python3 library/cards_db/run.py runeterra` must pass every step (248 of 248 cases, 0 word-check flags).
+2. cards.sqlite is committed and current: questions need no build (`ask.py runeterra ...`). Run `run.py runeterra` only after
+   changing records, values or scripts; it must then pass every step.
 3. Then, as the task needs: PROCESS.md (importing a game), README.md (files, tables, questions), RESULTS.md (Runeterra).
 
 ## State
