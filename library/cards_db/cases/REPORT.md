@@ -165,12 +165,12 @@ Made by `cases/run.py runeterra`.
 | r25 | Bandle City | signature (library tags) | trap_secret | 6 | 26 | yes |
 | r26 | Bandle City | signature (library tags) | discard | 6 | 20 | yes |
 | r27 | Bandle City | signature (library tags) | on_attack | 36 | 90 | yes |
-| r28 | Bandle City | signature (library tags) | transform | 8 | 13 | yes |
+| r28 | Bandle City | signature (library tags) | transform | 8 | 15 | yes |
 | r29 | Bandle City | splash (library tags) | stat_gain | 2 | 75 | yes |
 | r30 | Bandle City | splash (library tags) | on_spell | 2 | 6 | yes |
 | r31 | Bandle City | splash (library tags) | resource_gain | 4 | 8 | yes |
 | r32 | Bandle City | splash (library tags) | turn_start | 10 | 18 | yes |
-| r33 | Bilgewater | signature (library tags) | resource_gain | 11 | 21 | yes |
+| r33 | Bilgewater | signature (library tags) | resource_gain | 11 | 24 | yes |
 | r34 | Bilgewater | splash (library tags) | on_spell | 3 | 11 | yes |
 | r35 | Bilgewater | signature (library tags) | draw | 16 | 36 | yes |
 | r36 | Bilgewater | signature (library tags) | turn_end | 11 | 29 | yes |
@@ -181,7 +181,7 @@ Made by `cases/run.py runeterra`.
 | r41 | Demacia | signature (library tags) | damage_reduction | 10 | 19 | yes |
 | r42 | Demacia | signature (library tags) | stat_gain | 7 | 75 | yes |
 | r43 | Demacia | signature (library tags) | multi_attack | 4 | 17 | yes |
-| r44 | Demacia | splash (library tags) | merge_attach | 6 | 11 | yes |
+| r44 | Demacia | splash (library tags) | merge_attach | 6 | 13 | yes |
 | r45 | Demacia | splash (library tags) | on_ally_play | 6 | 43 | yes |
 | r47 | Demacia | splash (library tags) | banish | 2 | 9 | yes |
 | r48 | Demacia | splash (library tags) | on_attack | 12 | 62 | yes |
@@ -192,7 +192,7 @@ Made by `cases/run.py runeterra`.
 | r53 | Freljord | splash (library tags) | heal | 4 | 25 | yes |
 | r54 | Freljord | splash (library tags) | resource_gain | 5 | 10 | yes |
 | r55 | Freljord | splash (library tags) | death_trigger | 6 | 8 | yes |
-| r56 | Freljord | splash (library tags) | delayed | 3 | 4 | yes |
+| r56 | Freljord | splash (library tags) | delayed | 3 | 10 | yes |
 | r57 | Ionia | signature (library tags) | swap | 2 | 6 | yes |
 | r58 | Ionia | signature (library tags) | return_to_hand | 26 | 52 | yes |
 | r59 | Ionia | signature (library tags) | attack_now | 5 | 20 | yes |
@@ -215,19 +215,19 @@ Made by `cases/run.py runeterra`.
 | r76 | Piltover & Zaun | signature (library tags) | on_spell | 4 | 28 | yes |
 | r77 | Piltover & Zaun | splash (library tags) | resource_gain | 4 | 10 | yes |
 | r78 | Piltover & Zaun | splash (library tags) | damage | 14 | 57 | yes |
-| r79 | Piltover & Zaun | splash (library tags) | generate_cards | 20 | 67 | yes |
+| r79 | Piltover & Zaun | splash (library tags) | generate_cards | 20 | 70 | yes |
 | r80 | Piltover & Zaun | splash (library tags) | transform | 4 | 9 | yes |
-| r81 | Shadow Isles | signature (library tags) | revive | 11 | 20 | yes |
+| r81 | Shadow Isles | signature (library tags) | revive | 11 | 21 | yes |
 | r82 | Shadow Isles | signature (library tags) | destroy | 29 | 88 | yes |
 | r83 | Shadow Isles | signature (library tags) | death_trigger | 14 | 50 | yes |
 | r84 | Shadow Isles | signature (library tags) | summon | 34 | 45 | yes |
 | r85 | Shadow Isles | splash (library tags) | attack_now | 2 | 14 | yes |
 | r87 | Shadow Isles | splash (library tags) | cant_attack | 6 | 65 | yes |
-| r88 | Shadow Isles | splash (library tags) | merge_attach | 4 | 6 | yes |
+| r88 | Shadow Isles | splash (library tags) | merge_attach | 4 | 7 | yes |
 | r89 | Shurima | signature (library tags) | variety_payoff | 4 | 11 | yes |
-| r90 | Shurima | signature (library tags) | delayed | 12 | 15 | yes |
+| r90 | Shurima | signature (library tags) | delayed | 12 | 26 | yes |
 | r91 | Shurima | signature (library tags) | counter_spell | 2 | 20 | yes |
-| r92 | Shurima | signature (library tags) | selection | 6 | 27 | yes |
+| r92 | Shurima | signature (library tags) | selection | 6 | 30 | yes |
 | r93 | Shurima | splash (library tags) | attack_now | 4 | 18 | yes |
 | r94 | Shurima | splash (library tags) | excess_damage | 11 | 22 | yes |
 | r95 | Shurima | splash (library tags) | copy | 8 | 13 | yes |
@@ -239,27 +239,27 @@ Made by `cases/run.py runeterra`.
 | r101 | Targon | splash (library tags) | delayed | 4 | 7 | yes |
 | r102 | Targon | splash (library tags) | cost_reduction | 6 | 22 | yes |
 | r104 | Targon | splash (library tags) | discard | 2 | 8 | yes |
-| r105 | Bandle City | archetype (library) | scaling | 34 | 85 | yes |
-| r106 | Bandle City | archetype (library) | chaos | 28 | 85 | yes |
+| r105 | Bandle City | archetype (library) | scaling | 34 | 86 | yes |
+| r106 | Bandle City | archetype (library) | chaos | 28 | 87 | yes |
 | r107 | Bandle City | archetype (library) | trickery | 6 | 26 | yes |
-| r108 | Bandle City | archetype (library) | transformation | 16 | 30 | yes |
+| r108 | Bandle City | archetype (library) | transformation | 16 | 34 | yes |
 | r109 | Bilgewater | archetype (library) | chaos | 30 | 73 | yes |
-| r110 | Bilgewater | archetype (library) | ramp | 17 | 37 | yes |
+| r110 | Bilgewater | archetype (library) | ramp | 17 | 40 | yes |
 | r111 | Bilgewater | archetype (library) | graveyard | 4 | 39 | yes |
 | r112 | Demacia | archetype (library) | scaling | 21 | 38 | yes |
 | r113 | Demacia | archetype (library) | fortress | 22 | 51 | yes |
 | r114 | Freljord | archetype (library) | sustain | 14 | 25 | yes |
-| r115 | Freljord | archetype (library) | transformation | 11 | 18 | yes |
+| r115 | Freljord | archetype (library) | transformation | 11 | 22 | yes |
 | r116 | Ionia | archetype (library) | positional | 8 | 12 | yes |
 | r117 | Ionia | archetype (library) | control | 38 | 90 | yes |
 | r118 | Ionia | archetype (library) | ramp | 14 | 33 | yes |
 | r119 | Ionia | archetype (library) | card_advantage | 30 | 42 | yes |
-| r120 | Piltover & Zaun | archetype (library) | chaos | 24 | 78 | yes |
+| r120 | Piltover & Zaun | archetype (library) | chaos | 24 | 81 | yes |
 | r121 | Piltover & Zaun | archetype (library) | trickery | 6 | 17 | yes |
 | r122 | Piltover & Zaun | archetype (library) | ramp | 18 | 46 | yes |
 | r123 | Piltover & Zaun | archetype (library) | spellslinger | 14 | 45 | yes |
 | r124 | Shadow Isles | archetype (library) | sacrifice | 47 | 108 | yes |
-| r125 | Shadow Isles | archetype (library) | graveyard | 14 | 30 | yes |
+| r125 | Shadow Isles | archetype (library) | graveyard | 14 | 31 | yes |
 | r126 | Shadow Isles | archetype (library) | sustain | 17 | 38 | yes |
 | r127 | Shadow Isles | archetype (library) | swarm | 36 | 71 | yes |
 | r128 | Shurima | archetype (library) | trickery | 5 | 7 | yes |

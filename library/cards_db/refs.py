@@ -7,14 +7,16 @@ A happening is an `event` value from vocab.tsv (dies, summoned, damaged, given_k
              (dead_this_round -> dies), or units in the discard zone (zone discard `causes` dies; units only)
 kind/side/pick: the thing it happens to (the event's object, else its actor; for makes the effect's target). side '' = not
 limited (either side). keyword: the keyword given or used, when the happening is about one (given_keyword Stun).
+concept: the same thing as a concept-tree concept, equal in every game: the keyword's concept (Stun, Freeze: disable), else
+the state's (stunned, frozen: disable), else the event's (round_start, turn_start: turn_start).
 Payoff question ("cards that benefit from allies dying"):
   select distinct card from flat_ref where happening='dies' and role!='makes' and side in ('mine','any','')
 Called by load.py after flat.build."""
 import re
 
 SCHEMA = """create table flat_ref(card integer, origin text, via integer, ability integer, role text, happening text,
-  kind text, side text, pick text, keyword integer);
-create index frh on flat_ref(happening, role); create index frc on flat_ref(card);"""
+  kind text, side text, pick text, keyword integer, concept text);
+create index frh on flat_ref(happening, role); create index frc on flat_ref(card); create index frk on flat_ref(concept, role);"""
 
 
 def build(c):
@@ -24,13 +26,18 @@ def build(c):
     for f, v, cs in c.execute("select field, value, causes from vocab where causes!='' and causes is not null"):
         causes[(f, v)] = [x.split(':') for x in cs.split(';')]
 
-    def ins(card, origin, via, ab, role, ev, kind, side, pick, kw=None):
-        c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?)', (card, origin, via, ab, role, ev, kind, side or '', pick, kw))
+    tree = {(f, v): t for f, v, t in c.execute("select field, value, tree from vocab where tree!=''")}
+    kwname = {i: n for i, n in c.execute('select id, name from card where is_keyword=1')}
+
+    def ins(card, origin, via, ab, role, ev, kind, side, pick, kw=None, state=None):
+        con = (tree.get(('keyword', kwname.get(kw, ''))) if kw else None) or (tree.get(('state', state)) if state else None) \
+            or tree.get(('event', ev))
+        c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?,?)', (card, origin, via, ab, role, ev, kind, side or '', pick, kw, con))
 
     def state_rows(card, origin, via, ab, kind, side, pick, withs, zone):
         for st in re.findall(r'state (?:is|in) ([a-z_]+)', withs or ''):
             for ev, *kw in causes.get(('state', st), []):
-                ins(card, origin, via, ab, 'state', ev, kind, side, pick, kwid.get(kw[0].lower()) if kw else None)
+                ins(card, origin, via, ab, 'state', ev, kind, side, pick, kwid.get(kw[0].lower()) if kw else None, state=st)
         if zone and kind == 'unit':
             for ev, *_ in causes.get(('zone', zone), []): ins(card, origin, via, ab, 'state', ev, kind, side, pick)
 

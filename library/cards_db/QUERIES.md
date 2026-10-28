@@ -103,6 +103,41 @@ select distinct card from flat_do where params glob '*=[a-z]*'
 - runeterra: 684 cards: Absorb Soul, Abyssal Eye, Abyssal Guard, Acolyte's Reliquary, Acorn, the Hextechnician, Adnere's Aviarists, Advance, Advanced Intel ...
 - stormbound: 56 cards: Agile Warriors, Amberhides, Awakening of the Will, Beards of Crowglyph, Bigthrust Tigers, Blizzard Bombs, Booming Professors, Brood Sages ...
 
+## Mechanics, not cards
+
+What "disable" (stop a unit acting) is built with, on the same cards (`ask.py all together disable`):
+
+- cant_attack: runeterra 11 cards, stormbound 8 cards
+- cheat_death: runeterra 7 cards
+- passive: runeterra 18 cards, stormbound 8 cards
+- silence: stormbound 8 cards
+- revive: runeterra 7 cards
+- resource_gain: stormbound 2 cards
+
+Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
+
+- destroy: runeterra 19307 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- sacrifice: runeterra 6008 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- self_destruct: runeterra 9028 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Diehards
+- removal: runeterra 5519 pairs, e.g. Kindred's Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Diehards
+- revive: runeterra 1661 pairs, e.g. Eternal Dancers -> Bladepierced Revenant
+- on_kill: runeterra 1824 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Spellbinder Zhevana -> Spare Dragonling
+
+Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
+
+- summon -> on_ally_play -> random_effect (seen in runeterra)
+- summon -> on_ally_play -> stacking_keyword (seen in runeterra)
+- summon -> on_ally_play -> variable_stats (seen in runeterra)
+- summon -> on_ally_play -> temporary_buff (seen in runeterra)
+- summon -> tribal -> generate_cards (seen in runeterra)
+- summon -> on_ally_play -> delayed (seen in runeterra)
+
+## Decks: cards of one game that feed each other
+
+- `ask.py stormbound deck "Wisp Cloud"` (Neutral, Winter): Wisp Cloud, Orgone Leechers, Frosthexers, Spellbinder Zhevana, Icicle Burst, Midwinter Chaos, Blizzard Bombs, Iceflakes, Erratic Neglects, Timber Alchemists, Stream of Consciousness, Temple of the Mind
+- `ask.py stormbound deck "Doppelbocks"` (Neutral, Swarm): Doppelbocks, Faun Companions, Swarmcallers, Moonlit Aerie, Siegebreakers, Queen of Herds, Trusty Shepherds, Restless Goats, Bucks of Wasteland, Shady Ghoul, Martyr Spongers, Gathering Troupe
+- `ask.py runeterra deck "Kalista"` (Neutral, Shadow Isles): Kalista, Glimpse Beyond, Kindred, Crawling Viperwyrm, Camavoran Dragon, Mistkeepers, The Darkin Halberd, The Harrowing, Shark Chariot, Pesky Specter, Eternal Dancers, Harrowing Return, Amalgamation Of Vile Rites, The Iron Conquest
+
 ## Same effect, compare cost: deal damage to anything (unit, structure or player), cheapest first
 
 ```sql
@@ -126,10 +161,10 @@ select distinct card from flat_do where act='copy_keywords'
 - runeterra Demacia: extra_turn (23), multi_attack (15), damage_reduction (19), damage_prevention (19), shield (16)
 - runeterra Piltover & Zaun: junk_cards (13), on_draw (18), recycle (11), on_spell (27), trap_secret (16)
 - runeterra Freljord: regeneration (16), stat_loss (24), stat_multiply (27), aoe_damage (27), excess_damage (35)
-- runeterra Shadow Isles: death_count (23), sacrifice (34), revive (19), self_mill (7), lifesteal (29)
+- runeterra Shadow Isles: death_count (23), revive (20), sacrifice (34), self_mill (7), lifesteal (29)
 - runeterra Bilgewater: steal (5), forced_movement (4), self_mill (6), on_life_loss (21), hand_disruption (5)
-- runeterra Targon: on_lifegain (5), combo_sequence (32), immunity (20), on_targeted (24), assists_support (11)
-- runeterra Shurima: stealth (7), tutor (19), debuff (5), variety_payoff (11), delayed (15)
+- runeterra Targon: on_lifegain (5), combo_sequence (32), immunity (20), on_targeted (24), assists_support (12)
+- runeterra Shurima: stealth (7), tutor (19), delayed (26), debuff (5), variety_payoff (11)
 - runeterra Bandle City: stacking_keyword (52), trap_secret (25), junk_cards (8), ping (65), spell_power (5)
 - runeterra Runeterra: repeat_trigger (5), merge_attach (23), board_presence (5), variety_payoff (4), leave_trigger (14)
 - stormbound Neutral: draw (5), generate_cards (4), variety_payoff (6), attack_now (4), copy (4)

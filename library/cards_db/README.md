@@ -23,6 +23,7 @@ equal mechanics of different games share one concept of the concept tree (Stun a
 | `build_input.py` | Reader input batches (`--add` for cards new to the source); keyword-only cards get empty records |
 | `check.py`, `normalize.py` | Records against shapes and values; one canonical form for equal meanings (rules N1-N9) |
 | `load.py`, `flat.py`, `refs.py` | Build `cards.sqlite`; the query layer (keywords expanded, concepts, flat_ref) |
+| `mechanics.py` | Questions about mechanics (concepts) and decks, links inside each game added up over games |
 | `connections.py` | How one card sets off another, every reason ranked, most direct first |
 | `pattern_check.py`, `patterns/` | Word check: `patterns.tsv` (wording rules, each judged once), `verdicts.tsv` (flags decided once), `<game>_flags.tsv` (open flags) |
 | `reread.py` | Re-read chosen cards under the current brief; merge replaces the old readings (kept in `replaced/`, re-read output in `fixes/`) |
@@ -49,5 +50,10 @@ zone discard = died). So one query finds them all, whatever the wording:
 
 ## Questions across games
 `ask.py all concept <concept>` and `compare <concept> ...` show how each game does a mechanic; `both <A> <B>` the cards
-that combine two mechanics. Keywords of different games meet through their concept (vocab keyword rows). Combos are only
-found inside one game: each game is its own world.
+that combine two mechanics; `cares` / `makes` take a concept too (`cares disable`: units stunned or frozen). Mechanic
+questions (mechanics.py): `together <concept>` (what a mechanic is built with), `feeds` / `fed <concept>` (mechanics that set
+it off or that it sets off), `chains <concept>` (families of three), `<game> deck <card or concept>` (cards of one game, in
+its faction, that feed each other). A link between two cards is only made inside one game: each game is its own world; the
+answers add up, by concept, what every game shows. Keywords meet through their concept (vocab keyword rows), states
+through theirs (stunned, frozen: disable), events through theirs (round_start, turn_start: turn_start), stats through
+their role (concepts attack_gain, defence_gain: Power, Health, or a strength that is both).

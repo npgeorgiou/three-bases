@@ -110,8 +110,9 @@ After Kaptain's check: add a few of the game's approved records to BRIEF.md as w
 so the readers of every later game see approved examples from all earlier games.
 
 ## Asking the database
-`ask.py <games> ...` where <games> is one game, several (runeterra,stormbound) or all: `cares|makes <happening>
-[mine|enemy]`, `concept <concept>`, `both <A> <B>`, `compare <concept> ...`, `combo <A> <B>` (one game only),
+`ask.py <games> ...` where <games> is one game, several (runeterra,stormbound) or all: `cares|makes <happening or concept>
+[mine|enemy]`, `concept <concept>`, `both <A> <B>`, `compare <concept> ...`, `together|feeds|fed|chains <concept>`,
+`<game> deck <card or concept>`, `combo <A> <B>` (one game only),
 `partners <card>`, `card <card>`, `list happenings|concepts`. QUERIES.md has example questions with real answers.
 For "which cards care about X" always use flat_ref (ask.py cares): the same thing is stored as a trigger, a condition, a
 count or a target filter depending on the wording. For "how do games do X" use concepts: a happening can differ between
@@ -153,7 +154,9 @@ Stormbound:
 - Numbers per card level stay in the records (x per_level); the query layer shows the level-1 value so rules and SQL
   compare numbers. An amount worked out in play shows its kind (event_amount, count), never None.
 - Generic layer gaps showed only when asking across games: keyword concepts missing for the new game, a stat named
-  differently (strength vs power and health).
+  differently (strength vs power and health), act stun not naming its keyword, one meaning in two forms (Yasuo's trigger,
+  now normalize N12 for every game). Every event, state, keyword and duration that two games word differently needs the same
+  concept in vocab.tsv (column tree); a stat needs its role (attack_gain, defence_gain).
   Run `ask.py all compare` on the main concepts before calling a game done. Never link cards of different games.
 - One reader for all cards, one for the second reading, one re-read: ~400k tokens in all, against 5.5 million on Runeterra
   with 53 readers.

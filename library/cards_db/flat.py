@@ -134,7 +134,10 @@ def build(c):
 # table, SQL condition on that table. A card gets the concept when any of its rows matches.
 RULES = [
     ('permanent_growth', 'flat_do', "act='stat_change' and on_pick='self' and lasts in ('permanent','while') and params not like '%=-%'"),
-    ('temporary_buff', 'flat_do', "act='stat_change' and lasts='this_round' and coalesce(on_side,'mine')!='enemy' and params not like '%=-%'"),
+    ('temporary_buff', 'flat_do', "act='stat_change' and lasts in ('this_round','next_round','n_rounds','next_own_turn') and coalesce(on_side,'mine')!='enemy' and params not like '%=-%'"),
+    # stats by role, whatever a game calls them (Power / Health, or one strength stat that is both)
+    ('attack_gain', 'flat_do', "act in ('stat_change','grow') and (params glob '*power=[1-9a-z]*' or params glob '*strength=[1-9a-z]*') and coalesce(on_side,'mine')!='enemy'"),
+    ('defence_gain', 'flat_do', "act in ('stat_change','grow') and (params glob '*health=[1-9a-z]*' or params glob '*strength=[1-9a-z]*') and coalesce(on_side,'mine')!='enemy'"),
     ('stat_loss', 'flat_do', "(act='stat_change' and params like '%=-%') or (act='stat_set' and on_side='enemy')"),
     ('aoe_damage', 'flat_do', "act='damage' and on_pick='all'"),
     ('direct_damage', 'flat_do', "act in ('damage','excess_damage') and on_kind in ('player','any')"),

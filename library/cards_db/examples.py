@@ -3,7 +3,7 @@
 Usage: examples.py"""
 import os, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
-import connections
+import connections, mechanics
 c = sqlite3.connect(os.path.join(HERE, 'cards.sqlite'))
 name = lambda i: c.execute('select name from card where id=?', (i,)).fetchone()[0]
 game = lambda i: c.execute('select game from card where id=?', (i,)).fetchone()[0]
@@ -49,6 +49,18 @@ q('Drain: damage, then the same amount to my side (heal the player, or strength 
 q('Cards that care about a unit having a status any game gives (stunned, frozen, poisoned ...)',
   "select distinct card from flat_ref where happening='given_keyword' and role!='makes'", ask='all cares given_keyword')
 q('Effects that grow with a count ("for each", "equal to"), any game', "select distinct card from flat_do where params glob '*=[a-z]*'")
+games = [g for (g,) in c.execute('select distinct game from card order by game')]
+out.extend(['## Mechanics, not cards', '', 'What "disable" (stop a unit acting) is built with, on the same cards (`ask.py all together disable`):', ''] +
+           [f'- {x}: ' + ', '.join(f'{g} {n} cards' for g, n in per.items()) for x, per in mechanics.together(c, games, 'disable', top=6)] +
+           ['', 'Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):', ''] +
+           [f'- {x}: ' + '; '.join(f'{g} {n} pairs, e.g. {ex}' for g, (n, ex) in per.items()) for x, per in mechanics.feeds(c, games, 'death_trigger', top=6, reverse=True)] +
+           ['', 'Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):', ''] +
+           [f'- {a} -> {b} -> {x} (seen in {", ".join(gs)})' for n, a, b, x, gs in mechanics.chains(c, games, 'summon', top=6)] + [''])
+out.extend(['## Decks: cards of one game that feed each other', ''])
+for g, seed in (('stormbound', 'Wisp Cloud'), ('stormbound', 'Doppelbocks'), ('runeterra', 'Kalista')):
+    ids, allowed = mechanics.deck(c, g, seed, 12 if g == 'stormbound' else 14)
+    out.append(f'- `ask.py {g} deck "{seed}"` ({", ".join(sorted(allowed))}): ' + ', '.join(mechanics.name(c, i) for i in ids))
+out.append('')
 q('Same effect, compare cost: deal damage to anything (unit, structure or player), cheapest first',
   "select distinct d.card from flat_do d join card cd on cd.id=d.card where d.act='damage' and d.on_kind in ('any','anything') order by cd.cost")
 q('Cards that copy keywords between units (a mechanic found while testing)',

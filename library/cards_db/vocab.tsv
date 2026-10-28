@@ -3,13 +3,13 @@ event	always	no event: the ability is on as long as its conditions hold (static)
 event	activated	the player chooses to use it (landmark activation, skill-like use)	activated		27 Oct 2026, v1
 event	played	the actor card is played from hand (Play:, a spell being cast)	on_play		27 Oct 2026, v1
 event	summoned	a unit enters play by any means	on_ally_play		27 Oct 2026, v1
-event	created	a card is created (in hand, deck or play)			27 Oct 2026, v1
+event	created	a card is created (in hand, deck or play)	generate_cards		27 Oct 2026, v1
 event	drawn	a card is drawn	on_draw		27 Oct 2026, v1
 event	discarded	a card is discarded	on_discard		27 Oct 2026, v1
 event	attacks	a unit attacks (declared as attacker)	on_attack		27 Oct 2026, v1
 event	blocks	a unit blocks	on_block		27 Oct 2026, v1
 event	strikes	a unit strikes (deals damage with its Power)	on_attack		27 Oct 2026, v1
-event	strikes_nexus	a unit strikes the enemy player (Nexus Strike)	on_attack		27 Oct 2026, v1
+event	strikes_nexus	a unit hits the enemy player (Runeterra Nexus Strike; Stormbound: reaching the enemy base)	on_attack		27 Oct 2026, v1
 event	damaged	a unit or player takes damage	on_damaged		27 Oct 2026, v1
 event	survives_damage	a unit takes damage and does not die	on_damaged		27 Oct 2026, v1
 event	dies	a unit dies (Last Breath when the object is self)	death_trigger		27 Oct 2026, v1
@@ -21,18 +21,18 @@ event	targeted	a card is targeted by a spell, skill or ability	on_targeted		27 O
 event	given_keyword	a unit is given a keyword (Stun, Barrier, ...)			27 Oct 2026, v1
 event	stat_changed	a unit gets a stat change (buff or debuff)			27 Oct 2026, v1
 event	healed	a unit or player is healed	on_lifegain		27 Oct 2026, v1
-event	round_start	the round starts	turn_start		27 Oct 2026, v1
-event	round_end	the round ends	turn_end		27 Oct 2026, v1
+event	round_start	the round starts, for both players (Runeterra Round Start); a player's own turn is turn_start	turn_start		27 Oct 2026, v1
+event	round_end	the round ends, for both players (Runeterra Round End); a player's own turn is turn_end	turn_end		27 Oct 2026, v1
 event	game_start	the game starts	start_of_game		27 Oct 2026, v1
-event	levels_up	a champion levels up			27 Oct 2026, v1
+event	levels_up	a champion levels up	upgrade		27 Oct 2026, v1
 event	spell_resolves	a spell or skill finishes (Imbue)	on_spell		27 Oct 2026, v1
-event	mana_refilled	mana or spell mana is refilled			27 Oct 2026, v1
-event	equipped	an item or equipment is attached to a unit			27 Oct 2026, v1
+event	mana_refilled	mana or spell mana is refilled	resource_gain		27 Oct 2026, v1
+event	equipped	an item or equipment is attached to a unit	merge_attach		27 Oct 2026, v1
 event	countdown_done	a Countdown reaches 0	delayed		27 Oct 2026, v1
-event	shuffled	a card is shuffled into a deck			27 Oct 2026, v1
-event	transformed	a card transforms			27 Oct 2026, v1
-event	revived	a unit is revived			27 Oct 2026, v1
-event	predicts	the player Predicts			27 Oct 2026, v1
+event	shuffled	a card is shuffled into a deck	deck_modification		27 Oct 2026, v1
+event	transformed	a card transforms	transform		27 Oct 2026, v1
+event	revived	a unit is revived	revive		27 Oct 2026, v1
+event	predicts	the player Predicts	selection		27 Oct 2026, v1
 event	nexus_damaged	a player is damaged (any source)	on_life_loss		27 Oct 2026, v1
 act	damage	deal damage	damage	damaged;survives_damage;dies;killed;nexus_damaged	27 Oct 2026, v1
 act	heal	restore Health or player life	heal	healed	27 Oct 2026, v1
@@ -58,12 +58,12 @@ act	gain_attack_token	the player gains the attack token (Rally)	extra_turn	attac
 act	strike	the target unit strikes another target now	attack_now	strikes;damaged	27 Oct 2026, v1
 act	start_attack	start a free attack with the targets	attack_now	attacks	27 Oct 2026, v1
 act	challenge	force a unit to block / choose its blocker	forced_attack	blocks	27 Oct 2026, v1
-act	stun	stun (cannot attack or block this round, removed from combat)	disable	given_keyword	27 Oct 2026, v1
+act	stun	stun (cannot attack or block this round, removed from combat)	disable	given_keyword:Stun	27 Oct 2026, v1
 act	mark	mark the target for a later effect	mark_target		27 Oct 2026, v1
 act	capture	remove the target until the capturer leaves play	banish	leaves_play	27 Oct 2026, v1
 act	revive	return a dead unit to play	revive	summoned;revived	27 Oct 2026, v1
 act	level_up	level up the target champion	upgrade	levels_up	27 Oct 2026, v1
-act	reveal	reveal cards			27 Oct 2026, v1
+act	reveal	reveal cards	information		27 Oct 2026, v1
 act	look	look at cards without taking them	selection		27 Oct 2026, v1
 act	choose_one	the player chooses one of the following effects (they carry link=or)	modal_choice		27 Oct 2026, v1
 act	choose_card	pick a card among options (Invoke, Manifest, Predict, Discover)	selection		27 Oct 2026, v1
@@ -71,7 +71,7 @@ act	counter	negate a spell or skill	counter_spell		27 Oct 2026, v1
 act	negate_damage	prevent damage to the target	damage_prevention		27 Oct 2026, v1
 act	swap	swap the positions of the targets	swap		27 Oct 2026, v1
 act	move	move the target to another position or zone	forced_movement		27 Oct 2026, v1
-act	countdown_advance	make a Countdown count down (param amount)		countdown_done	27 Oct 2026, v1
+act	countdown_advance	make a Countdown count down (param amount)	delayed	countdown_done	27 Oct 2026, v1
 act	attach	attach the source to the target unit	merge_attach	equipped	27 Oct 2026, v1
 act	keyword_action	do what the linked keyword describes (Recall, Invoke, Predict, Toss, Nab, ...)		keyword_used	27 Oct 2026, v1
 act	win_game	the player wins the game	win_condition		27 Oct 2026, v1
@@ -82,8 +82,8 @@ act	increase_effect	the target's effects or numbers are increased (param amount)
 kind	unit	a unit (follower or champion)			27 Oct 2026, v1
 kind	card	a card in a zone other than play			27 Oct 2026, v1
 kind	spell	a spell or skill			27 Oct 2026, v1
-kind	player	a player (Nexus)			27 Oct 2026, v1
-kind	landmark	a landmark			27 Oct 2026, v1
+kind	player	a player: their life total (Runeterra Nexus, Stormbound base)			27 Oct 2026, v1
+kind	landmark	a non-unit card that stays on the board (Runeterra landmark, Stormbound structure)			27 Oct 2026, v1
 kind	equipment	an equipment or item			27 Oct 2026, v1
 kind	any	a unit or a player (anything)			27 Oct 2026, v1
 kind	effect	an effect or ability (for counter, repeat)			27 Oct 2026, v1
@@ -117,8 +117,8 @@ zone	deck_bottom	bottom of deck			27 Oct 2026, v1
 zone	everywhere	play, hand, deck and later created (Everywhere)			27 Oct 2026, v1
 zone	removed	removed from the game / captured			27 Oct 2026, v1
 zone	discard	discard pile / dead		dies	27 Oct 2026, v1
-attr	power	Power			27 Oct 2026, v1
-attr	health	Health			27 Oct 2026, v1
+attr	power	attack stat (Runeterra Power); a game with one stat uses strength			27 Oct 2026, v1
+attr	health	health stat (Runeterra Health); a game with one stat uses strength			27 Oct 2026, v1
 attr	cost	cost			27 Oct 2026, v1
 attr	keyword	has the linked keyword			27 Oct 2026, v1
 attr	type	has the linked type			27 Oct 2026, v1
@@ -137,10 +137,10 @@ op	is	is / has			27 Oct 2026, v1
 op	not	is not / lacks			27 Oct 2026, v1
 state	attacking	attacking		attacks	27 Oct 2026, v1
 state	blocking	blocking		blocks	27 Oct 2026, v1
-state	damaged	damaged		damaged	27 Oct 2026, v1
-state	stunned	stunned		given_keyword:Stun	27 Oct 2026, v1
-state	frostbitten	frostbitten		given_keyword:Frostbite	27 Oct 2026, v1
-state	marked	marked by the source			27 Oct 2026, v1
+state	damaged	damaged	damage	damaged	27 Oct 2026, v1
+state	stunned	stunned	disable	given_keyword:Stun	27 Oct 2026, v1
+state	frostbitten	frostbitten	stat_loss	given_keyword:Frostbite	27 Oct 2026, v1
+state	marked	marked by the source	mark_target		27 Oct 2026, v1
 state	created	created (not from the deck)		created	27 Oct 2026, v1
 state	champion	is a champion			27 Oct 2026, v1
 state	follower	is not a champion			27 Oct 2026, v1
@@ -150,7 +150,7 @@ state	leveled	is a leveled champion		levels_up	27 Oct 2026, v1
 state	hidden	played hidden (Ambush)			27 Oct 2026, v1
 state	ephemeral	Ephemeral			27 Oct 2026, v1
 state	in_combat	in combat			27 Oct 2026, v1
-state	dead_this_round	died this round		dies	27 Oct 2026, v1
+state	dead_this_round	died this round	death	dies	27 Oct 2026, v1
 state	fleeting	Fleeting			27 Oct 2026, v1
 category	unit	unit			27 Oct 2026, v1
 category	follower	non-champion unit			27 Oct 2026, v1
@@ -191,12 +191,12 @@ span	last_round	last round			27 Oct 2026, v1
 span	this_game	this game			27 Oct 2026, v1
 span	this_turn	this action			27 Oct 2026, v1
 lasts	instant	one-time			27 Oct 2026, v1
-lasts	this_round	until the round ends			27 Oct 2026, v1
-lasts	next_round	through the next round			27 Oct 2026, v1
+lasts	this_round	until the round ends	temporary_effect		27 Oct 2026, v1
+lasts	next_round	through the next round	temporary_effect		27 Oct 2026, v1
 lasts	permanent	for the rest of the game			27 Oct 2026, v1
 lasts	while	while the ability's conditions hold or the source is in play			27 Oct 2026, v1
 lasts	while_attached	while attached			27 Oct 2026, v1
-lasts	n_rounds	for param rounds rounds			27 Oct 2026, v1
+lasts	n_rounds	for param rounds rounds	temporary_effect		27 Oct 2026, v1
 link	and	also, independent			27 Oct 2026, v1
 link	then	after the previous effect			27 Oct 2026, v1
 link	if_done	only if the previous effect happened			27 Oct 2026, v1
@@ -257,9 +257,9 @@ act	cost_set	set the target's cost to params cost	cost_set		28 Oct 2026, v3
 act	max_mana_change	gain or lose mana gems (params amount, signed; empty gem = not refilled)	resource_gain	mana_refilled	28 Oct 2026, v3
 act	spend_mana	spend mana (params amount)		mana_spent	28 Oct 2026, v3
 act	play_card	play the target or the linked card without paying (cast it)	free_play	played	28 Oct 2026, v3
-event	challenges	a unit challenges (forces a blocker)			28 Oct 2026, v3
-event	supports	a unit supports the ally to its right (actor the supporter, object the supported)			28 Oct 2026, v3
-event	attack_token_gained	a player gains the attack token			28 Oct 2026, v3
+event	challenges	a unit challenges (forces a blocker)	target_choice		28 Oct 2026, v3
+event	supports	a unit supports the ally to its right (actor the supporter, object the supported)	assists_support		28 Oct 2026, v3
+event	attack_token_gained	a player gains the attack token	attack_token		28 Oct 2026, v3
 event	trap_activated	a Trap or Boon attached to a card activates	trap_secret		28 Oct 2026, v3
 state	new	a card with a different name than all cards played (or seen) before this game			28 Oct 2026, v3
 state	multi_region	a card from 2+ regions			28 Oct 2026, v3
@@ -358,8 +358,8 @@ state	struck_this_round	struck this round		strikes	28 Oct 2026, v7
 act	grow	"raise the target's Power and Health to at least the given values (""grows up to 4|4"", ""grow to the highest Power or Health"")"	stat_gain	stat_changed	28 Oct 2026, v8
 attr	targets	"a spell or skill whose target is the linked card (""enemy spells targeting Evelynn"")"			28 Oct 2026, v8
 x	per_level	"one number per card level, in level order, as items (""1/2/3/4/5 strength"")"			28 Oct 2026, v10
-attr	strength	Stormbound strength: one number that is both attack and health; damage lowers it			28 Oct 2026, v11 (Stormbound)
-attr	movement	Stormbound movement (speed): tiles a unit moves forward			28 Oct 2026, v11 (Stormbound)
+attr	strength	one stat that is both attack and health, lowered by damage (Stormbound strength)			28 Oct 2026, v11 (Stormbound)
+attr	movement	tiles a unit moves on its own each turn (Stormbound movement, speed)			28 Oct 2026, v11 (Stormbound)
 attr	position	"where the thing is, relative to the filter's ""of"" target (default the card itself); value from position"			28 Oct 2026, v11 (Stormbound)
 position	in_front	the tile directly in front (toward the enemy base)			28 Oct 2026, v11 (Stormbound)
 position	ahead	"any tile in front, in the same column (""all units in front"")"			28 Oct 2026, v11 (Stormbound)
@@ -374,26 +374,26 @@ position	same_row	the same row			28 Oct 2026, v11 (Stormbound)
 position	same_column	the same column			28 Oct 2026, v11 (Stormbound)
 position	most_forward	the closest to the enemy base			28 Oct 2026, v11 (Stormbound)
 position	furthest_row	the player's furthest row where cards can be played (front line)			28 Oct 2026, v11 (Stormbound)
-param	strength	strength change or value (Stormbound)			28 Oct 2026, v11 (Stormbound)
-param	movement	movement change or value (Stormbound)			28 Oct 2026, v11 (Stormbound)
+param	strength	change or value of the single attack-and-health stat (Stormbound strength)			28 Oct 2026, v11 (Stormbound)
+param	movement	change or value of movement			28 Oct 2026, v11 (Stormbound)
 param	spread	"1 = the amount is divided among the targets, not given to each (""spread randomly among"")"			28 Oct 2026, v11 (Stormbound)
 event	turn_start	"the actor player's turn starts (""At the start of your turn""; structures act, then units move)"	turn_start		28 Oct 2026, v11 (Stormbound)
 event	turn_end	the actor player's turn ends	turn_end		28 Oct 2026, v11 (Stormbound)
 event	moves	"a unit is about to move (""Before moving"": on play if it moves, then each turn)"			28 Oct 2026, v11 (Stormbound)
 event	attack_done	"a unit has finished an attack, also a forced one (""After attacking"")"	on_attack		28 Oct 2026, v11 (Stormbound)
-state	poisoned	poisoned		given_keyword:Poison	28 Oct 2026, v11 (Stormbound)
-state	vitalized	vitalized		given_keyword:Vitalize	28 Oct 2026, v11 (Stormbound)
-state	frozen	frozen		given_keyword:Freeze	28 Oct 2026, v11 (Stormbound)
-state	confused	confused		given_keyword:Confuse	28 Oct 2026, v11 (Stormbound)
-state	disabled	disabled (ability removed)		given_keyword:Disable	28 Oct 2026, v11 (Stormbound)
-kind	unit_or_structure	"a unit or a structure (Stormbound ""unit or structure"")"			28 Oct 2026, v11 (Stormbound)
-kind	anything	"a unit, a structure or a player's base (Stormbound's plain ""enemy"")"			28 Oct 2026, v11 (Stormbound)
+state	poisoned	poisoned	damage_over_time	given_keyword:Poison	28 Oct 2026, v11 (Stormbound)
+state	vitalized	vitalized	permanent_growth	given_keyword:Vitalize	28 Oct 2026, v11 (Stormbound)
+state	frozen	frozen	disable	given_keyword:Freeze	28 Oct 2026, v11 (Stormbound)
+state	confused	confused	forced_movement	given_keyword:Confuse	28 Oct 2026, v11 (Stormbound)
+state	disabled	disabled (ability removed)	silence	given_keyword:Disable	28 Oct 2026, v11 (Stormbound)
+kind	unit_or_structure	"a unit or a non-unit card on the board (""unit or structure"")"			28 Oct 2026, v11 (Stormbound)
+kind	anything	"a unit, a structure or a player (""an enemy"" where the rules count all three)"			28 Oct 2026, v11 (Stormbound)
 rarity	legendary	legendary			28 Oct 2026, v11 (Stormbound)
 test	level	"the card's level compared with n (op eq, le, ge): for words that change by level (""bordering/bordering/surrounding"")"			28 Oct 2026, v11 (Stormbound)
 x	range	"the text gives a range for this level (""4-5""): items are the lowest and highest number"			28 Oct 2026, v11 (Stormbound)
-lasts	next_own_turn	"until the end of the holder's next turn (Stormbound Freeze, Confuse: ""lasts one turn"")"			28 Oct 2026, v11 (Stormbound)
-state	single_use	a single-use card: removed when played (Stormbound battle copies)			28 Oct 2026, v13 (Stormbound)
-attr	level	"a card's level (Stormbound: ""a random level 3 unit"")"			28 Oct 2026, v13 (Stormbound)
+lasts	next_own_turn	"until the end of the holder's next turn (""lasts one turn"": Stormbound Freeze, Confuse)"	temporary_effect		28 Oct 2026, v11 (Stormbound)
+state	single_use	a card removed after it is played once (single-use copies)			28 Oct 2026, v13 (Stormbound)
+attr	level	a card's level, in games where cards have levels			28 Oct 2026, v13 (Stormbound)
 position	first_empty_in_front	the first empty tile going forward in the same column			28 Oct 2026, v13 (Stormbound)
 position	first_empty_behind	the first empty tile going back in the same column			28 Oct 2026, v13 (Stormbound)
 keyword	Poison	concept of using this keyword (Stormbound: takes 1 damage every turn; concept is Claude's)	damage_over_time		28 Oct 2026, v14 (Stormbound)
