@@ -1,0 +1,9 @@
+{"id": 2000287, "field": "params", "need": "bonus_set_by_card"}
+{"id": 2000301, "field": "params", "need": "triggered_abilities"}
+{"id": 2000303, "field": "to", "need": "next_in_lane"}
+{"id": 2000336, "field": "params", "need": "multiply_by_stacks"}
+{"id": 2000340, "field": "params", "need": "multiply_by_stacks"}
+{"id": 2000347, "field": "params", "need": "multiplier"}
+{"id": 2000355, "field": "act", "need": "ignore_protection"}
+{"id": 2000357, "field": "to", "need": "floor_below_top"}
+{"id": 2000361, "field": "params", "need": "purged"}
