@@ -6,8 +6,8 @@
   defined by Kaptain (supplement/runeterra_kaptain.jsonl).
 - cards.sqlite: 3,109 abilities, 4,582 effects, 358 values; flat_ref 13,658 rows over 40 happenings; 109 concept-tree
   concepts on the cards.
-- Names that nothing defines stay names: Mark of the Storm (a mark granted to enemies), Spriteling, Phased Moon Weapon.
-  Can't Block has a record by its name.
+- Mark of the Storm is a keyword with Kaptain's definition; Phased Moon Weapon is the type Moon Weapon. Spriteling stays a
+  name: no Runeterra source defines it. Can't Block has a record by its name.
 
 ## What it answers (ask.py; example answers in QUERIES.md)
 - Which cards care about a happening, whatever the wording (trigger, condition, count, picked by it): e.g. 127 cards

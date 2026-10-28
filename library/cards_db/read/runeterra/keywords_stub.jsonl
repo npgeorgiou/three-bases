@@ -2,3 +2,4 @@
 {"name":"Deep","condition":[{"test":"count","of":{"kind":"card","side":"mine","zone":"deck"},"op":"le","n":15,"span":"this_game"}],"abilities":[{"when":{"event":"always"},"if":[{"test":"keyword_condition","ref":"Deep"}],"do":[{"act":"stat_change","on":{"pick":"self","zone":"everywhere"},"params":{"power":3,"health":3},"lasts":"while"}]}]}
 {"name":"Plant","abilities":[{"when":{"event":"activated"},"do":[{"act":"create","on":{"pick":"it"},"zone":"deck","params":{"amount":{"x":"event_amount"}}}]}]}
 {"name":"Assimilate","abilities":[{"when":{"event":"activated"},"do":[{"act":"transform","on":{"kind":"unit","side":"mine","pick":"all","zone":"board","with":[{"attr":"state","op":"is","val":"equipped"}]}},{"act":"level_up","on":{"pick":"it","with":[{"attr":"category","op":"is","val":"champion"}]},"link":"then"}]}],"unsure":["with"]}
+{"name":"Mark of the Storm","abilities":[]}

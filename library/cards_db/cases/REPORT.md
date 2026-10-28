@@ -17,7 +17,7 @@ Made by `cases/run.py runeterra`.
 | m07 | frostbites (power to 0) | 22 | 22 | 100% | 1 | yes |
 | m08 | recalls units or cares about recalling | 60 | 60 | 100% | 77 | yes |
 | m09 | draws cards | 190 | 187 | 98% | 24 | yes |
-| m10 | creates cards | 437 | 436 | 100% | 189 | yes |
+| m10 | creates cards | 437 | 436 | 100% | 188 | yes |
 | m11 | damages the enemy Nexus | 94 | 92 | 98% | 268 | yes |
 | m12 | heals | 68 | 66 | 97% | 74 | yes |
 | m13 | discards | 40 | 39 | 98% | 110 | yes |
@@ -40,7 +40,7 @@ Made by `cases/run.py runeterra`.
 | m30 | Rally (attack token) | 25 | 25 | 100% | 19 | yes |
 | m31 | Predict | 20 | 20 | 100% | 62 | yes |
 | m32 | reduces costs | 129 | 129 | 100% | 54 | yes |
-| m33 | copies cards or spells (incl. becoming an exact copy) | 100 | 99 | 99% | 71 | yes |
+| m33 | copies cards or spells (incl. becoming an exact copy) | 100 | 98 | 98% | 71 | yes |
 | m34 | Behold (have a card) | 16 | 16 | 100% | 102 | yes |
 | m35 | Daybreak / Nightfall | 43 | 43 | 100% | 1 | yes |
 | m36 | can't block | 8 | 8 | 100% | 341 | yes |
@@ -243,7 +243,7 @@ Made by `cases/run.py runeterra`.
 | r106 | Bandle City | archetype (library) | chaos | 28 | 85 | yes |
 | r107 | Bandle City | archetype (library) | trickery | 6 | 26 | yes |
 | r108 | Bandle City | archetype (library) | transformation | 16 | 30 | yes |
-| r109 | Bilgewater | archetype (library) | chaos | 30 | 78 | yes |
+| r109 | Bilgewater | archetype (library) | chaos | 30 | 74 | yes |
 | r110 | Bilgewater | archetype (library) | ramp | 17 | 37 | yes |
 | r111 | Bilgewater | archetype (library) | graveyard | 4 | 40 | yes |
 | r112 | Demacia | archetype (library) | scaling | 21 | 38 | yes |

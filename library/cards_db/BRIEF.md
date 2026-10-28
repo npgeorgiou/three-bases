@@ -99,6 +99,10 @@ AMOUNT   a number, or `{"x": x, "of": TARGET, "attr": attr, "event": EVENT, "spa
    attacking") = the summon / revive / copy, then `{"act": "start_attack", "on": {"pick": "it"}, "link": "and"}`. Never a
    state attacking filter on what is summoned.
 
+22. A card that puts a named card into play ("summon a Stormcarved Spire that ... summons an exact copy of the unit")
+   describes only its own part (what it obliterates, which card, the numbers it sets). What the named card then does is
+   that card's own record; never copy it into this card.
+
 ## Keyword entries (category keyword)
 A keyword's record says what the keyword means, so that every card with it inherits that meaning. Four kinds:
 - Status keywords (a unit has it: Elusive, Barrier, Stun, Quick Attack, Ephemeral, ...): abilities of the holder, "I" / "this

@@ -74,8 +74,14 @@ def main():
     cell = lambda v: '' if v is None else str(v).replace('|', '/')
     head = ['| ' + ' | '.join(COLS) + ' |', '|' + '---|' * len(COLS)]
     out = [f'# Stored rows of {len(cards)} cards (check_table.py)', '',
-           'Each card: its name and text on one line, then its stored rows, one row per effect. Targets, events, conditions '
-           'and amounts are written in place as their stored fields.', '']
+           'Each card: its name and text on one line, then its stored rows, one row per effect, then the rows of each keyword it has.',
+           '- ability: one numbered "when -> if -> do" unit of the card. Rows with the same ability number are one ability; they '
+           'happen together, in effect order.',
+           '- effect: the step inside the ability. link says how a step joins the step before it: and = also; then = after it, '
+           'using its result; if_done = only if it happened; or = instead (a choice); instead = replaces it.',
+           '- pick=it in a target = the thing the step before acted on (the drawn card, the summoned unit, the chosen enemy).',
+           '- A row labelled "keyword X" is what keyword X does; the card has it, so the card does it too.',
+           '- Targets, events, conditions and amounts are written in place as their stored fields.', '']
     for cid in cards:
         nm = name('card', cid)
         kws = ', '.join(name('card', k) for (k,) in c.execute('select keyword from card_keyword where card=?', (cid,)))
@@ -83,6 +89,11 @@ def main():
         out.append('')
         abs_ = c.execute('select id, seq from ability where card=? and given_by_effect is null order by seq', (cid,)).fetchall()
         rows = [r for ab, seq in abs_ for r in ability_rows(ab, str(seq))]
+        for (k,) in c.execute('select keyword from card_keyword where card=?', (cid,)).fetchall():
+            kn = name('card', k); kab = c.execute('select id, seq from ability where card=? and given_by_effect is null order by seq', (k,)).fetchall()
+            trig = c.execute('select e.event from keyword_trigger t join event e on e.id=t.event where t.keyword=?', (k,)).fetchone()
+            rows += [r for ab, seq in kab for r in ability_rows(ab, f'keyword {kn}: {seq}')]
+            if not kab: rows.append({'ability': f'keyword {kn}', 'act': f'(a trigger label: event {trig[0]})' if trig else '(no rows: speed, type or reminder keyword)'})
         out += head + ['| ' + ' | '.join(cell(r.get(k)) for k in COLS) + ' |' for r in rows] if rows else ['(no rows stored)']
         out.append('')
     open(out_path, 'w').write('\n'.join(out) + '\n')

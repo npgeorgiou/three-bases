@@ -19,11 +19,20 @@ Commands run from `library/cards_db/`. Files and tables: README.md.
    once (`patterns/verdicts.tsv`); a dropped test case is written in `cases/DROPPED.md` with its reason.
 
 ## Steps
+### A game the library does not have at all
+The old library pipeline (library/ADDING_GAMES.md: converters, tags, patterns) is not used for this database. Write
+`supplement_<game>.py`: it reads the game's own published card data (all cards, and the keyword glossary with each
+definition as category keyword) and writes `supplement/<game>.jsonl` in the library's entities columns (source.py lists
+them; ext_id = the game's card code). Ids: a block of 1,000,000 per game, the next free one (Runeterra used 900001-999999;
+the next game takes 1000001-1999999, its Kaptain definitions from 1900001). From then on the game is like any other: step 0.
+Researching the game (its rules, glossary, factions) is still done first, as ADDING_GAMES.md section 0.1 says: it is the
+checklist for the case tests.
+
 ### 0. Before reading
 1. Decide with Kaptain what is left out (modes, other products): `exclude.tsv`.
 2. Completeness: compare the library's cards with the game's own published card list (by card code and by name). Cards
    the library lacks go to `supplement/<game>.jsonl` through a `supplement_<game>.py` like Runeterra's (ids 900001+).
-   Runeterra lacked 185 cards, champions among them. Keywords the cards name that the library lacks come from the game's
+   Runeterra lacked 185 cards, champions among them (a game the library lacks entirely: the section above). Keywords the cards name that the library lacks come from the game's
    own glossary the same way (Runeterra: Assimilate). Keywords-field entries that are data artefacts go to NOT_KEYWORDS in
    build_input.py, with the proof (Runeterra: "Missing Translation" is Riot's AuraVisualFakeKeyword).
 3. `python3 build_input.py <game> 20000` (batches of ~20,000 characters; a reader costs ~110-125k tokens whatever the size).

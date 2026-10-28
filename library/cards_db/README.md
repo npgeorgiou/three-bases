@@ -17,7 +17,7 @@ the source; `cards.sqlite` is rebuilt from them by `run.py <game>`.
 | `names.tsv` | Names readers took for keywords that are something else (a keyword, type, name family, or dropped), per game |
 | `source.py`, `supplement/`, `supplement_<game>.py` | Cards come from the library plus `supplement/<game>.jsonl` (cards the library lacks, from the game's own data; ids 900001+) and `<game>_kaptain.jsonl` (definitions Kaptain gave; 990001+) |
 | `build_input.py` | Reader input batches (`--add` for cards new to the source); keyword-only cards get empty records |
-| `check.py`, `normalize.py` | Records against shapes and values; one canonical form for equal meanings (rules N1-N8) |
+| `check.py`, `normalize.py` | Records against shapes and values; one canonical form for equal meanings (rules N1-N9) |
 | `load.py`, `flat.py`, `refs.py` | Build `cards.sqlite`; the query layer (keywords expanded, concepts, flat_ref) |
 | `connections.py` | How one card sets off another, every reason ranked, most direct first |
 | `pattern_check.py`, `patterns/` | Word check: `patterns.tsv` (wording rules, each judged once), `verdicts.tsv` (flags decided once), `<game>_flags.tsv` (open flags) |

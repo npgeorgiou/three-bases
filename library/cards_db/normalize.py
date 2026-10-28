@@ -12,6 +12,8 @@ and second readings). Safe to run any number of times. Each rule is listed in CH
   N7 a unit put into play attacking ("summon an attacking X", "revive an attacking copy") = the summon/revive/copy, then
      start_attack on it (link and); a state attacking filter on its target is that, written the other way.
   N8 a copy of a dead unit put into play (copy, on: unit in discard, zone board) is revive.
+  N9 a keyword used as an action whose own record picks its target itself (Toss: the bottom of your deck; Nab; Rally)
+     carries no "on": the keyword's record says what it acts on.
 Usage: normalize.py <game> <file.jsonl> [...]   rewrites the files in place, prints how many records changed."""
 import glob, json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -23,7 +25,11 @@ def keyword_kinds(game):
     for l in open(os.path.join(HERE, 'read', game, 'keywords.jsonl')):
         r = json.loads(l); ab = r.get('abilities', [])
         if ab: kinds[names[r['id']]] = 'action' if any(a.get('when', {}).get('event') == 'activated' for a in ab) else 'status'
+        act = [a for a in ab if a.get('when', {}).get('event') == 'activated']
+        if act and '"it"' not in json.dumps(act): SELF_TARGET.add(names[r['id']])
     return kinds
+
+SELF_TARGET = set()  # N9
 
 def clean(x):
     if isinstance(x, dict): return {k: clean(v) for k, v in x.items() if v is not None and (k == 'abilities' or (v != [] and v != {}))}
@@ -51,6 +57,7 @@ def fix_effect(e, kinds):
     if act in ('keyword_action', 'give_keyword') and kw in kinds:
         e['act'] = 'keyword_action' if kinds[kw] == 'action' else 'give_keyword'
         if e['act'] == 'keyword_action': e.pop('lasts', None)
+        if e['act'] == 'keyword_action' and kw in SELF_TARGET: e.pop('on', None)  # N9
         elif 'lasts' not in e: e['lasts'] = 'unstated'
     if 'ability' in e: fix_ability(e['ability'], kinds)
 

@@ -1,5 +1,8 @@
 # Adding a game to the library: cheap and safe
 
+This is the old library's pipeline (tags and patterns). To describe a game's cards in the card database, follow
+`cards_db/PROCESS.md` instead; from this file only section 0.1 (researching the game) applies there.
+
 Read this whole file before you add a game.
 
 ## Rule zero
