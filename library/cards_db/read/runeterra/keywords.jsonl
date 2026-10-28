@@ -17,7 +17,7 @@
 {"id":750384,"abilities":[],"condition":[{"test":"event_count","event":{"event":"played","actor":{"kind":"player","side":"mine"},"object":{"kind":"spell"}},"op":"ge","n":2,"span":"last_round"}]}
 {"id":750385,"abilities":[{"when":{"event":"activated"},"do":[{"act":"attach","on":{"pick":"self"},"to":{"kind":"card","side":"mine","pick":"chosen","zone":"deck"}}]},{"when":{"event":"drawn","object":{"pick":"attached_to"}},"do":[{"act":"keyword_action","on":{"pick":"self"},"keyword":"Boon"}]}],"unsure":["act"]}
 {"id":750386,"abilities":[{"when":{"event":"activated"},"do":[{"act":"attach","on":{"pick":"self"},"to":{"kind":"card","side":"mine","pick":"chosen","zone":"deck"}}]},{"when":{"event":"drawn","object":{"pick":"attached_to"}},"do":[{"act":"keyword_action","on":{"pick":"self"},"keyword":"Trap"}]}],"unsure":["act"]}
-{"id":750387,"abilities":[{"when":{"event":"damaged","actor":{"pick":"self"}},"do":[{"act":"heal","on":{"kind":"player","side":"mine"},"params":{"amount":{"x":"event_amount"}}}]}]}
+{"id":750387,"abilities":[{"when":{"event":"activated"},"do":[{"act":"damage","on":{"pick":"it"},"params":{"amount":{"x":"event_amount"}}},{"act":"heal","on":{"kind":"player","side":"mine"},"params":{"amount":{"x":"event_amount"}},"link":"then"}]}]}
 {"id":750388,"abilities":[],"trigger":{"event":"dies","object":{"pick":"self"}}}
 {"id":750389,"abilities":[{"when":{"event":"always"},"do":[{"act":"level_up","on":{"pick":"self"}}]}]}
 {"id":750390,"abilities":[]}

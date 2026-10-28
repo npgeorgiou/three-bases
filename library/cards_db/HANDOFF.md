@@ -17,11 +17,12 @@
 2. The word check against reader records (Kaptain's point 1, 28 Oct): pattern selection, judging and batching are proposed
    in chat and wait for his answer; nothing built yet. The old library (tags, key, patterns, query.py) is still not
    connected to cards.sqlite; that check is the first connection.
-3. Names with no text in the library or in Riot's data: Deep, Plant, Stance, Cursed, Release, Ascended (no rules written).
+3. Definitions Kaptain gave (28 Oct): Deep, Plant (supplement/runeterra_kaptain.jsonl, records in keywords_stub.jsonl);
+   Cursed = Curse, Ascended = type, Stance = name family, Release dropped (names.tsv, normalize N6).
    Still references to names that are no card: Spriteling, Phased Moon Weapon, Treasure (a Riot subtype the library lacks),
    Dragon's Rage, Prank, Mark of the Storm (keyword-field names), Swapbot.
 
-## How to work here (learned the hard way)
+## How to work here (learned the hard way; GUIDE.md sections 4-5 list the confusions to avoid)
 - Show real cards with their stored rows (`raw.py <id>`, `rows.py <id>`) before and after any change.
 - When a query returns too little, check the query against the texts first, then the records.
 - Every change: rebuild (`load.py runeterra`), `cases/run.py runeterra` must pass, commit and push at once.

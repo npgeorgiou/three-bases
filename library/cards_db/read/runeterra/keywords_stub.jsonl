@@ -1,1 +1,3 @@
 {"name":"Can't Block","abilities":[{"when":{"event":"always"},"do":[{"act":"cant","on":{"pick":"self"},"params":{"event":"blocks"},"lasts":"while"}]}]}
+{"name":"Deep","condition":[{"test":"count","of":{"kind":"card","side":"mine","zone":"deck"},"op":"le","n":15,"span":"this_game"}],"abilities":[{"when":{"event":"always"},"if":[{"test":"keyword_condition","ref":"Deep"}],"do":[{"act":"stat_change","on":{"pick":"self","zone":"everywhere"},"params":{"power":3,"health":3},"lasts":"while"}]}]}
+{"name":"Plant","abilities":[{"when":{"event":"activated"},"do":[{"act":"create","on":{"pick":"it"},"zone":"deck","params":{"amount":{"x":"event_amount"}}}]}]}

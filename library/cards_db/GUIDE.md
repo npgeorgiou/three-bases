@@ -62,3 +62,24 @@ runs from the files in this folder; nothing depends on an earlier chat.
 - Merging a fix batch while its reader was still writing; readers sharing one scratch folder.
 - Card names inside texts ("Prismatic Barrier", "Flow (created)") taken as wording.
 - Batches too small for the fixed cost per reader.
+
+## 5. Confusions of the second session (28 Oct 2026; avoid them)
+- A case's count is the answer to that case's narrow question ("a trigger on an ally dying": 6). Before calling the data
+  thin, ask the question the user means, in every form the data stores it (flat_ref), and compare with the texts.
+- Checking word patterns against the reader records is circular: the check exists because readers can be wrong. A pattern
+  is judged against the texts only; a record that disagrees with a sound pattern goes back to a reader.
+- "Missing" and "broken" must be proven from the game's own data, not assumed. Runeterra: "Missing Translation" was Riot's
+  aura display marker; 49 "missing" cards were in Riot's set JSON (GitHub mirror: the shell reaches GitHub, not riotgames).
+  Many stubs were not missing cards at all but readers referencing a family, subtype or keyword by the wrong kind.
+- One zone, state or value must mean one thing. "discard" held dead, discarded and tossed cards until rule 17 split them.
+- A re-read can lose what the old reading had right (copies read as summons). Run the cases after every merge, and turn
+  each loss into a BRIEF rule, then re-read the cards that lost it.
+- Never rebuild while a reader is writing: part files in read/ get loaded. Wait for the reader's reply, then merge.
+- normalize.py does nothing without file arguments: `normalize.py <game> $(ls read/<game>/*.jsonl | grep -v proposals)`.
+- reread.py make finds only cards already in input batches; cards new to the source need `build_input.py <game> --add`.
+- An action keyword whose record is written as a status (Drain) turns every use into the wrong act through N2: read the
+  keyword's own definition and how cards use it ("Drain 1 from a unit" acts on a target).
+- Kaptain reviews: one table, names instead of ids, card text above its rows (check_table.py). Many tables or merged prose
+  columns are unreadable for him.
+- Edit files with Edit or a Python replace that asserts one match; a sed over a docstring broke build_input.py once.
+- Ask Kaptain before inventing a definition: he supplies them (Deep, Plant, Stance, Curse, Ascended came from him).

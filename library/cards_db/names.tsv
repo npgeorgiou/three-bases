@@ -1,0 +1,5 @@
+game	read_as	name	becomes	new_name	why
+runeterra	keyword	Cursed	keyword	Curse	"Cursed" = has a Curse (Morgana level 2); Curse is the library keyword
+runeterra	keyword	Ascended	type	Ascended	Ascended is a subtype (library tribe entry; Kaptain, 28 Oct 2026)
+runeterra	keyword	Stance	name_has	Stance	Stances are the spells named ... Stance (Boar Stance, Bear Stance...; Kaptain, 28 Oct 2026)
+runeterra	keyword	Release	drop		no definition anywhere; Kaptain, 28 Oct 2026: drop it (the effect is removed)

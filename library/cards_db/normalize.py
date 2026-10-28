@@ -7,6 +7,8 @@ and second readings). Safe to run any number of times. Each rule is listed in CH
   N4 "follower" and "champion" are categories, not states; a category filter "unit" on a target of kind unit is dropped.
   N5 when the text says "another ally" / "other allies", the event object and the effect targets of my units get the
      not-this-card filter if they lack it.
+  N6 names.tsv: a name read as a keyword that is something else becomes it (a keyword, a type, a name_has family) or is
+     dropped (filters and effects naming it removed), per game, each line with its reason.
 Usage: normalize.py <game> <file.jsonl> [...]   rewrites the files in place, prints how many records changed."""
 import glob, json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -67,8 +69,33 @@ def another(r, inputs):
         not_self((ab.get('when') or {}).get('object'), x['name'])
         for e in ab.get('do', []): not_self(e.get('on'), x['name'])
 
+def names_table(game):
+    import csv
+    return {r['name'].lower(): r for r in csv.DictReader(open(os.path.join(HERE, 'names.tsv')), delimiter='\t')
+            if r['game'] == game and r['read_as'] == 'keyword'}
+
+def fix_names(x, table):
+    """N6"""
+    if isinstance(x, dict):
+        if isinstance(x.get('with'), list):
+            w = []
+            for f in x['with']:
+                r = table.get(str(f.get('ref', '')).lower()) if f.get('attr') == 'keyword' else None
+                if r and r['becomes'] == 'drop': continue
+                if r: f['attr'] = 'keyword' if r['becomes'] == 'keyword' else r['becomes']; f['ref'] = r['new_name']
+                w.append(f)
+            x['with'] = w
+        if isinstance(x.get('do'), list):
+            x['do'] = [e for e in x['do'] if not ((table.get((e.get('keyword') or '').lower()) or {}).get('becomes') == 'drop')]
+            for e in x['do']:
+                r = table.get((e.get('keyword') or '').lower())
+                if r and r['becomes'] == 'keyword': e['keyword'] = r['new_name']
+        for v in x.values(): fix_names(v, table)
+    elif isinstance(x, list):
+        for v in x: fix_names(v, table)
+
 def main():
-    game = sys.argv[1]; kinds = keyword_kinds(game)
+    game = sys.argv[1]; kinds = keyword_kinds(game); table = names_table(game)
     inputs = {}
     for f in glob.glob(os.path.join(HERE, 'input', game, '*.jsonl')):
         for l in open(f): x = json.loads(l); inputs[x['id']] = x
@@ -77,7 +104,7 @@ def main():
         for r in L:
             r2 = clean(json.loads(json.dumps(r)))
             for ab in r2.get('abilities', []): fix_ability(ab, kinds)
-            fix_filters(r2); another(r2, inputs)
+            fix_names(r2, table); fix_filters(r2); another(r2, inputs)
             n += r2 != r; out.append(r2)
         open(path, 'w').write(''.join(json.dumps(r, separators=(',', ':')) + '\n' for r in out))
         print(f'{os.path.basename(path)}: {n} of {len(L)} records changed')

@@ -17,13 +17,13 @@ Made by `cases/run.py runeterra`.
 | m07 | frostbites (power to 0) | 21 | 21 | 100% | 1 | yes |
 | m08 | recalls units or cares about recalling | 59 | 59 | 100% | 63 | yes |
 | m09 | draws cards | 178 | 174 | 98% | 22 | yes |
-| m10 | creates cards | 415 | 414 | 100% | 146 | yes |
-| m11 | damages the enemy Nexus | 89 | 87 | 98% | 240 | yes |
+| m10 | creates cards | 415 | 414 | 100% | 177 | yes |
+| m11 | damages the enemy Nexus | 89 | 87 | 98% | 256 | yes |
 | m12 | heals | 63 | 61 | 97% | 71 | yes |
 | m13 | discards | 37 | 36 | 97% | 105 | yes |
 | m14 | obliterates | 43 | 43 | 100% | 21 | yes |
 | m15 | levels up (champion level-up condition) | 109 | 108 | 99% | 3 | yes |
-| m16 | grants lasting stats | 216 | 216 | 100% | 218 | yes |
+| m16 | grants lasting stats | 216 | 216 | 100% | 226 | yes |
 | m17 | gives Barrier (damage prevention) | 29 | 29 | 100% | 2 | yes |
 | m18 | Nexus Strike triggers | 33 | 33 | 100% | 1 | yes |
 | m19 | Last Breath (dies) triggers | 47 | 46 | 98% | 17 | yes |
@@ -44,10 +44,10 @@ Made by `cases/run.py runeterra`.
 | m34 | Behold (have a card) | 15 | 15 | 100% | 98 | yes |
 | m35 | Daybreak / Nightfall | 42 | 42 | 100% | 1 | yes |
 | m36 | can't block | 8 | 8 | 100% | 325 | yes |
-| m37 | summons units or cares about summoning | 275 | 275 | 100% | 174 | yes |
+| m37 | summons units or cares about summoning | 275 | 275 | 100% | 175 | yes |
 | m38 | revives | 23 | 22 | 96% | 7 | yes |
 | m39 | silences | 11 | 11 | 100% | 41 | yes |
-| m40 | shuffles cards into a deck | 20 | 20 | 100% | 177 | yes |
+| m40 | shuffles cards into a deck | 20 | 20 | 100% | 211 | yes |
 | m41 | triggers when you draw | 7 | 7 | 100% | 11 | yes |
 | m42 | When I'm summoned triggers | 281 | 281 | 100% | 29 | yes |
 | m43 | Strike triggers | 35 | 35 | 100% | 249 | yes |
@@ -61,8 +61,8 @@ Made by `cases/run.py runeterra`.
 | m51 | Quick Attack strikes first | 85 | 85 | 100% | 18 | yes |
 | m52 | SpellShield negates enemy spells | 27 | 27 | 100% | 35 | yes |
 | m53 | Spirit / Gloom / Impact stacking keywords | 35 | 35 | 100% | 45 | yes |
-| m54 | damage equal to a stat or count | 9 | 9 | 100% | 15 | yes |
-| m55 | effects scaling with a count (for each) | 85 | 82 | 96% | 232 | yes |
+| m54 | damage equal to a stat or count | 9 | 9 | 100% | 38 | yes |
+| m55 | effects scaling with a count (for each) | 85 | 82 | 96% | 264 | yes |
 | m56 | temporary buffs this round | 122 | 122 | 100% | 44 | yes |
 | m57 | Invoke (does it or cares about it) | 19 | 19 | 100% | 0 | yes |
 | m58 | Manifest | 32 | 32 | 100% | 0 | yes |
@@ -72,7 +72,7 @@ Made by `cases/run.py runeterra`.
 | m62 | Equipment attaches | 42 | 42 | 100% | 34 | yes |
 | m63 | Augment grows on created cards | 10 | 10 | 100% | 2 | yes |
 | m64 | Formidable strikes with Health | 8 | 8 | 100% | 2 | yes |
-| m65 | Reputation | 13 | 13 | 100% | 137 | yes |
+| m65 | Reputation | 13 | 13 | 100% | 144 | yes |
 | m66 | Allegiance | 10 | 10 | 100% | 18 | yes |
 | m67 | Enlightened | 15 | 15 | 100% | 0 | yes |
 | m68 | Empowered | 10 | 10 | 100% | 4 | yes |
@@ -143,7 +143,7 @@ Made by `cases/run.py runeterra`.
 | r02 | Shadow Isles | archetype (Claude) | Last Breath | 10 | 21 | yes |
 | r03 | Shadow Isles | archetype (Claude) | Ephemeral | 8 | 34 | yes |
 | r04 | Shadow Isles | archetype (Claude) | revive | 3 | 20 | yes |
-| r05 | Noxus | archetype (Claude) | damages the enemy Nexus | 8 | 69 | yes |
+| r05 | Noxus | archetype (Claude) | damages the enemy Nexus | 8 | 71 | yes |
 | r06 | Noxus | archetype (Claude) | Overwhelm | 8 | 37 | yes |
 | r07 | Noxus | archetype (Claude) | kills own units / self-damage | 2 | 2 | yes |
 | r08 | Demacia | archetype (Claude) | grants lasting stats | 10 | 53 | yes |
@@ -154,14 +154,14 @@ Made by `cases/run.py runeterra`.
 | r13 | Ionia | archetype (Claude) | recall | 8 | 52 | yes |
 | r14 | Ionia | archetype (Claude) | stun | 5 | 13 | yes |
 | r15 | Piltover & Zaun | archetype (Claude) | discard | 8 | 30 | yes |
-| r16 | Piltover & Zaun | archetype (Claude) | creates cards | 20 | 70 | yes |
+| r16 | Piltover & Zaun | archetype (Claude) | creates cards | 20 | 83 | yes |
 | r17 | Bilgewater | archetype (Claude) | Plunder | 10 | 20 | yes |
 | r18 | Bilgewater | archetype (Claude) | Toss | 3 | 6 | yes |
 | r19 | Bilgewater | archetype (Claude) | damages the enemy Nexus | 8 | 37 | yes |
 | r20 | Targon | archetype (Claude) | Daybreak/Nightfall | 8 | 30 | yes |
 | r21 | Targon | archetype (Claude) | Invoke / pick cards | 2 | 26 | yes |
 | r22 | Shurima | archetype (Claude) | Countdown | 8 | 14 | yes |
-| r23 | Bandle City | archetype (Claude) | creates cards | 15 | 71 | yes |
+| r23 | Bandle City | archetype (Claude) | creates cards | 15 | 87 | yes |
 | r25 | Bandle City | signature (library tags) | trap_secret | 6 | 26 | yes |
 | r26 | Bandle City | signature (library tags) | discard | 6 | 21 | yes |
 | r27 | Bandle City | signature (library tags) | on_attack | 36 | 89 | yes |
@@ -215,7 +215,7 @@ Made by `cases/run.py runeterra`.
 | r76 | Piltover & Zaun | signature (library tags) | on_spell | 4 | 28 | yes |
 | r77 | Piltover & Zaun | splash (library tags) | resource_gain | 4 | 10 | yes |
 | r78 | Piltover & Zaun | splash (library tags) | damage | 14 | 55 | yes |
-| r79 | Piltover & Zaun | splash (library tags) | generate_cards | 20 | 54 | yes |
+| r79 | Piltover & Zaun | splash (library tags) | generate_cards | 20 | 67 | yes |
 | r80 | Piltover & Zaun | splash (library tags) | transform | 4 | 9 | yes |
 | r81 | Shadow Isles | signature (library tags) | revive | 11 | 20 | yes |
 | r82 | Shadow Isles | signature (library tags) | destroy | 29 | 88 | yes |
@@ -240,7 +240,7 @@ Made by `cases/run.py runeterra`.
 | r102 | Targon | splash (library tags) | cost_reduction | 6 | 22 | yes |
 | r104 | Targon | splash (library tags) | discard | 2 | 8 | yes |
 | r105 | Bandle City | archetype (library) | scaling | 34 | 82 | yes |
-| r106 | Bandle City | archetype (library) | chaos | 28 | 71 | yes |
+| r106 | Bandle City | archetype (library) | chaos | 28 | 85 | yes |
 | r107 | Bandle City | archetype (library) | trickery | 6 | 26 | yes |
 | r108 | Bandle City | archetype (library) | transformation | 16 | 29 | yes |
 | r109 | Bilgewater | archetype (library) | chaos | 30 | 78 | yes |
@@ -254,7 +254,7 @@ Made by `cases/run.py runeterra`.
 | r117 | Ionia | archetype (library) | control | 38 | 89 | yes |
 | r118 | Ionia | archetype (library) | ramp | 14 | 32 | yes |
 | r119 | Ionia | archetype (library) | card_advantage | 30 | 42 | yes |
-| r120 | Piltover & Zaun | archetype (library) | chaos | 24 | 68 | yes |
+| r120 | Piltover & Zaun | archetype (library) | chaos | 24 | 78 | yes |
 | r121 | Piltover & Zaun | archetype (library) | trickery | 6 | 17 | yes |
 | r122 | Piltover & Zaun | archetype (library) | ramp | 18 | 46 | yes |
 | r123 | Piltover & Zaun | archetype (library) | spellslinger | 14 | 45 | yes |

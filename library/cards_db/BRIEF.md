@@ -105,6 +105,8 @@ A keyword's record says what the keyword means, so that every card with it inher
 - Condition keywords (Daybreak, Nightfall, Plunder, Flow, Allegiance, Enlightened, Empowered, Reputation, Behold):
   `"condition": [COND, ...]` and `"abilities": []`.
 Play-speed keywords (Burst, Fast, Slow, Focus, Skill) and reminders with no effect: `"abilities": []`.
+A condition that, once met, holds for the rest of the game ("once you have 15 or fewer cards in deck, you are Deep for the
+rest of the game") = the test with `"span": "this_game"` (met at some moment this game).
 
 ## Worked examples (approved shapes)
 Kindred - Keywords: Quick Attack. Each round, the first time you slay a unit, I mark the weakest enemy. Round End: Kill
