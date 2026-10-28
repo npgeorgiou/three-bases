@@ -6,3 +6,6 @@
   Thresh (level 1) only levels up on seeing units die and kills nothing of yours; the revive is Kalista (level 2)'s own
   ability; the real pair is Thresh (level 2) -> Kalista (level 2), which is case c06 and passes. An earlier run passed c02
   only through a loose connection (Thresh's The Box damaging enemies counted toward Kalista's allied deaths), fixed since.
+- csb39 Summon Militia -> Kindred's Grace, csb41 Brothers in Arms -> Kindred's Grace (Claude's pairs from the texts):
+  Kindred's Grace gives strength to units sharing the target's type, whatever the type; Knights are not named, so the
+  pair has no link of its own beyond "more units of one type". The records hold it correctly (state shares_subtype_with_it).
