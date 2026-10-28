@@ -10,8 +10,9 @@
 - Runeterra is done and approved (RESULTS.md). Nothing is open on it.
 - The next game follows PROCESS.md from step 0. Runeterra's files are the template: supplement_runeterra.py for the
   game's own data, the patterns.tsv lines marked runeterra for the game's own wording, cases/*.tsv rows for its cases.
-- Stormbound (started 28 Oct 2026): step 0 done except Kaptain's check of the game words (BRIEF.md "Game words: Stormbound",
-  vocab rows marked "pending Kaptain"; questions asked: the mapping, spawned tribe = "Token <Tribe>s", When attacking =
-  attacks, words that change by level = test level, card data of Feb 2022). Supplement (42 dropped cards, 15 glossary
-  keywords), keyword records (read/stormbound/keywords.jsonl), word-check patterns, 4 batches + second_001 (20 cards),
-  cases (62 mechanics, 18 faction, 42 combos). Next: apply his answers, then step 1 (readers on batch_001-004 and second_001).
+- Stormbound (28 Oct 2026): card data = Stormbound Kitty's current card database (284 cards, supplement_stormbound.py,
+  replaces the library's 2022 copy). Read (batch_001, fix_001), second reading done (24 cards, the kept reading right on
+  every difference). run.py stormbound passes every step: 120 of 120 cases, word check 0 flags, no stubs, 15 unsure
+  rows (needs unique to one card). Waiting for Kaptain's check: CHECK_20_stormbound.md (ids in CHECK_20_stormbound_ids.txt).
+  After his approval: fix what he finds for all cards with the same problem, add a few approved records as examples to
+  BRIEF.md, write Stormbound's results in RESULTS.md.

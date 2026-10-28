@@ -23,9 +23,10 @@ def target(t):
     r = c.execute('select kind, side, pick, n, zone, by_attr from target where id=?', (t,)).fetchone()
     s = pairs({'kind': r[0], 'side': r[1], 'pick': r[2], 'n': amount(r[3]) if r[3] else None, 'zone': r[4], 'by': r[5]})
     fs = []
-    for attr, op, n, rc, rk, rt, rw, val in c.execute('select attr, op, n, ref_card, ref_keyword, ref_type, ref_word, val from filter where target=?', (t,)):
+    for attr, op, n, rc, rk, rt, rw, val, of in c.execute('select attr, op, n, ref_card, ref_keyword, ref_type, ref_word, val, of_target '
+                                                           'from filter where target=?', (t,)).fetchall():
         v = name('card', rc) or name('card', rk) or name('type', rt) or name('name_part', rw) or val or (amount(n) if n else '')
-        fs.append(f'{attr} {op} {v}')
+        fs.append(f'{attr} {op} {v}' + (f' of ({target(of)})' if of else ''))
     return s + (' with[' + '; '.join(fs) + ']' if fs else '')
 
 def event(e):
@@ -68,7 +69,8 @@ def ability_rows(ab, label):
 def main():
     out_path, args = sys.argv[1], sys.argv[2:]
     if args[0] == '--random':
-        ids = [i for (i,) in c.execute('select id from card where game=? and is_keyword=0 and is_stub=0', (args[1],))]
+        ids = [i for (i,) in c.execute('select distinct k.id from card k join ability a on a.card=k.id where k.game=? and k.is_keyword=0 '
+                                       'and k.is_stub=0', (args[1],))]  # cards with rows: a card with no text has nothing to check
         random.seed(); cards = random.sample(ids, int(args[2]))
     else: cards = [int(a) for a in args]
     cell = lambda v: '' if v is None else str(v).replace('|', '/')
