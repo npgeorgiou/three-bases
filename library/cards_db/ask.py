@@ -20,7 +20,7 @@ Happenings are the event values of vocab.tsv; concepts are the concept tree's (e
 one concept: Stun and Freeze are disable, round_start and turn_start are turn_start)."""
 import os, sqlite3, subprocess, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
-import connections, mechanics
+import connections, mechanics, deck_analysis
 c = sqlite3.connect(os.path.join(HERE, 'cards.sqlite'))
 
 
@@ -65,7 +65,7 @@ def main():
             print(f'{x}: ' + '; '.join(f'{g} {n} pairs, e.g. {ex}' for g, (n, ex) in per.items()))
     elif q == 'chains':
         for n, a, b, x, gs in mechanics.chains(c, games, args[0]): print(f'{a} -> {b} -> {x}  (seen in {", ".join(gs)})')
-    elif q == 'analyze': print('\n'.join(mechanics.analyze(c, games[0], ' '.join(args))))
+    elif q == 'analyze': print('\n'.join(deck_analysis.analyze(c, games[0], ' '.join(args))))
     elif q == 'deck':
         size = int(args[1]) if len(args) > 1 else {'stormbound': 12}.get(games[0], 14)
         ids, allowed = mechanics.deck(c, games[0], args[0], size)

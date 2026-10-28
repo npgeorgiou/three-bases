@@ -34,8 +34,8 @@ what cards do in shared values.
    or hero with life = kind player; a structure = kind landmark). Add a value only when no value means it, and word it so
    any game could use it ("start of the owner's turn", "the tile in front"), with the game as an example in brackets.
 2. Every keyword gets a vocab keyword row whose concept (column tree) says what it does by the game's own rules, checked
-   against the concept tree's definition. Stun in Runeterra: can't attack or block, so attack_lock, not disable (Kaptain,
-   28 Oct 2026). Freeze in Stormbound: no move and no ability for a turn, so disable.
+   against the concept tree's definition. Stun in Runeterra: the unit can't act, so disable; Frostbite sets Power to 0, so
+   attack_zero (Kaptain, 28 Oct 2026). Freeze in Stormbound: no move and no ability for a turn, so disable.
 3. Every event, state and duration that two games word differently gets the same concept: round_start and turn_start are
    turn_start; this_round and next_own_turn are temporary_effect; a state takes its keyword's concept (stunned like Stun).
 4. Stats by role: Power is attack, Health is health, Stormbound's strength is both. Never add a stat for one game when an

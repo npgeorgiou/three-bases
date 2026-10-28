@@ -9,4 +9,3 @@
 - csb39 Summon Militia -> Kindred's Grace, csb41 Brothers in Arms -> Kindred's Grace (Claude's pairs from the texts):
   Kindred's Grace gives strength to units sharing the target's type, whatever the type; Knights are not named, so the
   pair has no link of its own beyond "more units of one type". The records hold it correctly (state shares_subtype_with_it).
-- r60, r66, r100, r117 (changed, not dropped): the library tagged Stun as disable; Kaptain (28 Oct 2026): Stun is not "can't act" but "can't attack" (and block), so Stun's concept is attack_lock and these queries ask for disable or attack_lock.

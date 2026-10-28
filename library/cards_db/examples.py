@@ -3,7 +3,7 @@
 Usage: examples.py"""
 import os, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
-import connections, mechanics
+import connections, mechanics, deck_analysis
 c = sqlite3.connect(os.path.join(HERE, 'cards.sqlite'))
 name = lambda i: c.execute('select name from card where id=?', (i,)).fetchone()[0]
 game = lambda i: c.execute('select game from card where id=?', (i,)).fetchone()[0]
@@ -56,6 +56,9 @@ out.extend(['## Mechanics, not cards', '', 'What "disable" (stop a unit acting) 
            [f'- {x}: ' + '; '.join(f'{g} {n} pairs, e.g. {ex}' for g, (n, ex) in per.items()) for x, per in mechanics.feeds(c, games, 'death_trigger', top=6, reverse=True)] +
            ['', 'Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):', ''] +
            [f'- {a} -> {b} -> {x} (seen in {", ".join(gs)})' for n, a, b, x, gs in mechanics.chains(c, games, 'summon', top=6)] + [''])
+out.extend(['## A deck explained (`ask.py runeterra analyze "..."`), a Lucian/Senna deck from a deck guide', '', '```'] +
+           deck_analysis.analyze(c, 'runeterra', 'Lucian, Senna, Glimpse Beyond, Single Combat, Crumble, Piercing Darkness, The Ruination, '
+                                 'Ravenous Butcher, Hapless Aristocrat, Cursed Keeper, Lonely Chimeslime, The Undying, Senna, Sentinel of Light, Spirit Leech') + ['```', ''])
 out.extend(['## Decks: cards of one game that feed each other', ''])
 for g, seed in (('stormbound', 'Wisp Cloud'), ('stormbound', 'Doppelbocks'), ('runeterra', 'Kalista')):
     ids, allowed = mechanics.deck(c, g, seed, 12 if g == 'stormbound' else 14)

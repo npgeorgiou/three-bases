@@ -11,7 +11,7 @@ by game, first cards only.
 ```sql
 select distinct card from flat_concept where concept in ('disable','cant_attack')
 ```
-- runeterra: 391 cards: Abyssal Eye, Abyssal Guard, Acolyte's Reliquary, Acorn, the Hextechnician, Ahri (level 2), Airis, Altar to Unity, Amateur Aeronaut ...
+- runeterra: 462 cards: Abyssal Eye, Abyssal Guard, Acolyte's Reliquary, Acorn, the Hextechnician, Ahri (level 2), Airis, Altar to Unity, Amalgamation Of Vile Rites ...
 - stormbound: 9 cards: Blizzard Bombs, Freeze, Frosthexers, Glacier Palace, Iceflakes, Icicle Burst, Midwinter Chaos, Moment’s Peace ...
 
 ## Payoffs: cards that benefit from my other units dying, any way (trigger, condition, count, dead allies picked)
@@ -107,30 +107,48 @@ select distinct card from flat_do where params glob '*=[a-z]*'
 
 What "disable" (stop a unit acting) is built with, on the same cards (`ask.py all together disable`):
 
-- cant_attack: stormbound 8 cards
-- banish: runeterra 7 cards
-- passive: runeterra 2 cards, stormbound 8 cards
+- cant_attack: runeterra 11 cards, stormbound 8 cards
+- cheat_death: runeterra 7 cards
+- passive: runeterra 18 cards, stormbound 8 cards
 - silence: stormbound 8 cards
-- copy: runeterra 7 cards
-- return_to_hand: runeterra 7 cards
+- revive: runeterra 7 cards
+- resource_gain: stormbound 2 cards
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: runeterra 19307 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- sacrifice: runeterra 6008 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- destroy: runeterra 19385 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- sacrifice: runeterra 6008 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Dreadful Keepers
 - self_destruct: runeterra 9028 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
-- removal: runeterra 5519 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Vindictive Wretches -> Marked as Prey
+- removal: runeterra 5597 pairs, e.g. Kindred's Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Gray the Balancer -> Marked as Prey
 - revive: runeterra 1661 pairs, e.g. Eternal Dancers -> Bladepierced Revenant
-- aoe_damage: runeterra 4431 pairs, e.g. Anivia (level 2) -> Shackled Ghasts; stormbound 217 pairs, e.g. Broken Earth Drakes -> Dreadful Keepers
+- on_kill: runeterra 2008 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Spellbinder Zhevana -> Dreadful Keepers
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
+- summon -> on_ally_play -> random_effect (seen in runeterra)
 - summon -> on_ally_play -> stacking_keyword (seen in runeterra)
 - summon -> on_ally_play -> variable_stats (seen in runeterra)
 - summon -> on_ally_play -> temporary_buff (seen in runeterra)
+- summon -> on_ally_play -> on_draw (seen in runeterra)
 - summon -> tribal -> generate_cards (seen in runeterra)
-- summon -> on_ally_play -> delayed (seen in runeterra)
-- summon -> on_ally_play -> stat_loss (seen in runeterra)
+
+## A deck explained (`ask.py runeterra analyze "..."`), a Lucian/Senna deck from a deck guide
+
+```
+14 different cards, Shadow Isles 11, Demacia 3.
+Plan:
+- Your units die: made by Crumble, Glimpse Beyond, Piercing Darkness, Ravenous Butcher, Single Combat, Spirit Leech, The Ruination. Get value when they die: Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, The Undying. Level up from it: Lucian, Senna. Use it: Lonely Chimeslime, Senna, Sentinel of Light.
+- Any units are killed: made by Crumble, Glimpse Beyond, Piercing Darkness, Ravenous Butcher, Single Combat, Spirit Leech, The Ruination. Level up from it: Senna.
+- Lucian levels up when your units die (4+ times) or Senna, Sentinel of Light dies once.
+- Senna levels up when any units are killed (3+ times).
+Controls enemy units (damage, remove, stop, weaken): Crumble, Piercing Darkness, The Ruination.
+Supports your units (stats, protection, combat keywords): Piercing Darkness, Senna.
+Card flow (draw, create, choose): Glimpse Beyond, Lonely Chimeslime, Senna, Spirit Leech.
+Puts extra units into play: Cursed Keeper, Hapless Aristocrat, The Undying.
+Units that support cards can target: 9 (Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, Lucian, Ravenous Butcher, Senna, Senna, Sentinel of Light, Spirit Leech, The Undying).
+Key cards (in most of the plan): Senna, Spirit Leech, The Ruination, Crumble, Ravenous Butcher.
+Weak spots: none found.
+```
 
 ## Decks: cards of one game that feed each other
 
@@ -156,14 +174,14 @@ select distinct card from flat_do where act='copy_keywords'
 
 ## What each faction or region leans on (concepts with the highest share of its cards vs its game)
 
-- runeterra Ionia: disable (8), bounce_enemy (11), silence (33), movement (6), swap (6)
-- runeterra Noxus: on_discard (10), attack_lock (21), excess_damage (37), board_presence (6), on_life_loss (11)
+- runeterra Ionia: bounce_enemy (11), silence (33), movement (6), swap (6), return_to_hand (52)
+- runeterra Noxus: on_discard (10), excess_damage (37), disable (21), board_presence (6), on_life_loss (11)
 - runeterra Demacia: extra_turn (23), multi_attack (15), damage_reduction (19), damage_prevention (19), shield (16)
 - runeterra Piltover & Zaun: junk_cards (13), on_draw (18), recycle (11), on_spell (27), trap_secret (16)
-- runeterra Freljord: regeneration (16), stat_loss (24), stat_multiply (27), aoe_damage (27), excess_damage (35)
+- runeterra Freljord: attack_zero (21), regeneration (16), stat_loss (23), stat_multiply (27), aoe_damage (27)
 - runeterra Shadow Isles: death_count (23), revive (20), sacrifice (34), self_mill (7), lifesteal (29)
 - runeterra Bilgewater: steal (5), forced_movement (4), self_mill (6), on_life_loss (21), hand_disruption (5)
-- runeterra Targon: on_lifegain (5), combo_sequence (32), immunity (20), on_targeted (24), attack_lock (28)
+- runeterra Targon: on_lifegain (5), combo_sequence (32), immunity (20), on_targeted (24), assists_support (12)
 - runeterra Shurima: stealth (7), tutor (19), delayed (26), debuff (5), variety_payoff (11)
 - runeterra Bandle City: stacking_keyword (52), trap_secret (25), junk_cards (8), ping (65), spell_power (5)
 - runeterra Runeterra: repeat_trigger (5), merge_attach (23), board_presence (5), variety_payoff (4), leave_trigger (14)
