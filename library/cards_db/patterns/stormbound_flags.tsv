@@ -1,0 +1,6 @@
+card	name	pattern	requires	text
+1000067	Marked as Prey	V07	value:kill|killed|dies	target poisoned unit. if that kills it, spawn a 6/7/8/9/11 stren
+1000184	Rogue Sheep	V02	value:draw|drawn	on play, draw 1/1/2/2/3 single-use non- #  
+1000196	Siro the Resurrector	V25	value:kill|killed|dies	3/3/4 non-hero friendly units destroyed since the beginning of the 
+1000229	Terrifying Behemoths	KW	name:reduce strength	on play, reduce strength of surrounding enemy units by
+1000294	Temple of Life	V24	value:summon|revive|summoned	units/units/units/units, then spawn a 1 strength copy of itself o

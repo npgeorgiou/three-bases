@@ -83,6 +83,23 @@ def reasons(c, enabler, payoff):
             asks += [w for (w,) in c.execute('select coalesce(ev_obj_with, of_with) from flat_if where card=? and coalesce(ev_obj_with, of_with) is not null', (p,))]
             asks += [w for (w,) in c.execute("select f.attr || ' is ' || coalesce(f.ref_keyword, f.ref_type) from cond cd join ability a on a.id=cd.ability "
                                              "join filter f on f.target=cd.of_target where a.card=? and f.attr in ('keyword','type')", (p,))]
+            # a keyword or type the payoff's effects pick their targets by (Moonlit Aerie: strength to friendly Satyrs)
+            targets = [w for (w,) in c.execute("select on_with from flat_do where card=? and on_with is not null and coalesce(on_side,'') in ('mine','any','')", (p,))]
+            for w in targets:
+                for part in w.split(';'):
+                    bits = part.split(' ')
+                    if len(bits) == 3 and bits[1] in ('is', 'in') and bits[2].lstrip('-').isdigit():
+                        v = int(bits[2])
+                        if bits[0] == 'type' and v in ty_have: yield (9, 'target: type ' + (c.execute('select name from type where id=?', (v,)).fetchone() or ['?'])[0])
+                        if bits[0] == 'keyword' and v in kw_have: yield (9, f'target: keyword {name(c, v)}')
+            # what the enabler puts in play or gains that the payoff counts (Excited Mousers: friendly units; Lady Rime: mana)
+            MAKES_KIND = {'summon': 'unit', 'revive': 'unit', 'play_card': 'unit', 'mana_gain': 'mana', 'create': 'card', 'draw': 'card'}
+            made_kinds = {MAKES_KIND[a] for x in makers for (a,) in c.execute('select act from flat_do where card=?', (x,)) if a in MAKES_KIND}
+            made_kinds |= {'landmark' for x in makers if (c.execute('select category from card where id=?', (x,)).fetchone() or [''])[0] == 'building'}
+            for k, sd in c.execute("select of_kind, of_side from flat_if where card=? and test in ('count','have','amount_count')", (p,)).fetchall():
+                if k in made_kinds and agree(sd, 'mine'): yield (8, f'count: {k}')
+            for k, sd in c.execute("select on_kind, on_side from flat_do where card=? and on_kind in ('landmark','unit_or_structure')", (p,)).fetchall():
+                if 'landmark' in made_kinds and agree(sd, 'mine'): yield (9, 'target: structure')
             for w in asks:
                 for part in w.split(';'):
                     bits = part.split(' ')

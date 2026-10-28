@@ -58,8 +58,8 @@ stormbound	T29	\bafter surviving damage\b	event:survives_damage	yes	trigger labe
 stormbound	T30	\bbefore moving\b	event:moves	yes	trigger label (rulebook: Before moving)
 stormbound	T31	\bat the start of your turn\b	event:turn_start	yes	trigger phrase
 stormbound	T32	\bat the end of your turn\b	event:turn_end	yes	trigger phrase
-stormbound	V24	\b(?:re)?spawn|\bbuild\b	value:summon|revive|summoned	yes	verb (spawn and build put a token into play; respawn is revive)
-stormbound	V25	\bdestroy	value:kill|killed|dies	yes	verb (rulebook: Destroying)
+stormbound	V24	\b(?:re)?spawn|\bbuild\b	value:summon|revive|summoned|copy	yes	verb (spawn and build put a token into play; respawn is revive; spawning a copy of itself is copy, BRIEF rule 18)
+stormbound	V25	\bdestroy(?!ed)	value:kill|killed|dies	yes	verb (rulebook: Destroying); "units destroyed since ..." describes what died, not an effect
 stormbound	V26	\bconvert	value:steal	yes	verb (rulebook: Converting)
 stormbound	V27	\bdrain	value:damage	yes	verb (rulebook: Draining damages one unit)
 stormbound	V28	\bpoison	value:give_keyword|give_random_keyword|poisoned	yes	status (give it, or a poisoned filter)

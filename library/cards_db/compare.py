@@ -3,7 +3,10 @@
 Usage: compare.py <first.jsonl> <second.jsonl> <input.jsonl>   prints agreement and each differing card with both readings."""
 import json, sys
 sys.path.insert(0, __import__('os').path.dirname(__file__))
-from show import render
+
+def render(rec):
+    """one compact JSON line per ability (show.py was removed)"""
+    return '\n'.join('    ' + json.dumps(ab, separators=(',', ':')) for ab in rec.get('abilities', [])) or '    (no abilities)'
 
 def nums(x, out):
     if isinstance(x, bool): return

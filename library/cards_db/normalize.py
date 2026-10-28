@@ -14,6 +14,10 @@ and second readings). Safe to run any number of times. Each rule is listed in CH
   N8 a copy of a dead unit put into play (copy, on: unit in discard, zone board) is revive.
   N9 a keyword used as an action whose own record picks its target itself (Toss: the bottom of your deck; Nab; Rally)
      carries no "on": the keyword's record says what it acts on.
+  N11 summon / create / copy / play_card of a named card: an "on" that only says the kind (unit, landmark) is dropped; the
+     card says what it is (same meaning as N1).
+  N10 games whose units have one stat, strength (Stormbound): "strongest" / "weakest" are pick highest / lowest by strength,
+     never the Power-based picks.
 Usage: normalize.py <game> <file.jsonl> [...]   rewrites the files in place, prints how many records changed."""
 import glob, json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -51,6 +55,8 @@ def fix_filters(x):
         for v in x: fix_filters(v)
 
 def fix_effect(e, kinds):
+    if e.get('card') and e.get('act') in ('summon', 'create', 'copy', 'play_card') and isinstance(e.get('on'), dict) and set(e['on']) <= {'kind'}:
+        e.pop('on')  # N11
     act = e.get('act')
     if act in ('create', 'summon') and e.get('card') and (e.get('on') or {}).get('kind') == 'player': e.pop('on')
     kw = (e.get('keyword') or '').lower()
@@ -137,6 +143,17 @@ def attacking(x):
     elif isinstance(x, list):
         for v in x: attacking(v)
 
+STRENGTH_GAMES = {'stormbound'}
+
+def strength_picks(x):
+    """N10"""
+    if isinstance(x, dict):
+        if x.get('pick') in ('strongest', 'weakest'):
+            x['by'] = 'strength'; x['pick'] = 'highest' if x['pick'] == 'strongest' else 'lowest'
+        for v in x.values(): strength_picks(v)
+    elif isinstance(x, list):
+        for v in x: strength_picks(v)
+
 def main():
     game = sys.argv[1]; kinds = keyword_kinds(game); table = names_table(game)
     inputs = {}
@@ -148,6 +165,7 @@ def main():
             r2 = clean(json.loads(json.dumps(r)))
             for ab in r2.get('abilities', []): fix_ability(ab, kinds)
             fix_names(r2, table); attacking(r2); fix_filters(r2); another(r2, inputs)
+            if game in STRENGTH_GAMES: strength_picks(r2)
             n += r2 != r; out.append(r2)
         open(path, 'w').write(''.join(json.dumps(r, separators=(',', ':')) + '\n' for r in out))
         print(f'{os.path.basename(path)}: {n} of {len(L)} records changed')

@@ -245,6 +245,8 @@ Disable, Push, Pull, Command, Drain, ...) define the words; cards use the values
   before attacking = damage on the attacked unit. "spread randomly among" = the act on pick all with params spread 1.
   gain mana = mana_gain; spend remaining mana = spend_mana; mana cost -1 = cost_change. replace a card = shuffle_into_deck
   then draw (link then). add a created card to the deck = create, zone deck. trigger the ability of structures = repeat.
+- "Single-use" card = state single_use. A card's level ("a random level 1/2/3/4/5 unit") = filter attr level. "The first
+  empty tile in front / behind" = position first_empty_in_front / first_empty_behind.
 - Numbers per level: `{"x": "per_level", "items": [...]}`; a range at one level ("4-5") is the item `{"x": "range", "items":
   [4, 5]}`. Words that change by level ("bordering/bordering/surrounding", "a/a/all/all/all"): one ability per group of levels,
   each with a level cond: levels 1-2 = `{"test": "level", "op": "le", "n": 2}`, levels 3-5 = `{"test": "level", "op": "ge",
