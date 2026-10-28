@@ -1,13 +1,15 @@
-"""Stormbound cards the library lacks (by card code and by name), and the rulebook's glossary terms as keywords.
-Cards: the library's own source, src/data/cards.json of github.com/Stormbound-Games/stormbound-kitty at commit 96a86726
-(28 Feb 2022). The old library dropped 42 of its 232 cards (41 without ability text, mostly tokens); they come back here in the
-same form as the library's Stormbound entries (text without the *...* marks, level numbers as "1/2/3/4/5").
+"""Stormbound: every card from the game's current card data, and the rulebook's glossary terms as keywords.
+Cards: Stormbound Kitty's card database (the Sanity CMS its site and bin/export-cards.js read: project 5hlpazgd, dataset
+production), 284 cards on 28 Oct 2026. It is newer than the library's copy (the repository's cards.json of 28 Feb 2022, 232
+cards), so every card is written here and replaces the library's entry with the same card code (source.py). Fetch: GROQ query
+*[_type=="card"]{"id": id.current, name, type, faction, unitTypes, rarity, mana, ability, strength, movement, token} at
+https://5hlpazgd.apicdn.sanity.io/v2022-02-01/data/query/production (the workspace cannot reach it; read in the browser), saved
+one card per line as id|name|type|faction|unitTypes|rarity|mana|strength|movement|token|ability (text without *...* marks).
 Glossary: the statuses and special effects of the Stormbound Kitty rulebook (https://stormbound-kitty.com/rulebook), the game
 having no official rulebook or keyword list; each definition is recorded with that source.
 Writes supplement/stormbound.jsonl in the library's entities columns; ids from 1000001 (source.py), kept stable for entries
 already in the file.
-Usage: supplement_stormbound.py <cards.json> (fetch: git clone --filter=blob:none --no-checkout
-https://github.com/Stormbound-Games/stormbound-kitty <clone>, then git -C <clone> show 96a86726:src/data/cards.json > cards.json)."""
+Usage: supplement_stormbound.py <cards.psv>"""
 import json, os, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'supplement', 'stormbound.jsonl')
@@ -37,29 +39,24 @@ GLOSSARY = [
 ]
 
 
-def card(c):
-    stats = {k: v for k, v in [('strength', c.get('strength')), ('movement', c.get('movement'))] if v not in (None, '')}
-    race = (c.get('race') or '').capitalize()
-    extra = {k: True for k in ('hero', 'elder', 'ancient') if c.get(k)}
-    if c.get('token'): extra['token'] = True
-    return {'game': 'stormbound', 'ext_id': c['id'], 'name': c['name'], 'category': CAT[c['type']],
-            'source_type': c['type'] + ' (Stormbound Kitty cards.json 28 Feb 2022, supplement)', 'edition': None,
-            'faction': FAC.get(c['faction'], c['faction']), 'subtypes': json.dumps([race]) if race else None,
-            'rarity': c.get('rarity'), 'cost': str(c['mana']) if c.get('mana') is not None else None,
-            'cost_num': float(c['mana']) if c.get('mana') is not None else None,
-            'stats': json.dumps(stats) if stats else None, 'text': re.sub(r'\*', '', c.get('ability') or '').strip(),
-            'extra': json.dumps(extra) if extra else None, 'variants': None}
+def card(line):
+    cid, name, typ, fac, types, rar, mana, strength, movement, token, text = line.rstrip('\n').split('|', 10)
+    stats = {k: v for k, v in [('strength', strength), ('movement', int(movement) if movement.isdigit() else movement)] if v not in (None, '')}
+    return {'game': 'stormbound', 'ext_id': cid, 'name': name, 'category': CAT[typ],
+            'source_type': typ + ' (Stormbound Kitty card database 28 Oct 2026, supplement)', 'edition': None,
+            'faction': FAC.get(fac, fac), 'subtypes': json.dumps([t.capitalize() for t in types.split(',')]) if types else None,
+            'rarity': rar or None, 'cost': mana, 'cost_num': float(mana), 'stats': json.dumps(stats) if stats else None,
+            'text': text.strip(), 'extra': json.dumps({'token': True}) if token == '1' else None, 'variants': None}
 
 
 def main():
-    src = json.load(open(sys.argv[1], encoding='utf-8'))
+    lines = [l for l in open(sys.argv[1], encoding='utf-8') if l.strip()]
     lib = sqlite3.connect(os.path.join(HERE, '..', 'three-bases-library.sqlite'))
-    codes = {e.split(':')[-1] for (e,) in lib.execute("select ext_id from entities where game='stormbound'")}
-    names = {n.lower() for (n,) in lib.execute("select name from entities where game='stormbound'")}
+    names = {n.lower() for (n,) in lib.execute("select name from entities where game='stormbound' and category='keyword'")}
     rows = [json.loads(l) for l in open(OUT)] if os.path.exists(OUT) else []
     old = {r['ext_id']: r['id'] for r in rows}
     nxt = max(list(old.values()) + [1000000]) + 1
-    out = [card(c) for c in src if c['id'] not in codes and c['name'].lower() not in names]
+    out = [card(l) for l in lines]
     out += [{'game': 'stormbound', 'ext_id': 'glossary:' + n, 'name': n, 'category': 'keyword',
              'source_type': f'{kind} ({RULEBOOK})', 'edition': None, 'faction': None, 'subtypes': None, 'rarity': None,
              'cost': None, 'cost_num': None, 'stats': None, 'text': t, 'extra': None, 'variants': None}

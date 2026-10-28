@@ -209,7 +209,7 @@ III: Reduce the cost of a random card in hand by 5.
  {"when": {"event": "activated"}, "if": [{"test": "stage", "n": 3}], "do": [
   {"act": "cost_change", "on": {"kind": "card", "side": "mine", "pick": "random", "zone": "hand"}, "params": {"cost": -5}, "lasts": "permanent"}]}]}
 
-## Game words: Stormbound (pending Kaptain's check)
+## Game words: Stormbound
 Stormbound has no Keywords field: describe everything the text says. Its glossary keywords (Poison, Vitalize, Freeze, Confuse,
 Disable, Push, Pull, Command, Drain, ...) define the words; cards use the values below.
 - Board. A tile is kind position. Where something is: filter `{"attr": "position", "op": "is", "val": <position>, "of": TARGET}`
@@ -235,8 +235,8 @@ Disable, Push, Pull, Command, Drain, ...) define the words; cards use the values
 - Statuses. poison, vitalize, freeze, confuse, disable = give_keyword with that keyword, lasts as the glossary says (permanent,
   or next_own_turn for Freeze and Confuse); "deconfuse" = remove_keyword Confuse; "poisoned / frozen / confused / vitalized /
   disabled unit" = state filter; "a random status effect" = give_random_keyword.
-- Acts. spawn a unit = summon, card = the token of that type ("a 1 strength Toad" = card "Token Toads", "Nests" = "Token Nest
-  (Qordia)", "an Elder" = "Token Elders"), params strength, "to" = the tile; build / spawn a structure = summon the same way;
+- Acts. spawn a unit = summon, card = the token of that type ("a 1 strength Toad" = card "Token Toads", "Nests" = "Qordia’s
+  Nest", "an Elder" = "Token Elders"), params strength, "to" = the tile; build / spawn a structure = summon the same way;
   respawn = revive. destroy = kill. convert = steal. drain X from Y = damage Y (amount X), then stat_change strength on the
   drainer by `{"x": "event_amount"}` (link then). push / pull / command / jump / fly / teleport / move forward / move fixedly
   forward = move ("keyword" Push / Pull / Command / Move fixedly forward when the text names it; "to" = where). force to attack
@@ -247,4 +247,6 @@ Disable, Push, Pull, Command, Drain, ...) define the words; cards use the values
   then draw (link then). add a created card to the deck = create, zone deck. trigger the ability of structures = repeat.
 - Numbers per level: `{"x": "per_level", "items": [...]}`; a range at one level ("4-5") is the item `{"x": "range", "items":
   [4, 5]}`. Words that change by level ("bordering/bordering/surrounding", "a/a/all/all/all"): one ability per group of levels,
-  each with `{"test": "level", "op": "in", "vals": [1, 2, 3]}`.
+  each with a level cond: levels 1-2 = `{"test": "level", "op": "le", "n": 2}`, levels 3-5 = `{"test": "level", "op": "ge",
+  "n": 3}` (one level: op eq). An empty level value ("bordering/surrounding/surrounding//") is a gap in the card data: describe
+  the levels that have words.

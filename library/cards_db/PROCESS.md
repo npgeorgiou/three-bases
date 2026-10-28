@@ -26,7 +26,9 @@ Commands run from `library/cards_db/`. Files and tables: README.md.
    (tokens) are never left out: links to them are how combos are found.
 3. **Cards.** Compare the library's cards with the game's own published card list, by card code and by name.
    - Game in the library: nothing to do for the cards it has. Only if cards or glossary keywords are missing, write
-     `supplement_<game>.py` (like supplement_runeterra.py) for those.
+     `supplement_<game>.py` (like supplement_runeterra.py) for those. When a reliable source has newer card data than the
+     library (more cards, changed texts), the supplement holds every card from it: an entry replaces the library's entry
+     with the same card code (source.py). Stormbound: Stormbound Kitty's card database replaced the library's 2022 copy.
    - Game not in the library: `supplement_<game>.py` writes all its cards and glossary keywords. The old library pipeline
      (ADDING_GAMES.md converters, tags, patterns) is not used.
    - The supplement is `supplement/<game>.jsonl` in the library's entities columns (source.py lists them; ext_id = the
@@ -54,7 +56,9 @@ Commands run from `library/cards_db/`. Files and tables: README.md.
 9. Add the game's trigger labels and verbs to `patterns/patterns.tsv` (step 2.2 says how they are judged).
 
 ### 1. Reading
-- Readers: background agents, model sonnet, the prompt in READER_PROMPT.md with only the batch name filled in. 6-8 at once.
+- Readers: background agents, model sonnet, the prompt in READER_PROMPT.md with only the batch name filled in. A reader
+  costs about the same for 40 or 240 cards, so use as few as possible: one per ~20,000 characters (most games: one reader for
+  the cards, one for the second reading).
 - Never merge, normalize or rebuild while a reader runs (`run.py` refuses while part files exist). Wait for its reply.
 - Keep a 10% sample for a second, independent reading (`second/<game>/`): the only accuracy measure needing no person.
 
@@ -92,6 +96,9 @@ text, then its rows. Every error he finds is fixed for all cards with the same p
 ### 5. Done when
 `run.py <game>` passes every step; word check 0 open flags; no proposal need is shared by cards with different texts; stubs are
 only names nothing defines; Kaptain approved CHECK_20; RESULTS.md and HANDOFF.md say the state; everything pushed.
+
+After Kaptain's check: add a few of the game's approved records to BRIEF.md as worked examples under "Game words: <game>",
+so the readers of every later game see approved examples from all earlier games.
 
 ## Asking the database
 `ask.py <game> cares|makes <happening> [mine|enemy]`, `concept <concept>`, `combo <A> <B>`, `partners <card>`,

@@ -56,11 +56,11 @@ select distinct card from flat_do where act='copy_keywords'
 - Noxus: on_discard (10), excess_damage (37), disable (21), board_presence (6), on_life_loss (11)
 - Demacia: extra_turn (23), multi_attack (15), damage_reduction (19), damage_prevention (19), shield (16)
 - Piltover & Zaun: junk_cards (13), on_draw (18), recycle (11), on_spell (27), trap_secret (16)
-- Freljord: regeneration (16), stat_loss (24), aoe_damage (27), stat_multiply (27), excess_damage (35)
+- Freljord: regeneration (16), stat_loss (24), stat_multiply (27), aoe_damage (27), excess_damage (35)
 - Shadow Isles: death_count (23), sacrifice (34), revive (19), self_mill (7), lifesteal (29)
 - Bilgewater: steal (5), self_mill (6), on_life_loss (21), hand_disruption (5), rule_change (12)
 - Targon: on_lifegain (5), combo_sequence (32), immunity (20), on_targeted (24), assists_support (11)
-- Shurima: stealth (8), tutor (19), variety_payoff (11), debuff (5), delayed (15)
+- Shurima: stealth (7), tutor (19), debuff (5), variety_payoff (11), delayed (15)
 - Bandle City: stacking_keyword (52), trap_secret (25), junk_cards (8), ping (65), spell_power (5)
 - Runeterra: repeat_trigger (5), merge_attach (23), board_presence (5), leave_trigger (14), return_to_hand (15)
 
