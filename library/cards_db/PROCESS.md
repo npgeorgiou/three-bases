@@ -26,6 +26,32 @@ vocab.tsv values and concepts that any game can share.
    vocab keyword row with its concept (Stun and Freeze are both disable), so keywords of different games meet. Before a
    game is done, `ask.py all compare <concepts>` shows its cards next to the other games' for the same concepts.
 
+## Writing data the same way in every game (read before step 0.5)
+The database answers one question over all games at once (`ask.py all ...`). That only works when every game is written
+with the same values, shapes and habits. A game's own words stay in its card texts, keyword entries and types; the rows say
+what cards do in shared values.
+1. Reuse before adding. For each of the game's terms, search vocab.tsv for a value that means the same and use it (a base
+   or hero with life = kind player; a structure = kind landmark). Add a value only when no value means it, and word it so
+   any game could use it ("start of the owner's turn", "the tile in front"), with the game as an example in brackets.
+2. Every keyword gets a vocab keyword row whose concept (column tree) says what it does by the game's own rules, checked
+   against the concept tree's definition. Stun in Runeterra: can't attack or block, so attack_lock, not disable (Kaptain,
+   28 Oct 2026). Freeze in Stormbound: no move and no ability for a turn, so disable.
+3. Every event, state and duration that two games word differently gets the same concept: round_start and turn_start are
+   turn_start; this_round and next_own_turn are temporary_effect; a state takes its keyword's concept (stunned like Stun).
+4. Stats by role: Power is attack, Health is health, Stormbound's strength is both. Never add a stat for one game when an
+   existing one fits; the concepts attack_gain and defence_gain find stat gains in every game.
+5. Statuses: giving one is give_keyword with the keyword; "a poisoned unit" is a state whose causes is
+   given_keyword:<Keyword>; an act that gives a keyword names it in its causes (stun: given_keyword:Stun).
+6. Board positions are filters `{"attr": "position", ..., "of": TARGET}`: always say what the position is measured from.
+7. One meaning, one form, in every game: the normalize rules (N1-N12) run on every game. A new form found in one game gets a
+   rule for all games, and every game is rebuilt (`run.py <each game>`, all cases must still pass).
+8. Card names are stored without trailing spaces (load.py); look names up the same way.
+9. Links between cards (combos, decks, "feeds") are made only inside one game: each game is its own world. Questions over
+   several games add up, by concept, what each game shows.
+10. Before a game is done: `ask.py all compare <its main mechanics>` must show its cards next to the other games' (a mechanic
+   its cards clearly have but the answer lacks = a missing mapping), and `ask.py <game> analyze "<a known deck>"` must explain
+   a deck from a guide the way the guide does.
+
 ## Steps
 ### 0. Before reading (in this order)
 1. **Research the game** (library/ADDING_GAMES.md section 0.1 says how): rules, the full keyword glossary, factions or

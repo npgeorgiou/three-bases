@@ -60,6 +60,7 @@ def build(c):
                        'ev_obj_side, ev_obj_with from flat_if').fetchall():
         card, o, v, ab, ev, fk, fs, fp, fz, fw, ek, es, ew = r
         if ev: ins(card, o, v, ab, 'condition', ev, ek or fk, es or fs, fp, kw_of(ew))
+        elif fk == 'mana': ins(card, o, v, ab, 'condition', 'mana_refilled', fk, fs, fp)  # counts my mana: fed by mana gain
         state_rows(card, o, v, ab, fk, fs, fp, fw, fz)
         state_rows(card, o, v, ab, ek, es, None, ew, None)
     for r in c.execute('select card, origin, via, ability, act, on_kind, on_side, on_pick, on_zone, on_with, keyword_ref '

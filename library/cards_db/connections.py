@@ -10,7 +10,7 @@ explain(c, enabler, payoff) -> a short description of the most direct connection
 Sides are compared from the same player's view: 'mine' must not meet 'enemy'; 'any' or empty fits everything."""
 
 def ids(c, name):
-    return [i for (i,) in c.execute('select id from card where lower(name)=lower(?) and is_keyword=0', (name,))]
+    return [i for (i,) in c.execute('select id from card where lower(name)=lower(?) and is_keyword=0', (name.strip(),))]
 
 def agree(a, b):
     return not a or not b or a == b or 'any' in (a, b)

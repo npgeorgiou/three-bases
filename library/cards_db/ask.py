@@ -13,6 +13,7 @@ question runs across games.
   ask.py <games> fed <concept>                    mechanics that set this one off
   ask.py <games> chains <concept>                 families of three mechanics: A sets off B, B sets off C
   ask.py <game> deck <card or concept> [size]     cards of one game that feed each other around it, in its faction
+  ask.py <game> analyze "<card>, <card>, ..."      a deck: its mechanics, how its cards feed each other, what it lacks
   ask.py <games> card <card>                      the card's text and stored rows (rows.py)
   ask.py <games> list happenings|concepts         the values these questions take
 Happenings are the event values of vocab.tsv; concepts are the concept tree's (equal mechanics of different games share
@@ -64,6 +65,7 @@ def main():
             print(f'{x}: ' + '; '.join(f'{g} {n} pairs, e.g. {ex}' for g, (n, ex) in per.items()))
     elif q == 'chains':
         for n, a, b, x, gs in mechanics.chains(c, games, args[0]): print(f'{a} -> {b} -> {x}  (seen in {", ".join(gs)})')
+    elif q == 'analyze': print('\n'.join(mechanics.analyze(c, games[0], ' '.join(args))))
     elif q == 'deck':
         size = int(args[1]) if len(args) > 1 else {'stormbound': 12}.get(games[0], 14)
         ids, allowed = mechanics.deck(c, games[0], args[0], size)

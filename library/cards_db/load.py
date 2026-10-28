@@ -117,7 +117,7 @@ class Loader:
             st = json.loads(stats) if stats and stats.startswith('{') else {}
             regs = (json.loads(extra).get('regions') if extra and extra.startswith('{') else None) or ([fac] if fac else [])
             num = lambda *ks: next((float(st[k]) for k in ks if str(st.get(k, '')).lstrip('-').replace('.', '').isdigit()), None)
-            self.ins('card', id=i, game=game, name=n, category=cat, speed=speed_of(sub) or None, cost=cost,
+            self.ins('card', id=i, game=game, name=(n or '').strip(), category=cat,  # sources leave trailing spaces speed=speed_of(sub) or None, cost=cost,
                      power=num('power', 'attack'), health=num('health', 'toughness', 'life', 'hp'), regions=';'.join(regs),
                      rarity=rar, is_keyword=1 if cat == 'keyword' else 0, stats=stats)
             if cat == 'tribe': self.types[(game, n.lower())] = self.ins('type', game=game, name=n, tribe_entry=i)

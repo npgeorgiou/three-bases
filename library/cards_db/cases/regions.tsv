@@ -56,13 +56,13 @@ r56	runeterra	Freljord	splash (library tags)	delayed	3	select card from flat_con
 r57	runeterra	Ionia	signature (library tags)	swap	2	select card from flat_concept where concept='swap'
 r58	runeterra	Ionia	signature (library tags)	return_to_hand	26	select card from flat_concept where concept='return_to_hand'
 r59	runeterra	Ionia	signature (library tags)	attack_now	5	select card from flat_concept where concept='attack_now'
-r60	runeterra	Ionia	signature (library tags)	disable	14	select card from flat_concept where concept='disable'
+r60	runeterra	Ionia	signature (library tags)	disable	14	select card from flat_concept where concept in ('disable','attack_lock')
 r61	runeterra	Ionia	splash (library tags)	turn_end	8	select card from flat_concept where concept='turn_end'
 r62	runeterra	Ionia	splash (library tags)	cost_reduction	6	select card from flat_concept where concept='cost_reduction'
 r63	runeterra	Ionia	splash (library tags)	resource_gain	4	select card from flat_concept where concept='resource_gain'
 r64	runeterra	Ionia	splash (library tags)	summon	18	select card from flat_concept where concept='summon'
 r65	runeterra	Noxus	signature (library tags)	excess_damage	18	select card from flat_concept where concept='excess_damage'
-r66	runeterra	Noxus	signature (library tags)	disable	10	select card from flat_concept where concept='disable'
+r66	runeterra	Noxus	signature (library tags)	disable	10	select card from flat_concept where concept in ('disable','attack_lock')
 r67	runeterra	Noxus	signature (library tags)	discard	4	select card from flat_concept where concept='discard'
 r68	runeterra	Noxus	signature (library tags)	damage	18	select card from flat_concept where concept='damage'
 r69	runeterra	Noxus	splash (library tags)	first_strike	7	select card from flat_concept where concept='first_strike'
@@ -95,7 +95,7 @@ r96	runeterra	Shurima	splash (library tags)	on_ally_play	6	select card from flat
 r97	runeterra	Targon	signature (library tags)	silence	2	select card from flat_concept where concept='silence'
 r98	runeterra	Targon	signature (library tags)	selection	8	select card from flat_concept where concept='selection'
 r99	runeterra	Targon	signature (library tags)	heal	9	select card from flat_concept where concept='heal'
-r100	runeterra	Targon	signature (library tags)	disable	15	select card from flat_concept where concept='disable'
+r100	runeterra	Targon	signature (library tags)	disable	15	select card from flat_concept where concept in ('disable','attack_lock')
 r101	runeterra	Targon	splash (library tags)	delayed	4	select card from flat_concept where concept='delayed'
 r102	runeterra	Targon	splash (library tags)	cost_reduction	6	select card from flat_concept where concept='cost_reduction'
 r104	runeterra	Targon	splash (library tags)	discard	2	select card from flat_concept where concept='discard'
@@ -111,7 +111,7 @@ r113	runeterra	Demacia	archetype (library)	fortress	22	select card from flat_con
 r114	runeterra	Freljord	archetype (library)	sustain	14	select card from flat_concept where concept in ('heal','lifesteal','regeneration','cheat_death')
 r115	runeterra	Freljord	archetype (library)	transformation	11	select card from flat_concept where concept in ('transform','polymorph','stances','merge_attach')
 r116	runeterra	Ionia	archetype (library)	positional	8	select card from flat_concept where concept in ('movement','forced_movement','adjacency','lanes','rows','rank_positions','zone_of_control','flanking','placement_rules')
-r117	runeterra	Ionia	archetype (library)	control	38	select card from flat_concept where concept in ('destroy','board_wipe','disable','silence','counter_spell','banish','return_to_hand','bounce_enemy')
+r117	runeterra	Ionia	archetype (library)	control	38	select card from flat_concept where concept in ('destroy','board_wipe','disable','attack_lock','silence','counter_spell','banish','return_to_hand','bounce_enemy')
 r118	runeterra	Ionia	archetype (library)	ramp	14	select card from flat_concept where concept in ('resource_gain','cost_reduction','free_play','multiple_resources','coin_economy','kicker','resource_banking')
 r119	runeterra	Ionia	archetype (library)	card_advantage	30	select card from flat_concept where concept in ('draw','tutor','selection','recycle','bounce_enemy')
 r120	runeterra	Piltover & Zaun	archetype (library)	chaos	24	select card from flat_concept where concept in ('random_effect','random_ability','generate_cards')

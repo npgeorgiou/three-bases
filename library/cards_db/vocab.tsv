@@ -58,7 +58,7 @@ act	gain_attack_token	the player gains the attack token (Rally)	extra_turn	attac
 act	strike	the target unit strikes another target now	attack_now	strikes;damaged	27 Oct 2026, v1
 act	start_attack	start a free attack with the targets	attack_now	attacks	27 Oct 2026, v1
 act	challenge	force a unit to block / choose its blocker	forced_attack	blocks	27 Oct 2026, v1
-act	stun	stun (cannot attack or block this round, removed from combat)	disable	given_keyword:Stun	27 Oct 2026, v1
+act	stun	stun (cannot attack or block this round, removed from combat)	attack_lock	given_keyword:Stun	27 Oct 2026, v1
 act	mark	mark the target for a later effect	mark_target		27 Oct 2026, v1
 act	capture	remove the target until the capturer leaves play	banish	leaves_play	27 Oct 2026, v1
 act	revive	return a dead unit to play	revive	summoned;revived	27 Oct 2026, v1
@@ -138,7 +138,7 @@ op	not	is not / lacks			27 Oct 2026, v1
 state	attacking	attacking		attacks	27 Oct 2026, v1
 state	blocking	blocking		blocks	27 Oct 2026, v1
 state	damaged	damaged	damage	damaged	27 Oct 2026, v1
-state	stunned	stunned	disable	given_keyword:Stun	27 Oct 2026, v1
+state	stunned	stunned	attack_lock	given_keyword:Stun	27 Oct 2026, v1
 state	frostbitten	frostbitten	stat_loss	given_keyword:Frostbite	27 Oct 2026, v1
 state	marked	marked by the source	mark_target		27 Oct 2026, v1
 state	created	created (not from the deck)		created	27 Oct 2026, v1
@@ -291,7 +291,7 @@ keyword	Toss	concept of using or giving this keyword	self_mill		28 Oct 2026, v3
 keyword	Nab	concept of using or giving this keyword	steal		28 Oct 2026, v3
 keyword	Rally	concept of using or giving this keyword	extra_turn		28 Oct 2026, v3
 keyword	Frostbite	concept of using or giving this keyword	stat_loss		28 Oct 2026, v3
-keyword	Stun	concept of using or giving this keyword	disable		28 Oct 2026, v3
+keyword	Stun	concept of using or giving this keyword	attack_lock		28 Oct 2026, v3
 keyword	Silence	concept of using or giving this keyword	silence		28 Oct 2026, v3
 keyword	Capture	concept of using or giving this keyword	banish		28 Oct 2026, v3
 keyword	Terrify	concept of using or giving this keyword	mill		28 Oct 2026, v3

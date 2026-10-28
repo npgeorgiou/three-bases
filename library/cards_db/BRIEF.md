@@ -4,6 +4,11 @@ You read card texts and write what each card DOES as JSON records. Every value i
 `vocab.tsv` (column `value`, grouped by `field`), or the exact name of another card, keyword or type (the script turns names into
 links). Never write free text. Never guess a rule the text does not state.
 
+## Same values in every game
+Every game is written with the same values, so one question finds cards of all games. Use the existing value that means the
+same thing (the game's words are mapped in "Game words: <game>" below); propose a new value only when none fits, worded so
+any game could use it. Say what a position is measured from ("of"). Give statuses with give_keyword and the keyword.
+
 ## Output
 One JSON object per line, one line per card, in the card order of the input, written to the output file you are given:
 `{"id": <card id>, "abilities": [ABILITY, ...]}`

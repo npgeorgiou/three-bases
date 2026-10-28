@@ -1,6 +1,6 @@
 # Card database (what cards do, as linked rows)
 
-Start here: HANDOFF.md (state). Importing a game: PROCESS.md. Results per game: RESULTS.md. Example answers: QUERIES.md.
+Start here: HANDOFF.md (state). Importing a game: PROCESS.md (first its section "Writing data the same way in every game"). Results per game: RESULTS.md. Example answers: QUERIES.md.
 
 Games: Runeterra (done), Stormbound (waiting for Kaptain's check). One database holds all games, and every question can run
 across them (`ask.py all ...`).
@@ -53,7 +53,8 @@ zone discard = died). So one query finds them all, whatever the wording:
 that combine two mechanics; `cares` / `makes` take a concept too (`cares disable`: units stunned or frozen). Mechanic
 questions (mechanics.py): `together <concept>` (what a mechanic is built with), `feeds` / `fed <concept>` (mechanics that set
 it off or that it sets off), `chains <concept>` (families of three), `<game> deck <card or concept>` (cards of one game, in
-its faction, that feed each other). A link between two cards is only made inside one game: each game is its own world; the
+its faction, that feed each other), `<game> analyze "<card>, <card>, ..."` (a deck: its mechanics, which cards feed which,
+what it needs that nothing in it makes, the game's deck rules). A link between two cards is only made inside one game: each game is its own world; the
 answers add up, by concept, what every game shows. Keywords meet through their concept (vocab keyword rows), states
 through theirs (stunned, frozen: disable), events through theirs (round_start, turn_start: turn_start), stats through
 their role (concepts attack_gain, defence_gain: Power, Health, or a strength that is both).
