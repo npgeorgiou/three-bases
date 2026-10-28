@@ -18,5 +18,5 @@ Batch name: BATCH.
 5. Proposals (only for values that are missing) go to read/GAME/BATCH.proposals.jsonl.
 6. Run: python3 check.py GAME read/GAME/BATCH.jsonl --input input/GAME/BATCH.jsonl and fix every problem until it reports
    0 problems.
-7. If you write a helper script, keep it in your own folder /tmp/reader_BATCH/ (never a shared scratch folder).
+7. If you write a helper script, keep it in your own folder /tmp/reader_GAME_BATCH/ (never a shared scratch folder).
 8. Reply with exactly: records written, number marked unsure, number of proposals.

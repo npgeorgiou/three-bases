@@ -8,6 +8,8 @@ links). Never write free text. Never guess a rule the text does not state.
 Every game is written with the same values, so one question finds cards of all games. Use the existing value that means the
 same thing (the game's words are mapped in "Game words: <game>" below); propose a new value only when none fits, worded so
 any game could use it. Say what a position is measured from ("of"). Give statuses with give_keyword and the keyword.
+Mind the direction: steal takes the enemy's unit, donate gives away my own ("convert itself"). Mind who chooses: choose_one
+= the player picks, random_one = chance picks, "X, otherwise Y" = two abilities with opposite conditions (rule 8).
 
 ## Output
 One JSON object per line, one line per card, in the card order of the input, written to the output file you are given:
@@ -66,7 +68,8 @@ AMOUNT   a number, or `{"x": x, "of": TARGET, "attr": attr, "event": EVENT, "spa
 7. "Create a <card> in hand" = create, zone hand, card <name>. A created card that the text describes but does not name
    ("a random 1 cost Poro") = create/summon with `"on"` describing it: `{"kind": "unit", "pick": "random", "with": [filters]}`.
 8. "Choose one: A or B" = a choose_one effect, then A and B as effects with link or. "X, or if <the target> is Y, Z instead"
-   = X (target filtered "not Y"), then Z with link instead (target pick it, filtered "Y"). "X, or if <you / the game state> Y,
+   = X (target filtered "not Y"), then Z with link instead (target pick it, filtered "Y"). "A random effect: A, B or C" =
+   a random_one effect, then A, B, C with link or (nobody chooses). "X, or if <you / the game state> Y,
    Z" = two abilities with the same when: one with the cond "not Y" doing X, one with the cond "Y" doing Z (see Gnar).
 9. Stages "I-II:" / "III:" = COND test stage, n 1 and 2 (two conds are OR inside one stage: write one ability per stage).
 10. "When X or Y" (two different events) = one ability per event, same effects. "I or a Living Shadow strike" = two abilities.

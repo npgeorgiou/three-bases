@@ -117,10 +117,10 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
 - destroy: runeterra 19385 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- sacrifice: runeterra 6008 pairs, e.g. Chronicler of Ruin -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- removal: runeterra 5597 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Broken Truce -> Spare Dragonling
+- sacrifice: runeterra 6008 pairs, e.g. Amalgamation Of Vile Rites -> Shackled Ghasts; stormbound 120 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- removal: runeterra 5597 pairs, e.g. Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Avian Stalkers -> Marked as Prey
 - revive: runeterra 1661 pairs, e.g. Eternal Dancers -> Bladepierced Revenant
-- on_kill: runeterra 2008 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Spellbinder Zhevana -> Spare Dragonling
+- on_kill: runeterra 2008 pairs, e.g. Mordekaiser (level 2) -> Shackled Ghasts; stormbound 20 pairs, e.g. Spellbinder Zhevana -> Spare Dragonling
 - death_count: runeterra 728 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 19 pairs, e.g. Marked as Prey -> Spare Dragonling
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
@@ -187,7 +187,7 @@ select distinct card from flat_do where act='copy_keywords'
 - runeterra Runeterra: repeat_trigger (5), merge_attach (23), board_presence (5), variety_payoff (4), leave_trigger (14)
 - stormbound Neutral: draw (5), generate_cards (4), variety_payoff (6), attack_now (4), copy (4)
 - stormbound Ironclad: lanes (8), forced_movement (9), movement (9), death_trigger (4), positional (26)
-- stormbound Shadowfen: lifesteal (7), damage_over_time (6), steal (5), ping (10), variable_stats (7)
+- stormbound Shadowfen: lifesteal (7), damage_over_time (6), steal (4), ping (10), variable_stats (7)
 - stormbound Swarm: direct_damage (7), tribal (6), summon (8), death_trigger (4), on_attack (5)
 - stormbound Winter: disable (8), resource_gain (7), cant_attack (8), passive (8), silence (8)
 

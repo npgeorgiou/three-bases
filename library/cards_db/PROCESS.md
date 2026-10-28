@@ -59,6 +59,20 @@ what cards do in shared values.
    its cards clearly have but the answer lacks = a missing mapping), and `ask.py <game> analyze "<a known deck>"` must explain
    a deck from a guide the way the guide does.
 
+## Two chats on two games at the same time
+It works: each chat writes its own game's files (read/<game>/, input/<game>/, second/<game>/, supplement/<game>*.jsonl,
+supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
+- Id block: the first thing each chat does is write its game's line in source.py (the next free block) and push it. If the
+  push is refused, pull: the other chat took that block, so take the next one.
+- Shared files (vocab.tsv, BRIEF.md, patterns/patterns.tsv, normalize.py, flat.py, refs.py, connections.py, cases/*.tsv,
+  CHANGES.md, PROCESS.md): pull before editing, keep each change small, commit and push it at once. Before adding a vocab
+  value, pull and search vocab.tsv again: the other chat may have added the same meaning under another name (one meaning,
+  one value). Never edit another game's records.
+- cards.sqlite and QUERIES.md are rebuilt from the files: after every pull, run `run.py <your game>` (it loads every game);
+  on a merge conflict in them, take either side and rebuild. A change to shared code or values must leave every game's
+  `run.py` passing (run each game) before it is pushed.
+- Never force-push. Readers of different chats never share a scratch folder (/tmp/reader_<game>_<batch>/).
+
 ## Steps
 ### 0. Before reading (in this order)
 1. **Research the game** (library/ADDING_GAMES.md section 0.1 says how): rules, the full keyword glossary, factions or

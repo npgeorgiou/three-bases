@@ -98,7 +98,7 @@ sb15	mechanic	cares about confused units	text:\bconfused\b	select card from flat
 sb16	mechanic	disables abilities	text:\bdisable\b	select card from flat_do where act='give_keyword' and keyword_ref=(select id from card where game='stormbound' and name='Disable')	stormbound
 sb17	mechanic	spawns or builds	text:\bspawn|\bbuild\b	select card from flat_do where act in ('summon','revive')	stormbound
 sb18	mechanic	destroys	text:\bdestroys?\b	select card from flat_do where act='kill'	stormbound
-sb19	mechanic	converts enemies	text:\bconvert	select card from flat_do where act='steal'	stormbound
+sb19	mechanic	converts enemies	text:\bconvert(?! itself)	select card from flat_do where act='steal'	stormbound
 sb20	mechanic	drains strength	text:\bdrain	select card from flat_do where act='damage'	stormbound
 sb21	mechanic	pushes	text:\bpush	select card from flat_do where act='move'	stormbound
 sb22	mechanic	pulls	text:\bpull	select card from flat_do where act='move'	stormbound
@@ -142,3 +142,4 @@ sb59	mechanic	spreads an amount among targets	text:\bspread\b	select card from f
 sb60	mechanic	benefits from units dying, any way	text:\bon death\b|\bwhen (?:this )?dies\b|\bwhen dying\b|\bif that kills\b|\bfor each unit destroyed\b	select card from flat_ref where happening in ('dies','killed') and role!='makes'	stormbound
 sb61	mechanic	benefits from taking damage, any way	text:\bafter surviving damage\b	select card from flat_ref where happening in ('survives_damage','damaged') and role!='makes'	stormbound
 sb62	mechanic	benefits from poison, any way	text:\bpoisoned\b	select card from flat_ref where happening='given_keyword' and role!='makes'	stormbound
+sb63	mechanic	gives its own unit to the opponent	text:\bconvert itself	select card from flat_do where act='donate'	stormbound

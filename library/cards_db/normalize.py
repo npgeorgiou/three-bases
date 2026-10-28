@@ -19,6 +19,7 @@ and second readings). Safe to run any number of times. Each rule is listed in CH
   N12 a trigger on being given a keyword, narrowed by an it_matches condition that names the keyword ("keyword is Stun", or a
      state given by it: "state is stunned"), is written as the trigger's object filter "keyword is <it>" (one form, every game;
      Yasuo, Fae Bladetwirler and The Tidedancer were read the other way).
+  N13 steal aimed at my own side (pick self or side mine: "convert itself") is donate; steal is only taking the enemy's.
   N10 games whose units have one stat, strength (Stormbound): "strongest" / "weakest" are pick highest / lowest by strength,
      never the Power-based picks.
 Usage: normalize.py <game> <file.jsonl> [...]   rewrites the files in place, prints how many records changed."""
@@ -58,6 +59,8 @@ def fix_filters(x):
         for v in x: fix_filters(v)
 
 def fix_effect(e, kinds):
+    if e.get('act') == 'steal' and ((e.get('on') or {}).get('pick') == 'self' or (e.get('on') or {}).get('side') == 'mine'):
+        e['act'] = 'donate'  # N13
     if e.get('card') and e.get('act') in ('summon', 'create', 'copy', 'play_card') and isinstance(e.get('on'), dict) and set(e['on']) <= {'kind'}:
         e.pop('on')  # N11
     act = e.get('act')
