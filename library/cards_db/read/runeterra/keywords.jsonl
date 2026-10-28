@@ -74,7 +74,6 @@
 {"id":750443,"abilities":[{"when":{"event":"activated"},"do":[{"act":"obliterate","on":{"kind":"card","side":"mine","pick":"bottom","zone":"deck_bottom","n":{"x":"event_amount"},"with":[{"attr":"category","op":"not","val":"champion"}]}}]}]}
 {"id":750444,"abilities":[{"when":{"event":"activated"},"do":[{"act":"start_attack","on":{"kind":"unit","side":"mine","pick":"chosen","n":{"x":"event_amount"},"with":[{"attr":"card","op":"is","ref":"Blade"}]}}]}]}
 {"id":750445,"abilities":[],"condition":[{"test":"have","op":"is","of":{"kind":"card","side":"mine"}}]}
-{"id":750446,"abilities":[{"when":{"event":"activated"},"do":[{"act":"obliterate","on":{"kind":"card","side":"enemy","pick":"top","zone":"deck_top","n":{"x":"event_amount"}}},{"act":"keyword_action","on":{"pick":"it"},"keyword":"Trap","link":"then"}]}]}
 {"id":750447,"abilities":[],"trigger":{"event":"round_end"}}
 {"id":750448,"abilities":[],"condition":[{"test":"stat","of":{"pick":"self"},"attr":"power","op":"ge","n":8}],"unsure":["attr"]}
 {"id":750449,"abilities":[{"when":{"event":"activated"},"do":[{"act":"obliterate","on":{"pick":"it"}}]}]}

@@ -13,3 +13,4 @@
   approved records to BRIEF.md as examples, write Stormbound's results in RESULTS.md.
 - Questions over all games work (`ask.py all ...`, mechanics.py, QUERIES.md). The next game follows PROCESS.md, first its
   section "Writing data the same way in every game".
+- Next idea, not started: a deck as a network of cards (NETWORK_DRAFT.md).

@@ -36,6 +36,13 @@ what cards do in shared values.
 2. Every keyword gets a vocab keyword row whose concept (column tree) says what it does by the game's own rules, checked
    against the concept tree's definition. Stun in Runeterra: the unit can't act, so disable; Frostbite sets Power to 0, so
    attack_zero (Kaptain, 28 Oct 2026). Freeze in Stormbound: no move and no ability for a turn, so disable.
+   These mappings decide how every card is sorted, so they are checked keyword by keyword before a game is done, and
+   checked again: (a) the keyword's meaning from the game's own rules (glossary, wiki), not from memory or the old library;
+   (b) the concept's definition, including its "not this" part; (c) whose side it hits (an enemy that can't block is
+   cant_block, my own unit that can't block is a drawback); (d) whether the keyword belongs to the game at all (a mode left
+   out: Terrify is Path of Champions, so it is deleted). Runeterra's old library mappings were wrong for Stun, Frostbite,
+   Rally, Vulnerable, Fleeting, Landmark and Can't Block until Kaptain checked them (28 Oct 2026). Show Kaptain the full
+   keyword -> concept list (with each concept's definition) before calling a game done.
 3. Every event, state and duration that two games word differently gets the same concept: round_start and turn_start are
    turn_start; this_round and next_own_turn are temporary_effect; a state takes its keyword's concept (stunned like Stun).
 4. Stats by role: Power is attack, Health is health, Stormbound's strength is both. Never add a stat for one game when an
@@ -129,7 +136,7 @@ what cards do in shared values.
 text, then its rows. Every error he finds is fixed for all cards with the same problem.
 
 ### 5. Done when
-`run.py <game>` passes every step; word check 0 open flags; no proposal need is shared by cards with different texts; stubs are
+`run.py <game>` passes every step; the keyword -> concept list checked twice and shown to Kaptain; word check 0 open flags; no proposal need is shared by cards with different texts; stubs are
 only names nothing defines; Kaptain approved CHECK_20_<game>; RESULTS.md and HANDOFF.md say the state; everything pushed.
 
 After Kaptain's check: add a few of the game's approved records to BRIEF.md as worked examples under "Game words: <game>",

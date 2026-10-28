@@ -116,12 +116,12 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: runeterra 19385 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- sacrifice: runeterra 6008 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- self_destruct: runeterra 9028 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
-- removal: runeterra 5597 pairs, e.g. Kindred's Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Gray the Balancer -> Marked as Prey
+- destroy: runeterra 19385 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- sacrifice: runeterra 6008 pairs, e.g. Chronicler of Ruin -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- removal: runeterra 5597 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Broken Truce -> Spare Dragonling
 - revive: runeterra 1661 pairs, e.g. Eternal Dancers -> Bladepierced Revenant
-- on_kill: runeterra 2008 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Spellbinder Zhevana -> Dreadful Keepers
+- on_kill: runeterra 2008 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Spellbinder Zhevana -> Spare Dragonling
+- death_count: runeterra 728 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 19 pairs, e.g. Marked as Prey -> Spare Dragonling
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -146,7 +146,7 @@ Supports your units (stats, protection, combat keywords): Piercing Darkness, Sen
 Card flow (draw, create, choose): Glimpse Beyond, Lonely Chimeslime, Senna, Spirit Leech.
 Puts extra units into play: Cursed Keeper, Hapless Aristocrat, The Undying.
 Units that support cards can target: 9 (Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, Lucian, Ravenous Butcher, Senna, Senna, Sentinel of Light, Spirit Leech, The Undying).
-Key cards (in most of the plan): Senna, Spirit Leech, The Ruination, Crumble, Ravenous Butcher.
+Key cards (in most of the plan): Senna, The Ruination, Spirit Leech, Crumble, Ravenous Butcher.
 Weak spots: none found.
 ```
 
@@ -175,8 +175,8 @@ select distinct card from flat_do where act='copy_keywords'
 ## What each faction or region leans on (concepts with the highest share of its cards vs its game)
 
 - runeterra Ionia: bounce_enemy (11), silence (33), movement (6), swap (6), return_to_hand (52)
-- runeterra Noxus: on_discard (10), excess_damage (37), disable (21), board_presence (6), on_life_loss (11)
-- runeterra Demacia: extra_turn (23), multi_attack (15), damage_reduction (19), damage_prevention (19), shield (16)
+- runeterra Noxus: on_discard (10), drawback (7), excess_damage (37), disable (21), board_presence (6)
+- runeterra Demacia: extra_turn (23), damage_reduction (19), multi_attack (19), damage_prevention (19), shield (16)
 - runeterra Piltover & Zaun: junk_cards (13), on_draw (18), recycle (11), on_spell (27), trap_secret (16)
 - runeterra Freljord: attack_zero (21), regeneration (16), stat_loss (23), stat_multiply (27), aoe_damage (27)
 - runeterra Shadow Isles: death_count (23), revive (20), sacrifice (34), self_mill (7), lifesteal (29)

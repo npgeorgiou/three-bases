@@ -1,0 +1,1 @@
+{"id":750446,"abilities":[{"when":{"event":"activated"},"do":[{"act":"obliterate","on":{"kind":"card","side":"enemy","pick":"top","zone":"deck_top","n":{"x":"event_amount"}}},{"act":"keyword_action","on":{"pick":"it"},"keyword":"Trap","link":"then"}]}]}

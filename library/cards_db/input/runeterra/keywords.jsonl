@@ -74,7 +74,6 @@
 {"id": 750443, "name": "Toss", "category": "keyword", "text": "Obliterate X non-champion cards from the bottom of your deck."}
 {"id": 750444, "name": "Blade Dance", "category": "keyword", "text": "Start a free attack with that many summoned Blades."}
 {"id": 750445, "name": "Behold", "category": "keyword", "text": "You behold something if you have it in play or hand."}
-{"id": 750446, "name": "Terrify", "category": "keyword", "text": "Obliterate X cards from the top of the enemy deck, activating any traps on them."}
 {"id": 750447, "name": "Round End", "category": "keyword", "text": "Get this effect when the round ends."}
 {"id": 750448, "name": "Titanic", "category": "keyword", "text": "Units with 8+ power or health"}
 {"id": 750449, "name": "Obliterate", "category": "keyword", "text": "Completely removed from the game. Doesn't cause Last Breath and can't be revived."}

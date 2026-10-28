@@ -289,14 +289,13 @@ keyword	Manifest	concept of using or giving this keyword	selection		28 Oct 2026,
 keyword	Predict	concept of using or giving this keyword	selection		28 Oct 2026, v3
 keyword	Toss	concept of using or giving this keyword	self_mill		28 Oct 2026, v3
 keyword	Nab	concept of using or giving this keyword	steal		28 Oct 2026, v3
-keyword	Rally	concept of using or giving this keyword	extra_turn		28 Oct 2026, v3
+keyword	Rally	concept of using or giving this keyword (Kaptain, 28 Oct 2026: an extra attack token: the whole board attacks again)	multi_attack		28 Oct 2026, v3
 keyword	Frostbite	concept of using or giving this keyword	attack_zero		28 Oct 2026, v3
 keyword	Stun	concept of using or giving this keyword	disable		28 Oct 2026, v3
 keyword	Silence	concept of using or giving this keyword	silence		28 Oct 2026, v3
 keyword	Capture	concept of using or giving this keyword	banish		28 Oct 2026, v3
-keyword	Terrify	concept of using or giving this keyword	mill		28 Oct 2026, v3
 keyword	Blade Dance	concept of using or giving this keyword	attack_now		28 Oct 2026, v3
-keyword	Can't Block	concept of using or giving this keyword	cant_block		28 Oct 2026, v3
+keyword	Can't Block	concept of using or giving this keyword (Kaptain, 28 Oct 2026: my own unit cannot block: a drawback)	drawback		28 Oct 2026, v3
 keyword	Lifesteal	concept of having, using or giving this keyword	lifesteal		28 Oct 2026, v3
 keyword	Drain	concept of having, using or giving this keyword	lifesteal		28 Oct 2026, v3
 keyword	Regeneration	concept of having, using or giving this keyword	regeneration		28 Oct 2026, v3
@@ -310,7 +309,7 @@ keyword	Tough	concept of having, using or giving this keyword	damage_reduction		
 keyword	Ephemeral	concept of having, using or giving this keyword	self_destruct		28 Oct 2026, v3
 keyword	Deathless	concept of having, using or giving this keyword	cheat_death		28 Oct 2026, v3
 keyword	Challenger	concept of having, using or giving this keyword	target_choice		28 Oct 2026, v3
-keyword	Vulnerable	concept of having, using or giving this keyword	forced_attack		28 Oct 2026, v3
+keyword	Vulnerable	concept of using or giving this keyword (Kaptain, 28 Oct 2026: the enemy may choose it as a blocker: forced into combat)	target_choice		28 Oct 2026, v3
 keyword	Spirit	concept of having, using or giving this keyword	stacking_keyword		28 Oct 2026, v3
 keyword	Gloom	concept of having, using or giving this keyword	stacking_keyword		28 Oct 2026, v3
 keyword	Impact	concept of having, using or giving this keyword	stacking_keyword		28 Oct 2026, v3
@@ -320,10 +319,10 @@ keyword	Fury	concept of having, using or giving this keyword	permanent_growth		2
 keyword	Evolve	concept of having, using or giving this keyword	variety_payoff		28 Oct 2026, v3
 keyword	Formidable	concept of having, using or giving this keyword	stat_multiply		28 Oct 2026, v3
 keyword	Immobile	concept of having, using or giving this keyword	cant_attack		28 Oct 2026, v3
-keyword	Landmark	concept of having, using or giving this keyword	board_clog		28 Oct 2026, v3
+keyword	Landmark	concept of using or giving this keyword (Kaptain, 28 Oct 2026: not a unit: a building with no attack or health, destroyed only by cards that target landmarks, gives a benefit)	terrain		28 Oct 2026, v3
 keyword	Attach	concept of having, using or giving this keyword	merge_attach		28 Oct 2026, v3
 keyword	Equipment	concept of having, using or giving this keyword	merge_attach		28 Oct 2026, v3
-keyword	Fleeting	concept of having, using or giving this keyword	retain		28 Oct 2026, v3
+keyword	Fleeting	concept of using or giving this keyword (Kaptain, 28 Oct 2026: dies at the end of the turn)	self_destruct		28 Oct 2026, v3
 keyword	Augment	concept of having, using or giving this keyword	permanent_growth		28 Oct 2026, v3
 keyword	Hallowed	concept of having, using or giving this keyword	death_trigger		28 Oct 2026, v3
 keyword	Support	concept of having, using or giving this keyword	assists_support		28 Oct 2026, v3

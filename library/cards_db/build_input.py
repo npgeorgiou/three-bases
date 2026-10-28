@@ -29,7 +29,7 @@ def excluded(c, game):
     import csv
     out = set()
     for r in csv.DictReader(open(os.path.join(HERE, 'exclude.tsv')), delimiter='\t'):
-        if r['game'] == game and r['column'] in ('edition', 'source_type', 'category'):
+        if r['game'] == game and r['column'] in ('edition', 'source_type', 'category', 'name'):
             out |= {i for (i,) in c.execute(f"select id from entities where game=? and {r['column']}=?", (game, r['value']))}
     return out
 
@@ -91,6 +91,7 @@ def main():
             for x in b: f.write(json.dumps({k2: v for k2, v in x.items() if not k2.startswith('_')}) + '\n')
     with open(os.path.join(HERE, 'input', game, 'keywords.jsonl'), 'w') as f:
         for i, n, t in c.execute("select id, name, text from entities where game=? and category='keyword' order by id", (game,)):
+            if i in excluded(c, game): continue
             f.write(json.dumps({'id': i, 'name': n, 'category': 'keyword', 'text': ' '.join((t or '').split())}) + '\n')
     print(f'{game}: {len(allc)} cards, {len(auto)} keyword-only (no reading), {len(todo)} to read in {len(batches)} batches '
           f'({sum(len(x["text"]) for x in todo)} chars)')
