@@ -6,6 +6,7 @@ import glob, json, os, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from build_input import KWFIELD
+import source
 
 # wording -> what must be in the record: ('event', value) | ('act', value) | ('cond_kw', keyword name)
 TRIGGERS = [
@@ -47,7 +48,7 @@ def walk(x, out):
 
 def main():
     game = sys.argv[1]
-    c = sqlite3.connect(os.path.join(HERE, '..', 'three-bases-library.sqlite'))
+    c = source.lib()
     kwnames = {n.lower(): n for (n,) in c.execute("select name from entities where game=? and category='keyword'", (game,))}
     skipkw = {'play', 'attack', 'strike', 'round start', 'round end', 'last breath', 'level up', 'nexus strike', 'countdown',
               'burst', 'fast', 'slow', 'focus', 'skill', 'everywhere', 'weakest', 'strongest', 'attack strike', 'slay'}

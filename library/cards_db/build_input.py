@@ -3,6 +3,7 @@ other entries its text mentions; cut into batches by amount of text. Keyword-onl
 Usage: build_input.py <game> <chars per batch> [--only id,id,...]   writes input/<game>/batch_NNN.jsonl, read/<game>/auto.jsonl"""
 import json, os, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
+import source
 DB = os.path.join(HERE, '..', 'three-bases-library.sqlite')
 KWFIELD = re.compile(r'^\s*Keywords:\s*([^.]*)\.\s*', re.S)
 # Keywords-field entries that are not keywords. Runeterra "Missing Translation": Riot's own card data has keywordRef
@@ -56,7 +57,7 @@ def cards(c, game):
 def main():
     game, budget = sys.argv[1], int(sys.argv[2])
     only = set(int(x) for x in sys.argv[sys.argv.index('--only') + 1].split(',')) if '--only' in sys.argv else None
-    c = sqlite3.connect(DB)
+    c = source.lib()
     allc = cards(c, game)
     os.makedirs(os.path.join(HERE, 'input', game), exist_ok=True); os.makedirs(os.path.join(HERE, 'read', game), exist_ok=True)
     auto = [x for x in allc if not re.sub(r'[\W_]', '', x['_rest'])]

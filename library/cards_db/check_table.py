@@ -3,8 +3,9 @@ card, keyword, type or name part shown as its name instead of its id. One file, 
 Usage: check_table.py <out.md> <card id> [...]     or     check_table.py <out.md> --random <game> <n>"""
 import os, random, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
+import source
 c = sqlite3.connect(os.path.join(HERE, 'cards.sqlite'))
-TEXT = {i: ' '.join((t or '').split()) for i, t in sqlite3.connect(os.path.join(HERE, '..', 'three-bases-library.sqlite')).execute('select id, text from entities')}
+TEXT = {i: ' '.join((t or '').split()) for i, t in source.lib().execute('select id, text from entities')}
 
 # column -> table its id points to (rows whose names replace the ids)
 NAMED = {('card_keyword', 'card'): 'card', ('card_keyword', 'keyword'): 'card', ('card_type', 'card'): 'card',

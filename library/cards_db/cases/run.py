@@ -10,11 +10,12 @@ HERE = os.path.dirname(os.path.abspath(__file__)); DBDIR = os.path.dirname(HERE)
 sys.path.insert(0, DBDIR)
 from build_input import KWFIELD
 import connections
+sys.path.insert(0, DBDIR); import source
 
 def main():
     game = sys.argv[1]; show = int(sys.argv[sys.argv.index('--show') + 1]) if '--show' in sys.argv else 8
     c = sqlite3.connect(os.path.join(DBDIR, 'cards.sqlite'))
-    lib = sqlite3.connect(os.path.join(DBDIR, '..', 'three-bases-library.sqlite'))
+    lib = source.lib()
     cards = {i: n for i, n in c.execute('select id, name from card where is_keyword=0 and is_stub=0 and game=?', (game,))}
     region = {i: r for i, r in c.execute('select id, regions from card where game=?', (game,))}
     own, kws = {}, {}

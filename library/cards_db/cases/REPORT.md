@@ -8,11 +8,11 @@ Made by `cases/run.py runeterra`.
 
 | case | question | expected | found | recall | extra | pass |
 |---|---|---|---|---|---|---|
-| m01 | rewards an ally dying (event) | 6 | 6 | 100% | 9 | yes |
-| m02 | cares whether allies died (condition) | 13 | 13 | 100% | 21 | yes |
+| m01 | rewards an ally dying (event) | 6 | 6 | 100% | 10 | yes |
+| m02 | cares whether allies died (condition) | 13 | 13 | 100% | 20 | yes |
 | m03 | triggers when you play a spell | 31 | 31 | 100% | 8 | yes |
 | m04 | triggers when you summon an ally | 40 | 40 | 100% | 11 | yes |
-| m05 | kills own units | 34 | 34 | 100% | 21 | yes |
+| m05 | kills own units | 34 | 34 | 100% | 20 | yes |
 | m06 | stuns | 68 | 65 | 96% | 10 | yes |
 | m07 | frostbites (power to 0) | 21 | 21 | 100% | 1 | yes |
 | m08 | recalls units or cares about recalling | 58 | 58 | 100% | 63 | yes |
@@ -28,11 +28,11 @@ Made by `cases/run.py runeterra`.
 | m18 | Nexus Strike triggers | 32 | 32 | 100% | 1 | yes |
 | m19 | Last Breath (dies) triggers | 47 | 46 | 98% | 17 | yes |
 | m20 | Round Start triggers | 113 | 112 | 99% | 0 | yes |
-| m21 | Round End triggers | 31 | 31 | 100% | 185 | yes |
+| m21 | Round End triggers | 31 | 31 | 100% | 183 | yes |
 | m22 | Attack triggers | 96 | 95 | 99% | 245 | yes |
 | m23 | Overwhelm units deal excess damage | 104 | 104 | 100% | 34 | yes |
 | m24 | Elusive units can't be blocked by most units | 76 | 76 | 100% | 253 | yes |
-| m25 | Ephemeral units die at round end | 23 | 23 | 100% | 43 | yes |
+| m25 | Ephemeral units die at round end | 23 | 23 | 100% | 41 | yes |
 | m26 | Plunder: needs damage to the enemy Nexus this round | 33 | 33 | 100% | 11 | yes |
 | m27 | Countdown landmarks | 26 | 26 | 100% | 5 | yes |
 | m28 | refills/gains mana or cares about refilling | 29 | 29 | 100% | 36 | yes |
@@ -40,17 +40,17 @@ Made by `cases/run.py runeterra`.
 | m30 | Rally (attack token) | 25 | 25 | 100% | 18 | yes |
 | m31 | Predict | 20 | 20 | 100% | 62 | yes |
 | m32 | reduces costs | 125 | 123 | 98% | 54 | yes |
-| m33 | copies cards or spells (incl. becoming an exact copy) | 98 | 97 | 99% | 61 | yes |
+| m33 | copies cards or spells (incl. becoming an exact copy) | 98 | 97 | 99% | 62 | yes |
 | m34 | Behold (have a card) | 15 | 15 | 100% | 98 | yes |
 | m35 | Daybreak / Nightfall | 42 | 42 | 100% | 1 | yes |
 | m36 | can't block | 8 | 8 | 100% | 321 | yes |
-| m37 | summons units or cares about summoning | 273 | 273 | 100% | 174 | yes |
+| m37 | summons units or cares about summoning | 273 | 273 | 100% | 175 | yes |
 | m38 | revives | 23 | 22 | 96% | 7 | yes |
 | m39 | silences | 11 | 11 | 100% | 40 | yes |
 | m40 | shuffles cards into a deck | 20 | 20 | 100% | 178 | yes |
 | m41 | triggers when you draw | 7 | 7 | 100% | 9 | yes |
 | m42 | When I'm summoned triggers | 279 | 279 | 100% | 29 | yes |
-| m43 | Strike triggers | 35 | 35 | 100% | 241 | yes |
+| m43 | Strike triggers | 35 | 35 | 100% | 239 | yes |
 | m44 | gives Challenger | 23 | 23 | 100% | 10 | yes |
 | m45 | gives Elusive | 16 | 16 | 100% | 8 | yes |
 | m46 | gives Vulnerable | 33 | 33 | 100% | 2 | yes |
@@ -62,7 +62,7 @@ Made by `cases/run.py runeterra`.
 | m52 | SpellShield negates enemy spells | 26 | 26 | 100% | 35 | yes |
 | m53 | Spirit / Gloom / Impact stacking keywords | 32 | 32 | 100% | 45 | yes |
 | m54 | damage equal to a stat or count | 9 | 9 | 100% | 15 | yes |
-| m55 | effects scaling with a count (for each) | 85 | 82 | 96% | 234 | yes |
+| m55 | effects scaling with a count (for each) | 85 | 82 | 96% | 233 | yes |
 | m56 | temporary buffs this round | 120 | 120 | 100% | 44 | yes |
 | m57 | Invoke (does it or cares about it) | 19 | 19 | 100% | 0 | yes |
 | m58 | Manifest | 32 | 32 | 100% | 0 | yes |
@@ -139,7 +139,7 @@ Made by `cases/run.py runeterra`.
 
 | case | region | kind | mechanic | need | found | pass |
 |---|---|---|---|---|---|---|
-| r01 | Shadow Isles | archetype (Claude) | rewards allies dying | 4 | 10 | yes |
+| r01 | Shadow Isles | archetype (Claude) | rewards allies dying | 4 | 11 | yes |
 | r02 | Shadow Isles | archetype (Claude) | Last Breath | 10 | 21 | yes |
 | r03 | Shadow Isles | archetype (Claude) | Ephemeral | 8 | 33 | yes |
 | r04 | Shadow Isles | archetype (Claude) | revive | 3 | 20 | yes |
@@ -197,7 +197,7 @@ Made by `cases/run.py runeterra`.
 | r58 | Ionia | signature (library tags) | return_to_hand | 26 | 51 | yes |
 | r59 | Ionia | signature (library tags) | attack_now | 5 | 14 | yes |
 | r60 | Ionia | signature (library tags) | disable | 14 | 21 | yes |
-| r61 | Ionia | splash (library tags) | turn_end | 8 | 33 | yes |
+| r61 | Ionia | splash (library tags) | turn_end | 8 | 31 | yes |
 | r62 | Ionia | splash (library tags) | cost_reduction | 6 | 23 | yes |
 | r63 | Ionia | splash (library tags) | resource_gain | 4 | 8 | yes |
 | r64 | Ionia | splash (library tags) | summon | 18 | 31 | yes |
@@ -240,7 +240,7 @@ Made by `cases/run.py runeterra`.
 | r102 | Targon | splash (library tags) | cost_reduction | 6 | 22 | yes |
 | r104 | Targon | splash (library tags) | discard | 2 | 8 | yes |
 | r105 | Bandle City | archetype (library) | scaling | 34 | 79 | yes |
-| r106 | Bandle City | archetype (library) | chaos | 28 | 71 | yes |
+| r106 | Bandle City | archetype (library) | chaos | 28 | 70 | yes |
 | r107 | Bandle City | archetype (library) | trickery | 6 | 26 | yes |
 | r108 | Bandle City | archetype (library) | transformation | 16 | 28 | yes |
 | r109 | Bilgewater | archetype (library) | chaos | 30 | 78 | yes |
@@ -251,7 +251,7 @@ Made by `cases/run.py runeterra`.
 | r114 | Freljord | archetype (library) | sustain | 14 | 25 | yes |
 | r115 | Freljord | archetype (library) | transformation | 11 | 16 | yes |
 | r116 | Ionia | archetype (library) | positional | 8 | 12 | yes |
-| r117 | Ionia | archetype (library) | control | 38 | 88 | yes |
+| r117 | Ionia | archetype (library) | control | 38 | 87 | yes |
 | r118 | Ionia | archetype (library) | ramp | 14 | 32 | yes |
 | r119 | Ionia | archetype (library) | card_advantage | 30 | 41 | yes |
 | r120 | Piltover & Zaun | archetype (library) | chaos | 24 | 68 | yes |

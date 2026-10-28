@@ -348,3 +348,8 @@ state	has_subtype	has a subtype (type)			28 Oct 2026, v5
 state	subtype_not_on_board	"has a subtype no ally in play has (""a different subtype than allies in play"")"			28 Oct 2026, v5
 state	shares_subtype_with_it	shares a subtype with the target named it			28 Oct 2026, v5
 state	copy_of_it	"is a copy of (same card as) the target named it (""all copies of it"", ""allied copies of it"")"			28 Oct 2026, v5
+param	max	"upper limit of the amount or of the repetitions (""up to 3 times"", ""max 50 times"")"			28 Oct 2026, v6
+param	min	"lower limit of the amount or of the repetitions (""min 2 times"", ""plants 5 minimum"")"			28 Oct 2026, v6
+attr	right_of	"is to the right of the linked card's unit on the board (ref = card name: ""on Vladimir's right"")"			28 Oct 2026, v6
+attr	does	"a card whose own effects include the act in val (""spells that deal damage or kill"": does in damage, kill)"			28 Oct 2026, v6
+state	recalled_this_game	was Recalled this game			28 Oct 2026, v6

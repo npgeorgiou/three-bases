@@ -2,8 +2,9 @@
 Usage: rows.py <card name or id> [...]   |   rows.py --random N [seed]"""
 import os, random, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
+import source
 c = sqlite3.connect(os.path.join(HERE, 'cards.sqlite'))
-lib = sqlite3.connect(os.path.join(HERE, '..', 'three-bases-library.sqlite'))
+lib = source.lib()
 
 def nm(i):
     r = c.execute('select name from card where id=?', (i,)).fetchone()

@@ -3,6 +3,7 @@ Usage: check.py <game> <records.jsonl> [--input batch.jsonl]   prints each probl
 Imported by load.py (resolve, check_card)."""
 import csv, json, os, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
+import source
 DB = os.path.join(HERE, '..', 'three-bases-library.sqlite')
 sys.path.insert(0, HERE)
 from build_input import types_of
@@ -47,7 +48,7 @@ NEEDS_LASTS = {'stat_change', 'give_keyword', 'cant', 'can', 'cost_change'}
 
 class Checker:
     def __init__(self, game):
-        self.v = vocab(); self.names = Names(sqlite3.connect(DB), game); self.errors = []; self.links = []; self.stubs = []
+        self.v = vocab(); self.names = Names(source.lib(), game); self.errors = []; self.links = []; self.stubs = []
     def err(self, cid, path, msg): self.errors.append((cid, path, msg))
     def enum(self, cid, path, field, val):
         if val not in self.v.get(field, ()): self.err(cid, path, f'{field} value {val!r} not in vocab')
