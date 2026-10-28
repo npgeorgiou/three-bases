@@ -36,6 +36,10 @@ RAW = {
     'Spikedriver Colony': "'''Multistrike 1.'''<br>'''Extinguish:''' Add a permanent copy of this card to your discard pile."
                           "<hr>{{Value|+20|Attack}} and remove '''Extinguish.'''",
 }
+# Glossary terms no card of the game uses (enemy, artifact and run terms), and "Add", which the wiki marks as its own word
+# for the verb "add a card", not the game's: left out, so card texts are not linked to them.
+UNUSED = {'Add', 'Cardless', 'Haste', 'Hellborne Harvest', 'Heartless', 'Immobile', 'Intrinsic', 'Purify', 'Recover',
+          'Relentless', 'Spell Shield', 'Spellchain'}
 ICON = {'X Cost': 'X', 'Echo': 'Echo', 'EchoSlot': 'Echo slot', 'Attack': 'Attack', 'Health': 'Health', 'Ember': 'Ember',
         'Capacity': 'Capacity', 'Gold': 'Gold', 'Pyre Health': 'Pyre health'}
 
@@ -123,6 +127,7 @@ def main():
     for ln in open(GLOSS, encoding='utf-8'):
         p = ln.rstrip('\n').split('#')
         if len(p) != 4 or p[2].startswith('{{'): continue  # the X Cost row of Card Effects is an icon, not a term
+        if p[2] in UNUSED: continue
         page, sec, name, text = p
         add({'game': 'monster_train', 'ext_id': 'kw:' + name, 'name': name, 'category': 'keyword',
              'source_type': f'{sec.lower()} ({WIKI} {page}, supplement)', 'edition': None, 'faction': None, 'subtypes': None,
