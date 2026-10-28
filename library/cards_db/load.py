@@ -5,7 +5,7 @@ import csv, glob, json, os, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from check import Checker, DB
-from build_input import types_of, speed_of, KWFIELD, excluded
+from build_input import types_of, speed_of, KWFIELD, NOT_KEYWORDS, excluded
 
 SCHEMA = """
 create table vocab(field text, value text, meaning text, tree text, causes text, added text, primary key(field, value));
@@ -131,6 +131,7 @@ class Loader:
         for i, t in lib.execute("select id, text from entities where game=? and category not in ('keyword','tribe')", (game,)):
             m = KWFIELD.match(' '.join((t or '').split()))
             for k in (m.group(1).split(',') if m else []):
+                if k.strip().lower() in NOT_KEYWORDS: continue
                 kid = self.ref('keyword', k.strip())
                 if kid: self.ins('card_keyword', card=i, keyword=kid)
 

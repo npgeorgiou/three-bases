@@ -1,0 +1,7 @@
+{"id": 750930, "field": "act", "need": "release"}
+{"id": 751053, "field": "limit", "need": "every_third_time"}
+{"id": 751289, "field": "params", "need": "countdown"}
+{"id": 751704, "field": "span", "need": "single_strike"}
+{"id": 751893, "field": "with", "need": "played_on_me"}
+{"id": 796854, "field": "zone", "need": "stored_inside"}
+{"id": 796941, "field": "with", "need": "recalled_this_game"}

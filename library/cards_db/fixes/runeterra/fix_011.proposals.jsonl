@@ -1,0 +1,19 @@
+{"id": 752101, "field": "event", "need": "story_completed"}
+{"id": 796472, "field": "pick", "need": "all_right_of_self"}
+{"id": 796480, "field": "x", "need": "max_of (plants 5 minimum)"}
+{"id": 796495, "field": "attr", "need": "targeting_self (enemy spells and Skills that target me)"}
+{"id": 796501, "field": "param", "need": "except_only_non_champions (leaving 4 non-champions)"}
+{"id": 796523, "field": "act", "need": "replace_deck"}
+{"id": 796562, "field": "attr", "need": "spell_deals_damage_or_kills"}
+{"id": 796562, "field": "act", "need": "accelerate_speed"}
+{"id": 796568, "field": "act", "need": "hallowed_share (also gain Power when another ally does from Hallowed)"}
+{"id": 796598, "field": "pick", "need": "all_right_of_self (right of Vladimir)"}
+{"id": 796723, "field": "attr", "need": "distinct_names (2 different cards)"}
+{"id": 796782, "field": "event", "need": "leaves_combat"}
+{"id": 796832, "field": "act", "need": "grant_chosen_buff"}
+{"id": 796844, "field": "act", "need": "set_level (level 2 Ascended count as level 3)"}
+{"id": 796941, "field": "state", "need": "recalled_this_game"}
+{"id": 797017, "field": "x", "need": "clamp (max 50 times, min 2 times)"}
+{"id": 797078, "field": "state", "need": "slain_by_you_this_game"}
+{"id": 797078, "field": "x", "need": "free_attacker_slots"}
+{"id": 797112, "field": "pick", "need": "opposing_self"}

@@ -5,6 +5,9 @@ import json, os, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(HERE, '..', 'three-bases-library.sqlite')
 KWFIELD = re.compile(r'^\s*Keywords:\s*([^.]*)\.\s*', re.S)
+# Keywords-field entries that are not keywords. Runeterra "Missing Translation": Riot's own card data has keywordRef
+# AuraVisualFakeKeyword there on all 42 such cards (a display marker of aura cards, no rule text in any language)
+NOT_KEYWORDS = {'missing translation'}
 
 
 def types_of(subtypes):
