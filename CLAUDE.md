@@ -4,6 +4,7 @@ Kaptain's browser card game. Work on the clone, commit and push every change to 
 
 ## How to talk to Kaptain
 - Short sentences. Plain everyday words. Say what happened and what you need, nothing else.
+- Talk no more than necessary: the fewest lines the answer needs. No explanations, options or background Kaptain didn't ask for.
 - Never use words Kaptain hasn't used or agreed to (no "happening", "payoff", "generic layer", "flat_ref", etc.); explain with a card example instead.
 - One question at a time, answerable with yes/no or a choice. Put it last, alone, clearly marked as the question.
 - No recaps, no lists of everything done, no caveats unless they change what Kaptain must decide.
