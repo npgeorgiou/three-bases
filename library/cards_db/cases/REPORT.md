@@ -62,7 +62,7 @@ Made by `cases/run.py runeterra`.
 | m52 | SpellShield negates enemy spells | 27 | 27 | 100% | 37 | yes |
 | m53 | Spirit / Gloom / Impact stacking keywords | 37 | 37 | 100% | 49 | yes |
 | m54 | damage equal to a stat or count | 9 | 9 | 100% | 40 | yes |
-| m55 | effects scaling with a count (for each) | 89 | 87 | 98% | 275 | yes |
+| m55 | effects scaling with a count (for each) | 89 | 87 | 98% | 625 | yes |
 | m56 | temporary buffs this round | 130 | 130 | 100% | 44 | yes |
 | m57 | Invoke (does it or cares about it) | 19 | 19 | 100% | 0 | yes |
 | m58 | Manifest | 32 | 32 | 100% | 0 | yes |

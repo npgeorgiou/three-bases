@@ -1,7 +1,11 @@
 # Process: describing a game's cards (the framework for every game)
 
-For the chat that imports a game. Runeterra is the finished example: every step below was done on it.
+For the chat that imports a game. Runeterra and Stormbound went through every step below; their files are the templates.
 Commands run from `library/cards_db/`. Files and tables: README.md.
+
+The database is one place for all games: questions run across games (`ask.py all ...`), so everything stored must be
+generic. A game's own words live only in the card texts, its keyword entries and its types; what cards DO is said with
+vocab.tsv values and concepts that any game can share.
 
 ## Rules that are never broken
 1. The card text is the truth. A record says only what the text states. No rule from memory: a definition that neither
@@ -17,6 +21,10 @@ Commands run from `library/cards_db/`. Files and tables: README.md.
 7. Nothing lives only in a chat. Decisions go into the files at once; commit and push after every change.
 8. Nothing is "maybe". A card the values cannot describe is marked unsure (table `unsure`); a word-check flag is decided
    once (`patterns/verdicts.tsv`); a dropped test case is written in `cases/DROPPED.md` with its reason.
+9. Generic, never game-specific. A new value names what happens in any game ("start of the owner's turn", "the tile in
+   front"), not one game's word; the game's word is mapped to it in BRIEF.md "Game words: <game>". Every keyword gets a
+   vocab keyword row with its concept (Stun and Freeze are both disable), so keywords of different games meet. Before a
+   game is done, `ask.py all compare <concepts>` shows its cards next to the other games' for the same concepts.
 
 ## Steps
 ### 0. Before reading (in this order)
@@ -46,7 +54,8 @@ Commands run from `library/cards_db/`. Files and tables: README.md.
    - a different meaning: a new vocab.tsv row (rule 3), with an example from one of the game's cards in BRIEF.md. A new
      event or state needs its `causes`. Do not stretch an old value: "at the start of your turn" is not round_start when
      the game has turns per player.
-   Show Kaptain the mapping list once before reading; his answer is written in BRIEF.md.
+   Kaptain has not played most games: decide the mapping from the game's rules yourself (marked as Claude's) and write it
+   in BRIEF.md; ask him only what no source settles. Also give every keyword a vocab keyword row with its concept.
 6. **Numbers per card level** ("1/2/3/4/5 strength", one number per level): every level is kept, as
    `{"x": "per_level", "items": [1, 2, 3, 4, 5]}` in level order. A number the same at every level is a plain number.
 7. `python3 build_input.py <game> 20000` (batches of ~20,000 characters; a reader costs ~110-125k tokens whatever the size).
@@ -90,27 +99,31 @@ Commands run from `library/cards_db/`. Files and tables: README.md.
   records. Old tags are hints only; a case built on wrong old tags is dropped with its reason in DROPPED.md.
 
 ### 4. Kaptain's check
-`check_table.py CHECK_20.md --random <game> 20` (save the ids in CHECK_20_ids.txt). Each card: one line with its name and
+`check_table.py CHECK_20_<game>.md --random <game> 20` (cards with rows only; save the ids in CHECK_20_<game>_ids.txt). Each card: one line with its name and
 text, then its rows. Every error he finds is fixed for all cards with the same problem.
 
 ### 5. Done when
 `run.py <game>` passes every step; word check 0 open flags; no proposal need is shared by cards with different texts; stubs are
-only names nothing defines; Kaptain approved CHECK_20; RESULTS.md and HANDOFF.md say the state; everything pushed.
+only names nothing defines; Kaptain approved CHECK_20_<game>; RESULTS.md and HANDOFF.md say the state; everything pushed.
 
 After Kaptain's check: add a few of the game's approved records to BRIEF.md as worked examples under "Game words: <game>",
 so the readers of every later game see approved examples from all earlier games.
 
 ## Asking the database
-`ask.py <game> cares|makes <happening> [mine|enemy]`, `concept <concept>`, `combo <A> <B>`, `partners <card>`,
-`card <card>`, `list happenings|concepts`. For "which cards care about X" always use flat_ref (ask.py cares): the same
-thing is stored as a trigger, a condition, a count or a target filter depending on the wording.
+`ask.py <games> ...` where <games> is one game, several (runeterra,stormbound) or all: `cares|makes <happening>
+[mine|enemy]`, `concept <concept>`, `both <A> <B>`, `compare <concept> ...`, `link <A> <B>`, `combo <A> <B>`,
+`partners <card>`, `card <card>`, `list happenings|concepts`. QUERIES.md has example questions with real answers.
+For "which cards care about X" always use flat_ref (ask.py cares): the same thing is stored as a trigger, a condition, a
+count or a target filter depending on the wording. For "how do games do X" use concepts: a happening can differ between
+games (round_start, turn_start) where the concept is the same (turn_start).
 
 ## Surviving session limits
 - `python3 status.py <game>` first: it says from the files which batches are done, partial or todo.
 - Readers write in parts (`<batch>.partN.jsonl`); a stopped reader is restarted with the same prompt and continues.
 - Every finished batch is checked and pushed at once. Chats end with HANDOFF.md updated.
 
-## Mistakes made on Runeterra (do not repeat)
+## Lessons from earlier games (do not repeat)
+Runeterra:
 - Judging the data by a narrow question. "Only 6 cards reward an ally dying" was one test's trigger-only question; the
   data held 41 (texts) as triggers, conditions, counts and dead-unit targets. Ask in every form (flat_ref), compare with texts.
 - Old library tags taken as truth: they were wrong for whole regions (on_kill).
@@ -127,3 +140,21 @@ thing is stored as a trigger, a condition, a count or a target filter depending 
 - Card names inside texts taken as wording ("Prismatic Barrier", "Fury of the North", "Forge Workers").
 - Showing Kaptain many tables or merged prose: he reads one line per card, then its rows (check_table.py).
 - Writing a definition from memory instead of asking Kaptain.
+
+Stormbound:
+- The library's copy of a game can be old: Stormbound's was a 2022 list of 232 cards, the game's own card database had 284
+  and many changed texts. Look for the game's current data before step 0.3 (the site's own data source; the built-in
+  browser reaches what the workspace cannot), and verify a transcription against the source (length and checksum).
+- A card with no text (plain units, tokens) is still a card: tokens are what other cards link to.
+- A game that is not Runeterra-shaped needs its own values before reading (step 0.5): one stat (strength), a grid of tiles,
+  turns per player, statuses. Readers still propose what is missing; tally the proposals after the first reading.
+- Positions need "what from": "bordering a friendly Dragon" is a position filter with "of" (the Dragon). Readers left it
+  out on many cards; the query layer shows it as of: parts and the combo reasons use them.
+- Numbers per card level stay in the records (x per_level); the query layer shows the level-1 value so rules and SQL
+  compare numbers. An amount worked out in play shows its kind (event_amount, count), never None.
+- Generic layer gaps showed only when asking across games: keyword concepts missing for the new game, a stat named
+  differently (strength vs power and health), act stun not naming its keyword, one meaning in two forms (Yasuo's trigger).
+  Run `ask.py all compare` and `ask.py all link` on the main concepts before calling a game done.
+- One reader for all cards, one for the second reading, one re-read: ~400k tokens in all, against 5.5 million on Runeterra
+  with 53 readers.
+- run.py loads every game, so the database never loses a game when another is rebuilt.

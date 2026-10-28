@@ -16,6 +16,9 @@ and second readings). Safe to run any number of times. Each rule is listed in CH
      carries no "on": the keyword's record says what it acts on.
   N11 summon / create / copy / play_card of a named card: an "on" that only says the kind (unit, landmark) is dropped; the
      card says what it is (same meaning as N1).
+  N12 a trigger on being given a keyword, narrowed by an it_matches condition that names the keyword ("keyword is Stun", or a
+     state given by it: "state is stunned"), is written as the trigger's object filter "keyword is <it>" (one form; Yasuo was
+     read both ways).
   N10 games whose units have one stat, strength (Stormbound): "strongest" / "weakest" are pick highest / lowest by strength,
      never the Power-based picks.
 Usage: normalize.py <game> <file.jsonl> [...]   rewrites the files in place, prints how many records changed."""
@@ -154,8 +157,34 @@ def strength_picks(x):
     elif isinstance(x, list):
         for v in x: strength_picks(v)
 
+def status_keywords():
+    """state -> the keyword that gives it (vocab causes given_keyword:<Keyword>)"""
+    import csv
+    out = {}
+    for r in csv.DictReader(open(os.path.join(HERE, 'vocab.tsv')), delimiter='\t'):
+        if r['field'] == 'state' and r['causes'].startswith('given_keyword:'): out[r['value']] = r['causes'].split(':', 1)[1]
+    return out
+
+def keyword_trigger_form(r, st):
+    """N12"""
+    for ab in r.get('abilities', []):
+        w = ab.get('when') or {}
+        if w.get('event') != 'given_keyword': continue
+        keep = []
+        for cd in ab.get('if', []):
+            fs = (cd.get('of') or {}).get('with', [])
+            names = [f.get('ref') if f.get('attr') == 'keyword' else st.get(f.get('val')) for f in fs
+                     if f.get('op') == 'is' and (f.get('attr') == 'keyword' or (f.get('attr') == 'state' and f.get('val') in st))]
+            if cd.get('test') == 'it_matches' and fs and len(names) == len(fs) and len(set(names)) == 1:
+                obj = w.setdefault('object', {}); obj.setdefault('with', [])
+                if not any(f.get('attr') == 'keyword' for f in obj['with']): obj['with'].append({'attr': 'keyword', 'op': 'is', 'ref': names[0]})
+            else: keep.append(cd)
+        if keep: ab['if'] = keep
+        else: ab.pop('if', None)
+
 def main():
-    game = sys.argv[1]; kinds = keyword_kinds(game); table = names_table(game)
+    global STATUS
+    game = sys.argv[1]; kinds = keyword_kinds(game); table = names_table(game); STATUS = status_keywords()
     inputs = {}
     for f in glob.glob(os.path.join(HERE, 'input', game, '*.jsonl')):
         for l in open(f): x = json.loads(l); inputs[x['id']] = x
@@ -166,6 +195,7 @@ def main():
             for ab in r2.get('abilities', []): fix_ability(ab, kinds)
             fix_names(r2, table); attacking(r2); fix_filters(r2); another(r2, inputs)
             if game in STRENGTH_GAMES: strength_picks(r2)
+            keyword_trigger_form(r2, STATUS)
             n += r2 != r; out.append(r2)
         open(path, 'w').write(''.join(json.dumps(r, separators=(',', ':')) + '\n' for r in out))
         print(f'{os.path.basename(path)}: {n} of {len(L)} records changed')

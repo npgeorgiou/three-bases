@@ -15,10 +15,37 @@ def ids(c, name):
 def agree(a, b):
     return not a or not b or a == b or 'any' in (a, b)
 
-def narrow_ok(want, have):
-    """the payoff asks for a specific card, type or keyword ('card is 123'): the enabler's target must name the same one"""
+KWC = {}  # keyword id -> its concept (vocab keyword rows): keywords of different games meet through it (Stun, Freeze: disable)
+
+def kw_concept(c, k):
+    if k is None: return None
+    if k not in KWC:
+        r = c.execute("select v.tree from card k join vocab v on v.field='keyword' and v.value=k.name where k.id=?", (k,)).fetchone()
+        KWC[k] = (r[0] if r and r[0] else None) or f'keyword {k}'
+    return KWC[k]
+
+def same_kw(c, a, b):
+    """the same keyword, or keywords of the same concept (any game)"""
+    return a is None or b is None or a == b or kw_concept(c, a) == kw_concept(c, b)
+
+def narrow_ok(want, have, c=None):
+    """the payoff asks for a specific card, type or keyword ('card is 123'): the enabler's target must name the same one
+    (a keyword: the same one or one of the same concept)"""
     asks = [p for p in (want or '').split(';') if p.split(' ')[:2] in (['card', 'is'], ['type', 'is'], ['keyword', 'is'])]
-    return all(a in (have or '') for a in asks)
+    hk = [int(p.split(' ')[2]) for p in (have or '').split(';') if p.startswith('keyword is ') and p.split(' ')[2].isdigit()]
+    if c is not None:  # a state a keyword gives ("state is stunned"): the enabler must give that keyword or one of its concept
+        for p in (want or '').split(';'):
+            bits = p.split(' ')
+            if bits[:2] == ['state', 'is'] and len(bits) == 3:
+                r = c.execute("select v2.tree from vocab v join vocab v2 on v2.field='keyword' and v2.value=substr(v.causes, 15) "
+                              "where v.field='state' and v.value=? and v.causes like 'given_keyword:%'", (bits[2],)).fetchone()
+                if r and hk and not any(kw_concept(c, k) == (r[0] or None) for k in hk): return False
+    for a in asks:
+        if a in (have or ''): continue
+        bits = a.split(' ')
+        if c is not None and bits[0] == 'keyword' and bits[2].isdigit() and any(same_kw(c, int(bits[2]), k) for k in hk): continue
+        return False
+    return True
 
 def made_by(c, card, depth=2):
     """cards a card creates, summons or generates (a few steps deep), including itself"""
@@ -59,14 +86,14 @@ def reasons(c, enabler, payoff):
                     for (ev,) in c.execute('select event from causes where act=?', (act,)).fetchall():
                         for oside, opick, ow in c.execute('select obj_side, obj_pick, obj_with from flat_when where card=? and event=?', (p, ev)).fetchall():
                             if opick == 'self' and m != p and not (side in ('mine', 'any', None) and kind in ('unit', 'any', None)): continue
-                            if not narrow_ok(ow, onw): continue
+                            if not narrow_ok(ow, onw, c): continue
                             if agree(side, oside): yield ((7 if opick == 'self' else 5 if m != e else 3), f'event: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else ''))
                         for oside, ow in c.execute('select ev_obj_side, ev_obj_with from flat_if where card=? and event=?', (p, ev)).fetchall():
-                            if agree(side, oside) and narrow_ok(ow, onw): yield ((6 if m != e else 4), f'condition: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else ''))
+                            if agree(side, oside) and narrow_ok(ow, onw, c): yield ((6 if m != e else 4), f'condition: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else ''))
             # a happening the enabler makes that the payoff counts or picks things by (flat_ref: condition, state)
-            made = {(h, sd) for x in makers for h, sd in c.execute("select happening, side from flat_ref where card=? and role='makes'", (x,))}
-            for h, sd, role in c.execute("select happening, side, role from flat_ref where card=? and role in ('condition','state')", (p,)).fetchall():
-                if any(h == mh and agree(ms, sd) for mh, ms in made): yield (6, f'{role}: {h}')
+            made = {(h, sd, k) for x in makers for h, sd, k in c.execute("select happening, side, keyword from flat_ref where card=? and role='makes'", (x,))}
+            for h, sd, role, k in c.execute("select happening, side, role, keyword from flat_ref where card=? and role in ('condition','state')", (p,)).fetchall():
+                if any(h == mh and agree(ms, sd) and same_kw(c, k, mk) for mh, ms, mk in made): yield (6, f'{role}: {h}')
             # keyword or type the payoff asks for, carried by what the enabler makes or gives
             kw_have = {k for x in makers for (k,) in c.execute('select keyword from card_keyword where card=?', (x,))}
             kw_have |= {k for x in makers for (k,) in c.execute("select keyword_ref from flat_do where card=? and act='give_keyword' and keyword_ref is not null", (x,))}
@@ -92,7 +119,7 @@ def reasons(c, enabler, payoff):
                     if len(bits) == 3 and bits[1] in ('is', 'in') and bits[2].lstrip('-').isdigit():
                         v = int(bits[2])
                         if bits[0] == 'type' and v in ty_have: yield (9, 'target: type ' + (c.execute('select name from type where id=?', (v,)).fetchone() or ['?'])[0])
-                        if bits[0] == 'keyword' and v in kw_have: yield (9, f'target: keyword {name(c, v)}')
+                        if bits[0] == 'keyword' and any(same_kw(c, v, k) for k in kw_have): yield (9, f'target: keyword {name(c, v)}')
             # what the enabler puts in play or gains that the payoff counts (Excited Mousers: friendly units; Lady Rime: mana)
             MAKES_KIND = {'summon': 'unit', 'revive': 'unit', 'play_card': 'unit', 'mana_gain': 'mana', 'create': 'card', 'draw': 'card'}
             made_kinds = {MAKES_KIND[a] for x in makers for (a,) in c.execute('select act from flat_do where card=?', (x,)) if a in MAKES_KIND}
@@ -107,7 +134,7 @@ def reasons(c, enabler, payoff):
                     bits = part.removeprefix('of:').split(' ')
                     if len(bits) == 3 and bits[1] in ('is', 'in') and bits[2].lstrip('-').isdigit():
                         v = int(bits[2])
-                        if bits[0] == 'keyword' and v in kw_have: yield (4, f'keyword: {name(c, v)}')
+                        if bits[0] == 'keyword' and any(same_kw(c, v, k) for k in kw_have): yield (4, f'keyword: {name(c, v)}')
                         if bits[0] == 'type' and v in ty_have: yield (4, 'type: ' + (c.execute('select name from type where id=?', (v,)).fetchone() or ['?'])[0])
 
 def name(c, i):
