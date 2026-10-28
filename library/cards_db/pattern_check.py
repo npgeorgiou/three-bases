@@ -78,6 +78,7 @@ def main():
         own = {k.lower() for k in x['keywords']}
         for k in set(kwpat.findall(rest)):
             if k in own or k in got['name'] or k in ('stun', 'recall', 'obliterate', 'silence'): continue
+            if any(re.search(p['wording'], k) for p in pats): continue  # a keyword used as a verb is checked by its verb pattern
             if k in KW_EQUIV and set(KW_EQUIV[k].split('|')) & got['value']: continue
             flags.append((i, x['name'], 'KW', 'name:' + k, rest[max(0, rest.find(k) - 30):rest.find(k) + len(k) + 30]))
     flags = [f for f in flags if (f[0], f[2]) not in judged and (f[0], f[2] + ':' + f[3]) not in judged]

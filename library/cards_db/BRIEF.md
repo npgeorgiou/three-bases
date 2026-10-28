@@ -208,3 +208,43 @@ III: Reduce the cost of a random card in hand by 5.
   {"act": "keyword_action", "keyword": "Invoke", "on": {"kind": "card", "with": [{"attr": "type", "op": "is", "ref": "Celestial"}, {"attr": "cost", "op": "ge", "n": 7}]}, "zone": "hand", "link": "if_done"}]},
  {"when": {"event": "activated"}, "if": [{"test": "stage", "n": 3}], "do": [
   {"act": "cost_change", "on": {"kind": "card", "side": "mine", "pick": "random", "zone": "hand"}, "params": {"cost": -5}, "lasts": "permanent"}]}]}
+
+## Game words: Stormbound (pending Kaptain's check)
+Stormbound has no Keywords field: describe everything the text says. Its glossary keywords (Poison, Vitalize, Freeze, Confuse,
+Disable, Push, Pull, Command, Drain, ...) define the words; cards use the values below.
+- Board. A tile is kind position. Where something is: filter `{"attr": "position", "op": "is", "val": <position>, "of": TARGET}`
+  ("of" omitted = the card itself). "in front" (one tile) = in_front, "all units in front" = ahead, "the first enemy in front" =
+  first_in_front, "the tile behind" = behind, "all tiles behind" = behind_all, "the closest enemy behind" = closest_behind,
+  "on the side(s)" = sides, bordering, surrounding, "in its row" = same_row, "column" = same_column, "the most forward" =
+  most_forward, "your furthest row" = furthest_row. "Bordering your base" = bordering of `{"kind": "player", "side": "mine"}`.
+  "A random tile" = `{"kind": "position", "pick": "random"}`.
+- Base = kind player (like Runeterra's Nexus). "Damage to the enemy base" = damage on the enemy player. "Give strength to your
+  base" / "remove strength from a base" = stat_change params strength on the player.
+- Strength = attr / param strength (attack and health in one; damage lowers it). Movement, "speed", "additional move" = attr /
+  param movement. Strongest / weakest / lowest strength = pick highest / lowest, by strength. Stronger / weaker unit = filter
+  strength gt / lt `{"x": "stat", "attr": "strength", "of": {"pick": "self"}}`.
+- Structure = kind landmark (it stays on its tile). "Unit or structure" = kind unit_or_structure. A plain "enemy" / "enemies"
+  (the rulebook: units, structures and the base) = kind anything; "enemy unit" = kind unit.
+- Unit types (Dragon, Satyr, Toad, ...) and the extra types Ancient, Elder, Hero = filter type. "Temple structure" = name_has
+  Temple. "Non-legendary" = rarity not legendary.
+- Triggers. "On play" / "When played" = played, object self ("When played bordering X", "with a full hand", "as the last card"
+  = played plus conds). "On death" / "When dying" = dies, object self (also leaving the board through the base). "Before
+  attacking" / "When attacking" = attacks, actor self. "After attacking" = attack_done, actor self. "After surviving damage" =
+  survives_damage. "Before moving" = moves, object self. "At the start / end of your turn" = turn_start / turn_end, actor
+  `{"kind": "player", "side": "mine"}`.
+- Statuses. poison, vitalize, freeze, confuse, disable = give_keyword with that keyword, lasts as the glossary says (permanent,
+  or next_own_turn for Freeze and Confuse); "deconfuse" = remove_keyword Confuse; "poisoned / frozen / confused / vitalized /
+  disabled unit" = state filter; "a random status effect" = give_random_keyword.
+- Acts. spawn a unit = summon, card = the token of that type ("a 1 strength Toad" = card "Token Toads", "Nests" = "Token Nest
+  (Qordia)", "an Elder" = "Token Elders"), params strength, "to" = the tile; build / spawn a structure = summon the same way;
+  respawn = revive. destroy = kill. convert = steal. drain X from Y = damage Y (amount X), then stat_change strength on the
+  drainer by `{"x": "event_amount"}` (link then). push / pull / command / jump / fly / teleport / move forward / move fixedly
+  forward = move ("keyword" Push / Pull / Command / Move fixedly forward when the text names it; "to" = where). force to attack
+  = start_attack, "to" = what it attacks. give / gain / lose strength = stat_change strength (lasts permanent); set / reduce
+  strength to N = stat_set strength; restore initial strength = heal; raise to equal = grow. "deal X additional damage"
+  before attacking = damage on the attacked unit. "spread randomly among" = the act on pick all with params spread 1.
+  gain mana = mana_gain; spend remaining mana = spend_mana; mana cost -1 = cost_change. replace a card = shuffle_into_deck
+  then draw (link then). add a created card to the deck = create, zone deck. trigger the ability of structures = repeat.
+- Numbers per level: `{"x": "per_level", "items": [...]}`; a range at one level ("4-5") is the item `{"x": "range", "items":
+  [4, 5]}`. Words that change by level ("bordering/bordering/surrounding", "a/a/all/all/all"): one ability per group of levels,
+  each with `{"test": "level", "op": "in", "vals": [1, 2, 3]}`.

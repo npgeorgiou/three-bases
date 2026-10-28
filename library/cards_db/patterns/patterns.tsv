@@ -50,3 +50,25 @@ runeterra	V23	\brally\b	value:gain_attack_token|rally	yes	Rally gives the attack
 *	T24	\b(?:died|have died|has died) this game\b	value:discard|dies	yes	dead units are units in the discard zone (BRIEF rule 17)
 *	S01	[^.]*\bduring deckbuilding\b[^.]*\.?		strip	deck-building permissions have no effect in play (BRIEF rule 16): removed from the text before checking
 runeterra	S02	\borigin: [^.]*\.		strip	Origin names a deck-building origin, no effect in play
+stormbound	T25	\bon play\b|\bwhen played\b|\bif played\b	event:played	yes	trigger label (rulebook: On play / When played)
+stormbound	T26	\bon death\b|\bwhen (?:this )?dies\b|\bwhen dying\b	event:dies	yes	trigger label (rulebook: On death / When dying)
+stormbound	T27	\bbefore attacking\b|\bwhen attacking\b	event:attacks	yes	trigger label (rulebook: Before attacking)
+stormbound	T28	\bafter attacking\b	event:attack_done	yes	trigger label (rulebook: After attacking)
+stormbound	T29	\bafter surviving damage\b	event:survives_damage	yes	trigger label (rulebook: After surviving damage)
+stormbound	T30	\bbefore moving\b	event:moves	yes	trigger label (rulebook: Before moving)
+stormbound	T31	\bat the start of your turn\b	event:turn_start	yes	trigger phrase
+stormbound	T32	\bat the end of your turn\b	event:turn_end	yes	trigger phrase
+stormbound	V24	\b(?:re)?spawn|\bbuild\b	value:summon|revive|summoned	yes	verb (spawn and build put a token into play; respawn is revive)
+stormbound	V25	\bdestroy	value:kill|killed|dies	yes	verb (rulebook: Destroying)
+stormbound	V26	\bconvert	value:steal	yes	verb (rulebook: Converting)
+stormbound	V27	\bdrain	value:damage	yes	verb (rulebook: Draining damages one unit)
+stormbound	V28	\bpoison	value:give_keyword|give_random_keyword|poisoned	yes	status (give it, or a poisoned filter)
+stormbound	V29	\bvitaliz	value:give_keyword|give_random_keyword|vitalized	yes	status
+stormbound	V30	\bfr(?:eez|oze)	value:give_keyword|give_random_keyword|frozen	yes	status
+stormbound	V31	\bconfus	value:give_keyword|give_random_keyword|remove_keyword|confused	yes	status (deconfuse removes it)
+stormbound	V32	\bdisabl	value:give_keyword|disabled	yes	status
+stormbound	V33	\bpush|\bpull|\bcommand|\bteleport|\bjump|\bfly\b|\bmove (?:fixedly )?forward	value:move	yes	movement verbs (rulebook: Pushing, Pulling, Commanding, Moving fixedly forward)
+stormbound	V34	\bforces?\b[^.]{0,60}\battack	value:start_attack	yes	rulebook: Forcing attack
+stormbound	V35	\bgain [\d/]+ mana	value:mana_gain	yes	mana gain wording
+stormbound	V36	\breplace	value:shuffle_into_deck	yes	replacing a card puts it back into the deck and draws another
+stormbound	V37	\b(?:reduce|set)s?\b[^.]{0,40}\bstrength to\b	value:stat_set	yes	rulebook: Reducing strength sets a value; not damage

@@ -1,0 +1,15 @@
+{"id": 1000043, "name": "Poison", "category": "keyword", "text": "A poisoned unit takes 1 damage at the start of each turn until it dies or is vitalized."}
+{"id": 1000044, "name": "Vitalize", "category": "keyword", "text": "A vitalized unit gains 1 strength at the start of each turn until it is poisoned."}
+{"id": 1000045, "name": "Freeze", "category": "keyword", "text": "A frozen unit does not move at the start of its next turn and its ability is disabled for that turn; it lasts one turn."}
+{"id": 1000046, "name": "Confuse", "category": "keyword", "text": "A confused unit moves sideways at random during its movement; it lasts one turn."}
+{"id": 1000047, "name": "Disable", "category": "keyword", "text": "A disabled unit loses its ability until it dies."}
+{"id": 1000048, "name": "Command", "category": "keyword", "text": "Forces a unit to move forward, ignoring its attack pattern and enemies on its sides."}
+{"id": 1000049, "name": "Convert", "category": "keyword", "text": "Switches a unit to the other player's side."}
+{"id": 1000050, "name": "Destroy", "category": "keyword", "text": "Removes a target from the board whatever its strength."}
+{"id": 1000051, "name": "Drain", "category": "keyword", "text": "Damages one unit and gives the same amount of health to another."}
+{"id": 1000052, "name": "Force attack", "category": "keyword", "text": "Makes a unit attack a bordering tile, usually at random; its before- and after-attacking abilities trigger."}
+{"id": 1000053, "name": "Move fixedly forward", "category": "keyword", "text": "Moves a unit forward while ignoring enemies on its sides."}
+{"id": 1000054, "name": "Pull", "category": "keyword", "text": "Moves a unit toward another unit in the same row or column when nothing is between them; damage dealt with it comes after the move."}
+{"id": 1000055, "name": "Push", "category": "keyword", "text": "Moves a unit along a row or column until it reaches the edge of the board or another unit or structure; a unit cannot be pushed into a base."}
+{"id": 1000056, "name": "Reduce strength", "category": "keyword", "text": "Sets a unit's strength to a value; this is not damage."}
+{"id": 1000057, "name": "Spawn", "category": "keyword", "text": "Creates a unit or structure on a tile; a random spawn is always within the front line."}

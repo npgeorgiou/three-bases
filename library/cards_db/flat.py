@@ -32,8 +32,9 @@ def build(c):
 
     def withs(t):
         if not t: return None
-        parts = [f'{a} {o} {rk or rt or rc or rw or v or n}' for a, o, rk, rt, rc, rw, v, n in
-                 c.execute('select attr, op, ref_keyword, ref_type, ref_card, ref_word, val, n from filter where target=?', (t,))]
+        parts = [f'{a} {o} {rk or rt or rc or rw or v or n}' + (f' of {" ".join(x for x in tgt(of) if x)}' if of else '')
+                 for a, o, rk, rt, rc, rw, v, n, of in
+                 c.execute('select attr, op, ref_keyword, ref_type, ref_card, ref_word, val, n, of_target from filter where target=?', (t,))]
         return ';'.join(parts) or None
 
     num = lambda a: (c.execute("select value from amount where id=? and x='n'", (a,)).fetchone() or [None])[0] if a else None

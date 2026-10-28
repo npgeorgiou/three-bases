@@ -41,8 +41,8 @@ def cards(c, game):
     # one pattern for all names, longest first, so each text is scanned once
     pat = re.compile(r'\b(?:' + '|'.join(re.escape(k) for k in sorted(names, key=len, reverse=True)) + r')\b')
     out = []; skip = excluded(c, game)
-    for i, n, cat, sub, t in c.execute("select id, name, category, subtypes, text from entities where game=? and category "
-                                        "not in ('keyword','tribe') order by id", (game,)):
+    for i, n, cat, sub, t, extra in c.execute("select id, name, category, subtypes, text, extra from entities where game=? and "
+                                               "category not in ('keyword','tribe') order by id", (game,)):
         if i in skip: continue
         t = ' '.join((t or '').split())
         m = KWFIELD.match(t)
@@ -50,7 +50,9 @@ def cards(c, game):
         rest = t[m.end():] if m else t
         low = rest.lower()
         mentioned = sorted({names[m2.group(0)] for m2 in pat.finditer(low) if m2.group(0) != n.lower()})
-        out.append({'id': i, 'name': n, 'category': cat, 'speed': speed_of(sub), 'types': types_of(sub), 'keywords': kws,
+        ex = json.loads(extra) if extra and extra.startswith('{') else {}
+        types = types_of(sub) + [k.capitalize() for k in ('hero', 'elder', 'ancient') if ex.get(k)]  # Stormbound's extra unit types
+        out.append({'id': i, 'name': n, 'category': cat, 'speed': speed_of(sub), 'types': types, 'keywords': kws,
                     'text': t, 'names_in_text': mentioned, '_rest': rest})
     return out
 

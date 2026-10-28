@@ -38,7 +38,7 @@ SHAPES = {
     'ability': {'when', 'limit', 'if', 'do'},
     'event': {'event', 'actor', 'object'},
     'target': {'kind', 'side', 'pick', 'n', 'zone', 'with', 'by'},
-    'filter': {'attr', 'op', 'n', 'ref', 'val', 'vals', 'refs'},
+    'filter': {'attr', 'op', 'n', 'ref', 'val', 'vals', 'refs', 'of'},
     'cond': {'test', 'of', 'attr', 'op', 'n', 'span', 'event', 'ref', 'value'},
     'effect': {'act', 'on', 'to', 'zone', 'card', 'keyword', 'params', 'lasts', 'link', 'ability', 'type'},
     'amount': {'x', 'of', 'attr', 'event', 'span', 'inner', 'items'},
@@ -83,14 +83,15 @@ class Checker:
         for k, f in enumerate(t.get('with', [])): self.filt(cid, f'{path}.with[{k}]', f)
     def filt(self, cid, path, f):
         if not self.keys(cid, path, 'filter', f): return
+        if 'of' in f: self.target(cid, path + '.of', f['of'])  # position filters: relative to this target
         a = f.get('attr'); self.enum(cid, path + '.attr', 'attr', a); self.enum(cid, path + '.op', 'op', f.get('op'))
         if a in ('keyword', 'type', 'card'):
             for r in (f['refs'] if 'refs' in f else [f.get('ref')]): self.link(cid, path + '.ref', a, r)
-        elif a in ('state', 'category', 'region', 'origin', 'rarity'):
+        elif a in ('state', 'category', 'region', 'origin', 'rarity', 'position'):
             for x in (f['vals'] if 'vals' in f else [f.get('val')]): self.enum(cid, path + '.val', 'state' if a == 'origin' else a, x)
         elif a == 'name_has':
             if not isinstance(f.get('ref'), str) or not f['ref'].strip(): self.err(cid, path + '.ref', 'name word expected')
-        elif a in ('power', 'health', 'cost', 'count', 'base_power', 'base_health', 'damage', 'countdown'):
+        elif a in ('power', 'health', 'cost', 'count', 'base_power', 'base_health', 'damage', 'countdown', 'strength', 'movement'):
             if 'vals' in f and f.get('op') == 'in':
                 if not all(isinstance(v, (int, float)) for v in f['vals']): self.err(cid, path + '.vals', 'numbers expected')
             elif 'n' not in f: self.err(cid, path + '.n', 'number or amount expected')

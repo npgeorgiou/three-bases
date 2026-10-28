@@ -11,7 +11,7 @@ import source
 SCHEMA = """
 create table vocab(field text, value text, meaning text, tree text, causes text, added text, primary key(field, value));
 create table card(id integer primary key, game text, name text, category text, speed text, cost real, power real,
-  health real, regions text, rarity text, is_keyword integer, is_stub integer default 0);
+  health real, regions text, rarity text, is_keyword integer, is_stub integer default 0, stats text);
 create table type(id integer primary key, game text, name text, tribe_entry integer);
 create table card_type(card integer, type integer);
 create table card_keyword(card integer, keyword integer);
@@ -19,7 +19,7 @@ create table card_link(src integer, rel text, dst integer);
 create table event(id integer primary key, event text, actor integer, object integer);
 create table target(id integer primary key, kind text, side text, pick text, n integer, zone text, by_attr text);
 create table filter(id integer primary key, target integer, attr text, op text, n integer, ref_card integer, ref_keyword integer,
-  ref_type integer, ref_word integer, val text);
+  ref_type integer, ref_word integer, val text, of_target integer);
 create table amount(id integer primary key, x text, value real, of_target integer, attr text, event integer, span text,
   inner integer);
 create table amount_item(amount integer, item integer);
@@ -78,6 +78,7 @@ class Loader:
                 elif a == 'name_has': row['ref_word'] = self.word(one)
                 elif one is not None: row['val'] = one
                 if 'n' in f: row['n'] = self.amount(f['n'])  # filter n is an amount id (a number or an expression)
+                if 'of' in f: row['of_target'] = self.target(f['of'])
                 if f.get('op') == 'in': row['op'] = 'in'
                 self.ins('filter', **row)
         return tid
@@ -118,10 +119,11 @@ class Loader:
             num = lambda *ks: next((float(st[k]) for k in ks if str(st.get(k, '')).lstrip('-').replace('.', '').isdigit()), None)
             self.ins('card', id=i, game=game, name=n, category=cat, speed=speed_of(sub) or None, cost=cost,
                      power=num('power', 'attack'), health=num('health', 'toughness', 'life', 'hp'), regions=';'.join(regs),
-                     rarity=rar, is_keyword=1 if cat == 'keyword' else 0)
+                     rarity=rar, is_keyword=1 if cat == 'keyword' else 0, stats=stats)
             if cat == 'tribe': self.types[(game, n.lower())] = self.ins('type', game=game, name=n, tribe_entry=i)
-        for i, sub in lib.execute("select id, subtypes from entities where game=? and category not in ('keyword','tribe')", (game,)):
-            for t in types_of(sub):
+        for i, sub, extra in lib.execute("select id, subtypes, extra from entities where game=? and category not in ('keyword','tribe')", (game,)):
+            ex = json.loads(extra) if extra and extra.startswith('{') else {}
+            for t in types_of(sub) + [k.capitalize() for k in ('hero', 'elder', 'ancient') if ex.get(k)]:  # Stormbound's extra unit types
                 key = (game, t.lower())
                 if key not in self.types: self.types[key] = self.ins('type', game=game, name=t, tribe_entry=None)
                 self.ins('card_type', card=i, type=self.types[key])
