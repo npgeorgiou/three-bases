@@ -29,6 +29,7 @@ def main():
     out += ['## Mechanics (expected cards from the texts)', '', '| case | question | expected | found | recall | extra | pass |', '|---|---|---|---|---|---|---|']
     details = []
     for r in csv.DictReader(open(os.path.join(HERE, 'mechanics.tsv')), delimiter='\t'):
+        if r['game'] not in ('*', game): continue
         kind, _, val = r['expected'].partition(':')
         exp = {i for i in cards if (re.search(val, own[i], re.I) if kind == 'text' else val.lower() in kws[i])} if kind else set()
         got = {x for (x,) in c.execute(r['query'])} & set(cards)

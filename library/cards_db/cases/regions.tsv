@@ -126,3 +126,21 @@ r128	runeterra	Shurima	archetype (library)	trickery	5	select card from flat_conc
 r129	runeterra	Shurima	archetype (library)	swarm	30	select card from flat_concept where concept in ('summon','board_presence','fodder','aura','on_ally_play')
 r130	runeterra	Targon	archetype (library)	spellslinger	18	select card from flat_concept where concept in ('on_spell','combo_sequence','copy','repeat_trigger','spell_power')
 r131	runeterra	Targon	archetype (library)	card_advantage	15	select card from flat_concept where concept in ('draw','tutor','selection','recycle','bounce_enemy')
+rsb01	stormbound	Winter	signature (library)	Freeze	8	select card from flat_do where act='give_keyword' and keyword_ref=(select id from card where game='stormbound' and name='Freeze') union select card from flat_do where on_with like '%state is frozen%' union select card from flat_if where of_with like '%state is frozen%' union select card from flat_when where obj_with like '%state is frozen%'
+rsb02	stormbound	Winter	signature (library)	extra mana	5	select card from flat_do where act in ('mana_gain','spend_mana')
+rsb03	stormbound	Winter	signature (library)	heavy area damage	4	select card from flat_do where act in ('damage','kill') and on_pick='all'
+rsb04	stormbound	Winter	archetype (library)	ramp: extra mana for big units	5	select card from flat_do where act in ('mana_gain','spend_mana')
+rsb05	stormbound	Swarm	signature (library)	unit generation	5	select card from flat_do where act in ('summon','play_card')
+rsb06	stormbound	Swarm	signature (library)	Satyrs (tribal)	6	select card from flat_do where on_with like '%type is%' union select card from flat_if where of_with like '%type is%' union select card from flat_when where obj_with like '%type is%' union select card from flat_do where act='summon'
+rsb07	stormbound	Swarm	signature (library)	direct damage to the enemy base	3	select card from flat_do where act='damage' and on_kind in ('player','anything') and on_side in ('enemy','any')
+rsb08	stormbound	Swarm	signature (library)	high movement	4	select card from flat_do where act='move' or (act='stat_change' and params like '%movement%')
+rsb09	stormbound	Swarm	signature (library)	strengthening units on the board	4	select card from flat_do where act='stat_change' and params like '%strength%' and on_side='mine'
+rsb10	stormbound	Swarm	signature (library)	self-damage costs	2	select card from flat_do where act='damage' and on_kind='player' and on_side='mine'
+rsb11	stormbound	Shadowfen	signature (library)	poison	8	select card from flat_do where act='give_keyword' and keyword_ref=(select id from card where game='stormbound' and name='Poison') union select card from flat_do where on_with like '%state is poisoned%' union select card from flat_if where of_with like '%state is poisoned%' union select card from flat_when where obj_with like '%state is poisoned%'
+rsb12	stormbound	Shadowfen	signature (library)	Toads	3	select card from flat_do where act='summon'
+rsb13	stormbound	Shadowfen	archetype (library)	flooding the board	5	select card from flat_do where act='summon'
+rsb14	stormbound	Shadowfen	archetype (Claude)	converting enemies	3	select card from flat_do where act='steal'
+rsb15	stormbound	Shadowfen	archetype (Claude)	draining strength	4	select card from flat_do where act='damage' and card in (select card from flat_do where act='stat_change')
+rsb16	stormbound	Ironclad	signature (library)	knockback (push, pull)	5	select card from flat_do where act='move' and on_side='enemy'
+rsb17	stormbound	Ironclad	signature (library)	buffs (Boosting Elixir)	4	select card from flat_do where act='stat_change' and params like '%strength%' and on_side='mine'
+rsb18	stormbound	Ironclad	archetype (Claude)	Constructs and structures	4	select card from flat_do where on_with like '%type is%' union select card from flat_if where of_with like '%type is%' union select card from flat_when where obj_with like '%type is%' union select card from flat_do where act='summon' union select card from flat_do where on_kind='landmark'

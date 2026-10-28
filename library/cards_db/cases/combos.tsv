@@ -39,3 +39,45 @@ c38	runeterra	Mushroom Cloud	Teemo	planting Puffcaps counts toward Teemo's level
 c39	runeterra	Harsh Winds	Ashe	Frostbite sets Power to 0 for Ashe's level up	Claude, from the texts
 c40	runeterra	Staggering Strikes	Yasuo (level 2)	stunning an enemy makes Yasuo strike it	Claude, from the texts
 c41	runeterra	Skyward Strikes	Yasuo	recalling enemies makes Yasuo deal 2	Claude, from the texts
+csb01	stormbound	Frosthexers	Wisp Cloud	freezing enemies sets up damage to frozen enemies	library real-world case (bluestacks guide)
+csb02	stormbound	Glacier Palace	Wisp Cloud	freezes an enemy each turn for Wisp Cloud	texts
+csb03	stormbound	Frosthexers	Icicle Burst	an already frozen target takes damage instead	texts
+csb04	stormbound	Frosthexers	Midwinter Chaos	already frozen enemies are destroyed	texts
+csb05	stormbound	Icicle Burst	Spellbinder Zhevana	frozen units in front are destroyed for mana	texts
+csb06	stormbound	Moment’s Peace	Midwinter Chaos	frozen enemies are destroyed	texts
+csb07	stormbound	Blizzard Bombs	Wisp Cloud	freezes surrounding units for Wisp Cloud	texts
+csb08	stormbound	Copperskin Ranger	Marked as Prey	needs a poisoned target	texts
+csb09	stormbound	Venomfall Spire	Amberhides	drains a poisoned unit	texts
+csb10	stormbound	Copperskin Ranger	Brood Sages	spawns Toads per surrounding poisoned unit	texts
+csb11	stormbound	Toxic Sacrifice	Plague Monarchs	ancients drain poisoned enemies	texts
+csb12	stormbound	Heliotroopers	Soap Cleanse	restores and vitalizes friendly poisoned units	texts
+csb13	stormbound	Crimson Sentry	Amberhides	poisons units that Amberhides drains	texts
+csb14	stormbound	Sweetcap Kittens	Hair-Raising Cats	forces a confused enemy to attack	texts
+csb15	stormbound	Fluffy Badboxers	Melodious Sisters	damage when attacking a confused unit	texts
+csb16	stormbound	Slyboots	Temple of the Mind	destroys the weakest confused unit	texts
+csb17	stormbound	Sweetcap Kittens	Melodious Sisters	confused targets	texts
+csb18	stormbound	Doppelbocks	Swarmcallers	gains strength per bordering Satyr	texts
+csb19	stormbound	Dreadfauns	Moonlit Aerie	gives strength to friendly Satyrs	texts
+csb20	stormbound	Shady Ghoul	Faun Companions	gives strength to a bordering Satyr	texts
+csb21	stormbound	Head Start	Swarmcallers	Satyr on the board	texts
+csb22	stormbound	Ludic Matriarchs	Dangerous Suitors	gains per Dragon on the board	texts
+csb23	stormbound	Draconic Roamers	Sunbeam Serpents	gains the strongest friendly Dragon’s strength	texts
+csb24	stormbound	Ludic Matriarchs	Dreadful Keepers	spawns a Dragon bordering a friendly Dragon	texts
+csb25	stormbound	Draconic Roamers	Wandering Wyrms	played bordering a friendly Dragon	texts
+csb26	stormbound	Broodmother Qordia	Spare Dragonling	gives strength to a friendly Dragon	texts
+csb27	stormbound	Mech Workshop	Upgrade Point	strength to surrounding Constructs	texts
+csb28	stormbound	Finite Loopers	Linked Golems	played bordering a Construct	texts
+csb29	stormbound	Mechanical Workers	Upgrade Point	Constructs from the workshop	texts
+csb30	stormbound	Rockworkers	Fortification Tonic	units surrounding a friendly structure	texts
+csb31	stormbound	Rockworkers	Hearthguards	played bordering a friendly structure	texts
+csb32	stormbound	Mech Workshop	Doctor Mia	triggers bordering friendly structures	texts
+csb33	stormbound	Frozen Core	Lady Rime	spends the remaining mana for strength	texts
+csb34	stormbound	Rimelings	Visions of the Grove	damage for remaining mana	texts
+csb35	stormbound	Gift of the Wise	Lady Rime	remaining mana	texts
+csb36	stormbound	Dawnsparks	Visions of the Grove	remaining mana	texts
+csb37	stormbound	Martyr Spongers	Orgone Leechers	other friendly ancients lower its mana cost	texts
+csb38	stormbound	Absorbing Varmints	Plague Monarchs	friendly ancients act	texts
+csb39	stormbound	Summon Militia	Kindred’s Grace	strength to all others of the same unit type	texts
+csb40	stormbound	Rain of Frogs	Excited Mousers	confuses as many enemies as friendly units	texts
+csb41	stormbound	Brothers in Arms	Kindred’s Grace	same unit type	texts
+csb42	stormbound	Frosthexers	Spellbinder Zhevana	frozen units destroyed for mana	texts
