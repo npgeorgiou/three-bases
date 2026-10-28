@@ -6,3 +6,5 @@ runeterra	751259	V19	record_wrong, fixed by hand: state struck_this_round added 
 runeterra	751115	V03	no value for "your cards are created by this card": card marked unsure	Claude	28 Oct 2026
 runeterra	751630	V20	no value for "keywords allies have had this game": card marked unsure	Claude	28 Oct 2026
 runeterra	751017	V19	no value for "this round buffs become permanent": card marked unsure	Claude	28 Oct 2026
+runeterra	900162	V22	no value for "until the next time my bearer strikes": card marked unsure	Claude	28 Oct 2026
+runeterra	900175	V04	the count needs "played or summoned" as one distinct count, no form for it: card marked unsure	Claude	28 Oct 2026

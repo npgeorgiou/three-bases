@@ -1,39 +1,31 @@
-# Runeterra reading test: results (27-28 Oct 2026)
+# Runeterra: results (28 Oct 2026)
 
-## What was built
-- All base-game Runeterra entries described (Path of Champions items excluded, `exclude.tsv`): 2,177 cards with text read,
-  98 keyword-only, 104 keywords described once, plus one keyword the library lacks (Can't Block, by its name).
-- `cards.sqlite`: 2,955 abilities, 4,334 effects; every field a value from `vocab.tsv` (302 values), a number or an id.
-  69 cards and keywords the texts name but the library lacks are name-only stubs, so links still work.
-- Query layer (`flat.py`): 4,826 trigger rows, 1,474 condition rows, 6,631 effect rows, with each card's keywords copied
-  onto it in general terms (Tough on Malphite is damage_reduction) and 109 concept-tree concepts on 12,995 card-concept rows.
-- Connections (`connections.py`): an effect causes an event another card waits for; created cards, used keywords, zones
-  (discarding empties the hand) and asked-for types or keywords are followed. Example questions and answers: QUERIES.md.
+## What exists
+- 2,479 cards and 107 keywords described: the library's base-game entries (Path of Champions excluded, exclude.tsv) plus
+  186 cards and keywords the library lacked, taken from Riot's own data (supplement/runeterra.jsonl), and Deep and Plant
+  defined by Kaptain (supplement/runeterra_kaptain.jsonl).
+- cards.sqlite: 3,109 abilities, 4,582 effects, 358 values; flat_ref 13,658 rows over 40 happenings; 109 concept-tree
+  concepts on the cards.
+- Names that nothing defines stay names: Mark of the Storm (a mark granted to enemies), Spriteling, Phased Moon Weapon.
+  Can't Block has a record by its name.
 
-## Tests (cases/REPORT.md): 247 of 247 pass
-- 80 mechanics: the expected cards come from the card texts themselves; each query must find 95% of them.
-- 40 combos: 5 from the library's combos.tsv (one dropped: the texts do not support it, cases/DROPPED.md) and 35 pairs
-  taken from the texts (enabler wording and payoff wording).
-- 127 region cases: Claude's list of each region's known mechanics, plus the library's signature, splash and archetype rows
-  (three on_kill rows dropped: the old tags are wrong there, DROPPED.md).
-- Failing cases were fixed at their cause: text patterns that caught card names, queries that asked too narrowly, missing
-  values (copy_keywords), acts that caused no event (gain the attack token), and 87 records re-read with notes.
+## What it answers (ask.py; example answers in QUERIES.md)
+- Which cards care about a happening, whatever the wording (trigger, condition, count, picked by it): e.g. 127 cards
+  benefit from my units dying. Which cards make it happen (kill -> dies, summon -> summoned...).
+- Cards by concept (removal, revive, stat_gain, ...); how card A sets off card B, every reason ranked; a card's partners.
 
-## Accuracy
-- 219 cards (10%) read twice independently; differences judged against the text by a stronger model: the kept readings
-  were wrong on 19 (9%), mostly partial (a dropped filter, a missing "only the next time"); all 19 were re-read.
-- Word checks (`pattern_check.py`): 12 cards still flagged, all looked at: correct records ("summoned this round" is a
-  state, not a summon) or broken source text ("Level up: Missing Translation").
-- Unsure: 122 cards; two rounds of values for the needs that repeat (v5, v6) and re-reads left the cards whose mechanic is
-  unique to them (table `unsure`); their records hold the closest description.
-- Stubs: 69 names the library lacked; 49 were cards in Riot's own data (supplement/runeterra.jsonl, read as batch_023);
-  families and misread names were re-read (BRIEF rule 19); Deep, Plant, Stance, Cursed, Release, Ascended have no text in
-  the library or in Riot's data and stay names. "Missing Translation" is Riot's AuraVisualFakeKeyword, not a keyword.
-- Not measured: mistakes both readers made the same way. CHECK_20.md is for Kaptain's own check.
+## Quality
+- 248 of 248 case tests pass (cases/REPORT.md): 81 mechanics found from the texts at 95%+, 40 combos, 127 region cases.
+- Word check: 0 open flags; 9 flags decided one by one (patterns/verdicts.tsv).
+- 10% read twice independently: the kept readings were wrong on 9%, all re-read. Kaptain approved CHECK_20 (28 Oct).
+- 73 cards marked unsure: mechanics the values cannot say yet, each on one card or on cards with the same text
+  (Voidling, Patched Porobot); the record holds the closest description.
+- Not measured: mistakes both readers made the same way.
 
-## Cost and batch size
-- About 33 reader runs for the main reading, 110,000-125,000 tokens each, plus 9 smaller fix runs and 2 judge runs:
-  roughly 4.5 million tokens in all.
-- Cost per reader was nearly fixed whatever the batch size (39 to 189 cards): the next game uses ~20,000-character batches.
+## Limits
+- Connections are broad by design: a card that makes a happening connects to every card that cares about it on a
+  matching side. The reasons are ranked (most direct first), not filtered.
 
-## What the next game needs: GUIDE.md
+## Cost
+- About 53 reader runs of 95,000-125,000 tokens each, plus 2 judge runs: roughly 5.5 million tokens. A reader costs nearly
+  the same for 40 or 190 cards, so batches are ~20,000 characters.

@@ -7,8 +7,8 @@ and second readings). Safe to run any number of times. Each rule is listed in CH
   N4 "follower" and "champion" are categories, not states; a category filter "unit" on a target of kind unit is dropped.
   N5 when the text says "another ally" / "other allies", the event object and the effect targets of my units get the
      not-this-card filter if they lack it.
-  N6 names.tsv: a name read as a keyword that is something else becomes it (a keyword, a type, a name_has family) or is
-     dropped (filters and effects naming it removed), per game, each line with its reason.
+  N6 names.tsv: a name read as a keyword or a card that is something else becomes it (keyword, card, type, name_has) or
+     is dropped (filters and effects naming it removed); a keyword that is a card becomes play_card of it. Per game, with reasons.
   N7 a unit put into play attacking ("summon an attacking X", "revive an attacking copy") = the summon/revive/copy, then
      start_attack on it (link and); a state attacking filter on its target is that, written the other way.
   N8 a copy of a dead unit put into play (copy, on: unit in discard, zone board) is revive.
@@ -74,8 +74,8 @@ def another(r, inputs):
 
 def names_table(game):
     import csv
-    return {r['name'].lower(): r for r in csv.DictReader(open(os.path.join(HERE, 'names.tsv')), delimiter='\t')
-            if r['game'] == game and r['read_as'] == 'keyword'}
+    return {(r['read_as'], r['name'].lower()): r for r in csv.DictReader(open(os.path.join(HERE, 'names.tsv')), delimiter='\t')
+            if r['game'] == game}
 
 def fix_names(x, table):
     """N6"""
@@ -83,16 +83,22 @@ def fix_names(x, table):
         if isinstance(x.get('with'), list):
             w = []
             for f in x['with']:
-                r = table.get(str(f.get('ref', '')).lower()) if f.get('attr') == 'keyword' else None
+                r = table.get((f.get('attr'), str(f.get('ref', '')).lower())) if f.get('attr') in ('keyword', 'card') else None
                 if r and r['becomes'] == 'drop': continue
-                if r: f['attr'] = 'keyword' if r['becomes'] == 'keyword' else r['becomes']; f['ref'] = r['new_name']
+                if r: f['attr'] = r['becomes']; f['ref'] = r['new_name']
                 w.append(f)
             x['with'] = w
         if isinstance(x.get('do'), list):
-            x['do'] = [e for e in x['do'] if not ((table.get((e.get('keyword') or '').lower()) or {}).get('becomes') == 'drop')]
+            keep = []
             for e in x['do']:
-                r = table.get((e.get('keyword') or '').lower())
-                if r and r['becomes'] == 'keyword': e['keyword'] = r['new_name']
+                rk = table.get(('keyword', (e.get('keyword') or '').lower())); rc = table.get(('card', (e.get('card') or '').lower()))
+                if (rk or rc or {}).get('becomes') == 'drop': continue
+                if rk and rk['becomes'] == 'keyword': e['keyword'] = rk['new_name']
+                if rk and rk['becomes'] == 'card': e.pop('keyword'); e['act'] = 'play_card'; e['card'] = rk['new_name']
+                if rc and rc['becomes'] == 'card': e['card'] = rc['new_name']
+                if rc and rc['becomes'] == 'type': e.pop('card'); e['type'] = rc['new_name']
+                keep.append(e)
+            x['do'] = keep
         for v in x.values(): fix_names(v, table)
     elif isinstance(x, list):
         for v in x: fix_names(v, table)

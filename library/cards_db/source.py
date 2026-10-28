@@ -1,5 +1,6 @@
 """The card source: the library's entities plus supplement/<game>.jsonl (cards the library lacks, taken from another source,
-same columns as entities). Every script opens the library through lib(), so a supplement card is a card like any other."""
+same columns as entities). Every script opens the library through lib(), so a supplement card is a card like any other.
+Ids: 900001-989999 cards from the game's own data (supplement_<game>.py), 990001+ definitions Kaptain gave (<game>_kaptain.jsonl)."""
 import glob, json, os, sqlite3
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(HERE, '..', 'three-bases-library.sqlite')

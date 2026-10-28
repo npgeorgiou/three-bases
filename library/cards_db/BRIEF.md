@@ -80,7 +80,8 @@ AMOUNT   a number, or `{"x": x, "of": TARGET, "attr": attr, "event": EVENT, "spa
    = act copy_keywords: "on" receives, "to" is the unit whose keywords are copied; which keywords as a filter on "to"
    (`{"attr": "state", "op": "is", "val": "positive"}`). "Remove all negative keywords" = remove_keywords with that filter.
    "Another ally" / "other allies" always carries `{"attr": "card", "op": "not", "ref": "<this card's name>"}`.
-16. Read every sentence. Remarks, reminders and flavour have no effect: skip them. Never add an effect the text does not state.
+16. Read every sentence. Remarks, reminders and flavour have no effect: skip them. Deck-building permissions ("You may put any Cultist cards into your deck during deckbuilding", Origin) have no
+   effect in play: skip them. Never add an effect the text does not state.
 17. Where cards are: a unit that died ("dead ally", "allies that died", revive) is kind unit, zone discard. A discarded card
    is kind card, zone discard (category unit if the text says unit). An obliterated or Tossed card is zone removed. A Captured
    card is zone removed ("my Captured enemies": side enemy, zone removed).

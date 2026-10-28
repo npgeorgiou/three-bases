@@ -1,7 +1,8 @@
 """How one card can set off another, from the query layer (flat_*), for combo searches and the combo tests.
 explain(c, enabler, payoff) -> a short description of the most direct connection, or '' if none (reasons() lists all, ranked:
   makes; the enabler is what the payoff waits for; a direct event on another unit; a keyword or type asked for; a condition;
-  the same through a card the enabler makes; an event on the payoff itself (killing it for its Last Breath); a zone):
+  a happening the payoff counts or picks things by (flat_ref); the same through a card the enabler makes; an event on the
+  payoff itself (killing it for its Last Breath); a zone):
   makes      the enabler (or a card it makes) creates, summons or generates the payoff
   event      an effect of the enabler (or of a card it makes) causes an event (table causes) that a trigger or a condition of the
              payoff waits for, on a matching side
@@ -62,6 +63,10 @@ def reasons(c, enabler, payoff):
                             if agree(side, oside): yield ((7 if opick == 'self' else 5 if m != e else 3), f'event: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else ''))
                         for oside, ow in c.execute('select ev_obj_side, ev_obj_with from flat_if where card=? and event=?', (p, ev)).fetchall():
                             if agree(side, oside) and narrow_ok(ow, onw): yield ((6 if m != e else 4), f'condition: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else ''))
+            # a happening the enabler makes that the payoff counts or picks things by (flat_ref: condition, state)
+            made = {(h, sd) for x in makers for h, sd in c.execute("select happening, side from flat_ref where card=? and role='makes'", (x,))}
+            for h, sd, role in c.execute("select happening, side, role from flat_ref where card=? and role in ('condition','state')", (p,)).fetchall():
+                if any(h == mh and agree(ms, sd) for mh, ms in made): yield (6, f'{role}: {h}')
             # keyword or type the payoff asks for, carried by what the enabler makes or gives
             kw_have = {k for x in makers for (k,) in c.execute('select keyword from card_keyword where card=?', (x,))}
             kw_have |= {k for x in makers for (k,) in c.execute("select keyword_ref from flat_do where card=? and act='give_keyword' and keyword_ref is not null", (x,))}

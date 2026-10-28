@@ -48,3 +48,5 @@ runeterra	V23	\brally\b	value:gain_attack_token|rally	yes	Rally gives the attack
 *	D01	\bwhen\b		no	too general: when appears inside granted text and conditions
 *	D02	\b(?:grant|give)\b		no	covered by V15 and the keyword rule
 *	T24	\b(?:died|have died|has died) this game\b	value:discard|dies	yes	dead units are units in the discard zone (BRIEF rule 17)
+*	S01	[^.]*\bduring deckbuilding\b[^.]*\.?		strip	deck-building permissions have no effect in play (BRIEF rule 16): removed from the text before checking
+runeterra	S02	\borigin: [^.]*\.		strip	Origin names a deck-building origin, no effect in play

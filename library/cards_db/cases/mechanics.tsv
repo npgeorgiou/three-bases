@@ -38,7 +38,7 @@ m36	mechanic	can't block	text:\bcan'?t block\b	select card from flat_do where ac
 m37	mechanic	summons units or cares about summoning	text:\bsummon (?:a|an|\d|two|three|it|me|them|the|that|exact|copies)\b	select card from flat_do where act in ('summon','revive','copy','play_card') union select card from flat_when where event='summoned' and coalesce(obj_pick,'')!='self' union select card from flat_if where event='summoned'
 m38	mechanic	revives	text:\brevive\b	select card from flat_do where act='revive'
 m39	mechanic	silences	text:\bsilence\b	select card from flat_do where act='silence'
-m40	mechanic	shuffles cards into a deck	text:\bshuffle\b(?! (?:my|its|their) stats)|\binto (?:your|the enemy|their|its player's) deck\b|\bplace (?:it|that unit|them|me|the rest) into\b	select card from flat_do where act in ('shuffle_into_deck','put_on_top') or (eff_zone in ('deck','deck_top','deck_bottom') and act in ('create','copy','move','summon'))
+m40	mechanic	shuffles cards into a deck	text:\bshuffle\b(?! (?:my|its|their) stats)|\binto (?:your|the enemy|their|its player's) deck\b(?! during deckbuilding)|\bplace (?:it|that unit|them|me|the rest) into\b	select card from flat_do where act in ('shuffle_into_deck','put_on_top') or (eff_zone in ('deck','deck_top','deck_bottom') and act in ('create','copy','move','summon'))
 m41	mechanic	triggers when you draw	text:\bwhen(?:ever)? (?:you|your opponent|an? \w+) draws?\b	select card from flat_when where event='drawn'
 m42	mechanic	When I'm summoned triggers	text:\bwhen i'?m summoned\b	select card from flat_when where event='summoned' and obj_pick='self'
 m43	mechanic	Strike triggers	text:(?<!nexus )\bstrike:|\bor strike:	select card from flat_when where event='strikes'

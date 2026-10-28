@@ -1,8 +1,8 @@
 """Basic word checks against the records: plain wording that must show up somewhere in a card's record.
 If a card's text says "Round Start:", some ability of it waits for round_start; if it says "Stun", some effect stuns; if it
 names a keyword (outside its own Keywords field), the record links that keyword somewhere. Only unambiguous wording.
-The wording rules are in patterns/patterns.tsv (one line each: game or *, id, regex, what the record must hold, use yes/no,
-reason); each named keyword outside the card's own Keywords field must be linked (rule KW). Other cards' names are masked.
+The wording rules are in patterns/patterns.tsv (one line each: game or *, id, regex, what the record must hold, use
+yes / no / strip (wording with no effect, removed before checking), reason); each named keyword outside the card's own Keywords field must be linked (rule KW). Other cards' names are masked.
 Flags already judged (patterns/verdicts.tsv) are not repeated.
 Usage: pattern_check.py <game> [--reread]   writes patterns/<game>_flags.tsv; --reread makes the re-read batches with notes."""
 import csv, glob, json, os, re, sqlite3, sys
@@ -12,13 +12,17 @@ from build_input import KWFIELD
 import source
 
 # keywords that records say through an act or a value instead of a link to the keyword
-KW_EQUIV = {'landmark': 'landmark', 'equipment': 'equipment|attach|attached_to|equipped', 'equip': 'attach|equipped|attached_to|equipment',
+KW_EQUIV = {'landmark': 'landmark', 'equipment': 'equipment|attach|attached_to|equipped|unequip', 'equip': 'attach|equipped|attached_to|equipment',
             'rally': 'gain_attack_token', 'advance': 'countdown_advance', 'behold': 'have', 'ephemeral': 'ephemeral',
             'fleeting': 'fleeting', 'capture': 'capture', 'frostbite': 'frostbitten', 'vulnerable': 'vulnerable'}
 
 def patterns(game):
     return [r for r in csv.DictReader(open(os.path.join(HERE, 'patterns', 'patterns.tsv')), delimiter='\t')
             if r['game'] in ('*', game) and r['use'] == 'yes']
+
+def strips(game):
+    return [r['wording'] for r in csv.DictReader(open(os.path.join(HERE, 'patterns', 'patterns.tsv')), delimiter='\t')
+            if r['game'] in ('*', game) and r['use'] == 'strip']
 
 def verdicts(game):
     return {(int(r['card']), r['pattern']) for r in csv.DictReader(open(os.path.join(HERE, 'patterns', 'verdicts.tsv')), delimiter='\t')
@@ -42,7 +46,7 @@ def walk(x, out):
 
 def main():
     game = sys.argv[1]
-    c = source.lib(); pats = patterns(game); judged = verdicts(game)
+    c = source.lib(); pats = patterns(game); judged = verdicts(game); cut = strips(game)
     kwnames = {n.lower(): n for (n,) in c.execute("select name from entities where game=? and category='keyword'", (game,))}
     skipkw = {'play', 'attack', 'strike', 'round start', 'round end', 'last breath', 'level up', 'nexus strike', 'countdown',
               'burst', 'fast', 'slow', 'focus', 'skill', 'everywhere', 'weakest', 'strongest', 'attack strike', 'slay', 'support'}
@@ -62,6 +66,7 @@ def main():
         if not r: continue
         t = ' '.join(x['text'].split()); m = KWFIELD.match(t); rest = (t[m.end():] if m else t).lower()
         names = [n.lower() for n in set(x.get('names_in_text', [])) | {x['name']} if n.lower() not in kwnames]
+        for sp in cut: rest = re.sub(sp, ' ', rest)  # wording with no effect in play (use strip)
         rest = maskall.sub(' # ', rest)  # cards' names are not wording
         if names: rest = re.sub('(?:' + '|'.join(re.escape(n) for n in sorted(names, key=len, reverse=True)) + r')s?\b', ' # ', rest)
         got = {'event': set(), 'act': set(), 'name': set(), 'value': set()}; walk(r, got)

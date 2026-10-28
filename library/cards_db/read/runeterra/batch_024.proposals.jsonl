@@ -1,0 +1,7 @@
+{"id": 900055, "field": "attr", "need": "base_cost"}
+{"id": 900087, "field": "state", "need": "targeting_a_named_card"}
+{"id": 900107, "field": "state", "need": "targeting_a_named_card"}
+{"id": 900162, "field": "lasts", "need": "until_bearer_strikes"}
+{"id": 900172, "field": "limit", "need": "every_n_times (every 3rd)"}
+{"id": 900175, "field": "x", "need": "distinct across two events (played or summoned)"}
+{"id": 900183, "field": "act", "need": "assimilate"}
