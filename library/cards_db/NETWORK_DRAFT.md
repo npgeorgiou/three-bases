@@ -1,6 +1,10 @@
 # Draft: a deck (or a whole game) as a network of cards
 
-Status: idea for the next chat, agreed by nobody yet. Builds on deck_analysis.py and mechanics.py.
+Status: built as network.py (`ask.py <game> network ...`), waiting for Kaptain's judgement. Builds on deck_analysis.py and mechanics.py.
+Choices Claude made where this plan says nothing (Kaptain to judge): weights of rules lines = 1 / cards of the game making the
+same change, of targets lines = 0.5 / cards making the same act; chains are ranked by the geometric mean of their weights and
+leave out targets lines; groups: each card keeps its three closest partners, a line counts less the more partners its cards
+have; a faction or the whole game leaves out lines aimed at every card of a kind.
 
 ## The idea
 Every card is a node. A line (edge) goes from card A to card B when A gives B what B needs. The network is built by code

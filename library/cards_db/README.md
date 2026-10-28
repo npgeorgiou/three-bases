@@ -24,7 +24,7 @@ equal mechanics of different games share one concept of the concept tree (Stun a
 | `check.py`, `normalize.py` | Records against shapes and values; one canonical form for equal meanings (rules N1-N9) |
 | `load.py`, `flat.py`, `refs.py` | Build `cards.sqlite`; the query layer (keywords expanded, concepts, flat_ref) |
 | `deck_analysis.py` | A deck explained in plain words from the rows: plan, level-ups, control, support, card flow, key cards, weak spots (`ask.py <game> analyze`) |
-| `NETWORK_DRAFT.md` | Draft for the next step: a deck as a network of cards, measured by scripts |
+| `network.py`, `NETWORK_DRAFT.md` | A deck, a faction or a whole game as a network of cards: central cards, chains, groups, loose cards (`ask.py <game> network`); the plan it follows |
 | `mechanics.py` | Questions about mechanics (concepts) and decks, links inside each game added up over games |
 | `connections.py` | How one card sets off another, every reason ranked, most direct first |
 | `pattern_check.py`, `patterns/` | Word check: `patterns.tsv` (wording rules, each judged once), `verdicts.tsv` (flags decided once), `<game>_flags.tsv` (open flags) |

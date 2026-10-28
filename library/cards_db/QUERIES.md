@@ -202,3 +202,27 @@ select distinct card from flat_do where act='copy_keywords'
 - Draven's Whirling Death -> Draven -> Spinning Axe
 - Katarina's Death Lotus -> Katarina -> Blade's Edge
 
+
+## A deck as a network (`ask.py runeterra network "..."`), the Lucian/Senna deck above
+
+```
+runeterra deck: 14 cards, 5 more made by them, 94 lines.
+Central cards (strongest lines in and out): Senna (level 2) (made) (6 in, 5 out), Senna (8 in, 6 out), Crumble (2 in, 13 out), Glimpse Beyond (2 in, 13 out), Piercing Darkness (2 in, 8 out), The Ruination (2 in, 8 out), Darkness (made) (2 in, 1 out), Lucian (7 in, 1 out), Cursed Keeper (7 in, 1 out), Lucian (level 2) (made) (8 in, 0 out).
+Cards most chains pass through: Senna, Crumble, Glimpse Beyond, Senna (level 2) (made), Piercing Darkness.
+Strongest chains:
+- Ravenous Butcher -> any units are killed (levels it up) -> Senna -> levels into -> Senna (level 2) (made) -> changes its cost -> Piercing Darkness, Darkness (made), Crumble, The Ruination, Glimpse Beyond
+- Hapless Aristocrat -> summons -> Spiderling (made)
+- Senna -> levels into -> Senna (level 2) (made) -> changes its cost -> Piercing Darkness -> your units die (levels it up) -> Lucian
+- Single Combat -> your units die -> Cursed Keeper -> summons -> Escaped Abomination (made)
+- Spirit Leech -> any units are killed (levels it up) -> Senna -> gives it Fast -> Piercing Darkness -> your units die (levels it up) -> Lucian
+- Senna -> gives it Fast -> Piercing Darkness -> your units die -> Lucian (level 2) (made), Lonely Chimeslime, Hapless Aristocrat, The Undying, Cursed Keeper, Senna, Sentinel of Light
+Groups (cards tightly linked; one group = one plan):
+- your units die, any units are killed (levels it up) (15): Crumble, Darkness (made), Glimpse Beyond, Lonely Chimeslime, Lucian, Lucian (level 2) (made), Piercing Darkness, Ravenous Butcher, Senna, Senna (level 2) (made), Senna, Sentinel of Light, Single Combat, Spirit Leech, The Ruination, The Undying
+- summons (2): Cursed Keeper, Escaped Abomination (made)
+- summons (2): Hapless Aristocrat, Spiderling (made)
+The groups are joined to each other by weaker lines: yes.
+Loose cards:
+- only give to others, nothing gives to them (1): Single Combat
+- only get from others, give nothing back (3): Lonely Chimeslime, Senna, Sentinel of Light, The Undying
+Overall: 14 of 14 cards (100%) have at least one line; 3 groups.
+```

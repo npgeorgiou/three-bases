@@ -14,13 +14,14 @@ question runs across games.
   ask.py <games> chains <concept>                 families of three mechanics: A sets off B, B sets off C
   ask.py <game> deck <card or concept> [size]     cards of one game that feed each other around it, in its faction
   ask.py <game> analyze "<card>, <card>, ..."      a deck: its mechanics, how its cards feed each other, what it lacks
+  ask.py <game> network "<card>, ..." | faction <name> | game [--json f]  cards as a network: central cards, chains, groups, loose cards
   ask.py <games> card <card>                      the card's text and stored rows (rows.py)
   ask.py <games> list happenings|concepts         the values these questions take
 Happenings are the event values of vocab.tsv; concepts are the concept tree's (equal mechanics of different games share
 one concept: Stun and Freeze are disable, round_start and turn_start are turn_start)."""
 import os, sqlite3, subprocess, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
-import connections, mechanics, deck_analysis
+import connections, mechanics, deck_analysis, network
 c = sqlite3.connect(os.path.join(HERE, 'cards.sqlite'))
 
 
@@ -65,6 +66,7 @@ def main():
             print(f'{x}: ' + '; '.join(f'{g} {n} pairs, e.g. {ex}' for g, (n, ex) in per.items()))
     elif q == 'chains':
         for n, a, b, x, gs in mechanics.chains(c, games, args[0]): print(f'{a} -> {b} -> {x}  (seen in {", ".join(gs)})')
+    elif q == 'network': print('\n'.join(network.run(c, games[0], args)))
     elif q == 'analyze': print('\n'.join(deck_analysis.analyze(c, games[0], ' '.join(args))))
     elif q == 'deck':
         size = int(args[1]) if len(args) > 1 else {'stormbound': 12}.get(games[0], 14)

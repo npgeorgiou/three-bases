@@ -22,7 +22,7 @@ SAY = {  # what happens, in plain words; {who} = your / enemy / any
     'round_start': 'a round starts', 'round_end': 'a round ends', 'turn_start': 'your turn starts', 'turn_end': 'your turn ends'}
 EVERY_GAME = {'played', 'summoned', 'attacks', 'blocks', 'strikes', 'damaged', 'survives_damage', 'round_start', 'round_end',
               'turn_start', 'turn_end', 'drawn', 'mana_refilled', 'strikes_nexus', 'nexus_damaged', 'always', 'activated', 'moves',
-              'attack_done', 'targeted', 'spell_resolves', 'game_start'}  # happen in play without a card making them
+              'attack_done', 'targeted', 'spell_resolves', 'game_start', 'supports'}  # happen in play without a card making them
 CONTROL = ('damage', 'ping', 'aoe_damage', 'removal', 'destroy', 'board_wipe', 'banish', 'bounce_enemy', 'disable', 'attack_zero', 'stat_loss', 'silence',
            'attack_lock', 'cant_block', 'immobilize', 'forced_movement', 'steal', 'polymorph', 'damage_over_time')
 SUPPORT = ('stat_gain', 'attack_gain', 'defence_gain', 'shield', 'immunity', 'evasion', 'first_strike', 'multi_attack', 'heal',
@@ -36,7 +36,7 @@ def who(side):
 
 def say(c, h, side, kw):
     k = c.execute('select name from card where id=?', (kw,)).fetchone()[0] if kw else 'a keyword or status'
-    return SAY.get(h, h).format(who=who(side), kw=k)
+    return SAY.get(h, h.replace('_', ' ')).format(who=who(side), kw=k)
 
 
 def names(c, ids):

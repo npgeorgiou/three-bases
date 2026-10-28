@@ -14,4 +14,6 @@
   approved records to BRIEF.md as examples, write Stormbound's results in RESULTS.md.
 - Questions over all games work (`ask.py all ...`, mechanics.py, QUERIES.md). The next game follows PROCESS.md, first its
   section "Writing data the same way in every game".
-- Next idea, not started: a deck as a network of cards (NETWORK_DRAFT.md).
+- A deck, faction or game as a network of cards is built (network.py, `ask.py <game> network`; NETWORK_DRAFT.md has the
+  plan and Claude's own choices). Waiting for Kaptain's judgement; only the Lucian/Senna guide deck is stored (QUERIES.md),
+  the Nilah/Janna, Marauder/Fiora and Telsi/Volibear lists are not in the repo.
