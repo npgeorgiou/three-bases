@@ -150,7 +150,7 @@ def main():
             for line in open(f):
                 if line.strip(): L.record(json.loads(line)); n += 1
         print(game, n, 'records loaded')
-    import flat; flat.build(out); flat.derive(out)  # the query layer: general rows with keywords expanded and concepts
+    import flat; flat.build(out); flat.derive(out); import refs; refs.build(out)  # the query layer: general rows with keywords expanded and concepts
     out.commit()
 
 

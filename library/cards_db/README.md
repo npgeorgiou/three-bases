@@ -14,6 +14,7 @@ are the source; `cards.sqlite` is rebuilt from them.
 | `check.py` | Checks records against the shapes and values and resolves names to ids |
 | `load.py` | Builds `cards.sqlite` from the records, then the query layer |
 | `flat.py` | Query layer: flat_when / flat_if / flat_do rows with keywords expanded, flat_concept with concept-tree concepts (RULES) |
+| `refs.py` | Query layer: flat_ref, every way a card works with a happening (makes it, waits for it, tests or counts it, picks things it happened to), one row each |
 | `connections.py` | How one card sets off another (event, made card, zone, keyword or type asked for) |
 | `cases/` | Case tests: mechanics.tsv, combos.tsv, regions.tsv, run.py, REPORT.md, DROPPED.md (cases dropped and why) |
 | `GUIDE.md`, `RESULTS.md`, `QUERIES.md`, `examples.py` | How to do the next game; the Runeterra findings; example queries with real answers |
@@ -35,7 +36,16 @@ are the source; `cards.sqlite` is rebuilt from them.
 Tables in `cards.sqlite`: card, type, card_type, card_keyword, card_link (levels into, generates), ability (given_by_effect
 for abilities an effect gives), event, cond, effect, param, target, filter (op in on several rows of one attr = one of them),
 amount, amount_item, name_part, keyword_trigger, unsure, vocab, causes (which effect causes which event), and the query layer
-flat_when, flat_if, flat_do, flat_concept. Searches use the flat tables and concepts, never keyword names.
+flat_when, flat_if, flat_do, flat_concept, flat_ref. Searches use the flat tables and concepts, never keyword names.
+
+**Asking which cards care about something (decided 28 Oct 2026).** Anything a card can work with is a happening: an `event`
+value in vocab.tsv (dies, summoned, damaged, given_keyword, stat_changed, drawn, ...). Ask flat_ref, never flat_when alone,
+because the same thing is stored as a trigger, a condition, a count or a target filter depending on the wording:
+`select distinct card from flat_ref where happening='<event>' and role!='makes' and side in ('mine','any','')`
+(role makes = the card causes it; side '' = either side; add `and coalesce(pick,'')!='self'` for "other units"). A state is
+tied to its happening by the `causes` column of its vocab row (dead_this_round -> dies; stunned -> given_keyword:Stun); a
+unit in zone discard is a unit that died (BRIEF rule 17). A state with no happening (champion, ephemeral, fleeting...) is a
+property, not a happening. A new event or state gets its `causes` entry in the same change, or flat_ref misses it.
 
 ## Surviving session limits (rules for every chat doing this work)
 Nothing about the run lives only in a chat. Everything needed to continue is in these files:

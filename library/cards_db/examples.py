@@ -16,8 +16,8 @@ def q(title, sql, note='', limit=12):
 
 q('Cards that stop enemies attacking or blocking (any game wording: Stun, Frostbite-like, keywords that mean it)',
   "select distinct card from flat_concept where concept in ('disable','cant_attack')")
-pay = q('Payoffs: something happens when one of my units dies',
-        "select distinct card from flat_when where event='dies' and obj_side='mine' and coalesce(obj_pick,'')!='self'")
+pay = q('Payoffs: cards that benefit from my other units dying, any way (trigger, condition, count, dead allies picked)',
+        "select distinct card from flat_ref where happening='dies' and role!='makes' and side in ('mine','any','') and coalesce(pick,'')!='self'")
 ena = q('Enablers: cards that kill or sacrifice my own units',
         "select distinct card from flat_concept where concept='sacrifice'")
 pairs = []

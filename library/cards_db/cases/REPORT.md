@@ -1,7 +1,7 @@
 # Case tests: runeterra
 
 Made by `cases/run.py runeterra`.
-**247 of 247 cases pass.**
+**248 of 248 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -78,7 +78,7 @@ Made by `cases/run.py runeterra`.
 | m68 | Empowered | 10 | 10 | 100% | 4 | yes |
 | m69 | Fury grows on kills | 26 | 26 | 100% | 6 | yes |
 | m70 | transforms | 56 | 56 | 100% | 19 | yes |
-| m71 | Capture | 18 | 18 | 100% | 3 | yes |
+| m71 | Capture | 18 | 18 | 100% | 4 | yes |
 | m72 | Deathless / cheat death | 3 | 3 | 100% | 3 | yes |
 | m73 | Nab | 4 | 4 | 100% | 0 | yes |
 | m74 | Flow | 13 | 13 | 100% | 1 | yes |
@@ -88,6 +88,7 @@ Made by `cases/run.py runeterra`.
 | m78 | Fleeting cards are discarded at round end | 42 | 42 | 100% | 0 | yes |
 | m79 | Advance (Countdowns) | 22 | 22 | 100% | 0 | yes |
 | m80 | counters spells | 10 | 10 | 100% | 51 | yes |
+| m81 | benefits from allies dying, any way (trigger, condition, count, dead allies picked) | 41 | 41 | 100% | 86 | yes |
 
 ## Combos (the enabler must set off the payoff)
 

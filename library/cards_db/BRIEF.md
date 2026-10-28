@@ -81,6 +81,8 @@ AMOUNT   a number, or `{"x": x, "of": TARGET, "attr": attr, "event": EVENT, "spa
    (`{"attr": "state", "op": "is", "val": "positive"}`). "Remove all negative keywords" = remove_keywords with that filter.
    "Another ally" / "other allies" always carries `{"attr": "card", "op": "not", "ref": "<this card's name>"}`.
 16. Read every sentence. Remarks, reminders and flavour have no effect: skip them. Never add an effect the text does not state.
+17. Where cards are: a unit that died ("dead ally", "allies that died", revive) is kind unit, zone discard. A discarded card
+   is kind card, zone discard (category unit if the text says unit). An obliterated or Tossed card is zone removed.
 
 ## Keyword entries (category keyword)
 A keyword's record says what the keyword means, so that every card with it inherits that meaning. Four kinds:

@@ -79,3 +79,4 @@ m77	mechanic	Scout attacks again	kw:Scout	select card from flat_concept where co
 m78	mechanic	Fleeting cards are discarded at round end	kw:Fleeting	select card from flat_when where event='round_end' and card in (select card from flat_do where act='discard' and on_pick='self')
 m79	mechanic	Advance (Countdowns)	text:\badvance\b	select card from flat_do where act='countdown_advance' or keyword_ref=(select id from card where name='Advance' and is_keyword=1)
 m80	mechanic	counters spells	text:\bstop (?:a|an|all)\b|\bnegate\b	select card from flat_do where act='counter'
+m81	mechanic	benefits from allies dying, any way (trigger, condition, count, dead allies picked)	text:\b(?:when|if|for each|seen|that|have|has)\b[^.]{0,40}\b(?:all(?:y|ies)|units?|followers?)\b[^.]{0,30}\b(?<!would )(?:dies|die|died)\b|\bdead all(?:y|ies)|\bdead allied	select distinct card from flat_ref where happening='dies' and role!='makes' and side in ('mine','any','')

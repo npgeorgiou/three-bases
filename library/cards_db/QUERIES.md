@@ -7,12 +7,12 @@ select distinct card from flat_concept where concept in ('disable','cant_attack'
 ```
 437 cards: Abyssal Eye, Abyssal Guard, Acolyte's Reliquary, Acorn, the Hextechnician, Ahri (level 2), Airis, Altar to Unity, Amalgamation Of Vile Rites, Ambush, Ancient Crocolith, Ancient Malediction, Ancient Preparations ...
 
-## Payoffs: something happens when one of my units dies
+## Payoffs: cards that benefit from my other units dying, any way (trigger, condition, count, dead allies picked)
 
 ```sql
-select distinct card from flat_when where event='dies' and obj_side='mine' and coalesce(obj_pick,'')!='self'
+select distinct card from flat_ref where happening='dies' and role!='makes' and side in ('mine','any','') and coalesce(pick,'')!='self'
 ```
-15 cards: Barkbeast, Grave Companion, Kharox, Lonely Chimeslime, Lucian (level 2), Necrotic Arachnoid, Neverglade Collector, Phantom Prankster, Sea Scarab, Senna, Sentinel of Light, The Gray Apothecary, Tomb-Raider Barbara ...
+72 cards: Atakhan, Bringer of Ruin, Barkbeast, Black Spear, Boisterous Host, Chronobreak, Conductor Of The Mists, Crawling Sensation, Dawnspeakers, Elise's Crawling Sensation, Eternal Dancers, Faithful Wolfdog, For The Fallen ...
 
 ## Enablers: cards that kill or sacrifice my own units
 
@@ -23,18 +23,18 @@ select distinct card from flat_concept where concept='sacrifice'
 
 ## Combos found between those two lists (connections.explain)
 
-562 pairs among the first 40 x 40, for example:
+1372 pairs among the first 40 x 40, for example:
 
-- Glimpse Beyond -> Phantom Prankster (event: kill -> dies)
-- Glimpse Beyond -> Tortured Prodigy (event: kill -> dies)
-- Glimpse Beyond -> Neverglade Collector (event: kill -> dies)
-- Glimpse Beyond -> Barkbeast (event: kill -> dies)
-- Glimpse Beyond -> Viego (event: kill -> dies)
-- Glimpse Beyond -> Sea Scarab (event: kill -> dies)
-- Glimpse Beyond -> The Gray Apothecary (event: kill -> dies)
-- Glimpse Beyond -> Void Gate (event: kill -> dies)
-- Glimpse Beyond -> Grave Companion (event: kill -> dies)
-- Glimpse Beyond -> Necrotic Arachnoid (event: kill -> dies)
+- Glimpse Beyond -> Dawnspeakers (condition: kill -> dies)
+- Glimpse Beyond -> Lucian (condition: kill -> dies)
+- Glimpse Beyond -> Radiant Guardian (condition: kill -> dies)
+- Glimpse Beyond -> Vanguard Redeemer (condition: kill -> dies)
+- Glimpse Beyond -> They Who Endure (condition: kill -> dies)
+- Glimpse Beyond -> Fresh Offerings (condition: kill -> dies)
+- Glimpse Beyond -> Kalista (condition: kill -> dies)
+- Glimpse Beyond -> Rhasa the Sunderer (condition: kill -> dies)
+- Glimpse Beyond -> Scuttlegeist (condition: kill -> dies)
+- Glimpse Beyond -> Thresh (condition: kill -> dies)
 
 ## Same effect, compare cost: deal damage to anything (unit or player), cheapest first
 

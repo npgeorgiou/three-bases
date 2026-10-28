@@ -116,7 +116,7 @@ zone	deck_top	top of deck			27 Oct 2026, v1
 zone	deck_bottom	bottom of deck			27 Oct 2026, v1
 zone	everywhere	play, hand, deck and later created (Everywhere)			27 Oct 2026, v1
 zone	removed	removed from the game / captured			27 Oct 2026, v1
-zone	discard	discard pile / dead			27 Oct 2026, v1
+zone	discard	discard pile / dead		dies	27 Oct 2026, v1
 attr	power	Power			27 Oct 2026, v1
 attr	health	Health			27 Oct 2026, v1
 attr	cost	cost			27 Oct 2026, v1
@@ -135,22 +135,22 @@ op	gt	more than			27 Oct 2026, v1
 op	lt	less than			27 Oct 2026, v1
 op	is	is / has			27 Oct 2026, v1
 op	not	is not / lacks			27 Oct 2026, v1
-state	attacking	attacking			27 Oct 2026, v1
-state	blocking	blocking			27 Oct 2026, v1
-state	damaged	damaged			27 Oct 2026, v1
-state	stunned	stunned			27 Oct 2026, v1
-state	frostbitten	frostbitten			27 Oct 2026, v1
+state	attacking	attacking		attacks	27 Oct 2026, v1
+state	blocking	blocking		blocks	27 Oct 2026, v1
+state	damaged	damaged		damaged	27 Oct 2026, v1
+state	stunned	stunned		given_keyword:Stun	27 Oct 2026, v1
+state	frostbitten	frostbitten		given_keyword:Frostbite	27 Oct 2026, v1
 state	marked	marked by the source			27 Oct 2026, v1
-state	created	created (not from the deck)			27 Oct 2026, v1
+state	created	created (not from the deck)		created	27 Oct 2026, v1
 state	champion	is a champion			27 Oct 2026, v1
 state	follower	is not a champion			27 Oct 2026, v1
-state	equipped	has equipment			27 Oct 2026, v1
-state	buffed	has a positive stat change			27 Oct 2026, v1
-state	leveled	is a leveled champion			27 Oct 2026, v1
+state	equipped	has equipment		equipped	27 Oct 2026, v1
+state	buffed	has a positive stat change		stat_changed	27 Oct 2026, v1
+state	leveled	is a leveled champion		levels_up	27 Oct 2026, v1
 state	hidden	played hidden (Ambush)			27 Oct 2026, v1
 state	ephemeral	Ephemeral			27 Oct 2026, v1
 state	in_combat	in combat			27 Oct 2026, v1
-state	dead_this_round	died this round			27 Oct 2026, v1
+state	dead_this_round	died this round		dies	27 Oct 2026, v1
 state	fleeting	Fleeting			27 Oct 2026, v1
 category	unit	unit			27 Oct 2026, v1
 category	follower	non-champion unit			27 Oct 2026, v1
@@ -263,8 +263,8 @@ event	attack_token_gained	a player gains the attack token			28 Oct 2026, v3
 event	trap_activated	a Trap or Boon attached to a card activates	trap_secret		28 Oct 2026, v3
 state	new	a card with a different name than all cards played (or seen) before this game			28 Oct 2026, v3
 state	multi_region	a card from 2+ regions			28 Oct 2026, v3
-state	summoned_this_round	summoned this round			28 Oct 2026, v3
-state	targeted_this_round	targeted this round			28 Oct 2026, v3
+state	summoned_this_round	summoned this round		summoned	28 Oct 2026, v3
+state	targeted_this_round	targeted this round		targeted	28 Oct 2026, v3
 attr	damage	the damage dealt (for event_count and stat sums)			28 Oct 2026, v3
 attr	rarity	a rarity (value from rarity)			28 Oct 2026, v3
 attr	countdown	a Countdown value			28 Oct 2026, v3

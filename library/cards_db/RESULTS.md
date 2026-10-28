@@ -25,7 +25,7 @@
 - Word checks (`pattern_check.py`): 12 cards still flagged, all looked at: correct records ("summoned this round" is a
   state, not a summon) or broken source text ("Level up: Missing Translation").
 - 122 cards (5%) stay marked unsure: rare mechanics the values cannot say yet; their records hold the closest description.
-- Not measured: mistakes both readers made the same way. CHECK_20.md / CHECK_20_RAW.txt are for Kaptain's own check.
+- Not measured: mistakes both readers made the same way. CHECK_20.md is for Kaptain's own check.
 
 ## Cost and batch size
 - About 33 reader runs for the main reading, 110,000-125,000 tokens each, plus 9 smaller fix runs and 2 judge runs:
