@@ -55,3 +55,5 @@ Each change: date, what changed, the card that caused it, and which records were
   (events combat_start, combat_end, eats, exhausted, kept_in_hand, resource_gained; acts eat, capacity_change, gold_gain,
   return_card; kind lane_resource; attr / param size; positions for lanes; zone exhausted; lasts this_run; x x_paid; test
   upgrade_path).
+- 28 Oct 2026, v23 (Monster Train, repeated reader needs): x product, rarity uncommon, state boss, kind lane_resource_slot;
+  BRIEF: doubling stacks is give_keyword with the count of stacks.

@@ -53,7 +53,7 @@ act	return_to_hand	return a unit in play to its owner's hand (Recall)	return_to_
 act	shuffle_into_deck	shuffle the target into a deck	recycle	shuffled	27 Oct 2026, v1
 act	put_on_top	put the target on top of a deck	tutor		27 Oct 2026, v1
 act	cost_change	change the cost of the target (signed param cost)	cost_reduction		27 Oct 2026, v1
-act	mana_gain	refill or gain mana / spell mana (param amount, kind via target)	resource_gain	mana_refilled	27 Oct 2026, v1
+act	mana_gain	refill or gain mana / spell mana (param amount, kind via target)	resource_gain	mana_refilled;resource_gained	27 Oct 2026, v1
 act	gain_attack_token	the player gains the attack token (Rally)	extra_turn	attack_token_gained	27 Oct 2026, v1
 act	strike	the target unit strikes another target now	attack_now	strikes;damaged;survives_damage;dies;killed	27 Oct 2026, v1
 act	start_attack	start a free attack with the targets	attack_now	attacks	27 Oct 2026, v1
@@ -503,3 +503,8 @@ zone	exhausted	cards removed for the rest of the battle after use (Monster Train
 lasts	this_run	"for the rest of the run, in later battles too (roguelike ""permanently"", ""permanent copy"")"	deck_modification		28 Oct 2026, v22 (Monster Train)
 x	x_paid	"the X paid for an X-cost card, times inner (inner omitted = 1; ""2 per X"" = inner 2)"			28 Oct 2026, v22 (Monster Train)
 test	upgrade_path	the card took upgrade path n (n = the path's place in the card's list; Monster Train champion paths)			28 Oct 2026, v22 (Monster Train)
+x	product	"the product of the amounts in items (""4x the amount of Armor"" = items [4, the count])"			28 Oct 2026, v23 (Monster Train)
+rarity	uncommon	uncommon			28 Oct 2026, v23 (Monster Train)
+state	boss	"a boss: the strongest enemy of a fight (""non-boss unit"", ""does not affect bosses"")"			28 Oct 2026, v23 (Monster Train)
+kind	lane_resource_slot	a slot that holds a lane resource (Monster Train Echo slot)			28 Oct 2026, v23 (Monster Train)
+act	exhaust	remove the target card for the rest of the battle (Monster Train Consume pile, Slay the Spire exhaust)	exhaust	exhausted	28 Oct 2026, v24 (Monster Train)

@@ -282,7 +282,7 @@ Extract, ...) define the words; cards use the values below. Mapping decided by C
   "Harvest:" = dies, object `{"kind": "unit", "with": [same_lane]}`. "Incant:" = played, object `{"kind": "spell", "side":
   "mine", "with": [same_lane]}`. "Rally:" = played, object a mine unit, not type Morsel, same_lane. "Rejuvenate:" = healed,
   object self. "Resolve:" = combat_end. "Action:" = combat_start, actor self. "End of Turn:" = turn_end, actor
-  `{"kind": "player", "side": "mine"}`. "Gorge:" = eats, actor self. "Eaten:" = eats, object self ("the eater" = pick actor).
+  `{"kind": "player", "side": "mine"}`. "Gorge:" = eats, actor self, object a unit of type Morsel (the wiki: it eats a Morsel). "Eaten:" = eats, object self ("the eater" = pick actor).
   "Hunger:" = summoned, object a unit with keyword Eaten. "Etch:" = exhausted, object a card, same_lane. "Inspire:" =
   resource_gained, object `{"kind": "lane_resource", "with": [same_lane]}`. "Reserve:" = kept_in_hand, object self.
   "Armored:" = given_keyword Armor, object self. "Draw +1 next turn" = an ability turn_start (actor me) with limit next_time;
@@ -290,13 +290,16 @@ Extract, ...) define the words; cards use the values below. Mapping decided by C
 - A keyword the card has itself, written alone ("Consume.", "Rage 4.", "Extract 2.", "Burnout 1. Multistrike 1.") = one
   ability `{"when": {"event": "always"}, "do": [{"act": "give_keyword", "keyword": "<K>", "on": {"pick": "self"}, "params":
   {"amount": N}, "lasts": "permanent"}]}` (amount only when a number is written). "Apply Rage 3" = give_keyword Rage, amount 3,
-  lasts permanent (the keyword's own record says how its stacks fall). "Sacrifice Imp." = keyword_action Sacrifice on a mine
-  unit of type Imp. "Reform a unit" = keyword_action Reform. "Cultivate 2" = keyword_action Cultivate, amount 2.
+  lasts permanent (the keyword's own record says how its stacks fall). "Sacrifice Imp." = keyword_action Sacrifice with "on" a mine
+  unit of type Imp ("Sacrifice." alone: "on" a mine unit). "Reform a unit" = keyword_action Reform. "Cultivate 2" = keyword_action Cultivate, amount 2.
 - Zones: draw pile = deck ("top of your draw pile" = deck_top); discard pile = discard; consumed cards ("the Consume pile", "a
   consumed spell") = zone exhausted; a defeated or dead unit = kind unit, zone discard (rule 17). "Return ... to your hand"
   from those zones = return_card, zone hand. "Add N cards to your hand / discard pile" = create in that zone.
 - "Permanently", "a permanent copy" = lasts this_run (the change stays in the deck for later battles); other changes last the
   battle = permanent.
+- "15x the number of Imp units", "4x the amount of Armor" = `{"x": "product", "items": [15, <the count>]}`. "Double the
+  amount of Rage on friendly units" / "Double Armor on a unit" = give_keyword that keyword with amount = the count of its
+  stacks on the unit (it doubles). "Non-boss" = state not boss. Echo slots = kind lane_resource_slot.
 - Types (Imp, Demon, Morsel, Hollow, Egg, Blight, Scourge, ...) = filter type. "Morsel units" = type Morsel.
 - Champions: text before the first path holds always. "<Path> path (upgrades I/II/III): ..." = that path's abilities, each with
   the cond `{"test": "upgrade_path", "n": <1, 2 or 3: the path's place in the text>}`; numbers "10/15/20" = per_level items.

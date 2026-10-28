@@ -95,6 +95,15 @@ class Loader:
         for c in rec.get('condition', []): self.cond(c, keyword=cid)
         for f in rec.get('unsure', []): self.ins('unsure', card=cid, field=f)
         for k, ab in enumerate(rec['abilities']): self.ability(cid, k, ab)
+        # a keyword the card gives itself for good in its own text ("Consume.", "Rage 4." in games with no Keywords field) is a
+        # keyword the card has, like one in a Keywords field: the card inherits the keyword's record
+        for ab in rec['abilities']:
+            if (ab.get('when') or {}).get('event') != 'always' or ab.get('if'): continue
+            for e in ab['do']:
+                if e.get('act') == 'give_keyword' and e.get('on') == {'pick': 'self'} and e.get('keyword'):
+                    kid = self.ref('keyword', e['keyword'])
+                    if kid and not self.c.execute('select 1 from card_keyword where card=? and keyword=?', (cid, kid)).fetchone():
+                        self.ins('card_keyword', card=cid, keyword=kid)
 
     def ability(self, cid, k, ab, given_by=None):
             aid = self.ins('ability', card=cid, seq=k, event=self.event(ab['when']), lim=ab.get('limit'), given_by_effect=given_by)

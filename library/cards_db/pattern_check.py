@@ -14,7 +14,8 @@ import source
 # keywords that records say through an act or a value instead of a link to the keyword
 KW_EQUIV = {'landmark': 'landmark', 'equipment': 'equipment|attach|attached_to|equipped|unequip', 'equip': 'attach|equipped|attached_to|equipment',
             'rally': 'gain_attack_token', 'advance': 'countdown_advance', 'behold': 'have', 'ephemeral': 'ephemeral',
-            'fleeting': 'fleeting', 'capture': 'capture', 'frostbite': 'frostbitten', 'vulnerable': 'vulnerable'}
+            'fleeting': 'fleeting', 'capture': 'capture', 'frostbite': 'frostbitten', 'vulnerable': 'vulnerable',
+            'consume': 'exhausted|exhaust'}
 
 def patterns(game):
     return [r for r in csv.DictReader(open(os.path.join(HERE, 'patterns', 'patterns.tsv')), delimiter='\t')
@@ -60,6 +61,14 @@ def main():
     for f in glob.glob(os.path.join(HERE, 'read', game, 'batch_*.jsonl')):
         if 'proposals' in f: continue
         for l in open(f): r = json.loads(l); recs[r['id']] = r
+    # a trigger keyword (its record has "trigger") is said by its event: "Revenge:" is the event damaged
+    trig = {}
+    for f in glob.glob(os.path.join(HERE, 'read', game, 'keywords*.jsonl')):
+        if 'proposals' in f: continue
+        kname = {json.loads(l)['id']: json.loads(l)['name'] for l in open(os.path.join(HERE, 'input', game, 'keywords.jsonl'))} if os.path.exists(os.path.join(HERE, 'input', game, 'keywords.jsonl')) else {}
+        for l in open(f):
+            r = json.loads(l)
+            if r.get('trigger') and (r.get('name') or kname.get(r.get('id'))): trig[(r.get('name') or kname.get(r.get('id'))).lower()] = r['trigger'].get('event')
     flags = []
     for i, x in inputs.items():
         r = recs.get(i)
@@ -80,6 +89,7 @@ def main():
             if k in own or k in got['name'] or k in ('stun', 'recall', 'obliterate', 'silence'): continue
             if any(re.search(p['wording'], k) for p in pats): continue  # a keyword used as a verb is checked by its verb pattern
             if k in KW_EQUIV and set(KW_EQUIV[k].split('|')) & got['value']: continue
+            if k in trig and trig[k] in got['event']: continue
             flags.append((i, x['name'], 'KW', 'name:' + k, rest[max(0, rest.find(k) - 30):rest.find(k) + len(k) + 30]))
     flags = [f for f in flags if (f[0], f[2]) not in judged and (f[0], f[2] + ':' + f[3]) not in judged]
     out = os.path.join(HERE, 'patterns', game + '_flags.tsv')

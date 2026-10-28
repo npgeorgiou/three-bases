@@ -88,7 +88,7 @@ def reasons(c, enabler, payoff):
                     if kid: onw = (onw or '') + f';keyword is {kid}'
                     for (ev,) in c.execute('select event from causes where act=?', (act,)).fetchall():
                         for oside, opick, ow in c.execute('select obj_side, obj_pick, obj_with from flat_when where card=? and event=?', (p, ev)).fetchall():
-                            if opick == 'self' and m != p and not (side in ('mine', 'any', None) and kind in ('unit', 'any', None)): continue
+                            if opick == 'self' and m != p and not (side in ('mine', 'any', None) and kind in ('unit', 'any', 'card', None)): continue  # a card: discarding it
                             if not narrow_ok(ow, onw, c): continue
                             if agree(side, oside): yield ((7 if opick == 'self' else 5 if m != e else 3), f'event: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else ''))
                         for oside, ow in c.execute('select ev_obj_side, ev_obj_with from flat_if where card=? and event=?', (p, ev)).fetchall():
@@ -125,13 +125,29 @@ def reasons(c, enabler, payoff):
                         if bits[0] == 'keyword' and any(same_kw(c, v, k) for k in kw_have): yield (9, f'target: keyword {name(c, v)}')
             # what the enabler puts in play or gains that the payoff counts (Excited Mousers: friendly units; Lady Rime: mana)
             MAKES_KIND = {'summon': 'unit', 'revive': 'unit', 'play_card': 'unit', 'mana_gain': 'mana', 'create': 'card', 'draw': 'card'}
-            made_kinds = {MAKES_KIND[a] for x in makers for (a,) in c.execute('select act from flat_do where card=?', (x,)) if a in MAKES_KIND}
+            made_kinds = {(k if a == 'mana_gain' and k else MAKES_KIND[a]) for x in makers  # mana_gain: the resource it names (Echo)
+                          for (a, k) in c.execute('select act, on_kind from flat_do where card=?', (x,)) if a in MAKES_KIND}
             made_kinds |= {'landmark' for x in makers if (c.execute('select category from card where id=?', (x,)).fetchone() or [''])[0] == 'building'}
             for k, sd in c.execute("select of_kind, of_side from flat_if where card=? and test in ('count','have','amount_count')", (p,)).fetchall():
                 if k in made_kinds and agree(sd, 'mine'): yield (8, f'count: {k}')
             if any('of:kind is landmark' in w for w in targets) and 'landmark' in made_kinds: yield (9, 'target: next to a structure')
             for k, sd in c.execute("select on_kind, on_side from flat_do where card=? and on_kind in ('landmark','unit_or_structure')", (p,)).fetchall():
                 if 'landmark' in made_kinds and agree(sd, 'mine'): yield (9, 'target: structure')
+            # a trigger keyword one card acts on ("trigger a unit's Extinguish ability", "repeat all Summon effects") and a trigger of
+            # that keyword's event on the other card, in either direction
+            def kw_events(card):
+                return {(k, ev) for (w,) in c.execute('select on_with from flat_do where card=? and on_with is not null', (card,))
+                        for part in w.split(';') for bits in [part.split(' ')] if len(bits) == 3 and bits[:2] == ['keyword', 'is'] and bits[2].isdigit()
+                        for k in [int(bits[2])] for (ev,) in c.execute('select e.event from keyword_trigger kt join event e on e.id=kt.event where kt.keyword=?', (k,))}
+            for a, b in ((e, p), (p, e)):
+                own = {ev for (ev,) in c.execute("select event from flat_when where card=? and obj_pick='self' or card=? and actor_pick='self'", (b, b))}
+                for k, ev in kw_events(a):
+                    if ev in own: yield (5, f'trigger keyword: {name(c, k)}')
+            # the enabler gives, removes or uses a keyword the payoff has (removing Shell from Eggs hatches them)
+            pay_kw = {k for (k,) in c.execute('select keyword from card_keyword where card=?', (p,))}
+            for x in makers:
+                for k, sd in c.execute("select keyword_ref, on_side from flat_do where card=? and act in ('remove_keyword','keyword_action') and keyword_ref is not null", (x,)).fetchall():
+                    if k in pay_kw and agree(sd, 'mine'): yield (9, f'acts on its keyword: {name(c, k)}')
             for w in asks:
                 for part in w.split(';'):
                     bits = part.removeprefix('of:').split(' ')

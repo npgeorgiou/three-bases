@@ -23,10 +23,10 @@ runeterra	T17	\bsupport:	event:supports	yes	Support: is the event supports (one 
 *	T22	\bwhen i'?m discarded\b	event:discarded	yes	trigger phrase
 *	T23	\bwhen i level up\b	event:levels_up	yes	trigger phrase
 *	V01	\bstun	value:stun|stunned|given_keyword	yes	verb
-*	V02	\bdraws?\b	value:draw|drawn	yes	verb (the word draw only, not drawn-as-adjective)
+*	V02	\bdraws?\b(?! pile)	value:draw|drawn	yes	verb (the word draw only, not drawn-as-adjective)
 *	V03	\bcreate	value:create|copy|created	yes	verb
 *	V04	\bsummon(?!:)	value:summon|copy|summoned|revive|summoned_this_round	yes	"verb; ""summoned this round"" is a state"
-*	V05	\bdeal \d|\bdamage\b	value:damage|damaged|survives_damage|nexus_damaged|excess_damage|negate_damage|damage_reduction|strike_with|increase_effect	yes	"verb; ""1 extra damage"" is increase_effect"
+*	V05	\bdeal \d|\bdamage\b(?! shield)	value:damage|damaged|survives_damage|nexus_damaged|excess_damage|negate_damage|damage_reduction|strike_with|increase_effect	yes	"verb; ""1 extra damage"" is increase_effect"
 *	V06	\bheals?\b	value:heal|healed	yes	verb
 *	V07	\bkill	value:kill|killed|dies	yes	verb
 *	V08	\bobliterate	value:obliterate|obliterated|keyword_action	yes	verb
