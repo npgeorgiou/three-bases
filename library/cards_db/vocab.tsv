@@ -335,3 +335,16 @@ keyword	Sleep	concept of using this keyword (a unit is removed for a round)	disa
 act	copy_keywords	"the ""on"" target gets the keywords of the ""to"" target (filter which: state positive / negative)"	buff	given_keyword	28 Oct 2026, v4
 act	remove_keywords	"remove all keywords of a kind from the target (filter in ""to"": state positive / negative)"	debuff		28 Oct 2026, v4
 state	negative	a negative keyword or effect			28 Oct 2026, v4
+act	swap_stats	"the ""on"" unit and the ""to"" unit exchange Power and Health values (Swapbot's Swap)"	swap	stat_changed	28 Oct 2026, v5
+act	shuffle_stats	shuffle the target's stats (the card text's words; no definition text in the library)	swap	stat_changed	28 Oct 2026, v5
+act	steal	take control of an enemy unit (lasts this_round when the text says this round)	steal		28 Oct 2026, v5
+act	unequip	remove the target's equipment	debuff		28 Oct 2026, v5
+event	counts_down	a Countdown goes down by one (When I count down)	delayed		28 Oct 2026, v5
+span	different_rounds	"counts the rounds in which the event happened at least once (""in 5+ different rounds"", ""for each different round"")"			28 Oct 2026, v5
+attr	total_stats	Power plus Health			28 Oct 2026, v5
+state	played_last_round	played last round		played	28 Oct 2026, v5
+state	started_in_deck	was in the deck at the start of the game			28 Oct 2026, v5
+state	has_subtype	has a subtype (type)			28 Oct 2026, v5
+state	subtype_not_on_board	"has a subtype no ally in play has (""a different subtype than allies in play"")"			28 Oct 2026, v5
+state	shares_subtype_with_it	shares a subtype with the target named it			28 Oct 2026, v5
+state	copy_of_it	"is a copy of (same card as) the target named it (""all copies of it"", ""allied copies of it"")"			28 Oct 2026, v5
