@@ -52,8 +52,8 @@ m50	mechanic	Fearsome units evade weak blockers	kw:Fearsome	select card from fla
 m51	mechanic	Quick Attack strikes first	kw:Quick Attack	select card from flat_do where act='first_strike'	runeterra
 m52	mechanic	SpellShield negates enemy spells	kw:SpellShield	select card from flat_do where act='counter'	runeterra
 m53	mechanic	Spirit / Gloom / Impact stacking keywords	kw:Impact	select card from flat_concept where concept='stacking_keyword'	runeterra
-m54	mechanic	damage equal to a stat or count	text:\bdeal (?:damage )?equal to\b|\bdeal (?:that much|damage equal)	select card from flat_do where act='damage' and params like '%amount=None%'	runeterra
-m55	mechanic	effects scaling with a count (for each)	text:\bfor each\b	select card from flat_if where test like 'amount_%' union select card from flat_do where params like '%=None%'	runeterra
+m54	mechanic	damage equal to a stat or count	text:\bdeal (?:damage )?equal to\b|\bdeal (?:that much|damage equal)	select card from flat_do where act='damage' and params glob '*amount=[a-z]*'	runeterra
+m55	mechanic	effects scaling with a count (for each)	text:\bfor each\b	select card from flat_if where test like 'amount_%' union select card from flat_do where params glob '*=[a-z]*'	runeterra
 m56	mechanic	temporary buffs this round	text:\bgive (?:\w+ ){0,5}\+\d+\|\+\d+ (?:\w+ ){0,3}this round	select card from flat_do where act='stat_change' and lasts='this_round'	runeterra
 m57	mechanic	Invoke (does it or cares about it)	text:\binvoke\b	select card from flat_do where keyword_ref=(select id from card where name='Invoke' and is_keyword=1) union select card from flat_when where event='keyword_used' and obj_with like '%keyword is '||(select id from card where name='Invoke' and is_keyword=1)||'%'	runeterra
 m58	mechanic	Manifest	text:\bmanifest\b	select card from flat_do where keyword_ref=(select id from card where name='Manifest' and is_keyword=1)	runeterra

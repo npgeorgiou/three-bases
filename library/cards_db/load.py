@@ -146,7 +146,7 @@ def main():
     for r in csv.DictReader(open(os.path.join(HERE, 'vocab.tsv')), delimiter='\t'):
         L.ins('vocab', **{k: r[k] for k in ('field', 'value', 'meaning', 'tree', 'causes', 'added')})
         if r['field'] == 'act':
-            for ev in filter(None, r['causes'].split(';')): L.ins('causes', act=r['value'], event=ev)
+            for ev in filter(None, r['causes'].split(';')): L.ins('causes', act=r['value'], event=ev.split(':')[0])  # 'given_keyword:Stun': the event
     for game in sys.argv[1:]:
         L.game_data(game); n = 0
         for f in sorted(glob.glob(os.path.join(HERE, 'read', game, '*.jsonl'))):

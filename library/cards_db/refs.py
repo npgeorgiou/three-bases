@@ -34,16 +34,25 @@ def build(c):
         if zone and kind == 'unit':
             for ev, *_ in causes.get(('zone', zone), []): ins(card, origin, via, ab, 'state', ev, kind, side, pick)
 
+    def kw_of(withs):
+        """the keyword a filter names, or the one that gives the state it names (given_keyword happenings)"""
+        m = re.search(r'keyword is (\d+)', withs or '')
+        if m: return int(m.group(1))
+        for st in re.findall(r'state (?:is|in) ([a-z_]+)', withs or ''):
+            for ev, *kw in causes.get(('state', st), []):
+                if kw: return kwid.get(kw[0].lower())
+        return None
+
     for r in c.execute('select card, origin, via, ability, event, actor_kind, actor_side, actor_pick, obj_kind, obj_side, '
                        'obj_pick, obj_with from flat_when').fetchall():
         card, o, v, ab, ev, ak, as_, ap, ok, os_, op, ow = r
         obj = ok or os_ or op
-        if ev and ev != 'always': ins(card, o, v, ab, 'trigger', ev, ok if obj else ak, os_ if obj else as_, op if obj else ap)
+        if ev and ev != 'always': ins(card, o, v, ab, 'trigger', ev, ok if obj else ak, os_ if obj else as_, op if obj else ap, kw_of(ow))
         state_rows(card, o, v, ab, ok, os_, op, ow, None)
     for r in c.execute('select card, origin, via, ability, event, of_kind, of_side, of_pick, of_zone, of_with, ev_obj_kind, '
                        'ev_obj_side, ev_obj_with from flat_if').fetchall():
         card, o, v, ab, ev, fk, fs, fp, fz, fw, ek, es, ew = r
-        if ev: ins(card, o, v, ab, 'condition', ev, ek or fk, es or fs, fp)
+        if ev: ins(card, o, v, ab, 'condition', ev, ek or fk, es or fs, fp, kw_of(ew))
         state_rows(card, o, v, ab, fk, fs, fp, fw, fz)
         state_rows(card, o, v, ab, ek, es, None, ew, None)
     for r in c.execute('select card, origin, via, ability, act, on_kind, on_side, on_pick, on_zone, on_with, keyword_ref '

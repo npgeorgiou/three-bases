@@ -42,7 +42,15 @@ def build(c):
                 parts += ['of:' + p for p in (withs(of) or '').split(';') if p]
         return ';'.join(parts) or None
 
-    num = lambda a: (c.execute("select value from amount where id=? and x='n'", (a,)).fetchone() or [None])[0] if a else None
+    def num(a):
+        """a plain number; a number per card level shows its level-1 value (a range: its lowest), so params stay comparable"""
+        if not a: return None
+        x, v = c.execute('select x, value from amount where id=?', (a,)).fetchone()
+        if x == 'n': return v
+        if x in ('per_level', 'range'):
+            first = c.execute('select item from amount_item where amount=? order by rowid limit 1', (a,)).fetchone()
+            return num(first[0]) if first else None
+        return x  # an amount worked out in play (event_amount, count, stat, ...): its kind, so queries can ask for it
 
     def event_info(ev):
         if not ev: return (None,) * 6
@@ -144,16 +152,27 @@ RULES = [
     ('hand_disruption', 'flat_do', "act in ('discard','obliterate','steal','draw') and on_side='enemy' and coalesce(on_zone,'') in ('hand','deck','deck_bottom')"),
     ('cost_increase', 'flat_do', "act='cost_change' and params like 'cost=%' and params not like 'cost=-%' and on_side='enemy'"),
     ('aura', 'flat_do', "origin in ('own','has_keyword') and act in ('stat_change','give_keyword') and on_pick='all' and lasts in ('while','permanent') and ability in (select a.id from ability a join event v on v.id=a.event where v.event='always')"),
-    ('tribal', 'flat_do', "on_with like '%type is%' or on_with like '%name_has%'"),
-    ('tribal', 'flat_when', "obj_with like '%type is%' or obj_with like '%name_has%'"),
-    ('variable_stats', 'flat_do', "act='stat_change' and on_pick='self' and params like '%=None%'"),
+    ('tribal', 'flat_do', "on_with like '%type is%' or on_with like '%type in%' or on_with like '%name_has%' or to_with like '%of:type i%'"),
+    ('tribal', 'flat_when', "obj_with like '%type is%' or obj_with like '%type in%' or obj_with like '%name_has%'"),
+    ('tribal', 'flat_if', "coalesce(of_with,'') || coalesce(ev_obj_with,'') like '%type i%'"),
+    # board positions (any game with a grid, lanes or rows): any position = positional; neighbours = adjacency; columns = lanes
+    ('positional', 'flat_do', "coalesce(on_with,'') || coalesce(to_with,'') like '%position %'"),
+    ('positional', 'flat_if', "coalesce(of_with,'') || coalesce(ev_obj_with,'') like '%position %'"),
+    ('positional', 'flat_when', "obj_with like '%position %'"),
+    ('adjacency', 'flat_do', "coalesce(on_with,'') || coalesce(to_with,'') like '%position % bordering%' or coalesce(on_with,'') || coalesce(to_with,'') like '%position % surrounding%' or coalesce(on_with,'') || coalesce(to_with,'') like '%position % sides%'"),
+    ('adjacency', 'flat_if', "coalesce(of_with,'') like '%position % bordering%' or coalesce(of_with,'') like '%position % surrounding%' or coalesce(of_with,'') like '%position % sides%'"),
+    ('lanes', 'flat_do', "coalesce(on_with,'') || coalesce(to_with,'') like '%position % ahead%' or coalesce(on_with,'') || coalesce(to_with,'') like '%position % first_in_front%' or coalesce(on_with,'') || coalesce(to_with,'') like '%position % same_column%' or coalesce(on_with,'') || coalesce(to_with,'') like '%position % behind%'"),
+    ('rows', 'flat_do', "coalesce(on_with,'') || coalesce(to_with,'') like '%position % same_row%' or coalesce(on_with,'') || coalesce(to_with,'') like '%position % furthest_row%'"),
+    ('variable_stats', 'flat_do', "act='stat_change' and on_pick='self' and params glob '*=[a-z]*'"),
+    # damage, then the same amount to my side (Runeterra Drain: heal the Nexus; Stormbound drain: strength to the drainer)
+    ('lifesteal', 'flat_do', "act in ('heal','stat_change') and link='then' and params like '%=event_amount%' and exists (select 1 from flat_do d2 where d2.ability=flat_do.ability and d2.card=flat_do.card and d2.act='damage' and d2.seq<flat_do.seq)"),
     ('death_count', 'flat_if', "event='dies' and test in ('event_count','amount_event_count','amount_count')"),
     ('combo_sequence', 'flat_if', "test='first_card' or (event='played' and span in ('this_round','last_round'))"),
     ('adjacency', 'flat_do', "on_pick in ('right_of_self','left_of_self')"),
     ('movement', 'flat_do', "act in ('swap','move') and coalesce(on_zone,eff_zone,'board')='board'"),
     ('board_presence', 'flat_if', "test in ('count','amount_count') and of_zone='board' and of_side='mine'"),
     ('count_payoff', 'flat_if', "test in ('amount_count','amount_event_count')"),
-    ('removal', 'flat_do', "act in ('kill','obliterate','capture') and on_side in ('enemy','any')"),
+    ('removal', 'flat_do', "act in ('kill','obliterate','capture') and (on_side in ('enemy','any') or (coalesce(on_side,'')='' and on_pick in ('all','random','chosen','lowest','highest') and on_kind in ('unit','unit_or_structure','anything','landmark')))"),
 ]
 
 
