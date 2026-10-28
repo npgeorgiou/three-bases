@@ -1,0 +1,8 @@
+game	card	pattern	verdict	by	date
+runeterra	751651	T09	record_right	Claude: text is "Level up: Missing Translation" in the library and in Riot's data; nothing to describe	28 Oct 2026
+runeterra	900009	KW	record_right	Claude: Origin names a deck-building origin, no effect in play (reader rejection agreed)	28 Oct 2026
+runeterra	750960	V19	record_wrong, fixed by hand: state attacked_this_round added (vocab v7)	Claude	28 Oct 2026
+runeterra	751259	V19	record_wrong, fixed by hand: state struck_this_round added (vocab v7)	Claude	28 Oct 2026
+runeterra	751115	V03	no value for "your cards are created by this card": card marked unsure	Claude	28 Oct 2026
+runeterra	751630	V20	no value for "keywords allies have had this game": card marked unsure	Claude	28 Oct 2026
+runeterra	751017	V19	no value for "this round buffs become permanent": card marked unsure	Claude	28 Oct 2026

@@ -1,0 +1,14 @@
+{"id":750960,"field":"with","need":"state attacked_this_round"}
+{"id":751017,"field":"act","need":"make_permanent"}
+{"id":751067,"field":"act","need":"stat_raise_to"}
+{"id":751115,"field":"on","need":"cards_created_by_this_card"}
+{"id":751259,"field":"with","need":"state struck_this_round"}
+{"id":751406,"field":"act","need":"keep_buffs_on_recall"}
+{"id":751575,"field":"params","need":"buffs_of_self"}
+{"id":751630,"field":"with","need":"state had_this_game"}
+{"id":751985,"field":"with","need":"state cost_reduced"}
+{"id":796491,"field":"zone","need":"deck_or_hand"}
+{"id":796511,"field":"pick","need":"latest"}
+{"id":796514,"field":"act","need":"stat_raise_to"}
+{"id":796544,"field":"params","need":"can_target_anything"}
+{"id":797078,"field":"n","need":"open_attack_slots"}

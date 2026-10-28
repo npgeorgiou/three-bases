@@ -13,6 +13,8 @@ Batch name: BATCH.
 4. Write records, one compact JSON object per line, in input order, in parts of about 50 cards
    (read/GAME/BATCH.part1.jsonl, part2, ...). If part files already exist, keep them and continue with the cards not in them.
    Then join all parts into read/GAME/BATCH.jsonl with one shell command and delete the parts.
+   A card with check_note: the word check found wording its earlier record lacks. Describe that wording if the text
+   means it; if the text does not mean it, add the card id to read/GAME/BATCH.rejected.jsonl as {"id": ..., "pattern": ..., "why": ...}.
 5. Proposals (only for values that are missing) go to read/GAME/BATCH.proposals.jsonl.
 6. Run: python3 check.py GAME read/GAME/BATCH.jsonl --input input/GAME/BATCH.jsonl and fix every problem until it reports
    0 problems.

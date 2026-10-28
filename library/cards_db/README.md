@@ -23,11 +23,11 @@ are the source; `cards.sqlite` is rebuilt from them.
 | `input/<game>/` | Reader input batches |
 | `read/<game>/` | Reader output: one JSON record per card (the source of truth), plus proposals for new values |
 | `CHANGES.md` | Every change to the shapes or values, with the card that caused it |
-| `CHECK_20.md`, `CHECK_20_ids.txt`, `check_table.py` | Kaptain's check file, always one table: one row per effect, columns = stored fields, names instead of ids, nested targets/events/conditions/amounts written in place as field=value, the card text in a bold row above each card's rows (`check_table.py CHECK_20.md $(cat CHECK_20_ids.txt)`) |
+| `CHECK_20.md`, `CHECK_20_ids.txt`, `check_table.py` | Kaptain's check file, for each card one line with name and text, then its rows (one per effect, columns = stored fields, names instead of ids, nested targets/events/conditions/amounts as field=value) (`check_table.py CHECK_20.md $(cat CHECK_20_ids.txt)`) |
 | `STATUS.md` | Which batches are done, partial or still to read (made by `status.py <game>` from the files) |
 | `status.py`, `show.py`, `compare.py` | Progress from the files; cards with their records for checking by eye; first vs second reading |
 | `raw.py` | A card's stored rows exactly as in the database (ids, values, numbers) |
-| `pattern_check.py` | Plain wording (Round Start:, Stun, a named keyword...) must show up somewhere in the card's record |
+| `pattern_check.py`, `patterns/` | Word check: patterns.tsv (all wording rules, judged once each), verdicts.tsv (flags decided once), <game>_flags.tsv (current flags); GUIDE step 2.1 |
 | `exclude.tsv`, `excluded/` | Entries left out on purpose (Runeterra: Path of Champions items) and their old records |
 | `rows.py` | A card's rows from `cards.sqlite` as a table with names (what Kaptain checks) |
 | `reread.py`, `normalize.py` | Re-reading chosen records under the current brief (old readings kept in `replaced/`); one canonical form for equal meanings |

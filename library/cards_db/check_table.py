@@ -1,5 +1,4 @@
-"""Kaptain's check file: chosen cards' stored rows as ONE table, one row per effect, with the card's text in a row above its
-rows. Columns are the stored fields; links to cards, keywords, types and name parts are shown as names; a target, event,
+"""Kaptain's check file: for each chosen card, one line with its name and text, then its stored rows (one row per effect). Columns are the stored fields; links to cards, keywords, types and name parts are shown as names; a target, event,
 condition or amount that an effect points to is written out in place as field=value pairs (its stored fields, no prose).
 Usage: check_table.py <out.md> <card id> [...]     or     check_table.py <out.md> --random <game> <n>"""
 import os, random, sqlite3, sys
@@ -73,19 +72,19 @@ def main():
         random.seed(); cards = random.sample(ids, int(args[2]))
     else: cards = [int(a) for a in args]
     cell = lambda v: '' if v is None else str(v).replace('|', '/')
-    out = [f'# Stored rows of {len(cards)} cards (check_table.py)',
-           'One row per effect. The bold row above a card\'s rows is its text (not stored). Targets, events, conditions and amounts '
-           'are written in place as their stored fields.', '',
-           '| card | ' + ' | '.join(COLS) + ' |', '|' + '---|' * (len(COLS) + 1)]
+    head = ['| ' + ' | '.join(COLS) + ' |', '|' + '---|' * len(COLS)]
+    out = [f'# Stored rows of {len(cards)} cards (check_table.py)', '',
+           'Each card: its name and text on one line, then its stored rows, one row per effect. Targets, events, conditions '
+           'and amounts are written in place as their stored fields.', '']
     for cid in cards:
         nm = name('card', cid)
         kws = ', '.join(name('card', k) for (k,) in c.execute('select keyword from card_keyword where card=?', (cid,)))
-        out.append(f'| **{cell(nm)}** | **{cell(TEXT.get(cid, ""))}**' + (f' (keywords: {kws})' if kws else '') + ' |' + ' |' * (len(COLS) - 1))
+        out.append(f'**{nm}**: {TEXT.get(cid, "")}' + (f' (keywords: {kws})' if kws else ''))
+        out.append('')
         abs_ = c.execute('select id, seq from ability where card=? and given_by_effect is null order by seq', (cid,)).fetchall()
-        for ab, seq in abs_:
-            for r in ability_rows(ab, str(seq)):
-                out.append('| ' + cell(nm) + ' | ' + ' | '.join(cell(r.get(k)) for k in COLS) + ' |')
-        if not abs_: out.append(f'| {cell(nm)} | (no abilities stored) |' + ' |' * (len(COLS) - 1))
+        rows = [r for ab, seq in abs_ for r in ability_rows(ab, str(seq))]
+        out += head + ['| ' + ' | '.join(cell(r.get(k)) for k in COLS) + ' |' for r in rows] if rows else ['(no rows stored)']
+        out.append('')
     open(out_path, 'w').write('\n'.join(out) + '\n')
 
 main()

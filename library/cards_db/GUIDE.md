@@ -25,9 +25,19 @@ runs from the files in this folder; nothing depends on an earlier chat.
 - Keep a 10% sample for a second, independent reading (`second/`): it is the only accuracy measure that needs no person.
 
 ## 2. After all batches
-1. `pattern_check.py <game>`: plain wording that must show up in the record (Round Start:, Stun, Deal N, a named keyword).
-   Add the game's own trigger words to TRIGGERS and its keyword stand-ins to KW_EQUIV first. Re-read what it flags with
-   the flags as notes (`reread.py make <game> ids ...`, notes file in second/<game>/).
+1. Word check (decided 28 Oct 2026). Patterns live in `patterns/patterns.tsv` only (game or *, id, regex, what the record
+   must hold, use yes/no, reason). Only wording that names something a record must contain is a pattern: trigger labels
+   and phrases (an event), standard verbs (an act), duration words (this round, this game), and every keyword name outside
+   the card's own Keywords field (rule KW, automatic). Concept-tag patterns of the old library (tools/patterns/*.txt,
+   tools/games/*.md) are not used: they tag outcomes, not words. Text is prepared first: the Keywords field split off,
+   every card name of the game masked (multi-word names, the names in the text, plurals).
+   A pattern is judged once, by what its wording means in the texts, never by agreement with records (that would be
+   circular): read its hits; where the wording means something else ("a follower that costs 2 more" is a filter, not a
+   cost change), narrow the regex or widen what it accepts, and write the reason in the file.
+   `pattern_check.py <game> --reread` writes patterns/<game>_flags.tsv and one re-read batch of all flagged cards, each
+   flag as a check_note. The reader describes the wording or rejects the flag (BATCH.rejected.jsonl). Each rejection is
+   decided once (Claude reads the text; a doubt goes to Kaptain) and written to patterns/verdicts.tsv; judged flags never
+   come back. A pattern rejected twice for the same reason is narrowed. Run after every merge of a re-read.
 2. Values: tally the readers' proposals; add the recurring ones to vocab.tsv and BRIEF.md (a line in CHANGES.md each), then
    `reread.py make <game> unsure` and read those batches.
 3. `compare.py` first vs second readings, a judge agent (model opus) classifies each difference against the text
@@ -82,4 +92,9 @@ runs from the files in this folder; nothing depends on an earlier chat.
 - Kaptain reviews: one table, names instead of ids, card text above its rows (check_table.py). Many tables or merged prose
   columns are unreadable for him.
 - Edit files with Edit or a Python replace that asserts one match; a sed over a docstring broke build_input.py once.
+- A re-read may write the same meaning a new way (Thresh (level 2): "summon an attacking champion" as a state filter
+  instead of start_attack, which broke a combo). When two forms of one meaning appear, pick one, add a normalize rule and
+  a BRIEF rule, and normalize all records, not just the re-read ones.
+- Scripts that patch records must be safe to run twice (check the new text is not there yet): a crash halfway through
+  a multi-file patch leaves some files changed and some not.
 - Ask Kaptain before inventing a definition: he supplies them (Deep, Plant, Stance, Curse, Ascended came from him).

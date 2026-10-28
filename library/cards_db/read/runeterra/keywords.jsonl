@@ -23,7 +23,7 @@
 {"id":750390,"abilities":[]}
 {"id":750391,"abilities":[{"when":{"event":"activated"},"do":[{"act":"return_to_hand","on":{"pick":"it"}},{"act":"silence","on":{"pick":"it"},"link":"then"}]}]}
 {"id":750392,"abilities":[]}
-{"id":750393,"abilities":[],"trigger":{"event":"attacks","actor":{"pick":"self"}}}
+{"id":750393,"abilities":[],"trigger":{"event":"supports","actor":{"pick":"self"}}}
 {"id":750394,"abilities":[]}
 {"id":750395,"abilities":[],"trigger":{"event":"spell_resolves","actor":{"kind":"player","side":"mine"}}}
 {"id":750396,"abilities":[{"when":{"event":"activated"},"limit":"once_per_round","do":[{"act":"attach","on":{"pick":"self"},"to":{"kind":"unit","side":"mine","pick":"chosen","zone":"board"}}]},{"when":{"event":"leaves_play","object":{"pick":"attached_to"}},"do":[{"act":"return_to_hand","on":{"pick":"self"}}]}]}

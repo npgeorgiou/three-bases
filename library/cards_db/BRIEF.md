@@ -91,6 +91,13 @@ AMOUNT   a number, or `{"x": x, "of": TARGET, "attr": attr, "event": EVENT, "spa
    name that is no single card ("a random Husk", "Spritelings", "Mecha Yordles", "Turrets") = filter name_has. A word that
    is none of these ("it", "that keyword", "the Emperor's Deck") is never a card or keyword reference.
 
+20. "Support:" = event supports, actor self; the supported ally is the unit to my right (pick right_of_self). "Attack:" is
+   event attacks. Never write one for the other.
+
+21. A unit put into play attacking ("summon an attacking Sand Soldier", "revive an attacking Ephemeral copy", "summon it
+   attacking") = the summon / revive / copy, then `{"act": "start_attack", "on": {"pick": "it"}, "link": "and"}`. Never a
+   state attacking filter on what is summoned.
+
 ## Keyword entries (category keyword)
 A keyword's record says what the keyword means, so that every card with it inherits that meaning. Four kinds:
 - Status keywords (a unit has it: Elusive, Barrier, Stun, Quick Attack, Ephemeral, ...): abilities of the holder, "I" / "this

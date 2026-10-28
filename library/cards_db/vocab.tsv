@@ -353,3 +353,5 @@ param	min	"lower limit of the amount or of the repetitions (""min 2 times"", ""p
 attr	right_of	"is to the right of the linked card's unit on the board (ref = card name: ""on Vladimir's right"")"			28 Oct 2026, v6
 attr	does	"a card whose own effects include the act in val (""spells that deal damage or kill"": does in damage, kill)"			28 Oct 2026, v6
 state	recalled_this_game	was Recalled this game			28 Oct 2026, v6
+state	attacked_this_round	attacked this round		attacks	28 Oct 2026, v7
+state	struck_this_round	struck this round		strikes	28 Oct 2026, v7

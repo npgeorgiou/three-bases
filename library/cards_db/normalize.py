@@ -9,6 +9,9 @@ and second readings). Safe to run any number of times. Each rule is listed in CH
      not-this-card filter if they lack it.
   N6 names.tsv: a name read as a keyword that is something else becomes it (a keyword, a type, a name_has family) or is
      dropped (filters and effects naming it removed), per game, each line with its reason.
+  N7 a unit put into play attacking ("summon an attacking X", "revive an attacking copy") = the summon/revive/copy, then
+     start_attack on it (link and); a state attacking filter on its target is that, written the other way.
+  N8 a copy of a dead unit put into play (copy, on: unit in discard, zone board) is revive.
 Usage: normalize.py <game> <file.jsonl> [...]   rewrites the files in place, prints how many records changed."""
 import glob, json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -94,6 +97,33 @@ def fix_names(x, table):
     elif isinstance(x, list):
         for v in x: fix_names(v, table)
 
+def attacking(x):
+    """N7"""
+    if isinstance(x, dict):
+        if isinstance(x.get('do'), list):
+            out = []
+            for k, e in enumerate(x['do']):
+                out.append(e)
+                o = e.get('on') if isinstance(e.get('on'), dict) else {}
+                if e.get('act') == 'copy' and o.get('zone') == 'discard' and o.get('kind') == 'unit' and e.get('zone') == 'board':
+                    e['act'] = 'revive'; e.pop('zone')  # N8
+                if e.get('act') not in ('summon', 'revive', 'copy'): continue
+                hit = False
+                for side in ('on', 'to'):
+                    t = e.get(side)
+                    if isinstance(t, dict) and isinstance(t.get('with'), list):
+                        w = [f for f in t['with'] if not (f.get('attr') == 'state' and f.get('val') == 'attacking' and f.get('op') in ('is', 'in'))]
+                        if len(w) != len(t['with']):
+                            hit = True; t['with'] = w
+                            if not w: t.pop('with')
+                            if side == 'to' and set(t) <= {'kind', 'side'}: e.pop('to')
+                nxt = x['do'][k + 1] if k + 1 < len(x['do']) else {}
+                if hit and nxt.get('act') != 'start_attack': out.append({'act': 'start_attack', 'on': {'pick': 'it'}, 'link': 'and'})
+            x['do'] = out
+        for v in x.values(): attacking(v)
+    elif isinstance(x, list):
+        for v in x: attacking(v)
+
 def main():
     game = sys.argv[1]; kinds = keyword_kinds(game); table = names_table(game)
     inputs = {}
@@ -104,7 +134,7 @@ def main():
         for r in L:
             r2 = clean(json.loads(json.dumps(r)))
             for ab in r2.get('abilities', []): fix_ability(ab, kinds)
-            fix_names(r2, table); fix_filters(r2); another(r2, inputs)
+            fix_names(r2, table); attacking(r2); fix_filters(r2); another(r2, inputs)
             n += r2 != r; out.append(r2)
         open(path, 'w').write(''.join(json.dumps(r, separators=(',', ':')) + '\n' for r in out))
         print(f'{os.path.basename(path)}: {n} of {len(L)} records changed')

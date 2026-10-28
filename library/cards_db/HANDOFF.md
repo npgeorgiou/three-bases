@@ -14,9 +14,9 @@
 
 ## Open for Runeterra
 1. Kaptain's verdict on CHECK_20.md (fix each error for every card with the same problem).
-2. The word check against reader records (Kaptain's point 1, 28 Oct): pattern selection, judging and batching are proposed
-   in chat and wait for his answer; nothing built yet. The old library (tags, key, patterns, query.py) is still not
-   connected to cards.sqlite; that check is the first connection.
+2. Word check built and run (GUIDE step 2.1): 0 flags open. Run `pattern_check.py runeterra` after every merge; new flags
+   go through `--reread`, then each rejection is judged once into patterns/verdicts.tsv. The old library's concept-tag
+   patterns are not used (GUIDE 2.1 says why); tags, key and query.py are still not connected to cards.sqlite.
 3. Definitions Kaptain gave (28 Oct): Deep, Plant (supplement/runeterra_kaptain.jsonl, records in keywords_stub.jsonl);
    Cursed = Curse, Ascended = type, Stance = name family, Release dropped (names.tsv, normalize N6).
    Still references to names that are no card: Spriteling, Phased Moon Weapon, Treasure (a Riot subtype the library lacks),

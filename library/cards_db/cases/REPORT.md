@@ -16,20 +16,20 @@ Made by `cases/run.py runeterra`.
 | m06 | stuns | 69 | 66 | 96% | 10 | yes |
 | m07 | frostbites (power to 0) | 21 | 21 | 100% | 1 | yes |
 | m08 | recalls units or cares about recalling | 59 | 59 | 100% | 63 | yes |
-| m09 | draws cards | 178 | 174 | 98% | 22 | yes |
-| m10 | creates cards | 415 | 414 | 100% | 177 | yes |
+| m09 | draws cards | 178 | 175 | 98% | 22 | yes |
+| m10 | creates cards | 415 | 414 | 100% | 183 | yes |
 | m11 | damages the enemy Nexus | 89 | 87 | 98% | 256 | yes |
 | m12 | heals | 63 | 61 | 97% | 71 | yes |
-| m13 | discards | 37 | 36 | 97% | 105 | yes |
+| m13 | discards | 37 | 36 | 97% | 104 | yes |
 | m14 | obliterates | 43 | 43 | 100% | 21 | yes |
 | m15 | levels up (champion level-up condition) | 109 | 108 | 99% | 3 | yes |
 | m16 | grants lasting stats | 216 | 216 | 100% | 226 | yes |
 | m17 | gives Barrier (damage prevention) | 29 | 29 | 100% | 2 | yes |
 | m18 | Nexus Strike triggers | 33 | 33 | 100% | 1 | yes |
 | m19 | Last Breath (dies) triggers | 47 | 46 | 98% | 17 | yes |
-| m20 | Round Start triggers | 114 | 113 | 99% | 0 | yes |
-| m21 | Round End triggers | 31 | 31 | 100% | 185 | yes |
-| m22 | Attack triggers | 96 | 95 | 99% | 246 | yes |
+| m20 | Round Start triggers | 114 | 114 | 100% | 0 | yes |
+| m21 | Round End triggers | 31 | 31 | 100% | 184 | yes |
+| m22 | Attack triggers | 96 | 95 | 99% | 228 | yes |
 | m23 | Overwhelm units deal excess damage | 109 | 109 | 100% | 34 | yes |
 | m24 | Elusive units can't be blocked by most units | 77 | 77 | 100% | 256 | yes |
 | m25 | Ephemeral units die at round end | 25 | 25 | 100% | 41 | yes |
@@ -39,15 +39,15 @@ Made by `cases/run.py runeterra`.
 | m29 | Toss (obliterate own deck) | 13 | 13 | 100% | 3 | yes |
 | m30 | Rally (attack token) | 25 | 25 | 100% | 18 | yes |
 | m31 | Predict | 20 | 20 | 100% | 62 | yes |
-| m32 | reduces costs | 125 | 123 | 98% | 54 | yes |
+| m32 | reduces costs | 125 | 125 | 100% | 54 | yes |
 | m33 | copies cards or spells (incl. becoming an exact copy) | 98 | 97 | 99% | 62 | yes |
 | m34 | Behold (have a card) | 15 | 15 | 100% | 98 | yes |
 | m35 | Daybreak / Nightfall | 42 | 42 | 100% | 1 | yes |
 | m36 | can't block | 8 | 8 | 100% | 325 | yes |
-| m37 | summons units or cares about summoning | 275 | 275 | 100% | 175 | yes |
+| m37 | summons units or cares about summoning | 275 | 275 | 100% | 181 | yes |
 | m38 | revives | 23 | 22 | 96% | 7 | yes |
-| m39 | silences | 11 | 11 | 100% | 41 | yes |
-| m40 | shuffles cards into a deck | 20 | 20 | 100% | 211 | yes |
+| m39 | silences | 11 | 11 | 100% | 42 | yes |
+| m40 | shuffles cards into a deck | 20 | 20 | 100% | 210 | yes |
 | m41 | triggers when you draw | 7 | 7 | 100% | 11 | yes |
 | m42 | When I'm summoned triggers | 281 | 281 | 100% | 29 | yes |
 | m43 | Strike triggers | 35 | 35 | 100% | 249 | yes |
@@ -62,7 +62,7 @@ Made by `cases/run.py runeterra`.
 | m52 | SpellShield negates enemy spells | 27 | 27 | 100% | 35 | yes |
 | m53 | Spirit / Gloom / Impact stacking keywords | 35 | 35 | 100% | 45 | yes |
 | m54 | damage equal to a stat or count | 9 | 9 | 100% | 38 | yes |
-| m55 | effects scaling with a count (for each) | 85 | 82 | 96% | 264 | yes |
+| m55 | effects scaling with a count (for each) | 85 | 83 | 98% | 263 | yes |
 | m56 | temporary buffs this round | 122 | 122 | 100% | 44 | yes |
 | m57 | Invoke (does it or cares about it) | 19 | 19 | 100% | 0 | yes |
 | m58 | Manifest | 32 | 32 | 100% | 0 | yes |
@@ -72,12 +72,12 @@ Made by `cases/run.py runeterra`.
 | m62 | Equipment attaches | 42 | 42 | 100% | 34 | yes |
 | m63 | Augment grows on created cards | 10 | 10 | 100% | 2 | yes |
 | m64 | Formidable strikes with Health | 8 | 8 | 100% | 2 | yes |
-| m65 | Reputation | 13 | 13 | 100% | 144 | yes |
+| m65 | Reputation | 13 | 13 | 100% | 145 | yes |
 | m66 | Allegiance | 10 | 10 | 100% | 18 | yes |
 | m67 | Enlightened | 15 | 15 | 100% | 0 | yes |
 | m68 | Empowered | 10 | 10 | 100% | 4 | yes |
 | m69 | Fury grows on kills | 26 | 26 | 100% | 6 | yes |
-| m70 | transforms | 58 | 58 | 100% | 20 | yes |
+| m70 | transforms | 58 | 58 | 100% | 21 | yes |
 | m71 | Capture | 18 | 18 | 100% | 4 | yes |
 | m72 | Deathless / cheat death | 3 | 3 | 100% | 3 | yes |
 | m73 | Nab | 4 | 4 | 100% | 0 | yes |
@@ -88,7 +88,7 @@ Made by `cases/run.py runeterra`.
 | m78 | Fleeting cards are discarded at round end | 44 | 44 | 100% | 0 | yes |
 | m79 | Advance (Countdowns) | 22 | 22 | 100% | 0 | yes |
 | m80 | counters spells | 10 | 10 | 100% | 52 | yes |
-| m81 | benefits from allies dying, any way (trigger, condition, count, dead allies picked) | 41 | 41 | 100% | 86 | yes |
+| m81 | benefits from allies dying, any way (trigger, condition, count, dead allies picked) | 41 | 41 | 100% | 85 | yes |
 
 ## Combos (the enabler must set off the payoff)
 
@@ -154,7 +154,7 @@ Made by `cases/run.py runeterra`.
 | r13 | Ionia | archetype (Claude) | recall | 8 | 52 | yes |
 | r14 | Ionia | archetype (Claude) | stun | 5 | 13 | yes |
 | r15 | Piltover & Zaun | archetype (Claude) | discard | 8 | 30 | yes |
-| r16 | Piltover & Zaun | archetype (Claude) | creates cards | 20 | 83 | yes |
+| r16 | Piltover & Zaun | archetype (Claude) | creates cards | 20 | 87 | yes |
 | r17 | Bilgewater | archetype (Claude) | Plunder | 10 | 20 | yes |
 | r18 | Bilgewater | archetype (Claude) | Toss | 3 | 6 | yes |
 | r19 | Bilgewater | archetype (Claude) | damages the enemy Nexus | 8 | 37 | yes |
@@ -163,15 +163,15 @@ Made by `cases/run.py runeterra`.
 | r22 | Shurima | archetype (Claude) | Countdown | 8 | 14 | yes |
 | r23 | Bandle City | archetype (Claude) | creates cards | 15 | 87 | yes |
 | r25 | Bandle City | signature (library tags) | trap_secret | 6 | 26 | yes |
-| r26 | Bandle City | signature (library tags) | discard | 6 | 21 | yes |
-| r27 | Bandle City | signature (library tags) | on_attack | 36 | 89 | yes |
+| r26 | Bandle City | signature (library tags) | discard | 6 | 20 | yes |
+| r27 | Bandle City | signature (library tags) | on_attack | 36 | 87 | yes |
 | r28 | Bandle City | signature (library tags) | transform | 8 | 12 | yes |
 | r29 | Bandle City | splash (library tags) | stat_gain | 2 | 72 | yes |
-| r30 | Bandle City | splash (library tags) | on_spell | 2 | 5 | yes |
+| r30 | Bandle City | splash (library tags) | on_spell | 2 | 6 | yes |
 | r31 | Bandle City | splash (library tags) | resource_gain | 4 | 8 | yes |
 | r32 | Bandle City | splash (library tags) | turn_start | 10 | 18 | yes |
 | r33 | Bilgewater | signature (library tags) | resource_gain | 11 | 20 | yes |
-| r34 | Bilgewater | splash (library tags) | on_spell | 3 | 10 | yes |
+| r34 | Bilgewater | splash (library tags) | on_spell | 3 | 11 | yes |
 | r35 | Bilgewater | signature (library tags) | draw | 16 | 36 | yes |
 | r36 | Bilgewater | signature (library tags) | turn_end | 11 | 30 | yes |
 | r37 | Bilgewater | signature (library tags) | damage | 17 | 54 | yes |
@@ -184,7 +184,7 @@ Made by `cases/run.py runeterra`.
 | r44 | Demacia | splash (library tags) | merge_attach | 6 | 11 | yes |
 | r45 | Demacia | splash (library tags) | on_ally_play | 6 | 43 | yes |
 | r47 | Demacia | splash (library tags) | banish | 2 | 9 | yes |
-| r48 | Demacia | splash (library tags) | on_attack | 12 | 64 | yes |
+| r48 | Demacia | splash (library tags) | on_attack | 12 | 62 | yes |
 | r49 | Freljord | signature (library tags) | on_damaged | 4 | 8 | yes |
 | r50 | Freljord | signature (library tags) | excess_damage | 18 | 35 | yes |
 | r51 | Freljord | signature (library tags) | damage_reduction | 4 | 9 | yes |
@@ -195,7 +195,7 @@ Made by `cases/run.py runeterra`.
 | r56 | Freljord | splash (library tags) | delayed | 3 | 4 | yes |
 | r57 | Ionia | signature (library tags) | swap | 2 | 6 | yes |
 | r58 | Ionia | signature (library tags) | return_to_hand | 26 | 52 | yes |
-| r59 | Ionia | signature (library tags) | attack_now | 5 | 15 | yes |
+| r59 | Ionia | signature (library tags) | attack_now | 5 | 19 | yes |
 | r60 | Ionia | signature (library tags) | disable | 14 | 21 | yes |
 | r61 | Ionia | splash (library tags) | turn_end | 8 | 32 | yes |
 | r62 | Ionia | splash (library tags) | cost_reduction | 6 | 23 | yes |
@@ -208,7 +208,7 @@ Made by `cases/run.py runeterra`.
 | r69 | Noxus | splash (library tags) | first_strike | 7 | 16 | yes |
 | r70 | Noxus | splash (library tags) | cost_reduction | 5 | 12 | yes |
 | r71 | Noxus | splash (library tags) | on_attack | 12 | 87 | yes |
-| r72 | Noxus | splash (library tags) | on_play | 26 | 124 | yes |
+| r72 | Noxus | splash (library tags) | on_play | 26 | 125 | yes |
 | r73 | Piltover & Zaun | signature (library tags) | trap_secret | 6 | 17 | yes |
 | r74 | Piltover & Zaun | signature (library tags) | discard | 6 | 30 | yes |
 | r75 | Piltover & Zaun | signature (library tags) | cost_reduction | 12 | 38 | yes |
@@ -221,14 +221,14 @@ Made by `cases/run.py runeterra`.
 | r82 | Shadow Isles | signature (library tags) | destroy | 29 | 88 | yes |
 | r83 | Shadow Isles | signature (library tags) | death_trigger | 14 | 50 | yes |
 | r84 | Shadow Isles | signature (library tags) | summon | 34 | 44 | yes |
-| r85 | Shadow Isles | splash (library tags) | attack_now | 2 | 12 | yes |
+| r85 | Shadow Isles | splash (library tags) | attack_now | 2 | 14 | yes |
 | r87 | Shadow Isles | splash (library tags) | cant_attack | 6 | 63 | yes |
 | r88 | Shadow Isles | splash (library tags) | merge_attach | 4 | 6 | yes |
 | r89 | Shurima | signature (library tags) | variety_payoff | 4 | 11 | yes |
 | r90 | Shurima | signature (library tags) | delayed | 12 | 15 | yes |
 | r91 | Shurima | signature (library tags) | counter_spell | 2 | 20 | yes |
 | r92 | Shurima | signature (library tags) | selection | 6 | 27 | yes |
-| r93 | Shurima | splash (library tags) | attack_now | 4 | 13 | yes |
+| r93 | Shurima | splash (library tags) | attack_now | 4 | 18 | yes |
 | r94 | Shurima | splash (library tags) | excess_damage | 11 | 23 | yes |
 | r95 | Shurima | splash (library tags) | copy | 8 | 13 | yes |
 | r96 | Shurima | splash (library tags) | on_ally_play | 6 | 50 | yes |
@@ -240,16 +240,16 @@ Made by `cases/run.py runeterra`.
 | r102 | Targon | splash (library tags) | cost_reduction | 6 | 22 | yes |
 | r104 | Targon | splash (library tags) | discard | 2 | 8 | yes |
 | r105 | Bandle City | archetype (library) | scaling | 34 | 82 | yes |
-| r106 | Bandle City | archetype (library) | chaos | 28 | 85 | yes |
+| r106 | Bandle City | archetype (library) | chaos | 28 | 84 | yes |
 | r107 | Bandle City | archetype (library) | trickery | 6 | 26 | yes |
 | r108 | Bandle City | archetype (library) | transformation | 16 | 29 | yes |
 | r109 | Bilgewater | archetype (library) | chaos | 30 | 78 | yes |
-| r110 | Bilgewater | archetype (library) | ramp | 17 | 37 | yes |
+| r110 | Bilgewater | archetype (library) | ramp | 17 | 36 | yes |
 | r111 | Bilgewater | archetype (library) | graveyard | 4 | 40 | yes |
 | r112 | Demacia | archetype (library) | scaling | 21 | 38 | yes |
 | r113 | Demacia | archetype (library) | fortress | 22 | 50 | yes |
 | r114 | Freljord | archetype (library) | sustain | 14 | 25 | yes |
-| r115 | Freljord | archetype (library) | transformation | 11 | 17 | yes |
+| r115 | Freljord | archetype (library) | transformation | 11 | 18 | yes |
 | r116 | Ionia | archetype (library) | positional | 8 | 12 | yes |
 | r117 | Ionia | archetype (library) | control | 38 | 89 | yes |
 | r118 | Ionia | archetype (library) | ramp | 14 | 32 | yes |
@@ -264,5 +264,5 @@ Made by `cases/run.py runeterra`.
 | r127 | Shadow Isles | archetype (library) | swarm | 36 | 70 | yes |
 | r128 | Shurima | archetype (library) | trickery | 5 | 8 | yes |
 | r129 | Shurima | archetype (library) | swarm | 30 | 88 | yes |
-| r130 | Targon | archetype (library) | spellslinger | 18 | 37 | yes |
+| r130 | Targon | archetype (library) | spellslinger | 18 | 38 | yes |
 | r131 | Targon | archetype (library) | card_advantage | 15 | 44 | yes |
