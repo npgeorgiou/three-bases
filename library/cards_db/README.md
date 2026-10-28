@@ -21,10 +21,10 @@ are the source; `cards.sqlite` is rebuilt from them.
 | `input/<game>/` | Reader input batches |
 | `read/<game>/` | Reader output: one JSON record per card (the source of truth), plus proposals for new values |
 | `CHANGES.md` | Every change to the shapes or values, with the card that caused it |
-| `CHECK_20.md` | 19 random cards with their rows, names put back (for Kaptain's check) |
+| `CHECK_20.md`, `check_table.py` | Kaptain's check file: chosen cards' stored rows, one table per database table, columns as stored, card/keyword/type/name ids shown as names (always made this way, as one file) |
 | `STATUS.md` | Which batches are done, partial or still to read (made by `status.py <game>` from the files) |
 | `status.py`, `show.py`, `compare.py` | Progress from the files; cards with their records for checking by eye; first vs second reading |
-| `raw.py`, `CHECK_20_RAW.txt` | A card's stored rows exactly as in the database (ids, values, numbers) |
+| `raw.py` | A card's stored rows exactly as in the database (ids, values, numbers) |
 | `pattern_check.py` | Plain wording (Round Start:, Stun, a named keyword...) must show up somewhere in the card's record |
 | `exclude.tsv`, `excluded/` | Entries left out on purpose (Runeterra: Path of Champions items) and their old records |
 | `rows.py` | A card's rows from `cards.sqlite` as a table with names (what Kaptain checks) |
