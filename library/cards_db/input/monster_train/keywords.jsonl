@@ -1,0 +1,70 @@
+{"id": 2000283, "name": "Armor", "category": "keyword", "text": "Damage is dealt to Armor before health. Each point of Armor blocks one point of damage and is then removed."}
+{"id": 2000284, "name": "Buffet", "category": "keyword", "text": "This unit can be eaten multiple times."}
+{"id": 2000285, "name": "Burnout", "category": "keyword", "text": "Counts down every turn. When Burnout runs out, the unit dies."}
+{"id": 2000287, "name": "Enchant", "category": "keyword", "text": "Other friendly units on the same floor gain a bonus."}
+{"id": 2000288, "name": "Endless", "category": "keyword", "text": "When this unit dies, return its card to the top of the draw pile."}
+{"id": 2000289, "name": "Fragile", "category": "keyword", "text": "If this unit loses health, it dies."}
+{"id": 2000290, "name": "Fuel", "category": "keyword", "text": "Negates the effect of Inert. Loses 1 stack every turn."}
+{"id": 2000293, "name": "Inert", "category": "keyword", "text": "This unit cannot attack unless it has Fuel."}
+{"id": 2000294, "name": "Multistrike", "category": "keyword", "text": "Attacks an additional time each turn."}
+{"id": 2000295, "name": "Phased", "category": "keyword", "text": "Cannot attack. Cannot be damaged or targeted in any way."}
+{"id": 2000297, "name": "Quick", "category": "keyword", "text": "Attacks before enemy units during combat."}
+{"id": 2000299, "name": "Shard", "category": "keyword", "text": "Powers Solgard the Martyr's abilities."}
+{"id": 2000300, "name": "Shell", "category": "keyword", "text": "At end of turn, remove Echo from the floor to remove Shell from the front unit with Shell. When all Shell is removed, the unit will Hatch."}
+{"id": 2000301, "name": "Silence", "category": "keyword", "text": "Disables Triggered Abilities."}
+{"id": 2000302, "name": "Sweep", "category": "keyword", "text": "Attacks all enemy units."}
+{"id": 2000303, "name": "Trample", "category": "keyword", "text": "When attacking, excess damage is applied to the subsequent enemy unit."}
+{"id": 2000304, "name": "Action", "category": "keyword", "text": "Triggers at the start of this unit's turn."}
+{"id": 2000305, "name": "Armored", "category": "keyword", "text": "Triggers when Armor is added to this unit."}
+{"id": 2000306, "name": "Eaten", "category": "keyword", "text": "After the next round of combat, this unit will be eaten by the front unit without an Eaten ability."}
+{"id": 2000307, "name": "End of Turn", "category": "keyword", "text": "Triggers at end of turn."}
+{"id": 2000308, "name": "Etch", "category": "keyword", "text": "Triggers when a card is Consumed on this floor."}
+{"id": 2000309, "name": "Extinguish", "category": "keyword", "text": "Triggers on death."}
+{"id": 2000310, "name": "Gorge", "category": "keyword", "text": "Triggers when this unit eats a Morsel unit."}
+{"id": 2000311, "name": "Harvest", "category": "keyword", "text": "Triggers when a unit on this floor dies."}
+{"id": 2000312, "name": "Hatch", "category": "keyword", "text": "Once all Shell is removed, the unit dies, triggering its Hatch ability. Apply the Egg unit's upgrades and stat changes to the summoned unit."}
+{"id": 2000314, "name": "Hunger", "category": "keyword", "text": "Triggers when a unit with Eaten is summoned."}
+{"id": 2000315, "name": "Incant", "category": "keyword", "text": "Triggers when you cast a spell on this floor."}
+{"id": 2000316, "name": "Inspire", "category": "keyword", "text": "Triggers when you gain Echo on this floor, once per Echo."}
+{"id": 2000317, "name": "Rally", "category": "keyword", "text": "Triggers when you play a non-Morsel unit card on this floor."}
+{"id": 2000318, "name": "Rejuvenate", "category": "keyword", "text": "Triggers when healed, even at full health."}
+{"id": 2000319, "name": "Resolve", "category": "keyword", "text": "Triggers after combat."}
+{"id": 2000320, "name": "Revenge", "category": "keyword", "text": "Triggers when damaged."}
+{"id": 2000321, "name": "Slay", "category": "keyword", "text": "Triggers after dealing a killing blow."}
+{"id": 2000322, "name": "Strike", "category": "keyword", "text": "Triggers when attacking."}
+{"id": 2000323, "name": "Summon", "category": "keyword", "text": "Triggers when played."}
+{"id": 2000324, "name": "Damage Shield", "category": "keyword", "text": "Nullify the next source of damage."}
+{"id": 2000325, "name": "Lifesteal", "category": "keyword", "text": "When a unit with Lifesteal attacks, it restores health equal to the damage dealt."}
+{"id": 2000326, "name": "Rage", "category": "keyword", "text": "+2 Attack per stack. Decreases every turn."}
+{"id": 2000327, "name": "Regen", "category": "keyword", "text": "Restores 1 health per stack at the end of turn. Decreases every turn."}
+{"id": 2000328, "name": "Soul", "category": "keyword", "text": "Modifies the damage of Devourer of Death's Extinguish ability."}
+{"id": 2000330, "name": "Spikes", "category": "keyword", "text": "When a unit with Spikes is attacked, the attacker takes 1 damage per stack."}
+{"id": 2000331, "name": "Stealth", "category": "keyword", "text": "Not a target in combat. Loses 1 stack every turn."}
+{"id": 2000332, "name": "Dazed", "category": "keyword", "text": "As long as a unit is Dazed, it can't attack or use any Action or Resolve abilities."}
+{"id": 2000333, "name": "Emberdrain", "category": "keyword", "text": "At the start of turn, you lose 1 Ember for every stack of Emberdrain. Decreases every turn."}
+{"id": 2000334, "name": "Frostbite", "category": "keyword", "text": "Unit takes 1 damage per stack at the end of turn. Decreases every turn."}
+{"id": 2000336, "name": "Melee Weakness", "category": "keyword", "text": "The next time the unit is attacked, it takes that much damage again for each stack of Melee Weakness."}
+{"id": 2000337, "name": "Reap", "category": "keyword", "text": "Unit takes 1 damage per stack of Echo after combat ends. Does not decrease."}
+{"id": 2000338, "name": "Rooted", "category": "keyword", "text": "Prevents the next time a unit would move between floors. Bosses are immune."}
+{"id": 2000339, "name": "Sap", "category": "keyword", "text": "-2 Attack per stack. Decreases every turn."}
+{"id": 2000340, "name": "Spell Weakness", "category": "keyword", "text": "The next time the unit is hit by a damage spell, it takes that much damage again for each stack of Spell Weakness."}
+{"id": 2000342, "name": "Ascend", "category": "keyword", "text": "Move up a floor and to the back of that floor."}
+{"id": 2000343, "name": "Descend", "category": "keyword", "text": "Move down a floor and to the back of that floor."}
+{"id": 2000344, "name": "Reform", "category": "keyword", "text": "Return a defeated friendly unit to your hand. Enhance with Burnout 1, +5 Attack, +5 Health, and 0 Ember."}
+{"id": 2000345, "name": "Sacrifice", "category": "keyword", "text": "Kill a friendly unit (of the required type in order) to play this card."}
+{"id": 2000346, "name": "Cultivate", "category": "keyword", "text": "Increase the attack and health of the friendly unit with the lowest health by the Cultivate value."}
+{"id": 2000347, "name": "Attuned", "category": "keyword", "text": "Multiply the effects of Magic Power by 5."}
+{"id": 2000348, "name": "Consume", "category": "keyword", "text": "Can only be played once per battle."}
+{"id": 2000349, "name": "Extract", "category": "keyword", "text": "Lose Echo after you play this card. If you cannot, the card cannot be played."}
+{"id": 2000350, "name": "Frozen", "category": "keyword", "text": "A Frozen card is not discarded at end of turn. Frozen is removed when the card is played."}
+{"id": 2000351, "name": "Infused", "category": "keyword", "text": "When played, the current floor will gain 1 Echo."}
+{"id": 2000352, "name": "Magic Power", "category": "keyword", "text": "Increases the amount of damage dealt and health restored by spells."}
+{"id": 2000353, "name": "Offering", "category": "keyword", "text": "If discarded before the end of your turn, it will instead be played."}
+{"id": 2000354, "name": "Permafrost", "category": "keyword", "text": "Gain Frozen when drawn."}
+{"id": 2000355, "name": "Piercing", "category": "keyword", "text": "Damage dealt by this card ignores armor and shield."}
+{"id": 2000356, "name": "Purge", "category": "keyword", "text": "Once played, this card is removed from your deck for the rest of the run."}
+{"id": 2000357, "name": "Pyrebound", "category": "keyword", "text": "Can only be played in the Pyre Room and the floor below it."}
+{"id": 2000358, "name": "Reserve", "category": "keyword", "text": "Triggers if this card remains in hand at the end of turn."}
+{"id": 2000360, "name": "Unplayable", "category": "keyword", "text": "Card cannot be played."}
+{"id": 2000361, "name": "Unpurgeable", "category": "keyword", "text": "Card cannot be purged by shops or Unstable Vortexes."}
+{"id": 2000365, "name": "Charged Echo", "category": "keyword", "text": "A resource of the Wurmkin clan, stored on each floor (symbol Echo). Infused cards add it; Wurmkin spells and abilities use it. Each floor starts with 4 Echo slots; Echo can exceed the slots, but the excess is removed at the end of turn. Some effects add unremovable Echo for the rest of combat."}

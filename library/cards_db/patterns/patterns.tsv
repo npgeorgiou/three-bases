@@ -25,7 +25,7 @@ runeterra	T17	\bsupport:	event:supports	yes	Support: is the event supports (one 
 *	V01	\bstun	value:stun|stunned|given_keyword	yes	verb
 *	V02	\bdraws?\b	value:draw|drawn	yes	verb (the word draw only, not drawn-as-adjective)
 *	V03	\bcreate	value:create|copy|created	yes	verb
-*	V04	\bsummon	value:summon|copy|summoned|revive|summoned_this_round	yes	"verb; ""summoned this round"" is a state"
+*	V04	\bsummon(?!:)	value:summon|copy|summoned|revive|summoned_this_round	yes	"verb; ""summoned this round"" is a state"
 *	V05	\bdeal \d|\bdamage\b	value:damage|damaged|survives_damage|nexus_damaged|excess_damage|negate_damage|damage_reduction|strike_with|increase_effect	yes	"verb; ""1 extra damage"" is increase_effect"
 *	V06	\bheals?\b	value:heal|healed	yes	verb
 *	V07	\bkill	value:kill|killed|dies	yes	verb
@@ -72,3 +72,37 @@ stormbound	V34	\bforces?\b[^.]{0,60}\battack	value:start_attack	yes	rulebook: Fo
 stormbound	V35	\bgain [\d/]+ mana	value:mana_gain	yes	mana gain wording
 stormbound	V36	\breplace	value:shuffle_into_deck	yes	replacing a card puts it back into the deck and draws another
 stormbound	V37	\b(?:reduce|set)s?\b[^.]{0,40}\bstrength to\b	value:stat_set	yes	rulebook: Reducing strength sets a value; not damage
+monster_train	T33	(?:^|\. |/ )summon:|\bwhen played\b	event:played	yes	trigger label (wiki: Summon triggers when played)
+monster_train	T34	\bstrike:	event:strikes	yes	trigger label (wiki: Strike triggers when attacking)
+monster_train	T35	\brevenge:	event:damaged	yes	trigger label (wiki: Revenge triggers when damaged)
+monster_train	T36	\bslay:	event:killed	yes	trigger label (wiki: Slay triggers after a killing blow)
+monster_train	T37	\bextinguish:	event:dies	yes	trigger label (wiki: Extinguish triggers on death)
+monster_train	T38	\bhatch:	event:dies	yes	trigger label (wiki: the Egg dies when its Shell is gone, triggering Hatch)
+monster_train	T39	\bharvest:	event:dies	yes	trigger label (wiki: a unit on this floor dies)
+monster_train	T40	\bincant:	event:played	yes	trigger label (wiki: you cast a spell on this floor)
+monster_train	T41	\brally:	event:played	yes	trigger label (wiki: you play a non-Morsel unit card on this floor)
+monster_train	T42	\brejuvenate:	event:healed	yes	trigger label (wiki: when healed)
+monster_train	T43	\bresolve:	event:combat_end	yes	trigger label (wiki: after combat)
+monster_train	T44	\baction:	event:combat_start	yes	trigger label (wiki: start of this unit's turn)
+monster_train	T45	\bend of turn:	event:turn_end	yes	trigger label (wiki: at end of turn)
+monster_train	T46	\bgorge:	event:eats	yes	trigger label (wiki: this unit eats a Morsel)
+monster_train	T47	\beaten:	event:eats	yes	trigger label (wiki: this unit is eaten)
+monster_train	T48	\bhunger:	event:summoned	yes	trigger label (wiki: a unit with Eaten is summoned)
+monster_train	T49	\betch:	event:exhausted	yes	trigger label (wiki: a card is Consumed on this floor)
+monster_train	T50	\binspire:	event:resource_gained	yes	trigger label (wiki: you gain Echo on this floor)
+monster_train	T51	\breserve:	event:kept_in_hand	yes	trigger label (wiki: the card is still in hand at end of turn)
+monster_train	T52	\barmored:	event:given_keyword	yes	trigger label (wiki: Armor is added to this unit)
+monster_train	T53	\bnext turn\b	value:next_time|turn_start	yes	delayed wording ("Draw +1 next turn")
+monster_train	V38	\brestore	value:heal|healed	yes	verb (restore health)
+monster_train	V39	\bgain \d+ ember|\bember per turn|\bember\.? per turn	value:mana_gain|max_mana_change	yes	Ember is mana
+monster_train	V40	\bgold\b	value:gold_gain	yes	gold wording
+monster_train	V41	\bcapacity on this floor	value:capacity_change	yes	floor capacity wording
+monster_train	V42	\bpermanent(?:ly)?\b	value:this_run	yes	"permanently" keeps the change in the deck for later battles
+monster_train	V43	\bper x\b|\bdraw x\b	value:x_paid	yes	X-cost wording
+monster_train	V44	\bon this floor\b|\bin this room\b	value:same_lane	yes	floor wording
+monster_train	V45	\bfront (?:enemy |friendly )?unit\b|\bto the front\b	value:front_of_lane	yes	front of the floor
+monster_train	V46	\bto the back\b	value:back_of_lane	yes	back of the floor
+monster_train	V47	\bconsumed\b|\bconsume pile\b	value:exhausted	yes	consumed cards are zone exhausted
+monster_train	V48	\breturn\b[^.]{0,50}\bto (?:your|the) hand\b|\bto the top of your draw pile\b	value:return_card|put_on_top	yes	returning used cards
+monster_train	V49	\bmove\b	value:move	yes	verb
+monster_train	V50	\bdouble\b	value:double	yes	verb
