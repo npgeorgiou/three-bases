@@ -87,6 +87,10 @@ AMOUNT   a number, or `{"x": x, "of": TARGET, "attr": attr, "event": EVENT, "spa
 18. A copy ("a copy of me", "exact copies of the units stored inside", "an exact copy of an ally's equipment", "an Ephemeral
    copy") = act copy: on = the card or unit copied, zone = where the copy goes. Never summon, create or attach of the original.
 
+19. Names in the text: a card listed in names_in_text = card; a keyword = keyword; a subtype = type; a family of cards by
+   name that is no single card ("a random Husk", "Spritelings", "Mecha Yordles", "Turrets") = filter name_has. A word that
+   is none of these ("it", "that keyword", "the Emperor's Deck") is never a card or keyword reference.
+
 ## Keyword entries (category keyword)
 A keyword's record says what the keyword means, so that every card with it inherits that meaning. Four kinds:
 - Status keywords (a unit has it: Elusive, Barrier, Stun, Quick Attack, Ephemeral, ...): abilities of the holder, "I" / "this

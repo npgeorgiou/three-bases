@@ -24,7 +24,11 @@
   were wrong on 19 (9%), mostly partial (a dropped filter, a missing "only the next time"); all 19 were re-read.
 - Word checks (`pattern_check.py`): 12 cards still flagged, all looked at: correct records ("summoned this round" is a
   state, not a summon) or broken source text ("Level up: Missing Translation").
-- 122 cards (5%) stay marked unsure: rare mechanics the values cannot say yet; their records hold the closest description.
+- Unsure: 122 cards; two rounds of values for the needs that repeat (v5, v6) and re-reads left the cards whose mechanic is
+  unique to them (table `unsure`); their records hold the closest description.
+- Stubs: 69 names the library lacked; 49 were cards in Riot's own data (supplement/runeterra.jsonl, read as batch_023);
+  families and misread names were re-read (BRIEF rule 19); Deep, Plant, Stance, Cursed, Release, Ascended have no text in
+  the library or in Riot's data and stay names. "Missing Translation" is Riot's AuraVisualFakeKeyword, not a keyword.
 - Not measured: mistakes both readers made the same way. CHECK_20.md is for Kaptain's own check.
 
 ## Cost and batch size

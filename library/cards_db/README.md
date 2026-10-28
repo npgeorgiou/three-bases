@@ -8,6 +8,7 @@ are the source; `cards.sqlite` is rebuilt from them.
 
 | File | What it is |
 |---|---|
+| `source.py`, `supplement/`, `supplement_<game>.py` | Every script reads cards through source.lib(): the library's entities plus supplement/<game>.jsonl (cards the library lacks, from the game's own data) |
 | `BRIEF.md` | The record shapes, reading rules and approved examples (what readers follow) |
 | `vocab.tsv` | Every allowed value per field, its meaning, its concept-tree concept, and (for effects) the events it causes |
 | `build_input.py` | Cards to read, cut into batches by amount of text; keyword-only cards get an empty record directly |

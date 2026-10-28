@@ -1,5 +1,7 @@
 """How one card can set off another, from the query layer (flat_*), for combo searches and the combo tests.
-explain(c, enabler, payoff) -> a short description of the first connection found, or '' if none:
+explain(c, enabler, payoff) -> a short description of the most direct connection, or '' if none (reasons() lists all, ranked:
+  makes; the enabler is what the payoff waits for; a direct event on another unit; a keyword or type asked for; a condition;
+  the same through a card the enabler makes; an event on the payoff itself (killing it for its Last Breath); a zone):
   makes      the enabler (or a card it makes) creates, summons or generates the payoff
   event      an effect of the enabler (or of a card it makes) causes an event (table causes) that a trigger or a condition of the
              payoff waits for, on a matching side
@@ -31,19 +33,23 @@ def made_by(c, card, depth=2):
     return out
 
 def explain(c, enabler, payoff):
+    best = min(reasons(c, enabler, payoff), default=None)
+    return best[1] if best else ''
+
+def reasons(c, enabler, payoff):
     for e in ids(c, enabler):
         for p in ids(c, payoff):
             makers = made_by(c, e)
-            if p in makers and p != e: return 'makes'
+            if p in makers and p != e: yield (0, 'makes')
             # the enabler itself being played or summoned is what the payoff waits for (spells for spell payoffs, units for summon payoffs)
             cat = (c.execute('select category from card where id=?', (e,)).fetchone() or [''])[0]
             for ev, ok, oside, owith in c.execute("select event, obj_kind, obj_side, obj_with from flat_when where card=? and event in ('played','summoned') "
                                                   "and coalesce(obj_pick,'')!='self'", (p,)).fetchall():
                 if (ev == 'played' and cat == 'spell' and (ok == 'spell' or 'spell' in (owith or ''))) or \
                    (ev in ('summoned', 'played') and cat in ('unit', 'hero') and ok == 'unit' and agree(oside, 'mine')):
-                    return f'is: playing {name(c, e)} is a {ev} the payoff waits for'
+                    yield (1, f'is: playing {name(c, e)} is a {ev} the payoff waits for')
             for ev, owith in c.execute("select event, of_kind from flat_if where card=? and event in ('played','summoned')", (p,)).fetchall():
-                if ev == 'played' and cat == 'spell': return 'is: counted as a played spell'
+                if ev == 'played' and cat == 'spell': yield (2, 'is: counted as a played spell')
             for m in makers:
                 for act, side, kind, kref, cref, onw in c.execute('select act, on_side, on_kind, keyword_ref, card_ref, on_with from flat_do where card=?', (m,)).fetchall():
                     # what the effect itself carries: the keyword it gives or uses (a stun is the keyword Stun)
@@ -53,9 +59,9 @@ def explain(c, enabler, payoff):
                         for oside, opick, ow in c.execute('select obj_side, obj_pick, obj_with from flat_when where card=? and event=?', (p, ev)).fetchall():
                             if opick == 'self' and m != p and not (side in ('mine', 'any', None) and kind in ('unit', 'any', None)): continue
                             if not narrow_ok(ow, onw): continue
-                            if agree(side, oside): return f'event: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else '')
+                            if agree(side, oside): yield ((7 if opick == 'self' else 5 if m != e else 3), f'event: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else ''))
                         for oside, ow in c.execute('select ev_obj_side, ev_obj_with from flat_if where card=? and event=?', (p, ev)).fetchall():
-                            if agree(side, oside) and narrow_ok(ow, onw): return f'condition: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else '')
+                            if agree(side, oside) and narrow_ok(ow, onw): yield ((6 if m != e else 4), f'condition: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else ''))
             # keyword or type the payoff asks for, carried by what the enabler makes or gives
             kw_have = {k for x in makers for (k,) in c.execute('select keyword from card_keyword where card=?', (x,))}
             kw_have |= {k for x in makers for (k,) in c.execute("select keyword_ref from flat_do where card=? and act='give_keyword' and keyword_ref is not null", (x,))}
@@ -67,7 +73,7 @@ def explain(c, enabler, payoff):
             zones = {z for x in makers for (z,) in c.execute("select coalesce(on_zone, eff_zone) from flat_do where card=? and act in "
                                                              "('discard','draw','create','obliterate','play_card','shuffle_into_deck')", (x,)) if z}
             for (z,) in c.execute("select of_zone from flat_if where card=? and test in ('count','have','amount_count') and of_zone is not null", (p,)):
-                if z in zones: return f'zone: {z}'
+                if z in zones: yield (8, f'zone: {z}')
             asks = [w for (w,) in c.execute('select obj_with from flat_when where card=? and obj_with is not null', (p,))]
             asks += [w for (w,) in c.execute('select coalesce(ev_obj_with, of_with) from flat_if where card=? and coalesce(ev_obj_with, of_with) is not null', (p,))]
             asks += [w for (w,) in c.execute("select f.attr || ' is ' || coalesce(f.ref_keyword, f.ref_type) from cond cd join ability a on a.id=cd.ability "
@@ -77,9 +83,8 @@ def explain(c, enabler, payoff):
                     bits = part.split(' ')
                     if len(bits) == 3 and bits[1] == 'is' and bits[2].lstrip('-').isdigit():
                         v = int(bits[2])
-                        if bits[0] == 'keyword' and v in kw_have: return f'keyword: {name(c, v)}'
-                        if bits[0] == 'type' and v in ty_have: return 'type: ' + (c.execute('select name from type where id=?', (v,)).fetchone() or ['?'])[0]
-    return ''
+                        if bits[0] == 'keyword' and v in kw_have: yield (4, f'keyword: {name(c, v)}')
+                        if bits[0] == 'type' and v in ty_have: yield (4, 'type: ' + (c.execute('select name from type where id=?', (v,)).fetchone() or ['?'])[0])
 
 def name(c, i):
     return (c.execute('select name from card where id=?', (i,)).fetchone() or ['?'])[0]

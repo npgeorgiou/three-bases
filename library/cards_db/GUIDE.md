@@ -6,6 +6,11 @@ runs from the files in this folder; nothing depends on an earlier chat.
 ## 0. Before reading
 - Decide with Kaptain what is left out (modes, campaigns, other products) and write it to `exclude.tsv`
   (Runeterra: Path of Champions items, found by their source "Path of Champions item").
+- Cards the library lacks: after a first `load.py`, every stub (a name a text uses that the library lacks) is looked up in
+  the game's own published card data and added to `supplement/<game>.jsonl` (entities columns; Runeterra:
+  supplement_runeterra.py from Riot's set JSON). `build_input.py <game> --add <ids>` makes their batch. What the game's data
+  does not have either stays a name (Runeterra: Deep, Plant, Stance, Cursed, Release, Ascended have no text anywhere).
+- Keywords-field entries that are data artefacts, not keywords, go to NOT_KEYWORDS in build_input.py with their proof.
 - `python3 build_input.py <game> 20000`: batches of about 20,000 characters of card text. Reader cost per batch was nearly
   fixed (110,000-125,000 tokens whether 39 or 189 cards), so bigger batches are cheaper; check the first batch's quality
   (show.py on 20 random cards) before reading the rest at that size.
@@ -30,6 +35,8 @@ runs from the files in this folder; nothing depends on an earlier chat.
    Turn every "same meaning, different form" into a normalize.py rule.
 4. `load.py <game>` builds cards.sqlite and the query layer (flat.py): keywords expanded onto the cards, concept-tree
    concepts on every row, shape rules (RULES in flat.py) for concepts like aoe_damage or permanent_growth.
+   Then refs.py builds flat_ref: every way a card works with a happening. Every new event or state value gets its `causes`
+   entry in vocab.tsv, or flat_ref misses it (README, "Asking which cards care about something").
 5. Case tests (`cases/`): write the game's cases, run `cases/run.py <game>`, fix until all pass (below).
 
 ## 3. Case tests (cases/)

@@ -1,7 +1,8 @@
 """Reader input for one game: every card that has text beyond its Keywords field, with its keywords, types and the names of
 other entries its text mentions; cut into batches by amount of text. Keyword-only cards get an empty record directly.
-Usage: build_input.py <game> <chars per batch> [--only id,id,...]   writes input/<game>/batch_NNN.jsonl, read/<game>/auto.jsonl"""
-import json, os, re, sqlite3, sys
+Usage: build_input.py <game> <chars per batch> [--only id,id,...]   writes input/<game>/batch_NNN.jsonl, read/<game>/auto.jsonl
+       build_input.py <game> --add id,id,...   cards new to the source (supplement): the next batch_NNN and read/<game>/auto_NNN.jsonl"""
+import glob, json, os, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 import source
 DB = os.path.join(HERE, '..', 'three-bases-library.sqlite')
@@ -54,7 +55,21 @@ def cards(c, game):
     return out
 
 
+def add(game, ids):
+    """Cards new to the source (a supplement): the next batch_NNN for the given ids; keyword-only ones get empty records."""
+    c = source.lib(); new = [x for x in cards(c, game) if x['id'] in ids]
+    k = len(glob.glob(os.path.join(HERE, 'input', game, 'batch_*.jsonl'))) + 1
+    auto = [x for x in new if not re.sub(r'[\W_]', '', x['_rest'])]
+    with open(os.path.join(HERE, 'read', game, 'auto_%03d.jsonl' % k), 'w') as f:
+        for x in auto: f.write(json.dumps({'id': x['id'], 'abilities': []}) + '\n')
+    with open(os.path.join(HERE, 'input', game, 'batch_%03d.jsonl' % k), 'w') as f:
+        for x in new:
+            if x not in auto: f.write(json.dumps({k2: v for k2, v in x.items() if not k2.startswith('_')}) + '\n')
+    print(f'batch_{k:03d}: {len(new) - len(auto)} cards to read, {len(auto)} keyword-only')
+
+
 def main():
+    if sys.argv[2] == '--add': return add(sys.argv[1], {int(x) for x in sys.argv[3].split(',')})
     game, budget = sys.argv[1], int(sys.argv[2])
     only = set(int(x) for x in sys.argv[sys.argv.index('--only') + 1].split(',')) if '--only' in sys.argv else None
     c = source.lib()
