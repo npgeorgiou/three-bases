@@ -27,7 +27,8 @@ create index fwc on flat_when(card); create index fdc on flat_do(card); create i
 def build(c):
     c.executescript(SCHEMA)
     tree = {(f, v): t for f, v, t in c.execute('select field, value, tree from vocab')}
-    kwname = {i: n for i, n in c.execute('select id, name from card where is_keyword=1')}
+    # a keyword's vocab row: '<game>:<Name>' when the game has its own meaning for a shared name (Frostbite), else '<Name>'
+    kwname = {i: (f'{g}:{n}' if ('keyword', f'{g}:{n}') in tree else n) for i, g, n in c.execute('select id, game, name from card where is_keyword=1')}
     tgt = lambda t: c.execute('select kind, side, pick, zone from target where id=?', (t,)).fetchone() if t else (None,) * 4
 
     def withs(t):
@@ -185,6 +186,6 @@ def derive(c):
     c.execute("insert into flat_concept select distinct card, concept, 'row' from flat_when where concept is not null and concept!=''")
     c.execute("insert into flat_concept select distinct card, concept, 'row' from flat_if where concept is not null and concept!=''")
     c.execute("insert into flat_concept select distinct ck.card, v.tree, 'keyword' from card_keyword ck join card k on k.id=ck.keyword "
-              "join vocab v on v.field='keyword' and v.value=k.name where v.tree!=''")
+              "join vocab v on v.field='keyword' and v.value=coalesce((select s.value from vocab s where s.field='keyword' and s.value=k.game || ':' || k.name), k.name) where v.tree!=''")
     for concept, table, cond in RULES:
         c.execute(f"insert into flat_concept select distinct card, ?, ? from {table} where {cond}", (concept, 'rule ' + concept))

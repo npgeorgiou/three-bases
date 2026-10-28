@@ -260,3 +260,46 @@ Disable, Push, Pull, Command, Drain, ...) define the words; cards use the values
   each with a level cond: levels 1-2 = `{"test": "level", "op": "le", "n": 2}`, levels 3-5 = `{"test": "level", "op": "ge",
   "n": 3}` (one level: op eq). An empty level value ("bordering/surrounding/surrounding//") is a gap in the card data: describe
   the levels that have words.
+
+## Game words: Monster Train
+Monster Train has no Keywords field: describe everything the text says. Its glossary keywords (Armor, Rage, Burnout, Consume,
+Extract, ...) define the words; cards use the values below. Mapping decided by Claude from the game's wiki (28 Oct 2026).
+- Board. The train has floors (lanes) with the Pyre Room on top; on each floor both sides stand in a line and the front units
+  fight first. "On this floor" = position same_lane (of omitted = the card itself, or the floor a spell is cast on); "the
+  front (enemy) unit" = position front_of_lane; "to the back" = back_of_lane; "the Pyre Room" = top_lane; "the bottom floor"
+  = bottom_lane. Ascend / Descend = keyword_action with that keyword (it moves to lane_above / lane_below). "Move a unit to
+  the front" = move, "to" `{"kind": "position", "with": [{"attr": "position", "op": "is", "val": "front_of_lane"}]}`.
+- The Pyre = kind player (like Runeterra's Nexus): "Your Pyre takes 3 damage" = damage on `{"kind": "player", "side":
+  "mine"}`; "restore Pyre health" = heal it; "+5 Attack to your Pyre" = stat_change power on it.
+- Stats: Attack = attr / param power, Health = health ("max health" too). A unit's Capacity = attr / param size; "+1 Capacity
+  on this floor" = capacity_change on `{"kind": "position", "with": [same_lane]}`. "15x2" Attack is the stats, not text.
+- Ember = mana: "Gain 2 Ember" = mana_gain; "+1 Ember per turn" = max_mana_change; "costs -1 Ember" = cost_change; "apply 0
+  Ember" to a card = cost_set 0. Gold = gold_gain. Echo = kind lane_resource: "Gain 1 Echo" = mana_gain on it; "per Echo" =
+  `{"x": "count", "of": {"kind": "lane_resource"}}`; Echo slots are proposals.
+- X cost: "Deal 2 per X damage" = amount `{"x": "x_paid", "inner": 2}`; "Draw X" = `{"x": "x_paid"}`.
+- Triggers. "Summon:" and "When played" = played, object self. "Strike:" = strikes, actor self. "Revenge:" = damaged,
+  object self. "Slay:" = killed, actor self. "Extinguish:" = dies, object self. "Hatch:" = dies, object self (the Egg).
+  "Harvest:" = dies, object `{"kind": "unit", "with": [same_lane]}`. "Incant:" = played, object `{"kind": "spell", "side":
+  "mine", "with": [same_lane]}`. "Rally:" = played, object a mine unit, not type Morsel, same_lane. "Rejuvenate:" = healed,
+  object self. "Resolve:" = combat_end. "Action:" = combat_start, actor self. "End of Turn:" = turn_end, actor
+  `{"kind": "player", "side": "mine"}`. "Gorge:" = eats, actor self. "Eaten:" = eats, object self ("the eater" = pick actor).
+  "Hunger:" = summoned, object a unit with keyword Eaten. "Etch:" = exhausted, object a card, same_lane. "Inspire:" =
+  resource_gained, object `{"kind": "lane_resource", "with": [same_lane]}`. "Reserve:" = kept_in_hand, object self.
+  "Armored:" = given_keyword Armor, object self. "Draw +1 next turn" = an ability turn_start (actor me) with limit next_time;
+  "each turn" = turn_start.
+- A keyword the card has itself, written alone ("Consume.", "Rage 4.", "Extract 2.", "Burnout 1. Multistrike 1.") = one
+  ability `{"when": {"event": "always"}, "do": [{"act": "give_keyword", "keyword": "<K>", "on": {"pick": "self"}, "params":
+  {"amount": N}, "lasts": "permanent"}]}` (amount only when a number is written). "Apply Rage 3" = give_keyword Rage, amount 3,
+  lasts permanent (the keyword's own record says how its stacks fall). "Sacrifice Imp." = keyword_action Sacrifice on a mine
+  unit of type Imp. "Reform a unit" = keyword_action Reform. "Cultivate 2" = keyword_action Cultivate, amount 2.
+- Zones: draw pile = deck ("top of your draw pile" = deck_top); discard pile = discard; consumed cards ("the Consume pile", "a
+  consumed spell") = zone exhausted; a defeated or dead unit = kind unit, zone discard (rule 17). "Return ... to your hand"
+  from those zones = return_card, zone hand. "Add N cards to your hand / discard pile" = create in that zone.
+- "Permanently", "a permanent copy" = lasts this_run (the change stays in the deck for later battles); other changes last the
+  battle = permanent.
+- Types (Imp, Demon, Morsel, Hollow, Egg, Blight, Scourge, ...) = filter type. "Morsel units" = type Morsel.
+- Champions: text before the first path holds always. "<Path> path (upgrades I/II/III): ..." = that path's abilities, each with
+  the cond `{"test": "upgrade_path", "n": <1, 2 or 3: the path's place in the text>}`; numbers "10/15/20" = per_level items.
+  "<Path> path: Upgrade I: ... Upgrade II: ... Upgrade III: ..." = one ability set per upgrade with the path cond plus
+  `{"test": "level", "op": "eq", "n": <1, 2, 3>}`. "Next version:" in a card = its next version: write each version's
+  abilities with the cond level eq 1, 2, 3.

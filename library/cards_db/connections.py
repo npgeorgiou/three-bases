@@ -20,7 +20,7 @@ KWC = {}
 def kw_concept(c, k):
     if k is None: return None
     if k not in KWC:
-        r = c.execute("select v.tree from card k join vocab v on v.field='keyword' and v.value=k.name where k.id=?", (k,)).fetchone()
+        r = c.execute("select v.tree from card k join vocab v on v.field='keyword' and v.value=coalesce((select s.value from vocab s where s.field='keyword' and s.value=k.game || ':' || k.name), k.name) where k.id=?", (k,)).fetchone()
         KWC[k] = (r[0] if r and r[0] else None) or f'keyword {k}'
     return KWC[k]
 

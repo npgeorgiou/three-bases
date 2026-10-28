@@ -49,3 +49,9 @@ Each change: date, what changed, the card that caused it, and which records were
 - 28 Oct 2026, v19 (Kaptain's check of CHECK_20_stormbound): act donate (giving my own unit to the opponent; normalize N13 turns steal on my own side into it: Faithless Prophets) and act random_one (an effect picked at random; BRIEF rule 8: Tegor the Vengeful was read as the player choosing); Temple of Space's teleport measured from the older copy.
 - 28 Oct 2026, v20: PROCESS "Two chats on two games at the same time"; BRIEF: direction (steal / donate) and who chooses (choose_one / random_one / otherwise); reader scratch folders per game.
 - 28 Oct 2026, v21: network.py (`ask.py <game> network "<cards>" | faction <name> | game [--json file]`): every card a node (level-up forms and made cards too), lines of 7 kinds plus levels into, weighted by rarity; central cards, chains of 2 to 4 cards, groups, loose cards. deck_analysis: supports happens in play by itself (EVERY_GAME); unknown happenings are said with spaces.
+- 28 Oct 2026, v22 (Monster Train): supplement_monster_train.py (282 cards, champion paths, wiki glossary); keyword concepts
+  (vocab keyword rows; a game can have its own row '<game>:<Name>' where a shared name means something else there:
+  monster_train:Frostbite, monster_train:Rally; flat.py, refs.py, connections.py look it up first); game words in BRIEF.md
+  (events combat_start, combat_end, eats, exhausted, kept_in_hand, resource_gained; acts eat, capacity_change, gold_gain,
+  return_card; kind lane_resource; attr / param size; positions for lanes; zone exhausted; lasts this_run; x x_paid; test
+  upgrade_path).

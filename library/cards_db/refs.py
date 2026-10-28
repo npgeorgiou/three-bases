@@ -27,7 +27,7 @@ def build(c):
         causes[(f, v)] = [x.split(':') for x in cs.split(';')]
 
     tree = {(f, v): t for f, v, t in c.execute("select field, value, tree from vocab where tree!=''")}
-    kwname = {i: n for i, n in c.execute('select id, name from card where is_keyword=1')}
+    kwname = {i: (f'{g}:{n}' if ('keyword', f'{g}:{n}') in tree else n) for i, g, n in c.execute('select id, game, name from card where is_keyword=1')}
 
     def ins(card, origin, via, ab, role, ev, kind, side, pick, kw=None, state=None):
         con = (tree.get(('keyword', kwname.get(kw, ''))) if kw else None) or (tree.get(('state', state)) if state else None) \

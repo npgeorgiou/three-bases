@@ -116,12 +116,12 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: runeterra 19385 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- sacrifice: runeterra 6008 pairs, e.g. Amalgamation Of Vile Rites -> Shackled Ghasts; stormbound 120 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- removal: runeterra 5597 pairs, e.g. Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Avian Stalkers -> Marked as Prey
+- destroy: runeterra 19385 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- sacrifice: runeterra 6008 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- removal: runeterra 5597 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Gray the Balancer -> Snowmasons
 - revive: runeterra 1661 pairs, e.g. Eternal Dancers -> Bladepierced Revenant
-- on_kill: runeterra 2008 pairs, e.g. Mordekaiser (level 2) -> Shackled Ghasts; stormbound 20 pairs, e.g. Spellbinder Zhevana -> Spare Dragonling
-- death_count: runeterra 728 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 19 pairs, e.g. Marked as Prey -> Spare Dragonling
+- on_kill: runeterra 2008 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 20 pairs, e.g. Spellbinder Zhevana -> Dreadful Keepers
+- death_count: runeterra 728 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 19 pairs, e.g. Marked as Prey -> Snowmasons
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -146,7 +146,7 @@ Supports your units (stats, protection, combat keywords): Piercing Darkness, Sen
 Card flow (draw, create, choose): Glimpse Beyond, Lonely Chimeslime, Senna, Spirit Leech.
 Puts extra units into play: Cursed Keeper, Hapless Aristocrat, The Undying.
 Units that support cards can target: 9 (Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, Lucian, Ravenous Butcher, Senna, Senna, Sentinel of Light, Spirit Leech, The Undying).
-Key cards (in most of the plan): Senna, The Ruination, Spirit Leech, Crumble, Ravenous Butcher.
+Key cards (in most of the plan): Senna, Spirit Leech, The Ruination, Crumble, Ravenous Butcher.
 Weak spots: none found.
 ```
 
@@ -202,27 +202,3 @@ select distinct card from flat_do where act='copy_keywords'
 - Draven's Whirling Death -> Draven -> Spinning Axe
 - Katarina's Death Lotus -> Katarina -> Blade's Edge
 
-
-## A deck as a network (`ask.py runeterra network "..."`), the Lucian/Senna deck above
-
-```
-runeterra deck: 14 cards, 5 more made by them, 94 lines.
-Central cards (strongest lines in and out): Senna (level 2) (made) (6 in, 5 out), Senna (8 in, 6 out), Crumble (2 in, 13 out), Glimpse Beyond (2 in, 13 out), Piercing Darkness (2 in, 8 out), The Ruination (2 in, 8 out), Darkness (made) (2 in, 1 out), Lucian (7 in, 1 out), Cursed Keeper (7 in, 1 out), Lucian (level 2) (made) (8 in, 0 out).
-Cards most chains pass through: Senna, Crumble, Glimpse Beyond, Senna (level 2) (made), Piercing Darkness.
-Strongest chains:
-- Ravenous Butcher -> any units are killed (levels it up) -> Senna -> levels into -> Senna (level 2) (made) -> changes its cost -> Piercing Darkness, Darkness (made), Crumble, The Ruination, Glimpse Beyond
-- Hapless Aristocrat -> summons -> Spiderling (made)
-- Senna -> levels into -> Senna (level 2) (made) -> changes its cost -> Piercing Darkness -> your units die (levels it up) -> Lucian
-- Single Combat -> your units die -> Cursed Keeper -> summons -> Escaped Abomination (made)
-- Spirit Leech -> any units are killed (levels it up) -> Senna -> gives it Fast -> Piercing Darkness -> your units die (levels it up) -> Lucian
-- Senna -> gives it Fast -> Piercing Darkness -> your units die -> Lucian (level 2) (made), Lonely Chimeslime, Hapless Aristocrat, The Undying, Cursed Keeper, Senna, Sentinel of Light
-Groups (cards tightly linked; one group = one plan):
-- your units die, any units are killed (levels it up) (15): Crumble, Darkness (made), Glimpse Beyond, Lonely Chimeslime, Lucian, Lucian (level 2) (made), Piercing Darkness, Ravenous Butcher, Senna, Senna (level 2) (made), Senna, Sentinel of Light, Single Combat, Spirit Leech, The Ruination, The Undying
-- summons (2): Cursed Keeper, Escaped Abomination (made)
-- summons (2): Hapless Aristocrat, Spiderling (made)
-The groups are joined to each other by weaker lines: yes.
-Loose cards:
-- only give to others, nothing gives to them (1): Single Combat
-- only get from others, give nothing back (3): Lonely Chimeslime, Senna, Sentinel of Light, The Undying
-Overall: 14 of 14 cards (100%) have at least one line; 3 groups.
-```
