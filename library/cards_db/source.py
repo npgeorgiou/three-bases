@@ -1,7 +1,9 @@
 """The card source: the library's entities plus supplement/<game>.jsonl (cards the library lacks, taken from another source,
 same columns as entities). Every script opens the library through lib(), so a supplement card is a card like any other.
-Ids: Runeterra 900001-989999 cards from Riot's data, 990001+ definitions Kaptain gave (runeterra_kaptain.jsonl); every
-other game a block of 1,000,000 (PROCESS.md, "A game the library does not have at all")."""
+Id blocks, one per game (PROCESS.md step 0.3); a new game writes its line here first:
+  runeterra   900001-999999     cards from Riot's data from 900001; Kaptain's definitions from 990001
+  next game   1000001-1999999   cards and glossary keywords from 1000001; Kaptain's definitions from 1900001
+  then        2000001-2999999, and so on"""
 import glob, json, os, sqlite3
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(HERE, '..', 'three-bases-library.sqlite')

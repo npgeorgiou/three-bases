@@ -42,6 +42,7 @@ EFFECT   `{"act": act, "on": TARGET, "to": TARGET, "zone": zone, "card": "<exact
          lasts is required for stat_change, give_keyword, cant, can, cost_change; link is required from the 2nd effect on.
 AMOUNT   a number, or `{"x": x, "of": TARGET, "attr": attr, "event": EVENT, "span": span, "inner": AMOUNT, "items": [AMOUNT]}`
          (only the keys needed; "items" for x sum: "the number of allies stunned or recalled")
+         Numbers per card level ("1/2/3/4/5"): `{"x": "per_level", "items": [1, 2, 3, 4, 5]}`.
 
 ## Reading rules
 1. "I", "me", "my" = the card itself (pick self). "You", "your" = the player (kind player, side mine). "Allies" = side mine,

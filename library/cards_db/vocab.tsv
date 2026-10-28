@@ -357,3 +357,4 @@ state	attacked_this_round	attacked this round		attacks	28 Oct 2026, v7
 state	struck_this_round	struck this round		strikes	28 Oct 2026, v7
 act	grow	"raise the target's Power and Health to at least the given values (""grows up to 4|4"", ""grow to the highest Power or Health"")"	stat_gain	stat_changed	28 Oct 2026, v8
 attr	targets	"a spell or skill whose target is the linked card (""enemy spells targeting Evelynn"")"			28 Oct 2026, v8
+x	per_level	"one number per card level, in level order, as items (""1/2/3/4/5 strength"")"			28 Oct 2026, v10

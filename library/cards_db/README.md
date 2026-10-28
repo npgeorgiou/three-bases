@@ -15,7 +15,7 @@ the source; `cards.sqlite` is rebuilt from them by `run.py <game>`.
 | `BRIEF.md`, `READER_PROMPT.md` | What readers follow: record shapes, reading rules, approved examples; the reader prompt |
 | `vocab.tsv` | Every allowed value per field: meaning, concept-tree concept, and the events it causes (`causes`) |
 | `names.tsv` | Names readers took for a keyword or card that are something else (keyword, card, type, name family, or dropped), per game, with reasons |
-| `source.py`, `supplement/`, `supplement_<game>.py` | Cards come from the library plus `supplement/<game>.jsonl` (cards the library lacks, from the game's own data; ids 900001+) and `<game>_kaptain.jsonl` (definitions Kaptain gave; 990001+) |
+| `source.py`, `supplement/`, `supplement_<game>.py` | Cards come from the library plus `supplement/<game>.jsonl` (cards and keywords the library lacks, from the game's own data) and `<game>_kaptain.jsonl` (definitions Kaptain gave); id blocks per game in source.py |
 | `build_input.py` | Reader input batches (`--add` for cards new to the source); keyword-only cards get empty records |
 | `check.py`, `normalize.py` | Records against shapes and values; one canonical form for equal meanings (rules N1-N9) |
 | `load.py`, `flat.py`, `refs.py` | Build `cards.sqlite`; the query layer (keywords expanded, concepts, flat_ref) |

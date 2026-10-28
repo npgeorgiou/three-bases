@@ -19,27 +19,39 @@ Commands run from `library/cards_db/`. Files and tables: README.md.
    once (`patterns/verdicts.tsv`); a dropped test case is written in `cases/DROPPED.md` with its reason.
 
 ## Steps
-### A game the library does not have at all
-The old library pipeline (library/ADDING_GAMES.md: converters, tags, patterns) is not used for this database. Write
-`supplement_<game>.py`: it reads the game's own published card data (all cards, and the keyword glossary with each
-definition as category keyword) and writes `supplement/<game>.jsonl` in the library's entities columns (source.py lists
-them; ext_id = the game's card code). Ids: a block of 1,000,000 per game, the next free one (Runeterra used 900001-999999;
-the next game takes 1000001-1999999, its Kaptain definitions from 1900001). From then on the game is like any other: step 0.
-Researching the game (its rules, glossary, factions) is still done first, as ADDING_GAMES.md section 0.1 says: it is the
-checklist for the case tests.
-
-### 0. Before reading
-1. Decide with Kaptain what is left out (modes, other products): `exclude.tsv`.
-2. Completeness: compare the library's cards with the game's own published card list (by card code and by name). Cards
-   the library lacks go to `supplement/<game>.jsonl` through a `supplement_<game>.py` like Runeterra's (ids 900001+).
-   Runeterra lacked 185 cards, champions among them (a game the library lacks entirely: the section above). Keywords the cards name that the library lacks come from the game's
-   own glossary the same way (Runeterra: Assimilate). Keywords-field entries that are data artefacts go to NOT_KEYWORDS in
-   build_input.py, with the proof (Runeterra: "Missing Translation" is Riot's AuraVisualFakeKeyword).
-3. `python3 build_input.py <game> 20000` (batches of ~20,000 characters; a reader costs ~110-125k tokens whatever the size).
-4. Read the keywords first (`input/<game>/keywords.jsonl`) and check every keyword record by eye: all cards with a keyword
-   inherit it. A keyword the library lacks: a record by name in `read/<game>/keywords_stub.jsonl` only when its meaning is
-   known (the name says it, or Kaptain's definition in `supplement/<game>_kaptain.jsonl`, ids 990001+).
-5. Add the game's trigger labels and verbs to `patterns/patterns.tsv` (step 2.2 says how they are judged).
+### 0. Before reading (in this order)
+1. **Research the game** (library/ADDING_GAMES.md section 0.1 says how): rules, the full keyword glossary, factions or
+   tribes, board, turn structure. It is the checklist for steps 0.4, 0.5 and the case tests.
+2. **Left out** (`exclude.tsv`): only other modes or products, and only what Kaptain names. Cards that other cards create
+   (tokens) are never left out: links to them are how combos are found.
+3. **Cards.** Compare the library's cards with the game's own published card list, by card code and by name.
+   - Game in the library: nothing to do for the cards it has. Only if cards or glossary keywords are missing, write
+     `supplement_<game>.py` (like supplement_runeterra.py) for those.
+   - Game not in the library: `supplement_<game>.py` writes all its cards and glossary keywords. The old library pipeline
+     (ADDING_GAMES.md converters, tags, patterns) is not used.
+   - The supplement is `supplement/<game>.jsonl` in the library's entities columns (source.py lists them; ext_id = the
+     game's card code; category keyword for glossary entries, with the glossary text as text).
+   - Ids: one block of 1,000,000 per game, listed in source.py; write the game's line there before writing any id. Cards
+     and glossary keywords take ids from the block's start, definitions Kaptain gives (`supplement/<game>_kaptain.jsonl`)
+     from start + 900,000.
+   - Keywords-field entries that are data artefacts go to NOT_KEYWORDS in build_input.py with the proof.
+4. **Keyword definitions** come from the game's own glossary (official site, the game's data, its wiki), with the source
+   in source_type. Kaptain is asked only for a keyword no source defines. A keyword with no definition stays a name.
+5. **The game's words** (before any reading; readers can only use values that exist). For every term of the checklist
+   (stats, board positions, turn structure, zones, card kinds, statuses), in this order:
+   - same meaning as an existing value: use it, and write the mapping in BRIEF.md under "Game words: <game>" (e.g. a
+     player's base or hero with health = kind player, like Runeterra's Nexus);
+   - a different meaning: a new vocab.tsv row (rule 3), with an example from one of the game's cards in BRIEF.md. A new
+     event or state needs its `causes`. Do not stretch an old value: "at the start of your turn" is not round_start when
+     the game has turns per player.
+   Show Kaptain the mapping list once before reading; his answer is written in BRIEF.md.
+6. **Numbers per card level** ("1/2/3/4/5 strength", one number per level): every level is kept, as
+   `{"x": "per_level", "items": [1, 2, 3, 4, 5]}` in level order. A number the same at every level is a plain number.
+7. `python3 build_input.py <game> 20000` (batches of ~20,000 characters; a reader costs ~110-125k tokens whatever the size).
+8. Read the keywords first (`input/<game>/keywords.jsonl`) and check every keyword record by eye: all cards with a keyword
+   inherit it. A keyword named by cards but missing from the library and every source: a record by name in
+   `read/<game>/keywords_stub.jsonl` only when the name says what it does (Can't Block).
+9. Add the game's trigger labels and verbs to `patterns/patterns.tsv` (step 2.2 says how they are judged).
 
 ### 1. Reading
 - Readers: background agents, model sonnet, the prompt in READER_PROMPT.md with only the batch name filled in. 6-8 at once.
