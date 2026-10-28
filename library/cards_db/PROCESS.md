@@ -26,7 +26,7 @@ vocab.tsv values and concepts that any game can share.
    vocab keyword row with its concept (Stun and Freeze are both disable), so keywords of different games meet. Before a
    game is done, `ask.py all compare <concepts>` shows its cards next to the other games' for the same concepts.
 
-## Writing data the same way in every game (read before step 0.5)
+## Writing data the same way in every game (read before step 0.6)
 The database answers one question over all games at once (`ask.py all ...`). That only works when every game is written
 with the same values, shapes and habits. A game's own words stay in its card texts, keyword entries and types; the rows say
 what cards do in shared values.
@@ -76,10 +76,24 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
 ## Steps
 ### 0. Before reading (in this order)
 1. **Research the game** (library/ADDING_GAMES.md section 0.1 says how): rules, the full keyword glossary, factions or
-   tribes, board, turn structure. It is the checklist for steps 0.4, 0.5 and the case tests.
+   tribes, board, turn structure. It is the checklist for steps 0.5, 0.6 and the case tests.
 2. **Left out** (`exclude.tsv`): only other modes or products, and only what Kaptain names. Cards that other cards create
    (tokens) are never left out: links to them are how combos are found.
-3. **Cards.** Compare the library's cards with the game's own published card list, by card code and by name.
+3. **The game's data is already in the repo. Look there before fetching anything** (two chats fetched a game's data again
+   from the web because they did not look; Kaptain does not know where each file is, so it is written here):
+   - `library/tools/convert/conv_<game>.py`: its first lines name the source, date and format of the game's card data. Raw
+     files kept next to them: `monster_train_cards.psv` (all 282 Monster Train cards, wiki Module:Cards/Data, 20 Oct 2026),
+     `inscryption_missing_cards.json`. Named sources: Lorcana (npm lorcana-oracle), Star Wars: Unlimited (swucardex-data
+     a86faed), Elder Scrolls: Legends (TESLegendsTracker c541e82), Slay the Spire (wiki Module:Cards/data), Slay the Spire 2
+     (Kaptain's lists, 12 Oct 2026), Gwent (gwent.one v14.8), Magic (MTGJSON AtomicCards, Scryfall tokens), Shadowverse
+     (Portal API), 40k and Age of Sigmar (BSData).
+   - `library/tools/games/<game>.md`: the research (sources, factions) and, in its mechanics block, the rules and keyword
+     terms with the page each comes from. Check each term's source is this game (Monster Train's file mixes in Monster Train
+     2 terms from railtools.net) and drop terms marked "assumed": rule 1.
+   - `library/tools/key/<game>/`: files of the old library reading. `library/cards_db/supplement/<game>.jsonl`: games
+     imported here.
+   Fetch from the web only what none of these has, and add the new source to this list.
+4. **Cards.** Compare the library's cards with the game's own published card list, by card code and by name.
    - Game in the library: nothing to do for the cards it has. Only if cards or glossary keywords are missing, write
      `supplement_<game>.py` (like supplement_runeterra.py) for those. When a reliable source has newer card data than the
      library (more cards, changed texts), the supplement holds every card from it: an entry replaces the library's entry
@@ -92,9 +106,9 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
      and glossary keywords take ids from the block's start, definitions Kaptain gives (`supplement/<game>_kaptain.jsonl`)
      from start + 900,000.
    - Keywords-field entries that are data artefacts go to NOT_KEYWORDS in build_input.py with the proof.
-4. **Keyword definitions** come from the game's own glossary (official site, the game's data, its wiki), with the source
+5. **Keyword definitions** come from the game's own glossary (official site, the game's data, its wiki), with the source
    in source_type. Kaptain is asked only for a keyword no source defines. A keyword with no definition stays a name.
-5. **The game's words** (before any reading; readers can only use values that exist). For every term of the checklist
+6. **The game's words** (before any reading; readers can only use values that exist). For every term of the checklist
    (stats, board positions, turn structure, zones, card kinds, statuses), in this order:
    - same meaning as an existing value: use it, and write the mapping in BRIEF.md under "Game words: <game>" (e.g. a
      player's base or hero with health = kind player, like Runeterra's Nexus);
@@ -103,13 +117,13 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
      the game has turns per player.
    Kaptain has not played most games: decide the mapping from the game's rules yourself (marked as Claude's) and write it
    in BRIEF.md; ask him only what no source settles. Also give every keyword a vocab keyword row with its concept.
-6. **Numbers per card level** ("1/2/3/4/5 strength", one number per level): every level is kept, as
+7. **Numbers per card level** ("1/2/3/4/5 strength", one number per level): every level is kept, as
    `{"x": "per_level", "items": [1, 2, 3, 4, 5]}` in level order. A number the same at every level is a plain number.
-7. `python3 build_input.py <game> 20000` (batches of ~20,000 characters; a reader costs ~110-125k tokens whatever the size).
-8. Read the keywords first (`input/<game>/keywords.jsonl`) and check every keyword record by eye: all cards with a keyword
+8. `python3 build_input.py <game> 20000` (batches of ~20,000 characters; a reader costs ~110-125k tokens whatever the size).
+9. Read the keywords first (`input/<game>/keywords.jsonl`) and check every keyword record by eye: all cards with a keyword
    inherit it. A keyword named by cards but missing from the library and every source: a record by name in
    `read/<game>/keywords_stub.jsonl` only when the name says what it does (Can't Block).
-9. Add the game's trigger labels and verbs to `patterns/patterns.tsv` (step 2.2 says how they are judged).
+10. Add the game's trigger labels and verbs to `patterns/patterns.tsv` (step 2.2 says how they are judged).
 
 ### 1. Reading
 - Readers: background agents, model sonnet, the prompt in READER_PROMPT.md with only the batch name filled in. A reader
@@ -191,10 +205,10 @@ Runeterra:
 
 Stormbound:
 - The library's copy of a game can be old: Stormbound's was a 2022 list of 232 cards, the game's own card database had 284
-  and many changed texts. Look for the game's current data before step 0.3 (the site's own data source; the built-in
+  and many changed texts. Look for the game's current data before step 0.4 (the site's own data source; the built-in
   browser reaches what the workspace cannot), and verify a transcription against the source (length and checksum).
 - A card with no text (plain units, tokens) is still a card: tokens are what other cards link to.
-- A game that is not Runeterra-shaped needs its own values before reading (step 0.5): one stat (strength), a grid of tiles,
+- A game that is not Runeterra-shaped needs its own values before reading (step 0.6): one stat (strength), a grid of tiles,
   turns per player, statuses. Readers still propose what is missing; tally the proposals after the first reading.
 - Positions need "what from": "bordering a friendly Dragon" is a position filter with "of" (the Dragon). Readers left it
   out on many cards; the query layer shows it as of: parts and the combo reasons use them.

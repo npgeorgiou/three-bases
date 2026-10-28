@@ -1,6 +1,6 @@
 """The card source: the library's entities plus supplement/<game>.jsonl (cards the library lacks, taken from another source,
 same columns as entities). Every script opens the library through lib(), so a supplement card is a card like any other.
-Id blocks, one per game (PROCESS.md step 0.3); a new game writes its line here first:
+Id blocks, one per game (PROCESS.md step 0.4); a new game writes its line here first:
   runeterra   900001-999999     cards from Riot's data from 900001; Kaptain's definitions from 990001
   stormbound  1000001-1999999   cards and glossary keywords from 1000001; Kaptain's definitions from 1900001
   monster_train 2000001-2999999 cards and glossary keywords from 2000001; Kaptain's definitions from 2900001
