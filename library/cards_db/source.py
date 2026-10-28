@@ -2,7 +2,8 @@
 same columns as entities). Every script opens the library through lib(), so a supplement card is a card like any other.
 Id blocks, one per game (PROCESS.md step 0.3); a new game writes its line here first:
   runeterra   900001-999999     cards from Riot's data from 900001; Kaptain's definitions from 990001
-  next game   1000001-1999999   cards and glossary keywords from 1000001; Kaptain's definitions from 1900001
+  stormbound  1000001-1999999   cards and glossary keywords from 1000001; Kaptain's definitions from 1900001
+  next game   2000001-2999999   cards and glossary keywords from 2000001; Kaptain's definitions from 2900001
   then        2000001-2999999, and so on"""
 import glob, json, os, sqlite3
 HERE = os.path.dirname(os.path.abspath(__file__))
