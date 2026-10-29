@@ -16,7 +16,8 @@ Rules for turning boxes into cards (Claude's, from the box layout):
 - Faction: the page's one faction category; with several, the tab's cost (Energy Technology, Mox Magick, Blood Beast, Bones
   Undead when the page is Undead and not Beast, else Beast); with none: the library's faction for the name, then the page's
   own words ("is a Technology card"), then the cost, then a Beast tribe category; else none.
-- Terrain trait -> category terrain, else unit. Text in the library's form: "Power: Ants. Sigils: A, B. Traits: X."
+- Terrain trait -> category terrain, else unit. Text: the sigils, a power icon the library defines (Ants) and traits it defines (Ant, Uncuttable) are the Keywords
+  field ("Keywords: Ants, Ant Spawner, Ant."), so a card inherits its keywords' records; other traits follow ("Traits: Goat.").
 - Links: a Fledgling (or Finical Hatchling) tab transforms_into the next tab of its page, or the first when it is last;
   Transformer and Swapper tabs transform into each other.
 Not cards: Bottled Cards (an item; its tabs are the Squirrel, Black Goat, Frozen Opossum and Boulder cards), the Deathcard
@@ -111,7 +112,11 @@ def main():
     for n, f in lib.execute("select name, faction from entities where game='inscryption' and category in ('unit','terrain') "
                             "and faction is not null"):
         libfac.setdefault(n, f)
-    kwnames = {n.lower() for (n,) in lib.execute("select name from entities where game='inscryption' and category='keyword'")}
+    kwname = {re.sub(r'\W', '', n.lower()): n for (n,) in lib.execute("select name from entities where game='inscryption' and category='keyword'")}
+    libkw = {n.lower() for n in kwname.values()}
+    kwname.update({re.sub(r'\W', '', n.lower()): n for n in SIGIL_NAMES})
+    kwnames = {n.lower() for n in kwname.values()}
+    canon = lambda n: kwname.get(re.sub(r'\W', '', n.lower()))
     pages = [json.loads(l) for l in open(os.path.join(CONV, 'inscryption_wiki_cards.jsonl'))]
     cats = {p['title']: p['cats'] for p in pages}
     pages += [dict(p, cats=cats[p['title']]) for p in map(json.loads, open(os.path.join(CONV, 'inscryption_wiki_cards_more.jsonl')))]
@@ -141,18 +146,28 @@ def main():
             sigtext = re.sub(r'\[\[([^\]|]+)(?:\|([^\]]+))?\]\]', lambda m: m.group(1) if m.group(1) in sig else (m.group(2) or m.group(1)),
                              re.sub(r'<br\s*/?>', ', ', f.get('sigils') or ''))
             sigtext = re.sub(r'\s+([.,])', r'\1', re.sub(r'<[^>]+>', '', sigtext)).strip().rstrip('.')
-            traits = plain(f.get('traits'))
+            # traits: Terrain is the category, Mox Card a type; a trait the library defines as a keyword joins the Keywords field
+            traits = [t.strip() for t in re.split(r',|<br\s*/?>', re.sub(r'\[\[(?:[^\]|]+\|)?([^\]]+)\]\]', r'\1', f.get('traits') or '')) if t.strip()]
+            types = ['Mox Card'] if 'Mox Card' in traits else []
+            terrain = 'Terrain' in traits
+            kw_traits = [canon(t) for t in traits if canon(t)]
+            traits = [t for t in traits if t not in ('Terrain', 'Mox Card') and not canon(t)]
             stats = {k: v for k, v in (('power', power), ('health', health)) if v}
+            # the Keywords field: a power icon defined as a keyword, the sigils, keyword traits; sigil words that are no link
+            # (Boulder "(In Kaycee's Mod)", Starvation "5th Starvation onward:") keep the sigils as text instead
+            plain_sig = not re.sub(r'\[\[[^\]]+\]\]|,|<br\s*/?>|\s', '', f.get('sigils') or '')
+            kws = ([canon(power)] if power and canon(power) else []) + ([canon(x) or x for x in sig] if plain_sig else []) + kw_traits
             parts = []
-            if power and not re.fullmatch(r'\d+', power): parts.append(f'Power: {power}.')
-            if sigtext: parts.append('Sigils: ' + sigtext + '.')
-            if traits: parts.append('Traits: ' + traits.rstrip('.') + '.')
+            if kws: parts.append('Keywords: ' + ', '.join(kws) + '.')
+            if power and not re.fullmatch(r'\d+', power) and not canon(power): parts.append(f'Power: {power}.')
+            if sigtext and not plain_sig: parts.append('Sigils: ' + sigtext + '.')
+            if traits: parts.append('Traits: ' + ', '.join(traits) + '.')
             if f.get('description'): parts.append(plain(f['description']))
             acts = [x for x in p['cats'] if re.fullmatch(r"Act I{1,3}|Kaycee's Mod|Finale", x)]
             entry = {'game': 'inscryption', 'ext_id': None, 'name': name,
-                     'category': 'terrain' if 'Terrain' in traits else 'unit', 'source_type': f"card ({SRC}; page {p['title']} rev {p['rev']})",
+                     'category': 'terrain' if terrain else 'unit', 'source_type': f"card ({SRC}; page {p['title']} rev {p['rev']})",
                      'edition': ', '.join(acts) or None, 'faction': faction(p, name, kind, libfac),
-                     'subtypes': json.dumps([t for t in re.findall(r'[A-Z][a-z]+', plain(f.get('tribe'))) if t in TRIBES]) if f.get('tribe') else None,
+                     'subtypes': json.dumps([t for t in re.findall(r'[A-Z][a-z]+', plain(f.get('tribe'))) if t in TRIBES] + types) if f.get('tribe') or types else None,
                      'rarity': 'Rare' if 'Rare' in (f.get('meta_categories') or '') else None,
                      'cost': c, 'cost_num': cnum,
                      'stats': json.dumps(stats) if stats else None, 'text': ' '.join(parts),
@@ -180,7 +195,7 @@ def main():
     sig = [{'game': 'inscryption', 'ext_id': 'wiki:sigil:' + n, 'name': n, 'category': 'keyword',
             'source_type': f'sigil (Inscryption fandom wiki page {pg}, read 29 Oct 2026, supplement)', 'edition': None,
             'faction': None, 'subtypes': None, 'rarity': None, 'cost': None, 'cost_num': None, 'stats': None, 'text': t,
-            'extra': None, 'variants': None} for n, t, pg in WIKI_SIGILS if n.lower() not in kwnames]
+            'extra': None, 'variants': None} for n, t, pg in WIKI_SIGILS if n.lower() not in libkw]
     out = cards + sig
     for e in out:
         e['id'] = old.get(e['ext_id']) or nxt
