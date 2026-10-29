@@ -71,3 +71,6 @@ Each change: date, what changed, the card that caused it, and which records were
   repeats only on cards with Summon, combat start/end and end-of-turn holding are not weak spots. load.py: a card using a
   trigger keyword that acts by itself has it. Cases: decks.tsv (guide decks), mechanics mx01-mx03 for every game, guide
   pairs in combos.tsv.
+- 29 Oct 2026, v29: normalize N10 for every game (strongest / weakest = pick highest / lowest by power, or strength);
+  Monster Train combo cases only from guides (Claude's own text pairs removed); PROCESS.md rewritten: "How to work" first,
+  lessons folded into the steps, guide decks as the benchmark.

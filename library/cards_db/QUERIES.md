@@ -119,17 +119,17 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 - passive: monster_train 8 cards, runeterra 18 cards, stormbound 8 cards
 - cheat_death: runeterra 7 cards
 - silence: stormbound 8 cards
-- forced_movement: monster_train 6 cards
 - movement: monster_train 6 cards
+- forced_movement: monster_train 6 cards
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: monster_train 389 pairs, e.g. Kinhost Vessel -> Bog Chrysalis; runeterra 12693 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- sacrifice: monster_train 243 pairs, e.g. Primordium -> Devourer of Death; runeterra 3957 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- removal: monster_train 90 pairs, e.g. Shroud Spike -> Little Fade; runeterra 3608 pairs, e.g. Kindred's Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Wetland Deceivers -> Green Prototypes
-- damage: monster_train 741 pairs, e.g. Cycle of Life -> Little Fade; runeterra 15036 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 721 pairs, e.g. Divine Reptiles -> Spare Dragonling
-- aoe_damage: monster_train 244 pairs, e.g. The Sentient -> Little Fade; runeterra 2828 pairs, e.g. Anivia -> Shackled Ghasts; stormbound 217 pairs, e.g. Broken Earth Drakes -> Spare Dragonling
-- on_kill: monster_train 109 pairs, e.g. Shattered Shell -> Little Fade; runeterra 1283 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 20 pairs, e.g. Spellbinder Zhevana -> Spare Dragonling
+- destroy: monster_train 389 pairs, e.g. Kinhost Vessel -> Bog Chrysalis; runeterra 12693 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- sacrifice: monster_train 243 pairs, e.g. Primordium -> Devourer of Death; runeterra 3957 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- removal: monster_train 90 pairs, e.g. Crushing Demise -> Little Fade; runeterra 3608 pairs, e.g. Kindred's Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Tegor the Vengeful
+- damage: monster_train 741 pairs, e.g. Cycle of Life -> Little Fade; runeterra 15036 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 721 pairs, e.g. Divine Reptiles -> Dreadful Keepers
+- aoe_damage: monster_train 244 pairs, e.g. The Sentient -> Little Fade; runeterra 2828 pairs, e.g. Anivia -> Shackled Ghasts; stormbound 217 pairs, e.g. Broken Earth Drakes -> Dreadful Keepers
+- on_kill: monster_train 109 pairs, e.g. Shattered Shell -> Little Fade; runeterra 1283 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Spellbinder Zhevana -> Dreadful Keepers
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 

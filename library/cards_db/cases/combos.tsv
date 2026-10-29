@@ -79,50 +79,12 @@ csb37	stormbound	Martyr Spongers	Orgone Leechers	other friendly ancients lower i
 csb38	stormbound	Absorbing Varmints	Plague Monarchs	friendly ancients act	texts
 csb40	stormbound	Rain of Frogs	Excited Mousers	confuses as many enemies as friendly units	texts
 csb42	stormbound	Frosthexers	Spellbinder Zhevana	frozen units destroyed for mana	texts
-cmt01	monster_train	Fledgling Imp	Deranged Brute	Rage on friendly units hits harder with the Brute	texts
-cmt02	monster_train	Rage Serum	Last Stand	Rage to double	texts
-cmt03	monster_train	Ritual of Battle	Last Stand	Rage to double	texts
-cmt04	monster_train	Fortify	Battering Ram	Armor turns into damage	texts
-cmt05	monster_train	Steelworker	Battering Ram	Armor turns into damage	texts
-cmt06	monster_train	Alloy of the Ancients	Reinforce	Armor to double	texts
-cmt07	monster_train	Welder Helper	Apex Imp	Armor added gives the Apex Imp Rage	texts
-cmt08	monster_train	Fledgling Imp	Imp-portant Work	an Imp to sacrifice	texts
-cmt09	monster_train	Molting Imp	Transcendimp	Summon effects to repeat	texts
-cmt10	monster_train	Queen's Impling	Consumer of Crowns	Imps in play make it cheaper	texts
-cmt11	monster_train	Pyre Shards	Bramble Lash	Spikes turn into damage	texts
-cmt12	monster_train	Sharpen	Shard Channeler	Spikes deal more per stack	texts
-cmt13	monster_train	Restore	Thorned Hollow	healing triggers Rejuvenate	texts
-cmt14	monster_train	Glimmer	Steelsinger	healing triggers Rejuvenate	texts
-cmt15	monster_train	Engraft	Awoken Hollow	healing triggers Rejuvenate	texts
-cmt16	monster_train	Sting	Siren of the Sea	spells trigger Incant	texts
 cmt17	monster_train	Crystalline Seeds	Hoarfrost Effigy	Frostbite to gather and double	guide: https://progameguides.com/monster-train/best-builds-in-monster-train/
 cmt18	monster_train	Titanstooth	Hoarfrost Effigy	Frostbite to gather and double	guide: https://progameguides.com/monster-train/best-builds-in-monster-train/
-cmt19	monster_train	Molluscmage	Ice and Pyre	Magic Power counts five times with Attuned	texts
-cmt20	monster_train	Harness the Titan	Ice and Pyre	Magic Power counts five times with Attuned	texts
-cmt21	monster_train	Offering Token	Crypt Builder	discarding plays the Offering	texts
-cmt22	monster_train	Drain	Titanstooth	a random discard can hit the Offering	texts
-cmt23	monster_train	Deep Offering	Guardian's Amulet	discarding the hand plays the Offering	texts
-cmt24	monster_train	Frenzied Swarm	Crypt Builder	discarding the hand plays the Offering	texts
-cmt25	monster_train	Rubble Morsel	Overgorger	a Morsel to eat grows it	texts
-cmt26	monster_train	Packed Morsels	Crucible Warden	Morsels to eat give Damage Shield	texts
-cmt27	monster_train	Morselmaker	Morsel-Made	Morsels with Eaten for Hunger	texts
 cmt28	monster_train	Cannibalize	Penumbra	Morsels for Penumbra to Gorge on	library real-world case (progameguides builds)
 cmt29	monster_train	Morselmaker	Penumbra	Morsels for Penumbra	library real-world case (progameguides builds)
-cmt30	monster_train	Dreg	Hallowed Drippings	a Burnout unit to extend	texts
-cmt31	monster_train	Wicklash	Paraffin Enforcer	Burnout units gain Rage	texts
-cmt32	monster_train	Entombed Explosive	Intent on Death	an Extinguish ability to trigger	texts
-cmt33	monster_train	Devourer of Death	Intent on Death	an Extinguish ability to trigger	texts
-cmt34	monster_train	Crushing Demise	Wickless Baron	a death on the floor triggers Harvest	texts
-cmt35	monster_train	Crushing Demise	Memento Mori	friendly deaths raise the damage	texts
 cmt36	monster_train	Molded	Rector Flicker	returns the fallen Flicker by Reform	library real-world case (progameguides builds)
 cmt37	monster_train	Crushing Demise	Rector Flicker	deaths feed the Accumulator Harvest	library real-world case (progameguides builds)
-cmt38	monster_train	Bounding Echoes	Keeper of Echoes	Infused cards add Echo for Inspire	texts
-cmt39	monster_train	Returned Soul	Shardsoul Carver	an Infused card adds Echo for Inspire	texts
-cmt40	monster_train	Unearthed Remains	Echo Break	Echo raises the damage	texts
-cmt41	monster_train	Soul Siphon	Ancient Resonance	Echo raises the damage	texts
-cmt42	monster_train	Accelerated Incubation	Bog Chrysalis	removing Shell hatches the Egg	texts
-cmt43	monster_train	Rage Serum	First of Kin	a Consumed card triggers Etch	texts
-cmt44	monster_train	Dante's Candle	Dante the Deceptive	Blight cards give Multistrike	texts
 cmt45	monster_train	Titan Sentry	Hoarfrost Effigy	Frostbite build: Frostbite to gather and double	guide: https://progameguides.com/monster-train/best-builds-in-monster-train/
 cmt46	monster_train	Glacial Seal	Hoarfrost Effigy	Frostbite build: Frostbite to gather and double	guide: https://progameguides.com/monster-train/best-builds-in-monster-train/
 cmt47	monster_train	Imp-in-a-Box	Imp-olate	Imp build: more Imps in the deck, more damage	guide: https://progameguides.com/monster-train/best-builds-in-monster-train/

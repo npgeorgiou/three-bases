@@ -1,7 +1,7 @@
 # Case tests: monster_train
 
 Made by `cases/run.py monster_train`.
-**176 of 176 cases pass.**
+**138 of 138 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -93,50 +93,12 @@ Made by `cases/run.py monster_train`.
 
 | case | enabler | payoff | why | found as | pass |
 |---|---|---|---|---|---|
-| cmt01 | Fledgling Imp | Deranged Brute | Rage on friendly units hits harder with the Brute | state: given_keyword | yes |
-| cmt02 | Rage Serum | Last Stand | Rage to double | keyword: Rage | yes |
-| cmt03 | Ritual of Battle | Last Stand | Rage to double | keyword: Rage | yes |
-| cmt04 | Fortify | Battering Ram | Armor turns into damage | keyword: Armor | yes |
-| cmt05 | Steelworker | Battering Ram | Armor turns into damage | keyword: Armor | yes |
-| cmt06 | Alloy of the Ancients | Reinforce | Armor to double | keyword: Armor | yes |
-| cmt07 | Welder Helper | Apex Imp | Armor added gives the Apex Imp Rage | keyword: Armor | yes |
-| cmt08 | Fledgling Imp | Imp-portant Work | an Imp to sacrifice | target: type Imp | yes |
-| cmt09 | Molting Imp | Transcendimp | Summon effects to repeat | trigger keyword: Summon | yes |
-| cmt10 | Queen's Impling | Consumer of Crowns | Imps in play make it cheaper | type: Imp | yes |
-| cmt11 | Pyre Shards | Bramble Lash | Spikes turn into damage | keyword: Spikes | yes |
-| cmt12 | Sharpen | Shard Channeler | Spikes deal more per stack | state: given_keyword | yes |
-| cmt13 | Restore | Thorned Hollow | healing triggers Rejuvenate | event: heal -> healed | yes |
-| cmt14 | Glimmer | Steelsinger | healing triggers Rejuvenate | event: heal -> healed | yes |
-| cmt15 | Engraft | Awoken Hollow | healing triggers Rejuvenate | event: heal -> healed | yes |
-| cmt16 | Sting | Siren of the Sea | spells trigger Incant | is: playing Sting is a played the payoff waits for | yes |
 | cmt17 | Crystalline Seeds | Hoarfrost Effigy | Frostbite to gather and double | keyword: Frostbite | yes |
 | cmt18 | Titanstooth | Hoarfrost Effigy | Frostbite to gather and double | keyword: Frostbite | yes |
-| cmt19 | Molluscmage | Ice and Pyre | Magic Power counts five times with Attuned | state: given_keyword | yes |
-| cmt20 | Harness the Titan | Ice and Pyre | Magic Power counts five times with Attuned | state: given_keyword | yes |
-| cmt21 | Offering Token | Crypt Builder | discarding plays the Offering | event: discard -> discarded | yes |
-| cmt22 | Drain | Titanstooth | a random discard can hit the Offering | event: discard -> discarded | yes |
-| cmt23 | Deep Offering | Guardian's Amulet | discarding the hand plays the Offering | event: discard -> discarded | yes |
-| cmt24 | Frenzied Swarm | Crypt Builder | discarding the hand plays the Offering | event: discard -> discarded | yes |
-| cmt25 | Rubble Morsel | Overgorger | a Morsel to eat grows it | type: Morsel | yes |
-| cmt26 | Packed Morsels | Crucible Warden | Morsels to eat give Damage Shield | type: Morsel | yes |
-| cmt27 | Morselmaker | Morsel-Made | Morsels with Eaten for Hunger | keyword: Eaten | yes |
 | cmt28 | Cannibalize | Penumbra | Morsels for Penumbra to Gorge on | type: Morsel | yes |
 | cmt29 | Morselmaker | Penumbra | Morsels for Penumbra | type: Morsel | yes |
-| cmt30 | Dreg | Hallowed Drippings | a Burnout unit to extend | state: given_keyword | yes |
-| cmt31 | Wicklash | Paraffin Enforcer | Burnout units gain Rage | state: given_keyword | yes |
-| cmt32 | Entombed Explosive | Intent on Death | an Extinguish ability to trigger | trigger keyword: Extinguish | yes |
-| cmt33 | Devourer of Death | Intent on Death | an Extinguish ability to trigger | trigger keyword: Extinguish | yes |
-| cmt34 | Crushing Demise | Wickless Baron | a death on the floor triggers Harvest | event: kill -> dies | yes |
-| cmt35 | Crushing Demise | Memento Mori | friendly deaths raise the damage | condition: kill -> dies | yes |
 | cmt36 | Molded | Rector Flicker | returns the fallen Flicker by Reform | event: kill -> dies | yes |
 | cmt37 | Crushing Demise | Rector Flicker | deaths feed the Accumulator Harvest | event: kill -> dies | yes |
-| cmt38 | Bounding Echoes | Keeper of Echoes | Infused cards add Echo for Inspire | event: mana_gain -> resource_gained | yes |
-| cmt39 | Returned Soul | Shardsoul Carver | an Infused card adds Echo for Inspire | event: mana_gain -> resource_gained | yes |
-| cmt40 | Unearthed Remains | Echo Break | Echo raises the damage | count: lane_resource | yes |
-| cmt41 | Soul Siphon | Ancient Resonance | Echo raises the damage | count: lane_resource | yes |
-| cmt42 | Accelerated Incubation | Bog Chrysalis | removing Shell hatches the Egg | acts on its keyword: Shell | yes |
-| cmt43 | Rage Serum | First of Kin | a Consumed card triggers Etch | event: exhaust -> exhausted | yes |
-| cmt44 | Dante's Candle | Dante the Deceptive | Blight cards give Multistrike | type: Blight | yes |
 | cmt45 | Titan Sentry | Hoarfrost Effigy | Frostbite build: Frostbite to gather and double | keyword: Frostbite | yes |
 | cmt46 | Glacial Seal | Hoarfrost Effigy | Frostbite build: Frostbite to gather and double | keyword: Frostbite | yes |
 | cmt47 | Imp-in-a-Box | Imp-olate | Imp build: more Imps in the deck, more damage | type: Imp | yes |

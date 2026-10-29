@@ -1,6 +1,6 @@
 # Card database (what cards do, as linked rows)
 
-Start here: HANDOFF.md (state). Importing a game: PROCESS.md (first its section "Writing data the same way in every game"). Results per game: RESULTS.md. Example answers: QUERIES.md.
+Start here: HANDOFF.md (state). Importing a game: PROCESS.md (first its sections "How to work" and "Writing data the same way in every game"). Results per game: RESULTS.md. Example answers: QUERIES.md.
 
 Games: Runeterra (done), Stormbound (waiting for Kaptain's check). One database holds all games, and every question can run
 across them (`ask.py all ...`).
@@ -30,7 +30,7 @@ equal mechanics of different games share one concept of the concept tree (Stun a
 | `connections.py` | How one card sets off another, every reason ranked, most direct first |
 | `pattern_check.py`, `patterns/` | Word check: `patterns.tsv` (wording rules, each judged once), `verdicts.tsv` (flags decided once), `<game>_flags.tsv` (open flags) |
 | `reread.py` | Re-read chosen cards under the current brief; merge replaces the old readings (kept in `replaced/`, re-read output in `fixes/`) |
-| `cases/` | Case tests (mechanics, combos, regions), `run.py`, REPORT.md, DROPPED.md |
+| `cases/` | Case tests (mechanics, decks and combos from players' guides, regions), `run.py`, REPORT.md, DROPPED.md |
 | `rows.py`, `check_table.py`, `CHECK_20_<game>.md`, `CHECK_20_<game>_ids.txt` | A card's rows with names; Kaptain's check file (one line per card, then its rows) and its card ids |
 | `status.py`, `STATUS.md`, `compare.py`, `examples.py`, `QUERIES.md` | Progress from the files; first vs second reading; example questions with answers |
 | `exclude.tsv`, `excluded/` | Entries left out on purpose and their old records |

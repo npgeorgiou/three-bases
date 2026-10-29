@@ -29,7 +29,8 @@ EVENT    `{"event": event, "actor": TARGET, "object": TARGET}`  actor = who does
          leaves open). A spell's effect and a unit's "Play:" use `{"event": "played", "object": {"pick": "self"}}`.
          Static abilities ("Allies have +1|+0", "I can't be blocked") use `{"event": "always"}`.
 TARGET   `{"kind": kind, "side": side, "pick": pick, "n": AMOUNT, "zone": zone, "with": [FILTER, ...], "by": attr}`
-         ("by" only with pick highest / lowest: "the ally with the highest Countdown" = pick highest, by countdown)  n defaults to 1;
+         ("by" only with pick highest / lowest: "the ally with the highest Countdown" = pick highest, by countdown; "the
+         strongest / weakest enemy" = pick highest / lowest, by power, in every game)  n defaults to 1;
          "all" targets use pick all and omit n. `{"pick": "self"}` alone means the card itself.
 FILTER   `{"attr": "power|health|cost|base_power|base_health|damage|countdown", "op": op, "n": AMOUNT}` (n can compare to
          another value: "with less Power than me" = op lt, n `{"x": "stat", "attr": "power", "of": {"pick": "self"}}`)
@@ -134,7 +135,7 @@ Kindred - Keywords: Quick Attack. Each round, the first time you slay a unit, I 
 units with my mark. Level up: I've seen you slay 2+ units with my mark.
 {"id": 751268, "abilities": [
  {"when": {"event": "killed", "actor": {"kind": "player", "side": "mine"}, "object": {"kind": "unit"}}, "limit": "first_each_round",
-  "do": [{"act": "mark", "on": {"kind": "unit", "side": "enemy", "pick": "weakest", "zone": "board"}, "lasts": "permanent"}]},
+  "do": [{"act": "mark", "on": {"kind": "unit", "side": "enemy", "pick": "lowest", "by": "power", "zone": "board"}, "lasts": "permanent"}]},
  {"when": {"event": "round_end"},
   "do": [{"act": "kill", "on": {"kind": "unit", "pick": "all", "zone": "board", "with": [{"attr": "state", "op": "is", "val": "marked"}]}}]},
  {"when": {"event": "always"},
@@ -165,7 +166,7 @@ backrow enemy. Nexus Strike: Deal 3 to all enemies and the enemy Nexus.
 {"id": 796499, "abilities": [
  {"when": {"event": "nexus_damaged", "actor": {"kind": "player", "side": "mine"}, "object": {"kind": "player", "side": "enemy"}},
   "if": [{"test": "it_matches", "of": {"with": [{"attr": "origin", "op": "not", "val": "combat"}]}}],
-  "do": [{"act": "stun", "on": {"kind": "unit", "side": "enemy", "pick": "strongest", "zone": "board", "with": [{"attr": "state", "op": "not", "val": "in_combat"}]}, "lasts": "this_round"}]},
+  "do": [{"act": "stun", "on": {"kind": "unit", "side": "enemy", "pick": "highest", "by": "power", "zone": "board", "with": [{"attr": "state", "op": "not", "val": "in_combat"}]}, "lasts": "this_round"}]},
  {"when": {"event": "strikes_nexus", "actor": {"pick": "self"}},
   "do": [{"act": "damage", "on": {"kind": "unit", "side": "enemy", "pick": "all", "zone": "board"}, "params": {"amount": 3}},
          {"act": "damage", "on": {"kind": "player", "side": "enemy"}, "params": {"amount": 3}, "link": "and"}]}]}

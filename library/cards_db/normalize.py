@@ -21,8 +21,8 @@ and second readings). Safe to run any number of times. Each rule is listed in CH
      Yasuo, Fae Bladetwirler and The Tidedancer were read the other way).
   N13 steal aimed at my own side (pick self or side mine: "convert itself") is donate; steal is only taking the enemy's.
   N14 a plain draw is from the top of the deck: draw with pick top is written as zone deck_top without the pick (one form).
-  N10 games whose units have one stat, strength (Stormbound): "strongest" / "weakest" are pick highest / lowest by strength,
-     never the Power-based picks.
+  N10 "strongest" / "weakest" are pick highest / lowest by the attack stat: power, or strength in games whose units have
+     one stat (Stormbound). One form in every game.
 Usage: normalize.py <game> <file.jsonl> [...]   rewrites the files in place, prints how many records changed."""
 import csv, glob, json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -155,14 +155,14 @@ def attacking(x):
 
 STRENGTH_GAMES = {'stormbound'}
 
-def strength_picks(x):
+def strength_picks(x, stat):
     """N10"""
     if isinstance(x, dict):
         if x.get('pick') in ('strongest', 'weakest'):
-            x['by'] = 'strength'; x['pick'] = 'highest' if x['pick'] == 'strongest' else 'lowest'
-        for v in x.values(): strength_picks(v)
+            x['by'] = stat; x['pick'] = 'highest' if x['pick'] == 'strongest' else 'lowest'
+        for v in x.values(): strength_picks(v, stat)
     elif isinstance(x, list):
-        for v in x: strength_picks(v)
+        for v in x: strength_picks(v, stat)
 
 def status_keywords():
     """state -> the keyword that gives it (vocab causes given_keyword:<Keyword>)"""
@@ -200,7 +200,7 @@ def main():
             r2 = clean(json.loads(json.dumps(r)))
             for ab in r2.get('abilities', []): fix_ability(ab, kinds)
             fix_names(r2, table); attacking(r2); fix_filters(r2); another(r2, inputs)
-            if game in STRENGTH_GAMES: strength_picks(r2)
+            strength_picks(r2, 'strength' if game in STRENGTH_GAMES else 'power')
             keyword_trigger_form(r2, STATUS)
             n += r2 != r; out.append(r2)
         open(path, 'w').write(''.join(json.dumps(r, separators=(',', ':')) + '\n' for r in out))

@@ -97,8 +97,8 @@ pick	self	the card that has the ability			27 Oct 2026, v1
 pick	chosen	chosen by the player			27 Oct 2026, v1
 pick	random	random			27 Oct 2026, v1
 pick	all	all that match			27 Oct 2026, v1
-pick	weakest	lowest Power (Weakest)			27 Oct 2026, v1
-pick	strongest	highest Power (Strongest)			27 Oct 2026, v1
+pick	weakest	not written: normalize N10 makes it pick lowest, by power (or strength)			27 Oct 2026, v1
+pick	strongest	not written: normalize N10 makes it pick highest, by power (or strength)			27 Oct 2026, v1
 pick	it	the event's object, or the previous effect's target			27 Oct 2026, v1
 pick	actor	the event's actor			27 Oct 2026, v1
 pick	attached_to	the unit this is attached to			27 Oct 2026, v1
