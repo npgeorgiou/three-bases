@@ -95,12 +95,14 @@ def reasons(c, enabler, payoff):
                             if opick == 'self' and m != p and not (side in ('mine', 'any', None) and kind in ('unit', 'any', 'card', None)): continue  # a card: discarding it
                             if not narrow_ok(ow, onw, c): continue
                             if agree(side, oside): yield ((7 if opick == 'self' else 5 if m != e else 3), f'event: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else ''))
-                        for oside, ow in c.execute('select ev_obj_side, ev_obj_with from flat_if where card=? and event=?', (p, ev)).fetchall():
+                        for oside, ow, opick in c.execute('select ev_obj_side, ev_obj_with, ev_obj_pick from flat_if where card=? and event=?', (p, ev)).fetchall():
+                            if opick == 'self' and m != p and not (side in ('mine', 'any', None) and kind in ('unit', 'any', 'card', None)): continue  # "I've survived damage": only what hits my units
                             if agree(side, oside) and narrow_ok(ow, onw, c): yield ((6 if m != e else 4), f'condition: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else ''))
             # a happening the enabler makes that the payoff counts or picks things by (flat_ref: condition, state)
-            made = {(h, sd, k) for x in makers for h, sd, k in c.execute("select happening, side, keyword from flat_ref where card=? and role='makes'", (x,))}
-            for h, sd, role, k in c.execute("select happening, side, role, keyword from flat_ref where card=? and role in ('condition','state')", (p,)).fetchall():
-                if any(h == mh and agree(ms, sd) and same_kw(c, k, mk) for mh, ms, mk in made): yield (6, f'{role}: {h}')
+            made = {(h, sd, k, pk) for x in makers for h, sd, k, pk in c.execute("select happening, side, keyword, pick from flat_ref where card=? and role='makes'", (x,))}
+            for h, sd, role, k, pk in c.execute("select happening, side, role, keyword, pick from flat_ref where card=? and role in ('condition','state')", (p,)).fetchall():
+                sd = 'mine' if pk == 'self' else sd  # something that happens to the payoff itself happens on my side
+                if any(h == mh and agree(ms, sd) and same_kw(c, k, mk) and not (pk == 'self' and mp == 'self') for mh, ms, mk, mp in made): yield (6, f'{role}: {h}')
             # keyword or type the payoff asks for, carried by what the enabler makes or gives
             kw_have = {k for x in makers for (k,) in c.execute('select keyword from card_keyword where card=?', (x,))}
             kw_have |= {k for x in makers for (k,) in c.execute("select keyword_ref from flat_do where card=? and act='give_keyword' and keyword_ref is not null", (x,))}

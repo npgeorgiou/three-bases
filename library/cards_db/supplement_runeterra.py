@@ -49,9 +49,35 @@ def main():
         if c['type'] not in CAT: continue
         e = entry(c); e['id'] = old.get(e['ext_id']) or nxt; nxt += e['id'] == nxt
         out.append(e)
+    # champions' level-up forms the library lacks (Riot: the non-collectible champion of the same name, code <base>T<n>), named and
+    # coded like the library's ("Lucian (level 2)", ext_id lvl:<code>), and links: base transforms_into level form, generates
+    # for every associated card Riot lists (the library has links for its own cards only)
+    have_lvl = {e.split(':')[-1] for (e,) in lib.execute("select ext_id from main.entities where game='runeterra' and ext_id like 'lvl:%'")}
+    code_id = {e.split(':')[-1]: i for i, e in lib.execute("select id, ext_id from main.entities where game='runeterra'")}
+    code_id.update({e['ext_id']: e['id'] for e in out})
+    for e in list(out):
+        if not e['source_type'].startswith('Champion') or 'Level up:' not in e['text']: continue
+        lv = [c for c in riot.get(e['name'].lower(), []) if not c['collectible'] and c['supertype'] == 'Champion' and c['type'] == 'Unit'
+              and c['cardCode'].startswith(e['ext_id'] + 'T') and c['cardCode'] not in have_lvl]
+        if not lv: continue
+        x = entry(lv[0]); x['name'] = e['name'] + ' (level 2)'; x['ext_id'] = 'lvl:' + lv[0]['cardCode']
+        x['id'] = old.get(x['ext_id']) or nxt; nxt += x['id'] == nxt
+        out.append(x); code_id[lv[0]['cardCode']] = x['id']
+    links = []
+    for e in out:
+        code = e['ext_id'].split(':')[-1]
+        if e['ext_id'].startswith('lvl:'):
+            base = code_id.get(code.split('T')[0])
+            if base: links.append({'src': base, 'rel': 'transforms_into', 'dst': e['id'], 'evidence': 'Riot level-up form'})
+        rc = next((c for cs in riot.values() for c in cs if c['cardCode'] == code), None)
+        for ref in (rc or {}).get('associatedCardRefs', []):
+            if ref in code_id and code_id[ref] != e['id']:
+                links.append({'src': e['id'], 'rel': 'generates', 'dst': code_id[ref], 'evidence': 'Riot associatedCardRefs'})
+    open(os.path.join(HERE, 'supplement', 'runeterra_links.jsonl'), 'w').write(''.join(json.dumps(l) + '\n' for l in links))
     # keywords the cards name that the library lacks, with Riot's own definition (globals-en_us.json keywords and vocabTerms)
     gpath = os.path.join(sys.argv[1], 'globals.json')
-    if os.path.exists(gpath):
+    if not os.path.exists(gpath): out += [r for r in rows if r['category'] == 'keyword']  # no glossary given: keep the keywords already taken
+    else:
         g = json.load(open(gpath))
         terms = {k['name'].lower(): k for k in g['keywords'] + g['vocabTerms'] if k.get('description', '').strip()}
         oldk = {r['ext_id']: r['id'] for r in rows if r['category'] == 'keyword'}

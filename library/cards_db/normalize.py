@@ -21,6 +21,8 @@ and second readings). Safe to run any number of times. Each rule is listed in CH
      Yasuo, Fae Bladetwirler and The Tidedancer were read the other way).
   N13 steal aimed at my own side (pick self or side mine: "convert itself") is donate; steal is only taking the enemy's.
   N14 a plain draw is from the top of the deck: draw with pick top is written as zone deck_top without the pick (one form).
+  N15 a planted card going off ("5+ of your traps have been activated": event activated whose object is another card) is
+     event trap_activated; activated stays the player using something (a landmark, a keyword's own activation).
   N10 "strongest" / "weakest" are pick highest / lowest by the attack stat: power, or strength in games whose units have
      one stat (Stormbound). One form in every game.
 Usage: normalize.py <game> <file.jsonl> [...]   rewrites the files in place, prints how many records changed."""
@@ -188,6 +190,16 @@ def keyword_trigger_form(r, st):
         if keep: ab['if'] = keep
         else: ab.pop('if', None)
 
+def trap_events(x):
+    """N15"""
+    if isinstance(x, dict):
+        o = x.get('object')
+        if x.get('event') == 'activated' and isinstance(o, dict) and o.get('kind') == 'card' and o.get('pick') != 'self': x['event'] = 'trap_activated'
+        for v in x.values(): trap_events(v)
+    elif isinstance(x, list):
+        for v in x: trap_events(v)
+
+
 def main():
     global STATUS
     game = sys.argv[1]; kinds = keyword_kinds(game); table = names_table(game); STATUS = status_keywords()
@@ -202,6 +214,7 @@ def main():
             fix_names(r2, table); attacking(r2); fix_filters(r2); another(r2, inputs)
             strength_picks(r2, 'strength' if game in STRENGTH_GAMES else 'power')
             keyword_trigger_form(r2, STATUS)
+            trap_events(r2)
             n += r2 != r; out.append(r2)
         open(path, 'w').write(''.join(json.dumps(r, separators=(',', ':')) + '\n' for r in out))
         print(f'{os.path.basename(path)}: {n} of {len(L)} records changed')

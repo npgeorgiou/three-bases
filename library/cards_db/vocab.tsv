@@ -57,10 +57,10 @@ act	mana_gain	refill or gain mana / spell mana (param amount, kind via target)	r
 act	gain_attack_token	the player gains the attack token (Rally)	extra_turn	attack_token_gained	27 Oct 2026, v1
 act	strike	the target unit strikes another target now	attack_now	strikes;damaged;survives_damage;dies;killed	27 Oct 2026, v1
 act	start_attack	start a free attack with the targets	attack_now	attacks	27 Oct 2026, v1
-act	challenge	force a unit to block / choose its blocker	forced_attack	blocks	27 Oct 2026, v1
+act	challenge	force a unit to block / choose its blocker	forced_attack	blocks;challenges	27 Oct 2026, v1
 act	stun	stun (cannot attack or block this round, removed from combat)	disable	given_keyword:Stun	27 Oct 2026, v1
 act	mark	mark the target for a later effect	mark_target		27 Oct 2026, v1
-act	capture	remove the target until the capturer leaves play	banish	leaves_play	27 Oct 2026, v1
+act	capture	remove the target until the capturer leaves play	banish	leaves_play;keyword_used:Capture	27 Oct 2026, v1
 act	revive	return a dead unit to play	revive	summoned;revived	27 Oct 2026, v1
 act	level_up	level up the target champion	upgrade	levels_up	27 Oct 2026, v1
 act	reveal	reveal cards	information		27 Oct 2026, v1
@@ -69,8 +69,8 @@ act	choose_one	the player chooses one of the following effects (they carry link=
 act	choose_card	pick a card among options (Invoke, Manifest, Predict, Discover)	selection		27 Oct 2026, v1
 act	counter	negate a spell or skill	counter_spell		27 Oct 2026, v1
 act	negate_damage	prevent damage to the target	damage_prevention		27 Oct 2026, v1
-act	swap	swap the positions of the targets	swap		27 Oct 2026, v1
-act	move	move the target to another position or zone	forced_movement		27 Oct 2026, v1
+act	swap	swap the positions of the targets	swap	moves	27 Oct 2026, v1
+act	move	move the target to another position or zone	forced_movement	moves	27 Oct 2026, v1
 act	countdown_advance	make a Countdown count down (param amount)	delayed	countdown_done	27 Oct 2026, v1
 act	attach	attach the source to the target unit	merge_attach	equipped	27 Oct 2026, v1
 act	keyword_action	do what the linked keyword describes (Recall, Invoke, Predict, Toss, Nab, ...)		keyword_used	27 Oct 2026, v1
@@ -286,7 +286,7 @@ keyword	Recall	concept of using or giving this keyword	return_to_hand		28 Oct 20
 keyword	Obliterate	concept of using or giving this keyword	banish		28 Oct 2026, v3
 keyword	Invoke	concept of using or giving this keyword	selection		28 Oct 2026, v3
 keyword	Manifest	concept of using or giving this keyword	selection		28 Oct 2026, v3
-keyword	Predict	concept of using or giving this keyword	selection		28 Oct 2026, v3
+keyword	Predict	concept of using or giving this keyword	selection	predicts	28 Oct 2026, v3
 keyword	Toss	concept of using or giving this keyword	self_mill		28 Oct 2026, v3
 keyword	Nab	concept of using or giving this keyword	steal		28 Oct 2026, v3
 keyword	Rally	concept of using or giving this keyword (Kaptain, 28 Oct 2026: an extra attack token: the whole board attacks again)	multi_attack		28 Oct 2026, v3

@@ -5,7 +5,7 @@ Amounts that count or compare things ("for each Celestial card you played", "dif
 Each row carries its concept-tree concept, so searches run on mechanics, not on keyword names.
   flat_when(card, origin, via, ability, event, concept, actor_kind, actor_side, actor_pick, obj_kind, obj_side, obj_pick, lim, obj_with)
   flat_if(card, origin, via, ability, test, event, concept, of_kind, of_side, of_pick, of_zone, of_with, ev_obj_kind, ev_obj_side,
-          ev_obj_with, op, n, span)
+          ev_obj_with, op, n, span, ev_obj_pick, attr)
   flat_do(card, origin, via, ability, seq, act, concept, on_kind, on_side, on_pick, on_zone, card_ref, keyword_ref, lasts, link,
           on_with, param_event, params, eff_zone)
 *_with: a target's filters as 'attr op value' joined by ';' (values are vocab values or ids). Called by load.py."""
@@ -14,7 +14,8 @@ SCHEMA = """
 create table flat_when(card integer, origin text, via integer, ability integer, event text, concept text, actor_kind text,
   actor_side text, actor_pick text, obj_kind text, obj_side text, obj_pick text, lim text, obj_with text);
 create table flat_if(card integer, origin text, via integer, ability integer, test text, event text, concept text, of_kind text,
-  of_side text, of_pick text, of_zone text, of_with text, ev_obj_kind text, ev_obj_side text, ev_obj_with text, op text, n real, span text);
+  of_side text, of_pick text, of_zone text, of_with text, ev_obj_kind text, ev_obj_side text, ev_obj_with text, op text, n real, span text,
+  ev_obj_pick text, attr text);
 create table flat_do(card integer, origin text, via integer, ability integer, seq integer, act text, concept text, on_kind text,
   on_side text, on_pick text, on_zone text, card_ref integer, keyword_ref integer, lasts text, link text, on_with text,
   param_event text, params text, eff_zone text, to_kind text, to_with text, to_pick text);
@@ -91,18 +92,18 @@ def build(c):
             e, ok, os_, op, ow, actor = event_info(ev); ak, as_, ap, _ = tgt(actor)
             c.execute('insert into flat_when values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
                       (card, origin, via, aid, e, when_concept(e, ok, ow, op), ak, as_, ap, ok, os_, op, lim, ow))
-        for test, of, op, n, span, cev in c.execute('select test, of_target, op, n, span, event from cond where ability=?', (aid,)).fetchall():
-            k, s, p, z = tgt(of); e, ek, es, _, ew, _ = event_info(cev)
-            c.execute('insert into flat_if values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+        for test, of, op, n, span, cev, at in c.execute('select test, of_target, op, n, span, event, attr from cond where ability=?', (aid,)).fetchall():
+            k, s, p, z = tgt(of); e, ek, es, ep, ew, _ = event_info(cev)
+            c.execute('insert into flat_if values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
                       (card, origin, via, aid, test, e, (when_concept(e, ek, ew, None) if e else None) or tree.get(('test', test)),
-                       k, s, p, z, withs(of), ek, es, ew, op, num(n), span))
+                       k, s, p, z, withs(of), ek, es, ew, op, num(n), span, ep, at))
         for a in amounts(aid):  # counted things: "for each X", "different subtypes", "equal to its Power"
-            x, of, cev, span = c.execute('select x, of_target, event, span from amount where id=?', (a,)).fetchone()
+            x, of, cev, span, at = c.execute('select x, of_target, event, span, attr from amount where id=?', (a,)).fetchone()
             if x == 'n': continue
-            k, s, p, z = tgt(of); e, ek, es, _, ew, _ = event_info(cev)
-            c.execute('insert into flat_if values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+            k, s, p, z = tgt(of); e, ek, es, ep, ew, _ = event_info(cev)
+            c.execute('insert into flat_if values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
                       (card, origin, via, aid, 'amount_' + x, e, tree.get(('x', x)) or (when_concept(e, ek, ew, None) if e else None),
-                       k, s, p, z, withs(of), ek, es, ew, None, None, span))
+                       k, s, p, z, withs(of), ek, es, ew, None, None, span, ep, at))
         for eid, seq, act, on, cref, kref, lasts, link, ez, to in c.execute(
                 'select id, seq, act, on_target, card_ref, keyword_ref, lasts, link, zone, to_target from effect where ability=? order by seq', (aid,)).fetchall():
             k, s, p, z = tgt(on); w = withs(on)
@@ -120,11 +121,11 @@ def build(c):
                 ability_rows(card, sub, 'gives', eid, seen=seen)
 
     def keyword_conds(card, kw, aid, origin):
-        for test, of, op, n, span, cev in c.execute('select test, of_target, op, n, span, event from cond where keyword=?', (kw,)).fetchall():
-            k, s, p, z = tgt(of); e, ek, es, _, ew, _ = event_info(cev)
-            c.execute('insert into flat_if values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+        for test, of, op, n, span, cev, at in c.execute('select test, of_target, op, n, span, event, attr from cond where keyword=?', (kw,)).fetchall():
+            k, s, p, z = tgt(of); e, ek, es, ep, ew, _ = event_info(cev)
+            c.execute('insert into flat_if values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
                       (card, origin, kw, aid, test, e, (when_concept(e, ek, ew, None) if e else None) or tree.get(('test', test)),
-                       k, s, p, z, withs(of), ek, es, ew, op, num(n), span))
+                       k, s, p, z, withs(of), ek, es, ew, op, num(n), span, ep, at))
 
     for (card,) in c.execute('select id from card').fetchall():
         for (aid,) in c.execute('select id from ability where card=? and given_by_effect is null', (card,)).fetchall():

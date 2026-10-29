@@ -74,3 +74,15 @@ Each change: date, what changed, the card that caused it, and which records were
 - 29 Oct 2026, v29: normalize N10 for every game (strongest / weakest = pick highest / lowest by power, or strength);
   Monster Train combo cases only from guides (Claude's own text pairs removed); PROCESS.md rewritten: "How to work" first,
   lessons folded into the steps, guide decks as the benchmark.
+- 29 Oct 2026, v30 (Kaptain's check of the deck networks; shared code, every game): what a card makes is kept to the kind it
+  hits (damage to a base or Nexus is no unit dying, damage to a unit no Nexus damage: Reckless Rushers, Falling Star);
+  "I've survived damage" / "when I level up" counts only what happens to that card (flat_if ev_obj_pick: Braum, LeBlanc);
+  a stat a condition tests is fed by what changes it (enemy Nexus health: Darius); things picked by position are fed by
+  moving units (Stormbound pushes); can't-be-blocked units hit the enemy player; first strikes deal damage; a card's own
+  action keywords count as used (Lurk, Support, Evolve); vocab causes: move, swap -> moves, challenge -> challenges,
+  capture -> keyword_used:Capture, keyword Predict -> predicts; normalize N15 (a planted card going off is trap_activated:
+  Caitlyn); planted cards (Chime, Poison Puffcap, Flashbomb Trap, Mysterious Portal) are cards the planter puts in;
+  keyword conditions (Plunder, Reputation, Nightfall ...) are the using card's needs in the network. flat_ref has obj_with
+  and ref (the filter of the thing and the card made). Runeterra: 11 champions' level-up forms the library lacked (Bard,
+  Jhin, Jax, Evelynn ...) taken from Riot's data with their links (supplement/runeterra_links.jsonl; source.py loads them)
+  and read (batch_025).
