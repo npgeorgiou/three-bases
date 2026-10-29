@@ -1,6 +1,7 @@
 """Compares every card's text with its rows by pattern, the same way in every game: a word in the text that its rows do not
 show is a reading error (Make it Rain: "three enemies or the enemy Nexus" stored as enemy units only).
 Usage: audit_text.py <game> [--list rule]   prints, per rule, how many cards break it and some names; run.py runs it.
+A flag read and found right goes to audit_text_explained.tsv (game, card, rule, why); a wrong row is fixed by a rule script.
 A rule is (name, text pattern, what the rows must have). Text is the card's own text without its Keywords field."""
 import collections, glob, json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -34,23 +35,22 @@ def rules(game):
         # a player named as what an effect or condition is about: some row is about a player
         ('player named', rf'(?:\b(?:enemy|your|both|the|a|opponent\'s)\s+(?:\w+\s+)?){pl}', lambda r: 'player' in kinds(r) or has(r, 'kind', 'any') or has(r, 'kind', 'anything')),
         ('deal damage', r'\b(?:deal|deals|dealt)\s+(?:\d|X\b|that much|damage|\w+ damage)', lambda r: acts(r) & {'damage', 'strike', 'keyword_action', 'excess_damage', 'negate_damage'} or 'damage' in words(r)),
-        ('draw', r'\bdraw\s+(?:\d|a\b|an?\b|that|it|them|cards?|X|\w+\b(?! at))', lambda r: acts(r) & {'draw', 'keyword_action', 'put_on_top'} or '"draw' in words(r)),
+        ('draw', r'\bdraw\s+(?!pile)(?:\d|a\b|an?\b|that|it|them|cards?|X|\w+\b(?! at))', lambda r: acts(r) & {'draw', 'keyword_action', 'put_on_top', 'steal'} or '"draw' in words(r)),
         ('create', r'\bcreate\b', lambda r: acts(r) & {'create', 'copy', 'keyword_action', 'choose_card', 'random_one'}),
         ('summon', r'(?<!you )\bsummon\s(?!effect)', lambda r: acts(r) & {'summon', 'copy', 'revive', 'play_card', 'transform', 'keyword_action', 'create'}),
-        ('heal', r'\bheal\b|\brestore\s+\d', lambda r: acts(r) & {'heal', 'keyword_action'}),
-        ('kill or destroy', r'(?<!you )(?<!or )\b(?:kill|destroy)\b(?!ed)', lambda r: acts(r) & {'kill', 'obliterate', 'keyword_action', 'strike', 'spend_mana', 'unequip'}),
+        ('heal', r'\bheal\b|\brestore\s+\d', lambda r: acts(r) & {'heal', 'keyword_action'} or '"healed"' in words(r)),
+        ('kill or destroy', r'(?<!you )(?<!or )\b(?:kill|destroy)\b(?!ed)', lambda r: acts(r) & {'kill', 'obliterate', 'keyword_action', 'strike', 'spend_mana', 'unequip', 'max_mana_change'} or '"killed"' in words(r) or '"dies"' in words(r)),
         ('discard', r'\bdiscard\b(?! pile)', lambda r: acts(r) & {'discard', 'keyword_action'} or 'discard' in words(r)),
-        ('stat gift', r'\+\d+\|\+\d+|\bgive\s+[\d/]+\s+strength|\bgain\s+[\d/]+\s+strength|\+\d+ (?:Attack|Health)\b', lambda r: acts(r) & {'stat_change', 'grow', 'give_keyword', 'keyword_action'}),
+        ('stat gift', r'\+\d+\|\+\d+|\bgive\s+[\d/]+\s+strength|\bgain\s+[\d/]+\s+strength|\+\d+ (?:Attack|Health)\b', lambda r: acts(r) & {'stat_change', 'grow', 'give_keyword', 'keyword_action', 'increase_effect'}),
         ('cost less', r'\bcosts?\s+[\dX]+\s+less|\breduce\s+(?:its|their|the)\s+cost|\bcost\s+-\d', lambda r: acts(r) & {'cost_change', 'cost_set'}),
         ('this round', r'\bthis round\b', lambda r: 'this_round' in words(r)),
         ('everywhere', r'\beverywhere\b', lambda r: 'everywhere' in words(r)),
-        ('for each', r'\bfor each\b|\bper\b', lambda r: re.search(r'"x": ?"(?!n")', words(r)) is not None or 'per_' in words(r) or 'times' in words(r)),
-        ('random', r'\brandom', lambda r: 'random' in words(r)),
+        ('for each', r'\bfor each\b|\bper\b(?! turn| stack)', lambda r: re.search(r'"x": ?"(?!n")', words(r)) is not None or 'per_' in words(r) or 'times' in words(r)),
+        ('random', r'\brandom', lambda r: 'random' in words(r) or 'spread' in words(r)),
         ('spells and Skills', r'spells?,?\s+(?:and|or)\s+skills?', lambda r: '"skill"' in words(r)),
         ('level up', r'\bLevel up:', lambda r: 'level_up' in acts(r)),
-        ('double', r'\bdouble\b(?! attack)', lambda r: re.search(r'event_amount|double|"x": ?"stat"|times|"x": ?"count"', words(r)) or 'repeat' in acts(r)),
-        ('Rally', r'\bRally\b', lambda r: acts(r) & {'gain_attack_token', 'keyword_action'}),
-    ]
+        ('double', r'\bdouble\b(?! attack)', lambda r: re.search(r'event_amount|double|"x": ?"stat"|times|"x": ?"count"', words(r)) or acts(r) & {'repeat', 'copy'}),
+    ] + ([('Rally', r'\bRally\b', lambda r: acts(r) & {'gain_attack_token', 'keyword_action'})] if game == 'runeterra' else [])  # Monster Train's Rally is a trigger
 
 
 def main():
@@ -65,13 +65,15 @@ def main():
             r = json.loads(l)
             if 'id' not in r: continue
             recs.setdefault(r['id'], {'id': r['id'], 'abilities': []})['abilities'] += r.get('abilities', [])
+    explained = {(r[1], r[2]) for r in (l.rstrip('\n').split('\t') for l in open(os.path.join(HERE, 'audit_text_explained.tsv')))
+                 if len(r) >= 4 and r[0] == game}  # (card, rule) read and explained: the rows say it another way, or nothing to write
     bad = collections.defaultdict(list)
     for i, r in recs.items():
         if i not in text: continue  # keyword entries: their text is the glossary
         n, t = text[i]
         t = re.sub(r'^Keywords:[^.]*\.\s*', '', t)
         for name, pat, ok in rules(game):
-            if re.search(pat, t, re.I if name not in ('Rally', 'level up') else 0) and not ok(r): bad[name].append((n, t))
+            if re.search(pat, t, re.I if name not in ('Rally', 'level up') else 0) and not ok(r) and (n, name) not in explained: bad[name].append((n, t))
     total = 0
     for name, *_ in rules(game):
         xs = bad.get(name, []); total += len(xs)

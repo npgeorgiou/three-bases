@@ -5,7 +5,8 @@ A happening is an `event` value from vocab.tsv (dies, summoned, damaged, given_k
   condition  a condition or a counted amount tests that it happened (flat_if with an event)
   state      a target, condition or count picks things it happened to: a state filter whose vocab `causes` names it
              (dead_this_round -> dies), or units in the discard zone (zone discard `causes` dies; units only)
-kind/side/pick: the thing it happens to (the event's object, else its actor; for makes the effect's target). side '' = not
+kind/side/pick: the thing it happens to (the event's object, else its actor; for makes the effect's target). actor_kind,
+actor_with: who must do it, when the text says ("allied Pykes have dealt 15+ damage": actor unit, name_has Pyke). side '' = not
 limited (either side). keyword: the keyword given or used, when the happening is about one (given_keyword Stun).
 concept: the same thing as a concept-tree concept, equal in every game: the keyword's concept (Stun, Freeze: disable), else
 the state's (stunned, frozen: disable), else the event's (round_start, turn_start: turn_start).
@@ -15,7 +16,7 @@ Called by load.py after flat.build."""
 import re
 
 SCHEMA = """create table flat_ref(card integer, origin text, via integer, ability integer, role text, happening text,
-  kind text, side text, pick text, keyword integer, concept text, obj_with text, ref integer);
+  kind text, side text, pick text, keyword integer, concept text, obj_with text, ref integer, actor_kind text, actor_with text);
 create index frh on flat_ref(happening, role); create index frc on flat_ref(card); create index frk on flat_ref(concept, role);"""
 
 
@@ -41,12 +42,12 @@ def build(c):
     tree = {(f, v): t for f, v, t in c.execute("select field, value, tree from vocab where tree!=''")}
     kwname = {i: (f'{g}:{n}' if ('keyword', f'{g}:{n}') in tree else n) for i, g, n in c.execute('select id, game, name from card where is_keyword=1')}
 
-    def ins(card, origin, via, ab, role, ev, kind, side, pick, kw=None, state=None, w=None, ref=None):
+    def ins(card, origin, via, ab, role, ev, kind, side, pick, kw=None, state=None, w=None, ref=None, ak=None, aw=None):
         if ev == 'strikes_nexus' and kind == 'player': kind, side = 'unit', 'mine'  # one way: the unit that strikes, never the player struck
         if role == 'makes' and ((kind == 'player' and ev in UNIT_ONLY) or (kind not in OPEN_KINDS and ev in PLAYER_ONLY)): return
         con = (tree.get(('keyword', kwname.get(kw, ''))) if kw else None) or (tree.get(('state', state)) if state else None) \
             or tree.get(('event', ev))
-        c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?,?,?,?)', (card, origin, via, ab, role, ev, kind, side or '', pick, kw, con, w, ref))
+        c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (card, origin, via, ab, role, ev, kind, side or '', pick, kw, con, w, ref, ak, aw))
 
     def state_rows(card, origin, via, ab, kind, side, pick, withs, zone):
         for st in re.findall(r'state (?:is|in) ([a-z_]+)', withs or ''):
@@ -75,24 +76,24 @@ def build(c):
         return None
 
     for r in c.execute('select card, origin, via, ability, event, actor_kind, actor_side, actor_pick, obj_kind, obj_side, '
-                       'obj_pick, obj_with from flat_when').fetchall():
-        card, o, v, ab, ev, ak, as_, ap, ok, os_, op, ow = r
+                       'obj_pick, obj_with, actor_with from flat_when').fetchall():
+        card, o, v, ab, ev, ak, as_, ap, ok, os_, op, ow, aw = r
         obj = ok or os_ or op
         if ev and ev != 'always':
             pk = op if obj else ap
             if ap == 'self' and op != 'self':  # "Strike: ... the attacked unit": it is about the card striking, not the unit hit
                 pk = 'actor_self' if ev in BY_ME else 'self'
             for k in (kws_of(ow) if len(kws_of(ow)) > 1 else [kw_of(ow)]):  # "traps or boons": one row per keyword, never "any keyword"
-                ins(card, o, v, ab, 'trigger', ev, ok if obj else ak, os_ if obj else as_, pk, k, w=ow)
+                ins(card, o, v, ab, 'trigger', ev, ok if obj else ak, os_ if obj else as_, pk, k, w=ow if obj else aw, ak=ak if obj else None, aw=aw if obj else None)
         state_rows(card, o, v, ab, ok, os_, op, ow, None)
     for r in c.execute('select card, origin, via, ability, event, of_kind, of_side, of_pick, of_zone, of_with, ev_obj_kind, '
-                       'ev_obj_side, ev_obj_with, ev_obj_pick, test, attr, ev_actor_pick from flat_if').fetchall():
-        card, o, v, ab, ev, fk, fs, fp, fz, fw, ek, es, ew, ep, test, at, eap = r
+                       'ev_obj_side, ev_obj_with, ev_obj_pick, test, attr, ev_actor_pick, ev_actor_kind, ev_actor_with from flat_if').fetchall():
+        card, o, v, ab, ev, fk, fs, fp, fz, fw, ek, es, ew, ep, test, at, eap, eak, eaw = r
         if eap == 'self' and ep != 'self': ep = 'actor_self' if ev in BY_ME else 'self'  # "I've killed": only the card itself does it
         # the thing the counted event happens to ("I've survived 10+ damage": of self) decides whose it is
         if ev:
             for k in (kws_of(ew) if len(kws_of(ew)) > 1 else [kw_of(ew)]):
-                ins(card, o, v, ab, 'condition', ev, ek or fk, es or fs, ep or fp, k, w=ew or fw)
+                ins(card, o, v, ab, 'condition', ev, ek or fk, es or fs, ep or fp, k, w=ew or fw, ak=eak, aw=eaw)
         elif fk == 'mana': ins(card, o, v, ab, 'condition', 'mana_refilled', fk, fs, fp)  # counts my mana: fed by mana gain
         # a stat tested or counted ("the enemy Nexus has half its Health or less", "a unit with 5+ Power"): fed by what changes it
         if test in ('stat', 'amount_stat', 'count', 'have', 'amount_count') and at in STAT_EVENTS and not ev:
@@ -140,4 +141,4 @@ def build(c):
             if card in never: continue
             for ab, h, k, sd, pk, kw, con, w, ref in rows:
                 if pk == 'self' and not sd: sd = 'mine'  # what the card does to itself is on its owner's side
-                c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?,?,?,?)', (card, 'game', e, ab, 'makes', h, k, sd, pk, kw, con, w, ref))
+                c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (card, 'game', e, ab, 'makes', h, k, sd, pk, kw, con, w, ref, None, None))

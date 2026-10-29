@@ -56,3 +56,10 @@ n54	runeterra	Ping City	Powder Keg	Gangplank	none	by fighting	Claude, from the g
 n55	runeterra	Ashe LeBlanc	Incisive Tactician	Yadulski Snowdog	line		Kaptain: Rally makes my units attack again, so their Attack effects happen again
 n56	runeterra	Braum Zoe	Spirits Unleashed	Braum	none	rules:	Kaptain: Spirits Unleashed gives allies +1|+1, it does not change how they work
 n57	monster_train	Imp build (Shardtail Queen)	Fledgling Imp	Impish Scholar	line		Claude: Rage given to friendly units makes them stronger
+n58	runeterra	Swain Ziggs	Bomber Twins	Ziggs	line		Claude, deck read 29 Oct 2026: Ziggs levels by destroying allied landmarks; Bomber Twins makes landmarks
+n59	runeterra	Swain Ziggs	Conchologist	Swain	none		Claude, deck read: Swain counts non-combat damage, a unit fighting is combat damage
+n60	runeterra	Lurkers	Aspiring Chronomancer	Pyke	none		Claude, deck read: Pyke counts damage dealt by allied Pykes only
+n61	runeterra	Soraka Tahm Kench	An Acquired Taste	Tahm Kench	line		Claude, deck read: An Acquired Taste captures, Tahm Kench levels from captures
+n62	runeterra	Aphelios Zoe	Duskpetal Dust	Pale Cascade	line		Claude, deck read: Duskpetal Dust makes the next Nightfall card cheaper
+n63	stormbound	IC pirate	First Mutineer	Northsea Dogs	line		Claude, deck read: discarding helps Northsea Dogs be the last card in hand
+n64	stormbound	Chronobreak	Heliotroopers	Sunbeam Serpents	none		Claude, deck read: Heliotroopers poisons itself, it is no Dragon

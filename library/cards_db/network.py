@@ -107,7 +107,7 @@ def matches(c, game, card, kind, withs):
 
 def kinds_fit(a, b):
     """a player is never a unit or a structure, a unit never a structure; open kinds fit everything"""
-    if a in (None, '', 'any', 'anything', 'card') or b in (None, '', 'any', 'anything', 'card') or a == b: return True
+    if a in (None, '', 'any', 'anything', 'card', 'keyword') or b in (None, '', 'any', 'anything', 'card', 'keyword') or a == b: return True  # "used a keyword": matched by the keyword
     if 'unit_or_structure' in (a, b): return {a, b} <= {'unit_or_structure', 'unit', 'landmark'}
     return False
 
@@ -130,8 +130,8 @@ def lines_of(c, game):
     own_makes, lvl_needs = collections.defaultdict(set), collections.defaultdict(set)
     ab_card = dict(c.execute('select id, card from ability'))
     helps = adder_abilities(c, game)  # "your spells deal 1 extra damage" waits for nothing: it helps those cards (gives_lines)
-    for card, origin, ab, role, h, side, kw, pick, kind, w, ref in c.execute(
-            'select card, origin, ability, role, happening, side, keyword, pick, kind, obj_with, ref from flat_ref'):
+    for card, origin, ab, role, h, side, kw, pick, kind, w, ref, ak, aw in c.execute(
+            'select card, origin, ability, role, happening, side, keyword, pick, kind, obj_with, ref, actor_kind, actor_with from flat_ref'):
         if card not in cards: continue
         if role == 'makes':
             makes[h].add((card, side, kw, kind, pick, w, ref, origin == 'game'))
@@ -144,7 +144,7 @@ def lines_of(c, game):
            (pick == 'self' and h in ('played', 'summoned')) or pick == 'actor_self': continue  # "I've killed 4": only the card itself
         if ab in helps: continue
         if ab in lvl: lvl_needs[card].add(h)
-        takes[h].add((card, 'mine' if pick == 'self' else side, kw, kind, pick, w, ab in lvl, role))
+        takes[h].add((card, 'mine' if pick == 'self' else side, kw, kind, pick, w, ab in lvl, role, (ak, aw)))
     state_ev = collections.defaultdict(set)  # a state and the happenings that put things in it (damaged <- damaged)
     for v, cs in c.execute("select value, causes from vocab where field='state' and coalesce(causes,'')!=''"):
         state_ev[v] |= {x.split(':')[0] for x in cs.split(';')}
@@ -156,18 +156,31 @@ def lines_of(c, game):
     def lethal(m, t):
         life = cards[t]['health'] or cards[t]['strength']
         return bool(life) and bool(hits.get(m)) and all(x is not None and x >= life for x in hits[m])
+    fighters = {a for (a,) in c.execute("select card from flat_do where act in ('strike','first_strike','double_strike','start_attack')")}
+    def doer_fits(m, actor):
+        """who must do it ("an ally deals damage", "allied Pykes"): the card itself, or a card that makes such a unit fight"""
+        ak, aw = actor
+        if ak not in KIND_CAT and not aw: return True
+        k = ak if ak in KIND_CAT else 'any'
+        if matches(c, game, cards[m], k, aw): return True
+        return ak in ('unit', None) and m in fighters and not any(p.split(' ')[0] in ('card', 'name_has', 'type') for p in (aw or '').split(';'))
     # a card whose own triggers make what its level-up counts (Ashe frostbites when she attacks): feeding the trigger levels it
     selffeed = {t for t in lvl_needs if lvl_needs[t] & own_makes[t]}
     for h, ts in takes.items():
         carers = collections.defaultdict(set)
         for t, _, tk, *_ in ts: carers[tk].add(t)
         for m, ms, mk, mkind, mpick, mw, mref, rule in makes.get(h, ()):
-            for t, ts_, tk, tkind, tpick, tw, lv, role in ts:
+            for t, ts_, tk, tkind, tpick, tw, lv, role, actor in ts:
                 if m == t or not mechanics.FIT(ms, ts_) or not (mk is None or tk is None or mk == tk): continue
                 if not kinds_fit(mkind, tkind): continue
                 if mpick == 'self' and tpick == 'self': continue  # each card about itself ("when I level up"): no link between two cards
                 if not names_fit(c, game, cards, tw, mw, mref): continue
+                if mpick == 'self':  # what a card does to itself feeds only a need its own kind fits ("the strongest friendly Dragon")
+                    own = ';'.join(p for p in (tw or '').split(';') if p.split(' ')[:2] in (['type', 'is'], ['type', 'in'], ['card', 'is'], ['name_has', 'is'], ['keyword', 'is']))
+                    if own and not matches(c, game, cards[m], 'any', own): continue
                 if h == 'survives_damage' and tpick == 'self' and lethal(m, t): continue
+                if not doer_fits(m, actor): continue
+                if rule and 'origin not combat' in (tw or ''): continue  # "non-combat damage": fighting is combat  # "allied Pykes have dealt damage": the damage of a spell or another unit is not it
                 need = {e for p in (tw or '').split(';') if p.startswith('state is ') for e in state_ev.get(p[9:], ())} - {h}
                 if need and h in ('played', 'summoned', 'drawn', 'created') and not need & own_makes[m]: continue  # "8 cost reduced cards
                 # played": playing a card no one made cheaper is not it (a unit healed is damaged by the enemy too: no such need)
@@ -386,6 +399,10 @@ def need_lines(c, game, nodes, broad):
         of = [p[3:] for p in parts if p.startswith('of:')]
         kind = next((p.split(' ')[2] for p in of if p.startswith('kind is ')), None)
         if kind and kind != 'unit': needs.append((t, kind, ';'.join(p for p in of if not p.startswith('kind'))))
+    # a count of what happens to my cards of a kind ("you've destroyed 4+ allied landmarks"): fed by cards of that kind
+    for t, kind, w in c.execute(f"""select card, ev_obj_kind, ev_obj_with from flat_if where card in ({marks}) and test in ('event_count','amount_event_count')
+            and ev_obj_side='mine' and ev_obj_kind in ('landmark','equipment','spell')""", list(nodes)).fetchall():
+        needs.append((t, kind, w))
     for t, test, kind, side, op, n, w in c.execute(f"""select card, test, of_kind, of_side, op, n, of_with from flat_if where card in ({marks})
             and test in ('have','count','amount_count') and coalesce(of_side,'mine') in ('mine','any','')""", list(nodes)):
         if op == 'not' or (op in ('eq', 'le', 'lt') and not n): continue  # "no units around": nothing to feed
@@ -395,13 +412,19 @@ def need_lines(c, game, nodes, broad):
     for t, k in c.execute(f"""select card, keyword_ref from flat_do where act='keyword_action' and card_ref is null and keyword_ref is not null
             and on_kind is null and origin='own' and card in ({marks})""", list(nodes)).fetchall():
         if any(k in cards[a]['kws'] for a in nodes if a in cards and a != t): needs.append((t, 'any', f'keyword is {k}'))
+    # cards that make a card of a kind by description ("create a random landmark that costs 2 or less", Bomber Twins)
+    described = collections.defaultdict(set)
+    for a, k in c.execute(f"""select card, on_kind from flat_do where act in ('create','summon','choose_card','random_one') and card_ref is null
+            and on_kind in ('landmark','unit','spell','equipment') and coalesce(on_side,'mine') in ('mine','any') and card in ({marks})""", list(nodes)):
+        described[k].add(a)
     for t, kind, w in needs:
         cnt = kind_count(c, game, kind, w)
+        what = 'a card it acts on' if kind == 'any' else f'a {"landmark or structure" if kind == "landmark" else kind} it asks for'
         for a in nodes:
             if a == t or a not in cards: continue
-            if matches(c, game, cards[a], kind, w):
-                out[(a, t)].append(('type', 1.0 / cnt, 'is a card it acts on' if kind == 'any' else
-                                    f'is a {"structure" if kind == "landmark" else kind} it asks for'))
+            if matches(c, game, cards[a], kind, w): out[(a, t)].append(('type', 1.0 / cnt, 'is ' + what))
+            elif a in described.get(kind, ()) and not any(p.split(' ')[0] in ('card', 'name_has', 'type') for p in (w or '').split(';')):
+                out[(a, t)].append(('type', 0.5 / cnt, 'makes ' + what))
     return out
 
 
@@ -448,6 +471,16 @@ def boost_lines(c, game, nodes):
             lv = ab in lvl
             for a in helpers - {t}:
                 out[(a, t)].append(('levels' if lv else 'boosts', (1.0 if lv else 0.5) / n, why + (' (levels it up)' if lv else '')))
+    # how many cards are in my hand ("played as the last card from your hand", "10+ cards in hand", "for each card in hand")
+    hand = lambda acts, zone: {a for (a,) in c.execute(f"""select card from flat_do where act in ({','.join('?' * len(acts))}) and origin in
+            ('own','uses_keyword') and coalesce(on_side,'mine')='mine' and (coalesce(on_zone,'')='hand' or coalesce(eff_zone,'')='hand' or ?)
+            and card in ({marks})""", list(acts) + [zone] + L)}
+    for t, ab, op, n_ in c.execute(f"""select card, ability, op, n from flat_if where of_zone='hand' and coalesce(of_side,'mine')='mine'
+            and test in ('count','amount_count') and card in ({marks})""", L).fetchall():
+        few = op in ('eq', 'le', 'lt') and (n_ or 0) <= 1
+        helpers = hand(('discard',), 0) if few else hand(('create', 'copy', 'return_to_hand'), 0) | hand(('draw',), 1)  # a draw goes to hand
+        for a in helpers - {t}:
+            out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.3, ('empties your hand' if few else 'fills your hand') + (' (levels it up)' if ab in lvl else '')))
     # a stat it tests ("an ally with 5+ Power"): more of that stat
     power = having(('attack_gain',), False)
     for t, ab in c.execute(f"select card, ability from flat_if where test in ('stat','amount_stat') and attr='power' and card in ({marks})", L).fetchall():
@@ -492,6 +525,29 @@ def adders(c, game):
 
 def adder_abilities(c, game):
     return {ab for _, ab, *_ in adders(c, game)}
+
+
+def object_help_lines(c, game, nodes, broad):
+    """an ability that acts when my cards of a kind are played, summoned, drawn or created, and helps that card ("When you
+    summon an Elite, grant it +1|+1", Battlesmith; "the next card with Nightfall you play costs 1 less", Duskpetal Dust):
+    it makes every card of that kind in the deck stronger. broad=False keeps only kinds narrowed past "any unit" or "any card"."""
+    cards = cards_of(c, game); out = collections.defaultdict(list); marks = ','.join('?' * len(nodes)); L = list(nodes)
+    for a, origin, ab, kind, w in c.execute(f"""select distinct card, origin, ability, obj_kind, obj_with from flat_when where origin in ('own','gives')
+            and event in ('played','summoned','drawn','created') and coalesce(obj_side, actor_side, 'mine')='mine' and coalesce(obj_pick,'') not in ('self')
+            and card in ({marks})""", L).fetchall():
+        narrowed = any(p and p.split(' ')[0] not in PLAY_STATE and p.split(' ')[1:2] != ['not'] for p in (w or '').split(';'))
+        if not narrowed and not broad: continue
+        whys = []
+        for act, kw, ps in c.execute("select act, keyword_ref, params from flat_do where card=? and ability=? and origin=? and on_pick='it'", (a, ab, origin)):
+            if act in ('stat_change', 'grow') and '=-' not in (ps or ''): whys.append(stats_said(ps))
+            elif act == 'cost_change' and '=-' in (ps or ''): whys.append('makes it cheaper')
+            elif act == 'give_keyword' and kw and buff_keyword(c, kw): whys.append(f'gives it {mechanics.name(c, kw)}')
+            elif act == 'heal': whys.append('heals it')
+        if not whys: continue
+        k = 'any' if kind in (None, 'card', 'any', 'anything') else kind
+        hits = [b for b in L if b != a and b in cards and matches(c, game, cards[b], k, w)]
+        for b in hits: out[(a, b)].append(('boosts', 0.5 / max(1, len(hits)), ', '.join(dict.fromkeys(whys)) + ' when it comes'))
+    return out
 
 
 def gives_lines(c, game, nodes):
@@ -553,7 +609,7 @@ def network(c, game, ids, broad=True):
     for (a, b), ls in allg.items():
         if a in nodes and b in nodes: lines[(a, b)] += ls
     for f in (aimed(c, game, nodes, broad), played_lines(c, game, nodes, broad), need_lines(c, game, nodes, broad),
-              boost_lines(c, game, nodes), gives_lines(c, game, nodes)):
+              boost_lines(c, game, nodes), gives_lines(c, game, nodes), object_help_lines(c, game, nodes, broad)):
         for k, ls in f.items(): lines[k] += ls
     fam = families(c, nodes)
     lines = collections.defaultdict(list, {(a, b): [l for l in ls if l[0] == 'levelsinto'] if fam[a] == fam[b] else ls

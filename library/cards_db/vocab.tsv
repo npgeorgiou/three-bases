@@ -544,3 +544,4 @@ keyword	Sharpsight	concept of having, using or giving this keyword (Runeterra gl
 keyword	Mark of the Storm	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	mark_target		29 Oct 2026, v30; v33 (Kaptain)
 event	cost_changed	a card's cost is changed (made cheaper or dearer)			29 Oct 2026, v33
 state	cost_reduced	a card whose cost was reduced ("cost reduced cards")	cost_reduction	cost_changed	29 Oct 2026, v33
+keyword	Attack	concept of having, using or giving this keyword (Runeterra: a label, "Attack:" = when this unit attacks; concept is Claude's)	on_attack		29 Oct 2026, v34

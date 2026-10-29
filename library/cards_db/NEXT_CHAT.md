@@ -20,15 +20,14 @@ round, because the work fixed only what he pointed at. **Your job is to find the
 6. Report only what is checked. Say which families you swept and how many cards each touched.
 
 ## Open work, in order
-1. **Kaptain's check of v34** (CHANGES.md): game rules as data, help table, line names. Fix what he finds as a family.
-2. **Monster Train full decks: none found as text.** Searched Steam discussions and guides, GameFAQs, the wiki: players
-   post screenshots or prose, not card lists. cases/decks.tsv still holds the guides' core cards. Ask Kaptain for
-   screenshots or lists before searching again.
-3. **Read the new decks' networks like a player** (PROCESS "Think like a player"): only Janna Nilah was read (found Janna's
-   level-up row and the cost reduced family). Read the other 27 Runeterra and 22 Stormbound decks line by line.
-4. Not linked on purpose (Claude's call, tell Kaptain if asked): Janna's "the first 3 cards you draw cost 1 less" helps any
-   card, so it is no line to each card (it would say nothing about which cards belong together).
-5. After any change: `run.py <game>` for all three games (now 295 / 135 / 146 cases), audit_links.py 0 findings,
+1. **Kaptain's check of v34** (CHANGES.md): game rules as data, help table, line names, deck-read families. Fix what he
+   finds as a family, for all games, and write the lesson in PROCESS.md.
+2. **Monster Train full decks: none found as text** (Steam, GameFAQs, the wiki: players post screenshots). Ask Kaptain.
+3. Read more decks like a player (PROCESS step 2.9): read so far Janna Nilah, Swain Ziggs, Soraka Tahm Kench, Aphelios
+   Zoe, Lurkers, Chronobreak, IC pirate, Frost Deck, Morsel build, Hellhorned armor.
+4. Not linked on purpose (Claude's calls): Janna's "the first 3 cards you draw cost 1 less" (helps any card); Stormbound
+   units moving forward each turn (every unit, says nothing); removal spells (Hush, Mystic Shot) help no card in particular.
+5. After any change: `run.py <game>` for all three games (now 300 / 137 / 146 cases), audit_links.py 0 findings,
    `python3 network_page.py`, give Kaptain network.html, push.
 
 ## Where things are

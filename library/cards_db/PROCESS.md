@@ -25,7 +25,13 @@ Kaptain checked a few decks four times and each time found missing and wrong lin
 5. **Lines were named in Claude's words.** "Changes how it works" was shown for Spirits Unleashed giving +1|+1. Line kinds
    now say what a player says: does what it waits for, helps it level up, makes it stronger (stats, buffs, cheaper, more
    damage), changes how it works (only real rule changes: Fast, can't block), is a card it needs, puts it into play.
-6. **"Done" was said on counts.** Cases passing says nothing about the links nobody wrote a case for. Before showing a
+6. **The query layer dropped what the rows had.** The rows said "allied Pykes", "non-combat damage", "a card with
+   Nightfall", "Capture is used", but flat.py, refs.py or network.py did not carry or read that part, so the links were
+   wrong although the data was right. Now flat_when/flat_if/flat_ref keep who does it (actor_kind, actor_with), the
+   network checks it and the origin (combat) filter, label keywords a filter names ("Nightfall:") are the card's keywords
+   (load.py), and "used a keyword" matches by the keyword. Rule: a new field or filter in the rows is not done until the
+   query layer keeps it and the network reads it; network.PLAY_STATE lists the filters it ignores on purpose.
+7. **"Done" was said on counts.** Cases passing says nothing about the links nobody wrote a case for. Before showing a
    network: run.py passes, audit_text.py and audit_links.py are explained, every guide deck's "lacks" list (network.measure)
    is read card by card (PROCESS "Think like a player").
 
@@ -179,13 +185,21 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
 5. Second reading: `compare.py` lists differences; Claude judges them against the text. A kept reading that is wrong is
    fixed; each "same meaning, different form" becomes a normalize rule for all games.
 6. Rebuild every game once (`run.py <each game>`); all cases must pass.
-7. **Link audit** (`audit_links.py <game>`, also printed by run.py): every line it prints is a link that cannot exist. Each
+7. **Text audit** (`audit_text.py <game> [--list <rule>]`, also printed by run.py): every card whose text has a word its rows
+   do not show ("or the enemy Nexus" without a player target, "spells and Skills" without Skills, "everywhere" without
+   the zone). Read each listed card: fix the family by a rule script, or add the card to audit_text_explained.tsv with
+   why the rows are right (they say it another way, or the words are no effect).
+   A new kind of reading error found later becomes a new rule in audit_text.py, so the next game is checked for it.
+8. **Link audit** (`audit_links.py <game>`, also printed by run.py): every line it prints is a link that cannot exist. Each
    is fixed at its cause (a missing `causes`, a keyword with no concept row or no record, a level-up form the source lacks,
    a misread name) or explained in RESULTS.md. A game is not done while a line is unexplained.
-8. **Deck networks** (`network_page.py` draws every deck in decks.tsv and cases/decks.tsv; `ask.py <game> network "<deck>"`):
-   open the page and read every guide deck's network the way a player would: does each card that waits for something
-   get a line from the cards that do it? Kaptain found 15 gaps in 9 decks this way that 500 passing cases had not shown.
-   Each gap becomes a cases/network.tsv row (a line that must be there, or must not) and is fixed for every card.
+9. **Deck networks** (`network_page.py` draws every deck in decks.tsv and cases/decks.tsv; `ask.py <game> network "<deck>"`):
+   find full decks first (players' guides, deck sites, deck codes; full lists, not a guide's core cards). Read at least 10
+   decks card by card, as a player: for each card, what does it need (level-up, trigger, condition, stats, keywords) and
+   which cards in the deck give it that; what does it give, and to whom; is every line's reason true by the texts? Kaptain
+   found 15 gaps in 9 decks that 500 passing cases had not shown, and Claude's own read of 9 decks found 8 more families.
+   Each gap is fixed for every card of every game (a rule, never one card), becomes a cases/network.tsv row, and its
+   lesson is written in "Links the deck networks showed missing".
 
 ### 3. Case tests (`cases/`)
 - mechanics.tsv: a question, the expected cards from the texts (regex on the text, or a Keywords-field keyword) and the
@@ -208,10 +222,11 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
 its name and text, then its rows. Every error he finds is fixed for all cards with the same problem.
 
 ### 5. Done when
-`run.py <game>` passes every step and every other game still passes; the keyword -> concept list checked twice and shown
+`run.py <game>` passes every step and every other game still passes; read/<game>/game_rules.jsonl written (step 0.10);
+audit_text.py and audit_links.py print nothing unexplained; the keyword -> concept list checked twice and shown
 to Kaptain; word check 0 open flags; no proposal need shared by cards with different texts; stubs only names nothing
 defines; `ask.py all compare <its main concepts>` shows its cards next to the other games'; every guide deck explained;
-Kaptain approved CHECK_20_<game>; audit_links.py prints nothing unexplained; every guide deck's network read (step 2.8)
+Kaptain approved CHECK_20_<game>; at least 10 full decks' networks read card by card (step 2.9)
 and its gaps fixed; RESULTS.md and HANDOFF.md say the state; everything pushed. After his approval, add a few
 approved records to BRIEF.md under "Game words: <game>" as worked examples.
 
@@ -268,7 +283,7 @@ joins "A makes X" to "B waits for X". What went wrong, how it was missed, and th
    "Writing data the same way"), so concept questions missed them. Mapped from Riot's glossary (Claude's, for Kaptain's
    check); audit_links.py lists any keyword without one.
 How it was missed: every test asked whether the query finds the cards that do X; none asked whether two cards of a real
-deck are joined, or must not be. Read the networks of guide decks (step 2.8) before calling a game done.
+deck are joined, or must not be. Read the networks of guide decks (step 2.9) before calling a game done.
 Second check (Kaptain, 29 Oct 2026), fixed in every game: a champion linked to its own level-up form (one card in play);
 spells and skills not counted for "N spells or Skills played" (a skill is an ability card the unit casts: it is put in the
 network, kind spell takes it when the filter says Skill); "help" that is no event was missing (more health helps a card
@@ -281,6 +296,15 @@ abilities are fed like the card's own; "I strike / I kill" is about the card, no
 what the event happened to; a "non-X" filter narrows nothing; what a card creates by description ("2 random Imps") is no
 need for that type; the combo search (connections.py) is no source of network lines (its weak reasons, "counts card",
 "target: type", were noise); a count of a keyword used names the card when the text does ("planted 15+ Poison Puffcaps").
+
+Found by reading guide decks card by card, 29 Oct 2026 (v34, fixed for all games): a count of what happens to my cards of a kind
+("destroyed 4+ allied landmarks") is fed by cards of that kind and cards that make one by description (Bomber Twins ->
+Ziggs); "non-combat damage" is not fed by units fighting (Swain); a need that names who does it ("allied Pykes have dealt")
+is fed only by that doer or a card that makes such a unit fight; "used a keyword" (Capture) matches makers of that keyword
+(An Acquired Taste -> Tahm Kench); an ability that helps the card that comes ("the next card with Nightfall costs 1 less",
+"when you summon an Elite, grant it +1|+1") makes every card of that kind stronger; what a card does to itself only feeds a
+need its own kind fits (Heliotroopers poisoning itself is no Dragon for Sunbeam Serpents); "last card in hand" is helped by
+discarding, "cards in hand" by drawing and creating (First Mutineer -> Northsea Dogs).
 
 More found 29 Oct 2026 (v33, all games): an effect that adds to what my cards of a kind just did ("your spells and Skills
 deal 1 extra damage", "double all damage dealt by your spells") helps every card of that kind in the deck that does it, also

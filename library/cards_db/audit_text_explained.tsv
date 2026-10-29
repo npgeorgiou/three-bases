@@ -1,0 +1,17 @@
+game	card	rule	why
+runeterra	Hextech Anomaly	create	"create me" is when it is created (a trigger), not an effect
+runeterra	Agony's Embrace	summon	a deckbuilding rule ("cards that summon Husks"), nothing happens in play
+runeterra	Senna	kill or destroy	"kill spells" is a filter (does kill) on the spells it makes Fast
+runeterra	Senna (level 2)	kill or destroy	"kill spells" is a filter (does kill) on the spells it makes Fast and cheaper
+runeterra	Ryze (level 2)	kill or destroy	"destroy the enemy Nexus" is stored as winning the game (win_game)
+runeterra	Varus (level 2)	stat gift	"+10|+0" is the bow's maximum, not a gift
+runeterra	Out Of The Way	this round	"this round" names the buffs it changes, not a duration of its own
+runeterra	Legion Deserter	everywhere	"allied everywhere buffs" names the buffs it copies; the rows cannot say more
+runeterra	Mountain Sojourners	for each	"continue for each supported ally in succession" is a chain, not a count
+runeterra	Dreamlight Alina	for each	"for each one there isn't space for" is stored as the summon's overflow
+runeterra	Curious Shellfolk	random	"randomly selected options" names the trigger (picking from options), not a random effect
+runeterra	Fizz (level 2)	spells and Skills	the stop is stored on all enemy effects, which includes Skills
+runeterra	Allure	level up	its level-up text is "Missing Translation" in the source: nothing to write
+stormbound	Rogue Sheep	draw	drawing from the enemy's hand is stored as steal
+monster_train	Shardtail Queen	for each	"per" sits in another path's text; the rows hold each path
+monster_train	Steel Pulleyclaw	player named	"the Pyre room" is a floor, not the player

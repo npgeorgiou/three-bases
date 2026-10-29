@@ -112,3 +112,10 @@ Each change: date, what changed, the card that caused it, and which records were
   audit_text.py in run.py; fixes/runeterra/v34.py (Make it Rain hits the enemy Nexus too, "everywhere" zones); BRIEF
   reading rules 26-32; PROCESS "Why the first three games went wrong" and step 0.10; cases/network.tsv n52-n57 (cases now
   check the line kind).
+- 29 Oct 2026, v34 (deck read by Claude, 10 decks, all games): who does it kept in the query layer (flat_when actor_with,
+  flat_if ev_actor_kind/side/with, flat_ref actor_kind/actor_with) and checked by the network; "non-combat" not fed by
+  fighting; counted kinds of my cards fed by cards of that kind or that make one; "used a keyword" matches by keyword;
+  label keywords a filter names are the card's keywords (load.py; vocab keyword Attack); help to the card that comes
+  (object_help_lines); a card's effects on itself only feed needs its kind fits; hand-size needs; audit_text Rally only in
+  Runeterra; PROCESS lesson 6 (query layer), steps 2.7 (text audit) and 2.9 (read 10 full decks), "Done when"; HANDOFF
+  "Importing a new game: start here"; cases n58-n64.

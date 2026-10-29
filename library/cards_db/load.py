@@ -177,6 +177,16 @@ def main():
             if pat.search((t or '').lower()) and out.execute('select 1 from card where id=? and is_keyword=0', (i,)).fetchone() \
                     and not out.execute('select 1 from card_keyword where card=? and keyword=?', (i, k)).fetchone():
                 out.execute('insert into card_keyword(card, keyword) values(?,?)', (i, k))
+    # a card whose text uses a keyword as a label ("Nightfall: Draw 1", "Daybreak: ...") has that keyword even when the
+    # keyword's entry does nothing by itself, when a filter or condition names it ("the next card with Nightfall")
+    for k, kname, kgame in out.execute("select id, name, game from card where is_keyword=1 and category='keyword' and is_stub=0 and "
+                                       "not exists (select 1 from ability a where a.card=card.id) and (exists (select 1 from filter f where "
+                                       "f.ref_keyword=card.id) or exists (select 1 from cond d where d.ref_keyword=card.id))").fetchall():
+        pat = _re.compile(r'(?:^|[.:!?]\s+)' + _re.escape(kname.lower()) + r'(?: \d+)?:')
+        for i, t in lib.execute('select id, text from entities where game=?', (kgame,)):
+            if pat.search(' '.join((t or '').lower().split())) and out.execute('select 1 from card where id=? and is_keyword=0', (i,)).fetchone() \
+                    and not out.execute('select 1 from card_keyword where card=? and keyword=?', (i, k)).fetchone():
+                out.execute('insert into card_keyword(card, keyword) values(?,?)', (i, k))
     import flat; flat.build(out); flat.derive(out); import refs; refs.build(out)  # the query layer: general rows with keywords expanded and concepts
     out.commit()
 

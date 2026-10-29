@@ -119,24 +119,24 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 - passive: monster_train 8 cards, runeterra 18 cards, stormbound 8 cards
 - cheat_death: runeterra 7 cards
 - silence: stormbound 8 cards
-- movement: monster_train 6 cards
 - forced_movement: monster_train 6 cards
+- movement: monster_train 6 cards
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- sacrifice: monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5540 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- destroy: monster_train 399 pairs, e.g. Little Fade -> Primordium; runeterra 12483 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- removal: monster_train 93 pairs, e.g. Molded -> Primordium; runeterra 3771 pairs, e.g. Kindred's Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Dreadful Keepers
-- self_destruct: monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6870 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
-- revive: runeterra 1027 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant
-- damage: runeterra 13536 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 686 pairs, e.g. Eloth the Ignited -> Dreadful Keepers
+- sacrifice: monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5616 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- destroy: monster_train 399 pairs, e.g. Little Fade -> Primordium; runeterra 12667 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- removal: monster_train 93 pairs, e.g. Molded -> Primordium; runeterra 3870 pairs, e.g. Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
+- self_destruct: monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6976 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
+- revive: runeterra 1043 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant
+- damage: runeterra 13830 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 686 pairs, e.g. Eloth the Ignited -> Dreadful Keepers
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
 - summon -> on_ally_play -> generate_cards (seen in monster_train, runeterra)
 - summon -> on_ally_play -> random_effect (seen in runeterra)
-- summon -> on_ally_play -> combo_sequence (seen in runeterra)
-- summon -> on_ally_play -> play_timing_condition (seen in runeterra)
+- summon -> on_ally_play -> card_presence_condition (seen in runeterra)
+- summon -> tribal -> upgrade (seen in monster_train, runeterra)
 - summon -> cant_block -> cant_attack (seen in runeterra)
 - summon -> tribal -> cost_reduction (seen in runeterra, stormbound)
 
