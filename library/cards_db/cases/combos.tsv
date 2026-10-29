@@ -102,3 +102,19 @@ cmt58	monster_train	Railbeater	Battering Ram	Hellhorned armor: Armor turns into 
 cmt59	monster_train	Welder Helper	Battering Ram	Hellhorned armor: Armor turns into damage	guide: https://steamcommunity.com/sharedfiles/filedetails/?id=2111828801
 cmt60	monster_train	Imp-in-a-Box	Imp-pressive	Hellhorned Imps: an Imp to sacrifice	guide: https://steamcommunity.com/sharedfiles/filedetails/?id=2111828801
 cmt61	monster_train	Imp-in-a-Box	Imp-portant Work	Hellhorned Imps: an Imp to sacrifice	guide: https://steamcommunity.com/sharedfiles/filedetails/?id=2111828801
+cfa01	faeria	Feed the Forest	Oakling	destroying Oakling triggers its Last Words and gains faeria	guide: https://www.faeria.com/the-hub/guide/13-how-to-build-a-green-deck
+cfa02	faeria	Feed the Forest	Ruunin, the Relentless	each death returns Ruunin bigger; Feed the Forest turns her Life into faeria	guide: https://www.faeria.com/the-hub/deck/1720-illusion-of-failed-ruunin
+cfa03	faeria	Feed the Forest	Tarum, the Forest World	destroying Tarum gains faeria and its Last Words fills the world with forests	guide: https://www.faeria.com/the-hub/article/23-aquablad-s-card-review-time-of-legends
+cfa04	faeria	Gabrian Enchantment	Oak Father	Oak Father's Life, grown by forests, becomes its Attack	guide: https://www.faeria.com/the-hub/article/23-aquablad-s-card-review-time-of-legends
+cfa05	faeria	Doomsday	Soul Eater	Doomsday destroys every creature; each friendly death grows Soul Eater in hand	guide: https://www.faeria.com/the-hub/guide/337-how-to-play-a-393-393-soul-eater
+cfa06	faeria	Doomgate, Door to Oblivion	Annoying Gnat	sacrificing the Gnat draws a card; its Last Words summons it again	guide: https://www.faeria.com/the-hub/deck/2486-so-annoying
+cfa07	faeria	Famine	Ruby Yak	Famine damages every Yak; Ruby Yak hits the opponent once for each damaged Yak	guide: https://www.faeria.com/the-hub/deck/4206-ruby-yak-otk-combo
+cfa08	faeria	Ulani's Medallion	Ruby Yak	the Medallion turns your other creatures into copies of Ruby Yak	guide: https://www.faeria.com/the-hub/guide/344-exodia-yak
+cfa09	faeria	Rain of Fish	Ulani's Medallion	Rain of Fish fills the board with creatures for the Medallion to copy	guide: https://www.faeria.com/the-hub/guide/344-exodia-yak
+cfa10	faeria	Ruunin, the Relentless	Shaytan Monstrosity	each time Ruunin dies, Monstrosity drains her Attack	guide: https://www.faeria.com/the-hub/deck/1852-monstrosity-feeds-on-ruunin
+cfa11	faeria	Oakling	Deepwood Stalker	Oakling's buffs help Deepwood Stalker	guide: https://www.faeria.com/the-hub/deck/4570-no-dlc-beastmaster-green
+cfa12	faeria	Gabrian Commander	Triton Trainer	Commander with Triton Trainer is a strong turn-two play	guide: https://www.faeria.com/the-hub/deck/4615-no-dlc-blue-jump
+cfa13	faeria	Voice of Hunger	Eredon, Voice of All	the deck wins through the Voice of Hunger and Eredon combo	guide: https://www.faeria.com/the-hub/deck/4856-no-dlc-voice-of-hunger-combo-control
+cfa14	faeria	Famine	Plague Bearer	Famine is an extra trigger for Plague Bearer	guide: https://www.faeria.com/the-hub/deck/4856-no-dlc-voice-of-hunger-combo-control
+cfa15	faeria	Falcon Dive	Plague Bearer	Falcon Dive is an extra trigger for Plague Bearer	guide: https://www.faeria.com/the-hub/deck/4856-no-dlc-voice-of-hunger-combo-control
+cfa16	faeria	Gift of Steel	Hilltop Archer	Gift of Steel adds damage to repeated archer attacks	guide: https://www.faeria.com/the-hub/deck/4854-no-dlc-red-archers
