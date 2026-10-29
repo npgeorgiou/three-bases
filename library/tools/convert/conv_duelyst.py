@@ -71,7 +71,7 @@ def main():
                          '1' if re.search(r'setIsGeneral\(true\)', body) else '',
                          '1' if re.search(r'setIsHiddenInCollection\(true\)', body) else '',
                          '1' if re.search(r'setIsLegacy\(true\)', body) else '',
-                         name, ' '.join(desc.split()), ','.join(refs),
+                         name, '\\n'.join(' '.join(x.split()) for x in desc.replace('\\n', '\n').split('\n') if x.strip()), ','.join(refs),
                          get(r'signatureCardData\s*=\s*\{id:\s*(Cards\.\w+\.\w+)')])
     with open(OUT, 'w') as o:
         o.write('card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|name|text|refs|signature\n')

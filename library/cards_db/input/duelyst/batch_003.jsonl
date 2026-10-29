@@ -1,3 +1,10 @@
+{"id": 5000701, "name": "Lacerating Frost", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Deal 2 damage to the enemy General and stun all nearby enemy minions.", "names_in_text": []}
+{"id": 5000702, "name": "Entangling Shadow", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Summon Wraithlings and Shadow Creep in a 2x2 area.", "names_in_text": ["Shadow Creep"]}
+{"id": 5000703, "name": "Living Flame", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Deal 2 damage to an enemy and summon two Spellsparks nearby your General.", "names_in_text": []}
+{"id": 5000704, "name": "Molding Earth", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Summon 3 Magmas with random keywords nearby your General.", "names_in_text": []}
+{"id": 5000705, "name": "Ethereal Wind", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Dispel an enemy and summon a Wind Dervish nearby.", "names_in_text": ["Dispel", "Wind Dervish"]}
+{"id": 5000706, "name": "Restoring Light", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Restore 3 Health to your General. Give your friendly minions +1 Health.", "names_in_text": []}
+{"id": 5000707, "name": "Ancient Knowledge", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Draw 2 cards.", "names_in_text": []}
 {"id": 5000708, "name": "Fortuneshaper", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Your next Gauntlet card choices will be Epic cards.", "names_in_text": []}
 {"id": 5000709, "name": "Futureshaker", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Your next Gauntlet card choices will be Legendary Neutral cards.", "names_in_text": []}
 {"id": 5000710, "name": "Fatesealer", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Your next Gauntlet card choices will be Legendary Faction cards.", "names_in_text": []}
@@ -36,37 +43,33 @@
 {"id": 5000747, "name": "Teleport Near Your General", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Move target to any unoccupied space near your General.", "names_in_text": []}
 {"id": 5000749, "name": "Festive Spirit", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Snowchasers are on their way with Frostfire gifts!", "names_in_text": ["Frostfire"]}
 {"id": 5000753, "name": "Argeon Highmayne (tutorial, TutorialSignatureGeneral)", "category": "hero", "speed": "", "types": [], "keywords": [], "text": "Bloodbound Spell: Give a friendly minion nearby your General +2 Attack.", "names_in_text": ["Bloodbound Spell"]}
-{"id": 5000755, "name": "Saberspine Tiger (tutorial)", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Rush", "names_in_text": ["Rush"]}
-{"id": 5000756, "name": "Rook (tutorial, TutorialRookie)", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Provoke", "names_in_text": ["Provoke"]}
-{"id": 5000770, "name": "Primus Shieldmaster (tutorial)", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Provoke", "names_in_text": ["Provoke"]}
 {"id": 5000773, "name": "Freezing Orb", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Deal 25 damage to the enemy General.", "names_in_text": []}
 {"id": 5000774, "name": "Blazing Orb", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Deal 25 damage to the enemy General.", "names_in_text": []}
 {"id": 5000775, "name": "True Strike (tutorial)", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Deal 2 damage to a minion.", "names_in_text": []}
 {"id": 5000776, "name": "Sunstone Bracers (tutorial)", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Your General gains +1 Attack.", "names_in_text": []}
 {"id": 5000777, "name": "Ruby Rifter", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Whenever your General takes damage, draw a card and give this minion +2 Attack.", "names_in_text": []}
-{"id": 5000778, "name": "Blood Taura", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Provoke This minion's cost is your General's health.", "names_in_text": ["Provoke"]}
+{"id": 5000778, "name": "Blood Taura", "category": "unit", "speed": "", "types": [], "keywords": ["Provoke"], "text": "Keywords: Provoke. This minion's cost is your General's health.", "names_in_text": []}
 {"id": 5000779, "name": "Blistering Skorn", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Deal 1 damage to everything (including itself).", "names_in_text": ["Opening Gambit"]}
 {"id": 5000780, "name": "Chakkram", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "This minion costs 2 less if your General took damage on opponent's last turn.", "names_in_text": []}
-{"id": 5000781, "name": "Wood-Wen", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Provoke Opening Gambit: Give a nearby friendly minion Provoke.", "names_in_text": ["Opening Gambit", "Provoke"]}
+{"id": 5000781, "name": "Wood-Wen", "category": "unit", "speed": "", "types": [], "keywords": ["Provoke"], "text": "Keywords: Provoke. Opening Gambit: Give a nearby friendly minion Provoke.", "names_in_text": ["Opening Gambit", "Provoke"]}
 {"id": 5000782, "name": "Elkowl", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Gain two random keywords.", "names_in_text": ["Opening Gambit"]}
 {"id": 5000783, "name": "Grove Lion", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "While this minion is on the battlefield, your General has Forcefield.", "names_in_text": ["Forcefield"]}
 {"id": 5000784, "name": "Sphynx", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Put a Riddle in your opponent's action bar.", "names_in_text": ["Opening Gambit", "Riddle"]}
 {"id": 5000785, "name": "Riddle", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "While you have the Riddle, you cannot replace. Cast to give your opponent a Riddle.", "names_in_text": []}
 {"id": 5000786, "name": "Day Watcher", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Whenever a friendly minion attacks, restore 1 Health to your General.", "names_in_text": []}
-{"id": 5000787, "name": "Night Watcher", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Forcefield Whenever ANY player summons a minion with Rush, exhaust it.", "names_in_text": ["Forcefield", "Rush"]}
+{"id": 5000787, "name": "Night Watcher", "category": "unit", "speed": "", "types": [], "keywords": ["Forcefield"], "text": "Keywords: Forcefield. Whenever ANY player summons a minion with Rush, exhaust it.", "names_in_text": ["Rush"]}
 {"id": 5000788, "name": "Quartermaster Gauj", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Takes no damage from minions or Generals.", "names_in_text": []}
-{"id": 5000789, "name": "Dust Wailer", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Flying Opening Gambit: Deal 3 damage to all enemies in front of this minion.", "names_in_text": ["Flying", "Opening Gambit"]}
+{"id": 5000789, "name": "Dust Wailer", "category": "unit", "speed": "", "types": [], "keywords": ["Flying"], "text": "Keywords: Flying. Opening Gambit: Deal 3 damage to all enemies in front of this minion.", "names_in_text": ["Opening Gambit"]}
 {"id": 5000790, "name": "Zyx", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Summon a copy of this minion on a random nearby space.", "names_in_text": ["Opening Gambit"]}
 {"id": 5000791, "name": "Azure Herald", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Restore 3 Health to your General.", "names_in_text": ["Opening Gambit"]}
 {"id": 5000792, "name": "Ironclad", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Dying Wish: Dispel all enemy minions.", "names_in_text": ["Dispel", "Dying Wish"]}
 {"id": 5000793, "name": "Decimus", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Whenever your opponent draws a card, deal 2 damage to the enemy General.", "names_in_text": []}
-{"id": 5000794, "name": "Black Locust", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Flying After this minion moves, summon a Black Locust nearby.", "names_in_text": ["Flying"]}
+{"id": 5000794, "name": "Black Locust", "category": "unit", "speed": "", "types": [], "keywords": ["Flying"], "text": "Keywords: Flying. After this minion moves, summon a Black Locust nearby.", "names_in_text": []}
 {"id": 5000795, "name": "Wind Runner", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "After this minion moves, give all friendly minions around it +1/+1.", "names_in_text": []}
 {"id": 5000796, "name": "Mogwai", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "After this moves, draw a card.", "names_in_text": []}
 {"id": 5000797, "name": "Ghost Lynx", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Teleport a nearby minion to a random space.", "names_in_text": ["Opening Gambit"]}
 {"id": 5000798, "name": "Grailmaster", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Whenever you summon a minion, this minion gains a random keyword ability.", "names_in_text": []}
 {"id": 5000799, "name": "Firestarter", "category": "unit", "speed": "", "types": ["Arcanyst"], "keywords": [], "text": "Whenever you cast a spell, summon a 1/1 Spellspark with Rush on a random nearby space.", "names_in_text": ["Rush", "Spellspark"]}
-{"id": 5000800, "name": "Spellspark", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Rush", "names_in_text": ["Rush"]}
 {"id": 5000801, "name": "Khymera", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Whenever this minion takes damage, summon a random token minion nearby.", "names_in_text": []}
 {"id": 5000802, "name": "Jaxi", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Dying Wish: Summon a 1/1 Ranged Mini-Jax in a random corner.", "names_in_text": ["Dying Wish", "Mini-Jax", "Ranged"]}
 {"id": 5000803, "name": "Sun Elemental", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Give two random friendly minions +2 Health.", "names_in_text": ["Opening Gambit"]}
@@ -74,20 +77,17 @@
 {"id": 5000805, "name": "Araki Headhunter", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Whenever you summon a minion with Opening Gambit from your action bar, gain +2 Attack.", "names_in_text": ["Opening Gambit"]}
 {"id": 5000806, "name": "Keeper of the Vale", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Summon a random friendly minion destroyed this game nearby this minion.", "names_in_text": ["Opening Gambit"]}
 {"id": 5000807, "name": "White Widow", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Whenever you replace a card, deal 2 damage to a random enemy.", "names_in_text": []}
-{"id": 5000808, "name": "Wings of Paradise", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Flying Whenever you replace a card, this minion gains +2 Attack this turn.", "names_in_text": ["Flying"]}
+{"id": 5000808, "name": "Wings of Paradise", "category": "unit", "speed": "", "types": [], "keywords": ["Flying"], "text": "Keywords: Flying. Whenever you replace a card, this minion gains +2 Attack this turn.", "names_in_text": []}
 {"id": 5000809, "name": "Astral Crusader", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Whenever you replace this card, it costs 3 less and gains +3/+3.", "names_in_text": []}
 {"id": 5000810, "name": "Dreamgazer", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "When you replace this card, summon it on a random nearby space. Your General takes 2 damage.", "names_in_text": []}
-{"id": 5000811, "name": "Bonereaper", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Provoke At the end of your turn, deal 2 damage to each enemy minion around this one.", "names_in_text": ["Provoke"]}
+{"id": 5000811, "name": "Bonereaper", "category": "unit", "speed": "", "types": [], "keywords": ["Provoke"], "text": "Keywords: Provoke. At the end of your turn, deal 2 damage to each enemy minion around this one.", "names_in_text": []}
 {"id": 5000812, "name": "Hollow Grovekeeper", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Destroy ANY nearby minion with Provoke or Frenzy. If you do, this minion gains Provoke and Frenzy.", "names_in_text": ["Frenzy", "Opening Gambit", "Provoke"]}
-{"id": 5000813, "name": "Tethermancer", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Provoke Dispel any minion that deals damage to this one.", "names_in_text": ["Dispel", "Provoke"]}
-{"id": 5000814, "name": "War Talon", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Frenzy Provoke", "names_in_text": ["Frenzy", "Provoke"]}
-{"id": 5000815, "name": "Sapphire Seer", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Forcefield", "names_in_text": ["Forcefield"]}
-{"id": 5000816, "name": "Sunsteel Defender", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Forcefield", "names_in_text": ["Forcefield"]}
-{"id": 5000817, "name": "E'Xun", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Forcefield Whenever this minion attacks or is attacked, draw a card.", "names_in_text": ["Forcefield"]}
+{"id": 5000813, "name": "Tethermancer", "category": "unit", "speed": "", "types": [], "keywords": ["Provoke"], "text": "Keywords: Provoke. Dispel any minion that deals damage to this one.", "names_in_text": ["Dispel"]}
+{"id": 5000817, "name": "E'Xun", "category": "unit", "speed": "", "types": [], "keywords": ["Forcefield"], "text": "Keywords: Forcefield. Whenever this minion attacks or is attacked, draw a card.", "names_in_text": []}
 {"id": 5000818, "name": "Sunset Paragon", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: ALL nearby minions deal damage to themselves equal to their Attack.", "names_in_text": ["Deal Damage", "Opening Gambit"]}
-{"id": 5000819, "name": "Arrow Whistler", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Ranged Your other minions with Ranged get +1 Attack.", "names_in_text": ["Ranged"]}
-{"id": 5000820, "name": "Golden Justicar", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Provoke Your other minions with Provoke can move two additional spaces.", "names_in_text": ["Provoke"]}
-{"id": 5000821, "name": "Skywing", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Flying Your other minions with Flying cost 1 less.", "names_in_text": ["Flying"]}
+{"id": 5000819, "name": "Arrow Whistler", "category": "unit", "speed": "", "types": [], "keywords": ["Ranged"], "text": "Keywords: Ranged. Your other minions with Ranged get +1 Attack.", "names_in_text": ["Ranged"]}
+{"id": 5000820, "name": "Golden Justicar", "category": "unit", "speed": "", "types": [], "keywords": ["Provoke"], "text": "Keywords: Provoke. Your other minions with Provoke can move two additional spaces.", "names_in_text": ["Provoke"]}
+{"id": 5000821, "name": "Skywing", "category": "unit", "speed": "", "types": [], "keywords": ["Flying"], "text": "Keywords: Flying. Your other minions with Flying cost 1 less.", "names_in_text": ["Flying"]}
 {"id": 5000822, "name": "Unseven", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Dying Wish: Summon a minion with Dying Wish from your action bar.", "names_in_text": ["Dying Wish"]}
 {"id": 5000824, "name": "Bastion", "category": "unit", "speed": "", "types": ["Structure"], "keywords": [], "text": "At the end of your turn, give all friendly minions +1 health.", "names_in_text": []}
 {"id": 5000825, "name": "Abjudicator", "category": "unit", "speed": "", "types": ["Arcanyst"], "keywords": [], "text": "Opening Gambit: Lower the cost of all spells in your action bar by 1.", "names_in_text": ["Opening Gambit"]}
@@ -104,7 +104,6 @@
 {"id": 5000836, "name": "Wind Sister Maia", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Friendly minions with Infiltrate have +1/+1.", "names_in_text": ["Infiltrate"]}
 {"id": 5000837, "name": "Sworn Sister L'Kian", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Add 2 random cards from your Faction to your action bar.", "names_in_text": ["Opening Gambit"]}
 {"id": 5000838, "name": "Fiz", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "Opening Gambit: Restore 2 Health to anything.", "names_in_text": ["Opening Gambit"]}
-{"id": 5000839, "name": "Slo", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "Provoke", "names_in_text": ["Provoke"]}
 {"id": 5000840, "name": "Sun Wisp", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Draw a card.", "names_in_text": ["Opening Gambit"]}
 {"id": 5000841, "name": "Radiant Dragoon", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "At the end of your turn, give a friendly minion +1 Health.", "names_in_text": []}
 {"id": 5000842, "name": "Sunforge Lancer", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Whenever anything is healed, give your General +1 Attack.", "names_in_text": []}
@@ -117,9 +116,8 @@
 {"id": 5000849, "name": "Sky Phalanx", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Summon three Silverguard Knights nearby your General.", "names_in_text": []}
 {"id": 5000850, "name": "Dawn's Eye", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Your General gains +4 Attack. At the end of your turn, repair all of your artifacts to full durability.", "names_in_text": []}
 {"id": 5000851, "name": "Xho", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "Dying Wish: Put a random Songhai spell into your action bar. It costs 1 less.", "names_in_text": ["Dying Wish"]}
-{"id": 5000852, "name": "Ace", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "Ranged", "names_in_text": ["Ranged"]}
 {"id": 5000853, "name": "Onyx Jaguar", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Whenever a friendly unit is moved for any reason, it gains +1/+1.", "names_in_text": []}
-{"id": 5000854, "name": "Ki Beholder", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Ranged Opening Gambit: An enemy minion cannot move next turn.", "names_in_text": ["Opening Gambit", "Ranged"]}
+{"id": 5000854, "name": "Ki Beholder", "category": "unit", "speed": "", "types": [], "keywords": ["Ranged"], "text": "Keywords: Ranged. Opening Gambit: An enemy minion cannot move next turn.", "names_in_text": ["Opening Gambit"]}
 {"id": 5000855, "name": "Katara", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Backstab: (1).", "names_in_text": ["Backstab"]}
 {"id": 5000856, "name": "Battle Panddo", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Whenever this minion takes damage, deal 1 damage to all enemies.", "names_in_text": []}
 {"id": 5000857, "name": "Grandmaster Zendo", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "The enemy General moves and attacks automatically.", "names_in_text": []}
@@ -134,7 +132,7 @@
 {"id": 5000866, "name": "Rae", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "Dying Wish: Dispel the nearest enemy minion.", "names_in_text": ["Dispel", "Dying Wish"]}
 {"id": 5000867, "name": "Pax", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "Dying Wish: Summon two 2/2 Iron Dervishes nearby.", "names_in_text": ["Dying Wish"]}
 {"id": 5000868, "name": "Wind Slicer", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Lower the cost of all Structure minions in your action bar by 1.", "names_in_text": ["Opening Gambit", "Structure"]}
-{"id": 5000869, "name": "Soulburn Obelysk", "category": "unit", "speed": "", "types": ["Structure"], "keywords": [], "text": "Summon Dervish Enemy minions that damage this are destroyed.", "names_in_text": ["Summon Dervish"]}
+{"id": 5000869, "name": "Soulburn Obelysk", "category": "unit", "speed": "", "types": ["Structure"], "keywords": ["Summon Dervish"], "text": "Keywords: Summon Dervish. Enemy minions that damage this are destroyed.", "names_in_text": []}
 {"id": 5000870, "name": "Allomancer", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Dying Wish: Summon a random Obelysk on this space.", "names_in_text": ["Dying Wish"]}
 {"id": 5000871, "name": "Nimbus", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Whenever this minion takes damage, summon a 0/4 Soulburn Obelysk nearby.", "names_in_text": ["Soulburn Obelysk"]}
 {"id": 5000872, "name": "Bloodfire Totem", "category": "unit", "speed": "", "types": ["Structure"], "keywords": [], "text": "At end of turn, deal 1 damage to your General.", "names_in_text": []}
@@ -149,7 +147,7 @@
 {"id": 5000881, "name": "Ooz", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "Whenever this minion takes damage, turn a space occupied by an enemy into Shadow Creep.", "names_in_text": ["Shadow Creep"]}
 {"id": 5000882, "name": "Blood Baronette", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Double a nearby Wraithling's Attack and Health.", "names_in_text": ["Opening Gambit", "Wraithling"]}
 {"id": 5000883, "name": "Arcane Devourer", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: The next minion you summon this turn costs 1.", "names_in_text": ["Opening Gambit"]}
-{"id": 5000884, "name": "Klaxon", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Provoke Dying Wish: Turn six random spaces into Shadow Creep.", "names_in_text": ["Dying Wish", "Provoke", "Shadow Creep"]}
+{"id": 5000884, "name": "Klaxon", "category": "unit", "speed": "", "types": [], "keywords": ["Provoke"], "text": "Keywords: Provoke. Dying Wish: Turn six random spaces into Shadow Creep.", "names_in_text": ["Dying Wish", "Shadow Creep"]}
 {"id": 5000885, "name": "Lurking Fear", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Lower the cost of all minions with Dying Wish in your action bar and deck by 1.", "names_in_text": ["Dying Wish"]}
 {"id": 5000886, "name": "Inkhorn Gaze", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Deal 2 damage to a minion. If it dies this turn, put a random Battle Pet into your action bar.", "names_in_text": ["Battle Pet"]}
 {"id": 5000887, "name": "Sphere of Darkness", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Turn an enemy minion's space into Shadow Creep. Draw a card.", "names_in_text": ["Shadow Creep"]}
@@ -158,10 +156,9 @@
 {"id": 5000890, "name": "Obliterate", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Destroy all friendly Shadow Creep to deal that much damage to all enemies.", "names_in_text": ["Shadow Creep"]}
 {"id": 5000891, "name": "Ghost Azalea", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Your General gains +1 Attack for each friendly Shadow Creep.", "names_in_text": ["Shadow Creep"]}
 {"id": 5000892, "name": "Gro", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "Grow: +1/+1", "names_in_text": ["Grow"]}
-{"id": 5000893, "name": "Rex", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "Rebirth", "names_in_text": ["Rebirth"]}
 {"id": 5000895, "name": "Wild Inceptor", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Hatch a friendly Egg.", "names_in_text": ["Opening Gambit"]}
 {"id": 5000896, "name": "Moloki Huntress", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Grow: +1/+1 Friendly minions grow at the start of BOTH player's turns.", "names_in_text": ["Grow"]}
-{"id": 5000897, "name": "Dreadnought", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Rebirth Egg minions you summon gain +2/+2.", "names_in_text": ["Rebirth"]}
+{"id": 5000897, "name": "Dreadnought", "category": "unit", "speed": "", "types": [], "keywords": ["Rebirth"], "text": "Keywords: Rebirth. Egg minions you summon gain +2/+2.", "names_in_text": []}
 {"id": 5000898, "name": "Mandrake", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Costs 1 less for each minion summoned from ANY player's action bar this game.", "names_in_text": []}
 {"id": 5000899, "name": "Visionar", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Whenever ANY player draws a card, this minion gains +1/+1.", "names_in_text": []}
 {"id": 5000900, "name": "Razor Skin", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Give all friendly minions +1 Attack. Put a random Battle Pet into your action bar.", "names_in_text": ["Battle Pet"]}
@@ -175,7 +172,7 @@
 {"id": 5000908, "name": "Icy", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "Opening Gambit: Stun a nearby enemy.", "names_in_text": ["Opening Gambit"]}
 {"id": 5000909, "name": "Bur", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "When this minion survives damage, transform it into a different Battle Pet.", "names_in_text": ["Battle Pet"]}
 {"id": 5000910, "name": "Huldra", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Give a friendly Vespyr minion Celerity.", "names_in_text": ["Celerity", "Opening Gambit", "Vespyr"]}
-{"id": 5000911, "name": "Frostiva", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Forcefield Whenever this minion attacks or is attacked, summon a 3/3 Vespyr Night Howler nearby.", "names_in_text": ["Forcefield", "Night Howler", "Vespyr"]}
+{"id": 5000911, "name": "Frostiva", "category": "unit", "speed": "", "types": [], "keywords": ["Forcefield"], "text": "Keywords: Forcefield. Whenever this minion attacks or is attacked, summon a 3/3 Vespyr Night Howler nearby.", "names_in_text": ["Night Howler", "Vespyr"]}
 {"id": 5000913, "name": "Frostburn", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Deal 3 damage to all enemy minions.", "names_in_text": []}
 {"id": 5000914, "name": "Wailing Overdrive", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Give a friendly minion on your opponent's starting side of the battlefield +5/+5.", "names_in_text": []}
 {"id": 5000915, "name": "Vespyric Call", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Put a random Vespyr minion into your action bar. It costs 1 less and has +1/+1.", "names_in_text": ["Vespyr"]}
@@ -184,13 +181,10 @@
 {"id": 5000918, "name": "Aspect of Shim'Zar", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Transform ANY minion into a random Battle Pet.", "names_in_text": ["Battle Pet"]}
 {"id": 5000919, "name": "White Asp", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Your General gains +3 Attack. Whenever your General destroys a minion, summon a 3/3 Blazing Spine Wall on that space.", "names_in_text": ["Wall"]}
 {"id": 5000920, "name": "Fog", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "Dying Wish: Draw a random battle pet.", "names_in_text": ["Battle Pet", "Dying Wish"]}
-{"id": 5000921, "name": "Ubo", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "Flying", "names_in_text": ["Flying"]}
-{"id": 5000922, "name": "Dex", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "Celerity", "names_in_text": ["Celerity"]}
 {"id": 5000925, "name": "Rok", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "Can't move.", "names_in_text": []}
-{"id": 5000926, "name": "Ion", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "Ranged Deals double damage to Generals.", "names_in_text": ["Ranged"]}
+{"id": 5000926, "name": "Ion", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": ["Ranged"], "text": "Keywords: Ranged. Deals double damage to Generals.", "names_in_text": []}
 {"id": 5000927, "name": "Hydrax", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Whenever a friendly Battle Pet dies, draw a card.", "names_in_text": ["Battle Pet"]}
 {"id": 5000928, "name": "Koi", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "This minion takes no damage from Generals.", "names_in_text": []}
-{"id": 5000929, "name": "Beastbound Savage", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Frenzy Celerity", "names_in_text": ["Celerity", "Frenzy"]}
 {"id": 5000931, "name": "Golden Mantella", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Put a random Battle Pet into your action bar.", "names_in_text": ["Battle Pet", "Opening Gambit"]}
 {"id": 5000932, "name": "Gnasher", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Dying Wish: This minion deals 3 damage to all enemies around it.", "names_in_text": ["Dying Wish"]}
 {"id": 5000933, "name": "Soboro", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Whenever this damages a neutral minion, destroy that minion.", "names_in_text": []}
@@ -198,27 +192,20 @@
 {"id": 5000935, "name": "Rawr", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "Whenever this minion takes damage, summon a random Battle Pet nearby.", "names_in_text": ["Battle Pet"]}
 {"id": 5000936, "name": "Z0r", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "Dying Wish: Put a random MECH minion into your action bar.", "names_in_text": ["Dying Wish", "Mech"]}
 {"id": 5000938, "name": "Sol", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "Opening Gambit: Activate a friendly Battle Pet.", "names_in_text": ["Battle Pet", "Opening Gambit"]}
-{"id": 5000939, "name": "Inquisitor Kron", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Provoke Whenever you replace a card, summon a 2/2 Prisoner with a random ability nearby.", "names_in_text": ["Provoke"]}
-{"id": 5000940, "name": "Dispirited Prisoner", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Frenzy", "names_in_text": ["Frenzy"]}
-{"id": 5000941, "name": "Broken Captive", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Rush", "names_in_text": ["Rush"]}
-{"id": 5000942, "name": "Ruined Slave", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Provoke", "names_in_text": ["Provoke"]}
-{"id": 5000943, "name": "Drudging Servant", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Flying", "names_in_text": ["Flying"]}
-{"id": 5000944, "name": "Toiling Vassal", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Ranged", "names_in_text": ["Ranged"]}
+{"id": 5000939, "name": "Inquisitor Kron", "category": "unit", "speed": "", "types": [], "keywords": ["Provoke"], "text": "Keywords: Provoke. Whenever you replace a card, summon a 2/2 Prisoner with a random ability nearby.", "names_in_text": []}
 {"id": 5000945, "name": "Calculator", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Gain the combined Attack and Health of all Battle Pets in your action bar.", "names_in_text": ["Opening Gambit"]}
-{"id": 5000946, "name": "Oni", "category": "unit", "speed": "", "types": ["Battle Pet"], "keywords": [], "text": "Forcefield.", "names_in_text": ["Forcefield"]}
 {"id": 5000947, "name": "Warblade", "category": "unit", "speed": "", "types": ["Golem"], "keywords": [], "text": "Bond: Other friendly minions gain +1/+1.", "names_in_text": ["Bond"]}
 {"id": 5000948, "name": "Life Coil", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Double a minion's Health.", "names_in_text": []}
 {"id": 5000949, "name": "Sol Pontiff", "category": "unit", "speed": "", "types": ["Golem"], "keywords": [], "text": "Zeal: Your Golems have +2 Attack.", "names_in_text": ["Zeal"]}
-{"id": 5000950, "name": "Peacekeeper", "category": "unit", "speed": "", "types": ["Golem"], "keywords": [], "text": "Airdrop, Forcefield, Frenzy, Provoke, Celerity", "names_in_text": ["Airdrop", "Celerity", "Forcefield", "Frenzy", "Provoke"]}
 {"id": 5000951, "name": "Gold Vitriol", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Whenever anything is healed, deal 2 damage to a random enemy.", "names_in_text": []}
 {"id": 5000952, "name": "Sparrowhawk", "category": "unit", "speed": "", "types": ["Arcanyst"], "keywords": [], "text": "Bond: Put a Mist Dragon Seal into your action bar.", "names_in_text": ["Bond", "Mist Dragon Seal"]}
 {"id": 5000953, "name": "Kindling", "category": "unit", "speed": "", "types": ["Arcanyst"], "keywords": [], "text": "Whenever you cast a spell, your Arcanyst minions gain +1 Attack.", "names_in_text": ["Arcanyst"]}
-{"id": 5000954, "name": "Calligrapher", "category": "unit", "speed": "", "types": ["Arcanyst"], "keywords": [], "text": "Rush Whenever this minion attacks, put three Songhai spells into your action bar.", "names_in_text": ["Rush"]}
+{"id": 5000954, "name": "Calligrapher", "category": "unit", "speed": "", "types": ["Arcanyst"], "keywords": ["Rush"], "text": "Keywords: Rush. Whenever this minion attacks, put three Songhai spells into your action bar.", "names_in_text": []}
 {"id": 5000955, "name": "Bangle of Blinding Strike", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Your General has Celerity.", "names_in_text": ["Celerity"]}
 {"id": 5000956, "name": "Joseki", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Each player steals a random card from their opponent's deck.", "names_in_text": []}
 {"id": 5000957, "name": "Dreamshaper", "category": "unit", "speed": "", "types": ["Golem"], "keywords": [], "text": "Bond: Draw two cards.", "names_in_text": ["Bond"]}
 {"id": 5000958, "name": "Blood of Air", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Transform an enemy minion into a friendly Wind Dervish.", "names_in_text": ["Wind Dervish"]}
-{"id": 5000959, "name": "Wind Striker", "category": "unit", "speed": "", "types": ["Golem"], "keywords": [], "text": "Flying Opening Gambit: Equip a Staff of Y'kir to your General.", "names_in_text": ["Flying", "Opening Gambit", "Staff Of Y'Kir"]}
+{"id": 5000959, "name": "Wind Striker", "category": "unit", "speed": "", "types": ["Golem"], "keywords": ["Flying"], "text": "Keywords: Flying. Opening Gambit: Equip a Staff of Y'kir to your General.", "names_in_text": ["Opening Gambit", "Staff Of Y'Kir"]}
 {"id": 5000960, "name": "Sirocco", "category": "unit", "speed": "", "types": ["Golem"], "keywords": [], "text": "Opening Gambit: Summon a Skyrock Golem on random spaces for each other Golem you've summoned this game.", "names_in_text": ["Golem", "Opening Gambit", "Skyrock Golem"]}
 {"id": 5000961, "name": "Thunderclap", "category": "item", "speed": "", "types": [], "keywords": [], "text": "When your General destroys a minion, summon a copy of it nearby.", "names_in_text": []}
 {"id": 5000962, "name": "Nightshroud", "category": "unit", "speed": "", "types": ["Arcanyst"], "keywords": [], "text": "Bond: Your General steals 1 Health from the enemy General for each other friendly Arcanyst.", "names_in_text": ["Arcanyst", "Bond"]}
@@ -228,7 +215,7 @@
 {"id": 5000966, "name": "The Releaser", "category": "item", "speed": "", "types": [], "keywords": [], "text": "When this artifact breaks, summon a random friendly non-token minion destroyed this game nearby.", "names_in_text": []}
 {"id": 5000967, "name": "Lavaslasher", "category": "unit", "speed": "", "types": ["Golem"], "keywords": [], "text": "Opening Gambit: This minion fights a nearby enemy minion.", "names_in_text": ["Opening Gambit"]}
 {"id": 5000968, "name": "Godhammer", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Your minions have \"Grow: +1/+1.\"", "names_in_text": ["Grow"]}
-{"id": 5000969, "name": "Ragebinder", "category": "unit", "speed": "", "types": ["Golem"], "keywords": [], "text": "Rebirth Bond: Restore 3 Health to your General.", "names_in_text": ["Bond", "Rebirth"]}
+{"id": 5000969, "name": "Ragebinder", "category": "unit", "speed": "", "types": ["Golem"], "keywords": ["Rebirth"], "text": "Keywords: Rebirth. Bond: Restore 3 Health to your General.", "names_in_text": ["Bond"]}
 {"id": 5000970, "name": "Juggernaut", "category": "unit", "speed": "", "types": ["Golem"], "keywords": [], "text": "Grow: +5/+5 Whenever this minion takes damage, summon that many random Golem Eggs nearby.", "names_in_text": ["Golem", "Grow"]}
 {"id": 5000971, "name": "Cascading Rebirth", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Destroy a friendly minion to summon a random Magmar minion that costs 1 more.", "names_in_text": []}
 {"id": 5000972, "name": "Cascading Rebirth (follow-up)", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Destroy a friendly minion to summon a random Magmar minion that costs 1 more.", "names_in_text": []}
@@ -244,7 +231,7 @@
 {"id": 5000982, "name": "Blue Conjurer", "category": "unit", "speed": "", "types": ["Arcanyst"], "keywords": [], "text": "Whenever you cast a spell, put a random Arcanyst into your action bar.", "names_in_text": ["Arcanyst"]}
 {"id": 5000983, "name": "Grimes", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit and Dying Wish: Summon a random minion from any tribe nearby.", "names_in_text": ["Dying Wish", "Opening Gambit"]}
 {"id": 5000984, "name": "Loreweaver", "category": "unit", "speed": "", "types": ["Arcanyst"], "keywords": [], "text": "Whenever you draw a spell, put a copy of it into your action bar.", "names_in_text": []}
-{"id": 5000985, "name": "Trinity Wing", "category": "unit", "speed": "", "types": ["Arcanyst"], "keywords": [], "text": "Flying Bond: Put the three Teachings of the Dragon into your action bar.", "names_in_text": ["Bond", "Flying"]}
+{"id": 5000985, "name": "Trinity Wing", "category": "unit", "speed": "", "types": ["Arcanyst"], "keywords": ["Flying"], "text": "Keywords: Flying. Bond: Put the three Teachings of the Dragon into your action bar.", "names_in_text": ["Bond"]}
 {"id": 5000986, "name": "Lesson of Power", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Deal 2 damage to anything.", "names_in_text": []}
 {"id": 5000987, "name": "Lesson of Wisdom", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Restore 3 Health to anything.", "names_in_text": []}
 {"id": 5000988, "name": "Lesson of Courage", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Give your General +1 Attack.", "names_in_text": []}
@@ -278,7 +265,7 @@
 {"id": 5001020, "name": "MECHAZ0R Progression", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Progresses MECHAZ0R build by +20%.", "names_in_text": ["Build", "MECHAZ0R"]}
 {"id": 5001021, "name": "Gust", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Blood Surge: Summon two Wind Dervishes nearby.", "names_in_text": ["Blood Surge"]}
 {"id": 5001022, "name": "Kinematic Projection", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Give a minion Blast. It can no longer move.", "names_in_text": ["Blast"]}
-{"id": 5001025, "name": "Barren Shrike", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Build: (2). Blast", "names_in_text": ["Blast", "Build"]}
+{"id": 5001025, "name": "Barren Shrike", "category": "unit", "speed": "", "types": [], "keywords": ["Blast"], "text": "Keywords: Blast. Build: (2).", "names_in_text": ["Build"]}
 {"id": 5001026, "name": "Silica Weaver", "category": "unit", "speed": "", "types": ["Mech"], "keywords": [], "text": "Opening Gambit: Progresses MECHAZ0R build by +40%.", "names_in_text": ["Build", "MECHAZ0R", "Opening Gambit"]}
 {"id": 5001027, "name": "Monolithic Vision", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Transform your action bar into six random Vetruvian cards that cost 4 less.", "names_in_text": []}
 {"id": 5001028, "name": "Skyppy", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Dying Wish: Put a random legendary artifact from your opponent's Faction into your action bar.", "names_in_text": ["Dying Wish"]}
@@ -287,7 +274,7 @@
 {"id": 5001031, "name": "Grapnel Paradigm", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Take control of enemy minions with 2 or less Attack on this row.", "names_in_text": ["Opening Gambit"]}
 {"id": 5001032, "name": "Lost in the Desert", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Deal 5 damage to enemies that are not nearby another enemy.", "names_in_text": []}
 {"id": 5001033, "name": "Iris Barrier", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Your General takes no damage during your turn.", "names_in_text": []}
-{"id": 5001034, "name": "Simulacra Obelysk", "category": "unit", "speed": "", "types": ["Structure"], "keywords": [], "text": "Build: (2). Summon Dervish When this minion is built, start building another on a nearby space.", "names_in_text": ["Build", "Summon Dervish"]}
+{"id": 5001034, "name": "Simulacra Obelysk", "category": "unit", "speed": "", "types": ["Structure"], "keywords": ["Summon Dervish"], "text": "Keywords: Summon Dervish. Build: (2). When this minion is built, start building another on a nearby space.", "names_in_text": ["Build"]}
 {"id": 5001035, "name": "Neurolink", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Your General gains all keywords of friendly minions this turn.", "names_in_text": []}
 {"id": 5001036, "name": "Cacophynos", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Dying Wish: Destroy a random nearby enemy minion.", "names_in_text": ["Dying Wish"]}
 {"id": 5001037, "name": "Stygian Observer", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Deathwatch: Give minions in your action bar +2/+2.", "names_in_text": ["Deathwatch"]}
@@ -295,7 +282,7 @@
 {"id": 5001041, "name": "Nightmare Operant", "category": "unit", "speed": "", "types": ["Mech"], "keywords": [], "text": "Dying Wish: Shuffle a MECHAZ0R into your deck.", "names_in_text": ["Dying Wish", "MECHAZ0R"]}
 {"id": 5001042, "name": "Infest", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Choose an enemy minion. When it dies, give this effect to all nearby enemy minions and deal 2 damage to the enemy General.", "names_in_text": []}
 {"id": 5001043, "name": "Moonrider", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Blood Surge: Summon a 4/4 Fiend on a nearby space.", "names_in_text": ["Blood Surge", "Fiend"]}
-{"id": 5001044, "name": "Gate to the Undervault", "category": "unit", "speed": "", "types": ["Structure"], "keywords": [], "text": "Build: (3). Invulnerable Deathwatch: Summon a random Demon nearby.", "names_in_text": ["Build", "Deathwatch", "Invulnerable"]}
+{"id": 5001044, "name": "Gate to the Undervault", "category": "unit", "speed": "", "types": ["Structure"], "keywords": ["Invulnerable"], "text": "Keywords: Invulnerable. Build: (3). Deathwatch: Summon a random Demon nearby.", "names_in_text": ["Build", "Deathwatch"]}
 {"id": 5001045, "name": "Betrayal", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Enemy minions nearby their General attack their General.", "names_in_text": []}
 {"id": 5001046, "name": "Deathmark", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Deal 1 damage to an enemy minion. After it is attacked this turn, destroy it.", "names_in_text": []}
 {"id": 5001047, "name": "Vellumscry", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Destroy a friendly minion to draw three cards.", "names_in_text": []}
@@ -312,7 +299,7 @@
 {"id": 5001061, "name": "Upper Hand", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Deal 1 damage to an enemy minion for each card in your opponent's action bar.", "names_in_text": []}
 {"id": 5001062, "name": "Saurian Finality", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Stun the enemy General. Your General gains +3 Attack. Both players lose 3 mana. Restore 10 Health to your General.", "names_in_text": []}
 {"id": 5001063, "name": "Homeostatic Rebuke", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "ALL minions attack themselves.", "names_in_text": []}
-{"id": 5001064, "name": "Erratic Raptyr", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Rebirth After this minion attacks or counterattacks, turn it into an Egg.", "names_in_text": ["Rebirth"]}
+{"id": 5001064, "name": "Erratic Raptyr", "category": "unit", "speed": "", "types": [], "keywords": ["Rebirth"], "text": "Keywords: Rebirth. After this minion attacks or counterattacks, turn it into an Egg.", "names_in_text": []}
 {"id": 5001065, "name": "Effulgent Infusion", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Give a friendly minion +Attack equal to your General's Attack.", "names_in_text": []}
 {"id": 5001066, "name": "Rage Reactor", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Your General gains +1 Attack. Whenever your General destroys an enemy, summon a Ripper Egg on that space.", "names_in_text": ["Ripper"]}
 {"id": 5001069, "name": "Echo Deliverant", "category": "unit", "speed": "", "types": ["Mech"], "keywords": [], "text": "Whenever you summon another Mech, summon a copy of it nearby.", "names_in_text": ["Mech"]}
@@ -322,7 +309,7 @@
 {"id": 5001073, "name": "Hydrogarm", "category": "unit", "speed": "", "types": ["Vespyr"], "keywords": [], "text": "Blood Surge: Deal 1 damage to enemy minions in this row and Stun them.", "names_in_text": ["Blood Surge"]}
 {"id": 5001074, "name": "Wintertide", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Summon three 2/2 Vespyr Winter Maerids on any column.", "names_in_text": ["Vespyr"]}
 {"id": 5001075, "name": "Shatter", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Destroy a Stunned enemy minion.", "names_in_text": ["Stunned"]}
-{"id": 5001076, "name": "Protosensor", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Build: (1). Airdrop", "names_in_text": ["Airdrop", "Build"]}
+{"id": 5001076, "name": "Protosensor", "category": "unit", "speed": "", "types": [], "keywords": ["Airdrop"], "text": "Keywords: Airdrop. Build: (1).", "names_in_text": ["Build"]}
 {"id": 5001077, "name": "Cryoblade", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Deals double damage to Stunned enemies.", "names_in_text": ["Stunned"]}
 {"id": 5001078, "name": "Animus Plate", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Your General gains +2 Attack. Whenever your General attacks or counterattacks, give all friendly Vespyr minions +2/+2.", "names_in_text": ["Vespyr"]}
 {"id": 5001079, "name": "Auroraboros", "category": "spell", "speed": "", "types": [], "keywords": [], "text": "Give friendly minions \"Dying Wish: Re-summon this minion on this space.\"", "names_in_text": ["Dying Wish"]}
@@ -337,7 +324,7 @@
 {"id": 5001088, "name": "DECEPTIB0T", "category": "unit", "speed": "", "types": ["Mech"], "keywords": [], "text": "Whenever this minion destroys an enemy, summon a different Mech minion from your deck nearby.", "names_in_text": ["Mech"]}
 {"id": 5001091, "name": "Redsteel Minos", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Blood Surge: Gains +2/+2.", "names_in_text": ["Blood Surge"]}
 {"id": 5001092, "name": "Q'orrhlma'a", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Remove all minions that cost 2 or less from each player's deck.", "names_in_text": ["Opening Gambit"]}
-{"id": 5001093, "name": "Impervious Giago", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Provoke Whenever this minion is attacked, it gains +2 Attack.", "names_in_text": ["Provoke"]}
+{"id": 5001093, "name": "Impervious Giago", "category": "unit", "speed": "", "types": [], "keywords": ["Provoke"], "text": "Keywords: Provoke. Whenever this minion is attacked, it gains +2 Attack.", "names_in_text": []}
 {"id": 5001094, "name": "Capricious Marauder", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Whenever a friendly minion is destroyed, your opponent takes control of this minion.", "names_in_text": []}
 {"id": 5001095, "name": "Recombobulus", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Teleport ANY minion one space randomly.", "names_in_text": ["Opening Gambit"]}
 {"id": 5001096, "name": "Reliquarian", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Opening Gambit: Forge a friendly minion into a Faction artifact with equal Attack.", "names_in_text": ["Opening Gambit"]}

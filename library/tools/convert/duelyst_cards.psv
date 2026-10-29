@@ -1,7 +1,7 @@
 card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|name|text|refs|signature
 31|Cards.Faction1.Sunbreaker|bloodstorm/faction1|Unit|Lyonar Kingdoms||rare|4|2|4||||Sunbreaker|Forcefield. Your Bloodbound Spell is Tempest.|Cards.Spell.TempestBBS|
 32|Cards.Faction1.Scintilla|bloodstorm/faction1|Unit|Lyonar Kingdoms||common|3|3|4||||Scintilla|Blood Surge: Restore 3 Health to your General.||
-33|Cards.Faction1.Excelsious|bloodstorm/faction1|Unit|Lyonar Kingdoms||legendary|8|6|6||||Excelsious|Provoke Celerity This minion gains +1/+1 for each time you healed anything this game.||
+33|Cards.Faction1.Excelsious|bloodstorm/faction1|Unit|Lyonar Kingdoms||legendary|8|6|6||||Excelsious|Provoke\nCelerity\nThis minion gains +1/+1 for each time you healed anything this game.||
 20232|Cards.Spell.TrinityOath|bloodstorm/faction1|SpellHealYourGeneral|Lyonar Kingdoms||epic|4||||||Trinity Oath|Draw 3 cards and restore 3 Health to your General.||
 20233|Cards.Spell.DrainingWave|bloodstorm/faction1|SpellDamageMinionAndGeneral|Lyonar Kingdoms||common|1||||||Draining Wave|Deal 4 damage to a minion AND your General.||
 20235|Cards.Spell.PrismBarrier|bloodstorm/faction1|SpellApplyModifiers|Lyonar Kingdoms||rare|2||||||Prism Barrier|Give a friendly minion Forcefield.||
@@ -17,7 +17,7 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 236|Cards.Faction3.Incinera|bloodstorm/faction3|Unit|Vetruvian Imperium||rare|5|5|6||||Incinera|Your General may move 2 additional spaces.||
 20242|Cards.Spell.DivineSpark|bloodstorm/faction3|Spell|Vetruvian Imperium||common|3||||||Divine Spark|Draw two cards.||
 20244|Cards.Spell.EquipVetArtifacts|bloodstorm/faction3|SpellEquipVetArtifacts|Vetruvian Imperium||epic|6||||||Autarch's Gifts|Equip 2 random Vetruvian artifacts.||
-237|Cards.Faction3.GrandmasterNoshRak|bloodstorm/faction3|Unit|Vetruvian Imperium||legendary|8|4|8||||Grandmaster Nosh-Rak|Blast Flying The enemy General takes double damage.||
+237|Cards.Faction3.GrandmasterNoshRak|bloodstorm/faction3|Unit|Vetruvian Imperium||legendary|8|4|8||||Grandmaster Nosh-Rak|Blast\nFlying\nThe enemy General takes double damage.||
 20246|Cards.Spell.StoneToSpears|bloodstorm/faction3|SpellApplyModifiers|Vetruvian Imperium||rare|1||||||Stone to Spears|A friendly Obelysk gains +3 Attack and may move and attack this turn if able.|Cards.Faction3.BrazierDuskWind,Cards.Faction3.BrazierGoldenFlame,Cards.Faction3.BrazierRedSand,Cards.Faction3.LavastormObelysk,Cards.Faction3.SimulacraObelysk,Cards.Faction3.SoulburnObelysk,Cards.Faction3.TrygonObelysk|
 331|Cards.Faction4.Furosa|bloodstorm/faction4|Unit|Abyssian Host||common|1|1|2||||Furiosa|Blood Surge: Friendly Wraithlings gain +1/+1.||
 333|Cards.Faction4.GrandmasterVariax|bloodstorm/faction4|Unit|Abyssian Host||legendary|8|8|8||||Grandmaster Variax|Opening Gambit: Your Bloodbound Spell costs 3 and is now AWESOME.||
@@ -52,14 +52,14 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 14|Cards.Faction1.SilverguardSquire|core/faction1|Unit|Lyonar Kingdoms||common|1|1|4||||Silverguard Squire|||
 9|Cards.Faction1.WindbladeAdept|core/faction1|Unit|Lyonar Kingdoms||fixed|2|2|3||||Windblade Adept|Zeal: Gains +1 Attack||
 16|Cards.Faction1.SuntideMaiden|core/faction1|Unit|Lyonar Kingdoms||common|4|3|6||||Suntide Maiden|Zeal: At the end of your turn, fully heal this minion.||
-11|Cards.Faction1.SilverguardKnight|core/faction1|Unit|Lyonar Kingdoms||fixed|3|1|5||||Silverguard Knight|Provoke Zeal: Gains +2 Attack||
+11|Cards.Faction1.SilverguardKnight|core/faction1|Unit|Lyonar Kingdoms||fixed|3|1|5||||Silverguard Knight|Provoke\nZeal: Gains +2 Attack||
 12|Cards.Faction1.ArclyteSentinel|core/faction1|Unit|Lyonar Kingdoms||rare|3|2|4||||Arclyte Sentinel|Opening Gambit: Give ANY nearby minion +2 Attack, but -2 Health|Cards.Spell.ApplyModifiers|
 13|Cards.Faction1.WindbladeCommander|core/faction1|Unit|Lyonar Kingdoms||rare|5|0|8||||Second Sun|Zeal: Gains +8 Attack||
 8|Cards.Faction1.LysianBrawler|core/faction1|Unit|Lyonar Kingdoms||fixed|4|4|4||||Lysian Brawler|Celerity||
 15|Cards.Faction1.Lightchaser|core/faction1|Unit|Lyonar Kingdoms||common|2|3|2||||Lightchaser|Whenever anything is healed, this minion gains +1/+1.||
 10|Cards.Faction1.SunstoneTemplar|core/faction1|Unit|Lyonar Kingdoms||epic|2|1|4|||1|Sunstone Templar|Whenever this attacks or counterattacks, it dispels that enemy||
-17|Cards.Faction1.IroncliffeGuardian|core/faction1|Unit|Lyonar Kingdoms||rare|5|3|10||||Ironcliffe Guardian|Airdrop Provoke||
-18|Cards.Faction1.ElyxStormblade|core/faction1|Unit|Lyonar Kingdoms||legendary|6|7|7||||Elyx Stormblade|Provoke Your minions and General may move an additional space||
+17|Cards.Faction1.IroncliffeGuardian|core/faction1|Unit|Lyonar Kingdoms||rare|5|3|10||||Ironcliffe Guardian|Airdrop\nProvoke||
+18|Cards.Faction1.ElyxStormblade|core/faction1|Unit|Lyonar Kingdoms||legendary|6|7|7||||Elyx Stormblade|Provoke\nYour minions and General may move an additional space||
 22|Cards.Faction1.Sunriser|core/faction1|Unit|Lyonar Kingdoms||epic|4|3|4||||Sunriser|Whenever anything is healed, deal 2 damage to all nearby enemies.||
 20|Cards.Faction1.GrandmasterZir|core/faction1|Unit|Lyonar Kingdoms||legendary|7|5|12||||Grandmaster Z'ir|When your General dies, Grandmaster Z'ir becomes your General.||
 21|Cards.Faction1.AzuriteLion|core/faction1|Unit|Lyonar Kingdoms||common|2|2|3||||Azurite Lion|Celerity||
@@ -93,10 +93,10 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 108|Cards.Faction2.Heartseeker|core/faction2|Unit|Songhai Empire||common|1|1|1||||Heartseeker|Ranged||
 109|Cards.Faction2.Widowmaker|core/faction2|Unit|Songhai Empire||fixed|3|2|3||||Widowmaker|Ranged||
 110|Cards.Faction2.KaidoAssassin|core/faction2|Unit|Songhai Empire||fixed|2|2|3||||Kaido Assassin|Backstab: (1).||
-111|Cards.Faction2.ScarletViper|core/faction2|Unit|Songhai Empire||common|5|2|5||||Scarlet Viper|Flying Backstab: (4).||
-112|Cards.Faction2.GoreHorn|core/faction2|Unit|Songhai Empire||rare|3|3|3||||Gore Horn|Backstab: (2) After this minion attacks, it gains +1/+1.||
+111|Cards.Faction2.ScarletViper|core/faction2|Unit|Songhai Empire||common|5|2|5||||Scarlet Viper|Flying\nBackstab: (4).||
+112|Cards.Faction2.GoreHorn|core/faction2|Unit|Songhai Empire||rare|3|3|3||||Gore Horn|Backstab: (2)\nAfter this minion attacks, it gains +1/+1.||
 113|Cards.Faction2.OnyxBear|core/faction2|Unit|Songhai Empire||tokenunit|1|0|2||1||Panddo|Cannot be attacked||
-121|Cards.Faction2.TuskBoar|core/faction2|Unit|Songhai Empire||legendary|2|2|3||||Tusk Boar|Rush Return this minion to your action bar at the beginning of your turn.||
+121|Cards.Faction2.TuskBoar|core/faction2|Unit|Songhai Empire||legendary|2|2|3||||Tusk Boar|Rush\nReturn this minion to your action bar at the beginning of your turn.||
 122|Cards.Faction2.LanternFox|core/faction2|Unit|Songhai Empire||epic|3|2|3||||Lantern Fox|Whenever this minion takes damage, put a Phoenix Fire into your action bar.|Cards.Spell.PhoenixFire|
 114|Cards.Faction2.JadeOgre|core/faction2|Unit|Songhai Empire||common|3|4|3||||Jade Monk|Whenever this minion takes damage, deal 1 damage to a random enemy minion.||
 115|Cards.Faction2.ChakriAvatar|core/faction2|Unit|Songhai Empire|Arcanyst|fixed|2|1|2||||Chakri Avatar|Whenever you cast a spell, this minion gains +1/+1||
@@ -130,28 +130,28 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 20155|Cards.Spell.HeavensEclipse|core/faction2|SpellHeavensEclipse|Songhai Empire||legendary|5||||||Heaven's Eclipse|Draw 3 spell cards from your deck.||
 20167|Cards.Spell.MistWalking|core/faction2|SpellMistWalking|Songhai Empire||rare|1||||||Mist Walking|Teleport your General up to 2 spaces.||
 20102|Cards.Spell.KillingEdge|core/faction2|SpellKillingEdge|Songhai Empire||fixed|3||||||Killing Edge|Give a friendly minion +4/+2. If that minion has Backstab, draw a card at end of turn.||
-30007|Cards.Artifact.MaskOfShadows|core/faction2|Artifact|Songhai Empire||legendary|2||||||Mask of Shadows|Your General gains +1 Attack. Your General gains Backstab (4).||
+30007|Cards.Artifact.MaskOfShadows|core/faction2|Artifact|Songhai Empire||legendary|2||||||Mask of Shadows|Your General gains +1 Attack.\nYour General gains Backstab (4).||
 30009|Cards.Artifact.MaskOfTranscendance|core/faction2|Artifact|Songhai Empire||epic|3||||||Cyclone Mask|Your General gains Ranged.||
 30010|Cards.Artifact.MaskOfBloodLeech|core/faction2|Artifact|Songhai Empire||fixed|2||||||Bloodrage Mask|Whenever you cast a spell, deal 1 damage to the enemy General.||
 201|Cards.Faction3.General|core/faction3|Unit|Vetruvian Imperium|||0|2|25|1|||Zirix Starstrider|Bloodbound Spell: Summon a 2/2 Iron Dervish on a random space nearby your General.|Cards.Spell.WindShroud|Cards.Spell.WindShroud
 223|Cards.Faction3.AltGeneral|core/faction3|Unit|Vetruvian Imperium|||0|2|25|1|||Scioness Sajj|Bloodbound Spell: Your General deals double damage to minions this turn.|Cards.Spell.PsionicStrike|Cards.Spell.PsionicStrike
 254|Cards.Faction3.ThirdGeneral|core/faction3|Unit|Vetruvian Imperium|||0|2|25|1|||Ciphyron Ascendant|Bloodbound Spell: Give an enemy minion -2 Attack until your next turn.|Cards.Spell.DebuffBBS|Cards.Spell.DebuffBBS
-208|Cards.Faction3.WindShrike|core/faction3|Unit|Vetruvian Imperium||fixed|4|4|3||||Wind Shrike|Flying Dying Wish: Draw a card.||
+208|Cards.Faction3.WindShrike|core/faction3|Unit|Vetruvian Imperium||fixed|4|4|3||||Wind Shrike|Flying\nDying Wish: Draw a card.||
 209|Cards.Faction3.StarfireScarab|core/faction3|Unit|Vetruvian Imperium||common|5|4|6||||Starfire Scarab|Blast||
 213|Cards.Faction3.Pyromancer|core/faction3|Unit|Vetruvian Imperium||fixed|2|2|1||||Pyromancer|Blast||
 210|Cards.Faction3.SandHowler|core/faction3|Unit|Vetruvian Imperium|Dervish|rare|3|3|3||||Sand Howler|Cannot be targeted by enemy spells.||
 212|Cards.Faction3.OrbWeaver|core/faction3|Unit|Vetruvian Imperium|Dervish|common|3|2|2||||Orb Weaver|Opening Gambit: Summon a copy of this minion on a nearby space.|Cards.Spell.CloneSourceEntity|
 218|Cards.Faction3.NightfallMechanyst|core/faction3|Unit|Vetruvian Imperium||rare|3|2|5||||Imperial Mechanyst|Opening Gambit: Repair all of your artifacts to full durability.||
 214|Cards.Faction3.BrazierRedSand|core/faction3|Unit|Vetruvian Imperium|Structure|fixed|2|0|6||||Ethereal Obelysk|Summon Dervish||
-215|Cards.Faction3.BrazierGoldenFlame|core/faction3|Unit|Vetruvian Imperium|Structure|rare|3|0|6||||Fireblaze Obelysk|Summon Dervish Your dervishes have +1 Attack.||
-217|Cards.Faction3.Dervish|core/faction3|Unit|Vetruvian Imperium|Dervish|tokenunit|2|2|2||1||Wind Dervish|Rush Ephemeral||
+215|Cards.Faction3.BrazierGoldenFlame|core/faction3|Unit|Vetruvian Imperium|Structure|rare|3|0|6||||Fireblaze Obelysk|Summon Dervish\nYour dervishes have +1 Attack.||
+217|Cards.Faction3.Dervish|core/faction3|Unit|Vetruvian Imperium|Dervish|tokenunit|2|2|2||1||Wind Dervish|Rush\nEphemeral||
 225|Cards.Faction3.IronDervish|core/faction3|Unit|Vetruvian Imperium|Dervish|tokenunit|1|2|2||1||Iron Dervish|||
-216|Cards.Faction3.BrazierDuskWind|core/faction3|Unit|Vetruvian Imperium|Structure|common|2|0|4||||Windstorm Obelysk|Summon Dervish Your dervishes have +1 Health.||
+216|Cards.Faction3.BrazierDuskWind|core/faction3|Unit|Vetruvian Imperium|Structure|common|2|0|4||||Windstorm Obelysk|Summon Dervish\nYour dervishes have +1 Health.||
 211|Cards.Faction3.Dunecaster|core/faction3|Unit|Vetruvian Imperium|Dervish|common|2|2|1||||Dunecaster|Opening Gambit: Give +2/+2 to a friendly Dervish. If it is a Wind Dervish, it no longer disappears.|Cards.Spell.DunecasterFollowup|
 219|Cards.Faction3.MirrorMaster|core/faction3|Unit|Vetruvian Imperium||epic|4|1|1||||Mirage Master|Opening Gambit: This minion transforms into a copy of an enemy minion.|Cards.Spell.CloneTargetEntity|
-220|Cards.Faction3.AymaraHealer|core/faction3|Unit|Vetruvian Imperium||legendary|6|5|5||||Aymara Healer|Provoke Dying Wish: Deal 5 damage to the enemy General. Restore 5 Health to your General.||
-221|Cards.Faction3.PortalGuardian|core/faction3|Unit|Vetruvian Imperium||epic|3|0|8||||Portal Guardian|Frenzy Whenever you summon a minion, this minion gains +1 Attack.||
-222|Cards.Faction3.Oserix|core/faction3|Unit|Vetruvian Imperium||legendary|6|6|5||||Oserix|Flying Dying Wish: Equip 2 random artifacts from your deck.||
+220|Cards.Faction3.AymaraHealer|core/faction3|Unit|Vetruvian Imperium||legendary|6|5|5||||Aymara Healer|Provoke\nDying Wish: Deal 5 damage to the enemy General. Restore 5 Health to your General.||
+221|Cards.Faction3.PortalGuardian|core/faction3|Unit|Vetruvian Imperium||epic|3|0|8||||Portal Guardian|Frenzy\nWhenever you summon a minion, this minion gains +1 Attack.||
+222|Cards.Faction3.Oserix|core/faction3|Unit|Vetruvian Imperium||legendary|6|6|5||||Oserix|Flying\nDying Wish: Equip 2 random artifacts from your deck.||
 20178|Cards.Spell.WindShroud|core/faction3|SpellWindShroud|Vetruvian Imperium|||1||||1||Iron Shroud|Summon a 2/2 Iron Dervish on a random space nearby your General.||
 20179|Cards.Spell.PsionicStrike|core/faction3|SpellApplyModifiersToGeneral|Vetruvian Imperium|||1||||1||Psionic Strike|Your General deals double damage to minions this turn.||
 20304|Cards.Spell.DebuffBBS|core/faction3|SpellApplyModifiers|Vetruvian Imperium|||1||||1||Descension|Give an enemy minion -2 Attack until your next turn.||
@@ -183,16 +183,16 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 309|Cards.Faction4.AbyssalJuggernaut|core/faction4|Unit|Abyssian Host||common|4|3|3||||Abyssal Juggernaut|This minion has +1/+1 for each friendly Shadow Creep.||
 310|Cards.Faction4.BloodmoonPriestess|core/faction4|Unit|Abyssian Host||rare|4|3|3||||Bloodtide Priestess|Deathwatch: Summon a Wraithling on a random nearby space.|Cards.Faction4.Wraithling|
 311|Cards.Faction4.ShadowWatcher|core/faction4|Unit|Abyssian Host||fixed|3|2|2||||Shadow Watcher|Deathwatch: Gains +1/+1.||
-312|Cards.Faction4.DeepfireDevourer|core/faction4|Unit|Abyssian Host||common|4|4|4||||Deepfire Devourer|Frenzy Opening Gambit: Destroy friendly minions around it and gain +2/+2 for each minion.||
+312|Cards.Faction4.DeepfireDevourer|core/faction4|Unit|Abyssian Host||common|4|4|4||||Deepfire Devourer|Frenzy\nOpening Gambit: Destroy friendly minions around it and gain +2/+2 for each minion.||
 313|Cards.Faction4.DarkSiren|core/faction4|Unit|Abyssian Host||common|2|3|2||||Blood Siren|Opening Gambit: Give a nearby enemy -2 attack this turn.|Cards.Spell.ApplyModifiers|
-314|Cards.Faction4.VorpalReaver|core/faction4|Unit|Abyssian Host||legendary|6|6|6||||Vorpal Reaver|Celerity Dying Wish: Summon six Wraithlings on random spaces.|Cards.Faction4.Wraithling|
+314|Cards.Faction4.VorpalReaver|core/faction4|Unit|Abyssian Host||legendary|6|6|6||||Vorpal Reaver|Celerity\nDying Wish: Summon six Wraithlings on random spaces.|Cards.Faction4.Wraithling|
 315|Cards.Faction4.Wraithling|core/faction4|Unit|Abyssian Host||tokenunit|1|1|1||1||Wraithling|||
 316|Cards.Faction4.DarkspineElemental|core/faction4|Unit|Abyssian Host||rare|2|1|4||||Darkspine Elemental|Double the damage dealt by friendly Shadow Creep.|Cards.Tile.Shadow|
 317|Cards.Faction4.GloomChaser|core/faction4|Unit|Abyssian Host||fixed|2|2|2||||Gloomchaser|Opening Gambit: Summon a 1/1 Wraithling in a random nearby space.|Cards.Faction4.Wraithling|
-322|Cards.Faction4.ReaperNineMoons|core/faction4|Unit|Abyssian Host||epic|5|5|3||||Reaper of the Nine Moons|Flying Dying Wish: Summon a random minion from the opponent's deck on this space.||
+322|Cards.Faction4.ReaperNineMoons|core/faction4|Unit|Abyssian Host||epic|5|5|3||||Reaper of the Nine Moons|Flying\nDying Wish: Summon a random minion from the opponent's deck on this space.||
 318|Cards.Faction4.SharianShadowdancer|core/faction4|Unit|Abyssian Host||rare|5|4|4||||Shadowdancer|Deathwatch: Deal 1 damage to the enemy General, and restore 1 Health to your General.||
 319|Cards.Faction4.NightsorrowAssassin|core/faction4|Unit|Abyssian Host||common|3|2|1||||Nightsorrow Assassin|Opening Gambit: Destroy a nearby enemy minion with 2 or less attack.|Cards.Spell.FollowupKillTargetByAttack|
-320|Cards.Faction4.SpectralRevenant|core/faction4|Unit|Abyssian Host||legendary|8|6|6||||Spectral Revenant|Rush Whenever this damages an enemy minion, deal 4 damage to the enemy General.||
+320|Cards.Faction4.SpectralRevenant|core/faction4|Unit|Abyssian Host||legendary|8|6|6||||Spectral Revenant|Rush\nWhenever this damages an enemy minion, deal 4 damage to the enemy General.||
 321|Cards.Faction4.BlackSolus|core/faction4|Unit|Abyssian Host||epic|5|4|7||||Black Solus|When you summon a Wraithling, this minion gains +2 Attack.|Cards.Faction4.Wraithling|
 20180|Cards.Spell.Shadowspawn|core/faction4|SpellShadowspawn|Abyssian Host|||1||||1||Shadowspawn|Summon 2 Wraithlings nearby your General.|Cards.Faction4.Wraithling|
 20181|Cards.Spell.AbyssalScar|core/faction4|SpellAbyssalScar|Abyssian Host|||1||||1||Abyssal Scar|Deal 1 damage to a minion. If it dies this turn, the space turns into Shadow Creep.|Cards.Tile.Shadow|
@@ -217,23 +217,23 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 20166|Cards.Spell.ConsumingRebirth|core/faction4|SpellConsumingRebirth|Abyssian Host||epic|2||||||Consuming Rebirth|Destroy a friendly minion. At the end of your turn, re-summon it on the same space and give it +1/+1.||
 30002|Cards.Artifact.SoulGrimwar|core/faction4|Artifact|Abyssian Host||legendary|3||||||Soul Grimwar|Your General gains, "Deathwatch: Gains +2 Attack."||
 30005|Cards.Artifact.HornOfTheForsaken|core/faction4|Artifact|Abyssian Host||fixed|1||||||Horn of the Forsaken|Whenever your General deals damage, summon a 1/1 Wraithling nearby your General.|Cards.Artifact.SunstoneBracers,Cards.Faction4.Wraithling|
-30014|Cards.Artifact.SpectralBlade|core/faction4|Artifact|Abyssian Host||epic|2||||||Spectral Blade|Your General gains +2 Attack. Whenever your General destroys an enemy, restore 2 Health to your General.||
+30014|Cards.Artifact.SpectralBlade|core/faction4|Artifact|Abyssian Host||epic|2||||||Spectral Blade|Your General gains +2 Attack.\nWhenever your General destroys an enemy, restore 2 Health to your General.||
 401|Cards.Faction5.General|core/faction5|Unit|Magmar Aspects|||0|2|25|1|||Vaath the Immortal|Bloodbound Spell: Give your General +1 Attack.|Cards.Spell.Overload|Cards.Spell.Overload
 418|Cards.Faction5.AltGeneral|core/faction5|Unit|Magmar Aspects|||0|2|25|1|||Starhorn the Seeker|Bloodbound Spell: Both players draw a card.|Cards.Spell.SeekingEye|Cards.Spell.SeekingEye
 449|Cards.Faction5.ThirdGeneral|core/faction5|Unit|Magmar Aspects|||0|2|25|1|||Ragnora the Relentless|Bloodbound Spell: Summon a Ripper Egg nearby your General.|Cards.Spell.EggBBS|Cards.Spell.EggBBS
 402|Cards.Faction5.EarthWalker|core/faction5|Unit|Magmar Aspects||fixed|3|3|3||||Earth Walker|Grow: +1/+1||
 403|Cards.Faction5.Grimrock|core/faction5|Unit|Magmar Aspects||common|4|3|4||||Grimrock|Grow: +2/+2||
 404|Cards.Faction5.Kolossus|core/faction5|Unit|Magmar Aspects||common|5|1|7||||Kolossus|Grow: +4/+4||
-405|Cards.Faction5.MakantorWarbeast|core/faction5|Unit|Magmar Aspects||epic|6|4|4||||Makantor Warbeast|Frenzy Rush||
+405|Cards.Faction5.MakantorWarbeast|core/faction5|Unit|Magmar Aspects||epic|6|4|4||||Makantor Warbeast|Frenzy\nRush||
 406|Cards.Faction5.Phalanxar|core/faction5|Unit|Magmar Aspects||fixed|2|6|1||||Phalanxar|||
-407|Cards.Faction5.Elucidator|core/faction5|Unit|Magmar Aspects||rare|4|5|4||||Elucidator|Rush Opening Gambit: Deal 4 damage to your General.||
+407|Cards.Faction5.Elucidator|core/faction5|Unit|Magmar Aspects||rare|4|5|4||||Elucidator|Rush\nOpening Gambit: Deal 4 damage to your General.||
 408|Cards.Faction5.UnstableLeviathan|core/faction5|Unit|Magmar Aspects||rare|7|11|11||||Unstable Leviathan|At the start of your turn, deal 4 damage to a random minion or General.||
 409|Cards.Faction5.Kujata|core/faction5|Unit|Magmar Aspects||epic|2|2|2||||Kujata|Your minions cost 1 less to summon and take 1 damage when summoned from your action bar.||
 410|Cards.Faction5.PrimordialGazer|core/faction5|Unit|Magmar Aspects||fixed|3|2|2||||Primordial Gazer|Opening Gambit: Give a nearby friendly minion +2/+2.|Cards.Spell.ApplyModifiers|
 411|Cards.Faction5.Egg|core/faction5|Unit|Magmar Aspects||tokenunit|0|0|1||1||Chrysalis Egg|||
 412|Cards.Faction5.YoungSilithar|core/faction5|Unit|Magmar Aspects||common|2|2|3||||Young Silithar|Rebirth||
 413|Cards.Faction5.VeteranSilithar|core/faction5|Unit|Magmar Aspects||common|4|4|4||||Veteran Silithar|Rebirth||
-414|Cards.Faction5.SilitharElder|core/faction5|Unit|Magmar Aspects||legendary|7|7|7||||Silithar Elder|Rebirth At the end of your turn, summon a Silithar Elder Egg nearby.||
+414|Cards.Faction5.SilitharElder|core/faction5|Unit|Magmar Aspects||legendary|7|7|7||||Silithar Elder|Rebirth\nAt the end of your turn, summon a Silithar Elder Egg nearby.||
 415|Cards.Faction5.SpiritHarvester|core/faction5|Unit|Magmar Aspects||rare|5|5|5||||Spirit Harvester|At the end of your turn, deal 1 damage to ALL other minions.||
 416|Cards.Faction5.MiniMagmar|core/faction5|Unit|Magmar Aspects||tokenunit|1|1|1||1||Magma|||
 417|Cards.Faction5.Vindicator|core/faction5|Unit|Magmar Aspects||legendary|3|1|3||||Vindicator|Whenever your opponent draws a card, this minion gains +2/+2.||
@@ -272,11 +272,11 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 508|Cards.Faction6.PrismaticGiant|core/faction6|Unit|Vanar Kindred|Vespyr|epic|6|4|8||||Draugar Lord|Dying Wish: Summon a 4/8 Ice Drake on this space.|Cards.Faction6.IceDrake|
 509|Cards.Faction6.IceDrake|core/faction6|Unit|Vanar Kindred||tokenunit|4|4|8||1||Ice Drake|||
 510|Cards.Faction6.WyrBeast|core/faction6|Unit|Vanar Kindred|Vespyr|rare|1|2|1||||Snow Chaser|Infiltrate: When this minion dies, return it to your action bar.||
-511|Cards.Faction6.WolfRaven|core/faction6|Unit|Vanar Kindred||common|3|1|4||||Wolfraven|Flying Infiltrate: Gain +3 Attack.||
+511|Cards.Faction6.WolfRaven|core/faction6|Unit|Vanar Kindred||common|3|1|4||||Wolfraven|Flying\nInfiltrate: Gain +3 Attack.||
 512|Cards.Faction6.BoreanBear|core/faction6|Unit|Vanar Kindred|Vespyr|common|2|1|3||||Borean Bear|Whenever you summon a Vespyr minion, this minion gains +1 Attack.||
 517|Cards.Faction6.HearthSister|core/faction6|Unit|Vanar Kindred||common|2|3|2||||Hearth-Sister|Opening Gambit: Switch positions with ANY other minion.|Cards.Spell.FollowupSwapPositions|
 513|Cards.Faction6.Razorback|core/faction6|Unit|Vanar Kindred||rare|4|4|3||||Razorback|Opening Gambit: Give all friendly minions +2 Attack this turn.||
-514|Cards.Faction6.AncientGrove|core/faction6|Unit|Vanar Kindred|Vespyr|legendary|7|7|7||||Ancient Grove|Provoke Opening Gambit: Your minions gain "Dying Wish: Summon a 1/1 Treant with Provoke".|Cards.Faction6.Treant|
+514|Cards.Faction6.AncientGrove|core/faction6|Unit|Vanar Kindred|Vespyr|legendary|7|7|7||||Ancient Grove|Provoke\nOpening Gambit: Your minions gain "Dying Wish: Summon a 1/1 Treant with Provoke".|Cards.Faction6.Treant|
 516|Cards.Faction6.Treant|core/faction6|Unit|Vanar Kindred||tokenunit|1|1|1||1||Treant|Provoke||
 515|Cards.Faction6.VoiceoftheWind|core/faction6|Unit|Vanar Kindred||legendary|4|4|4||||Voice of the Wind|Whenever you summon a minion from your action bar, summon a 2/2 Vespyr Winter Maerid nearby.|Cards.Faction6.WaterBear|
 518|Cards.Faction6.WaterBear|core/faction6|Unit|Vanar Kindred|Vespyr|tokenunit|1|2|2||1||Winter Maerid|||
@@ -284,9 +284,9 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 520|Cards.Faction6.WolfAspect|core/faction6|Unit|Vanar Kindred||tokenunit|2|3|3||1||Fox Ravager|||
 521|Cards.Faction6.AzureDrake|core/faction6|Unit|Vanar Kindred||tokenunit|4|4|4||1||Whyte Drake|Flying||
 522|Cards.Faction6.SeismicElemental|core/faction6|Unit|Vanar Kindred||tokenunit|4|5|5||1||Seismic Elemental|||
-523|Cards.Faction6.GravityWell|core/faction6|Unit|Vanar Kindred||tokenunit|1|0|1||1||Gravity Well|Wall Provoke||
+523|Cards.Faction6.GravityWell|core/faction6|Unit|Vanar Kindred||tokenunit|1|0|1||1||Gravity Well|Wall\nProvoke||
 524|Cards.Faction6.BlazingSpines|core/faction6|Unit|Vanar Kindred||tokenunit|1|3|3||1||Blazing Spines|Wall||
-525|Cards.Faction6.BonechillBarrier|core/faction6|Unit|Vanar Kindred|Vespyr|tokenunit|1|0|2||1||Bonechill Barrier|Wall Minions next to this minion that attack it are Stunned.||
+525|Cards.Faction6.BonechillBarrier|core/faction6|Unit|Vanar Kindred|Vespyr|tokenunit|1|0|2||1||Bonechill Barrier|Wall\nMinions next to this minion that attack it are Stunned.||
 506|Cards.Faction6.CrystalWisp|core/faction6|Unit|Vanar Kindred||common|2|1|1||||Crystal Wisp|Dying Wish: Permanently gain 1 mana crystal.||
 20185|Cards.Spell.KineticSurge|core/faction6|SpellKineticSurge|Vanar Kindred|||1||||1||Kinetic Surge|Friendly minions summoned this turn gain +1/+1.||
 20184|Cards.Spell.Warbird|core/faction6|SpellWarbird|Vanar Kindred|||1||||1||Warbird|Deal 2 damage to all enemies in the enemy General's Column.||
@@ -341,10 +341,10 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 10207|Cards.Neutral.StormmetalGolem|core/neutral|Unit|Neutral|Golem|fixed|6|8|8||||Stormmetal Golem|||
 10204|Cards.Neutral.BrightmossGolem|core/neutral|Unit|Neutral|Golem|fixed|5|4|9||||Brightmoss Golem|||
 19002|Cards.Neutral.Mechaz0rHelm|core/neutral|Unit|Neutral|Mech|common|1|2|2||||Helm of MECHAZ0R|Opening Gambit: Progresses MECHAZ0R build by +20%.|Cards.Spell.DeployMechaz0r|
-19003|Cards.Neutral.Mechaz0rWings|core/neutral|Unit|Neutral|Mech|common|2|1|4||||Wings of MECHAZ0R|Airdrop Opening Gambit: Progresses MECHAZ0R build by +20%.|Cards.Spell.DeployMechaz0r|
-19004|Cards.Neutral.Mechaz0rCannon|core/neutral|Unit|Neutral|Mech|rare|3|2|2||||Cannon of MECHAZ0R|Ranged Opening Gambit: Progresses MECHAZ0R build by +20%.|Cards.Spell.DeployMechaz0r|
-19005|Cards.Neutral.Mechaz0rSword|core/neutral|Unit|Neutral|Mech|rare|3|3|3||||Sword of MECHAZ0R|Frenzy Opening Gambit: Progresses MECHAZ0R build by +20%.|Cards.Spell.DeployMechaz0r|
-19006|Cards.Neutral.Mechaz0rChassis|core/neutral|Unit|Neutral|Mech|epic|4|2|4||||Chassis of MECHAZ0R|Forcefield Opening Gambit: Progresses MECHAZ0R build by +20%.|Cards.Spell.DeployMechaz0r|
+19003|Cards.Neutral.Mechaz0rWings|core/neutral|Unit|Neutral|Mech|common|2|1|4||||Wings of MECHAZ0R|Airdrop\nOpening Gambit: Progresses MECHAZ0R build by +20%.|Cards.Spell.DeployMechaz0r|
+19004|Cards.Neutral.Mechaz0rCannon|core/neutral|Unit|Neutral|Mech|rare|3|2|2||||Cannon of MECHAZ0R|Ranged\nOpening Gambit: Progresses MECHAZ0R build by +20%.|Cards.Spell.DeployMechaz0r|
+19005|Cards.Neutral.Mechaz0rSword|core/neutral|Unit|Neutral|Mech|rare|3|3|3||||Sword of MECHAZ0R|Frenzy\nOpening Gambit: Progresses MECHAZ0R build by +20%.|Cards.Spell.DeployMechaz0r|
+19006|Cards.Neutral.Mechaz0rChassis|core/neutral|Unit|Neutral|Mech|epic|4|2|4||||Chassis of MECHAZ0R|Forcefield\nOpening Gambit: Progresses MECHAZ0R build by +20%.|Cards.Spell.DeployMechaz0r|
 19001|Cards.Neutral.Mechaz0r|core/neutral|Unit|Neutral|Mech|tokenunit|4|6|6||1||MECHAZ0R!|Airdrop, Forcefield, Frenzy, Ranged||
 10001|Cards.Neutral.SpottedDragonlark|core/neutral|Unit|Neutral||fixed|1|2|1||||Dragonlark|Flying||
 19033|Cards.Neutral.PutridMindflayer|core/neutral|Unit|Neutral||fixed|3|2|4||||Putrid Dreadflayer|Flying||
@@ -353,7 +353,7 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 10013|Cards.Neutral.PhaseHound|core/neutral|Unit|Neutral||common|3|4|3||||Blaze Hound|Opening Gambit: Both players draw a card.||
 10014|Cards.Neutral.BlackSandBurrower|core/neutral|Unit|Neutral||common|3|2|4|||1|Sand Burrower|When this minion survives damage, it returns to your action bar.||
 10972|Cards.Neutral.MiniJax|core/neutral|Unit|Neutral||tokenunit|1|1|1||1||Mini-Jax|Ranged||
-10963|Cards.Neutral.JaxTruesight|core/neutral|Unit|Neutral||legendary|6|1|1||||Jax Truesight|Ranged Opening Gambit: Summon a 1/1 Ranged Mini-Jax in each corner.|Cards.Neutral.MiniJax|
+10963|Cards.Neutral.JaxTruesight|core/neutral|Unit|Neutral||legendary|6|1|1||||Jax Truesight|Ranged\nOpening Gambit: Summon a 1/1 Ranged Mini-Jax in each corner.|Cards.Neutral.MiniJax|
 10016|Cards.Neutral.RepulsionBeast|core/neutral|Unit|Neutral||fixed|3|2|2||||Repulsor Beast|Opening Gambit: Push a nearby enemy minion to any space.|Cards.Spell.Repulsion|
 10009|Cards.Neutral.SilvertongueCorsair|core/neutral|Unit|Neutral||rare|3|3|3||||Silvertongue Corsair|Takes no damage from Generals.||
 10012|Cards.Neutral.SaberspineTiger|core/neutral|Unit|Neutral||fixed|4|3|2||||Saberspine Tiger|Rush||
@@ -361,7 +361,7 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 10022|Cards.Neutral.TwilightMage|core/neutral|Unit|Neutral||epic|5|3|6||||Twilight Sorcerer|Opening Gambit: Put a copy of a random spell you cast this game into your action bar.||
 19037|Cards.Neutral.PrimusFist|core/neutral|Unit|Neutral||common|2|2|3||||Primus Fist|Opening Gambit: Give a nearby friendly minion +2 Attack this turn.|Cards.Spell.ApplyModifiers|
 19038|Cards.Neutral.GolemMetallurgist|core/neutral|Unit|Neutral|Golem|rare|2|2|3||||Golem Metallurgist|The first Golem you summon each turn costs 1 less.||
-19039|Cards.Neutral.GolemVanquisher|core/neutral|Unit|Neutral|Golem|legendary|3|2|4||||Golem Vanquisher|Provoke Your other Golem minions have Provoke.||
+19039|Cards.Neutral.GolemVanquisher|core/neutral|Unit|Neutral|Golem|legendary|3|2|4||||Golem Vanquisher|Provoke\nYour other Golem minions have Provoke.||
 19042|Cards.Neutral.FrostboneNaga|core/neutral|Unit|Neutral||common|4|3|3||||Frostbone Naga|Opening Gambit: Deal 2 damage to everything around it.||
 19043|Cards.Neutral.ArchonSpellbinder|core/neutral|Unit|Neutral|Arcanyst|legendary|6|7|7||||Archon Spellbinder|Your opponent's non-Bloodbound spells cost 1 more to cast.||
 19044|Cards.Neutral.SilhoutteTracer|core/neutral|Unit|Neutral||common|4|2|6||||Silhouette Tracer|Opening Gambit: Teleport your General up to 3 spaces.|Cards.Spell.FollowupTeleportMyGeneral|
@@ -374,7 +374,7 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 19052|Cards.Neutral.BloodtearAlchemist|core/neutral|Unit|Neutral||fixed|1|2|1||||Bloodtear Alchemist|Opening Gambit: Deal 1 damage to an enemy.|Cards.Spell.FollowupDamage|
 10959|Cards.Neutral.DancingBlades|core/neutral|Unit|Neutral||common|5|4|6||||Dancing Blades|Opening Gambit: Deal 3 damage to ANY minion in front of this.||
 10953|Cards.Neutral.Crossbones|core/neutral|Unit|Neutral||rare|3|3|3||||Crossbones|Opening Gambit: Destroy an enemy minion with Ranged.|Cards.Spell.KillTargetWithRanged|
-10954|Cards.Neutral.SwornAvenger|core/neutral|Unit|Neutral||epic|3|1|3||||Sworn Avenger|Ranged Whenever your General takes damage, this minion gains +1 Attack.||
+10954|Cards.Neutral.SwornAvenger|core/neutral|Unit|Neutral||epic|3|1|3||||Sworn Avenger|Ranged\nWhenever your General takes damage, this minion gains +1 Attack.||
 10955|Cards.Neutral.SwornDefender|core/neutral|Unit|Neutral||epic|5|4|7||||Sworn Defender|Whenever your General takes damage, fully heal this minion.||
 10956|Cards.Neutral.RedSynja|core/neutral|Unit|Neutral||legendary|7|7|7||||Red Synja|Whenever your General takes damage, deal 7 damage to a random nearby enemy minion.||
 10957|Cards.Neutral.CoiledCrawler|core/neutral|Unit|Neutral||common|2|2|3||||Rust Crawler|Opening Gambit: Destroy a random artifact on the enemy General.||
@@ -388,8 +388,8 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 10969|Cards.Neutral.PandoraMinion3|core/neutral|Unit|Neutral||tokenunit|2|3|3||1||Wrath|Celerity||
 10970|Cards.Neutral.PandoraMinion4|core/neutral|Unit|Neutral||tokenunit|2|3|3||1||Envy|Ranged||
 10971|Cards.Neutral.PandoraMinion5|core/neutral|Unit|Neutral||tokenunit|2|3|3||1||Fear|Provoke||
-10973|Cards.Neutral.LuxIgnis|core/neutral|Unit|Neutral||epic|5|2|5|||1|Lux Ignis|Ranged At the end of your turn, restore 2 Health to all nearby friendly minions.||
-10974|Cards.Neutral.SyvrelTheExile|core/neutral|Unit|Neutral||epic|3|1|4|||1|Syvrel the Exile|Ranged Minions damaged by Syvrel are pulled in front of him.||
+10973|Cards.Neutral.LuxIgnis|core/neutral|Unit|Neutral||epic|5|2|5|||1|Lux Ignis|Ranged\nAt the end of your turn, restore 2 Health to all nearby friendly minions.||
+10974|Cards.Neutral.SyvrelTheExile|core/neutral|Unit|Neutral||epic|3|1|4|||1|Syvrel the Exile|Ranged\nMinions damaged by Syvrel are pulled in front of him.||
 10975|Cards.Neutral.Spelljammer|core/neutral|Unit|Neutral||legendary|4|3|5||||Spelljammer|Each player draws an additional card at the end of their turns.||
 10976|Cards.Neutral.Dilotas|core/neutral|Unit|Neutral||epic|4|5|3|||1|Dioltas|Dying Wish: Summon a 0/8 Tombstone minion with Provoke near your General.|Cards.Neutral.DilotasTombstone|
 10977|Cards.Neutral.DilotasTombstone|core/neutral|Unit|Neutral||tokenunit|3|0|8||1||Tombstone|Provoke||
@@ -402,9 +402,9 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 10984|Cards.Neutral.FirstSwordofAkrane|core/neutral|Unit|Neutral||common|6|7|7||||First Sword of Akrane|Your other minions have +1 Attack.||
 10985|Cards.Neutral.TheHighHand|core/neutral|Unit|Neutral||common|5|2|3|||1|The High Hand|Opening Gambit: Gains +1/+1 for each card in your opponent's action bar.||
 10986|Cards.Neutral.Eclipse|core/neutral|Unit|Neutral|Arcanyst|legendary|6|3|7|||1|Eclipse|Whenever this minion takes damage, it deals that much damage to the enemy General.||
-10987|Cards.Neutral.LadyLocke|core/neutral|Unit|Neutral||legendary|3|2|3||||Lady Locke|Provoke Opening Gambit: Other minions you summon this turn gain +1/+1 and gain Provoke.||
+10987|Cards.Neutral.LadyLocke|core/neutral|Unit|Neutral||legendary|3|2|3||||Lady Locke|Provoke\nOpening Gambit: Other minions you summon this turn gain +1/+1 and gain Provoke.||
 10988|Cards.Neutral.Moebius|core/neutral|Unit|Neutral|Arcanyst|epic|4|3|5||||Moebius|At the start of your turn, fully heal this minion and switch its Attack and Health.||
-10989|Cards.Neutral.HankHart|core/neutral|Unit|Neutral||epic|4|2|4|||1|Captain Hank Hart|Ranged Whenever this minion deals damage, restore that much Health to it.||
+10989|Cards.Neutral.HankHart|core/neutral|Unit|Neutral||epic|4|2|4|||1|Captain Hank Hart|Ranged\nWhenever this minion deals damage, restore that much Health to it.||
 10990|Cards.Neutral.Rook|core/neutral|Unit|Neutral||legendary|7|5|5|||1|Rook|At the end of your turn, this minion gains a random Faction ability.||
 10991|Cards.Neutral.Purgatos|core/neutral|Unit|Neutral||epic|4|3|5||||Purgatos, The Realmkeeper|Whenever this minion deals damage, either deal 3 damage to the enemy General OR restore 3 Health to your General.||
 10992|Cards.Neutral.Songweaver|core/neutral|Unit|Neutral||common|3|3|3||||Songweaver|Opening Gambit: Give a nearby friendly minion +1/+1.|Cards.Spell.ApplyModifiers|
@@ -412,7 +412,7 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 10994|Cards.Neutral.ZenRui|core/neutral|Unit|Neutral||legendary|6|4|4|||1|Zen'Rui, the Blightspawned|Opening Gambit: Take control of a nearby enemy minion with 2 or less Attack.|Cards.Spell.MindControlByAttackValue|
 10995|Cards.Neutral.EmeraldRejuvenator|core/neutral|Unit|Neutral||rare|4|4|4||||Emerald Rejuvenator|Opening Gambit: Restore 4 Health to BOTH Generals.||
 10996|Cards.Neutral.ZuraelTheLifegiver|core/neutral|Unit|Neutral||legendary|7|4|7||||Zurael, the Lifegiver|Opening Gambit: Summon all non-token friendly minions destroyed on your opponent's last turn on a random space.||
-10997|Cards.Neutral.Paddo|core/neutral|Unit|Neutral||legendary|7|12|6||||Paddo|Airdrop Opening Gambit: Push ALL nearby minions and Generals to random spaces.||
+10997|Cards.Neutral.Paddo|core/neutral|Unit|Neutral||legendary|7|12|6||||Paddo|Airdrop\nOpening Gambit: Push ALL nearby minions and Generals to random spaces.||
 11031|Cards.Neutral.Necroseer|core/neutral|Unit|Neutral||fixed|5|5|4||||Necroseer|Dying Wish: Draw a card.||
 11032|Cards.Neutral.Bloodletter|core/neutral|Unit|Neutral||fixed|6|4|6||||Facestriker|Deals double damage to Generals.||
 57|Cards.Faction1.RightfulHeir|coreshatter/faction1|Unit|Lyonar Kingdoms||mythron|5|5|5||||Grand Strategos|Trial: Summon 12 minions with 1 or less Attack.\nDestiny: Promote other friendly minions at the end of your turn.||
@@ -537,22 +537,22 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 20285|Cards.Spell.ValeAscension|firstwatch/faction1|SpellSummonDeadMinionOnHallowedGround|Lyonar Kingdoms||epic|2||||||Vale Ascension|Summon a friendly non-token minion destroyed this game onto friendly Hallowed Ground.||
 20287|Cards.Spell.FortifiedAssault|firstwatch/faction1|SpellFortifiedAssault|Lyonar Kingdoms||rare|1||||||Fortified Assault|Turn an enemy minion's space into Hallowed Ground. Deal it 1 damage for each friendly Hallowed Ground.||
 138|Cards.Faction2.Flamewreath|firstwatch/faction2|Unit|Songhai Empire||common|4|2|4||||Flamewreath|Whenever this minion is moved for any reason, it deals 2 damage to all enemies around it.||
-140|Cards.Faction2.ScrollBandit|firstwatch/faction2|Unit|Songhai Empire|Arcanyst|epic|2|1|3||||Scroll Bandit|Backstab: (1). Whenever this backstabs, steal a spell from your opponent's deck.||
+140|Cards.Faction2.ScrollBandit|firstwatch/faction2|Unit|Songhai Empire|Arcanyst|epic|2|1|3||||Scroll Bandit|Backstab: (1).\nWhenever this backstabs, steal a spell from your opponent's deck.||
 139|Cards.Faction2.EternityPainter|firstwatch/faction2|Unit|Songhai Empire||legendary|6|3|4||||Eternity Painter|At the end of your turn, transform all nearby enemy minions into 0/2 Panddos that cannot be attacked.|Cards.Faction2.OnyxBear|
-30033|Cards.Artifact.EnergyAmulet|firstwatch/faction2|Artifact|Songhai Empire||legendary|3||||||Unbounded Energy Amulet|Your General gains +1 Attack. Your General may move an additional space.||
+30033|Cards.Artifact.EnergyAmulet|firstwatch/faction2|Artifact|Songhai Empire||legendary|3||||||Unbounded Energy Amulet|Your General gains +1 Attack.\nYour General may move an additional space.||
 20275|Cards.Spell.Gotatsu|firstwatch/faction2|SpellGotatsu|Songhai Empire||common|1||||||Gotatsu|Deal 1 damage to a minion. Draw a card at end of turn.||
 141|Cards.Faction2.SonghaiSentinel|firstwatch/faction2|Unit|Songhai Empire||tokenunit|3|3|3||1||Watchful Sentinel|Sentinel: This transforms into a powerful minion if its hidden condition is met.||
-142|Cards.Faction2.HundredHand|firstwatch/faction2|Unit|Songhai Empire||common|3|3|4||||Hundred-Handed Rakushi|Sentinel: Minion summoned. Deal 2 damage to the minion that transformed this.|Cards.Faction2.SonghaiSentinel|
-143|Cards.Faction2.Mizuchi|firstwatch/faction2|Unit|Songhai Empire||rare|3|2|5||||Mizuchi|Sentinel: General attacks. Flying Backstab: (2).|Cards.Faction2.SonghaiSentinel|
-144|Cards.Faction2.MindCageOni|firstwatch/faction2|Unit|Songhai Empire||rare|3|3|2||||Mind-Cage Oni|Sentinel: Spell cast. Whenever your opponent casts a spell, put a copy of that spell into your action bar.|Cards.Faction2.SonghaiSentinel|
+142|Cards.Faction2.HundredHand|firstwatch/faction2|Unit|Songhai Empire||common|3|3|4||||Hundred-Handed Rakushi|Sentinel: Minion summoned.\nDeal 2 damage to the minion that transformed this.|Cards.Faction2.SonghaiSentinel|
+143|Cards.Faction2.Mizuchi|firstwatch/faction2|Unit|Songhai Empire||rare|3|2|5||||Mizuchi|Sentinel: General attacks.\nFlying\nBackstab: (2).|Cards.Faction2.SonghaiSentinel|
+144|Cards.Faction2.MindCageOni|firstwatch/faction2|Unit|Songhai Empire||rare|3|3|2||||Mind-Cage Oni|Sentinel: Spell cast.\nWhenever your opponent casts a spell, put a copy of that spell into your action bar.|Cards.Faction2.SonghaiSentinel|
 20283|Cards.Spell.Flicker|firstwatch/faction2|SpellTeleportGeneralBehindEnemy|Songhai Empire||epic|3||||||Flicker|Teleport your General to a space behind an enemy.||
 20267|Cards.Spell.TwilightReiki|firstwatch/faction2|SpellZodiacTriad|Songhai Empire||legendary|5||||||Twilight Reiki|Put 3 random Songhai minions into your action bar. They cost 1 less.||
 20290|Cards.Spell.FirestormMantra|firstwatch/faction2|SpellFirestormOfAgony|Songhai Empire||epic|6||||||Firestorm Mantra|Steal Health from the enemy General equal to twice the number of spells cast this turn.||
 20294|Cards.Spell.SpiralCounter|firstwatch/faction2|SpellSpiralCounter|Songhai Empire||common|1||||||Spiral Counter|Deal 8 damage to an enemy minion that attacked last turn.||
 20279|Cards.Spell.Bombard|firstwatch/faction2|SpellRefreshFriendlyRanged|Songhai Empire||rare|5||||||Bombard|Reactivate your minions with Ranged.||
 245|Cards.Faction3.FateWatcher|firstwatch/faction3|Unit|Vetruvian Imperium||common|3|2|3||||Fate Watcher|Whenever your opponent draws a card, this minion gains a random keyword ability.||
-242|Cards.Faction3.TrygonObelysk|firstwatch/faction3|Unit|Vetruvian Imperium|Structure|legendary|4|0|9||||Trygon Obelysk|Summon Dervish Summon Dervish Summon Dervish||
-243|Cards.Faction3.LavastormObelysk|firstwatch/faction3|Unit|Vetruvian Imperium|Structure|rare|2|0|4||||Lavastorm Obelysk|Summon Dervish At the start of your turn, deal 6 damage to all enemy minions in this row.||
+242|Cards.Faction3.TrygonObelysk|firstwatch/faction3|Unit|Vetruvian Imperium|Structure|legendary|4|0|9||||Trygon Obelysk|Summon Dervish\nSummon Dervish\nSummon Dervish||
+243|Cards.Faction3.LavastormObelysk|firstwatch/faction3|Unit|Vetruvian Imperium|Structure|rare|2|0|4||||Lavastorm Obelysk|Summon Dervish\nAt the start of your turn, deal 6 damage to all enemy minions in this row.||
 244|Cards.Faction3.WastelandWraith|firstwatch/faction3|Unit|Vetruvian Imperium||epic|4|1|5||||Wasteland Wraith|At the start of your turn, destroy this and all enemy minions.||
 241|Cards.Faction3.Duskweaver|firstwatch/faction3|Unit|Vetruvian Imperium|Dervish|common|2|2|1||||Duskweaver|Dying Wish: Put a random Scion's Wish spell into your action bar.||
 20255|Cards.Spell.AridUnmaking|firstwatch/faction3|SpellKillTargetSpawnEntity|Vetruvian Imperium||common|1||||||Arid Unmaking|Destroy a friendly minion to turn its space into Exhuming Sand.|Cards.Tile.SandPortal|
@@ -568,12 +568,12 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 20272|Cards.Spell.InklingSurge|firstwatch/faction4|SpellInklingSurge|Abyssian Host||common|1||||||Inkling Surge|Summon a 1/1 Wraithling. If you have another Wraithling, draw a card.|Cards.Faction4.Wraithling|
 20273|Cards.Spell.Shadowstalk|firstwatch/faction4|SpellShadows|Abyssian Host||rare|2||||||Shadowstalk|Summon a Wraithling behind each enemy.||
 30034|Cards.Artifact.Mindlathe|firstwatch/faction4|Artifact|Abyssian Host||legendary|3||||||Mindlathe|After your General damages a minion, reactivate and take control of it until the end of your turn.||
-341|Cards.Faction4.Desolator|firstwatch/faction4|Unit|Abyssian Host||legendary|4|2|1||||Desolator|Opening Gambit: Steal 2 Health from the enemy General. Dying Wish: Return Desolator to your action bar.||
+341|Cards.Faction4.Desolator|firstwatch/faction4|Unit|Abyssian Host||legendary|4|2|1||||Desolator|Opening Gambit: Steal 2 Health from the enemy General.\nDying Wish: Return Desolator to your action bar.||
 20264|Cards.Spell.Doom|firstwatch/faction4|SpellApplyModifiersToGeneral|Abyssian Host||legendary|9||||||Doom|The enemy General is DOOMED and will die after three turns.||
 342|Cards.Faction4.AbyssSentinel|firstwatch/faction4|Unit|Abyssian Host||tokenunit|3|3|3||1||Watchful Sentinel|Sentinel: This transforms into a powerful minion if its hidden condition is met.||
-343|Cards.Faction4.SkullProphet|firstwatch/faction4|Unit|Abyssian Host||rare|3|2|4||||Skullprophet|Sentinel: General attacks. The enemy General has -1 Attack.|Cards.Faction4.AbyssSentinel|
-344|Cards.Faction4.BoundTormentor|firstwatch/faction4|Unit|Abyssian Host||common|3|2|3||||Bound Tormentor|Sentinel: Minion summoned. Put a copy of the minion that transformed this into your action bar. It costs 2 less.|Cards.Faction4.AbyssSentinel|
-345|Cards.Faction4.Xerroloth|firstwatch/faction4|Unit|Abyssian Host||rare|3|3|2||||Xerroloth|Sentinel: Spell cast. Whenever your opponent casts a spell, put a 4/4 Fiend into your action bar.|Cards.Faction4.AbyssSentinel,Cards.Faction4.Fiend|
+343|Cards.Faction4.SkullProphet|firstwatch/faction4|Unit|Abyssian Host||rare|3|2|4||||Skullprophet|Sentinel: General attacks.\nThe enemy General has -1 Attack.|Cards.Faction4.AbyssSentinel|
+344|Cards.Faction4.BoundTormentor|firstwatch/faction4|Unit|Abyssian Host||common|3|2|3||||Bound Tormentor|Sentinel: Minion summoned.\nPut a copy of the minion that transformed this into your action bar. It costs 2 less.|Cards.Faction4.AbyssSentinel|
+345|Cards.Faction4.Xerroloth|firstwatch/faction4|Unit|Abyssian Host||rare|3|3|2||||Xerroloth|Sentinel: Spell cast.\nWhenever your opponent casts a spell, put a 4/4 Fiend into your action bar.|Cards.Faction4.AbyssSentinel,Cards.Faction4.Fiend|
 20269|Cards.Spell.Nethermeld|firstwatch/faction4|SpellRequireUnoccupiedFriendlyCreep|Abyssian Host||epic|1||||||Nethermeld|Teleport ANY minion to friendly Shadow Creep.|Cards.Spell.CreepMeld,Cards.Spell.FollowupTeleportToFriendlyCreep|
 20271|Cards.Spell.ChokingTendrils|firstwatch/faction4|SpellKillEnemyOnFriendlyCreep|Abyssian Host||common|2||||||Choking Tendrils|Destroy an enemy minion on friendly Shadow Creep.|Cards.Spell.CreepingTendrils|
 20284|Cards.Spell.CorporealCadence|firstwatch/faction4|SpellCurseOfShadows|Abyssian Host||epic|5||||||Corporeal Cadence|Destroy a friendly minion to deal its Attack to the enemy General.|Cards.Spell.CurseOfShadows|
@@ -581,7 +581,7 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 439|Cards.Faction5.Quillbeast|firstwatch/faction5|Unit|Magmar Aspects||common|3|3|4||||Catalyst Quillbeast|Whenever you cast a spell, deal 1 damage to ALL minions.||
 437|Cards.Faction5.Terradon|firstwatch/faction5|Unit|Magmar Aspects||common|3|2|8||||Terradon|||
 438|Cards.Faction5.Warpup|firstwatch/faction5|Unit|Magmar Aspects||rare|2|1|1||||Warpup|Forcefield, Frenzy||
-436|Cards.Faction5.GrandmasterKraigon|firstwatch/faction5|Unit|Magmar Aspects||legendary|9|7|7||||Grandmaster Kraigon|Forcefield, Frenzy, Grow: +7/+7. Your General has: Forcefield, Frenzy, Grow: +7/+7.||
+436|Cards.Faction5.GrandmasterKraigon|firstwatch/faction5|Unit|Magmar Aspects||legendary|9|7|7||||Grandmaster Kraigon|Forcefield, Frenzy, Grow: +7/+7.\nYour General has:\nForcefield, Frenzy, Grow: +7/+7.||
 440|Cards.Faction5.Omniseer|firstwatch/faction5|Unit|Magmar Aspects||rare|4|4|5||||Omniseer|Opening Gambit: Turn a nearby space into Primal Flourish.|Cards.Spell.SpawnEntity,Cards.Tile.PrimalMojo|
 20268|Cards.Spell.PrimalBallast|firstwatch/faction5|SpellToothAndTrial|Magmar Aspects||rare|2||||||Primal Ballast|Dispel a space. If there is a minion on that space, give it +2/+2.|Cards.Spell.ToothAndTrial|
 20288|Cards.Spell.VaathsBrutality|firstwatch/faction5|SpellVaathsSpirit|Magmar Aspects||common|2||||||Vaath's Brutality|Stun an enemy minion. Give your General +1 Attack.||
@@ -593,13 +593,13 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 543|Cards.Faction6.MatronElveiti|firstwatch/faction6|Unit|Vanar Kindred||legendary|8|7|5||||Matron Elveiti|Minions cannot attack your General.||
 20276|Cards.Spell.LuminousCharge|firstwatch/faction6|SpellSpawnEntity|Vanar Kindred||rare|5||||||Luminous Charge|Summon five joined 0/1 Walls that deal 2 damage to nearby enemies when destroyed.|Cards.Faction6.FrostBomb,Cards.Spell.CloneSourceEntity4X|
 544|Cards.Faction6.FrostBomb|firstwatch/faction6|Unit|Vanar Kindred||tokenunit|1|0|1||1||Luminous Charge|Dying Wish: Deal 2 damage to nearby enemies.||
-545|Cards.Faction6.Shivers|firstwatch/faction6|Unit|Vanar Kindred|Vespyr|epic|2|2|1||||Shivers|Flying Infiltrate: When this minion attacks, permanently gain 1 mana crystal.||
+545|Cards.Faction6.Shivers|firstwatch/faction6|Unit|Vanar Kindred|Vespyr|epic|2|2|1||||Shivers|Flying\nInfiltrate: When this minion attacks, permanently gain 1 mana crystal.||
 30035|Cards.Artifact.TheDredger|firstwatch/faction6|Artifact|Vanar Kindred||legendary|1||||||The Dredger|Whenever your General damages an enemy, randomly teleport them to your starting side of the battlefield.||
 20266|Cards.Spell.GlacialFissure|firstwatch/faction6|SpellDamageCenterColumn|Vanar Kindred||epic|3||||||Glacial Fissure|Deal 8 damage to EVERYTHING in the center column.||
 546|Cards.Faction6.VanarSentinel|firstwatch/faction6|Unit|Vanar Kindred||tokenunit|3|3|3||1||Watchful Sentinel|Sentinel: This transforms into a powerful minion if its hidden condition is met.||
-547|Cards.Faction6.Freeblade|firstwatch/faction6|Unit|Vanar Kindred||common|3|3|5||||Freeblade|Sentinel: Minion summoned. This switches positions with the minion that transformed it.|Cards.Faction6.VanarSentinel|
-548|Cards.Faction6.DrakeDowager|firstwatch/faction6|Unit|Vanar Kindred||rare|3|1|3||||Drake Dowager|Sentinel: General attacks. Ranged Whenever this attacks, summon a 4/4 Flying Drake nearby.|Cards.Faction6.AzureDrake,Cards.Faction6.VanarSentinel|
-549|Cards.Faction6.MoonlitBasilysk|firstwatch/faction6|Unit|Vanar Kindred||rare|3|2|2||||Moonlit Basilysk|Sentinel: Spell cast. Whenever your opponent casts a spell, this minion gains +3/+3.|Cards.Faction6.VanarSentinel|
+547|Cards.Faction6.Freeblade|firstwatch/faction6|Unit|Vanar Kindred||common|3|3|5||||Freeblade|Sentinel: Minion summoned.\nThis switches positions with the minion that transformed it.|Cards.Faction6.VanarSentinel|
+548|Cards.Faction6.DrakeDowager|firstwatch/faction6|Unit|Vanar Kindred||rare|3|1|3||||Drake Dowager|Sentinel: General attacks.\nRanged\nWhenever this attacks, summon a 4/4 Flying Drake nearby.|Cards.Faction6.AzureDrake,Cards.Faction6.VanarSentinel|
+549|Cards.Faction6.MoonlitBasilysk|firstwatch/faction6|Unit|Vanar Kindred||rare|3|2|2||||Moonlit Basilysk|Sentinel: Spell cast.\nWhenever your opponent casts a spell, this minion gains +3/+3.|Cards.Faction6.VanarSentinel|
 20289|Cards.Spell.VespyrianMight|firstwatch/faction6|SpellMightOfVespyr|Vanar Kindred||common|5||||||Vespyrian Might|Give a Vespyr minion +2/+2 for each friendly Vespyr.||
 550|Cards.Faction6.CrystalArbiter|firstwatch/faction6|Unit|Vanar Kindred|Vespyr|common|2|1|4||||Crystal Arbiter|This minion has +3 Attack on your opponent's turn.||
 20293|Cards.Spell.FlawlessReflection|firstwatch/faction6|SpellIllusoryIce|Vanar Kindred||legendary|7||||||Flawless Reflection|Choose a minion. Transform ALL nearby minions into copies of it.||
@@ -614,26 +614,26 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 20278|Cards.Spell.BoulderHurl|firstwatch/neutral|SpellDamage|Neutral|||0||||1||Boulder Hurl|Deal 1 damage to an enemy.||
 11109|Cards.Neutral.SinisterSilhouette|firstwatch/neutral|Unit|Neutral||rare|2|1|2||||Sinister Silhouette|Cannot be attacked.||
 11110|Cards.Neutral.MatterShaper|firstwatch/neutral|Unit|Neutral||rare|4|5|4||||Matter Shaper|Opening Gambit: Destroy an enemy artifact to put a random artifact from your faction into your action bar.||
-11105|Cards.Neutral.WildTahr|firstwatch/neutral|Unit|Neutral||common|3|2|4||||Wild Tahr|Frenzy Whenever an enemy attacks, this minion gains +3 Attack until the end of your turn.||
+11105|Cards.Neutral.WildTahr|firstwatch/neutral|Unit|Neutral||common|3|2|4||||Wild Tahr|Frenzy\nWhenever an enemy attacks, this minion gains +3 Attack until the end of your turn.||
 11111|Cards.Neutral.Quahog|firstwatch/neutral|Unit|Neutral||rare|5|7|7||||Quahog|Enemy minions destroyed by this are returned to their action bar.||
-11112|Cards.Neutral.Letigress|firstwatch/neutral|Unit|Neutral||legendary|5|2|6||||Letigress|Ranged Whenever your General attacks, a cub joins the pack.|Cards.Neutral.TigerCub|
+11112|Cards.Neutral.Letigress|firstwatch/neutral|Unit|Neutral||legendary|5|2|6||||Letigress|Ranged\nWhenever your General attacks, a cub joins the pack.|Cards.Neutral.TigerCub|
 11113|Cards.Neutral.TigerCub|firstwatch/neutral|Unit|Neutral||tokenunit|1|2|1||1||Saberspine Cub|Rush||
 11114|Cards.Neutral.Theobule|firstwatch/neutral|Unit|Neutral||legendary|5|5|6||||Theobule|Opening Gambit: Replace each card in your action bar.||
 11115|Cards.Neutral.Thunderhorn|firstwatch/neutral|Unit|Neutral||epic|4|4|4||||Thunderhorn|Whenever this minion damages an enemy, it also damages all joined enemies.||
-11116|Cards.Neutral.Spriggin|firstwatch/neutral|Unit|Neutral||epic|6|8|8||||Spriggin|Provoke Opening Gambit: Each player summons three Spriggin Kin nearby their General.||
+11116|Cards.Neutral.Spriggin|firstwatch/neutral|Unit|Neutral||epic|6|8|8||||Spriggin|Provoke\nOpening Gambit: Each player summons three Spriggin Kin nearby their General.||
 11117|Cards.Neutral.PartyAnimal1|firstwatch/neutral|Unit|Neutral||tokenunit|1|1|1||1||Glub|Whenever a Spriggin is destroyed, this minion gains +3/+3.||
-11118|Cards.Neutral.PartyAnimal2|firstwatch/neutral|Unit|Neutral||tokenunit|1|2|1||1||Binky|Flying Whenever this damages a minion, restore 2 Health to your General.||
+11118|Cards.Neutral.PartyAnimal2|firstwatch/neutral|Unit|Neutral||tokenunit|1|2|1||1||Binky|Flying\nWhenever this damages a minion, restore 2 Health to your General.||
 11119|Cards.Neutral.PartyAnimal3|firstwatch/neutral|Unit|Neutral||tokenunit|1|2|3||1||Zetta|Frenzy||
 11120|Cards.Neutral.PartyAnimal4|firstwatch/neutral|Unit|Neutral||tokenunit|1|0|3||1||Moro|As long as there is a Spriggin, this minion has +3 Attack.||
-11121|Cards.Neutral.DagonaFish|firstwatch/neutral|Unit|Neutral||legendary|8|8|8||||Dagona|Opening Gambit: Devour ANY minion, anywhere. Dying Wish: Spit out the devoured minion on this space.||
-11122|Cards.Neutral.Gambler|firstwatch/neutral|Unit|Neutral||epic|4|2|3||||Bloodsworn Gambler|Ranged Each time this minion attacks, it has a 50% chance to attack again, attacking a random enemy.||
-200001|Cards.Boss.Boss1|misc/bosses|Unit|Boss|||0|5|40|1|1||Boreal Juggernaut|Frenzy Whenever this damages an enemy minion, it is stunned.|Cards.BossSpell.LaceratingFrost,Cards.Spell.Frostburn|Cards.BossSpell.LaceratingFrost
+11121|Cards.Neutral.DagonaFish|firstwatch/neutral|Unit|Neutral||legendary|8|8|8||||Dagona|Opening Gambit: Devour ANY minion, anywhere.\nDying Wish: Spit out the devoured minion on this space.||
+11122|Cards.Neutral.Gambler|firstwatch/neutral|Unit|Neutral||epic|4|2|3||||Bloodsworn Gambler|Ranged\nEach time this minion attacks, it has a 50% chance to attack again, attacking a random enemy.||
+200001|Cards.Boss.Boss1|misc/bosses|Unit|Boss|||0|5|40|1|1||Boreal Juggernaut|Frenzy\nWhenever this damages an enemy minion, it is stunned.|Cards.BossSpell.LaceratingFrost,Cards.Spell.Frostburn|Cards.BossSpell.LaceratingFrost
 200002|Cards.Boss.Boss2|misc/bosses|Unit|Boss|||0|2|30|1|1||Umbra|Whenever an enemy summons a minion, summon a 1 health clone nearby your General.|Cards.BossSpell.MoldingEarth|Cards.BossSpell.MoldingEarth
-200003|Cards.Boss.Boss3|misc/bosses|Unit|Boss|||0|2|30|1|1||CALIBERO 2.0|Forcefield At the start of your turn, equip a random artifact.|Cards.Artifact.IndomitableWill,Cards.Artifact.Spinecleaver,Cards.BossSpell.RestoringLight|Cards.BossSpell.RestoringLight
+200003|Cards.Boss.Boss3|misc/bosses|Unit|Boss|||0|2|30|1|1||CALIBERO 2.0|Forcefield\nAt the start of your turn, equip a random artifact.|Cards.Artifact.IndomitableWill,Cards.Artifact.Spinecleaver,Cards.BossSpell.RestoringLight|Cards.BossSpell.RestoringLight
 200103|Cards.Boss.QABoss3|misc/bosses|Unit|Boss|||0|2|1|1|1||QA-IBERO||Cards.Artifact.IndomitableWill,Cards.Artifact.Spinecleaver|
-200004|Cards.Boss.Boss4|misc/bosses|Unit|Boss|||0|3|35|1|1||Cade the Desolator|Frenzy Whenever an enemy damages or takes damage from this, teleport that enemy to a random location.|Cards.BossSpell.EntanglingShadow|Cards.BossSpell.EntanglingShadow
+200004|Cards.Boss.Boss4|misc/bosses|Unit|Boss|||0|3|35|1|1||Cade the Desolator|Frenzy\nWhenever an enemy damages or takes damage from this, teleport that enemy to a random location.|Cards.BossSpell.EntanglingShadow|Cards.BossSpell.EntanglingShadow
 200005|Cards.Boss.Boss5|misc/bosses|Unit|Boss|||0|6|20|1|1||Shinkage Zendo|The enemy General moves and attacks as if they are a Battle Pet.|Cards.BossSpell.EntanglingShadow|Cards.BossSpell.EntanglingShadow
-200006|Cards.Boss.Boss6|misc/bosses|Unit|Boss|||0|2|1|1|1||D3C|Provoke Cannot be damaged while other D3cepticle parts live.|Cards.Boss.Boss6Chassis,Cards.Boss.Boss6Helm,Cards.Boss.Boss6Prime,Cards.Boss.Boss6Sword,Cards.Boss.Boss6Wings,Cards.BossSpell.AncientKnowledge|Cards.BossSpell.AncientKnowledge
+200006|Cards.Boss.Boss6|misc/bosses|Unit|Boss|||0|2|1|1|1||D3C|Provoke\nCannot be damaged while other D3cepticle parts live.|Cards.Boss.Boss6Chassis,Cards.Boss.Boss6Helm,Cards.Boss.Boss6Prime,Cards.Boss.Boss6Sword,Cards.Boss.Boss6Wings,Cards.BossSpell.AncientKnowledge|Cards.BossSpell.AncientKnowledge
 200106|Cards.Boss.Boss6Wings|misc/bosses|Unit|Boss|||0|2|3||1||Thrusters of D3cepticle|Flying||
 200206|Cards.Boss.Boss6Chassis|misc/bosses|Unit|Boss|||0|5|4||1||Core of D3cepticle|Forcefield||
 200306|Cards.Boss.Boss6Sword|misc/bosses|Unit|Boss|||0|4|2||1||Blade of D3cepticle|Backstab: (2)||
@@ -642,55 +642,55 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 200007|Cards.Boss.Boss7|misc/bosses|Unit|Boss|||0|2|20|1|1||CALIBERO|At the start of your second turn and every turn thereafter, equip a random artifact.|Cards.Artifact.ArclyteRegalia,Cards.Artifact.StaffOfYKir,Cards.Artifact.SunstoneBracers,Cards.BossSpell.RestoringLight|Cards.BossSpell.RestoringLight
 240001|Cards.BossArtifact.CycloneGenerator|misc/bosses|Artifact|Boss||epic|0||||1||Cyclone Generator|Your General gains Celerity.|Cards.BossArtifact.DanceOfSteel|
 200008|Cards.Boss.Boss8|misc/bosses|Unit|Boss|||0|2|15|1|1||Monolith Guardian|Whenever Monolith Guardian destroys an enemy, it assimilates them.|Cards.BossSpell.EtherealWind|Cards.BossSpell.EtherealWind
-200009|Cards.Boss.Boss9|misc/bosses|Unit|Boss|||0|3|30|1|1||Wu'jin the Trickster|Flying. Whenever this attacks or is attacked, summon a decoy nearby. At the end of turn, teleport to a random corner.|Cards.Boss.Boss9Clone,Cards.BossSpell.LivingFlame|Cards.BossSpell.LivingFlame
+200009|Cards.Boss.Boss9|misc/bosses|Unit|Boss|||0|3|30|1|1||Wu'jin the Trickster|Flying.\nWhenever this attacks or is attacked, summon a decoy nearby. At the end of turn, teleport to a random corner.|Cards.Boss.Boss9Clone,Cards.BossSpell.LivingFlame|Cards.BossSpell.LivingFlame
 200109|Cards.Boss.Boss9Clone|misc/bosses|Unit|Boss|||0|1|5||1||Decoy|||
 200010|Cards.Boss.Boss10|misc/bosses|Unit|Boss|||0|3|35|1|1||Solfist|Whenever Solfist destroys a minion, reactivate it. At the end of Solfist's turn, deal increasing damage to himself and all nearby enemies.|Cards.BossSpell.LivingFlame|Cards.BossSpell.LivingFlame
-200011|Cards.Boss.Boss11|misc/bosses|Unit|Boss|Golem||0|3|60|1|1||Automaton 8|Ranged. Attacks hit the target and all enemies around that target. Take damage equal to the total damage dealt|Cards.BossSpell.RestoringLight|Cards.BossSpell.RestoringLight
+200011|Cards.Boss.Boss11|misc/bosses|Unit|Boss|Golem||0|3|60|1|1||Automaton 8|Ranged.\nAttacks hit the target and all enemies around that target. Take damage equal to the total damage dealt|Cards.BossSpell.RestoringLight|Cards.BossSpell.RestoringLight
 200012|Cards.Boss.Boss12|misc/bosses|Unit|Boss|||0|0|35|1|1||Orias the Heretic|Whenever Orias damages an enemy, he gains +1 Attack.|Cards.BossSpell.MoldingEarth|Cards.BossSpell.MoldingEarth
 200112|Cards.Boss.Boss12Idol|misc/bosses|Unit|Boss|Structure||0|0|6||1||Idol of Invigoration|ANY minion summoned nearby this minion gains Rush.||
-200013|Cards.Boss.Boss13|misc/bosses|Unit|Boss|||0|2|30|1|1||Malyk|Ranged. Whenever your opponent summons a minion, they draw a card. Whenever your opponent overdraws, summon a 3/3 Ooz|Cards.BossSpell.EntanglingShadow,Cards.Faction4.Ooz|Cards.BossSpell.EntanglingShadow
+200013|Cards.Boss.Boss13|misc/bosses|Unit|Boss|||0|2|30|1|1||Malyk|Ranged.\nWhenever your opponent summons a minion, they draw a card. Whenever your opponent overdraws, summon a 3/3 Ooz|Cards.BossSpell.EntanglingShadow,Cards.Faction4.Ooz|Cards.BossSpell.EntanglingShadow
 200014|Cards.Boss.Boss14|misc/bosses|Unit|Boss|||0|6|60|1|1||Archonis|At the end of each turn, deal damage to the player equal to their remaining mana.|Cards.BossSpell.LaceratingFrost|Cards.BossSpell.LaceratingFrost
 200015|Cards.Boss.Boss15|misc/bosses|Unit|Boss|||0|3|30|1|1||Paragon of Light|Gains new keyword abilities as health decreases.|Cards.BossSpell.RestoringLight|Cards.BossSpell.RestoringLight
-200016|Cards.Boss.Boss16|misc/bosses|Unit|Boss|||0|2|30|1|1||Scion of the Void|Flying. Deals double damage on counter attacks. Whenever this deals damage, restore that much Health to it.|Cards.BossSpell.EntanglingShadow|Cards.BossSpell.EntanglingShadow
-200017|Cards.Boss.Boss17|misc/bosses|Unit|Boss|||0|2|30|1|1||High Templar Kron|Whenever an enemy minion dies, summon a prisoner on their space. Kron's spells cost 2 less to cast.|Cards.BossSpell.RestoringLight|Cards.BossSpell.RestoringLight
+200016|Cards.Boss.Boss16|misc/bosses|Unit|Boss|||0|2|30|1|1||Scion of the Void|Flying.\nDeals double damage on counter attacks. Whenever this deals damage, restore that much Health to it.|Cards.BossSpell.EntanglingShadow|Cards.BossSpell.EntanglingShadow
+200017|Cards.Boss.Boss17|misc/bosses|Unit|Boss|||0|2|30|1|1||High Templar Kron|Whenever an enemy minion dies, summon a prisoner on their space.\nKron's spells cost 2 less to cast.|Cards.BossSpell.RestoringLight|Cards.BossSpell.RestoringLight
 200018|Cards.Boss.Boss18|misc/bosses|Unit|Boss|||0|4|40|1|1||Megapenti|Minions summoned from Megapenti's action bar gain Rebirth: Serpenti.|Cards.BossSpell.AncientKnowledge,Cards.Neutral.Serpenti|Cards.BossSpell.AncientKnowledge
 200019|Cards.Boss.Boss19|misc/bosses|Unit|Boss|||0|1|40|1|1||Rin the Shadowsworn|Rin's minions have Grow +1/+1. Whenever Rin takes damage, summon that many wraithlings.|Cards.BossSpell.EntanglingShadow|Cards.BossSpell.EntanglingShadow
-200020|Cards.Boss.Boss20|misc/bosses|Unit|Boss|||0|2|35|1|1||Skyfall Tyrant|Ranged. Can't move. At the start of your turn, equip a Frost Armor artifact.|Cards.BossArtifact.FrostArmor,Cards.BossSpell.LaceratingFrost|Cards.BossSpell.LaceratingFrost
+200020|Cards.Boss.Boss20|misc/bosses|Unit|Boss|||0|2|35|1|1||Skyfall Tyrant|Ranged.\nCan't move.\nAt the start of your turn, equip a Frost Armor artifact.|Cards.BossArtifact.FrostArmor,Cards.BossSpell.LaceratingFrost|Cards.BossSpell.LaceratingFrost
 240002|Cards.BossArtifact.FrostArmor|misc/bosses|Artifact|Boss||epic|0||||1||Frost Armor|The first time your General takes damage each turn, prevent 1 of it. Enemies who damage your General take 1 damage.||
-200021|Cards.Boss.Boss21|misc/bosses|Unit|Boss|||0|2|35|1|1||Cindera|Frenzy. Your minions have "Dying Wish: Deal 2 damage to all nearby enemies." At the start of your turn, teleport to a random location.|Cards.BossSpell.LivingFlame|Cards.BossSpell.LivingFlame
-200022|Cards.Boss.Boss22|misc/bosses|Unit|Boss|||0|3|30|1|1||Crystalline Champion|Forcefield All minions summoned from the action bar gain +2 Attack, but -2 Health.|Cards.BossSpell.RestoringLight|Cards.BossSpell.RestoringLight
-200023|Cards.Boss.Boss23|misc/bosses|Unit|Boss|||0|1|30|1|1||Xel|At the start of your turn, damage the enemy General equal to the amount of minions they own. Deathwatch: Restore 1 health and deal 1 damage to the enemy General|Cards.BossSpell.EntanglingShadow|Cards.BossSpell.EntanglingShadow
-200024|Cards.Boss.Boss24|misc/bosses|Unit|Boss|||0|1|25|1|1||Skurge|Ranged At the start of your turn, take 3 damage but gain +1 Attack.|Cards.Boss.Boss24Valiant,Cards.BossSpell.EtherealWind|Cards.BossSpell.EtherealWind
-200124|Cards.Boss.Boss24Valiant|misc/bosses|Unit|Boss|||0|4|15||1||Valiant|Provoke Ranged attackers must attack this minion first. Can move 2 additional spaces.||
+200021|Cards.Boss.Boss21|misc/bosses|Unit|Boss|||0|2|35|1|1||Cindera|Frenzy.\nYour minions have "Dying Wish: Deal 2 damage to all nearby enemies." At the start of your turn, teleport to a random location.|Cards.BossSpell.LivingFlame|Cards.BossSpell.LivingFlame
+200022|Cards.Boss.Boss22|misc/bosses|Unit|Boss|||0|3|30|1|1||Crystalline Champion|Forcefield\nAll minions summoned from the action bar gain +2 Attack, but -2 Health.|Cards.BossSpell.RestoringLight|Cards.BossSpell.RestoringLight
+200023|Cards.Boss.Boss23|misc/bosses|Unit|Boss|||0|1|30|1|1||Xel|At the start of your turn, damage the enemy General equal to the amount of minions they own.\nDeathwatch: Restore 1 health and deal 1 damage to the enemy General|Cards.BossSpell.EntanglingShadow|Cards.BossSpell.EntanglingShadow
+200024|Cards.Boss.Boss24|misc/bosses|Unit|Boss|||0|1|25|1|1||Skurge|Ranged\nAt the start of your turn, take 3 damage but gain +1 Attack.|Cards.Boss.Boss24Valiant,Cards.BossSpell.EtherealWind|Cards.BossSpell.EtherealWind
+200124|Cards.Boss.Boss24Valiant|misc/bosses|Unit|Boss|||0|4|15||1||Valiant|Provoke\nRanged attackers must attack this minion first.\nCan move 2 additional spaces.||
 200025|Cards.Boss.Boss25|misc/bosses|Unit|Boss|||0|3|30|1|1||Shadow Lord|Whenever an enemy minion is moved for any reason, summon a Kaido Asasssin behind them. Whenever a friendly minion is moved for any reason, give it +1/+1.|Cards.BossSpell.LivingFlame,Cards.Faction2.KaidoAssassin|Cards.BossSpell.LivingFlame
 200026|Cards.Boss.Boss26|misc/bosses|Unit|Boss|||0|2|40|1|1||Archmagus Vol|Attacks damage all enemy minions.|Cards.BossSpell.LivingFlame|Cards.BossSpell.LivingFlame
 200126|Cards.Boss.Boss26Companion|misc/bosses|Unit|Boss|||0|3|20||1||Darkspear Zane|Zane has a mind of his own. Deals double damage to Vol. Zane dies if his attack exceeds 6. Your general dies if Zane dies.||
-200027|Cards.Boss.Boss27|misc/bosses|Unit|Boss|||0|3|35|1|1||Taskmaster Beatrix|Cannot be targeted by spells. Generals cannot move. All minions summoned act like Battle Pets.|Cards.BossSpell.AncientKnowledge|Cards.BossSpell.AncientKnowledge
+200027|Cards.Boss.Boss27|misc/bosses|Unit|Boss|||0|3|35|1|1||Taskmaster Beatrix|Cannot be targeted by spells.\nGenerals cannot move.\nAll minions summoned act like Battle Pets.|Cards.BossSpell.AncientKnowledge|Cards.BossSpell.AncientKnowledge
 200028|Cards.Boss.Boss28|misc/bosses|Unit|Boss|||0|3|30|1|1||Grym the Vengeful|Whenever a friendly minion dies, deal 3 damage to a random minion and restore 3 health.|Cards.BossSpell.MoldingEarth|Cards.BossSpell.MoldingEarth
 200029|Cards.Boss.Boss29|misc/bosses|Unit|Boss|||0|2|40|1|1||Nahlgol|At the start of your turn spawn an Exhuming Sand tile randomly on the board.|Cards.BossSpell.EtherealWind,Cards.Tile.SandPortal|Cards.BossSpell.EtherealWind
-200030|Cards.Boss.Boss30|misc/bosses|Unit|Boss|||0|2|40|1|1||Wolfpunch|Celerity Has +4 attack on opponent's turn. At the start of your turn, spawn a Fox Ravager.|Cards.BossSpell.LaceratingFrost,Cards.Faction6.WolfAspect|Cards.BossSpell.LaceratingFrost
+200030|Cards.Boss.Boss30|misc/bosses|Unit|Boss|||0|2|40|1|1||Wolfpunch|Celerity\nHas +4 attack on opponent's turn. At the start of your turn, spawn a Fox Ravager.|Cards.BossSpell.LaceratingFrost,Cards.Faction6.WolfAspect|Cards.BossSpell.LaceratingFrost
 200031|Cards.Boss.Boss31|misc/bosses|Unit|Boss|||0|2|50|1|1||Unhallowed|Whenever this takes damage, spawn a random Haunt nearby.|Cards.BossSpell.EntanglingShadow|Cards.BossSpell.EntanglingShadow
-200131|Cards.Boss.Boss31Treat1|misc/bosses|Unit|Boss||rare|3|3|2||1||Candy Panda|Sentinel: General attacks. Treat! Restore 5 health to the attacking General and draw a card. Cannot attack Generals.|Cards.Faction2.SonghaiSentinel|
-200231|Cards.Boss.Boss31Treat2|misc/bosses|Unit|Boss||rare|3|3|2||1||Candy Panda|Sentinel: Minion summoned. Treat! Give the minion that transformed this +2/+2 and draw a card. Cannot attack Generals.|Cards.Faction4.AbyssSentinel|
-200331|Cards.Boss.Boss31Treat3|misc/bosses|Unit|Boss||rare|3|3|2||1||Candy Panda|Sentinel: Spell cast. Treat! Refund the mana for the spell that was cast and draw a card. Cannot attack Generals.|Cards.Faction6.VanarSentinel|
-200431|Cards.Boss.Boss31Haunt1|misc/bosses|Unit|Boss||rare|3|3|2||1||Corporeal Haunt|The enemy General's minions cost 1 more to play. Dying Wish: Draw 2 cards||
-200531|Cards.Boss.Boss31Haunt2|misc/bosses|Unit|Boss||rare|3|3|2||1||Enchanted Haunt|The enemy General's non-Bloodbound spells cost 1 more to cast. Dying Wish: Draw 2 cards||
-200631|Cards.Boss.Boss31Haunt3|misc/bosses|Unit|Boss||rare|3|3|2||1||Material Haunt|The enemy General's artifacts cost 1 more to play. Dying Wish: Draw 2 cards||
+200131|Cards.Boss.Boss31Treat1|misc/bosses|Unit|Boss||rare|3|3|2||1||Candy Panda|Sentinel: General attacks.\nTreat! Restore 5 health to the attacking General and draw a card.\nCannot attack Generals.|Cards.Faction2.SonghaiSentinel|
+200231|Cards.Boss.Boss31Treat2|misc/bosses|Unit|Boss||rare|3|3|2||1||Candy Panda|Sentinel: Minion summoned.\nTreat! Give the minion that transformed this +2/+2 and draw a card.\nCannot attack Generals.|Cards.Faction4.AbyssSentinel|
+200331|Cards.Boss.Boss31Treat3|misc/bosses|Unit|Boss||rare|3|3|2||1||Candy Panda|Sentinel: Spell cast.\nTreat! Refund the mana for the spell that was cast and draw a card.\nCannot attack Generals.|Cards.Faction6.VanarSentinel|
+200431|Cards.Boss.Boss31Haunt1|misc/bosses|Unit|Boss||rare|3|3|2||1||Corporeal Haunt|The enemy General's minions cost 1 more to play.\nDying Wish: Draw 2 cards||
+200531|Cards.Boss.Boss31Haunt2|misc/bosses|Unit|Boss||rare|3|3|2||1||Enchanted Haunt|The enemy General's non-Bloodbound spells cost 1 more to cast.\nDying Wish: Draw 2 cards||
+200631|Cards.Boss.Boss31Haunt3|misc/bosses|Unit|Boss||rare|3|3|2||1||Material Haunt|The enemy General's artifacts cost 1 more to play.\nDying Wish: Draw 2 cards||
 200032|Cards.Boss.Boss32|misc/bosses|Unit|Boss|||0|4|50|1|1||Santaur the Terrible|At the start of Santaur's turn, spawn a Frostfire Elf nearby|Cards.Boss.Boss32_2,Cards.BossSpell.HolidayGift,Cards.BossSpell.LaceratingFrost|Cards.BossSpell.LaceratingFrost
-200232|Cards.Boss.Boss32_2|misc/bosses|Unit|Boss|||0|2|3||1||Frostfire Elf|Celerity Dying Wish: Give the player a Holiday Gift|Cards.BossSpell.HolidayGift|
+200232|Cards.Boss.Boss32_2|misc/bosses|Unit|Boss|||0|2|3||1||Frostfire Elf|Celerity\nDying Wish: Give the player a Holiday Gift|Cards.BossSpell.HolidayGift|
 240003|Cards.BossArtifact.FlyingBells|misc/bosses|Artifact|Boss||epic|0||||1||Jingle Bells|Your General gains Flying.||
 240004|Cards.BossArtifact.Coal|misc/bosses|Artifact|Boss||epic|0||||1||Lump of Coal|Your Bloodbound Spell cannot be cast.||
 240005|Cards.BossArtifact.CostReducer|misc/bosses|Artifact|Boss||epic|0||||1||Mistletoe|Cards in your hand cost 1 less to play.||
 250001|Cards.BossSpell.HolidayGift|misc/bosses|SpellEquipBossArtifacts|Boss||legendary|1||||1||Holiday Gift|Equip a random present.|Cards.Spell.HolidayGift|
 240006|Cards.BossArtifact.Snowball|misc/bosses|Artifact|Boss||epic|0||||1||Snowball|Your General gains Ranged and -1 Attack.||
-200033|Cards.Boss.Boss33|misc/bosses|Unit|Boss|||0|2|8|1|1||Legion|All Legion restore 3 health at the end of turn. All killed Legion respawn in a corner at the start of turn.|Cards.Boss.Boss33_1,Cards.Boss.Boss33_2,Cards.Boss.Boss33_3,Cards.Boss.Boss33_4,Cards.BossSpell.EtherealWind|Cards.BossSpell.EtherealWind
-200133|Cards.Boss.Boss33_1|misc/bosses|Unit|Boss|||0|2|8||1||Legion|All Legion restore 3 health at the end of turn. All killed Legion respawn in a corner at the start of turn.|Cards.Boss.Boss33,Cards.Boss.Boss33_2,Cards.Boss.Boss33_3,Cards.Boss.Boss33_4|
-200233|Cards.Boss.Boss33_2|misc/bosses|Unit|Boss|||0|2|8||1||Legion|All Legion gain +2 Attack. All killed Legion respawn in a corner at the start of turn.|Cards.Boss.Boss33,Cards.Boss.Boss33_1,Cards.Boss.Boss33_3,Cards.Boss.Boss33_4|
-200333|Cards.Boss.Boss33_3|misc/bosses|Unit|Boss|||0|2|8||1||Legion|All Legion can move 2 extra spaces. All killed Legion respawn in a corner at the start of turn.|Cards.Boss.Boss33,Cards.Boss.Boss33_1,Cards.Boss.Boss33_2,Cards.Boss.Boss33_4|
-200433|Cards.Boss.Boss33_4|misc/bosses|Unit|Boss|||0|2|8||1||Legion|All Legion cannot be targeted by spells. All killed Legion respawn in a corner at the start of turn.|Cards.Boss.Boss33,Cards.Boss.Boss33_1,Cards.Boss.Boss33_2,Cards.Boss.Boss33_3|
+200033|Cards.Boss.Boss33|misc/bosses|Unit|Boss|||0|2|8|1|1||Legion|All Legion restore 3 health at the end of turn.\nAll killed Legion respawn in a corner at the start of turn.|Cards.Boss.Boss33_1,Cards.Boss.Boss33_2,Cards.Boss.Boss33_3,Cards.Boss.Boss33_4,Cards.BossSpell.EtherealWind|Cards.BossSpell.EtherealWind
+200133|Cards.Boss.Boss33_1|misc/bosses|Unit|Boss|||0|2|8||1||Legion|All Legion restore 3 health at the end of turn.\nAll killed Legion respawn in a corner at the start of turn.|Cards.Boss.Boss33,Cards.Boss.Boss33_2,Cards.Boss.Boss33_3,Cards.Boss.Boss33_4|
+200233|Cards.Boss.Boss33_2|misc/bosses|Unit|Boss|||0|2|8||1||Legion|All Legion gain +2 Attack.\nAll killed Legion respawn in a corner at the start of turn.|Cards.Boss.Boss33,Cards.Boss.Boss33_1,Cards.Boss.Boss33_3,Cards.Boss.Boss33_4|
+200333|Cards.Boss.Boss33_3|misc/bosses|Unit|Boss|||0|2|8||1||Legion|All Legion can move 2 extra spaces.\nAll killed Legion respawn in a corner at the start of turn.|Cards.Boss.Boss33,Cards.Boss.Boss33_1,Cards.Boss.Boss33_2,Cards.Boss.Boss33_4|
+200433|Cards.Boss.Boss33_4|misc/bosses|Unit|Boss|||0|2|8||1||Legion|All Legion cannot be targeted by spells.\nAll killed Legion respawn in a corner at the start of turn.|Cards.Boss.Boss33,Cards.Boss.Boss33_1,Cards.Boss.Boss33_2,Cards.Boss.Boss33_3|
 200034|Cards.Boss.Boss34|misc/bosses|Unit|Boss|||0|3|25|1|1||Harmony|All minions cost 0 mana.|Cards.Boss.Boss34_2,Cards.BossSpell.AncientKnowledge|Cards.BossSpell.AncientKnowledge
-200234|Cards.Boss.Boss34_2|misc/bosses|Unit|Boss|||0|3|25||1||Dissonance|Frenzy When Dissonance is spawned all minions switch allegiances and Dissonance gains +3/+3 for each of its minions that switched sides.||
-200035|Cards.Boss.Boss35|misc/bosses|Unit|Boss|||0|3|42|1|1||Andromeda|Flying Whenever the enemy General plays a minion, transform it into a random minion with the same mana cost.|Cards.BossSpell.MoldingEarth|Cards.BossSpell.MoldingEarth
+200234|Cards.Boss.Boss34_2|misc/bosses|Unit|Boss|||0|3|25||1||Dissonance|Frenzy\nWhen Dissonance is spawned all minions switch allegiances and Dissonance gains +3/+3 for each of its minions that switched sides.||
+200035|Cards.Boss.Boss35|misc/bosses|Unit|Boss|||0|3|42|1|1||Andromeda|Flying\nWhenever the enemy General plays a minion, transform it into a random minion with the same mana cost.|Cards.BossSpell.MoldingEarth|Cards.BossSpell.MoldingEarth
 200036|Cards.Boss.Boss36|misc/bosses|Unit|Boss|||0|3|80|1|1||The Invader|At the start of your turn, deal 6 damage to a random minion or General.|Cards.BossSpell.MoldingEarth|Cards.BossSpell.MoldingEarth
 200236|Cards.Boss.Boss36_2|misc/bosses|Unit|Boss|||0|1|50||1||Protector|Whenever an enemy minion dies, this gains attack equal to that minion's attack.||
 200336|Cards.Boss.Boss36_3|misc/bosses|Unit|Boss|Structure||0|0|3||1||Kaero Tower|When this dies, The Invader gains +2/+6||
@@ -784,23 +784,23 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 120013|Cards.TutorialSpell.TutorialPlayerTrueStrike|misc/tutorial|SpellDamage|Tutorial||fixed|1||||||True Strike|Deal 2 damage to a minion.||
 130002|Cards.TutorialArtifact.TutorialSunstoneBracers|misc/tutorial|Artifact|Tutorial||fixed|0||||||Sunstone Bracers|Your General gains +1 Attack.||
 11045|Cards.Neutral.RubyRifter|monthly/m10_general_damage|Unit|Neutral||legendary|6|4|6|||1|Ruby Rifter|Whenever your General takes damage, draw a card and give this minion +2 Attack.||
-11044|Cards.Neutral.BloodTaura|monthly/m10_general_damage|Unit|Neutral||epic|25|12|12||||Blood Taura|Provoke This minion's cost is your General's health.||
+11044|Cards.Neutral.BloodTaura|monthly/m10_general_damage|Unit|Neutral||epic|25|12|12||||Blood Taura|Provoke\nThis minion's cost is your General's health.||
 11043|Cards.Neutral.BlisteringSkorn|monthly/m10_general_damage|Unit|Neutral||common|4|4|5|||1|Blistering Skorn|Opening Gambit: Deal 1 damage to everything (including itself).||
 11042|Cards.Neutral.Chakkram|monthly/m10_general_damage|Unit|Neutral||rare|5|5|5|||1|Chakkram|This minion costs 2 less if your General took damage on opponent's last turn.||
-11075|Cards.Neutral.WoodWen|monthly/m11_penny_arcade|Unit|Neutral||common|2|2|2||||Wood-Wen|Provoke Opening Gambit: Give a nearby friendly minion Provoke.|Cards.Spell.ApplyModifiers|
+11075|Cards.Neutral.WoodWen|monthly/m11_penny_arcade|Unit|Neutral||common|2|2|2||||Wood-Wen|Provoke\nOpening Gambit: Give a nearby friendly minion Provoke.|Cards.Spell.ApplyModifiers|
 11076|Cards.Neutral.Elkowl|monthly/m11_penny_arcade|Unit|Neutral||rare|3|2|3||||Elkowl|Opening Gambit: Gain two random keywords.||
 11077|Cards.Neutral.GroveLion|monthly/m11_penny_arcade|Unit|Neutral||epic|6|5|5||||Grove Lion|While this minion is on the battlefield, your General has Forcefield.||
 11078|Cards.Neutral.Sphynx|monthly/m11_penny_arcade|Unit|Neutral||legendary|4|5|4||||Sphynx|Opening Gambit: Put a Riddle in your opponent's action bar.|Cards.Spell.Riddle|
 20224|Cards.Spell.Riddle|monthly/m11_penny_arcade|SpellRiddle|Neutral|||2||||1||Riddle|While you have the Riddle, you cannot replace. Cast to give your opponent a Riddle.||
 11079|Cards.Neutral.DayWatcher|monthly/m12_october_monthlies|Unit|Neutral||common|3|3|3|||1|Day Watcher|Whenever a friendly minion attacks, restore 1 Health to your General.||
-11080|Cards.Neutral.NightWatcher|monthly/m12_october_monthlies|Unit|Neutral||epic|4|2|4|||1|Night Watcher|Forcefield Whenever ANY player summons a minion with Rush, exhaust it.||
+11080|Cards.Neutral.NightWatcher|monthly/m12_october_monthlies|Unit|Neutral||epic|4|2|4|||1|Night Watcher|Forcefield\nWhenever ANY player summons a minion with Rush, exhaust it.||
 11081|Cards.Neutral.QuartermasterGauj|monthly/m12_october_monthlies|Unit|Neutral||legendary|6|5|2||||Quartermaster Gauj|Takes no damage from minions or Generals.||
-11082|Cards.Neutral.DustWailer|monthly/m12_october_monthlies|Unit|Neutral||rare|6|3|4||||Dust Wailer|Flying Opening Gambit: Deal 3 damage to all enemies in front of this minion.||
+11082|Cards.Neutral.DustWailer|monthly/m12_october_monthlies|Unit|Neutral||rare|6|3|4||||Dust Wailer|Flying\nOpening Gambit: Deal 3 damage to all enemies in front of this minion.||
 11083|Cards.Neutral.Zyx|monthly/m13_november_monthlies|Unit|Neutral||rare|2|1|2||||Zyx|Opening Gambit: Summon a copy of this minion on a random nearby space.||
 11084|Cards.Neutral.AzureHerald|monthly/m13_november_monthlies|Unit|Neutral||common|2|1|4||||Azure Herald|Opening Gambit: Restore 3 Health to your General.||
 11085|Cards.Neutral.Ironclad|monthly/m13_november_monthlies|Unit|Neutral||epic|5|4|3||||Ironclad|Dying Wish: Dispel all enemy minions.||
 11086|Cards.Neutral.Decimus|monthly/m13_november_monthlies|Unit|Neutral||legendary|4|4|4||||Decimus|Whenever your opponent draws a card, deal 2 damage to the enemy General.||
-11006|Cards.Neutral.BlackLocust|monthly/m1_movement|Unit|Neutral||legendary|4|2|2||||Black Locust|Flying After this minion moves, summon a Black Locust nearby.||
+11006|Cards.Neutral.BlackLocust|monthly/m1_movement|Unit|Neutral||legendary|4|2|2||||Black Locust|Flying\nAfter this minion moves, summon a Black Locust nearby.||
 11007|Cards.Neutral.WindRunner|monthly/m1_movement|Unit|Neutral||rare|3|3|3|||1|Wind Runner|After this minion moves, give all friendly minions around it +1/+1.||
 11008|Cards.Neutral.Mogwai|monthly/m1_movement|Unit|Neutral||epic|3|2|3|||1|Mogwai|After this moves, draw a card.||
 11009|Cards.Neutral.GhostLynx|monthly/m1_movement|Unit|Neutral||common|2|2|1||||Ghost Lynx|Opening Gambit: Teleport a nearby minion to a random space.|Cards.Spell.FollowupRandomTeleport|
@@ -814,20 +814,20 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 11017|Cards.Neutral.ArakiHeadhunter|monthly/m3_opening_gambit_buff|Unit|Neutral||epic|2|1|3||||Araki Headhunter|Whenever you summon a minion with Opening Gambit from your action bar, gain +2 Attack.||
 11018|Cards.Neutral.KeeperOfTheVale|monthly/m3_opening_gambit_buff|Unit|Neutral||legendary|5|3|4||||Keeper of the Vale|Opening Gambit: Summon a random friendly minion destroyed this game nearby this minion.|Cards.Spell.FollowupKeeper|
 11019|Cards.Neutral.WhiteWidow|monthly/m4_replace|Unit|Neutral||rare|4|3|4||||White Widow|Whenever you replace a card, deal 2 damage to a random enemy.||
-11020|Cards.Neutral.WingsOfParadise|monthly/m4_replace|Unit|Neutral||common|3|3|3||||Wings of Paradise|Flying Whenever you replace a card, this minion gains +2 Attack this turn.||
+11020|Cards.Neutral.WingsOfParadise|monthly/m4_replace|Unit|Neutral||common|3|3|3||||Wings of Paradise|Flying\nWhenever you replace a card, this minion gains +2 Attack this turn.||
 11021|Cards.Neutral.AstralCrusader|monthly/m4_replace|Unit|Neutral||legendary|7|7|6|||1|Astral Crusader|Whenever you replace this card, it costs 3 less and gains +3/+3.||
 11022|Cards.Neutral.Dreamgazer|monthly/m4_replace|Unit|Neutral||epic|1|1|1||||Dreamgazer|When you replace this card, summon it on a random nearby space. Your General takes 2 damage.||
-11023|Cards.Neutral.Bonereaper|monthly/m5_provoke|Unit|Neutral||epic|6|2|9||||Bonereaper|Provoke At the end of your turn, deal 2 damage to each enemy minion around this one.||
+11023|Cards.Neutral.Bonereaper|monthly/m5_provoke|Unit|Neutral||epic|6|2|9||||Bonereaper|Provoke\nAt the end of your turn, deal 2 damage to each enemy minion around this one.||
 11024|Cards.Neutral.HollowGrovekeeper|monthly/m5_provoke|Unit|Neutral||legendary|5|3|4||||Hollow Grovekeeper|Opening Gambit: Destroy ANY nearby minion with Provoke or Frenzy. If you do, this minion gains Provoke and Frenzy.|Cards.Spell.FollowupHollowGroveKeeper|
-11025|Cards.Neutral.Tethermancer|monthly/m5_provoke|Unit|Neutral||rare|4|1|6|||1|Tethermancer|Provoke Dispel any minion that deals damage to this one.||
-11026|Cards.Neutral.WarTalon|monthly/m5_provoke|Unit|Neutral||common|7|4|9||||War Talon|Frenzy Provoke||
+11025|Cards.Neutral.Tethermancer|monthly/m5_provoke|Unit|Neutral||rare|4|1|6|||1|Tethermancer|Provoke\nDispel any minion that deals damage to this one.||
+11026|Cards.Neutral.WarTalon|monthly/m5_provoke|Unit|Neutral||common|7|4|9||||War Talon|Frenzy\nProvoke||
 11027|Cards.Neutral.SapphireSeer|monthly/m6_forcefield|Unit|Neutral||common|3|2|2||||Sapphire Seer|Forcefield||
 11028|Cards.Neutral.SunsteelDefender|monthly/m6_forcefield|Unit|Neutral||rare|4|3|3|||1|Sunsteel Defender|Forcefield||
-11029|Cards.Neutral.EXun|monthly/m6_forcefield|Unit|Neutral||legendary|7|5|5|||1|E'Xun|Forcefield Whenever this minion attacks or is attacked, draw a card.||
+11029|Cards.Neutral.EXun|monthly/m6_forcefield|Unit|Neutral||legendary|7|5|5|||1|E'Xun|Forcefield\nWhenever this minion attacks or is attacked, draw a card.||
 11030|Cards.Neutral.SunsetParagon|monthly/m6_forcefield|Unit|Neutral||epic|5|3|2||||Sunset Paragon|Opening Gambit: ALL nearby minions deal damage to themselves equal to their Attack.||
-11033|Cards.Neutral.ArrowWhistler|monthly/m7_warmasters|Unit|Neutral||common|4|2|4|||1|Arrow Whistler|Ranged Your other minions with Ranged get +1 Attack.||
-11034|Cards.Neutral.GoldenJusticar|monthly/m7_warmasters|Unit|Neutral||epic|5|4|6||||Golden Justicar|Provoke Your other minions with Provoke can move two additional spaces.||
-11035|Cards.Neutral.Skywing|monthly/m7_warmasters|Unit|Neutral||rare|3|3|3||||Skywing|Flying Your other minions with Flying cost 1 less.||
+11033|Cards.Neutral.ArrowWhistler|monthly/m7_warmasters|Unit|Neutral||common|4|2|4|||1|Arrow Whistler|Ranged\nYour other minions with Ranged get +1 Attack.||
+11034|Cards.Neutral.GoldenJusticar|monthly/m7_warmasters|Unit|Neutral||epic|5|4|6||||Golden Justicar|Provoke\nYour other minions with Provoke can move two additional spaces.||
+11035|Cards.Neutral.Skywing|monthly/m7_warmasters|Unit|Neutral||rare|3|3|3||||Skywing|Flying\nYour other minions with Flying cost 1 less.||
 11036|Cards.Neutral.Unseven|monthly/m7_warmasters|Unit|Neutral||legendary|4|2|4||||Unseven|Dying Wish: Summon a minion with Dying Wish from your action bar.||
 11037|Cards.Neutral.DiamondGolem|monthly/m8_rexx|Unit|Neutral|Golem|common|6|5|11||||Diamond Golem|||
 11038|Cards.Neutral.Bastion|monthly/m8_rexx|Unit|Neutral|Structure|epic|3|0|5||||Bastion|At the end of your turn, give all friendly minions +1 health.||
@@ -860,7 +860,7 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 125|Cards.Faction2.Xho|shimzar/faction2|Unit|Songhai Empire|BattlePet|rare|2|2|3||||Xho|Dying Wish: Put a random Songhai spell into your action bar. It costs 1 less.||
 126|Cards.Faction2.Ace|shimzar/faction2|Unit|Songhai Empire|BattlePet|common|1|1|2||||Ace|Ranged||
 127|Cards.Faction2.OnyxJaguar|shimzar/faction2|Unit|Songhai Empire||epic|5|3|3||||Onyx Jaguar|Whenever a friendly unit is moved for any reason, it gains +1/+1.||
-128|Cards.Faction2.KiBeholder|shimzar/faction2|Unit|Songhai Empire||rare|3|3|2||||Ki Beholder|Ranged Opening Gambit: An enemy minion cannot move next turn.|Cards.Spell.ApplyModifiers|
+128|Cards.Faction2.KiBeholder|shimzar/faction2|Unit|Songhai Empire||rare|3|3|2||||Ki Beholder|Ranged\nOpening Gambit: An enemy minion cannot move next turn.|Cards.Spell.ApplyModifiers|
 129|Cards.Faction2.Katara|shimzar/faction2|Unit|Songhai Empire||common|1|1|3||||Katara|Backstab: (1).||
 130|Cards.Faction2.BattlePanddo|shimzar/faction2|Unit|Songhai Empire||epic|3|2|4||||Battle Panddo|Whenever this minion takes damage, deal 1 damage to all enemies.||
 131|Cards.Faction2.GrandmasterZendo|shimzar/faction2|Unit|Songhai Empire||legendary|6|3|6||||Grandmaster Zendo|The enemy General moves and attacks automatically.||
@@ -875,7 +875,7 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 227|Cards.Faction3.Rae|shimzar/faction3|Unit|Vetruvian Imperium|BattlePet|common|0|1|1||||Rae|Dying Wish: Dispel the nearest enemy minion.||
 228|Cards.Faction3.Pax|shimzar/faction3|Unit|Vetruvian Imperium|BattlePet|rare|2|2|1||||Pax|Dying Wish: Summon two 2/2 Iron Dervishes nearby.|Cards.Faction3.IronDervish|
 229|Cards.Faction3.WindSlicer|shimzar/faction3|Unit|Vetruvian Imperium||rare|2|2|3||||Wind Slicer|Opening Gambit: Lower the cost of all Structure minions in your action bar by 1.||
-230|Cards.Faction3.SoulburnObelysk|shimzar/faction3|Unit|Vetruvian Imperium|Structure|tokenunit|3|0|4||1||Soulburn Obelysk|Summon Dervish Enemy minions that damage this are destroyed.||
+230|Cards.Faction3.SoulburnObelysk|shimzar/faction3|Unit|Vetruvian Imperium|Structure|tokenunit|3|0|4||1||Soulburn Obelysk|Summon Dervish\nEnemy minions that damage this are destroyed.||
 231|Cards.Faction3.Allomancer|shimzar/faction3|Unit|Vetruvian Imperium||epic|4|4|3||||Allomancer|Dying Wish: Summon a random Obelysk on this space.|Cards.Faction3.BrazierDuskWind,Cards.Faction3.BrazierGoldenFlame,Cards.Faction3.BrazierRedSand,Cards.Faction3.LavastormObelysk,Cards.Faction3.SimulacraObelysk,Cards.Faction3.SoulburnObelysk,Cards.Faction3.TrygonObelysk|
 232|Cards.Faction3.Nimbus|shimzar/faction3|Unit|Vetruvian Imperium||legendary|5|3|8||||Nimbus|Whenever this minion takes damage, summon a 0/4 Soulburn Obelysk nearby.|Cards.Faction3.SoulburnObelysk|
 234|Cards.Faction3.PlagueTotem|shimzar/faction3|Unit|Vetruvian Imperium|Structure|tokenunit|2|0|4||1||Bloodfire Totem|At end of turn, deal 1 damage to your General.||
@@ -890,7 +890,7 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 327|Cards.Faction4.Ooz|shimzar/faction4|Unit|Abyssian Host|BattlePet|rare|2|3|3||||Ooz|Whenever this minion takes damage, turn a space occupied by an enemy into Shadow Creep.||
 328|Cards.Faction4.BloodBaronette|shimzar/faction4|Unit|Abyssian Host||rare|3|3|3||||Blood Baronette|Opening Gambit: Double a nearby Wraithling's Attack and Health.|Cards.Faction4.Wraithling,Cards.Spell.DoubleAttackAndHealth|
 329|Cards.Faction4.ArcaneDevourer|shimzar/faction4|Unit|Abyssian Host||epic|7|8|4||||Arcane Devourer|Opening Gambit: The next minion you summon this turn costs 1.||
-330|Cards.Faction4.Klaxon|shimzar/faction4|Unit|Abyssian Host||legendary|6|6|6||||Klaxon|Provoke Dying Wish: Turn six random spaces into Shadow Creep.|Cards.Tile.Shadow|
+330|Cards.Faction4.Klaxon|shimzar/faction4|Unit|Abyssian Host||legendary|6|6|6||||Klaxon|Provoke\nDying Wish: Turn six random spaces into Shadow Creep.|Cards.Tile.Shadow|
 20199|Cards.Spell.LurkingFear|shimzar/faction4|SpellLurkingFear|Abyssian Host||epic|2||||||Lurking Fear|Lower the cost of all minions with Dying Wish in your action bar and deck by 1.||
 20200|Cards.Spell.InkhornGaze|shimzar/faction4|SpellAbyssalScar|Abyssian Host||common|2||||||Inkhorn Gaze|Deal 2 damage to a minion. If it dies this turn, put a random Battle Pet into your action bar.||
 20201|Cards.Spell.SphereOfDarkness|shimzar/faction4|SpellSpawnEntity|Abyssian Host||common|2||||||Sphere of Darkness|Turn an enemy minion's space into Shadow Creep. Draw a card.|Cards.Tile.Shadow|
@@ -902,8 +902,8 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 421|Cards.Faction5.Rex|shimzar/faction5|Unit|Magmar Aspects|BattlePet|common|1|3|1||||Rex|Rebirth||
 427|Cards.Faction5.Kin|shimzar/faction5|Unit|Magmar Aspects|BattlePet|tokenunit|3|3|3||1||Kin|||
 422|Cards.Faction5.WildInceptor|shimzar/faction5|Unit|Magmar Aspects||common|4|3|3||||Wild Inceptor|Opening Gambit: Hatch a friendly Egg.|Cards.Spell.HatchAnEgg|
-423|Cards.Faction5.MolokiHuntress|shimzar/faction5|Unit|Magmar Aspects||epic|3|1|2||||Moloki Huntress|Grow: +1/+1 Friendly minions grow at the start of BOTH player's turns.||
-424|Cards.Faction5.Dreadnaught|shimzar/faction5|Unit|Magmar Aspects||legendary|6|4|7||||Dreadnought|Rebirth Egg minions you summon gain +2/+2.|Cards.Faction5.Egg|
+423|Cards.Faction5.MolokiHuntress|shimzar/faction5|Unit|Magmar Aspects||epic|3|1|2||||Moloki Huntress|Grow: +1/+1\nFriendly minions grow at the start of BOTH player's turns.||
+424|Cards.Faction5.Dreadnaught|shimzar/faction5|Unit|Magmar Aspects||legendary|6|4|7||||Dreadnought|Rebirth\nEgg minions you summon gain +2/+2.|Cards.Faction5.Egg|
 425|Cards.Faction5.Mandrake|shimzar/faction5|Unit|Magmar Aspects||rare|12|6|6||||Mandrake|Costs 1 less for each minion summoned from ANY player's action bar this game.||
 426|Cards.Faction5.Visionar|shimzar/faction5|Unit|Magmar Aspects||epic|5|5|6||||Visionar|Whenever ANY player draws a card, this minion gains +1/+1.||
 20202|Cards.Spell.RazorSkin|shimzar/faction5|SpellRazorSkin|Magmar Aspects||common|1||||||Razor Skin|Give all friendly minions +1 Attack. Put a random Battle Pet into your action bar.||
@@ -917,7 +917,7 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 530|Cards.Faction6.Icy|shimzar/faction6|Unit|Vanar Kindred|BattlePet|common|2|2|3||||Icy|Opening Gambit: Stun a nearby enemy.|Cards.Spell.ApplyModifiers|
 531|Cards.Faction6.Bur|shimzar/faction6|Unit|Vanar Kindred|BattlePet|rare|2|3|3||||Bur|When this minion survives damage, transform it into a different Battle Pet.||
 532|Cards.Faction6.Huldra|shimzar/faction6|Unit|Vanar Kindred||rare|5|3|4||||Huldra|Opening Gambit: Give a friendly Vespyr minion Celerity.|Cards.Spell.ApplyModifiers|
-534|Cards.Faction6.Frostiva|shimzar/faction6|Unit|Vanar Kindred||legendary|5|3|3||||Frostiva|Forcefield Whenever this minion attacks or is attacked, summon a 3/3 Vespyr Night Howler nearby.|Cards.Faction6.ShadowVespyr|
+534|Cards.Faction6.Frostiva|shimzar/faction6|Unit|Vanar Kindred||legendary|5|3|3||||Frostiva|Forcefield\nWhenever this minion attacks or is attacked, summon a 3/3 Vespyr Night Howler nearby.|Cards.Faction6.ShadowVespyr|
 535|Cards.Faction6.ShadowVespyr|shimzar/faction6|Unit|Vanar Kindred|Vespyr|tokenunit|2|3|3||1||Night Howler|||
 20207|Cards.Spell.Frostburn|shimzar/faction6|SpellDamage|Vanar Kindred||rare|6||||||Frostburn|Deal 3 damage to all enemy minions.||
 20208|Cards.Spell.WailingOverdrive|shimzar/faction6|SpellWailingOverdrive|Vanar Kindred||common|4||||||Wailing Overdrive|Give a friendly minion on your opponent's starting side of the battlefield +5/+5.||
@@ -932,10 +932,10 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 11004|Cards.Neutral.Yun|shimzar/neutral|Unit|Neutral|BattlePet|common|3|5|4||||Yun|||
 11001|Cards.Neutral.Amu|shimzar/neutral|Unit|Neutral|BattlePet|common|2|3|3||||Amu|||
 11050|Cards.Neutral.Rok|shimzar/neutral|Unit|Neutral|BattlePet|tokenunit|1|4|4||1||Rok|Can't move.||
-11051|Cards.Neutral.Ion|shimzar/neutral|Unit|Neutral|BattlePet|rare|3|2|3||||Ion|Ranged Deals double damage to Generals.||
+11051|Cards.Neutral.Ion|shimzar/neutral|Unit|Neutral|BattlePet|rare|3|2|3||||Ion|Ranged\nDeals double damage to Generals.||
 11052|Cards.Neutral.Hydrax|shimzar/neutral|Unit|Neutral||legendary|3|3|4||||Hydrax|Whenever a friendly Battle Pet dies, draw a card.||
 11053|Cards.Neutral.Koi|shimzar/neutral|Unit|Neutral|BattlePet|common|1|3|1||||Koi|This minion takes no damage from Generals.||
-11054|Cards.Neutral.Beastmaster|shimzar/neutral|Unit|Neutral||rare|5|2|5||||Beastbound Savage|Frenzy Celerity||
+11054|Cards.Neutral.Beastmaster|shimzar/neutral|Unit|Neutral||rare|5|2|5||||Beastbound Savage|Frenzy\nCelerity||
 11055|Cards.Neutral.Silverbeak|shimzar/neutral|Unit|Neutral||common|6|6|9||||Silverbeak|||
 11056|Cards.Neutral.GoldenMantella|shimzar/neutral|Unit|Neutral||common|3|4|2||||Golden Mantella|Opening Gambit: Put a random Battle Pet into your action bar.||
 11057|Cards.Neutral.Gnasher|shimzar/neutral|Unit|Neutral||common|4|3|3||||Gnasher|Dying Wish: This minion deals 3 damage to all enemies around it.||
@@ -945,7 +945,7 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 11061|Cards.Neutral.Z0r|shimzar/neutral|Unit|Neutral|BattlePet|epic|2|2|1||||Z0r|Dying Wish: Put a random MECH minion into your action bar.||
 11003|Cards.Neutral.Sai|shimzar/neutral|Unit|Neutral|BattlePet|tokenunit|1|3|3||1||Sai|||
 11066|Cards.Neutral.Sol|shimzar/neutral|Unit|Neutral|BattlePet|rare|2|1|1||||Sol|Opening Gambit: Activate a friendly Battle Pet.|Cards.Spell.FollowupActivateBattlepet|
-11064|Cards.Neutral.InquisitorKron|shimzar/neutral|Unit|Neutral||legendary|5|4|5||||Inquisitor Kron|Provoke Whenever you replace a card, summon a 2/2 Prisoner with a random ability nearby.|Cards.Neutral.Prisoner1|
+11064|Cards.Neutral.InquisitorKron|shimzar/neutral|Unit|Neutral||legendary|5|4|5||||Inquisitor Kron|Provoke\nWhenever you replace a card, summon a 2/2 Prisoner with a random ability nearby.|Cards.Neutral.Prisoner1|
 11065|Cards.Neutral.Prisoner1|shimzar/neutral|Unit|Neutral||tokenunit|2|2|2||1||Dispirited Prisoner|Frenzy||
 11069|Cards.Neutral.Prisoner2|shimzar/neutral|Unit|Neutral||tokenunit|2|2|2||1||Broken Captive|Rush||
 11070|Cards.Neutral.Prisoner3|shimzar/neutral|Unit|Neutral||tokenunit|2|2|2||1||Ruined Slave|Provoke||
@@ -960,12 +960,12 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 30026|Cards.Artifact.GoldVitriol|unity/faction1|Artifact|Lyonar Kingdoms||rare|2||||||Gold Vitriol|Whenever anything is healed, deal 2 damage to a random enemy.||
 135|Cards.Faction2.Sparrowhawk|unity/faction2|Unit|Songhai Empire|Arcanyst|common|3|3|3||||Sparrowhawk|Bond: Put a Mist Dragon Seal into your action bar.|Cards.Spell.MistDragonSeal|
 136|Cards.Faction2.Kindling|unity/faction2|Unit|Songhai Empire|Arcanyst|epic|4|3|5||||Kindling|Whenever you cast a spell, your Arcanyst minions gain +1 Attack.||
-137|Cards.Faction2.Calligrapher|unity/faction2|Unit|Songhai Empire|Arcanyst|legendary|7|3|7||||Calligrapher|Rush Whenever this minion attacks, put three Songhai spells into your action bar.||
+137|Cards.Faction2.Calligrapher|unity/faction2|Unit|Songhai Empire|Arcanyst|legendary|7|3|7||||Calligrapher|Rush\nWhenever this minion attacks, put three Songhai spells into your action bar.||
 30027|Cards.Artifact.MaskOfCelerity|unity/faction2|Artifact|Songhai Empire||rare|3||||||Bangle of Blinding Strike|Your General has Celerity.||
 20256|Cards.Spell.Joseki|unity/faction2|SpellJoseki|Songhai Empire||common|1||||||Joseki|Each player steals a random card from their opponent's deck.||
 238|Cards.Faction3.Dreamcarver|unity/faction3|Unit|Vetruvian Imperium|Golem|common|2|2|2||||Dreamshaper|Bond: Draw two cards.||
 20254|Cards.Spell.BloodOfAir|unity/faction3|SpellRemoveTargetSpawnEntity|Vetruvian Imperium||common|5||||||Blood of Air|Transform an enemy minion into a friendly Wind Dervish.|Cards.Faction3.Dervish|
-239|Cards.Faction3.Windlark|unity/faction3|Unit|Vetruvian Imperium|Golem|epic|4|1|4||||Wind Striker|Flying Opening Gambit: Equip a Staff of Y'kir to your General.|Cards.Artifact.StaffOfYKir|
+239|Cards.Faction3.Windlark|unity/faction3|Unit|Vetruvian Imperium|Golem|epic|4|1|4||||Wind Striker|Flying\nOpening Gambit: Equip a Staff of Y'kir to your General.|Cards.Artifact.StaffOfYKir|
 240|Cards.Faction3.Sirocco|unity/faction3|Unit|Vetruvian Imperium|Golem|legendary|5|4|3||||Sirocco|Opening Gambit: Summon a Skyrock Golem on random spaces for each other Golem you've summoned this game.||
 30029|Cards.Artifact.Thunderclap|unity/faction3|Artifact|Vetruvian Imperium||rare|4||||||Thunderclap|When your General destroys a minion, summon a copy of it nearby.||
 336|Cards.Faction4.Nightshroud|unity/faction4|Unit|Abyssian Host|Arcanyst|common|4|5|1||||Nightshroud|Bond: Your General steals 1 Health from the enemy General for each other friendly Arcanyst.||
@@ -975,8 +975,8 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 30030|Cards.Artifact.AngryRebirthAmulet|unity/faction4|Artifact|Abyssian Host||rare|2||||||The Releaser|When this artifact breaks, summon a random friendly non-token minion destroyed this game nearby.||
 433|Cards.Faction5.Lavaslasher|unity/faction5|Unit|Magmar Aspects|Golem|epic|5|4|7||||Lavaslasher|Opening Gambit: This minion fights a nearby enemy minion.|Cards.Spell.FollowupFight|
 30028|Cards.Artifact.GrowthBangle|unity/faction5|Artifact|Magmar Aspects||rare|1||||||Godhammer|Your minions have "Grow: +1/+1."||
-432|Cards.Faction5.Ragebinder|unity/faction5|Unit|Magmar Aspects|Golem|common|3|3|4||||Ragebinder|Rebirth Bond: Restore 3 Health to your General.||
-434|Cards.Faction5.Juggernaut|unity/faction5|Unit|Magmar Aspects|Golem|legendary|8|4|10||||Juggernaut|Grow: +5/+5 Whenever this minion takes damage, summon that many random Golem Eggs nearby.||
+432|Cards.Faction5.Ragebinder|unity/faction5|Unit|Magmar Aspects|Golem|common|3|3|4||||Ragebinder|Rebirth\nBond: Restore 3 Health to your General.||
+434|Cards.Faction5.Juggernaut|unity/faction5|Unit|Magmar Aspects|Golem|legendary|8|4|10||||Juggernaut|Grow: +5/+5\nWhenever this minion takes damage, summon that many random Golem Eggs nearby.||
 20258|Cards.Spell.MoltenRebirth|unity/faction5|Spell|Magmar Aspects||common|2||||||Cascading Rebirth|Destroy a friendly minion to summon a random Magmar minion that costs 1 more.|Cards.Spell.MoltenRebirthFollowup|
 20259|Cards.Spell.MoltenRebirthFollowup|unity/faction5|SpellMoltenRebirth|Magmar Aspects||common|0||||1||Cascading Rebirth|Destroy a friendly minion to summon a random Magmar minion that costs 1 more.||
 539|Cards.Faction6.KindredHunter|unity/faction6|Unit|Vanar Kindred|Arcanyst|common|3|3|3||||Kindred Hunter|Bond: Summon a 3/3 Night Howler on a random nearby space.|Cards.Faction6.ShadowVespyr|
@@ -991,21 +991,21 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 11094|Cards.Neutral.BlueConjurer|unity/neutral|Unit|Neutral|Arcanyst|rare|5|4|6||||Blue Conjurer|Whenever you cast a spell, put a random Arcanyst into your action bar.||
 11095|Cards.Neutral.Grimes|unity/neutral|Unit|Neutral||rare|6|3|3||||Grimes|Opening Gambit and Dying Wish: Summon a random minion from any tribe nearby.||
 11096|Cards.Neutral.Duplicator|unity/neutral|Unit|Neutral|Arcanyst|rare|4|2|5||||Loreweaver|Whenever you draw a spell, put a copy of it into your action bar.||
-11097|Cards.Neutral.TrinityWing|unity/neutral|Unit|Neutral|Arcanyst|legendary|5|4|4||||Trinity Wing|Flying Bond: Put the three Teachings of the Dragon into your action bar.|Cards.Spell.DragonBreath,Cards.Spell.DragonGrace,Cards.Spell.DragonHeart|
+11097|Cards.Neutral.TrinityWing|unity/neutral|Unit|Neutral|Arcanyst|legendary|5|4|4||||Trinity Wing|Flying\nBond: Put the three Teachings of the Dragon into your action bar.|Cards.Spell.DragonBreath,Cards.Spell.DragonGrace,Cards.Spell.DragonHeart|
 20250|Cards.Spell.DragonBreath|unity/neutral|SpellDamage|Neutral|||1||||1||Lesson of Power|Deal 2 damage to anything.||
 20252|Cards.Spell.DragonGrace|unity/neutral|SpellHeal|Neutral|||1||||1||Lesson of Wisdom|Restore 3 Health to anything.||
 20251|Cards.Spell.DragonHeart|unity/neutral|SpellApplyModifiersToGeneral|Neutral|||1||||1||Lesson of Courage|Give your General +1 Attack.||
 11098|Cards.Neutral.Celebrant|unity/neutral|Unit|Neutral|Golem|rare|2|1|4||||Celebrant|Opening Gambit: Create a mana spring tile nearby.|Cards.Spell.SpawnNeutralEntity,Cards.Tile.BonusMana|
-44|Cards.Faction1.Oakenheart|wartech/faction1|Unit|Lyonar Kingdoms|Mech|rare|5|4|5||||Oakenheart|Opening Gambit: Progresses MECHAZ0R build by +20%. Your other Mech minions have +1/+1.|Cards.Spell.DeployMechaz0r|
+44|Cards.Faction1.Oakenheart|wartech/faction1|Unit|Lyonar Kingdoms|Mech|rare|5|4|5||||Oakenheart|Opening Gambit: Progresses MECHAZ0R build by +20%.\nYour other Mech minions have +1/+1.|Cards.Spell.DeployMechaz0r|
 45|Cards.Faction1.Prominence|wartech/faction1|Unit|Lyonar Kingdoms||epic|6|4|7||||Prominence|Blood Surge: Summon a Silverguard Knight nearby your General.|Cards.Faction1.SilverguardKnight|
 46|Cards.Faction1.VigilatorBuilding|wartech/faction1|Unit|Lyonar Kingdoms|Structure|tokenunit|3|0|10||1||Building|||
 52|Cards.Faction1.MonumentBuilding|wartech/faction1|Unit|Lyonar Kingdoms|Structure|tokenunit|4|0|10||1||Building|||
-47|Cards.Faction1.Vigilator|wartech/faction1|Unit|Lyonar Kingdoms||common|3|3|4||||Vigilator|Build: (1). When this minion is built, give nearby friendly minions +3 Health.|Cards.Faction1.VigilatorBuilding|
+47|Cards.Faction1.Vigilator|wartech/faction1|Unit|Lyonar Kingdoms||common|3|3|4||||Vigilator|Build: (1).\nWhen this minion is built, give nearby friendly minions +3 Health.|Cards.Faction1.VigilatorBuilding|
 20316|Cards.Spell.SteadfastFormation|wartech/faction1|SpellApplyModifiers|Lyonar Kingdoms||common|0||||||Steadfast Formation|Give friendly minions in a 2x2 area Provoke.||
 48|Cards.Faction1.Warsmith|wartech/faction1|Unit|Lyonar Kingdoms||legendary|3|2|2||||Surgeforger|Whenever you summon a minion nearby this minion, give them both +1/+1.||
 50|Cards.Faction1.DecoratedEnlistee|wartech/faction1|Unit|Lyonar Kingdoms||common|3|1|5||||Decorated Enlistee|While at full Health, this minion has +3 Attack.||
 20317|Cards.Spell.Fealty|wartech/faction1|SpellTogetherness|Lyonar Kingdoms||rare|3||||||Fealty|Draw a card for each friendly minion nearby your General.||
-49|Cards.Faction1.IroncliffeMonument|wartech/faction1|Unit|Lyonar Kingdoms|Structure|legendary|4|0|10||||Ironcliffe Monument|Build: (2). Whenever you summon a minion nearby this, transform that minion into an Ironcliffe Guardian.|Cards.Faction1.IroncliffeGuardian,Cards.Faction1.MonumentBuilding|
+49|Cards.Faction1.IroncliffeMonument|wartech/faction1|Unit|Lyonar Kingdoms|Structure|legendary|4|0|10||||Ironcliffe Monument|Build: (2).\nWhenever you summon a minion nearby this, transform that minion into an Ironcliffe Guardian.|Cards.Faction1.IroncliffeGuardian,Cards.Faction1.MonumentBuilding|
 20318|Cards.Spell.CallToArms|wartech/faction1|SpellApplyModifiersToGeneral|Lyonar Kingdoms||legendary|7||||||Call to Arms|Your General gains, "Minions you summon nearby gain +3/+3."||
 20320|Cards.Spell.Sunstrike|wartech/faction1|SpellSunstrike|Lyonar Kingdoms||epic|4||||||Sunstrike|Deal 3 damage to enemies and restore 3 Health to friendly minions and Generals in a row.||
 20325|Cards.Spell.Invincible|wartech/faction1|SpellApplyModifiersToUndamagedMinion|Lyonar Kingdoms||epic|4||||||Invincible|Give a friendly minion with full Health +4/+4.||
@@ -1017,21 +1017,21 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 20314|Cards.Spell.Thunderbomb|wartech/faction2|SpellThunderbomb|Songhai Empire||common|3||||||Thunderbomb|Deal 3 damage to an enemy and 1 damage to all enemies around it.|Cards.Spell.HellsKitchen|
 147|Cards.Faction2.ManakiteBuilding|wartech/faction2|Unit|Songhai Empire|Structure|tokenunit|4|0|10||1||Building|||
 153|Cards.Faction2.PenumbraxxBuilding|wartech/faction2|Unit|Songhai Empire|Structure|tokenunit|3|0|10||1||Building|||
-148|Cards.Faction2.ManakiteDrifter|wartech/faction2|Unit|Songhai Empire||common|4|5|5||||Manakite Drifter|Build: (2). When this minion is built, gain +2 mana this turn.|Cards.Faction2.ManakiteBuilding|
-149|Cards.Faction2.Penumbraxx|wartech/faction2|Unit|Songhai Empire||legendary|3|4|1||||Penumbraxx|Build: (2). Backstab: (2). Whenever this backstabs, transform it into a building with Build (1).|Cards.Faction2.PenumbraxxBuilding|
+148|Cards.Faction2.ManakiteDrifter|wartech/faction2|Unit|Songhai Empire||common|4|5|5||||Manakite Drifter|Build: (2).\nWhen this minion is built, gain +2 mana this turn.|Cards.Faction2.ManakiteBuilding|
+149|Cards.Faction2.Penumbraxx|wartech/faction2|Unit|Songhai Empire||legendary|3|4|1||||Penumbraxx|Build: (2).\nBackstab: (2).\nWhenever this backstabs, transform it into a building with Build (1).|Cards.Faction2.PenumbraxxBuilding|
 150|Cards.Faction2.WildfireTenketsu|wartech/faction2|Unit|Songhai Empire||epic|4|3|5||||Wildfire Tenketsu|Blood Surge: Put an Eight Gates into your action bar.|Cards.Spell.EightGates|
 20323|Cards.Spell.AssassinationProtocol|wartech/faction2|SpellAssassinationProtocol|Songhai Empire||common|1||||||Assassination Protocol|Reactivate an exhausted friendly minion. It cannot damage or attack Generals this turn.||
 20326|Cards.Spell.SeekerSquad|wartech/faction2|SpellSpawnEntitiesOnGeneralsDiagonals|Songhai Empire||legendary|5||||||Seeker Squad|Summon a Heartseeker in each nearby space diagonal from your General.|Cards.Faction2.Heartseeker|
 20327|Cards.Spell.Bamboozle|wartech/faction2|SpellBamboozle|Songhai Empire||epic|3||||||Bamboozle|Transform a nearby enemy minion into a 0/2 Panddo. If it is already a Panddo, instead destroy it and draw to fill your action bar.||
 20328|Cards.Spell.Substitution|wartech/faction2|SpellFriendlyJux|Songhai Empire||epic|3||||||Substitution|Switch positions between a friendly minion and your General.||
-151|Cards.Faction2.DuskRigger|wartech/faction2|Unit|Songhai Empire|Mech|rare|3|3|3||||Dusk Rigger|Backstab: (2). Whenever this backstabs, put a MECHAZ0R Progression into your action bar.|Cards.Spell.MechProgress|
+151|Cards.Faction2.DuskRigger|wartech/faction2|Unit|Songhai Empire|Mech|rare|3|3|3||||Dusk Rigger|Backstab: (2).\nWhenever this backstabs, put a MECHAZ0R Progression into your action bar.|Cards.Spell.MechProgress|
 20341|Cards.Spell.MassFlight|wartech/faction2|SpellApplyModifiers|Songhai Empire||rare|2||||||Mass Flight|Give all friendly minions Flying this turn.||
 20349|Cards.Spell.MechProgress|wartech/faction2|SpellApplyPlayerModifiers|Songhai Empire||tokenunit|0||||1||MECHAZ0R Progression|Progresses MECHAZ0R build by +20%.|Cards.Spell.DeployMechaz0r|
 247|Cards.Faction3.Gust|wartech/faction3|Unit|Vetruvian Imperium||epic|5|3|5||||Gust|Blood Surge: Summon two Wind Dervishes nearby.|Cards.Faction3.Dervish|
 20313|Cards.Spell.KinematicProjection|wartech/faction3|SpellApplyModifiers|Vetruvian Imperium||rare|1||||||Kinematic Projection|Give a minion Blast. It can no longer move.||
 248|Cards.Faction3.ShrikeBuilding|wartech/faction3|Unit|Vetruvian Imperium|Structure|tokenunit|4|0|10||1||Building|||
 255|Cards.Faction3.SimulacraBuilding|wartech/faction3|Unit|Vetruvian Imperium|Structure|tokenunit|3|0|10||1||Building|||
-249|Cards.Faction3.BarrenShrike|wartech/faction3|Unit|Vetruvian Imperium||common|4|5|5||||Barren Shrike|Build: (2). Blast|Cards.Faction3.ShrikeBuilding|
+249|Cards.Faction3.BarrenShrike|wartech/faction3|Unit|Vetruvian Imperium||common|4|5|5||||Barren Shrike|Build: (2).\nBlast|Cards.Faction3.ShrikeBuilding|
 250|Cards.Faction3.SilicaWeaver|wartech/faction3|Unit|Vetruvian Imperium|Mech|rare|5|4|4||||Silica Weaver|Opening Gambit: Progresses MECHAZ0R build by +40%.|Cards.Spell.DeployMechaz0r|
 20322|Cards.Spell.MonolithicVision|wartech/faction3|SpellGodMulligan|Vetruvian Imperium||legendary|9||||||Monolithic Vision|Transform your action bar into six random Vetruvian cards that cost 4 less.||
 251|Cards.Faction3.Skyppy|wartech/faction3|Unit|Vetruvian Imperium||common|3|3|3||||Skyppy|Dying Wish: Put a random legendary artifact from your opponent's Faction into your action bar.||
@@ -1040,7 +1040,7 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 252|Cards.Faction3.SniperZen|wartech/faction3|Unit|Vetruvian Imperium||legendary|6|5|5||||Grapnel Paradigm|Opening Gambit: Take control of enemy minions with 2 or less Attack on this row.||
 20342|Cards.Spell.LostInTheDesert|wartech/faction3|SpellLostInTheDesert|Vetruvian Imperium||epic|4||||||Lost in the Desert|Deal 5 damage to enemies that are not nearby another enemy.||
 30050|Cards.Artifact.IrisBarrier|wartech/faction3|Artifact|Vetruvian Imperium||rare|2||||||Iris Barrier|Your General takes no damage during your turn.||
-253|Cards.Faction3.SimulacraObelysk|wartech/faction3|Unit|Vetruvian Imperium|Structure|legendary|3|0|7||||Simulacra Obelysk|Build: (2). Summon Dervish When this minion is built, start building another on a nearby space.|Cards.Faction3.SimulacraBuilding|
+253|Cards.Faction3.SimulacraObelysk|wartech/faction3|Unit|Vetruvian Imperium|Structure|legendary|3|0|7||||Simulacra Obelysk|Build: (2).\nSummon Dervish\nWhen this minion is built, start building another on a nearby space.|Cards.Faction3.SimulacraBuilding|
 20350|Cards.Spell.Neurolink|wartech/faction3|SpellNeurolink|Vetruvian Imperium||epic|2||||||Neurolink|Your General gains all keywords of friendly minions this turn.||
 348|Cards.Faction4.Cacophynos|wartech/faction4|Unit|Abyssian Host||common|4|6|3||||Cacophynos|Dying Wish: Destroy a random nearby enemy minion.||
 347|Cards.Faction4.StygianObserver|wartech/faction4|Unit|Abyssian Host||legendary|7|7|7||||Stygian Observer|Deathwatch: Give minions in your action bar +2/+2.||
@@ -1050,7 +1050,7 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 351|Cards.Faction4.NightmareOperant|wartech/faction4|Unit|Abyssian Host|Mech|rare|2|3|2||||Nightmare Operant|Dying Wish: Shuffle a MECHAZ0R into your deck.|Cards.Neutral.Mechaz0r|
 20321|Cards.Spell.Infest|wartech/faction4|SpellApplyModifiers|Abyssian Host||legendary|3||||||Infest|Choose an enemy minion. When it dies, give this effect to all nearby enemy minions and deal 2 damage to the enemy General.||
 352|Cards.Faction4.Moonrider|wartech/faction4|Unit|Abyssian Host||epic|6|6|6||||Moonrider|Blood Surge: Summon a 4/4 Fiend on a nearby space.|Cards.Faction4.Fiend|
-353|Cards.Faction4.GateToUndervault|wartech/faction4|Unit|Abyssian Host|Structure|legendary|4|0|0||||Gate to the Undervault|Build: (3). Invulnerable Deathwatch: Summon a random Demon nearby.|Cards.Faction4.GateBuilding|
+353|Cards.Faction4.GateToUndervault|wartech/faction4|Unit|Abyssian Host|Structure|legendary|4|0|0||||Gate to the Undervault|Build: (3).\nInvulnerable\nDeathwatch: Summon a random Demon nearby.|Cards.Faction4.GateBuilding|
 20331|Cards.Spell.Betrayal|wartech/faction4|SpellBetrayal|Abyssian Host||epic|6||||||Betrayal|Enemy minions nearby their General attack their General.||
 20333|Cards.Spell.Deathmark|wartech/faction4|SpellDamageAndApplyModifiers|Abyssian Host||rare|2||||||Deathmark|Deal 1 damage to an enemy minion. After it is attacked this turn, destroy it.||
 20334|Cards.Spell.Vellumscry|wartech/faction4|SpellVellumscry|Abyssian Host||common|4||||||Vellumscry|Destroy a friendly minion to draw three cards.||
@@ -1064,15 +1064,15 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 443|Cards.Faction5.HulkBuilding|wartech/faction5|Unit|Magmar Aspects|Structure|tokenunit|2|0|10||1||Building|||
 450|Cards.Faction5.GigalothBuilding|wartech/faction5|Unit|Magmar Aspects|Structure|tokenunit|4|0|10||1||Building|||
 444|Cards.Faction5.BioHulk|wartech/faction5|Unit|Magmar Aspects||common|2|10|10||||Biomimetic Hulk|Build: (3).|Cards.Faction5.HulkBuilding|
-445|Cards.Faction5.Gigaloth|wartech/faction5|Unit|Magmar Aspects||legendary|4|7|7||||Gigaloth|Build: (2). Whenever this minion attacks, other friendly minions gain +3/+3.|Cards.Faction5.GigalothBuilding|
+445|Cards.Faction5.Gigaloth|wartech/faction5|Unit|Magmar Aspects||legendary|4|7|7||||Gigaloth|Build: (2).\nWhenever this minion attacks, other friendly minions gain +3/+3.|Cards.Faction5.GigalothBuilding|
 446|Cards.Faction5.Seismoid|wartech/faction5|Unit|Magmar Aspects|Mech|rare|2|3|1||||Seismoid|Whenever you summon a Mech minion from your action bar, both players draw a card.||
 447|Cards.Faction5.Armada|wartech/faction5|Unit|Magmar Aspects||epic|6|5|6||||Armada|Blood Surge: Deal 5 damage to the closest enemy.||
 20338|Cards.Spell.UpperHand|wartech/faction5|SpellUpperHand|Magmar Aspects||rare|3||||||Upper Hand|Deal 1 damage to an enemy minion for each card in your opponent's action bar.||
-20339|Cards.Spell.SaurianFinality|wartech/faction5|SpellSaurianFinality|Magmar Aspects||legendary|8||||||Saurian Finality|Stun the enemy General. Your General gains +3 Attack. Both players lose 3 mana. Restore 10 Health to your General.||
+20339|Cards.Spell.SaurianFinality|wartech/faction5|SpellSaurianFinality|Magmar Aspects||legendary|8||||||Saurian Finality|Stun the enemy General.\nYour General gains +3 Attack.\nBoth players lose 3 mana.\nRestore 10 Health to your General.||
 20344|Cards.Spell.HomeostaticRebuke|wartech/faction5|SpellHomeostaticRebuke|Magmar Aspects||epic|4||||||Homeostatic Rebuke|ALL minions attack themselves.||
-448|Cards.Faction5.ErraticRaptyr|wartech/faction5|Unit|Magmar Aspects||common|3|5|5||||Erratic Raptyr|Rebirth After this minion attacks or counterattacks, turn it into an Egg.||
+448|Cards.Faction5.ErraticRaptyr|wartech/faction5|Unit|Magmar Aspects||common|3|5|5||||Erratic Raptyr|Rebirth\nAfter this minion attacks or counterattacks, turn it into an Egg.||
 20346|Cards.Spell.EffulgentInfusion|wartech/faction5|SpellEffulgentInfusion|Magmar Aspects||common|3||||||Effulgent Infusion|Give a friendly minion +Attack equal to your General's Attack.||
-30049|Cards.Artifact.RageReactor|wartech/faction5|Artifact|Magmar Aspects||rare|1||||||Rage Reactor|Your General gains +1 Attack. Whenever your General destroys an enemy, summon a Ripper Egg on that space.|Cards.Faction5.Gibblegup|
+30049|Cards.Artifact.RageReactor|wartech/faction5|Artifact|Magmar Aspects||rare|1||||||Rage Reactor|Your General gains +1 Attack.\nWhenever your General destroys an enemy, summon a Ripper Egg on that space.|Cards.Faction5.Gibblegup|
 551|Cards.Faction6.ProtosensorBuilding|wartech/faction6|Unit|Vanar Kindred|Structure|tokenunit|2|0|10||1||Building|||
 559|Cards.Faction6.EyolithBuilding|wartech/faction6|Unit|Vanar Kindred|Structure|tokenunit|6|0|10||1||Building|||
 552|Cards.Faction6.EchoDeliverant|wartech/faction6|Unit|Vanar Kindred|Mech|rare|6|6|4||||Echo Deliverant|Whenever you summon another Mech, summon a copy of it nearby.||
@@ -1082,11 +1082,11 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 542|Cards.Faction6.Hydrogarm|wartech/faction6|Unit|Vanar Kindred|Vespyr|epic|4|3|3||||Hydrogarm|Blood Surge: Deal 1 damage to enemy minions in this row and Stun them.||
 20330|Cards.Spell.Wintertide|wartech/faction6|SpellSpawnEntity|Vanar Kindred||epic|4||||||Wintertide|Summon three 2/2 Vespyr Winter Maerids on any column.|Cards.Faction6.WaterBear|
 20337|Cards.Spell.Shatter|wartech/faction6|SpellKillTargetWithModifierStunned|Vanar Kindred||common|2||||||Shatter|Destroy a Stunned enemy minion.||
-554|Cards.Faction6.Protosensor|wartech/faction6|Unit|Vanar Kindred||common|2|2|2||||Protosensor|Build: (1). Airdrop|Cards.Faction6.ProtosensorBuilding|
+554|Cards.Faction6.Protosensor|wartech/faction6|Unit|Vanar Kindred||common|2|2|2||||Protosensor|Build: (1).\nAirdrop|Cards.Faction6.ProtosensorBuilding|
 555|Cards.Faction6.FrostbladeFiend|wartech/faction6|Unit|Vanar Kindred||common|2|2|3||||Cryoblade|Deals double damage to Stunned enemies.||
-30040|Cards.Artifact.AnimusPlate|wartech/faction6|Artifact|Vanar Kindred||rare|5||||||Animus Plate|Your General gains +2 Attack. Whenever your General attacks or counterattacks, give all friendly Vespyr minions +2/+2.||
+30040|Cards.Artifact.AnimusPlate|wartech/faction6|Artifact|Vanar Kindred||rare|5||||||Animus Plate|Your General gains +2 Attack.\nWhenever your General attacks or counterattacks, give all friendly Vespyr minions +2/+2.||
 20343|Cards.Spell.Auroraboros|wartech/faction6|SpellApplyModifiers|Vanar Kindred||legendary|5||||||Auroraboros|Give friendly minions "Dying Wish: Re-summon this minion on this space."||
-556|Cards.Faction6.DraugarEyolith|wartech/faction6|Unit|Vanar Kindred||legendary|6|7|14||||Draugar Eyolith|Build: (2). While this is building or on the battlefield, enemy minions and Generals can only move 1 space.|Cards.Faction6.EyolithBuilding|
+556|Cards.Faction6.DraugarEyolith|wartech/faction6|Unit|Vanar Kindred||legendary|6|7|14||||Draugar Eyolith|Build: (2).\nWhile this is building or on the battlefield, enemy minions and Generals can only move 1 space.|Cards.Faction6.EyolithBuilding|
 20347|Cards.Spell.CrystallineReinforcement|wartech/faction6|SpellDoubleAttributeBuffs|Vanar Kindred||epic|3||||||Crystalline Reinforcement|Double the Attack and Health buffs of friendly minions.||
 557|Cards.Faction6.InfiltrateMaster|wartech/faction6|Unit|Vanar Kindred||legendary|4|4|5||||Denadoro|Your minions are always infiltrated.||
 11123|Cards.Neutral.Metaltooth|wartech/neutral|Unit|Neutral|Mech|common|2|2|2||||Metaltooth|If you have another Mech minion, this minion has Rush.||
@@ -1099,7 +1099,7 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 11140|Cards.Neutral.ArchitectBuilding|wartech/neutral|Unit|Neutral|Structure|tokenunit|3|0|10||1||Building|||
 11131|Cards.Neutral.RedsteelMinos|wartech/neutral|Unit|Neutral||common|3|2|3||||Redsteel Minos|Blood Surge: Gains +2/+2.||
 11132|Cards.Neutral.Qorrhlmaa|wartech/neutral|Unit|Neutral||legendary|6|6|6||||Q'orrhlma'a|Opening Gambit: Remove all minions that cost 2 or less from each player's deck.||
-11133|Cards.Neutral.ImperviousGiago|wartech/neutral|Unit|Neutral||rare|5|1|10||||Impervious Giago|Provoke Whenever this minion is attacked, it gains +2 Attack.||
+11133|Cards.Neutral.ImperviousGiago|wartech/neutral|Unit|Neutral||rare|5|1|10||||Impervious Giago|Provoke\nWhenever this minion is attacked, it gains +2 Attack.||
 11134|Cards.Neutral.CapriciousMarauder|wartech/neutral|Unit|Neutral||rare|5|9|9||||Capricious Marauder|Whenever a friendly minion is destroyed, your opponent takes control of this minion.||
 11135|Cards.Neutral.Recombobulus|wartech/neutral|Unit|Neutral||common|2|2|3||||Recombobulus|Opening Gambit: Teleport ANY minion one space randomly.|Cards.Spell.FollowupRandomTeleport|
 11136|Cards.Neutral.Reliquarian|wartech/neutral|Unit|Neutral||legendary|7|3|3||||Reliquarian|Opening Gambit: Forge a friendly minion into a Faction artifact with equal Attack.|Cards.Spell.ForgeArtifact|
@@ -1111,7 +1111,7 @@ card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|nam
 30045|Cards.Artifact.AbyssianRelic|wartech/neutral|Artifact|Abyssian Host||tokenunit|0||||1||Void Relic|||
 30046|Cards.Artifact.MagmarRelic|wartech/neutral|Artifact|Magmar Aspects||tokenunit|0||||1||Primal Relic|||
 30047|Cards.Artifact.VanarRelic|wartech/neutral|Artifact|Vanar Kindred||tokenunit|0||||1||Howling Relic|||
-11137|Cards.Neutral.RescueRX|wartech/neutral|Unit|Neutral||common|2|2|4||||Rescue-RX|Build: (2). When this minion is built, restore 5 Health to your General.|Cards.Neutral.RescueRXBuilding|
-11138|Cards.Neutral.ArchitectT2K5|wartech/neutral|Unit|Neutral||epic|3|1|5||||Architect-T2K5|Build: (1). Whenever this or another friendly minion is built, draw a card.|Cards.Neutral.ArchitectBuilding|
+11137|Cards.Neutral.RescueRX|wartech/neutral|Unit|Neutral||common|2|2|4||||Rescue-RX|Build: (2).\nWhen this minion is built, restore 5 Health to your General.|Cards.Neutral.RescueRXBuilding|
+11138|Cards.Neutral.ArchitectT2K5|wartech/neutral|Unit|Neutral||epic|3|1|5||||Architect-T2K5|Build: (1).\nWhenever this or another friendly minion is built, draw a card.|Cards.Neutral.ArchitectBuilding|
 11139|Cards.Neutral.Timekeeper|wartech/neutral|Unit|Neutral||common|4|2|2||||Timekeeper|Opening Gambit: Your buildings progress by 1 turn.||
 11129|Cards.Neutral.Silver|wartech/neutral|Unit|Neutral|Mech|legendary|6|7|5||||S.I.L.V.E.R.|Whenever you summon this or another Mech, friendly Mechs gain all keywords of other friendly Mechs.||

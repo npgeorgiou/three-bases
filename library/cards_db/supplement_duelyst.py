@@ -10,7 +10,7 @@ Links (supplement/duelyst_links.jsonl): a card generates every other card its fa
 form it transforms into, a General's Bloodbound Spell), and to a tile's keyword entry.
 Writes supplement/duelyst.jsonl in the library's entities columns; ids from 5000001 (source.py), kept stable.
 Usage: supplement_duelyst.py"""
-import csv, json, os
+import csv, json, os, re
 HERE = os.path.dirname(os.path.abspath(__file__))
 PSV = os.path.join(HERE, '..', 'tools', 'convert', 'duelyst_cards.psv')
 OUT = os.path.join(HERE, 'supplement', 'duelyst.jsonl')
@@ -77,6 +77,29 @@ def names(rows):
                 r['name'] = f"{n[:-1] if n.endswith(')') else n + ' ('}{', ' if n.endswith(')') else ''}{r['code'].split('.')[-1]})"
 
 
+def keywords_field(text, kws):
+    """Lines that are only keywords ("Provoke", "Flying", "Airdrop, Forcefield") become the Keywords field, so the card
+    inherits the keywords' records (PROCESS "A card list that looked whole" 3); labels ("Opening Gambit:") and keywords with
+    a number ("Backstab: (2).") stay in the text."""
+    alt = '|'.join(re.escape(k) for k in sorted(kws, key=len, reverse=True))
+    only = re.compile(rf'^(?:{alt})(?:\s*,\s*|\s+(?:and\s+)?)?(?:(?:{alt})(?:\s*,\s*|\s+(?:and\s+)?)?)*\.?$', re.I)
+    found, rest = [], []
+    lead = re.compile(rf'^((?:{alt})(?:\s*,\s*(?:{alt}))*)\.\s+(?=[A-Z])')  # "Forcefield. Your Bloodbound Spell is Tempest."
+    for line in text.split('\n'):
+        m = lead.match(line.strip())
+        if line.strip() and only.match(line.strip()):
+            found += [m.group(0) for m in re.finditer(alt, line, re.I)]
+        elif m:
+            found += [k.group(0) for k in re.finditer(alt, m.group(1), re.I)]
+            rest.append(line.strip()[m.end():])
+        else:
+            rest.append(line)
+    canon = {k.lower(): k for k in kws}
+    found = list(dict.fromkeys(canon[f.lower()] for f in found))
+    body = '\n'.join(rest).strip()
+    return (f"Keywords: {', '.join(found)}." + (' ' + body if body else '')) if found else body
+
+
 def main():
     old = {}
     if os.path.exists(OUT):
@@ -87,6 +110,10 @@ def main():
             if r['name'] and r['class'] != 'Tile']
     BBS.update(r['signature'] for r in rows if r['signature'])
     names(rows)
+    import sqlite3
+    lib = sqlite3.connect(os.path.join(HERE, '..', 'three-bases-library.sqlite'))
+    kw_names = {n for (n,) in lib.execute("select name from entities where game='duelyst' and category='keyword'")}
+    kw_names |= {n for _, n, *_ in GLOSSARY}
     out, ids = [], {}
     for r in rows:
         i = old.get(r['code'])
@@ -104,7 +131,8 @@ def main():
                                            + (['Bloodbound Spell'] if kind(r) == 'Bloodbound Spell' or r['code'] in BBS else [])) or None,
                     'rarity': r['rarity'] or None, 'cost': f"{r['mana']} mana" if r['mana'] else None,
                     'cost_num': float(r['mana']) if r['mana'] else None,
-                    'stats': json.dumps(stats) if stats else None, 'text': r['text'].replace('\\n', '\n'),
+                    'stats': json.dumps(stats) if stats else None,
+                    'text': keywords_field(r['text'].replace('\\n', '\n'), kw_names),
                     'extra': json.dumps(extra), 'variants': None, 'id': i})
     for code, name, text, st in GLOSSARY:
         i = old.get(code)
@@ -115,8 +143,6 @@ def main():
                     'stats': None, 'text': text, 'extra': None, 'variants': None, 'id': i})
     open(OUT, 'w').write(''.join(json.dumps(e) + '\n' for e in out))
     # links to the library's keyword entries go by their ids there
-    import sqlite3
-    lib = sqlite3.connect(os.path.join(HERE, '..', 'three-bases-library.sqlite'))
     kw = {x: i for x, i in lib.execute("select ext_id, id from entities where game='duelyst' and ext_id like 'kw:%'")}
     kw.update({k: ids[k] for k, *_ in GLOSSARY})
     links = []

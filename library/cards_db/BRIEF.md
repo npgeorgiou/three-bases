@@ -427,7 +427,8 @@ keyword entries (category keyword: a sigil, a trait or a variable Power stat). M
 - Items (category item), events, modifiers (Boons) are read like cards: a Boon's "at the start of every battle" = game_start.
 
 ## Game words: Duelyst
-Duelyst has no Keywords field: describe everything the text says. Its keyword entries (Provoke, Rush, Ranged, Flying, Frenzy,
+Cards list their plain keywords in the Keywords field ("Keywords: Provoke, Celerity."): do not describe them. Describe the
+rest of the text, labels and numbered keywords included ("Backstab: (2).", "Build: (1)."). Its keyword entries (Provoke, Rush, Ranged, Flying, Frenzy,
 Celerity, Blast, Backstab, Zeal, Infiltrate, Grow, Rebirth, Forcefield, Airdrop, Opening Gambit, Dying Wish, Deathwatch, Blood
 Surge, Bond, Intensify, Sentinel, Build, Trial, Destiny, the tiles ...) define the words; cards use the values below. Mapping
 decided by Claude from the game's own texts (open-duelyst: keyword definitions, tutorial, tips; 29 Oct 2026).
@@ -471,7 +472,7 @@ decided by Claude from the game's own texts (open-duelyst: keyword definitions, 
   its action bar" = return_to_hand. "Equip an artifact" = attach (on the player, card the artifact). "Progresses MECHAZ0R
   build by +20%" = keyword_action MECHAZ0R, params amount 20. "Destroy" = kill. "Transform into X" = transform, card X.
   "Shuffle into your deck" = shuffle_into_deck; "replace" a card = shuffle_into_deck, then draw (link then).
-- A keyword the card has itself, written alone ("Provoke", "Rush", "Backstab: (2).", "Build: (1).", "Forcefield") = one
+- A keyword the card has itself in its text ("Backstab: (2).", "Build: (1).", "Forcefield, Frenzy, Grow: +7/+7.") = one
   ability `{"when": {"event": "always"}, "do": [{"act": "give_keyword", "keyword": "<K>", "on": {"pick": "self"}, "params":
   {"amount": N}, "lasts": "permanent"}]}` (amount only for a number: Backstab 2, Build 1). "Give a minion Celerity this turn"
   = give_keyword, lasts this_round ("this turn" = this_round).
