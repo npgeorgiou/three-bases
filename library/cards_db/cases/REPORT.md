@@ -12,7 +12,7 @@ Made by `cases/run.py faeria`.
 | mx02 | moving enemy units is forced_movement | 0 | 0 | 100% | 38 | yes |
 | mx03 | a plain draw is one form: zone deck_top, no pick top | 26 | 26 | 100% | 16 | yes |
 | mx10 | damage to the enemy player is Nexus damage (kinds kept, v30) | 0 | 0 | 100% | 356 | yes |
-| mx11 | moving or pushing units makes units move (positions change, v30) | 0 | 0 | 100% | 42 | yes |
+| mx11 | moving or pushing units makes units move (positions change, v30) | 0 | 0 | 100% | 150 | yes |
 | fa01 | Gift triggers | 122 | 122 | 100% | 133 | yes |
 | fa02 | Last Words triggers | 32 | 32 | 100% | 0 | yes |
 | fa03 | Production triggers | 18 | 18 | 100% | 0 | yes |
@@ -61,7 +61,7 @@ Made by `cases/run.py faeria`.
 | cfa02 | Feed the Forest | Ruunin, the Relentless | each death returns Ruunin bigger; Feed the Forest turns her Life into faeria | state: dies | yes |
 | cfa03 | Feed the Forest | Tarum, the Forest World | destroying Tarum gains faeria and its Last Words fills the world with forests | event: kill -> dies | yes |
 | cfa05 | Doomsday | Soul Eater | Doomsday destroys every creature; each friendly death grows Soul Eater in hand | condition: kill -> dies | yes |
-| cfa06 | Doomgate, Door to Oblivion | Annoying Gnat | sacrificing the Gnat draws a card; its Last Words summons it again | event: sacrifice -> dies | yes |
+| cfa06 | Doomgate, Door to Oblivion | Annoying Gnat | sacrificing the Gnat draws a card; its Last Words summons it again | event: kill -> dies | yes |
 | cfa07 | Famine | Ruby Yak | Famine damages every Yak; Ruby Yak hits the opponent once for each damaged Yak | event: damage -> damaged | yes |
 | cfa08 | Ulani's Medallion | Ruby Yak | the Medallion turns your other creatures into copies of Ruby Yak | copies: turns my units into copies of it | yes |
 | cfa09 | Rain of Fish | Ulani's Medallion | Rain of Fish fills the board with creatures for the Medallion to copy | target: my units | yes |

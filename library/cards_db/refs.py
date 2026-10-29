@@ -26,7 +26,7 @@ PLAYER_ONLY = {'nexus_damaged'}  # only a player's
 OPEN_KINDS = {None, '', 'player', 'any', 'anything'}
 BY_ME = {'killed', 'damaged', 'nexus_damaged', 'challenges'}  # done by the card to something else: only the card itself can do it
 # (attacks and strikes by the card: other cards can make it attack or strike: Rally, "an ally strikes")  # kinds a player can be
-TO_OBJECT = {('harvest', 'harvests')}  # "X harvests from a well": the unit is the actor, the space the object (like strikes)
+TO_OBJECT = {('harvest', 'harvests'), ('set_terrain', 'terrain_changed')}  # "X harvests from a well": the unit is the actor, the space the object (like strikes)
 BOARD_KINDS = {'unit', 'landmark', 'unit_or_structure', 'anything', 'any', None}
 # a stat tested or counted, and the happenings that change it, for a player and for a unit
 STAT_EVENTS = {'health': {'player': ('nexus_damaged', 'healed'), 'unit': ('stat_changed', 'damaged', 'healed')},
@@ -98,6 +98,8 @@ def build(c):
             for k in (kws_of(ew) if len(kws_of(ew)) > 1 else [kw_of(ew)]):
                 ins(card, o, v, ab, 'condition', ev, ek or fk, es or fs, ep or fp, k, w=ew or fw, ak=eak, aw=eaw)
         elif fk in ('mana', 'secondary_resource', 'gem', 'lane_resource'): ins(card, o, v, ab, 'condition', 'mana_refilled', fk, fs, fp, w=fw)  # counts my mana or another resource: fed by gaining it
+        elif fk == 'position' and fw and 'terrain is ' in fw and test in ('count', 'have', 'amount_count'):  # "for each forest you control":
+            ins(card, o, v, ab, 'condition', 'terrain_changed', 'position', fs, fp, w=fw)                 # fed by making that ground
         # a stat tested or counted ("the enemy Nexus has half its Health or less", "a unit with 5+ Power"): fed by what changes it
         if test in ('stat', 'amount_stat', 'count', 'have', 'amount_count') and at in STAT_EVENTS and not ev:
             sevs = STAT_EVENTS[at].get(fk if fk == 'player' else 'unit', ())
@@ -119,6 +121,8 @@ def build(c):
         card, o, v, ab, act, k, s, p, z, w, kw, cref, pev, to_k, to_w, to_s, to_p = r
         for ev, *kwn in causes.get(('act', act), []):
             if (act, ev) in TO_OBJECT and (to_k or to_s or to_p):  # the space it happens on is the event's object, the mover its actor
+                if act == 'set_terrain':  # the space now has the new ground ("to"), on the side of the space changed (mine when unsaid)
+                    ins(card, o, v, ab, 'makes', ev, 'position', s or 'mine', p, w=to_w); continue
                 ins(card, o, v, ab, 'makes', ev, to_k, to_s, 'self' if p == 'self' else to_p, w=to_w, ak=k or 'unit', aw=w); continue  # "I harvest": self, as for strikes
             if act == 'strike' and ev != 'strikes' and (to_k or to_s or to_p):  # "A strikes B": A strikes, B takes the damage
                 if to_k == 'player':

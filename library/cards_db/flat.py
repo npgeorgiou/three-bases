@@ -203,6 +203,20 @@ RULES = [
     # board ground (Faeria lands): changing, moving or taking a space's ground; entering or standing on enemy ground
     ('terrain', 'flat_do', "act='set_terrain' or (act in ('move','steal','kill') and on_kind='position')"),
     ('territory_trigger', 'flat_when', "event='moves_onto' and obj_with like '%same_space of position enemy%'"),
+    ('territory_trigger', 'flat_if', "coalesce(of_with,'') like '%same_space%' and of_kind='position' and of_side='enemy'"),
+    # the board as a research tool (29 Oct 2026, positional pass; any grid, hex or lane game): what a space is, who holds it,
+    # where units may enter, shapes of areas, neighbours in triggers
+    ('positional', 'flat_do', "coalesce(on_with,'') || coalesce(to_with,'') like '%terrain %' or coalesce(on_with,'') || coalesce(to_with,'') like '%distance %'"),
+    ('positional', 'flat_if', "coalesce(of_with,'') || coalesce(ev_obj_with,'') like '%terrain %' or coalesce(of_with,'') || coalesce(ev_obj_with,'') like '%distance %'"),
+    ('positional', 'flat_when', "obj_with like '%terrain %' or obj_with like '%distance %'"),
+    ('adjacency', 'flat_when', "obj_with like '%position % bordering%' or obj_with like '%position % surrounding%' or obj_with like '%position % sides%'"),
+    ('terrain', 'flat_if', "coalesce(of_with,'') || coalesce(ev_obj_with,'') like '%terrain %'"),
+    ('terrain', 'flat_when', "event='terrain_changed' or obj_with like '%terrain %'"),
+    ('area_templates', 'flat_do', "coalesce(on_with,'') || coalesce(to_with,'') like '%position % straight_line%' or coalesce(on_with,'') || coalesce(to_with,'') like '%position % area_%' or coalesce(on_with,'') || coalesce(to_with,'') like '%distance %' or coalesce(on_with,'') || coalesce(to_with,'') like '%position in %'"),
+    ('placement_rules', 'flat_do', "act in ('can','cant') and param_event in ('summoned','played') and to_kind='position'"),
+    ('zone_control', 'flat_do', "act='steal' and on_kind='position'"),
+    ('control_reward', 'flat_when', "event='harvests' and obj_side='enemy'"),
+    ('control_reward', 'flat_if', "event='harvests' and ev_obj_side='enemy'"),
     ('territory_trigger', 'flat_if', "coalesce(of_with,'') like '%same_space%' and coalesce(of_with,'') like '%enemy%'"),
     ('removal', 'flat_do', "act in ('kill','obliterate','capture') and (on_side in ('enemy','any') or (coalesce(on_side,'')='' and on_pick in ('all','random','chosen','lowest','highest') and on_kind in ('unit','unit_or_structure','anything','landmark')))"),
 ]

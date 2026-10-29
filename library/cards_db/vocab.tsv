@@ -778,3 +778,5 @@ act	empty_resource	remove the resource stored on the "on" board spaces (Faeria: 
 act	refill_resource	fill the "on" board spaces' stored resource again (Faeria: refill a faeria well)	resource_gain		29 Oct 2026, v35
 act	extra_turn	the player takes another turn after this one (Faeria Ocarina)	extra_turn		29 Oct 2026, v35
 act	end_turn	the player's turn ends now (Faeria Doomsday)	drawback	turn_end	29 Oct 2026, v35
+position	straight_line	"in a straight line from of: along a row, column or hex axis, any distance (Faeria Charge, Dash, Ranged Attack: ""in a straight line"")"			29 Oct 2026, v38
+attr	distance	"how many spaces away from of, counted in steps on the board's grid (""moves up to 2 spaces"", ""within 3 spaces""; adjacent is position bordering)"			29 Oct 2026, v38

@@ -23,7 +23,11 @@
     {"kind": "unit", "side": "mine"}]}` (a space, like Wind Gate's), never "to" the units.
   * "on or adjacent to that space": one target, position in [same_space, bordering] of the space (Meteor's form), not two
     effects (Firestorm).
-  * "destroy it" on the card itself is kill (self-destruct), not sacrifice (Doomgate)."""
+  * "destroy it" on the card itself is kill (self-destruct), not sacrifice (Doomgate).
+  * "You can summon creatures on spaces adjacent to this structure": the permission is on my creatures, not on the
+    structure (Wind Gate); "(you may summon it on an ocean tile)": the token goes to ocean or land (Gabrian Noble).
+  * Keyword entries: "in a straight line" (Charge, Dash, Ranged Attack) is position straight_line of the unit; Jump's "up
+    to 2 spaces" is distance le 2 (attr distance); those readers' unsure flags go."""
 import glob, json, os, re, sys
 HERE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, HERE); import source
@@ -53,11 +57,21 @@ def board_forms(r, t):
                             f['of'] = {'pick': 'it'}; to.pop('pick')
                 if e.get('act') in ('can', 'cant') and (e.get('params') or {}).get('event') in ('summoned', 'played') and to and to.get('kind') == 'unit' \
                         and any(f.get('val') == 'bordering' for f in to.get('with', [])):
-                    e['to'] = {'kind': 'position', 'with': [{'attr': 'position', 'op': 'is', 'val': 'bordering',
-                                                             'of': {k: v for k, v in to.items() if k in ('kind', 'side')}}]}
+                    of = {k: v for k, v in to.items() if k in ('kind', 'side')}
+                    keep = [f for f in to.get('with', []) if f.get('attr') != 'position']  # "next to friendly Yaks": the Yak filter stays
+                    if keep: of['with'] = keep
+                    e['to'] = {'kind': 'position', 'with': [{'attr': 'position', 'op': 'is', 'val': 'bordering', 'of': of}]}
                 if e.get('act') == 'sacrifice' and (e.get('on') or {}).get('pick') == 'self' and re.search(r'\bdestroy (?:it|this)\b', t, re.I) \
                         and not re.search(r'\bsacrifice (?:this|it|a card bearing)', t, re.I):
                     e['act'] = 'kill'
+            if re.search(r'You can summon creatures on spaces adjacent to this', t):
+                for e in do:
+                    if e.get('act') == 'can' and (e.get('on') or {}).get('pick') == 'self' and (e.get('params') or {}).get('event') == 'summoned':
+                        e['on'] = {'kind': 'unit', 'side': 'mine', 'pick': 'all'}
+            if re.search(r'you may summon it on an ocean (?:tile|space)', t):
+                for e in do:
+                    if e.get('act') == 'summon' and 'to' not in e:
+                        e['to'] = {'kind': 'position', 'with': [{'attr': 'terrain', 'op': 'in', 'vals': ['ocean', 'land']}]}
             # "on or adjacent to that space": same_space of X, then the same act on bordering of it -> one target
             for j in range(len(do) - 1):
                 a, b = do[j], do[j + 1]
@@ -71,6 +85,28 @@ def board_forms(r, t):
         elif isinstance(o, list):
             for v in o: walk(v)
     walk(r)
+
+
+WORD = {'two': 2, 'three': 3, 'four': 4}
+LINE = {'attr': 'position', 'op': 'is', 'val': 'straight_line', 'of': {'pick': 'self'}}
+
+
+def keyword_forms(r, name, t):
+    """the keyword entries' board words, now that values exist for them"""
+    for ab in r.get('abilities', []):
+        for e in ab.get('do', []):
+            to = e.get('to') if isinstance(e.get('to'), dict) else None
+            if re.search(r'straight line', t) and to is not None and LINE not in to.get('with', []) and \
+                    (e.get('act') in ('move', 'strike') or (e.get('act') == 'can' and (e.get('params') or {}).get('event') == 'moves')):
+                to.setdefault('with', []).append(dict(LINE))
+            m = re.search(r'up to (\d+|two|three|four) (?:tiles|spaces)', t)
+            if m and e.get('act') == 'can' and (e.get('params') or {}).get('event') == 'moves' and (e.get('params') or {}).get('amount'):
+                e['params'].pop('amount')
+                e['to'] = {'kind': 'position', 'with': [{'attr': 'distance', 'op': 'le', 'n': int(WORD.get(m.group(1), m.group(1))), 'of': {'pick': 'self'}}]}
+    if r.get('unsure'):
+        if re.search(r'straight line', t): r['unsure'] = [u for u in r['unsure'] if u != 'position']
+        if re.search(r'up to (?:\d+|two|three|four) (?:tiles|spaces)', t): r['unsure'] = [u for u in r['unsure'] if u != 'params']
+        if not r['unsure']: r.pop('unsure')
 
 
 def has_kw(t):
@@ -147,6 +183,8 @@ for game in ('runeterra', 'stormbound', 'monster_train', 'faeria'):
         for r in recs:
             before = json.dumps(r); t = text.get(r.get('id'), '')
             board_forms(r, t)
+            if p.endswith('keywords.jsonl') and game == 'faeria':
+                keyword_forms(r, None, t)
             if json.dumps(r) != before: n += 1
         if n:
             open(p, 'w').write(''.join(json.dumps(r, separators=(',', ':')) + '\n' for r in recs)); print(game, os.path.basename(p), n)

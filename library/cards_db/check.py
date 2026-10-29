@@ -91,7 +91,7 @@ class Checker:
             for x in (f['vals'] if 'vals' in f else [f.get('val')]): self.enum(cid, path + '.val', 'state' if a == 'origin' else a, x)
         elif a == 'name_has':
             if not isinstance(f.get('ref'), str) or not f['ref'].strip(): self.err(cid, path + '.ref', 'name word expected')
-        elif a in ('power', 'health', 'cost', 'count', 'base_power', 'base_health', 'damage', 'countdown', 'strength', 'movement', 'level'):
+        elif a in ('power', 'health', 'cost', 'count', 'base_power', 'base_health', 'damage', 'countdown', 'strength', 'movement', 'level', 'distance'):
             if 'vals' in f and f.get('op') == 'in':
                 if not all(isinstance(v, (int, float)) for v in f['vals']): self.err(cid, path + '.vals', 'numbers expected')
             elif 'n' not in f: self.err(cid, path + '.n', 'number or amount expected')

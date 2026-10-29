@@ -25,7 +25,7 @@ KIND_CAT = {'unit': {'unit', 'hero'}, 'landmark': {'building'}, 'spell': {'spell
             'unit_or_structure': {'unit', 'hero', 'building'}}
 CAT = {'follower': {'unit'}, 'champion': {'hero'}, 'unit': {'unit', 'hero'}, 'spell': {'spell'}, 'skill': {'ability'},
        'landmark': {'building'}, 'equipment': {'item'}}
-PLAY_STATE = ('state', 'position', 'terrain', 'targets', 'right_of', 'level', 'origin', 'countdown', 'damage')  # true or not only in play
+PLAY_STATE = ('state', 'position', 'terrain', 'distance', 'targets', 'right_of', 'level', 'origin', 'countdown', 'damage')  # true or not only in play
 EVERY_GAME = deck_analysis.EVERY_GAME
 
 
@@ -112,6 +112,20 @@ def kinds_fit(a, b):
     return False
 
 
+LAND_KINDS = {'land': {'land', 'prairie', 'lake', 'forest', 'mountain', 'desert', 'special_land'},
+              'special_land': {'special_land', 'lake', 'forest', 'mountain', 'desert'}}  # terrain values that include others
+
+
+def terrain_fit(want, have):
+    """the ground a card counts or waits for ("a forest", "special lands") and the ground a card makes: one must include the
+    other (a lake maker feeds "special lands", not "forests"); no ground named on either side fits"""
+    w = {p.split(' ')[2] for p in (want or '').split(';') if p.startswith('terrain is ') or p.startswith('terrain in ')}
+    h = {p.split(' ')[2] for p in (have or '').split(';') if p.startswith('terrain is ') or p.startswith('terrain in ')}
+    if not w or not h: return True
+    grow = lambda s: set().union(*(LAND_KINDS.get(x, {x}) for x in s))
+    return bool(grow(w) & h) or bool(w & grow(h))
+
+
 def names_fit(c, game, cards, want, have, ref):
     """the taker asks for one card or a name family ("an allied Lucian", "a Flashbomb Trap"): the maker must make that one"""
     asks = [p for p in (want or '').split(';') if p.split(' ')[:2] in (['card', 'is'], ['name_has', 'is'])]
@@ -189,6 +203,7 @@ def lines_of(c, game):
                 if not kinds_fit(mkind, tkind): continue
                 if mpick == 'self' and tpick == 'self': continue  # each card about itself ("when I level up"): no link between two cards
                 if not names_fit(c, game, cards, tw, mw, mref): continue
+                if not terrain_fit(tw, mw): continue
                 if tkind in RESOURCE_WORD and not colour_fit(tw, mw): continue  # a Green Mox cost is paid by a Green gem only
                 if mpick == 'self':  # what a card does to itself feeds only a need its own kind fits ("the strongest friendly Dragon")
                     own = ';'.join(p for p in (tw or '').split(';') if p.split(' ')[:2] in (['type', 'is'], ['type', 'in'], ['card', 'is'], ['name_has', 'is'], ['keyword', 'is']))
@@ -465,6 +480,8 @@ HELPS = [
     (('attacks',), ('mine', '', 'any'), ('multi_attack', 'extra_turn', 'attack_now'), 'another attack'),
     (('survives_damage',), ('mine', ''), ('defence_gain', 'shield', 'damage_reduction', 'immunity', 'regeneration', 'heal',
                                          'cheat_death', 'block_armor', 'lifesteal'), 'more health or protection: survives damage'),
+    # where a unit must get to (enemy land, an enemy well, a forest): what moves my units, or units that move well, gets it there
+    (('moves_onto', 'harvests'), ('mine', '', 'enemy', 'any'), ('movement',), 'moves it where it must be'),
 ]
 HIT_KW = ('target_choice', 'excess_damage', 'multi_attack', 'first_strike', 'evasion', 'ranged')  # keywords whose use depends on power
 
@@ -490,12 +507,14 @@ def boost_lines(c, game, nodes):
             ('own','uses_keyword','has_keyword') and card in ({marks})""", L).fetchall()
     for hs, sides, concepts, why in HELPS:
         helpers = having(concepts, hs[0] == 'nexus_damaged'); n = count(concepts)
+        movers = having(concepts, True) if hs[0] == 'moves_onto' else helpers  # units that move well reach the wells themselves
         for t, ab, h, side, role, pick in needs:
             if h not in hs or side not in sides: continue
-            if role == 'trigger' and pick == 'self' and h != 'survives_damage': continue  # "Strike:" fires on any strike: more of it adds nothing
+            helpers_t = movers if pick != 'self' else helpers  # "whenever THIS moves onto": only what moves it, not other movers
+            if role == 'trigger' and pick == 'self' and h not in ('survives_damage', 'moves_onto', 'harvests'): continue  # getting there is help  # "Strike:" fires on any strike: more of it adds nothing
             if h in ('strikes', 'killed') and role == 'trigger': continue  # only counted strikes and kills grow with more power
             lv = ab in lvl
-            for a in helpers - {t}:
+            for a in helpers_t - {t}:
                 out[(a, t)].append(('levels' if lv else 'boosts', (1.0 if lv else 0.5) / n, why + (' (levels it up)' if lv else '')))
     # how many cards are in my hand ("played as the last card from your hand", "10+ cards in hand", "for each card in hand")
     hand = lambda acts, zone: {a for (a,) in c.execute(f"""select card from flat_do where act in ({','.join('?' * len(acts))}) and origin in
@@ -516,6 +535,15 @@ def boost_lines(c, game, nodes):
     for t, ab in c.execute(f"""select card, ability from flat_if where attr in ('health', 'total_stats') and (test='amount_stat' or
             (test='stat' and coalesce(op,'') in ('ge','gt'))) and coalesce(of_side,'mine')!='enemy' and card in ({marks})""", L).fetchall():
         for a in health - {t}: out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.5 / count(('defence_gain',)), 'more health' + (' (levels it up)' if ab in lvl else '')))
+    # where my units may enter (Wind Gate: "summon creatures on spaces adjacent to this"): helps a card whose entry asks for a
+    # place ("Gift - gains +1/+1 if summoned adjacent to an opponent's well")
+    placers = {a for (a,) in c.execute(f"""select card from flat_do where act='can' and param_event in ('summoned','played') and
+            to_kind='position' and coalesce(on_pick,'')!='self' and card in ({marks})""", L)}
+    if placers:
+        for (t,) in c.execute(f"""select distinct i.card from flat_if i join flat_when w on w.ability=i.ability where w.event in
+                ('played','summoned') and w.obj_pick='self' and (coalesce(i.of_with,'') like '%position %' or i.of_kind='position')
+                and i.card in ({marks})""", L).fetchall():
+            for a in placers - {t}: out[(a, t)].append(('boosts', 0.5 / len(placers), 'lets it enter where it needs to be'))
     # units whose keywords use their power (Challenger, Overwhelm, Quick Attack, Elusive, Double Attack, Ranged), and units whose
     # own effect makes them fight (Faeria "This fights an enemy creature"): power makes them hit harder
     for (t,) in c.execute(f"""select distinct ck.card from card_keyword ck join card k on k.id=ck.keyword join vocab v on v.field='keyword'
