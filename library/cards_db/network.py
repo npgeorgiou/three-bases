@@ -64,6 +64,7 @@ def kw_id(c, game, word):
 
 
 def number(c, n):
+    if '.' in str(n): return float(n)  # a number written in by the network itself ("cost ge 7.0"); stored filters hold amount ids
     r = c.execute('select x, value from amount where id=?', (n,)).fetchone() if str(n).isdigit() else None
     return r[1] if r and r[0] == 'n' else None
 
@@ -309,7 +310,7 @@ def buff_keyword(c, kw):
 AIM = {'give_keyword': 'can give it {kw}', 'keyword_action': 'can {kw} it', 'heal': 'can heal it', 'damage': 'can damage it',
        'kill': 'can kill it', 'strike': 'can make it strike', 'return_to_hand': 'can return it to hand', 'start_attack': 'can make it attack',
        'transform': 'can transform it', 'copy': 'can copy it', 'revive': 'can bring it back', 'move': 'can move it',
-       'cost_change': 'can change its cost', 'stat_set': 'can set its stats', 'give_ability': 'can give it an ability'}
+       'cost_change': 'can make it cheaper', 'stat_set': 'can set its stats', 'give_ability': 'can give it an ability'}
 
 
 def aim_said(act, kw, ps):
@@ -353,7 +354,10 @@ def aimed_rows(c, game):
         elif rule and act == 'give_keyword' and kw and buff_keyword(c, kw): rule = f'help gives it {mechanics.name(c, kw)}'
         elif rule and act == 'copy_keywords': rule = 'help gives it keywords'
         narrowed = any(p.split(' ')[0] not in PLAY_STATE + ('card',) and p.split(' ')[1:2] != ['not'] for p in (w or '').split(';') if p and not p.startswith('of:'))
-        if (side == 'any' and not rule) or (kind not in KIND_CAT and not (kind in ('card', 'any', 'anything') and (narrowed or named))): continue
+        cut = dict(x.split('=', 1) for x in (ps or '').split(';') if '=' in x).get('cost', '')
+        if act == 'cost_change' and not narrowed and kind in ('card', 'any') and cut.startswith('-') and cut[1:].replace('.', '').isdigit() \
+                and float(cut[1:]) >= 2:  # "a random card in your hand costs 7 less": a cut that big is used in full by the cards
+            w = ';'.join(x for x in (w, f'cost ge {cut[1:]}') if x); narrowed = True  # costing at least that much (Bargain decks) or (kind not in KIND_CAT and not (kind in ('card', 'any', 'anything') and (narrowed or named))): continue
         rows.append((a, act, kind, w, kw, rule, narrowed or named, ps))
     makers = collections.defaultdict(set)
     for a, act, kind, w, kw, rule, *_ in rows: makers[(act, kind, kw, rule if rule in (True, False, 'boost') else True)].add(a)
@@ -489,8 +493,10 @@ HELPS = [
     (('attacks',), ('mine', '', 'any'), ('multi_attack', 'extra_turn', 'attack_now'), 'another attack'),
     (('survives_damage',), ('mine', ''), ('defence_gain', 'shield', 'damage_reduction', 'immunity', 'regeneration', 'heal',
                                          'cheat_death', 'block_armor', 'lifesteal'), 'more health or protection: survives damage'),
-    # where a unit must get to (enemy land, an enemy well, a forest): what moves my units, or units that move well, gets it there
+    # where a unit must get to (enemy land, an enemy well, a forest, the enemy god): what moves my units, or units that move
+    # well, gets it there (positional games: moving is how a unit reaches the enemy player)
     (('moves_onto', 'harvests'), ('mine', '', 'enemy', 'any'), ('movement',), 'moves it where it must be'),
+    (('strikes_nexus', 'nexus_damaged'), ('enemy', '', 'mine'), ('movement',), 'moves it within reach of the enemy player'),
 ]
 HIT_KW = ('target_choice', 'excess_damage', 'multi_attack', 'first_strike', 'evasion', 'ranged')  # keywords whose use depends on power
 
@@ -517,7 +523,7 @@ def boost_lines(c, game, nodes):
     for hs, sides, concepts, why in HELPS:
         helpers = having(concepts, hs[0] == 'nexus_damaged'); n = count(concepts)
         move_rows = {}
-        if hs[0] == 'moves_onto':  # what moves another of my units, or gives it a movement keyword (row by row, not "has both somewhere")
+        if concepts == ('movement',):  # what moves another of my units, or gives it a movement keyword (row by row, not "has both somewhere")
             move_rows = collections.defaultdict(list)
             for a, w_ in c.execute(f"""select d.card, d.on_with from flat_do d left join card k on k.id=d.keyword_ref left join vocab v on
                     v.field='keyword' and v.value in (k.name, k.game || ':' || k.name) where d.origin='own' and coalesce(d.on_pick,'') not in ('self')
@@ -530,11 +536,12 @@ def boost_lines(c, game, nodes):
         for t, ab, h, side, role, pick in needs:
             if h not in hs or side not in sides: continue
             helpers_t = movers if pick != 'self' else helpers  # "whenever THIS moves onto": only what moves it, not other movers
-            if hs[0] == 'moves_onto':  # what it moves must be able to be this card ("give the Demon Wing Flying", "another Rakoan")
+            if concepts == ('movement',):  # what it moves must be able to be this card ("give the Demon Wing Flying", "another Rakoan")
                 fits = lambda ws: any(not who or matches(c, game, cards[t], 'any', who) for who in (';'.join(p for p in (w_ or '').split(';')
                        if p.split(' ')[:2] in (['card', 'is'], ['type', 'is'], ['type', 'in'], ['name_has', 'is'])) for w_ in ws))
                 helpers_t = {a for a in helpers_t if a not in move_rows or fits(move_rows[a])}
-            if role == 'trigger' and pick == 'self' and h not in ('survives_damage', 'moves_onto', 'harvests'): continue  # getting there is help  # "Strike:" fires on any strike: more of it adds nothing
+            if role == 'trigger' and pick == 'self' and h not in ('survives_damage', 'moves_onto', 'harvests') and \
+                    not (concepts == ('movement',) and h == 'strikes_nexus'): continue  # getting there is help  # "Strike:" fires on any strike: more of it adds nothing
             if h in ('strikes', 'killed') and role == 'trigger': continue  # only counted strikes and kills grow with more power
             lv = ab in lvl
             for a in helpers_t - {t}:

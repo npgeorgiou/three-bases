@@ -62,7 +62,9 @@ def build(c):
         for k in (re.findall(r'(?<![a-z:])keyword is (\d+)', withs or '') if kind != 'effect' and zone not in ('deck', 'deck_top', 'deck_bottom') else []):  # repeating Summon effects is no unit with Summon; a card in the deck has its keyword, nothing gives it (Iona's Smile draws Flying creatures)
             ins(card, origin, via, ab, 'state', 'given_keyword', kind, side, pick, int(k))
         # things picked by where they stand ("the enemy in front", "bordering units"): moving units changes who that is
-        if re.search(r'(?<![a-z:])position ', withs or '') and kind in BOARD_KINDS:
+        if re.search(r'(?<![a-z:])position ', withs or '') and kind in BOARD_KINDS and \
+                not re.search(r'(?<![a-z:])position \w+ \w+ of position(?: \w+)? chosen', withs or ''):  # around a space the player picks
+            # ("all enemies on or adjacent to a chosen space"): the player aims it where units are; moving them is no help
             ins(card, origin, via, ab, 'state', 'moves', kind, side, pick, w=withs)
 
     def kws_of(withs):
@@ -88,7 +90,8 @@ def build(c):
                 pk = 'actor_self' if ev in BY_ME else 'self'
             for k in (kws_of(ow) if len(kws_of(ow)) > 1 else [kw_of(ow)]):  # "traps or boons": one row per keyword, never "any keyword"
                 ins(card, o, v, ab, 'trigger', ev, ok if obj else ak, os_ if obj else as_, pk, k, w=ow if obj else aw, ak=ak if obj else None, aw=aw if obj else None)
-        state_rows(card, o, v, ab, ok, os_, op, ow, None)
+        state_rows(card, o, v, ab, ok, os_, op, ow, 'deck' if ev in ('drawn', 'played', 'discarded') else None)  # "draw a Flying
+        # creature": the card has Flying already; nothing given in play makes it one
     r_op = {(a, b, t, at): op for a, b, t, at, op in c.execute('select card, ability, test, attr, op from flat_if')}
     for r in c.execute('select card, origin, via, ability, event, of_kind, of_side, of_pick, of_zone, of_with, ev_obj_kind, '
                        'ev_obj_side, ev_obj_with, ev_obj_pick, test, attr, ev_actor_pick, ev_actor_kind, ev_actor_with from flat_if').fetchall():
@@ -146,7 +149,7 @@ def build(c):
         if act == 'spend_mana' and k in ('mana', 'secondary_resource', 'gem', 'lane_resource') and s in ('mine', None):
             # an ability that spends a resource needs it ("Activate: Pay 2 Bones"): fed by gaining it; the card's own need
             ins(card, o, v, None if o == 'has_keyword' else ab, 'condition', 'mana_refilled', k, 'mine', None, w=w)
-        state_rows(card, o, v, ab, k, s, p, w, z)
+        if p != 'it': state_rows(card, o, v, ab, k, s, p, w, z)  # "give it +1|+1": what it is was said by the event or the effect before
         if to_w and to_k != 'position' and re.search(r'(?<![a-z:])position ', to_w) and act not in PLACES:  # a space is not moved into place  # "attack a bordering enemy"; where a new card is put
             ins(card, o, v, ab, 'state', 'moves', to_k, s, None, w=to_w)                # ("Pelt Lice in adjacent slots") needs no moves
     # the game's rules (read/<game>/game_rules.jsonl): what every card of a category does without its text saying so (an
