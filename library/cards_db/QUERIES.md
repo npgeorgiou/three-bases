@@ -119,15 +119,15 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 - passive: monster_train 8 cards, runeterra 18 cards, stormbound 8 cards
 - cheat_death: runeterra 7 cards
 - silence: stormbound 8 cards
-- movement: monster_train 6 cards
 - forced_movement: monster_train 6 cards
+- movement: monster_train 6 cards
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: monster_train 399 pairs, e.g. Little Fade -> Primordium; runeterra 12614 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- sacrifice: monster_train 248 pairs, e.g. Primordium -> Devourer of Death; runeterra 3957 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- removal: monster_train 93 pairs, e.g. Wicked Blaze -> Primordium; runeterra 3531 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Embers of Chaos
-- self_destruct: monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6899 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Azure Hatcher
+- destroy: monster_train 399 pairs, e.g. Little Fade -> Primordium; runeterra 12614 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- sacrifice: monster_train 248 pairs, e.g. Primordium -> Devourer of Death; runeterra 3957 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- removal: monster_train 93 pairs, e.g. Molded -> Primordium; runeterra 3531 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Dreadful Keepers
+- self_destruct: monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6899 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
 - revive: runeterra 1074 pairs, e.g. Eternal Dancers -> Bladepierced Revenant
 - damage: runeterra 13499 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 719 pairs, e.g. Eloth the Ignited -> Dreadful Keepers
 

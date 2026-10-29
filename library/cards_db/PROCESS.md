@@ -108,6 +108,11 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
    every card and replaces the library's entry with the same code (source.py). A card with no text is still a card.
    Ids: the game's block in source.py; definitions Kaptain gives (`supplement/<game>_kaptain.jsonl`) from start + 900,000.
    Keywords-field entries that are data artefacts go to NOT_KEYWORDS in build_input.py with the proof.
+   **Take every form of a card by its code, not by its name**: a champion's level-up form, a transformed side, a token
+   often shares the base card's name (Riot: Bard 06RU001 and Bard 06RU001T4). Taking cards by name lost 11 Runeterra
+   level-up forms (Bard, Jhin, Jax ...): their level-ups and everything they do were missing from every network. Write the
+   links between the new cards too (`supplement/<game>_links.jsonl`: transforms_into, generates; source.py loads them): the
+   library has links only for its own cards.
 5. **Keyword definitions** come from the game's own glossary, with the source in source_type. Kaptain is asked only for a
    keyword no source defines. Glossary terms no card uses are left out.
 6. **The game's words** (readers can only use values that exist). For every term of the checklist (stats, board, turn
@@ -138,6 +143,13 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
 5. Second reading: `compare.py` lists differences; Claude judges them against the text. A kept reading that is wrong is
    fixed; each "same meaning, different form" becomes a normalize rule for all games.
 6. Rebuild every game once (`run.py <each game>`); all cases must pass.
+7. **Link audit** (`audit_links.py <game>`, also printed by run.py): every line it prints is a link that cannot exist. Each
+   is fixed at its cause (a missing `causes`, a keyword with no concept row or no record, a level-up form the source lacks,
+   a misread name) or explained in RESULTS.md. A game is not done while a line is unexplained.
+8. **Deck networks** (`network_page.py` draws every deck in decks.tsv and cases/decks.tsv; `ask.py <game> network "<deck>"`):
+   open the page and read every guide deck's network the way a player would: does each card that waits for something
+   get a line from the cards that do it? Kaptain found 15 gaps in 9 decks this way that 500 passing cases had not shown.
+   Each gap becomes a cases/network.tsv row (a line that must be there, or must not) and is fixed for every card.
 
 ### 3. Case tests (`cases/`)
 - mechanics.tsv: a question, the expected cards from the texts (regex on the text, or a Keywords-field keyword) and the
@@ -147,6 +159,8 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
   Train they showed the explainer missing keyword stacks, types, spell triggers and Morsels being eaten, all fixed in
   shared code for every game. A guide deck the explainer cannot explain is a gap to fix, not a case to drop.
 - combos.tsv: pairs a guide names, plus the library's combos rows; the source column says which guide.
+- network.tsv: lines of a guide deck's network that must be there, or must not (Kaptain's checks of the networks; a
+  wrong line is a "none" row, with why_not when only one reason is wrong).
 - regions.tsv: the library's signature, splash and archetype rows per faction.
 - A failing case is fixed at its cause: the query (check it against the texts first), the pattern, the value, the shared
   code or the records. A case built on wrong old tags is dropped with its reason in DROPPED.md.
@@ -161,7 +175,8 @@ its name and text, then its rows. Every error he finds is fixed for all cards wi
 `run.py <game>` passes every step and every other game still passes; the keyword -> concept list checked twice and shown
 to Kaptain; word check 0 open flags; no proposal need shared by cards with different texts; stubs only names nothing
 defines; `ask.py all compare <its main concepts>` shows its cards next to the other games'; every guide deck explained;
-Kaptain approved CHECK_20_<game>; RESULTS.md and HANDOFF.md say the state; everything pushed. After his approval, add a few
+Kaptain approved CHECK_20_<game>; audit_links.py prints nothing unexplained; every guide deck's network read (step 2.8)
+and its gaps fixed; RESULTS.md and HANDOFF.md say the state; everything pushed. After his approval, add a few
 approved records to BRIEF.md under "Game words: <game>" as worked examples.
 
 ## Asking the database
@@ -175,6 +190,47 @@ about X" use flat_ref (ask.py cares): the same thing is stored as a trigger, a c
 - `python3 status.py <game>` says from the files which batches are done, partial or todo.
 - Readers write in parts (`<batch>.partN.jsonl`); a stopped reader is resumed (it continues from its parts).
 - Every finished step is pushed at once. Chats end with HANDOFF.md updated.
+
+## Links the deck networks showed missing (29 Oct 2026; Kaptain's check of 9 decks; fixed in every game)
+The records were right card by card, but the links between cards were not: a network is only as good as the rule that
+joins "A makes X" to "B waits for X". What went wrong, how it was missed, and the rule now:
+1. **The kind of thing hit was dropped.** `damage` causes dies, survives_damage and nexus_damaged whatever it hits, so a
+   unit damaging its own base "made units die" (Reckless Rushers -> Green Prototypes) and Falling Star (an enemy unit)
+   "damaged the Nexus". Missed because every case asked "who makes X", never "who must NOT". Rule: refs.py keeps unit-only
+   and player-only happenings to their kinds; network.py joins only kinds that fit (kinds_fit).
+2. **"Me" was lost in conditions.** "I've survived 10+ damage" (Braum) stored its event object without the pick, so it
+   read as any unit surviving; "when I level up" (LeBlanc) took Ashe levelling up. Rule: flat_if keeps ev_obj_pick and
+   attr; a need about the card itself is fed only by what is done to my units; two cards each about themselves never link.
+   When the query layer flattens a record, every field that changes the meaning (pick, side, kind, attr, with) is kept.
+3. **Planted and placed cards were no cards.** Chime, Poison Puffcap, Flashbomb Trap, Mysterious Portal are planted by a
+   keyword action with a card; the network only followed summon/create. Rule: an effect that names a card puts that card
+   in (keyword_action included); a planted card going off is trap_activated (normalize N15; "activated" is a player using
+   something). Bard levels from Cosmic Binding's Chimes; Caitlyn from every trap planter.
+4. **Readers narrowed a class to one card.** "5+ of your traps have been activated" was read as card Flashbomb Trap, so
+   Poison Puffcaps did not count; "Trap" as a name family missed Puffcaps. Rule (BRIEF 23): "your traps / boons / spells /
+   Imps" is the keyword, category or type filter, never one card or a name family. Fixed by rule (fixes/runeterra/v30.py).
+5. **Keyword records were not the card's needs.** Plunder, Reputation, Nightfall, Deep ... are conditions in the keyword's
+   record; the network took only a card's own rows. Rule: a keyword condition the card uses is the card's need.
+6. **Things a card tests or picks by had no maker.** A stat tested ("the enemy Nexus has half its Health": Darius), a
+   position picked by ("the enemy in front", "bordering enemies": Booming Professors, Chaotic Pupil), units that can't be
+   blocked (they hit the Nexus), units that strike (they deal damage), moves, challenges, captures, Predict, Countdown: no
+   act said it caused them. Rule: refs.py feeds a tested stat from what changes it and a position filter from moves; vocab
+   `causes` was completed (move, swap, challenge, capture, Predict, Countdown, Trap, Boon, Elusive, Overwhelm). Every new
+   event, state or test needs its makers before a game is done; audit_links.py lists those nothing makes.
+7. **Groups of cards acted on were ignored.** Doctor Mia repeats structures, Ava Achiever doubles traps, Teemo 2 copies
+   Puffcaps, Norra 2 changes Portals: only Attack/Support repeats were followed. Rule: repeat, increase_effect, copy and
+   give_ability on a named group link to every card of the group, on either side when the group is named (traps on enemy
+   cards are still mine).
+8. **Cards that are what another waits for, and kinds of card another needs.** A spell is what "Fast spells, Slow spells or
+   Skills you've played" counts (Ravenbloom Conservatory); a structure is what "units surrounding a friendly structure"
+   needs (Fortification Tonic). Rule: played_lines and need_lines match the card itself against the filter.
+9. **Helping is a link too.** Power buffs and Elusive, Overwhelm, Quick Attack, Challenger given to my units help every card
+   that counts damage my side deals (Darius, LeBlanc, Reputation): weak "makes its damage bigger" lines.
+10. **33 Runeterra keywords had no vocab concept row** (Plunder, Countdown, Last Breath ... ; Runeterra predates rule 2 of
+   "Writing data the same way"), so concept questions missed them. Mapped from Riot's glossary (Claude's, for Kaptain's
+   check); audit_links.py lists any keyword without one.
+How it was missed: every test asked whether the query finds the cards that do X; none asked whether two cards of a real
+deck are joined, or must not be. Read the networks of guide decks (step 2.8) before calling a game done.
 
 ## Mistakes made before (do not repeat)
 - Fetching a game's data the repo already had; trusting old library tags; judging data by one narrow question; assuming

@@ -112,6 +112,13 @@ AMOUNT   a number, or `{"x": x, "of": TARGET, "attr": attr, "event": EVENT, "spa
 22. A card that puts a named card into play ("summon a Stormcarved Spire that ... summons an exact copy of the unit")
    describes only its own part (what it obliterates, which card, the numbers it sets). What the named card then does is
    that card's own record; never copy it into this card.
+23. A class of cards is its filter, never one card or a name family: "your traps", "traps or boons" = keyword Trap / Boon;
+   "your spells" = category spell; "Imp units" = type Imp. Write one card only when the text names that card ("a Flashbomb
+   Trap"). (Caitlyn's "5+ of your traps" was read as Flashbomb Trap, so Poison Puffcaps did not count.)
+24. Whose event: "I've struck", "I've survived damage", "when I level up" = the event's object (or actor) pick self; "you
+   dealt damage" = actor the player, side mine. Never leave out the "self": without it the card waits for any unit.
+25. Write the kind of what is hit: a base, Nexus or Pyre is kind player; a unit is kind unit. Damage "to your base" is not
+   damage to a unit.
 
 ## Keyword entries (category keyword)
 A keyword's record says what the keyword means, so that every card with it inherits that meaning. Four kinds:

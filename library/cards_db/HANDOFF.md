@@ -16,6 +16,8 @@
 - Monster Train: every build step passes; waiting for Kaptain's check of CHECK_20_monster_train.md (ids in
   CHECK_20_monster_train_ids.txt) and of the keyword -> concept list. Results in RESULTS.md.
 - Questions over all games work (`ask.py all ...`, mechanics.py, QUERIES.md). The next game follows PROCESS.md.
-- A deck, faction or game as a network of cards is built (network.py, `ask.py <game> network`; NETWORK_DRAFT.md has the
-  plan and Claude's own choices). Waiting for Kaptain's judgement; only the Lucian/Senna guide deck is stored (QUERIES.md),
-  the Nilah/Janna, Marauder/Fiora and Telsi/Volibear lists are not in the repo.
+- Deck networks: network.py (`ask.py <game> network`), the page `network_page.py` -> network.html (decks from the web in
+  decks.tsv and cases/decks.tsv, a game picker). Kaptain's check of 9 decks found links missing or wrong; fixed for every
+  game (CHANGES v30) and turned into cases/network.tsv and audit_links.py. **Importing a game: read PROCESS.md "Links the
+  deck networks showed missing" first.** Open for Kaptain: his judgement of the new networks; the 33 Runeterra keyword ->
+  concept rows Claude mapped (vocab.tsv, added 29 Oct 2026, v30).
