@@ -293,6 +293,8 @@ hero_power | Hero power | trigger | activated | A repeatable player or leader ab
 on_ally_play | When I play another card | trigger | trigger,synergy_payoff | Triggers when the owner plays or summons another card or unit. | When this card is played is on_play.
 on_attack | When it attacks | trigger | trigger | Triggers when the unit attacks or strikes. | When it is attacked is on_damaged or counterattack.
 on_damaged | When it is damaged | trigger | trigger | Triggers when the unit is damaged or survives damage. | Striking back at the attacker is counterattack.
+on_fight | When it fights | trigger | trigger | Triggers when the unit exchanges attacks with another unit, a structure or a player: when it attacks and when it is attacked, both hitting (Faeria Combat). (Added 29 Oct 2026, Claude's.) | Only when it attacks is on_attack; damage from anything is on_damaged.
+on_harvest | When it collects a resource from the board | trigger | trigger | Triggers when a unit collects a resource from a board space (Faeria harvesting a faeria well). (Added 29 Oct 2026, Claude's.) | Gaining a resource by an effect is resource_gain.
 on_enemy_enter | When an enemy arrives | trigger | trigger | Triggers when an enemy is placed or moves in. | When an ally arrives is on_ally_play.
 on_kill | When it kills | trigger | trigger | Triggers when the unit kills another. | When it dies is death_trigger.
 on_play | When played (battlecry, on reveal) | trigger | trigger | Triggers when the card is played or revealed: battlecry, on reveal, enters. | When another card is played is on_ally_play.

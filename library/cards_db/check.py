@@ -87,7 +87,7 @@ class Checker:
         a = f.get('attr'); self.enum(cid, path + '.attr', 'attr', a); self.enum(cid, path + '.op', 'op', f.get('op'))
         if a in ('keyword', 'type', 'card'):
             for r in (f['refs'] if 'refs' in f else [f.get('ref')]): self.link(cid, path + '.ref', a, r)
-        elif a in ('state', 'category', 'region', 'origin', 'rarity', 'position'):
+        elif a in ('state', 'category', 'region', 'origin', 'rarity', 'position', 'terrain'):
             for x in (f['vals'] if 'vals' in f else [f.get('val')]): self.enum(cid, path + '.val', 'state' if a == 'origin' else a, x)
         elif a == 'name_has':
             if not isinstance(f.get('ref'), str) or not f['ref'].strip(): self.err(cid, path + '.ref', 'name word expected')

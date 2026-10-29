@@ -1,0 +1,23 @@
+{"id": 741057, "name": "Gift", "category": "keyword", "text": "Triggers when the card is summoned."}
+{"id": 741058, "name": "Last Words", "category": "keyword", "text": "Triggers when the creature or structure is destroyed."}
+{"id": 741059, "name": "Production", "category": "keyword", "text": "Triggers at the start of each of its owner's turns."}
+{"id": 741060, "name": "Combat", "category": "keyword", "text": "Triggers whenever it exchanges attacks with creatures, structures or the enemy orb (not when shot by a ranged creature)."}
+{"id": 741061, "name": "Corrupt", "category": "keyword", "text": "Triggers the first time this creature moves onto enemy land, on a turn after it was played."}
+{"id": 741062, "name": "Activate", "category": "keyword", "text": "Structures only: use the ability once per turn."}
+{"id": 741063, "name": "Flying", "category": "keyword", "text": "Can move over ocean and land, but not through creatures or structures."}
+{"id": 741064, "name": "Charge", "category": "keyword", "text": "Can move several spaces in a straight line."}
+{"id": 741065, "name": "Jump", "category": "keyword", "text": "Moves up to two tiles and can leap over obstacles, creatures and ocean."}
+{"id": 741066, "name": "Taunt", "category": "keyword", "text": "Adjacent enemy creatures cannot move and can only attack the taunt."}
+{"id": 741067, "name": "Dash", "category": "keyword", "text": "When summoned, moves X spaces in a straight line."}
+{"id": 741068, "name": "Haste", "category": "keyword", "text": "Can move, attack and harvest the turn it is played."}
+{"id": 741069, "name": "Protection", "category": "keyword", "text": "Prevents all damage from the next damage source, then is removed."}
+{"id": 741070, "name": "Discover", "category": "keyword", "text": "Creates a copy of a card."}
+{"id": 741071, "name": "Ranged Attack", "category": "keyword", "text": "Shoots in a straight line with line of sight; takes no retaliation unless adjacent or shot by another ranged unit; cannot attack after moving normally."}
+{"id": 741072, "name": "Divine", "category": "keyword", "text": "Cannot be targeted by spells or abilities from either player (still attackable and hit by area effects)."}
+{"id": 741073, "name": "Deathtouch", "category": "keyword", "text": "Any creature it damages dies."}
+{"id": 741074, "name": "Aquatic", "category": "keyword", "text": "Can only travel over lakes and ocean; drowns at end of turn on other land."}
+{"id": 741075, "name": "Swallow", "category": "keyword", "text": "Removes a creature from the game until the swallower dies, then releases it."}
+{"id": 3000040, "name": "Wild", "category": "keyword", "text": "A card is wild when all the lands it requires are wild: any land colours pay them, and a wild creature can be summoned on any of your lands, including prairies."}
+{"id": 3000041, "name": "Fight", "category": "keyword", "text": "Your creature exchanges attacks with an enemy creature anywhere on the board; this does not count as the creature's attack for the turn."}
+{"id": 3000042, "name": "Teleport", "category": "keyword", "text": "Moves a creature to another tile; this does not count as the creature's movement for the turn."}
+{"id": 3000043, "name": "Transform", "category": "keyword", "text": "Turns a creature into another; its stats return to the new card's printed values (buffs and damage are removed); it is not a summon."}

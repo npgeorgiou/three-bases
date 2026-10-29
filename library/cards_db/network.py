@@ -25,7 +25,7 @@ KIND_CAT = {'unit': {'unit', 'hero'}, 'landmark': {'building'}, 'spell': {'spell
             'unit_or_structure': {'unit', 'hero', 'building'}}
 CAT = {'follower': {'unit'}, 'champion': {'hero'}, 'unit': {'unit', 'hero'}, 'spell': {'spell'}, 'skill': {'ability'},
        'landmark': {'building'}, 'equipment': {'item'}}
-PLAY_STATE = ('state', 'position', 'targets', 'right_of', 'level', 'origin', 'countdown', 'damage')  # true or not only in play
+PLAY_STATE = ('state', 'position', 'terrain', 'targets', 'right_of', 'level', 'origin', 'countdown', 'damage')  # true or not only in play
 EVERY_GAME = deck_analysis.EVERY_GAME
 
 

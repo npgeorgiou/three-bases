@@ -119,3 +119,22 @@ Each change: date, what changed, the card that caused it, and which records were
   (object_help_lines); a card's effects on itself only feed needs its kind fits; hand-size needs; audit_text Rally only in
   Runeterra; PROCESS lesson 6 (query layer), steps 2.7 (text audit) and 2.9 (read 10 full decks), "Done when"; HANDOFF
   "Importing a new game: start here"; cases n58-n64.
+
+## 29 Oct 2026, v35 (Faeria import, Claude's mapping from Abrakam's glossary and the faeria.com Keyword Rulings guide)
+- Source: Abrakam's card export (library/tools/convert/faeria_*.csv); supplement_faeria.py writes 19 cards the library lacked,
+  13 whose library text kept export markup or wrote two land icons as "lake lake" (now "2 lakes"), and glossary terms Wild,
+  Fight, Teleport, Transform. source.py: a supplement entry now replaces the library entry with the same bare card code too
+  (Faeria "45"; this also removed Runeterra's duplicate Dragon's Rage, 02IO007).
+- Board ground: attr terrain with values land, ocean, prairie, lake, forest, mountain, desert, special_land, resource_well;
+  act set_terrain (create, transform or destroy a land), event terrain_changed; position same_space; state empty; bordering
+  also means the 6 hex neighbours; steal also takes a board space. flat.py: terrain and territory_trigger shape rules.
+- Harvest: act harvest, event harvests (concept on_harvest, new). Combat: event fights (concept on_fight, new; start_attack
+  causes it). Corrupt: event moves_onto (move causes it). Power wheel: event turn_option_chosen.
+- Keywords: Gift on_play, Last Words death_trigger, Production turn_start, Combat on_fight, Corrupt territory_trigger,
+  Activate activated, Flying / Charge / Jump / Dash / Aquatic / Teleport movement (Flying, Jump, Aquatic: Kaptain 26 Oct),
+  Taunt taunt, Haste haste, Protection shield, Discover selection, Ranged Attack ranged, Divine immunity, Deathtouch
+  deathtouch, Swallow banish (as Runeterra Capture), Wild cost_type, Fight attack_now, Transform transform. Regions Blue,
+  Green, Red, Yellow, Neutral (Human), Pandora.
+- refs.py: a game rule is skipped only for cards that can never do what that rule makes ("Can't harvest faeria" skips the
+  harvest rule; "can only attack gods", a can't limited to some targets, skips nothing).
+- read/faeria/game_rules.jsonl: units fight (strike an enemy unit or structure, or the enemy god) and harvest wells.

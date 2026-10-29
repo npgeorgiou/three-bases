@@ -56,7 +56,7 @@ act	cost_change	change the cost of the target (signed param cost)	cost_reduction
 act	mana_gain	refill or gain mana / spell mana (param amount, kind via target)	resource_gain	mana_refilled;resource_gained	27 Oct 2026, v1
 act	gain_attack_token	the player gains the attack token (Rally)	extra_turn	attack_token_gained	27 Oct 2026, v1
 act	strike	the target unit strikes another target now	attack_now	strikes;damaged;survives_damage;dies;killed	27 Oct 2026, v1
-act	start_attack	start a free attack with the targets	attack_now	attacks	27 Oct 2026, v1
+act	start_attack	start a free attack with the targets	attack_now	attacks;fights	27 Oct 2026, v1
 act	challenge	force a unit to block / choose its blocker	forced_attack	blocks;challenges	27 Oct 2026, v1
 act	stun	stun (cannot attack or block this round, removed from combat)	disable	given_keyword:Stun	27 Oct 2026, v1
 act	mark	mark the target for a later effect	mark_target		27 Oct 2026, v1
@@ -70,7 +70,7 @@ act	choose_card	pick a card among options (Invoke, Manifest, Predict, Discover)	
 act	counter	negate a spell or skill	counter_spell		27 Oct 2026, v1
 act	negate_damage	prevent damage to the target	damage_prevention		27 Oct 2026, v1
 act	swap	swap the positions of the targets	swap	moves	27 Oct 2026, v1
-act	move	move the target to another position or zone	forced_movement	moves	27 Oct 2026, v1
+act	move	move the target to another position or zone	forced_movement	moves;moves_onto	27 Oct 2026, v1
 act	countdown_advance	make a Countdown count down (param amount)	delayed	countdown_done	27 Oct 2026, v1
 act	attach	attach the source to the target unit	merge_attach	equipped	27 Oct 2026, v1
 act	keyword_action	do what the linked keyword describes (Recall, Invoke, Predict, Toss, Nab, ...)		keyword_used	27 Oct 2026, v1
@@ -336,7 +336,7 @@ act	remove_keywords	"remove all keywords of a kind from the target (filter in ""
 state	negative	a negative keyword or effect			28 Oct 2026, v4
 act	swap_stats	"the ""on"" unit and the ""to"" unit exchange Power and Health values (Swapbot's Swap)"	swap	stat_changed	28 Oct 2026, v5
 act	shuffle_stats	shuffle the target's stats (the card text's words; no definition text in the library)	swap	stat_changed	28 Oct 2026, v5
-act	steal	take control of an enemy unit (lasts this_round when the text says this round)	steal		28 Oct 2026, v5
+act	steal	take control of an enemy unit or board space (Faeria: gain control of a land; lasts this_round when the text says this round)	steal		28 Oct 2026, v5
 act	unequip	remove the target's equipment	debuff		28 Oct 2026, v5
 event	counts_down	a Countdown goes down by one (When I count down)	delayed		28 Oct 2026, v5
 span	different_rounds	"counts the rounds in which the event happened at least once (""in 5+ different rounds"", ""for each different round"")"			28 Oct 2026, v5
@@ -367,7 +367,7 @@ position	behind	the tile directly behind			28 Oct 2026, v11 (Stormbound)
 position	behind_all	"any tile behind, in the same column (""all tiles behind"")"			28 Oct 2026, v11 (Stormbound)
 position	closest_behind	the closest one behind in the same column			28 Oct 2026, v11 (Stormbound)
 position	sides	"the tile to the left or right (""on both sides"", ""on the side"")"			28 Oct 2026, v11 (Stormbound)
-position	bordering	"the 4 tiles in front, behind and on the sides; ""bordering your base"" = of the player"			28 Oct 2026, v11 (Stormbound)
+position	bordering	"the tiles touching of along an edge: on a square grid the 4 in front, behind and on the sides; on a hex board the 6 neighbours (Faeria adjacent); ""bordering your base"" = of the player"			28 Oct 2026, v11 (Stormbound)
 position	surrounding	the 8 tiles around (bordering plus diagonals)			28 Oct 2026, v11 (Stormbound)
 position	same_row	the same row			28 Oct 2026, v11 (Stormbound)
 position	same_column	the same column			28 Oct 2026, v11 (Stormbound)
@@ -545,3 +545,51 @@ keyword	Mark of the Storm	concept of having, using or giving this keyword (Runet
 event	cost_changed	a card's cost is changed (made cheaper or dearer)			29 Oct 2026, v33
 state	cost_reduced	a card whose cost was reduced ("cost reduced cards")	cost_reduction	cost_changed	29 Oct 2026, v33
 keyword	Attack	concept of having, using or giving this keyword (Runeterra: a label, "Attack:" = when this unit attacks; concept is Claude's)	on_attack		29 Oct 2026, v34
+attr	terrain	the kind of ground of a board space; value from terrain (Faeria lands)	terrain		29 Oct 2026, v35
+terrain	land	any land: not water or ocean (Faeria: prairie or a special land)	terrain		29 Oct 2026, v35
+terrain	ocean	open water no land is built on (Faeria ocean)	terrain		29 Oct 2026, v35
+terrain	prairie	neutral land of no colour (Faeria prairie)	terrain		29 Oct 2026, v35
+terrain	lake	water land of the blue colour (Faeria lake)	terrain		29 Oct 2026, v35
+terrain	forest	forest land of the green colour (Faeria forest)	terrain		29 Oct 2026, v35
+terrain	mountain	mountain land of the red colour (Faeria mountain)	terrain		29 Oct 2026, v35
+terrain	desert	desert land of the yellow colour (Faeria desert)	terrain		29 Oct 2026, v35
+terrain	special_land	a land of a colour, not prairie (Faeria special land: lake, forest, mountain or desert)	terrain		29 Oct 2026, v35
+terrain	resource_well	a board space whose resource a unit next to it collects (Faeria faeria well)	terrain		29 Oct 2026, v35
+act	set_terrain	change the ground of the "on" spaces to the terrain the "to" target has (Faeria create, transform or destroy a land; a destroyed land becomes ocean)	terrain	terrain_changed	29 Oct 2026, v35
+act	harvest	the unit collects a resource from a board space next to it (Faeria harvesting faeria from a well)	resource_gain	harvests;resource_gained	29 Oct 2026, v35
+event	terrain_changed	a board space's ground changes (Faeria "whenever you create forest")	terrain		29 Oct 2026, v35
+event	harvests	a unit collects a resource from a board space next to it (actor the unit, object the space; Faeria harvesting a well)	on_harvest		29 Oct 2026, v35
+event	fights	a unit exchanges attacks with a unit, structure or player, attacking or attacked, not hit from range (Faeria Combat)	on_fight		29 Oct 2026, v35
+event	moves_onto	a unit has moved onto a board space (actor the unit, object the space: "moves onto enemy land", "moves into a forest")			29 Oct 2026, v35
+event	turn_option_chosen	the player picks one of the choices every turn offers (Faeria power wheel; object kind mana = the +1 faeria choice)			29 Oct 2026, v35
+position	same_space	on the same board space as of (a unit and the land it stands on: "this creature's land", "on an enemy land")			29 Oct 2026, v35
+state	empty	a board space with no unit or structure on it ("unoccupied land")			29 Oct 2026, v35
+keyword	Gift	concept of having, using or giving this keyword (Faeria: when the card is played from hand)	on_play		29 Oct 2026, v35
+keyword	Last Words	concept of having, using or giving this keyword (Faeria: when this creature or structure is destroyed)	death_trigger		29 Oct 2026, v35
+keyword	Production	concept of having, using or giving this keyword (Faeria: at the start of each of its owner's turns)	turn_start		29 Oct 2026, v35
+keyword	Combat	concept of having, using or giving this keyword (Faeria: whenever it exchanges attacks with creatures, structures or the enemy god; not when shot from range)	on_fight	fights	29 Oct 2026, v35
+keyword	Corrupt	concept of having, using or giving this keyword (Faeria: the first time it moves onto enemy land on a turn after it was played)	territory_trigger	moves_onto	29 Oct 2026, v35
+keyword	Activate	concept of having, using or giving this keyword (Faeria: a structure's ability used once per turn)	activated	activated	29 Oct 2026, v35
+keyword	Flying	concept of having, using or giving this keyword (Faeria: moves over ocean and land; Faeria has no blocking, so it is movement, Kaptain 26 Oct 2026)	movement		29 Oct 2026, v35
+keyword	Charge	concept of having, using or giving this keyword (Faeria Charge N: moves up to N spaces in a straight line)	movement		29 Oct 2026, v35
+keyword	Jump	concept of having, using or giving this keyword (Faeria: moves up to 2 spaces, over creatures and ocean)	movement		29 Oct 2026, v35
+keyword	Dash	concept of having, using or giving this keyword (Faeria Dash N: when summoned, moves up to N spaces in a straight line)	movement		29 Oct 2026, v35
+keyword	Aquatic	concept of having, using or giving this keyword (Faeria: moves only over ocean and lakes, drowns at end of turn on other land; movement, Kaptain 26 Oct 2026)	movement		29 Oct 2026, v35
+keyword	Taunt	concept of having, using or giving this keyword (Faeria: adjacent enemy creatures can't move and can only attack it)	taunt		29 Oct 2026, v35
+keyword	Haste	concept of having, using or giving this keyword (Faeria: can move, attack and harvest the turn it is played)	haste		29 Oct 2026, v35
+keyword	Protection	concept of having, using or giving this keyword (Faeria: prevents all damage of the next damage source, then is removed)	shield		29 Oct 2026, v35
+keyword	Discover	concept of having, using or giving this keyword (Faeria: pick one of the offered cards and add a copy to hand)	selection		29 Oct 2026, v35
+keyword	Ranged Attack	concept of having, using or giving this keyword (Faeria: shoots in a straight line with line of sight; no retaliation unless adjacent or ranged; can't attack after moving)	ranged		29 Oct 2026, v35
+keyword	Divine	concept of having, using or giving this keyword (Faeria: can't be targeted by either player's events or abilities)	immunity		29 Oct 2026, v35
+keyword	Deathtouch	concept of having, using or giving this keyword (Faeria: any creature it damages dies)	deathtouch		29 Oct 2026, v35
+keyword	Swallow	concept of having, using or giving this keyword (Faeria: removes a creature until the swallower dies; like Runeterra Capture)	banish	keyword_used:Swallow	29 Oct 2026, v35
+keyword	Wild	concept of having, using or giving this keyword (Faeria: a card whose land requirements any land colours pay)	cost_type		29 Oct 2026, v35
+keyword	Fight	concept of having, using or giving this keyword (Faeria: exchanges attacks with an enemy creature anywhere; not its attack for the turn)	attack_now	fights	29 Oct 2026, v35
+keyword	Teleport	concept of having, using or giving this keyword (Faeria: moves a creature; not its movement for the turn)	movement		29 Oct 2026, v35
+keyword	Transform	concept of having, using or giving this keyword (Faeria: becomes another card; buffs and damage are removed; not a summon)	transform	transformed	29 Oct 2026, v35
+region	Blue	region (Faeria colour or card pool)			29 Oct 2026, v35
+region	Green	region (Faeria colour or card pool)			29 Oct 2026, v35
+region	Red	region (Faeria colour or card pool)			29 Oct 2026, v35
+region	Yellow	region (Faeria colour or card pool)			29 Oct 2026, v35
+region	Neutral (Human)	region (Faeria colour or card pool)			29 Oct 2026, v35
+region	Pandora	region (Faeria colour or card pool)			29 Oct 2026, v35

@@ -106,3 +106,23 @@ monster_train	V47	\bconsumed\b|\bconsume pile\b	value:exhausted	yes	consumed car
 monster_train	V48	\breturn\b[^.]{0,50}\bto (?:your|the) hand\b|\bto the top of your draw pile\b	value:return_card|put_on_top	yes	returning used cards
 monster_train	V49	\bmove\b	value:move	yes	verb
 monster_train	V50	\bdouble\b	value:double	yes	verb
+faeria	T54	\bgift\s*-	event:played	yes	trigger label (Abrakam glossary: Gift)
+faeria	T55	\blast words\s*-	event:dies	yes	trigger label (Last Words)
+faeria	T56	\bproduction\s*-	event:turn_start	yes	trigger label (Production)
+faeria	T57	\bcombat\s*-	event:fights	yes	trigger label (Combat)
+faeria	T58	\bcorrupt\s*-	event:moves_onto	yes	trigger label (Corrupt)
+faeria	T59	\bactivate\s*-	event:activated	yes	trigger label (Activate)
+faeria	T60	\bat the end of (?:your|the) turn\b	event:turn_end	yes	trigger phrase
+faeria	T61	\battacks? a god\b	event:strikes_nexus	yes	"attacks a god" is hitting the enemy player (BRIEF rule 31)
+faeria	T62	\bharvests? faeria\b(?<!can't harvest faeria)	value:harvests|harvest	yes	harvesting wording ("can't harvest" is a cant)
+faeria	V51	[+-]\d+/[+-]\d+	value:stat_change|stat_set	yes	stats are Attack/Life ("+2/+2")
+faeria	V52	\bgain (?:\d+|x) faeria\b	value:mana_gain	yes	faeria is mana
+faeria	V53	\bcreate (?:\d+ )?(?:lakes?|forests?|mountains?|deserts?|a prairie)|\btransform\b[^.]{0,30}\blands?\b|\bdestroy\b[^.]{0,40}\blands\b|\bmove (?:a|this creature's) land	value:set_terrain|move|kill	yes	land acts (BRIEF Game words: Faeria)
+faeria	V54	\bgain control of\b	value:steal	yes	verb
+faeria	V55	\bswallow	value:capture|keyword_action	yes	Swallow removes until the swallower dies
+faeria	V56	\bteleport	value:move	yes	verb
+faeria	V57	\bfights?\b	value:start_attack	yes	Fight (rulings)
+faeria	V58	\bdiscover	value:keyword_action|choose_card	yes	Discover
+faeria	V59	\bdrain\b	value:damage	yes	Drain damages, then heals you
+faeria	V60	\bbecomes? wild land|\bare wild land\b	value:give_keyword	yes	"becomes wild land" = give_keyword Wild
+faeria	V61	\bthis turn\b	value:this_round	yes	one turn is the span (BRIEF Game words: Faeria)

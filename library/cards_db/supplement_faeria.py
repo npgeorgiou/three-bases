@@ -4,7 +4,8 @@ CardExport/merlin_shortened.csv (462 cards: card_id;color;card_name;card_type;ca
 mountain;desert;power;life;codex_id;rarity) and CardExport/English/cards.csv (<id>.name / <id>.text), copied to
 library/tools/convert/faeria_merlin_shortened.csv and faeria_cards_english.csv (sha256 9199d280... and 96d3ada5...).
 The library holds 443 of these cards from the same export, so only the cards it lacks, and the cards whose library text
-kept the export's markup (choices of 3 or 4 options: "{green.|..."), are written here; they replace the library's entry.
+differs from render() (choices of 3 or 4 options kept the markup "{green.|..."; land icons were written "lake lake" for two
+lakes), are written here; they replace the library's entry.
 Glossary: the repository README's function list and faeria.com's Keyword Rulings guide (Abrakam's own definitions); a term
 is written only when cards use it and the library has no keyword entry for it.
 Writes supplement/faeria.jsonl in the library's entities columns; ids from 3000001 (source.py).
@@ -34,10 +35,17 @@ LAND = {'blue': 'lake', 'green': 'forest', 'red': 'mountain', 'yellow': 'desert'
 NAMES = {'ranged_attack': 'Ranged Attack', 'last_words': 'Last Words', 'wild': 'wild land'}
 
 
+def lands(m):
+    """land icons: one is its name ("Create forest"), several the same are counted ("{blue}{blue}" -> "2 lakes")"""
+    cs = re.findall(r'\w+', m[0])
+    if len(cs) > 1 and len(set(cs)) == 1: return f'{len(cs)} {LAND[cs[0]]}s'
+    return ' '.join(LAND[c] for c in cs)
+
+
 def render(t):
     """The export's markup as the library writes it: {gift} -> Gift, {charge|3} -> Charge 3, {faeria|2} -> 2 faeria."""
     t = t.replace('\\n', '\n').replace('<b>', '').replace('</b>', '')
-    t = re.sub(r'(?:\{(?:blue|green|red|yellow)\})+', lambda m: ' '.join(LAND[c] for c in re.findall(r'\w+', m[0])), t)
+    t = re.sub(r'(?:\{(?:blue|green|red|yellow)\})+', lands, t)
     t = re.sub(r'\{dynamic_number\|[^}]*\}', 'X', t)  # a counter the card shows in play; its text says what it counts
     t = re.sub(r'\{faeria\|(\d+)\}', r'\1 faeria', t)
     t = re.sub(r'\{(\w+)\}', lambda m: NAMES.get(m[1], m[1].replace('_', ' ').title()), t)

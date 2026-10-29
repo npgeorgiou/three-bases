@@ -133,10 +133,14 @@ def build(c):
     # attacking unit hits the enemy Nexus when it is not blocked); its makes rows, about "self", become every such card's own
     for e, cat in c.execute('select entry, category from game_rule').fetchall():
         rows = c.execute("select ability, happening, kind, side, pick, keyword, concept, obj_with, ref from flat_ref where card=? and role='makes'", (e,)).fetchall()
-        # a unit that can never attack (Immobile, Inert, "I can't attack") does not fight
+        # a unit that can never do what the rule makes does not follow it: Immobile, Inert, "I can't attack" skip the fight rule,
+        # "Can't harvest faeria" the harvest rule; a "can't" limited to some targets ("can only attack gods") skips nothing
+        made = {r[1] for r in rows}
+        fights = bool(made & {'attacks', 'strikes', 'strikes_nexus', 'fights'})
         never = {a for (a,) in c.execute("""select ck.card from card_keyword ck join card k on k.id=ck.keyword join vocab v on v.field='keyword'
-                 and v.value in (k.name, k.game || ':' || k.name) where v.tree='cant_attack' union select card from flat_do where origin='own'
-                 and act='cant' and param_event='attacks' and on_pick='self' and coalesce(lasts,'while') in ('while','permanent')""")}
+                 and v.value in (k.name, k.game || ':' || k.name) where v.tree='cant_attack'""")} if fights else set()
+        never |= {a for (a, ev) in c.execute("""select card, param_event from flat_do where origin='own' and act='cant' and on_pick='self'
+                 and to_kind is null and coalesce(lasts,'while') in ('while','permanent')""") if ev in made or (fights and ev == 'attacks')}
         for (card,) in c.execute('select id from card where category=? and game=(select game from card where id=?) and is_stub=0', (cat, e)).fetchall():
             if card in never: continue
             for ab, h, k, sd, pk, kw, con, w, ref in rows:

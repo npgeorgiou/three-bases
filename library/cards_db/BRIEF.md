@@ -334,3 +334,58 @@ Extract, ...) define the words; cards use the values below. Mapping decided by C
   "<Path> path: Upgrade I: ... Upgrade II: ... Upgrade III: ..." = one ability set per upgrade with the path cond plus
   `{"test": "level", "op": "eq", "n": <1, 2, 3>}`. "Next version:" in a card = its next version: write each version's
   abilities with the cond level eq 1, 2, 3.
+
+## Game words: Faeria
+Faeria has no Keywords field: describe everything the text says. Its glossary keywords (Gift, Last Words, Production, Combat,
+Corrupt, Activate, Flying, Charge, Jump, Dash, Aquatic, Taunt, Haste, Protection, Discover, Ranged Attack, Divine, Deathtouch,
+Swallow, Wild, Fight, Teleport, Transform) define the words; cards use the values below. Mapping decided by Claude from the
+game's own glossary (Abrakam's card export README, faeria.com Keyword Rulings guide; 29 Oct 2026).
+- Players. Each player has a god (an orb) with Life = kind player. "Your opponent", "the enemy god", "a god" = kind player
+  (side enemy / any). "Deal 2 damage to yourself" = damage on `{"kind": "player", "side": "mine"}`. "Gain 3 Life" = heal on
+  the player. A plain "enemy" / "enemies" (the rulings: all enemies, gods included) = kind anything; "enemy creature" = kind
+  unit; "creatures and structures" = unit_or_structure.
+- Cards. Creature = unit, structure = landmark (category landmark), event = spell (category spell). Attack = power, Life =
+  health ("+2/+1" = power 2, health 1). Legend / legendary = rarity legendary. Types (Yak, Triton, Beast, Mecha, Rakoan) =
+  filter type. A colour of card ("a random blue card", "a green creature") = filter `{"attr": "region", "op": "is", "val":
+  "Blue"}` (Green, Red, Yellow; the card's faction); "neutral" = region "Neutral (Human)".
+- Faeria = mana. "Gain 2 faeria" = mana_gain amount 2 on the player. "Costs 1 faeria less" = cost_change cost -1; "It costs 0
+  faeria", "a free X" = cost_set cost 0. "It becomes wild land" / "They are wild land" = give_keyword Wild, lasts permanent.
+- The board is hexes ("spaces"). A space is kind position; its ground is filter `{"attr": "terrain", "op": "is", "val": ...}`:
+  ocean, land (any land), prairie, lake, forest, mountain, desert, special_land, resource_well (a faeria well). Lands have
+  an owner: "a land you control", "your lands", "friendly forest" = side mine; "enemy land", "an opponent's well" = side enemy.
+  "Unoccupied" = state empty. "Adjacent" = position bordering ("adjacent enemies" = kind anything, side enemy, position
+  bordering of the card; "adjacent to the target" = of `{"pick": "it"}`). "On or adjacent to that space" = two targets, link
+  and. "This creature's land", "the land it is on" = kind position with position same_space of the card; "if this is on an
+  enemy land" = COND `{"test": "count", "of": {"kind": "position", "side": "enemy", "with": [terrain land, position
+  same_space]}, "op": "ge", "n": 1}`. "Choose a space" = kind position, pick chosen; "a random space" = pick random.
+- Land acts. "Create forest", "Create 3 forests at random" = set_terrain on `{"kind": "position", "with": [terrain ocean]}`
+  (n, pick as written), "to" `{"kind": "position", "with": [terrain forest]}`. "Transform a land into lake" = set_terrain on
+  the land, "to" terrain lake. "Destroy a land" = set_terrain to terrain ocean. "Move a land" = move on the land (kind position).
+  "Gain control of a land" = steal on it. "Fill the world with forests" = set_terrain on all ocean spaces, to forest.
+  "Empty / refill / destroy a faeria well" have no value: propose. "Whenever you create forest" = event terrain_changed,
+  actor the player, object a position with terrain forest.
+- Lands as conditions. "While you control 2 lakes" = COND `{"test": "count", "of": {"kind": "position", "side": "mine",
+  "with": [terrain lake]}, "op": "ge", "n": 2}`; "for each forest you control" = `{"x": "count", "of": <that target>}`.
+- Triggers. "Gift -" = played, object self. "Last Words -" = dies, object self. "Production -" = turn_start, actor
+  `{"kind": "player", "side": "mine"}`. "Combat -" = fights, actor self. "Corrupt -" = moves_onto, actor self, object
+  `{"kind": "position", "side": "enemy", "with": [terrain land]}`, limit once_per_game. "Activate -" = activated. "At the end
+  of your turn" = turn_end, actor me. "On your opponent's next turn" = turn_start, actor the enemy player, limit next_time.
+  "Whenever this attacks a god" = strikes_nexus, actor self (rule 31). "Whenever this attacks" = attacks, actor self.
+  "Whenever this harvests faeria (from an opponent's well)" = harvests, actor self, object a position with terrain
+  resource_well (side enemy). "Whenever you harvest faeria" = harvests, actor `{"kind": "unit", "side": "mine"}`. "Whenever
+  this moves into a forest" = moves_onto, actor self, object position terrain forest. "Whenever you select +1 faeria from the
+  power wheel" = turn_option_chosen, actor me, object `{"kind": "mana"}`. "Whenever you play an event" = played, object kind
+  spell side mine.
+- Durations. "This turn" = lasts this_round (one turn is the span); "Has +1/+1 while ..." = stat_change lasts while.
+- Acts. "X fights Y" = start_attack on X, "to" Y, keyword Fight. "Teleport X to Y" = move, keyword Teleport, "to" Y. "Swallow
+  a creature" = capture on it, keyword Swallow. "Drain 2 life from X" = damage X amount 2, then heal the player amount
+  event_amount (link then). "Transform X into Y" = transform, card Y. "Discover a Beast" = keyword_action Discover, on
+  `{"kind": "card", "with": [type Beast]}`, zone hand (what the Discover offers as filters on "on"). "Sacrifice a creature" = kill
+  on a mine unit, pick chosen. "Can't harvest faeria" = cant, params event harvests, on self. "Can only attack gods" = cant
+  params event attacks, on self, "to" kind unit_or_structure. "Launch / Summon a 4/2 Mecha" = summon card "Mecha" (the named
+  token), with stats in params power, health only when the text gives them.
+- A keyword the card has itself, written alone ("Flying, Charge 3", "Taunt", "Dash 2") = one ability `{"when": {"event":
+  "always"}, "do": [{"act": "give_keyword", "keyword": "<K>", "on": {"pick": "self"}, "params": {"amount": N}, "lasts":
+  "permanent"}]}` (amount only for a number: Charge 3, Dash 2). "Give a creature Charge 3 this turn" = give_keyword Charge,
+  amount 3, lasts this_round.
+- "Choose one: A / B." then "- A" lines: the "- A" lines repeat the options; describe each option once (rule 8).
