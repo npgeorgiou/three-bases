@@ -160,3 +160,25 @@ Each change: date, what changed, the card that caused it, and which records were
   damage_space, heal_space, summon_space, growth_space, bonus_mana_space; positions corner, area_2x2, area_3x3,
   starting_side, diagonal, center_column; concept cant_move (Duelyst Wall) with flat.py rules cant_move and immobilize
   (cant moves on an enemy); BRIEF "Game words: Duelyst"; read/duelyst/game_rules.jsonl (fight, counterattack).
+
+## 29 Oct 2026, v38 (Faeria positional pass; shared code, every game rebuilt)
+- BRIEF "The board": one form for spaces, neighbours, areas, ground, movement, placement and board resources in every game.
+- vocab: position straight_line, attr distance (numeric, check.py, network PLAY_STATE), acts empty_resource,
+  refill_resource, extra_turn, end_turn, state struck_player_this_round; moves_onto has the mover as object (like moves);
+  harvests: actor the unit, object the space; movement keywords of every game cause moves and moves_onto.
+- normalize N23: a draw that names what it draws is from the deck (N14 only for plain draws).
+- flat.py: "it" keeps the previous target's filters (after a summon of a named card, that card); RULES terrain,
+  territory_trigger (conditions), placement_rules, zone_control, control_reward, area_templates, adjacency in triggers,
+  positional for ground and distance.
+- refs.py: stat needs by direction (damage never feeds "more"; thresholds want nothing; unnamed holder = unit); land counts
+  need terrain_changed; set_terrain makes the new ground; harvests made on the space with the harvester as self; spaces and
+  chosen-space areas and entering positions need no moves; no keyword-given needs for cards drawn or played or in the deck;
+  effects on "it" make no needs; what a card does to itself is on my side; keyword causes keep their target.
+- network.py: reads card costs (was never read: cost filters matched every card); terrain_fit; movement HELPS (reach enemy
+  land, wells, fights, the enemy player); placement help; tutors ("draws it from the deck") only to deck cards; drawn
+  triggers fed by the deck's cards; a big cost cut aims at cards costing that much; can / can't lines say what they allow;
+  help to a card about itself only from effects that can be that card.
+- load.py: trigger labels written "Name -" on their own line are the card's keyword (Faeria Corrupt).
+- connections.py: an effect on every unit hits each type ("ALL creatures" damages the Yaks); a payoff acting on all my
+  units is fed by summoners; turning my units into copies of a chosen unit makes more of the payoff.
+- audit_text.py: Faeria player words; board rules (this turn, land act, adjacent, harvest); "+1/+1" stat gifts.

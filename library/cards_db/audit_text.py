@@ -54,7 +54,7 @@ def rules(game):
         ('this turn', r'\bthis turn\b', lambda r: 'this_round' in words(r) or 'this_turn' in words(r)),
         ('land act', r'\b(?:create|transform|destroy|move)\b[^.]{0,30}\b(?:lands?|forests?|lakes?|mountains?|deserts?|prairies?)\b', lambda r: acts(r) & {'set_terrain', 'move', 'steal'} or '"terrain"' in words(r)),
         ('adjacent', r'\badjacent\b', lambda r: '"bordering"' in words(r) or '"sides"' in words(r)),  # a hex board's neighbours, or a row's (Inscryption)
-        ('harvest', r'(?<!can )(?<!can\'t )\bharvest', lambda r: 'harvest' in words(r)),
+        ('harvest', r'(?<!can )(?<!can\'t )\bharvest(?:s|ed|ing)? (?:faeria|from|over)\b', lambda r: 'harvest' in words(r)),  # collecting from the board; Monster Train's "Harvest:" is a death trigger
         # grid words (Duelyst: "nearby" is the 8 spaces around); a game without them never matches
         ('nearby', r'\bnearby\b|\baround (?:it|this|your|the|an?)\b', lambda r: re.search(r'"(?:surrounding|area_3x3|bordering|diagonal)"', words(r))),
         ('stun', r'\bstun(?:s|ned)?\b', lambda r: 'Stun' in words(r) or 'stun' in acts(r) or '"stunned"' in words(r)),

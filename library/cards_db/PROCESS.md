@@ -138,7 +138,8 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
    Fetch from the web only what none of these has (the built-in browser reaches pages the workspace cannot; a fandom
    wiki's api.php gives its card modules), check the copy against the source (length and checksum), and add the source to
    this list.
-4. **Cards.** Compare the library's cards with the game's data, by card code and by name. Missing cards, glossary keywords
+4. **Cards.** Compare the library's cards with the game's data, by card code, by name and by text (render the source's
+   markup and diff every text: Faeria's library kept markup in 13 cards). Missing cards, glossary keywords
    and tokens go into `supplement_<game>.py` -> `supplement/<game>.jsonl` (library entities columns; ext_id = the game's
    card code; category keyword for glossary entries). When the source is newer than the library, the supplement holds
    every card and replaces the library's entry with the same code (source.py). A card with no text is still a card.
@@ -151,7 +152,8 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
    library has links only for its own cards.
 5. **Keyword definitions** come from the game's own glossary, with the source in source_type. Kaptain is asked only for a
    keyword no source defines. Glossary terms no card uses are left out.
-6. **The game's words** (readers can only use values that exist). For every term of the checklist (stats, board, turn
+6. **The game's words** (readers can only use values that exist). A game with a board maps its words to BRIEF "The board"
+   first (spaces, neighbours, areas, ground, movement, placement, board resources), adding a value only for what it lacks. For every term of the checklist (stats, board, turn
    structure, zones, card kinds, statuses): an existing value with the same meaning, mapped in BRIEF.md "Game words:
    <game>"; or a new vocab row (rule 3). Do not stretch an old value. Decide the mapping from the game's rules (marked as
    Claude's); ask Kaptain only what no source settles. Give every keyword its vocab keyword row now.
@@ -386,6 +388,45 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
    keyword entry goes in the Keywords field (the General's spells carry "Keywords: Bloodbound Spell.").
 5. **Keywords written as lines.** "Provoke\nCelerity\n..." became "Keywords: Provoke, Celerity." for 178 cards (rule of
    "A card list that looked whole" 3): line breaks in the source must be kept until the Keywords field is cut.
+
+## Importing Faeria: the board (29 Oct 2026; checked in every game)
+Faeria is played on a hex board that players build; Kaptain uses the library to study positional play, so its board words
+were made the shared form for every game with spaces (BRIEF "The board"). What went wrong and the rule now:
+1. **The library's texts were not the source's texts.** Its Faeria entries kept export markup ("Choose one: {green.|...")
+   and wrote two land icons as "lake lake"; 19 cards were missing. Rule: render the game's own export and compare every text,
+   not only the card codes (supplement_faeria.py writes the cards whose text differs). A supplement entry now replaces the
+   library entry with the same bare code too (source.py), which also removed Runeterra's duplicate Dragon's Rage.
+2. **One board happening, two forms.** "Moves onto enemy land" had the space as object and the mover as actor, "moves" the
+   mover as object; "summon adjacent to friendly creatures" was aimed at units, Wind Gate's at spaces; "on or adjacent" was
+   one target (Meteor) or two effects (Firestorm); "in its place" had no "of". Rule: BRIEF "The board" (one form each),
+   fixes/faeria/v35.py, cases nfa03, nfa04, fa36-fa43.
+3. **Board words had no values.** Readers wrote stand-in keywords (Empty, Refill, Extra turn, Destroy) and proposals
+   (straight_line). Now: terrain (field and attr), set_terrain, harvest / harvests, moves_onto, same_space, straight_line,
+   distance, empty_resource, refill_resource, extra_turn, end_turn, state empty; audit_links lists any stand-in keyword.
+4. **Board concepts were never derived.** flat.py RULES now give terrain, territory_trigger, placement_rules, zone_control,
+   control_reward, area_templates, adjacency in triggers and positional for ground and distance (cases fa36-fa42).
+5. **Who benefits from moves and places.** Movement keywords cause moves and moves_onto (every game's movement keywords).
+   network HELPS: what moves another of my units, or gives it a movement keyword, helps a card that must reach enemy land,
+   an enemy well, a fight or the enemy player (row by row: the moved unit must be able to be that card; a unit's own Dash
+   helps only itself); units that move well help "my units harvest enemy wells". Placement ("summon creatures next to this")
+   helps a card whose entry asks for a place. A card counting my lands of a ground is fed by cards making that ground
+   (network.terrain_fit: a lake maker feeds "special lands", not "forests"). A place chosen by the player ("on or adjacent
+   to a chosen space") and where a card enters need no units to move. Cases nfa12-nfa15.
+6. **Needs without a direction.** "Gain faeria equal to its Life" was fed by damage and by a debuff to the god; a threshold
+   ("when you would take lethal damage") wanted more Life. Rule: a stat used as an amount or tested high is fed by stat changes
+   and healing, never damage; a stat used as a threshold is no need (refs.py); an unnamed stat holder is a unit (nfa06).
+7. **The network never read card costs**: "a card with base cost 7 or more" matched every card in every game (cards_of had
+   no cost). Fixed for all games (nfa07, nfa08). A big cost cut to a random card in hand aims at cards costing at least that
+   much (nfa11).
+8. **Tutors.** A draw that names what it draws is from the deck (normalize N23, all games); it links to those cards in the
+   deck, never to a card the deck only makes; a keyword on a card drawn or played ("draw a Flying creature") is the card's
+   own, not one given in play (nfa05, nfa09, nfa16, nfa17). Triggers on drawing a kind of card are fed by the deck's cards of
+   that kind (played_lines also reads drawn).
+9. **"It" lost what it was.** "Transform another Rakoan ..., give it Flying" made any unit fly. Rule: "it" keeps the previous
+   target's filters, and after a summon of a named card it is that card (flat.py); a need about the card itself is fed only
+   by effects that can be that card (network lines_of and HELPS; nfa03).
+10. **Trigger labels written "Name -".** Faeria's "Corrupt - ..." was not the card's keyword (load.py read only "Name:"), so
+   "whenever a creature triggers a Corrupt ability" had no makers (fa43).
 
 ## Think like a player (read before showing any network, any deck explanation, any answer about synergy)
 Kaptain checks a few decks and finds errors a player sees at once. Before showing anything, do what he does:

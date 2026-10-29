@@ -133,6 +133,33 @@ AMOUNT   a number, or `{"x": x, "of": TARGET, "attr": attr, "event": EVENT, "spa
 32. Do not write what the game's rules do for every card (a unit attacks, an unblocked attacker hits the enemy Nexus): that is
    in read/<game>/game_rules.jsonl, written once by the import chat. Write only what this card's text says.
 
+## The board (every game with spaces, tiles, hexes, lanes or rows; one form for all)
+- A space is `{"kind": "position"}`. Where a thing is = filter `{"attr": "position", "op": "is", "val": <position>, "of":
+  TARGET}`; "of" omitted = the card itself. Never write a space as a unit target ("summon adjacent to friendly creatures" is a
+  space bordering of `{"kind": "unit", "side": "mine"}`, keeping the units' own filters there: "next to friendly Yaks").
+- Neighbours: touching along an edge = bordering (a square's 4, a hex's 6); with diagonals = surrounding; left/right =
+  sides; only diagonals = diagonal. "On X" / "X's space" / "its land" = same_space of X. "On or adjacent to X" = one target,
+  `{"attr": "position", "op": "in", "vals": ["same_space", "bordering"], "of": X}`, never two effects.
+- Lines and areas: "in a straight line" = straight_line of the unit; "in its row / column" = same_row / same_column; named
+  areas = area_2x2, area_3x3, corner, center_column, starting_side; "within N spaces", "up to N spaces" = `{"attr":
+  "distance", "op": "le", "n": N, "of": X}` (distance counts steps on the grid).
+- Ground: what a space is = filter `{"attr": "terrain", "op": "is", "val": ...}` (vocab field terrain: land, ocean, the land
+  colours, special_land, resource_well, damage_space ...). A space's owner is its side ("a land you control" = side mine).
+  "Empty", "unoccupied" = state empty. Making or changing ground ("create a forest", "turn a space into Shadow Creep",
+  "destroy a land" = ocean) = set_terrain, "on" the spaces changed, "to" a position with the new terrain. Taking a space =
+  steal on it; moving a land = move on it.
+- Movement: moving a unit = move, "on" the unit, "to" the space (with what the text says of it). The event of having moved
+  onto a space = moves_onto with the MOVER as object and the space as its filter `same_space of {the space}` (the same way
+  as moves, N16): "Corrupt: the first time this moves onto enemy land" = object self with same_space of `{"kind":
+  "position", "side": "enemy", "with": [terrain land]}`. A keyword that lets a unit move further or over things (Flying,
+  Jump, Charge, Dash) is a `can moves` with "to" the reachable spaces (straight_line, distance, terrain).
+- Placement: where a card may enter = `{"act": "can", "params": {"event": "summoned"}, "to": <the spaces>}`, "on" the card
+  itself or the cards it lets in ("You can summon creatures next to this" = on my units, pick all). A condition on where it
+  entered ("if summoned adjacent to an enemy well") = a COND on the played / summoned ability.
+- Resources on the board (wells, springs): collecting one = event harvests, actor the unit, object the space (like strikes);
+  emptying / refilling = empty_resource / refill_resource on the spaces.
+- "In its place", "where this died" = the summon's "to" `{"kind": "position", "with": [same_space of {"pick": "it"}]}`.
+
 ## Keyword entries (category keyword)
 A keyword's record says what the keyword means, so that every card with it inherits that meaning. Four kinds:
 - Status keywords (a unit has it: Elusive, Barrier, Stun, Quick Attack, Ephemeral, ...): abilities of the holder, "I" / "this
@@ -354,8 +381,8 @@ game's own glossary (Abrakam's card export README, faeria.com Keyword Rulings gu
   ocean, land (any land), prairie, lake, forest, mountain, desert, special_land, resource_well (a faeria well). Lands have
   an owner: "a land you control", "your lands", "friendly forest" = side mine; "enemy land", "an opponent's well" = side enemy.
   "Unoccupied" = state empty. "Adjacent" = position bordering ("adjacent enemies" = kind anything, side enemy, position
-  bordering of the card; "adjacent to the target" = of `{"pick": "it"}`). "On or adjacent to that space" = two targets, link
-  and. "This creature's land", "the land it is on" = kind position with position same_space of the card; "if this is on an
+  bordering of the card; "adjacent to the target" = of `{"pick": "it"}`). "On or adjacent to that space" = one target, position in
+  [same_space, bordering] of the space (The board). "This creature's land", "the land it is on" = kind position with position same_space of the card; "if this is on an
   enemy land" = COND `{"test": "count", "of": {"kind": "position", "side": "enemy", "with": [terrain land, position
   same_space]}, "op": "ge", "n": 1}`. "Choose a space" = kind position, pick chosen; "a random space" = pick random.
 - Land acts. "Create forest", "Create 3 forests at random" = set_terrain on `{"kind": "position", "with": [terrain ocean]}`

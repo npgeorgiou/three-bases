@@ -1,7 +1,7 @@
 # Case tests: faeria
 
 Made by `cases/run.py faeria`.
-**81 of 81 cases pass.**
+**82 of 82 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -59,6 +59,7 @@ Made by `cases/run.py faeria`.
 | fa40 | counts my lands | 10 | 10 | 100% | 57 | yes |
 | fa41 | neighbours in a trigger | 3 | 3 | 100% | 73 | yes |
 | fa42 | Corrupt is entering enemy territory | 14 | 14 | 100% | 4 | yes |
+| fa43 | a trigger label written "Corrupt -" is the card's keyword | 14 | 14 | 100% | 0 | yes |
 
 ## Combos (the enabler must set off the payoff)
 

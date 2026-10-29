@@ -111,7 +111,9 @@ def build(c):
                 'select id, seq, act, on_target, card_ref, keyword_ref, lasts, link, zone, to_target from effect where ability=? order by seq', (aid,)).fetchall():
             k, s, p, z = tgt(on); w = withs(on)
             if p == 'it' and not s: k, s = k or last[0], last[1]  # "give it Vitalize" after "a random enemy unit": the same side
-            if p == 'it' and not w: w = last[2]  # and the same filters: "transform another Rakoan ..., give it Flying" is a Rakoan
+            if p == 'it' and not w and last[2]:  # and who it is: "transform another Rakoan ..., give it Flying" is a Rakoan (identity
+                w = ';'.join(x for x in last[2].split(';') if x.split(' ')[0] in ('card', 'type', 'name_has', 'category')) or None
+                # filters only: a state or keyword said before ("a Flying creature drawn") is no need of the effect on it)
             if act in ('summon', 'create', 'copy', 'revive', 'play_card') and cref:  # "summon a Demon Wing ..., give it Flying": that card
                 last = ('unit' if act in ('summon', 'revive') else (k or 'card'), s or 'mine', f'card is {cref}')
             elif p != 'it': last = (k, s, w)

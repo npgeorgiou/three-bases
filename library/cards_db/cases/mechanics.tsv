@@ -321,3 +321,4 @@ fa39	mechanic	area shapes (on or adjacent to a space)	text:\bon or adjacent to\b
 fa40	mechanic	counts my lands	text:\bwhile you control \d+ (?:lakes|forests|mountains|deserts|prairies)\b|\bfor each (?:forest|lake|special land)\b|\bcontrol \d+ or more special lands\b	select card from flat_concept where concept='terrain'	faeria
 fa41	mechanic	neighbours in a trigger	text:\bwhen(?:ever)? an adjacent creature dies\b|\bsummoned adjacent to this creature\b	select card from flat_concept where concept='adjacency'	faeria
 fa42	mechanic	Corrupt is entering enemy territory	text:\bcorrupt\s*-	select card from flat_concept where concept='territory_trigger'	faeria
+fa43	mechanic	a trigger label written "Corrupt -" is the card's keyword	text:\bcorrupt\s*-	select card from card_keyword where keyword=(select id from card where name='Corrupt' and is_keyword=1 and game='faeria')	faeria
