@@ -33,7 +33,7 @@ Made by `cases/run.py inscryption`.
 | mi17 | Sharp Quills: damages its attacker | 4 | 4 | 100% | 11 | yes |
 | mi18 | Leader: adjacent creatures gain Power | 1 | 1 | 100% | 0 | yes |
 | mi19 | Stinky: the opposing creature loses Power | 2 | 2 | 100% | 3 | yes |
-| mi20 | Waterborne: submerged (cannot be attacked) on the enemy turn | 9 | 9 | 100% | 38 | yes |
+| mi20 | Waterborne: submerged (cannot be attacked) on the enemy turn | 9 | 9 | 100% | 37 | yes |
 
 ## Combos (the enabler must set off the payoff)
 

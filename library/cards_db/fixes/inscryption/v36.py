@@ -7,7 +7,7 @@
   inscribed_direction, 5 records); cards "in the way" are on its sides too (not in_front / behind, a column's words).
 - "a Green / Orange / Blue Gem is provided" (Great Mox: all three): when played, mana_gain on kind gem of that colour
   (proposal gem_provided, 5 records).
-- "is healed" with no number: params amount x unstated."""
+- "is healed" / "has increased power" with no number: the amount is x unstated."""
 import glob, json, os, re
 HERE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 text = {}
@@ -48,7 +48,9 @@ def fix(r):
                 if e.get('on') == {'pick': 'self'} and isinstance(to, dict) and to.get('kind') == 'position' and not to.get('with'):
                     to['with'] = [dict(SIDES)]
                 done.add('to')
-            if e.get('act') == 'heal' and not (e.get('params') or {}).get('amount') and re.search(r'\bhealed?\b', rb) and not re.search(r'\bheal(?:ed)? (?:by )?\d', rb):
+            if e.get('act') == 'stat_change' and not e.get('params') and re.search(r'\bincreased (power|health)\b', rb):  # "has increased power"
+                e['params'] = {re.search(r'\bincreased (power|health)\b', rb).group(1): {'x': 'unstated'}}; done.add('params')
+            if e.get('act') == 'heal' and not (e.get('params') or {}).get('amount') and re.search(r'\bheal(?:ed)?\b', rb) and not re.search(r'\bheal(?:ed)? (?:by )?\d', rb):
                 e['params'] = dict(e.get('params') or {}, amount={'x': 'unstated'}); done.add('params')
     gems = re.findall(r'\b(green|orange|blue)\b', rb) if re.search(r'gems? (?:is|are) provided', rb) and '(green, orange, or blue)' not in rb else []
     if gems:
@@ -122,3 +124,14 @@ for l in open(os.path.join(HERE, 'input', 'inscryption', 'keywords.jsonl')): x =
 for r in recs: normalize.sacrifice_form(r, inputs)
 open(P, 'w').write(''.join(json.dumps(r, ensure_ascii=False) + '\n' for r in recs))
 print('sacrifice form applied to keywords')
+
+# Uncuttable (Claude, from its text): only Scissors, the Skinning Knife and the Fish Hook cannot act on it; the reading had
+# "cannot be targeted" by anything. Written like SpellShield: when one of those items targets it, the item's effect is stopped.
+P = os.path.join(HERE, 'read', 'inscryption', 'keywords.jsonl'); recs = [json.loads(l) for l in open(P)]
+for r in recs:
+    if text.get(r['id'], '').startswith('Uncuttable is a trait'):
+        r['abilities'] = [{'when': {'event': 'targeted', 'actor': {'kind': 'equipment', 'with': [{'attr': 'card', 'op': 'in',
+                           'refs': ['Scissors', 'Skinning Knife', 'Fish Hook']}]}, 'object': {'pick': 'self'}},
+                           'do': [{'act': 'counter', 'on': {'kind': 'effect', 'pick': 'it'}}]}]
+open(P, 'w').write(''.join(json.dumps(r, ensure_ascii=False) + '\n' for r in recs))
+print('Uncuttable written')

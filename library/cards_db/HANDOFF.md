@@ -29,16 +29,6 @@
   cases/decks.tsv). 36 Runeterra and 28 Stormbound full decks; Monster Train has only guides' core cards (no full lists
   found as text). Kaptain's judgement of the v34 networks is open (NEXT_CHAT.md).
 - Cases: Runeterra 300, Stormbound 137, Monster Train 146, all passing; audit_links.py 0 findings in every game.
-- Inscryption (v36, import chat 29 Oct 2026): 251 cards from the wiki's card boxes (supplement_inscryption.py; the library's
-  entries were merged and incomplete), sigils as the Keywords field, 107 sigil concepts in vocab, game rules (fight, Bones from
-  deaths, units can be sacrificed, Blood / Bones / Mox costs as needs), 19 decks in decks.tsv; run.py passes, audits 0, cases
-  14. Read as a player so far: Act II Beast, Undead, Technology, Magick starters, Archeronline4U, Burntcookies1, koi, the
-  speedrun deck, Act I and Act III starters, Kaycee's Ants and Bones. Open, in order:
-  1. Special behaviours are missing from the card texts (wiki box field special_behaviours: Ouroboros grows each time it
-     dies, Cat, Caged Wolf, Pack Mule, Strange Frog TrapSpawner, Giant); their descriptions are on the wiki page "Special
-     Card Behaviours", reachable only in the built-in browser (it was offline). Without it the Ouroboros decks lose their plan.
-  2. Energy ramp (Battery Bearer, Energy Bot) is not linked to Energy-cost cards, as mana in the other games: Kaptain decides.
-  3. Read the remaining decks (Kaycee's other starters, the skeleton deck vs Magnificus) and the Ants lines (Ant Queen ->
-     Flying Ant through the Ants power); step 3 cases (sigil mechanics, the inscryption.md combos, deck explanations);
-     CHECK_20_inscryption.md; show Kaptain the sigil -> concept list (vocab rows "Inscryption:").
-  4. Unsure records left: single needs (Bell Ringer's space number, Energy Conduit "never depletes", Wiseclock, Campfire ...).
+- Inscryption (v36): imported; every step of PROCESS passes, all 19 decks read card by card (RESULTS.md). Waiting for
+  Kaptain's check of CHECK_20_inscryption.md (ids in CHECK_20_inscryption_ids.txt) and of the sigil -> concept list
+  CONCEPTS_inscryption.md, and his answer on Energy ramp lines (Battery Bearer -> Energy-cost cards).

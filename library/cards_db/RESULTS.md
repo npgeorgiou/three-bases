@@ -45,3 +45,24 @@
 - Second reading: 28 cards, 17 the same; of the 11 others, 10 the same meaning in another form (one became normalize N14)
   and 1 kept reading fixed.
 - Cost: three readers (cards, keywords, second reading); the unsure cards fixed by rule (fixes/monster_train/).
+
+# Inscryption: results (29 Oct 2026, waiting for Kaptain's check of CHECK_20_inscryption.md and CONCEPTS_inscryption.md)
+
+## What exists
+- 251 cards from the Inscryption wiki's card boxes (supplement_inscryption.py; the library had merged and dropped cards),
+  108 sigils and traits; sigils are each card's Keywords field, so 212 cards take their records from their sigils.
+  Special card behaviours (Ouroboros, Cat, Pack Mule, Caged Wolf, Strange Frog, Child 13, Daus, Pelts, the giants) are in
+  the texts from the wiki page Special Card Behaviours.
+- Game rules (read/inscryption/game_rules.jsonl): units fight, Bones from deaths, units can be sacrificed, and Blood,
+  Bones and Green / Orange / Blue Mox costs, which are needs of the cards whose cost names them.
+- 19 decks in decks.tsv, all read card by card: the four Act II starters, five players' Act II decks, the Act I and Act III
+  starters and the eight Kaycee's Mod starters.
+
+## Quality
+- run.py passes; cases 56 of 56 (20 sigil mechanics, 7 combos, 4 guide decks, 7 faction cases, 12 network lines, shared
+  cases); word check, text audit and link audit 0.
+- Unsure records left (no value for one card's need): Build-a-Card, Campfire, Card Recycle, Pliers, Wiseclock, Pack Mule,
+  The Moon, The Limoncello, Glitched card, Clinger, Dead Byte, Detonator, Energy Conduit, Finical Hatchling, Loose Tail,
+  Tidal Lock, Trinket Bearer, Satisfies Ring Trial, Bell Ringer, Kraken Waterborne, Mox Sigils, Cat and Child 13 (a count
+  across battles).
+- Open for Kaptain: Energy ramp (Battery Bearer, Energy Bot) has no line to Energy-cost cards, as mana in the other games.
