@@ -80,7 +80,7 @@ select card from flat_concept where concept in ('movement','forced_movement') in
 ```
 - duelyst: 16 cards: Aspect of the Wyrm, Black Locust, Cade the Desolator, Chittering Tiller, Cindera, D3cepticle, Drake Dowager, Ghost Lynx ...
 - faeria: 28 cards: Animated Banquet, Astral Weapon, Baeru, the First Wave, Dancing Blade, Flowersilk Faerie, Flying Piranha, Frog-Tosser, Grappling Hook ...
-- inscryption: 21 cards: 49er, Elk, Elk Fawn, Ghost Ship, Headless Horseman, Hefty, Long Elk, Moose Buck ...
+- inscryption: 25 cards: 49er, Clinger, Elk, Elk Fawn, Ghost Ship, Headless Horseman, Hefty, Lonely Wizbot ...
 - runeterra: 2 cards: Ahri, Ahri (level 2)
 - stormbound: 17 cards: Agile Warriors, Angelic Tikas, Anointed Saviors, Armed Schemers, Catnip’s Charm, Chateau de Cardboard, Confuse, Crystalshields ...
 
@@ -150,21 +150,21 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: duelyst 2530 pairs, e.g. Abhorrent Unbirth -> Unseven; faeria 1058 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 489 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 302 pairs, e.g. Little Fade -> Primordium; runeterra 11659 pairs, e.g. Shark Chariot -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- sacrifice: duelyst 1574 pairs, e.g. Abhorrent Unbirth -> Unseven; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Master Bleene -> Caged Wolf; monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5684 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- self_destruct: duelyst 692 pairs, e.g. Windstorm Obelysk -> Khanuum-ka; faeria 767 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 350 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 252 pairs, e.g. Little Fade -> Primordium; runeterra 6577 pairs, e.g. Shark Chariot -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Azure Hatcher
-- removal: duelyst 517 pairs, e.g. Rasha's Curse -> Khanuum-ka; faeria 131 pairs, e.g. Death's Desire -> Long-horned Yak; monster_train 41 pairs, e.g. Wicked Blaze -> Primordium; runeterra 2104 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
-- revive: duelyst 176 pairs, e.g. Rex -> Fog; inscryption 27 pairs, e.g. Necromancer -> Caged Wolf; runeterra 887 pairs, e.g. Shark Chariot -> Bladepierced Revenant
-- damage: duelyst 3056 pairs, e.g. Abyssal Scar (Bloodbound Spell) -> Unseven; faeria 628 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 267 pairs, e.g. Good Fish -> Burrowing Trap; runeterra 8240 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 614 pairs, e.g. Divine Reptiles -> Dreadful Keepers
+- destroy: duelyst 2530 pairs, e.g. Abhorrent Unbirth -> Unseven; faeria 1058 pairs, e.g. Feed the Forest -> Long-horned Yak; inscryption 489 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 302 pairs, e.g. Little Fade -> Primordium; runeterra 11659 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- sacrifice: duelyst 1574 pairs, e.g. Abhorrent Unbirth -> Unseven; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Librarian; monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5684 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- self_destruct: duelyst 692 pairs, e.g. Windstorm Obelysk -> Khanuum-ka; faeria 767 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 350 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 252 pairs, e.g. Little Fade -> Primordium; runeterra 6577 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
+- removal: duelyst 517 pairs, e.g. Rasha's Curse -> Khanuum-ka; faeria 131 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Librarian; monster_train 41 pairs, e.g. Wicked Blaze -> Primordium; runeterra 2104 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Embers of Chaos
+- revive: duelyst 176 pairs, e.g. Rex -> Fog; inscryption 27 pairs, e.g. Necromancer -> Librarian; runeterra 887 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant
+- damage: duelyst 3056 pairs, e.g. Cindera -> Unseven; faeria 628 pairs, e.g. Boulder Thrower -> Laya, Lady of Sorrows; inscryption 267 pairs, e.g. Good Fish -> Burrowing Trap; runeterra 8240 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 614 pairs, e.g. Divine Reptiles -> Dreadful Keepers
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
 - summon -> on_ally_play -> delayed (seen in duelyst, runeterra)
 - summon -> on_ally_play -> countdown (seen in duelyst, runeterra)
-- summon -> tribal -> on_draw (seen in runeterra)
 - summon -> banish -> merge_attach (seen in runeterra)
 - summon -> banish -> other_leave_trigger (seen in runeterra)
 - summon -> banish -> return_to_hand (seen in runeterra)
+- summon -> on_ally_play -> repeat_trigger (seen in faeria, runeterra)
 
 ## A deck explained (`ask.py runeterra analyze "..."`), a Lucian/Senna deck from a deck guide
 
@@ -175,6 +175,7 @@ Plan:
 - Any units are killed: made by Crumble, Glimpse Beyond, Piercing Darkness, Ravenous Butcher, Single Combat, Spirit Leech, The Ruination. Level up from it: Senna.
 - Lucian levels up when your units die (4+ times) or Senna, Sentinel of Light dies once.
 - Senna levels up when any units are killed (3+ times).
+Controls enemy units (damage, remove, stop, weaken): Single Combat.
 Supports your units (stats, protection, combat keywords): Piercing Darkness, Senna.
 Card flow (draw, create, choose): Glimpse Beyond, Lonely Chimeslime, Senna, Spirit Leech.
 Puts extra units into play: Cursed Keeper, Hapless Aristocrat, The Undying.
@@ -216,7 +217,7 @@ select distinct card from flat_do where act='copy_keywords'
 - duelyst Vetruvian Imperium: rows (9), self_destruct (9), merge_attach (6), steal (6), haste (14)
 - duelyst Abyssian Host: other_death_trigger (12), terrain (15), sacrifice (13), destroy (22), stat_loss (4)
 - duelyst Magmar Aspects: area_templates (4), revive (8), permanent_growth (14), disable (4), attack_gain (38)
-- duelyst Vanar Kindred: territory_trigger (7), disable (12), resource_gain (4), cant_move (4), trap_secret (4)
+- duelyst Vanar Kindred: territory_trigger (7), disable (12), base_resource_gain (4), resource_gain (4), cant_move (4)
 - duelyst Neutral: deck_modification (6), quests (5), random_ability (6), ranged (18), copy (16)
 - duelyst Boss: merge_attach (4), multi_attack (6), turn_start (16), revive (6), on_ally_play (10)
 - duelyst Tutorial: on_play (4)
@@ -226,15 +227,15 @@ select distinct card from flat_do where act='copy_keywords'
 - faeria Red: on_fight (10), aoe_damage (13), ranged (5), direct_damage (11), damage (32)
 - faeria Yellow: temporary_buff (4), sacrifice (6), on_attack (14), haste (6), removal (4)
 - faeria Pandora: modal_choice (5), removal (4), aoe_damage (6), destroy (7), on_play (34)
-- inscryption Beast: free_play (4), stealth (8), immunity (6), multi_attack (8), variable_stats (8)
-- inscryption Technology: stances (8), aoe_damage (4), ping (6), damage (11), random_effect (7)
-- inscryption Magick: aura (6), tribal (7), defence_gain (5), draw (4), self_destruct (4)
+- inscryption Beast: free_play (4), multi_attack (8), stealth (8), immunity (6), variable_stats (8)
+- inscryption Technology: stances (8), territory_trigger (4), aoe_damage (4), link_formation (10), ping (6)
+- inscryption Magick: aura (6), defence_gain (5), draw (4), self_destruct (4), card_presence_condition (5)
 - monster_train Hellhorned: temporary_buff (11), block_armor (12), damage_prevention (12), on_damaged (13), count_payoff (21)
 - monster_train Awoken: on_lifegain (4), counterattack (7), regeneration (4), draw (11), heal (11)
 - monster_train Stygian Guard: discard (6), on_spell (9), retain (4), stat_loss (5), damage_over_time (11)
 - monster_train Umbra: lifesteal (4), on_sacrifice (14), shield (7), board_limit (4), overload_debt (4)
 - monster_train Melting Remnant: other_death_trigger (8), countdown (15), self_destruct (16), cost_set (6), delayed (15)
-- monster_train Wurmkin: cost_type (10), resource_gain (23), summon (4), damage_over_time (8), exhaust (19)
+- monster_train Wurmkin: cost_type (10), resource_gain (23), summon (4), damage_over_time (8), lanes (27)
 - monster_train Clanless: direct_damage (5), banish (10), turn_end (7), cant_attack (5), passive (20)
 - runeterra Ionia: bounce_enemy (11), leave_trigger (10), spells_played_condition (12), silence (32), max_mana_condition (8)
 - runeterra Noxus: combat_damage_threshold (9), on_discard (10), drawback (7), nexus_damage_condition (12), excess_damage (37)
@@ -251,7 +252,7 @@ select distinct card from flat_do where act='copy_keywords'
 - stormbound Ironclad: lanes (8), forced_movement (9), movement (9), death_trigger (4), positional (26)
 - stormbound Shadowfen: lifesteal (7), damage_over_time (6), steal (4), ping (10), variable_stats (7)
 - stormbound Swarm: direct_damage (8), tribal (6), summon (8), death_trigger (4), on_attack (5)
-- stormbound Winter: disable (8), immobilize (6), resource_gain (7), cant_attack (8), silence (8)
+- stormbound Winter: base_resource_gain (7), disable (8), immobilize (6), resource_gain (7), cant_attack (8)
 
 ## Created-card chains (A creates B, B creates C)
 
