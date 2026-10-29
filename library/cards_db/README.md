@@ -25,6 +25,7 @@ equal mechanics of different games share one concept of the concept tree (Stun a
 | `load.py`, `flat.py`, `refs.py` | Build `cards.sqlite`; the query layer (keywords expanded, concepts, flat_ref) |
 | `deck_analysis.py` | A deck explained in plain words from the rows: plan, level-ups, control, support, card flow, key cards, weak spots (`ask.py <game> analyze`) |
 | `network_page.py`, `decks.tsv`, `network.html` | Decks from the web (with source; and cases/decks.tsv) drawn as networks in one page that opens offline, by game |
+| `audit_text.py` | Words in a card's text its rows do not show ("or the enemy Nexus", "spells and Skills", "everywhere" ...); run by run.py |
 | `audit_links.py` | Links that cannot exist (needs nothing makes, keywords without concept or record, missing level-up forms, misread names); run by run.py |
 | `network.py`, `NETWORK_DRAFT.md` | A deck, a faction or a whole game as a network of cards: central cards, chains, groups, loose cards (`ask.py <game> network`); the plan it follows |
 | `mechanics.py` | Questions about mechanics (concepts) and decks, links inside each game added up over games |
@@ -39,7 +40,7 @@ equal mechanics of different games share one concept of the concept tree (Stun a
 | `CHANGES.md`, `RESULTS.md`, `HANDOFF.md` | Every change to shapes, values and rules; each game's results; where the work stands |
 
 ## Tables in cards.sqlite
-card, type, card_type, card_keyword, card_link (levels into, generates), ability (given_by_effect for abilities an effect
+card, type, card_type, card_keyword, game_rule (an entry whose rows every card of a category has by the game's rules: read/<game>/game_rules.jsonl; flat_ref origin game), card_link (levels into, generates), ability (given_by_effect for abilities an effect
 gives), event, cond, effect, param, target, filter (op in on several rows of one attr = one of them), amount, amount_item,
 name_part, keyword_trigger, unsure, vocab, causes; the query layer flat_when, flat_if, flat_do, flat_concept, flat_ref.
 Searches use the query layer, never keyword names.

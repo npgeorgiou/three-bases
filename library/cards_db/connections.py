@@ -99,7 +99,7 @@ def reasons(c, enabler, payoff):
                             if opick == 'self' and m != p and not (side in ('mine', 'any', None) and kind in ('unit', 'any', 'card', None)): continue  # "I've survived damage": only what hits my units
                             if agree(side, oside) and narrow_ok(ow, onw, c): yield ((6 if m != e else 4), f'condition: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else ''))
             # a happening the enabler makes that the payoff counts or picks things by (flat_ref: condition, state)
-            made = {(h, sd, k, pk) for x in makers for h, sd, k, pk in c.execute("select happening, side, keyword, pick from flat_ref where card=? and role='makes'", (x,))}
+            made = {(h, sd, k, pk) for x in makers for h, sd, k, pk in c.execute("select happening, side, keyword, pick from flat_ref where card=? and role='makes' and origin!='game'", (x,))}
             for h, sd, role, k, pk in c.execute("select happening, side, role, keyword, pick from flat_ref where card=? and role in ('condition','state')", (p,)).fetchall():
                 sd = 'mine' if pk == 'self' else sd  # something that happens to the payoff itself happens on my side
                 if any(h == mh and agree(ms, sd) and same_kw(c, k, mk) and not (pk == 'self' and mp == 'self') for mh, ms, mk, mp in made): yield (6, f'{role}: {h}')

@@ -104,3 +104,11 @@ Each change: date, what changed, the card that caused it, and which records were
   reduced cards. vocab: event cost_changed (caused by cost_change, cost_set), state cost_reduced. PROCESS: how to map a
   keyword to a concept; BRIEF: Game words: Runeterra. decks.tsv: Janna Nilah and 27 Runeterra decks from deck codes
   (riwan.substack.com, Dec 2021), 22 Stormbound decks (stormbound-kitty.com deck ids). cases/network.tsv n43-n51.
+- 29 Oct 2026, v34 (Kaptain: errors in every check; the whole design changed, all games): game rules as data
+  (read/<game>/game_rules.jsonl, table game_rule, flat_ref origin game: every unit can attack and strike enemy units or the
+  enemy player; not Immobile units); a strike's damage is on what it hits (flat_do to_side); strikes_nexus written one way;
+  help as one table (network.py HELPS) instead of special cases; line kinds in players' words (stats, buffs, cheaper and
+  more damage are "makes it stronger"; "changes how it works" only for rule changes; aimed lines say "can give it +2|+0");
+  audit_text.py in run.py; fixes/runeterra/v34.py (Make it Rain hits the enemy Nexus too, "everywhere" zones); BRIEF
+  reading rules 26-32; PROCESS "Why the first three games went wrong" and step 0.10; cases/network.tsv n52-n57 (cases now
+  check the line kind).

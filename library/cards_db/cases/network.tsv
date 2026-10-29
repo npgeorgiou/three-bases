@@ -50,3 +50,9 @@ n48	runeterra	Braum Zoe	Sunburst	Braum	none		Kaptain 29 Oct 2026: Sunburst deals
 n49	runeterra	Janna Nilah	Windborne Mariner	Janna	line		Claude, from Janna's text: a card that costs less when played is a cost reduced card she counts
 n50	runeterra	Janna Nilah	Ruined Rex	Janna	none		Claude, from Janna's text: Cannon Barrage played by Ruined Rex is not cost reduced
 n51	monster_train	Imp build (Shardtail Queen)	Imp-in-a-Box	Shardtail Queen	line		Kaptain: cards made by description ("2 random Imps") are Imps
+n52	runeterra	Ping City	Make it Rain	Gangplank	line		Kaptain 29 Oct 2026: anything that damages the enemy Nexus levels Gangplank (Make it Rain: "or the enemy Nexus")
+n53	runeterra	Ping City	Jagged Butcher	Gangplank	line		Kaptain: a unit that attacks can hit the enemy Nexus (game rule), so it helps Gangplank level up
+n54	runeterra	Ping City	Powder Keg	Gangplank	none	by fighting	Claude, from the game rule: an Immobile unit never attacks
+n55	runeterra	Ashe LeBlanc	Incisive Tactician	Yadulski Snowdog	line		Kaptain: Rally makes my units attack again, so their Attack effects happen again
+n56	runeterra	Braum Zoe	Spirits Unleashed	Braum	none	rules:	Kaptain: Spirits Unleashed gives allies +1|+1, it does not change how they work
+n57	monster_train	Imp build (Shardtail Queen)	Fledgling Imp	Impish Scholar	line		Claude: Rage given to friendly units makes them stronger

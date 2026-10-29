@@ -7,6 +7,28 @@ The database is one place for all games: questions run across games (`ask.py all
 generic. A game's own words live only in the card texts, its keyword entries and its types; what cards DO is said with
 vocab.tsv values and concepts that any game can share.
 
+## Why the first three games went wrong (read before importing a game; 29 Oct 2026)
+Kaptain checked a few decks four times and each time found missing and wrong links. The causes, and what now stops them:
+1. **The rows held only what card texts say, not the game's rules.** No Runeterra text says "a unit that attacks unblocked
+   hits the enemy Nexus", so no unit helped Gangplank, Darius or Gnar level up. Now each game has
+   `read/<game>/game_rules.jsonl` (step 0.10): what every unit does by the rules, written once from
+   `library/tools/games/<game>.md`; refs.py gives those rows to every card of the category (origin game).
+2. **Claude patched the example, not the cause.** Each check added one special rule to the network code (power helps
+   damage, health helps survival ...) and the next missing case waited for Kaptain. Now what helps a need is one table
+   (network.py HELPS) and every fix is a rule over all cards of all games (fixes/<game>/vNN.py), never one card.
+3. **Readers dropped details a verb check cannot see**: a second target ("or the enemy Nexus"), Skills in "spells and
+   Skills", a counted card's quality ("cost reduced"), "double" written as +1, "everywhere", the damage of a strike put on
+   the striker, one happening written two ways (strikes_nexus with the player or the unit). BRIEF.md reading rules 26-32
+   now say each; `audit_text.py` (in run.py) compares every text with its rows and lists every card a rule finds.
+4. **Data the build had but did not read**: level-up forms keep power and health as "power|health" in stats, read by no
+   query until 29 Oct (246 Runeterra forms had no stats, so "an ally with 5+ Power" matched them all).
+5. **Lines were named in Claude's words.** "Changes how it works" was shown for Spirits Unleashed giving +1|+1. Line kinds
+   now say what a player says: does what it waits for, helps it level up, makes it stronger (stats, buffs, cheaper, more
+   damage), changes how it works (only real rule changes: Fast, can't block), is a card it needs, puts it into play.
+6. **"Done" was said on counts.** Cases passing says nothing about the links nobody wrote a case for. Before showing a
+   network: run.py passes, audit_text.py and audit_links.py are explained, every guide deck's "lacks" list (network.measure)
+   is read card by card (PROCESS "Think like a player").
+
 ## How to work (read first; the cost of a game is set here)
 Import chats went wrong by going round in circles: fetching data the repo had, fixing one card at a time, rebuilding after
 every small edit, and turning a decision one way and later back. Work like this:
@@ -128,6 +150,14 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
 7. **Numbers per card level** ("1/2/3/4/5"): `{"x": "per_level", "items": [...]}` in level order.
 8. `python3 build_input.py <game> 20000`; a 10% sample for the second reading in `input/<game>/second_001.jsonl`.
 9. Add the game's trigger labels and verbs to `patterns/patterns.tsv` (judged as step 2.2 says).
+10. **The game's rules** (`read/<game>/game_rules.jsonl`): from `library/tools/games/<game>.md` ("The game" and the terms),
+   write what every unit (or card of a category) does that no card text says, as one record: name "Game rule: ...",
+   `applies_to` (categories), `source` (the line it comes from), abilities on event always with pick self. The three games
+   write how units fight: Runeterra `start_attack` self, `strike` self to an enemy unit, or (link or) to the enemy player;
+   Stormbound strike to an enemy unit or structure, or the enemy base; Monster Train strike to an enemy unit. Not written:
+   what every unit does all the time and says nothing about which cards belong together (Stormbound units moving forward).
+   refs.py copies the rows to every card of the category as origin game, except units that can never attack (Immobile);
+   the network weights them less than a card that says it; card queries (ask.py, mechanics.py, connections.py) leave them out.
 
 ### 1. Reading
 - Readers: background agents, model sonnet, the prompt in READER_PROMPT.md. Three in parallel: cards, keywords, second

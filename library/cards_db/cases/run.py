@@ -89,8 +89,8 @@ def main():
                 nodes, lines = network.network(c, game, ids)
                 nets[r['deck']] = ({i: mechanics.name(c, i) for i in nodes}, lines)
             nm, lines = nets[r['deck']]
-            hit = [y for (a, b), ls in lines.items() if (r['from'] == '*' or nm[a] == r['from']) and nm[b] == r['to']
-                   for k, w, y in ls if k != 'targets']
+            hit = [f'{k}: {y}' for (a, b), ls in lines.items() if (r['from'] == '*' or nm[a] == r['from']) and nm[b] == r['to']
+                   for k, w, y in ls if k != 'targets']  # the line's kind and why ("boosts: gives it +1|+1")
             if r['expect'] == 'line': ok = bool(hit)
             else: ok = not hit if not r['why_not'] else not any(r['why_not'] in y for y in hit)
             total += 1; passed += ok

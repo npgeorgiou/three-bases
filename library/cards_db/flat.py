@@ -18,7 +18,7 @@ create table flat_if(card integer, origin text, via integer, ability integer, te
   ev_obj_pick text, attr text, ev_actor_pick text);
 create table flat_do(card integer, origin text, via integer, ability integer, seq integer, act text, concept text, on_kind text,
   on_side text, on_pick text, on_zone text, card_ref integer, keyword_ref integer, lasts text, link text, on_with text,
-  param_event text, params text, eff_zone text, to_kind text, to_with text, to_pick text);
+  param_event text, params text, eff_zone text, to_kind text, to_with text, to_pick text, to_side text);
 create table flat_concept(card integer, concept text, rule text);
 create index fw on flat_when(event); create index fd on flat_do(act); create index fi on flat_if(test, event);
 create index fwc on flat_when(card); create index fdc on flat_do(card); create index fic on flat_if(card);
@@ -117,8 +117,8 @@ def build(c):
             ps = ';'.join(f'{pn}={num(a) if a else v}' for pn, a, v in c.execute('select param, amount, value from param where effect=?', (eid,))) or None
             concept = (tree.get(('keyword', kwname.get(kref, ''))) if kref else None) or tree.get(('act', act))
             if s == 'enemy': concept = ON_ENEMY.get(concept, concept)  # the same keyword used on an enemy (Ascend an enemy unit)
-            c.execute('insert into flat_do values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
-                      (card, origin, via, aid, seq, act, concept, k, s, p, z, cref, kref, lasts, link, w, pe, ps, ez, tgt(to)[0], withs(to), tgt(to)[2]))
+            c.execute('insert into flat_do values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+                      (card, origin, via, aid, seq, act, concept, k, s, p, z, cref, kref, lasts, link, w, pe, ps, ez, tgt(to)[0], withs(to), tgt(to)[2], tgt(to)[1]))
             if kref and act in ('keyword_action', 'give_keyword') and kref not in seen:  # the keyword's meaning on this target
                 for (kab,) in c.execute('select id from ability where card=? and given_by_effect is null', (kref,)).fetchall():
                     ability_rows(card, kab, 'uses_keyword', kref, applied_to=(k, s, p, z, w), seen=tuple(seen) + (kref,))

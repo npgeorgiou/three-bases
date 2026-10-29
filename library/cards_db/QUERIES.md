@@ -126,10 +126,10 @@ Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed dea
 
 - sacrifice: monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5540 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
 - destroy: monster_train 399 pairs, e.g. Little Fade -> Primordium; runeterra 12483 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- removal: monster_train 93 pairs, e.g. Wicked Blaze -> Primordium; runeterra 3771 pairs, e.g. Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
-- self_destruct: monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6803 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
+- removal: monster_train 93 pairs, e.g. Molded -> Primordium; runeterra 3771 pairs, e.g. Kindred's Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Dreadful Keepers
+- self_destruct: monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6870 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
 - revive: runeterra 1027 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant
-- damage: runeterra 13535 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 686 pairs, e.g. Eloth the Ignited -> Dreadful Keepers
+- damage: runeterra 13536 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 686 pairs, e.g. Eloth the Ignited -> Dreadful Keepers
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -154,7 +154,7 @@ Supports your units (stats, protection, combat keywords): Piercing Darkness, Sen
 Card flow (draw, create, choose): Glimpse Beyond, Lonely Chimeslime, Senna, Spirit Leech.
 Puts extra units into play: Cursed Keeper, Hapless Aristocrat, The Undying.
 Units that support cards can target: 9 (Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, Lucian, Ravenous Butcher, Senna, Senna, Sentinel of Light, Spirit Leech, The Undying).
-Key cards (in most of the plan): Senna, The Ruination, Spirit Leech, Crumble, Ravenous Butcher.
+Key cards (in most of the plan): Senna, Spirit Leech, The Ruination, Crumble, Ravenous Butcher.
 Weak spots: none found.
 ```
 
@@ -205,7 +205,7 @@ select distinct card from flat_do where act='copy_keywords'
 - stormbound Ironclad: lanes (8), forced_movement (9), movement (9), death_trigger (4), positional (26)
 - stormbound Shadowfen: lifesteal (7), damage_over_time (6), steal (4), ping (10), variable_stats (7)
 - stormbound Swarm: direct_damage (8), tribal (6), summon (8), death_trigger (4), on_attack (5)
-- stormbound Winter: disable (8), resource_gain (7), cant_attack (8), passive (8), silence (8)
+- stormbound Winter: disable (8), resource_gain (7), cant_attack (8), silence (8), passive (8)
 
 ## Created-card chains (A creates B, B creates C)
 

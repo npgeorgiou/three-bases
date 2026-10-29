@@ -119,6 +119,19 @@ AMOUNT   a number, or `{"x": x, "of": TARGET, "attr": attr, "event": EVENT, "spa
    dealt damage" = actor the player, side mine. Never leave out the "self": without it the card waits for any unit.
 25. Write the kind of what is hit: a base, Nexus or Pyre is kind player; a unit is kind unit. Damage "to your base" is not
    damage to a unit.
+26. Every target the text names gets a row; "or" makes two effects linked "or". "Deal 1 to three enemies or the enemy
+   Nexus" = damage on enemy units AND, link "or", damage on the enemy player (Make it Rain lost the Nexus).
+27. A class the text names is the whole class: "spells and Skills" / "Fast spells, Slow spells, and Skills" = category in
+   spell, skill on every target the phrase names (28 Runeterra cards lost Skills).
+28. Every word that narrows what is counted or picked is a filter: "8 cost reduced cards" = state cost_reduced; "damaged
+   enemy" = state damaged; "allies with 5+ Power" = power ge 5. A count without its filter counts everything (Janna).
+29. Amounts are what the text says: "double the damage" = amount event_amount (as much again), never 1 (The Dreadway);
+   "everywhere" = zone everywhere on that target (Rek'Sai (level 2) lost it).
+30. "A strikes B": act strike, on = the striker, to = what it hits; the damage is on "to", never on the striker.
+31. One happening is written one way in every card: "strike the enemy Nexus" is strikes_nexus by the striking unit (actor),
+   never with the player as its object. Before writing a happening, look at how the worked examples and vocab.tsv write it.
+32. Do not write what the game's rules do for every card (a unit attacks, an unblocked attacker hits the enemy Nexus): that is
+   in read/<game>/game_rules.jsonl, written once by the import chat. Write only what this card's text says.
 
 ## Keyword entries (category keyword)
 A keyword's record says what the keyword means, so that every card with it inherits that meaning. Four kinds:

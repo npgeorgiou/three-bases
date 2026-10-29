@@ -42,6 +42,7 @@ def build(c):
     kwname = {i: (f'{g}:{n}' if ('keyword', f'{g}:{n}') in tree else n) for i, g, n in c.execute('select id, game, name from card where is_keyword=1')}
 
     def ins(card, origin, via, ab, role, ev, kind, side, pick, kw=None, state=None, w=None, ref=None):
+        if ev == 'strikes_nexus' and kind == 'player': kind, side = 'unit', 'mine'  # one way: the unit that strikes, never the player struck
         if role == 'makes' and ((kind == 'player' and ev in UNIT_ONLY) or (kind not in OPEN_KINDS and ev in PLAYER_ONLY)): return
         con = (tree.get(('keyword', kwname.get(kw, ''))) if kw else None) or (tree.get(('state', state)) if state else None) \
             or tree.get(('event', ev))
@@ -104,10 +105,16 @@ def build(c):
         ins(card, 'has_keyword', kw, None, 'makes', 'keyword_used', None, 'mine', 'self', kw)
         for ev, *kwn in causes.get(('keyword', kwname.get(kw, '')), []): ins(card, 'has_keyword', kw, None, 'makes', ev, None, 'mine', 'self', kw)
     for r in c.execute('select card, origin, via, ability, act, on_kind, on_side, on_pick, on_zone, on_with, keyword_ref, card_ref, '
-                       'param_event, to_kind, to_with from flat_do').fetchall():
-        card, o, v, ab, act, k, s, p, z, w, kw, cref, pev, to_k, to_w = r
+                       'param_event, to_kind, to_with, to_side, to_pick from flat_do').fetchall():
+        card, o, v, ab, act, k, s, p, z, w, kw, cref, pev, to_k, to_w, to_s, to_p = r
         for ev, *kwn in causes.get(('act', act), []):
+            if act == 'strike' and ev != 'strikes' and (to_k or to_s or to_p):  # "A strikes B": A strikes, B takes the damage
+                if to_k == 'player':
+                    if ev == 'damaged': ins(card, o, v, ab, 'makes', 'nexus_damaged', 'player', to_s, None)
+                    else: continue
+                ins(card, o, v, ab, 'makes', ev, to_k, to_s, to_p, w=to_w); continue
             ins(card, o, v, ab, 'makes', ev, k, s, p, kwid.get(kwn[0].lower()) if kwn else kw, w=w, ref=cref)
+        if act == 'strike' and to_k == 'player': ins(card, o, v, ab, 'makes', 'strikes_nexus', k or 'unit', s or 'mine', p)
         if act == 'keyword_action' and cref:  # a card planted or placed to go off later (a trap, a Chime): it goes off
             ins(card, o, v, ab, 'makes', 'trap_activated', 'card', s, None, w=f'card is {cref}', ref=cref)
         if kw and act in ('keyword_action', 'give_keyword'):  # what the keyword itself is (Predict: predicts)
@@ -121,3 +128,16 @@ def build(c):
             ins(card, o, v, ab, 'makes', 'damaged', 'unit', 'enemy', None)
         state_rows(card, o, v, ab, k, s, p, w, z)
         if to_w and re.search(r'(?<![a-z:])position ', to_w): ins(card, o, v, ab, 'state', 'moves', to_k, s, None, w=to_w)  # "attack a bordering enemy"
+    # the game's rules (read/<game>/game_rules.jsonl): what every card of a category does without its text saying so (an
+    # attacking unit hits the enemy Nexus when it is not blocked); its makes rows, about "self", become every such card's own
+    for e, cat in c.execute('select entry, category from game_rule').fetchall():
+        rows = c.execute("select ability, happening, kind, side, pick, keyword, concept, obj_with, ref from flat_ref where card=? and role='makes'", (e,)).fetchall()
+        # a unit that can never attack (Immobile, Inert, "I can't attack") does not fight
+        never = {a for (a,) in c.execute("""select ck.card from card_keyword ck join card k on k.id=ck.keyword join vocab v on v.field='keyword'
+                 and v.value in (k.name, k.game || ':' || k.name) where v.tree='cant_attack' union select card from flat_do where origin='own'
+                 and act='cant' and param_event='attacks' and on_pick='self' and coalesce(lasts,'while') in ('while','permanent')""")}
+        for (card,) in c.execute('select id from card where category=? and game=(select game from card where id=?) and is_stub=0', (cat, e)).fetchall():
+            if card in never: continue
+            for ab, h, k, sd, pk, kw, con, w, ref in rows:
+                if pk == 'self' and not sd: sd = 'mine'  # what the card does to itself is on its owner's side
+                c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?,?,?,?)', (card, 'game', e, ab, 'makes', h, k, sd, pk, kw, con, w, ref))

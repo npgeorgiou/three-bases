@@ -1,0 +1,1 @@
+{"name":"Game rule: units fight","applies_to":["unit","hero"],"source":"library/tools/games/monster_train.md, The game: combat resolves floor by floor; units fight on the same floor (the front unit attacks the front enemy).","abilities":[{"when":{"event":"always"},"do":[{"act":"strike","on":{"pick":"self"},"to":{"kind":"unit","side":"enemy","pick":"chosen"}}]}]}

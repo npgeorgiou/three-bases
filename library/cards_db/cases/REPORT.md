@@ -1,7 +1,7 @@
 # Case tests: monster_train
 
 Made by `cases/run.py monster_train`.
-**145 of 145 cases pass.**
+**146 of 146 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -171,5 +171,6 @@ Made by `cases/run.py monster_train`.
 | n40 | Imp build (Shardtail Queen) | Queen's Impling | Transcendimp | none repeats | - | yes |
 | n41 | Frostbite build (Tethys) | Crystalline Seeds | Tethys Titansbane | none  | - | yes |
 | n42 | Frostbite build (Tethys) | Tethys Titansbane | Titan Sentry | none Frostbite | - | yes |
-| n47 | Hellhorned rage | Deranged Brute | Rage Serum | line  | makes the Rage it gives stronger | yes |
-| n51 | Imp build (Shardtail Queen) | Imp-in-a-Box | Shardtail Queen | line  | makes an Imp it asks for | yes |
+| n47 | Hellhorned rage | Deranged Brute | Rage Serum | line  | boosts: makes the Rage it gives stronger | yes |
+| n51 | Imp build (Shardtail Queen) | Imp-in-a-Box | Shardtail Queen | line  | type: makes an Imp it asks for | yes |
+| n57 | Imp build (Shardtail Queen) | Fledgling Imp | Impish Scholar | line  | boosts: gives it Rage | yes |

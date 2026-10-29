@@ -15,6 +15,7 @@ create table card(id integer primary key, game text, name text, category text, s
 create table type(id integer primary key, game text, name text, tribe_entry integer);
 create table card_type(card integer, type integer);
 create table card_keyword(card integer, keyword integer);
+create table game_rule(entry integer, category text);  -- an entry whose abilities every card of the category has by the game's rules
 create table card_link(src integer, rel text, dst integer);
 create table event(id integer primary key, event text, actor integer, object integer);
 create table target(id integer primary key, kind text, side text, pick text, n integer, zone text, by_attr text);
@@ -91,6 +92,9 @@ class Loader:
                  ref_keyword=self.ref('keyword', c['ref']) if 'ref' in c else None, value=self.amount(c.get('value')))
     def record(self, rec):
         cid = rec['id'] if 'id' in rec else self.ref('keyword', rec['name'])  # a keyword the library lacks, by its name
+        if 'applies_to' in rec:  # a game rule (read/<game>/game_rules.jsonl): every card of these categories follows it
+            self.c.execute("update card set category='game_rule' where id=?", (cid,))
+            for cat in rec['applies_to']: self.ins('game_rule', entry=cid, category=cat)
         if 'trigger' in rec: self.ins('keyword_trigger', keyword=cid, event=self.event(rec['trigger']))
         for c in rec.get('condition', []): self.cond(c, keyword=cid)
         for f in rec.get('unsure', []): self.ins('unsure', card=cid, field=f)

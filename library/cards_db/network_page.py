@@ -39,9 +39,9 @@ svg text{font-size:12px;fill:var(--fg);pointer-events:none;paint-order:stroke;st
 <div id="tools"><button id="zin" title="zoom in">+</button><button id="zout" title="zoom out">&minus;</button><button id="fit" title="fit">fit</button></div></div>
 <div id="side"></div></div><div id="tip"></div><script>
 const D=__DATA__;
-const LINE={waits:['#0d9488','makes what it waits for'],levels:['#c026d3','helps it level up'],puts:['#65a30d','puts it into play'],
- repeats:['#ea580c','repeats its effects'],rules:['#dc2626','changes how it works'],type:['#4f46e5','is the type or kind it asks for'],
- boosts:['#b45309','helps it (more power, health, Nexus hits)'],levelsinto:['#6b7280','levels into'],targets:['#9ca3af','can aim at it']};
+const LINE={waits:['#0d9488','does what it waits for'],levels:['#c026d3','helps it level up'],puts:['#65a30d','puts it into play'],
+ repeats:['#ea580c','repeats its effects'],rules:['#dc2626','changes how it works'],type:['#4f46e5','is a card it needs in play or in the deck'],
+ boosts:['#b45309','makes it stronger'],levelsinto:['#6b7280','levels into'],targets:['#9ca3af','can aim at it']};
 const CARD={hero:['#facc15','champion'],unit:['#7dd3fc','unit'],spell:['#c4b5fd','spell'],building:['#6ee7b7','landmark / structure'],
  item:['#fdba74','equipment'],ability:['#d1d5db','skill']};
 const R=14,NS='http://www.w3.org/2000/svg',svg=document.getElementById('draw'),tip=document.getElementById('tip');

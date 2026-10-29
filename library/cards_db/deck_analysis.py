@@ -11,7 +11,7 @@ DECK_RULES = {  # the games' own deck-building rules (not card data)
 }
 SAY = {  # what happens, in plain words; {who} = your / enemy / any
     'dies': '{who} units die', 'killed': '{who} units are killed', 'damaged': '{who} units or players take damage',
-    'survives_damage': '{who} units survive damage', 'nexus_damaged': 'a player takes damage', 'summoned': '{who} units enter play',
+    'survives_damage': '{who} units survive damage', 'nexus_damaged': '{whos} takes damage', 'summoned': '{who} units enter play',
     'played': 'cards are played', 'cost_changed': 'card costs are changed', 'drawn': 'you draw cards', 'discarded': 'cards are discarded', 'created': 'cards are created',
     'given_keyword': '{who} units get {kw}', 'stat_changed': '{who} units have their stats changed', 'healed': '{who} units are healed',
     'attacks': '{who} units attack', 'blocks': '{who} units block', 'strikes': '{who} units strike',
@@ -36,7 +36,7 @@ def who(side):
 
 def say(c, h, side, kw):
     k = c.execute('select name from card where id=?', (kw,)).fetchone()[0] if kw else 'a keyword or status'
-    return SAY.get(h, h.replace('_', ' ')).format(who=who(side), kw=k)
+    return SAY.get(h, h.replace('_', ' ')).format(who=who(side), whos={'mine': 'your Nexus or base', 'enemy': 'the enemy player'}.get(side, 'a player'), kw=k)
 
 
 def names(c, ids):
@@ -84,7 +84,7 @@ def analyze(c, game, text):
     if unknown: out.append('Not found in ' + game + ': ' + ', '.join(unknown) + '.')
 
     # what each card makes and what it uses (its own rules only; a keyword's inner rules are not the card's needs)
-    rows = c.execute(f'select card, ability, role, happening, side, keyword, pick, origin from flat_ref where card in ({marks})', deck).fetchall()
+    rows = c.execute(f'select card, ability, role, happening, side, keyword, pick, origin from flat_ref where origin!=\'game\' and card in ({marks})', deck).fetchall()
     lvl = {a for (a,) in c.execute(f"select ability from flat_do where act='level_up' and card in ({marks})", deck)}
     makes = collections.defaultdict(set); uses = []
     for card, ab, role, h, side, kw, pick, origin in rows:

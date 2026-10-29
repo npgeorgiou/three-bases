@@ -47,7 +47,7 @@ def names(games, sql, args=(), limit=None):
 
 def feature_sql(x):
     """a concept or a happening the card makes"""
-    return ("select card from flat_concept where concept=? union select card from flat_ref where happening=? and role='makes'", (x, x))
+    return ("select card from flat_concept where concept=? union select card from flat_ref where happening=? and role='makes' and origin!='game'", (x, x))
 
 
 def side_sql(side):
@@ -58,7 +58,7 @@ def main():
     games, q, args = games_of(sys.argv[1]), sys.argv[2], sys.argv[3:]
     col = 'happening' if args and c.execute("select 1 from vocab where field='event' and value=?", (args[0],)).fetchone() else 'concept'
     if q == 'cares': names(games, f"select card from flat_ref where {col}=? and role!='makes'" + side_sql(args[1] if len(args) > 1 else ''), (args[0],))
-    elif q == 'makes': names(games, f"select card from flat_ref where {col}=? and role='makes'" + side_sql(args[1] if len(args) > 1 else ''), (args[0],))
+    elif q == 'makes': names(games, f"select card from flat_ref where {col}=? and role='makes' and origin!='game'" + side_sql(args[1] if len(args) > 1 else ''), (args[0],))
     elif q == 'together':
         for x, per in mechanics.together(c, games, args[0]): print(f'{x}: ' + ', '.join(f'{g} {n} cards' for g, n in per.items()))
     elif q in ('feeds', 'fed'):

@@ -1,4 +1,4 @@
-# Next chat: deck networks — state, open work, how to work (29 Oct 2026, v33)
+# Next chat: deck networks — state, open work, how to work (29 Oct 2026, v34)
 
 Read this file, then HANDOFF.md. Everything below is pushed. Kaptain is out of patience: he has found real errors in every
 round, because the work fixed only what he pointed at. **Your job is to find the errors he has not pointed at.**
@@ -20,7 +20,7 @@ round, because the work fixed only what he pointed at. **Your job is to find the
 6. Report only what is checked. Say which families you swept and how many cards each touched.
 
 ## Open work, in order
-1. **Kaptain's check of v33** (CHANGES.md): Tybaulk's family, the new decks, Janna. Fix what he finds as a family.
+1. **Kaptain's check of v34** (CHANGES.md): game rules as data, help table, line names. Fix what he finds as a family.
 2. **Monster Train full decks: none found as text.** Searched Steam discussions and guides, GameFAQs, the wiki: players
    post screenshots or prose, not card lists. cases/decks.tsv still holds the guides' core cards. Ask Kaptain for
    screenshots or lists before searching again.
@@ -28,7 +28,7 @@ round, because the work fixed only what he pointed at. **Your job is to find the
    level-up row and the cost reduced family). Read the other 27 Runeterra and 22 Stormbound decks line by line.
 4. Not linked on purpose (Claude's call, tell Kaptain if asked): Janna's "the first 3 cards you draw cost 1 less" helps any
    card, so it is no line to each card (it would say nothing about which cards belong together).
-5. After any change: `run.py <game>` for all three games (now 290 / 135 / 145 cases), audit_links.py 0 findings,
+5. After any change: `run.py <game>` for all three games (now 295 / 135 / 146 cases), audit_links.py 0 findings,
    `python3 network_page.py`, give Kaptain network.html, push.
 
 ## Where things are

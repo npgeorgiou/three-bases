@@ -33,12 +33,15 @@ def main():
         if f.endswith('proposals.jsonl'): continue
         inp = os.path.join(HERE, 'input', game, os.path.basename(f))
         step('check ' + os.path.basename(f), ['check.py', game, f, '--input', inp], lambda o: ' 0 problems' in o)
+    if os.path.exists(os.path.join(read, 'game_rules.jsonl')):  # what every unit (card of a category) does by the game's rules
+        step('check game_rules.jsonl', ['check.py', game, os.path.join(read, 'game_rules.jsonl')], lambda o: ' 0 problems' in o)
     if os.path.exists(os.path.join(read, 'keywords_stub.jsonl')):  # only games with keywords defined by name
         step('check keywords_stub.jsonl', ['check.py', game, os.path.join(read, 'keywords_stub.jsonl')], lambda o: ' 0 problems' in o)
     games = sorted(d for d in os.listdir(os.path.join(HERE, 'read')) if os.path.isdir(os.path.join(HERE, 'read', d)))
     step('load', ['load.py'] + games)  # cards.sqlite holds every game
     step('cases', ['cases/run.py', game], lambda o: (lambda w: w[0] == w[2])(o.splitlines()[-1].split()))  # "N of N cases pass"
     step('word check', ['pattern_check.py', game])
+    step('text audit', ['audit_text.py', game])  # words in a card's text its rows do not show (audit_text.py); explain or fix each
     step('link audit', ['audit_links.py', game])  # lists links that cannot exist (audit_links.py); a game is done when it explains each
     step('status', ['status.py', game]); step('examples', ['examples.py'])
 

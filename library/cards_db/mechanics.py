@@ -17,7 +17,7 @@ def edges(c, game):
     key = ('edges', game)
     if key in CACHE: return CACHE[key]
     rows = c.execute("""select f.card, f.role, f.happening, f.side, f.keyword, f.pick from flat_ref f join card k on k.id=f.card
-                        where k.game=? and k.is_keyword=0 and k.is_stub=0""", (game,)).fetchall()
+                        where k.game=? and k.is_keyword=0 and k.is_stub=0 and f.origin!='game'""", (game,)).fetchall()
     makes, takes = collections.defaultdict(list), collections.defaultdict(list)
     for card, role, h, side, kw, pick in rows:
         if pick == 'self' and role != 'makes':
