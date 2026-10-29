@@ -143,13 +143,19 @@ condition | Conditions | condition |  | An effect works only if, unless or when 
 adjacency | Neighbours matter (adjacency) | condition | positional | The effect uses the units or tiles beside it for any purpose: hits them, moves them, gives or needs a bonus, or the lane or location to the left or right. | Several lanes away is cross_lane.
 assists_support | Help from nearby allies (assists) | condition | adjacency,synergy_payoff | Nearby allies add a bonus to an action: assists, support, flanking help. | Bonuses for any ally anywhere are tribal or aura.
 combo_sequence | Order of my plays matters (combo) | condition | condition | The effect cares about the order of the owner's plays: the last card played, played another card first. | Order between the players is reveal_order.
+play_timing_condition | When in the round it is played | condition | condition,combo_sequence | The effect needs the card to be the first card played this round, or not the first (Daybreak, Nightfall). (Added 29 Oct 2026, Kaptain's decision; Claude's wording.) | Any other order of plays is combo_sequence.
 condition_count | Counts / thresholds | condition | condition | The effect needs or scales with a number: for each, N or more. | Counts of past events this game are count_payoff.
+combat_damage_threshold | Strikes of a given size | condition | condition_count | The effect needs allies to have struck for N or more damage a number of times (Reputation). (Added 29 Oct 2026, Kaptain's decision; Claude's wording.) | Damage counted in total is count_payoff.
+spells_played_condition | Enough spells played | condition | condition_count | The effect needs N or more spells or skills played in a round (Flow). (Added 29 Oct 2026, Kaptain's decision; Claude's wording.) | Growing with every spell played this game is count_payoff.
 condition_life | Damaged unit matters | condition | condition | The effect cares that a unit is damaged or wounded: enrage, bloodied, below full health. | The player being at low life is low_life.
 low_life | Low life matters (player behind) | condition | condition,comeback | The effect cares that the owner's player or hero is at low life. | A unit being damaged is condition_life.
+nexus_damage_condition | Enemy player damaged this turn | condition | condition | The effect needs the enemy player (Nexus, base, Pyre) to have taken damage this turn or round (Plunder). (Added 29 Oct 2026, Kaptain's decision; Claude's wording.) | My own player losing life is on_life_loss or low_life.
 cost_condition | Cost matters | condition | condition | The effect cares about a card's cost: 1-cost cards, odd or even cost, N or more. | Changing costs is cost_reduction or cost_set.
+max_mana_condition | Maximum mana reached | condition | condition | The effect needs the owner to have a given maximum mana or resource (Enlightened: 10 max mana). (Added 29 Oct 2026, Kaptain's decision; Claude's wording.) | Gaining mana is resource_gain.
 count_payoff | Grows with what happened this game | condition | condition_count | The effect grows with how many times something happened this game: cards played, units died, spells cast. | A count of what is on the board now is condition_count.
 death_count | Counts deaths | condition | death,condition_count | The effect counts or scales with how many units died. | A single death trigger is death_trigger.
 deck_condition | Deck contents matter | condition | condition | The effect cares about what is in the deck: deck size, cards in it, an empty deck. | The top card is deck_position.
+card_presence_condition | Having a card in play or hand | condition | condition | The effect needs a given card or kind of card in play or in hand (Behold; "if you have a structure"). (Added 29 Oct 2026, Kaptain's decision; Claude's wording.) | Counting how many is condition_count.
 deck_position | Top or bottom of the deck matters | condition | card_flow,condition | The top or bottom card of a deck matters: looked at, revealed or changed. | Searching the whole deck is tutor.
 flanking | Facing / attack from behind | condition | positional | Facing, flanking or attacking from the side or behind matters. | Simple neighbours are adjacency.
 hand_position | Position in hand matters | condition | condition,card_flow | Where a card sits in hand (leftmost, oldest) or how long it has been there matters. | Hand size is hand_size.
@@ -273,6 +279,7 @@ zone_of_control | Zones of control (leaving is punished) | structure | positiona
 ## Triggers
 trigger | Triggers & timing | trigger |  | When an effect happens. | What it does is an effect.
 activated | Activated ability (pay to use) | trigger | trigger | The player chooses when to use an ability: activate, tap, pay to use. | Abilities that fire on their own are triggers.
+spell_or_skill | Skill (a unit's spell-like effect) | trigger | trigger | A unit's own effect that goes on the stack like a spell, so the opponent can react (Runeterra Skill, Elemental Skill). (Added 29 Oct 2026, Kaptain's decision; Claude's wording.) | An ability the player chooses to use is activated.
 aura | Aura (ongoing effect on others) | trigger | passive | While the source is in play, other units are continuously changed: anthem, lord. | A one-time change is the effect itself.
 combat_start | Start of combat | trigger | trigger | Effects at the start of combat or before a fight. | Start of turn is turn_start.
 death_trigger | When it dies (deathrattle) | trigger | death,trigger | Effects when this unit dies or is destroyed: its own death. (Narrowed 20 Oct 2026, Kaptain's decision.) | Another unit dying is other_death_trigger; leaving play by other means is leave_trigger.
@@ -280,6 +287,7 @@ other_death_trigger | When another unit dies | trigger | death,trigger | Trigger
 leave_trigger | When it leaves play | trigger | trigger | Effects when this unit leaves play by any means: dies, exiled, returned, banished. (Added 20 Oct 2026, Kaptain's decision; Claude's wording.) | Text that says it dies is death_trigger.
 other_leave_trigger | When another unit leaves play | trigger | trigger | Triggers when another unit leaves play by any means. (Added 20 Oct 2026, Kaptain's decision; Claude's wording.) | Text that says it dies is other_death_trigger.
 delayed | Delayed / countdown | trigger | trigger | The effect happens later: next turn, after N turns, countdowns. | A set turn number is turn_number.
+countdown | Countdown | trigger | delayed | A card counts down each round and acts at 0; effects that advance a countdown. (Added 29 Oct 2026, Kaptain's decision; Claude's wording.) | Something that happens next turn once is delayed.
 game_end_trigger | At the end of the game | trigger | trigger,win_condition | Effects when the game ends or at the final count. | End of a turn is turn_end.
 hero_power | Hero power | trigger | activated | A repeatable player or leader ability. | A unit's own ability is activated.
 on_ally_play | When I play another card | trigger | trigger,synergy_payoff | Triggers when the owner plays or summons another card or unit. | When this card is played is on_play.

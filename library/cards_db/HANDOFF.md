@@ -1,6 +1,7 @@
 # Handoff: card database (29 Oct 2026)
 
 ## Start of a chat
+0. **Deck-network work in progress: read NEXT_CHAT.md first** (state, open work, how to think).
 1. Clone with the library (CLAUDE.md "Start of a chat", then `git sparse-checkout disable`). Read only this file.
    A game's card data and keyword sources are already in the repo: PROCESS.md step 0.3 says where. Never fetch them again.
 2. cards.sqlite is committed and current: questions need no build (`ask.py runeterra ...`). Run `run.py runeterra` only after

@@ -509,36 +509,36 @@ state	boss	"a boss: the strongest enemy of a fight (""non-boss unit"", ""does no
 kind	lane_resource_slot	a slot that holds a lane resource (Monster Train Echo slot)			28 Oct 2026, v23 (Monster Train)
 act	exhaust	remove the target card for the rest of the battle (Monster Train Consume pile, Slay the Spire exhaust)	exhaust	exhausted	28 Oct 2026, v24 (Monster Train)
 act	copy_upgrades	the "on" units get the upgrades, enhancements and stat changes of the "to" card (Monster Train Legion of Wax: "apply this unit's upgrades and stat changes")	upgrade		29 Oct 2026, v26 (Monster Train)
-keyword	Burst	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	spell_speed		29 Oct 2026, v30
-keyword	Fast	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	spell_speed		29 Oct 2026, v30
-keyword	Slow	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	spell_speed		29 Oct 2026, v30
-keyword	Focus	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	spell_speed		29 Oct 2026, v30
-keyword	Skill	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	activated		29 Oct 2026, v30
-keyword	Elemental Skill	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	activated		29 Oct 2026, v30
-keyword	Countdown	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	delayed	counts_down;countdown_done	29 Oct 2026, v30
-keyword	Advance	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	delayed	counts_down	29 Oct 2026, v30
-keyword	Last Breath	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	death_trigger		29 Oct 2026, v30
-keyword	Imbue	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	on_spell		29 Oct 2026, v30
-keyword	Nightfall	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	combo_sequence		29 Oct 2026, v30
-keyword	Daybreak	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	combo_sequence		29 Oct 2026, v30
-keyword	Attune	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	resource_gain	mana_refilled	29 Oct 2026, v30
-keyword	Plunder	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	on_life_loss		29 Oct 2026, v30
-keyword	Curse	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	debuff		29 Oct 2026, v30
-keyword	Enlightened	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	high_cost		29 Oct 2026, v30
-keyword	Flow	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	on_spell		29 Oct 2026, v30
-keyword	Allegiance	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	deck_condition		29 Oct 2026, v30
-keyword	Phase	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	stances		29 Oct 2026, v30
-keyword	Reforge	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	generate_cards	created	29 Oct 2026, v30
-keyword	Restore the Sun Disc	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	upgrade	levels_up	29 Oct 2026, v30
-keyword	Updraft	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	deck_modification	shuffled	29 Oct 2026, v30
-keyword	Improvise	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	merge_attach	equipped	29 Oct 2026, v30
-keyword	Boost	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	stacking_keyword	given_keyword	29 Oct 2026, v30
-keyword	Forge	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	stat_gain	stat_changed	29 Oct 2026, v30
-keyword	Empowered	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	stat_condition		29 Oct 2026, v30
-keyword	Reputation	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	condition_count		29 Oct 2026, v30
-keyword	Deep	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	self_mill		29 Oct 2026, v30
-keyword	Behold	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	condition		29 Oct 2026, v30
-keyword	Assimilate	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	transform	transformed;levels_up	29 Oct 2026, v30
-keyword	Fated	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	on_targeted		29 Oct 2026, v30
-keyword	Sharpsight	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	blocking		29 Oct 2026, v30
-keyword	Mark of the Storm	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	mark_target		29 Oct 2026, v30
+keyword	Burst	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	spell_speed		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Fast	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	spell_speed		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Slow	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	spell_speed		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Focus	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	spell_speed		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Skill	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	spell_or_skill		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Elemental Skill	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	spell_or_skill		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Countdown	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	countdown	counts_down;countdown_done	29 Oct 2026, v30; v33 (Kaptain)
+keyword	Advance	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	countdown	counts_down	29 Oct 2026, v30; v33 (Kaptain)
+keyword	Last Breath	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	death_trigger		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Imbue	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	on_spell		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Nightfall	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	play_timing_condition		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Daybreak	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	play_timing_condition		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Attune	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	resource_gain	mana_refilled	29 Oct 2026, v30; v33 (Kaptain)
+keyword	Plunder	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	nexus_damage_condition		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Curse	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	debuff		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Enlightened	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	max_mana_condition		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Flow	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	spells_played_condition		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Allegiance	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	deck_position		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Phase	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	stances		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Reforge	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	generate_cards	created	29 Oct 2026, v30; v33 (Kaptain)
+keyword	Restore the Sun Disc	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	upgrade	levels_up	29 Oct 2026, v30; v33 (Kaptain)
+keyword	Updraft	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	recycle	shuffled	29 Oct 2026, v30; v33 (Kaptain)
+keyword	Improvise	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	merge_attach	equipped	29 Oct 2026, v30; v33 (Kaptain)
+keyword	Boost	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	stacking_keyword	given_keyword	29 Oct 2026, v30; v33 (Kaptain)
+keyword	Forge	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	stat_gain	stat_changed	29 Oct 2026, v30; v33 (Kaptain)
+keyword	Empowered	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	stat_condition		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Reputation	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	combat_damage_threshold		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Deep	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	deck_condition		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Behold	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	card_presence_condition		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Assimilate	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	transform	transformed;levels_up	29 Oct 2026, v30; v33 (Kaptain)
+keyword	Fated	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	on_targeted		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Sharpsight	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	blocking		29 Oct 2026, v30; v33 (Kaptain)
+keyword	Mark of the Storm	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	mark_target		29 Oct 2026, v30; v33 (Kaptain)

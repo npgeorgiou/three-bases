@@ -189,6 +189,15 @@ RULES = [
     ('movement', 'flat_do', "act in ('swap','move') and coalesce(on_zone,eff_zone,'board')='board'"),
     ('board_presence', 'flat_if', "test in ('count','amount_count') and of_zone='board' and of_side='mine'"),
     ('count_payoff', 'flat_if', "test in ('amount_count','amount_event_count')"),
+    # conditions and kinds of card that any game can have (29 Oct 2026, Kaptain's review of the Runeterra keyword concepts)
+    ('countdown', 'flat_do', "act='countdown_advance'"),
+    ('countdown', 'flat_when', "event in ('counts_down','countdown_done')"),
+    ('play_timing_condition', 'flat_if', "test='first_card'"),
+    ('spells_played_condition', 'flat_if', "event='played' and test in ('event_count','amount_event_count') and span in ('this_round','last_round','this_turn','last_turn') and (ev_obj_kind='spell' or coalesce(ev_obj_with,'') like '%spell%' or coalesce(ev_obj_with,'') like '%skill%')"),
+    ('combat_damage_threshold', 'flat_if', "event='strikes' and test in ('event_count','amount_event_count') and (attr in ('damage','power') or coalesce(ev_obj_with,'') like '%power %')"),
+    ('nexus_damage_condition', 'flat_if', "event='nexus_damaged' and test in ('event_count','amount_event_count') and coalesce(ev_obj_side, of_side, 'enemy')='enemy'"),
+    ('max_mana_condition', 'flat_if', "test='max_mana'"),
+    ('card_presence_condition', 'flat_if', "test='have' and coalesce(op,'') not in ('not')"),
     ('removal', 'flat_do', "act in ('kill','obliterate','capture') and (on_side in ('enemy','any') or (coalesce(on_side,'')='' and on_pick in ('all','random','chosen','lowest','highest') and on_kind in ('unit','unit_or_structure','anything','landmark')))"),
 ]
 
@@ -200,5 +209,10 @@ def derive(c):
     c.execute("insert into flat_concept select distinct card, concept, 'row' from flat_if where concept is not null and concept!=''")
     c.execute("insert into flat_concept select distinct ck.card, v.tree, 'keyword' from card_keyword ck join card k on k.id=ck.keyword "
               "join vocab v on v.field='keyword' and v.value=coalesce((select s.value from vocab s where s.field='keyword' and s.value=k.game || ':' || k.name), k.name) where v.tree!=''")
+    c.execute("insert into flat_concept select id, 'spell_or_skill', 'rule spell_or_skill' from card where category='ability'")  # skills
+    # a keyword condition the card uses (Plunder, Reputation, Allegiance ...) gives the card that keyword's concept
+    c.execute("insert into flat_concept select distinct a.card, v.tree, 'keyword condition' from cond cd join ability a on a.id=cd.ability "
+              "join card k on k.id=cd.ref_keyword join vocab v on v.field='keyword' and v.value=coalesce((select s.value from vocab s where "
+              "s.field='keyword' and s.value=k.game || ':' || k.name), k.name) where cd.test='keyword_condition' and v.tree!=''")
     for concept, table, cond in RULES:
         c.execute(f"insert into flat_concept select distinct card, ?, ? from {table} where {cond}", (concept, 'rule ' + concept))
