@@ -44,8 +44,9 @@ every small edit, and turning a decision one way and later back. Work like this:
 3. A decision is written once and kept. Before changing a mapping, value or rule, grep CHANGES.md for it: if it was decided
    (by Kaptain or an earlier chat), do not turn it back; if it truly looks wrong, ask Kaptain, giving the card that shows
    it. (Runeterra's Stun went disable -> attack_lock -> disable in two chats before Kaptain settled it.)
-4. Batch the work: collect all problems of one kind (all proposals, all flags, all failing cases), decide them together,
-   fix them with one rule or script, then rebuild every game once. Never rebuild between single edits.
+4. Batch the work: collect all problems of one kind (all proposals, all flags, all failing cases, all wrong deck lines),
+   decide them together, fix them with one rule or script, then rebuild once. Never rebuild between single edits. (Faeria,
+   29 Oct 2026: fixing deck by deck with a rebuild of six games after each fix cost over an hour.)
 5. Fix by rule, for every card: a regex over the texts or a script over the records (`fixes/<game>/vNN.py`, safe to run
    twice). A re-read by a reader is the last resort, for cards no rule can fix.
 6. Readers are expensive (~110-125k tokens each, whatever the batch size): one for the cards, one for the keywords, one for
@@ -53,7 +54,9 @@ every small edit, and turning a decision one way and later back. Work like this:
 7. Read the answers, not only the counts: before calling a step done, run `ask.py <game> partners <card>` and
    `analyze` on a guide deck and read them. A case count that passes says nothing about a link that should not exist.
 8. Shared code (connections.py, refs.py, flat.py, deck_analysis.py, normalize.py, load.py) serves every game: a change
-   there gets a mechanics.tsv case with game `*`, and every game's `run.py` must pass before it is pushed.
+   there gets a mechanics.tsv case with game `*`, and every game's cases must pass before it is pushed: run `run.py <your
+   game>` (it loads every game into cards.sqlite), then `cases/run.py <other game>` for each other game. Never run
+   `run.py` for a game another chat is importing: it normalizes and rewrites that chat's records, flags and reports.
 
 ## Rules that are never broken
 1. The card text is the truth. A record says only what the text states. No rule from memory: a definition that neither
@@ -190,7 +193,8 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
    type, or a misreading (`names.tsv`). Never guess.
 5. Second reading: `compare.py` lists differences; Claude judges them against the text. A kept reading that is wrong is
    fixed; each "same meaning, different form" becomes a normalize rule for all games.
-6. Rebuild every game once (`run.py <each game>`); all cases must pass.
+6. Rebuild your game once (`run.py <your game>`) and check every other game read-only (`cases/run.py <game>`); all cases
+   must pass. Games no other chat is working on may be rebuilt with their own run.py.
 7. **Text audit** (`audit_text.py <game> [--list <rule>]`, also printed by run.py): every card whose text has a word its rows
    do not show ("or the enemy Nexus" without a player target, "spells and Skills" without Skills, "everywhere" without
    the zone). Read each listed card: fix the family by a rule script, or add the card to audit_text_explained.tsv with

@@ -8,6 +8,19 @@
    game), NEXT_CHAT.md (open deck-network work on the three games).
 
 ## Importing a new game: start here
+**Do and don't (Kaptain, 29 Oct 2026, after the Faeria import took over an hour of loops). Keep this list in view:**
+- Do research the game's rules first, before readers: how units fight, move and reach things, and, on a board, where cards
+  may enter and how the board grows (Faeria: land only next to your god, lands or creatures; summon only on your own empty
+  land of the right colour). Write them as game rules (step 0.10). Missing them made most of Faeria's network errors.
+- Do read ALL guide decks before fixing anything: write every wrong or missing line in one list, group them into families,
+  fix each family once by a rule for all games, rebuild once. Never fix after each deck, never rebuild after each fix.
+- Do rebuild only your own game (`run.py <your game>`, it loads every game). After a shared-code change, check the others
+  read-only with `cases/run.py <game>`; if one fails, tell Kaptain. Never run `run.py` for another chat's game: it
+  normalizes and rewrites that chat's records and files.
+- Don't touch other games' records, fixes or flags; don't do work nobody asked for (new explainer roles, wordings).
+- Don't trust a passing count or a few lines: look at what a line SAYS in network.html, both directions, as a player.
+- If a step here or in PROCESS seems to force a loop, stop and ask Kaptain instead of working around it.
+
 1. Read PROCESS.md in this order: "Why the first three games went wrong", "How to work", "Rules that are never broken",
    "Writing data the same way in every game", then "Steps" and follow them in order, once. Read "Links the deck networks
    showed missing" and "Think like a player" before step 2.9.
