@@ -340,17 +340,11 @@ def groups(best, nodes):
     return sorted(out, key=lambda x: -len(x[0]))
 
 
-def report(c, game, ids, title, broad=True, limit=10, json_path=None):
+def measure(c, game, ids, broad=True, limit=10):
+    """the network and its measures as data: card ids, so a text or a page can show them"""
     nodes, lines = network(c, game, ids, broad)
     best = best_lines(lines)
-    nm = lambda i: mechanics.name(c, i) + (' (made)' if nodes.get(i) else '')
     own = [i for i, m in nodes.items() if not m]
-    out = [f'{title}: {len(own)} cards, {sum(nodes.values())} more made by them, {len(best)} lines.']
-    if json_path:
-        json.dump({'game': game, 'nodes': [{'id': i, 'name': mechanics.name(c, i), 'made': m} for i, m in nodes.items()],
-                   'lines': [{'from': a, 'to': b, 'kind': k, 'weight': round(w, 4), 'why': y} for (a, b), ls in lines.items()
-                             for k, w, y in sorted(set(ls))]}, open(json_path, 'w'), indent=1)
-        out.append(f'Network written to {json_path}.')
     ins, outs, wsum = collections.Counter(), collections.Counter(), collections.Counter()
     for (a, b), (w, kind, _) in best.items():
         outs[a] += 1; ins[b] += 1; wsum[a] += w; wsum[b] += w
@@ -359,31 +353,12 @@ def report(c, game, ids, title, broad=True, limit=10, json_path=None):
     for (a, b), (w, kind, _) in sorted(best.items(), key=lambda x: -x[1][0]):
         if per_node is None or len(adj[a]) < per_node: adj[a].append(b)
     bc = betweenness(list(nodes), adj)
-    top = sorted(nodes, key=lambda i: -wsum[i])[:limit]
-    out.append('Central cards (strongest lines in and out): ' + ', '.join(f'{nm(i)} ({ins[i]} in, {outs[i]} out)' for i in top if wsum[i]) + '.')
-    mid = [i for i in sorted(nodes, key=lambda i: -bc[i]) if bc[i] > 0][:5]
-    if mid: out.append('Cards most chains pass through: ' + ', '.join(nm(i) for i in mid) + '.')
-    out.append('Strongest chains:')
-    for s, head, steps, ends in chains(best, list(nodes), limit, per_node):
-        path = list(head[1:]) + [', '.join(dict.fromkeys(nm(e) for e in ends))]
-        out.append('- ' + nm(head[0]) + ''.join(f' -> {why} -> {b if isinstance(b, str) else nm(b)}' for (w, kind, why), b in zip(steps, path)))
     gs = groups(best, nodes)
-    out.append('Groups (cards tightly linked; one group = one plan):')
-    for g, why in gs[:limit]:
-        names_ = sorted(dict.fromkeys(nm(i) for i in g))
-        out.append(f'- {why or "linked"} ({len(g)}): ' + ', '.join(names_[:25]) + (f' and {len(names_) - 25} more' if len(names_) > 25 else ''))
-    if len(gs) > limit: out.append(f'- and {len(gs) - limit} smaller groups')
-    if len(gs) > 1:
-        gid = {n: k for k, (g, _) in enumerate(gs) for n in g}
-        joined = {(gid[a], gid[b]) for (a, b) in best if a in gid and b in gid and gid[a] != gid[b]}
-        out.append(f'The groups are joined to each other by weaker lines: {"yes" if joined else "no"}.')
+    gid = {n: k for k, (g, _) in enumerate(gs) for n in g}
     # loose cards: no lines, lines only one way, needs nothing in the set makes
-    alone = [i for i in own if not ins[i] and not outs[i]]
-    gives = [i for i in own if outs[i] and not ins[i]]
-    gets = [i for i in own if ins[i] and not outs[i]]
     makes = collections.defaultdict(set)
-    marks = ','.join('?' * len(nodes))
-    for card, h, side, kw in c.execute(f"select card, happening, side, keyword from flat_ref where role='makes' and card in ({marks})", list(nodes)):
+    for card, h, side, kw in c.execute(f"select card, happening, side, keyword from flat_ref where role='makes' and card in ({','.join('?' * len(nodes))})",
+                                       list(nodes)):
         makes[h].add((card, side, kw))
     lack = {}
     for card, h, side, kw, pick in c.execute(f"""select card, happening, side, keyword, pick from flat_ref where role!='makes' and origin='own'
@@ -392,15 +367,49 @@ def report(c, game, ids, title, broad=True, limit=10, json_path=None):
         if h in EVERY_GAME or side == 'enemy' or (pick == 'self' and h in ('played', 'summoned')): continue
         if not any(m != card and mechanics.FIT(ms, side) and (mk is None or kw is None or mk == kw) for m, ms, mk in makes.get(h, ())):
             lack.setdefault(card, deck_analysis.say(c, h, side, kw))
+    return {'nodes': nodes, 'lines': lines, 'best': best, 'own': own,
+            'central': [(i, ins[i], outs[i]) for i in sorted(nodes, key=lambda i: -wsum[i])[:limit] if wsum[i]],
+            'through': [i for i in sorted(nodes, key=lambda i: -bc[i]) if bc[i] > 0][:5],
+            'chains': [(list(head), [why for _, _, why in steps], ends) for _, head, steps, ends in chains(best, list(nodes), limit, per_node)],
+            'groups': gs, 'joined': any(gid.get(a, -1) != gid.get(b, -1) and a in gid and b in gid for (a, b) in best),
+            'alone': [i for i in own if not ins[i] and not outs[i]], 'gives': [i for i in own if outs[i] and not ins[i]],
+            'gets': [i for i in own if ins[i] and not outs[i]], 'lack': list(lack.items()),
+            'linked': sum(1 for i in own if ins[i] or outs[i])}
+
+
+def report(c, game, ids, title, broad=True, limit=10, json_path=None):
+    m = measure(c, game, ids, broad, limit)
+    nodes, lines = m['nodes'], m['lines']
+    nm = lambda i: mechanics.name(c, i) + (' (made)' if nodes.get(i) else '')
+    own = m['own']
+    out = [f'{title}: {len(own)} cards, {sum(nodes.values())} more made by them, {len(m["best"])} lines.']
+    if json_path:
+        json.dump({'game': game, 'nodes': [{'id': i, 'name': mechanics.name(c, i), 'made': x} for i, x in nodes.items()],
+                   'lines': [{'from': a, 'to': b, 'kind': k, 'weight': round(w, 4), 'why': y} for (a, b), ls in lines.items()
+                             for k, w, y in sorted(set(ls))]}, open(json_path, 'w'), indent=1)
+        out.append(f'Network written to {json_path}.')
+    out.append('Central cards (strongest lines in and out): ' + ', '.join(f'{nm(i)} ({a} in, {b} out)' for i, a, b in m['central']) + '.')
+    if m['through']: out.append('Cards most chains pass through: ' + ', '.join(nm(i) for i in m['through']) + '.')
+    out.append('Strongest chains:')
+    for head, whys, ends in m['chains']:
+        path = [nm(x) for x in head[1:]] + [', '.join(dict.fromkeys(nm(e) for e in ends))]
+        out.append('- ' + nm(head[0]) + ''.join(f' -> {why} -> {b}' for why, b in zip(whys, path)))
+    gs = m['groups']
+    out.append('Groups (cards tightly linked; one group = one plan):')
+    for g, why in gs[:limit]:
+        names_ = sorted(dict.fromkeys(nm(i) for i in g))
+        out.append(f'- {why or "linked"} ({len(g)}): ' + ', '.join(names_[:25]) + (f' and {len(names_) - 25} more' if len(names_) > 25 else ''))
+    if len(gs) > limit: out.append(f'- and {len(gs) - limit} smaller groups')
+    if len(gs) > 1: out.append(f'The groups are joined to each other by weaker lines: {"yes" if m["joined"] else "no"}.')
     cap = lambda xs: ', '.join(sorted(dict.fromkeys(nm(i) for i in xs))[:15]) + (f' and {len(xs) - 15} more' if len(xs) > 15 else '')
     out.append('Loose cards:')
-    if alone: out.append(f'- no lines at all ({len(alone)}): {cap(alone)}')
-    if gives: out.append(f'- only give to others, nothing gives to them ({len(gives)}): {cap(gives)}')
-    if gets: out.append(f'- only get from others, give nothing back ({len(gets)}): {cap(gets)}')
-    for card, what in list(lack.items())[:limit]: out.append(f'- {nm(card)} waits for "{what}" and nothing here does it')
-    if len(lack) > limit: out.append(f'- and {len(lack) - limit} more cards wait for something nothing here does')
-    linked = sum(1 for i in own if ins[i] or outs[i])
-    out.append(f'Overall: {linked} of {len(own)} cards ({round(100 * linked / max(1, len(own)))}%) have at least one line; {len(gs)} group{"" if len(gs) == 1 else "s"}.')
+    if m['alone']: out.append(f'- no lines at all ({len(m["alone"])}): {cap(m["alone"])}')
+    if m['gives']: out.append(f'- only give to others, nothing gives to them ({len(m["gives"])}): {cap(m["gives"])}')
+    if m['gets']: out.append(f'- only get from others, give nothing back ({len(m["gets"])}): {cap(m["gets"])}')
+    for card, what in m['lack'][:limit]: out.append(f'- {nm(card)} waits for "{what}" and nothing here does it')
+    if len(m['lack']) > limit: out.append(f'- and {len(m["lack"]) - limit} more cards wait for something nothing here does')
+    out.append(f'Overall: {m["linked"]} of {len(own)} cards ({round(100 * m["linked"] / max(1, len(own)))}%) have at least one line; '
+               f'{len(gs)} group{"" if len(gs) == 1 else "s"}.')
     return out
 
 
