@@ -3,20 +3,37 @@
 One file per game: the game, its factions, the source summary, the mechanics (patterns) and the real-world cases.
 
 ## The game
-*Claude's summary (Oct 2026), from general knowledge of the game and the rules and terms under Mechanics; not from the sources below.*
-- Genre: digital tactics card game (Counterplay, 2016); 1 vs 1 on a 9x5 grid.
-- Generals: each player's General is a unit on the board with 25 HP; killing the enemy General wins.
-- Turn: play cards from hand, then each unit may move up to 2 tiles and attack once; attacked units counterattack if they can reach.
-- Mana: mana crystals grow by 1 per turn up to 9; mana springs on the board give 1 extra mana to the unit that steps on them.
-- Deploy: minions are summoned next to a friendly unit; once per turn a card can be replaced with a random one from the deck.
-- Keywords: Opening Gambit (on play), Dying Wish (on death), Provoke, Rush, Ranged, Flying, Frenzy, Celerity, Blast, Backstab, Zeal, Rebirth, Grow, Infiltrate, Deathwatch.
-- Specific: each General has a Bloodborn Spell that charges over turns; positioning on the grid is the core of the game.
+*From the game's own texts: the open-sourced client (github.com/open-duelyst/duelyst, commit 2843f24): tutorial and tips
+(app/localization/locales/en/tutorial.json, game_tips.json) and rule constants (app/common/config.js, app/sdk/board.coffee);
+each line names its source. Checked 29 Oct 2026.*
+- Board: 5 rows by 9 columns (config BOARDROW, BOARDCOL).
+- Generals: each player's General is a unit on the board; "If you run out of Health, you lose"; deal enough damage to the
+  enemy General to win (tutorial lesson 1). Generals have 25 Health (card factories: General maxHP 25).
+- Moving: units can move up to 2 spaces (tutorial; tip novice_tip_22); allies can move through each other, but not through
+  enemies (novice_tip_9); actions are movements followed by attacks, a unit cannot attack and then move (novice_tip_38).
+- Attacking: a unit attacks an enemy by moving onto it; the General attacks too, also diagonally (tutorial lessons 1, 4);
+  melee units reach the spaces next to them, Ranged units the whole board (config REACH_MELEE 1, REACH_RANGED).
+- Counterattack: "Your minions will always counterattack, even if they get destroyed" (novice_tip_2); Blast minions are
+  counterattacked by Ranged minions (medium_tip_17); Frenzy minions only by their attack target (medium_tip_20).
+- Summoning: minions are summoned on a space around any friendly unit (board.coffee getValidSpawnPositions); Airdrop
+  anywhere (medium_tip_1); minions must wait a turn to attack (tutorial), Rush acts at once (medium_tip_10).
+- Mana: 1 more Mana at the start of your turn, up to 9 (novice_tip_31); Player 2 starts with an extra mana crystal
+  (novice_tip_33); occupying a Mana Spring gives +1 bonus Mana for that turn (novice_tip_0).
+- Cards: you draw one new card each turn (tutorial); replace one card per turn (novice_tip_23), never getting the same copy
+  back (novice_tip_24); cards drawn past the hand limit (6, config MAX_HAND_SIZE) are destroyed (novice_tip_27); decks are
+  40 cards with the General, at most 3 copies (config MAX_DECK_SIZE, MAX_DECK_DUPLICATES).
+- Artifacts are equipped on your General, up to 3 at a time (novice_tip_1); an artifact is destroyed when the General has
+  taken damage three times (medium_tip_16; keyword Destructible).
+- Bloodbound Spell: each General's own spell; it counts down each turn until it refreshes (tutorial lesson 4).
+- Effects that only target minions do not apply to Generals (medium_tip_19).
 
 ## Sources and notes
 
 Sources:
 [1] https://store.steampowered.com/app/2004320/Duelyst_II/ (official faction descriptions, Duelyst II)
 [2] https://gamewave.fr/duelyst/duelyst-le-jeu-de-carte-aux-six-factions/ (French; six factions)
+[3] https://github.com/open-duelyst/duelyst commit 2843f24 (the open-sourced game: cards, texts, tutorial, tips, rules)
+[4] https://duelspot.com/ deck pages and the Duelyst forum archive (static.animalcracker.art/duelyst/forum_archive): the decks below
 
 Neutral is not a faction. Zeal (bonus next to the General) is adjacency; Infiltrate (bonus on the enemy side) is
 territory_trigger; Rebirth (comes back from an egg) is cheat_death. No source with named combos was found.
@@ -75,10 +92,33 @@ heal|heal|\brestore \d+ health\b
 dispel|silence|\bdispel\b
 stun|disable|\bstun\b
 walls|summon|\bsummon[^.]{0,40}\bwalls?\b
-# term: Zeal: a bonus while the minion is next to its General (Duelyst II store page: close-quarters fighters with Provoke and Zeal).
-# term: Infiltrate: a bonus while the minion is on the enemy's side of the board (assumed: the store page names Infiltrate without defining it).
-# term: Deathwatch: triggers when any minion dies (assumed: the store page says Abyssians profit from death through Deathwatch).
+# term: Zeal: Gains a bonus effect when nearby your General (modifiers.json); minions lose the Zeal buff when not adjacent to their General (game_tips medium_tip_26).
+# term: Infiltrate: Gains a bonus while on the enemy side of the battlefield (modifiers.json, the game's keyword text).
+# term: Deathwatch: Triggers effect whenever ANY minion dies (modifiers.json; game_tips medium_tip_4).
 ```
+
+## Decks
+Ten full decks (40 cards with the General) for the deck tests, each from a deck code on the page (decoded with the card ids
+of [3]; codes in cards_db/supplement/duelyst_deck_codes.tsv). The authors' plans, in Claude's words:
+- Argeon Mechaz0r (duelspot 4k-spirit-lyonar-mirror-mechs): build MECHAZ0R from its pieces, Lifestream and Mirrorrim find
+  them, Metaltooth for burst.
+- Vaath Dying Wish (duelspot dying-wish-vaath): Dying Wish minions with Cascading Rebirth; Grimes cascades into big
+  minions; Unseven pulls Dagona; Dagona + Cascading Rebirth + Homeostatic Rebuke for 15 damage; Fractal Replication copies.
+- Cassyva Replace Abomination (duelspot replace-abomination): replace cards (Aethermaster, White Widow, Inquisitor Kron,
+  Wings of Paradise) build stats; Abhorrent Unbirth fuses the board and needs a Rush minion (Kron's or Letigress's tokens).
+- Faie Blood Taura (duelspot blood-faice): trade face and burn; Blood Taura costs your General's health; Spirit
+  of the Wild reactivates Flameblood Warlocks, Blazing Spines, Disciples of Yggdra; Hearth-Sisters switch positions with them.
+- Shidai Artifacts (duelspot one-woman-army-shidai): Bangle of Blinding Strike and Cyclone Mask; Mask of Shadows to get
+  behind an enemy then Bangle; Flicker with Cyclone Mask; Saberspine Seal with Bangle; Crescent Spear adds damage to damage spells.
+- Kaleos Trial of Songhai (duelspot replace-ox): finish the Trial to summon Hideatsu the Ebon Ox, then each summoned minion
+  deals damage equal to its cost; minions of many costs.
+- Argeon Dawn's Eye aggro (duelspot dawns-eyeggro-patreon): cheap minions take the board early, trade, chip the enemy
+  General, burst at the end.
+- Lilithe Darkfire (forum: Unearthed Prophecies: Lilithe part two): Darkfire Sacrifice makes the next minion cost 2 less for big minions (Vorpal
+  Reaver, Desolator, a good sacrifice); Phantasm wants a hand of strong targets; Daemonic Lure against repositioning.
+- Argeon Intensify Riftwalker (forum: DeathsAdvocate's master thread): Mirrorrim and Lifestream on Riftwalker; Replicants
+  and Sun Wisps thin the deck so the Riftwalkers come back.
+- Ciphyron Build (forum: DeathsAdvocate's master thread): Build cards protected by Ciphyron's defensive tools.
 
 ## Cases
 The real-world cases, one per line, tab-separated: `type  a  b  why  source` (see `realworld/RESEARCH.md`). Read by `realworld.py`, `realworld_report.py`, `realworld_why.py` and `learn_recipes.py`.
