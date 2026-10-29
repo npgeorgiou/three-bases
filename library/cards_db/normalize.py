@@ -24,6 +24,8 @@ and second readings). Safe to run any number of times. Each rule is listed in CH
   N15 a planted card going off ("5+ of your traps have been activated": event activated whose object is another card, or
      keyword_used of a keyword whose vocab causes trap_activated: Trap, Boon) is event trap_activated; activated stays the
      player using something (a landmark, a keyword's own activation).
+  N16 "moves": the unit that moves is the event's object (vocab), never its actor; "on actor" in that ability is "on it"
+    (Inscryption Sentry, second reading, 29 Oct 2026).
   N10 "strongest" / "weakest" are pick highest / lowest by the attack stat: power, or strength in games whose units have
      one stat (Stormbound). One form in every game.
 Usage: normalize.py <game> <file.jsonl> [...]   rewrites the files in place, prints how many records changed."""
@@ -202,6 +204,19 @@ TRAP_KEYWORDS = {r['value'] for r in csv.DictReader(open(os.path.join(HERE, 'voc
                  if r['field'] == 'keyword' and 'trap_activated' in (r['causes'] or '')}
 
 
+def moves_object(x):
+    """N16"""
+    if isinstance(x, dict):
+        w = x.get('when') if isinstance(x.get('when'), dict) else {}
+        if w.get('event') == 'moves' and 'actor' in w and 'object' not in w:
+            w['object'] = w.pop('actor')
+            for e in x.get('do', []):
+                if e.get('on') == {'pick': 'actor'}: e['on'] = {'pick': 'it'}
+        for v in x.values(): moves_object(v)
+    elif isinstance(x, list):
+        for v in x: moves_object(v)
+
+
 def trap_events(x):
     """N15"""
     if isinstance(x, dict):
@@ -230,7 +245,7 @@ def main():
             fix_names(r2, table); attacking(r2); fix_filters(r2); another(r2, inputs)
             strength_picks(r2, 'strength' if game in STRENGTH_GAMES else 'power')
             keyword_trigger_form(r2, STATUS)
-            trap_events(r2)
+            trap_events(r2); moves_object(r2)
             n += r2 != r; out.append(r2)
         open(path, 'w').write(''.join(json.dumps(r, separators=(',', ':')) + '\n' for r in out))
         print(f'{os.path.basename(path)}: {n} of {len(L)} records changed')

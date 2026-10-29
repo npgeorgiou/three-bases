@@ -80,3 +80,36 @@ recs = [json.loads(l) for l in open(P)]; before = json.dumps(recs)
 for r in recs: normalize.fix_names(r, table)
 open(P, 'w').write(''.join(json.dumps(r, ensure_ascii=False) + '\n' for r in recs))
 print('keywords.jsonl names', 'changed' if json.dumps(recs) != before else 'unchanged')
+
+# second reading judged by Claude (compare.py): the kept reading is fixed where the second was right
+# - event moves: the unit that moves is the object (vocab: "a unit is about to move"; Stormbound "moves, object self"); Sentry
+#   had it as actor, and damaged "actor"
+# - Boon of Goat's Blood: the Black Goat is placed on the player's side ("to" my side)
+# - Bell Ringer: Power is the space number plus 1 per adjacent Chime: the Chimes add to it (stat_change), not set it
+def moves_object(x):
+    if isinstance(x, dict):
+        w = x.get('when') or {}
+        if w.get('event') == 'moves' and 'actor' in w and 'object' not in w:
+            w['object'] = w.pop('actor')
+            for e in x.get('do', []):
+                if e.get('on') == {'pick': 'actor'}: e['on'] = {'pick': 'it'}
+        for v in x.values(): moves_object(v)
+    elif isinstance(x, list):
+        for v in x: moves_object(v)
+
+for P in (os.path.join(HERE, 'read', 'inscryption', 'keywords.jsonl'), os.path.join(HERE, 'read', 'inscryption', 'batch_001.jsonl')):
+    recs = [json.loads(l) for l in open(P)]
+    for r in recs:
+        moves_object(r)
+        name = text.get(r['id'], '')
+        if 'Boon of Goat' in name or "Boon of Goat's Blood" in name:
+            for ab in r['abilities']:
+                for e in ab['do']:
+                    if e.get('act') == 'summon' and e.get('card') == 'Black Goat': e.setdefault('to', {'kind': 'position', 'side': 'mine'})
+        if name.startswith('The Bell Ringer symbol'):
+            for ab in r['abilities']:
+                for e in ab['do']:
+                    if e.get('act') == 'stat_set': e['act'] = 'stat_change'; e['lasts'] = 'while'
+            r['unsure'] = sorted(set(r.get('unsure', [])) | {'params'})  # the space number has no value
+    open(P, 'w').write(''.join(json.dumps(r, ensure_ascii=False) + '\n' for r in recs))
+print('second reading fixes applied')

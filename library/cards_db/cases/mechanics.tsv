@@ -260,3 +260,4 @@ fa32	mechanic	fights	text:\b(?:this|it) (?:may )?fights? (?:an?|another|the)\b|\
 fa33	mechanic	teleports	text:\bteleport	select card from flat_do where act='move'	faeria
 fa34	mechanic	summons units	text:(?<!when you )(?<!whenever you )\bsummon (?:a|an|two|three|\d+)\b	select card from flat_do where act in ('summon','copy')	faeria
 fa35	mechanic	draws cards	text:(?<!whenever you )(?<!time you )\bdraw (?:a|\d+|two|three) (?:\w+ )?cards?\b	select card from flat_do where act='draw'	faeria
+mx12	mechanic	a unit that moves is the event's object, never its actor (N16, Sentry, v36)	kw:Sentry	select card from flat_when where event='moves' and actor_kind is null and actor_pick is null and (obj_kind is not null or obj_pick is not null)	*

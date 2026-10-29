@@ -125,7 +125,7 @@ select distinct card from flat_do where params glob '*=[a-z]*'
 - faeria: 245 cards: Air Elemental, Airbot, Amai Merchant, Ancient Boar, Ancient Gargoyle, Animated Banquet, Annoying Gnat, Apex Predator ...
 - inscryption: 76 cards: !CORRUPTED, Ancient Fir, Aquasquirrel, Armored, Bell Ringer, Bell Tentacle, Blue Mage, Blue Sporemage ...
 - monster_train: 166 cards: A Fatal Melting, Adaptive Mutation, Alloy of the Ancients, Alloyed Construct, Ambient Charge, Ancient Resonance, Ancient Synergy, Apex Imp ...
-- runeterra: 687 cards: Absorb Soul, Abyssal Eye, Abyssal Guard, Acolyte's Reliquary, Acorn, the Hextechnician, Adnere's Aviarists, Advance, Advanced Intel ...
+- runeterra: 698 cards: Absorb Soul, Abyssal Eye, Abyssal Guard, Acolyte's Reliquary, Acorn, the Hextechnician, Adnere's Aviarists, Advance, Advanced Intel ...
 - stormbound: 56 cards: Agile Warriors, Amberhides, Awakening of the Will, Beards of Crowglyph, Bigthrust Tigers, Blizzard Bombs, Booming Professors, Brood Sages ...
 
 ## Mechanics, not cards
@@ -141,12 +141,12 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: faeria 1343 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 440 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 399 pairs, e.g. Little Fade -> Primordium; runeterra 12658 pairs, e.g. Shark Chariot -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- sacrifice: faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 24 pairs, e.g. Necromancer -> Kind Cell; monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5616 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- self_destruct: faeria 767 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 311 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6931 pairs, e.g. Shark Chariot -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
-- removal: faeria 320 pairs, e.g. Death's Desire -> Long-horned Yak; monster_train 93 pairs, e.g. Wicked Blaze -> Primordium; runeterra 3855 pairs, e.g. Kindred's Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Embers of Chaos
-- revive: inscryption 24 pairs, e.g. Necromancer -> Kind Cell; runeterra 1035 pairs, e.g. Chronobreak -> Bladepierced Revenant
-- ping: faeria 417 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 168 pairs, e.g. Good Fish -> Burrowing Trap; runeterra 5507 pairs, e.g. Anivia -> Bladepierced Revenant; stormbound 203 pairs, e.g. Acid Greenhorns -> Marked as Prey
+- destroy: faeria 1343 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 440 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 399 pairs, e.g. Little Fade -> Primordium; runeterra 12658 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- sacrifice: faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 24 pairs, e.g. Necromancer -> Leaping Trap; monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5616 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- self_destruct: faeria 767 pairs, e.g. Doomgate, Door to Oblivion -> Long-horned Yak; inscryption 311 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6931 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Spare Dragonling
+- removal: faeria 320 pairs, e.g. Death's Desire -> Long-horned Yak; monster_train 93 pairs, e.g. Wicked Blaze -> Primordium; runeterra 3855 pairs, e.g. Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Temple of the Mind -> Embers of Chaos
+- revive: inscryption 24 pairs, e.g. Necromancer -> Leaping Trap; runeterra 1035 pairs, e.g. Eternal Dancers -> Bladepierced Revenant
+- ping: faeria 417 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 120 pairs, e.g. Good Fish -> Burrowing Trap; runeterra 5507 pairs, e.g. Anivia -> Shackled Ghasts; stormbound 203 pairs, e.g. Acid Greenhorns -> Green Prototypes
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -171,7 +171,7 @@ Supports your units (stats, protection, combat keywords): Piercing Darkness, Sen
 Card flow (draw, create, choose): Glimpse Beyond, Lonely Chimeslime, Senna, Spirit Leech.
 Puts extra units into play: Cursed Keeper, Hapless Aristocrat, The Undying.
 Units that support cards can target: 9 (Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, Lucian, Ravenous Butcher, Senna, Senna, Sentinel of Light, Spirit Leech, The Undying).
-Key cards (in most of the plan): Senna, Spirit Leech, The Ruination, Crumble, Ravenous Butcher.
+Key cards (in most of the plan): Senna, The Ruination, Spirit Leech, Crumble, Ravenous Butcher.
 Weak spots: none found.
 ```
 
@@ -207,7 +207,7 @@ select distinct card from flat_do where act='copy_keywords'
 - faeria Red: on_fight (10), aoe_damage (13), ranged (5), direct_damage (11), damage (32)
 - faeria Yellow: temporary_buff (4), sacrifice (6), on_attack (14), haste (6), removal (5)
 - faeria Pandora: modal_choice (5), removal (4), aoe_damage (6), destroy (7), on_play (34)
-- inscryption Beast: variable_stats (8), stealth (8), immunity (6), multi_attack (8), blocking (15)
+- inscryption Beast: stealth (8), variable_stats (8), immunity (6), multi_attack (8), blocking (15)
 - inscryption Technology: stances (8), aoe_damage (4), ping (6), damage (11), random_effect (7)
 - inscryption Magick: aura (6), defence_gain (5), self_destruct (5), tribal (7), draw (4)
 - monster_train Hellhorned: temporary_buff (11), block_armor (12), damage_prevention (12), on_damaged (13), count_payoff (21)

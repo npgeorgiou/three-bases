@@ -330,6 +330,16 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
 3. **Keywords belong in the Keywords field.** Written as "Sigils: Airborne." every card needed a reader and inherited nothing;
    as "Keywords: Airborne." 222 of 285 cards need no reading and take their sigils' records. A game whose cards list keywords
    (sigils, traits that the game defines) writes them in the Keywords field.
+4. **Keyword records were never audited.** audit_text.py read card texts only ("a keyword's text is the glossary"); in
+   Inscryption every card is its sigils, so a misread sigil is every card's error. It now reads keyword entries too (the
+   rulebook line when the entry has one; trigger and condition keywords say it by their form). It found errors in other
+   games' keyword records: Runeterra SpellShield and Flow lacked Skills (v33's rule ran on card batches only, now on
+   keywords too), Spawn's "For each Spawn" lacked its repetition (fixes/runeterra/v36.py).
+5. **Readers used another game's words.** Hefty and Rampager moves were written with keyword Push (a Stormbound keyword),
+   and "in the way" with in_front / behind (a column's words on Inscryption's row of spaces). Names: a keyword that is no
+   keyword of the game is dropped from the effect, the effect stays (normalize N6); the row's neighbours are sides.
+6. **One happening, two forms, found by the second reading.** "Moves" had the moving unit as actor in Sentry: normalize N16
+   (the moving unit is the object) and case mx12.
 
 ## Think like a player (read before showing any network, any deck explanation, any answer about synergy)
 Kaptain checks a few decks and finds errors a player sees at once. Before showing anything, do what he does:

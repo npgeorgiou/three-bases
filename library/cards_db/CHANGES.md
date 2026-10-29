@@ -142,3 +142,9 @@ Each change: date, what changed, the card that caused it, and which records were
   merged entries: source.py FULL; 5 sigils the library lacks); sigils are the Keywords field; vocab keyword rows for all 107
   sigils and traits (inscryption:Armored is shield); kind secondary_resource (Bones), event sacrificed (Blood); BRIEF "Game
   words: Inscryption"; read/inscryption/game_rules.jsonl (units fight, Bones from deaths); 19 decks in decks.tsv.
+- 29 Oct 2026, v36 (Inscryption, after the readings): vocab position in_circuit, kind gem, region Orange, x unstated, keyword
+  Gemified; fixes/inscryption/v36.py (circuits, inscribed direction = sides, gems, unstated heals, names for keyword records,
+  second reading); names.tsv (Push/Pull dropped, Explode Bots, Pelts family, Nano Armor = Armored, Ancient Obol dropped);
+  normalize: a dropped keyword keeps its effect, abilities left without effects go, N16 (moves: the mover is the object);
+  audit_text.py reads keyword entries (rulebook line); audit_links.py check 5 (deck cards that are no card); Runeterra
+  keyword records: Skills in SpellShield and Flow (v33 now on keywords), Spawn repeats per Spawn (fixes/runeterra/v36.py).

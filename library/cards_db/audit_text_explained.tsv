@@ -20,3 +20,25 @@ faeria	Royal Judge	draw	"Draw a free Safeguard" is the choice label; the card ad
 faeria	Wind Gate	summon	a permission: you can summon on spaces next to it (can, event summoned, bordering)
 faeria	Death Walker	summon	"you must sacrifice another creature to summon this": the sacrifice is the kill on play
 faeria	Iona's Mirror	player named	"the last Treasure your opponent played": the copied card is the enemy's (side enemy); no row is about the player
+inscryption	Looter	deal damage	"deals damage directly" is the trigger strikes_nexus (the damage to the opponent); the effect is the draw
+inscryption	Hostage File	create	"the file used to create it" names how the card was made; nothing is created
+inscryption	Uncuttable	summon	the entry has no rulebook line; "Forced Death events ... summon" is a note on other events, not the trait
+inscryption	Waterborne	kill or destroy	"the only ways to kill a Waterborne creature" is a strategy note after the rule
+inscryption	Bone Dice	random	"a random whole number from 1 to 6" is the x range 1-6 the record sets
+inscryption	Power Dice	random	"randomly between 1 and 6" is the x range 1-6 the record sets
+inscryption	Boon of the Magpie's Eye	random	"bypasses the randomness" is a remark; the record lets the player choose the drawn card
+inscryption	Boon of the Forest	draw	"time to draw cards and plan" is a remark; the boon places Grand Firs
+inscryption	Boons	for each	the entry describes the Boons system (one offered per trial passed); no effect in a battle
+inscryption	Minor Boon of the Bone Lord	for each	"for each of this Boon obtained" counts copies of the Boon; one Boon gives 1 Bone per round as recorded
+runeterra	Overwhelm	kill or destroy	"beyond what would kill the target" is the excess_damage the record has
+runeterra	Everywhere	discard	the zone list of the keyword; it is the zone everywhere itself
+runeterra	Level Up	everywhere	"levels up everywhere" describes the level_up the champion records hold
+runeterra	Focus	spells and Skills	a play-speed keyword: "other spells or skills pending" is timing, no effect (BRIEF keyword entries)
+runeterra	Slow	spells and Skills	a play-speed keyword: "spells or skills pending" is timing, no effect
+runeterra	Rally	this round	"you can attack this round" is what gaining the attack token means
+runeterra	Animate	for each	the summon is on all allied targets (one per target); the record is marked unsure on its copy zone
+stormbound	Push	player named	"cannot be pushed into a base" limits the move; no effect on the player
+stormbound	Spawn	random	"a random spawn is always within the front line" limits where random spawns go; the keyword spawns where the card says
+monster_train	Pyrebound	player named	"the Pyre Room" is the top floor (position top_lane in the record), not the Pyre
+monster_train	Consume	for each	"once per battle" is the exhaust the record has
+faeria	Ranged Attack	adjacent	the "unless adjacent" exception has no row; the record is marked unsure (position, params)

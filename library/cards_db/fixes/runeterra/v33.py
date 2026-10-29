@@ -4,6 +4,7 @@
   ("When you play a spell, stop all enemy spells and Skills", Fizz), only targets on the phrase's side change.
 - "Double all damage dealt by ...": the damage again on what was damaged is as much as was dealt (amount event_amount),
   not 1 (The Dreadway).
+- Keyword records too (v36: SpellShield "the next enemy spell or skill" had spells only; the text audit now reads keywords).
 - "cost reduced cards" counted: the counted cards have state cost_reduced (Janna's level-up)."""
 import glob, json, os, re, sys
 HERE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -26,7 +27,7 @@ def has_skill(t):
     return any(f.get('attr') == 'category' and ('skill' in (f.get('vals') or []) or f.get('val') == 'skill') for f in t.get('with') or [])
 
 
-for p in sorted(glob.glob(os.path.join(HERE, 'read', 'runeterra', 'batch_*.jsonl'))):
+for p in sorted(glob.glob(os.path.join(HERE, 'read', 'runeterra', 'batch_*.jsonl'))) + [os.path.join(HERE, 'read', 'runeterra', 'keywords.jsonl')]:  # keyword records too (SpellShield, v36)
     recs = [json.loads(l) for l in open(p) if l.strip()]; n = 0
     for r in recs:
         t = re.sub(r'^Keywords:[^.]*\.\s*', '', text.get(r.get('id'), ''))

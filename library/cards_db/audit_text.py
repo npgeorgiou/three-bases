@@ -2,7 +2,8 @@
 show is a reading error (Make it Rain: "three enemies or the enemy Nexus" stored as enemy units only).
 Usage: audit_text.py <game> [--list rule]   prints, per rule, how many cards break it and some names; run.py runs it.
 A flag read and found right goes to audit_text_explained.tsv (game, card, rule, why); a wrong row is fixed by a rule script.
-A rule is (name, text pattern, what the rows must have). Text is the card's own text without its Keywords field."""
+A rule is (name, text pattern, what the rows must have). Text is the card's own text without its Keywords field; a keyword entry's
+rulebook line when it has one."""
 import collections, glob, json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE); import source
@@ -61,7 +62,12 @@ def rules(game):
 def main():
     game = sys.argv[1]; show = sys.argv[sys.argv.index('--list') + 1] if '--list' in sys.argv else None
     lib = source.lib()
-    text = {i: (n.strip(), ' '.join((t or '').split())) for i, n, t in lib.execute("select id, name, text from entities where game=? and category!='keyword'", (game,))}
+    text = {i: (n.strip(), ' '.join((t or '').split())) for i, n, t in lib.execute("select id, name, text from entities where game=?", (game,))}
+    # keyword entries too (v36: Inscryption's cards are only their sigils, so a misread sigil is every card's error); a keyword
+    # whose entry has a rulebook line is checked on that line (wiki notes follow it)
+    for i, (n, t) in list(text.items()):
+        m = re.match(r'Rulebook:\s*(.*?\.)(?:\s|\||$)', t)
+        if m: text[i] = (n, m.group(1))
     recs = {}
     for p in sorted(glob.glob(os.path.join(HERE, 'read', game, '*.jsonl'))):  # every record file load.py loads; one card can have several
         if p.endswith(('proposals.jsonl', 'rejected.jsonl')): continue
@@ -70,11 +76,12 @@ def main():
             r = json.loads(l)
             if 'id' not in r: continue
             recs.setdefault(r['id'], {'id': r['id'], 'abilities': []})['abilities'] += r.get('abilities', [])
+            if r.get('trigger') or r.get('condition'): recs[r['id']]['says_by_form'] = True  # a trigger or condition keyword
     explained = {(r[1], r[2]) for r in (l.rstrip('\n').split('\t') for l in open(os.path.join(HERE, 'audit_text_explained.tsv')))
                  if len(r) >= 4 and r[0] == game}  # (card, rule) read and explained: the rows say it another way, or nothing to write
     bad = collections.defaultdict(list)
     for i, r in recs.items():
-        if i not in text: continue  # keyword entries: their text is the glossary
+        if i not in text or r.get('says_by_form'): continue  # trigger and condition keywords say it by their form
         n, t = text[i]
         t = re.sub(r'^Keywords:[^.]*\.\s*', '', t)
         for name, pat, ok in rules(game):
