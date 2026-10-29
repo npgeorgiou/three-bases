@@ -20,8 +20,18 @@ RACE = {'BattlePet': 'Battle Pet'}
 TILE_KW = {'Cards.Tile.Shadow': 'kw:Shadow Creep', 'Cards.Tile.Hallowed': 'kw:Hallowed Ground',
            'Cards.Tile.SandPortal': 'kw:Exhuming Sand', 'Cards.Tile.PrimalMojo': 'kw:Primal Flourish',
            'Cards.Tile.BonusMana': 'kw:Mana Spring'}
+MOD = 'keyword (open-duelyst app/sdk/modifiers/modifier%s.coffee keywordDefinition, supplement)'
 GLOSSARY = [('kw:Mana Spring', 'Mana Spring', 'Occupying a Mana Spring gives you +1 bonus Mana for that turn.',
-             'keyword (open-duelyst game_tips.json novice_tip_0, supplement)')]
+             'keyword (open-duelyst game_tips.json novice_tip_0, supplement)'),
+            ('kw:Intensify', 'Intensify', 'Effect is boosted each time you play it.', MOD % 'Intensify'),
+            ('kw:Trial', 'Trial', 'Starts locked in your action bar. Complete the Trial to unlock the ability to play this card.',
+             MOD % 'Fate'),
+            ('kw:Destiny', 'Destiny', 'Summon to gain a permanent game-changing effect.', MOD % 'OnSummonFromHandApplyEmblems'),
+            ('kw:Bloodbound Spell', 'Bloodbound Spell', "Your General's own spell; it counts down each turn until it refreshes.",
+             'keyword (open-duelyst tutorial.json lesson_4_bloodborn_instruction_1: "Your Bloodbound Spell counts down each turn '
+             'until it refreshes", supplement)')]
+# Types: the race (Golem, Mech, ...), and Bloodbound Spell on each General's own spell (the card its code names), so
+# "your Bloodbound Spell" is a type filter
 
 
 def category(r):
@@ -89,7 +99,8 @@ def main():
         out.append({'game': 'duelyst', 'ext_id': r['code'], 'name': r['name'], 'category': cat,
                     'source_type': f"{r['class']} ({SRC})", 'edition': r['set'].split('/')[0],
                     'faction': r['faction'] or None,
-                    'subtypes': json.dumps([RACE.get(r['race'], r['race'])]) if r['race'] else None,
+                    'subtypes': json.dumps(([RACE.get(r['race'], r['race'])] if r['race'] else [])
+                                           + (['Bloodbound Spell'] if kind(r) == 'Bloodbound Spell' or r['code'] in BBS else [])) or None,
                     'rarity': r['rarity'] or None, 'cost': f"{r['mana']} mana" if r['mana'] else None,
                     'cost_num': float(r['mana']) if r['mana'] else None,
                     'stats': json.dumps(stats) if stats else None, 'text': r['text'].replace('\\n', '\n'),
