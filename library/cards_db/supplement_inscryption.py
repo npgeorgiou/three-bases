@@ -38,6 +38,39 @@ FORM_TABS = {'Left', 'Right', 'Defense', 'Attack', 'Base Form', 'Beast Form', 'D
              'Rabbit', 'Wolf', 'Golden', 'Emerald', 'Ruby', 'Sapphire'}
 RENAME = {'Gem Vessels (Emerald)': 'Emerald Vessel', 'Gem Vessels (Ruby)': 'Ruby Vessel',
           'Gem Vessels (Sapphire)': 'Sapphire Vessel'}   # the wiki's redirects Emerald/Ruby/Sapphire Vessel -> Empty Vessel#Gem Vessels
+RENAME['Cat (Undead)'] = 'Undead Cat'  # the name the wiki page Special Card Behaviours gives it
+# Special card behaviours: the game's own code for single cards (wiki page Special Card Behaviours, rev 12544, read 29 Oct 2026
+# in the built-in browser): the "Effects" column, kept in the page's words. Presentation only, left out: TalkingCardChooser
+# (talking cards' dialogue), GiantMoon (an animation), BountyHunter (dialogue and music); BrokenCoin gives the Ancient Obol,
+# an offering outside battles (the Obols' traits already say it).
+BEHAVIOUR = {
+    'Cat': 'A card will turn into Undead Cat when sacrificed 9 times.',
+    'Glitched card': 'When a card is drawn, it is replaced with a random unlocked card for the current battle.',
+    'Pack Mule': 'When a card perishes, player receives a Squirrel, a Card that Costs 1 Blood, a Card that Costs 2 Blood, and a '
+                 "Card that Costs Bones (or another Card that Costs 1 Blood, if Bones haven't been unlocked yet).",
+    'Caged Wolf': 'When a card perishes (but not sacrificed), it is removed from player\'s deck, and Wolf is created in its place '
+                  "and added to player's deck.",
+    'Strange Frog': 'When a card perishes, it spawns a Leaping Trap in its place.',
+    'The Moon': "When a card is spawned on the board, it replaces all spaces on opponent's side of the board with itself. When a "
+                "card perishes, it clears all spaces on opponent's side of the board.",
+    'The Limoncello': "When a card is spawned on the board, it replaces all spaces on opponent's side of the board with itself. When "
+                      "a card perishes, it clears all spaces on opponent's side of the board. Once a card has less than 70 Health, "
+                      "each turn one Skeleton Crew per 5 damage taken since last turn will drop onto player's side of the board "
+                      "(if there are free slots).",
+    'Child 13 (Dormant)': 'When a card is sacrificed, it switches between portraits and receives/loses temporary modifier that '
+                          'increases Power by 2 and adds Airborne Sigil. Sacrificing for 14th time will kill the card, as if it '
+                          "didn't have the Many Lives Sigil.",
+    'Daus': 'If a card with "bell" in its internal ID (Chime, Bell Tentacle) is attacked, a card with this Behaviour will strike '
+            'the offending card.',
+    'Daus (Act III)': 'If a card with "bell" in its internal ID (Chime, Bell Tentacle) is attacked, a card with this Behaviour will '
+                      'strike the offending card.',
+    'Ouroboros': "A card's base Power and Health are permanently incremented by 1 each time card perishes.",
+    'Ourobot': "A card's base Power and Health are permanently incremented by 1 each time card perishes.",
+    'Ijiraq': 'A card will mimic a random card in your deck, only revealing itself when played.',
+    'Pelts (Rabbit)': 'When a card is played, Pelt Lice from hand/deck are played in adjacent slots for free.',
+    'Pelts (Wolf)': 'When a card is played, Pelt Lice from hand/deck are played in adjacent slots for free.',
+    'Pelts (Golden)': 'When a card is played, Pelt Lice from hand/deck are played in adjacent slots for free.',
+}
 SKIP_PAGES = {'Bottled Cards'}
 SKIP_TABS = {('Deathcard', 'Deathcard portraits')}
 FACTIONS = ['Beast', 'Undead', 'Technology', 'Magick']
@@ -123,7 +156,7 @@ def main():
     pages = [json.loads(l) for l in open(os.path.join(CONV, 'inscryption_wiki_cards.jsonl'))]
     cats = {p['title']: p['cats'] for p in pages}
     pages += [dict(p, cats=cats[p['title']]) for p in map(json.loads, open(os.path.join(CONV, 'inscryption_wiki_cards_more.jsonl')))]
-    cards, by_name, page_tabs = [], {}, []
+    cards, by_name, page_tabs = [], {}, []; seen_beh = set()
     for p in pages:
         if p['title'] in SKIP_PAGES: continue
         T = tabs(p['b'])
@@ -166,6 +199,8 @@ def main():
             if sigtext and not plain_sig: parts.append('Sigils: ' + sigtext + '.')
             if traits: parts.append('Traits: ' + ', '.join(traits) + '.')
             if f.get('description'): parts.append(plain(f['description']))
+            beh = BEHAVIOUR.get(RENAME.get(name, name))
+            if beh and (name, 'b') not in seen_beh: parts.append('Special behaviour: ' + beh); seen_beh.add((name, 'b'))
             acts = [x for x in p['cats'] if re.fullmatch(r"Act I{1,3}|Kaycee's Mod|Finale", x)]
             entry = {'game': 'inscryption', 'ext_id': None, 'name': name,
                      'category': 'terrain' if terrain else 'unit', 'source_type': f"card ({SRC}; page {p['title']} rev {p['rev']})",

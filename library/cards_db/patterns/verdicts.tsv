@@ -26,3 +26,8 @@ inscryption	741037	V21	record_right	Claude: "more than one copy of the Dagger" i
 inscryption	4000003	V07	record_right	Claude: KillsSurvivors is an internal trait flag (a run event), no effect in a battle (BRIEF Game words: Inscryption)	29 Oct 2026
 inscryption	4000114	V07	record_right	Claude: KillsSurvivors is an internal trait flag (a run event), no effect in a battle (BRIEF Game words: Inscryption)	29 Oct 2026
 inscryption	4000190	V07	record_right	Claude: KillsSurvivors is an internal trait flag (a run event), no effect in a battle (BRIEF Game words: Inscryption)	29 Oct 2026
+inscryption	4000018	V03	record_right	Claude: "Wolf is created in its place and added to deck" is the transform into Wolf (lasts this_run) the record has	29 Oct 2026
+inscryption	4000019	KW	record_right	Claude: Airborne is what the Awakened form has; the record transforms into Child 13 (Awakened)	29 Oct 2026
+inscryption	4000191	T81	no value: card marked unsure	Claude: GiantCard: when it perishes it clears the opposing spaces it filled; no value for a card filling every space: card marked unsure	29 Oct 2026
+inscryption	4000225	T81	no value: card marked unsure	Claude: GiantCard: when it perishes it clears the opposing spaces it filled; no value for a card filling every space: card marked unsure	29 Oct 2026
+inscryption	4000225	V05	no value: card marked unsure	Claude: "per 5 damage taken since last turn" is the amount of Skeleton Crews; no form for it: card marked unsure	29 Oct 2026

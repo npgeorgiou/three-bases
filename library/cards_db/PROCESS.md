@@ -326,7 +326,10 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
    must be a card of the game; audit_links.py check 5 lists deck cards that are not. When the source is not whole, the
    supplement holds every card and source.py FULL replaces the library's categories for that game.
 2. **A wiki page can hold several cards.** Empty Vessel's page has a second box (the three Gem Vessels), Trees a second box
-   (Act III trees): take every card box of a page, not the first, and every tab of a box.
+   (Act III trees): take every card box of a page, not the first, and every tab of a box. Read every field of the source's
+   card, not only the text: Inscryption's box field special_behaviours names code that changes play (Ouroboros grows each
+   time it dies, Cat becomes Undead Cat, Strange Frog leaves a Leaping Trap); without it the Ouroboros decks had no plan.
+   Their effects come from the wiki page Special Card Behaviours and are now in the cards' text (case ni09).
 3. **Keywords belong in the Keywords field.** Written as "Sigils: Airborne." every card needed a reader and inherited nothing;
    as "Keywords: Airborne." 222 of 285 cards need no reading and take their sigils' records. A game whose cards list keywords
    (sigils, traits that the game defines) writes them in the Keywords field.

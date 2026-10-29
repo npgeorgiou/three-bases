@@ -221,7 +221,7 @@ def moves_object(x):
 def sacrifice_form(r, inputs):
     """N17"""
     t = (inputs.get(r.get('id')) or {}).get('text', '')
-    if not re.search(r'\bsacrific', t, re.I): return
+    if not re.search(r'\bsacrific', t, re.I) or re.search(r'\b(?:kill|destroy)', t, re.I): return  # "sacrificing for the 14th time will kill the card": a kill
     def walk(x):
         if isinstance(x, dict):
             for e in x.get('do', []) if isinstance(x.get('do'), list) else []:

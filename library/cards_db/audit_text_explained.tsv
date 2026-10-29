@@ -42,3 +42,4 @@ stormbound	Spawn	random	"a random spawn is always within the front line" limits 
 monster_train	Pyrebound	player named	"the Pyre Room" is the top floor (position top_lane in the record), not the Pyre
 monster_train	Consume	for each	"once per battle" is the exhaust the record has
 faeria	Ranged Attack	adjacent	the "unless adjacent" exception has no row; the record is marked unsure (position, params)
+inscryption	Ijiraq	random	Shapeshifter: it only looks like a random card of the deck until played; no effect in a battle

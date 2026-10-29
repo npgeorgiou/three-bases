@@ -73,3 +73,5 @@ ni05	inscryption	Act II Magick starter	Sapphire Mox	Junior Sage	none	you gain a 
 ni06	inscryption	Act II bones and sacrifice (Archeronline4U)	M3atB0t	Urayuli	line		Claude (v36): Worthy Sacrifice counts as 3 Blood, so Urayuli (4 Blood) costs less when M3atB0t is sacrificed for it
 ni07	inscryption	Act II bones and sacrifice (Archeronline4U)	Bone Lord's Horn	Tomb Robber	line		Claude (v36): Bonehorn gives Bones; Disentomb pays 1 Bone (a spent resource is a need)
 ni08	inscryption	Kaycee's Mod Bones	Coyote	Pelts (Rabbit)	none	sacrificed	Claude (v36): a Pelt costs 0 Blood, so it needs no sacrifice (a cost rule needs a cost above 0)
+ni09	inscryption	Act II Ouroboros and Mantis God (koi)	Mantis God	Ouroboros	line		Claude (v36): playing Mantis God sacrifices Ouroboros, which grows each time it dies (special behaviour Ouroboros)
+ni10	inscryption	Act II Ouroboros and Mantis God (koi)	Ouroboros	Mantis God	none	Blood costs	Claude (v36): Ouroboros paying its own Blood cost pays nothing for Mantis God

@@ -4,6 +4,6 @@ Made by `status.py inscryption` from the files. done 3, problems 0, partial 0, t
 
 | batch | cards | read | state |
 |---|---|---|---|
-| batch_001 | 63 | 63 | done |
+| batch_001 | 73 | 73 | done |
 | keywords | 108 | 108 | done |
 | second_001 | 18 | 18 | done |

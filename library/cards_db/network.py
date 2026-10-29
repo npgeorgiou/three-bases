@@ -141,11 +141,13 @@ def lines_of(c, game):
     own_makes, lvl_needs = collections.defaultdict(set), collections.defaultdict(set)
     ab_card = dict(c.execute('select id, card from ability'))
     helps = adder_abilities(c, game)  # "your spells deal 1 extra damage" waits for nothing: it helps those cards (gives_lines)
-    for card, origin, ab, role, h, side, kw, pick, kind, w, ref, ak, aw in c.execute(
-            'select card, origin, ability, role, happening, side, keyword, pick, kind, obj_with, ref, actor_kind, actor_with from flat_ref'):
+    rule_name = {i: n.removeprefix('Game rule: ') for i, n in c.execute("select id, name from card where category='game_rule'")}
+    cost_rules = {rule_name.get(e) for (e,) in c.execute('select entry from game_rule where cost_has is not null')}
+    for card, origin, ab, role, h, side, kw, pick, kind, w, ref, ak, aw, via in c.execute(
+            'select card, origin, ability, role, happening, side, keyword, pick, kind, obj_with, ref, actor_kind, actor_with, via from flat_ref'):
         if card not in cards: continue
         if role == 'makes':
-            makes[h].add((card, side, kw, kind, pick, w, ref, origin == 'game'))
+            makes[h].add((card, side, kw, kind, pick, w, ref, rule_name.get(via, 'rules') if origin == 'game' else False))
             if origin != 'game': own_makes[card].add(h)
             continue
         # a keyword condition the card uses (Plunder, Reputation, Deep) is the card's own need (its rows sit on the card's own
@@ -193,16 +195,17 @@ def lines_of(c, game):
                     if own and not matches(c, game, cards[m], 'any', own): continue
                 if h == 'survives_damage' and tpick == 'self' and lethal(m, t): continue
                 if not doer_fits(m, actor): continue
-                if rule and 'origin not combat' in (tw or ''): continue  # "non-combat damage": fighting is combat  # "allied Pykes have dealt damage": the damage of a spell or another unit is not it
+                if rule == 'units fight' and 'origin not combat' in (tw or ''): continue  # "non-combat damage": fighting is combat  # "allied Pykes have dealt damage": the damage of a spell or another unit is not it
                 need = {e for p in (tw or '').split(';') if p.startswith('state is ') for e in state_ev.get(p[9:], ())} - {h}
                 if need and h in ('played', 'summoned', 'drawn', 'created') and not need & own_makes[m]: continue  # "8 cost reduced cards
                 # played": playing a card no one made cheaper is not it (a unit healed is damaged by the enemy too: no such need)
                 w = 1.0 / len(carers[tk] | (carers[None] if tk else set()))
                 say = deck_analysis.say(c, h, ts_, tk)
                 if h == 'mana_refilled' and tkind in RESOURCE_WORD: say = RESOURCE_WORD[tkind]  # not mana: say which resource
+                if cost and rule in cost_rules: continue  # another card paying its own cost pays nothing for this one
                 if cost: say += ' (pays its cost)'
                 if rule:  # every unit does it by the game's rules (attacks, hits the enemy Nexus): weaker than a card that says so
-                    w *= 0.25; say += ' (by fighting)' if h in ('attacks', 'strikes', 'strikes_nexus', 'fights', 'damaged', 'nexus_damaged', 'dies', 'killed', 'survives_damage') and not cost else ' (by the game\'s rules)'
+                    w *= 0.25; say += ' (by fighting)' if rule == 'units fight' else f" (by the game's rule: {rule})"
                 if lv: out[(m, t)].append(('levels', 2 * w, say + ' (levels it up)'))
                 elif role == 'trigger' and t in selffeed: out[(m, t)].append(('levels', w, say + ' (it levels up from what it then does)'))
                 else: out[(m, t)].append(('waits', w, say))
