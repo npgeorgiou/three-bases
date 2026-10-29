@@ -124,12 +124,12 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: monster_train 386 pairs, e.g. Petrified Skull -> Little Fade; runeterra 12693 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- sacrifice: monster_train 179 pairs, e.g. Lady of the Reformed -> Little Fade; runeterra 3957 pairs, e.g. Amalgamation Of Vile Rites -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- removal: monster_train 90 pairs, e.g. Petrified Skull -> Little Fade; runeterra 3608 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Gray the Balancer -> Shady Ghoul
-- self_destruct: monster_train 266 pairs, e.g. Kinhost Vessel -> Little Fade; runeterra 6891 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
+- destroy: monster_train 386 pairs, e.g. Hallowed Halls -> Little Fade; runeterra 12693 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- sacrifice: monster_train 179 pairs, e.g. Hallowed Halls -> Little Fade; runeterra 3957 pairs, e.g. Amalgamation Of Vile Rites -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- removal: monster_train 90 pairs, e.g. Shardtail Queen -> Little Fade; runeterra 3608 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Wetland Deceivers -> Project PH03-NIX
+- self_destruct: monster_train 266 pairs, e.g. Hallowed Halls -> Little Fade; runeterra 6891 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
 - revive: runeterra 1071 pairs, e.g. Eternal Dancers -> Bladepierced Revenant
-- aoe_damage: monster_train 217 pairs, e.g. Shattered Shell -> Little Fade; runeterra 2827 pairs, e.g. Anivia (level 2) -> Shackled Ghasts; stormbound 217 pairs, e.g. Broken Earth Drakes -> Dreadful Keepers
+- aoe_damage: monster_train 217 pairs, e.g. Shattered Shell -> Little Fade; runeterra 2827 pairs, e.g. Anivia (level 2) -> Bladepierced Revenant; stormbound 217 pairs, e.g. Broken Earth Drakes -> Spare Dragonling
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -154,7 +154,7 @@ Supports your units (stats, protection, combat keywords): Piercing Darkness, Sen
 Card flow (draw, create, choose): Glimpse Beyond, Lonely Chimeslime, Senna, Spirit Leech.
 Puts extra units into play: Cursed Keeper, Hapless Aristocrat, The Undying.
 Units that support cards can target: 9 (Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, Lucian, Ravenous Butcher, Senna, Senna, Sentinel of Light, Spirit Leech, The Undying).
-Key cards (in most of the plan): Senna, Spirit Leech, The Ruination, Crumble, Ravenous Butcher.
+Key cards (in most of the plan): Senna, The Ruination, Spirit Leech, Crumble, Ravenous Butcher.
 Weak spots: none found.
 ```
 

@@ -12,6 +12,8 @@
 - Stormbound: every build step passes; waiting for Kaptain's check of CHECK_20_stormbound.md (ids in
   CHECK_20_stormbound_ids.txt). After his approval: fix what he finds for all cards with the same problem, add a few
   approved records to BRIEF.md as examples, write Stormbound's results in RESULTS.md.
+- Monster Train: every build step passes; waiting for Kaptain's check of CHECK_20_monster_train.md (ids in
+  CHECK_20_monster_train_ids.txt) and of the keyword -> concept list. Results in RESULTS.md.
 - Questions over all games work (`ask.py all ...`, mechanics.py, QUERIES.md). The next game follows PROCESS.md, first its
   section "Writing data the same way in every game".
 - A deck, faction or game as a network of cards is built (network.py, `ask.py <game> network`; NETWORK_DRAFT.md has the

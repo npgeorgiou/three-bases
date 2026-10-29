@@ -63,3 +63,5 @@ Each change: date, what changed, the card that caused it, and which records were
   "to this floor" added; the rest same meaning.
 - 29 Oct 2026, v26 (Monster Train): tokens Twin of Wax and Mote of Wax (wiki page Legion of Wax) in the supplement,
   recorded by Claude; act copy_upgrades (Legion of Wax, Twin of Wax).
+- 29 Oct 2026, v27: an effect on the enemy side takes the enemy counterpart of its concept (movement -> forced_movement,
+  return_to_hand -> bounce_enemy, transform -> polymorph; flat.py ON_ENEMY, all games). Monster Train results in RESULTS.md.

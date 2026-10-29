@@ -29,3 +29,23 @@
 ## Cost
 - About 53 reader runs of 95,000-125,000 tokens each, plus 2 judge runs: roughly 5.5 million tokens. A reader costs nearly
   the same for 40 or 190 cards, so batches are ~20,000 characters.
+
+# Monster Train: results (29 Oct 2026, waiting for Kaptain's check of CHECK_20_monster_train.md)
+
+## What exists
+- 284 cards (282 from the wiki's Module:Cards/Data already in the repo, library/tools/convert/monster_train_cards.psv; the
+  two wax tokens from the wiki page Legion of Wax), the 12 champions with their upgrade paths, 70 glossary keywords with the
+  wiki's definitions (supplement_monster_train.py). 24 tribes from the library.
+- Game words in BRIEF.md "Game words: Monster Train"; every keyword has a concept (vocab keyword rows; Frostbite and Rally
+  mean something else here than in Runeterra, so they have rows monster_train:Frostbite and monster_train:Rally).
+
+## Quality
+- run.py monster_train passes every step: 149 of 149 cases (77 mechanics, 28 clan cases, 44 combos), word check 0 open flags,
+  no stub names. 10 entries stay unsure (3 cards: Legion of Wax's twin-making is described, Hallowed Halls "until it exceeds
+  its Capacity", Eternal Kinstone "cannot be removed"; 7 keyword entries whose rule no value says, such as Piercing).
+- Second reading: 28 cards, 17 the same; of the 11 others, 10 the same meaning in another form and 1 kept reading fixed
+  (Hallowed Halls "to this floor"). The draw form became normalize N14 for every game.
+
+## Cost
+- Three readers (cards, keywords, second reading). The cards the first reading marked unsure were fixed by rule
+  (fixes/monster_train/v24.py, v25.py) instead of a re-read; the two tokens were recorded by Claude.

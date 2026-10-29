@@ -24,6 +24,10 @@ create index fwc on flat_when(card); create index fdc on flat_do(card); create i
 """
 
 
+# a concept for my own side and its counterpart when the effect hits the enemy (concept tree: "not this" parts)
+ON_ENEMY = {'movement': 'forced_movement', 'return_to_hand': 'bounce_enemy', 'transform': 'polymorph', 'mill': 'mill', 'self_mill': 'mill'}
+
+
 def build(c):
     c.executescript(SCHEMA)
     tree = {(f, v): t for f, v, t in c.execute('select field, value, tree from vocab')}
@@ -106,6 +110,7 @@ def build(c):
             pe = (c.execute("select value from param where effect=? and param='event'", (eid,)).fetchone() or [None])[0]
             ps = ';'.join(f'{pn}={num(a) if a else v}' for pn, a, v in c.execute('select param, amount, value from param where effect=?', (eid,))) or None
             concept = (tree.get(('keyword', kwname.get(kref, ''))) if kref else None) or tree.get(('act', act))
+            if s == 'enemy': concept = ON_ENEMY.get(concept, concept)  # the same keyword used on an enemy (Ascend an enemy unit)
             c.execute('insert into flat_do values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
                       (card, origin, via, aid, seq, act, concept, k, s, p, z, cref, kref, lasts, link, w, pe, ps, ez, tgt(to)[0], withs(to), tgt(to)[2]))
             if kref and act in ('keyword_action', 'give_keyword') and kref not in seen:  # the keyword's meaning on this target

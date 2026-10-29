@@ -222,3 +222,10 @@ Stormbound:
 - One reader for all cards, one for the second reading, one re-read: ~400k tokens in all, against 5.5 million on Runeterra
   with 53 readers.
 - run.py loads every game, so the database never loses a game when another is rebuilt.
+
+Monster Train:
+- The card data was already in the repo (library/tools/convert/monster_train_cards.psv); it was fetched again before
+  anyone looked. Step 0.3 now lists where every game's data is.
+- Use as few readers as possible: one for the cards, one for the keywords, one for the second reading. Cards a reader marks
+  unsure for the same reason are fixed by a rule script (fixes/<game>/vNN.py, safe to run twice), and the second reading is
+  judged by Claude, not by another agent; a handful of tokens are recorded by Claude.
