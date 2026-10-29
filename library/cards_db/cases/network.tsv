@@ -70,3 +70,6 @@ ni02	inscryption	Act II Undead starter	Skeleton	Frank & Stein	line		Claude (v36)
 ni03	inscryption	Act II Beast starter	Squirrel	Hawk	line		Claude (v36): a Squirrel is sacrificed to pay Hawk's 2 Blood
 ni04	inscryption	Act II Magick starter	Emerald Mox	Junior Sage	line		Claude (v36): Junior Sage costs a Green Mox; Emerald Mox gives a Green gem
 ni05	inscryption	Act II Magick starter	Sapphire Mox	Junior Sage	none	you gain a gem	Claude (v36): a Blue gem does not pay a Green Mox cost (colours fit)
+ni06	inscryption	Act II bones and sacrifice (Archeronline4U)	M3atB0t	Urayuli	line		Claude (v36): Worthy Sacrifice counts as 3 Blood, so Urayuli (4 Blood) costs less when M3atB0t is sacrificed for it
+ni07	inscryption	Act II bones and sacrifice (Archeronline4U)	Bone Lord's Horn	Tomb Robber	line		Claude (v36): Bonehorn gives Bones; Disentomb pays 1 Bone (a spent resource is a need)
+ni08	inscryption	Kaycee's Mod Bones	Coyote	Pelts (Rabbit)	none	sacrificed	Claude (v36): a Pelt costs 0 Blood, so it needs no sacrifice (a cost rule needs a cost above 0)

@@ -579,6 +579,22 @@ def object_help_lines(c, game, nodes, broad):
     return out
 
 
+def actor_help_lines(c, game, nodes):
+    """an ability on what happens to the card itself that acts on the event's actor (Worthy Sacrifice: when it is sacrificed,
+    the card it pays for costs 2 less; Morsel: that card gets its stats): it helps every card of the deck that needs that
+    happening (the Blood cards that need sacrifices)"""
+    cards = cards_of(c, game); out = collections.defaultdict(list); marks = ','.join('?' * len(nodes)); L = list(nodes)
+    for a, act, ps, ev in c.execute(f"""select distinct d.card, d.act, d.params, w.event from flat_do d join flat_when w on w.card=d.card
+            and w.ability=d.ability where d.on_pick='actor' and w.obj_pick='self' and d.origin in ('own','has_keyword')
+            and d.act in ('cost_change','stat_change','give_keyword') and d.card in ({marks})""", L).fetchall():
+        takers = {t for (t,) in c.execute(f"""select distinct card from flat_ref where role in ('condition','trigger') and happening=?
+                  and coalesce(side,'') in ('mine','any','') and coalesce(pick,'') not in ('self','actor_self') and card in ({marks})""", [ev] + L)} - {a}
+        why = 'makes it cheaper' if act == 'cost_change' and '=-' in (ps or '') else ('help ' + stats_said(ps))[5:] if act == 'stat_change' else 'gives it a keyword'
+        for t in takers:
+            if t in cards: out[(a, t)].append(('boosts', 1.0 / len(takers), why + f' (when it is {ev.replace("_", " ")} for it)'))
+    return out
+
+
 def gives_lines(c, game, nodes):
     """abilities that act when my cards of a kind do something (the card's own or given to my side). When they add to what
     happened (adders) the card makes every card of that kind in the deck that does it stronger (Tybaulk -> every spell and
@@ -638,7 +654,8 @@ def network(c, game, ids, broad=True):
     for (a, b), ls in allg.items():
         if a in nodes and b in nodes: lines[(a, b)] += ls
     for f in (aimed(c, game, nodes, broad), played_lines(c, game, nodes, broad), need_lines(c, game, nodes, broad),
-              boost_lines(c, game, nodes), gives_lines(c, game, nodes), object_help_lines(c, game, nodes, broad)):
+              boost_lines(c, game, nodes), gives_lines(c, game, nodes), object_help_lines(c, game, nodes, broad),
+              actor_help_lines(c, game, nodes)):
         for k, ls in f.items(): lines[k] += ls
     fam = families(c, nodes)
     lines = collections.defaultdict(list, {(a, b): [l for l in ls if l[0] == 'levelsinto'] if fam[a] == fam[b] else ls

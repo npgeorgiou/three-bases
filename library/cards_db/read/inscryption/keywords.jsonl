@@ -91,7 +91,7 @@
 {"id": 740703, "abilities": [{"when": {"event": "dies", "object": {"pick": "self"}}, "do": [{"act": "return_card", "on": {"pick": "self"}, "zone": "hand"}]}]}
 {"id": 740704, "abilities": [{"when": {"event": "damaged", "object": {"pick": "self", "with": [{"attr": "state", "op": "is", "val": "combat"}]}}, "do": [{"act": "draw", "on": {"kind": "card", "side": "mine", "zone": "deck", "with": [{"attr": "card", "op": "is", "ref": "Empty Vessel"}]}, "params": {"amount": 1}}]}]}
 {"id": 740705, "abilities": [{"when": {"event": "always"}, "do": [{"act": "cant", "on": {"kind": "unit", "side": "enemy", "zone": "board", "with": [{"attr": "position", "op": "is", "val": "same_lane"}]}, "params": {"event": "strikes"}, "to": {"pick": "self"}, "lasts": "while"}]}]}
-{"id": 740706, "abilities": [], "unsure": ["act"]}
+{"id": 740706, "abilities": [{"when": {"event": "sacrificed", "object": {"pick": "self"}}, "do": [{"act": "cost_change", "on": {"pick": "actor"}, "params": {"cost": -2}, "lasts": "instant"}]}]}
 {"id": 740707, "abilities": []}
 {"id": 740708, "abilities": [{"when": {"event": "always"}, "do": [{"act": "cant", "on": {"pick": "self"}, "params": {"event": "targeted"}, "lasts": "while"}]}], "unsure": ["params"]}
 {"id": 740709, "abilities": [], "unsure": ["act"]}

@@ -1,7 +1,7 @@
 # Case tests: inscryption
 
 Made by `cases/run.py inscryption`.
-**11 of 11 cases pass.**
+**14 of 14 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -39,3 +39,6 @@ Made by `cases/run.py inscryption`.
 | ni03 | Act II Beast starter | Squirrel | Hawk | line  | waits: sacrificed (pays its cost) (by the game's rules) | yes |
 | ni04 | Act II Magick starter | Emerald Mox | Junior Sage | line  | waits: you gain a gem (Mox) (pays its cost) | yes |
 | ni05 | Act II Magick starter | Sapphire Mox | Junior Sage | none you gain a gem | - | yes |
+| ni06 | Act II bones and sacrifice (Archeronline4U) | M3atB0t | Urayuli | line  | boosts: makes it cheaper (when it is sacrificed for it); waits: sacrificed (pays | yes |
+| ni07 | Act II bones and sacrifice (Archeronline4U) | Bone Lord's Horn | Tomb Robber | line  | waits: you gain the second resource (Bones); waits: you gain the second resource | yes |
+| ni08 | Kaycee's Mod Bones | Coyote | Pelts (Rabbit) | none sacrificed | - | yes |

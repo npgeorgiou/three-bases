@@ -348,6 +348,10 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
    lost every card's cost and spell speed (both sat inside a comment since v35); the card table now also keeps the cost text.
 8. **Giving up my own unit had three forms** (kill on my unit in Faeria, Monster Train's Sacrifice record, nothing in
    Inscryption): one act sacrifice (causes sacrificed and dies), normalize N17 for card records.
+9. **Help through the card that is paid for.** Worthy Sacrifice ("counts as 3 Blood") and Morsel act on the card they are
+   sacrificed for (pick actor of event sacrificed): network.actor_help_lines gives them a line to every card of the deck that
+   needs that happening (M3atB0t makes Urayuli cheaper, case ni06). An ability that spends a resource ("Activate: pay 1
+   Bone") needs it like a cost does (refs.py; Bone Lord's Horn -> Tomb Robber, ni07). A cost of 0 ("0 Blood") is no need (ni08).
 
 ## Think like a player (read before showing any network, any deck explanation, any answer about synergy)
 Kaptain checks a few decks and finds errors a player sees at once. Before showing anything, do what he does:

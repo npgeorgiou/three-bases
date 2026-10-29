@@ -152,3 +152,6 @@ Each change: date, what changed, the card that caused it, and which records were
   Green/Orange/Blue Mox costs; units can be sacrificed; refs.py copies a cost rule's needs to the cards whose cost names it;
   network: cost needs ("pays its cost"), resource words, colour_fit; act sacrifice (normalize N17; Monster Train Sacrifice
   record, fixes/monster_train/v36.py); load.py: card cost and speed loaded again (lost in a comment), cost_text kept.
+- 29 Oct 2026, v36 (Inscryption networks, 2): network.actor_help_lines (effects on the card a sacrifice pays for); refs: an
+  ability that spends a resource needs it; a cost rule skips cost 0; Worthy Sacrifice record (Claude): the card it is
+  sacrificed for costs 2 less; cases ni06-ni08.

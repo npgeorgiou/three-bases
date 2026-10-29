@@ -134,6 +134,9 @@ def build(c):
             ins(card, o, v, ab, 'makes', 'attacks', 'unit', 'mine', None)
         if act in ('first_strike', 'double_strike', 'strike_with') and s in ('mine', None) and p in ('self', 'all', 'chosen', None):  # my unit strikes: an enemy takes damage
             ins(card, o, v, ab, 'makes', 'damaged', 'unit', 'enemy', None)
+        if act == 'spend_mana' and k in ('mana', 'secondary_resource', 'gem', 'lane_resource') and s in ('mine', None):
+            # an ability that spends a resource needs it ("Activate: Pay 2 Bones"): fed by gaining it; the card's own need
+            ins(card, o, v, None if o == 'has_keyword' else ab, 'condition', 'mana_refilled', k, 'mine', None, w=w)
         state_rows(card, o, v, ab, k, s, p, w, z)
         if to_w and re.search(r'(?<![a-z:])position ', to_w): ins(card, o, v, ab, 'state', 'moves', to_k, s, None, w=to_w)  # "attack a bordering enemy"
     # the game's rules (read/<game>/game_rules.jsonl): what every card of a category does without its text saying so (an
@@ -151,7 +154,8 @@ def build(c):
         never |= {a for (a, ev) in c.execute("""select card, param_event from flat_do where origin='own' and act='cant' and on_pick='self'
                  and to_kind is null and coalesce(lasts,'while') in ('while','permanent')""") if ev in made or (fights and ev == 'attacks')}
         for (card,) in c.execute("select id from card where category=? and game=(select game from card where id=?) and is_stub=0 and "
-                                 "(? is null or lower(coalesce(cost_text,'')) like '%' || lower(?) || '%')", (cat, e, cost_has, cost_has)).fetchall():
+                                 "(? is null or (lower(coalesce(cost_text,'')) like '%' || lower(?) || '%' and coalesce(cost, 1) > 0))",  # "0 Blood" costs nothing
+                                 (cat, e, cost_has, cost_has)).fetchall():
             if card in never: continue
             for ab, h, k, sd, pk, kw, con, w, ref, role in rows:
                 if pk == 'self' and not sd: sd = 'mine'  # what the card does to itself is on its owner's side
