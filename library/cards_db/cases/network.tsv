@@ -41,3 +41,8 @@ n39	runeterra	Braum Zoe	Targonian Tellstones	Zoe	line		Kaptain: creating cards h
 n40	monster_train	Imp build (Shardtail Queen)	Queen's Impling	Transcendimp	none	repeats	Kaptain: Transcendimp repeats the others, not the other way
 n41	monster_train	Frostbite build (Tethys)	Crystalline Seeds	Tethys Titansbane	none		Kaptain: Tethys asks for no Frostbite
 n42	monster_train	Frostbite build (Tethys)	Tethys Titansbane	Titan Sentry	none	Frostbite	Kaptain: Tethys does not give my units Frostbite
+n43	runeterra	Annie Gwen	Tybaulk	Torment	line		Kaptain 29 Oct 2026: Tybaulk's extra damage reaches Skills that deal damage through a keyword (Drain)
+n44	runeterra	Annie Gwen	Tybaulk	Vile Feast	line		Kaptain: Tybaulk's extra damage reaches spells that Drain
+n45	runeterra	Annie Gwen	Tybaulk	Armed Acquisitioner	line		Kaptain: Tybaulk grants allies everywhere +1|+0
+n46	runeterra	Annie Gwen	Tybaulk	Annie	none	its damage	Kaptain: Tybaulk's extra damage is for spells and Skills, not units
+n47	monster_train	Hellhorned rage	Deranged Brute	Rage Serum	line		Claude, same family as Tybaulk: a boost to a status helps the cards that give it
