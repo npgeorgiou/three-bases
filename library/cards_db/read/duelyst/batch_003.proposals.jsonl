@@ -1,0 +1,18 @@
+{"id": 5000708, "field": "act", "need": "set_draft_choices"}
+{"id": 5000709, "field": "act", "need": "set_draft_choices"}
+{"id": 5000710, "field": "act", "need": "set_draft_choices"}
+{"id": 5000851, "field": "region", "need": "Songhai"}
+{"id": 5000857, "field": "keyword", "need": "autonomous"}
+{"id": 5000866, "field": "pick", "need": "nearest"}
+{"id": 5000933, "field": "region", "need": "Neutral"}
+{"id": 5000934, "field": "act", "need": "control"}
+{"id": 5000954, "field": "region", "need": "Songhai"}
+{"id": 5000965, "field": "state", "need": "token"}
+{"id": 5000966, "field": "state", "need": "token"}
+{"id": 5000971, "field": "region", "need": "Magmar"}
+{"id": 5000972, "field": "region", "need": "Magmar"}
+{"id": 5000978, "field": "act", "need": "has_every_type"}
+{"id": 5001027, "field": "region", "need": "Vetruvian"}
+{"id": 5001028, "field": "region", "need": "opponent's faction"}
+{"id": 5001044, "field": "type", "need": "Demon"}
+{"id": 5001060, "field": "pick", "need": "nearest"}
