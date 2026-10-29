@@ -1,4 +1,4 @@
-# Handoff: card database (29 Oct 2026, v36)
+# Handoff: card database (29 Oct 2026, v38)
 
 ## Start of a chat
 1. Clone with the library (CLAUDE.md "Start of a chat", then `git sparse-checkout disable`). Read only this file first.
@@ -28,7 +28,10 @@
 - Deck networks: network.py (`ask.py <game> network`), the page `network_page.py` -> network.html (decks in decks.tsv and
   cases/decks.tsv). 36 Runeterra and 28 Stormbound full decks; Monster Train has only guides' core cards (no full lists
   found as text). Kaptain's judgement of the v34 networks is open (NEXT_CHAT.md).
-- Cases: Runeterra 300, Stormbound 137, Monster Train 146, all passing; audit_links.py 0 findings in every game.
+- Cases: Runeterra 304, Stormbound 141, Monster Train 150, Inscryption 59, Duelyst 39, Faeria 82, all passing; audit_links.py findings are explained in RESULTS.md.
+- Faeria (v35-v38): imported; every step of PROCESS passes, all 12 decks read card by card (RESULTS.md). Its board words are
+  now the shared form for every positional game (BRIEF "The board", PROCESS "Importing Faeria: the board"). Waiting for
+  Kaptain's check of CHECK_20_faeria.md (ids in CHECK_20_faeria_ids.txt) and of CONCEPTS_faeria.md.
 - Inscryption (v36): imported; every step of PROCESS passes, all 19 decks read card by card (RESULTS.md). Waiting for
   Kaptain's check of CHECK_20_inscryption.md (ids in CHECK_20_inscryption_ids.txt) and of the sigil -> concept list
   CONCEPTS_inscryption.md, and his answer on Energy ramp lines (Battery Bearer -> Energy-cost cards).

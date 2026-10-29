@@ -191,3 +191,9 @@ Patterns check, 26 Oct 2026 (Claude, decisions by Kaptain). Counts are from the 
   link joins two cards that benefit from the same effect); Earthcraft + Three Wishes (no concept for the land colours a cost
   needs). Both need the per-effect records (`library/TAGGING_RECORDS.md`). Two relations found the Ruby Yak pairs: copy
   synergizes tribal, summon synergizes transform (`engine_links.py`).
+
+## Card database (cards_db, 29 Oct 2026)
+Imported into library/cards_db from Abrakam's card export (RESULTS.md "Faeria"). The board words decided there (BRIEF "The
+board") replace the mechanics list above for the card database: Flying, Jump, Charge, Dash, Aquatic and Teleport are
+movement; Combat is its own trigger concept on_fight (not on_attack: it also fires when the creature is attacked); Swallow is
+banish, like Runeterra's Capture; land making, transforming, destroying and taking is terrain (set_terrain, steal of a space).

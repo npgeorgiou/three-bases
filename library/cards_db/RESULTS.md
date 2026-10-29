@@ -66,3 +66,28 @@
   Tidal Lock, Trinket Bearer, Satisfies Ring Trial, Bell Ringer, Kraken Waterborne, Mox Sigils, Cat and Child 13 (a count
   across battles).
 - Open for Kaptain: Energy ramp (Battery Bearer, Energy Bot) has no line to Energy-cost cards, as mana in the other games.
+
+# Faeria: results (29 Oct 2026, waiting for Kaptain's check of CHECK_20_faeria.md and CONCEPTS_faeria.md)
+
+## What exists
+- 462 cards from Abrakam's own card export (github.com/abrakam/Faeria_Cards; the library had 443, 13 of them with export
+  markup in their texts) and 23 keywords (the library's 19 from the faeria.com Keyword Rulings guide, plus Wild, Fight,
+  Teleport, Transform). 16 tokens named by texts stay names: the export has collectible cards only (Frog, Mecha, Angry Yak,
+  Treasure Map, Manta, Hydra Head, Yak Guard, Baby Yak, Guardian, Explore, Ostregoth, Sky Swallower, Angry Prairie Yak, and
+  Looking Glass Phantasm's own joke name "msatnahP ssalG gnikooL").
+- Game rules (read/faeria/game_rules.jsonl): units fight (an enemy unit or structure, or the enemy god) and harvest the
+  wells next to them (mine or the enemy's).
+- The board, written the same way as every game with spaces (BRIEF "The board"): ground of spaces (lands, ocean, wells),
+  land making and taking, neighbours, straight lines and distances, where a card may enter, moving onto a place.
+- 12 full decks in decks.tsv (faeria.com The Hub), all read card by card; 16 deck-read lines are cases nfa01-nfa18.
+
+## Quality
+- run.py passes; cases 82 of 82 (43 Faeria mechanics, 12 combos, 18 network lines, shared cases); word check 0 flags;
+  text audit 0; every other game still passes.
+- Link audit, explained: nothing in a card makes "turn_option_chosen" (Flamestoker, Ignus, Wrath of Ignus wait for the
+  player picking +1 faeria on the power wheel, which the player does every turn); the 14 token names above.
+- Unsure records left (no value for one card's need): Master Swordsman ("during your turn"), Celeste ("only 1 of each
+  card in your deck"), Thyrian Expedition ("total land cost"), and the keyword entries Flying, Taunt (whom the attack goes
+  to), Ranged Attack (no retaliation), Wild, Transform.
+- Not in the database: each turn a player builds lands, draws or takes faeria (the power wheel). Cards that count my lakes
+  or forests are fed only by cards that make lands, not by the player's own land building.

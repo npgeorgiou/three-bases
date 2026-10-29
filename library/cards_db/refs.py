@@ -104,7 +104,7 @@ def build(c):
             for k in (kws_of(ew) if len(kws_of(ew)) > 1 else [kw_of(ew)]):
                 ins(card, o, v, ab, 'condition', ev, ek or fk, es or fs, ep or fp, k, w=ew or fw, ak=eak, aw=eaw)
         elif fk in ('mana', 'secondary_resource', 'gem', 'lane_resource'): ins(card, o, v, ab, 'condition', 'mana_refilled', fk, fs, fp, w=fw)  # counts my mana or another resource: fed by gaining it
-        elif fk == 'position' and fw and 'terrain is ' in fw and test in ('count', 'have', 'amount_count'):  # "for each forest you control":
+        elif fk == 'position' and fw and 'terrain is ' in fw and 'position ' not in fw and test in ('count', 'have', 'amount_count'):  # (where a unit stands is no ground made)  # "for each forest you control":
             ins(card, o, v, ab, 'condition', 'terrain_changed', 'position', fs, fp, w=fw)                 # fed by making that ground
         # a stat tested or counted ("the enemy Nexus has half its Health or less", "a unit with 5+ Power"): fed by what changes it
         if test in ('stat', 'amount_stat', 'count', 'have', 'amount_count') and at in STAT_EVENTS and not ev:

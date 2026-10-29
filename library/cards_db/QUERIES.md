@@ -150,12 +150,12 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: duelyst 3033 pairs, e.g. Deathmark -> Unseven; faeria 1247 pairs, e.g. Feed the Forest -> Long-horned Yak; inscryption 489 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 354 pairs, e.g. Little Fade -> Primordium; runeterra 12658 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- sacrifice: duelyst 1574 pairs, e.g. Abhorrent Unbirth -> Unseven; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Ouroboros; monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5762 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- self_destruct: duelyst 692 pairs, e.g. Soulburn Obelysk -> Khanuum-ka; faeria 767 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 350 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6934 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
+- destroy: duelyst 3033 pairs, e.g. Abhorrent Unbirth -> Unseven; faeria 1247 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 489 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 354 pairs, e.g. Little Fade -> Primordium; runeterra 12658 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- sacrifice: duelyst 1574 pairs, e.g. Abhorrent Unbirth -> Unseven; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Master Bleene -> Bomb Latcher; monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5762 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- self_destruct: duelyst 692 pairs, e.g. Lavastorm Obelysk -> Khanuum-ka; faeria 767 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 350 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6934 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Restless Goats
 - removal: duelyst 1020 pairs, e.g. Rasha's Curse -> Khanuum-ka; faeria 320 pairs, e.g. Death's Desire -> Long-horned Yak; monster_train 93 pairs, e.g. Wicked Blaze -> Primordium; runeterra 2974 pairs, e.g. Kindred's Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
-- damage: duelyst 4245 pairs, e.g. Deathmark -> Unseven; faeria 851 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 267 pairs, e.g. Good Fish -> Burrowing Trap; runeterra 13474 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 633 pairs, e.g. Divine Reptiles -> Spare Dragonling
-- ping: duelyst 765 pairs, e.g. Deathmark -> Unseven; faeria 417 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 135 pairs, e.g. Good Fish -> Burrowing Trap; runeterra 5507 pairs, e.g. Anivia -> Shackled Ghasts; stormbound 195 pairs, e.g. Acid Greenhorns -> Green Prototypes
+- damage: duelyst 4245 pairs, e.g. Inkhorn Gaze -> Unseven; faeria 851 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 267 pairs, e.g. Good Fish -> Burrowing Trap; runeterra 13474 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 633 pairs, e.g. Divine Reptiles -> Dreadful Keepers
+- ping: duelyst 765 pairs, e.g. Mana Deathgrip -> Unseven; faeria 417 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 135 pairs, e.g. Good Fish -> Burrowing Trap; runeterra 5507 pairs, e.g. Anivia -> Shackled Ghasts; stormbound 195 pairs, e.g. Acid Greenhorns -> Marked as Prey
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -211,11 +211,11 @@ select distinct card from flat_do where act='copy_keywords'
 
 ## What each faction or region leans on (concepts with the highest share of its cards vs its game)
 
-- duelyst Lyonar Kingdoms: on_lifegain (7), aura (5), heal (14), multi_attack (5), taunt (11)
+- duelyst Lyonar Kingdoms: on_lifegain (7), area_templates (4), aura (5), heal (14), multi_attack (5)
 - duelyst Songhai Empire: flanking (13), temporary_buff (5), generate_cards (11), trap_secret (4), on_spell (15)
 - duelyst Vetruvian Imperium: rows (9), self_destruct (9), merge_attach (6), steal (6), haste (14)
 - duelyst Abyssian Host: other_death_trigger (12), terrain (15), sacrifice (13), destroy (22), stat_loss (4)
-- duelyst Magmar Aspects: revive (8), permanent_growth (14), area_templates (4), disable (4), attack_gain (38)
+- duelyst Magmar Aspects: area_templates (4), revive (8), permanent_growth (14), disable (4), attack_gain (38)
 - duelyst Vanar Kindred: territory_trigger (7), disable (12), resource_gain (4), cant_move (4), trap_secret (4)
 - duelyst Neutral: deck_modification (6), quests (5), random_ability (6), ranged (18), copy (16)
 - duelyst Boss: merge_attach (4), multi_attack (6), turn_start (16), revive (6), on_ally_play (10)
@@ -225,7 +225,7 @@ select distinct card from flat_do where act='copy_keywords'
 - faeria Green: taunt (12), immobilize (12), random_effect (12), defence_gain (35), death_trigger (10)
 - faeria Red: on_fight (10), aoe_damage (13), ranged (5), direct_damage (11), damage (32)
 - faeria Yellow: temporary_buff (4), sacrifice (6), on_attack (14), haste (6), removal (4)
-- faeria Pandora: modal_choice (5), removal (4), aoe_damage (6), placement_rules (4), destroy (7)
+- faeria Pandora: modal_choice (5), removal (4), aoe_damage (6), destroy (7), on_play (34)
 - inscryption Beast: free_play (4), stealth (8), immunity (6), multi_attack (8), variable_stats (8)
 - inscryption Technology: stances (8), aoe_damage (4), ping (6), damage (11), random_effect (7)
 - inscryption Magick: aura (6), tribal (7), defence_gain (5), draw (4), self_destruct (4)
