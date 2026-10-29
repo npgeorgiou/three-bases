@@ -124,12 +124,12 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: monster_train 541 pairs, e.g. Molded -> Little Fade; runeterra 19385 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- sacrifice: monster_train 250 pairs, e.g. Lady of the Reformed -> Little Fade; runeterra 6008 pairs, e.g. Mordekaiser -> Shackled Ghasts; stormbound 120 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- removal: monster_train 126 pairs, e.g. Molded -> Little Fade; runeterra 5597 pairs, e.g. Kindred's Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Chilled Stonedames -> Marked as Prey
-- on_kill: monster_train 151 pairs, e.g. Shattered Shell -> Little Fade; runeterra 2008 pairs, e.g. Mordekaiser -> Shackled Ghasts; stormbound 20 pairs, e.g. Spellbinder Zhevana -> Dreadful Keepers
-- damage: monster_train 1076 pairs, e.g. Hoarfrost Effigy -> Little Fade; stormbound 721 pairs, e.g. Divine Reptiles -> Dreadful Keepers
-- self_destruct: monster_train 373 pairs, e.g. Molded -> Little Fade; stormbound 20 pairs, e.g. Powder Tower -> Chaotic Pupil
+- destroy: monster_train 567 pairs, e.g. Rector Flicker -> Little Fade; runeterra 19385 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- sacrifice: monster_train 262 pairs, e.g. Rector Flicker -> Little Fade; runeterra 6008 pairs, e.g. Chronicler of Ruin -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- removal: monster_train 132 pairs, e.g. Shardtail Queen -> Little Fade; runeterra 5597 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Avian Stalkers -> Marked as Prey
+- on_kill: monster_train 157 pairs, e.g. Shattered Shell -> Little Fade; runeterra 2008 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Spellbinder Zhevana -> Dreadful Keepers
+- damage: monster_train 1117 pairs, e.g. Cycle of Life -> Little Fade; stormbound 721 pairs, e.g. Divine Reptiles -> Dreadful Keepers
+- self_destruct: monster_train 391 pairs, e.g. Rector Flicker -> Little Fade; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -154,7 +154,7 @@ Supports your units (stats, protection, combat keywords): Piercing Darkness, Sen
 Card flow (draw, create, choose): Glimpse Beyond, Lonely Chimeslime, Senna, Spirit Leech.
 Puts extra units into play: Cursed Keeper, Hapless Aristocrat, The Undying.
 Units that support cards can target: 9 (Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, Lucian, Ravenous Butcher, Senna, Senna, Sentinel of Light, Spirit Leech, The Undying).
-Key cards (in most of the plan): Senna, The Ruination, Spirit Leech, Crumble, Ravenous Butcher.
+Key cards (in most of the plan): Senna, Spirit Leech, The Ruination, Crumble, Ravenous Butcher.
 Weak spots: none found.
 ```
 
@@ -187,7 +187,7 @@ select distinct card from flat_do where act='copy_keywords'
 - monster_train Awoken: on_lifegain (4), counterattack (7), regeneration (4), draw (11), heal (11)
 - monster_train Stygian Guard: discard (6), on_spell (9), retain (4), stat_loss (5), damage_over_time (11)
 - monster_train Umbra: lifesteal (4), on_sacrifice (14), shield (7), board_limit (4), overload_debt (4)
-- monster_train Melting Remnant: death_trigger (17), self_destruct (16), cost_set (6), delayed (15), sacrifice (9)
+- monster_train Melting Remnant: death_trigger (18), self_destruct (16), cost_set (6), delayed (15), sacrifice (9)
 - monster_train Wurmkin: cost_type (10), resource_gain (23), summon (4), damage_over_time (8), exhaust (19)
 - monster_train Clanless: direct_damage (5), banish (10), turn_end (7), cant_attack (5), passive (20)
 - runeterra Ionia: bounce_enemy (11), silence (33), movement (6), swap (6), return_to_hand (52)

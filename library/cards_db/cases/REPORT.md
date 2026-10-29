@@ -12,7 +12,7 @@ Made by `cases/run.py monster_train`.
 | mt02 | Strike triggers | 9 | 9 | 100% | 7 | yes |
 | mt03 | Revenge triggers | 7 | 7 | 100% | 32 | yes |
 | mt04 | Slay triggers | 14 | 14 | 100% | 0 | yes |
-| mt05 | Extinguish triggers | 10 | 10 | 100% | 4 | yes |
+| mt05 | Extinguish triggers | 11 | 11 | 100% | 4 | yes |
 | mt06 | Harvest triggers | 5 | 5 | 100% | 0 | yes |
 | mt07 | Incant triggers | 10 | 10 | 100% | 0 | yes |
 | mt08 | Rally triggers | 1 | 1 | 100% | 0 | yes |
@@ -26,7 +26,7 @@ Made by `cases/run.py monster_train`.
 | mt16 | Etch triggers | 4 | 4 | 100% | 0 | yes |
 | mt17 | Inspire triggers | 4 | 4 | 100% | 0 | yes |
 | mt18 | Reserve triggers | 6 | 6 | 100% | 0 | yes |
-| mt19 | Hatch triggers | 3 | 3 | 100% | 11 | yes |
+| mt19 | Hatch triggers | 3 | 3 | 100% | 12 | yes |
 | mt20 | extra draw next turn | 6 | 6 | 100% | 43 | yes |
 | mt21 | deals damage | 53 | 52 | 98% | 32 | yes |
 | mt22 | restores health | 14 | 14 | 100% | 6 | yes |
@@ -40,7 +40,7 @@ Made by `cases/run.py monster_train`.
 | mt30 | damages its own Pyre | 5 | 5 | 100% | 0 | yes |
 | mt31 | X cost amounts | 17 | 17 | 100% | 1 | yes |
 | mt32 | hits the front enemy unit | 21 | 21 | 100% | 4 | yes |
-| mt33 | on this floor | 14 | 14 | 100% | 51 | yes |
+| mt33 | on this floor | 14 | 14 | 100% | 52 | yes |
 | mt34 | consumed cards matter | 6 | 6 | 100% | 4 | yes |
 | mt35 | permanent changes | 7 | 7 | 100% | 11 | yes |
 | mt36 | moves units | 4 | 4 | 100% | 9 | yes |
@@ -158,7 +158,7 @@ Made by `cases/run.py monster_train`.
 | rmt17 | Umbra | archetype (Claude) | Morsels | 10 | 25 | yes |
 | rmt18 | Umbra | archetype (Claude) | Damage Shield | 4 | 7 | yes |
 | rmt19 | Umbra | archetype (Claude) | Emberdrain | 3 | 4 | yes |
-| rmt20 | Melting Remnant | signature (library) | death abilities | 6 | 14 | yes |
+| rmt20 | Melting Remnant | signature (library) | death abilities | 6 | 15 | yes |
 | rmt21 | Melting Remnant | signature (library) | Reform | 4 | 6 | yes |
 | rmt22 | Melting Remnant | signature (library) | Burnout | 6 | 16 | yes |
 | rmt23 | Melting Remnant | signature (library) | Harvest | 3 | 5 | yes |

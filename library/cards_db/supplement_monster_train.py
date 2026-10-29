@@ -10,6 +10,8 @@ Sources (all from the Monster Train fandom wiki, monster-train.fandom.com, Monst
 - Glossary: supplement/monster_train_glossary.psv: the tables of the pages Status Effects and Card Effects
   (page#section#name#description), read 28 Oct 2026 (first 85 lines, sha256 ffbe989...); the last line, Charged Echo, is the
   page Charged Echoes in the wiki's words, shortened.
+- Tokens the module lacks: Twin of Wax and Mote of Wax (made by Legion of Wax), from the {{Card}} boxes on the wiki page
+  Legion of Wax, read 29 Oct 2026 (TOKENS below; the page gives no type or rarity).
 - Olde Magic has no text: its effects are chosen in a run (wiki: Concealed Caverns, Arcane Machine). Demon Fiend, Shadowsiege
   and Train Steward are units without text.
 Writes supplement/monster_train.jsonl in the library's entities columns; ids from 2000001 (source.py), kept stable for
@@ -36,6 +38,8 @@ RAW = {
     'Spikedriver Colony': "'''Multistrike 1.'''<br>'''Extinguish:''' Add a permanent copy of this card to your discard pile."
                           "<hr>{{Value|+20|Attack}} and remove '''Extinguish.'''",
 }
+TOKENS = [('Twin of Wax', "'''Extinguish:''' Summon 2 '''Mote of Wax.''' '''Enhance''' them with all enhancements and card upgrades on this unit.", '2', '4', '4'),
+          ('Mote of Wax', '', '1', '2', '2')]
 # Glossary terms no card of the game uses (enemy, artifact and run terms), and "Add", which the wiki marks as its own word
 # for the verb "add a card", not the game's: left out, so card texts are not linked to them.
 UNUSED = {'Add', 'Cardless', 'Haste', 'Hellborne Harvest', 'Heartless', 'Immobile', 'Intrinsic', 'Purify', 'Recover',
@@ -123,6 +127,11 @@ def main():
              'subtypes': json.dumps(sub) if sub else None, 'rarity': rar or None, 'cost': cost or None, 'cost_num': cn,
              'stats': json.dumps(stats) if stats else None, 'text': desc or None,
              'extra': json.dumps(extra, ensure_ascii=False) if extra else None, 'variants': None})
+    for name, desc, cap, atk, hp in TOKENS:
+        add({'game': 'monster_train', 'ext_id': name, 'name': name, 'category': 'unit',
+             'source_type': f'unit token ({WIKI} page Legion of Wax, supplement)', 'edition': None, 'faction': 'Melting Remnant',
+             'subtypes': None, 'rarity': None, 'cost': None, 'cost_num': None,
+             'stats': json.dumps({'capacity': cap, 'attack': atk, 'health': hp}), 'text': flat(desc) or None, 'extra': None, 'variants': None})
     assert len(paths) == 12 and sum(r['category'] == 'hero' for r in rows) == 12
     for ln in open(GLOSS, encoding='utf-8'):
         p = ln.rstrip('\n').split('#')

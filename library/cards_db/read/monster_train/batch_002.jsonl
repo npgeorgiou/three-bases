@@ -1,0 +1,1 @@
+{"id":2000366,"abilities":[{"when":{"event":"dies","object":{"pick":"self"}},"do":[{"act":"summon","card":"Mote of Wax","on":{"kind":"position","with":[{"attr":"position","op":"is","val":"same_lane"}]},"params":{"amount":2}},{"act":"copy_upgrades","on":{"pick":"it"},"to":{"pick":"self"},"link":"and"}]}]}

@@ -61,3 +61,5 @@ Each change: date, what changed, the card that caused it, and which records were
   stacks, rarity pairs, non-boss, Echo slots, Sacrifice targets) instead of a re-read; Sacrifice's keyword record kills the
   card's target; normalize N14 (draw from the top: one form, all games); second reading judged by Claude: Hallowed Halls
   "to this floor" added; the rest same meaning.
+- 29 Oct 2026, v26 (Monster Train): tokens Twin of Wax and Mote of Wax (wiki page Legion of Wax) in the supplement,
+  recorded by Claude; act copy_upgrades (Legion of Wax, Twin of Wax).
