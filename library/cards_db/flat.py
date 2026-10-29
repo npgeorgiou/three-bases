@@ -86,17 +86,21 @@ def build(c):
             todo += [i for (i,) in c.execute('select item from amount_item where amount=?', (a,))]
         return seen
 
-    def ability_rows(card, aid, origin, via, applied_to=None, seen=()):
+    def ability_rows(card, aid, origin, via, applied_to=None, seen=(), flip=False, action=False):
+        # flip: an ability given to an enemy ("give an enemy minion 'When it dies, damage enemies around it'"): its sides are
+        # the holder's, so its "mine" is my enemy's (v39, Duelyst Grasp of Agony). action: the keyword is used as an action on a
+        # target ("Recall an ally"): its "it" is that target; a status keyword given ("give it Backstab") has only "self" = holder
+        fl = (lambda x: {'mine': 'enemy', 'enemy': 'mine'}.get(x, x)) if flip else (lambda x: x)
         ev, lim = c.execute('select event, lim from ability where id=?', (aid,)).fetchone()
         if ev:
             e, ok, os_, op, ow, actor = event_info(ev); ak, as_, ap, _ = tgt(actor)
             c.execute('insert into flat_when values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
-                      (card, origin, via, aid, e, when_concept(e, ok, ow, op), ak, as_, ap, ok, os_, op, lim, ow, withs(actor)))
+                      (card, origin, via, aid, e, when_concept(e, ok, ow, op), ak, fl(as_), ap, ok, fl(os_), op, lim, ow, withs(actor)))
         for test, of, op, n, span, cev, at in c.execute('select test, of_target, op, n, span, event, attr from cond where ability=?', (aid,)).fetchall():
             k, s, p, z = tgt(of); e, ek, es, ep, ew, ea = event_info(cev)
             c.execute('insert into flat_if values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
                       (card, origin, via, aid, test, e, (when_concept(e, ek, ew, None) if e else None) or tree.get(('test', test)),
-                       k, s, p, z, withs(of), ek, es, ew, op, num(n), span, ep, at, tgt(ea)[2] if ea else None, tgt(ea)[0], tgt(ea)[1], withs(ea)))
+                       k, fl(s), p, z, withs(of), ek, fl(es), ew, op, num(n), span, ep, at, tgt(ea)[2] if ea else None, tgt(ea)[0], fl(tgt(ea)[1]), withs(ea)))
         for a in amounts(aid):  # counted things: "for each X", "different subtypes", "equal to its Power"
             x, of, cev, span, at = c.execute('select x, of_target, event, span, attr from amount where id=?', (a,)).fetchone()
             if x == 'n': continue
@@ -117,18 +121,19 @@ def build(c):
             if act in ('summon', 'create', 'copy', 'revive', 'play_card') and cref:  # "summon a Demon Wing ..., give it Flying": that card
                 last = ('unit' if act in ('summon', 'revive') else (k or 'card'), s or 'mine', f'card is {cref}')
             elif p != 'it': last = (k, s, w)
-            if applied_to and (p in ('self', 'it') or (k, s, p) == (None, None, None)): k, s, p, z, w = applied_to
+            if applied_to and (p == 'self' or (p == 'it' and action) or (k, s, p) == (None, None, None)): k, s, p, z, w = applied_to
+            s = fl(s)
             pe = (c.execute("select value from param where effect=? and param='event'", (eid,)).fetchone() or [None])[0]
             ps = ';'.join(f'{pn}={num(a) if a else v}' for pn, a, v in c.execute('select param, amount, value from param where effect=?', (eid,))) or None
             concept = (tree.get(('keyword', kwname.get(kref, ''))) if kref else None) or tree.get(('act', act))
             if s == 'enemy': concept = ON_ENEMY.get(concept, concept)  # the same keyword used on an enemy (Ascend an enemy unit)
             c.execute('insert into flat_do values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
-                      (card, origin, via, aid, seq, act, concept, k, s, p, z, cref, kref, lasts, link, w, pe, ps, ez, tgt(to)[0], withs(to), tgt(to)[2], tgt(to)[1]))
+                      (card, origin, via, aid, seq, act, concept, k, s, p, z, cref, kref, lasts, link, w, pe, ps, ez, tgt(to)[0], withs(to), tgt(to)[2], fl(tgt(to)[1])))
             if kref and act in ('keyword_action', 'give_keyword') and kref not in seen:  # the keyword's meaning on this target
                 for (kab,) in c.execute('select id from ability where card=? and given_by_effect is null', (kref,)).fetchall():
-                    ability_rows(card, kab, 'uses_keyword', kref, applied_to=(k, s, p, z, w), seen=tuple(seen) + (kref,))
+                    ability_rows(card, kab, 'uses_keyword', kref, applied_to=(k, s, p, z, w), seen=tuple(seen) + (kref,), action=act == 'keyword_action')
             for (sub,) in c.execute('select id from ability where given_by_effect=?', (eid,)).fetchall():  # abilities this effect gives
-                ability_rows(card, sub, 'gives', eid, seen=seen)
+                ability_rows(card, sub, 'gives', eid, seen=seen, flip=(s == 'enemy') != flip)
 
     def keyword_conds(card, kw, aid, origin):
         for test, of, op, n, span, cev, at in c.execute('select test, of_target, op, n, span, event, attr from cond where keyword=?', (kw,)).fetchall():
@@ -228,7 +233,13 @@ RULES = [
     ('adjacency', 'flat_when', "obj_with like '%position % bordering%' or obj_with like '%position % surrounding%' or obj_with like '%position % sides%'"),
     ('terrain', 'flat_if', "coalesce(of_with,'') || coalesce(ev_obj_with,'') like '%terrain %'"),
     ('terrain', 'flat_when', "event='terrain_changed' or obj_with like '%terrain %'"),
-    ('area_templates', 'flat_do', "origin='own' and act not in ('can','cant','move') and (coalesce(on_with,'') || coalesce(to_with,'') like '%position % straight_line%' or coalesce(on_with,'') || coalesce(to_with,'') like '%position % area_%' or coalesce(on_with,'') || coalesce(to_with,'') like '%distance %' or coalesce(on_with,'') || coalesce(to_with,'') like '%position in %')"),
+    ('area_templates', 'flat_do', "origin='own' and act not in ('can','cant','move') and (coalesce(on_with,'') || coalesce(to_with,'') like '%position % straight_line%' or coalesce(on_with,'') || coalesce(to_with,'') like '%position % area_%' or coalesce(on_with,'') || coalesce(to_with,'') like '%distance %' or coalesce(on_with,'') || coalesce(to_with,'') like '%position in %' or coalesce(on_with,'') || coalesce(to_with,'') like '%position % corner%' or coalesce(on_with,'') || coalesce(to_with,'') like '%position % starting_side%')"),
+    # grid shapes any board game can have (v39, Duelyst): attacking from behind and getting behind an enemy are flanking; the
+    # diagonal neighbours are adjacency; the centre column is a column (lanes)
+    ('flanking', 'flat_if', "coalesce(of_with,'') like '%position is behind of it%'"),
+    ('flanking', 'flat_do', "act in ('move','swap') and coalesce(to_with,'') like '%position is behind of % enemy%'"),
+    ('adjacency', 'flat_do', "coalesce(on_with,'') || coalesce(to_with,'') like '%position % diagonal%'"),
+    ('lanes', 'flat_do', "coalesce(on_with,'') || coalesce(to_with,'') like '%position % center_column%'"),
     ('placement_rules', 'flat_do', "origin in ('own','has_keyword') and act in ('can','cant') and param_event in ('summoned','played') and to_kind='position'"),
     ('zone_control', 'flat_do', "act='steal' and on_kind='position'"),
     ('control_reward', 'flat_when', "event='harvests' and obj_side='enemy'"),

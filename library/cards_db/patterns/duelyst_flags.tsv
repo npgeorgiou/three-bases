@@ -1,1 +1,11 @@
 card	name	pattern	requires	text
+5000230	Kujata	V04	value:summon|copy|summoned|revive|summoned_this_round	your minions cost 1 less to summon and take 1 damage when summon
+5000280	Voice of the Wind	V94	value:hand|return_to_hand|from_hand|draw|create|copy|return_card	you summon a minion from your action bar, summon a 2/2  #   #  nearby.
+5000431	Hideatsu the Ebon Ox	V94	value:hand|return_to_hand|from_hand|draw|create|copy|return_card	l: summon 7 minions from your action bar with different costs. destiny
+5000474	Hatefurnace	V04	value:summon|copy|summoned|revive|summoned_this_round	ain +attack. destiny: minions summoned from your action bar gain r
+5000474	Hatefurnace	V94	value:hand|return_to_hand|from_hand|draw|create|copy|return_card	y: minions summoned from your action bar gain rush and frenzy.
+5000561	Azure Summoning	V04	value:summon|copy|summoned|revive|summoned_this_round	whenever you summon a minion with flying from you
+5000655	Megapenti	V04	value:summon|copy|summoned|revive|summoned_this_round	minions summoned from  # 's action bar gain 
+5000655	Megapenti	V94	value:hand|return_to_hand|from_hand|draw|create|copy|return_card	minions summoned from  # 's action bar gain rebirth:  # .
+5000660	Crystalline Champion	V04	value:summon|copy|summoned|revive|summoned_this_round	all minions summoned from the action bar gain +2
+5000660	Crystalline Champion	V94	value:hand|return_to_hand|from_hand|draw|create|copy|return_card	all minions summoned from the action bar gain +2 attack, but -2 health

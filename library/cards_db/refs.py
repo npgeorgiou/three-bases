@@ -29,7 +29,9 @@ BY_ME = {'killed', 'damaged', 'nexus_damaged', 'challenges'}  # done by the card
 # (attacks and strikes by the card: other cards can make it attack or strike: Rally, "an ally strikes")  # kinds a player can be
 HARM = {'damage', 'kill', 'obliterate', 'capture', 'stun', 'silence', 'transform'}  # harm aimed at a chosen target of either side
 TO_OBJECT = {('harvest', 'harvests'), ('set_terrain', 'terrain_changed')}  # "X harvests from a well": the unit is the actor, the space the object (like strikes)
-BOARD_KINDS = {'unit', 'landmark', 'unit_or_structure', 'anything', 'any', None}
+BOARD_KINDS = {'unit', 'landmark', 'unit_or_structure', 'anything', 'any', None, 'player'}  # a player on the board: a leader (Duelyst General)
+KIND_OF_CAT = {'unit': 'unit', 'hero': 'unit', 'leader': 'player'}  # the kind a card of a category is on the board
+NOT_UNIT_DEATH = {'dies', 'killed', 'survives_damage', 'damaged'}  # destroying an artifact or equipment kills no unit (Duelyst EMP)
 # a stat tested or counted, and the happenings that change it, for a player and for a unit
 STAT_EVENTS = {'health': {'player': ('nexus_damaged', 'healed'), 'unit': ('stat_changed', 'damaged', 'healed')},
                'power': {'unit': ('stat_changed',)}, 'strength': {'unit': ('stat_changed', 'damaged'), 'player': ('nexus_damaged', 'healed')},
@@ -50,6 +52,8 @@ def build(c):
         if role == 'makes' and pick == 'self' and not side: side = 'mine'  # what a card does to itself happens on my side
         if ev == 'strikes_nexus' and kind == 'player': kind, side = 'unit', 'mine'  # one way: the unit that strikes, never the player struck
         if role == 'makes' and ((kind == 'player' and ev in UNIT_ONLY) or (kind not in OPEN_KINDS and ev in PLAYER_ONLY)): return
+        if role == 'makes' and kind == 'equipment' and ev in NOT_UNIT_DEATH: return
+        if role == 'makes' and ev in ('summoned', 'revived') and not side: side = 'mine'  # a summon puts the unit on its owner's side
         con = (tree.get(('keyword', kwname.get(kw, ''))) if kw else None) or (tree.get(('state', state)) if state else None) \
             or tree.get(('event', ev))
         c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (card, origin, via, ab, role, ev, kind, side or '', pick, kw, con, w, ref, ak, aw))
@@ -69,6 +73,12 @@ def build(c):
                 not re.search(r'(?<![a-z:])position \w+ \w+ of position(?: \w+)? chosen', withs or ''):  # around a space the player picks
             # ("all enemies on or adjacent to a chosen space"): the player aims it where units are; moving them is no help
             ins(card, origin, via, ab, 'state', 'moves', kind, side, pick, w=withs)
+            if re.search(r'(?<![a-z:])position \w+ \w+ of self\b', withs or '') and pick != 'self' and side == 'mine':  # from the card itself (Zeal:
+                ins(card, origin, via, ab, 'state', 'moves', None, 'mine', 'self', w=withs)  # "near your General"): moving it changes it too
+        # where the card itself stands ("while on the enemy side": a space with same_space and no "of"): moving it is its need
+        elif kind == 'position' and not entering and re.search(r'(?<![a-z:])position is same_space(?! of)', withs or '') and \
+                re.search(r'(?<![a-z:])position \w+ \w+ of ', withs or ''):
+            ins(card, origin, via, ab, 'state', 'moves', None, 'mine', 'self', w=withs)
 
     def kws_of(withs):
         """every keyword a filter names: "keyword is X", or "keyword in X" rows (one of them: traps or boons)"""
@@ -103,6 +113,7 @@ def build(c):
         # creature": the card has Flying already; nothing given in play makes it one
     r_op = {(a, b, t, at): op for a, b, t, at, op in c.execute('select card, ability, test, attr, op from flat_if')}
     compared = {(a, b) for a, b in c.execute("select card, ability from flat_if where test='amount'")}
+    costs = {(a, b) for a, b in c.execute("select card, ability from flat_do where act in ('cost_set','cost_change') and on_pick='self'")}
     for r in c.execute('select card, origin, via, ability, event, of_kind, of_side, of_pick, of_zone, of_with, ev_obj_kind, '
                        'ev_obj_side, ev_obj_with, ev_obj_pick, test, attr, ev_actor_pick, ev_actor_kind, ev_actor_with from flat_if').fetchall():
         card, o, v, ab, ev, fk, fs, fp, fz, fw, ek, es, ew, ep, test, at, eap, eak, eaw = r
@@ -122,7 +133,9 @@ def build(c):
             op = r_op.get((card, ab, test, at))
             if test == 'amount_stat' and (card, ab) in compared: continue  # a stat used as a threshold ("lethal damage": damage >= my
             # Life) is no stat the card wants more or less of (Divine Guardian)
-            if test == 'amount_stat' or op in ('ge', 'gt'): sevs = tuple(e for e in sevs if e not in ('damaged', 'nexus_damaged'))
+            if test == 'amount_stat' and (card, ab) in costs:  # a cost equal to a stat ("costs your General's Health"): less of it
+                sevs = tuple(e for e in sevs if e != 'healed')  # makes it cheaper (Blood Taura): damage feeds it, healing does not
+            elif test == 'amount_stat' or op in ('ge', 'gt'): sevs = tuple(e for e in sevs if e not in ('damaged', 'nexus_damaged'))
             elif op in ('le', 'lt'): sevs = tuple(e for e in sevs if e != 'healed')
             for sev in sevs:
                 ins(card, o, v, ab, 'condition', sev, fk or 'unit', fs, fp, w=fw)  # a unit's stat unless a player's is named ("its Life" of "it")
@@ -132,11 +145,22 @@ def build(c):
     for card, kw in c.execute('select card, keyword from card_keyword').fetchall():
         ins(card, 'has_keyword', kw, None, 'makes', 'keyword_used', None, 'mine', 'self', kw)
         for ev, *kwn in causes.get(('keyword', kwname.get(kw, '')), []): ins(card, 'has_keyword', kw, None, 'makes', ev, None, 'mine', 'self', kw)
+    # "the attacker", "that enemy" (pick actor): who it is is the event's actor (the counterattack rule strikes the enemy that
+    # attacked, never my own unit)
+    actor_of = {(a, b): (ak, as_) for a, b, ak, as_ in c.execute('select card, ability, actor_kind, actor_side from flat_when')}
+    entry_abs = {(a, b) for a, b in c.execute("select card, ability from flat_when where event in ('played','summoned') and obj_pick='self'")}
+    ev_of = {(a, b): e for a, b, e in c.execute("select card, ability, event from flat_when where actor_pick='self' and obj_pick is null")}
     for r in c.execute('select card, origin, via, ability, act, on_kind, on_side, on_pick, on_zone, on_with, keyword_ref, card_ref, '
                        'param_event, to_kind, to_with, to_side, to_pick from flat_do').fetchall():
         card, o, v, ab, act, k, s, p, z, w, kw, cref, pev, to_k, to_w, to_s, to_p = r
         if not s and p == 'chosen' and act in HARM and k in ('unit', 'any', 'anything', 'unit_or_structure', None):
             s = 'enemy'  # "deal 2 to a creature" (either side): the player aims it at an enemy; it makes no friendly deaths
+        if p == 'actor' and not (k or s): k, s = actor_of.get((card, ab), (None, None))
+        if to_p == 'actor' and not (to_k or to_s): to_k, to_s = actor_of.get((card, ab), (None, None))
+        if act == 'can' and k == 'player' and pev not in (None, 'played', 'summoned', 'targeted'):  # "you may replace an additional
+            ins(card, o, v, ab, 'makes', pev, 'card' if pev in ('shuffled', 'drawn', 'discarded') else k, s or 'mine', None)  # card": more of it
+        # "it" in an ability on my own attack or strike ("Backstab: deals extra damage to it") is what I attack: an enemy
+        if p == 'it' and not s and ev_of.get((card, ab)) in ('attacks', 'strikes'): k, s = k or 'any', 'enemy'
         for ev, *kwn in causes.get(('act', act), []):
             if (act, ev) in TO_OBJECT and (to_k or to_s or to_p):  # the space it happens on is the event's object, the mover its actor
                 if act == 'set_terrain':  # the space now has the new ground ("to"), on the side of the space changed (mine when unsaid)
@@ -147,6 +171,7 @@ def build(c):
                     if ev == 'damaged': ins(card, o, v, ab, 'makes', 'nexus_damaged', 'player', to_s, None)
                     else: continue
                 ins(card, o, v, ab, 'makes', ev, to_k, to_s, to_p, w=to_w); continue
+            if act == 'give_ability' and ev == 'given_keyword' and k == 'player': continue  # an ability given to the player is no keyword
             ins(card, o, v, ab, 'makes', ev, k, s, p, kwid.get(kwn[0].lower()) if kwn else kw, w=w, ref=cref)
         if act == 'strike' and to_k == 'player': ins(card, o, v, ab, 'makes', 'strikes_nexus', k or 'unit', s or 'mine', p)
         if act == 'keyword_action' and cref:  # a card planted or placed to go off later (a trap, a Chime): it goes off
@@ -163,7 +188,8 @@ def build(c):
         if act == 'spend_mana' and k in ('mana', 'secondary_resource', 'gem', 'lane_resource') and s in ('mine', None):
             # an ability that spends a resource needs it ("Activate: Pay 2 Bones"): fed by gaining it; the card's own need
             ins(card, o, v, None if o == 'has_keyword' else ab, 'condition', 'mana_refilled', k, 'mine', None, w=w)
-        state_rows(card, o, v, ab, k, s, p, w, z)
+        # an effect when the card enters on a unit next to it ("Opening Gambit: give a nearby minion +2"): where it enters decides
+        state_rows(card, o, v, ab, k, s, p, w, z, entering=(card, ab) in entry_abs and not re.search(r'(?<![a-z:])position \w+ \w+ of ', w or ''))
         if to_w and to_k != 'position' and re.search(r'(?<![a-z:])position ', to_w) and act not in PLACES:  # a space is not moved into place  # "attack a bordering enemy"; where a new card is put
             ins(card, o, v, ab, 'state', 'moves', to_k, s, None, w=to_w)                # ("Pelt Lice in adjacent slots") needs no moves
     # the game's rules (read/<game>/game_rules.jsonl): what every card of a category does without its text saying so (an
@@ -188,6 +214,9 @@ def build(c):
                                  "(? is null or (lower(coalesce(cost_text,'')) like '%' || lower(?) || '%' and coalesce(cost, 1) > 0))",  # "0 Blood" costs nothing
                                  (cat, e, cost_has, cost_has)).fetchall():
             if card in never: continue
+            ckind = KIND_OF_CAT.get(c.execute('select category from card where id=?', (card,)).fetchone()[0])
             for ab, h, k, sd, pk, kw, con, w, ref, role in rows + hit_back:
                 if pk == 'self' and not sd: sd = 'mine'  # what the card does to itself is on its owner's side
+                if pk == 'self' and not k: k = ckind  # a unit fights as a unit, a leader (Duelyst General) as its player
+                # (a leader attacks, strikes and kills as its player: "whenever your General attacks" waits for exactly that)
                 c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (card, 'game', e, ab, role, h, k, sd, pk, kw, con, w, ref, None, None))

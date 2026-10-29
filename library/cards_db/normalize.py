@@ -37,6 +37,8 @@ and second readings). Safe to run any number of times. Each rule is listed in CH
   N21 a stat change of 0 ("power -3, health 0") lists only the stats that change.
   N22 "if you have X" is test have: a count of X with op ge n 1 is have (op is), with op eq n 0 or lt n 1 is have (op not)
      (Lava Lance was read both ways).
+  N24 "summoned from your action bar / hand" is played (one form; Duelyst Opening Gambit is played): an event summoned whose
+     object has state from_hand is the event played without that filter (Kujata, Hideatsu, Araki Headhunter).
   N10 "strongest" / "weakest" are pick highest / lowest by the attack stat: power, or strength in games whose units have
      one stat (Stormbound). One form in every game.
 Usage: normalize.py <game> <file.jsonl> [...]   rewrites the files in place, prints how many records changed."""
@@ -263,6 +265,11 @@ def second_forms(x):
     """N18-N22"""
     if isinstance(x, dict):
         if x.get('side') == 'any': x.pop('side')
+        if x.get('event') == 'summoned' and isinstance(x.get('object'), dict):  # N24
+            w = x['object'].get('with') or []
+            if any(f.get('attr') == 'state' and f.get('val') == 'from_hand' and f.get('op', 'is') == 'is' for f in w):
+                x['event'] = 'played'; x['object']['with'] = [f for f in w if not (f.get('attr') == 'state' and f.get('val') == 'from_hand')]
+                if not x['object']['with']: x['object'].pop('with')
         if x.get('test') == 'count' and 'of' in x and not x.get('span') and not x.get('attr'):
             if x.get('op') == 'ge' and x.get('n') == 1: x['test'] = 'have'; x['op'] = 'is'; x.pop('n')
             elif (x.get('op') == 'eq' and x.get('n') == 0) or (x.get('op') == 'lt' and x.get('n') == 1): x['test'] = 'have'; x['op'] = 'not'; x.pop('n')

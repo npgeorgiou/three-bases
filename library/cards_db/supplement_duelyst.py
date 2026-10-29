@@ -38,7 +38,7 @@ GLOSSARY = [('kw:Mana Spring', 'Mana Spring', 'Occupying a Mana Spring gives you
 def category(r):
     if r['class'] == 'Unit':
         if r['faction'] == 'Boss': return 'boss'
-        return 'hero' if r['general'] else 'unit'
+        return 'leader' if r['general'] else 'unit'  # a General is its player (BRIEF Game words: Duelyst)
     if r['class'] == 'Artifact': return 'item'
     return 'spell'
 

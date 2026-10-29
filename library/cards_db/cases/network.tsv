@@ -110,3 +110,25 @@ ni14	inscryption	Act III starter	Sniper Bot	Double Gunner	none		Claude (v38): tw
 ni15	inscryption	Alpha, Wolf, Moose Buck	Alpha	Wolf	line		Claude (v39): Leader (wiki: "Creatures adjacent to a card bearing this sigil gain 1 Power") boosts the units next to Alpha; a keyword's effect on other cards is a line too
 ni16	inscryption	Daus, Bell Tentacle	Bell Tentacle	Daus	line		Claude (v39): Daus strikes a card that attacks a Chime or Bell Tentacle (wiki Special Card Behaviours): the card it names
 ni17	inscryption	Daus, Bell Tentacle	Bell Tentacle	Daus	none	by fighting	Claude (v39): Daus waits for an enemy to attack the Bell Tentacle; Bell Tentacle attacking is not it
+ndu01	duelyst	Vaath Dying Wish	Spelljammer	Dagona	none		Claude, deck read: a counterattack hits the attacker, an enemy; Dagona's Dying Wish is its own death (family 1)
+ndu02	duelyst	Cassyva Replace Abomination	Healing Mystic	Letigress	none		Claude, deck read: Letigress waits for the General attacking, not any unit (family 2)
+ndu03	duelyst	Cassyva Replace Abomination	Cassyva Soulreaper	Letigress	line		Claude, deck read: the General attacks: a cub joins the pack
+ndu04	duelyst	Argeon Mechaz0r	Lifestream	Argeon Highmayne	none		Claude, deck read: the General is no minion to heal or draw (family 2)
+ndu05	duelyst	Vaath Dying Wish	Vaath the Immortal	Lavaslasher	none		Claude, deck read: +1 Attack to the General helps no minion (family 3)
+ndu06	duelyst	Shidai Artifacts	Mask of Shadows	Shidai Stormblossom	line		guide: Mask of Shadows gives the General Backstab and Attack
+ndu07	duelyst	Shidai Artifacts	Flicker	Mask of Shadows	line		guide: Flicker teleports the General behind an enemy, then the Backstab hits (family 9)
+ndu08	duelyst	Kaleos Trial of Songhai	EMP	Dagona	none		Claude, deck read: destroying artifacts kills no minion (family 5)
+ndu09	duelyst	Vaath Dying Wish	Unseven	Dagona	line		guide: Unseven pulls Dagona from the action bar
+ndu10	duelyst	Kaleos Trial of Songhai	Scroll Bandit	Battle Panddo	none		Claude, deck read: Backstab's damage hits the enemy attacked (families 1, 4)
+ndu11	duelyst	Kaleos Trial of Songhai	Heartseeker	Hideatsu the Ebon Ox	line		guide: every minion summoned from the action bar counts for the Trial (family 8)
+ndu12	duelyst	Kaleos Trial of Songhai	Kaleos Xaan	Scroll Bandit	line		Claude, deck read: teleporting the Bandit behind an enemy is what Backstab needs (family 9)
+ndu13	duelyst	Cassyva Replace Abomination	Aethermaster	White Widow	line		guide: more replaces set off White Widow (family 11)
+ndu14	duelyst	Lilithe Darkfire	Lilithe Blightchaser	Phantasm	none		Claude, deck read: my Wraithlings are no opponent's summons (family 7)
+ndu15	duelyst	Lilithe Darkfire	Grasp of Agony	Vorpal Reaver	none		Claude, deck read: Grasp damages the enemies around the dying enemy (family 18)
+ndu16	duelyst	Argeon Intensify Riftwalker	Lifestream	Sunstrike	none		Claude, deck read: Lifestream draws a copy of the minion it healed (family 12)
+ndu17	duelyst	Argeon Intensify Riftwalker	Sunstrike	Lifestream	none		Claude, deck read: a spell is never on the board to heal (family 13)
+ndu18	duelyst	Faie Blood Taura	Flameblood Warlock	Blood Taura	line		guide: Blood Taura costs the General's Health; damage to the General makes it cheaper (family 15)
+ndu19	duelyst	Argeon Intensify Riftwalker	Windblade Adept	Afterblaze	line		Claude, deck read: "if that minion has Zeal" asks for Zeal minions (family 16)
+ndu20	duelyst	Argeon Mechaz0r	Helm of MECHAZ0R	MECHAZ0R!	line		guide: the pieces build MECHAZ0R! (family 17)
+ndu21	duelyst	Vaath Dying Wish	Kujata	Juggernaut	line		Claude, deck read: Kujata's damage on summon sets off Juggernaut
+ndu22	duelyst	Kaleos Trial of Songhai	Juxtaposition	Bonereaper	line		Claude, deck read: switching an enemy next to Bonereaper puts it in reach of its end-of-turn damage

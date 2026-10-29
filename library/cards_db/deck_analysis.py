@@ -17,7 +17,7 @@ SAY = {  # what happens, in plain words; {who} = your / enemy / any
     'attacks': '{who} units attack', 'blocks': '{who} units block', 'strikes': '{who} units strike',
     'strikes_nexus': '{who} units hit the enemy player', 'leaves_play': '{who} cards leave play', 'recalled': '{who} units return to hand',
     'revived': '{who} units come back from the dead', 'levels_up': 'champions level up', 'obliterated': 'cards are removed from the game',
-    'transformed': 'cards transform', 'mana_refilled': 'you gain mana', 'targeted': '{who} cards are targeted', 'moves': '{who} units move',
+    'transformed': 'cards transform', 'mana_refilled': 'you gain mana', 'targeted': '{who} cards are targeted', 'moves': '{who} units move', 'shuffled': 'cards are replaced (shuffled into the deck)',
     'equipped': '{who} units get equipment', 'spell_resolves': 'spells finish', 'keyword_used': '{kw} is used',
     'round_start': 'a round starts', 'round_end': 'a round ends', 'turn_start': 'your turn starts', 'turn_end': 'your turn ends',
     'mana_refilled@secondary_resource': 'you gain the second resource (Bones)', 'mana_refilled@gem': 'you gain a gem (Mox)',

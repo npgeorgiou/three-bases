@@ -762,7 +762,7 @@ position	area_3x3	the 3x3 block of spaces centred on of ("a 3x3 area": of plus i
 position	starting_side	the half of the board where of's player started ("your starting side of the battlefield")			29 Oct 2026, v37 (Duelyst)
 position	diagonal	the 4 spaces diagonally next to of ("each nearby space diagonal from your General")			29 Oct 2026, v37 (Duelyst)
 position	center_column	the middle column of the board ("the entire center column")			29 Oct 2026, v37 (Duelyst)
-act	ready	the target may move and attack again this turn (Duelyst "reactivate")	untap		29 Oct 2026, v37 (Duelyst)
+act	ready	the target may move and attack again this turn (Duelyst "reactivate")	untap	attacks;moves	29 Oct 2026, v37 (Duelyst)
 act	become_leader	the target becomes its player's leader unit, whose life is the player's (Duelyst "becomes your General")	rule_change		29 Oct 2026, v37 (Duelyst)
 state	token	a token: a card made by another card, never in a deck ("non-token minions")		summon;create	29 Oct 2026, v37 (Duelyst)
 pick	nearest	the one closest to of (or to the card itself) ("the nearest enemy", "the closest enemy")			29 Oct 2026, v37 (Duelyst)
