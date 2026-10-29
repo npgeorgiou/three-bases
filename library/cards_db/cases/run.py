@@ -5,6 +5,8 @@ expected cards (mechanics) or the connection exists (combos) or the region shows
   combos.tsv     real combos: the enabler's results must set off the payoff (connections.py).
   regions.tsv    region identity: the query must find at least n cards of that region.
   decks.tsv      decks from players' guides: the deck explanation (ask.py <game> analyze) must contain each 'must' phrase.
+  network.tsv    deck networks (network.py) of decks from the web (../decks.tsv, decks.tsv): a line between two cards must be
+                 there, or must not (with why_not: no line for that reason); Kaptain's check of the networks.
 Usage: run.py <game> [--show N]   (N: misses listed per failing case)"""
 import csv, os, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); DBDIR = os.path.dirname(HERE)
@@ -71,6 +73,28 @@ def main():
             miss = [w for w in r['must'].split(';') if w.strip() and w.strip().lower() not in text]
             total += 1; passed += not miss
             out.append(f"| {r['id']} | {r['deck']} | {r['must']} | {', '.join(miss) or '-'} | {'yes' if not miss else 'NO'} |")
+    # deck networks: a line that must be there (or must not) between two cards of a deck from the web (Kaptain's check)
+    path = os.path.join(HERE, 'network.tsv')
+    if os.path.exists(path):
+        import network, mechanics
+        decks = {r['deck']: r['cards'] for f in (os.path.join(DBDIR, 'decks.tsv'), os.path.join(HERE, 'decks.tsv')) if os.path.exists(f)
+                 for r in csv.DictReader(open(f, encoding='utf-8'), delimiter='\t') if r['game'] == game}
+        out += ['', '## Deck networks (a line must be there, or must not)', '', '| case | deck | from | to | expect | found | pass |', '|---|---|---|---|---|---|---|']
+        nets = {}
+        for r in csv.DictReader(open(path, encoding='utf-8'), delimiter='\t'):
+            if r['game'] != game: continue
+            if r['deck'] not in nets:
+                import deck_analysis
+                ids, _ = deck_analysis.parse_deck(c, game, decks.get(r['deck'], ''))
+                nodes, lines = network.network(c, game, ids)
+                nets[r['deck']] = ({i: mechanics.name(c, i) for i in nodes}, lines)
+            nm, lines = nets[r['deck']]
+            hit = [y for (a, b), ls in lines.items() if (r['from'] == '*' or nm[a] == r['from']) and nm[b] == r['to']
+                   for k, w, y in ls if k != 'targets']
+            if r['expect'] == 'line': ok = bool(hit)
+            else: ok = not hit if not r['why_not'] else not any(r['why_not'] in y for y in hit)
+            total += 1; passed += ok
+            out.append(f"| {r['id']} | {r['deck']} | {r['from']} | {r['to']} | {r['expect']} {r['why_not']} | {'; '.join(sorted(set(hit)))[:80] or '-'} | {'yes' if ok else 'NO'} |")
     out.insert(3, f'**{passed} of {total} cases pass.**\n')
     open(os.path.join(HERE, 'REPORT.md'), 'w').write('\n'.join(out) + '\n'); print(f'{passed} of {total} cases pass')
 

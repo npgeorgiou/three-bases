@@ -1,0 +1,26 @@
+id	game	deck	from	to	expect	why_not	source
+n01	runeterra	Braum Zoe	Falling Star	Braum	none		Kaptain 29 Oct 2026: Falling Star only hits enemies, Braum levels on damage he survives
+n02	runeterra	Annie Gwen	*	Ravenbloom Conservatory	line		Kaptain: it counts Fast/Slow spells and skills played
+n03	runeterra	Caitlyn Teemo	Puffcap Peddler	Caitlyn	line		Kaptain: any of your traps activated levels Caitlyn
+n04	runeterra	Caitlyn Teemo	*	Caitlyn (level 2)	line		Kaptain: Caitlyn 2 counts traps activated
+n05	runeterra	Caitlyn Teemo	*	Teemo (level 2)	line		Kaptain: Teemo 2 doubles planted Puffcaps
+n06	runeterra	Caitlyn Teemo	Ava Achiever	Poison Puffcap	line		Kaptain: Ava doubles traps
+n07	runeterra	Caitlyn Teemo	*	Corina, Mastermind	line		Kaptain: Corina activates planted traps
+n08	runeterra	Bard Norra	Cosmic Binding	Chime	line		Kaptain: Cosmic Binding plants Chimes
+n09	runeterra	Bard Norra	Chime	Bard	line		Kaptain: Chimes add stats, which levels Bard
+n10	runeterra	Bard Norra	Bard	Bard (level 2)	line		Kaptain: Bard level 2 was missing
+n11	runeterra	Bard Norra	Norra (level 2)	Mysterious Portal	line		Kaptain: Norra 2 makes Mysterious Portals stronger
+n12	runeterra	Darius Gnar	*	Darius	line		Kaptain: Nexus damage levels Darius
+n13	runeterra	Ashe LeBlanc	*	LeBlanc	line		Kaptain: damage you deal levels LeBlanc
+n14	runeterra	Ashe LeBlanc	*	LeBlanc (level 2)	line		Kaptain: LeBlanc 2 acts on damage you deal
+n15	runeterra	Ashe LeBlanc	Ashe	LeBlanc	none	champions level up	Kaptain: "when I level up" is about LeBlanc herself
+n16	runeterra	Ashe LeBlanc	*	Bloody Business	line		Kaptain: Reputation needs allies striking for 5+
+n17	stormbound	Royal Reactant	Doctor Mia	Emerald Towers	line		Kaptain: Doctor Mia triggers structures
+n18	stormbound	Royal Reactant	Emerald Towers	Fortification Tonic	line		Kaptain: Fortification Tonic needs a structure
+n19	stormbound	Extreme Speed	Reckless Rushers	Green Prototypes	none		Kaptain: damage to your own base is no unit dying
+n20	stormbound	Extreme Speed	Reckless Rushers	Restless Goats	none		Kaptain: damage to your own base is no unit dying
+n21	stormbound	Extreme Speed	Restless Goats	Green Prototypes	none		Kaptain: damage to your own base is no unit dying
+n22	stormbound	Nu Bad Medicine	Ozone Purifiers	Wild Saberpaws	line		Kaptain: pushing enemies away frees the tiles around
+n23	stormbound	Nu Bad Medicine	Windmakers	Booming Professors	line		Kaptain: moving enemies changes who is in front
+n24	stormbound	Nu Bad Medicine	*	Unhealthy Hysteria	line		Kaptain: moving enemies changes who borders whom
+n25	stormbound	Nu Bad Medicine	Ozone Purifiers	Chaotic Pupil	line		Kaptain: moving enemies changes who borders whom
