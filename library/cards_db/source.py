@@ -4,7 +4,8 @@ Id blocks, one per game (PROCESS.md step 0.4); a new game writes its line here f
   runeterra   900001-999999     cards from Riot's data from 900001; Kaptain's definitions from 990001
   stormbound  1000001-1999999   cards and glossary keywords from 1000001; Kaptain's definitions from 1900001
   monster_train 2000001-2999999 cards and glossary keywords from 2000001; Kaptain's definitions from 2900001
-  then        3000001-3999999, 4000001-4999999, ... (each game takes the first free block and writes its line here)
+  faeria      3000001-3999999   cards and glossary keywords from 3000001; Kaptain's definitions from 3900001
+  then        4000001-3999999, 4000001-4999999, ... (each game takes the first free block and writes its line here)
   then        and so on"""
 import glob, json, os, sqlite3
 HERE = os.path.dirname(os.path.abspath(__file__))
