@@ -1,8 +1,8 @@
 """Duelyst: every card from the open-sourced game (github.com/open-duelyst/duelyst, commit 2843f24, 1 Aug 2025).
 Reads the card factories (app/sdk/cards/factory/<set>/*.coffee), the card id list (app/sdk/cards/cardsLookup.coffee) and the
 English texts (app/localization/locales/en/*.json) of a checkout, and writes duelyst_cards.psv next to this file, one card per
-line: card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|name|text|refs
-(code = Cards.<Group>.<Name>, the library's ext_id; refs = the other cards the card's code names, e.g. the token it summons).
+line: card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|name|text|refs|signature
+(code = Cards.<Group>.<Name>, the library's ext_id; refs = the other cards the card's code names, e.g. the token it summons; signature = a General's Bloodbound Spell, its signatureCardData).
 Usage: conv_duelyst.py <open-duelyst checkout>"""
 import glob, json, os, re, sys
 
@@ -71,9 +71,10 @@ def main():
                          '1' if re.search(r'setIsGeneral\(true\)', body) else '',
                          '1' if re.search(r'setIsHiddenInCollection\(true\)', body) else '',
                          '1' if re.search(r'setIsLegacy\(true\)', body) else '',
-                         name, ' '.join(desc.split()), ','.join(refs)])
+                         name, ' '.join(desc.split()), ','.join(refs),
+                         get(r'signatureCardData\s*=\s*\{id:\s*(Cards\.\w+\.\w+)')])
     with open(OUT, 'w') as o:
-        o.write('card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|name|text|refs\n')
+        o.write('card_id|code|set|class|faction|race|rarity|mana|atk|hp|general|hidden|legacy|name|text|refs|signature\n')
         for r in rows:
             o.write('|'.join(str(x).replace('|', '/') for x in r) + '\n')
     print(len(rows), 'cards ->', OUT)

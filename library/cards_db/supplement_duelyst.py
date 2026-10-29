@@ -30,7 +30,8 @@ GLOSSARY = [('kw:Mana Spring', 'Mana Spring', 'Occupying a Mana Spring gives you
             ('kw:Bloodbound Spell', 'Bloodbound Spell', "Your General's own spell; it counts down each turn until it refreshes.",
              'keyword (open-duelyst tutorial.json lesson_4_bloodborn_instruction_1: "Your Bloodbound Spell counts down each turn '
              'until it refreshes", supplement)')]
-# Types: the race (Golem, Mech, ...), and Bloodbound Spell on each General's own spell (the card its code names), so
+# Types: the race (Golem, Mech, ...), and Bloodbound Spell on each General's own spell (its signatureCardData) and the
+# cards that replace one (code ending BBS), so
 # "your Bloodbound Spell" is a type filter
 
 
@@ -84,7 +85,7 @@ def main():
     nxt = max(list(old.values()) + [5000000]) + 1
     rows = [r for r in csv.DictReader(open(PSV), delimiter='|', quoting=csv.QUOTE_NONE)
             if r['name'] and r['class'] != 'Tile']
-    BBS.update(x for r in rows if r['general'] for x in r['refs'].split(','))
+    BBS.update(r['signature'] for r in rows if r['signature'])
     names(rows)
     out, ids = [], {}
     for r in rows:
