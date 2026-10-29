@@ -1,0 +1,5 @@
+{"id": 5000202, "field": "state", "need": "token"}
+{"id": 5000413, "field": "state", "need": "token"}
+{"id": 5000966, "field": "state", "need": "token"}
+{"id": 5000433, "field": "pick", "need": "most_recent"}
+{"id": 5000652, "field": "act", "need": "give_keyword_by_health_threshold"}

@@ -1,0 +1,4 @@
+{"id": 5000441, "field": "limit", "need": "this_turn_after_played"}
+{"id": 5000445, "field": "test", "need": "edge_reached"}
+{"id": 5000454, "field": "act", "need": "give_unit_to_opponent_that_takes_control"}
+{"id": 5000464, "field": "with", "need": "space_under_enemy_unit"}

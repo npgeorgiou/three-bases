@@ -30,8 +30,8 @@ GLOSSARY = [('kw:Mana Spring', 'Mana Spring', 'Occupying a Mana Spring gives you
             ('kw:Bloodbound Spell', 'Bloodbound Spell', "Your General's own spell; it counts down each turn until it refreshes.",
              'keyword (open-duelyst tutorial.json lesson_4_bloodborn_instruction_1: "Your Bloodbound Spell counts down each turn '
              'until it refreshes", supplement)')]
-# Types: the race (Golem, Mech, ...), and Bloodbound Spell on each General's own spell (its signatureCardData) and the
-# cards that replace one (code ending BBS), so
+# Types: the race (Golem, Mech, ...). Each General's own spell (its signatureCardData) and the cards that replace one (code
+# ending BBS) have the keyword Bloodbound Spell, so "your Bloodbound Spell" is a keyword filter, so
 # "your Bloodbound Spell" is a type filter
 
 
@@ -127,12 +127,12 @@ def main():
         out.append({'game': 'duelyst', 'ext_id': r['code'], 'name': r['name'], 'category': cat,
                     'source_type': f"{r['class']} ({SRC})", 'edition': r['set'].split('/')[0],
                     'faction': r['faction'] or None,
-                    'subtypes': json.dumps(([RACE.get(r['race'], r['race'])] if r['race'] else [])
-                                           + (['Bloodbound Spell'] if kind(r) == 'Bloodbound Spell' or r['code'] in BBS else [])) or None,
+                    'subtypes': json.dumps([RACE.get(r['race'], r['race'])]) if r['race'] else None,
                     'rarity': r['rarity'] or None, 'cost': f"{r['mana']} mana" if r['mana'] else None,
                     'cost_num': float(r['mana']) if r['mana'] else None,
                     'stats': json.dumps(stats) if stats else None,
-                    'text': keywords_field(r['text'].replace('\\n', '\n'), kw_names),
+                    'text': keywords_field(('Bloodbound Spell\n' if r['code'] in BBS or r['code'].endswith('BBS') else '')
+                                           + r['text'].replace('\\n', '\n'), kw_names),
                     'extra': json.dumps(extra), 'variants': None, 'id': i})
     for code, name, text, st in GLOSSARY:
         i = old.get(code)

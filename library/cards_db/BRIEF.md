@@ -441,7 +441,7 @@ decided by Claude from the game's own texts (open-duelyst: keyword definitions, 
   actor that player.
 - Cards. Minion = unit, spell = spell, artifact = item. Attack = power, Health = health ("+2/+1" = power 2, health 1).
   The action bar = the hand ("put X into your action bar" = create, zone hand). Tribes (Golem, Mech, Arcanyst, Vespyr,
-  Dervish, Structure, Battle Pet) = filter type. "Your Bloodbound Spell" = a spell of type Bloodbound Spell, side mine.
+  Dervish, Structure, Battle Pet) = filter type. "Your Bloodbound Spell" = a spell with keyword Bloodbound Spell, side mine.
 - Mana. "Gain 1 mana" = mana_gain; "gain a mana crystal" (more mana every turn) = max_mana_change; "costs 1 less" =
   cost_change cost -1; "costs 0" = cost_set.
 - The board is a grid of spaces. A space = kind position. "Nearby X" / "around X" = position surrounding of X ("nearby" alone =
@@ -455,7 +455,7 @@ decided by Claude from the game's own texts (open-duelyst: keyword definitions, 
   Creep", "your Shadow Creep" = kind position, side mine, with that terrain; "for each friendly Shadow Creep" = count of it.
 - Triggers. "Opening Gambit:" = played, object self. "Dying Wish:" = dies, object self. "Deathwatch:" = dies, object
   `{"kind": "unit"}` (any minion). "Blood Surge:" and a General's "Bloodbound Spell: X" = played, object `{"kind": "spell",
-  "side": "mine", "with": [{"attr": "type", "op": "is", "ref": "Bloodbound Spell"}]}`. "Grow: +1/+1" = turn_start, actor
+  "side": "mine", "with": [{"attr": "keyword", "op": "is", "ref": "Bloodbound Spell"}]}`. "Grow: +1/+1" = turn_start, actor
   `{"kind": "player", "side": "mine"}`, stat_change power 1, health 1 on self, lasts permanent. "Bond:", "Zeal:" and
   "Infiltrate:" are conditions: COND `{"test": "keyword_condition", "ref": "Bond"}` (Zeal, Infiltrate) on the ability the
   text gives (Bond with event played, object self; "Zeal: Gains +1 Attack" = always, stat_change lasts while). "Sentinel: X"

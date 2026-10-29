@@ -1,0 +1,6 @@
+{"id": 741523, "field": "position", "need": "straight_line"}
+{"id": 741528, "field": "act", "need": "durability_loss"}
+{"id": 741533, "field": "to", "need": "other_than_it"}
+{"id": 741543, "field": "event", "need": "specific_event_on_opponent_turn"}
+{"id": 741548, "field": "pick", "need": "nearest"}
+{"id": 741550, "field": "event", "need": "silenced"}
