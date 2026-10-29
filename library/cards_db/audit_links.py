@@ -9,6 +9,11 @@ or fix every line it prints). Found by Kaptain's check of the deck networks (29 
     article is about the variable stat..."; the readers wrote nothing, so Ant Queen did not count Ants)
   5 cards of a guide deck (decks.tsv, cases/decks.tsv) that are no card of the game: the game's card list is not whole (the
     library merged Inscryption cards with the same text and dropped cards without sigils: Hawk, Wolf, Coyote)
+  7 card names shared by two cards of one game: a deck, a text or a question names one and gets either (Duelyst: Tempest
+    and its Bloodbound Spell copy, the tutorial's Argeon Highmayne); the supplement gives each other card "<name> (<kind>)"
+  8 the game's rules (read/<game>/game_rules.jsonl) missing, or the game file's "The game" section written from memory
+    (Duelyst's said units on a mana spring gain mana and minions are summoned next to a friendly unit; the game's own
+    tutorial and tips say the player gains it and summoning is around any friendly unit)
 Usage: audit_links.py <game> [...]"""
 import collections, csv, os, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
@@ -59,6 +64,16 @@ def audit(g):
     for n, t in source.lib().execute("select name, text from entities where game=? and category='keyword'", (g,)):
         t = ' '.join((t or '').split())
         if re.fullmatch(r"(?:This (?:article|page) is about [^.]*\.\s*(?:For [^.]*\.\s*)*)", t): out.append(f'6 keyword {n} has no definition, only: {t[:80]}')
+    for n, cnt in c.execute("select name, count(*) from card where game=? and is_stub=0 group by lower(name) having count(*) > 1", (g,)):
+        out.append(f'7 {cnt} cards are called {n}')
+    rules = os.path.join(HERE, 'read', g, 'game_rules.jsonl')
+    md = os.path.join(HERE, '..', 'tools', 'games', g + '.md')
+    if not os.path.exists(rules): out.append(f'8 no game rules: write read/{g}/game_rules.jsonl (PROCESS step 0.10)')
+    if os.path.exists(md):
+        s = open(md, encoding='utf-8').read()
+        sec = s.split('## The game', 1)[1].split('\n## ', 1)[0] if '## The game' in s else ''
+        if re.search(r'general knowledge|from memory', sec, re.I):
+            out.append(f'8 {g}.md "The game" is written from memory: rewrite it from the game\'s own rules, each line with its source')
     return out
 
 
