@@ -8,3 +8,12 @@
 {"id": 5000505, "field": "test", "need": "duplicate_cards_in_deck"}
 {"id": 5000517, "field": "on", "need": "pull_some_things"}
 {"id": 5000524, "field": "params", "need": "random_buff"}
+{"id": 5000548, "field": "with", "need": "Songhai_faction"}
+{"id": 5000561, "field": "limit", "need": "this_turn_after_played"}
+{"id": 5000569, "field": "lasts", "need": "until_end_of_turn"}
+{"id": 5000621, "field": "with", "need": "joined"}
+{"id": 5000646, "field": "params", "need": "increasing_amount"}
+{"id": 5000650, "field": "event", "need": "overdraws"}
+{"id": 5000652, "field": "when", "need": "health_threshold"}
+{"id": 5000653, "field": "when", "need": "counter_attack"}
+{"id": 5000696, "field": "act", "need": "become_general"}
