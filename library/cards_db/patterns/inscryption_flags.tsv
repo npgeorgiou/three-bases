@@ -1,0 +1,12 @@
+card	name	pattern	requires	text
+740979	Boon of the Bone Lord	T84	event:turn_start	 to easily play any bone card at the start of your turn.
+740980	Boon of the Forest	V02	value:draw|drawn	 you a good amount of time to draw cards and plan for the next f
+740981	Boon of the Magpie's Eye	KW	name:hoarder	owerful card. this mimics the hoarder ability on the  #  card, henc
+741009	Hammer	KW	name:detonator	 as latchers, unkillable, and detonator, assuming the card actually d
+741009	Hammer	KW	name:unkillable	 abilities, such as latchers, unkillable, and detonator, assuming the 
+741009	Hammer	T81	event:dies	r, assuming the card actually dies from the hit.
+741035	Skinning Knife	V02	value:draw|drawn	ards. it is destroyed and you draw a pelt card.
+741037	Special Dagger	V21	value:copy|copy_keywords|create|summon|transform|copy_of_it|revive	 can never have more than one copy of the dagger at any given ti
+4000003	Adder	V07	value:kill|killed|dies	traits: killssurvivors.
+4000114	Long Elk	V07	value:kill|killed|dies	traits: killssurvivors.
+4000190	Ring Worm	V07	value:kill|killed|dies	traits: killssurvivors, deathcardcreationn
