@@ -12,6 +12,12 @@ One file per game: the game, its factions, the source summary, the mechanics (pa
 - Keywords: Elusive, Overwhelm, Quick Attack, Barrier, Challenger, Frostbite, Last Breath, Fleeting, Ephemeral, Lifesteal, Regeneration, Tough, Lurk, Plunder, Predict.
 - Win: reduce the enemy Nexus to 0.
 
+## The game's rules (from sources)
+*Checked 29 Oct 2026 against Riot's support page https://support.riotgames.com/en-us/legends-of-runeterra/gameplay/round-faq.*
+- Attack token: the player on attack acts first in a round; roles swap in the next round (round FAQ).
+- Attacking: units are moved onto the battlefield and fight the defenders' blockers; an attacker that is not blocked strikes the
+  opponent's Nexus (round FAQ). Win by bringing the enemy Nexus to 0.
+
 ## Sources and notes
 
 Sources:

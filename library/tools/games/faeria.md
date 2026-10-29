@@ -16,6 +16,13 @@ One file per game: the game, its factions, the source summary, the mechanics (pa
   summoned only on lakes (Kaptain) and drown if they end their turn on a non-lake land. A swallowed creature is removed until the swallower releases it. Corrupt
   triggers the first time the creature moves onto an enemy land.
 
+## The game's rules (from sources)
+*Checked 29 Oct 2026 against https://en.wikipedia.org/wiki/Faeria (Gameplay) and https://faeria.gamepedia.com/Battlefield.*
+- Winning: reduce the opponent's avatar (god) health to zero (Wikipedia, Gameplay).
+- Creatures: a summoned creature waits a turn, then can move one tile and attack an adjacent enemy (Wikipedia, Gameplay).
+- Faeria: 3 at the start of each turn, plus 1 for each faeria well you control by having a creature next to it (Wikipedia;
+  Battlefield page: a creature on a tile next to a well).
+
 ## Sources and notes
 
 Sources:

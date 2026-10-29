@@ -158,7 +158,9 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
 7. **Numbers per card level** ("1/2/3/4/5"): `{"x": "per_level", "items": [...]}` in level order.
 8. `python3 build_input.py <game> 20000`; a 10% sample for the second reading in `input/<game>/second_001.jsonl`.
 9. Add the game's trigger labels and verbs to `patterns/patterns.tsv` (judged as step 2.2 says).
-10. **The game's rules** (`read/<game>/game_rules.jsonl`): from `library/tools/games/<game>.md` ("The game" and the terms),
+10. **The game's rules** (`read/<game>/game_rules.jsonl`): from the game's own rules (tutorial, rulebook, help pages, wiki),
+   written with their sources into `library/tools/games/<game>.md` ("The game's rules (from sources)" or sourced terms; never
+   the "Claude's summary" lines, which came from memory: audit_links check 8),
    write what every unit (or card of a category) does that no card text says, as one record: name "Game rule: ...",
    `applies_to` (categories), `source` (the line it comes from), abilities on event always with pick self. The three games
    write how units fight: Runeterra `start_attack` self, `strike` self to an enemy unit, or (link or) to the enemy player;

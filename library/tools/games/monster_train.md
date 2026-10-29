@@ -11,6 +11,11 @@ One file per game: the game, its factions, the source summary, the mechanics (pa
 - Clans: a run picks a primary and an allied clan; the primary clan gives the Champion.
 - Specific: buffs and debuffs are status stacks; the rules and terms are listed in full under Mechanics.
 
+## The game's rules (from sources)
+*Checked 29 Oct 2026 against https://www.bluestacks.com/blog/game-guides/monster-train/mstn-beginners-guide-en.html.*
+- Floors: three floors where units are placed, and the Pyre on top; combat happens on the floor the enemies are on; enemies
+  climb one floor at the end of each turn if they survive; an enemy that reaches the top attacks the Pyre.
+
 ## Sources and notes
 
 Sources:

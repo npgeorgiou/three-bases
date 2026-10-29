@@ -11,11 +11,11 @@ or fix every line it prints). Found by Kaptain's check of the deck networks (29 
     library merged Inscryption cards with the same text and dropped cards without sigils: Hawk, Wolf, Coyote)
   7 card names shared by two cards of one game: a deck, a text or a question names one and gets either (Duelyst: Tempest
     and its Bloodbound Spell copy, the tutorial's Argeon Highmayne); the supplement gives each other card "<name> (<kind>)"
-  8 the game's rules (read/<game>/game_rules.jsonl) missing, or the game file's "The game" section written from memory
+  8 the game's rules (read/<game>/game_rules.jsonl) missing, or citing the game file's "The game" section written from memory
     (Duelyst's said units on a mana spring gain mana and minions are summoned next to a friendly unit; the game's own
     tutorial and tips say the player gains it and summoning is around any friendly unit)
 Usage: audit_links.py <game> [...]"""
-import collections, csv, os, re, sqlite3, sys
+import collections, csv, json, os, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import deck_analysis
 c = sqlite3.connect(os.path.join(HERE, 'cards.sqlite'))
@@ -72,8 +72,9 @@ def audit(g):
     if os.path.exists(md):
         s = open(md, encoding='utf-8').read()
         sec = s.split('## The game', 1)[1].split('\n## ', 1)[0] if '## The game' in s else ''
-        if re.search(r'general knowledge|from memory', sec, re.I):
-            out.append(f'8 {g}.md "The game" is written from memory: rewrite it from the game\'s own rules, each line with its source')
+        cites = os.path.exists(rules) and any(', The game:' in json.loads(l).get('source', '') for l in open(rules) if l.strip())
+        if cites and re.search(r'general knowledge|from memory', sec, re.I):
+            out.append(f'8 {g}.md "The game" is written from memory: the game rules cite it: cite the game\'s own rules, each line with its source')
     return out
 
 
