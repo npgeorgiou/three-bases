@@ -360,6 +360,10 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
    article is about the variable stat..."), so the readers wrote nothing and no Ant counted the others. The definitions now
    come from the wiki pages (supplement), audit_links.py check 6 lists any such entry, case ni11. Where a new card is put
    ("Pelt Lice in adjacent slots") needs no units to move (refs.py PLACES, ni12).
+11. **The deck explainer and the combo search did not know the game's rules.** "Gravedigger: no clear role" and "Adder waits
+   for sacrifices, nothing in the deck does it": ask.py analyze now reads cost needs and counts what the rules make (any
+   unit can be sacrificed, a Skeleton's death gives a Bone), deck cases di01-di04; connections.py goes one step through a
+   rule about the owner's own cards (Necromancer's second deaths give Bones for Tomb Robber, combo cases ci07-ci08).
 
 ## Think like a player (read before showing any network, any deck explanation, any answer about synergy)
 Kaptain checks a few decks and finds errors a player sees at once. Before showing anything, do what he does:

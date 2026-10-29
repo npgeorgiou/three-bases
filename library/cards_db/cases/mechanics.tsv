@@ -261,3 +261,23 @@ fa33	mechanic	teleports	text:\bteleport	select card from flat_do where act='move
 fa34	mechanic	summons units	text:(?<!when you )(?<!whenever you )\bsummon (?:a|an|two|three|\d+)\b	select card from flat_do where act in ('summon','copy')	faeria
 fa35	mechanic	draws cards	text:(?<!whenever you )(?<!time you )\bdraw (?:a|\d+|two|three) (?:\w+ )?cards?\b	select card from flat_do where act='draw'	faeria
 mx12	mechanic	a unit that moves is the event's object, never its actor (N16, Sentry, v36)	kw:Sentry	select card from flat_when where event='moves' and actor_kind is null and actor_pick is null and (obj_kind is not null or obj_pick is not null)	*
+mi01	mechanic	Airborne: strikes the opponent directly	kw:Airborne	select card from flat_ref where happening='strikes_nexus' and role='makes' and origin!='game'	inscryption
+mi02	mechanic	Touch of Death: a creature it damages perishes	kw:Touch of Death	select card from flat_do where act='kill' and origin!='own'	inscryption
+mi03	mechanic	Bone Digger: gives Bones	kw:Bone Digger	select card from flat_ref where role='makes' and happening='resource_gained' and kind='secondary_resource' and origin!='game'	inscryption
+mi04	mechanic	Bone King: gives Bones when it dies	kw:Bone King	select card from flat_ref where role='makes' and happening='resource_gained' and kind='secondary_resource' and origin!='game'	inscryption
+mi05	mechanic	Ant Spawner: creates an Ant in hand	kw:Ant Spawner	select card from flat_do where act='create' and card_ref in (select id from card where name='Worker Ant')	inscryption
+mi06	mechanic	Fecundity: a copy in hand	kw:Fecundity	select card from flat_do where act='copy'	inscryption
+mi07	mechanic	Dam Builder: Dams on the spaces beside it	kw:Dam Builder	select card from flat_do where act='summon' and card_ref in (select id from card where name='Dam')	inscryption
+mi08	mechanic	Sprinter: moves on its own each turn	kw:Sprinter	select card from flat_do where act='move' and on_pick='self'	inscryption
+mi09	mechanic	Fledgling: grows into another form	kw:Fledgling	select card from flat_do where act='transform'	inscryption
+mi10	mechanic	Worthy Sacrifice: something happens when it is sacrificed	kw:Worthy Sacrifice	select card from flat_when where event='sacrificed' and obj_pick='self'	inscryption
+mi11	mechanic	Many Lives: does not perish when sacrificed	kw:Many Lives	select card from flat_when where event='sacrificed' and obj_pick='self'	inscryption
+mi12	mechanic	Green Mox: gives a Green gem	kw:Green Mox	select card from flat_do where act='mana_gain' and on_kind='gem'	inscryption
+mi13	mechanic	Gem Dependant: perishes without a Mox card	kw:Gem Dependant	select card from flat_if where test='count' and of_with like '%type is%'	inscryption
+mi14	mechanic	Unkillable: back to hand when it dies	kw:Unkillable	select card from flat_do where act in ('return_to_hand','return_card') and coalesce(eff_zone,'hand')='hand'	inscryption
+mi15	mechanic	Bifurcated Strike: strikes two spaces	kw:Bifurcated Strike	select card from flat_do where act='strike' and origin!='game'	inscryption
+mi16	mechanic	Ants: Power is the number of Ants	kw:Ants	select card from flat_do where act='stat_set' and params like '%power%'	inscryption
+mi17	mechanic	Sharp Quills: damages its attacker	kw:Sharp Quills	select card from flat_do where act='damage' and origin!='game'	inscryption
+mi18	mechanic	Leader: adjacent creatures gain Power	kw:Leader	select card from flat_do where act='stat_change' and on_with like '%sides%'	inscryption
+mi19	mechanic	Stinky: the opposing creature loses Power	kw:Stinky	select card from flat_do where act='stat_change' and on_side='enemy'	inscryption
+mi20	mechanic	Waterborne: submerged (cannot be attacked) on the enemy turn	kw:Waterborne	select card from flat_do where act in ('cant','give_keyword','can','negate_damage')	inscryption

@@ -19,7 +19,10 @@ SAY = {  # what happens, in plain words; {who} = your / enemy / any
     'revived': '{who} units come back from the dead', 'levels_up': 'champions level up', 'obliterated': 'cards are removed from the game',
     'transformed': 'cards transform', 'mana_refilled': 'you gain mana', 'targeted': '{who} cards are targeted', 'moves': '{who} units move',
     'equipped': '{who} units get equipment', 'spell_resolves': 'spells finish', 'keyword_used': '{kw} is used',
-    'round_start': 'a round starts', 'round_end': 'a round ends', 'turn_start': 'your turn starts', 'turn_end': 'your turn ends'}
+    'round_start': 'a round starts', 'round_end': 'a round ends', 'turn_start': 'your turn starts', 'turn_end': 'your turn ends',
+    'mana_refilled@secondary_resource': 'you gain the second resource (Bones)', 'mana_refilled@gem': 'you gain a gem (Mox)',
+    'mana_refilled@lane_resource': 'you gain the lane resource (Echo)', 'sacrificed': '{who} units are sacrificed'}
+RESOURCE_KINDS = ('secondary_resource', 'gem', 'lane_resource')
 EVERY_GAME = {'played', 'summoned', 'attacks', 'blocks', 'strikes', 'damaged', 'survives_damage', 'round_start', 'round_end',
               'turn_start', 'turn_end', 'drawn', 'mana_refilled', 'strikes_nexus', 'nexus_damaged', 'always', 'activated', 'moves',
               'attack_done', 'targeted', 'spell_resolves', 'game_start', 'supports', 'combat_start', 'combat_end', 'kept_in_hand'}  # happen in play without a card making them
@@ -84,18 +87,27 @@ def analyze(c, game, text):
     if unknown: out.append('Not found in ' + game + ': ' + ', '.join(unknown) + '.')
 
     # what each card makes and what it uses (its own rules only; a keyword's inner rules are not the card's needs)
-    rows = c.execute(f'select card, ability, role, happening, side, keyword, pick, origin from flat_ref where origin!=\'game\' and card in ({marks})', deck).fetchall()
+    # a cost the game's rules set (Bones, Mox) is the card's own need too: rows of origin game with role condition
+    rows = c.execute(f"select card, ability, role, happening, side, keyword, pick, origin, kind from flat_ref where (origin!='game' or role='condition') and card in ({marks})", deck).fetchall()
     lvl = {a for (a,) in c.execute(f"select ability from flat_do where act='level_up' and card in ({marks})", deck)}
     makes = collections.defaultdict(set); uses = []
-    for card, ab, role, h, side, kw, pick, origin in rows:
+    for card, ab, role, h, side, kw, pick, origin, kind in rows:
+        if h in ('mana_refilled', 'resource_gained') and kind in RESOURCE_KINDS: h = 'mana_refilled@' + kind  # which resource
+        elif h == 'resource_gained': continue
         if role == 'makes': makes[(h, kw)].add((card, side))
-        elif origin == 'own' and not (pick == 'self' and h in ('played', 'summoned')):
+        elif origin in ('own', 'game') and not (pick == 'self' and h in ('played', 'summoned')):
             uses.append((card, ab, role, h, 'mine' if pick == 'self' else side, kw, pick))
+    # what the game's rules make every card of the deck do (a Skeleton dying gives a Bone, any unit can be sacrificed)
+    by_rule = collections.defaultdict(set)
+    for card, h, kind in c.execute(f"select card, happening, kind from flat_ref where origin='game' and role='makes' and card in ({marks})", deck):
+        by_rule['mana_refilled@' + kind if h in ('mana_refilled', 'resource_gained') and kind in RESOURCE_KINDS else h].add(card)
     fit = lambda a, b: not a or not b or a == b or 'any' in (a, b)
     plan = collections.defaultdict(lambda: [set(), set(), set(), set()])  # makers, own-death users, level-ups, other users
     linked = set(); sides = collections.defaultdict(set)
     for card, ab, role, h, side, kw, pick in uses:
         mk = {(m, ms) for (hh, k), ms_ in makes.items() if hh == h and (k is None or kw is None or k == kw) for m, ms in ms_ if m != card and fit(ms, side)}
+        if role == 'condition' and side in ('mine', '', None):  # a cost: the game's rules make it too (any unit can be sacrificed, a Skeleton's death gives a Bone)
+            mk |= {(m, 'mine') for m in by_rule.get(h, set()) - {card}}
         if not mk: continue
         key = (h, kw)
         p = plan[key]; p[0] |= {m for m, _ in mk}
@@ -151,7 +163,7 @@ def analyze(c, game, text):
             out.append(f'- More {mechanics.name(c, key[1])} in play: made by {names(c, mk)}.'); continue
         h, kw = key; ss = sides[key] - {''}; side = ss.pop() if len(ss) == 1 else ''
         if len(mk) + len(own) + len(lv) + len(other) < 3 and h in ('damaged', 'played', 'stat_changed'): continue
-        line = f'- {say(c, h, side, kw).capitalize()}: made by {names(c, mk)}.'
+        line = f'- {(lambda t: t[:1].upper() + t[1:])(say(c, h, side, kw))}: made by {names(c, mk)}.'
         if own: line += f' Get value when they die: {names(c, own)}.'
         if lv: line += f' Level up from it: {names(c, lv)}.'
         if other: line += f' Use it: {names(c, other)}.'
@@ -201,7 +213,7 @@ def analyze(c, game, text):
     if deg: out.append('Key cards (in most of the plan): ' + ', '.join(f'{mechanics.name(c, x)}' for x, _ in deg.most_common(5)) + '.')
     lack = []
     for card, ab, role_, h, side, kw, pick in uses:
-        if h in EVERY_GAME or side == 'enemy': continue
+        if h in EVERY_GAME or side == 'enemy' or by_rule.get(h, set()) - {card}: continue
         if not any((m != card or pick == 'self') and hh == h and (k is None or kw is None or k == kw) and fit(ms, side) for (hh, k), ms_ in makes.items() for m, ms in ms_):
             lack.append(f'{mechanics.name(c, card)} waits for "{say(c, h, side, kw)}" and nothing else in the deck does it')
     alone = [i for i in deck if i not in linked | ctrl | sup | flow | extra]

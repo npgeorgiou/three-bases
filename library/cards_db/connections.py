@@ -102,6 +102,13 @@ def reasons(c, enabler, payoff):
                             if agree(side, oside) and narrow_ok(ow, onw, c, everyone): yield ((6 if m != e else 4), f'condition: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else ''))
             # a happening the enabler makes that the payoff counts or picks things by (flat_ref: condition, state)
             made = {(h, sd, k, pk) for x in makers for h, sd, k, pk in c.execute("select happening, side, keyword, pick from flat_ref where card=? and role='makes' and origin!='game'", (x,))}
+            # one step through the game's rules: what the enabler makes sets off a rule ("a creature dies" -> its owner gains a
+            # Bone), so it makes what the rule makes (Necromancer's second deaths give Bones for Tomb Robber's Disentomb)
+            for (ev,) in [(h,) for h, sd, *_ in made if sd == 'mine']:  # the rule is about the owner's own cards
+                for (rh,) in c.execute("""select distinct r.happening from game_rule g join flat_when w on w.card=g.entry and w.event=? and w.obj_pick='self'
+                                       join flat_ref r on r.card=g.entry and r.role='makes' where g.cost_has is null
+                                       and (select game from card where id=g.entry)=(select game from card where id=?)""", (ev, e)).fetchall():
+                    made = made | {(rh, 'mine', None, None)}
             for h, sd, role, k, pk in c.execute("select happening, side, role, keyword, pick from flat_ref where card=? and role in ('condition','state')", (p,)).fetchall():
                 sd = 'mine' if pk == 'self' else sd  # something that happens to the payoff itself happens on my side
                 if any(h == mh and agree(ms, sd) and same_kw(c, k, mk) and not (pk == 'self' and mp == 'self') for mh, ms, mk, mp in made): yield (6, f'{role}: {h}')

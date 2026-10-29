@@ -14,3 +14,10 @@
   cases nfa01, nfa02 ("boosts" lines); Enchantment + Oak Father is in no deck found.
 - cfa12 Gabrian Commander -> Triton Trainer (Blue Jump guide, "a strong turn-two play"): no link in the texts; the Trainer
   buffs the next Jump creature and the Commander has no Jump (Aquatic, Charge 2). Tempo advice, not a combo.
+- Inscryption, Black Goat -> Boon of the Bone Lord (inscryption.md Cases): the Boon is won by giving the Black Goat at the Bone
+  Lord's altar, an event between battles; inside a battle the two cards have no link (29 Oct 2026).
+- Inscryption, combos of a card and a sigil it is given (inscryption.md Cases: Ouroboros + Fecundity, Warren + Unkillable,
+  Cuckoo + Fecundity, Beaver + Worthy Sacrifice, Urayuli + Corpse Eater, Fecundity + Corpse Eater, Pronghorn + Touch of Death,
+  Mantis God + Fecundity, Geck + Fecundity, the Squirrel, Insect and Reptile totems): a sigil moved onto a card at the
+  Mysterious Stones or by a totem is a change to the card between battles, not two cards of a deck; the cards database links
+  cards only.
