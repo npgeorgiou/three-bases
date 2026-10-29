@@ -1,0 +1,44 @@
+{"id": 741522, "name": "Flying", "category": "keyword", "text": "Move anywhere on the battlefield."}
+{"id": 741523, "name": "Blast", "category": "keyword", "text": "Attack all enemy minions and Generals in one straight line."}
+{"id": 741524, "name": "Blood Surge", "category": "keyword", "text": "Triggers an effect after you activate your Bloodbound Spell."}
+{"id": 741525, "name": "Bond", "category": "keyword", "text": "Triggers an effect when summoned if you have another minion from the same tribe."}
+{"id": 741526, "name": "Celerity", "category": "keyword", "text": "This minion may activate twice per turn."}
+{"id": 741527, "name": "Deathwatch", "category": "keyword", "text": "Triggers effect whenever ANY minion dies."}
+{"id": 741528, "name": "Destructible", "category": "keyword", "text": "Artifacts have 3 Durability. Whenever your General takes damage, it loses 1 Durability. It's destroyed at 0 Durability."}
+{"id": 741529, "name": "Dying Wish", "category": "keyword", "text": "Triggers an effect when this minion dies."}
+{"id": 741530, "name": "Ephemeral", "category": "keyword", "text": "Only exists until end of turn."}
+{"id": 741531, "name": "Exhuming Sand", "category": "keyword", "text": "Summons a 2/2 Iron Dervish when its owner summons a minion from their action bar"}
+{"id": 741532, "name": "Forcefield", "category": "keyword", "text": "Cancel the first damage taken each turn."}
+{"id": 741533, "name": "Frenzy", "category": "keyword", "text": "When attacking in melee range, simultaneously strike all other nearby enemies."}
+{"id": 741534, "name": "Grow", "category": "keyword", "text": "Gets bigger at the start of your turn."}
+{"id": 741535, "name": "Hallowed Ground", "category": "keyword", "text": "Restores 1 Health to friendly minions and Generals standing on it at the end of owner's turn"}
+{"id": 741536, "name": "Infiltrate", "category": "keyword", "text": "Gains a bonus while on the enemy side of the battlefield."}
+{"id": 741538, "name": "MECHAZ0R", "category": "keyword", "text": "When MECHAZ0R is complete, lookout!"}
+{"id": 741539, "name": "Opening Gambit", "category": "keyword", "text": "Triggers an effect when summoned from your action bar."}
+{"id": 741540, "name": "Primal Flourish", "category": "keyword", "text": "Friendly minions standing on it have \"Grow: +2/+2\""}
+{"id": 741541, "name": "Ranged", "category": "keyword", "text": "Attack from anywhere on the battlefield."}
+{"id": 741542, "name": "Rebirth", "category": "keyword", "text": "When this dies, it leaves behind a 0/1 Egg that hatches into the same minion before your next turn."}
+{"id": 741543, "name": "Sentinel", "category": "keyword", "text": "Summoned as a 3/3 with no abilities. Will transform into its true form if a specific event occurs on opponent's turn."}
+{"id": 741544, "name": "Shadow Creep", "category": "keyword", "text": "Deals damage to enemy minions and Generals standing on it at the end of owner's turn"}
+{"id": 741545, "name": "Structure", "category": "keyword", "text": "This minion cannot move or attack."}
+{"id": 741546, "name": "Stunned", "category": "keyword", "text": "Stunned minions lose their next action."}
+{"id": 741547, "name": "Summon Dervish", "category": "keyword", "text": "At the start of your turn, summon a 2/2 Wind Dervish with Rush nearby. It disappears at the end of your turn."}
+{"id": 741548, "name": "Battle Pet", "category": "keyword", "text": "Activates at the start of your turn and moves to attack the nearest enemy."}
+{"id": 741549, "name": "Anti-Magic Field", "category": "keyword", "text": "Cannot be targeted or damaged by spells."}
+{"id": 741550, "name": "Wall", "category": "keyword", "text": "This minion cannot move, and is immediately removed from the battlefield if dispelled."}
+{"id": 741551, "name": "Zeal", "category": "keyword", "text": "Gains a bonus effect when nearby your General."}
+{"id": 741552, "name": "Backstab", "category": "keyword", "text": "When attacking from behind, this deals extra damage and can\u2019t be counterattacked."}
+{"id": 741553, "name": "Invulnerable", "category": "keyword", "text": "Cannot die or be affected by ANYTHING"}
+{"id": 741554, "name": "Build", "category": "keyword", "text": "Summon as a 0/10 Structure that transforms into its true form after a number of turns."}
+{"id": 741555, "name": "Rush", "category": "keyword", "text": "Can move and attack immediately."}
+{"id": 741556, "name": "Airdrop", "category": "keyword", "text": "Summon this minion anywhere on the battlefield."}
+{"id": 741557, "name": "Provoke", "category": "keyword", "text": "Stops nearby enemy minions and Generals from moving. They must attack this first."}
+{"id": 741558, "name": "Spellshield", "category": "keyword", "text": "Cannot be targeted by ANY spells"}
+{"id": 741559, "name": "Ranged Provoke", "category": "keyword", "text": "Ranged attackers must attack this minion first"}
+{"id": 741560, "name": "Dispel", "category": "keyword", "text": "Nullifies all abilities and enchantments previously added."}
+{"id": 741561, "name": "Untargetable", "category": "keyword", "text": "This entity cannot be targeted"}
+{"id": 5001109, "name": "Mana Spring", "category": "keyword", "text": "Occupying a Mana Spring gives you +1 bonus Mana for that turn."}
+{"id": 5001110, "name": "Intensify", "category": "keyword", "text": "Effect is boosted each time you play it."}
+{"id": 5001111, "name": "Trial", "category": "keyword", "text": "Starts locked in your action bar. Complete the Trial to unlock the ability to play this card."}
+{"id": 5001112, "name": "Destiny", "category": "keyword", "text": "Summon to gain a permanent game-changing effect."}
+{"id": 5001113, "name": "Bloodbound Spell", "category": "keyword", "text": "Your General's own spell; it counts down each turn until it refreshes."}

@@ -139,3 +139,20 @@ inscryption	V81	\bgain \d+ bones?\b|\bbones? (?:are|is) awarded\b|\bgenerate \d+
 inscryption	V82	\b(?:are |is )?dealt \d+ damage\b|\bdeal \d+ damage\b	value:damage	yes	verb
 inscryption	V83	\bgains? \d+ power\b|\bloses? \d+ power\b	value:stat_change|stat_set	yes	stats
 inscryption	V84	\bdraw (?:\d+|a|a new hand of \d+) cards?\b	value:draw	yes	verb
+duelyst	T90	\bopening gambit:	event:played	yes	trigger label (Opening Gambit: when summoned from the action bar)
+duelyst	T91	\bdying wish:	event:dies	yes	trigger label (Dying Wish)
+duelyst	T92	\bdeathwatch:	event:dies	yes	trigger label (Deathwatch: any minion dies)
+duelyst	T93	\bblood surge:|\bbloodbound spell:	event:played	yes	trigger label (casting your Bloodbound Spell; BRIEF Game words: Duelyst)
+duelyst	T94	\bgrow:	event:turn_start	yes	trigger label (Grow: at the start of your turn)
+duelyst	T95	\bat the (?:start|beginning) of (?:your|each|the) turn\b	event:turn_start	yes	trigger phrase
+duelyst	T96	\bat the end of (?:your|each|the) turn\b	event:turn_end	yes	trigger phrase
+duelyst	T97	\bwhenever you replace\b	event:shuffled	yes	replacing a card (BRIEF Game words: Duelyst)
+duelyst	T98	\bwhen this minion is built\b	event:transformed	yes	Build: the structure turns into its true form
+duelyst	V90	[+-]\d+/[+-]\d+	value:stat_change|stat_set	yes	stats are Attack/Health ("+2/+2")
+duelyst	V91	\bteleport|\bswitch positions\b|\bpush\b|\bpull\b	value:move|swap	yes	movement verbs
+duelyst	V92	\bdispel	value:silence	yes	Dispel removes abilities
+duelyst	V93	\binto (?:shadow creep|hallowed ground|exhuming sand|primal flourish)\b|\bmana spring tile\b	value:set_terrain	yes	tiles (BRIEF Game words: Duelyst)
+duelyst	V94	\baction bar\b	value:hand	yes	the action bar is the hand
+duelyst	V95	\bthis turn\b	value:this_round	yes	one turn is the span (BRIEF Game words: Duelyst)
+duelyst	V96	\bequip	value:attach	yes	equip an artifact
+duelyst	V97	\bprogresses mechaz0r\b	value:keyword_action	yes	MECHAZ0R build progress
