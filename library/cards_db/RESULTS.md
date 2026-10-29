@@ -82,7 +82,7 @@
 - 12 full decks in decks.tsv (faeria.com The Hub), all read card by card; 16 deck-read lines are cases nfa01-nfa18.
 
 ## Quality
-- run.py passes; cases 82 of 82 (43 Faeria mechanics, 12 combos, 18 network lines, shared cases); word check 0 flags;
+- run.py passes; cases 87 of 87 (43 Faeria mechanics, 12 combos, 18 network lines, 5 guide-deck explanations, shared cases); word check 0 flags;
   text audit 0; every other game still passes.
 - Link audit, explained: nothing in a card makes "turn_option_chosen" (Flamestoker, Ignus, Wrath of Ignus wait for the
   player picking +1 faeria on the power wheel, which the player does every turn); the 14 token names above.
