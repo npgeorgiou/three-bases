@@ -15,3 +15,14 @@ monster_train	2000043	KW	record_right	Claude: "Enchant: grant Quick" is recorded
 monster_train	2000035	V50	record_right	Claude: doubling stacks is give_keyword with the count of stacks the unit has (BRIEF, Game words: Monster Train)	29 Oct 2026
 monster_train	2000036	V50	record_right	Claude: doubling stacks is give_keyword with the count of stacks the unit has (BRIEF, Game words: Monster Train)	29 Oct 2026
 monster_train	2000117	V50	record_right	Claude: doubling stacks is give_keyword with the count of stacks the unit has (BRIEF, Game words: Monster Train)	29 Oct 2026
+inscryption	740979	T84	record_right	Claude: the start of your turn is a remark on playing Bone cards; the effect is 8 Bones at game_start	29 Oct 2026
+inscryption	740980	V02	record_right	Claude: "time to draw cards and plan" is a remark; the boon places Grand Firs, no draw	29 Oct 2026
+inscryption	740981	KW	record_right	Claude: Hoarder is named as a comparison; the record lets the player choose the drawn card	29 Oct 2026
+inscryption	741009	KW	record_right	Claude: Detonator is named as an example of death abilities the hit sets off; no keyword given	29 Oct 2026
+inscryption	741009	KW	record_right	Claude: Unkillable is named as an example of death abilities the hit sets off; no keyword given	29 Oct 2026
+inscryption	741009	T81	record_right	Claude: "assuming the card dies" explains the 100 damage; dying is the damage's result	29 Oct 2026
+inscryption	741035	V02	record_right	Claude: "draw a Pelt card" is the create in hand the record has (a Pelt is made, not drawn from the deck)	29 Oct 2026
+inscryption	741037	V21	record_right	Claude: "more than one copy of the Dagger" is a remark about owning items; no copy is made	29 Oct 2026
+inscryption	4000003	V07	record_right	Claude: KillsSurvivors is an internal trait flag (a run event), no effect in a battle (BRIEF Game words: Inscryption)	29 Oct 2026
+inscryption	4000114	V07	record_right	Claude: KillsSurvivors is an internal trait flag (a run event), no effect in a battle (BRIEF Game words: Inscryption)	29 Oct 2026
+inscryption	4000190	V07	record_right	Claude: KillsSurvivors is an internal trait flag (a run event), no effect in a battle (BRIEF Game words: Inscryption)	29 Oct 2026

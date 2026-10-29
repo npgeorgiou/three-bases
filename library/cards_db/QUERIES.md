@@ -75,7 +75,7 @@ select distinct card from flat_concept where concept='forced_movement'
 select card from flat_concept where concept in ('movement','forced_movement') intersect select card from flat_concept where concept='adjacency'
 ```
 - faeria: 26 cards: Animated Banquet, Astral Weapon, Baeru, the First Wave, Dancing Blade, Flowersilk Faerie, Frog-Tosser, Grappling Hook, Khalim's Skyguard ...
-- inscryption: 3 cards: Pronghorn, The Moon, Tidal Lock
+- inscryption: 21 cards: 49er, Elk, Elk Fawn, Ghost Ship, Headless Horseman, Hefty, Long Elk, Moose Buck ...
 - runeterra: 2 cards: Ahri, Ahri (level 2)
 - stormbound: 17 cards: Agile Warriors, Angelic Tikas, Anointed Saviors, Armed Schemers, Catnip’s Charm, Chateau de Cardboard, Confuse, Crystalshields ...
 
@@ -112,7 +112,7 @@ select distinct card from flat_concept where concept='lifesteal'
 select distinct card from flat_ref where happening='given_keyword' and role!='makes'
 ```
 - faeria: 12 cards: Destructive Volley, Drakkar Skycaptain, Enslaved Priest, Fugoro, Captain of the Gagana, Gift of Steel, Golden Aviary, Herald of War, Imperial Engineer ...
-- inscryption: 4 cards: Emerald Power, Green Mage, Master Bleene, True Scholar
+- inscryption: 19 cards: Bleene's Mox, Bleene's Vessel, Blue Mox, Emerald Mox, Emerald Power, Emerald Vessel, Goranj's Mox, Goranj's Vessel ...
 - monster_train: 90 cards: Alloy of the Ancients, Alloyed Construct, Apex Imp, Armor, Attuned, Awake, Battering Ram, Big Sludge ...
 - runeterra: 111 cards: Animate, Arbiter of the Peak, Aspect of the Dragon, Ava Achiever, Balen the Benevolent, Big Game Tycoon, Caitlyn, Caitlyn (level 2) ...
 - stormbound: 26 cards: Acid Greenhorns, Amberhides, Big Sisters of Growth, Brood Sages, Copperskin Ranger, Crimson Sentry, Function Wilds, Green Prototypes ...
@@ -123,7 +123,7 @@ select distinct card from flat_ref where happening='given_keyword' and role!='ma
 select distinct card from flat_do where params glob '*=[a-z]*'
 ```
 - faeria: 245 cards: Air Elemental, Airbot, Amai Merchant, Ancient Boar, Ancient Gargoyle, Animated Banquet, Annoying Gnat, Apex Predator ...
-- inscryption: 70 cards: !CORRUPTED, Ancient Fir, Aquasquirrel, Armored, Bell Ringer, Bell Tentacle, Blue Mage, Blue Sporemage ...
+- inscryption: 76 cards: !CORRUPTED, Ancient Fir, Aquasquirrel, Armored, Bell Ringer, Bell Tentacle, Blue Mage, Blue Sporemage ...
 - monster_train: 166 cards: A Fatal Melting, Adaptive Mutation, Alloy of the Ancients, Alloyed Construct, Ambient Charge, Ancient Resonance, Ancient Synergy, Apex Imp ...
 - runeterra: 687 cards: Absorb Soul, Abyssal Eye, Abyssal Guard, Acolyte's Reliquary, Acorn, the Hextechnician, Adnere's Aviarists, Advance, Advanced Intel ...
 - stormbound: 56 cards: Agile Warriors, Amberhides, Awakening of the Will, Beards of Crowglyph, Bigthrust Tigers, Blizzard Bombs, Booming Professors, Brood Sages ...
@@ -136,16 +136,16 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 - passive: monster_train 8 cards, runeterra 18 cards, stormbound 8 cards
 - cheat_death: runeterra 7 cards
 - silence: stormbound 8 cards
-- movement: monster_train 6 cards
 - forced_movement: monster_train 6 cards
+- movement: monster_train 6 cards
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: faeria 1343 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 439 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 399 pairs, e.g. Little Fade -> Primordium; runeterra 12658 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- sacrifice: faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 24 pairs, e.g. Necromancer -> Greater Smoke; monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5616 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- self_destruct: faeria 767 pairs, e.g. Doomgate, Door to Oblivion -> Long-horned Yak; inscryption 311 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6931 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Restless Goats
-- removal: faeria 320 pairs, e.g. Death's Desire -> Long-horned Yak; monster_train 93 pairs, e.g. Molded -> Primordium; runeterra 3855 pairs, e.g. Kindred's Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
-- revive: inscryption 24 pairs, e.g. Necromancer -> Greater Smoke; runeterra 1035 pairs, e.g. Eternal Dancers -> Bladepierced Revenant
+- destroy: faeria 1343 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 440 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 399 pairs, e.g. Little Fade -> Primordium; runeterra 12658 pairs, e.g. Shark Chariot -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- sacrifice: faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 24 pairs, e.g. Necromancer -> Kind Cell; monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5616 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- self_destruct: faeria 767 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 311 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6931 pairs, e.g. Shark Chariot -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
+- removal: faeria 320 pairs, e.g. Death's Desire -> Long-horned Yak; monster_train 93 pairs, e.g. Wicked Blaze -> Primordium; runeterra 3855 pairs, e.g. Kindred's Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Embers of Chaos
+- revive: inscryption 24 pairs, e.g. Necromancer -> Kind Cell; runeterra 1035 pairs, e.g. Chronobreak -> Bladepierced Revenant
 - ping: faeria 417 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 168 pairs, e.g. Good Fish -> Burrowing Trap; runeterra 5507 pairs, e.g. Anivia -> Bladepierced Revenant; stormbound 203 pairs, e.g. Acid Greenhorns -> Marked as Prey
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
@@ -209,7 +209,7 @@ select distinct card from flat_do where act='copy_keywords'
 - faeria Pandora: modal_choice (5), removal (4), aoe_damage (6), destroy (7), on_play (34)
 - inscryption Beast: variable_stats (8), stealth (8), immunity (6), multi_attack (8), blocking (15)
 - inscryption Technology: stances (8), aoe_damage (4), ping (6), damage (11), random_effect (7)
-- inscryption Magick: defence_gain (5), tribal (7), aura (6), self_destruct (5), draw (4)
+- inscryption Magick: aura (6), defence_gain (5), self_destruct (5), tribal (7), draw (4)
 - monster_train Hellhorned: temporary_buff (11), block_armor (12), damage_prevention (12), on_damaged (13), count_payoff (21)
 - monster_train Awoken: on_lifegain (4), counterattack (7), regeneration (4), draw (11), heal (11)
 - monster_train Stygian Guard: discard (6), on_spell (9), retain (4), stat_loss (5), damage_over_time (11)

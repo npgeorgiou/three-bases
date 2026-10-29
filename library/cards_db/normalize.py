@@ -118,14 +118,21 @@ def fix_names(x, table):
             keep = []
             for e in x['do']:
                 rk = table.get(('keyword', (e.get('keyword') or '').lower())); rc = table.get(('card', (e.get('card') or '').lower()))
-                if (rk or rc or {}).get('becomes') == 'drop': continue
+                if rc and rc['becomes'] == 'drop': continue
+                if rk and rk['becomes'] == 'drop':  # a keyword that is no keyword of the game: the effect stays when it does more than use it
+                    if e.get('act') in ('keyword_action', 'give_keyword', 'remove_keyword'): continue
+                    e.pop('keyword')
                 if rk and rk['becomes'] == 'keyword': e['keyword'] = rk['new_name']
                 if rk and rk['becomes'] == 'card': e.pop('keyword'); e['act'] = 'play_card'; e['card'] = rk['new_name']
                 if rc and rc['becomes'] == 'card': e['card'] = rc['new_name']
                 if rc and rc['becomes'] == 'type': e.pop('card'); e['type'] = rc['new_name']
+                if rc and rc['becomes'] == 'name_has':  # "a Pelt card": one of a family of cards
+                    e.pop('card'); e['on'] = {'kind': 'card', 'with': [{'attr': 'name_has', 'op': 'is', 'ref': rc['new_name']}]}
                 keep.append(e)
             x['do'] = keep
         for v in x.values(): fix_names(v, table)
+        if isinstance(x.get('abilities'), list):  # an ability whose only effects were dropped names is no ability
+            x['abilities'] = [a for a in x['abilities'] if not (isinstance(a, dict) and not a.get('do'))]
     elif isinstance(x, list):
         for v in x: fix_names(v, table)
 

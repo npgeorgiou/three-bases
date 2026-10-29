@@ -22,7 +22,7 @@ Rules for turning boxes into cards (Claude's, from the box layout):
   Transformer and Swapper tabs transform into each other.
 Not cards: Bottled Cards (an item; its tabs are the Squirrel, Black Goat, Frozen Opossum and Boulder cards), the Deathcard
 page's portrait gallery tab. Tail (Loose Tail page): no title in the box; the page names it Tail and gives 0 Power, 2 Health.
-Sigils: Great Mox and Kraken Waterborne have no library entry; Green, Orange and Blue Mox are the library's Mox Sigils entry,
+Sigils: Great Mox and Kraken Waterborne have no library entry; Gemified (the Act III upgrade, wiki page Gemification) neither; Green, Orange and Blue Mox are the library's Mox Sigils entry,
 one per colour (the names the cards use). Texts from the wiki pages Mox Sigils (rev 12604) and Waterborne (rev 12626).
 Writes supplement/inscryption.jsonl and supplement/inscryption_links.jsonl; ids from 4000001 (source.py), kept stable.
 Usage: supplement_inscryption.py"""
@@ -56,6 +56,9 @@ WIKI_SIGILS = [
     ('Kraken Waterborne', "Rulebook: A card bearing this sigil submerges during its opponent's turn: an opposing creature attacks "
                           "the space directly, skipping over it. When it re-emerges it transforms into a random Tentacle card "
                           "(Bell Tentacle, Hand Tentacle, Mirror Tentacle), losing this sigil and its other sigils.", 'Waterborne'),
+    ('Gemified', "A card chosen at the Gemification event (Act III) is Gemified: it gains no sigil, but while its owner has a "
+                 "Green Gem it has 2 more Health, with an Orange Gem 1 more Power, and with a Blue Gem it costs 1 Energy less.",
+     'Gemification'),
 ]
 
 

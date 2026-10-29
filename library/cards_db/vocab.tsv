@@ -703,3 +703,8 @@ keyword	Waterborne	concept of having, using or giving this keyword (Inscryption:
 keyword	Worthy Sacrifice	concept of having, using or giving this keyword (Inscryption: counts as 3 Blood instead of 1 when sacrificed; concept is Claude's)	sacrifice		29 Oct 2026, v36 (Inscryption)
 kind	secondary_resource	a player's resource besides mana, gained and spent by cards (Inscryption Bones: gained when cards die, spent to play Bones-cost cards)			29 Oct 2026, v36 (Inscryption)
 event	sacrificed	a unit is given up by its owner to pay a cost (object the sacrificed unit, actor the card it pays for; Inscryption Blood)	on_sacrifice		29 Oct 2026, v36 (Inscryption)
+position	in_circuit	in a circuit: between two cards of the same side that complete a circuit, with of the card completing it (Inscryption conduits: "within a circuit completed by a card bearing this sigil")			29 Oct 2026, v36 (Inscryption)
+kind	gem	a coloured resource a card provides while it is in play, paying the cards of that colour (Inscryption Mox gems; the colour is a filter region Green, Orange or Blue)			29 Oct 2026, v36 (Inscryption)
+region	Orange	region (Inscryption Mox colour; Green and Blue are the shared colour values)			29 Oct 2026, v36 (Inscryption)
+x	unstated	the text names the change but gives no number ("is healed", "has increased power")			29 Oct 2026, v36 (Inscryption)
+keyword	Gemified	concept of having, using or giving this keyword (Inscryption: an Act III upgrade: more Health, Power or a lower cost while its owner has a gem of that colour; concept is Claude's)	stat_gain		29 Oct 2026, v36 (Inscryption)
