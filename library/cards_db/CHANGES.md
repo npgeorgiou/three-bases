@@ -65,3 +65,9 @@ Each change: date, what changed, the card that caused it, and which records were
   recorded by Claude; act copy_upgrades (Legion of Wax, Twin of Wax).
 - 29 Oct 2026, v27: an effect on the enemy side takes the enemy counterpart of its concept (movement -> forced_movement,
   return_to_hand -> bounce_enemy, transform -> polymorph; flat.py ON_ENEMY, all games). Monster Train results in RESULTS.md.
+- 29 Oct 2026, v28 (all games): connections.py: a played card sets off a trigger only if it has the type or keyword the
+  trigger asks for; filters match whole parts; returning my unit to hand links to its own "when played". refs.py: units
+  picked by a keyword are fed by giving it. deck_analysis.py: keyword stacks, types, spells for spell triggers, Summon
+  repeats only on cards with Summon, combat start/end and end-of-turn holding are not weak spots. load.py: a card using a
+  trigger keyword that acts by itself has it. Cases: decks.tsv (guide decks), mechanics mx01-mx03 for every game, guide
+  pairs in combos.tsv.

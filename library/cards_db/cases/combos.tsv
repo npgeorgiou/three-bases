@@ -95,8 +95,8 @@ cmt13	monster_train	Restore	Thorned Hollow	healing triggers Rejuvenate	texts
 cmt14	monster_train	Glimmer	Steelsinger	healing triggers Rejuvenate	texts
 cmt15	monster_train	Engraft	Awoken Hollow	healing triggers Rejuvenate	texts
 cmt16	monster_train	Sting	Siren of the Sea	spells trigger Incant	texts
-cmt17	monster_train	Crystalline Seeds	Hoarfrost Effigy	Frostbite to gather and double	texts
-cmt18	monster_train	Titanstooth	Hoarfrost Effigy	Frostbite to gather and double	texts
+cmt17	monster_train	Crystalline Seeds	Hoarfrost Effigy	Frostbite to gather and double	guide: https://progameguides.com/monster-train/best-builds-in-monster-train/
+cmt18	monster_train	Titanstooth	Hoarfrost Effigy	Frostbite to gather and double	guide: https://progameguides.com/monster-train/best-builds-in-monster-train/
 cmt19	monster_train	Molluscmage	Ice and Pyre	Magic Power counts five times with Attuned	texts
 cmt20	monster_train	Harness the Titan	Ice and Pyre	Magic Power counts five times with Attuned	texts
 cmt21	monster_train	Offering Token	Crypt Builder	discarding plays the Offering	texts
@@ -123,3 +123,20 @@ cmt41	monster_train	Soul Siphon	Ancient Resonance	Echo raises the damage	texts
 cmt42	monster_train	Accelerated Incubation	Bog Chrysalis	removing Shell hatches the Egg	texts
 cmt43	monster_train	Rage Serum	First of Kin	a Consumed card triggers Etch	texts
 cmt44	monster_train	Dante's Candle	Dante the Deceptive	Blight cards give Multistrike	texts
+cmt45	monster_train	Titan Sentry	Hoarfrost Effigy	Frostbite build: Frostbite to gather and double	guide: https://progameguides.com/monster-train/best-builds-in-monster-train/
+cmt46	monster_train	Glacial Seal	Hoarfrost Effigy	Frostbite build: Frostbite to gather and double	guide: https://progameguides.com/monster-train/best-builds-in-monster-train/
+cmt47	monster_train	Imp-in-a-Box	Imp-olate	Imp build: more Imps in the deck, more damage	guide: https://progameguides.com/monster-train/best-builds-in-monster-train/
+cmt48	monster_train	Queen's Impling	Transcendimp	Imp build: Summon effects to repeat	guide: https://progameguides.com/monster-train/best-builds-in-monster-train/
+cmt49	monster_train	Impish Scholar	Transcendimp	Imp build: Summon effects to repeat	guide: https://progameguides.com/monster-train/best-builds-in-monster-train/
+cmt50	monster_train	Making of a Morsel	Penumbra	Morsel build: a Morsel Miner for Penumbra to eat	guide: https://progameguides.com/monster-train/best-builds-in-monster-train/
+cmt51	monster_train	Morsel Miner	Penumbra	Morsel build: Penumbra eats it for its bonus	guide: https://progameguides.com/monster-train/best-builds-in-monster-train/
+cmt52	monster_train	Rootseeds	Siren of the Sea	Stygian + Awoken: cheap Awoken spells set off Incant	guide: https://steamcommunity.com/app/1102190/discussions/0/532101678384547883/
+cmt53	monster_train	Steel Enhancer	Guard of the Unnamed	Stygian + Awoken: cheap Awoken spells set off Incant	guide: https://steamcommunity.com/app/1102190/discussions/0/532101678384547883/
+cmt54	monster_train	Molded	Queen's Impling	Hellhorned + Melting Remnant: Reform brings Imps back to replay their Summon	guide: https://steamcommunity.com/app/1102190/discussions/0/532101678384547883/
+cmt55	monster_train	Furnace Tap	Tethys Titansbane	Tethys + Umbra: Multistrike makes more Strikes that apply Frostbite	guide: https://steamcommunity.com/app/1102190/discussions/0/532101678384547883/
+cmt56	monster_train	Ritual of Battle	Deranged Brute	Hellhorned rage: Rage on friendly units hits harder	guide: https://steamcommunity.com/sharedfiles/filedetails/?id=2111828801
+cmt57	monster_train	Dark Deal	Deranged Brute	Hellhorned rage: Rage on friendly units hits harder	guide: https://steamcommunity.com/sharedfiles/filedetails/?id=2111828801
+cmt58	monster_train	Railbeater	Battering Ram	Hellhorned armor: Armor turns into damage	guide: https://steamcommunity.com/sharedfiles/filedetails/?id=2111828801
+cmt59	monster_train	Welder Helper	Battering Ram	Hellhorned armor: Armor turns into damage	guide: https://steamcommunity.com/sharedfiles/filedetails/?id=2111828801
+cmt60	monster_train	Imp-in-a-Box	Imp-pressive	Hellhorned Imps: an Imp to sacrifice	guide: https://steamcommunity.com/sharedfiles/filedetails/?id=2111828801
+cmt61	monster_train	Imp-in-a-Box	Imp-portant Work	Hellhorned Imps: an Imp to sacrifice	guide: https://steamcommunity.com/sharedfiles/filedetails/?id=2111828801

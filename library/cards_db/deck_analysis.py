@@ -2,7 +2,7 @@
 cards use it), its champions' level-ups, how it controls the enemy, how it supports its units, its card flow, what repeats
 its effects, its key cards and its weak spots. Same code for every game; links only inside the deck's game.
 Usage (through ask.py): ask.py <game> analyze "<card>, <card>, ..." """
-import collections, os
+import collections, os, re
 import mechanics
 
 DECK_RULES = {  # the games' own deck-building rules (not card data)
@@ -22,7 +22,7 @@ SAY = {  # what happens, in plain words; {who} = your / enemy / any
     'round_start': 'a round starts', 'round_end': 'a round ends', 'turn_start': 'your turn starts', 'turn_end': 'your turn ends'}
 EVERY_GAME = {'played', 'summoned', 'attacks', 'blocks', 'strikes', 'damaged', 'survives_damage', 'round_start', 'round_end',
               'turn_start', 'turn_end', 'drawn', 'mana_refilled', 'strikes_nexus', 'nexus_damaged', 'always', 'activated', 'moves',
-              'attack_done', 'targeted', 'spell_resolves', 'game_start', 'supports'}  # happen in play without a card making them
+              'attack_done', 'targeted', 'spell_resolves', 'game_start', 'supports', 'combat_start', 'combat_end', 'kept_in_hand'}  # happen in play without a card making them
 CONTROL = ('damage', 'ping', 'aoe_damage', 'removal', 'destroy', 'board_wipe', 'banish', 'bounce_enemy', 'disable', 'attack_zero', 'stat_loss', 'silence',
            'attack_lock', 'cant_block', 'immobilize', 'forced_movement', 'steal', 'polymorph', 'damage_over_time')
 SUPPORT = ('stat_gain', 'attack_gain', 'defence_gain', 'shield', 'immunity', 'evasion', 'first_strike', 'multi_attack', 'heal',
@@ -56,6 +56,14 @@ def parse_deck(c, game, text):
         found.append(m); rest = rest[len(m):]
     ids = [c.execute('select id from card where game=? and name=? and is_keyword=0 and is_stub=0', (game, n)).fetchone()[0] for n in found]
     return ids, unknown
+
+
+_TEXT = {}
+def text_of(card):
+    if not _TEXT:
+        import source
+        for i, t in source.lib().execute('select id, text from entities'): _TEXT[i] = (t or '').lower()
+    return _TEXT.get(card, '')
 
 
 def analyze(c, game, text):
@@ -98,19 +106,47 @@ def analyze(c, game, text):
     trig = {k: e for k, e in c.execute('select t.keyword, v.event from keyword_trigger t join event v on v.id=t.event')}
     for card, w in c.execute(f"select card, on_with from flat_do where act in ('repeat','increase_effect') and card in ({marks})", deck):
         evs = {trig.get(int(p.split(' ')[2])) for p in (w or '').split(';') if p.startswith('keyword is ') and p.split(' ')[2].isdigit()}
-        got = {t for t in deck if t != card and c.execute(f"select 1 from flat_when where card=? and event in ({','.join('?' * len(evs))})",
+        kws = [mechanics.name(c, int(p.split(' ')[2])) for p in (w or '').split(';') if p.startswith('keyword is ') and p.split(' ')[2].isdigit()]
+        got = {t for t in deck if t != card and c.execute(f"select 1 from flat_when where card=? and origin='own' and event in ({','.join('?' * len(evs))})",
                                                            [t] + list(evs)).fetchone()} if evs - {None} else set()
+        # a trigger keyword names its own label ("Summon:"): only cards whose text has it (a spell's "when played" is no Summon)
+        got = {t for t in got if any(re.search(r'\b' + re.escape(k.lower()) + r'\b', text_of(t)) for k in kws)}
         if got:
             plan[('repeat', card)][0].add(card); plan[('repeat', card)][3] |= got
             linked |= got | {card}
 
     for m, ref in c.execute(f"select card, card_ref from flat_do where act in ('summon','create','copy','play_card') and card in ({marks})", deck):
         if ref in D and ref != m: plan[('puts', ref)][0].add(m); plan[('puts', ref)][3].add(ref); linked |= {m, ref}
+    # spells: every spell in the deck sets off "when you play a spell" triggers (Incant, Runeterra "when you cast a spell")
+    spells = {i for i in deck if (c.execute('select category from card where id=?', (i,)).fetchone() or [''])[0] == 'spell'}
+    sp_users = {x for (x,) in c.execute(f"select card from flat_when where origin='own' and event='played' and coalesce(obj_pick,'')!='self' "
+                                         f"and (obj_kind='spell' or obj_with like '%category is spell%') and card in ({marks})", deck)}
+    if spells and sp_users:
+        plan[('spells', 0)][0] |= spells; plan[('spells', 0)][3] |= sp_users; linked |= spells | sp_users
+    # types: cards that care about a type (target, count or trigger names it) and the cards that are or make it
+    tname = {i: n for i, n in c.execute('select id, name from type where game=?', (game,))}
+    care = collections.defaultdict(set); have = collections.defaultdict(set)
+    for q in ("select card, on_with from flat_do", "select card, to_with from flat_do", "select card, of_with from flat_if",
+              "select card, ev_obj_with from flat_if", "select card, obj_with from flat_when"):
+        for x, w in c.execute(q + f" where origin='own' and card in ({marks})", deck):
+            for t in re.findall(r'(?<![a-z:])type is (\d+)', w or ''): care[int(t)].add(x)
+    for x, t in c.execute(f'select card, type from card_type where card in ({marks})', deck): have[t].add(x)
+    for x, w in c.execute(f"select card, on_with from flat_do where act in ('create','summon') and card in ({marks})", deck):
+        for t in re.findall(r'(?<![a-z:])type is (\d+)', w or ''): have[int(t)].add(x)
+    for x, t in c.execute(f"select d.card, ct.type from flat_do d join card_type ct on ct.card=d.card_ref where d.act in ('create','summon','copy') "
+                          f"and d.card in ({marks})", deck): have[t].add(x)
+    for t in care:
+        if have[t] - care[t]:
+            plan[('type', t)][0] |= have[t]; plan[('type', t)][3] |= care[t]; linked |= have[t] | care[t]
     out.append('Plan:')
     order = sorted(plan.items(), key=lambda x: -(len(x[1][0]) + len(x[1][1]) + len(x[1][2]) + len(x[1][3])))
     for key, (mk, own, lv, other) in order:
         if key[0] == 'repeat':
             out.append(f'- {mechanics.name(c, key[1])} makes these cards\' effects happen again: {names(c, other)}.'); continue
+        if key[0] == 'spells':
+            out.append(f'- Spells you play: {names(c, mk)}. Set off: {names(c, other)}.'); continue
+        if key[0] == 'type':
+            out.append(f'- {tname.get(key[1], "?")} cards: are or make them: {names(c, mk)}. Care about them: {names(c, other)}.'); continue
         if key[0] == 'puts':
             out.append(f'- More {mechanics.name(c, key[1])} in play: made by {names(c, mk)}.'); continue
         h, kw = key; ss = sides[key] - {''}; side = ss.pop() if len(ss) == 1 else ''
@@ -166,7 +202,7 @@ def analyze(c, game, text):
     lack = []
     for card, ab, role_, h, side, kw, pick in uses:
         if h in EVERY_GAME or side == 'enemy': continue
-        if not any(m != card and hh == h and (k is None or kw is None or k == kw) and fit(ms, side) for (hh, k), ms_ in makes.items() for m, ms in ms_):
+        if not any((m != card or pick == 'self') and hh == h and (k is None or kw is None or k == kw) and fit(ms, side) for (hh, k), ms_ in makes.items() for m, ms in ms_):
             lack.append(f'{mechanics.name(c, card)} waits for "{say(c, h, side, kw)}" and nothing else in the deck does it')
     alone = [i for i in deck if i not in linked | ctrl | sup | flow | extra]
     weak = list(dict.fromkeys(lack)) + ([f'no clear role: {names(c, alone)}'] if alone else [])

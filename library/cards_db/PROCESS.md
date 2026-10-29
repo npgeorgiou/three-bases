@@ -155,6 +155,11 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
   keyword in that field) and the query. Passes at 95% found. At least 60 per game: every trigger word, every keyword,
   every common verb, and "benefits from X, any way" for the main happenings (flat_ref).
 - combos.tsv: real enabler/payoff pairs: the library's combos.tsv rows for the game, plus pairs found in the texts. 40+.
+- decks.tsv: decks from players' guides (Steam guides and threads, build guides), never made up: the cards, and the phrases
+  `ask.py <game> analyze` must say for the deck to be explained the way the guide explains it (cases/run.py checks them).
+  Pairs a guide names go into combos.tsv with the guide as source. Search for the guides before writing any case.
+- A change to shared code or values gets a case in mechanics.tsv with game * (every game runs it), so the change is
+  tested in each game, not only in the one that needed it.
 - regions.tsv: per faction its known mechanics (marked as Claude's), plus the library's signature, splash and archetype rows.
 - A failing case is fixed at its cause: the query (check it against the texts first), the pattern, the value, or the
   records. Old tags are hints only; a case built on wrong old tags is dropped with its reason in DROPPED.md.
@@ -229,3 +234,11 @@ Monster Train:
 - Use as few readers as possible: one for the cards, one for the keywords, one for the second reading. Cards a reader marks
   unsure for the same reason are fixed by a rule script (fixes/<game>/vNN.py, safe to run twice), and the second reading is
   judged by Claude, not by another agent; a handful of tokens are recorded by Claude.
+- Read the answers, not only the case counts: `ask.py <game> partners <card>` for a few cards showed Shard Channeler
+  "setting off" Morselmaster (which waits for a Morsel). The cause was in shared code (connections.py ignored the type a
+  trigger asks for, and matched 'type is 1' inside 'type is 11'); it was wrong in every game and no case had caught it.
+- The deck explainer missed the guides' own plans until it learned keyword stacks ("units with Rage", "the amount of
+  Armor"), types ("Imp cards: are or make them / care about them"), spells setting off "when you play a spell" triggers,
+  and events the game makes by itself (combat start and end). Run the guide decks early: they show what the queries miss.
+- A trigger keyword that does something by itself (Eaten: the unit is eaten after combat) needs that act in its keyword
+  record; cards whose text uses the label get the keyword (load.py), so their partners are found.

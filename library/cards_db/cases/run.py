@@ -4,6 +4,7 @@ expected cards (mechanics) or the connection exists (combos) or the region shows
                  or kw:<Keyword> in the Keywords field): the query on the records must find them.
   combos.tsv     real combos: the enabler's results must set off the payoff (connections.py).
   regions.tsv    region identity: the query must find at least n cards of that region.
+  decks.tsv      decks from players' guides: the deck explanation (ask.py <game> analyze) must contain each 'must' phrase.
 Usage: run.py <game> [--show N]   (N: misses listed per failing case)"""
 import csv, os, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); DBDIR = os.path.dirname(HERE)
@@ -59,6 +60,17 @@ def main():
             n = len([i for i in got if r['region'] in (region[i] or '').split(';')])
             ok = n >= int(r['need']); total += 1; passed += ok
             out.append(f"| {r['id']} | {r['region']} | {r['kind']} | {r['mechanic']} | {r['need']} | {n} | {'yes' if ok else 'NO'} |")
+    # decks from players' guides: the deck explanation must name what the guide says the deck does
+    path = os.path.join(HERE, 'decks.tsv')
+    if os.path.exists(path):
+        import deck_analysis
+        out += ['', '## Guide decks (the explanation must say what the guide says)', '', '| case | deck | must say | missing | pass |', '|---|---|---|---|---|']
+        for r in csv.DictReader(open(path), delimiter='\t'):
+            if r['game'] != game: continue
+            text = '\n'.join(deck_analysis.analyze(c, game, r['cards'])).lower()
+            miss = [w for w in r['must'].split(';') if w.strip() and w.strip().lower() not in text]
+            total += 1; passed += not miss
+            out.append(f"| {r['id']} | {r['deck']} | {r['must']} | {', '.join(miss) or '-'} | {'yes' if not miss else 'NO'} |")
     out.insert(3, f'**{passed} of {total} cases pass.**\n')
     open(os.path.join(HERE, 'REPORT.md'), 'w').write('\n'.join(out) + '\n'); print(f'{passed} of {total} cases pass')
 

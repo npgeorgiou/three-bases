@@ -16,7 +16,7 @@
 {"id": 2000303, "abilities": [{"when": {"event": "strikes", "actor": {"pick": "self"}}, "do": [{"act": "excess_damage", "on": {"pick": "self"}, "to": {"kind": "unit", "side": "enemy", "zone": "board", "with": [{"attr": "position", "op": "is", "val": "same_lane"}]}}]}], "unsure": ["to"]}
 {"id": 2000304, "trigger": {"event": "combat_start", "actor": {"pick": "self"}}, "abilities": []}
 {"id": 2000305, "trigger": {"event": "given_keyword", "object": {"pick": "self", "with": [{"attr": "keyword", "op": "is", "ref": "Armor"}]}}, "abilities": []}
-{"id": 2000306, "trigger": {"event": "eats", "object": {"pick": "self"}}, "abilities": []}
+{"id": 2000306, "trigger": {"event": "eats", "object": {"pick": "self"}}, "abilities": [{"when": {"event": "combat_end"}, "limit": "next_time", "do": [{"act": "eat", "on": {"pick": "self"}, "to": {"kind": "unit", "side": "mine", "zone": "board", "with": [{"attr": "position", "op": "is", "val": "front_of_lane"}, {"attr": "keyword", "op": "not", "ref": "Eaten"}]}}]}]}
 {"id": 2000307, "trigger": {"event": "turn_end", "actor": {"kind": "player", "side": "mine"}}, "abilities": []}
 {"id": 2000308, "trigger": {"event": "exhausted", "object": {"kind": "card", "with": [{"attr": "position", "op": "is", "val": "same_lane"}]}}, "abilities": []}
 {"id": 2000309, "trigger": {"event": "dies", "object": {"pick": "self"}}, "abilities": []}

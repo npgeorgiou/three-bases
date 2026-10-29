@@ -163,6 +163,16 @@ def main():
             for line in open(f):
                 if line.strip(): L.record(json.loads(line)); n += 1
         print(game, n, 'records loaded')
+    # a card whose text uses a trigger keyword that does something by itself ("Eaten:" - the unit gets eaten after combat)
+    # has that keyword, so it inherits the keyword's own abilities
+    import re as _re; lib = source.lib()
+    for k, kname, kgame in out.execute("select distinct t.keyword, c.name, c.game from keyword_trigger t join card c on c.id=t.keyword "
+                                       "where exists (select 1 from ability a where a.card=t.keyword)").fetchall():
+        pat = _re.compile(r'\b' + _re.escape(kname.lower()) + r':')
+        for i, t in lib.execute('select id, text from entities where game=?', (kgame,)):
+            if pat.search((t or '').lower()) and out.execute('select 1 from card where id=? and is_keyword=0', (i,)).fetchone() \
+                    and not out.execute('select 1 from card_keyword where card=? and keyword=?', (i, k)).fetchone():
+                out.execute('insert into card_keyword(card, keyword) values(?,?)', (i, k))
     import flat; flat.build(out); flat.derive(out); import refs; refs.build(out)  # the query layer: general rows with keywords expanded and concepts
     out.commit()
 

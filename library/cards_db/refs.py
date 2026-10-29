@@ -40,6 +40,9 @@ def build(c):
                 ins(card, origin, via, ab, 'state', ev, kind, side, pick, kwid.get(kw[0].lower()) if kw else None, state=st)
         if zone and kind == 'unit':
             for ev, *_ in causes.get(('zone', zone), []): ins(card, origin, via, ab, 'state', ev, kind, side, pick)
+        # units picked by a keyword they have ("friendly units with Rage", "the amount of Armor"): fed by giving that keyword
+        for k in (re.findall(r'(?<![a-z:])keyword is (\d+)', withs or '') if kind != 'effect' else []):  # repeating Summon effects is no unit with Summon
+            ins(card, origin, via, ab, 'state', 'given_keyword', kind, side, pick, int(k))
 
     def kw_of(withs):
         """the keyword a filter names, or the one that gives the state it names (given_keyword happenings)"""

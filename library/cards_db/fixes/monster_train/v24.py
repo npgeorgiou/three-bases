@@ -10,10 +10,17 @@ for f in ('batch_001', 'keywords'):
 # Sacrifice (keyword entry): the card names the type of unit to kill ("Sacrifice Imp"), so the unit is the card's target
 # (pick it), not one the keyword picks itself (normalize N9 would drop the card's target otherwise)
 SACRIFICE = [{'when': {'event': 'activated'}, 'do': [{'act': 'kill', 'on': {'kind': 'unit', 'side': 'mine', 'pick': 'it', 'zone': 'board'}}]}]
+# Eaten (keyword entry, wiki): "After the next round of combat, this unit will be eaten by the front unit without an Eaten
+# ability": the trigger, plus the eating itself, so a deck with Morsels makes "eats" happen
+EATEN_AB = [{'when': {'event': 'combat_end'}, 'limit': 'next_time', 'do': [{'act': 'eat', 'on': {'pick': 'self'}, 'to': {'kind': 'unit',
+            'side': 'mine', 'zone': 'board', 'with': [{'attr': 'position', 'op': 'is', 'val': 'front_of_lane'},
+            {'attr': 'keyword', 'op': 'not', 'ref': 'Eaten'}]}}]}]
 CONSUME = [{'when': {'event': 'played', 'object': {'pick': 'self'}}, 'do': [{'act': 'exhaust', 'on': {'pick': 'self'}}]}]
 for f in ('batch_001.jsonl', 'keywords.jsonl'):
     p = os.path.join(HERE, 'read', 'monster_train', f); recs = [json.loads(l) for l in open(p)]; n = 0
     for r in recs:
+        if names.get(r['id']) == 'Eaten' and r['abilities'] != EATEN_AB:
+            r['abilities'] = EATEN_AB; n += 1
         if names.get(r['id']) == 'Sacrifice' and r['abilities'] != SACRIFICE:
             r['abilities'] = SACRIFICE; n += 1
         if names.get(r['id']) == 'Consume' and r['abilities'] != CONSUME:

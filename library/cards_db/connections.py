@@ -147,6 +147,13 @@ def reasons(c, enabler, payoff):
                 own = {ev for (ev,) in c.execute("select event from flat_when where card=? and obj_pick='self' or card=? and actor_pick='self'", (b, b))}
                 for k, ev in kw_events(a):
                     if ev in own: yield (5, f'trigger keyword: {name(c, k)}')
+            # the enabler returns my unit to hand (Recall, Reform): the payoff's own "when played" happens again
+            pcat = (c.execute('select category from card where id=?', (p,)).fetchone() or [''])[0]
+            if pcat in ('unit', 'hero') and c.execute("select 1 from flat_when where card=? and event='played' and obj_pick='self'", (p,)).fetchone():
+                for x in makers:
+                    if c.execute("select 1 from flat_do where card=? and act in ('return_card','return_to_hand') and coalesce(on_side,'mine') in ('mine','any') "
+                                 "and coalesce(on_kind,'unit') in ('unit','card','any') and coalesce(eff_zone,'hand')='hand'", (x,)).fetchone():
+                        yield (8, 'replay: back in hand, played again')
             # the enabler gives, removes or uses a keyword the payoff has (removing Shell from Eggs hatches them)
             pay_kw = {k for (k,) in c.execute('select keyword from card_keyword where card=?', (p,))}
             for x in makers:

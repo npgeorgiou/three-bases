@@ -31,13 +31,13 @@ select distinct card from flat_ref where happening='dies' and role!='makes' and 
 ```sql
 select distinct card from flat_concept where concept='sacrifice'
 ```
-- monster_train: 15 cards: Cannibalize, Crushing Demise, Feast, Hallowed Drippings, Hallowed Halls, Imp-portant Work, Imp-pressive, Lady of the Reformed ...
+- monster_train: 23 cards: Antumbra Morsel, Cannibalize, Crushing Demise, Eaten, Feast, Hallowed Drippings, Hallowed Halls, Imp-portant Work ...
 - runeterra: 54 cards: Amalgamation Of Vile Rites, Ancient Crocolith, Astral Fox, Atrocity, Blighted Caretaker, Bloodcursed Harpy, Chronicler of Ruin, Crumble ...
 - stormbound: 6 cards: Pricey Freedom, Spooky Pumpkin, Stream of Consciousness, Temple of Space, Toxic Sacrifice, Yowling Weavers
 
 ## Combos between those two lists, inside each game (connections.explain)
 
-780 pairs, for example:
+782 pairs, for example:
 
 - monster_train: Imp-portant Work -> Memories of the Melted (condition: kill -> dies)
 - monster_train: Imp-portant Work -> A Fatal Melting (condition: kill -> dies)
@@ -98,8 +98,8 @@ select distinct card from flat_concept where concept='lifesteal'
 ```sql
 select distinct card from flat_ref where happening='given_keyword' and role!='makes'
 ```
-- monster_train: 1 cards: Apex Imp
-- runeterra: 29 cards: Curtain Call, Deadly Flourish, Deathless Knight, Fae Bladetwirler, Falling Star, Greenglade Caretaker, Jhin, Kinkou Student ...
+- monster_train: 90 cards: Alloy of the Ancients, Alloyed Construct, Apex Imp, Armor, Attuned, Awake, Battering Ram, Big Sludge ...
+- runeterra: 106 cards: Animate, Arbiter of the Peak, Aspect of the Dragon, Ava Achiever, Balen the Benevolent, Big Game Tycoon, Clash of Giants, Curtain Call ...
 - stormbound: 26 cards: Acid Greenhorns, Amberhides, Big Sisters of Growth, Brood Sages, Copperskin Ranger, Crimson Sentry, Function Wilds, Green Prototypes ...
 
 ## Effects that grow with a count ("for each", "equal to"), any game
@@ -119,26 +119,26 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 - passive: monster_train 8 cards, runeterra 18 cards, stormbound 8 cards
 - cheat_death: runeterra 7 cards
 - silence: stormbound 8 cards
-- movement: monster_train 6 cards
 - forced_movement: monster_train 6 cards
+- movement: monster_train 6 cards
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: monster_train 386 pairs, e.g. Rector Flicker -> Little Fade; runeterra 12693 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- sacrifice: monster_train 179 pairs, e.g. Rector Flicker -> Little Fade; runeterra 3957 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- removal: monster_train 90 pairs, e.g. Crushing Demise -> Little Fade; runeterra 3608 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
-- self_destruct: monster_train 266 pairs, e.g. Rector Flicker -> Little Fade; runeterra 6891 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
-- revive: runeterra 1071 pairs, e.g. Eternal Dancers -> Bladepierced Revenant
-- aoe_damage: monster_train 217 pairs, e.g. Shattered Shell -> Little Fade; runeterra 2827 pairs, e.g. Anivia -> Bladepierced Revenant; stormbound 217 pairs, e.g. Broken Earth Drakes -> Dreadful Keepers
+- destroy: monster_train 389 pairs, e.g. Kinhost Vessel -> Bog Chrysalis; runeterra 12693 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- sacrifice: monster_train 243 pairs, e.g. Primordium -> Devourer of Death; runeterra 3957 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- removal: monster_train 90 pairs, e.g. Shroud Spike -> Little Fade; runeterra 3608 pairs, e.g. Kindred's Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Wetland Deceivers -> Green Prototypes
+- damage: monster_train 741 pairs, e.g. Cycle of Life -> Little Fade; runeterra 15036 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 721 pairs, e.g. Divine Reptiles -> Spare Dragonling
+- aoe_damage: monster_train 244 pairs, e.g. The Sentient -> Little Fade; runeterra 2828 pairs, e.g. Anivia -> Shackled Ghasts; stormbound 217 pairs, e.g. Broken Earth Drakes -> Spare Dragonling
+- on_kill: monster_train 109 pairs, e.g. Shattered Shell -> Little Fade; runeterra 1283 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 20 pairs, e.g. Spellbinder Zhevana -> Spare Dragonling
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
 - summon -> on_ally_play -> random_effect (seen in runeterra)
-- summon -> on_ally_play -> stacking_keyword (seen in runeterra)
-- summon -> on_ally_play -> variable_stats (seen in runeterra)
-- summon -> on_ally_play -> temporary_buff (seen in runeterra)
 - summon -> tribal -> generate_cards (seen in runeterra)
+- summon -> on_ally_play -> combo_sequence (seen in runeterra)
 - summon -> tribal -> draw (seen in monster_train, runeterra, stormbound)
+- summon -> on_ally_play -> cost_set (seen in monster_train, runeterra)
+- summon -> on_ally_play -> spell_power (seen in monster_train, runeterra)
 
 ## A deck explained (`ask.py runeterra analyze "..."`), a Lucian/Senna deck from a deck guide
 
@@ -154,7 +154,7 @@ Supports your units (stats, protection, combat keywords): Piercing Darkness, Sen
 Card flow (draw, create, choose): Glimpse Beyond, Lonely Chimeslime, Senna, Spirit Leech.
 Puts extra units into play: Cursed Keeper, Hapless Aristocrat, The Undying.
 Units that support cards can target: 9 (Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, Lucian, Ravenous Butcher, Senna, Senna, Sentinel of Light, Spirit Leech, The Undying).
-Key cards (in most of the plan): Senna, The Ruination, Spirit Leech, Crumble, Ravenous Butcher.
+Key cards (in most of the plan): Senna, Spirit Leech, The Ruination, Crumble, Ravenous Butcher.
 Weak spots: none found.
 ```
 
@@ -187,7 +187,7 @@ select distinct card from flat_do where act='copy_keywords'
 - monster_train Awoken: on_lifegain (4), counterattack (7), regeneration (4), draw (11), heal (11)
 - monster_train Stygian Guard: discard (6), on_spell (9), retain (4), stat_loss (5), damage_over_time (11)
 - monster_train Umbra: lifesteal (4), on_sacrifice (14), shield (7), board_limit (4), overload_debt (4)
-- monster_train Melting Remnant: other_death_trigger (8), self_destruct (16), death_trigger (11), cost_set (6), delayed (15)
+- monster_train Melting Remnant: other_death_trigger (8), self_destruct (16), cost_set (6), delayed (15), recycle (10)
 - monster_train Wurmkin: cost_type (10), resource_gain (23), summon (4), damage_over_time (8), exhaust (19)
 - monster_train Clanless: direct_damage (5), banish (10), turn_end (7), cant_attack (5), passive (20)
 - runeterra Ionia: bounce_enemy (11), leave_trigger (10), silence (33), movement (6), swap (6)
