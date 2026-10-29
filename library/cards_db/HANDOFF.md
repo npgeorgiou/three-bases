@@ -20,5 +20,4 @@
 - Deck networks: network.py (`ask.py <game> network`), the page `network_page.py` -> network.html (decks from the web in
   decks.tsv and cases/decks.tsv, a game picker). Kaptain's check of 9 decks found links missing or wrong; fixed for every
   game (CHANGES v30) and turned into cases/network.tsv and audit_links.py. **Importing a game: read PROCESS.md "Links the
-  deck networks showed missing" first.** Open for Kaptain: his judgement of the new networks; the 33 Runeterra keyword ->
-  concept rows Claude mapped (vocab.tsv, added 29 Oct 2026, v30).
+  deck networks showed missing" first.** Open for Kaptain: his judgement of the v33 networks (NEXT_CHAT.md).

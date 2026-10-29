@@ -225,6 +225,13 @@ III: Reduce the cost of a random card in hand by 5.
  {"when": {"event": "activated"}, "if": [{"test": "stage", "n": 3}], "do": [
   {"act": "cost_change", "on": {"kind": "card", "side": "mine", "pick": "random", "zone": "hand"}, "params": {"cost": -5}, "lasts": "permanent"}]}]}
 
+## Game words: Runeterra
+- Frostbite sets a unit's Power to 0 this round: a frostbitten unit can still block (attack_zero, never cant_block).
+- Overwhelm adds no damage: damage past the blocker's health goes to the enemy Nexus (excess_damage; in a deck network it
+  "helps it hit the enemy player").
+- "spells and Skills" / "Fast spells, Slow spells, and Skills": category in spell, skill on every target the phrase names.
+- "cost reduced cards": state cost_reduced on the counted cards.
+
 ## Game words: Stormbound
 Stormbound has no Keywords field: describe everything the text says. Its glossary keywords (Poison, Vitalize, Freeze, Confuse,
 Disable, Push, Pull, Command, Drain, ...) define the words; cards use the values below.

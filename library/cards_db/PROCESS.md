@@ -54,6 +54,12 @@ every small edit, and turning a decision one way and later back. Work like this:
    keyword belongs to the game at all (Terrify is Path of Champions: deleted). When a shared keyword name means something
    else in this game, the row is `<game>:<Name>` (monster_train:Frostbite is damage over time, Runeterra's Frostbite is
    attack_zero). Show Kaptain the full keyword -> concept list with each concept's definition.
+   How to map a keyword to a concept: read the concept's definition and its "not this" part, then use an existing concept
+   only when the definition says exactly that mechanic. A loose fit is wrong (Claude's first list had Enlightened ->
+   high_cost, Deep -> self_mill, Plunder -> on_life_loss: Enlightened is a max-mana condition, Deep a deck-size condition,
+   Plunder "the enemy Nexus was damaged this round"). When none fits, add a precise concept to concept_tree_v3.txt with
+   its definition and "not this", give it a shape rule in flat.py RULES, and run the rule on every game, then read what
+   it found in each (v32: spell_or_skill, countdown, max_mana_condition, card_presence_condition ...).
 3. Events, states and durations that games word differently get the same concept: round_start and turn_start are
    turn_start; this_round and next_own_turn are temporary_effect; a state takes its keyword's concept (stunned like Stun).
 4. Stats by role: Power / Attack is attack (attr power), Health is health, Stormbound's strength is both. Never add a stat
@@ -245,6 +251,17 @@ abilities are fed like the card's own; "I strike / I kill" is about the card, no
 what the event happened to; a "non-X" filter narrows nothing; what a card creates by description ("2 random Imps") is no
 need for that type; the combo search (connections.py) is no source of network lines (its weak reasons, "counts card",
 "target: type", were noise); a count of a keyword used names the card when the text does ("planted 15+ Poison Puffcaps").
+
+More found 29 Oct 2026 (v33, all games): an effect that adds to what my cards of a kind just did ("your spells and Skills
+deal 1 extra damage", "double all damage dealt by your spells") helps every card of that kind in the deck that does it, also
+through a keyword it uses (Drain) and through Skills; it waits for nothing itself (Tybaulk, Funsmith, The Dreadway); "it"
+there is what was hit only while no earlier effect named a new target (Azir's summoned Sand Soldier is not the attacker);
+a lasting change to all my cards of a kind, or to them in hand and deck ("grant allies everywhere +1|+0", "friendly units
+in front get 2 strength each turn") helps each of them; a boost to a status ("Rage on friendly units adds +3 Attack")
+helps the cards that give it; damage as big as a card's health is no "survives damage" help (Sunburst 6, Braum 6); a
+card made by description ("2 random Imps") is a card of that type for what asks for the type; a counted card with a state
+("8 cost reduced cards played") is fed only by cards that put it in that state; "spells and Skills" in a text includes
+Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up form's power and health are its stats field.
 
 ## Think like a player (read before showing any network, any deck explanation, any answer about synergy)
 Kaptain checks a few decks and finds errors a player sees at once. Before showing anything, do what he does:

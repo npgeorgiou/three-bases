@@ -96,3 +96,11 @@ Each change: date, what changed, the card that caused it, and which records were
   filters split per keyword; N15 also turns keyword_used of Trap / Boon into trap_activated; Rally makes my units attack;
   combo search lines removed from the network; fixes/runeterra/v31.py (planted card in counts, "<Keyword> me");
   cases/network.tsv n26-n42; PROCESS "Think like a player"; page: curved lines, mechanics section, solid aim lines.
+- 29 Oct 2026, v33 (Kaptain: Tybaulk linked to too few cards; families swept in every game): help lines from effects that
+  add to what my cards of a kind did (network.adders; Skills and keyword damage included), from lasting changes to all my
+  cards of a kind (stat gifts say "gives it +1|+0"), from boosts to a status to its givers; lethal damage is no survival;
+  cards made by description make their type; level-up forms read their stats; identical lines merged. Records by rule
+  (fixes/runeterra/v33.py): "spells and Skills" includes Skills (28 cards), The Dreadway doubles damage, Janna counts cost
+  reduced cards. vocab: event cost_changed (caused by cost_change, cost_set), state cost_reduced. PROCESS: how to map a
+  keyword to a concept; BRIEF: Game words: Runeterra. decks.tsv: Janna Nilah and 27 Runeterra decks from deck codes
+  (riwan.substack.com, Dec 2021), 22 Stormbound decks (stormbound-kitty.com deck ids). cases/network.tsv n43-n51.
