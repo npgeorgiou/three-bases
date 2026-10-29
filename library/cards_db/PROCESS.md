@@ -233,6 +233,35 @@ joins "A makes X" to "B waits for X". What went wrong, how it was missed, and th
    check); audit_links.py lists any keyword without one.
 How it was missed: every test asked whether the query finds the cards that do X; none asked whether two cards of a real
 deck are joined, or must not be. Read the networks of guide decks (step 2.8) before calling a game done.
+Second check (Kaptain, 29 Oct 2026), fixed in every game: a champion linked to its own level-up form (one card in play);
+spells and skills not counted for "N spells or Skills played" (a skill is an ability card the unit casts: it is put in the
+network, kind spell takes it when the filter says Skill); "help" that is no event was missing (more health helps a card
+that must survive damage; more power helps a card that counts damage dealt or Nexus hits, and Challenger and Overwhelm
+units; Elusive or Overwhelm given helps cards that count hits on the enemy player; creating cards helps "N different cards
+played"; a planter helps what its planted card levels); a card whose own trigger makes what its level-up counts (Ashe:
+Attack -> Frostbite -> level) levels from anything that sets the trigger off (Rally); an ability given to the player that
+adds to what happened (Tybaulk: "your spells and Skills deal 1 extra damage") makes those cards stronger, other given
+abilities are fed like the card's own; "I strike / I kill" is about the card, not the unit it hits; "it" first refers to
+what the event happened to; a "non-X" filter narrows nothing; what a card creates by description ("2 random Imps") is no
+need for that type; the combo search (connections.py) is no source of network lines (its weak reasons, "counts card",
+"target: type", were noise); a count of a keyword used names the card when the text does ("planted 15+ Poison Puffcaps").
+
+## Think like a player (read before showing any network, any deck explanation, any answer about synergy)
+Kaptain checks a few decks and finds errors a player sees at once. Before showing anything, do what he does:
+1. Take every guide deck of the game and read its network line by line, both cards' texts side by side. For each line ask
+   "would a player who knows this game say A helps B for this reason?" If not, find the rule that made it and fix the
+   rule, for every game. Then ask the other way: "what does a player know helps B?" (its level-up, its triggers, its
+   conditions, its stats, its keywords) and check each is there.
+2. Game facts that are never broken: a champion and its level-up form are one card in play (copies level together); a
+   card's "I / me / my / itself / this unit" is that card; damage to a player is not damage to a unit; keywords do what the
+   glossary says and nothing more (Overwhelm sends leftover damage to the Nexus, it adds no damage; Frostbite sets Power to
+   0, a frostbitten unit can still block); skills are not spells unless the text says "spells or Skills".
+3. "Helps" is wider than "makes what it waits for": more stats, protection, extra attacks, more cards, cheaper cards all
+   help the card that needs them. A line is right when the help is real, not when the words match.
+4. Tell Kaptain which lines you are not sure of, with the card text, instead of leaving them for him to find. Never say a
+   check is done when only the counted cases pass.
+5. When Kaptain finds one wrong line, look for the whole family of it: list every line of every game made by the same rule
+   and read a sample of 20 before and after the fix.
 
 ## Mistakes made before (do not repeat)
 - Fetching a game's data the repo already had; trusting old library tags; judging data by one narrow question; assuming

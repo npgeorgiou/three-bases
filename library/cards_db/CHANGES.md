@@ -89,3 +89,10 @@ Each change: date, what changed, the card that caused it, and which records were
 - 29 Oct 2026, v31: the query layer gives a target "it" the side and kind of the target before it (flat.py); link audit
   (audit_links.py, in run.py), deck network cases (cases/network.tsv), 33 Runeterra keyword concept rows (Claude's, from
   Riot's glossary), BRIEF rules 23-25, PROCESS "Links the deck networks showed missing".
+- 29 Oct 2026, v32 (Kaptain's second network check, every game): champion families never link to themselves; skills cast by
+  units are cards in the network and count for "spells or Skills"; help lines (power, health, protection, Nexus hits, card
+  creation for "different cards", through a made card for level-ups); self-feeding level-ups; given abilities; actor "me"
+  (flat_if ev_actor_pick; refs actor_self for killing / dealing damage); "it" falls back to the event's object; "keyword in"
+  filters split per keyword; N15 also turns keyword_used of Trap / Boon into trap_activated; Rally makes my units attack;
+  combo search lines removed from the network; fixes/runeterra/v31.py (planted card in counts, "<Keyword> me");
+  cases/network.tsv n26-n42; PROCESS "Think like a player"; page: curved lines, mechanics section, solid aim lines.

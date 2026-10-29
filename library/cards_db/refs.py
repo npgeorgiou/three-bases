@@ -21,7 +21,9 @@ create index frh on flat_ref(happening, role); create index frc on flat_ref(card
 
 UNIT_ONLY = {'dies', 'killed', 'survives_damage', 'summoned', 'revived', 'leaves_play', 'strikes', 'attacks', 'blocks'}  # never a player's
 PLAYER_ONLY = {'nexus_damaged'}  # only a player's
-OPEN_KINDS = {None, '', 'player', 'any', 'anything'}  # kinds a player can be
+OPEN_KINDS = {None, '', 'player', 'any', 'anything'}
+BY_ME = {'killed', 'damaged', 'nexus_damaged', 'challenges'}  # done by the card to something else: only the card itself can do it
+# (attacks and strikes by the card: other cards can make it attack or strike: Rally, "an ally strikes")  # kinds a player can be
 BOARD_KINDS = {'unit', 'landmark', 'unit_or_structure', 'anything', 'any', None}
 # a stat tested or counted, and the happenings that change it, for a player and for a unit
 STAT_EVENTS = {'health': {'player': ('nexus_damaged', 'healed'), 'unit': ('stat_changed', 'damaged', 'healed')},
@@ -58,6 +60,10 @@ def build(c):
         if re.search(r'(?<![a-z:])position ', withs or '') and kind in BOARD_KINDS:
             ins(card, origin, via, ab, 'state', 'moves', kind, side, pick, w=withs)
 
+    def kws_of(withs):
+        """every keyword a filter names: "keyword is X", or "keyword in X" rows (one of them: traps or boons)"""
+        return [int(k) for k in re.findall(r'(?<![a-z:])keyword (?:is|in) (\d+)', withs or '')]
+
     def kw_of(withs):
         """the keyword a filter names, or the one that gives the state it names (given_keyword happenings)"""
         m = re.search(r'keyword is (\d+)', withs or '')
@@ -71,13 +77,21 @@ def build(c):
                        'obj_pick, obj_with from flat_when').fetchall():
         card, o, v, ab, ev, ak, as_, ap, ok, os_, op, ow = r
         obj = ok or os_ or op
-        if ev and ev != 'always': ins(card, o, v, ab, 'trigger', ev, ok if obj else ak, os_ if obj else as_, op if obj else ap, kw_of(ow), w=ow)
+        if ev and ev != 'always':
+            pk = op if obj else ap
+            if ap == 'self' and op != 'self':  # "Strike: ... the attacked unit": it is about the card striking, not the unit hit
+                pk = 'actor_self' if ev in BY_ME else 'self'
+            for k in (kws_of(ow) if len(kws_of(ow)) > 1 else [kw_of(ow)]):  # "traps or boons": one row per keyword, never "any keyword"
+                ins(card, o, v, ab, 'trigger', ev, ok if obj else ak, os_ if obj else as_, pk, k, w=ow)
         state_rows(card, o, v, ab, ok, os_, op, ow, None)
     for r in c.execute('select card, origin, via, ability, event, of_kind, of_side, of_pick, of_zone, of_with, ev_obj_kind, '
-                       'ev_obj_side, ev_obj_with, ev_obj_pick, test, attr from flat_if').fetchall():
-        card, o, v, ab, ev, fk, fs, fp, fz, fw, ek, es, ew, ep, test, at = r
+                       'ev_obj_side, ev_obj_with, ev_obj_pick, test, attr, ev_actor_pick from flat_if').fetchall():
+        card, o, v, ab, ev, fk, fs, fp, fz, fw, ek, es, ew, ep, test, at, eap = r
+        if eap == 'self' and ep != 'self': ep = 'actor_self' if ev in BY_ME else 'self'  # "I've killed": only the card itself does it
         # the thing the counted event happens to ("I've survived 10+ damage": of self) decides whose it is
-        if ev: ins(card, o, v, ab, 'condition', ev, ek or fk, es or fs, ep or fp, kw_of(ew), w=ew or fw)
+        if ev:
+            for k in (kws_of(ew) if len(kws_of(ew)) > 1 else [kw_of(ew)]):
+                ins(card, o, v, ab, 'condition', ev, ek or fk, es or fs, ep or fp, k, w=ew or fw)
         elif fk == 'mana': ins(card, o, v, ab, 'condition', 'mana_refilled', fk, fs, fp)  # counts my mana: fed by mana gain
         # a stat tested or counted ("the enemy Nexus has half its Health or less", "a unit with 5+ Power"): fed by what changes it
         if test in ('stat', 'amount_stat', 'count', 'have', 'amount_count') and at in STAT_EVENTS and not ev:
@@ -101,6 +115,8 @@ def build(c):
         if act == 'cant' and pev == 'blocks' and s == 'enemy' and (p == 'self' or k in ('unit', None)):  # can't be blocked: hits the enemy player
             for ev in ('nexus_damaged', 'damaged'): ins(card, o, v, ab, 'makes', ev, 'player', 'enemy', None)
             ins(card, o, v, ab, 'makes', 'strikes_nexus', 'unit', 'mine', p)  # the unit itself strikes the Nexus
+        if act == 'gain_attack_token':  # the attack token (Rally): my units attack again, their Attack effects happen again
+            ins(card, o, v, ab, 'makes', 'attacks', 'unit', 'mine', None)
         if act in ('first_strike', 'double_strike', 'strike_with') and s in ('mine', None) and p in ('self', 'all', 'chosen', None):  # my unit strikes: an enemy takes damage
             ins(card, o, v, ab, 'makes', 'damaged', 'unit', 'enemy', None)
         state_rows(card, o, v, ab, k, s, p, w, z)

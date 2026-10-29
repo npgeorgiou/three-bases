@@ -124,21 +124,21 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- sacrifice: monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5540 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- destroy: monster_train 399 pairs, e.g. Little Fade -> Primordium; runeterra 12546 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- removal: monster_train 93 pairs, e.g. Wicked Blaze -> Primordium; runeterra 3755 pairs, e.g. Kindred's Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
-- self_destruct: runeterra 6762 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Finite Loopers
-- revive: runeterra 1006 pairs, e.g. Eternal Dancers -> Bladepierced Revenant
-- damage: runeterra 13429 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 712 pairs, e.g. Eloth the Ignited -> Dreadful Keepers
+- sacrifice: monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5540 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- destroy: monster_train 399 pairs, e.g. Little Fade -> Primordium; runeterra 12483 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- removal: monster_train 93 pairs, e.g. Wicked Blaze -> Primordium; runeterra 3771 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Dreadful Keepers
+- self_destruct: monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6803 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Spare Dragonling
+- revive: runeterra 1027 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant
+- damage: runeterra 13535 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 686 pairs, e.g. Eloth the Ignited -> Dreadful Keepers
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
+- summon -> on_ally_play -> generate_cards (seen in monster_train, runeterra)
 - summon -> on_ally_play -> random_effect (seen in runeterra)
 - summon -> temporary_buff -> stat_gain (seen in runeterra)
 - summon -> temporary_buff -> attack_gain (seen in runeterra)
 - summon -> on_ally_play -> combo_sequence (seen in runeterra)
 - summon -> cant_block -> cant_attack (seen in runeterra)
-- summon -> temporary_buff -> buff (seen in runeterra)
 
 ## A deck explained (`ask.py runeterra analyze "..."`), a Lucian/Senna deck from a deck guide
 
@@ -162,7 +162,7 @@ Weak spots: none found.
 
 - `ask.py stormbound deck "Wisp Cloud"` (Neutral, Winter): Wisp Cloud, Orgone Leechers, Frosthexers, Spellbinder Zhevana, Icicle Burst, Midwinter Chaos, Blizzard Bombs, Iceflakes, Agile Warriors, Erratic Neglects, Lost Psyches, Va’vel the Looper
 - `ask.py stormbound deck "Doppelbocks"` (Neutral, Swarm): Doppelbocks, Faun Companions, Swarmcallers, Moonlit Aerie, Siegebreakers, Queen of Herds, Headless Hotheads, Sparkly Kitties, Catnip’s Charm, Angelic Tikas, Lost Psyches, Agile Warriors
-- `ask.py runeterra deck "Kalista"` (Neutral, Shadow Isles): Kalista, Commander Ledros, Mask Mother, Gluttony, Shark Chariot, Threshold of the Grey, Camavoran Dragon, Crawling Viperwyrm, Mistkeepers, Kindred, Harrowing Return, The Darkin Halberd, Amalgamation Of Vile Rites, Eternal Dancers
+- `ask.py runeterra deck "Kalista"` (Neutral, Shadow Isles): Kalista, Commander Ledros, Song of the Isles, Mask Mother, Unspeakable Horror, Ixtali Sentinel, Camavoran Dragon, Proliferating Darkwraith, Gwen, Crawling Viperwyrm, Kindred, Harrowing Return, Black Spear, Keeper of the Box
 
 ## Same effect, compare cost: deal damage to anything (unit, structure or player), cheapest first
 
@@ -204,7 +204,7 @@ select distinct card from flat_do where act='copy_keywords'
 - stormbound Neutral: draw (5), generate_cards (4), variety_payoff (6), attack_now (4), copy (4)
 - stormbound Ironclad: lanes (8), forced_movement (9), movement (9), death_trigger (4), positional (26)
 - stormbound Shadowfen: lifesteal (7), damage_over_time (6), steal (4), ping (10), variable_stats (7)
-- stormbound Swarm: direct_damage (7), tribal (6), summon (8), death_trigger (4), on_attack (5)
+- stormbound Swarm: direct_damage (8), tribal (6), summon (8), death_trigger (4), on_attack (5)
 - stormbound Winter: disable (8), resource_gain (7), cant_attack (8), passive (8), silence (8)
 
 ## Created-card chains (A creates B, B creates C)

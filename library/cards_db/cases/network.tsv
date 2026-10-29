@@ -24,3 +24,20 @@ n22	stormbound	Nu Bad Medicine	Ozone Purifiers	Wild Saberpaws	line		Kaptain: pus
 n23	stormbound	Nu Bad Medicine	Windmakers	Booming Professors	line		Kaptain: moving enemies changes who is in front
 n24	stormbound	Nu Bad Medicine	*	Unhealthy Hysteria	line		Kaptain: moving enemies changes who borders whom
 n25	stormbound	Nu Bad Medicine	Ozone Purifiers	Chaotic Pupil	line		Kaptain: moving enemies changes who borders whom
+n26	runeterra	Annie Gwen	Gwen (level 2)	Gwen	none		Kaptain 29 Oct: a champion and its level-up form are one card in play
+n27	runeterra	Annie Gwen	Molten Shield	Annie	line		Kaptain: Annie levels from spells and skills (units that cast skills)
+n28	runeterra	Annie Gwen	Tybaulk	Withering Wail	line		Kaptain: Tybaulk makes spells and skills deal extra damage
+n29	runeterra	Caitlyn Teemo	Advanced Intel	Teemo	none		Kaptain: Teemo counts Poison Puffcaps planted, not Flashbomb Traps
+n30	runeterra	Caitlyn Teemo	Pie Toss	Bursting Backpack	none		Kaptain: Bursting Backpack counts itself
+n31	runeterra	Bard Norra	Cosmic Binding	Bard	line		Kaptain: planting Chimes levels Bard
+n32	runeterra	Bard Norra	Byrd, The Bellringer	Bard	line		Kaptain: planting Chimes levels Bard
+n33	runeterra	Darius Gnar	Yadulski Snowdog	Darius	line		Kaptain: more damage helps Darius level up
+n34	runeterra	Darius Gnar	Brothers' Bond	Darius	line		Kaptain: more damage helps Darius level up
+n35	runeterra	Darius Gnar	Darius	Mega Gnar (level 2)	none		Kaptain: nothing Darius does is what Mega Gnar waits for
+n36	runeterra	Ashe LeBlanc	Avarosan Hearthguard	Trifarian Gloryseeker	line		Kaptain: Gloryseeker (Challenger) benefits from more Power
+n37	runeterra	Ashe LeBlanc	Incisive Tactician	Ashe	line		Kaptain: Rally gives another attack, Ashe levels from her Attack
+n38	runeterra	Braum Zoe	Cosmic Youngling	Braum	line		Kaptain: more health helps Braum survive damage
+n39	runeterra	Braum Zoe	Targonian Tellstones	Zoe	line		Kaptain: creating cards helps Zoe play 10 different cards
+n40	monster_train	Imp build (Shardtail Queen)	Queen's Impling	Transcendimp	none	repeats	Kaptain: Transcendimp repeats the others, not the other way
+n41	monster_train	Frostbite build (Tethys)	Crystalline Seeds	Tethys Titansbane	none		Kaptain: Tethys asks for no Frostbite
+n42	monster_train	Frostbite build (Tethys)	Tethys Titansbane	Titan Sentry	none	Frostbite	Kaptain: Tethys does not give my units Frostbite

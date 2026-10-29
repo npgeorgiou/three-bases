@@ -3,7 +3,7 @@ locally without internet: a tab per deck, a dot per card (pointing at it shows i
 line coloured by kind (legend click hides a kind), zoom and pan, a game picker then the game's decks; a card or a sidebar
 section (central cards, a chain, a group, loose cards) pointed at or clicked lights up its cards and the lines between them.
 Usage: python3 network_page.py [out.html]   (default network.html)"""
-import csv, json, os, sqlite3, sys
+import collections, csv, json, os, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import deck_analysis, mechanics, network, source
 
@@ -41,7 +41,7 @@ svg text{font-size:12px;fill:var(--fg);pointer-events:none;paint-order:stroke;st
 const D=__DATA__;
 const LINE={waits:['#0d9488','makes what it waits for'],levels:['#c026d3','helps it level up'],puts:['#65a30d','puts it into play'],
  repeats:['#ea580c','repeats its effects'],rules:['#dc2626','changes how it works'],type:['#4f46e5','is the type or kind it asks for'],
- boosts:['#b45309','makes its damage bigger'],levelsinto:['#6b7280','levels into'],targets:['#9ca3af','can aim at it']};
+ boosts:['#b45309','helps it (more power, health, Nexus hits)'],levelsinto:['#6b7280','levels into'],targets:['#9ca3af','can aim at it']};
 const CARD={hero:['#facc15','champion'],unit:['#7dd3fc','unit'],spell:['#c4b5fd','spell'],building:['#6ee7b7','landmark / structure'],
  item:['#fdba74','equipment'],ability:['#d1d5db','skill']};
 const R=14,NS='http://www.w3.org/2000/svg',svg=document.getElementById('draw'),tip=document.getElementById('tip');
@@ -77,7 +77,7 @@ function layout(){ // spring layout on the lines that tie cards together; cards 
  F.forEach((n,i)=>{n.x=x0+(i%per)*190;n.y=y1+90+Math.floor(i/per)*50})}
 function fit(){let a=Infinity,b=Infinity,c=-Infinity,e=-Infinity;
  N.forEach(n=>{a=Math.min(a,n.x-R);b=Math.min(b,n.y-R);c=Math.max(c,n.x+R+8+n.name.length*7);e=Math.max(e,n.y+R)});
- vb={x:a-30,y:b-30,w:c-a+60,h:e-b+60};setVB()}
+ const w=c-a+60;vb={x:a-30-w*0.3,y:b-30,w:w*1.3,h:e-b+60};setVB()}  // room on the left for the legend
 function setVB(){svg.setAttribute('viewBox',`${vb.x} ${vb.y} ${vb.w} ${vb.h}`)}
 function zoom(f,cx,cy){const r=svg.getBoundingClientRect(),s=Math.max(vb.w/r.width,vb.h/r.height);
  const px=cx==null?vb.x+vb.w/2:vb.x+(cx-r.left)*s-(r.width*s-vb.w)/2,py=cy==null?vb.y+vb.h/2:vb.y+(cy-r.top)*s-(r.height*s-vb.h)/2;
@@ -90,14 +90,19 @@ addEventListener('mousemove',e=>{if(!drag)return;const r=svg.getBoundingClientRe
 addEventListener('mouseup',e=>{if(drag&&!drag.moved&&!e.target.dataset.n&&e.target.closest('#draw')){sel=null;mark()}drag=null;svg.classList.remove('pan')});
 const same=(a,b)=>a&&b&&a.key===b.key&&a.card===b.card;
 function el(t,a){const x=document.createElementNS(NS,t);for(const k in a)x.setAttribute(k,a[k]);return x}
-function draw(){svg.innerHTML='';const defs=el('defs',{});
+function draw(){svg.innerHTML='';const defs=el('defs',{}),seen={},bend=[];
+ d.lines.forEach((l,i)=>{const key=l.from+'>'+l.to;seen[key]=(seen[key]||0)+1;bend[i]=26*seen[key]});
  for(const[k,[c]]of Object.entries(LINE))defs.appendChild(el('marker',{id:'m'+k,viewBox:'0 0 10 10',refX:9,refY:5,markerWidth:12,markerHeight:12,markerUnits:'userSpaceOnUse',orient:'auto'})).appendChild(el('path',{d:'M0,0L10,5L0,10z',fill:c}));
  svg.appendChild(defs);const gl=el('g',{}),gn=el('g',{});svg.append(gl,gn);els={lines:[],nodes:[]};
  d.lines.forEach((l,i)=>{const a=N[ix[l.from]],b=N[ix[l.to]],x=b.x-a.x,y=b.y-a.y,r=Math.max(1,Math.hypot(x,y)),ux=x/r,uy=y/r;
-  const p={x1:a.x+ux*R,y1:a.y+uy*R,x2:b.x-ux*(R+2),y2:b.y-uy*(R+2)},c=LINE[l.kind][0];
-  const ln=el('line',{...p,stroke:c,'stroke-width':l.kind==='targets'?2:2+Math.min(3,l.weight*6),'marker-end':`url(#m${l.kind})`});
-  if(l.kind==='targets')ln.setAttribute('stroke-dasharray','6 4');if(l.kind==='levelsinto')ln.setAttribute('stroke-dasharray','2 3');
-  const hit=el('line',{...p,stroke:'transparent','stroke-width':10,'data-l':i});gl.append(ln,hit);els.lines.push(ln)});
+  // every line bends a little to its left: lines both ways between two cards part, several kinds fan out
+  const k=bend[i],nx=-uy,ny=ux,mx=(a.x+b.x)/2+nx*k,my=(a.y+b.y)/2+ny*k;
+  const sx=a.x+(mx-a.x)/Math.hypot(mx-a.x,my-a.y)*R,sy=a.y+(my-a.y)/Math.hypot(mx-a.x,my-a.y)*R;
+  const ex=b.x-(b.x-mx)/Math.hypot(b.x-mx,b.y-my)*(R+2),ey=b.y-(b.y-my)/Math.hypot(b.x-mx,b.y-my)*(R+2);
+  const dd=`M${sx},${sy} Q${mx},${my} ${ex},${ey}`,c=LINE[l.kind][0];
+  const ln=el('path',{d:dd,fill:'none',stroke:c,'stroke-width':l.kind==='targets'?2:2+Math.min(3,l.weight*6),'marker-end':`url(#m${l.kind})`});
+  if(l.kind==='levelsinto')ln.setAttribute('stroke-dasharray','2 3');
+  const hit=el('path',{d:dd,fill:'none',stroke:'transparent','stroke-width':10,'data-l':i});gl.append(ln,hit);els.lines.push(ln)});
  N.forEach((n,i)=>{const g=el('g',{});const c=el('circle',{cx:n.x,cy:n.y,r:R,fill:col(n),stroke:'currentColor','stroke-width':n.made?1.5:2,'data-n':i,style:'cursor:pointer;color:var(--fg)'});
   if(n.made)c.setAttribute('stroke-dasharray','3 3');const t=el('text',{x:n.x+R+5,y:n.y+4});t.textContent=n.name;g.append(c,t);gn.appendChild(g);els.nodes.push(g)});
  mark()}
@@ -119,7 +124,7 @@ svg.onclick=e=>{if(e.target.dataset.n){const i=+e.target.dataset.n;sel=sel&&sel.
 function legend(){const cats=[...new Set(N.map(n=>n.cat))],kinds=new Set(d.lines.map(l=>l.kind));
  let h='<b>Cards</b>'+cats.map(c=>`<div class="k n"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="${(CARD[c]||['#ccc'])[0]}" stroke="currentColor"/></svg>${esc((CARD[c]||['',c])[1])}</div>`).join('')
   +'<div class="k n"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="none" stroke="currentColor" stroke-dasharray="2 2"/></svg>made by the deck</div>'
-  +'<b>Lines: A &rarr; B (click to hide)</b>'+Object.entries(LINE).filter(([k])=>kinds.has(k)).map(([k,[c,t]])=>`<div class="k${hidden.has(k)?' off':''}" data-k="${k}"><svg width="26" height="10"><line x1="1" y1="5" x2="25" y2="5" stroke="${c}" stroke-width="3" ${k==='targets'?'stroke-dasharray="5 3"':''}/></svg>${t}</div>`).join('');
+  +'<b>Lines: A &rarr; B (click to hide)</b>'+Object.entries(LINE).filter(([k])=>kinds.has(k)).map(([k,[c,t]])=>`<div class="k${hidden.has(k)?' off':''}" data-k="${k}"><svg width="26" height="10"><line x1="1" y1="5" x2="25" y2="5" stroke="${c}" stroke-width="3" ${k==='levelsinto'?'stroke-dasharray="2 3"':''}/></svg>${t}</div>`).join('');
  const L=document.getElementById('legend');L.innerHTML=h;L.querySelectorAll('[data-k]').forEach(x=>x.onclick=()=>{const k=x.dataset.k;hidden.has(k)?hidden.delete(k):hidden.add(k);legend();mark()})}
 function chip(id){const n=N[ix[id]];return `<span class="chip${n.made?' made':''}" data-id="${id}"><i style="background:${col(n)}"></i>${esc(n.name)}</span>`}
 const SEC={};let nsec=0;
@@ -129,6 +134,7 @@ function side(){const m=d.m,s=document.getElementById('side');nsec=0;
  let h=`<h2>${esc(d.deck)}</h2><div class="sub">${esc(d.game.replace('_',' '))} &middot; <a href="${esc(d.source)}" target="_blank">source</a> &middot; ${m.own} cards, ${m.made} made by them, ${m.lines} lines &middot; ${m.linked} of ${m.own} cards linked</div>`;
  h+='<h3>Central cards</h3>'+sec(m.central.map(x=>x[0]),null,'<ul>'+m.central.map(([i,a,b])=>`<li>${chip(i)}<span class="num">${a} in &middot; ${b} out</span></li>`).join('')+'</ul>');
  if(m.through.length)h+='<h3>Most chains pass through</h3>'+sec(m.through,null,m.through.map(chip).join(' '));
+ if(d.mech.length)h+='<h3>Mechanics (cards that do it)</h3>'+d.mech.map(([t,ids])=>sec(ids,[],`<div class="why" style="margin:0">${esc(t)} (${ids.length})</div>${ids.map(chip).join(' ')}`)).join('');
  h+='<h3>Strongest chains</h3>'+m.chains.map(([head,whys,ends])=>{const pairs=head.slice(1).map((x,i)=>[head[i],x]).concat(ends.map(e=>[head[head.length-1],e]));
   return sec(head.concat(ends),pairs,head.map((x,i)=>chip(x)+`<span class="why">&rarr; ${esc(whys[i])} &rarr;</span>`).join('')+ends.map(chip).join(' '))}).join('');
  h+='<h3>Groups</h3>'+m.groups.map(([g,why])=>sec(g,null,`<div class="why" style="margin:0">${esc(why||'linked')} (${g.length})</div>${g.map(chip).join(' ')}`)).join('');
@@ -166,7 +172,15 @@ def deck_data(c, lib, game, deck, src, text):
             'central': m['central'], 'through': m['through'], 'chains': m['chains'],
             'groups': [[by_name(g), why] for g, why in m['groups']], 'alone': by_name(m['alone']), 'gives': by_name(m['gives']),
             'gets': by_name(m['gets']), 'lack': m['lack']}
-    return {'game': game, 'deck': deck, 'source': src, 'nodes': out, 'lines': ls, 'm': meas}
+    # the deck's mechanics in plain words: what its cards make happen, each with the cards that do it
+    mech = collections.defaultdict(set)
+    marks = ','.join('?' * len(nodes))
+    for card, h, side, kw in c.execute(f"""select distinct card, happening, side, keyword from flat_ref where role='makes' and origin in
+            ('own','uses_keyword','has_keyword') and coalesce(pick,'')!='self' and happening not in ('levels_up','played','spell_resolves','created','drawn','targeted')
+            and card in ({marks})""", list(nodes)):
+        mech['Makes: ' + deck_analysis.say(c, h, side, kw)].add(card)
+    meas['mech'] = sorted([[t, by_name(ids)] for t, ids in mech.items() if len(ids) > 1 or len(mech) < 12], key=lambda x: -len(x[1]))[:16]
+    return {'game': game, 'deck': deck, 'source': src, 'nodes': out, 'lines': ls, 'm': meas, 'mech': meas['mech']}
 
 
 def main():

@@ -21,8 +21,9 @@ and second readings). Safe to run any number of times. Each rule is listed in CH
      Yasuo, Fae Bladetwirler and The Tidedancer were read the other way).
   N13 steal aimed at my own side (pick self or side mine: "convert itself") is donate; steal is only taking the enemy's.
   N14 a plain draw is from the top of the deck: draw with pick top is written as zone deck_top without the pick (one form).
-  N15 a planted card going off ("5+ of your traps have been activated": event activated whose object is another card) is
-     event trap_activated; activated stays the player using something (a landmark, a keyword's own activation).
+  N15 a planted card going off ("5+ of your traps have been activated": event activated whose object is another card, or
+     keyword_used of a keyword whose vocab causes trap_activated: Trap, Boon) is event trap_activated; activated stays the
+     player using something (a landmark, a keyword's own activation).
   N10 "strongest" / "weakest" are pick highest / lowest by the attack stat: power, or strength in games whose units have
      one stat (Stormbound). One form in every game.
 Usage: normalize.py <game> <file.jsonl> [...]   rewrites the files in place, prints how many records changed."""
@@ -190,11 +191,19 @@ def keyword_trigger_form(r, st):
         if keep: ab['if'] = keep
         else: ab.pop('if', None)
 
+TRAP_KEYWORDS = {r['value'] for r in csv.DictReader(open(os.path.join(HERE, 'vocab.tsv'), encoding='utf-8'), delimiter='\t')
+                 if r['field'] == 'keyword' and 'trap_activated' in (r['causes'] or '')}
+
+
 def trap_events(x):
     """N15"""
     if isinstance(x, dict):
         o = x.get('object')
         if x.get('event') == 'activated' and isinstance(o, dict) and o.get('kind') == 'card' and o.get('pick') != 'self': x['event'] = 'trap_activated'
+        # "your traps or boons activate" written as the keyword being used: the same happening
+        refs = [f.get('ref') for f in (o or {}).get('with', []) if isinstance(o, dict) and f.get('attr') == 'keyword'] + \
+               [r for f in ((o or {}).get('with', []) if isinstance(o, dict) else []) if f.get('attr') == 'keyword' for r in f.get('refs', [])]
+        if x.get('event') == 'keyword_used' and refs and set(refs) <= TRAP_KEYWORDS: x['event'] = 'trap_activated'
         for v in x.values(): trap_events(v)
     elif isinstance(x, list):
         for v in x: trap_events(v)

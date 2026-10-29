@@ -1,7 +1,7 @@
 # Case tests: monster_train
 
 Made by `cases/run.py monster_train`.
-**140 of 140 cases pass.**
+**143 of 143 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -88,7 +88,7 @@ Made by `cases/run.py monster_train`.
 | mx01 | a trigger on another unit dying is other_death_trigger | 5 | 5 | 100% | 3 | yes |
 | mx02 | moving enemy units is forced_movement | 3 | 3 | 100% | 10 | yes |
 | mx03 | a plain draw is one form: zone deck_top, no pick top | 10 | 10 | 100% | 10 | yes |
-| mx10 | damage to the enemy player is Nexus damage (kinds kept, v30) | 0 | 0 | 100% | 20 | yes |
+| mx10 | damage to the enemy player is Nexus damage (kinds kept, v30) | 0 | 0 | 100% | 16 | yes |
 | mx11 | moving or pushing units makes units move (positions change, v30) | 0 | 0 | 100% | 13 | yes |
 
 ## Combos (the enabler must set off the payoff)
@@ -168,3 +168,6 @@ Made by `cases/run.py monster_train`.
 
 | case | deck | from | to | expect | found | pass |
 |---|---|---|---|---|---|---|
+| n40 | Imp build (Shardtail Queen) | Queen's Impling | Transcendimp | none repeats | - | yes |
+| n41 | Frostbite build (Tethys) | Crystalline Seeds | Tethys Titansbane | none  | - | yes |
+| n42 | Frostbite build (Tethys) | Tethys Titansbane | Titan Sentry | none Frostbite | - | yes |
