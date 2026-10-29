@@ -15,3 +15,8 @@ runeterra	Allure	level up	its level-up text is "Missing Translation" in the sour
 stormbound	Rogue Sheep	draw	drawing from the enemy's hand is stored as steal
 monster_train	Shardtail Queen	for each	"per" sits in another path's text; the rows hold each path
 monster_train	Steel Pulleyclaw	player named	"the Pyre room" is a floor, not the player
+faeria	Crumbling Golem	player named	"your opponent summons a creature": the summoned enemy unit is the event object (side enemy); no row is about the player
+faeria	Royal Judge	draw	"Draw a free Safeguard" is the choice label; the card adds the Safeguard to hand (create, cost 0)
+faeria	Wind Gate	summon	a permission: you can summon on spaces next to it (can, event summoned, bordering)
+faeria	Death Walker	summon	"you must sacrifice another creature to summon this": the sacrifice is the kill on play
+faeria	Iona's Mirror	player named	"the last Treasure your opponent played": the copied card is the enemy's (side enemy); no row is about the player

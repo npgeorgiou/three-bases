@@ -86,6 +86,7 @@ def build(c):
             for k in (kws_of(ow) if len(kws_of(ow)) > 1 else [kw_of(ow)]):  # "traps or boons": one row per keyword, never "any keyword"
                 ins(card, o, v, ab, 'trigger', ev, ok if obj else ak, os_ if obj else as_, pk, k, w=ow if obj else aw, ak=ak if obj else None, aw=aw if obj else None)
         state_rows(card, o, v, ab, ok, os_, op, ow, None)
+    r_op = {(a, b, t, at): op for a, b, t, at, op in c.execute('select card, ability, test, attr, op from flat_if')}
     for r in c.execute('select card, origin, via, ability, event, of_kind, of_side, of_pick, of_zone, of_with, ev_obj_kind, '
                        'ev_obj_side, ev_obj_with, ev_obj_pick, test, attr, ev_actor_pick, ev_actor_kind, ev_actor_with from flat_if').fetchall():
         card, o, v, ab, ev, fk, fs, fp, fz, fw, ek, es, ew, ep, test, at, eap, eak, eaw = r
@@ -97,7 +98,13 @@ def build(c):
         elif fk == 'mana': ins(card, o, v, ab, 'condition', 'mana_refilled', fk, fs, fp)  # counts my mana: fed by mana gain
         # a stat tested or counted ("the enemy Nexus has half its Health or less", "a unit with 5+ Power"): fed by what changes it
         if test in ('stat', 'amount_stat', 'count', 'have', 'amount_count') and at in STAT_EVENTS and not ev:
-            for sev in STAT_EVENTS[at].get(fk if fk == 'player' else 'unit', ()):
+            sevs = STAT_EVENTS[at].get(fk if fk == 'player' else 'unit', ())
+            # the direction it wants: "5+ Life", "faeria equal to its Life" want more (stat changes, healing), "half its Health or
+            # less" wants less (damage, stat changes); damage never feeds a need for more (Feed the Forest)
+            op = r_op.get((card, ab, test, at))
+            if test == 'amount_stat' or op in ('ge', 'gt'): sevs = tuple(e for e in sevs if e not in ('damaged', 'nexus_damaged'))
+            elif op in ('le', 'lt'): sevs = tuple(e for e in sevs if e != 'healed')
+            for sev in sevs:
                 ins(card, o, v, ab, 'condition', sev, fk, fs, fp, w=fw)
         state_rows(card, o, v, ab, fk, fs, fp, fw, fz)
         state_rows(card, o, v, ab, ek, es, None, ew, None)

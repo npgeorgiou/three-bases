@@ -593,3 +593,4 @@ region	Red	region (Faeria colour or card pool)			29 Oct 2026, v35
 region	Yellow	region (Faeria colour or card pool)			29 Oct 2026, v35
 region	Neutral (Human)	region (Faeria colour or card pool)			29 Oct 2026, v35
 region	Pandora	region (Faeria colour or card pool)			29 Oct 2026, v35
+state	struck_player_this_round	hit the enemy player this round (Faeria "a creature that attacked a god this turn")		strikes_nexus	29 Oct 2026, v35

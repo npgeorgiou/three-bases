@@ -28,9 +28,9 @@ def same_kw(c, a, b):
     """the same keyword (combos are found inside one game only)"""
     return a is None or b is None or a == b
 
-def narrow_ok(want, have, c=None):
+def narrow_ok(want, have, c=None, everyone=False):
     """the payoff asks for a specific card, type or keyword ('card is 123'): the enabler's target must name the same one
-    (a keyword: the same one or one of the same concept)"""
+    (a keyword: the same one or one of the same concept); an effect on every unit (everyone) hits each type and keyword"""
     asks = [p for p in (want or '').split(';') if p.split(' ')[:2] in (['card', 'is'], ['type', 'is'], ['keyword', 'is'])]
     hk = [int(p.split(' ')[2]) for p in (have or '').split(';') if p.startswith('keyword is ') and p.split(' ')[2].isdigit()]
     if c is not None:  # a state a keyword gives ("state is stunned"): the enabler must give that keyword or one of its concept
@@ -42,7 +42,8 @@ def narrow_ok(want, have, c=None):
                 if r and hk and not any((c.execute('select lower(name) from card where id=?', (k,)).fetchone() or [''])[0] == r[0].lower()
                                         for k in hk): return False
     for a in asks:
-        if a in (have or '').split(';'): continue  # whole parts only: 'type is 1' is not 'type is 11'
+        if a in (have or '').split(';'): continue
+        if everyone and a.split(' ')[0] in ('type', 'keyword'): continue  # "deal 1 to ALL creatures" also hits the Yaks  # whole parts only: 'type is 1' is not 'type is 11'
         bits = a.split(' ')
         if c is not None and bits[0] == 'keyword' and bits[2].isdigit() and any(same_kw(c, int(bits[2]), k) for k in hk): continue
         return False
@@ -86,18 +87,19 @@ def reasons(c, enabler, payoff):
             for ev, owith in c.execute("select event, of_kind from flat_if where card=? and event in ('played','summoned')", (p,)).fetchall():
                 if ev == 'played' and cat == 'spell': yield (2, 'is: counted as a played spell')
             for m in makers:
-                for act, side, kind, kref, cref, onw in c.execute('select act, on_side, on_kind, keyword_ref, card_ref, on_with from flat_do where card=?', (m,)).fetchall():
+                for act, side, kind, kref, cref, onw, opk in c.execute('select act, on_side, on_kind, keyword_ref, card_ref, on_with, on_pick from flat_do where card=?', (m,)).fetchall():
+                    everyone = opk == 'all' and not any(p.split(' ')[:2] in (['type', 'is'], ['card', 'is'], ['type', 'in']) for p in (onw or '').split(';'))
                     # what the effect itself carries: the keyword it gives or uses (a stun is the keyword Stun)
                     kid = kref or (c.execute("select id from card where is_keyword=1 and lower(name)=?", (act,)).fetchone() or [None])[0]
                     if kid: onw = (onw or '') + f';keyword is {kid}'
                     for (ev,) in c.execute('select event from causes where act=?', (act,)).fetchall():
                         for oside, opick, ow in c.execute('select obj_side, obj_pick, obj_with from flat_when where card=? and event=?', (p, ev)).fetchall():
                             if opick == 'self' and m != p and not (side in ('mine', 'any', None) and kind in ('unit', 'any', 'card', None)): continue  # a card: discarding it
-                            if not narrow_ok(ow, onw, c): continue
+                            if not narrow_ok(ow, onw, c, everyone): continue
                             if agree(side, oside): yield ((7 if opick == 'self' else 5 if m != e else 3), f'event: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else ''))
                         for oside, ow, opick in c.execute('select ev_obj_side, ev_obj_with, ev_obj_pick from flat_if where card=? and event=?', (p, ev)).fetchall():
                             if opick == 'self' and m != p and not (side in ('mine', 'any', None) and kind in ('unit', 'any', 'card', None)): continue  # "I've survived damage": only what hits my units
-                            if agree(side, oside) and narrow_ok(ow, onw, c): yield ((6 if m != e else 4), f'condition: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else ''))
+                            if agree(side, oside) and narrow_ok(ow, onw, c, everyone): yield ((6 if m != e else 4), f'condition: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else ''))
             # a happening the enabler makes that the payoff counts or picks things by (flat_ref: condition, state)
             made = {(h, sd, k, pk) for x in makers for h, sd, k, pk in c.execute("select happening, side, keyword, pick from flat_ref where card=? and role='makes' and origin!='game'", (x,))}
             for h, sd, role, k, pk in c.execute("select happening, side, role, keyword, pick from flat_ref where card=? and role in ('condition','state')", (p,)).fetchall():
@@ -137,6 +139,14 @@ def reasons(c, enabler, payoff):
             for k, sd in c.execute("select of_kind, of_side from flat_if where card=? and test in ('count','have','amount_count')", (p,)).fetchall():
                 if k in made_kinds and agree(sd, 'mine'): yield (8, f'count: {k}')
             if any('of:kind is landmark' in w for w in targets) and 'landmark' in made_kinds: yield (9, 'target: next to a structure')
+            # the payoff acts on all my units (Ulani's Medallion turns them into copies): units put into play are more for it
+            if 'unit' in made_kinds and c.execute("select 1 from flat_do where card=? and on_kind='unit' and on_pick='all' and on_side='mine'", (p,)).fetchone():
+                yield (9, 'target: my units')
+            # the enabler turns my units into copies of a unit I choose: more of the payoff (Ulani's Medallion -> Ruby Yak)
+            pcat0 = (c.execute('select category from card where id=?', (p,)).fetchone() or [''])[0]
+            if pcat0 in ('unit', 'hero') and any(c.execute("select 1 from flat_do where card=? and act in ('transform','copy') and to_kind='unit' and to_side='mine' "
+                                                         "and to_pick='chosen' and coalesce(to_with,'') not like '%card is%'", (x,)).fetchone() for x in makers):
+                yield (8, 'copies: turns my units into copies of it')
             for k, sd in c.execute("select on_kind, on_side from flat_do where card=? and on_kind in ('landmark','unit_or_structure')", (p,)).fetchall():
                 if 'landmark' in made_kinds and agree(sd, 'mine'): yield (9, 'target: structure')
             # a trigger keyword one card acts on ("trigger a unit's Extinguish ability", "repeat all Summon effects") and a trigger of

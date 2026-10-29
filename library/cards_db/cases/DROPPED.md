@@ -9,3 +9,8 @@
 - csb39 Summon Militia -> Kindred's Grace, csb41 Brothers in Arms -> Kindred's Grace (Claude's pairs from the texts):
   Kindred's Grace gives strength to units sharing the target's type, whatever the type; Knights are not named, so the
   pair has no link of its own beyond "more units of one type". The records hold it correctly (state shares_subtype_with_it).
+- cfa04 Gabrian Enchantment -> Oak Father, cfa11 Oakling -> Deepwood Stalker, cfa16 Gift of Steel -> Hilltop Archer (Faeria
+  guides): stat help, not one card setting off another; the combo search finds only that. The two in guide decks are network
+  cases nfa01, nfa02 ("boosts" lines); Enchantment + Oak Father is in no deck found.
+- cfa12 Gabrian Commander -> Triton Trainer (Blue Jump guide, "a strong turn-two play"): no link in the texts; the Trainer
+  buffs the next Jump creature and the Commander has no Jump (Aquatic, Charge 2). Tempo advice, not a combo.

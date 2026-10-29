@@ -1,0 +1,39 @@
+card	name	pattern	requires	text
+741096	Unlikely Hero	V57	value:start_attack	the first time this fights and survives, it gains +3/+3 
+741134	Mystic Beast	V04	value:summon|copy|summoned|revive|summoned_this_round	ift - gains +2/+0 and jump if summoned adjacent to an enemy well.
+741146	Baeru, the First Wave	V13	value:transform|transformed	aquatic production - transform all adjacent lands into lake
+741151	Water Elemental	V03	value:create|copy|created	jump gift - create lake
+741188	Seed Sower	V03	value:create|copy|created	gift - create an adjacent forest at random.
+741189	Vine Wall	V03	value:create|copy|created	taunt last words - create forest at random.
+741195	Wild Growth	V03	value:create|copy|created	create forest at random.
+741198	Wood Elemental	V03	value:create|copy|created	taunt gift - create forest
+741201	Everbloom Wisp	V03	value:create|copy|created	whenever you create forest, this gains +1/+1.
+741201	Everbloom Wisp	V53	value:set_terrain|move|kill	whenever you create forest, this gains +1/+1.
+741230	Axe Grinder	V04	value:summon|copy|summoned|revive|summoned_this_round	gift - gains +1/+1 if summoned adjacent to an opponent's w
+741238	Blood Obelisk	KW	name:combat	ver an enemy creature dies in combat, deal 1 damage to your oppone
+741244	Volcanic Colossus	V20	value:this_game|recalled_this_game|once_per_game	dealt damage to your opponent this game. (minimum cost: 5 faeria).
+741246	Fire Elemental	V03	value:create|copy|created	gift - create mountain
+741289	Air Elemental	V03	value:create|copy|created	flying gift - create desert
+741298	Demon Wrangler	KW	name:flying	her creature, summoning a 5/2 flying  #  in its place.
+741299	Death Walker	V04	value:summon|copy|summoned|revive|summoned_this_round	sacrifice another creature to summon this creature.
+741300	Oath to Oblivion	KW	name:charge	eature. summon a 6/3  #  with charge 3 in its place.
+741352	The World's Tear	V55	value:capture|keyword_action	od this turn into a 10/10 sky swallower with flying.
+741352	The World's Tear	V61	value:this_round	 creature that attacked a god this turn into a 10/10 sky swallower wi
+741422	Spirit Theft	V07	value:kill|killed|dies	rom an enemy creature. if you kill it, add a copy of it to your 
+741439	Rakoan Illusionist	KW	name:charge	riendly  #  into a 4/4 flying charge 2  #  until the start of your
+741439	Rakoan Illusionist	KW	name:flying	other friendly  #  into a 4/4 flying charge 2  #  until the start 
+741445	Shozen, the Sky Eater	KW	name:combat	ozen would kill a creature in combat, instead swallow and gain con
+741460	Barrensky Vulture	V59	value:damage	oy a creature with 1 life and drain its attack.
+741466	Roaming Yak	V03	value:create|copy|created	gift - create a prairie. dash 1
+741483	Compass of Gagana	V14	value:shuffle_into_deck|shuffled	ur deck has no treasure maps, shuffle one into it instead.
+741488	Message in a Bottle	V14	value:shuffle_into_deck|shuffled	shuffle 2 treasure maps into your deck and draw a card.
+741489	Starshell Keeper	V14	value:shuffle_into_deck|shuffled	gift - shuffle a treasure map into your deck and draw a card.
+741491	Fugoro, Captain of the Gagana	V58	value:keyword_action|choose_card	jump whenever you discover a treasure, fugoro gains +3/+
+741502	Keldran Adventurer	V14	value:shuffle_into_deck|shuffled	sh 1 at the end of your turn, shuffle 2 treasure maps into your deck if this is on an en
+741504	Amai Mapdealer	V14	value:shuffle_into_deck|shuffled	gift - shuffle a treasure map into your deck.
+3000005	Royal Judge	V02	value:draw|drawn	choose one: draw a free  #  / draw a free  # .
+3000021	Earthcraft	V13	value:transform|transformed	choose one: transform one of your lands into forest
+3000029	Ring of Dominion	V13	value:transform|transformed	choose one: transform a land to forest. gain contro
+3000032	Seed of Paradise	V03	value:create|copy|created	s over the ocean, it dies and creates forest / when this creature 
+3000034	Path to Paradise	V03	value:create|copy|created	choose one: create forest / create lake / create
+3000037	Blossoming Kodama	V03	value:create|copy|created	gift - create 3 forests at random.

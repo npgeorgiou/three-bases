@@ -199,6 +199,12 @@ def lines_of(c, game):
     for m, ref, act in put:
         out[(m, ref)].append(('puts', 1.0 / putters[ref], {'summon': 'summons', 'create': 'creates', 'copy': 'copies', 'revive': 'brings back',
                                                            'play_card': 'plays', 'keyword_action': 'plants', 'skill': 'casts its skill'}[act]))
+    # a draw that names what it takes from the deck ("draw the top legend", "draw a Beast") finds those cards
+    tutors = [(m, k, w) for m, k, w in c.execute("select card, on_kind, on_with from flat_do where act='draw' and origin='own' and "
+              "coalesce(on_side,'mine')='mine' and coalesce(on_with,'')!=''") if m in cards]
+    for m, k, w in tutors:
+        hit = [t for t, x in cards.items() if t != m and matches(c, game, x, k if k in KIND_CAT else 'any', w)]
+        for t in hit: out[(m, t)].append(('puts', 1.0 / max(1, len(hit)), 'draws it from the deck'))
     for a, b in c.execute("select src, dst from card_link where rel='transforms_into'"):
         if a in cards and b in cards: out[(a, b)].append(('levelsinto', 1.0, 'levels into'))
     # repeats: Allied Attack effects activate twice -> every card with its own Attack effect
@@ -440,7 +446,7 @@ HELPS = [
     (('survives_damage',), ('mine', ''), ('defence_gain', 'shield', 'damage_reduction', 'immunity', 'regeneration', 'heal',
                                          'cheat_death', 'block_armor', 'lifesteal'), 'more health or protection: survives damage'),
 ]
-HIT_KW = ('target_choice', 'excess_damage', 'multi_attack', 'first_strike', 'evasion')  # keywords whose use depends on power
+HIT_KW = ('target_choice', 'excess_damage', 'multi_attack', 'first_strike', 'evasion', 'ranged')  # keywords whose use depends on power
 
 
 def boost_lines(c, game, nodes):
@@ -485,9 +491,17 @@ def boost_lines(c, game, nodes):
     power = having(('attack_gain',), False)
     for t, ab in c.execute(f"select card, ability from flat_if where test in ('stat','amount_stat') and attr='power' and card in ({marks})", L).fetchall():
         for a in power - {t}: out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.5 / count(('attack_gain',)), 'more power' + (' (levels it up)' if ab in lvl else '')))
-    # units whose keywords use their power (Challenger, Overwhelm, Quick Attack, Elusive, Double Attack): power makes them hit harder
+    # a stat it tests high or uses as an amount ("a creature with 5+ Life", "faeria equal to its Life"): more of that stat
+    health = having(('defence_gain',), False)
+    for t, ab in c.execute(f"""select card, ability from flat_if where attr in ('health', 'total_stats') and (test='amount_stat' or
+            (test='stat' and coalesce(op,'') in ('ge','gt'))) and coalesce(of_side,'mine')!='enemy' and card in ({marks})""", L).fetchall():
+        for a in health - {t}: out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.5 / count(('defence_gain',)), 'more health' + (' (levels it up)' if ab in lvl else '')))
+    # units whose keywords use their power (Challenger, Overwhelm, Quick Attack, Elusive, Double Attack, Ranged), and units whose
+    # own effect makes them fight (Faeria "This fights an enemy creature"): power makes them hit harder
     for (t,) in c.execute(f"""select distinct ck.card from card_keyword ck join card k on k.id=ck.keyword join vocab v on v.field='keyword'
-            and v.value in (k.name, k.game || ':' || k.name) where v.tree in ({','.join('?' * len(HIT_KW))}) and ck.card in ({marks})""", list(HIT_KW) + L).fetchall():
+            and v.value in (k.name, k.game || ':' || k.name) where v.tree in ({','.join('?' * len(HIT_KW))}) and ck.card in ({marks})
+            union select card from flat_do where origin='own' and act in ('start_attack','strike') and on_pick='self' and card in ({marks})""",
+            list(HIT_KW) + L + L).fetchall():
         for a in power - {t}:
             if not any(k in ('boosts', 'levels') for k, *_ in out[(a, t)]): out[(a, t)].append(('boosts', 0.25 / count(('attack_gain',)), 'more power: it hits harder'))
     return out

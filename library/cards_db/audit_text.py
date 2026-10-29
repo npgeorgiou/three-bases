@@ -7,7 +7,7 @@ import collections, glob, json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE); import source
 
-PLAYER = {'runeterra': r'Nexus', 'stormbound': r'\bbase\b', 'monster_train': r'\bPyre\b'}
+PLAYER = {'runeterra': r'Nexus', 'stormbound': r'\bbase\b', 'monster_train': r'\bPyre\b', 'faeria': r"\b(?:gods?|opponent)\b(?!'s)"}
 
 
 def parts(rec):
@@ -33,15 +33,15 @@ def rules(game):
     pl = PLAYER[game]
     return [
         # a player named as what an effect or condition is about: some row is about a player
-        ('player named', rf'(?:\b(?:enemy|your|both|the|a|opponent\'s)\s+(?:\w+\s+)?){pl}', lambda r: 'player' in kinds(r) or has(r, 'kind', 'any') or has(r, 'kind', 'anything')),
+        ('player named', rf'(?:\b(?:enemy|your|both|the|a|opponent\'s)\s+(?:\w+\s+)?){pl}', lambda r: 'player' in kinds(r) or has(r, 'kind', 'any') or has(r, 'kind', 'anything') or has(r, 'event', 'strikes_nexus') or has(r, 'event', 'nexus_damaged') or has(r, 'val', 'struck_player_this_round')),
         ('deal damage', r'\b(?:deal|deals|dealt)\s+(?:\d|X\b|that much|damage|\w+ damage)', lambda r: acts(r) & {'damage', 'strike', 'keyword_action', 'excess_damage', 'negate_damage'} or 'damage' in words(r)),
         ('draw', r'\bdraw\s+(?!pile)(?:\d|a\b|an?\b|that|it|them|cards?|X|\w+\b(?! at))', lambda r: acts(r) & {'draw', 'keyword_action', 'put_on_top', 'steal'} or '"draw' in words(r)),
-        ('create', r'\bcreate\b', lambda r: acts(r) & {'create', 'copy', 'keyword_action', 'choose_card', 'random_one'}),
+        ('create', r'\bcreate\b', lambda r: acts(r) & {'create', 'copy', 'keyword_action', 'choose_card', 'random_one', 'set_terrain'} or has(r, 'event', 'terrain_changed')),
         ('summon', r'(?<!you )\bsummon\s(?!effect)', lambda r: acts(r) & {'summon', 'copy', 'revive', 'play_card', 'transform', 'keyword_action', 'create'}),
         ('heal', r'\bheal\b|\brestore\s+\d', lambda r: acts(r) & {'heal', 'keyword_action'} or '"healed"' in words(r)),
         ('kill or destroy', r'(?<!you )(?<!or )\b(?:kill|destroy)\b(?!ed)', lambda r: acts(r) & {'kill', 'obliterate', 'keyword_action', 'strike', 'spend_mana', 'unequip', 'max_mana_change'} or '"killed"' in words(r) or '"dies"' in words(r)),
         ('discard', r'\bdiscard\b(?! pile)', lambda r: acts(r) & {'discard', 'keyword_action'} or 'discard' in words(r)),
-        ('stat gift', r'\+\d+\|\+\d+|\bgive\s+[\d/]+\s+strength|\bgain\s+[\d/]+\s+strength|\+\d+ (?:Attack|Health)\b', lambda r: acts(r) & {'stat_change', 'grow', 'give_keyword', 'keyword_action', 'increase_effect'}),
+        ('stat gift', r'\+\d+[|/]\+\d+|\bgive\s+[\d/]+\s+strength|\bgain\s+[\d/]+\s+strength|\+\d+ (?:Attack|Health)\b', lambda r: acts(r) & {'stat_change', 'grow', 'give_keyword', 'keyword_action', 'increase_effect'}),
         ('cost less', r'\bcosts?\s+[\dX]+\s+less|\breduce\s+(?:its|their|the)\s+cost|\bcost\s+-\d', lambda r: acts(r) & {'cost_change', 'cost_set'}),
         ('this round', r'\bthis round\b', lambda r: 'this_round' in words(r)),
         ('everywhere', r'\beverywhere\b', lambda r: 'everywhere' in words(r)),
@@ -49,6 +49,11 @@ def rules(game):
         ('random', r'\brandom', lambda r: 'random' in words(r) or 'spread' in words(r)),
         ('spells and Skills', r'spells?,?\s+(?:and|or)\s+skills?', lambda r: '"skill"' in words(r)),
         ('level up', r'\bLevel up:', lambda r: 'level_up' in acts(r)),
+        # board words (Faeria lands, wells, adjacency); a game without them never matches
+        ('this turn', r'\bthis turn\b', lambda r: 'this_round' in words(r) or 'this_turn' in words(r)),
+        ('land act', r'\b(?:create|transform|destroy|move)\b[^.]{0,30}\b(?:lands?|forests?|lakes?|mountains?|deserts?|prairies?)\b', lambda r: acts(r) & {'set_terrain', 'move', 'steal'} or '"terrain"' in words(r)),
+        ('adjacent', r'\badjacent\b', lambda r: '"bordering"' in words(r)),
+        ('harvest', r'(?<!can )(?<!can\'t )\bharvest', lambda r: 'harvest' in words(r)),
         ('double', r'\bdouble\b(?! attack)', lambda r: re.search(r'event_amount|double|"x": ?"stat"|times|"x": ?"count"', words(r)) or acts(r) & {'repeat', 'copy'}),
     ] + ([('Rally', r'\bRally\b', lambda r: acts(r) & {'gain_attack_token', 'keyword_action'})] if game == 'runeterra' else [])  # Monster Train's Rally is a trigger
 
