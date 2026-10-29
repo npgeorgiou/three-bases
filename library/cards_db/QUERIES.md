@@ -112,7 +112,7 @@ select distinct card from flat_concept where concept='lifesteal'
 select distinct card from flat_ref where happening='given_keyword' and role!='makes'
 ```
 - faeria: 12 cards: Destructive Volley, Drakkar Skycaptain, Enslaved Priest, Fugoro, Captain of the Gagana, Gift of Steel, Golden Aviary, Herald of War, Imperial Engineer ...
-- inscryption: 19 cards: Bleene's Mox, Bleene's Vessel, Blue Mox, Emerald Mox, Emerald Power, Emerald Vessel, Goranj's Mox, Goranj's Vessel ...
+- inscryption: 23 cards: Ant Queen, Ants, Bleene's Mox, Bleene's Vessel, Blue Mox, Emerald Mox, Emerald Power, Emerald Vessel ...
 - monster_train: 90 cards: Alloy of the Ancients, Alloyed Construct, Apex Imp, Armor, Attuned, Awake, Battering Ram, Big Sludge ...
 - runeterra: 111 cards: Animate, Arbiter of the Peak, Aspect of the Dragon, Ava Achiever, Balen the Benevolent, Big Game Tycoon, Caitlyn, Caitlyn (level 2) ...
 - stormbound: 26 cards: Acid Greenhorns, Amberhides, Big Sisters of Growth, Brood Sages, Copperskin Ranger, Crimson Sentry, Function Wilds, Green Prototypes ...
@@ -123,7 +123,7 @@ select distinct card from flat_ref where happening='given_keyword' and role!='ma
 select distinct card from flat_do where params glob '*=[a-z]*'
 ```
 - faeria: 245 cards: Air Elemental, Airbot, Amai Merchant, Ancient Boar, Ancient Gargoyle, Animated Banquet, Annoying Gnat, Apex Predator ...
-- inscryption: 80 cards: !CORRUPTED, Ancient Fir, Aquasquirrel, Armored, Bell Ringer, Bell Tentacle, Blue Mage, Blue Sporemage ...
+- inscryption: 84 cards: !CORRUPTED, Ancient Fir, Ant Queen, Ants, Aquasquirrel, Armored, Bell Ringer, Bell Tentacle ...
 - monster_train: 166 cards: A Fatal Melting, Adaptive Mutation, Alloy of the Ancients, Alloyed Construct, Ambient Charge, Ancient Resonance, Ancient Synergy, Apex Imp ...
 - runeterra: 698 cards: Absorb Soul, Abyssal Eye, Abyssal Guard, Acolyte's Reliquary, Acorn, the Hextechnician, Adnere's Aviarists, Advance, Advanced Intel ...
 - stormbound: 56 cards: Agile Warriors, Amberhides, Awakening of the Will, Beards of Crowglyph, Bigthrust Tigers, Blizzard Bombs, Booming Professors, Brood Sages ...
@@ -136,26 +136,26 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 - passive: monster_train 8 cards, runeterra 18 cards, stormbound 8 cards
 - cheat_death: runeterra 7 cards
 - silence: stormbound 8 cards
-- movement: monster_train 6 cards
 - forced_movement: monster_train 6 cards
+- movement: monster_train 6 cards
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: faeria 1183 pairs, e.g. Feed the Forest -> Long-horned Yak; inscryption 496 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 354 pairs, e.g. Little Fade -> Primordium; runeterra 12658 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- sacrifice: faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Fishbot; monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5616 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- self_destruct: faeria 735 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 350 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6935 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
+- destroy: faeria 1183 pairs, e.g. Feed the Forest -> Long-horned Yak; inscryption 491 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 354 pairs, e.g. Little Fade -> Primordium; runeterra 12658 pairs, e.g. Shark Chariot -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- sacrifice: faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Master Bleene -> Shield Latcher; monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5616 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- self_destruct: faeria 735 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 350 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6935 pairs, e.g. Shark Chariot -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
 - removal: faeria 320 pairs, e.g. Death's Desire -> Long-horned Yak; monster_train 93 pairs, e.g. Wicked Blaze -> Primordium; runeterra 3855 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Embers of Chaos
-- revive: inscryption 27 pairs, e.g. Necromancer -> Fishbot; runeterra 1035 pairs, e.g. Eternal Dancers -> Bladepierced Revenant
-- damage: inscryption 267 pairs, e.g. Good Fish -> Burrowing Trap; runeterra 13474 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 686 pairs, e.g. Eloth the Ignited -> Dreadful Keepers
+- revive: inscryption 27 pairs, e.g. Necromancer -> Shield Latcher; runeterra 1035 pairs, e.g. Chronobreak -> Bladepierced Revenant
+- ping: faeria 417 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 135 pairs, e.g. Good Fish -> Burrowing Trap; runeterra 5507 pairs, e.g. Anivia -> Bladepierced Revenant; stormbound 197 pairs, e.g. Acid Greenhorns -> Marked as Prey
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
 - summon -> card_presence_condition -> on_attack (seen in runeterra, stormbound)
 - summon -> tribal -> cost_reduction (seen in runeterra, stormbound)
-- summon -> on_ally_play -> free_play (seen in inscryption, runeterra)
 - summon -> terrain -> cant_attack (seen in runeterra)
 - summon -> tribal -> card_presence_condition (seen in runeterra, stormbound)
 - summon -> card_presence_condition -> direct_damage (seen in inscryption, runeterra)
+- summon -> tribal -> on_draw (seen in runeterra)
 
 ## A deck explained (`ask.py runeterra analyze "..."`), a Lucian/Senna deck from a deck guide
 
@@ -171,14 +171,14 @@ Supports your units (stats, protection, combat keywords): Piercing Darkness, Sen
 Card flow (draw, create, choose): Glimpse Beyond, Lonely Chimeslime, Senna, Spirit Leech.
 Puts extra units into play: Cursed Keeper, Hapless Aristocrat, The Undying.
 Units that support cards can target: 9 (Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, Lucian, Ravenous Butcher, Senna, Senna, Sentinel of Light, Spirit Leech, The Undying).
-Key cards (in most of the plan): Senna, The Ruination, Spirit Leech, Crumble, Ravenous Butcher.
+Key cards (in most of the plan): Senna, Spirit Leech, The Ruination, Crumble, Ravenous Butcher.
 Weak spots: none found.
 ```
 
 ## Decks: cards of one game that feed each other
 
 - `ask.py stormbound deck "Wisp Cloud"` (Neutral, Winter): Wisp Cloud, Orgone Leechers, Frosthexers, Spellbinder Zhevana, Icicle Burst, Midwinter Chaos, Blizzard Bombs, Iceflakes, Agile Warriors, Erratic Neglects, Lost Psyches, Va’vel the Looper
-- `ask.py stormbound deck "Doppelbocks"` (Neutral, Swarm): Doppelbocks, Faun Companions, Swarmcallers, Moonlit Aerie, Siegebreakers, Queen of Herds, Headless Hotheads, Sparkly Kitties, Catnip’s Charm, Angelic Tikas, Lost Psyches, Agile Warriors
+- `ask.py stormbound deck "Doppelbocks"` (Neutral, Swarm): Doppelbocks, Faun Companions, Swarmcallers, Moonlit Aerie, Siegebreakers, Queen of Herds, Trusty Shepherds, Beards of Crowglyph, Prime Oracle Bragda, Noble Vigilantes, Bucks of Wasteland, Counselor Ahmi
 - `ask.py runeterra deck "Kalista"` (Neutral, Shadow Isles): Kalista, Darkwater Scourge, Mask Mother, Unspeakable Horror, Shark Chariot, Camavoran Dragon, Crawling Viperwyrm, Kindred, Mistkeepers, Harrowing Return, Amalgamation Of Vile Rites, Eternal Dancers, The Iron Conquest, Black Spear
 
 ## Same effect, compare cost: deal damage to anything (unit, structure or player), cheapest first
@@ -201,6 +201,15 @@ select distinct card from flat_do where act='copy_keywords'
 
 ## What each faction or region leans on (concepts with the highest share of its cards vs its game)
 
+- duelyst Lyonar Kingdoms: 
+- duelyst Songhai Empire: 
+- duelyst Vetruvian Imperium: 
+- duelyst Abyssian Host: 
+- duelyst Magmar Aspects: 
+- duelyst Vanar Kindred: 
+- duelyst Neutral: 
+- duelyst Boss: 
+- duelyst Tutorial: 
 - faeria Neutral (Human): death_count (4), cost_set (6), damage_prevention (9), shield (7), taunt (15)
 - faeria Blue: on_harvest (5), stat_multiply (6), turn_end (10), transform (4), on_draw (5)
 - faeria Green: taunt (12), random_effect (12), terrain (9), defence_gain (35), death_trigger (10)

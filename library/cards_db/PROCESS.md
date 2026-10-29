@@ -355,6 +355,10 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
    sacrificed for (pick actor of event sacrificed): network.actor_help_lines gives them a line to every card of the deck that
    needs that happening (M3atB0t makes Urayuli cheaper, case ni06). An ability that spends a resource ("Activate: pay 1
    Bone") needs it like a cost does (refs.py; Bone Lord's Horn -> Tomb Robber, ni07). A cost of 0 ("0 Blood") is no need (ni08).
+10. **A keyword entry without its definition.** The library kept only the wiki's pointer line for Ants and Ant ("This
+   article is about the variable stat..."), so the readers wrote nothing and no Ant counted the others. The definitions now
+   come from the wiki pages (supplement), audit_links.py check 6 lists any such entry, case ni11. Where a new card is put
+   ("Pelt Lice in adjacent slots") needs no units to move (refs.py PLACES, ni12).
 
 ## Think like a player (read before showing any network, any deck explanation, any answer about synergy)
 Kaptain checks a few decks and finds errors a player sees at once. Before showing anything, do what he does:

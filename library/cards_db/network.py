@@ -444,6 +444,8 @@ def need_lines(c, game, nodes, broad):
     for t, kind, w in needs:
         cnt = kind_count(c, game, kind, w)
         what = 'a card it acts on' if kind == 'any' else f'a {"landmark or structure" if kind == "landmark" else kind} it asks for'
+        kws_ = [mechanics.name(c, int(p.split(' ')[2])) for p in (w or '').split(';') if p.startswith('keyword is ') and p.split(' ')[2].isdigit()]
+        if kws_ and kind != 'any': what = what.replace(' it asks for', f' with {", ".join(kws_)} it counts or asks for')  # "a unit with Ant
         for a in nodes:
             if a == t or a not in cards: continue
             if matches(c, game, cards[a], kind, w): out[(a, t)].append(('type', 1.0 / cnt, 'is ' + what))

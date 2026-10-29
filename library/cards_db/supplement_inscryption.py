@@ -95,6 +95,16 @@ WIKI_SIGILS = [
 ]
 
 
+# library keyword entries that kept only the wiki's disambiguation line ("This article is about the trait..."): the
+# definitions from the wiki pages Ants (rev 11767) and Ant (rev 11809), read 29 Oct 2026; they replace the entries (same code)
+REPLACE_KEYWORDS = [
+    ('Ants', 'variable stat', "Ants is a variable stat representing the Power of certain cards: a card with it has Power equal "
+                              "to the number of ants on their side of the board (cards with the Ant trait)."),
+    ('Ant', 'trait', "Ant is a trait: cards bearing it are counted for the Ants Power stat; the number of cards with the Ant "
+                     "trait determines the Power of cards with the Ants Power stat."),
+]
+
+
 def links_in(v):
     """[[A]] or [[A|B]] -> names: the link target for sigils (the library's entry names), the label otherwise."""
     return [(a, b or a) for a, b in re.findall(r'\[\[([^\]|]+)(?:\|([^\]]+))?\]\]', v or '')]
@@ -234,6 +244,10 @@ def main():
             'source_type': f'sigil (Inscryption fandom wiki page {pg}, read 29 Oct 2026, supplement)', 'edition': None,
             'faction': None, 'subtypes': None, 'rarity': None, 'cost': None, 'cost_num': None, 'stats': None, 'text': t,
             'extra': None, 'variants': None} for n, t, pg in WIKI_SIGILS if n.lower() not in libkw]
+    sig += [{'game': 'inscryption', 'ext_id': n, 'name': n, 'category': 'keyword',
+             'source_type': f'{kind} (Inscryption fandom wiki page {n}, read 29 Oct 2026, supplement)', 'edition': None,
+             'faction': None, 'subtypes': None, 'rarity': None, 'cost': None, 'cost_num': None, 'stats': None, 'text': t,
+             'extra': None, 'variants': None} for n, kind, t in REPLACE_KEYWORDS]
     out = cards + sig
     for e in out:
         e['id'] = old.get(e['ext_id']) or nxt

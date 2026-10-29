@@ -5,10 +5,12 @@ or fix every line it prints). Found by Kaptain's check of the deck networks (29 
   2 keywords without a vocab concept row, and keyword conditions or action keywords whose record has no rows
   3 champions with a level-up condition but no level-up form (cards the source lacks: take them from the game's data)
   4 cards named in effects (summon X, plant X) that are no card of the game
+  6 keyword entries that hold no definition, only a pointer to other pages (Inscryption's Ants and Ant kept just "This
+    article is about the variable stat..."; the readers wrote nothing, so Ant Queen did not count Ants)
   5 cards of a guide deck (decks.tsv, cases/decks.tsv) that are no card of the game: the game's card list is not whole (the
     library merged Inscryption cards with the same text and dropped cards without sigils: Hawk, Wolf, Coyote)
 Usage: audit_links.py <game> [...]"""
-import collections, csv, os, sqlite3, sys
+import collections, csv, os, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import deck_analysis
 c = sqlite3.connect(os.path.join(HERE, 'cards.sqlite'))
@@ -53,6 +55,10 @@ def audit(g):
             if r['game'] != g: continue
             miss = deck_analysis.parse_deck(c, g, r['cards'])[1]  # read as the networks read it
             if miss: out.append(f"5 deck {r['deck']} names {len(miss)} cards that are no card: " + ', '.join(miss[:6]))
+    import source
+    for n, t in source.lib().execute("select name, text from entities where game=? and category='keyword'", (g,)):
+        t = ' '.join((t or '').split())
+        if re.fullmatch(r"(?:This (?:article|page) is about [^.]*\.\s*(?:For [^.]*\.\s*)*)", t): out.append(f'6 keyword {n} has no definition, only: {t[:80]}')
     return out
 
 

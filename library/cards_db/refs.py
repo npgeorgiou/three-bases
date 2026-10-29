@@ -20,6 +20,7 @@ SCHEMA = """create table flat_ref(card integer, origin text, via integer, abilit
 create index frh on flat_ref(happening, role); create index frc on flat_ref(card); create index frk on flat_ref(concept, role);"""
 
 
+PLACES = {'summon', 'play_card', 'create', 'copy', 'revive', 'transform', 'keyword_action'}  # acts that put a card somewhere
 UNIT_ONLY = {'dies', 'killed', 'survives_damage', 'summoned', 'revived', 'leaves_play', 'strikes', 'attacks', 'blocks'}  # never a player's
 PLAYER_ONLY = {'nexus_damaged'}  # only a player's
 OPEN_KINDS = {None, '', 'player', 'any', 'anything'}
@@ -138,7 +139,8 @@ def build(c):
             # an ability that spends a resource needs it ("Activate: Pay 2 Bones"): fed by gaining it; the card's own need
             ins(card, o, v, None if o == 'has_keyword' else ab, 'condition', 'mana_refilled', k, 'mine', None, w=w)
         state_rows(card, o, v, ab, k, s, p, w, z)
-        if to_w and re.search(r'(?<![a-z:])position ', to_w): ins(card, o, v, ab, 'state', 'moves', to_k, s, None, w=to_w)  # "attack a bordering enemy"
+        if to_w and re.search(r'(?<![a-z:])position ', to_w) and act not in PLACES:  # "attack a bordering enemy"; where a new card is put
+            ins(card, o, v, ab, 'state', 'moves', to_k, s, None, w=to_w)                # ("Pelt Lice in adjacent slots") needs no moves
     # the game's rules (read/<game>/game_rules.jsonl): what every card of a category does without its text saying so (an
     # attacking unit hits the enemy Nexus when it is not blocked); its makes rows, about "self", become every such card's own
     for e, cat, cost_has in c.execute('select entry, category, cost_has from game_rule').fetchall():

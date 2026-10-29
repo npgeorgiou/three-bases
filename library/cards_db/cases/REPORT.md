@@ -1,7 +1,7 @@
 # Case tests: inscryption
 
 Made by `cases/run.py inscryption`.
-**16 of 16 cases pass.**
+**18 of 18 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -44,3 +44,5 @@ Made by `cases/run.py inscryption`.
 | ni08 | Kaycee's Mod Bones | Coyote | Pelts (Rabbit) | none sacrificed | - | yes |
 | ni09 | Act II Ouroboros and Mantis God (koi) | Mantis God | Ouroboros | line  | waits: sacrificed (pays its cost) (by the game's rule: units can be sacrificed); | yes |
 | ni10 | Act II Ouroboros and Mantis God (koi) | Ouroboros | Mantis God | none Blood costs | waits: sacrificed (pays its cost) (by the game's rule: units can be sacrificed) | yes |
+| ni11 | Kaycee's Mod Ants | Ant Queen | Flying Ant | line  | type: is a unit with Ant it counts or asks for; waits: sacrificed (pays its cost | yes |
+| ni12 | Kaycee's Mod Moose Blood | Moose Buck | Pelts (Rabbit) | none your units move | - | yes |

@@ -75,3 +75,5 @@ ni07	inscryption	Act II bones and sacrifice (Archeronline4U)	Bone Lord's Horn	To
 ni08	inscryption	Kaycee's Mod Bones	Coyote	Pelts (Rabbit)	none	sacrificed	Claude (v36): a Pelt costs 0 Blood, so it needs no sacrifice (a cost rule needs a cost above 0)
 ni09	inscryption	Act II Ouroboros and Mantis God (koi)	Mantis God	Ouroboros	line		Claude (v36): playing Mantis God sacrifices Ouroboros, which grows each time it dies (special behaviour Ouroboros)
 ni10	inscryption	Act II Ouroboros and Mantis God (koi)	Ouroboros	Mantis God	none	Blood costs	Claude (v36): Ouroboros paying its own Blood cost pays nothing for Mantis God
+ni11	inscryption	Kaycee's Mod Ants	Ant Queen	Flying Ant	line		Claude (v36): Flying Ant's Power is the number of Ants; Ant Queen is an Ant (wiki pages Ants, Ant)
+ni12	inscryption	Kaycee's Mod Moose Blood	Moose Buck	Pelts (Rabbit)	none	your units move	Claude (v36): where Pelt Lice are put (adjacent slots) does not need units to move
