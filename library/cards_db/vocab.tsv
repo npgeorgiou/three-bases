@@ -773,3 +773,4 @@ region	Abyssian Host	region (Duelyst faction; "Neutral" = neutral cards)			29 Oc
 region	Magmar Aspects	region (Duelyst faction; "Neutral" = neutral cards)			29 Oct 2026, v37 (Duelyst)
 region	Vanar Kindred	region (Duelyst faction; "Neutral" = neutral cards)			29 Oct 2026, v37 (Duelyst)
 region	Neutral	region (Duelyst faction; "Neutral" = neutral cards)			29 Oct 2026, v37 (Duelyst)
+act	refresh	a used spell or ability can be used again now (Duelyst "refresh your Bloodbound Spell")	cooldowns		29 Oct 2026, v37 (Duelyst)

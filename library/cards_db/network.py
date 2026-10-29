@@ -502,8 +502,8 @@ def boost_lines(c, game, nodes):
             ('own','uses_keyword') and coalesce(on_side,'mine')='mine' and (coalesce(on_zone,'')='hand' or coalesce(eff_zone,'')='hand' or ?)
             and card in ({marks})""", list(acts) + [zone] + L)}
     for t, ab, op, n_ in c.execute(f"""select card, ability, op, n from flat_if where of_zone='hand' and coalesce(of_side,'mine')='mine'
-            and test in ('count','amount_count') and card in ({marks})""", L).fetchall():
-        few = op in ('eq', 'le', 'lt') and (n_ or 0) <= 1
+            and test in ('count','amount_count','have') and card in ({marks})""", L).fetchall():
+        few = (op in ('eq', 'le', 'lt') and (n_ or 0) <= 1) or op == 'not'  # "no cards in hand" (have not, N22)
         helpers = hand(('discard',), 0) if few else hand(('create', 'copy', 'return_to_hand'), 0) | hand(('draw',), 1)  # a draw goes to hand
         for a in helpers - {t}:
             out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.3, ('empties your hand' if few else 'fills your hand') + (' (levels it up)' if ab in lvl else '')))

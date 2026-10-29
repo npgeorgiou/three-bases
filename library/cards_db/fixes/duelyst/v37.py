@@ -15,7 +15,16 @@
 - New values (v37): "reactivate" = act ready (was can attacks this_round); "non-token" = state not token; "nearest" /
   "closest" = pick nearest (was chosen); a faction named ("Songhai spell", "Vetruvian artifacts", "Magmar minion",
   "neutral minion") = filter region on what is created, summoned or equipped; "becomes your General" / "becomes their new
-  General" = become_leader (was transform to the player). The unsure marks these needs set are removed."""
+  General" = become_leader (was transform to the player). The unsure marks these needs set are removed.
+- Keywords the readers made of verbs: Reactivate = act ready, Refresh (a Bloodbound Spell) = act refresh, Hatch (an Egg) =
+  transform of the Egg. "Walls" a card summons are that card's own wall token ("<card> (token)"). Cards whose undefined word
+  was dropped (names.tsv: Assimilate, Ascension, Promote, Doomed) are unsure (act). Rebirth's Egg is Chrysalis Egg.
+- Written by Claude from the game's own descriptions of the effect (open-duelyst factories, emblem appliedDescription and
+  modifiers.json doomed_3_def): Grand Strategos' Destiny "At the end of your turn, transform friendly minions other than Grand
+  Strategos into faction minions that cost 1 more"; Notion of Starless Eternity's Destiny "Each equipped artifact gives your
+  General a tier of ascension: Frenzy, Flying, Celerity"; Doom "Will die after three turns" (the delay is unsure).
+- Second reading kept where it was right (compare.py, 29 Oct 2026): Synaptic Arbitrage gives the opponent one chosen minion,
+  then takes the enemy minions around it with less Attack (the first reading donated them all)."""
 import glob, json, os, re, sys
 HERE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, HERE); import source
@@ -37,7 +46,7 @@ def bbs_type(d):
         if w.get('attr') == 'type' and w.get('ref') == 'Bloodbound Spell': w['attr'] = 'keyword'
 
 
-WINDOW = re.compile(r"\b(?:whenever|if|after|when|other minions you summon|the next)\b[^.]*\bthis turn\b", re.I)
+WINDOW = re.compile(r"\b(?:whenever|if|after|when|other minions you summon|the next)\b[^,.]*\bthis turn\b", re.I)
 
 
 def own_trigger(a):
@@ -124,8 +133,47 @@ def new_values(r, t):
         if not r['unsure']: r.pop('unsure')
 
 
+VERB = {'reactivate': 'ready', 'refresh': 'refresh', 'hatch': 'transform'}
+NAME = {i: n for i, n in lib.execute("select id, name from entities where game='duelyst'")}
+NAMES = set(NAME.values())
+UNDEFINED = re.compile(r'\b(?:assimilates?|ascension|promote|doomed)\b', re.I)
+
+
+def verbs(r, t):
+    def f(e):
+        k = (e.get('keyword') or '').lower()
+        if e.get('act') == 'keyword_action' and k in VERB:
+            e['act'] = VERB[k]; e.pop('keyword')
+        if e.get('card') == 'Egg': e['card'] = 'Chrysalis Egg'
+        if e.get('card') == 'Wall' and f"{NAME.get(r.get('id'))} (token)" in NAMES: e['card'] = f"{NAME[r['id']]} (token)"
+    for a in r.get('abilities', []):
+        for e in a.get('do', []):
+            f(e)
+            if isinstance(e.get('ability'), dict):
+                for e2 in e['ability'].get('do', []): f(e2)
+    if UNDEFINED.search(t) and 'act' not in r.get('unsure', []): r.setdefault('unsure', []).append('act')
+
+
+ID = {n: i for i, n in NAME.items()}
+ME = {'kind': 'player', 'side': 'mine'}
+
+
 def direct(r):
     i = r.get('id')
+    if i == ID['Grand Strategos'] and 'transform' not in json.dumps(r):
+        r['abilities'].append({'when': {'event': 'turn_end', 'actor': dict(ME)}, 'do': [{'act': 'transform', 'on': {
+            'kind': 'unit', 'side': 'mine', 'pick': 'all', 'zone': 'board', 'with': [{'attr': 'card', 'op': 'not', 'ref': 'Grand Strategos'}]},
+            'to': {'kind': 'unit', 'pick': 'random', 'with': [{'attr': 'region', 'op': 'is', 'val': 'Lyonar Kingdoms'}, {'attr': 'cost', 'op': 'eq',
+            'n': {'x': 'sum', 'items': [{'x': 'stat', 'attr': 'cost', 'of': {'pick': 'it'}}, 1]}}]}}]})
+        r.pop('unsure', None)
+    if i == ID['Notion of Starless Eternity'] and 'Celerity' not in json.dumps(r):
+        for n, k in ((1, 'Frenzy'), (2, 'Flying'), (3, 'Celerity')):
+            r['abilities'].append({'when': {'event': 'always'}, 'if': [{'test': 'count', 'of': {'kind': 'equipment', 'side': 'mine',
+                'zone': 'attached'}, 'op': 'ge', 'n': n}], 'do': [{'act': 'give_keyword', 'keyword': k, 'on': dict(ME), 'lasts': 'while'}]})
+        r['unsure'] = ['test']  # "reaches the other edge of the battlefield" has no value
+    if i == ID['Doom'] and not r.get('abilities'):
+        r['abilities'] = [{'when': {'event': 'played', 'object': {'pick': 'self'}}, 'do': [{'act': 'kill', 'on': {'kind': 'player', 'side': 'enemy'}}]}]
+        r['unsure'] = ['when']  # "after three turns": no delay value
     if i == 5000653:  # Scion of the Void
         r['abilities'] = [a for a in r['abilities'] if 'double_strike' not in json.dumps(a)]
         if 'increase_effect' not in json.dumps(r):
@@ -135,6 +183,13 @@ def direct(r):
         for a in r['abilities']:
             for e in a.get('do', []):
                 if e.get('on', {}).get('pick') == 'chosen': e['on']['pick'] = 'random'
+    if i == ID['Synaptic Arbitrage'] and '"steal"' not in json.dumps(r):
+        r['abilities'] = [{'when': {'event': 'played', 'object': {'pick': 'self'}}, 'do': [
+            {'act': 'donate', 'on': {'kind': 'unit', 'side': 'mine', 'pick': 'chosen', 'zone': 'board'}},
+            {'act': 'steal', 'on': {'kind': 'unit', 'side': 'enemy', 'pick': 'all', 'zone': 'board', 'with': [
+                {'attr': 'position', 'op': 'is', 'val': 'surrounding', 'of': {'pick': 'it'}},
+                {'attr': 'power', 'op': 'lt', 'n': {'x': 'stat', 'attr': 'power', 'of': {'pick': 'it'}}}]}, 'link': 'then'}]}]
+        r.pop('unsure', None)
     if i == SOBORO:  # "Whenever this damages a neutral minion, destroy that minion"
         for a in r['abilities']:
             o = (a.get('when') or {}).get('object') or {}
@@ -168,6 +223,7 @@ for p in sorted(glob.glob(os.path.join(HERE, 'read', 'duelyst', '*.jsonl'))) + s
         before = json.dumps(r, sort_keys=True)
         this_turn(r, text.get(r.get('id'), ''))
         new_values(r, text.get(r.get('id'), ''))
+        verbs(r, text.get(r.get('id'), ''))
         direct(r)
         n += json.dumps(r, sort_keys=True) != before
     open(p, 'w').write(''.join(json.dumps(r, separators=(',', ':')) + '\n' for r in recs))

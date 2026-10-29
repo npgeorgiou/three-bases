@@ -64,7 +64,9 @@ def audit(g):
     for n, t in source.lib().execute("select name, text from entities where game=? and category='keyword'", (g,)):
         t = ' '.join((t or '').split())
         if re.fullmatch(r"(?:This (?:article|page) is about [^.]*\.\s*(?:For [^.]*\.\s*)*)", t): out.append(f'6 keyword {n} has no definition, only: {t[:80]}')
-    for n, cnt in c.execute("select name, count(*) from card where game=? and is_stub=0 group by lower(name) having count(*) > 1", (g,)):
+    # a keyword and a tribe (Structure) or a keyword and a spell (Dispel) may share a name: a filter names its kind
+    for n, cnt in c.execute("select name, count(*) from card where game=? and is_stub=0 group by lower(name), is_keyword, "
+                            "category='tribe' having count(*) > 1", (g,)):
         out.append(f'7 {cnt} cards are called {n}')
     rules = os.path.join(HERE, 'read', g, 'game_rules.jsonl')
     md = os.path.join(HERE, '..', 'tools', 'games', g + '.md')

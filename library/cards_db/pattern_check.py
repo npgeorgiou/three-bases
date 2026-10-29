@@ -15,7 +15,10 @@ import source
 KW_EQUIV = {'landmark': 'landmark', 'equipment': 'equipment|attach|attached_to|equipped|unequip', 'equip': 'attach|equipped|attached_to|equipment',
             'rally': 'gain_attack_token', 'advance': 'countdown_advance', 'behold': 'have', 'ephemeral': 'ephemeral',
             'fleeting': 'fleeting', 'capture': 'capture', 'frostbite': 'frostbitten', 'vulnerable': 'vulnerable',
-            'consume': 'exhausted|exhaust'}
+            'consume': 'exhausted|exhaust',
+            # Duelyst tiles are terrain values (BRIEF Game words: Duelyst)
+            'shadow creep': 'damage_space|set_terrain', 'hallowed ground': 'heal_space|set_terrain', 'exhuming sand': 'summon_space|set_terrain',
+            'primal flourish': 'growth_space|set_terrain', 'mana spring': 'bonus_mana_space|set_terrain'}
 
 def patterns(game):
     return [r for r in csv.DictReader(open(os.path.join(HERE, 'patterns', 'patterns.tsv')), delimiter='\t')
@@ -90,6 +93,7 @@ def main():
             if any(re.search(p['wording'], k) for p in pats): continue  # a keyword used as a verb is checked by its verb pattern
             if k in KW_EQUIV and set(KW_EQUIV[k].split('|')) & got['value']: continue
             if k in trig and trig[k] in got['event']: continue
+            if re.search(r'(?:^|[.:!?] )' + re.escape(k) + r':', rest): continue  # a label ("Intensify:", "Build: (2)."): load.py links it
             flags.append((i, x['name'], 'KW', 'name:' + k, rest[max(0, rest.find(k) - 30):rest.find(k) + len(k) + 30]))
     flags = [f for f in flags if (f[0], f[2]) not in judged and (f[0], f[2] + ':' + f[3]) not in judged]
     out = os.path.join(HERE, 'patterns', game + '_flags.tsv')

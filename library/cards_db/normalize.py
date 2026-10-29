@@ -27,6 +27,14 @@ and second readings). Safe to run any number of times. Each rule is listed in CH
   N16 "moves": the unit that moves is the event's object (vocab), never its actor; "on actor" in that ability is "on it"
     (Inscryption Sentry, second reading, 29 Oct 2026).
   N17 giving up my own unit ("sacrifice a creature", "you must sacrifice") is act sacrifice, not kill (one form in every game).
+  N18 side "any" is no side: a target that may be on either side has no side (Duelyst "ANY minion"; second reading).
+  N19 "can't be targeted by spells / enemy spells": the cant is on what cannot target (the spells), "to" is what is protected
+     (BRIEF rule 12: on = what cannot act); a cant targeted whose "on" is a unit or player and whose "to" is a spell or card
+     is turned round (Aegis Barrier, War Judicator were read both ways).
+  N20 a summon of a dead unit (on: zone discard) is revive (same meaning as N8 for copy).
+  N21 a stat change of 0 ("power -3, health 0") lists only the stats that change.
+  N22 "if you have X" is test have: a count of X with op ge n 1 is have (op is), with op eq n 0 or lt n 1 is have (op not)
+     (Lava Lance was read both ways).
   N10 "strongest" / "weakest" are pick highest / lowest by the attack stat: power, or strength in games whose units have
      one stat (Stormbound). One form in every game.
 Usage: normalize.py <game> <file.jsonl> [...]   rewrites the files in place, prints how many records changed."""
@@ -247,6 +255,25 @@ def trap_events(x):
         for v in x: trap_events(v)
 
 
+def second_forms(x):
+    """N18-N22"""
+    if isinstance(x, dict):
+        if x.get('side') == 'any': x.pop('side')
+        if x.get('test') == 'count' and 'of' in x and not x.get('span') and not x.get('attr'):
+            if x.get('op') == 'ge' and x.get('n') == 1: x['test'] = 'have'; x['op'] = 'is'; x.pop('n')
+            elif (x.get('op') == 'eq' and x.get('n') == 0) or (x.get('op') == 'lt' and x.get('n') == 1): x['test'] = 'have'; x['op'] = 'not'; x.pop('n')
+        if x.get('act') == 'cant' and (x.get('params') or {}).get('event') == 'targeted':
+            o, t = x.get('on') or {}, x.get('to') or {}
+            if o.get('kind') in ('unit', 'player', 'any', None) and o.get('pick') != 'all' or o.get('kind') in ('unit', 'player', 'any'):
+                if t.get('kind') in ('spell', 'card'): x['on'], x['to'] = t, o
+        if x.get('act') == 'summon' and (x.get('on') or {}).get('zone') == 'discard' and not x.get('card'): x['act'] = 'revive'
+        if x.get('act') == 'stat_change' and isinstance(x.get('params'), dict) and len(x['params']) > 1:
+            for k in [k for k, v in x['params'].items() if v == 0 and k in ('power', 'health', 'strength')]: x['params'].pop(k)
+        for v in list(x.values()): second_forms(v)
+    elif isinstance(x, list):
+        for v in x: second_forms(v)
+
+
 def main():
     global STATUS
     game = sys.argv[1]; kinds = keyword_kinds(game); table = names_table(game); STATUS = status_keywords()
@@ -261,7 +288,7 @@ def main():
             fix_names(r2, table); attacking(r2); fix_filters(r2); another(r2, inputs)
             strength_picks(r2, 'strength' if game in STRENGTH_GAMES else 'power')
             keyword_trigger_form(r2, STATUS)
-            trap_events(r2); moves_object(r2); sacrifice_form(r2, inputs)
+            trap_events(r2); moves_object(r2); sacrifice_form(r2, inputs); second_forms(r2)
             n += r2 != r; out.append(r2)
         open(path, 'w').write(''.join(json.dumps(r, separators=(',', ':')) + '\n' for r in out))
         print(f'{os.path.basename(path)}: {n} of {len(L)} records changed')

@@ -15,3 +15,23 @@ inscryption	card	Explode Bots	card	Explode Bot	plural of the card Explode Bot (B
 inscryption	card	Pelt	name_has	Pelts	"a Pelt card": one of the Pelts cards (Pelts (Rabbit), (Wolf), (Golden)) (Skinning Knife)
 inscryption	keyword	Nano Armor	keyword	Armored	Nano Armor is Armored's Act III name (wiki page Armored, read 29 Oct 2026)
 inscryption	card	Ancient Obol	drop		the Ancient Obol is the offering given to the Bone Lord in Act II, not a card (primagames.com/gaming/inscryption-bone-lord-key-ancient-obol-offering)
+duelyst	card	Egg	card	Chrysalis Egg	the Egg token is "Chrysalis Egg" in the game's data (Cards.Faction5.Egg); texts call it Egg
+duelyst	card	Ripper Egg	card	Chrysalis Egg	an Egg that hatches into a Ripper: the Egg card (Cards.Faction5.Egg)
+duelyst	card	Silithar Elder Egg	card	Chrysalis Egg	an Egg that hatches into a Silithar Elder: the Egg card
+duelyst	card	Blazing Spine Wall	card	Blazing Spines (token)	the 3/3 wall Blazing Spines summons (Cards.Faction6.BlazingSpines)
+duelyst	card	MECHAZ0R	card	MECHAZ0R!	the card is named "MECHAZ0R!" (Cards.Neutral.Mechaz0r)
+duelyst	card	Prisoner	card	Dispirited Prisoner	the 2/2 Prisoner token (Cards.Neutral.Prisoner1)
+duelyst	card	Cub	card	Saberspine Cub	Letigress's cub (Cards.Neutral.TigerCub, linked from Letigress)
+duelyst	card	Drake	card	Whyte Drake	Drake Dowager's 4/4 Flying Drake (Cards.Faction6.AzureDrake, linked)
+duelyst	card	Ravager	card	Fox Ravager	the 3/3 Ravager (Cards.Faction6.WolfAspect, linked from Aspect of the Ravager)
+duelyst	card	Vespyr Winter Maerid	card	Winter Maerid	the 2/2 Vespyr (Cards.Faction6.WaterBear, linked from Wintertide)
+duelyst	card	Teachings of the Dragon	name_has	Lesson of	the three Teachings are Lesson of Power, Lesson of Wisdom, Lesson of Courage (linked from Trinity Wing)
+duelyst	card	AWESOME	drop		a word of Grandmaster Variax's text, not a card
+duelyst	keyword	Holy Immolation	card	Holy Immolation	War Exorcist casts the card Holy Immolation on its damaged minions
+duelyst	keyword	Assimilate	drop		no definition in the game's data; the card stays unsure
+duelyst	keyword	Ascension	drop		no definition in the game's data; the card stays unsure
+duelyst	keyword	Promote	drop		no definition in the game's data; the card stays unsure
+duelyst	keyword	Doomed	drop		Doom's own text says it: the enemy General dies after three turns (no keyword); unsure
+duelyst	keyword	Teleport	drop		teleporting is the act move; Teleport is no Duelyst keyword (reader used another game's word)
+duelyst	keyword	Pull	drop		Pull is a Stormbound keyword; Duelyst's pulls are the act move
+duelyst	keyword	Push	drop		Push is a Stormbound keyword; Duelyst's pushes are the act move

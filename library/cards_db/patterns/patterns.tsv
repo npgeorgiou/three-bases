@@ -41,13 +41,13 @@ runeterra	V11	\brecall	value:return_to_hand|keyword_action|recalled|recalled_thi
 runeterra	V17	\b(?:get|gain)s? (?:an? |\d+ )?(?:empty )?mana gems?\b	value:max_mana_change|mana_gain	yes	ramp wording (old runeterra.txt resource_gain)
 runeterra	V18	\brefill\b[^.]{0,20}\bmana\b	value:mana_gain|max_mana_change|mana_refilled	yes	"refill wording; ""when you refill mana"" is the event mana_refilled"
 *	V19	\bthis round\b	value:this_round|dead_this_round|summoned_this_round|targeted_this_round|attacked_this_round|struck_this_round	yes	duration or span word; died/summoned/targeted this round are states
-*	V20	(?<!died )\bthis game\b	value:this_game|recalled_this_game|once_per_game	yes	"span word (""died this game"" is checked by T24); ""the first time ... this game"" is the limit once_per_game"
+*	V20	(?<!died )(?<!destroyed )\bthis game\b	value:this_game|recalled_this_game|once_per_game	yes	"span word (""died this game"" is checked by T24); ""the first time ... this game"" is the limit once_per_game"
 *	V21	\bcop(?:y|ies)\b	value:copy|copy_keywords|create|summon|transform|copy_of_it|revive	yes	"copy wording; ""transform into an exact copy"" is transform; ""copies of it"" is the state copy_of_it; ""revive an Ephemeral copy"" is revive"
 *	V22	\bstrikes?\b(?! ?:)	value:strike|strikes|strike_with|damage|strikes_nexus|survives_damage	yes	"strike wording (not the Strike: label); ""survived strikes"" is survives_damage"
 runeterra	V23	\brally\b	value:gain_attack_token|rally	yes	Rally gives the attack token
 *	D01	\bwhen\b		no	too general: when appears inside granted text and conditions
 *	D02	\b(?:grant|give)\b		no	covered by V15 and the keyword rule
-*	T24	\b(?:died|have died|has died) this game\b	value:discard|dies	yes	dead units are units in the discard zone (BRIEF rule 17)
+*	T24	\b(?:died|have died|has died|destroyed) this game\b	value:discard|dies	yes	dead units are units in the discard zone (BRIEF rule 17)
 *	S01	[^.]*\bduring deckbuilding\b[^.]*\.?		strip	deck-building permissions have no effect in play (BRIEF rule 16): removed from the text before checking
 runeterra	S02	\borigin: [^.]*\.		strip	Origin names a deck-building origin, no effect in play
 stormbound	T25	\bon play\b|\bwhen played\b|\bif played\b	event:played	yes	trigger label (rulebook: On play / When played)
@@ -152,7 +152,7 @@ duelyst	V90	[+-]\d+/[+-]\d+	value:stat_change|stat_set	yes	stats are Attack/Heal
 duelyst	V91	\bteleport|\bswitch positions\b|\bpush\b|\bpull\b	value:move|swap	yes	movement verbs
 duelyst	V92	\bdispel	value:silence	yes	Dispel removes abilities
 duelyst	V93	\binto (?:shadow creep|hallowed ground|exhuming sand|primal flourish)\b|\bmana spring tile\b	value:set_terrain	yes	tiles (BRIEF Game words: Duelyst)
-duelyst	V94	\baction bar\b	value:hand	yes	the action bar is the hand
-duelyst	V95	\bthis turn\b	value:this_round	yes	one turn is the span (BRIEF Game words: Duelyst)
+duelyst	V94	\baction bar\b	value:hand|return_to_hand|from_hand|draw|create|copy|return_card	yes	the action bar is the hand (returning, drawing, creating into it, or a card played from it)
+duelyst	V95	\bthis turn\b	value:this_round|summoned_this_round|dead_this_round|attacked_this_round|struck_this_round|next_card	yes	one turn is the span (BRIEF Game words: Duelyst)
 duelyst	V96	\bequip	value:attach	yes	equip an artifact
 duelyst	V97	\bprogresses mechaz0r\b	value:keyword_action	yes	MECHAZ0R build progress

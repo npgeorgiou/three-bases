@@ -31,3 +31,56 @@ inscryption	4000019	KW	record_right	Claude: Airborne is what the Awakened form h
 inscryption	4000191	T81	no value: card marked unsure	Claude: GiantCard: when it perishes it clears the opposing spaces it filled; no value for a card filling every space: card marked unsure	29 Oct 2026
 inscryption	4000225	T81	no value: card marked unsure	Claude: GiantCard: when it perishes it clears the opposing spaces it filled; no value for a card filling every space: card marked unsure	29 Oct 2026
 inscryption	4000225	V05	no value: card marked unsure	Claude: "per 5 damage taken since last turn" is the amount of Skeleton Crews; no form for it: card marked unsure	29 Oct 2026
+duelyst	5000050	KW:name:provoke	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5000050	KW:name:zeal	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5000067	KW:name:provoke	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5000067	KW:name:zeal	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5000162	V96	record_right	Claude: equipped artifacts are equipment, zone attached, or the event equipped	29 Oct 2026
+duelyst	5000328	KW:name:ranged	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5000342	KW:name:build	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5000343	KW:name:build	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5000344	KW:name:build	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5000345	KW:name:build	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5000346	KW:name:build	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5000360	V20	record_right	Claude: a spell cast this game is a spell in the discard zone (copied from there)	29 Oct 2026
+duelyst	5000362	V04	record_right	Claude: "summon ... from your action bar" is the event played (BRIEF Game words: Duelyst: Opening Gambit = played), or the summoned card's own rows	29 Oct 2026
+duelyst	5000419	V14	record_right	Claude: shuffling copies or a card into the deck is copy / create with zone deck	29 Oct 2026
+duelyst	5000424	KW:name:provoke	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5000445	V96	record_right	Claude: equipped artifacts are equipment, zone attached, or the event equipped	29 Oct 2026
+duelyst	5000459	V96	record_right	Claude: equipped artifacts are equipment, zone attached, or the event equipped	29 Oct 2026
+duelyst	5000482	KW:name:grow	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5000506	V14	record_right	Claude: shuffling copies or a card into the deck is copy / create with zone deck	29 Oct 2026
+duelyst	5000543	V13	record_right	Claude: the transformation is the Sentinel keyword's or the Build keyword's own record	29 Oct 2026
+duelyst	5000572	V13	record_right	Claude: the transformation is the Sentinel keyword's or the Build keyword's own record	29 Oct 2026
+duelyst	5000583	KW:name:grow	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5000589	KW:name:grow	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5000593	V05	record_right	Claude: the damage is the named token's own record, a strike, or a "cannot damage" limit	29 Oct 2026
+duelyst	5000598	V13	record_right	Claude: the transformation is the Sentinel keyword's or the Build keyword's own record	29 Oct 2026
+duelyst	5000633	V05	record_right	Claude: the damage is the named token's own record, a strike, or a "cannot damage" limit	29 Oct 2026
+duelyst	5000634	KW:name:battle pet	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5000656	KW:name:grow	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5000667	V04	record_right	Claude: "summon ... from your action bar" is the event played (BRIEF Game words: Duelyst: Opening Gambit = played), or the summoned card's own rows	29 Oct 2026
+duelyst	5000685	V07	record_right	Claude: "killed Legion respawn" is revive of dead Legion units (zone discard)	29 Oct 2026
+duelyst	5000686	V07	record_right	Claude: "killed Legion respawn" is revive of dead Legion units (zone discard)	29 Oct 2026
+duelyst	5000687	V07	record_right	Claude: "killed Legion respawn" is revive of dead Legion units (zone discard)	29 Oct 2026
+duelyst	5000688	V07	record_right	Claude: "killed Legion respawn" is revive of dead Legion units (zone discard)	29 Oct 2026
+duelyst	5000689	V07	record_right	Claude: "killed Legion respawn" is revive of dead Legion units (zone discard)	29 Oct 2026
+duelyst	5000730	V05	record_right	Claude: the damage is the named token's own record, a strike, or a "cannot damage" limit	29 Oct 2026
+duelyst	5000805	V04	record_right	Claude: "summon ... from your action bar" is the event played (BRIEF Game words: Duelyst: Opening Gambit = played), or the summoned card's own rows	29 Oct 2026
+duelyst	5000805	V94	record_right	Claude: played from the action bar = event played; the hand is implied	29 Oct 2026
+duelyst	5000826	KW:name:mechaz0r	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5000883	V04	record_right	Claude: "summon ... from your action bar" is the event played (BRIEF Game words: Duelyst: Opening Gambit = played), or the summoned card's own rows	29 Oct 2026
+duelyst	5000898	V04	record_right	Claude: "summon ... from your action bar" is the event played (BRIEF Game words: Duelyst: Opening Gambit = played), or the summoned card's own rows	29 Oct 2026
+duelyst	5000898	V94	record_right	Claude: played from the action bar = event played; the hand is implied	29 Oct 2026
+duelyst	5000919	KW:name:wall	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5000968	KW:name:grow	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5000989	V03	record_right	Claude: "create a mana spring tile" is set_terrain (keyword Mana Spring)	29 Oct 2026
+duelyst	5000990	KW:name:build	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5001012	V13	record_right	Claude: the transformation is the Sentinel keyword's or the Build keyword's own record	29 Oct 2026
+duelyst	5001014	V05	record_right	Claude: the damage is the named token's own record, a strike, or a "cannot damage" limit	29 Oct 2026
+duelyst	5001020	KW:name:build	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5001026	KW:name:build	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5001041	KW:name:mechaz0r	record_right	Claude: the keyword word belongs to a named card's own text, another word ("MECHAZ0R build"), or the record says it by its act (Grow as turn_start stat_change, Ranged Provoke)	29 Oct 2026
+duelyst	5001041	V14	record_right	Claude: shuffling copies or a card into the deck is copy / create with zone deck	29 Oct 2026
+duelyst	5001059	V04	record_right	Claude: "summon ... from your action bar" is the event played (BRIEF Game words: Duelyst: Opening Gambit = played), or the summoned card's own rows	29 Oct 2026
+duelyst	5001084	V96	record_right	Claude: equipped artifacts are equipment, zone attached, or the event equipped	29 Oct 2026

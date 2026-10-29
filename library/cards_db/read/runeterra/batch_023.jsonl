@@ -10,5 +10,5 @@
 {"id":900033,"abilities":[{"when":{"event":"played","object":{"pick":"self"}},"do":[{"act":"play_card","on":{"kind":"card","side":"enemy","pick":"chosen","n":1,"with":[{"attr":"category","op":"not","val":"champion"}]},"card":"Prank"}]}],"unsure":["keyword"]}
 {"id":900038,"abilities":[]}
 {"id":900039,"abilities":[{"when":{"event":"played","object":{"pick":"self"}},"do":[{"act":"stat_change","on":{"kind":"unit","side":"mine","pick":"chosen","zone":"board"},"params":{"power":3,"health":2},"lasts":"this_round"}]}]}
-{"id":900046,"abilities":[{"when":{"event":"played","object":{"pick":"self"}},"do":[{"act":"stat_change","on":{"kind":"unit","side":"mine","pick":"chosen","zone":"board"},"params":{"power":1,"health":0},"lasts":"permanent"}]}]}
+{"id":900046,"abilities":[{"when":{"event":"played","object":{"pick":"self"}},"do":[{"act":"stat_change","on":{"kind":"unit","side":"mine","pick":"chosen","zone":"board"},"params":{"power":1},"lasts":"permanent"}]}]}
 {"id":900049,"abilities":[{"when":{"event":"played","object":{"pick":"self"}},"do":[{"act":"stat_change","on":{"kind":"unit","side":"mine","pick":"random","zone":"hand"},"params":{"power":1,"health":1},"lasts":"permanent"}]}]}
