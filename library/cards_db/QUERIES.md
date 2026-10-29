@@ -124,12 +124,12 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: monster_train 567 pairs, e.g. Rector Flicker -> Little Fade; runeterra 19385 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- sacrifice: monster_train 262 pairs, e.g. Rector Flicker -> Little Fade; runeterra 6008 pairs, e.g. Chronicler of Ruin -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- removal: monster_train 132 pairs, e.g. Shardtail Queen -> Little Fade; runeterra 5597 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Avian Stalkers -> Marked as Prey
-- on_kill: monster_train 157 pairs, e.g. Shattered Shell -> Little Fade; runeterra 2008 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Spellbinder Zhevana -> Dreadful Keepers
-- damage: monster_train 1117 pairs, e.g. Cycle of Life -> Little Fade; stormbound 721 pairs, e.g. Divine Reptiles -> Dreadful Keepers
-- self_destruct: monster_train 391 pairs, e.g. Rector Flicker -> Little Fade; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
+- destroy: monster_train 386 pairs, e.g. Petrified Skull -> Little Fade; runeterra 12693 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- sacrifice: monster_train 179 pairs, e.g. Lady of the Reformed -> Little Fade; runeterra 3957 pairs, e.g. Amalgamation Of Vile Rites -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- removal: monster_train 90 pairs, e.g. Petrified Skull -> Little Fade; runeterra 3608 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Gray the Balancer -> Shady Ghoul
+- self_destruct: monster_train 266 pairs, e.g. Kinhost Vessel -> Little Fade; runeterra 6891 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
+- revive: runeterra 1071 pairs, e.g. Eternal Dancers -> Bladepierced Revenant
+- aoe_damage: monster_train 217 pairs, e.g. Shattered Shell -> Little Fade; runeterra 2827 pairs, e.g. Anivia (level 2) -> Shackled Ghasts; stormbound 217 pairs, e.g. Broken Earth Drakes -> Dreadful Keepers
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -138,7 +138,7 @@ Families of three mechanics that feed each other, starting from "summon" (`ask.p
 - summon -> on_ally_play -> variable_stats (seen in runeterra)
 - summon -> on_ally_play -> temporary_buff (seen in runeterra)
 - summon -> tribal -> generate_cards (seen in runeterra)
-- summon -> cant_block -> permanent_growth (seen in runeterra)
+- summon -> tribal -> draw (seen in monster_train, runeterra, stormbound)
 
 ## A deck explained (`ask.py runeterra analyze "..."`), a Lucian/Senna deck from a deck guide
 
@@ -187,20 +187,20 @@ select distinct card from flat_do where act='copy_keywords'
 - monster_train Awoken: on_lifegain (4), counterattack (7), regeneration (4), draw (11), heal (11)
 - monster_train Stygian Guard: discard (6), on_spell (9), retain (4), stat_loss (5), damage_over_time (11)
 - monster_train Umbra: lifesteal (4), on_sacrifice (14), shield (7), board_limit (4), overload_debt (4)
-- monster_train Melting Remnant: death_trigger (18), self_destruct (16), cost_set (6), delayed (15), sacrifice (9)
+- monster_train Melting Remnant: other_death_trigger (8), self_destruct (16), death_trigger (11), cost_set (6), delayed (15)
 - monster_train Wurmkin: cost_type (10), resource_gain (23), summon (4), damage_over_time (8), exhaust (19)
 - monster_train Clanless: direct_damage (5), banish (10), turn_end (7), cant_attack (5), passive (20)
-- runeterra Ionia: bounce_enemy (11), silence (33), movement (6), swap (6), return_to_hand (52)
+- runeterra Ionia: bounce_enemy (11), leave_trigger (10), silence (33), movement (6), swap (6)
 - runeterra Noxus: on_discard (10), drawback (7), excess_damage (37), disable (21), board_presence (6)
 - runeterra Demacia: extra_turn (23), damage_reduction (19), multi_attack (19), damage_prevention (19), shield (16)
 - runeterra Piltover & Zaun: junk_cards (13), on_draw (18), recycle (11), on_spell (27), trap_secret (16)
 - runeterra Freljord: attack_zero (21), regeneration (16), stat_loss (23), stat_multiply (27), aoe_damage (27)
-- runeterra Shadow Isles: death_count (23), revive (20), sacrifice (34), self_mill (7), lifesteal (29)
+- runeterra Shadow Isles: death_count (23), revive (20), sacrifice (34), other_death_trigger (25), self_mill (7)
 - runeterra Bilgewater: steal (5), forced_movement (4), self_mill (6), on_life_loss (21), hand_disruption (5)
 - runeterra Targon: on_lifegain (5), combo_sequence (32), immunity (20), on_targeted (24), assists_support (12)
 - runeterra Shurima: stealth (7), tutor (19), delayed (26), debuff (5), variety_payoff (11)
 - runeterra Bandle City: stacking_keyword (52), trap_secret (25), junk_cards (8), ping (65), spell_power (5)
-- runeterra Runeterra: repeat_trigger (5), merge_attach (23), board_presence (5), variety_payoff (4), leave_trigger (14)
+- runeterra Runeterra: repeat_trigger (5), merge_attach (23), board_presence (5), other_leave_trigger (14), variety_payoff (4)
 - stormbound Neutral: draw (5), generate_cards (4), variety_payoff (6), attack_now (4), copy (4)
 - stormbound Ironclad: lanes (8), forced_movement (9), movement (9), death_trigger (4), positional (26)
 - stormbound Shadowfen: lifesteal (7), damage_over_time (6), steal (4), ping (10), variable_stats (7)

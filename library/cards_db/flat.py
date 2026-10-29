@@ -62,6 +62,8 @@ def build(c):
     def when_concept(e, okind, owith, opick):
         if e in ('played', 'spell_resolves') and (okind == 'spell' or 'spell' in (owith or '')): return 'on_spell'
         if e in ('summoned', 'played') and opick != 'self' and okind == 'unit': return 'on_ally_play'
+        if e == 'dies' and (opick not in ('self', None) or okind == 'unit'): return 'other_death_trigger'  # another unit dies (concept tree: death_trigger is its own death)
+        if e == 'leaves_play' and opick != 'self': return 'other_leave_trigger'
         return tree.get(('event', e))
 
     def amounts(aid):
