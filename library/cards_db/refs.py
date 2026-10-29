@@ -95,7 +95,7 @@ def build(c):
         if ev:
             for k in (kws_of(ew) if len(kws_of(ew)) > 1 else [kw_of(ew)]):
                 ins(card, o, v, ab, 'condition', ev, ek or fk, es or fs, ep or fp, k, w=ew or fw, ak=eak, aw=eaw)
-        elif fk == 'mana': ins(card, o, v, ab, 'condition', 'mana_refilled', fk, fs, fp)  # counts my mana: fed by mana gain
+        elif fk in ('mana', 'secondary_resource', 'gem', 'lane_resource'): ins(card, o, v, ab, 'condition', 'mana_refilled', fk, fs, fp, w=fw)  # counts my mana or another resource: fed by gaining it
         # a stat tested or counted ("the enemy Nexus has half its Health or less", "a unit with 5+ Power"): fed by what changes it
         if test in ('stat', 'amount_stat', 'count', 'have', 'amount_count') and at in STAT_EVENTS and not ev:
             sevs = STAT_EVENTS[at].get(fk if fk == 'player' else 'unit', ())
@@ -138,8 +138,10 @@ def build(c):
         if to_w and re.search(r'(?<![a-z:])position ', to_w): ins(card, o, v, ab, 'state', 'moves', to_k, s, None, w=to_w)  # "attack a bordering enemy"
     # the game's rules (read/<game>/game_rules.jsonl): what every card of a category does without its text saying so (an
     # attacking unit hits the enemy Nexus when it is not blocked); its makes rows, about "self", become every such card's own
-    for e, cat in c.execute('select entry, category from game_rule').fetchall():
-        rows = c.execute("select ability, happening, kind, side, pick, keyword, concept, obj_with, ref from flat_ref where card=? and role='makes'", (e,)).fetchall()
+    for e, cat, cost_has in c.execute('select entry, category, cost_has from game_rule').fetchall():
+        # a rule about a cost ("Bones costs": the card needs Bones) is a need of every card whose cost names it; other rules make
+        rows = c.execute("select ability, happening, kind, side, pick, keyword, concept, obj_with, ref, role from flat_ref where card=? and role in "
+                         + ("('makes','condition','trigger')" if cost_has else "('makes')"), (e,)).fetchall()
         # a unit that can never do what the rule makes does not follow it: Immobile, Inert, "I can't attack" skip the fight rule,
         # "Can't harvest faeria" the harvest rule; a "can't" limited to some targets ("can only attack gods") skips nothing
         made = {r[1] for r in rows}
@@ -148,8 +150,9 @@ def build(c):
                  and v.value in (k.name, k.game || ':' || k.name) where v.tree='cant_attack'""")} if fights else set()
         never |= {a for (a, ev) in c.execute("""select card, param_event from flat_do where origin='own' and act='cant' and on_pick='self'
                  and to_kind is null and coalesce(lasts,'while') in ('while','permanent')""") if ev in made or (fights and ev == 'attacks')}
-        for (card,) in c.execute('select id from card where category=? and game=(select game from card where id=?) and is_stub=0', (cat, e)).fetchall():
+        for (card,) in c.execute("select id from card where category=? and game=(select game from card where id=?) and is_stub=0 and "
+                                 "(? is null or lower(coalesce(cost_text,'')) like '%' || lower(?) || '%')", (cat, e, cost_has, cost_has)).fetchall():
             if card in never: continue
-            for ab, h, k, sd, pk, kw, con, w, ref in rows:
+            for ab, h, k, sd, pk, kw, con, w, ref, role in rows:
                 if pk == 'self' and not sd: sd = 'mine'  # what the card does to itself is on its owner's side
-                c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (card, 'game', e, ab, 'makes', h, k, sd, pk, kw, con, w, ref, None, None))
+                c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (card, 'game', e, ab, role, h, k, sd, pk, kw, con, w, ref, None, None))

@@ -708,3 +708,4 @@ kind	gem	a coloured resource a card provides while it is in play, paying the car
 region	Orange	region (Inscryption Mox colour; Green and Blue are the shared colour values)			29 Oct 2026, v36 (Inscryption)
 x	unstated	the text names the change but gives no number ("is healed", "has increased power")			29 Oct 2026, v36 (Inscryption)
 keyword	Gemified	concept of having, using or giving this keyword (Inscryption: an Act III upgrade: more Health, Power or a lower cost while its owner has a gem of that colour; concept is Claude's)	stat_gain		29 Oct 2026, v36 (Inscryption)
+act	sacrifice	the owner gives up their own unit to pay a cost or for an effect; it dies (Inscryption Blood, Monster Train Sacrifice, Faeria "sacrifice a creature")	sacrifice	sacrificed;dies	29 Oct 2026, v36 (Inscryption)

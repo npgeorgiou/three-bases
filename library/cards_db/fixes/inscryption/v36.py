@@ -113,3 +113,12 @@ for P in (os.path.join(HERE, 'read', 'inscryption', 'keywords.jsonl'), os.path.j
             r['unsure'] = sorted(set(r.get('unsure', [])) | {'params'})  # the space number has no value
     open(P, 'w').write(''.join(json.dumps(r, ensure_ascii=False) + '\n' for r in recs))
 print('second reading fixes applied')
+
+# giving up my own unit is act sacrifice (normalize N17; keyword records are not normalized): True Scholar
+
+P = os.path.join(HERE, 'read', 'inscryption', 'keywords.jsonl'); recs = [json.loads(l) for l in open(P)]
+inputs = {}
+for l in open(os.path.join(HERE, 'input', 'inscryption', 'keywords.jsonl')): x = json.loads(l); inputs[x['id']] = x
+for r in recs: normalize.sacrifice_form(r, inputs)
+open(P, 'w').write(''.join(json.dumps(r, ensure_ascii=False) + '\n' for r in recs))
+print('sacrifice form applied to keywords')

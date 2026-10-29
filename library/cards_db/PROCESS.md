@@ -340,6 +340,14 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
    keyword of the game is dropped from the effect, the effect stays (normalize N6); the row's neighbours are sides.
 6. **One happening, two forms, found by the second reading.** "Moves" had the moving unit as actor in Sentry: normalize N16
    (the moving unit is the object) and case mx12.
+7. **Costs were no needs.** A Zombie (2 Bones) had no line from the Gravedigger that makes Bones, a Hawk (2 Blood) none from
+   the Squirrel sacrificed for it: the network never read a card's cost. Now a game rule can name a cost word
+   (`"cost_has": "Bones"`, read/<game>/game_rules.jsonl): its conditions become the needs of every card whose cost names it
+   (refs.py, network.py "pays its cost"); a resource kind (Bones, gems) is fed by gaining it, and a coloured resource only by
+   its colour (a Green Mox cost by a Green gem: network.colour_fit). Cases ni01-ni05. Doing it found a shared bug: load.py had
+   lost every card's cost and spell speed (both sat inside a comment since v35); the card table now also keeps the cost text.
+8. **Giving up my own unit had three forms** (kill on my unit in Faeria, Monster Train's Sacrifice record, nothing in
+   Inscryption): one act sacrifice (causes sacrificed and dies), normalize N17 for card records.
 
 ## Think like a player (read before showing any network, any deck explanation, any answer about synergy)
 Kaptain checks a few decks and finds errors a player sees at once. Before showing anything, do what he does:

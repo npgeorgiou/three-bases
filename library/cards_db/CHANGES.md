@@ -148,3 +148,7 @@ Each change: date, what changed, the card that caused it, and which records were
   normalize: a dropped keyword keeps its effect, abilities left without effects go, N16 (moves: the mover is the object);
   audit_text.py reads keyword entries (rulebook line); audit_links.py check 5 (deck cards that are no card); Runeterra
   keyword records: Skills in SpellShield and Flow (v33 now on keywords), Spawn repeats per Spawn (fixes/runeterra/v36.py).
+- 29 Oct 2026, v36 (Inscryption networks): game rules may name a cost (cost_has): Blood costs (sacrifices), Bones costs,
+  Green/Orange/Blue Mox costs; units can be sacrificed; refs.py copies a cost rule's needs to the cards whose cost names it;
+  network: cost needs ("pays its cost"), resource words, colour_fit; act sacrifice (normalize N17; Monster Train Sacrifice
+  record, fixes/monster_train/v36.py); load.py: card cost and speed loaded again (lost in a comment), cost_text kept.

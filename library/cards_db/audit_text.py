@@ -40,7 +40,7 @@ def rules(game):
         ('create', r'\bcreate\b', lambda r: acts(r) & {'create', 'copy', 'keyword_action', 'choose_card', 'random_one', 'set_terrain'} or has(r, 'event', 'terrain_changed')),
         ('summon', r'(?<!you )\bsummon\s(?!effect)', lambda r: acts(r) & {'summon', 'copy', 'revive', 'play_card', 'transform', 'keyword_action', 'create'}),
         ('heal', r'\bheal\b|\brestore\s+\d', lambda r: acts(r) & {'heal', 'keyword_action'} or '"healed"' in words(r)),
-        ('kill or destroy', r'(?<!you )(?<!or )\b(?:kill|destroy)\b(?!ed)', lambda r: acts(r) & {'kill', 'obliterate', 'keyword_action', 'strike', 'spend_mana', 'unequip', 'max_mana_change'} or '"killed"' in words(r) or '"dies"' in words(r)),
+        ('kill or destroy', r'(?<!you )(?<!or )\b(?:kill|destroy)\b(?!ed)', lambda r: acts(r) & {'kill', 'sacrifice', 'obliterate', 'keyword_action', 'strike', 'spend_mana', 'unequip', 'max_mana_change'} or '"killed"' in words(r) or '"dies"' in words(r)),
         ('discard', r'\bdiscard\b(?! pile)', lambda r: acts(r) & {'discard', 'keyword_action'} or 'discard' in words(r)),
         ('stat gift', r'\+\d+[|/]\+\d+|\bgive\s+[\d/]+\s+strength|\bgain\s+[\d/]+\s+strength|\+\d+ (?:Attack|Health)\b', lambda r: acts(r) & {'stat_change', 'grow', 'give_keyword', 'keyword_action', 'increase_effect'}),
         ('cost less', r'\bcosts?\s+[\dX]+\s+less|\breduce\s+(?:its|their|the)\s+cost|\bcost\s+-\d', lambda r: acts(r) & {'cost_change', 'cost_set'}),

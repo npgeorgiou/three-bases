@@ -11,11 +11,11 @@ import source
 SCHEMA = """
 create table vocab(field text, value text, meaning text, tree text, causes text, added text, primary key(field, value));
 create table card(id integer primary key, game text, name text, category text, speed text, cost real, power real,
-  health real, regions text, rarity text, is_keyword integer, is_stub integer default 0, stats text);
+  health real, regions text, rarity text, is_keyword integer, is_stub integer default 0, stats text, cost_text text);
 create table type(id integer primary key, game text, name text, tribe_entry integer);
 create table card_type(card integer, type integer);
 create table card_keyword(card integer, keyword integer);
-create table game_rule(entry integer, category text);  -- an entry whose abilities every card of the category has by the game's rules
+create table game_rule(entry integer, category text, cost_has text);  -- an entry whose abilities every card of the category has by the game's rules
 create table card_link(src integer, rel text, dst integer);
 create table event(id integer primary key, event text, actor integer, object integer);
 create table target(id integer primary key, kind text, side text, pick text, n integer, zone text, by_attr text);
@@ -94,7 +94,7 @@ class Loader:
         cid = rec['id'] if 'id' in rec else self.ref('keyword', rec['name'])  # a keyword the library lacks, by its name
         if 'applies_to' in rec:  # a game rule (read/<game>/game_rules.jsonl): every card of these categories follows it
             self.c.execute("update card set category='game_rule' where id=?", (cid,))
-            for cat in rec['applies_to']: self.ins('game_rule', entry=cid, category=cat)
+            for cat in rec['applies_to']: self.ins('game_rule', entry=cid, category=cat, cost_has=rec.get('cost_has'))  # cost_has: only cards whose cost names it
         if 'trigger' in rec: self.ins('keyword_trigger', keyword=cid, event=self.event(rec['trigger']))
         for c in rec.get('condition', []): self.cond(c, keyword=cid)
         for f in rec.get('unsure', []): self.ins('unsure', card=cid, field=f)
@@ -124,13 +124,14 @@ class Loader:
 
     def game_data(self, game):
         lib = source.lib(); skip = excluded(lib, game); self.skip = skip; self.game = game; self.games.append(game); self.stubs = {}; self.ch = Checker(game); self.types = {}
-        for i, n, cat, sub, cost, stats, fac, extra, rar in lib.execute(
-                "select id, name, category, subtypes, cost_num, stats, faction, extra, rarity from entities where game=?", (game,)):
+        for i, n, cat, sub, cost, stats, fac, extra, rar, ctext in lib.execute(
+                "select id, name, category, subtypes, cost_num, stats, faction, extra, rarity, cost from entities where game=?", (game,)):
             if i in skip: continue
             st = json.loads(stats) if stats and stats.startswith('{') else {}
             regs = (json.loads(extra).get('regions') if extra and extra.startswith('{') else None) or ([fac] if fac else [])
             num = lambda *ks: next((float(st[k]) for k in ks if str(st.get(k, '')).lstrip('-').replace('.', '').isdigit()), None)
-            self.ins('card', id=i, game=game, name=(n or '').strip(), category=cat,  # sources leave trailing spaces speed=speed_of(sub) or None, cost=cost,
+            self.ins('card', id=i, game=game, name=(n or '').strip(), category=cat,  # sources leave trailing spaces
+                     speed=speed_of(sub) or None, cost=cost, cost_text=ctext,  # the cost as written ("2 Bones", "Green Mox")
                      power=num('power', 'attack'), health=num('health', 'toughness', 'life', 'hp'), regions=';'.join(regs),
                      rarity=rar, is_keyword=1 if cat == 'keyword' else 0, stats=stats)
             if cat == 'tribe': self.types[(game, n.lower())] = self.ins('type', game=game, name=n, tribe_entry=i)

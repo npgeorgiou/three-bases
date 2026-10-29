@@ -26,6 +26,7 @@ and second readings). Safe to run any number of times. Each rule is listed in CH
      player using something (a landmark, a keyword's own activation).
   N16 "moves": the unit that moves is the event's object (vocab), never its actor; "on actor" in that ability is "on it"
     (Inscryption Sentry, second reading, 29 Oct 2026).
+  N17 giving up my own unit ("sacrifice a creature", "you must sacrifice") is act sacrifice, not kill (one form in every game).
   N10 "strongest" / "weakest" are pick highest / lowest by the attack stat: power, or strength in games whose units have
      one stat (Stormbound). One form in every game.
 Usage: normalize.py <game> <file.jsonl> [...]   rewrites the files in place, prints how many records changed."""
@@ -217,6 +218,21 @@ def moves_object(x):
         for v in x: moves_object(v)
 
 
+def sacrifice_form(r, inputs):
+    """N17"""
+    t = (inputs.get(r.get('id')) or {}).get('text', '')
+    if not re.search(r'\bsacrific', t, re.I): return
+    def walk(x):
+        if isinstance(x, dict):
+            for e in x.get('do', []) if isinstance(x.get('do'), list) else []:
+                on = e.get('on') or {}
+                if e.get('act') == 'kill' and (on.get('side') == 'mine' or on.get('pick') == 'self') and on.get('kind') in ('unit', None): e['act'] = 'sacrifice'
+            for v in x.values(): walk(v)
+        elif isinstance(x, list):
+            for v in x: walk(v)
+    walk(r)
+
+
 def trap_events(x):
     """N15"""
     if isinstance(x, dict):
@@ -245,7 +261,7 @@ def main():
             fix_names(r2, table); attacking(r2); fix_filters(r2); another(r2, inputs)
             strength_picks(r2, 'strength' if game in STRENGTH_GAMES else 'power')
             keyword_trigger_form(r2, STATUS)
-            trap_events(r2); moves_object(r2)
+            trap_events(r2); moves_object(r2); sacrifice_form(r2, inputs)
             n += r2 != r; out.append(r2)
         open(path, 'w').write(''.join(json.dumps(r, separators=(',', ':')) + '\n' for r in out))
         print(f'{os.path.basename(path)}: {n} of {len(L)} records changed')

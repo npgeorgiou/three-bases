@@ -380,7 +380,7 @@ game's own glossary (Abrakam's card export README, faeria.com Keyword Rulings gu
 - Acts. "X fights Y" = start_attack on X, "to" Y, keyword Fight. "Teleport X to Y" = move, keyword Teleport, "to" Y. "Swallow
   a creature" = capture on it, keyword Swallow. "Drain 2 life from X" = damage X amount 2, then heal the player amount
   event_amount (link then). "Transform X into Y" = transform, card Y. "Discover a Beast" = keyword_action Discover, on
-  `{"kind": "card", "with": [type Beast]}`, zone hand (what the Discover offers as filters on "on"). "Sacrifice a creature" = kill
+  `{"kind": "card", "with": [type Beast]}`, zone hand (what the Discover offers as filters on "on"). "Sacrifice a creature" = sacrifice
   on a mine unit, pick chosen. "Can't harvest faeria" = cant, params event harvests, on self. "Can only attack gods" = cant
   params event attacks, on self, "to" kind unit_or_structure. "Launch / Summon a 4/2 Mecha" = summon card "Mecha" (the named
   token), with stats in params power, health only when the text gives them.
@@ -407,7 +407,8 @@ keyword entries (category keyword: a sigil, a trait or a variable Power stat). M
   `{"kind": "player", "side": "mine"}`. "Activate: Pay 2 Bones to ..." = activated; the payment is a first effect: spend on
   `{"kind": "secondary_resource", "side": "mine"}` = act spend_mana with params amount (Energy payment: spend_mana on kind mana).
 - Costs. Blood is paid by sacrificing your creatures: "is sacrificed", "when sacrificed" = event sacrificed, object self; "the
-  card it was sacrificed for" = pick actor. "Counts as 3 Blood" = proposal (no value yet). Bones = kind secondary_resource:
+  card it was sacrificed for" = pick actor; "sacrifice a card bearing this sigil" = act sacrifice on self (every game: giving
+  up my own unit is act sacrifice). "Counts as 3 Blood" = proposal (no value yet). Bones = kind secondary_resource:
   "gain 3 Bones", "1 bone is generated", "4 Bones are awarded" = mana_gain on `{"kind": "secondary_resource", "side": "mine"}`.
   Energy = mana: "an Energy Cell" = max_mana_change amount 1; "your Energy never depletes" = proposal. A Gem (Mox): "a Green Gem
   is provided" = proposal (no value yet); "controls no Mox cards" = COND count of `{"kind": "unit", "side": "mine", "with":

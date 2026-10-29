@@ -120,6 +120,17 @@ def names_fit(c, game, cards, want, have, ref):
     return all(p in (have or '').split(';') for p in asks)
 
 
+def colour_fit(want, have):
+    """a resource of one colour (Inscryption gems: region Green, Orange, Blue): the maker gives that colour, or names none"""
+    ask = {p for p in (want or '').split(';') if p.startswith('region ')}
+    got = {p for p in (have or '').split(';') if p.startswith('region ')}
+    return not ask or not got or bool(ask & got)
+
+
+RESOURCE_WORD = {'secondary_resource': 'you gain the second resource (Bones)', 'gem': 'you gain a gem (Mox)',
+                 'lane_resource': 'you gain the lane resource (Echo)'}
+
+
 def lines_of(c, game):
     """every waits / levels / puts / repeats / type line of the game: (a, b) -> [(kind, weight, why)]"""
     if ('lines', game) in CACHE: return CACHE[('lines', game)]
@@ -140,11 +151,12 @@ def lines_of(c, game):
         # a keyword condition the card uses (Plunder, Reputation, Deep) is the card's own need (its rows sit on the card's own
         # ability, or on none for a keyword it has); the rows of a keyword it gives or uses on a target are not
         kwcond = role in ('condition', 'state') and ((origin == 'uses_keyword' and ab_card.get(ab) == card) or (origin == 'has_keyword' and ab is None))
-        if (origin != 'own' and not kwcond) or \
+        cost = origin == 'game' and role == 'condition'  # a cost the game's rules set (Inscryption Bones, Blood, Mox): the card needs it
+        if (origin != 'own' and not kwcond and not cost) or \
            (pick == 'self' and h in ('played', 'summoned')) or pick == 'actor_self': continue  # "I've killed 4": only the card itself
         if ab in helps: continue
         if ab in lvl: lvl_needs[card].add(h)
-        takes[h].add((card, 'mine' if pick == 'self' else side, kw, kind, pick, w, ab in lvl, role, (ak, aw)))
+        takes[h].add((card, 'mine' if pick == 'self' else side, kw, kind, pick, w, ab in lvl, role, (ak, aw), cost))
     state_ev = collections.defaultdict(set)  # a state and the happenings that put things in it (damaged <- damaged)
     for v, cs in c.execute("select value, causes from vocab where field='state' and coalesce(causes,'')!=''"):
         state_ev[v] |= {x.split(':')[0] for x in cs.split(';')}
@@ -170,11 +182,12 @@ def lines_of(c, game):
         carers = collections.defaultdict(set)
         for t, _, tk, *_ in ts: carers[tk].add(t)
         for m, ms, mk, mkind, mpick, mw, mref, rule in makes.get(h, ()):
-            for t, ts_, tk, tkind, tpick, tw, lv, role, actor in ts:
+            for t, ts_, tk, tkind, tpick, tw, lv, role, actor, cost in ts:
                 if m == t or not mechanics.FIT(ms, ts_) or not (mk is None or tk is None or mk == tk): continue
                 if not kinds_fit(mkind, tkind): continue
                 if mpick == 'self' and tpick == 'self': continue  # each card about itself ("when I level up"): no link between two cards
                 if not names_fit(c, game, cards, tw, mw, mref): continue
+                if tkind in RESOURCE_WORD and not colour_fit(tw, mw): continue  # a Green Mox cost is paid by a Green gem only
                 if mpick == 'self':  # what a card does to itself feeds only a need its own kind fits ("the strongest friendly Dragon")
                     own = ';'.join(p for p in (tw or '').split(';') if p.split(' ')[:2] in (['type', 'is'], ['type', 'in'], ['card', 'is'], ['name_has', 'is'], ['keyword', 'is']))
                     if own and not matches(c, game, cards[m], 'any', own): continue
@@ -186,8 +199,10 @@ def lines_of(c, game):
                 # played": playing a card no one made cheaper is not it (a unit healed is damaged by the enemy too: no such need)
                 w = 1.0 / len(carers[tk] | (carers[None] if tk else set()))
                 say = deck_analysis.say(c, h, ts_, tk)
+                if h == 'mana_refilled' and tkind in RESOURCE_WORD: say = RESOURCE_WORD[tkind]  # not mana: say which resource
+                if cost: say += ' (pays its cost)'
                 if rule:  # every unit does it by the game's rules (attacks, hits the enemy Nexus): weaker than a card that says so
-                    w *= 0.25; say += ' (by fighting)'
+                    w *= 0.25; say += ' (by fighting)' if h in ('attacks', 'strikes', 'strikes_nexus', 'fights', 'damaged', 'nexus_damaged', 'dies', 'killed', 'survives_damage') and not cost else ' (by the game\'s rules)'
                 if lv: out[(m, t)].append(('levels', 2 * w, say + ' (levels it up)'))
                 elif role == 'trigger' and t in selffeed: out[(m, t)].append(('levels', w, say + ' (it levels up from what it then does)'))
                 else: out[(m, t)].append(('waits', w, say))

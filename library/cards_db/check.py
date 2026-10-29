@@ -34,7 +34,7 @@ class Names:
 
 
 SHAPES = {
-    'card': {'id', 'name', 'abilities', 'unsure', 'trigger', 'condition', 'applies_to', 'source'},
+    'card': {'id', 'name', 'abilities', 'unsure', 'trigger', 'condition', 'applies_to', 'source', 'cost_has'},
     'ability': {'when', 'limit', 'if', 'do'},
     'event': {'event', 'actor', 'object'},
     'target': {'kind', 'side', 'pick', 'n', 'zone', 'with', 'by'},

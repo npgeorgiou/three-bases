@@ -65,3 +65,8 @@ n63	stormbound	IC pirate	First Mutineer	Northsea Dogs	line		Claude, deck read: d
 n64	stormbound	Chronobreak	Heliotroopers	Sunbeam Serpents	none		Claude, deck read: Heliotroopers poisons itself, it is no Dragon
 nfa01	faeria	Beastmaster Green	Oakling	Deepwood Stalker	line		guide https://www.faeria.com/the-hub/deck/4570-no-dlc-beastmaster-green: Oakling's buffs help Deepwood Stalker (a green creature in hand)
 nfa02	faeria	Red Archers	Gift of Steel	Hilltop Archer	line		guide https://www.faeria.com/the-hub/deck/4854-no-dlc-red-archers: Gift of Steel adds damage to repeated archer attacks
+ni01	inscryption	Act II Undead starter	Gravedigger	Zombie	line		Claude 29 Oct 2026 (v36): Bone Digger gives Bones, Zombie costs 2 Bones (cost needs from the game's rules)
+ni02	inscryption	Act II Undead starter	Skeleton	Frank & Stein	line		Claude (v36): a Skeleton that perishes gives a Bone (game rule), Frank & Stein costs Bones
+ni03	inscryption	Act II Beast starter	Squirrel	Hawk	line		Claude (v36): a Squirrel is sacrificed to pay Hawk's 2 Blood
+ni04	inscryption	Act II Magick starter	Emerald Mox	Junior Sage	line		Claude (v36): Junior Sage costs a Green Mox; Emerald Mox gives a Green gem
+ni05	inscryption	Act II Magick starter	Sapphire Mox	Junior Sage	none	you gain a gem	Claude (v36): a Blue gem does not pay a Green Mox cost (colours fit)
