@@ -1,1 +1,3 @@
 __pycache__/
+library/cards_db/read/*/*.part*.jsonl
+library/cards_db/second/*/*.part*.jsonl

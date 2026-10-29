@@ -2,3 +2,9 @@
 {"id": 5000445, "field": "test", "need": "edge_reached"}
 {"id": 5000454, "field": "act", "need": "give_unit_to_opponent_that_takes_control"}
 {"id": 5000464, "field": "with", "need": "space_under_enemy_unit"}
+{"id": 5000490, "field": "lasts", "need": "this_turn_transform"}
+{"id": 5000493, "field": "position", "need": "edge"}
+{"id": 5000497, "field": "with", "need": "exhausted_unit"}
+{"id": 5000505, "field": "test", "need": "duplicate_cards_in_deck"}
+{"id": 5000517, "field": "on", "need": "pull_some_things"}
+{"id": 5000524, "field": "params", "need": "random_buff"}
