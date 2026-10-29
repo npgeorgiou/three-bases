@@ -1,0 +1,5 @@
+{"id": 740983, "field": "act", "need": "create_custom_card_from_points"}
+{"id": 740984, "field": "params", "need": "stat_change_amount_unstated"}
+{"id": 740990, "field": "amount", "need": "keyword_added_to_card_count"}
+{"id": 741026, "field": "act", "need": "scale_weight_unstated_amount_and_side"}
+{"id": 741056, "field": "to", "need": "clockwise_next_space"}
