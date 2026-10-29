@@ -442,6 +442,27 @@ were made the shared form for every game with spaces (BRIEF "The board"). What w
 10. **Trigger labels written "Name -".** Faeria's "Corrupt - ..." was not the card's keyword (load.py read only "Name:"), so
    "whenever a creature triggers a Corrupt ability" had no makers (fa43).
 
+## Kaptain's check of the Faeria networks (29 Oct 2026; 24 points, fixed for every game; deck_read_faeria.md)
+1. **Labels read backwards.** Arrows go from the card that provides to the card that uses it; "is a card it needs" read as
+   if the start needed the end. Page labels now: "enables" (kind type), "helps" (kind boosts: stronger, cheaper, reaching).
+2. **Help aimed at one chosen or random card was a faint "can aim at it".** A buff, a movement keyword, a cost cut or a
+   heal aimed at a card of a kind (Oakling's random green creature, Horsemaster's Charge, Khalim's Training on "a creature"
+   of either side) is "helps" to each card it can hit, weight shared (network.helps_it; cases nfa19, nfa20, nfa30).
+3. **Paying for big cards.** Mana gain and cost cuts help the cards in the top quarter of the game's costs (nfa23).
+4. **The board grows from my units (Faeria game rules: land next to my creatures, summon on my own land).** Whatever moves my
+   units or land forward (move effects, movement keywords given or owned, land movers, units made with movement keywords)
+   helps cards whose entry asks for a place measured from themselves (Bomb Slinger, Axe Grinder) and cards that need my
+   units deep in enemy ground (enemy wells, enemy land); what moves a card helps "units summoned next to this" (Mistral
+   Guide). Read only when the game's own rules say the board grows next to units (nfa21, nfa26-nfa28).
+5. **A straight line of fire** (a keyword whose strike hits the nearest enemy in a straight line: Faeria Ranged) is helped by
+   removing or moving enemy units and by moving the shooter by an effect (nfa22).
+6. **Needs that are none.** An ability that only destroys its own card waits for nothing (Krog's Dinner, nfa24); harm aimed
+   at "a creature" of either side is aimed at enemies, no friendly death (nfa25); units are struck back when they fight, so
+   they can die (weak "by fighting" lines); "if Krog has died" kept its card filter (the zone filter was dropped).
+7. **A code line lost in a comment.** A scripted replacement left aimed_rows' filter inside a comment for a whole session.
+   Rule: after any scripted edit of shared code, read `git diff` of that file before rebuilding.
+8. Page: cost and Attack|Life on every card, keywords once, a deck drop-down per game, decks listed once, nodes pulled closer.
+
 ## Think like a player (read before showing any network, any deck explanation, any answer about synergy)
 Kaptain checks a few decks and finds errors a player sees at once. Before showing anything, do what he does:
 1. Take every guide deck of the game and read its network line by line, both cards' texts side by side. For each line ask

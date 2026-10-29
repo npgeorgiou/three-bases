@@ -26,7 +26,8 @@
   * "destroy it" on the card itself is kill (self-destruct), not sacrifice (Doomgate).
   * "You can summon creatures on spaces adjacent to this structure": the permission is on my creatures, not on the
     structure (Wind Gate); "(you may summon it on an ocean tile)": the token goes to ocean or land (Gabrian Noble).
-  * Keyword entries: "in a straight line" (Charge, Dash, Ranged Attack) is position straight_line of the unit; Jump's "up
+  * Keyword entries: "in a straight line" (Charge, Dash, Ranged Attack) is position straight_line of the unit; Ranged
+    shoots the nearest enemy in that line (line of sight: pick nearest); Jump's "up
     to 2 spaces" is distance le 2 (attr distance); those readers' unsure flags go."""
 import glob, json, os, re, sys
 HERE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -99,6 +100,8 @@ def keyword_forms(r, name, t):
             if re.search(r'straight line', t) and to is not None and LINE not in to.get('with', []) and \
                     (e.get('act') in ('move', 'strike') or (e.get('act') == 'can' and (e.get('params') or {}).get('event') == 'moves')):
                 to.setdefault('with', []).append(dict(LINE))
+            if re.search(r'line of sight', t) and e.get('act') == 'strike' and to is not None and to.get('pick') != 'nearest':
+                to['pick'] = 'nearest'; to['kind'] = 'anything'  # Ranged: the first enemy in the line (a unit in between blocks it)
             m = re.search(r'up to (\d+|two|three|four) (?:tiles|spaces)', t)
             if m and e.get('act') == 'can' and (e.get('params') or {}).get('event') == 'moves' and (e.get('params') or {}).get('amount'):
                 e['params'].pop('amount')

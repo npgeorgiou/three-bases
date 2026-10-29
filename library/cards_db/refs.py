@@ -26,6 +26,7 @@ PLAYER_ONLY = {'nexus_damaged'}  # only a player's
 OPEN_KINDS = {None, '', 'player', 'any', 'anything'}
 BY_ME = {'killed', 'damaged', 'nexus_damaged', 'challenges'}  # done by the card to something else: only the card itself can do it
 # (attacks and strikes by the card: other cards can make it attack or strike: Rally, "an ally strikes")  # kinds a player can be
+HARM = {'damage', 'kill', 'obliterate', 'capture', 'stun', 'silence', 'transform'}  # harm aimed at a chosen target of either side
 TO_OBJECT = {('harvest', 'harvests'), ('set_terrain', 'terrain_changed')}  # "X harvests from a well": the unit is the actor, the space the object (like strikes)
 BOARD_KINDS = {'unit', 'landmark', 'unit_or_structure', 'anything', 'any', None}
 # a stat tested or counted, and the happenings that change it, for a player and for a unit
@@ -57,7 +58,8 @@ def build(c):
             for ev, *kw in causes.get(('state', st), []):
                 ins(card, origin, via, ab, 'state', ev, kind, side, pick, kwid.get(kw[0].lower()) if kw else None, state=st)
         if zone and kind == 'unit':
-            for ev, *_ in causes.get(('zone', zone), []): ins(card, origin, via, ab, 'state', ev, kind, side, pick)
+            for ev, *_ in causes.get(('zone', zone), []): ins(card, origin, via, ab, 'state', ev, kind, side, pick, w=withs)  # "if Krog has
+            # died": Krog's death, not any death (the filter was dropped)
         # units picked by a keyword they have ("friendly units with Rage", "the amount of Armor"): fed by giving that keyword
         for k in (re.findall(r'(?<![a-z:])keyword is (\d+)', withs or '') if kind != 'effect' and zone not in ('deck', 'deck_top', 'deck_bottom') else []):  # repeating Summon effects is no unit with Summon; a card in the deck has its keyword, nothing gives it (Iona's Smile draws Flying creatures)
             ins(card, origin, via, ab, 'state', 'given_keyword', kind, side, pick, int(k))
@@ -80,10 +82,13 @@ def build(c):
                 if kw: return kwid.get(kw[0].lower())
         return None
 
+    cleanup = {a for (a,) in c.execute("""select ability from flat_do group by ability having sum(case when act in
+               ('kill','obliterate','sacrifice') and on_pick='self' then 0 else 1 end)=0""")}
     for r in c.execute('select card, origin, via, ability, event, actor_kind, actor_side, actor_pick, obj_kind, obj_side, '
                        'obj_pick, obj_with, actor_with from flat_when').fetchall():
         card, o, v, ab, ev, ak, as_, ap, ok, os_, op, ow, aw = r
         obj = ok or os_ or op
+        if ab in cleanup: continue  # "When you summon Krog, destroy this": it only removes itself; it waits for nothing
         if ev and ev != 'always':
             pk = op if obj else ap
             if ap == 'self' and op != 'self':  # "Strike: ... the attacked unit": it is about the card striking, not the unit hit
@@ -127,6 +132,8 @@ def build(c):
     for r in c.execute('select card, origin, via, ability, act, on_kind, on_side, on_pick, on_zone, on_with, keyword_ref, card_ref, '
                        'param_event, to_kind, to_with, to_side, to_pick from flat_do').fetchall():
         card, o, v, ab, act, k, s, p, z, w, kw, cref, pev, to_k, to_w, to_s, to_p = r
+        if not s and p == 'chosen' and act in HARM and k in ('unit', 'any', 'anything', 'unit_or_structure', None):
+            s = 'enemy'  # "deal 2 to a creature" (either side): the player aims it at an enemy; it makes no friendly deaths
         for ev, *kwn in causes.get(('act', act), []):
             if (act, ev) in TO_OBJECT and (to_k or to_s or to_p):  # the space it happens on is the event's object, the mover its actor
                 if act == 'set_terrain':  # the space now has the new ground ("to"), on the side of the space changed (mine when unsaid)
@@ -166,6 +173,10 @@ def build(c):
         # "Can't harvest faeria" the harvest rule; a "can't" limited to some targets ("can only attack gods") skips nothing
         made = {r[1] for r in rows}
         fights = bool(made & {'attacks', 'strikes', 'strikes_nexus', 'fights'})
+        # a unit that fights is struck back: it is damaged and can die (my units dying in fights feeds Shaytan Monstrosity)
+        ab0 = rows[0][0] if rows else None
+        hit_back = [(ab0, h, 'unit', 'mine', 'self', None, None, None, None, 'makes') for h in ('damaged', 'survives_damage', 'dies')] \
+            if made & {'strikes', 'fights'} and not cost_has else []
         never = {a for (a,) in c.execute("""select ck.card from card_keyword ck join card k on k.id=ck.keyword join vocab v on v.field='keyword'
                  and v.value in (k.name, k.game || ':' || k.name) where v.tree='cant_attack'""")} if fights else set()
         never |= {a for (a, ev) in c.execute("""select card, param_event from flat_do where origin='own' and act='cant' and on_pick='self'
@@ -174,6 +185,6 @@ def build(c):
                                  "(? is null or (lower(coalesce(cost_text,'')) like '%' || lower(?) || '%' and coalesce(cost, 1) > 0))",  # "0 Blood" costs nothing
                                  (cat, e, cost_has, cost_has)).fetchall():
             if card in never: continue
-            for ab, h, k, sd, pk, kw, con, w, ref, role in rows:
+            for ab, h, k, sd, pk, kw, con, w, ref, role in rows + hit_back:
                 if pk == 'self' and not sd: sd = 'mine'  # what the card does to itself is on its owner's side
                 c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (card, 'game', e, ab, role, h, k, sd, pk, kw, con, w, ref, None, None))

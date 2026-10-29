@@ -107,7 +107,8 @@ def analyze(c, game, text):
     # what the game's rules make every card of the deck do (a Skeleton dying gives a Bone, any unit can be sacrificed)
     by_rule = collections.defaultdict(set)
     for card, h, kind, sd in c.execute(f"select card, happening, kind, side from flat_ref where origin='game' and role='makes' and card in ({marks})", deck):
-        if sd == 'enemy': continue  # the rules' fights kill enemies: no friendly death made by them (Faeria Soul Eater)
+        if sd == 'enemy' or h in ('damaged', 'survives_damage', 'dies'): continue  # fights hurt both sides; every unit would be a
+        # maker of deaths, which says nothing about a deck (the network keeps these as weak "by fighting" lines)
         by_rule['mana_refilled@' + kind if h in ('mana_refilled', 'resource_gained') and kind in RESOURCE_KINDS else h].add(card)
     fit = lambda a, b: not a or not b or a == b or 'any' in (a, b)
     import network  # (lazy: network imports this module)

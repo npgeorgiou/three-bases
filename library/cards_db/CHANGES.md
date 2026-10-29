@@ -185,3 +185,13 @@ Each change: date, what changed, the card that caused it, and which records were
 - deck_analysis.py: kinds must fit (a god healed is no unit healed); a need about the card itself is not met by another card
   acting on itself unless the need names that kind of card; the rules' rows on enemies make no friendly happening; making a
   type by description is no caring about it; role "Pays for big cards (more mana, cheaper cards)". Cases dfa01-dfa05.
+
+## 29 Oct 2026, v39 (Kaptain's check of the Faeria networks)
+- network.py: helps_it (help aimed at one card of a kind helps each card it can hit); payers for the top quarter of costs;
+  line of fire (data-driven: a keyword striking the nearest enemy in a straight line); board growth (data-driven: a game
+  rule letting land or entry spaces sit next to units); harvest help only from move effects; the aimed_rows filter restored.
+- refs.py: abilities that only destroy their own card wait for nothing; chosen harm of either side goes to enemies; fighters
+  are struck back (damaged, dies on my side, weak); zone needs keep their filters ("if Krog has died").
+- deck_analysis.py: fight deaths are not listed as makers.
+- Faeria: game rules for land building and summoning; Ranged strikes the nearest enemy in a straight line; faeria.md rules
+  from the Battlefield page and Kaptain. network_page.py: labels "enables" / "helps", cost and stats, deck drop-down.

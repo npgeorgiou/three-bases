@@ -302,6 +302,16 @@ BUFFS = ('stat_gain', 'attack_gain', 'defence_gain', 'temporary_buff', 'permanen
          'target_choice', 'aoe_damage')  # keyword concepts that only make a unit stronger
 
 
+def helps_it(c, act, kw, ps):
+    """an effect that leaves my card better off: stats up, a buff or movement keyword, cheaper, healed, protected"""
+    p = dict(x.split('=', 1) for x in (ps or '').split(';') if '=' in x)
+    if act in ('stat_change', 'grow'): return any(k in p and not p[k].startswith('-') for k in ('power', 'health', 'strength'))
+    if act == 'give_keyword': return bool(kw) and (buff_keyword(c, kw) or (c.execute("select v.tree from card k join vocab v on "
+        "v.field='keyword' and v.value in (k.name, k.game || ':' || k.name) where k.id=?", (kw,)).fetchone() or [''])[0] == 'movement')
+    if act == 'cost_change': return p.get('cost', '').startswith('-')
+    return act in ('cost_set', 'heal', 'negate_damage', 'give_ability')
+
+
 def buff_keyword(c, kw):
     r = c.execute("select v.tree from card k join vocab v on v.field='keyword' and v.value in (k.name, k.game || ':' || k.name) where k.id=?", (kw,)).fetchone()
     return bool(r) and r[0] in BUFFS
@@ -344,7 +354,8 @@ def aimed_rows(c, game):
         if act in BOOST and cref is None and (side in ('mine', 'any', None) or named):
             if kind in KIND_CAT or named or kind in ('card', 'effect', 'any', 'anything'): rows.append((a, act, kind, w, kw, 'boost', named, ps))
             continue
-        if side not in ('mine', 'any') or act in NOT_AIMED: continue
+        if act in NOT_AIMED or (side not in ('mine', 'any') and not (side is None and helps_it(c, act, kw, ps))): continue  # no side
+        # (N18: "a creature", either side): help is aimed at mine (Khalim's Training), harm at enemies
         # a lasting change to all my cards of a kind, or to them in hand and deck too ("grant allies everywhere +1|+0"): it rules them
         rule = pick == 'all' and side == 'mine' and act not in NOT_AIMED and ((act in RULES and lasts in ('while', 'permanent', None)) or
                lasts in ('while', 'permanent') or zone in ('everywhere', 'hand', 'deck'))
@@ -357,7 +368,9 @@ def aimed_rows(c, game):
         cut = dict(x.split('=', 1) for x in (ps or '').split(';') if '=' in x).get('cost', '')
         if act == 'cost_change' and not narrowed and kind in ('card', 'any') and cut.startswith('-') and cut[1:].replace('.', '').isdigit() \
                 and float(cut[1:]) >= 2:  # "a random card in your hand costs 7 less": a cut that big is used in full by the cards
-            w = ';'.join(x for x in (w, f'cost ge {cut[1:]}') if x); narrowed = True  # costing at least that much (Bargain decks) or (kind not in KIND_CAT and not (kind in ('card', 'any', 'anything') and (narrowed or named))): continue
+            w = ';'.join(x for x in (w, f'cost ge {cut[1:]}') if x); narrowed = True  # costing at least that much (Bargain decks)
+        if (side == 'any' and not rule and not helps_it(c, act, kw, ps)) or \
+                (kind not in KIND_CAT and not (kind in ('card', 'any', 'anything') and (narrowed or named))): continue
         rows.append((a, act, kind, w, kw, rule, narrowed or named, ps))
     makers = collections.defaultdict(set)
     for a, act, kind, w, kw, rule, *_ in rows: makers[(act, kind, kw, rule if rule in (True, False, 'boost') else True)].add(a)
@@ -417,7 +430,9 @@ def aimed(c, game, nodes, broad):
         at = where(w)  # who benefits from a place: "when next to it", "in its circuit" (positional games; Inscryption Leader)
         for b in hits:
             if rule: out[(a, b)].append(('boosts' if isinstance(rule, str) else 'rules', 1.0 / n, what + at))  # stats given make it stronger; the rest change how it works
-            else: out[(a, b)].append(('targets', 0.5 / n, aim_said(act, kwn(kw), ps) + at))
+            elif helps_it(c, act, kw, ps): out[(a, b)].append(('boosts', 0.5 / max(1, len(hits)), aim_said(act, kwn(kw), ps) + at))
+            else: out[(a, b)].append(('targets', 0.5 / n, aim_said(act, kwn(kw), ps) + at))  # help aimed at one card of a kind helps
+            # each card it can hit (Oakling's +5|+5 to a random green creature, Horsemaster's Charge, a 7 cost cut), weight shared
     return out
 
 
@@ -546,10 +561,11 @@ def boost_lines(c, game, nodes):
             helpers = set(move_rows)
             movers = helpers | {a for (a,) in c.execute(f"""select ck.card from card_keyword ck join card k on k.id=ck.keyword join vocab v on
                     v.field='keyword' and v.value in (k.name, k.game || ':' || k.name) where v.tree='movement' and ck.card in ({marks})""", L)}
-        else: movers = helpers  # units that move well reach the wells themselves
+        else: movers = helpers
         for t, ab, h, side, role, pick in needs:
             if h not in hs or side not in sides: continue
-            helpers_t = movers if pick != 'self' else helpers  # "whenever THIS moves onto": only what moves it, not other movers
+            helpers_t = movers if pick != 'self' and h != 'harvests' else helpers  # "whenever THIS moves onto": only what moves it;
+            # "my units harvest enemy wells": every mobile unit would link (noise, Gabrian Archon -> Wavecrash Colossus)
             if concepts == ('movement',):  # what it moves must be able to be this card ("give the Demon Wing Flying", "another Rakoan")
                 fits = lambda ws: any(not who or matches(c, game, cards[t], 'any', who) for who in (';'.join(p for p in (w_ or '').split(';')
                        if p.split(' ')[:2] in (['card', 'is'], ['type', 'is'], ['type', 'in'], ['name_has', 'is'])) for w_ in ws))
@@ -597,6 +613,67 @@ def boost_lines(c, game, nodes):
             list(HIT_KW) + L + L).fetchall():
         for a in power - {t}:
             if not any(k in ('boosts', 'levels') for k, *_ in out[(a, t)]): out[(a, t)].append(('boosts', 0.25 / count(('attack_gain',)), 'more power: it hits harder'))
+    q = lambda sql, *a: {x for (x,) in c.execute(sql.format(marks=marks), list(a) + L * sql.count('{marks}'))}
+    movers_mine = q("""select card from flat_do where origin='own' and act in ('move','swap') and coalesce(on_side,'mine') in ('mine','any')
+            and coalesce(on_kind,'unit') in ('unit','any') and coalesce(on_pick,'') not in ('self') and card in ({marks})""")
+    # paying for big cards: more mana, or cost cuts on my cards, help the cards that cost the most in that game (top quarter)
+    costs = sorted(x['cost'] for x in cards.values() if x.get('cost'))
+    if costs:
+        high = costs[int(len(costs) * 0.75)]
+        payers = q("""select card from flat_do where origin='own' and ((act in ('mana_gain','max_mana_change') and coalesce(on_side,'mine')='mine')
+                or (act in ('cost_change','cost_set') and coalesce(on_side,'mine') in ('mine','any') and coalesce(on_pick,'') not in ('self','it')
+                and coalesce(params,'') not like 'cost=1%' and coalesce(params,'') not like 'cost=-1.%')) and card in ({marks})""")
+        for t in nodes:
+            if t in cards and (cards[t].get('cost') or 0) >= high:
+                for a in payers - {t}: out[(a, t)].append(('boosts', 0.5 / max(1, len(payers)), 'pays for it: more mana or a lower cost'))
+    # a straight line of fire (a keyword whose strike hits the nearest enemy in a straight line: Faeria Ranged): what removes or
+    # moves enemy units clears the line; what moves my unit by an effect places it without using its move
+    line_kw = q("""select distinct d.card from flat_do d join card k on k.id=d.card where k.is_keyword=1 and d.act='strike'
+            and d.to_with like '%straight_line%' and d.to_pick='nearest' and 1 in (1) and d.card not in ({marks})""")
+    if line_kw:
+        shooters = {t for t in nodes if t in cards and cards[t]['kws'] & line_kw}
+        clear = q("""select card from flat_do where origin='own' and act in ('damage','kill','obliterate','capture','move','swap','transform',
+                'return_to_hand') and (on_side='enemy' or (coalesce(on_side,'')='' and on_pick in ('chosen','all','random')))
+                and coalesce(on_kind,'unit') in ('unit','any','anything','unit_or_structure') and card in ({marks})""")
+        for t in shooters:
+            for a in clear - {t}: out[(a, t)].append(('boosts', 0.5 / max(1, len(clear)), 'clears its line of fire'))
+            for a in movers_mine - {t}: out[(a, t)].append(('boosts', 0.5 / max(1, len(movers_mine)), 'moves it without using its move'))
+    # a board that grows from my units (a game rule: land or entry spaces next to my units, Faeria): whatever moves my units or
+    # my land, or puts units that move far, helps the cards whose entry asks for a place (Bomb Slinger's adjacent enemy, Axe
+    # Grinder next to an enemy well, Mistral Guide's units summoned next to it)
+    grows = c.execute("""select 1 from game_rule g join flat_do d on d.card=g.entry join card k on k.id=g.entry where d.act='can' and
+            d.param_event in ('terrain_changed','summoned','played') and d.to_with like '%bordering%' and k.game=? limit 1""", (game,)).fetchone()
+    if grows:
+        mobile = q("""select ck.card from card_keyword ck join card k on k.id=ck.keyword join vocab v on v.field='keyword' and v.value in
+                (k.name, k.game || ':' || k.name) where v.tree='movement' and ck.card in ({marks})""")
+        land_movers = q("""select card from flat_do where origin='own' and act in ('move','set_terrain') and on_kind='position' and card in ({marks})""")
+        put_movers = q("""select d.card from flat_do d join flat_do g on g.card=d.card and g.ability=d.ability where d.origin='own' and
+                d.act='summon' and g.act='give_keyword' and g.on_pick='it' and g.keyword_ref in (select id from card where is_keyword=1 and
+                name in ('Flying','Jump','Charge','Dash')) and d.card in ({marks})""")
+        givers = q("""select d.card from flat_do d join card k on k.id=d.keyword_ref join vocab v on v.field='keyword' and v.value in
+                (k.name, k.game || ':' || k.name) where d.origin='own' and d.act='give_keyword' and v.tree='movement' and
+                coalesce(d.on_side,'mine') in ('mine','any') and coalesce(d.on_pick,'') not in ('self','it') and d.card in ({marks})""")  # not a
+        # token's own keyword ("summon a Manta with Flying")
+        growers = movers_mine | mobile | land_movers | put_movers | givers  # Syland Horsemaster gives Charge
+        place = q("""select distinct d.card from flat_do d join flat_when w on w.ability=d.ability where w.event in ('played','summoned')
+                and w.obj_pick='self' and d.origin='own' and coalesce(d.on_with,'') || coalesce(d.to_with,'') like '%position %'
+                and coalesce(d.on_with,'') || coalesce(d.to_with,'') not like '%position % % of %' and d.card in ({marks})  -- measured from the card itself
+                -- ("an adjacent enemy"), not from another thing ("in its place")
+                union select distinct i.card from flat_if i join flat_when w on w.ability=i.ability where w.event in ('played','summoned')
+                and w.obj_pick='self' and i.origin='own' and coalesce(i.of_with,'') like '%position %'
+                and coalesce(i.of_with,'') not like '%position % % of %' and i.card in ({marks})
+""")
+        near_me = q("""select card from flat_when where origin='own' and event in ('summoned','played') and coalesce(obj_pick,'')!='self'
+                and obj_with like '%position % bordering%' and card in ({marks})""")  # "units summoned next to this" (Mistral Guide)
+        place = {t for t in place if cards.get(t, {}).get('cat') in ('unit', 'hero', 'building')}  # a spell enters no board (Firestorm)
+        # and cards that need my units deep in enemy ground: harvesting enemy wells (Wavecrash Colossus), moving onto enemy land
+        deep = q("""select card from flat_ref where role!='makes' and origin in ('own','has_keyword') and happening in ('harvests','moves_onto')
+                and (side='enemy' or coalesce(obj_with,'') like '%enemy%') and card in ({marks})""")
+        for t in near_me:  # what moves this card, or lets it move far, chooses where the units summoned next to it appear
+            for a in (movers_mine | givers) - {t}: out[(a, t)].append(('boosts', 0.5 / max(1, len(movers_mine | givers)), 'moves it where the units summoned next to it are needed'))
+        for t in (place | deep) - near_me:
+            why = 'moves my units or land forward: it can enter where it needs to be' if t in place else 'moves my units or land forward: they reach enemy ground'
+            for a in growers - {t}: out[(a, t)].append(('boosts', 0.5 / max(1, len(growers)), why))
     return out
 
 

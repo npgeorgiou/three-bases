@@ -23,6 +23,17 @@ One file per game: the game, its factions, the source summary, the mechanics (pa
 - Faeria: 3 at the start of each turn, plus 1 for each faeria well you control by having a creature next to it (Wikipedia;
   Battlefield page: a creature on a tile next to a well).
 
+- Land (Faeria wiki, Battlefield page; Kaptain 29 Oct 2026): each turn the power wheel places one coloured land or two
+  prairies, on an empty ocean space next to your orb, next to a land you created, or next to a land one of your creatures
+  stands on; never over an opponent's land or an occupied space.
+- Summoning (Battlefield page; Kaptain): a creature is summoned on an empty land you created whose colour meets its land
+  requirement (wild cards: any of your lands). So creatures that move forward let you build, and then summon, further
+  forward.
+- Wells (Battlefield page): you gain 1 faeria at the start of your turn for a creature next to a well, and 1 when a creature
+  moves next to a well.
+- Ranged (Keyword Rulings; Kaptain): attacks the first enemy in a straight line, at any range, needing line of sight (a unit in
+  between blocks it); it cannot attack after moving normally (moves by effects, Flash Wind, do not stop it).
+
 ## Sources and notes
 
 Sources:

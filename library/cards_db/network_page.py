@@ -15,7 +15,8 @@ PAGE = r'''<!doctype html><html><head><meta charset="utf-8"><title>Deck networks
 #top{display:flex;gap:10px;align-items:center;padding:6px 8px;flex:none;overflow-x:auto}
 #games,#tabs{display:flex;gap:4px}#games button{font-weight:600;text-transform:capitalize}
 #games button,#tabs button{flex:none;white-space:nowrap;border:1px solid var(--ln);background:var(--card);color:var(--fg);padding:4px 10px;border-radius:6px;cursor:pointer}
-#games button.on{background:var(--fg);color:var(--card)}#sep{width:1px;align-self:stretch;background:var(--ln);flex:none}
+#games button.on{background:var(--fg);color:var(--card)}
+#deck{font:inherit;padding:4px 8px;border:1px solid var(--ln);border-radius:6px;background:var(--card);color:var(--fg);max-width:60vw}#sep{width:1px;align-self:stretch;background:var(--ln);flex:none}
 .sec{cursor:pointer;border-radius:6px;padding:4px 4px}.sec:hover{background:var(--chip)}.sec.on{background:var(--chip);outline:2px solid var(--fg)}
 #tabs button.on{border-color:var(--fg);font-weight:600}
 #main{flex:1;display:flex;min-height:0}
@@ -40,8 +41,8 @@ svg text{font-size:12px;fill:var(--fg);pointer-events:none;paint-order:stroke;st
 <div id="side"></div></div><div id="tip"></div><script>
 const D=__DATA__;
 const LINE={waits:['#0d9488','does what it waits for'],levels:['#c026d3','helps it level up'],puts:['#65a30d','puts it into play'],
- repeats:['#ea580c','repeats its effects'],rules:['#dc2626','changes how it works'],type:['#4f46e5','is a card it needs in play or in the deck'],
- boosts:['#b45309','makes it stronger'],levelsinto:['#6b7280','levels into'],targets:['#9ca3af','can aim at it']};
+ repeats:['#ea580c','repeats its effects'],rules:['#dc2626','changes how it works'],type:['#4f46e5','enables'],
+ boosts:['#b45309','helps'],levelsinto:['#6b7280','levels into'],targets:['#9ca3af','can aim at it']};
 const CARD={hero:['#facc15','champion'],unit:['#7dd3fc','unit'],spell:['#c4b5fd','spell'],building:['#6ee7b7','landmark / structure'],
  item:['#fdba74','equipment'],ability:['#d1d5db','skill']};
 const R=14,NS='http://www.w3.org/2000/svg',svg=document.getElementById('draw'),tip=document.getElementById('tip');
@@ -51,16 +52,18 @@ const one=i=>({nodes:new Set([i]),pairs:null,card:i});
 function games(){const G=[...new Set(D.map(x=>x.game))],g=document.getElementById('games');g.innerHTML='';
  G.forEach(x=>{const b=document.createElement('button');b.textContent=x.replace('_',' ');b.className=x===game?'on':'';
   b.onclick=()=>{game=x;cur=D.findIndex(y=>y.game===x);sel=null;games();show()};g.appendChild(b)});tabs()}
-function tabs(){const t=document.getElementById('tabs');t.innerHTML='';
- D.forEach((x,i)=>{if(x.game!==game)return;const b=document.createElement('button');b.textContent=x.deck;b.className=i===cur?'on':'';
-  b.onclick=()=>{cur=i;sel=null;show()};t.appendChild(b)})}
+function tabs(){const t=document.getElementById('tabs');t.innerHTML='';const s=document.createElement('select');s.id='deck';
+ D.forEach((x,i)=>{if(x.game!==game)return;const o=document.createElement('option');o.value=i;o.textContent=x.deck;if(i===cur)o.selected=true;s.appendChild(o)});
+ s.onchange=()=>{cur=+s.value;sel=null;show()};t.appendChild(s)}
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const col=n=>(CARD[n.cat]||['#d1d5db'])[0];
+const num=x=>x==null?'':(Math.round(x)===x?String(x):String(x));
+const info=n=>{const p=[];if(n.cost!=null)p.push(num(n.cost));if(n.power!=null||n.health!=null)p.push(num(n.power??0)+'|'+num(n.health??0));return p.length?'  ('+p.join(' \u00b7 ')+')':''};
 function layout(){ // spring layout on the lines that tie cards together; cards with none go in a row below
  const E=d.lines.filter(l=>l.kind!=='targets'),deg={};E.forEach(l=>{deg[l.from]=1;deg[l.to]=1});
  const L=N.filter(n=>deg[n.id]),F=N.filter(n=>!deg[n.id]);
  L.forEach((n,i)=>{n.x=Math.cos(i*2.4)*(60+8*i);n.y=Math.sin(i*2.4)*(60+8*i)});
- for(let t=0;t<500;t++){const k=1-t/500;L.forEach(a=>{a.dx=-a.x*0.01;a.dy=-a.y*0.01});
+ for(let t=0;t<500;t++){const k=1-t/500;L.forEach(a=>{a.dx=-a.x*0.03;a.dy=-a.y*0.03});
   for(let i=0;i<L.length;i++)for(let j=i+1;j<L.length;j++){const a=L[i],b=L[j],x=a.x-b.x,y=a.y-b.y,r=Math.max(25,Math.hypot(x,y));
    if(r>600)continue;const f=40000/(r*r)+(r<90?(90-r)*0.5:0);a.dx+=x/r*f;a.dy+=y/r*f;b.dx-=x/r*f;b.dy-=y/r*f}
   E.forEach(l=>{const a=N[ix[l.from]],b=N[ix[l.to]],x=b.x-a.x,y=b.y-a.y,r=Math.max(1,Math.hypot(x,y)),f=(r-190)*0.03;
@@ -68,7 +71,7 @@ function layout(){ // spring layout on the lines that tie cards together; cards 
   L.forEach(a=>{a.x+=Math.max(-25,Math.min(25,a.dx))*k;a.y+=Math.max(-25,Math.min(25,a.dy))*k})}
  for(let t=0;t<200;t++){let moved=0; // labels must not cover other cards: a card and its label are a box
   for(let i=0;i<L.length;i++)for(let j=i+1;j<L.length;j++){const a=L[i],b=L[j],[l,r]=a.x<b.x?[a,b]:[b,a],
-   need=R+10+l.name.length*7,dx=r.x-l.x,dy=Math.abs(a.y-b.y);
+   need=R+10+(l.name.length+info(l).length)*7,dx=r.x-l.x,dy=Math.abs(a.y-b.y);
    if(dx<need&&dy<34){const p=(34-dy)/2+1,up=a.y<=b.y?a:b,dn=up===a?b:a;up.y-=p;dn.y+=p;moved=1}}
   if(!moved)break}
  let x0=Infinity,x1=-Infinity,y1=-Infinity;L.forEach(n=>{x0=Math.min(x0,n.x);x1=Math.max(x1,n.x);y1=Math.max(y1,n.y)});
@@ -76,7 +79,7 @@ function layout(){ // spring layout on the lines that tie cards together; cards 
  const w=Math.max(x1-x0,600),per=Math.max(1,Math.floor(w/190));
  F.forEach((n,i)=>{n.x=x0+(i%per)*190;n.y=y1+90+Math.floor(i/per)*50})}
 function fit(){let a=Infinity,b=Infinity,c=-Infinity,e=-Infinity;
- N.forEach(n=>{a=Math.min(a,n.x-R);b=Math.min(b,n.y-R);c=Math.max(c,n.x+R+8+n.name.length*7);e=Math.max(e,n.y+R)});
+ N.forEach(n=>{a=Math.min(a,n.x-R);b=Math.min(b,n.y-R);c=Math.max(c,n.x+R+8+(n.name.length+info(n).length)*7);e=Math.max(e,n.y+R)});
  const w=c-a+60;vb={x:a-30-w*0.3,y:b-30,w:w*1.3,h:e-b+60};setVB()}  // room on the left for the legend
 function setVB(){svg.setAttribute('viewBox',`${vb.x} ${vb.y} ${vb.w} ${vb.h}`)}
 function zoom(f,cx,cy){const r=svg.getBoundingClientRect(),s=Math.max(vb.w/r.width,vb.h/r.height);
@@ -104,7 +107,7 @@ function draw(){svg.innerHTML='';const defs=el('defs',{}),seen={},bend=[];
   if(l.kind==='levelsinto')ln.setAttribute('stroke-dasharray','2 3');
   const hit=el('path',{d:dd,fill:'none',stroke:'transparent','stroke-width':10,'data-l':i});gl.append(ln,hit);els.lines.push(ln)});
  N.forEach((n,i)=>{const g=el('g',{});const c=el('circle',{cx:n.x,cy:n.y,r:R,fill:col(n),stroke:'currentColor','stroke-width':n.made?1.5:2,'data-n':i,style:'cursor:pointer;color:var(--fg)'});
-  if(n.made)c.setAttribute('stroke-dasharray','3 3');const t=el('text',{x:n.x+R+5,y:n.y+4});t.textContent=n.name;g.append(c,t);gn.appendChild(g);els.nodes.push(g)});
+  if(n.made)c.setAttribute('stroke-dasharray','3 3');const t=el('text',{x:n.x+R+5,y:n.y+4});t.textContent=n.name+info(n);g.append(c,t);gn.appendChild(g);els.nodes.push(g)});
  mark()}
 function mark(){const f=hov||sel,on=new Set(f?f.nodes:[]);
  d.lines.forEach((l,i)=>{const ln=els.lines[i],show=!hidden.has(l.kind),a=ix[l.from],b=ix[l.to];
@@ -116,7 +119,7 @@ function mark(){const f=hov||sel,on=new Set(f?f.nodes:[]);
  document.querySelectorAll('.chip').forEach(c=>c.style.outline=sel&&sel.card!=null&&ix[+c.dataset.id]===sel.card?'2px solid var(--fg)':'');
  document.querySelectorAll('.sec').forEach(x=>x.classList.toggle('on',!!sel&&sel.key===x.dataset.key))}
 svg.onmousemove=e=>{if(drag&&drag.moved)return;const t=e.target;let h='';
- if(t.dataset.n){const n=N[+t.dataset.n];hov=one(+t.dataset.n);h=`<b>${esc(n.name)}</b> <span style="color:var(--mut)">${esc((CARD[n.cat]||['',n.cat])[1])}${n.made?', made by the deck':''}</span><br>${n.keywords.length?'<i>'+esc(n.keywords.join(', '))+'</i><br>':''}${esc(n.text)}`}
+ if(t.dataset.n){const n=N[+t.dataset.n];hov=one(+t.dataset.n);h=`<b>${esc(n.name)}</b>${esc(info(n))} <span style="color:var(--mut)">${esc((CARD[n.cat]||['',n.cat])[1])}${n.made?', made by the deck':''}</span><br>${n.keywords.length?'<i>'+esc(n.keywords.join(', '))+'</i><br>':''}${esc(n.text)}`}
  else{hov=null;if(t.dataset.l){const l=d.lines[+t.dataset.l];h=`${esc(N[ix[l.from]].name)} &rarr; <b>${esc(l.why)}</b> &rarr; ${esc(N[ix[l.to]].name)}<br><span style="color:var(--mut)">${LINE[l.kind][1]}</span>`}}
  mark();tip.style.display=h?'block':'none';tip.innerHTML=h;tip.style.left=Math.min(innerWidth-360,e.clientX+14)+'px';tip.style.top=Math.min(innerHeight-120,e.clientY+14)+'px'};
 svg.onmouseleave=()=>{hov=null;mark();tip.style.display='none'};
@@ -158,9 +161,10 @@ def deck_data(c, lib, game, deck, src, text):
     for i, made in nodes.items():
         r = lib.execute('select text from entities where id=?', (i,)).fetchone()
         txt = ' '.join(((r[0] if r else '') or '').replace('Missing Translation', '').split())
-        kws = [n for (n,) in c.execute('select k.name from card_keyword ck join card k on k.id=ck.keyword where ck.card=?', (i,))]
-        cat = c.execute('select category from card where id=?', (i,)).fetchone()[0]
-        out.append({'id': i, 'name': mechanics.name(c, i), 'made': made, 'cat': cat, 'keywords': kws, 'text': txt})
+        kws = list(dict.fromkeys(n for (n,) in c.execute('select k.name from card_keyword ck join card k on k.id=ck.keyword where ck.card=?', (i,))))
+        cat, cost, pw, hp = c.execute('select category, cost, power, health from card where id=?', (i,)).fetchone()
+        out.append({'id': i, 'name': mechanics.name(c, i), 'made': made, 'cat': cat, 'keywords': kws, 'text': txt,
+                    'cost': cost, 'power': pw if cat in ('unit', 'hero', 'building') else None, 'health': hp if cat in ('unit', 'hero', 'building') else None})
     ls = []
     for (a, b), rs in lines.items():  # one arrow per pair and kind, its strongest reason
         per = {}
@@ -189,6 +193,7 @@ def main():
     rows = [r for f in ('decks.tsv', os.path.join('cases', 'decks.tsv'))  # decks from the web; the guide decks of the cases too
             for r in csv.DictReader(open(os.path.join(HERE, f), encoding='utf-8'), delimiter='\t')]
     order = {'runeterra': 0, 'stormbound': 1, 'monster_train': 2}
+    rows = list({(r['game'], r['deck']): r for r in reversed(rows)}.values())[::-1]  # a deck in both files is drawn once
     rows.sort(key=lambda r: order.get(r['game'], 9))
     data = [deck_data(c, lib, r['game'], r['deck'], r['source'].removeprefix('guide: ').split(' ')[0], r['cards']) for r in rows]
     open(out, 'w', encoding='utf-8').write(PAGE.replace('__DATA__', json.dumps(data, ensure_ascii=False).replace('</', '<\\/')))
