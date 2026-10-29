@@ -289,7 +289,10 @@ def boost_lines(c, game, nodes):
     """power buffs on my units help cards that count damage my side deals or hits on the enemy player (Darius, LeBlanc,
     Reputation): weak lines"""
     cards = cards_of(c, game); out = collections.defaultdict(list); marks = ','.join('?' * len(nodes))
-    buffers = {a for (a,) in c.execute(f"""select card from flat_concept where concept='attack_gain' and card in ({marks})""", list(nodes))}
+    # more power, or a keyword that gets attacks through or makes them hit harder (Elusive, Overwhelm, Quick Attack, Challenger)
+    buffers = {a for (a,) in c.execute(f"""select card from flat_concept where concept='attack_gain' and card in ({marks}) union select card
+            from flat_do where origin='own' and coalesce(on_side,'mine') in ('mine','any') and act='give_keyword' and concept in
+            ('evasion','excess_damage','multi_attack','first_strike','target_choice') and card in ({marks})""", list(nodes) * 2)}
     if not buffers: return out
     allb = CACHE.setdefault(('buffers', game), max(1, sum(1 for (a,) in c.execute("select distinct card from flat_concept where concept='attack_gain'")
                                                             if a in cards)))
@@ -489,7 +492,7 @@ def measure(c, game, ids, broad=True, limit=10):
                                                and card in ({','.join('?' * len(own))})""", own):
         side = 'mine' if pick == 'self' else side
         if h in EVERY_GAME or side == 'enemy' or (pick == 'self' and h in ('played', 'summoned')): continue
-        if not any(m != card and mechanics.FIT(ms, side) and (mk is None or kw is None or mk == kw) for m, ms, mk in makes.get(h, ())):
+        if not any(mechanics.FIT(ms, side) and (mk is None or kw is None or mk == kw) for m, ms, mk in makes.get(h, ())):  # itself counts too
             lack.setdefault(card, deck_analysis.say(c, h, side, kw))
     return {'nodes': nodes, 'lines': lines, 'best': best, 'own': own,
             'central': [(i, ins[i], outs[i]) for i in sorted(nodes, key=lambda i: -wsum[i])[:limit] if wsum[i]],

@@ -4,7 +4,7 @@
   3 check.py on every batch (0 problems required)
   4 load.py (cards.sqlite and the query layer)
   5 cases/run.py (all cases must pass)
-  6 pattern_check.py (word check; open flags are listed, not a failure)
+  6 pattern_check.py (word check; open flags are listed, not a failure); audit_links.py (links that cannot exist, listed)
   7 status.py, examples.py (STATUS.md, QUERIES.md)
 Usage: run.py <game>"""
 import glob, os, subprocess, sys
@@ -39,6 +39,7 @@ def main():
     step('load', ['load.py'] + games)  # cards.sqlite holds every game
     step('cases', ['cases/run.py', game], lambda o: (lambda w: w[0] == w[2])(o.splitlines()[-1].split()))  # "N of N cases pass"
     step('word check', ['pattern_check.py', game])
+    step('link audit', ['audit_links.py', game])  # lists links that cannot exist (audit_links.py); a game is done when it explains each
     step('status', ['status.py', game]); step('examples', ['examples.py'])
 
 

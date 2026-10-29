@@ -60,7 +60,7 @@ Made by `cases/run.py runeterra`.
 | m50 | Fearsome units evade weak blockers | 87 | 87 | 100% | 139 | yes |
 | m51 | Quick Attack strikes first | 90 | 90 | 100% | 20 | yes |
 | m52 | SpellShield negates enemy spells | 28 | 28 | 100% | 37 | yes |
-| m53 | Spirit / Gloom / Impact stacking keywords | 37 | 37 | 100% | 49 | yes |
+| m53 | Spirit / Gloom / Impact stacking keywords | 37 | 37 | 100% | 56 | yes |
 | m54 | damage equal to a stat or count | 9 | 9 | 100% | 40 | yes |
 | m55 | effects scaling with a count (for each) | 90 | 88 | 98% | 628 | yes |
 | m56 | temporary buffs this round | 131 | 131 | 100% | 44 | yes |
@@ -242,14 +242,14 @@ Made by `cases/run.py runeterra`.
 | r101 | Targon | splash (library tags) | delayed | 4 | 7 | yes |
 | r102 | Targon | splash (library tags) | cost_reduction | 6 | 22 | yes |
 | r104 | Targon | splash (library tags) | discard | 2 | 8 | yes |
-| r105 | Bandle City | archetype (library) | scaling | 34 | 86 | yes |
+| r105 | Bandle City | archetype (library) | scaling | 34 | 87 | yes |
 | r106 | Bandle City | archetype (library) | chaos | 28 | 87 | yes |
 | r107 | Bandle City | archetype (library) | trickery | 6 | 26 | yes |
 | r108 | Bandle City | archetype (library) | transformation | 16 | 34 | yes |
 | r109 | Bilgewater | archetype (library) | chaos | 30 | 73 | yes |
 | r110 | Bilgewater | archetype (library) | ramp | 17 | 40 | yes |
-| r111 | Bilgewater | archetype (library) | graveyard | 4 | 39 | yes |
-| r112 | Demacia | archetype (library) | scaling | 21 | 38 | yes |
+| r111 | Bilgewater | archetype (library) | graveyard | 4 | 44 | yes |
+| r112 | Demacia | archetype (library) | scaling | 21 | 44 | yes |
 | r113 | Demacia | archetype (library) | fortress | 22 | 51 | yes |
 | r114 | Freljord | archetype (library) | sustain | 14 | 25 | yes |
 | r115 | Freljord | archetype (library) | transformation | 11 | 22 | yes |
@@ -262,12 +262,12 @@ Made by `cases/run.py runeterra`.
 | r122 | Piltover & Zaun | archetype (library) | ramp | 18 | 46 | yes |
 | r123 | Piltover & Zaun | archetype (library) | spellslinger | 14 | 45 | yes |
 | r124 | Shadow Isles | archetype (library) | sacrifice | 47 | 102 | yes |
-| r125 | Shadow Isles | archetype (library) | graveyard | 14 | 31 | yes |
+| r125 | Shadow Isles | archetype (library) | graveyard | 14 | 32 | yes |
 | r126 | Shadow Isles | archetype (library) | sustain | 17 | 38 | yes |
 | r127 | Shadow Isles | archetype (library) | swarm | 36 | 71 | yes |
 | r128 | Shurima | archetype (library) | trickery | 5 | 7 | yes |
 | r129 | Shurima | archetype (library) | swarm | 30 | 88 | yes |
-| r130 | Targon | archetype (library) | spellslinger | 18 | 39 | yes |
+| r130 | Targon | archetype (library) | spellslinger | 18 | 41 | yes |
 | r131 | Targon | archetype (library) | card_advantage | 15 | 44 | yes |
 
 ## Guide decks (the explanation must say what the guide says)

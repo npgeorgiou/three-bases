@@ -20,7 +20,7 @@ create index frh on flat_ref(happening, role); create index frc on flat_ref(card
 
 
 UNIT_ONLY = {'dies', 'killed', 'survives_damage', 'summoned', 'revived', 'leaves_play', 'strikes', 'attacks', 'blocks'}  # never a player's
-PLAYER_ONLY = {'nexus_damaged', 'strikes_nexus'}  # only a player's
+PLAYER_ONLY = {'nexus_damaged'}  # only a player's
 OPEN_KINDS = {None, '', 'player', 'any', 'anything'}  # kinds a player can be
 BOARD_KINDS = {'unit', 'landmark', 'unit_or_structure', 'anything', 'any', None}
 # a stat tested or counted, and the happenings that change it, for a player and for a unit
@@ -99,7 +99,8 @@ def build(c):
         if kw and act in ('keyword_action', 'give_keyword'):  # what the keyword itself is (Predict: predicts)
             for ev, *kwn in causes.get(('keyword', kwname.get(kw, '')), []): ins(card, o, v, ab, 'makes', ev, k, s, p, kw)
         if act == 'cant' and pev == 'blocks' and s == 'enemy' and (p == 'self' or k in ('unit', None)):  # can't be blocked: hits the enemy player
-            for ev in ('strikes_nexus', 'nexus_damaged', 'damaged'): ins(card, o, v, ab, 'makes', ev, 'player', 'enemy', None)
+            for ev in ('nexus_damaged', 'damaged'): ins(card, o, v, ab, 'makes', ev, 'player', 'enemy', None)
+            ins(card, o, v, ab, 'makes', 'strikes_nexus', 'unit', 'mine', p)  # the unit itself strikes the Nexus
         if act in ('first_strike', 'double_strike', 'strike_with') and s in ('mine', None) and p in ('self', 'all', 'chosen', None):  # my unit strikes: an enemy takes damage
             ins(card, o, v, ab, 'makes', 'damaged', 'unit', 'enemy', None)
         state_rows(card, o, v, ab, k, s, p, w, z)

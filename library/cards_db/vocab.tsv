@@ -279,8 +279,8 @@ lasts	unstated	the text does not say how long			28 Oct 2026, v3
 pick	highest	"highest value of the target key ""by"" (an attr)"			28 Oct 2026, v3
 pick	lowest	"lowest value of the target key ""by"" (an attr)"			28 Oct 2026, v3
 param	except	"how many are left out (""obliterate the enemy deck, leaving 3"")"			28 Oct 2026, v3
-keyword	Trap	concept of using or giving this keyword	trap_secret		28 Oct 2026, v3
-keyword	Boon	concept of using or giving this keyword	trap_secret		28 Oct 2026, v3
+keyword	Trap	concept of using or giving this keyword	trap_secret	trap_activated	28 Oct 2026, v3
+keyword	Boon	concept of using or giving this keyword	trap_secret	trap_activated	28 Oct 2026, v3
 keyword	Plant	concept of using or giving this keyword	trap_secret		28 Oct 2026, v3
 keyword	Recall	concept of using or giving this keyword	return_to_hand		28 Oct 2026, v3
 keyword	Obliterate	concept of using or giving this keyword	banish		28 Oct 2026, v3
@@ -301,10 +301,10 @@ keyword	Drain	concept of having, using or giving this keyword	lifesteal		28 Oct 
 keyword	Regeneration	concept of having, using or giving this keyword	regeneration		28 Oct 2026, v3
 keyword	Barrier	concept of having, using or giving this keyword	shield		28 Oct 2026, v3
 keyword	SpellShield	concept of having, using or giving this keyword	immunity		28 Oct 2026, v3
-keyword	Elusive	concept of having, using or giving this keyword	evasion		28 Oct 2026, v3
-keyword	Fearsome	concept of having, using or giving this keyword	evasion		28 Oct 2026, v3
+keyword	Elusive	concept of having, using or giving this keyword	evasion	strikes_nexus	28 Oct 2026, v3
+keyword	Fearsome	concept of having, using or giving this keyword	evasion	strikes_nexus	28 Oct 2026, v3
 keyword	Brash	concept of having, using or giving this keyword	evasion		28 Oct 2026, v3
-keyword	Overwhelm	concept of having, using or giving this keyword	excess_damage		28 Oct 2026, v3
+keyword	Overwhelm	concept of having, using or giving this keyword	excess_damage	strikes_nexus	28 Oct 2026, v3
 keyword	Tough	concept of having, using or giving this keyword	damage_reduction		28 Oct 2026, v3
 keyword	Ephemeral	concept of having, using or giving this keyword	self_destruct		28 Oct 2026, v3
 keyword	Deathless	concept of having, using or giving this keyword	cheat_death		28 Oct 2026, v3
@@ -509,3 +509,36 @@ state	boss	"a boss: the strongest enemy of a fight (""non-boss unit"", ""does no
 kind	lane_resource_slot	a slot that holds a lane resource (Monster Train Echo slot)			28 Oct 2026, v23 (Monster Train)
 act	exhaust	remove the target card for the rest of the battle (Monster Train Consume pile, Slay the Spire exhaust)	exhaust	exhausted	28 Oct 2026, v24 (Monster Train)
 act	copy_upgrades	the "on" units get the upgrades, enhancements and stat changes of the "to" card (Monster Train Legion of Wax: "apply this unit's upgrades and stat changes")	upgrade		29 Oct 2026, v26 (Monster Train)
+keyword	Burst	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	spell_speed		29 Oct 2026, v30
+keyword	Fast	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	spell_speed		29 Oct 2026, v30
+keyword	Slow	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	spell_speed		29 Oct 2026, v30
+keyword	Focus	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	spell_speed		29 Oct 2026, v30
+keyword	Skill	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	activated		29 Oct 2026, v30
+keyword	Elemental Skill	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	activated		29 Oct 2026, v30
+keyword	Countdown	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	delayed	counts_down;countdown_done	29 Oct 2026, v30
+keyword	Advance	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	delayed	counts_down	29 Oct 2026, v30
+keyword	Last Breath	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	death_trigger		29 Oct 2026, v30
+keyword	Imbue	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	on_spell		29 Oct 2026, v30
+keyword	Nightfall	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	combo_sequence		29 Oct 2026, v30
+keyword	Daybreak	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	combo_sequence		29 Oct 2026, v30
+keyword	Attune	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	resource_gain	mana_refilled	29 Oct 2026, v30
+keyword	Plunder	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	on_life_loss		29 Oct 2026, v30
+keyword	Curse	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	debuff		29 Oct 2026, v30
+keyword	Enlightened	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	high_cost		29 Oct 2026, v30
+keyword	Flow	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	on_spell		29 Oct 2026, v30
+keyword	Allegiance	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	deck_condition		29 Oct 2026, v30
+keyword	Phase	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	stances		29 Oct 2026, v30
+keyword	Reforge	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	generate_cards	created	29 Oct 2026, v30
+keyword	Restore the Sun Disc	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	upgrade	levels_up	29 Oct 2026, v30
+keyword	Updraft	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	deck_modification	shuffled	29 Oct 2026, v30
+keyword	Improvise	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	merge_attach	equipped	29 Oct 2026, v30
+keyword	Boost	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	stacking_keyword	given_keyword	29 Oct 2026, v30
+keyword	Forge	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	stat_gain	stat_changed	29 Oct 2026, v30
+keyword	Empowered	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	stat_condition		29 Oct 2026, v30
+keyword	Reputation	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	condition_count		29 Oct 2026, v30
+keyword	Deep	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	self_mill		29 Oct 2026, v30
+keyword	Behold	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	condition		29 Oct 2026, v30
+keyword	Assimilate	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	transform	transformed;levels_up	29 Oct 2026, v30
+keyword	Fated	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	on_targeted		29 Oct 2026, v30
+keyword	Sharpsight	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	blocking		29 Oct 2026, v30
+keyword	Mark of the Storm	concept of having, using or giving this keyword (Runeterra glossary: Claude's mapping, for Kaptain's check)	mark_target		29 Oct 2026, v30

@@ -99,7 +99,7 @@ select distinct card from flat_concept where concept='lifesteal'
 select distinct card from flat_ref where happening='given_keyword' and role!='makes'
 ```
 - monster_train: 90 cards: Alloy of the Ancients, Alloyed Construct, Apex Imp, Armor, Attuned, Awake, Battering Ram, Big Sludge ...
-- runeterra: 107 cards: Animate, Arbiter of the Peak, Aspect of the Dragon, Ava Achiever, Balen the Benevolent, Big Game Tycoon, Clash of Giants, Curtain Call ...
+- runeterra: 109 cards: Animate, Arbiter of the Peak, Aspect of the Dragon, Ava Achiever, Balen the Benevolent, Big Game Tycoon, Caitlyn, Caitlyn (level 2) ...
 - stormbound: 26 cards: Acid Greenhorns, Amberhides, Big Sisters of Growth, Brood Sages, Copperskin Ranger, Crimson Sentry, Function Wilds, Green Prototypes ...
 
 ## Effects that grow with a count ("for each", "equal to"), any game
@@ -119,17 +119,17 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 - passive: monster_train 8 cards, runeterra 18 cards, stormbound 8 cards
 - cheat_death: runeterra 7 cards
 - silence: stormbound 8 cards
-- forced_movement: monster_train 6 cards
 - movement: monster_train 6 cards
+- forced_movement: monster_train 6 cards
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
 - destroy: monster_train 399 pairs, e.g. Little Fade -> Primordium; runeterra 12614 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- sacrifice: monster_train 248 pairs, e.g. Primordium -> Devourer of Death; runeterra 3957 pairs, e.g. Amalgamation Of Vile Rites -> Shackled Ghasts; stormbound 120 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- removal: monster_train 93 pairs, e.g. Wicked Blaze -> Primordium; runeterra 3529 pairs, e.g. Kindred's Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
-- self_destruct: monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6899 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
-- revive: runeterra 1072 pairs, e.g. Eternal Dancers -> Bladepierced Revenant
-- damage: runeterra 13498 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 719 pairs, e.g. Eloth the Ignited -> Dreadful Keepers
+- sacrifice: monster_train 248 pairs, e.g. Primordium -> Devourer of Death; runeterra 3957 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- removal: monster_train 93 pairs, e.g. Wicked Blaze -> Primordium; runeterra 3531 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Embers of Chaos
+- self_destruct: monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6899 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Azure Hatcher
+- revive: runeterra 1074 pairs, e.g. Eternal Dancers -> Bladepierced Revenant
+- damage: runeterra 13499 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 719 pairs, e.g. Eloth the Ignited -> Dreadful Keepers
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -137,7 +137,7 @@ Families of three mechanics that feed each other, starting from "summon" (`ask.p
 - summon -> temporary_buff -> stat_gain (seen in runeterra)
 - summon -> temporary_buff -> attack_gain (seen in runeterra)
 - summon -> on_ally_play -> combo_sequence (seen in runeterra)
-- summon -> on_ally_play -> delayed (seen in runeterra)
+- summon -> cant_block -> cant_attack (seen in runeterra)
 - summon -> temporary_buff -> buff (seen in runeterra)
 
 ## A deck explained (`ask.py runeterra analyze "..."`), a Lucian/Senna deck from a deck guide
@@ -154,7 +154,7 @@ Supports your units (stats, protection, combat keywords): Piercing Darkness, Sen
 Card flow (draw, create, choose): Glimpse Beyond, Lonely Chimeslime, Senna, Spirit Leech.
 Puts extra units into play: Cursed Keeper, Hapless Aristocrat, The Undying.
 Units that support cards can target: 9 (Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, Lucian, Ravenous Butcher, Senna, Senna, Sentinel of Light, Spirit Leech, The Undying).
-Key cards (in most of the plan): Senna, The Ruination, Spirit Leech, Crumble, Ravenous Butcher.
+Key cards (in most of the plan): Senna, Spirit Leech, The Ruination, Crumble, Ravenous Butcher.
 Weak spots: none found.
 ```
 
@@ -191,15 +191,15 @@ select distinct card from flat_do where act='copy_keywords'
 - monster_train Wurmkin: cost_type (10), resource_gain (23), summon (4), damage_over_time (8), exhaust (19)
 - monster_train Clanless: direct_damage (5), banish (10), turn_end (7), cant_attack (5), passive (20)
 - runeterra Ionia: bounce_enemy (11), leave_trigger (10), silence (33), movement (6), swap (6)
-- runeterra Noxus: on_discard (10), drawback (7), excess_damage (37), disable (21), on_life_loss (11)
+- runeterra Noxus: on_discard (10), drawback (7), on_life_loss (14), excess_damage (37), disable (21)
 - runeterra Demacia: extra_turn (23), damage_reduction (19), multi_attack (19), damage_prevention (19), shield (16)
-- runeterra Piltover & Zaun: junk_cards (13), on_draw (18), recycle (11), on_spell (27), trap_secret (16)
+- runeterra Piltover & Zaun: deck_modification (10), junk_cards (13), on_draw (18), recycle (11), on_spell (27)
 - runeterra Freljord: attack_zero (21), regeneration (16), stat_loss (23), stat_multiply (27), aoe_damage (27)
-- runeterra Shadow Isles: death_count (23), revive (20), sacrifice (34), other_death_trigger (25), self_mill (7)
-- runeterra Bilgewater: steal (5), forced_movement (4), self_mill (6), on_life_loss (21), hand_disruption (5)
-- runeterra Targon: on_lifegain (5), combo_sequence (32), immunity (20), on_targeted (24), assists_support (12)
-- runeterra Shurima: stealth (7), tutor (19), delayed (26), debuff (5), variety_payoff (11)
-- runeterra Bandle City: stacking_keyword (52), trap_secret (25), junk_cards (8), ping (65), spell_power (5)
+- runeterra Shadow Isles: death_count (23), revive (20), sacrifice (34), other_death_trigger (25), lifesteal (29)
+- runeterra Bilgewater: steal (5), self_mill (12), forced_movement (4), on_life_loss (21), hand_disruption (5)
+- runeterra Targon: on_lifegain (5), stances (5), combo_sequence (34), immunity (20), on_targeted (25)
+- runeterra Shurima: stealth (7), tutor (19), delayed (26), variety_payoff (11), rule_change (14)
+- runeterra Bandle City: stacking_keyword (53), trap_secret (25), junk_cards (8), ping (65), spell_power (5)
 - runeterra Runeterra: repeat_trigger (7), board_presence (6), merge_attach (26), variety_payoff (5), other_leave_trigger (14)
 - stormbound Neutral: draw (5), generate_cards (4), variety_payoff (6), attack_now (4), copy (4)
 - stormbound Ironclad: lanes (8), forced_movement (9), movement (9), death_trigger (4), positional (26)
