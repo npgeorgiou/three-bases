@@ -21,6 +21,8 @@ and second readings). Safe to run any number of times. Each rule is listed in CH
      Yasuo, Fae Bladetwirler and The Tidedancer were read the other way).
   N13 steal aimed at my own side (pick self or side mine: "convert itself") is donate; steal is only taking the enemy's.
   N14 a plain draw is from the top of the deck: draw with pick top is written as zone deck_top without the pick (one form).
+  N23 a draw that names what it draws ("draw a follower", "draw the top legend in your deck") takes it from the deck: zone
+     deck (pick top kept for "the top ..."), never deck_top, which is the plain draw of N14 (Faeria, Runeterra, Monster Train).
   N15 a planted card going off ("5+ of your traps have been activated": event activated whose object is another card, or
      keyword_used of a keyword whose vocab causes trap_activated: Trap, Boon) is event trap_activated; activated stays the
      player using something (a landmark, a keyword's own activation).
@@ -77,8 +79,10 @@ def fix_effect(e, kinds):
     if e.get('act') == 'steal' and ((e.get('on') or {}).get('pick') == 'self' or (e.get('on') or {}).get('side') == 'mine'):
         e['act'] = 'donate'  # N13
     on = e.get('on')
-    if e.get('act') == 'draw' and isinstance(on, dict) and on.get('pick') == 'top' and on.get('zone') in ('deck_top', 'deck'):
+    if e.get('act') == 'draw' and isinstance(on, dict) and on.get('pick') == 'top' and on.get('zone') in ('deck_top', 'deck') and not on.get('with'):
         on.pop('pick'); on['zone'] = 'deck_top'  # N14
+    if e.get('act') == 'draw' and isinstance(on, dict) and on.get('with') and on.get('zone') == 'deck_top' and not on.get('pick'):
+        on['zone'] = 'deck'  # N23
     if e.get('card') and e.get('act') in ('summon', 'create', 'copy', 'play_card') and isinstance(e.get('on'), dict) and set(e['on']) <= {'kind'}:
         e.pop('on')  # N11
     act = e.get('act')

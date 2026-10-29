@@ -26,7 +26,7 @@ PLAYER_ONLY = {'nexus_damaged'}  # only a player's
 OPEN_KINDS = {None, '', 'player', 'any', 'anything'}
 BY_ME = {'killed', 'damaged', 'nexus_damaged', 'challenges'}  # done by the card to something else: only the card itself can do it
 # (attacks and strikes by the card: other cards can make it attack or strike: Rally, "an ally strikes")  # kinds a player can be
-TO_OBJECT = {('harvest', 'harvests'), ('move', 'moves_onto')}  # "X harvests from a well", "X moves onto enemy land": object = "to"
+TO_OBJECT = {('harvest', 'harvests')}  # "X harvests from a well": the unit is the actor, the space the object (like strikes)
 BOARD_KINDS = {'unit', 'landmark', 'unit_or_structure', 'anything', 'any', None}
 # a stat tested or counted, and the happenings that change it, for a player and for a unit
 STAT_EVENTS = {'health': {'player': ('nexus_damaged', 'healed'), 'unit': ('stat_changed', 'damaged', 'healed')},
@@ -119,7 +119,7 @@ def build(c):
         card, o, v, ab, act, k, s, p, z, w, kw, cref, pev, to_k, to_w, to_s, to_p = r
         for ev, *kwn in causes.get(('act', act), []):
             if (act, ev) in TO_OBJECT and (to_k or to_s or to_p):  # the space it happens on is the event's object, the mover its actor
-                ins(card, o, v, ab, 'makes', ev, to_k, to_s, to_p, w=to_w, ak=k or 'unit', aw=w); continue
+                ins(card, o, v, ab, 'makes', ev, to_k, to_s, 'self' if p == 'self' else to_p, w=to_w, ak=k or 'unit', aw=w); continue  # "I harvest": self, as for strikes
             if act == 'strike' and ev != 'strikes' and (to_k or to_s or to_p):  # "A strikes B": A strikes, B takes the damage
                 if to_k == 'player':
                     if ev == 'damaged': ins(card, o, v, ab, 'makes', 'nexus_damaged', 'player', to_s, None)
@@ -142,7 +142,7 @@ def build(c):
             # an ability that spends a resource needs it ("Activate: Pay 2 Bones"): fed by gaining it; the card's own need
             ins(card, o, v, None if o == 'has_keyword' else ab, 'condition', 'mana_refilled', k, 'mine', None, w=w)
         state_rows(card, o, v, ab, k, s, p, w, z)
-        if to_w and re.search(r'(?<![a-z:])position ', to_w) and act not in PLACES:  # "attack a bordering enemy"; where a new card is put
+        if to_w and to_k != 'position' and re.search(r'(?<![a-z:])position ', to_w) and act not in PLACES:  # a space is not moved into place  # "attack a bordering enemy"; where a new card is put
             ins(card, o, v, ab, 'state', 'moves', to_k, s, None, w=to_w)                # ("Pelt Lice in adjacent slots") needs no moves
     # the game's rules (read/<game>/game_rules.jsonl): what every card of a category does without its text saying so (an
     # attacking unit hits the enemy Nexus when it is not blocked); its makes rows, about "self", become every such card's own

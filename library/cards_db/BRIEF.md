@@ -367,13 +367,14 @@ game's own glossary (Abrakam's card export README, faeria.com Keyword Rulings gu
 - Lands as conditions. "While you control 2 lakes" = COND `{"test": "count", "of": {"kind": "position", "side": "mine",
   "with": [terrain lake]}, "op": "ge", "n": 2}`; "for each forest you control" = `{"x": "count", "of": <that target>}`.
 - Triggers. "Gift -" = played, object self. "Last Words -" = dies, object self. "Production -" = turn_start, actor
-  `{"kind": "player", "side": "mine"}`. "Combat -" = fights, actor self. "Corrupt -" = moves_onto, actor self, object
-  `{"kind": "position", "side": "enemy", "with": [terrain land]}`, limit once_per_game. "Activate -" = activated. "At the end
+  `{"kind": "player", "side": "mine"}`. "Combat -" = fights, actor self. "Corrupt -" = moves_onto, object self `with` [position same_space
+  of `{"kind": "position", "side": "enemy", "with": [terrain land]}`], limit once_per_game (the mover is the object, as for
+  moves; the space is where it now stands). "Activate -" = activated. "At the end
   of your turn" = turn_end, actor me. "On your opponent's next turn" = turn_start, actor the enemy player, limit next_time.
   "Whenever this attacks a god" = strikes_nexus, actor self (rule 31). "Whenever this attacks" = attacks, actor self.
   "Whenever this harvests faeria (from an opponent's well)" = harvests, actor self, object a position with terrain
   resource_well (side enemy). "Whenever you harvest faeria" = harvests, actor `{"kind": "unit", "side": "mine"}`. "Whenever
-  this moves into a forest" = moves_onto, actor self, object position terrain forest. "Whenever you select +1 faeria from the
+  this moves into a forest" = moves_onto, object self with position same_space of a position with terrain forest. "Whenever you select +1 faeria from the
   power wheel" = turn_option_chosen, actor me, object `{"kind": "mana"}`. "Whenever you play an event" = played, object kind
   spell side mine.
 - Durations. "This turn" = lasts this_round (one turn is the span); "Has +1/+1 while ..." = stat_change lasts while.

@@ -229,7 +229,7 @@ fa01	mechanic	Gift triggers	text:\bgift\s*-	select card from flat_when where eve
 fa02	mechanic	Last Words triggers	text:\blast words\s*-	select card from flat_when where event='dies' and obj_pick='self'	faeria
 fa03	mechanic	Production triggers	text:\bproduction\s*-	select card from flat_when where event='turn_start' and actor_kind='player' and actor_side='mine'	faeria
 fa04	mechanic	Combat triggers	text:\bcombat\s*-	select card from flat_when where event='fights'	faeria
-fa05	mechanic	Corrupt triggers	text:\bcorrupt\s*-	select card from flat_when where event='moves_onto' and obj_side='enemy'	faeria
+fa05	mechanic	Corrupt triggers	text:\bcorrupt\s*-	select card from flat_when where event='moves_onto' and obj_with like '%same_space of position enemy%'	faeria
 fa06	mechanic	Activate abilities	text:\bactivate\s*-	select card from flat_when where event='activated'	faeria
 fa07	mechanic	end of your turn	text:\bat the end of (?:your|the) turn\b	select card from flat_when where event='turn_end'	faeria
 fa08	mechanic	rewards attacking a god	text:\battacks? a god\b	select card from flat_when where event='strikes_nexus'	faeria

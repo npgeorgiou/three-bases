@@ -202,7 +202,7 @@ RULES = [
     ('card_presence_condition', 'flat_if', "test='have' and coalesce(op,'') not in ('not')"),
     # board ground (Faeria lands): changing, moving or taking a space's ground; entering or standing on enemy ground
     ('terrain', 'flat_do', "act='set_terrain' or (act in ('move','steal','kill') and on_kind='position')"),
-    ('territory_trigger', 'flat_when', "event='moves_onto' and obj_side='enemy'"),
+    ('territory_trigger', 'flat_when', "event='moves_onto' and obj_with like '%same_space of position enemy%'"),
     ('territory_trigger', 'flat_if', "coalesce(of_with,'') like '%same_space%' and coalesce(of_with,'') like '%enemy%'"),
     ('removal', 'flat_do', "act in ('kill','obliterate','capture') and (on_side in ('enemy','any') or (coalesce(on_side,'')='' and on_pick in ('all','random','chosen','lowest','highest') and on_kind in ('unit','unit_or_structure','anything','landmark')))"),
 ]

@@ -400,8 +400,8 @@ keyword	Vitalize	concept of using this keyword (Stormbound: gains 1 strength eve
 keyword	Freeze	concept of using this keyword (Stormbound: no move and no ability for a turn; concept is Claude's)	disable		28 Oct 2026, v14 (Stormbound)
 keyword	Confuse	concept of using this keyword (Stormbound: moves sideways at random for a turn; concept is Claude's)	forced_movement		28 Oct 2026, v14 (Stormbound)
 keyword	Disable	concept of using this keyword (Stormbound: loses its ability; concept is Claude's)	silence		28 Oct 2026, v14 (Stormbound)
-keyword	Command	concept of using this keyword (Stormbound: my unit moves forward; concept is Claude's)	movement		28 Oct 2026, v14 (Stormbound)
-keyword	Move fixedly forward	concept of using this keyword (Stormbound: moves forward ignoring sides; concept is Claude's)	movement		28 Oct 2026, v14 (Stormbound)
+keyword	Command	concept of using this keyword (Stormbound: my unit moves forward; concept is Claude's)	movement	moves;moves_onto	28 Oct 2026, v14 (Stormbound)
+keyword	Move fixedly forward	concept of using this keyword (Stormbound: moves forward ignoring sides; concept is Claude's)	movement	moves;moves_onto	28 Oct 2026, v14 (Stormbound)
 keyword	Convert	concept of using this keyword (Stormbound: takes the enemy unit; concept is Claude's)	steal		28 Oct 2026, v14 (Stormbound)
 keyword	Destroy	concept of using this keyword (Stormbound: removed whatever its strength; concept is Claude's)	removal		28 Oct 2026, v14 (Stormbound)
 keyword	Force attack	concept of using this keyword (Stormbound: made to attack a bordering tile; concept is Claude's)	forced_attack		28 Oct 2026, v14 (Stormbound)
@@ -459,8 +459,8 @@ keyword	Reap	concept of having, using or giving this keyword (Monster Train: 1 d
 keyword	Rooted	concept of having, using or giving this keyword (Monster Train: stops the next move between floors; bosses are immune; concept is Claude's)	immobilize		28 Oct 2026, v22 (Monster Train)
 keyword	Sap	concept of having, using or giving this keyword (Monster Train: -2 Attack per stack; decreases every turn; concept is Claude's)	stat_loss		28 Oct 2026, v22 (Monster Train)
 keyword	Spell Weakness	concept of having, using or giving this keyword (Monster Train: the next damage spell on the unit deals that much again per stack; concept is Claude's)	mark_target		28 Oct 2026, v22 (Monster Train)
-keyword	Ascend	concept of having, using or giving this keyword (Monster Train: move up a floor, to the back of that floor; concept is Claude's)	movement		28 Oct 2026, v22 (Monster Train)
-keyword	Descend	concept of having, using or giving this keyword (Monster Train: move down a floor, to the back of that floor; concept is Claude's)	movement		28 Oct 2026, v22 (Monster Train)
+keyword	Ascend	concept of having, using or giving this keyword (Monster Train: move up a floor, to the back of that floor; concept is Claude's)	movement	moves;moves_onto	28 Oct 2026, v22 (Monster Train)
+keyword	Descend	concept of having, using or giving this keyword (Monster Train: move down a floor, to the back of that floor; concept is Claude's)	movement	moves;moves_onto	28 Oct 2026, v22 (Monster Train)
 keyword	Reform	concept of having, using or giving this keyword (Monster Train: return a defeated friendly unit to hand, enhanced; concept is Claude's)	recycle		28 Oct 2026, v22 (Monster Train)
 keyword	Sacrifice	concept of having, using or giving this keyword (Monster Train: kill a friendly unit of the required type to play the card; concept is Claude's)	sacrifice		28 Oct 2026, v22 (Monster Train)
 keyword	Cultivate	concept of having, using or giving this keyword (Monster Train: the friendly unit with the lowest health gains that much attack and health; concept is Claude's)	stat_gain		28 Oct 2026, v22 (Monster Train)
@@ -558,9 +558,9 @@ terrain	resource_well	a board space whose resource a unit next to it collects (F
 act	set_terrain	change the ground of the "on" spaces to the terrain the "to" target has (Faeria create, transform or destroy a land; a destroyed land becomes ocean)	terrain	terrain_changed	29 Oct 2026, v35
 act	harvest	the unit collects a resource from a board space next to it (Faeria harvesting faeria from a well)	resource_gain	harvests;resource_gained	29 Oct 2026, v35
 event	terrain_changed	a board space's ground changes (Faeria "whenever you create forest")	terrain		29 Oct 2026, v35
-event	harvests	a unit collects a resource from a board space next to it (actor the unit, object the space; Faeria harvesting a well)	on_harvest		29 Oct 2026, v35
+event	harvests	a unit collects a resource from a board space next to it: actor the unit, object the space (like strikes: Faeria harvesting a well)	on_harvest		29 Oct 2026, v35
 event	fights	a unit exchanges attacks with a unit, structure or player, attacking or attacked, not hit from range (Faeria Combat)	on_fight		29 Oct 2026, v35
-event	moves_onto	a unit has moved onto a board space (actor the unit, object the space: "moves onto enemy land", "moves into a forest")			29 Oct 2026, v35
+event	moves_onto	a unit has moved onto a board space: object the moving unit (as for moves), the space as its position filter same_space of the space ("moves onto enemy land", "moves into a forest")			29 Oct 2026, v35
 event	turn_option_chosen	the player picks one of the choices every turn offers (Faeria power wheel; object kind mana = the +1 faeria choice)			29 Oct 2026, v35
 position	same_space	on the same board space as of (a unit and the land it stands on: "this creature's land", "on an enemy land")			29 Oct 2026, v35
 state	empty	a board space with no unit or structure on it ("unoccupied land")			29 Oct 2026, v35
@@ -570,11 +570,11 @@ keyword	Production	concept of having, using or giving this keyword (Faeria: at t
 keyword	Combat	concept of having, using or giving this keyword (Faeria: whenever it exchanges attacks with creatures, structures or the enemy god; not when shot from range)	on_fight	fights	29 Oct 2026, v35
 keyword	Corrupt	concept of having, using or giving this keyword (Faeria: the first time it moves onto enemy land on a turn after it was played)	territory_trigger	moves_onto	29 Oct 2026, v35
 keyword	Activate	concept of having, using or giving this keyword (Faeria: a structure's ability used once per turn)	activated	activated	29 Oct 2026, v35
-keyword	Flying	concept of having, using or giving this keyword (Faeria: moves over ocean and land; Faeria has no blocking, so it is movement, Kaptain 26 Oct 2026)	movement		29 Oct 2026, v35
-keyword	Charge	concept of having, using or giving this keyword (Faeria Charge N: moves up to N spaces in a straight line)	movement		29 Oct 2026, v35
-keyword	Jump	concept of having, using or giving this keyword (Faeria: moves up to 2 spaces, over creatures and ocean)	movement		29 Oct 2026, v35
-keyword	Dash	concept of having, using or giving this keyword (Faeria Dash N: when summoned, moves up to N spaces in a straight line)	movement		29 Oct 2026, v35
-keyword	Aquatic	concept of having, using or giving this keyword (Faeria: moves only over ocean and lakes, drowns at end of turn on other land; movement, Kaptain 26 Oct 2026)	movement		29 Oct 2026, v35
+keyword	Flying	concept of having, using or giving this keyword (Faeria: moves over ocean and land; Faeria has no blocking, so it is movement, Kaptain 26 Oct 2026)	movement	moves;moves_onto	29 Oct 2026, v35
+keyword	Charge	concept of having, using or giving this keyword (Faeria Charge N: moves up to N spaces in a straight line)	movement	moves;moves_onto	29 Oct 2026, v35
+keyword	Jump	concept of having, using or giving this keyword (Faeria: moves up to 2 spaces, over creatures and ocean)	movement	moves;moves_onto	29 Oct 2026, v35
+keyword	Dash	concept of having, using or giving this keyword (Faeria Dash N: when summoned, moves up to N spaces in a straight line)	movement	moves;moves_onto	29 Oct 2026, v35
+keyword	Aquatic	concept of having, using or giving this keyword (Faeria: moves only over ocean and lakes, drowns at end of turn on other land; movement, Kaptain 26 Oct 2026)	movement	moves;moves_onto	29 Oct 2026, v35
 keyword	Taunt	concept of having, using or giving this keyword (Faeria: adjacent enemy creatures can't move and can only attack it)	taunt		29 Oct 2026, v35
 keyword	Haste	concept of having, using or giving this keyword (Faeria: can move, attack and harvest the turn it is played)	haste		29 Oct 2026, v35
 keyword	Protection	concept of having, using or giving this keyword (Faeria: prevents all damage of the next damage source, then is removed)	shield		29 Oct 2026, v35
@@ -585,7 +585,7 @@ keyword	Deathtouch	concept of having, using or giving this keyword (Faeria: any 
 keyword	Swallow	concept of having, using or giving this keyword (Faeria: removes a creature until the swallower dies; like Runeterra Capture)	banish	keyword_used:Swallow	29 Oct 2026, v35
 keyword	Wild	concept of having, using or giving this keyword (Faeria: a card whose land requirements any land colours pay)	cost_type		29 Oct 2026, v35
 keyword	Fight	concept of having, using or giving this keyword (Faeria: exchanges attacks with an enemy creature anywhere; not its attack for the turn)	attack_now	fights	29 Oct 2026, v35
-keyword	Teleport	concept of having, using or giving this keyword (Faeria: moves a creature; not its movement for the turn)	movement		29 Oct 2026, v35
+keyword	Teleport	concept of having, using or giving this keyword (Faeria: moves a creature; not its movement for the turn)	movement	moves;moves_onto	29 Oct 2026, v35
 keyword	Transform	concept of having, using or giving this keyword (Faeria: becomes another card; buffs and damage are removed; not a summon)	transform	transformed	29 Oct 2026, v35
 region	Blue	region (Faeria colour or card pool)			29 Oct 2026, v35
 region	Green	region (Faeria colour or card pool)			29 Oct 2026, v35
@@ -621,7 +621,7 @@ keyword	Brood Parasite	concept of having, using or giving this keyword (Inscrypt
 keyword	Buff When Powered	concept of having, using or giving this keyword (Inscryption: gains 2 Power while in a circuit; concept is Claude's)	attack_gain		29 Oct 2026, v36 (Inscryption)
 keyword	Burrower	concept of having, using or giving this keyword (Inscryption: moves to an empty space that would be struck, to take the strike; concept is Claude's)	blocking		29 Oct 2026, v36 (Inscryption)
 keyword	Card Counter	concept of having, using or giving this keyword (Inscryption: Power equals the number of cards in the player's hand; concept is Claude's)	variable_stats		29 Oct 2026, v36 (Inscryption)
-keyword	Clinger	concept of having, using or giving this keyword (Inscryption: moves toward an ally placed in a space; concept is Claude's)	movement		29 Oct 2026, v36 (Inscryption)
+keyword	Clinger	concept of having, using or giving this keyword (Inscryption: moves toward an ally placed in a space; concept is Claude's)	movement	moves;moves_onto	29 Oct 2026, v36 (Inscryption)
 keyword	Corpse Eater	concept of having, using or giving this keyword (Inscryption: from hand, it is played free in the space of your first creature to perish in combat; concept is Claude's)	free_play		29 Oct 2026, v36 (Inscryption)
 keyword	Dam Builder	concept of having, using or giving this keyword (Inscryption: when played, a Dam is created on each empty adjacent space; concept is Claude's)	summon		29 Oct 2026, v36 (Inscryption)
 keyword	Dead Byte	concept of having, using or giving this keyword (Inscryption: when it perishes, a file is selected (Act III); what the file does is not stated; concept is Claude's)	death_trigger		29 Oct 2026, v36 (Inscryption)
@@ -649,7 +649,7 @@ keyword	Green Mox	concept of having, using or giving this keyword (Inscryption: 
 keyword	Guardian	concept of having, using or giving this keyword (Inscryption: moves to the empty space opposite a newly placed opposing creature; concept is Claude's)	blocking		29 Oct 2026, v36 (Inscryption)
 keyword	Handy	concept of having, using or giving this keyword (Inscryption: when played, discard your hand and draw a new hand of 4; concept is Claude's)	hand_deck_swap		29 Oct 2026, v36 (Inscryption)
 keyword	Healing Conduit	concept of having, using or giving this keyword (Inscryption: other creatures in its circuit are healed at the end of the owner's turn; concept is Claude's)	heal		29 Oct 2026, v36 (Inscryption)
-keyword	Hefty	concept of having, using or giving this keyword (Inscryption: moves at the end of the owner's turn, pushing cards in its way; concept is Claude's)	movement		29 Oct 2026, v36 (Inscryption)
+keyword	Hefty	concept of having, using or giving this keyword (Inscryption: moves at the end of the owner's turn, pushing cards in its way; concept is Claude's)	movement	moves;moves_onto	29 Oct 2026, v36 (Inscryption)
 keyword	Hoarder	concept of having, using or giving this keyword (Inscryption: when played, search your deck for any card; concept is Claude's)	tutor		29 Oct 2026, v36 (Inscryption)
 keyword	Hostage File	concept of having, using or giving this keyword (Inscryption: when it perishes, the file used to create it is deleted; concept is Claude's)	permanent_loss		29 Oct 2026, v36 (Inscryption)
 keyword	Kraken Waterborne	concept of having, using or giving this keyword (Inscryption: submerged during the opponent's turn; re-emerges as a random Tentacle card; concept is Claude's)	stealth		29 Oct 2026, v36 (Inscryption)
@@ -671,7 +671,7 @@ keyword	Orange Mox	concept of having, using or giving this keyword (Inscryption:
 keyword	Overclocked	concept of having, using or giving this keyword (Inscryption: has increased Power; concept is Claude's)	attack_gain		29 Oct 2026, v36 (Inscryption)
 keyword	Power Dice	concept of having, using or giving this keyword (Inscryption: activate: pay 1 Energy to set its Power to a random number from 1 to 6; concept is Claude's)	random_effect		29 Oct 2026, v36 (Inscryption)
 keyword	Rabbit Hole	concept of having, using or giving this keyword (Inscryption: when played, a Rabbit is created in your hand; concept is Claude's)	generate_cards		29 Oct 2026, v36 (Inscryption)
-keyword	Rampager	concept of having, using or giving this keyword (Inscryption: moves at the end of the owner's turn; concept is Claude's)	movement		29 Oct 2026, v36 (Inscryption)
+keyword	Rampager	concept of having, using or giving this keyword (Inscryption: moves at the end of the owner's turn; concept is Claude's)	movement	moves;moves_onto	29 Oct 2026, v36 (Inscryption)
 keyword	Repulsive	concept of having, using or giving this keyword (Inscryption: a creature that would attack it does not; concept is Claude's)	immunity		29 Oct 2026, v36 (Inscryption)
 keyword	Ruby Heart	concept of having, using or giving this keyword (Inscryption: when it perishes, a Ruby Mox is created in its place; concept is Claude's)	summon		29 Oct 2026, v36 (Inscryption)
 keyword	Satisfies Ring Trial	concept of having, using or giving this keyword (Inscryption: a trait that passes the Trial of the Ring when drawn (run event); concept is Claude's)	run_structure		29 Oct 2026, v36 (Inscryption)
@@ -683,7 +683,7 @@ keyword	Skeleton Crew	concept of having, using or giving this keyword (Inscrypti
 keyword	Sniper	concept of having, using or giving this keyword (Inscryption: its owner chooses which opposing space it strikes; concept is Claude's)	target_choice		29 Oct 2026, v36 (Inscryption)
 keyword	Spawn Conduit	concept of having, using or giving this keyword (Inscryption: empty spaces in its circuit spawn L33pB0ts at the end of the owner's turn; concept is Claude's)	summon		29 Oct 2026, v36 (Inscryption)
 keyword	Spilled Blood	concept of having, using or giving this keyword (Inscryption: Power equals the number of sacrifices made this turn; concept is Claude's)	variable_stats		29 Oct 2026, v36 (Inscryption)
-keyword	Sprinter	concept of having, using or giving this keyword (Inscryption: moves at the end of the owner's turn; concept is Claude's)	movement		29 Oct 2026, v36 (Inscryption)
+keyword	Sprinter	concept of having, using or giving this keyword (Inscryption: moves at the end of the owner's turn; concept is Claude's)	movement	moves;moves_onto	29 Oct 2026, v36 (Inscryption)
 keyword	Squirrel Shedder	concept of having, using or giving this keyword (Inscryption: moves at the end of the owner's turn and drops a Squirrel in its old space; concept is Claude's)	summon		29 Oct 2026, v36 (Inscryption)
 keyword	Steel Trap	concept of having, using or giving this keyword (Inscryption: when it perishes, the creature opposing it perishes too; concept is Claude's)	destroy		29 Oct 2026, v36 (Inscryption)
 keyword	Stimulate	concept of having, using or giving this keyword (Inscryption: activate: pay 3 Energy for +1 Power and +1 Health; concept is Claude's)	stat_gain		29 Oct 2026, v36 (Inscryption)

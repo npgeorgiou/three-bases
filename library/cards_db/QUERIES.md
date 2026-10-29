@@ -131,7 +131,7 @@ select distinct card from flat_ref where happening='given_keyword' and role!='ma
 select distinct card from flat_do where params glob '*=[a-z]*'
 ```
 - duelyst: 371 cards: Abhorrent Unbirth, Abyssal Juggernaut, Abyssal Tormentor, Accumulonimbus, Ace, Aegis Barrier, Aerial Rift, Aethermaster ...
-- faeria: 245 cards: Air Elemental, Airbot, Amai Merchant, Ancient Boar, Ancient Gargoyle, Animated Banquet, Annoying Gnat, Apex Predator ...
+- faeria: 248 cards: Air Elemental, Airbot, Amai Merchant, Ancient Boar, Ancient Gargoyle, Animated Banquet, Annoying Gnat, Apex Predator ...
 - inscryption: 84 cards: !CORRUPTED, Ancient Fir, Ant Queen, Ants, Aquasquirrel, Armored, Bell Ringer, Bell Tentacle ...
 - monster_train: 166 cards: A Fatal Melting, Adaptive Mutation, Alloy of the Ancients, Alloyed Construct, Ambient Charge, Ancient Resonance, Ancient Synergy, Apex Imp ...
 - runeterra: 698 cards: Absorb Soul, Abyssal Eye, Abyssal Guard, Acolyte's Reliquary, Acorn, the Hextechnician, Adnere's Aviarists, Advance, Advanced Intel ...
@@ -150,12 +150,12 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: duelyst 3033 pairs, e.g. Deathmark -> Unseven; faeria 1183 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 491 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 354 pairs, e.g. Little Fade -> Primordium; runeterra 12658 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- sacrifice: duelyst 1133 pairs, e.g. Abhorrent Unbirth -> Unseven; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Explode Bot; monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5616 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- self_destruct: duelyst 692 pairs, e.g. Ethereal Obelysk -> Khanuum-ka; faeria 735 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 350 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6935 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
-- removal: duelyst 1020 pairs, e.g. Rasha's Curse -> Khanuum-ka; faeria 320 pairs, e.g. Death's Desire -> Long-horned Yak; monster_train 93 pairs, e.g. Wicked Blaze -> Primordium; runeterra 2976 pairs, e.g. Kindred's Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Temple of the Mind -> Embers of Chaos
-- damage: duelyst 4251 pairs, e.g. Inkhorn Gaze -> Unseven; inscryption 267 pairs, e.g. Good Fish -> Burrowing Trap; runeterra 13474 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 635 pairs, e.g. Divine Reptiles -> Spare Dragonling
-- ping: duelyst 766 pairs, e.g. Deathmark -> Unseven; faeria 417 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 135 pairs, e.g. Good Fish -> Burrowing Trap; runeterra 5507 pairs, e.g. Anivia -> Bladepierced Revenant; stormbound 197 pairs, e.g. Acid Greenhorns -> Green Prototypes
+- destroy: duelyst 3033 pairs, e.g. Deathmark -> Nekomata; faeria 1215 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 491 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 354 pairs, e.g. Little Fade -> Primordium; runeterra 12658 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- sacrifice: duelyst 1133 pairs, e.g. Abhorrent Unbirth -> Nekomata; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Master Bleene -> Bomb Latcher; monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5616 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- self_destruct: duelyst 692 pairs, e.g. Ethereal Obelysk -> Khanuum-ka; faeria 735 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 350 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6935 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
+- removal: duelyst 1020 pairs, e.g. Rasha's Curse -> Khanuum-ka; faeria 320 pairs, e.g. Death's Desire -> Long-horned Yak; monster_train 93 pairs, e.g. Wicked Blaze -> Primordium; runeterra 2976 pairs, e.g. Kindred's Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
+- damage: duelyst 4251 pairs, e.g. Abyssal Scar (Bloodbound Spell) -> Nekomata; faeria 859 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 267 pairs, e.g. Good Fish -> Burrowing Trap; runeterra 13474 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 635 pairs, e.g. Divine Reptiles -> Dreadful Keepers
+- ping: duelyst 766 pairs, e.g. Abyssal Scar (Bloodbound Spell) -> Nekomata; faeria 417 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 135 pairs, e.g. Good Fish -> Burrowing Trap; runeterra 5507 pairs, e.g. Anivia -> Bladepierced Revenant; stormbound 197 pairs, e.g. Venomfall Spire -> Marked as Prey
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -224,7 +224,7 @@ select distinct card from flat_do where act='copy_keywords'
 - faeria Blue: cant_move (6), on_harvest (5), stat_multiply (6), turn_end (10), transform (4)
 - faeria Green: taunt (12), immobilize (12), random_effect (12), terrain (9), defence_gain (35)
 - faeria Red: on_fight (10), aoe_damage (13), ranged (5), direct_damage (11), damage (32)
-- faeria Yellow: temporary_buff (4), sacrifice (6), on_attack (14), haste (6), removal (5)
+- faeria Yellow: temporary_buff (4), sacrifice (6), on_attack (14), haste (6), removal (4)
 - faeria Pandora: modal_choice (5), removal (4), aoe_damage (6), destroy (7), on_play (34)
 - inscryption Beast: free_play (4), stealth (8), immunity (6), multi_attack (8), variable_stats (8)
 - inscryption Technology: stances (8), aoe_damage (4), ping (6), damage (11), random_effect (7)

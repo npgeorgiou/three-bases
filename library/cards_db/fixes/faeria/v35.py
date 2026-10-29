@@ -14,7 +14,16 @@
   well = empty_resource / refill_resource; Destroy a well = kill on it; End the turn = end_turn; Extra turn = extra_turn;
   Refresh power wheel (Ignusi Ritualist) = refresh on the turn's choice (kind effect; act refresh from Duelyst).
 - A summoned or transformed-into token's keywords in the text ("a 5/2 Flying Demon Wing", "a 6/3 Oblivion Rider with Charge
-  3", "a 4/4 Flying Charge 2 Dune Drake"): give_keyword on it for each, when the record lacks it (Demon Wrangler)."""
+  3", "a 4/4 Flying Charge 2 Dune Drake"): give_keyword on it for each, when the record lacks it (Demon Wrangler).
+- Board forms, one per meaning (29 Oct 2026, the positional pass):
+  * "moves onto enemy land" / "moves into a forest" (event moves_onto): the moving unit is the object (like moves, N16) and
+    the space is its position filter `same_space of {the space}`; never the space as object with the unit as actor.
+  * "in its place" / "where this died": summon to `{"kind": "position", "with": [same_space of {"pick": "it"}]}`.
+  * "Can be summoned adjacent to friendly creatures": can summoned to `{"kind": "position", "with": [bordering of
+    {"kind": "unit", "side": "mine"}]}` (a space, like Wind Gate's), never "to" the units.
+  * "on or adjacent to that space": one target, position in [same_space, bordering] of the space (Meteor's form), not two
+    effects (Firestorm).
+  * "destroy it" on the card itself is kill (self-destruct), not sacrifice (Doomgate)."""
 import glob, json, os, re, sys
 HERE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, HERE); import source
@@ -26,6 +35,44 @@ STAND_IN = {'Empty': 'empty_resource', 'Refill': 'refill_resource', 'Destroy': '
             'Extra turn': 'extra_turn', 'Refresh power wheel': 'refresh'}
 
 
+def board_forms(r, t):
+    def walk(o):
+        if isinstance(o, dict):
+            for k in ('when', 'trigger'):
+                ev = o.get(k)
+                if isinstance(ev, dict) and ev.get('event') == 'moves_onto' and (ev.get('object') or {}).get('kind') == 'position':
+                    space = ev.pop('object'); mover = ev.pop('actor', None) or {}
+                    mover.setdefault('with', []).append({'attr': 'position', 'op': 'is', 'val': 'same_space', 'of': space})
+                    ev['object'] = mover
+            do = o.get('do') if isinstance(o.get('do'), list) else []
+            for j, e in enumerate(do):
+                to = e.get('to') if isinstance(e.get('to'), dict) else None
+                if e.get('act') in ('summon', 'revive', 'copy') and to and to.get('kind') == 'position' and to.get('pick') == 'it':
+                    for f in to.get('with', []):
+                        if f.get('attr') == 'position' and f.get('val') == 'same_space' and 'of' not in f:
+                            f['of'] = {'pick': 'it'}; to.pop('pick')
+                if e.get('act') in ('can', 'cant') and (e.get('params') or {}).get('event') in ('summoned', 'played') and to and to.get('kind') == 'unit' \
+                        and any(f.get('val') == 'bordering' for f in to.get('with', [])):
+                    e['to'] = {'kind': 'position', 'with': [{'attr': 'position', 'op': 'is', 'val': 'bordering',
+                                                             'of': {k: v for k, v in to.items() if k in ('kind', 'side')}}]}
+                if e.get('act') == 'sacrifice' and (e.get('on') or {}).get('pick') == 'self' and re.search(r'\bdestroy (?:it|this)\b', t, re.I) \
+                        and not re.search(r'\bsacrifice (?:this|it|a card bearing)', t, re.I):
+                    e['act'] = 'kill'
+            # "on or adjacent to that space": same_space of X, then the same act on bordering of it -> one target
+            for j in range(len(do) - 1):
+                a, b = do[j], do[j + 1]
+                fa = [f for f in (a.get('on') or {}).get('with', []) if f.get('attr') == 'position' and f.get('val') == 'same_space' and 'of' in f]
+                fb = [f for f in (b.get('on') or {}).get('with', []) if f.get('attr') == 'position' and f.get('val') == 'bordering' and (f.get('of') or {}).get('pick') == 'it']
+                if fa and fb and a.get('act') == b.get('act') and a.get('params') == b.get('params') and \
+                        {k: v for k, v in a['on'].items() if k != 'with'} == {k: v for k, v in b['on'].items() if k != 'with'}:
+                    fa[0].pop('val'); fa[0]['op'] = 'in'; fa[0]['vals'] = ['same_space', 'bordering']
+                    do.pop(j + 1); break
+            for v in o.values(): walk(v)
+        elif isinstance(o, list):
+            for v in o: walk(v)
+    walk(r)
+
+
 def has_kw(t):
     return any(f.get('attr') == 'keyword' for f in (t or {}).get('with', []))
 
@@ -33,7 +80,7 @@ def has_kw(t):
 for game in ('runeterra', 'stormbound', 'monster_train', 'faeria'):
     text = {i: ' '.join((t or '').split()) for i, t in lib.execute('select id, text from entities where game=?', (game,))}
     kws = [n for (n,) in lib.execute("select name from entities where game=? and category='keyword'", (game,))]
-    for p in sorted(glob.glob(os.path.join(HERE, 'read', game, 'batch_*.jsonl'))):
+    for p in sorted(glob.glob(os.path.join(HERE, 'read', game, 'batch_*.jsonl')) + glob.glob(os.path.join(HERE, 'read', game, 'keywords.jsonl'))):
         recs = [json.loads(l) for l in open(p) if l.strip()]; n = 0
         for r in recs:
             words = [w.lower() for w in TRIG.findall(text.get(r.get('id'), ''))]
@@ -97,5 +144,9 @@ for game in ('runeterra', 'stormbound', 'monster_train', 'faeria'):
                                 add.append(g); words = words.replace(mm.group(0), '')
                         for g in reversed(add): do.insert(j + 1, g)
                 if json.dumps(r) != before: n += 1
+        for r in recs:
+            before = json.dumps(r); t = text.get(r.get('id'), '')
+            board_forms(r, t)
+            if json.dumps(r) != before: n += 1
         if n:
             open(p, 'w').write(''.join(json.dumps(r, separators=(',', ':')) + '\n' for r in recs)); print(game, os.path.basename(p), n)
