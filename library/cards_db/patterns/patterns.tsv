@@ -126,3 +126,16 @@ faeria	V58	\bdiscover	value:keyword_action|choose_card	yes	Discover
 faeria	V59	\bdrain\b	value:damage	yes	Drain damages, then heals you
 faeria	V60	\bbecomes? wild land|\bare wild land\b	value:give_keyword	yes	"becomes wild land" = give_keyword Wild
 faeria	V61	\bthis turn\b	value:this_round	yes	one turn is the span (BRIEF Game words: Faeria)
+inscryption	T80	\bwhen (?:a card bearing this sigil|it) is played\b|\bis played\b	event:played	yes	trigger phrase
+inscryption	T81	\bperish(?:es)?\b|\bdies\b	event:dies	yes	"perish" is dying
+inscryption	T82	\bis struck\b|\bwould be struck\b	event:damaged	yes	being struck
+inscryption	T83	\bat the end of (?:the|its|your)(?: owner's)? turn\b|\bat the end of the owners turn\b	event:turn_end	yes	trigger phrase
+inscryption	T84	\bat the (?:beginning|start) of (?:its owner's|your|the owner's) turn\b	event:turn_start	yes	trigger phrase
+inscryption	T85	\bis sacrificed\b|\bwhen sacrificed\b	event:sacrificed	yes	Blood: sacrificed to pay a cost
+inscryption	T86	\bis drawn\b|\bwhen drawn\b	event:drawn	yes	trigger phrase
+inscryption	T87	\bactivate:	event:activated	yes	activated ability ("Activate: Pay ...")
+inscryption	V80	\bis created in your hand\b|\bcreated in your hand\b	value:create|copy	yes	created cards
+inscryption	V81	\bgain \d+ bones?\b|\bbones? (?:are|is) awarded\b|\bgenerate \d+ bones?\b|\balso grant bones\b	value:mana_gain	yes	Bones are kind secondary_resource
+inscryption	V82	\b(?:are |is )?dealt \d+ damage\b|\bdeal \d+ damage\b	value:damage	yes	verb
+inscryption	V83	\bgains? \d+ power\b|\bloses? \d+ power\b	value:stat_change|stat_set	yes	stats
+inscryption	V84	\bdraw (?:\d+|a|a new hand of \d+) cards?\b	value:draw	yes	verb
