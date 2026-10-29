@@ -206,7 +206,9 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
 8. **Link audit** (`audit_links.py <game>`, also printed by run.py): every line it prints is a link that cannot exist. Each
    is fixed at its cause (a missing `causes`, a keyword with no concept row or no record, a level-up form the source lacks,
    a misread name) or explained in RESULTS.md. A game is not done while a line is unexplained.
-9. **Deck networks** (`network_page.py` draws every deck in decks.tsv and cases/decks.tsv; `ask.py <game> network "<deck>"`):
+9. **Deck networks** (`network_page.py` draws every deck in decks.tsv and cases/decks.tsv; `ask.py <game> network "<deck>"`).
+   First read ALL decks and write every wrong or missing line into `deck_read_<game>.md` (deck, from, to, what is wrong);
+   only then group them into families and fix each family once:
    find full decks first (players' guides, deck sites, deck codes; full lists, not a guide's core cards). Read at least 10
    decks card by card, as a player: for each card, what does it need (level-up, trigger, condition, stats, keywords) and
    which cards in the deck give it that; what does it give, and to whom; is every line's reason true by the texts? Kaptain
