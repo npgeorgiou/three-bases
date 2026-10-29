@@ -5,7 +5,8 @@ Id blocks, one per game (PROCESS.md step 0.4); a new game writes its line here f
   stormbound  1000001-1999999   cards and glossary keywords from 1000001; Kaptain's definitions from 1900001
   monster_train 2000001-2999999 cards and glossary keywords from 2000001; Kaptain's definitions from 2900001
   faeria      3000001-3999999   cards and glossary keywords from 3000001; Kaptain's definitions from 3900001
-  then        4000001-4999999, 5000001-5999999, ... (each game takes the first free block and writes its line here)
+  inscryption 4000001-4999999   cards and glossary keywords from 4000001; Kaptain's definitions from 4900001
+  then        5000001-5999999, 6000001-6999999, ... (each game takes the first free block and writes its line here)
   then        and so on"""
 import glob, json, os, sqlite3
 HERE = os.path.dirname(os.path.abspath(__file__))
