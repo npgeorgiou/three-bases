@@ -182,3 +182,6 @@ Each change: date, what changed, the card that caused it, and which records were
 - connections.py: an effect on every unit hits each type ("ALL creatures" damages the Yaks); a payoff acting on all my
   units is fed by summoners; turning my units into copies of a chosen unit makes more of the payoff.
 - audit_text.py: Faeria player words; board rules (this turn, land act, adjacent, harvest); "+1/+1" stat gifts.
+- deck_analysis.py: kinds must fit (a god healed is no unit healed); a need about the card itself is not met by another card
+  acting on itself unless the need names that kind of card; the rules' rows on enemies make no friendly happening; making a
+  type by description is no caring about it; role "Pays for big cards (more mana, cheaper cards)". Cases dfa01-dfa05.

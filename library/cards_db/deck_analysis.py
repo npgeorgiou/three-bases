@@ -33,6 +33,13 @@ SUPPORT = ('stat_gain', 'attack_gain', 'defence_gain', 'shield', 'immunity', 'ev
 FLOW = ('draw', 'generate_cards', 'selection', 'tutor', 'recycle', 'copy')
 
 
+def kinds_fit(a, b):
+    """a player is never a unit or a structure, a unit never a structure; open kinds fit everything (network.kinds_fit)"""
+    if a in (None, '', 'any', 'anything', 'card', 'keyword') or b in (None, '', 'any', 'anything', 'card', 'keyword') or a == b: return True
+    if 'unit_or_structure' in (a, b): return {a, b} <= {'unit_or_structure', 'unit', 'landmark'}
+    return False
+
+
 def who(side):
     return {'mine': 'your', 'enemy': 'enemy'}.get(side, 'any')
 
@@ -88,24 +95,39 @@ def analyze(c, game, text):
 
     # what each card makes and what it uses (its own rules only; a keyword's inner rules are not the card's needs)
     # a cost the game's rules set (Bones, Mox) is the card's own need too: rows of origin game with role condition
-    rows = c.execute(f"select card, ability, role, happening, side, keyword, pick, origin, kind from flat_ref where (origin!='game' or role='condition') and card in ({marks})", deck).fetchall()
+    rows = c.execute(f"select card, ability, role, happening, side, keyword, pick, origin, kind, obj_with from flat_ref where (origin!='game' or role='condition') and card in ({marks})", deck).fetchall()
     lvl = {a for (a,) in c.execute(f"select ability from flat_do where act='level_up' and card in ({marks})", deck)}
     makes = collections.defaultdict(set); uses = []
-    for card, ab, role, h, side, kw, pick, origin, kind in rows:
+    for card, ab, role, h, side, kw, pick, origin, kind, mw in rows:
         if h in ('mana_refilled', 'resource_gained') and kind in RESOURCE_KINDS: h = 'mana_refilled@' + kind  # which resource
         elif h == 'resource_gained': continue
-        if role == 'makes': makes[(h, kw)].add((card, side))
+        if role == 'makes': makes[(h, kw)].add((card, side, kind, pick, mw))
         elif origin in ('own', 'game') and not (pick == 'self' and h in ('played', 'summoned')):
-            uses.append((card, ab, role, h, 'mine' if pick == 'self' else side, kw, pick))
+            uses.append((card, ab, role, h, 'mine' if pick == 'self' else side, kw, pick, kind, mw))
     # what the game's rules make every card of the deck do (a Skeleton dying gives a Bone, any unit can be sacrificed)
     by_rule = collections.defaultdict(set)
-    for card, h, kind in c.execute(f"select card, happening, kind from flat_ref where origin='game' and role='makes' and card in ({marks})", deck):
+    for card, h, kind, sd in c.execute(f"select card, happening, kind, side from flat_ref where origin='game' and role='makes' and card in ({marks})", deck):
+        if sd == 'enemy': continue  # the rules' fights kill enemies: no friendly death made by them (Faeria Soul Eater)
         by_rule['mana_refilled@' + kind if h in ('mana_refilled', 'resource_gained') and kind in RESOURCE_KINDS else h].add(card)
     fit = lambda a, b: not a or not b or a == b or 'any' in (a, b)
+    import network  # (lazy: network imports this module)
+    def names_it(m, tw):
+        """the need names a kind of card the maker is ("Gorge: I eat a Morsel" and a Morsel that is eaten): its own happening is it"""
+        who = ';'.join(p for p in (tw or '').split(';') if p.split(' ')[:2] in (['card', 'is'], ['type', 'is'], ['type', 'in'], ['name_has', 'is']))
+        return bool(who) and can_be(m, who)
+
+    def can_be(card, mw):
+        """what a maker does it to ("the Demon Wing", "another Rakoan") can be this card"""
+        who = ';'.join(p for p in (mw or '').split(';') if p.split(' ')[:2] in (['card', 'is'], ['type', 'is'], ['type', 'in'], ['name_has', 'is']))
+        cs = network.cards_of(c, game)
+        return not who or card not in cs or network.matches(c, game, cs[card], 'any', who)
     plan = collections.defaultdict(lambda: [set(), set(), set(), set()])  # makers, own-death users, level-ups, other users
     linked = set(); sides = collections.defaultdict(set)
-    for card, ab, role, h, side, kw, pick in uses:
-        mk = {(m, ms) for (hh, k), ms_ in makes.items() if hh == h and (k is None or kw is None or k == kw) for m, ms in ms_ if m != card and fit(ms, side)}
+    for card, ab, role, h, side, kw, pick, kind, tw in uses:  # kinds must fit too: healing a god is no unit healed (as network.kinds_fit)
+        mk = {(m, ms) for (hh, k), ms_ in makes.items() if hh == h and (k is None or kw is None or k == kw) for m, ms, mkd, mp, mw in ms_
+              if m != card and fit(ms, side) and kinds_fit(mkd, kind) and not (pick == 'self' and mp == 'self' and not names_it(m, tw)) and
+              not (pick == 'self' and not can_be(card, mw))}  # "when THIS moves":
+              # another card moving itself is no help (network: two cards each about themselves never link)
         if role == 'condition' and side in ('mine', '', None):  # a cost: the game's rules make it too (any unit can be sacrificed, a Skeleton's death gives a Bone)
             mk |= {(m, 'mine') for m in by_rule.get(h, set()) - {card}}
         if not mk: continue
@@ -138,9 +160,10 @@ def analyze(c, game, text):
     # types: cards that care about a type (target, count or trigger names it) and the cards that are or make it
     tname = {i: n for i, n in c.execute('select id, name from type where game=?', (game,))}
     care = collections.defaultdict(set); have = collections.defaultdict(set)
-    for q in ("select card, on_with from flat_do", "select card, to_with from flat_do", "select card, of_with from flat_if",
-              "select card, ev_obj_with from flat_if", "select card, obj_with from flat_when"):
-        for x, w in c.execute(q + f" where origin='own' and card in ({marks})", deck):
+    for q in ("select card, on_with from flat_do where act not in ('create','summon','transform','copy','choose_card','play_card','revive') and 1",
+              "select card, to_with from flat_do where 1", "select card, of_with from flat_if where 1",
+              "select card, ev_obj_with from flat_if where 1", "select card, obj_with from flat_when where 1"):  # making one by
+        for x, w in c.execute(q + f" and origin='own' and card in ({marks})", deck):                       # description is no caring
             for t in re.findall(r'(?<![a-z:])type is (\d+)', w or ''): care[int(t)].add(x)
     for x, t in c.execute(f'select card, type from card_type where card in ({marks})', deck): have[t].add(x)
     for x, w in c.execute(f"select card, on_with from flat_do where act in ('create','summon') and card in ({marks})", deck):
@@ -148,7 +171,7 @@ def analyze(c, game, text):
     for x, t in c.execute(f"select d.card, ct.type from flat_do d join card_type ct on ct.card=d.card_ref where d.act in ('create','summon','copy') "
                           f"and d.card in ({marks})", deck): have[t].add(x)
     for t in care:
-        if have[t] - care[t]:
+        if care[t] and any(have[t] - {x} for x in care[t]):  # another card is or makes one (Rakoans count each other)
             plan[('type', t)][0] |= have[t]; plan[('type', t)][3] |= care[t]; linked |= have[t] | care[t]
     out.append('Plan:')
     order = sorted(plan.items(), key=lambda x: -(len(x[1][0]) + len(x[1][1]) + len(x[1][2]) + len(x[1][3])))
@@ -189,11 +212,11 @@ def analyze(c, game, text):
     # roles by mechanic (concepts): control, support for your units, card flow
     con = collections.defaultdict(set)
     for card, x in c.execute(f'select card, concept from flat_concept where card in ({marks})', deck): con[x].add(card)
-    def role(title, keys, on_side, acts):
+    def role(title, keys, on_side, acts, extra_sql=''):
         cards = set()
         for k in keys: cards |= con.get(k, set())
         # the card must have an effect of that kind on that side (a landmark that can't block itself is no control)
-        cards = {x for x in cards if c.execute(f"""select 1 from flat_do where card=? and coalesce(on_side,'') in ({on_side}) and
+        cards = {x for x in cards if c.execute(f"""select 1 from flat_do where card=? and coalesce(on_side,'') in ({on_side}) {extra_sql} and
                  (concept in ({','.join('?' * len(keys))}) or act in ({','.join('?' * len(acts))}))""", (x, *keys, *acts)).fetchone()}
         if cards: out.append(f'{title}: {names(c, cards)}.')
         return cards
@@ -203,6 +226,13 @@ def analyze(c, game, text):
                ('stat_change', 'give_keyword', 'negate_damage', 'heal', 'grow', 'first_strike', 'double_strike'))
     flow = role('Card flow (draw, create, choose)', FLOW, "'mine','any',''", ('draw', 'create', 'choose_card', 'copy'))
     extra = role('Puts extra units into play', ('summon', 'revive'), "'mine','any',''", ('summon', 'revive'))
+    # economy: more mana, or my cards made cheaper (Faeria Bargain: Bold Bargainer, Ogre Dance, Red Devil)
+    eco = role('Pays for big cards (more mana, cheaper cards)', ('resource_gain', 'cost_reduction', 'cost_set'), "'mine','any',''",
+               ('mana_gain', 'max_mana_change', 'cost_change', 'cost_set'), "and coalesce(on_pick,'')!='it'")  # not the card it just made
+    big = [i for i in deck if (c.execute('select cost from card where id=?', (i,)).fetchone() or [None])[0] or 0]
+    if eco and big:
+        top = sorted(big, key=lambda i: -c.execute('select cost from card where id=?', (i,)).fetchone()[0])[:5]
+        out.append(f'Most expensive cards they pay for: {names(c, set(top))}.')
     units = {i for i in deck if c.execute("select 1 from card where id=? and category in ('unit','hero','champion')", (i,)).fetchone()}
     if sup and units: out.append(f'Units that support cards can target: {len(units)} ({names(c, units)}).')
 
@@ -212,11 +242,11 @@ def analyze(c, game, text):
         for x in mk | own | lv | other: deg[x] += 1
     if deg: out.append('Key cards (in most of the plan): ' + ', '.join(f'{mechanics.name(c, x)}' for x, _ in deg.most_common(5)) + '.')
     lack = []
-    for card, ab, role_, h, side, kw, pick in uses:
+    for card, ab, role_, h, side, kw, pick, kind, tw in uses:
         if h in EVERY_GAME or side == 'enemy' or by_rule.get(h, set()) - {card}: continue
-        if not any((m != card or pick == 'self') and hh == h and (k is None or kw is None or k == kw) and fit(ms, side) for (hh, k), ms_ in makes.items() for m, ms in ms_):
+        if not any((m != card or pick == 'self') and hh == h and (k is None or kw is None or k == kw) and fit(ms, side) and kinds_fit(mkd, kind) and not (pick == 'self' and mp == 'self' and m != card and not names_it(m, tw)) for (hh, k), ms_ in makes.items() for m, ms, mkd, mp, mw in ms_):
             lack.append(f'{mechanics.name(c, card)} waits for "{say(c, h, side, kw)}" and nothing else in the deck does it')
-    alone = [i for i in deck if i not in linked | ctrl | sup | flow | extra]
+    alone = [i for i in deck if i not in linked | ctrl | sup | flow | extra | eco]
     weak = list(dict.fromkeys(lack)) + ([f'no clear role: {names(c, alone)}'] if alone else [])
     out.append('Weak spots: ' + ('; '.join(weak) + '.' if weak else 'none found.'))
     return out

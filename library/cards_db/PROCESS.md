@@ -425,6 +425,11 @@ were made the shared form for every game with spaces (BRIEF "The board"). What w
 9. **"It" lost what it was.** "Transform another Rakoan ..., give it Flying" made any unit fly. Rule: "it" keeps the previous
    target's filters, and after a summon of a named card it is that card (flat.py); a need about the card itself is fed only
    by effects that can be that card (network lines_of and HELPS; nfa03).
+11. **The deck explainer (ask.py analyze) had the network's old faults**: it joined a god healed with "units healed" (no
+   kinds), let a unit moving itself feed another's Corrupt, took the rules' kills of enemies as friendly deaths (every unit
+   "made" Soul Eater's deaths), counted cards that make a type by description as caring about it (no Rakoan plan), and had
+   no role for paying for big cards. Rule: the explainer joins makers and needs by the same tests as network.py (kinds,
+   sides of the rules' rows, "about itself", who the maker acts on); role "Pays for big cards". Deck cases dfa01-dfa05.
 10. **Trigger labels written "Name -".** Faeria's "Corrupt - ..." was not the card's keyword (load.py read only "Name:"), so
    "whenever a creature triggers a Corrupt ability" had no makers (fa43).
 
