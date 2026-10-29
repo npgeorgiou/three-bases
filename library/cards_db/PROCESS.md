@@ -318,6 +318,19 @@ card made by description ("2 random Imps") is a card of that type for what asks 
 ("8 cost reduced cards played") is fed only by cards that put it in that state; "spells and Skills" in a text includes
 Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up form's power and health are its stats field.
 
+## A card list that looked whole (Inscryption, 29 Oct 2026; checked in every game)
+1. **The library's entries were not the game's cards.** Its 164 Inscryption units came from the wiki, but cards with the same
+   text had been merged (Hawk, Raven, Sparrow, Mothman into Bat; Skeleton into Revenant), cards without sigils were dropped
+   (Wolf, Coyote, Grizzly, Stoat, Opossum), and a page's tabs were stored under the tab's label (Left, Right, Normal, Base
+   Form). The starter decks named cards the database did not have. Rule: before the readers, every card of every guide deck
+   must be a card of the game; audit_links.py check 5 lists deck cards that are not. When the source is not whole, the
+   supplement holds every card and source.py FULL replaces the library's categories for that game.
+2. **A wiki page can hold several cards.** Empty Vessel's page has a second box (the three Gem Vessels), Trees a second box
+   (Act III trees): take every card box of a page, not the first, and every tab of a box.
+3. **Keywords belong in the Keywords field.** Written as "Sigils: Airborne." every card needed a reader and inherited nothing;
+   as "Keywords: Airborne." 222 of 285 cards need no reading and take their sigils' records. A game whose cards list keywords
+   (sigils, traits that the game defines) writes them in the Keywords field.
+
 ## Think like a player (read before showing any network, any deck explanation, any answer about synergy)
 Kaptain checks a few decks and finds errors a player sees at once. Before showing anything, do what he does:
 1. Take every guide deck of the game and read its network line by line, both cards' texts side by side. For each line ask

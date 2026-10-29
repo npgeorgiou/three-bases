@@ -5,6 +5,8 @@ or fix every line it prints). Found by Kaptain's check of the deck networks (29 
   2 keywords without a vocab concept row, and keyword conditions or action keywords whose record has no rows
   3 champions with a level-up condition but no level-up form (cards the source lacks: take them from the game's data)
   4 cards named in effects (summon X, plant X) that are no card of the game
+  5 cards of a guide deck (decks.tsv, cases/decks.tsv) that are no card of the game: the game's card list is not whole (the
+    library merged Inscryption cards with the same text and dropped cards without sigils: Hawk, Wolf, Coyote)
 Usage: audit_links.py <game> [...]"""
 import collections, csv, os, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
@@ -46,6 +48,11 @@ def audit(g):
         out.append(f'3 {n} levels up but has no level-up form')
     for n, cnt in c.execute("""select k.name, count(*) from flat_do d join card k on k.id=d.card_ref where k.game=? and k.is_stub=1 group by k.id""", (g,)):
         out.append(f'4 {n} is named by {cnt} effects but is no card')
+    for f in ('decks.tsv', os.path.join('cases', 'decks.tsv')):
+        for r in csv.DictReader(open(os.path.join(HERE, f), encoding='utf-8'), delimiter='\t'):
+            if r['game'] != g: continue
+            miss = deck_analysis.parse_deck(c, g, r['cards'])[1]  # read as the networks read it
+            if miss: out.append(f"5 deck {r['deck']} names {len(miss)} cards that are no card: " + ', '.join(miss[:6]))
     return out
 
 
