@@ -42,7 +42,7 @@ def narrow_ok(want, have, c=None):
                 if r and hk and not any((c.execute('select lower(name) from card where id=?', (k,)).fetchone() or [''])[0] == r[0].lower()
                                         for k in hk): return False
     for a in asks:
-        if a in (have or ''): continue
+        if a in (have or '').split(';'): continue  # whole parts only: 'type is 1' is not 'type is 11'
         bits = a.split(' ')
         if c is not None and bits[0] == 'keyword' and bits[2].isdigit() and any(same_kw(c, int(bits[2]), k) for k in hk): continue
         return False
@@ -76,6 +76,10 @@ def reasons(c, enabler, payoff):
             cat = (c.execute('select category from card where id=?', (e,)).fetchone() or [''])[0]
             for ev, ok, oside, owith in c.execute("select event, obj_kind, obj_side, obj_with from flat_when where card=? and event in ('played','summoned') "
                                                   "and coalesce(obj_pick,'')!='self'", (p,)).fetchall():
+                # the payoff may ask for a type or keyword ("when you summon a Morsel"): the enabler itself must have it
+                own = ';'.join([f'type is {t}' for (t,) in c.execute('select type from card_type where card=?', (e,))] +
+                               [f'keyword is {k}' for (k,) in c.execute('select keyword from card_keyword where card=?', (e,))])
+                if not narrow_ok(owith, own, c): continue
                 if (ev == 'played' and cat == 'spell' and (ok == 'spell' or 'spell' in (owith or ''))) or \
                    (ev in ('summoned', 'played') and cat in ('unit', 'hero') and ok == 'unit' and agree(oside, 'mine')):
                     yield (1, f'is: playing {name(c, e)} is a {ev} the payoff waits for')

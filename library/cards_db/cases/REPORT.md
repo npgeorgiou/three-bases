@@ -116,7 +116,7 @@ Made by `cases/run.py monster_train`.
 | cmt24 | Frenzied Swarm | Crypt Builder | discarding the hand plays the Offering | event: discard -> discarded | yes |
 | cmt25 | Rubble Morsel | Overgorger | a Morsel to eat grows it | type: Morsel | yes |
 | cmt26 | Packed Morsels | Crucible Warden | Morsels to eat give Damage Shield | type: Morsel | yes |
-| cmt27 | Morselmaker | Morsel-Made | Morsels with Eaten for Hunger | is: playing Morselmaker is a summoned the payoff waits for | yes |
+| cmt27 | Morselmaker | Morsel-Made | Morsels with Eaten for Hunger | type: Morsel | yes |
 | cmt28 | Cannibalize | Penumbra | Morsels for Penumbra to Gorge on | type: Morsel | yes |
 | cmt29 | Morselmaker | Penumbra | Morsels for Penumbra | type: Morsel | yes |
 | cmt30 | Dreg | Hallowed Drippings | a Burnout unit to extend | event: countdown_advance -> countdown_done | yes |

@@ -119,17 +119,17 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 - passive: monster_train 8 cards, runeterra 18 cards, stormbound 8 cards
 - cheat_death: runeterra 7 cards
 - silence: stormbound 8 cards
-- forced_movement: monster_train 6 cards
 - movement: monster_train 6 cards
+- forced_movement: monster_train 6 cards
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: monster_train 386 pairs, e.g. Hallowed Halls -> Little Fade; runeterra 12693 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- sacrifice: monster_train 179 pairs, e.g. Hallowed Halls -> Little Fade; runeterra 3957 pairs, e.g. Amalgamation Of Vile Rites -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- removal: monster_train 90 pairs, e.g. Shardtail Queen -> Little Fade; runeterra 3608 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Wetland Deceivers -> Project PH03-NIX
-- self_destruct: monster_train 266 pairs, e.g. Hallowed Halls -> Little Fade; runeterra 6891 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
+- destroy: monster_train 386 pairs, e.g. Rector Flicker -> Little Fade; runeterra 12693 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- sacrifice: monster_train 179 pairs, e.g. Rector Flicker -> Little Fade; runeterra 3957 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- removal: monster_train 90 pairs, e.g. Crushing Demise -> Little Fade; runeterra 3608 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
+- self_destruct: monster_train 266 pairs, e.g. Rector Flicker -> Little Fade; runeterra 6891 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
 - revive: runeterra 1071 pairs, e.g. Eternal Dancers -> Bladepierced Revenant
-- aoe_damage: monster_train 217 pairs, e.g. Shattered Shell -> Little Fade; runeterra 2827 pairs, e.g. Anivia (level 2) -> Bladepierced Revenant; stormbound 217 pairs, e.g. Broken Earth Drakes -> Spare Dragonling
+- aoe_damage: monster_train 217 pairs, e.g. Shattered Shell -> Little Fade; runeterra 2827 pairs, e.g. Anivia -> Bladepierced Revenant; stormbound 217 pairs, e.g. Broken Earth Drakes -> Dreadful Keepers
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
