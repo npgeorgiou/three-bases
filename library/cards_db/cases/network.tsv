@@ -77,3 +77,19 @@ ni09	inscryption	Act II Ouroboros and Mantis God (koi)	Mantis God	Ouroboros	line
 ni10	inscryption	Act II Ouroboros and Mantis God (koi)	Ouroboros	Mantis God	none	Blood costs	Claude (v36): Ouroboros paying its own Blood cost pays nothing for Mantis God
 ni11	inscryption	Kaycee's Mod Ants	Ant Queen	Flying Ant	line		Claude (v36): Flying Ant's Power is the number of Ants; Ant Queen is an Ant (wiki pages Ants, Ant)
 ni12	inscryption	Kaycee's Mod Moose Blood	Moose Buck	Pelts (Rabbit)	none	your units move	Claude (v36): where Pelt Lice are put (adjacent slots) does not need units to move
+nfa03	faeria	Fast Rakoans	Rakoan Illusionist	Imperial Trooper	none	moves	Claude, deck read: the Illusionist gives Flying to another Rakoan; the Trooper is no Rakoan, nothing moves it onto enemy land
+nfa04	faeria	Fast Rakoans	Airbot	Imperial Trooper	none		Claude, deck read: Airbot's own Dash moves Airbot; Corrupt waits for the Trooper itself to move
+nfa05	faeria	Beastmaster Green	Time of Legends	Eredon, Voice of All	line		guide: Time of Legends brings Eredon out early (draws the top legend)
+nfa06	faeria	Beastmaster Green	The Emperor's Command	Feed the Forest	none	healed	Claude, deck read: the Command heals a god, not the creature Feed the Forest destroys
+nfa07	faeria	Blue Jump	Wavecrash Colossus	Gabrian Commander	line		guide: play slowly so the big cards come; the Commander waits for a 7+ cost card drawn
+nfa08	faeria	Blue Jump	Ninja Toad	Gabrian Commander	none		Claude, deck read: Ninja Toad costs 4, not 7 or more
+nfa09	faeria	Yellow Flyers	Windborne Champion	Drakkar Skycaptain	none	get Flying	Claude, deck read: drawing a Flying creature needs a card that has Flying, nothing given in play
+nfa10	faeria	Bargain (Krog)	Krog's Dinner	Krog, the Ogre King	line		guide: mulligan for Krog's Dinner; it draws Krog and cuts his cost by 7 (a random 7 cut is an aimed line, not counted here)
+nfa11	faeria	Bargain (Krog)	Bold Bargainer	Ogre Dance	none		Claude, deck read: Ogre Dance costs 4; a 7 cut is for cards costing 7 or more
+nfa12	faeria	Red Combat	Garudan, Heart of the Mountain	Bomb Slinger	none	move	Claude, deck read: Garudan moving is my unit moving, not an enemy coming next to the Slinger
+nfa13	faeria	Yellow Flyers	Celestial Tower	Khalim, Sky Prodigy	line		Claude, deck read: Charge 3 from the Tower gets Khalim to the enemy god
+nfa14	faeria	Red Blue Mobility Burn	Syland Horsemaster	Grim Guard	line		guide title: mobility gets Combat creatures into fights (Grim Guard hits the god for 2)
+nfa15	faeria	Voice of Hunger Control	Time of Legends	Voice of Hunger	none	enter	Claude, deck read: Wild changes the land colours a card needs, not where it enters
+nfa16	faeria	Midrange Sacrifice	Iona's Smile	Soul Eater	line		Claude, deck read: Iona's Smile draws Flying creatures from the deck
+nfa17	faeria	Midrange Sacrifice	Iona's Smile	Demon Wing	none	draws it	Claude, deck read: Demon Wing is made by Demon Wrangler, it is in no deck to draw
+nfa18	faeria	Voice of Hunger Control	Voice of Hunger	Eredon, Voice of All	line		guide: the deck wins through Voice of Hunger and Eredon (Voice destroys Eredon, its Last Words buff the deck)

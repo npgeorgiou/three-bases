@@ -1,7 +1,7 @@
 # Case tests: faeria
 
 Made by `cases/run.py faeria`.
-**58 of 58 cases pass.**
+**81 of 81 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -52,6 +52,13 @@ Made by `cases/run.py faeria`.
 | mx13 | can't be targeted by spells: the cant is on the spells, the protected unit is "to" (N19, v37) | 0 | 0 | 100% | 0 | yes |
 | mx14 | a dead unit put into play is revive, never summon from the discard (N20, v37) | 0 | 0 | 100% | 0 | yes |
 | mx15 | a trigger that holds only "this turn" is an ability given to the player for this turn (v37, Duelyst) | 0 | 0 | 100% | 2 | yes |
+| fa36 | placement: where a unit may be summoned | 7 | 7 | 100% | 16 | yes |
+| fa37 | taking a land | 1 | 1 | 100% | 1 | yes |
+| fa38 | reward for harvesting enemy wells | 5 | 5 | 100% | 0 | yes |
+| fa39 | area shapes (on or adjacent to a space) | 2 | 2 | 100% | 118 | yes |
+| fa40 | counts my lands | 10 | 10 | 100% | 57 | yes |
+| fa41 | neighbours in a trigger | 3 | 3 | 100% | 73 | yes |
+| fa42 | Corrupt is entering enemy territory | 14 | 14 | 100% | 4 | yes |
 
 ## Combos (the enabler must set off the payoff)
 
@@ -86,3 +93,19 @@ Made by `cases/run.py faeria`.
 |---|---|---|---|---|---|---|
 | nfa01 | Beastmaster Green | Oakling | Deepwood Stalker | line  | boosts: more power: it hits harder | yes |
 | nfa02 | Red Archers | Gift of Steel | Hilltop Archer | line  | boosts: more power: it hits harder | yes |
+| nfa03 | Fast Rakoans | Rakoan Illusionist | Imperial Trooper | none moves | - | yes |
+| nfa04 | Fast Rakoans | Airbot | Imperial Trooper | none  | - | yes |
+| nfa05 | Beastmaster Green | Time of Legends | Eredon, Voice of All | line  | puts: draws it from the deck | yes |
+| nfa06 | Beastmaster Green | The Emperor's Command | Feed the Forest | none healed | waits: any units have their stats changed | yes |
+| nfa07 | Blue Jump | Wavecrash Colossus | Gabrian Commander | line  | waits: is a card it counts when drawn | yes |
+| nfa08 | Blue Jump | Ninja Toad | Gabrian Commander | none  | - | yes |
+| nfa09 | Yellow Flyers | Windborne Champion | Drakkar Skycaptain | none get Flying | waits: is a card it counts when drawn | yes |
+| nfa10 | Bargain (Krog) | Krog's Dinner | Krog, the Ogre King | line  | boosts: makes it cheaper; puts: draws it from the deck | yes |
+| nfa11 | Bargain (Krog) | Bold Bargainer | Ogre Dance | none  | - | yes |
+| nfa12 | Red Combat | Garudan, Heart of the Mountain | Bomb Slinger | none move | - | yes |
+| nfa13 | Yellow Flyers | Celestial Tower | Khalim, Sky Prodigy | line  | boosts: moves it within reach of the enemy player | yes |
+| nfa14 | Red Blue Mobility Burn | Syland Horsemaster | Grim Guard | line  | boosts: moves it where it must be | yes |
+| nfa15 | Voice of Hunger Control | Time of Legends | Voice of Hunger | none enter | - | yes |
+| nfa16 | Midrange Sacrifice | Iona's Smile | Soul Eater | line  | puts: draws it from the deck | yes |
+| nfa17 | Midrange Sacrifice | Iona's Smile | Demon Wing | none draws it | - | yes |
+| nfa18 | Voice of Hunger Control | Voice of Hunger | Eredon, Voice of All | line  | waits: your units die | yes |

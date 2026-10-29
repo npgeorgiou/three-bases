@@ -495,7 +495,7 @@ HELPS = [
                                          'cheat_death', 'block_armor', 'lifesteal'), 'more health or protection: survives damage'),
     # where a unit must get to (enemy land, an enemy well, a forest, the enemy god): what moves my units, or units that move
     # well, gets it there (positional games: moving is how a unit reaches the enemy player)
-    (('moves_onto', 'harvests'), ('mine', '', 'enemy', 'any'), ('movement',), 'moves it where it must be'),
+    (('moves_onto', 'harvests', 'fights'), ('mine', '', 'enemy', 'any'), ('movement',), 'moves it where it must be'),
     (('strikes_nexus', 'nexus_damaged'), ('enemy', '', 'mine'), ('movement',), 'moves it within reach of the enemy player'),
 ]
 HIT_KW = ('target_choice', 'excess_damage', 'multi_attack', 'first_strike', 'evasion', 'ranged')  # keywords whose use depends on power
@@ -541,7 +541,7 @@ def boost_lines(c, game, nodes):
                        if p.split(' ')[:2] in (['card', 'is'], ['type', 'is'], ['type', 'in'], ['name_has', 'is'])) for w_ in ws))
                 helpers_t = {a for a in helpers_t if a not in move_rows or fits(move_rows[a])}
             if role == 'trigger' and pick == 'self' and h not in ('survives_damage', 'moves_onto', 'harvests') and \
-                    not (concepts == ('movement',) and h == 'strikes_nexus'): continue  # getting there is help  # "Strike:" fires on any strike: more of it adds nothing
+                    not (concepts == ('movement',) and h in ('strikes_nexus', 'fights')): continue  # getting there is help  # "Strike:" fires on any strike: more of it adds nothing
             if h in ('strikes', 'killed') and role == 'trigger': continue  # only counted strikes and kills grow with more power
             lv = ab in lvl
             for a in helpers_t - {t}:
@@ -563,12 +563,13 @@ def boost_lines(c, game, nodes):
     # a stat it tests high or uses as an amount ("a creature with 5+ Life", "faeria equal to its Life"): more of that stat
     health = having(('defence_gain',), False)
     for t, ab in c.execute(f"""select card, ability from flat_if where attr in ('health', 'total_stats') and (test='amount_stat' or
-            (test='stat' and coalesce(op,'') in ('ge','gt'))) and coalesce(of_side,'mine')!='enemy' and card in ({marks})""", L).fetchall():
+            (test='stat' and coalesce(op,'') in ('ge','gt'))) and coalesce(of_side,'mine')!='enemy' and card in ({marks}) and not exists
+            (select 1 from flat_if x where x.card=flat_if.card and x.ability=flat_if.ability and x.test='amount')""", L).fetchall():  # a threshold wants nothing
         for a in health - {t}: out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.5 / count(('defence_gain',)), 'more health' + (' (levels it up)' if ab in lvl else '')))
     # where my units may enter (Wind Gate: "summon creatures on spaces adjacent to this"): helps a card whose entry asks for a
     # place ("Gift - gains +1/+1 if summoned adjacent to an opponent's well")
     placers = {a for (a,) in c.execute(f"""select card from flat_do where act='can' and param_event in ('summoned','played') and
-            to_kind='position' and coalesce(on_pick,'')!='self' and card in ({marks})""", L)}
+            to_kind='position' and coalesce(on_pick,'')!='self' and origin='own' and card in ({marks})""", L)}  # not a keyword's (Wild)
     if placers:
         for (t,) in c.execute(f"""select distinct i.card from flat_if i join flat_when w on w.ability=i.ability where w.event in
                 ('played','summoned') and w.obj_pick='self' and (coalesce(i.of_with,'') like '%position %' or i.of_kind='position')

@@ -52,7 +52,7 @@ def build(c):
             or tree.get(('event', ev))
         c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (card, origin, via, ab, role, ev, kind, side or '', pick, kw, con, w, ref, ak, aw))
 
-    def state_rows(card, origin, via, ab, kind, side, pick, withs, zone):
+    def state_rows(card, origin, via, ab, kind, side, pick, withs, zone, entering=False):
         for st in re.findall(r'state (?:is|in) ([a-z_]+)', withs or ''):
             for ev, *kw in causes.get(('state', st), []):
                 ins(card, origin, via, ab, 'state', ev, kind, side, pick, kwid.get(kw[0].lower()) if kw else None, state=st)
@@ -62,7 +62,7 @@ def build(c):
         for k in (re.findall(r'(?<![a-z:])keyword is (\d+)', withs or '') if kind != 'effect' and zone not in ('deck', 'deck_top', 'deck_bottom') else []):  # repeating Summon effects is no unit with Summon; a card in the deck has its keyword, nothing gives it (Iona's Smile draws Flying creatures)
             ins(card, origin, via, ab, 'state', 'given_keyword', kind, side, pick, int(k))
         # things picked by where they stand ("the enemy in front", "bordering units"): moving units changes who that is
-        if re.search(r'(?<![a-z:])position ', withs or '') and kind in BOARD_KINDS and \
+        if re.search(r'(?<![a-z:])position ', withs or '') and kind in BOARD_KINDS and not entering and \
                 not re.search(r'(?<![a-z:])position \w+ \w+ of position(?: \w+)? chosen', withs or ''):  # around a space the player picks
             # ("all enemies on or adjacent to a chosen space"): the player aims it where units are; moving them is no help
             ins(card, origin, via, ab, 'state', 'moves', kind, side, pick, w=withs)
@@ -90,9 +90,11 @@ def build(c):
                 pk = 'actor_self' if ev in BY_ME else 'self'
             for k in (kws_of(ow) if len(kws_of(ow)) > 1 else [kw_of(ow)]):  # "traps or boons": one row per keyword, never "any keyword"
                 ins(card, o, v, ab, 'trigger', ev, ok if obj else ak, os_ if obj else as_, pk, k, w=ow if obj else aw, ak=ak if obj else None, aw=aw if obj else None)
-        state_rows(card, o, v, ab, ok, os_, op, ow, 'deck' if ev in ('drawn', 'played', 'discarded') else None)  # "draw a Flying
+        state_rows(card, o, v, ab, ok, os_, op, ow, 'deck' if ev in ('drawn', 'played', 'discarded') else None,  # "draw a Flying
+                   entering=ev in ('summoned', 'played'))  # "summoned adjacent to this": where it enters; moving is no help
         # creature": the card has Flying already; nothing given in play makes it one
     r_op = {(a, b, t, at): op for a, b, t, at, op in c.execute('select card, ability, test, attr, op from flat_if')}
+    compared = {(a, b) for a, b in c.execute("select card, ability from flat_if where test='amount'")}
     for r in c.execute('select card, origin, via, ability, event, of_kind, of_side, of_pick, of_zone, of_with, ev_obj_kind, '
                        'ev_obj_side, ev_obj_with, ev_obj_pick, test, attr, ev_actor_pick, ev_actor_kind, ev_actor_with from flat_if').fetchall():
         card, o, v, ab, ev, fk, fs, fp, fz, fw, ek, es, ew, ep, test, at, eap, eak, eaw = r
@@ -110,6 +112,8 @@ def build(c):
             # the direction it wants: "5+ Life", "faeria equal to its Life" want more (stat changes, healing), "half its Health or
             # less" wants less (damage, stat changes); damage never feeds a need for more (Feed the Forest)
             op = r_op.get((card, ab, test, at))
+            if test == 'amount_stat' and (card, ab) in compared: continue  # a stat used as a threshold ("lethal damage": damage >= my
+            # Life) is no stat the card wants more or less of (Divine Guardian)
             if test == 'amount_stat' or op in ('ge', 'gt'): sevs = tuple(e for e in sevs if e not in ('damaged', 'nexus_damaged'))
             elif op in ('le', 'lt'): sevs = tuple(e for e in sevs if e != 'healed')
             for sev in sevs:
