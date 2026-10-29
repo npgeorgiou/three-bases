@@ -43,3 +43,25 @@ monster_train	Pyrebound	player named	"the Pyre Room" is the top floor (position 
 monster_train	Consume	for each	"once per battle" is the exhaust the record has
 faeria	Ranged Attack	adjacent	the "unless adjacent" exception has no row; the record is marked unsure (position, params)
 inscryption	Ijiraq	random	Shapeshifter: it only looks like a random card of the deck until played; no effect in a battle
+duelyst	Mana Vortex	this turn	"the next spell you cast this turn" is cost_change lasts next_card: the next card is cast this turn
+duelyst	Arcane Devourer	this turn	"the next minion you summon this turn costs 1" is cost_set lasts next_card: the next card is played this turn
+duelyst	Artifact Defiler	player named	"artifacts on the enemy General" are equipment, side enemy, zone attached: the rows name the General's artifacts
+duelyst	Rust Crawler	player named	"an artifact on the enemy General" is equipment, side enemy, zone attached
+duelyst	Corporeal Haunt	player named	"the enemy General's minions" are the enemy player's cards: side enemy
+duelyst	Enchanted Haunt	player named	"the enemy General's spells" are the enemy player's cards: side enemy
+duelyst	Material Haunt	player named	"the enemy General's artifacts" are the enemy player's cards: side enemy
+duelyst	Eight Gates	deal damage	the bonus is increase_effect on my spells; "that deal damage" narrows to damage spells, which no value can say (unsure)
+duelyst	Scioness Sajj	deal damage	"deals double damage to minions" is increase_effect times 2 to kind unit
+duelyst	Psionic Strike	deal damage	"deals double damage to minions" is increase_effect times 2 to kind unit
+duelyst	Bluetip Scorpion	deal damage	"deals double damage to minions" is increase_effect times 2 to kind unit
+duelyst	Facestriker	deal damage	"deals double damage to Generals" is increase_effect times 2 to kind player
+duelyst	Luminous Charge	deal damage	the Walls' damage when destroyed is the summoned token's own record (BRIEF rule 22)
+duelyst	Luminous Charge	nearby	the Walls' "nearby enemies" is the summoned token's own record (BRIEF rule 22)
+duelyst	Scion of the Void	deal damage	"double damage on counter attacks" is increase_effect times 2 when it is attacked (fixes/duelyst/v37.py)
+duelyst	Kujata	summon	"when summoned from your action bar" is the event summoned (state from_hand), not a summon effect
+duelyst	Hideatsu the Ebon Ox	summon	"Summon 7 minions" (Trial) and "Summon friendly minions to" (Destiny) are events counted or waited for
+duelyst	Airdrop	summon	the keyword lets the minion be summoned anywhere: can, event played, to any position
+duelyst	Destiny	summon	the keyword's line says summoning the card gives the effect; the effects are each card's own
+duelyst	Wraithling Swarm	nearby	"nearby each other" places the three Wraithlings together; no position relative to a card
+duelyst	Stunned	stun	the status itself ("Stunned minions lose their next action"): its rows are what a stunned minion can't do
+duelyst	Wall	dispel	"removed if dispelled": no event for being dispelled yet (proposal silenced, unsure)

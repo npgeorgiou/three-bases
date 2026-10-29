@@ -1,0 +1,129 @@
+card	name	pattern	requires	text
+5000024	Abyssal Scar (token)	KW	name:shadow creep	n a 4/4  #  on every friendly shadow creep.
+5000050	Brome Warcrest	KW	name:provoke	: summon a 1/2  #  with zeal: provoke in front of your general.
+5000050	Brome Warcrest	KW	name:zeal	 spell: summon a 1/2  #  with zeal: provoke in front of your gen
+5000067	Conscript	KW	name:provoke	summon a 1/2  #  with zeal: provoke in front of your general.
+5000067	Conscript	KW	name:zeal	summon a 1/2  #  with zeal: provoke in front of your gen
+5000098	Tusk Boar	V94	value:hand	return this minion to your action bar at the beginning of your turn
+5000121	Mana Vortex	V95	value:this_round	the next spell you cast this turn costs 1 less.
+5000162	Auroras Tears	V96	value:attach	ral gains +2 attack for every equipped artifact.
+5000182	Abyssal Juggernaut	KW	name:shadow creep	n has +1/+1 for each friendly shadow creep.
+5000189	Darkspine Elemental	KW	name:shadow creep	 the damage dealt by friendly shadow creep.
+5000207	Rite Of The Undervault	V94	value:hand	draw to fill your action bar.
+5000223	Earth Walker	KW	name:grow	grow: +1/+1
+5000224	Grimrock	KW	name:grow	grow: +2/+2
+5000225	Kolossus	KW	name:grow	grow: +4/+4
+5000264	Kara Winterblade	V95	value:this_round	ll: friendly minions summoned this turn gain +1/+1.
+5000273	Snow Chaser	V94	value:hand	inion dies, return it to your action bar.
+5000280	Voice of the Wind	V94	value:hand	you summon a minion from your action bar, summon a 2/2  #   #  nearby.
+5000290	Kinetic Surge	V95	value:this_round	friendly minions summoned this turn gain +1/+1.
+5000307	Hailstone Prison	V94	value:hand	return any minion to its action bar.
+5000328	Wind Stopper	KW	name:ranged	ranged attackers must attack this mi
+5000342	Helm of MECHAZ0R	KW	name:build	g gambit: progresses mechaz0r build by +20%.
+5000343	Wings of MECHAZ0R	KW	name:build	g gambit: progresses mechaz0r build by +20%.
+5000344	Cannon of MECHAZ0R	KW	name:build	g gambit: progresses mechaz0r build by +20%.
+5000345	Sword of MECHAZ0R	KW	name:build	g gambit: progresses mechaz0r build by +20%.
+5000346	Chassis of MECHAZ0R	KW	name:build	g gambit: progresses mechaz0r build by +20%.
+5000353	Sand Burrower	V94	value:hand	es damage, it returns to your action bar.
+5000360	Twilight Sorcerer	V20	value:this_game|recalled_this_game|once_per_game	py of a random spell you cast this game into your action bar.
+5000362	Golem Metallurgist	V04	value:summon|copy|summoned|revive|summoned_this_round	the first  #  you summon each turn costs 1 less.
+5000417	Grand Strategos	KW	name:destiny	inions with 1 or less attack. destiny: promote other friendly minio
+5000417	Grand Strategos	KW	name:trial	trial: summon 12 minions with 1 or 
+5000418	Bolster	KW	name:intensify	intensify: give friendly minions +2 hea
+5000419	Legion	KW	name:intensify	intensify: put 1  #  into your action b
+5000419	Legion	V14	value:shuffle_into_deck|shuffled	t 1  #  into your action bar. shuffle a copy of this minion into your deck.
+5000424	Windcliffe Alarmist	KW	name:provoke	gambit: summon a 5/5  #  with provoke from your deck.
+5000431	Hideatsu the Ebon Ox	KW	name:destiny	ion bar with different costs. destiny: summon friendly minions to d
+5000431	Hideatsu the Ebon Ox	KW	name:trial	trial: summon 7 minions from your a
+5000431	Hideatsu the Ebon Ox	V94	value:hand	l: summon 7 minions from your action bar with different costs. destiny
+5000434	Knucklestorm	KW	name:intensify	intensify: deal 1 damage to an enemy.
+5000440	Coalfist	KW	name:intensify	intensify: give a random nearby friendl
+5000445	Notion of Starless Eternity	KW	name:destiny	ld with an equipped artifact. destiny: each equipped artifact gives
+5000445	Notion of Starless Eternity	KW	name:trial	trial: general reaches the other ed
+5000445	Notion of Starless Eternity	V96	value:attach	ge of the battlefield with an equipped artifact. destiny: each eq
+5000446	Orbrider	V94	value:hand	earby friendly minion to your action bar.
+5000447	Accumulonimbus	KW	name:intensify	intensify: summon 2 wind dervishes near
+5000452	Dustdrinker	KW	name:intensify	intensify: deal 1 damage to the enemy g
+5000455	Metalmeld	V20	value:this_game|recalled_this_game|once_per_game	y artifact that was destroyed this game.
+5000459	Atom Klinger	V96	value:attach	whenever you equip an artifact, this minion gain
+5000460	Underlord Xor'Xuul	KW	name:destiny	at destroy a friendly minion. destiny: whenever a friendly minion d
+5000460	Underlord Xor'Xuul	KW	name:trial	trial: cast 6 spells that destroy a
+5000464	Painful Pluck	KW	name:intensify	intensify: turn 1 random space into sha
+5000465	Yielding Depths	KW	name:shadow creep	if you have three or more shadow creep, draw 2 cards.
+5000466	Abyssal Tormentor	KW	name:shadow creep	your shadow creep deals damage equal to the num
+5000467	Unfathomable Rite	V94	value:hand	 opponent's deck to fill your action bar.
+5000468	Munch	KW	name:shadow creep	nemy minion for each friendly shadow creep (but not more than its health
+5000469	Bonecrusher	KW	name:intensify	intensify: this minion gains +5 attack.
+5000473	Unleash the Evil	V94	value:hand	 recently summoned from their action bar. it gains rush and flying.
+5000474	Hatefurnace	KW	name:destiny	use a minion to gain +attack. destiny: minions summoned from your a
+5000474	Hatefurnace	KW	name:trial	trial: cast 7 spells that cause a m
+5000474	Hatefurnace	V94	value:hand	y: minions summoned from your action bar gain rush and frenzy.
+5000475	Angered Okkadok	KW	name:intensify	intensify: this minion gains +1/+1.
+5000476	Invigoration	KW	name:intensify	intensify: restore 3 health to your gen
+5000482	Gargantuan Growth	KW	name:grow	"give a minion, \""grow: +8/+8.\"""
+5000484	Mitotic Induction	V94	value:hand	t recently summoned from your action bar.
+5000489	Oak in the Nemeton	KW	name:destiny	minions with different names. destiny: friendly token minions have 
+5000489	Oak in the Nemeton	KW	name:trial	trial: have 5 token minions with di
+5000494	Thicket Augur	KW	name:intensify	intensify: summon 1  #  with provoke ne
+5000498	Wanderlust	KW	name:intensify	intensify: teleport 1 random enemy mini
+5000505	Mythron Wanderer	KW	name:destiny	duplicate cards in your deck. destiny: your minions have +1/+1.
+5000505	Mythron Wanderer	KW	name:trial	trial: have no duplicate cards in y
+5000506	Mirrorrim	V14	value:shuffle_into_deck|shuffled	opening gambit: shuffle three copies of a friendly minion into your deck.
+5000513	Riftwalker	KW	name:intensify	intensify: deal 1 damage to everything 
+5000536	Vale Ascension	KW	name:hallowed ground	royed this game onto friendly hallowed ground.
+5000536	Vale Ascension	V20	value:this_game|recalled_this_game|once_per_game	ly non-token minion destroyed this game onto friendly hallowed ground
+5000543	Watchful Sentinel (token, SonghaiSentinel)	V13	value:transform|transformed	sentinel: this transforms into a powerful minion if it
+5000559	Sandswirl Reader	V94	value:hand	return a nearby minion to its action bar. turn that space into exhumin
+5000560	Reassemble	V94	value:hand	rn a friendly obelysk to your action bar and reduce its cost to 0. dra
+5000561	Azure Summoning	V94	value:hand	 minion with flying from your action bar this turn, draw a minion with
+5000570	Desolator	V94	value:hand	ying wish: return  #  to your action bar.
+5000572	Watchful Sentinel (token, AbyssSentinel)	V13	value:transform|transformed	sentinel: this transforms into a powerful minion if it
+5000576	Nethermeld	KW	name:shadow creep	leport any minion to friendly shadow creep.
+5000577	Choking Tendrils	KW	name:shadow creep	y an enemy minion on friendly shadow creep.
+5000583	Grandmaster Kraigon	KW	name:grow	forcefield, frenzy, grow: +7/+7. your general has: for
+5000589	Verdant Fulmination	KW	name:grow	s on friendly primal flourish grow. turn your other minions' spa
+5000593	Luminous Charge	V05	value:damage|damaged|survives_damage|nexus_damaged|excess_damage|negate_damage|damage_reduction|strike_with|increase_effect	on five joined 0/1 walls that deal 2 damage to nearby enemies when
+5000598	Watchful Sentinel (token, VanarSentinel)	V13	value:transform|transformed	sentinel: this transforms into a powerful minion if it
+5000617	Quahog	V94	value:hand	by this are returned to their action bar.
+5000633	Cade the Desolator	V05	value:damage|damaged|survives_damage|nexus_damaged|excess_damage|negate_damage|damage_reduction|strike_with|increase_effect	ver an enemy damages or takes damage from this, teleport that enem
+5000634	Shinkage Zendo	KW	name:battle pet	 and attacks as if they are a battle pet.
+5000655	Megapenti	V94	value:hand	minions summoned from  # 's action bar gain rebirth:  # .
+5000656	Rin the Shadowsworn	KW	name:grow	rin's minions have grow +1/+1. whenever rin takes dam
+5000660	Crystalline Champion	V94	value:hand	all minions summoned from the action bar gain +2 attack, but -2 health
+5000667	Taskmaster Beatrix	V04	value:summon|copy|summoned|revive|summoned_this_round	rals cannot move. all minions summoned act like battle pets.
+5000685	Legion (boss, Boss33)	V07	value:kill|killed|dies	ealth at the end of turn. all killed  #  respawn in a corner at 
+5000686	Legion (boss, Boss33_1)	V07	value:kill|killed|dies	ealth at the end of turn. all killed  #  respawn in a corner at 
+5000687	Legion (boss, Boss33_2)	V07	value:kill|killed|dies	all  #  gain +2 attack. all killed  #  respawn in a corner at 
+5000688	Legion (boss, Boss33_3)	V07	value:kill|killed|dies	 can move 2 extra spaces. all killed  #  respawn in a corner at 
+5000689	Legion (boss, Boss33_4)	V07	value:kill|killed|dies	ot be targeted by spells. all killed  #  respawn in a corner at 
+5000730	Heal Damge	V05	value:damage|damaged|survives_damage|nexus_damaged|excess_damage|negate_damage|damage_reduction|strike_with|increase_effect	heal damage
+5000745	Bounce Minion Spawn Entity	V94	value:hand	return a minion its action bar. summon an entity on that spa
+5000746	Teleport To Shadow Creep	KW	name:shadow creep	et to any unoccupied friendly shadow creep.
+5000805	Araki Headhunter	V04	value:summon|copy|summoned|revive|summoned_this_round	whenever you summon a minion with opening gambit 
+5000805	Araki Headhunter	V94	value:hand	with opening gambit from your action bar, gain +2 attack.
+5000806	Keeper of the Vale	V20	value:this_game|recalled_this_game|once_per_game	dom friendly minion destroyed this game nearby this minion.
+5000879	Night Fiend	KW	name:shadow creep	ach enemy on or near friendly shadow creep.
+5000883	Arcane Devourer	V04	value:summon|copy|summoned|revive|summoned_this_round	g gambit: the next minion you summon this turn costs 1.
+5000883	Arcane Devourer	V95	value:this_round	t: the next minion you summon this turn costs 1.
+5000890	Obliterate	KW	name:shadow creep	destroy all friendly shadow creep to deal that much damage to a
+5000891	Ghost Azalea	KW	name:shadow creep	s +1 attack for each friendly shadow creep.
+5000892	Gro	KW	name:grow	grow: +1/+1
+5000896	Moloki Huntress	KW	name:grow	grow: +1/+1 friendly minions grow 
+5000898	Mandrake	V04	value:summon|copy|summoned|revive|summoned_this_round	costs 1 less for each minion summoned from any player's action ba
+5000898	Mandrake	V94	value:hand	on summoned from any player's action bar this game.
+5000919	White Asp	KW	name:wall	n, summon a 3/3 blazing spine wall on that space.
+5000965	Death Knell	V20	value:this_game|recalled_this_game|once_per_game	non-token arcanysts destroyed this game nearby.
+5000966	The Releaser	V20	value:this_game|recalled_this_game|once_per_game	ly non-token minion destroyed this game nearby.
+5000968	Godhammer	KW	name:grow	"your minions have ""grow: +1/+1."""
+5000970	Juggernaut	KW	name:grow	grow: +5/+5 whenever this minion t
+5000989	Celebrant	V03	value:create|copy|created	opening gambit: create a mana spring tile nearby.
+5000990	Oakenheart	KW	name:build	g gambit: progresses mechaz0r build by +20%. your other  #  minio
+5001012	Penumbraxx	V13	value:transform|transformed	(2). whenever this backstabs, transform it into a building with build
+5001014	Assassination Protocol	V05	value:damage|damaged|survives_damage|nexus_damaged|excess_damage|negate_damage|damage_reduction|strike_with|increase_effect	ed friendly minion. it cannot damage or attack generals this turn.
+5001016	Bamboozle	V94	value:hand	troy it and draw to fill your action bar.
+5001020	MECHAZ0R Progression	KW	name:build	progresses mechaz0r build by +20%.
+5001026	Silica Weaver	KW	name:build	g gambit: progresses mechaz0r build by +40%.
+5001041	Nightmare Operant	V14	value:shuffle_into_deck|shuffled	dying wish: shuffle a mechaz0r into your deck.
+5001059	Seismoid	V04	value:summon|copy|summoned|revive|summoned_this_round	whenever you summon a  #  minion from your action
+5001059	Seismoid	V94	value:hand	summon a  #  minion from your action bar, both players draw a card.
+5001084	Lost Artificer	V96	value:attach	the first artifact you equip each turn costs 1 less.

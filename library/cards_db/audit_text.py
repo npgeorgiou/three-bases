@@ -8,7 +8,7 @@ import collections, glob, json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE); import source
 
-PLAYER = {'runeterra': r'Nexus', 'stormbound': r'\bbase\b', 'monster_train': r'\bPyre\b', 'faeria': r"\b(?:gods?|opponent)\b(?!'s)", 'inscryption': r"\b(?:opponent|scale)\b(?!'s)"}
+PLAYER = {'runeterra': r'Nexus', 'stormbound': r'\bbase\b', 'monster_train': r'\bPyre\b', 'faeria': r"\b(?:gods?|opponent)\b(?!'s)", 'inscryption': r"\b(?:opponent|scale)\b(?!'s)", 'duelyst': r'\bGenerals?\b'}
 
 
 def parts(rec):
@@ -55,6 +55,10 @@ def rules(game):
         ('land act', r'\b(?:create|transform|destroy|move)\b[^.]{0,30}\b(?:lands?|forests?|lakes?|mountains?|deserts?|prairies?)\b', lambda r: acts(r) & {'set_terrain', 'move', 'steal'} or '"terrain"' in words(r)),
         ('adjacent', r'\badjacent\b', lambda r: '"bordering"' in words(r) or '"sides"' in words(r)),  # a hex board's neighbours, or a row's (Inscryption)
         ('harvest', r'(?<!can )(?<!can\'t )\bharvest', lambda r: 'harvest' in words(r)),
+        # grid words (Duelyst: "nearby" is the 8 spaces around); a game without them never matches
+        ('nearby', r'\bnearby\b|\baround (?:it|this|your|the|an?)\b', lambda r: re.search(r'"(?:surrounding|area_3x3|bordering|diagonal)"', words(r))),
+        ('stun', r'\bstun(?:s|ned)?\b', lambda r: 'Stun' in words(r) or 'stun' in acts(r) or '"stunned"' in words(r)),
+        ('dispel', r'\bdispel', lambda r: 'silence' in acts(r) or 'Dispel' in words(r)),
         ('double', r'\bdouble\b(?! attack)', lambda r: re.search(r'event_amount|double|"x": ?"stat"|times|"x": ?"count"', words(r)) or acts(r) & {'repeat', 'copy'}),
     ] + ([('Rally', r'\bRally\b', lambda r: acts(r) & {'gain_attack_token', 'keyword_action'})] if game == 'runeterra' else [])  # Monster Train's Rally is a trigger
 

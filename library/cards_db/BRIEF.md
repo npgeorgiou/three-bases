@@ -472,6 +472,11 @@ decided by Claude from the game's own texts (open-duelyst: keyword definitions, 
   its action bar" = return_to_hand. "Equip an artifact" = attach (on the player, card the artifact). "Progresses MECHAZ0R
   build by +20%" = keyword_action MECHAZ0R, params amount 20. "Destroy" = kill. "Transform into X" = transform, card X.
   "Shuffle into your deck" = shuffle_into_deck; "replace" a card = shuffle_into_deck, then draw (link then).
+- "Reactivate" = ready; "becomes your General" = become_leader; "non-token" = filter state not token; "the nearest / closest
+  enemy" = pick nearest. A faction named ("a random Songhai spell", "Vetruvian artifacts", "a neutral minion") = filter
+  `{"attr": "region", "op": "is", "val": "Songhai Empire"}` (Lyonar Kingdoms, Vetruvian Imperium, Abyssian Host, Magmar
+  Aspects, Vanar Kindred, Neutral). A trigger that only holds "this turn" ("Whenever a friendly minion dies this turn") = the
+  card gives its player that ability: give_ability on `{"kind": "player", "side": "mine"}`, lasts this_round.
 - A keyword the card has itself in its text ("Backstab: (2).", "Build: (1).", "Forcefield, Frenzy, Grow: +7/+7.") = one
   ability `{"when": {"event": "always"}, "do": [{"act": "give_keyword", "keyword": "<K>", "on": {"pick": "self"}, "params":
   {"amount": N}, "lasts": "permanent"}]}` (amount only for a number: Backstab 2, Build 1). "Give a minion Celerity this turn"

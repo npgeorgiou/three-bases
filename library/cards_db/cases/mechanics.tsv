@@ -284,18 +284,18 @@ mi20	mechanic	Waterborne: submerged (cannot be attacked) on the enemy turn	kw:Wa
 du01	mechanic	Opening Gambit triggers	text:\bopening gambit:	select card from flat_when where event='played' and obj_pick='self'	duelyst
 du02	mechanic	Dying Wish triggers	text:\bdying wish:	select card from flat_when where event='dies' and obj_pick='self'	duelyst
 du03	mechanic	Deathwatch triggers	text:\bdeathwatch:	select card from flat_when where event='dies' and coalesce(obj_pick,'')!='self'	duelyst
-du04	mechanic	Blood Surge triggers	text:\bblood surge:	select card from flat_when where event='played' and obj_with like '%Bloodbound Spell%'	duelyst
+du04	mechanic	Blood Surge triggers	text:\bblood surge:	select card from flat_when where event='played' and obj_with like '%keyword is ' || (select id from card where name='Bloodbound Spell' and is_keyword=1 and game='duelyst') || '%'	duelyst
 du05	mechanic	Grow	text:\bgrow:	select card from flat_when where event='turn_start' union select card from flat_do where act='give_keyword' and keyword_ref=(select id from card where name='Grow' and is_keyword=1 and game='duelyst')	duelyst
 du06	mechanic	start of your turn	text:\bat the start of your turn\b	select card from flat_when where event='turn_start'	duelyst
 du07	mechanic	end of your turn	text:\bat the end of your turn\b	select card from flat_when where event='turn_end'	duelyst
-du08	mechanic	Zeal	text:\bzeal:	select card from flat_if where test='keyword_condition'	duelyst
+du08	mechanic	Zeal	text:(?<!with )\bzeal:	select card from flat_if where test='keyword_condition'	duelyst
 du09	mechanic	Infiltrate	text:\binfiltrate:	select card from flat_if where test='keyword_condition'	duelyst
 du10	mechanic	Bond	text:\bbond:	select card from flat_if where test='keyword_condition'	duelyst
-du11	mechanic	Backstab	text:\bbackstab\b	select card from flat_do where keyword_ref=(select id from card where name='Backstab' and is_keyword=1 and game='duelyst')	duelyst
+du11	mechanic	Backstab	text:\bbackstab\b	select card from flat_do where keyword_ref=(select id from card where name='Backstab' and is_keyword=1 and game='duelyst') or on_with like '%keyword is ' || (select id from card where name='Backstab' and is_keyword=1 and game='duelyst') || '%' union select card from flat_when where coalesce(actor_with,'') || coalesce(obj_with,'') like '%keyword is ' || (select id from card where name='Backstab' and is_keyword=1 and game='duelyst') || '%' union select card from flat_if where coalesce(of_with,'') || coalesce(ev_obj_with,'') like '%keyword is ' || (select id from card where name='Backstab' and is_keyword=1 and game='duelyst') || '%' union select card from card_keyword where keyword=(select id from card where name='Backstab' and is_keyword=1 and game='duelyst')	duelyst
 du12	mechanic	Stun	text:\bstuns?\b	select card from flat_do where keyword_ref=(select id from card where name='Stunned' and is_keyword=1 and game='duelyst') or act='stun' union select card from flat_when where obj_with like '%Stunned%' union select card from flat_if where of_with like '%Stunned%'	duelyst
 du13	mechanic	Dispel	text:\bdispel	select card from flat_do where act='silence'	duelyst
 du14	mechanic	Shadow Creep made	text:\binto shadow creep\b	select card from flat_do where act='set_terrain'	duelyst
-du15	mechanic	summon Wraithlings	text:\bsummon\b[^.]{0,30}\bwraithlings?\b	select card from flat_do where act='summon' and card_ref=(select id from card where name='Wraithling' and game='duelyst')	duelyst
+du15	mechanic	summon Wraithlings	text:(?<!you )\bsummon\b[^.]{0,30}\bwraithlings?\b	select card from flat_do where act='summon' and card_ref=(select id from card where name='Wraithling' and game='duelyst')	duelyst
 du16	mechanic	teleport	text:\bteleport	select card from flat_do where act in ('move','swap')	duelyst
 du17	mechanic	equipped artifacts on the General	text:\byour general (?:has|gains) \+\d+ attack\b	select card from flat_do where act='stat_change' and on_kind='player'	duelyst
 du18	mechanic	Intensify	text:\bintensify:	select card from flat_when where event='played' and obj_pick='self'	duelyst
