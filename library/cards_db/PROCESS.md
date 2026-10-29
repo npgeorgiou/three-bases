@@ -126,7 +126,8 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
    is; this list does:
    - `library/tools/convert/conv_<game>.py`: its first lines name the source, date and format of the game's card data. Raw
      files next to them: `monster_train_cards.psv` (282 Monster Train cards, wiki Module:Cards/Data),
-     `inscryption_missing_cards.json`. Named sources: Lorcana (npm lorcana-oracle), Star Wars: Unlimited (swucardex-data
+     `inscryption_missing_cards.json`, `faeria_merlin_shortened.csv` + `faeria_cards_english.csv` (462 Faeria cards,
+     Abrakam's github.com/abrakam/Faeria_Cards 12b7207; its README defines the keywords). Named sources: Lorcana (npm lorcana-oracle), Star Wars: Unlimited (swucardex-data
      a86faed), Elder Scrolls: Legends (TESLegendsTracker c541e82), Slay the Spire (wiki Module:Cards/data), Slay the Spire 2
      (Kaptain's lists, 12 Oct 2026), Gwent (gwent.one v14.8), Magic (MTGJSON AtomicCards, Scryfall tokens), Shadowverse
      (Portal API), 40k and Age of Sigmar (BSData).

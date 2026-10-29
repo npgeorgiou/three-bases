@@ -22,9 +22,9 @@ def lib():
             if line.strip():
                 r = json.loads(line)
                 c.execute(f"insert into temp.supplement({','.join(COLS)}) values({','.join('?' * len(COLS))})", [r.get(k) for k in COLS])
-    # a supplement entry replaces the library's entry with the same card code (the game's own newer data)
+    # a supplement entry replaces the library's entry with the same card code, bare (Faeria '45') or prefixed (the game's own newer data)
     c.execute("create temp view entities as select * from main.entities e where not exists (select 1 from temp.supplement s "
-              "where s.game=e.game and s.ext_id is not null and e.ext_id like '%:' || s.ext_id) union all select * from temp.supplement")
+              "where s.game=e.game and s.ext_id is not null and (e.ext_id = s.ext_id or e.ext_id like '%:' || s.ext_id)) union all select * from temp.supplement")
     # links between supplement cards (level-up forms, generated cards): supplement/<game>_links.jsonl
     c.execute('create temp table supplement_links as select * from main.entity_links where 0')
     for f in sorted(glob.glob(os.path.join(HERE, 'supplement', '*_links.jsonl'))):
