@@ -774,3 +774,7 @@ region	Magmar Aspects	region (Duelyst faction; "Neutral" = neutral cards)			29 O
 region	Vanar Kindred	region (Duelyst faction; "Neutral" = neutral cards)			29 Oct 2026, v37 (Duelyst)
 region	Neutral	region (Duelyst faction; "Neutral" = neutral cards)			29 Oct 2026, v37 (Duelyst)
 act	refresh	a used spell or ability can be used again now (Duelyst "refresh your Bloodbound Spell")	cooldowns		29 Oct 2026, v37 (Duelyst)
+act	empty_resource	remove the resource stored on the "on" board spaces (Faeria: empty a faeria well)	disruption		29 Oct 2026, v35
+act	refill_resource	fill the "on" board spaces' stored resource again (Faeria: refill a faeria well)	resource_gain		29 Oct 2026, v35
+act	extra_turn	the player takes another turn after this one (Faeria Ocarina)	extra_turn		29 Oct 2026, v35
+act	end_turn	the player's turn ends now (Faeria Doomsday)	drawback	turn_end	29 Oct 2026, v35

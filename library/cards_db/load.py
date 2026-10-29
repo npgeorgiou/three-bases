@@ -173,7 +173,7 @@ def main():
     import re as _re; lib = source.lib()
     for k, kname, kgame in out.execute("select distinct t.keyword, c.name, c.game from keyword_trigger t join card c on c.id=t.keyword "
                                        "where exists (select 1 from ability a where a.card=t.keyword)").fetchall():
-        pat = _re.compile(r'\b' + _re.escape(kname.lower()) + r':')
+        pat = _re.compile(r'\b' + _re.escape(kname.lower()) + r'(?::| -)')  # "Eaten:", Faeria "Gift -" 
         for i, t in lib.execute('select id, text from entities where game=?', (kgame,)):
             if pat.search((t or '').lower()) and out.execute('select 1 from card where id=? and is_keyword=0', (i,)).fetchone() \
                     and not out.execute('select 1 from card_keyword where card=? and keyword=?', (i, k)).fetchone():
@@ -183,9 +183,9 @@ def main():
     for k, kname, kgame in out.execute("select id, name, game from card where is_keyword=1 and category='keyword' and is_stub=0 and "
                                        "not exists (select 1 from ability a where a.card=card.id) and (exists (select 1 from filter f where "
                                        "f.ref_keyword=card.id) or exists (select 1 from cond d where d.ref_keyword=card.id))").fetchall():
-        pat = _re.compile(r'(?:^|[.:!?]\s+)' + _re.escape(kname.lower()) + r'(?: \d+)?:')
+        pat = _re.compile(r'(?:^|[.:!?]\s+|\n\s*)' + _re.escape(kname.lower()) + r'(?: \d+)?(?::| -)', _re.M)  # "Nightfall:", Faeria "Corrupt -" on its own line
         for i, t in lib.execute('select id, text from entities where game=?', (kgame,)):
-            if pat.search(' '.join((t or '').lower().split())) and out.execute('select 1 from card where id=? and is_keyword=0', (i,)).fetchone() \
+            if pat.search(_re.sub(r'[ \t]+', ' ', (t or '').lower())) and out.execute('select 1 from card where id=? and is_keyword=0', (i,)).fetchone() \
                     and not out.execute('select 1 from card_keyword where card=? and keyword=?', (i, k)).fetchone():
                 out.execute('insert into card_keyword(card, keyword) values(?,?)', (i, k))
     import flat; flat.build(out); flat.derive(out); import refs; refs.build(out)  # the query layer: general rows with keywords expanded and concepts

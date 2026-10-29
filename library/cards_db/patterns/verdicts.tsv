@@ -84,3 +84,12 @@ duelyst	5001041	KW:name:mechaz0r	record_right	Claude: the keyword word belongs t
 duelyst	5001041	V14	record_right	Claude: shuffling copies or a card into the deck is copy / create with zone deck	29 Oct 2026
 duelyst	5001059	V04	record_right	Claude: "summon ... from your action bar" is the event played (BRIEF Game words: Duelyst: Opening Gambit = played), or the summoned card's own rows	29 Oct 2026
 duelyst	5001084	V96	record_right	Claude: equipped artifacts are equipment, zone attached, or the event equipped	29 Oct 2026
+faeria	741096	V57	record_right	Claude: "the first time this fights and survives": survives_damage from combat, once; the pattern now matches only the act	29 Oct 2026
+faeria	741134	V04	record_right	Claude: "if summoned adjacent to an enemy well": a Gift with a position condition on enemy wells	29 Oct 2026
+faeria	741230	V04	record_right	Claude: "if summoned adjacent to an opponent's well": a Gift with a position condition on enemy wells	29 Oct 2026
+faeria	741299	V04	record_right	Claude: "you must sacrifice another creature to summon this": the sacrifice is the kill on play	29 Oct 2026
+faeria	741238	KW	record_right	Claude: "dies in combat": origin combat, not the Combat keyword	29 Oct 2026
+faeria	741445	KW	record_right	Claude: "kill a creature in combat": origin combat, not the Combat keyword	29 Oct 2026
+faeria	741244	V20	record_right	Claude: "each turn you dealt damage ... this game": event_count over different rounds	29 Oct 2026
+faeria	741422	V07	record_right	Claude: "If you kill it": the copy is made only if the damage killed it (if_done)	29 Oct 2026
+faeria	3000005	V02	record_right	Claude: not a draw: "Draw a free Safeguard" labels the choice; the card adds it to hand (create)	29 Oct 2026

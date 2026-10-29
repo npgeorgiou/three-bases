@@ -26,6 +26,7 @@ PLAYER_ONLY = {'nexus_damaged'}  # only a player's
 OPEN_KINDS = {None, '', 'player', 'any', 'anything'}
 BY_ME = {'killed', 'damaged', 'nexus_damaged', 'challenges'}  # done by the card to something else: only the card itself can do it
 # (attacks and strikes by the card: other cards can make it attack or strike: Rally, "an ally strikes")  # kinds a player can be
+TO_OBJECT = {('harvest', 'harvests'), ('move', 'moves_onto')}  # "X harvests from a well", "X moves onto enemy land": object = "to"
 BOARD_KINDS = {'unit', 'landmark', 'unit_or_structure', 'anything', 'any', None}
 # a stat tested or counted, and the happenings that change it, for a player and for a unit
 STAT_EVENTS = {'health': {'player': ('nexus_damaged', 'healed'), 'unit': ('stat_changed', 'damaged', 'healed')},
@@ -117,6 +118,8 @@ def build(c):
                        'param_event, to_kind, to_with, to_side, to_pick from flat_do').fetchall():
         card, o, v, ab, act, k, s, p, z, w, kw, cref, pev, to_k, to_w, to_s, to_p = r
         for ev, *kwn in causes.get(('act', act), []):
+            if (act, ev) in TO_OBJECT and (to_k or to_s or to_p):  # the space it happens on is the event's object, the mover its actor
+                ins(card, o, v, ab, 'makes', ev, to_k, to_s, to_p, w=to_w, ak=k or 'unit', aw=w); continue
             if act == 'strike' and ev != 'strikes' and (to_k or to_s or to_p):  # "A strikes B": A strikes, B takes the damage
                 if to_k == 'player':
                     if ev == 'damaged': ins(card, o, v, ab, 'makes', 'nexus_damaged', 'player', to_s, None)

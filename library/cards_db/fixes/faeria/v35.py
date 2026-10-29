@@ -9,12 +9,21 @@
 - "Last Words - ... Summon this in a random space.": the card summons itself again when it dies (Annoying Gnat was read as
   moving when played).
 - Faeria "this turn" is the span this_round (BRIEF Game words: Faeria), never this_turn ("this action"); "a creature that
-  attacked a god this turn" is state struck_player_this_round, not attacked_this_round (The World's Tear)."""
+  attacked a god this turn" is state struck_player_this_round, not attacked_this_round (The World's Tear).
+- Faeria keyword_action with a keyword no glossary has (readers' stand-ins for missing values): Empty / Refill a faeria
+  well = empty_resource / refill_resource; Destroy a well = kill on it; End the turn = end_turn; Extra turn = extra_turn;
+  Refresh power wheel (Ignusi Ritualist) = refresh on the turn's choice (kind effect; act refresh from Duelyst).
+- A summoned or transformed-into token's keywords in the text ("a 5/2 Flying Demon Wing", "a 6/3 Oblivion Rider with Charge
+  3", "a 4/4 Flying Charge 2 Dune Drake"): give_keyword on it for each, when the record lacks it (Demon Wrangler)."""
 import glob, json, os, re, sys
 HERE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, HERE); import source
 lib = source.lib()
 TRIG = re.compile(r"\b(?:if i'm|when i'm|whenever you|when you|the first time you|each time you)\s+(\w+)", re.I)
+
+
+STAND_IN = {'Empty': 'empty_resource', 'Refill': 'refill_resource', 'Destroy': 'kill', 'End the turn': 'end_turn',
+            'Extra turn': 'extra_turn', 'Refresh power wheel': 'refresh'}
 
 
 def has_kw(t):
@@ -61,6 +70,32 @@ for game in ('runeterra', 'stormbound', 'monster_train', 'faeria'):
                     elif isinstance(o, list):
                         for v in o: walk(v)
                 walk(r)
+                for ab in r.get('abilities', []):
+                    for e in ab.get('do', []):
+                        if e.get('act') != 'keyword_action': continue
+                        k = e.get('keyword')
+                        if k in STAND_IN:
+                            e['act'] = STAND_IN[k]; del e['keyword']; e.pop('lasts', None)
+                            if k == 'Refresh power wheel': e['on'] = {'kind': 'effect'}
+                            if 'act' in (r.get('unsure') or []): r['unsure'] = [u for u in r['unsure'] if u != 'act'] or None
+                if r.get('unsure') is None: r.pop('unsure', None)
+                for ab in r.get('abilities', []):
+                    do = ab.get('do', [])
+                    for j, e in enumerate(list(do)):
+                        if e.get('act') not in ('summon', 'transform') or not e.get('card'): continue
+                        tok = re.escape(e['card'])
+                        m = re.search(r'\d+/\d+ ((?:[A-Z][a-z]+(?: [A-Z][a-z]+)?(?: \d+)?,? )*)' + tok + r's?(?: with ((?:[A-Z][a-z]+(?: [A-Z][a-z]+)?(?: \d+)?(?:,? and |, )?)+))?', t)
+                        if not m: continue
+                        words = ' '.join(x for x in m.groups() if x)
+                        have = {x.get('keyword') for x in do if x.get('act') == 'give_keyword' and (x.get('on') or {}).get('pick') == 'it'}
+                        add = []
+                        for k in sorted(kws, key=len, reverse=True):
+                            mm = re.search(r'\b' + re.escape(k) + r'(?: (\d+))?\b', words)
+                            if mm and k not in have and k not in ('Wild', 'Transform', 'Fight', 'Teleport', 'Discover', 'Swallow'):
+                                g = {'act': 'give_keyword', 'on': {'pick': 'it'}, 'keyword': k, 'lasts': e.get('lasts', 'permanent'), 'link': 'and'}
+                                if mm.group(1): g['params'] = {'amount': int(mm.group(1))}
+                                add.append(g); words = words.replace(mm.group(0), '')
+                        for g in reversed(add): do.insert(j + 1, g)
                 if json.dumps(r) != before: n += 1
         if n:
             open(p, 'w').write(''.join(json.dumps(r, separators=(',', ':')) + '\n' for r in recs)); print(game, os.path.basename(p), n)
