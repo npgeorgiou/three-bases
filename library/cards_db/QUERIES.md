@@ -31,13 +31,13 @@ select distinct card from flat_ref where happening='dies' and role!='makes' and 
 ```sql
 select distinct card from flat_concept where concept='sacrifice'
 ```
-- monster_train: 23 cards: Antumbra Morsel, Cannibalize, Crushing Demise, Eaten, Feast, Hallowed Drippings, Hallowed Halls, Imp-portant Work ...
-- runeterra: 54 cards: Amalgamation Of Vile Rites, Ancient Crocolith, Astral Fox, Atrocity, Blighted Caretaker, Bloodcursed Harpy, Chronicler of Ruin, Crumble ...
-- stormbound: 6 cards: Pricey Freedom, Spooky Pumpkin, Stream of Consciousness, Temple of Space, Toxic Sacrifice, Yowling Weavers
+- monster_train: 27 cards: Antumbra Morsel, Cannibalize, Crushing Demise, Eaten, Feast, Hallowed Drippings, Hallowed Halls, Imp-portant Work ...
+- runeterra: 76 cards: Amalgamation Of Vile Rites, Ancient Crocolith, Astral Fox, Atrocity, Blighted Caretaker, Bloodcursed Harpy, Captivated Audience, Chronicler of Ruin ...
+- stormbound: 7 cards: Final Sacrifice, Pricey Freedom, Spooky Pumpkin, Stream of Consciousness, Temple of Space, Toxic Sacrifice, Yowling Weavers
 
 ## Combos between those two lists, inside each game (connections.explain)
 
-807 pairs, for example:
+851 pairs, for example:
 
 - monster_train: Imp-portant Work -> Memories of the Melted (condition: kill -> dies)
 - monster_train: Imp-portant Work -> A Fatal Melting (condition: kill -> dies)
@@ -119,17 +119,17 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 - passive: monster_train 8 cards, runeterra 18 cards, stormbound 8 cards
 - cheat_death: runeterra 7 cards
 - silence: stormbound 8 cards
-- forced_movement: monster_train 6 cards
 - movement: monster_train 6 cards
+- forced_movement: monster_train 6 cards
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: monster_train 399 pairs, e.g. Little Fade -> Primordium; runeterra 12614 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- sacrifice: monster_train 248 pairs, e.g. Primordium -> Devourer of Death; runeterra 3957 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 120 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- removal: monster_train 93 pairs, e.g. Molded -> Primordium; runeterra 3531 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Dreadful Keepers
-- self_destruct: monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6899 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
-- revive: runeterra 1074 pairs, e.g. Eternal Dancers -> Bladepierced Revenant
-- damage: runeterra 13499 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 719 pairs, e.g. Eloth the Ignited -> Dreadful Keepers
+- sacrifice: monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5540 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- destroy: monster_train 399 pairs, e.g. Little Fade -> Primordium; runeterra 12546 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- removal: monster_train 93 pairs, e.g. Wicked Blaze -> Primordium; runeterra 3755 pairs, e.g. Kindred's Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
+- self_destruct: runeterra 6762 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Finite Loopers
+- revive: runeterra 1006 pairs, e.g. Eternal Dancers -> Bladepierced Revenant
+- damage: runeterra 13429 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 712 pairs, e.g. Eloth the Ignited -> Dreadful Keepers
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -161,7 +161,7 @@ Weak spots: none found.
 ## Decks: cards of one game that feed each other
 
 - `ask.py stormbound deck "Wisp Cloud"` (Neutral, Winter): Wisp Cloud, Orgone Leechers, Frosthexers, Spellbinder Zhevana, Icicle Burst, Midwinter Chaos, Blizzard Bombs, Iceflakes, Agile Warriors, Erratic Neglects, Lost Psyches, Va’vel the Looper
-- `ask.py stormbound deck "Doppelbocks"` (Neutral, Swarm): Doppelbocks, Faun Companions, Swarmcallers, Moonlit Aerie, Siegebreakers, Queen of Herds, Slyboots, Catnip’s Charm, Sparkly Kitties, Angelic Tikas, Lost Psyches, Agile Warriors
+- `ask.py stormbound deck "Doppelbocks"` (Neutral, Swarm): Doppelbocks, Faun Companions, Swarmcallers, Moonlit Aerie, Siegebreakers, Queen of Herds, Headless Hotheads, Sparkly Kitties, Catnip’s Charm, Angelic Tikas, Lost Psyches, Agile Warriors
 - `ask.py runeterra deck "Kalista"` (Neutral, Shadow Isles): Kalista, Commander Ledros, Mask Mother, Gluttony, Shark Chariot, Threshold of the Grey, Camavoran Dragon, Crawling Viperwyrm, Mistkeepers, Kindred, Harrowing Return, The Darkin Halberd, Amalgamation Of Vile Rites, Eternal Dancers
 
 ## Same effect, compare cost: deal damage to anything (unit, structure or player), cheapest first
@@ -170,7 +170,7 @@ Weak spots: none found.
 select distinct d.card from flat_do d join card cd on cd.id=d.card where d.act='damage' and d.on_kind in ('any','anything') order by cd.cost
 ```
 - runeterra: 45 cards: Atrocity, Blade's Edge, Blood in the Water, Chakram Dancer, Divine Draft, Ebb, Ebb and Flow, Ember Maiden ...
-- stormbound: 16 cards: Booming Professors, Boomstick Officers, Chaotic Pupil, Crazy Bombers, Dark Harvest, Felflares, Melodious Sisters, Minion Launchers ...
+- stormbound: 17 cards: Booming Professors, Boomstick Officers, Chaotic Pupil, Cheesy Lurers, Crazy Bombers, Dark Harvest, Felflares, Melodious Sisters ...
 
 ## Cards that copy keywords between units (a mechanic found while testing)
 
@@ -195,7 +195,7 @@ select distinct card from flat_do where act='copy_keywords'
 - runeterra Demacia: extra_turn (23), damage_reduction (19), multi_attack (19), damage_prevention (19), shield (16)
 - runeterra Piltover & Zaun: deck_modification (10), junk_cards (13), on_draw (18), recycle (11), on_spell (27)
 - runeterra Freljord: attack_zero (21), regeneration (16), stat_loss (23), stat_multiply (27), aoe_damage (27)
-- runeterra Shadow Isles: death_count (23), revive (20), sacrifice (34), other_death_trigger (25), lifesteal (29)
+- runeterra Shadow Isles: death_count (23), revive (20), sacrifice (47), other_death_trigger (25), lifesteal (29)
 - runeterra Bilgewater: steal (5), self_mill (12), forced_movement (4), on_life_loss (21), hand_disruption (5)
 - runeterra Targon: on_lifegain (5), stances (5), combo_sequence (34), immunity (20), on_targeted (25)
 - runeterra Shurima: stealth (7), tutor (19), delayed (26), variety_payoff (11), rule_change (14)

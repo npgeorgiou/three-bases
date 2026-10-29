@@ -86,3 +86,6 @@ Each change: date, what changed, the card that caused it, and which records were
   and ref (the filter of the thing and the card made). Runeterra: 11 champions' level-up forms the library lacked (Bard,
   Jhin, Jax, Evelynn ...) taken from Riot's data with their links (supplement/runeterra_links.jsonl; source.py loads them)
   and read (batch_025).
+- 29 Oct 2026, v31: the query layer gives a target "it" the side and kind of the target before it (flat.py); link audit
+  (audit_links.py, in run.py), deck network cases (cases/network.tsv), 33 Runeterra keyword concept rows (Claude's, from
+  Riot's glossary), BRIEF rules 23-25, PROCESS "Links the deck networks showed missing".

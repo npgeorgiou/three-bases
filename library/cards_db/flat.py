@@ -104,9 +104,12 @@ def build(c):
             c.execute('insert into flat_if values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
                       (card, origin, via, aid, 'amount_' + x, e, tree.get(('x', x)) or (when_concept(e, ek, ew, None) if e else None),
                        k, s, p, z, withs(of), ek, es, ew, None, None, span, ep, at))
+        last = (None, None)
         for eid, seq, act, on, cref, kref, lasts, link, ez, to in c.execute(
                 'select id, seq, act, on_target, card_ref, keyword_ref, lasts, link, zone, to_target from effect where ability=? order by seq', (aid,)).fetchall():
             k, s, p, z = tgt(on); w = withs(on)
+            if p == 'it' and not s: k, s = k or last[0], last[1]  # "give it Vitalize" after "a random enemy unit": the same side
+            if p != 'it': last = (k, s)
             if applied_to and (p in ('self', 'it') or (k, s, p) == (None, None, None)): k, s, p, z, w = applied_to
             pe = (c.execute("select value from param where effect=? and param='event'", (eid,)).fetchone() or [None])[0]
             ps = ';'.join(f'{pn}={num(a) if a else v}' for pn, a, v in c.execute('select param, amount, value from param where effect=?', (eid,))) or None

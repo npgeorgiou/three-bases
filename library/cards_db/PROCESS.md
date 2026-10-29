@@ -202,6 +202,8 @@ joins "A makes X" to "B waits for X". What went wrong, how it was missed, and th
    read as any unit surviving; "when I level up" (LeBlanc) took Ashe levelling up. Rule: flat_if keeps ev_obj_pick and
    attr; a need about the card itself is fed only by what is done to my units; two cards each about themselves never link.
    When the query layer flattens a record, every field that changes the meaning (pick, side, kind, attr, with) is kept.
+   "It" keeps the side of the target before it ("give a random enemy +2, then give it Vitalize": the enemy), or a buff
+   to an enemy reads as a buff to anyone (Green Prototypes -> Booming Professors).
 3. **Planted and placed cards were no cards.** Chime, Poison Puffcap, Flashbomb Trap, Mysterious Portal are planted by a
    keyword action with a card; the network only followed summon/create. Rule: an effect that names a card puts that card
    in (keyword_action included); a planted card going off is trap_activated (normalize N15; "activated" is a player using
