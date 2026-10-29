@@ -12,7 +12,7 @@ DECK_RULES = {  # the games' own deck-building rules (not card data)
 SAY = {  # what happens, in plain words; {who} = your / enemy / any
     'dies': '{who} units die', 'killed': '{who} units are killed', 'damaged': '{who} units or players take damage',
     'survives_damage': '{who} units survive damage', 'nexus_damaged': 'a player takes damage', 'summoned': '{who} units enter play',
-    'played': 'cards are played', 'drawn': 'you draw cards', 'discarded': 'cards are discarded', 'created': 'cards are created',
+    'played': 'cards are played', 'cost_changed': 'card costs are changed', 'drawn': 'you draw cards', 'discarded': 'cards are discarded', 'created': 'cards are created',
     'given_keyword': '{who} units get {kw}', 'stat_changed': '{who} units have their stats changed', 'healed': '{who} units are healed',
     'attacks': '{who} units attack', 'blocks': '{who} units block', 'strikes': '{who} units strike',
     'strikes_nexus': '{who} units hit the enemy player', 'leaves_play': '{who} cards leave play', 'recalled': '{who} units return to hand',

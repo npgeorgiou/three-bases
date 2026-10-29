@@ -52,7 +52,7 @@ act	transform	turn the target into another card (linked or described)	transform	
 act	return_to_hand	return a unit in play to its owner's hand (Recall)	return_to_hand	recalled;leaves_play	27 Oct 2026, v1
 act	shuffle_into_deck	shuffle the target into a deck	recycle	shuffled	27 Oct 2026, v1
 act	put_on_top	put the target on top of a deck	tutor		27 Oct 2026, v1
-act	cost_change	change the cost of the target (signed param cost)	cost_reduction		27 Oct 2026, v1
+act	cost_change	change the cost of the target (signed param cost)	cost_reduction	cost_changed	27 Oct 2026, v1
 act	mana_gain	refill or gain mana / spell mana (param amount, kind via target)	resource_gain	mana_refilled;resource_gained	27 Oct 2026, v1
 act	gain_attack_token	the player gains the attack token (Rally)	extra_turn	attack_token_gained	27 Oct 2026, v1
 act	strike	the target unit strikes another target now	attack_now	strikes;damaged;survives_damage;dies;killed	27 Oct 2026, v1
@@ -253,7 +253,7 @@ test	amount	"the amount in value compares op n (totals: ""5+ units Stunned or Re
 act	give_ability	"give the target the ability in the effect key ""ability"" (a whole ABILITY)"	buff	given_keyword	28 Oct 2026, v3
 act	give_random_keyword	"give the target a random keyword (filters on the keyword in ""on"" are not used; use params amount)"	random_ability	given_keyword	28 Oct 2026, v3
 act	give_type	"give the target the type in the effect key ""type"""	type_grant		28 Oct 2026, v3
-act	cost_set	set the target's cost to params cost	cost_set		28 Oct 2026, v3
+act	cost_set	set the target's cost to params cost	cost_set	cost_changed	28 Oct 2026, v3
 act	max_mana_change	gain or lose mana gems (params amount, signed; empty gem = not refilled)	resource_gain	mana_refilled	28 Oct 2026, v3
 act	spend_mana	spend mana (params amount)		mana_spent	28 Oct 2026, v3
 act	play_card	play the target or the linked card without paying (cast it)	free_play	played	28 Oct 2026, v3
@@ -542,3 +542,5 @@ keyword	Assimilate	concept of having, using or giving this keyword (Runeterra gl
 keyword	Fated	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	on_targeted		29 Oct 2026, v30; v33 (Kaptain)
 keyword	Sharpsight	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	blocking		29 Oct 2026, v30; v33 (Kaptain)
 keyword	Mark of the Storm	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	mark_target		29 Oct 2026, v30; v33 (Kaptain)
+event	cost_changed	a card's cost is changed (made cheaper or dearer)			29 Oct 2026, v33
+state	cost_reduced	a card whose cost was reduced ("cost reduced cards")	cost_reduction	cost_changed	29 Oct 2026, v33

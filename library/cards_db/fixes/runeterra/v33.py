@@ -3,7 +3,8 @@
   takes Skills (category in spell, skill; a category list gets skill added). When the text also names plain spells
   ("When you play a spell, stop all enemy spells and Skills", Fizz), only targets on the phrase's side change.
 - "Double all damage dealt by ...": the damage again on what was damaged is as much as was dealt (amount event_amount),
-  not 1 (The Dreadway)."""
+  not 1 (The Dreadway).
+- "cost reduced cards" counted: the counted cards have state cost_reduced (Janna's level-up)."""
 import glob, json, os, re, sys
 HERE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, HERE); import source
@@ -36,6 +37,15 @@ for p in sorted(glob.glob(os.path.join(HERE, 'read', 'runeterra', 'batch_*.jsonl
                     if ev == 'damaged' and e.get('act') == 'damage' and (e.get('on') or {}).get('pick') == 'it' and \
                        (e.get('params') or {}).get('amount') != {'x': 'event_amount'}:
                         e.setdefault('params', {})['amount'] = {'x': 'event_amount'}; n += 1
+        if re.search(r'cost reduced cards', t, re.I):
+            def reduced(o):
+                global n
+                if o.get('x') in ('event_count',) or o.get('test') == 'event_count':
+                    e = o.get('event') if isinstance(o.get('event'), dict) else {}
+                    obj = e.get('object')
+                    if e.get('event') == 'played' and isinstance(obj, dict) and not any(f.get('val') == 'cost_reduced' for f in obj.get('with', [])):
+                        obj.setdefault('with', []).append({'attr': 'state', 'op': 'is', 'val': 'cost_reduced'}); n += 1
+            walk(r, reduced)
         found = list(PHRASE.finditer(t))
         if not found: continue
         rest = PHRASE.sub('', t)

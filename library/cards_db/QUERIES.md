@@ -126,8 +126,8 @@ Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed dea
 
 - sacrifice: monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5540 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
 - destroy: monster_train 399 pairs, e.g. Little Fade -> Primordium; runeterra 12483 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 283 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- removal: monster_train 93 pairs, e.g. Wicked Blaze -> Primordium; runeterra 3771 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
-- self_destruct: monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6803 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Broken Earth Drakes
+- removal: monster_train 93 pairs, e.g. Wicked Blaze -> Primordium; runeterra 3771 pairs, e.g. Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
+- self_destruct: monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6803 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
 - revive: runeterra 1027 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant
 - damage: runeterra 13535 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 686 pairs, e.g. Eloth the Ignited -> Dreadful Keepers
 
@@ -138,7 +138,7 @@ Families of three mechanics that feed each other, starting from "summon" (`ask.p
 - summon -> on_ally_play -> combo_sequence (seen in runeterra)
 - summon -> on_ally_play -> play_timing_condition (seen in runeterra)
 - summon -> cant_block -> cant_attack (seen in runeterra)
-- summon -> on_ally_play -> spell_power (seen in monster_train, runeterra)
+- summon -> tribal -> cost_reduction (seen in runeterra, stormbound)
 
 ## A deck explained (`ask.py runeterra analyze "..."`), a Lucian/Senna deck from a deck guide
 

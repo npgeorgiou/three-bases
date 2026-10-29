@@ -46,3 +46,7 @@ n44	runeterra	Annie Gwen	Tybaulk	Vile Feast	line		Kaptain: Tybaulk's extra damag
 n45	runeterra	Annie Gwen	Tybaulk	Armed Acquisitioner	line		Kaptain: Tybaulk grants allies everywhere +1|+0
 n46	runeterra	Annie Gwen	Tybaulk	Annie	none	its damage	Kaptain: Tybaulk's extra damage is for spells and Skills, not units
 n47	monster_train	Hellhorned rage	Deranged Brute	Rage Serum	line		Claude, same family as Tybaulk: a boost to a status helps the cards that give it
+n48	runeterra	Braum Zoe	Sunburst	Braum	none		Kaptain 29 Oct 2026: Sunburst deals 6, Braum has 6 health: he does not survive it
+n49	runeterra	Janna Nilah	Windborne Mariner	Janna	line		Claude, from Janna's text: a card that costs less when played is a cost reduced card she counts
+n50	runeterra	Janna Nilah	Ruined Rex	Janna	none		Claude, from Janna's text: Cannon Barrage played by Ruined Rex is not cost reduced
+n51	monster_train	Imp build (Shardtail Queen)	Imp-in-a-Box	Shardtail Queen	line		Kaptain: cards made by description ("2 random Imps") are Imps

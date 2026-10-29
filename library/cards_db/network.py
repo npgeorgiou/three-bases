@@ -36,6 +36,9 @@ def cards_of(c, game):
         try: st = json.loads(stats) if stats else {}
         except ValueError: st = {}
         if not isinstance(st, dict): st = {}
+        if pw is None and hp is None and '|' in str(stats or ''):  # a level-up form keeps its stats as "power|health"
+            a, b = str(stats).split('|', 1)
+            pw, hp = (float(a) if a.strip().isdigit() else None), (float(b) if b.strip().isdigit() else None)
         strength = str(st.get('strength', '')).split('/')[0]
         d[i] = {'id': i, 'name': n, 'cat': cat, 'regions': set((regions or '').split(';')) - {''}, 'rarity': rar,
                 'power': pw, 'health': hp, 'strength': float(strength) if strength.replace('.', '').isdigit() else None,
@@ -138,6 +141,17 @@ def lines_of(c, game):
         if ab in helps: continue
         if ab in lvl: lvl_needs[card].add(h)
         takes[h].add((card, 'mine' if pick == 'self' else side, kw, kind, pick, w, ab in lvl, role))
+    state_ev = collections.defaultdict(set)  # a state and the happenings that put things in it (damaged <- damaged)
+    for v, cs in c.execute("select value, causes from vocab where field='state' and coalesce(causes,'')!=''"):
+        state_ev[v] |= {x.split(':')[0] for x in cs.split(';')}
+    # damage to my side by amount: damage as big as a card's health kills it, so it never survives it (Sunburst deals 6, Braum has 6)
+    hits = collections.defaultdict(list)
+    for m, ps in c.execute("select card, params from flat_do where act='damage' and origin='own' and coalesce(on_side,'any') in ('mine','any')"):
+        x = dict(p.split('=', 1) for p in (ps or '').split(';') if '=' in p).get('amount', '')
+        hits[m].append(float(x) if x.replace('.', '').isdigit() else None)
+    def lethal(m, t):
+        life = cards[t]['health'] or cards[t]['strength']
+        return bool(life) and bool(hits.get(m)) and all(x is not None and x >= life for x in hits[m])
     # a card whose own triggers make what its level-up counts (Ashe frostbites when she attacks): feeding the trigger levels it
     selffeed = {t for t in lvl_needs if lvl_needs[t] & own_makes[t]}
     for h, ts in takes.items():
@@ -149,6 +163,10 @@ def lines_of(c, game):
                 if not kinds_fit(mkind, tkind): continue
                 if mpick == 'self' and tpick == 'self': continue  # each card about itself ("when I level up"): no link between two cards
                 if not names_fit(c, game, cards, tw, mw, mref): continue
+                if h == 'survives_damage' and tpick == 'self' and lethal(m, t): continue
+                need = {e for p in (tw or '').split(';') if p.startswith('state is ') for e in state_ev.get(p[9:], ())} - {h}
+                if need and h in ('played', 'summoned', 'drawn', 'created') and not need & own_makes[m]: continue  # "8 cost reduced cards
+                # played": playing a card no one made cheaper is not it (a unit healed is damaged by the enemy too: no such need)
                 w = 1.0 / len(carers[tk] | (carers[None] if tk else set()))
                 say = deck_analysis.say(c, h, ts_, tk)
                 if lv: out[(m, t)].append(('levels', 2 * w, say + ' (levels it up)'))
@@ -194,10 +212,17 @@ def lines_of(c, game):
     for m, ref in c.execute(f"select card, card_ref from flat_do where act in ({','.join('?' * len(PUTS))}) and card_ref is not null", PUTS):
         if m in cards and ref in cards:
             for t in cards[ref]['types']: has[t].add((m, 'makes'))
+    # cards made by description ("2 random Imps", "a random Celestial card") are of the type they name
+    for m, w in c.execute(f"select card, on_with from flat_do where act in ({','.join('?' * len(PUTS))}, 'choose_card') and card_ref is null "
+                          "and on_with like '%type is%' and coalesce(on_side,'mine') in ('mine','any')", PUTS):
+        if m in cards:
+            for p in w.split(';'):
+                b = p.split(' ')
+                if len(b) == 3 and b[:2] == ['type', 'is'] and b[2].isdigit(): has[int(b[2])].add((m, 'makes'))
     for t, ts in asks.items():
         tn = c.execute('select name from type where id=?', (t,)).fetchone()
         for m, how in has.get(t, ()):
-            for x in ts - {m}: out[(m, x)].append(('type', 1.0 / len(ts), f'{"is" if how == "is" else "makes"} a {tn[0] if tn else "card of the type"} it asks for'))
+            for x in ts - {m}: out[(m, x)].append(('type', 1.0 / len(ts), f'{"is" if how == "is" else "makes"} {"an" if tn and tn[0][:1] in "AEIOU" else "a"} {tn[0] if tn else "card of the type"} it asks for'))
     CACHE[('lines', game)] = out
     return out
 
