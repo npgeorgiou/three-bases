@@ -367,6 +367,26 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
    unit can be sacrificed, a Skeleton's death gives a Bone), deck cases di01-di04; connections.py goes one step through a
    rule about the owner's own cards (Necromancer's second deaths give Bones for Tomb Robber, combo cases ci07-ci08).
 
+## Importing Duelyst (29 Oct 2026; checked in every game)
+1. **The game file's rules were written from memory.** duelyst.md "The game" (Claude's summary) said a unit on a mana
+   spring gains the mana and minions are summoned next to a friendly unit; the game's own tutorial and tips say the player
+   gains it and summoning is around any friendly unit. Runeterra's, Monster Train's, Faeria's and Inscryption's game rules
+   cited the same kind of summary. Rule: game rules cite the game's own rules with their source (step 0.10); audit_links
+   check 8 lists a game whose game_rules.jsonl cites a "The game" section written from memory (Runeterra, Monster Train and
+   Faeria now cite Riot's round FAQ, a beginner's guide and Wikipedia's Gameplay section; Inscryption still to do).
+2. **One name, two cards.** The open-sourced data has Tempest and its Bloodbound Spell copy, the tutorial's Argeon Highmayne,
+   Cascading Rebirth's follow-up, 14 Build structures called Building: a deck or a text naming one got either. Rule: the
+   collectible card keeps the name, the others are "<name> (<kind>)" (supplement_duelyst.py names()); audit_links check 7
+   lists names two cards of a game share.
+3. **Decks from deck codes.** Duelyst deck pages give a base64 code of card ids; the ids are the game's own (cardsLookup).
+   Codes from Duelyst II pages decode to ids the original game lacks: such a deck is another version of the game, not a
+   source. Codes and decoded decks are kept (supplement/duelyst_deck_codes.tsv) so the decks can be checked again.
+4. **A card kind ending in "Spell" is no type.** build_input.types_of drops subtypes ending in " spell" (Runeterra's spell
+   speeds), so "Bloodbound Spell" as a type was refused by check.py. A kind of card that cards filter by and that has a
+   keyword entry goes in the Keywords field (the General's spells carry "Keywords: Bloodbound Spell.").
+5. **Keywords written as lines.** "Provoke\nCelerity\n..." became "Keywords: Provoke, Celerity." for 178 cards (rule of
+   "A card list that looked whole" 3): line breaks in the source must be kept until the Keywords field is cut.
+
 ## Think like a player (read before showing any network, any deck explanation, any answer about synergy)
 Kaptain checks a few decks and finds errors a player sees at once. Before showing anything, do what he does:
 1. Take every guide deck of the game and read its network line by line, both cards' texts side by side. For each line ask
