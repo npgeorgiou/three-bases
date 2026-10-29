@@ -205,3 +205,20 @@ Each change: date, what changed, the card that caused it, and which records were
   Finical Hatchling, circuits) and v39.py (Burrower's space is mine, "rotate one space" = bordering); Tadpole -> Bullfrog;
   Conduit Card type. Concepts base_resource_gain (every game), lanes, link_formation, cross_lane; ask.py factions.
 - Cases ni15-ni17, mi22-mi23. Other games checked read-only with cases/run.py: all pass.
+
+## 29 Oct 2026, v40 (Duelyst deck read: leaders and the board; shared code, Duelyst rebuilt, other games checked)
+- Category `leader` (Duelyst Generals): network KIND_CAT player and board; leaders fight as their player; help to the
+  player reaches only the leader; aim of help checked only in games with leaders.
+- refs.py: pick actor takes the event actor's kind and side; "it" in an attack ability is the enemy; equipment kills make
+  only leaves_play; summons with no side are mine; positional needs (Backstab, Zeal, Infiltrate, positions of my General,
+  same_space) make moves needs; entering abilities need no moves; costs equal to a stat want less; death needs an ability
+  makes itself are dropped.
+- flat.py: given abilities flip sides for enemies; applied_to replaces only "self"; RULES flanking, adjacency diagonal, lanes
+  center_column, area_templates corners and starting side.
+- network.py: power and health makers row by row (no self gains); "can" on the player for card handling is no help;
+  hand and cost effects skip board-only tokens; chosen help on "anything" reaches units and leaders; named cards asked for
+  in play; tutors from hand; "a copy of it" keeps the first target; harm triggers skipped; stat needs by stat made.
+- normalize N24: summoned from the hand (action bar) is played. load.py: "Opening Gambit and Dying Wish:" labels.
+- Duelyst: fixes/duelyst/v38.py (MECHAZ0R build count; Spellsword's four swords); cases ndu01-ndu29, du31-du34;
+  CONCEPTS_duelyst.md; deck_read_duelyst.md.
+

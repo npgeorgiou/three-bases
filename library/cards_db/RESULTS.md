@@ -94,3 +94,24 @@
   to), Ranged Attack (no retaliation), Wild, Transform.
 - Not in the database: each turn a player builds lands, draws or takes faeria (the power wheel). Cards that count my lakes
   or forests are fed only by cards that make lands, not by the player's own land building.
+
+# Duelyst: results (29 Oct 2026, waiting for Kaptain's check of CHECK_20_duelyst.md and CONCEPTS_duelyst.md)
+
+## What exists
+- 1,117 cards and 46 keywords from the open-sourced game's own card factories (open-duelyst; supplement_duelyst.py). Cards
+  the source names twice keep the collectible card's name; the others are "<name> (<kind>)". Stubs (named, no card): Spriggin Kin, Spirit Wolf; the two game rules are rows too.
+- Generals are category `leader`: the card is its player (help to "your General" reaches only it; it fights by the rules).
+- Game rules (read/duelyst/game_rules.jsonl, from the game's tutorial and tips): units and Generals attack and are
+  counterattacked; summons go next to my units; mana springs, the 9x5 board.
+- The board in the shared form (BRIEF "The board"): nearby, behind, in front, rows and columns, center column, 2x2 and 3x3
+  areas, corners, starting sides, tiles (Shadow Creep, Hallowed Ground, Exhuming Sand, Primal Flourish, mana springs).
+  Backstab, Zeal and Infiltrate are needs for moves; teleports and swaps feed them.
+- 10 full decks in decks.tsv (from deck codes, supplement/duelyst_deck_codes.tsv), all read card by card twice
+  (deck_read_duelyst.md, 24 families fixed by rule); cases ndu01-ndu29.
+
+## Quality
+- run.py passes; cases 72 of 72 (34 Duelyst mechanics, 29 network lines, shared cases); text audit 0; every other game still
+  passes, except Inscryption's mx12 (the Inscryption chat's own Sentry change).
+- Link audit, explained: Pandora summons "a 3/3 Spirit Wolf with a random ability"; the source has five wolves under other
+  names, so Spirit Wolf stays a name.
+- Wording still shared with other games: a player's damage reads "your Nexus or base" (the General in Duelyst).

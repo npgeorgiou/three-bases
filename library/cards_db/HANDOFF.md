@@ -45,6 +45,9 @@
 - Faeria (v35-v38): imported; every step of PROCESS passes, all 12 decks read card by card (RESULTS.md). Its board words are
   now the shared form for every positional game (BRIEF "The board", PROCESS "Importing Faeria: the board"). Waiting for
   Kaptain's check of CHECK_20_faeria.md (ids in CHECK_20_faeria_ids.txt) and of CONCEPTS_faeria.md.
+- Duelyst (v37-v40): imported; every step of PROCESS passes, all 10 decks read card by card twice (RESULTS.md,
+  deck_read_duelyst.md). Generals are leader cards; Backstab, Zeal and Infiltrate are needs for moves. Waiting for Kaptain's
+  check of CHECK_20_duelyst.md (ids in CHECK_20_duelyst_ids.txt) and of CONCEPTS_duelyst.md.
 - Inscryption (v36-v39): imported; every step of PROCESS passes, all 19 decks read card by card (deck_read_inscryption.md).
   Kaptain does not know the game: Claude checked CHECK_20_inscryption.md against the texts (deck_read_inscryption.md);
   Energy ramp is marked base_resource_gain, not linked to costs (Kaptain). Open: Kaptain's look at the deck networks page.

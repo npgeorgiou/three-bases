@@ -111,7 +111,7 @@ ni15	inscryption	Alpha, Wolf, Moose Buck	Alpha	Wolf	line		Claude (v39): Leader (
 ni16	inscryption	Daus, Bell Tentacle	Bell Tentacle	Daus	line		Claude (v39): Daus strikes a card that attacks a Chime or Bell Tentacle (wiki Special Card Behaviours): the card it names
 ni17	inscryption	Daus, Bell Tentacle	Bell Tentacle	Daus	none	by fighting	Claude (v39): Daus waits for an enemy to attack the Bell Tentacle; Bell Tentacle attacking is not it
 ndu01	duelyst	Vaath Dying Wish	Spelljammer	Dagona	none		Claude, deck read: a counterattack hits the attacker, an enemy; Dagona's Dying Wish is its own death (family 1)
-ndu02	duelyst	Cassyva Replace Abomination	Healing Mystic	Letigress	none		Claude, deck read: Letigress waits for the General attacking, not any unit (family 2)
+ndu02	duelyst	Cassyva Replace Abomination	Healing Mystic	Letigress	none	attack	Claude, deck read: Letigress waits for the General attacking, not any unit (family 2)
 ndu03	duelyst	Cassyva Replace Abomination	Cassyva Soulreaper	Letigress	line		Claude, deck read: the General attacks: a cub joins the pack
 ndu04	duelyst	Argeon Mechaz0r	Lifestream	Argeon Highmayne	none		Claude, deck read: the General is no minion to heal or draw (family 2)
 ndu05	duelyst	Vaath Dying Wish	Vaath the Immortal	Lavaslasher	none		Claude, deck read: +1 Attack to the General helps no minion (family 3)
@@ -132,3 +132,10 @@ ndu19	duelyst	Argeon Intensify Riftwalker	Windblade Adept	Afterblaze	line		Claud
 ndu20	duelyst	Argeon Mechaz0r	Helm of MECHAZ0R	MECHAZ0R!	line		guide: the pieces build MECHAZ0R! (family 17)
 ndu21	duelyst	Vaath Dying Wish	Kujata	Juggernaut	line		Claude, deck read: Kujata's damage on summon sets off Juggernaut
 ndu22	duelyst	Kaleos Trial of Songhai	Juxtaposition	Bonereaper	line		Claude, deck read: switching an enemy next to Bonereaper puts it in reach of its end-of-turn damage
+ndu23	duelyst	Vaath Dying Wish	Juggernaut	Lavaslasher	none	hits harder	Claude, deck read: Grow makes only Juggernaut stronger (family 19)
+ndu24	duelyst	Cassyva Replace Abomination	Aethermaster	Cassyva Soulreaper	none		Claude, deck read: an extra replace helps the player, not the General card (family 20)
+ndu25	duelyst	Cassyva Replace Abomination	Healing Mystic	Abhorrent Unbirth	none	your units die	Claude, deck read: Unbirth destroys my minions itself; it waits for no deaths (family 21)
+ndu26	duelyst	Lilithe Darkfire	Phantasm	Wraithling	none		Claude, deck read: Wraithlings are summoned onto the board, never in the action bar (family 22)
+ndu27	duelyst	Lilithe Darkfire	Darkfire Sacrifice	Wraithling	none	cheaper	Claude, deck read: as ndu26, a lower cost is no help to a token
+ndu28	duelyst	Cassyva Replace Abomination	Healing Mystic	Cassyva Soulreaper	line		Claude, deck read: "restore 2 Health to anything" can heal my General (family 13)
+ndu29	duelyst	Lilithe Darkfire	Vorpal Reaver	Inkling Surge	line		guide: Inkling Surge draws when another Wraithling is out; Lilithe and Vorpal Reaver make them

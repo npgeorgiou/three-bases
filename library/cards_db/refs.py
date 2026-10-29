@@ -220,3 +220,8 @@ def build(c):
                 if pk == 'self' and not k: k = ckind  # a unit fights as a unit, a leader (Duelyst General) as its player
                 # (a leader attacks, strikes and kills as its player: "whenever your General attacks" waits for exactly that)
                 c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (card, 'game', e, ab, role, h, k, sd, pk, kw, con, w, ref, None, None))
+    # what an ability kills and then uses ("destroy all friendly minions to summon an Abomination that gains their Attack"): its
+    # own deaths, it waits for none
+    c.execute("""delete from flat_ref where role in ('state','condition') and happening='dies' and exists (select 1 from flat_ref m
+                 where m.card=flat_ref.card and m.ability=flat_ref.ability and m.role='makes' and m.happening='dies'
+                 and coalesce(m.kind,'')=coalesce(flat_ref.kind,'') and m.side=flat_ref.side and coalesce(m.pick,'')=coalesce(flat_ref.pick,''))""")

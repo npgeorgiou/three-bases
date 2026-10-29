@@ -423,6 +423,25 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
 5. **Keywords written as lines.** "Provoke\nCelerity\n..." became "Keywords: Provoke, Celerity." for 178 cards (rule of
    "A card list that looked whole" 3): line breaks in the source must be kept until the Keywords field is cut.
 
+## Duelyst deck read: leaders and the board (29 Oct 2026, v40; deck_read_duelyst.md; checked in every game)
+1. **A leader card is its player.** A Duelyst General is a card on the board and the player's life: category `leader`
+   (network KIND_CAT player). Help given to "your General" reaches only the leader card; a unit target never matches it;
+   the General attacks, strikes and kills as its player (game rules: applies_to unit, leader). Champions stay `hero`.
+2. **Who did it keeps its kind and side.** A target picked "actor" (the attacker, a counterattack) takes its event actor's
+   kind and side; "it" in an ability on my own attack is the enemy attacked; "it" in a given keyword's record is never the
+   holder (Backstab's damage landed on the attacker). Cases ndu01, ndu10.
+3. **Positions a card needs are needs for moves.** Backstab (behind an enemy), Zeal (near my General), Infiltrate (enemy
+   side): moving the unit or the General feeds them; where a card enters needs no moves (placement). Use the BRIEF "The board"
+   positions; concept rules flanking, adjacency (with diagonal), lanes (with center_column), area_templates (corners,
+   starting side). Cases du31-du34, ndu07, ndu12.
+4. **Help must reach the card it can hit.** A gain on itself helps no other card; a player's extra card handling is no help
+   to its leader; effects on the hand or on costs skip tokens only summoned on the board; "anything" chosen on the board is a
+   unit or the leader; spells and artifacts are never board targets. Cases ndu04, ndu05, ndu17, ndu23-ndu28.
+5. **What a card makes itself it does not wait for** (Abhorrent Unbirth's deaths, Krog's Dinner); a named card asked for in
+   play is fed by the cards that make it (Inkling Surge and Wraithlings). Cases ndu25, ndu29, nfa24.
+6. **Card counts by where the card comes from.** "Summoned from your action bar" is played (N24): tokens do not count.
+   Stats used as amounts want that stat; a cost equal to a stat wants less of it (Blood Taura). Cases ndu11, ndu18.
+
 ## Importing Faeria: the board (29 Oct 2026; checked in every game)
 Faeria is played on a hex board that players build; Kaptain uses the library to study positional play, so its board words
 were made the shared form for every game with spaces (BRIEF "The board"). What went wrong and the rule now:

@@ -362,7 +362,8 @@ def buff_keyword(c, kw):
 AIM = {'give_keyword': 'can give it {kw}', 'keyword_action': 'can {kw} it', 'heal': 'can heal it', 'damage': 'can damage it',
        'kill': 'can kill it', 'strike': 'can make it strike', 'return_to_hand': 'can return it to hand', 'start_attack': 'can make it attack',
        'transform': 'can transform it', 'copy': 'can copy it', 'revive': 'can bring it back', 'move': 'can move it',
-       'cost_change': 'can make it cheaper', 'stat_set': 'can set its stats', 'give_ability': 'can give it an ability'}
+       'cost_change': 'can make it cheaper', 'stat_set': 'can set its stats', 'give_ability': 'can give it an ability',
+       'can': 'lets it do more'}
 
 
 def aim_said(act, kw, ps):
@@ -388,8 +389,11 @@ def aimed_rows(c, game):
     if ('aimed', game) in CACHE: return CACHE[('aimed', game)]
     cards = cards_of(c, game); rows = []
     for a, act, kind, side, pick, w, lasts, kw, cref, zone, ps in c.execute("""select card, act, on_kind, on_side, on_pick, on_with, lasts,
-            keyword_ref, card_ref, on_zone, params from flat_do where origin in ('own','has_keyword') and coalesce(on_pick,'') not in ('self','it','owner','actor')"""):
+            keyword_ref, card_ref, on_zone, params from flat_do where origin in ('own','has_keyword') and coalesce(on_pick,'') not in ('self','it','owner','actor')
+            and not (act = 'can' and on_kind = 'player' and param_event in ('shuffled','drawn','discarded','played','summoned'))"""):
+        # "you may replace an additional card": the player handles more cards, its leader card gets nothing
         if a not in cards: continue
+        if zone in ('hand', 'deck', 'deck_top', 'deck_bottom') or act in ('cost_change', 'cost_set'): CACHE.setdefault(('handrows', game), set()).add((a, act))
         if act == 'increase_effect' and kw and 'keyword is' not in (w or ''):  # "Impact deals 2 more": the cards with Impact
             w = ';'.join(x for x in (w, f'keyword is {kw}') if x); kind = kind if kind in KIND_CAT else 'any'
         named = any(p.startswith(NAMES_ONE) for p in (w or '').split(';'))
@@ -412,7 +416,9 @@ def aimed_rows(c, game):
                 and float(cut[1:]) >= 2:  # "a random card in your hand costs 7 less": a cut that big is used in full by the cards
             w = ';'.join(x for x in (w, f'cost ge {cut[1:]}') if x); narrowed = True  # costing at least that much (Bargain decks)
         if (side == 'any' and not rule and not helps_it(c, act, kw, ps)) or \
-                (kind not in KIND_CAT and not (kind in ('card', 'any', 'anything') and (narrowed or named))): continue
+                (kind not in KIND_CAT and not (kind in ('card', 'any', 'anything') and (narrowed or named)) and not
+                 (kind in ('any', 'anything') and zone in (None, 'board') and pick in ('chosen', 'random')
+                  and any(x['cat'] == 'leader' for x in cards.values()))): continue  # "restore 2 Health to anything": a unit or my General
         rows.append((a, act, kind, w, kw, rule, narrowed or named or kind == 'player', ps))  # "your General": one card, the leader
     makers = collections.defaultdict(set)
     for a, act, kind, w, kw, rule, *_ in rows: makers[(act, kind, kw, rule if rule in (True, False, 'boost') else True)].add(a)
@@ -452,6 +458,8 @@ def aimed(c, game, nodes, broad):
         if kind == 'effect':  # an effect picked by its keyword ("Trap effects"): the cards that carry the keyword
             w = ';'.join(p for p in (w or '').split(';') if p.startswith('keyword'))
         hits = [b for b in nodes if b != a and b in cards and matches(c, game, cards[b], k, w)]
+        if (a, act) in CACHE.get(('handrows', game), ()):  # a card in hand or a cost: Wraithlings summoned onto the board are never there
+            hits = [b for b in hits if not board_only(c, nodes, b)]
         n = len(makers[(act, kind, kw, rule if rule in (True, False, 'boost') else True)])
         if rule == 'boost':
             kind_, x, why = BOOST[act]
@@ -476,6 +484,16 @@ def aimed(c, game, nodes, broad):
             else: out[(a, b)].append(('targets', 0.5 / n, aim_said(act, kwn(kw), ps) + at))  # help aimed at one card of a kind helps
             # each card it can hit (Oakling's +5|+5 to a random green creature, Horsemaster's Charge, a 7 cost cut), weight shared
     return out
+
+
+def board_only(c, nodes, b):
+    """a card the deck only makes on the board (summoned tokens): never in the hand or deck"""
+    if not nodes.get(b): return False
+    key = ('board_only', b)
+    if key not in CACHE:
+        CACHE[key] = not c.execute("""select 1 from flat_do where card_ref=? and (act in ('create','copy') and coalesce(eff_zone,'hand')
+                in ('hand','deck','deck_top','deck_bottom') or (act='transform' and on_zone in ('hand','deck','everywhere')))""", (b,)).fetchone()
+    return CACHE[key]
 
 
 def kind_count(c, game, kind, w):
@@ -593,8 +611,13 @@ def boost_lines(c, game, nodes):
         q = ','.join('?' * len(concepts))
         acting = {a for (a,) in c.execute(f"""select card from flat_do where origin in ('own','uses_keyword') and coalesce(on_side,'mine') in ('mine','any')
                 and coalesce(on_pick,'') not in ('self') and card in ({marks})""", L)}  # it acts on other cards of mine, not only on itself
-        got = acting & {a for (a,) in c.execute(f"""select card from flat_do where (concept in ({q}) or act in ({q})) and card in ({marks})
-                union select card from flat_concept where concept in ({q}) and card in ({marks})""", list(concepts) * 2 + L + list(concepts) + L)}
+        rows = c.execute(f"""select card, coalesce(on_pick,'') = 'self' or coalesce(on_side,'mine') not in ('mine','any') from flat_do
+                where origin in ('own','uses_keyword') and (concept in ({q}) or act in ({q}) or (? and act in ('stat_change','grow')))
+                and card in ({marks})""", list(concepts) * 2 + [bool(set(concepts) & {'attack_gain', 'defence_gain'})] + L).fetchall()  # stat gains by rule
+        other = {a for a, own in rows if not own}
+        only_self = {a for a, own in rows if own} - other  # Juggernaut "Grow: +5/+5" makes only itself stronger
+        got = other | (acting & {a for (a,) in c.execute(f"select card from flat_concept where concept in ({q}) and card in ({marks})",
+                list(concepts) + L)}) - only_self
         if units_too:  # a unit whose own keyword it is
             got |= {a for (a,) in c.execute(f"""select ck.card from card_keyword ck join card k on k.id=ck.keyword join vocab v on v.field='keyword'
                     and v.value in (k.name, k.game || ':' || k.name) where v.tree in ({q}) and ck.card in ({marks})""", list(concepts) + L)}

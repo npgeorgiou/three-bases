@@ -35,6 +35,16 @@ families they fall into. Every family is fixed once, by a rule for every game.
 | Faie Blood Taura | Spirit of the Wild targets | units on the enemy side | Infiltrate and "on the enemy side" needs: moving the unit is what they need (none was written) |
 | Shidai Artifacts | Shidai's Bloodbound Spell | Spellsword | a stub: Spellsword is one of Murasame, Kiyomori, Tanahashi, Kotetsu |
 
+Second read, after the merge with Faeria's v39 code (same 10 decks):
+| deck | from | to | what is wrong |
+|---|---|---|---|
+| Vaath Dying Wish | Juggernaut | Lavaslasher, Vaath | "more power: it hits harder": Grow makes only Juggernaut stronger |
+| Cassyva Replace, Kaleos Trial | Aethermaster | the General | "targets can can it": an extra replace is the player's, no help to the General card |
+| Cassyva Replace | every unit, Healing Mystic | Abhorrent Unbirth | "your units die / are healed": Unbirth destroys my minions itself |
+| Lilithe Darkfire | Phantasm, Darkfire Sacrifice | Wraithling | "+1 Attack / cheaper": Wraithlings are summoned onto the board, never in the action bar |
+| Cassyva Replace, Ciphyron Build | Healing Mystic | the General, units | missing: "restore 2 Health to anything" heals my General or a minion |
+| Lilithe Darkfire | Lilithe BBS, Inkling Surge, Vorpal Reaver | Inkling Surge | missing: "if you have another Wraithling" asks for the Wraithling makers |
+
 ## Families (one rule each, every game)
 1. **pick actor kept no kind or side** (counterattack rule, Scroll Bandit, every "the attacker"): the actor of the event is
    who it is. refs.py: a target picked "actor" takes the kind and side of its ability's event actor.
@@ -62,3 +72,12 @@ families they fall into. Every family is fixed once, by a rule for every game.
 16. **Asked-for keywords in conditions**: "if that minion has Zeal" asks for Zeal cards.
 17. **MECHAZ0R build**: the keyword's record counts progress; every piece helps the others complete MECHAZ0R!.
 18. **Grasp of Agony's "enemies"** are the caster's enemies (the dying minion's allies); Spellsword is one of four swords.
+19. **A gain on itself helps no other card** (Juggernaut's Grow): power and health makers are counted row by row; a card whose
+    stat gains are all on itself is no maker for others.
+20. **What the player may do with cards is no help to its leader card** ("you may replace an additional card").
+21. **What an ability kills and then uses is its own** (Abhorrent Unbirth): a death need is dropped when the same ability makes
+    those deaths.
+22. **Cards only summoned onto the board are never in the hand**: effects on cards in hand and cost changes skip them.
+23. **Help to "anything" chosen on the board** reaches units and the leader card (games with leader cards).
+24. **A named card asked for in play** ("if you have another Wraithling"): the cards that make it feed the condition; not a
+    condition on the deck or discard ("if Krog is in your deck, draw him" fetches him).

@@ -25,7 +25,7 @@ select distinct card from flat_concept where concept in ('disable','cant_attack'
 ```sql
 select distinct card from flat_ref where happening='dies' and role!='makes' and side in ('mine','any','') and coalesce(pick,'')!='self'
 ```
-- duelyst: 36 cards: Abhorrent Unbirth, Abyssal Scar (Bloodbound Spell), Amaranthine Vow, Blood Echoes, Bloodtide Priestess, Capricious Marauder, Cassyva Soulreaper, Corpse Combustion ...
+- duelyst: 35 cards: Abyssal Scar (Bloodbound Spell), Amaranthine Vow, Blood Echoes, Bloodtide Priestess, Capricious Marauder, Cassyva Soulreaper, Corpse Combustion, Dance of Dreams ...
 - faeria: 10 cards: Bone Collector, Flying Piranha, Krog's Dinner, Mother of All Yaks, Ruunin, the Relentless, Shaytan Monstrosity, Soul Eater, Spirit Spice ...
 - inscryption: 6 cards: Corpse Eater, Corpse Maggots, Double Death, Gem Detonator, Gem Detonator (sigil), Necromancer
 - monster_train: 15 cards: A Fatal Melting, Big Sludge, Devourer of Death, Formless Child, Hallowed Halls, Memento Mori, Memories of the Melted, Molded ...
@@ -46,9 +46,8 @@ select distinct card from flat_concept where concept='sacrifice'
 
 ## Combos between those two lists, inside each game (connections.explain)
 
-1538 pairs, for example:
+1515 pairs, for example:
 
-- duelyst: Malice (token) -> Abhorrent Unbirth (state: dies)
 - duelyst: Malice (token) -> Nether Summoning (state: dies)
 - duelyst: Malice (token) -> Zurael, the Lifegiver (state: dies)
 - duelyst: Malice (token) -> Amaranthine Vow (state: dies)
@@ -56,6 +55,7 @@ select distinct card from flat_concept where concept='sacrifice'
 - duelyst: Malice (token) -> Legion (boss, Boss33) (state: dies)
 - duelyst: Malice (token) -> Legion (boss, Boss33_1) (state: dies)
 - duelyst: Malice (token) -> Legion (boss, Boss33_2) (state: dies)
+- duelyst: Malice (token) -> Legion (boss, Boss33_3) (state: dies)
 
 ## How each game does "move enemy units" (push, pull, force to move)
 
@@ -131,7 +131,7 @@ select distinct card from flat_ref where happening='given_keyword' and role!='ma
 select distinct card from flat_do where params glob '*=[a-z]*'
 ```
 - duelyst: 371 cards: Abhorrent Unbirth, Abyssal Juggernaut, Abyssal Tormentor, Accumulonimbus, Ace, Aegis Barrier, Aerial Rift, Aethermaster ...
-- faeria: 248 cards: Air Elemental, Airbot, Amai Merchant, Ancient Boar, Ancient Gargoyle, Animated Banquet, Annoying Gnat, Apex Predator ...
+- faeria: 250 cards: Air Elemental, Airbot, Amai Merchant, Ancient Boar, Ancient Gargoyle, Animated Banquet, Annoying Gnat, Apex Predator ...
 - inscryption: 84 cards: !CORRUPTED, Ancient Fir, Ant Queen, Ants, Aquasquirrel, Armored, Bell Ringer, Bell Tentacle ...
 - monster_train: 166 cards: A Fatal Melting, Adaptive Mutation, Alloy of the Ancients, Alloyed Construct, Ambient Charge, Ancient Resonance, Ancient Synergy, Apex Imp ...
 - runeterra: 698 cards: Absorb Soul, Abyssal Eye, Abyssal Guard, Acolyte's Reliquary, Acorn, the Hextechnician, Adnere's Aviarists, Advance, Advanced Intel ...
@@ -150,28 +150,28 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: duelyst 2966 pairs, e.g. Deathstrike Seal -> Unseven; faeria 1120 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 489 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 354 pairs, e.g. Little Fade -> Primordium; runeterra 12180 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 264 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- sacrifice: duelyst 1574 pairs, e.g. Abhorrent Unbirth -> Unseven; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> The Walkers; monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5709 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- self_destruct: duelyst 692 pairs, e.g. Fireblaze Obelysk -> Khanuum-ka; faeria 576 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 350 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 278 pairs, e.g. Little Fade -> Primordium; runeterra 6932 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Snowmasons
-- removal: duelyst 1015 pairs, e.g. Rasha's Curse -> Khanuum-ka; faeria 320 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> The Walkers; monster_train 93 pairs, e.g. Wicked Blaze -> Primordium; runeterra 2974 pairs, e.g. Kindred's Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
-- damage: duelyst 3312 pairs, e.g. Cindera -> Unseven; faeria 851 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 267 pairs, e.g. Good Fish -> Burrowing Trap; runeterra 13474 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 538 pairs, e.g. Divine Reptiles -> Dreadful Keepers
-- revive: inscryption 27 pairs, e.g. Necromancer -> The Walkers; runeterra 1034 pairs, e.g. Chronobreak -> Bladepierced Revenant
+- destroy: duelyst 2463 pairs, e.g. Deathstrike Seal -> Unseven; faeria 931 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 489 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 302 pairs, e.g. Little Fade -> Primordium; runeterra 11118 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 264 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- sacrifice: duelyst 1574 pairs, e.g. Abhorrent Unbirth -> Unseven; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Librarian; monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5632 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- self_destruct: duelyst 692 pairs, e.g. Windstorm Obelysk -> Khanuum-ka; faeria 576 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 350 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 252 pairs, e.g. Little Fade -> Primordium; runeterra 6575 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Shady Ghoul
+- revive: duelyst 153 pairs, e.g. Rex -> Fog; inscryption 27 pairs, e.g. Necromancer -> Librarian; runeterra 886 pairs, e.g. Chronobreak -> Bladepierced Revenant
+- removal: duelyst 512 pairs, e.g. Rasha's Curse -> Khanuum-ka; faeria 131 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Librarian; monster_train 41 pairs, e.g. Wicked Blaze -> Primordium; runeterra 2034 pairs, e.g. Kindred's Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Temple of the Mind -> Project PH03-NIX
+- ping: duelyst 512 pairs, e.g. Catalyst Quillbeast -> Frostfire Elf; faeria 385 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 135 pairs, e.g. Good Fish -> Burrowing Trap; runeterra 3703 pairs, e.g. Anivia -> Shackled Ghasts; stormbound 176 pairs, e.g. Acid Greenhorns -> Marked as Prey
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
 - summon -> on_ally_play -> random_effect (seen in faeria, runeterra)
 - summon -> on_ally_play -> countdown (seen in duelyst, runeterra)
-- summon -> tribal -> cost_reduction (seen in runeterra, stormbound)
-- summon -> card_presence_condition -> direct_damage (seen in duelyst, runeterra)
 - summon -> banish -> activated (seen in duelyst, runeterra)
+- summon -> banish -> merge_attach (seen in runeterra)
 - summon -> banish -> other_leave_trigger (seen in runeterra)
+- summon -> banish -> return_to_hand (seen in runeterra)
 
 ## A deck explained (`ask.py runeterra analyze "..."`), a Lucian/Senna deck from a deck guide
 
 ```
 14 different cards, Shadow Isles 11, Demacia 3.
 Plan:
-- Your units die: made by Crumble, Glimpse Beyond, Piercing Darkness, Ravenous Butcher, Single Combat, Spirit Leech, The Ruination. Get value when they die: Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, The Undying. Level up from it: Lucian, Senna. Use it: Lonely Chimeslime, Senna, Sentinel of Light.
+- Your units die: made by Crumble, Glimpse Beyond, Ravenous Butcher, Single Combat, Spirit Leech, The Ruination. Get value when they die: Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, The Undying. Level up from it: Lucian, Senna. Use it: Lonely Chimeslime, Senna, Sentinel of Light.
 - Any units are killed: made by Crumble, Glimpse Beyond, Piercing Darkness, Ravenous Butcher, Single Combat, Spirit Leech, The Ruination. Level up from it: Senna.
 - Lucian levels up when your units die (4+ times) or Senna, Sentinel of Light dies once.
 - Senna levels up when any units are killed (3+ times).
@@ -180,7 +180,7 @@ Supports your units (stats, protection, combat keywords): Piercing Darkness, Sen
 Card flow (draw, create, choose): Glimpse Beyond, Lonely Chimeslime, Senna, Spirit Leech.
 Puts extra units into play: Cursed Keeper, Hapless Aristocrat, The Undying.
 Units that support cards can target: 9 (Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, Lucian, Ravenous Butcher, Senna, Senna, Sentinel of Light, Spirit Leech, The Undying).
-Key cards (in most of the plan): Senna, Spirit Leech, The Ruination, Crumble, Ravenous Butcher.
+Key cards (in most of the plan): Senna, The Ruination, Spirit Leech, Crumble, Ravenous Butcher.
 Weak spots: none found.
 ```
 
@@ -188,7 +188,7 @@ Weak spots: none found.
 
 - `ask.py stormbound deck "Wisp Cloud"` (Neutral, Winter): Wisp Cloud, Orgone Leechers, Frosthexers, Spellbinder Zhevana, Icicle Burst, Midwinter Chaos, Blizzard Bombs, Moment’s Peace, Angelic Tikas, Catnip’s Charm, Fluffy Badboxers, Sweetcap Kittens
 - `ask.py stormbound deck "Doppelbocks"` (Neutral, Swarm): Doppelbocks, Faun Companions, Swarmcallers, Moonlit Aerie, Siegebreakers, Queen of Herds, Trusty Shepherds, Beards of Crowglyph, Prime Oracle Bragda, Counselor Ahmi, Noble Vigilantes, Pan Heralds
-- `ask.py runeterra deck "Kalista"` (Neutral, Shadow Isles): Kalista, Darkwater Scourge, Mask Mother, Unspeakable Horror, Camavoran Dragon, Crawling Viperwyrm, Kindred, Mistkeepers, Song of the Isles, Harrowing Return, Amalgamation Of Vile Rites, Black Spear, Eternal Dancers, The Iron Conquest
+- `ask.py runeterra deck "Kalista"` (Neutral, Shadow Isles): Kalista, Darkwater Scourge, Mask Mother, Camavoran Dragon, Crawling Viperwyrm, Kindred, Song of the Isles, Mistkeepers, Harrowing Return, The Darkin Halberd, Amalgamation Of Vile Rites, Eternal Dancers, The Iron Conquest, Atrocity
 
 ## Same effect, compare cost: deal damage to anything (unit, structure or player), cheapest first
 
