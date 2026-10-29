@@ -174,6 +174,9 @@ RULES = [
     ('random_effect', 'flat_do', "on_pick='random' or act='give_random_keyword'"),
     ('junk_cards', 'flat_do', "act in ('create','keyword_action') and on_side='enemy' and coalesce(on_zone,eff_zone,'') in ('deck','hand','deck_top')"),
     ('hand_disruption', 'flat_do', "act in ('discard','obliterate','steal','draw') and on_side='enemy' and coalesce(on_zone,'') in ('hand','deck','deck_bottom')"),
+    # more or faster of the base resource (mana, spell mana, Ember, faeria, Energy), every game alike; a second resource
+    # (Bones, gems, Echo) is not it (Kaptain, 29 Oct 2026)
+    ('base_resource_gain', 'flat_do', "(act in ('mana_gain','max_mana_change','harvest') and coalesce(on_kind,'mana') in ('mana','spell_mana','player') and coalesce(on_side,'mine') in ('mine','any')) or (act='cant' and param_event='mana_spent' and on_kind='mana' and coalesce(on_side,'mine')='mine')"),
     ('cost_increase', 'flat_do', "act='cost_change' and params like 'cost=%' and params not like 'cost=-%' and on_side='enemy'"),
     ('aura', 'flat_do', "origin in ('own','has_keyword') and act in ('stat_change','give_keyword') and on_pick='all' and lasts in ('while','permanent') and ability in (select a.id from ability a join event v on v.id=a.event where v.event='always')"),
     ('tribal', 'flat_do', "on_with like '%type is%' or on_with like '%type in%' or on_with like '%name_has%' or to_with like '%of:type i%'"),
@@ -186,6 +189,14 @@ RULES = [
     ('adjacency', 'flat_do', "coalesce(on_with,'') || coalesce(to_with,'') like '%position % bordering%' or coalesce(on_with,'') || coalesce(to_with,'') like '%position % surrounding%' or coalesce(on_with,'') || coalesce(to_with,'') like '%position % sides%'"),
     ('adjacency', 'flat_if', "coalesce(of_with,'') like '%position % bordering%' or coalesce(of_with,'') like '%position % surrounding%' or coalesce(of_with,'') like '%position % sides%'"),
     ('lanes', 'flat_do', "coalesce(on_with,'') || coalesce(to_with,'') like '%position % ahead%' or coalesce(on_with,'') || coalesce(to_with,'') like '%position % first_in_front%' or coalesce(on_with,'') || coalesce(to_with,'') like '%position % same_column%' or coalesce(on_with,'') || coalesce(to_with,'') like '%position % behind%'"),
+    # one lane against the other ("the creature opposing it", "on this floor"), formations (circuits), the lanes beside the
+    # opposing one (Bifurcated Strike): every game alike (Inscryption, 29 Oct 2026)
+    ('lanes', 'flat_do', "coalesce(on_with,'') || coalesce(to_with,'') like '%position % same_lane%'"),
+    ('lanes', 'flat_if', "coalesce(of_with,'') || coalesce(ev_obj_with,'') like '%position % same_lane%'"),
+    ('lanes', 'flat_when', "obj_with like '%position % same_lane%'"),
+    ('link_formation', 'flat_do', "coalesce(on_with,'') || coalesce(to_with,'') like '%position % in_circuit%'"),
+    ('link_formation', 'flat_if', "coalesce(of_with,'') || coalesce(ev_obj_with,'') like '%position % in_circuit%'"),
+    ('cross_lane', 'flat_do', "act in ('strike','damage','kill') and coalesce(on_with,'') || coalesce(to_with,'') like '%sides of position enemy%'"),
     ('rows', 'flat_do', "coalesce(on_with,'') || coalesce(to_with,'') like '%position % same_row%' or coalesce(on_with,'') || coalesce(to_with,'') like '%position % furthest_row%'"),
     ('variable_stats', 'flat_do', "act='stat_change' and on_pick='self' and params glob '*=[a-z]*'"),
     # damage, then the same amount to my side (Runeterra Drain: heal the Nexus; Stormbound drain: strength to the drainer)

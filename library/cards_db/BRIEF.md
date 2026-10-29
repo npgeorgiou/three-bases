@@ -428,6 +428,11 @@ keyword entries (category keyword: a sigil, a trait or a variable Power stat). M
   itself). "Adjacent" / "to the left and right" = position sides (on its own side unless the text says opposing: "each opposing
   space to the left and right of the space across" = side enemy, position sides of the opposing space). "An empty space" =
   `{"kind": "position", "with": [{"attr": "state", "op": "is", "val": "empty"}]}`; "in its place" = position same_space of it.
+  Follow "The board" above for every other board word: "moves into the space opposing" = moves_onto (the mover as object,
+  same_space of the opposing space); "moves towards" a unit = to the sides of it. A strike aimed at opposing spaces
+  ("strike each opposing space to the left and right", "choose which opposing space") also strikes the enemy player, link
+  or: an empty struck space hits the opponent (wiki Card Battle). "Within a circuit" = position in_circuit of the conduit
+  card, and a COND of two Conduit Cards of mine (a circuit is two conduit cards, wiki Circuits).
 - The opponent (the scale) = kind player, side enemy. "Strike an opponent directly", "deals damage directly" = strikes_nexus,
   actor self. Damage to the scale = damage on the player.
 - Perish / die = dies. "When a card bearing this sigil is struck" = damaged, object self (state combat). "Is played" = played,

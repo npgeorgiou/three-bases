@@ -216,12 +216,24 @@ def analyze(c, game, text):
         cards = set()
         for k in keys: cards |= con.get(k, set())
         # the card must have an effect of that kind on that side (a landmark that can't block itself is no control)
-        cards = {x for x in cards if c.execute(f"""select 1 from flat_do where card=? and coalesce(on_side,'') in ({on_side}) {extra_sql} and
-                 (concept in ({','.join('?' * len(keys))}) or act in ({','.join('?' * len(acts))}))""", (x, *keys, *acts)).fetchone()}
+        rows = lambda x: c.execute(f"""select on_with from flat_do where card=? and coalesce(on_side,'') in ({on_side}) {extra_sql} and
+                 (concept in ({','.join('?' * len(keys))}) or act in ({','.join('?' * len(acts))}))""", (x, *keys, *acts)).fetchall()
+        # a row that acts only on cards with a keyword no card of the deck has or is given acts on nothing here (Act III's
+        # Gemified bonus of Emerald and Ruby Mox in an Act II deck)
+        reachable = lambda w: all(int(k) in deck_kws for k in re.findall(r'(?<![a-z:])keyword is (\d+)', w or ''))
+        cards = {x for x in cards if any(reachable(w) for (w,) in rows(x))}
         if cards: out.append(f'{title}: {names(c, cards)}.')
         return cards
+    deck_kws = {k for (k,) in c.execute(f'select keyword from card_keyword where card in ({marks})', deck)} | \
+               {k for (k,) in c.execute(f"select keyword_ref from flat_do where act in ('give_keyword','keyword_action') and keyword_ref is not null and card in ({marks})", deck)}
+    # a unit striking enemy units by its own text (Bifurcated Strike, Sniper) controls them too: the strike's "on" is the striker,
+    # its "to" the enemy, so it is added here (Inscryption Double Gunner, Sniper Bot)
+    con['_strikes'] = {x for (x,) in c.execute(f"""select distinct card from flat_do where act='strike' and to_side='enemy' and to_kind in ('unit','unit_or_structure')
+                       and origin in ('own','has_keyword') and card in ({marks})""", deck)}
     ctrl = role('Controls enemy units (damage, remove, stop, weaken)', CONTROL, "'enemy','any'",
                 ('kill', 'obliterate', 'capture', 'stat_set', 'stun', 'silence', 'steal', 'transform', 'return_to_hand', 'damage', 'move', 'strike', 'challenge'))
+    if con['_strikes'] - ctrl:
+        ctrl |= con['_strikes']; out[-1 if out[-1].startswith('Controls enemy units') else len(out):] = [f'Controls enemy units (damage, remove, stop, weaken): {names(c, ctrl)}.']
     sup = role('Supports your units (stats, protection, combat keywords)', SUPPORT, "'mine'",
                ('stat_change', 'give_keyword', 'negate_damage', 'heal', 'grow', 'first_strike', 'double_strike'))
     flow = role('Card flow (draw, create, choose)', FLOW, "'mine','any',''", ('draw', 'create', 'choose_card', 'copy'))
@@ -229,6 +241,9 @@ def analyze(c, game, text):
     # economy: more mana, or my cards made cheaper (Faeria Bargain: Bold Bargainer, Ogre Dance, Red Devil)
     eco = role('Pays for big cards (more mana, cheaper cards)', ('resource_gain', 'cost_reduction', 'cost_set'), "'mine','any',''",
                ('mana_gain', 'max_mana_change', 'cost_change', 'cost_set'), "and coalesce(on_pick,'')!='it'")  # not the card it just made
+    # more or faster of the base resource (mana, Energy, Ember, faeria): its own line, so a ramp deck is named (Kaptain, 29 Oct 2026)
+    ramp = {x for (x,) in c.execute(f"select distinct card from flat_concept where concept='base_resource_gain' and card in ({marks})", deck)}
+    if ramp: out.append(f'More or faster base resource (ramp): {names(c, ramp)}.')
     big = [i for i in deck if (c.execute('select cost from card where id=?', (i,)).fetchone() or [None])[0] or 0]
     if eco and big:
         top = sorted(big, key=lambda i: -c.execute('select cost from card where id=?', (i,)).fetchone()[0])[:5]

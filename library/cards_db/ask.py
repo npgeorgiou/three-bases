@@ -6,6 +6,8 @@ question runs across games.
   ask.py <games> concept <concept>                cards with a concept-tree concept (flat_concept), e.g. removal, revive
   ask.py <games> both <A> <B>                     cards that have both A and B (each a concept or a happening the card makes)
   ask.py <games> compare <concept> [...]          per game: how many cards, and examples (how each game does it)
+  ask.py <games> factions <concept>               per game and faction: share of its cards with the concept, highest first
+                                                  (which faction is about it: base_resource_gain, sacrifice, movement ...)
   ask.py <games> combo <card A> <card B>          every way A sets off B, most direct first (both cards of one game)
   ask.py <games> partners <card>                  cards A sets off and cards that set off A, in the chosen games
   ask.py <games> together <concept>               mechanics found on the same cards as this one (what it is built with)
@@ -79,6 +81,15 @@ def main():
     elif q == 'compare':
         for x in args:
             print(f'## {x}'); names(games, 'select card from flat_concept where concept=?', (x,), limit=8)
+    elif q == 'factions':
+        got = {i for (i,) in c.execute('select card from flat_concept where concept=?', (args[0],))}
+        for g in games:
+            per = {}
+            for i, regs in c.execute("select id, regions from card where game=? and is_keyword=0 and is_stub=0 and category not in ('game_rule','ability')", (g,)):
+                for r in (regs or '').split(';') or ['']:
+                    per.setdefault(r or '(none)', [0, 0]); per[r or '(none)'][1] += 1; per[r or '(none)'][0] += i in got
+            rows = sorted(((n / t, n, t, r) for r, (n, t) in per.items() if n), reverse=True)
+            if rows: print(f'{g}: ' + '; '.join(f'{r} {n} of {t} ({x:.0%})' for x, n, t, r in rows))
     elif q == 'combo':
         rs = sorted(set(connections.reasons(c, args[0], args[1])))
         print('\n'.join(f'{why}' for _, why in rs) or 'no connection')

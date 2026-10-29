@@ -372,6 +372,19 @@ def givers_of(c, game, k, nodes):
             and origin='own' and coalesce(on_side,'mine') in ('mine','any') and card in ({marks})""", [k] + list(nodes))}
 
 
+PLACE_WORDS = {'sides': 'next to it', 'bordering': 'next to it', 'surrounding': 'around it', 'same_lane': 'in its lane',
+               'in_circuit': 'in its circuit', 'same_space': 'on its space', 'same_row': 'in its row', 'same_column': 'in its column',
+               'in_front': 'in front of it', 'behind': 'behind it', 'ahead': 'ahead of it', 'straight_line': 'in a line from it'}
+
+
+def where(w):
+    """the place a target filter asks for, measured from the card itself, in plain words (' when next to it')"""
+    for p in (w or '').split(';'):
+        b = p.split(' ')
+        if b[:2] == ['position', 'is'] and len(b) == 3 and b[2] in PLACE_WORDS: return f' (when {PLACE_WORDS[b[2]]})'
+    return ''
+
+
 def aimed(c, game, nodes, broad):
     """rules and targets lines from the nodes to the nodes (a filter is checked against each card); broad=False drops lines
     whose target is every card of its kind, which say nothing about which cards belong together"""
@@ -401,9 +414,10 @@ def aimed(c, game, nodes, broad):
             what = {('can', 'summoned'): 'lets it be summoned in more places', ('can', 'played'): 'lets it be played in more places',
                     ('can', 'moves'): 'lets it move more', ('cant', 'moves'): 'stops it moving', ('cant', 'attacks'): 'stops it attacking',
                     ('cant', 'targeted'): 'protects it from targeting'}.get((act, pev), what + f' ({pev})')
+        at = where(w)  # who benefits from a place: "when next to it", "in its circuit" (positional games; Inscryption Leader)
         for b in hits:
-            if rule: out[(a, b)].append(('boosts' if isinstance(rule, str) else 'rules', 1.0 / n, what))  # stats given make it stronger; the rest change how it works
-            else: out[(a, b)].append(('targets', 0.5 / n, aim_said(act, kwn(kw), ps)))
+            if rule: out[(a, b)].append(('boosts' if isinstance(rule, str) else 'rules', 1.0 / n, what + at))  # stats given make it stronger; the rest change how it works
+            else: out[(a, b)].append(('targets', 0.5 / n, aim_said(act, kwn(kw), ps) + at))
     return out
 
 

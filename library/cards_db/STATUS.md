@@ -1,11 +1,9 @@
-# Reading status: duelyst
+# Reading status: inscryption
 
-Made by `status.py duelyst` from the files. done 5, problems 0, partial 0, todo 0.
+Made by `status.py inscryption` from the files. done 3, problems 0, partial 0, todo 0.
 
 | batch | cards | read | state |
 |---|---|---|---|
-| batch_001 | 349 | 349 | done |
-| batch_002 | 262 | 262 | done |
-| batch_003 | 335 | 335 | done |
-| keywords | 44 | 44 | done |
-| second_001 | 95 | 95 | done |
+| batch_001 | 73 | 73 | done |
+| keywords | 108 | 108 | done |
+| second_001 | 18 | 18 | done |

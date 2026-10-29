@@ -72,6 +72,8 @@ BEHAVIOUR = {
     'Pelts (Golden)': 'When a card is played, Pelt Lice from hand/deck are played in adjacent slots for free.',
 }
 SKIP_PAGES = {'Bottled Cards'}
+FLEDGLING_TO = {'Tadpole': 'Bullfrog'}
+CONDUIT_SIGILS = {'Attack Conduit', 'Energy Conduit (sigil)', 'Gem Spawn Conduit', 'Healing Conduit', 'Null Conduit (sigil)', 'Spawn Conduit'}
 SKIP_TABS = {('Deathcard', 'Deathcard portraits')}
 FACTIONS = ['Beast', 'Undead', 'Technology', 'Magick']
 TRIBES = {'Avian', 'Canine', 'Hooved', 'Insect', 'Reptile', 'Squirrel'}
@@ -195,6 +197,8 @@ def main():
             # traits: Terrain is the category, Mox Card a type; a trait the library defines as a keyword joins the Keywords field
             traits = [t.strip() for t in re.split(r',|<br\s*/?>', re.sub(r'\[\[(?:[^\]|]+\|)?([^\]]+)\]\]', r'\1', f.get('traits') or '')) if t.strip()]
             types = ['Mox Card'] if 'Mox Card' in traits else []
+            # a card bearing a sigil that can complete a circuit (wiki Category:Conduit Sigils, rev 7802) is a Conduit card
+            if any(a in CONDUIT_SIGILS for a, b in links_in(f.get('sigils'))): types.append('Conduit Card')
             terrain = 'Terrain' in traits
             kw_traits = [canon(t) for t in traits if canon(t)]
             traits = [t for t in traits if t not in ('Terrain', 'Mox Card') and not canon(t)]
@@ -265,6 +269,10 @@ def main():
                 for d in uniq:
                     if d is not e and {'Transformer', 'Swapper'} & set(d['_sig']):
                         links.append({'src': e['id'], 'rel': 'transforms_into', 'dst': d['id'], 'evidence': 'wiki card page: other form'})
+    # a grown form on another page (wiki Fledgling, rev 12592: "The Tadpole ... transforms into a Bullfrog")
+    by = {e['name']: e for e in cards}
+    for a, b in FLEDGLING_TO.items():
+        links.append({'src': by[a]['id'], 'rel': 'transforms_into', 'dst': by[b]['id'], 'evidence': 'wiki Fledgling: grown form'})
     with open(OUT, 'w') as f:
         for e in out:
             f.write(json.dumps({k: v for k, v in e.items() if not k.startswith('_')}, ensure_ascii=False) + '\n')

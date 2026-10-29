@@ -24,6 +24,31 @@ One file per game: the game, its factions, the source summary, the mechanics (pa
   (Dam into Bait Bucket, Bee into Bat, Skeleton into Revenant, Red Hart into Elk); Squirrel, Rabbit, Pelts, Geck, Urayuli and
   Child 13 are not in the library.
 
+## The game's rules (from sources)
+*Read 29 Oct 2026: https://en.wikipedia.org/wiki/Inscryption, and the Inscryption fandom wiki pages Card Battle (rev 12984),
+Blood (13205), Bones (11499), Energy (11039), Mox (10838), Cost (10841), Health (3914), Power (11760), Circuits (9920),
+Side Deck (12407), Starter Deck (11826), Special Card Behaviours (12544).*
+- Board: a 3x4 grid, a 3x5 grid in Act III; the player plays cards into the bottom row, the opponent plays cards ahead of
+  time into the top row (Wikipedia). The opponent plays into its back lanes; cards in its front lanes attack (Card Battle).
+  Act III has a fifth lane (Circuits). Cards are placed on the player's side of the board (Card Battle).
+- Turns: draw one card from the main deck or the side deck, place cards, ring the bell; at the end of the turn all cards on
+  the player's side attack, the leftmost first; then the opponent's turn (Card Battle). Side decks: Squirrels in Act I,
+  Empty Vessels in Act III, Skeletons and Mox cards in the Finale; Act II has none (Side Deck, Card Battle).
+- Attacks: each card attacks the opponent's card in the same column, dealing its attack to that card's health; an
+  unopposed card attacks the opponent directly (Wikipedia). Health drops by the attacker's Power; at 0 the creature dies
+  (Health).
+- Winning: tip the scale 5 points (teeth) to one side; damage is done by cards striking empty board spaces (Wikipedia,
+  Card Battle).
+- Costs: four types, Bones, Blood, Energy and Mox (Cost). Blood: almost any card can be sacrificed for 1 Blood (Worthy
+  Sacrifice: 3); sacrificing kills the card and gives 1 Bone (Blood). Bones: whenever a card on the player's side perishes
+  for any reason the player gets 1 Bone (Bone King: 4); a Bones card takes its cost from the player's total (Bones).
+  Energy: replenished at the start of the turn and the maximum grows by 1 up to 6 (Energy). Mox: a Mox card of the right
+  colour must be on the player's side to play a Mox creature (Mox).
+- Circuits (Acts II and III): two conduit cards on the same side make a circuit; the cards between them are powered; if
+  either conduit is destroyed the circuit is broken (Circuits).
+Not written as game rules (they say nothing about which cards belong together): Energy refilling each turn, drawing from the
+side deck, placing on any empty space of one's own row.
+
 ## Sources and notes
 
 Sources:
