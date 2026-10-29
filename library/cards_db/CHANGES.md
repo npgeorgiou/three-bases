@@ -155,3 +155,8 @@ Each change: date, what changed, the card that caused it, and which records were
 - 29 Oct 2026, v36 (Inscryption networks, 2): network.actor_help_lines (effects on the card a sacrifice pays for); refs: an
   ability that spends a resource needs it; a cost rule skips cost 0; Worthy Sacrifice record (Claude): the card it is
   sacrificed for costs 2 less; cases ni06-ni08.
+- 29 Oct 2026, v37 (Duelyst, 1): cards from open-duelyst 2843f24 (supplement_duelyst.py, tools/convert/conv_duelyst.py;
+  the library's copy lacked the basic cards and tokens); keyword rows for 42 Duelyst keywords (concepts Claude's); terrain
+  damage_space, heal_space, summon_space, growth_space, bonus_mana_space; positions corner, area_2x2, area_3x3,
+  starting_side, diagonal, center_column; concept cant_move (Duelyst Wall) with flat.py rules cant_move and immobilize
+  (cant moves on an enemy); BRIEF "Game words: Duelyst"; read/duelyst/game_rules.jsonl (fight, counterattack).

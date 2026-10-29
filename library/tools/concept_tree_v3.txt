@@ -119,6 +119,7 @@ sacrifice | Sacrifice my own units | cost | drawback,death | The owner destroys 
 discard | Discard my own cards | effect | drawback,card_flow | The owner discards cards from their own hand, as a cost or to fuel effects. | Making the opponent discard is hand_disruption.
 exhaust | One use (exhausted for the battle) | effect | drawback,card_flow | A card is removed for the rest of the battle after use, or other cards of mine are. | Removing a card from the game for good is banish.
 cant_attack | Can't attack (my own unit) | combat | debuff,drawback | The unit itself can't attack: defender, wall. | A lock put on an enemy is attack_lock.
+cant_move | Can't move (my own unit) | combat | drawback | The unit itself can't move from its space: a wall, a structure that stays where it was summoned. (Added 29 Oct 2026 for Duelyst Wall; Claude's wording.) | An enemy that can't move is immobilize; a unit that can't attack is cant_attack.
 donate | Give my units or cards to the opponent | effect | drawback | The owner gives their own units or cards to the opponent. | Putting harmful units on their side is board_clog.
 
 ## Neutral game rules

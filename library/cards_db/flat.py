@@ -161,6 +161,8 @@ RULES = [
     ('evasion', 'flat_do', "act='cant' and param_event='blocks' and on_side='enemy'"),
     ('cant_block', 'flat_do', "act='cant' and param_event='blocks' and on_pick='self'"),
     ('cant_attack', 'flat_do', "act='cant' and param_event='attacks'"),
+    ('cant_move', 'flat_do', "act='cant' and param_event='moves' and on_pick='self'"),
+    ('immobilize', 'flat_do', "act='cant' and param_event='moves' and on_side='enemy'"),
     ('bounce_enemy', 'flat_do', "act='return_to_hand' and on_side='enemy'"),
     ('polymorph', 'flat_do', "act='transform' and on_side='enemy'"),
     ('information', 'flat_do', "act in ('reveal','look')"),

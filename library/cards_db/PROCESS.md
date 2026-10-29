@@ -130,7 +130,8 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
      Abrakam's github.com/abrakam/Faeria_Cards 12b7207; its README defines the keywords). Named sources: Lorcana (npm lorcana-oracle), Star Wars: Unlimited (swucardex-data
      a86faed), Elder Scrolls: Legends (TESLegendsTracker c541e82), Slay the Spire (wiki Module:Cards/data), Slay the Spire 2
      (Kaptain's lists, 12 Oct 2026), Gwent (gwent.one v14.8), Magic (MTGJSON AtomicCards, Scryfall tokens), Shadowverse
-     (Portal API), 40k and Age of Sigmar (BSData).
+     (Portal API), 40k and Age of Sigmar (BSData). Duelyst: `library/tools/convert/duelyst_cards.psv` (1116 cards, conv_duelyst.py over
+     github.com/open-duelyst/duelyst 2843f24; the repo's tutorial and tips are the rules source).
    - `library/tools/games/<game>.md`: research, sources, and the keyword terms with the page each comes from. Check each
      term's source is this game and drop terms marked "assumed" (rule 1).
    - `library/cards_db/supplement/<game>*`: games already imported here.

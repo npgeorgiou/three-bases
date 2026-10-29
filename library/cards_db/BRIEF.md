@@ -425,3 +425,53 @@ keyword entries (category keyword: a sigil, a trait or a variable Power stat). M
   DeathcardCreationNonOption, JeresyDevil, Cat, Child 13, Limited Lives, Chime Keeper, Giant without words): no record. A trait
   with words ("Giant (Increases its Power by 1 every turn ...)", the Obol halves' "gives the player one Ancient Obol") is read.
 - Items (category item), events, modifiers (Boons) are read like cards: a Boon's "at the start of every battle" = game_start.
+
+## Game words: Duelyst
+Duelyst has no Keywords field: describe everything the text says. Its keyword entries (Provoke, Rush, Ranged, Flying, Frenzy,
+Celerity, Blast, Backstab, Zeal, Infiltrate, Grow, Rebirth, Forcefield, Airdrop, Opening Gambit, Dying Wish, Deathwatch, Blood
+Surge, Bond, Intensify, Sentinel, Build, Trial, Destiny, the tiles ...) define the words; cards use the values below. Mapping
+decided by Claude from the game's own texts (open-duelyst: keyword definitions, tutorial, tips; 29 Oct 2026).
+- Players. Each player's General is a unit on the board whose Health is the player's life: the General = kind player. "Your
+  General" = `{"kind": "player", "side": "mine"}`, "the enemy General" = side enemy, "a General", "Generals" = kind player.
+  A minion = kind unit. An "enemy", "a friendly unit", "anything" (a minion or a General) = kind any; "everything" = kind
+  any, pick all (no side). "Your General gains +1 Attack" = stat_change power on the player. "Teleport your General" = move
+  on the player. Events of the General: "whenever your General attacks" = attacks, actor `{"kind": "player", "side": "mine"}`;
+  "whenever your General takes damage" = damaged, object that player; "whenever your General destroys an enemy" = killed,
+  actor that player.
+- Cards. Minion = unit, spell = spell, artifact = item. Attack = power, Health = health ("+2/+1" = power 2, health 1).
+  The action bar = the hand ("put X into your action bar" = create, zone hand). Tribes (Golem, Mech, Arcanyst, Vespyr,
+  Dervish, Structure, Battle Pet) = filter type. "Your Bloodbound Spell" = a spell of type Bloodbound Spell, side mine.
+- Mana. "Gain 1 mana" = mana_gain; "gain a mana crystal" (more mana every turn) = max_mana_change; "costs 1 less" =
+  cost_change cost -1; "costs 0" = cost_set.
+- The board is a grid of spaces. A space = kind position. "Nearby X" / "around X" = position surrounding of X ("nearby" alone =
+  of this card); "in front of" = in_front, "behind" = behind (of the unit named); "in its row" / "column" = same_row /
+  same_column; "anywhere" = kind position with no filter; "a random space" = pick random; "in each corner" = position corner;
+  "a 2x2 area" = area_2x2; "a 3x3 area" = area_3x3; "your starting side of the battlefield" = starting_side of the player;
+  "diagonal from" = diagonal; "the center column" = center_column. "Empty", "unoccupied" = state empty.
+- Tiles. "Turn a space into Shadow Creep" = set_terrain on that position, keyword Shadow Creep, "to" `{"kind": "position",
+  "with": [{"attr": "terrain", "op": "is", "val": "damage_space"}]}`; Hallowed Ground = heal_space, Exhuming Sand =
+  summon_space, Primal Flourish = growth_space, a mana spring = bonus_mana_space (keyword Mana Spring). "Friendly Shadow
+  Creep", "your Shadow Creep" = kind position, side mine, with that terrain; "for each friendly Shadow Creep" = count of it.
+- Triggers. "Opening Gambit:" = played, object self. "Dying Wish:" = dies, object self. "Deathwatch:" = dies, object
+  `{"kind": "unit"}` (any minion). "Blood Surge:" and a General's "Bloodbound Spell: X" = played, object `{"kind": "spell",
+  "side": "mine", "with": [{"attr": "type", "op": "is", "ref": "Bloodbound Spell"}]}`. "Grow: +1/+1" = turn_start, actor
+  `{"kind": "player", "side": "mine"}`, stat_change power 1, health 1 on self, lasts permanent. "Bond:", "Zeal:" and
+  "Infiltrate:" are conditions: COND `{"test": "keyword_condition", "ref": "Bond"}` (Zeal, Infiltrate) on the ability the
+  text gives (Bond with event played, object self; "Zeal: Gains +1 Attack" = always, stat_change lasts while). "Sentinel: X"
+  = the event X, then transform on self (the true form is a link of the card). "Intensify: X" = played, object self; each
+  amount that grows = `{"x": "product", "items": [<N>, {"x": "event_count", "event": {"event": "played", "object": {"kind":
+  "card", "side": "mine", "with": [{"attr": "card", "op": "is", "ref": "<this card>"}]}}, "span": "this_game"}]}`.
+  "Trial: X" = `{"when": {"event": "always"}, "if": [X as conds, span this_game], "do": [{"act": "can", "on": {"pick":
+  "self"}, "params": {"event": "played"}, "lasts": "permanent"}]}`. "Destiny: X" = X as its own ability (its event as
+  written), lasts permanent. "When this minion is built" (Build) = transformed, object self. "At the start / end of your
+  turn" = turn_start / turn_end, actor `{"kind": "player", "side": "mine"}`. "Whenever you replace a card" = shuffled,
+  actor that player, object a card of yours from zone hand.
+- Acts. "Stun X" = give_keyword Stunned, lasts next_own_turn. "Dispel X" = silence (a dispelled space: silence on the
+  position). "Teleport X to Y" = move, "to" Y; "switch positions" = swap; "push" / "pull" an enemy = move on it. "Return to
+  its action bar" = return_to_hand. "Equip an artifact" = attach (on the player, card the artifact). "Progresses MECHAZ0R
+  build by +20%" = keyword_action MECHAZ0R, params amount 20. "Destroy" = kill. "Transform into X" = transform, card X.
+  "Shuffle into your deck" = shuffle_into_deck; "replace" a card = shuffle_into_deck, then draw (link then).
+- A keyword the card has itself, written alone ("Provoke", "Rush", "Backstab: (2).", "Build: (1).", "Forcefield") = one
+  ability `{"when": {"event": "always"}, "do": [{"act": "give_keyword", "keyword": "<K>", "on": {"pick": "self"}, "params":
+  {"amount": N}, "lasts": "permanent"}]}` (amount only for a number: Backstab 2, Build 1). "Give a minion Celerity this turn"
+  = give_keyword, lasts this_round ("this turn" = this_round).
