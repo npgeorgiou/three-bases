@@ -45,6 +45,7 @@ def build(c):
     kwname = {i: (f'{g}:{n}' if ('keyword', f'{g}:{n}') in tree else n) for i, g, n in c.execute('select id, game, name from card where is_keyword=1')}
 
     def ins(card, origin, via, ab, role, ev, kind, side, pick, kw=None, state=None, w=None, ref=None, ak=None, aw=None):
+        if role == 'makes' and pick == 'self' and not side: side = 'mine'  # what a card does to itself happens on my side
         if ev == 'strikes_nexus' and kind == 'player': kind, side = 'unit', 'mine'  # one way: the unit that strikes, never the player struck
         if role == 'makes' and ((kind == 'player' and ev in UNIT_ONLY) or (kind not in OPEN_KINDS and ev in PLAYER_ONLY)): return
         con = (tree.get(('keyword', kwname.get(kw, ''))) if kw else None) or (tree.get(('state', state)) if state else None) \

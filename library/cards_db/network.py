@@ -33,7 +33,7 @@ def cards_of(c, game):
     """per card: what filters can test before play (category, types, keywords, acts, numbers)"""
     if ('cards', game) in CACHE: return CACHE[('cards', game)]
     d = {}
-    for i, n, cat, regions, pw, hp, stats, rar in c.execute("""select id, name, category, regions, power, health, stats, rarity from card
+    for i, n, cat, regions, pw, hp, stats, rar, cost in c.execute("""select id, name, category, regions, power, health, stats, rarity, cost from card
                                                               where game=? and is_keyword=0 and is_stub=0 and category!='tribe'""", (game,)):  # a type's own entry is no card
         try: st = json.loads(stats) if stats else {}
         except ValueError: st = {}
@@ -44,7 +44,7 @@ def cards_of(c, game):
         strength = str(st.get('strength', '')).split('/')[0]
         d[i] = {'id': i, 'name': n, 'cat': cat, 'regions': set((regions or '').split(';')) - {''}, 'rarity': rar,
                 'power': pw, 'health': hp, 'strength': float(strength) if strength.replace('.', '').isdigit() else None,
-                'types': set(), 'kws': set(), 'acts': set()}
+                'types': set(), 'kws': set(), 'acts': set(), 'cost': cost}  # cost: "a card that costs 7 or more" (was never read)
     for i, t in c.execute('select card, type from card_type'):
         if i in d: d[i]['types'].add(t)
     for i, k in c.execute('select card, keyword from card_keyword'):
@@ -420,15 +420,15 @@ def played_lines(c, game, nodes, broad):
     "N cards with different names" is helped by cards that create cards (more different cards to play)."""
     cards = cards_of(c, game); out = collections.defaultdict(list); marks = ','.join('?' * len(nodes)); lvl = level_abilities(c)
     for t, ab, h, kind, side, pick, w in c.execute(f"""select card, ability, happening, kind, side, pick, obj_with from flat_ref where role!='makes'
-            and origin='own' and happening in ('played','summoned') and coalesce(pick,'')!='self' and side in ('mine','any','')
+            and origin='own' and happening in ('played','summoned','drawn') and coalesce(pick,'')!='self' and side in ('mine','any','')
             and card in ({marks})""", list(nodes)).fetchall():
-        k = kind or ('card' if h == 'played' else 'unit')
+        k = kind or ('card' if h in ('played', 'drawn') else 'unit')
         narrowed = any(p and p.split(' ')[0] not in PLAY_STATE and p.split(' ')[1:2] != ['not'] for p in (w or '').split(';'))
         if not narrowed and (k in ('card', 'any', 'anything', None) or (k == 'unit' and h == 'summoned') or not broad): continue
         n = kind_count(c, game, 'any' if k == 'card' else k, w)
         for a in nodes:
             if a != t and a in cards and matches(c, game, cards[a], 'any' if k == 'card' else k, w):
-                why = f'is a card it counts when {"played" if h == "played" else "summoned"}'
+                why = f'is a card it counts when {h}'  # "when you draw an event": the deck's events are what it waits to draw
                 out[(a, t)].append(('levels', 2.0 / n, why + ' (levels it up)') if ab in lvl else ('waits', 1.0 / n, why))
     for t, ab in c.execute(f"""select card, ability from flat_if where test in ('amount_distinct','distinct') and event='played'
             and card in ({marks})""", list(nodes)).fetchall():
