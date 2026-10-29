@@ -1,7 +1,7 @@
 # Case tests: inscryption
 
 Made by `cases/run.py inscryption`.
-**58 of 59 cases pass.**
+**72 of 72 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -13,7 +13,7 @@ Made by `cases/run.py inscryption`.
 | mx03 | a plain draw is one form: zone deck_top, no pick top | 0 | 0 | 100% | 9 | yes |
 | mx10 | damage to the enemy player is Nexus damage (kinds kept, v30) | 0 | 0 | 100% | 223 | yes |
 | mx11 | moving or pushing units makes units move (positions change, v30) | 0 | 0 | 100% | 26 | yes |
-| mx12 | a unit that moves is the event's object, never its actor (N16, Sentry, v36) | 4 | 0 | 0% | 0 | NO |
+| mx12 | a unit that moves (onto a space) is the event's object, never its actor (N16, Sentry, v36, v38) | 4 | 4 | 100% | 0 | yes |
 | mi01 | Airborne: strikes the opponent directly | 20 | 20 | 100% | 14 | yes |
 | mi02 | Touch of Death: a creature it damages perishes | 4 | 4 | 100% | 15 | yes |
 | mi03 | Bone Digger: gives Bones | 3 | 3 | 100% | 10 | yes |
@@ -37,10 +37,13 @@ Made by `cases/run.py inscryption`.
 | mx13 | can't be targeted by spells: the cant is on the spells, the protected unit is "to" (N19, v37) | 0 | 0 | 100% | 0 | yes |
 | mx14 | a dead unit put into play is revive, never summon from the discard (N20, v37) | 0 | 0 | 100% | 1 | yes |
 | mx15 | a trigger that holds only "this turn" is an ability given to the player for this turn (v37, Duelyst) | 0 | 0 | 100% | 0 | yes |
-
-Missed cards (first 8 per failing case):
-
-- mx12 a unit that moves is the event's object, never its actor (N16, Sentry, v36): Good Fish, Sentry Drone, Sentry Spore, Shutterbug
+| mi21 | strikes at opposing spaces also hit the opponent (an empty space is struck: wiki Card Battle) | 4 | 4 | 100% | 30 | yes |
+| mx13 | an effect on the creature opposing it is about lanes (concept lanes from same_lane, v38) | 2 | 2 | 100% | 42 | yes |
+| mx14 | a strike on the spaces beside the opposing one reaches other lanes (cross_lane, v38) | 2 | 2 | 100% | 4 | yes |
+| mx15 | within a circuit is a formation (link_formation, v38) | 1 | 1 | 100% | 9 | yes |
+| mx16 | more or faster base resource (base_resource_gain, v38) | 2 | 2 | 100% | 2 | yes |
+| mi22 | Burrower: moves to an empty space of its own side when it would be struck | 5 | 5 | 100% | 0 | yes |
+| mi23 | rotate one space clockwise: every unit moves to a bordering space | 1 | 1 | 100% | 1 | yes |
 
 ## Combos (the enabler must set off the payoff)
 
@@ -65,6 +68,7 @@ Missed cards (first 8 per failing case):
 | ri05 | Beast | signature (inscryption.md: Warren puts a Rabbit in hand) | creates cards in hand | 4 | 8 | yes |
 | ri06 | Beast | signature (inscryption.md: Hawk hits past blockers) | strikes the opponent directly | 8 | 23 | yes |
 | ri07 | Magick | signature (inscryption.md: Blue Mage draws per Mox) | draws cards | 1 | 4 | yes |
+| ri08 | Technology | signature (wiki Energy: Battery Bearer raises Energy) | more or faster base resource | 2 | 2 | yes |
 
 ## Guide decks (the explanation must say what the guide says)
 
@@ -91,3 +95,8 @@ Missed cards (first 8 per failing case):
 | ni10 | Act II Ouroboros and Mantis God (koi) | Ouroboros | Mantis God | none Blood costs | waits: your units are sacrificed (pays its cost) (by the game's rule: units can  | yes |
 | ni11 | Kaycee's Mod Ants | Ant Queen | Flying Ant | line  | type: is a unit with Ant it counts or asks for; waits: your units are sacrificed | yes |
 | ni12 | Kaycee's Mod Moose Blood | Moose Buck | Pelts (Rabbit) | none your units move | - | yes |
+| ni13 | Kaycee's Mod Free Reptiles | Rabbit | Bullfrog | none sacrificed | - | yes |
+| ni14 | Act III starter | Sniper Bot | Double Gunner | none  | - | yes |
+| ni15 | Alpha, Wolf, Moose Buck | Alpha | Wolf | line  | boosts: gives it +1|+0 (when next to it); waits: your units are sacrificed (pays | yes |
+| ni16 | Daus, Bell Tentacle | Bell Tentacle | Daus | line  | type: is the Bell Tentacle it names; waits: your units are sacrificed (pays its  | yes |
+| ni17 | Daus, Bell Tentacle | Bell Tentacle | Daus | none by fighting | type: is the Bell Tentacle it names; waits: your units are sacrificed (pays its  | yes |

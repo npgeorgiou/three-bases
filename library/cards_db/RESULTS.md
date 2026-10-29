@@ -46,7 +46,7 @@
   and 1 kept reading fixed.
 - Cost: three readers (cards, keywords, second reading); the unsure cards fixed by rule (fixes/monster_train/).
 
-# Inscryption: results (29 Oct 2026, waiting for Kaptain's check of CHECK_20_inscryption.md and CONCEPTS_inscryption.md)
+# Inscryption: results (29 Oct 2026, v39; Claude's check of 20 cards in deck_read_inscryption.md)
 
 ## What exists
 - 251 cards from the Inscryption wiki's card boxes (supplement_inscryption.py; the library had merged and dropped cards),
@@ -59,13 +59,16 @@
   starters and the eight Kaycee's Mod starters.
 
 ## Quality
-- run.py passes; cases 56 of 56 (20 sigil mechanics, 7 combos, 4 guide decks, 7 faction cases, 12 network lines, shared
+- run.py passes; cases 72 of 72 (23 sigil mechanics, 7 combos, 4 guide decks, 8 faction cases, 17 network lines, shared
   cases); word check, text audit and link audit 0.
 - Unsure records left (no value for one card's need): Build-a-Card, Campfire, Card Recycle, Pliers, Wiseclock, Pack Mule,
-  The Moon, The Limoncello, Glitched card, Clinger, Dead Byte, Detonator, Energy Conduit, Finical Hatchling, Loose Tail,
-  Tidal Lock, Trinket Bearer, Satisfies Ring Trial, Bell Ringer, Kraken Waterborne, Mox Sigils, Cat and Child 13 (a count
+  The Moon (it fills the opponent's side: no board form for that), The Limoncello, Glitched card, Dead Byte, Detonator,
+  Energy Conduit, Tidal Lock ("pulls small creatures into its orbit": no place stated), Trinket Bearer, Satisfies Ring Trial, Bell Ringer, Kraken Waterborne, Mox Sigils, Cat and Child 13 (a count
   across battles).
-- Open for Kaptain: Energy ramp (Battery Bearer, Energy Bot) has no line to Energy-cost cards, as mana in the other games.
+- Energy ramp (Energy Bot, Energy Conduit, Extra Battery, Hrokkall) is concept base_resource_gain, as mana ramp in the other
+  games, with no line to Energy-cost cards (Kaptain 29 Oct 2026).
+- Positions: lanes (same_lane, the opposing space), sides (adjacent), circuits (two conduit cards); strikes into empty
+  spaces hit the opponent; who benefits from a place is said on the line ("gives it +1|+0 (when next to it)").
 
 # Faeria: results (29 Oct 2026, waiting for Kaptain's check of CHECK_20_faeria.md and CONCEPTS_faeria.md)
 

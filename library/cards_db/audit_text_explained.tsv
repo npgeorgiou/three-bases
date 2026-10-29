@@ -65,3 +65,4 @@ duelyst	Destiny	summon	the keyword's line says summoning the card gives the effe
 duelyst	Wraithling Swarm	nearby	"nearby each other" places the three Wraithlings together; no position relative to a card
 duelyst	Stunned	stun	the status itself ("Stunned minions lose their next action"): its rows are what a stunned minion can't do
 duelyst	Wall	dispel	"removed if dispelled": no event for being dispelled yet (proposal silenced, unsure)
+inscryption	Campfire	nearby	"gathered around a fire" is the scene of a run event, no board position

@@ -24,6 +24,7 @@ PLACES = {'summon', 'play_card', 'create', 'copy', 'revive', 'transform', 'keywo
 UNIT_ONLY = {'dies', 'killed', 'survives_damage', 'summoned', 'revived', 'leaves_play', 'strikes', 'attacks', 'blocks'}  # never a player's
 PLAYER_ONLY = {'nexus_damaged'}  # only a player's
 OPEN_KINDS = {None, '', 'player', 'any', 'anything'}
+DONE_BY = {'attacks', 'strikes', 'fights', 'challenges'}  # the side of these is the doer's (the actor), not the unit it is done to
 BY_ME = {'killed', 'damaged', 'nexus_damaged', 'challenges'}  # done by the card to something else: only the card itself can do it
 # (attacks and strikes by the card: other cards can make it attack or strike: Rally, "an ally strikes")  # kinds a player can be
 HARM = {'damage', 'kill', 'obliterate', 'capture', 'stun', 'silence', 'transform'}  # harm aimed at a chosen target of either side
@@ -91,10 +92,12 @@ def build(c):
         if ab in cleanup: continue  # "When you summon Krog, destroy this": it only removes itself; it waits for nothing
         if ev and ev != 'always':
             pk = op if obj else ap
+            side = os_ if obj else as_
+            if ev in DONE_BY and as_ == 'enemy' and ap != 'self': side = 'enemy'  # "if a Chime is attacked": an enemy attacks, not mine
             if ap == 'self' and op != 'self':  # "Strike: ... the attacked unit": it is about the card striking, not the unit hit
                 pk = 'actor_self' if ev in BY_ME else 'self'
             for k in (kws_of(ow) if len(kws_of(ow)) > 1 else [kw_of(ow)]):  # "traps or boons": one row per keyword, never "any keyword"
-                ins(card, o, v, ab, 'trigger', ev, ok if obj else ak, os_ if obj else as_, pk, k, w=ow if obj else aw, ak=ak if obj else None, aw=aw if obj else None)
+                ins(card, o, v, ab, 'trigger', ev, ok if obj else ak, side, pk, k, w=ow if obj else aw, ak=ak if obj else None, aw=aw if obj else None)
         state_rows(card, o, v, ab, ok, os_, op, ow, 'deck' if ev in ('drawn', 'played', 'discarded') else None,  # "draw a Flying
                    entering=ev in ('summoned', 'played'))  # "summoned adjacent to this": where it enters; moving is no help
         # creature": the card has Flying already; nothing given in play makes it one

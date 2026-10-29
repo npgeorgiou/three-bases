@@ -260,7 +260,7 @@ def lines_of(c, game):
             for t in users - {m}:
                 out[(m, t)].append(('repeats', 2.0 / len(ms), f'repeats its {mechanics.name(c, k)} effects'))
     # types: a card that asks for a type is fed by cards of that type and cards that make them
-    asks = collections.defaultdict(set)
+    asks, named = collections.defaultdict(set), collections.defaultdict(set)  # named: a card it names ("if a Chime is attacked")
     for card, w in c.execute("""select card, coalesce(on_with,'') || ';' || coalesce(to_with,'') from flat_do where coalesce(on_side,'mine')!='enemy'
                                 and act not in ('create','summon','transform','copy','choose_card','play_card','revive')
                                 union all select card, obj_with from flat_when union all select card, coalesce(of_with,'') || ';' ||
@@ -269,6 +269,7 @@ def lines_of(c, game):
         for part in (w or '').split(';'):
             b = part.removeprefix('of:').split(' ')
             if len(b) == 3 and b[0] == 'type' and b[1] in ('is', 'in') and b[2].isdigit(): asks[int(b[2])].add(card)
+            if len(b) == 3 and b[0] == 'card' and b[1] in ('is', 'in') and b[2].isdigit(): named[int(b[2])].add(card)
     has = collections.defaultdict(set)
     for i, x in cards.items():
         for t in x['types']: has[t].add((i, 'is'))
@@ -286,6 +287,13 @@ def lines_of(c, game):
         tn = c.execute('select name from type where id=?', (t,)).fetchone()
         for m, how in has.get(t, ()):
             for x in ts - {m}: out[(m, x)].append(('type', 1.0 / len(ts), f'{"is" if how == "is" else "makes"} {"an" if tn and tn[0][:1] in "AEIOU" else "a"} {tn[0] if tn else "card of the type"} it asks for'))
+    for t, ts in named.items():  # the named card itself, or a card that makes it
+        name = cards[t]['name'] if t in cards else None
+        if not name: continue
+        for m, how in [(t, 'is')] + [(m, 'makes') for m, ref, _ in put if ref == t]:
+            for x in ts - {m}:
+                if not any(l[0] == 'puts' for l in out.get((x, m), ())):  # what it makes itself is no help to it
+                    out[(m, x)].append(('type', 1.0 / len(ts), f'{how} the {name} it names'))
     CACHE[('lines', game)] = out
     return out
 
@@ -346,7 +354,7 @@ def aimed_rows(c, game):
     if ('aimed', game) in CACHE: return CACHE[('aimed', game)]
     cards = cards_of(c, game); rows = []
     for a, act, kind, side, pick, w, lasts, kw, cref, zone, ps in c.execute("""select card, act, on_kind, on_side, on_pick, on_with, lasts,
-            keyword_ref, card_ref, on_zone, params from flat_do where origin='own' and coalesce(on_pick,'') not in ('self','it','owner','actor')"""):
+            keyword_ref, card_ref, on_zone, params from flat_do where origin in ('own','has_keyword') and coalesce(on_pick,'') not in ('self','it','owner','actor')"""):
         if a not in cards: continue
         if act == 'increase_effect' and kw and 'keyword is' not in (w or ''):  # "Impact deals 2 more": the cards with Impact
             w = ';'.join(x for x in (w, f'keyword is {kw}') if x); kind = kind if kind in KIND_CAT else 'any'
@@ -828,6 +836,11 @@ def network(c, game, ids, broad=True):
                         lines[(p, b)].append((k, w * 0.5, f'through {mechanics.name(c, m)}: {why}'))
     lines = collections.defaultdict(list, {(a, b): [l for l in ls if not (nodes.get(b) and l[2] == 'draws it from the deck')]
                                            for (a, b), ls in lines.items()})  # a card the deck only makes is in no deck to draw from
+    # a form a card grows or levels into is never played from hand: its cost is never paid (Tadpole -> Bullfrog, Curious Egg ->
+    # Hydra; a champion's level-up form)
+    grown = {b for (a, b), ls in lines.items() if nodes.get(b) and any(k == 'levelsinto' for k, _, _ in ls)} - \
+            {b for (a, b), ls in lines.items() if any(k == 'puts' for k, _, _ in ls)}
+    lines = collections.defaultdict(list, {(a, b): [l for l in ls if not (b in grown and '(pays its cost)' in l[2])] for (a, b), ls in lines.items()})
     same = lambda ls: list({(k, y): (k, w, y) for k, w, y in ls}.values())  # one card doing a thing twice (when summoned, when attacking) is one line
     return nodes, {k: same(v) for k, v in lines.items() if v}
 

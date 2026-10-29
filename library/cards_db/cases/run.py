@@ -85,7 +85,7 @@ def main():
             if r['game'] != game: continue
             if r['deck'] not in nets:
                 import deck_analysis
-                ids, _ = deck_analysis.parse_deck(c, game, decks.get(r['deck'], ''))
+                ids, _ = deck_analysis.parse_deck(c, game, decks.get(r['deck'], r['deck']))  # no deck of that name: the column is the card list
                 nodes, lines = network.network(c, game, ids)
                 nets[r['deck']] = ({i: mechanics.name(c, i) for i in nodes}, lines)
             nm, lines = nets[r['deck']]

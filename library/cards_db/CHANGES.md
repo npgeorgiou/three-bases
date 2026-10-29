@@ -195,3 +195,13 @@ Each change: date, what changed, the card that caused it, and which records were
 - deck_analysis.py: fight deaths are not listed as makers.
 - Faeria: game rules for land building and summoning; Ranged strikes the nearest enemy in a straight line; faeria.md rules
   from the Battlefield page and Kaptain. network_page.py: labels "enables" / "helps", cost and stats, deck drop-down.
+
+## 29 Oct 2026, v39 (Inscryption: positions, Claude's check of 20 cards)
+- network.py: aimed lines also read a card's keyword effects on other cards (Leader boosts the units next to Alpha); a
+  card named in a filter is fed by that card or a card that makes it ("is the Bell Tentacle it names"); a grown form pays
+  no cost (Tadpole -> Bullfrog). refs.py DONE_BY: attacks, strikes, fights and challenges take the doer's side, so an enemy
+  attacking my unit is not fed by my attacks. cases/run.py: a network case's deck may be a card list.
+- Inscryption: fixes/inscryption/v38.py (strikes into empty spaces, Double Strike, Clinger, Loose Tail, Hefty, Sentry,
+  Finical Hatchling, circuits) and v39.py (Burrower's space is mine, "rotate one space" = bordering); Tadpole -> Bullfrog;
+  Conduit Card type. Concepts base_resource_gain (every game), lanes, link_formation, cross_lane; ask.py factions.
+- Cases ni15-ni17, mi22-mi23. Other games checked read-only with cases/run.py: all pass.

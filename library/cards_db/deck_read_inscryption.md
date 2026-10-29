@@ -53,3 +53,18 @@ missing line is listed first; the families below say how each is fixed once, for
    of the deck has or is given is no support.
 7. Shared network wording (network.py aimed): a line from an effect with a position filter says where ("next to it",
    "opposite it", "in its circuit").
+8. Shared network (network.py, refs.py; v39): a keyword's effect on other cards makes aimed lines (Alpha's Leader -> Wolf,
+   ni15); a card named in a filter gets a line from that card (Bell Tentacle -> Daus, ni16); an enemy attacking my unit is
+   not fed by my attacks (ni17).
+
+## Check of 20 cards (CHECK_20_inscryption.md, by Claude: Kaptain does not know the game)
+Each card's rows compared with its text and the wiki. Right: Spilled Blood, Sprinter, Blue and Green Mox, Gem Guardian,
+Brittle, Airborne, M!rror r0rriM, Bifurcated and Trifurcated Strike (now with the strike to the opponent), Fecundity,
+Sentry, Guardian, Hoggy Bank, Fish Hook, Hammer, Mighty Leap, Omni Strike, Uncuttable, Special Dagger, Magickal Bleach
+("my cards" is Leshy speaking: enemy units), Ourobot.
+| card | what was wrong | fix |
+|---|---|---|
+| Mole (Burrower) | the empty struck space had no side | side mine (v39.py, mi22) |
+| Wiseclock | "rotate one space clockwise": the move had no place | to a bordering space (v39.py, mi23) |
+| The Moon | "replaces all spaces on opponent's side with itself": no board form for a card that fills a side | open, told Kaptain |
+| The Moon (Tidal Lock) | "pull small creatures into its orbit": the place is not stated; written as Squirrels moving bordering | open (unsure) |

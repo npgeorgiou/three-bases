@@ -105,3 +105,8 @@ nfa27	faeria	Blue Jump	Battle Toads	Wavecrash Colossus	line		Kaptain: Battle Toa
 nfa28	faeria	Blue Jump	Sunken Tower	Wavecrash Colossus	line		Kaptain: as nfa27
 nfa29	faeria	Blue Jump	Gabrian Archon	Wavecrash Colossus	none	moves it where it must be	Kaptain: Archon does not help the Colossus; the Colossus helps the Archon
 nfa30	faeria	Bargain (Krog)	Bold Bargainer	Krog, the Ogre King	line		Kaptain: a 7 cost cut must help the expensive cards
+ni13	inscryption	Kaycee's Mod Free Reptiles	Rabbit	Bullfrog	none	sacrificed	Claude (v38): Bullfrog comes from Tadpole growing (wiki Fledgling), it is never played, so no sacrifice pays for it
+ni14	inscryption	Act III starter	Sniper Bot	Double Gunner	none		Claude (v38): two strikers, nothing between them
+ni15	inscryption	Alpha, Wolf, Moose Buck	Alpha	Wolf	line		Claude (v39): Leader (wiki: "Creatures adjacent to a card bearing this sigil gain 1 Power") boosts the units next to Alpha; a keyword's effect on other cards is a line too
+ni16	inscryption	Daus, Bell Tentacle	Bell Tentacle	Daus	line		Claude (v39): Daus strikes a card that attacks a Chime or Bell Tentacle (wiki Special Card Behaviours): the card it names
+ni17	inscryption	Daus, Bell Tentacle	Bell Tentacle	Daus	none	by fighting	Claude (v39): Daus waits for an enemy to attack the Bell Tentacle; Bell Tentacle attacking is not it

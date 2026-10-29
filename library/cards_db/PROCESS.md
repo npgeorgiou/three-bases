@@ -129,7 +129,8 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
    is; this list does:
    - `library/tools/convert/conv_<game>.py`: its first lines name the source, date and format of the game's card data. Raw
      files next to them: `monster_train_cards.psv` (282 Monster Train cards, wiki Module:Cards/Data),
-     `inscryption_missing_cards.json`, `faeria_merlin_shortened.csv` + `faeria_cards_english.csv` (462 Faeria cards,
+     `inscryption_missing_cards.json` (partial: only the cards the library missed; the whole set is
+     `inscryption_wiki_cards.jsonl` + `inscryption_wiki_cards_more.jsonl`, wiki pages with their revisions, 29 Oct 2026), `faeria_merlin_shortened.csv` + `faeria_cards_english.csv` (462 Faeria cards,
      Abrakam's github.com/abrakam/Faeria_Cards 12b7207; its README defines the keywords). Named sources: Lorcana (npm lorcana-oracle), Star Wars: Unlimited (swucardex-data
      a86faed), Elder Scrolls: Legends (TESLegendsTracker c541e82), Slay the Spire (wiki Module:Cards/data), Slay the Spire 2
      (Kaptain's lists, 12 Oct 2026), Gwent (gwent.one v14.8), Magic (MTGJSON AtomicCards, Scryfall tokens), Shadowverse
@@ -235,13 +236,17 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
 ### 4. Kaptain's check
 `check_table.py CHECK_20_<game>.md --random <game> 20` (save the ids in CHECK_20_<game>_ids.txt). Each card: one line with
 its name and text, then its rows. Every error he finds is fixed for all cards with the same problem.
+When Kaptain does not know the game (Inscryption), he cannot check rows: Claude checks the 20 cards against their texts
+and the sources of step 0.10 itself, writes every error into deck_read_<game>.md ("Check of 20 cards"), fixes each family
+once, and adds a case per family. Kaptain then checks the deck networks page (network_page.py) in plain words: does a line
+between two cards make sense to a player.
 
 ### 5. Done when
 `run.py <game>` passes every step and every other game still passes; read/<game>/game_rules.jsonl written (step 0.10);
 audit_text.py and audit_links.py print nothing unexplained; the keyword -> concept list checked twice and shown
 to Kaptain; word check 0 open flags; no proposal need shared by cards with different texts; stubs only names nothing
 defines; `ask.py all compare <its main concepts>` shows its cards next to the other games'; every guide deck explained;
-Kaptain approved CHECK_20_<game>; at least 10 full decks' networks read card by card (step 2.9)
+Kaptain approved CHECK_20_<game> (or, for a game he does not know, Claude's check in deck_read_<game>.md); at least 10 full decks' networks read card by card (step 2.9)
 and its gaps fixed; RESULTS.md and HANDOFF.md say the state; everything pushed. After his approval, add a few
 approved records to BRIEF.md under "Game words: <game>" as worked examples.
 
@@ -377,6 +382,25 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
    for sacrifices, nothing in the deck does it": ask.py analyze now reads cost needs and counts what the rules make (any
    unit can be sacrificed, a Skeleton's death gives a Bone), deck cases di01-di04; connections.py goes one step through a
    rule about the owner's own cards (Necromancer's second deaths give Bones for Tomb Robber, combo cases ci07-ci08).
+12. **Keyword records are not normalized by run.py** (it normalizes card batches only). A game whose cards are mostly their
+   keywords (Inscryption) applies the normalize rules to keywords.jsonl in its fix script (fixes/inscryption/v36.py:
+   names, moves object, sacrifice form).
+13. **Board games, positions (29 Oct 2026, v38-v39; for every positional game).** Read every sigil that names a place and
+   write it in BRIEF "The board" forms; check the place, not only the act: a strike into an empty opposing space hits the
+   opponent (strike to the player, link or); "moves towards them" = sides of them; "rotate one space" = bordering; a space
+   struck on my side is side mine (Burrower). The concepts follow from the forms for every game (flat.py): same_lane ->
+   lanes, in_circuit -> link_formation, a strike on the sides of the opposing space -> cross_lane. Lines say where help
+   works: an aimed line with a position filter ends "(when next to it)". A circuit needs two conduit cards (wiki Circuits),
+   so "within a circuit" also counts two Conduit Cards of mine.
+14. **Who benefits from a place: three network gaps (v39, every game).** A keyword's effect on other cards (Leader: "creatures
+   adjacent gain 1 Power") made no line, only the card's own text did: aimed lines now read has_keyword rows too (ni15). A
+   card that names another card in a filter ("if a Chime or Bell Tentacle is attacked") made no line from that card: it
+   now says "is the Bell Tentacle it names" (ni16). A trigger on an enemy attacking my unit took the side of the unit
+   attacked, so my own attacks fed it "by fighting": attacks, strikes, fights and challenges take the doer's side (refs.py
+   DONE_BY, ni17). A network case's deck column may be a card list when no deck has the cards.
+15. **More or faster base resource** (Kaptain 29 Oct 2026: not linked to costs, but findable): concept base_resource_gain
+   (mana, spell mana, Ember, faeria, Energy; a second resource such as Bones or gems stays resource_gain), `ask.py
+   <game> factions base_resource_gain` gives each faction's share, and ask.py analyze names the ramp cards. Cases mx16, ri08.
 
 ## Importing Duelyst (29 Oct 2026; checked in every game)
 1. **The game file's rules were written from memory.** duelyst.md "The game" (Claude's summary) said a unit on a mana
@@ -384,7 +408,8 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
    gains it and summoning is around any friendly unit. Runeterra's, Monster Train's, Faeria's and Inscryption's game rules
    cited the same kind of summary. Rule: game rules cite the game's own rules with their source (step 0.10); audit_links
    check 8 lists a game whose game_rules.jsonl cites a "The game" section written from memory (Runeterra, Monster Train and
-   Faeria now cite Riot's round FAQ, a beginner's guide and Wikipedia's Gameplay section; Inscryption still to do).
+   Faeria now cite Riot's round FAQ, a beginner's guide and Wikipedia's Gameplay section; Inscryption cites the wiki's
+   Card Battle, cost and Circuits pages and Wikipedia).
 2. **One name, two cards.** The open-sourced data has Tempest and its Bloodbound Spell copy, the tutorial's Argeon Highmayne,
    Cascading Rebirth's follow-up, 14 Build structures called Building: a deck or a text naming one got either. Rule: the
    collectible card keeps the name, the others are "<name> (<kind>)" (supplement_duelyst.py names()); audit_links check 7

@@ -51,8 +51,10 @@ Each card: its name and text on one line, then its stored rows, one row per effe
 | ability | when_event | when_actor | when_object | when_limit | if | effect | act | on | to | zone | card | keyword | type | params | lasts | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | keyword Bifurcated Strike: 0 | attacks | pick=self |  |  |  | 0 | strike | pick=self | kind=unit side=enemy pick=all zone=board with[position is sides of (kind=position side=enemy with[position is same_lane])] |  |  |  |  |  |  |  |
+| keyword Bifurcated Strike: 0 | attacks | pick=self |  |  |  | 1 | strike | pick=self | kind=player side=enemy |  |  |  |  |  |  | or |
 | keyword Trifurcated Strike: 0 | attacks | pick=self |  |  |  | 0 | strike | pick=self | kind=unit side=enemy pick=all zone=board with[position is sides of (kind=position side=enemy with[position is same_lane])] |  |  |  |  |  |  |  |
 | keyword Trifurcated Strike: 0 | attacks | pick=self |  |  |  | 1 | strike | pick=self | kind=unit side=enemy zone=board with[position is same_lane] |  |  |  |  |  |  | and |
+| keyword Trifurcated Strike: 0 | attacks | pick=self |  |  |  | 2 | strike | pick=self | kind=player side=enemy |  |  |  |  |  |  | or |
 
 **Mole (Act III)**: Keywords: Burrower. (keywords: Burrower)
 
@@ -71,7 +73,7 @@ Each card: its name and text on one line, then its stored rows, one row per effe
 
 | ability | when_event | when_actor | when_object | when_limit | if | effect | act | on | to | zone | card | keyword | type | params | lasts | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| keyword Sentry: 0 | moves |  | kind=unit side=enemy with[position is same_lane] |  |  | 0 | damage | pick=it |  |  |  |  |  | amount=1 |  |  |
+| keyword Sentry: 0 | moves_onto |  | kind=unit side=enemy with[position is same_space of (kind=position side=enemy with[position is same_lane])] |  |  | 0 | damage | pick=it |  |  |  |  |  | amount=1 |  |  |
 
 **Emerald Vessel**: Keywords: Green Mox. (keywords: Green Mox)
 
@@ -96,7 +98,7 @@ Each card: its name and text on one line, then its stored rows, one row per effe
 
 | ability | when_event | when_actor | when_object | when_limit | if | effect | act | on | to | zone | card | keyword | type | params | lasts | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 0 | played |  | pick=self |  | (test=count of=(kind=position side=mine with[state is empty; position is same_lane of (pick=it)]) op=ge n=1) | 0 | steal | kind=unit side=enemy pick=chosen zone=board |  |  |  |  |  |  |  |  |
+| 0 | played |  | pick=self |  | (test=have of=(kind=position side=mine with[state is empty; position is same_lane of (pick=it)]) op=is) | 0 | steal | kind=unit side=enemy pick=chosen zone=board |  |  |  |  |  |  |  |  |
 
 **Hammer**: The Hammer is a tool in Act II and Act III of Inscryption. It can be used on any card on the player's side, including terrain cards, dealing 100 damage to said card. If used on a card with Nano Armor, it will break the Nano Armor first. It will also activate any on death abilities, such as Latchers, Unkillable, and Detonator, assuming the card actually dies from the hit.
 
@@ -108,7 +110,7 @@ Each card: its name and text on one line, then its stored rows, one row per effe
 
 | ability | when_event | when_actor | when_object | when_limit | if | effect | act | on | to | zone | card | keyword | type | params | lasts | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 0 | turn_start | kind=player side=mine |  |  | (test=count of=(kind=card side=mine zone=deck) op=eq n=0) | 0 | stat_change | pick=self |  |  |  |  |  | power=1 | permanent |  |
+| 0 | turn_start | kind=player side=mine |  |  | (test=have of=(kind=card side=mine zone=deck) op=not) | 0 | stat_change | pick=self |  |  |  |  |  | power=1 | permanent |  |
 | keyword Mighty Leap: 0 | always |  |  |  |  | 0 | can | pick=self | kind=unit side=enemy with[keyword is Airborne] |  |  |  |  | event=blocks | while |  |
 | keyword Omni Strike: 0 | attacks | pick=self |  |  |  | 0 | strike | pick=self | kind=unit side=enemy pick=all zone=board |  |  |  |  |  |  |  |
 | keyword Omni Strike: 0 | attacks | pick=self |  |  |  | 1 | strike | pick=self | kind=player side=enemy |  |  |  |  |  |  | or |
@@ -125,7 +127,7 @@ Each card: its name and text on one line, then its stored rows, one row per effe
 
 | ability | when_event | when_actor | when_object | when_limit | if | effect | act | on | to | zone | card | keyword | type | params | lasts | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 0 | played |  | pick=self |  |  | 0 | move | kind=unit side=any pick=all zone=board |  |  |  |  |  |  |  |  |
+| 0 | played |  | pick=self |  |  | 0 | move | kind=unit pick=all zone=board |  |  |  |  |  |  |  |  |
 
 **Magickal Bleach**: Rulebook: To the user: My cards on the board will lose all of their Sigils.
 

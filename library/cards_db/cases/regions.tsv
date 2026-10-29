@@ -179,3 +179,4 @@ ri04	inscryption	Magick	signature (inscryption.md: Magick cards are paid with Mo
 ri05	inscryption	Beast	signature (inscryption.md: Warren puts a Rabbit in hand)	creates cards in hand	4	select card from flat_do where act in ('create','copy') and coalesce(eff_zone,'')='hand'
 ri06	inscryption	Beast	signature (inscryption.md: Hawk hits past blockers)	strikes the opponent directly	8	select card from flat_ref where role='makes' and happening='strikes_nexus' and origin!='game'
 ri07	inscryption	Magick	signature (inscryption.md: Blue Mage draws per Mox)	draws cards	1	select card from flat_do where act='draw'
+ri08	inscryption	Technology	signature (wiki Energy: Battery Bearer raises Energy)	more or faster base resource	2	select card from flat_concept where concept='base_resource_gain'
