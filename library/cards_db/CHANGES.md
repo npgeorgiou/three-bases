@@ -138,3 +138,7 @@ Each change: date, what changed, the card that caused it, and which records were
 - refs.py: a game rule is skipped only for cards that can never do what that rule makes ("Can't harvest faeria" skips the
   harvest rule; "can only attack gods", a can't limited to some targets, skips nothing).
 - read/faeria/game_rules.jsonl: units fight (strike an enemy unit or structure, or the enemy god) and harvest wells.
+- 29 Oct 2026, v36 (Inscryption): supplement_inscryption.py (251 cards from the wiki's card boxes, replacing the library's
+  merged entries: source.py FULL; 5 sigils the library lacks); sigils are the Keywords field; vocab keyword rows for all 107
+  sigils and traits (inscryption:Armored is shield); kind secondary_resource (Bones), event sacrificed (Blood); BRIEF "Game
+  words: Inscryption"; read/inscryption/game_rules.jsonl (units fight, Bones from deaths); 19 decks in decks.tsv.

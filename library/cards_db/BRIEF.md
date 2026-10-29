@@ -389,3 +389,38 @@ game's own glossary (Abrakam's card export README, faeria.com Keyword Rulings gu
   "permanent"}]}` (amount only for a number: Charge 3, Dash 2). "Give a creature Charge 3 this turn" = give_keyword Charge,
   amount 3, lasts this_round.
 - "Choose one: A / B." then "- A" lines: the "- A" lines repeat the options; describe each option once (rule 8).
+
+## Game words: Inscryption
+Cards list their sigils in the Keywords field ("Keywords: Airborne, Fledgling."); do not describe them, the sigil (keyword)
+entries do. Read the rest of a card's text ("Traits: Goat.", "Sigils: Repulsive. 5th Starvation onward: Airborne.") and the
+keyword entries (category keyword: a sigil, a trait or a variable Power stat). Mapping decided by Claude from the game's wiki
+(sigil pages and the rulebook lines; 29 Oct 2026).
+- Board. Each side has a row of spaces (4 in most of the game, 5 in Act III); a lane is a space and the space across from it.
+  "The opposing space", "the creature opposing it", "across from it" = position same_lane, side enemy (of omitted = the card
+  itself). "Adjacent" / "to the left and right" = position sides (on its own side unless the text says opposing: "each opposing
+  space to the left and right of the space across" = side enemy, position sides of the opposing space). "An empty space" =
+  `{"kind": "position", "with": [{"attr": "state", "op": "is", "val": "empty"}]}`; "in its place" = position same_space of it.
+- The opponent (the scale) = kind player, side enemy. "Strike an opponent directly", "deals damage directly" = strikes_nexus,
+  actor self. Damage to the scale = damage on the player.
+- Perish / die = dies. "When a card bearing this sigil is struck" = damaged, object self (state combat). "Is played" = played,
+  object self. "Is drawn" = drawn, object self. "At the end / beginning of the owner's turn" = turn_end / turn_start, actor
+  `{"kind": "player", "side": "mine"}`. "Activate: Pay 2 Bones to ..." = activated; the payment is a first effect: spend on
+  `{"kind": "secondary_resource", "side": "mine"}` = act spend_mana with params amount (Energy payment: spend_mana on kind mana).
+- Costs. Blood is paid by sacrificing your creatures: "is sacrificed", "when sacrificed" = event sacrificed, object self; "the
+  card it was sacrificed for" = pick actor. "Counts as 3 Blood" = proposal (no value yet). Bones = kind secondary_resource:
+  "gain 3 Bones", "1 bone is generated", "4 Bones are awarded" = mana_gain on `{"kind": "secondary_resource", "side": "mine"}`.
+  Energy = mana: "an Energy Cell" = max_mana_change amount 1; "your Energy never depletes" = proposal. A Gem (Mox): "a Green Gem
+  is provided" = proposal (no value yet); "controls no Mox cards" = COND count of `{"kind": "unit", "side": "mine", "with":
+  [{"attr": "type", "op": "is", "ref": "Mox Card"}]}` op eq n 0.
+- Created cards. "An Ant is created in your hand" = create, zone hand, card "Worker Ant"; "a Bee", "a Rabbit", "a Skeleton",
+  "a Squirrel", "a Chime", "a Dam", "an Egg" (Brood Parasite: "Broken Egg"), "a Tail", "L33pB0ts", "Explode Bots", "a Ruby Mox",
+  "Gem Vessels" (the Emerald, Ruby and Sapphire Vessel cards) = those cards; "created on each empty adjacent space" = summon,
+  "to" the spaces. "Grow into a more powerful form" (Fledgling) = transform on self at turn_start (the next form is a link of
+  the card, not written). "Transform to, or from, Beast mode" = transform on self (the other form is a link).
+- "Moves in the direction inscribed" / "moves to that space" = move on self, "to" the space. "Strike" as an act = strike, on
+  self, to the struck target. A circuit (Conduits): "within a circuit completed by a card bearing this sigil" = position
+  proposal (no value yet: propose "in_circuit").
+- Traits that are the game's internal flags with no effect in a battle (Goat, Lice, Fused, KillsSurvivors, DeathCardNonOption,
+  DeathcardCreationNonOption, JeresyDevil, Cat, Child 13, Limited Lives, Chime Keeper, Giant without words): no record. A trait
+  with words ("Giant (Increases its Power by 1 every turn ...)", the Obol halves' "gives the player one Ancient Obol") is read.
+- Items (category item), events, modifiers (Boons) are read like cards: a Boon's "at the start of every battle" = game_start.
