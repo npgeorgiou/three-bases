@@ -1,0 +1,4 @@
+{"id": 741088, "field": "test", "need": "my_turn"}
+{"id": 741168, "field": "act", "need": "mana_set"}
+{"id": 3000034, "field": "on", "need": "first_summoned_on_space"}
+{"id": 3000036, "field": "amount", "need": "base_x"}

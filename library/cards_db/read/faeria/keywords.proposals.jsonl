@@ -1,0 +1,9 @@
+{"id": 741063, "field": "act", "need": "cant_move_through_units"}
+{"id": 741064, "field": "position", "need": "straight_line"}
+{"id": 741065, "field": "act", "need": "leap_over_obstacles"}
+{"id": 741066, "field": "to", "need": "other_than_it"}
+{"id": 741067, "field": "position", "need": "straight_line"}
+{"id": 741071, "field": "position", "need": "straight_line"}
+{"id": 741071, "field": "state", "need": "moved_this_turn"}
+{"id": 3000040, "field": "act", "need": "pay_with_any_land_colour"}
+{"id": 3000043, "field": "card", "need": "any_card"}

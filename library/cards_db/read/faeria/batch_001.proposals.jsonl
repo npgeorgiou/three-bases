@@ -1,0 +1,10 @@
+{"id": 741088, "field": "test", "need": "my_turn"}
+{"id": 741119, "field": "act", "need": "empty_refill_well"}
+{"id": 741326, "field": "act", "need": "end_turn"}
+{"id": 741343, "field": "act", "need": "extra_turn"}
+{"id": 741347, "field": "act", "need": "empty_refill_well"}
+{"id": 741406, "field": "act", "need": "empty_refill_well"}
+{"id": 741423, "field": "act", "need": "destroy_well"}
+{"id": 741454, "field": "act", "need": "refresh_power_wheel"}
+{"id": 741485, "field": "test", "need": "deck_has_no_duplicates"}
+{"id": 741510, "field": "attr", "need": "land_cost"}
