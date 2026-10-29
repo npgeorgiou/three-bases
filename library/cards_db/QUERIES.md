@@ -80,7 +80,7 @@ select card from flat_concept where concept in ('movement','forced_movement') in
 ```
 - duelyst: 16 cards: Aspect of the Wyrm, Black Locust, Cade the Desolator, Chittering Tiller, Cindera, D3cepticle, Drake Dowager, Ghost Lynx ...
 - faeria: 28 cards: Animated Banquet, Astral Weapon, Baeru, the First Wave, Dancing Blade, Flowersilk Faerie, Flying Piranha, Frog-Tosser, Grappling Hook ...
-- inscryption: 25 cards: 49er, Clinger, Elk, Elk Fawn, Ghost Ship, Headless Horseman, Hefty, Lonely Wizbot ...
+- inscryption: 26 cards: 49er, Clinger, Elk, Elk Fawn, Ghost Ship, Headless Horseman, Hefty, Lonely Wizbot ...
 - runeterra: 2 cards: Ahri, Ahri (level 2)
 - stormbound: 17 cards: Agile Warriors, Angelic Tikas, Anointed Saviors, Armed Schemers, Catnip’s Charm, Chateau de Cardboard, Confuse, Crystalshields ...
 
@@ -150,21 +150,21 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: duelyst 2463 pairs, e.g. Deathstrike Seal -> Unseven; faeria 931 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 489 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 302 pairs, e.g. Little Fade -> Primordium; runeterra 11118 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 264 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- sacrifice: duelyst 1574 pairs, e.g. Abhorrent Unbirth -> Unseven; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Librarian; monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5632 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- self_destruct: duelyst 692 pairs, e.g. Windstorm Obelysk -> Khanuum-ka; faeria 576 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 350 pairs, e.g. Zombie Parrot -> Burrowing Trap; monster_train 252 pairs, e.g. Little Fade -> Primordium; runeterra 6575 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Shady Ghoul
-- revive: duelyst 153 pairs, e.g. Rex -> Fog; inscryption 27 pairs, e.g. Necromancer -> Librarian; runeterra 886 pairs, e.g. Chronobreak -> Bladepierced Revenant
-- removal: duelyst 512 pairs, e.g. Rasha's Curse -> Khanuum-ka; faeria 131 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Librarian; monster_train 41 pairs, e.g. Wicked Blaze -> Primordium; runeterra 2034 pairs, e.g. Kindred's Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Temple of the Mind -> Project PH03-NIX
-- ping: duelyst 512 pairs, e.g. Catalyst Quillbeast -> Frostfire Elf; faeria 385 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 135 pairs, e.g. Good Fish -> Burrowing Trap; runeterra 3703 pairs, e.g. Anivia -> Shackled Ghasts; stormbound 176 pairs, e.g. Acid Greenhorns -> Marked as Prey
+- destroy: duelyst 2463 pairs, e.g. Abhorrent Unbirth -> Unseven; faeria 931 pairs, e.g. Feed the Forest -> Long-horned Yak; inscryption 489 pairs, e.g. Gem Fiend -> Explode Bot; monster_train 302 pairs, e.g. Little Fade -> Primordium; runeterra 11118 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 264 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- sacrifice: duelyst 1574 pairs, e.g. Abhorrent Unbirth -> Unseven; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Explode Bot; monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5632 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- self_destruct: duelyst 692 pairs, e.g. Wind Dervish -> Khanuum-ka; faeria 576 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 350 pairs, e.g. Gem Fiend -> Explode Bot; monster_train 252 pairs, e.g. Little Fade -> Primordium; runeterra 6575 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Dreadful Keepers
+- revive: duelyst 153 pairs, e.g. Rex -> Fog; inscryption 27 pairs, e.g. Necromancer -> Explode Bot; runeterra 886 pairs, e.g. Chronobreak -> Bladepierced Revenant
+- removal: duelyst 512 pairs, e.g. Rasha's Curse -> Khanuum-ka; faeria 131 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Explode Bot; monster_train 41 pairs, e.g. Shardtail Queen -> Primordium; runeterra 2034 pairs, e.g. Kindred's Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
+- ping: duelyst 512 pairs, e.g. Kujata -> Khanuum-ka; faeria 385 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 135 pairs, e.g. QU177 (Beast Form) -> Shield Latcher; runeterra 3703 pairs, e.g. Anivia -> Bladepierced Revenant; stormbound 176 pairs, e.g. Acid Greenhorns -> Green Prototypes
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
-- summon -> on_ally_play -> random_effect (seen in faeria, runeterra)
 - summon -> on_ally_play -> countdown (seen in duelyst, runeterra)
 - summon -> banish -> activated (seen in duelyst, runeterra)
 - summon -> banish -> merge_attach (seen in runeterra)
 - summon -> banish -> other_leave_trigger (seen in runeterra)
 - summon -> banish -> return_to_hand (seen in runeterra)
+- summon -> delayed -> cant_block (seen in runeterra)
 
 ## A deck explained (`ask.py runeterra analyze "..."`), a Lucian/Senna deck from a deck guide
 
@@ -180,7 +180,7 @@ Supports your units (stats, protection, combat keywords): Piercing Darkness, Sen
 Card flow (draw, create, choose): Glimpse Beyond, Lonely Chimeslime, Senna, Spirit Leech.
 Puts extra units into play: Cursed Keeper, Hapless Aristocrat, The Undying.
 Units that support cards can target: 9 (Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, Lucian, Ravenous Butcher, Senna, Senna, Sentinel of Light, Spirit Leech, The Undying).
-Key cards (in most of the plan): Senna, The Ruination, Spirit Leech, Crumble, Ravenous Butcher.
+Key cards (in most of the plan): Senna, Spirit Leech, The Ruination, Crumble, Ravenous Butcher.
 Weak spots: none found.
 ```
 

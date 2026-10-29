@@ -295,15 +295,18 @@ def lines_of(c, game):
                 out[(m, t)].append(('repeats', 2.0 / len(ms), f'repeats its {mechanics.name(c, k)} effects'))
     # types: a card that asks for a type is fed by cards of that type and cards that make them
     asks, named = collections.defaultdict(set), collections.defaultdict(set)  # named: a card it names ("if a Chime is attacked")
-    for card, w in c.execute("""select card, coalesce(on_with,'') || ';' || coalesce(to_with,'') from flat_do where coalesce(on_side,'mine')!='enemy'
+    asked = collections.defaultdict(set)  # named by a trigger or condition: it waits for or asks for that card
+    for card, w, src in c.execute("""select card, coalesce(on_with,'') || ';' || coalesce(to_with,''), 'do' from flat_do where coalesce(on_side,'mine')!='enemy'
                                 and act not in ('create','summon','transform','copy','choose_card','play_card','revive')
-                                union all select card, obj_with from flat_when union all select card, coalesce(of_with,'') || ';' ||
-                                coalesce(ev_obj_with,'') from flat_if where coalesce(of_side,'mine')!='enemy'"""):
+                                union all select card, obj_with, 'when' from flat_when union all select card, coalesce(of_with,'') || ';' ||
+                                coalesce(ev_obj_with,''), 'if' from flat_if where coalesce(of_side,'mine')!='enemy'"""):
         if card not in cards: continue
         for part in (w or '').split(';'):
             b = part.removeprefix('of:').split(' ')
             if len(b) == 3 and b[0] == 'type' and b[1] in ('is', 'in') and b[2].isdigit(): asks[int(b[2])].add(card)
-            if len(b) == 3 and b[0] == 'card' and b[1] in ('is', 'in') and b[2].isdigit(): named[int(b[2])].add(card)
+            if len(b) == 3 and b[0] == 'card' and b[1] in ('is', 'in') and b[2].isdigit():
+                named[int(b[2])].add(card)
+                if src != 'do': asked[int(b[2])].add(card)  # "if you have another Wraithling"
     has = collections.defaultdict(set)
     for i, x in cards.items():
         for t in x['types']: has[t].add((i, 'is'))
@@ -324,8 +327,9 @@ def lines_of(c, game):
     for t, ts in named.items():  # the named card itself, or a card that makes it
         name = cards[t]['name'] if t in cards else None
         if not name: continue
-        for m, how in [(t, 'is')] + [(m, 'makes') for m, ref, _ in put if ref == t]:
-            for x in ts - {m}:
+        own = {m for m, ref, _ in put if ref == t}  # a card naming what it makes itself acts on its own product (Blazing Spines'
+        for m, how in [(t, 'is')] + [(m, 'makes') for m in own]:  # walls "can attack")
+            for x in ts - {m} - (own - asked[t]):
                 if not any(l[0] == 'puts' for l in out.get((x, m), ())):  # what it makes itself is no help to it
                     out[(m, x)].append(('type', 1.0 / len(ts), f'{how} the {name} it names'))
     CACHE[('lines', game)] = out

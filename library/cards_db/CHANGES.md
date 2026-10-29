@@ -219,6 +219,6 @@ Each change: date, what changed, the card that caused it, and which records were
   hand and cost effects skip board-only tokens; chosen help on "anything" reaches units and leaders; named cards asked for
   in play; tutors from hand; "a copy of it" keeps the first target; harm triggers skipped; stat needs by stat made.
 - normalize N24: summoned from the hand (action bar) is played. load.py: "Opening Gambit and Dying Wish:" labels.
-- Duelyst: fixes/duelyst/v38.py (MECHAZ0R build count; Spellsword's four swords); cases ndu01-ndu29, du31-du34;
+- Duelyst: fixes/duelyst/v38.py (MECHAZ0R build count; Spellsword's four swords); cases ndu01-ndu30, du31-du34;
   CONCEPTS_duelyst.md; deck_read_duelyst.md.
 

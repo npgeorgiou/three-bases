@@ -44,6 +44,7 @@ Second read, after the merge with Faeria's v39 code (same 10 decks):
 | Lilithe Darkfire | Phantasm, Darkfire Sacrifice | Wraithling | "+1 Attack / cheaper": Wraithlings are summoned onto the board, never in the action bar |
 | Cassyva Replace, Ciphyron Build | Healing Mystic | the General, units | missing: "restore 2 Health to anything" heals my General or a minion |
 | Lilithe Darkfire | Lilithe BBS, Inkling Surge, Vorpal Reaver | Inkling Surge | missing: "if you have another Wraithling" asks for the Wraithling makers |
+| Faie Blood Taura | White Asp | Blazing Spines | "makes the walls it names": the spell names only the walls it summons itself |
 
 ## Families (one rule each, every game)
 1. **pick actor kept no kind or side** (counterattack rule, Scroll Bandit, every "the attacker"): the actor of the event is
@@ -80,4 +81,5 @@ Second read, after the merge with Faeria's v39 code (same 10 decks):
 22. **Cards only summoned onto the board are never in the hand**: effects on cards in hand and cost changes skip them.
 23. **Help to "anything" chosen on the board** reaches units and the leader card (games with leader cards).
 24. **A named card asked for in play** ("if you have another Wraithling"): the cards that make it feed the condition; not a
-    condition on the deck or discard ("if Krog is in your deck, draw him" fetches him).
+    condition on the deck or discard ("if Krog is in your deck, draw him" fetches him). A card naming what it makes itself in
+    its own effects (Blazing Spines' walls "can attack") asks for no other maker of it.

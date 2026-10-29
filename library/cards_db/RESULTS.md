@@ -107,11 +107,11 @@
   areas, corners, starting sides, tiles (Shadow Creep, Hallowed Ground, Exhuming Sand, Primal Flourish, mana springs).
   Backstab, Zeal and Infiltrate are needs for moves; teleports and swaps feed them.
 - 10 full decks in decks.tsv (from deck codes, supplement/duelyst_deck_codes.tsv), all read card by card twice
-  (deck_read_duelyst.md, 24 families fixed by rule); cases ndu01-ndu29.
+  (deck_read_duelyst.md, 24 families fixed by rule); cases ndu01-ndu30.
 
 ## Quality
-- run.py passes; cases 72 of 72 (34 Duelyst mechanics, 29 network lines, shared cases); text audit 0; every other game still
-  passes, except Inscryption's mx12 (the Inscryption chat's own Sentry change).
+- run.py passes; cases 77 of 77 (34 Duelyst mechanics, 30 network lines, shared cases); text audit 0; every other game still
+  passes.
 - Link audit, explained: Pandora summons "a 3/3 Spirit Wolf with a random ability"; the source has five wolves under other
   names, so Spirit Wolf stays a name.
 - Wording still shared with other games: a player's damage reads "your Nexus or base" (the General in Duelyst).

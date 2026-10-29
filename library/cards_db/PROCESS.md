@@ -438,7 +438,7 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
    to its leader; effects on the hand or on costs skip tokens only summoned on the board; "anything" chosen on the board is a
    unit or the leader; spells and artifacts are never board targets. Cases ndu04, ndu05, ndu17, ndu23-ndu28.
 5. **What a card makes itself it does not wait for** (Abhorrent Unbirth's deaths, Krog's Dinner); a named card asked for in
-   play is fed by the cards that make it (Inkling Surge and Wraithlings). Cases ndu25, ndu29, nfa24.
+   play is fed by the cards that make it (Inkling Surge and Wraithlings), not a card naming what it makes itself (Blazing Spines). Cases ndu25, ndu29, ndu30, nfa24.
 6. **Card counts by where the card comes from.** "Summoned from your action bar" is played (N24): tokens do not count.
    Stats used as amounts want that stat; a cost equal to a stat wants less of it (Blood Taura). Cases ndu11, ndu18.
 
