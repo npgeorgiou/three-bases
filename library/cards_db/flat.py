@@ -104,14 +104,17 @@ def build(c):
             c.execute('insert into flat_if values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
                       (card, origin, via, aid, 'amount_' + x, e, tree.get(('x', x)) or (when_concept(e, ek, ew, None) if e else None),
                        k, s, p, z, withs(of), ek, es, ew, None, None, span, ep, at, tgt(ea)[2] if ea else None, tgt(ea)[0], tgt(ea)[1], withs(ea)))
-        last = (None, None)  # "it" is the thing before it: the last effect's target, else what the event happened to
+        last = (None, None, None)  # "it" is the thing before it: the last effect's target, else what the event happened to
         if ev:
-            e0, k0, s0, *_ = event_info(ev); last = (k0, s0)
+            e0, k0, s0, _op0, w0, _a0 = event_info(ev); last = (k0, s0, w0)
         for eid, seq, act, on, cref, kref, lasts, link, ez, to in c.execute(
                 'select id, seq, act, on_target, card_ref, keyword_ref, lasts, link, zone, to_target from effect where ability=? order by seq', (aid,)).fetchall():
             k, s, p, z = tgt(on); w = withs(on)
             if p == 'it' and not s: k, s = k or last[0], last[1]  # "give it Vitalize" after "a random enemy unit": the same side
-            if p != 'it': last = (k, s)
+            if p == 'it' and not w: w = last[2]  # and the same filters: "transform another Rakoan ..., give it Flying" is a Rakoan
+            if act in ('summon', 'create', 'copy', 'revive', 'play_card') and cref:  # "summon a Demon Wing ..., give it Flying": that card
+                last = ('unit' if act in ('summon', 'revive') else (k or 'card'), s or 'mine', f'card is {cref}')
+            elif p != 'it': last = (k, s, w)
             if applied_to and (p in ('self', 'it') or (k, s, p) == (None, None, None)): k, s, p, z, w = applied_to
             pe = (c.execute("select value from param where effect=? and param='event'", (eid,)).fetchone() or [None])[0]
             ps = ';'.join(f'{pn}={num(a) if a else v}' for pn, a, v in c.execute('select param, amount, value from param where effect=?', (eid,))) or None

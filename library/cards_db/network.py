@@ -204,6 +204,10 @@ def lines_of(c, game):
                 if mpick == 'self' and tpick == 'self': continue  # each card about itself ("when I level up"): no link between two cards
                 if not names_fit(c, game, cards, tw, mw, mref): continue
                 if not terrain_fit(tw, mw): continue
+                if tpick == 'self' and mpick != 'self':  # done to one of my units that must be this card ("give the Demon Wing Flying",
+                    who = ';'.join(p for p in (mw or '').split(';') if p.split(' ')[:2] in (['card', 'is'], ['type', 'is'], ['type', 'in'],
+                                                                                        ['name_has', 'is']))  # "another Rakoan")
+                    if who and not matches(c, game, cards[t], 'any', who): continue
                 if tkind in RESOURCE_WORD and not colour_fit(tw, mw): continue  # a Green Mox cost is paid by a Green gem only
                 if mpick == 'self':  # what a card does to itself feeds only a need its own kind fits ("the strongest friendly Dragon")
                     own = ';'.join(p for p in (tw or '').split(';') if p.split(' ')[:2] in (['type', 'is'], ['type', 'in'], ['card', 'is'], ['name_has', 'is'], ['keyword', 'is']))
@@ -388,6 +392,11 @@ def aimed(c, game, nodes, broad):
                 'can': 'lets it do more', 'cant': 'stops it doing something', 'give_ability': 'gives it an ability',
                 'give_type': 'gives it a type', 'remove_keyword': f'removes {kwn(kw)}', 'copy_keywords': 'gives it keywords',
                 'mark': 'marks it'}.get(act, act.replace('_', ' '))
+        pev = dict(p.split('=', 1) for p in (ps or '').split(';') if '=' in p).get('event')
+        if act in ('can', 'cant') and pev:  # say what it may or may not do: "lets it be summoned there", "stops it moving"
+            what = {('can', 'summoned'): 'lets it be summoned in more places', ('can', 'played'): 'lets it be played in more places',
+                    ('can', 'moves'): 'lets it move more', ('cant', 'moves'): 'stops it moving', ('cant', 'attacks'): 'stops it attacking',
+                    ('cant', 'targeted'): 'protects it from targeting'}.get((act, pev), what + f' ({pev})')
         for b in hits:
             if rule: out[(a, b)].append(('boosts' if isinstance(rule, str) else 'rules', 1.0 / n, what))  # stats given make it stronger; the rest change how it works
             else: out[(a, b)].append(('targets', 0.5 / n, aim_said(act, kwn(kw), ps)))
@@ -507,10 +516,24 @@ def boost_lines(c, game, nodes):
             ('own','uses_keyword','has_keyword') and card in ({marks})""", L).fetchall()
     for hs, sides, concepts, why in HELPS:
         helpers = having(concepts, hs[0] == 'nexus_damaged'); n = count(concepts)
-        movers = having(concepts, True) if hs[0] == 'moves_onto' else helpers  # units that move well reach the wells themselves
+        move_rows = {}
+        if hs[0] == 'moves_onto':  # what moves another of my units, or gives it a movement keyword (row by row, not "has both somewhere")
+            move_rows = collections.defaultdict(list)
+            for a, w_ in c.execute(f"""select d.card, d.on_with from flat_do d left join card k on k.id=d.keyword_ref left join vocab v on
+                    v.field='keyword' and v.value in (k.name, k.game || ':' || k.name) where d.origin='own' and coalesce(d.on_pick,'') not in ('self')
+                    and coalesce(d.on_side,'mine') in ('mine','any') and coalesce(d.on_kind,'unit') in ('unit','any') and (d.act in ('move','swap')
+                    or (d.act='give_keyword' and v.tree='movement')) and d.card in ({marks})""", L): move_rows[a].append(w_)
+            helpers = set(move_rows)
+            movers = helpers | {a for (a,) in c.execute(f"""select ck.card from card_keyword ck join card k on k.id=ck.keyword join vocab v on
+                    v.field='keyword' and v.value in (k.name, k.game || ':' || k.name) where v.tree='movement' and ck.card in ({marks})""", L)}
+        else: movers = helpers  # units that move well reach the wells themselves
         for t, ab, h, side, role, pick in needs:
             if h not in hs or side not in sides: continue
             helpers_t = movers if pick != 'self' else helpers  # "whenever THIS moves onto": only what moves it, not other movers
+            if hs[0] == 'moves_onto':  # what it moves must be able to be this card ("give the Demon Wing Flying", "another Rakoan")
+                fits = lambda ws: any(not who or matches(c, game, cards[t], 'any', who) for who in (';'.join(p for p in (w_ or '').split(';')
+                       if p.split(' ')[:2] in (['card', 'is'], ['type', 'is'], ['type', 'in'], ['name_has', 'is'])) for w_ in ws))
+                helpers_t = {a for a in helpers_t if a not in move_rows or fits(move_rows[a])}
             if role == 'trigger' and pick == 'self' and h not in ('survives_damage', 'moves_onto', 'harvests'): continue  # getting there is help  # "Strike:" fires on any strike: more of it adds nothing
             if h in ('strikes', 'killed') and role == 'trigger': continue  # only counted strikes and kills grow with more power
             lv = ab in lvl
@@ -704,6 +727,8 @@ def network(c, game, ids, broad=True):
                 for k, w, why in ls:
                     if k == 'levels':  # only what levels a champion up is passed on: other lines through a made card stay on it
                         lines[(p, b)].append((k, w * 0.5, f'through {mechanics.name(c, m)}: {why}'))
+    lines = collections.defaultdict(list, {(a, b): [l for l in ls if not (nodes.get(b) and l[2] == 'draws it from the deck')]
+                                           for (a, b), ls in lines.items()})  # a card the deck only makes is in no deck to draw from
     same = lambda ls: list({(k, y): (k, w, y) for k, w, y in ls}.values())  # one card doing a thing twice (when summoned, when attacking) is one line
     return nodes, {k: same(v) for k, v in lines.items() if v}
 

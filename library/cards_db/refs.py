@@ -58,7 +58,7 @@ def build(c):
         if zone and kind == 'unit':
             for ev, *_ in causes.get(('zone', zone), []): ins(card, origin, via, ab, 'state', ev, kind, side, pick)
         # units picked by a keyword they have ("friendly units with Rage", "the amount of Armor"): fed by giving that keyword
-        for k in (re.findall(r'(?<![a-z:])keyword is (\d+)', withs or '') if kind != 'effect' else []):  # repeating Summon effects is no unit with Summon
+        for k in (re.findall(r'(?<![a-z:])keyword is (\d+)', withs or '') if kind != 'effect' and zone not in ('deck', 'deck_top', 'deck_bottom') else []):  # repeating Summon effects is no unit with Summon; a card in the deck has its keyword, nothing gives it (Iona's Smile draws Flying creatures)
             ins(card, origin, via, ab, 'state', 'given_keyword', kind, side, pick, int(k))
         # things picked by where they stand ("the enemy in front", "bordering units"): moving units changes who that is
         if re.search(r'(?<![a-z:])position ', withs or '') and kind in BOARD_KINDS:
@@ -109,7 +109,7 @@ def build(c):
             if test == 'amount_stat' or op in ('ge', 'gt'): sevs = tuple(e for e in sevs if e not in ('damaged', 'nexus_damaged'))
             elif op in ('le', 'lt'): sevs = tuple(e for e in sevs if e != 'healed')
             for sev in sevs:
-                ins(card, o, v, ab, 'condition', sev, fk, fs, fp, w=fw)
+                ins(card, o, v, ab, 'condition', sev, fk or 'unit', fs, fp, w=fw)  # a unit's stat unless a player's is named ("its Life" of "it")
         state_rows(card, o, v, ab, fk, fs, fp, fw, fz)
         state_rows(card, o, v, ab, ek, es, None, ew, None)
     # a card that has an action keyword uses it (Lurk, Support, Evolve, Fury on the unit itself), and does what the keyword is
@@ -134,7 +134,7 @@ def build(c):
         if act == 'keyword_action' and cref:  # a card planted or placed to go off later (a trap, a Chime): it goes off
             ins(card, o, v, ab, 'makes', 'trap_activated', 'card', s, None, w=f'card is {cref}', ref=cref)
         if kw and act in ('keyword_action', 'give_keyword'):  # what the keyword itself is (Predict: predicts)
-            for ev, *kwn in causes.get(('keyword', kwname.get(kw, '')), []): ins(card, o, v, ab, 'makes', ev, k, s, p, kw)
+            for ev, *kwn in causes.get(('keyword', kwname.get(kw, '')), []): ins(card, o, v, ab, 'makes', ev, k, s, p, kw, w=w)  # on what it is given to ("give the Demon Wing Flying")
         if act == 'cant' and pev == 'blocks' and s == 'enemy' and (p == 'self' or k in ('unit', None)):  # can't be blocked: hits the enemy player
             for ev in ('nexus_damaged', 'damaged'): ins(card, o, v, ab, 'makes', ev, 'player', 'enemy', None)
             ins(card, o, v, ab, 'makes', 'strikes_nexus', 'unit', 'mine', p)  # the unit itself strikes the Nexus
