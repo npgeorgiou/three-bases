@@ -1,7 +1,7 @@
 # Case tests: monster_train
 
 Made by `cases/run.py monster_train`.
-**147 of 149 cases pass.**
+**149 of 149 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -40,11 +40,11 @@ Made by `cases/run.py monster_train`.
 | mt30 | damages its own Pyre | 5 | 5 | 100% | 0 | yes |
 | mt31 | X cost amounts | 17 | 17 | 100% | 1 | yes |
 | mt32 | hits the front enemy unit | 21 | 21 | 100% | 4 | yes |
-| mt33 | on this floor | 14 | 14 | 100% | 50 | yes |
+| mt33 | on this floor | 14 | 14 | 100% | 51 | yes |
 | mt34 | consumed cards matter | 6 | 6 | 100% | 4 | yes |
 | mt35 | permanent changes | 7 | 7 | 100% | 11 | yes |
 | mt36 | moves units | 4 | 4 | 100% | 9 | yes |
-| mt37 | doubles amounts | 4 | 4 | 100% | 14 | yes |
+| mt37 | doubles amounts | 4 | 4 | 100% | 15 | yes |
 | mt38 | Armor (gives, has or uses it) | 20 | 20 | 100% | 0 | yes |
 | mt39 | Rage (gives, has or uses it) | 16 | 16 | 100% | 0 | yes |
 | mt40 | Multistrike (gives, has or uses it) | 13 | 13 | 100% | 0 | yes |
@@ -97,7 +97,7 @@ Made by `cases/run.py monster_train`.
 | cmt05 | Steelworker | Battering Ram | Armor turns into damage | keyword: Armor | yes |
 | cmt06 | Alloy of the Ancients | Reinforce | Armor to double | keyword: Armor | yes |
 | cmt07 | Welder Helper | Apex Imp | Armor added gives the Apex Imp Rage | keyword: Armor | yes |
-| cmt08 | Fledgling Imp | Imp-portant Work | an Imp to sacrifice | - | NO |
+| cmt08 | Fledgling Imp | Imp-portant Work | an Imp to sacrifice | target: type Imp | yes |
 | cmt09 | Molting Imp | Transcendimp | Summon effects to repeat | trigger keyword: Summon | yes |
 | cmt10 | Queen's Impling | Consumer of Crowns | Imps in play make it cheaper | type: Imp | yes |
 | cmt11 | Pyre Shards | Bramble Lash | Spikes turn into damage | keyword: Spikes | yes |
@@ -141,7 +141,7 @@ Made by `cases/run.py monster_train`.
 |---|---|---|---|---|---|---|
 | rmt01 | Hellhorned | signature (library) | Multistrike | 2 | 3 | yes |
 | rmt02 | Hellhorned | signature (library) | Rage | 8 | 11 | yes |
-| rmt03 | Hellhorned | signature (library) | Imps | 8 | 4 | NO |
+| rmt03 | Hellhorned | signature (library) | Imps | 8 | 14 | yes |
 | rmt04 | Hellhorned | archetype (Claude) | Armor | 8 | 12 | yes |
 | rmt05 | Hellhorned | archetype (Claude) | Summon triggers | 6 | 31 | yes |
 | rmt06 | Awoken | signature (library) | Sweep | 3 | 3 | yes |

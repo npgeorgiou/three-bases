@@ -11,3 +11,7 @@ runeterra	900175	V04	the count needs "played or summoned" as one distinct count,
 stormbound	1000184	V02	record_right	Claude: drawing copies from the enemy hand is copy into hand (BRIEF game words: Stormbound)	28 Oct 2026
 stormbound	1000229	KW	record_right	Claude: "reduce strength by" is a strength loss; the keyword Reduce strength sets a value (rulebook)	28 Oct 2026
 monster_train	2000177	V07	record_right	Claude: "without killing it" says the unit is not killed; the record repeats its Extinguish ability	28 Oct 2026
+monster_train	2000043	KW	record_right	Claude: "Enchant: grant Quick" is recorded as the aura it describes (Quick to my other units on the floor, lasts while)	29 Oct 2026
+monster_train	2000035	V50	record_right	Claude: doubling stacks is give_keyword with the count of stacks the unit has (BRIEF, Game words: Monster Train)	29 Oct 2026
+monster_train	2000036	V50	record_right	Claude: doubling stacks is give_keyword with the count of stacks the unit has (BRIEF, Game words: Monster Train)	29 Oct 2026
+monster_train	2000117	V50	record_right	Claude: doubling stacks is give_keyword with the count of stacks the unit has (BRIEF, Game words: Monster Train)	29 Oct 2026

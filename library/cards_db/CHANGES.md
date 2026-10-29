@@ -57,3 +57,7 @@ Each change: date, what changed, the card that caused it, and which records were
   upgrade_path).
 - 28 Oct 2026, v23 (Monster Train, repeated reader needs): x product, rarity uncommon, state boss, kind lane_resource_slot;
   BRIEF: doubling stacks is give_keyword with the count of stacks.
+- 29 Oct 2026, v25 (Monster Train): the unsure cards fixed by rule (fixes/monster_train/v25.py: product amounts, doubling
+  stacks, rarity pairs, non-boss, Echo slots, Sacrifice targets) instead of a re-read; Sacrifice's keyword record kills the
+  card's target; normalize N14 (draw from the top: one form, all games); second reading judged by Claude: Hallowed Halls
+  "to this floor" added; the rest same meaning.
