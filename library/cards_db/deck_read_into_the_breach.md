@@ -61,3 +61,57 @@ Same error elsewhere: Inscryption and Duelyst had the same and drop them in name
 Fix: names.tsv drops them for into_the_breach (the move stays; act move gives forced_movement or movement); Leaper's
 "Jump" is can move; Flying written on a move is dropped from it (v48.py F6). "Reset Turn" and "flip target" have no
 value: Isaac Jones and Seismic Capacitor stay unsure.
+
+## Deck read (30 Oct 2026, all 20 squads, after the v48 rebuild; 107 lines)
+Read with deck_lines.py, both cards' texts side by side. Nothing below is fixed yet: each family gets its rule, a
+cases/network.tsv row and a rebuild in the next step. Lines a player would keep: Bombling Mech -> Walking Bomb and Arachnoid
+Mech -> Arachnoid (summons), Meteor Mech -> Flame Mech (Fire for Flame Thrower's "damage units already on Fire"), Pulse,
+Slide and Hook Mech giving Energy Shield to an ally, Flame Mech -> the other mechs (Fire Immunity).
+
+## F7 Every pusher "enables" every weapon (95 lines, 18 of 20 squads)
+Lines: "makes units move", "makes enemy units move", "makes your units move", "moves it for its effect" between nearly all
+pairs (Combat Mech -> Cannon Mech, Artillery Mech -> Combat Mech ...).
+Root cause: refs.py state_rows: a target picked by position ("in a line from self", "adjacent to self") is a need for moves,
+and from my own unit a need for moving it (Kaptain's Duelyst rule 7: Holy Immolation, Bonereaper). Every Into the Breach
+weapon aims from its mech and nearly every weapon pushes, so every pair links.
+Same error elsewhere: to be measured with dump_lines.py --find "move" in every game before any change.
+Fix: open. It turns on Kaptain's rule 7 for a game where every unit moves itself each turn and every attack is aimed:
+asked of Kaptain before any change.
+
+## F8 "is a unit_or_structure it asks for" (49 lines; Stormbound 3 lines, Tode the Elevated)
+Lines: Combat Mech -> Artillery Mech, Walking Bomb -> Pierce Mech ...
+Root cause: network.py need_lines reads a position measured from another thing ("the tile beyond the pushed unit", of kind
+unit_or_structure) as a need for a card of that kind on my side; it skips kind unit (always there) but not unit_or_structure.
+Same error elsewhere: Stormbound, 3 lines to Tode the Elevated; no other game writes that kind in a position.
+Fix: proposed, treat unit_or_structure like unit there (any unit fits, so it is no need).
+
+## F9 "is a Mech it asks for" towards a passive that helps all Mechs (6 lines)
+Lines: Swap Mech -> Flame Mech, Meteor Mech -> Flame Mech (Flame Shielding), Thruster and Control Mech -> Smog Mech
+(Nanofilter Mending), Dispersal and Quick-Fire Mech -> Napalm Mech (Heat Engines).
+Root cause: network.py type line takes the passive's target type (Mech) as something it asks for; Kaptain's rule (30 Oct): a
+passive that helps cards points from it to them, and those cards do not enable it. The help line (Flame Mech -> Swap Mech)
+is right.
+Same error elsewhere: to be measured (type lines whose card only gives to that type).
+Fix: proposed, no type line when the type is only the target of the card's help.
+
+## F10 Viscera Nanobots: wrong side and wrong direction (2 lines; 2 missing)
+Lines: Leap Mech -> Nano Mech, Unstable Mech -> Nano Mech "triggers: kills your units". Viscera Nanobots heals any Mech that
+deals a killing blow: the lines should be Nano Mech -> Leap Mech and Nano Mech -> Unstable Mech, "heals it when it kills".
+Root cause: a damage target with no side is read as my units, and the trigger's actor (a Mech) is not used to point the
+help at the killer.
+Same error elsewhere: to be measured (triggers on "killed" whose actor is a type of my units).
+Fix: open.
+
+## F11 Vek Hormones set off by my own damage (2 lines)
+Lines: Judo Mech -> Gravity Mech, Siege Mech -> Gravity Mech "triggers: damages enemy units or players". Vek Hormones adds
+damage only when an enemy damages another enemy; the record says actor side enemy.
+Root cause: the line matches the event's object (enemy units) and does not check its actor.
+Same error elsewhere: to be measured (damaged triggers with an actor filter).
+Fix: open.
+
+## F12 Statuses on tiles do not reach cards that ask for units with them (missing lines)
+Missing: Thruster Mech -> Smog Mech (Reverse Thrusters leaves Smoke; Nanofilter Mending repairs Mechs standing on Smoke),
+Defense Mech -> Laser Mech and Charge Mech (Shield Projector shields tiles).
+Root cause: give_keyword on kind position (tiles) is not read as giving it to the unit on that tile.
+Same error elsewhere: Faeria and Duelyst give nothing to spaces that units then ask for; to be measured.
+Fix: open.

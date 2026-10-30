@@ -122,3 +122,17 @@
 - Link audit, explained: Pandora summons "a 3/3 Spirit Wolf with a random ability"; the source has five wolves under other
   names, so Spirit Wolf stays a name.
 - Wording still shared with other games: a player's damage reads "your Nexus or base" (the General in Duelyst).
+
+# Into the Breach: results (30 Oct 2026, v48, in progress; deck_read_into_the_breach.md)
+
+## What exists
+299 cards (42 mechs, 104 weapons, 17 passives, 20 pilots, Vek, tiles, 6 deployed units) and 27 keywords, read once; 30 cards
+read twice. 20 squads in decks.tsv (14 official, 6 players' custom); a squad of 3 mechs is the deck.
+
+## Quality
+- run.py passes every step; word check 0 flags, text audit 0 unexplained, 13 cases. Families F1-F6 fixed by rule (v48.py).
+- Link audit, explained: Spore, Alpha Spore, Alpha Blob, Blob Leader, Boulder, Unstable Boulder, Freeze Mine, Strange Pod and
+  Strange Object are things Vek and tiles put on the board; the source has no entry for them and the wiki is not reachable
+  from here, so they stay names. Emerging and High Tide are each one tile with two library pages (terrain and modifier,
+  same text); both are read alike and no deck holds them.
+- Deck networks: all 20 read; families F7-F12 open (deck_read_into_the_breach.md).
