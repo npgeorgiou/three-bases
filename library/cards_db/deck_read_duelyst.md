@@ -84,7 +84,7 @@ Second read, after the merge with Faeria's v39 code (same 10 decks):
     condition on the deck or discard ("if Krog is in your deck, draw him" fetches him). A card naming what it makes itself in
     its own effects (Blazing Spines' walls "can attack") asks for no other maker of it.
 
-## Kaptain's check (30 Oct 2026, v42): families (PROCESS "Kaptain's check of the Duelyst networks")
+## Kaptain's check (30 Oct 2026, v42): families (PROCESS_LESSONS "Kaptain's check of the Duelyst networks")
 Lines before -> after my v42 change, measured with the network code before and after (before the merge with Faeria's v41):
 Runeterra 597 gone / 15 new, Stormbound 18 / 4, Monster Train 2 / 0, Faeria 53 / 3, Inscryption 19 / 1; every gone and new
 reason group read.

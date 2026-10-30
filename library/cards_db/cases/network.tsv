@@ -233,3 +233,7 @@ nst30	sts1	Watcher Divinity (gamersdecide)	Devotion	Smite	line	Mantra	Claude (au
 nst31	sts1	Ironclad Body Slam (highgroundgaming)	Pure Water	Miracle	none		Kaptain 30 Oct 2026 (i): a deck gets only its own character's starting relic
 nst32	sts1	Watcher Stance Change (highgroundgaming)	Flurry of Blows	Bottled Flame	none		Claude (audit): Bottled Flame picks an Attack, it asks for none
 nst33	sts1	Defect Lightning (highgroundgaming)	Capacitor	Electrodynamics	line	more slots	Claude (audit): more Orb slots keep more Lightning
+nst34	sts1	Defect Reprogram (highgroundgaming)	Melter	Claw	line	gets through	Kaptain 30 Oct 2026: Melter removes Block, every damage card hits in full
+nst35	sts1	Defect Claw (gamersdecide)	All for One	Claw	line	brings it back	Kaptain 30 Oct 2026: All for One returns all 0-cost cards; it aims at none
+nst36	sts1	Defect Claw (gamersdecide)	All for One	Claw	none	can bring it back	Kaptain 30 Oct 2026: not "can aim at it"
+nst37	sts1	Defect Lightning (highgroundgaming)	Zap	Thunder Strike	line	uses Lightning	Claude: Thunder Strike counts Lightning Channeled, not every Orb

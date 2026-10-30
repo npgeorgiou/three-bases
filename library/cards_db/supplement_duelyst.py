@@ -79,7 +79,7 @@ def names(rows):
 
 def keywords_field(text, kws):
     """Lines that are only keywords ("Provoke", "Flying", "Airdrop, Forcefield") become the Keywords field, so the card
-    inherits the keywords' records (PROCESS "A card list that looked whole" 3); labels ("Opening Gambit:") and keywords with
+    inherits the keywords' records (PROCESS_LESSONS "A card list that looked whole" 3); labels ("Opening Gambit:") and keywords with
     a number ("Backstab: (2).") stay in the text."""
     alt = '|'.join(re.escape(k) for k in sorted(kws, key=len, reverse=True))
     only = re.compile(rf'^(?:{alt})(?:\s*,\s*|\s+(?:and\s+)?)?(?:(?:{alt})(?:\s*,\s*|\s+(?:and\s+)?)?)*\.?$', re.I)

@@ -25,6 +25,9 @@ create index fwc on flat_when(card); create index fdc on flat_do(card); create i
 """
 
 
+import re
+
+
 # a concept for my own side and its counterpart when the effect hits the enemy (concept tree: "not this" parts)
 ON_ENEMY = {'movement': 'forced_movement', 'return_to_hand': 'bounce_enemy', 'transform': 'polymorph', 'mill': 'mill', 'self_mill': 'mill'}
 
@@ -132,6 +135,11 @@ def build(c):
             if kref and act in ('keyword_action', 'give_keyword') and kref not in seen:  # the keyword's meaning on this target
                 for (kab,) in c.execute('select id from ability where card=? and given_by_effect is null', (kref,)).fetchall():
                     ability_rows(card, kab, 'uses_keyword', kref, applied_to=(k, s, p, z, w), seen=tuple(seen) + (kref,), action=act == 'keyword_action')
+            if act == 'keyword_action' and k == 'keyword' and w:  # "Channel 1 Lightning": the Orb put in play does what its entry
+                # says (deals damage, gains Block or energy), and the card that put it in does that through it
+                for put in {int(x) for x in re.findall(r'keyword (?:is|in) (\d+)', w)} - set(seen):
+                    for (kab,) in c.execute('select id from ability where card=? and given_by_effect is null', (put,)).fetchall():
+                        ability_rows(card, kab, 'uses_keyword', put, seen=tuple(seen) + (put,))
             for (sub,) in c.execute('select id from ability where given_by_effect=?', (eid,)).fetchall():  # abilities this effect gives
                 ability_rows(card, sub, 'gives', eid, seen=seen, flip=(s == 'enemy') != flip)
 

@@ -189,6 +189,8 @@ def build(c):
             s = 'enemy'  # "deal 2 to a creature" (either side): the player aims it at an enemy; it makes no friendly deaths
         if p == 'actor' and not (k or s): k, s = actor_of.get((card, ab), (None, None))
         if to_p == 'actor' and not (to_k or to_s): to_k, to_s = actor_of.get((card, ab), (None, None))
+        if act == 'keyword_action' and k == 'keyword' and w:  # "Channel 1 Lightning": Lightning is used too (Thunder Strike counts it)
+            for put in re.findall(r'keyword (?:is|in) (\d+)', w): ins(card, o, v, ab, 'makes', 'keyword_used', None, 'mine', None, int(put))
         if p == 'actor' and not s and (card, ab) in hit_mine: s = 'enemy'
         if to_p == 'actor' and not to_s and (card, ab) in hit_mine: to_s = 'enemy'
         if act == 'can' and k == 'player' and pev not in (None, 'played', 'summoned', 'targeted'):  # "you may replace an additional

@@ -62,6 +62,21 @@ Builds: Frost Tank, Lightning Spam, Claw [1]; Focus stacking, Loop + Defragment,
 Known for: stances (Calm, Wrath, Divinity), stance dancing for burst, Mantra [2]; Retain, creating and upgrading cards, Scry [1].
 Builds: Retain, Creation, Stance Master, Scry [1]; stance burst, Mantra [2].
 
+## What the database must know (learned importing it, 30 Oct 2026; PROCESS_LESSONS "Importing Slay the Spire")
+- The player is the only one of my side: statuses go on the player (Strength, Dexterity, Focus, Wrath, Calm, Divinity) or
+  on enemies (Vulnerable, Weak, Poison, Lock-On). A card that gives a status does what the status does.
+- Strength: Attacks deal more. Dexterity: Block a card gives when played is bigger (not a Power's later Block, not
+  Entrench; slaythespire.wiki.gg/wiki/Dexterity). Focus: Orbs are stronger. Vulnerable: attack damage taken is bigger.
+- Orbs (Lightning: damage; Frost: Block; Dark: damage that grows; Plasma: energy) are put in slots by Channel and act at
+  the end of the turn; Evoke uses them up. The card that channels an Orb does what the Orb does. More slots (Capacitor)
+  keep more Orbs.
+- Stances: Wrath, Calm and Divinity are each "this Stance" in their own texts; "whenever you change Stances" is entering
+  any of them. 10 Mantra is Divinity.
+- X costs: written "-1 energy" by the source; they are X (energy spent decides the size). Unplayable cards have no cost.
+- Every character starts with a relic (Burning Blood, Ring of the Snake, Cracked Core, Pure Water); a boss relic
+  "Replaces" it (Black Blood, Ring of the Serpent, Frozen Core, Holy Water).
+- Runs: relics, potions, rest sites, shops and events are run rules (act run_rule), not card effects.
+
 ## Combos
 - Body Slam + Barricade / Entrench: Block becomes damage [1]
 - Demon Form / Limit Break + Sword Boomerang / Whirlwind: Strength with multi-attack [1]
@@ -103,10 +118,10 @@ retain|retain|\bretain\b
 scry|selection|\bscry\b
 upgrade created cards|upgrade|\bupgrade\b
 create cards|generate_cards|\badd [a-z0-9 ]{0,30} (into|to) your hand\b
-# term: Block: absorbs attack damage; Barricade and Entrench keep and grow it (thegamer); it is removed at the start of the next turn otherwise (assumed).
+# term: Block: absorbs attack damage; it is removed at the start of your turn unless kept (Barricade: "Block is not removed at the start of your turn"); Entrench doubles it.
 # term: Orbs: channelled into slots; Frost gives Block, Lightning deals damage; Focus strengthens orbs (thegamer; slaythespire.gg).
 # term: Stances: Calm, Wrath and Divinity; switching between them (stance dancing) is the Watcher's burst (slaythespire.gg).
-# term: Retain: the card stays in hand at the end of the turn (assumed); Establishment makes retained cards cheaper (thegamer).
+# term: Retain: the card stays in hand at the end of the turn (game glossary); Establishment makes retained cards cheaper (thegamer).
 ```
 
 ## Cases

@@ -1,7 +1,7 @@
 # Draft: a deck (or a whole game) as a network of cards
 
 Status: built as network.py (`ask.py <game> network ...`) and network_page.py; Kaptain's first check fixed (CHANGES v30,
-PROCESS "Links the deck networks showed missing"); lines added since: boosts (makes its damage bigger), cards that are
+PROCESS_LESSONS "Links the deck networks showed missing"); lines added since: boosts (makes its damage bigger), cards that are
 what another waits for when played, kinds of card another needs (type lines). Builds on deck_analysis.py and mechanics.py.
 Choices Claude made where this plan says nothing (Kaptain to judge): weights of rules lines = 1 / cards of the game making the
 same change, of targets lines = 0.5 / cards making the same act; chains are ranked by the geometric mean of their weights and

@@ -20,7 +20,6 @@ Each rule names the text it reads and the value it writes (vocab rows of v49):
   act run_rule on the player, replacing the readers' stand-ins (cant activated, empty abilities); its triggers ("whenever you
   rest", "enter a shop / rest site / room", "open a chest", "climb a floor") are event run_event.
 - "Orb" alone ("for each Orb", "your next Orb") is no keyword: keyword in Lightning, Frost, Dark, Plasma.
-- "N Frost / Lightning Channeled this combat" counts keyword_used Channel (the Orb used as a keyword had no makers).
 - Shop prices ("discount on all products", "Merchant prices") are run rules, never card cost changes.
 - A family by name that is exactly one card of the game ("Shivs") is that card (filter card), unless the text says
   "containing" (Strike Dummy: "Cards containing Strike").
@@ -188,14 +187,7 @@ def fix(r, props):
         def f(o):
             if o.get('act') == 'gold_gain' and isinstance(o.get('params', {}).get('amount'), dict): o['params']['amount'] = {'x': 'all_of'}
         walk(abs_, f); done |= {'params', 'all_gold'}
-    # "the number of Frost / Lightning Channeled this combat": counts uses of Channel (the readers wrote the Orb as the keyword
-    # used, which nothing makes: audit_links 1); which Orb is not kept (no value for an action keyword's object)
-    if re.search(r'\b(?:frost|lightning|dark|plasma) channeled\b', low):
-        def f(o):
-            if o.get('event') == 'keyword_used' and isinstance(o.get('object'), dict):
-                for w in o['object'].get('with', []):
-                    if w.get('attr') == 'keyword' and w.get('ref') in ('Frost', 'Lightning', 'Dark', 'Plasma'): w['ref'] = 'Channel'
-        walk(abs_, f)
+    # "the number of Frost / Lightning Channeled this combat": the Orb used, as the readers wrote it (v52: Channel now makes it)
     # the run between fights
     if needs & RUN_ACTS or (not abs_ and (RUN_TEXT.search(t) or re.search(r'\b(?:drop|relic)\b', low))):
         abs_[:] = [ab for ab in abs_ if not any(e.get('act') == 'cant' and (e.get('params') or {}).get('event') == 'activated' for e in ab['do'])]

@@ -764,6 +764,9 @@ def aimed(c, game, nodes, broad):
                     ('can', 'moves'): 'lets it move more', ('cant', 'moves'): 'stops it moving', ('cant', 'attacks'): 'stops it attacking',
                     ('cant', 'targeted'): 'protects it from targeting', ('cant', 'given_keyword'): f'keeps {kwn(kw) or "a status"} off it'}.get((act, pev), what + f' ({pev})')
         at = where(w)  # who benefits from a place: "when next to it", "in its circuit" (positional games; Inscryption Leader)
+        if act == 'return_card':  # "put all cost 0 cards from your discard pile into your hand" (All for One): it brings them back
+            for b in hits: out[(a, b)].append(('puts', 1.0 / max(1, len(hits)), 'brings it back to your hand'))
+            continue
         for b in hits:
             if rule: out[(a, b)].append(('boosts' if isinstance(rule, str) else 'rules', 1.0 / n, what + at))  # stats given make it stronger; the rest change how it works
             elif helps_it(c, act, kw, ps): out[(a, b)].append(('boosts', 0.5 / max(1, len(hits)), aim_said(act, kwn(kw), ps) + at))
@@ -1331,9 +1334,11 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
              and d.act='remove_keyword' and d.on_side='enemy' and d.card in ({marks}) and exists (select 1 from flat_do g where
              g.card=d.keyword_ref and g.act='negate_damage')""", L)}  # the keyword it strips is one that stops damage (Block)
     wants = {t for (t,) in c.execute(f"""select distinct card from flat_when where event='damaged' and coalesce(obj_side,'enemy')='enemy'
-             and obj_with like '%state is unblocked%' and card in ({marks})""", L)}
+             and obj_with like '%state is unblocked%' and card in ({marks})""", L)} | {t for (t,) in c.execute(f"""select distinct card
+             from flat_do where origin='own' and act='damage' and on_side='enemy' and card in ({marks})""", L)}  # and every card of mine
+             # that deals damage: with the Block gone it hits in full (Kaptain 30 Oct 2026, Melter)
     for a in strip:
-        for t in wants - {a}: out[(a, t)].append(('boosts', 0.5 / len(wants), 'strips their Block: its damage gets through'))
+        for t in wants - {a}: out[(a, t)].append(('boosts', 0.5 / len(wants), 'removes their Block: its damage gets through'))
     # a status that makes damage bigger (Vulnerable on an enemy: it takes more; Wrath on me: I deal more): the cards that give it
     # make every card of mine that deals damage stronger
     orbs = {k for (k,) in c.execute("""select distinct d.card from flat_do d join card k on k.id=d.card where k.is_keyword=1 and k.game=?

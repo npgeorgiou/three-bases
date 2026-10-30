@@ -1,42 +1,33 @@
-# Next chat: deck networks — state, open work, how to work (29 Oct 2026, v34)
+# Next chat: import the next game (30 Oct 2026, v53)
 
-Read this file, then HANDOFF.md. Everything below is pushed. Kaptain is out of patience: he has found real errors in every
-round, because the work fixed only what he pointed at. **Your job is to find the errors he has not pointed at.**
+Read HANDOFF.md first (its two boxes are the rules most often broken), then PROCESS.md and PROCESS_LESSONS.md. Everything
+below is pushed. Kaptain checks a few decks and has found real errors in every round, because work fixed only what he
+pointed at. **Your job is to find the errors he has not pointed at, before he looks.**
 
-## How to think (read twice; this is what went wrong three times)
-1. Every error Kaptain names is ONE example of a FAMILY. Before fixing it, write down the family ("an ability given to the
-   player that boosts a kind of card", "a status keyword read as if it adds damage", "a condition about the card itself
-   stored without 'self'"), then find EVERY member in ALL THREE GAMES with a query or a text regex over all cards, read
-   20 of them, fix the rule, and read 20 again after. Never fix one card.
-2. Think like a player of the game, card by card: for each card in a deck ask "what does this card need to work well
-   (its level-up, triggers, conditions, stats, keywords, type) and which cards in the deck give it that?" and "what does
-   this card give, and to whom?". Then compare with the network. Missing help is as wrong as a wrong line.
-3. Read the card TEXT, not only the rows. If text and rows disagree, the rows are wrong: fix them by rule (fixes/<game>/vNN.py).
-4. Never write "not sure" about something you can check: read the texts, the game's glossary (supplement, library/tools/games/
-   <game>.md), the wiki. Kaptain's examples: "Spirits Unleashed deals 1 to EVERYTHING" (so it does hit Braum: the line is
-   right); "Imps in your deck" — Monster Train's own glossary says Consume removes a card "from the deck for the rest of the
-   battle", so deck = all cards of the battle: Imps added to hand count (Imp-in-a-Box -> Imp-olate is right).
-5. Use real decks as the mirror: many full decks per game; for each, read every line and every missing line (point 2).
-6. Report only what is checked. Say which families you swept and how many cards each touched.
+## How to think (this is what went wrong, game after game)
+1. Every error is ONE example of a FAMILY. Name the cause in one sentence, find every member in ALL games (a query, a text
+   regex, `dump_lines.py --find`), fix the shared rule once, dump before and after, read the diff. Never fix one card.
+2. Think like a player, card by card: what does this card need, and which cards give it that? What does it give, and to
+   whom? Missing help is as wrong as a wrong line. Run `deck_audit.py <game>` and read all of it.
+3. Read the card TEXT, not only the rows. If they disagree, the rows are wrong: fix them by a text rule (fixes/<game>/vNN.py).
+4. Never write "not sure" about something you can check: the texts, the game's glossary, the wiki. Read the game's own
+   limits on a mechanic before drawing a line (Slay the Spire's Dexterity: only Block a card gives when played).
+5. What a card gives (a status) or puts in play (a token, an Orb) acts through it: check the database says so, or every
+   question over damage, Block or energy misses those cards (PROCESS_LESSONS "Importing Slay the Spire" 2).
+6. Report per family, with counts per game, and say honestly what was not checked.
 
-## Open work, in order
-1. **Kaptain's check of v34** (CHANGES.md): game rules as data, help table, line names, deck-read families. Fix what he
-   finds as a family, for all games, and write the lesson in PROCESS.md.
-2. **Monster Train full decks: none found as text** (Steam, GameFAQs, the wiki: players post screenshots). Ask Kaptain.
-3. Read more decks like a player (PROCESS step 2.9): read so far Janna Nilah, Swain Ziggs, Soraka Tahm Kench, Aphelios
-   Zoe, Lurkers, Chronobreak, IC pirate, Frost Deck, Morsel build, Hellhorned armor.
-4. Not linked on purpose (Claude's calls): Janna's "the first 3 cards you draw cost 1 less" (helps any card); Stormbound
-   units moving forward each turn (every unit, says nothing); removal spells (Hush, Mystic Shot) help no card in particular.
-5. After any change: `check_all.py <game>` (one reload; HANDOFF box), for all games (now 300 / 137 / 146 cases), audit_links.py 0 findings,
-   `python3 network_page.py`, give Kaptain network.html, push.
+## Open work (not this chat's game unless asked)
+- Deck checks of the other games with `deck_audit.py`: another chat does them (Kaptain, 30 Oct 2026).
+- Stormbound csb09-csb13 (poisoned-unit combos) fail; Runeterra n56 must be rewritten (HANDOFF "State").
+- Slay the Spire: Through Violence is missing (no reachable source on 30 Oct 2026); add it to supplement_sts1.py when one is.
+- Monster Train has no full decks as text (players post screenshots): ask Kaptain.
+- Not linked on purpose (Claude's calls, keep unless Kaptain says otherwise): Janna's "the first 3 cards you draw cost 1
+  less" (helps any card); Stormbound units moving forward each turn (every unit); plain single-target damage (Strike, Mystic
+  Shot) feeds no "when an enemy dies".
 
 ## Where things are
-- network.py: lines (lines_of, aimed, played_lines, need_lines, boost_lines, gives_lines, families, through-made-card
-  level-ups), measures, report. network_page.py -> network.html (game picker, decks, sidebar sections incl. Mechanics).
-- refs.py (flat_ref: makes/trigger/condition/state with kinds, self, actor_self), flat.py (query layer, concept RULES),
-  audit_links.py (in run.py), cases/network.tsv (Kaptain's checks as tests), fixes/runeterra/v30.py, v31.py.
-- PROCESS.md: "Links the deck networks showed missing", "Think like a player"; BRIEF.md rules 23-25; CHANGES.md v30-v32.
-
-## Slay the Spire (sts1): Kaptain's second check fixed (30 Oct 2026, v52)
-deck_read_sts1.md F1-F19. Open: whether Orbs (Lightning, Frost, Dark, Plasma) should be shown as their own nodes (asked).
-Known gaps at the end of deck_read_sts1.md. After any change: check_all.py, then deck_audit.py sts1 (HANDOFF boxes).
+- network.py: every line rule (lines_of, aimed, played_lines, need_lines, boost_lines, gives_lines, keyword_adders,
+  status_damage_givers, special_abilities, EXPENSIVE); network_page.py -> network.html; deck_lines.py, deck_audit.py.
+- refs.py (what each card makes and needs), flat.py (query layer: keywords given, used or put in play are expanded onto the
+  card), deck_analysis.py (deck parsing, starter items), check_all.py, dump_lines.py, review_check.py.
+- cases/network.tsv (line or no line, per deck), cases/mechanics.tsv (questions over records); deck_read_<game>.md (families).

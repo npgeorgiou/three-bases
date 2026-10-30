@@ -144,3 +144,21 @@ Kaptain's word), and 3 players' runs as played; a deck is each mech followed by 
   shield damage_over_time` shows its cards next to the other games' (it has the most forced movement of all games).
 - Check of 20 cards: CHECK_20_into_the_breach.md (ids in CHECK_20_into_the_breach_ids.txt), checked by Claude at Kaptain's
   word (30 Oct 2026: "its YOUR task"); errors and fixes in deck_read_into_the_breach.md "Check of 20 cards".
+
+# Slay the Spire: results (30 Oct 2026, v53, done; two checks by Kaptain fixed; deck_read_sts1.md F1-F20)
+
+## What exists
+- 814 entries (supplement/sts1.jsonl, the library's sts1 entries repaired by supplement_sts1.py): 414 cards (75 per
+  character, colorless, curses, statuses, upgraded forms that change more than numbers), 179 relics, 42 potions, 49
+  keywords (statuses, Orbs, Stances), 49 monsters, 11 bosses, 51 events, 20 Ascension levels; 892 abilities, 4,846 rows of
+  what cards make and need.
+- 22 guide decks (decks.tsv): guides' core cards and relics, no full end-of-run deck exists as text; every deck also holds its
+  character's starting relic. 533 network lines.
+- Cases: 53 (nst01-nst37 network lines, ms01-ms03 Orb questions), all passing.
+
+## Quality
+- Word check 0 flags, text audit 0. Link audit: 4 findings, all explained: run events (rest sites, shops) are made by the
+  run, not by cards; "dies (mine)" (Fairy in a Bottle, Lizard Tail) is my own death, which no card causes; "removed from
+  deck" (Parasite) is done by shops and events; Through Violence (made by Reach Heaven) is missing from the library.
+- Orbs act through the cards that channel them (ms01-ms03): questions over damage, Block and energy find Zap, Glacier,
+  Meteor Strike.

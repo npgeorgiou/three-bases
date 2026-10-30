@@ -357,3 +357,12 @@ Each change: date, what changed, the card that caused it, and which records were
   Capacitor, Lock-On), picks / kept draws / adders / Mantra / Melter, wording. fixes/sts1/v51.py; supplement_sts1.py
   ("Replaces" gives the character); deck_analysis.starters. Dexterity only for Block a card gives when played (wiki).
   Other games' lines unchanged. Cases nst26-nst33; nst19 rewritten.
+
+## 30 Oct 2026, v53 (Slay the Spire done; Kaptain's last check; docs tidied)
+- flat.py: an action that puts a keyword in play ("Channel 1 Lightning") expands that keyword's rows onto the card; refs.py:
+  it uses that keyword. fixes/sts1/v52.py: Blizzard and Thunder Strike count their own Orb (v49's Channel rule removed).
+- network.py: removing an enemy keyword that stops damage (Melter) helps every damage card; return_card lines are "brings it
+  back to your hand" (also Monster Train Impish Scholar, Faeria Krog's Dinner). deck_read_sts1.md F20; cases ms01-ms03,
+  nst34-nst37.
+- Docs: PROCESS.md split (PROCESS_LESSONS.md holds each import's and review's lessons, with "Importing Slay the Spire");
+  HANDOFF.md and NEXT_CHAT.md rewritten for the next importing chat; README, RESULTS (Slay the Spire), tools/games/sts1.md.

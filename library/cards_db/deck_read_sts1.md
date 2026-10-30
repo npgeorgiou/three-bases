@@ -178,5 +178,22 @@ had no rule.
 - Same error elsewhere: only games with no units of mine (Slay the Spire); Exhaust only in Slay the Spire.
 - Fix: damage to me in a game without units of mine is "makes you lose HP"; ACT "exhausts cards".
 
-## Open (for Kaptain)
-- Known gaps: Blizzard and Thunder Strike count every Channel; Through Violence is not in the library.
+## F20 Orbs did nothing for the cards that put them in; Melter; All for One (Kaptain 30 Oct 2026, last check)
+Zap ("Channel 1 Lightning") did not deal damage in the database, Glacier gave no Frost Block, Meteor Strike's Plasma no energy:
+questions over damage, Block or energy missed every Orb card. Blizzard and Thunder Strike counted every Channel. Melter linked
+to no damage card. All for One read "can aim at it" though it returns all 0-cost cards.
+- Root cause: the query layer expanded the keywords a card gives or uses on a target, not the keyword an action puts in play
+  (Channel's Orb); v49 had made the counts count Channel because nothing "used" an Orb; the Block rule looked only for cards
+  asking for unblocked damage; returning cards was a chosen-target line.
+- Same error elsewhere: an action that puts a keyword in play exists only in Slay the Spire (Channel; Faeria's Discover and
+  Runeterra's Manifest name card filters, not keywords put in play: unchanged). Returning cards: Monster Train Impish Scholar
+  and Faeria Krog's Dinner now read "brings it back to your hand" too.
+- Fix: flat.py: "Channel 1 Lightning" adds Lightning's rows to the card (it deals the damage); refs.py: it uses Lightning;
+  fixes/sts1/v52.py: Blizzard counts Frost, Thunder Strike Lightning (v49's Channel rule removed); removing a keyword that stops
+  damage helps every damage card of mine; return_card lines are "brings it back to your hand". Cases ms01-ms03, nst34-nst37.
+
+## Open
+- Through Violence (made by Reach Heaven) is not in the library; its wiki pages (wiki.gg, fandom) were not reachable from
+  here on 30 Oct 2026. Add it to supplement_sts1.py when a source is reachable.
+- Orbs are shown through the cards that put them in, not as their own cards in the networks (Kaptain asked whether
+  questions find them: they do now, ms01-ms03).
