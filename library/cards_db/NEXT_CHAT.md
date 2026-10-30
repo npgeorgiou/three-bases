@@ -14,6 +14,10 @@ library/README.md (what the library is for and how design questions are asked). 
 ## Open, in Kaptain's order
 1. Read every answer in library/design_questions/ like a designer and trace each wrong or thin one (seen: Taunt and Provoke
    count as stopping enemies; Inscryption's Waterborne counts as stopping enemies; Duelyst and Faeria disruption near 0).
+   Done: "can't attack this" (Waterborne, Repulsive) is no enemy lock. Asked Kaptain, waiting: (a) my own unit's Can't Block
+   (127 Runeterra cards, flat.py rule cant_block) and stop rows aimed at my own units (Into the Breach 38, Runeterra 39) count
+   as stopping enemies; (b) Taunt and Provoke still count as immobilize; (c) disruption: enemy mana loss (Malicious Wisp,
+   Saurian Finality) and units put on the enemy side (Brood Parasite, Cuckoo, Dubious Hags) have no rule.
 2. Trace every miss of `realworld.py` (84 of 275 cases miss; Inscryption combos with sigils find no line; Ironclad has no
    permanent_growth) and every lead of `audit_links.py` 10 (Runeterra: 379 cards tagged on_kill before have no row for it).
 3. Item 7, approved, not started: every card-to-card line of every deck as a table in cards.sqlite (from, to, kind, reason),
