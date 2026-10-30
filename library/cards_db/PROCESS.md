@@ -410,6 +410,12 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
 17. **Decks that were not full.** Inscryption's decks were starters (4-7 cards) and players' cores without counts; Kaptain
    saw too few cards and lines. Only 5 full 20-card decks exist as text (Steam threads); step 2.9 now says what a full
    deck is and that starters do not count.
+18. **A cost rule makes every unit a payer** (v42, Kaptain's Faeria point seen in Inscryption): "any unit can be sacrificed"
+   and "any death gives a Bone" linked every creature to every Blood and Bones card. By the rules alone only a unit that
+   costs nothing to play is played to be spent (Squirrel, Skeleton); others pay by their own text. A card that wants to die
+   keeps its line from the cards that sacrifice it (Ouroboros). deck_read_inscryption.md F9-F10.
+19. **Card states named as states** (v42): a deck says "Child 13", the source's first tab is "Dormant"; the state a card is
+   played in keeps the card's name. Search for decks under every name a guide uses (Son1a = S0N1A, Fish Bot = Fishbot).
 15. **More or faster base resource** (Kaptain 29 Oct 2026: not linked to costs, but findable): concept base_resource_gain
    (mana, spell mana, Ember, faeria, Energy; a second resource such as Bones or gems stays resource_gain), `ask.py
    <game> factions base_resource_gain` gives each faction's share, and ask.py analyze names the ramp cards. Cases mx16, ri08.

@@ -55,8 +55,8 @@
   the texts from the wiki page Special Card Behaviours.
 - Game rules (read/inscryption/game_rules.jsonl): units fight, Bones from deaths, units can be sacrificed, and Blood,
   Bones and Green / Orange / Blue Mox costs, which are needs of the cards whose cost names them.
-- Full decks: only 5 exist as text (Steam threads, 20 cards each; counts in decks.tsv). The other 15 are starter decks
-  (where a run begins) and do not count as full. 20 decks in decks.tsv, all read card by card: the four Act II starters, five players' Act II decks, the Act I and Act III
+- Full decks: 7 exist as text (Steam threads and a Steam guide, 20 cards each; counts in decks.tsv); 10 core lists from
+  gamersdecide.com (all three acts, Act III included) and 14 starter decks (where a run begins). 31 decks in decks.tsv: the four Act II starters, five players' Act II decks, the Act I and Act III
   starters and the eight Kaycee's Mod starters.
 
 ## Quality

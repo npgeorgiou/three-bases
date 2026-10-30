@@ -301,7 +301,9 @@ def lines_of(c, game):
                 if not doer_fits(m, actor, h): continue
                 # my units are hurt or die in fights by the rules: every unit would feed "when a friendly unit dies" (Soul Eater,
                 # Shaytan Monstrosity); only cards that hurt or kill my units do (Kaptain 30 Oct 2026); a cost the rules pay stays
-                if rule and not cost and h in OWN_LOSS and ms != 'enemy': continue
+                # except a card that wants to die itself (Ouroboros grows each time it dies): a card paid for by sacrifice lets you
+                # sacrifice it (Mantis God -> Ouroboros)
+                if rule and not cost and h in OWN_LOSS and ms != 'enemy' and not (rule in cost_rules and tpick == 'self'): continue
                 # a rule that needs a place ("harvest a well next to it": an enemy well is deep in enemy ground) is done by the units
                 # that get there, not by every unit: what moves them is the help (HELPS movement); Gabrian Archon -> Wavecrash Colossus
                 if rule and not cost and 'position ' in (mw or ''): continue
@@ -316,6 +318,11 @@ def lines_of(c, game):
                 if tkind == 'player' and leader_game: say = one_leader(say)  # "whenever your General attacks"
                 if h == 'mana_refilled' and tkind in RESOURCE_WORD: say = RESOURCE_WORD[tkind]  # not mana: say which resource
                 if cost and rule in cost_rules: continue  # another card paying its own cost pays nothing for this one
+                # every unit can be sacrificed or die for Bones: by the rules alone only a unit that costs nothing to play is played
+                # to be spent (Squirrel, Skeleton, Bone Heap -> a Blood or Bones card); others pay only by their own text
+                if rule and (cost or tkind in RESOURCE_WORD) and cards[m]['cost']: continue  # also Bones spent by an ability (Enlarge)
+                if rule in cost_rules and not cost and tpick == 'self' and h in OWN_LOSS: say = 'can sacrifice it for its cost (sets off its death effect)'
+                if cost and rule and h == 'sacrificed': say = 'is sacrificed for it'  # a free unit by the rules (Squirrel -> Wolf)
                 if cost: say += ' (pays its cost)'
                 if rule and not cost and not lv and (rule != 'units fight' or m not in rule_fighters) and actor[0] != 'player' and \
                         not (tkind == 'player' and h in ('attacks', 'strikes', 'fights')) and not any(
@@ -536,7 +543,7 @@ def where(w):
     """the place a target filter asks for, measured from the card itself, in plain words (' when next to it')"""
     for p in (w or '').split(';'):
         b = p.split(' ')
-        if b[:2] == ['position', 'is'] and len(b) == 3 and b[2] in PLACE_WORDS: return f' (when {PLACE_WORDS[b[2]]})'
+        if b[:2] == ['position', 'is'] and (len(b) == 3 or b[3:] == ['of', 'self']) and b[2] in PLACE_WORDS: return f' (when {PLACE_WORDS[b[2]]})'  # "of self" = measured from it
     return ''
 
 
@@ -705,6 +712,7 @@ def need_lines(c, game, nodes, broad):
         cnt = kind_count(c, game, kind, w)
         what = 'a card it acts on' if kind == 'any' else f'a {"landmark or structure" if kind == "landmark" else kind} it asks for'
         kws_ = [mechanics.name(c, int(p.split(' ')[2])) for p in (w or '').split(';') if p.startswith('keyword is ') and p.split(' ')[2].isdigit()]
+        if not kws_ and not counted and any(p.split(' ')[:2] in (['type', 'is'], ['type', 'in']) for p in (w or '').split(';')): continue  # the type line says it ("is a Conduit card it asks for")
         if kws_ and kind != 'any': what = what.replace(' it asks for', f' with {", ".join(kws_)} it counts or asks for')  # "a unit with Ant
         for a in nodes:
             if a == t or a not in cards: continue
@@ -1062,12 +1070,21 @@ def made(c, game, ids):
     return new
 
 
+def forms_of(root, pairs):
+    """a card and the forms it turns into are one card (union of the pairs; forms that turn into each other, Swapbot, too)"""
+    def fam(n):
+        seen = set()
+        while root[n] != n and n not in seen: seen.add(n); n = root[n]
+        return n
+    for a, b in pairs:
+        if a in root and b in root and fam(a) != fam(b): root[fam(b)] = fam(a)
+    return fam
+
+
 def families(c, nodes):
     """a champion and its level-up forms are one card in play (a levelled champion is never next to its own level 1)"""
     root = {n: n for n in nodes}
-    for a, b in c.execute("select src, dst from card_link where rel='transforms_into'"):
-        if a in root and b in root: root[b] = a
-    fam = lambda n: n if root[n] == n else fam(root[n])
+    fam = forms_of(root, c.execute("select src, dst from card_link where rel='transforms_into'").fetchall())
     return {n: fam(n) for n in nodes}
 
 
@@ -1184,9 +1201,7 @@ def chains(best, nodes, top=10, per_node=None):
     """paths of 2 to 4 cards, strongest first (strength = geometric mean of the line weights; levels-into lines are free;
     targets lines are left out, any card will do for them; a champion and its level-up form count as one card)"""
     adj, root = collections.defaultdict(list), {n: n for n in nodes}
-    for (a, b), (w, kind, why) in best.items():
-        if kind == 'levelsinto': root[b] = a
-    fam = lambda n: n if root[n] == n else fam(root[n])
+    fam = forms_of(root, [(a, b) for (a, b), (w, kind, why) in best.items() if kind == 'levelsinto'])
     for (a, b), (w, kind, why) in best.items():
         if kind != 'targets': adj[a].append((w, b, kind, why))
     for a in adj:
@@ -1228,9 +1243,7 @@ def groups(best, nodes):
     """cards that share more line weight with each other than with the rest (each card takes the group its neighbours weigh
     most for, until nothing changes; a line counts less the more partners its two cards have); one group = one plan"""
     root = {n: n for n in nodes}
-    for (a, b), (w, kind, why) in best.items():
-        if kind == 'levelsinto': root[b] = a
-    fam = lambda n: n if root[n] == n else fam(root[n])  # a champion and its level-up forms are one card here
+    fam = forms_of(root, [(a, b) for (a, b), (w, kind, why) in best.items() if kind == 'levelsinto'])
     nb = collections.defaultdict(collections.Counter)
     for (a, b), (w, kind, why) in best.items():
         a, b = fam(a), fam(b)

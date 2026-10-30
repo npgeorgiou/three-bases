@@ -10,7 +10,8 @@ Empty Vessel, Act III Trees on Trees, sha256 3493c1ba...), read through the wiki
 Rules for turning boxes into cards (Claude's, from the box layout):
 - Every tab is a card. A tab named Act I/II/III, Kaycee's Mod or Menu Preview is a version of the same card (extra.versions),
   unless its cost type differs from the first tab's (Daus in Act III costs Energy): then it is its own card "<name> (<tab>)".
-- A tab whose label is a state of the card (FORM_TABS: Left, Defense, Base Form, Dormant ...) is "<title> (<tab>)"; any other
+- A tab whose label is a state of the card (FORM_TABS: Left, Defense, Base Form, Dormant ...) is "<title> (<tab>)", except a
+  first tab that is the state it is played in (START_TABS: Defense, Base Form, Dormant), which keeps the title (Child 13); any other
   tab label is the card's name (Wolf Cub, Spore Mice, Sarcophagus). A tab with its own titleN uses that title.
 - The same name from another page takes that page's title (Amalgam (Act II)); from the same page it is a version.
 - Faction: the page's one faction category; with several, the tab's cost (Energy Technology, Mox Magick, Blood Beast, Bones
@@ -36,6 +37,7 @@ SRC = 'Inscryption fandom wiki card box (inscryption.fandom.com, read 29 Oct 202
 EDITIONS = {'Act I', 'Act II', 'Act III', "Kaycee's Mod", 'Menu Preview'}
 FORM_TABS = {'Left', 'Right', 'Defense', 'Attack', 'Base Form', 'Beast Form', 'Dormant', 'Awakened', 'Undead',
              'Rabbit', 'Wolf', 'Golden', 'Emerald', 'Ruby', 'Sapphire'}
+START_TABS = {'Defense', 'Base Form', 'Dormant'}  # a first tab that is the state the card is played in: decks and texts name the card
 RENAME = {'Gem Vessels (Emerald)': 'Emerald Vessel', 'Gem Vessels (Ruby)': 'Ruby Vessel',
           'Gem Vessels (Sapphire)': 'Sapphire Vessel'}   # the wiki's redirects Emerald/Ruby/Sapphire Vessel -> Empty Vessel#Gem Vessels
 RENAME['Cat (Undead)'] = 'Undead Cat'  # the name the wiki page Special Card Behaviours gives it
@@ -57,7 +59,7 @@ BEHAVIOUR = {
                       "a card perishes, it clears all spaces on opponent's side of the board. Once a card has less than 70 Health, "
                       "each turn one Skeleton Crew per 5 damage taken since last turn will drop onto player's side of the board "
                       "(if there are free slots).",
-    'Child 13 (Dormant)': 'When a card is sacrificed, it switches between portraits and receives/loses temporary modifier that '
+    'Child 13': 'When a card is sacrificed, it switches between portraits and receives/loses temporary modifier that '
                           'increases Power by 2 and adds Airborne Sigil. Sacrificing for 14th time will kill the card, as if it '
                           "didn't have the Many Lives Sigil.",
     'Daus': 'If a card with "bell" in its internal ID (Chime, Bell Tentacle) is attacked, a card with this Behaviour will strike '
@@ -176,13 +178,14 @@ def main():
         first_kind, made = None, []
         for n in sorted(T):
             f = T[n]
-            tab = plain(f.get('tab')) or t1
+            tab = plain(f.get('tab')) or t1; ext = None
             if (p['title'], tab) in SKIP_TABS: continue
             c, cnum, kind = cost(f.get('cost'))
             if n == min(T): first_kind = kind
             own = plain(f.get('title')) if n > 1 and f.get('title') else None
             if own and own != tab: name = f'{own} ({tab})'
             elif tab in EDITIONS or tab in (t1, 'Normal'): name = t1
+            elif tab in START_TABS and n == min(T): name = t1; ext = f'{t1} ({tab})'  # the state it is played in keeps the card's name (Child 13, Swapbot); its id stays
             elif tab in FORM_TABS: name = f'{t1} ({tab})'
             else: name = tab
             name = RENAME.get(name, name)
@@ -216,7 +219,7 @@ def main():
             beh = BEHAVIOUR.get(RENAME.get(name, name))
             if beh and (name, 'b') not in seen_beh: parts.append('Special behaviour: ' + beh); seen_beh.add((name, 'b'))
             acts = [x for x in p['cats'] if re.fullmatch(r"Act I{1,3}|Kaycee's Mod|Finale", x)]
-            entry = {'game': 'inscryption', 'ext_id': None, 'name': name,
+            entry = {'game': 'inscryption', 'ext_id': None, '_ext': ext, 'name': name,
                      'category': 'terrain' if terrain else 'unit', 'source_type': f"card ({SRC}; page {p['title']} rev {p['rev']})",
                      'edition': ', '.join(acts) or None, 'faction': faction(p, name, kind, libfac),
                      'subtypes': json.dumps([t for t in re.findall(r'[A-Z][a-z]+', plain(f.get('tribe'))) if t in TRIBES] + types) if f.get('tribe') or types else None,
@@ -239,7 +242,7 @@ def main():
         page_tabs.append(made)
     # ext_id: the game's asset name, else the name; stable ids
     for e in cards:
-        e['ext_id'] = 'wiki:' + (e['_asset'] or e['name'])
+        e['ext_id'] = 'wiki:' + (e['_asset'] or e.get('_ext') or e['name'])
     old = {}
     if os.path.exists(OUT):
         old = {r['ext_id']: r['id'] for r in map(json.loads, open(OUT))}

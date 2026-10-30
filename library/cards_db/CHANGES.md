@@ -254,4 +254,16 @@ Each change: date, what changed, the card that caused it, and which records were
 - vocab: Duelyst Celerity causes attacks and moves. supplement_duelyst.py: a General's text names its spell card;
   fixes/duelyst/v41.py drops the spell copy from the General's record.
 - network_page.py: right click copies a terse card or line text; tooltips show types. deck_lines.py prints the same text.
+## 30 Oct 2026, v43 (Inscryption: rule lines from every unit, decks; deck_read_inscryption.md F9-F12)
+- network.py: a cost or resource need (Blood, Bones, Bones spent by an ability) is fed by the rules only from a unit that
+  costs nothing to play; other units only by their text (F9). A cost rule's sacrifice still feeds a card's trigger on its
+  own death, Mantis God -> Ouroboros (F10). where() reads "of self" filters ("(when in its circuit)", Stormbound "(when
+  around it)"). A need whose only filter is a type makes no "is a unit it asks for" line: the type line says it (every
+  game: Stormbound 13, Duelyst 8, Faeria 5, Monster Train 5, Inscryption 5, Runeterra 4 duplicates gone, no pair lost).
+  Forms that turn into each other (Swapbot) are one card (forms_of; it looped before).
+- deck_analysis.parse_deck: a name written with other spaces ("Fish Bot") finds the card, every game.
+- supplement_inscryption.py: a first tab that is the state a card is played in keeps the card's name (Child 13, GR1ZZ,
+  Swapbot, S0N1A, QU177), ids kept (F11).
+- decks.tsv: 12 Inscryption decks added (10 core lists from gamersdecide.com, 2 full ones from a Steam guide); 31 in all.
+- Cases ni10, ni12 rewritten, ni17 dropped for mi25, ni18-ni21 added. Lines: Inscryption 371 -> 289.
 

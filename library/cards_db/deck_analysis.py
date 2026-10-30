@@ -60,8 +60,11 @@ def parse_deck(c, game, text):
     while rest.strip(' ,\n'):
         rest = rest.strip(' ,\n'); low = rest.lower()
         m = next((n for n in known if low.startswith(n.lower()) and (len(rest) == len(n) or rest[len(n)] in ',\n')), None)
-        if not m:
-            cut = rest.find(','); unknown.append((rest if cut < 0 else rest[:cut]).strip()); rest = '' if cut < 0 else rest[cut:]
+        if not m:  # the same name written with other spaces ("Fish Bot" for Fishbot)
+            cut = rest.find(','); word = (rest if cut < 0 else rest[:cut]).strip()
+            m = next((n for n in known if n.lower().replace(' ', '') == word.lower().replace(' ', '')), None)
+            if m: found.append(m); rest = '' if cut < 0 else rest[cut:]; continue
+            unknown.append(word); rest = '' if cut < 0 else rest[cut:]
             continue
         found.append(m); rest = rest[len(m):]
     ids = [c.execute('select id from card where game=? and name=? and is_keyword=0 and is_stub=0', (game, n)).fetchone()[0] for n in found]

@@ -74,9 +74,9 @@ ni06	inscryption	Act II bones and sacrifice (Archeronline4U)	M3atB0t	Urayuli	lin
 ni07	inscryption	Act II bones and sacrifice (Archeronline4U)	Bone Lord's Horn	Tomb Robber	line		Claude (v36): Bonehorn gives Bones; Disentomb pays 1 Bone (a spent resource is a need)
 ni08	inscryption	Kaycee's Mod Bones	Coyote	Pelts (Rabbit)	none	sacrificed	Claude (v36): a Pelt costs 0 Blood, so it needs no sacrifice (a cost rule needs a cost above 0)
 ni09	inscryption	Act II Ouroboros and Mantis God (koi)	Mantis God	Ouroboros	line		Claude (v36): playing Mantis God sacrifices Ouroboros, which grows each time it dies (special behaviour Ouroboros)
-ni10	inscryption	Act II Ouroboros and Mantis God (koi)	Ouroboros	Mantis God	none	Blood costs	Claude (v36): Ouroboros paying its own Blood cost pays nothing for Mantis God
+ni10	inscryption	Act II Ouroboros and Mantis God (koi)	Ouroboros	Mantis God	none		Claude (v36, rewritten v41): Ouroboros (2 Blood) paying its own cost pays nothing for Mantis God; no line at all
 ni11	inscryption	Kaycee's Mod Ants	Ant Queen	Flying Ant	line		Claude (v36): Flying Ant's Power is the number of Ants; Ant Queen is an Ant (wiki pages Ants, Ant)
-ni12	inscryption	Kaycee's Mod Moose Blood	Moose Buck	Pelts (Rabbit)	none	your units move	Claude (v36): where Pelt Lice are put (adjacent slots) does not need units to move
+ni12	inscryption	Kaycee's Mod Moose Blood	Moose Buck	Pelts (Rabbit)	none		Claude (v36, rewritten v41): where Pelt Lice are put needs no moves, and Moose Buck is no free sacrifice; no line at all
 nfa03	faeria	Fast Rakoans	Rakoan Illusionist	Imperial Trooper	none	onto	Claude, deck read: the Illusionist gives Flying to another Rakoan; the Trooper is no Rakoan, nothing moves it onto enemy land
 nfa04	faeria	Fast Rakoans	Airbot	Imperial Trooper	none	onto	Claude, deck read: Airbot's own Dash moves Airbot, not the Trooper (its forward position helps the Trooper enter nearer enemy land: that line is right)
 nfa05	faeria	Beastmaster Green	Time of Legends	Eredon, Voice of All	line	puts:	guide: Time of Legends brings Eredon out early (draws the top legend)
@@ -109,7 +109,6 @@ ni13	inscryption	Kaycee's Mod Free Reptiles	Rabbit	Bullfrog	none	sacrificed	Clau
 ni14	inscryption	Act III starter	Sniper Bot	Double Gunner	none		Claude (v38): two strikers, nothing between them
 ni15	inscryption	Alpha, Wolf, Moose Buck	Alpha	Wolf	line		Claude (v39): Leader (wiki: "Creatures adjacent to a card bearing this sigil gain 1 Power") boosts the units next to Alpha; a keyword's effect on other cards is a line too
 ni16	inscryption	Daus, Bell Tentacle	Bell Tentacle	Daus	line		Claude (v39): Daus strikes a card that attacks a Chime or Bell Tentacle (wiki Special Card Behaviours): the card it names
-ni17	inscryption	Daus, Bell Tentacle	Bell Tentacle	Daus	none	by fighting	Claude (v39): Daus waits for an enemy to attack the Bell Tentacle; Bell Tentacle attacking is not it
 ndu01	duelyst	Vaath Dying Wish	Spelljammer	Dagona	none		Claude, deck read: a counterattack hits the attacker, an enemy; Dagona's Dying Wish is its own death (family 1)
 ndu02	duelyst	Cassyva Replace Abomination	Healing Mystic	Letigress	none	attack	Claude, deck read: Letigress waits for the General attacking, not any unit (family 2)
 ndu03	duelyst	Cassyva Replace Abomination	Cassyva Soulreaper	Letigress	line		Claude, deck read: the General attacks: a cub joins the pack
@@ -177,3 +176,7 @@ nfa47	faeria	Midrange Sacrifice	Wind Soldier	Soul Eater	line	waits:	Claude from 
 nfa48	faeria	Bargain (Krog)	Krog's Dinner	Ogre Battler	none		Kaptain 30 Oct 2026: as nfa39
 nfa49	faeria	Yellow Monstrosity	Khalim's Training	Windborne Emissary	line	type:	Claude from Kaptain's point 1: giving Flying to a creature enables the Emissary
 nfa50	faeria	Voice of Hunger Control	Falcon Dive	Eredon, Voice of All	none	death effect	Claude from Kaptain's point 10: 1 damage does not kill a 3 Life unit
+ni18	inscryption	Act II Ouroboros and Mantis God (koi)	Mantis God	Ouroboros	line		Claude (v41): a Blood card lets you sacrifice Ouroboros, which grows each time it dies (koi's deck plan)
+ni19	inscryption	Act II Ouroboros and Mantis God (koi)	Squirrel	Mantis God	line		Claude (v41): Squirrels cost nothing and are played to be sacrificed
+ni20	inscryption	Kaycee's Mod Moose Blood	Mole	Moose Buck	none	sacrificed	Claude (v41): every unit can be sacrificed; Mole (1 Blood) is no fodder by its text
+ni21	inscryption	Act II bones and sacrifice (Archeronline4U)	Urayuli	Bone Heap	none	Bones	Claude (v41): every death gives a Bone; Urayuli (4 Blood) is not played to die

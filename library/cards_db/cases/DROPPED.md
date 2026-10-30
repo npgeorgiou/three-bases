@@ -21,3 +21,5 @@
   Mantis God + Fecundity, Geck + Fecundity, the Squirrel, Insect and Reptile totems): a sigil moved onto a card at the
   Mysterious Stones or by a totem is a change to the card between battles, not two cards of a deck; the cards database links
   cards only.
+
+- ni17 (network, Inscryption, Bell Tentacle -> Daus none 'by fighting'): no line says "by fighting" or "attack" any more, so it could not fail; replaced by mechanics case mi25 (an enemy attacking my Chime or Bell Tentacle is the enemy's attack: refs.py DONE_BY). 30 Oct 2026, v41.

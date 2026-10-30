@@ -40,22 +40,67 @@ missing line is listed first; the families below say how each is fixed once, for
 | (concepts) | same_lane ("the opposing creature") gives no lanes concept; in_circuit no link_formation; strikes on the spaces left and right of the opposing one no cross_lane | flat.py RULES for every game |
 | (network wording) | "Leader makes it stronger" does not say "when next to it"; who benefits from a position is not said | aimed lines name the position of their filter |
 
-## Families and fixes (each once)
-1. Strikes into empty spaces reach the opponent (records, fixes/inscryption/v38.py): Bifurcated, Trifurcated, Trifurcated
-   When Powered, Sniper get a strike to the enemy player (link or); Double Strike becomes a second strike. Case mi21.
-2. Board forms (records, v38.py): Clinger, Loose Tail, Hefty, Sentry as in the table.
-3. Deck conditions (records, v38.py): Finical Hatchling's ten counts (Power 1-5, Health 1-5) and six tribes in the deck.
-4. Card data (supplement_inscryption.py): Tadpole -> Bullfrog (wiki Fledgling page); conduit cards get the type Conduit
-   (wiki Category:Conduit Sigils) and "within a circuit" also needs two Conduit cards of mine (wiki Circuits).
-5. Shared concepts (flat.py): lanes from same_lane, link_formation from in_circuit, cross_lane from a target on the sides of
-   an opposing space; checked in every game (cases/run.py).
-6. Shared explainer (deck_analysis.py): a strike at enemy units is control; a support whose target needs a keyword no card
-   of the deck has or is given is no support.
-7. Shared network wording (network.py aimed): a line from an effect with a position filter says where ("next to it",
-   "opposite it", "in its circuit").
-8. Shared network (network.py, refs.py; v39): a keyword's effect on other cards makes aimed lines (Alpha's Leader -> Wolf,
-   ni15); a card named in a filter gets a line from that card (Bell Tentacle -> Daus, ni16); an enemy attacking my unit is
-   not fed by my attacks (ni17).
+## Families (by cause; the first eight v38-v39, F9-F12 v41)
+
+## F1 Strikes into empty spaces did not reach the opponent
+Root cause: readers wrote Bifurcated, Trifurcated (When Powered) and Sniper as strikes on units only; Double Strike as Runeterra's double_strike.
+Same error elsewhere: no other game strikes spaces (Stormbound, Faeria and Duelyst attack units or the base directly); 5 sigils here.
+Fix: fixes/inscryption/v38.py: a strike to the enemy player, link or; Double Strike a second strike. Case mi21.
+
+## F2 Board places written in a column's or another game's words
+Root cause: readers wrote "towards them", "to the right", "in the way", "into the space opposing" with same_space, Push, in_front.
+Same error elsewhere: Faeria and Duelyst write the BRIEF "The board" forms (v38); Stormbound's columns are right there.
+Fix: v38.py and v39.py by text: sides, bordering, moves_onto with the mover as object; Burrower's space mine. Cases mx12, mi22, mi23.
+
+## F3 A deck condition left unsure
+Root cause: Finical Hatchling's "every tribe and Power and Health 1 to 5 in the deck" had no reading.
+Same error elsewhere: no other game has a deck-content condition of that shape (checked: no "in your deck" count of every value).
+Fix: v38.py: ten counts and six tribe counts in the deck.
+
+## F4 Card data the source split over pages
+Root cause: the wiki puts a grown form on another page (Tadpole -> Bullfrog) and circuits on a category page.
+Same error elsewhere: Runeterra level forms and Duelyst follow-ups come from the same card's data; no split pages there.
+Fix: supplement_inscryption.py: FLEDGLING_TO, Conduit Card type; "within a circuit" counts two Conduit Cards (v38.py).
+
+## F5 Position filters made no concept
+Root cause: flat.py RULES had no rule for same_lane, in_circuit and strikes on the sides of the opposing space.
+Same error elsewhere: Duelyst and Faeria positions now map too (checked with cases/run.py on every game: all pass).
+Fix: flat.py lanes, link_formation, cross_lane for every game.
+
+## F6 The explainer did not count strikes or check a support's target
+Root cause: deck_analysis.py control role ignored strikes; support roles kept rows whose target needs a keyword the deck lacks.
+Same error elsewhere: Runeterra and Stormbound supports with keyword targets were also listed; all games' deck cases still pass.
+Fix: deck_analysis.py, for every game.
+
+## F7 Lines did not say where help works
+Root cause: network.py aimed lines dropped the position filter in their wording.
+Same error elsewhere: every positional game (Faeria, Duelyst, Stormbound) had the same wording.
+Fix: network.py where(): "(when next to it)", "(opposite it)".
+
+## F8 Keyword effects on others, named cards and the attacker's side
+Root cause: aimed lines read only a card's own rows; a card named in a filter made no line; an "attacks" trigger took the attacked unit's side.
+Same error elsewhere: has_keyword aims: Runeterra 76, Monster Train 22, Duelyst 1 rows; named cards in every game; enemy attackers: Duelyst 2 triggers.
+Fix: network.py aimed_rows reads has_keyword; named lines; refs.py DONE_BY. Cases ni15, ni16, mi25.
+
+## F9 Every unit linked to every Blood and Bones card by the rules
+Root cause: network.py lines_of joined the cost rules' needs (Blood, Bones, Bones spent by Enlarge) to the rules' makers on every unit: any unit can be sacrificed and any death gives a Bone (Wolf -> Great Kraken, Urayuli -> Bone Heap).
+Same error elsewhere: cost rules exist only in Inscryption (game_rule.cost_has); dump_lines diff: Inscryption 371 -> 168 lines (106 sacrifice, 75 Bones cost, 23 Bones spend gone), every other game 0 changed. The same pattern Kaptain rejected in Faeria (rules' harm) was fixed there in v41.
+Fix: a cost or resource need is fed by the rules only from a unit that costs nothing to play (Squirrel, Skeleton, Rabbit, Bone Heap, Pelts: played to be spent); other units only by their own text (Worthy Sacrifice, Bone Digger). Claude's rule; checked on all 31 Inscryption decks. Cases ni19, ni20, ni21.
+
+## F10 A card that wants to die lost its line from the cards that sacrifice it
+Root cause: v41 dropped the rules' harm to my own units (Faeria), which also removed "a Blood card lets you sacrifice Ouroboros" (Ouroboros grows each time it dies).
+Same error elsewhere: only cost rules that sacrifice (Inscryption Blood) and a card whose own trigger is its own death: Ouroboros, Ourobot, Cat; no other game has a cost rule.
+Fix: network.py: the rules' harm still feeds nothing, except a cost rule's sacrifice feeding a card's trigger on its own death ("can sacrifice it for its cost (sets off its death effect)"). Case ni18.
+
+## F11 Decks named cards the database stored under a state's name
+Root cause: supplement_inscryption.py named every state tab "<card> (<tab>)", so "Child 13", "Swapbot", "GR1ZZ", "S0N1A", "QU177" were no cards; parse_deck needed exact spacing ("Fish Bot" for Fishbot).
+Same error elsewhere: Runeterra champions keep their name ("Kalista", level form "(level 2)"); Duelyst collectible cards keep the name (v37 rule); spacing variants: none in other games' decks.
+Fix: the first tab that is the state a card is played in (Dormant, Defense, Base Form) keeps the card's name, its id kept; parse_deck accepts a name with other spaces, every game.
+
+## F12 Decks that were not full
+Root cause: Claude took starter decks and players' core cards as decks without counting copies (step 2.9 did not say what a full deck is).
+Same error elsewhere: Monster Train has only guides' core cards (HANDOFF says so); Runeterra, Stormbound, Faeria and Duelyst decks are full lists or deck codes.
+Fix: PROCESS 2.9 and HANDOFF: a full deck has its copies and the game's deck size; starters and cores are marked. Inscryption: 7 decks with their 20-card counts, 10 core decks from a guide added (marked core).
 
 ## Check of 20 cards (CHECK_20_inscryption.md, by Claude: Kaptain does not know the game)
 Each card's rows compared with its text and the wiki. Right: Spilled Blood, Sprinter, Blue and Green Mox, Gem Guardian,
