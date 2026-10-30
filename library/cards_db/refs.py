@@ -121,11 +121,15 @@ def build(c):
         if ev and ev != 'always':
             pk = op if obj else ap
             side = os_ if obj else as_
+            # "when a Mech kills": the Mech is who kills, not what is killed (Viscera Nanobots); the victim is not said
+            doer = not obj and ev in ('killed', 'damaged') and ap != 'self'
+            if doer: side, pk = '', None
             if ev in DONE_BY and as_ == 'enemy' and ap != 'self': side = 'enemy'  # "if a Chime is attacked": an enemy attacks, not mine
             if ap == 'self' and op != 'self':  # "Strike: ... the attacked unit": it is about the card striking, not the unit hit
                 pk = 'actor_self' if ev in BY_ME else 'self'
             for k in (kws_of(ow) if len(kws_of(ow)) > 1 else [kw_of(ow)]):  # "traps or boons": one row per keyword, never "any keyword"
-                ins(card, o, v, ab, 'trigger', ev, ok if obj else ak, side, pk, k, w=ow if obj else aw, ak=ak if obj else None, aw=aw if obj else None)
+                ins(card, o, v, ab, 'trigger', ev, ok if obj or doer else ak, side, pk, k, w=ow if obj or doer else aw,
+                    ak=ak if obj or doer else None, aw=aw if obj or doer else None)
         state_rows(card, o, v, ab, ok, os_, op, ow, 'deck' if ev in ('drawn', 'played', 'discarded') else None,  # "draw a Flying
                    entering=ev in ('summoned', 'played'))  # "summoned adjacent to this": where it enters; moving is no help
         # creature": the card has Flying already; nothing given in play makes it one

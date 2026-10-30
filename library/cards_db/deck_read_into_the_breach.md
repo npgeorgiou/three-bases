@@ -83,7 +83,8 @@ Lines: Combat Mech -> Artillery Mech, Walking Bomb -> Pierce Mech ...
 Root cause: network.py need_lines reads a position measured from another thing ("the tile beyond the pushed unit", of kind
 unit_or_structure) as a need for a card of that kind on my side; it skips kind unit (always there) but not unit_or_structure.
 Same error elsewhere: Stormbound, 3 lines to Tode the Elevated; no other game writes that kind in a position.
-Fix: proposed, treat unit_or_structure like unit there (any unit fits, so it is no need).
+Fix (v48): need_lines treats unit_or_structure like unit there. Gone: 49 Into the Breach lines, 13 Stormbound lines to
+Tode the Elevated (all decks). Case ntb1.
 
 ## F9 "is a Mech it asks for" towards a passive that helps all Mechs (6 lines)
 Lines: Swap Mech -> Flame Mech, Meteor Mech -> Flame Mech (Flame Shielding), Thruster and Control Mech -> Smog Mech
@@ -92,7 +93,10 @@ Root cause: network.py type line takes the passive's target type (Mech) as somet
 passive that helps cards points from it to them, and those cards do not enable it. The help line (Flame Mech -> Swap Mech)
 is right.
 Same error elsewhere: to be measured (type lines whose card only gives to that type).
-Fix: proposed, no type line when the type is only the target of the card's help.
+Fix (v48): the type lines skip an effect that helps my cards: removing a status that is no buff (Fire, Smoke) and what a
+helping keyword the card gives does (Fire Immunity, Boost). A keyword's concept now comes from the game's own vocab entry
+first (into_the_breach:Boost is a buff; another game's Boost is not). Same error in Slay the Spire: 49 "is an Attack it asks
+for" lines to Strength cards are gone (NEXT_CHAT family 1); the help lines it wants are still missing there. Case ntb2.
 
 ## F10 Viscera Nanobots: wrong side and wrong direction (2 lines; 2 missing)
 Lines: Leap Mech -> Nano Mech, Unstable Mech -> Nano Mech "triggers: kills your units". Viscera Nanobots heals any Mech that
@@ -100,18 +104,29 @@ deals a killing blow: the lines should be Nano Mech -> Leap Mech and Nano Mech -
 Root cause: a damage target with no side is read as my units, and the trigger's actor (a Mech) is not used to point the
 help at the killer.
 Same error elsewhere: to be measured (triggers on "killed" whose actor is a type of my units).
-Fix: open.
+Fix (v48): refs.py: on "killed" and "damaged" with no object, the actor is who does it, the victim is not said (also
+LeBlanc level 2 "each time you deal 15+ damage": damage dealers now feed it). network.py: a trigger that only helps the
+unit that did it (doer_help_abilities) waits for nothing; a help line goes from the card to the deck's cards of that kind
+that do it (doer_help_lines): Nano Mech -> Leap Mech and Unstable Mech "heals it when it kills". Case ntb3.
 
 ## F11 Vek Hormones set off by my own damage (2 lines)
 Lines: Judo Mech -> Gravity Mech, Siege Mech -> Gravity Mech "triggers: damages enemy units or players". Vek Hormones adds
 damage only when an enemy damages another enemy; the record says actor side enemy.
 Root cause: the line matches the event's object (enemy units) and does not check its actor.
 Same error elsewhere: to be measured (damaged triggers with an actor filter).
-Fix: open.
+Fix (v48): a trigger's actor side is kept; an enemy actor is fitted only by cards that make an enemy strike, attack or
+turn its attack. Case ntb4.
 
 ## F12 Statuses on tiles do not reach cards that ask for units with them (missing lines)
 Missing: Thruster Mech -> Smog Mech (Reverse Thrusters leaves Smoke; Nanofilter Mending repairs Mechs standing on Smoke),
 Defense Mech -> Laser Mech and Charge Mech (Shield Projector shields tiles).
 Root cause: give_keyword on kind position (tiles) is not read as giving it to the unit on that tile.
 Same error elsewhere: Faeria and Duelyst give nothing to spaces that units then ask for; to be measured.
-Fix: open.
+Fix (v48): a keyword given to a tile reaches the unit on it (lines_of and aimed_rows read kind position as
+unit_or_structure). New: Thruster Mech -> Smog Mech (Smoke), Defense Mech -> Laser Mech and Charge Mech (Energy Shield),
+Jet Mech -> Rocket Mech (Smoke for Storm Generator). Case ntb5.
+
+## After the fix (30 Oct 2026, one rebuild)
+Into the Breach 107 -> 99 lines; Stormbound 696 -> 683; Slay the Spire 451 -> 410; Runeterra +3 (LeBlanc level 2); Duelyst
++1 (Lilithe -> Spectral Blade); other differences are only the order of reasons. Cases pass in every game (Stormbound 141
+of 145, the known csb09-csb13). ntb2 and ntb4 are flagged "reason no line says": the fix removed every such line of the game.
