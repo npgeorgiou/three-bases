@@ -183,7 +183,8 @@ ni21	inscryption	Act II bones and sacrifice (Archeronline4U)	Urayuli	Bone Heap	n
 n70	runeterra	Braum Zoe	Behold the Infinite	Supercool Starchart	none		Kaptain 30 Oct 2026: both make Celestials; "Invoke a Celestial" names what it makes, it asks for none
 n71	runeterra	Caitlyn Teemo	Poison Dart	Caitlyn	line	plants traps	Kaptain 30 Oct 2026: Poison Dart does not activate traps; it plants Puffcaps that the opponent sets off
 ntb1	into_the_breach	Blitzkrieg	Lightning Mech	Boulder Mech	none		Claude (v48, F8): a place measured from any unit ("the tile beyond the pushed unit") asks for no card
-ntb2	into_the_breach	Flame Behemoths	Swap Mech	Flame Mech	none	is a Mech it asks for	Kaptain 30 Oct 2026 (F9): Flame Shielding helps every Mech; the Mechs do not enable it
+ntb2	into_the_breach	Swap Mech, Flame Shielding	Swap Mech	Flame Shielding	none		Kaptain 30 Oct 2026 (F9): Flame Shielding helps every Mech; the Mechs do not enable it
 ntb3	into_the_breach	Hazardous Mechs	Nano Mech	Leap Mech	line	heals it when it kills	Claude (v48, F10): Viscera Nanobots heals any Mech that kills
-ntb4	into_the_breach	Steel Judoka	Judo Mech	Gravity Mech	none	triggers: damages	Claude (v48, F11): Vek Hormones needs an enemy to damage another enemy
+ntb4	into_the_breach	Steel Judoka	Judo Mech	Gravity Mech	none	damages enemy units	Claude (v48, F11): Vek Hormones needs an enemy to damage another enemy
+ntb6	into_the_breach	Aegis Mech, Gravity Mech, Judo Mech	Aegis Mech	Gravity Mech	line	damages enemy units	Claude (v48, F11): Spartan Shield turns an enemy's attack onto other enemies, which sets off Vek Hormones
 ntb5	into_the_breach	Mist Eaters	Thruster Mech	Smog Mech	line	Smoke	Claude (v48, F12): Reverse Thrusters leaves Smoke; Nanofilter Mending repairs Mechs on Smoke

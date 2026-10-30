@@ -1,9 +1,7 @@
 # Case tests: into_the_breach
 
 Made by `cases/run.py into_the_breach`.
-**18 of 18 cases pass.**
-
-**Cases whose reason no line says any more (rewrite them): ntb2, ntb4**
+**19 of 19 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -44,7 +42,8 @@ Made by `cases/run.py into_the_breach`.
 | case | deck | from | to | expect | found | pass |
 |---|---|---|---|---|---|---|
 | ntb1 | Blitzkrieg | Lightning Mech | Boulder Mech | none  | - | yes |
-| ntb2 | Flame Behemoths | Swap Mech | Flame Mech | none is a Mech it asks for | type: makes units move | yes |
+| ntb2 | Swap Mech, Flame Shielding | Swap Mech | Flame Shielding | none  | - | yes |
 | ntb3 | Hazardous Mechs | Nano Mech | Leap Mech | line heals it when it kills | type: makes units move; also heals: heals it when it kills | yes |
-| ntb4 | Steel Judoka | Judo Mech | Gravity Mech | none triggers: damages | type: makes units move; also moves it for its effect | yes |
-| ntb5 | Mist Eaters | Thruster Mech | Smog Mech | line Smoke | type: makes your units get Smoke; also makes your units move; also makes units m | yes |
+| ntb4 | Steel Judoka | Judo Mech | Gravity Mech | none damages enemy units | type: makes units move; also moves it for its effect | yes |
+| ntb6 | Aegis Mech, Gravity Mech, Judo Mech | Aegis Mech | Gravity Mech | line damages enemy units | waits: damages enemy units or players | yes |
+| ntb5 | Mist Eaters | Thruster Mech | Smog Mech | line Smoke | type: makes your units get Smoke; also makes units move; also makes your units m | yes |

@@ -46,7 +46,9 @@ Wrong lines found (deck: from -> to):
 1. A status that helps a kind of card is read as that kind of card being its need, and the help line is missing: every Attack
    -> Flex, Spot Weakness, Inflame, Limit Break, Vajra, Red Skull, Reprogram, Wish, Wrist Blade ("is an Attack it asks for");
    Skills -> Burst, Powers -> Amplify, cards -> Echo Form, Poison cards -> Snecko Skull ("triggers"); Shiv -> Accuracy beside
-   Accuracy -> Shiv (two links); Heavy Blade -> Flex/Inflame/Vajra beside the opposite line (two links). Wanted: Strength,
+   Accuracy -> Shiv (two links); Heavy Blade -> Flex/Inflame/Vajra beside the opposite line (two links).
+   (Into the Breach F9, 30 Oct 2026: the type lines skip help to my cards, so 49 "is an Attack it asks for" lines are gone;
+   the help lines Strength givers -> Attacks are still missing.) Wanted: Strength,
    Dexterity, Focus givers -> the cards they make stronger (Attacks, Block cards, Orb cards); Burst/Amplify/Echo Form/Snecko
    Skull -> the cards they repeat or boost.
 2. Ethereal's "still in hand at the end of turn" read as a need for cards in hand: draws -> Ghostly Armor, Echo Form, Deva Form

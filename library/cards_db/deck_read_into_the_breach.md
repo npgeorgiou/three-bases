@@ -115,7 +115,7 @@ damage only when an enemy damages another enemy; the record says actor side enem
 Root cause: the line matches the event's object (enemy units) and does not check its actor.
 Same error elsewhere: to be measured (damaged triggers with an actor filter).
 Fix (v48): a trigger's actor side is kept; an enemy actor is fitted only by cards that make an enemy strike, attack or
-turn its attack. Case ntb4.
+turn its attack. Cases ntb4, ntb6.
 
 ## F12 Statuses on tiles do not reach cards that ask for units with them (missing lines)
 Missing: Thruster Mech -> Smog Mech (Reverse Thrusters leaves Smoke; Nanofilter Mending repairs Mechs standing on Smoke),
@@ -129,4 +129,4 @@ Jet Mech -> Rocket Mech (Smoke for Storm Generator). Case ntb5.
 ## After the fix (30 Oct 2026, one rebuild)
 Into the Breach 107 -> 99 lines; Stormbound 696 -> 683; Slay the Spire 451 -> 410; Runeterra +3 (LeBlanc level 2); Duelyst
 +1 (Lilithe -> Spectral Blade); other differences are only the order of reasons. Cases pass in every game (Stormbound 141
-of 145, the known csb09-csb13). ntb2 and ntb4 are flagged "reason no line says": the fix removed every such line of the game.
+of 145, the known csb09-csb13). ntb6 (Aegis Mech -> Gravity Mech: Spartan Shield turns an enemy attack onto enemies, Vek Hormones) keeps the F11 exception tested.

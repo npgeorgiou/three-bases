@@ -71,7 +71,7 @@ and about ten rebuilds). Each check below is cheap and found errors that later c
 - Deck networks: network.py (`ask.py <game> network`), the page `network_page.py` -> network.html (decks in decks.tsv and
   cases/decks.tsv). 36 Runeterra and 28 Stormbound full decks; Monster Train has only guides' core cards (no full lists
   found as text). Kaptain's judgement of the v34 networks is open (NEXT_CHAT.md).
-- Cases: Runeterra 310, Stormbound 145, Monster Train 154, Inscryption 77, Duelyst 94, Faeria 123, Into the Breach 18, all passing (Stormbound 141, see below); audit_links.py findings are explained in RESULTS.md.
+- Cases: Runeterra 310, Stormbound 145, Monster Train 154, Inscryption 77, Duelyst 94, Faeria 123, Into the Breach 19, all passing (Stormbound 141, see below); audit_links.py findings are explained in RESULTS.md.
 - Faeria (v35-v38): imported; every step of PROCESS passes, all 12 decks read card by card (RESULTS.md). Its board words are
   now the shared form for every positional game (BRIEF "The board", PROCESS "Importing Faeria: the board"). Waiting for
   Kaptain's check of CHECK_20_faeria.md (ids in CHECK_20_faeria_ids.txt) and of CONCEPTS_faeria.md.
@@ -90,6 +90,6 @@ and about ten rebuilds). Each check below is cheap and found errors that later c
   fix: fixes/into_the_breach/v48.py (families F1-F6), names.tsv drops, patterns S-TB1-3, verdicts and text-audit
   explanations; run.py passes every step. All 20 decks read: families F7-F12 in deck_read_into_the_breach.md, none fixed
   yet. F7 (pushes "enable" weapons aimed by position) is right: Kaptain, 30 Oct 2026, keeps them. F8-F12 fixed by rule
-  (network.py, refs.py), cases ntb1-ntb5, one rebuild, diff read (deck_read_into_the_breach.md "After the fix"). Waiting for
-  Kaptain's check of the changed lines.
+  (network.py, refs.py), cases ntb1-ntb6, one rebuild, diff read (deck_read_into_the_breach.md "After the fix"). Waiting for
+  Kaptain approved the changed lines (30 Oct 2026); next: his look at network.html.
   Stormbound shows 141 of 145 cases (csb09-csb13, poisoned-unit lines) since the Slay the Spire chat's v49 shared change.
