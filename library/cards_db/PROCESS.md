@@ -543,6 +543,21 @@ point is answered; the rule behind it is never looked at across the games. Do th
 7. Report to Kaptain per family: the cause, what it did in every game, the fix, what is still open. Never per card only.
 Another chat's game: the dump and the diff show what a shared fix did there; tell Kaptain and that chat, change none of
 its records or cases.
+Working smarter on a review (lessons, 30 Oct 2026):
+- Answer Kaptain's questions first and wait; then do all points in one pass: dump, causes, one fix per cause, one rebuild,
+  one diff read, one report. No rebuild per point.
+- Trace a wrong line to its rows before guessing: `flat_ref` (needs and makes) and `flat_do` (acts, filters) of both cards
+  show which rule fired. Most wrong lines were one rule firing for every card (game rules, a dropped filter, either side).
+- A line is right when a player would say "A does this for B"; "every unit can do it" is no reason for a line, unless
+  Kaptain asked for it (Runeterra units hitting the Nexus for champions).
+- Say every rule with a number in it (top tenth of costs, a third of the cost) and the cases it was checked on; a
+  threshold tuned to make one case pass is a new error.
+- Changing reason wording can make must-not cases pass whatever the network says: run cases/run.py and rewrite the cases
+  it lists.
+- Check a page change in the browser (Playwright: load every deck, no script errors; hover and click on a line).
+- Kaptain asked about a line he could not see: check the page data and a screenshot first, then answer in plain words
+  about what is drawn, not about weights.
+- Report per cause with counts per game, and say honestly what was only fixed for the named cards.
 
 ## Think like a player (read before showing any network, any deck explanation, any answer about synergy)
 Kaptain checks a few decks and finds errors a player sees at once. Before showing anything, do what he does:
