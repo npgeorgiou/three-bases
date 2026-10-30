@@ -156,29 +156,29 @@ select distinct card from flat_do where params glob '*=[a-z]*'
 What "disable" (stop a unit acting) is built with, on the same cards (`ask.py all together disable`):
 
 - attack_lock: duelyst 18 cards, monster_train 3 cards
-- cant_attack: duelyst 23 cards, into_the_breach 5 cards, monster_train 8 cards, runeterra 56 cards, stormbound 8 cards
-- cant_move: duelyst 4 cards, into_the_breach 2 cards
+- cant_attack: duelyst 23 cards, into_the_breach 4 cards, monster_train 8 cards, runeterra 56 cards, stormbound 8 cards
+- passive: duelyst 23 cards, into_the_breach 4 cards, monster_train 8 cards, runeterra 88 cards, stormbound 8 cards
 - immobilize: duelyst 18 cards, stormbound 6 cards
-- passive: duelyst 23 cards, into_the_breach 5 cards, monster_train 8 cards, runeterra 88 cards, stormbound 8 cards
-- buff: runeterra 21 cards, sts1 4 cards
+- cant_move: duelyst 3 cards, into_the_breach 2 cards
+- stances: runeterra 9 cards
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: duelyst 3758 pairs, e.g. Legion (boss, Boss33_3) -> Darkspear Zane; faeria 1015 pairs, e.g. Doomgate, Door to Oblivion -> Long-horned Yak; inscryption 466 pairs, e.g. Revenant -> Frozen Opossum; into_the_breach 148 pairs, e.g. Arachnid Psion -> Boom Cannon; monster_train 348 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 22558 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
-- self_destruct: duelyst 2148 pairs, e.g. Legion (boss, Boss33_3) -> Darkspear Zane; faeria 653 pairs, e.g. Doomgate, Door to Oblivion -> Long-horned Yak; inscryption 431 pairs, e.g. Revenant -> Frozen Opossum; into_the_breach 88 pairs, e.g. Arachnid Psion -> Boom Cannon; monster_train 296 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 19820 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Restless Goats
-- sacrifice: duelyst 1836 pairs, e.g. Fireblaze Obelysk -> Darkspear Zane; faeria 387 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Frozen Opossum; into_the_breach 24 pairs, e.g. Arachnoid Mech -> Large Goo; monster_train 305 pairs, e.g. Primordium -> Devourer of Death; runeterra 8133 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
-- removal: duelyst 659 pairs, e.g. Rasha's Curse -> Khanuum-ka; faeria 134 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Frozen Opossum; into_the_breach 56 pairs, e.g. Tentacles -> Large Goo; runeterra 5806 pairs, e.g. Mordekaiser's Realm of Death -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Embers of Chaos
-- turn_end: duelyst 2196 pairs, e.g. Legion (boss, Boss33_3) -> Darkspear Zane; faeria 473 pairs, e.g. Flash Salmon -> Long-horned Yak; into_the_breach 32 pairs, e.g. Psion Tyrant -> Boom Cannon; monster_train 276 pairs, e.g. Primordium -> Devourer of Death; runeterra 19731 pairs, e.g. Eternal Dancers -> Bladepierced Revenant
-- revive: duelyst 495 pairs, e.g. Legion (boss, Boss33_3) -> Darkspear Zane; inscryption 27 pairs, e.g. Necromancer -> Frozen Opossum; runeterra 2461 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 38 pairs, e.g. Diehards -> Restless Goats
+- destroy: duelyst 3172 pairs, e.g. Soulburn Obelysk -> Khanuum-ka; faeria 1015 pairs, e.g. Feed the Forest -> Long-horned Yak; inscryption 466 pairs, e.g. Skeleton Crew -> Gift Bot; into_the_breach 10 pairs, e.g. Walking Bomb -> Ice Tile; monster_train 348 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 22558 pairs, e.g. Mordekaiser's Realm of Death -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- self_destruct: duelyst 1788 pairs, e.g. Soulburn Obelysk -> Khanuum-ka; faeria 653 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 431 pairs, e.g. Skeleton Crew -> Gift Bot; into_the_breach 8 pairs, e.g. Walking Bomb -> Ice Tile; monster_train 296 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 19820 pairs, e.g. Ekko -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Spare Dragonling
+- sacrifice: duelyst 1521 pairs, e.g. Soulburn Obelysk -> Khanuum-ka; faeria 387 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Gift Bot; into_the_breach 6 pairs, e.g. Arachnoid Mech -> Ice Tile; monster_train 305 pairs, e.g. Primordium -> Devourer of Death; runeterra 8133 pairs, e.g. Mordekaiser's Realm of Death -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- turn_end: duelyst 1814 pairs, e.g. Soulburn Obelysk -> Khanuum-ka; faeria 473 pairs, e.g. Flash Salmon -> Long-horned Yak; into_the_breach 6 pairs, e.g. Walking Bomb -> Ice Tile; monster_train 276 pairs, e.g. Primordium -> Devourer of Death; runeterra 19731 pairs, e.g. Ekko -> Bladepierced Revenant
+- activated: faeria 297 pairs, e.g. Doomgate, Door to Oblivion -> Long-horned Yak; inscryption 27 pairs, e.g. Master Bleene -> Gift Bot; into_the_breach 6 pairs, e.g. Walking Bomb -> Ice Tile; monster_train 210 pairs, e.g. Sacred Wicks -> Echowright; stormbound 20 pairs, e.g. Temple of the Mind -> Project PH03-NIX
+- removal: duelyst 568 pairs, e.g. Rasha's Curse -> Khanuum-ka; faeria 134 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Gift Bot; runeterra 5806 pairs, e.g. Mordekaiser's Realm of Death -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Project PH03-NIX
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
+- summon -> banish -> activated (seen in duelyst, runeterra)
 - summon -> delayed -> countdown (seen in monster_train, runeterra)
-- summon -> banish -> terrain (seen in runeterra)
 - summon -> banish -> removal (seen in duelyst, runeterra)
 - summon -> delayed -> cost_set (seen in monster_train, runeterra)
 - summon -> banish -> drawback (seen in runeterra)
-- summon -> start_of_game -> terrain (seen in into_the_breach, runeterra)
+- summon -> start_of_game -> delayed (seen in runeterra)
 
 ## A deck explained (`ask.py runeterra analyze "..."`), a Lucian/Senna deck from a deck guide
 

@@ -319,7 +319,7 @@ keyword	Fury	concept of having, using or giving this keyword	permanent_growth		2
 keyword	Evolve	concept of having, using or giving this keyword	variety_payoff		28 Oct 2026, v3
 keyword	Formidable	concept of having, using or giving this keyword	stat_multiply		28 Oct 2026, v3
 keyword	Immobile	concept of having, using or giving this keyword	cant_attack		28 Oct 2026, v3
-keyword	Landmark	concept of using or giving this keyword (Kaptain, 28 Oct 2026: not a unit: a building with no attack or health, destroyed only by cards that target landmarks, gives a benefit)	terrain		28 Oct 2026, v3
+keyword	Landmark	concept of using or giving this keyword (Kaptain, 28 Oct 2026: not a unit: a building with no attack or health, destroyed only by cards that target landmarks, gives a benefit; 30 Oct 2026: takes one of the 6 board slots shared with units)	board_limit		28 Oct 2026, v3
 keyword	Attach	concept of having, using or giving this keyword	merge_attach		28 Oct 2026, v3
 keyword	Equipment	concept of having, using or giving this keyword	merge_attach		28 Oct 2026, v3
 keyword	Fleeting	concept of using or giving this keyword (Kaptain, 28 Oct 2026: dies at the end of the turn)	self_destruct		28 Oct 2026, v3
