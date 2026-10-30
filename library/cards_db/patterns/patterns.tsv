@@ -156,3 +156,17 @@ duelyst	V94	\baction bar\b	value:hand|return_to_hand|from_hand|draw|create|copy|
 duelyst	V95	\bthis turn\b	value:this_round|summoned_this_round|dead_this_round|attacked_this_round|struck_this_round|next_card	yes	one turn is the span (BRIEF Game words: Duelyst)
 duelyst	V96	\bequip	value:attach	yes	equip an artifact
 duelyst	V97	\bprogresses mechaz0r\b	value:keyword_action	yes	MECHAZ0R build progress
+into_the_breach	TB01	\bpush(?:es|ed|ing)?\b	value:move|swap	yes	push moves the unit on the tile (BRIEF Game words: Into the Breach)
+into_the_breach	TB02	\bpull(?:s|ed|ing)?\b(?! the)	value:move	yes	pull moves the unit towards (BRIEF Game words: Into the Breach)
+into_the_breach	TB03	\b(?:toss|throw)\w*\b	value:move	yes	toss or throw moves the unit (BRIEF Game words: Into the Breach)
+into_the_breach	TB04	\bswap\w*\b	value:swap	yes	swap places
+into_the_breach	TB05	\bon fire\b|\blight[^.]{0,30}fire\b|\badds? fire\b|\bapply fire\b	value:give_keyword	yes	Fire given to a unit or tiles (keyword Fire)
+into_the_breach	TB06	\bsmoke\b(?! immun)	value:give_keyword|cant	yes	Smoke given or meant (keyword Smoke)
+into_the_breach	TB07	\bfreez\w*\b|\bfrozen\b	value:give_keyword|cant	yes	Frozen given (keyword Frozen)
+into_the_breach	TB08	\ba\.?c\.?i\.?d\b	value:give_keyword|cant|damage	yes	A.C.I.D. given (keyword A.C.I.D.)
+into_the_breach	TB09	\bshields?\b	value:give_keyword|negate_damage	yes	Shield given (keyword Energy Shield)
+into_the_breach	TB10	\bsingle-use\b|\buses per battle\b	value:once_per_game|n_times	yes	limited uses per battle (BRIEF Game words: Into the Breach)
+into_the_breach	TB11	\bon kill\b|\bkilling blow\b|\bif target is killed\b|\bkilled enemies\b	event:killed|dies	yes	trigger on a kill
+into_the_breach	TB12	\brepair\w*\b|\bheal\w*\b	value:heal|healed	yes	repair is heal
+into_the_breach	TB13	\bcrack\w*\b	value:set_terrain	yes	cracking tiles (terrain cracked_space)
+into_the_breach	TB14	\bupgrades?:	value:upgraded	yes	each upgrade is an ability with COND upgraded n

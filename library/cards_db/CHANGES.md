@@ -297,3 +297,12 @@ Each change: date, what changed, the card that caused it, and which records were
   needs, HELPS by the need's role). network_page.py: the label "triggers". Cases nfa31, nfa37, nfa42, nfa47 rewritten by
   Kaptain's word. PROCESS "Link kinds and what this chat learned".
 
+
+## 30 Oct 2026, v48 (Into the Breach import)
+- source.py: id block 6000001 for into_the_breach; FULL replaces the library's unit, ability, item and hero entries with the
+  supplement (every mech, weapon, passive and pilot from the wiki tables; Walking Bomb, Arachnoid and four tanks as tokens).
+- vocab: keyword rows for the game's statuses and Vek abilities (Boost, Frozen, Burrower are into_the_breach:<Name>: other games
+  use the names for other meanings); terrain chasm, cracked_space; test upgraded (a weapon upgrade is powered).
+- BRIEF "Game words: Into the Breach"; patterns TB01-TB14; exclude.tsv: the library's 10 wiki article pages (category
+  game_rule) are not cards (Claude, for Kaptain's check).
+- decks.tsv: the 14 official squads and 6 players' custom squads (a squad of 3 mechs is the deck).
