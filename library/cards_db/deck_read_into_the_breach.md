@@ -237,7 +237,8 @@ side is control (as refs.py's HARM rule).
 ## F24 The mechs were linked to nothing, and builds broke the loadout rule (Kaptain, 30 Oct 2026)
 Cards: every mech; the builds of F20.
 Root cause: after F20 a mech kept only its keywords, so most mechs had no line; and the builds were taken as card lists, not
-as which mech carries what. Kaptain: a mech carries its starting weapon and at most one extra weapon, never two extra.
+as which mech carries what. Kaptain: a mech has 2 weapon slots (a passive takes one); its starting weapon and one more,
+never two extra.
 Same error elsewhere: no other game has carried cards.
 Fix: decks list each mech, then what it carries; network.py draws "Combat Mech carries Titan Fist" (kind carries, first in
 KIND_ORDER; network_page.py colours it). Builds checked against the rule: Hazardous Mechs' run (Nano Mech would hold
