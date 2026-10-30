@@ -91,7 +91,8 @@ def main():
             nm, lines = nets[r['deck']]
             hit = [f'{k}: {y}' for (a, b), ls in lines.items() if (r['from'] == '*' or nm[a] == r['from']) and nm[b] == r['to']
                    for k, w, y in ls if k != 'targets']  # the line's kind and why ("boosts: gives it +1|+1")
-            if r['expect'] == 'line': ok = bool(hit)
+            if r['expect'] == 'line': ok = bool(hit) if not r['why_not'] else any(r['why_not'] in y for y in hit)  # a line saying
+            # this kind or reason ("cheaper:", "kills it for its death effect")
             else: ok = not hit if not r['why_not'] else not any(r['why_not'] in y for y in hit)
             # a "must not" case on a reason no line of the deck says any more can never fail: the reason text changed, so the
             # case must be rewritten (Kaptain's Archon -> Colossus passed on an old wording)

@@ -230,7 +230,9 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
   shared code for every game. A guide deck the explainer cannot explain is a gap to fix, not a case to drop.
 - combos.tsv: pairs a guide names, plus the library's combos rows; the source column says which guide.
 - network.tsv: lines of a guide deck's network that must be there, or must not (Kaptain's checks of the networks; a
-  wrong line is a "none" row, with why_not when only one reason is wrong).
+  wrong line is a "none" row, with why_not when only one reason is wrong; a "line" row with text in that column needs a
+  line whose "kind: reason" holds it, e.g. "cheaper:" or "kills it for its death effect"). Every point Kaptain confirms
+  becomes a row that checks the kind too, not only that some line exists.
 - regions.tsv: the library's signature, splash and archetype rows per faction.
 - A failing case is fixed at its cause: the query (check it against the texts first), the pattern, the value, the shared
   code or the records. A case built on wrong old tags is dropped with its reason in DROPPED.md.

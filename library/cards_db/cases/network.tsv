@@ -79,12 +79,12 @@ ni11	inscryption	Kaycee's Mod Ants	Ant Queen	Flying Ant	line		Claude (v36): Flyi
 ni12	inscryption	Kaycee's Mod Moose Blood	Moose Buck	Pelts (Rabbit)	none	your units move	Claude (v36): where Pelt Lice are put (adjacent slots) does not need units to move
 nfa03	faeria	Fast Rakoans	Rakoan Illusionist	Imperial Trooper	none	onto	Claude, deck read: the Illusionist gives Flying to another Rakoan; the Trooper is no Rakoan, nothing moves it onto enemy land
 nfa04	faeria	Fast Rakoans	Airbot	Imperial Trooper	none	onto	Claude, deck read: Airbot's own Dash moves Airbot, not the Trooper (its forward position helps the Trooper enter nearer enemy land: that line is right)
-nfa05	faeria	Beastmaster Green	Time of Legends	Eredon, Voice of All	line		guide: Time of Legends brings Eredon out early (draws the top legend)
+nfa05	faeria	Beastmaster Green	Time of Legends	Eredon, Voice of All	line	puts:	guide: Time of Legends brings Eredon out early (draws the top legend)
 nfa06	faeria	Beastmaster Green	The Emperor's Command	Feed the Forest	none	heals	Claude, deck read: the Command heals a god, not the creature Feed the Forest destroys
 nfa07	faeria	Blue Jump	Wavecrash Colossus	Gabrian Commander	line		guide: play slowly so the big cards come; the Commander waits for a 7+ cost card drawn
 nfa08	faeria	Blue Jump	Ninja Toad	Gabrian Commander	none		Claude, deck read: Ninja Toad costs 4, not 7 or more
 nfa09	faeria	Yellow Flyers	Windborne Champion	Drakkar Skycaptain	none	get Flying	Claude, deck read: drawing a Flying creature needs a card that has Flying, nothing given in play
-nfa10	faeria	Bargain (Krog)	Krog's Dinner	Krog, the Ogre King	line		guide: mulligan for Krog's Dinner; it draws Krog and cuts his cost by 7 (a random 7 cut is an aimed line, not counted here)
+nfa10	faeria	Bargain (Krog)	Krog's Dinner	Krog, the Ogre King	line	cheaper:	guide: mulligan for Krog's Dinner; it draws Krog and cuts his cost by 7 (a random 7 cut is an aimed line, not counted here)
 nfa11	faeria	Bargain (Krog)	Bold Bargainer	Ogre Dance	none		Claude, deck read: Ogre Dance costs 4; a 7 cut is for cards costing 7 or more
 nfa12	faeria	Red Combat	Garudan, Heart of the Mountain	Bomb Slinger	none	enemy units move	Claude, deck read: Garudan moving is my unit moving, not an enemy coming next to the Slinger
 nfa13	faeria	Yellow Flyers	Celestial Tower	Khalim, Sky Prodigy	line		Claude, deck read: Charge 3 from the Tower gets Khalim to the enemy god
@@ -93,18 +93,18 @@ nfa15	faeria	Voice of Hunger Control	Time of Legends	Voice of Hunger	none	enter	
 nfa16	faeria	Midrange Sacrifice	Iona's Smile	Soul Eater	line		Claude, deck read: Iona's Smile draws Flying creatures from the deck
 nfa17	faeria	Midrange Sacrifice	Iona's Smile	Demon Wing	none	draws it	Claude, deck read: Demon Wing is made by Demon Wrangler, it is in no deck to draw
 nfa18	faeria	Voice of Hunger Control	Voice of Hunger	Eredon, Voice of All	line		guide: the deck wins through Voice of Hunger and Eredon (Voice destroys Eredon, its Last Words buff the deck)
-nfa19	faeria	Beastmaster Green	Oakling	Grove Guardian	line		Kaptain 29 Oct 2026: Oakling makes every green creature stronger (a random one in hand)
-nfa20	faeria	Yellow Monstrosity	Khalim's Training	Manta Rider	line		Kaptain: the Training helps any creature, not only Shaytan Monstrosity
-nfa21	faeria	Red Combat	Syland Horsemaster	Bomb Slinger	line		Kaptain: Charge moves my units forward; land is built next to them, so the Slinger enters next to enemies
-nfa22	faeria	Red Archers	Flame Burst	Hilltop Archer	line		Kaptain: removing the unit in the way clears a Ranged unit's straight line
-nfa23	faeria	Bargain (Krog)	Red Devil	Krog, the Ogre King	line		Kaptain: gaining 5 faeria pays for the big cards
+nfa19	faeria	Beastmaster Green	Oakling	Grove Guardian	line	stronger:	Kaptain 29 Oct 2026: Oakling makes every green creature stronger (a random one in hand)
+nfa20	faeria	Yellow Monstrosity	Khalim's Training	Manta Rider	line	stronger:	Kaptain: the Training helps any creature, not only Shaytan Monstrosity
+nfa21	faeria	Red Combat	Syland Horsemaster	Bomb Slinger	line	moves:	Kaptain: Charge moves my units forward; land is built next to them, so the Slinger enters next to enemies
+nfa22	faeria	Red Archers	Flame Burst	Hilltop Archer	line	clears:	Kaptain: removing the unit in the way clears a Ranged unit's straight line
+nfa23	faeria	Bargain (Krog)	Red Devil	Krog, the Ogre King	line	cheaper:	Kaptain: gaining 5 faeria pays for the big cards
 nfa24	faeria	Bargain (Krog)	Krog, the Ogre King	Krog's Dinner	none		Kaptain: the Dinner only destroys itself when Krog comes; it needs nothing from Krog
 nfa25	faeria	Yellow Monstrosity	Soul Drain	Shaytan Monstrosity	none	your units die	Kaptain: a drain is played on enemies; it is no friendly death
-nfa26	faeria	Yellow Monstrosity	Flash Wind	Mistral Guide	line		Kaptain: moving Mistral Guide decides where the units summoned next to it get Dash and Flying
-nfa27	faeria	Blue Jump	Battle Toads	Wavecrash Colossus	line		Kaptain: Battle Toads and Sunken Tower are in the deck for a reason: units and lands forward reach the enemy wells
-nfa28	faeria	Blue Jump	Sunken Tower	Wavecrash Colossus	line		Kaptain: as nfa27
+nfa26	faeria	Yellow Monstrosity	Flash Wind	Mistral Guide	line	moves:	Kaptain: moving Mistral Guide decides where the units summoned next to it get Dash and Flying
+nfa27	faeria	Blue Jump	Battle Toads	Wavecrash Colossus	line	moves:	Kaptain: Battle Toads and Sunken Tower are in the deck for a reason: units and lands forward reach the enemy wells
+nfa28	faeria	Blue Jump	Sunken Tower	Wavecrash Colossus	line	moves:	Kaptain: as nfa27
 nfa29	faeria	Blue Jump	Gabrian Archon	Wavecrash Colossus	none	stronger:	Kaptain: Archon does not help the Colossus; the Colossus helps the Archon; 30 Oct: the complaint was "makes it stronger"; Archon has Charge 2, so it may still move into place (Claude, asked Kaptain)
-nfa30	faeria	Bargain (Krog)	Bold Bargainer	Krog, the Ogre King	line		Kaptain: a 7 cost cut must help the expensive cards
+nfa30	faeria	Bargain (Krog)	Bold Bargainer	Krog, the Ogre King	line	cheaper:	Kaptain: a 7 cost cut must help the expensive cards
 ni13	inscryption	Kaycee's Mod Free Reptiles	Rabbit	Bullfrog	none	sacrificed	Claude (v38): Bullfrog comes from Tadpole growing (wiki Fledgling), it is never played, so no sacrifice pays for it
 ni14	inscryption	Act III starter	Sniper Bot	Double Gunner	none		Claude (v38): two strikers, nothing between them
 ni15	inscryption	Alpha, Wolf, Moose Buck	Alpha	Wolf	line		Claude (v39): Leader (wiki: "Creatures adjacent to a card bearing this sigil gain 1 Power") boosts the units next to Alpha; a keyword's effect on other cards is a line too
@@ -145,12 +145,12 @@ nfa31	faeria	Blue Yellow Events	Shifting Tide	Windstorm Colossus	none	type:	Kapt
 nfa32	faeria	Yellow Monstrosity	Manta Rider	Windborne Emissary	none	waits:	Kaptain 30 Oct 2026: the Emissary needs another flyer to be there: enables, not does what it waits for
 nfa33	faeria	Red Combat	Underground Boss	Bomb Slinger	none		Kaptain 30 Oct 2026: 2 faeria in a fight does not pay for a 5 cost card
 nfa34	faeria	Red Blue Mobility Burn	Seifer, Blood Tyrant	Gabrian Enchantment	none		Kaptain 30 Oct 2026: 'Attack becomes equal to its Life' waits for nothing
-nfa35	faeria	Red Blue Mobility Burn	Gift of Steel	Gabrian Enchantment	line		Claude, from Kaptain's point 4: more Life becomes more Attack (makes stronger)
+nfa35	faeria	Red Blue Mobility Burn	Gift of Steel	Gabrian Enchantment	line	stronger:	Claude, from Kaptain's point 4: more Life becomes more Attack (makes stronger)
 nfa36	faeria	Midrange Sacrifice	Demon Wing	Soul Eater	none		Kaptain 30 Oct 2026: every unit can die fighting; only cards that make my units die feed it
-nfa37	faeria	Midrange Sacrifice	Lord of the Wastes	Soul Eater	line		Kaptain 30 Oct 2026: Lord sacrifices a friendly creature
-nfa38	faeria	Midrange Sacrifice	Lord of the Wastes	Village Elder	line		Kaptain 30 Oct 2026: kills it for its death effect
+nfa37	faeria	Midrange Sacrifice	Lord of the Wastes	Soul Eater	line	waits: makes your units die	Kaptain 30 Oct 2026: Lord sacrifices a friendly creature
+nfa38	faeria	Midrange Sacrifice	Lord of the Wastes	Village Elder	line	waits: kills it for its death effect	Kaptain 30 Oct 2026: kills it for its death effect
 nfa39	faeria	Bargain (Krog)	Krog's Dinner	Meteor	none		Kaptain 30 Oct 2026: 'Your Krog costs 7 less' helps only Krog
-nfa40	faeria	Voice of Hunger Control	Falcon Dive	Plague Bearer	line		Kaptain 30 Oct 2026: 1 damage to my own 1 Life unit sets off its Last Words
+nfa40	faeria	Voice of Hunger Control	Falcon Dive	Plague Bearer	line	waits: kills it for its death effect	Kaptain 30 Oct 2026: 1 damage to my own 1 Life unit sets off its Last Words
 ndu32	duelyst	Argeon Mechaz0r	Lifestream	Martyrdom	none		Kaptain 30 Oct 2026: Martyrdom's waits are not relevant (it picks any minion)
 ndu33	duelyst	Argeon Mechaz0r	Helm of MECHAZ0R	Oakenheart	none		Kaptain: Oakenheart's passive helps the Mechs; the Mechs do not enable it
 ndu34	duelyst	Argeon Mechaz0r	Oakenheart	Helm of MECHAZ0R	line		Kaptain: Oakenheart helps the Mechs
@@ -167,3 +167,13 @@ ndu44	duelyst	Ciphyron Build	Rescue-RX	Timekeeper	none		Kaptain: Timekeeper help
 ndu45	duelyst	Ciphyron Build	Timekeeper	Rescue-RX	line		Kaptain: as ndu44
 ndu46	duelyst	Argeon Dawn's Eye aggro	Tempest	Arclyte Regalia	none		Claude: Regalia's damage prevention waits for nothing
 ndu47	duelyst	Kaleos Trial of Songhai	Dispirited Prisoner	Hideatsu the Ebon Ox	none	counts when played	Claude: a token is summoned, never played from the action bar
+nfa41	faeria	Yellow Monstrosity	Manta Rider	Windborne Emissary	line	type:	Kaptain 30 Oct 2026: a flyer enables the Emissary ('while you control another flying creature')
+nfa42	faeria	Blue Yellow Events	Shifting Tide	Windstorm Colossus	line	waits:	Kaptain 30 Oct 2026: the Colossus counts the events played: does what it waits for
+nfa43	faeria	Bargain (Krog)	Bold Bargainer	Krog, the Ogre King	none	stronger:	Kaptain 30 Oct 2026: a cost cut makes cheaper, not stronger
+nfa44	faeria	Red Combat	Underground Brigand	Bomb Slinger	none		Kaptain 30 Oct 2026: as nfa33
+nfa45	faeria	Red Blue Mobility Burn	Gift of Steel	Gabrian Enchantment	none	waits:	Kaptain 30 Oct 2026: the Enchantment waits for nothing
+nfa46	faeria	Midrange Sacrifice	Village Elder	Soul Eater	none		Kaptain 30 Oct 2026: Village Elder makes no friendly creature die
+nfa47	faeria	Midrange Sacrifice	Wind Soldier	Soul Eater	line	waits:	Claude from Kaptain's point 5: Wind Soldier dies at end of turn, a friendly death
+nfa48	faeria	Bargain (Krog)	Krog's Dinner	Ogre Battler	none		Kaptain 30 Oct 2026: as nfa39
+nfa49	faeria	Yellow Monstrosity	Khalim's Training	Windborne Emissary	line	type:	Claude from Kaptain's point 1: giving Flying to a creature enables the Emissary
+nfa50	faeria	Voice of Hunger Control	Falcon Dive	Eredon, Voice of All	none	death effect	Claude from Kaptain's point 10: 1 damage does not kill a 3 Life unit
