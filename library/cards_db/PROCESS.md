@@ -452,6 +452,31 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
 6. **Card counts by where the card comes from.** "Summoned from your action bar" is played (N24): tokens do not count.
    Stats used as amounts want that stat; a cost equal to a stat wants less of it (Blood Taura). Cases ndu11, ndu18.
 
+## Kaptain's check of the Duelyst networks (30 Oct 2026, v41; fixed by rule in every game; cases ndu31-ndu47)
+1. **Help is no need.** An effect that helps the cards it names (Oakenheart: Mechs +1/+1; Golem Metallurgist: Golems
+   cheaper; Timekeeper: buildings progress) is a help line from it; those cards' type or keyword is no ask or need of it, and
+   the cards are no "card it counts". A card that makes an effect stronger does want it (Deranged Brute wants Rage).
+2. **The rules are no combo.** Every unit attacks, is struck back, harvests and gives Bones by the rules: such a line is
+   dropped (Punish waits for a damaged enemy: any attacker does that), unless the card's own ability makes it fight more
+   (Celerity, Frenzy, Overwhelm, "this fights"), the need names the leader ("whenever your General attacks"), or it is a
+   level-up count (n53). Power is no help to "an enemy is damaged" except for a level-up count.
+3. **What the player picks to harm, on either side, is the biggest there is**: "destroy ANY minion, restore its Health"
+   wants no Health (Martyrdom); a chosen help still wants the stat (Gabrian Enchantment).
+4. **Stat gains by stat and by target**: +2 Attack is no Health (Roar); the Abomination's gains reach only it; Juggernaut's
+   Grow only itself; strength is both stats. A level-up form keeps its card's types (Pyke (level 2) is a Lurker).
+5. **A made card that is drawn takes its own lines**: its makers put it into play, it enables the card that asks for it
+   (Lilithe -> Wraithling -> Inkling Surge); no line from the makers straight to that card. A card naming what it makes itself
+   ("walls that can attack") asks for no other maker; "if you have another Wraithling" does.
+6. **Keywords that make my unit better are help** (Ranged, Backstab, Rush, Provoke, Airdrop), and so are readying,
+   speeding a countdown and damage prevention.
+7. **Moves**: a unit's own movement keyword (Celerity) moves it; a position measured from my unit (Holy Immolation "enemies
+   around it", Bonereaper "around this one") needs my units moved; a card moving itself moves as what it is (the Lion is no
+   General: no line to Zeal).
+8. **A leader's spell is its own card** (Duelyst: the General's signature card, fixes/duelyst/v41.py): drawn with the deck,
+   "casts its own spell"; the General's text names it.
+9. **A protection trigger waits for nothing** ("the first time your General takes damage, prevent 2"). A trigger that helps
+   what set it off still waits for more of those events from other cards (Janna's discount on draws, Mirkblood on summons).
+
 ## Importing Faeria: the board (29 Oct 2026; checked in every game)
 Faeria is played on a hex board that players build; Kaptain uses the library to study positional play, so its board words
 were made the shared form for every game with spaces (BRIEF "The board"). What went wrong and the rule now:

@@ -23,6 +23,18 @@
   after (`dump_lines.py`), read every gone and new reason, write root cause / same error elsewhere / fix per family
   (`review_check.py` fails without them). A point fixed for the named cards only comes back.
 - If a step here or in PROCESS seems to force a loop, stop and ask Kaptain instead of working around it.
+- Do read networks only with `deck_lines.py <game> [deck]`: the same terse text the page copies on a right click (Kaptain
+  pastes it). Never write your own export or dump scripts (the Duelyst import lost much time on them).
+- Do pull right before you rebuild and again before you commit. Generated files (cards.sqlite, cases/REPORT.md, QUERIES.md,
+  STATUS.md, network.html) conflict on every merge: take either side and rebuild your game; keep both sides of code.
+- Do read the decks after your last pull, not before it: merged code changes lines (the Duelyst second read found 6 new errors).
+- Do write each wrong line as an exact network case (deck, from, to, line/none) when you find it; don't tune text regexes
+  for concept cases. After a shared change, compare `deck_lines.py` output before and after for every game and read the
+  changed lines: passing cases do not show hundreds of lines going away.
+- Lines are combos between card abilities (Kaptain, 30 Oct 2026): what every unit does by the rules (attacks, is struck
+  back, harvests, gives Bones when it dies) makes no line, except for a level-up count or a need that names the leader; a
+  passive that helps cards points from it to them, and those cards do not "enable" it (PROCESS "Kaptain's check of the
+  Duelyst networks").
 
 **The order that saves the most time (Inscryption, 29 Oct 2026: done the long way it took three fix rounds, v36, v38, v39,
 and about ten rebuilds). Each check below is cheap and found errors that later cost a whole round:**
@@ -57,7 +69,7 @@ and about ten rebuilds). Each check below is cheap and found errors that later c
 - Deck networks: network.py (`ask.py <game> network`), the page `network_page.py` -> network.html (decks in decks.tsv and
   cases/decks.tsv). 36 Runeterra and 28 Stormbound full decks; Monster Train has only guides' core cards (no full lists
   found as text). Kaptain's judgement of the v34 networks is open (NEXT_CHAT.md).
-- Cases: Runeterra 308, Stormbound 145, Monster Train 154, Inscryption 72, Duelyst 77, Faeria 113, all passing; audit_links.py findings are explained in RESULTS.md.
+- Cases: Runeterra 308, Stormbound 145, Monster Train 154, Inscryption 72, Duelyst 94, Faeria 113, all passing; audit_links.py findings are explained in RESULTS.md.
 - Faeria (v35-v38): imported; every step of PROCESS passes, all 12 decks read card by card (RESULTS.md). Its board words are
   now the shared form for every positional game (BRIEF "The board", PROCESS "Importing Faeria: the board"). Waiting for
   Kaptain's check of CHECK_20_faeria.md (ids in CHECK_20_faeria_ids.txt) and of CONCEPTS_faeria.md.

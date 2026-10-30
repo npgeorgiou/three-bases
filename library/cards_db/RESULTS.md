@@ -108,10 +108,11 @@
   areas, corners, starting sides, tiles (Shadow Creep, Hallowed Ground, Exhuming Sand, Primal Flourish, mana springs).
   Backstab, Zeal and Infiltrate are needs for moves; teleports and swaps feed them.
 - 10 full decks in decks.tsv (from deck codes, supplement/duelyst_deck_codes.tsv), all read card by card twice
-  (deck_read_duelyst.md, 24 families fixed by rule); cases ndu01-ndu30.
+  (deck_read_duelyst.md, 24 families fixed by rule), then Kaptain's check (9 rules); cases ndu01-ndu47.
+- Each General's Bloodbound Spell is its own card (its signature card), drawn as a node next to the General.
 
 ## Quality
-- run.py passes; cases 77 of 77 (34 Duelyst mechanics, 30 network lines, shared cases); text audit 0; every other game still
+- run.py passes; cases 94 of 94 (34 Duelyst mechanics, 47 network lines, shared cases); text audit 0; every other game still
   passes.
 - Link audit, explained: Pandora summons "a 3/3 Spirit Wolf with a random ability"; the source has five wolves under other
   names, so Spirit Wolf stays a name.

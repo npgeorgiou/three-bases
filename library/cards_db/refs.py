@@ -58,7 +58,17 @@ def build(c):
             or tree.get(('event', ev))
         c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (card, origin, via, ab, role, ev, kind, side or '', pick, kw, con, w, ref, ak, aw))
 
-    def state_rows(card, origin, via, ab, kind, side, pick, withs, zone, entering=False):
+    cat = dict(c.execute('select id, category from card'))
+    it_side = {(a, b): sd for a, b, sd in c.execute("select card, ability, on_side from flat_do where coalesce(seq,0)=0 and coalesce(on_pick,'') not in ('it','self')")}
+
+    def helps(act, ps):
+        """an effect that leaves the cards it picks better off (stats up, cheaper, healed, sped up)"""
+        p = dict(x.split('=', 1) for x in (ps or '').split(';') if '=' in x)
+        if act in ('stat_change', 'grow'): return any(k in p and not p[k].startswith('-') for k in ('power', 'health', 'strength'))
+        if act == 'cost_change': return p.get('cost', '').startswith('-')
+        return act in ('countdown_advance', 'heal', 'ready', 'can', 'give_ability', 'negate_damage', 'cost_set', 'damage_reduction')  # not increase_effect: a card that makes Rage stronger wants Rage (Deranged Brute)
+
+    def state_rows(card, origin, via, ab, kind, side, pick, withs, zone, entering=False, helpful=False):
         for st in re.findall(r'state (?:is|in) ([a-z_]+)', withs or ''):
             for ev, *kw in causes.get(('state', st), []):
                 ins(card, origin, via, ab, 'state', ev, kind, side, pick, kwid.get(kw[0].lower()) if kw else None, state=st)
@@ -66,7 +76,8 @@ def build(c):
             for ev, *_ in causes.get(('zone', zone), []): ins(card, origin, via, ab, 'state', ev, kind, side, pick, w=withs)  # "if Krog has
             # died": Krog's death, not any death (the filter was dropped)
         # units picked by a keyword they have ("friendly units with Rage", "the amount of Armor"): fed by giving that keyword
-        for k in (re.findall(r'(?<![a-z:])keyword is (\d+)', withs or '') if kind != 'effect' and zone not in ('deck', 'deck_top', 'deck_bottom') else []):  # repeating Summon effects is no unit with Summon; a card in the deck has its keyword, nothing gives it (Iona's Smile draws Flying creatures)
+        for k in (re.findall(r'(?<![a-z:])keyword is (\d+)', withs or '') if kind != 'effect' and not helpful and zone not in ('deck', 'deck_top', 'deck_bottom') else []):  # help to
+            # the cards with a keyword ("your Build minions progress by 1 turn") is no need for that keyword: it helps them  # repeating Summon effects is no unit with Summon; a card in the deck has its keyword, nothing gives it (Iona's Smile draws Flying creatures)
             ins(card, origin, via, ab, 'state', 'given_keyword', kind, side, pick, int(k))
         # things picked by where they stand ("the enemy in front", "bordering units"): moving units changes who that is
         if re.search(r'(?<![a-z:])position ', withs or '') and kind in BOARD_KINDS and not entering and \
@@ -75,6 +86,13 @@ def build(c):
             ins(card, origin, via, ab, 'state', 'moves', kind, side, pick, w=withs)
             if re.search(r'(?<![a-z:])position \w+ \w+ of self\b', withs or '') and pick != 'self' and side == 'mine':  # from the card itself (Zeal:
                 ins(card, origin, via, ab, 'state', 'moves', None, 'mine', 'self', w=withs)  # "near your General"): moving it changes it too
+            # measured from my unit: the card itself ("each enemy around this one", Bonereaper) or my unit the ability picked first
+            # ("restore 4 Health to a friendly minion, deal 4 to enemies around it", Holy Immolation): moving that unit changes who it hits
+            elif side != 'mine' and pick != 'self' and origin == 'own' and cat.get(card) in ('unit', 'hero', 'leader', 'building') and \
+                    re.search(r'(?<![a-z:])position \w+ \w+(?: of self)?(?:;|$)', withs or ''):
+                ins(card, origin, via, ab, 'state', 'moves', None, 'mine', 'self', w=withs)
+            elif side != 'mine' and re.search(r'(?<![a-z:])position \w+ \w+ of it\b', withs or '') and it_side.get((card, ab)) == 'mine':
+                ins(card, origin, via, ab, 'state', 'moves', 'unit', 'mine', None, w=withs)
         # where the card itself stands ("while on the enemy side": a space with same_space and no "of"): moving it is its need
         elif kind == 'position' and not entering and re.search(r'(?<![a-z:])position is same_space(?! of)', withs or '') and \
                 re.search(r'(?<![a-z:])position \w+ \w+ of ', withs or ''):
@@ -113,6 +131,8 @@ def build(c):
         # creature": the card has Flying already; nothing given in play makes it one
     r_op = {(a, b, t, at): op for a, b, t, at, op in c.execute('select card, ability, test, attr, op from flat_if')}
     compared = {(a, b) for a, b in c.execute("select card, ability from flat_if where test='amount'")}
+    picked_any = {(a, b) for a, b in c.execute("""select card, ability from flat_do where on_pick in ('chosen','random') and coalesce(on_side,'any')!='mine'
+                  and act in ('kill','damage','obliterate','sacrifice','return_to_hand','transform','silence')""")}  # harm on either side goes to enemies
     costs = {(a, b) for a, b in c.execute("select card, ability from flat_do where act in ('cost_set','cost_change') and on_pick='self'")}
     for r in c.execute('select card, origin, via, ability, event, of_kind, of_side, of_pick, of_zone, of_with, ev_obj_kind, '
                        'ev_obj_side, ev_obj_with, ev_obj_pick, test, attr, ev_actor_pick, ev_actor_kind, ev_actor_with from flat_if').fetchall():
@@ -131,6 +151,8 @@ def build(c):
             # the direction it wants: "5+ Life", "faeria equal to its Life" want more (stat changes, healing), "half its Health or
             # less" wants less (damage, stat changes); damage never feeds a need for more (Feed the Forest)
             op = r_op.get((card, ab, test, at))
+            if test == 'amount_stat' and fp == 'it' and (card, ab) in picked_any: continue  # "destroy ANY minion, restore its Health":
+            # the player picks the biggest there is; nothing has to grow it (Martyrdom)
             if test == 'amount_stat' and (card, ab) in compared: continue  # a stat used as a threshold ("lethal damage": damage >= my
             # Life) is no stat the card wants more or less of (Divine Guardian)
             if test == 'amount_stat' and (card, ab) in costs:  # a cost equal to a stat ("costs your General's Health"): less of it
@@ -153,8 +175,8 @@ def build(c):
     entry_abs = {(a, b) for a, b in c.execute("select card, ability from flat_when where event in ('played','summoned') and obj_pick='self'")}
     ev_of = {(a, b): e for a, b, e in c.execute("select card, ability, event from flat_when where actor_pick='self' and obj_pick is null")}
     for r in c.execute('select card, origin, via, ability, act, on_kind, on_side, on_pick, on_zone, on_with, keyword_ref, card_ref, '
-                       'param_event, to_kind, to_with, to_side, to_pick from flat_do').fetchall():
-        card, o, v, ab, act, k, s, p, z, w, kw, cref, pev, to_k, to_w, to_s, to_p = r
+                       'param_event, to_kind, to_with, to_side, to_pick, params from flat_do').fetchall():
+        card, o, v, ab, act, k, s, p, z, w, kw, cref, pev, to_k, to_w, to_s, to_p, ps = r
         if not s and p == 'chosen' and act in HARM and k in ('unit', 'any', 'anything', 'unit_or_structure', None):
             s = 'enemy'  # "deal 2 to a creature" (either side): the player aims it at an enemy; it makes no friendly deaths
         if p == 'actor' and not (k or s): k, s = actor_of.get((card, ab), (None, None))
@@ -191,7 +213,8 @@ def build(c):
             # an ability that spends a resource needs it ("Activate: Pay 2 Bones"): fed by gaining it; the card's own need
             ins(card, o, v, None if o == 'has_keyword' else ab, 'condition', 'mana_refilled', k, 'mine', None, w=w)
         # an effect when the card enters on a unit next to it ("Opening Gambit: give a nearby minion +2"): where it enters decides
-        state_rows(card, o, v, ab, k, s, p, w, z, entering=(card, ab) in entry_abs and not re.search(r'(?<![a-z:])position \w+ \w+ of ', w or ''))
+        state_rows(card, o, v, ab, k, s, p, w, z, entering=(card, ab) in entry_abs and not re.search(r'(?<![a-z:])position \w+ \w+ of ', w or ''),
+                   helpful=s in ('mine', None) and helps(act, ps))
         if to_w and to_k != 'position' and re.search(r'(?<![a-z:])position ', to_w) and act not in PLACES:  # a space is not moved into place  # "attack a bordering enemy"; where a new card is put
             ins(card, o, v, ab, 'state', 'moves', to_k, s, None, w=to_w)                # ("Pelt Lice in adjacent slots") needs no moves
     # the game's rules (read/<game>/game_rules.jsonl): what every card of a category does without its text saying so (an

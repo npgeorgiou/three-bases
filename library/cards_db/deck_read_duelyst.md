@@ -83,3 +83,19 @@ Second read, after the merge with Faeria's v39 code (same 10 decks):
 24. **A named card asked for in play** ("if you have another Wraithling"): the cards that make it feed the condition; not a
     condition on the deck or discard ("if Krog is in your deck, draw him" fetches him). A card naming what it makes itself in
     its own effects (Blazing Spines' walls "can attack") asks for no other maker of it.
+
+## Kaptain's check (30 Oct 2026): what was wrong and the rule (PROCESS "Kaptain's check of the Duelyst networks")
+| deck | line | rule |
+|---|---|---|
+| Argeon Mechaz0r | Lifestream, Holy Immolation -> Martyrdom "does what it waits for" | 3: a stat of what it picks to destroy wants nothing |
+| Argeon Mechaz0r | Mechs -> Oakenheart "is a Mech it asks for" | 1: Oakenheart's passive helps the Mechs (line from it) |
+| Vaath Dying Wish | Golems -> Golem Metallurgist "asks for / counts" | 1: it makes them cheaper (line from it) |
+| Cassyva Replace | Aethermaster, Kron, Replicant, Letigress ... -> Punish "by fighting" | 2: every unit attacks; no combo |
+| Shidai Artifacts | Cyclone Mask -> General "can aim at it" | 6: giving Ranged is help |
+| all | the General's spell | 8: its own card, a node |
+| Argeon Dawn's Eye | Azurite Lion: no line to Holy Immolation | 7: Celerity moves it; "enemies around it" needs my units moved |
+| Lilithe Darkfire | Lilithe, Vorpal Reaver -> Inkling Surge "enables" | 5: they put Wraithlings into play; the Wraithling enables Inkling Surge |
+| Ciphyron Build | Build cards -> Timekeeper "does what it waits for" | 1: Timekeeper helps the buildings (line from it) |
+Found reading again by the same rules: Roar "more health" (4), Abomination's gains to Letigress (4), Tempest -> Arclyte
+Regalia (9), the Lion -> Zeal "your leader moves" (7), Dispirited Prisoner "counts when played" (tokens are never played),
+Abyssal Scar -> the General (a delayed effect the player gets is no help to the General card).

@@ -243,3 +243,15 @@ Each change: date, what changed, the card that caused it, and which records were
 - network_page.py: kinds and names agreed 30 Oct; links hover and click like cards; labels only the reason.
 - Lines before -> after: Runeterra 6952 -> 6729, Stormbound 959 -> 925, Monster Train 106 -> 109, Duelyst 574 -> 569,
   Inscryption 325 -> 324, Faeria 651 -> 571. Cases nfa31-nfa40.
+
+## 30 Oct 2026, v41 (Kaptain's check of the Duelyst networks; shared code, Duelyst rebuilt, other games checked)
+- network.py: helpful effects and help triggers are no asks or "cards it counts"; rule lines only from cards that fight
+  more, needs naming the leader, or level-ups; power no help to damaged enemies (except level-ups); chosen harm wants no stat;
+  stat makers by stat and target; level forms keep types; made nodes take their makers' lines; buff keywords Ranged,
+  Backstab, Rush, Provoke, Airdrop; ready, countdown and damage prevention help; self makes keep the card's kind; protection
+  triggers wait for nothing; tokens are never played; a leader's spell is a node ("casts its own spell"); leader wording.
+- refs.py: help to keyword holders makes no keyword need; positions from my unit need its moves; chosen harm wants no stat.
+- vocab: Duelyst Celerity causes attacks and moves. supplement_duelyst.py: a General's text names its spell card;
+  fixes/duelyst/v41.py drops the spell copy from the General's record.
+- network_page.py: right click copies a terse card or line text; tooltips show types. deck_lines.py prints the same text.
+

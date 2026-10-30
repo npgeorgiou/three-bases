@@ -11,7 +11,7 @@ by game, first cards only.
 ```sql
 select distinct card from flat_concept where concept in ('disable','cant_attack')
 ```
-- duelyst: 130 cards: Abyssal Tormentor, Aegis Barrier, Ancient Grove, Anti-Magic Field, Assassination Protocol, Avalanche, Aymara Healer, Backstab ...
+- duelyst: 128 cards: Abyssal Tormentor, Aegis Barrier, Ancient Grove, Anti-Magic Field, Assassination Protocol, Avalanche, Aymara Healer, Backstab ...
 - faeria: 67 cards: Annoying Gnat, Aquatic, Baeru, the First Wave, Boulder Thrower, Court Jester, Defender of the Homeland, Demonic Salmon, Devouring Plant ...
 - inscryption: 25 cards: Aquasquirrel, Cat, Child 13 (Awakened), Child 13 (Dormant), Drowned Soul, Energy Conduit, Energy Conduit (sigil), Force Mage ...
 - monster_train: 43 cards: Alloyed Construct, Ambient Charge, Bone Dog's Favor, Bounty Stalker, Cuttlehex, Dante's Candle, Dazed, Deadweight ...
@@ -25,7 +25,7 @@ select distinct card from flat_concept where concept in ('disable','cant_attack'
 ```sql
 select distinct card from flat_ref where happening='dies' and role!='makes' and side in ('mine','any','') and coalesce(pick,'')!='self'
 ```
-- duelyst: 35 cards: Abyssal Scar (Bloodbound Spell), Amaranthine Vow, Blood Echoes, Bloodtide Priestess, Capricious Marauder, Cassyva Soulreaper, Corpse Combustion, Dance of Dreams ...
+- duelyst: 34 cards: Abyssal Scar (Bloodbound Spell), Amaranthine Vow, Blood Echoes, Bloodtide Priestess, Capricious Marauder, Corpse Combustion, Dance of Dreams, Death Knell ...
 - faeria: 10 cards: Bone Collector, Flying Piranha, Krog's Dinner, Mother of All Yaks, Ruunin, the Relentless, Shaytan Monstrosity, Soul Eater, Spirit Spice ...
 - inscryption: 6 cards: Corpse Eater, Corpse Maggots, Double Death, Gem Detonator, Gem Detonator (sigil), Necromancer
 - monster_train: 15 cards: A Fatal Melting, Big Sludge, Devourer of Death, Formless Child, Hallowed Halls, Memento Mori, Memories of the Melted, Molded ...
@@ -37,7 +37,7 @@ select distinct card from flat_ref where happening='dies' and role!='makes' and 
 ```sql
 select distinct card from flat_concept where concept='sacrifice'
 ```
-- duelyst: 27 cards: Abhorrent Unbirth, Aphotic Drain, Arid Unmaking, Blood Echoes, Cascading Rebirth, Cascading Rebirth (follow-up), Consuming Rebirth, Corporeal Cadence ...
+- duelyst: 26 cards: Abhorrent Unbirth, Aphotic Drain, Arid Unmaking, Blood Echoes, Cascading Rebirth, Cascading Rebirth (follow-up), Consuming Rebirth, Corporeal Cadence ...
 - faeria: 12 cards: Ancient Gargoyle, Death Walker, Demon Wrangler, Doomgate, Door to Oblivion, Failed Experiment, Feed the Forest, Lord of the Wastes, Oath to Oblivion ...
 - inscryption: 9 cards: Black Goat, Double Death, Game rule: Blood costs, Game rule: units can be sacrificed, M3atB0t, Master Bleene, Necromancer, Pharaoh's Pets ...
 - monster_train: 27 cards: Antumbra Morsel, Cannibalize, Crushing Demise, Eaten, Feast, Hallowed Drippings, Hallowed Halls, Imp-portant Work ...
@@ -46,7 +46,7 @@ select distinct card from flat_concept where concept='sacrifice'
 
 ## Combos between those two lists, inside each game (connections.explain)
 
-1523 pairs, for example:
+1515 pairs, for example:
 
 - duelyst: Malice (token) -> Nether Summoning (state: dies)
 - duelyst: Malice (token) -> Zurael, the Lifegiver (state: dies)
@@ -64,7 +64,7 @@ select distinct card from flat_concept where concept='sacrifice'
 ```sql
 select distinct card from flat_concept where concept='forced_movement'
 ```
-- duelyst: 37 cards: Blink, Cade the Desolator, Chaos Elemental, Chittering Tiller, Cindera, Daemonic Lure, Envybaer, Flicker ...
+- duelyst: 36 cards: Blink, Cade the Desolator, Chaos Elemental, Chittering Tiller, Cindera, Daemonic Lure, Envybaer, Flicker ...
 - faeria: 39 cards: Airbot, Ancient Boar, Animated Banquet, Balloon Fish, Clockwork Yak, Coral Polliwog, Crackthorn Beast, Dash ...
 - inscryption: 36 cards: 49er, Bloodhound, Bolthound, Bonehound, Burrower, Burrowing Trap, Clinger, Elk ...
 - monster_train: 15 cards: Ascend, Cave In, Crypt Builder, Descend, Dripfall, Hidden Passage, Hosting Kin, March of Shields ...
@@ -118,11 +118,11 @@ select distinct card from flat_concept where concept='lifesteal'
 ```sql
 select distinct card from flat_ref where happening='given_keyword' and role!='makes'
 ```
-- duelyst: 49 cards: Afterblaze, Amaranthine Vow, Arrow Whistler, Bloodbound Mentor, Bombard, Cannon of MECHAZ0R, Carrion Collector, Chassis of MECHAZ0R ...
-- faeria: 10 cards: Destructive Volley, Enslaved Priest, Fugoro, Captain of the Gagana, Gift of Steel, Golden Aviary, Herald of War, Imperial Engineer, Seek Shelter ...
-- inscryption: 23 cards: Ant Queen, Ants, Bleene's Mox, Bleene's Vessel, Blue Mox, Emerald Mox, Emerald Power, Emerald Vessel ...
+- duelyst: 38 cards: Afterblaze, Amaranthine Vow, Bloodbound Mentor, Cannon of MECHAZ0R, Chassis of MECHAZ0R, Cloudcaller, Corpse Combustion, Crossbones ...
+- faeria: 8 cards: Destructive Volley, Enslaved Priest, Fugoro, Captain of the Gagana, Herald of War, Imperial Engineer, Seek Shelter, Triton Trainer, Windborne Emissary
+- inscryption: 8 cards: Ant Queen, Ants, Emerald Power, Flying Ant, Green Mage, Master Bleene, True Scholar, Worker Ant
 - monster_train: 90 cards: Alloy of the Ancients, Alloyed Construct, Apex Imp, Armor, Attuned, Awake, Battering Ram, Big Sludge ...
-- runeterra: 108 cards: Animate, Arbiter of the Peak, Aspect of the Dragon, Ava Achiever, Balen the Benevolent, Big Game Tycoon, Caitlyn, Caitlyn (level 2) ...
+- runeterra: 102 cards: Animate, Arbiter of the Peak, Aspect of the Dragon, Ava Achiever, Big Game Tycoon, Caitlyn, Caitlyn (level 2), Clash of Giants ...
 - stormbound: 26 cards: Acid Greenhorns, Amberhides, Big Sisters of Growth, Brood Sages, Copperskin Ranger, Crimson Sentry, Function Wilds, Green Prototypes ...
 
 ## Effects that grow with a count ("for each", "equal to"), any game
@@ -130,7 +130,7 @@ select distinct card from flat_ref where happening='given_keyword' and role!='ma
 ```sql
 select distinct card from flat_do where params glob '*=[a-z]*'
 ```
-- duelyst: 371 cards: Abhorrent Unbirth, Abyssal Juggernaut, Abyssal Tormentor, Accumulonimbus, Ace, Aegis Barrier, Aerial Rift, Aethermaster ...
+- duelyst: 369 cards: Abhorrent Unbirth, Abyssal Juggernaut, Abyssal Tormentor, Accumulonimbus, Ace, Aegis Barrier, Aerial Rift, Aethermaster ...
 - faeria: 250 cards: Air Elemental, Airbot, Amai Merchant, Ancient Boar, Ancient Gargoyle, Animated Banquet, Annoying Gnat, Apex Predator ...
 - inscryption: 84 cards: !CORRUPTED, Ancient Fir, Ant Queen, Ants, Aquasquirrel, Armored, Bell Ringer, Bell Tentacle ...
 - monster_train: 166 cards: A Fatal Melting, Adaptive Mutation, Alloy of the Ancients, Alloyed Construct, Ambient Charge, Ancient Resonance, Ancient Synergy, Apex Imp ...
@@ -141,30 +141,30 @@ select distinct card from flat_do where params glob '*=[a-z]*'
 
 What "disable" (stop a unit acting) is built with, on the same cards (`ask.py all together disable`):
 
-- cant_attack: duelyst 19 cards, monster_train 8 cards, runeterra 11 cards, stormbound 8 cards
-- immobilize: duelyst 14 cards, stormbound 6 cards
-- passive: duelyst 19 cards, monster_train 8 cards, runeterra 18 cards, stormbound 8 cards
+- cant_attack: duelyst 18 cards, monster_train 8 cards, runeterra 11 cards, stormbound 8 cards
+- immobilize: duelyst 13 cards, stormbound 6 cards
+- passive: duelyst 18 cards, monster_train 8 cards, runeterra 18 cards, stormbound 8 cards
 - cheat_death: runeterra 7 cards
 - silence: stormbound 8 cards
-- forced_movement: monster_train 6 cards
+- movement: monster_train 6 cards
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: duelyst 2463 pairs, e.g. Deepfire Devourer -> Darkspear Zane; faeria 929 pairs, e.g. Feed the Forest -> Long-horned Yak; inscryption 489 pairs, e.g. Mage Knight -> Strange Frog; monster_train 292 pairs, e.g. Bogdeep Cocoon -> Kinhost Vessel; runeterra 11113 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 264 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- sacrifice: duelyst 1574 pairs, e.g. Deepfire Devourer -> Darkspear Zane; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Strange Frog; monster_train 288 pairs, e.g. Primordium -> Devourer of Death; runeterra 5631 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- self_destruct: duelyst 692 pairs, e.g. Fireblaze Obelysk -> Darkspear Zane; faeria 576 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 350 pairs, e.g. Mage Knight -> Strange Frog; monster_train 243 pairs, e.g. Bogdeep Cocoon -> Kinhost Vessel; runeterra 6557 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
-- revive: inscryption 27 pairs, e.g. Necromancer -> Strange Frog; runeterra 1010 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 38 pairs, e.g. Diehards -> Project PH03-NIX
-- damage: faeria 652 pairs, e.g. Boulder Thrower -> Laya, Lady of Sorrows; inscryption 267 pairs, e.g. QU177 (Beast Form) -> Shield Latcher; runeterra 8388 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 519 pairs, e.g. Divine Reptiles -> Spare Dragonling
-- removal: faeria 129 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Strange Frog; monster_train 38 pairs, e.g. Crushing Demise -> Little Fade; runeterra 2027 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
+- destroy: duelyst 2400 pairs, e.g. Deathstrike Seal -> Unseven; faeria 934 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 489 pairs, e.g. Long Elk -> Draugr; monster_train 302 pairs, e.g. Little Fade -> Primordium; runeterra 11118 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 264 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- sacrifice: duelyst 1511 pairs, e.g. Abhorrent Unbirth -> Unseven; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Draugr; monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5632 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- self_destruct: duelyst 692 pairs, e.g. Simulacra Obelysk -> Khanuum-ka; faeria 576 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 350 pairs, e.g. Gem Fiend -> Draugr; monster_train 252 pairs, e.g. Little Fade -> Primordium; runeterra 6575 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
+- removal: duelyst 512 pairs, e.g. Rasha's Curse -> Khanuum-ka; faeria 133 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Draugr; monster_train 41 pairs, e.g. Wicked Blaze -> Primordium; runeterra 2034 pairs, e.g. Kindred's Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
+- revive: inscryption 27 pairs, e.g. Necromancer -> Draugr; runeterra 886 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant
+- ping: duelyst 512 pairs, e.g. Catalyst Quillbeast -> Darkspear Zane; faeria 385 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 135 pairs, e.g. QU177 (Beast Form) -> Shield Latcher; runeterra 3703 pairs, e.g. Anivia -> Shackled Ghasts; stormbound 178 pairs, e.g. Acid Greenhorns -> Green Prototypes
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
-- summon -> on_ally_play -> random_effect (seen in faeria, monster_train, runeterra)
-- summon -> tribal -> card_presence_condition (seen in runeterra, stormbound)
+- summon -> on_ally_play -> countdown (seen in duelyst, runeterra)
 - summon -> banish -> activated (seen in duelyst, runeterra)
-- summon -> banish -> other_leave_trigger (seen in runeterra)
 - summon -> banish -> merge_attach (seen in runeterra)
+- summon -> banish -> other_leave_trigger (seen in runeterra)
 - summon -> banish -> return_to_hand (seen in runeterra)
+- summon -> delayed -> cant_block (seen in runeterra)
 
 ## A deck explained (`ask.py runeterra analyze "..."`), a Lucian/Senna deck from a deck guide
 
@@ -186,16 +186,16 @@ Weak spots: none found.
 
 ## Decks: cards of one game that feed each other
 
-- `ask.py stormbound deck "Wisp Cloud"` (Neutral, Winter): Wisp Cloud, Orgone Leechers, Frosthexers, Spellbinder Zhevana, Icicle Burst, Midwinter Chaos, Blizzard Bombs, Moment’s Peace, Angelic Tikas, Catnip’s Charm, Fluffy Badboxers, Sweetcap Kittens
-- `ask.py stormbound deck "Doppelbocks"` (Neutral, Swarm): Doppelbocks, Faun Companions, Swarmcallers, Moonlit Aerie, Siegebreakers, Queen of Herds, Trusty Shepherds, Restless Goats, Counselor Ahmi, Shady Ghoul, Pan Heralds, Dreadfauns
-- `ask.py runeterra deck "Kalista"` (Neutral, Shadow Isles): Kalista, Darkwater Scourge, Kindred, Crawling Viperwyrm, Camavoran Dragon, Gwen, Eternal Dancers, The Iron Conquest, Mistkeepers, Amalgamation Of Vile Rites, The Darkin Halberd, Harrowing Return, The Harrowing, Shark Chariot
+- `ask.py stormbound deck "Wisp Cloud"` (Neutral, Winter): Wisp Cloud, Orgone Leechers, Frosthexers, Spellbinder Zhevana, Icicle Burst, Midwinter Chaos, Blizzard Bombs, Agile Warriors, Temple of the Mind, Moment’s Peace, Angelic Tikas, Catnip’s Charm
+- `ask.py stormbound deck "Doppelbocks"` (Neutral, Swarm): Doppelbocks, Faun Companions, Swarmcallers, Moonlit Aerie, Siegebreakers, Queen of Herds, Trusty Shepherds, Beards of Crowglyph, Prime Oracle Bragda, Counselor Ahmi, Noble Vigilantes, Pan Heralds
+- `ask.py runeterra deck "Kalista"` (Neutral, Shadow Isles): Kalista, Darkwater Scourge, Mask Mother, Camavoran Dragon, Crawling Viperwyrm, Kindred, Song of the Isles, Mistkeepers, Harrowing Return, The Darkin Halberd, Amalgamation Of Vile Rites, Eternal Dancers, The Iron Conquest, The Harrowing
 
 ## Same effect, compare cost: deal damage to anything (unit, structure or player), cheapest first
 
 ```sql
 select distinct d.card from flat_do d join card cd on cd.id=d.card where d.act='damage' and d.on_kind in ('any','anything') order by cd.cost
 ```
-- duelyst: 50 cards: Armada, Avalanche, Battle Panddo, Blinding Snowstorm, Blistering Skorn, Bloodtear Alchemist, Boulder Hurl, Chromatic Cold ...
+- duelyst: 49 cards: Armada, Avalanche, Battle Panddo, Blinding Snowstorm, Blistering Skorn, Bloodtear Alchemist, Boulder Hurl, Chromatic Cold ...
 - faeria: 21 cards: Blazing Salamander, Bottled Lightning, Boulder Thrower, Bursting Hippo, Crackthorn Beast, Dancing Blade, Derelict Tower, Detonate ...
 - runeterra: 45 cards: Atrocity, Blade's Edge, Blood in the Water, Chakram Dancer, Divine Draft, Ebb, Ebb and Flow, Ember Maiden ...
 - stormbound: 17 cards: Booming Professors, Boomstick Officers, Chaotic Pupil, Cheesy Lurers, Crazy Bombers, Dark Harvest, Felflares, Melodious Sisters ...
@@ -212,12 +212,12 @@ select distinct card from flat_do where act='copy_keywords'
 
 ## What each faction or region leans on (concepts with the highest share of its cards vs its game)
 
-- duelyst Lyonar Kingdoms: on_lifegain (7), aura (5), heal (14), multi_attack (5), taunt (11)
-- duelyst Songhai Empire: flanking (14), temporary_buff (5), generate_cards (11), trap_secret (4), on_spell (15)
+- duelyst Lyonar Kingdoms: on_lifegain (7), aura (5), multi_attack (5), taunt (11), heal (13)
+- duelyst Songhai Empire: flanking (14), temporary_buff (5), on_spell (12), generate_cards (10), trap_secret (4)
 - duelyst Vetruvian Imperium: rows (9), self_destruct (9), merge_attach (6), steal (6), haste (14)
-- duelyst Abyssian Host: other_death_trigger (12), terrain (15), sacrifice (13), destroy (22), stat_loss (4)
-- duelyst Magmar Aspects: revive (8), permanent_growth (14), disable (4), attack_gain (38), turn_start (13)
-- duelyst Vanar Kindred: territory_trigger (7), disable (12), base_resource_gain (4), resource_gain (4), cant_move (4)
+- duelyst Abyssian Host: other_death_trigger (11), terrain (14), sacrifice (12), destroy (21), stat_loss (4)
+- duelyst Magmar Aspects: revive (8), permanent_growth (14), disable (4), turn_start (13), attack_gain (37)
+- duelyst Vanar Kindred: territory_trigger (7), disable (11), base_resource_gain (4), resource_gain (4), cant_move (4)
 - duelyst Neutral: deck_modification (6), quests (5), random_ability (6), ranged (18), copy (16)
 - duelyst Boss: merge_attach (4), multi_attack (6), turn_start (16), area_templates (6), revive (6)
 - duelyst Tutorial: on_play (4)
@@ -233,7 +233,7 @@ select distinct card from flat_do where act='copy_keywords'
 - monster_train Hellhorned: temporary_buff (11), block_armor (12), damage_prevention (12), on_damaged (13), count_payoff (21)
 - monster_train Awoken: on_lifegain (4), counterattack (7), regeneration (4), draw (11), heal (11)
 - monster_train Stygian Guard: discard (6), on_spell (9), retain (4), stat_loss (5), damage_over_time (11)
-- monster_train Umbra: lifesteal (4), on_sacrifice (14), shield (7), overload_debt (4), tribal (18)
+- monster_train Umbra: lifesteal (4), on_sacrifice (14), shield (7), board_limit (4), overload_debt (4)
 - monster_train Melting Remnant: other_death_trigger (8), countdown (15), self_destruct (16), cost_set (6), delayed (15)
 - monster_train Wurmkin: cost_type (10), resource_gain (23), summon (4), damage_over_time (8), lanes (27)
 - monster_train Clanless: direct_damage (5), banish (10), turn_end (7), cant_attack (5), passive (20)

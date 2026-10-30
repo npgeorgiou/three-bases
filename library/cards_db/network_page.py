@@ -45,7 +45,7 @@ const LINE={waits:['#0d9488','does what it waits for'],type:['#4f46e5','enables'
  levels:['#c026d3','helps it level up'],puts:['#65a30d','puts it into play'],repeats:['#ea580c','repeats its effects'],
  rules:['#dc2626','changes how it works'],boosts:['#92400e','helps'],levelsinto:['#6b7280','levels into'],targets:['#9ca3af','can aim at it']};
 const CARD={hero:['#facc15','champion'],unit:['#7dd3fc','unit'],spell:['#c4b5fd','spell'],building:['#6ee7b7','landmark / structure'],
- item:['#fdba74','equipment'],ability:['#d1d5db','skill']};
+ item:['#fdba74','equipment'],ability:['#d1d5db','skill'],leader:['#f9a8d4','leader (the player)']};
 const R=14,NS='http://www.w3.org/2000/svg',svg=document.getElementById('draw'),tip=document.getElementById('tip');
 const hidden=new Set();let cur=0,sel=null,hov=null,vb=null,d=null,N=[],ix={},els={},game=D[0].game;
 // focus: one card (its lines) or a section of the sidebar (its cards and the lines between them); one at a time
@@ -123,11 +123,20 @@ function mark(){const f=hov||sel,on=new Set(f?f.nodes:[]);
  document.querySelectorAll('.chip').forEach(c=>c.style.outline=sel&&sel.card!=null&&ix[+c.dataset.id]===sel.card?'2px solid var(--fg)':'');
  document.querySelectorAll('.sec').forEach(x=>x.classList.toggle('on',!!sel&&sel.key===x.dataset.key))}
 svg.onmousemove=e=>{if(drag&&drag.moved)return;const t=e.target;let h='';
- if(t.dataset.n){const n=N[+t.dataset.n];hov=one(+t.dataset.n);h=`<b>${esc(n.name)}</b>${esc(info(n))} <span style="color:var(--mut)">${esc((CARD[n.cat]||['',n.cat])[1])}${n.made?', made by the deck':''}</span><br>${n.keywords.length?'<i>'+esc(n.keywords.join(', '))+'</i><br>':''}${esc(n.text)}`}
+ if(t.dataset.n){const n=N[+t.dataset.n];hov=one(+t.dataset.n);h=`<b>${esc(n.name)}</b>${esc(info(n))} <span style="color:var(--mut)">${esc((CARD[n.cat]||['',n.cat])[1])}${n.types&&n.types.length?' \u00b7 '+esc(n.types.join(', ')):''}${n.made?', made by the deck':''}</span><br>${n.keywords.length?'<i>'+esc(n.keywords.join(', '))+'</i><br>':''}${esc(n.text)}`}
  else if(t.dataset.l){const l=d.lines[+t.dataset.l];hov=oneLine(+t.dataset.l);h=`<b>${esc(l.why)}</b><br><span style="color:var(--mut)">${LINE[l.kind][1]}</span>`}
  else hov=null;
  mark();tip.style.display=h?'block':'none';tip.innerHTML=h;tip.style.left=Math.min(innerWidth-360,e.clientX+14)+'px';tip.style.top=Math.min(innerHeight-120,e.clientY+14)+'px'};
 svg.onmouseleave=()=>{hov=null;mark();tip.style.display='none'};
+// right click copies a terse text to show Claude: a line with its two cards, or a card with all its lines (deck_lines.py prints the same)
+const tl=l=>`${N[ix[l.from]].name} -> ${N[ix[l.to]].name}: ${LINE[l.kind][1]}: ${l.why}`;
+const tn=i=>{const n=N[i],tag=[n.cat,...(n.types||[]),...n.keywords].join(', ');
+ return [`${n.name}${n.made?' (made)':''} [${tag}]: ${n.text}`,...d.lines.filter(l=>ix[l.from]===i||ix[l.to]===i).map(l=>'  '+tl(l))].join('\n')};
+function copy(t,e){const done=()=>{tip.style.display='block';tip.textContent='copied';tip.style.left=e.clientX+14+'px';tip.style.top=e.clientY+14+'px'};
+ (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(done,()=>{const a=document.createElement('textarea');a.value=t;
+  document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();done()})}
+svg.oncontextmenu=e=>{const t=e.target;if(t.dataset.n){e.preventDefault();copy(`${d.game} / ${d.deck}\n`+tn(+t.dataset.n),e)}
+ else if(t.dataset.l){e.preventDefault();copy(`${d.game} / ${d.deck}\n`+tl(d.lines[+t.dataset.l]),e)}};
 svg.onclick=e=>{if(e.target.dataset.n){const i=+e.target.dataset.n;sel=sel&&sel.card===i?null:one(i);mark()}
  else if(e.target.dataset.l&&!(drag&&drag.moved)){const i=+e.target.dataset.l;sel=sel&&sel.line===i?null:oneLine(i);mark()}};
 function legend(){const cats=[...new Set(N.map(n=>n.cat))],kinds=new Set(d.lines.map(l=>l.kind));
@@ -169,7 +178,8 @@ def deck_data(c, lib, game, deck, src, text):
         txt = ' '.join(((r[0] if r else '') or '').replace('Missing Translation', '').split())
         kws = list(dict.fromkeys(n for (n,) in c.execute('select k.name from card_keyword ck join card k on k.id=ck.keyword where ck.card=?', (i,))))
         cat, cost, pw, hp = c.execute('select category, cost, power, health from card where id=?', (i,)).fetchone()
-        out.append({'id': i, 'name': mechanics.name(c, i), 'made': made, 'cat': cat, 'keywords': kws, 'text': txt,
+        types = [n for (n,) in c.execute('select t.name from card_type ct join type t on t.id=ct.type where ct.card=?', (i,))]
+        out.append({'id': i, 'name': mechanics.name(c, i), 'made': made, 'cat': cat, 'types': types, 'keywords': kws, 'text': txt,
                     'cost': cost, 'power': pw if cat in ('unit', 'hero', 'building') else None, 'health': hp if cat in ('unit', 'hero', 'building') else None})
     ls = []
     for (a, b), rs in lines.items():  # one arrow per pair and kind, its strongest reason
@@ -206,4 +216,4 @@ def main():
     print(out)
 
 
-main()
+if __name__ == '__main__': main()

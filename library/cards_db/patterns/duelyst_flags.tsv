@@ -1,5 +1,44 @@
 card	name	pattern	requires	text
+5000048	Argeon Highmayne	T93	event:played	bloodbound spell: give a friendly minion nearby
+5000049	Zir'An Sunforge	T93	event:played	bloodbound spell: restore 3 health to any minio
+5000050	Brome Warcrest	T93	event:played	bloodbound spell: summon a 1/2  #  with zeal: p
+5000050	Brome Warcrest	V04	value:summon|copy|summoned|revive|summoned_this_round	bloodbound spell: summon a 1/2  #  with zeal: provoke 
+5000089	Kaleos Xaan	T93	event:played	bloodbound spell: teleport a friendly minion up
+5000089	Kaleos Xaan	V91	value:move|swap	bloodbound spell: teleport a friendly minion up to 2 spa
+5000090	Reva Eventide	T93	event:played	bloodbound spell: summon a  #  nearby your gene
+5000090	Reva Eventide	V04	value:summon|copy|summoned|revive|summoned_this_round	bloodbound spell: summon a  #  nearby your general.
+5000091	Shidai Stormblossom	T93	event:played	bloodbound spell: put a spellsword into your ac
+5000091	Shidai Stormblossom	V94	value:hand|return_to_hand|from_hand|draw|create|copy|return_card	l: put a spellsword into your action bar that cannot be replaced.
+5000135	Zirix Starstrider	T93	event:played	bloodbound spell: summon a 2/2  #  on a random 
+5000135	Zirix Starstrider	V04	value:summon|copy|summoned|revive|summoned_this_round	bloodbound spell: summon a 2/2  #  on a random space n
+5000136	Scioness Sajj	T93	event:played	bloodbound spell: your general deals double dam
+5000136	Scioness Sajj	V05	value:damage|damaged|survives_damage|nexus_damaged|excess_damage|negate_damage|damage_reduction|strike_with|increase_effect	ll: your general deals double damage to minions this turn.
+5000136	Scioness Sajj	V95	value:this_round|summoned_this_round|dead_this_round|attacked_this_round|struck_this_round|next_card	eals double damage to minions this turn.
+5000137	Ciphyron Ascendant	T93	event:played	bloodbound spell: give an enemy minion -2 attac
+5000178	Lilithe Blightchaser	T93	event:played	bloodbound spell: summon 2 wraithlings nearby y
+5000178	Lilithe Blightchaser	V04	value:summon|copy|summoned|revive|summoned_this_round	bloodbound spell: summon 2 wraithlings nearby your gen
+5000179	Cassyva Soulreaper	KW	name:shadow creep	is turn, the space turns into shadow creep.
+5000179	Cassyva Soulreaper	T93	event:played	bloodbound spell: deal 1 damage to a minion. if
+5000179	Cassyva Soulreaper	V05	value:damage|damaged|survives_damage|nexus_damaged|excess_damage|negate_damage|damage_reduction|strike_with|increase_effect	bloodbound spell: deal 1 damage to a minion. if it die
+5000179	Cassyva Soulreaper	V93	value:set_terrain	es this turn, the space turns into shadow creep.
+5000179	Cassyva Soulreaper	V95	value:this_round|summoned_this_round|dead_this_round|attacked_this_round|struck_this_round|next_card	amage to a minion. if it dies this turn, the space turns into shadow 
+5000180	Maehv Skinsolder	T93	event:played	bloodbound spell: destroy a friendly minion to 
+5000180	Maehv Skinsolder	V04	value:summon|copy|summoned|revive|summoned_this_round	 destroy a friendly minion to summon a 4/4  #  nearby. deal 2 dama
+5000180	Maehv Skinsolder	V05	value:damage|damaged|survives_damage|nexus_damaged|excess_damage|negate_damage|damage_reduction|strike_with|increase_effect	n to summon a 4/4  #  nearby. deal 2 damage to your general.
+5000220	Vaath the Immortal	T93	event:played	bloodbound spell: give your general +1 attack.
+5000221	Starhorn the Seeker	T93	event:played	bloodbound spell: both players draw a card.
+5000221	Starhorn the Seeker	V02	value:draw|drawn	loodbound spell: both players draw a card.
+5000222	Ragnora the Relentless	T93	event:played	bloodbound spell: summon a  #  egg nearby your 
+5000222	Ragnora the Relentless	V04	value:summon|copy|summoned|revive|summoned_this_round	bloodbound spell: summon a  #  egg nearby your general
 5000230	Kujata	V04	value:summon|copy|summoned|revive|summoned_this_round	your minions cost 1 less to summon and take 1 damage when summon
+5000263	Faie Bloodwing	T93	event:played	bloodbound spell: deal 2 damage to all enemies 
+5000263	Faie Bloodwing	V05	value:damage|damaged|survives_damage|nexus_damaged|excess_damage|negate_damage|damage_reduction|strike_with|increase_effect	bloodbound spell: deal 2 damage to all enemies in the 
+5000264	Kara Winterblade	T93	event:played	bloodbound spell: friendly minions summoned thi
+5000264	Kara Winterblade	V04	value:summon|copy|summoned|revive|summoned_this_round	bound spell: friendly minions summoned this turn gain +1/+1.
+5000264	Kara Winterblade	V90	value:stat_change|stat_set	nions summoned this turn gain +1/+1.
+5000264	Kara Winterblade	V95	value:this_round|summoned_this_round|dead_this_round|attacked_this_round|struck_this_round|next_card	ll: friendly minions summoned this turn gain +1/+1.
+5000265	Ilena Cryobyte	T93	event:played	bloodbound spell: stun a nearby enemy minion.
+5000265	Ilena Cryobyte	V01	value:stun|stunned|given_keyword	bloodbound spell: stun a nearby enemy minion.
 5000280	Voice of the Wind	V94	value:hand|return_to_hand|from_hand|draw|create|copy|return_card	you summon a minion from your action bar, summon a 2/2  #   #  nearby.
 5000431	Hideatsu the Ebon Ox	V94	value:hand|return_to_hand|from_hand|draw|create|copy|return_card	l: summon 7 minions from your action bar with different costs. destiny
 5000474	Hatefurnace	V04	value:summon|copy|summoned|revive|summoned_this_round	ain +attack. destiny: minions summoned from your action bar gain r
@@ -9,3 +48,4 @@ card	name	pattern	requires	text
 5000655	Megapenti	V94	value:hand|return_to_hand|from_hand|draw|create|copy|return_card	minions summoned from  # 's action bar gain rebirth:  # .
 5000660	Crystalline Champion	V04	value:summon|copy|summoned|revive|summoned_this_round	all minions summoned from the action bar gain +2
 5000660	Crystalline Champion	V94	value:hand|return_to_hand|from_hand|draw|create|copy|return_card	all minions summoned from the action bar gain +2 attack, but -2 health
+5000753	Argeon Highmayne (tutorial, TutorialSignatureGeneral)	T93	event:played	bloodbound spell: give a friendly minion nearby

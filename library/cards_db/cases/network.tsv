@@ -114,14 +114,14 @@ ndu01	duelyst	Vaath Dying Wish	Spelljammer	Dagona	none		Claude, deck read: a cou
 ndu02	duelyst	Cassyva Replace Abomination	Healing Mystic	Letigress	none	attack	Claude, deck read: Letigress waits for the General attacking, not any unit (family 2)
 ndu03	duelyst	Cassyva Replace Abomination	Cassyva Soulreaper	Letigress	line		Claude, deck read: the General attacks: a cub joins the pack
 ndu04	duelyst	Argeon Mechaz0r	Lifestream	Argeon Highmayne	none		Claude, deck read: the General is no minion to heal or draw (family 2)
-ndu05	duelyst	Vaath Dying Wish	Vaath the Immortal	Lavaslasher	none		Claude, deck read: +1 Attack to the General helps no minion (family 3)
+ndu05	duelyst	Vaath Dying Wish	Overload	Lavaslasher	none		Claude, deck read: +1 Attack to the General helps no minion (family 3)
 ndu06	duelyst	Shidai Artifacts	Mask of Shadows	Shidai Stormblossom	line		guide: Mask of Shadows gives the General Backstab and Attack
 ndu07	duelyst	Shidai Artifacts	Flicker	Mask of Shadows	line		guide: Flicker teleports the General behind an enemy, then the Backstab hits (family 9)
 ndu08	duelyst	Kaleos Trial of Songhai	EMP	Dagona	none		Claude, deck read: destroying artifacts kills no minion (family 5)
 ndu09	duelyst	Vaath Dying Wish	Unseven	Dagona	line		guide: Unseven pulls Dagona from the action bar
 ndu10	duelyst	Kaleos Trial of Songhai	Scroll Bandit	Battle Panddo	none		Claude, deck read: Backstab's damage hits the enemy attacked (families 1, 4)
 ndu11	duelyst	Kaleos Trial of Songhai	Heartseeker	Hideatsu the Ebon Ox	line		guide: every minion summoned from the action bar counts for the Trial (family 8)
-ndu12	duelyst	Kaleos Trial of Songhai	Kaleos Xaan	Scroll Bandit	line		Claude, deck read: teleporting the Bandit behind an enemy is what Backstab needs (family 9)
+ndu12	duelyst	Kaleos Trial of Songhai	Blink	Scroll Bandit	line		Claude, deck read: teleporting the Bandit behind an enemy is what Backstab needs (family 9)
 ndu13	duelyst	Cassyva Replace Abomination	Aethermaster	White Widow	line		guide: more replaces set off White Widow (family 11)
 ndu14	duelyst	Lilithe Darkfire	Lilithe Blightchaser	Phantasm	none		Claude, deck read: my Wraithlings are no opponent's summons (family 7)
 ndu15	duelyst	Lilithe Darkfire	Grasp of Agony	Vorpal Reaver	none		Claude, deck read: Grasp damages the enemies around the dying enemy (family 18)
@@ -138,7 +138,8 @@ ndu25	duelyst	Cassyva Replace Abomination	Healing Mystic	Abhorrent Unbirth	none	
 ndu26	duelyst	Lilithe Darkfire	Phantasm	Wraithling	none		Claude, deck read: Wraithlings are summoned onto the board, never in the action bar (family 22)
 ndu27	duelyst	Lilithe Darkfire	Darkfire Sacrifice	Wraithling	none	cheaper	Claude, deck read: as ndu26, a lower cost is no help to a token
 ndu28	duelyst	Cassyva Replace Abomination	Healing Mystic	Cassyva Soulreaper	line		Claude, deck read: "restore 2 Health to anything" can heal my General (family 13)
-ndu29	duelyst	Lilithe Darkfire	Vorpal Reaver	Inkling Surge	line		guide: Inkling Surge draws when another Wraithling is out; Lilithe and Vorpal Reaver make them
+ndu29	duelyst	Lilithe Darkfire	Wraithling	Inkling Surge	line		guide: Inkling Surge draws when another Wraithling is out; Lilithe and Vorpal Reaver put Wraithlings into play
+ndu31	duelyst	Lilithe Darkfire	Vorpal Reaver	Inkling Surge	none	makes	Kaptain 30 Oct 2026: makers put the Wraithling into play; the Wraithling enables Inkling Surge, not its makers
 ndu30	duelyst	Faie Blood Taura	White Asp	Blazing Spines	none	names	Claude, deck read: Blazing Spines names the walls it summons itself; it asks for no other wall maker (family 24)
 nfa31	faeria	Blue Yellow Events	Shifting Tide	Windstorm Colossus	none	type:	Kaptain 30 Oct 2026: the Colossus counts events played; one kind of line, does what it waits for, not enables
 nfa32	faeria	Yellow Monstrosity	Manta Rider	Windborne Emissary	none	waits:	Kaptain 30 Oct 2026: the Emissary needs another flyer to be there: enables, not does what it waits for
@@ -150,3 +151,19 @@ nfa37	faeria	Midrange Sacrifice	Lord of the Wastes	Soul Eater	line		Kaptain 30 O
 nfa38	faeria	Midrange Sacrifice	Lord of the Wastes	Village Elder	line		Kaptain 30 Oct 2026: kills it for its death effect
 nfa39	faeria	Bargain (Krog)	Krog's Dinner	Meteor	none		Kaptain 30 Oct 2026: 'Your Krog costs 7 less' helps only Krog
 nfa40	faeria	Voice of Hunger Control	Falcon Dive	Plague Bearer	line		Kaptain 30 Oct 2026: 1 damage to my own 1 Life unit sets off its Last Words
+ndu32	duelyst	Argeon Mechaz0r	Lifestream	Martyrdom	none		Kaptain 30 Oct 2026: Martyrdom's waits are not relevant (it picks any minion)
+ndu33	duelyst	Argeon Mechaz0r	Helm of MECHAZ0R	Oakenheart	none		Kaptain: Oakenheart's passive helps the Mechs; the Mechs do not enable it
+ndu34	duelyst	Argeon Mechaz0r	Oakenheart	Helm of MECHAZ0R	line		Kaptain: Oakenheart helps the Mechs
+ndu35	duelyst	Vaath Dying Wish	Ragebinder	Golem Metallurgist	none		Kaptain: Metallurgist only makes Golems cheaper
+ndu36	duelyst	Vaath Dying Wish	Golem Metallurgist	Ragebinder	line		Kaptain: Metallurgist helps the Golems
+ndu37	duelyst	Cassyva Replace Abomination	Aethermaster	Punish	none		Kaptain: every unit can attack; that is no combo
+ndu38	duelyst	Cassyva Replace Abomination	Letigress	Punish	none		Kaptain: as ndu37
+ndu39	duelyst	Shidai Artifacts	Cyclone Mask	Shidai Stormblossom	line		Kaptain: Cyclone Mask gives the General Ranged
+ndu40	duelyst	Argeon Dawn's Eye aggro	Argeon Highmayne	Roar	line		Kaptain: the General's spell is its own card
+ndu41	duelyst	Argeon Dawn's Eye aggro	Roar	Windblade Adept	line		Kaptain: as ndu40, its effects sit on the spell
+ndu42	duelyst	Argeon Dawn's Eye aggro	Azurite Lion	Holy Immolation	line		Kaptain: Celerity moves the Lion next to enemies
+ndu43	duelyst	Argeon Dawn's Eye aggro	Azurite Lion	Windblade Adept	none	leader moves	Claude: the Lion moving is no General moving
+ndu44	duelyst	Ciphyron Build	Rescue-RX	Timekeeper	none		Kaptain: Timekeeper helps the buildings, it waits for nothing
+ndu45	duelyst	Ciphyron Build	Timekeeper	Rescue-RX	line		Kaptain: as ndu44
+ndu46	duelyst	Argeon Dawn's Eye aggro	Tempest	Arclyte Regalia	none		Claude: Regalia's damage prevention waits for nothing
+ndu47	duelyst	Kaleos Trial of Songhai	Dispirited Prisoner	Hideatsu the Ebon Ox	none	counts when played	Claude: a token is summoned, never played from the action bar

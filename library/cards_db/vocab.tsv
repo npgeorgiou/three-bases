@@ -712,7 +712,7 @@ act	sacrifice	the owner gives up their own unit to pay a cost or for an effect; 
 keyword	Blast	concept of having, using or giving this keyword (Duelyst: attacks all enemy minions and Generals in one straight line; concept is Claude's)	aoe_damage		29 Oct 2026, v37 (Duelyst)
 keyword	Blood Surge	concept of having, using or giving this keyword (Duelyst: triggers after you activate your Bloodbound Spell; concept is Claude's)	hero_power		29 Oct 2026, v37 (Duelyst)
 keyword	Bond	concept of having, using or giving this keyword (Duelyst: triggers when summoned if you have another minion of the same tribe; concept is Claude's)	tribal		29 Oct 2026, v37 (Duelyst)
-keyword	Celerity	concept of having, using or giving this keyword (Duelyst: the minion may activate twice per turn; concept is Claude's)	multi_attack		29 Oct 2026, v37 (Duelyst)
+keyword	Celerity	concept of having, using or giving this keyword (Duelyst: the minion may activate twice per turn; concept is Claude's)	multi_attack	attacks;moves	29 Oct 2026, v37 (Duelyst)
 keyword	Deathwatch	concept of having, using or giving this keyword (Duelyst: triggers whenever any minion dies; concept is Claude's)	other_death_trigger		29 Oct 2026, v37 (Duelyst)
 keyword	Destructible	concept of having, using or giving this keyword (Duelyst: an artifact loses 1 durability whenever its General takes damage and is destroyed at 0; concept is Claude's)	self_destruct		29 Oct 2026, v37 (Duelyst)
 keyword	Dying Wish	concept of having, using or giving this keyword (Duelyst: triggers when this minion dies; concept is Claude's)	death_trigger		29 Oct 2026, v37 (Duelyst)

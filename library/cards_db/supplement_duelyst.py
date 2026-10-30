@@ -115,6 +115,10 @@ def main():
     kw_names = {n for (n,) in lib.execute("select name from entities where game='duelyst' and category='keyword'")}
     kw_names |= {n for _, n, *_ in GLOSSARY}
     out, ids = [], {}
+    sig_name = {r['code']: r['name'] for r in rows}
+    for r in rows:  # a General's own spell is its own card (its signature card): the General's text names it
+        if r['general'] and r['signature'] in sig_name and r['text'].startswith('Bloodbound Spell:'):
+            r['text'] = f"Bloodbound Spell: {sig_name[r['signature']]}."
     for r in rows:
         i = old.get(r['code'])
         if i is None: i, nxt = nxt, nxt + 1
