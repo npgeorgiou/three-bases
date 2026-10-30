@@ -1,14 +1,21 @@
 # Handoff: card database (30 Oct 2026, v41)
 
+> **CHECKING AFTER A CHANGE: LOAD THE DATABASE ONCE. NEVER RUN `run.py <game>` ONCE PER GAME.**
+> Every `run.py` reloads ALL eight games (load.py loads every game, every time). Eight runs = eight reloads = over an hour
+> (30 Oct 2026, it happened). Use `python3 check_all.py <your game>` (one reload, then every other game's cases and link
+> audit) or, after a change to network.py only, `python3 check_all.py --no-load` (no reload at all: the networks read
+> cards.sqlite). Then `dump_lines.py` before/after (PROCESS "Fixing a review").
+
 ## Start of a chat
 1. Clone with the library (CLAUDE.md "Start of a chat", then `git sparse-checkout disable`). Read only this file first.
 2. cards.sqlite is committed and current: questions need no build (`ask.py runeterra ...`). After changing records, values
-   or scripts, run `run.py <game>` for every game; each must pass every step.
+   or scripts, run `check_all.py <game>` (the box above: one reload for all games); every game must pass.
 3. Then, as the task needs: PROCESS.md (importing a game), README.md (files, tables, questions), RESULTS.md (results per
    game), NEXT_CHAT.md (open deck-network work on the three games).
 
 ## Importing a new game: start here
 **Do and don't (Kaptain, 29 Oct 2026, after the Faeria import took over an hour of loops). Keep this list in view:**
+- Do set the game's expensive cost in network.py EXPENSIVE (PROCESS "Rules for links"), and read those rules before any network.
 - Do research the game's rules first, before readers: how units fight, move and reach things, and, on a board, where cards
   may enter and how the board grows (Faeria: land only next to your god, lands or creatures; summon only on your own empty
   land of the right colour). Write them as game rules (step 0.10). Missing them made most of Faeria's network errors.

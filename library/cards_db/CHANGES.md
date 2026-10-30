@@ -338,3 +338,11 @@ Each change: date, what changed, the card that caused it, and which records were
   had already removed some asks: 410 -> 456); every other game keeps its lines and pairs
   (only the order of reason parts changed). Cases nst01-nst18. All games pass except Stormbound's four poison combo cases,
   which failed before this work.
+
+## 30 Oct 2026, v51 (Kaptain's check of the Slay the Spire networks; network.py only, every game checked without a reload)
+- Rules for links written in PROCESS "Think like a player"; load-once rule in a box at the top of HANDOFF.md and
+  check_all.py (one reload, or none after a network.py change).
+- deck_read_sts1.md F9-F13: no links from what every card does; plain hits feed no death reactions; helpers point at what
+  they help (Barricade, Vulnerable, Wrath, Divinity); a cost that drops per X is "makes cheaper" (also Runeterra, Faeria);
+  "gives you" for the player; one reason said once. EXPENSIVE: the expensive cost per game (set to each game's current
+  top tenth). Cases nst19-nst25; nfa42 rewritten.

@@ -27,7 +27,7 @@ round, because the work fixed only what he pointed at. **Your job is to find the
    Zoe, Lurkers, Chronobreak, IC pirate, Frost Deck, Morsel build, Hellhorned armor.
 4. Not linked on purpose (Claude's calls): Janna's "the first 3 cards you draw cost 1 less" (helps any card); Stormbound
    units moving forward each turn (every unit, says nothing); removal spells (Hush, Mystic Shot) help no card in particular.
-5. After any change: `run.py <game>` for all three games (now 300 / 137 / 146 cases), audit_links.py 0 findings,
+5. After any change: `check_all.py <game>` (one reload; HANDOFF box), for all games (now 300 / 137 / 146 cases), audit_links.py 0 findings,
    `python3 network_page.py`, give Kaptain network.html, push.
 
 ## Where things are
@@ -37,9 +37,6 @@ round, because the work fixed only what he pointed at. **Your job is to find the
   audit_links.py (in run.py), cases/network.tsv (Kaptain's checks as tests), fixes/runeterra/v30.py, v31.py.
 - PROCESS.md: "Links the deck networks showed missing", "Think like a player"; BRIEF.md rules 23-25; CHANGES.md v30-v32.
 
-## Slay the Spire (sts1): deck read done, waiting for Kaptain's check (30 Oct 2026, v50)
-Imported and read: run.py sts1 passes (31 cases), word check 0, text audit 0, link audit 3 explained + Through Violence.
-The 7 wrong-line families and 3 missing-line kinds of the first read are fixed for every game (deck_read_sts1.md F1-F8,
-CHANGES v50). Open questions for Kaptain are at the end of deck_read_sts1.md. Known gap: Dexterity lines also reach Block
-given by Powers (After Image, Mental Fortress), which Dexterity does not change in the game; the records cannot tell a
-Power's later Block from a card's.
+## Slay the Spire (sts1): Kaptain's first check fixed (30 Oct 2026, v51)
+deck_read_sts1.md F1-F13 (F9-F13 from Kaptain's check: every-card links, plain hits, helpers, cheaper, wording). Open items at
+the end of deck_read_sts1.md. Check after a change with check_all.py (HANDOFF box), never run.py once per game.

@@ -82,9 +82,52 @@ Flurry of Blows.
 - Fix: boost_lines: a kept keyword helps the cards that count it ("keeps your Block"); aimed_rows: "can" on my keyword
   helps its givers; fixes/sts1/v50.py: a Stance filter is the keywords whose text says "this Stance" (Wrath, Calm, Divinity).
 
+## F9 Links from what every card does (Kaptain 30 Oct 2026, 1)
+Every card -> After Image, A Thousand Cuts ("whenever you play a card"); Echo Form -> every card ("plays it again").
+- Root cause: played_lines and object_help_lines skipped "any card" but not a kind that every playable card of the game
+  is (Slay the Spire: every card is a spell).
+- Same error elsewhere: "is a card it counts when played" sts1 103 before, 0 now with no type; Runeterra 113 -> 109 (Wizened
+  Helmsman now says "an Elemental"), Faeria 16, Duelyst 13, Monster Train 13 unchanged (their kinds are narrowed).
+- Fix: every_card_kinds(): a kind every playable card of the game is counts as not narrowed; the reason names the type
+  ("is an Attack it counts when played").
+
+## F10 The game's normal attack fed death reactions (Kaptain 30 Oct 2026, 2)
+Strike (Silent) -> Corpse Explosion, The Specimen ("makes enemy units die").
+- Root cause: every damage effect makes a death, so a plain hit on one enemy fed every "when an enemy dies".
+- Same error elsewhere: Runeterra "kills units" 12 -> 8 (Mystic Shot, Shock Blast -> the Sentinels: plain hits, as the
+  earlier call that removal helps no card in particular); sts1 30 -> 28.
+- Fix: special_abilities(): an ability whose every effect is damage to one chosen or random target makes no enemy death
+  for these lines; poison, hits on all, kill effects and boosts still do.
+
+## F11 Helpers drawn as needing what they help (Kaptain 30 Oct 2026, 5d, 5e, 5g)
+Block cards -> Barricade ("enables: makes your units get Block"); Bag of Marbles and Bash (Vulnerable) had no line to the
+damage cards.
+- Root cause: "Block is not removed" was read as a need for Block; a status that makes damage bigger (Vulnerable on the
+  enemy, Wrath and Divinity on me) had no rule.
+- Same error elsewhere: no other game has a keeper of a keyword or such a status in its decks (0 lines either way).
+- Fix: keepers need nothing and point at the Block cards ("keeps the Block it gives", 10 lines); status_damage_givers():
+  the givers point at every card of mine that deals damage ("gives Vulnerable: its damage is bigger", 28 lines; not
+  Lock-On, which only the Orbs use, nor Mantra, which only leads to Divinity).
+
+## F12 A cost that drops for each X drawn as "enables" (Kaptain 30 Oct 2026, 5h)
+Gambling Chip -> Eviscerate ("enables: makes you discard cards").
+- Root cause: the line kind came from the need (a count: enables), not from what the count does (lowers the cost).
+- Same error elsewhere: Runeterra 23 lines (Windborne Mariner, Monster Harpoon, Bloody Business, Remembrance, Hidden
+  Pathways), Faeria Windstorm Colossus; "cheaper" Runeterra 85 -> 108.
+- Fix: an ability whose every effect lowers this card's cost (also "cost=minus") makes its need lines "makes cheaper";
+  a reason said as cheaper is not said again as enables. Case nfa42 rewritten.
+
+## F13 Wording and repeated reasons (Kaptain 30 Oct 2026, 5b, 5c)
+"Flex -> Heavy Blade: makes your units get Strength" (it is the player); "Whirlwind -> Pen Nib: enables: is an Attack it
+asks for; also is a card it counts when played; also triggers: is a card it counts when played".
+- Root cause: the "given keyword" sentence always said "your units"; one count was drawn by two rules (type asks and
+  played cards) and by two rows (trigger and condition) of one ability.
+- Same error elsewhere: "makes your units get" sts1 44 -> 0 (other games keep it: their keywords go on units);
+  Kunai, Shuriken, Finisher, Force Field, Wizened Helmsman lines now said once.
+- Fix: a keyword on the player is "gives you X" in a game where the player is no card; counted plays come from
+  played_lines only, once per reason, by the strongest kind (cheaper, triggers, enables).
+
 ## Open (for Kaptain)
-- Every card -> After Image, A Thousand Cuts ("whenever you play a card"): drawn with a tiny weight; drop them?
-- Strike and other damage -> Corpse Explosion, The Specimen ("makes enemy units die"): any damage can kill.
-- Energy gains -> 2-3 cost cards ("pays for it", the Faeria rule of a third of the top tenth of costs).
+- Lock-On (Defect) makes Orb damage bigger: not linked yet to the Orb cards.
 - Dexterity also reaches Block given later by Powers (After Image, Mental Fortress); the records cannot tell it apart.
 - Known gaps: Blizzard and Thunder Strike count every Channel; Through Violence is not in the library.

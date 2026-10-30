@@ -167,7 +167,7 @@ ndu45	duelyst	Ciphyron Build	Timekeeper	Rescue-RX	line		Kaptain: as ndu44
 ndu46	duelyst	Argeon Dawn's Eye aggro	Tempest	Arclyte Regalia	none		Claude: Regalia's damage prevention waits for nothing
 ndu47	duelyst	Kaleos Trial of Songhai	Dispirited Prisoner	Hideatsu the Ebon Ox	none	counts when played	Claude: a token is summoned, never played from the action bar
 nfa41	faeria	Yellow Monstrosity	Manta Rider	Windborne Emissary	line	type:	Kaptain 30 Oct 2026: a flyer enables the Emissary ('while you control another flying creature')
-nfa42	faeria	Blue Yellow Events	Shifting Tide	Windstorm Colossus	line	type:	Kaptain 30 Oct 2026: the Colossus counts the events played: does what it waits for (rewritten 30 Oct 2026, Kaptain: a count is part of "enables"; "triggers" only for reactions)
+nfa42	faeria	Blue Yellow Events	Shifting Tide	Windstorm Colossus	line	cheaper:	Kaptain 30 Oct 2026: the Colossus counts the events played: does what it waits for (rewritten 30 Oct 2026, Kaptain: a count is part of "enables"; "triggers" only for reactions); rewritten 30 Oct 2026 (sts1 chat), Kaptain: a card whose cost drops for each X is made cheaper by X (Gambling Chip -> Eviscerate)
 nfa43	faeria	Bargain (Krog)	Bold Bargainer	Krog, the Ogre King	none	stronger:	Kaptain 30 Oct 2026: a cost cut makes cheaper, not stronger
 nfa44	faeria	Red Combat	Underground Brigand	Bomb Slinger	none		Kaptain 30 Oct 2026: as nfa33
 nfa45	faeria	Red Blue Mobility Burn	Gift of Steel	Gabrian Enchantment	none	waits:	Kaptain 30 Oct 2026: the Enchantment waits for nothing
@@ -206,3 +206,10 @@ nst15	sts1	Ironclad Strength (gamersdecide)	Heavy Blade	Flex	none		Claude (v50 d
 nst16	sts1	Ironclad Exhaust (gamersdecide)	Barricade	Body Slam	line	keeps your Block	Claude (v50 deck read): Block kept is Block Body Slam counts
 nst17	sts1	Defect Orb (gamersdecide)	Electrodynamics	Tempest	line	Lightning	Claude (v50 deck read): Lightning hits all enemies; Tempest channels Lightning
 nst18	sts1	Watcher Stance Change (highgroundgaming)	Crescendo	Mental Fortress	line	Wrath	Claude (v50 deck read): entering Wrath is changing Stance
+nst19	sts1	Silent Shiv (highgroundgaming)	Blade Dance	After Image	none		Kaptain 30 Oct 2026: links come from card texts, not from playing any card
+nst20	sts1	Silent Poison (highgroundgaming)	Strike (Silent)	Corpse Explosion	none		Kaptain 30 Oct 2026: the normal attack feeds no death reaction
+nst21	sts1	Ironclad Barricade (Steam, Jeff)	Shrug It Off	Barricade	none		Kaptain 30 Oct 2026: Barricade helps the Block cards, it does not need them
+nst22	sts1	Ironclad Barricade (Steam, Jeff)	Barricade	Shrug It Off	line	keeps the Block	Kaptain 30 Oct 2026: Barricade keeps the Block they give
+nst23	sts1	Ironclad Strength (gamersdecide)	Bag of Marbles	Reaper	line	Vulnerable	Kaptain 30 Oct 2026: Vulnerable makes damage cards stronger
+nst24	sts1	Silent Discard (gamersdecide)	Gambling Chip	Eviscerate	line	cheaper:	Kaptain 30 Oct 2026: discards make Eviscerate cheaper
+nst25	sts1	Ironclad Strength (gamersdecide)	Flex	Heavy Blade	line	gives you Strength	Kaptain 30 Oct 2026: Strength goes to the player

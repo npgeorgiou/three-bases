@@ -54,8 +54,8 @@ every small edit, and turning a decision one way and later back. Work like this:
 7. Read the answers, not only the counts: before calling a step done, run `ask.py <game> partners <card>` and
    `analyze` on a guide deck and read them. A case count that passes says nothing about a link that should not exist.
 8. Shared code (connections.py, refs.py, flat.py, deck_analysis.py, normalize.py, load.py) serves every game: a change
-   there gets a mechanics.tsv case with game `*`, and every game's cases must pass before it is pushed: run `run.py <your
-   game>` (it loads every game into cards.sqlite), then `cases/run.py <other game>` for each other game. Never run
+   there gets a mechanics.tsv case with game `*`, and every game's cases must pass before it is pushed: run
+   `check_all.py <your game>` (ONE reload of every game, then every other game's cases; HANDOFF box). Never run
    `run.py` for a game another chat is importing: it normalizes and rewrites that chat's records, flags and reports.
 
 ## Rules that are never broken
@@ -659,6 +659,29 @@ Kaptain checks a few decks and finds errors a player sees at once. Before showin
    check is done when only the counted cases pass.
 5. When Kaptain finds one wrong line, look for the whole family of it: list every line of every game made by the same rule
    and read a sample of 20 before and after the fix.
+
+**Rules for links (Kaptain, 30 Oct 2026; each is a rule in network.py for every game, never a list of cards):**
+- **Links come from what a card's TEXT does, never from what every card does.** Playing, drawing or summoning a card is
+  what all cards do: "whenever you play a card" (After Image) gets no link from every card. Only a narrowed kind counts
+  ("whenever you play a Skill"), and a kind that every playable card of the game is counts as not narrowed (Slay the Spire:
+  every card is a spell). The same for help: "play the first card each turn twice" (Echo Form) links to no card.
+- **The game's normal attack feeds nothing.** A card whose only effect is plain damage to one target (Strike, Mystic Shot)
+  is no link to "when an enemy dies" (Corpse Explosion). Only cards with something special that makes or helps the kill:
+  poison and damage over time, hits on all enemies, kill effects, damage boosts (Strength, Vulnerable).
+- **A helper points at what it helps; it never "needs" it.** Strength, Dexterity, Focus, Vulnerable, Wrath givers -> the
+  cards whose damage or Block they make bigger; "your next Skill is played twice" (Burst) -> the Skills; "Block is not
+  removed" (Barricade) -> the Block cards. The cards helped are never drawn as enabling the helper.
+- **A cost that drops for each X: what does X makes it cheaper** (Gambling Chip discards -> Eviscerate, events ->
+  Windstorm Colossus): kind "makes cheaper", never "enables".
+- **Kinds (Kaptain, 30 Oct):** a reaction ("whenever", "every 3rd Attack") is "triggers"; a count or a thing that must be
+  there ("for each Attack played", "if you have Block") is "enables"; help says how (stronger, cheaper ...). One reason is
+  said once per line, by its strongest kind.
+- **Say who gets it.** In a game where the player is no card, a status on the player is "gives you Strength", never
+  "makes your units get Strength".
+- **What is expensive is set per game** (network.py EXPENSIVE: the cost from which a card counts as expensive). Every game's
+  import sets it, from that game's own costs; a game missing there gets no "pays for it" lines.
+- **Drawbacks and limits are no needs.** "Lose 1 energy when drawn" (Void) wants no draws; "if you played fewer than 3
+  cards" (FTL) wants no plays; "if this is still in your hand" (Ethereal) wants no full hand.
 
 ## Mistakes made before (do not repeat)
 - Fetching a game's data the repo already had; trusting old library tags; judging data by one narrow question; assuming
