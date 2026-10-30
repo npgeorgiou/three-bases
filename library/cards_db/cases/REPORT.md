@@ -1,7 +1,7 @@
 # Case tests: into_the_breach
 
 Made by `cases/run.py into_the_breach`.
-**30 of 30 cases pass.**
+**35 of 35 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -56,5 +56,10 @@ Made by `cases/run.py into_the_breach`.
 | ntb9 | Run: Rusting Hulks (Sevastromo, Unfair) | Aerial Bombs | Force Amp | none  | - | yes |
 | ntb10 | Run: Rift Walkers (Sevastromo, Unfair) | Titan Fist | Artemis Artillery | line acts on units | type: Titan Fist moves units, and Artemis Artillery acts on units in a line from | yes |
 | ntb11 | Rift Walkers | Combat Mech | Titan Fist | line carries | carries: Combat Mech carries Titan Fist | yes |
-| ntb12 | Claude: Steel Judoka with second weapons | Confuse Shot | Vek Hormones | line damages enemy units | waits: damages enemy units or players | yes |
-| ntb13 | Claude: Mist Eaters with second weapons | Smoke Pellets | Smog Mech | line keeps Smoke off it | rules: keeps Smoke off it | yes |
+| ntb12 | Steel Judoka | Confuse Shot | Vek Hormones | line damages enemy units | waits: damages enemy units or players | yes |
+| ntb13 | Mist Eaters | Smoke Pellets | Smog Mech | line keeps Smoke off it | rules: keeps Smoke off it | yes |
+| ntb14 | Cataclysm | Flood Drill | Hydraulic Lifter | line makes holes | type: Flood Drill makes holes, and Hydraulic Lifter pushes enemy units: a ground | yes |
+| ntb15 | Hazardous Mechs | A.C.I.D. Projector | Unstable Cannon | line gives A.C.I.D. | type: A.C.I.D. Projector moves units, and Unstable Cannon acts on units in a lin | yes |
+| ntb16 | Hazardous Mechs | A.C.I.D. Projector | Force Amp | none gives A.C.I.D. | waits: A.C.I.D. Projector pushes enemy units into things (bump damage) | yes |
+| ntb17 | Heat Sinkers | Heat Engines | Napalm Mech | line Boost | keyword: gives it Boost; also makes stronger: makes its effect bigger; also chan | yes |
+| ntb18 | Frozen Titans | Janus Cannon | Cryo-Launcher | line frees it | type: Janus Cannon moves units, and Cryo-Launcher acts on units in a line from i | yes |

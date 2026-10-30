@@ -248,7 +248,8 @@ Rusting Hulks run. The rule is in BRIEF "Game words: Into the Breach" and librar
 
 ## Claude's builds (30 Oct 2026; Kaptain: "put something that makes sense")
 Most official squads leave one slot free per mech, and players post their loadouts as pictures, not text. At Kaptain's word
-Claude filled the second slot of every mech in 14 squads (decks.tsv, "Claude: <squad> with second weapons"): weapons of the
+Claude filled the second slot of every mech in the 14 squads and the 6 custom squads (decks.tsv: the squad's row lists both
+weapons of each mech; its source says which are Claude's; the 3 players' runs stay as they were played): weapons of the
 mech's class or Any class, chosen for what the squad does, from guides where they name one (Cluster Artillery on the Boulder
 Mech, Vek Hormones moved to the Siege Mech, Viscera Nanobots moved to the Unstable Mech, Frost Beam on the Nano Mech, Rail
 Cannon and Control Shot in Arachnophiles), else Claude's choice; each row's source says why. Every build is checked: 2
@@ -267,4 +268,40 @@ Root cause: redirect_attack had no causes in vocab, so a turned Vek attack hit n
 which also deals damage itself, reached Vek Hormones.
 Same error elsewhere: only Into the Breach has redirect_attack.
 Fix: vocab: redirect_attack causes damaged, survives_damage, dies, killed. Case ntb12.
+
+## F27 Holes, water and lava did not count (Kaptain, 30 Oct 2026: "Flood Drill makes a Hole, so of course it synergizes")
+Cards: Flood Drill (holes and water), Seismic Capacitor and Fissure Fist (cracked ground, a hole once hit), and every weapon
+that pushes, pulls or tosses Vek.
+Root cause: the game's rule that a ground unit pushed into a Chasm is destroyed, and that most Vek drown in Water and Lava
+(library/tools/games/into_the_breach.md, wiki Tiles), was in the rules notes but in no record or line rule.
+Same error elsewhere: Faeria makes oceans, where nothing dies; no other game has deadly ground.
+Fix: network.DEADLY_GROUND (Into the Breach: chasm, water, lava, cracked ground): a card that makes it enables every card
+that pushes enemy units ("Flood Drill makes holes, and Titan Fist pushes enemy units: a ground unit pushed into a hole
+dies"); ask.py analyze says "Holes and water that kill pushed Vek". Case ntb14.
+
+## F28 A.C.I.D. made no weapon stronger
+Cards: A.C.I.D. Projector, Arachnoid Injector, every weapon that damages a picked target.
+Root cause: the rule for statuses that make damage bigger (Slay the Spire's Vulnerable) read only "increase_effect"; A.C.I.D.
+is written as extra damage equal to the hit; and a status put on a target of no side, or damage to one, was not seen as aimed
+at enemies.
+Same error elsewhere: none (cases and lines of every other game unchanged).
+Fix: network.status_damage_givers also reads "damage self, amount = the hit"; a status or damage on a picked target of no
+side is aimed at enemies (refs.py's HARM rule); bump damage is no weapon damage, so Force Amp gets no A.C.I.D. line. Cases
+ntb15, ntb16.
+
+## F29 Help to "Mechs on Fire" reached no mech
+Cards: Heat Engines (Mechs standing on Fire get Boost), Nanofilter Mending (Mechs on Smoke are repaired).
+Root cause: a filter "with keyword Fire" was matched against printed keywords; no mech has Fire printed, it is a status
+given in play.
+Same error elsewhere: none changed (the rule is kept to statuses no card prints, of the status kinds: damage over time, can't
+attack, can't act, can't move, weaker, a bonus for one attack, shield).
+Fix: network.matches: such a status filter fits any unit. Heat Engines -> Dispersal, Quick-Fire and Napalm Mech "gives it Boost".
+
+## F30 A frozen mech is freed by a hit
+Cards: Cryo-Launcher (freezes the Ice Mech too), every weapon that can hit my units.
+Root cause: Frozen ends when the unit is damaged (its keyword record), so a hit on my frozen mech is help; no line said it.
+Guides: Mirror Mech's Janus Cannon thaws the Ice Mech.
+Same error elsewhere: only Into the Breach puts a bad status on its own unit that a hit removes.
+Fix: network.py: a card that puts on itself a bad status that damage removes is helped by cards that can hit my units ("Janus
+Cannon can hit the mech with Cryo-Launcher while it is Frozen: the hit frees it") and by cards that shield my units.
 

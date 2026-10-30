@@ -111,7 +111,9 @@ def matches(c, game, card, kind, withs):
                     k = kw_id(c, game, v[:-6]); hit.append(card['cat'] == 'spell' and (k is None or k in card['kws']))
                 else: hit.append(card['cat'] in CAT.get(v, {v}))
             elif attr == 'type': hit.append(v.isdigit() and int(v) in card['types'])
-            elif attr == 'keyword': hit.append(v.isdigit() and int(v) in card['kws'])
+            elif attr == 'keyword': hit.append(v.isdigit() and (int(v) in card['kws'] or (int(v) not in printed_kws(c, game) and
+                                               kw_tree(c, int(v)) in STATUS_TREES)))  # a status no card prints (Fire, Smoke on an Into
+                # the Breach mech) is only given in play: any unit can have it
             elif attr == 'card': hit.append(v.isdigit() and int(v) == card['id'])
             elif attr == 'does': hit.append(v in card['acts'])
             elif attr == 'region': hit.append(v in card['regions'] or v == 'own_regions')
@@ -129,6 +131,17 @@ def matches(c, game, card, kind, withs):
         ok = any(hit)
         if (op == 'not') == ok: return False
     return True
+
+
+STATUS_TREES = ('damage_over_time', 'attack_lock', 'disable', 'immobilize', 'debuff', 'temporary_buff', 'shield')  # statuses put on units
+
+
+def printed_kws(c, game):
+    """keywords some card of the game has printed; the others are statuses given in play"""
+    key = ('printed', game)
+    if key not in CACHE: CACHE[key] = {k for (k,) in c.execute("""select distinct ck.keyword from card_keyword ck join card k on k.id=ck.card
+                                         where k.game=? and k.is_keyword=0""", (game,))}
+    return CACHE[key]
 
 
 def kinds_fit(a, b):
@@ -509,6 +522,27 @@ def lines_of(c, game):
                and coalesce(side,'') in ('enemy','','any') and coalesce(pick,'') not in ('self')""") if a in cards}
     for t in set(bump_abs.values()) & set(cards):
         for m in pushers - {t}: out[(m, t)].append(('waits', 1.0 / len(pushers), '{A} pushes enemy units into things (bump damage)'))
+    # a card that puts a status on itself which damage takes off (Cryo-Launcher freezes the Ice Mech; Frozen ends when damaged):
+    # a card that can hit my units frees it; a card that shields my units stops it (Energy Shield keeps new bad statuses off)
+    freed = {k for (k,) in c.execute("""select distinct w.card from flat_when w join flat_do d on d.card=w.card and d.ability=w.ability
+             where w.event='damaged' and w.obj_pick='self' and d.act='remove_keyword' and d.keyword_ref=w.card and d.on_pick='self'""")}
+    blockers = {k for (k,) in c.execute("select card from flat_do where act='cant' and param_event='given_keyword' and to_with like '%state is negative%'")}
+    selfstat = {(a, k) for a, k in c.execute("select card, keyword_ref from flat_do where act='give_keyword' and on_pick='self' and origin='own'")
+                if a in cards and k in freed and kw_tree(c, k) in ('disable', 'immobilize', 'attack_lock', 'damage_over_time', 'debuff')}
+    if selfstat:
+        hitters_ = {a for (a,) in c.execute("""select distinct card from flat_do where act='damage' and origin='own' and on_side is null
+                    and on_pick in ('chosen','nearest','all')""") if a in cards}
+        shielders = {a for a, k in c.execute("""select card, keyword_ref from flat_do where act='give_keyword' and origin='own'
+                     and coalesce(on_side,'mine')='mine' and coalesce(on_pick,'') not in ('self','it')""") if a in cards and k in blockers}
+        for t, k in selfstat:
+            kn = mechanics.name(c, k)
+            for m in hitters_ - {t}: out[(m, t)].append(('heals', 0.5 / len(hitters_), f'{{A}} can hit {{Bc}} while it is {kn}: the hit frees it'))
+            for m in shielders - {t}: out[(m, t)].append(('keyword', 0.5 / max(1, len(shielders)), f'{{A}} can shield {{Bc}}: the Shield keeps {kn} off it'))
+    # ground that kills what is pushed onto it (the game's rules, DEADLY_GROUND): a card that makes it enables every pusher
+    for m, w_ in c.execute("select card, to_with from flat_do where act='set_terrain' and origin='own'").fetchall():
+        say = next((v for k, v in DEADLY_GROUND.get(game, {}).items() if f'terrain is {k}' in (w_ or '')), None)
+        if not say or m not in cards: continue
+        for t in pushers - {m}: out[(m, t)].append(('type', 1.0 / len(pushers), say))
     CACHE[('lines', game)] = out
     return out
 
@@ -780,6 +814,15 @@ def protect_abilities(c):
     return CACHE['protab']
 
 
+# ground a unit pushed onto dies on (Into the Breach, wiki Tiles: "Ground units pushed in will be destroyed"; "Most non-flying
+# enemies die in Water"; Lava "behaves like Water"; "Cracked tiles will turn into holes if damaged")
+DEADLY_GROUND = {'into_the_breach': {
+    'chasm': '{A} makes holes, and {B} pushes enemy units: a ground unit pushed into a hole dies',
+    'ocean': '{A} makes water, and {B} pushes enemy units: most Vek pushed into water drown',
+    'lava': '{A} makes lava, and {B} pushes enemy units: most Vek pushed into lava die',
+    'cracked_space': '{A} cracks the ground (a hole once hit), and {B} pushes enemy units: a ground unit pushed into a hole dies'}}
+
+
 def doer_help_abilities(c):
     """triggers on what my units of a kind do that only help the unit that did it ("heal any Mech that kills", Viscera
     Nanobots): a help line from the card to those units (doer_help_lines), no wait for it"""
@@ -860,12 +903,16 @@ def status_damage_givers(c, game, nodes):
     for k, ab, ak, aside, oside in c.execute("""select w.card, w.ability, w.actor_kind, coalesce(w.actor_side,''), coalesce(w.obj_side,'')
             from flat_when w join card k on k.id=w.card where k.is_keyword=1 and k.game=? and w.event='damaged' and w.origin='own'""", (game,)):
         dos = c.execute("select act, on_pick, params from flat_do where card=? and ability=? and origin='own'", (k, ab)).fetchall()
-        if ak == 'keyword' or not dos or not all(a_ == 'increase_effect' and pk == 'it' and boosts_it(a_, ps) for a_, pk, ps in dos): continue
+        more = lambda a_, pk, ps: (a_ == 'increase_effect' and pk == 'it' and boosts_it(a_, ps)) or \
+            (a_ == 'damage' and pk == 'self' and 'amount=event_amount' in (ps or ''))  # A.C.I.D.: "weapon damage against this unit is doubled"
+        if ak == 'keyword' or not dos or not all(more(a_, pk, ps) for a_, pk, ps in dos): continue
         if aside == 'mine': boost[k] = 'mine'  # I deal more
         elif oside != 'mine': boost.setdefault(k, 'enemy')  # its holder takes more
     marks = ','.join('?' * len(nodes))
-    return {(a, mechanics.name(c, k)) for a, k, side in c.execute(f"""select card, keyword_ref, coalesce(on_side,'mine') from flat_do where
-            act='give_keyword' and origin='own' and card in ({marks})""", list(nodes)) if k in boost and side == boost[k]}
+    # a status of no side put on a target the player picks goes on enemies when it hurts (refs.py HARM: A.C.I.D. Projector)
+    return {(a, mechanics.name(c, k)) for a, k, side in c.execute(f"""select card, keyword_ref, coalesce(on_side, case when on_pick in
+            ('chosen','nearest','random') then 'enemy' else 'mine' end) from flat_do where act='give_keyword' and origin='own'
+            and card in ({marks})""", list(nodes)) if k in boost and side == boost[k]}
 
 
 def capped(c):
@@ -1222,8 +1269,10 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
     # a status that makes damage bigger (Vulnerable on an enemy: it takes more; Wrath on me: I deal more): the cards that give it
     # make every card of mine that deals damage stronger
     for a, kname in status_damage_givers(c, game, L):
-        hitters = {m for (m,) in c.execute(f"""select distinct card from flat_do where origin='own' and act='damage' and on_side='enemy'
-                   and card in ({marks})""", L)} - {a}
+        hitters = {m for (m,) in c.execute(f"""select distinct card from flat_do where origin='own' and act='damage' and (on_side='enemy'
+                   or (on_side is null and on_pick in ('chosen','nearest','random','all'))) and card in ({marks}) and ability not in (select ability
+                   from flat_if where test='it_matches' and of_with like '%origin %' and of_with not like '%origin is weapon%')""", L)} - {a}
+        # aimed at enemies; damage only from bumps (Force Amp) is no weapon damage
         for m in hitters: out[(a, m)].append(('boosts', 0.5 / len(hitters), f'gives {kname}: its damage is bigger'))
     return out
 

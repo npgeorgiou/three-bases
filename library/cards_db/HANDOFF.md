@@ -95,5 +95,6 @@ and about ten rebuilds). Each check below is cheap and found errors that later c
   library/tools/games/into_the_breach.md, BRIEF "Game words: Into the Breach". Families F1-F19 in deck_read_into_the_breach.md
   (F7 kept by Kaptain; F8-F12 approved by him; the check of 20 cards done by Claude at his word). Decks list weapons and
   passives as cards (F20, v52.py): a mech keeps only its keywords; network.CARRIED makes a weapon act as its mech; a mech
-  has 2 slots. 14 of Claude's builds fill every second slot (Kaptain's word); F25-F26 from reading them.
+  has 2 slots; every squad's mechs carry 2 weapons (Claude's choice for the second, Kaptain's word); F25-F30 from reading
+  them, incl. deadly ground (holes, water) and A.C.I.D.
   Stormbound shows 141 of 145 cases (csb09-csb13, poisoned-unit lines) since the Slay the Spire chat's v49 shared change.

@@ -35,6 +35,9 @@ each line names its page. Used for read/into_the_breach/game_rules.jsonl (cards_
   normally deploy in a limited area; the area itself is not described by any page read (unknown). Deployed tanks, Walking
   Bombs and Arachnoids are put on the board by the weapons that name them (wiki weapon pages).
 - Once per battle the player can reset a turn (wiki Reset Turn).
+- Tiles (wiki Tiles): Chasm: ground units pushed in are destroyed; Water: most non-flying enemies die in it, units cannot
+  attack in it; Lava: behaves like Water and sets survivors on Fire; Cracked tile: turns into a hole when damaged; Ice:
+  turns into Water when hit twice. Frozen ends when the unit is damaged; Energy Shield keeps new bad statuses off.
 - Loadout: each mech has 2 slots, so 2 weapons at most; a passive (Rocket Mech's Storm Generator) takes a slot too. The
   starting weapon fills one slot, the second holds the starting passive or one extra weapon; never two extra weapons
   (Kaptain, 30 Oct 2026). A starting weapon can be swapped for another.

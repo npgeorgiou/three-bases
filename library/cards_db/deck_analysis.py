@@ -182,6 +182,14 @@ def analyze(c, game, text):
     for t in care:
         if care[t] and any(have[t] - {x} for x in care[t]):  # another card is or makes one (Rakoans count each other)
             plan[('type', t)][0] |= have[t]; plan[('type', t)][3] |= care[t]; linked |= have[t] | care[t]
+    # ground that kills what is pushed onto it (network.DEADLY_GROUND): its makers and the cards that push enemies into it
+    deadly = network.DEADLY_GROUND.get(game, {})
+    if deadly:
+        dmk = {a for a, w in c.execute(f"select card, to_with from flat_do where act='set_terrain' and origin='own' and card in ({marks})", deck)
+               if any(f'terrain is {k}' in (w or '') for k in deadly)}
+        dpush = {a for (a,) in c.execute(f"""select distinct card from flat_ref where role='makes' and happening='moves' and origin in
+                 ('own','uses_keyword') and coalesce(side,'') in ('enemy','','any') and coalesce(pick,'') not in ('self') and card in ({marks})""", deck)}
+        if dmk and dpush - dmk: plan[('deadly', 0)] = [dmk, set(), set(), dpush - dmk]; linked |= dmk | dpush
     out.append('Plan:')
     order = sorted(plan.items(), key=lambda x: -(len(x[1][0]) + len(x[1][1]) + len(x[1][2]) + len(x[1][3])))
     for key, (mk, own, lv, other) in order:
@@ -191,6 +199,8 @@ def analyze(c, game, text):
             out.append(f'- Spells you play: {names(c, mk)}. Set off: {names(c, other)}.'); continue
         if key[0] == 'type':
             out.append(f'- {tname.get(key[1], "?")} cards: are or make them: {names(c, mk)}. Care about them: {names(c, other)}.'); continue
+        if key[0] == 'deadly':
+            out.append(f'- Holes and water that kill pushed Vek: made by {names(c, mk)}. Push Vek into them: {names(c, other)}.'); continue
         if key[0] == 'puts':
             out.append(f'- More {mechanics.name(c, key[1])} in play: made by {names(c, mk)}.'); continue
         h, kw = key; ss = sides[key] - {''}; side = ss.pop() if len(ss) == 1 else ''
@@ -243,7 +253,7 @@ def analyze(c, game, text):
     con['_strikes'] = {x for (x,) in c.execute(f"""select distinct card from flat_do where act='strike' and to_side='enemy' and to_kind in ('unit','unit_or_structure')
                        and origin in ('own','has_keyword') and card in ({marks})""", deck)}
     ctrl = role('Controls enemy units (damage, remove, stop, weaken)', CONTROL, "'enemy','any'",
-                ('kill', 'obliterate', 'capture', 'stat_set', 'stun', 'silence', 'steal', 'transform', 'return_to_hand', 'damage', 'move', 'strike', 'challenge'), aimed=True)
+                ('kill', 'obliterate', 'capture', 'stat_set', 'stun', 'silence', 'steal', 'transform', 'return_to_hand', 'damage', 'move', 'strike', 'challenge'), aimed=True, any_side=game in network.CARRIED)  # Into the Breach: Smoke on any tile
     if con['_strikes'] - ctrl:
         ctrl |= con['_strikes']; out[-1 if out[-1].startswith('Controls enemy units') else len(out):] = [f'Controls enemy units (damage, remove, stop, weaken): {names(c, ctrl)}.']
     sup = role('Supports your units (stats, protection, combat keywords)', SUPPORT, "'mine'",
