@@ -869,7 +869,7 @@ event	run_event	something happens on the run between fights: resting, entering a
 category	item	an item the player carries and uses up (Slay the Spire potions, Inscryption items)	items_consumables		30 Oct 2026, v49 (Slay the Spire)
 x	all_of	all of what the target has ("lose all your Gold", "give all Gold")			30 Oct 2026, v49 (Slay the Spire)
 keyword	Metallicize	concept of having, using or giving this keyword (Slay the Spire: gains Block at the end of each turn; concept is Claude's)	block_armor		30 Oct 2026, v49 (Slay the Spire)
-act	redirect_attack	turn an enemy's announced attack the other way, so it hits other tiles (Into the Breach: flip its attack direction)			30 Oct 2026, v48 (Into the Breach)
+act	redirect_attack	turn an enemy's announced attack the other way, so it hits other tiles (Into the Breach: flip its attack direction)		damaged;survives_damage;dies;killed	30 Oct 2026, v48 (Into the Breach); causes v53
 param	range	change of the reach of a weapon or move, in spaces, when the text gives only the change ("+2 Range")			30 Oct 2026, v48 (Into the Breach)
 param	area	change of the number of spaces an effect hits, when the text gives only the change ("Increases area hit by 1 tile")			30 Oct 2026, v51 (Into the Breach)
 terrain	lava	a board space of lava (Into the Breach Lava; the source says only that tiles turn into it)	terrain		30 Oct 2026, v48 (Into the Breach)

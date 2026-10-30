@@ -127,8 +127,8 @@
 
 ## What exists
 299 cards (42 mechs, 104 weapons, 17 passives, 20 pilots, Vek, tiles, 6 deployed units) and 27 keywords, read once; 30 cards
-read twice. 23 decks in decks.tsv: 14 official squads, 6 players' custom squads, 3 builds from players' runs with extra weapons; a
-deck is each mech followed by what it carries (2 slots: its starting weapon, then its passive or one extra weapon).
+read twice. 37 decks in decks.tsv: 14 official squads, 6 players' custom squads, 3 builds from players' runs, 14 of Claude's builds
+(every mech with a second weapon, Kaptain's word); a deck is each mech followed by what it carries (2 slots).
 
 ## Quality
 - run.py passes every step; word check 0 flags, text audit 0 unexplained, 27 cases. Families F1-F6 fixed by rule (v48.py),

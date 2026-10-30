@@ -246,3 +246,25 @@ Teleporter, Frost Beam and Viscera Nanobots, and Force Amp's mech is not said) a
 said) are dropped; in the Rusting Hulks run Force Amp goes on Jet Mech, the only free slot. Cases ntb11; ntb8 moved to the
 Rusting Hulks run. The rule is in BRIEF "Game words: Into the Breach" and library/tools/games/into_the_breach.md.
 
+## Claude's builds (30 Oct 2026; Kaptain: "put something that makes sense")
+Most official squads leave one slot free per mech, and players post their loadouts as pictures, not text. At Kaptain's word
+Claude filled the second slot of every mech in 14 squads (decks.tsv, "Claude: <squad> with second weapons"): weapons of the
+mech's class or Any class, chosen for what the squad does, from guides where they name one (Cluster Artillery on the Boulder
+Mech, Vek Hormones moved to the Siege Mech, Viscera Nanobots moved to the Unstable Mech, Frost Beam on the Nano Mech, Rail
+Cannon and Control Shot in Arachnophiles), else Claude's choice; each row's source says why. Every build is checked: 2
+items per mech at most, class or Any. Reading their networks found F25 and F26.
+
+## F25 Smoke Pellets' Ally Immune read as removing Smoke
+Cards: Smoke Pellets ("Ally Immune: No longer applies Smoke on self or allies").
+Root cause: "no longer applies" was read as remove_keyword on my units, so it looked like it clears Smoke off my mechs.
+Same error elsewhere: no other text in any game says "no longer applies".
+Fix: fixes/into_the_breach/v53.py: cant given_keyword Smoke on my units there (as Smoke Immunity); the label says "keeps
+Smoke off it" (network.py, every game's "can't be given"). Case ntb13.
+
+## F26 Confuse Shot did not feed Vek Hormones
+Cards: Confuse Shot, Mass Confusion, Aegis Mech's Spartan Shield (redirect_attack) with Vek Hormones.
+Root cause: redirect_attack had no causes in vocab, so a turned Vek attack hit nothing in the records; only Spartan Shield,
+which also deals damage itself, reached Vek Hormones.
+Same error elsewhere: only Into the Breach has redirect_attack.
+Fix: vocab: redirect_attack causes damaged, survives_damage, dies, killed. Case ntb12.
+

@@ -164,12 +164,12 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- self_destruct: duelyst 692 pairs, e.g. Fireblaze Obelysk -> Darkspear Zane; faeria 576 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 350 pairs, e.g. Gem Fiend -> Broken Obol (Right); into_the_breach 32 pairs, e.g. Self-Destruct -> Ice Tile; monster_train 241 pairs, e.g. Bogdeep Cocoon -> Kinhost Vessel; runeterra 6554 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
-- destroy: duelyst 2211 pairs, e.g. Abhorrent Unbirth -> Darkspear Zane; faeria 932 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 385 pairs, e.g. Gem Fiend -> Broken Obol (Right); into_the_breach 84 pairs, e.g. Self-Destruct -> Ice Tile; monster_train 290 pairs, e.g. Bogdeep Cocoon -> Kinhost Vessel; runeterra 11112 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
-- sacrifice: duelyst 1511 pairs, e.g. Abhorrent Unbirth -> Darkspear Zane; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Broken Obol (Right); into_the_breach 8 pairs, e.g. Arachnoid -> Large Goo; monster_train 286 pairs, e.g. Primordium -> Devourer of Death; runeterra 5631 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
-- revive: inscryption 27 pairs, e.g. Necromancer -> Broken Obol (Right); runeterra 1008 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 38 pairs, e.g. Diehards -> Azure Hatcher
-- removal: faeria 131 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Broken Obol (Right); into_the_breach 48 pairs, e.g. Self-Destruct -> Ice Tile; monster_train 38 pairs, e.g. Crushing Demise -> Little Fade; runeterra 2026 pairs, e.g. Kindred's Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
-- aoe_damage: inscryption 105 pairs, e.g. Explode Bot -> Shield Latcher; into_the_breach 424 pairs, e.g. Thermal Discharger -> Boom Cannon; runeterra 2572 pairs, e.g. Anivia -> Shackled Ghasts; stormbound 229 pairs, e.g. Crimson Sentry -> Green Prototypes
+- self_destruct: duelyst 692 pairs, e.g. Windstorm Obelysk -> Darkspear Zane; faeria 576 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 350 pairs, e.g. Skelemagus -> Gift Bot; into_the_breach 32 pairs, e.g. Spiderling Egg -> Boom Laser; monster_train 241 pairs, e.g. Kinhost Vessel -> Bogdeep Cocoon; runeterra 6554 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Spare Dragonling
+- destroy: duelyst 2211 pairs, e.g. Windstorm Obelysk -> Darkspear Zane; faeria 932 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 385 pairs, e.g. Skelemagus -> Gift Bot; into_the_breach 84 pairs, e.g. Spiderling Egg -> Boom Laser; monster_train 290 pairs, e.g. Kinhost Vessel -> Bogdeep Cocoon; runeterra 11112 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- sacrifice: duelyst 1511 pairs, e.g. Windstorm Obelysk -> Darkspear Zane; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Gift Bot; into_the_breach 8 pairs, e.g. Arachnoid -> Large Goo; monster_train 286 pairs, e.g. Primordium -> Devourer of Death; runeterra 5631 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- revive: inscryption 27 pairs, e.g. Necromancer -> Gift Bot; runeterra 1008 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 38 pairs, e.g. Project PH03-NIX -> Spare Dragonling
+- removal: faeria 131 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Gift Bot; into_the_breach 48 pairs, e.g. Tentacles -> Boom Laser; monster_train 38 pairs, e.g. Wicked Blaze -> Little Fade; runeterra 2026 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Avian Stalkers
+- aoe_damage: inscryption 105 pairs, e.g. Bomb Latcher -> Shield Latcher; into_the_breach 424 pairs, e.g. Thermal Discharger -> Boom Cannon; runeterra 2572 pairs, e.g. Anivia (level 2) -> Bladepierced Revenant; stormbound 229 pairs, e.g. Crimson Sentry -> Green Prototypes
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -177,8 +177,8 @@ Families of three mechanics that feed each other, starting from "summon" (`ask.p
 - summon -> on_ally_play -> countdown (seen in duelyst, runeterra)
 - summon -> banish -> other_leave_trigger (seen in runeterra)
 - summon -> banish -> return_to_hand (seen in runeterra)
-- summon -> delayed -> cant_block (seen in runeterra)
-- summon -> delayed -> terrain (seen in runeterra)
+- summon -> terrain -> cant_block (seen in runeterra)
+- summon -> terrain -> delayed (seen in runeterra)
 
 ## A deck explained (`ask.py runeterra analyze "..."`), a Lucian/Senna deck from a deck guide
 

@@ -348,3 +348,5 @@ Each change: date, what changed, the card that caused it, and which records were
   top tenth). Cases nst19-nst25; nfa42 rewritten.
 - 30 Oct 2026, v51 (Into the Breach, check of 20 cards): param area ("Increases area hit by 1 tile": increase_effect params
   area N); Explosive Goo, Techno-Scarab corrected (fixes/into_the_breach/v51.py).
+- 30 Oct 2026, v53 (Into the Breach): act redirect_attack causes damaged, survives_damage, dies, killed (a turned Vek attack
+  hits what is now in its way; Confuse Shot feeds Vek Hormones). Smoke Pellets' Ally Immune corrected (fixes/into_the_breach/v53.py).

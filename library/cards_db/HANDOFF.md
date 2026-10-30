@@ -94,5 +94,6 @@ and about ten rebuilds). Each check below is cheap and found errors that later c
 - Into the Breach (v48-v51, done 30 Oct 2026): every step of PROCESS passes (RESULTS.md). 20 squads in decks.tsv, rules in
   library/tools/games/into_the_breach.md, BRIEF "Game words: Into the Breach". Families F1-F19 in deck_read_into_the_breach.md
   (F7 kept by Kaptain; F8-F12 approved by him; the check of 20 cards done by Claude at his word). Decks list weapons and
-  passives as cards (F20, v52.py): a mech keeps only its keywords; network.CARRIED makes a weapon act as its mech.
+  passives as cards (F20, v52.py): a mech keeps only its keywords; network.CARRIED makes a weapon act as its mech; a mech
+  has 2 slots. 14 of Claude's builds fill every second slot (Kaptain's word); F25-F26 from reading them.
   Stormbound shows 141 of 145 cases (csb09-csb13, poisoned-unit lines) since the Slay the Spire chat's v49 shared change.

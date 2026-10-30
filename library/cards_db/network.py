@@ -709,7 +709,7 @@ def aimed(c, game, nodes, broad):
         if act in ('can', 'cant') and pev:  # say what it may or may not do: "lets it be summoned there", "stops it moving"
             what = {('can', 'summoned'): 'lets it be summoned in more places', ('can', 'played'): 'lets it be played in more places',
                     ('can', 'moves'): 'lets it move more', ('cant', 'moves'): 'stops it moving', ('cant', 'attacks'): 'stops it attacking',
-                    ('cant', 'targeted'): 'protects it from targeting'}.get((act, pev), what + f' ({pev})')
+                    ('cant', 'targeted'): 'protects it from targeting', ('cant', 'given_keyword'): f'keeps {kwn(kw) or "a status"} off it'}.get((act, pev), what + f' ({pev})')
         at = where(w)  # who benefits from a place: "when next to it", "in its circuit" (positional games; Inscryption Leader)
         for b in hits:
             if rule: out[(a, b)].append(('boosts' if isinstance(rule, str) else 'rules', 1.0 / n, what + at))  # stats given make it stronger; the rest change how it works

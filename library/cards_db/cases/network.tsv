@@ -218,3 +218,5 @@ ntb8	into_the_breach	Run: Rusting Hulks (Sevastromo, Unfair)	Rocket Artillery	Fo
 ntb9	into_the_breach	Run: Rusting Hulks (Sevastromo, Unfair)	Aerial Bombs	Force Amp	none		Claude (v52, F22): Aerial Bombs push nothing; plain damage is no bump
 ntb10	into_the_breach	Run: Rift Walkers (Sevastromo, Unfair)	Titan Fist	Artemis Artillery	line	acts on units	Kaptain 30 Oct 2026 (F20): the squad lists its weapons, the lines are between weapons
 ntb11	into_the_breach	Rift Walkers	Combat Mech	Titan Fist	line	carries	Kaptain 30 Oct 2026 (F24): the weapon of each mech is linked with its mech
+ntb12	into_the_breach	Claude: Steel Judoka with second weapons	Confuse Shot	Vek Hormones	line	damages enemy units	Claude (v53, F26): a turned Vek attack hits other Vek, which Vek Hormones adds to
+ntb13	into_the_breach	Claude: Mist Eaters with second weapons	Smoke Pellets	Smog Mech	line	keeps Smoke off it	Claude (v53, F25): Ally Immune keeps Smoke off my mechs; it removes none
