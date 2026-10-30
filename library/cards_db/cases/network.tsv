@@ -140,13 +140,13 @@ ndu28	duelyst	Cassyva Replace Abomination	Healing Mystic	Cassyva Soulreaper	line
 ndu29	duelyst	Lilithe Darkfire	Wraithling	Inkling Surge	line		guide: Inkling Surge draws when another Wraithling is out; Lilithe and Vorpal Reaver put Wraithlings into play
 ndu31	duelyst	Lilithe Darkfire	Vorpal Reaver	Inkling Surge	none	makes	Kaptain 30 Oct 2026: makers put the Wraithling into play; the Wraithling enables Inkling Surge, not its makers
 ndu30	duelyst	Faie Blood Taura	White Asp	Blazing Spines	none	names	Claude, deck read: Blazing Spines names the walls it summons itself; it asks for no other wall maker (family 24)
-nfa31	faeria	Blue Yellow Events	Shifting Tide	Windstorm Colossus	none	type:	Kaptain 30 Oct 2026: the Colossus counts events played; one kind of line, does what it waits for, not enables
+nfa31	faeria	Blue Yellow Events	Shifting Tide	Windstorm Colossus	none	waits:	Kaptain 30 Oct 2026: the Colossus counts events played; one kind of line, does what it waits for, not enables (rewritten 30 Oct 2026, Kaptain: a count is part of "enables"; "triggers" only for reactions)
 nfa32	faeria	Yellow Monstrosity	Manta Rider	Windborne Emissary	none	waits:	Kaptain 30 Oct 2026: the Emissary needs another flyer to be there: enables, not does what it waits for
 nfa33	faeria	Red Combat	Underground Boss	Bomb Slinger	none		Kaptain 30 Oct 2026: 2 faeria in a fight does not pay for a 5 cost card
 nfa34	faeria	Red Blue Mobility Burn	Seifer, Blood Tyrant	Gabrian Enchantment	none		Kaptain 30 Oct 2026: 'Attack becomes equal to its Life' waits for nothing
 nfa35	faeria	Red Blue Mobility Burn	Gift of Steel	Gabrian Enchantment	line	stronger:	Claude, from Kaptain's point 4: more Life becomes more Attack (makes stronger)
 nfa36	faeria	Midrange Sacrifice	Demon Wing	Soul Eater	none		Kaptain 30 Oct 2026: every unit can die fighting; only cards that make my units die feed it
-nfa37	faeria	Midrange Sacrifice	Lord of the Wastes	Soul Eater	line	waits: makes your units die	Kaptain 30 Oct 2026: Lord sacrifices a friendly creature
+nfa37	faeria	Midrange Sacrifice	Lord of the Wastes	Soul Eater	line	type: makes your units die	Kaptain 30 Oct 2026: Lord sacrifices a friendly creature (rewritten 30 Oct 2026, Kaptain: a count is part of "enables"; "triggers" only for reactions)
 nfa38	faeria	Midrange Sacrifice	Lord of the Wastes	Village Elder	line	waits: kills it for its death effect	Kaptain 30 Oct 2026: kills it for its death effect
 nfa39	faeria	Bargain (Krog)	Krog's Dinner	Meteor	none		Kaptain 30 Oct 2026: 'Your Krog costs 7 less' helps only Krog
 nfa40	faeria	Voice of Hunger Control	Falcon Dive	Plague Bearer	line	waits: kills it for its death effect	Kaptain 30 Oct 2026: 1 damage to my own 1 Life unit sets off its Last Words
@@ -167,12 +167,12 @@ ndu45	duelyst	Ciphyron Build	Timekeeper	Rescue-RX	line		Kaptain: as ndu44
 ndu46	duelyst	Argeon Dawn's Eye aggro	Tempest	Arclyte Regalia	none		Claude: Regalia's damage prevention waits for nothing
 ndu47	duelyst	Kaleos Trial of Songhai	Dispirited Prisoner	Hideatsu the Ebon Ox	none	counts when played	Claude: a token is summoned, never played from the action bar
 nfa41	faeria	Yellow Monstrosity	Manta Rider	Windborne Emissary	line	type:	Kaptain 30 Oct 2026: a flyer enables the Emissary ('while you control another flying creature')
-nfa42	faeria	Blue Yellow Events	Shifting Tide	Windstorm Colossus	line	waits:	Kaptain 30 Oct 2026: the Colossus counts the events played: does what it waits for
+nfa42	faeria	Blue Yellow Events	Shifting Tide	Windstorm Colossus	line	type:	Kaptain 30 Oct 2026: the Colossus counts the events played: does what it waits for (rewritten 30 Oct 2026, Kaptain: a count is part of "enables"; "triggers" only for reactions)
 nfa43	faeria	Bargain (Krog)	Bold Bargainer	Krog, the Ogre King	none	stronger:	Kaptain 30 Oct 2026: a cost cut makes cheaper, not stronger
 nfa44	faeria	Red Combat	Underground Brigand	Bomb Slinger	none		Kaptain 30 Oct 2026: as nfa33
 nfa45	faeria	Red Blue Mobility Burn	Gift of Steel	Gabrian Enchantment	none	waits:	Kaptain 30 Oct 2026: the Enchantment waits for nothing
 nfa46	faeria	Midrange Sacrifice	Village Elder	Soul Eater	none		Kaptain 30 Oct 2026: Village Elder makes no friendly creature die
-nfa47	faeria	Midrange Sacrifice	Wind Soldier	Soul Eater	line	waits:	Claude from Kaptain's point 5: Wind Soldier dies at end of turn, a friendly death
+nfa47	faeria	Midrange Sacrifice	Wind Soldier	Soul Eater	line	type:	Claude from Kaptain's point 5: Wind Soldier dies at end of turn, a friendly death (rewritten 30 Oct 2026, Kaptain: a count is part of "enables"; "triggers" only for reactions)
 nfa48	faeria	Bargain (Krog)	Krog's Dinner	Ogre Battler	none		Kaptain 30 Oct 2026: as nfa39
 nfa49	faeria	Yellow Monstrosity	Khalim's Training	Windborne Emissary	line	type:	Claude from Kaptain's point 1: giving Flying to a creature enables the Emissary
 nfa50	faeria	Voice of Hunger Control	Falcon Dive	Eredon, Voice of All	none	death effect	Claude from Kaptain's point 10: 1 damage does not kill a 3 Life unit

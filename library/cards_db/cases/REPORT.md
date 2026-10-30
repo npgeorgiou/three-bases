@@ -85,14 +85,14 @@ Made by `cases/run.py duelyst`.
 | ndu08 | Kaleos Trial of Songhai | EMP | Dagona | none  | - | yes |
 | ndu09 | Vaath Dying Wish | Unseven | Dagona | line  | puts: puts it into play from the hand | yes |
 | ndu10 | Kaleos Trial of Songhai | Scroll Bandit | Battle Panddo | none  | - | yes |
-| ndu11 | Kaleos Trial of Songhai | Heartseeker | Hideatsu the Ebon Ox | line  | waits: is a card it counts when played | yes |
+| ndu11 | Kaleos Trial of Songhai | Heartseeker | Hideatsu the Ebon Ox | line  | type: is a card it counts when played | yes |
 | ndu12 | Kaleos Trial of Songhai | Blink | Scroll Bandit | line  | type: moves it for its effect | yes |
 | ndu13 | Cassyva Replace Abomination | Aethermaster | White Widow | line  | waits: shuffles cards into the deck | yes |
 | ndu14 | Lilithe Darkfire | Lilithe Blightchaser | Phantasm | none  | - | yes |
 | ndu15 | Lilithe Darkfire | Grasp of Agony | Vorpal Reaver | none  | - | yes |
 | ndu16 | Argeon Intensify Riftwalker | Lifestream | Sunstrike | none  | - | yes |
 | ndu17 | Argeon Intensify Riftwalker | Sunstrike | Lifestream | none  | - | yes |
-| ndu18 | Faie Blood Taura | Flameblood Warlock | Blood Taura | line  | waits: damages your leader | yes |
+| ndu18 | Faie Blood Taura | Flameblood Warlock | Blood Taura | line  | type: damages your leader | yes |
 | ndu19 | Argeon Intensify Riftwalker | Windblade Adept | Afterblaze | line  | type: is a unit with Zeal it counts or asks for | yes |
 | ndu20 | Argeon Mechaz0r | Helm of MECHAZ0R | MECHAZ0R! | line  | puts: summons | yes |
 | ndu21 | Vaath Dying Wish | Kujata | Juggernaut | line  | waits: damages it for its effect; also makes cheaper: makes it cheaper | yes |

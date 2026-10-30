@@ -31,6 +31,8 @@
 - Do write each wrong line as an exact network case (deck, from, to, line/none) when you find it; don't tune text regexes
   for concept cases. After a shared change, compare `dump_lines.py --diff` before and after for every game and read the
   changed lines: passing cases do not show hundreds of lines going away.
+- Link kinds (Kaptain, 30 Oct 2026): "triggers" for reactions, "enables" for things needed or counted, help kinds, one link per
+  pair (PROCESS "Link kinds and what this chat learned").
 - Lines are combos between card abilities (Kaptain, 30 Oct 2026): what every unit does by the rules (attacks, is struck
   back, harvests, gives Bones when it dies) makes no line, except for a level-up count or a need that names the leader; a
   passive that helps cards points from it to them, and those cards do not "enable" it (PROCESS "Kaptain's check of the

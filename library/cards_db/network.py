@@ -333,9 +333,10 @@ def lines_of(c, game):
                     w *= 0.25; say += ' (by fighting)' if rule == 'units fight' else f" (by the game's rule: {rule})"
                 if lv: out[(m, t)].append(('levels', 2 * w, say + ' (levels it up)'))
                 elif role == 'trigger' and t in selffeed: out[(m, t)].append(('levels', w, say + ' (it levels up from what it then does)'))
-                # it reacts to or counts a happening: "does what it waits for"; it needs a thing to be there ("while you control
-                # another flying creature", "if Krog has died"): "enables"
-                else: out[(m, t)].append(('type' if role == 'state' else 'waits', w, say))
+                # it reacts to a happening (a death effect, "when an ally dies"): "triggers"; it counts one or needs a thing to be
+                # there ("5+ spells played", "while you control another flying creature", "if Krog has died"): "enables"
+                else: out[(m, t)].append(('waits' if role == 'trigger' else 'type', w, say))  # a reaction is triggered; a count or a
+                # state it needs is enabled (Kaptain, 30 Oct 2026: "triggers" and "enables")
     put = [(m, ref, act) for m, ref, act in c.execute(f"select card, card_ref, act from flat_do where act in ({','.join('?' * len(PUTS))})", PUTS)
            if m in cards and ref in cards and m != ref]
     mk_kws = {v for (v,) in c.execute("select distinct via from flat_do where origin='uses_keyword' and act in ('create','summon','choose_card')")}
@@ -665,7 +666,7 @@ def played_lines(c, game, nodes, broad):
     "Fast spells, Slow spells or Skills you've played"); only when the kind is narrowed past "any card" or "any unit".
     "N cards with different names" is helped by cards that create cards (more different cards to play)."""
     cards = cards_of(c, game); out = collections.defaultdict(list); marks = ','.join('?' * len(nodes)); lvl = level_abilities(c)
-    for t, ab, h, kind, side, pick, w in c.execute(f"""select card, ability, happening, kind, side, pick, obj_with from flat_ref where role!='makes'
+    for t, ab, h, kind, side, pick, w, role in c.execute(f"""select card, ability, happening, kind, side, pick, obj_with, role from flat_ref where role!='makes'
             and origin='own' and happening in ('played','summoned','drawn') and coalesce(pick,'')!='self' and side in ('mine','any','')
             and card in ({marks})""", list(nodes)).fetchall():
         if ab in harm_abilities(c) or ab in help_abilities(c): continue
@@ -677,11 +678,11 @@ def played_lines(c, game, nodes, broad):
             if a != t and a in cards and matches(c, game, cards[a], 'any' if k == 'card' else k, w) and \
                     not (h in ('played', 'drawn') and board_only(c, nodes, a)):  # a token summoned on the board is never played or drawn
                 why = f'is a card it counts when {h}'  # "when you draw an event": the deck's events are what it waits to draw
-                out[(a, t)].append(('levels', 2.0 / n, why + ' (levels it up)') if ab in lvl else ('waits', 1.0 / n, why))
+                out[(a, t)].append(('levels', 2.0 / n, why + ' (levels it up)') if ab in lvl else ('waits' if role == 'trigger' else 'type', 1.0 / n, why))
     for t, ab in c.execute(f"""select card, ability from flat_if where test in ('amount_distinct','distinct') and event='played'
             and card in ({marks})""", list(nodes)).fetchall():
         for (a,) in c.execute(f"select distinct card from flat_concept where concept='generate_cards' and card in ({marks})", list(nodes)):
-            if a != t: out[(a, t)].append(('levels' if ab in lvl else 'waits', 0.2, 'creates cards: more different cards to play' +
+            if a != t: out[(a, t)].append(('levels' if ab in lvl else 'type', 0.2, 'creates cards: more different cards to play' +
                                            (' (levels it up)' if ab in lvl else '')))
     return out
 
@@ -717,7 +718,7 @@ def need_lines(c, game, nodes, broad):
         described[k].add(a)
     for t, kind, w in needs:
         counted = (w or '').endswith(';counted'); w = (w or '').removesuffix(';counted')  # "each event you've played": it counts what
-        # happens, so it waits for it ("does what it waits for"), it needs nothing to be there
+        # happens: "enables" (a count, no reaction)
         cnt = kind_count(c, game, kind, w)
         what = 'a card it acts on' if kind == 'any' else f'a {"landmark or structure" if kind == "landmark" else kind} it asks for'
         kws_ = [mechanics.name(c, int(p.split(' ')[2])) for p in (w or '').split(';') if p.startswith('keyword is ') and p.split(' ')[2].isdigit()]
@@ -726,9 +727,9 @@ def need_lines(c, game, nodes, broad):
         for a in nodes:
             if a == t or a not in cards: continue
             if counted:
-                if matches(c, game, cards[a], kind, w): out[(a, t)].append(('waits', 1.0 / cnt, f'is a {kind} it counts'))
+                if matches(c, game, cards[a], kind, w): out[(a, t)].append(('type', 1.0 / cnt, f'is a {kind} it counts'))
                 elif a in described.get(kind, ()) and not any(p.split(' ')[0] in ('card', 'name_has', 'type') for p in (w or '').split(';')):
-                    out[(a, t)].append(('waits', 0.5 / cnt, f'makes a {"landmark or structure" if kind == "landmark" else kind} it counts'))
+                    out[(a, t)].append(('type', 0.5 / cnt, f'makes a {"landmark or structure" if kind == "landmark" else kind} it counts'))
                 continue
             if matches(c, game, cards[a], kind, w): out[(a, t)].append(('type', 1.0 / cnt, 'is ' + what))
             elif a in described.get(kind, ()) and not any(p.split(' ')[0] in ('card', 'name_has', 'type') for p in (w or '').split(';')):
@@ -840,7 +841,7 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
             if why.endswith('*') and not lv: continue
             for a in helpers_t - {t}:
                 if not (aim_fits(a, t) if pick == 'self' else leader_fits(a, t)): continue  # help on itself must land on it
-                out[(a, t)].append(('levels' if lv else 'moves' if concepts == ('movement',) else 'waits', (1.0 if lv else 0.5) / n,
+                out[(a, t)].append(('levels' if lv else 'moves' if concepts == ('movement',) else 'waits' if role == 'trigger' else 'type', (1.0 if lv else 0.5) / n,
                                     why.rstrip('*') + (' (levels it up)' if lv else '')))  # it makes what the card waits for happen more
     # how many cards are in my hand ("played as the last card from your hand", "10+ cards in hand", "for each card in hand")
     hand = lambda acts, zone: {a for (a,) in c.execute(f"""select card from flat_do where act in ({','.join('?' * len(acts))}) and origin in
@@ -1185,10 +1186,10 @@ def network(c, game, ids, broad=True):
 
 
 # one link per pair of cards (Kaptain, 30 Oct 2026: never two arrows between the same two cards): its kind is the first of
-# these the reasons have, its reasons all of them ("is an Imp it asks for; also does what it waits for: is a card it counts")
+# these the reasons have, its reasons all of them ("is an Imp it asks for; also is a card it counts when played")
 KIND_ORDER = ('puts', 'levelsinto', 'levels', 'type', 'waits', 'moves', 'clears', 'heals', 'keyword', 'stronger', 'cheaper', 'repeats',
               'rules', 'boosts', 'targets')
-KIND_WORD = {'waits': 'does what it waits for', 'type': 'enables', 'cheaper': 'makes cheaper', 'heals': 'heals', 'stronger': 'makes stronger',
+KIND_WORD = {'waits': 'triggers', 'type': 'enables', 'cheaper': 'makes cheaper', 'heals': 'heals', 'stronger': 'makes stronger',
              'keyword': 'gives keyword', 'moves': 'moves into place', 'clears': 'clears the way', 'levels': 'helps it level up',
              'puts': 'puts it into play', 'repeats': 'repeats its effects', 'rules': 'changes how it works', 'boosts': 'helps',
              'levelsinto': 'levels into', 'targets': 'can aim at it'}

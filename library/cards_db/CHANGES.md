@@ -292,3 +292,8 @@ Each change: date, what changed, the card that caused it, and which records were
   card or line is locked, pointing reacts only to the locked part and a right click copies only it.
 - Families F10-F15 in deck_read_duelyst.md; cases n38 (rewritten, Kaptain), n70, n71.
 
+## 30 Oct 2026, v47 (Kaptain: "triggers" and "enables")
+- network.py: a reaction (refs role trigger) is a "triggers" link; a count or a needed thing is "enables" (played_lines, counted
+  needs, HELPS by the need's role). network_page.py: the label "triggers". Cases nfa31, nfa37, nfa42, nfa47 rewritten by
+  Kaptain's word. PROCESS "Link kinds and what this chat learned".
+

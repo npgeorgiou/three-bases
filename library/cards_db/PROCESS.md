@@ -506,6 +506,23 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
 3. A filter of what a card makes (create, summon, Invoke, Manifest) describes the made card: no ask, no keyword need.
 4. Help on the card itself or on the player (heals, stats, keywords) helps no unit; extra attacks given to the player do.
 
+## Link kinds and what this chat learned (30 Oct 2026, v47; Duelyst chat)
+Link kinds (Kaptain): "triggers" = B reacts to what A does (a death effect, "when an ally dies", "when this is hit"; refs role
+trigger); "enables" = B needs a thing to be there or counts things ("5+ spells played", "if you have another Wraithling");
+the help kinds (heals, makes stronger, makes cheaper, gives keyword, moves into place, clears the way); puts it into play;
+helps it level up. One link per pair (PROCESS "One link per pair, one rule per need").
+Learned:
+1. Take `dump_lines.py` before any change and read the gone and new PAIRS after it, not only the reasons: merging reasons
+   hides real losses (a player-kind exclusion silently cut Rally's "another attack" lines).
+2. Every new exclusion: ask what else shares the attribute you exclude by (target kind player = Nexus heals, but also Rally).
+3. A rule made for one game's model (a leader card) must be gated by that model (`leader_game`), or it opens every game.
+4. When Kaptain's new word contradicts an old case, rewrite the case with the date and his word; never keep both.
+5. Kaptain's words on the page are the vocabulary: say what a card does ("plants traps that go off later"), never the
+   opponent's act as the card's.
+6. Kaptain reviews links, but names the cause by example: "kitchen dirty, bathroom dirty". For each point, list every other
+   rule that could make the same kind of mistake (a filter read as an ask, a fact said twice, a need read by two rules) and check
+   them all before reporting.
+
 ## Importing Faeria: the board (29 Oct 2026; checked in every game)
 Faeria is played on a hex board that players build; Kaptain uses the library to study positional play, so its board words
 were made the shared form for every game with spaces (BRIEF "The board"). What went wrong and the rule now:
