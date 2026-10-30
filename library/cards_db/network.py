@@ -1470,6 +1470,15 @@ def network(c, game, ids, broad=True):
                                 if k == 'puts' and (y == 'draws it from the deck' or y.startswith('puts it into play from')))
     lines = collections.defaultdict(list, {(a, b): [(k, 1.0 / found[(a, y)] if (a, y) in found and k == 'puts' else w, y) for k, w, y in ls]
                                            for (a, b), ls in lines.items()})
+    # a unit and what it carries (Into the Breach: a mech, its starting weapon and passive, and one extra weapon; the deck lists
+    # each mech, then what it carries): the weapon fires from where its mech stands (Kaptain 30 Oct 2026)
+    if game in CARRIED:
+        carrier = None; cards = cards_of(c, game)
+        for i in ids:
+            x = cards.get(i)
+            if not x: continue
+            if x['cat'] not in CARRIED[game][0] + ('item',): carrier = i
+            elif carrier is not None: lines[(carrier, i)].append(('carries', 1.0, '{A} carries {B}'))
     # "helps" says how: cheaper, stronger, a keyword, into place, a clear way (or it makes what the card waits for happen more)
     lines = collections.defaultdict(list, {(a, b): [(help_kind(y), w, y) if k == 'boosts' else (k, w, y) for k, w, y in ls]
                                            for (a, b), ls in lines.items()})
@@ -1482,9 +1491,9 @@ def network(c, game, ids, broad=True):
 
 # one link per pair of cards (Kaptain, 30 Oct 2026: never two arrows between the same two cards): its kind is the first of
 # these the reasons have, its reasons all of them ("is an Imp it asks for; also is a card it counts when played")
-KIND_ORDER = ('puts', 'levelsinto', 'levels', 'type', 'waits', 'moves', 'clears', 'heals', 'keyword', 'stronger', 'cheaper', 'repeats',
+KIND_ORDER = ('carries', 'puts', 'levelsinto', 'levels', 'type', 'waits', 'moves', 'clears', 'heals', 'keyword', 'stronger', 'cheaper', 'repeats',
               'rules', 'boosts', 'targets')
-KIND_WORD = {'waits': 'triggers', 'type': 'enables', 'cheaper': 'makes cheaper', 'heals': 'heals', 'stronger': 'makes stronger',
+KIND_WORD = {'carries': 'carries', 'waits': 'triggers', 'type': 'enables', 'cheaper': 'makes cheaper', 'heals': 'heals', 'stronger': 'makes stronger',
              'keyword': 'gives keyword', 'moves': 'moves into place', 'clears': 'clears the way', 'levels': 'helps it level up',
              'puts': 'puts it into play', 'repeats': 'repeats its effects', 'rules': 'changes how it works', 'boosts': 'helps',
              'levelsinto': 'levels into', 'targets': 'can aim at it'}

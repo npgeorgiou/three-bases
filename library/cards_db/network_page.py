@@ -40,7 +40,7 @@ svg text{font-size:12px;fill:var(--fg);pointer-events:none;paint-order:stroke;st
 <div id="tools"><button id="zin" title="zoom in">+</button><button id="zout" title="zoom out">&minus;</button><button id="fit" title="fit">fit</button></div></div>
 <div id="side"></div></div><div id="tip"></div><script>
 const D=__DATA__;
-const LINE={waits:['#0d9488','triggers'],type:['#4f46e5','enables'],cheaper:['#ca8a04','makes cheaper'],heals:['#16a34a','heals'],
+const LINE={carries:['#111827','carries'],waits:['#0d9488','triggers'],type:['#4f46e5','enables'],cheaper:['#ca8a04','makes cheaper'],heals:['#16a34a','heals'],
  stronger:['#b45309','makes stronger'],keyword:['#db2777','gives keyword'],moves:['#0284c7','moves into place'],clears:['#7c3aed','clears the way'],
  levels:['#c026d3','helps it level up'],puts:['#65a30d','puts it into play'],repeats:['#ea580c','repeats its effects'],
  rules:['#dc2626','changes how it works'],boosts:['#92400e','helps'],levelsinto:['#6b7280','levels into'],targets:['#9ca3af','can aim at it']};

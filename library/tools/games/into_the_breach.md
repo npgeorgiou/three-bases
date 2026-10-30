@@ -35,6 +35,8 @@ each line names its page. Used for read/into_the_breach/game_rules.jsonl (cards_
   normally deploy in a limited area; the area itself is not described by any page read (unknown). Deployed tanks, Walking
   Bombs and Arachnoids are put on the board by the weapons that name them (wiki weapon pages).
 - Once per battle the player can reset a turn (wiki Reset Turn).
+- Loadout: each mech carries its starting weapon (some also a passive, Rocket Mech's Storm Generator) and one extra weapon at
+  most; never two extra weapons (Kaptain, 30 Oct 2026). A starting weapon can be swapped for another.
 
 ## Sources and notes
 

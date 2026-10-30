@@ -619,6 +619,10 @@ that carries it (pick self); a pilot's "Mech" = the mech it pilots (pick self). 
 - Decks (v52, Kaptain 30 Oct 2026: mechs are equipped with weapons): a squad or build lists each mech, then its weapons and
   passive as cards of their own. A mech's record holds only its own keywords (Flying, Massive, Natural Armor); its weapon's
   and passive's rows are on the weapon and passive cards, read from their own texts.
+- A mech carries its starting weapon (and passive, if it has one) and at most ONE extra weapon; never two extra weapons
+  (Kaptain, 30 Oct 2026). A starting weapon may be swapped for another. In a deck, each mech comes first and what it carries
+  right after it ("Jet Mech, Aerial Bombs, Force Amp, Rocket Mech, ..."); the network draws "Jet Mech carries Aerial Bombs".
+  A build whose source does not say which mech carries an item, and no free slot decides it, is not used.
   "Power: ..." (Reactor Cores needed to power the weapon) is no effect: skip it.
 - Passives act on all Mechs: "All Mechs are immune to Fire" = always, give_keyword Fire Immunity on units side mine with type
   Mech, lasts while. Pilots: "Mech gains Armored" = give_keyword Natural Armor on self; "+3 Move" = stat_change params movement.

@@ -214,6 +214,7 @@ nst23	sts1	Ironclad Strength (gamersdecide)	Bag of Marbles	Reaper	line	Vulnerabl
 nst24	sts1	Silent Discard (gamersdecide)	Gambling Chip	Eviscerate	line	cheaper:	Kaptain 30 Oct 2026: discards make Eviscerate cheaper
 nst25	sts1	Ironclad Strength (gamersdecide)	Flex	Heavy Blade	line	gives you Strength	Kaptain 30 Oct 2026: Strength goes to the player
 ntb7	into_the_breach	Rusting Hulks	Repulse	Jet Mech	line	gives it Energy Shield	Claude (v51, F14): Shield Friendly shields every adjacent ally, nothing is chosen (v52: the squad lists its weapons)
-ntb8	into_the_breach	Guide: Rift Walkers with Force Amp (CelJaded)	Titan Fist	Force Amp	line	bump damage	Claude (v52, F22): pushes cause the bumps Force Amp adds damage to
+ntb8	into_the_breach	Run: Rusting Hulks (Sevastromo, Unfair)	Rocket Artillery	Force Amp	line	bump damage	Claude (v52, F22): pushes cause the bumps Force Amp adds damage to
 ntb9	into_the_breach	Run: Rusting Hulks (Sevastromo, Unfair)	Aerial Bombs	Force Amp	none		Claude (v52, F22): Aerial Bombs push nothing; plain damage is no bump
 ntb10	into_the_breach	Run: Rift Walkers (Sevastromo, Unfair)	Titan Fist	Artemis Artillery	line	acts on units	Kaptain 30 Oct 2026 (F20): the squad lists its weapons, the lines are between weapons
+ntb11	into_the_breach	Rift Walkers	Combat Mech	Titan Fist	line	carries	Kaptain 30 Oct 2026 (F24): the weapon of each mech is linked with its mech
