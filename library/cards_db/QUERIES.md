@@ -146,16 +146,16 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 - passive: duelyst 19 cards, monster_train 8 cards, runeterra 18 cards, stormbound 8 cards
 - cheat_death: runeterra 7 cards
 - silence: stormbound 8 cards
-- movement: monster_train 6 cards
+- forced_movement: monster_train 6 cards
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: duelyst 2463 pairs, e.g. Fireblaze Obelysk -> Darkspear Zane; faeria 929 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 489 pairs, e.g. Mage Pupil -> Pack Mule; monster_train 292 pairs, e.g. Kinhost Vessel -> Bog Chrysalis; runeterra 11113 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 264 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- sacrifice: duelyst 1574 pairs, e.g. Fireblaze Obelysk -> Darkspear Zane; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Pack Mule; monster_train 288 pairs, e.g. Primordium -> Devourer of Death; runeterra 5631 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- self_destruct: duelyst 692 pairs, e.g. Fireblaze Obelysk -> Darkspear Zane; faeria 576 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 350 pairs, e.g. Mage Pupil -> Pack Mule; monster_train 243 pairs, e.g. Kinhost Vessel -> Bog Chrysalis; runeterra 6557 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
-- revive: inscryption 27 pairs, e.g. Necromancer -> Pack Mule; runeterra 1010 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 38 pairs, e.g. Diehards -> Vindictive Wretches
-- damage: faeria 652 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 267 pairs, e.g. Bomb Latcher -> Shield Latcher; runeterra 8388 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 519 pairs, e.g. Divine Reptiles -> Dreadful Keepers
-- removal: faeria 129 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Pack Mule; monster_train 38 pairs, e.g. Crushing Demise -> Little Fade; runeterra 2027 pairs, e.g. Kindred's Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
+- destroy: duelyst 2463 pairs, e.g. Deepfire Devourer -> Darkspear Zane; faeria 929 pairs, e.g. Feed the Forest -> Long-horned Yak; inscryption 489 pairs, e.g. Mage Knight -> Strange Frog; monster_train 292 pairs, e.g. Bogdeep Cocoon -> Kinhost Vessel; runeterra 11113 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 264 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- sacrifice: duelyst 1574 pairs, e.g. Deepfire Devourer -> Darkspear Zane; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Strange Frog; monster_train 288 pairs, e.g. Primordium -> Devourer of Death; runeterra 5631 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- self_destruct: duelyst 692 pairs, e.g. Fireblaze Obelysk -> Darkspear Zane; faeria 576 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 350 pairs, e.g. Mage Knight -> Strange Frog; monster_train 243 pairs, e.g. Bogdeep Cocoon -> Kinhost Vessel; runeterra 6557 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
+- revive: inscryption 27 pairs, e.g. Necromancer -> Strange Frog; runeterra 1010 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 38 pairs, e.g. Diehards -> Project PH03-NIX
+- damage: faeria 652 pairs, e.g. Boulder Thrower -> Laya, Lady of Sorrows; inscryption 267 pairs, e.g. QU177 (Beast Form) -> Shield Latcher; runeterra 8388 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 519 pairs, e.g. Divine Reptiles -> Spare Dragonling
+- removal: faeria 129 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Strange Frog; monster_train 38 pairs, e.g. Crushing Demise -> Little Fade; runeterra 2027 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -180,7 +180,7 @@ Supports your units (stats, protection, combat keywords): Piercing Darkness, Sen
 Card flow (draw, create, choose): Glimpse Beyond, Lonely Chimeslime, Senna, Spirit Leech.
 Puts extra units into play: Cursed Keeper, Hapless Aristocrat, The Undying.
 Units that support cards can target: 9 (Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, Lucian, Ravenous Butcher, Senna, Senna, Sentinel of Light, Spirit Leech, The Undying).
-Key cards (in most of the plan): Senna, The Ruination, Spirit Leech, Crumble, Ravenous Butcher.
+Key cards (in most of the plan): Senna, Spirit Leech, The Ruination, Crumble, Ravenous Butcher.
 Weak spots: none found.
 ```
 
@@ -233,7 +233,7 @@ select distinct card from flat_do where act='copy_keywords'
 - monster_train Hellhorned: temporary_buff (11), block_armor (12), damage_prevention (12), on_damaged (13), count_payoff (21)
 - monster_train Awoken: on_lifegain (4), counterattack (7), regeneration (4), draw (11), heal (11)
 - monster_train Stygian Guard: discard (6), on_spell (9), retain (4), stat_loss (5), damage_over_time (11)
-- monster_train Umbra: lifesteal (4), on_sacrifice (14), shield (7), board_limit (4), overload_debt (4)
+- monster_train Umbra: lifesteal (4), on_sacrifice (14), shield (7), overload_debt (4), tribal (18)
 - monster_train Melting Remnant: other_death_trigger (8), countdown (15), self_destruct (16), cost_set (6), delayed (15)
 - monster_train Wurmkin: cost_type (10), resource_gain (23), summon (4), damage_over_time (8), lanes (27)
 - monster_train Clanless: direct_damage (5), banish (10), turn_end (7), cant_attack (5), passive (20)
