@@ -164,17 +164,17 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- counterattack: inscryption 108 pairs, e.g. QU177 (Beast Form) -> Shield Latcher; monster_train 119 pairs, e.g. Cycle of Life -> Little Fade; sts1 4 pairs, e.g. Bronze Scales -> Fairy in a Bottle
-- on_attack: sts1 4 pairs, e.g. Caltrops -> Fairy in a Bottle
-- self_destruct: duelyst 692 pairs, e.g. Windstorm Obelysk -> Darkspear Zane; faeria 576 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 350 pairs, e.g. Skelemagus -> Ouroboros; into_the_breach 32 pairs, e.g. Blob -> Large Goo; monster_train 243 pairs, e.g. Bog Chrysalis -> Kinhost Vessel; runeterra 6554 pairs, e.g. Shark Chariot -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Green Prototypes
-- destroy: duelyst 2211 pairs, e.g. Windstorm Obelysk -> Darkspear Zane; faeria 932 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 385 pairs, e.g. Skelemagus -> Ouroboros; into_the_breach 84 pairs, e.g. Blob -> Large Goo; monster_train 292 pairs, e.g. Bog Chrysalis -> Kinhost Vessel; runeterra 11112 pairs, e.g. Shark Chariot -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
-- sacrifice: duelyst 1511 pairs, e.g. Windstorm Obelysk -> Darkspear Zane; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Ouroboros; into_the_breach 8 pairs, e.g. Arachnoid -> Large Goo; monster_train 288 pairs, e.g. Primordium -> Devourer of Death; runeterra 5631 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
-- revive: inscryption 27 pairs, e.g. Necromancer -> Ouroboros; runeterra 1008 pairs, e.g. Chronobreak -> Bladepierced Revenant; stormbound 38 pairs, e.g. Project PH03-NIX -> Green Prototypes
+- self_destruct: duelyst 692 pairs, e.g. Simulacra Obelysk -> Darkspear Zane; faeria 576 pairs, e.g. Doomgate, Door to Oblivion -> Long-horned Yak; inscryption 350 pairs, e.g. Gem Fiend -> Cockroach; into_the_breach 32 pairs, e.g. Walking Bomb -> Large Goo; monster_train 241 pairs, e.g. Kinhost Vessel -> Bogdeep Cocoon; runeterra 6554 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
+- destroy: duelyst 2211 pairs, e.g. Simulacra Obelysk -> Darkspear Zane; faeria 932 pairs, e.g. Doomgate, Door to Oblivion -> Long-horned Yak; inscryption 385 pairs, e.g. Gem Fiend -> Cockroach; into_the_breach 84 pairs, e.g. Tentacles -> Large Goo; monster_train 290 pairs, e.g. Kinhost Vessel -> Bogdeep Cocoon; runeterra 11112 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- sacrifice: duelyst 1511 pairs, e.g. Simulacra Obelysk -> Darkspear Zane; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Cockroach; into_the_breach 8 pairs, e.g. Arachnoid -> Boom Artillery; monster_train 286 pairs, e.g. Primordium -> Devourer of Death; runeterra 5631 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- revive: inscryption 27 pairs, e.g. Necromancer -> Cockroach; runeterra 1008 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 38 pairs, e.g. Diehards -> Crimson Sentry
+- removal: faeria 131 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Cockroach; into_the_breach 48 pairs, e.g. Tentacles -> Large Goo; monster_train 38 pairs, e.g. Crushing Demise -> Little Fade; runeterra 2026 pairs, e.g. Kindred's Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Blizzard Bombs
+- aoe_damage: inscryption 105 pairs, e.g. Broken Bot -> Shield Latcher; into_the_breach 477 pairs, e.g. Thermal Discharger -> Boom Cannon; runeterra 2572 pairs, e.g. Anivia (level 2) -> Bladepierced Revenant; stormbound 229 pairs, e.g. Crimson Sentry -> Green Prototypes
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
+- summon -> tribal -> upgrade (seen in monster_train, runeterra)
 - summon -> on_ally_play -> countdown (seen in duelyst, runeterra)
-- summon -> tribal -> turn_start (seen in runeterra)
 - summon -> banish -> other_leave_trigger (seen in runeterra)
 - summon -> banish -> return_to_hand (seen in runeterra)
 - summon -> tribal -> board_presence (seen in duelyst, runeterra)

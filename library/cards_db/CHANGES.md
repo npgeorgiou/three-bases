@@ -334,6 +334,7 @@ Each change: date, what changed, the card that caused it, and which records were
   Stances.
 - network.py: amount_kind, x_cost, boosts_it, keyword_adders, capped, unplayable; status boosts through uses_keyword in
   aimed_rows; refs.py: the attacker of my side is an enemy. supplement_sts1.py: "-1 energy" is X. fixes/sts1/v50.py.
-- Dumps before and after: sts1 451 -> 456 lines (128 gone, 133 new, all read); every other game keeps its lines and pairs
+- Dumps before and after: sts1 451 -> 456 lines (128 gone, 133 new, all read; on top of the Into the Breach chat's F9, which
+  had already removed some asks: 410 -> 456); every other game keeps its lines and pairs
   (only the order of reason parts changed). Cases nst01-nst18. All games pass except Stormbound's four poison combo cases,
   which failed before this work.
