@@ -281,3 +281,14 @@ Each change: date, what changed, the card that caused it, and which records were
 - supplement_inscryption.py: Larva is Strange Larva (wiki page name), id kept (KEEP_ID).
 - RESULTS.md: why Inscryption's networks are thin, with numbers per game.
 
+## 30 Oct 2026, v46 (Kaptain's second check of the networks, from the Duelyst chat; shared code, every game checked)
+- network.py: one link per pair of cards (one_link: kind by a fixed order, every reason listed); one rule per need (triggers
+  on played, summoned, drawn and counted played cards only in played_lines); no second saying of a fact (stat gain and more
+  power, cost cut and pays for it, rule line beside the card's own ability, through lines); heals its own kind; help on itself
+  or the player helps no unit (Rally still does); making keywords (Invoke, Manifest) name what they make; trap wording; the
+  leader exemption only in leader games. refs.py: a keyword in a create or summon filter is no need.
+- network_page.py: layout tried from several starts, the one with fewest crossing lines and lines through cards kept, a card
+  and what it makes or levels into close; help lines softer; a line's tooltip names both cards; focused labels bold; while a
+  card or line is locked, pointing reacts only to the locked part and a right click copies only it.
+- Families F10-F15 in deck_read_duelyst.md; cases n38 (rewritten, Kaptain), n70, n71.
+

@@ -40,7 +40,7 @@ svg text{font-size:12px;fill:var(--fg);pointer-events:none;paint-order:stroke;st
 <div id="tools"><button id="zin" title="zoom in">+</button><button id="zout" title="zoom out">&minus;</button><button id="fit" title="fit">fit</button></div></div>
 <div id="side"></div></div><div id="tip"></div><script>
 const D=__DATA__;
-const LINE={waits:['#0d9488','does what it waits for'],type:['#4f46e5','enables'],cheaper:['#ca8a04','makes cheaper'],
+const LINE={waits:['#0d9488','does what it waits for'],type:['#4f46e5','enables'],cheaper:['#ca8a04','makes cheaper'],heals:['#16a34a','heals'],
  stronger:['#b45309','makes stronger'],keyword:['#db2777','gives keyword'],moves:['#0284c7','moves into place'],clears:['#7c3aed','clears the way'],
  levels:['#c026d3','helps it level up'],puts:['#65a30d','puts it into play'],repeats:['#ea580c','repeats its effects'],
  rules:['#dc2626','changes how it works'],boosts:['#92400e','helps'],levelsinto:['#6b7280','levels into'],targets:['#9ca3af','can aim at it']};
@@ -61,21 +61,34 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 const col=n=>(CARD[n.cat]||['#d1d5db'])[0];
 const num=x=>x==null?'':(Math.round(x)===x?String(x):String(x));
 const info=n=>{const p=[];if(n.cost!=null)p.push(num(n.cost));if(n.power!=null||n.health!=null)p.push(num(n.power??0)+'|'+num(n.health??0));return p.length?'  ('+p.join(' \u00b7 ')+')':''};
-function layout(){ // spring layout on the lines that tie cards together; cards with none go in a row below
+function layout(){ // spring layout tried from several starts; the one with the fewest crossing lines and covered labels is kept.
+ // a card and what it makes or levels into sit close (short strong springs); cards with no line go in a row below
  const E=d.lines.filter(l=>l.kind!=='targets'),deg={};E.forEach(l=>{deg[l.from]=1;deg[l.to]=1});
  const L=N.filter(n=>deg[n.id]),F=N.filter(n=>!deg[n.id]);
- L.forEach((n,i)=>{n.x=Math.cos(i*2.4)*(60+8*i);n.y=Math.sin(i*2.4)*(60+8*i)});
- for(let t=0;t<500;t++){const k=1-t/500;L.forEach(a=>{a.dx=-a.x*0.03;a.dy=-a.y*0.03});
-  for(let i=0;i<L.length;i++)for(let j=i+1;j<L.length;j++){const a=L[i],b=L[j],x=a.x-b.x,y=a.y-b.y,r=Math.max(25,Math.hypot(x,y));
-   if(r>600)continue;const f=40000/(r*r)+(r<90?(90-r)*0.5:0);a.dx+=x/r*f;a.dy+=y/r*f;b.dx-=x/r*f;b.dy-=y/r*f}
-  E.forEach(l=>{const a=N[ix[l.from]],b=N[ix[l.to]],x=b.x-a.x,y=b.y-a.y,r=Math.max(1,Math.hypot(x,y)),f=(r-190)*0.03;
-   a.dx+=x/r*f;a.dy+=y/r*f;b.dx-=x/r*f;b.dy-=y/r*f});
-  L.forEach(a=>{a.x+=Math.max(-25,Math.min(25,a.dx))*k;a.y+=Math.max(-25,Math.min(25,a.dy))*k})}
- for(let t=0;t<200;t++){let moved=0; // labels must not cover other cards: a card and its label are a box
-  for(let i=0;i<L.length;i++)for(let j=i+1;j<L.length;j++){const a=L[i],b=L[j],[l,r]=a.x<b.x?[a,b]:[b,a],
-   need=R+10+(l.name.length+info(l).length)*7,dx=r.x-l.x,dy=Math.abs(a.y-b.y);
-   if(dx<need&&dy<34){const p=(34-dy)/2+1,up=a.y<=b.y?a:b,dn=up===a?b:a;up.y-=p;dn.y+=p;moved=1}}
-  if(!moved)break}
+ const tie=l=>l.kind==='puts'||l.kind==='levelsinto';
+ let seed=1;const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647};
+ const wid=n=>R+10+(n.name.length+info(n).length)*7;
+ function run(trial){L.forEach((n,i)=>{const a=trial?rnd()*6.28:i*2.4,r=trial?rnd()*300:60+8*i;n.x=Math.cos(a)*r;n.y=Math.sin(a)*r});
+  for(let t=0;t<450;t++){const k=1-t/450;L.forEach(a=>{a.dx=-a.x*0.02;a.dy=-a.y*0.02});
+   for(let i=0;i<L.length;i++)for(let j=i+1;j<L.length;j++){const a=L[i],b=L[j],x=a.x-b.x,y=a.y-b.y,r=Math.max(25,Math.hypot(x,y));
+    if(r>700)continue;const f=45000/(r*r)+(r<110?(110-r)*0.5:0);a.dx+=x/r*f;a.dy+=y/r*f;b.dx-=x/r*f;b.dy-=y/r*f}
+   E.forEach(l=>{const a=N[ix[l.from]],b=N[ix[l.to]],x=b.x-a.x,y=b.y-a.y,r=Math.max(1,Math.hypot(x,y)),f=tie(l)?(r-90)*0.08:(r-200)*0.03;
+    a.dx+=x/r*f;a.dy+=y/r*f;b.dx-=x/r*f;b.dy-=y/r*f});
+   L.forEach(a=>{a.x+=Math.max(-25,Math.min(25,a.dx))*k;a.y+=Math.max(-25,Math.min(25,a.dy))*k})}
+  for(let t=0;t<200;t++){let moved=0; // labels must not cover other cards: a card and its label are a box
+   for(let i=0;i<L.length;i++)for(let j=i+1;j<L.length;j++){const a=L[i],b=L[j],[l,r]=a.x<b.x?[a,b]:[b,a],dx=r.x-l.x,dy=Math.abs(a.y-b.y);
+    if(dx<wid(l)&&dy<34){const p=(34-dy)/2+1,up=a.y<=b.y?a:b,dn=up===a?b:a;up.y-=p;dn.y+=p;moved=1}}
+   if(!moved)break}}
+ function score(){let s=0;const P=E.map(l=>[N[ix[l.from]],N[ix[l.to]]]);
+  const cr=(p,q,r)=>(q.x-p.x)*(r.y-p.y)-(q.y-p.y)*(r.x-p.x);
+  for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const[a,b]=P[i],[c,e]=P[j];if(a===c||a===e||b===c||b===e)continue;
+   if(cr(a,b,c)*cr(a,b,e)<0&&cr(c,e,a)*cr(c,e,b)<0)s+=1}
+  P.forEach(([a,b])=>L.forEach(n=>{if(n===a||n===b)return;const x=b.x-a.x,y=b.y-a.y,t=Math.max(0,Math.min(1,((n.x-a.x)*x+(n.y-a.y)*y)/(x*x+y*y||1)));
+   if(Math.hypot(a.x+t*x-n.x,a.y+t*y-n.y)<R+4)s+=2}));  // a line through another card
+  let len=0;P.forEach(([a,b])=>len+=Math.hypot(a.x-b.x,a.y-b.y));return s+len/(P.length||1)/400}
+ let best=null,bs=Infinity;const tries=L.length>60?3:L.length>30?6:10;
+ for(let t=0;t<tries;t++){run(t);const sc=score();if(sc<bs){bs=sc;best=L.map(n=>[n.x,n.y])}}
+ L.forEach((n,i)=>{n.x=best[i][0];n.y=best[i][1]});
  let x0=Infinity,x1=-Infinity,y1=-Infinity;L.forEach(n=>{x0=Math.min(x0,n.x);x1=Math.max(x1,n.x);y1=Math.max(y1,n.y)});
  if(!L.length){x0=0;x1=600;y1=-60}
  const w=Math.max(x1-x0,600),per=Math.max(1,Math.floor(w/190));
@@ -112,19 +125,25 @@ function draw(){svg.innerHTML='';const defs=el('defs',{}),seen={},bend=[];
  N.forEach((n,i)=>{const g=el('g',{});const c=el('circle',{cx:n.x,cy:n.y,r:R,fill:col(n),stroke:'currentColor','stroke-width':n.made?1.5:2,'data-n':i,style:'cursor:pointer;color:var(--fg)'});
   if(n.made)c.setAttribute('stroke-dasharray','3 3');const t=el('text',{x:n.x+R+5,y:n.y+4});t.textContent=n.name+info(n);g.append(c,t);gn.appendChild(g);els.nodes.push(g)});
  mark()}
-function mark(){const f=hov||sel,on=new Set(f?f.nodes:[]);
+// what a click locked: its cards and lines; while locked, pointing reacts only to them, and a right click copies only them
+let lockN=null,lockL=null;const SOFT=new Set(['stronger','cheaper','keyword','heals','moves','clears','boosts']);
+function touches(f,l,i){const a=ix[l.from],b=ix[l.to];return f.line!=null?i===f.line:f.card!=null?(a===f.card||b===f.card):f.pairs?f.pairs.has(a+'>'+b):(f.nodes.has(a)&&f.nodes.has(b))}
+function lock(){if(!sel){lockN=lockL=null;return}lockN=new Set(sel.nodes);lockL=new Set();
+ d.lines.forEach((l,i)=>{if(!hidden.has(l.kind)&&touches(sel,l,i)){lockL.add(i);lockN.add(ix[l.from]);lockN.add(ix[l.to])}})}
+function mark(){lock();const f=hov||sel,on=new Set(f?f.nodes:[]);
  d.lines.forEach((l,i)=>{const ln=els.lines[i],show=!hidden.has(l.kind),a=ix[l.from],b=ix[l.to];
-  const touch=!!f&&(f.line!=null?i===f.line:f.card!=null?(a===f.card||b===f.card):f.pairs?f.pairs.has(a+'>'+b):(f.nodes.has(a)&&f.nodes.has(b)));
+  const touch=!!f&&touches(f,l,i);
   ln.style.display=show?'':'none';els.lines[i].nextSibling.style.display=show?'':'none';
   if(touch&&show){on.add(a);on.add(b)}
-  ln.style.opacity=!f?(l.kind==='targets'?.45:.6):touch?1:.08;ln.style.filter=touch?'saturate(1.6)':'';
+  ln.style.opacity=!f?(l.kind==='targets'?.3:SOFT.has(l.kind)?.35:.8):touch?1:.08;  // help lines softer: the combos stand outln.style.filter=touch?'saturate(1.6)':'';
   ln.style.strokeWidth=f&&f.line===i?String(4+Math.min(3,l.weight*6)):''});
- els.nodes.forEach((g,i)=>{g.style.opacity=!f||on.has(i)?1:.25;g.firstChild.setAttribute('r',sel&&sel.nodes.has(i)?R+4:R)});
+ els.nodes.forEach((g,i)=>{g.style.opacity=!f||on.has(i)?1:.25;g.lastChild.style.fontWeight=f&&on.has(i)?'700':'';g.firstChild.setAttribute('r',sel&&sel.nodes.has(i)?R+4:R)});
  document.querySelectorAll('.chip').forEach(c=>c.style.outline=sel&&sel.card!=null&&ix[+c.dataset.id]===sel.card?'2px solid var(--fg)':'');
  document.querySelectorAll('.sec').forEach(x=>x.classList.toggle('on',!!sel&&sel.key===x.dataset.key))}
-svg.onmousemove=e=>{if(drag&&drag.moved)return;const t=e.target;let h='';
+svg.onmousemove=e=>{if(drag&&drag.moved)return;let t=e.target;let h='';
+ if(lockN&&((t.dataset.n&&!lockN.has(+t.dataset.n))||(t.dataset.l&&!lockL.has(+t.dataset.l))))t={dataset:{}};  // outside the locked part
  if(t.dataset.n){const n=N[+t.dataset.n];hov=one(+t.dataset.n);h=`<b>${esc(n.name)}</b>${esc(info(n))} <span style="color:var(--mut)">${esc((CARD[n.cat]||['',n.cat])[1])}${n.types&&n.types.length?' \u00b7 '+esc(n.types.join(', ')):''}${n.made?', made by the deck':''}</span><br>${n.keywords.length?'<i>'+esc(n.keywords.join(', '))+'</i><br>':''}${esc(n.text)}`}
- else if(t.dataset.l){const l=d.lines[+t.dataset.l];hov=oneLine(+t.dataset.l);h=`<b>${esc(l.why)}</b><br><span style="color:var(--mut)">${LINE[l.kind][1]}</span>`}
+ else if(t.dataset.l){const l=d.lines[+t.dataset.l];hov=oneLine(+t.dataset.l);h=`${esc(N[ix[l.from]].name)} &rarr; ${esc(N[ix[l.to]].name)}<br><b>${esc(l.why)}</b><br><span style="color:var(--mut)">${LINE[l.kind][1]}</span>`}
  else hov=null;
  mark();tip.style.display=h?'block':'none';tip.innerHTML=h;tip.style.left=Math.min(innerWidth-360,e.clientX+14)+'px';tip.style.top=Math.min(innerHeight-120,e.clientY+14)+'px'};
 svg.onmouseleave=()=>{hov=null;mark();tip.style.display='none'};
@@ -135,7 +154,10 @@ const tn=i=>{const n=N[i],tag=[n.cat,...(n.types||[]),...n.keywords].join(', ');
 function copy(t,e){const done=()=>{tip.style.display='block';tip.textContent='copied';tip.style.left=e.clientX+14+'px';tip.style.top=e.clientY+14+'px'};
  (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(done,()=>{const a=document.createElement('textarea');a.value=t;
   document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();done()})}
-svg.oncontextmenu=e=>{const t=e.target;if(t.dataset.n){e.preventDefault();copy(`${d.game} / ${d.deck}\n`+tn(+t.dataset.n),e)}
+svg.oncontextmenu=e=>{const t=e.target;
+ if(lockN&&(t.dataset.n||t.dataset.l)){e.preventDefault();const head=[...lockN].map(i=>{const n=N[i];return `${n.name}${n.made?' (made)':''} [${[n.cat,...(n.types||[]),...n.keywords].join(', ')}]: ${n.text}`});
+  copy(`${d.game} / ${d.deck}\n`+head.join('\n')+'\n'+[...lockL].map(i=>'  '+tl(d.lines[i])).join('\n'),e);return}
+ if(t.dataset.n){e.preventDefault();copy(`${d.game} / ${d.deck}\n`+tn(+t.dataset.n),e)}
  else if(t.dataset.l){e.preventDefault();copy(`${d.game} / ${d.deck}\n`+tl(d.lines[+t.dataset.l]),e)}};
 svg.onclick=e=>{if(e.target.dataset.n){const i=+e.target.dataset.n;sel=sel&&sel.card===i?null:one(i);mark()}
  else if(e.target.dataset.l&&!(drag&&drag.moved)){const i=+e.target.dataset.l;sel=sel&&sel.line===i?null:oneLine(i);mark()}};

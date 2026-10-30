@@ -215,7 +215,8 @@ def build(c):
             ins(card, o, v, None if o == 'has_keyword' else ab, 'condition', 'mana_refilled', k, 'mine', None, w=w)
         # an effect when the card enters on a unit next to it ("Opening Gambit: give a nearby minion +2"): where it enters decides
         state_rows(card, o, v, ab, k, s, p, w, z, entering=(card, ab) in entry_abs and not re.search(r'(?<![a-z:])position \w+ \w+ of ', w or ''),
-                   helpful=s in ('mine', None) and helps(act, ps))
+                   helpful=(s in ('mine', None) and helps(act, ps)) or act in ('create', 'summon', 'choose_card', 'play_card', 'revive'))  # the
+        # filter of what it makes or fetches ("create a follower with Challenger") is the card's own keyword: nothing must give it
         if to_w and to_k != 'position' and re.search(r'(?<![a-z:])position ', to_w) and act not in PLACES:  # a space is not moved into place  # "attack a bordering enemy"; where a new card is put
             ins(card, o, v, ab, 'state', 'moves', to_k, s, None, w=to_w)                # ("Pelt Lice in adjacent slots") needs no moves
     # the game's rules (read/<game>/game_rules.jsonl): what every card of a category does without its text saying so (an

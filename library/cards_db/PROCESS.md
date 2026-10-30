@@ -497,6 +497,15 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
 9. **A protection trigger waits for nothing** ("the first time your General takes damage, prevent 2"). A trigger that helps
    what set it off still waits for more of those events from other cards (Janna's discount on draws, Mirkblood on summons).
 
+## One link per pair, one rule per need (30 Oct 2026, v46; deck_read_duelyst.md F10-F15)
+1. Two cards have one link. Its kind is the first of its reasons in a fixed order (network.py KIND_ORDER); every reason is
+   listed. A second arrow between the same two cards is a bug in a rule, not something to hide.
+2. Each need is read by one rule: triggers and counts of played, summoned or drawn cards only by played_lines; types and names
+   only by the type rule. A fact is said once: a stat gain is not said again as "more power", a cost cut not again as
+   "pays for it", a rule line not beside the card's own ability doing the same.
+3. A filter of what a card makes (create, summon, Invoke, Manifest) describes the made card: no ask, no keyword need.
+4. Help on the card itself or on the player (heals, stats, keywords) helps no unit; extra attacks given to the player do.
+
 ## Importing Faeria: the board (29 Oct 2026; checked in every game)
 Faeria is played on a hex board that players build; Kaptain uses the library to study positional play, so its board words
 were made the shared form for every game with spaces (BRIEF "The board"). What went wrong and the rule now:

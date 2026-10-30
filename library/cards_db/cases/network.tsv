@@ -36,7 +36,7 @@ n34	runeterra	Darius Gnar	Brothers' Bond	Darius	line		Kaptain: more damage helps
 n35	runeterra	Darius Gnar	Darius	Mega Gnar (level 2)	none		Kaptain: nothing Darius does is what Mega Gnar waits for
 n36	runeterra	Ashe LeBlanc	Avarosan Hearthguard	Trifarian Gloryseeker	line		Kaptain: Gloryseeker (Challenger) benefits from more Power
 n37	runeterra	Ashe LeBlanc	Incisive Tactician	Ashe	line		Kaptain: Rally gives another attack, Ashe levels from her Attack
-n38	runeterra	Braum Zoe	Cosmic Youngling	Braum	line		Kaptain: more health helps Braum survive damage
+n38	runeterra	Braum Zoe	Cosmic Youngling	Braum	none		Kaptain 30 Oct 2026: Cosmic Youngling heals itself and the Nexus, no one else (was: more health helps Braum survive damage)
 n39	runeterra	Braum Zoe	Targonian Tellstones	Zoe	line		Kaptain: creating cards helps Zoe play 10 different cards
 n40	monster_train	Imp build (Shardtail Queen)	Queen's Impling	Transcendimp	none	repeats	Kaptain: Transcendimp repeats the others, not the other way
 n41	monster_train	Frostbite build (Tethys)	Crystalline Seeds	Tethys Titansbane	none		Kaptain: Tethys asks for no Frostbite
@@ -180,3 +180,5 @@ ni18	inscryption	Ouroboros, Mantis God, Squirrel	Mantis God	Ouroboros	none		Kapt
 ni19	inscryption	Ouroboros, Mantis God, Squirrel	Squirrel	Mantis God	none		Kaptain 30 Oct 2026: what every unit does by the rules (is sacrificed, gives a Bone when it dies) makes no line; was a 'line' case (v36-v41)
 ni20	inscryption	Black Goat, Moose Buck, Mole, Pelts (Rabbit), Squirrel	Mole	Moose Buck	none	sacrificed	Claude (v41): every unit can be sacrificed; Mole (1 Blood) is no fodder by its text
 ni21	inscryption	Act II bones and sacrifice (Archeronline4U)	Urayuli	Bone Heap	none	Bones	Claude (v41): every death gives a Bone; Urayuli (4 Blood) is not played to die
+n70	runeterra	Braum Zoe	Behold the Infinite	Supercool Starchart	none		Kaptain 30 Oct 2026: both make Celestials; "Invoke a Celestial" names what it makes, it asks for none
+n71	runeterra	Caitlyn Teemo	Poison Dart	Caitlyn	line	plants traps	Kaptain 30 Oct 2026: Poison Dart does not activate traps; it plants Puffcaps that the opponent sets off

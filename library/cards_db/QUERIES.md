@@ -118,11 +118,11 @@ select distinct card from flat_concept where concept='lifesteal'
 ```sql
 select distinct card from flat_ref where happening='given_keyword' and role!='makes'
 ```
-- duelyst: 38 cards: Afterblaze, Amaranthine Vow, Bloodbound Mentor, Cannon of MECHAZ0R, Chassis of MECHAZ0R, Cloudcaller, Corpse Combustion, Crossbones ...
+- duelyst: 32 cards: Afterblaze, Bloodbound Mentor, Cannon of MECHAZ0R, Chassis of MECHAZ0R, Cloudcaller, Crossbones, Cryoblade, Cryptographer ...
 - faeria: 8 cards: Destructive Volley, Enslaved Priest, Fugoro, Captain of the Gagana, Herald of War, Imperial Engineer, Seek Shelter, Triton Trainer, Windborne Emissary
 - inscryption: 8 cards: Ant Queen, Ants, Emerald Power, Flying Ant, Green Mage, Master Bleene, True Scholar, Worker Ant
 - monster_train: 90 cards: Alloy of the Ancients, Alloyed Construct, Apex Imp, Armor, Attuned, Awake, Battering Ram, Big Sludge ...
-- runeterra: 102 cards: Animate, Arbiter of the Peak, Aspect of the Dragon, Ava Achiever, Big Game Tycoon, Caitlyn, Caitlyn (level 2), Clash of Giants ...
+- runeterra: 87 cards: Arbiter of the Peak, Ava Achiever, Big Game Tycoon, Caitlyn, Caitlyn (level 2), Curtain Call, Deadly Flourish, Death Mark ...
 - stormbound: 26 cards: Acid Greenhorns, Amberhides, Big Sisters of Growth, Brood Sages, Copperskin Ranger, Crimson Sentry, Function Wilds, Green Prototypes ...
 
 ## Effects that grow with a count ("for each", "equal to"), any game
@@ -146,20 +146,20 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 - passive: duelyst 18 cards, monster_train 8 cards, runeterra 18 cards, stormbound 8 cards
 - cheat_death: runeterra 7 cards
 - silence: stormbound 8 cards
-- movement: monster_train 6 cards
+- forced_movement: monster_train 6 cards
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- self_destruct: duelyst 692 pairs, e.g. Fireblaze Obelysk -> Darkspear Zane; faeria 576 pairs, e.g. Doomgate, Door to Oblivion -> Long-horned Yak; inscryption 350 pairs, e.g. Gem Fiend -> Kind Cell; monster_train 243 pairs, e.g. Bogdeep Cocoon -> Kinhost Vessel; runeterra 6557 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
-- sacrifice: duelyst 1511 pairs, e.g. Abhorrent Unbirth -> Unseven; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Kind Cell; monster_train 288 pairs, e.g. Primordium -> Devourer of Death; runeterra 5631 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- destroy: duelyst 2212 pairs, e.g. Deathstrike Seal -> Unseven; faeria 932 pairs, e.g. Doomgate, Door to Oblivion -> Long-horned Yak; inscryption 385 pairs, e.g. Gem Fiend -> Kind Cell; monster_train 292 pairs, e.g. Bogdeep Cocoon -> Kinhost Vessel; runeterra 11113 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 264 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- revive: inscryption 27 pairs, e.g. Necromancer -> Kind Cell; runeterra 1010 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 38 pairs, e.g. Diehards -> Chaotic Pupil
-- damage: faeria 658 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 240 pairs, e.g. Explode Bot -> Shield Latcher; runeterra 8319 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 521 pairs, e.g. Divine Reptiles -> Dreadful Keepers
-- removal: faeria 131 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Kind Cell; monster_train 38 pairs, e.g. Crushing Demise -> Little Fade; runeterra 2027 pairs, e.g. Kindred's Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Temple of the Mind -> Crimson Sentry
+- self_destruct: duelyst 692 pairs, e.g. Windstorm Obelysk -> Darkspear Zane; faeria 576 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 350 pairs, e.g. Master Goranj -> Gift Bot; monster_train 243 pairs, e.g. Kinhost Vessel -> Bog Chrysalis; runeterra 6554 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
+- sacrifice: duelyst 1511 pairs, e.g. Consuming Rebirth -> Darkspear Zane; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Gift Bot; monster_train 288 pairs, e.g. Primordium -> Devourer of Death; runeterra 5631 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- destroy: duelyst 2211 pairs, e.g. Consuming Rebirth -> Darkspear Zane; faeria 932 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 385 pairs, e.g. Master Goranj -> Gift Bot; monster_train 292 pairs, e.g. Kinhost Vessel -> Bog Chrysalis; runeterra 11112 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 264 pairs, e.g. Yowling Weavers -> Spare Dragonling
+- revive: inscryption 27 pairs, e.g. Necromancer -> Gift Bot; runeterra 1008 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 38 pairs, e.g. Project PH03-NIX -> Dubious Hags
+- damage: faeria 658 pairs, e.g. Boulder Thrower -> Laya, Lady of Sorrows; inscryption 240 pairs, e.g. Hammer -> Shield Latcher; runeterra 8315 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 521 pairs, e.g. Divine Reptiles -> Spare Dragonling
+- removal: faeria 131 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Gift Bot; monster_train 38 pairs, e.g. Crushing Demise -> Little Fade; runeterra 2026 pairs, e.g. Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
-- summon -> on_ally_play -> random_effect (seen in faeria, monster_train, runeterra)
+- summon -> on_ally_play -> countdown (seen in duelyst, runeterra)
 - summon -> tribal -> card_presence_condition (seen in runeterra, stormbound)
 - summon -> banish -> activated (seen in duelyst, runeterra)
 - summon -> banish -> other_leave_trigger (seen in runeterra)

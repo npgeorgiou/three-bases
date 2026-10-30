@@ -1,107 +1,124 @@
-# Case tests: inscryption
+# Case tests: duelyst
 
-Made by `cases/run.py inscryption`.
-**77 of 77 cases pass.**
+Made by `cases/run.py duelyst`.
+**94 of 94 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
 
 | case | question | expected | found | recall | extra | pass |
 |---|---|---|---|---|---|---|
-| mx01 | a trigger on another unit dying is other_death_trigger | 0 | 0 | 100% | 4 | yes |
-| mx02 | moving enemy units is forced_movement | 0 | 0 | 100% | 26 | yes |
-| mx03 | a plain draw is one form: zone deck_top, no pick top | 0 | 0 | 100% | 9 | yes |
-| mx10 | damage to the enemy player is Nexus damage (kinds kept, v30) | 0 | 0 | 100% | 223 | yes |
-| mx11 | moving or pushing units makes units move (positions change, v30) | 0 | 0 | 100% | 26 | yes |
-| mx12 | a unit that moves (onto a space) is the event's object, never its actor (N16, Sentry, v36, v38) | 4 | 4 | 100% | 0 | yes |
-| mi01 | Airborne: strikes the opponent directly | 20 | 20 | 100% | 14 | yes |
-| mi02 | Touch of Death: a creature it damages perishes | 4 | 4 | 100% | 15 | yes |
-| mi03 | Bone Digger: gives Bones | 3 | 3 | 100% | 10 | yes |
-| mi04 | Bone King: gives Bones when it dies | 5 | 5 | 100% | 8 | yes |
-| mi05 | Ant Spawner: creates an Ant in hand | 1 | 1 | 100% | 0 | yes |
-| mi06 | Fecundity: a copy in hand | 3 | 3 | 100% | 0 | yes |
-| mi07 | Dam Builder: Dams on the spaces beside it | 1 | 1 | 100% | 0 | yes |
-| mi08 | Sprinter: moves on its own each turn | 9 | 9 | 100% | 15 | yes |
-| mi09 | Fledgling: grows into another form | 8 | 8 | 100% | 13 | yes |
-| mi10 | Worthy Sacrifice: something happens when it is sacrificed | 3 | 3 | 100% | 4 | yes |
-| mi11 | Many Lives: does not perish when sacrificed | 4 | 4 | 100% | 3 | yes |
-| mi12 | Green Mox: gives a Green gem | 6 | 6 | 100% | 8 | yes |
-| mi13 | Gem Dependant: perishes without a Mox card | 5 | 5 | 100% | 8 | yes |
-| mi14 | Unkillable: back to hand when it dies | 3 | 3 | 100% | 0 | yes |
-| mi15 | Bifurcated Strike: strikes two spaces | 4 | 4 | 100% | 32 | yes |
-| mi16 | Ants: Power is the number of Ants | 3 | 3 | 100% | 6 | yes |
-| mi17 | Sharp Quills: damages its attacker | 4 | 4 | 100% | 11 | yes |
-| mi18 | Leader: adjacent creatures gain Power | 1 | 1 | 100% | 0 | yes |
-| mi19 | Stinky: the opposing creature loses Power | 2 | 2 | 100% | 3 | yes |
-| mi20 | Waterborne: submerged (cannot be attacked) on the enemy turn | 9 | 9 | 100% | 37 | yes |
-| mx13 | can't be targeted by spells: the cant is on the spells, the protected unit is "to" (N19, v37) | 0 | 0 | 100% | 0 | yes |
-| mx14 | a dead unit put into play is revive, never summon from the discard (N20, v37) | 0 | 0 | 100% | 1 | yes |
-| mx15 | a trigger that holds only "this turn" is an ability given to the player for this turn (v37, Duelyst) | 0 | 0 | 100% | 0 | yes |
-| mi21 | strikes at opposing spaces also hit the opponent (an empty space is struck: wiki Card Battle) | 4 | 4 | 100% | 30 | yes |
-| mx13 | an effect on the creature opposing it is about lanes (concept lanes from same_lane, v38) | 2 | 2 | 100% | 42 | yes |
-| mx14 | a strike on the spaces beside the opposing one reaches other lanes (cross_lane, v38) | 2 | 2 | 100% | 4 | yes |
-| mx15 | within a circuit is a formation (link_formation, v38) | 1 | 1 | 100% | 9 | yes |
-| mx16 | more or faster base resource (base_resource_gain, v38) | 2 | 2 | 100% | 2 | yes |
-| mi22 | Burrower: moves to an empty space of its own side when it would be struck | 5 | 5 | 100% | 0 | yes |
-| mi23 | rotate one space clockwise: every unit moves to a bordering space | 1 | 1 | 100% | 1 | yes |
-| mi24 | a unit that takes every space of its side (room, size) | 2 | 2 | 100% | 0 | yes |
-| mi25 | an enemy attacking my unit is the enemy's attack (Daus), not mine | 2 | 2 | 100% | 0 | yes |
+| mx01 | a trigger on another unit dying is other_death_trigger | 0 | 0 | 100% | 21 | yes |
+| mx02 | moving enemy units is forced_movement | 1 | 1 | 100% | 35 | yes |
+| mx03 | a plain draw is one form: zone deck_top, no pick top | 52 | 52 | 100% | 17 | yes |
+| mx10 | damage to the enemy player is Nexus damage (kinds kept, v30) | 0 | 0 | 100% | 680 | yes |
+| mx11 | moving or pushing units makes units move (positions change, v30) | 1 | 1 | 100% | 111 | yes |
+| mx12 | a unit that moves (onto a space) is the event's object, never its actor (N16, Sentry, v36, v38) | 0 | 0 | 100% | 7 | yes |
+| du01 | Opening Gambit triggers | 118 | 118 | 100% | 420 | yes |
+| du02 | Dying Wish triggers | 48 | 48 | 100% | 14 | yes |
+| du03 | Deathwatch triggers | 8 | 8 | 100% | 14 | yes |
+| du04 | Blood Surge triggers | 17 | 17 | 100% | 0 | yes |
+| du05 | Grow | 10 | 10 | 100% | 49 | yes |
+| du06 | start of your turn | 17 | 17 | 100% | 42 | yes |
+| du07 | end of your turn | 17 | 17 | 100% | 24 | yes |
+| du08 | Zeal | 10 | 10 | 100% | 20 | yes |
+| du09 | Infiltrate | 6 | 6 | 100% | 24 | yes |
+| du10 | Bond | 8 | 8 | 100% | 22 | yes |
+| du11 | Backstab | 18 | 18 | 100% | 0 | yes |
+| du12 | Stun | 14 | 14 | 100% | 6 | yes |
+| du13 | Dispel | 13 | 13 | 100% | 0 | yes |
+| du14 | Shadow Creep made | 7 | 7 | 100% | 15 | yes |
+| du15 | summon Wraithlings | 13 | 13 | 100% | 1 | yes |
+| du16 | teleport | 21 | 21 | 100% | 19 | yes |
+| du17 | equipped artifacts on the General | 29 | 29 | 100% | 11 | yes |
+| du18 | Intensify | 13 | 13 | 100% | 525 | yes |
+| du19 | Sentinel | 15 | 15 | 100% | 53 | yes |
+| du20 | Build | 14 | 14 | 100% | 0 | yes |
+| du21 | Provoke | 38 | 38 | 100% | 10 | yes |
+| du22 | Rush | 15 | 15 | 100% | 17 | yes |
+| du23 | Flying | 31 | 31 | 100% | 12 | yes |
+| du24 | Ranged | 29 | 29 | 100% | 4 | yes |
+| du25 | Frenzy | 20 | 20 | 100% | 8 | yes |
+| du26 | Celerity | 15 | 15 | 100% | 7 | yes |
+| du27 | Forcefield | 15 | 15 | 100% | 6 | yes |
+| du28 | Airdrop | 10 | 10 | 100% | 1 | yes |
+| du29 | Rebirth | 8 | 8 | 100% | 1 | yes |
+| du30 | Blast | 5 | 5 | 100% | 2 | yes |
+| mx13 | can't be targeted by spells: the cant is on the spells, the protected unit is "to" (N19, v37) | 6 | 6 | 100% | 2 | yes |
+| mx14 | a dead unit put into play is revive, never summon from the discard (N20, v37) | 1 | 1 | 100% | 16 | yes |
+| mx15 | a trigger that holds only "this turn" is an ability given to the player for this turn (v37, Duelyst) | 3 | 3 | 100% | 8 | yes |
+| mx13 | an effect on the creature opposing it is about lanes (concept lanes from same_lane, v38) | 0 | 0 | 100% | 20 | yes |
+| mx14 | a strike on the spaces beside the opposing one reaches other lanes (cross_lane, v38) | 0 | 0 | 100% | 0 | yes |
+| mx15 | within a circuit is a formation (link_formation, v38) | 0 | 0 | 100% | 0 | yes |
+| mx16 | more or faster base resource (base_resource_gain, v38) | 0 | 0 | 100% | 6 | yes |
+| du31 | attacking from behind, or getting behind an enemy, is flanking (v40) | 17 | 17 | 100% | 0 | yes |
+| du32 | being on the enemy side is territory (Infiltrate, v39) | 0 | 0 | 100% | 7 | yes |
+| du33 | named areas (2x2, 3x3, corners, starting side) are area shapes (v40) | 12 | 12 | 100% | 12 | yes |
+| du34 | a stun makes a unit unable to act (v40) | 14 | 14 | 100% | 4 | yes |
 
 ## Combos (the enabler must set off the payoff)
 
 | case | enabler | payoff | why | found as | pass |
 |---|---|---|---|---|---|
-| ci01 | Necromancer | Broken Obol (Right) | the Obol dies twice, giving Bones twice (Bone King) | condition: mana_refilled | yes |
-| ci02 | Warren | Rabbit | Warren supplies Rabbits | makes | yes |
-| ci03 | Sapphire Mox | Blue Mage | Blue Mage needs the matching Mox | type: Mox Card | yes |
-| ci04 | Ruby Mox | Mage Knight | Mage Knight needs the matching Mox | type: Mox Card | yes |
-| ci05 | Emerald Mox | Junior Sage | Junior Sage needs the matching Mox | condition: mana_refilled | yes |
-| ci07 | Necromancer | Tomb Robber | Skeletons from Tomb Robber die twice with Necromancer: more Bones | condition: mana_refilled | yes |
-| ci08 | Necromancer | Bone Heap | the Bones loop pays for Bone Heap's Enlarge | condition: mana_refilled | yes |
 
 ## Region identity (signature, splash, archetype)
 
 | case | region | kind | mechanic | need | found | pass |
 |---|---|---|---|---|---|---|
-| ri01 | Beast | signature (inscryption.md: Blood costs paid by sacrifice) | needs sacrifices to be played (Blood) | 20 | 73 | yes |
-| ri02 | Undead | signature (inscryption.md: Bones from Gravedigger and from cards that die) | gives Bones | 3 | 5 | yes |
-| ri03 | Undead | signature (inscryption.md: Bones as the cost) | paid with Bones | 10 | 21 | yes |
-| ri04 | Magick | signature (inscryption.md: Magick cards are paid with Mox gems) | paid with gems | 8 | 17 | yes |
-| ri05 | Beast | signature (inscryption.md: Warren puts a Rabbit in hand) | creates cards in hand | 4 | 8 | yes |
-| ri06 | Beast | signature (inscryption.md: Hawk hits past blockers) | strikes the opponent directly | 8 | 23 | yes |
-| ri07 | Magick | signature (inscryption.md: Blue Mage draws per Mox) | draws cards | 1 | 4 | yes |
-| ri08 | Technology | signature (wiki Energy: Battery Bearer raises Energy) | more or faster base resource | 2 | 2 | yes |
 
 ## Guide decks (the explanation must say what the guide says)
 
 | case | deck | must say | missing | pass |
 |---|---|---|---|---|
-| di01 | Act II Undead starter | second resource (Bones): made by;Gravedigger | - | yes |
-| di02 | Act II Beast starter | units are sacrificed;Warren | - | yes |
-| di03 | Act II Magick starter | gem (Mox): made by Emerald Mox, Ruby Mox, Sapphire Mox | - | yes |
-| di04 | Act II bones and sacrifice (Archeronline4U) | Tomb Robber;second resource (Bones) | - | yes |
 
 ## Deck networks (a line must be there, or must not)
 
 | case | deck | from | to | expect | found | pass |
 |---|---|---|---|---|---|---|
-| ni01 | Act II Undead starter | Gravedigger | Zombie | line  | waits: lets you gain the second resource (Bones) (pays its cost) | yes |
-| ni02 | Act II Undead starter | Skeleton | Frank & Stein | none  | - | yes |
-| ni03 | Squirrel, Stoat, Warren, Adder, Hawk | Squirrel | Hawk | none  | - | yes |
-| ni04 | Act II Magick starter | Emerald Mox | Junior Sage | line  | waits: lets you gain a gem (Mox) (pays its cost) | yes |
-| ni05 | Act II Magick starter | Sapphire Mox | Junior Sage | none you gain a gem | - | yes |
-| ni06 | Act II bones and sacrifice (Archeronline4U) | M3atB0t | Urayuli | line  | cheaper: makes it cheaper (when it is sacrificed for it) | yes |
-| ni07 | Act II bones and sacrifice (Archeronline4U) | Bone Lord's Horn | Tomb Robber | line  | waits: lets you gain the second resource (Bones) | yes |
-| ni08 | Raccoon, Dire Wolf Pup, Coyote, Pelts (Rabbit), Squirrel | Coyote | Pelts (Rabbit) | none sacrificed | - | yes |
-| ni09 | Ouroboros, Mantis God, Squirrel | Mantis God | Ouroboros | none  | - | yes |
-| ni10 | Ouroboros, Mantis God, Squirrel | Ouroboros | Mantis God | none  | - | yes |
-| ni11 | Ant Queen, Flying Ant, Skunk, Pelts (Rabbit), Squirrel | Ant Queen | Flying Ant | line  | type: is a unit with Ant it counts or asks for | yes |
-| ni12 | Black Goat, Moose Buck, Mole, Pelts (Rabbit), Squirrel | Moose Buck | Pelts (Rabbit) | none  | - | yes |
-| ni13 | Rabbit, Tadpole, Geck, Pelts (Rabbit), Squirrel | Rabbit | Bullfrog | none sacrificed | - | yes |
-| ni14 | Energy Bot, Shieldbot, Sniper Bot, Double Gunner, Empty Vessel | Sniper Bot | Double Gunner | none  | - | yes |
-| ni15 | Alpha, Wolf, Moose Buck | Alpha | Wolf | line  | stronger: gives it +1|+0 (when next to it) | yes |
-| ni16 | Daus, Bell Tentacle | Bell Tentacle | Daus | line  | type: is the Bell Tentacle it names | yes |
-| ni18 | Ouroboros, Mantis God, Squirrel | Mantis God | Ouroboros | none  | - | yes |
-| ni19 | Ouroboros, Mantis God, Squirrel | Squirrel | Mantis God | none  | - | yes |
-| ni20 | Black Goat, Moose Buck, Mole, Pelts (Rabbit), Squirrel | Mole | Moose Buck | none sacrificed | - | yes |
-| ni21 | Act II bones and sacrifice (Archeronline4U) | Urayuli | Bone Heap | none Bones | - | yes |
+| ndu01 | Vaath Dying Wish | Spelljammer | Dagona | none  | - | yes |
+| ndu02 | Cassyva Replace Abomination | Healing Mystic | Letigress | none attack | heals: can heal it | yes |
+| ndu03 | Cassyva Replace Abomination | Cassyva Soulreaper | Letigress | line  | waits: makes your leader attack (by fighting) | yes |
+| ndu04 | Argeon Mechaz0r | Lifestream | Argeon Highmayne | none  | - | yes |
+| ndu05 | Vaath Dying Wish | Overload | Lavaslasher | none  | - | yes |
+| ndu06 | Shidai Artifacts | Mask of Shadows | Shidai Stormblossom | line  | keyword: can give it Backstab; also makes stronger: can give it +1|+0 | yes |
+| ndu07 | Shidai Artifacts | Flicker | Mask of Shadows | line  | type: makes your leader move | yes |
+| ndu08 | Kaleos Trial of Songhai | EMP | Dagona | none  | - | yes |
+| ndu09 | Vaath Dying Wish | Unseven | Dagona | line  | puts: puts it into play from the hand | yes |
+| ndu10 | Kaleos Trial of Songhai | Scroll Bandit | Battle Panddo | none  | - | yes |
+| ndu11 | Kaleos Trial of Songhai | Heartseeker | Hideatsu the Ebon Ox | line  | waits: is a card it counts when played | yes |
+| ndu12 | Kaleos Trial of Songhai | Blink | Scroll Bandit | line  | type: moves it for its effect | yes |
+| ndu13 | Cassyva Replace Abomination | Aethermaster | White Widow | line  | waits: shuffles cards into the deck | yes |
+| ndu14 | Lilithe Darkfire | Lilithe Blightchaser | Phantasm | none  | - | yes |
+| ndu15 | Lilithe Darkfire | Grasp of Agony | Vorpal Reaver | none  | - | yes |
+| ndu16 | Argeon Intensify Riftwalker | Lifestream | Sunstrike | none  | - | yes |
+| ndu17 | Argeon Intensify Riftwalker | Sunstrike | Lifestream | none  | - | yes |
+| ndu18 | Faie Blood Taura | Flameblood Warlock | Blood Taura | line  | waits: damages your leader | yes |
+| ndu19 | Argeon Intensify Riftwalker | Windblade Adept | Afterblaze | line  | type: is a unit with Zeal it counts or asks for | yes |
+| ndu20 | Argeon Mechaz0r | Helm of MECHAZ0R | MECHAZ0R! | line  | puts: summons | yes |
+| ndu21 | Vaath Dying Wish | Kujata | Juggernaut | line  | waits: damages it for its effect; also makes cheaper: makes it cheaper | yes |
+| ndu22 | Kaleos Trial of Songhai | Juxtaposition | Bonereaper | line  | type: moves it for its effect; also makes enemy units move | yes |
+| ndu23 | Vaath Dying Wish | Juggernaut | Lavaslasher | none hits harder | - | yes |
+| ndu24 | Cassyva Replace Abomination | Aethermaster | Cassyva Soulreaper | none  | - | yes |
+| ndu25 | Cassyva Replace Abomination | Healing Mystic | Abhorrent Unbirth | none  | - | yes |
+| ndu26 | Lilithe Darkfire | Phantasm | Wraithling | none  | - | yes |
+| ndu27 | Lilithe Darkfire | Darkfire Sacrifice | Wraithling | none cheaper | - | yes |
+| ndu28 | Cassyva Replace Abomination | Healing Mystic | Cassyva Soulreaper | line  | heals: can heal it | yes |
+| ndu29 | Lilithe Darkfire | Wraithling | Inkling Surge | line  | type: is the Wraithling it names | yes |
+| ndu31 | Lilithe Darkfire | Vorpal Reaver | Inkling Surge | none makes | - | yes |
+| ndu30 | Faie Blood Taura | White Asp | Blazing Spines | none names | - | yes |
+| ndu32 | Argeon Mechaz0r | Lifestream | Martyrdom | none  | - | yes |
+| ndu33 | Argeon Mechaz0r | Helm of MECHAZ0R | Oakenheart | none  | - | yes |
+| ndu34 | Argeon Mechaz0r | Oakenheart | Helm of MECHAZ0R | line  | stronger: gives it +1|+1 | yes |
+| ndu35 | Vaath Dying Wish | Ragebinder | Golem Metallurgist | none  | - | yes |
+| ndu36 | Vaath Dying Wish | Golem Metallurgist | Ragebinder | line  | cheaper: makes it cheaper when it comes | yes |
+| ndu37 | Cassyva Replace Abomination | Aethermaster | Punish | none  | - | yes |
+| ndu38 | Cassyva Replace Abomination | Letigress | Punish | none  | - | yes |
+| ndu39 | Shidai Artifacts | Cyclone Mask | Shidai Stormblossom | line  | keyword: can give it Ranged | yes |
+| ndu40 | Argeon Dawn's Eye aggro | Argeon Highmayne | Roar | line  | puts: casts its own spell | yes |
+| ndu41 | Argeon Dawn's Eye aggro | Roar | Windblade Adept | line  | stronger: can give it +2|+0 | yes |
+| ndu42 | Argeon Dawn's Eye aggro | Azurite Lion | Holy Immolation | line  | type: makes your units move | yes |
+| ndu43 | Argeon Dawn's Eye aggro | Azurite Lion | Windblade Adept | none  | - | yes |
+| ndu44 | Ciphyron Build | Rescue-RX | Timekeeper | none  | - | yes |
+| ndu45 | Ciphyron Build | Timekeeper | Rescue-RX | line  | stronger: can speed up its countdown | yes |
+| ndu46 | Argeon Dawn's Eye aggro | Tempest | Arclyte Regalia | none  | - | yes |
+| ndu47 | Kaleos Trial of Songhai | Dispirited Prisoner | Hideatsu the Ebon Ox | none counts when played | - | yes |

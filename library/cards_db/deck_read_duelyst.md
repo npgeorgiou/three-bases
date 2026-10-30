@@ -159,3 +159,48 @@ Root cause: a trigger that only prevents damage was a wait; tokens summoned on t
 the player gets was help to the leader card.
 Same error elsewhere: none found in the other games' gone and new lines.
 Fix: protection triggers wait for nothing; board-only tokens are never played or drawn; give_ability on the player is no help.
+
+## Kaptain's second check (30 Oct 2026, v46): families F10-F15
+Lines before -> after (dump_lines.py, network code before and after; links are now one per pair): Runeterra 6104 -> 4286
+(pairs 4376 -> 4286), Stormbound 891 -> 699, Faeria 538 -> 407, Duelyst 515 -> 436, Monster Train 102 -> 75, Inscryption
+162 -> 146 (no pairs gone outside Runeterra). Every gone pair read: 47 Invoke Celestial asks, 34 rule lines, 5 heals on itself
+or the Nexus, 1 Otterpus ask (now "creates").
+
+## F10 Heals inside "makes stronger"
+Root cause: network.py help_kind put "can heal it" under stronger.
+Same error elsewhere: every heal line of every game (Duelyst 82, Runeterra and Faeria heal spells).
+Fix: its own kind "heals" (page colour and legend).
+
+## F11 Help to itself or to the player read as help to units
+Root cause: having() counted a card that acts anywhere on my side plus a heal or protection concept; healing itself and the
+Nexus (Cosmic Youngling) became "more health: survives damage" for Braum.
+Same error elsewhere: Runeterra Spectral Surveyor (Lifesteal heals the Nexus), Radiant Guardian (Tough on itself), 5 pairs.
+Fix: effects on itself, or heals, stats and keywords on the player, help no unit; Rally on the player still gives another
+attack (Blood in the Water, Sion Returned keep their lines). Case n38 rewritten by Kaptain's word.
+
+## F12 What a card makes read as what it asks for
+Root cause: lines_of took the filter of a making keyword's action ("Invoke a Celestial", "Manifest an Otterpus") as an
+ask; refs.py took a keyword in a create or summon filter ("create a follower with Challenger") as a keyword need.
+Same error elsewhere: Runeterra 47 "makes a Celestial it asks for" (Behold the Infinite -> Supercool Starchart), 1 Otterpus
+ask; keyword needs from making filters: Runeterra 20, Duelyst 7, Faeria 1.
+Fix: such filters describe the made card: no ask, no need; a making keyword that names a card puts it into play (Trinket Trade
+-> Otterpus "creates"). Case n70.
+
+## F13 Trap lines said "activates traps"
+Root cause: the active verb for trap_activated named the opponent's act as the planter's.
+Same error elsewhere: every trap planter in Runeterra (Teemo, Peddlers, Poison Dart, Chime -> Proximity Puffcap).
+Fix: "plants traps that go off later"; the trap card itself "is a trap that goes off". Case n71.
+
+## F14 Two links between the same two cards
+Root cause: one need read by two rules (lines_of asks read played/summoned/drawn triggers that played_lines reads;
+need_lines counted played spells that played_lines reads), the same fact said twice (a stat gain and "more power"; a cost cut
+and "pays for it"; a rule line beside the card's own ability; "through" lines repeating what the maker does itself or going
+through two made cards), and each different need drew its own arrow.
+Same error elsewhere: all games (line counts above): Faeria Windstorm Colossus, Stormbound Shaped Stone, Runeterra Sejuani.
+Fix: one rule per need; no second saying of the same fact; one link per pair whose kind is the first reason in a fixed order
+(puts, levels into, levels, enables, waits, moves, clears, heals, keyword, stronger, cheaper, ...), every reason listed.
+
+## F15 "You" exempted rule lines in games without leaders
+Root cause: v42's leader exemption (a need naming the leader keeps rule lines) took the player as the leader in every game.
+Same error elsewhere: Runeterra 17 "damages the enemy player (by fighting)" (Fortune Croaker -> Sejuani (level 2)).
+Fix: the exemption only in games with leader cards.
