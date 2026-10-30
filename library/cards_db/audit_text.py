@@ -69,7 +69,11 @@ def main():
     text = {i: (n.strip(), ' '.join((t or '').split())) for i, n, t in lib.execute("select id, name, text from entities where game=?", (game,))}
     # keyword entries too (v36: Inscryption's cards are only their sigils, so a misread sigil is every card's error); a keyword
     # whose entry has a rulebook line is checked on that line (wiki notes follow it)
+    import pattern_check  # wording with no effect in play (patterns.tsv use strip) is not checked here either
+    cut = pattern_check.strips(game)
     for i, (n, t) in list(text.items()):
+        for sp in cut: t = re.sub(sp, ' ', t, flags=re.I)
+        text[i] = (n, t)
         m = re.match(r'Rulebook:\s*(.*?\.)(?:\s|\||$)', t)
         if m: text[i] = (n, m.group(1))
     recs = {}

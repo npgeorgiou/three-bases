@@ -208,6 +208,8 @@ Hazardous Mechs, Zenith Guard; CelJaded: Force Amp with Rift Walkers and Secret 
 is not in the source and is left out. The lines are now between weapons ("Titan Fist moves units, and Artemis Artillery acts
 on units in a line from it"); a mech is a dot whose lines are what is given to it (Energy Shield, Fire Immunity). Case ntb10;
 cases ntb1-ntb7 rewritten on the weapons.
+The weapon and passive wording in a mech's text is stripped for the word check and the text audit (pattern S-TB4; audit_text.py
+now skips every game's strip wordings, which changed no other game's count).
 
 ## F21 A weapon is no Mech, so "any Mech that kills" found no killer
 Cards: Viscera Nanobots (heals a Mech that kills) with every weapon.

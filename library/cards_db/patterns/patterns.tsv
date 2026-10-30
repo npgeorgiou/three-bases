@@ -191,3 +191,4 @@ sts1	SS18	\benter (?:wrath|calm|divinity)\b	value:give_keyword	yes	entering a st
 into_the_breach	S-TB1	\(but water will prevent attacking or repairing\)		strip	the Massive reminder in Vek texts: a rule of the keyword Massive, its own record says it
 into_the_breach	S-TB2	all other damage \(push, blocking, fire, etc\.\) is unaffected\.?		strip	says what the keyword does not change (A.C.I.D., Natural Armor): no effect
 into_the_breach	S-TB3	\bfires? (?=(?:a|an|two|the|rockets|a second)\b)		strip	"fire a projectile" is shooting, not the status Fire
+into_the_breach	S-TB4	\b(?:weapon|passive): .*$		strip	a mech's starting weapon and passive in its text: they are cards of their own in the deck, with their own rows (v52)
