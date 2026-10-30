@@ -123,7 +123,7 @@
   names, so Spirit Wolf stays a name.
 - Wording still shared with other games: a player's damage reads "your Nexus or base" (the General in Duelyst).
 
-# Into the Breach: results (30 Oct 2026, v51, done; deck_read_into_the_breach.md)
+# Into the Breach: results (30 Oct 2026, v53, done and approved by Kaptain; deck_read_into_the_breach.md)
 
 ## What exists
 299 cards (42 mechs, 104 weapons, 17 passives, 20 pilots, Vek, tiles, 6 deployed units) and 27 keywords, read once; 30 cards
@@ -131,9 +131,9 @@ read twice. 23 decks in decks.tsv: 14 official squads and 6 players' custom squa
 Kaptain's word), and 3 players' runs as played; a deck is each mech followed by what it carries (2 slots).
 
 ## Quality
-- run.py passes every step; word check 0 flags, text audit 0 unexplained, 27 cases. Families F1-F6 fixed by rule (v48.py),
+- run.py passes every step; word check 0 flags, text audit 0 unexplained, 35 cases. Families F1-F6 fixed by rule (v48.py),
   F13-F16 from Claude's check of 20 cards (v51.py), F20 weapons as cards in the decks (v52.py), F7-F12, F17-F19 and
-  F21-F23 in shared code (network.py, refs.py, deck_analysis.py).
+  F21-F30 in shared code (network.py, refs.py, deck_analysis.py) and v53.py.
 - Link audit, explained: Spore, Alpha Spore, Alpha Blob, Blob Leader, Boulder, Unstable Boulder, Freeze Mine, Strange Pod and
   Strange Object are things Vek and tiles put on the board; the source has no entry for them and the wiki is not reachable
   from here, so they stay names. Emerging and High Tide are each one tile with two library pages (terrain and modifier,

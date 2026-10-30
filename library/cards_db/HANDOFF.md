@@ -91,10 +91,11 @@ and about ten rebuilds). Each check below is cheap and found errors that later c
 - Inscryption (v36-v45): imported and reviewed by Kaptain (30 Oct 2026). 17 decks kept (decks.tsv), 20 weak ones listed in
   decks_dropped_inscryption.tsv; families F1-F18 in deck_read_inscryption.md; why its networks are thin: RESULTS.md.
   Energy ramp is marked base_resource_gain, not linked to costs (Kaptain).
-- Into the Breach (v48-v51, done 30 Oct 2026): every step of PROCESS passes (RESULTS.md). 20 squads in decks.tsv, rules in
-  library/tools/games/into_the_breach.md, BRIEF "Game words: Into the Breach". Families F1-F19 in deck_read_into_the_breach.md
-  (F7 kept by Kaptain; F8-F12 approved by him; the check of 20 cards done by Claude at his word). Decks list weapons and
-  passives as cards (F20, v52.py): a mech keeps only its keywords; network.CARRIED makes a weapon act as its mech; a mech
-  has 2 slots; every squad's mechs carry 2 weapons (Claude's choice for the second, Kaptain's word); F25-F30 from reading
-  them, incl. deadly ground (holes, water) and A.C.I.D.
+- Into the Breach: DONE, approved by Kaptain (30 Oct 2026, v48-v53). Every step of PROCESS passes (RESULTS.md). 23 decks in
+  decks.tsv (14 official and 6 custom squads, each mech with 2 weapons, the second Claude's at Kaptain's word; 3 players'
+  runs), rules and combos in library/tools/games/into_the_breach.md, BRIEF "Game words: Into the Breach", families F1-F30 in
+  deck_read_into_the_breach.md, lessons for every game in PROCESS "Importing Into the Breach". Shared code it added:
+  network.CARRIED (carried weapons act as their mech, "carries" lines), DEADLY_GROUND (holes, water, lava), bump-only
+  needs (Force Amp), statuses in play (printed_kws, STATUS_TREES), A.C.I.D. in status_damage_givers, freeing a self-frozen
+  unit, labels with both card names ({A}, {B}, {Bc}).
   Stormbound shows 141 of 145 cases (csb09-csb13, poisoned-unit lines) since the Slay the Spire chat's v49 shared change.

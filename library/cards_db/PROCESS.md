@@ -178,6 +178,18 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
    refs.py copies the rows to every card of the category as origin game, except units that can never attack (Immobile);
    the network weights them less than a card that says it; card queries (ask.py, mechanics.py, connections.py) leave them out.
 
+11. **What a deck is in this game** (Into the Breach, 30 Oct 2026: a squad was first written as 3 mechs, and Kaptain found
+   "no weapons in your networks"). Before writing decks.tsv, write into `library/tools/games/<game>.md` what the player
+   really brings to a battle and its limits: which cards ride on which (a mech carries 2 slots: its starting weapon and its
+   passive or one extra weapon, never two extra), slot and class rules, copies allowed. Each deck lists every card the player
+   brings, in an order that says what rides on what (each mech, then what it carries); check every deck against the limits
+   with a short script before building networks.
+12. **Every rule of the game becomes a record or a line rule.** Read the rules notes line by line and ask for each: which
+   cards does it link? Into the Breach's "a ground unit pushed into a Chasm is destroyed", "most Vek drown in Water", "Frozen
+   ends when hit", "bumps deal 1 damage" sat in the notes and drew no line until Kaptain pointed at Flood Drill. Write such a
+   rule as a record (game_rules.jsonl) or, when it links two kinds of card (makers of holes -> pushers), as a sourced rule in
+   network.py (DEADLY_GROUND), and give it a case.
+
 ### 1. Reading
 - Readers: background agents, model sonnet, the prompt in READER_PROMPT.md. Three in parallel: cards, keywords, second
   reading. Never merge, normalize or rebuild while a reader runs (`run.py` refuses while part files exist).
@@ -591,6 +603,36 @@ were made the shared form for every game with spaces (BRIEF "The board"). What w
 7. **A code line lost in a comment.** A scripted replacement left aimed_rows' filter inside a comment for a whole session.
    Rule: after any scripted edit of shared code, read `git diff` of that file before rebuilding.
 8. Page: cost and Attack|Life on every card, keywords once, a deck drop-down per game, decks listed once, nodes pulled closer.
+
+## Importing Into the Breach: lessons for every game (30 Oct 2026, v48-v53; deck_read_into_the_breach.md F1-F30)
+- **Understand the game before building anything.** Kaptain: "the first step was to understand the game". Read the game's
+  rules, its tiles and statuses, and three guides on how players win, and write the game's own combos into
+  `library/tools/games/<game>.md` "Combos" before the deck read. Then ask of every card: what does a player use it with?
+- **Cards that ride on other cards** (weapons on mechs; the same holds for equipment or attachments in other games): a card
+  carried by a unit is a card of its own in the deck; the unit keeps only what it is (its keywords); network.CARRIED makes
+  the carried card act as its unit ("the mech with Hydraulic Legs" kills, for Viscera Nanobots); a "carries" line joins
+  them, so no unit is left without lines.
+- **Full decks may not exist as text** (Into the Breach and Monster Train: players post screenshots). Take the real ones
+  that exist (a run report naming each item), then, only at Kaptain's word, fill the rest with builds that make sense,
+  marked as Claude's in the source column with the reason per item, and checked by script against the deck limits. Say
+  plainly which decks are real and which are Claude's.
+- **A status a unit only gets in play** (Fire, Smoke, A.C.I.D. on a mech) is no printed keyword: filters on it match any unit
+  (network.printed_kws, STATUS_TREES); otherwise help to "Mechs on Fire" reaches no card.
+- **Damage by origin matters** (Force Amp adds to bumps only; A.C.I.D. doubles weapon damage only): a line must check where
+  the damage comes from, not only that damage happens.
+- **Harm aimed at a target of no side** (most Into the Breach weapons: "a tile", "the target") goes to enemies, as refs.py's
+  HARM rule says; every rule that counts enemy damage or debuffs must read it so (status_damage_givers, deck_analysis roles).
+- **Self-harm the game lets you undo** (the Ice Mech freezes itself; a hit frees it) links the cards that can undo it.
+- **Words in a card's prose decide its reading when the short text is unclear** ("3 tiles in a row": the Burrower's prose says
+  a 3-wide area in front, the Hornet Leader's three tiles ahead). Never give two cards the same reading only because their
+  short texts match; never give the same text two readings.
+- **Ask the deck explanation too** (`ask.py <game> analyze` on every deck) after a network fix: it reads the records with its
+  own rules (deck_analysis.py), and every network fix about sides, statuses or tiles must be made there as well (F18, F19,
+  F23, F27).
+- **cases/decks.tsv overrides decks.tsv** for a deck of the same name (dump_lines, cases and the page take the last row):
+  change both when a deck changes.
+- **Reporting:** when Kaptain asks "are we done", answer against step 5 ("Done when") item by item, and finish every open
+  step before saying goodbye; "the next chat will do it" is not done.
 
 ## Fixing a review: by cause, never by example (30 Oct 2026; read before touching any point Kaptain raises)
 Kaptain reviews a few decks: a sliver of the cards. Each point he finds is a sample of a rule that is wrong everywhere it

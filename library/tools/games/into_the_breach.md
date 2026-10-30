@@ -84,8 +84,27 @@ Weapons: utility, not damage: pull, push, swap, acid, shields, smoke, fire, free
 - Laser Mech + Judo Mech: tosses line the Vek up for the piercing beam [5]
 - Jet Mech + Rocket Mech: Aerial Bombs leave Smoke on enemy tiles; Storm Generator makes Smoke damage enemies (deck read)
 - Aegis Mech + Gravity Mech: Spartan Shield turns an enemy's attack onto other enemies, which Vek Hormones adds to (deck read)
+- Flood Drill, Seismic Capacitor, Fissure Fist + any push, pull or toss: holes (and water) kill ground Vek pushed in (wiki
+  Tiles; Kaptain 30 Oct 2026)
+- A.C.I.D. Projector, Arachnoid Injector + damaging weapons: A.C.I.D. doubles weapon damage (not bump damage)
+- Confuse Shot, Mass Confusion, Spartan Shield + Vek Hormones: turned Vek attacks hit other Vek
+- Force Amp + every push, pull or toss: +1 to bump damage (guides: Rift Walkers, Secret Squad; wiki Siege Mech)
+- Fire makers (Vulcan Artillery, Fire Beam, Firestorm Generator, Thermal Discharger) + Flame Thrower (more damage on burning
+  units) and Heat Engines (Mechs on Fire get Boost); Flame Shielding keeps the mechs safe in it
+- Smoke makers + Storm Generator (Smoke hurts Vek) and Nanofilter Mending (Mechs on Smoke are repaired); Smoke on a Vek stops
+  its attack
+- Cryo-Launcher + any weapon that can hit the Ice Mech, or a shield: a hit frees the frozen mech, a Shield keeps the freeze
+  off (guides: Janus Cannon thaws it; Bethany Jones' and Mafan's shields)
+- Shield Projector + Burst Beam, Ramming Engines: shields soak the squad's own friendly fire and self-damage (CelJaded)
+- Viscera Nanobots + every kill: the killing mech heals; it can move to another mech (Steam guide), as can Vek Hormones
+  (to the Siege Mech) and Flame Shielding, to free a slot for a second weapon
 
 ## Notes for readers (30 Oct 2026, deck read)
+- A squad's deck lists each mech, then what it carries (2 slots); a mech's own record keeps only its keywords, its weapons
+  and passives are cards of their own (fixes/into_the_breach/v52.py).
+- Flying stops on any tile but mountains and other units; it only flies over them.
+- "Shield adjacent ally or Building" shields every one; "Increases area hit by N tiles" = increase_effect params area N;
+  "No longer applies X on self or allies" = my units cannot be given X there.
 - Swap Mech's Teleporter swaps places: the unit on the other tile moves too.
 - Statuses put on tiles (Smoke, Fire, Energy Shield, A.C.I.D.) reach the unit standing there.
 - Viscera Nanobots heals the Mech that kills; Vek Hormones needs an enemy to damage another enemy, not my Mechs.
