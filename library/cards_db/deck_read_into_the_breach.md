@@ -75,8 +75,8 @@ Root cause: refs.py state_rows: a target picked by position ("in a line from sel
 and from my own unit a need for moving it (Kaptain's Duelyst rule 7: Holy Immolation, Bonereaper). Every Into the Breach
 weapon aims from its mech and nearly every weapon pushes, so every pair links.
 Same error elsewhere: to be measured with dump_lines.py --find "move" in every game before any change.
-Fix: open. It turns on Kaptain's rule 7 for a game where every unit moves itself each turn and every attack is aimed:
-asked of Kaptain before any change.
+Fix: none. Kaptain (30 Oct 2026): "things that move stuff benefit things that depend on stuff's position"; pushing an enemy
+into another mech's line of fire is help. These lines stay; the family is decided, not an error.
 
 ## F8 "is a unit_or_structure it asks for" (49 lines; Stormbound 3 lines, Tode the Elevated)
 Lines: Combat Mech -> Artillery Mech, Walking Bomb -> Pierce Mech ...

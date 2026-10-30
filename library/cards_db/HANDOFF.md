@@ -89,6 +89,6 @@ and about ten rebuilds). Each check below is cheap and found errors that later c
   BRIEF "Game words: Into the Breach". Read: 299 cards, 27 keywords, 30 cards twice. After the first build, one pass and one
   fix: fixes/into_the_breach/v48.py (families F1-F6), names.tsv drops, patterns S-TB1-3, verdicts and text-audit
   explanations; run.py passes every step. All 20 decks read: families F7-F12 in deck_read_into_the_breach.md, none fixed
-  yet. F7 (every pusher "enables" every weapon) turns on Kaptain's Duelyst rule 7 (positions from my unit need moves) and
-  waits for his answer; then fix F7-F12 by rule with a cases/network.tsv row each, one rebuild, dump_lines.py --diff.
+  yet. F7 (pushes "enable" weapons aimed by position) is right: Kaptain, 30 Oct 2026, keeps them. Next: fix F8-F12 by rule
+  with a cases/network.tsv row each, one rebuild, dump_lines.py --diff.
   Stormbound shows 141 of 145 cases (csb09-csb13, poisoned-unit lines) since the Slay the Spire chat's v49 shared change.
