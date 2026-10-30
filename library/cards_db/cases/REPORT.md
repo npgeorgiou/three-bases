@@ -1,31 +1,29 @@
-# Case tests: sts1
+# Case tests: into_the_breach
 
-Made by `cases/run.py sts1`.
-**53 of 53 cases pass.**
-
-**Cases whose reason no line says any more (rewrite them): nst36**
+Made by `cases/run.py into_the_breach`.
+**35 of 35 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
 
 | case | question | expected | found | recall | extra | pass |
 |---|---|---|---|---|---|---|
-| mx01 | a trigger on another unit dying is other_death_trigger | 2 | 2 | 100% | 1 | yes |
-| mx02 | moving enemy units is forced_movement | 0 | 0 | 100% | 59 | yes |
-| mx03 | a plain draw is one form: zone deck_top, no pick top | 65 | 65 | 100% | 5 | yes |
-| mx10 | damage to the enemy player is Nexus damage (kinds kept, v30) | 0 | 0 | 100% | 86 | yes |
-| mx11 | moving or pushing units makes units move (positions change, v30) | 0 | 0 | 100% | 59 | yes |
-| mx12 | a unit that moves (onto a space) is the event's object, never its actor (N16, Sentry, v36, v38) | 0 | 0 | 100% | 0 | yes |
+| mx01 | a trigger on another unit dying is other_death_trigger | 0 | 0 | 100% | 4 | yes |
+| mx02 | moving enemy units is forced_movement | 0 | 0 | 100% | 80 | yes |
+| mx03 | a plain draw is one form: zone deck_top, no pick top | 0 | 0 | 100% | 0 | yes |
+| mx10 | damage to the enemy player is Nexus damage (kinds kept, v30) | 0 | 0 | 100% | 12 | yes |
+| mx11 | moving or pushing units makes units move (positions change, v30) | 2 | 2 | 100% | 118 | yes |
+| mx12 | a unit that moves (onto a space) is the event's object, never its actor (N16, Sentry, v36, v38) | 0 | 0 | 100% | 22 | yes |
 | mx13 | can't be targeted by spells: the cant is on the spells, the protected unit is "to" (N19, v37) | 0 | 0 | 100% | 0 | yes |
 | mx14 | a dead unit put into play is revive, never summon from the discard (N20, v37) | 0 | 0 | 100% | 0 | yes |
-| mx15 | a trigger that holds only "this turn" is an ability given to the player for this turn (v37, Duelyst) | 4 | 4 | 100% | 8 | yes |
-| mx13 | an effect on the creature opposing it is about lanes (concept lanes from same_lane, v38) | 0 | 0 | 100% | 0 | yes |
+| mx15 | a trigger that holds only "this turn" is an ability given to the player for this turn (v37, Duelyst) | 0 | 0 | 100% | 0 | yes |
+| mx13 | an effect on the creature opposing it is about lanes (concept lanes from same_lane, v38) | 0 | 0 | 100% | 17 | yes |
 | mx14 | a strike on the spaces beside the opposing one reaches other lanes (cross_lane, v38) | 0 | 0 | 100% | 0 | yes |
 | mx15 | within a circuit is a formation (link_formation, v38) | 0 | 0 | 100% | 0 | yes |
-| mx16 | more or faster base resource (base_resource_gain, v38) | 0 | 0 | 100% | 71 | yes |
-| ms01 | puts in an Orb that deals damage (Lightning, Dark): the card deals that damage | 15 | 15 | 100% | 212 | yes |
-| ms02 | puts in Frost: the card gives Block through it | 8 | 8 | 100% | 99 | yes |
-| ms03 | puts in Plasma: the card gains energy through it | 3 | 3 | 100% | 68 | yes |
+| mx16 | more or faster base resource (base_resource_gain, v38) | 0 | 0 | 100% | 1 | yes |
+| mtb1 | Flying units stop on no mountain and no enemy unit (they fly over them) | 9 | 9 | 100% | 19 | yes |
+| mtb2 | hits the tile in front and its two sides (Burrowers) | 2 | 2 | 100% | 0 | yes |
+| mtb3 | an upgrade that makes the area hit bigger | 1 | 1 | 100% | 0 | yes |
 
 ## Combos (the enabler must set off the payoff)
 
@@ -41,45 +39,27 @@ Made by `cases/run.py sts1`.
 
 | case | deck | must say | missing | pass |
 |---|---|---|---|---|
+| dtb01 | Rusting Hulks | Enemy units get Smoke: made by Aerial Bombs | - | yes |
 
 ## Deck networks (a line must be there, or must not)
 
 | case | deck | from | to | expect | found | pass |
 |---|---|---|---|---|---|---|
-| nst01 | Ironclad Pain (gamersdecide) | Reaper | Flex | none  | - | yes |
-| nst02 | Ironclad Pain (gamersdecide) | Flex | Reaper | line bigger | stronger: makes its effect bigger | yes |
-| nst03 | Silent Shiv (gamersdecide) | Shiv | Accuracy | none  | - | yes |
-| nst04 | Silent Poison (gamersdecide) | Burst | Catalyst | line plays it again | stronger: plays it again | yes |
-| nst05 | Silent Poison (gamersdecide) | Catalyst | Burst | none  | - | yes |
-| nst06 | Ironclad Body Slam (highgroundgaming) | Shrug It Off | Ghostly Armor | none  | - | yes |
-| nst07 | Silent Discard (gamersdecide) | Reflex | Gambling Chip | none  | - | yes |
-| nst08 | Defect Claw (fantasywarden) | Machine Learning | Void | none  | - | yes |
-| nst09 | Defect Claw (fantasywarden) | Hologram | FTL | none  | - | yes |
-| nst10 | Ironclad Pain (gamersdecide) | Flame Barrier | Rupture | none  | - | yes |
-| nst11 | Watcher Stance Change (highgroundgaming) | Bottled Flame | Kunai | none  | - | yes |
-| nst12 | Watcher Conjure Blade (slaythespire.info) | Chemical X | Miracle | none  | - | yes |
-| nst13 | Watcher Conjure Blade (slaythespire.info) | Chemical X | Conjure Blade | line bigger | stronger: makes its effect bigger | yes |
-| nst14 | Defect Claw (fantasywarden) | All for One | Reinforced Body | none  | - | yes |
-| nst15 | Ironclad Strength (gamersdecide) | Heavy Blade | Flex | none  | - | yes |
-| nst16 | Ironclad Exhaust (gamersdecide) | Barricade | Body Slam | line keeps your Block | stronger: keeps your Block: it counts more of it | yes |
-| nst17 | Defect Orb (gamersdecide) | Electrodynamics | Tempest | line Lightning | stronger: makes the Lightning it gives stronger | yes |
-| nst18 | Watcher Stance Change (highgroundgaming) | Crescendo | Mental Fortress | line Wrath | waits: gives you Wrath | yes |
-| nst19 | Silent Shiv (highgroundgaming) | Footwork | After Image | none counts when played | - | yes |
-| nst20 | Silent Poison (highgroundgaming) | Strike (Silent) | Corpse Explosion | none  | - | yes |
-| nst21 | Ironclad Barricade (Steam, Jeff) | Shrug It Off | Barricade | none  | - | yes |
-| nst22 | Ironclad Barricade (Steam, Jeff) | Barricade | Shrug It Off | line keeps the Block | stronger: keeps the Block it gives | yes |
-| nst23 | Ironclad Strength (gamersdecide) | Bag of Marbles | Reaper | line Vulnerable | stronger: gives Vulnerable: its damage is bigger | yes |
-| nst24 | Silent Discard (gamersdecide) | Gambling Chip | Eviscerate | line cheaper: | cheaper: makes you discard cards | yes |
-| nst25 | Ironclad Strength (gamersdecide) | Flex | Heavy Blade | line gives you Strength | type: gives you Strength; also makes stronger: makes its effect bigger | yes |
-| nst26 | Silent Shiv (highgroundgaming) | Blade Dance | A Thousand Cuts | line more cards to play | waits: makes more cards to play | yes |
-| nst27 | Ironclad Pain (gamersdecide) | Reaper | Rage | line Attack | waits: is an Attack it counts when played | yes |
-| nst28 | Defect Snecko Eye (gamersdecide) | Snecko Eye | Meteor Strike | line pays for it | cheaper: pays for it: more mana or a lower cost | yes |
-| nst29 | Defect Claw (gamersdecide) | Scrape | Claw | line keeps it | puts: draws it and keeps it | yes |
-| nst30 | Watcher Divinity (gamersdecide) | Devotion | Smite | line Mantra | stronger: gives Mantra: its damage is bigger | yes |
-| nst31 | Ironclad Body Slam (highgroundgaming) | Pure Water | Miracle | none  | - | yes |
-| nst32 | Watcher Stance Change (highgroundgaming) | Flurry of Blows | Bottled Flame | none  | - | yes |
-| nst33 | Defect Lightning (highgroundgaming) | Capacitor | Electrodynamics | line more slots | stronger: more slots: it keeps more of what it puts in | yes |
-| nst34 | Defect Reprogram (highgroundgaming) | Melter | Claw | line gets through | stronger: removes their Block: its damage gets through | yes |
-| nst35 | Defect Claw (gamersdecide) | All for One | Claw | line brings it back | puts: brings it back to your hand | yes |
-| nst36 | Defect Claw (gamersdecide) | All for One | Claw | none can bring it back | puts: brings it back to your hand | yes |
-| nst37 | Defect Lightning (highgroundgaming) | Zap | Thunder Strike | line uses Lightning | type: uses Lightning | yes |
+| ntb1 | Blitzkrieg | Electric Whip | Rock Accelerator | none  | - | yes |
+| ntb2 | Teleporter, Flame Shielding | Teleporter | Flame Shielding | none  | - | yes |
+| ntb3 | Hazardous Mechs | Viscera Nanobots | Hydraulic Legs | line heals the mech with Hydraulic Legs when it kills | heals: Viscera Nanobots heals the mech with Hydraulic Legs when it kills | yes |
+| ntb4 | Steel Judoka | Vice Fist | Vek Hormones | none damages enemy units | - | yes |
+| ntb6 | Spartan Shield, Vek Hormones | Spartan Shield | Vek Hormones | line damages enemy units | waits: damages enemy units or players | yes |
+| ntb5 | Mist Eaters | Reverse Thrusters | Nanofilter Mending | line Smoke | type: makes your units get Smoke | yes |
+| ntb7 | Rusting Hulks | Repulse | Jet Mech | line gives it Energy Shield | keyword: gives it Energy Shield (when next to it) | yes |
+| ntb8 | Run: Rusting Hulks (Sevastromo, Unfair) | Rocket Artillery | Force Amp | line bump damage | waits: Rocket Artillery pushes enemy units into things (bump damage) | yes |
+| ntb9 | Run: Rusting Hulks (Sevastromo, Unfair) | Aerial Bombs | Force Amp | none  | - | yes |
+| ntb10 | Run: Rift Walkers (Sevastromo, Unfair) | Titan Fist | Artemis Artillery | line acts on units | type: Titan Fist moves units, and Artemis Artillery acts on units in a line from | yes |
+| ntb11 | Rift Walkers | Combat Mech | Titan Fist | line carries | carries: Combat Mech carries Titan Fist | yes |
+| ntb12 | Steel Judoka | Confuse Shot | Vek Hormones | line damages enemy units | waits: damages enemy units or players | yes |
+| ntb13 | Mist Eaters | Smoke Pellets | Smog Mech | line keeps Smoke off it | rules: keeps Smoke off it | yes |
+| ntb14 | Cataclysm | Flood Drill | Hydraulic Lifter | line makes holes | type: Flood Drill makes holes, and Hydraulic Lifter pushes enemy units: a ground | yes |
+| ntb15 | Hazardous Mechs | A.C.I.D. Projector | Unstable Cannon | line gives A.C.I.D. | type: A.C.I.D. Projector moves units, and Unstable Cannon acts on units in a lin | yes |
+| ntb16 | Hazardous Mechs | A.C.I.D. Projector | Force Amp | none gives A.C.I.D. | waits: A.C.I.D. Projector pushes enemy units into things (bump damage) | yes |
+| ntb17 | Heat Sinkers | Heat Engines | Napalm Mech | line Boost | keyword: gives it Boost; also makes stronger: makes its effect bigger; also chan | yes |
+| ntb18 | Frozen Titans | Janus Cannon | Cryo-Launcher | line frees it | type: Janus Cannon moves units, and Cryo-Launcher acts on units in a line from i | yes |

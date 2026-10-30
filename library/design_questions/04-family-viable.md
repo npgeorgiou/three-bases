@@ -14,7 +14,7 @@ Abyssian Host (117 cards): sacrifice 13, draw 8
   Abhorrent Unbirth: Destroy all friendly minions to summon a 1/1 Abomination that gains their Attack,...
   Aphotic Drain: Destroy a friendly minion to restore 5 Health to your General.
   Blood Echoes: Destroy all friendly minions and resummon them on random spaces at end of turn.
-  works with: revive (e.g. Allomancer -> The Releaser); death_trigger (e.g. Ethereal Obelysk -> Khanuum-ka); leave_trigger (e.g. Allomancer -> The Releaser)
+  works with: revive (e.g. Stone to Spears -> The Releaser); death_trigger (e.g. Soulburn Obelysk -> Khanuum-ka); leave_trigger (e.g. Stone to Spears -> The Releaser)
 ## faeria
 Blue (72 cards): sacrifice 1, draw 12
   Aurora's Dream: Draw until you have 9 cards. Reduce the cost of all cards in your hand to 0 faeria.
@@ -26,7 +26,7 @@ Yellow (72 cards): sacrifice 6, draw 6
   Death Walker: Deathtouch You must sacrifice another creature to summon this creature.
   Demon Wrangler: Gift - You may sacrifice another creature, summoning a 5/2 Flying Demon Wing in its place.
   Flash Salmon: Divine, Flying, Haste, Charge 2 Can't harvest faeria. At the end of your turn, destroy...
-  works with: death_trigger (e.g. Rakoan Cannoneer -> Rakoan Shield Mates); cheat_death (e.g. Rakoan Cannoneer -> Annoying Gnat); death_count (e.g. Rakoan Cannoneer -> Spirit Spice)
+  works with: death_trigger (e.g. Rakoan Cannoneer -> Rakoan Shield Mates); cheat_death (e.g. Failed Experiment -> Aryana, Soul of Gagana); death_count (e.g. Failed Experiment -> Mother of All Yaks)
 ## inscryption
 Magick (25 cards): sacrifice 1, draw 4
   Master Bleene: Keywords: True Scholar.
@@ -37,11 +37,11 @@ Undead (24 cards): sacrifice 2, draw 1
   Dead Hand: Keywords: Handy.
   Necromancer: Keywords: Double Death.
   Pharaoh's Pets: Keywords: Worthy Sacrifice, Many Lives.
-  works with: on_sacrifice (e.g. Master Bleene -> Cat); cost_reduction (e.g. Master Bleene -> M3atB0t); cheat_death (e.g. Master Bleene -> Cat)
+  works with: on_sacrifice (e.g. Master Bleene -> Child 13); cost_reduction (e.g. Master Bleene -> Pharaoh's Pets); cheat_death (e.g. Master Bleene -> Child 13)
 ## into_the_breach
 Ranged (10 cards): sacrifice 1, draw 0
   Arachnoid Mech: Health 3, move 3. Weapon: Arachnoid Injector: Damage target, creating a friendly robot...
-  works with: summon (e.g. Arachnoid Injector -> Marked tile); on_kill (e.g. Arachnoid Mech -> Cascading Resonator); death_trigger (e.g. Arachnoid Injector -> Ice Tile)
+  works with: summon (e.g. Arachnoid Mech -> Marked tile); on_kill (e.g. Arachnoid Mech -> Cascading Resonator); death_trigger (e.g. Arachnoid Mech -> Ice Tile)
 ## monster_train
 Umbra (47 cards): sacrifice 12, draw 2
   Antumbra Morsel: Eaten: Eater gains +6 Health.
@@ -65,7 +65,7 @@ Runeterra (76 cards): sacrifice 4, draw 45
   Aatrox (level 2): Keywords: Overwhelm. Auto-Equip: The Darkin Blade. Darkin allies cost 5 less. When I'm...
   Aatrox's Deathbringer Sweep: Keywords: Fast. Aatrox and an enemy strike each other. Create a Deathbringer Slash in...
   Bard: Origin: The Wandering Caretaker. Attack: Plant 3 Chimes in your deck. Level up: You've...
-  works with: revive (e.g. Eternal Dancers -> Bladepierced Revenant); death_trigger (e.g. Eternal Dancers -> Bladepierced Revenant); other_leave_trigger (e.g. The Darkin Bloodletters -> The Shadow Reaper)
+  works with: revive (e.g. Kalista (level 2) -> Bladepierced Revenant); death_trigger (e.g. Kalista (level 2) -> Bladepierced Revenant); other_leave_trigger (e.g. The Darkin Bloodletters (created) -> The Shadow Reaper)
 ## stormbound
 Ironclad (34 cards): sacrifice 1, draw 0
   Temple of Space: When played with a friendly copy on the board, teleport 2/3/4/6/8 surrounding units from...
@@ -83,5 +83,5 @@ Defect (89 cards): sacrifice 0, draw 13
   Coolheaded: Channel 1 Frost. Draw 1 card.
   FTL: Deal 5 damage. If you have played less than 3 cards this turn, draw 1 card.
   Fission: Keywords: Exhaust. Remove all your Orbs. Gain 1 energy and draw 1 card for each Orb...
-  works with: stances (e.g. Blasphemy+ -> Ambrosia); resource_gain (e.g. Blasphemy -> Bloody Idol); base_resource_gain (e.g. Blasphemy -> Double Energy)
+  works with: stances (e.g. Blasphemy+ -> Prostrate); resource_gain (e.g. Blasphemy -> Bloody Idol); base_resource_gain (e.g. Blasphemy -> Double Energy)
 ```

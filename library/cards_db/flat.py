@@ -29,6 +29,9 @@ import re
 
 
 # a concept for my own side and its counterpart when the effect hits the enemy (concept tree: "not this" parts)
+# stops on a unit (concept tree under suppress), and what hurts a unit, for "can't be given" (immunity)
+STOPS = ('suppress', 'no_damage_output', 'attack_lock', 'damage_prevention', 'cant_block', 'immobilize', 'silence', 'disable')
+HURTS = STOPS + ('debuff', 'stat_loss', 'damage_over_time', 'cant_attack')
 ON_ENEMY = {'movement': 'forced_movement', 'return_to_hand': 'bounce_enemy', 'transform': 'polymorph', 'mill': 'mill', 'self_mill': 'mill'}
 
 
@@ -133,6 +136,10 @@ def build(c):
             ps = ';'.join(f'{pn}={num(a) if a else v}' for pn, a, v in c.execute('select param, amount, value from param where effect=?', (eid,))) or None
             concept = (tree.get(('keyword', kwname.get(kref, ''))) if kref else None) or tree.get(('act', act))
             if s == 'enemy': concept = ON_ENEMY.get(concept, concept)  # the same keyword used on an enemy (Ascend an enemy unit)
+            elif act == 'cant' and pe == 'given_keyword' and concept in HURTS:
+                concept = 'immunity'  # "can't be Webbed" guards my unit (Into the Breach Flying)
+            elif concept in STOPS and (s == 'mine' or p == 'self') and card not in kwname:
+                concept = None  # a stop on my own unit is neither good nor bad (Recall, Iceflakes freezing itself); a keyword's own entry stays
             c.execute('insert into flat_do values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
                       (card, origin, via, aid, seq, act, concept, k, s, p, z, cref, kref, lasts, link, w, pe, ps, ez, tgt(to)[0], withs(to), tgt(to)[2], fl(tgt(to)[1])))
             if kref and act in ('keyword_action', 'give_keyword') and kref not in seen:  # the keyword's meaning on this target
@@ -181,7 +188,7 @@ RULES = [
     ('self_destruct', 'flat_do', "act='kill' and on_pick='self'"),
     ('sacrifice', 'flat_do', "act='kill' and on_side='mine' and coalesce(on_pick,'')!='self'"),
     ('evasion', 'flat_do', "act='cant' and param_event='blocks' and on_side='enemy'"),
-    ('cant_block', 'flat_do', "act='cant' and param_event='blocks' and on_pick='self'"),
+    ('cant_block_self', 'flat_do', "act='cant' and param_event='blocks' and on_pick='self'"),  # my unit can't defend (Kaptain 30 Oct 2026)
     ('cant_attack', 'flat_do', "act='cant' and param_event='attacks' and coalesce(on_side,'')!='enemy'"),  # my own unit
     # the enemy stopped, by outcome (Kaptain 30 Oct 2026): can't attack or strike = deals no damage; can't attack and can't move,
     # or can't take its turn = can't act at all (Faeria "enemy creatures can't attack or move", Inscryption skips a turn)

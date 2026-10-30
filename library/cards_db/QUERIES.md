@@ -14,11 +14,11 @@ select distinct card from flat_concept where concept in ('disable','cant_attack'
 - duelyst: 128 cards: Abyssal Tormentor, Aegis Barrier, Ancient Grove, Anti-Magic Field, Assassination Protocol, Avalanche, Aymara Healer, Backstab ...
 - faeria: 67 cards: Annoying Gnat, Aquatic, Baeru, the First Wave, Boulder Thrower, Court Jester, Defender of the Homeland, Demonic Salmon, Devouring Plant ...
 - inscryption: 25 cards: Aquasquirrel, Cat, Child 13, Child 13 (Awakened), Drowned Soul, Energy Conduit, Energy Conduit (sigil), Force Mage ...
-- into_the_breach: 91 cards: A.C.I.D. Scorpion, Adam, Aerial Bombs, Alpha Burrower, Alpha Leaper, Alpha Mosquito, Alpha Scorpion, Alpha Spider ...
+- into_the_breach: 73 cards: A.C.I.D. Scorpion, Aerial Bombs, Alpha Burrower, Alpha Leaper, Alpha Mosquito, Alpha Scorpion, Alpha Spider, Artemis Artillery ...
 - monster_train: 43 cards: Alloyed Construct, Ambient Charge, Bone Dog's Favor, Bounty Stalker, Cuttlehex, Dante's Candle, Dazed, Deadweight ...
-- runeterra: 463 cards: Abyssal Eye, Abyssal Guard, Acolyte's Reliquary, Acorn, the Hextechnician, Ahri (level 2), Airis, Altar to Unity, Amalgamation Of Vile Rites ...
+- runeterra: 452 cards: Abyssal Eye, Abyssal Guard, Acolyte's Reliquary, Acorn, the Hextechnician, Ahri (level 2), Airis, Altar to Unity, Amateur Aeronaut ...
 - stormbound: 9 cards: Blizzard Bombs, Freeze, Frosthexers, Glacier Palace, Iceflakes, Icicle Burst, Midwinter Chaos, Moment’s Peace ...
-- sts1: 57 cards: Ascender's Bane, Barricade, Battle Trance, Blasphemy+, Blur, Bronze Automaton, Bullet Time, Burn ...
+- sts1: 50 cards: Ascender's Bane, Barricade, Battle Trance, Blasphemy+, Blur, Bullet Time, Burn, Clumsy ...
 
 ## Payoffs: cards that benefit from my other units dying, any way (trigger, condition, count, dead allies picked)
 
@@ -156,20 +156,20 @@ select distinct card from flat_do where params glob '*=[a-z]*'
 What "disable" (stop a unit acting) is built with, on the same cards (`ask.py all together disable`):
 
 - attack_lock: duelyst 18 cards, monster_train 3 cards
-- cant_attack: duelyst 23 cards, into_the_breach 4 cards, monster_train 8 cards, runeterra 56 cards, stormbound 8 cards
-- passive: duelyst 23 cards, into_the_breach 4 cards, monster_train 8 cards, runeterra 88 cards, stormbound 8 cards
-- cant_move: duelyst 3 cards, into_the_breach 2 cards
+- cant_attack: duelyst 22 cards, into_the_breach 4 cards, monster_train 8 cards, runeterra 46 cards, stormbound 7 cards
 - immobilize: duelyst 18 cards, stormbound 6 cards
+- passive: duelyst 22 cards, into_the_breach 4 cards, monster_train 8 cards, runeterra 78 cards, stormbound 7 cards
+- cant_move: duelyst 2 cards, into_the_breach 2 cards
 - stances: runeterra 9 cards
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: duelyst 3172 pairs, e.g. Lavastorm Obelysk -> Khanuum-ka; faeria 1015 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 466 pairs, e.g. Bad Fish -> Librarian; into_the_breach 10 pairs, e.g. Bomb Dispenser -> Ice Tile; monster_train 348 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 22558 pairs, e.g. Kalista -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
-- self_destruct: duelyst 1788 pairs, e.g. Lavastorm Obelysk -> Khanuum-ka; faeria 653 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 431 pairs, e.g. Bad Fish -> Librarian; into_the_breach 8 pairs, e.g. Bomb Dispenser -> Ice Tile; monster_train 296 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 19820 pairs, e.g. Kalista -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Vindictive Wretches
-- sacrifice: duelyst 1521 pairs, e.g. Lavastorm Obelysk -> Khanuum-ka; faeria 387 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Librarian; into_the_breach 6 pairs, e.g. Arachnoid -> Ice Tile; monster_train 305 pairs, e.g. Primordium -> Devourer of Death; runeterra 8133 pairs, e.g. Kalista -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
-- turn_end: duelyst 1814 pairs, e.g. Lavastorm Obelysk -> Khanuum-ka; faeria 473 pairs, e.g. Flash Salmon -> Long-horned Yak; into_the_breach 6 pairs, e.g. Bomb Dispenser -> Ice Tile; monster_train 276 pairs, e.g. Primordium -> Devourer of Death; runeterra 19731 pairs, e.g. Kalista -> Bladepierced Revenant
-- activated: faeria 297 pairs, e.g. Doomgate, Door to Oblivion -> Long-horned Yak; inscryption 27 pairs, e.g. Master Bleene -> Librarian; into_the_breach 6 pairs, e.g. Bomb Dispenser -> Ice Tile; monster_train 210 pairs, e.g. Steel Pulleyclaw -> Echowright; stormbound 20 pairs, e.g. Temple of the Mind -> Embers of Chaos
-- removal: duelyst 568 pairs, e.g. Rasha's Curse (follow-up) -> Khanuum-ka; faeria 134 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Librarian; runeterra 5806 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Embers of Chaos
+- destroy: duelyst 3172 pairs, e.g. Fireblaze Obelysk -> Khanuum-ka; faeria 1015 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 466 pairs, e.g. Mage Knight -> Ouroboros; into_the_breach 10 pairs, e.g. Walking Bomb -> Ice Tile; monster_train 348 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 22558 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- self_destruct: duelyst 1788 pairs, e.g. Fireblaze Obelysk -> Khanuum-ka; faeria 653 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 431 pairs, e.g. Mage Knight -> Ouroboros; into_the_breach 8 pairs, e.g. Walking Bomb -> Ice Tile; monster_train 296 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 19820 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Project PH03-NIX
+- sacrifice: duelyst 1521 pairs, e.g. Fireblaze Obelysk -> Khanuum-ka; faeria 387 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Ouroboros; into_the_breach 6 pairs, e.g. Arachnoid Injector -> Ice Tile; monster_train 305 pairs, e.g. Primordium -> Devourer of Death; runeterra 8133 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- turn_end: duelyst 1814 pairs, e.g. Fireblaze Obelysk -> Khanuum-ka; faeria 473 pairs, e.g. Flash Salmon -> Long-horned Yak; into_the_breach 6 pairs, e.g. Walking Bomb -> Ice Tile; monster_train 276 pairs, e.g. Primordium -> Devourer of Death; runeterra 19731 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant
+- activated: faeria 297 pairs, e.g. Doomgate, Door to Oblivion -> Long-horned Yak; inscryption 27 pairs, e.g. Master Bleene -> Ouroboros; into_the_breach 6 pairs, e.g. Walking Bomb -> Ice Tile; monster_train 210 pairs, e.g. Steel Pulleyclaw -> Echowright; stormbound 20 pairs, e.g. Temple of the Mind -> Snowmasons
+- removal: duelyst 568 pairs, e.g. Rasha's Curse (follow-up) -> Khanuum-ka; faeria 134 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Ouroboros; runeterra 5806 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -231,8 +231,8 @@ select distinct card from flat_do where act='copy_keywords'
 - duelyst Songhai Empire: flanking (14), temporary_buff (5), on_spell (12), generate_cards (10), trap_secret (4)
 - duelyst Vetruvian Imperium: rows (9), self_destruct (9), merge_attach (6), steal (6), haste (14)
 - duelyst Abyssian Host: other_death_trigger (11), terrain (14), sacrifice (12), destroy (21), stat_loss (4)
-- duelyst Magmar Aspects: cheat_death (9), attack_lock (4), revive (8), permanent_growth (14), disable (4)
-- duelyst Vanar Kindred: territory_trigger (7), disable (11), base_resource_gain (4), resource_gain (4), attack_lock (6)
+- duelyst Magmar Aspects: cheat_death (9), attack_lock (4), revive (8), disable (4), permanent_growth (14)
+- duelyst Vanar Kindred: territory_trigger (7), disable (10), base_resource_gain (4), resource_gain (4), attack_lock (6)
 - duelyst Neutral: deck_modification (6), quests (5), random_ability (6), ranged (18), copy (16)
 - duelyst Boss: merge_attach (4), multi_attack (6), turn_start (16), area_templates (6), revive (6)
 - duelyst Tutorial: on_play (4)
@@ -247,8 +247,8 @@ select distinct card from flat_do where act='copy_keywords'
 - inscryption Magick: aura (6), defence_gain (5), draw (4), self_destruct (4), card_presence_condition (5)
 - into_the_breach Prime: lanes (4), spell_or_skill (21), forced_movement (15), aoe_damage (10), spell_power (4)
 - into_the_breach Brute: forced_movement (17), spell_or_skill (21), area_templates (18), movement (19), ping (16)
-- into_the_breach Ranged: area_templates (18), spell_or_skill (19), ping (16), forced_movement (11), on_lifegain (5)
-- into_the_breach Science: shield (5), spell_power (7), spell_or_skill (20), suppress (5), movement (18)
+- into_the_breach Ranged: area_templates (18), spell_or_skill (19), ping (16), forced_movement (11), cant_attack (10)
+- into_the_breach Science: shield (5), spell_power (7), spell_or_skill (20), immunity (11), movement (18)
 - into_the_breach Any: defence_gain (5), tribal (9), stat_gain (6), heal (6), spell_power (6)
 - monster_train Hellhorned: temporary_buff (11), block_armor (12), damage_reduction (12), on_damaged (13), count_payoff (21)
 - monster_train Awoken: on_lifegain (4), counterattack (7), regeneration (4), draw (11), heal (11)
@@ -257,7 +257,7 @@ select distinct card from flat_do where act='copy_keywords'
 - monster_train Melting Remnant: other_death_trigger (8), countdown (15), self_destruct (16), cost_set (6), delayed (15)
 - monster_train Wurmkin: cost_type (10), resource_gain (23), summon (4), damage_over_time (8), lanes (27)
 - monster_train Clanless: direct_damage (5), banish (10), turn_end (7), cant_attack (5), passive (20)
-- runeterra Ionia: bounce_enemy (11), leave_trigger (10), spells_played_condition (12), silence (32), max_mana_condition (8)
+- runeterra Ionia: bounce_enemy (11), leave_trigger (10), spells_played_condition (12), silence (17), max_mana_condition (8)
 - runeterra Noxus: combat_damage_threshold (9), on_discard (10), drawback (7), nexus_damage_condition (12), excess_damage (37)
 - runeterra Demacia: extra_turn (23), multi_attack (19), damage_reduction (38), shield (16), spell_power (8)
 - runeterra Piltover & Zaun: junk_cards (13), on_draw (18), recycle (12), on_spell (27), trap_secret (16)
@@ -272,12 +272,12 @@ select distinct card from flat_do where act='copy_keywords'
 - stormbound Ironclad: lanes (8), forced_movement (9), movement (9), death_trigger (4), positional (26)
 - stormbound Shadowfen: lifesteal (7), damage_over_time (6), steal (4), ping (10), variable_stats (7)
 - stormbound Swarm: direct_damage (8), tribal (6), summon (8), death_trigger (4), on_attack (5)
-- stormbound Winter: base_resource_gain (7), disable (8), immobilize (6), resource_gain (7), cant_attack (8)
+- stormbound Winter: base_resource_gain (7), disable (7), immobilize (6), resource_gain (7), cant_attack (8)
 - sts1 Silent: damage_over_time (9), on_discard (5), discard (11), draw (18), aoe_damage (8)
 - sts1 Watcher: stances (22), leave_trigger (6), retain (11), information (4), recycle (5)
 - sts1 Defect: movement (23), slots_queue (26), repeat_trigger (31), card_presence_condition (25), forced_movement (29)
 - sts1 Ironclad: attack_gain (8), aoe_damage (7), exhaust (26), debuff (7), tribal (17)
-- sts1 Colorless: cost_set (11), retain (6), exhaust (33), activated (31), cant_attack (11)
+- sts1 Colorless: cost_set (11), retain (6), exhaust (33), activated (31), cant_attack (10)
 
 ## Created-card chains (A creates B, B creates C)
 
