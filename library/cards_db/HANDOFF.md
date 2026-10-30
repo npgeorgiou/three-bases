@@ -27,7 +27,16 @@
    each import and review taught, for every game), README.md (files, tables, questions), RESULTS.md (results per game),
    NEXT_CHAT.md (the next chat's work).
 
+## How to think (what went wrong, game after game)
+1. Every error Kaptain finds is ONE example of a family. Name the cause in one sentence, decide whether it lives in the data
+   (the rows) or in the scripts (the line rules, the questions), find every member in ALL games, fix the shared rule once,
+   dump all lines before and after (`dump_lines.py`), read every gone and new reason.
+2. Think like a player, card by card: what does it need, who gives it that, who must do it (Zed's own strikes, Ephemeral
+   attackers), what it makes and what that made card does. Read the card TEXT, not only the rows.
+3. Report per family: the cause, data or script, the fix, and the counts per game.
+
 ## Importing a new game: start here
+- After the import, the three checks of PROCESS 4b: the deck check, the real-world cases, the design questions per faction.
 Read PROCESS.md in order ("Why the first three games went wrong", "How to work", "Rules that are never broken", "Writing
 data the same way in every game", "Steps"), then PROCESS_LESSONS.md, the sections closest to your kind of game. Follow the
 steps once, in order. The order that saves the most time:

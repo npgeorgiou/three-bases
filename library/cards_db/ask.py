@@ -27,6 +27,7 @@ left out unless --enemies is given. An unknown concept says so and names the nea
 Happenings are the event values of vocab.tsv; concepts are the concept tree's (equal mechanics of different games share
 one concept: Stun and Freeze are disable, round_start and turn_start are turn_start)."""
 import os, sqlite3, subprocess, sys
+NOT_FACTION = ('neutral', 'boss', 'any', 'colorless', 'curse', 'status', 'token', 'event', 'shared', 'universal', '(none)')  # no faction of its own
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import connections, mechanics, deck_analysis, network
 c = sqlite3.connect(os.path.join(HERE, 'cards.sqlite'))
@@ -156,9 +157,9 @@ def main():
         for g in games:
             per = {}
             for i, regs in c.execute("select id, regions from card where game=? and is_keyword=0 and is_stub=0 and coalesce(category,'') not in "
-                                     "('game_rule','ability','boss','monster','event','modifier')", (g,)):
-                k = sum(i in got[x] for x in args)
-                for r in [x for x in (regs or '').split(';') if x and not x.lower().startswith(('neutral', 'boss', 'any')) and x != 'Runeterra']:
+                                     "('game_rule','boss','monster','event','modifier') and not (category='ability' and id in (select made from flat_made))", (g,)):
+                k = sum(i in got[x] for x in args)  # an Into the Breach weapon is a card; a skill a card makes is not
+                for r in [x for x in (regs or '').split(';') if x and not x.lower().startswith(NOT_FACTION) and x != 'Runeterra']:
                     per.setdefault(r, [[0] * len(args), 0, []])
                     per[r][1] += 1
                     for j, x in enumerate(args): per[r][0][j] += i in got[x]

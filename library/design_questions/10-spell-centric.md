@@ -17,6 +17,14 @@ Vetruvian Imperium (114 cards): spells_played_condition 0, spell_power 3
 ## faeria
 Blue (72 cards): spells_played_condition 1, spell_power 0
   Dark Stalker: If you've played an event this turn, this costs 2 faeria less.
+## into_the_breach
+Science (30 cards): spells_played_condition 0, spell_power 7
+  Explosive Warp: Teleport to target and push nearby tiles away. Can also be used to push the user to the...
+  Fire Beam: Fire a beam that applies Fire in a line. Single-use. Power: Free. Upgrades: +1 Use (1...
+  Frost Beam: Fire a beam that Freezes everything in a line. Single-use. Power: 1 Reactor Core....
+  Shield Array: Apply a Shield on nearby tiles. Single-use. Power: Free. Upgrades: +1 Size (1 Reactor...
+Cyborg (6 cards): spells_played_condition 0, spell_power 1
+  Explosive Goo: Artillery attack that damages a tile and pushes adjacent tiles away. Damage: 1. Power:...
 ## monster_train
 Stygian Guard (41 cards): spells_played_condition 0, spell_power 6
   Crypt Builder: Offering. Attuned. / Deal 60 damage to the front enemy unit and push it to the back.
@@ -27,26 +35,27 @@ Melting Remnant (43 cards): spells_played_condition 0, spell_power 2
   Mortal Entrapment: Attuned. / Deal 25 damage and apply Dazed 3 to an already damaged unit.
   Subsuming Blade: Piercing. / Deal 5 damage. / Slay: Increase damage by 3 permanently.
 ## runeterra
-Bilgewater (218 cards): spells_played_condition 2, spell_power 20
+Bilgewater (220 cards): spells_played_condition 2, spell_power 20
   Bilgewater Tellstones: Create a Fleeting More Powder!, Playful Trickster, or Chum the Waters in hand.
   Boomship: Deal 1 to a unit. Summon Powder Kegs equal to the amount of damage dealt.
   Dreadway Deckhand: When I'm summoned, summon a Powder Keg.
   Fleet Admiral Shelly: Keywords: Elusive, Imbue. When you play 2 spells each round, grant other allies +1|+1.
-Ionia (235 cards): spells_played_condition 14, spell_power 0
+Ionia (236 cards): spells_played_condition 14, spell_power 0
   Claws of the Dragon: While I'm in hand, summon me when you play 2 spells in a round.
   Deep Meditation: Keywords: Flow. Flow: I cost 2 less. Draw 2 other spells.
   Dragoncaller: Keywords: Attune, Flow. Round Start: Flow: Summon The Empyrean and grant it Ephemeral.
   Eye of the Dragon: Keywords: Attune, Flow. Round Start: Flow: Summon a Dragonling.
-  works with: recycle (e.g. The Spirit of Wuju -> Janna); on_discard (e.g. Lee Sin's Sonic Wave -> Rumble); turn_start (e.g. The Spirit of Wuju -> Janna)
+  works with: recycle (e.g. Drum Solo -> Janna); on_discard (e.g. Lee Sin's Sonic Wave -> Rumble); turn_start (e.g. Drum Solo -> Janna)
 ## sts1
-Curse (14 cards): spells_played_condition 1, spell_power 2
-  Doubt: Keywords: Unplayable. At the end of your turn, gain 1 Weak.
-  Normality: Keywords: Unplayable. While in hand, you cannot play more than 3 cards this turn.
-  Shame: Keywords: Unplayable. At the end of your turn, gain 1 Frail.
 Defect (89 cards): spells_played_condition 1, spell_power 18
   Beam Cell: Deal 3 damage. Apply 1 Vulnerable.
   Biased Cognition: Gain 4 Focus. At the start of your turn, lose 1 Focus.
   Bullseye: Deal 8 damage. Apply 2 Lock-On.
   Chaos: Channel 1 random Orb.
-  works with: permanent_growth (e.g. Mind Bloom -> Du-Vu Doll); passive (e.g. Velvet Choker -> Void); attack_gain (e.g. Mind Bloom -> Du-Vu Doll)
+Watcher (90 cards): spells_played_condition 0, spell_power 23
+  Blasphemy: Keywords: Exhaust. Enter Divinity. Die next turn.
+  Blasphemy+: Keywords: Retain, Exhaust. Enter Divinity. Die next turn.
+  Crescendo: Keywords: Retain, Exhaust. Enter Wrath.
+  Crush Joints: Deal 8 damage. If the last card played this combat was a Skill, apply 1 Vulnerable.
+  works with: permanent_growth (e.g. Mind Bloom -> Du-Vu Doll); passive (e.g. Art of War -> Void); attack_gain (e.g. Mind Bloom -> Du-Vu Doll)
 ```

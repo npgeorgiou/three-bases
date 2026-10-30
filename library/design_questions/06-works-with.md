@@ -3,18 +3,18 @@
 `ask.py all feeds damage_over_time`
 
 ```
-on_kill: monster_train 294 pairs, e.g. Glugsider -> Hornbreaker Prince; stormbound 6 pairs, e.g. Venomfall Spire -> Spellbinder Zhevana; sts1 78 pairs, e.g. Bouncing Flask -> Ritual Dagger
-other_death_trigger: monster_train 120 pairs, e.g. Glacial Seal -> Wickless Baron; sts1 37 pairs, e.g. Twisted Funnel -> The Specimen
-on_damaged: into_the_breach 396 pairs, e.g. Thermal Discharger -> Fire; stormbound 68 pairs, e.g. Toxic Sacrifice -> Greenwood Ancients
-shop_gold: monster_train 63 pairs, e.g. Glacial Seal -> Paraffin Thug; sts1 27 pairs, e.g. Bouncing Flask -> Golden Idol
+on_kill: monster_train 294 pairs, e.g. Glugsider -> Hornbreaker Prince; stormbound 6 pairs, e.g. Toxic Sacrifice -> Spellbinder Zhevana; sts1 78 pairs, e.g. Crippling Cloud -> Feed
+other_death_trigger: monster_train 120 pairs, e.g. Glugsider -> Wickless Baron; sts1 37 pairs, e.g. Snecko Skull -> The Specimen
+on_damaged: into_the_breach 396 pairs, e.g. Thermal Discharger -> Fire; stormbound 68 pairs, e.g. Toxic Sacrifice -> Hairy Chestnuts
+shop_gold: monster_train 63 pairs, e.g. Glugsider -> Paraffin Thug; sts1 27 pairs, e.g. Crippling Cloud -> Hand of Greed
 immunity: into_the_breach 165 pairs, e.g. Forest Tile -> Critical Shields; monster_train 6 pairs, e.g. Spike of the Stygian -> Solgard the Martyr
-generate_cards: into_the_breach 10 pairs, e.g. Forest Tile -> Marked tile; monster_train 59 pairs, e.g. Titanstooth -> Wyldenten
-death_trigger: into_the_breach 20 pairs, e.g. Forest Tile -> Marked tile; stormbound 81 pairs, e.g. Acid Greenhorns -> Green Prototypes
-base_resource_gain: into_the_breach 10 pairs, e.g. Forest Tile -> Mafan; sts1 164 pairs, e.g. Bouncing Flask -> Gremlin Horn
+generate_cards: into_the_breach 10 pairs, e.g. Forest Tile -> Marked tile; monster_train 59 pairs, e.g. Titanstooth -> Shardtail Queen
+death_trigger: into_the_breach 20 pairs, e.g. Forest Tile -> Ice Tile; stormbound 81 pairs, e.g. Acid Greenhorns -> Green Prototypes
+base_resource_gain: into_the_breach 10 pairs, e.g. Forest Tile -> Mafan; sts1 164 pairs, e.g. Crippling Cloud -> Gremlin Horn
 area_templates: stormbound 4 pairs, e.g. Acid Greenhorns -> Temple of Life
-turn_start: stormbound 31 pairs, e.g. Acid Greenhorns -> Temple of Life; sts1 259 pairs, e.g. Twisted Funnel -> The Specimen
+turn_start: stormbound 31 pairs, e.g. Acid Greenhorns -> Temple of Life; sts1 259 pairs, e.g. Snecko Skull -> The Specimen
 shield: into_the_breach 161 pairs, e.g. Forest Tile -> Critical Shields
-damage: sts1 296 pairs, e.g. Crippling Cloud -> Sadistic Nature
+damage: sts1 296 pairs, e.g. Snecko Skull -> The Specimen
 ```
 
 `ask.py all together damage_over_time`

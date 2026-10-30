@@ -14,7 +14,7 @@ Vetruvian Imperium (114 cards): tribal 16, summon 30
   Circle of Fabrication: Summon one of each Obelysk from your deck on random spaces.
   Fireblaze Obelysk: Keywords: Summon Dervish. Your dervishes have +1 Attack.
   Khanuum-ka: Keywords: Flying, Rush. Dying Wish: A random friendly Dervish disappears, summoning a...
-  works with: on_ally_play (e.g. Metaltooth -> Night Watcher); high_cost (e.g. Duskweaver -> Oak in the Nemeton); rule_change (e.g. Duskweaver -> Oak in the Nemeton)
+  works with: on_ally_play (e.g. S.I.L.V.E.R. -> Night Watcher); high_cost (e.g. Fighting Spirit -> Oak in the Nemeton); rule_change (e.g. Fighting Spirit -> Oak in the Nemeton)
 ## faeria
 Pandora (40 cards): tribal 3, summon 3
   Doom Scythe: Destroy a creature. Summon a 6/1 Slaughtering Shadow in its place.
@@ -26,7 +26,7 @@ Blue (72 cards): tribal 4, summon 5
   Bloated Toad: Jump This enters play with an enemy 2/2 Frog with Jump swallowed.
   Fugoro, Captain of the Gagana: Jump Whenever you discover a Treasure, Fugoro gains +3/+3.
   Gabrian Noble: Gift - Summon a 1/1 Ruby Fish (you may summon it on an ocean tile).
-  works with: board_presence (e.g. Tide Lord -> Triton Tactician); temporary_buff (e.g. Mother of All Yaks -> Yak Shepherd); placement_rules (e.g. Fugoro, Captain of the Gagana -> Tide Lord)
+  works with: board_presence (e.g. Fugoro, Captain of the Gagana -> Triton Tactician); temporary_buff (e.g. Mother of All Yaks -> Yak Shepherd); placement_rules (e.g. Triton Tactician -> Tide Lord)
 ## inscryption
 Magick (25 cards): tribal 7, summon 1
   Blue Mage: Keywords: Mental Gemnastics.
@@ -38,7 +38,12 @@ Technology (76 cards): tribal 9, summon 5
   Gems Conduit: Keywords: Gem Spawn Conduit.
   Buff Conduit: Keywords: Attack Conduit.
   Daus (Act III): Keywords: Bellist. Special behaviour: If a card with "bell" in its internal ID (Chime,...
-  works with: death_trigger (e.g. Energy Conduit -> Kind Cell); link_formation (e.g. Energy Conduit -> Splinter Cell); summon (e.g. Worker Ant -> The Limoncello)
+  works with: death_trigger (e.g. Energy Conduit -> Kind Cell); link_formation (e.g. Energy Conduit -> Splinter Cell); summon (e.g. Ant Spawner -> The Limoncello)
+## into_the_breach
+Ranged (29 cards): tribal 0, summon 2
+  Arachnoid Injector: Damage target, creating a friendly robot spider on kill. Damage: 1. Power: Free....
+  Bomb Dispenser: Launch a Walking Bomb. Unused bombs dismantle after the enemy turn. Power: Free....
+  works with: stat_loss (e.g. Nanofilter Mending -> Kai Miller); on_lifegain (e.g. Heat Engines -> Fire); damage_over_time (e.g. Heat Engines -> Fire)
 ## monster_train
 Umbra (47 cards): tribal 18, summon 1
   Alloyed Construct: Inert. Multistrike 1. / Gorge: Gain Fuel 1.
@@ -50,9 +55,9 @@ Hellhorned (41 cards): tribal 6, summon 0
   Imp-in-a-Box: Consume. / Add 2 random Imp units to your hand.
   Imp-olate: Deal damage to the front enemy unit equal to 15x the number of Imp units in your deck.
   Imp-portant Work: Sacrifice Imp. / Gain 1 Ember. Draw 1.
-  works with: death_trigger (e.g. Echowright -> Kinhost Vessel); death_count (e.g. Imp-portant Work -> Memories of the Melted); activated (e.g. Penumbra -> The Sentient)
+  works with: death_trigger (e.g. Echowright -> Kinhost Vessel); death_count (e.g. Imp-portant Work -> A Fatal Melting); activated (e.g. Penumbra -> The Sentient)
 ## runeterra
-Bilgewater (218 cards): tribal 31, summon 54
+Bilgewater (220 cards): tribal 31, summon 54
   Death From Below: Keywords: Fast, Lurk. Summon Pyke striking an enemy.
   Illaoi: Keywords: Overwhelm. Attack: Spawn 1, then I gain Power equal to your strongest...
   Illaoi (level 2): Keywords: Overwhelm. When you Spawn, increase its value by 1. Attack: Spawn 1, then...
@@ -62,7 +67,7 @@ Shurima (264 cards): tribal 36, summon 73
   Azir: When allies attack, summon an attacking Sand Soldier. Level up: You've summoned 12+...
   Azir (level 2): When I level up, replace your deck with the Emperor's Deck, then draw 1. When allies...
   Azir (other form): When allies attack, summon an attacking Sand Soldier. When you summon another ally, give...
-  works with: stances (e.g. Infernum -> Severum); tutor (e.g. Ripper's Bay -> Rek'Sai (level 2)); recycle (e.g. Udyr (level 2) -> Janna)
+  works with: stances (e.g. Crescendum -> Severum); tutor (e.g. Ripper's Bay -> Rek'Sai (level 2)); recycle (e.g. Udyr (level 2) -> Janna)
 ## stormbound
 Swarm (34 cards): tribal 6, summon 8
   Dreadful Keepers: On death, randomly spawn a 3/4/6/7/8 strength Dragon on a tile bordering a friendly Dragon
@@ -81,10 +86,10 @@ Ironclad (83 cards): tribal 17, summon 0
   Demon Form: At the start of your turn, gain 2 Strength.
   Disarm: Keywords: Exhaust. Enemy loses 2 Strength.
   Double Tap: This turn, your next Attack is played twice.
-Colorless (68 cards): tribal 11, summon 0
-  Become Almighty: Gain 3 Strength.
-  Chrysalis: Keywords: Exhaust. Shuffle 3 random Skills into your draw pile. They cost 0 this combat.
-  Dark Shackles: Keywords: Exhaust. Enemy loses 9 Strength this turn.
-  Impatience: If you have no Attacks in your hand, draw 2 cards.
+Watcher (90 cards): tribal 11, summon 0
+  Crush Joints: Deal 8 damage. If the last card played this combat was a Skill, apply 1 Vulnerable.
+  Fasting: Gain 3 Strength. Gain 3 Dexterity. Gain 1 less at the start of each turn.
+  Follow-Up: Deal 7 damage. If the last card played this combat was an Attack, gain 1 energy.
+  Foreign Influence: Keywords: Exhaust. Choose 1 of 3 Attacks of any color to add into your hand.
   works with: attack_gain (e.g. J.A.X. -> Red Skull); permanent_growth (e.g. Necronomicon -> Du-Vu Doll); spell_power (e.g. J.A.X. -> Red Skull)
 ```
