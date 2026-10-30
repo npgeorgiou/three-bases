@@ -81,3 +81,13 @@ and about ten rebuilds). Each check below is cheap and found errors that later c
 - Inscryption (v36-v45): imported and reviewed by Kaptain (30 Oct 2026). 17 decks kept (decks.tsv), 20 weak ones listed in
   decks_dropped_inscryption.tsv; families F1-F18 in deck_read_inscryption.md; why its networks are thin: RESULTS.md.
   Energy ramp is marked base_resource_gain, not linked to costs (Kaptain).
+- Into the Breach (v48, in progress, 30 Oct 2026): supplement from the wiki tables (42 mechs, 104 weapons, 17 passives, 20
+  pilots, 6 deployed units; supplement_into_the_breach.py), 20 squads in decks.tsv (14 official, 6 custom; a squad of 3 mechs
+  is the deck), sourced rules in library/tools/games/into_the_breach.md, game_rules.jsonl, BRIEF "Game words: Into the
+  Breach", vocab rows (v48 in CHANGES.md). Readers done: read/into_the_breach (299 cards, 27 keywords), second/ (30 cards).
+  First run.py: checks, load and 13 cases pass; it stopped at the text audit (62 flags, mostly Vek texts whose library text
+  mixes wiki prose). Next, in one pass before any fix: audit_text (`--list <rule>`), word check flags
+  (patterns/into_the_breach_flags.tsv, 100), proposals (32: redirect_attack, damage along a line, second_in_line, range, weapon
+  damage origin ...), compare.py on the second reading (readers wrote Push/Pull as keywords: normalize N6), audit_links; then
+  one fix script fixes/into_the_breach/v48.py, one rebuild, then read all 20 decks (deck_read_into_the_breach.md).
+  The "before" dump for review fixes is /tmp only: take it again before the first shared change.

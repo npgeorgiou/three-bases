@@ -1,0 +1,7 @@
+{"id": 760827, "field": "origin", "need": "direct"}
+{"id": 760829, "field": "params", "need": "moves"}
+{"id": 760829, "field": "terrain", "need": "lava"}
+{"id": 760831, "field": "origin", "need": "weapon"}
+{"id": 760834, "field": "origin", "need": "weapon"}
+{"id": 760834, "field": "act", "need": "disable_keyword"}
+{"id": 760848, "field": "params", "need": "ignores_armor"}

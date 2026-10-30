@@ -1,0 +1,15 @@
+{"id": 6000075, "field": "params", "need": "damage_changes_along_line"}
+{"id": 6000078, "field": "pick", "need": "second_in_line"}
+{"id": 6000080, "field": "params", "need": "damage_changes_along_line"}
+{"id": 6000099, "field": "on", "need": "arachnoid_attack"}
+{"id": 6000102, "field": "if", "need": "splash_damage_victim"}
+{"id": 6000110, "field": "act", "need": "redirect_attack"}
+{"id": 6000122, "field": "params", "need": "range"}
+{"id": 6000123, "field": "params", "need": "range"}
+{"id": 6000130, "field": "params", "need": "range"}
+{"id": 6000134, "field": "act", "need": "redirect_attack"}
+{"id": 6000153, "field": "if", "need": "bump_or_block_emerging"}
+{"id": 6000159, "field": "if", "need": "blocks_emerging"}
+{"id": 6000164, "field": "act", "need": "gain_xp"}
+{"id": 6000174, "field": "act", "need": "reset_turn_charge"}
+{"id": 6000182, "field": "on", "need": "reactor_core"}

@@ -1,0 +1,13 @@
+{"id": 761116, "field": "params", "need": "damage_reduced_by_range"}
+{"id": 761128, "field": "if", "need": "weapon_damage_only"}
+{"id": 761158, "field": "to", "need": "lava"}
+{"id": 761161, "field": "to", "need": "lava"}
+{"id": 6000013, "field": "params", "need": "damage_changes_along_line"}
+{"id": 6000016, "field": "act", "need": "redirect_attack"}
+{"id": 6000028, "field": "pick", "need": "second_in_line"}
+{"id": 6000032, "field": "on", "need": "arachnoid_attack"}
+{"id": 6000034, "field": "params", "need": "damage_changes_along_line"}
+{"id": 6000044, "field": "params", "need": "damage_changes_along_line"}
+{"id": 6000048, "field": "act", "need": "redirect_attack"}
+{"id": 6000060, "field": "params", "need": "damage_changes_along_line"}
+{"id": 6000061, "field": "params", "need": "damage_changes_along_line"}
