@@ -179,7 +179,15 @@ RULES = [
     ('sacrifice', 'flat_do', "act='kill' and on_side='mine' and coalesce(on_pick,'')!='self'"),
     ('evasion', 'flat_do', "act='cant' and param_event='blocks' and on_side='enemy'"),
     ('cant_block', 'flat_do', "act='cant' and param_event='blocks' and on_pick='self'"),
-    ('cant_attack', 'flat_do', "act='cant' and param_event='attacks'"),
+    ('cant_attack', 'flat_do', "act='cant' and param_event='attacks' and coalesce(on_side,'')!='enemy'"),  # my own unit
+    # the enemy stopped, by outcome (Kaptain 30 Oct 2026): can't attack or strike = deals no damage; can't attack and can't move,
+    # or can't take its turn = can't act at all (Faeria "enemy creatures can't attack or move", Inscryption skips a turn)
+    # (not Taunt or Provoke: "can't attack anything but this" only picks what it attacks)
+    ('attack_lock', 'flat_do', "act='cant' and param_event in ('attacks','strikes') and on_side='enemy' and to_with is null"),
+    ('disable', 'flat_do', "act='cant' and on_side='enemy' and to_with is null and (param_event in ('turn_start','acts') or (param_event='attacks' and exists (select 1 from flat_do d2 where d2.card=flat_do.card and d2.ability=flat_do.ability and d2.act='cant' and d2.param_event='moves' and d2.on_side='enemy')))"),
+    # staying power (Kaptain 30 Oct 2026): healing itself or my units every turn; can't die, or coming back when it dies
+    ('regeneration', 'flat_do', "act='heal' and (on_pick='self' or coalesce(on_side,'')='mine') and coalesce(on_kind,'unit')!='player' and exists (select 1 from flat_when w where w.card=flat_do.card and w.ability=flat_do.ability and w.event in ('turn_start','turn_end','round_start','round_end'))"),
+    ('cheat_death', 'flat_do', "(act='cant' and param_event='dies' and coalesce(on_side,'mine')!='enemy') or (act in ('summon','revive','return_to_hand','copy','return_card') and (card_ref=card or on_pick='self') and exists (select 1 from flat_when w where w.card=flat_do.card and w.ability=flat_do.ability and w.event='dies' and w.obj_pick='self'))"),
     ('cant_move', 'flat_do', "act='cant' and param_event='moves' and on_pick='self'"),
     ('immobilize', 'flat_do', "act='cant' and param_event='moves' and on_side='enemy'"),
     ('bounce_enemy', 'flat_do', "act='return_to_hand' and on_side='enemy'"),
@@ -251,6 +259,13 @@ RULES = [
     ('lanes', 'flat_do', "coalesce(on_with,'') || coalesce(to_with,'') like '%position % center_column%'"),
     ('placement_rules', 'flat_do', "origin in ('own','has_keyword') and act in ('can','cant') and param_event in ('summoned','played') and to_kind='position'"),
     ('zone_control', 'flat_do', "act='steal' and on_kind='position'"),
+    # holding spaces of the map (Kaptain 30 Oct 2026), every game alike: making ground that is mine or works for me (Faeria lands,
+    # Duelyst mana and summon spaces), placing units where cards normally can't go (anywhere: Airdrop; random tiles push the
+    # Stormbound front line), harvesting wells, shielding my buildings (Into the Breach grid). Landmarks are cards, not spaces.
+    ('zone_control', 'flat_do', "act='set_terrain' and (coalesce(to_with,'') || coalesce(on_with,'')) glob '*terrain is *' and (coalesce(to_with,'') || coalesce(on_with,'')) not like '%damage_space%' and (coalesce(to_with,'') || coalesce(on_with,'')) not like '%ocean%' and (coalesce(to_with,'') || coalesce(on_with,'')) not like '%chasm%' and (coalesce(to_with,'') || coalesce(on_with,'')) not like '%lava%' and (coalesce(to_with,'') || coalesce(on_with,'')) not like '%cracked%'"),
+    ('zone_control', 'flat_do', "act='can' and ((param_event in ('summoned','played') and to_kind='position') or param_event='harvests') and coalesce(on_side,'mine')!='enemy'"),
+    ('zone_control', 'flat_do', "act in ('summon','move') and to_kind='position' and coalesce(to_pick,'')='random' and coalesce(to_with,'') not like '% of %' and coalesce(to_with,'') not like '%surrounding%' and coalesce(to_with,'') not like '%bordering%'"),
+    ('zone_control', 'flat_do', "on_kind='landmark' and coalesce(on_side,'mine')='mine' and act in ('give_keyword','heal','negate_damage','damage_reduction')"),
     ('control_reward', 'flat_when', "event='harvests' and obj_side='enemy'"),
     ('control_reward', 'flat_if', "event='harvests' and ev_obj_side='enemy'"),
     ('territory_trigger', 'flat_if', "coalesce(of_with,'') like '%same_space%' and coalesce(of_with,'') like '%enemy%'"),

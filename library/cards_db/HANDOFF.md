@@ -1,4 +1,4 @@
-# Handoff: card database (30 Oct 2026, v56; NEXT_CHAT.md first: Kaptain's open order)
+# Handoff: card database (30 Oct 2026, v57; NEXT_CHAT.md first: Kaptain's open order)
 
 > **CHECKING AFTER A CHANGE: LOAD THE DATABASE ONCE. NEVER RUN `run.py <game>` ONCE PER GAME.**
 > Every `run.py` reloads ALL eight games (load.py loads every game, every time). Eight runs = eight reloads = over an hour

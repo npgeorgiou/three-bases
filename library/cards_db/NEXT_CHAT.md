@@ -23,15 +23,15 @@ print it; level-up sentences keep who acts and their kind ("your Ephemeral units
 run events (--enemies keeps them) and names the nearest concept for an unknown one; deck_audit prints what each card makes.
 Still to do, each found by questions that came back empty or wrong (the cause is in the data or the query, never "the game has
 none"):
-1. Controlling spots on the map: only 2 Faeria cards (zone_control). Find every game's map-control mechanics (Stormbound front
+1. DONE v57 except landmarks (zone_control: Faeria lands, Duelyst spaces, placement anywhere, random tiles, wells, building shields; Runeterra Landmark keyword still maps to terrain: needs a concept of its own, asked Kaptain). Was: Controlling spots on the map: only 2 Faeria cards (zone_control). Find every game's map-control mechanics (Stormbound front
    line, Faeria wells and lands, Duelyst mana springs and positions, Into the Breach buildings and tiles), give them one
    outcome concept, and keep landmarks (Runeterra building, 101 cards, now in "terrain") apart from map spaces.
-2. Staying power: regeneration and cheat_death are missing in Duelyst, Faeria, Stormbound (heal each turn, "can't die",
+2. DONE v57 (regeneration, cheat_death rules in flat.py). Was: Staying power: regeneration and cheat_death are missing in Duelyst, Faeria, Stormbound (heal each turn, "can't die",
    rebirth). Find the texts by regex, find why their rows lack the concept, fix the concept mapping.
-3. Disable: Faeria and Inscryption find none, yet Faeria's "can't attack" rows and Inscryption's skip a turn exist under
+3. DONE v57 (enemy can't attack = attack_lock; can't attack and move, or skips a turn = disable; Taunt/Provoke excluded; Faeria has no stun cards, only Taunt). Was: Disable: Faeria and Inscryption find none, yet Faeria's "can't attack" rows and Inscryption's skip a turn exist under
    other concepts. Check every concept that means "the enemy can't act" and map it by outcome.
-4. Runeterra drowns other games in pair counts (feeds, fed, together): rank by share within each game.
-5. Answers are names only: add the card text (short) where a design question needs it.
+4. DONE v57 (each game's scores as a share of its best). Was: Runeterra drowns other games in pair counts (feeds, fed, together): rank by share within each game.
+5. DONE v57 (short texts when 10 or fewer cards, or --texts). Was: Answers are names only: add the card text (short) where a design question needs it.
 6. DONE v56 (PROCESS_LESSONS "Who must do it"). Was: plan lines in deck_analysis ignore the kind a level-up asks for ("Any units attack ... level up from it: Hecarim", who needs
    Ephemeral attackers): same thinking as the arrival-buff error; check every match of a need against its filters.
 7. Kaptain's suggestions, approved: store every card-to-card line of each game as a table in cards.sqlite (from, to, kind,

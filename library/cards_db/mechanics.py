@@ -87,11 +87,19 @@ def together(c, games, concept, top=12):
         if not have: continue
         base = collections.Counter(x for s in cc.values() for x in s)
         with_ = collections.Counter(x for k in have for x in cc[k] if x != concept)
+        gs = {}
         for x, k in with_.items():
             if k >= 2:
                 lift = (k / len(have)) / (base[x] / n)
-                score[x] += lift * math.log(1 + k); seen[x][g] = k
+                gs[x] = lift * math.log(1 + k); seen[x][g] = k
+        add_share(score, gs)
     return [(x, seen[x]) for x, _ in score.most_common(top)]
+
+
+def add_share(score, gs):
+    """each game counts the same: its scores as a share of its best one (Runeterra's many cards must not drown the other games)"""
+    top_ = max(gs.values(), default=0)
+    for x, v in gs.items(): score[x] += v / top_ if top_ else 0
 
 
 def feeds(c, games, concept, top=12, reverse=False):
@@ -112,11 +120,13 @@ def feeds(c, games, concept, top=12, reverse=False):
                 if x == concept: continue
                 a = agg[x]; a[0] += 1; a[1] += w
                 if a[2] is None or w > a[2][0]: a[2] = (w, m, t)
+        gs = {}
         for x, (n, w, ex) in agg.items():
             if n >= 3 and base[x]:
                 lift = (w / tot_a) / (base[x] / tot)
                 if lift > 1.2:
-                    score[x] += lift * math.log(1 + n); per[x][g] = (n, f'{name(c, ex[1])} -> {name(c, ex[2])}')
+                    gs[x] = lift * math.log(1 + n); per[x][g] = (n, f'{name(c, ex[1])} -> {name(c, ex[2])}')
+        add_share(score, gs)
     return [(x, per[x]) for x, _ in score.most_common(top)]
 
 

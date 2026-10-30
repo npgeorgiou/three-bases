@@ -19,6 +19,7 @@ question runs across games.
   ask.py <game> network "<card>, ..." | faction <name> | game [--json f]  cards as a network: central cards, chains, groups, loose cards
   ask.py <games> card <card>                      the card's text and stored rows (rows.py)
   ask.py <games> list happenings|concepts         the values these questions take
+  --texts: every card found with its short text (a game with 10 or fewer cards always shows them)
 Cards that make a card with it count too, named "Zed (via Living Shadow)". The game's enemies, bosses and run events are
 left out unless --enemies is given. An unknown concept says so and names the nearest ones.
 Happenings are the event values of vocab.tsv; concepts are the concept tree's (equal mechanics of different games share
@@ -64,11 +65,31 @@ def known(x):
     return False
 
 
+TEXTS = '--texts' in sys.argv
+if TEXTS: sys.argv.remove('--texts')
+LIB = []
+
+
+def short_text(i, n=90):
+    """the card's own text, short (a design question needs to see what the card does, not only its name)"""
+    if not LIB:
+        import source; LIB.append(source.lib())
+    r = LIB[0].execute('select text from entities where id=?', (i,)).fetchone()
+    t = ' '.join(((r[0] if r else '') or '').replace('Missing Translation', '').split())
+    return t if len(t) <= n else t[:n - 1].rsplit(' ', 1)[0] + '...'
+
+
 def names(games, sql, args=(), limit=None):
+    """per game the cards found; with their short texts when few (10 or less) or with --texts"""
     found = ids_of(games, sql, args)
     for g in games:
-        out = sorted(n for gg, n in found.values() if gg == g)
-        if out: print(f'{g}: {len(out)} cards: ' + ', '.join(out[:limit]) + (' ...' if limit and len(out) > limit else ''))
+        out = sorted((n, i) for i, (gg, n) in found.items() if gg == g)
+        if not out: continue
+        if TEXTS or len(out) <= 10:
+            print(f'{g}: {len(out)} cards:')
+            for n, i in out[:limit]: print(f'  {n}: {short_text(i)}')
+            if limit and len(out) > limit: print('  ...')
+        else: print(f'{g}: {len(out)} cards: ' + ', '.join(n for n, _ in out[:limit]) + (' ...' if limit and len(out) > limit else ''))
     if not found: print('no cards')
 
 

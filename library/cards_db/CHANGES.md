@@ -376,3 +376,4 @@ Each change: date, what changed, the card that caused it, and which records were
   keep the actor's side and kind; ask.py drops enemies by default and warns on unknown concepts; deck_audit prints made cards;
   HANDOFF box and PROCESS rule: a wrong judgment is wrong thinking, fixed everywhere it lives.
 - 30 Oct 2026, v56: no shape change; network.py, deck_analysis.py, connections.py check who must do a need (Zed, Hecarim, Pyke; PROCESS_LESSONS "Who must do it").
+- 30 Oct 2026, v57: concept rules in flat.py for attack_lock, disable, regeneration, cheat_death, zone_control (NEXT_CHAT 1-3); ask.py short texts and per-game shares.
