@@ -326,6 +326,15 @@ def lines_of(c, game):
         if o_ and o_ <= {'bump', 'blocking_emerging'}: bump_abs[ab_] = a_
     plain_hits, keepers, cheap_abs = special_abilities(c)
     kw_adds = {ab for _, ab, *_ in keyword_adders(c, game)}  # "apply 1 more Poison" adds to others' Poison: it applies none alone
+    # what a card does to the things a happening left ("revive the strongest dead ally": it brings back what died)
+    state_use = {}
+    for a_, ab_, act_, kw_ in c.execute("""select card, ability, act, keyword_ref from flat_do where origin='own' and
+            (coalesce(on_with,'') like '%state is%' or coalesce(on_zone,'') in ('discard','exhausted')) order by seq"""):  # the act on
+        # those very things (not "deal damage equal to your Block": Body Slam does nothing to the Block)
+        if act_ == 'strike' and (a_, ab_) not in state_use: state_use[(a_, ab_)] = 'strikes them'; continue  # "I strike it" (Yasuo)
+        if (a_, ab_) not in state_use and act_ in AIM:
+            v_, _, rest_ = AIM[act_].format(kw=mechanics.name(c, kw_) if kw_ else 'a keyword').removeprefix('can ').replace(' it', ' them').partition(' ')
+            state_use[(a_, ab_)] = (v_ if v_.endswith('s') else v_ + 'es' if v_.endswith(('sh', 'ch', 'x')) else v_ + 's') + ' ' + rest_  # "brings them back"
     for card, origin, ab, role, h, side, kw, pick, kind, w, ref, ak, aw, via in c.execute(
             'select card, origin, ability, role, happening, side, keyword, pick, kind, obj_with, ref, actor_kind, actor_with, via from flat_ref'):
         if card not in cards: continue
@@ -359,7 +368,8 @@ def lines_of(c, game):
         if role == 'state' and ab in keepers: continue  # "Block is not removed" needs no Block: it helps the Block cards (boost_lines)
         if ab in lvl: lvl_needs[card].add(h)
         takes[h].add((card, 'mine' if pick == 'self' else side, kw, kind, pick, w, ab in lvl, role,
-                      (ak, aw, actor_side.get((card, ab)) if role == 'trigger' else None), cost, ab in cheap_abs))
+                      (ak, aw, actor_side.get((card, ab)) if role == 'trigger' else None), cost, ab in cheap_abs,
+                      state_use.get((card, ab), '') if role == 'state' else ''))
     state_ev = collections.defaultdict(set)  # a state and the happenings that put things in it (damaged <- damaged)
     for v, cs in c.execute("select value, causes from vocab where field='state' and coalesce(causes,'')!=''"):
         state_ev[v] |= {x.split(':')[0] for x in cs.split(';')}
@@ -409,7 +419,7 @@ def lines_of(c, game):
         carers = collections.defaultdict(set)
         for t, _, tk, *_ in ts: carers[tk].add(t)
         for m, ms, mk, mkind, mpick, mw, mref, rule in makes.get(h, ()):
-            for t, ts_, tk, tkind, tpick, tw, lv, role, actor, cost, cheap in ts:
+            for t, ts_, tk, tkind, tpick, tw, lv, role, actor, cost, cheap, use in ts:
                 if m == t or not mechanics.FIT(ms, ts_) or not (mk is None or tk is None or mk == tk): continue
                 if not kinds_fit(mkind, tkind): continue
                 if mpick == 'self' and tpick == 'self': continue  # each card about itself ("when I level up"): no link between two cards
@@ -468,6 +478,9 @@ def lines_of(c, game):
                     # card whose own ability makes it fight (Celerity, Ranged, "this fights") or a need that names who (my General) keeps the line
                 if rule:  # every unit does it by the game's rules (attacks, hits the enemy Nexus): weaker than a card that says so
                     w *= 0.25; say += ' (by fighting)' if rule == 'units fight' else f" (by the game's rule: {rule})"
+                if use and not rule and h not in ('moves', 'moves_onto') and not any(x in use for x in ('cheaper', 'cost')):
+                    w = max(w, 0.25); say += f': {mechanics.name(c, t)} {use}'  # it acts on them itself: a direct combo (Soul Cleave kills
+                # an ally, Undying Revenge brings back the strongest dead ally), not one card among every card that cares about deaths
                 if lv: out[(m, t)].append(('levels', 2 * w, say + ' (levels it up)'))
                 elif role == 'trigger' and t in selffeed: out[(m, t)].append(('levels', w, say + ' (it levels up from what it then does)'))
                 # it reacts to a happening (a death effect, "when an ally dies"): "triggers"; it counts one or needs a thing to be

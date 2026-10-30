@@ -393,3 +393,6 @@ that card: Dragon Ambush sends only Dragonlings; Rally sends any), `state_giver_
 Ephemeral: it feeds Hecarim), deck_analysis plan lines keyed by who ("Your Ephemeral units attack"), connections.may_be
 ("when I attack" is no Dragonling attacking). Also: "first each round" / "once per round" triggers (Hallowed, Lurk) get no
 "another attack" lines; "name has" filters now read stored name parts (allied Pykes, Duelyst Eggs and Obelysks were never matched).
+Same day: a card that acts on what something left (Undying Revenge revives a dead ally, Scorched Earth kills a damaged unit) had
+its line drawn as one card among all that care about deaths: weight 0.009, reason "makes your units die". Now such a line says
+what the card does to them ("makes your units die: Undying Revenge brings them back") and weighs as a direct combo (0.25).
