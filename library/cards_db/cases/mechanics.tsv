@@ -333,3 +333,4 @@ du31	mechanic	attacking from behind, or getting behind an enemy, is flanking (v4
 du32	mechanic	being on the enemy side is territory (Infiltrate, v39)	kw:Infiltrate	select card from flat_concept where concept='territory_trigger'	duelyst
 du33	mechanic	named areas (2x2, 3x3, corners, starting side) are area shapes (v40)	text:\b(?:2x2|3x3) area\b|\bin each corner\b|\b(?:damage|stun|destroy)(?:(?!teleport)[^.])*\bstarting side\b	select card from flat_concept where concept='area_templates'	duelyst
 du34	mechanic	a stun makes a unit unable to act (v40)	text:\bstun (?:a|an|all|enemy|the|it|them)\b	select card from flat_concept where concept='disable'	duelyst
+mi24	mechanic	a unit that takes every space of its side (room, size)	text:replaces all spaces on opponent's side	select card from flat_concept where concept='board_limit'	inscryption

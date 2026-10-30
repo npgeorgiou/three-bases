@@ -1,7 +1,7 @@
 # Case tests: inscryption
 
 Made by `cases/run.py inscryption`.
-**72 of 72 cases pass.**
+**73 of 73 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -44,6 +44,7 @@ Made by `cases/run.py inscryption`.
 | mx16 | more or faster base resource (base_resource_gain, v38) | 2 | 2 | 100% | 2 | yes |
 | mi22 | Burrower: moves to an empty space of its own side when it would be struck | 5 | 5 | 100% | 0 | yes |
 | mi23 | rotate one space clockwise: every unit moves to a bordering space | 1 | 1 | 100% | 1 | yes |
+| mi24 | a unit that takes every space of its side (room, size) | 2 | 2 | 100% | 0 | yes |
 
 ## Combos (the enabler must set off the payoff)
 

@@ -66,5 +66,5 @@ Sentry, Guardian, Hoggy Bank, Fish Hook, Hammer, Mighty Leap, Omni Strike, Uncut
 |---|---|---|
 | Mole (Burrower) | the empty struck space had no side | side mine (v39.py, mi22) |
 | Wiseclock | "rotate one space clockwise": the move had no place | to a bordering space (v39.py, mi23) |
-| The Moon | "replaces all spaces on opponent's side with itself": no board form for a card that fills a side | open, told Kaptain |
+| The Moon, The Limoncello | "replaces all spaces on its side with itself" had no row | stat_set size = its side's spaces (BRIEF Room; v39.py, mi24) |
 | The Moon (Tidal Lock) | "pull small creatures into its orbit": the place is not stated; written as Squirrels moving bordering | open (unsure) |

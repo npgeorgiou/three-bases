@@ -55,14 +55,15 @@
   the texts from the wiki page Special Card Behaviours.
 - Game rules (read/inscryption/game_rules.jsonl): units fight, Bones from deaths, units can be sacrificed, and Blood,
   Bones and Green / Orange / Blue Mox costs, which are needs of the cards whose cost names them.
-- 19 decks in decks.tsv, all read card by card: the four Act II starters, five players' Act II decks, the Act I and Act III
+- Full decks: only 5 exist as text (Steam threads, 20 cards each; counts in decks.tsv). The other 15 are starter decks
+  (where a run begins) and do not count as full. 20 decks in decks.tsv, all read card by card: the four Act II starters, five players' Act II decks, the Act I and Act III
   starters and the eight Kaycee's Mod starters.
 
 ## Quality
 - run.py passes; cases 72 of 72 (23 sigil mechanics, 7 combos, 4 guide decks, 8 faction cases, 17 network lines, shared
   cases); word check, text audit and link audit 0.
 - Unsure records left (no value for one card's need): Build-a-Card, Campfire, Card Recycle, Pliers, Wiseclock, Pack Mule,
-  The Moon (it fills the opponent's side: no board form for that), The Limoncello, Glitched card, Dead Byte, Detonator,
+  The Limoncello, Glitched card, Dead Byte, Detonator,
   Energy Conduit, Tidal Lock ("pulls small creatures into its orbit": no place stated), Trinket Bearer, Satisfies Ring Trial, Bell Ringer, Kraken Waterborne, Mox Sigils, Cat and Child 13 (a count
   across battles).
 - Energy ramp (Energy Bot, Energy Conduit, Extra Battery, Hrokkall) is concept base_resource_gain, as mana ramp in the other

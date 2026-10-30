@@ -150,12 +150,12 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: duelyst 2463 pairs, e.g. Abhorrent Unbirth -> Unseven; faeria 931 pairs, e.g. Feed the Forest -> Long-horned Yak; inscryption 489 pairs, e.g. Gem Fiend -> Explode Bot; monster_train 302 pairs, e.g. Little Fade -> Primordium; runeterra 11118 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 264 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- sacrifice: duelyst 1574 pairs, e.g. Abhorrent Unbirth -> Unseven; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Explode Bot; monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5632 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- self_destruct: duelyst 692 pairs, e.g. Wind Dervish -> Khanuum-ka; faeria 576 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 350 pairs, e.g. Gem Fiend -> Explode Bot; monster_train 252 pairs, e.g. Little Fade -> Primordium; runeterra 6575 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Dreadful Keepers
-- revive: duelyst 153 pairs, e.g. Rex -> Fog; inscryption 27 pairs, e.g. Necromancer -> Explode Bot; runeterra 886 pairs, e.g. Chronobreak -> Bladepierced Revenant
-- removal: duelyst 512 pairs, e.g. Rasha's Curse -> Khanuum-ka; faeria 131 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Explode Bot; monster_train 41 pairs, e.g. Shardtail Queen -> Primordium; runeterra 2034 pairs, e.g. Kindred's Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
-- ping: duelyst 512 pairs, e.g. Kujata -> Khanuum-ka; faeria 385 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 135 pairs, e.g. QU177 (Beast Form) -> Shield Latcher; runeterra 3703 pairs, e.g. Anivia -> Bladepierced Revenant; stormbound 176 pairs, e.g. Acid Greenhorns -> Green Prototypes
+- destroy: duelyst 2463 pairs, e.g. Abhorrent Unbirth -> Unseven; faeria 931 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 489 pairs, e.g. Mage Pupil -> Bomb Latcher; monster_train 302 pairs, e.g. Little Fade -> Primordium; runeterra 11118 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 264 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- sacrifice: duelyst 1574 pairs, e.g. Abhorrent Unbirth -> Unseven; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Master Bleene -> Bomb Latcher; monster_train 295 pairs, e.g. Primordium -> Devourer of Death; runeterra 5632 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- self_destruct: duelyst 692 pairs, e.g. Fireblaze Obelysk -> Khanuum-ka; faeria 576 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 350 pairs, e.g. Mage Pupil -> Bomb Latcher; monster_train 252 pairs, e.g. Little Fade -> Primordium; runeterra 6575 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Azure Hatcher
+- revive: duelyst 153 pairs, e.g. Rex -> Fog; inscryption 27 pairs, e.g. Necromancer -> Bomb Latcher; runeterra 886 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant
+- removal: duelyst 512 pairs, e.g. Rasha's Curse -> Khanuum-ka; faeria 131 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Bomb Latcher; monster_train 41 pairs, e.g. Wicked Blaze -> Primordium; runeterra 2034 pairs, e.g. Kindred's Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Snowmasons
+- ping: duelyst 512 pairs, e.g. Catalyst Quillbeast -> Nekomata; faeria 385 pairs, e.g. Flame Thrower -> Laya, Lady of Sorrows; inscryption 135 pairs, e.g. QU177 (Beast Form) -> Shield Latcher; runeterra 3703 pairs, e.g. Anivia -> Bladepierced Revenant; stormbound 176 pairs, e.g. Acid Greenhorns -> Marked as Prey
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -233,7 +233,7 @@ select distinct card from flat_do where act='copy_keywords'
 - monster_train Hellhorned: temporary_buff (11), block_armor (12), damage_prevention (12), on_damaged (13), count_payoff (21)
 - monster_train Awoken: on_lifegain (4), counterattack (7), regeneration (4), draw (11), heal (11)
 - monster_train Stygian Guard: discard (6), on_spell (9), retain (4), stat_loss (5), damage_over_time (11)
-- monster_train Umbra: lifesteal (4), on_sacrifice (14), shield (7), board_limit (4), overload_debt (4)
+- monster_train Umbra: lifesteal (4), on_sacrifice (14), shield (7), overload_debt (4), tribal (18)
 - monster_train Melting Remnant: other_death_trigger (8), countdown (15), self_destruct (16), cost_set (6), delayed (15)
 - monster_train Wurmkin: cost_type (10), resource_gain (23), summon (4), damage_over_time (8), lanes (27)
 - monster_train Clanless: direct_damage (5), banish (10), turn_end (7), cant_attack (5), passive (20)

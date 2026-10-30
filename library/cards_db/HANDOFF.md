@@ -21,6 +21,19 @@
 - Don't trust a passing count or a few lines: look at what a line SAYS in network.html, both directions, as a player.
 - If a step here or in PROCESS seems to force a loop, stop and ask Kaptain instead of working around it.
 
+**The order that saves the most time (Inscryption, 29 Oct 2026: done the long way it took three fix rounds, v36, v38, v39,
+and about ten rebuilds). Each check below is cheap and found errors that later cost a whole round:**
+1. Before readers: every card of every guide deck is a card of the game (`audit_links.py` check 5 on decks.tsv). If not,
+   the source is not whole: build the supplement first. Inscryption's merged and missing cards forced a second reading.
+2. Before readers: each deck is FULL (PROCESS 2.9): its copies add up to the game's deck size, with the counts and the size
+   written in its source. A starter deck or a guide's core cards is not a full deck; mark it so.
+3. Before readers: read 20 cards' source boxes field by field (special behaviours, tabs, second boxes on a page) and their
+   keyword definitions; a keyword entry that only points elsewhere has no definition yet (audit_links check 6).
+4. After readers, before any fix: one pass that lists everything wrong: all decks (deck_read_<game>.md), the 20-card check
+   (yourself when Kaptain does not know the game), audit_text, audit_links. Then one fix script, one rebuild, one case per
+   family. Fixing as you find costs a rebuild per fix and finds the same family again later.
+5. Look at the networks in network.html (network_page.py), not through ad-hoc scripts: it shows both directions at once.
+
 1. Read PROCESS.md in this order: "Why the first three games went wrong", "How to work", "Rules that are never broken",
    "Writing data the same way in every game", then "Steps" and follow them in order, once. Read "Links the deck networks
    showed missing" and "Think like a player" before step 2.9.

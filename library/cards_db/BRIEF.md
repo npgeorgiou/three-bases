@@ -159,6 +159,10 @@ AMOUNT   a number, or `{"x": x, "of": TARGET, "attr": attr, "event": EVENT, "spa
 - Resources on the board (wells, springs): collecting one = event harvests, actor the unit, object the space (like strikes);
   emptying / refilling = empty_resource / refill_resource on the spaces.
 - "In its place", "where this died" = the summon's "to" `{"kind": "position", "with": [same_space of {"pick": "it"}]}`.
+- Room: how many spaces a unit takes = stat size (Monster Train's unit capacity); "takes up every space on its side" =
+  stat_set size `{"x": "count", "of": {"kind": "position", "side": "mine", "zone": "board"}}` (it frees them when it leaves).
+  Full: "if your board is full" / "no empty space" = COND have of `{"kind": "position", "side": "mine", "with": [state
+  empty]}` op not; a board with a set number of units counts them (Runeterra: count of my units ge 6).
 
 ## Keyword entries (category keyword)
 A keyword's record says what the keyword means, so that every card with it inherits that meaning. Four kinds:

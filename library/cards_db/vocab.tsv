@@ -490,7 +490,7 @@ act	capacity_change	change how many units a lane or floor holds (params amount; 
 act	gold_gain	gain gold, a currency kept between battles for shops (params amount)	shop_gold		28 Oct 2026, v22 (Monster Train)
 act	return_card	put a card back into hand from the discard, exhausted or removed zone (zone = where it goes)	recycle		28 Oct 2026, v22 (Monster Train)
 kind	lane_resource	a resource stored in a lane or floor and spent by cards (Monster Train Echo)			28 Oct 2026, v22 (Monster Train)
-attr	size	the room a unit takes in its lane (Monster Train Capacity of a unit)			28 Oct 2026, v22 (Monster Train)
+attr	size	the room a unit takes: spaces of a grid or row, or capacity of a floor or lane (Monster Train Capacity of a unit; Inscryption The Moon takes its whole side)			28 Oct 2026, v22 (Monster Train)
 param	size	change or value of size			28 Oct 2026, v22 (Monster Train)
 position	same_lane	"in the same lane, floor or location as of (""on this floor"")"			28 Oct 2026, v22 (Monster Train)
 position	front_of_lane	"the front of its side's line in the lane of of: the unit that fights first (""the front enemy unit"")"			28 Oct 2026, v22 (Monster Train)

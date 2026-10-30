@@ -210,7 +210,11 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
 9. **Deck networks** (`network_page.py` draws every deck in decks.tsv and cases/decks.tsv; `ask.py <game> network "<deck>"`).
    First read ALL decks and write every wrong or missing line into `deck_read_<game>.md` (deck, from, to, what is wrong);
    only then group them into families and fix each family once:
-   find full decks first (players' guides, deck sites, deck codes; full lists, not a guide's core cards). Read at least 10
+   find full decks first (players' guides, deck sites, deck codes; full lists, not a guide's core cards). A full deck has
+   every copy: the counts add up to the deck size the game sets (Inscryption Act II battle decks: 20), and the source
+   column says the counts and the size; decks.tsv lists each card once. A roguelike's starter deck (Inscryption Act I,
+   Kaycee's Mod: 4 cards and a side deck) is where a run starts: keep it, marked as a starter, but it does not count
+   toward the 10 full decks; when fewer than 10 full decks exist as text, say so in RESULTS.md. Read at least 10
    decks card by card, as a player: for each card, what does it need (level-up, trigger, condition, stats, keywords) and
    which cards in the deck give it that; what does it give, and to whom; is every line's reason true by the texts? Kaptain
    found 15 gaps in 9 decks that 500 passing cases had not shown, and Claude's own read of 9 decks found 8 more families.
@@ -398,6 +402,12 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
    now says "is the Bell Tentacle it names" (ni16). A trigger on an enemy attacking my unit took the side of the unit
    attacked, so my own attacks fed it "by fighting": attacks, strikes, fights and challenges take the doer's side (refs.py
    DONE_BY, ni17). A network case's deck column may be a card list when no deck has the cards.
+16. **Room and full sides (v40, every positional game).** The Moon "replaces all spaces on its side with itself": a unit's
+   room is stat size (Monster Train's unit capacity), here the count of its side's spaces; "board full" = no empty space
+   on that side (BRIEF "The board", Room). Size changes are concept board_limit.
+17. **Decks that were not full.** Inscryption's decks were starters (4-7 cards) and players' cores without counts; Kaptain
+   saw too few cards and lines. Only 5 full 20-card decks exist as text (Steam threads); step 2.9 now says what a full
+   deck is and that starters do not count.
 15. **More or faster base resource** (Kaptain 29 Oct 2026: not linked to costs, but findable): concept base_resource_gain
    (mana, spell mana, Ember, faeria, Energy; a second resource such as Bones or gems stays resource_gain), `ask.py
    <game> factions base_resource_gain` gives each faction's share, and ask.py analyze names the ramp cards. Cases mx16, ri08.

@@ -222,3 +222,10 @@ Each change: date, what changed, the card that caused it, and which records were
 - Duelyst: fixes/duelyst/v38.py (MECHAZ0R build count; Spellsword's four swords); cases ndu01-ndu30, du31-du34;
   CONCEPTS_duelyst.md; deck_read_duelyst.md.
 
+## 30 Oct 2026, v40 (Inscryption: room on the board, full decks)
+- BRIEF "The board": Room (stat size = spaces a unit takes; "board full" = no empty space on that side); vocab size widened;
+  flat.py: size changes are board_limit. Inscryption: The Moon and The Limoncello take every space of their side
+  (fixes/inscryption/v39.py, case mi24).
+- decks.tsv: Inscryption players' decks carry their counts (20 cards each); BEAR's 20-card deck added; starters marked.
+  PROCESS 2.9: what a full deck is. HANDOFF: the order that saves the most time.
+

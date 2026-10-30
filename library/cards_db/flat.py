@@ -166,6 +166,7 @@ RULES = [
     ('aoe_damage', 'flat_do', "act='damage' and on_pick='all'"),
     ('direct_damage', 'flat_do', "act in ('damage','excess_damage') and on_kind in ('player','any')"),
     ('ping', 'flat_do', "act='damage' and params like 'amount=1.0%'"),
+    ('board_limit', 'flat_do', "act in ('stat_change','stat_set') and (params like 'size=%' or params like '%;size=%')"),  # the room a unit takes (Monster Train size, The Moon's whole side)
     ('self_destruct', 'flat_do', "act='kill' and on_pick='self'"),
     ('sacrifice', 'flat_do', "act='kill' and on_side='mine' and coalesce(on_pick,'')!='self'"),
     ('evasion', 'flat_do', "act='cant' and param_event='blocks' and on_side='enemy'"),
