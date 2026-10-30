@@ -93,3 +93,55 @@ faeria	741445	KW	record_right	Claude: "kill a creature in combat": origin combat
 faeria	741244	V20	record_right	Claude: "each turn you dealt damage ... this game": event_count over different rounds	29 Oct 2026
 faeria	741422	V07	record_right	Claude: "If you kill it": the copy is made only if the damage killed it (if_done)	29 Oct 2026
 faeria	3000005	V02	record_right	Claude: not a draw: "Draw a free Safeguard" labels the choice; the card adds it to hand (create)	29 Oct 2026
+sts1	7000047	SS18	record_right	Claude: "whenever you enter Wrath" is the given_keyword event with keyword Wrath, not an act	30 Oct 2026
+sts1	7000067	SS01	record_right	Claude: the words name the time Block would be removed, no trigger: the record says Block is not removed	30 Oct 2026
+sts1	7000092	KW	record_right	Claude: "exhaust" is the act exhaust on a card (BRIEF Game words: Slay the Spire), not the card's own Exhaust keyword	30 Oct 2026
+sts1	7000123	KW	record_right	Claude: "exhaust" is the act exhaust on a card (BRIEF Game words: Slay the Spire), not the card's own Exhaust keyword	30 Oct 2026
+sts1	7000148	KW	record_right	Claude: "exhaust" is the act exhaust on a card (BRIEF Game words: Slay the Spire), not the card's own Exhaust keyword	30 Oct 2026
+sts1	7000194	SS14	record_right	Claude: "at the end of this turn" is the turn_end ability with limit next_time	30 Oct 2026
+sts1	7000195	V09	record_right	Claude: "from the discard pile" is the zone discard, no discarding	30 Oct 2026
+sts1	7000216	KW	record_right	Claude: "exhaust" is the act exhaust on a card (BRIEF Game words: Slay the Spire), not the card's own Exhaust keyword	30 Oct 2026
+sts1	7000264	KW	record_right	Claude: "this Curse" names the card itself, which is a Curse by its type	30 Oct 2026
+sts1	7000303	KW	record_right	Claude: "exhaust" is the act exhaust on a card (BRIEF Game words: Slay the Spire), not the card's own Exhaust keyword	30 Oct 2026
+sts1	7000320	KW	record_right	Claude: "exhaust" is the act exhaust on a card (BRIEF Game words: Slay the Spire), not the card's own Exhaust keyword	30 Oct 2026
+sts1	7000328	KW	record_right	Claude: "exhaust" is the act exhaust on a card (BRIEF Game words: Slay the Spire), not the card's own Exhaust keyword	30 Oct 2026
+sts1	7000370	KW	record_right	Claude: "exhaust" is the act exhaust on a card (BRIEF Game words: Slay the Spire), not the card's own Exhaust keyword	30 Oct 2026
+sts1	7000387	V09	record_right	Claude: "from the discard pile" is the zone discard, no discarding	30 Oct 2026
+sts1	7000414	KW	record_right	Claude: "exhaust" is the act exhaust on a card (BRIEF Game words: Slay the Spire), not the card's own Exhaust keyword	30 Oct 2026
+sts1	7000416	SS07	record_right	Claude: "start each combat with this card in your hand" is Innate given to the chosen card for the run	30 Oct 2026
+sts1	7000417	SS07	record_right	Claude: "start each combat with this card in your hand" is Innate given to the chosen card for the run	30 Oct 2026
+sts1	7000418	SS07	record_right	Claude: "start each combat with this card in your hand" is Innate given to the chosen card for the run	30 Oct 2026
+sts1	7000431	KW	record_right	Claude: "exhaust" is the act exhaust on a card (BRIEF Game words: Slay the Spire), not the card's own Exhaust keyword	30 Oct 2026
+sts1	7000431	SS17	record_right	Claude: the record has the exhausted event ("whenever you exhaust a card"), which is what the words mean	30 Oct 2026
+sts1	7000443	KW	record_right	Claude: "exhaust" is the act exhaust on a card (BRIEF Game words: Slay the Spire), not the card's own Exhaust keyword	30 Oct 2026
+sts1	7000443	SS17	record_right	Claude: the record has the exhausted event ("whenever you exhaust a card"), which is what the words mean	30 Oct 2026
+sts1	7000461	KW	record_right	Claude: gaining Strength at rest sites changes the run: run_rule	30 Oct 2026
+sts1	7000466	KW	record_right	Claude: "break an enemy's Block" is the damaged event on the enemy; Block is not given	30 Oct 2026
+sts1	7000489	KW	record_right	Claude: "exhaust" is the act exhaust on a card (BRIEF Game words: Slay the Spire), not the card's own Exhaust keyword	30 Oct 2026
+sts1	7000489	KW	record_right	Claude: "status cards" is the type Status; Unplayable names the rule it lifts (can play)	30 Oct 2026
+sts1	7000496	KW	record_right	Claude: "a special curse" is a run reward: run_rule	30 Oct 2026
+sts1	7000550	KW	record_right	Claude: "exhaust" is the act exhaust on a card (BRIEF Game words: Slay the Spire), not the card's own Exhaust keyword	30 Oct 2026
+sts1	7000573	KW	record_right	Claude: leaving Calm has no value yet: proposal exit_stance (unsure)	30 Oct 2026
+sts1	7000581	KW	record_right	Claude: "Divinity Stance" is give_keyword Divinity; Stance is the family word	30 Oct 2026
+sts1	7000590	KW	record_right	Claude: Shiv+ is the upgraded Shiv, a card the record names	30 Oct 2026
+sts1	7000594	KW	record_right	Claude: "exhaust" is the act exhaust on a card (BRIEF Game words: Slay the Spire), not the card's own Exhaust keyword	30 Oct 2026
+sts1	7000615	KW	record_right	Claude: "Surrounded" is a localization tag at the end of the text, no effect	30 Oct 2026
+sts1	7000755	KW	record_right	Claude: an enemy action's name holds the word; the action is written by its kind (attack, debuff, buff)	30 Oct 2026
+sts1	7000758	KW	record_right	Claude: an enemy action's name holds the word; the action is written by its kind (attack, debuff, buff)	30 Oct 2026
+sts1	7000761	KW	record_right	Claude: an enemy action's name holds the word; the action is written by its kind (attack, debuff, buff)	30 Oct 2026
+sts1	7000762	KW	record_right	Claude: an enemy action's name holds the word; the action is written by its kind (attack, debuff, buff)	30 Oct 2026
+sts1	7000763	KW	record_right	Claude: an enemy action's name holds the word; the action is written by its kind (attack, debuff, buff)	30 Oct 2026
+sts1	7000764	KW	record_right	Claude: an enemy action's name holds the word; the action is written by its kind (attack, debuff, buff)	30 Oct 2026
+sts1	7000765	KW	record_right	Claude: an enemy action's name holds the word; the action is written by its kind (attack, debuff, buff)	30 Oct 2026
+sts1	7000769	KW	record_right	Claude: an enemy action's name holds the word; the action is written by its kind (attack, debuff, buff)	30 Oct 2026
+sts1	7000781	V06	record_right	Claude: an enemy's action named Heal (unknown amount) or a run rule (less healing after bosses), not a card heal	30 Oct 2026
+sts1	7000787	KW	record_right	Claude: an enemy action's name holds the word; the action is written by its kind (attack, debuff, buff)	30 Oct 2026
+sts1	7000800	KW	record_right	Claude: an enemy action's name holds the word; the action is written by its kind (attack, debuff, buff)	30 Oct 2026
+sts1	7000801	KW	record_right	Claude: an enemy action's name holds the word; the action is written by its kind (attack, debuff, buff)	30 Oct 2026
+sts1	7000806	KW	record_right	Claude: an enemy action's name holds the word; the action is written by its kind (attack, debuff, buff)	30 Oct 2026
+sts1	7000807	V12	record_right	Claude: an enemy action named Revive with no stated effect	30 Oct 2026
+sts1	7000867	V06	record_right	Claude: an enemy's action named Heal (unknown amount) or a run rule (less healing after bosses), not a card heal	30 Oct 2026
+sts1	7000884	KW	record_right	Claude: "exhaust" is the act exhaust on a card (BRIEF Game words: Slay the Spire), not the card's own Exhaust keyword	30 Oct 2026
+sts1	7000078	KW	record_right	Claude: the count is of Channel uses; which Orb was channeled has no value (fixes/sts1/v49.py, RESULTS.md)	30 Oct 2026
+sts1	7000366	KW	record_right	Claude: the count is of Channel uses; which Orb was channeled has no value (fixes/sts1/v49.py, RESULTS.md)	30 Oct 2026
+sts1	7000439	KW	record_right	Claude: "obtain a Curse" from a chest is a run reward: run_rule	30 Oct 2026

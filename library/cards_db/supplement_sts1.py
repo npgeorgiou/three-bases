@@ -17,10 +17,14 @@ FULL; cards and their powers share card codes, so a partial supplement would dro
 - Keywords the card has itself, written as a sentence of their own (Exhaust., Ethereal., Innate., Retain., Unplayable.), go
   in the Keywords field (PROCESS "A card list that looked whole" 3), so each card takes the keyword's record.
 - Powers (the game's statuses, category status) are keywords when a text names them and no glossary keyword or card holds
-  them already: Plated Armor, Mark, Hex, Stasis, Surrounded (category keyword). Left out (glossary terms no card uses,
+  them already: Plated Armor, Mark, Hex, Stasis, Surrounded, Metallicize (a potion gives it; category keyword). Left out (glossary terms no card uses,
   PROCESS 0.5): powers that only repeat a glossary keyword (Strength, Weakened = Weak ...), powers that only repeat their
   card's text (Barricade, Demon Form ...), powers no text names (enemy powers such as Curl Up, Thievery), and the glossary
   keywords Opener (a Slay the Spire 2 word) and Vigor, which no text uses.
+- One name, two entries (PROCESS "Importing Duelyst" 2): each character's Strike and Defend are "Strike (Ironclad)" ...
+  (the wiki's own page names); two monsters of one name take their kind from the game's code ("Louse (defensive)",
+  "Slaver (blue)"); the event Golden Idol is "Golden Idol (event)" (the relic keeps the name). A keyword may share a card's
+  name (Shiv, Burn, Wound).
 - Card kinds (Attack, Skill, Power, Status, Curse; the source's type) are the cards' types: "Whenever you play an Attack" is
   filter type Attack, never Runeterra's category skill.
 Writes supplement/sts1.jsonl in the library's entities columns; ids from 7000001 in library order (source.py).
@@ -31,7 +35,7 @@ OUT = os.path.join(HERE, 'supplement', 'sts1.jsonl')
 DB = os.path.join(HERE, '..', 'three-bases-library.sqlite')
 COLS = ['id', 'game', 'ext_id', 'name', 'category', 'source_type', 'edition', 'faction', 'subtypes', 'rarity', 'cost', 'cost_num',
         'stats', 'text', 'extra', 'variants']
-KEEP_POWERS = {'Plated Armor', 'Mark', 'Hex', 'Stasis', 'Surrounded'}
+KEEP_POWERS = {'Plated Armor', 'Mark', 'Hex', 'Stasis', 'Surrounded', 'Metallicize'}
 DROP_KEYWORDS = {'Opener', 'Vigor'}
 KWS = ['Unplayable', 'Innate', 'Ethereal', 'Retain', 'Exhaust']
 RELICS = {  # Module:Relics/data, markup removed
@@ -110,6 +114,16 @@ for n, row in enumerate(c.execute(f"select {','.join(COLS)} from entities where 
         r['category'] = 'keyword'
     if r['category'] == 'keyword' and r['name'] in DROP_KEYWORDS: continue
     out.append(r)
+SAME = {}
+for r in out:
+    if r['category'] != 'keyword': SAME.setdefault(r['name'], []).append(r)
+MON = {'FUZZYLOUSEDEFENSIVE': 'defensive', 'FUZZYLOUSENORMAL': 'normal', 'SLAVERBLUE': 'blue', 'SLAVERRED': 'red'}
+for n, rs in SAME.items():
+    if len(rs) < 2: continue
+    for r in rs:
+        if r['category'] == 'spell': r['name'] = f"{n} ({r['faction']})"
+        elif r['category'] == 'monster': r['name'] = f"{n} ({MON[r['ext_id']]})"
+        elif r['category'] == 'event': r['name'] = f'{n} (event)'
 with open(OUT, 'w') as f:
     for r in out: f.write(json.dumps(r, ensure_ascii=False) + '\n')
 print(f'{len(out)} entries -> {OUT}')

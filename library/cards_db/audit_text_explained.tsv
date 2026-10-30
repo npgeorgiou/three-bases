@@ -66,3 +66,23 @@ duelyst	Wraithling Swarm	nearby	"nearby each other" places the three Wraithlings
 duelyst	Stunned	stun	the status itself ("Stunned minions lose their next action"): its rows are what a stunned minion can't do
 duelyst	Wall	dispel	"removed if dispelled": no event for being dispelled yet (proposal silenced, unsure)
 inscryption	Campfire	nearby	"gathered around a fire" is the scene of a run event, no board position
+sts1	Accuracy	deal damage	"Shivs deal 4 additional damage" is increase_effect (amount 4) on the Shivs: more of the damage they deal
+sts1	Phantasmal Killer	deal damage	increase_effect (100 percent) on my Attacks next turn: double damage
+sts1	Wreath of Flame	deal damage	increase_effect on my next Attack: more of its damage
+sts1	Akabeko	deal damage	increase_effect on my first Attack each combat: more of its damage
+sts1	Paper Krane	deal damage	Weak works harder on enemies (increase_effect on Weak), no damage dealt
+sts1	Pen Nib	deal damage	increase_effect on every 10th Attack: double damage
+sts1	Strike Dummy	deal damage	increase_effect on cards containing Strike: more of their damage
+sts1	Wrist Blade	deal damage	increase_effect on 0-cost Attacks: more of their damage
+sts1	Pen Nib	double	the doubling is increase_effect 100 percent
+sts1	Phantasmal Killer	double	the doubling is increase_effect 100 percent
+sts1	Sacred Bark	double	the doubling is increase_effect on potions
+sts1	Ascension Mode Level 20	double	"Double Boss" changes the run: run_rule
+sts1	Unraveling	random	targets chosen at random are part of play_card (the game picks them); no choice to describe
+sts1	Entropic Brew	random	random potions: create with category item, pick random
+sts1	Snecko Oil	random	random costs have no value yet (proposal random_cost, unsure)
+sts1	Discovery+	random	the 3 cards offered are random (choose among options 3); the made card is chosen
+sts1	Confused	random	random costs have no value yet (proposal random_value, unsure)
+sts1	Mystic	heal	an enemy action named Heal with no amount: written as the enemy's buff
+sts1	Ascension Mode Level 5	heal	less healing after bosses changes the run: run_rule
+sts1	Flex	this turn	"at the end of this turn" is the turn_end ability with limit next_time

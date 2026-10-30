@@ -45,3 +45,4 @@
 {"id": 7000715, "name": "Plated Armor", "category": "keyword", "text": "At the end of your turn, gain X Block. Receiving unblocked attack damage reduces Plated Armor by 1."}
 {"id": 7000730, "name": "Stasis", "category": "keyword", "text": "On death, is returned to your hand."}
 {"id": 7000736, "name": "Surrounded", "category": "keyword", "text": "Receive 50% more damage if attacked from behind. Use targeting cards or potions to change your orientation."}
+{"id": 7000701, "name": "Metallicize", "category": "keyword", "text": "At the end of your turn, gain X Block."}

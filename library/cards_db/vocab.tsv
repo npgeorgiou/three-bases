@@ -868,3 +868,4 @@ act	run_rule	changes how the run works outside fights: map, rest sites, shops, r
 event	run_event	something happens on the run between fights: resting, entering a room, a shop or a rest site, opening a chest, climbing a floor	run_structure		30 Oct 2026, v49 (Slay the Spire)
 category	item	an item the player carries and uses up (Slay the Spire potions, Inscryption items)	items_consumables		30 Oct 2026, v49 (Slay the Spire)
 x	all_of	all of what the target has ("lose all your Gold", "give all Gold")			30 Oct 2026, v49 (Slay the Spire)
+keyword	Metallicize	concept of having, using or giving this keyword (Slay the Spire: gains Block at the end of each turn; concept is Claude's)	block_armor		30 Oct 2026, v49 (Slay the Spire)
