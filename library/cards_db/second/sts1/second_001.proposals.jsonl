@@ -1,0 +1,12 @@
+{"id": 7000411, "field": "when", "need": "elite_enemy_state"}
+{"id": 7000461, "field": "when", "need": "rest_site_option"}
+{"id": 7000471, "field": "act", "need": "keep_energy_between_turns"}
+{"id": 7000491, "field": "act", "need": "shop_discount_percent"}
+{"id": 7000501, "field": "act", "need": "reward_chance_change"}
+{"id": 7000521, "field": "when", "need": "normal_enemy_state"}
+{"id": 7000541, "field": "if", "need": "elite_enemy_state"}
+{"id": 7000611, "field": "on", "need": "orb_slot"}
+{"id": 7000830, "field": "params", "need": "all_gold"}
+{"id": 7000840, "field": "params", "need": "unstated_amount"}
+{"id": 7000870, "field": "act", "need": "tougher_elites"}
+{"id": 7000880, "field": "act", "need": "elite_movesets"}
