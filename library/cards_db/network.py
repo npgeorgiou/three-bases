@@ -326,6 +326,10 @@ def lines_of(c, game):
         if o_ and o_ <= {'bump', 'blocking_emerging'}: bump_abs[ab_] = a_
     plain_hits, keepers, cheap_abs = special_abilities(c)
     kw_adds = {ab for _, ab, *_ in keyword_adders(c, game)}  # "apply 1 more Poison" adds to others' Poison: it applies none alone
+    gv = collections.defaultdict(set)  # where each card's given abilities go: to my player or itself, or to other cards
+    for a_, k_, s_, p_ in c.execute("select card, on_kind, on_side, on_pick from flat_do where act='give_ability' and origin='own'"):
+        gv[a_].add((k_ == 'player' and s_ in ('mine', None)) or p_ in ('self', 'owner'))
+    self_given = {a_ for a_, x in gv.items() if x == {True}}
     # what a card does to the things a happening left ("revive the strongest dead ally": it brings back what died)
     state_use = {}
     for a_, ab_, act_, kw_ in c.execute("""select card, ability, act, keyword_ref from flat_do where origin='own' and
@@ -357,6 +361,8 @@ def lines_of(c, game):
         if role == 'state' and h == 'moves' and origin == 'uses_keyword' and pick == 'self' and (card, via) in gives_kw:
             kwcond = True; kind, side, pick = gives_kw[(card, via)][0], 'mine', None  # the holder is what the card gives it to
         cost = origin == 'game' and role == 'condition'  # a cost the game's rules set (Inscryption Bones, Blood, Mox): the card needs it
+        if origin == 'gives' and card in self_given: origin = 'own'  # "Last Breath: the next time an Ephemeral ally attacks, revive
+        # me": an ability it gives its own player or itself is its own need (Hecarim's Ephemeral attackers set off Shark Chariot)
         if (origin != 'own' and not kwcond and not cost) or \
            (pick == 'self' and h in ('played', 'summoned')) or pick == 'actor_self': continue  # "I've killed 4": only the card itself
         if ab in helps or (role == 'trigger' and (ab in doer_helps or ab in bump_abs)): continue  # "heal the Mech that kills": it helps the killer
@@ -1683,6 +1689,26 @@ def network(c, game, ids, broad=True):
               actor_help_lines(c, game, nodes), doer_help_lines(c, game, nodes), self_harm_lines(c, game, nodes),
               state_giver_lines(c, game, nodes)):
         for k, ls in f.items(): lines[k] += ls
+    # a need the maker shares with the card it makes is the made card's (The Iron Conquest's stage III is its skill Undying
+    # Revenge: Soul Cleave's dead ally feeds the skill, not the landmark too)
+    mk_ = collections.defaultdict(set)
+    for a, b in c.execute(f"select card, made from flat_made where card in ({','.join('?' * len(nodes))})", list(nodes)):
+        if b in nodes and a != b and (c.execute('select category from card where id=?', (b,)).fetchone() or [''])[0] == 'ability':
+            mk_[a].add(b)  # a skill it casts: the card's text repeats the skill's effect (a unit it makes has needs of its own)
+    plain = lambda y, t: y.replace(mechanics.name(c, t), '*')  # the reason without the card's own name
+    for (x, a) in list(lines):
+        if x in mk_.get(a, ()):  # its own skill feeds the need the skill itself has: one need, said once (on the skill)
+            own = {plain(l[2], x) for (y, z), ls in lines.items() if z == x for l in ls}
+            keep = [l for l in lines[(x, a)] if l[0] not in ('type', 'waits', 'levels') or plain(l[2], a) not in own]
+            if keep: lines[(x, a)] = keep
+            else: del lines[(x, a)]
+            continue
+        same = {plain(l[2], b) for b in mk_.get(a, ()) if b != x for l in lines.get((x, b), ())}
+        if same and a not in mk_.get(x, ()):
+            keep = [l for l in lines[(x, a)] if l[0] not in ('type', 'waits', 'levels') or plain(l[2], a) not in same]  # its needs
+            # only: help on the maker itself (more power, a move, a keyword) is still help on it
+            if keep: lines[(x, a)] = keep
+            else: del lines[(x, a)]
     fam = families(c, nodes)
     lines = collections.defaultdict(list, {(a, b): [l for l in ls if l[0] == 'levelsinto'] if fam[a] == fam[b] else ls
                                            for (a, b), ls in lines.items()})

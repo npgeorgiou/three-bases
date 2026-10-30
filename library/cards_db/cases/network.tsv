@@ -245,3 +245,8 @@ n244	runeterra	Hecarim Zed	Zed	Ghastly Band	none	another attack	Kaptain 30 Oct 2
 n245	runeterra	Hecarim Zed	Mark of the Isles	Hecarim	line	makes your units Ephemeral	Kaptain 30 Oct 2026: it makes an ally Ephemeral, Hecarim counts Ephemeral attackers
 n246	runeterra	Elu Thresh	Thresh	Hecarim	none		Claude 30 Oct 2026: Thresh is no Ephemeral attacker
 n247	runeterra	Hecarim Zed	Soul Cleave	Undying Revenge	line	brings them back	Kaptain 30 Oct 2026: Soul Cleave kills an ally, Undying Revenge revives the strongest dead ally
+n248	runeterra	Hecarim Zed	Glimpse Beyond	The Iron Conquest	none	brings them back	Kaptain 30 Oct 2026: the revive is its skill Undying Revenge's; the line goes to the skill only
+n249	runeterra	Hecarim Zed	Dragon Ambush	Dragonling	line	summons	Kaptain 30 Oct 2026: "start a free attack with 2 Dragonlings" summons them
+n250	runeterra	Hecarim Zed	Hecarim	Shark Chariot	line		Kaptain 30 Oct 2026: Hecarim's attacking Spectral Riders are Ephemeral attackers: they revive Shark Chariot
+n251	runeterra	Hecarim Zed	Shark Chariot	Zed	none	makes it attack	Kaptain 30 Oct 2026: Shark Chariot revives itself attacking, it makes no other unit attack
+n252	runeterra	Hecarim Zed	Redeemed Prodigy	Shark Chariot	line		Kaptain 30 Oct 2026: its attacking Ghastly Band is an Ephemeral attacker: it revives Shark Chariot

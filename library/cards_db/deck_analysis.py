@@ -127,11 +127,15 @@ def analyze(c, game, text):
     rows = c.execute(f"select card, ability, role, happening, side, keyword, pick, origin, kind, obj_with, actor_kind, actor_with from flat_ref where (origin!='game' or role='condition') and card in ({marks})", deck).fetchall()
     lvl = {a for (a,) in c.execute(f"select ability from flat_do where act='level_up' and card in ({marks})", deck)}
     makes = collections.defaultdict(set); uses = []
+    gv = collections.defaultdict(set)  # an ability a card gives its own player or itself is its own need (Shark Chariot's Last Breath)
+    for a_, k_, s_, p_ in c.execute(f"select card, on_kind, on_side, on_pick from flat_do where act='give_ability' and origin='own' and card in ({marks})", deck):
+        gv[a_].add((k_ == 'player' and s_ in ('mine', None)) or p_ in ('self', 'owner'))
+    self_given = {a_ for a_, x in gv.items() if x == {True}}
     for card, ab, role, h, side, kw, pick, origin, kind, mw, ak, aw in rows:
         if h in ('mana_refilled', 'resource_gained') and kind in RESOURCE_KINDS: h = 'mana_refilled@' + kind  # which resource
         elif h == 'resource_gained': continue
         if role == 'makes': makes[(h, kw)].add((card, side, kind, pick, mw))
-        elif origin in ('own', 'game') and not (pick == 'self' and h in ('played', 'summoned')):
+        elif (origin in ('own', 'game') or (origin == 'gives' and card in self_given)) and not (pick == 'self' and h in ('played', 'summoned')):
             uses.append((card, ab, role, h, 'mine' if pick == 'self' else side, kw, pick, kind, mw, ak, aw))
     # a card is everything it makes: what Zed's Living Shadow does, Zed brings to the deck
     mk = {b: a for a, b in c.execute(f"select card, made from flat_made where card in ({marks}) and made not in ({marks})", deck + deck)}
