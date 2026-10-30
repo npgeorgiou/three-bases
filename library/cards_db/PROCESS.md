@@ -615,6 +615,19 @@ point is answered; the rule behind it is never looked at across the games. Do th
 Another chat's game: the dump and the diff show what a shared fix did there; tell Kaptain and that chat, change none of
 its records or cases.
 Working smarter on a review (lessons, 30 Oct 2026):
+- A line's label must say why both cards belong together, with both names where "it" is unclear: "Combat Mech moves units,
+  and Artillery Mech acts on units in a line from it", not "makes units move" (Kaptain, 30 Oct 2026). Use {A} and {B} in a
+  reason; network() fills in the names (moves_said, doer_help_lines). Check help_kind() when a reason's first words change.
+- After the counted fix, read EVERY line of the game's decks once more as a player before reporting: three more errors of
+  the same family were found that way (a card moving only itself, a swap, a card that aims at any space).
+- Finishing a network task always ends with `network_page.py`, a Playwright load of every deck (no script errors, one
+  hover), push, and network.html given to Kaptain.
+- A must-not case whose reason the fix removed from the whole game is flagged as stale: test it on a card-list deck with
+  no other line ("Swap Mech, Flame Shielding", expect none), or keep the reason said by a positive case (ntb6 keeps ntb4).
+- A keyword can have two vocab entries (another game's "Boost" and "into_the_breach:Boost"): the game's own entry wins
+  (network.kw_tree); a lookup with fetchone() and no order picks either.
+- Another chat pushed meanwhile: rebase, take the upstream cards.sqlite, network.html and QUERIES.md, keep both sides of
+  code, rebuild with run.py, run cases/run.py for every game, compare your game's lines with your last dump.
 - Answer Kaptain's questions first and wait; then do all points in one pass: dump, causes, one fix per cause, one rebuild,
   one diff read, one report. No rebuild per point.
 - Trace a wrong line to its rows before guessing: `flat_ref` (needs and makes) and `flat_do` (acts, filters) of both cards

@@ -90,6 +90,9 @@ and about ten rebuilds). Each check below is cheap and found errors that later c
   fix: fixes/into_the_breach/v48.py (families F1-F6), names.tsv drops, patterns S-TB1-3, verdicts and text-audit
   explanations; run.py passes every step. All 20 decks read: families F7-F12 in deck_read_into_the_breach.md, none fixed
   yet. F7 (pushes "enable" weapons aimed by position) is right: Kaptain, 30 Oct 2026, keeps them. F8-F12 fixed by rule
-  (network.py, refs.py), cases ntb1-ntb6, one rebuild, diff read (deck_read_into_the_breach.md "After the fix"). Waiting for
-  Kaptain approved the changed lines (30 Oct 2026); next: his look at network.html.
+  (network.py, refs.py), cases ntb1-ntb6, one rebuild, diff read (deck_read_into_the_breach.md "After the fix"); Kaptain
+  approved the changed lines (30 Oct 2026). Then: move labels name both cards, self-moves, swaps and any-space targets fixed
+  in every game (deck_read F7 notes). Left: Kaptain unsure whether a single-target attack next to the unit (Combat Mech)
+  cares about positions like a line or area weapon does; left as is. Labels in other games still say "it" (Kaptain: no
+  change wanted now). Not done: PROCESS step 4 (CHECK_20_into_the_breach) and step 5.
   Stormbound shows 141 of 145 cases (csb09-csb13, poisoned-unit lines) since the Slay the Spire chat's v49 shared change.

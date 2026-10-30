@@ -76,6 +76,14 @@ Weapons: utility, not damage: pull, push, swap, acid, shields, smoke, fire, free
 - Kai Miller + Arachnoid Injector: Kai's boost secures the kill, the kill creates a friendly spider [4]
 - Laser Mech + Combat Mech: pushes line the Vek up for the piercing beam [5]
 - Laser Mech + Judo Mech: tosses line the Vek up for the piercing beam [5]
+- Jet Mech + Rocket Mech: Aerial Bombs leave Smoke on enemy tiles; Storm Generator makes Smoke damage enemies (deck read)
+- Aegis Mech + Gravity Mech: Spartan Shield turns an enemy's attack onto other enemies, which Vek Hormones adds to (deck read)
+
+## Notes for readers (30 Oct 2026, deck read)
+- Swap Mech's Teleporter swaps places: the unit on the other tile moves too.
+- Statuses put on tiles (Smoke, Fire, Energy Shield, A.C.I.D.) reach the unit standing there.
+- Viscera Nanobots heals the Mech that kills; Vek Hormones needs an enemy to damage another enemy, not my Mechs.
+- Every Mech moves itself each turn: moving itself is no help to another Mech's shot.
 
 ## Mechanics
 The mechanics the guides name, one per line as `name|concept|regex`, and the rules and terms as `# term:` lines. Read by `coverage.py --mechanics` and `key/key.py`.
