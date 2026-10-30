@@ -136,6 +136,15 @@ def matches(c, game, card, kind, withs):
 STATUS_TREES = ('damage_over_time', 'attack_lock', 'disable', 'immobilize', 'debuff', 'temporary_buff', 'shield')  # statuses put on units
 
 
+def state_kw(c, game, state):
+    """the keyword a state value is (vocab meaning = a keyword's name in this game: ephemeral -> Ephemeral), or None"""
+    key = ('state_kw', game, state)
+    if key not in CACHE:
+        m = c.execute("select meaning from vocab where field='state' and value=?", (state,)).fetchone()
+        CACHE[key] = kw_id(c, game, m[0]) if m and m[0] else None
+    return CACHE[key]
+
+
 def printed_kws(c, game):
     """keywords some card of the game has printed; the others are statuses given in play"""
     key = ('printed', game)
@@ -1421,7 +1430,10 @@ def object_help_lines(c, game, nodes, broad):
     for a, origin, ab, kind, w in c.execute(f"""select distinct card, origin, ability, obj_kind, obj_with from flat_when where origin in ('own','gives')
             and event in ('played','summoned','drawn','created') and coalesce(obj_side, actor_side, 'mine')='mine' and coalesce(obj_pick,'') not in ('self')
             and card in ({marks})""", L).fetchall():
-        narrowed = any(p and p.split(' ')[0] not in PLAY_STATE and p.split(' ')[1:2] != ['not'] for p in (w or '').split(';'))
+        # a state that is a keyword ("an Ephemeral ally") is had on arrival only by cards that print it: Zed is no Ephemeral
+        # ally, his Living Shadow is (Moonlit Glenkeeper buffs the Shadow, never Zed)
+        arrive_kws = [k for k in (state_kw(c, game, p[9:]) for p in (w or '').split(';') if p.startswith('state is ')) if k]
+        narrowed = bool(arrive_kws) or any(p and p.split(' ')[0] not in PLAY_STATE and p.split(' ')[1:2] != ['not'] for p in (w or '').split(';'))
         if not narrowed and (not broad or kind in every_card_kinds(c, game)): continue  # Echo Form repeats any card: no link
         whys = []
         for act, kw, ps in c.execute("select act, keyword_ref, params from flat_do where card=? and ability=? and origin=? and on_pick='it'", (a, ab, origin)):
@@ -1433,7 +1445,7 @@ def object_help_lines(c, game, nodes, broad):
             elif act == 'increase_effect' and boosts_it(act, ps): whys.append('makes its effect bigger')
         if not whys: continue
         k = 'any' if kind in (None, 'card', 'any', 'anything') else kind
-        hits = [b for b in L if b != a and b in cards and matches(c, game, cards[b], k, w)]
+        hits = [b for b in L if b != a and b in cards and matches(c, game, cards[b], k, w) and all(x in cards[b]['kws'] for x in arrive_kws)]
         when = '' if set(whys) <= {'plays it again', 'makes its effect bigger'} else ' when it comes'  # it is played: it comes
         for b in hits: out[(a, b)].append(('boosts', 0.5 / max(1, len(hits)), ', '.join(dict.fromkeys(whys)) + when))
     return out

@@ -63,6 +63,8 @@ every small edit, and turning a decision one way and later back. Work like this:
    `run.py` for a game another chat is importing: it normalizes and rewrites that chat's records, flags and reports.
 
 ## Rules that are never broken
+- **A card is everything it makes** (summons, creates, shuffles in, transforms into, levels into), and a wrong judgment is
+  wrong thinking: fix the thinking in every place it lives (HANDOFF box), never only the example.
 1. The card text is the truth. A record says only what the text states. No rule from memory: a definition that neither
    the library nor the game's own data has is asked from Kaptain (Runeterra: Deep, Plant).
 2. The records in `read/<game>/` are the source. Everything else is rebuilt from them by `run.py <game>`.
@@ -403,6 +405,11 @@ Then audit again. Write the families found in deck_read_<game>.md.
   cards" (FTL) wants no plays; "if this is still in your hand" (Ethereal) wants no full hand.
 
 ## Mistakes made before (do not repeat)
+- **Read what a card makes before judging a line (Kaptain, 30 Oct 2026).** Claude called "Zed -> Moonlit Glenkeeper" wrong
+  because Zed is not Ephemeral; Zed summons Living Shadows, which are, so the link is true through them. The real error was
+  the other line, "Glenkeeper gives Zed +1|+0 when he comes" (fixed: a state that is a keyword, "an Ephemeral ally", is had on
+  arrival only by cards that print it). Before calling a line wrong or missing, read the texts of every card both cards make
+  (deck_audit prints them under "makes"), the keywords those cards have, and what the game's rules add.
 - Fetching a game's data the repo already had; trusting old library tags; judging data by one narrow question; assuming
   "missing" or "broken" without checking the game's data; writing a definition from memory.
 - One value with several meanings (zone discard for dead, discarded and tossed cards; now BRIEF rule 17); a keyword

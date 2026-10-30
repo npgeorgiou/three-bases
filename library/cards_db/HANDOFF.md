@@ -1,4 +1,4 @@
-# Handoff: card database (30 Oct 2026, v54)
+# Handoff: card database (30 Oct 2026, v55; NEXT_CHAT.md first: Kaptain's open order)
 
 > **CHECKING AFTER A CHANGE: LOAD THE DATABASE ONCE. NEVER RUN `run.py <game>` ONCE PER GAME.**
 > Every `run.py` reloads ALL eight games (load.py loads every game, every time). Eight runs = eight reloads = over an hour
@@ -11,6 +11,14 @@
 > linked card?), and 10 random lines, each checked against the card texts.
 > Fix what you find by its cause, for every game, and ask what else that cause breaks outside the decks. Kaptain must not be
 > the one who finds these.
+
+> **WHEN ONE JUDGMENT IS WRONG, THE THINKING BEHIND IT IS WRONG EVERYWHERE (Kaptain, 30 Oct 2026).** Write the wrong thinking
+> as one sentence ("I judged a card by its own text, not by the cards it makes"). Then find EVERY place that thinking lives and
+> fix each: your other judgments in the same check, the network rules (network.py), the questions (ask.py, mechanics.py,
+> connections.py, deck_analysis.py), the reading rules (BRIEF.md), the docs. Fixing the example, or its family of lines, is
+> not the fix. Example: Zed -> Moonlit Glenkeeper was called wrong because Zed is not Ephemeral, yet Zed summons Ephemeral
+> Living Shadows. Fixed as thinking: a card is judged with everything it makes (flat_made; ask.py counts makers
+> "Zed (via Living Shadow)"; arrival buffs reach only cards that print the keyword; deck_audit prints what each card makes).
 
 ## Start of a chat
 1. Clone with the library (CLAUDE.md "Start of a chat", then `git sparse-checkout disable`). Read only this file first.

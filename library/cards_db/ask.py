@@ -19,6 +19,8 @@ question runs across games.
   ask.py <game> network "<card>, ..." | faction <name> | game [--json f]  cards as a network: central cards, chains, groups, loose cards
   ask.py <games> card <card>                      the card's text and stored rows (rows.py)
   ask.py <games> list happenings|concepts         the values these questions take
+Cards that make a card with it count too, named "Zed (via Living Shadow)". The game's enemies, bosses and run events are
+left out unless --enemies is given. An unknown concept says so and names the nearest ones.
 Happenings are the event values of vocab.tsv; concepts are the concept tree's (equal mechanics of different games share
 one concept: Stun and Freeze are disable, round_start and turn_start are turn_start)."""
 import os, sqlite3, subprocess, sys
@@ -32,11 +34,34 @@ def games_of(arg):
     return allg if arg == 'all' else [g for g in arg.split(',') if g in allg]
 
 
+ENEMY = ('boss', 'monster', 'event', 'modifier')  # the game's enemies and run events: no player's cards (--enemies keeps them)
+WITH_ENEMIES = '--enemies' in sys.argv
+if WITH_ENEMIES: sys.argv.remove('--enemies')
+
+
 def ids_of(games, sql, args=()):
+    """the cards the query finds, plus every card that makes one of them (Zed makes Living Shadow: Zed brings what it has);
+    a maker found only through its made card is named with it: "Zed (via Living Shadow)" """
     got = {i for (i,) in c.execute(sql, args)}
+    via = {}
+    for a, b in c.execute('select card, made from flat_made order by depth'):
+        if b in got and a not in got: via.setdefault(a, b)
     marks = ','.join('?' * len(games))
-    return {i: (g, n) for i, g, n in c.execute(f'select id, game, name from card where game in ({marks}) and is_keyword=0 and is_stub=0',
-                                               games) if i in got}
+    keep = '' if WITH_ENEMIES else f" and coalesce(category,'') not in ({','.join(repr(x) for x in ENEMY)})"
+    out = {}
+    for i, g, n in c.execute(f'select id, game, name from card where game in ({marks}) and is_keyword=0 and is_stub=0' + keep, games):
+        if i in got: out[i] = (g, n)
+        elif i in via: out[i] = (g, f"{n} (via {mechanics.name(c, via[i])})")
+    return out
+
+
+def known(x):
+    """a concept or happening the database has; else say so and name the nearest ones"""
+    have = {v for (v,) in c.execute("select distinct concept from flat_concept")} | {v for (v,) in c.execute("select value from vocab where field='event'")}
+    if x in have: return True
+    import difflib
+    print(f'unknown concept or happening "{x}"; nearest: ' + ', '.join(difflib.get_close_matches(x, have, 6, 0.4) or sorted(v for v in have if x.split('_')[0] in v)[:6]))
+    return False
 
 
 def names(games, sql, args=(), limit=None):
@@ -58,6 +83,8 @@ def side_sql(side):
 
 def main():
     games, q, args = games_of(sys.argv[1]), sys.argv[2], sys.argv[3:]
+    if q in ('cares', 'makes', 'concept', 'together', 'feeds', 'fed', 'chains', 'factions') and args and not known(args[0]): return
+    if q in ('both', 'compare') and not all(known(x) for x in args): return
     col = 'happening' if args and c.execute("select 1 from vocab where field='event' and value=?", (args[0],)).fetchone() else 'concept'
     if q == 'cares': names(games, f"select card from flat_ref where {col}=? and role!='makes'" + side_sql(args[1] if len(args) > 1 else ''), (args[0],))
     elif q == 'makes': names(games, f"select card from flat_ref where {col}=? and role='makes' and origin!='game'" + side_sql(args[1] if len(args) > 1 else ''), (args[0],))
@@ -82,10 +109,11 @@ def main():
         for x in args:
             print(f'## {x}'); names(games, 'select card from flat_concept where concept=?', (x,), limit=8)
     elif q == 'factions':
-        got = {i for (i,) in c.execute('select card from flat_concept where concept=?', (args[0],))}
+        got = set(ids_of(games, 'select card from flat_concept where concept=?', (args[0],)))
         for g in games:
             per = {}
-            for i, regs in c.execute("select id, regions from card where game=? and is_keyword=0 and is_stub=0 and category not in ('game_rule','ability')", (g,)):
+            for i, regs in c.execute("select id, regions from card where game=? and is_keyword=0 and is_stub=0 and coalesce(category,'') not in "
+                                     f"('game_rule','ability'{'' if WITH_ENEMIES else ',' + ','.join(repr(x) for x in ENEMY)})", (g,)):
                 for r in (regs or '').split(';') or ['']:
                     per.setdefault(r or '(none)', [0, 0]); per[r or '(none)'][1] += 1; per[r or '(none)'][0] += i in got
             rows = sorted(((n / t, n, t, r) for r, (n, t) in per.items() if n), reverse=True)

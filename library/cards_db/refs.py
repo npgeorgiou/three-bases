@@ -274,3 +274,26 @@ def build(c):
     c.execute("""delete from flat_ref where role in ('state','condition') and happening='given_keyword' and pick='self' and exists
                  (select 1 from flat_do d where d.card=flat_ref.card and d.ability=flat_ref.ability and d.act='give_keyword'
                  and d.keyword_ref=flat_ref.keyword and coalesce(d.on_pick,'')!='self')""")
+    made(c)
+
+
+def made(c):
+    """flat_made: every card a card puts in play or into a pile, transforms into or levels into, and what those make in turn
+    (Zed -> Living Shadow; a card is judged with everything it makes: Zed brings Ephemeral allies). Card questions read it."""
+    c.execute('drop table if exists flat_made')
+    c.execute('create table flat_made(card integer, made integer, depth integer)')
+    step = {}
+    for a, b in c.execute("""select distinct card, ref from flat_ref where role='makes' and ref is not null and origin in ('own','gives','uses_keyword')
+            and happening in ('created','summoned','transformed','played','equipped','shuffled')
+            union select src, dst from card_link where rel in ('generates','transforms_into')"""):
+        if a != b: step.setdefault(a, set()).add(b)
+    for a in step:
+        seen, front, d = {}, set(step[a]), 1
+        while front and d <= 3:
+            nxt = set()
+            for b in front:
+                if b != a and b not in seen: seen[b] = d; nxt |= step.get(b, set())
+            front, d = nxt, d + 1
+        c.executemany('insert into flat_made values(?,?,?)', [(a, b, x) for b, x in seen.items()])
+    c.execute('create index fm on flat_made(card)')
+

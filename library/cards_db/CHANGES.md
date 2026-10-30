@@ -371,3 +371,7 @@ Each change: date, what changed, the card that caused it, and which records were
   Shadow Isles, Targon, Shurima). PROCESS 2.9: at least 20 decks per game with a spread over factions and mechanics; the deck
   check (deck_audit.py, now also 10 random other cards beside the least linked) is part of every import. network.py: a place
   measured from something narrows no kind (Fealty); damage to my own player is not helped by attacks or moves (Radiance).
+- v55 (30 Oct 2026): a card is judged with what it makes: flat_made (refs.py); ask.py, mechanics.py, deck_analysis.py count
+  made cards; network object_help_lines: a keyword state on arrival needs the printed keyword; deck_analysis level-up sentences
+  keep the actor's side and kind; ask.py drops enemies by default and warns on unknown concepts; deck_audit prints made cards;
+  HANDOFF box and PROCESS rule: a wrong judgment is wrong thinking, fixed everywhere it lives.

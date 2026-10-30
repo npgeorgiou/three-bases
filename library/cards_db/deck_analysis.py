@@ -120,6 +120,12 @@ def analyze(c, game, text):
         if role == 'makes': makes[(h, kw)].add((card, side, kind, pick, mw))
         elif origin in ('own', 'game') and not (pick == 'self' and h in ('played', 'summoned')):
             uses.append((card, ab, role, h, 'mine' if pick == 'self' else side, kw, pick, kind, mw))
+    # a card is everything it makes: what Zed's Living Shadow does, Zed brings to the deck
+    mk = {b: a for a, b in c.execute(f"select card, made from flat_made where card in ({marks}) and made not in ({marks})", deck + deck)}
+    if mk:
+        for b, h, side, kw, pick, kind, mw in c.execute(f"select card, happening, side, keyword, pick, kind, obj_with from flat_ref where role='makes' and "
+                                                         f"origin!='game' and card in ({','.join('?' * len(mk))})", list(mk)):
+            makes[(h, kw)].add((mk[b], side, kind, 'it' if pick == 'self' else pick, mw))
     # what the game's rules make every card of the deck do (a Skeleton dying gives a Bone, any unit can be sacrificed)
     by_rule = collections.defaultdict(set)
     for card, h, kind, sd in c.execute(f"select card, happening, kind, side from flat_ref where origin='game' and role='makes' and card in ({marks})", deck):
@@ -227,17 +233,24 @@ def analyze(c, game, text):
     # champions: what levels them up
     for card in deck:
         conds = c.execute("""select i.test, i.event, i.ev_obj_side, i.of_side, i.op, i.n, i.ev_obj_with,
-                             (select cd.attr from cond cd where cd.ability=i.ability and cd.test=i.test limit 1) from flat_if i join flat_do d
+                             (select cd.attr from cond cd where cd.ability=i.ability and cd.test=i.test limit 1), i.ev_obj_kind, i.ev_actor_side, i.ev_actor_with from flat_if i join flat_do d
                              on d.ability=i.ability and d.card=i.card where d.act='level_up' and i.card=? and i.origin='own'""", (card,)).fetchall()
         if conds:
             ws = []
-            for test, ev, es, fs, op, n, ew, attr in conds:
+            for test, ev, es, fs, op, n, ew, attr, ok, acs, aw in conds:
                 if not ev: continue
+                if ok == 'player' and SAY.get(ev, '').startswith('{who} units'):  # "allied Living Shadows strike the enemy Nexus":
+                    es = acs or {'enemy': 'mine', 'mine': 'enemy'}.get(es, es)  # the sentence names who strikes, not whose Nexus
+                es = es or acs  # "you've attacked with ...": the attackers are yours
+                kinds = [str((c.execute("select meaning from vocab where field='state' and value=?", (p[9:],)).fetchone() or [p[9:]])[0])
+                         for p in f"{ew or ''};{aw or ''}".split(';') if p.startswith('state is ')] + \
+                        [mechanics.name(c, int(p.split(' ')[2])) for p in f"{ew or ''};{aw or ''}".split(';') if p.startswith('keyword is ') and p.split(' ')[2].isdigit()]
                 ref = [int(p.split(' ')[2]) for p in (ew or '').split(';') if p.startswith('card is ') and p.split(' ')[2].isdigit()]
                 what = (f"{mechanics.name(c, ref[0])} " + say(c, ev, es or fs, None).split(' ', 2)[-1].replace('units ', '').replace('die', 'dies'))\
                     if ref else say(c, ev, es or fs, None)
                 unit = f' {attr}' if attr else ' times'  # a total of a stat ("50+ damage"), else a number of times
                 times = '' if not n else ' once' if n == 1 and not attr else f" ({int(n)}+{unit})" if op == 'ge' else f" ({int(n)}{unit})"
+                if kinds and ' units ' in what: what = what.replace(' units ', f" {' '.join(kinds)} units ", 1)  # "7+ Ephemeral allies"
                 ws.append(what + times)
             if ws: out.append(f'- {mechanics.name(c, card)} levels up when ' + ' or '.join(dict.fromkeys(ws)) + '.')
 

@@ -24,6 +24,10 @@ def edges(c, game):
             if h in ('played', 'summoned'): continue  # a card's own entry (On play) is not something another card feeds
             side = 'mine'  # something happening to the card itself happens on my side
         (makes if role == 'makes' else takes)[h].append((card, side, kw))
+    made = collections.defaultdict(set)  # a card is everything it makes: what Living Shadow does, Zed brings
+    for a, b in c.execute("select m.card, m.made from flat_made m join card k on k.id=m.card where k.game=?", (game,)): made[b].add(a)
+    for h, ms in list(makes.items()):
+        makes[h] = ms + [(a, side, kw) for b, side, kw in ms for a in made.get(b, ()) if a != b]
     out = collections.defaultdict(float)
     for h, ts in takes.items():
         carers = collections.defaultdict(set)  # a thing about one keyword (frozen units) is rarer than the happening in general
@@ -65,6 +69,8 @@ def concepts_of(c, game):
         for card, con in c.execute("""select f.card, f.concept from flat_concept f join card k on k.id=f.card
                                       where k.game=? and k.is_keyword=0 and k.is_stub=0""", (game,)):
             d[card].add(con)
+        for a, b in c.execute("select m.card, m.made from flat_made m join card k on k.id=m.card where k.game=?", (game,)):
+            d[a] |= d.get(b, set())  # a card is everything it makes (Zed brings his Living Shadow's Ephemeral)
         CACHE[key] = d
     return CACHE[key]
 

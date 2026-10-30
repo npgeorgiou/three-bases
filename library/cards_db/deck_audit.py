@@ -32,6 +32,9 @@ def main():
             print(f'-- {title}')
             for i in group:
                 print(f"{nm[i]} ({deg[i]} lines): {tx[i]}")
+                made = [l['to'] for l in d['lines'] if l['from'] == i and 'puts it into play' in l['why'] and l['to'] != i]
+                for o in dict.fromkeys(made):  # what it makes acts through it (Zed's Living Shadow is the Ephemeral ally)
+                    print(f"    makes {nm[o]}: {tx[o]}")
                 for l in d['lines']:
                     if i in (l['from'], l['to']):
                         o = l['to'] if l['from'] == i else l['from']
