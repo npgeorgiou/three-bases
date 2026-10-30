@@ -1,0 +1,47 @@
+{"id": 7000001, "name": "Artifact", "category": "keyword", "text": "Negates the next debuff."}
+{"id": 7000002, "name": "Block", "category": "keyword", "text": "Until next turn, prevents damage."}
+{"id": 7000003, "name": "Burn", "category": "keyword", "text": "Burns are unplayable status cards that damage you."}
+{"id": 7000004, "name": "Calm", "category": "keyword", "text": "Upon exiting this Stance, gain 2 Energy."}
+{"id": 7000005, "name": "Channel", "category": "keyword", "text": "Channeling an Orb puts it into your first empty slot. If you have no empty slots, your first Orb is automatically Evoked to make room."}
+{"id": 7000006, "name": "Confused", "category": "keyword", "text": "Whenever you draw a card, randomize its cost."}
+{"id": 7000007, "name": "Curse", "category": "keyword", "text": "Curse cards are negative cards that stay in your deck."}
+{"id": 7000008, "name": "Dark", "category": "keyword", "text": "Orb: Increases damage every turn. When Evoked, deals damage to the enemy with the least HP."}
+{"id": 7000009, "name": "Dazed", "category": "keyword", "text": "Dazed are unplayable status cards."}
+{"id": 7000010, "name": "Dexterity", "category": "keyword", "text": "Dexterity improves Block gained from cards."}
+{"id": 7000011, "name": "Divinity", "category": "keyword", "text": "Upon entering this stance, gain 3 Energy. Attacks deal triple damage. Exit this Stance at the start of your next turn."}
+{"id": 7000012, "name": "Ethereal", "category": "keyword", "text": "If this card is in your hand at the end of turn, it is exhausted. Exhausted cards are removed from your deck until the end of combat."}
+{"id": 7000013, "name": "Evoke", "category": "keyword", "text": "Consume your rightmost Orb and use its Evoke effect."}
+{"id": 7000014, "name": "Exhaust", "category": "keyword", "text": "Removed until end of combat."}
+{"id": 7000015, "name": "Fatal", "category": "keyword", "text": "Triggers whenever this card kills a non-minion enemy."}
+{"id": 7000016, "name": "Focus", "category": "keyword", "text": "Focus increases the effectiveness of Channeled Orbs."}
+{"id": 7000017, "name": "Frail", "category": "keyword", "text": "While Frail, gain 25% less Block from cards."}
+{"id": 7000018, "name": "Frost", "category": "keyword", "text": "Orb: Gains Block."}
+{"id": 7000019, "name": "Innate", "category": "keyword", "text": "Start each combat with this card in your hand."}
+{"id": 7000020, "name": "Intangible", "category": "keyword", "text": "Reduce ALL damage taken and HP loss to 1."}
+{"id": 7000021, "name": "Lightning", "category": "keyword", "text": "Orb: Deals damage to random enemies."}
+{"id": 7000022, "name": "Lock-On", "category": "keyword", "text": "Lock-On targets receive 50% more damage from Orbs."}
+{"id": 7000024, "name": "Plasma", "category": "keyword", "text": "Orb: Gains Energy."}
+{"id": 7000025, "name": "Poison", "category": "keyword", "text": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1."}
+{"id": 7000026, "name": "Mantra", "category": "keyword", "text": "When you obtain 10 Mantra, enter Divinity."}
+{"id": 7000027, "name": "Regen", "category": "keyword", "text": "Regen heals HP at the end of your turn. Each turn, Regen is reduced by 1."}
+{"id": 7000028, "name": "Retain", "category": "keyword", "text": "Retained cards are not discarded at the end of turn."}
+{"id": 7000029, "name": "Ritual", "category": "keyword", "text": "Gain Strength at the end of your turn."}
+{"id": 7000030, "name": "Scry", "category": "keyword", "text": "Look at the top X cards of your draw pile. You may discard any of them."}
+{"id": 7000031, "name": "Shiv", "category": "keyword", "text": "Shivs are 0 cost Attack cards which Exhaust."}
+{"id": 7000032, "name": "Stance", "category": "keyword", "text": "You can only have one stance at a time."}
+{"id": 7000033, "name": "Status", "category": "keyword", "text": "Status cards are removed at the end of combat."}
+{"id": 7000034, "name": "Strength", "category": "keyword", "text": "Strength adds additional damage to attacks."}
+{"id": 7000035, "name": "Thorns", "category": "keyword", "text": "When receiving Attack damage, deals damage back."}
+{"id": 7000036, "name": "Transform", "category": "keyword", "text": "Transformed cards become a random card of any rarity."}
+{"id": 7000037, "name": "Unplayable", "category": "keyword", "text": "Unplayable cards cannot be played from your hand."}
+{"id": 7000038, "name": "Upgrade", "category": "keyword", "text": "Upgrading cards makes them more powerful. Cards can only be upgraded once."}
+{"id": 7000040, "name": "Void", "category": "keyword", "text": "Voids are unplayable status cards that consume energy when drawn."}
+{"id": 7000041, "name": "Vulnerable", "category": "keyword", "text": "Vulnerable creatures take 50% more damage from Attacks."}
+{"id": 7000042, "name": "Weak", "category": "keyword", "text": "Weakened creatures deal 25% less damage with Attacks."}
+{"id": 7000043, "name": "Wound", "category": "keyword", "text": "Wounds are unplayable status cards."}
+{"id": 7000044, "name": "Wrath", "category": "keyword", "text": "In this Stance, you deal and receive double attack damage."}
+{"id": 7000688, "name": "Hex", "category": "keyword", "text": "Whenever you play a non-Attack card, shuffle X Dazed into your draw pile."}
+{"id": 7000713, "name": "Mark", "category": "keyword", "text": "Whenever you play Pressure Points, loses X HP."}
+{"id": 7000715, "name": "Plated Armor", "category": "keyword", "text": "At the end of your turn, gain X Block. Receiving unblocked attack damage reduces Plated Armor by 1."}
+{"id": 7000730, "name": "Stasis", "category": "keyword", "text": "On death, is returned to your hand."}
+{"id": 7000736, "name": "Surrounded", "category": "keyword", "text": "Receive 50% more damage if attacked from behind. Use targeting cards or potions to change your orientation."}

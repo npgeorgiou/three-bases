@@ -11,6 +11,25 @@ One file per game: the game, its factions, the source summary, the mechanics (pa
 - Keywords: Exhaust, Ethereal, Innate, Retain, Strength, Dexterity, Vulnerable, Weak, Frail, Poison, Orbs, Focus, Stances, Scry.
 - Win: beat the final boss; Ascension levels add difficulty.
 
+## The game's rules (from sources)
+Read 30 Oct 2026 for the card database (cards_db, PROCESS step 0.10). [W] = Wikipedia "Slay the Spire", Gameplay section;
+[M] = slaythespire.wiki.gg/wiki/Mechanics; [K] = slaythespire.wiki.gg/wiki/Keywords.
+- The player alone fights: each turn a fresh hand of cards and three energy [W]; energy is set to the base energy (3) and 5
+  cards are drawn at the start of the turn [M]. Any cards can be played while there is energy to pay their costs [W].
+- Attack cards damage enemies; Skill cards buff the player, debuff enemies or add Block; Power cards keep their effect until
+  the combat ends [W]; a played Power leaves the piles [M]. Block reduces damage taken in a turn [K].
+- Cards not played go to the discard pile at the end of the turn [W] (shuffled into it [M]); Retained cards stay [K]. Drawing
+  from an empty draw pile shuffles the discard pile into it [M]. Exhausted cards go to the exhaust pile until the combat
+  ends [M][K]. The hand holds at most 10 cards [M].
+- Enemies show their intent (attack and its damage, block, buffs, debuffs) before the player acts [W] and act left to right
+  [M]; some enemy attacks add Wounds and other status cards to the deck [W][M]. A fight is won when the enemies die; at 0 HP
+  the run ends [W][M].
+- Between fights: card rewards (one of three), relics (permanent buffs for the run), potions (single use, free), campfires
+  (heal or upgrade a card), shops (buy, remove cards) [W].
+No record in read/sts1/game_rules.jsonl: no card category does anything its text does not say (there are no units; every
+effect, including every Attack's damage, is on the card), and what the rules do for every card (draw 5, 3 energy, discard the
+hand) is no combo between cards (Kaptain, 30 Oct 2026).
+
 ## Sources and notes
 
 Sources:

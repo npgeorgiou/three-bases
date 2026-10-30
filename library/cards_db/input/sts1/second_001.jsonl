@@ -1,0 +1,76 @@
+{"id": 7000045, "name": "Accuracy", "category": "spell", "speed": "", "types": ["Power"], "keywords": [], "text": "Shivs deal 4 additional damage.", "names_in_text": []}
+{"id": 7000055, "name": "Anger", "category": "spell", "speed": "", "types": ["Attack"], "keywords": [], "text": "Deal 6 damage. Add a copy of this card into your discard pile.", "names_in_text": []}
+{"id": 7000065, "name": "Bane", "category": "spell", "speed": "", "types": ["Attack"], "keywords": [], "text": "Deal 7 damage. If the enemy has Poison, deal 7 damage again.", "names_in_text": ["Poison"]}
+{"id": 7000075, "name": "Blade Dance", "category": "spell", "speed": "", "types": ["Skill"], "keywords": [], "text": "Add 3 Shivs into your hand.", "names_in_text": []}
+{"id": 7000085, "name": "Bouncing Flask", "category": "spell", "speed": "", "types": ["Skill"], "keywords": [], "text": "Apply 3 Poison to a random enemy 3 times.", "names_in_text": ["Poison"]}
+{"id": 7000095, "name": "Caltrops", "category": "spell", "speed": "", "types": ["Power"], "keywords": [], "text": "Whenever you are attacked, deal 3 damage back.", "names_in_text": []}
+{"id": 7000105, "name": "Tranquility", "category": "spell", "speed": "", "types": ["Skill"], "keywords": ["Retain", "Exhaust"], "text": "Keywords: Retain, Exhaust. Enter Calm.", "names_in_text": ["Calm"]}
+{"id": 7000116, "name": "Conjure Blade", "category": "spell", "speed": "", "types": ["Skill"], "keywords": ["Exhaust"], "text": "Keywords: Exhaust. Shuffle an Expunger into your draw pile.", "names_in_text": ["Expunger"]}
+{"id": 7000126, "name": "Crippling Cloud", "category": "spell", "speed": "", "types": ["Skill"], "keywords": ["Exhaust"], "text": "Keywords: Exhaust. Apply 4 Poison and 2 Weak to ALL enemies.", "names_in_text": ["Poison", "Weak"]}
+{"id": 7000137, "name": "Deadly Poison", "category": "spell", "speed": "", "types": ["Skill"], "keywords": [], "text": "Apply 5 Poison.", "names_in_text": ["Poison"]}
+{"id": 7000147, "name": "Demon Form", "category": "spell", "speed": "", "types": ["Power"], "keywords": [], "text": "At the start of your turn, gain 2 Strength.", "names_in_text": ["Strength"]}
+{"id": 7000157, "name": "Doppelganger", "category": "spell", "speed": "", "types": ["Skill"], "keywords": ["Exhaust"], "text": "Keywords: Exhaust. Next turn, draw X cards and gain X energy.", "names_in_text": []}
+{"id": 7000167, "name": "Empty Body", "category": "spell", "speed": "", "types": ["Skill"], "keywords": [], "text": "Gain 7 Block. Exit your Stance.", "names_in_text": ["Block", "Stance"]}
+{"id": 7000177, "name": "Evaluate", "category": "spell", "speed": "", "types": ["Skill"], "keywords": [], "text": "Gain 6 Block. Shuffle an Insight into your draw pile.", "names_in_text": ["Block", "Insight"]}
+{"id": 7000187, "name": "Finesse", "category": "spell", "speed": "", "types": ["Skill"], "keywords": [], "text": "Gain 2 Block. Draw 1 card.", "names_in_text": ["Block"]}
+{"id": 7000197, "name": "Flying Knee", "category": "spell", "speed": "", "types": ["Attack"], "keywords": [], "text": "Deal 8 damage. Next turn, gain 1 energy.", "names_in_text": []}
+{"id": 7000207, "name": "Apparition", "category": "spell", "speed": "", "types": ["Skill"], "keywords": ["Ethereal", "Exhaust"], "text": "Keywords: Ethereal, Exhaust. Gain 1 Intangible.", "names_in_text": ["Intangible"]}
+{"id": 7000217, "name": "Headbutt", "category": "spell", "speed": "", "types": ["Attack"], "keywords": [], "text": "Deal 9 damage. Put a card from your discard pile on top of your draw pile.", "names_in_text": []}
+{"id": 7000227, "name": "Impervious", "category": "spell", "speed": "", "types": ["Skill"], "keywords": ["Exhaust"], "text": "Keywords: Exhaust. Gain 30 Block.", "names_in_text": ["Block"]}
+{"id": 7000238, "name": "Juggernaut", "category": "spell", "speed": "", "types": ["Power"], "keywords": [], "text": "Whenever you gain Block, deal 5 damage to a random enemy.", "names_in_text": ["Block"]}
+{"id": 7000248, "name": "Machine Learning", "category": "spell", "speed": "", "types": ["Power"], "keywords": ["Innate"], "text": "Keywords: Innate. At the start of your turn, draw 1 additional card.", "names_in_text": []}
+{"id": 7000258, "name": "Mental Fortress", "category": "spell", "speed": "", "types": ["Power"], "keywords": [], "text": "Whenever you change Stances, gain 4 Block.", "names_in_text": ["Block"]}
+{"id": 7000268, "name": "Normality", "category": "spell", "speed": "", "types": ["Curse"], "keywords": ["Unplayable"], "text": "Keywords: Unplayable. While in hand, you cannot play more than 3 cards this turn.", "names_in_text": []}
+{"id": 7000278, "name": "Perfected Strike", "category": "spell", "speed": "", "types": ["Attack"], "keywords": [], "text": "Deal 6 damage. Deals 2 additional damage for ALL your cards containing \"Strike\".", "names_in_text": ["Strike"]}
+{"id": 7000288, "name": "Pride", "category": "spell", "speed": "", "types": ["Curse"], "keywords": ["Innate", "Exhaust"], "text": "Keywords: Innate, Exhaust. At the end of your turn, put a copy of this card on top of your draw pile.", "names_in_text": []}
+{"id": 7000298, "name": "Reach Heaven", "category": "spell", "speed": "", "types": ["Attack"], "keywords": [], "text": "Deal 10 damage. Shuffle a Through Violence into your draw pile.", "names_in_text": ["Violence"]}
+{"id": 7000308, "name": "Reprogram", "category": "spell", "speed": "", "types": ["Skill"], "keywords": [], "text": "Lose 1 Focus. Gain 1 Strength. Gain 1 Dexterity.", "names_in_text": ["Dexterity", "Focus", "Strength"]}
+{"id": 7000318, "name": "Scrawl", "category": "spell", "speed": "", "types": ["Skill"], "keywords": ["Exhaust"], "text": "Keywords: Exhaust. Draw cards until your hand is full.", "names_in_text": []}
+{"id": 7000328, "name": "Sever Soul", "category": "spell", "speed": "", "types": ["Attack"], "keywords": [], "text": "Exhaust all non-Attack cards in your hand. Deal 16 damage.", "names_in_text": ["Exhaust"]}
+{"id": 7000339, "name": "Stack", "category": "spell", "speed": "", "types": ["Skill"], "keywords": [], "text": "Gain Block equal to the number of cards in your discard pile.", "names_in_text": ["Block"]}
+{"id": 7000349, "name": "Strike", "category": "spell", "speed": "", "types": ["Attack"], "keywords": [], "text": "Deal 6 damage.", "names_in_text": []}
+{"id": 7000359, "name": "Tantrum", "category": "spell", "speed": "", "types": ["Attack"], "keywords": [], "text": "Deal 3 damage 3 times. Enter Wrath. Shuffle this card into your draw pile.", "names_in_text": ["Wrath"]}
+{"id": 7000369, "name": "Trip", "category": "spell", "speed": "", "types": ["Skill"], "keywords": [], "text": "Apply 2 Vulnerable.", "names_in_text": ["Vulnerable"]}
+{"id": 7000379, "name": "Simmering Fury", "category": "spell", "speed": "", "types": ["Skill"], "keywords": [], "text": "At the start of your next turn, enter Wrath and draw 2 cards.", "names_in_text": ["Wrath"]}
+{"id": 7000389, "name": "Wheel Kick", "category": "spell", "speed": "", "types": ["Attack"], "keywords": [], "text": "Deal 15 damage. Draw 2 cards.", "names_in_text": []}
+{"id": 7000401, "name": "Zap", "category": "spell", "speed": "", "types": ["Skill"], "keywords": [], "text": "Channel 1 Lightning.", "names_in_text": ["Channel", "Lightning"]}
+{"id": 7000411, "name": "Black Star", "category": "relic", "speed": "", "types": [], "keywords": [], "text": "Elites drop an additional relic when defeated.", "names_in_text": []}
+{"id": 7000421, "name": "Burning Blood", "category": "relic", "speed": "", "types": [], "keywords": [], "text": "At the end of combat, heal 6 HP.", "names_in_text": []}
+{"id": 7000431, "name": "Charon's Ashes", "category": "relic", "speed": "", "types": [], "keywords": [], "text": "Whenever you Exhaust a card, deal 3 damage to ALL enemies.", "names_in_text": ["Exhaust"]}
+{"id": 7000441, "name": "Darkstone Periapt", "category": "relic", "speed": "", "types": [], "keywords": [], "text": "Whenever you obtain a Curse, increase your Max HP by 6.", "names_in_text": ["Curse"]}
+{"id": 7000451, "name": "Enchiridion", "category": "relic", "speed": "", "types": [], "keywords": [], "text": "At the start of each combat, add a random Power card into your hand. It costs 0 for that turn.", "names_in_text": []}
+{"id": 7000461, "name": "Girya", "category": "relic", "speed": "", "types": [], "keywords": [], "text": "You can now gain Strength at Rest Sites (up to 3 times).", "names_in_text": ["Strength"]}
+{"id": 7000471, "name": "Ice Cream", "category": "relic", "speed": "", "types": [], "keywords": [], "text": "Energy is now conserved between turns.", "names_in_text": []}
+{"id": 7000481, "name": "Magic Flower", "category": "relic", "speed": "", "types": [], "keywords": [], "text": "Healing is 50% more effective during combat.", "names_in_text": []}
+{"id": 7000491, "name": "Membership Card", "category": "relic", "speed": "", "types": [], "keywords": [], "text": "50% discount on all products!", "names_in_text": []}
+{"id": 7000501, "name": "N'loth's Gift", "category": "relic", "speed": "", "types": [], "keywords": [], "text": "Triple the chance of finding Rare cards from combat rewards.", "names_in_text": []}
+{"id": 7000511, "name": "Orrery", "category": "relic", "speed": "", "types": [], "keywords": [], "text": "Upon pickup, choose and add 5 cards to your deck.", "names_in_text": []}
+{"id": 7000521, "name": "Prayer Wheel", "category": "relic", "speed": "", "types": [], "keywords": [], "text": "Normal enemies drop an additional card reward.", "names_in_text": []}
+{"id": 7000531, "name": "Ring of the Snake", "category": "relic", "speed": "", "types": [], "keywords": [], "text": "At the start of each combat, draw 2 additional cards.", "names_in_text": []}
+{"id": 7000541, "name": "Slaver's Collar", "category": "relic", "speed": "", "types": [], "keywords": [], "text": "Gain 1 energy at the start of your turn during Boss and Elite combats.", "names_in_text": []}
+{"id": 7000551, "name": "Strike Dummy", "category": "relic", "speed": "", "types": [], "keywords": [], "text": "Cards containing Strike deal 3 additional damage.", "names_in_text": ["Strike"]}
+{"id": 7000561, "name": "Tiny House", "category": "relic", "speed": "", "types": [], "keywords": [], "text": "Upon pickup, obtain 1 potion. Gain 50 Gold. Raise your Max HP by 5 . Obtain 1 card. Upgrade 1 random card.", "names_in_text": ["Upgrade"]}
+{"id": 7000571, "name": "Vajra", "category": "relic", "speed": "", "types": [], "keywords": [], "text": "Start each combat with 1 Strength.", "names_in_text": ["Strength"]}
+{"id": 7000581, "name": "Ambrosia", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Enter Divinity Stance.", "names_in_text": ["Divinity", "Stance"]}
+{"id": 7000591, "name": "Dexterity Potion", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Gain 2 Dexterity.", "names_in_text": ["Dexterity"]}
+{"id": 7000601, "name": "Fear Potion", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Apply 3 Vulnerable.", "names_in_text": ["Vulnerable"]}
+{"id": 7000611, "name": "Potion Of Capacity", "category": "item", "speed": "", "types": [], "keywords": [], "text": "Gain 2 Orb slots.", "names_in_text": ["Orb"]}
+{"id": 7000621, "name": "Swift Potion", "category": "item", "speed": "", "types": [], "keywords": [], "text": "3Draw cards.", "names_in_text": []}
+{"id": 7000760, "name": "Centurion", "category": "monster", "speed": "", "types": [], "keywords": [], "text": "Actions: Slash (attack, 12 damage); Protect (defend); Fury (attack, 6 damage x3)", "names_in_text": ["Defend", "Protect"]}
+{"id": 7000770, "name": "Fungi Beast", "category": "monster", "speed": "", "types": [], "keywords": [], "text": "Actions: Bite (attack, 6 damage); Grow (buff)", "names_in_text": ["Bite"]}
+{"id": 7000780, "name": "Gremlin Wizard", "category": "monster", "speed": "", "types": [], "keywords": [], "text": "Actions: Ultimate Blast (attack, 25 damage); Charging (unknown); Move 99 (escape)", "names_in_text": []}
+{"id": 7000790, "name": "Repulsor", "category": "monster", "speed": "", "types": [], "keywords": [], "text": "Actions: Daze (debuff); Attack (attack, 11 damage)", "names_in_text": []}
+{"id": 7000800, "name": "Spheric Guardian", "category": "monster", "speed": "", "types": [], "keywords": [], "text": "Actions: Big Attack (attack, 10 damage x2); Initial Block Gain (defend, 95 block); Block Attack (attack defend, 10 damage, 15 block); Frail Attack (attack debuff, 10 damage)", "names_in_text": ["Block", "Defend", "Frail"]}
+{"id": 7000810, "name": "Transient", "category": "monster", "speed": "", "types": [], "keywords": [], "text": "Actions: Attack (attack, 30 damage)", "names_in_text": []}
+{"id": 7000820, "name": "Designer In-Spire", "category": "event", "speed": "", "types": [], "keywords": [], "text": "Choices: Lose 40 Gold. Upgrade a card. | Lose 60 Gold. Remove a card. | Lose 90 Gold. Remove a card and upgrade a card. | Lose 5 HP.", "names_in_text": ["Upgrade"]}
+{"id": 7000830, "name": "Masked Bandits", "category": "event", "speed": "", "types": [], "keywords": [], "text": "Choices: Lose ALL of your Gold. |", "names_in_text": []}
+{"id": 7000840, "name": "Scrap Ooze", "category": "event", "speed": "", "types": [], "keywords": [], "text": "Choices: Take damage. Chance to find a Relic.", "names_in_text": []}
+{"id": 7000850, "name": "The Moai Head", "category": "event", "speed": "", "types": [], "keywords": [], "text": "Choices: Heal to full HP. Lose Max HP. | Gain 333 Gold. Lose Golden Idol.", "names_in_text": ["Golden Idol"]}
+{"id": 7000860, "name": "Winding Halls", "category": "event", "speed": "", "types": [], "keywords": [], "text": "Choices: Lose Max HP. | Heal HP. | Become Cursed - Writhe. Heal HP.", "names_in_text": ["Writhe"]}
+{"id": 7000870, "name": "Ascension Mode Level 8", "category": "modifier", "speed": "", "types": [], "keywords": [], "text": "Elites are tougher.", "names_in_text": []}
+{"id": 7000880, "name": "Ascension Mode Level 18", "category": "modifier", "speed": "", "types": [], "keywords": [], "text": "Elites have more challenging movesets and abilities.", "names_in_text": []}
+{"id": 7000890, "name": "Catalyst+", "category": "spell", "speed": "", "types": ["Skill"], "keywords": ["Exhaust"], "text": "Keywords: Exhaust. Triple the enemy's Poison.", "names_in_text": ["Poison"]}
+{"id": 7000900, "name": "Storm+", "category": "spell", "speed": "", "types": ["Power"], "keywords": ["Innate"], "text": "Keywords: Innate. Whenever you play a Power card, Channel 1 Lightning.", "names_in_text": ["Channel", "Lightning"]}
+{"id": 7000910, "name": "Meditate+", "category": "spell", "speed": "", "types": ["Skill"], "keywords": [], "text": "Put 2 cards from your discard pile into your hand and Retain them. Enter Calm. End your turn.", "names_in_text": ["Calm", "Retain"]}
+{"id": 7000920, "name": "Live Forever", "category": "spell", "speed": "", "types": ["Power"], "keywords": [], "text": "Gain 6 Plated Armor.", "names_in_text": ["Plated Armor"]}
+{"id": 7000930, "name": "Apparition+", "category": "spell", "speed": "", "types": ["Skill"], "keywords": ["Exhaust"], "text": "Keywords: Exhaust. Gain 1 Intangible.", "names_in_text": ["Intangible"]}

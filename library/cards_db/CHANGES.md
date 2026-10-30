@@ -306,3 +306,18 @@ Each change: date, what changed, the card that caused it, and which records were
 - BRIEF "Game words: Into the Breach"; patterns TB01-TB14; exclude.tsv: the library's 10 wiki article pages (category
   game_rule) are not cards (Claude, for Kaptain's check).
 - decks.tsv: the 14 official squads and 6 players' custom squads (a squad of 3 mechs is the deck).
+
+## 30 Oct 2026, v49 (Slay the Spire import)
+- source.py: id block 7000001 for sts1 (first taken for The Elder Scrolls: Legends, released unused: its later sets are not
+  reachable from here). supplement_sts1.py holds every sts1 entry (FULL): energy icons counted ("Gain energy energy" = 2),
+  numbers the library's conversion lost (Genetic Algorithm, Ritual Dagger from the source's upgraded_text; Happy Flower,
+  Sundial, Nunchaku from the wiki's Module:Relics/data), powers' format strings replaced by Module:Powers/data texts, Exhaust,
+  Ethereal, Innate, Retain, Unplayable in the Keywords field, card kinds (Attack, Skill, Power, Status, Curse) as types.
+  Powers kept only when a text names them and nothing else holds them (Plated Armor, Mark, Hex, Stasis, Surrounded, as
+  keywords); glossary words no text uses left out (Opener, Vigor). Claude's choices, for Kaptain's check.
+- vocab.tsv: 43 keyword rows (Slay the Spire); sts1:Vulnerable, sts1:Dazed, sts1:Focus, sts1:Curse mean something else than
+  the shared rows; Poison, Regen, Unplayable, Transform use the shared rows (same concept).
+- BRIEF "Game words: Slay the Spire"; patterns SS01-SS18; tools/games/sts1.md "The game's rules (from sources)";
+  read/sts1/game_rules.jsonl has no record (no card category does anything its text does not say).
+- decks.tsv: 22 guide decks (guides' core cards and relics; no full end-of-run deck exists as text that can be reached here,
+  and the game sets no deck size).

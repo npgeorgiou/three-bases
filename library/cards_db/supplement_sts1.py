@@ -16,6 +16,11 @@ FULL; cards and their powers share card codes, so a partial supplement would dro
   "LocalizedStrings.PERIOD" is a period; a number glued after X ("X2 turns") is that number.
 - Keywords the card has itself, written as a sentence of their own (Exhaust., Ethereal., Innate., Retain., Unplayable.), go
   in the Keywords field (PROCESS "A card list that looked whole" 3), so each card takes the keyword's record.
+- Powers (the game's statuses, category status) are keywords when a text names them and no glossary keyword or card holds
+  them already: Plated Armor, Mark, Hex, Stasis, Surrounded (category keyword). Left out (glossary terms no card uses,
+  PROCESS 0.5): powers that only repeat a glossary keyword (Strength, Weakened = Weak ...), powers that only repeat their
+  card's text (Barricade, Demon Form ...), powers no text names (enemy powers such as Curl Up, Thievery), and the glossary
+  keywords Opener (a Slay the Spire 2 word) and Vigor, which no text uses.
 - Card kinds (Attack, Skill, Power, Status, Curse; the source's type) are the cards' types: "Whenever you play an Attack" is
   filter type Attack, never Runeterra's category skill.
 Writes supplement/sts1.jsonl in the library's entities columns; ids from 7000001 in library order (source.py).
@@ -26,6 +31,8 @@ OUT = os.path.join(HERE, 'supplement', 'sts1.jsonl')
 DB = os.path.join(HERE, '..', 'three-bases-library.sqlite')
 COLS = ['id', 'game', 'ext_id', 'name', 'category', 'source_type', 'edition', 'faction', 'subtypes', 'rarity', 'cost', 'cost_num',
         'stats', 'text', 'extra', 'variants']
+KEEP_POWERS = {'Plated Armor', 'Mark', 'Hex', 'Stasis', 'Surrounded'}
+DROP_KEYWORDS = {'Opener', 'Vigor'}
 KWS = ['Unplayable', 'Innate', 'Ethereal', 'Retain', 'Exhaust']
 RELICS = {  # Module:Relics/data, markup removed
     'Happy Flower': 'Every 3 turns, gain 1 energy.',
@@ -97,7 +104,11 @@ c = sqlite3.connect(DB)
 out = []
 for n, row in enumerate(c.execute(f"select {','.join(COLS)} from entities where game='sts1' order by id")):
     r = repair(dict(zip(COLS, row)))
-    r['id'] = 7000001 + n
+    r['id'] = 7000001 + n  # by library order, so ids stay stable whatever is left out
+    if r['category'] == 'status':
+        if r['name'] not in KEEP_POWERS: continue
+        r['category'] = 'keyword'
+    if r['category'] == 'keyword' and r['name'] in DROP_KEYWORDS: continue
     out.append(r)
 with open(OUT, 'w') as f:
     for r in out: f.write(json.dumps(r, ensure_ascii=False) + '\n')

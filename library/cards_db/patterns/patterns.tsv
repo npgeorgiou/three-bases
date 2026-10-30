@@ -170,3 +170,21 @@ into_the_breach	TB11	\bon kill\b|\bkilling blow\b|\bif target is killed\b|\bkill
 into_the_breach	TB12	\brepair\w*\b|\bheal\w*\b	value:heal|healed	yes	repair is heal
 into_the_breach	TB13	\bcrack\w*\b	value:set_terrain	yes	cracking tiles (terrain cracked_space)
 into_the_breach	TB14	\bupgrades?:	value:upgraded	yes	each upgrade is an ability with COND upgraded n
+sts1	SS01	\bat the start of (?:your|each|every) turn\b|\bat the beginning of your turn\b	event:turn_start	yes	trigger phrase (wiki Mechanics: start of the player's turn)
+sts1	SS02	\bat the end of (?:your|each) turn\b|\bat the end of turn\b	event:turn_end	yes	trigger phrase
+sts1	SS03	\bwhenever you play\b|\bevery time you play\b	event:played	yes	trigger phrase (a card played)
+sts1	SS04	\bwhen(?:ever)? (?:you draw|this card is drawn)\b|\bwhen you draw this card\b	event:drawn	yes	trigger phrase
+sts1	SS05	\bis discarded\b|\bwhenever you discard\b|\bthe first time you discard\b	event:discarded	yes	trigger phrase
+sts1	SS06	\b(?:is|are) exhausted\b	event:exhausted	yes	trigger phrase (a card goes to the exhaust pile)
+sts1	SS07	\b(?:start|beginning) of (?:each )?combat\b|\bstart each combat\b	event:combat_start	yes	trigger phrase
+sts1	SS08	\bwhenever you lose hp\b|\bthe first time you lose hp\b|\btime you lose hp\b	event:damaged	yes	trigger phrase (HP lost by the player)
+sts1	SS09	\bif fatal\b	value:keyword_condition	yes	Fatal is a condition keyword (BRIEF Game words: Slay the Spire)
+sts1	SS10	\bchannel\b	value:keyword_action	yes	Channel is an action keyword
+sts1	SS11	\bevoke\b	value:keyword_action|keyword_used	yes	Evoke is an action keyword
+sts1	SS12	\bscry\b	value:keyword_action|keyword_used	yes	Scry is an action keyword
+sts1	SS13	\bupgrade\b	value:keyword_action|upgraded	yes	Upgrade is an action keyword
+sts1	SS14	\bthis turn\b	value:this_round|this_turn	yes	duration word (this turn = this_round)
+sts1	SS15	\bpermanently\b	value:this_run	yes	duration word (the change stays for the run)
+sts1	SS16	\bgain \d+ energy\b|\bgain x energy\b	value:mana_gain	yes	energy is mana
+sts1	SS17	\bexhaust (?:a|\d|x|all|the|your|it)\b	value:exhaust	yes	exhausting a card as an act (not the Keywords field)
+sts1	SS18	\benter (?:wrath|calm|divinity)\b	value:give_keyword	yes	entering a stance gives its keyword

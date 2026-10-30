@@ -519,6 +519,51 @@ decided by Claude from the game's own texts (open-duelyst: keyword definitions, 
   {"amount": N}, "lasts": "permanent"}]}` (amount only for a number: Backstab 2, Build 1). "Give a minion Celerity this turn"
   = give_keyword, lasts this_round ("this turn" = this_round).
 
+## Game words: Slay the Spire
+Cards list Exhaust, Ethereal, Innate, Retain and Unplayable in the Keywords field ("Keywords: Exhaust. Deal 11 damage."): do not
+describe them. Card kinds are types (Attack, Skill, Power, Status, Curse): "an Attack" = filter type Attack, never category
+skill. Keyword entries (category keyword: glossary words such as Block, Strength, Vulnerable, Channel, Scry, Wrath, and the
+powers Plated Armor, Mark, Hex, Stasis, Surrounded) define the words; cards use the values below. Mapping decided by Claude
+from the game's wiki and Wikipedia (tools/games/sts1.md "The game's rules"; 30 Oct 2026).
+- No board, no units of mine. The player = kind player, side mine ("you", "your"); enemies = kind unit, side enemy ("an
+  enemy" = pick chosen, "a random enemy" = random, "ALL enemies" = all). An enemy's own text (monster, boss) is written from
+  its side: the player it attacks is side enemy.
+- Damage: "Deal 8 damage" = damage on the enemy; "Deal 7 damage 3 times" = damage, params amount 7 and times 3. "Lose 3 HP",
+  "take 2 damage" = damage on the player (side mine). HP = health: "raise your Max HP by 3" = stat_change health on the
+  player; "heal 4 HP" = heal.
+- Statuses with numbers are keywords with amount, lasts permanent (the keyword's record says how they wear off): "Gain 5
+  Block" = give_keyword Block, params amount 5, on the player; "Apply 2 Vulnerable" = give_keyword Vulnerable on the enemy;
+  "gain 2 Strength", "4 Plated Armor", "3 Mantra", "8 Mark", "1 Artifact", "Intangible", "Weak", "Frail", "Poison", "Thorns",
+  "Focus", "Dexterity" alike. "Lose 2 Strength", "Enemy loses 9 Strength" = give_keyword Strength with a negative amount;
+  "this turn" = lasts this_round. "Double the enemy's Poison" = give_keyword Poison, amount the count of its Poison.
+- Energy = mana: "Gain 2 energy" = mana_gain amount 2; "costs 1 less (energy)" = cost_change; "costs 0 this turn" = cost_set
+  0, lasts this_round; X cost = `{"x": "x_paid"}`. "Next turn, gain 1 energy" / "next turn, draw 2" = an ability turn_start,
+  actor the player, limit next_time.
+- Piles: draw pile = deck ("top of your draw pile" = deck_top), discard pile = discard, exhaust pile = exhausted, hand = hand.
+  "Draw 2 cards" = draw; "Discard 1 card" = discard; "Exhaust a card" = exhaust on a card in hand; "put a card from your
+  discard pile into your hand" = return_card zone hand. New cards: "Add 2 Shivs into your hand" = create, zone hand, card Shiv
+  (params amount 2); "Shuffle a Wound into your draw pile" / "add a Void into your discard pile" = create in zone deck /
+  discard; "a random Skill" = create with "on" `{"kind": "spell", "pick": "random", "with": [type Skill]}` (rule 7).
+  "Upgrade a card" = keyword_action Upgrade on the card. "Transform" = keyword_action Transform. "Scry 3" = keyword_action
+  Scry, amount 3. "Play twice" / "played twice" = repeat on the card (params times 2).
+- Cards played: "Whenever you play a card / an Attack" = played, object `{"kind": "spell", "side": "mine"}` (with type
+  Attack). "When this card is drawn / discarded / Exhausted / Retained" = drawn / discarded / exhausted / kept_in_hand, object
+  self. "Whenever a card is Exhausted" = exhausted, object a card of mine. "If Fatal" = COND keyword_condition, ref Fatal.
+- Turns: "At the start / end of your turn" = turn_start / turn_end, actor the player (mine). "Each turn" = turn_start.
+  "Start of combat", "at the start of each combat" = combat_start; "this combat" = lasts permanent; "permanently" (the card
+  changes for the run) and Max HP gains = lasts this_run. "Whenever you lose HP" = damaged, object the player.
+- Orbs (Lightning, Frost, Dark, Plasma are keywords): "Channel 1 Lightning" = keyword_action Channel, params amount 1, "on"
+  `{"kind": "keyword", "with": [{"attr": "keyword", "op": "is", "ref": "Lightning"}]}`; "Evoke your next Orb" =
+  keyword_action Evoke on `{"kind": "keyword", "pick": "top"}`; Orb slots are proposals.
+- Stances (Wrath, Calm, Divinity are keywords; Stance is their family): "Enter Wrath" = give_keyword Wrath on the player,
+  lasts permanent; "exit your Stance" = remove_keyword Stance on the player; "whenever you enter Wrath" = given_keyword,
+  object the player, keyword filter Wrath; "whenever you change Stances" = given_keyword with keyword filter Stance.
+- Relics (category relic) hold for the run: their text is an ability like a card's ("Whenever you play 10 Attacks, gain 1
+  energy" = played, Attack, with the count as COND). "Upon pickup" = played, object self. Potions (category item) = played,
+  object self, like a card. Events: "Choices: A | B | C" = choose_one, then each choice linked or. Monsters and bosses:
+  "Actions: Slash (attack, 20 damage); ..." = one ability turn_start, actor self, doing random_one of the actions linked or
+  (the intent is the enemy's choice). Ascension levels (category modifier) are read like relics.
+
 ## Game words: Into the Breach
 A squad of 3 mechs fights the Vek on an 8x8 grid of tiles. Mechs (category unit, the player's) carry their starting weapons
 and passive in their text ("Weapon: Titan Fist: ...", "Passive: Flame Shielding: ..."); weapons (category ability), passives
