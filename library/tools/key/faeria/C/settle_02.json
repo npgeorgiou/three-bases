@@ -1,6 +1,0 @@
-{"741508": [["generate_cards", "Discover 2 non legendary cards"], ["selection", "Discover"], ["cost_condition", "cost 7 faeria or more"], ["cost_type", "wild land"]],
-"741514": [["movement", "Charge 3"], ["evasion", "Flying"], ["on_play", "Gift"], ["self_mill", "Destroy all Treasure Maps in your deck"], ["stat_gain", "gain +1/+1 for each map destroyed"], ["condition_count", "for each map destroyed"]],
-"741515": [["on_play", "Gift"], ["merge_attach", "Swallow a friendly creature"], ["turn_start", "Production"], ["permanent_growth", "The swallowed creature gains +4/+4"], ["activated", "Activate"], ["self_destruct", "Destroy this"]],
-"741517": [["cost_reduction", "Cards in your hand cost 1 faeria less"]],
-"741518": [["immunity", "Divine"], ["evasion", "Flying"], ["movement", "Dash 5"], ["placement_rules", "Must be summoned next to a friendly creature"]],
-"741520": [["generate_cards", "Discover a creature"], ["selection", "Discover"], ["in_hand_buff", "gains +6/+6"], ["cost_type", "wild land"]]}

@@ -69,7 +69,7 @@ def audit(g):
                             "category='tribe' having count(*) > 1", (g,)):
         out.append(f'7 {cnt} cards are called {n}')
     rules = os.path.join(HERE, 'read', g, 'game_rules.jsonl')
-    md = os.path.join(HERE, '..', 'tools', 'games', g + '.md')
+    md = os.path.join(HERE, '..', 'games', g + '.md')
     if not os.path.exists(rules): out.append(f'8 no game rules: write read/{g}/game_rules.jsonl (PROCESS step 0.10)')
     if os.path.exists(md):
         s = open(md, encoding='utf-8').read()

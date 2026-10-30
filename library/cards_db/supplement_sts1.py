@@ -1,5 +1,5 @@
 """Slay the Spire: every entry of the game, with the library's broken texts repaired.
-Source: the library's sts1 entries (cards from the Slay the Spire wiki's Module:Cards/data via library/tools/convert/conv_sts.py;
+Source: the library's sts1 entries (cards from the Slay the Spire wiki's Module:Cards/data via library/sources/conv_sts.py;
 relics, potions, powers, monsters, events and Ascension levels from the game's localization). They are whole: 75 cards per
 character, colorless cards, curses and statuses, an upgraded form 'Name+' where the upgrade changes more than numbers; every
 card of every guide deck in decks.tsv is among them (checked 30 Oct 2026).

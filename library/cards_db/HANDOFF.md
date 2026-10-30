@@ -32,7 +32,7 @@ Read PROCESS.md in order ("Why the first three games went wrong", "How to work",
 data the same way in every game", "Steps"), then PROCESS_LESSONS.md, the sections closest to your kind of game. Follow the
 steps once, in order. The order that saves the most time:
 1. **Before readers.** The game's data is already in the repo (step 0.3); its rules and terms are in
-   `library/tools/games/<game>.md`. Research how the game works first (fights, moves, boards, statuses, what cards put in
+   `library/games/<game>.md`. Research how the game works first (fights, moves, boards, statuses, what cards put in
    play) and write it as game rules (step 0.10). Every card of every guide deck must be a card of the game (`audit_links.py`
    check 5): if not, build the supplement first. Read 20 cards' source boxes and their keyword definitions field by field.
    Decks: at least 20, spread over the game's factions and mechanics; full ones with counts if they exist (step 2.9); a

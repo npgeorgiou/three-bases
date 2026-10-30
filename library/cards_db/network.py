@@ -1,4 +1,4 @@
-"""A deck, a faction or a whole game as a network of cards (NETWORK_DRAFT.md), built from the stored rows only, the same way
+"""A deck, a faction or a whole game as a network of cards, built from the stored rows only, the same way
 for every game; lines only join cards of one game.
 Nodes: the cards; their level-up forms; cards they make or put into play ("made by the deck").
 Lines A -> B, each with a kind and a weight:

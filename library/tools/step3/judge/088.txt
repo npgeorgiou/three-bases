@@ -1,70 +1,0 @@
-# definitions
-activated | Activated ability (pay to use) | The player chooses when to use an ability: activate, tap, pay to use. | Not: Abilities that fire on their own are triggers.
-summon | Summon units / tokens | New units are put onto the owner's side of the board. | Not: Units put on the opponent's side are board_clog; units back from death are revive.
-symmetric_effect | Both players alike | The effect touches both players the same way: each player draws. | Not: Only my side is the effect itself.
-temporary_effect | This turn / round only | It lasts only this turn or round: a bonus, a penalty or a lock. | Not: Lasting changes are the effect itself.
-transform | Transform my card into another | The owner's own card or unit turns into a different one: evolve, flip, become. | Not: Turning an enemy into something weaker is polymorph.
-tribal | Tribe / type matters | The effect cares about a tribe, type, team or family of cards. | Not: Counting as another type is type_grant.
-tutor | Search the deck for a card (tutor) | The owner searches the deck for a card of a stated kind and takes it. | Not: Drawing the top card is draw.
-upgrade | Upgrade / level up a card | A card is upgraded, levelled up or enhanced into a better version of itself. | Not: A plain stat rise on the board is stat_gain.
-# questions: qid | concept | game | name | text
-1032 | summon | runeterra | Monkey Idol | Keywords: Immobile. Round Start: Deal 2 to me and summon a Powder Monkey.
-1033 | summon | runeterra | Soul Cleave | Kill an ally to summon 2 Ephemeral copies of it.
-1034 | summon | runeterra | Instant Century | Keywords: Focus. Summon a random landmark with Countdown, or advance a landmark 4 rounds.
-1035 | summon | runeterra | Vora | When I'm summoned, summon a random Husk.
-6718 | summon | runeterra | Riptide Sermon | Deal 3 to an enemy unit. / Spawn 3. / Deal 1 to the enemy Nexus.
-6719 | summon | runeterra | Illaoi (level 2) | Keywords: Overwhelm. When you Spawn, increase its value by 1. Attack: Spawn 1, then fully heal your strongest Tentacle and I gain stats equal to its stats this round.
-6720 | summon | runeterra | Nagakabouros | Keywords: Fearsome. When I'm summoned or Round Start: Spawn 2. Then, if your strongest Tentacle has 12+ Power, create a Nagakabouros' Tantrum in hand.
-6721 | summon | runeterra | The Sea's Voice | Attack: Spawn 1 and give your strongest Tentacle Overwhelm this round.
-6722 | summon | runeterra | Illaoi's Tentacle Smash | Keywords: Slow. Spawn 2, then your strongest Tentacle and an enemy strike each other. Create an Illaoi in your deck.
-6723 | summon | runeterra | Tentacle Smash | Spawn 2, then your strongest Tentacle and an enemy strike each other.
-6724 | summon | runeterra | Eye of God | Keywords: Equipment. Attack: Spawn 2.
-6725 | summon | runeterra | Buhru Lookout | When I'm summoned, Spawn 3.
-6726 | summon | runeterra | The Sea's Command | Attune.When I'm summoned, Spawn equal to my cost.
-6727 | summon | runeterra | Eye of Nagakabouros | Spawn 2. / Draw 2.
-3610* | symmetric_effect | runeterra | Veteran Investigator | When I'm summoned, ALL players draw 1.
-3611* | symmetric_effect | runeterra | Targon's Peak | Keywords: Landmark. Round Start: Reduce the cost of a random card in ALL players' hands to 0 this round.
-3612* | symmetric_effect | runeterra | Aloof Travelers | When I’m summoned, ALL players draw 1, then your opponent discards their highest cost card.
-3613* | symmetric_effect | runeterra | Charlatan Fishmonger | Round Start: ALL players draw 1, then grant your opponent's card Fleeting.
-8121* | symmetric_effect | runeterra | Ember Maiden | Round Start: Deal 1 to EVERYTHING.
-8122* | symmetric_effect | runeterra | Ice Shard | Deal 1 to EVERYTHING.
-8123* | symmetric_effect | runeterra | Spirits Unleashed | Grant allies everywhere +1|+1. Then deal 1 to EVERYTHING.
-8124* | symmetric_effect | runeterra | Fracture | Deal 1 to EVERYTHING or destroy a unit's equipment.
-8125* | symmetric_effect | runeterra | Udyr's Spirits Unleashed | Keywords: Slow. Grant allies everywhere +1|+1. Then deal 1 to EVERYTHING. Create an Udyr in your deck.
-8126* | symmetric_effect | runeterra | Ram Stance | Keywords: Slow. Pick an ally. Deal 1 to EVERYTHING else.
-8127* | symmetric_effect | runeterra | Fracture (created) | Keywords: Slow. Deal 1 to EVERYTHING.
-3395* | temporary_effect | runeterra | Survival Skills | Allies can't drop below 1 health this round. / When discarded, your strongest ally can't drop below 1 health this round.
-3396* | temporary_effect | runeterra | Eager Dedicant | Keywords: Brash, Missing Translation. I have +1|+0 for each card you've drawn this round.
-3397* | temporary_effect | runeterra | Annie's Disintegrate | Keywords: Fast. Pick a unit. The next time it takes 1 or more damage this round, kill it. Create an Annie in your deck.
-3398* | temporary_effect | runeterra | Thresh's The Box | Keywords: Fast. Deal 3 to each enemy that was summoned this round. Create a Thresh in your deck.
-3399* | temporary_effect | runeterra | Fresh Offerings | If 3+ allies have died this round, summon Vilemaw.
-3400* | temporary_effect | runeterra | Lamb's Respite | Give the weakest ally "I can't take damage or die" this round.
-3401* | temporary_effect | runeterra | The Box | Deal 3 to each enemy that was summoned this round.
-3402* | temporary_effect | runeterra | Divine Judgment | Give an ally "I can't take damage or die" this round.  / Give all allies +1|+0 this round.
-3403* | temporary_effect | runeterra | Reveler's Feast | Deal 2 to an ally to give allies +2|+0 this round.
-3404* | temporary_effect | runeterra | Crystal Carrier | Round Start: Get an extra mana gem this round.
-4707 | transform | runeterra | Black Rose Spy | Reputation: When I'm summoned, transform me into an exact copy of the strongest ally that struck this round.
-4708 | transform | runeterra | Liminal Guardian | When I'm summoned, summon a random 1 cost follower from your regions. When I'm Recalled, transform me into Nine Lives.
-4709 | transform | runeterra | Go Hard | Drain 1 from a unit. / Create 2 copies of Go Hard in your deck. Every third time this happens, transform all copies of me everywhere into Pack Your Bags.
-4710 | transform | runeterra | Hextech Anomaly | When you draw or create me in hand or each Round Start: while I'm in hand, transform me into a random 6+ cost spell.
-4711 | transform | runeterra | Destined Poro | Round Start: If you've leveled a champion, transform me into Exalted Poro.
-4712 | transform | runeterra | Impersonate | Keywords: Skill. Pick a follower. Transform me into an exact copy of it.
-4713 | transform | runeterra | Pyke (level 2) | Keywords: Lurk, Quick Attack. When I Lurk, transform me into Death From Below. When I kill an enemy, I strike the weakest enemy.
-4714 | transform | runeterra | Packmother Nidalee (level 2) | Keywords: Overwhelm, Quick Attack. Ambush 2 Nexus Strike: Transform me back into Nidalee and create a Javelin Toss in hand.
-4715 | transform | runeterra | Big Game Tycoon | Play: Manifest a card with Ambush. / When an ally transforms, double its Power and Health.
-4716 | transform | runeterra | Chief Nakotak | When an ally transforms, fully heal it and grant it +1|+1 and Impact.
-6930* | transform | runeterra | Ripper's Bay | Keywords: Lurk, Landmark. When allies attack, before activating Lurk, grant the top ally in your deck Lurk and it becomes a Lurker.
-6455* | tribal | runeterra | Shyvana | Keywords: Fury. Attack: Give me +1|+1 this round. Level up: Dragon allies have dealt 16+ damage.
-6456* | tribal | runeterra | Spider Queen Elise (level 2) | Keywords: Fearsome, Challenger, Missing Translation. Other Spider allies have Challenger and Fearsome.
-4572* | tutor | runeterra | Warmother's Call | Summon the top ally from your deck now and EACH Round Start.
-4573* | tutor | runeterra | Zap Sprayfin | Keywords: Elusive, Attune. When I'm summoned, draw a spell that costs 3 or less from your deck.
-4574* | tutor | runeterra | Vaults of Helia | Keywords: Landmark. Round Start: If you can, kill your most expensive ally to summon an ally from your deck that costs 1 more.
-4575* | tutor | runeterra | Gluttony | Kill an ally with Last Breath to summon a follower from your deck that costs 1 more.
-4576* | tutor | runeterra | The Kingfisher | When I'm summoned, draw 1 of each champion from your deck. / Each round, the first time you summon a champion, Rally.
-4577* | tutor | runeterra | Thresh (level 2) | Keywords: Challenger. The first time I attack this game, summon another attacking champion from your deck or hand.
-5162* | upgrade | runeterra | Viktor | Keywords: Augment. When I'm summoned or Round Start: Create a Hex Core Upgrade in hand. Level up: You've played 7+ created cards.
-5163* | upgrade | runeterra | Viktor (level 2) | Keywords: Augment, Missing Translation. Your created cards cost 1 less. When I'm summoned or Round Start: Create a Hex Core Upgrade in hand.
-427* | activated | shadowverse | Castelle's Ultimate | Put a Purgation's Blessing into your hand. Give your leader the following effect: At the start of your every other turn, put a Purgation's Blessing into your hand. (This effect lasts for the rest of the match.)<<${me.inplay.class.load_turn_skill_id=9301440901}>0&{me.main_place.class.is_buff_detail=true.count}>0? (Turn given: )?>>
-2166 | activated | shadowverse | Instigator of Discord | Evolved: Evolve: Activate Vengeance until the end of your next turn, even if your leader's defense is greater than 10. Destroy an enemy follower that costs 2 play points or less. Summon an allied copy of the selected follower and give it Rush.
-2167* | activated | shadowverse | Postapocalyptic Girls | During your turn, when this card is added to your hand from your deck, if X is at least 1, subtract X from its cost and reveal it. X equals the number of times Resonance has been activated for you this match. ---------- Accelerate (1): Put 2 Analyzing Artifacts and a Postapocalyptic Girls into your deck. At the end of this turn, draw a card. ---------- Fanfare: Restore 5 defense to your leader. Give your leader the following effect - The next time your leader takes damage, reduce that damage to 0.
-2168 | activated | shadowverse | Rayne, Divine Smith | Invocation: Whenever you play a card, if it's the fourth card you've played this turn, invoke this card. Then, return it to your hand and change its cost to 1. Evolved: Evolve: Evolve an unevolved allied Forestcraft follower. (Evolve effects will not activate.)

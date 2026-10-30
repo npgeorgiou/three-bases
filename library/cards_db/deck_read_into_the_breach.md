@@ -244,7 +244,7 @@ Fix: decks list each mech, then what it carries; network.py draws "Combat Mech c
 KIND_ORDER; network_page.py colours it). Builds checked against the rule: Hazardous Mechs' run (Nano Mech would hold
 Teleporter, Frost Beam and Viscera Nanobots, and Force Amp's mech is not said) and the two CelJaded Force Amp builds (no mech
 said) are dropped; in the Rusting Hulks run Force Amp goes on Jet Mech, the only free slot. Cases ntb11; ntb8 moved to the
-Rusting Hulks run. The rule is in BRIEF "Game words: Into the Breach" and library/tools/games/into_the_breach.md.
+Rusting Hulks run. The rule is in BRIEF "Game words: Into the Breach" and library/games/into_the_breach.md.
 
 ## Claude's builds (30 Oct 2026; Kaptain: "put something that makes sense")
 Most official squads leave one slot free per mech, and players post their loadouts as pictures, not text. At Kaptain's word
@@ -273,7 +273,7 @@ Fix: vocab: redirect_attack causes damaged, survives_damage, dies, killed. Case 
 Cards: Flood Drill (holes and water), Seismic Capacitor and Fissure Fist (cracked ground, a hole once hit), and every weapon
 that pushes, pulls or tosses Vek.
 Root cause: the game's rule that a ground unit pushed into a Chasm is destroyed, and that most Vek drown in Water and Lava
-(library/tools/games/into_the_breach.md, wiki Tiles), was in the rules notes but in no record or line rule.
+(library/games/into_the_breach.md, wiki Tiles), was in the rules notes but in no record or line rule.
 Same error elsewhere: Faeria makes oceans, where nothing dies; no other game has deadly ground.
 Fix: network.DEADLY_GROUND (Into the Breach: chasm, water, lava, cracked ground): a card that makes it enables every card
 that pushes enemy units ("Flood Drill makes holes, and Titan Fist pushes enemy units: a ground unit pushed into a hole

@@ -16,7 +16,7 @@ Kaptain checked a few decks four times and each time found missing and wrong lin
 1. **The rows held only what card texts say, not the game's rules.** No Runeterra text says "a unit that attacks unblocked
    hits the enemy Nexus", so no unit helped Gangplank, Darius or Gnar level up. Now each game has
    `read/<game>/game_rules.jsonl` (step 0.10): what every unit does by the rules, written once from
-   `library/tools/games/<game>.md`; refs.py gives those rows to every card of the category (origin game).
+   `library/games/<game>.md`; refs.py gives those rows to every card of the category (origin game).
 2. **Claude patched the example, not the cause.** Each check added one special rule to the network code (power helps
    damage, health helps survival ...) and the next missing case waited for Kaptain. Now what helps a need is one table
    (network.py HELPS) and every fix is a rule over all cards of all games (fixes/<game>/vNN.py), never one card.
@@ -86,7 +86,7 @@ every small edit, and turning a decision one way and later back. Work like this:
    game could use it ("start of the owner's turn", "the tile in front"), with the game as an example in brackets.
 2. Every keyword gets a vocab keyword row whose concept (column tree) says what it does by the game's own rules. Check each,
    twice, before a game is done: (a) the keyword's meaning from the game's glossary or wiki, not from memory or the old
-   library; (b) the concept's definition, including its "not this" part (library/tools/concept_tree_v3.txt); (c) whose
+   library; (b) the concept's definition, including its "not this" part (library/concept_tree.txt); (c) whose
    side it hits (an enemy that can't block is cant_block, my own unit that can't block is a drawback); (d) whether the
    keyword belongs to the game at all (Terrify is Path of Champions: deleted). When a shared keyword name means something
    else in this game, the row is `<game>:<Name>` (monster_train:Frostbite is damage over time, Runeterra's Frostbite is
@@ -94,7 +94,7 @@ every small edit, and turning a decision one way and later back. Work like this:
    How to map a keyword to a concept: read the concept's definition and its "not this" part, then use an existing concept
    only when the definition says exactly that mechanic. A loose fit is wrong (Claude's first list had Enlightened ->
    high_cost, Deep -> self_mill, Plunder -> on_life_loss: Enlightened is a max-mana condition, Deep a deck-size condition,
-   Plunder "the enemy Nexus was damaged this round"). When none fits, add a precise concept to concept_tree_v3.txt with
+   Plunder "the enemy Nexus was damaged this round"). When none fits, add a precise concept to concept_tree.txt with
    its definition and "not this", give it a shape rule in flat.py RULES, and run the rule on every game, then read what
    it found in each (v32: spell_or_skill, countdown, max_mana_condition, card_presence_condition ...).
 3. Events, states and durations that games word differently get the same concept: round_start and turn_start are
@@ -125,7 +125,7 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
 
 ## Steps
 ### 0. Before reading (in this order)
-1. **Research the game** (library/ADDING_GAMES.md section 0.1): rules, the full keyword glossary, factions or tribes,
+1. **Research the game** (the game's wiki rules and full glossary, every faction page, two or more strategy guides; note each mechanic with its page): rules, the full keyword glossary, factions or tribes,
    board, turn structure. Also search now for players' guides with real decks (Steam guides and discussions, build
    guides, tier lists with card lists): they become the deck tests (step 3). Note each source's URL and check it is about
    this game (Monster Train 1 and 2 guides look alike; a page with card names the game does not have is not a source).
@@ -133,16 +133,16 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
    links to them are how combos are found.
 3. **The game's data is already in the repo. Look there before fetching anything.** Kaptain does not know where each file
    is; this list does:
-   - `library/tools/convert/conv_<game>.py`: its first lines name the source, date and format of the game's card data. Raw
+   - `library/sources/conv_<game>.py`: its first lines name the source, date and format of the game's card data. Raw
      files next to them: `monster_train_cards.psv` (282 Monster Train cards, wiki Module:Cards/Data),
      `inscryption_missing_cards.json` (partial: only the cards the library missed; the whole set is
      `inscryption_wiki_cards.jsonl` + `inscryption_wiki_cards_more.jsonl`, wiki pages with their revisions, 29 Oct 2026), `faeria_merlin_shortened.csv` + `faeria_cards_english.csv` (462 Faeria cards,
      Abrakam's github.com/abrakam/Faeria_Cards 12b7207; its README defines the keywords). Named sources: Lorcana (npm lorcana-oracle), Star Wars: Unlimited (swucardex-data
      a86faed), Elder Scrolls: Legends (TESLegendsTracker c541e82), Slay the Spire (wiki Module:Cards/data), Slay the Spire 2
      (Kaptain's lists, 12 Oct 2026), Gwent (gwent.one v14.8), Magic (MTGJSON AtomicCards, Scryfall tokens), Shadowverse
-     (Portal API), 40k and Age of Sigmar (BSData). Duelyst: `library/tools/convert/duelyst_cards.psv` (1116 cards, conv_duelyst.py over
+     (Portal API), 40k and Age of Sigmar (BSData). Duelyst: `library/sources/duelyst_cards.psv` (1116 cards, conv_duelyst.py over
      github.com/open-duelyst/duelyst 2843f24; the repo's tutorial and tips are the rules source).
-   - `library/tools/games/<game>.md`: research, sources, and the keyword terms with the page each comes from. Check each
+   - `library/games/<game>.md`: research, sources, and the keyword terms with the page each comes from. Check each
      term's source is this game and drop terms marked "assumed" (rule 1).
    - `library/cards_db/supplement/<game>*`: games already imported here.
    Fetch from the web only what none of these has (the built-in browser reaches pages the workspace cannot; a fandom
@@ -174,7 +174,7 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
    network lines: how units fight, move and reach the enemy player, and on a board where cards may enter and how the board
    grows (who may build or claim spaces, next to what; Faeria's were missing and caused most of its network errors). Take
    them from the game's own rules (tutorial, rulebook, help pages, wiki),
-   written with their sources into `library/tools/games/<game>.md` ("The game's rules (from sources)" or sourced terms; never
+   written with their sources into `library/games/<game>.md` ("The game's rules (from sources)" or sourced terms; never
    the "Claude's summary" lines, which came from memory: audit_links check 8),
    write what every unit (or card of a category) does that no card text says, as one record: name "Game rule: ...",
    `applies_to` (categories), `source` (the line it comes from), abilities on event always with pick self. The three games
@@ -185,7 +185,7 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
    the network weights them less than a card that says it; card queries (ask.py, mechanics.py, connections.py) leave them out.
 
 11. **What a deck is in this game** (Into the Breach, 30 Oct 2026: a squad was first written as 3 mechs, and Kaptain found
-   "no weapons in your networks"). Before writing decks.tsv, write into `library/tools/games/<game>.md` what the player
+   "no weapons in your networks"). Before writing decks.tsv, write into `library/games/<game>.md` what the player
    really brings to a battle and its limits: which cards ride on which (a mech carries 2 slots: its starting weapon and its
    passive or one extra weapon, never two extra), slot and class rules, copies allowed. Each deck lists every card the player
    brings, in an order that says what rides on what (each mech, then what it carries); check every deck against the limits

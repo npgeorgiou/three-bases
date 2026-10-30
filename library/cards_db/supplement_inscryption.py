@@ -3,7 +3,7 @@ Why: the library's 164 Inscryption units came from the same wiki but are not usa
 merged (Hawk, Raven, Sparrow and Mothman into Bat; Skeleton into Revenant), cards without sigils were dropped (Wolf, Coyote,
 Grizzly, Stoat, Opossum ...), and a page's tabs were stored under the tab's label (Left, Right, Normal, Dormant, Base Form).
 So every card is written here, and source.py FULL replaces all the library's Inscryption units and terrain with these.
-Cards: library/tools/convert/inscryption_wiki_cards.jsonl (215 pages, the first {{Card}} box of every page in
+Cards: library/sources/inscryption_wiki_cards.jsonl (215 pages, the first {{Card}} box of every page in
 Category:Cards plus Loose Tail, sha256 2e0d2c72...) and inscryption_wiki_cards_more.jsonl (the further boxes: Gem Vessels on
 Empty Vessel, Act III Trees on Trees, sha256 3493c1ba...), read through the wiki's api.php in the built-in browser on
 29 Oct 2026; each line has the page title, revision id, the page's act/faction/tribe categories and the box (images removed).
@@ -29,7 +29,7 @@ Writes supplement/inscryption.jsonl and supplement/inscryption_links.jsonl; ids 
 Usage: supplement_inscryption.py"""
 import json, os, re, sqlite3
 HERE = os.path.dirname(os.path.abspath(__file__))
-CONV = os.path.join(HERE, '..', 'tools', 'convert')
+CONV = os.path.join(HERE, '..', 'sources')
 OUT = os.path.join(HERE, 'supplement', 'inscryption.jsonl')
 LINKS = os.path.join(HERE, 'supplement', 'inscryption_links.jsonl')
 LIB = os.path.join(HERE, '..', 'three-bases-library.sqlite')

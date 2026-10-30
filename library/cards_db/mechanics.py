@@ -17,7 +17,8 @@ def edges(c, game):
     key = ('edges', game)
     if key in CACHE: return CACHE[key]
     rows = c.execute("""select f.card, f.role, f.happening, f.side, f.keyword, f.pick from flat_ref f join card k on k.id=f.card
-                        where k.game=? and k.is_keyword=0 and k.is_stub=0 and f.origin!='game'""", (game,)).fetchall()
+                        where k.game=? and k.is_keyword=0 and k.is_stub=0 and f.origin!='game'
+                        and coalesce(k.category,'') not in ('boss','monster','event','modifier')""", (game,)).fetchall()  # no enemies
     makes, takes = collections.defaultdict(list), collections.defaultdict(list)
     for card, role, h, side, kw, pick in rows:
         if pick == 'self' and role != 'makes':
@@ -67,7 +68,8 @@ def concepts_of(c, game):
     if key not in CACHE:
         d = collections.defaultdict(set)
         for card, con in c.execute("""select f.card, f.concept from flat_concept f join card k on k.id=f.card
-                                      where k.game=? and k.is_keyword=0 and k.is_stub=0""", (game,)):
+                                      where k.game=? and k.is_keyword=0 and k.is_stub=0
+                                      and coalesce(k.category,'') not in ('boss','monster','event','modifier')""", (game,)):
             d[card].add(con)
         for a, b in c.execute("select m.card, m.made from flat_made m join card k on k.id=m.card where k.game=?", (game,)):
             d[a] |= d.get(b, set())  # a card is everything it makes (Zed brings his Living Shadow's Ephemeral)

@@ -35,6 +35,25 @@ def games_of(arg):
     return allg if arg == 'all' else [g for g in arg.split(',') if g in allg]
 
 
+def subtree():
+    """each concept with every concept under it in library/concept_tree.txt (suppress: disable, silence, immobilize ...)"""
+    kids = {}
+    for line in open(os.path.join(HERE, '..', 'concept_tree.txt'), encoding='utf-8'):
+        if line.startswith('#') or '|' not in line: continue
+        f = [x.strip() for x in line.split('|')]
+        for p_ in filter(None, (x.strip() for x in f[3].split(','))): kids.setdefault(p_, set()).add(f[0])
+        kids.setdefault(f[0], set())
+    out = {}
+    def walk(x, seen):
+        for k in kids.get(x, ()):
+            if k not in seen: seen.add(k); walk(k, seen)
+        return seen
+    for x in kids: out[x] = walk(x, {x})
+    return out
+SUB = subtree()
+c.create_function('under', 2, lambda v, x: v == x or v in SUB.get(x, ()), deterministic=True)  # a concept or one under it
+
+
 ENEMY = ('boss', 'monster', 'event', 'modifier')  # the game's enemies and run events: no player's cards (--enemies keeps them)
 WITH_ENEMIES = '--enemies' in sys.argv
 if WITH_ENEMIES: sys.argv.remove('--enemies')
@@ -58,7 +77,7 @@ def ids_of(games, sql, args=()):
 
 def known(x):
     """a concept or happening the database has; else say so and name the nearest ones"""
-    have = {v for (v,) in c.execute("select distinct concept from flat_concept")} | {v for (v,) in c.execute("select value from vocab where field='event'")}
+    have = set(SUB) | {v for (v,) in c.execute("select distinct concept from flat_concept")} | {v for (v,) in c.execute("select value from vocab where field='event'")}
     if x in have: return True
     import difflib
     print(f'unknown concept or happening "{x}"; nearest: ' + ', '.join(difflib.get_close_matches(x, have, 6, 0.4) or sorted(v for v in have if x.split('_')[0] in v)[:6]))
@@ -95,7 +114,7 @@ def names(games, sql, args=(), limit=None):
 
 def feature_sql(x):
     """a concept or a happening the card makes"""
-    return ("select card from flat_concept where concept=? union select card from flat_ref where happening=? and role='makes' and origin!='game'", (x, x))
+    return ("select card from flat_concept where under(concept, ?) union select card from flat_ref where happening=? and role='makes' and origin!='game'", (x, x))
 
 
 def side_sql(side):
@@ -107,8 +126,8 @@ def main():
     if q in ('cares', 'makes', 'concept', 'together', 'feeds', 'fed', 'chains', 'factions') and args and not known(args[0]): return
     if q in ('both', 'compare') and not all(known(x) for x in args): return
     col = 'happening' if args and c.execute("select 1 from vocab where field='event' and value=?", (args[0],)).fetchone() else 'concept'
-    if q == 'cares': names(games, f"select card from flat_ref where {col}=? and role!='makes'" + side_sql(args[1] if len(args) > 1 else ''), (args[0],))
-    elif q == 'makes': names(games, f"select card from flat_ref where {col}=? and role='makes' and origin!='game'" + side_sql(args[1] if len(args) > 1 else ''), (args[0],))
+    if q == 'cares': names(games, f"select card from flat_ref where {'under(concept, ?)' if col == 'concept' else col + '=?'} and role!='makes'" + side_sql(args[1] if len(args) > 1 else ''), (args[0],))
+    elif q == 'makes': names(games, f"select card from flat_ref where {'under(concept, ?)' if col == 'concept' else col + '=?'} and role='makes' and origin!='game'" + side_sql(args[1] if len(args) > 1 else ''), (args[0],))
     elif q == 'together':
         for x, per in mechanics.together(c, games, args[0]): print(f'{x}: ' + ', '.join(f'{g} {n} cards' for g, n in per.items()))
     elif q in ('feeds', 'fed'):
@@ -122,15 +141,15 @@ def main():
         size = int(args[1]) if len(args) > 1 else {'stormbound': 12}.get(games[0], 14)
         ids, allowed = mechanics.deck(c, games[0], args[0], size)
         print(f'{games[0]}, factions {", ".join(sorted(allowed))}: ' + ', '.join(mechanics.name(c, i) for i in ids) if ids else 'nothing found')
-    elif q == 'concept': names(games, 'select card from flat_concept where concept=?', (args[0],))
+    elif q == 'concept': names(games, 'select card from flat_concept where under(concept, ?)', (args[0],))
     elif q == 'both':
         (sa, pa), (sb, pb) = feature_sql(args[0]), feature_sql(args[1])
         names(games, f'select card from ({sa}) intersect select card from ({sb})', pa + pb)
     elif q == 'compare':
         for x in args:
-            print(f'## {x}'); names(games, 'select card from flat_concept where concept=?', (x,), limit=8)
+            print(f'## {x}'); names(games, 'select card from flat_concept where under(concept, ?)', (x,), limit=8)
     elif q == 'factions':
-        got = set(ids_of(games, 'select card from flat_concept where concept=?', (args[0],)))
+        got = set(ids_of(games, 'select card from flat_concept where under(concept, ?)', (args[0],)))
         for g in games:
             per = {}
             for i, regs in c.execute("select id, regions from card where game=? and is_keyword=0 and is_stub=0 and coalesce(category,'') not in "

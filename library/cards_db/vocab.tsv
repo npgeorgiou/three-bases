@@ -68,7 +68,7 @@ act	look	look at cards without taking them	selection		27 Oct 2026, v1
 act	choose_one	the player chooses one of the following effects (they carry link=or)	modal_choice		27 Oct 2026, v1
 act	choose_card	pick a card among options (Invoke, Manifest, Predict, Discover)	selection		27 Oct 2026, v1
 act	counter	negate a spell or skill	counter_spell		27 Oct 2026, v1
-act	negate_damage	prevent damage to the target	damage_prevention		27 Oct 2026, v1
+act	negate_damage	prevent damage to the target	damage_reduction		27 Oct 2026, v1
 act	swap	swap the positions of the targets	swap	moves	27 Oct 2026, v1
 act	move	move the target to another position or zone	forced_movement	moves;moves_onto	27 Oct 2026, v1
 act	countdown_advance	make a Countdown count down (param amount)	delayed	countdown_done	27 Oct 2026, v1

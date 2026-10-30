@@ -1,70 +1,0 @@
-# definitions
-activated | Activated ability (pay to use) | The player chooses when to use an ability: activate, tap, pay to use. | Not: Abilities that fire on their own are triggers.
-aoe_damage | Damage to many at once | Damage hits several units, a row, a lane or an area at once. | Not: One unit's attack hitting several is multi_target_attack.
-banish | Banish / exile (gone for good) | A unit or card is removed from the game for good, beyond the discard pile. | Not: Leaving and coming back is blink.
-blocking | Blocking / interception rules | Rules for who can block or intercept an attacker. | Not: A unit that can't block is cant_block.
-board_wipe | Board wipe | Most or all units on the board, or in a lane, are destroyed or removed. | Not: Damage to several that may leave survivors is aoe_damage.
-bounce_enemy | Send an enemy unit back (bounce) | An enemy unit is returned to its owner's hand or deck. | Not: Returning my own unit is return_to_hand.
-coin_economy | Second currency for abilities | A second currency (coins, crowns) is spent on abilities. | Not: Shop gold between fights is shop_gold.
-condition_count | Counts / thresholds | The effect needs or scales with a number: for each, N or more. | Not: Counts of past events this game are count_payoff.
-# questions: qid | concept | game | name | text
-2140 | activated | runeterra | Adroit Artificer | Keywords: Challenger. When I'm summoned, activate all ally Plunder effects.
-2141 | activated | runeterra | Living Library | Keywords: Elusive. When I'm summoned, if one of your traps or boons has activated this round, draw 1.
-2142 | activated | runeterra | Leona (level 2) | Keywords: Challenger. Daybreak or when you activate another Daybreak: Stun the strongest enemy and give me Barrier this round.
-2143 | activated | runeterra | Proximity Puffcap | Deal 1 to a unit. If one of your traps or boons activated this round, deal 3 to it instead.
-2144 | activated | runeterra | Daring Demolisher | Play: Deal 1 to the enemy Nexus or activate an ally's Plunder effect.
-2618 | activated | runeterra | Equipment | Equip to a unit to grant the listed bonuses. If the unit leaves play, the equipment will return to your hand. You may play each equipment at most once per round.
-2619 | activated | runeterra | Equip | Equipping an Item to a unit grants it the listed bonuses. If the unit leaves play, the Item will return to your hand. You may play each item at most once per round.
-7178 | activated | runeterra | Powder Pandemonium | Summon a Powder Monkey for each time you've activated Plunder this game.
-7179 | activated | runeterra | Duskrider | Keywords: Fearsome. Nightfall: Grant me +1|+0 for each time we've activated Nightfall this game.
-7180 | activated | runeterra | Ava Achiever | When I'm summoned or Round End: Plant 3 Poison Puffcaps in the enemy deck.  / Traps on enemy cards are doubled when activated.
-8384 | activated | runeterra | The Darkin Spear | Keywords: Equipment. Attack: Grant the top 2 allies in your deck +1|+1. / You may spend 8 mana to play me as Anaakca.
-8385 | activated | runeterra | The Darkin Staff | Keywords: Equipment, Impact. Strike: Refill 1 spell mana. / You may spend 8 mana to play me as Baalkux.
-8386 | activated | runeterra | The Darkin Harp | Keywords: Equipment, Quick Attack. You may spend 8 mana to play me as Styraatu.
-8387 | activated | runeterra | The Darkin Aegis | Keywords: Equipment, Tough. You may spend 5 mana to play me as Joraal.
-8388 | activated | runeterra | Tag Out! | Recall an ally and create a Coin in hand, or spend 5 mana to Recall an enemy and create a Coin in hand.
-8389 | activated | runeterra | Soul Harvest | Kill a follower with 3 or less Power, or spend 3 mana to kill a champion with 3 or less Power.
-6856* | aoe_damage | runeterra | Nilah (level 2) | Keywords: Brash. Attack: Create a Slipstream in the top 6 cards of your deck and deal 2 damage to all enemies and the enemy Nexus. They cannot drop below 1 Health from this damage.
-1577* | banish | runeterra | Reforge | Create a random Blade Fragment still needed to restore the blade. Once you’ve played all 3, create the Blade of the Exile.
-1578* | banish | runeterra | Riven | When I'm summoned, if you have the attack token, or when you gain the attack token, Reforge. Level up: You've created Blade of the Exile.
-3682 | blocking | runeterra | Trifarian Gloryseeker | Keywords: Challenger, Can't Block.
-3683 | blocking | runeterra | Renekton (level 2) | Keywords: Overwhelm. When I block or Attack: Deal 2 to enemies and the enemy Nexus.
-3684 | blocking | runeterra | Challenger | Can choose which enemy unit blocks.
-3685 | blocking | runeterra | Wrath of the Freljord | Keywords: Overwhelm, Missing Translation. Play:Frostbite an enemy. / Enemies with 3 or less Power can't block.
-3686 | blocking | runeterra | Legion Rearguard | Keywords: Can't Block.
-3687 | blocking | runeterra | Consuming Wrath | +4|+0 and Can't Block.
-3688 | blocking | runeterra | Blighted Battleaxe | Keywords: Equipment, Can't Block. Round End: If my bearer didn't attack this round, grant it Gloom.
-3689 | blocking | runeterra | Thrashing Snapper | When an enemy blocks me, give me +3|+0 this round.
-3690 | blocking | runeterra | Hunting Boar | Keywords: Can't Block, Last Breath. Last Breath: Get an empty mana gem.
-3691 | blocking | runeterra | Shark Chariot | Keywords: Can't Block, Ephemeral, Last Breath. Last Breath: The next time an Ephemeral ally attacks, revive me attacking.
-8732 | blocking | runeterra | Risen Reckoner | Keywords: Overwhelm, Ephemeral. When I'm summoned, grant Can't Block to the weakest enemy.
-8733 | blocking | runeterra | Ashe (level 2) | Keywords: Missing Translation. Attack: Frostbite the strongest enemy. Enemies with 0 Power can't block.
-8734 | blocking | runeterra | Slingshot Sniper | Keywords: Skill, Focus. Give an enemy Can't Block this round.
-8735 | blocking | runeterra | Rusty Armor | Can't block
-8736 | blocking | runeterra | Fireth, Reaper of the Sands | Keywords: Ephemeral, Can't Block. When I'm summoned, I Improvise.
-8737 | blocking | runeterra | The Arena's Greatest | Keywords: Landmark. I-II: Give an ally +2|+0 this round. / III: Give an enemy Can't Block this round.
-7660 | board_wipe | runeterra | The Ruination | Kill ALL units.
-7661 | board_wipe | runeterra | Castigate | Kill ALL followers.
-7662 | board_wipe | runeterra | Utter Devastation | Kill ALL units except Darkin allies and Equipped allies.
-7663 | board_wipe | runeterra | Conservator's Judgment | Keywords: Skill. Kill an enemy follower. If you've slain 13+ units this game, kill all enemy followers, then summon a copy of me instead.
-7664 | board_wipe | runeterra | Mordekaiser's Realm of Death | Keywords: Slow. An ally starts a free attack Challenging the Strongest enemy. Kill ALL other units. Create a Mordekaiser in your deck.
-7234* | bounce_enemy | runeterra | Equipment | Equip to a unit to grant the listed bonuses. If the unit leaves play, the equipment will return to your hand. You may play each equipment at most once per round.
-7235* | bounce_enemy | runeterra | Equip | Equipping an Item to a unit grants it the listed bonuses. If the unit leaves play, the Item will return to your hand. You may play each item at most once per round.
-9127 | coin_economy | runeterra | Barknuckles | Keywords: Equipment, Brash. Strike: Create a Coin in hand.
-9128 | coin_economy | runeterra | Jack (level 2) | Keywords: Overwhelm, Brash. Strike: Create 2 Coins in hand. When you refill mana, grant me +1|+0 and heal me 1 for each mana refilled.
-9129 | coin_economy | runeterra | Pocket Picker | Keywords: Last Breath. Last Breath: Create a Coin in hand.
-9130 | coin_economy | runeterra | Attentive Accountant | Keywords: Elusive. Nexus Strike: Create a Coin in hand.
-9131 | coin_economy | runeterra | Sett's Facebreaker | Keywords: Slow. Stun 2 enemies and create a Coin in hand. Create a Sett in your deck.
-9132 | coin_economy | runeterra | Facebreaker | Stun 2 enemies and create a Coin in hand.
-9133 | coin_economy | runeterra | The Pit Champion | Keywords: Landmark. I: An ally and an enemy Strike each other. They can't drop below 1 Health from this Strike. / II: Fully heal an ally. / III: Create 3 Coins in hand.
-9134 | coin_economy | runeterra | Tag Out! | Recall an ally and create a Coin in hand, or spend 5 mana to Recall an enemy and create a Coin in hand.
-9135 | coin_economy | runeterra | Smooth Mixologist | Play: Heal an ally or your Nexus 3 and create a Coin in hand.
-9136 | coin_economy | runeterra | Pit Professional | When I'm summoned, create a Coin in hand.
-1153 | condition_count | runeterra | Arbiter of the Peak | Keywords: Overwhelm. I cost 1 less for each time you've targeted or supported allies this game.
-1154 | condition_count | runeterra | Rummage | To play, discard up to 2 cards. Draw 1 for each card you discarded.
-1155 | condition_count | runeterra | Warden of the Tribes | Keywords: Overwhelm. When I'm summoned, grant allies +1|+1 for each different subtype you’ve summoned this game.
-1156 | condition_count | runeterra | Powder Pandemonium | Summon a Powder Monkey for each time you've activated Plunder this game.
-1157 | condition_count | runeterra | The Immortal Fire | Keywords: Elusive. When I'm summoned, grant me +1|+0 for each Celestial card you played this game.  The first time I would die, fully heal me instead.
-1158 | condition_count | runeterra | Tristana (level 2) | Keywords: Quick Attack, Impact. I have +1|+0 for each multi-region ally you've summoned this game. When you summon a multi-region ally, grant me and it +1|+0 and Impact.
-1159 | condition_count | runeterra | Crimson Pact | Keywords: Skill. For each attacking ally on Vladimir's right, deal 1 to it and drain 1 from the enemy Nexus.
-1160 | condition_count | runeterra | Dreamlight Alina | Keywords: Spirit. When I'm summoned, summon 5 Spritelings. For each one there isn't space for, grant the Weakest ally 2 Spirit instead.

@@ -33,7 +33,7 @@
 # Monster Train: results (29 Oct 2026, waiting for Kaptain's check of CHECK_20_monster_train.md)
 
 ## What exists
-- 284 cards (282 from the wiki's Module:Cards/Data in library/tools/convert/monster_train_cards.psv, the two wax tokens
+- 284 cards (282 from the wiki's Module:Cards/Data in library/sources/monster_train_cards.psv, the two wax tokens
   from the wiki page Legion of Wax), the 12 champions with their upgrade paths, 70 glossary keywords with the wiki's
   definitions (supplement_monster_train.py). Game words in BRIEF.md "Game words: Monster Train"; every keyword has a
   concept (Frostbite and Rally have their own rows, monster_train:Frostbite and monster_train:Rally).

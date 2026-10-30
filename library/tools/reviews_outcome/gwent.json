@@ -1,9 +1,0 @@
-{
- "756183": {
-  "add": [
-   "stat_loss:counters",
-   "damage_over_time:counters"
-  ],
-  "drop": []
- }
-}

@@ -155,7 +155,7 @@ Each change: date, what changed, the card that caused it, and which records were
 - 29 Oct 2026, v36 (Inscryption networks, 2): network.actor_help_lines (effects on the card a sacrifice pays for); refs: an
   ability that spends a resource needs it; a cost rule skips cost 0; Worthy Sacrifice record (Claude): the card it is
   sacrificed for costs 2 less; cases ni06-ni08.
-- 29 Oct 2026, v37 (Duelyst, 1): cards from open-duelyst 2843f24 (supplement_duelyst.py, tools/convert/conv_duelyst.py;
+- 29 Oct 2026, v37 (Duelyst, 1): cards from open-duelyst 2843f24 (supplement_duelyst.py, sources/conv_duelyst.py;
   the library's copy lacked the basic cards and tokens); keyword rows for 42 Duelyst keywords (concepts Claude's); terrain
   damage_space, heal_space, summon_space, growth_space, bonus_mana_space; positions corner, area_2x2, area_3x3,
   starting_side, diagonal, center_column; concept cant_move (Duelyst Wall) with flat.py rules cant_move and immobilize
@@ -377,3 +377,4 @@ Each change: date, what changed, the card that caused it, and which records were
   HANDOFF box and PROCESS rule: a wrong judgment is wrong thinking, fixed everywhere it lives.
 - 30 Oct 2026, v56: no shape change; network.py, deck_analysis.py, connections.py check who must do a need (Zed, Hecarim, Pyke; PROCESS_LESSONS "Who must do it").
 - 30 Oct 2026, v57: concept rules in flat.py for attack_lock, disable, regeneration, cheat_death, zone_control (NEXT_CHAT 1-3); ask.py short texts and per-game shares.
+- 30 Oct 2026, v58: Dragon Ambush (free attack summons its cards, fixes/runeterra/v57.py); flat.py: "it" after a card comes back itself is the card; network: abilities a card gives itself are its needs, a skill's need goes to the skill only. Library tidied: old tagging tools removed; game rules in library/games, regexes in library/game_patterns, sources in library/sources, concept tree in library/concept_tree.txt.

@@ -524,7 +524,7 @@ Cards list Exhaust, Ethereal, Innate, Retain and Unplayable in the Keywords fiel
 describe them. Card kinds are types (Attack, Skill, Power, Status, Curse): "an Attack" = filter type Attack, never category
 skill. Keyword entries (category keyword: glossary words such as Block, Strength, Vulnerable, Channel, Scry, Wrath, and the
 powers Plated Armor, Mark, Hex, Stasis, Surrounded) define the words; cards use the values below. Mapping decided by Claude
-from the game's wiki and Wikipedia (tools/games/sts1.md "The game's rules"; 30 Oct 2026).
+from the game's wiki and Wikipedia (games/sts1.md "The game's rules"; 30 Oct 2026).
 - No board, no units of mine. The player = kind player, side mine ("you", "your"); enemies = kind unit, side enemy ("an
   enemy" = pick chosen, "a random enemy" = random, "ALL enemies" = all). An enemy's own text (monster, boss) is written from
   its side: the player it attacks is side enemy.

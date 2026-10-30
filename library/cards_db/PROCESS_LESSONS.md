@@ -330,7 +330,7 @@ were made the shared form for every game with spaces (BRIEF "The board"). What w
 ## Importing Into the Breach: lessons for every game (30 Oct 2026, v48-v53; deck_read_into_the_breach.md F1-F30)
 - **Understand the game before building anything.** Kaptain: "the first step was to understand the game". Read the game's
   rules, its tiles and statuses, and three guides on how players win, and write the game's own combos into
-  `library/tools/games/<game>.md` "Combos" before the deck read. Then ask of every card: what does a player use it with?
+  `library/games/<game>.md` "Combos" before the deck read. Then ask of every card: what does a player use it with?
 - **Cards that ride on other cards** (weapons on mechs; the same holds for equipment or attachments in other games): a card
   carried by a unit is a card of its own in the deck; the unit keeps only what it is (its keywords); network.CARRIED makes
   the carried card act as its unit ("the mech with Hydraulic Legs" kills, for Viscera Nanobots); a "carries" line joins

@@ -1,6 +1,6 @@
 """Monster Train: every card, the champions' upgrade paths and the wiki's glossary of effects and triggers.
 Sources (all from the Monster Train fandom wiki, monster-train.fandom.com, Monster Train 1 with The Last Divinity):
-- Cards: library/tools/convert/monster_train_cards.psv, the wiki's Module:Cards/Data (revision of 19 Jan 2024) flattened to
+- Cards: library/sources/monster_train_cards.psv, the wiki's Module:Cards/Data (revision of 19 Jan 2024) flattened to
   one line per card on 20 Oct 2026 (format in conv_monster_train.py): 282 cards, the six clans and clanless cards. The
   library has only 272 of them, so every card is written here and replaces the library's entry with the same name.
   That flattening lost some numbers ({{Value|n|X Cost|Icon}}, lower-case {{value}}) and the <hr> between a card's versions;
@@ -20,7 +20,7 @@ Usage: supplement_monster_train.py"""
 import json, os, re
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'supplement', 'monster_train.jsonl')
-CARDS = os.path.join(HERE, '..', 'tools', 'convert', 'monster_train_cards.psv')
+CARDS = os.path.join(HERE, '..', 'sources', 'monster_train_cards.psv')
 CHAMPS = os.path.join(HERE, 'supplement', 'monster_train_champions.psv')
 GLOSS = os.path.join(HERE, 'supplement', 'monster_train_glossary.psv')
 WIKI = 'Monster Train fandom wiki'

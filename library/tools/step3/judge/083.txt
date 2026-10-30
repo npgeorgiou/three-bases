@@ -1,70 +1,0 @@
-# definitions
-damage_over_time | Damage over time (poison, burn) | Damage repeats over turns: poison, burn, bleed. | Not: One-time damage is damage.
-death_trigger | When it dies (deathrattle) | Effects when a unit dies or is destroyed. | Not: Counting deaths is death_count.
-deck_position | Top or bottom of the deck matters | The top or bottom card of a deck matters: looked at, revealed or changed. | Not: Searching the whole deck is tutor.
-delayed | Delayed / countdown | The effect happens later: next turn, after N turns, countdowns. | Not: A set turn number is turn_number.
-destroy | Destroy outright | A unit is destroyed or killed regardless of its health. | Not: Killing by damage is damage; destroying my own unit for value is sacrifice.
-direct_damage | Damage to the player or base | Damage goes straight to the enemy player, hero or base. | Not: Damage to units is damage.
-disable | Can't act at all (stun, freeze) | The unit can't act at all: stun, freeze, sleep, skip its turn. | Not: Losing only its attack is attack_lock.
-discard | Discard my own cards | The owner discards cards from their own hand, as a cost or to fuel effects. | Not: Making the opponent discard is hand_disruption.
-# questions: qid | concept | game | name | text
-6588 | damage_over_time | runeterra | Teemo's Mushroom Cloud | Keywords: Burst. Plant 5 Poison Puffcaps in the enemy deck. Create a Teemo in your deck.
-6589 | damage_over_time | runeterra | Entrapment (created) | Keywords: Burst. Pick 1 of 3 spells from the enemy deck and plant 3 Poison Puffcaps on all copies of it.
-5282* | death_trigger | runeterra | Last Breath | These abilities take effect when the unit dies.
-5283* | death_trigger | runeterra | Tortured Prodigy | Keywords: Last Breath. When another ally dies, or Last Breath: Refill your spell mana.
-5284* | death_trigger | runeterra | Neverglade Collector | When another ally dies, drain 1 from the enemy Nexus.
-5285* | death_trigger | runeterra | Sea Scarab | Keywords: Deep, Last Breath. When another ally dies, or Last Breath: Toss 1.
-5286* | death_trigger | runeterra | Necrotic Arachnoid | Keywords: Fearsome. When I'm summoned, summon 2 Necrotic Nestlings.  / When another ally dies, drain 1 from the enemy Nexus.
-8918* | deck_position | runeterra | Terrify | Obliterate X cards from the top of the enemy deck, activating any traps on them.
-8919* | deck_position | runeterra | Stalking Shadows | Pick a follower from the top 4 cards in your deck. / Draw it, place the rest into your deck, then create an exact Ephemeral copy in hand.
-8920* | deck_position | runeterra | Tempting Prospect | Pick a follower or equipment from the top 4 cards of your deck. Draw it, place the rest into your deck.
-8921* | deck_position | runeterra | Scrutinizing Sergeant | Play: Pick a unit from the top 5 cards of your deck that costs 3 or less. Summon it and place the rest into your deck.
-8922* | deck_position | runeterra | Anaakca | Attack: From the top 6 cards of your deck, summon an attacking follower or non-Champion Darkin and grant it +1|+1.
-6898 | delayed | runeterra | Frozen Thrall | Keywords: Countdown, Landmark. Countdown 9: Summon a Frostguard Thrall.
-6899 | delayed | runeterra | Buried Armory | Keywords: Landmark, Countdown. Countdown 2: Create a Treasure of the Sands in hand.
-6900 | delayed | runeterra | Frozen Tomb | Keywords: Countdown, Landmark. Countdown 2: Summon exact copies of the units and landmarks stored inside.
-6901 | delayed | runeterra | Instant Century | Keywords: Focus. Summon a random landmark with Countdown, or advance a landmark 4 rounds.
-6902 | delayed | runeterra | Stasis Statue | Keywords: Countdown, Landmark. Countdown 1: Summon exact copies of the units and landmarks stored inside.
-6903 | delayed | runeterra | Hibernating Rockbear | Keywords: Countdown, Landmark. Countdown 3: Summon a Grumpy Rockbear.
-6904 | delayed | runeterra | Stormcarved Spire | Keywords: Landmark, Countdown. Countdown : Summon an exact copy of the unit stored inside.
-6905 | delayed | runeterra | Akshan | Keywords: Quick Attack. When I'm summoned or strike: Summon a Warlord's Palace or advance it 1 round. Level up: Warlord's Palace has finished its Countdown. When I level up, summon a Warlord's Hoard.
-6906 | delayed | runeterra | Ravenbloom Conservatory | Keywords: Landmark, Countdown. Countdown 11: Create a Tybaulk in hand. / I advance 1 round for each Fast spell, Slow spell, or Skill you've played this game.
-6907 | delayed | runeterra | Risen Altar | Keywords: Countdown, Landmark. Countdown 3 or when you destroy me: Summon a Dami'yin the Unbound.
-1731 | destroy | runeterra | Yordle Contraption | Destroy a landmark or create 2 random multi-region followers in hand.
-1732 | destroy | runeterra | Xerath (level 2) | When you destroy an allied landmark, deal 3 to the weakest enemy.
-1733 | destroy | runeterra | Fracture (created) | Keywords: Slow. Destroy a unit's equipment.
-1734 | destroy | runeterra | Xerath's Rite of the Arcane (created) | Keywords: Slow. Destroy an allied landmark to deal 4 to a unit.
-1735 | destroy | runeterra | Xerath's Rite of the Arcane | Keywords: Slow. Destroy an allied landmark or one of your mana gems to deal 4 to a unit. Create a Xerath in your deck.
-1736 | destroy | runeterra | Crumble | Kill an ally to kill a unit or destroy a landmark.
-1737 | destroy | runeterra | Unleashed Energy | Give an ally +2|+1 this round or destroy an allied landmark to give an ally +4|+2 this round.
-1738 | destroy | runeterra | Aftershock | Deal 3 to a unit or destroy a landmark.
-1739 | destroy | runeterra | Heavy Metal | Destroy a unit's equipment and deal 2 to it.
-1740 | destroy | runeterra | Unworthy Soul | Keywords: Flow. Flow: I cost 2 less. / Recall a unit or landmark. If it has any attachments, destroy them first.
-3549* | direct_damage | runeterra | Commander Ledros | Keywords: Fearsome, Last Breath. Play: Deal damage to the enemy Nexus equal to half its Health, rounded up. / Last Breath: Return me to hand.
-3550* | direct_damage | runeterra | Wild Claws | An ally strikes an enemy. If it has Overwhelm, deal excess damage to the enemy Nexus.
-3551* | direct_damage | runeterra | Furious Faefolk | Keywords: Quick Attack. When I'm summoned, if you've dealt damage to the enemy Nexus 4+ times this game, grant me 4 Impact.
-3552* | direct_damage | runeterra | Captive Greyback | Keywords: Overwhelm. Attack: I deal 3 damage to my blocker. If it's dead or gone, I deal 3 damage to the enemy Nexus instead.
-3553* | direct_damage | runeterra | Captain Kalrix | Keywords: Overwhelm. Nexus Strike: Deal damage to the enemy Nexus equal to half its Health, rounded up.
-3554* | direct_damage | runeterra | Alchemist's Incendiary | I have Countdown 3: Deal damage to enemy Nexus equal to twice my cost.
-3555* | direct_damage | runeterra | Swain (level 2) | Keywords: Fearsome, Overwhelm. When you deal non-combat damage to the enemy Nexus, Stun the strongest backrow enemy. Nexus Strike: Deal 3 to all enemies and the enemy Nexus.
-3556* | direct_damage | runeterra | Taliyah (level 2) | Play: Summon an exact copy of an allied landmark.  Attack: I deal 2 damage to my blocker 3 times. If it's dead or gone, I deal 2 damage to the enemy Nexus instead.
-3557* | direct_damage | runeterra | Rumble (level 2) | Keywords: Quick Attack, SpellShield, Impact. When you deal damage to the enemy Nexus, create a random Mecha Yordle in hand or if you have one, grant all Mecha Yordles in hand +1|+1 and reduce their cost by 1.
-3558* | direct_damage | runeterra | Blade of Ledros | Keywords: Skill. Deal damage to the enemy Nexus equal to half its Health, rounded up.
-5992 | disable | runeterra | Sneaky Zeebles | Keywords: Elusive. Play: Stun enemies with 2 or less Power.
-5993 | disable | runeterra | Legion General | Keywords: Fearsome. When I'm summoned, grant me +1|+1 for each unit you've Stunned or Recalled this game.
-5994 | disable | runeterra | Lord Broadmane | Keywords: Missing Translation. Play: Deal 2 to an enemy. / Your Fast spells, Slow spells, and Skills have "When I damage a Stunned or damaged enemy, kill it."
-5995 | disable | runeterra | Apprehend | Stun an enemy. / If you have a Darius, Rally.
-5996 | disable | runeterra | Strategic Execution (created) | Keywords: Slow. Stun 2 enemies.
-5997 | disable | runeterra | Sky Charge | Keywords: Skill. Stun an enemy. If it's a follower, Stun it again at the next Round Start.
-5998 | disable | runeterra | Gnar's Wallop | Keywords: Fast. Deal 1 to an enemy and Stun it.  Create a Gnar in your deck.
-5999 | disable | runeterra | Annie (level 2) | Attack: I deal 3 to my blocker and Stun it. If it's dead or gone, I deal 3 to the enemy Nexus instead.
-6000 | disable | runeterra | Event Horizon | Stun an enemy and stun all enemies with 2 or less Power.
-6001 | disable | runeterra | Arachnoid Sentry | Play: Stun an enemy.
-1868 | discard | runeterra | The University of Piltover | Keywords: Landmark. Round Start: Discard your hand. Create 3 random cards in hand and grant them Fleeting.
-1869 | discard | runeterra | Rummage | To play, discard up to 2 cards. Draw 1 for each card you discarded.
-1870 | discard | runeterra | Aloof Travelers | When I’m summoned, ALL players draw 1, then your opponent discards their highest cost card.
-1871 | discard | runeterra | Sump Dredger | Play: Discard a card to draw 1.
-1872 | discard | runeterra | Fix-Em-Uppers | The first time you discard a card or damage the enemy Nexus, grant me +2|+1.
-1873 | discard | runeterra | Salvaged Scrap | To play, discard up to 2 cards. Create that many followers from your regions that cost 1 more and reduce their costs by 1.
-1874 | discard | runeterra | Tricksy Tentacles | Your opponent discards their lowest cost card.
-1875 | discard | runeterra | Spinning Axe | Keywords: Burst. To play, discard 1. Give an ally +1|+0 this round.

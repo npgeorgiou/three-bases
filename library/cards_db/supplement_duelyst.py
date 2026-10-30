@@ -1,5 +1,5 @@
 """Duelyst: every card from the open-sourced game, and its board tiles as keywords.
-Cards: library/tools/convert/duelyst_cards.psv (conv_duelyst.py over github.com/open-duelyst/duelyst commit 2843f24, 1 Aug
+Cards: library/sources/duelyst_cards.psv (conv_duelyst.py over github.com/open-duelyst/duelyst commit 2843f24, 1 Aug
 2025: the card factories, the card id list and the English texts; 1116 entries). The library's copy (duelyst.json, 793 cards)
 lacks the basic cards (Tempest, Phoenix Fire), most tokens (Wraithling) and others the guides' decks use (Mirrorrim, Disciple
 of Yggdra), so every card is written here and replaces the library's entry with the same card code (source.py).
@@ -12,7 +12,7 @@ Writes supplement/duelyst.jsonl in the library's entities columns; ids from 5000
 Usage: supplement_duelyst.py"""
 import csv, json, os, re
 HERE = os.path.dirname(os.path.abspath(__file__))
-PSV = os.path.join(HERE, '..', 'tools', 'convert', 'duelyst_cards.psv')
+PSV = os.path.join(HERE, '..', 'sources', 'duelyst_cards.psv')
 OUT = os.path.join(HERE, 'supplement', 'duelyst.jsonl')
 LINKS = os.path.join(HERE, 'supplement', 'duelyst_links.jsonl')
 SRC = 'open-duelyst 2843f24 card factories, supplement'

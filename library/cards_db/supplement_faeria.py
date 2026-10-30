@@ -2,7 +2,7 @@
 Cards: Abrakam's public repository github.com/abrakam/Faeria_Cards (commit 12b7207 "Gagana's new cards"), files
 CardExport/merlin_shortened.csv (462 cards: card_id;color;card_name;card_type;card_subtype;faeria;wild_land;lake;forest;
 mountain;desert;power;life;codex_id;rarity) and CardExport/English/cards.csv (<id>.name / <id>.text), copied to
-library/tools/convert/faeria_merlin_shortened.csv and faeria_cards_english.csv (sha256 9199d280... and 96d3ada5...).
+library/sources/faeria_merlin_shortened.csv and faeria_cards_english.csv (sha256 9199d280... and 96d3ada5...).
 The library holds 443 of these cards from the same export, so only the cards it lacks, and the cards whose library text
 differs from render() (choices of 3 or 4 options kept the markup "{green.|..."; land icons were written "lake lake" for two
 lakes), are written here; they replace the library's entry.
@@ -12,7 +12,7 @@ Writes supplement/faeria.jsonl in the library's entities columns; ids from 30000
 Usage: supplement_faeria.py"""
 import csv, json, os, re, sqlite3
 HERE = os.path.dirname(os.path.abspath(__file__))
-CONV = os.path.join(HERE, '..', 'tools', 'convert')
+CONV = os.path.join(HERE, '..', 'sources')
 OUT = os.path.join(HERE, 'supplement', 'faeria.jsonl')
 LIB = os.path.join(HERE, '..', 'three-bases-library.sqlite')
 SRC = 'Abrakam Faeria_Cards CardExport (github.com/abrakam/Faeria_Cards 12b7207), supplement'
