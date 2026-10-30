@@ -210,6 +210,26 @@ RULES = [
     # (Bones, gems, Echo) is not it (Kaptain, 29 Oct 2026)
     ('base_resource_gain', 'flat_do', "(act in ('mana_gain','max_mana_change','harvest') and coalesce(on_kind,'mana') in ('mana','spell_mana','player') and coalesce(on_side,'mine') in ('mine','any')) or (act='cant' and param_event='mana_spent' and on_kind='mana' and coalesce(on_side,'mine')='mine')"),
     ('cost_increase', 'flat_do', "act='cost_change' and params like 'cost=%' and params not like 'cost=-%' and on_side='enemy'"),
+    # Claude's rules from the concept tree's definitions, 30 Oct 2026 (concepts no card had)
+    ('disruption', 'flat_do', "on_side='enemy' and ((act in ('max_mana_change','mana_gain') and params like '%=-%') or act='spend_mana' or (act='cant' and on_kind='player' and param_event in ('played','drawn','mana_spent','harvests')))"),  # enemy mana or plays (Malicious Wisp, Fifth Canopic)
+    ('board_clog', 'flat_do', "act='summon' and (to_side='enemy' or (on_side='enemy' and card_ref is not null))"),  # a unit put on the enemy side (Brood Parasite, Dubious Hags)
+    ('board_wipe', 'flat_do', "act in ('kill','obliterate','capture','return_to_hand','transform') and on_pick='all' and coalesce(on_kind,'unit') in ('unit','any','unit_or_structure') and coalesce(on_side,'any')!='mine'"),
+    ('mill', 'flat_do', "act in ('discard','obliterate','kill') and on_side='enemy' and coalesce(on_zone,eff_zone,'') in ('deck','deck_top','deck_bottom')"),
+    ('friendly_fire', 'flat_do', "(act in ('damage','kill') and on_pick='all' and coalesce(on_side,'any')='any' and coalesce(on_kind,'unit') in ('unit','any','unit_or_structure')) or (act='damage' and on_side='mine' and coalesce(on_pick,'')!='self' and coalesce(on_kind,'unit')!='player')"),
+    ('life_payment', 'flat_do', "act='damage' and on_kind='player' and on_side='mine'"),
+    ('random_target', 'flat_do', "on_pick='random' and act in ('damage','kill','stat_change','give_keyword','stun','transform','return_to_hand','obliterate','move','heal','strike','silence') and coalesce(on_kind,'unit') in ('unit','player','any','unit_or_structure','position')"),
+    ('multi_target_attack', 'flat_do', "act='damage' and coalesce(on_pick,'') not in ('all','self') and coalesce(on_side,'enemy')!='mine' and exists (select 1 from flat_do y where y.card=flat_do.card and y.ability=flat_do.ability and y.act='damage' and y.seq!=flat_do.seq and coalesce(y.on_pick,'') not in ('all','self') and coalesce(y.on_side,'enemy')!='mine' and (coalesce(y.on_pick,'')||coalesce(y.on_kind,'')!=coalesce(flat_do.on_pick,'')||coalesce(flat_do.on_kind,'') or y.on_pick='chosen'))"),
+    ('in_hand_buff', 'flat_do', "act in ('stat_change','cost_change','give_keyword') and coalesce(on_zone,eff_zone,'') in ('hand','deck','deck_top') and coalesce(on_side,'mine')='mine'"),
+    ('symmetric_effect', 'flat_do', "on_side='any' or (on_kind='player' and on_pick='all')"),
+    ('condition_life', 'flat_if', "(coalesce(of_with,'')||coalesce(ev_obj_with,'')) like '%damaged%' and (coalesce(of_with,'')||coalesce(ev_obj_with,'')) not like '%not damaged%'"),
+    ('condition_life', 'flat_do', "on_with like '%state i_ damaged%' or on_with like '%state in %damaged%'"),
+    ('condition_life', 'flat_when', "obj_with like '%state i_ damaged%' or obj_with like '%state in %damaged%'"),
+    ('low_life', 'flat_if', "of_kind='player' and of_side='mine' and attr='health' and op in ('le','lt')"),
+    ('cost_condition', 'flat_if', "(attr='cost' and test in ('stat','have','count','event_count')) or (coalesce(of_with,'')||coalesce(ev_obj_with,'')) like '%cost %'"),
+    ('hand_size', 'flat_if', "of_zone='hand' and test in ('count','amount_count')"),
+    ('once_per_game', 'flat_when', "lim='once_per_game'"),
+    ('reactions', 'flat_when', "actor_side='enemy' and event in ('played','targeted','activated')"),
+    ('on_enemy_enter', 'flat_when', "(event in ('summoned','moves_onto') and obj_side='enemy') or (event='played' and actor_side='enemy' and obj_kind='unit')"),
     ('aura', 'flat_do', "origin in ('own','has_keyword') and act in ('stat_change','give_keyword') and on_pick='all' and lasts in ('while','permanent') and ability in (select a.id from ability a join event v on v.id=a.event where v.event='always')"),
     ('tribal', 'flat_do', "on_with like '%type is%' or on_with like '%type in%' or on_with like '%name_has%' or to_with like '%of:type i%'"),
     ('tribal', 'flat_when', "obj_with like '%type is%' or obj_with like '%type in%' or obj_with like '%name_has%'"),
@@ -297,3 +317,9 @@ def derive(c):
               "s.field='keyword' and s.value=k.game || ':' || k.name), k.name) where cd.test='keyword_condition' and v.tree!=''")
     for concept, table, cond in RULES:
         c.execute(f"insert into flat_concept select distinct card, ?, ? from {table} where {cond}", (concept, 'rule ' + concept))
+    # the top 10% of a game's printed costs (concept tree high_cost)
+    for (g,) in c.execute("select distinct game from card where cost is not null").fetchall():
+        costs = sorted(x for (x,) in c.execute("select cost from card where game=? and is_keyword=0 and cost is not null", (g,)))
+        if costs:
+            c.execute("insert into flat_concept select id, 'high_cost', 'rule high_cost' from card where game=? and is_keyword=0 and cost>=? and cost>0",
+                      (g, costs[int(len(costs) * 0.9)]))

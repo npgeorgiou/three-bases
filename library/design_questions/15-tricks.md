@@ -40,5 +40,5 @@ Runeterra (76 cards): stealth 3, trap_secret 5
   Bard (level 2): Attack: Plant 6 Chimes in your deck. When you activate a Chime, grant +1|+1 to a random...
   Bard's Traveler's Call: Keywords: Burst. Draw a follower, then activate the effects of all boons in the top 3...
   Chime: Keywords: Boon. Grant a random ally in hand +1|+1.
-  works with: other_leave_trigger (e.g. Packmother Nidalee's Ambush -> Nidalee); banish (e.g. Blimp-Pack Poacher -> Tahm Kench); transform (e.g. Blimp-Pack Poacher -> Big Game Tycoon)
+  works with: other_leave_trigger (e.g. Aurora Hallunatis -> Nidalee); banish (e.g. Blimp-Pack Poacher -> Tahm Kench); transform (e.g. Blimp-Pack Poacher -> Big Game Tycoon)
 ```

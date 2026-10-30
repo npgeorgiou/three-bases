@@ -14,7 +14,7 @@ Magmar Aspects (115 cards): sacrifice 3, revive 11
   Cascading Rebirth (follow-up): Destroy a friendly minion to summon a random Magmar minion that costs 1 more.
   Dreadnought: Keywords: Rebirth. Egg minions you summon gain +2/+2.
   Erratic Raptyr: Keywords: Rebirth. After this minion attacks or counterattacks, turn it into an Egg.
-  works with: revive (e.g. Deepfire Devourer -> The Releaser); death_trigger (e.g. Windstorm Obelysk -> Khanuum-ka); leave_trigger (e.g. Deepfire Devourer -> The Releaser)
+  works with: revive (e.g. Stone to Spears -> The Releaser); death_trigger (e.g. Windstorm Obelysk -> Khanuum-ka); leave_trigger (e.g. Stone to Spears -> The Releaser)
 ## faeria
 Yellow (72 cards): sacrifice 6, revive 0
   Death Walker: Deathtouch You must sacrifice another creature to summon this creature.
@@ -24,18 +24,18 @@ Yellow (72 cards): sacrifice 6, revive 0
 Pandora (40 cards): sacrifice 2, revive 0
   Ancient Gargoyle: Charge 3, Flying Gift - Destroy all Treasure Maps in your deck and gain +1/+1 for each...
   Void Guardian: Gift - Destroy your deck.
-  works with: death_trigger (e.g. Rakoan Cannoneer -> Rakoan Shield Mates); cheat_death (e.g. Death Walker -> Annoying Gnat); death_count (e.g. Death Walker -> Spirit Spice)
+  works with: death_trigger (e.g. Rakoan Cannoneer -> Rakoan Shield Mates); cheat_death (e.g. Voice of Hunger -> Annoying Gnat); random_target (e.g. Voice of Hunger -> Elderwood Hermit)
 ## inscryption
 Undead (24 cards): sacrifice 2, revive 1
   Necromancer: Keywords: Double Death.
   Pharaoh's Pets: Keywords: Worthy Sacrifice, Many Lives.
 Magick (25 cards): sacrifice 1, revive 0
   Master Bleene: Keywords: True Scholar.
-  works with: on_sacrifice (e.g. Master Bleene -> Pharaoh's Pets); cost_reduction (e.g. Master Bleene -> Pharaoh's Pets); cheat_death (e.g. Master Bleene -> Pharaoh's Pets)
+  works with: on_sacrifice (e.g. Master Bleene -> Child 13); cost_reduction (e.g. Master Bleene -> Pharaoh's Pets); cheat_death (e.g. Master Bleene -> Child 13)
 ## into_the_breach
 Ranged (10 cards): sacrifice 1, revive 0
   Arachnoid Mech: Health 3, move 3. Weapon: Arachnoid Injector: Damage target, creating a friendly robot...
-  works with: summon (e.g. Arachnoid Injector -> Marked tile); on_kill (e.g. Arachnoid Injector -> Cascading Resonator); death_trigger (e.g. Arachnoid Injector -> Ice Tile)
+  works with: summon (e.g. Arachnoid Mech -> Marked tile); on_kill (e.g. Arachnoid Mech -> Cascading Resonator); death_trigger (e.g. Arachnoid Mech -> Ice Tile)
 ## monster_train
 Umbra (47 cards): sacrifice 12, revive 0
   Antumbra Morsel: Eaten: Eater gains +6 Health.
@@ -71,5 +71,5 @@ Shadowfen (34 cards): sacrifice 1, revive 0
 Watcher (90 cards): sacrifice 2, revive 0
   Blasphemy: Keywords: Exhaust. Enter Divinity. Die next turn.
   Blasphemy+: Keywords: Retain, Exhaust. Enter Divinity. Die next turn.
-  works with: stances (e.g. Blasphemy -> Pray); resource_gain (e.g. Blasphemy -> Bloody Idol); base_resource_gain (e.g. Blasphemy -> Double Energy)
+  works with: stances (e.g. Blasphemy+ -> Worship); resource_gain (e.g. Blasphemy -> Bloody Idol); base_resource_gain (e.g. Blasphemy -> Double Energy)
 ```

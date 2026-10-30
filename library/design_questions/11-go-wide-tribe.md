@@ -14,7 +14,7 @@ Vetruvian Imperium (114 cards): tribal 16, summon 30
   Circle of Fabrication: Summon one of each Obelysk from your deck on random spaces.
   Fireblaze Obelysk: Keywords: Summon Dervish. Your dervishes have +1 Attack.
   Khanuum-ka: Keywords: Flying, Rush. Dying Wish: A random friendly Dervish disappears, summoning a...
-  works with: on_ally_play (e.g. Fireblaze Obelysk -> Night Watcher); rule_change (e.g. Snow Rippler -> Oak in the Nemeton); aura (e.g. S.I.L.V.E.R. -> Golden Justicar)
+  works with: on_ally_play (e.g. Stone to Spears -> Night Watcher); high_cost (e.g. Echo Deliverant -> Oak in the Nemeton); rule_change (e.g. Echo Deliverant -> Oak in the Nemeton)
 ## faeria
 Pandora (40 cards): tribal 3, summon 3
   Doom Scythe: Destroy a creature. Summon a 6/1 Slaughtering Shadow in its place.
@@ -26,7 +26,7 @@ Blue (72 cards): tribal 4, summon 5
   Bloated Toad: Jump This enters play with an enemy 2/2 Frog with Jump swallowed.
   Fugoro, Captain of the Gagana: Jump Whenever you discover a Treasure, Fugoro gains +3/+3.
   Gabrian Noble: Gift - Summon a 1/1 Ruby Fish (you may summon it on an ocean tile).
-  works with: board_presence (e.g. Fugoro, Captain of the Gagana -> Triton Tactician); temporary_buff (e.g. Mother of All Yaks -> Yak Shepherd); placement_rules (e.g. Triton Tactician -> Tide Lord)
+  works with: board_presence (e.g. Fugoro, Captain of the Gagana -> Triton Tactician); temporary_buff (e.g. Mother of All Yaks -> Yak Shepherd); placement_rules (e.g. Fugoro, Captain of the Gagana -> Tide Lord)
 ## inscryption
 Magick (25 cards): tribal 7, summon 1
   Blue Mage: Keywords: Mental Gemnastics.
@@ -38,7 +38,7 @@ Technology (76 cards): tribal 9, summon 5
   Gems Conduit: Keywords: Gem Spawn Conduit.
   Buff Conduit: Keywords: Attack Conduit.
   Daus (Act III): Keywords: Bellist. Special behaviour: If a card with "bell" in its internal ID (Chime,...
-  works with: death_trigger (e.g. Energy Conduit -> Kind Cell); link_formation (e.g. Energy Conduit -> Splinter Cell); summon (e.g. Orange Mage -> The Limoncello)
+  works with: death_trigger (e.g. Energy Conduit -> Kind Cell); link_formation (e.g. Energy Conduit -> Splinter Cell); summon (e.g. Worker Ant -> The Limoncello)
 ## monster_train
 Umbra (47 cards): tribal 18, summon 1
   Alloyed Construct: Inert. Multistrike 1. / Gorge: Gain Fuel 1.
@@ -50,7 +50,7 @@ Hellhorned (41 cards): tribal 6, summon 0
   Imp-in-a-Box: Consume. / Add 2 random Imp units to your hand.
   Imp-olate: Deal damage to the front enemy unit equal to 15x the number of Imp units in your deck.
   Imp-portant Work: Sacrifice Imp. / Gain 1 Ember. Draw 1.
-  works with: death_trigger (e.g. Echowright -> Bog Chrysalis); death_count (e.g. Imp-portant Work -> A Fatal Melting); activated (e.g. Penumbra -> The Sentient)
+  works with: death_trigger (e.g. Echowright -> Bog Chrysalis); death_count (e.g. Imp-portant Work -> Memento Mori); activated (e.g. Penumbra -> The Sentient)
 ## runeterra
 Bilgewater (218 cards): tribal 31, summon 54
   Death From Below: Keywords: Fast, Lurk. Summon Pyke striking an enemy.
@@ -62,7 +62,7 @@ Shurima (264 cards): tribal 36, summon 73
   Azir: When allies attack, summon an attacking Sand Soldier. Level up: You've summoned 12+...
   Azir (level 2): When I level up, replace your deck with the Emperor's Deck, then draw 1. When allies...
   Azir (other form): When allies attack, summon an attacking Sand Soldier. When you summon another ally, give...
-  works with: stances (e.g. Crescendum -> Severum); tutor (e.g. Ripper's Bay -> Rek'Sai (level 2)); recycle (e.g. Udyr (level 2) -> Janna)
+  works with: stances (e.g. Crescendum -> Severum); tutor (e.g. Ripper's Bay -> Pyke); recycle (e.g. Udyr (level 2) -> Janna)
 ## stormbound
 Swarm (34 cards): tribal 6, summon 8
   Dreadful Keepers: On death, randomly spawn a 3/4/6/7/8 strength Dragon on a tile bordering a friendly Dragon

@@ -37,7 +37,7 @@ Ionia (235 cards): spells_played_condition 14, spell_power 0
   Deep Meditation: Keywords: Flow. Flow: I cost 2 less. Draw 2 other spells.
   Dragoncaller: Keywords: Attune, Flow. Round Start: Flow: Summon The Empyrean and grant it Ephemeral.
   Eye of the Dragon: Keywords: Attune, Flow. Round Start: Flow: Summon a Dragonling.
-  works with: recycle (e.g. The Spirit of Wuju -> Janna); on_discard (e.g. Master Yi's Wuju Style -> Rumble); turn_start (e.g. The Spirit of Wuju -> Janna)
+  works with: recycle (e.g. Deep Meditation -> Janna); on_discard (e.g. Lee Sin (level 2) -> Rumble); turn_start (e.g. Deep Meditation -> Janna)
 ## sts1
 Curse (14 cards): spells_played_condition 1, spell_power 2
   Doubt: Keywords: Unplayable. At the end of your turn, gain 1 Weak.
@@ -48,5 +48,5 @@ Defect (89 cards): spells_played_condition 1, spell_power 18
   Biased Cognition: Gain 4 Focus. At the start of your turn, lose 1 Focus.
   Bullseye: Deal 8 damage. Apply 2 Lock-On.
   Chaos: Channel 1 random Orb.
-  works with: passive (e.g. Velvet Choker -> Void); attack_gain (e.g. Mind Bloom -> Du-Vu Doll); spell_power (e.g. Panache -> Ritual Dagger)
+  works with: passive (e.g. Velvet Choker -> Void); attack_gain (e.g. Mind Bloom -> Du-Vu Doll); spell_power (e.g. FTL -> Ritual Dagger)
 ```

@@ -9,11 +9,12 @@ Lyonar Kingdoms (110 cards): disruption 0, suppress 22
   Brome Warcrest: Bloodbound Spell: Conscript.
   Conscript: Keywords: Bloodbound Spell. Summon a 1/2 Crestfallen with Zeal: Provoke in front of your...
   Crestfallen: Zeal: Provoke
-Vanar Kindred (124 cards): disruption 0, suppress 17
+Vanar Kindred (124 cards): disruption 1, suppress 17
   Ancient Grove: Keywords: Provoke. Opening Gambit: Your minions gain "Dying Wish: Summon a 1/1 Treant...
   Avalanche: Deal 4 damage to everything on your starting side of the battlefield and Stun them.
   Bonechill Barrier: Summon three joined 0/2 Vespyr Walls. Minions that attack these walls are Stunned.
   Bonechill Barrier (token): Keywords: Wall. Minions next to this minion that attack it are Stunned.
+  works with: on_lifegain (e.g. Saurian Finality -> Sunriser); heal (e.g. Malicious Wisp -> Saurian Finality); attack_gain (e.g. Malicious Wisp -> Saurian Finality)
 ## faeria
 Green (72 cards): disruption 0, suppress 12
   Emerald Yak: Gift - Summon a 1/1 Baby Yak with Taunt and Can't harvest faeria on a prairie you control.
@@ -56,6 +57,8 @@ Winter (34 cards): disruption 0, suppress 7
   Frosthexers: On play, freeze bordering enemy units
   Glacier Palace: At the start of your turn, freeze the most forward enemy unit
   Icicle Burst: Freeze a target enemy unit. If it is already frozen, deal 6/7/8/10/12 damage to it...
+Shadowfen (34 cards): disruption 1, suppress 0
+  Dubious Hags: On death, spawn a 1 strength enemy Raven on a random bordering tile
 ## sts1
 Colorless (68 cards): disruption 1, suppress 0
   Panacea: Keywords: Exhaust. Gain 1 Artifact.
