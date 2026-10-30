@@ -702,6 +702,16 @@ Kaptain checks a few decks and finds errors a player sees at once. Before showin
 5. When Kaptain finds one wrong line, look for the whole family of it: list every line of every game made by the same rule
    and read a sample of 20 before and after the fix.
 
+**Audit every deck yourself (Kaptain, 30 Oct 2026; every worker, every game, after building or changing the networks, before
+showing Kaptain anything):** run `python3 deck_audit.py <game> > audit.txt`. For EACH deck it prints (1) the 3 most linked
+cards with every line and the other card's text, (2) the 3 least linked cards the same way, (3) 10 other lines at random,
+with both texts. Read every printed line against both card texts as a player: is the line true, is its kind right (triggers,
+enables, makes stronger, makes cheaper ...), is its wording right, and what does a least-linked card obviously need or give
+that no line shows? Every error found is fixed the way "Fixing a review" says: by its cause, in the shared rule, for every
+game, never for the one card; and before fixing, ask what else the same cause breaks OUTSIDE the decks (the decks show a
+tiny part of each game: the cause is wrong for every card it touches). Dump before and after, read the diff, add a case.
+Then audit again. Write the families found in deck_read_<game>.md.
+
 **Rules for links (Kaptain, 30 Oct 2026; each is a rule in network.py for every game, never a list of cards):**
 - **Links come from what a card's TEXT does, never from what every card does.** Playing, drawing or summoning a card is
   what all cards do: "whenever you play a card" (After Image) gets no link from every card. Only a narrowed kind counts
@@ -722,6 +732,10 @@ Kaptain checks a few decks and finds errors a player sees at once. Before showin
   "makes your units get Strength".
 - **What is expensive is set per game** (network.py EXPENSIVE: the cost from which a card counts as expensive). Every game's
   import sets it, from that game's own costs; a game missing there gets no "pays for it" lines.
+- **A deck holds what the game gives every deck of its character** (Slay the Spire's starting relic: Burning Blood),
+  unless a card of the deck replaces it ("Replaces Burning Blood": Black Blood). deck_analysis.starters, rarity starter.
+- **Read the game's own limits on a mechanic** (wiki): Dexterity adds only to Block a card gives when played, not to a
+  Power's later Block or Entrench's doubling; Lock-On only to Orb damage.
 - **Drawbacks and limits are no needs.** "Lose 1 energy when drawn" (Void) wants no draws; "if you played fewer than 3
   cards" (FTL) wants no plays; "if this is still in your hand" (Ethereal) wants no full hand.
 

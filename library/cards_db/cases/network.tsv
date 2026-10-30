@@ -206,7 +206,7 @@ nst15	sts1	Ironclad Strength (gamersdecide)	Heavy Blade	Flex	none		Claude (v50 d
 nst16	sts1	Ironclad Exhaust (gamersdecide)	Barricade	Body Slam	line	keeps your Block	Claude (v50 deck read): Block kept is Block Body Slam counts
 nst17	sts1	Defect Orb (gamersdecide)	Electrodynamics	Tempest	line	Lightning	Claude (v50 deck read): Lightning hits all enemies; Tempest channels Lightning
 nst18	sts1	Watcher Stance Change (highgroundgaming)	Crescendo	Mental Fortress	line	Wrath	Claude (v50 deck read): entering Wrath is changing Stance
-nst19	sts1	Silent Shiv (highgroundgaming)	Blade Dance	After Image	none		Kaptain 30 Oct 2026: links come from card texts, not from playing any card
+nst19	sts1	Silent Shiv (highgroundgaming)	Footwork	After Image	none	counts when played	Kaptain 30 Oct 2026: links come from card texts, not from playing any card (rewritten: makers of more cards to play do set it off, point h)
 nst20	sts1	Silent Poison (highgroundgaming)	Strike (Silent)	Corpse Explosion	none		Kaptain 30 Oct 2026: the normal attack feeds no death reaction
 nst21	sts1	Ironclad Barricade (Steam, Jeff)	Shrug It Off	Barricade	none		Kaptain 30 Oct 2026: Barricade helps the Block cards, it does not need them
 nst22	sts1	Ironclad Barricade (Steam, Jeff)	Barricade	Shrug It Off	line	keeps the Block	Kaptain 30 Oct 2026: Barricade keeps the Block they give
@@ -225,3 +225,11 @@ ntb15	into_the_breach	Hazardous Mechs	A.C.I.D. Projector	Unstable Cannon	line	gi
 ntb16	into_the_breach	Hazardous Mechs	A.C.I.D. Projector	Force Amp	none	gives A.C.I.D.	Claude (v53, F28): bump damage is no weapon damage; A.C.I.D. does not double it
 ntb17	into_the_breach	Heat Sinkers	Heat Engines	Napalm Mech	line	Boost	Claude (v53, F29): Heat Engines gives Boost to Mechs on Fire; Fire is a status, not printed
 ntb18	into_the_breach	Frozen Titans	Janus Cannon	Cryo-Launcher	line	frees it	Claude (v53, F30): a hit frees the frozen Ice Mech (guide: Janus Cannon thaws it)
+nst26	sts1	Silent Shiv (highgroundgaming)	Blade Dance	A Thousand Cuts	line	more cards to play	Kaptain 30 Oct 2026 (h): Shivs are more cards played, more A Thousand Cuts damage
+nst27	sts1	Ironclad Pain (gamersdecide)	Reaper	Rage	line	Attack	Kaptain 30 Oct 2026 (audit): Rage gains Block for each Attack played
+nst28	sts1	Defect Snecko Eye (gamersdecide)	Snecko Eye	Meteor Strike	line	pays for it	Kaptain 30 Oct 2026 (f): random costs pay for big cards
+nst29	sts1	Defect Claw (gamersdecide)	Scrape	Claw	line	keeps it	Claude (audit): Scrape keeps the 0-cost cards it draws
+nst30	sts1	Watcher Divinity (gamersdecide)	Devotion	Smite	line	Mantra	Claude (audit): 10 Mantra is Divinity, triple damage
+nst31	sts1	Ironclad Body Slam (highgroundgaming)	Pure Water	Miracle	none		Kaptain 30 Oct 2026 (i): a deck gets only its own character's starting relic
+nst32	sts1	Watcher Stance Change (highgroundgaming)	Flurry of Blows	Bottled Flame	none		Claude (audit): Bottled Flame picks an Attack, it asks for none
+nst33	sts1	Defect Lightning (highgroundgaming)	Capacitor	Electrodynamics	line	more slots	Claude (audit): more Orb slots keep more Lightning

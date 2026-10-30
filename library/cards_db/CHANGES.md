@@ -350,3 +350,10 @@ Each change: date, what changed, the card that caused it, and which records were
   area N); Explosive Goo, Techno-Scarab corrected (fixes/into_the_breach/v51.py).
 - 30 Oct 2026, v53 (Into the Breach): act redirect_attack causes damaged, survives_damage, dies, killed (a turned Vek attack
   hits what is now in its way; Confuse Shot feeds Vek Hormones). Smoke Pellets' Ally Immune corrected (fixes/into_the_breach/v53.py).
+
+## 30 Oct 2026, v52 (Kaptain's second Slay the Spire check; deck audit rule)
+- PROCESS "Audit every deck yourself" and deck_audit.py (Kaptain's rule for every worker); HANDOFF box.
+- deck_read_sts1.md F14-F19: given play triggers, energy and costs (Confused, Plasma, X), starting relics, Orb cards (Loop,
+  Capacitor, Lock-On), picks / kept draws / adders / Mantra / Melter, wording. fixes/sts1/v51.py; supplement_sts1.py
+  ("Replaces" gives the character); deck_analysis.starters. Dexterity only for Block a card gives when played (wiki).
+  Other games' lines unchanged. Cases nst26-nst33; nst19 rewritten.

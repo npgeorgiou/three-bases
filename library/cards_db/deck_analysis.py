@@ -68,7 +68,20 @@ def parse_deck(c, game, text):
             continue
         found.append(m); rest = rest[len(m):]
     ids = [c.execute('select id from card where game=? and name=? and is_keyword=0 and is_stub=0', (game, n)).fetchone()[0] for n in found]
-    return ids, unknown
+    return ids + starters(c, game, ids), unknown
+
+
+def starters(c, game, ids):
+    """what the game gives every deck of a character (rarity starter: Slay the Spire's Burning Blood), unless a card of the deck
+    says it replaces it ("Replaces Burning Blood": Black Blood). The character is the region most of the deck's cards have."""
+    marks = ','.join('?' * len(ids)) or "''"
+    import collections
+    count = collections.Counter(g for (r,) in c.execute(f'select regions from card where id in ({marks})', ids) for g in (r or '').split(';') if g)
+    regions = {count.most_common(1)[0][0]} if count else set()  # the deck's character: the region most of its cards have
+    replaced = ' '.join(text_of(i) for i in ids)
+    return [i for i, n, r in c.execute("select id, name, regions from card where game=? and lower(rarity)='starter' and category!='spell' "
+                                      "and is_keyword=0 and is_stub=0", (game,))
+            if set((r or '').split(';')) & regions and i not in ids and f'replaces {n.lower()}' not in replaced]
 
 
 _TEXT = {}

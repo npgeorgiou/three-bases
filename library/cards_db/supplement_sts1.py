@@ -27,6 +27,7 @@ FULL; cards and their powers share card codes, so a partial supplement would dro
   name (Shiv, Burn, Wound).
 - Card kinds (Attack, Skill, Power, Status, Curse; the source's type) are the cards' types: "Whenever you play an Attack" is
   filter type Attack, never Runeterra's category skill.
+- A relic with no character takes the character of the relic that "Replaces" it (Pure Water <- Holy Water: Watcher).
 - X costs: the conversion wrote them as "-1 energy" (the game's code for X: Whirlwind, Skewer, Malaise ...): "X energy", no
   number, so no "cost 0" filter matches them.
 Writes supplement/sts1.jsonl in the library's entities columns; ids from 7000001 in library order (source.py).
@@ -127,6 +128,10 @@ for n, rs in SAME.items():
         if r['category'] == 'spell': r['name'] = f"{n} ({r['faction']})"
         elif r['category'] == 'monster': r['name'] = f"{n} ({MON[r['ext_id']]})"
         elif r['category'] == 'event': r['name'] = f'{n} (event)'
+by_name = {r['name']: r for r in out}
+for r in out:  # "Replaces Pure Water" (Holy Water, Watcher): the relic it replaces is that character's too
+    m = re.match(r'Replaces ([^.]+)\.', r['text'] or '')
+    if m and r['faction'] and m.group(1) in by_name and not by_name[m.group(1)]['faction']: by_name[m.group(1)]['faction'] = r['faction']
 with open(OUT, 'w') as f:
     for r in out: f.write(json.dumps(r, ensure_ascii=False) + '\n')
 print(f'{len(out)} entries -> {OUT}')

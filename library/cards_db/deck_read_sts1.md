@@ -127,7 +127,56 @@ asks for; also is a card it counts when played; also triggers: is a card it coun
 - Fix: a keyword on the player is "gives you X" in a game where the player is no card; counted plays come from
   played_lines only, once per reason, by the strongest kind (cheaper, triggers, enables).
 
+## F14 Abilities given to the player were never set off by plays (Kaptain 30 Oct 2026, h; deck audit)
+A Thousand Cuts, After Image, Rage ("whenever you play an Attack this turn"), Choke had no line from the cards that set them off.
+- Root cause: played_lines read only a card's own triggers, not those it gives the player; "whenever you play a card" (no
+  type) had no feeder once every-card links were dropped.
+- Same error elsewhere: Duelyst's given "your next minion costs 2 less and takes 2 damage" (Flash Reincarnation) would have
+  drawn 9 wrong lines; it acts on the card that sets it off, so it is skipped (help or harm to that card, not a wait).
+  Other games: no change.
+- Fix: played_lines reads given triggers too; "whenever you play a card" is fed by the cards that make more cards to play
+  (Blade Dance's Shivs: 17 lines).
+
+## F15 Energy and costs not counted (Kaptain 30 Oct 2026, d, f; deck audit)
+Snecko Eye (Confused: random costs), Meteor Strike (3 Plasma: energy), energy -> X cards (Conjure Blade, Reinforced Body)
+had no lines; Defect Snecko had 6 lines.
+- Root cause: the paying rule read only a card's own energy and cost cuts: not a status it gives (Confused), not an Orb it
+  puts in (Plasma), and X costs have no number.
+- Same error elsewhere: other games have none of the three in decks (no change).
+- Fix: a status the card gives me that sets costs pays; an Orb's energy pays (at least 1 per Orb put in); every energy gain
+  helps X cards ("more energy: a bigger X").
+
+## F16 Starting relics missing from decks (Kaptain 30 Oct 2026, i)
+Black Blood replaces Burning Blood, yet Burning Blood was in no deck; Pure Water had no character.
+- Root cause: decks are guides' card lists; what the game gives every deck of a character was never added.
+- Same error elsewhere: only Slay the Spire has starter items (rarity starter).
+- Fix: deck_analysis.starters adds the deck's character's starter (the region most of its cards have) unless a card says
+  "Replaces" it; supplement_sts1.py: a relic with no character takes that of the relic that replaces it.
+
+## F17 Orb cards: rule changes, slots, Lock-On, "next Orb" (Kaptain 30 Oct 2026, e; deck audit)
+Loop ("your next Orb") and Capacitor (2 Orb slots) had no line; Lock-On had no rule.
+- Root cause: Loop's record had no Orb filter; no rule for more slots; Lock-On's damage boost is by Orbs only.
+- Same error elsewhere: none in other games' decks.
+- Fix: fixes/sts1/v51.py (an Orb effect with no filter acts on the four Orbs); slot gains help the cards that put things in
+  slots; Lock-On helps the cards that put damaging Orbs in.
+
+## F18 Picks, kept draws, adders, Mantra, Melter (Kaptain 30 Oct 2026, b, c; deck audit)
+Bottled Flame read as asking for Attacks; Scrape (keeps 0-cost draws) had no line to 0-cost cards; Snecko Skull drawn as
+applying Poison itself; Mantra givers (Devotion, Worship) had no line though 10 Mantra is Divinity; Melter (removes Block)
+had no rule.
+- Root cause: what a card does to the card it picked was read as asks; a discard after a draw was not read as a filter of
+  what stays; an adder's own rows fed needs; a keyword that leads to another was not followed.
+- Same error elsewhere: none in other games (no change in their lines).
+- Fix: a card that picks from my deck is a tutor ("picks it from the deck"); draw + discard of those not matching keeps the
+  rest ("draws it and keeps it"); adders feed no needs; a keyword that gives a boosting keyword counts as it; removing an
+  enemy keyword that stops damage helps cards that want unblocked damage (no deck has both yet).
+- Claw (c): every copy is one card in the network, so Claw cannot link to itself; the cards that bring Claws back (All for
+  One, Scrape) are linked to it.
+
+## F19 Wording: "makes you lose HP", "exhausts cards" (deck audit)
+- Root cause: the sentences assumed units or a Nexus; Exhaust had no sentence.
+- Same error elsewhere: only games with no units of mine (Slay the Spire); Exhaust only in Slay the Spire.
+- Fix: damage to me in a game without units of mine is "makes you lose HP"; ACT "exhausts cards".
+
 ## Open (for Kaptain)
-- Lock-On (Defect) makes Orb damage bigger: not linked yet to the Orb cards.
-- Dexterity also reaches Block given later by Powers (After Image, Mental Fortress); the records cannot tell it apart.
 - Known gaps: Blizzard and Thunder Strike count every Channel; Through Violence is not in the library.

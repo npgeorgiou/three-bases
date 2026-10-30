@@ -6,6 +6,10 @@
 > audit) or, after a change to network.py only, `python3 check_all.py --no-load` (no reload at all: the networks read
 > cards.sqlite). Then `dump_lines.py` before/after (PROCESS "Fixing a review").
 
+> **AFTER EVERY NETWORK BUILD OR CHANGE: `deck_audit.py <game>` AND READ IT (PROCESS "Audit every deck yourself").** For every
+> deck: the 3 most and 3 least linked cards with all their lines, and 10 random lines, each checked against the card texts.
+> Fix what you find by its cause, for every game. Kaptain must not be the one who finds these.
+
 ## Start of a chat
 1. Clone with the library (CLAUDE.md "Start of a chat", then `git sparse-checkout disable`). Read only this file first.
 2. cards.sqlite is committed and current: questions need no build (`ask.py runeterra ...`). After changing records, values

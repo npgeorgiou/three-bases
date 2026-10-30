@@ -37,6 +37,6 @@ round, because the work fixed only what he pointed at. **Your job is to find the
   audit_links.py (in run.py), cases/network.tsv (Kaptain's checks as tests), fixes/runeterra/v30.py, v31.py.
 - PROCESS.md: "Links the deck networks showed missing", "Think like a player"; BRIEF.md rules 23-25; CHANGES.md v30-v32.
 
-## Slay the Spire (sts1): Kaptain's first check fixed (30 Oct 2026, v51)
-deck_read_sts1.md F1-F13 (F9-F13 from Kaptain's check: every-card links, plain hits, helpers, cheaper, wording). Open items at
-the end of deck_read_sts1.md. Check after a change with check_all.py (HANDOFF box), never run.py once per game.
+## Slay the Spire (sts1): Kaptain's second check fixed (30 Oct 2026, v52)
+deck_read_sts1.md F1-F19. Open: whether Orbs (Lightning, Frost, Dark, Plasma) should be shown as their own nodes (asked).
+Known gaps at the end of deck_read_sts1.md. After any change: check_all.py, then deck_audit.py sts1 (HANDOFF boxes).
