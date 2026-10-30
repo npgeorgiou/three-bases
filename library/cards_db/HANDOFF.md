@@ -76,6 +76,6 @@ and about ten rebuilds). Each check below is cheap and found errors that later c
 - Duelyst (v37-v40): imported; every step of PROCESS passes, all 10 decks read card by card twice (RESULTS.md,
   deck_read_duelyst.md). Generals are leader cards; Backstab, Zeal and Infiltrate are needs for moves. Waiting for Kaptain's
   check of CHECK_20_duelyst.md (ids in CHECK_20_duelyst_ids.txt) and of CONCEPTS_duelyst.md.
-- Inscryption (v36-v39): imported; every step of PROCESS passes, all 19 decks read card by card (deck_read_inscryption.md).
-  Kaptain does not know the game: Claude checked CHECK_20_inscryption.md against the texts (deck_read_inscryption.md);
-  Energy ramp is marked base_resource_gain, not linked to costs (Kaptain). Open: Kaptain's look at the deck networks page.
+- Inscryption (v36-v45): imported and reviewed by Kaptain (30 Oct 2026). 17 decks kept (decks.tsv), 20 weak ones listed in
+  decks_dropped_inscryption.tsv; families F1-F18 in deck_read_inscryption.md; why its networks are thin: RESULTS.md.
+  Energy ramp is marked base_resource_gain, not linked to costs (Kaptain).

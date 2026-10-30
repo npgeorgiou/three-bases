@@ -211,6 +211,10 @@ def main():
             for r in csv.DictReader(open(os.path.join(HERE, f), encoding='utf-8'), delimiter='\t')]
     order = {'runeterra': 0, 'stormbound': 1, 'monster_train': 2}
     rows = list({(r['game'], r['deck']): r for r in reversed(rows)}.values())[::-1]  # a deck in both files is drawn once
+    import glob  # decks judged too weak to show (decks_dropped_<game>.tsv) are not drawn, also when a case keeps them
+    weak = {(r['game'], r['deck']) for f in glob.glob(os.path.join(HERE, 'decks_dropped_*.tsv'))
+            for r in csv.DictReader(open(f, encoding='utf-8'), delimiter='\t')}
+    rows = [r for r in rows if (r['game'], r['deck']) not in weak]
     rows.sort(key=lambda r: order.get(r['game'], 9))
     data = [deck_data(c, lib, r['game'], r['deck'], r['source'].removeprefix('guide: ').split(' ')[0], r['cards']) for r in rows]
     open(out, 'w', encoding='utf-8').write(PAGE.replace('__DATA__', json.dumps(data, ensure_ascii=False).replace('</', '<\\/')))

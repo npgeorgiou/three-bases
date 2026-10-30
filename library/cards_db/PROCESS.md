@@ -420,6 +420,14 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
    Bones) must not link every unit to every card with that cost. Lines are combos between card texts only.
 21. **A source's fields are not all card text**: Inscryption's wiki "traits" are code markers; read the source's page that
    explains a field (wiki Traits) before putting it in the text.
+22. **What Inscryption taught (for the next game; 30 Oct 2026).** About the game: read the wiki's mechanics pages, not only
+   card pages (Traits, Special Card Behaviours, Card Battle, Circuits, the cost pages, Kaycee's Mod tips); a roguelike's
+   decks are built during a run, so real decks are rare as text: search guides that say which cards to add to a starter
+   (the wiki's tips page) and players' end-of-run lists (Steam threads); expect thin networks when most cards only act on
+   themselves, and say so with numbers (share of cards acting on other cards) instead of adding lines. About the work:
+   Kaptain reviews the page, so look at it as he does before reporting (a line whose reason no card text shows is wrong);
+   ask whether a rule-made line is a combo before writing one; the review method ("Fixing a review") found in one pass
+   what three of my own rounds had missed; keep only decks that test something (decks_dropped_<game>.tsv for the rest).
 15. **More or faster base resource** (Kaptain 29 Oct 2026: not linked to costs, but findable): concept base_resource_gain
    (mana, spell mana, Ember, faeria, Energy; a second resource such as Bones or gems stays resource_gain), `ask.py
    <game> factions base_resource_gain` gives each faction's share, and ask.py analyze names the ramp cards. Cases mx16, ri08.

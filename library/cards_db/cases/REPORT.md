@@ -87,21 +87,21 @@ Made by `cases/run.py inscryption`.
 |---|---|---|---|---|---|---|
 | ni01 | Act II Undead starter | Gravedigger | Zombie | line  | waits: lets you gain the second resource (Bones) (pays its cost) | yes |
 | ni02 | Act II Undead starter | Skeleton | Frank & Stein | none  | - | yes |
-| ni03 | Act II Beast starter | Squirrel | Hawk | none  | - | yes |
+| ni03 | Squirrel, Stoat, Warren, Adder, Hawk | Squirrel | Hawk | none  | - | yes |
 | ni04 | Act II Magick starter | Emerald Mox | Junior Sage | line  | waits: lets you gain a gem (Mox) (pays its cost) | yes |
 | ni05 | Act II Magick starter | Sapphire Mox | Junior Sage | none you gain a gem | - | yes |
 | ni06 | Act II bones and sacrifice (Archeronline4U) | M3atB0t | Urayuli | line  | cheaper: makes it cheaper (when it is sacrificed for it) | yes |
 | ni07 | Act II bones and sacrifice (Archeronline4U) | Bone Lord's Horn | Tomb Robber | line  | waits: lets you gain the second resource (Bones) | yes |
-| ni08 | Kaycee's Mod Bones | Coyote | Pelts (Rabbit) | none sacrificed | - | yes |
-| ni09 | Act II Ouroboros and Mantis God (koi) | Mantis God | Ouroboros | none  | - | yes |
-| ni10 | Act II Ouroboros and Mantis God (koi) | Ouroboros | Mantis God | none  | - | yes |
-| ni11 | Kaycee's Mod Ants | Ant Queen | Flying Ant | line  | type: is a unit with Ant it counts or asks for | yes |
-| ni12 | Kaycee's Mod Moose Blood | Moose Buck | Pelts (Rabbit) | none  | - | yes |
-| ni13 | Kaycee's Mod Free Reptiles | Rabbit | Bullfrog | none sacrificed | - | yes |
-| ni14 | Act III starter | Sniper Bot | Double Gunner | none  | - | yes |
+| ni08 | Raccoon, Dire Wolf Pup, Coyote, Pelts (Rabbit), Squirrel | Coyote | Pelts (Rabbit) | none sacrificed | - | yes |
+| ni09 | Ouroboros, Mantis God, Squirrel | Mantis God | Ouroboros | none  | - | yes |
+| ni10 | Ouroboros, Mantis God, Squirrel | Ouroboros | Mantis God | none  | - | yes |
+| ni11 | Ant Queen, Flying Ant, Skunk, Pelts (Rabbit), Squirrel | Ant Queen | Flying Ant | line  | type: is a unit with Ant it counts or asks for | yes |
+| ni12 | Black Goat, Moose Buck, Mole, Pelts (Rabbit), Squirrel | Moose Buck | Pelts (Rabbit) | none  | - | yes |
+| ni13 | Rabbit, Tadpole, Geck, Pelts (Rabbit), Squirrel | Rabbit | Bullfrog | none sacrificed | - | yes |
+| ni14 | Energy Bot, Shieldbot, Sniper Bot, Double Gunner, Empty Vessel | Sniper Bot | Double Gunner | none  | - | yes |
 | ni15 | Alpha, Wolf, Moose Buck | Alpha | Wolf | line  | stronger: gives it +1|+0 (when next to it) | yes |
 | ni16 | Daus, Bell Tentacle | Bell Tentacle | Daus | line  | type: is the Bell Tentacle it names | yes |
-| ni18 | Act II Ouroboros and Mantis God (koi) | Mantis God | Ouroboros | none  | - | yes |
-| ni19 | Act II Ouroboros and Mantis God (koi) | Squirrel | Mantis God | none  | - | yes |
-| ni20 | Kaycee's Mod Moose Blood | Mole | Moose Buck | none sacrificed | - | yes |
+| ni18 | Ouroboros, Mantis God, Squirrel | Mantis God | Ouroboros | none  | - | yes |
+| ni19 | Ouroboros, Mantis God, Squirrel | Squirrel | Mantis God | none  | - | yes |
+| ni20 | Black Goat, Moose Buck, Mole, Pelts (Rabbit), Squirrel | Mole | Moose Buck | none sacrificed | - | yes |
 | ni21 | Act II bones and sacrifice (Archeronline4U) | Urayuli | Bone Heap | none Bones | - | yes |

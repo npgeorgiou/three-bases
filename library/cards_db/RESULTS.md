@@ -46,7 +46,7 @@
   and 1 kept reading fixed.
 - Cost: three readers (cards, keywords, second reading); the unsure cards fixed by rule (fixes/monster_train/).
 
-# Inscryption: results (29 Oct 2026, v39; Claude's check of 20 cards in deck_read_inscryption.md)
+# Inscryption: results (30 Oct 2026, v45; reviewed by Kaptain; families F1-F18 in deck_read_inscryption.md)
 
 ## What exists
 - 251 cards from the Inscryption wiki's card boxes (supplement_inscryption.py; the library had merged and dropped cards),
@@ -55,11 +55,16 @@
   the texts from the wiki page Special Card Behaviours.
 - Game rules (read/inscryption/game_rules.jsonl): units fight, Bones from deaths, units can be sacrificed, and Blood,
   Bones and Green / Orange / Blue Mox costs, which are needs of the cards whose cost names them.
-- Full decks: 7 exist as text (Steam threads and a Steam guide, 20 cards each; counts in decks.tsv); 10 core lists from
-  gamersdecide.com (all three acts, Act III included) and 14 starter decks (where a run begins). 31 decks in decks.tsv: the four Act II starters, five players' Act II decks, the Act I and Act III
-  starters and the eight Kaycee's Mod starters.
-
-## Quality
+- Decks: 17 kept (decks.tsv): 3 Act II starters with links, 4 full 20-card decks from Steam (Archeronline4U, Burntcookies1,
+  BEAR, the 666-damage guide), 7 core lists from gamersdecide.com (Acts I-III), 3 Kaycee's Mod decks built as the wiki's
+  Kaycee's Mod tips page (rev 13001) says. 20 decks with few or no links are listed with their source in
+  decks_dropped_inscryption.tsv (the page does not draw them; cases keep their card lists).
+- Why the networks are thin (30 Oct 2026): only 31% of Inscryption's cards act on another card of mine (Runeterra 74%,
+  Faeria 62%, Duelyst 58%, Stormbound 45%) and 18% have no effect at all (vanilla 1/1, 2/2 cards). Most sigils act on the
+  card itself (Airborne, Sprinter, Mighty Leap, Bifurcated Strike). The game's synergy is its costs (sacrificing cards for
+  Blood, Bones from deaths), which every card can do by the rules, so they make no line (Kaptain's rule). What is left:
+  Worthy Sacrifice and Morsel, Bone makers to Bones cards and spenders, Mox gems to Mox cards, Ants, conduits and circuits,
+  Leader, and cards that make cards (Warren, Tomb Robber, Ant Queen).
 - run.py passes; cases 72 of 72 (23 sigil mechanics, 7 combos, 4 guide decks, 8 faction cases, 17 network lines, shared
   cases); word check, text audit and link audit 0.
 - Unsure records left (no value for one card's need): Build-a-Card, Campfire, Card Recycle, Pliers, Wiseclock, Pack Mule,

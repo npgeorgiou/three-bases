@@ -49,7 +49,9 @@ off_battle = lambda t: re.sub(r'[^a-z0-9]', '', t.lower()) in OFF_BATTLE
 START_TABS = {'Defense', 'Base Form', 'Dormant'}  # a first tab that is the state the card is played in: decks and texts name the card
 RENAME = {'Gem Vessels (Emerald)': 'Emerald Vessel', 'Gem Vessels (Ruby)': 'Ruby Vessel',
           'Gem Vessels (Sapphire)': 'Sapphire Vessel'}   # the wiki's redirects Emerald/Ruby/Sapphire Vessel -> Empty Vessel#Gem Vessels
-RENAME['Cat (Undead)'] = 'Undead Cat'  # the name the wiki page Special Card Behaviours gives it
+RENAME['Cat (Undead)'] = 'Undead Cat'
+RENAME['Larva'] = 'Strange Larva'  # the card's name on its wiki page (Strange Larva) and in Kaycee's Mod tips; the Mothman box tab says Larva
+KEEP_ID = {'Larva'}  # the name the wiki page Special Card Behaviours gives it
 # Special card behaviours: the game's own code for single cards (wiki page Special Card Behaviours, rev 12544, read 29 Oct 2026
 # in the built-in browser): the "Effects" column, kept in the page's words. Presentation only, left out: TalkingCardChooser
 # (talking cards' dialogue), GiantMoon (an animation), BountyHunter (dialogue and music); BrokenCoin gives the Ancient Obol,
@@ -197,6 +199,7 @@ def main():
             elif tab in START_TABS and n == min(T): name = t1; ext = f'{t1} ({tab})'  # the state it is played in keeps the card's name (Child 13, Swapbot); its id stays
             elif tab in FORM_TABS: name = f'{t1} ({tab})'
             else: name = tab
+            if name in KEEP_ID: ext = ext or name  # renamed later: the id stays
             name = RENAME.get(name, name)
             version = tab in EDITIONS and n > min(T)
             if version and kind != first_kind: name, version = f'{t1} ({tab})', False

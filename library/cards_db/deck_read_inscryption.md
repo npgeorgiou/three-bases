@@ -127,6 +127,11 @@ Root cause: network_page.py showed the keyword list and then the text, which for
 Same error elsewhere: any game whose text holds a "Keywords:" sentence (Inscryption only today).
 Fix: the page and deck_lines.py drop that sentence; the keywords stay in their own row above the text.
 
+## F18 Weak decks shown as decks (Kaptain's review, 30 Oct 2026)
+Root cause: starter decks (where a run begins: 3-5 cards) and lists of 2-3 different cards were kept as test decks; most of their cards' sigils act on the card itself, so they showed 0-1 lines.
+Same error elsewhere: Monster Train has guides' core cards only (RESULTS.md); the other games' decks are full lists with many links.
+Fix: decks with fewer than 3 lines or fewer than half their cards linked moved to decks_dropped_inscryption.tsv (network_page.py skips them, cases keep their card lists); 3 decks built as the wiki's Kaycee's Mod tips page says added; Larva renamed Strange Larva (its wiki page name), id kept.
+
 ## Check of 20 cards (CHECK_20_inscryption.md, by Claude: Kaptain does not know the game)
 Each card's rows compared with its text and the wiki. Right: Spilled Blood, Sprinter, Blue and Green Mox, Gem Guardian,
 Brittle, Airborne, M!rror r0rriM, Bifurcated and Trifurcated Strike (now with the strike to the opponent), Fecundity,

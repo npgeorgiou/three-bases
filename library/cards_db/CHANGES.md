@@ -275,3 +275,9 @@ Each change: date, what changed, the card that caused it, and which records were
 - network_page.py: a "Keywords: ..." sentence is not repeated in the card text.
 - Cases: ni02, ni03, ni09, ni18, ni19 now "none"; stale must-not cases rewritten: n15, nfa03, nfa04, nfa06, nfa12, ndu25, ndu43.
 
+## 30 Oct 2026, v45 (Inscryption decks; deck_read_inscryption.md F18)
+- decks.tsv: 17 Inscryption decks kept, 3 added from the wiki's Kaycee's Mod tips page; 20 weak decks moved to
+  decks_dropped_inscryption.tsv, which network_page.py does not draw (any game can have such a file); cases keep their lists.
+- supplement_inscryption.py: Larva is Strange Larva (wiki page name), id kept (KEEP_ID).
+- RESULTS.md: why Inscryption's networks are thin, with numbers per game.
+
