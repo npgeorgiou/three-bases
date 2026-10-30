@@ -3,7 +3,7 @@ locally without internet: a tab per deck, a dot per card (pointing at it shows i
 line coloured by kind (legend click hides a kind), zoom and pan, a game picker then the game's decks; a card or a sidebar
 section (central cards, a chain, a group, loose cards) pointed at or clicked lights up its cards and the lines between them.
 Usage: python3 network_page.py [out.html]   (default network.html)"""
-import collections, csv, json, os, sqlite3, sys
+import collections, csv, json, os, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import deck_analysis, mechanics, network, source
 
@@ -177,6 +177,7 @@ def deck_data(c, lib, game, deck, src, text):
         r = lib.execute('select text from entities where id=?', (i,)).fetchone()
         txt = ' '.join(((r[0] if r else '') or '').replace('Missing Translation', '').split())
         kws = list(dict.fromkeys(n for (n,) in c.execute('select k.name from card_keyword ck join card k on k.id=ck.keyword where ck.card=?', (i,))))
+        if kws: txt = re.sub(r'^Keywords: [^.]*\.\s*', '', txt)  # the keywords have their own row above the text (Inscryption writes them in the text)
         cat, cost, pw, hp = c.execute('select category, cost, power, health from card where id=?', (i,)).fetchone()
         types = [n for (n,) in c.execute('select t.name from card_type ct join type t on t.id=ct.type where ct.card=?', (i,))]
         out.append({'id': i, 'name': mechanics.name(c, i), 'made': made, 'cat': cat, 'types': types, 'keywords': kws, 'text': txt,

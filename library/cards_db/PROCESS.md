@@ -416,6 +416,10 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
    keeps its line from the cards that sacrifice it (Ouroboros). deck_read_inscryption.md F9-F10.
 19. **Card states named as states** (v42): a deck says "Child 13", the source's first tab is "Dormant"; the state a card is
    played in keeps the card's name. Search for decks under every name a guide uses (Son1a = S0N1A, Fish Bot = Fishbot).
+20. **The rules pay for nothing** (Kaptain's review, 30 Oct 2026): a game whose costs are paid with units (Inscryption Blood,
+   Bones) must not link every unit to every card with that cost. Lines are combos between card texts only.
+21. **A source's fields are not all card text**: Inscryption's wiki "traits" are code markers; read the source's page that
+   explains a field (wiki Traits) before putting it in the text.
 15. **More or faster base resource** (Kaptain 29 Oct 2026: not linked to costs, but findable): concept base_resource_gain
    (mana, spell mana, Ember, faeria, Energy; a second resource such as Bones or gems stays resource_gain), `ask.py
    <game> factions base_resource_gain` gives each faction's share, and ask.py analyze names the ramp cards. Cases mx16, ri08.

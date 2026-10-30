@@ -183,8 +183,9 @@ def build(c):
         if to_p == 'actor' and not (to_k or to_s): to_k, to_s = actor_of.get((card, ab), (None, None))
         if act == 'can' and k == 'player' and pev not in (None, 'played', 'summoned', 'targeted'):  # "you may replace an additional
             ins(card, o, v, ab, 'makes', pev, 'card' if pev in ('shuffled', 'drawn', 'discarded') else k, s or 'mine', None)  # card": more of it
-        # "it" in an ability on my own attack or strike ("Backstab: deals extra damage to it") is what I attack: an enemy
-        if p == 'it' and not s and ev_of.get((card, ab)) in ('attacks', 'strikes'): k, s = k or 'any', 'enemy'
+        # "it" in an ability on my own attack, strike or damage ("Backstab: deals extra damage to it"; Touch of Death: "when this
+        # damages another creature, that creature perishes") is what I fight: an enemy
+        if p == 'it' and not s and ev_of.get((card, ab)) in ('attacks', 'strikes', 'damaged', 'fights'): k, s = k or 'any', 'enemy'
         for ev, *kwn in causes.get(('act', act), []):
             if (act, ev) in TO_OBJECT and (to_k or to_s or to_p):  # the space it happens on is the event's object, the mover its actor
                 if act == 'set_terrain':  # the space now has the new ground ("to"), on the side of the space changed (mine when unsaid)

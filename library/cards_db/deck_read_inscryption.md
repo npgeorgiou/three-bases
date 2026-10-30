@@ -102,6 +102,31 @@ Root cause: Claude took starter decks and players' core cards as decks without c
 Same error elsewhere: Monster Train has only guides' core cards (HANDOFF says so); Runeterra, Stormbound, Faeria and Duelyst decks are full lists or deck codes.
 Fix: PROCESS 2.9 and HANDOFF: a full deck has its copies and the game's deck size; starters and cores are marked. Inscryption: 7 decks with their 20-card counts, 10 core decks from a guide added (marked core).
 
+## F13 Lines from what every unit does by the rules (Kaptain's review, 30 Oct 2026, points 2, 3, 4, 5)
+Root cause: network.py lines_of joined the cost rules (Blood: any unit can be sacrificed; Bones: every death gives a Bone) to every card that costs Blood or Bones; F9 only narrowed it to free units, and F10 kept every Blood card -> Ouroboros. A player sees no card text behind "Skeleton -> Revenant", "Bone Heap -> Pharaoh's Pets", "Rabbit -> Hawk", "Mole Man -> Ouroboros".
+Same error elsewhere: cost rules exist only in Inscryption; other games' rule lines were removed by Kaptain's rule in v41/v42 (Faeria, Duelyst). dump_lines diff: Inscryption 279 -> 136 lines (82 sacrifice, 46 Bones, 12 Ouroboros); no other game changed by it.
+Fix: what the rules let every unit do pays for nothing; only a card that pays by its own text keeps a line (Gravedigger and Bone Lord's Horn give Bones, Black Goat counts as 3 Blood, Mealworm gives its stats). Cases ni02, ni03, ni09, ni18, ni19 now say no line.
+
+## F14 A unit's own fighting harm aimed at my units
+Root cause: refs.py took "it" in "when this damages another creature, that creature perishes" (Touch of Death) as a creature of either side, so Adder "killed Ouroboros for its death effect"; units only damage the cards they fight, which are enemies.
+Same error elsewhere: the rule already held for attacks and strikes ("Backstab: deals extra damage to it"); now also for damaged and fights, every game (dump: no other game's line changed).
+Fix: refs.py: "it" in an ability on my own attack, strike, damage or fight is an enemy.
+
+## F15 Cost help to forms that are never played
+Root cause: network.py dropped "(pays its cost)" lines to grown forms but not "makes it cheaper" ones (Black Goat -> Pupa, Mothman).
+Same error elsewhere: Runeterra level-2 champions got "makes it cheaper when it comes" (5 lines: Curious Shellfolk -> Lux (level 2), Janna -> Nilah (level 2)); a level form is never cast.
+Fix: no cost or cheaper line to a form a card grows or levels into.
+
+## F16 Code markers shown as card text (point 4: Stoat "DeathCardNonOption")
+Root cause: supplement_inscryption.py copied the wiki box's traits field whole; the wiki page Traits (rev 13178) says traits are markers for other code, and most act outside battle (Campfire survivors, the Bone Lord's boons, Leshy's trials, the Deathcard maker, stitches in Act II).
+Same error elsewhere: no other game has a traits field (the other sources give keywords and text only).
+Fix: only traits that act in battle stay (Ant, Gem, Giant, Terrain, Uncuttable, the Obols' sentences, Chime Keeper, Limited Lives); 16 cards' texts changed; Satisfies Ring Trial is no keyword any more.
+
+## F17 Keywords twice in a card (point 1)
+Root cause: network_page.py showed the keyword list and then the text, which for Inscryption starts with "Keywords: ...".
+Same error elsewhere: any game whose text holds a "Keywords:" sentence (Inscryption only today).
+Fix: the page and deck_lines.py drop that sentence; the keywords stay in their own row above the text.
+
 ## Check of 20 cards (CHECK_20_inscryption.md, by Claude: Kaptain does not know the game)
 Each card's rows compared with its text and the wiki. Right: Spilled Blood, Sprinter, Blue and Green Mox, Gem Guardian,
 Brittle, Airborne, M!rror r0rriM, Bifurcated and Trifurcated Strike (now with the strike to the opponent), Fecundity,

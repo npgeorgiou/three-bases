@@ -301,9 +301,7 @@ def lines_of(c, game):
                 if not doer_fits(m, actor, h): continue
                 # my units are hurt or die in fights by the rules: every unit would feed "when a friendly unit dies" (Soul Eater,
                 # Shaytan Monstrosity); only cards that hurt or kill my units do (Kaptain 30 Oct 2026); a cost the rules pay stays
-                # except a card that wants to die itself (Ouroboros grows each time it dies): a card paid for by sacrifice lets you
-                # sacrifice it (Mantis God -> Ouroboros)
-                if rule and not cost and h in OWN_LOSS and ms != 'enemy' and not (rule in cost_rules and tpick == 'self'): continue
+                if rule and not cost and h in OWN_LOSS and ms != 'enemy': continue
                 # a rule that needs a place ("harvest a well next to it": an enemy well is deep in enemy ground) is done by the units
                 # that get there, not by every unit: what moves them is the help (HELPS movement); Gabrian Archon -> Wavecrash Colossus
                 if rule and not cost and 'position ' in (mw or ''): continue
@@ -318,14 +316,11 @@ def lines_of(c, game):
                 if tkind == 'player' and leader_game: say = one_leader(say)  # "whenever your General attacks"
                 if h == 'mana_refilled' and tkind in RESOURCE_WORD: say = RESOURCE_WORD[tkind]  # not mana: say which resource
                 if cost and rule in cost_rules: continue  # another card paying its own cost pays nothing for this one
-                # every unit can be sacrificed or die for Bones: by the rules alone only a unit that costs nothing to play is played
-                # to be spent (Squirrel, Skeleton, Bone Heap -> a Blood or Bones card); others pay only by their own text
-                if rule and (cost or tkind in RESOURCE_WORD) and cards[m]['cost']: continue  # also Bones spent by an ability (Enlarge)
-                if rule in cost_rules and not cost and tpick == 'self' and h in OWN_LOSS: say = 'can sacrifice it for its cost (sets off its death effect)'
-                if cost and rule and h == 'sacrificed': say = 'is sacrificed for it'  # a free unit by the rules (Squirrel -> Wolf)
+                # every unit can be sacrificed and every death gives a Bone: what the rules let every unit do pays for nothing
+                # (Kaptain 30 Oct 2026: lines are combos between card abilities); a card that pays by its own text keeps its line
+                if rule and (cost or tkind in RESOURCE_WORD): continue  # also Bones spent by an ability (Enlarge)
                 if cost: say += ' (pays its cost)'
                 if rule and not cost and not lv and (rule != 'units fight' or m not in rule_fighters) and actor[0] != 'player' and \
-                        not (rule in cost_rules and tpick == 'self' and h in OWN_LOSS) and \
                         not (tkind == 'player' and h in ('attacks', 'strikes', 'fights')) and not any(
                         p.split(' ')[0] in ('card', 'name_has', 'type', 'keyword') for p in (tw or '').split(';')):
                     continue  # every unit fights by the rules: that is no combo (Punish waits for damaged enemies; any attacker does it). A
@@ -1153,7 +1148,7 @@ def network(c, game, ids, broad=True):
     # Hydra; a champion's level-up form)
     grown = {b for (a, b), ls in lines.items() if nodes.get(b) and any(k == 'levelsinto' for k, _, _ in ls)} - \
             {b for (a, b), ls in lines.items() if any(k == 'puts' for k, _, _ in ls)}
-    lines = collections.defaultdict(list, {(a, b): [l for l in ls if not (b in grown and '(pays its cost)' in l[2])] for (a, b), ls in lines.items()})
+    lines = collections.defaultdict(list, {(a, b): [l for l in ls if not (b in grown and ('(pays its cost)' in l[2] or 'cheaper' in l[2]))] for (a, b), ls in lines.items()})
     # a card that draws or puts a kind of card from my deck finds the deck's cards of that kind, not the game's (Time of Legends
     # finds the deck's one legend)
     found = collections.Counter((a, y) for (a, b), ls in lines.items() if nodes.get(b) is False for k, w, y in ls

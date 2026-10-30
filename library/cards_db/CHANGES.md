@@ -267,3 +267,11 @@ Each change: date, what changed, the card that caused it, and which records were
 - decks.tsv: 12 Inscryption decks added (10 core lists from gamersdecide.com, 2 full ones from a Steam guide); 31 in all.
 - Cases ni10, ni12 rewritten, ni17 dropped for mi25, ni18-ni21 added. Lines: Inscryption 371 -> 289.
 
+## 30 Oct 2026, v44 (Kaptain's review of the Inscryption networks; deck_read_inscryption.md F13-F17)
+- network.py: the cost rules (Blood by sacrifice, Bones from deaths) make no lines; only cards that pay by their own text do.
+  No cost or cheaper line to grown or level forms (Runeterra level 2: 5 lines gone).
+- refs.py: "it" in an ability on my own damage or fight is an enemy (Touch of Death).
+- supplement_inscryption.py: traits that do nothing in battle leave the text (wiki page Traits).
+- network_page.py: a "Keywords: ..." sentence is not repeated in the card text.
+- Cases: ni02, ni03, ni09, ni18, ni19 now "none"; stale must-not cases rewritten: n15, nfa03, nfa04, nfa06, nfa12, ndu25, ndu43.
+

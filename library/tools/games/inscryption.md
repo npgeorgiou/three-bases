@@ -44,6 +44,10 @@ Side Deck (12407), Starter Deck (11826), Special Card Behaviours (12544).*
   for any reason the player gets 1 Bone (Bone King: 4); a Bones card takes its cost from the player's total (Bones).
   Energy: replenished at the start of the turn and the maximum grows by 1 up to 6 (Energy). Mox: a Mox card of the right
   colour must be on the player's side to play a Mox creature (Mox).
+- Traits (wiki Traits, rev 13178, read 30 Oct 2026): markers for other code, not sigils. In battle: Ant (counted by Ants),
+  Gem (counted by Gem Dependant and other gem sigils), Giant (+1 Power each turn once out of cards), Terrain (cannot be
+  sacrificed unless it has Worthy Sacrifice), Uncuttable (immune to Scissors, Fish Hook, Skinning Knife). Outside battle:
+  KillsSurvivors, Goat, Pelt, SatisfiesRingTrial, DeathCardNonOption, Fused; the cut traits have no code.
 - Circuits (Acts II and III): two conduit cards on the same side make a circuit; the cards between them are powered; if
   either conduit is destroyed the circuit is broken (Circuits).
 Not written as game rules (they say nothing about which cards belong together): Energy refilling each turn, drawing from the

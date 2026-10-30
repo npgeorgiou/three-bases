@@ -37,6 +37,15 @@ SRC = 'Inscryption fandom wiki card box (inscryption.fandom.com, read 29 Oct 202
 EDITIONS = {'Act I', 'Act II', 'Act III', "Kaycee's Mod", 'Menu Preview'}
 FORM_TABS = {'Left', 'Right', 'Defense', 'Attack', 'Base Form', 'Beast Form', 'Dormant', 'Awakened', 'Undead',
              'Rabbit', 'Wolf', 'Golden', 'Emerald', 'Ruby', 'Sapphire'}
+# Traits that do nothing in battle (wiki page Traits, rev 13178: "Traits only serve as markers for other code"): run events
+# (KillsSurvivors: the Campfire survivors; Goat, Pelt: the Bone Lord's boons; SatisfiesRingTrial: Leshy's trial), the
+# Deathcard maker (DeathCardNonOption), drawing (Fused: stitches), and the cut traits with no code; markers the page does
+# not list (Cat, JeresyDevil, Lice, Child 13 on Child 13 and Pelt Lice) are the same kind of code marker. Battle traits stay:
+# Ant, Gem, Giant, Terrain, Uncuttable, and trait sentences (the Obols' halves).
+OFF_BATTLE = {'killssurvivors', 'goat', 'pelt', 'satisfiesringtrial', 'deathcardnonoption', 'deathcardcreationnonoption', 'fused',
+              'eatswarrens', 'feedsstoat', 'likeshoney', 'bear', 'wolf', 'juvenile', 'protectscub', 'undead', 'structure', 'blind',
+              'cat', 'jeresydevil', 'lice', 'child13'}
+off_battle = lambda t: re.sub(r'[^a-z0-9]', '', t.lower()) in OFF_BATTLE
 START_TABS = {'Defense', 'Base Form', 'Dormant'}  # a first tab that is the state the card is played in: decks and texts name the card
 RENAME = {'Gem Vessels (Emerald)': 'Emerald Vessel', 'Gem Vessels (Ruby)': 'Ruby Vessel',
           'Gem Vessels (Sapphire)': 'Sapphire Vessel'}   # the wiki's redirects Emerald/Ruby/Sapphire Vessel -> Empty Vessel#Gem Vessels
@@ -203,6 +212,7 @@ def main():
             # a card bearing a sigil that can complete a circuit (wiki Category:Conduit Sigils, rev 7802) is a Conduit card
             if any(a in CONDUIT_SIGILS for a, b in links_in(f.get('sigils'))): types.append('Conduit Card')
             terrain = 'Terrain' in traits
+            traits = [t for t in traits if not off_battle(t)]
             kw_traits = [canon(t) for t in traits if canon(t)]
             traits = [t for t in traits if t not in ('Terrain', 'Mox Card') and not canon(t)]
             stats = {k: v for k, v in (('power', power), ('health', health)) if v}

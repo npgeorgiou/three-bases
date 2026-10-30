@@ -13,7 +13,7 @@ n11	runeterra	Bard Norra	Norra (level 2)	Mysterious Portal	line		Kaptain: Norra 
 n12	runeterra	Darius Gnar	*	Darius	line		Kaptain: Nexus damage levels Darius
 n13	runeterra	Ashe LeBlanc	*	LeBlanc	line		Kaptain: damage you deal levels LeBlanc
 n14	runeterra	Ashe LeBlanc	*	LeBlanc (level 2)	line		Kaptain: LeBlanc 2 acts on damage you deal
-n15	runeterra	Ashe LeBlanc	Ashe	LeBlanc	none	champions level up	Kaptain: "when I level up" is about LeBlanc herself
+n15	runeterra	Ashe LeBlanc	Ashe	LeBlanc	line	(levels it up)	Kaptain: "when I level up" is about LeBlanc herself, so Ashe levelling feeds nothing; the one line left is the right one: Ashe's damage counts for LeBlanc's 15+ (rewritten 30 Oct 2026: no line said "level up" any more, so the must-not case could not fail)
 n16	runeterra	Ashe LeBlanc	*	Bloody Business	line		Kaptain: Reputation needs allies striking for 5+
 n17	stormbound	Royal Reactant	Doctor Mia	Emerald Towers	line		Kaptain: Doctor Mia triggers structures
 n18	stormbound	Royal Reactant	Emerald Towers	Fortification Tonic	line		Kaptain: Fortification Tonic needs a structure
@@ -66,27 +66,27 @@ n64	stormbound	Chronobreak	Heliotroopers	Sunbeam Serpents	none		Claude, deck rea
 nfa01	faeria	Beastmaster Green	Oakling	Deepwood Stalker	line		guide https://www.faeria.com/the-hub/deck/4570-no-dlc-beastmaster-green: Oakling's buffs help Deepwood Stalker (a green creature in hand)
 nfa02	faeria	Red Archers	Gift of Steel	Hilltop Archer	line		guide https://www.faeria.com/the-hub/deck/4854-no-dlc-red-archers: Gift of Steel adds damage to repeated archer attacks
 ni01	inscryption	Act II Undead starter	Gravedigger	Zombie	line		Claude 29 Oct 2026 (v36): Bone Digger gives Bones, Zombie costs 2 Bones (cost needs from the game's rules)
-ni02	inscryption	Act II Undead starter	Skeleton	Frank & Stein	line		Claude (v36): a Skeleton that perishes gives a Bone (game rule), Frank & Stein costs Bones
-ni03	inscryption	Act II Beast starter	Squirrel	Hawk	line		Claude (v36): a Squirrel is sacrificed to pay Hawk's 2 Blood
+ni02	inscryption	Act II Undead starter	Skeleton	Frank & Stein	none		Kaptain 30 Oct 2026: what every unit does by the rules (is sacrificed, gives a Bone when it dies) makes no line; was a 'line' case (v36-v41)
+ni03	inscryption	Act II Beast starter	Squirrel	Hawk	none		Kaptain 30 Oct 2026: what every unit does by the rules (is sacrificed, gives a Bone when it dies) makes no line; was a 'line' case (v36-v41)
 ni04	inscryption	Act II Magick starter	Emerald Mox	Junior Sage	line		Claude (v36): Junior Sage costs a Green Mox; Emerald Mox gives a Green gem
 ni05	inscryption	Act II Magick starter	Sapphire Mox	Junior Sage	none	you gain a gem	Claude (v36): a Blue gem does not pay a Green Mox cost (colours fit)
 ni06	inscryption	Act II bones and sacrifice (Archeronline4U)	M3atB0t	Urayuli	line		Claude (v36): Worthy Sacrifice counts as 3 Blood, so Urayuli (4 Blood) costs less when M3atB0t is sacrificed for it
 ni07	inscryption	Act II bones and sacrifice (Archeronline4U)	Bone Lord's Horn	Tomb Robber	line		Claude (v36): Bonehorn gives Bones; Disentomb pays 1 Bone (a spent resource is a need)
 ni08	inscryption	Kaycee's Mod Bones	Coyote	Pelts (Rabbit)	none	sacrificed	Claude (v36): a Pelt costs 0 Blood, so it needs no sacrifice (a cost rule needs a cost above 0)
-ni09	inscryption	Act II Ouroboros and Mantis God (koi)	Mantis God	Ouroboros	line		Claude (v36): playing Mantis God sacrifices Ouroboros, which grows each time it dies (special behaviour Ouroboros)
+ni09	inscryption	Act II Ouroboros and Mantis God (koi)	Mantis God	Ouroboros	none		Kaptain 30 Oct 2026: what every unit does by the rules (is sacrificed, gives a Bone when it dies) makes no line; was a 'line' case (v36-v41)
 ni10	inscryption	Act II Ouroboros and Mantis God (koi)	Ouroboros	Mantis God	none		Claude (v36, rewritten v41): Ouroboros (2 Blood) paying its own cost pays nothing for Mantis God; no line at all
 ni11	inscryption	Kaycee's Mod Ants	Ant Queen	Flying Ant	line		Claude (v36): Flying Ant's Power is the number of Ants; Ant Queen is an Ant (wiki pages Ants, Ant)
 ni12	inscryption	Kaycee's Mod Moose Blood	Moose Buck	Pelts (Rabbit)	none		Claude (v36, rewritten v41): where Pelt Lice are put needs no moves, and Moose Buck is no free sacrifice; no line at all
-nfa03	faeria	Fast Rakoans	Rakoan Illusionist	Imperial Trooper	none	onto	Claude, deck read: the Illusionist gives Flying to another Rakoan; the Trooper is no Rakoan, nothing moves it onto enemy land
-nfa04	faeria	Fast Rakoans	Airbot	Imperial Trooper	none	onto	Claude, deck read: Airbot's own Dash moves Airbot, not the Trooper (its forward position helps the Trooper enter nearer enemy land: that line is right)
+nfa03	faeria	Fast Rakoans	Rakoan Illusionist	Imperial Trooper	none		Claude, deck read: the Illusionist gives Flying to another Rakoan; the Trooper is no Rakoan, nothing moves it onto enemy land (reason rewritten 30 Oct 2026: the old wording was said by no line, so the case could not fail)
+nfa04	faeria	Fast Rakoans	Airbot	Imperial Trooper	none	moves it	Claude, deck read: Airbot's own Dash moves Airbot, not the Trooper (its forward position helps the Trooper enter nearer enemy land: that line is right) (reason rewritten 30 Oct 2026: the old wording was said by no line, so the case could not fail)
 nfa05	faeria	Beastmaster Green	Time of Legends	Eredon, Voice of All	line	puts:	guide: Time of Legends brings Eredon out early (draws the top legend)
-nfa06	faeria	Beastmaster Green	The Emperor's Command	Feed the Forest	none	heals	Claude, deck read: the Command heals a god, not the creature Feed the Forest destroys
+nfa06	faeria	Beastmaster Green	The Emperor's Command	Feed the Forest	none		Claude, deck read: the Command heals a god, not the creature Feed the Forest destroys (reason rewritten 30 Oct 2026: the old wording was said by no line, so the case could not fail)
 nfa07	faeria	Blue Jump	Wavecrash Colossus	Gabrian Commander	line		guide: play slowly so the big cards come; the Commander waits for a 7+ cost card drawn
 nfa08	faeria	Blue Jump	Ninja Toad	Gabrian Commander	none		Claude, deck read: Ninja Toad costs 4, not 7 or more
 nfa09	faeria	Yellow Flyers	Windborne Champion	Drakkar Skycaptain	none	get Flying	Claude, deck read: drawing a Flying creature needs a card that has Flying, nothing given in play
 nfa10	faeria	Bargain (Krog)	Krog's Dinner	Krog, the Ogre King	line	cheaper:	guide: mulligan for Krog's Dinner; it draws Krog and cuts his cost by 7 (a random 7 cut is an aimed line, not counted here)
 nfa11	faeria	Bargain (Krog)	Bold Bargainer	Ogre Dance	none		Claude, deck read: Ogre Dance costs 4; a 7 cut is for cards costing 7 or more
-nfa12	faeria	Red Combat	Garudan, Heart of the Mountain	Bomb Slinger	none	enemy units move	Claude, deck read: Garudan moving is my unit moving, not an enemy coming next to the Slinger
+nfa12	faeria	Red Combat	Garudan, Heart of the Mountain	Bomb Slinger	none	enemy	Claude, deck read: Garudan moving is my unit moving, not an enemy coming next to the Slinger (reason rewritten 30 Oct 2026: the old wording was said by no line, so the case could not fail)
 nfa13	faeria	Yellow Flyers	Celestial Tower	Khalim, Sky Prodigy	line		Claude, deck read: Charge 3 from the Tower gets Khalim to the enemy god
 nfa14	faeria	Red Blue Mobility Burn	Syland Horsemaster	Grim Guard	line		guide title: mobility gets Combat creatures into fights (Grim Guard hits the god for 2)
 nfa15	faeria	Voice of Hunger Control	Time of Legends	Voice of Hunger	none	enter	Claude, deck read: Wild changes the land colours a card needs, not where it enters
@@ -133,7 +133,7 @@ ndu21	duelyst	Vaath Dying Wish	Kujata	Juggernaut	line		Claude, deck read: Kujata
 ndu22	duelyst	Kaleos Trial of Songhai	Juxtaposition	Bonereaper	line		Claude, deck read: switching an enemy next to Bonereaper puts it in reach of its end-of-turn damage
 ndu23	duelyst	Vaath Dying Wish	Juggernaut	Lavaslasher	none	hits harder	Claude, deck read: Grow makes only Juggernaut stronger (family 19)
 ndu24	duelyst	Cassyva Replace Abomination	Aethermaster	Cassyva Soulreaper	none		Claude, deck read: an extra replace helps the player, not the General card (family 20)
-ndu25	duelyst	Cassyva Replace Abomination	Healing Mystic	Abhorrent Unbirth	none	your units die	Claude, deck read: Unbirth destroys my minions itself; it waits for no deaths (family 21)
+ndu25	duelyst	Cassyva Replace Abomination	Healing Mystic	Abhorrent Unbirth	none		Claude, deck read: Unbirth destroys my minions itself; it waits for no deaths (family 21) (reason rewritten 30 Oct 2026: the old wording was said by no line, so the case could not fail)
 ndu26	duelyst	Lilithe Darkfire	Phantasm	Wraithling	none		Claude, deck read: Wraithlings are summoned onto the board, never in the action bar (family 22)
 ndu27	duelyst	Lilithe Darkfire	Darkfire Sacrifice	Wraithling	none	cheaper	Claude, deck read: as ndu26, a lower cost is no help to a token
 ndu28	duelyst	Cassyva Replace Abomination	Healing Mystic	Cassyva Soulreaper	line		Claude, deck read: "restore 2 Health to anything" can heal my General (family 13)
@@ -161,7 +161,7 @@ ndu39	duelyst	Shidai Artifacts	Cyclone Mask	Shidai Stormblossom	line		Kaptain: C
 ndu40	duelyst	Argeon Dawn's Eye aggro	Argeon Highmayne	Roar	line		Kaptain: the General's spell is its own card
 ndu41	duelyst	Argeon Dawn's Eye aggro	Roar	Windblade Adept	line		Kaptain: as ndu40, its effects sit on the spell
 ndu42	duelyst	Argeon Dawn's Eye aggro	Azurite Lion	Holy Immolation	line		Kaptain: Celerity moves the Lion next to enemies
-ndu43	duelyst	Argeon Dawn's Eye aggro	Azurite Lion	Windblade Adept	none	leader moves	Claude: the Lion moving is no General moving
+ndu43	duelyst	Argeon Dawn's Eye aggro	Azurite Lion	Windblade Adept	none		Claude: the Lion moving is no General moving (reason rewritten 30 Oct 2026: the old wording was said by no line, so the case could not fail)
 ndu44	duelyst	Ciphyron Build	Rescue-RX	Timekeeper	none		Kaptain: Timekeeper helps the buildings, it waits for nothing
 ndu45	duelyst	Ciphyron Build	Timekeeper	Rescue-RX	line		Kaptain: as ndu44
 ndu46	duelyst	Argeon Dawn's Eye aggro	Tempest	Arclyte Regalia	none		Claude: Regalia's damage prevention waits for nothing
@@ -176,7 +176,7 @@ nfa47	faeria	Midrange Sacrifice	Wind Soldier	Soul Eater	line	waits:	Claude from 
 nfa48	faeria	Bargain (Krog)	Krog's Dinner	Ogre Battler	none		Kaptain 30 Oct 2026: as nfa39
 nfa49	faeria	Yellow Monstrosity	Khalim's Training	Windborne Emissary	line	type:	Claude from Kaptain's point 1: giving Flying to a creature enables the Emissary
 nfa50	faeria	Voice of Hunger Control	Falcon Dive	Eredon, Voice of All	none	death effect	Claude from Kaptain's point 10: 1 damage does not kill a 3 Life unit
-ni18	inscryption	Act II Ouroboros and Mantis God (koi)	Mantis God	Ouroboros	line		Claude (v41): a Blood card lets you sacrifice Ouroboros, which grows each time it dies (koi's deck plan)
-ni19	inscryption	Act II Ouroboros and Mantis God (koi)	Squirrel	Mantis God	line		Claude (v41): Squirrels cost nothing and are played to be sacrificed
+ni18	inscryption	Act II Ouroboros and Mantis God (koi)	Mantis God	Ouroboros	none		Kaptain 30 Oct 2026: what every unit does by the rules (is sacrificed, gives a Bone when it dies) makes no line; was a 'line' case (v36-v41)
+ni19	inscryption	Act II Ouroboros and Mantis God (koi)	Squirrel	Mantis God	none		Kaptain 30 Oct 2026: what every unit does by the rules (is sacrificed, gives a Bone when it dies) makes no line; was a 'line' case (v36-v41)
 ni20	inscryption	Kaycee's Mod Moose Blood	Mole	Moose Buck	none	sacrificed	Claude (v41): every unit can be sacrificed; Mole (1 Blood) is no fodder by its text
 ni21	inscryption	Act II bones and sacrifice (Archeronline4U)	Urayuli	Bone Heap	none	Bones	Claude (v41): every death gives a Bone; Urayuli (4 Blood) is not played to die
