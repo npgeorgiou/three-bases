@@ -452,7 +452,7 @@ Skills in every target the phrase names (fixes/runeterra/v33.py); a level-up for
 6. **Card counts by where the card comes from.** "Summoned from your action bar" is played (N24): tokens do not count.
    Stats used as amounts want that stat; a cost equal to a stat wants less of it (Blood Taura). Cases ndu11, ndu18.
 
-## Kaptain's check of the Duelyst networks (30 Oct 2026, v41; fixed by rule in every game; cases ndu31-ndu47)
+## Kaptain's check of the Duelyst networks (30 Oct 2026, v42; fixed by rule in every game; cases ndu31-ndu47)
 1. **Help is no need.** An effect that helps the cards it names (Oakenheart: Mechs +1/+1; Golem Metallurgist: Golems
    cheaper; Timekeeper: buildings progress) is a help line from it; those cards' type or keyword is no ask or need of it, and
    the cards are no "card it counts". A card that makes an effect stronger does want it (Deranged Brute wants Rage).

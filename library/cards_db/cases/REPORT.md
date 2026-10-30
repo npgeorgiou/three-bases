@@ -1,7 +1,9 @@
 # Case tests: inscryption
 
 Made by `cases/run.py inscryption`.
-**72 of 72 cases pass.**
+**73 of 73 cases pass.**
+
+**Cases whose reason no line says any more (rewrite them): ni10, ni12, ni17**
 
 
 ## Mechanics (expected cards from the texts)
@@ -44,6 +46,7 @@ Made by `cases/run.py inscryption`.
 | mx16 | more or faster base resource (base_resource_gain, v38) | 2 | 2 | 100% | 2 | yes |
 | mi22 | Burrower: moves to an empty space of its own side when it would be struck | 5 | 5 | 100% | 0 | yes |
 | mi23 | rotate one space clockwise: every unit moves to a bordering space | 1 | 1 | 100% | 1 | yes |
+| mi24 | a unit that takes every space of its side (room, size) | 2 | 2 | 100% | 0 | yes |
 
 ## Combos (the enabler must set off the payoff)
 
@@ -83,20 +86,20 @@ Made by `cases/run.py inscryption`.
 
 | case | deck | from | to | expect | found | pass |
 |---|---|---|---|---|---|---|
-| ni01 | Act II Undead starter | Gravedigger | Zombie | line  | waits: you gain the second resource (Bones) (pays its cost); waits: you gain the | yes |
-| ni02 | Act II Undead starter | Skeleton | Frank & Stein | line  | waits: you gain the second resource (Bones) (pays its cost) (by the game's rule: | yes |
-| ni03 | Act II Beast starter | Squirrel | Hawk | line  | waits: your units are sacrificed (pays its cost) (by the game's rule: units can  | yes |
-| ni04 | Act II Magick starter | Emerald Mox | Junior Sage | line  | waits: you gain a gem (Mox) (pays its cost) | yes |
+| ni01 | Act II Undead starter | Gravedigger | Zombie | line  | waits: lets you gain the second resource (Bones) (pays its cost); waits: lets yo | yes |
+| ni02 | Act II Undead starter | Skeleton | Frank & Stein | line  | waits: lets you gain the second resource (Bones) (pays its cost) (by the game's  | yes |
+| ni03 | Act II Beast starter | Squirrel | Hawk | line  | waits: has your units sacrificed (pays its cost) (by the game's rule: units can  | yes |
+| ni04 | Act II Magick starter | Emerald Mox | Junior Sage | line  | waits: lets you gain a gem (Mox) (pays its cost) | yes |
 | ni05 | Act II Magick starter | Sapphire Mox | Junior Sage | none you gain a gem | - | yes |
-| ni06 | Act II bones and sacrifice (Archeronline4U) | M3atB0t | Urayuli | line  | boosts: makes it cheaper (when it is sacrificed for it); waits: your units are s | yes |
-| ni07 | Act II bones and sacrifice (Archeronline4U) | Bone Lord's Horn | Tomb Robber | line  | waits: you gain the second resource (Bones) | yes |
+| ni06 | Act II bones and sacrifice (Archeronline4U) | M3atB0t | Urayuli | line  | cheaper: makes it cheaper (when it is sacrificed for it); waits: has your units  | yes |
+| ni07 | Act II bones and sacrifice (Archeronline4U) | Bone Lord's Horn | Tomb Robber | line  | waits: lets you gain the second resource (Bones) | yes |
 | ni08 | Kaycee's Mod Bones | Coyote | Pelts (Rabbit) | none sacrificed | - | yes |
-| ni09 | Act II Ouroboros and Mantis God (koi) | Mantis God | Ouroboros | line  | waits: your units are sacrificed (pays its cost) (by the game's rule: units can  | yes |
-| ni10 | Act II Ouroboros and Mantis God (koi) | Ouroboros | Mantis God | none Blood costs | waits: your units are sacrificed (pays its cost) (by the game's rule: units can  | yes |
-| ni11 | Kaycee's Mod Ants | Ant Queen | Flying Ant | line  | type: is a unit with Ant it counts or asks for; waits: your units are sacrificed | yes |
+| ni09 | Act II Ouroboros and Mantis God (koi) | Mantis God | Ouroboros | line  | waits: has your units sacrificed (pays its cost) (by the game's rule: units can  | yes |
+| ni10 | Act II Ouroboros and Mantis God (koi) | Ouroboros | Mantis God | none Blood costs | waits: has your units sacrificed (pays its cost) (by the game's rule: units can  | yes |
+| ni11 | Kaycee's Mod Ants | Ant Queen | Flying Ant | line  | type: is a unit with Ant it counts or asks for; waits: has your units sacrificed | yes |
 | ni12 | Kaycee's Mod Moose Blood | Moose Buck | Pelts (Rabbit) | none your units move | - | yes |
 | ni13 | Kaycee's Mod Free Reptiles | Rabbit | Bullfrog | none sacrificed | - | yes |
 | ni14 | Act III starter | Sniper Bot | Double Gunner | none  | - | yes |
-| ni15 | Alpha, Wolf, Moose Buck | Alpha | Wolf | line  | boosts: gives it +1|+0 (when next to it); waits: your units are sacrificed (pays | yes |
-| ni16 | Daus, Bell Tentacle | Bell Tentacle | Daus | line  | type: is the Bell Tentacle it names; waits: your units are sacrificed (pays its  | yes |
-| ni17 | Daus, Bell Tentacle | Bell Tentacle | Daus | none by fighting | type: is the Bell Tentacle it names; waits: your units are sacrificed (pays its  | yes |
+| ni15 | Alpha, Wolf, Moose Buck | Alpha | Wolf | line  | stronger: gives it +1|+0 (when next to it); waits: has your units sacrificed (pa | yes |
+| ni16 | Daus, Bell Tentacle | Bell Tentacle | Daus | line  | type: is the Bell Tentacle it names; waits: has your units sacrificed (pays its  | yes |
+| ni17 | Daus, Bell Tentacle | Bell Tentacle | Daus | none by fighting | type: is the Bell Tentacle it names; waits: has your units sacrificed (pays its  | yes |

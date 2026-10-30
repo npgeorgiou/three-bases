@@ -607,7 +607,10 @@ def one_leader(say):
     verb = {'attack': 'attacks', 'die': 'dies', 'take': 'takes', 'move': 'moves', 'are': 'is', 'have': 'has', 'get': 'gets',
             'enter': 'enters', 'strike': 'strikes', 'kill': 'kills', 'survive': 'survives'}
     def fix(m): return m.group(1) + ' leader ' + verb.get(m.group(2), m.group(2))
-    return re.sub(r'\b(your|enemy) units(?: or players)? (\w+)', fix, say).replace('enemy leader', 'the enemy leader')
+    say = re.sub(r'\b(your|enemy) units(?: or players)? (\w+)', fix, say).replace('enemy leader', 'the enemy leader')
+    say = say.replace('your Nexus or base', 'your leader').replace('the enemy player', 'the enemy leader')
+    base = {v: k for k, v in verb.items()}  # "makes your leader move": no -s after "makes"
+    return re.sub(r'\b(makes (?:your|the enemy) leader) (\w+)', lambda m: m.group(1) + ' ' + base.get(m.group(2), m.group(2)), say)
 
 
 def help_abilities(c):

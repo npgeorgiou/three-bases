@@ -84,18 +84,78 @@ Second read, after the merge with Faeria's v39 code (same 10 decks):
     condition on the deck or discard ("if Krog is in your deck, draw him" fetches him). A card naming what it makes itself in
     its own effects (Blazing Spines' walls "can attack") asks for no other maker of it.
 
-## Kaptain's check (30 Oct 2026): what was wrong and the rule (PROCESS "Kaptain's check of the Duelyst networks")
-| deck | line | rule |
-|---|---|---|
-| Argeon Mechaz0r | Lifestream, Holy Immolation -> Martyrdom "does what it waits for" | 3: a stat of what it picks to destroy wants nothing |
-| Argeon Mechaz0r | Mechs -> Oakenheart "is a Mech it asks for" | 1: Oakenheart's passive helps the Mechs (line from it) |
-| Vaath Dying Wish | Golems -> Golem Metallurgist "asks for / counts" | 1: it makes them cheaper (line from it) |
-| Cassyva Replace | Aethermaster, Kron, Replicant, Letigress ... -> Punish "by fighting" | 2: every unit attacks; no combo |
-| Shidai Artifacts | Cyclone Mask -> General "can aim at it" | 6: giving Ranged is help |
-| all | the General's spell | 8: its own card, a node |
-| Argeon Dawn's Eye | Azurite Lion: no line to Holy Immolation | 7: Celerity moves it; "enemies around it" needs my units moved |
-| Lilithe Darkfire | Lilithe, Vorpal Reaver -> Inkling Surge "enables" | 5: they put Wraithlings into play; the Wraithling enables Inkling Surge |
-| Ciphyron Build | Build cards -> Timekeeper "does what it waits for" | 1: Timekeeper helps the buildings (line from it) |
-Found reading again by the same rules: Roar "more health" (4), Abomination's gains to Letigress (4), Tempest -> Arclyte
-Regalia (9), the Lion -> Zeal "your leader moves" (7), Dispirited Prisoner "counts when played" (tokens are never played),
-Abyssal Scar -> the General (a delayed effect the player gets is no help to the General card).
+## Kaptain's check (30 Oct 2026, v42): families (PROCESS "Kaptain's check of the Duelyst networks")
+Lines before -> after my v42 change, measured with the network code before and after (before the merge with Faeria's v41):
+Runeterra 597 gone / 15 new, Stormbound 18 / 4, Monster Train 2 / 0, Faeria 53 / 3, Inscryption 19 / 1; every gone and new
+reason group read.
+
+## F1 Help read as a need
+Kaptain: Mechs -> Oakenheart "is a Mech it asks for"; Golems -> Golem Metallurgist; Build cards -> Timekeeper.
+Root cause: network.py lines_of took every effect's target filter as an ask (type, name); refs.py state_rows took a keyword
+filter of any effect as a keyword need, and help triggers ("the first Golem you summon costs 1 less") as waits.
+Same error elsewhere: Runeterra 129 "is a Lurker it asks for" + 38 "makes a Lurker" (Lurk grants Lurkers +1|+0: now a help
+line); Stormbound 11 "is a Dragon it asks for" to Spare Dragonling; Faeria 14 Rakoan asks, Ancient Beastmaster, Drakkar
+Skycaptain counts; Monster Train: none wrong (Shardtail Queen kills her Imps, Deranged Brute makes Rage stronger: real wants).
+Fix: an effect that helps what it names (helps_it, HELP_ACTS) is no ask, no keyword need, and its trigger's own cards are no
+"card it counts"; a card that makes an effect stronger (increase_effect) still wants it.
+
+## F2 What every unit does by the rules
+Kaptain: Aethermaster, Kron, Replicant, Letigress ... -> Punish "by fighting": all units can attack.
+Root cause: network.py lines_of linked every unit through the game's fight and counterattack rules, and HELPS gave power as
+help to "an enemy is damaged".
+Same error elsewhere: Runeterra 79 "your units attack (by fighting)", 62 "enemy units take damage", 57 "your units die", 26
+"the enemy player takes damage", 20 "any units strike", 37 "more damage"; Faeria 9 "harvests (by the rule)" to Wavecrash
+Colossus, 10 "your units die (by fighting)"; Inscryption 19 "Bones from deaths".
+Fix: a rule line stays only from a card whose own ability makes it fight more (Celerity, Frenzy, Overwhelm, "this fights"),
+for a need naming the leader, or for a level-up count (Kaptain's n53); power helps damage needs only for level-ups.
+
+## F3 A stat of what the player picks to harm
+Kaptain: Lifestream, Holy Immolation -> Martyrdom "does what it waits for".
+Root cause: refs.py (amount_stat conditions) and network.py (more health / more power) wanted the stat of "it" also when
+"it" is any minion the player picks to destroy.
+Same error elsewhere: Faeria The Emperor's Command -> Feed the Forest; none else found.
+Fix: a stat of a chosen or random target of a harmful act on either side wants nothing; help picks keep the want.
+
+## F4 Stat gains by stat and by target
+Found reading again: Roar -> Martyrdom "more health"; Abhorrent Unbirth -> Letigress "hits harder"; Juggernaut -> others.
+Root cause: having() counted any stat change as both stats and any target.
+Same error elsewhere: Runeterra 41 "more power: it hits harder" (Ballistic Bot's Augment on itself, Glare's Gloom, spells
+like Final Spark); Stormbound Spare Dragonling's gift to non-Dragons; level forms lost their types (Pyke (level 2)).
+Fix: gains per stat (strength is both) and per target filter; a level form keeps its card's types.
+
+## F5 Makers of a made card that is drawn
+Kaptain: Lilithe, Vorpal Reaver -> Inkling Surge "enables".
+Root cause: the named-card rule linked makers straight to the asker though the made card was a node.
+Same error elsewhere: Runeterra 11 "makes a Celestial", 5 "makes the Poison Puffcap", 5 "makes the Chime"; Monster Train 2
+(Morselmaker, Shardtail Queen); Stormbound Qordia's Nest.
+Fix: when the made card is drawn, makers put it into play and it enables the asker; "another" in a condition still asks.
+
+## F6 Keywords and acts that help were "can aim at it"
+Kaptain: Cyclone Mask -> the General not linked (only a faint "can aim at it").
+Root cause: BUFFS lacked ranged, flanking, haste, taunt, placement_rules; helps_it lacked ready, countdown_advance,
+damage_reduction.
+Same error elsewhere: Runeterra 3 countdown lines; Faeria Spirit-like readies; Duelyst Spirit of the Wild, Timekeeper.
+Fix: those keywords and acts are help ("helps").
+
+## F7 Moves and positions
+Kaptain: Azurite Lion (Celerity) not linked to Holy Immolation.
+Root cause: Duelyst Celerity caused no moves; a position measured from my unit ("enemies around it") made a moves need only
+for the enemies; a card moving itself had no kind (so the Lion moved "your leader").
+Same error elsewhere: Stormbound Tode the Elevated -> Toxic Sacrifice now "your units move"; none wrong found elsewhere.
+Fix: Celerity causes moves; positions measured from my unit (its own "around this one", or "around it" of my first target)
+need my units moved; a card's own moves keep its kind.
+
+## F8 The General's spell
+Kaptain: each General's spell should be a node.
+Root cause: the General's record held a copy of its signature card's effects.
+Same error elsewhere: none (Runeterra champion spells are cards already).
+Fix: the spell is its own card (fixes/duelyst/v41.py; supplement_duelyst.py names it in the General's text), drawn with the
+deck: General -> spell "casts its own spell".
+
+## F9 Protection triggers and tokens
+Found reading again: Tempest -> Arclyte Regalia "waits"; Dispirited Prisoner -> Hideatsu "counts when played"; Abyssal Scar
+-> the General "gives it an ability".
+Root cause: a trigger that only prevents damage was a wait; tokens summoned on the board counted as played; a delayed ability
+the player gets was help to the leader card.
+Same error elsewhere: none found in the other games' gone and new lines.
+Fix: protection triggers wait for nothing; board-only tokens are never played or drawn; give_ability on the player is no help.
