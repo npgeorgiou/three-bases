@@ -72,7 +72,11 @@ select distinct card from flat_concept where concept='forced_movement'
 - duelyst: 36 cards: Blink, Cade the Desolator, Chaos Elemental, Chittering Tiller, Cindera, Daemonic Lure, Envybaer, Flicker ...
 - faeria: 39 cards: Airbot, Ancient Boar, Animated Banquet, Balloon Fish, Clockwork Yak, Coral Polliwog, Crackthorn Beast, Dash ...
 - inscryption: 36 cards: 49er, Bloodhound, Bolthound, Bonehound, Burrower, Burrowing Trap, Clinger, Elk ...
+<<<<<<< Updated upstream
 - into_the_breach: 104 cards: A.C.I.D. Projector, A.C.I.D. Tank, AP Cannon, Aegon Mortar, Aerial Bombs, Alpha Beetle, Alpha Bouncer, Alpha Gastropod ...
+=======
+- into_the_breach: 113 cards: A.C.I.D. Projector, A.C.I.D. Tank, AP Cannon, Aegon Mortar, Aerial Bombs, Alpha Beetle, Alpha Bouncer, Alpha Gastropod ...
+>>>>>>> Stashed changes
 - monster_train: 15 cards: Ascend, Cave In, Crypt Builder, Descend, Dripfall, Hidden Passage, Hosting Kin, March of Shields ...
 - runeterra: 8 cards: Bone Skewer, Fizz's Playful Trickster, Lissandra's Entomb, Playful Trickster, Sharesies, Sion, Sugary Snare, Tahm Kench
 - stormbound: 33 cards: Absorbing Varmints, Agile Warriors, Angelic Tikas, Anointed Saviors, Armed Schemers, Catnip’s Charm, Chateau de Cardboard, Cheesy Lurers ...
@@ -88,7 +92,11 @@ select card from flat_concept where concept in ('movement','forced_movement') in
 - duelyst: 16 cards: Aspect of the Wyrm, Black Locust, Cade the Desolator, Chittering Tiller, Cindera, D3cepticle, Drake Dowager, Ghost Lynx ...
 - faeria: 28 cards: Animated Banquet, Astral Weapon, Baeru, the First Wave, Dancing Blade, Flowersilk Faerie, Flying Piranha, Frog-Tosser, Grappling Hook ...
 - inscryption: 26 cards: 49er, Clinger, Elk, Elk Fawn, Ghost Ship, Headless Horseman, Hefty, Lonely Wizbot ...
+<<<<<<< Updated upstream
 - into_the_breach: 122 cards: A.C.I.D. Hornet, A.C.I.D. Projector, A.C.I.D. Tank, AP Cannon, Aegon Mortar, Aerial Bombs, Alpha Beetle, Alpha Bouncer ...
+=======
+- into_the_breach: 120 cards: A.C.I.D. Hornet, A.C.I.D. Projector, A.C.I.D. Tank, AP Cannon, Aegon Mortar, Aerial Bombs, Alpha Beetle, Alpha Bouncer ...
+>>>>>>> Stashed changes
 - runeterra: 2 cards: Ahri, Ahri (level 2)
 - stormbound: 17 cards: Agile Warriors, Angelic Tikas, Anointed Saviors, Armed Schemers, Catnip’s Charm, Chateau de Cardboard, Confuse, Crystalshields ...
 
@@ -106,7 +114,11 @@ select distinct card from flat_concept where concept='turn_start'
 - monster_train: 56 cards: Alloyed Construct, Apex Imp, Big Sludge, Bounty Stalker, Branded Warrior, Burnout, Dark Deal, Draff ...
 - runeterra: 116 cards: Abominable Guardian, Aphelios (level 2), Arena Bookie, Aurelion Sol, Aurelion Sol (level 2), Ballistic Bot, Barbed Chain, Beefcake Mayor ...
 - stormbound: 39 cards: Acid Greenhorns, Big Sisters of Growth, Chateau de Cardboard, Copperskin Ranger, Crimson Sentry, Cursed Cemetery, Emerald Towers, Frozen Core ...
+<<<<<<< Updated upstream
 - sts1: 221 cards: Acid Slime (L), Acid Slime (M), Acid Slime (S), After Image, After Image+, Ambrosia, Anchor, Armaments ...
+=======
+- sts1: 215 cards: Acid Slime (L), Acid Slime (M), Acid Slime (S), After Image, After Image+, Ambrosia, Anchor, Armaments ...
+>>>>>>> Stashed changes
 
 ## Drain: damage, then the same amount to my side (heal the player, or strength to the drainer)
 
@@ -135,7 +147,11 @@ select distinct card from flat_ref where happening='given_keyword' and role!='ma
 - monster_train: 90 cards: Alloy of the Ancients, Alloyed Construct, Apex Imp, Armor, Attuned, Awake, Battering Ram, Big Sludge ...
 - runeterra: 87 cards: Arbiter of the Peak, Ava Achiever, Big Game Tycoon, Caitlyn, Caitlyn (level 2), Curtain Call, Deadly Flourish, Death Mark ...
 - stormbound: 26 cards: Acid Greenhorns, Amberhides, Big Sisters of Growth, Brood Sages, Copperskin Ranger, Crimson Sentry, Function Wilds, Green Prototypes ...
+<<<<<<< Updated upstream
 - sts1: 231 cards: After Image, After Image+, Ambrosia, Anchor, Ancient Potion, Armaments, Armaments+, Artifact ...
+=======
+- sts1: 227 cards: After Image, After Image+, Ambrosia, Anchor, Ancient Potion, Armaments, Armaments+, Artifact ...
+>>>>>>> Stashed changes
 
 ## Effects that grow with a count ("for each", "equal to"), any game
 
@@ -149,7 +165,11 @@ select distinct card from flat_do where params glob '*=[a-z]*'
 - monster_train: 166 cards: A Fatal Melting, Adaptive Mutation, Alloy of the Ancients, Alloyed Construct, Ambient Charge, Ancient Resonance, Ancient Synergy, Apex Imp ...
 - runeterra: 698 cards: Absorb Soul, Abyssal Eye, Abyssal Guard, Acolyte's Reliquary, Acorn, the Hextechnician, Adnere's Aviarists, Advance, Advanced Intel ...
 - stormbound: 56 cards: Agile Warriors, Amberhides, Awakening of the Will, Beards of Crowglyph, Bigthrust Tigers, Blizzard Bombs, Booming Professors, Brood Sages ...
+<<<<<<< Updated upstream
 - sts1: 317 cards: Acid Slime (L), Acid Slime (M), Acid Slime (S), After Image, After Image+, Aggregate, Anchor, Armaments ...
+=======
+- sts1: 311 cards: Acid Slime (L), Acid Slime (M), Acid Slime (S), After Image, After Image+, Aggregate, Anchor, Armaments ...
+>>>>>>> Stashed changes
 
 ## Mechanics, not cards
 
@@ -164,12 +184,21 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
+<<<<<<< Updated upstream
 - counterattack: inscryption 108 pairs, e.g. QU177 (Beast Form) -> Shield Latcher; monster_train 119 pairs, e.g. Cycle of Life -> Little Fade; sts1 4 pairs, e.g. Liquid Bronze -> Lizard Tail
 - on_attack: sts1 4 pairs, e.g. Caltrops -> Lizard Tail
 - self_destruct: duelyst 692 pairs, e.g. Windstorm Obelysk -> Darkspear Zane; faeria 576 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 350 pairs, e.g. Skeleton Crew -> Explode Bot; into_the_breach 32 pairs, e.g. Self-Destruct -> Marked tile; monster_train 243 pairs, e.g. Bog Chrysalis -> Kinhost Vessel; runeterra 6554 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Diehards
 - destroy: duelyst 2211 pairs, e.g. Windstorm Obelysk -> Darkspear Zane; faeria 932 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 385 pairs, e.g. Skeleton Crew -> Explode Bot; into_the_breach 84 pairs, e.g. Tentacles -> Marked tile; monster_train 292 pairs, e.g. Bog Chrysalis -> Kinhost Vessel; runeterra 11112 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
 - sacrifice: duelyst 1511 pairs, e.g. Windstorm Obelysk -> Darkspear Zane; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Explode Bot; into_the_breach 8 pairs, e.g. Arachnoid -> Large Goo; monster_train 288 pairs, e.g. Primordium -> Devourer of Death; runeterra 5631 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
 - revive: inscryption 27 pairs, e.g. Necromancer -> Explode Bot; runeterra 1008 pairs, e.g. Chronobreak -> Bladepierced Revenant; stormbound 38 pairs, e.g. Diehards -> Crimson Sentry
+=======
+- counterattack: inscryption 108 pairs, e.g. QU177 (Beast Form) -> Shield Latcher; monster_train 119 pairs, e.g. The Sentient -> Little Fade; sts1 4 pairs, e.g. Bronze Scales -> Lizard Tail
+- self_destruct: duelyst 692 pairs, e.g. Simulacra Obelysk -> Darkspear Zane; faeria 576 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 350 pairs, e.g. Skeleton Crew -> Broken Bot; into_the_breach 32 pairs, e.g. Walking Bomb -> Marked tile; monster_train 243 pairs, e.g. Kinhost Vessel -> Bogdeep Cocoon; runeterra 6554 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Crimson Sentry
+- on_attack: sts1 4 pairs, e.g. Caltrops -> Lizard Tail
+- destroy: duelyst 2211 pairs, e.g. Simulacra Obelysk -> Darkspear Zane; faeria 932 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 385 pairs, e.g. Skeleton Crew -> Broken Bot; into_the_breach 84 pairs, e.g. Tentacles -> Marked tile; monster_train 292 pairs, e.g. Kinhost Vessel -> Bogdeep Cocoon; runeterra 11112 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- sacrifice: duelyst 1511 pairs, e.g. Simulacra Obelysk -> Darkspear Zane; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Broken Bot; into_the_breach 8 pairs, e.g. Arachnoid -> Large Goo; monster_train 288 pairs, e.g. Primordium -> Devourer of Death; runeterra 5631 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- revive: inscryption 27 pairs, e.g. Necromancer -> Broken Bot; runeterra 1008 pairs, e.g. Chronobreak -> Bladepierced Revenant; stormbound 38 pairs, e.g. Diehards -> Crimson Sentry
+>>>>>>> Stashed changes
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -245,8 +274,13 @@ select distinct card from flat_do where act='copy_keywords'
 - inscryption Beast: free_play (4), multi_attack (8), stealth (8), immunity (6), variable_stats (8)
 - inscryption Technology: stances (8), territory_trigger (4), aoe_damage (4), link_formation (10), ping (6)
 - inscryption Magick: aura (6), defence_gain (5), draw (4), self_destruct (4), card_presence_condition (5)
+<<<<<<< Updated upstream
 - into_the_breach Prime: self_mill (4), aoe_damage (15), lanes (5), spell_or_skill (21), forced_movement (17)
 - into_the_breach Brute: forced_movement (24), area_templates (27), spell_or_skill (21), attack_lock (5), movement (27)
+=======
+- into_the_breach Prime: aoe_damage (15), lanes (5), spell_or_skill (21), forced_movement (21), ping (24)
+- into_the_breach Brute: forced_movement (27), area_templates (27), spell_or_skill (21), attack_lock (5), movement (27)
+>>>>>>> Stashed changes
 - into_the_breach Ranged: area_templates (28), attack_lock (5), damage_over_time (5), spell_or_skill (19), lanes (4)
 - into_the_breach Science: swap (4), shield (8), spell_power (9), damage_prevention (9), spell_or_skill (20)
 - into_the_breach Any: defence_gain (5), tribal (9), stat_gain (6), heal (6), spell_power (6)

@@ -582,19 +582,21 @@ that carries it (pick self); a pilot's "Mech" = the mech it pilots (pick self). 
   in its straight line; artillery arcs to any tile in a straight line (this is how the weapon aims: write the target, never
   the path).
 - Damage. "Damage: 2" = damage params amount 2 on what the weapon hits. "(1 to self)", "damaging self" = a second effect,
-  damage on self. "3-1", "1-3", "0 - 2" (damage that changes with distance or hits) = damage with params amount min and max
-  as the first number written, and add "unsure": ["params"] (no value says "damage that changes along the line" yet). "Damage: kills" = kill. "Building Immune" / "Ally Immune" = the target filter excludes landmarks / side mine.
+  damage on self. "3-1", "1-3", "0 - 2" (damage that changes with distance or hits) = damage with amount `{"x": "range", "items":
+  [lowest, highest]}`. "Damage: kills" = kill. "Building Immune" / "Ally Immune" = the target filter excludes landmarks / side mine.
 - Moves. "Push" a tile or unit = move on the unit there, "to" the bordering position away from the attacker; "pull" = move
   towards; "toss", "throw", "grab and toss behind you" = move "to" behind of self; "swap places" = swap; "teleport", "leap",
-  "dash", "charge", "fly over" by the mech itself = move on self. "Flip its attack direction" = a
-  proposal (no value yet: propose "redirect_attack"). "Temporarily control a unit" = steal, lasts this_round. "Force a unit
+  "dash", "charge", "fly over" by the mech itself = move on self. "Flip its attack direction" = act
+  redirect_attack on the unit. "Temporarily control a unit" = steal, lasts this_round. "Force a unit
   to attack" = start_attack on it.
 - Statuses (keywords): Fire, Smoke, A.C.I.D., Frozen, Webbed, Shield (keyword Energy Shield), Boost. On a unit = give_keyword
   with that keyword, lasts permanent unless the text says how long (Boost wears off by its own keyword record: lasts permanent). On tiles ("light tiles on Fire", "Smoke on 5 tiles", "Smoke behind the shooter", "A.C.I.D. pool")
   = give_keyword on the positions. "Freeze" = give_keyword Frozen. "Repair" = heal (also of disabled Mechs); "repairs all
   damage", "heal completely" = heal with amount `{"x": "stat", "attr": "health", "of": TARGET}`.
+- Damage by origin. "Weapon damage to this unit", "Bumps", "blocking emerging Vek" = event damaged with COND it_matches
+  origin weapon / bump / blocking_emerging. "+N Range" with no reach written = increase_effect params range N.
 - Ground. "Crack tiles" = set_terrain "to" a position with terrain cracked_space; "convert a liquid Tile to a Hole" = set_terrain
-  to chasm. Water = terrain ocean; Chasm = chasm.
+  to chasm. Water = terrain ocean; Chasm = chasm; Lava = lava.
 - Events. "On kill", "when they deal a killing blow", "if target is killed" = killed, actor self (the mech) and object the
   target. "When repairing" = healed, actor self. "After attacking" = attack_done, actor self; "after Move" = moves_onto, object
   self. "Every turn" (Vek or environment) = turn_start of the player whose turn it says ("the player turn" = actor kind player

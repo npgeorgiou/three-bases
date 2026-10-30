@@ -306,6 +306,11 @@ Each change: date, what changed, the card that caused it, and which records were
 - BRIEF "Game words: Into the Breach"; patterns TB01-TB14; exclude.tsv: the library's 10 wiki article pages (category
   game_rule) are not cards (Claude, for Kaptain's check).
 - decks.tsv: the 14 official squads and 6 players' custom squads (a squad of 3 mechs is the deck).
+- After the first build, one pass (deck_read_into_the_breach.md "Before the fix"), fixed by fixes/into_the_breach/v48.py:
+  damage that changes with distance or hits = amount x range; vocab act redirect_attack (flip an attack's direction, no
+  concept yet), param range ("+2 Range" with no reach written), terrain lava, states weapon, bump, blocking_emerging (the
+  origin of damage); names.tsv drops other games' keywords written on moves (Push, Pull, Charge, Dash, Jump, Toss,
+  Teleport, Flip) and Reset Turn; patterns S-TB1 to S-TB3 strip wording with no effect. Claude's choices, for Kaptain's check.
 
 ## 30 Oct 2026, v49 (Slay the Spire import)
 - source.py: id block 7000001 for sts1 (first taken for The Elder Scrolls: Legends, released unused: its later sets are not

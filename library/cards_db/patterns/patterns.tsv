@@ -188,3 +188,6 @@ sts1	SS15	\bpermanently\b	value:this_run	yes	duration word (the change stays for
 sts1	SS16	\bgain \d+ energy\b|\bgain x energy\b	value:mana_gain	yes	energy is mana
 sts1	SS17	\bexhaust (?:a|\d|x|all|the|your|it)\b	value:exhaust	yes	exhausting a card as an act (not the Keywords field)
 sts1	SS18	\benter (?:wrath|calm|divinity)\b	value:give_keyword	yes	entering a stance gives its keyword
+into_the_breach	S-TB1	\(but water will prevent attacking or repairing\)		strip	the Massive reminder in Vek texts: a rule of the keyword Massive, its own record says it
+into_the_breach	S-TB2	all other damage \(push, blocking, fire, etc\.\) is unaffected\.?		strip	says what the keyword does not change (A.C.I.D., Natural Armor): no effect
+into_the_breach	S-TB3	\bfires? (?=(?:a|an|two|the|rockets|a second)\b)		strip	"fire a projectile" is shooting, not the status Fire

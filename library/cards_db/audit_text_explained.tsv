@@ -66,6 +66,7 @@ duelyst	Wraithling Swarm	nearby	"nearby each other" places the three Wraithlings
 duelyst	Stunned	stun	the status itself ("Stunned minions lose their next action"): its rows are what a stunned minion can't do
 duelyst	Wall	dispel	"removed if dispelled": no event for being dispelled yet (proposal silenced, unsure)
 inscryption	Campfire	nearby	"gathered around a fire" is the scene of a run event, no board position
+<<<<<<< Updated upstream
 sts1	Accuracy	deal damage	"Shivs deal 4 additional damage" is increase_effect (amount 4) on the Shivs: more of the damage they deal
 sts1	Phantasmal Killer	deal damage	increase_effect (100 percent) on my Attacks next turn: double damage
 sts1	Wreath of Flame	deal damage	increase_effect on my next Attack: more of its damage
@@ -86,3 +87,65 @@ sts1	Confused	random	random costs have no value yet (proposal random_value, unsu
 sts1	Mystic	heal	an enemy action named Heal with no amount: written as the enemy's buff
 sts1	Ascension Mode Level 5	heal	less healing after bosses changes the run: run_rule
 sts1	Flex	this turn	"at the end of this turn" is the turn_end ability with limit next_time
+=======
+into_the_breach	Shell Psion	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Bot Leader	heal	"prepare to heal" is the keyword Self-Repairing in the rows
+into_the_breach	Bot Leader	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Blobber	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Blobber	adjacent	the adjacent tiles belong to another card (Blob, egg, boulder) or to the keyword Explosive Decay, whose record damages the bordering tiles
+into_the_breach	Alpha Blobber	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Alpha Blobber	adjacent	the adjacent tiles belong to another card (Blob, egg, boulder) or to the keyword Explosive Decay, whose record damages the bordering tiles
+into_the_breach	Large Goo	random	"randomly determined tiles" is wiki prose about where split Goos land
+into_the_breach	Medium Goo	random	"randomly determined tiles" is wiki prose about where split Goos land
+into_the_breach	Small Goo	random	"randomly determined tiles" is wiki prose about where split Goos land
+into_the_breach	Crab	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Alpha Crab	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Centipede	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Centipede	nearby	wiki prose (where eggs land, Spider Leader eggs), A.C.I.D. on the tiles beside the target as the wiki prose says (sides), or the Refractor Laser's damage that changes with distance (amount range)
+into_the_breach	Alpha Centipede	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Alpha Centipede	nearby	wiki prose (where eggs land, Spider Leader eggs), A.C.I.D. on the tiles beside the target as the wiki prose says (sides), or the Refractor Laser's damage that changes with distance (amount range)
+into_the_breach	Digger	create	"create a rock wall / an explosive boulder" puts a unit on the board: summon Boulder / Unstable Boulder
+into_the_breach	Digger	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Alpha Digger	create	"create a rock wall / an explosive boulder" puts a unit on the board: summon Boulder / Unstable Boulder
+into_the_breach	Alpha Digger	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Alpha Hornet	land act	"move freely through mountains" is the keyword Flying in the rows
+into_the_breach	Psion Tyrant	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Spider	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Alpha Spider	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Spider Leader	adjacent	the adjacent tiles belong to another card (Blob, egg, boulder) or to the keyword Explosive Decay, whose record damages the bordering tiles
+into_the_breach	Spider Leader	nearby	wiki prose (where eggs land, Spider Leader eggs), A.C.I.D. on the tiles beside the target as the wiki prose says (sides), or the Refractor Laser's damage that changes with distance (amount range)
+into_the_breach	Spiderling Egg	adjacent	the adjacent tiles belong to another card (Blob, egg, boulder) or to the keyword Explosive Decay, whose record damages the bordering tiles
+into_the_breach	Starfish	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Plasmodia	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Tumblebug	create	"create a rock wall / an explosive boulder" puts a unit on the board: summon Boulder / Unstable Boulder
+into_the_breach	Tumblebug	kill or destroy	"destroy" is in wiki prose (Boom-Bots, Hive Leader, Minor's XP) or is the Tumblebug hitting its boulder, written as damage on it
+into_the_breach	Tumblebug	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Blobber Leader	adjacent	the adjacent tiles belong to another card (Blob, egg, boulder) or to the keyword Explosive Decay, whose record damages the bordering tiles
+into_the_breach	Arachnid Psion	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Arachnid Psion	nearby	wiki prose (where eggs land, Spider Leader eggs), A.C.I.D. on the tiles beside the target as the wiki prose says (sides), or the Refractor Laser's damage that changes with distance (amount range)
+into_the_breach	Raging Psion	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Smoldering Psion	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Alpha Plasmodia	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Alpha Starfish	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Alpha Tumblebug	create	"create a rock wall / an explosive boulder" puts a unit on the board: summon Boulder / Unstable Boulder
+into_the_breach	Alpha Tumblebug	kill or destroy	"destroy" is in wiki prose (Boom-Bots, Hive Leader, Minor's XP) or is the Tumblebug hitting its boulder, written as damage on it
+into_the_breach	Alpha Tumblebug	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Alpha Tumblebug	adjacent	the adjacent tiles belong to another card (Blob, egg, boulder) or to the keyword Explosive Decay, whose record damages the bordering tiles
+into_the_breach	Tumblebug Leader	create	"create a rock wall / an explosive boulder" puts a unit on the board: summon Boulder / Unstable Boulder
+into_the_breach	Tumblebug Leader	kill or destroy	"destroy" is in wiki prose (Boom-Bots, Hive Leader, Minor's XP) or is the Tumblebug hitting its boulder, written as damage on it
+into_the_breach	Tumblebug Leader	adjacent	the adjacent tiles belong to another card (Blob, egg, boulder) or to the keyword Explosive Decay, whose record damages the bordering tiles
+into_the_breach	Centipede Leader	nearby	wiki prose (where eggs land, Spider Leader eggs), A.C.I.D. on the tiles beside the target as the wiki prose says (sides), or the Refractor Laser's damage that changes with distance (amount range)
+into_the_breach	Boom Cannon	kill or destroy	"destroy" is in wiki prose (Boom-Bots, Hive Leader, Minor's XP) or is the Tumblebug hitting its boulder, written as damage on it
+into_the_breach	Boom Cannon	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Boom Cannon	adjacent	the adjacent tiles belong to another card (Blob, egg, boulder) or to the keyword Explosive Decay, whose record damages the bordering tiles
+into_the_breach	Boom Artillery	kill or destroy	"destroy" is in wiki prose (Boom-Bots, Hive Leader, Minor's XP) or is the Tumblebug hitting its boulder, written as damage on it
+into_the_breach	Boom Artillery	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Boom Artillery	adjacent	the adjacent tiles belong to another card (Blob, egg, boulder) or to the keyword Explosive Decay, whose record damages the bordering tiles
+into_the_breach	Boom Laser	kill or destroy	"destroy" is in wiki prose (Boom-Bots, Hive Leader, Minor's XP) or is the Tumblebug hitting its boulder, written as damage on it
+into_the_breach	Boom Laser	adjacent	the adjacent tiles belong to another card (Blob, egg, boulder) or to the keyword Explosive Decay, whose record damages the bordering tiles
+into_the_breach	Refractor Laser	nearby	wiki prose (where eggs land, Spider Leader eggs), A.C.I.D. on the tiles beside the target as the wiki prose says (sides), or the Refractor Laser's damage that changes with distance (amount range)
+into_the_breach	Ralph Karlsson	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
+into_the_breach	Silica	double	"act twice" is ready again after its attack, in the rows
+into_the_breach	Hive Leader	kill or destroy	"destroy" is in wiki prose (Boom-Bots, Hive Leader, Minor's XP) or is the Tumblebug hitting its boulder, written as damage on it
+into_the_breach	Minor	kill or destroy	"destroy" is in wiki prose (Boom-Bots, Hive Leader, Minor's XP) or is the Tumblebug hitting its boulder, written as damage on it
+>>>>>>> Stashed changes
