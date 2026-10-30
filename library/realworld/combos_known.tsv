@@ -1,0 +1,83 @@
+game	enabler	payoff	engine	why (Claude's summary of the known combo)	known_miss (link type the library lacks)
+mtg	Splinter Twin	Zealous Conscripts	copy + untap	copies of the creature untap the source card each time, repeating the copy	
+mtg	Kiki-Jiki, Mirror Breaker	Zealous Conscripts	copy + untap	same loop with the creature copier itself	
+mtg	Exquisite Blood	Sanguine Bond	life loss -> life gain loop	each pays off the other's trigger, unbounded	
+mtg	Blood Artist	Phyrexian Altar	sacrifice outlet -> death payoff	free sacrifice outlet feeds the on-death drain	
+mtg	Zulaport Cutthroat	Carrion Feeder	sacrifice outlet -> death payoff	free sacrifice feeds on-death drain	
+mtg	Pitiless Plunderer	Phyrexian Altar	sacrifice -> resource on death	each death refunds a resource used by the outlet	
+mtg	Dictate of Erebos	Carrion Feeder	sacrifice -> enemy sacrifice	your sacrifices force enemy sacrifices	
+mtg	Saheeli Rai	Felidar Guardian	copy + blink	the blink resets the loyalty ability that copies the blinker	
+mtg	Thassa's Oracle	Demonic Consultation	self-mill -> empty-library win	empty your deck, then the payoff wins	empty-library win: no link between self-exile of the deck and the deck-count payoff
+mtg	Heliod, Sun-Crowned	Walking Ballista	counters -> lifelink loop	lifegain adds a counter, the counter pings for life	
+mtg	Hardened Scales	Walking Ballista	+1 counters	more counters on every counter placement	
+mtg	Mikaeus, the Unhallowed	Triskelion	undying + counters	counter cancels the -1 and the unit keeps returning	
+mtg	Food Chain	Misthollow Griffin	exile -> recast loop	exile for mana, recast from exile	
+mtg	Yawgmoth, Thran Physician	Geralf's Messenger	sacrifice + undying	removes the -1 counter so the unit returns again	
+mtg	Reassembling Skeleton	Phyrexian Altar	recursion + sacrifice outlet	the returning unit is free fodder	
+mtg	Sneak Attack	Emrakul, the Aeons Torn	cheat into play	free placement of an expensive unit	
+mtg	Goblin Bombardment	Krenko, Mob Boss	token maker -> sacrifice outlet	tokens become direct damage	
+mtg	Reanimate	Griselbrand	graveyard -> reanimation	put the big unit in the graveyard, return it	
+mtg	Necromancy	Griselbrand	graveyard -> reanimation	same with another reanimator	
+mtg	Painter's Servant	Grindstone	color sharing -> mill loop	every card shares a colour, mill repeats	
+mtg	Earthcraft	Squirrel Nest	token -> untap loop	tokens untap the nest	
+mtg	Intruder Alarm	Krenko, Mob Boss	creature enters -> untap	each token untaps the maker	
+mtg	Cathars' Crusade	Krenko, Mob Boss	token flood -> counters	each entering token grows the team	
+mtg	Anointed Procession	Krenko, Mob Boss	token doubler	twice the tokens	
+mtg	Mirror Entity	Krenko, Mob Boss	go-wide -> mass stat set	many tokens become large	
+mtg	Aetherflux Reservoir	Bolas's Citadel	spell chain -> storm payoff	casting many spells from the top gains life, then kills	
+mtg	Prossh, Skyraider of Kher	Phyrexian Altar	token maker -> sacrifice outlet	tokens become resources and more tokens	
+hearthstone	Wild Pyromancer	Equality	set health -> spell ping	health set to 1, then the ping clears the board	
+hearthstone	Auchenai Soulpriest	Circle of Healing	heal -> damage	healing becomes area damage	
+hearthstone	Northshire Cleric	Circle of Healing	heal -> draw	mass heal draws per damaged minion	
+hearthstone	Knife Juggler	Imp Gang Boss	summon -> ping	each summoned imp throws a knife	
+hearthstone	Acolyte of Pain	Inner Rage	self-damage -> draw	self-damage draws a card	
+hearthstone	Cruel Taskmaster	Frothing Berserker	damage friendly -> growth	friendly damage grows the berserker	
+hearthstone	Leeroy Jenkins	Shadowstep	bounce -> replay	return the charger and replay it cheaper	
+hearthstone	Malygos	Sinister Strike	spell power -> burn	spell power boosts direct damage	
+hearthstone	Tundra Rhino	Savannah Highmane	haste aura -> beasts	beasts gain charge	
+hearthstone	Baron Rivendare	Sylvanas Windrunner	deathrattle doubling	deathrattle triggers twice	
+hearthstone	Kel'Thuzad	Abomination	resurrect -> deathrattle	the minion returns and triggers again	
+hearthstone	Questing Adventurer	Preparation	cards played -> growth	cheap spells grow the adventurer	
+hearthstone	Violet Teacher	Preparation	spell cast -> summon	spell casts make tokens	
+hearthstone	Gadgetzan Auctioneer	Preparation	spell cast -> draw	cheap spells draw cards	
+hearthstone	Grim Patron	Warsong Commander	survive damage -> summon	each surviving hit makes another patron	
+hearthstone	Doomsayer	Frost Nova	freeze -> board wipe	freeze protects the doomsayer until it wipes the board	freeze as protection: disable on the enemy is not linked to a delayed board wipe
+hearthstone	Lightwarden	Circle of Healing	heal -> growth	healing grows the minion	
+hearthstone	Wild Growth	Malygos	ramp -> big payoff	extra mana reaches the expensive payoff sooner	
+hs_battlegrounds	Titus Rivendare	Selfless Hero	deathrattle doubling	the shield deathrattle fires twice	
+hs_battlegrounds	Mama Bear	Pack Leader	summon -> buff	summoned units are buffed twice over	
+hs_battlegrounds	Soul Juggler	Imp Gang Boss	demon dies -> damage	imps die and throw souls	
+hs_battlegrounds	Khadgar	Imp Gang Boss	summon doubling	twice the imps	
+hs_battlegrounds	Deflect-o-Bot	Kaboom Bot	mech summon -> shield	the bomb kills, the bot regains its shield	
+runeterra	Hecarim	Shark Chariot	ephemeral summons -> revive	attacking with Ephemeral allies revives the Chariot each attack	
+runeterra	Thresh	Kalista	revive	revive the strongest dead champion	
+runeterra	Ezreal	Mystic Shot	targeting spells -> level	spells that target the enemy level the champion	
+runeterra	Elise	Frenzied Skitterer	spider tribal	spiders level and buff	
+runeterra	Jinx	Get Excited!	empty hand -> level	discarding empties the hand	
+gwent	Nekker	Nekker Warrior	thinning -> growth	nekkers grow as copies come from the deck	
+sts1	Corruption	Dead Branch	exhaust -> card creation	every skill exhausts and creates a card	
+sts1	Feel No Pain	Corruption	exhaust -> block	every exhaust gives block	
+sts1	Barricade	Entrench	block retained -> doubling	retained block doubles	
+sts1	Body Slam	Entrench	block -> damage	block becomes damage	
+sts1	Limit Break	Inflame	strength -> doubling	strength doubles	
+sts1	Catalyst	Noxious Fumes	poison -> multiply	poison doubles	
+sts1	Accuracy	Blade Dance	shiv generation -> shiv payoff	shivs deal more damage	
+sts1	Rupture	Offering	self HP loss -> strength	losing HP grants strength	
+sts1	Dark Embrace	Second Wind	exhaust -> draw	every exhaust draws	
+sts1	After Image	Blade Dance	cards played -> block	every card played gives block	
+sts1	Electrodynamics	Ball Lightning	lightning orbs -> all enemies	lightning hits every enemy	
+sts1	Defragment	Dualcast	focus -> orb evoke	more focus, stronger evokes	
+sts1	Mental Fortress	Rushdown	stance change -> block/draw	each stance change pays off	
+sts1	Juggernaut	Barricade	block gain -> damage	every block gain deals damage	
+sts1	Fire Breathing	Evolve	status cards drawn -> payoff	drawing status cards deals damage and draws	
+marvel_snap	Wong	Odin	reveal doubling	on-reveal effects repeat	
+marvel_snap	Carnage	Nova	destroy own -> growth + buff	destroying Nova buffs the team and grows Carnage	
+marvel_snap	Moon Girl	Devil Dinosaur	duplicate hand -> hand size payoff	more cards in hand, more power	
+marvel_snap	Bast	Mister Negative	set power -> swap	power 3 becomes cost 3	
+marvel_snap	Death	Killmonger	destroy -> cost reduction	destroyed cards make the payoff cheaper	
+marvel_snap	Bucky Barnes	Carnage	destroy -> summon	destroying Bucky leaves the Winter Soldier	
+marvel_snap	Patriot	Ultron	no-ability buff	Ultron's drones have no ability and Patriot buffs them	
+marvel_snap	Ka-Zar	Squirrel Girl	1-cost buff	squirrels are 1-cost cards	
+marvel_snap	Apocalypse	Swarm	discard -> return	discarded cards come back stronger	
+marvel_snap	Hela	Apocalypse	discard -> resurrect	discarded cards return to play	
+runeterra	Thresh (level 2)	Kalista (level 2)	summon attacking -> attack payoff	Thresh summons another champion from deck or hand already attacking; Kalista's revive fires the first time she attacks each round	

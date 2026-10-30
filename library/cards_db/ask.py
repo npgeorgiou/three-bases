@@ -18,6 +18,8 @@ question runs across games.
   ask.py <game> analyze "<card>, <card>, ..."      a deck: its mechanics, how its cards feed each other, what it lacks
   ask.py <game> network "<card>, ..." | faction <name> | game [--json f]  cards as a network: central cards, chains, groups, loose cards
   ask.py <games> card <card>                      the card's text and stored rows (rows.py)
+  ask.py <games> kit <concept> [<concept> ...]    a faction built on these: per game the two factions that combine them
+                                                  most, their key cards with texts, and what the first concept works with
   ask.py <games> list happenings|concepts         the values these questions take
   --texts: every card found with its short text (a game with 10 or fewer cards always shows them)
 Cards that make a card with it count too, named "Zed (via Living Shadow)". The game's enemies, bosses and run events are
@@ -148,6 +150,30 @@ def main():
     elif q == 'compare':
         for x in args:
             print(f'## {x}'); names(games, 'select card from flat_concept where under(concept, ?)', (x,), limit=8)
+    elif q == 'kit':  # a faction built on these concepts: per game the factions that combine them most, their key cards, partners
+        if not all(known(x) for x in args): return
+        got = {x: set(ids_of(games, 'select card from flat_concept where under(concept, ?)', (x,))) for x in args}
+        for g in games:
+            per = {}
+            for i, regs in c.execute("select id, regions from card where game=? and is_keyword=0 and is_stub=0 and coalesce(category,'') not in "
+                                     "('game_rule','ability','boss','monster','event','modifier')", (g,)):
+                k = sum(i in got[x] for x in args)
+                for r in [x for x in (regs or '').split(';') if x and not x.lower().startswith(('neutral', 'boss', 'any'))]:
+                    per.setdefault(r, [[0] * len(args), 0, []])
+                    per[r][1] += 1
+                    for j, x in enumerate(args): per[r][0][j] += i in got[x]
+                    if k: per[r][2].append((k, i))
+            score = {r: sum(min(1.0, n / max(1, t) * 5) for n in ns) for r, (ns, t, _) in per.items()}  # each concept counts up to a fifth of the faction
+            top = [r for r in sorted(score, key=lambda r: -score[r]) if score[r]][:2]
+            if not top: continue
+            print(f'## {g}')
+            for r in top:
+                ns, t, cs = per[r]
+                print(f'{r} ({t} cards): ' + ', '.join(f'{x} {n}' for x, n in zip(args, ns)))
+                for k, i in sorted(cs, key=lambda x: (-x[0], mechanics.name(c, x[1])))[:4]:
+                    print(f'  {mechanics.name(c, i)}: {short_text(i)}')
+            pairs = [(x, per_) for x, per_ in mechanics.feeds(c, [g], args[0], top=3)]
+            if pairs: print('  works with: ' + '; '.join(f'{x} (e.g. {list(p.values())[0][1]})' for x, p in pairs))
     elif q == 'factions':
         got = set(ids_of(games, 'select card from flat_concept where under(concept, ?)', (args[0],)))
         for g in games:

@@ -12,15 +12,16 @@ library/README.md (what the library is for and how design questions are asked). 
 3. Report per family: the cause, data or script, the fix, and the counts per game.
 
 ## Open, in Kaptain's order
-1. Kaptain's answer on landmarks: Runeterra's Landmark keyword maps to `terrain` with map spaces; a new concept
-   "Buildings that stay on the board" was proposed. Do not change concepts before he says yes.
-2. Item 7, approved, not started (Kaptain wants it explained first, then built): every card-to-card line of every deck stored
-   as a table in cards.sqlite (from, to, kind, reason), built with the database; one design question giving per game the
-   cards with their texts, best partners and factions.
-3. Item 8, not started: a full deck check of every game, card by card, reading what each card makes (`deck_audit.py`), not a
-   sample; fix every family by cause.
-4. Proposals for design questions, not started (library/README.md "Known gaps"): search concepts by plain words; a
-   "faction kit" question (for a set of concepts: per game the factions that combine them, their key cards with texts).
+1. Landmarks: Kaptain says Runeterra landmarks take space (6 slots shared by units and landmarks). Proposed: map the
+   Landmark keyword to `board_limit` ("Board size limit") instead of `terrain`. Wait for his yes before changing it.
+2. Read every answer in library/design_questions/ like a designer and trace each wrong or thin one (seen: Taunt and Provoke
+   count as stopping enemies; Inscryption's Waterborne counts as stopping enemies; Duelyst and Faeria disruption near 0).
+3. Trace every miss of `realworld.py` (84 of 275 cases miss; Inscryption combos with sigils find no line; Ironclad has no
+   permanent_growth) and every lead of `audit_links.py` 10 (Runeterra: 379 cards tagged on_kill before have no row for it).
+4. Item 7, approved, not started: every card-to-card line of every deck as a table in cards.sqlite (from, to, kind, reason),
+   built with the database, so any question can use the lines; one design question giving per game the cards with texts,
+   best partners and factions (`kit` covers part of it).
+5. Item 8, not started: a full deck check of every game, card by card (`deck_audit.py`), not a sample.
 
 ## Not this chat's work unless asked
 - Stormbound csb09-csb13 (poisoned-unit combos) fail; Runeterra n56 and Slay the Spire nst36 must be rewritten.

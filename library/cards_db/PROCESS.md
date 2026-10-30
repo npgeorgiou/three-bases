@@ -7,6 +7,28 @@ The database is one place for all games: questions run across games (`ask.py all
 generic. A game's own words live only in the card texts, its keyword entries and its types; what cards DO is said with
 vocab.tsv values and concepts that any game can share.
 
+## Think in families, every time (Kaptain, 30 Oct 2026: the lesson every import repeated)
+Kaptain checks one deck and finds errors in every round, because each fix covered only the cards he named. Before you say
+"done" or "no other card has this", do all of these:
+1. **Name the cause, not the card.** One sentence: what thinking or what reading made it wrong ("Start a free attack with 2
+   Dragonlings" read as using Dragonlings in play). Then ask: where else does the same thinking live? The same meaning in
+   other words ("Nagakabouros starts a free attack with 4 Tentacles", "an exact copy of each Cat attacks"), other games,
+   other scripts (lines, deck plans, combos, questions).
+2. **Search by meaning, not by wording.** A regex over one sentence finds one card. Search the rows for the shape of the
+   error (`audit_links.py` 9: a card acting on N cards it names but never makes) and read every hit against its text.
+3. **Data or script?** Read the card's text and its rows (`ask.py <game> card <name>`). Rows that disagree with the text:
+   the data is wrong, fix it by a text rule (fixes/<game>/vNN.py). Rows right but the line wrong: a script rule is wrong,
+   fix it for every game. Say which one it was.
+4. **Check who, what and what it makes.** Who must do it (Zed's own strikes, Ephemeral attackers), what the effect lands on
+   ("it" after "revive me" is the card itself), what a card makes (Zed's Living Shadow, The Iron Conquest's skill), and
+   abilities a card gives itself (Shark Chariot's Last Breath).
+5. **Dump every line before and after** (`dump_lines.py`) and read every gone and new reason: a fix that removes good lines
+   is a new error (a too wide rule broke Surgeforger's "give them both").
+6. **Use every check you have**: `audit_links.py` (10: what the earlier library's tags say a card does that its rows lack:
+   leads to read, not truth), `realworld.py` (what players and guides say about each game), `design_questions.py` (the
+   answers to the questions Kaptain will ask, read like a designer). A thin or odd answer is an error to trace.
+7. **Report** each family: the cause, data or script, the fix, how many cards in which games, and what was not checked.
+
 **Two files.** This file: how to work, the steps, how to fix a review, how to check networks. PROCESS_LESSONS.md: what each
 import and each review by Kaptain taught (one section per game or review; every rule in it holds for every game). Read both
 before importing a game.

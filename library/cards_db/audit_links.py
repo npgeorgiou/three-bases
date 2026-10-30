@@ -14,6 +14,12 @@ or fix every line it prints). Found by Kaptain's check of the deck networks (29 
   8 the game's rules (read/<game>/game_rules.jsonl) missing, or citing the game file's "The game" section written from memory
     (Duelyst's said units on a mana spring gain mana and minions are summoned next to a friendly unit; the game's own
     tutorial and tips say the player gains it and summoning is around any friendly unit)
+  9 a card that acts on a number of cards it names but never makes ("start a free attack with 2 Dragonlings" was read as
+    picking Dragonlings already in play: they are summoned for it). Each line is read against the text: a draw or a pick
+    of a named card is right; a card made for the effect is a misreading, fixed by a text rule
+  10 concepts the earlier library tagged on a card (three-bases-library.sqlite, entity_concepts, from text patterns) that
+    its rows lack, with nothing under them either: per concept, how many cards and one example. Old tags are leads, not
+    truth: read the card's text; a missing row is fixed by a text rule, a wrong old tag is left
 Usage: audit_links.py <game> [...]"""
 import collections, csv, json, os, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
@@ -68,6 +74,35 @@ def audit(g):
     for n, cnt in c.execute("select name, count(*) from card where game=? and is_stub=0 group by lower(name), is_keyword, "
                             "category='tribe' having count(*) > 1", (g,)):
         out.append(f'7 {cnt} cards are called {n}')
+    import source
+    lib = source.lib(); mk = collections.defaultdict(set)
+    for a, r in c.execute("select card, card_ref from flat_do where act in ('summon','create','copy','revive','transform','play_card','keyword_action') and card_ref is not null"):
+        mk[a].add(r)
+    seen = set()
+    for a, act, w in c.execute("""select f.card, f.act, f.on_with from flat_do f join card k on k.id=f.card where k.game=? and f.origin='own'
+            and f.on_with like '%card is %' and f.act not in ('summon','create','copy','revive','transform','play_card','draw')""", (g,)).fetchall():
+        t = ' '.join(((lib.execute('select text from entities where id=?', (a,)).fetchone() or [''])[0] or '').split())
+        for x in map(int, re.findall(r'card is (\d+)', w)):
+            n = nm(x).split(' (')[0]
+            if x in mk[a] or (a, x) in seen or not re.search(r"(\b\d+|\ban?|\btwo|\bthree|\bfour|\bfive)\s+" + re.escape(n[:-1]), t): continue
+            seen.add((a, x)); out.append(f'9 {nm(a)} {act}s {n} but never makes it: "{t[:90]}"')
+    kids = collections.defaultdict(set)  # the concept tree: a concept and everything under it
+    for line in open(os.path.join(HERE, '..', 'concept_tree.txt'), encoding='utf-8'):
+        if '|' in line and not line.startswith('#'):
+            f_ = [x.strip() for x in line.split('|')]
+            kids[f_[0]]; [kids[p_].add(f_[0]) for p_ in filter(None, (x.strip() for x in f_[3].split(',')))]
+    def under(x, s_=None):
+        s_ = s_ if s_ is not None else {x}
+        for k in kids.get(x, ()):
+            if k not in s_: s_.add(k); under(k, s_)
+        return s_
+    new_c = collections.defaultdict(set)
+    for i, con in c.execute("select f.card, f.concept from flat_concept f join card k on k.id=f.card where k.game=?", (g,)): new_c[i].add(con)
+    ids = {i for (i,) in c.execute("select id from card where game=? and is_keyword=0 and is_stub=0", (g,))}
+    lost, ex = collections.Counter(), {}
+    for e, con in lib.execute("select entity, concept from entity_concepts where role='does'"):
+        if e in ids and con in kids and not (new_c[e] & under(con)): lost[con] += 1; ex.setdefault(con, e)
+    for con, n in lost.most_common(10): out.append(f'10 {n} cards tagged {con} before have no row for it, e.g. {nm(ex[con])}')
     rules = os.path.join(HERE, 'read', g, 'game_rules.jsonl')
     md = os.path.join(HERE, '..', 'games', g + '.md')
     if not os.path.exists(rules): out.append(f'8 no game rules: write read/{g}/game_rules.jsonl (PROCESS step 0.10)')

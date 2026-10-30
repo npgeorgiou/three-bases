@@ -7,7 +7,9 @@ the cards' own texts, written as rows (what each card does, when, to whom), the 
 | Path | What it is |
 |---|---|
 | `cards_db/` | The card database: every card of 8 games as rows, the networks of their decks, and the questions (`ask.py`). Start with `cards_db/HANDOFF.md`. |
-| `three-bases-library.sqlite` | The card texts of 21 games (table `entities`), from an earlier library. The card database reads its texts from here. |
+| `three-bases-library.sqlite` | The earlier library: card texts of 21 games (`entities`, the card database reads them) and their tags from text patterns (`entity_concepts`, `entity_links`, `trigger_effect`). The tags are leads for an import (`audit_links.py` 10), not answers. |
+| `realworld/` | How the real-world cases are made (RESEARCH.md), the archetypes, and known combos from other sources. The cases themselves are in `games/<game>.md`; `cards_db/realworld.py` checks them. |
+| `design_questions/` | Kaptain's design questions asked of every game, with their answers (`cards_db/design_questions.py`). |
 | `games/<game>.md` | Each game's rules, terms, keywords and mechanics with the wording to look for, and the pages they come from. Read before importing a game. |
 | `game_patterns/<game>.txt` | Each game's wording rules (regexes) for its mechanics. A help when reading a new game's cards. |
 | `sources/` | Each game's raw card data and the script that converted it (`conv_<game>.py`, first lines name the source). |
@@ -30,6 +32,7 @@ game has 10 or fewer (`--texts` for all). Each game counts the same in rankings,
 | How can a faction control spots on the map? | `compare zone_control`, `compare terrain` |
 | How can a faction be spell-centric? | `compare spells_played_condition`, `compare spell_power` |
 | Which factions are built around a mechanic? | `factions <concept>` (share of each faction's cards) |
+| What would a faction built on these mechanics look like? | `kit <concept> <concept> ...` (per game the factions that combine them most, key cards with texts, what they work with) |
 | What works well with a mechanic? | `feeds <concept>`, `fed <concept>`, `together <concept>` |
 | Which combos chain into other combos? | `chains <concept>` (A sets off B sets off C, and in which games) |
 | Ideas for a card that does X and Y | `both <X> <Y>` (cards that do both, with texts) |
@@ -40,4 +43,5 @@ game has 10 or fewer (`--texts` for all). Each game counts the same in rankings,
 ## Known gaps
 - Landmarks (Runeterra buildings) still sit under `terrain`, with map spaces; they need a concept of their own (Kaptain's call).
 - Faction answers work only where the game has factions (Into the Breach squads, Slay the Spire characters count as factions).
-- A question names concepts by their ids (`list concepts`); there is no search by plain words yet.
+- Some keyword concepts are wrong in the answers: Taunt and Provoke count as stopping enemies, Inscryption's Waterborne too.
+- Real-world cases: 191 of 275 hold (`realworld.py`); every miss is to be traced to data, question or case.
