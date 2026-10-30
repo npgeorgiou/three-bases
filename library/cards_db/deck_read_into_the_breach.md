@@ -142,7 +142,7 @@ Into the Breach 107 -> 99 lines; Stormbound 696 -> 683; Slay the Spire 451 -> 41
 +1 (Lilithe -> Spectral Blade); other differences are only the order of reasons. Cases pass in every game (Stormbound 141
 of 145, the known csb09-csb13). ntb6 (Aegis Mech -> Gravity Mech: Spartan Shield turns an enemy attack onto enemies, Vek Hormones) keeps the F11 exception tested.
 
-## Check of 20 cards (30 Oct 2026, Claude; CHECK_20_into_the_breach.md, ids in CHECK_20_into_the_breach_ids.txt)
+## Check of 20 cards (30 Oct 2026, Claude)
 Each card's rows read against its text: Centipede Leader, Quick-Fire Mech, Hook Mech, Emerging, Alpha Hornet, Spring-Loaded
 Legs, Alpha Bouncer, Raining Death, Alpha Beetle, Techno-Scarab, Tentacles, Meteor Mech, Alpha Scarab, Mine-Mech, Cannon Mech,
 Alpha Mosquito, Repulse, Burrower, Ramming Speed, Lily Reed. 15 right; 4 errors (F13-F16), fixed by fixes/into_the_breach/v51.py.

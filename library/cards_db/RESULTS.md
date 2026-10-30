@@ -17,7 +17,7 @@
 ## Quality
 - 248 of 248 case tests pass (cases/REPORT.md): 81 mechanics found from the texts at 95%+, 40 combos, 127 region cases.
 - Word check: 0 open flags; 9 flags decided one by one (patterns/verdicts.tsv).
-- 10% read twice independently: the kept readings were wrong on 9%, all re-read. Kaptain approved CHECK_20 (28 Oct).
+- 10% read twice independently: the kept readings were wrong on 9%, all re-read.
 - 73 cards marked unsure: mechanics the values cannot say yet, each on one card or on cards with the same text
   (Voidling, Patched Porobot); the record holds the closest description.
 - Not measured: mistakes both readers made the same way.
@@ -30,7 +30,7 @@
 - About 53 reader runs of 95,000-125,000 tokens each, plus 2 judge runs: roughly 5.5 million tokens. A reader costs nearly
   the same for 40 or 190 cards, so batches are ~20,000 characters.
 
-# Monster Train: results (29 Oct 2026, waiting for Kaptain's check of CHECK_20_monster_train.md)
+# Monster Train: results (29 Oct 2026)
 
 ## What exists
 - 284 cards (282 from the wiki's Module:Cards/Data in library/sources/monster_train_cards.psv, the two wax tokens
@@ -76,7 +76,7 @@
 - Positions: lanes (same_lane, the opposing space), sides (adjacent), circuits (two conduit cards); strikes into empty
   spaces hit the opponent; who benefits from a place is said on the line ("gives it +1|+0 (when next to it)").
 
-# Faeria: results (29 Oct 2026, waiting for Kaptain's check of CHECK_20_faeria.md and CONCEPTS_faeria.md)
+# Faeria: results (29 Oct 2026)
 
 ## What exists
 - 462 cards from Abrakam's own card export (github.com/abrakam/Faeria_Cards; the library had 443, 13 of them with export
@@ -101,7 +101,7 @@
 - Not in the database: each turn a player builds lands, draws or takes faeria (the power wheel). Cards that count my lakes
   or forests are fed only by cards that make lands, not by the player's own land building.
 
-# Duelyst: results (29 Oct 2026, waiting for Kaptain's check of CHECK_20_duelyst.md and CONCEPTS_duelyst.md)
+# Duelyst: results (29 Oct 2026)
 
 ## What exists
 - 1,117 cards and 46 keywords from the open-sourced game's own card factories (open-duelyst; supplement_duelyst.py). Cards
@@ -142,7 +142,7 @@ Kaptain's word), and 3 players' runs as played; a deck is each mech followed by 
   explained by ask.py analyze with no false weak spot (Rusting Hulks: Smoke for Storm Generator, case dtb01).
 - Keywords: CONCEPTS_into_the_breach.md (every keyword and its concept, checked twice). `ask.py all compare forced_movement
   shield damage_over_time` shows its cards next to the other games' (it has the most forced movement of all games).
-- Check of 20 cards: CHECK_20_into_the_breach.md (ids in CHECK_20_into_the_breach_ids.txt), checked by Claude at Kaptain's
+- Check of 20 cards: deck_read_into_the_breach.md, checked by Claude at Kaptain's
   word (30 Oct 2026: "its YOUR task"); errors and fixes in deck_read_into_the_breach.md "Check of 20 cards".
 
 # Slay the Spire: results (30 Oct 2026, v53, done; two checks by Kaptain fixed; deck_read_sts1.md F1-F20)

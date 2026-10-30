@@ -132,7 +132,7 @@ Root cause: starter decks (where a run begins: 3-5 cards) and lists of 2-3 diffe
 Same error elsewhere: Monster Train has guides' core cards only (RESULTS.md); the other games' decks are full lists with many links.
 Fix: decks with fewer than 3 lines or fewer than half their cards linked moved to decks_dropped_inscryption.tsv (network_page.py skips them, cases keep their card lists); 3 decks built as the wiki's Kaycee's Mod tips page says added; Larva renamed Strange Larva (its wiki page name), id kept.
 
-## Check of 20 cards (CHECK_20_inscryption.md, by Claude: Kaptain does not know the game)
+## Check of 20 cards (by Claude: Kaptain does not know the game)
 Each card's rows compared with its text and the wiki. Right: Spilled Blood, Sprinter, Blue and Green Mox, Gem Guardian,
 Brittle, Airborne, M!rror r0rriM, Bifurcated and Trifurcated Strike (now with the strike to the opponent), Fecundity,
 Sentry, Guardian, Hoggy Bank, Fish Hook, Hammer, Mighty Leap, Omni Strike, Uncuttable, Special Dagger, Magickal Bleach

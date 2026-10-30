@@ -1,4 +1,4 @@
-# Handoff: card database (30 Oct 2026, v57; NEXT_CHAT.md first: Kaptain's open order)
+# Handoff: card database (30 Oct 2026, v58; NEXT_CHAT.md first: Kaptain's open order)
 
 > **CHECKING AFTER A CHANGE: LOAD THE DATABASE ONCE. NEVER RUN `run.py <game>` ONCE PER GAME.**
 > Every `run.py` reloads ALL eight games (load.py loads every game, every time). Eight runs = eight reloads = over an hour
@@ -59,7 +59,7 @@ steps once, in order. The order that saves the most time:
 ## State
 - Done and approved: Runeterra, Into the Breach (RESULTS.md). Slay the Spire: done (v49-v53), deck_read_sts1.md F1-F20,
   every Kaptain point fixed by rule; Through Violence added from Kaptain's definition (supplement/sts1_kaptain.jsonl).
-- Waiting for Kaptain's check: Stormbound and Monster Train (CHECK_20_<game>.md), Faeria, Duelyst (CHECK_20, CONCEPTS);
+- Waiting for Kaptain's check of their deck networks: Stormbound, Monster Train, Faeria, Duelyst;
   Inscryption reviewed (deck_read_inscryption.md).
 - Cases, all passing except: Stormbound 141 of 145, csb09-csb13 (poisoned-unit combos), which fail also without the Slay the
   Spire rows: an older Stormbound issue, not yet traced. Runeterra n56 is a must-not case whose reason no deck says any more

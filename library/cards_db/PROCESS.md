@@ -112,7 +112,7 @@ every small edit, and turning a decision one way and later back. Work like this:
 
 ## Two chats on two games at the same time
 Each chat writes its own game's files (read/<game>/, input/<game>/, second/<game>/, fixes/<game>/, supplement/<game>*,
-supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
+supplement_<game>.py). The shared files need care:
 - Id block: the first thing each chat does is write its game's line in source.py (the next free block) and push it. If the
   push is refused, pull: the other chat took that block, so take the next one.
 - Shared files (vocab.tsv, BRIEF.md, patterns/patterns.tsv, normalize.py, flat.py, refs.py, connections.py,
@@ -270,19 +270,17 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
   state. Decks test the result.
 
 ### 4. Kaptain's check
-`check_table.py CHECK_20_<game>.md --random <game> 20` (save the ids in CHECK_20_<game>_ids.txt). Each card: one line with
-its name and text, then its rows. Every error he finds is fixed for all cards with the same problem.
-When Kaptain does not know the game (Inscryption), he cannot check rows: Claude checks the 20 cards against their texts
-and the sources of step 0.10 itself, writes every error into deck_read_<game>.md ("Check of 20 cards"), fixes each family
-once, and adds a case per family. Kaptain then checks the deck networks page (network_page.py) in plain words: does a line
-between two cards make sense to a player. Every point he finds is fixed as "Fixing a review" says.
+Claude checks 20 random cards against their texts and the sources of step 0.10 (`ask.py <game> card <name>` shows text and
+rows), writes every error family into deck_read_<game>.md ("Check of 20 cards"), fixes each family once, and adds a case
+per family. No check files are written for Kaptain. Kaptain checks the deck networks page (network_page.py) in plain words:
+does a line between two cards make sense to a player. Every point he finds is fixed as "Fixing a review" says.
 
 ### 5. Done when
 `run.py <game>` passes every step and every other game still passes; read/<game>/game_rules.jsonl written (step 0.10);
 audit_text.py and audit_links.py print nothing unexplained; the keyword -> concept list checked twice and shown
 to Kaptain; word check 0 open flags; no proposal need shared by cards with different texts; stubs only names nothing
 defines; `ask.py all compare <its main concepts>` shows its cards next to the other games'; every guide deck explained;
-Kaptain approved CHECK_20_<game> (or, for a game he does not know, Claude's check in deck_read_<game>.md); at least 20 decks found with a spread over factions and mechanics, at least 10 full decks' networks read card by card and the deck check done (step 2.9)
+Claude's check of 20 cards in deck_read_<game>.md; at least 20 decks found with a spread over factions and mechanics, at least 10 full decks' networks read card by card and the deck check done (step 2.9)
 and its gaps fixed; RESULTS.md and HANDOFF.md say the state; everything pushed. After his approval, add a few
 approved records to BRIEF.md under "Game words: <game>" as worked examples.
 

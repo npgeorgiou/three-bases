@@ -38,7 +38,7 @@ equal mechanics of different games share one concept of the concept tree (Stun a
 | `pattern_check.py`, `patterns/` | Word check: `patterns.tsv` (wording rules, each judged once), `verdicts.tsv` (flags decided once), `<game>_flags.tsv` (open flags) |
 | `reread.py` | Re-read chosen cards under the current brief; merge replaces the old readings (kept in `replaced/`, re-read output in `fixes/`) |
 | `cases/` | Case tests (mechanics, decks and combos from players' guides, regions), `run.py`, REPORT.md, DROPPED.md |
-| `rows.py`, `check_table.py`, `CHECK_20_<game>.md`, `CHECK_20_<game>_ids.txt` | A card's rows with names; Kaptain's check file (one line per card, then its rows) and its card ids |
+| `rows.py` | A card's text and rows with names (`ask.py <game> card <name>`) |
 | `status.py`, `STATUS.md`, `compare.py`, `examples.py`, `QUERIES.md` | Progress from the files; first vs second reading; example questions with answers |
 | `exclude.tsv`, `excluded/` | Entries left out on purpose and their old records |
 | `input/`, `read/`, `second/` | Reader input; reader output (the source) with proposals; the independent second reading of a 10% sample |
