@@ -41,7 +41,7 @@ act	obliterate	remove from the game; no death effects	banish	obliterated;leaves_
 act	stat_change	change Power and/or Health by the params (signed)	stat_gain	stat_changed	27 Oct 2026, v1
 act	stat_set	set Power and/or Health to the params	stat_multiply	stat_changed	27 Oct 2026, v1
 act	give_keyword	give the target the linked keyword	buff	given_keyword	27 Oct 2026, v1
-act	remove_keyword	remove the linked keyword from the target	debuff		27 Oct 2026, v1
+act	remove_keyword	remove the linked keyword from the target	debuff	keyword_removed	27 Oct 2026, v1
 act	silence	remove all keywords, abilities and ongoing effects	silence		27 Oct 2026, v1
 act	draw	draw cards (the target says which cards and from where)	draw	drawn	27 Oct 2026, v1
 act	discard	discard cards	discard	discarded	27 Oct 2026, v1
@@ -851,3 +851,20 @@ keyword	Mark	concept of having, using or giving this keyword (Slay the Spire: lo
 keyword	Plated Armor	concept of having, using or giving this keyword (Slay the Spire: gains Block each turn; less when damaged; concept is Claude's)	block_armor		30 Oct 2026, v49 (Slay the Spire)
 keyword	Stasis	concept of having, using or giving this keyword (Slay the Spire: an enemy holds a card taken from the player until it dies; concept is Claude's)	hand_disruption		30 Oct 2026, v49 (Slay the Spire)
 keyword	Surrounded	concept of having, using or giving this keyword (Slay the Spire: takes 50% more damage when attacked from behind; concept is Claude's)	flanking		30 Oct 2026, v49 (Slay the Spire)
+region	Ironclad	a Slay the Spire character's cards (card colour red)			30 Oct 2026, v49 (Slay the Spire)
+region	Silent	a Slay the Spire character's cards (card colour green)			30 Oct 2026, v49 (Slay the Spire)
+region	Defect	a Slay the Spire character's cards (card colour blue)			30 Oct 2026, v49 (Slay the Spire)
+region	Watcher	a Slay the Spire character's cards (card colour purple)			30 Oct 2026, v49 (Slay the Spire)
+region	Colorless	cards of no character (Slay the Spire colorless cards)			30 Oct 2026, v49 (Slay the Spire)
+kind	slot	a slot that holds what the player channels or keeps (Slay the Spire Orb slots, potion slots)	slots_queue		30 Oct 2026, v49 (Slay the Spire)
+op	every	each time the count reaches a multiple of n ("every 3 turns", "every time you play 10 Attacks")	condition_count		30 Oct 2026, v49 (Slay the Spire)
+test	last_card	the card played just before this one matches the filters of "of" ("if the last card played was an Attack")	combo_sequence		30 Oct 2026, v49 (Slay the Spire)
+state	intends_attack	an enemy whose shown intent is to attack ("if the enemy intends to attack")	telegraphed_threats		30 Oct 2026, v49 (Slay the Spire)
+state	elite	an elite enemy: a stronger enemy of a fight off the main path ("Elite combats")			30 Oct 2026, v49 (Slay the Spire)
+state	unblocked	damage that Block did not stop ("unblocked attack damage")			30 Oct 2026, v49 (Slay the Spire)
+event	keyword_removed	a keyword or status is removed from its holder ("Block is not removed")			30 Oct 2026, v49 (Slay the Spire)
+event	removed_from_deck	a card is removed from the deck between fights (shop, events)	deck_modification		30 Oct 2026, v49 (Slay the Spire)
+act	run_rule	changes how the run works outside fights: map, rest sites, shops, rewards, chests, Ascension difficulty	run_structure		30 Oct 2026, v49 (Slay the Spire)
+event	run_event	something happens on the run between fights: resting, entering a room, a shop or a rest site, opening a chest, climbing a floor	run_structure		30 Oct 2026, v49 (Slay the Spire)
+category	item	an item the player carries and uses up (Slay the Spire potions, Inscryption items)	items_consumables		30 Oct 2026, v49 (Slay the Spire)
+x	all_of	all of what the target has ("lose all your Gold", "give all Gold")			30 Oct 2026, v49 (Slay the Spire)

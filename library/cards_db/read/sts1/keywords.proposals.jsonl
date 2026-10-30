@@ -1,12 +1,6 @@
 {"id": 7000003, "field": "event", "need": "unstated_trigger"}
 {"id": 7000004, "field": "event", "need": "stance_exited"}
-{"id": 7000005, "field": "kind", "need": "orb_slot"}
 {"id": 7000006, "field": "param", "need": "random_value"}
-{"id": 7000013, "field": "kind", "need": "orb_slot"}
 {"id": 7000015, "field": "state", "need": "minion"}
-{"id": 7000018, "field": "act", "need": "trigger_orb_passive"}
-{"id": 7000021, "field": "act", "need": "trigger_orb_passive"}
-{"id": 7000024, "field": "act", "need": "trigger_orb_passive"}
 {"id": 7000038, "field": "act", "need": "upgrade"}
-{"id": 7000715, "field": "state", "need": "unblocked"}
 {"id": 7000736, "field": "position", "need": "attacked_from_behind"}

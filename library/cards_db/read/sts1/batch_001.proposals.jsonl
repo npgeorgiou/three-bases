@@ -1,31 +1,4 @@
-{"id":7000050,"field":"params","need":"per_n"}
-{"id":7000058,"field":"params","need":"removed_from_deck"}
-{"id":7000067,"field":"params","need":"keyword_removed"}
-{"id":7000082,"field":"params","need":"keyword_removed"}
-{"id":7000096,"field":"on","need":"orb_slot"}
-{"id":7000119,"field":"on","need":"orb_slot"}
-{"id":7000127,"field":"test","need":"last_card_played"}
-{"id":7000128,"field":"params","need":"removed_from_deck"}
-{"id":7000173,"field":"when","need":"unblocked_damage"}
-{"id":7000183,"field":"if","need":"intends_attack"}
-{"id":7000198,"field":"test","need":"last_card_played"}
-{"id":7000212,"field":"if","need":"intends_attack"}
-{"id":7000219,"field":"params","need":"multiplier"}
-{"id":7000236,"field":"on","need":"colorless"}
-{"id":7000250,"field":"on","need":"colorless"}
-{"id":7000264,"field":"params","need":"removed_from_deck"}
-{"id":7000277,"field":"when","need":"removed_from_deck"}
-{"id":7000314,"field":"test","need":"last_card_played"}
-{"id":7000316,"field":"test","need":"last_card_played"}
-{"id":7000338,"field":"if","need":"intends_attack"}
-{"id":7000340,"field":"when","need":"unblocked_damage"}
-{"id":7000368,"field":"on","need":"colorless"}
-{"id":7000380,"field":"on","need":"potion"}
-{"id":7000404,"field":"when","need":"enters_rest_site"}
-{"id":7000411,"field":"when","need":"elite_enemy"}
-{"id":7000412,"field":"when","need":"gold_gained"}
-{"id":7000415,"field":"do","need":"raise_to"}
-{"id":7000422,"field":"do","need":"card_reward_options"}
-{"id":7000424,"field":"do","need":"keep_rest"}
-{"id":7000425,"field":"do","need":"relic"}
-{"id":7000427,"field":"on","need":"potion"}
+{"id": 7000050, "field": "params", "need": "per_n"}
+{"id": 7000219, "field": "params", "need": "multiplier"}
+{"id": 7000412, "field": "when", "need": "gold_gained"}
+{"id": 7000415, "field": "do", "need": "raise_to"}
