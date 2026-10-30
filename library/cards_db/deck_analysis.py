@@ -92,6 +92,19 @@ def text_of(card):
     return _TEXT.get(card, '')
 
 
+def who_said(c, text, aw):
+    """the sentence with who must do it: "your units hit ..." with "card in Zed; card in Living Shadow" says "Zed or Living Shadow
+    hit ..."; "state is ephemeral" says "your Ephemeral units ..." """
+    parts = [p for p in (aw or '').split(';') if len(p.split(' ')) > 2 and p.split(' ')[1] in ('is', 'in')]
+    named = [mechanics.name(c, int(p.split(' ')[2])) if p.startswith('card ') else str((c.execute('select word from name_part where id=?',
+             (int(p.split(' ')[2]),)).fetchone() or [p.split(' ')[2]])[0]) + 's' for p in parts if p.split(' ')[0] in ('card', 'name_has') and p.split(' ')[2].isdigit()]
+    kinds = [str((c.execute("select meaning from vocab where field='state' and value=?", (p[9:],)).fetchone() or [p[9:]])[0]) for p in parts if p.startswith('state is ')] + \
+            [mechanics.name(c, int(p.split(' ')[2])) for p in parts if p.startswith('keyword is ') and p.split(' ')[2].isdigit()]
+    if named and 'your units ' in text: return text.replace('your units ', ' or '.join(named) + ' ', 1)
+    if kinds and 'units ' in text and not any(k + ' units' in text for k in kinds): return text.replace('units ', ' '.join(kinds) + ' units ', 1)
+    return text
+
+
 def analyze(c, game, text):
     ids, unknown = parse_deck(c, game, text)
     deck = list(dict.fromkeys(ids)); D = set(deck); out = []
@@ -111,15 +124,15 @@ def analyze(c, game, text):
 
     # what each card makes and what it uses (its own rules only; a keyword's inner rules are not the card's needs)
     # a cost the game's rules set (Bones, Mox) is the card's own need too: rows of origin game with role condition
-    rows = c.execute(f"select card, ability, role, happening, side, keyword, pick, origin, kind, obj_with from flat_ref where (origin!='game' or role='condition') and card in ({marks})", deck).fetchall()
+    rows = c.execute(f"select card, ability, role, happening, side, keyword, pick, origin, kind, obj_with, actor_kind, actor_with from flat_ref where (origin!='game' or role='condition') and card in ({marks})", deck).fetchall()
     lvl = {a for (a,) in c.execute(f"select ability from flat_do where act='level_up' and card in ({marks})", deck)}
     makes = collections.defaultdict(set); uses = []
-    for card, ab, role, h, side, kw, pick, origin, kind, mw in rows:
+    for card, ab, role, h, side, kw, pick, origin, kind, mw, ak, aw in rows:
         if h in ('mana_refilled', 'resource_gained') and kind in RESOURCE_KINDS: h = 'mana_refilled@' + kind  # which resource
         elif h == 'resource_gained': continue
         if role == 'makes': makes[(h, kw)].add((card, side, kind, pick, mw))
         elif origin in ('own', 'game') and not (pick == 'self' and h in ('played', 'summoned')):
-            uses.append((card, ab, role, h, 'mine' if pick == 'self' else side, kw, pick, kind, mw))
+            uses.append((card, ab, role, h, 'mine' if pick == 'self' else side, kw, pick, kind, mw, ak, aw))
     # a card is everything it makes: what Zed's Living Shadow does, Zed brings to the deck
     mk = {b: a for a, b in c.execute(f"select card, made from flat_made where card in ({marks}) and made not in ({marks})", deck + deck)}
     if mk:
@@ -149,7 +162,14 @@ def analyze(c, game, text):
     actor_side = {(a, b): sd for a, b, sd in c.execute("select card, ability, actor_side from flat_when where actor_side is not null")}
     enemy_doers = {a for (a,) in c.execute("""select card from flat_do where act in ('strike','start_attack','redirect_attack')
                    and coalesce(on_side,'') in ('enemy','')""")}
-    for card, ab, role, h, side, kw, pick, kind, tw in uses:  # kinds must fit too: healing a god is no unit healed (as network.kinds_fit)
+    made_by = collections.defaultdict(set)
+    for a, b in c.execute(f"select card, made from flat_made where card in ({marks})", deck): made_by[a].add(b)
+    def acts_as(m, ak, aw):
+        """who must do it ("Zed or allied Living Shadows", "Ephemeral allies"): the maker, what it makes or what it acts on can be
+        that card (as network.can_aim_at): Dragon Ambush's Dragonlings are no Living Shadows"""
+        cs = network.cards_of(c, game); k = ak if ak in network.KIND_CAT else 'any'
+        return any(x in cs and network.can_aim_at(c, game, x, k, aw, network.SEND_ACTS) for x in {m} | made_by[m])
+    for card, ab, role, h, side, kw, pick, kind, tw, ak, aw in uses:  # kinds must fit too: healing a god is no unit healed (as network.kinds_fit)
         mk = {(m, ms) for (hh, k), ms_ in makes.items() if hh == h and (k is None or kw is None or k == kw) for m, ms, mkd, mp, mw in ms_
               if m != card and fit(ms, side) and kinds_fit(mkd, kind) and not (pick == 'self' and mp == 'self' and not names_it(m, tw)) and
               not (pick == 'self' and not can_be(card, mw))}  # "when THIS moves":
@@ -158,8 +178,9 @@ def analyze(c, game, text):
         # enemy damages another enemy" (Vek Hormones): only a card that makes enemies act does it, not my own damage (as network)
         if role == 'condition' and side in ('mine', '', None):  # a cost: the game's rules make it too (any unit can be sacrificed, a Skeleton's death gives a Bone)
             mk |= {(m, 'mine') for m in by_rule.get(h, set()) - {card}}
+        if aw and pick != 'self': mk = {(m, ms) for m, ms in mk if acts_as(m, ak, aw)}  # who must do it
         if not mk: continue
-        key = (h, kw)
+        key = (h, kw, aw) if aw and pick != 'self' else (h, kw)  # "your Ephemeral units attack" is its own line, not "your units attack"
         p = plan[key]; p[0] |= {m for m, _ in mk}
         sides[key].add(side if side in ('mine', 'enemy') else '')
         (p[2] if ab in lvl else p[1] if pick == 'self' and h == 'dies' else p[3]).add(card)
@@ -222,9 +243,9 @@ def analyze(c, game, text):
             out.append(f'- Holes and water that kill pushed Vek: made by {names(c, mk)}. Push Vek into them: {names(c, other)}.'); continue
         if key[0] == 'puts':
             out.append(f'- More {mechanics.name(c, key[1])} in play: made by {names(c, mk)}.'); continue
-        h, kw = key; ss = sides[key] - {''}; side = ss.pop() if len(ss) == 1 else ''
+        h, kw, *aw_ = key; ss = sides[key] - {''}; side = ss.pop() if len(ss) == 1 else ''
         if len(mk) + len(own) + len(lv) + len(other) < 3 and h in ('damaged', 'played', 'stat_changed'): continue
-        line = f'- {(lambda t: t[:1].upper() + t[1:])(say(c, h, side, kw))}: made by {names(c, mk)}.'
+        line = f'- {(lambda t: t[:1].upper() + t[1:])(who_said(c, say(c, h, side, kw), aw_[0] if aw_ else None))}: made by {names(c, mk)}.'
         if own: line += f' Get value when they die: {names(c, own)}.'
         if lv: line += f' Level up from it: {names(c, lv)}.'
         if other: line += f' Use it: {names(c, other)}.'
@@ -251,6 +272,7 @@ def analyze(c, game, text):
                 unit = f' {attr}' if attr else ' times'  # a total of a stat ("50+ damage"), else a number of times
                 times = '' if not n else ' once' if n == 1 and not attr else f" ({int(n)}+{unit})" if op == 'ge' else f" ({int(n)}{unit})"
                 if kinds and ' units ' in what: what = what.replace(' units ', f" {' '.join(kinds)} units ", 1)  # "7+ Ephemeral allies"
+                if not ref: what = who_said(c, what, ';'.join(p for p in (aw or '').split(';') if p.split(' ')[0] in ('card', 'name_has')))  # "Zed or Living Shadow"
                 ws.append(what + times)
             if ws: out.append(f'- {mechanics.name(c, card)} levels up when ' + ' or '.join(dict.fromkeys(ws)) + '.')
 
@@ -305,7 +327,7 @@ def analyze(c, game, text):
         for x in mk | own | lv | other: deg[x] += 1
     if deg: out.append('Key cards (in most of the plan): ' + ', '.join(f'{mechanics.name(c, x)}' for x, _ in deg.most_common(5)) + '.')
     lack = []
-    for card, ab, role_, h, side, kw, pick, kind, tw in uses:
+    for card, ab, role_, h, side, kw, pick, kind, tw, _ak, _aw in uses:
         if h in EVERY_GAME or side == 'enemy' or by_rule.get(h, set()) - {card}: continue
         if not any((m != card or pick == 'self') and hh == h and (k is None or kw is None or k == kw) and fit(ms, side) and kinds_fit(mkd, kind) and not (pick == 'self' and mp == 'self' and m != card and not names_it(m, tw)) for (hh, k), ms_ in makes.items() for m, ms, mkd, mp, mw in ms_):
             lack.append(f'{mechanics.name(c, card)} waits for "{say(c, h, side, kw)}" and nothing else in the deck does it')

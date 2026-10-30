@@ -239,3 +239,8 @@ nst36	sts1	Defect Claw (gamersdecide)	All for One	Claw	none	can bring it back	Ka
 nst37	sts1	Defect Lightning (highgroundgaming)	Zap	Thunder Strike	line	uses Lightning	Claude: Thunder Strike counts Lightning Channeled, not every Orb
 n240	duelyst	Brome Swarm	Warblade	Fealty	none		Claude deck check 30 Oct 2026: "each friendly minion nearby your General" is every minion; the place is no kind
 n241	faeria	Auroras Dreamer	Water Elemental	Radiance, Imperial Airship	none		Claude deck check 30 Oct 2026: Radiance wants your own Life low; moving toward the enemy god is no help
+n242	runeterra	Hecarim Zed	Dragon Ambush	Zed	none		Kaptain 30 Oct 2026: Zed levels from his own or his Living Shadows' Nexus strikes; Dragonlings are neither
+n243	runeterra	Hecarim Zed	Hecarim	Zed	none		Kaptain 30 Oct 2026: Hecarim's Overwhelm helps him, not Zed or his Living Shadows
+n244	runeterra	Hecarim Zed	Zed	Ghastly Band	none	another attack	Kaptain 30 Oct 2026: Hallowed buffs only the first attacker each round; more attacks add nothing
+n245	runeterra	Hecarim Zed	Mark of the Isles	Hecarim	line	makes your units Ephemeral	Kaptain 30 Oct 2026: it makes an ally Ephemeral, Hecarim counts Ephemeral attackers
+n246	runeterra	Elu Thresh	Thresh	Hecarim	none		Claude 30 Oct 2026: Thresh is no Ephemeral attacker

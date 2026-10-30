@@ -375,3 +375,4 @@ Each change: date, what changed, the card that caused it, and which records were
   made cards; network object_help_lines: a keyword state on arrival needs the printed keyword; deck_analysis level-up sentences
   keep the actor's side and kind; ask.py drops enemies by default and warns on unknown concepts; deck_audit prints made cards;
   HANDOFF box and PROCESS rule: a wrong judgment is wrong thinking, fixed everywhere it lives.
+- 30 Oct 2026, v56: no shape change; network.py, deck_analysis.py, connections.py check who must do a need (Zed, Hecarim, Pyke; PROCESS_LESSONS "Who must do it").

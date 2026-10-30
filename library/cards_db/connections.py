@@ -49,6 +49,15 @@ def narrow_ok(want, have, c=None, everyone=False):
         return False
     return True
 
+def may_be(c, card, onw):
+    """an effect aimed at cards it names ("start a free attack with 2 Dragonlings") can land on this card only if it is one of
+    them: Zed's "when I attack" is no Dragonling attacking"""
+    who = ';'.join(p for p in (onw or '').split(';') if p.split(' ')[:2] in (['card', 'is'], ['card', 'in'], ['type', 'is'], ['type', 'in'], ['name_has', 'is']))
+    if not who: return True
+    import network  # (lazy: network imports this module's users)
+    game = c.execute('select game from card where id=?', (card,)).fetchone()[0]; cs = network.cards_of(c, game)
+    return card not in cs or network.matches(c, game, cs[card], 'any', who)
+
 def made_by(c, card, depth=2):
     """cards a card creates, summons or generates (a few steps deep), including itself"""
     out, todo = {card}, [card]
@@ -93,12 +102,16 @@ def reasons(c, enabler, payoff):
                     kid = kref or (c.execute("select id from card where is_keyword=1 and lower(name)=?", (act,)).fetchone() or [None])[0]
                     if kid: onw = (onw or '') + f';keyword is {kid}'
                     for (ev,) in c.execute('select event from causes where act=?', (act,)).fetchall():
-                        for oside, opick, ow in c.execute('select obj_side, obj_pick, obj_with from flat_when where card=? and event=?', (p, ev)).fetchall():
+                        for oside, opick, ow, apick, aw in c.execute('select obj_side, obj_pick, obj_with, actor_pick, actor_with from flat_when where card=? and event=?', (p, ev)).fetchall():
                             if opick == 'self' and m != p and not (side in ('mine', 'any', None) and kind in ('unit', 'any', 'card', None)): continue  # a card: discarding it
+                            if (opick == 'self' or apick == 'self') and m != p and not may_be(c, p, onw): continue  # "when I attack": what it
+                            # sends must be able to be this card
+                            if aw and not narrow_ok(aw, onw, c, everyone): continue  # who must do it ("when an allied Pyke strikes")
                             if not narrow_ok(ow, onw, c, everyone): continue
                             if agree(side, oside): yield ((7 if opick == 'self' else 5 if m != e else 3), f'event: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else ''))
                         for oside, ow, opick in c.execute('select ev_obj_side, ev_obj_with, ev_obj_pick from flat_if where card=? and event=?', (p, ev)).fetchall():
                             if opick == 'self' and m != p and not (side in ('mine', 'any', None) and kind in ('unit', 'any', 'card', None)): continue  # "I've survived damage": only what hits my units
+                            if opick == 'self' and m != p and not may_be(c, p, onw): continue
                             if agree(side, oside) and narrow_ok(ow, onw, c, everyone): yield ((6 if m != e else 4), f'condition: {act} -> {ev}' + (f' (via {name(c, m)})' if m != e else ''))
             # a happening the enabler makes that the payoff counts or picks things by (flat_ref: condition, state)
             made = {(h, sd, k, pk) for x in makers for h, sd, k, pk in c.execute("select happening, side, keyword, pick from flat_ref where card=? and role='makes' and origin!='game'", (x,))}

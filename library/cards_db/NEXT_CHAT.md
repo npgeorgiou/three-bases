@@ -32,7 +32,7 @@ none"):
    other concepts. Check every concept that means "the enemy can't act" and map it by outcome.
 4. Runeterra drowns other games in pair counts (feeds, fed, together): rank by share within each game.
 5. Answers are names only: add the card text (short) where a design question needs it.
-6. Plan lines in deck_analysis ignore the kind a level-up asks for ("Any units attack ... level up from it: Hecarim", who needs
+6. DONE v56 (PROCESS_LESSONS "Who must do it"). Was: plan lines in deck_analysis ignore the kind a level-up asks for ("Any units attack ... level up from it: Hecarim", who needs
    Ephemeral attackers): same thinking as the arrival-buff error; check every match of a need against its filters.
 7. Kaptain's suggestions, approved: store every card-to-card line of each game as a table in cards.sqlite (from, to, kind,
    reason), built with the database; one design question giving per game the cards with texts, best partners and factions.

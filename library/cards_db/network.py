@@ -119,7 +119,7 @@ def matches(c, game, card, kind, withs):
             elif attr == 'region': hit.append(v in card['regions'] or v == 'own_regions')
             elif attr == 'rarity': hit.append(v == card['rarity'])
             elif attr == 'name_has':
-                ref = mechanics.name(c, int(v)) if v.isdigit() and c.execute('select 1 from card where id=?', (int(v),)).fetchone() else v
+                ref = name_word(c, v)
                 hit.append(str(ref).lower() in card['name'].lower())
             elif attr == 'cost' and amount_kind(c, v) == 'x_paid': hit.append(card['x_cost'])  # "your cost X cards" (Chemical X)
             elif attr == 'cost' and card['cost'] is None: hit.append(False)  # no number to compare: unplayable, X, a relic
@@ -131,6 +131,16 @@ def matches(c, game, card, kind, withs):
         ok = any(hit)
         if (op == 'not') == ok: return False
     return True
+
+
+def name_word(c, v):
+    """the text a "name has" filter looks for: a card's name, or a stored name part ("allied Pykes": Pyke)"""
+    key = ('name_word', v)
+    if key not in CACHE:
+        r = v.isdigit() and (c.execute('select name from card where id=?', (int(v),)).fetchone() or
+                             c.execute('select word from name_part where id=?', (int(v),)).fetchone())
+        CACHE[key] = r[0] if r else v
+    return CACHE[key]
 
 
 STATUS_TREES = ('damage_over_time', 'attack_lock', 'disable', 'immobilize', 'debuff', 'temporary_buff', 'shield')  # statuses put on units
@@ -151,6 +161,58 @@ def printed_kws(c, game):
     if key not in CACHE: CACHE[key] = {k for (k,) in c.execute("""select distinct ck.keyword from card_keyword ck join card k on k.id=ck.card
                                          where k.game=? and k.is_keyword=0""", (game,))}
     return CACHE[key]
+
+
+def kw_states(c, game, withs):
+    """the keywords a "state is" filter asks for that cards print ("an Ephemeral ally"): a card has them only if it prints them
+    or a card gives them; statuses given in play (Frostbite, Stun) any unit can have"""
+    ks = [state_kw(c, game, p[9:]) for p in (withs or '').split(';') if p.startswith('state is ')]
+    return [k for k in ks if k and k in printed_kws(c, game) and kw_tree(c, k) not in STATUS_TREES]
+
+
+def who_fits(c, game, card, kind, withs):
+    """can this card be the one a need names, keyword states included (Zed is no Ephemeral ally; his Living Shadow is)"""
+    return matches(c, game, card, kind, withs) and all(k in card['kws'] for k in kw_states(c, game, withs))
+
+
+SEND_ACTS = ('strike', 'first_strike', 'double_strike', 'start_attack', 'ready', 'move', 'swap')  # it makes a unit act
+
+
+def aimed_whos(c, game, acts=None):
+    """per card, the filter of each of my units it acts on (not itself), or only those it makes act (acts): "card is Dragonling"
+    for Dragon Ambush; what it acts on right after making it ("summon 2 Spectral Riders ... attacking") is the card it made"""
+    key = ('aimed_whos', game, acts)
+    if key in CACHE: return CACHE[key]
+    cards = cards_of(c, game); made = collections.defaultdict(set); out = collections.defaultdict(list)
+    rows = c.execute("""select card, ability, act, card_ref, on_pick, on_with from flat_do where origin in ('own','uses_keyword','has_keyword')
+            and coalesce(on_side,'mine') in ('mine','any') and coalesce(on_pick,'') not in ('self','owner')
+            and coalesce(on_kind,'unit') in ('unit','any','anything','hero')""").fetchall()
+    for a, ab, act, ref, pick, w in c.execute("select card, ability, act, card_ref, on_pick, on_with from flat_do where act in ('summon','create') and card_ref is not null"):
+        made[(a, ab)].add(ref)
+    for a, ab, act, ref, pick, w in rows:
+        if a not in cards or act in ('summon', 'create') or (acts and act not in acts): continue
+        if pick == 'it' and made.get((a, ab)): out[a] += [f'card is {r}' for r in made[(a, ab)]]
+        else: out[a].append(w or '')
+    if not acts or 'start_attack' in acts:  # Rally (an attack token for my player): any of my units can attack with it
+        for (a,) in c.execute("select distinct card from flat_do where act='gain_attack_token' and coalesce(on_side,'mine')='mine'"):
+            if a in cards: out[a].append('')
+    CACHE[key] = out
+    return out
+
+
+def can_aim_at(c, game, a, kind, withs, acts=None):
+    """the card itself is such a card, or something it acts on (acts: makes act) can be one (Ghost gives any ally Elusive: Zed
+    too; Dragon Ambush sends only Dragonlings)"""
+    cards = cards_of(c, game)
+    if who_fits(c, game, cards[a], kind, withs): return True
+    named = lambda w: any(p.split(' ')[0] in ('card', 'name_has', 'type') for p in (w or '').split(';'))
+    whos = aimed_whos(c, game, acts).get(a, ())
+    if not whos and not acts and cards[a]['cat'] not in KIND_CAT['unit']: return True  # help on no unit of mine (Rally: every ally
+    # attacks again) can help any; a card that makes no unit act is no doer
+    for who in whos:
+        if not named(who) and not named(withs) and not kw_states(c, game, withs): return True
+        if any(who_fits(c, game, b, 'unit', who) and who_fits(c, game, b, kind, withs) for b in cards.values()): return True
+    return False
 
 
 def kinds_fit(a, b):
@@ -331,8 +393,10 @@ def lines_of(c, game):
         if ak == 'player' and not aw and h not in ('attacks', 'strikes', 'killed', 'strikes_nexus', 'fights'): return True
         if ak not in KIND_CAT and not aw: return True
         k = ak if ak in KIND_CAT else 'any'
-        if matches(c, game, as_doer(c, game, cards[m]), k, aw): return True
-        return ak in ('unit', None) and m in fighters and not any(p.split(' ')[0] in ('card', 'name_has', 'type') for p in (aw or '').split(';'))
+        if who_fits(c, game, as_doer(c, game, cards[m]), k, aw): return True
+        # a card that makes units fight: only if a unit it sends can be the one named (Dragon Ambush sends Dragonlings, not Zed)
+        return ak in ('unit', None) and m in fighters and not any(p.split(' ')[0] in ('card', 'name_has', 'type') for p in (aw or '').split(';')) \
+            and can_aim_at(c, game, m, 'unit', aw, SEND_ACTS)
     # a card whose own triggers make what its level-up counts (Ashe frostbites when she attacks): feeding the trigger levels it
     selffeed = {t for t in lvl_needs if lvl_needs[t] & own_makes[t]}
     # a stat it tests or uses ("restore that minion's Health"): only a change of that stat feeds it (+Attack adds no Health)
@@ -1125,8 +1189,10 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
         return got
     count = lambda concepts: CACHE.setdefault(('n', game, concepts), max(1, len({a for (a,) in c.execute(
         f"select card from flat_concept where concept in ({','.join('?' * len(concepts))})", concepts) if a in cards})))
-    needs = c.execute(f"""select card, ability, happening, side, role, pick from flat_ref where role!='makes' and origin in
+    needs = c.execute(f"""select card, ability, happening, side, role, pick, actor_kind, actor_with from flat_ref where role!='makes' and origin in
             ('own','uses_keyword','has_keyword') and card in ({marks})""", L).fetchall()
+    # "the first time an ally attacks each round" (Hallowed): another attack in that round adds nothing
+    once = {(a, ab) for a, ab in c.execute(f"select card, ability from flat_when where lim in ('first_each_round','once_per_round') and card in ({marks})", L)}
     # help given to my player reaches only my leader card (Duelyst: "your General gains +1 Attack"), help given to units only units
     aims = collections.defaultdict(set)
     leaders = any(cards[t]['cat'] == 'leader' for t in L if t in cards)  # only a game whose player is a card on the board
@@ -1161,8 +1227,9 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
             movers = helpers | {a for (a,) in c.execute(f"""select ck.card from card_keyword ck join card k on k.id=ck.keyword join vocab v on
                     v.field='keyword' and v.value in (k.name, k.game || ':' || k.name) where v.tree='movement' and ck.card in ({marks})""", L)}
         else: movers = helpers
-        for t, ab, h, side, role, pick in needs:
+        for t, ab, h, side, role, pick, ak, aw in needs:
             if h not in hs or side not in sides: continue
+            if role == 'trigger' and (t, ab) in once and why == 'another attack': continue
             if h == 'nexus_damaged' and side == 'mine': continue  # my own player losing health (Radiance: costs your Life) is no hit
             # on the enemy player: attacks and moves toward the enemy do not help it
             helpers_t = movers if pick != 'self' and h != 'harvests' else helpers  # "whenever THIS moves onto": only what moves it;
@@ -1178,6 +1245,8 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
             if why.endswith('*') and not lv: continue
             for a in helpers_t - {t}:
                 if not (aim_fits(a, t) if pick == 'self' else leader_fits(a, t)): continue  # help on itself must land on it
+                # who must do it ("Zed or allied Living Shadows strike the Nexus"): the help must land on such a card
+                if aw and pick != 'self' and not can_aim_at(c, game, a, ak if ak in KIND_CAT else 'any', aw): continue
                 out[(a, t)].append(('levels' if lv else 'moves' if concepts == ('movement',) else 'waits' if role == 'trigger' else 'type', (1.0 if lv else 0.5) / n,
                                     why.rstrip('*') + (' (levels it up)' if lv else '')))  # it makes what the card waits for happen more
     # how many cards are in my hand ("played as the last card from your hand", "10+ cards in hand", "for each card in hand")
@@ -1451,6 +1520,25 @@ def object_help_lines(c, game, nodes, broad):
     return out
 
 
+def state_giver_lines(c, game, nodes):
+    """a card that gives my units a keyword another card's need asks for ("You've attacked with 7+ Ephemeral allies": Mark of
+    the Isles grants an ally Ephemeral, so it feeds Hecarim's level-up)"""
+    cards = cards_of(c, game); out = collections.defaultdict(list); marks = ','.join('?' * len(nodes)); L = list(nodes); lvl = level_abilities(c)
+    gives = collections.defaultdict(set)
+    for a, k in c.execute(f"""select card, keyword_ref from flat_do where act='give_keyword' and origin='own' and coalesce(on_side,'mine')
+            in ('mine','any') and coalesce(on_pick,'') not in ('self','owner') and coalesce(on_kind,'unit') in ('unit','any','anything')
+            and card in ({marks})""", L): gives[k].add(a)
+    for t, ab, role, aw, ow in c.execute(f"""select card, ability, role, actor_with, obj_with from flat_ref where role in ('condition','trigger')
+            and origin='own' and coalesce(side,'mine') in ('mine','any','') and card in ({marks})""", L).fetchall():
+        for k in set(kw_states(c, game, aw)) | set(kw_states(c, game, ow)):
+            for a in gives.get(k, set()) - {t}:
+                if a not in cards: continue
+                lv = ab in lvl; say = f'makes your units {mechanics.name(c, k)}' + (' (levels it up)' if lv else '')
+                if not any(l[2] == say for l in out[(a, t)]):
+                    out[(a, t)].append(('levels' if lv else 'waits' if role == 'trigger' else 'type', 0.5 / len(gives[k]), say))
+    return out
+
+
 def actor_help_lines(c, game, nodes):
     """an ability on what happens to the card itself that acts on the event's actor (Worthy Sacrifice: when it is sacrificed,
     the card it pays for costs 2 less; Morsel: that card gets its stats): it helps every card of the deck that needs that
@@ -1579,7 +1667,8 @@ def network(c, game, ids, broad=True):
     # "more power / more health" from the same gain says it twice
     for f in (am, played_lines(c, game, nodes, broad), need_lines(c, game, nodes, broad),
               boost_lines(c, game, nodes, stat_help, {p for p, ls in am.items() if any('cheaper' in y or 'cost' in y for _, _, y in ls)}), gives_lines(c, game, nodes), object_help_lines(c, game, nodes, broad),
-              actor_help_lines(c, game, nodes), doer_help_lines(c, game, nodes), self_harm_lines(c, game, nodes)):
+              actor_help_lines(c, game, nodes), doer_help_lines(c, game, nodes), self_harm_lines(c, game, nodes),
+              state_giver_lines(c, game, nodes)):
         for k, ls in f.items(): lines[k] += ls
     fam = families(c, nodes)
     lines = collections.defaultdict(list, {(a, b): [l for l in ls if l[0] == 'levelsinto'] if fam[a] == fam[b] else ls

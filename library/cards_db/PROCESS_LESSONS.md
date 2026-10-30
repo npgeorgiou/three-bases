@@ -383,3 +383,13 @@ A deckbuilder with no board and no units of mine: cards, relics, potions, status
    cards" keeps its filter, "Stance" and "Orb" are the keywords whose texts say so.
 11. **Guide decks are thin** (core cards, no full end-of-run deck exists as text): thin networks there are true, not errors;
    say so to Kaptain with the deck, before he asks.
+
+## Who must do it (30 Oct 2026, v56; Kaptain on Zed and Hecarim, fixed for every game)
+Wrong thinking: "a need's happening is enough; who must do it does not matter". Zed levels from his own or his Living Shadows'
+Nexus strikes, Hecarim from Ephemeral attackers, Pyke from allied Pykes' damage: the who-filter was ignored in help lines,
+in "makes units fight" lines, in deck plans and in combos. Fixed once in shared rules: `who_fits` (a keyword state such as
+Ephemeral only on cards that print it), `can_aim_at` (the card, what it acts on, or with SEND_ACTS what it makes act, can be
+that card: Dragon Ambush sends only Dragonlings; Rally sends any), `state_giver_lines` (Mark of the Isles makes an ally
+Ephemeral: it feeds Hecarim), deck_analysis plan lines keyed by who ("Your Ephemeral units attack"), connections.may_be
+("when I attack" is no Dragonling attacking). Also: "first each round" / "once per round" triggers (Hallowed, Lurk) get no
+"another attack" lines; "name has" filters now read stored name parts (allied Pykes, Duelyst Eggs and Obelysks were never matched).
