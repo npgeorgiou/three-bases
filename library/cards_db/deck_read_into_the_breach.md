@@ -85,6 +85,9 @@ moves itself (Ice Mech's Flying, Thruster Mech, Tode the Elevated) puts no enemy
 Mirror Mech, Thruster Mech -> Control Mech, Tode -> Ubass); a swap moves the unit swapped with too (refs.py: Swap Mech ->
 Flame, Laser, Ice, Meteor, Boulder Mech stay; new Hearth-Sister -> Warbird in Duelyst); a card that picks any space
 (Chromatic Cold) does not care where units stand.
+Kaptain (30 Oct 2026): the labels were hard to understand. The move labels and Viscera Nanobots' label now name both cards
+("Combat Mech moves units, and Artillery Mech acts on units in a line from it"; "Nano Mech heals Leap Mech when Leap Mech
+kills"); the page shows each reason of a line on its own row.
 
 ## F8 "is a unit_or_structure it asks for" (49 lines; Stormbound 3 lines, Tode the Elevated)
 Lines: Combat Mech -> Artillery Mech, Walking Bomb -> Pierce Mech ...

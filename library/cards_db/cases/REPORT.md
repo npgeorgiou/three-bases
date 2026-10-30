@@ -43,7 +43,7 @@ Made by `cases/run.py into_the_breach`.
 |---|---|---|---|---|---|---|
 | ntb1 | Blitzkrieg | Lightning Mech | Boulder Mech | none  | - | yes |
 | ntb2 | Swap Mech, Flame Shielding | Swap Mech | Flame Shielding | none  | - | yes |
-| ntb3 | Hazardous Mechs | Nano Mech | Leap Mech | line heals it when it kills | type: moves units; what it does depends on where they stand (next to it); also h | yes |
-| ntb4 | Steel Judoka | Judo Mech | Gravity Mech | none damages enemy units | type: moves it and units; what it does depends on where they stand (in a line fr | yes |
+| ntb3 | Hazardous Mechs | Nano Mech | Leap Mech | line heals Leap Mech when Leap Mech kills | type: Nano Mech moves units, and Leap Mech acts on units next to it; also heals: | yes |
+| ntb4 | Steel Judoka | Judo Mech | Gravity Mech | none damages enemy units | type: Judo Mech moves Gravity Mech and units, and Gravity Mech acts on units in  | yes |
 | ntb6 | Aegis Mech, Gravity Mech, Judo Mech | Aegis Mech | Gravity Mech | line damages enemy units | waits: damages enemy units or players | yes |
 | ntb5 | Mist Eaters | Thruster Mech | Smog Mech | line Smoke | type: makes your units get Smoke | yes |

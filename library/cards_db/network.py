@@ -192,7 +192,7 @@ def act_say(c, h, side, kw, self_=False):
 def help_kind(why):
     y = why.split(': ', 1)[1] if why.startswith('through ') and ': ' in why else why
     if 'cheaper' in y or y.startswith(('pays for it', 'can cost set')): return 'cheaper'
-    if y.startswith(('can heal it', 'heals it', 'can restore')): return 'heals'
+    if y.startswith(('can heal it', 'heals it', 'can restore', '{A} heals')): return 'heals'
     if y.startswith('clears its line'): return 'clears'
     if y.startswith(('moves', 'lets it enter')): return 'moves'
     if y.startswith(('another attack', 'more health or protection', 'helps my units', 'helps it hit', 'more damage', 'fills your hand',
@@ -617,11 +617,11 @@ def place_of(w):
 
 
 def moves_said(w, side, self_):
-    """a card that picks what it acts on by place, fed by moves: say both halves (Kaptain 30 Oct 2026: one card moves, the
-    other cares where things stand): "moves enemy units; what it does depends on where they stand (in a line from it)" """
-    if self_: return f'moves it; what it does depends on where it stands ({place_of(w)})'
-    who = {'mine': 'your units', 'enemy': 'enemy units'}.get(side, 'units')
-    return f'moves {who}; what it does depends on where they stand ({place_of(w)})'
+    """a card that picks what it acts on by place, fed by moves: say both halves with both names (Kaptain 30 Oct 2026: one
+    card moves, the other cares where things stand): "Combat Mech moves units, and Artillery Mech acts on units in a line
+    from it" ({A}, {B}: the two cards' names, filled in by network())"""
+    who = 'it' if self_ else {'mine': 'your units', 'enemy': 'enemy units'}.get(side, 'units')
+    return f'{{A}} moves {who}, and {{B}} acts on units {place_of(w)}'
 
 
 def where(w):
@@ -766,7 +766,7 @@ def doer_help_lines(c, game, nodes):
                  ('own','uses_keyword') and card in ({marks})""", [h] + L)}
         for m in doers:
             if m != a and m in cards and matches(c, game, cards[m], kind if kind in KIND_CAT else 'any', w):
-                out[(a, m)].append(('boosts', 1.0 / max(1, len(doers)), ', '.join(dict.fromkeys(whys)) + f' when it {DOES.get(h, h.replace("_", " "))}'))
+                out[(a, m)].append(('boosts', 1.0 / max(1, len(doers)), '{A} ' + ', '.join(dict.fromkeys(w_.replace(' it', ' {B}') for w_ in whys)) + f' when {{B}} {DOES.get(h, h.replace("_", " "))}'))
     return out
 
 
@@ -1366,7 +1366,8 @@ def network(c, game, ids, broad=True):
     # "helps" says how: cheaper, stronger, a keyword, into place, a clear way (or it makes what the card waits for happen more)
     lines = collections.defaultdict(list, {(a, b): [(help_kind(y), w, y) if k == 'boosts' else (k, w, y) for k, w, y in ls]
                                            for (a, b), ls in lines.items()})
-    return nodes, {k: one_link(v) for k, v in lines.items() if v}
+    named = lambda a, b, y: y.replace('{A}', mechanics.name(c, a)).replace('{B}', mechanics.name(c, b))  # the two cards by name
+    return nodes, {(a, b): [(k, w, named(a, b, y)) for k, w, y in one_link(v)] for (a, b), v in lines.items() if v}
 
 
 # one link per pair of cards (Kaptain, 30 Oct 2026: never two arrows between the same two cards): its kind is the first of
@@ -1379,11 +1380,12 @@ KIND_WORD = {'waits': 'triggers', 'type': 'enables', 'cheaper': 'makes cheaper',
              'levelsinto': 'levels into', 'targets': 'can aim at it'}
 
 
-MOVE_RE = re.compile(r'moves (it|units|enemy units|your units); what it does depends on where (?:they stand|it stands) \((.*)\)$')
+MOVE_RE = re.compile(r'\{A\} moves (it|units|enemy units|your units), and \{B\} acts on units (.*)$')
 
 
 def merge_places(ls):
-    """every move reason of a pair is one reason: who is moved, every place ("moves it and units; ... (next to it or around it)")"""
+    """every move reason of a pair is one reason: who is moved, every place ("{A} moves {B} and units, and {B} acts on units
+    next to it or around it")"""
     moved, places, w_, k_ = [], [], 0, None
     rest = []
     for k, w, y in ls:
@@ -1392,9 +1394,8 @@ def merge_places(ls):
         moved.append(m.group(1)); places += [p for p in m.group(2).split(' or ') if p not in places]; w_ = max(w_, w); k_ = k_ or k
     if not moved: return ls
     others = {x for x in moved if x != 'it'}
-    who = ' and '.join((['it'] if 'it' in moved else []) + ([others.pop() if len(others) == 1 else 'units'] if others else []))
-    verb = 'it stands' if who == 'it' else 'they stand'
-    return [(k_, w_, f'moves {who}; what it does depends on where {verb} ({" or ".join(places)})')] + rest
+    who = ' and '.join((['{B}'] if 'it' in moved else []) + ([others.pop() if len(others) == 1 else 'units'] if others else []))
+    return [(k_, w_, f'{{A}} moves {who}, and {{B}} acts on units {" or ".join(places)}')] + rest
 
 
 def one_link(ls):

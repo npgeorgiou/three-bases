@@ -143,7 +143,7 @@ function mark(){lock();const f=hov||sel,on=new Set(f?f.nodes:[]);
 svg.onmousemove=e=>{if(drag&&drag.moved)return;let t=e.target;let h='';
  if(lockN&&((t.dataset.n&&!lockN.has(+t.dataset.n))||(t.dataset.l&&!lockL.has(+t.dataset.l))))t={dataset:{}};  // outside the locked part
  if(t.dataset.n){const n=N[+t.dataset.n];hov=one(+t.dataset.n);h=`<b>${esc(n.name)}</b>${esc(info(n))} <span style="color:var(--mut)">${esc((CARD[n.cat]||['',n.cat])[1])}${n.types&&n.types.length?' \u00b7 '+esc(n.types.join(', ')):''}${n.made?', made by the deck':''}</span><br>${n.keywords.length?'<i>'+esc(n.keywords.join(', '))+'</i><br>':''}${esc(n.text)}`}
- else if(t.dataset.l){const l=d.lines[+t.dataset.l];hov=oneLine(+t.dataset.l);h=`${esc(N[ix[l.from]].name)} &rarr; ${esc(N[ix[l.to]].name)}<br><b>${esc(l.why)}</b><br><span style="color:var(--mut)">${LINE[l.kind][1]}</span>`}
+ else if(t.dataset.l){const l=d.lines[+t.dataset.l];hov=oneLine(+t.dataset.l);h=`${esc(N[ix[l.from]].name)} &rarr; ${esc(N[ix[l.to]].name)}<br><b>${l.why.split('; also ').map(esc).join('<br>')}</b><br><span style="color:var(--mut)">${LINE[l.kind][1]}</span>`}
  else hov=null;
  mark();tip.style.display=h?'block':'none';tip.innerHTML=h;tip.style.left=Math.min(innerWidth-360,e.clientX+14)+'px';tip.style.top=Math.min(innerHeight-120,e.clientY+14)+'px'};
 svg.onmouseleave=()=>{hov=null;mark();tip.style.display='none'};
