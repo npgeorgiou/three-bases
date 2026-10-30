@@ -14,7 +14,7 @@ import glob, json, os, sqlite3
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(HERE, '..', 'three-bases-library.sqlite')
 # a supplement that holds a game's full card list replaces every library entry of these categories (not only same codes)
-FULL = {'inscryption': ('unit', 'terrain'), 'into_the_breach': ('unit', 'ability', 'item', 'hero')}
+FULL = {'inscryption': ('unit', 'terrain'), 'into_the_breach': ('unit', 'ability', 'item', 'hero'), 'sts1': ('spell', 'relic', 'item', 'status', 'keyword', 'monster', 'boss', 'event', 'modifier')}
 COLS = ['id', 'game', 'ext_id', 'name', 'category', 'source_type', 'edition', 'faction', 'subtypes', 'rarity', 'cost', 'cost_num',
         'stats', 'text', 'extra', 'variants']
 

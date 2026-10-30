@@ -1,25 +1,103 @@
-"""Slay the Spire: entries whose library text is broken.
-The library's cards come from the Slay the Spire wiki's Module:Cards/data (library/tools/convert/conv_sts.py) and are whole:
-75 cards per character, colorless cards, curses and statuses, with an upgraded form ('Name+') where the upgrade changes more
-than numbers; relics, potions, powers (status), monsters, events and Ascension levels come from the game's localization.
-Every card of every guide deck in decks.tsv is among them (checked 30 Oct 2026).
-Only one text is broken: the power The Bomb kept the game's format strings ("X%1$s turns"); its text here is the card The
-Bomb's text with the numbers as X, as every other power is written ("At the start of your turn, gain X Strength").
-Writes supplement/sts1.jsonl in the library's entities columns; ids from 7000001 (source.py).
+"""Slay the Spire: every entry of the game, with the library's broken texts repaired.
+Source: the library's sts1 entries (cards from the Slay the Spire wiki's Module:Cards/data via library/tools/convert/conv_sts.py;
+relics, potions, powers, monsters, events and Ascension levels from the game's localization). They are whole: 75 cards per
+character, colorless cards, curses and statuses, an upgraded form 'Name+' where the upgrade changes more than numbers; every
+card of every guide deck in decks.tsv is among them (checked 30 Oct 2026).
+What is repaired, each by one rule for every entry (so the supplement holds every entry and replaces the library's, source.py
+FULL; cards and their powers share card codes, so a partial supplement would drop one of them):
+- Energy icons: the conversion wrote each icon as a word ("Gain energy energy." = 2 energy, Bloodletting; "Sunder ... gain
+  energy energy energy" = 3). Runs of the word are counted; a lone icon after "gain" is 1 ("Gain energy." Adrenaline), except
+  "gain energy equal to ..." (Recycle).
+- Numbers the conversion lost: Genetic Algorithm "Gain Block." and Ritual Dagger "Deal damage." take the number of the same
+  sentence in the source's own upgraded_text (extra.upgraded_text: "Gain 1 Block", "Deal 15 damage"; the upgrade changes
+  only the other number). Happy Flower, Sundial, Nunchaku: the wiki's Module:Relics/data (read 30 Oct 2026, RELICS below).
+- Powers (category status) kept the game's format strings ("X%1$s", "draw X1 card.Whenever ... draw X"): the wiki's
+  Module:Powers/data texts (read 30 Oct 2026, POWERS below), markup removed; other powers keep their first sentence group.
+  "LocalizedStrings.PERIOD" is a period; a number glued after X ("X2 turns") is that number.
+- Keywords the card has itself, written as a sentence of their own (Exhaust., Ethereal., Innate., Retain., Unplayable.), go
+  in the Keywords field (PROCESS "A card list that looked whole" 3), so each card takes the keyword's record.
+- Card kinds (Attack, Skill, Power, Status, Curse; the source's type) are the cards' types: "Whenever you play an Attack" is
+  filter type Attack, never Runeterra's category skill.
+Writes supplement/sts1.jsonl in the library's entities columns; ids from 7000001 in library order (source.py).
 Usage: supplement_sts1.py"""
-import json, os, sqlite3
+import json, os, re, sqlite3
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'supplement', 'sts1.jsonl')
 DB = os.path.join(HERE, '..', 'three-bases-library.sqlite')
-FIX = {('THEBOMB', 'status'): 'At the end of X turns, deal X damage to ALL enemies.'}
 COLS = ['id', 'game', 'ext_id', 'name', 'category', 'source_type', 'edition', 'faction', 'subtypes', 'rarity', 'cost', 'cost_num',
         'stats', 'text', 'extra', 'variants']
+KWS = ['Unplayable', 'Innate', 'Ethereal', 'Retain', 'Exhaust']
+RELICS = {  # Module:Relics/data, markup removed
+    'Happy Flower': 'Every 3 turns, gain 1 energy.',
+    'Sundial': 'Every 3 times you shuffle your draw pile, gain 2 energy.',
+    'Nunchaku': 'Every time you play 10 Attacks, gain 1 energy.',
+}
+POWERS = {  # Module:Powers/data, markup removed (library name -> text)
+    'Buffer': 'Prevent the next X times you would lose HP.',
+    'Blur': 'Block is not removed at the beginning of your next X turns.',
+    'Burst': 'Your next X Skills are played twice this turn.',
+    'Collect': 'At the start of your next X turns, put a Miracle+ into your hand.',
+    'Corpse Explosion': 'On death, deal damage equal to Max HP X times to ALL enemies.',
+    'Dark Embrace': 'Whenever a card is Exhausted, draw X cards.',
+    'Double Tap': 'Your next X Attacks are played twice this turn.',
+    'Draw Reduction': 'Draw X less cards next turn.',
+    'Echo Form': 'The first X cards you play each turn are played twice.',
+    'Equilibrium': 'Retain your hand for X turns.',
+    'Evolve': 'Whenever you draw a Status card, draw X cards.',
+    'Loop': 'At the start of your turn, trigger the passive ability of your next Orb X times.',
+    'Magnetism': 'At the start of your turn, add X random Colorless cards into your hand.',
+    'Mayhem': 'At the start of your turn, play the top X cards of your draw pile.',
+    'Phantasmal': 'Deal Double Damage for the next X turns.',
+    'The Bomb': 'At the end of X turns, deal X damage to ALL enemies.',
+    'Time Warp': 'Whenever you play a certain number of cards, ends your turn and gains X Strength.',
+    'Tools Of The Trade': 'At the start of your turn, draw X cards and discard X cards.',
+    'Lock-On': 'Receives 50% more damage from Orbs for X turns.',
+    'Vulnerable': 'Receive 50% more damage from Attacks for X turns.',
+    'Weakened': 'Attacks deal 25% less damage for X turns.',
+    'Frail': 'Gain 25% less Block from cards for X turns.',
+    'Barricade': 'Block is not removed at the beginning of your turn.',
+    'Back Attack': 'Deals 50% more damage as it is attacking you from behind.',
+}
+TYPES = {'attack card': 'Attack', 'skill card': 'Skill', 'power card': 'Power', 'status card': 'Status', 'curse card': 'Curse'}
+
+
+def energy(t):
+    t = re.sub(r'\benergy(?: energy)+\b', lambda m: f"{len(m.group(0).split())} energy", t)
+    return re.sub(r'\b([Gg]ain) energy\b(?! equal)', r'\1 1 energy', t)
+
+
+def keywords_field(t):
+    found = [k for k in KWS if re.search(rf'(?:^|(?<=\. )){k}(?:\.(?=\s|$)|$)', t)]
+    for k in found: t = re.sub(rf'(?:^|(?<=\. )){k}(?:\.(?:\s+|$)|$)', '', t)
+    t = t.strip()
+    return (f"Keywords: {', '.join(found)}. " + t).strip() if found else t
+
+
+def repair(r):
+    t = (r['text'] or '').replace(' LocalizedStrings.PERIOD', '.').replace('LocalizedStrings.PERIOD', '.')
+    if r['category'] == 'spell':
+        up = (json.loads(r['extra']) if r['extra'] and r['extra'].startswith('{') else {}).get('upgraded_text', '')
+        for pat in (r'^Gain (\d+) Block\.', r'^Deal (\d+) damage\.'):
+            m = re.search(pat, up); word = pat.split(' ')[0][1:]
+            if m and re.match(rf'^{word} (Block|damage)\.', t): t = re.sub(rf'^{word} ', f'{word} {m.group(1)} ', t)
+        t = keywords_field(energy(t))
+        r['subtypes'] = TYPES.get(r['source_type'])
+    elif r['category'] == 'relic' and r['name'] in RELICS:
+        t = RELICS[r['name']]
+    elif r['category'] == 'status':
+        t = POWERS.get(r['name']) or re.split(r'(?<=[a-z0-9.!])\.(?=[A-Z])', t)[0].rstrip('.') + '.'
+        t = re.sub(r'\bX(\d)', r'\1', t)  # "revives in X2 turns at X50% HP": the number is written after the X
+    else:
+        t = energy(t)
+    r['text'] = t
+    return r
+
 
 c = sqlite3.connect(DB)
 out = []
-for n, ((ext, cat), text) in enumerate(sorted(FIX.items())):
-    r = dict(zip(COLS, c.execute(f"select {','.join(COLS)} from entities where game='sts1' and ext_id=? and category=?", (ext, cat)).fetchone()))
-    r.update(id=7000001 + n, text=text, source_type=r['source_type'])
+for n, row in enumerate(c.execute(f"select {','.join(COLS)} from entities where game='sts1' order by id")):
+    r = repair(dict(zip(COLS, row)))
+    r['id'] = 7000001 + n
     out.append(r)
 with open(OUT, 'w') as f:
     for r in out: f.write(json.dumps(r, ensure_ascii=False) + '\n')
