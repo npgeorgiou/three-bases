@@ -91,15 +91,8 @@ and about ten rebuilds). Each check below is cheap and found errors that later c
 - Inscryption (v36-v45): imported and reviewed by Kaptain (30 Oct 2026). 17 decks kept (decks.tsv), 20 weak ones listed in
   decks_dropped_inscryption.tsv; families F1-F18 in deck_read_inscryption.md; why its networks are thin: RESULTS.md.
   Energy ramp is marked base_resource_gain, not linked to costs (Kaptain).
-- Into the Breach (v48, in progress, 30 Oct 2026): supplement from the wiki tables (supplement_into_the_breach.py), 20
-  squads in decks.tsv (a squad of 3 mechs is the deck), rules in library/tools/games/into_the_breach.md, game_rules.jsonl,
-  BRIEF "Game words: Into the Breach". Read: 299 cards, 27 keywords, 30 cards twice. After the first build, one pass and one
-  fix: fixes/into_the_breach/v48.py (families F1-F6), names.tsv drops, patterns S-TB1-3, verdicts and text-audit
-  explanations; run.py passes every step. All 20 decks read: families F7-F12 in deck_read_into_the_breach.md, none fixed
-  yet. F7 (pushes "enable" weapons aimed by position) is right: Kaptain, 30 Oct 2026, keeps them. F8-F12 fixed by rule
-  (network.py, refs.py), cases ntb1-ntb6, one rebuild, diff read (deck_read_into_the_breach.md "After the fix"); Kaptain
-  approved the changed lines (30 Oct 2026). Then: move labels name both cards, self-moves, swaps and any-space targets fixed
-  in every game (deck_read F7 notes). Left: Kaptain unsure whether a single-target attack next to the unit (Combat Mech)
-  cares about positions like a line or area weapon does; left as is. Labels in other games still say "it" (Kaptain: no
-  change wanted now). Not done: PROCESS step 4 (CHECK_20_into_the_breach) and step 5.
+- Into the Breach (v48-v51, done 30 Oct 2026): every step of PROCESS passes (RESULTS.md). 20 squads in decks.tsv, rules in
+  library/tools/games/into_the_breach.md, BRIEF "Game words: Into the Breach". Families F1-F19 in deck_read_into_the_breach.md
+  (F7 kept by Kaptain; F8-F12 approved by him; the check of 20 cards done by Claude at his word). Open, Kaptain's call: does a
+  single-target attack next to the unit (Combat Mech) care where units stand like a line or area weapon? Left as is.
   Stormbound shows 141 of 145 cases (csb09-csb13, poisoned-unit lines) since the Slay the Spire chat's v49 shared change.

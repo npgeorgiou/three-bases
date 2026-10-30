@@ -123,16 +123,22 @@
   names, so Spirit Wolf stays a name.
 - Wording still shared with other games: a player's damage reads "your Nexus or base" (the General in Duelyst).
 
-# Into the Breach: results (30 Oct 2026, v48, in progress; deck_read_into_the_breach.md)
+# Into the Breach: results (30 Oct 2026, v51, done; deck_read_into_the_breach.md)
 
 ## What exists
 299 cards (42 mechs, 104 weapons, 17 passives, 20 pilots, Vek, tiles, 6 deployed units) and 27 keywords, read once; 30 cards
 read twice. 20 squads in decks.tsv (14 official, 6 players' custom); a squad of 3 mechs is the deck.
 
 ## Quality
-- run.py passes every step; word check 0 flags, text audit 0 unexplained, 13 cases. Families F1-F6 fixed by rule (v48.py).
+- run.py passes every step; word check 0 flags, text audit 0 unexplained, 24 cases. Families F1-F6 fixed by rule (v48.py),
+  F13-F16 from Claude's check of 20 cards (v51.py), F7-F12 and F17-F19 in shared code (network.py, refs.py, deck_analysis.py).
 - Link audit, explained: Spore, Alpha Spore, Alpha Blob, Blob Leader, Boulder, Unstable Boulder, Freeze Mine, Strange Pod and
   Strange Object are things Vek and tiles put on the board; the source has no entry for them and the wiki is not reachable
   from here, so they stay names. Emerging and High Tide are each one tile with two library pages (terrain and modifier,
   same text); both are read alike and no deck holds them.
-- Deck networks: all 20 read; families F7-F12 open (deck_read_into_the_breach.md).
+- Deck networks: all 20 read twice; F7 kept by Kaptain, F8-F12 fixed and approved by Kaptain (30 Oct 2026). Every squad
+  explained by ask.py analyze with no false weak spot (Rusting Hulks: Smoke for Storm Generator, case dtb01).
+- Keywords: CONCEPTS_into_the_breach.md (every keyword and its concept, checked twice). `ask.py all compare forced_movement
+  shield damage_over_time` shows its cards next to the other games' (it has the most forced movement of all games).
+- Check of 20 cards: CHECK_20_into_the_breach.md (ids in CHECK_20_into_the_breach_ids.txt), checked by Claude at Kaptain's
+  word (30 Oct 2026: "its YOUR task"); errors and fixes in deck_read_into_the_breach.md "Check of 20 cards".

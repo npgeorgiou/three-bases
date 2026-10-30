@@ -50,6 +50,7 @@ def build(c):
 
     def ins(card, origin, via, ab, role, ev, kind, side, pick, kw=None, state=None, w=None, ref=None, ak=None, aw=None):
         if role == 'makes' and pick == 'self' and not side: side = 'mine'  # what a card does to itself happens on my side
+        if role == 'makes' and ev == 'given_keyword' and kind == 'position': kind = 'unit_or_structure'  # Smoke on a tile: the unit on it
         if ev == 'strikes_nexus' and kind == 'player': kind, side = 'unit', 'mine'  # one way: the unit that strikes, never the player struck
         if role == 'makes' and ((kind == 'player' and ev in UNIT_ONLY) or (kind not in OPEN_KINDS and ev in PLAYER_ONLY)): return
         if role == 'makes' and kind == 'equipment' and ev in NOT_UNIT_DEATH: return
@@ -266,3 +267,8 @@ def build(c):
     c.execute("""delete from flat_ref where role in ('state','condition') and happening='dies' and exists (select 1 from flat_ref m
                  where m.card=flat_ref.card and m.ability=flat_ref.ability and m.role='makes' and m.happening='dies'
                  and coalesce(m.kind,'')=coalesce(flat_ref.kind,'') and m.side=flat_ref.side and coalesce(m.pick,'')=coalesce(flat_ref.pick,''))""")
+    # a status the card has and passes on ("if you are webbed and swap places, the other unit becomes webbed", Swap Mech): how
+    # the status spreads, not a status the card wants
+    c.execute("""delete from flat_ref where role in ('state','condition') and happening='given_keyword' and pick='self' and exists
+                 (select 1 from flat_do d where d.card=flat_ref.card and d.ability=flat_ref.ability and d.act='give_keyword'
+                 and d.keyword_ref=flat_ref.keyword and coalesce(d.on_pick,'')!='self')""")

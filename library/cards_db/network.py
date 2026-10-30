@@ -230,7 +230,6 @@ def lines_of(c, game):
             if h in ('dies', 'killed') and side == 'enemy' and origin == 'own' and ab in plain_hits: continue  # a plain hit on one
             # enemy (Strike) is what every attack does: it feeds no "when an enemy dies" (Kaptain 30 Oct 2026); poison, hits on all,
             # kill effects and damage boosts still do
-            if h == 'given_keyword' and kind == 'position': kind = 'unit_or_structure'  # Smoke on a tile: the unit on it has Smoke
             if pick == 'self' and not kind: kind = {'leader': 'player', 'hero': 'unit'}.get(cards[card]['cat'], cards[card]['cat'])  # it
             # moves itself as what it is: Azurite Lion moving is no General moving (Zeal)
             makes[h].add((card, side, kw, kind, pick, w, ref, rule_name.get(via, 'rules') if origin == 'game' else False))
@@ -1481,7 +1480,7 @@ def merge_places(ls):
     if not moved: return ls
     others = {x for x in moved if x != 'it'}
     who = ' and '.join((['{B}'] if 'it' in moved else []) + ([others.pop() if len(others) == 1 else 'units'] if others else []))
-    return [(k_, w_, f'{{A}} moves {who}, and {{B}} acts on units {" or ".join(places)}')] + rest
+    return [(k_, w_, f'{{A}} moves {who}, and {{B}} acts on units {" or ".join(sorted(places))}')] + rest
 
 
 def one_link(ls):

@@ -608,6 +608,14 @@ that carries it (pick self); a pilot's "Mech" = the mech it pilots (pick self). 
   (3 Reactor Cores): Increases damage by 2.") are optional: the base weapon is one ability with no COND; each upgrade is its
   own ability with the base weapon's event and COND `{"test": "upgraded", "n": <its place, 1 or 2>}`, holding only what the
   upgrade adds ("+2 Damage" = damage amount 2 more on the same target, "Gain Shield" = give_keyword Energy Shield on self).
+- From the check of 20 cards (30 Oct 2026): "Increases area hit by 1 tile" = increase_effect on self, params area 1. "Shield
+  adjacent ally or Building" = every adjacent one (pick all; no choice word, nothing is chosen). Flying over mountains or
+  units is no place to stand: write only the tiles it may stop on. "3 tiles in a row" means what the card's own prose says
+  (Burrowers: the tile in front and its two sides; Hornet Leader: three tiles ahead).
+  Worked example, Repulse "Push all adjacent tiles ... Shield Friendly: Shield adjacent ally or Building":
+  `{"when": {"event": "attacks", "actor": {"pick": "self"}}, "if": [{"test": "upgraded", "n": 2}], "do": [{"act":
+  "give_keyword", "on": {"kind": "unit_or_structure", "side": "mine", "pick": "all", "with": [{"attr": "position", "op":
+  "is", "val": "bordering", "of": {"pick": "self"}}]}, "keyword": "Energy Shield", "lasts": "permanent"}]}`.
   "Power: ..." (Reactor Cores needed to power the weapon) is no effect: skip it.
 - Passives act on all Mechs: "All Mechs are immune to Fire" = always, give_keyword Fire Immunity on units side mine with type
   Mech, lasts while. Pilots: "Mech gains Armored" = give_keyword Natural Armor on self; "+3 Move" = stat_change params movement.

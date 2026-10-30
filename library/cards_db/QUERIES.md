@@ -131,7 +131,7 @@ select distinct card from flat_ref where happening='given_keyword' and role!='ma
 - duelyst: 32 cards: Afterblaze, Bloodbound Mentor, Cannon of MECHAZ0R, Chassis of MECHAZ0R, Cloudcaller, Crossbones, Cryoblade, Cryptographer ...
 - faeria: 8 cards: Destructive Volley, Enslaved Priest, Fugoro, Captain of the Gagana, Herald of War, Imperial Engineer, Seek Shelter, Triton Trainer, Windborne Emissary
 - inscryption: 8 cards: Ant Queen, Ants, Emerald Power, Flying Ant, Green Mage, Master Bleene, True Scholar, Worker Ant
-- into_the_breach: 13 cards: Fire, Flame Mech, Flame Thrower, Heat Engines, Nanofilter Mending, Napalm Mech, Rocket Mech, Sand Tile ...
+- into_the_breach: 11 cards: Fire, Flame Mech, Flame Thrower, Heat Engines, Nanofilter Mending, Napalm Mech, Rocket Mech, Sand Tile ...
 - monster_train: 90 cards: Alloy of the Ancients, Alloyed Construct, Apex Imp, Armor, Attuned, Awake, Battering Ram, Big Sludge ...
 - runeterra: 87 cards: Arbiter of the Peak, Ava Achiever, Big Game Tycoon, Caitlyn, Caitlyn (level 2), Curtain Call, Deadly Flourish, Death Mark ...
 - stormbound: 26 cards: Acid Greenhorns, Amberhides, Big Sisters of Growth, Brood Sages, Copperskin Ranger, Crimson Sentry, Function Wilds, Green Prototypes ...
@@ -164,12 +164,12 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- self_destruct: duelyst 692 pairs, e.g. Windstorm Obelysk -> Darkspear Zane; faeria 576 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 350 pairs, e.g. Skel-e-latcher -> Shield Latcher; into_the_breach 32 pairs, e.g. Blob -> Boom Cannon; monster_train 241 pairs, e.g. Bogdeep Cocoon -> Kinhost Vessel; runeterra 6554 pairs, e.g. Shark Chariot -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Restless Goats
-- destroy: duelyst 2211 pairs, e.g. Windstorm Obelysk -> Darkspear Zane; faeria 932 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 385 pairs, e.g. Skel-e-latcher -> Shield Latcher; into_the_breach 84 pairs, e.g. Blob -> Boom Cannon; monster_train 290 pairs, e.g. Bogdeep Cocoon -> Kinhost Vessel; runeterra 11112 pairs, e.g. Shark Chariot -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
-- sacrifice: duelyst 1511 pairs, e.g. Windstorm Obelysk -> Darkspear Zane; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Master Bleene -> Shield Latcher; into_the_breach 8 pairs, e.g. Arachnoid -> Large Goo; monster_train 286 pairs, e.g. Primordium -> Devourer of Death; runeterra 5631 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
-- revive: inscryption 27 pairs, e.g. Necromancer -> Shield Latcher; runeterra 1008 pairs, e.g. Chronobreak -> Bladepierced Revenant; stormbound 38 pairs, e.g. Diehards -> Restless Goats
-- removal: faeria 131 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Shield Latcher; into_the_breach 48 pairs, e.g. Tentacles -> Boom Cannon; monster_train 38 pairs, e.g. Petrified Skull -> Little Fade; runeterra 2026 pairs, e.g. Kindred's Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Embers of Chaos
-- aoe_damage: inscryption 105 pairs, e.g. Gem Detonator -> Shield Latcher; into_the_breach 477 pairs, e.g. Thermal Discharger -> Boom Cannon; runeterra 2572 pairs, e.g. Anivia (level 2) -> Shackled Ghasts; stormbound 229 pairs, e.g. Crimson Sentry -> Green Prototypes
+- self_destruct: duelyst 692 pairs, e.g. Windstorm Obelysk -> Darkspear Zane; faeria 576 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 350 pairs, e.g. Revenant -> Skel-e-latcher; into_the_breach 32 pairs, e.g. Walking Bomb -> Ice Tile; monster_train 241 pairs, e.g. Bog Chrysalis -> Kinhost Vessel; runeterra 6554 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
+- destroy: duelyst 2211 pairs, e.g. Windstorm Obelysk -> Darkspear Zane; faeria 932 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 385 pairs, e.g. Revenant -> Skel-e-latcher; into_the_breach 84 pairs, e.g. Walking Bomb -> Ice Tile; monster_train 290 pairs, e.g. Bog Chrysalis -> Kinhost Vessel; runeterra 11112 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- sacrifice: duelyst 1511 pairs, e.g. Windstorm Obelysk -> Darkspear Zane; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Skel-e-latcher; into_the_breach 8 pairs, e.g. Arachnoid -> Large Goo; monster_train 286 pairs, e.g. Primordium -> Devourer of Death; runeterra 5631 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- revive: inscryption 27 pairs, e.g. Necromancer -> Skel-e-latcher; runeterra 1008 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 38 pairs, e.g. Diehards -> Azure Hatcher
+- removal: faeria 131 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Explode Bot; into_the_breach 48 pairs, e.g. Tentacles -> Ice Tile; monster_train 38 pairs, e.g. Crushing Demise -> Little Fade; runeterra 2026 pairs, e.g. Kindred's Spirit Journey -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Embers of Chaos
+- aoe_damage: inscryption 105 pairs, e.g. Explode Bot -> Shield Latcher; into_the_breach 493 pairs, e.g. Thermal Discharger -> Boom Cannon; runeterra 2572 pairs, e.g. Anivia (level 2) -> Shackled Ghasts; stormbound 229 pairs, e.g. Crimson Sentry -> Green Prototypes
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -177,8 +177,8 @@ Families of three mechanics that feed each other, starting from "summon" (`ask.p
 - summon -> on_ally_play -> countdown (seen in duelyst, runeterra)
 - summon -> banish -> other_leave_trigger (seen in runeterra)
 - summon -> banish -> return_to_hand (seen in runeterra)
-- summon -> tribal -> board_presence (seen in duelyst, runeterra)
-- summon -> tribal -> recycle (seen in monster_train, runeterra)
+- summon -> delayed -> cant_block (seen in runeterra)
+- summon -> delayed -> terrain (seen in runeterra)
 
 ## A deck explained (`ask.py runeterra analyze "..."`), a Lucian/Senna deck from a deck guide
 
@@ -245,7 +245,7 @@ select distinct card from flat_do where act='copy_keywords'
 - inscryption Beast: free_play (4), multi_attack (8), stealth (8), immunity (6), variable_stats (8)
 - inscryption Technology: stances (8), territory_trigger (4), aoe_damage (4), link_formation (10), ping (6)
 - inscryption Magick: aura (6), defence_gain (5), draw (4), self_destruct (4), card_presence_condition (5)
-- into_the_breach Prime: aoe_damage (15), lanes (5), spell_or_skill (21), forced_movement (21), ping (24)
+- into_the_breach Prime: lanes (5), aoe_damage (15), spell_or_skill (21), forced_movement (21), ping (24)
 - into_the_breach Brute: forced_movement (27), area_templates (27), spell_or_skill (21), attack_lock (5), movement (27)
 - into_the_breach Ranged: area_templates (28), attack_lock (5), damage_over_time (5), spell_or_skill (19), lanes (4)
 - into_the_breach Science: swap (4), shield (8), spell_power (9), damage_prevention (9), spell_or_skill (20)

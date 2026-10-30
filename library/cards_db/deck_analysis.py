@@ -127,11 +127,16 @@ def analyze(c, game, text):
         return not who or card not in cs or network.matches(c, game, cs[card], 'any', who)
     plan = collections.defaultdict(lambda: [set(), set(), set(), set()])  # makers, own-death users, level-ups, other users
     linked = set(); sides = collections.defaultdict(set)
+    actor_side = {(a, b): sd for a, b, sd in c.execute("select card, ability, actor_side from flat_when where actor_side is not null")}
+    enemy_doers = {a for (a,) in c.execute("""select card from flat_do where act in ('strike','start_attack','redirect_attack')
+                   and coalesce(on_side,'') in ('enemy','')""")}
     for card, ab, role, h, side, kw, pick, kind, tw in uses:  # kinds must fit too: healing a god is no unit healed (as network.kinds_fit)
         mk = {(m, ms) for (hh, k), ms_ in makes.items() if hh == h and (k is None or kw is None or k == kw) for m, ms, mkd, mp, mw in ms_
               if m != card and fit(ms, side) and kinds_fit(mkd, kind) and not (pick == 'self' and mp == 'self' and not names_it(m, tw)) and
               not (pick == 'self' and not can_be(card, mw))}  # "when THIS moves":
               # another card moving itself is no help (network: two cards each about themselves never link)
+        if role == 'trigger' and actor_side.get((card, ab)) == 'enemy': mk = {(m, ms) for m, ms in mk if m in enemy_doers}  # "when an
+        # enemy damages another enemy" (Vek Hormones): only a card that makes enemies act does it, not my own damage (as network)
         if role == 'condition' and side in ('mine', '', None):  # a cost: the game's rules make it too (any unit can be sacrificed, a Skeleton's death gives a Bone)
             mk |= {(m, 'mine') for m in by_rule.get(h, set()) - {card}}
         if not mk: continue

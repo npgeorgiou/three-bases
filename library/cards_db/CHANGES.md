@@ -346,3 +346,5 @@ Each change: date, what changed, the card that caused it, and which records were
   they help (Barricade, Vulnerable, Wrath, Divinity); a cost that drops per X is "makes cheaper" (also Runeterra, Faeria);
   "gives you" for the player; one reason said once. EXPENSIVE: the expensive cost per game (set to each game's current
   top tenth). Cases nst19-nst25; nfa42 rewritten.
+- 30 Oct 2026, v51 (Into the Breach, check of 20 cards): param area ("Increases area hit by 1 tile": increase_effect params
+  area N); Explosive Goo, Techno-Scarab corrected (fixes/into_the_breach/v51.py).

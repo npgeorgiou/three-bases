@@ -141,3 +141,57 @@ Jet Mech -> Rocket Mech (Smoke for Storm Generator). Case ntb5.
 Into the Breach 107 -> 99 lines; Stormbound 696 -> 683; Slay the Spire 451 -> 410; Runeterra +3 (LeBlanc level 2); Duelyst
 +1 (Lilithe -> Spectral Blade); other differences are only the order of reasons. Cases pass in every game (Stormbound 141
 of 145, the known csb09-csb13). ntb6 (Aegis Mech -> Gravity Mech: Spartan Shield turns an enemy attack onto enemies, Vek Hormones) keeps the F11 exception tested.
+
+## Check of 20 cards (30 Oct 2026, Claude; CHECK_20_into_the_breach.md, ids in CHECK_20_into_the_breach_ids.txt)
+Each card's rows read against its text: Centipede Leader, Quick-Fire Mech, Hook Mech, Emerging, Alpha Hornet, Spring-Loaded
+Legs, Alpha Bouncer, Raining Death, Alpha Beetle, Techno-Scarab, Tentacles, Meteor Mech, Alpha Scarab, Mine-Mech, Cannon Mech,
+Alpha Mosquito, Repulse, Burrower, Ramming Speed, Lily Reed. 15 right; 4 errors (F13-F16), fixed by fixes/into_the_breach/v51.py.
+The guide-deck explanations (ask.py into_the_breach analyze, all 20 squads) showed three more (F17-F19).
+Kept: Emerging writes "a Vek emerges" and "a unit blocking it takes 1 damage" side by side (the text does not say the
+blocked Vek stays down); Flying keeps "not given A.C.I.D." although the wiki text says both "not affected by A.C.I.D. tiles"
+and "not immune to A.C.I.D. pools" (marked unsure).
+
+## F13 Flying stands on mountains and enemy units
+Cards: Flying (keyword), so every flying unit (Alpha Hornet, Alpha Mosquito, Jet Mech, Swap Mech ...).
+Root cause: the text "can be positioned at any terrain tile, except mountains and other units. Mountains and unfriendly units
+can be overflown" was read as two more places to move onto; flying over is no place to stop.
+Same error elsewhere: no other game writes a can-move onto mountains or onto enemy units (flat_do query, every game).
+Fix: v51.py drops the can-move rows onto mountains and enemy units when the text says so. Case mtb1.
+
+## F14 "Shield adjacent ally or Building" picks one
+Cards: Repulse, Pulse Mech (Shield Friendly).
+Root cause: "Shield adjacent ally or Building" has no choice word; it shields every adjacent ally and building.
+Same error elsewhere: no other card of any game has a chosen help next to it with no choice word and "adjacent ally" in its text.
+Fix: v51.py makes it pick all. Pulse Mech -> Jet Mech and Rocket Mech now say "gives it Energy Shield". Case ntb7.
+
+## F15 Burrowers hit any 3 tiles around them
+Cards: Burrower, Alpha Burrower ("Slam against 3 tiles in a row"; wiki: "a 3-tile wide area in front of them").
+Root cause: "in a row" was read as 3 chosen tiles around it; it is the tile in front and its two sides.
+Same error elsewhere: Hornet Leader's "three tiles in a row" is ahead of it, as its text says; no other game.
+Fix: v51.py: damage to all on the tile in front and its sides. Case mtb2.
+
+## F16 "Increases area hit by 1 tile" read as wider pushes
+Cards: Explosive Goo, Techno-Scarab.
+Root cause: no value for a bigger hit area; readers wrote pushes within 2 tiles, which the text does not say.
+Same error elsewhere: only this game words an upgrade that way.
+Fix: param area (vocab v51): increase_effect params area 1. Case mtb3.
+
+## F17 Swap Mech "waits for your units getting Webbed"
+Cards: Swap Mech, Teleporter ("if you are webbed and swap places with another unit, the other unit will become webbed").
+Root cause: a condition that the card has a status it passes on was read as a status it wants (ask.py analyze: weak spot).
+Same error elsewhere: none in other games (flat_ref query).
+Fix: refs.py drops a "has status X" need when the same ability gives X to another. Squads with Swap Mech have no weak spot now.
+
+## F18 The deck explanation missed Smoke on tiles (F12 in ask.py analyze)
+Cards: Jet Mech, Thruster Mech and every weapon that puts a status on a tile.
+Root cause: F12 was fixed in network.py only; ask.py analyze reads flat_ref, where a keyword given to a tile had kind position.
+Same error elsewhere: Monster Train's one tile keyword (Molluscmage) now reaches units too; no deck line changed.
+Fix: refs.py writes a keyword given to a tile as given to the unit or structure on it (one rule for both); network.py's
+own copy removed. Rusting Hulks: "Enemy units get Smoke: made by Jet Mech. Use it: Rocket Mech". Case dtb01.
+
+## F19 The deck explanation fed Vek Hormones with my own damage (F11 in ask.py analyze)
+Cards: Gravity Mech (Vek Hormones) in Steel Judoka.
+Root cause: F11 was fixed in network.py only; deck_analysis did not check who must do it.
+Same error elsewhere: no other game's deck explanation changed (cases pass).
+Fix: deck_analysis.py: a trigger whose doer is an enemy is fed only by cards that make enemies act. Steel Judoka no longer
+says "Enemy units take damage: made by Judo Mech, Siege Mech. Use it: Gravity Mech".
