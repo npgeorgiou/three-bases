@@ -208,6 +208,9 @@ def build(c):
             if act == 'give_ability' and ev == 'given_keyword' and k == 'player': continue  # an ability given to the player is no keyword
             ins(card, o, v, ab, 'makes', ev, k, s, p, kwid.get(kwn[0].lower()) if kwn else kw, w=w, ref=cref)
         if act == 'strike' and to_k == 'player': ins(card, o, v, ab, 'makes', 'strikes_nexus', k or 'unit', s or 'mine', p)
+        if act == 'swap' and (to_k or to_p):  # "swap places with a nearby tile" (Swap Mech): the unit there moves too
+            for ev in ('moves', 'moves_onto'):
+                ins(card, o, v, ab, 'makes', ev, 'unit_or_structure' if to_k in ('position', None) else to_k, to_s or '', to_p or 'chosen', w=to_w)
         if act == 'keyword_action' and cref:  # a card planted or placed to go off later (a trap, a Chime): it goes off
             ins(card, o, v, ab, 'makes', 'trap_activated', 'card', s, None, w=f'card is {cref}', ref=cref)
         if kw and act in ('keyword_action', 'give_keyword'):  # what the keyword itself is (Predict: predicts)

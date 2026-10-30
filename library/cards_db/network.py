@@ -312,6 +312,10 @@ def lines_of(c, game):
                 if mpick == 'self':  # what a card does to itself feeds only a need its own kind fits ("the strongest friendly Dragon")
                     own = ';'.join(p for p in (tw or '').split(';') if p.split(' ')[:2] in (['type', 'is'], ['type', 'in'], ['card', 'is'], ['name_has', 'is'], ['keyword', 'is']))
                     if own and not matches(c, game, cards[m], 'any', own): continue
+                if mpick == 'self' and role == 'state' and h in ('moves', 'moves_onto') and tpick != 'self' and ts_ != 'mine': continue
+                if role == 'state' and h in ('moves', 'moves_onto') and place_of(tw) == 'on the space it picks': continue  # any space
+                # it picks (Chromatic Cold): where units stand does not matter to it
+                # a card that only moves itself (Ice Mech's Flying) puts itself, not enemies, where another card hits
                 if h == 'survives_damage' and tpick == 'self' and lethal(m, t): continue
                 if h == 'dies' and tpick == 'self' and m in hits and m not in killers and weak(m, t): continue  # 1 damage kills no 4-health unit
                 if h == 'stat_changed' and role == 'condition' and stat_need.get(t) and stat_made.get(m) and \
@@ -605,7 +609,8 @@ def place_of(w):
         of = b[4:] if b[3:4] == ['of'] else []
         x = ('it' if not of or of[0] == 'self' else 'its target' if of[0] == 'it' else
              'your leader or base' if of[:2] == ['player', 'mine'] else 'the enemy leader or base' if of[:2] == ['player', 'enemy'] else
-             'a space' if of[0] == 'position' else 'another card')
+             'a space it picks' if of[0] == 'position' else 'a card it picks')
+        if b[2] == 'same_space' and x in ('a space it picks', 'its target'): return 'on the space it picks'
         xs = {'it': 'its', 'its target': "its target's"}.get(x, x + "'s")
         return MOVE_PLACE.get(b[2], b[2].replace('_', ' ') + ' {x}').format(x=x, xs=xs)
     return None

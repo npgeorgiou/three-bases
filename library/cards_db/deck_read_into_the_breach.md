@@ -80,13 +80,18 @@ into another mech's line of fire is help. These lines stay; the family is decide
 Kaptain (30 Oct 2026, after the F8-F12 fix): "makes enemy units move" did not say why. Every such line, in every game, now
 says both halves: "moves units; what it does depends on where they stand (in a line from it or next to its target)"
 (network.py moves_said, merge_places: one reason per pair, every place joined). Only the words changed, no line.
+Reading every line again after that showed three more errors of the same family, fixed in every game: a card that only
+moves itself (Ice Mech's Flying, Thruster Mech, Tode the Elevated) puts no enemy where another card hits (gone: Ice Mech ->
+Mirror Mech, Thruster Mech -> Control Mech, Tode -> Ubass); a swap moves the unit swapped with too (refs.py: Swap Mech ->
+Flame, Laser, Ice, Meteor, Boulder Mech stay; new Hearth-Sister -> Warbird in Duelyst); a card that picks any space
+(Chromatic Cold) does not care where units stand.
 
 ## F8 "is a unit_or_structure it asks for" (49 lines; Stormbound 3 lines, Tode the Elevated)
 Lines: Combat Mech -> Artillery Mech, Walking Bomb -> Pierce Mech ...
 Root cause: network.py need_lines reads a position measured from another thing ("the tile beyond the pushed unit", of kind
 unit_or_structure) as a need for a card of that kind on my side; it skips kind unit (always there) but not unit_or_structure.
-Same error elsewhere: Stormbound, 3 lines to Tode the Elevated; no other game writes that kind in a position.
-Fix (v48): need_lines treats unit_or_structure like unit there. Gone: 49 Into the Breach lines, 13 Stormbound lines to
+Same error elsewhere: Stormbound, 13 lines to Tode the Elevated (all decks); no other game writes that kind in a position.
+Fix: need_lines treats unit_or_structure like unit there. Gone: 49 Into the Breach lines, 13 Stormbound lines to
 Tode the Elevated (all decks). Case ntb1.
 
 ## F9 "is a Mech it asks for" towards a passive that helps all Mechs (6 lines)
@@ -95,8 +100,8 @@ Lines: Swap Mech -> Flame Mech, Meteor Mech -> Flame Mech (Flame Shielding), Thr
 Root cause: network.py type line takes the passive's target type (Mech) as something it asks for; Kaptain's rule (30 Oct): a
 passive that helps cards points from it to them, and those cards do not enable it. The help line (Flame Mech -> Swap Mech)
 is right.
-Same error elsewhere: to be measured (type lines whose card only gives to that type).
-Fix (v48): the type lines skip an effect that helps my cards: removing a status that is no buff (Fire, Smoke) and what a
+Same error elsewhere: Slay the Spire 49 lines ("is an Attack it asks for" to Strength cards); none in other games.
+Fix: the type lines skip an effect that helps my cards: removing a status that is no buff (Fire, Smoke) and what a
 helping keyword the card gives does (Fire Immunity, Boost). A keyword's concept now comes from the game's own vocab entry
 first (into_the_breach:Boost is a buff; another game's Boost is not). Same error in Slay the Spire: 49 "is an Attack it asks
 for" lines to Strength cards are gone (NEXT_CHAT family 1); the help lines it wants are still missing there. Case ntb2.
@@ -106,8 +111,8 @@ Lines: Leap Mech -> Nano Mech, Unstable Mech -> Nano Mech "triggers: kills your 
 deals a killing blow: the lines should be Nano Mech -> Leap Mech and Nano Mech -> Unstable Mech, "heals it when it kills".
 Root cause: a damage target with no side is read as my units, and the trigger's actor (a Mech) is not used to point the
 help at the killer.
-Same error elsewhere: to be measured (triggers on "killed" whose actor is a type of my units).
-Fix (v48): refs.py: on "killed" and "damaged" with no object, the actor is who does it, the victim is not said (also
+Same error elsewhere: Runeterra 3 new lines (LeBlanc level 2 counts damage you deal); Duelyst 1 (Spectral Blade).
+Fix: refs.py: on "killed" and "damaged" with no object, the actor is who does it, the victim is not said (also
 LeBlanc level 2 "each time you deal 15+ damage": damage dealers now feed it). network.py: a trigger that only helps the
 unit that did it (doer_help_abilities) waits for nothing; a help line goes from the card to the deck's cards of that kind
 that do it (doer_help_lines): Nano Mech -> Leap Mech and Unstable Mech "heals it when it kills". Case ntb3.
@@ -116,16 +121,16 @@ that do it (doer_help_lines): Nano Mech -> Leap Mech and Unstable Mech "heals it
 Lines: Judo Mech -> Gravity Mech, Siege Mech -> Gravity Mech "triggers: damages enemy units or players". Vek Hormones adds
 damage only when an enemy damages another enemy; the record says actor side enemy.
 Root cause: the line matches the event's object (enemy units) and does not check its actor.
-Same error elsewhere: to be measured (damaged triggers with an actor filter).
-Fix (v48): a trigger's actor side is kept; an enemy actor is fitted only by cards that make an enemy strike, attack or
+Same error elsewhere: no other game's lines changed.
+Fix: a trigger's actor side is kept; an enemy actor is fitted only by cards that make an enemy strike, attack or
 turn its attack. Cases ntb4, ntb6.
 
 ## F12 Statuses on tiles do not reach cards that ask for units with them (missing lines)
 Missing: Thruster Mech -> Smog Mech (Reverse Thrusters leaves Smoke; Nanofilter Mending repairs Mechs standing on Smoke),
 Defense Mech -> Laser Mech and Charge Mech (Shield Projector shields tiles).
 Root cause: give_keyword on kind position (tiles) is not read as giving it to the unit on that tile.
-Same error elsewhere: Faeria and Duelyst give nothing to spaces that units then ask for; to be measured.
-Fix (v48): a keyword given to a tile reaches the unit on it (lines_of and aimed_rows read kind position as
+Same error elsewhere: no other game's lines changed (Monster Train's one tile keyword feeds nothing in its decks).
+Fix: a keyword given to a tile reaches the unit on it (lines_of and aimed_rows read kind position as
 unit_or_structure). New: Thruster Mech -> Smog Mech (Smoke), Defense Mech -> Laser Mech and Charge Mech (Energy Shield),
 Jet Mech -> Rocket Mech (Smoke for Storm Generator). Case ntb5.
 
