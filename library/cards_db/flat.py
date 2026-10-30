@@ -185,9 +185,9 @@ RULES = [
     ('cant_attack', 'flat_do', "act='cant' and param_event='attacks' and coalesce(on_side,'')!='enemy'"),  # my own unit
     # the enemy stopped, by outcome (Kaptain 30 Oct 2026): can't attack or strike = deals no damage; can't attack and can't move,
     # or can't take its turn = can't act at all (Faeria "enemy creatures can't attack or move", Inscryption skips a turn)
-    # (not Taunt or Provoke: "can't attack anything but this" only picks what it attacks)
-    ('attack_lock', 'flat_do', "act='cant' and param_event in ('attacks','strikes') and on_side='enemy' and to_with is null"),
-    ('disable', 'flat_do', "act='cant' and on_side='enemy' and to_with is null and (param_event in ('turn_start','acts') or (param_event='attacks' and exists (select 1 from flat_do d2 where d2.card=flat_do.card and d2.ability=flat_do.ability and d2.act='cant' and d2.param_event='moves' and d2.on_side='enemy')))"),
+    # (not Taunt or Provoke: "can't attack anything but this" only picks what it attacks; not "can't attack this": it guards itself)
+    ('attack_lock', 'flat_do', "act='cant' and param_event in ('attacks','strikes') and on_side='enemy' and to_with is null and to_pick is null and to_kind is null and to_side is null"),
+    ('disable', 'flat_do', "act='cant' and on_side='enemy' and to_with is null and to_pick is null and to_kind is null and to_side is null and (param_event in ('turn_start','acts') or (param_event='attacks' and exists (select 1 from flat_do d2 where d2.card=flat_do.card and d2.ability=flat_do.ability and d2.act='cant' and d2.param_event='moves' and d2.on_side='enemy')))"),
     # staying power (Kaptain 30 Oct 2026): healing itself or my units every turn; can't die, or coming back when it dies
     ('regeneration', 'flat_do', "act='heal' and (on_pick='self' or coalesce(on_side,'')='mine') and coalesce(on_kind,'unit')!='player' and exists (select 1 from flat_when w where w.card=flat_do.card and w.ability=flat_do.ability and w.event in ('turn_start','turn_end','round_start','round_end'))"),
     ('cheat_death', 'flat_do', "(act='cant' and param_event='dies' and coalesce(on_side,'mine')!='enemy') or (act in ('summon','revive','return_to_hand','copy','return_card') and (card_ref=card or on_pick='self') and exists (select 1 from flat_when w where w.card=flat_do.card and w.ability=flat_do.ability and w.event='dies' and w.obj_pick='self'))"),

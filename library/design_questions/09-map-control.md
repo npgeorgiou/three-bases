@@ -14,7 +14,7 @@ Songhai Empire (117 cards): zone_control 2, movement 14
   Dusk Rigger: Backstab: (2). Whenever this backstabs, put a MECHAZ0R Progression into your action bar.
   Flicker: Teleport your General to a space behind an enemy.
   Juxtaposition: Switch positions between ANY two minions.
-  works with: terrain (e.g. Sandswirl Reader -> Nocturne); flanking (e.g. Peacekeeper -> Scroll Bandit); lifesteal (e.g. Sanctify -> Munch)
+  works with: terrain (e.g. Sunrise Cleric -> Nocturne); flanking (e.g. Peacekeeper -> Scroll Bandit); lifesteal (e.g. Aperion's Claim -> Munch)
 ## faeria
 Pandora (40 cards): zone_control 7, movement 12
   Jeweled Magpie: Flying, Haste Whenever this attacks a god, add a random Treasure to your hand.
@@ -26,7 +26,7 @@ Yellow (72 cards): zone_control 11, movement 42
   Demonic Salmon: Haste, Flying, Charge 2 Can't harvest faeria. Whenever this attacks a god, it gains +1/+1.
   Flash Salmon: Divine, Flying, Haste, Charge 2 Can't harvest faeria. At the end of your turn, destroy...
   Khalim's Skyguard: Flying Can be summoned adjacent to friendly creatures.
-  works with: cost_reduction (e.g. Magda, Queen of Meroval -> Gemshell Tortoise); terrain (e.g. Yak Attack -> Path to Paradise); territory_trigger (e.g. Annoying Gnat -> Solem)
+  works with: cost_reduction (e.g. Gagana, Rainbow Birdship -> Gemshell Tortoise); terrain (e.g. Yak Attack -> Path to Paradise); territory_trigger (e.g. Khalim, Sky Prodigy -> Solem)
 ## inscryption
 Beast (122 cards): zone_control 0, movement 18
   Bloodhound: Keywords: Guardian.
@@ -77,7 +77,7 @@ Swarm (34 cards): zone_control 1, movement 5
   Head Start: Spawn a 5/6/7/8/9 strength Satyr on a random tile in your furthest row
   Herald’s Hymn: Give 2/3/4/5/6 strength to a target friendly unit. Command friendly units in its row...
   Lasting Remains: After attacking, move forward
-  works with: attack_now (e.g. Chateau de Cardboard -> Hair-Raising Cats); activated (e.g. Slyboots -> Temple of the Mind); removal (e.g. Slyboots -> Temple of the Mind)
+  works with: attack_now (e.g. Chateau de Cardboard -> Hair-Raising Cats); activated (e.g. Catnip’s Charm -> Temple of the Mind); removal (e.g. Catnip’s Charm -> Temple of the Mind)
 ## sts1
 Defect (89 cards): zone_control 0, movement 23
   Ball Lightning: Deal 7 damage. Channel 1 Lightning.

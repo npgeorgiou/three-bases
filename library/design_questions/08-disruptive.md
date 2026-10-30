@@ -20,21 +20,17 @@ Green (72 cards): disruption 0, suppress 12
   Flowersilk Faerie: Flying The first time you draw an event, this gains +1/+4, Taunt and Charge 2.
   Grove Guardian: Taunt
   Haunted Willow: Taunt
-Yellow (72 cards): disruption 3, suppress 1
-  Amai Merchant: Flying Gift - Discover a card that costs 5 faeria or more. Add the 2 cards you didn't...
-  Barter: Discover an event from your opponent's deck. It becomes wild land and costs 2 faeria less.
-  Dustbringer Wraith: Corrupt - Increase the cost of each card in your opponent's hand by 1 faeria.
-  Iona, Beloved by All: Flying Can't be attacked.
+Red (72 cards): disruption 0, suppress 3
+  Devouring Plant: Taunt Production - Deal 2 damage to all adjacent enemy creatures.
+  Grim Guard: Taunt Combat - Deal 2 damage to your opponent.
+  Ogre Battler: Taunt
   works with: on_damaged (e.g. Imperial Drain -> Unlikely Hero); damage_reduction (e.g. Imperial Drain -> Shadowsilk Faerie); death_trigger (e.g. Imperial Drain -> Celeste, Crystal Dragon)
 ## inscryption
-Beast (122 cards): disruption 4, suppress 10
-  Aquasquirrel: Keywords: Waterborne.
+Beast (122 cards): disruption 4, suppress 1
   Cuckoo: Keywords: Airborne, Brood Parasite.
   Great Kraken: Keywords: Kraken Waterborne.
-  Great White: Keywords: Waterborne.
-Undead (24 cards): disruption 0, suppress 2
-  Drowned Soul: Keywords: Waterborne, Touch of Death.
-  Ghost Ship: Keywords: Waterborne, Skeleton Crew.
+  Pack Mule: Keywords: Sprinter, Uncuttable. Special behaviour: When a card perishes, player receives...
+  The Limoncello: Keywords: Mighty Leap, Omni Strike, Made Of Stone, Uncuttable. Traits: Giant. Special...
 ## into_the_breach
 Brute (10 cards): disruption 0, suppress 2
   Jet Mech: Keywords: Flying. Health 2, move 4. Weapon: Aerial Bombs: Fly over a target, dropping an...

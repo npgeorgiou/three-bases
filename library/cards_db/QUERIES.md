@@ -158,18 +158,18 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 - attack_lock: duelyst 18 cards, monster_train 3 cards
 - cant_attack: duelyst 23 cards, into_the_breach 4 cards, monster_train 8 cards, runeterra 56 cards, stormbound 8 cards
 - passive: duelyst 23 cards, into_the_breach 4 cards, monster_train 8 cards, runeterra 88 cards, stormbound 8 cards
-- immobilize: duelyst 18 cards, stormbound 6 cards
 - cant_move: duelyst 3 cards, into_the_breach 2 cards
+- immobilize: duelyst 18 cards, stormbound 6 cards
 - stances: runeterra 9 cards
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: duelyst 3172 pairs, e.g. Soulburn Obelysk -> Khanuum-ka; faeria 1015 pairs, e.g. Feed the Forest -> Long-horned Yak; inscryption 466 pairs, e.g. Skeleton Crew -> Gift Bot; into_the_breach 10 pairs, e.g. Walking Bomb -> Ice Tile; monster_train 348 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 22558 pairs, e.g. Mordekaiser's Realm of Death -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
-- self_destruct: duelyst 1788 pairs, e.g. Soulburn Obelysk -> Khanuum-ka; faeria 653 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 431 pairs, e.g. Skeleton Crew -> Gift Bot; into_the_breach 8 pairs, e.g. Walking Bomb -> Ice Tile; monster_train 296 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 19820 pairs, e.g. Ekko -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Spare Dragonling
-- sacrifice: duelyst 1521 pairs, e.g. Soulburn Obelysk -> Khanuum-ka; faeria 387 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Gift Bot; into_the_breach 6 pairs, e.g. Arachnoid Mech -> Ice Tile; monster_train 305 pairs, e.g. Primordium -> Devourer of Death; runeterra 8133 pairs, e.g. Mordekaiser's Realm of Death -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
-- turn_end: duelyst 1814 pairs, e.g. Soulburn Obelysk -> Khanuum-ka; faeria 473 pairs, e.g. Flash Salmon -> Long-horned Yak; into_the_breach 6 pairs, e.g. Walking Bomb -> Ice Tile; monster_train 276 pairs, e.g. Primordium -> Devourer of Death; runeterra 19731 pairs, e.g. Ekko -> Bladepierced Revenant
-- activated: faeria 297 pairs, e.g. Doomgate, Door to Oblivion -> Long-horned Yak; inscryption 27 pairs, e.g. Master Bleene -> Gift Bot; into_the_breach 6 pairs, e.g. Walking Bomb -> Ice Tile; monster_train 210 pairs, e.g. Sacred Wicks -> Echowright; stormbound 20 pairs, e.g. Temple of the Mind -> Project PH03-NIX
-- removal: duelyst 568 pairs, e.g. Rasha's Curse -> Khanuum-ka; faeria 134 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Gift Bot; runeterra 5806 pairs, e.g. Mordekaiser's Realm of Death -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Project PH03-NIX
+- destroy: duelyst 3172 pairs, e.g. Lavastorm Obelysk -> Khanuum-ka; faeria 1015 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 466 pairs, e.g. Bad Fish -> Librarian; into_the_breach 10 pairs, e.g. Bomb Dispenser -> Ice Tile; monster_train 348 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 22558 pairs, e.g. Kalista -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- self_destruct: duelyst 1788 pairs, e.g. Lavastorm Obelysk -> Khanuum-ka; faeria 653 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 431 pairs, e.g. Bad Fish -> Librarian; into_the_breach 8 pairs, e.g. Bomb Dispenser -> Ice Tile; monster_train 296 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 19820 pairs, e.g. Kalista -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Vindictive Wretches
+- sacrifice: duelyst 1521 pairs, e.g. Lavastorm Obelysk -> Khanuum-ka; faeria 387 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Librarian; into_the_breach 6 pairs, e.g. Arachnoid -> Ice Tile; monster_train 305 pairs, e.g. Primordium -> Devourer of Death; runeterra 8133 pairs, e.g. Kalista -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- turn_end: duelyst 1814 pairs, e.g. Lavastorm Obelysk -> Khanuum-ka; faeria 473 pairs, e.g. Flash Salmon -> Long-horned Yak; into_the_breach 6 pairs, e.g. Bomb Dispenser -> Ice Tile; monster_train 276 pairs, e.g. Primordium -> Devourer of Death; runeterra 19731 pairs, e.g. Kalista -> Bladepierced Revenant
+- activated: faeria 297 pairs, e.g. Doomgate, Door to Oblivion -> Long-horned Yak; inscryption 27 pairs, e.g. Master Bleene -> Librarian; into_the_breach 6 pairs, e.g. Bomb Dispenser -> Ice Tile; monster_train 210 pairs, e.g. Steel Pulleyclaw -> Echowright; stormbound 20 pairs, e.g. Temple of the Mind -> Embers of Chaos
+- removal: duelyst 568 pairs, e.g. Rasha's Curse (follow-up) -> Khanuum-ka; faeria 134 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Librarian; runeterra 5806 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Embers of Chaos
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -231,8 +231,8 @@ select distinct card from flat_do where act='copy_keywords'
 - duelyst Songhai Empire: flanking (14), temporary_buff (5), on_spell (12), generate_cards (10), trap_secret (4)
 - duelyst Vetruvian Imperium: rows (9), self_destruct (9), merge_attach (6), steal (6), haste (14)
 - duelyst Abyssian Host: other_death_trigger (11), terrain (14), sacrifice (12), destroy (21), stat_loss (4)
-- duelyst Magmar Aspects: cheat_death (9), revive (8), attack_lock (4), permanent_growth (14), disable (4)
-- duelyst Vanar Kindred: territory_trigger (7), disable (11), base_resource_gain (4), resource_gain (4), cant_move (4)
+- duelyst Magmar Aspects: cheat_death (9), attack_lock (4), revive (8), permanent_growth (14), disable (4)
+- duelyst Vanar Kindred: territory_trigger (7), disable (11), base_resource_gain (4), resource_gain (4), attack_lock (6)
 - duelyst Neutral: deck_modification (6), quests (5), random_ability (6), ranged (18), copy (16)
 - duelyst Boss: merge_attach (4), multi_attack (6), turn_start (16), area_templates (6), revive (6)
 - duelyst Tutorial: on_play (4)

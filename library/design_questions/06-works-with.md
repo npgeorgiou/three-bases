@@ -3,17 +3,17 @@
 `ask.py all feeds damage_over_time`
 
 ```
-on_kill: monster_train 294 pairs, e.g. Glugsider -> Hornbreaker Prince; stormbound 6 pairs, e.g. Toxic Sacrifice -> Spellbinder Zhevana; sts1 78 pairs, e.g. Catalyst -> Sunder
-turn_start: into_the_breach 111 pairs, e.g. Thermal Discharger -> Fire; stormbound 31 pairs, e.g. Acid Greenhorns -> Xuri, Lord of Life; sts1 259 pairs, e.g. Deadly Poison -> The Specimen
-other_death_trigger: monster_train 120 pairs, e.g. Kinhost Vessel -> Wickless Baron; sts1 37 pairs, e.g. Deadly Poison -> The Specimen
-on_damaged: into_the_breach 398 pairs, e.g. Thermal Discharger -> Fire; stormbound 68 pairs, e.g. Toxic Sacrifice -> Wrinkled Foretopmen
-shop_gold: monster_train 63 pairs, e.g. Kinhost Vessel -> Paraffin Thug; sts1 27 pairs, e.g. Catalyst -> Hand of Greed
-aoe_damage: into_the_breach 143 pairs, e.g. Thermal Discharger -> Fire; sts1 33 pairs, e.g. Catalyst -> Corpse Explosion
+on_kill: monster_train 294 pairs, e.g. Glugsider -> Hornbreaker Prince; stormbound 6 pairs, e.g. Toxic Sacrifice -> Spellbinder Zhevana; sts1 78 pairs, e.g. Noxious Fumes -> Hand of Greed
+turn_start: into_the_breach 111 pairs, e.g. Thermal Discharger -> Fire; stormbound 31 pairs, e.g. Acid Greenhorns -> Function Wilds; sts1 259 pairs, e.g. Noxious Fumes -> The Specimen
+other_death_trigger: monster_train 120 pairs, e.g. Kinhost Vessel -> Memories of the Melted; sts1 37 pairs, e.g. Noxious Fumes -> The Specimen
+on_damaged: into_the_breach 398 pairs, e.g. Thermal Discharger -> Fire; stormbound 68 pairs, e.g. Toxic Sacrifice -> Earthfathers
+shop_gold: monster_train 63 pairs, e.g. Kinhost Vessel -> Paraffin Thug; sts1 27 pairs, e.g. Noxious Fumes -> Hand of Greed
+aoe_damage: into_the_breach 143 pairs, e.g. Thermal Discharger -> Fire; sts1 33 pairs, e.g. Noxious Fumes -> Corpse Explosion
 generate_cards: into_the_breach 10 pairs, e.g. Forest Tile -> Marked tile; monster_train 59 pairs, e.g. Titanstooth -> Shardtail Queen
 death_trigger: into_the_breach 20 pairs, e.g. Forest Tile -> Ice Tile; stormbound 81 pairs, e.g. Acid Greenhorns -> Green Prototypes
-base_resource_gain: into_the_breach 10 pairs, e.g. Forest Tile -> Mafan; sts1 164 pairs, e.g. Catalyst -> Gremlin Horn
+base_resource_gain: into_the_breach 10 pairs, e.g. Forest Tile -> Mafan; sts1 164 pairs, e.g. Noxious Fumes -> Gremlin Horn
 area_templates: stormbound 4 pairs, e.g. Acid Greenhorns -> Temple of Life
-damage: sts1 296 pairs, e.g. Deadly Poison -> The Specimen
+damage: sts1 296 pairs, e.g. Noxious Fumes -> The Specimen
 copy: monster_train 32 pairs, e.g. Echowright -> Morselmaster; stormbound 8 pairs, e.g. Acid Greenhorns -> Temple of Life
 ```
 
