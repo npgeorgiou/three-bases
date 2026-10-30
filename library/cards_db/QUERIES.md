@@ -18,7 +18,7 @@ select distinct card from flat_concept where concept in ('disable','cant_attack'
 - monster_train: 43 cards: Alloyed Construct, Ambient Charge, Bone Dog's Favor, Bounty Stalker, Cuttlehex, Dante's Candle, Dazed, Deadweight ...
 - runeterra: 463 cards: Abyssal Eye, Abyssal Guard, Acolyte's Reliquary, Acorn, the Hextechnician, Ahri (level 2), Airis, Altar to Unity, Amalgamation Of Vile Rites ...
 - stormbound: 9 cards: Blizzard Bombs, Freeze, Frosthexers, Glacier Palace, Iceflakes, Icicle Burst, Midwinter Chaos, Moment’s Peace ...
-- sts1: 56 cards: Ascender's Bane, Barricade, Battle Trance, Blasphemy+, Blur, Bronze Automaton, Bullet Time, Burn ...
+- sts1: 57 cards: Ascender's Bane, Barricade, Battle Trance, Blasphemy+, Blur, Bronze Automaton, Bullet Time, Burn ...
 
 ## Payoffs: cards that benefit from my other units dying, any way (trigger, condition, count, dead allies picked)
 
@@ -149,7 +149,7 @@ select distinct card from flat_do where params glob '*=[a-z]*'
 - monster_train: 166 cards: A Fatal Melting, Adaptive Mutation, Alloy of the Ancients, Alloyed Construct, Ambient Charge, Ancient Resonance, Ancient Synergy, Apex Imp ...
 - runeterra: 698 cards: Absorb Soul, Abyssal Eye, Abyssal Guard, Acolyte's Reliquary, Acorn, the Hextechnician, Adnere's Aviarists, Advance, Advanced Intel ...
 - stormbound: 56 cards: Agile Warriors, Amberhides, Awakening of the Will, Beards of Crowglyph, Bigthrust Tigers, Blizzard Bombs, Booming Professors, Brood Sages ...
-- sts1: 336 cards: Acid Slime (L), Acid Slime (M), Acid Slime (S), After Image, After Image+, Aggregate, Anchor, Armaments ...
+- sts1: 337 cards: Acid Slime (L), Acid Slime (M), Acid Slime (S), After Image, After Image+, Aggregate, Anchor, Armaments ...
 
 ## Mechanics, not cards
 
@@ -164,12 +164,12 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- self_destruct: duelyst 692 pairs, e.g. Windstorm Obelysk -> Darkspear Zane; faeria 576 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 350 pairs, e.g. Mage Pupil -> The Walkers; into_the_breach 32 pairs, e.g. Blob -> Ice Tile; monster_train 241 pairs, e.g. Bog Chrysalis -> Kinhost Vessel; runeterra 6554 pairs, e.g. Shark Chariot -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Snowmasons
-- destroy: duelyst 2211 pairs, e.g. Windstorm Obelysk -> Darkspear Zane; faeria 932 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 385 pairs, e.g. Mage Pupil -> The Walkers; into_the_breach 84 pairs, e.g. Blob -> Ice Tile; monster_train 290 pairs, e.g. Bog Chrysalis -> Kinhost Vessel; runeterra 11112 pairs, e.g. Shark Chariot -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
-- sacrifice: duelyst 1511 pairs, e.g. Windstorm Obelysk -> Darkspear Zane; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> The Walkers; into_the_breach 8 pairs, e.g. Arachnoid -> Boom Artillery; monster_train 286 pairs, e.g. Primordium -> Devourer of Death; runeterra 5631 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
-- revive: inscryption 27 pairs, e.g. Necromancer -> The Walkers; runeterra 1008 pairs, e.g. Chronobreak -> Bladepierced Revenant; stormbound 38 pairs, e.g. Project PH03-NIX -> Snowmasons
-- removal: faeria 131 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> The Walkers; into_the_breach 48 pairs, e.g. Tentacles -> Ice Tile; monster_train 38 pairs, e.g. Wicked Blaze -> Little Fade; runeterra 2026 pairs, e.g. Kindred's Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Temple of the Mind -> Project PH03-NIX
-- aoe_damage: inscryption 105 pairs, e.g. Bomb Latcher -> Shield Latcher; into_the_breach 424 pairs, e.g. Thermal Discharger -> Boom Cannon; runeterra 2572 pairs, e.g. Anivia -> Bladepierced Revenant; stormbound 229 pairs, e.g. Crimson Sentry -> Green Prototypes
+- self_destruct: duelyst 692 pairs, e.g. Fireblaze Obelysk -> Darkspear Zane; faeria 576 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 350 pairs, e.g. Skeleton Crew -> Rat King; into_the_breach 32 pairs, e.g. Walking Bomb -> Boom Laser; monster_train 241 pairs, e.g. Bogdeep Cocoon -> Kinhost Vessel; runeterra 6554 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
+- destroy: duelyst 2211 pairs, e.g. Fireblaze Obelysk -> Darkspear Zane; faeria 932 pairs, e.g. Feed the Forest -> Long-horned Yak; inscryption 385 pairs, e.g. Skeleton Crew -> Rat King; into_the_breach 84 pairs, e.g. Tentacles -> Boom Laser; monster_train 290 pairs, e.g. Bogdeep Cocoon -> Kinhost Vessel; runeterra 11112 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- sacrifice: duelyst 1511 pairs, e.g. Fireblaze Obelysk -> Darkspear Zane; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Rat King; into_the_breach 8 pairs, e.g. Arachnoid -> Large Goo; monster_train 286 pairs, e.g. Primordium -> Devourer of Death; runeterra 5631 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- revive: inscryption 27 pairs, e.g. Necromancer -> Rat King; runeterra 1008 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 38 pairs, e.g. Project PH03-NIX -> Blizzard Bombs
+- removal: faeria 131 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Rat King; into_the_breach 48 pairs, e.g. Tentacles -> Boom Laser; monster_train 38 pairs, e.g. Shroud Spike -> Little Fade; runeterra 2026 pairs, e.g. Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Temple of the Mind -> Project PH03-NIX
+- aoe_damage: inscryption 105 pairs, e.g. Bomb Latcher -> Shield Latcher; into_the_breach 424 pairs, e.g. Thermal Discharger -> Boom Cannon; runeterra 2572 pairs, e.g. Anivia (level 2) -> Shackled Ghasts; stormbound 229 pairs, e.g. Crimson Sentry -> Green Prototypes
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -194,7 +194,7 @@ Supports your units (stats, protection, combat keywords): Lucian, Piercing Darkn
 Card flow (draw, create, choose): Glimpse Beyond, Lonely Chimeslime, Senna, Spirit Leech.
 Puts extra units into play: Cursed Keeper, Hapless Aristocrat, The Undying.
 Units that support cards can target: 9 (Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, Lucian, Ravenous Butcher, Senna, Senna, Sentinel of Light, Spirit Leech, The Undying).
-Key cards (in most of the plan): Senna, The Ruination, Spirit Leech, Crumble, Ravenous Butcher.
+Key cards (in most of the plan): Senna, Spirit Leech, The Ruination, Crumble, Ravenous Butcher.
 Weak spots: none found.
 ```
 
@@ -277,7 +277,7 @@ select distinct card from flat_do where act='copy_keywords'
 - sts1 Watcher: stances (22), leave_trigger (6), retain (11), information (4), recycle (5)
 - sts1 Defect: movement (23), slots_queue (26), repeat_trigger (31), card_presence_condition (25), forced_movement (29)
 - sts1 Ironclad: attack_gain (8), aoe_damage (7), exhaust (26), debuff (7), tribal (17)
-- sts1 Colorless: cost_set (11), retain (5), exhaust (32), activated (30), cant_attack (10)
+- sts1 Colorless: cost_set (11), retain (6), exhaust (33), activated (31), cant_attack (11)
 
 ## Created-card chains (A creates B, B creates C)
 

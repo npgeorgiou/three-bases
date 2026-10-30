@@ -226,7 +226,12 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
 9. **Deck networks** (`network_page.py` draws every deck in decks.tsv and cases/decks.tsv; `ask.py <game> network "<deck>"`).
    First read ALL decks and write every wrong or missing line into `deck_read_<game>.md` (deck, from, to, what is wrong);
    only then group them into families and fix each family once:
-   find full decks first (players' guides, deck sites, deck codes; full lists, not a guide's core cards). A full deck has
+   **find at least 20 decks for the game (Kaptain, 30 Oct 2026), with a good spread over its factions and its mechanics**
+   (count the factions the decks cover, and add decks for the factions and kinds of play that have few or none; Duelyst:
+   every General's faction, Runeterra: every region; a list Kaptain gives is used whole, and a name cut short by a page is
+   matched to the real card, never dropped). Find full decks first (players' guides, deck sites, deck codes; full lists,
+   not a guide's core cards; a roguelike's guide builds are core cards: the source column says so). The source column
+   starts with the URL (the page links its first word). A full deck has
    every copy: the counts add up to the deck size the game sets (Inscryption Act II battle decks: 20), and the source
    column says the counts and the size; decks.tsv lists each card once. A roguelike's starter deck (Inscryption Act I,
    Kaycee's Mod: 4 cards and a side deck) is where a run starts: keep it, marked as a starter, but it does not count
@@ -236,6 +241,13 @@ supplement_<game>.py, CHECK_20_<game>*). The shared files need care:
    found 15 gaps in 9 decks that 500 passing cases had not shown, and Claude's own read of 9 decks found 8 more families.
    Each gap is fixed for every card of every game (a rule, never one card), becomes a cases/network.tsv row, and its
    lesson is written in "Links the deck networks showed missing".
+   **Then the deck check (Kaptain, 30 Oct 2026; part of every import, and of every later network change):**
+   `deck_audit.py <game>` and read all of it, as "Audit every deck yourself" says: per deck the 3 most linked and the 3 least
+   linked cards with every line and the cards they link to, 10 other cards at random (should one of them be linked with a
+   least linked card?), and 10 other random lines, each checked yourself against both
+   card texts. Every mistake found is fixed generally: by its cause, in the shared rule, for every game, and before fixing,
+   ask what else the same cause breaks outside the decks (the decks show only a tiny part of each game). Dump before and
+   after, read the diff, add a case. A game is not done before its deck check is written in deck_read_<game>.md.
 
 ### 3. Case tests (`cases/`)
 - mechanics.tsv: a question, the expected cards from the texts (regex on the text, or a Keywords-field keyword) and the
@@ -268,7 +280,7 @@ between two cards make sense to a player. Every point he finds is fixed as "Fixi
 audit_text.py and audit_links.py print nothing unexplained; the keyword -> concept list checked twice and shown
 to Kaptain; word check 0 open flags; no proposal need shared by cards with different texts; stubs only names nothing
 defines; `ask.py all compare <its main concepts>` shows its cards next to the other games'; every guide deck explained;
-Kaptain approved CHECK_20_<game> (or, for a game he does not know, Claude's check in deck_read_<game>.md); at least 10 full decks' networks read card by card (step 2.9)
+Kaptain approved CHECK_20_<game> (or, for a game he does not know, Claude's check in deck_read_<game>.md); at least 20 decks found with a spread over factions and mechanics, at least 10 full decks' networks read card by card and the deck check done (step 2.9)
 and its gaps fixed; RESULTS.md and HANDOFF.md say the state; everything pushed. After his approval, add a few
 approved records to BRIEF.md under "Game words: <game>" as worked examples.
 
@@ -354,7 +366,8 @@ Kaptain checks a few decks and finds errors a player sees at once. Before showin
 
 **Audit every deck yourself (Kaptain, 30 Oct 2026; every worker, every game, after building or changing the networks, before
 showing Kaptain anything):** run `python3 deck_audit.py <game> > audit.txt`. For EACH deck it prints (1) the 3 most linked
-cards with every line and the other card's text, (2) the 3 least linked cards the same way, (3) 10 other lines at random,
+cards with every line and the other card's text, (2) the 3 least linked cards the same way, plus 10 other cards of the deck at random with their texts (should one of
+them be linked with a least linked card?), (3) 10 other lines at random,
 with both texts. Read every printed line against both card texts as a player: is the line true, is its kind right (triggers,
 enables, makes stronger, makes cheaper ...), is its wording right, and what does a least-linked card obviously need or give
 that no line shows? Every error found is fixed the way "Fixing a review" says: by its cause, in the shared rule, for every

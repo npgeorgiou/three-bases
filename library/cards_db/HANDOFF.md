@@ -1,4 +1,4 @@
-# Handoff: card database (30 Oct 2026, v53)
+# Handoff: card database (30 Oct 2026, v54)
 
 > **CHECKING AFTER A CHANGE: LOAD THE DATABASE ONCE. NEVER RUN `run.py <game>` ONCE PER GAME.**
 > Every `run.py` reloads ALL eight games (load.py loads every game, every time). Eight runs = eight reloads = over an hour
@@ -7,7 +7,8 @@
 > cards.sqlite). Then `dump_lines.py` before/after (PROCESS "Fixing a review").
 
 > **AFTER EVERY NETWORK BUILD OR CHANGE: `deck_audit.py <game>` AND READ IT (PROCESS "Audit every deck yourself").** For every
-> deck: the 3 most and 3 least linked cards with all their lines, and 10 random lines, each checked against the card texts.
+> deck: the 3 most and 3 least linked cards with all their lines, 10 other random cards (should one be linked with a least
+> linked card?), and 10 random lines, each checked against the card texts.
 > Fix what you find by its cause, for every game, and ask what else that cause breaks outside the decks. Kaptain must not be
 > the one who finds these.
 
@@ -26,7 +27,8 @@ steps once, in order. The order that saves the most time:
    `library/tools/games/<game>.md`. Research how the game works first (fights, moves, boards, statuses, what cards put in
    play) and write it as game rules (step 0.10). Every card of every guide deck must be a card of the game (`audit_links.py`
    check 5): if not, build the supplement first. Read 20 cards' source boxes and their keyword definitions field by field.
-   Decks: full ones with counts if they exist (step 2.9); a guide's core cards is no full deck: mark it so.
+   Decks: at least 20, spread over the game's factions and mechanics; full ones with counts if they exist (step 2.9); a
+   guide's core cards is no full deck: mark it so. After the networks are built: the deck check (`deck_audit.py`, box above).
 2. **Readers** get READER_PROMPT.md unchanged; BRIEF.md reading rules are what they follow. Fix what they get wrong by rule
    scripts over the texts (`fixes/<game>/vNN.py`, safe to run twice, each file keeps its own JSON form), never by re-reading.
 3. **After readers, before any fix:** one pass that lists everything wrong (all decks with `deck_lines.py`, `deck_audit.py`,
@@ -48,7 +50,7 @@ steps once, in order. The order that saves the most time:
 
 ## State
 - Done and approved: Runeterra, Into the Breach (RESULTS.md). Slay the Spire: done (v49-v53), deck_read_sts1.md F1-F20,
-  every Kaptain point fixed by rule; open: Through Violence missing from the library (no reachable source).
+  every Kaptain point fixed by rule; Through Violence added from Kaptain's definition (supplement/sts1_kaptain.jsonl).
 - Waiting for Kaptain's check: Stormbound and Monster Train (CHECK_20_<game>.md), Faeria, Duelyst (CHECK_20, CONCEPTS);
   Inscryption reviewed (deck_read_inscryption.md).
 - Cases, all passing except: Stormbound 141 of 145, csb09-csb13 (poisoned-unit combos), which fail also without the Slay the

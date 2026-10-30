@@ -110,3 +110,13 @@ Claude, 30 Oct: nfa29 ("Archon must not move the Colossus into place") passed on
 ## Open
 - Kaptain 4: Shifting Tide -> Oasis Explorer: moving a land does not change land counts by the text (asked).
 - Gabrian Archon has Charge 2, so it "moves into place" for Wavecrash Colossus like the Jump frogs of Battle Toads (asked).
+
+## Deck check, 30 Oct 2026 (v54; 30 decks from Kaptain's list added, 42 in all)
+- Names cut short by the page, matched to the card by the part that was kept: Crystal Spirit -> Crystal Spice, Flight of the
+  Mask -> Flight of the Mantas, Gagana, Rainbow Birds -> Gagana, Rainbow Birdship, Oversky Township -> Oversky Towship,
+  Radiance, Scourge of the Sky -> Radiance, Scourge of Oversky, Sorocco, Fiery Beast -> Sorocco, First Mate (the only Sorocco).
+  "[NO DLC] Voice of Hunger Combo/Control" is the deck already listed as Voice of Hunger Control: not added twice.
+- F-own-life: Radiance, Imperial Airship (costs your Life) drew "moves it within reach of the enemy player" and "helps it hit
+  the enemy player" from every mover and attack buff: the help rule took damage to MY player as a hit on the enemy. Fixed in
+  network.py (HELPS loop: nexus_damaged on my side is never helped by attacks or moves), every game; 9 lines gone, all
+  Radiance's; case n241.

@@ -237,3 +237,5 @@ nst34	sts1	Defect Reprogram (highgroundgaming)	Melter	Claw	line	gets through	Kap
 nst35	sts1	Defect Claw (gamersdecide)	All for One	Claw	line	brings it back	Kaptain 30 Oct 2026: All for One returns all 0-cost cards; it aims at none
 nst36	sts1	Defect Claw (gamersdecide)	All for One	Claw	none	can bring it back	Kaptain 30 Oct 2026: not "can aim at it"
 nst37	sts1	Defect Lightning (highgroundgaming)	Zap	Thunder Strike	line	uses Lightning	Claude: Thunder Strike counts Lightning Channeled, not every Orb
+n240	duelyst	Brome Swarm	Warblade	Fealty	none		Claude deck check 30 Oct 2026: "each friendly minion nearby your General" is every minion; the place is no kind
+n241	faeria	Auroras Dreamer	Water Elemental	Radiance, Imperial Airship	none		Claude deck check 30 Oct 2026: Radiance wants your own Life low; moving toward the enemy god is no help

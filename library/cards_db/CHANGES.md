@@ -366,3 +366,8 @@ Each change: date, what changed, the card that caused it, and which records were
   nst34-nst37.
 - Docs: PROCESS.md split (PROCESS_LESSONS.md holds each import's and review's lessons, with "Importing Slay the Spire");
   HANDOFF.md and NEXT_CHAT.md rewritten for the next importing chat; README, RESULTS (Slay the Spire), tools/games/sts1.md.
+- v54 (30 Oct 2026): Through Violence from Kaptain's definition (supplement/sts1_kaptain.jsonl, read/sts1/batch_004.jsonl).
+  Decks: Duelyst +12 (deck codes), Faeria +30 (Kaptain's list), Monster Train +18 (guide core cards), Runeterra +6 (Ionia,
+  Shadow Isles, Targon, Shurima). PROCESS 2.9: at least 20 decks per game with a spread over factions and mechanics; the deck
+  check (deck_audit.py, now also 10 random other cards beside the least linked) is part of every import. network.py: a place
+  measured from something narrows no kind (Fealty); damage to my own player is not helped by attacks or moves (Radiance).

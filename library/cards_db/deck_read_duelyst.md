@@ -204,3 +204,11 @@ Fix: one rule per need; no second saying of the same fact; one link per pair who
 Root cause: v42's leader exemption (a need naming the leader keeps rule lines) took the player as the leader in every game.
 Same error elsewhere: Runeterra 17 "damages the enemy player (by fighting)" (Fortune Croaker -> Sejuani (level 2)).
 Fix: the exemption only in games with leader cards.
+
+## Deck check, 30 Oct 2026 (v54; 12 decks added from duelspot deck codes, 22 in all, every faction)
+- F-place: "each friendly minion nearby your General" (Fealty) drew "is a unit it asks for" from every minion: the place a
+  condition is measured from (of:kind is player) counted as narrowing the kind. Fixed in network.need_lines (as in line 663
+  already): what a place is measured from narrows nothing. 23 lines gone, only Fealty's; case n240.
+- Open (NEXT_CHAT): Conscript summons near the General but draws no line to Fealty.
+- Duelyst II deck codes (Vanar Walls 2, Mid Heal) decode to ids the original game lacks: left out (PROCESS_LESSONS "Decks from
+  deck codes").

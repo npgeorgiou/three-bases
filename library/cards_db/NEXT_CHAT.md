@@ -19,7 +19,12 @@ pointed at. **Your job is to find the errors he has not pointed at, before he lo
 ## Open work (not this chat's game unless asked)
 - Deck checks of the other games with `deck_audit.py`: another chat does them (Kaptain, 30 Oct 2026).
 - Stormbound csb09-csb13 (poisoned-unit combos) fail; Runeterra n56 must be rewritten (HANDOFF "State").
-- Slay the Spire: Through Violence is missing (no reachable source on 30 Oct 2026); add it to supplement_sts1.py when one is.
+- Deck check of 30 Oct 2026 (v54), open families (fix by cause, for every game):
+  - A card placed by its own text near the leader (Conscript: "summon a Crestfallen in front of your General") draws no line to
+    a card acting on units near the leader (Fealty); only moving cards do (Azurite Lion).
+  - "When you summon an Ephemeral ally, grant it +1|+0" (Moonlit Glenkeeper) links to non-Ephemeral units (Zed, Hecarim): the
+    state filter counts as possible because some card of the game gives Ephemeral, even when no card of the deck does.
+  - Adaptive Mutation (swap Attack and Health) shows only "can heal it" to Deranged Brute: the swap of stats has no link.
 - Monster Train has no full decks as text (players post screenshots): ask Kaptain.
 - Not linked on purpose (Claude's calls, keep unless Kaptain says otherwise): Janna's "the first 3 cards you draw cost 1
   less" (helps any card); Stormbound units moving forward each turn (every unit); plain single-target damage (Strike, Mystic

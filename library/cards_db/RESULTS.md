@@ -159,6 +159,6 @@ Kaptain's word), and 3 players' runs as played; a deck is each mech followed by 
 ## Quality
 - Word check 0 flags, text audit 0. Link audit: 4 findings, all explained: run events (rest sites, shops) are made by the
   run, not by cards; "dies (mine)" (Fairy in a Bottle, Lizard Tail) is my own death, which no card causes; "removed from
-  deck" (Parasite) is done by shops and events; Through Violence (made by Reach Heaven) is missing from the library.
+  deck" (Parasite) is done by shops and events; Through Violence (made by Reach Heaven) comes from Kaptain's definition (30 Oct 2026).
 - Orbs act through the cards that channel them (ms01-ms03): questions over damage, Block and energy find Zap, Glacier,
   Meteor Strike.

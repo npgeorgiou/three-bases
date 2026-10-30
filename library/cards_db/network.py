@@ -1024,7 +1024,8 @@ def need_lines(c, game, nodes, broad):
     for t, test, kind, side, op, n, w, pick_ in c.execute(f"""select card, test, of_kind, of_side, op, n, of_with, of_pick from flat_if where card in ({marks})
             and test in ('have','count','amount_count') and coalesce(of_side,'mine') in ('mine','any','')""", list(nodes)):
         if op == 'not' or (op in ('eq', 'le', 'lt') and not n): continue  # "no units around": nothing to feed
-        narrowed = any(p and p.split(' ')[0] not in PLAY_STATE + ('card',) and p.split(' ')[1:2] != ['not'] for p in (w or '').split(';'))  # "non-X" narrows nothing
+        # "non-X" narrows nothing; nor does what a place is measured from ("near your General": of:kind is player)
+        narrowed = any(p and not p.startswith('of:') and p.split(' ')[0] not in PLAY_STATE + ('card',) and p.split(' ')[1:2] != ['not'] for p in (w or '').split(';'))
         if kind is None and pick_ == 'it' and 'keyword is ' in (w or ''): kind = 'unit'  # "if that minion has Zeal": cards with Zeal
         if kind in KIND_CAT and kind != 'player' and (narrowed or kind != 'unit'): needs.append((t, kind, w))  # a player is always there
     # a keyword's effects acted on ("activate the effects of all traps"): the cards that carry the keyword
@@ -1153,6 +1154,8 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
         else: movers = helpers
         for t, ab, h, side, role, pick in needs:
             if h not in hs or side not in sides: continue
+            if h == 'nexus_damaged' and side == 'mine': continue  # my own player losing health (Radiance: costs your Life) is no hit
+            # on the enemy player: attacks and moves toward the enemy do not help it
             helpers_t = movers if pick != 'self' and h != 'harvests' else helpers  # "whenever THIS moves onto": only what moves it;
             # "my units harvest enemy wells": every mobile unit would link (noise, Gabrian Archon -> Wavecrash Colossus)
             if concepts == ('movement',):  # what it moves must be able to be this card ("give the Demon Wing Flying", "another Rakoan")

@@ -23,7 +23,7 @@ Made by `cases/run.py sts1`.
 | mx14 | a strike on the spaces beside the opposing one reaches other lanes (cross_lane, v38) | 0 | 0 | 100% | 0 | yes |
 | mx15 | within a circuit is a formation (link_formation, v38) | 0 | 0 | 100% | 0 | yes |
 | mx16 | more or faster base resource (base_resource_gain, v38) | 0 | 0 | 100% | 71 | yes |
-| ms01 | puts in an Orb that deals damage (Lightning, Dark): the card deals that damage | 15 | 15 | 100% | 211 | yes |
+| ms01 | puts in an Orb that deals damage (Lightning, Dark): the card deals that damage | 15 | 15 | 100% | 212 | yes |
 | ms02 | puts in Frost: the card gives Block through it | 8 | 8 | 100% | 99 | yes |
 | ms03 | puts in Plasma: the card gains energy through it | 3 | 3 | 100% | 68 | yes |
 
