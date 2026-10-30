@@ -188,3 +188,21 @@ ntb3	into_the_breach	Hazardous Mechs	Nano Mech	Leap Mech	line	heals it when it k
 ntb4	into_the_breach	Steel Judoka	Judo Mech	Gravity Mech	none	damages enemy units	Claude (v48, F11): Vek Hormones needs an enemy to damage another enemy
 ntb6	into_the_breach	Aegis Mech, Gravity Mech, Judo Mech	Aegis Mech	Gravity Mech	line	damages enemy units	Claude (v48, F11): Spartan Shield turns an enemy's attack onto other enemies, which sets off Vek Hormones
 ntb5	into_the_breach	Mist Eaters	Thruster Mech	Smog Mech	line	Smoke	Claude (v48, F12): Reverse Thrusters leaves Smoke; Nanofilter Mending repairs Mechs on Smoke
+nst01	sts1	Ironclad Pain (gamersdecide)	Reaper	Flex	none		Claude (v50 deck read): Flex gives Strength, which makes Attacks bigger; it asks for no Attack
+nst02	sts1	Ironclad Pain (gamersdecide)	Flex	Reaper	line	bigger	Claude (v50 deck read): Strength makes Reaper's damage bigger
+nst03	sts1	Silent Shiv (gamersdecide)	Shiv	Accuracy	none		Claude (v50 deck read): Accuracy makes Shivs bigger (one line, Accuracy -> Shiv)
+nst04	sts1	Silent Poison (gamersdecide)	Burst	Catalyst	line	plays it again	Claude (v50 deck read): Burst plays the next Skill twice
+nst05	sts1	Silent Poison (gamersdecide)	Catalyst	Burst	none		Claude (v50 deck read): Burst asks for no Skill, it repeats one
+nst06	sts1	Ironclad Body Slam (highgroundgaming)	Shrug It Off	Ghostly Armor	none		Claude (v50 deck read): Ethereal's "still in hand" is a drawback, no hand to fill
+nst07	sts1	Silent Discard (gamersdecide)	Reflex	Gambling Chip	none		Claude (v50 deck read): Gambling Chip counts the cards it discards itself
+nst08	sts1	Defect Claw (fantasywarden)	Machine Learning	Void	none		Claude (v50 deck read): Void costs energy when drawn: it wants no draws
+nst09	sts1	Defect Claw (fantasywarden)	Hologram	FTL	none		Claude (v50 deck read): FTL draws only if fewer than 3 cards were played
+nst10	sts1	Ironclad Pain (gamersdecide)	Flame Barrier	Rupture	none		Claude (v50 deck read): Flame Barrier hits the attacker, an enemy
+nst11	sts1	Watcher Stance Change (highgroundgaming)	Bottled Flame	Kunai	none		Claude (v50 deck read): Bottled Flame picks an Attack already in the deck; it makes none
+nst12	sts1	Watcher Conjure Blade (slaythespire.info)	Chemical X	Miracle	none		Claude (v50 deck read): Chemical X boosts cost X cards only
+nst13	sts1	Watcher Conjure Blade (slaythespire.info)	Chemical X	Conjure Blade	line	bigger	Claude (v50 deck read): Conjure Blade costs X
+nst14	sts1	Defect Claw (fantasywarden)	All for One	Reinforced Body	none		Claude (v50 deck read): Reinforced Body costs X, not 0
+nst15	sts1	Ironclad Strength (gamersdecide)	Heavy Blade	Flex	none		Claude (v50 deck read): Strength affects Heavy Blade only; Flex -> Heavy Blade is the line
+nst16	sts1	Ironclad Exhaust (gamersdecide)	Barricade	Body Slam	line	keeps your Block	Claude (v50 deck read): Block kept is Block Body Slam counts
+nst17	sts1	Defect Orb (gamersdecide)	Electrodynamics	Tempest	line	Lightning	Claude (v50 deck read): Lightning hits all enemies; Tempest channels Lightning
+nst18	sts1	Watcher Stance Change (highgroundgaming)	Crescendo	Mental Fortress	line	Wrath	Claude (v50 deck read): entering Wrath is changing Stance

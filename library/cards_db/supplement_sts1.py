@@ -27,6 +27,8 @@ FULL; cards and their powers share card codes, so a partial supplement would dro
   name (Shiv, Burn, Wound).
 - Card kinds (Attack, Skill, Power, Status, Curse; the source's type) are the cards' types: "Whenever you play an Attack" is
   filter type Attack, never Runeterra's category skill.
+- X costs: the conversion wrote them as "-1 energy" (the game's code for X: Whirlwind, Skewer, Malaise ...): "X energy", no
+  number, so no "cost 0" filter matches them.
 Writes supplement/sts1.jsonl in the library's entities columns; ids from 7000001 in library order (source.py).
 Usage: supplement_sts1.py"""
 import json, os, re, sqlite3
@@ -93,6 +95,7 @@ def repair(r):
             if m and re.match(rf'^{word} (Block|damage)\.', t): t = re.sub(rf'^{word} ', f'{word} {m.group(1)} ', t)
         t = keywords_field(energy(t))
         r['subtypes'] = TYPES.get(r['source_type'])
+        if r['cost'] == '-1 energy': r['cost'], r['cost_num'] = 'X energy', None  # the wiki's module writes an X cost as -1
     elif r['category'] == 'relic' and r['name'] in RELICS:
         t = RELICS[r['name']]
     elif r['category'] == 'status':

@@ -1,5 +1,5 @@
 {"id":7000431,"abilities":[{"when":{"event":"exhausted","object":{"kind":"card","side":"mine"}},"do":[{"act":"damage","on":{"kind":"unit","side":"enemy","pick":"all","zone":"board"},"params":{"amount":3}}]}]}
-{"id":7000432,"abilities":[{"when":{"event":"always"},"do":[{"act":"increase_effect","on":{"kind":"card","side":"mine","pick":"all"},"params":{"amount":2}}]}],"unsure":["on"]}
+{"id":7000432,"abilities":[{"when":{"event":"always"},"do":[{"act":"increase_effect","on":{"kind":"card","side":"mine","pick":"all","with":[{"attr":"cost","op":"eq","n":{"x":"x_paid"}}]},"params":{"amount":2}}]}]}
 {"id":7000433,"abilities":[]}
 {"id":7000434,"abilities":[{"when":{"event":"turn_end","actor":{"kind":"player","side":"mine"}},"do":[{"act":"give_keyword","keyword":"Block","on":{"kind":"player","side":"mine"},"params":{"amount":{"x":"count","of":{"kind":"card","side":"mine","zone":"hand","pick":"all"}}},"lasts":"permanent"}]}]}
 {"id":7000435,"abilities":[{"when":{"event":"combat_start"},"do":[{"act":"give_keyword","keyword":"Artifact","on":{"kind":"player","side":"mine"},"params":{"amount":1},"lasts":"permanent"}]}]}

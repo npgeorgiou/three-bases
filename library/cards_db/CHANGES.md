@@ -326,3 +326,14 @@ Each change: date, what changed, the card that caused it, and which records were
   read/sts1/game_rules.jsonl has no record (no card category does anything its text does not say).
 - decks.tsv: 22 guide decks (guides' core cards and relics; no full end-of-run deck exists as text that can be reached here,
   and the game sets no deck size).
+
+## 30 Oct 2026, v50 (Slay the Spire deck read; shared code, every game checked)
+- Eight families of wrong or missing lines, each fixed once for every game (deck_read_sts1.md F1-F8): boosts read as needs
+  (statuses, repeats, keyword adders), the card itself in hand, cost filters on cards with no number and X costs, forced
+  energy loss, upper limits and Unplayable cards, the attacker's side, picks from my own deck, kept keywords / Orb rules /
+  Stances.
+- network.py: amount_kind, x_cost, boosts_it, keyword_adders, capped, unplayable; status boosts through uses_keyword in
+  aimed_rows; refs.py: the attacker of my side is an enemy. supplement_sts1.py: "-1 energy" is X. fixes/sts1/v50.py.
+- Dumps before and after: sts1 451 -> 456 lines (128 gone, 133 new, all read); every other game keeps its lines and pairs
+  (only the order of reason parts changed). Cases nst01-nst18. All games pass except Stormbound's four poison combo cases,
+  which failed before this work.

@@ -176,6 +176,9 @@ def build(c):
     # "the attacker", "that enemy" (pick actor): who it is is the event's actor (the counterattack rule strikes the enemy that
     # attacked, never my own unit)
     actor_of = {(a, b): (ak, as_) for a, b, ak, as_ in c.execute('select card, ability, actor_kind, actor_side from flat_when')}
+    # who attacks or damages what is mine, when the text names no side, is an enemy ("whenever you are attacked, deal 4 back")
+    hit_mine = {(a, b) for a, b in c.execute(f"""select card, ability from flat_when where event in ({','.join('?' * len(DONE_BY | {'damaged'}))})
+                and coalesce(actor_side,'')='' and (obj_side='mine' or obj_pick='self')""", sorted(DONE_BY | {'damaged'}))}
     entry_abs = {(a, b) for a, b in c.execute("select card, ability from flat_when where event in ('played','summoned') and obj_pick='self'")}
     ev_of = {(a, b): e for a, b, e in c.execute("select card, ability, event from flat_when where actor_pick='self' and obj_pick is null")}
     for r in c.execute('select card, origin, via, ability, act, on_kind, on_side, on_pick, on_zone, on_with, keyword_ref, card_ref, '
@@ -185,6 +188,8 @@ def build(c):
             s = 'enemy'  # "deal 2 to a creature" (either side): the player aims it at an enemy; it makes no friendly deaths
         if p == 'actor' and not (k or s): k, s = actor_of.get((card, ab), (None, None))
         if to_p == 'actor' and not (to_k or to_s): to_k, to_s = actor_of.get((card, ab), (None, None))
+        if p == 'actor' and not s and (card, ab) in hit_mine: s = 'enemy'
+        if to_p == 'actor' and not to_s and (card, ab) in hit_mine: to_s = 'enemy'
         if act == 'can' and k == 'player' and pev not in (None, 'played', 'summoned', 'targeted'):  # "you may replace an additional
             ins(card, o, v, ab, 'makes', pev, 'card' if pev in ('shuffled', 'drawn', 'discarded') else k, s or 'mine', None)  # card": more of it
         # "it" in an ability on my own attack, strike or damage ("Backstab: deals extra damage to it"; Touch of Death: "when this
