@@ -21,7 +21,7 @@ ARCHETYPE = {'swarm': ('summon', 'generate_cards', 'board_presence'), 'sacrifice
              'disruption': ('disruption', 'debuff'), 'trickery': ('stealth', 'trap_secret', 'information'), 'chaos': ('random_effect',),
              'card_advantage': ('card_advantage',), 'tribal': ('tribal',), 'objectives': ('zone_control', 'scoring_objectives'),
              'poison_attrition': ('damage_over_time',), 'transformation': ('transform', 'stances', 'merge_attach')}
-NOT_FACTION = ('boss', 'neutral', 'colorless', 'curse', 'status', 'token', 'event', 'shared', 'universal', '(none)')
+NOT_FACTION = ('boss', 'neutral', 'colorless', 'curse', 'status', 'token', 'event', 'shared', 'universal', '(none)', 'runeterra')  # Runeterra's own region is neutral (Kaptain)
 
 
 def cases(game):

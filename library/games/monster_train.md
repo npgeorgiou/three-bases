@@ -181,14 +181,14 @@ The real-world cases, one per line, tab-separated: `type  a  b  why  source` (se
 signature	Hellhorned	multi_attack	Multistrike	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
 signature	Hellhorned	temporary_buff	Rage	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
 signature	Hellhorned	tribal	Imps	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
-signature	Hellhorned	summon	Imp Parade makes Imps	https://progameguides.com/monster-train/best-builds-in-monster-train/
+signature	Hellhorned	generate_cards	Imp Parade (Shardtail Queen's upgrade path) adds Imps to hand; Kaptain 31 Oct	https://progameguides.com/monster-train/best-builds-in-monster-train/
 signature	Awoken	aoe_damage	Sweep	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
 signature	Awoken	tank	giant minions that protect others	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
 signature	Stygian Guard	damage_over_time	Frostbite	https://progameguides.com/monster-train/best-builds-in-monster-train/
 signature	Umbra	sacrifice	buffing units by killing other units	https://indiecator.org/2021/07/12/monster-train-my-favourite-clans/
 signature	Umbra	stat_gain	eating Morsels for their buffs	https://progameguides.com/monster-train/best-builds-in-monster-train/
 signature	Melting Remnant	death_trigger	minions with death abilities	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
-signature	Melting Remnant	revive	Reform	https://progameguides.com/monster-train/best-builds-in-monster-train/
+signature	Melting Remnant	recycle	Reform returns a dead unit to hand (back to hand is not revive, Kaptain 26 Oct)	https://progameguides.com/monster-train/best-builds-in-monster-train/
 signature	Melting Remnant	self_destruct	Burnout	https://progameguides.com/monster-train/best-builds-in-monster-train/
 signature	Melting Remnant	other_death_trigger	Harvest	https://indiecator.org/2021/07/12/monster-train-my-favourite-clans/
 signature	Wurmkin	buff	Infused cards and Eggs buff monsters	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/

@@ -135,7 +135,7 @@ signature	Beast	generate_cards	Warren puts a Rabbit in hand	https://primagames.c
 signature	Beast	evasion	Hawk hits past blockers	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Undead	cost_type	Bones	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Undead	resource_gain	Bones from Gravedigger and from cards that die	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
-signature	Magick	cost_type	Magick cards are paid with Mox gems	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
+# dropped 31 Oct (Kaptain): every Inscryption faction has its own cost	# signature	Magick	cost_type	Magick cards are paid with Mox gems	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Magick	draw	Blue Mage draws per Mox	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 combo	Necromancer	Right	the Obol dies twice	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
 combo	Warren	Rabbit	Warren supplies Rabbits	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide

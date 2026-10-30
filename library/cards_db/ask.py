@@ -158,7 +158,7 @@ def main():
             for i, regs in c.execute("select id, regions from card where game=? and is_keyword=0 and is_stub=0 and coalesce(category,'') not in "
                                      "('game_rule','ability','boss','monster','event','modifier')", (g,)):
                 k = sum(i in got[x] for x in args)
-                for r in [x for x in (regs or '').split(';') if x and not x.lower().startswith(('neutral', 'boss', 'any'))]:
+                for r in [x for x in (regs or '').split(';') if x and not x.lower().startswith(('neutral', 'boss', 'any')) and x != 'Runeterra']:
                     per.setdefault(r, [[0] * len(args), 0, []])
                     per[r][1] += 1
                     for j, x in enumerate(args): per[r][0][j] += i in got[x]

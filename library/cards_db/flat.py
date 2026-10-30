@@ -136,6 +136,8 @@ def build(c):
             ps = ';'.join(f'{pn}={num(a) if a else v}' for pn, a, v in c.execute('select param, amount, value from param where effect=?', (eid,))) or None
             concept = (tree.get(('keyword', kwname.get(kref, ''))) if kref else None) or tree.get(('act', act))
             if s == 'enemy': concept = ON_ENEMY.get(concept, concept)  # the same keyword used on an enemy (Ascend an enemy unit)
+            elif act == 'counter' and k == 'effect' and p == 'it':
+                concept = 'shield'  # cancels the next spell aimed at it (SpellShield): it guards one unit, it doesn't counter plays
             elif act == 'cant' and pe == 'given_keyword' and concept in HURTS:
                 concept = 'immunity'  # "can't be Webbed" guards my unit (Into the Breach Flying)
             elif concept in STOPS and (s == 'mine' or p == 'self') and card not in kwname:

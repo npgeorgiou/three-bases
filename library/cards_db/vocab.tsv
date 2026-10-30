@@ -300,7 +300,7 @@ keyword	Lifesteal	concept of having, using or giving this keyword	lifesteal		28 
 keyword	Drain	concept of having, using or giving this keyword	lifesteal		28 Oct 2026, v3
 keyword	Regeneration	concept of having, using or giving this keyword	regeneration		28 Oct 2026, v3
 keyword	Barrier	concept of having, using or giving this keyword	shield		28 Oct 2026, v3
-keyword	SpellShield	concept of having, using or giving this keyword	immunity		28 Oct 2026, v3
+keyword	SpellShield	concept of having, using or giving this keyword (negates the next enemy spell or skill: absorbs one hit, 31 Oct 2026)	shield		28 Oct 2026, v3
 keyword	Elusive	concept of having, using or giving this keyword	evasion	strikes_nexus	28 Oct 2026, v3
 keyword	Fearsome	concept of having, using or giving this keyword	evasion	strikes_nexus	28 Oct 2026, v3
 keyword	Brash	concept of having, using or giving this keyword	evasion		28 Oct 2026, v3
