@@ -11,6 +11,31 @@ One file per game: the game, its factions, the source summary, the mechanics (pa
 - Lose: the Power Grid (shared by the buildings) reaches 0; a mission is won by surviving its turns and meeting bonus objectives.
 - Specific: perfect information and deterministic attacks; once per battle the player can reset a turn.
 
+## The game's rules (from sources)
+Researched 30 Oct 2026 from the game's wiki (intothebreach.fandom.com, read through api.php) and Wikipedia's Gameplay section;
+each line names its page. Used for read/into_the_breach/game_rules.jsonl (cards_db PROCESS step 0.10).
+- How units fight: the player controls three mechs; each turn the player moves each mech and fires one of its weapons
+  (Wikipedia, Gameplay). Before the player's turn every active Vek moves to a tile and prepares to attack a tile, aiming for a
+  mech, a building or an objective; the attacks happen in the enemy turn unless cancelled or the Vek is killed first (wiki
+  Vek). The player sees the direction of each Vek's attack (Wikipedia). All weapons have friendly fire on unless they say
+  otherwise (wiki Weapons).
+- How units move: Move = how many tiles a mech can move each turn; Flying units can move over any terrain tile (wiki Mechs).
+  Mountains block movement and projectiles (wiki Mountain Tile); buildings block grounded movement and projectiles (wiki
+  Civilian Building).
+- How units reach things: most weapons push, pull or toss; a ground unit displaced into a Chasm is destroyed (wiki Chasm
+  Tile); most non-flying enemies die in Water, and Massive units (all player Mechs and boss Vek) stand in Water but cannot
+  attack (wiki Water Tile). Units pushed into other units take Push damage; Stable units cannot be pushed (wiki Status
+  Effects). With Force Amp (+1) a pull into the mech does 2 damage (wiki Force Amp), so a bump does 1.
+- What is attacked: damaging a Civilian Building lowers the Power Grid; the run is lost when it reaches 0 (wiki Civilian
+  Building, Grid Power). A battle is lost when all three mechs are disabled, the grid is lost or the objective fails
+  (Wikipedia). Health = how much damage a mech takes before it is disabled; a disabled mech cannot act unless repaired
+  (wiki Mechs).
+- Where units enter: Vek emerge from the ground on spawn tiles at the start of the enemy turn; a unit standing on one blocks
+  the Vek and takes 1 damage (wiki Vek, Spawn Tile). Gana's pilot skill "Deploy anywhere on the map" shows that mechs
+  normally deploy in a limited area; the area itself is not described by any page read (unknown). Deployed tanks, Walking
+  Bombs and Arachnoids are put on the board by the weapons that name them (wiki weapon pages).
+- Once per battle the player can reset a turn (wiki Reset Turn).
+
 ## Sources and notes
 
 Sources:

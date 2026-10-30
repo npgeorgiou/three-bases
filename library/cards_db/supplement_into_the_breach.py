@@ -142,7 +142,7 @@ def main():
     def add(name, cat, stype, fac, stats, text, cost=None):
         nonlocal i
         out.append({'game': G, 'ext_id': name, 'name': name, 'category': cat, 'source_type': stype, 'edition': None,
-                    'faction': fac, 'subtypes': None, 'rarity': None, 'cost': cost, 'cost_num': None,
+                    'faction': fac, 'subtypes': '["Mech"]' if stype.endswith('(mech) table, 30 Oct 2026 (supplement)') else None, 'rarity': None, 'cost': cost, 'cost_num': None,
                     'stats': json.dumps(stats) if stats else None, 'text': text, 'extra': None, 'variants': None, 'id': i})
         i += 1
         return i - 1

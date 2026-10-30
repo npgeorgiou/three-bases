@@ -518,3 +518,51 @@ decided by Claude from the game's own texts (open-duelyst: keyword definitions, 
   ability `{"when": {"event": "always"}, "do": [{"act": "give_keyword", "keyword": "<K>", "on": {"pick": "self"}, "params":
   {"amount": N}, "lasts": "permanent"}]}` (amount only for a number: Backstab 2, Build 1). "Give a minion Celerity this turn"
   = give_keyword, lasts this_round ("this turn" = this_round).
+
+## Game words: Into the Breach
+A squad of 3 mechs fights the Vek on an 8x8 grid of tiles. Mechs (category unit, the player's) carry their starting weapons
+and passive in their text ("Weapon: Titan Fist: ...", "Passive: Flame Shielding: ..."); weapons (category ability), passives
+(item) and pilots (hero) are also cards of their own. A weapon's or passive's "you", "the Mech", "the user", "self" = the unit
+that carries it (pick self); a pilot's "Mech" = the mech it pilots (pick self). Mapping decided by Claude from the game's wiki
+(Weapons, Mechs, Passives, Pilots, Status Effects, Abilities and status effects, Tiles pages; 30 Oct 2026).
+- Sides. Mechs, allied units and deployed tanks are side mine; Vek (category monster, boss) are side enemy. "Enemies", "Vek"
+  = kind unit, side enemy; "allies", "friendly units", "player units" = kind unit, side mine; "units", "a unit", "target"
+  (anything on a tile) = kind unit, no side. "Mechs" = units side mine with filter type Mech ("All Mechs"). "Grid Buildings",
+  "buildings" = kind landmark, side mine. The Power Grid / Grid Power is the player's life: kind player, side mine; "charge
+  the Power Grid 1 point" = heal on that player, amount 1.
+- Tiles. A tile = kind position. "Adjacent" = bordering (4 tiles); "nearby" = bordering unless a size is given; "in a line",
+  "a beam", "every tile it passes" = straight_line of self; "behind you" / "the tile behind" = behind of self; "in front" =
+  in_front of self; "to the left and right of X" = sides of X; "a row or column" = same_row / same_column; "anywhere on the
+  map" = kind position, no filter; "within N tiles", "N-tile range" = distance le N. A projectile or beam hits the first unit
+  in its straight line; artillery arcs to any tile in a straight line (this is how the weapon aims: write the target, never
+  the path).
+- Damage. "Damage: 2" = damage params amount 2 on what the weapon hits. "(1 to self)", "damaging self" = a second effect,
+  damage on self. "3-1", "1-3", "0 - 2" (damage that changes with distance or hits) = damage with params amount min and max
+  as the first number written, and add "unsure": ["params"] (no value says "damage that changes along the line" yet). "Damage: kills" = kill. "Building Immune" / "Ally Immune" = the target filter excludes landmarks / side mine.
+- Moves. "Push" a tile or unit = move on the unit there, "to" the bordering position away from the attacker; "pull" = move
+  towards; "toss", "throw", "grab and toss behind you" = move "to" behind of self; "swap places" = swap; "teleport", "leap",
+  "dash", "charge", "fly over" by the mech itself = move on self. "Flip its attack direction" = a
+  proposal (no value yet: propose "redirect_attack"). "Temporarily control a unit" = steal, lasts this_round. "Force a unit
+  to attack" = start_attack on it.
+- Statuses (keywords): Fire, Smoke, A.C.I.D., Frozen, Webbed, Shield (keyword Energy Shield), Boost. On a unit = give_keyword
+  with that keyword, lasts permanent unless the text says how long (Boost wears off by its own keyword record: lasts permanent). On tiles ("light tiles on Fire", "Smoke on 5 tiles", "Smoke behind the shooter", "A.C.I.D. pool")
+  = give_keyword on the positions. "Freeze" = give_keyword Frozen. "Repair" = heal (also of disabled Mechs); "repairs all
+  damage", "heal completely" = heal with amount `{"x": "stat", "attr": "health", "of": TARGET}`.
+- Ground. "Crack tiles" = set_terrain "to" a position with terrain cracked_space; "convert a liquid Tile to a Hole" = set_terrain
+  to chasm. Water = terrain ocean; Chasm = chasm.
+- Events. "On kill", "when they deal a killing blow", "if target is killed" = killed, actor self (the mech) and object the
+  target. "When repairing" = healed, actor self. "After attacking" = attack_done, actor self; "after Move" = moves_onto, object
+  self. "Every turn" (Vek or environment) = turn_start of the player whose turn it says ("the player turn" = actor kind player
+  side mine; "the enemy turn" = side enemy); "start every mission" = game_start (a mission is a game). "On Reset Turn" =
+  activated, object kind player side mine (proposal "reset_turn" if it does not fit).
+- Limits. "Single-use" = limit once_per_game on the weapon's ability (a battle is a game); "2 uses per battle" = limit n_times
+  with params times 2; "+1 Use" upgrades raise times.
+- Upgrades. A weapon's upgrades ("Upgrades: Dash (2 Reactor Cores): Charge any distance before punching the target; +2 Damage
+  (3 Reactor Cores): Increases damage by 2.") are optional: the base weapon is one ability with no COND; each upgrade is its
+  own ability with the base weapon's event and COND `{"test": "upgraded", "n": <its place, 1 or 2>}`, holding only what the
+  upgrade adds ("+2 Damage" = damage amount 2 more on the same target, "Gain Shield" = give_keyword Energy Shield on self).
+  "Power: ..." (Reactor Cores needed to power the weapon) is no effect: skip it.
+- Passives act on all Mechs: "All Mechs are immune to Fire" = always, give_keyword Fire Immunity on units side mine with type
+  Mech, lasts while. Pilots: "Mech gains Armored" = give_keyword Natural Armor on self; "+3 Move" = stat_change params movement.
+- Vek text ("Health 3, move 3. Weapons/skills: Pincers: Charge forward to deal 1 damage and push the target.") is read the same
+  way: the Vek is self, its targets are units or landmarks of either side unless it says.
