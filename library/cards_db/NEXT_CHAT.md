@@ -36,3 +36,33 @@ round, because the work fixed only what he pointed at. **Your job is to find the
 - refs.py (flat_ref: makes/trigger/condition/state with kinds, self, actor_self), flat.py (query layer, concept RULES),
   audit_links.py (in run.py), cases/network.tsv (Kaptain's checks as tests), fixes/runeterra/v30.py, v31.py.
 - PROCESS.md: "Links the deck networks showed missing", "Think like a player"; BRIEF.md rules 23-25; CHANGES.md v30-v32.
+
+## Slay the Spire (sts1): deck read open (30 Oct 2026, v49)
+Imported up to step 2.9: run.py sts1 passes, word check 0 flags, text audit 0, link audit 3 explained (RESULTS.md). All 22
+decks read once (`deck_lines.py sts1`); nothing fixed yet. Next: `dump_lines.py /tmp/before.tsv`, trace each family below to
+its rule (flat_ref / flat_do of both cards), fix each once for every game, dump after, read the diff, then write the families
+into deck_read_sts1.md with Root cause / Same error elsewhere / Fix and a case each (PROCESS "Fixing a review").
+Wrong lines found (deck: from -> to):
+1. A status that helps a kind of card is read as that kind of card being its need, and the help line is missing: every Attack
+   -> Flex, Spot Weakness, Inflame, Limit Break, Vajra, Red Skull, Reprogram, Wish, Wrist Blade ("is an Attack it asks for");
+   Skills -> Burst, Powers -> Amplify, cards -> Echo Form, Poison cards -> Snecko Skull ("triggers"); Shiv -> Accuracy beside
+   Accuracy -> Shiv (two links); Heavy Blade -> Flex/Inflame/Vajra beside the opposite line (two links). Wanted: Strength,
+   Dexterity, Focus givers -> the cards they make stronger (Attacks, Block cards, Orb cards); Burst/Amplify/Echo Form/Snecko
+   Skull -> the cards they repeat or boost.
+2. Ethereal's "still in hand at the end of turn" read as a need for cards in hand: draws -> Ghostly Armor, Echo Form, Deva Form
+   "fills your hand". Gambling Chip's own discard-then-draw read as a need ("fills your hand" from Reflex, Tools of the Trade).
+3. Cards with no numeric cost match cost filters: All for One ("cost 0 cards") -> Burn, Void, Girya and Snecko Eye (relics),
+   Reinforced Body (X cost); Chemical X ("cost X cards") -> Deus Ex Machina, Miracle, Expunger.
+4. A drawback is read as a need: Void ("lose 1 energy when drawn") <- draws "fills your hand", <- TURBO/Nunchaku "lets you
+   gain mana".
+5. An upper limit is read as a need: FTL ("if you have played less than 3 cards") <- every card; unplayable Void counted as
+   played.
+6. Damage back to the attacker lands on me: Flame Barrier -> Rupture, Self-Forming Clay, Red Skull ("damages your units or
+   players"); the attacker of "whenever you are attacked" has no side.
+7. Choosing a card for the run is read as making one: Bottled Flame -> Kunai, Shuriken, Vajra ("makes an Attack").
+Missing lines: Barricade -> Body Slam (Block kept); Electrodynamics -> Lightning channelers (Lightning hits all); entering
+Wrath/Calm (Crescendo, Tranquility, Teardrop Locket) -> Mental Fortress, Flurry of Blows ("whenever you change Stances").
+Not sure (ask Kaptain): every card -> After Image / A Thousand Cuts ("whenever you play a card"); Strike -> Corpse Explosion,
+The Specimen ("makes enemy units die": any damage kills); energy gains -> 2-3 cost cards ("pays for it", the Faeria rule).
+Known gaps: Blizzard and Thunder Strike count every Channel (which Orb is not kept); Through Violence (made by Reach Heaven)
+is not in the library and its wiki page was not reachable.
