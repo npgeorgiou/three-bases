@@ -176,6 +176,8 @@ def build(c):
 # table, SQL condition on that table. A card gets the concept when any of its rows matches.
 RULES = [
     ('permanent_growth', 'flat_do', "act='stat_change' and on_pick='self' and lasts in ('permanent','while') and params not like '%=-%'"),
+    ('permanent_growth', 'flat_do', "act='give_keyword' and concept in ('attack_gain','defence_gain','stat_gain') and lasts='permanent' and (on_pick='self' or (on_kind='player' and on_side='mine')) and coalesce(params,'') not like '%=-%'"),  # Strength on the player (Slay the Spire Inflame)
+    ('multi_attack', 'flat_do', "params like '%times=%' and params not like '%times=1.0%' and coalesce(on_side,'enemy')!='mine' and (act='strike' or (act='damage' and card in (select ct.card from card_type ct join type t on t.id=ct.type where t.name='Attack')))"),  # an attack that hits more than once (Twin Strike), not a spell's repeated damage (Gouge)
     ('temporary_buff', 'flat_do', "act='stat_change' and lasts in ('this_round','next_round','n_rounds','next_own_turn') and coalesce(on_side,'mine')!='enemy' and params not like '%=-%'"),
     # stats by role, whatever a game calls them (Power / Health, or one strength stat that is both)
     ('attack_gain', 'flat_do', "act in ('stat_change','grow') and (params glob '*power=[1-9a-z]*' or params glob '*strength=[1-9a-z]*') and coalesce(on_side,'mine')!='enemy'"),
@@ -317,6 +319,12 @@ def derive(c):
               "s.field='keyword' and s.value=k.game || ':' || k.name), k.name) where cd.test='keyword_condition' and v.tree!=''")
     for concept, table, cond in RULES:
         c.execute(f"insert into flat_concept select distinct card, ?, ? from {table} where {cond}", (concept, 'rule ' + concept))
+    # a tank: a unit with the top 10% of its game's unit health (concept tree tank: high defence that holds the line)
+    for (g,) in c.execute("select distinct game from card where health is not null").fetchall():
+        hp = sorted(x for (x,) in c.execute("select health from card where game=? and is_keyword=0 and category='unit' and health is not null", (g,)))
+        if hp:
+            c.execute("insert into flat_concept select id, 'tank', 'rule tank' from card where game=? and is_keyword=0 and category='unit' and health>=? and health>0",
+                      (g, hp[int(len(hp) * 0.9)]))
     # the top 10% of a game's printed costs (concept tree high_cost)
     for (g,) in c.execute("select distinct game from card where cost is not null").fetchall():
         costs = sorted(x for (x,) in c.execute("select cost from card where game=? and is_keyword=0 and cost is not null", (g,)))

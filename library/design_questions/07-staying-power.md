@@ -35,7 +35,7 @@ Undead (24 cards): protection 3, heal 0, cheat_death 1
   Pharaoh's Pets: Keywords: Worthy Sacrifice, Many Lives.
   Drowned Soul: Keywords: Waterborne, Touch of Death.
   Ghost Ship: Keywords: Waterborne, Skeleton Crew.
-  works with: adjacency (e.g. Skink -> Curious Egg); positional (e.g. Skink -> Curious Egg); movement (e.g. Skink -> Lonely Wizbot)
+  works with: adjacency (e.g. Skink -> Curious Egg); positional (e.g. Skink -> Curious Egg); forced_movement (e.g. Skink -> Lonely Wizbot)
 ## into_the_breach
 Brute (10 cards): protection 3, heal 0, cheat_death 0
   Hook Mech: Keywords: Natural Armor. Health 3, move 3. Weapon: Grappling Hook: Use a grapple to pull...

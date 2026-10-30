@@ -297,6 +297,14 @@ rows), writes every error family into deck_read_<game>.md ("Check of 20 cards"),
 per family. No check files are written for Kaptain. Kaptain checks the deck networks page (network_page.py) in plain words:
 does a line between two cards make sense to a player. Every point he finds is fixed as "Fixing a review" says.
 
+### 4b. The three checks after every import (Kaptain, 31 Oct 2026)
+1. Deck check: `deck_audit.py <game>`, every deck: the 3 most linked and 3 least linked cards with all their lines, and 10
+   other lines; read each like a player.
+2. Real-world cases: `realworld.py <game>`; read every miss and decide whether the data, the question or the case is wrong
+   (cases are mostly right; a wrong case is shown to Kaptain with the card texts, never changed quietly).
+3. Design questions per faction: `design_questions.py`, then read every answer for the new game's factions like a designer;
+   a concept that finds no card, or a faction answer that looks wrong or thin, is traced to its cause and fixed for all games.
+
 ### 5. Done when
 `run.py <game>` passes every step and every other game still passes; read/<game>/game_rules.jsonl written (step 0.10);
 audit_text.py and audit_links.py print nothing unexplained; the keyword -> concept list checked twice and shown

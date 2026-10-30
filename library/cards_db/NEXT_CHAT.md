@@ -1,4 +1,4 @@
-# Next chat: card database (30 Oct 2026, v59)
+# Next chat: card database (31 Oct 2026, v62)
 
 Read HANDOFF.md first (its boxes are the rules most often broken), then PROCESS.md and PROCESS_LESSONS.md, and
 library/README.md (what the library is for and how design questions are asked). Everything below is pushed.
@@ -12,17 +12,19 @@ library/README.md (what the library is for and how design questions are asked). 
 3. Report per family: the cause, data or script, the fix, and the counts per game.
 
 ## Open, in Kaptain's order
-1. Read every answer in library/design_questions/ like a designer and trace each wrong or thin one (seen: Taunt and Provoke
-   count as stopping enemies; Inscryption's Waterborne counts as stopping enemies; Duelyst and Faeria disruption near 0).
-   Done: "can't attack this" (Waterborne, Repulsive) is no enemy lock. Asked Kaptain, waiting: (a) my own unit's Can't Block
-   (127 Runeterra cards, flat.py rule cant_block) and stop rows aimed at my own units (Into the Breach 38, Runeterra 39) count
-   as stopping enemies; (b) Taunt and Provoke still count as immobilize; (c) disruption: enemy mana loss (Malicious Wisp,
-   Saurian Finality) and units put on the enemy side (Brood Parasite, Cuckoo, Dubious Hags) have no rule.
-2. Trace every miss of `realworld.py` (84 of 275 cases miss; Inscryption combos with sigils find no line; Ironclad has no
-   permanent_growth) and every lead of `audit_links.py` 10 (Runeterra: 379 cards tagged on_kill before have no row for it).
-3. Item 7, approved, not started: every card-to-card line of every deck as a table in cards.sqlite (from, to, kind, reason),
-   built with the database, so any question can use the lines; one design question giving per game the cards with texts,
-   best partners and factions (`kit` covers part of it).
+Done 31 Oct (v59-v62, CHANGES.md): Landmark is board_limit; own-unit stops get no concept; own Can't Block is cant_block_self;
+Taunt and Provoke stay immobilize (Kaptain: the rules say enemies next to them can't move); rules for concepts no card had
+(board_wipe, disruption, board_clog, mill, tank, high_cost ...); realworld.py counts Into the Breach weapons and kw: cases.
+Real-world: 205 of 275 hold (was 191). The three checks after an import are in PROCESS 4b.
+1. Real-world misses left (`realworld.py`). Cases that look wrong, to show Kaptain with texts: Ionia counter_spell "Deny"
+   (Deny is Freljord), Shurima shield "Spellshield", Hellhorned summon (Imp Parade adds Imps to hand: generate_cards),
+   Melting Remnant revive (Reform returns to hand; Kaptain 26 Oct: back to hand is not revive), Magick cost_type. The
+   "Runeterra" region (97 cards) tops many ranks: ask whether small regions should count. 36 combos with no line: trace them
+   as families (Inscryption sigil combos, Slay the Spire Exhaust/Retain/Orb cards, Into the Breach push combos).
+2. More design questions, per faction (Kaptain 31 Oct: "ask more, more, MORE"), read every answer, rework wrong ones. Concepts
+   still with no card: list with the snippet in this chat's CHANGES v61; roles (finisher, support, snowball) have no rule.
+3. Item 7, Kaptain's yes NOT given yet: explained to him; suggestion (Claude's) to also hold lines between all cards of a
+   faction, not only deck cards, for faction ideas and deck feasibility (lines per card). Wait for his answer.
 4. Item 8, not started: a full deck check of every game, card by card (`deck_audit.py`), not a sample.
 
 ## Not this chat's work unless asked

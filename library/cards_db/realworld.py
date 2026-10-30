@@ -16,7 +16,7 @@ c = ask.c
 ARCHETYPE = {'swarm': ('summon', 'generate_cards', 'board_presence'), 'sacrifice': ('sacrifice', 'death_trigger', 'other_death_trigger'),
              'graveyard': ('revive', 'recycle', 'graveyard'), 'control': ('removal', 'suppress'), 'burn': ('direct_damage', 'aoe_damage'),
              'aggro_tempo': ('haste', 'attack_gain', 'evasion', 'tempo'), 'scaling': ('permanent_growth', 'snowball'),
-             'fortress': ('protection', 'taunt'), 'sustain': ('heal',), 'spellslinger': ('spell_power', 'spells_played_condition', 'on_spell'),
+             'fortress': ('protection', 'taunt', 'tank'), 'sustain': ('heal',), 'spellslinger': ('spell_power', 'spells_played_condition', 'on_spell'),
              'ramp': ('resource_gain', 'cost_reduction'), 'positional': ('movement', 'forced_movement', 'positional'),
              'disruption': ('disruption', 'debuff'), 'trickery': ('stealth', 'trap_secret', 'information'), 'chaos': ('random_effect',),
              'card_advantage': ('card_advantage',), 'tribal': ('tribal',), 'objectives': ('zone_control', 'scoring_objectives'),
@@ -31,11 +31,16 @@ def cases(game):
 
 def shares(game, concepts):
     """faction -> share of its cards with any of the concepts (or one under them)"""
-    got = {i for x in concepts for (i,) in c.execute('select card from flat_concept where under(concept, ?)', (x,))}
+    got = {i for x in concepts if not x.startswith('kw:') for (i,) in c.execute('select card from flat_concept where under(concept, ?)', (x,))}
+    for x in concepts:  # kw:<Keyword>: the card has the keyword or gives it
+        if x.startswith('kw:'):
+            got |= {i for (i,) in c.execute("select ck.card from card_keyword ck join card k on k.id=ck.keyword where k.game=? and k.name=? "
+                                             "union select d.card from flat_do d join card k on k.id=d.keyword_ref where k.game=? and k.name=?", (game, x[3:], game, x[3:]))}
     got |= {a for a, b in c.execute('select card, made from flat_made') if b in got}  # a card is what it makes
     per = collections.defaultdict(lambda: [0, 0])
     for i, regs in c.execute("""select id, regions from card where game=? and is_keyword=0 and is_stub=0 and coalesce(category,'')
-                                not in ('game_rule','ability','boss','monster','event','modifier')""", (game,)):
+                                not in ('game_rule','boss','monster','event','modifier')
+                                and not (category='ability' and id in (select made from flat_made))""", (game,)):  # a skill a card makes is no card of its own (an Into the Breach weapon is)
         for r in (regs or '').split(';'):
             if r: per[r][1] += 1; per[r][0] += i in got
     return {r: n / t for r, (n, t) in per.items() if t}

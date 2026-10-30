@@ -14,7 +14,7 @@ Vanar Kindred (124 cards): forced_movement 4, movement 13
   Mesmerize: Teleport an enemy one space.
   The Dredger: Whenever your General damages an enemy, randomly teleport them to your starting side of...
   Wanderlust: Intensify: Teleport 1 random enemy minion to a space on your starting side of the...
-  works with: board_wipe (e.g. The Dredger -> Necrotic Sphere); polymorph (e.g. The Dredger -> Eternity Painter); regeneration (e.g. Sparrowhawk -> Lux Ignis)
+  works with: board_wipe (e.g. Unleash the Evil -> Necrotic Sphere); polymorph (e.g. Unleash the Evil -> Eternity Painter); regeneration (e.g. Kaleos Xaan -> Suntide Maiden)
 ## faeria
 Yellow (72 cards): forced_movement 8, movement 42
   Flash Wind: Move a friendly creature or pay 2 faeria and move an enemy creature.
@@ -26,7 +26,7 @@ Blue (72 cards): forced_movement 7, movement 38
   Coral Polliwog: This creature can harvest faeria the turn you play it. Gift - You may move this...
   Dream Reaver: Dash 3 Gift - Set a god's Life to 10.
   Prophet of Tides: Gift - Move this creature's land twice.
-  works with: territory_trigger (e.g. Radiance, Imperial Airship -> Dustbringer Wraith); terrain (e.g. Triton Adventurer -> Gabrian Commander); adjacency (e.g. Triton Adventurer -> Triton Tactician)
+  works with: territory_trigger (e.g. Mistral Guide -> Rotting Boar); terrain (e.g. Triton Adventurer -> Gabrian Commander); adjacency (e.g. Triton Adventurer -> Tide Lord)
 ## inscryption
 Beast (122 cards): forced_movement 18, movement 18
   Bloodhound: Keywords: Guardian.
@@ -37,7 +37,7 @@ Undead (24 cards): forced_movement 3, movement 3
   Bonehound: Keywords: Guardian.
   Ghost Ship: Keywords: Waterborne, Skeleton Crew.
   Headless Horseman: Keywords: Airborne, Sprinter.
-  works with: enemy_benefit (e.g. Wild Bull -> Bad Fish); link_formation (e.g. Pack Mule -> Energy Conduit); base_resource_gain (e.g. Pack Mule -> Energy Conduit)
+  works with: enemy_benefit (e.g. Wild Bull -> Alarm Bot); link_formation (e.g. Elk -> Buff Conduit); base_resource_gain (e.g. Elk -> Energy Conduit)
 ## into_the_breach
 Archive, Inc. (3 cards): forced_movement 2, movement 2
   Gana: Pilot ability: Preemptive Strike: Deploy anywhere on the map, damaging adjacent enemies....
@@ -45,7 +45,7 @@ Archive, Inc. (3 cards): forced_movement 2, movement 2
 Ranged (10 cards): forced_movement 1, movement 2
   Arachnoid Mech: Health 3, move 3. Weapon: Arachnoid Injector: Damage target, creating a friendly robot...
   Ice Mech: Keywords: Flying. Health 2, move 3. Weapon: Cryo-Launcher: Freeze yourself and the...
-  works with: movement (e.g. Thermal Discharger -> Flame Thrower); destroy (e.g. Sidewinder Fist -> Water Tile); rule_change (e.g. Thermal Discharger -> Flame Thrower)
+  works with: movement (e.g. Thermal Discharger -> Flame Thrower); destroy (e.g. Ricochet Rocket -> Water Tile); rule_change (e.g. Thermal Discharger -> Flame Thrower)
 ## monster_train
 Hellhorned (41 cards): forced_movement 3, movement 3
   Hidden Passage: Ascend a unit.
@@ -54,7 +54,7 @@ Hellhorned (41 cards): forced_movement 3, movement 3
 Clanless (28 cards): forced_movement 2, movement 2
   Steel Pulleyclaw: Consume. / Ascend an enemy unit to the Pyre room. Apply Dazed 3.
   Trap Chute: Consume. / Descend a unit to the bottom floor. Apply Dazed 2.
-  works with: attack_lock (e.g. Tiresome Climb -> Siren's Song); play_restriction (e.g. Tiresome Climb -> Siren's Song); placement_rules (e.g. Tiresome Climb -> Siren's Song)
+  works with: attack_lock (e.g. Steel Pulleyclaw -> Siren's Song); placement_rules (e.g. Steel Pulleyclaw -> Siren's Song); play_restriction (e.g. Steel Pulleyclaw -> Siren's Song)
 ## runeterra
 Bilgewater (218 cards): forced_movement 9, movement 5
   Bilgewater Tellstones: Create a Fleeting More Powder!, Playful Trickster, or Chum the Waters in hand.
@@ -66,7 +66,7 @@ Ionia (235 cards): forced_movement 0, movement 14
   Ahri (level 2): Keywords: Quick Attack, Elusive, . When you Recall an ally, reduce its cost by 1....
   Ahri's Charm: Keywords: Focus. Recall an ally to give an enemy Vulnerable this round. Create an Ahri...
   Bladesurge: Keywords: Burst, Fleeting. Swap Irelia with an ally.
-  works with: attack_token (e.g. Sion Returned -> Riven (level 2)); on_discard (e.g. Fizz -> Rumble (level 2)); board_limit (e.g. Lissandra's Entomb -> Reaver's Row)
+  works with: attack_token (e.g. Sion (level 2) -> Riven (level 2)); on_discard (e.g. Fizz -> Rumble (level 2)); board_limit (e.g. Lissandra (level 2) -> Mystic Vortex)
 ## stormbound
 Ironclad (34 cards): forced_movement 9, movement 9
   Absorbing Varmints: Before moving, make friendly Ancients and Rodents pull enemy units from behind. Then...
@@ -78,7 +78,7 @@ Swarm (34 cards): forced_movement 3, movement 5
   Xuri, Lord of Life: On play, fly to the first empty tile in front. Give 2/3/4/5/6 strength to all friendly...
   Forgotten Souls: On play, command a/a/// random/random///...
   Herald’s Hymn: Give 2/3/4/5/6 strength to a target friendly unit. Command friendly units in its row...
-  works with: variety_payoff (e.g. Angelic Tikas -> Terrifying Behemoths); attack_now (e.g. Angelic Tikas -> Hair-Raising Cats); generate_cards (e.g. Angelic Tikas -> Guardi the Lightbringer)
+  works with: variety_payoff (e.g. Sparkly Kitties -> Timber Alchemists); attack_now (e.g. Chateau de Cardboard -> Hair-Raising Cats); generate_cards (e.g. Sparkly Kitties -> Guardi the Lightbringer)
 ## sts1
 Defect (89 cards): forced_movement 29, movement 23
   Ball Lightning: Deal 7 damage. Channel 1 Lightning.
