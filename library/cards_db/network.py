@@ -143,8 +143,54 @@ def colour_fit(want, have):
     return not ask or not got or bool(ask & got)
 
 
-RESOURCE_WORD = {'secondary_resource': 'you gain the second resource (Bones)', 'gem': 'you gain a gem (Mox)',
-                 'lane_resource': 'you gain the lane resource (Echo)'}
+RESOURCE_WORD = {'secondary_resource': 'lets you gain the second resource (Bones)', 'gem': 'lets you gain a gem (Mox)',
+                 'lane_resource': 'lets you gain the lane resource (Echo)'}
+# what the first card of a line does, as an active verb (the line reads "A <does this>" for B)
+ACT = {'dies': 'makes {who} units die', 'killed': 'kills {who} units', 'damaged': 'damages {who} units or players',
+       'survives_damage': 'damages {who} units without killing them', 'nexus_damaged': 'damages {whos}', 'summoned': 'puts {who} units into play',
+       'played': 'is played', 'cost_changed': 'changes card costs', 'drawn': 'makes you draw cards', 'discarded': 'makes you discard cards',
+       'created': 'creates cards', 'given_keyword': 'makes {who} units get {kw}', 'stat_changed': "changes {who} units' stats",
+       'healed': 'heals {who} units', 'attacks': 'makes {who} units attack', 'blocks': 'makes {who} units block', 'strikes': 'makes {who} units strike',
+       'strikes_nexus': 'makes {who} units hit the enemy player', 'leaves_play': 'makes {who} cards leave play', 'recalled': 'returns {who} units to hand',
+       'revived': 'brings {who} units back from the dead', 'levels_up': 'makes champions level up', 'obliterated': 'removes cards from the game',
+       'transformed': 'transforms cards', 'mana_refilled': 'lets you gain mana', 'targeted': 'targets {who} cards', 'moves': 'makes {who} units move',
+       'moves_onto': 'moves {who} units onto spaces', 'shuffled': 'shuffles cards into the deck', 'equipped': 'equips {who} units',
+       'spell_resolves': 'casts spells', 'keyword_used': 'uses {kw}', 'sacrificed': 'has {who} units sacrificed', 'fights': 'makes {who} units fight',
+       'harvests': 'makes your units harvest {who} wells', 'terrain_changed': 'changes the land', 'mana_refilled@secondary_resource': RESOURCE_WORD['secondary_resource'],
+       'mana_refilled@gem': RESOURCE_WORD['gem'], 'mana_refilled@lane_resource': RESOURCE_WORD['lane_resource'],
+       'trap_activated': 'activates traps', 'countdown_done': 'finishes countdowns'}
+# the same, when the second card waits for it to happen to itself ("Last Words", "when this is damaged")
+ACT_SELF = {'dies': 'kills it for its death effect', 'killed': 'kills it for its death effect', 'sacrificed': 'sacrifices it for its effect',
+            'damaged': 'damages it for its effect', 'survives_damage': 'damages it without killing it, for its effect',
+            'given_keyword': 'gives it {kw} for its effect', 'stat_changed': 'changes its stats for its effect', 'healed': 'heals it for its effect',
+            'moves': 'moves it for its effect', 'moves_onto': 'moves it for its effect', 'attacks': 'makes it attack for its effect',
+            'strikes': 'makes it strike for its effect', 'fights': 'makes it fight for its effect', 'recalled': 'returns it to hand for its effect',
+            'revived': 'brings it back', 'transformed': 'transforms it for its effect', 'targeted': 'targets it for its effect'}
+
+
+def act_say(c, h, side, kw, self_=False):
+    """what the first card of a line does, in an active verb: 'makes your units die', 'kills it for its death effect'"""
+    k = c.execute('select name from card where id=?', (kw,)).fetchone()[0] if kw else 'a keyword or status'
+    t = ACT_SELF.get(h) if self_ else None
+    t = t or ACT.get(h) or 'makes this happen: ' + deck_analysis.SAY.get(h, h.replace('_', ' '))
+    return t.format(who=deck_analysis.who(side), whos={'mine': 'your Nexus or base', 'enemy': 'the enemy player'}.get(side, 'a player'),
+                    kw=k).replace('any units', 'units').replace('any cards', 'cards')
+
+
+# the kind of a "helps" line, from what the help does (the page names it): cheaper, stronger, a keyword, into place, a clear way
+def help_kind(why):
+    y = why.split(': ', 1)[1] if why.startswith('through ') and ': ' in why else why
+    if 'cheaper' in y or y.startswith(('pays for it', 'can cost set')): return 'cheaper'
+    if y.startswith('clears its line'): return 'clears'
+    if y.startswith(('moves', 'lets it enter')): return 'moves'
+    if y.startswith(('another attack', 'more health or protection', 'helps my units', 'helps it hit', 'more damage', 'fills your hand',
+                     'empties your hand')): return 'waits'  # makes what it waits for happen more
+    g = next((y.split(x, 1)[1] for x in ('can give it ', 'gives it ') if y.startswith(x)), None)
+    if g is not None and not (g[:1] in '+-0123456789' or g.startswith(('X|', 'X '))): return 'keyword'
+    return 'stronger'
+
+
+OWN_LOSS = ('dies', 'killed', 'damaged', 'survives_damage', 'sacrificed')  # what fights do to my own units
 
 
 def lines_of(c, game):
@@ -241,12 +287,20 @@ def lines_of(c, game):
                 if h == 'stat_changed' and role == 'condition' and stat_need.get(t) and stat_made.get(m) and \
                         not (stat_need[t] & stat_made[m]) and 'strength' not in stat_made[m]: continue
                 if not doer_fits(m, actor, h): continue
+                # my units are hurt or die in fights by the rules: every unit would feed "when a friendly unit dies" (Soul Eater,
+                # Shaytan Monstrosity); only cards that hurt or kill my units do (Kaptain 30 Oct 2026); a cost the rules pay stays
+                if rule and not cost and h in OWN_LOSS and ms != 'enemy': continue
+                # a rule that needs a place ("harvest a well next to it": an enemy well is deep in enemy ground) is done by the units
+                # that get there, not by every unit: what moves them is the help (HELPS movement); Gabrian Archon -> Wavecrash Colossus
+                if rule and not cost and 'position ' in (mw or ''): continue
                 if rule == 'units fight' and 'origin not combat' in (tw or ''): continue  # "non-combat damage": fighting is combat  # "allied Pykes have dealt damage": the damage of a spell or another unit is not it
                 need = {e for p in (tw or '').split(';') if p.startswith('state is ') for e in state_ev.get(p[9:], ())} - {h}
                 if need and h in ('played', 'summoned', 'drawn', 'created') and not need & own_makes[m]: continue  # "8 cost reduced cards
                 # played": playing a card no one made cheaper is not it (a unit healed is damaged by the enemy too: no such need)
                 w = 1.0 / len(carers[tk] | (carers[None] if tk else set()))
-                say = deck_analysis.say(c, h, ts_, tk)
+                say = act_say(c, h, ts_, tk, self_=tpick == 'self')
+                if mpick == 'self' and h == 'dies': say = 'dies, comes back and dies again' if mref == m else 'dies by its own effect'
+                if mpick == 'self' and h == 'given_keyword' and mk: say = f'has {mechanics.name(c, mk)}'  # Manta Rider has Flying
                 if h == 'mana_refilled' and tkind in RESOURCE_WORD: say = RESOURCE_WORD[tkind]  # not mana: say which resource
                 if cost and rule in cost_rules: continue  # another card paying its own cost pays nothing for this one
                 if cost: say += ' (pays its cost)'
@@ -254,7 +308,9 @@ def lines_of(c, game):
                     w *= 0.25; say += ' (by fighting)' if rule == 'units fight' else f" (by the game's rule: {rule})"
                 if lv: out[(m, t)].append(('levels', 2 * w, say + ' (levels it up)'))
                 elif role == 'trigger' and t in selffeed: out[(m, t)].append(('levels', w, say + ' (it levels up from what it then does)'))
-                else: out[(m, t)].append(('waits', w, say))
+                # it reacts to or counts a happening: "does what it waits for"; it needs a thing to be there ("while you control
+                # another flying creature", "if Krog has died"): "enables"
+                else: out[(m, t)].append(('type' if role == 'state' else 'waits', w, say))
     put = [(m, ref, act) for m, ref, act in c.execute(f"select card, card_ref, act from flat_do where act in ({','.join('?' * len(PUTS))})", PUTS)
            if m in cards and ref in cards and m != ref]
     put += [(m, ref, 'skill') for m, ref in c.execute("select l.src, l.dst from card_link l join card d on d.id=l.dst where l.rel='generates' "
@@ -367,7 +423,9 @@ AIM = {'give_keyword': 'can give it {kw}', 'keyword_action': 'can {kw} it', 'hea
        'kill': 'can kill it', 'strike': 'can make it strike', 'return_to_hand': 'can return it to hand', 'start_attack': 'can make it attack',
        'transform': 'can transform it', 'copy': 'can copy it', 'revive': 'can bring it back', 'move': 'can move it',
        'cost_change': 'can make it cheaper', 'stat_set': 'can set its stats', 'give_ability': 'can give it an ability',
-       'can': 'lets it do more'}
+       'can': 'lets it do more', 'cant': 'can stop it from acting', 'countdown_advance': 'can speed up its countdown',
+       'give_random_keyword': 'can give it a random keyword', 'return_card': 'can bring it back to hand', 'ready': 'can ready it',
+       'damage_reduction': 'can shield it from damage', 'capture': 'can take control of it', 'sacrifice': 'can sacrifice it'}
 
 
 def aim_said(act, kw, ps):
@@ -558,7 +616,7 @@ def need_lines(c, game, nodes, broad):
     # a count of what happens to my cards of a kind ("you've destroyed 4+ allied landmarks"): fed by cards of that kind
     for t, kind, w in c.execute(f"""select card, ev_obj_kind, ev_obj_with from flat_if where card in ({marks}) and test in ('event_count','amount_event_count')
             and ev_obj_side='mine' and ev_obj_kind in ('landmark','equipment','spell')""", list(nodes)).fetchall():
-        needs.append((t, kind, w))
+        needs.append((t, kind, (w or '') + ';counted'))
     for t, test, kind, side, op, n, w, pick_ in c.execute(f"""select card, test, of_kind, of_side, op, n, of_with, of_pick from flat_if where card in ({marks})
             and test in ('have','count','amount_count') and coalesce(of_side,'mine') in ('mine','any','')""", list(nodes)):
         if op == 'not' or (op in ('eq', 'le', 'lt') and not n): continue  # "no units around": nothing to feed
@@ -575,12 +633,19 @@ def need_lines(c, game, nodes, broad):
             and on_kind in ('landmark','unit','spell','equipment') and coalesce(on_side,'mine') in ('mine','any') and card in ({marks})""", list(nodes)):
         described[k].add(a)
     for t, kind, w in needs:
+        counted = (w or '').endswith(';counted'); w = (w or '').removesuffix(';counted')  # "each event you've played": it counts what
+        # happens, so it waits for it ("does what it waits for"), it needs nothing to be there
         cnt = kind_count(c, game, kind, w)
         what = 'a card it acts on' if kind == 'any' else f'a {"landmark or structure" if kind == "landmark" else kind} it asks for'
         kws_ = [mechanics.name(c, int(p.split(' ')[2])) for p in (w or '').split(';') if p.startswith('keyword is ') and p.split(' ')[2].isdigit()]
         if kws_ and kind != 'any': what = what.replace(' it asks for', f' with {", ".join(kws_)} it counts or asks for')  # "a unit with Ant
         for a in nodes:
             if a == t or a not in cards: continue
+            if counted:
+                if matches(c, game, cards[a], kind, w): out[(a, t)].append(('waits', 1.0 / cnt, f'is a {kind} it counts'))
+                elif a in described.get(kind, ()) and not any(p.split(' ')[0] in ('card', 'name_has', 'type') for p in (w or '').split(';')):
+                    out[(a, t)].append(('waits', 0.5 / cnt, f'makes a {"landmark or structure" if kind == "landmark" else kind} it counts'))
+                continue
             if matches(c, game, cards[a], kind, w): out[(a, t)].append(('type', 1.0 / cnt, 'is ' + what))
             elif a in described.get(kind, ()) and not any(p.split(' ')[0] in ('card', 'name_has', 'type') for p in (w or '').split(';')):
                 out[(a, t)].append(('type', 0.5 / cnt, 'makes ' + what))
@@ -637,7 +702,18 @@ def boost_lines(c, game, nodes):
             in ('mine','any') and coalesce(on_pick,'') not in ('self') and act in ('stat_change','give_keyword','heal','move','swap','grow',
             'ready','can','give_ability','first_strike','double_strike','copy_keywords') and card in ({marks})""", L):
         aims[a] |= {'player', 'unit'} if k in ('any', 'anything') else {'player'} if k == 'player' else {'unit'} if k in ('unit', 'hero') else {'other'}  # "a minion or General"
+    # help that names whom it lands on ("give a Dragon +2|+2", "your Rakoans get Flying") reaches only those cards
+    ident = collections.defaultdict(list)
+    for a, w_ in c.execute(f"""select card, on_with from flat_do where origin in ('own','uses_keyword') and coalesce(on_side,'mine') in ('mine','any')
+            and coalesce(on_pick,'') not in ('self') and act in ('stat_change','give_keyword','heal','grow','copy_keywords','negate_damage')
+            and card in ({marks})""", L):
+        ident[a].append(';'.join(q_ for q_ in (w_ or '').split(';') if q_.split(' ')[:2] in (['card', 'is'], ['type', 'is'], ['type', 'in'],
+                        ['name_has', 'is'], ['keyword', 'is'], ['region', 'is'], ['card', 'not'])))
+    def lands_on(a, t):
+        return not ident.get(a) or any(not who or matches(c, game, cards[t], 'any', who) for who in ident[a])
     def aim_fits(a, t):
+        return lands_on(a, t) and leader_fits(a, t)
+    def leader_fits(a, t):
         if a not in aims or not leaders: return True
         return ('player' in aims[a]) if cards[t]['cat'] == 'leader' else 'unit' in aims[a] or aims[a] == {'other'}
     for hs, sides, concepts, why in HELPS:
@@ -666,8 +742,9 @@ def boost_lines(c, game, nodes):
             if h in ('strikes', 'killed') and role == 'trigger': continue  # only counted strikes and kills grow with more power
             lv = ab in lvl
             for a in helpers_t - {t}:
-                if not aim_fits(a, t): continue
-                out[(a, t)].append(('levels' if lv else 'boosts', (1.0 if lv else 0.5) / n, why + (' (levels it up)' if lv else '')))
+                if not (aim_fits(a, t) if pick == 'self' else leader_fits(a, t)): continue  # help on itself must land on it
+                out[(a, t)].append(('levels' if lv else 'moves' if concepts == ('movement',) else 'waits', (1.0 if lv else 0.5) / n,
+                                    why + (' (levels it up)' if lv else '')))  # it makes what the card waits for happen more
     # how many cards are in my hand ("played as the last card from your hand", "10+ cards in hand", "for each card in hand")
     hand = lambda acts, zone: {a for (a,) in c.execute(f"""select card from flat_do where act in ({','.join('?' * len(acts))}) and origin in
             ('own','uses_keyword') and coalesce(on_side,'mine')='mine' and (coalesce(on_zone,'')='hand' or coalesce(eff_zone,'')='hand' or ?)
@@ -712,16 +789,31 @@ def boost_lines(c, game, nodes):
     q = lambda sql, *a: {x for (x,) in c.execute(sql.format(marks=marks), list(a) + L * sql.count('{marks}'))}
     movers_mine = q("""select card from flat_do where origin='own' and act in ('move','swap') and coalesce(on_side,'mine') in ('mine','any')
             and coalesce(on_kind,'unit') in ('unit','any') and coalesce(on_pick,'') not in ('self') and card in ({marks})""")
-    # paying for big cards: more mana, or cost cuts on my cards, help the cards that cost the most in that game (top quarter)
-    costs = sorted(x['cost'] for x in cards.values() if x.get('cost'))
-    if costs:
-        high = costs[int(len(costs) * 0.75)]
-        payers = q("""select card from flat_do where origin='own' and ((act in ('mana_gain','max_mana_change') and coalesce(on_side,'mine')='mine')
-                or (act in ('cost_change','cost_set') and coalesce(on_side,'mine') in ('mine','any') and coalesce(on_pick,'') not in ('self','it')
-                and coalesce(params,'') not like 'cost=1%' and coalesce(params,'') not like 'cost=-1.%')) and card in ({marks})""")
+    # paying for big cards: more mana, or a cost cut on my cards, helps the game's expensive cards (its top tenth of costs:
+    # Faeria 7+) when it pays at least a third of the card's cost (Red Devil's 5 faeria for Krog's 12; 2 faeria in a fight
+    # does not pay for anything), and only the cards the cut names ("Your Krog costs 7 less": Krog only)
+    game_costs = sorted(x['cost'] for x in cards.values() if x.get('cost') and x['cat'] not in ('game_rule',))
+    if game_costs:
+        high = game_costs[int(len(game_costs) * 0.9)]
+        pays = collections.defaultdict(list)
+        for a, act, ps, w_ in c.execute(f"""select card, act, params, on_with from flat_do where origin='own' and ((act in ('mana_gain','max_mana_change')
+                and coalesce(on_side,'mine')='mine') or (act in ('cost_change','cost_set') and coalesce(on_side,'mine') in ('mine','any')
+                and coalesce(on_pick,'') not in ('self','it'))) and card in ({marks})""", L):
+            p = dict(x.split('=', 1) for x in (ps or '').split(';') if '=' in x)
+            x = p.get('amount' if act in ('mana_gain', 'max_mana_change') else 'cost', '')
+            n_ = float(x.lstrip('-')) if act != 'cost_set' and x.lstrip('-').replace('.', '', 1).isdigit() else None
+            if act == 'cost_change' and not x.startswith('-'): continue  # a cost raised pays nothing
+            who = ';'.join(q_ for q_ in (w_ or '').split(';') if q_.split(' ')[:2] in (['card', 'is'], ['type', 'is'], ['type', 'in'],
+                           ['name_has', 'is'], ['keyword', 'is'], ['region', 'is'], ['category', 'is']))
+            pays[a].append((act, n_, who))
         for t in nodes:
-            if t in cards and (cards[t].get('cost') or 0) >= high:
-                for a in payers - {t}: out[(a, t)].append(('boosts', 0.5 / max(1, len(payers)), 'pays for it: more mana or a lower cost'))
+            cost = cards.get(t, {}).get('cost') or 0
+            if t not in cards or cost < high: continue
+            for a, rs in pays.items():
+                if a == t: continue
+                if any((n_ is None and act == 'cost_set') or (n_ is not None and n_ * 3 >= cost) for act, n_, who in rs
+                       if not who or matches(c, game, cards[t], 'any', who)):
+                    out[(a, t)].append(('boosts', 0.5 / max(1, len(pays)), 'pays for it: more mana or a lower cost'))
     # a straight line of fire (a keyword whose strike hits the nearest enemy in a straight line: Faeria Ranged): what removes or
     # moves enemy units clears the line; what moves my unit by an effect places it without using its move
     line_kw = q("""select distinct d.card from flat_do d join card k on k.id=d.card where k.is_keyword=1 and d.act='strike'
@@ -867,7 +959,7 @@ def gives_lines(c, game, nodes):
     for a, h, ab, akind in c.execute(f"""select distinct card, event, ability, actor_kind from flat_when where origin='gives'
             and coalesce(actor_side,'mine')='mine' and card in ({marks})""", L).fetchall():
         if ab in skip: continue
-        say = deck_analysis.say(c, h, '', None); w = actor_of(c, ab)[3]
+        say = act_say(c, h, '', None); w = actor_of(c, ab)[3]
         for m in doers(h):
             if m == a or m not in cards or (akind in KIND_CAT and not matches(c, game, cards[m], akind, w)): continue
             out[(m, a)].append(('waits', 0.1, f'{say} (for the ability it gives)'))
@@ -897,6 +989,33 @@ def families(c, nodes):
     return {n: fam(n) for n in nodes}
 
 
+def self_harm_lines(c, game, nodes):
+    """harm aimed at any unit, of either side ("deal 1 damage to a creature"), or at my own units ("sacrifice another creature"):
+    the player aims it at my own unit when that unit's own effect fires on it (Falcon Dive -> a Last Words unit with 1 Life;
+    Lord of the Wastes -> Village Elder). A card that counts friendly deaths (Soul Eater) gets nothing from either-side harm."""
+    cards = cards_of(c, game); out = collections.defaultdict(list); marks = ','.join('?' * len(nodes)); L = list(nodes)
+    wants = collections.defaultdict(set)
+    for t, h in c.execute(f"""select card, happening from flat_ref where role='trigger' and pick='self' and (origin='own' or
+            (origin='has_keyword' and happening in ('dies','killed'))) and happening in ('dies','killed','damaged','survives_damage','sacrificed')
+            and card in ({marks})""", L): wants[t].add(h)  # a death keyword (Last Breath, Dying Wish) is its effect; a shield keyword
+            # that fires on damage (Barrier, Forcefield) is no effect anyone damages it for
+    harms = c.execute(f"""select card, act, on_kind, on_with, params from flat_do where origin='own' and act in ('damage','kill','sacrifice')
+            and coalesce(on_side,'') in ('','any','mine') and on_pick in ('chosen','random','all') and coalesce(on_kind,'unit') in
+            ('unit','any','anything','unit_or_structure') and card in ({marks})""", L).fetchall()
+    for t, hs in wants.items():
+        life = cards.get(t, {}).get('health') or cards.get(t, {}).get('strength')
+        for a, act, k, w, ps in harms:
+            if a == t or a not in cards or not matches(c, game, cards[t], 'unit', w): continue
+            x = dict(q.split('=', 1) for q in (ps or '').split(';') if '=' in q).get('amount', '')
+            dmg = float(x) if x.replace('.', '', 1).isdigit() else None
+            kills = act in ('kill', 'sacrifice') or (dmg is not None and life and dmg >= life)
+            if kills and hs & {'dies', 'killed'}: out[(a, t)].append(('waits', 0.5, ACT_SELF['dies']))
+            elif kills and 'sacrificed' in hs and act == 'sacrifice': out[(a, t)].append(('waits', 0.5, ACT_SELF['sacrificed']))
+            elif act == 'damage' and 'damaged' in hs: out[(a, t)].append(('waits', 0.5, ACT_SELF['damaged']))
+            elif act == 'damage' and 'survives_damage' in hs and not kills: out[(a, t)].append(('waits', 0.5, ACT_SELF['survives_damage']))
+    return out
+
+
 def network(c, game, ids, broad=True):
     """nodes (id -> made by the deck?) and lines (a, b) -> [(kind, weight, why)] between them"""
     nodes = {i: False for i in ids}
@@ -906,7 +1025,7 @@ def network(c, game, ids, broad=True):
         if a in nodes and b in nodes: lines[(a, b)] += ls
     for f in (aimed(c, game, nodes, broad), played_lines(c, game, nodes, broad), need_lines(c, game, nodes, broad),
               boost_lines(c, game, nodes), gives_lines(c, game, nodes), object_help_lines(c, game, nodes, broad),
-              actor_help_lines(c, game, nodes)):
+              actor_help_lines(c, game, nodes), self_harm_lines(c, game, nodes)):
         for k, ls in f.items(): lines[k] += ls
     fam = families(c, nodes)
     lines = collections.defaultdict(list, {(a, b): [l for l in ls if l[0] == 'levelsinto'] if fam[a] == fam[b] else ls
@@ -929,6 +1048,15 @@ def network(c, game, ids, broad=True):
     grown = {b for (a, b), ls in lines.items() if nodes.get(b) and any(k == 'levelsinto' for k, _, _ in ls)} - \
             {b for (a, b), ls in lines.items() if any(k == 'puts' for k, _, _ in ls)}
     lines = collections.defaultdict(list, {(a, b): [l for l in ls if not (b in grown and '(pays its cost)' in l[2])] for (a, b), ls in lines.items()})
+    # a card that draws or puts a kind of card from my deck finds the deck's cards of that kind, not the game's (Time of Legends
+    # finds the deck's one legend)
+    found = collections.Counter((a, y) for (a, b), ls in lines.items() if nodes.get(b) is False for k, w, y in ls
+                                if k == 'puts' and (y == 'draws it from the deck' or y.startswith('puts it into play from')))
+    lines = collections.defaultdict(list, {(a, b): [(k, 1.0 / found[(a, y)] if (a, y) in found and k == 'puts' else w, y) for k, w, y in ls]
+                                           for (a, b), ls in lines.items()})
+    # "helps" says how: cheaper, stronger, a keyword, into place, a clear way (or it makes what the card waits for happen more)
+    lines = collections.defaultdict(list, {(a, b): [(help_kind(y), w, y) if k == 'boosts' else (k, w, y) for k, w, y in ls]
+                                           for (a, b), ls in lines.items()})
     same = lambda ls: list({(k, y): (k, w, y) for k, w, y in ls}.values())  # one card doing a thing twice (when summoned, when attacking) is one line
     return nodes, {k: same(v) for k, v in lines.items() if v}
 

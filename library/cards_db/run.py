@@ -44,6 +44,7 @@ def main():
     step('text audit', ['audit_text.py', game])  # words in a card's text its rows do not show (audit_text.py); explain or fix each
     step('link audit', ['audit_links.py', game])  # lists links that cannot exist (audit_links.py); a game is done when it explains each
     step('status', ['status.py', game]); step('examples', ['examples.py'])
+    step('review check', ['review_check.py', game])  # each family of Kaptain's deck check has its root cause and its parallels
 
 
 main()

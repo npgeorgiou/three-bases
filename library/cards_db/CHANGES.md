@@ -229,3 +229,17 @@ Each change: date, what changed, the card that caused it, and which records were
 - decks.tsv: Inscryption players' decks carry their counts (20 cards each); BEAR's 20-card deck added; starters marked.
   PROCESS 2.9: what a full deck is. HANDOFF: the order that saves the most time.
 
+
+## 30 Oct 2026, v41 (Kaptain's second Faeria check, fixed by cause in every game; deck_read_faeria.md F1-F13)
+- network.py: a line's kind from the need (trigger or counted event: waits; a thing that must be there: type "enables");
+  help split into cheaper, stronger, keyword, moves, clears (help_kind); reasons in active verbs (ACT, ACT_SELF); the
+  rules' harm to my own units and rules that need a place feed nothing (costs kept); either-side harm aimed at my own unit
+  whose death or damage effect it sets off (self_harm_lines; not shield keywords); payers: game's top tenth of costs, a
+  third of the cost, only the cards a cut names; help that names its targets lands only on them (lands_on); a tutor's
+  line split over the deck's matching cards.
+- refs.py: the struck-back rule removed; a number taken from a stat waits for nothing; a unit that comes back after dying
+  makes deaths (Ruunin). connections.py: what a card does to itself meets the payoff's trigger about my units.
+- cases/run.py lists must-not cases whose reason no deck says; review_check.py (in run.py); dump_lines.py.
+- network_page.py: kinds and names agreed 30 Oct; links hover and click like cards; labels only the reason.
+- Lines before -> after: Runeterra 6952 -> 6729, Stormbound 959 -> 925, Monster Train 106 -> 109, Duelyst 574 -> 569,
+  Inscryption 325 -> 324, Faeria 651 -> 571. Cases nfa31-nfa40.

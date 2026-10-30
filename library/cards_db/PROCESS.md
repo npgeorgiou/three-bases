@@ -243,7 +243,7 @@ its name and text, then its rows. Every error he finds is fixed for all cards wi
 When Kaptain does not know the game (Inscryption), he cannot check rows: Claude checks the 20 cards against their texts
 and the sources of step 0.10 itself, writes every error into deck_read_<game>.md ("Check of 20 cards"), fixes each family
 once, and adds a case per family. Kaptain then checks the deck networks page (network_page.py) in plain words: does a line
-between two cards make sense to a player.
+between two cards make sense to a player. Every point he finds is fixed as "Fixing a review" says.
 
 ### 5. Done when
 `run.py <game>` passes every step and every other game still passes; read/<game>/game_rules.jsonl written (step 0.10);
@@ -498,11 +498,14 @@ were made the shared form for every game with spaces (BRIEF "The board"). What w
 
 ## Kaptain's check of the Faeria networks (29 Oct 2026; 24 points, fixed for every game; deck_read_faeria.md)
 1. **Labels read backwards.** Arrows go from the card that provides to the card that uses it; "is a card it needs" read as
-   if the start needed the end. Page labels now: "enables" (kind type), "helps" (kind boosts: stronger, cheaper, reaching).
+   if the start needed the end. Kinds and page names (30 Oct, agreed): "does what it waits for" (a trigger or a counted
+   event), "enables" (a thing that must be there), makes cheaper / makes stronger / gives keyword / moves into place /
+   clears the way (help, by how). Reasons are the first card's active verb ("kills it for its death effect").
 2. **Help aimed at one chosen or random card was a faint "can aim at it".** A buff, a movement keyword, a cost cut or a
    heal aimed at a card of a kind (Oakling's random green creature, Horsemaster's Charge, Khalim's Training on "a creature"
    of either side) is "helps" to each card it can hit, weight shared (network.helps_it; cases nfa19, nfa20, nfa30).
-3. **Paying for big cards.** Mana gain and cost cuts help the cards in the top quarter of the game's costs (nfa23).
+3. **Paying for big cards.** Mana gain and cost cuts help the game's top tenth of costs when they pay a third of the cost,
+   and only the cards a cut names (nfa23, nfa33, nfa39).
 4. **The board grows from my units (Faeria game rules: land next to my creatures, summon on my own land).** Whatever moves my
    units or land forward (move effects, movement keywords given or owned, land movers, units made with movement keywords)
    helps cards whose entry asks for a place measured from themselves (Bomb Slinger, Axe Grinder) and cards that need my
@@ -511,11 +514,35 @@ were made the shared form for every game with spaces (BRIEF "The board"). What w
 5. **A straight line of fire** (a keyword whose strike hits the nearest enemy in a straight line: Faeria Ranged) is helped by
    removing or moving enemy units and by moving the shooter by an effect (nfa22).
 6. **Needs that are none.** An ability that only destroys its own card waits for nothing (Krog's Dinner, nfa24); harm aimed
-   at "a creature" of either side is aimed at enemies, no friendly death (nfa25); units are struck back when they fight, so
-   they can die (weak "by fighting" lines); "if Krog has died" kept its card filter (the zone filter was dropped).
+   at "a creature" of either side is no friendly death for death counters (nfa25) but is aimed at my own unit whose own
+   death effect it sets off (nfa40); "if Krog has died" kept its card filter. Wrong and removed 30 Oct: "units are struck
+   back when they fight, so they can die" (Claude's own addition; it linked every creature to Soul Eater).
 7. **A code line lost in a comment.** A scripted replacement left aimed_rows' filter inside a comment for a whole session.
    Rule: after any scripted edit of shared code, read `git diff` of that file before rebuilding.
 8. Page: cost and Attack|Life on every card, keywords once, a deck drop-down per game, decks listed once, nodes pulled closer.
+
+## Fixing a review: by cause, never by example (30 Oct 2026; read before touching any point Kaptain raises)
+Kaptain reviews a few decks: a sliver of the cards. Each point he finds is a sample of a rule that is wrong everywhere it
+fires. Twice Claude fixed the named lines only, and added rules of its own without looking at what they did elsewhere; he
+then found the same errors again. Why it happens, so it can be watched for: Claude reads a point as a task ("this line is
+wrong"), finds the code that drew that line, changes it until the line goes, sees the counted tests pass, and stops. The
+point is answered; the rule behind it is never looked at across the games. Do this instead, in this order, every time:
+1. Before any change: `python3 dump_lines.py /tmp/before.tsv` (every line of every deck of every game).
+2. For each point: find the rule that drew the line (file, function, condition) and the reading behind it (`flat_ref`,
+   `flat_do` rows of both cards). Name the cause in one sentence, not the card.
+3. Group the points by cause (families). For each cause ask what else it does: `dump_lines.py --find /tmp/before.tsv <reason>`
+   counts the same reason in every game; read 10 examples per game. Ask also which nearby rules share the cause (the same
+   filter dropped by another rule, the same "every unit" by another game rule).
+4. Fix each cause once, in the shared rule. A rule of your own beyond the point (Faeria: "fighters are struck back") is a
+   new cause: dump and read what it does in every game before keeping it.
+5. `python3 dump_lines.py /tmp/after.tsv` and `--diff /tmp/before.tsv /tmp/after.tsv`: read EVERY gone and new reason group,
+   in every game, as a player. A wrong one is another family: back to 2.
+6. Write the families in deck_read_<game>.md, each "## F<n> <name>" with "Root cause:", "Same error elsewhere:" (counts per
+   game) and "Fix:" lines; `run.py` fails without them (review_check.py). Add a case per point; rewrite any must-not case
+   cases/run.py lists as saying a reason no deck says any more (its wording changed, so it can no longer fail).
+7. Report to Kaptain per family: the cause, what it did in every game, the fix, what is still open. Never per card only.
+Another chat's game: the dump and the diff show what a shared fix did there; tell Kaptain and that chat, change none of
+its records or cases.
 
 ## Think like a player (read before showing any network, any deck explanation, any answer about synergy)
 Kaptain checks a few decks and finds errors a player sees at once. Before showing anything, do what he does:
@@ -544,3 +571,5 @@ Kaptain checks a few decks and finds errors a player sees at once. Before showin
 - Shared-code bugs no case caught (a played card "setting off" a trigger that asks for another type; 'type is 1' matched
   inside 'type is 11'): found only by reading `partners` answers.
 - Turning a decision back and forth instead of looking up CHANGES.md and asking Kaptain.
+- Fixing the lines a reviewer named, not the rule that drew them; adding an unasked rule (fighters struck back) without
+  checking what it drew in every game (Faeria, 29-30 Oct: "Fixing a review").

@@ -109,9 +109,12 @@ def reasons(c, enabler, payoff):
                                        join flat_ref r on r.card=g.entry and r.role='makes' where g.cost_has is null
                                        and (select game from card where id=g.entry)=(select game from card where id=?)""", (ev, e)).fetchall():
                     made = made | {(rh, 'mine', None, None)}
-            for h, sd, role, k, pk in c.execute("select happening, side, role, keyword, pick from flat_ref where card=? and role in ('condition','state')", (p,)).fetchall():
+            for h, sd, role, k, pk in c.execute("select happening, side, role, keyword, pick from flat_ref where card=? and role in ('condition','state','trigger')", (p,)).fetchall():
                 sd = 'mine' if pk == 'self' else sd  # something that happens to the payoff itself happens on my side
-                if any(h == mh and agree(ms, sd) and same_kw(c, k, mk) and not (pk == 'self' and mp == 'self') for mh, ms, mk, mp in made): yield (6, f'{role}: {h}')
+                # a trigger is matched here only by what the enabler does to itself (Ruunin dies and comes back: "when a friendly
+                # creature dies"); what it does to others is matched by its acts above
+                if any(h == mh and agree(ms, sd) and same_kw(c, k, mk) and not (pk == 'self' and mp == 'self') and (role != 'trigger' or
+                       (mp == 'self' and pk != 'self')) for mh, ms, mk, mp in made): yield (6, f'{role}: {h}')
             # keyword or type the payoff asks for, carried by what the enabler makes or gives
             kw_have = {k for x in makers for (k,) in c.execute('select keyword from card_keyword where card=?', (x,))}
             kw_have |= {k for x in makers for (k,) in c.execute("select keyword_ref from flat_do where card=? and act='give_keyword' and keyword_ref is not null", (x,))}

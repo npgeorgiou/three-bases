@@ -77,10 +77,10 @@ ni09	inscryption	Act II Ouroboros and Mantis God (koi)	Mantis God	Ouroboros	line
 ni10	inscryption	Act II Ouroboros and Mantis God (koi)	Ouroboros	Mantis God	none	Blood costs	Claude (v36): Ouroboros paying its own Blood cost pays nothing for Mantis God
 ni11	inscryption	Kaycee's Mod Ants	Ant Queen	Flying Ant	line		Claude (v36): Flying Ant's Power is the number of Ants; Ant Queen is an Ant (wiki pages Ants, Ant)
 ni12	inscryption	Kaycee's Mod Moose Blood	Moose Buck	Pelts (Rabbit)	none	your units move	Claude (v36): where Pelt Lice are put (adjacent slots) does not need units to move
-nfa03	faeria	Fast Rakoans	Rakoan Illusionist	Imperial Trooper	none	moves onto	Claude, deck read: the Illusionist gives Flying to another Rakoan; the Trooper is no Rakoan, nothing moves it onto enemy land
-nfa04	faeria	Fast Rakoans	Airbot	Imperial Trooper	none	moves onto	Claude, deck read: Airbot's own Dash moves Airbot, not the Trooper (its forward position helps the Trooper enter nearer enemy land: that line is right)
+nfa03	faeria	Fast Rakoans	Rakoan Illusionist	Imperial Trooper	none	onto	Claude, deck read: the Illusionist gives Flying to another Rakoan; the Trooper is no Rakoan, nothing moves it onto enemy land
+nfa04	faeria	Fast Rakoans	Airbot	Imperial Trooper	none	onto	Claude, deck read: Airbot's own Dash moves Airbot, not the Trooper (its forward position helps the Trooper enter nearer enemy land: that line is right)
 nfa05	faeria	Beastmaster Green	Time of Legends	Eredon, Voice of All	line		guide: Time of Legends brings Eredon out early (draws the top legend)
-nfa06	faeria	Beastmaster Green	The Emperor's Command	Feed the Forest	none	healed	Claude, deck read: the Command heals a god, not the creature Feed the Forest destroys
+nfa06	faeria	Beastmaster Green	The Emperor's Command	Feed the Forest	none	heals	Claude, deck read: the Command heals a god, not the creature Feed the Forest destroys
 nfa07	faeria	Blue Jump	Wavecrash Colossus	Gabrian Commander	line		guide: play slowly so the big cards come; the Commander waits for a 7+ cost card drawn
 nfa08	faeria	Blue Jump	Ninja Toad	Gabrian Commander	none		Claude, deck read: Ninja Toad costs 4, not 7 or more
 nfa09	faeria	Yellow Flyers	Windborne Champion	Drakkar Skycaptain	none	get Flying	Claude, deck read: drawing a Flying creature needs a card that has Flying, nothing given in play
@@ -103,7 +103,7 @@ nfa25	faeria	Yellow Monstrosity	Soul Drain	Shaytan Monstrosity	none	your units d
 nfa26	faeria	Yellow Monstrosity	Flash Wind	Mistral Guide	line		Kaptain: moving Mistral Guide decides where the units summoned next to it get Dash and Flying
 nfa27	faeria	Blue Jump	Battle Toads	Wavecrash Colossus	line		Kaptain: Battle Toads and Sunken Tower are in the deck for a reason: units and lands forward reach the enemy wells
 nfa28	faeria	Blue Jump	Sunken Tower	Wavecrash Colossus	line		Kaptain: as nfa27
-nfa29	faeria	Blue Jump	Gabrian Archon	Wavecrash Colossus	none	moves it where it must be	Kaptain: Archon does not help the Colossus; the Colossus helps the Archon
+nfa29	faeria	Blue Jump	Gabrian Archon	Wavecrash Colossus	none	stronger:	Kaptain: Archon does not help the Colossus; the Colossus helps the Archon; 30 Oct: the complaint was "makes it stronger"; Archon has Charge 2, so it may still move into place (Claude, asked Kaptain)
 nfa30	faeria	Bargain (Krog)	Bold Bargainer	Krog, the Ogre King	line		Kaptain: a 7 cost cut must help the expensive cards
 ni13	inscryption	Kaycee's Mod Free Reptiles	Rabbit	Bullfrog	none	sacrificed	Claude (v38): Bullfrog comes from Tadpole growing (wiki Fledgling), it is never played, so no sacrifice pays for it
 ni14	inscryption	Act III starter	Sniper Bot	Double Gunner	none		Claude (v38): two strikers, nothing between them
@@ -140,3 +140,13 @@ ndu27	duelyst	Lilithe Darkfire	Darkfire Sacrifice	Wraithling	none	cheaper	Claude
 ndu28	duelyst	Cassyva Replace Abomination	Healing Mystic	Cassyva Soulreaper	line		Claude, deck read: "restore 2 Health to anything" can heal my General (family 13)
 ndu29	duelyst	Lilithe Darkfire	Vorpal Reaver	Inkling Surge	line		guide: Inkling Surge draws when another Wraithling is out; Lilithe and Vorpal Reaver make them
 ndu30	duelyst	Faie Blood Taura	White Asp	Blazing Spines	none	names	Claude, deck read: Blazing Spines names the walls it summons itself; it asks for no other wall maker (family 24)
+nfa31	faeria	Blue Yellow Events	Shifting Tide	Windstorm Colossus	none	type:	Kaptain 30 Oct 2026: the Colossus counts events played; one kind of line, does what it waits for, not enables
+nfa32	faeria	Yellow Monstrosity	Manta Rider	Windborne Emissary	none	waits:	Kaptain 30 Oct 2026: the Emissary needs another flyer to be there: enables, not does what it waits for
+nfa33	faeria	Red Combat	Underground Boss	Bomb Slinger	none		Kaptain 30 Oct 2026: 2 faeria in a fight does not pay for a 5 cost card
+nfa34	faeria	Red Blue Mobility Burn	Seifer, Blood Tyrant	Gabrian Enchantment	none		Kaptain 30 Oct 2026: 'Attack becomes equal to its Life' waits for nothing
+nfa35	faeria	Red Blue Mobility Burn	Gift of Steel	Gabrian Enchantment	line		Claude, from Kaptain's point 4: more Life becomes more Attack (makes stronger)
+nfa36	faeria	Midrange Sacrifice	Demon Wing	Soul Eater	none		Kaptain 30 Oct 2026: every unit can die fighting; only cards that make my units die feed it
+nfa37	faeria	Midrange Sacrifice	Lord of the Wastes	Soul Eater	line		Kaptain 30 Oct 2026: Lord sacrifices a friendly creature
+nfa38	faeria	Midrange Sacrifice	Lord of the Wastes	Village Elder	line		Kaptain 30 Oct 2026: kills it for its death effect
+nfa39	faeria	Bargain (Krog)	Krog's Dinner	Meteor	none		Kaptain 30 Oct 2026: 'Your Krog costs 7 less' helps only Krog
+nfa40	faeria	Voice of Hunger Control	Falcon Dive	Plague Bearer	line		Kaptain 30 Oct 2026: 1 damage to my own 1 Life unit sets off its Last Words

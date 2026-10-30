@@ -80,7 +80,7 @@ def main():
         decks = {r['deck']: r['cards'] for f in (os.path.join(DBDIR, 'decks.tsv'), os.path.join(HERE, 'decks.tsv')) if os.path.exists(f)
                  for r in csv.DictReader(open(f, encoding='utf-8'), delimiter='\t') if r['game'] == game}
         out += ['', '## Deck networks (a line must be there, or must not)', '', '| case | deck | from | to | expect | found | pass |', '|---|---|---|---|---|---|---|']
-        nets = {}
+        nets = {}; stale = []
         for r in csv.DictReader(open(path, encoding='utf-8'), delimiter='\t'):
             if r['game'] != game: continue
             if r['deck'] not in nets:
@@ -93,8 +93,16 @@ def main():
                    for k, w, y in ls if k != 'targets']  # the line's kind and why ("boosts: gives it +1|+1")
             if r['expect'] == 'line': ok = bool(hit)
             else: ok = not hit if not r['why_not'] else not any(r['why_not'] in y for y in hit)
+            # a "must not" case on a reason no line of the deck says any more can never fail: the reason text changed, so the
+            # case must be rewritten (Kaptain's Archon -> Colossus passed on an old wording)
+            if r['expect'] != 'line' and r['why_not']: stale.append((r['id'], r['why_not']))
             total += 1; passed += ok
             out.append(f"| {r['id']} | {r['deck']} | {r['from']} | {r['to']} | {r['expect']} {r['why_not']} | {'; '.join(sorted(set(hit)))[:80] or '-'} | {'yes' if ok else 'NO'} |")
+    said = {f'{k}: {y}' for _, ls_ in locals().get('nets', {}).values() for ls in ls_.values() for k, w, y in ls}
+    path_stale = [i for i, wn in locals().get('stale', []) if not any(wn in x for x in said)]  # in no deck of the game
+    if path_stale:
+        out.insert(3, f"**Cases whose reason no line says any more (rewrite them): {', '.join(path_stale)}**\n")
+        print('must-not cases whose reason no deck of the game says (reworded, or every such line is gone): ' + ', '.join(path_stale))
     out.insert(3, f'**{passed} of {total} cases pass.**\n')
     open(os.path.join(HERE, 'REPORT.md'), 'w').write('\n'.join(out) + '\n'); print(f'{passed} of {total} cases pass')
 

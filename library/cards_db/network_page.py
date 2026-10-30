@@ -40,15 +40,17 @@ svg text{font-size:12px;fill:var(--fg);pointer-events:none;paint-order:stroke;st
 <div id="tools"><button id="zin" title="zoom in">+</button><button id="zout" title="zoom out">&minus;</button><button id="fit" title="fit">fit</button></div></div>
 <div id="side"></div></div><div id="tip"></div><script>
 const D=__DATA__;
-const LINE={waits:['#0d9488','does what it waits for'],levels:['#c026d3','helps it level up'],puts:['#65a30d','puts it into play'],
- repeats:['#ea580c','repeats its effects'],rules:['#dc2626','changes how it works'],type:['#4f46e5','enables'],
- boosts:['#b45309','helps'],levelsinto:['#6b7280','levels into'],targets:['#9ca3af','can aim at it']};
+const LINE={waits:['#0d9488','does what it waits for'],type:['#4f46e5','enables'],cheaper:['#ca8a04','makes cheaper'],
+ stronger:['#b45309','makes stronger'],keyword:['#db2777','gives keyword'],moves:['#0284c7','moves into place'],clears:['#7c3aed','clears the way'],
+ levels:['#c026d3','helps it level up'],puts:['#65a30d','puts it into play'],repeats:['#ea580c','repeats its effects'],
+ rules:['#dc2626','changes how it works'],boosts:['#92400e','helps'],levelsinto:['#6b7280','levels into'],targets:['#9ca3af','can aim at it']};
 const CARD={hero:['#facc15','champion'],unit:['#7dd3fc','unit'],spell:['#c4b5fd','spell'],building:['#6ee7b7','landmark / structure'],
  item:['#fdba74','equipment'],ability:['#d1d5db','skill']};
 const R=14,NS='http://www.w3.org/2000/svg',svg=document.getElementById('draw'),tip=document.getElementById('tip');
 const hidden=new Set();let cur=0,sel=null,hov=null,vb=null,d=null,N=[],ix={},els={},game=D[0].game;
 // focus: one card (its lines) or a section of the sidebar (its cards and the lines between them); one at a time
 const one=i=>({nodes:new Set([i]),pairs:null,card:i});
+const oneLine=i=>{const l=d.lines[i];return {nodes:new Set([ix[l.from],ix[l.to]]),pairs:null,card:null,line:i,key:'l'+i}};
 function games(){const G=[...new Set(D.map(x=>x.game))],g=document.getElementById('games');g.innerHTML='';
  G.forEach(x=>{const b=document.createElement('button');b.textContent=x.replace('_',' ');b.className=x===game?'on':'';
   b.onclick=()=>{game=x;cur=D.findIndex(y=>y.game===x);sel=null;games();show()};g.appendChild(b)});tabs()}
@@ -90,7 +92,8 @@ document.getElementById('zin').onclick=()=>zoom(1/1.3);document.getElementById('
 let drag=null;svg.onmousedown=e=>{if(e.target.dataset.n)return;drag={x:e.clientX,y:e.clientY,vb:{...vb},moved:false};svg.classList.add('pan')};
 addEventListener('mousemove',e=>{if(!drag)return;const r=svg.getBoundingClientRect(),s=Math.max(vb.w/r.width,vb.h/r.height),dx=e.clientX-drag.x,dy=e.clientY-drag.y;
  if(Math.abs(dx)+Math.abs(dy)>3)drag.moved=true;vb={...drag.vb,x:drag.vb.x-dx*s,y:drag.vb.y-dy*s};setVB()});
-addEventListener('mouseup',e=>{if(drag&&!drag.moved&&!e.target.dataset.n&&e.target.closest('#draw')){sel=null;mark()}drag=null;svg.classList.remove('pan')});
+addEventListener('mouseup',e=>{if(drag&&!drag.moved&&!e.target.dataset.n&&!e.target.dataset.l&&e.target.closest('#draw')){sel=null;mark()}
+ setTimeout(()=>{drag=null},0);svg.classList.remove('pan')});
 const same=(a,b)=>a&&b&&a.key===b.key&&a.card===b.card;
 function el(t,a){const x=document.createElementNS(NS,t);for(const k in a)x.setAttribute(k,a[k]);return x}
 function draw(){svg.innerHTML='';const defs=el('defs',{}),seen={},bend=[];
@@ -105,25 +108,28 @@ function draw(){svg.innerHTML='';const defs=el('defs',{}),seen={},bend=[];
   const dd=`M${sx},${sy} Q${mx},${my} ${ex},${ey}`,c=LINE[l.kind][0];
   const ln=el('path',{d:dd,fill:'none',stroke:c,'stroke-width':l.kind==='targets'?2:2+Math.min(3,l.weight*6),'marker-end':`url(#m${l.kind})`});
   if(l.kind==='levelsinto')ln.setAttribute('stroke-dasharray','2 3');
-  const hit=el('path',{d:dd,fill:'none',stroke:'transparent','stroke-width':10,'data-l':i});gl.append(ln,hit);els.lines.push(ln)});
+  const hit=el('path',{d:dd,fill:'none',stroke:'transparent','stroke-width':10,'data-l':i,style:'cursor:pointer'});gl.append(ln,hit);els.lines.push(ln)});
  N.forEach((n,i)=>{const g=el('g',{});const c=el('circle',{cx:n.x,cy:n.y,r:R,fill:col(n),stroke:'currentColor','stroke-width':n.made?1.5:2,'data-n':i,style:'cursor:pointer;color:var(--fg)'});
   if(n.made)c.setAttribute('stroke-dasharray','3 3');const t=el('text',{x:n.x+R+5,y:n.y+4});t.textContent=n.name+info(n);g.append(c,t);gn.appendChild(g);els.nodes.push(g)});
  mark()}
 function mark(){const f=hov||sel,on=new Set(f?f.nodes:[]);
  d.lines.forEach((l,i)=>{const ln=els.lines[i],show=!hidden.has(l.kind),a=ix[l.from],b=ix[l.to];
-  const touch=!!f&&(f.card!=null?(a===f.card||b===f.card):f.pairs?f.pairs.has(a+'>'+b):(f.nodes.has(a)&&f.nodes.has(b)));
+  const touch=!!f&&(f.line!=null?i===f.line:f.card!=null?(a===f.card||b===f.card):f.pairs?f.pairs.has(a+'>'+b):(f.nodes.has(a)&&f.nodes.has(b)));
   ln.style.display=show?'':'none';els.lines[i].nextSibling.style.display=show?'':'none';
   if(touch&&show){on.add(a);on.add(b)}
-  ln.style.opacity=!f?(l.kind==='targets'?.45:.6):touch?1:.08;ln.style.filter=touch?'saturate(1.6)':'';ln.style.strokeWidth=touch?'':''});
+  ln.style.opacity=!f?(l.kind==='targets'?.45:.6):touch?1:.08;ln.style.filter=touch?'saturate(1.6)':'';
+  ln.style.strokeWidth=f&&f.line===i?String(4+Math.min(3,l.weight*6)):''});
  els.nodes.forEach((g,i)=>{g.style.opacity=!f||on.has(i)?1:.25;g.firstChild.setAttribute('r',sel&&sel.nodes.has(i)?R+4:R)});
  document.querySelectorAll('.chip').forEach(c=>c.style.outline=sel&&sel.card!=null&&ix[+c.dataset.id]===sel.card?'2px solid var(--fg)':'');
  document.querySelectorAll('.sec').forEach(x=>x.classList.toggle('on',!!sel&&sel.key===x.dataset.key))}
 svg.onmousemove=e=>{if(drag&&drag.moved)return;const t=e.target;let h='';
  if(t.dataset.n){const n=N[+t.dataset.n];hov=one(+t.dataset.n);h=`<b>${esc(n.name)}</b>${esc(info(n))} <span style="color:var(--mut)">${esc((CARD[n.cat]||['',n.cat])[1])}${n.made?', made by the deck':''}</span><br>${n.keywords.length?'<i>'+esc(n.keywords.join(', '))+'</i><br>':''}${esc(n.text)}`}
- else{hov=null;if(t.dataset.l){const l=d.lines[+t.dataset.l];h=`${esc(N[ix[l.from]].name)} &rarr; <b>${esc(l.why)}</b> &rarr; ${esc(N[ix[l.to]].name)}<br><span style="color:var(--mut)">${LINE[l.kind][1]}</span>`}}
+ else if(t.dataset.l){const l=d.lines[+t.dataset.l];hov=oneLine(+t.dataset.l);h=`<b>${esc(l.why)}</b><br><span style="color:var(--mut)">${LINE[l.kind][1]}</span>`}
+ else hov=null;
  mark();tip.style.display=h?'block':'none';tip.innerHTML=h;tip.style.left=Math.min(innerWidth-360,e.clientX+14)+'px';tip.style.top=Math.min(innerHeight-120,e.clientY+14)+'px'};
 svg.onmouseleave=()=>{hov=null;mark();tip.style.display='none'};
-svg.onclick=e=>{if(e.target.dataset.n){const i=+e.target.dataset.n;sel=sel&&sel.card===i?null:one(i);mark()}};
+svg.onclick=e=>{if(e.target.dataset.n){const i=+e.target.dataset.n;sel=sel&&sel.card===i?null:one(i);mark()}
+ else if(e.target.dataset.l&&!(drag&&drag.moved)){const i=+e.target.dataset.l;sel=sel&&sel.line===i?null:oneLine(i);mark()}};
 function legend(){const cats=[...new Set(N.map(n=>n.cat))],kinds=new Set(d.lines.map(l=>l.kind));
  let h='<b>Cards</b>'+cats.map(c=>`<div class="k n"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="${(CARD[c]||['#ccc'])[0]}" stroke="currentColor"/></svg>${esc((CARD[c]||['',c])[1])}</div>`).join('')
   +'<div class="k n"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="none" stroke="currentColor" stroke-dasharray="2 2"/></svg>made by the deck</div>'

@@ -1,4 +1,4 @@
-# Handoff: card database (29 Oct 2026, v38)
+# Handoff: card database (30 Oct 2026, v41)
 
 ## Start of a chat
 1. Clone with the library (CLAUDE.md "Start of a chat", then `git sparse-checkout disable`). Read only this file first.
@@ -19,6 +19,9 @@
   normalizes and rewrites that chat's records and files.
 - Don't touch other games' records, fixes or flags; don't do work nobody asked for (new explainer roles, wordings).
 - Don't trust a passing count or a few lines: look at what a line SAYS in network.html, both directions, as a player.
+- Do fix every review point by its cause (PROCESS.md "Fixing a review"): dump every network line of every game before and
+  after (`dump_lines.py`), read every gone and new reason, write root cause / same error elsewhere / fix per family
+  (`review_check.py` fails without them). A point fixed for the named cards only comes back.
 - If a step here or in PROCESS seems to force a loop, stop and ask Kaptain instead of working around it.
 
 **The order that saves the most time (Inscryption, 29 Oct 2026: done the long way it took three fix rounds, v36, v38, v39,
@@ -54,7 +57,7 @@ and about ten rebuilds). Each check below is cheap and found errors that later c
 - Deck networks: network.py (`ask.py <game> network`), the page `network_page.py` -> network.html (decks in decks.tsv and
   cases/decks.tsv). 36 Runeterra and 28 Stormbound full decks; Monster Train has only guides' core cards (no full lists
   found as text). Kaptain's judgement of the v34 networks is open (NEXT_CHAT.md).
-- Cases: Runeterra 308, Stormbound 145, Monster Train 154, Inscryption 72, Duelyst 77, Faeria 103, all passing; audit_links.py findings are explained in RESULTS.md.
+- Cases: Runeterra 308, Stormbound 145, Monster Train 154, Inscryption 72, Duelyst 77, Faeria 113, all passing; audit_links.py findings are explained in RESULTS.md.
 - Faeria (v35-v38): imported; every step of PROCESS passes, all 12 decks read card by card (RESULTS.md). Its board words are
   now the shared form for every positional game (BRIEF "The board", PROCESS "Importing Faeria: the board"). Waiting for
   Kaptain's check of CHECK_20_faeria.md (ids in CHECK_20_faeria_ids.txt) and of CONCEPTS_faeria.md.

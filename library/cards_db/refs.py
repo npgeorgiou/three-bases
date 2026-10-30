@@ -135,7 +135,9 @@ def build(c):
             # Life) is no stat the card wants more or less of (Divine Guardian)
             if test == 'amount_stat' and (card, ab) in costs:  # a cost equal to a stat ("costs your General's Health"): less of it
                 sevs = tuple(e for e in sevs if e != 'healed')  # makes it cheaper (Blood Taura): damage feeds it, healing does not
-            elif test == 'amount_stat' or op in ('ge', 'gt'): sevs = tuple(e for e in sevs if e not in ('damaged', 'nexus_damaged'))
+            elif test == 'amount_stat': sevs = ()  # a number taken from a stat ("Attack becomes equal to its Life") waits for nothing;
+            # what raises that stat makes the card stronger (network.py boost_lines: more health, more power)
+            elif op in ('ge', 'gt'): sevs = tuple(e for e in sevs if e not in ('damaged', 'nexus_damaged'))
             elif op in ('le', 'lt'): sevs = tuple(e for e in sevs if e != 'healed')
             for sev in sevs:
                 ins(card, o, v, ab, 'condition', sev, fk or 'unit', fs, fp, w=fw)  # a unit's stat unless a player's is named ("its Life" of "it")
@@ -202,10 +204,6 @@ def build(c):
         # "Can't harvest faeria" the harvest rule; a "can't" limited to some targets ("can only attack gods") skips nothing
         made = {r[1] for r in rows}
         fights = bool(made & {'attacks', 'strikes', 'strikes_nexus', 'fights'})
-        # a unit that fights is struck back: it is damaged and can die (my units dying in fights feeds Shaytan Monstrosity)
-        ab0 = rows[0][0] if rows else None
-        hit_back = [(ab0, h, 'unit', 'mine', 'self', None, None, None, None, 'makes') for h in ('damaged', 'survives_damage', 'dies')] \
-            if made & {'strikes', 'fights'} and not cost_has else []
         never = {a for (a,) in c.execute("""select ck.card from card_keyword ck join card k on k.id=ck.keyword join vocab v on v.field='keyword'
                  and v.value in (k.name, k.game || ':' || k.name) where v.tree='cant_attack'""")} if fights else set()
         never |= {a for (a, ev) in c.execute("""select card, param_event from flat_do where origin='own' and act='cant' and on_pick='self'
@@ -215,11 +213,17 @@ def build(c):
                                  (cat, e, cost_has, cost_has)).fetchall():
             if card in never: continue
             ckind = KIND_OF_CAT.get(c.execute('select category from card where id=?', (card,)).fetchone()[0])
-            for ab, h, k, sd, pk, kw, con, w, ref, role in rows + hit_back:
+            for ab, h, k, sd, pk, kw, con, w, ref, role in rows:
                 if pk == 'self' and not sd: sd = 'mine'  # what the card does to itself is on its owner's side
                 if pk == 'self' and not k: k = ckind  # a unit fights as a unit, a leader (Duelyst General) as its player
                 # (a leader attacks, strikes and kills as its player: "whenever your General attacks" waits for exactly that)
                 c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (card, 'game', e, ab, role, h, k, sd, pk, kw, con, w, ref, None, None))
+    # a unit that comes back when it dies (Ruunin: "Last Words - return Ruunin to your hand") dies again and again: its deaths
+    # feed what counts my units dying (Shaytan Monstrosity), as a card that kills my units does (ref: the card itself)
+    for card, ab in c.execute("""select distinct w.card, w.ability from flat_when w join flat_do d on d.card=w.card where w.event='dies'
+            and w.obj_pick='self' and w.origin='own' and d.origin in ('own','gives') and d.act in ('return_card','return_to_hand','revive','summon')
+            and (d.on_with like '%card is ' || w.card || '%' or d.card_ref=w.card or (d.on_pick='self' and d.ability=w.ability))""").fetchall():
+        ins(card, 'own', None, ab, 'makes', 'dies', 'unit', 'mine', 'self', ref=card)
     # what an ability kills and then uses ("destroy all friendly minions to summon an Abomination that gains their Attack"): its
     # own deaths, it waits for none
     c.execute("""delete from flat_ref where role in ('state','condition') and happening='dies' and exists (select 1 from flat_ref m
