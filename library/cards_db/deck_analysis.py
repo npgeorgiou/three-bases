@@ -221,12 +221,15 @@ def analyze(c, game, text):
     # roles by mechanic (concepts): control, support for your units, card flow
     con = collections.defaultdict(set)
     for card, x in c.execute(f'select card, concept from flat_concept where card in ({marks})', deck): con[x].add(card)
-    def role(title, keys, on_side, acts, extra_sql=''):
+    def role(title, keys, on_side, acts, extra_sql='', any_side=False, aimed=False):  # any_side: help of its kind on a target of no
+        # side (a shield on any tile); aimed: harm on a target of no side the player picks goes to enemies (refs.py HARM)
         cards = set()
         for k in keys: cards |= con.get(k, set())
         # the card must have an effect of that kind on that side (a landmark that can't block itself is no control)
-        rows = lambda x: c.execute(f"""select on_with from flat_do where card=? and coalesce(on_side,'') in ({on_side}) {extra_sql} and
-                 (concept in ({','.join('?' * len(keys))}) or act in ({','.join('?' * len(acts))}))""", (x, *keys, *acts)).fetchall()
+        rows = lambda x: c.execute(f"""select on_with from flat_do where card=? and ((coalesce(on_side,'') in ({on_side}) {extra_sql} and
+                 (concept in ({','.join('?' * len(keys))}) or act in ({','.join('?' * len(acts))}))) or (coalesce(on_side,'')='' and
+                 {"1" if any_side else "0"} and concept in ({','.join('?' * len(keys))})) or (coalesce(on_side,'')='' and {"1" if aimed else "0"}
+                 and on_pick in ('chosen','nearest','random') and act in ({','.join('?' * len(acts))})))""", (x, *keys, *acts, *keys, *acts)).fetchall()
         # a row that acts only on cards with a keyword no card of the deck has or is given acts on nothing here (Act III's
         # Gemified bonus of Emerald and Ruby Mox in an Act II deck)
         reachable = lambda w: all(int(k) in deck_kws for k in re.findall(r'(?<![a-z:])keyword is (\d+)', w or ''))
@@ -240,11 +243,11 @@ def analyze(c, game, text):
     con['_strikes'] = {x for (x,) in c.execute(f"""select distinct card from flat_do where act='strike' and to_side='enemy' and to_kind in ('unit','unit_or_structure')
                        and origin in ('own','has_keyword') and card in ({marks})""", deck)}
     ctrl = role('Controls enemy units (damage, remove, stop, weaken)', CONTROL, "'enemy','any'",
-                ('kill', 'obliterate', 'capture', 'stat_set', 'stun', 'silence', 'steal', 'transform', 'return_to_hand', 'damage', 'move', 'strike', 'challenge'))
+                ('kill', 'obliterate', 'capture', 'stat_set', 'stun', 'silence', 'steal', 'transform', 'return_to_hand', 'damage', 'move', 'strike', 'challenge'), aimed=True)
     if con['_strikes'] - ctrl:
         ctrl |= con['_strikes']; out[-1 if out[-1].startswith('Controls enemy units') else len(out):] = [f'Controls enemy units (damage, remove, stop, weaken): {names(c, ctrl)}.']
     sup = role('Supports your units (stats, protection, combat keywords)', SUPPORT, "'mine'",
-               ('stat_change', 'give_keyword', 'negate_damage', 'heal', 'grow', 'first_strike', 'double_strike'))
+               ('stat_change', 'give_keyword', 'negate_damage', 'heal', 'grow', 'first_strike', 'double_strike'), any_side=True)
     flow = role('Card flow (draw, create, choose)', FLOW, "'mine','any',''", ('draw', 'create', 'choose_card', 'copy'))
     extra = role('Puts extra units into play', ('summon', 'revive'), "'mine','any',''", ('summon', 'revive'))
     # economy: more mana, or my cards made cheaper (Faeria Bargain: Bold Bargainer, Ogre Dance, Red Devil)
@@ -271,6 +274,10 @@ def analyze(c, game, text):
         if not any((m != card or pick == 'self') and hh == h and (k is None or kw is None or k == kw) and fit(ms, side) and kinds_fit(mkd, kind) and not (pick == 'self' and mp == 'self' and m != card and not names_it(m, tw)) for (hh, k), ms_ in makes.items() for m, ms, mkd, mp, mw in ms_):
             lack.append(f'{mechanics.name(c, card)} waits for "{say(c, h, side, kw)}" and nothing else in the deck does it')
     alone = [i for i in deck if i not in linked | ctrl | sup | flow | extra | eco]
+    if game in network.CARRIED:  # a unit that carries the deck's weapons does what they do (Into the Breach mechs)
+        carriers = {i for (i,) in c.execute(f"""select ct.card from card_type ct join type t on t.id=ct.type where t.name=? and t.game=?
+                    and ct.card in ({marks})""", [network.CARRIED[game][1], game] + list(deck))}
+        if any(network.cards_of(c, game).get(i, {}).get('cat') in network.CARRIED[game][0] for i in deck): alone = [i for i in alone if i not in carriers]
     weak = list(dict.fromkeys(lack)) + ([f'no clear role: {names(c, alone)}'] if alone else [])
     out.append('Weak spots: ' + ('; '.join(weak) + '.' if weak else 'none found.'))
     return out

@@ -79,6 +79,19 @@ def amount_kind(c, n):
     return r[0] if r else None
 
 
+# cards a unit carries and acts with (Into the Breach weapons and passives: their "self" is the mech): who does what they do
+# is the carrier, so they fit "a Mech that kills" (Viscera Nanobots)
+CARRIED = {'into_the_breach': (('ability',), 'Mech')}  # weapons; a passive (item) acts for no one mech
+
+
+def as_doer(c, game, card):
+    """the card as the one who does its effects: a carried card is its carrier (a unit of the carrier's type)"""
+    if game not in CARRIED or card['cat'] not in CARRIED[game][0]: return card
+    key = ('carrier_type', game)
+    if key not in CACHE: CACHE[key] = {t for (t,) in c.execute("select id from type where name=? and game=?", (CARRIED[game][1], game))}
+    return dict(card, cat='unit', types=card['types'] | CACHE[key])
+
+
 def matches(c, game, card, kind, withs):
     """can card be one of the target's cards (kind plus filters); things only true in play count as possible"""
     skill = card['cat'] == 'ability' and kind == 'spell' and 'skill' in (withs or '')  # "spells or Skills": a skill is no spell otherwise
@@ -222,6 +235,11 @@ def lines_of(c, game):
     cost_rules = {rule_name.get(e) for (e,) in c.execute('select entry from game_rule where cost_has is not null')}
     actor_side = {(a, b): sd for a, b, sd in c.execute("select card, ability, actor_side from flat_when where actor_side is not null")}
     doer_helps = doer_help_abilities(c)
+    # damage only from bumps ("Vek take +1 damage from Bumps", Force Amp): what pushes enemies into things feeds it, not damage
+    bump_abs = {}
+    for a_, ab_, w_ in c.execute("select card, ability, of_with from flat_if where test='it_matches' and of_with like '%origin %'"):
+        o_ = set(re.findall(r'origin (?:is|in) (\w+)', w_ or ''))
+        if o_ and o_ <= {'bump', 'blocking_emerging'}: bump_abs[ab_] = a_
     plain_hits, keepers, cheap_abs = special_abilities(c)
     for card, origin, ab, role, h, side, kw, pick, kind, w, ref, ak, aw, via in c.execute(
             'select card, origin, ability, role, happening, side, keyword, pick, kind, obj_with, ref, actor_kind, actor_with, via from flat_ref'):
@@ -246,7 +264,7 @@ def lines_of(c, game):
         cost = origin == 'game' and role == 'condition'  # a cost the game's rules set (Inscryption Bones, Blood, Mox): the card needs it
         if (origin != 'own' and not kwcond and not cost) or \
            (pick == 'self' and h in ('played', 'summoned')) or pick == 'actor_self': continue  # "I've killed 4": only the card itself
-        if ab in helps or (role == 'trigger' and ab in doer_helps): continue  # "heal the Mech that kills": it helps the killer
+        if ab in helps or (role == 'trigger' and (ab in doer_helps or ab in bump_abs)): continue  # "heal the Mech that kills": it helps the killer
         # (doer_help_lines), it waits for no kill
         if ab in harm_abs or (role == 'trigger' and ab in protect_abilities(c)) or (role == 'condition' and (ab, h) in capped(c)): continue  # "take 1 damage when summoned" (Kujata): it
         # hurts my cards, it wants none; "the first time your General takes damage, prevent 2": it protects, it wants no damage. (A
@@ -288,7 +306,7 @@ def lines_of(c, game):
         if ak == 'player' and not aw and h not in ('attacks', 'strikes', 'killed', 'strikes_nexus', 'fights'): return True
         if ak not in KIND_CAT and not aw: return True
         k = ak if ak in KIND_CAT else 'any'
-        if matches(c, game, cards[m], k, aw): return True
+        if matches(c, game, as_doer(c, game, cards[m]), k, aw): return True
         return ak in ('unit', None) and m in fighters and not any(p.split(' ')[0] in ('card', 'name_has', 'type') for p in (aw or '').split(';'))
     # a card whose own triggers make what its level-up counts (Ashe frostbites when she attacks): feeding the trigger levels it
     selffeed = {t for t in lvl_needs if lvl_needs[t] & own_makes[t]}
@@ -487,6 +505,10 @@ def lines_of(c, game):
         for l in ls:
             if l not in keep and not (l[0] != 'cheaper' and l[2] in cheap): keep.append(l)
         out[k_] = keep
+    pushers = {a for (a,) in c.execute("""select distinct card from flat_ref where role='makes' and happening='moves' and origin in ('own','uses_keyword')
+               and coalesce(side,'') in ('enemy','','any') and coalesce(pick,'') not in ('self')""") if a in cards}
+    for t in set(bump_abs.values()) & set(cards):
+        for m in pushers - {t}: out[(m, t)].append(('waits', 1.0 / len(pushers), '{A} pushes enemy units into things (bump damage)'))
     CACHE[('lines', game)] = out
     return out
 
@@ -788,8 +810,8 @@ def doer_help_lines(c, game, nodes):
         doers = {m for (m,) in c.execute(f"""select distinct card from flat_ref where role='makes' and happening=? and origin in
                  ('own','uses_keyword') and card in ({marks})""", [h] + L)}
         for m in doers:
-            if m != a and m in cards and matches(c, game, cards[m], kind if kind in KIND_CAT else 'any', w):
-                out[(a, m)].append(('boosts', 1.0 / max(1, len(doers)), '{A} ' + ', '.join(dict.fromkeys(w_.replace(' it', ' {B}') for w_ in whys)) + f' when {{B}} {DOES.get(h, h.replace("_", " "))}'))
+            if m != a and m in cards and matches(c, game, as_doer(c, game, cards[m]), kind if kind in KIND_CAT else 'any', w):
+                out[(a, m)].append(('boosts', 1.0 / max(1, len(doers)), '{A} ' + ', '.join(dict.fromkeys(w_.replace(' it', ' {Bc}') for w_ in whys)) + f' when it {DOES.get(h, h.replace("_", " "))}'))
     return out
 
 
@@ -1451,7 +1473,10 @@ def network(c, game, ids, broad=True):
     # "helps" says how: cheaper, stronger, a keyword, into place, a clear way (or it makes what the card waits for happen more)
     lines = collections.defaultdict(list, {(a, b): [(help_kind(y), w, y) if k == 'boosts' else (k, w, y) for k, w, y in ls]
                                            for (a, b), ls in lines.items()})
-    named = lambda a, b, y: y.replace('{A}', mechanics.name(c, a)).replace('{B}', mechanics.name(c, b))  # the two cards by name
+    def unit_name(b):  # the unit itself: a carried weapon is "the mech with Titan Fist"
+        x = cards_of(c, game).get(b)
+        return f'the {CARRIED[game][1].lower()} with {mechanics.name(c, b)}' if x and game in CARRIED and x['cat'] in CARRIED[game][0] else mechanics.name(c, b)
+    named = lambda a, b, y: y.replace('{A}', mechanics.name(c, a)).replace('{Bc}', unit_name(b)).replace('{B}', mechanics.name(c, b))  # names
     return nodes, {(a, b): [(k, w, named(a, b, y)) for k, w, y in one_link(v)] for (a, b), v in lines.items() if v}
 
 
@@ -1479,7 +1504,7 @@ def merge_places(ls):
         moved.append(m.group(1)); places += [p for p in m.group(2).split(' or ') if p not in places]; w_ = max(w_, w); k_ = k_ or k
     if not moved: return ls
     others = {x for x in moved if x != 'it'}
-    who = ' and '.join((['{B}'] if 'it' in moved else []) + ([others.pop() if len(others) == 1 else 'units'] if others else []))
+    who = ' and '.join((['{Bc}'] if 'it' in moved else []) + ([others.pop() if len(others) == 1 else 'units'] if others else []))
     return [(k_, w_, f'{{A}} moves {who}, and {{B}} acts on units {" or ".join(sorted(places))}')] + rest
 
 

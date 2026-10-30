@@ -182,12 +182,12 @@ ni20	inscryption	Black Goat, Moose Buck, Mole, Pelts (Rabbit), Squirrel	Mole	Moo
 ni21	inscryption	Act II bones and sacrifice (Archeronline4U)	Urayuli	Bone Heap	none	Bones	Claude (v41): every death gives a Bone; Urayuli (4 Blood) is not played to die
 n70	runeterra	Braum Zoe	Behold the Infinite	Supercool Starchart	none		Kaptain 30 Oct 2026: both make Celestials; "Invoke a Celestial" names what it makes, it asks for none
 n71	runeterra	Caitlyn Teemo	Poison Dart	Caitlyn	line	plants traps	Kaptain 30 Oct 2026: Poison Dart does not activate traps; it plants Puffcaps that the opponent sets off
-ntb1	into_the_breach	Blitzkrieg	Lightning Mech	Boulder Mech	none		Claude (v48, F8): a place measured from any unit ("the tile beyond the pushed unit") asks for no card
-ntb2	into_the_breach	Swap Mech, Flame Shielding	Swap Mech	Flame Shielding	none		Kaptain 30 Oct 2026 (F9): Flame Shielding helps every Mech; the Mechs do not enable it
-ntb3	into_the_breach	Hazardous Mechs	Nano Mech	Leap Mech	line	heals Leap Mech when Leap Mech kills	Claude (v48, F10): Viscera Nanobots heals any Mech that kills
-ntb4	into_the_breach	Steel Judoka	Judo Mech	Gravity Mech	none	damages enemy units	Claude (v48, F11): Vek Hormones needs an enemy to damage another enemy
-ntb6	into_the_breach	Aegis Mech, Gravity Mech, Judo Mech	Aegis Mech	Gravity Mech	line	damages enemy units	Claude (v48, F11): Spartan Shield turns an enemy's attack onto other enemies, which sets off Vek Hormones
-ntb5	into_the_breach	Mist Eaters	Thruster Mech	Smog Mech	line	Smoke	Claude (v48, F12): Reverse Thrusters leaves Smoke; Nanofilter Mending repairs Mechs on Smoke
+ntb1	into_the_breach	Blitzkrieg	Electric Whip	Rock Accelerator	none		Claude (v48, F8): a place measured from any unit ("the tile beyond the pushed unit") asks for no card (v52: the squad lists its weapons)
+ntb2	into_the_breach	Teleporter, Flame Shielding	Teleporter	Flame Shielding	none		Kaptain 30 Oct 2026 (F9): Flame Shielding helps every Mech; the Mechs do not enable it (v52: the squad lists its weapons)
+ntb3	into_the_breach	Hazardous Mechs	Viscera Nanobots	Hydraulic Legs	line	heals the mech with Hydraulic Legs when it kills	Claude (v48, F10): Viscera Nanobots heals any Mech that kills (v52: the squad lists its weapons)
+ntb4	into_the_breach	Steel Judoka	Vice Fist	Vek Hormones	none	damages enemy units	Claude (v48, F11): Vek Hormones needs an enemy to damage another enemy (v52: the squad lists its weapons)
+ntb6	into_the_breach	Spartan Shield, Vek Hormones	Spartan Shield	Vek Hormones	line	damages enemy units	Claude (v48, F11): Spartan Shield turns an enemy's attack onto other enemies, which sets off Vek Hormones (v52: the squad lists its weapons)
+ntb5	into_the_breach	Mist Eaters	Reverse Thrusters	Nanofilter Mending	line	Smoke	Claude (v48, F12): Reverse Thrusters leaves Smoke; Nanofilter Mending repairs Mechs on Smoke (v52: the squad lists its weapons)
 nst01	sts1	Ironclad Pain (gamersdecide)	Reaper	Flex	none		Claude (v50 deck read): Flex gives Strength, which makes Attacks bigger; it asks for no Attack
 nst02	sts1	Ironclad Pain (gamersdecide)	Flex	Reaper	line	bigger	Claude (v50 deck read): Strength makes Reaper's damage bigger
 nst03	sts1	Silent Shiv (gamersdecide)	Shiv	Accuracy	none		Claude (v50 deck read): Accuracy makes Shivs bigger (one line, Accuracy -> Shiv)
@@ -213,4 +213,7 @@ nst22	sts1	Ironclad Barricade (Steam, Jeff)	Barricade	Shrug It Off	line	keeps th
 nst23	sts1	Ironclad Strength (gamersdecide)	Bag of Marbles	Reaper	line	Vulnerable	Kaptain 30 Oct 2026: Vulnerable makes damage cards stronger
 nst24	sts1	Silent Discard (gamersdecide)	Gambling Chip	Eviscerate	line	cheaper:	Kaptain 30 Oct 2026: discards make Eviscerate cheaper
 nst25	sts1	Ironclad Strength (gamersdecide)	Flex	Heavy Blade	line	gives you Strength	Kaptain 30 Oct 2026: Strength goes to the player
-ntb7	into_the_breach	Rusting Hulks	Pulse Mech	Jet Mech	line	gives it Energy Shield	Claude (v51, F14): Shield Friendly shields every adjacent ally, nothing is chosen
+ntb7	into_the_breach	Rusting Hulks	Repulse	Jet Mech	line	gives it Energy Shield	Claude (v51, F14): Shield Friendly shields every adjacent ally, nothing is chosen (v52: the squad lists its weapons)
+ntb8	into_the_breach	Guide: Rift Walkers with Force Amp (CelJaded)	Titan Fist	Force Amp	line	bump damage	Claude (v52, F22): pushes cause the bumps Force Amp adds damage to
+ntb9	into_the_breach	Run: Rusting Hulks (Sevastromo, Unfair)	Aerial Bombs	Force Amp	none		Claude (v52, F22): Aerial Bombs push nothing; plain damage is no bump
+ntb10	into_the_breach	Run: Rift Walkers (Sevastromo, Unfair)	Titan Fist	Artemis Artillery	line	acts on units	Kaptain 30 Oct 2026 (F20): the squad lists its weapons, the lines are between weapons

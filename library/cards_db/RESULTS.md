@@ -127,11 +127,13 @@
 
 ## What exists
 299 cards (42 mechs, 104 weapons, 17 passives, 20 pilots, Vek, tiles, 6 deployed units) and 27 keywords, read once; 30 cards
-read twice. 20 squads in decks.tsv (14 official, 6 players' custom); a squad of 3 mechs is the deck.
+read twice. 26 decks in decks.tsv: 14 official squads, 6 players' custom squads, 6 builds from players' runs and guides with
+extra weapons; a deck is each mech with its weapons and passives (weapons are cards; the mech keeps only its keywords).
 
 ## Quality
-- run.py passes every step; word check 0 flags, text audit 0 unexplained, 24 cases. Families F1-F6 fixed by rule (v48.py),
-  F13-F16 from Claude's check of 20 cards (v51.py), F7-F12 and F17-F19 in shared code (network.py, refs.py, deck_analysis.py).
+- run.py passes every step; word check 0 flags, text audit 0 unexplained, 27 cases. Families F1-F6 fixed by rule (v48.py),
+  F13-F16 from Claude's check of 20 cards (v51.py), F20 weapons as cards in the decks (v52.py), F7-F12, F17-F19 and
+  F21-F23 in shared code (network.py, refs.py, deck_analysis.py).
 - Link audit, explained: Spore, Alpha Spore, Alpha Blob, Blob Leader, Boulder, Unstable Boulder, Freeze Mine, Strange Pod and
   Strange Object are things Vek and tiles put on the board; the source has no entry for them and the wiki is not reachable
   from here, so they stay names. Emerging and High Tide are each one tile with two library pages (terrain and modifier,

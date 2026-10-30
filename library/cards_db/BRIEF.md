@@ -616,6 +616,9 @@ that carries it (pick self); a pilot's "Mech" = the mech it pilots (pick self). 
   `{"when": {"event": "attacks", "actor": {"pick": "self"}}, "if": [{"test": "upgraded", "n": 2}], "do": [{"act":
   "give_keyword", "on": {"kind": "unit_or_structure", "side": "mine", "pick": "all", "with": [{"attr": "position", "op":
   "is", "val": "bordering", "of": {"pick": "self"}}]}, "keyword": "Energy Shield", "lasts": "permanent"}]}`.
+- Decks (v52, Kaptain 30 Oct 2026: mechs are equipped with weapons): a squad or build lists each mech, then its weapons and
+  passive as cards of their own. A mech's record holds only its own keywords (Flying, Massive, Natural Armor); its weapon's
+  and passive's rows are on the weapon and passive cards, read from their own texts.
   "Power: ..." (Reactor Cores needed to power the weapon) is no effect: skip it.
 - Passives act on all Mechs: "All Mechs are immune to Fire" = always, give_keyword Fire Immunity on units side mine with type
   Mech, lasts while. Pilots: "Mech gains Armored" = give_keyword Natural Armor on self; "+3 Move" = stat_change params movement.

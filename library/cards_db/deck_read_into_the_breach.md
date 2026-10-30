@@ -195,3 +195,40 @@ Root cause: F11 was fixed in network.py only; deck_analysis did not check who mu
 Same error elsewhere: no other game's deck explanation changed (cases pass).
 Fix: deck_analysis.py: a trigger whose doer is an enemy is fed only by cards that make enemies act. Steel Judoka no longer
 says "Enemy units take damage: made by Judo Mech, Siege Mech. Use it: Gravity Mech".
+
+## F20 The squads had no weapons (Kaptain, 30 Oct 2026: "In this game you can equip mechs with extra weapons")
+Cards: every squad in decks.tsv; every mech.
+Root cause: a squad was written as its 3 mechs, each mech's record carrying its starting weapon and passive; the weapons and
+passives that are cards of their own (Titan Fist, Storm Generator) and the extra weapons a run equips were never in a deck.
+Same error elsewhere: no other game has cards carried by another card in a deck.
+Fix: fixes/into_the_breach/v52.py: a mech's record keeps only its own keywords (Flying, Massive, Natural Armor); its weapon
+and passive rows stay on the weapon and passive cards. decks.tsv lists each mech with its starting weapon and passive; 6 new
+decks from players' runs and guides add their extra weapons (Sevastromo's Unfair runs: Rift Walkers, Rusting Hulks,
+Hazardous Mechs, Zenith Guard; CelJaded: Force Amp with Rift Walkers and Secret Squad). Quick-Fire Artillery (Zenith run)
+is not in the source and is left out. The lines are now between weapons ("Titan Fist moves units, and Artemis Artillery acts
+on units in a line from it"); a mech is a dot whose lines are what is given to it (Energy Shield, Fire Immunity). Case ntb10;
+cases ntb1-ntb7 rewritten on the weapons.
+
+## F21 A weapon is no Mech, so "any Mech that kills" found no killer
+Cards: Viscera Nanobots (heals a Mech that kills) with every weapon.
+Root cause: once weapons are cards, the one who kills is the weapon card, which is no Mech; the line went missing.
+Same error elsewhere: no other game has carried cards (network.CARRIED lists Into the Breach weapons only).
+Fix: network.py as_doer: a weapon acts as the mech that carries it; the label says "the mech with Hydraulic Legs".
+deck_analysis.py: a mech whose weapons are in the deck is no "no clear role". Case ntb3.
+
+## F22 Force Amp fed by any damage
+Cards: Force Amp ("All Vek take +1 damage from Bumps and blocking emerging Vek").
+Root cause: its trigger is damage to enemies with a condition on the damage's origin (bump); the line read only "damaged",
+so every weapon that damages fed it, and Storm Generator's Smoke too.
+Same error elsewhere: no other game has bump damage; Runeterra's "origin not combat" is untouched (its lines are the same).
+Fix: network.py: a need for damage only from bumps is fed by the cards that push enemy units ("Titan Fist pushes enemy
+units into things (bump damage)"). Cases ntb8, ntb9.
+
+## F23 The deck explanation missed shields on tiles and damage the player aims
+Cards: Shield Projector ("no clear role"), Guided Missile, every weapon that damages a target of no side.
+Root cause: deck_analysis counted support only on my side and control only on enemies; Into the Breach weapons aim at any
+tile, and a shield is given to a tile.
+Same error elsewhere: no other game's deck explanation case changed.
+Fix: deck_analysis.py: help of a support kind on a target of no side is support; harm on a target the player picks with no
+side is control (as refs.py's HARM rule).
+
