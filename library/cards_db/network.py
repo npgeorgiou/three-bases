@@ -325,6 +325,7 @@ def lines_of(c, game):
                 if cost and rule and h == 'sacrificed': say = 'is sacrificed for it'  # a free unit by the rules (Squirrel -> Wolf)
                 if cost: say += ' (pays its cost)'
                 if rule and not cost and not lv and (rule != 'units fight' or m not in rule_fighters) and actor[0] != 'player' and \
+                        not (rule in cost_rules and tpick == 'self' and h in OWN_LOSS) and \
                         not (tkind == 'player' and h in ('attacks', 'strikes', 'fights')) and not any(
                         p.split(' ')[0] in ('card', 'name_has', 'type', 'keyword') for p in (tw or '').split(';')):
                     continue  # every unit fights by the rules: that is no combo (Punish waits for damaged enemies; any attacker does it). A
