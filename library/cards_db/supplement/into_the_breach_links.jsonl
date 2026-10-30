@@ -1,0 +1,8 @@
+{"src": 6000098, "rel": "generates", "dst": 6000184, "evidence": "Bomb Dispenser page: unit box / description"}
+{"src": 6000029, "rel": "generates", "dst": 6000184, "evidence": "starting weapon Bomb Dispenser"}
+{"src": 6000099, "rel": "generates", "dst": 6000185, "evidence": "Arachnoid Injector page: unit box / description"}
+{"src": 6000032, "rel": "generates", "dst": 6000185, "evidence": "starting weapon Arachnoid Injector"}
+{"src": 6000140, "rel": "generates", "dst": 6000186, "evidence": "Light Tank page: unit box / description"}
+{"src": 6000141, "rel": "generates", "dst": 6000187, "evidence": "Shield-Tank page: unit box / description"}
+{"src": 6000142, "rel": "generates", "dst": 6000188, "evidence": "A.C.I.D. Tank page: unit box / description"}
+{"src": 6000143, "rel": "generates", "dst": 6000189, "evidence": "Pull-Tank page: unit box / description"}

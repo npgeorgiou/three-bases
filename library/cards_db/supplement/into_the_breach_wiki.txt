@@ -1,0 +1,191 @@
+### Weapons
+Prime-class :: Titan Fist ¦ 2 ¦ Free ¦ Punch an adjacent tile, damaging and pushing it. ¦ ;Dash (2): Charge any distance before punching the target. ¦ ;+2 Damage (3): Increases damage by 2. ¦ Combat Mech ¦ Prime_Punchmech
+Prime-class :: Burst Beam ¦ 3-1 ¦ Free ¦ Fire a piercing beam that decreases in damage the further it goes. ¦ ;Ally Immune (1):Friendly units will not take damage from this attack. (Buildings will still be damaged and shields will be removed) ¦ ;+1 Damage (3): Increases the starting damage by 1. ¦ Laser Mech ¦ Prime_Lasermech
+Prime-class :: Electric Whip ¦ 2 ¦ (1) ¦ Chain damage through adjacent targets. ¦ ;Building Chain (1): Chain through Grid Buildings without causing damage. ¦ ;+1 Damage (3): Deals +1 damage to all affected tiles. ¦ Lightning Mech ¦ Prime_Lightning
+Prime-class :: Vice Fist ¦ 1 ¦ Free ¦ Grab a unit and toss it behind you. (If an unit is thrown onto ACID, ACID will apply first then damage) ¦ ;Ally Immune (1): Deals no damage to allies. ¦ ;+2 Damage (3): Increases damage by 2. ¦ Judo Mech ¦ Prime_Shift
+Prime-class :: Flame Thrower ¦ 2 ¦ Free ¦ Push target tile and light tiles on Fire. Damage units already on Fire. (Starts with 1 range.) ¦ ;+1 Range (1): Extends flamethrower range by 1 tile. ¦ ;+1 Range (3): Extends flamethrower range by 1 tile. ¦ Flame Mech ¦ Prime_Flamethrower
+Prime-class :: Spartan Shield ¦ 2 ¦ Free ¦ Bash the enemy, flipping its attack direction. (Doesn't affect multi-directional attacks) ¦ ;Gain Shield (1): Gain a Shield when bashing. ¦ ;+1 Damage (2): Increases damage by 1. ¦ Aegis Mech ¦ Prime_ShieldBash
+Prime-class :: Hydraulic Legs ¦ 1 (1 self) ¦ Free ¦ Leap to a tile, damaging self and adjacent tiles (with push). ¦ ;+1 Damage Each (1): Increases damage to self and targets by 1. ¦ ;+1 Damage (3): Increases damage to targets by 1. ¦ Leap Mech ¦ Prime_Leap
+Prime-class :: Explosive Vents ¦ 1 ¦ Free ¦ Blast (and push) all adjacent tiles. ¦ ;+1 Damage (2): Increases damage by 1. ¦ ;+1 Damage (2): Increases damage by 1. ¦ None ¦ Prime_Areablast
+Prime-class :: Mercury Fist ¦ 4 ¦ Free ¦ Smash the ground, dealing huge damage and pushing adjacent tiles. Single-use. ¦ ;+1 Use (1): Increases uses per battle by 1. ¦ ;+1 Damage (1): Increases damage by 1. ¦ None ¦ Prime_Smash
+Prime-class :: Prime Spear ¦ 2 ¦ (1) ¦ Stab multiple tiles and push the furthest hit tile. (Starts with 2-tile range.) ¦ ;A.C.I.D. Tip (1): Adds A.C.I.D. to the furthest hit enemy. ¦ ;+1 Range (2): Increases the maximum number of hit tiles by 1. ¦ None ¦ Prime_Spear
+Prime-class :: Sidewinder Fist ¦ 2 ¦ Free ¦ Punch an adjacent tile, damaging and pushing it to the left. ¦ ;+1 Damage (2): Increases damage by 1. ¦ ;+1 Damage (2): Increases damage by 1. (Powering both upgrades allows you to move a square when you attack) ¦ None ¦ Prime_RightHook
+Prime-class :: Rocket Fist ¦ 2 ¦ Free ¦ Punch an adjacent tile. Upgrades to launch as a projectile. (Has knockback) ¦ ;Rocket (1): Launch the fist. Pushes the Mech if target is not adjacent. ¦ ;+2 Damage (2): Increases damage by 2. ¦ None ¦ Prime_RocketPunch
+Prime-class :: Titanite Blade ¦ 2 ¦ Free ¦ Swing a massive sword to damage and push 3 tiles. Single-use. ¦ ;+1 Use (1): Increases uses per battle by 1. ¦ ;+2 Damage (3): Increases damage on each affected tile by 2. ¦ None ¦ Prime_Sword
+Prime-class :: Vortex Fist ¦ 2 (1 self) ¦ Free ¦ Damage and push all adjacent tiles to the left. ¦ ;-1 Self Damage (1): Reduces the damage the Mech takes when using this weapon by 1. ¦ ;+1 Damage (3): Increases damage to targets by 1. ¦ None ¦ Prime_SpinFist
+Prime-class :: Thermal Discharger ¦ 1 ¦ Free ¦ Damage up to two or more tiles in a line and push tiles to the left and right of damaged tiles. (Starts with 2-tile range.) ¦ ;+2 Range (2): Increases the maximum Range by 2. ¦ ;Add Fire (3): Adds Fire to all hit tiles. ¦ Dispersal Mech ¦ Prime_Flamespreader
+Prime-class :: Hydraulic Lifter ¦ 1 ¦ Free ¦ Throw an adjacent unit and damage it. (Starts with 2-tile range.) ¦ ;+2 Range (1): Increases the range of the throw by 2. ¦ ;+2 Damage (2): Increases the damage of the throw by 2. ¦ Pitcher Mech ¦ Prime_TC_Punt
+Prime-class :: Fissure Fist ¦ 3 ¦ Free ¦ Heavily damage a tile, cracking tiles behind the target on kill. Single-use. ¦ ;+1 Damage (2): Increase damage to the target by 1. ¦ ;+1 Use (1): Increases uses per battle by 1. ¦ None ¦ Prime_KO_Crack
+Prime-class :: Prism Laser ¦ 1-3 ¦ Free ¦ Laser that increases in damage for each unit that it hits. ¦ ;Ally Immune (1): Friendly units will not take damage from this attack. ¦ ;No Max Damage (2): Removes the upper limit on damage. ¦ None ¦ Prime_PrismLaser
+Prime-class :: Refractor Laser ¦ 1-3 ¦ (1) ¦ A laser that can bend, dealing more damage to nearby tiles. ¦ ;Ally Immune (1): Friendly units will not take damage from this attack. ¦ ;+2 Damage (3): +2 maximum damage ¦ None ¦ Prime_TC_BendBeam
+Prime-class :: Spring-Loaded Legs ¦ 2 ¦ (1) ¦ Leap and attack a tile (next to your landing point), dealing damage and pushing it. ¦ ;+2 Range (1): Leap up to 4 tiles away. ¦ ;+2 Damage (3): Increase damage to the target by 2. ¦ None ¦ Prime_TC_Feint
+Prime-class :: The Big One ¦ 3-1 (2 self) ¦ Free ¦ Fires a huge missile that damages in a large cone shape. (Deals 3 damage to target, 2 to 3 tiles behind it, and 1 to 5 tiles further behind. Has knockback.) ¦ ;-1 Self Damage (1): Deals 1 less damage to the user. ¦ ;-1 Self Damage (2): Deals 1 less damage to the user. ¦ None ¦ Prime_WayTooBig
+Brute-class :: Taurus Cannon ¦ 1 ¦ Free ¦ Fires a powerful projectile that damages and pushes its target. ¦ ;+1 Damage (2): Increases damage by 1. ¦ ;+1 Damage (3): Increases damage by 1. ¦ Cannon Mech ¦ Brute_Tankmech
+Brute-class :: Aerial Bombs ¦ 1 ¦ Free ¦ Fly over a target, dropping an explosive smoke bomb. ¦ ;+1 Damage (2): Increases damage by 1. ¦ ;+1 Range (2): Allows jumping over and attacking an additional target. ¦ Jet Mech ¦ Brute_Jetmech
+Brute-class :: Ramming Engines ¦ 2 (1 self) ¦ Free ¦ Fly in a line and slam into the target, pushing it and hurting yourself. (The self damage is also considered as attack to terrain) ¦ ;+1 Damage Each (1): Increases damage to self and target by 1. ¦ ;+1 Damage (3): Increases damage to target by 1. ¦ Charge Mech ¦ Brute_Beetle
+Brute-class :: Grappling Hook ¦ Free ¦ Use a grapple to pull Mech towards immovable objects, or units to the Mech. ¦ ;Shield Ally (1): If used on an ally unit it gives them a Shield. ¦ Hook Mech ¦ Brute_Grapple
+Brute-class :: Janus Cannon ¦ 1 ¦ Free ¦ Fire two projectiles in opposite directions (with push). ¦ ;+1 Damage (1): Increases damage by 1. ¦ ;+1 Damage (3): Increases damage by 1. ¦ Mirror Mech ¦ Brute_Mirrorshot
+Brute-class :: Unstable Cannon ¦ 2 (1 self) ¦ Free ¦ Powerful projectile that causes damage to shooter as well as target (and push each). ¦ ;+1 Damage Each (1): Increases damage to self and target by 1. ¦ ;+1 Damage (3): Increases target damage by 1. ¦ Unstable Mech ¦ Brute_Unstable
+Brute-class :: Phase Cannon ¦ 1 ¦ Free ¦ Shoot a projectile that phases through objects (rocks, explosive boulders, Grid Buildings, Mechs and Allied Units excluding Old Earth Dam and mountains). ¦ ;Phase Shield (1): Applies a Shield to buildings it passes through. ¦ ;+1 Damage (2): Increases damage by 1. ¦ None ¦ Brute_PhaseShot
+Brute-class :: Astra Bombs ¦ 1 ¦ Free ¦ Leap over any distance dropping a bomb on each tile you pass. Single-use. ¦ ;+1 Use (1): Increases uses per battle by 1. ¦ ;+2 Damage (3): Increases damage to all tiles by 2. ¦ None ¦ Brute_Bombrun
+Brute-class :: Def. Shrapnel ¦ Free ¦ Fire a non-damaging projectile that pushes tiles around the target. ¦ None ¦ Brute_Shrapnel
+Brute-class :: Heavy Rocket ¦ 3 ¦ Free ¦ Fire a projectile that heavily damages a target and pushes adjacent tiles. Single-use. ¦ ;+1 Use (1): Increases uses per battle by 1. ¦ ;+2 Damage (2): Increases damage by 2. ¦ None ¦ Brute_Heavyrocket
+Brute-class :: Hermes Engines ¦ Free ¦ Dash in a line, pushing adjacent tiles away. ¦ None ¦ Brute_Sonic
+Brute-class :: Rail Cannon ¦ 0 - 2 ¦ Free ¦ Projectile that does more damage to targets that are further away. ¦ ;+1 Max Damage (1): Increases max damage by 1. ¦ ;+2 Max Damage (2): Increases max damage by 2. ¦ None ¦ Brute_Sniper
+Brute-class :: Shock Cannon ¦ 1 ¦ Free ¦ Fire a projectile that hits 2 tiles, pushing them in opposite directions. ¦ ;+1 Damage (1): Increases damage by 1. ¦ ;+1 Damage (2): Increases damage by 1. ¦ None ¦ Brute_Shockblast
+Brute-class :: Shrapnel Cannon ¦ 2 ¦ Free ¦ Shoot a projectile that damages and pushes the targeted tile and the tiles to its left and right. Single-use. ¦ ;+1 Use (1): Increases uses per battle by 1. ¦ ;+1 Damage (2):Increases damage by 1. ¦ None ¦ Brute_Splitshot
+Brute-class :: AP Cannon ¦ 2 ¦ Free ¦ Fire a pushing projectile that pierces the first target and damages the second. ¦ ;+1 Damage (2): Increases damage to the second hit tile by 1. ¦ ;+1 Damage (2): Increases damage to the second hit tile by 1. ¦ Pierce Mech ¦ Brute_PierceShot
+Brute-class :: Ricochet Rocket ¦ 1 ¦ Free ¦ Bounce a projectile off one target to hit another (and push each). ¦ ;+1 Damage (3): +1 damage to both targets. ¦ ;Ally Immune (1): Friendly units will not take damage from this attack. ¦ Bulk Mech ¦ Brute_TC_Ricochet
+Brute-class :: Reverse Thrusters ¦ 1-2 (1 self) ¦ Free ¦ Smoke and deal damage to a tile while dashing away. (The further you dash, the more damage deals. Starts with 2-tile range.) ¦ ;+1 Range (1): Increases the max distance and damage by 1. ¦ ;+1 Damage (3): Increases the max distance and damage by 1. ¦ Thruster Mech ¦ Brute_KickBack
+Brute-class :: Quick-Fire Rockets ¦ 1 ¦ Free ¦ Fire two projectiles in different directions. ¦ ;Add Push (1): Will now push both targets. ¦ ;+1 Damage (3): +1 damage to both targets. ¦ Quick-Fire Mech ¦ Brute_TC_DoubleShot
+Brute-class :: EM Railgun ¦ 2 ¦ Free ¦ Pierce through any killed Enemies. Single-use. ¦ ;+2 Damage (1): Deals 2 additional damage to all targets. ¦ ;Building Immune (1): This attack will no longer damage Grid Buildings. ¦ None ¦ Brute_KO_Combo
+Brute-class :: Fracturing Shells ¦ 1 ¦ Free ¦ Fires a projectile that explodes on contact, damaging and pushing adjacent tiles. ¦ ;+2 Damage (3): Increases the damage to adjacent tiles by 2. ¦ ;Buildings Immune (1): This attack will no longer damage Grid Buildings. ¦ None ¦ Brute_Fracture
+Brute-class :: Guided Missile ¦ 2 ¦ (1) ¦ A projectile that can turn once before hitting its target. ¦ ;+1 Damage (3): +1 Damage to the target. ¦ ;Smoke Line (1): After turning, adds Smoke to each tile passed through. ¦ None ¦ Brute_TC_GuidedMissile
+Ranged-class :: Artemis Artillery ¦ 1 ¦ Free ¦ Powerful artillery strike, damaging a single tile and pushing adjacent tiles. ¦ ;Buildings Immune (1): This attack will no longer damage Grid Buildings. ¦ Artillery Mech ¦ Ranged_Artillerymech
+Ranged-class :: Rocket Artillery ¦ 2 ¦ Free ¦ Fires a pushing artillery and creates Smoke behind the shooter. ¦ ;+1 Damage (2): Increases damage by 1. ¦ ;+1 Damage (2): Increases damage by 1. ¦ Rocket Mech ¦ Ranged_Rocket
+Ranged-class :: Rock Accelerator ¦ 2 ¦ Free ¦ Launch a rock at a tile, pushing tiles to the left and right. ¦ ;+1 Damage (2): Increases damage by 1. ¦ Boulder Mech ¦ Ranged_Rockthrow
+Ranged-class :: Rock Launcher ¦ 2 ¦ Free ¦ Throw a rock at a chosen target. Rock remains as an obstacle. ¦ ;+1 Damage (2): Increases damage by 1. ¦ ;+1 Damage (3): Increases damage by 1. ¦ Boulder Mech (Only available through debug) ¦ Prime_Rockmech
+Ranged-class :: Cluster Artillery ¦ 1 ¦ Free ¦ Protect a tile by damaging and pushing adjacent tiles. ¦ ;Buildings Immune (1): This attack will no longer damage Grid Buildings. ¦ ;+1 Damage (3): Increases damage to adjacent tiles by 1. ¦ Siege Mech ¦ Ranged_Defensestrike
+Ranged-class :: Vulcan Artillery ¦ 0 ¦ Free ¦ Light the target on Fire and push adjacent tiles. ¦ ;Backburn (1): Light the tile behind the Mech on Fire. ¦ ;+2 Damage (3): Adds 2 damage to targeted tiles. ¦ Meteor Mech ¦ Ranged_Ignite
+Ranged-class :: Cryo-Launcher ¦ (1) ¦ Freeze yourself and the target. ¦ Ice Mech ¦ Ranged_Ice
+Ranged-class :: Aegon Mortar ¦ 1 ¦ Free ¦ Deals damage to two tiles, pushing one forwards and one backwards. ¦ ;+1 Damage (1): Increases damage to both tiles by 1. ¦ ;+1 Damage (2): Increases damage to both tiles by 1. ¦ None ¦ Ranged_BackShot
+Ranged-class :: Burning Mortar ¦ 0 (1 self) ¦ Free ¦ Artillery attack that sets 5 tiles on Fire. ¦ ;No Self Damage (2): This attack will no longer damage the Mech that uses it. ¦ None ¦ Ranged_Fireball
+Ranged-class :: Gemini Missiles ¦ 3 ¦ (1) ¦ Launch two missiles, damaging and pushing two targets. Single-use. ¦ ;+1 Use (1): Increases uses per battle by 1. ¦ ;+1 Damage (1): Increases damage by 1. ¦ None ¦ Ranged_Dual
+Ranged-class :: Heavy Artillery ¦ 2 ¦ Free ¦ Powerful attack that damages a large area. Single-use. ¦ ;+1 Use (1): Increases uses per battle by 1. ¦ ;+1 Damage (2): Increases damage by 1. ¦ None ¦ Ranged_Wide
+Ranged-class :: Micro-Artillery ¦ 1 ¦ Free ¦ Artillery with potential to launch multiple small projectiles (with push). ¦ ;+2 Tiles (1): Add additional missiles to hit adjacent tiles. ¦ ;+1 Damage (2): Increases damage to all tiles by 1. ¦ None ¦ Ranged_ScatterShot
+Ranged-class :: Raining Death ¦ 2 (1 self) ¦ Free ¦ A dangerous projectile that damages everything it passes. ¦ ;Buildings Immune (1): This attack will no longer damage Grid Buildings. ¦ ;+1 Damage Each (2): Increases damage to self and targets by 1. ¦ None ¦ Ranged_RainingVolley
+Ranged-class :: Smoke Mortar ¦ Free ¦ Artillery shot that applies Smoke and pushes two adjacent tiles. ¦ None ¦ Ranged_SmokeBlast
+Ranged-class :: Bomb Dispenser ¦ Free ¦ Launch a Walking Bomb. Unused bombs dismantle after the enemy turn. ¦ ;2 Bombs (3): Fire a second Walking Bomb in a different direction. ¦ Bombling Mech ¦ Ranged_DeployBomb
+Ranged-class :: Arachnoid Injector ¦ 1 ¦ Free ¦ Damage target, creating a friendly robot spider on kill. ¦ ;+1 Damage (2): Increases the artillery attack damage by 1. ¦ ;Acidic (1): Adds ACID to the attack of the Arachnoid. ¦ Arachnoid Mech ¦ Ranged_Arachnoid
+Ranged-class :: Smoldering Shells ¦ 1 ¦ (1) ¦ Damage and apply Fire to a tile while adding Smoke to adjacent tiles (vertical). ¦ ;More Smoke (2): Adds Smoke to more tiles (in 4 directions). ¦ ;+2 Damage (3): Increases the center tile damage by 2. ¦ Smog Mech ¦ Ranged_SmokeFire
+Ranged-class :: Tri-Rocket ¦ 1 ¦ Free ¦ Damage and push 3 tiles in a line. (Can aim close tile.) ¦ ;+1 Damage (3): Deals 1 additional damage to all targets. ¦ ;Building Immune (1): This attack will no longer damage Grid Buildings. ¦ Triptych Mech ¦ Ranged_Crack
+Ranged-class :: Cascading Resonator ¦ 2 (1 self) ¦ Free ¦ Killed enemies explode; victims of splash damage also explode on death. ¦ ;+1 Damage (2): Increases damage to each hit tile by 1. ¦ ;+Building Immune (1): This attack will no longer damage Grid Buildings. ¦ None ¦ Ranged_KO_Combo
+Ranged-class :: Rebounding Volley ¦ 2 ¦ (1) ¦ Artillery attack that can bounce to an additional target. (Pull the first and push the second.) ¦ ;+1 Damage (2): Increases the damage to both targets by 1. ¦ ;Building Immune (1): This attack will no longer damage Grid Buildings. ¦ None ¦ Ranged_TC_BounceShot
+Science-class :: Repulse ¦ Free ¦ Push all adjacent tiles. ¦ ;Shield Self (1): Creates a personal Shield when used. ¦ ;Shield Friendly (2): Shield adjacent ally or Building. ¦ Pulse Mech ¦ Science_Repulse
+Science-class :: Attraction Pulse ¦ Free ¦ Fires a projectile, pulling target towards you 1 tile. ¦ Defense Mech ¦ Science_Pullmech
+Science-class :: Shield Projector ¦ Free ¦ Shield tiles from damage. 2 uses per battle. ¦ ;+1 Use (2): Increases uses per battle by 1. ¦ ;+3 Area (2): Shields 3 additional tiles. ¦ Defense Mech ¦ Science_Shield
+Science-class :: Grav Well ¦ Free ¦ Artillery weapon that pulls its target towards you. ¦ Gravity Mech ¦ Science_Gravwell
+Science-class :: Teleporter ¦ Free ¦ Swap places with a nearby tile. (Note: if you are webbed and swap places with another unit, the other unit will become webbed.) ¦ ;+1 Range (1): Extends range of the swap by 1 tile. ¦ ;+2 Range (2): Extends range of the swap by 2 tiles. ¦ Swap Mech ¦ Science_Swap
+Science-class :: A.C.I.D. Projector ¦ Free ¦ Fire a projectile that applies A.C.I.D. and pushes. ¦ Nano Mech ¦ Science_AcidShot
+Science-class :: Confuse Shot ¦ Free ¦ Fire a projectile that flips a target's attack direction. ¦ None ¦ Science_Confuse
+Science-class :: Fire Beam ¦ Free ¦ Fire a beam that applies Fire in a line. Single-use. ¦ ;+1 Use (1): Increases uses per battle by 1. ¦ None ¦ Science_FireBeam
+Science-class :: Frost Beam ¦ (1) ¦ Fire a beam that Freezes everything in a line. Single-use. ¦ ;+1 Use (2): Increases uses per battle by 1. ¦ None ¦ Science_FreezeBeam
+Science-class :: Push Beam ¦ Free ¦ Pushes all units in a line. Single-use. ¦ ;Unlimited Use (1): Removes use restriction in battles. ¦ None ¦ Science_PushBeam
+Science-class :: Shield Array ¦ Free ¦ Apply a Shield on nearby tiles. Single-use. ¦ ;+1 Size (1): Area of effect increased by 2 tiles. ¦ ;+1 Use (1): Increases uses per battle by 1. ¦ None ¦ Science_LocalShield
+Science-class :: Smoke Pellets ¦ Free ¦ Surround yourself with Smoke to defend against nearby enemies. Single-use. ¦ ;Ally Immune (1): No longer applies Smoke on self or allies. ¦ ;+1 Use (1): Increases uses per battle by 1. ¦ None ¦ Science_SmokeDefense
+Science-class :: Force Swap ¦ 0 ¦ (1) ¦ Force a nearby unit to swap places with any other unit. ¦ ;Heal Ally (1): Swapping an ally will heal it completely. ¦ ;Hurt Enemy (2): Swapping an enemy will deal 1 damage to it. ¦ Exchange Mech ¦ Science_TC_SwapOther
+Science-class :: Area Shift ¦ Free ¦ Push self and all adjacent tiles. ¦ ;Shield Self (1): Shield the user when activated. ¦ ;Shield Ally (2): Shield any Ally units affected by this skill. ¦ Slide Mech ¦ Science_MassShift
+Science-class :: Control Shot ¦ Free ¦ Temporarily control a unit, moving it a short distance (2 tiles). ¦ ;+1 Move (1): Targeted unit can move one extra tile. ¦ ;+1 Move (2): Targeted unit can move one extra tile. ¦ Control Mech ¦ Science_TC_Control
+Science-class :: Firestorm Generator ¦ Free ¦ Flaming artillery that drops fire on the way to its target (and push the target). (Starts with 2-tile range.) ¦ ;+1 Range (1): Maximum range is increased by 1. ¦ ;+2 Range (2): Maximum range is increased by 2. ¦ Napalm Mech ¦ Science_RainingFire
+Science-class :: Seismic Capacitor ¦ 1 ¦ Free ¦ Damage and flip target. If target is killed, crack adjacent tiles. ¦ ;+1 Damage (1): Increase damage to the target by 1. ¦ ;+1 Damage (3): Increase damage to the target by 1. ¦ Drill Mech ¦ Science_KO_Crack
+Science-class :: Enrage Shot ¦ 1 ¦ Free ¦ Force targeted unit to attack adjacent tile. ¦ ;+1 Damage (1): The targeted unit does 1 extra damage with its attack. ¦ ;+1 Damage (1): The targeted unit does 1 extra damage with its attack. ¦ None ¦ Science_TC_Enrage
+Science-class :: Explosive Warp ¦ Free ¦ Teleport to target and push nearby tiles away. Can also be used to push the user to the original position by teleporting to the tile right next to it. ¦ ;+2 Range (1): Increases the teleport range by 2. ¦ ;+2 Range (1): Increases the teleport range by 2. ¦ None ¦ Science_TelePush
+Science-class :: Shield Placer ¦ Free ¦ Shield target and push adjacent tiles away. ¦ ;+1 Range (1): Can target one additional tile away. ¦ ;+1 Range (2): Can target one additional tile away. (This is actually +2 range. The text is wrong in game) ¦ None ¦ Science_Placer
+Any Class :: Boosters ¦ Free ¦ Jump forward and push adjacent tiles away. ¦ None ¦ Support_Boosters
+Any Class :: Heat Converter ¦ Free ¦ Freeze the tile in front but light the tile behind on Fire in the process. Single-use. ¦ ;+1 Use (1): Increases uses per battle by 1. ¦ None ¦ Support_Refrigerate
+Any Class :: Ice Generator ¦ (1) ¦ Freeze yourself and nearby tiles. Single-use. ¦ ;+1 Size (1): Area of effect increased by 1 tile. ¦ ;+1 Size (2): Area of effect increased by 1 tile. ¦ None ¦ Support_Blizzard
+Any Class :: Missile Barrage ¦ 1 ¦ (1) ¦ Fires a missile barrage that hits every enemy on the map. Single-use. ¦ ;+1 Damage (2): Increases damage by 1. ¦ None ¦ Support_Missiles
+Any Class :: Repair Drop ¦ Free ¦ Heal all player units (including disabled Mechs). Single-use. ¦ None ¦ Support_Repair
+Any Class :: Self-Destruct ¦ Kill ¦ Free ¦ Mech explodes, killing self and anything adjacent to Mech. Single-use. ¦ None ¦ Support_Destruct
+Any Class :: Smoke Bombs ¦ Free ¦ Fly over the targets while dropping Smoke. ¦ ;+1 Range (1): Increases potential movement range by 1. ¦ ;+1 Range (1): Increases potential movement range by 1. ¦ None ¦ Support_Smoke
+Any Class :: Smoke Drop ¦ Free ¦ Drops Smoke on 5 tiles anywhere on the map. Single-use. ¦ None ¦ Support_SmokeDrop
+Any Class :: Targeted Strike ¦ 1 ¦ Free ¦ Call in an air strike on a single tile anywhere on the map. Single-use. ¦ None ¦ Support_Force
+Any Class :: Wind Torrent ¦ Free ¦ Push all units in a single direction. Single-use. ¦ ;Unlimited Uses (1): Removes use restriction in battles. ¦ None ¦ Support_Wind
+Any Class :: Mass Confusion ¦ Free ¦ Cause nearby enemies to flip their attack direction. Single-use. ¦ ;+1 Size (1): Area of effect increased by 1 tile. ¦ ;+1 Use (1): Increases uses per battle by 1. ¦ None ¦ Support_Confuse
+Any Class :: Grid Repulse ¦ Free ¦ Overload the grid, causing a building to push away nearby units. ¦ ;Add Shield (1): The selected building also gains a shield. ¦ None ¦ Support_GridDefense
+Any Class :: Grid Assault ¦ 1 ¦ Free ¦ Overload the grid causing a building to damage and push an adjacent tile. ¦ ;+1 Damage (1): Increases damage by 1. ¦ ;+1 Damage (1): Increases damage by 1. ¦ None ¦ Support_TC_GridAtk
+Any Class :: Bombing Run ¦ 2 ¦ Free ¦ Call in bombers, dealing damage to every tile in a row or column. Single-use. ¦ ;+1 Use (1): Increases uses per battle by 1. ¦ ;Building Immune (1): This attack will no longer damage Grid Buildings. ¦ None ¦ Support_TC_Bombline
+Any Class :: Grid Charger ¦ 1 ¦ (1) ¦ Killing an enemy will charge the Power Grid 1 point. Single-use. ¦ None ¦ Support_KO_GridCharger
+Any Class :: Flood Drill ¦ (1) ¦ Convert any liquid Tile to a Hole, spreading the liquid to adjacent tiles. Single-use. ¦ ;+1 Use (1): Increases uses per battle by 1. ¦ None ¦ Support_Waterdrill
+Deployables :: Light Tank ¦ (2) ¦ Deploy a small tank to help in combat. Single-use. ¦ align="center"|1 ¦ align="center"|3 ¦ ;+2 Health (1): Increases the Tank's max health to 3. ¦ ;+2 Damage (3): Increases the Tank's attack damage to 2. ¦ None ¦ DeploySkill_Tank
+Deployables :: Shield-Tank ¦ (2) ¦ Deploy a Shield-Tank that can give Shields to allies. Single-use. ¦ align="center"|1 ¦ align="center"|3 ¦ ;+2 Health (1): Increases the Shield-Tank's max health to 3. ¦ ;Projectile (1): The Shield-Tank instead fires a projectile, allowing you to Shield distant targets. ¦ None ¦ DeploySkill_ShieldTank DeploySkill_SGenerator
+Deployables :: A.C.I.D. Tank ¦ (2) ¦ Deploy a Tank that can apply A.C.I.D. to targets. Single-use. ¦ align="center"|1 ¦ align="center"|3 ¦ ;+2 Health (1): Increases the Tank's max health to 3. ¦ ;Push (1): The tank's attack also pushes its target. ¦ None ¦ DeploySkill_AcidTank
+Deployables :: Pull-Tank ¦ (2) ¦ Deploy a Pull-Tank that can pull targets with a projectile. Single-use. ¦ align="center"|1 ¦ align="center"|3 ¦ ;+2 Health (1): Increases the Pull-Tank's max health to 3. ¦ ;Flying (1): Gives the Pull-Tank the ability to fly. ¦ None ¦ DeploySkill_PullTank
+Cyborg-class :: Ramming Speed ¦ 1 ¦ Free ¦ Dash across the map, damaging and pushing the target tile. ¦ ;Smoke Behind (1): Tile behind you gains Smoke. ¦ ;+2 Damage (3): Increases damage by 2. ¦ Techno-Beetle ¦ Vek_Beetle
+Cyborg-class :: Needle Shot ¦ 1 ¦ Free ¦ Throw needles at the enemy, pushing the furthest hit tile. (Starts with 1-tile range.) ¦ ;Range & Damage (2): Increases potential hit tiles by 1 and damage on all tiles by 1. ¦ ;Range & Damage (3): Increases potential hit tiles by 1 and damage on all tiles by 1. ¦ Techno-Hornet ¦ Vek_Hornet
+Cyborg-class :: Explosive Goo ¦ 1 ¦ Free ¦ Artillery attack that damages a tile and pushes adjacent tiles away. ¦ ;+1 Tile (1): Increases area hit by 1 tile. ¦ ;+2 Damage (3): Increases damage by 2. ¦ Techno-Scarab ¦ Vek_Scarab
+### Passives
+List :: Storm Generator ¦ Free ¦ All Smoke deals damage to enemy units every turn. ¦ ;+1 Damage (3): Increases Smoke damage by 1. ¦ Rocket Mech ¦ Passive_Electric
+List :: Vek Hormones ¦ Free ¦ Enemies do +1 Damage against other enemies. ¦ ;+1 Damage (1): Increases damage by 1. ¦ ;+1 Damage (2): Increases damage by 1. ¦ Gravity Mech ¦ Passive_FriendlyFire
+List :: Flame Shielding ¦ Free ¦ All Mechs are immune to Fire. ¦ Flame Mech ¦ Passive_FlameImmune
+List :: Viscera Nanobots ¦ Free ¦ Mechs heal 1 damage when they deal a killing blow. ¦ ;+1 Heal (2): Increase healing to 2. ¦ Nano Mech ¦ Passive_Leech
+List :: Auto-Shields ¦ Free ¦ Buildings gain a Shield after taking damage. ¦ None ¦ Passive_AutoShields
+List :: Critical Shields ¦ Free ¦ If Power Grid is reduced to 1, all buildings gain a Shield. ¦ None ¦ Passive_CritDefense
+List :: Force Amp ¦ (1) ¦ All Vek take +1 damage from Bumps and blocking emerging Vek. ¦ None ¦ Passive_ForceAmp
+List :: Kickoff Boosters ¦ Free ¦ Mechs gain +1 move if they start their turn adjacent to each other. ¦ ;+1 Movement (2): Movement bonus is increased by 1. ¦ None ¦ Passive_Boosters
+List :: Medical Supplies ¦ Free ¦ All Pilots survive death. ¦ None ¦ Passive_Medical
+List :: Networked Armor ¦ (1) ¦ All Mechs gain +1 HP. ¦ ;+1 Health (2): Increases health bonus to 2. ¦ None ¦ Passive_Defenses
+List :: Psionic Receiver ¦ Free ¦ Mechs use bonuses from Vek Psion. ¦ None ¦ Passive_Psions
+List :: Repair Field ¦ Free ¦ Repairing one Mech will affect all Mechs. (Includes disabled Mechs. Repairing a disabled Mech will save the pilot.) ¦ None ¦ Passive_MassRepair
+List :: Stabilizers ¦ (1) ¦ Mechs no longer take damage when blocking emerging Vek. ¦ None ¦ Passive_Burrows
+List :: Nanofilter Mending ¦ Free ¦ Standing on Smoke repairs mechs and removes Smoke. ¦ Smog Mech ¦ Passive_HealingSmoke
+List :: Heat Engines ¦ Free ¦ Standing on Fire removes Fire and gives the mech "Boost". ¦ Napalm Mech ¦ Passive_FireBoost
+List :: Networked Shielding ¦ (2) ¦ Mechs cannot take damage during the Player Turn. ¦ None ¦ Passive_PlayerTurnShield
+List :: Void Shocker ¦ (2) ¦ If a Vek deals no damage to buildings or units when attacking, it takes 1 damage. ¦ None ¦ Passive_VoidShock
+### Mechs
+List of mechs :: {{ficon|mech punch.png|Combat Mech|x90px}} ¦ Prime ¦ rowspan="3" |Rift Walkers ¦ align="center"|3 ¦ align="center"|3 ¦ {{Prime_Punchmech}}
+List of mechs :: {{ficon|mech tank.png|Cannon Mech|x90px}} ¦ Brute ¦ align="center"|3 ¦ align="center"|3 ¦ {{Brute_Tankmech}}
+List of mechs :: {{ficon|mech artillery.png|Artillery Mech|x90px}} ¦ Ranged ¦ align="center"|2 ¦ align="center"|3 ¦ {{Ranged_Artillerymech}}
+List of mechs :: {{ficon|mech judo.png|Judo Mech|x90px}} ¦ Prime ¦ rowspan="3" |Steel Judoka ¦ align="center"|3 ¦ align="center"|4 ¦ {{Prime_Shift}} ¦ {{armored}}
+List of mechs :: {{ficon|mech dstrike.png|Siege Mech|x90px}} ¦ Ranged ¦ align="center"|2 ¦ align="center"|3 ¦ {{Ranged_Defensestrike}}
+List of mechs :: {{ficon|mech grav.png|Gravity Mech|x90px}} ¦ Science ¦ align="center"|3 ¦ align="center"|4 ¦ {{Science_Gravwell}}{{Passive_FriendlyFire}}
+List of mechs :: {{ficon|mech jet.png|Jet Mech|x90px}} ¦ Brute ¦ rowspan="3" |Rusting Hulks ¦ align="center"|2 ¦ align="center"|4 ¦ {{Brute_Jetmech}} ¦ {{flying}}
+List of mechs :: {{ficon|mech rocket.png|Rocket Mech|x90px}} ¦ Ranged ¦ align="center"|3 ¦ align="center"|3 ¦ {{Ranged_Rocket}}{{Passive_Electric}}
+List of mechs :: {{ficon|mech pulse.png|Pulse Mech|x90px}} ¦ Science ¦ align="center"|3 ¦ align="center"|4 ¦ {{Science_Repulse}}
+List of mechs :: {{ficon|mech flame.png|Flame Mech|x90px}} ¦ Prime ¦ rowspan="3" |Flame Behemoths ¦ align="center"|3 ¦ align="center"|3 ¦ {{Prime_Flamethrower}}{{Passive_FlameImmune}}
+List of mechs :: {{ficon|mech ignite.png|Meteor Mech|x90px}} ¦ Ranged ¦ align="center"|3 ¦ align="center"|3 ¦ {{Ranged_Ignite}}
+List of mechs :: {{ficon|mech tele.png|Swap Mech|x90px}} ¦ Science ¦ align="center"|2 ¦ align="center"|4 ¦ {{Science_Swap}} ¦ {{flying}}
+List of mechs :: {{ficon|mech laser.png|Laser Mech|x90px}} ¦ Prime ¦ rowspan="3" |Zenith Guard ¦ align="center"|3 ¦ align="center"|3 ¦ {{Prime_Lasermech}}
+List of mechs :: {{ficon|mech charge.png|Charge Mech|x90px}} ¦ Brute ¦ align="center"|3 ¦ align="center"|3 ¦ {{Brute_Beetle}}
+List of mechs :: {{ficon|mech science.png|Defense Mech|x90px}} ¦ Science ¦ align="center"|2 ¦ align="center"|4 ¦ {{Science_Pullmech}}{{Science_Shield}} ¦ {{flying}}
+List of mechs :: {{ficon|mech guard.png|Aegis Mech|x90px}} ¦ Prime ¦ rowspan="3" |Frozen Titans ¦ align="center"|3 ¦ align="center"|4 ¦ {{Prime_ShieldBash}}
+List of mechs :: {{ficon|mech mirror.png|Mirror Mech|x90px}} ¦ Brute ¦ align="center"|3 ¦ align="center"|3 ¦ {{Brute_Mirrorshot}}
+List of mechs :: {{ficon|mech ice.png|Ice Mech|x90px}} ¦ Ranged ¦ align="center"|2 ¦ align="center"|3 ¦ {{Ranged_Ice}} ¦ {{flying}}
+List of mechs :: {{ficon|mech_electric.png|Lightning Mech|x90px}} ¦ Prime ¦ rowspan="3" |Blitzkrieg ¦ align="center"|3 ¦ align="center"|3 ¦ {{Prime_Lightning}}
+List of mechs :: {{ficon|mech wall.png|Hook Mech|x90px}} ¦ Brute ¦ align="center"|3 ¦ align="center"|3 ¦ {{Brute_Grapple}} ¦ {{armored}}
+List of mechs :: {{ficon|mech rockart.png|Boulder Mech|x90px}} ¦ Ranged ¦ align="center"|2 ¦ align="center"|3 ¦ {{Ranged_Rockthrow}}
+List of mechs :: {{ficon|mech leap.png|Leap Mech|x90px}} ¦ Prime ¦ rowspan="3" |Hazardous Mechs ¦ align="center"|3 ¦ align="center"|4 ¦ {{Prime_Leap}}
+List of mechs :: {{ficon|mech unstable.png|Unstable Mech|x90px}} ¦ Brute ¦ align="center"|3 ¦ align="center"|3 ¦ {{Brute_Unstable}}
+List of mechs :: {{ficon|mech nano.png|Nano Mech|x90px}} ¦ Science ¦ align="center"|2 ¦ align="center"|4 ¦ {{Science_AcidShot}}{{Passive_Leech}} ¦ {{flying}}
+List of mechs :: {{ficon|vek beetle.png|Techno-Beetle|x90px}} ¦ Cyborg ¦ rowspan="3" |Secret Squad ¦ align="center"|3 ¦ align="center"|3 ¦ {{Vek_Beetle}}
+List of mechs :: {{ficon|vek hornet.png|Techno-Hornet|x90px}} ¦ Cyborg ¦ align="center"|2 ¦ align="center"|4 ¦ {{Vek_Hornet}} ¦ {{Flying}}
+List of mechs :: {{ficon|vek scarab.png|Techno-Scarab|x90px}} ¦ Cyborg ¦ align="center"|2 ¦ align="center"|3 ¦ {{Vek_Scarab}}
+List of mechs :: {{ficon|Pierce_Mech.png|Pierce Mech|x90px}} ¦ Brute ¦ rowspan="3" |Bombermechs ¦ align="center"|3 ¦ align="center"|4 ¦ {{Brute_APCannon}}
+List of mechs :: {{ficon|Bombling_Mech.png|Bombling Mech|x90px}} ¦ Ranged ¦ align="center"|3 ¦ align="center"|3 ¦ {{Ranged_BombDispenser}}
+List of mechs :: {{ficon|Exchange_Mech.png|Exchange Mech|x90px}} ¦ Science ¦ align="center"|2 ¦ align="center"|3 ¦ {{Science_ForceSwap}}
+List of mechs :: {{ficon|Bulk_Mech.png|Bulk Mech|x90px}} ¦ Brute ¦ rowspan="3" |Arachnophiles ¦ align="center"|3 ¦ align="center"|3 ¦ {{Brute_RicochetRocket}}
+List of mechs :: {{ficon| Arachnoid_Mech.png| Arachnoid Mech|x90px}} ¦ Ranged ¦ align="center"|3 ¦ align="center"|3 ¦ {{Ranged_ArachnoidsInjector}}
+List of mechs :: {{ficon|Slide_Mech.png|Slide Mech|x90px}} ¦ Science ¦ align="center"|2 ¦ align="center"|4 ¦ {{Science_AreaShift}}
+List of mechs :: {{ficon|Thruster_Mech.png|Thruster Mech|x90px}} ¦ Brute ¦ rowspan="3" |Mist Eaters ¦ align="center"|3 ¦ align="center"|4 ¦ {{Brute_ReverseThrusters}} ¦ {{flying}}
+List of mechs :: {{ficon|Smog_Mech.png|Smog Mech|x90px}} ¦ Ranged ¦ align="center"|3 ¦ align="center"|3 ¦ {{Ranged_SmolderingShells}}{{Passive_NanofilterMending}}
+List of mechs :: {{ficon|Control_Mech.png|Control Mech|x90px}} ¦ Science ¦ align="center"|2 ¦ align="center"|4 ¦ {{Science_ControlShot}} ¦ {{flying}}
+List of mechs :: {{ficon|Dispersal_Mech.png|Dispersal Mech|x90px}} ¦ Prime ¦ rowspan="3" |Heat Sinkers ¦ align="center"|3 ¦ align="center"|3 ¦ {{Prime_ThermalDischarger}}
+List of mechs :: {{ficon|Quick-Fire_Mech.png|Quick-Fire Mech|x90px}} ¦ Brute ¦ align="center"|2 ¦ align="center"|4 ¦ {{Brute_QuickFireRockets}}
+List of mechs :: {{ficon|Napalm_Mech.png|Napalm Mech|x90px}} ¦ align="center"|Science ¦ align="center"|2 ¦ 4 ¦ {{Science_FirestormGenerator}}{{Passive_HeatEngines}}
+List of mechs :: {{ficon|Pitcher_Mech.png|Pitcher Mech|x90px}} ¦ Prime ¦ rowspan="3" |Cataclysm ¦ align="center"|4 ¦ align="center"|4 ¦ {{Prime_HydraulicLifter}}
+List of mechs :: {{ficon|Triptych_Mech.png|Triptych Mech|x90px}} ¦ Ranged ¦ align="center"|2 ¦ align="center"|3 ¦ {{Ranged_TriRocket}}
+List of mechs :: {{ficon|Drill_Mech.png|Drill Mech|x90px}} ¦ Science ¦ align="center"|3 ¦ align="center"|4 ¦ {{Science_SeismicCapacitor}} ¦ {{Flying}}
+### Pilots
+Artificial Pilots and CorPilots :: AI Pilot ¦ | center|link=Archive Inc Pilot Archive Inc Pilot ¦ | center|link=RST Pilot RST Pilot ¦ | center|link=Pinnacle Pilot Pinnacle Pilot ¦ | center|link=Detritus Pilot Detritus Pilot ¦ }
+Time Travelers :: Ralph Karlsson ¦ None ¦ *Experienced: Gain +2 bonus XP per kill. ¦ Pilot_Original
+Time Travelers :: Harold Schmidt ¦ Archive, Inc. ¦ * Frenzied Repair: Push adjacent tiles when repairing. ¦ Pilot_Repairman
+Time Travelers :: Abe Isamu ¦ R.S.T. Corporation ¦ *Armored: Mech gains Armored. ¦ Pilot_Assassin
+Time Travelers :: Bethany Jones ¦ Pinnacle Robotics ¦ * Starting Shield: Mech starts every mission with a Shield. ¦ Pilot_Genius
+Time Travelers :: Henry Kwan ¦ Detritus Disposal ¦ * Maneuverable: Mech can move through enemy units. ¦ Pilot_Hotshot
+Time Travelers :: Gana ¦ Archive, Inc. ¦ * Preemptive Strike: Deploy anywhere on the map, damaging adjacent enemies. (1 power required) ¦ Pilot_Warrior
+Time Travelers :: Prospero ¦ Detritus Disposal ¦ * Flying: Mech gains Flying (1 power required) ¦ Pilot_Recycler
+Time Travelers :: Lily Reed ¦ Archive, Inc. ¦ * Impulsive: Gain +3 Move on first turn of every mission. ¦ Pilot_Youth
+Time Travelers :: Chen Rong ¦ Detritus Disposal ¦ * Sidestep: After attacking, gain 1 free tile movement. ¦ Pilot_Leader
+Time Travelers :: Camila Vera ¦ R.S.T. Corporation ¦ * Evasion: Mech unaffected by Webbing and Smoke. ¦ Pilot_Soldier
+Time Travelers :: Isaac Jones ¦ Pinnacle Robotics ¦ * Temporal Reset: Gain 1 extra 'Reset Turn' every battle. ¦ Pilot_Medic
+Time Travelers :: center|link=Silica Silica ¦ R.S.T. Corporation ¦ * Double Shot: Mech can act twice if it does not move. (2 power required) ¦ Pilot_Miner
+Time Travelers :: Archimedes ¦ Pinnacle Robotics ¦ * Fire-and-Forget: Move again after shooting. (1 power required) ¦ Pilot_Aquatic
+Time Travelers :: Kai Miller ¦ * Arrogant Boost: Mech is Boosted if full health, otherwise -1 Move. ¦ Pilot_Arrogant
+Time Travelers :: Rosie Rivets ¦ * Reassuring Hand: After Move, Repair adjacent Mechs. ¦ Pilot_Caretaker
+Time Travelers :: Morgan Lejeune ¦ * Field Research: Mech gains Boosted on kill. ¦ Pilot_Chemical
+Time Travelers :: Adam ¦ * Chosen One: On Reset Turn, gain Shield and +2 Move. ¦ Pilot_Delusional ¦ }
+Secret Pilots :: center|link=Kazaaakpleth Kazaaakpleth ¦ *Mantis: 2 damage melee attack replaces Repair. ¦ Pilot_Mantis
+Secret Pilots :: Mafan ¦ *Zoltan: +1 Reactor Core. Reduce Mech HP to 1. Gain Shield every turn. ¦ Pilot_Zoltan
+Secret Pilots :: center|link=Ariadne Ariadne ¦ *Rockman: +3 Health and immune to Fire. ¦ Pilot_Rock ¦ }
+Corporate CEOs :: Dewey Alms Archive, Inc. ¦ | Jessica Kern R.S.T. Corporation ¦ | center|link=Zenith Zenith Pinnacle Robotics ¦ | center|link=Vikram Singh Vikram Singh Detritus Disposal ¦ }
+Behind the scenes :: Gizmo ¦ | Huang ¦ | center|link=Kirk Kirk ¦ } There are some special skills that went unused in the game: * Cauterize : Fire heals instead of damaging Mech. * Frozen Stance : Stopping on any liquid tile freezes it, making it safe to stand on. * Retaliation : D
