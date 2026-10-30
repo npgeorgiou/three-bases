@@ -321,6 +321,7 @@ def lines_of(c, game):
                 # played": playing a card no one made cheaper is not it (a unit healed is damaged by the enemy too: no such need)
                 w = 1.0 / len(carers[tk] | (carers[None] if tk else set()))
                 say = act_say(c, h, ts_, tk, self_=tpick == 'self')
+                if role == 'state' and h in ('moves', 'moves_onto') and place_of(tw): say = moves_said(tw, ts_, tpick == 'self')
                 if mpick == 'self' and h == 'dies': say = 'dies, comes back and dies again' if mref == m else 'dies by its own effect'
                 if mpick == 'self' and h == 'given_keyword' and mk: say = f'has {mechanics.name(c, mk)}'  # Manta Rider has Flying
                 if mpick == 'self' and h == 'trap_activated': say = 'is a trap that goes off'  # the Puffcap itself
@@ -566,6 +567,37 @@ def givers_of(c, game, k, nodes):
 PLACE_WORDS = {'sides': 'next to it', 'bordering': 'next to it', 'surrounding': 'around it', 'same_lane': 'in its lane',
                'in_circuit': 'in its circuit', 'same_space': 'on its space', 'same_row': 'in its row', 'same_column': 'in its column',
                'in_front': 'in front of it', 'behind': 'behind it', 'ahead': 'ahead of it', 'straight_line': 'in a line from it'}
+
+
+# a place a card picks things by, measured from x ("in a line from it"; "x's" is its possessive)
+MOVE_PLACE = {'straight_line': 'in a line from {x}', 'bordering': 'next to {x}', 'sides': 'next to {x}', 'surrounding': 'around {x}',
+              'same_lane': "in {xs} lane", 'same_space': "on {xs} space", 'same_row': "in {xs} row", 'same_column': "in {xs} column",
+              'in_circuit': "in {xs} circuit", 'in_front': 'in front of {x}', 'behind': 'behind {x}', 'ahead': 'ahead of {x}',
+              'behind_all': 'anywhere behind {x}', 'first_in_front': 'first in front of {x}', 'diagonal': 'diagonal to {x}',
+              'front_of_lane': 'at the front of a lane', 'most_forward': 'furthest forward', 'area_2x2': 'in a 2x2 area',
+              'area_3x3': 'in a 3x3 area around {x}', 'starting_side': "on {xs} starting side"}
+
+
+def place_of(w):
+    """where a filter picks things, in plain words ("in a line from it", "next to its target"); None when no place"""
+    for p in (w or '').split(';'):
+        b = p.removeprefix('of:').split(' ')
+        if b[:2] != ['position', 'is'] or len(b) < 3: continue
+        of = b[4:] if b[3:4] == ['of'] else []
+        x = ('it' if not of or of[0] == 'self' else 'its target' if of[0] == 'it' else
+             'your leader or base' if of[:2] == ['player', 'mine'] else 'the enemy leader or base' if of[:2] == ['player', 'enemy'] else
+             'a space' if of[0] == 'position' else 'another card')
+        xs = {'it': 'its', 'its target': "its target's"}.get(x, x + "'s")
+        return MOVE_PLACE.get(b[2], b[2].replace('_', ' ') + ' {x}').format(x=x, xs=xs)
+    return None
+
+
+def moves_said(w, side, self_):
+    """a card that picks what it acts on by place, fed by moves: say both halves (Kaptain 30 Oct 2026: one card moves, the
+    other cares where things stand): "moves enemy units; what it does depends on where they stand (in a line from it)" """
+    if self_: return f'moves it; what it does depends on where it stands ({place_of(w)})'
+    who = {'mine': 'your units', 'enemy': 'enemy units'}.get(side, 'units')
+    return f'moves {who}; what it does depends on where they stand ({place_of(w)})'
 
 
 def where(w):
@@ -1251,8 +1283,27 @@ KIND_WORD = {'waits': 'triggers', 'type': 'enables', 'cheaper': 'makes cheaper',
              'levelsinto': 'levels into', 'targets': 'can aim at it'}
 
 
+MOVE_RE = re.compile(r'moves (it|units|enemy units|your units); what it does depends on where (?:they stand|it stands) \((.*)\)$')
+
+
+def merge_places(ls):
+    """every move reason of a pair is one reason: who is moved, every place ("moves it and units; ... (next to it or around it)")"""
+    moved, places, w_, k_ = [], [], 0, None
+    rest = []
+    for k, w, y in ls:
+        m = MOVE_RE.match(y)
+        if not m: rest.append((k, w, y)); continue
+        moved.append(m.group(1)); places += [p for p in m.group(2).split(' or ') if p not in places]; w_ = max(w_, w); k_ = k_ or k
+    if not moved: return ls
+    others = {x for x in moved if x != 'it'}
+    who = ' and '.join((['it'] if 'it' in moved else []) + ([others.pop() if len(others) == 1 else 'units'] if others else []))
+    verb = 'it stands' if who == 'it' else 'they stand'
+    return [(k_, w_, f'moves {who}; what it does depends on where {verb} ({" or ".join(places)})')] + rest
+
+
 def one_link(ls):
     ls = list({(k, y): (k, w, y) for k, w, y in ls}.values())  # one card doing a thing twice (when summoned, when attacking) is one reason
+    ls = merge_places(ls)
     if len(ls) > 1: ls = [x for x in ls if x[0] != 'targets'] or ls  # "can aim at it" only when nothing else joins them
     ls.sort(key=lambda x: (KIND_ORDER.index(x[0]) if x[0] in KIND_ORDER else 99, -x[1]))
     k, w, y = ls[0]

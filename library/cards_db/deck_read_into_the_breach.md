@@ -77,6 +77,9 @@ weapon aims from its mech and nearly every weapon pushes, so every pair links.
 Same error elsewhere: to be measured with dump_lines.py --find "move" in every game before any change.
 Fix: none. Kaptain (30 Oct 2026): "things that move stuff benefit things that depend on stuff's position"; pushing an enemy
 into another mech's line of fire is help. These lines stay; the family is decided, not an error.
+Kaptain (30 Oct 2026, after the F8-F12 fix): "makes enemy units move" did not say why. Every such line, in every game, now
+says both halves: "moves units; what it does depends on where they stand (in a line from it or next to its target)"
+(network.py moves_said, merge_places: one reason per pair, every place joined). Only the words changed, no line.
 
 ## F8 "is a unit_or_structure it asks for" (49 lines; Stormbound 3 lines, Tode the Elevated)
 Lines: Combat Mech -> Artillery Mech, Walking Bomb -> Pierce Mech ...
