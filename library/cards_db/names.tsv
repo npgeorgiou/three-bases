@@ -35,13 +35,11 @@ duelyst	keyword	Doomed	drop		Doom's own text says it: the enemy General dies aft
 duelyst	keyword	Teleport	drop		teleporting is the act move; Teleport is no Duelyst keyword (reader used another game's word)
 duelyst	keyword	Pull	drop		Pull is a Stormbound keyword; Duelyst's pulls are the act move
 duelyst	keyword	Push	drop		Push is a Stormbound keyword; Duelyst's pushes are the act move
-<<<<<<< Updated upstream
 sts1	card	Shiv+	card	Shiv	the upgraded Shiv (Cunning Potion adds Shiv+); the upgrade changes only numbers, so it is the card Shiv
 sts1	card	Curse	type	Curse	"a Curse" is any card of the type Curse (Necronomicon, events), no card of that name
 sts1	card	JAXXED	card	J.A.X.	the event Augmenter's choice "Become J.A.X.X.E.D." gives the card J.A.X.
 sts1	card	Good Face	drop		Face Trader's outcomes (a relic face) are run results, no card; the event is a run rule
 sts1	card	Bad Face	drop		Face Trader's outcomes (a relic face) are run results, no card; the event is a run rule
-=======
 into_the_breach	keyword	Push	drop		pushing is the act move (its concept is forced_movement); Push is no Into the Breach keyword (reader used another game's word)
 into_the_breach	keyword	Pull	drop		pulling is the act move; Pull is no Into the Breach keyword
 into_the_breach	keyword	Toss	drop		tossing is the act move; no Into the Breach keyword
@@ -51,4 +49,3 @@ into_the_breach	keyword	Teleport	drop		teleporting is the act move on self; Tele
 into_the_breach	keyword	Jump	drop		jumping is the act move; no Into the Breach keyword (Leaper's jump is written as can move, v48.py)
 into_the_breach	keyword	Flip	drop		"flip target" (Seismic Capacitor) is no keyword; the card stays unsure
 into_the_breach	keyword	Reset Turn	drop		Reset Turn undoes a player's turn, no card keyword and no value for it; Isaac Jones stays unsure
->>>>>>> Stashed changes

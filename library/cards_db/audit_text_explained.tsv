@@ -66,7 +66,6 @@ duelyst	Wraithling Swarm	nearby	"nearby each other" places the three Wraithlings
 duelyst	Stunned	stun	the status itself ("Stunned minions lose their next action"): its rows are what a stunned minion can't do
 duelyst	Wall	dispel	"removed if dispelled": no event for being dispelled yet (proposal silenced, unsure)
 inscryption	Campfire	nearby	"gathered around a fire" is the scene of a run event, no board position
-<<<<<<< Updated upstream
 sts1	Accuracy	deal damage	"Shivs deal 4 additional damage" is increase_effect (amount 4) on the Shivs: more of the damage they deal
 sts1	Phantasmal Killer	deal damage	increase_effect (100 percent) on my Attacks next turn: double damage
 sts1	Wreath of Flame	deal damage	increase_effect on my next Attack: more of its damage
@@ -87,7 +86,6 @@ sts1	Confused	random	random costs have no value yet (proposal random_value, unsu
 sts1	Mystic	heal	an enemy action named Heal with no amount: written as the enemy's buff
 sts1	Ascension Mode Level 5	heal	less healing after bosses changes the run: run_rule
 sts1	Flex	this turn	"at the end of this turn" is the turn_end ability with limit next_time
-=======
 into_the_breach	Shell Psion	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
 into_the_breach	Bot Leader	heal	"prepare to heal" is the keyword Self-Repairing in the rows
 into_the_breach	Bot Leader	for each	"per" and "for each" are in wiki prose (spawns per mission, reputation per 2 Boom-Bots, damage per tile on later islands) or say a damage that grows with hits, written as amount range; Ralph Karlsson's "XP per kill" has no value (card unsure)
@@ -148,4 +146,3 @@ into_the_breach	Ralph Karlsson	for each	"per" and "for each" are in wiki prose (
 into_the_breach	Silica	double	"act twice" is ready again after its attack, in the rows
 into_the_breach	Hive Leader	kill or destroy	"destroy" is in wiki prose (Boom-Bots, Hive Leader, Minor's XP) or is the Tumblebug hitting its boulder, written as damage on it
 into_the_breach	Minor	kill or destroy	"destroy" is in wiki prose (Boom-Bots, Hive Leader, Minor's XP) or is the Tumblebug hitting its boulder, written as damage on it
->>>>>>> Stashed changes
