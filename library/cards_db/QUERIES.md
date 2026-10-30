@@ -155,30 +155,30 @@ select distinct card from flat_do where params glob '*=[a-z]*'
 
 What "disable" (stop a unit acting) is built with, on the same cards (`ask.py all together disable`):
 
-- cant_attack: duelyst 18 cards, into_the_breach 5 cards, monster_train 8 cards, runeterra 11 cards, stormbound 8 cards
-- immobilize: duelyst 13 cards, stormbound 6 cards
-- cant_move: duelyst 2 cards, into_the_breach 2 cards
-- passive: duelyst 18 cards, into_the_breach 5 cards, monster_train 8 cards, runeterra 18 cards, stormbound 8 cards
-- cheat_death: runeterra 7 cards
-- silence: stormbound 8 cards
+- cant_attack: duelyst 23 cards, into_the_breach 5 cards, monster_train 8 cards, runeterra 56 cards, stormbound 8 cards
+- immobilize: duelyst 18 cards, stormbound 6 cards
+- cant_move: duelyst 4 cards, into_the_breach 2 cards
+- passive: duelyst 23 cards, into_the_breach 5 cards, monster_train 8 cards, runeterra 88 cards, stormbound 8 cards
+- silence: runeterra 3 cards, stormbound 8 cards
+- cheat_death: runeterra 10 cards
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- self_destruct: duelyst 692 pairs, e.g. Fireblaze Obelysk -> Darkspear Zane; faeria 576 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 350 pairs, e.g. Skeleton Crew -> Rat King; into_the_breach 32 pairs, e.g. Walking Bomb -> Boom Laser; monster_train 241 pairs, e.g. Bogdeep Cocoon -> Kinhost Vessel; runeterra 6554 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
-- destroy: duelyst 2211 pairs, e.g. Fireblaze Obelysk -> Darkspear Zane; faeria 932 pairs, e.g. Feed the Forest -> Long-horned Yak; inscryption 385 pairs, e.g. Skeleton Crew -> Rat King; into_the_breach 84 pairs, e.g. Tentacles -> Boom Laser; monster_train 290 pairs, e.g. Bogdeep Cocoon -> Kinhost Vessel; runeterra 11112 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
-- sacrifice: duelyst 1511 pairs, e.g. Fireblaze Obelysk -> Darkspear Zane; faeria 384 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Rat King; into_the_breach 8 pairs, e.g. Arachnoid -> Large Goo; monster_train 286 pairs, e.g. Primordium -> Devourer of Death; runeterra 5631 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
-- revive: inscryption 27 pairs, e.g. Necromancer -> Rat King; runeterra 1008 pairs, e.g. Kalista (level 2) -> Bladepierced Revenant; stormbound 38 pairs, e.g. Project PH03-NIX -> Blizzard Bombs
-- removal: faeria 131 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Rat King; into_the_breach 48 pairs, e.g. Tentacles -> Boom Laser; monster_train 38 pairs, e.g. Shroud Spike -> Little Fade; runeterra 2026 pairs, e.g. Spirit Journey -> Shackled Ghasts; stormbound 103 pairs, e.g. Temple of the Mind -> Project PH03-NIX
-- aoe_damage: inscryption 105 pairs, e.g. Bomb Latcher -> Shield Latcher; into_the_breach 424 pairs, e.g. Thermal Discharger -> Boom Cannon; runeterra 2572 pairs, e.g. Anivia (level 2) -> Shackled Ghasts; stormbound 229 pairs, e.g. Crimson Sentry -> Green Prototypes
+- self_destruct: duelyst 2148 pairs, e.g. Legion (boss, Boss33_2) -> Darkspear Zane; faeria 653 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 431 pairs, e.g. Skelemagus -> Ouroboros; into_the_breach 88 pairs, e.g. Arachnid Psion -> Boom Cannon; monster_train 296 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 19819 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Green Prototypes
+- destroy: duelyst 3758 pairs, e.g. Deepfire Devourer -> Darkspear Zane; faeria 1015 pairs, e.g. Feed the Forest -> Long-horned Yak; inscryption 466 pairs, e.g. Skelemagus -> Ouroboros; into_the_breach 148 pairs, e.g. Arachnid Psion -> Boom Cannon; monster_train 348 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 22557 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- sacrifice: duelyst 1836 pairs, e.g. Deepfire Devourer -> Darkspear Zane; faeria 387 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Ouroboros; into_the_breach 24 pairs, e.g. Arachnoid Injector -> Boom Artillery; monster_train 305 pairs, e.g. Primordium -> Devourer of Death; runeterra 8133 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- revive: duelyst 495 pairs, e.g. Legion (boss, Boss33_2) -> Darkspear Zane; inscryption 27 pairs, e.g. Necromancer -> Ouroboros; runeterra 2461 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 38 pairs, e.g. Diehards -> Green Prototypes
+- removal: duelyst 659 pairs, e.g. Rasha's Curse -> Khanuum-ka; faeria 134 pairs, e.g. Death's Desire -> Long-horned Yak; inscryption 30 pairs, e.g. Skel-e-latcher -> Ouroboros; into_the_breach 56 pairs, e.g. Tentacles -> Boom Cannon; runeterra 5806 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 103 pairs, e.g. Temple of the Mind -> Chaotic Pupil
+- turn_end: duelyst 2196 pairs, e.g. Legion (boss, Boss33_2) -> Darkspear Zane; faeria 473 pairs, e.g. Flash Salmon -> Long-horned Yak; into_the_breach 32 pairs, e.g. Psion Tyrant -> Boom Cannon; monster_train 276 pairs, e.g. Primordium -> Devourer of Death; runeterra 19730 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
-- summon -> tribal -> upgrade (seen in monster_train, runeterra)
-- summon -> on_ally_play -> countdown (seen in duelyst, runeterra)
-- summon -> banish -> other_leave_trigger (seen in runeterra)
-- summon -> banish -> return_to_hand (seen in runeterra)
-- summon -> terrain -> cant_block (seen in runeterra)
-- summon -> terrain -> delayed (seen in runeterra)
+- summon -> on_ally_play -> forced_movement (seen in inscryption, runeterra)
+- summon -> delayed -> cant_block (seen in runeterra)
+- summon -> delayed -> terrain (seen in runeterra)
+- summon -> delayed -> countdown (seen in monster_train, runeterra)
+- summon -> banish -> drawback (seen in runeterra)
+- summon -> on_ally_play -> turn_start (seen in duelyst, faeria, monster_train)
 
 ## A deck explained (`ask.py runeterra analyze "..."`), a Lucian/Senna deck from a deck guide
 
@@ -188,13 +188,13 @@ Plan:
 - Your units die: made by Crumble, Glimpse Beyond, Ravenous Butcher, Single Combat, Spirit Leech, The Ruination. Get value when they die: Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, The Undying. Level up from it: Lucian, Senna. Use it: Lonely Chimeslime, Senna, Sentinel of Light.
 - Any units are killed: made by Crumble, Glimpse Beyond, Piercing Darkness, Ravenous Butcher, Single Combat, Spirit Leech, The Ruination. Level up from it: Senna.
 - Lucian levels up when your units die (4+ times) or Senna, Sentinel of Light dies once.
-- Senna levels up when any units are killed (3+ times).
+- Senna levels up when your units are killed (3+ times).
 Controls enemy units (damage, remove, stop, weaken): Crumble, Piercing Darkness, Single Combat.
 Supports your units (stats, protection, combat keywords): Lucian, Piercing Darkness, Senna, Senna, Sentinel of Light, The Undying.
 Card flow (draw, create, choose): Glimpse Beyond, Lonely Chimeslime, Senna, Spirit Leech.
 Puts extra units into play: Cursed Keeper, Hapless Aristocrat, The Undying.
 Units that support cards can target: 9 (Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, Lucian, Ravenous Butcher, Senna, Senna, Sentinel of Light, Spirit Leech, The Undying).
-Key cards (in most of the plan): Senna, Spirit Leech, The Ruination, Crumble, Ravenous Butcher.
+Key cards (in most of the plan): Senna, The Ruination, Spirit Leech, Crumble, Ravenous Butcher.
 Weak spots: none found.
 ```
 
@@ -202,7 +202,7 @@ Weak spots: none found.
 
 - `ask.py stormbound deck "Wisp Cloud"` (Neutral, Winter): Wisp Cloud, Orgone Leechers, Frosthexers, Spellbinder Zhevana, Icicle Burst, Midwinter Chaos, Blizzard Bombs, Agile Warriors, Temple of the Mind, Moment’s Peace, Angelic Tikas, Catnip’s Charm
 - `ask.py stormbound deck "Doppelbocks"` (Neutral, Swarm): Doppelbocks, Faun Companions, Swarmcallers, Moonlit Aerie, Siegebreakers, Queen of Herds, Trusty Shepherds, Restless Goats, Counselor Ahmi, Shady Ghoul, Pan Heralds, Dreadfauns
-- `ask.py runeterra deck "Kalista"` (Neutral, Shadow Isles): Kalista, Darkwater Scourge, Kindred, Crawling Viperwyrm, Camavoran Dragon, Gwen, Eternal Dancers, The Iron Conquest, Mistkeepers, Amalgamation Of Vile Rites, The Darkin Halberd, Harrowing Return, The Harrowing, Shark Chariot
+- `ask.py runeterra deck "Kalista"` (Neutral, Shadow Isles): Kalista, Shackled Ghasts, Kindred, The Harrowing, Shark Chariot, Eternal Dancers, Harrowing Return, Amalgamation Of Vile Rites, The Iron Conquest, Chronicler of Ruin, The Undying, Maokai, Gwen, Threshold of the Grey
 
 ## Same effect, compare cost: deal damage to anything (unit, structure or player), cheapest first
 

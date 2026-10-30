@@ -274,10 +274,10 @@ def build(c):
     c.execute("""delete from flat_ref where role in ('state','condition') and happening='given_keyword' and pick='self' and exists
                  (select 1 from flat_do d where d.card=flat_ref.card and d.ability=flat_ref.ability and d.act='give_keyword'
                  and d.keyword_ref=flat_ref.keyword and coalesce(d.on_pick,'')!='self')""")
-    made(c)
+    build_made(c)
 
 
-def made(c):
+def build_made(c):
     """flat_made: every card a card puts in play or into a pile, transforms into or levels into, and what those make in turn
     (Zed -> Living Shadow; a card is judged with everything it makes: Zed brings Ephemeral allies). Card questions read it."""
     c.execute('drop table if exists flat_made')
