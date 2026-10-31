@@ -84,6 +84,20 @@ Report: the numbers.
       missed;
    f) for decks that have special cards like Champion, Heroes, Legends, etc., check all their links;
    g) don't re-check links that are checked by previous steps.
+   State (31 Oct): links_check.py does 3.1 and 3.3 for all games: 0 zero-check lines; the only deck differences left are
+   expected (a) (a collectible card a deck does not list but makes: Fledgling Imp, Mighty Poro). Fixed on the way: in the whole
+   game a card only other cards make (token, created card, level-up form; Inscryption: no offer category on its wiki page) is
+   now "made" as in a deck (links.only_made), so Lilithe -> Inkling Surge goes through the Wraithling and "through Chime" level
+   lines exist. links_audit.py written; Inscryption audit read in part (a, d), findings, each waiting for Kaptain's OK:
+   - "can damage it" / "can kill it" (kind targets) from my card to my own card with no need for it (Hammer -> Wild Bull,
+     Explode Bot -> Adder, Gem Detonator -> Automaton): harm on my own card helps nothing (L9). Proposed: the table stores no
+     targets line between two cards of one deck unless the target gains from it (then it is already a "waits" line).
+   - Curious Egg has 200 partners: "is a unit it asks for" from every unit (Finical Hatchling read as "any unit": L1). Trace
+     the keyword's rows (it is not in read/inscryption; look in keywords_stub or the library) and fix the need.
+   - Opponent-only cards are "owned": The Limoncello, The Moon, Gold Nugget, Dead Tree get lines. Proposed: an Inscryption
+     card is owned when the game offers it (wiki offer category), a deck lists it, or an owned card makes it.
+   - Act "Finale" joins Act I and Act II cards (Alpha -> Practice Wizard): check what the Finale deck is before keeping it.
+   Next: Kaptain's OK on these, fix, then the audit of the other 7 games (one game per round; record read lines with --record).
 3. **Zero checks** (a query each, must give 0): lines between two cards that cannot share a deck; lines with an end that
    is not a card a player owns.
 4. Every wrong line: name the cause in one sentence (the thinking, not the card), fix it in network.py for every game,
