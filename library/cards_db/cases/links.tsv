@@ -73,3 +73,7 @@ lk71	stormbound	Treasurous Bosuns	Westwind Sailors	none	draws it	Claude 31 Oct 2
 lk72	stormbound	Sparkly Kitties	Westwind Sailors	none	Confuse	Claude 31 Oct 2026: confusing my own unit is a drawback, no help
 lk73	stormbound	Sparkly Kitties	Temple of the Mind	line	Confuse	Claude 31 Oct 2026: Temple of the Mind kills confused units
 lk74	stormbound	Timber Alchemists	Westwind Sailors	none	remove keywords	Claude 31 Oct 2026: taking statuses from any friendly unit is no line to every unit
+lk75	stormbound	Freebooters	Clap of Thunder	none	fills your hand	Claude 31 Oct 2026: Clap of Thunder counts EMPTY hand spaces; filling the hand works against it
+lk76	stormbound	Treasurous Bosuns	Lucky Charmers	none	fills your hand	Claude 31 Oct 2026: Lucky Charmers counts Pirates in hand; Bosuns draws any card
+lk77	stormbound	Clap of Thunder	Spellbinder Zhevana	none	helps my units kill	Claude 31 Oct 2026: Zhevana counts the units its own damage destroys
+lk78	stormbound	Westwind Sailors	Mystwives	none	asks for	Claude 31 Oct 2026: "a stronger friendly unit" can be any unit; a stat number is no need

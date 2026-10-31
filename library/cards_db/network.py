@@ -1242,6 +1242,9 @@ def need_lines(c, game, nodes, broad):
         what = 'a card it acts on' if kind == 'any' else f'a {"landmark or structure" if kind == "landmark" else kind} it asks for'
         kws_ = [mechanics.name(c, int(p.split(' ')[2])) for p in (w or '').split(';') if p.startswith('keyword is ') and p.split(' ')[2].isdigit()]
         if not kws_ and not counted and any(p.split(' ')[:2] in (['type', 'is'], ['type', 'in']) for p in (w or '').split(';')): continue  # the type line says it ("is a Conduit card it asks for")
+        if not counted and kind != 'any' and w and all(p.removeprefix('of:').split(' ')[0] in ('position', 'strength', 'power', 'health', 'cost')
+                                                        for p in w.split(';') if p): continue  # "a stronger friendly unit next to it" (Mystwives):
+        # any unit can be that; a place or a stat number is no need (L1; Kaptain 31 Oct 2026, Curious Egg)
         if kws_ and kind != 'any': what = what.replace(' it asks for', f' with {", ".join(kws_)} it counts or asks for')  # "a unit with Ant
         for a in nodes:
             if a == t or a not in cards: continue
@@ -1357,6 +1360,8 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
         return ('player' in aims[a]) if cards[t]['cat'] == 'leader' else 'unit' in aims[a] or aims[a] == {'other'}
     enemy_movers = {a for (a,) in c.execute(f"""select card from flat_do where origin in ('own','uses_keyword') and act in ('move','swap')
             and coalesce(on_side,'') in ('enemy','any','') and coalesce(on_pick,'') not in ('self') and card in ({marks})""", L)}  # no side: either (N18)
+    self_kills = {(t, ab, h) for t, ab, h in c.execute(f"""select card, ability, happening from flat_ref where role='makes' and origin='own'
+                  and happening in ('killed','dies') and card in ({marks})""", L)}  # kills its own ability makes
     for hs, sides, concepts, why in HELPS:
         helpers = having(concepts, hs[0] == 'nexus_damaged'); n = count(concepts)
         move_rows = {}
@@ -1374,6 +1379,8 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
         # Witch is Elusive): it helps a need that it can be the doer of, not "Zed or allied Living Shadows strike the Nexus"
         for t, ab, h, side, role, pick, ak, aw in needs:
             if h not in hs or side not in sides: continue
+            if role == 'condition' and h in ('killed', 'dies') and (t, ab, h) in self_kills: continue  # "gain 4 mana for each unit
+            # destroyed" by its own damage (Spellbinder Zhevana): its own hit does the killing, more power on my units adds nothing
             if role == 'trigger' and (t, ab) in once and why == 'another attack': continue
             if h == 'nexus_damaged' and side == 'mine': continue  # my own player losing health (Radiance: costs your Life) is no hit
             # on the enemy player: attacks and moves toward the enemy do not help it
@@ -1401,11 +1408,16 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
     hand = lambda acts, zone, kw='': {a for (a,) in c.execute(f"""select card from flat_do where act in ({','.join('?' * len(acts))}) and origin in
             ('own','uses_keyword',?) and coalesce(on_side,'mine')='mine' and (coalesce(on_zone,'')='hand' or coalesce(eff_zone,'')='hand' or ?)
             and card in ({marks})""", list(acts) + [kw, zone] + L)}  # kw: a keyword it has that adds to the hand (Fecundity's copy)
-    for t, ab, op, n_ in c.execute(f"""select card, ability, op, n from flat_if where of_zone='hand' and coalesce(of_side,'mine')='mine'
+    for t, ab, op, n_, ok_, ow_ in c.execute(f"""select card, ability, op, n, of_kind, of_with from flat_if where of_zone='hand' and coalesce(of_side,'mine')='mine'
             and test in ('count','amount_count','have') and coalesce(of_pick,'') not in ('self','chosen') and card in ({marks})""", L).fetchall():
         # not the card itself in hand (Ethereal: "if this is still in your hand"), nor what it picks there itself (Gambling Chip)
-        few = (op in ('eq', 'le', 'lt') and (n_ or 0) <= 1) or op == 'not'  # "no cards in hand" (have not, N22)
+        few = (op in ('eq', 'le', 'lt') and (n_ or 0) <= 1) or op == 'not' or ok_ == 'position'  # "no cards in hand" (have not, N22);
+        # "for each empty card space in your hand" (Clap of Thunder): it wants an empty hand
         helpers = hand(('discard',), 0) if few else hand(('create', 'copy', 'return_to_hand'), 0, 'has_keyword') | hand(('draw',), 1)  # a draw goes to hand
+        named = [p_ for p_ in (ow_ or '').split(';') if p_.split(' ')[:2] in (['type', 'is'], ['card', 'is'], ['name_has', 'is'])]
+        if named and not few:  # "for each Pirate in your hand" (Lucky Charmers): only what brings such cards fills it
+            helpers = {a for a in helpers if any(all(p_ in (w_ or '') for p_ in named) for (w_,) in c.execute(
+                       "select on_with from flat_do where card=? and act in ('draw','create','copy','return_to_hand')", (a,)))}
         for a in helpers - {t}:
             out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.3, ('empties your hand' if few else 'fills your hand') + (' (levels it up)' if ab in lvl else '')))
     # a stat it tests ("an ally with 5+ Power"): more of that stat
