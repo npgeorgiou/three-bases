@@ -292,3 +292,8 @@ n291	stormbound	Relic Song	Doppelbocks	Token Satyrs	line	summons	Claude 31 Oct 2
 n292	monster_train	Remnant Reform (Wickless Baron)	Dreg	Wickless Baron	line	dies	Claude 31 Oct 2026, from the texts: Dreg burns out (dies), Wickless Baron's Harvest fires on a death
 n293	inscryption	Kaycee's Mod Ants, built (wiki tips)	Ant Queen	Flying Ant	line	Ant	Claude 31 Oct 2026, from the texts: Ant Queen is an Ant; Flying Ant's power counts Ants
 n294	into_the_breach	Custom: Laser Combat Judo	Vice Fist	Burst Beam	line	in a line	Claude 31 Oct 2026, from the texts and the guide: the toss lines Vek up for the piercing beam
+n295	runeterra	Jayce Sentinels	The Forge Of Tomorrow	Shock Blast	line	pays for it	Claude 31 Oct 2026, from the texts: "refill your spell mana" pays the next 6-cost spell
+n296	runeterra	Caitlyn Teemo	Poison Dart	Poison Puffcap	line	plants	Claude 31 Oct 2026: a card planted in the enemy deck stays my act
+n297	stormbound	Meow	Dubious Hags	Token Ravens	none		Dubious Hags text: it spawns an ENEMY Raven
+n298	inscryption	Kaycee's Mod Mantis God (gamersdecide, core)	Mealworm	Mantis God	line	X|X	Claude 31 Oct 2026: Morsel feeds the card it is sacrificed for (Mantis God costs Blood), said once as X|X (table case: Mealworm -> Raven)
+n299	inscryption	Act III Mycobot (gamersdecide, core)	Buff Conduit	Null Conduit	none	+1|+0	wiki sigils: the Conduits close the circuit, they are not in it

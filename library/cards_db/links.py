@@ -36,6 +36,7 @@ INSCRYPTION_NOT_OWNED = ('Bait Bucket', 'Gold Nugget', 'Grand Fir', 'Leaping Tra
     'Strange Frog', 'Stump', 'The Moon', 'Mole Seaman', 'Skeleton Crew', 'Zombie Parrot', 'The Limoncello', 'Burrowing Trap',
     'Kingfisher', 'Coyote', 'Inspector', 'Melter', 'Magnus Mox', '!CORRUPTED', 'Ancient Fir', 'Dead Tree', 'Annoy FM',
     'Bridge Rails', 'Broken Bot', 'Conduit Tower', 'Tombstone', 'Librarian', 'Mole (Act III)', 'Daus (Act III)', 'Shutterbug')
+INSCRYPTION_NOT_CARDS = ('Consumable Items',)  # the wiki's page about all items, imported as an item: no card
 ENEMY_CATS = ('boss', 'monster')  # an event gives the player its cards (Council of Ghosts: Apparitions), so it is no enemy
 
 
@@ -51,11 +52,13 @@ def owned(c, game):
     drop = set()
     if game == 'inscryption':
         off = inscryption_offered()
-        drop = {i for i in ids if nm[i] in INSCRYPTION_NOT_OWNED and nm[i].lower() not in off and i not in listed}
+        drop = {i for i in ids if (nm[i] in INSCRYPTION_NOT_OWNED and nm[i].lower() not in off and i not in listed) or nm[i] in INSCRYPTION_NOT_CARDS}
     makers = collections.defaultdict(set)
     for a, b in c.execute("select src, dst from card_link where rel in ('transforms_into', 'generates') and src!=dst"): makers[b].add(a)
-    for a, b in c.execute(f"select card, card_ref from flat_do where act in ({','.join('?' * len(network.PUTS))}) and card_ref is not null "
-                          f"and card_ref!=card", list(network.PUTS)): makers[b].add(a)
+    for a, b, side in c.execute(f"select card, card_ref, act in ('summon','create','copy') and 'enemy' in (coalesce(on_side,''), coalesce(to_side,'')) from flat_do where act in "
+                                f"({','.join('?' * len(network.PUTS))}) and card_ref is not null and card_ref!=card", list(network.PUTS)):
+        makers[b].add(-1 if side else a)  # made on the enemy's side (Cuckoo's Broken Egg): the enemy owns it
+    enemy.add(-1)
     while True:  # Skeleton Crew is made only by The Limoncello
         more = {i for i in ids - drop if makers.get(i) and makers[i] <= enemy | drop and i not in listed
                 and (game == 'inscryption' or rar.get(i) in (None, 'tokenunit', 'special'))}
@@ -83,7 +86,14 @@ def only_made(c, game, owned):
     if game == 'inscryption':  # no rarities: a card the game offers (a card choice, the Trader, a pack, a rare) has an offer category
         offered = inscryption_offered()
         rar = {i: 'offered' if n.lower() in offered else None for i, n in c.execute('select id, name from card where game=?', (game,))}
-    return {b for b in got & set(owned) if rar.get(b) in (None, 'tokenunit', 'special') and b not in listed}
+    by = collections.defaultdict(set)  # who makes each card
+    for a, b in c.execute(f"select src, dst from card_link where rel in ('transforms_into', 'generates') and src in ({marks}) and dst!=src", q): by[b].add(a)
+    for a, b in c.execute(f"select card, card_ref from flat_do where act in ({','.join('?' * len(network.PUTS))}) and card in ({marks}) "
+                          f"and card_ref!=card", list(network.PUTS) + q): by[b].add(a)
+    nm = dict(c.execute('select id, name from card where game=?', (game,)))
+    # two forms that turn into each other (GR1ZZ and GR1ZZ (Beast Form), Transformer): the one whose name the other extends is played
+    base = {b for b in got if by[b] and all(b in by.get(a, ()) and nm[a].startswith(nm[b] + ' ') for a in by[b])}
+    return {b for b in got & set(owned) if rar.get(b) in (None, 'tokenunit', 'special') and b not in listed and b not in base}
 
 
 def inscryption_offered():

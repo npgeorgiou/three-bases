@@ -99,18 +99,23 @@ Report: the numbers.
      Vessels are Act III only; "whenever your General attacks" fed by every General's attack (L2; ndu03 rewritten).
    - All counts after round 1: dump_lines.py --diff, deck lines and table, read whole; links_check 0 differences except the
      expected (a); zero checks 0; cases pass (Stormbound csb09-11, csb13 still open; Runeterra n56 stale).
-   - Seen, not fixed: Corpse Eater fires only on deaths "by combat" (its reading lacks that: Hammer -> Corpse Maggots is
-     wrong); Runeterra has Molten Shield twice (a plain and a "(created)" entry).
-   - NOT done: Inscryption round 2 (rerun links_audit and deck_audit, read all, until a round finds nothing); the other 7
-     games (links_audit + deck_audit for every deck): Stormbound, Monster Train, Into the Breach, Slay the Spire, Faeria,
-     Duelyst, Runeterra. Next chat: start with Inscryption round 2, then one game at a time.
+   - Seen, not fixed: Runeterra has Molten Shield twice (a plain and a "(created)" entry).
+   - Inscryption round 2 read whole (links_audit, deck_audit); 7 causes fixed for every game, with cases (links.tsv lk36-lk50,
+     network.tsv n295-n299): a gain on the card it is sacrificed for reached every unit as "more power" (Mealworm -> Bat), and
+     a stat said twice; "within a circuit" reached the Conduit cards that close it; a unit made on the enemy side was mine
+     (Cuckoo's Broken Egg, Stormbound Dubious Hags' enemy Raven); a keyword's one-target hit fed "an enemy dies" (Sharp
+     Quills, L11); "refill your mana" paid for nothing (Extra Battery, Runeterra The Forge Of Tomorrow); two forms that turn
+     into each other were both "only made" (GR1ZZ, Transformer); "perishes by combat" was fed by effect kills (Hammer -> Corpse
+     Maggots); "Consumable Items" (a wiki page) was a card. Round 3: the audits' new lines read, nothing found. Inscryption done.
+   - Open for Kaptain: Many Lives (Cat: "does not die when sacrificed") pays Blood again and again; today no line.
+   - NOT done: the other 7 games (links_audit + deck_audit for every deck), in the order below.
    Pace (Kaptain 31 Oct 2026: the last chat spent 30 minutes and checked only Inscryption; most time went to rebuilds):
    - Rebuild only the game being checked: `links.py <game>` (seconds; Runeterra alone takes about 9 minutes, so rebuild it only
      when Runeterra is the game). `dump_lines.py --table` before and after, `--diff` on that game's rows.
    - Read the whole game's output first and write every error down; then fix all causes, then one rebuild. Not a rebuild per fix.
    - After a fix: `cases/run.py <game>` for the games the fix touches; `check_all.py --no-load` (about 10 minutes) once, at
      the end of a game, not after every fix.
-   - Order: Inscryption round 2, Into the Breach, Monster Train, Stormbound, Slay the Spire, Faeria, Duelyst, Runeterra last.
+   - Order: Into the Breach, Monster Train, Stormbound, Slay the Spire, Faeria, Duelyst, Runeterra last.
      Commit and push after each game, so a chat that ends loses nothing.
    - Rule 6 still holds: all output of links_audit and deck_audit is read, nothing sampled.
    - Agents (one game each) only if Kaptain says yes; ask him first.

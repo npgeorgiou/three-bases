@@ -34,3 +34,18 @@ lk32	inscryption	Field Mice	Hand Tentacle	line	fills your hand	Claude 31 Oct 202
 lk33	inscryption	Orange Mage	Ruby Mox	line	+1|+0	Claude 31 Oct 2026, from the texts: Gem Animator gives Mox cards +1 Power; a Mox card is a creature card with the Terrain trait
 lk34	inscryption	Orlu's Vessel	Mage Knight	none		wiki Side Deck: gem Vessels are Act III, Mage Knight Act II
 lk35	runeterra	The Poro King	Poro Snax	line	creates	Claude 31 Oct 2026: a card made by its name, the same error in Runeterra
+lk36	inscryption	Mealworm	Bat	none		Claude 31 Oct 2026, from the texts: Morsel feeds only the card Mealworm is sacrificed for; Bat costs Bones, nothing is sacrificed
+lk37	inscryption	Mealworm	Raven	none	hits harder	Claude 31 Oct 2026: Morsel is said once ("gives it X|X"), not again as "more power"
+lk38	inscryption	Mealworm	Raven	line	X|X	Claude 31 Oct 2026, from the texts: Raven costs 2 Blood, Mealworm can be sacrificed for it
+lk39	inscryption	Buff Conduit	Null Conduit	none	+1|+0	wiki sigils: Attack Conduit gives "other creatures within a circuit" power; the Conduits are its ends
+lk40	inscryption	Buff Conduit	Energy Conduit	none	+1|+0	wiki sigils: the Conduit cards close the circuit, they are not in it
+lk41	inscryption	Buff Conduit	Kind Cell	line	+1|+0	wiki sigils: a creature within the circuit gains 1 power
+lk42	inscryption	Cuckoo	Broken Egg	none		Brood Parasite text: the Egg is created on the opposing space, the enemy gets it
+lk43	inscryption	*	Broken Egg	none		Claude 31 Oct 2026: a card made only on the enemy side is no card a player owns
+lk44	inscryption	Porcupine	Raccoon	none		START_DATABASE L11: Sharp Quills is a plain hit on one attacker, it feeds no "when an enemy dies"
+lk45	inscryption	Dire Wolf	Raccoon	line	enemy units die	L2: a second strike (Double Strike) still kills more
+lk46	inscryption	Extra Battery	GR1ZZ	line	pays for it	Claude 31 Oct 2026, from the texts: Extra Battery refills Energy to the maximum; GR1ZZ costs 6 Energy
+lk47	inscryption	Bomb Latcher	GR1ZZ	line	Detonator	Claude 31 Oct 2026: a Transformer card is played as its first form (GR1ZZ), not only made
+lk48	inscryption	GR1ZZ	GR1ZZ (Beast Form)	line	levels into	Transformer text: it changes Beast mode at the start of your turn
+lk49	inscryption	*	Consumable Items	none		Claude 31 Oct 2026: the wiki page about all items is no card
+lk50	inscryption	Hammer	Corpse Maggots	none		Corpse Eater text: it fires on a card that perishes by combat; the Hammer kills by an effect
