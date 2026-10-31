@@ -118,8 +118,8 @@ Read: any FAILED line, and the audit lists. After a change to network.py only: `
 **C. Checking lines (after any change to lines, and whenever Kaptain says check):** scripts plus Claude reading.
 1. Before the change: `dump_lines.py /tmp/before.tsv`. After: `dump_lines.py /tmp/after.tsv` and
    `dump_lines.py --diff /tmp/before.tsv /tmp/after.tsv`. Read every gone and new reason group, in every game.
-2. `deck_audit.py <game>` for each game whose lines changed: per deck the 3 most and 3 least linked cards, 10 random
-   cards and 10 random lines with both texts. Read all of it, plus every level-up line of every deck against both texts.
+2. `deck_audit.py <game>` for each game whose lines changed (the deck check of LINKS_PLAN.md step 3). Read all of
+   it, plus every level-up line of every deck against both texts.
 3. Every error: fix by cause for every game, add network.tsv cases, rebuild (A), repeat 1-2.
 4. `realworld.py` for all games: no case that held may break.
 5. After a change to the deck pages: `network_page.py`, then load network.html in the browser (Playwright) with no errors.
@@ -136,9 +136,8 @@ Read: any FAILED line, and the audit lists. After a change to network.py only: `
   (Fealty); Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain).
 
 ## Open work, in Kaptain's order
-1. The line table for design questions: LINKS_PLAN.md, step by step, each step reported to Kaptain and approved. Steps 1
-   and 2 done; step 3: Inscryption done; Into the Breach rounds 1-2 done, one question to Kaptain open (LINKS_PLAN.md State); then the other six games, one at a time, the way LINKS_PLAN.md
-   step 3 "How a game is checked" says. Table cases: cases/links.tsv (run by links.py).
+1. Check every line, one game at a time: LINKS_PLAN.md step 3 (a whole-game check and a deck check per game).
+   Inscryption and Into the Breach done; next Stormbound.
 
 ## When you finish
 Commit and push every finished step. Update "State" and "Open work" above (keep them short: no history; git log has it).
