@@ -384,3 +384,13 @@ Each change: date, what changed, the card that caused it, and which records were
 - 30 Oct 2026, v61: flat.py rules (Claude's, from the concept tree) for concepts no card had: board_wipe, mill, board_clog, enemy mana and plays as disruption, friendly_fire, life_payment, random_target, multi_target_attack, in_hand_buff, symmetric_effect, condition_life, low_life, cost_condition, hand_size, once_per_game, reactions, on_enemy_enter, high_cost (top 10% of a game's costs, ties kept). Deck lines unchanged.
 - 31 Oct 2026, v62: permanent_growth includes a stat keyword given for good to my player (Inflame); multi_attack: an attack that hits more than once (Twin Strike); tank: top 10% of a game's unit health; realworld.py counts kw: cases and Into the Breach weapons (skills a card makes stay out), fortress includes tank. PROCESS 4b: the three checks after an import.
 - 31 Oct 2026, v63: SpellShield is shield (cancels the next spell aimed at it), not counter_spell or immunity; the Runeterra region is neutral in faction shares (realworld.py, ask.py); ask.py kit leaves out non-factions (Curse, Colorless ...) and counts Into the Breach weapons; cases Hellhorned generate_cards, Melting Remnant recycle, Magick cost_type dropped (Kaptain). 'How to think' moved to HANDOFF.md.
+- 31 Oct 2026, v64 (the 36 real-world combos with no line; families): (1) a thing the player chooses on the board is targeted
+  (refs.py; Ezreal's level-up counts targeted enemies, Fated, Taric); (2) Retain and Monster Train's Frozen cause kept_in_hand
+  (Establishment + Windmill Strike); (3) a status that makes a keyword's effect bigger makes stronger what sets that effect off
+  again (network repeaters_of: Defragment -> Loop); (4) a card played by discarding my cards is fed by cards that create cards
+  in my hand (discard_fuel_lines: Chump Whump -> Get Excited!); (5) an effect that raises a stat by another of the unit's stats
+  helps units that grow that stat or have it high (stat_reader_lines: Gabrian Enchantment -> Oak Father); (6) Faeria land
+  costs are game rules like Inscryption's Mox costs (read/faeria/game_rules.jsonl: forest, lake, mountain, desert; Earthcraft
+  -> Three Wishes); (7) realworld.py judges a card with what it makes and carries (a mech's starting weapon and passive) and, in
+  Inscryption, a sigil as worn by the card or tribe named with it. 11 wrong cases dropped (commented in library/games/*.md with
+  the reason). Deck lines: 0 gone, 301 new (153 discard fuel, 48 targeting, 100 Faeria land costs). Real-world 240 of 263.

@@ -14,7 +14,7 @@ Abyssian Host (117 cards): sacrifice 13, draw 8
   Abhorrent Unbirth: Destroy all friendly minions to summon a 1/1 Abomination that gains their Attack,...
   Aphotic Drain: Destroy a friendly minion to restore 5 Health to your General.
   Blood Echoes: Destroy all friendly minions and resummon them on random spaces at end of turn.
-  works with: revive (e.g. Pupabomb -> The Releaser); death_trigger (e.g. Simulacra Obelysk -> Khanuum-ka); leave_trigger (e.g. Pupabomb -> The Releaser)
+  works with: revive (e.g. Abhorrent Unbirth -> The Releaser); death_trigger (e.g. Trygon Obelysk -> Khanuum-ka); leave_trigger (e.g. Abhorrent Unbirth -> The Releaser)
 ## faeria
 Blue (72 cards): sacrifice 1, draw 12
   Aurora's Dream: Draw until you have 9 cards. Reduce the cost of all cards in your hand to 0 faeria.
@@ -26,7 +26,7 @@ Yellow (72 cards): sacrifice 6, draw 6
   Death Walker: Deathtouch You must sacrifice another creature to summon this creature.
   Demon Wrangler: Gift - You may sacrifice another creature, summoning a 5/2 Flying Demon Wing in its place.
   Flash Salmon: Divine, Flying, Haste, Charge 2 Can't harvest faeria. At the end of your turn, destroy...
-  works with: death_trigger (e.g. Rakoan Cannoneer -> Rakoan Shield Mates); cheat_death (e.g. Death Walker -> Aryana, Soul of Gagana); random_target (e.g. Death Walker -> Elderwood Hermit)
+  works with: death_trigger (e.g. Rakoan Cannoneer -> Rakoan Shield Mates); cheat_death (e.g. Shaytan Assassin -> Aryana, Soul of Gagana); random_target (e.g. Shaytan Assassin -> Soulbound Sagami)
 ## inscryption
 Magick (25 cards): sacrifice 1, draw 4
   Master Bleene: Keywords: True Scholar.
@@ -37,12 +37,12 @@ Undead (24 cards): sacrifice 2, draw 1
   Dead Hand: Keywords: Handy.
   Necromancer: Keywords: Double Death.
   Pharaoh's Pets: Keywords: Worthy Sacrifice, Many Lives.
-  works with: on_sacrifice (e.g. Master Bleene -> Black Goat); cost_reduction (e.g. Master Bleene -> Black Goat); cheat_death (e.g. Master Bleene -> Child 13 (Awakened))
+  works with: on_sacrifice (e.g. Master Bleene -> M3atB0t); cost_reduction (e.g. Master Bleene -> M3atB0t); cheat_death (e.g. Master Bleene -> Pharaoh's Pets)
 ## into_the_breach
 Ranged (29 cards): sacrifice 2, draw 0
   Arachnoid Injector: Damage target, creating a friendly robot spider on kill. Damage: 1. Power: Free....
   Arachnoid Mech: Health 3, move 3. Weapon: Arachnoid Injector: Damage target, creating a friendly robot...
-  works with: summon (e.g. Arachnoid Injector -> Marked tile); on_kill (e.g. Arachnoid Mech -> Cascading Resonator); death_trigger (e.g. Arachnoid Injector -> Marked tile)
+  works with: summon (e.g. Arachnoid -> Marked tile); on_kill (e.g. Arachnoid -> Cascading Resonator); death_trigger (e.g. Arachnoid -> Ice Tile)
 ## monster_train
 Umbra (47 cards): sacrifice 12, draw 2
   Antumbra Morsel: Eaten: Eater gains +6 Health.
@@ -66,13 +66,13 @@ Shadow Isles (221 cards): sacrifice 52, draw 10
   Spirit Leech: Play: Kill an ally to draw 2.
   Stalking Shadows: Pick a follower from the top 4 cards in your deck. Draw it, place the rest into your...
   Amalgamation Of Vile Rites: Keywords: Last Breath, Deathless. To play me, kill an ally. Last Breath: Heal your Nexus...
-  works with: revive (e.g. Kalista's Black Spear -> Bladepierced Revenant); death_trigger (e.g. Kalista's Black Spear -> Bladepierced Revenant); other_leave_trigger (e.g. The Darkin Bloodletters (created) -> The Shadow Reaper)
+  works with: revive (e.g. Ekko (level 2) -> Bladepierced Revenant); death_trigger (e.g. Ekko (level 2) -> Bladepierced Revenant); other_leave_trigger (e.g. The Darkin Bloodletters -> The Shadow Reaper)
 ## stormbound
 Ironclad (34 cards): sacrifice 1, draw 0
   Temple of Space: When played with a friendly copy on the board, teleport 2/3/4/6/8 surrounding units from...
 Shadowfen (34 cards): sacrifice 1, draw 0
   Toxic Sacrifice: Destroy a target friendly unit. Deal 2/3/4/5/6 damage to surrounding units and poison them
-  works with: death_trigger (e.g. Toxic Sacrifice -> Green Prototypes); revive (e.g. Pricey Freedom -> Project PH03-NIX); cheat_death (e.g. Pricey Freedom -> Project PH03-NIX)
+  works with: death_trigger (e.g. Toxic Sacrifice -> Green Prototypes); revive (e.g. Pricey Freedom -> Siro the Resurrector); cheat_death (e.g. Pricey Freedom -> Project PH03-NIX)
 ## sts1
 Silent (83 cards): sacrifice 0, draw 18
   Acrobatics: Draw 3 cards. Discard 1 card.
@@ -84,5 +84,5 @@ Defect (89 cards): sacrifice 0, draw 13
   Coolheaded: Channel 1 Frost. Draw 1 card.
   FTL: Deal 5 damage. If you have played less than 3 cards this turn, draw 1 card.
   Fission: Keywords: Exhaust. Remove all your Orbs. Gain 1 energy and draw 1 card for each Orb...
-  works with: stances (e.g. Blasphemy+ -> Worship); resource_gain (e.g. Blasphemy+ -> Bloody Idol); base_resource_gain (e.g. Blasphemy+ -> Double Energy)
+  works with: stances (e.g. Blasphemy -> Worship+); resource_gain (e.g. Blasphemy -> Bloody Idol); retain (e.g. Blasphemy+ -> Perseverance)
 ```

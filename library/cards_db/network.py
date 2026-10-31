@@ -777,7 +777,14 @@ def givers_of(c, game, k, nodes):
             [k, f'%;keyword is {k};%', f'%;keyword in {k};%'] + list(nodes))}
 
 
-PLACE_WORDS = {'sides': 'next to it', 'bordering': 'next to it', 'surrounding': 'around it', 'same_lane': 'in its lane',
+def repeaters_of(c, k, nodes):
+    """the nodes that set off keyword k's effect again (Loop: "trigger the passive ability of your next Orb")"""
+    marks = ','.join('?' * len(nodes))
+    return {a for (a,) in c.execute(f"""select distinct card from flat_do where act='repeat' and origin='own' and ((';' || coalesce(on_with,'') || ';')
+            like ? or (';' || coalesce(on_with,'') || ';') like ?) and card in ({marks})""", [f'%;keyword is {k};%', f'%;keyword in {k};%'] + list(nodes))}
+
+
+PLACE_WORDS = {'sides':'next to it', 'bordering': 'next to it', 'surrounding': 'around it', 'same_lane': 'in its lane',
                'in_circuit': 'in its circuit', 'same_space': 'on its space', 'same_row': 'in its row', 'same_column': 'in its column',
                'in_front': 'in front of it', 'behind': 'behind it', 'ahead': 'ahead of it', 'straight_line': 'in a line from it'}
 
@@ -845,6 +852,9 @@ def aimed(c, game, nodes, broad):
                 # units it boosts (Heat Engines: Mechs standing on Fire hit harder; Fire is not made stronger)
                 for b in givers_of(c, game, k, nodes) - set(hits) - {a}:  # Rage made stronger: the cards that give Rage too
                     out[(a, b)].append((kind_, x / n, f'makes the {kwn(k)} it gives stronger'))
+                if act == 'increase_effect':  # Focus: the Orbs Loop sets off again are stronger too
+                    for b in repeaters_of(c, k, nodes) - set(hits) - {a}:
+                        out[(a, b)].append((kind_, x / n, f'makes the {kwn(k)} it sets off stronger'))
             continue
         what = rule[5:] if isinstance(rule, str) and rule.startswith('help ') else {'give_keyword': f'gives it {kwn(kw)}', 'cost_change': 'changes its cost', 'cost_set': 'sets its cost',
                 'can': 'lets it do more', 'cant': 'stops it doing something', 'give_ability': 'gives it an ability',
@@ -1647,6 +1657,48 @@ def families(c, nodes):
     return {n: fam(n) for n in nodes}
 
 
+def stat_reader_lines(c, game, nodes):
+    """an effect that raises a unit's stat by another of its stats (Gabrian Enchantment: "a creature's Attack becomes equal to its
+    Life"; Bayou Brunch doubles it) gets more from a unit that grows that stat itself (Oak Father: +0/+1 for each forest) or has it
+    high (a tank, for Life)"""
+    cards = cards_of(c, game); out = collections.defaultdict(list); marks = ','.join('?' * len(nodes)); L = list(nodes)
+    readers = c.execute(f"""select distinct b.card, e.act, p.param, a.attr from param p join amount a on a.id=p.amount join effect e on e.id=p.effect
+              join ability b on b.id=e.ability join target t on t.id=a.of_target join target o on o.id=e.on_target
+              where a.x='stat' and t.pick='it' and o.pick in ('chosen','it','all') and coalesce(o.side,'mine') in ('mine','any')
+              and e.act in ('stat_change','stat_set') and p.param in ('power','health') and a.attr in ('power','health')
+              and b.card in ({marks})""", L).fetchall()
+    if not readers: return out
+    grows = collections.defaultdict(set)  # unit -> stats it raises on itself
+    for t, ps in c.execute(f"""select card, params from flat_do where origin='own' and on_pick='self' and act in ('stat_change','grow')
+            and card in ({marks})""", L):
+        for x in (ps or '').split(';'):
+            if '=' in x and not x.split('=', 1)[1].startswith('-'): grows[t].add(x.split('=', 1)[0])
+    tanks = {t for (t,) in c.execute(f"select card from flat_concept where concept='tank' and card in ({marks})", L)}
+    word = {'power': 'Attack', 'health': 'Life'} if game == 'faeria' else {'power': 'Power', 'health': 'Health'}
+    for a, act, stat, read in readers:
+        if act == 'stat_set' and stat == read: continue  # "set its Power to its Power" changes nothing
+        for t in nodes:
+            if t == a or cards.get(t, {}).get('cat') not in KIND_CAT['unit']: continue
+            why = 'grows' if read in grows.get(t, ()) else 'has a high' if read == 'health' and t in tanks else None
+            if why: out[(a, t)].append(('stronger', 0.5, f"turns the {word[read]} it {why if why == 'grows' else 'has'} into {word[stat]}"))
+    return out
+
+
+def discard_fuel_lines(c, game, nodes):
+    """a card played by discarding my own cards (Get Excited!: "To play, discard 1") is fed by the cards that make extra cards in my
+    hand (Chump Whump's Mushroom Clouds): they are what it discards"""
+    cards = cards_of(c, game); out = collections.defaultdict(list); marks = ','.join('?' * len(nodes)); L = list(nodes)
+    eaters = {a for (a,) in c.execute(f"""select d.card from flat_do d join flat_when w on w.card=d.card and w.ability=d.ability and w.origin=d.origin
+              where d.origin='own' and d.act='discard' and coalesce(d.seq,0)=0 and d.on_pick='chosen' and coalesce(d.on_side,'mine')='mine'
+              and d.on_zone='hand' and w.event='played' and w.obj_pick='self' and d.card in ({marks})""", L)}
+    fuel = {a for (a,) in c.execute(f"""select card from flat_do where origin='own' and act in ('create','copy') and coalesce(on_side,'mine')='mine'
+            and 'hand' in (coalesce(eff_zone,''), coalesce(on_zone,'')) and card in ({marks})""", L)}
+    for t in eaters:
+        for a in fuel - {t}:
+            if a in cards and t in cards: out[(a, t)].append(('waits', 0.5 / max(1, len(fuel)), 'gives it cards to discard'))
+    return out
+
+
 def self_harm_lines(c, game, nodes):
     """harm aimed at any unit, of either side ("deal 1 damage to a creature"), or at my own units ("sacrifice another creature"):
     the player aims it at my own unit when that unit's own effect fires on it (Falcon Dive -> a Last Words unit with 1 Life;
@@ -1687,7 +1739,7 @@ def network(c, game, ids, broad=True):
     for f in (am, played_lines(c, game, nodes, broad), need_lines(c, game, nodes, broad),
               boost_lines(c, game, nodes, stat_help, {p for p, ls in am.items() if any('cheaper' in y or 'cost' in y for _, _, y in ls)}), gives_lines(c, game, nodes), object_help_lines(c, game, nodes, broad),
               actor_help_lines(c, game, nodes), doer_help_lines(c, game, nodes), self_harm_lines(c, game, nodes),
-              state_giver_lines(c, game, nodes)):
+              state_giver_lines(c, game, nodes), discard_fuel_lines(c, game, nodes), stat_reader_lines(c, game, nodes)):
         for k, ls in f.items(): lines[k] += ls
     # a need the maker shares with the card it makes is the made card's (The Iron Conquest's stage III is its skill Undying
     # Revenge: Soul Cleave's dead ally feeds the skill, not the landmark too)

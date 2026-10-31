@@ -198,6 +198,10 @@ def build(c):
         # "it" in an ability on my own attack, strike or damage ("Backstab: deals extra damage to it"; Touch of Death: "when this
         # damages another creature, that creature perishes") is what I fight: an enemy
         if p == 'it' and not s and ev_of.get((card, ab)) in ('attacks', 'strikes', 'damaged', 'fights'): k, s = k or 'any', 'enemy'
+        # a thing the player chooses on the board is targeted (Ezreal counts "targeted enemies", Fated waits for it)
+        for tk, ts, tp in ((k, s, p), (to_k, to_s, to_p)):
+            if tp == 'chosen' and act != 'choose_one' and z in (None, 'board') and tk in ('unit', 'any', 'anything', 'unit_or_structure', 'player', None):
+                ins(card, o, v, ab, 'makes', 'targeted', tk or 'any', ts or '', 'chosen')
         for ev, *kwn in causes.get(('act', act), []):
             if (act, ev) in TO_OBJECT and (to_k or to_s or to_p):  # the space it happens on is the event's object, the mover its actor
                 if act == 'set_terrain':  # the space now has the new ground ("to"), on the side of the space changed (mine when unsaid)

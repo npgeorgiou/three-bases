@@ -143,7 +143,7 @@ select distinct card from flat_ref where happening='given_keyword' and role!='ma
 select distinct card from flat_do where params glob '*=[a-z]*'
 ```
 - duelyst: 369 cards: Abhorrent Unbirth, Abyssal Juggernaut, Abyssal Tormentor, Accumulonimbus, Ace, Aegis Barrier, Aerial Rift, Aethermaster ...
-- faeria: 250 cards: Air Elemental, Airbot, Amai Merchant, Ancient Boar, Ancient Gargoyle, Animated Banquet, Annoying Gnat, Apex Predator ...
+- faeria: 254 cards: Air Elemental, Airbot, Amai Merchant, Ancient Boar, Ancient Gargoyle, Animated Banquet, Annoying Gnat, Apex Predator ...
 - inscryption: 84 cards: !CORRUPTED, Ancient Fir, Ant Queen, Ants, Aquasquirrel, Armored, Bell Ringer, Bell Tentacle ...
 - into_the_breach: 158 cards: A.C.I.D., A.C.I.D. Firefly, A.C.I.D. Hornet, A.C.I.D. Pool, A.C.I.D. Projector, A.C.I.D. Scorpion, A.C.I.D. Tank (unit), A.C.I.D. Tile ...
 - monster_train: 166 cards: A Fatal Melting, Adaptive Mutation, Alloy of the Ancients, Alloyed Construct, Ambient Charge, Ancient Resonance, Ancient Synergy, Apex Imp ...
@@ -164,21 +164,21 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: duelyst 3172 pairs, e.g. Trygon Obelysk -> Khanuum-ka; faeria 1015 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 466 pairs, e.g. Child 13 -> Greater Smoke; into_the_breach 10 pairs, e.g. Self-Destruct -> Ice Tile; monster_train 348 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 22558 pairs, e.g. Ekko -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
-- self_destruct: duelyst 1788 pairs, e.g. Trygon Obelysk -> Khanuum-ka; faeria 653 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 431 pairs, e.g. Child 13 -> Greater Smoke; into_the_breach 8 pairs, e.g. Self-Destruct -> Ice Tile; monster_train 296 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 19820 pairs, e.g. Ekko -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Azure Hatcher
-- sacrifice: duelyst 1521 pairs, e.g. Trygon Obelysk -> Khanuum-ka; faeria 387 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Master Bleene -> Greater Smoke; into_the_breach 6 pairs, e.g. Arachnoid Injector -> Ice Tile; monster_train 305 pairs, e.g. Primordium -> Devourer of Death; runeterra 8133 pairs, e.g. Ekko -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
-- friendly_fire: duelyst 1153 pairs, e.g. Necrotic Sphere -> Rage Reactor; faeria 160 pairs, e.g. Doomsday -> Ruunin, the Relentless; inscryption 186 pairs, e.g. Broken Bot -> Shield Latcher; into_the_breach 58 pairs, e.g. Self-Destruct -> Ice Tile; monster_train 34 pairs, e.g. Shardtail Queen -> Little Fade; runeterra 7878 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 238 pairs, e.g. Crimson Sentry -> Green Prototypes
-- turn_end: duelyst 1814 pairs, e.g. Trygon Obelysk -> Khanuum-ka; faeria 473 pairs, e.g. Flash Salmon -> Long-horned Yak; into_the_breach 6 pairs, e.g. Bomb Dispenser -> Ice Tile; monster_train 276 pairs, e.g. Primordium -> Devourer of Death; runeterra 19731 pairs, e.g. Ekko -> Bladepierced Revenant
-- board_wipe: duelyst 330 pairs, e.g. Necrotic Sphere -> Rage Reactor; faeria 97 pairs, e.g. Doomsday -> Ruunin, the Relentless; monster_train 16 pairs, e.g. Shardtail Queen -> Little Fade; runeterra 1370 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 22 pairs, e.g. Avian Stalkers -> Marked as Prey
+- destroy: duelyst 3172 pairs, e.g. Soulburn Obelysk -> Khanuum-ka; faeria 1015 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 466 pairs, e.g. Skel-e-latcher -> Pack Mule; into_the_breach 10 pairs, e.g. Walking Bomb -> Ice Tile; monster_train 348 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 22558 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 264 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- self_destruct: duelyst 1788 pairs, e.g. Soulburn Obelysk -> Khanuum-ka; faeria 653 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 431 pairs, e.g. Skel-e-latcher -> Pack Mule; into_the_breach 8 pairs, e.g. Walking Bomb -> Ice Tile; monster_train 296 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 19820 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
+- sacrifice: duelyst 1521 pairs, e.g. Soulburn Obelysk -> Khanuum-ka; faeria 387 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Cockroach; into_the_breach 6 pairs, e.g. Arachnoid Mech -> Ice Tile; monster_train 305 pairs, e.g. Primordium -> Devourer of Death; runeterra 8133 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Toxic Sacrifice -> Green Prototypes
+- friendly_fire: duelyst 1153 pairs, e.g. Necrotic Sphere -> Rage Reactor; faeria 160 pairs, e.g. Doomsday -> Ruunin, the Relentless; inscryption 186 pairs, e.g. Hammer -> Pack Mule; into_the_breach 58 pairs, e.g. Thermal Discharger -> Ice Tile; monster_train 34 pairs, e.g. Shardtail Queen -> Little Fade; runeterra 7878 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 238 pairs, e.g. Crimson Sentry -> Green Prototypes
+- turn_end: duelyst 1814 pairs, e.g. Soulburn Obelysk -> Khanuum-ka; faeria 473 pairs, e.g. Flash Salmon -> Long-horned Yak; into_the_breach 6 pairs, e.g. Walking Bomb -> Ice Tile; monster_train 276 pairs, e.g. Primordium -> Devourer of Death; runeterra 19731 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant
+- board_wipe: duelyst 330 pairs, e.g. Necrotic Sphere -> Rage Reactor; faeria 97 pairs, e.g. Doomsday -> Ruunin, the Relentless; monster_train 16 pairs, e.g. Shardtail Queen -> Little Fade; runeterra 1370 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 22 pairs, e.g. Wetland Deceivers -> Diehards
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
+- summon -> banish -> activated (seen in duelyst, runeterra)
+- summon -> banish -> removal (seen in duelyst, runeterra)
 - summon -> start_of_game -> delayed (seen in runeterra)
 - summon -> start_of_game -> countdown (seen in runeterra)
 - summon -> death_trigger -> attack_gain (seen in duelyst)
 - summon -> death_trigger -> on_ally_play (seen in duelyst, monster_train)
-- summon -> on_ally_play -> on_damaged (seen in duelyst, faeria)
-- summon -> tribal -> on_ally_play (seen in duelyst, monster_train)
 
 ## A deck explained (`ask.py runeterra analyze "..."`), a Lucian/Senna deck from a deck guide
 
@@ -194,7 +194,7 @@ Supports your units (stats, protection, combat keywords): Lucian, Piercing Darkn
 Card flow (draw, create, choose): Glimpse Beyond, Lonely Chimeslime, Senna, Spirit Leech.
 Puts extra units into play: Cursed Keeper, Hapless Aristocrat, The Undying.
 Units that support cards can target: 9 (Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, Lucian, Ravenous Butcher, Senna, Senna, Sentinel of Light, Spirit Leech, The Undying).
-Key cards (in most of the plan): Senna, The Ruination, Spirit Leech, Crumble, Ravenous Butcher.
+Key cards (in most of the plan): Senna, Spirit Leech, The Ruination, Crumble, Ravenous Butcher.
 Weak spots: none found.
 ```
 

@@ -25,7 +25,7 @@ Red (72 cards): disruption 0, suppress 3
   Devouring Plant: Taunt Production - Deal 2 damage to all adjacent enemy creatures.
   Grim Guard: Taunt Combat - Deal 2 damage to your opponent.
   Ogre Battler: Taunt
-  works with: on_damaged (e.g. Imperial Drain -> Unlikely Hero); damage_reduction (e.g. Imperial Drain -> Shadowsilk Faerie); death_trigger (e.g. Imperial Drain -> Celeste, Crystal Dragon)
+  works with: on_damaged (e.g. Imperial Drain -> Unlikely Hero); damage_reduction (e.g. Imperial Drain -> Safeguard); death_trigger (e.g. Imperial Drain -> Celeste, Crystal Dragon)
 ## inscryption
 Beast (122 cards): disruption 2, suppress 0
   Cuckoo: Keywords: Airborne, Brood Parasite.

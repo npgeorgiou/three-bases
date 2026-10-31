@@ -35,7 +35,7 @@ Undead (24 cards): protection 3, heal 0, cheat_death 1
   Pharaoh's Pets: Keywords: Worthy Sacrifice, Many Lives.
   Drowned Soul: Keywords: Waterborne, Touch of Death.
   Ghost Ship: Keywords: Waterborne, Skeleton Crew.
-  works with: adjacency (e.g. Skink -> Curious Egg); positional (e.g. Skink -> Curious Egg); forced_movement (e.g. Skink -> Lonely Wizbot)
+  works with: adjacency (e.g. Skink -> Curious Egg); positional (e.g. Skink -> Curious Egg); lanes (e.g. Skink -> Curious Egg)
 ## into_the_breach
 Science (30 cards): protection 13, heal 1, cheat_death 0
   A.C.I.D. Projector: Fire a projectile that applies A.C.I.D. and pushes. Power: Free.

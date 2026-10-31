@@ -137,7 +137,7 @@ signature	Undead	cost_type	Bones	https://primagames.com/gaming/inscryption-scryb
 signature	Undead	resource_gain	Bones from Gravedigger and from cards that die	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 # dropped 31 Oct (Kaptain): every Inscryption faction has its own cost	# signature	Magick	cost_type	Magick cards are paid with Mox gems	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Magick	draw	Blue Mage draws per Mox	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
-combo	Necromancer	Right	the Obol dies twice	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
+# dropped 31 Oct (Claude, Kaptain asked to drop wrong cases): no card named Right (the Obol is not in the library); Tomb Robber + Necromancer covers it	# combo	Necromancer	Right	the Obol dies twice	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
 combo	Warren	Rabbit	Warren supplies Rabbits	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 combo	Blue Mage	Sapphire Mox	needs the matching Mox	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 combo	Mage Knight	Ruby Mox	needs the matching Mox	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
@@ -148,7 +148,7 @@ combo	Cuckoo	Fecundity	copies of Cuckoo put an egg opposite each time one is pla
 combo	Beaver	Worthy Sacrifice	Dams adopt the Beaver's sigils, so each Dam counts as 3 Blood	https://inscryption.fandom.com/wiki/Dam_Builder
 combo	Urayuli	Corpse Eater	Corpse Eater plays Urayuli without its 4 Blood cost	https://inscryption.fandom.com/wiki/Urayuli
 combo	Fecundity	Corpse Eater	a card played by Corpse Eater triggers Fecundity	Kaptain's combo list, 26 Oct 2026; source named: r/inscryption
-combo	Black Goat	Boon of the Bone Lord	sacrificing the Black Goat to the Bone Lord gives 8 Bones each battle	https://inscryption.fandom.com/wiki/The_Bone_Lord
+# dropped 31 Oct (Claude, Kaptain asked to drop wrong cases): the Goat is given away at a map event to get the Boon: never in a battle with it	# combo	Black Goat	Boon of the Bone Lord	sacrificing the Black Goat to the Bone Lord gives 8 Bones each battle	https://inscryption.fandom.com/wiki/The_Bone_Lord
 combo	Pronghorn	Touch of Death	Bifurcated Strike with Touch of Death kills both creatures it strikes	Kaptain's combo list, 26 Oct 2026; source named: YouTube
 combo	Mantis God	Fecundity	copies of a three-way striker in hand	Kaptain's combo list, 26 Oct 2026; source named: Steam
 combo	Geck	Fecundity	a free card that copies itself when played	Kaptain's combo list, 26 Oct 2026; source named: r/inscryption

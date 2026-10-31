@@ -45,7 +45,7 @@ Ionia (236 cards): spells_played_condition 14, spell_power 0
   Deep Meditation: Keywords: Flow. Flow: I cost 2 less. Draw 2 other spells.
   Dragoncaller: Keywords: Attune, Flow. Round Start: Flow: Summon The Empyrean and grant it Ephemeral.
   Eye of the Dragon: Keywords: Attune, Flow. Round Start: Flow: Summon a Dragonling.
-  works with: recycle (e.g. Drum Solo -> Janna); on_discard (e.g. Lee Sin's Sonic Wave -> Rumble); turn_start (e.g. Drum Solo -> Janna)
+  works with: recycle (e.g. The Spirit of Wuju -> Janna); on_discard (e.g. Lee Sin (level 2) -> Rumble); turn_start (e.g. The Spirit of Wuju -> Janna)
 ## sts1
 Defect (89 cards): spells_played_condition 1, spell_power 18
   Beam Cell: Deal 3 damage. Apply 1 Vulnerable.
@@ -57,5 +57,5 @@ Watcher (90 cards): spells_played_condition 0, spell_power 23
   Blasphemy+: Keywords: Retain, Exhaust. Enter Divinity. Die next turn.
   Crescendo: Keywords: Retain, Exhaust. Enter Wrath.
   Crush Joints: Deal 8 damage. If the last card played this combat was a Skill, apply 1 Vulnerable.
-  works with: permanent_growth (e.g. Mind Bloom -> Du-Vu Doll); passive (e.g. Art of War -> Void); attack_gain (e.g. Mind Bloom -> Du-Vu Doll)
+  works with: permanent_growth (e.g. Mind Bloom -> Du-Vu Doll); passive (e.g. Velvet Choker -> Void); attack_gain (e.g. Mind Bloom -> Du-Vu Doll)
 ```

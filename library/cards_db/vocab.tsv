@@ -467,7 +467,7 @@ keyword	Cultivate	concept of having, using or giving this keyword (Monster Train
 keyword	Attuned	concept of having, using or giving this keyword (Monster Train: Magic Power counts five times on this card; concept is Claude's)	spell_power		28 Oct 2026, v22 (Monster Train)
 keyword	Consume	concept of having, using or giving this keyword (Monster Train: can only be played once per battle; concept is Claude's)	exhaust		28 Oct 2026, v22 (Monster Train)
 keyword	Extract	concept of having, using or giving this keyword (Monster Train: playing the card costs that much Echo; without it the card cannot be played; concept is Claude's)	cost_type		28 Oct 2026, v22 (Monster Train)
-keyword	Frozen	concept of having, using or giving this keyword (Monster Train: the card is not discarded at end of turn; concept is Claude's)	retain		28 Oct 2026, v22 (Monster Train)
+keyword	Frozen	concept of having, using or giving this keyword (Monster Train: the card is not discarded at end of turn; concept is Claude's)	retain	kept_in_hand	28 Oct 2026, v22 (Monster Train); causes kept_in_hand v64
 keyword	Infused	concept of having, using or giving this keyword (Monster Train: when played, the floor gains 1 Echo; concept is Claude's)	resource_gain		28 Oct 2026, v22 (Monster Train)
 keyword	Magic Power	concept of having, using or giving this keyword (Monster Train: spells deal more damage and restore more health; concept is Claude's)	spell_power		28 Oct 2026, v22 (Monster Train)
 keyword	Offering	concept of having, using or giving this keyword (Monster Train: if discarded before the end of the turn, the card is played instead; concept is Claude's)	on_discard		28 Oct 2026, v22 (Monster Train)
@@ -832,7 +832,7 @@ keyword	Lightning	concept of having, using or giving this keyword (Slay the Spir
 keyword	Lock-On	concept of having, using or giving this keyword (Slay the Spire: targets take 50% more damage from Orbs; concept is Claude's)	mark_target		30 Oct 2026, v49 (Slay the Spire)
 keyword	Plasma	concept of having, using or giving this keyword (Slay the Spire: an Orb that gives energy; concept is Claude's)	base_resource_gain		30 Oct 2026, v49 (Slay the Spire)
 keyword	Mantra	concept of having, using or giving this keyword (Slay the Spire: 10 Mantra enters Divinity; concept is Claude's)	stances		30 Oct 2026, v49 (Slay the Spire)
-keyword	Retain	concept of having, using or giving this keyword (Slay the Spire: not discarded at the end of turn; concept is Claude's)	retain		30 Oct 2026, v49 (Slay the Spire)
+keyword	Retain	concept of having, using or giving this keyword (Slay the Spire: not discarded at the end of turn; concept is Claude's)	retain	kept_in_hand	30 Oct 2026, v49 (Slay the Spire); causes kept_in_hand v64
 keyword	Ritual	concept of having, using or giving this keyword (Slay the Spire: gains Strength at the end of each turn; concept is Claude's)	permanent_growth		30 Oct 2026, v49 (Slay the Spire)
 keyword	Scry	concept of having, using or giving this keyword (Slay the Spire: look at the top cards of the draw pile and discard any; concept is Claude's)	selection		30 Oct 2026, v49 (Slay the Spire)
 keyword	Shiv	concept of having, using or giving this keyword (Slay the Spire: a 0-cost Attack card that exhausts; concept is Claude's)	generate_cards		30 Oct 2026, v49 (Slay the Spire)

@@ -159,21 +159,21 @@ combo	Body Slam	Barricade	Block becomes damage	https://www.thegamer.com/slay-the
 combo	Body Slam	Entrench	Block becomes damage	https://www.thegamer.com/slay-the-spire-best-builds/
 combo	Demon Form	Sword Boomerang	Strength with multi-attack	https://www.thegamer.com/slay-the-spire-best-builds/
 combo	Limit Break	Whirlwind	Strength with multi-attack	https://www.thegamer.com/slay-the-spire-best-builds/
-combo	Feel No Pain	Dark Embrace	Exhaust value	https://slaythespire.gg/guides/slay-the-spire-best-character
+# dropped 31 Oct (Claude, Kaptain asked to drop wrong cases): both wait for Exhaust; neither Exhausts	# combo	Feel No Pain	Dark Embrace	Exhaust value	https://slaythespire.gg/guides/slay-the-spire-best-character
 combo	After Image	A Thousand Cuts	both trigger on every card	https://www.thegamer.com/slay-the-spire-best-builds/
 combo	Catalyst	Noxious Fumes	Catalyst doubles Poison	https://www.thegamer.com/slay-the-spire-best-builds/
 combo	Catalyst	Bouncing Flask	Catalyst doubles Poison	https://www.thegamer.com/slay-the-spire-best-builds/
 combo	Glacier	Capacitor	Frost and more Orb slots	https://www.thegamer.com/slay-the-spire-best-builds/
-combo	Recursion	Loop	more use of Orbs	https://www.thegamer.com/slay-the-spire-best-builds/
+# dropped 31 Oct (Claude, Kaptain asked to drop wrong cases): both use Orbs; neither feeds the other	# combo	Recursion	Loop	more use of Orbs	https://www.thegamer.com/slay-the-spire-best-builds/
 combo	Loop	Defragment	Focus scaling	https://slaythespire.gg/guides/slay-the-spire-best-character
 combo	All for One	Claw	zero-cost engine	https://slaythespire.gg/guides/slay-the-spire-best-character
 combo	Establishment	Windmill Strike	retained cards get cheaper	https://www.thegamer.com/slay-the-spire-best-builds/
 combo	Establishment	Sands of Time	retained cards get cheaper	https://www.thegamer.com/slay-the-spire-best-builds/
 combo	Master Reality	Conjure Blade	created cards come upgraded	https://www.thegamer.com/slay-the-spire-best-builds/
 combo	Master Reality	Evaluate	created cards come upgraded	https://www.thegamer.com/slay-the-spire-best-builds/
-combo	Talk to the Hand	Flurry of Blows	stance switching	https://www.thegamer.com/slay-the-spire-best-builds/
+# dropped 31 Oct (Claude, Kaptain asked to drop wrong cases): Talk to the Hand changes no Stance	# combo	Talk to the Hand	Flurry of Blows	stance switching	https://www.thegamer.com/slay-the-spire-best-builds/
 combo	Nirvana	Cut Through Fate	Block whenever you Scry	https://www.thegamer.com/slay-the-spire-best-builds/
 combo	Nirvana	Third Eye	Block whenever you Scry	https://www.thegamer.com/slay-the-spire-best-builds/
 combo	Nirvana	Just Lucky	Block whenever you Scry	https://www.thegamer.com/slay-the-spire-best-builds/
-combo	Nirvana	Weave	Block whenever you Scry	https://www.thegamer.com/slay-the-spire-best-builds/
+# dropped 31 Oct (Claude, Kaptain asked to drop wrong cases): both wait for Scry; neither Scries	# combo	Nirvana	Weave	Block whenever you Scry	https://www.thegamer.com/slay-the-spire-best-builds/
 ```
