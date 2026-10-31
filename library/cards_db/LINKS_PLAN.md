@@ -97,7 +97,13 @@ Report: the numbers.
    - Opponent-only cards are "owned": The Limoncello, The Moon, Gold Nugget, Dead Tree get lines. Proposed: an Inscryption
      card is owned when the game offers it (wiki offer category), a deck lists it, or an owned card makes it.
    - Act "Finale" joins Act I and Act II cards (Alpha -> Practice Wizard): check what the Finale deck is before keeping it.
-   Next: Kaptain's OK on these, fix, then the audit of the other 7 games (one game per round; record read lines with --record).
+   Kaptain 31 Oct: fix 2 and 3, check 4. Fix 1 waits for his answer: it is not how the other games do it; every game has
+   these lines (Stormbound "can kill it": 408), so the fix would change every game.
+   Not done yet (Kaptain: "fix everything so the next chat only has to do step 4 from a clean base"): the links_audit.py
+   check a-f was read for Inscryption only, in part, and deck_audit.py (process C) was not run for any deck in this chat.
+   links_check.py only shows that the table equals the deck pages; it does not show that a line is right. Next chat: for
+   every game, run links_audit.py and deck_audit.py, read ALL of the output against both texts, fix every error by its cause
+   for every game with network.tsv cases (START_DATABASE.md rules 1-3), rebuild, repeat until a round finds nothing.
 3. **Zero checks** (a query each, must give 0): lines between two cards that cannot share a deck; lines with an end that
    is not a card a player owns.
 4. Every wrong line: name the cause in one sentence (the thinking, not the card), fix it in network.py for every game,
