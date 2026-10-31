@@ -1,7 +1,7 @@
 """Every line network.py draws between two cards of one game that can share a deck, stored in links.sqlite (not in git; rebuilt
 from cards.sqlite). Tables: phrase(id, kind, text) with the two cards' names as {A} and {B}; link(game, a, b, phrase, weight).
 Usage: links.py [game ...]   (no game: all; a game's old rows are replaced)"""
-import os, random, sqlite3, sys, time
+import csv, os, random, sqlite3, sys, time
 import network, deck_analysis
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -30,12 +30,42 @@ def as_phrase(text, a_name, b_name):
     return text.replace('\0A\0', '{A}').replace('\0B\0', '{B}')
 
 
+def only_made(c, game, owned):
+    """cards that come only from other cards: made by one (levels into it, a skill it casts, makes, plants or puts into play),
+    of no deck rarity (none, token, special) and in no deck of decks.tsv"""
+    marks = ','.join('?' * len(owned)); q = list(owned)
+    got = {b for (b,) in c.execute(f"select dst from card_link where rel in ('transforms_into', 'generates') and src in ({marks}) and dst!=src", q)}
+    got |= {b for (b,) in c.execute(f"select card_ref from flat_do where act in ({','.join('?' * len(network.PUTS))}) and card in ({marks}) "
+                                     f"and card_ref!=card", list(network.PUTS) + q)}
+    listed = set()
+    for f in ('decks.tsv', os.path.join('cases', 'decks.tsv')):
+        for r in csv.DictReader(open(os.path.join(HERE, f), encoding='utf-8'), delimiter='\t'):
+            if r['game'] == game: listed |= set(deck_analysis.parse_deck(c, game, r['cards'])[0])
+    rar = dict(c.execute('select id, rarity from card where game=?', (game,)))
+    if game == 'inscryption':  # no rarities: a card the game offers (a card choice, the Trader, a pack, a rare) has an offer category
+        offered = inscryption_offered()
+        rar = {i: 'offered' if n.lower() in offered else None for i, n in c.execute('select id, name from card where game=?', (game,))}
+    return {b for b in got & set(owned) if rar.get(b) in (None, 'tokenunit', 'special') and b not in listed}
+
+
+def inscryption_offered():
+    """names of the wiki's Inscryption cards with an offer category (ChoiceNode, TraderOffer, GBCPack, Part3Random, AscensionUnlock, Rare)"""
+    import json, re
+    out = set()
+    for f in ('inscryption_wiki_cards.jsonl', 'inscryption_wiki_cards_more.jsonl'):
+        for line in open(os.path.join(HERE, '..', 'sources', f), encoding='utf-8'):
+            d = json.loads(line)
+            if re.search(r'ChoiceNode|TraderOffer|GBCPack|Part3Random|AscensionUnlock|Rare card', d['b']): out.add(d['title'].lower())
+    return out
+
+
 def build(c, L, game):
     t = time.time()
     ids = [i for (i,) in c.execute(OWNED, (game,))]; owned = set(ids)
     names = {i: n for i, n in c.execute('select id, name from card where game=?', (game,))}
     print(game, 'sample:', ', '.join(names[i] for i in random.Random(1).sample(ids, min(10, len(ids)))))
-    nodes, lines = network.network(c, game, ids)
+    only = only_made(c, game, owned)  # as in a deck: a card only other cards make is "made" (Wraithling, Chime, a level-up form)
+    nodes, lines = network.network(c, game, [i for i in ids if i not in only])
     phr = {(k, x): i for i, k, x in L.execute('select id, kind, text from phrase')}
     L.execute('delete from link where game=?', (game,)); pairs = rows = 0
     for (a, b), ls in lines.items():
@@ -67,4 +97,4 @@ def main():
     print(f'links.sqlite: {os.path.getsize(os.path.join(HERE, "links.sqlite")) / 1e6:.1f} MB')
 
 
-main()
+if __name__ == '__main__': main()

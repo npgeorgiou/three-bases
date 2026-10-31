@@ -73,10 +73,17 @@ Report: the numbers.
    (b) "draws a card of kind X" is shared among the X cards of the list, so phrases match but weights do not;
    (c) Into the Breach "carries" lines come from the deck's order (a mech, then what it carries) and are not card links:
    the table has none. Every other difference is a bug: find its cause.
-2. **links_audit.py <game>** (write it like deck_audit.py, both card texts beside each line): the 20 cards with the most
-   partners (many partners usually means a rule that fires for every card: START_DATABASE.md L1, L2), 5 random lines of
-   each of the 20 most used phrases, 30 random lines, and 20 cards with no partner (should one have a line?). Read each
-   against both texts.
+2. **links_audit.py <game>** (Kaptain 31 Oct 2026; write it like deck_audit.py, both card texts beside each line):
+   a) the 20 cards with the most partners (many partners usually means a rule that fires for every card: START_DATABASE.md
+      L1, L2);
+   b) the 20 cards with the least partners, also compared with 15 random cards on the deck, to see if links should be
+      existing and are missed;
+   c) 5 random lines of each of the 20 most used phrases;
+   d) 30 random lines, to find wrong links;
+   e) the 20 cards with no partner, compared with 15 random cards on the deck, to see if links should be existing and are
+      missed;
+   f) for decks that have special cards like Champion, Heroes, Legends, etc., check all their links;
+   g) don't re-check links that are checked by previous steps.
 3. **Zero checks** (a query each, must give 0): lines between two cards that cannot share a deck; lines with an end that
    is not a card a player owns.
 4. Every wrong line: name the cause in one sentence (the thinking, not the card), fix it in network.py for every game,
