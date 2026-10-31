@@ -13,7 +13,7 @@ n11	runeterra	Bard Norra	Norra (level 2)	Mysterious Portal	line		Kaptain: Norra 
 n12	runeterra	Darius Gnar	*	Darius	line		Kaptain: Nexus damage levels Darius
 n13	runeterra	Ashe LeBlanc	*	LeBlanc	line		Kaptain: damage you deal levels LeBlanc
 n14	runeterra	Ashe LeBlanc	*	LeBlanc (level 2)	line		Kaptain: LeBlanc 2 acts on damage you deal
-n15	runeterra	Ashe LeBlanc	Ashe	LeBlanc	none		Kaptain 31 Oct 2026: "we know units can attack": damage dealt by fighting levels no champion (Poppy, Zed); was a line (Ashe's damage for LeBlanc)
+n15	runeterra	Ashe LeBlanc	Ashe	LeBlanc	none		Kaptain: what every card can do makes no line; Ashe's normal attack damage is no help to LeBlanc
 n16	runeterra	Ashe LeBlanc	*	Bloody Business	line		Kaptain: Reputation needs allies striking for 5+
 n17	stormbound	Royal Reactant	Doctor Mia	Emerald Towers	line		Kaptain: Doctor Mia triggers structures
 n18	stormbound	Royal Reactant	Emerald Towers	Fortification Tonic	line		Kaptain: Fortification Tonic needs a structure
@@ -51,7 +51,7 @@ n49	runeterra	Janna Nilah	Windborne Mariner	Janna	line		Claude, from Janna's tex
 n50	runeterra	Janna Nilah	Ruined Rex	Janna	none		Claude, from Janna's text: Cannon Barrage played by Ruined Rex is not cost reduced
 n51	monster_train	Imp build (Shardtail Queen)	Imp-in-a-Box	Shardtail Queen	line		Kaptain: cards made by description ("2 random Imps") are Imps
 n52	runeterra	Ping City	Make it Rain	Gangplank	line		Kaptain 29 Oct 2026: anything that damages the enemy Nexus levels Gangplank (Make it Rain: "or the enemy Nexus")
-n53	runeterra	Ping City	Jagged Butcher	Gangplank	none		Kaptain 31 Oct 2026: "we know units can attack": attacking by the rules levels no champion (Poppy, Zed); was a line
+n53	runeterra	Ping City	Jagged Butcher	Gangplank	none		Kaptain: what every card can do makes no line; a unit attacking normally does not level Gangplank
 n54	runeterra	Ping City	Powder Keg	Gangplank	none	by fighting	Claude, from the game rule: an Immobile unit never attacks
 n55	runeterra	Ashe LeBlanc	Incisive Tactician	Yadulski Snowdog	line		Kaptain: Rally makes my units attack again, so their Attack effects happen again
 n56	runeterra	Braum Zoe	Spirits Unleashed	Braum	none	rules:	Kaptain: Spirits Unleashed gives allies +1|+1, it does not change how they work

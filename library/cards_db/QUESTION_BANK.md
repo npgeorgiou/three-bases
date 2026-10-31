@@ -29,6 +29,27 @@ faction-design columns, Felix Moll's set-up and pay-off archetypes (Game Develop
   copy[source=enemy, on=unit]; copy[source=enemy, on=spell]; play enemy cards. Links: copies -> my cards that count
   played cards, generated cards or other factions' cards (variety_payoff). !Cards that need my own types (tribal).
 
+- K6 Protect units while they stay back and grow stronger. Parts: permanent_growth; upkeep or turn_start growth;
+  protection[mine]; taunt; ranged or rows (units that act from the back); cant_attack[mine] or no attack needed.
+  Links: protection -> growers (time bought), what triggers growth -> growers. !growth that needs attacking.
+- K7 A deck that combines drawing with dealing damage when drawing. Parts: draw; on_draw (triggers when I draw);
+  direct_damage; damage. Links: draw -> on_draw cards with damage. Also cards that do both (both draw on_draw).
+- K8 Units that can't move but still control important points on the map, even points they don't touch. Parts:
+  cant_move[mine] or immobilize[mine] (my own units: a drawback); zone_control; ranged; aoe_damage or effects on
+  spaces at a distance (position filters); terrain. Links: those units -> zone needs. Positional games only (Faeria,
+  Duelyst, Stormbound, Into the Breach); say which.
+- K9 A faction of spells, and units that are built from parts over a few turns. Parts: spells_played_condition,
+  spell_power; merge_attach (parts joined into a unit: Duelyst MECHAZ0R); countdown or delayed (takes turns);
+  generate_cards (the parts). Links: parts -> the built unit; spells -> parts. Expect few games: say where it is new.
+- K10 A faction that attacks again and again. Parts: multi_attack; extra_turn (Rally, attack token); attack_now (a free attack; LINKS_PLAN step 4 splits it); on_attack triggers; untap. Links: extra attacks -> on_attack cards (each attack sets them off again).
+  !"the first time each round" limits.
+- K11 A deck that thrives on cards that create other cards in my hand. Parts: generate_cards[mine, zone=hand]; count of
+  created or played created cards (Viktor); hand_size; cost_reduction on created cards. Links: makers -> counters.
+  Remember: making cards is no fuel for "discard" or "play any card" needs (START_DATABASE.md L1).
+- K12 A faction that creates spells on the fly by combining cards. Parts: generate_cards[on=spell]; merge_attach;
+  transform; copy[on=spell]; combo_sequence. Links: what is combined -> the spell made. Expect almost no game does it
+  as written: say the closest ones and that it is new ground.
+
 ## A. Archetype factions ("How to make a <archetype> faction?"; parts from realworld.ARCHETYPE plus these)
 - A1 swarm: summon[amount>=2]; generate_cards[on=unit]; board_presence cond; aoe buffs (stat_gain[pick=all]). Links: makers ->
   count_payoff. !board_limit.

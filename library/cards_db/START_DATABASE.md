@@ -29,9 +29,10 @@ questions first and wait. Never invent rules or mechanics; mark suggestions as y
 - L1 A line comes from what a card's TEXT does, never from what every card does or is. Every card can be played, drawn,
   discarded, can attack and has Life: none of these makes a line (Chump Whump -> Get Excited!: no; any card can be
   discarded. "Whenever you play a card", After Image: no line from every card).
-- L2 The game's rules are no combo, also not for a level-up ("we know units can attack": Living Shadow -> Zed, any unit
-  -> Poppy: no). Only a card whose own text adds an attack (Rally, a free attack), a strike now, a second strike, or a
-  keyword that does the need (Overwhelm and Elusive reach the Nexus, deathtouch kills) makes the line.
+- L2 The game's rules are no combo, also not for a level-up. Kaptain: what every card can do counts for nothing
+  (Living Shadow -> Zed, any unit -> Poppy, Jagged Butcher -> Gangplank, Ashe -> LeBlanc: no line). Only a card whose
+  own text adds an attack (Rally, a free attack), a strike now, a second strike, or a keyword that does the need
+  (Overwhelm and Elusive reach the Nexus, deathtouch kills) makes the line.
 - L3 A makes B, B acts on C: A gets NO line to C (Targonian Tellstones makes Blessing of Targon; only the Blessing helps
   Braum). A's own act of making does link to a card that waits for that making (Zed summons Ephemeral units: Moonlit
   Glenkeeper). Only a planted card that goes off by itself when drawn counts as the planter's act (Chimes for Bard).
@@ -82,33 +83,46 @@ questions first and wait. Never invent rules or mechanics; mark suggestions as y
 | Each game's rules, terms, real-world cases | library/games/<game>.md |
 
 ## Every check and test, and when it runs
-**Inside `run.py <game>` (the build; it stops at the first failure):**
+Scripts cost no tokens: running them is free. What costs tokens is reading their output and the card texts; readers
+(background agents that write the records of a new game) cost the most. Each process below says what to run and what to read.
+
+**A. Rebuild (`run.py <game>`, or `check_all.py <game>` for all games): a script, run after any change to records,
+vocab or shared code.** It stops at the first failure:
 1. normalize.py: one form for equal meanings, on every record.
-2. check.py: every record has allowed shapes and values (0 problems needed).
-3. load.py: builds cards.sqlite for all games (flat.py and refs.py make the query layer).
-4. cases/run.py: all case tests of the game must pass (below).
-5. pattern_check.py (word check): wording in a text that its record must show; open flags are listed.
-6. audit_text.py: words in a text its rows do not show ("or the enemy Nexus"); each is fixed or explained.
+2. check.py: every record uses allowed shapes and values (0 problems needed).
+3. load.py: builds cards.sqlite for all 8 games (with flat.py, refs.py: the tables questions use).
+4. cases/run.py: every test of the game must pass. The tests (`cases/`):
+   mechanics.tsv (a mechanic's cards, found by regex in the texts, must be found by the query, 95%), combos.tsv (a guide's
+   combo: the first card must set off the second), regions.tsv (a faction must show its known mechanic), decks.tsv (a
+   guide deck's explanation must say the guide's phrases), network.tsv (a deck line that must exist, or must not: 294 rows).
+5. pattern_check.py: words in a text that its record must show (open flags listed).
+6. audit_text.py: words in a text that its rows miss ("or the enemy Nexus"); each fixed or explained.
 7. audit_links.py: links that cannot exist (a need nothing makes, a keyword without concept); each fixed or explained.
-8. status.py, examples.py: STATUS.md and QUERIES.md.
-9. review_check.py: each family in deck_read_<game>.md has its root cause, same errors elsewhere and fix.
-**Case tests (`cases/`, run by `cases/run.py <game>`, and by run.py):**
-- mechanics.tsv: a mechanic's cards found from the texts must be found by the query (95%).
-- combos.tsv: a combo from a guide: the first card must set off the second (connections.py).
-- regions.tsv: a faction must show its known mechanic.
-- decks.tsv: a guide deck's explanation (`ask.py <game> analyze`) must say the guide's phrases.
-- network.tsv: a deck line that must be there (`line`, optionally with words its reason holds) or must not (`none`).
-  294 rows, all games. This is where every fixed line error goes.
-**Checks you run yourself:**
-- check_all.py: one rebuild, then every game's cases and link audit (after any change).
-- compare.py: first and second reading of a 10% sample (after the readers).
-- dump_lines.py: every deck line of every game; `--diff before after` shows what a change did.
-- deck_audit.py <game>: per deck the most and least linked cards, random cards and random lines with both texts; read it
-  all, and also read every level-up line of every deck (Runeterra champions) against both texts.
-- realworld.py: what players and guides say (the factions' known mechanics, known combos) against the database.
-- design_questions.py: Kaptain's design questions asked of every game (library/design_questions/); read the answers.
-- network_page.py: the deck pages; load them in the browser (Playwright) after a change.
-The game itself (not the database) has its own: tools/build.py, tools/simtest.js, tools/smoke.js (CLAUDE.md).
+8. status.py, examples.py: write STATUS.md and QUERIES.md.
+9. review_check.py: each mistake family in deck_read_<game>.md has its cause, the same error elsewhere, and the fix.
+Read: any FAILED line, and the audit lists. After a change to network.py only: `check_all.py --no-load` (steps 4 and 7).
+
+**B. Importing a game (PROCESS.md, steps 0-5): Claude's work plus scripts.** In order:
+1. Research the game and its decks; write its rules into `library/games/<game>.md` with sources (Claude reads pages).
+2. Cards and keywords from the game's data (`supplement_<game>.py`, a script), reader input (`build_input.py`).
+3. Readers write the records (agents, the costly part), then a second reading of 10% (`compare.py` lists differences;
+   Claude judges each).
+4. Process A, until it passes; proposals, word flags, stub names decided by Claude.
+5. Deck networks: decks into decks.tsv; Claude reads at least 10 decks card by card; `deck_audit.py <game>` (process C).
+6. `realworld.py <game>` (what guides say about the game's factions and combos; read every miss) and
+   `design_questions.py` (read the new game's answers).
+7. Done when PROCESS.md step 5 holds; Kaptain checks the deck pages (`network_page.py` makes network.html).
+
+**C. Checking lines (after any change to lines, and whenever Kaptain says check):** scripts plus Claude reading.
+1. Before the change: `dump_lines.py /tmp/before.tsv`. After: `dump_lines.py /tmp/after.tsv` and
+   `dump_lines.py --diff /tmp/before.tsv /tmp/after.tsv`. Read every gone and new reason group, in every game.
+2. `deck_audit.py <game>` for each game whose lines changed: per deck the 3 most and 3 least linked cards, 10 random
+   cards and 10 random lines with both texts. Read all of it, plus every level-up line of every deck against both texts.
+3. Every error: fix by cause for every game, add network.tsv cases, rebuild (A), repeat 1-2.
+4. `realworld.py` for all games: no case that held may break.
+5. After a change to the deck pages: `network_page.py`, then load network.html in the browser (Playwright) with no errors.
+
+**The game itself** (not the database) has its own: tools/build.py, tools/simtest.js, tools/smoke.js (CLAUDE.md).
 
 ## State (31 Oct 2026, v65)
 - All 8 games imported. Kaptain approved Runeterra and Into the Breach; Slay the Spire done; Inscryption reviewed;
@@ -121,6 +135,7 @@ The game itself (not the database) has its own: tools/build.py, tools/simtest.js
 
 ## Open work, in Kaptain's order
 1. The line table for design questions: LINKS_PLAN.md, step by step, each step reported to Kaptain and approved.
+   Kaptain's first message to that chat: "Read library/cards_db/START_DATABASE.md and LINKS_PLAN.md and do step 1."
 
 ## When you finish
 Commit and push every finished step. Update "State" and "Open work" above (keep them short: no history; git log has it).
