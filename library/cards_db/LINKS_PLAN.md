@@ -104,6 +104,16 @@ Report: the numbers.
    - NOT done: Inscryption round 2 (rerun links_audit and deck_audit, read all, until a round finds nothing); the other 7
      games (links_audit + deck_audit for every deck): Stormbound, Monster Train, Into the Breach, Slay the Spire, Faeria,
      Duelyst, Runeterra. Next chat: start with Inscryption round 2, then one game at a time.
+   Pace (Kaptain 31 Oct 2026: the last chat spent 30 minutes and checked only Inscryption; most time went to rebuilds):
+   - Rebuild only the game being checked: `links.py <game>` (seconds; Runeterra alone takes about 9 minutes, so rebuild it only
+     when Runeterra is the game). `dump_lines.py --table` before and after, `--diff` on that game's rows.
+   - Read the whole game's output first and write every error down; then fix all causes, then one rebuild. Not a rebuild per fix.
+   - After a fix: `cases/run.py <game>` for the games the fix touches; `check_all.py --no-load` (about 10 minutes) once, at
+     the end of a game, not after every fix.
+   - Order: Inscryption round 2, Into the Breach, Monster Train, Stormbound, Slay the Spire, Faeria, Duelyst, Runeterra last.
+     Commit and push after each game, so a chat that ends loses nothing.
+   - Rule 6 still holds: all output of links_audit and deck_audit is read, nothing sampled.
+   - Agents (one game each) only if Kaptain says yes; ask him first.
    How to do the a-g check (Kaptain: "this check pretty much checks every link in the many decks we have"):
    - Every game, one at a time: `links_audit.py <game> > /tmp/a.txt`, plus `deck_audit.py <game>` for every deck of the game.
      Read ALL of both outputs, in parts of about 150 lines, every line against both card texts as a player. Big output is
