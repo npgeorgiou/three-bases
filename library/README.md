@@ -6,7 +6,7 @@ the cards' own texts, written as rows (what each card does, when, to whom), the 
 ## What is here
 | Path | What it is |
 |---|---|
-| `cards_db/` | The card database: every card of 8 games as rows, the networks of their decks, and the questions (`ask.py`). Start with `cards_db/HANDOFF.md`. |
+| `cards_db/` | The card database: every card of 8 games as rows, the networks of their decks, and the questions (`ask.py`). Start with `cards_db/START_DATABASE.md` (changing it) or `cards_db/START_QUESTIONS.md` (asking it). |
 | `three-bases-library.sqlite` | The earlier library: card texts of 21 games (`entities`, the card database reads them) and their tags from text patterns (`entity_concepts`, `entity_links`, `trigger_effect`). The tags are leads for an import (`audit_links.py` 10), not answers. |
 | `realworld/` | How the real-world cases are made (RESEARCH.md), the archetypes, and known combos from other sources. The cases themselves are in `games/<game>.md`; `cards_db/realworld.py` checks them. |
 | `design_questions/` | Kaptain's design questions asked of every game, with their answers (`cards_db/design_questions.py`). |
@@ -41,7 +41,9 @@ game has 10 or fewer (`--texts` for all). Each game counts the same in rankings,
 | Which values can I ask for? | `list concepts`, `list happenings` |
 
 ## Known gaps
-- Landmarks (Runeterra buildings) still sit under `terrain`, with map spaces; they need a concept of their own (Kaptain's call).
+- `kit` answers are weak (a faction's most-tagged cards, broad concepts drown narrow ones); the fix is planned in
+  `cards_db/LINKS_PLAN.md`.
+- Concepts do not say whose card or which cards an effect aims at (my cost rise vs the enemy's; copying my card vs an
+  enemy's): LINKS_PLAN.md step 4.
 - Faction answers work only where the game has factions (Into the Breach squads, Slay the Spire characters count as factions).
-- Some keyword concepts are wrong in the answers: Taunt and Provoke count as stopping enemies, Inscryption's Waterborne too.
-- Real-world cases: 191 of 275 hold (`realworld.py`); every miss is to be traced to data, question or case.
+- Real-world cases: 238 of 261 hold (`cards_db/realworld.py`).

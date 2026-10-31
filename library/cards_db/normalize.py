@@ -1,5 +1,5 @@
 """Puts records into one canonical form where readers wrote the same meaning in different ways (found by comparing first
-and second readings). Safe to run any number of times. Each rule is listed in CHANGES.md.
+and second readings). Safe to run any number of times. Each rule is described where it is written below.
   N1 create / summon of a named card: the receiving player in "on" is dropped (the card and zone say it all).
   N2 a keyword used on a target is keyword_action when the keyword's own record is an action (an "activated" ability),
      and give_keyword when it is a status the target then has (Frostbite, Stun-like keywords given "this round").

@@ -1,18 +1,18 @@
 # Question bank: design questions the card connections must answer (31 Oct 2026, Claude, from Kaptain's examples)
 
-How to read: each question has its parts as roles (LINKS_PLAN.md section 6): `concept[facet=value, ...]`. Facets: whose
-(mine, enemy), on (unit, spell, card, player, position), zone, pick, cost_band (cheap, mid, expensive), lasts, amount, when
-(trigger concept), cond (condition concept). `A -> B` means "the answer must show lines from A to B". `!X` means a tension
-to look for (X hurts the plan). Sources of the questions: Kaptain's five (K), the 20 archetypes of
-library/realworld/archetypes.txt (A), mechanic pairs and trades from the concept tree (M, T), and published design
-practice: Mark Rosewater's mechanical colour pie (each colour's share of removal, draw, selection, recursion, tutors, mana,
-copying, stealing) and faction-design columns (distinct identity, overlap, pairing), Félix Moll's set-up and pay-off
-archetypes (Game Developer) (C, I, V). Every answer has the shape of LINKS_PLAN.md section 7.
+How to read: each question lists its parts as concepts (library/concept_tree.txt). A bracket says which direction or
+target the part needs: `[mine]`, `[enemy]` (whose cards), `[on=unit|spell|card]`, `[cost_band=expensive|cheap]`,
+`[zone=hand|deck|deck_top]`, `[lasts=permanent|now]`, `[amount=2]`. Concepts do not hold these yet: read the cards' rows
+or texts to tell, until LINKS_PLAN.md step 4 adds the missing concepts. `A -> B` means the answer must show lines from A
+to B; `!X` is something to look for that works against the plan. Answers take the shape of START_QUESTIONS.md "What
+Kaptain wants". Sources: Kaptain's five questions (K), the 20 archetypes of library/realworld/archetypes.txt (A), mechanic
+pairs and trades from the concept tree (M, T), and published design practice: Wizards' mechanical colour pie and
+faction-design columns, Felix Moll's set-up and pay-off archetypes (Game Developer) (C, I, V).
 
 ## K. Kaptain's test questions (answer these first, after every step)
 - K1 Speed up the summoning of big costly units, and protect the board until they are summoned.
-  Parts: cost_reduction[whose=mine, on=unit, cost_band=expensive]; free_play[on=unit, cost_band=expensive, zone=hand|deck];
-  cost_set[on=unit, cost_band=expensive]; protection[whose=mine]; taunt; heal[on=player]; removal[cost_band=cheap].
+  Parts: cost_reduction[mine, on=unit, cost_band=expensive]; free_play[on=unit, cost_band=expensive, zone=hand|deck];
+  cost_set[on=unit, cost_band=expensive]; protection[mine]; taunt; heal[on=player]; removal[cost_band=cheap].
   Links: protection -> high_cost[on=unit] (time bought); each speed-up part -> high_cost units. !board_presence needs
   (a discount per ally vs few allies).
 - K2 The same, by earning resources faster. Parts: resource_gain[lasts=permanent|growing]; base_resource_gain;
@@ -45,7 +45,7 @@ archetypes (Game Developer) (C, I, V). Every answer has the shape of LINKS_PLAN.
 - A10 spellslinger: on_spell; spells_played_condition; spell_power; cost_reduction[on=spell]; generate_cards[on=spell].
 - A11 ramp: base_resource_gain; resource_gain; cost_reduction; high_cost. Links: ramp -> high_cost.
 - A12 positional: movement; forced_movement; positional cond; adjacency; terrain. Links: forced_movement -> hazards/terrain.
-- A13 disruption: hand_disruption; discard[whose=enemy]; cost_increase; steal; mill. Links: what counts enemy losses.
+- A13 disruption: hand_disruption; discard[enemy]; cost_increase; steal; mill. Links: what counts enemy losses.
 - A14 trickery: stealth; trap_secret; information; reactions. Links: trap makers -> trap payoffs (trap_activated).
 - A15 chaos: random_effect; random_target; generate_cards[random]; polymorph. Links: random makers -> variety_payoff.
 - A16 card_advantage: draw; tutor; selection; generate_cards; hand_size cond. Links: draw -> on_draw, hand_size needs.
@@ -86,7 +86,7 @@ S6 What gives units haste or attack_now, and what do those link to? S7 What make
 (disable, bounce_enemy, cost_increase)? S8 Which factions have a cheap removal and which have none (gaps)?
 
 ## C. Answers and counters ("What beats X?")
-For each plan X: the enemy-side roles that cancel it, from lines whose A acts on enemy rows that are X's ends: C1 a
+For each plan X: the enemy-side concepts that cancel it, from lines whose first card acts on the plan's cards: C1 a
 fortress (taunt, protection): piercing, silence, steal, transform, aoe; C2 a swarm: aoe_damage, board_wipe, board_limit;
 C3 big units: destroy, polymorph, deathtouch, steal, attack_lock; C4 spells: counter_spell, cost_increase on spells; C5
 graveyard: banish, recycle denial; C6 stealth: reveal, aoe, random_target; C7 healing: anti-heal, lifesteal denial; C8
@@ -127,17 +127,17 @@ work in two-faction decks only (Runeterra regions, Monster Train clans): the lin
 how many cards would a faction of plan X need to match the real games' density?
 
 ## N. New ground
-N1 Which role pairs have no line in any game (K4's second half)? N2 Which concepts appear in one game only (a game's
+N1 Which concept pairs have no line in any game (K4's second half)? N2 Which concepts appear in one game only (a game's
 signature)? N3 Which trades (T) does no game use? N4 Which archetype pairs does no faction mix? N5 Which counters (C)
 have no counter in some game (an unanswered plan)? N6 For each of Three Bases' factions (summary/11-faction-*.txt), which
 of its mechanics have the fewest partners in real games (risk) and which real links it lacks (ideas).
 
 ## I. Faction identity (from faction-design practice)
-I1 Per game, what makes each faction distinct: its roles with the highest share vs the game (weighted, narrow roles
+I1 Per game, what makes each faction distinct: its concepts with the highest share vs the game (weighted, narrow concepts
 count). I2 Where do factions overlap, and is the overlap shared parts or shared plans? I3 Which faction pairs combine best
 (Runeterra region pairs, Monster Train clan pairs): the lines between two factions. I4 Does each faction have its own
 removal, draw and finisher, and of what kind (the colour-pie question: who gets what kind of removal)? I5 Which
-weaknesses does each faction have (roles it lacks that all others have)? I6 How do games give each faction its own way to
+weaknesses does each faction have (concepts it lacks that all others have)? I6 How do games give each faction its own way to
 pay (a cost or drawback it alone uses)?
 
 ## Kept from library/design_questions (same questions, now answered by plan)

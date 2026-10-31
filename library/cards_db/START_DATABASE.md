@@ -1,0 +1,126 @@
+# Start here: chats that import a game or change the card database
+
+Read this file whole. Then read only what your task needs (the map below). Commands run from `library/cards_db/`.
+Clone with the library: CLAUDE.md "Start of a chat", then `git sparse-checkout disable` (the library is ~120 MB).
+
+## What the database is
+Every card of 8 games (Runeterra, Stormbound, Monster Train, Duelyst, Faeria, Inscryption, Into the Breach, Slay the
+Spire) described as rows: when it acts (event), if what (conditions), what it does (effects). Every value is from
+`vocab.tsv`; equal mechanics of different games share one concept (`library/concept_tree.txt`). From the rows, network.py
+draws **lines** between two cards of one game ("A makes B cheaper", "A sets off B"). Kaptain uses the lines and the
+concepts to design factions for Three Bases. Wrong lines give wrong design answers, so lines must be right.
+
+## How to talk to Kaptain
+Short plain sentences, his words, a card example for every point, one question at a time (last, marked). Answer his
+questions first and wait. Never invent rules or mechanics; mark suggestions as yours.
+
+## The five rules most often broken (each cost Kaptain hours)
+1. **Fix the cause, never the example.** Every error Kaptain finds is one sample of a family. Write the wrong thinking
+   in one sentence, find every place it lives (all games, all rules, the readings, the questions), fix it once.
+2. **Every fix gets test cases** (Kaptain, 31 Oct 2026): one `cases/network.tsv` row per point Kaptain made and per
+   similar error you found, `line` or `none`, only for lines you checked against both card texts. A fix without cases
+   comes back broken.
+3. **Dump all lines before and after** (`dump_lines.py`), read EVERY gone and new reason group in every game.
+4. **One rebuild per round**: `check_all.py <game>` loads all games once (about 25 minutes). Never `run.py` once per game.
+   After a change to network.py only: `check_all.py --no-load` (minutes).
+5. **Read cards like a player**: what does it need, who gives it that, what does it make, what does that card do.
+
+## Rules every line must keep (network.py; each is a rule for every game)
+- L1 A line comes from what a card's TEXT does, never from what every card does or is. Every card can be played, drawn,
+  discarded, can attack and has Life: none of these makes a line (Chump Whump -> Get Excited!: no; any card can be
+  discarded. "Whenever you play a card", After Image: no line from every card).
+- L2 The game's rules are no combo, also not for a level-up ("we know units can attack": Living Shadow -> Zed, any unit
+  -> Poppy: no). Only a card whose own text adds an attack (Rally, a free attack), a strike now, a second strike, or a
+  keyword that does the need (Overwhelm and Elusive reach the Nexus, deathtouch kills) makes the line.
+- L3 A makes B, B acts on C: A gets NO line to C (Targonian Tellstones makes Blessing of Targon; only the Blessing helps
+  Braum). A's own act of making does link to a card that waits for that making (Zed summons Ephemeral units: Moonlit
+  Glenkeeper). Only a planted card that goes off by itself when drawn counts as the planter's act (Chimes for Bard).
+- L4 A help must do the very thing needed. Power gets no unit past blockers (For Demacia! does not help Zed hit the
+  Nexus) and adds no level-up damage (Tybaulk does not level Gwen). Health and protection do help "survive damage".
+  "Another attack" is only Rally or a free attack.
+- L5 Limits and drawbacks are no needs ("the first 3 times you draw", Janna; "lose 1 energy when drawn", Void).
+- L6 A helper points at what it helps and never "needs" it (Strength -> Attacks; Focus -> Orbs).
+- L7 Read who does it. "I've attacked" = the card itself; "I've seen you" = the player; "your General" = the General.
+- L8 Costs as paid: "X" and "spend all your mana" are variable (card.cost_x). A made or summoned card has its own kind
+  (Tail of the Dragon is a unit, not a landmark).
+- L9 My effects feed my needs; an effect on enemies feeds needs about enemies. Lines link only cards a player can own.
+- L10 Line words say what a player says: triggers (a reaction), enables (a count or a thing that must be there), makes
+  stronger / cheaper, helps it level up, puts it into play, can aim at it. A cost that drops for each X: what does X
+  "makes it cheaper" (Gambling Chip -> Eviscerate), never "enables". One reason is said once, by its strongest kind.
+- L11 A plain hit on one target (Strike, Mystic Shot) feeds no "when an enemy dies"; poison, hits on all, kill effects and
+  damage boosts do.
+- L12 Say who gets it: where the player is no card (Slay the Spire), a status on the player is "gives you Strength".
+- L13 Per game settings: network.EXPENSIVE (the cost from which a card is expensive); a deck holds what the game gives
+  every deck of its character (Slay the Spire's starting relic) unless a card replaces it; read the game's own limits of
+  a mechanic (Dexterity adds only to Block a card gives when played).
+
+## Rules for the data (readings)
+- The card text is the truth; no rule from memory. A definition no source has is asked from Kaptain.
+- The records in `read/<game>/` are the source; everything else is rebuilt from them. Fix readings by a rule script over
+  the texts (`fixes/<game>/vNN.py`, safe to run twice), never card by card, never by a re-read unless no rule can.
+- Every value is a `vocab.tsv` row. Reuse before adding; one meaning, one form (normalize.py). A new value gets a BRIEF.md
+  line if readers need it. Never change a concept without Kaptain's OK.
+- A game's own rules (how units fight, move, pay) are records in `read/<game>/game_rules.jsonl`, taken from the game's
+  own sources (cited in `library/games/<game>.md`), never from memory.
+- Import pitfalls seen before: the library's entries were not the game's cards (compare by code and text); one wiki page
+  held several cards; one name, two cards (a champion and its level-up form: take cards by code); keywords hidden in
+  prose; readers using another game's words; guide decks that are only core cards; full decks that exist only as deck
+  codes. Look in the repo first (PROCESS.md step 0.3 lists every game's data).
+
+## Map: where things are
+| What | File |
+|---|---|
+| Steps of an import, in order | PROCESS.md (sections 0-5) |
+| Reading rules and record shapes (what readers follow) | BRIEF.md, READER_PROMPT.md |
+| Values and concepts | vocab.tsv, library/concept_tree.txt |
+| Build: rows -> cards.sqlite | run.py (one game's full build), load.py, flat.py, refs.py |
+| Lines between cards | network.py (rules: lines_of, aimed, boost_lines with HELPS, the *_lines functions) |
+| Decks | decks.tsv, cases/decks.tsv; pages network.html (network_page.py) |
+| Per-game review records (needed by the build) | deck_read_<game>.md |
+| Questions | ask.py, mechanics.py, connections.py, deck_analysis.py; START_QUESTIONS.md |
+| The planned line table (next work) | LINKS_PLAN.md, QUESTION_BANK.md |
+| Each game's rules, terms, real-world cases | library/games/<game>.md |
+
+## Every check and test, and when it runs
+**Inside `run.py <game>` (the build; it stops at the first failure):**
+1. normalize.py: one form for equal meanings, on every record.
+2. check.py: every record has allowed shapes and values (0 problems needed).
+3. load.py: builds cards.sqlite for all games (flat.py and refs.py make the query layer).
+4. cases/run.py: all case tests of the game must pass (below).
+5. pattern_check.py (word check): wording in a text that its record must show; open flags are listed.
+6. audit_text.py: words in a text its rows do not show ("or the enemy Nexus"); each is fixed or explained.
+7. audit_links.py: links that cannot exist (a need nothing makes, a keyword without concept); each fixed or explained.
+8. status.py, examples.py: STATUS.md and QUERIES.md.
+9. review_check.py: each family in deck_read_<game>.md has its root cause, same errors elsewhere and fix.
+**Case tests (`cases/`, run by `cases/run.py <game>`, and by run.py):**
+- mechanics.tsv: a mechanic's cards found from the texts must be found by the query (95%).
+- combos.tsv: a combo from a guide: the first card must set off the second (connections.py).
+- regions.tsv: a faction must show its known mechanic.
+- decks.tsv: a guide deck's explanation (`ask.py <game> analyze`) must say the guide's phrases.
+- network.tsv: a deck line that must be there (`line`, optionally with words its reason holds) or must not (`none`).
+  294 rows, all games. This is where every fixed line error goes.
+**Checks you run yourself:**
+- check_all.py: one rebuild, then every game's cases and link audit (after any change).
+- compare.py: first and second reading of a 10% sample (after the readers).
+- dump_lines.py: every deck line of every game; `--diff before after` shows what a change did.
+- deck_audit.py <game>: per deck the most and least linked cards, random cards and random lines with both texts; read it
+  all, and also read every level-up line of every deck (Runeterra champions) against both texts.
+- realworld.py: what players and guides say (the factions' known mechanics, known combos) against the database.
+- design_questions.py: Kaptain's design questions asked of every game (library/design_questions/); read the answers.
+- network_page.py: the deck pages; load them in the browser (Playwright) after a change.
+The game itself (not the database) has its own: tools/build.py, tools/simtest.js, tools/smoke.js (CLAUDE.md).
+
+## State (31 Oct 2026, v65)
+- All 8 games imported. Kaptain approved Runeterra and Into the Breach; Slay the Spire done; Inscryption reviewed;
+  Stormbound, Monster Train, Faeria, Duelyst wait for his check of their deck networks.
+- Cases: all pass except Stormbound csb09-csb13 (poisoned-unit combos, an old cause not yet traced). Runeterra n56 and Slay
+  the Spire nst36 are must-not cases whose reason no deck says any more: rewrite them.
+- Real-world cases: 238 of 261 hold.
+- Known open: a card placed by its text near the leader (Conscript) draws no line to a card acting near the leader
+  (Fealty); Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain).
+
+## Open work, in Kaptain's order
+1. The line table for design questions: LINKS_PLAN.md, step by step, each step reported to Kaptain and approved.
+
+## When you finish
+Commit and push every finished step. Update "State" and "Open work" above (keep them short: no history; git log has it).

@@ -62,7 +62,7 @@ Builds: Frost Tank, Lightning Spam, Claw [1]; Focus stacking, Loop + Defragment,
 Known for: stances (Calm, Wrath, Divinity), stance dancing for burst, Mantra [2]; Retain, creating and upgrading cards, Scry [1].
 Builds: Retain, Creation, Stance Master, Scry [1]; stance burst, Mantra [2].
 
-## What the database must know (learned importing it, 30 Oct 2026; PROCESS_LESSONS "Importing Slay the Spire")
+## What the database must know (learned importing it, 30 Oct 2026)
 - The player is the only one of my side: statuses go on the player (Strength, Dexterity, Focus, Wrath, Calm, Divinity) or
   on enemies (Vulnerable, Weak, Poison, Lock-On). A card that gives a status does what the status does.
 - Strength: Attacks deal more. Dexterity: Block a card gives when played is bigger (not a Power's later Block, not

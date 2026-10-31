@@ -1,7 +1,7 @@
 # Process: describing a game's cards (the framework for every game)
 
 For the chat that imports a game. Runeterra, Stormbound and Monster Train went through every step; their files are the
-templates. Commands run from `library/cards_db/`. Files and tables: README.md.
+templates. Commands run from `library/cards_db/`. Read START_DATABASE.md first. Files and tables: README.md.
 
 The database is one place for all games: questions run across games (`ask.py all ...`), so everything stored must be
 generic. A game's own words live only in the card texts, its keyword entries and its types; what cards DO is said with
@@ -29,45 +29,13 @@ Kaptain checks one deck and finds errors in every round, because each fix covere
    answers to the questions Kaptain will ask, read like a designer). A thin or odd answer is an error to trace.
 7. **Report** each family: the cause, data or script, the fix, how many cards in which games, and what was not checked.
 
-**Two files.** This file: how to work, the steps, how to fix a review, how to check networks. PROCESS_LESSONS.md: what each
-import and each review by Kaptain taught (one section per game or review; every rule in it holds for every game). Read both
-before importing a game.
-
-## Why the first three games went wrong (read before importing a game; 29 Oct 2026)
-Kaptain checked a few decks four times and each time found missing and wrong links. The causes, and what now stops them:
-1. **The rows held only what card texts say, not the game's rules.** No Runeterra text says "a unit that attacks unblocked
-   hits the enemy Nexus", so no unit helped Gangplank, Darius or Gnar level up. Now each game has
-   `read/<game>/game_rules.jsonl` (step 0.10): what every unit does by the rules, written once from
-   `library/games/<game>.md`; refs.py gives those rows to every card of the category (origin game).
-2. **Claude patched the example, not the cause.** Each check added one special rule to the network code (power helps
-   damage, health helps survival ...) and the next missing case waited for Kaptain. Now what helps a need is one table
-   (network.py HELPS) and every fix is a rule over all cards of all games (fixes/<game>/vNN.py), never one card.
-3. **Readers dropped details a verb check cannot see**: a second target ("or the enemy Nexus"), Skills in "spells and
-   Skills", a counted card's quality ("cost reduced"), "double" written as +1, "everywhere", the damage of a strike put on
-   the striker, one happening written two ways (strikes_nexus with the player or the unit). BRIEF.md reading rules 26-32
-   now say each; `audit_text.py` (in run.py) compares every text with its rows and lists every card a rule finds.
-4. **Data the build had but did not read**: level-up forms keep power and health as "power|health" in stats, read by no
-   query until 29 Oct (246 Runeterra forms had no stats, so "an ally with 5+ Power" matched them all).
-5. **Lines were named in Claude's words.** "Changes how it works" was shown for Spirits Unleashed giving +1|+1. Line kinds
-   now say what a player says: does what it waits for, helps it level up, makes it stronger (stats, buffs, cheaper, more
-   damage), changes how it works (only real rule changes: Fast, can't block), is a card it needs, puts it into play.
-6. **The query layer dropped what the rows had.** The rows said "allied Pykes", "non-combat damage", "a card with
-   Nightfall", "Capture is used", but flat.py, refs.py or network.py did not carry or read that part, so the links were
-   wrong although the data was right. Now flat_when/flat_if/flat_ref keep who does it (actor_kind, actor_with), the
-   network checks it and the origin (combat) filter, label keywords a filter names ("Nightfall:") are the card's keywords
-   (load.py), and "used a keyword" matches by the keyword. Rule: a new field or filter in the rows is not done until the
-   query layer keeps it and the network reads it; network.PLAY_STATE lists the filters it ignores on purpose.
-7. **"Done" was said on counts.** Cases passing says nothing about the links nobody wrote a case for. Before showing a
-   network: run.py passes, audit_text.py and audit_links.py are explained, every guide deck's "lacks" list (network.measure)
-   is read card by card (PROCESS "Think like a player").
-
 ## How to work (read first; the cost of a game is set here)
 Import chats went wrong by going round in circles: fetching data the repo had, fixing one card at a time, rebuilding after
 every small edit, and turning a decision one way and later back. Work like this:
 1. Follow the steps below in order, once. Make the task list from them at the start and tick them off.
 2. Look before you make: the game's data (step 0.3), an existing value (vocab.tsv, search by meaning), an existing rule
-   (normalize.py N-rules, BRIEF.md), an earlier decision (CHANGES.md, verdicts.tsv). `grep` first, then write.
-3. A decision is written once and kept. Before changing a mapping, value or rule, grep CHANGES.md for it: if it was decided
+   (normalize.py N-rules, BRIEF.md), an earlier decision (vocab.tsv column added, verdicts.tsv, `git log -S <word>`). `grep` first, then write.
+3. A decision is written once and kept. Before changing a mapping, value or rule, look it up (vocab.tsv added column, `git log -S`): if it was decided
    (by Kaptain or an earlier chat), do not turn it back; if it truly looks wrong, ask Kaptain, giving the card that shows
    it. (Runeterra's Stun went disable -> attack_lock -> disable in two chats before Kaptain settled it.)
 4. Batch the work: collect all problems of one kind (all proposals, all flags, all failing cases, all wrong deck lines),
@@ -81,17 +49,17 @@ every small edit, and turning a decision one way and later back. Work like this:
    `analyze` on a guide deck and read them. A case count that passes says nothing about a link that should not exist.
 8. Shared code (connections.py, refs.py, flat.py, deck_analysis.py, normalize.py, load.py) serves every game: a change
    there gets a mechanics.tsv case with game `*`, and every game's cases must pass before it is pushed: run
-   `check_all.py <your game>` (ONE reload of every game, then every other game's cases; HANDOFF box). Never run
+   `check_all.py <your game>` (ONE reload of every game, then every other game's cases). Never run
    `run.py` for a game another chat is importing: it normalizes and rewrites that chat's records, flags and reports.
 
 ## Rules that are never broken
 - **A card is everything it makes** (summons, creates, shuffles in, transforms into, levels into), and a wrong judgment is
-  wrong thinking: fix the thinking in every place it lives (HANDOFF box), never only the example.
+  wrong thinking: fix the thinking in every place it lives, never only the example.
 1. The card text is the truth. A record says only what the text states. No rule from memory: a definition that neither
    the library nor the game's own data has is asked from Kaptain (Runeterra: Deep, Plant).
 2. The records in `read/<game>/` are the source. Everything else is rebuilt from them by `run.py <game>`.
-3. Every value is a row of `vocab.tsv`. A new value is a vocab row, a BRIEF.md line if readers need it, and a CHANGES.md
-   line, in one commit. A new event or state also gets its `causes` entry, or "which cards care about X" misses it.
+3. Every value is a row of `vocab.tsv`. A new value is a vocab row, (date and reason in its added column) and a BRIEF.md line if
+   readers need it, in one commit. A new event or state also gets its `causes` entry, or "which cards care about X" misses it.
 4. One meaning, one form. When two forms of one meaning appear, pick one, write a normalize.py rule and a BRIEF rule, and
    rebuild: normalize runs on all records of all games.
 5. Judge data against the texts. Never against old library tags, never against agreement between records and patterns.
@@ -138,7 +106,7 @@ supplement_<game>.py). The shared files need care:
 - Id block: the first thing each chat does is write its game's line in source.py (the next free block) and push it. If the
   push is refused, pull: the other chat took that block, so take the next one.
 - Shared files (vocab.tsv, BRIEF.md, patterns/patterns.tsv, normalize.py, flat.py, refs.py, connections.py,
-  deck_analysis.py, load.py, cases/*.tsv, CHANGES.md, PROCESS.md): pull before editing, keep each change small, commit and
+  deck_analysis.py, load.py, cases/*.tsv, PROCESS.md, START_DATABASE.md): pull before editing, keep each change small, commit and
   push it at once. Before adding a vocab value, pull and search vocab.tsv again (one meaning, one value). Never edit
   another game's records.
 - cards.sqlite, QUERIES.md and cases/REPORT.md are rebuilt: after a pull run `run.py <your game>` (it loads every game);
@@ -246,7 +214,7 @@ supplement_<game>.py). The shared files need care:
    A new kind of reading error found later becomes a new rule in audit_text.py, so the next game is checked for it.
 8. **Link audit** (`audit_links.py <game>`, also printed by run.py): every line it prints is a link that cannot exist. Each
    is fixed at its cause (a missing `causes`, a keyword with no concept row or no record, a level-up form the source lacks,
-   a misread name) or explained in RESULTS.md. A game is not done while a line is unexplained.
+   a misread name) or explained in START_DATABASE.md "State". A game is not done while a line is unexplained.
 9. **Deck networks** (`network_page.py` draws every deck in decks.tsv and cases/decks.tsv; `ask.py <game> network "<deck>"`).
    First read ALL decks and write every wrong or missing line into `deck_read_<game>.md` (deck, from, to, what is wrong);
    only then group them into families and fix each family once:
@@ -259,12 +227,12 @@ supplement_<game>.py). The shared files need care:
    every copy: the counts add up to the deck size the game sets (Inscryption Act II battle decks: 20), and the source
    column says the counts and the size; decks.tsv lists each card once. A roguelike's starter deck (Inscryption Act I,
    Kaycee's Mod: 4 cards and a side deck) is where a run starts: keep it, marked as a starter, but it does not count
-   toward the 10 full decks; when fewer than 10 full decks exist as text, say so in RESULTS.md. Read at least 10
+   toward the 10 full decks; when fewer than 10 full decks exist as text, say so in START_DATABASE.md "State". Read at least 10
    decks card by card, as a player: for each card, what does it need (level-up, trigger, condition, stats, keywords) and
    which cards in the deck give it that; what does it give, and to whom; is every line's reason true by the texts? Kaptain
    found 15 gaps in 9 decks that 500 passing cases had not shown, and Claude's own read of 9 decks found 8 more families.
-   Each gap is fixed for every card of every game (a rule, never one card), becomes a cases/network.tsv row, and its
-   lesson is written in "Links the deck networks showed missing".
+   Each gap is fixed for every card of every game (a rule, never one card), becomes a cases/network.tsv row, and a rule
+   that holds for every game goes into START_DATABASE.md "Rules every line must keep".
    **Then the deck check (Kaptain, 30 Oct 2026; part of every import, and of every later network change):**
    `deck_audit.py <game>` and read all of it, as "Audit every deck yourself" says: per deck the 3 most linked and the 3 least
    linked cards with every line and the cards they link to, 10 other cards at random (should one of them be linked with a
@@ -311,7 +279,7 @@ audit_text.py and audit_links.py print nothing unexplained; the keyword -> conce
 to Kaptain; word check 0 open flags; no proposal need shared by cards with different texts; stubs only names nothing
 defines; `ask.py all compare <its main concepts>` shows its cards next to the other games'; every guide deck explained;
 Claude's check of 20 cards in deck_read_<game>.md; at least 20 decks found with a spread over factions and mechanics, at least 10 full decks' networks read card by card and the deck check done (step 2.9)
-and its gaps fixed; RESULTS.md and HANDOFF.md say the state; everything pushed. After his approval, add a few
+and its gaps fixed; START_DATABASE.md "State" says it; everything pushed. After his approval, add a few
 approved records to BRIEF.md under "Game words: <game>" as worked examples.
 
 ## Asking the database
@@ -324,7 +292,7 @@ about X" use flat_ref (ask.py cares): the same thing is stored as a trigger, a c
 ## Surviving session limits
 - `python3 status.py <game>` says from the files which batches are done, partial or todo.
 - Readers write in parts (`<batch>.partN.jsonl`); a stopped reader is resumed (it continues from its parts).
-- Every finished step is pushed at once. Chats end with HANDOFF.md updated.
+- Every finished step is pushed at once. Chats end with START_DATABASE.md "State" and "Open work" updated.
 
 ## Fixing a review: by cause, never by example (30 Oct 2026; read before touching any point Kaptain raises)
 Kaptain reviews a few decks: a sliver of the cards. Each point he finds is a sample of a rule that is wrong everywhere it
@@ -366,8 +334,8 @@ Working smarter on a review (lessons, 30 Oct 2026):
   one diff read, one report. No rebuild per point.
 - Trace a wrong line to its rows before guessing: `flat_ref` (needs and makes) and `flat_do` (acts, filters) of both cards
   show which rule fired. Most wrong lines were one rule firing for every card (game rules, a dropped filter, either side).
-- A line is right when a player would say "A does this for B"; "every unit can do it" is no reason for a line, unless
-  Kaptain asked for it (Runeterra units hitting the Nexus for champions).
+- A line is right when a player would say "A does this for B"; "every unit can do it" is no reason for a line, also
+  not for a level-up (Kaptain 31 Oct 2026).
 - Say every rule with a number in it (top tenth of costs, a third of the cost) and the cases it was checked on; a
   threshold tuned to make one case pass is a new error.
 - Changing reason wording can make must-not cases pass whatever the network says: run cases/run.py and rewrite the cases
@@ -405,60 +373,4 @@ game, never for the one card; and before fixing, ask what else the same cause br
 tiny part of each game: the cause is wrong for every card it touches). Dump before and after, read the diff, add a case.
 Then audit again. Write the families found in deck_read_<game>.md.
 
-**Rules for links (Kaptain, 30 Oct 2026; each is a rule in network.py for every game, never a list of cards):**
-- **Links come from what a card's TEXT does, never from what every card does.** Playing, drawing or summoning a card is
-  what all cards do: "whenever you play a card" (After Image) gets no link from every card. Only a narrowed kind counts
-  ("whenever you play a Skill"), and a kind that every playable card of the game is counts as not narrowed (Slay the Spire:
-  every card is a spell). The same for help: "play the first card each turn twice" (Echo Form) links to no card.
-- **The game's normal attack feeds nothing.** A card whose only effect is plain damage to one target (Strike, Mystic Shot)
-  is no link to "when an enemy dies" (Corpse Explosion). Only cards with something special that makes or helps the kill:
-  poison and damage over time, hits on all enemies, kill effects, damage boosts (Strength, Vulnerable).
-- **A helper points at what it helps; it never "needs" it.** Strength, Dexterity, Focus, Vulnerable, Wrath givers -> the
-  cards whose damage or Block they make bigger; "your next Skill is played twice" (Burst) -> the Skills; "Block is not
-  removed" (Barricade) -> the Block cards. The cards helped are never drawn as enabling the helper.
-- **A cost that drops for each X: what does X makes it cheaper** (Gambling Chip discards -> Eviscerate, events ->
-  Windstorm Colossus): kind "makes cheaper", never "enables".
-- **Kinds (Kaptain, 30 Oct):** a reaction ("whenever", "every 3rd Attack") is "triggers"; a count or a thing that must be
-  there ("for each Attack played", "if you have Block") is "enables"; help says how (stronger, cheaper ...). One reason is
-  said once per line, by its strongest kind.
-- **Say who gets it.** In a game where the player is no card, a status on the player is "gives you Strength", never
-  "makes your units get Strength".
-- **What is expensive is set per game** (network.py EXPENSIVE: the cost from which a card counts as expensive). Every game's
-  import sets it, from that game's own costs; a game missing there gets no "pays for it" lines.
-- **A deck holds what the game gives every deck of its character** (Slay the Spire's starting relic: Burning Blood),
-  unless a card of the deck replaces it ("Replaces Burning Blood": Black Blood). deck_analysis.starters, rarity starter.
-- **Read the game's own limits on a mechanic** (wiki): Dexterity adds only to Block a card gives when played, not to a
-  Power's later Block or Entrench's doubling; Lock-On only to Orb damage.
-- **The rules are no combo, not even for a level-up (Kaptain 31 Oct 2026: "we know units can attack").** Every unit
-  attacks, strikes and deals damage; only a card whose own text adds an attack (Rally, a free attack), a strike now, a second
-  strike, Overwhelm or evasion helps a count of attacks, strikes, Nexus hits or damage. Cases n15 and n53 were flipped.
-- **A makes B, B acts on C: A gets NO line to C (Kaptain, said many times).** Targonian Tellstones makes Blessing of
-  Targon; only the Blessing helps Braum. A's own act of making links to what waits for that making (Zed summons Ephemeral
-  units). Only planted cards that go off by themselves when drawn are the planter's act (n31, n32: Chimes for Bard).
-- **A help must do the very thing needed.** Power does not get a unit past blockers (Sharpsight, For Demacia! do not
-  help Zed hit the Nexus) and does not deal a champion's level-up damage (Tybaulk does not level Gwen). Health and
-  protection do help "survive damage" (Blessing of Targon -> Braum).
-- **Read who does a count.** "Level up: I've attacked with allies 3 times" is Poppy's own attacks; check the actor of every
-  count against the text ("I've" = the card, "I've seen you" = the player).
-- **Costs as paid.** "X" costs and "spend all your mana" (Thermogenic Beam) are variable (card.cost_x); a count of mana spent
-  on spells (Lux: 6+) is met by a spell costing 6+ or with a variable cost.
-- **Drawbacks and limits are no needs.** "Lose 1 energy when drawn" (Void) wants no draws; "if you played fewer than 3
-  cards" (FTL) wants no plays; "if this is still in your hand" (Ethereal) wants no full hand.
-
-## Mistakes made before (do not repeat)
-- **Read what a card makes before judging a line (Kaptain, 30 Oct 2026).** Claude called "Zed -> Moonlit Glenkeeper" wrong
-  because Zed is not Ephemeral; Zed summons Living Shadows, which are, so the link is true through them. The real error was
-  the other line, "Glenkeeper gives Zed +1|+0 when he comes" (fixed: a state that is a keyword, "an Ephemeral ally", is had on
-  arrival only by cards that print it). Before calling a line wrong or missing, read the texts of every card both cards make
-  (deck_audit prints them under "makes"), the keywords those cards have, and what the game's rules add.
-- Fetching a game's data the repo already had; trusting old library tags; judging data by one narrow question; assuming
-  "missing" or "broken" without checking the game's data; writing a definition from memory.
-- One value with several meanings (zone discard for dead, discarded and tossed cards; now BRIEF rule 17); a keyword
-  recorded as the wrong kind (Drain as a status).
-- Re-reads trusted blindly; rebuilding while a reader wrote; patch scripts not safe to run twice; card names inside texts
-  taken as wording.
-- Shared-code bugs no case caught (a played card "setting off" a trigger that asks for another type; 'type is 1' matched
-  inside 'type is 11'): found only by reading `partners` answers.
-- Turning a decision back and forth instead of looking up CHANGES.md and asking Kaptain.
-- Fixing the lines a reviewer named, not the rule that drew them; adding an unasked rule (fighters struck back) without
-  checking what it drew in every game (Faeria, 29-30 Oct: "Fixing a review").
+**Rules for lines:** START_DATABASE.md "Rules every line must keep" (the one list; keep it there).

@@ -250,3 +250,45 @@ n249	runeterra	Hecarim Zed	Dragon Ambush	Dragonling	line	summons	Kaptain 30 Oct 
 n250	runeterra	Hecarim Zed	Hecarim	Shark Chariot	line		Kaptain 30 Oct 2026: Hecarim's attacking Spectral Riders are Ephemeral attackers: they revive Shark Chariot
 n251	runeterra	Hecarim Zed	Shark Chariot	Zed	none	makes it attack	Kaptain 30 Oct 2026: Shark Chariot revives itself attacking, it makes no other unit attack
 n252	runeterra	Hecarim Zed	Redeemed Prodigy	Shark Chariot	line		Kaptain 30 Oct 2026: its attacking Ghastly Band is an Ephemeral attacker: it revives Shark Chariot
+n253	runeterra	Lux Jayce	Thermogenic Beam	Lux	line	(levels it up)	Kaptain 31 Oct 2026: Thermogenic Beam spends all your mana (a variable cost), so it can pay Lux's 6+ mana of spells alone
+n254	runeterra	Lux Jayce	For Demacia!	Lux	line	(levels it up)	Kaptain 31 Oct 2026: a 6-cost spell alone is Lux's 6+ mana of spells
+n255	runeterra	Rally Elusives, aka Zed Poppy	Living Shadow	Zed	none	(levels it up)	Kaptain 31 Oct 2026: "we know units can attack": attacking by the rules levels no champion
+n256	runeterra	Rally Elusives, aka Zed Poppy	Sharpsight	Zed	none	(levels it up)	Kaptain 31 Oct 2026: power does not get Zed past blockers to the Nexus
+n257	runeterra	Rally Elusives, aka Zed Poppy	For Demacia!	Zed	none	(levels it up)	Kaptain 31 Oct 2026: power does not get Zed past blockers to the Nexus
+n258	runeterra	Rally Elusives, aka Zed Poppy	Twin Disciplines	Zed	none	(levels it up)	Kaptain 31 Oct 2026: power does not get Zed past blockers to the Nexus
+n259	runeterra	Rally Elusives, aka Zed Poppy	Poppy	Zed	none	(levels it up)	Kaptain 31 Oct 2026: power does not get Zed past blockers to the Nexus
+n260	runeterra	Rally Elusives, aka Zed Poppy	Young Witch	Zed	none	(levels it up)	Claude 31 Oct 2026: Young Witch's own Elusive is no help to Zed; her Support gives Quick Attack and power only
+n261	runeterra	Rally Elusives, aka Zed Poppy	Ghost	Zed	line	(levels it up)	Claude 31 Oct 2026: Elusive gets Zed to the Nexus
+n262	runeterra	Rally Elusives, aka Zed Poppy	Relentless Pursuit	Poppy	line	another attack	Kaptain 31 Oct 2026: only an attack token or a free attack helps Poppy level up
+n263	runeterra	Rally Elusives, aka Zed Poppy	Brightsteel Protector	Poppy	none	(levels it up)	Kaptain 31 Oct 2026: a unit attacking by the rules does not level Poppy
+n264	runeterra	Rally Elusives, aka Zed Poppy	Zed	Poppy	none	(levels it up)	Kaptain 31 Oct 2026: Poppy counts her own attacks; Zed's Living Shadow joins an attack, it is no new one
+n265	runeterra	Braum Zoe	Targonian Tellstones	Braum	none	(levels it up)	Kaptain 31 Oct 2026: A makes B, B helps C: A gets no line to C (only Blessing of Targon helps Braum)
+n266	runeterra	Braum Zoe	Blessing of Targon	Braum	line	(levels it up)	Kaptain 31 Oct 2026: +3|+3 helps Braum survive damage
+n267	runeterra	Braum Zoe	Esmus, Breath of the World	Zoe	none	different cards	Claude 31 Oct 2026: a planted Chime goes off when drawn and is never played: no new name for Zoe
+n268	runeterra	Annie Gwen	Ravenbloom Conservatory	Gwen	none	(levels it up)	Kaptain 31 Oct 2026: A makes B (Tybaulk), B helps C: A gets no line to C
+n269	runeterra	Annie Gwen	Tybaulk	Gwen	none	(levels it up)	Kaptain 31 Oct 2026: +1|+0 does not level Gwen
+n270	runeterra	Janna Nilah	Vikrash the Exuberant	Janna	none	(levels it up)	Kaptain 31 Oct 2026: Vikrash makes Slipstream; Slipstream's lines are its own
+n271	runeterra	Janna Nilah	Nilah	Janna	none	(levels it up)	Kaptain 31 Oct 2026: Nilah makes Slipstream; Slipstream's lines are its own
+n272	runeterra	Janna Nilah	Slipstream	Janna	none	(levels it up)	Kaptain 31 Oct 2026: draws do not level Janna; the player still has to play the cards she makes cheaper
+n273	runeterra	Janna Nilah	Pool Shark	Janna	none	enables	Claude 31 Oct 2026: "the first 3 times you draw" is a limit, not a need
+n274	runeterra	Janna Nilah	Windborne Mariner	Janna	line	(levels it up)	Claude 31 Oct 2026: Windborne Mariner is a cost reduced card when played
+n275	runeterra	Janna Nilah	Sunken Temple	Janna	line	changes card costs	Claude 31 Oct 2026: Updraft cuts the cost of the cards it shuffles in
+n276	runeterra	Janna Nilah	Janna	Nilah	line	(levels it up)	Claude 31 Oct 2026: Janna draws, Nilah counts draws
+n277	runeterra	Bard Norra	Byrd, The Bellringer	Norra	none	(levels it up)	Claude 31 Oct 2026: a planted Chime is no ally for Norra
+n278	runeterra	Bard Norra	Portalpalooza	Norra	line	Mysterious Portal	Claude 31 Oct 2026: planted Mysterious Portals summon created allies by themselves
+n279	runeterra	Bard Norra	Cosmic Binding	Bard	line	(levels it up)	Kaptain n31: planting Chimes levels Bard
+n280	runeterra	Unstoppable Yasuo	Concussive Palm	Malphite	none	(levels it up)	Claude 31 Oct 2026: Tail of the Dragon is a unit, not a landmark
+n281	runeterra	Swain Ziggs	Captain Farron	Swain	none	(levels it up)	Claude 31 Oct 2026: Overwhelm damage is combat damage; the Decimates are Farron's made cards
+n282	runeterra	Elu Thresh	Hecarim	Thresh	none	(levels it up)	Claude 31 Oct 2026: Overwhelm kills no more units; the Spectral Riders' deaths are theirs
+n283	runeterra	Akshan Riven	Blade of the Exile	Akshan	none	strike	Claude 31 Oct 2026: Quick Attack adds no strike
+n284	runeterra	Hecarim Zed	Zed	Hecarim	line	(levels it up)	Kaptain n250 thinking: a unit summoned attacking is an Ephemeral attacker for Hecarim
+n285	runeterra	Draven Viktor	Chump Whump	Get Excited!	none	cards to discard	Kaptain 31 Oct 2026: any card can be discarded; making cards is no fuel
+n286	faeria	Fast Rakoans	Demon Wrangler	Imperial Trooper	none	moves	Claude 31 Oct 2026: Flying is the Demon Wing's own keyword; Demon Wrangler moves nothing
+n287	faeria	Tarum Combo	Tarum, the Forest World	Oak Father	line		Claude 31 Oct 2026: Tarum makes forests; Oak Father grows for each forest
+n288	duelyst	Lilithe Swarm	Bloodtear Alchemist	Horn of the Forsaken	none	damages	Claude 31 Oct 2026: Horn waits for the General's damage, not any card's
+n289	sts1	Defect Lightning (highgroundgaming)	Defragment	Loop	line	sets off stronger	Claude 31 Oct 2026: Focus makes the Orbs Loop sets off stronger
+n290	stormbound	Relic Song	Hunter’s Vengeance	Diehards	line		Claude 31 Oct 2026, from the texts: a spell kills Diehards, which respawn when dying from a spell
+n291	stormbound	Relic Song	Doppelbocks	Token Satyrs	line	summons	Claude 31 Oct 2026, from the texts: Doppelbocks spawns a Satyr
+n292	monster_train	Remnant Reform (Wickless Baron)	Dreg	Wickless Baron	line	dies	Claude 31 Oct 2026, from the texts: Dreg burns out (dies), Wickless Baron's Harvest fires on a death
+n293	inscryption	Kaycee's Mod Ants, built (wiki tips)	Ant Queen	Flying Ant	line	Ant	Claude 31 Oct 2026, from the texts: Ant Queen is an Ant; Flying Ant's power counts Ants
+n294	into_the_breach	Custom: Laser Combat Judo	Vice Fist	Burst Beam	line	in a line	Claude 31 Oct 2026, from the texts and the guide: the toss lines Vek up for the piercing beam

@@ -1,7 +1,7 @@
 # Case tests: sts1
 
 Made by `cases/run.py sts1`.
-**53 of 53 cases pass.**
+**54 of 54 cases pass.**
 
 **Cases whose reason no line says any more (rewrite them): nst36**
 
@@ -83,3 +83,4 @@ Made by `cases/run.py sts1`.
 | nst35 | Defect Claw (gamersdecide) | All for One | Claw | line brings it back | puts: brings it back to your hand | yes |
 | nst36 | Defect Claw (gamersdecide) | All for One | Claw | none can bring it back | puts: brings it back to your hand | yes |
 | nst37 | Defect Lightning (highgroundgaming) | Zap | Thunder Strike | line uses Lightning | type: uses Lightning | yes |
+| n289 | Defect Lightning (highgroundgaming) | Defragment | Loop | line sets off stronger | stronger: makes the Lightning it sets off stronger; also makes the Frost it sets | yes |

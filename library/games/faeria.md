@@ -204,7 +204,7 @@ Patterns check, 26 Oct 2026 (Claude, decisions by Kaptain). Counts are from the 
   synergizes tribal, summon synergizes transform (`engine_links.py`).
 
 ## Card database (cards_db, 29 Oct 2026)
-Imported into library/cards_db from Abrakam's card export (RESULTS.md "Faeria"). The board words decided there (BRIEF "The
+Imported into library/cards_db from Abrakam's card export. The board words decided there (BRIEF "The
 board") replace the mechanics list above for the card database: Flying, Jump, Charge, Dash, Aquatic and Teleport are
 movement; Combat is its own trigger concept on_fight (not on_attack: it also fires when the creature is attacked); Swallow is
 banish, like Runeterra's Capture; land making, transforming, destroying and taking is terrain (set_terrain, steal of a space).

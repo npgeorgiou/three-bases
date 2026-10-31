@@ -1,8 +1,8 @@
 # Card database (what cards do, as linked rows)
 
-Start here: HANDOFF.md (state). Importing a game: PROCESS.md and PROCESS_LESSONS.md (first PROCESS's sections "How to work" and "Writing data the same way in every game"). Results per game: RESULTS.md. Example answers: QUERIES.md.
+Start here: START_DATABASE.md (import a game or change the database) or START_QUESTIONS.md (answer design questions).
 
-Games: Runeterra (done), Stormbound (waiting for Kaptain's check). One database holds all games, and every question can run
+Games: the 8 games of START_DATABASE.md. One database holds all games, and every question can run
 across them (`ask.py all ...`).
 
 Each card is described as abilities: an event (when), conditions (if) and effects (do). Every field is a value from
@@ -16,8 +16,8 @@ equal mechanics of different games share one concept of the concept tree (Stun a
 | `run.py` | The whole build of a game in one command, in the safe order (PROCESS.md step 2.1); it loads every game |
 | `check_all.py <game>` / `--no-load` | After a change: one reload (or none after a network.py change), then every game's cases and link audit (HANDOFF box) |
 | `ask.py` | Questions answered with card names, per game or across games (`ask.py all ...`; QUERIES.md shows examples) |
+| `START_DATABASE.md`, `START_QUESTIONS.md` | Entry files: rules, checks, state, open work; how to answer design questions |
 | `PROCESS.md` | The framework: rules, steps, gates, fixing a review, checking networks, mistakes not to repeat |
-| `PROCESS_LESSONS.md` | What each import and each review by Kaptain taught, one section per game or review, for every game |
 | `BRIEF.md`, `READER_PROMPT.md` | What readers follow: record shapes, reading rules, approved examples; the reader prompt |
 | `vocab.tsv` | Every allowed value per field: meaning, concept-tree concept, and the events it causes (`causes`) |
 | `names.tsv` | Names readers took for a keyword or card that are something else (keyword, card, type, name family, or dropped), per game, with reasons |
@@ -43,7 +43,6 @@ equal mechanics of different games share one concept of the concept tree (Stun a
 | `exclude.tsv`, `excluded/` | Entries left out on purpose and their old records |
 | `input/`, `read/`, `second/` | Reader input; reader output (the source) with proposals; the independent second reading of a 10% sample |
 | `LINKS_PLAN.md`, `QUESTION_BANK.md` | The plan for every card connection as a table, built to answer design questions; the questions it must answer |
-| `CHANGES.md`, `RESULTS.md`, `HANDOFF.md` | Every change to shapes, values and rules; each game's results; where the work stands |
 
 ## Tables in cards.sqlite
 card, type, card_type, card_keyword, game_rule (an entry whose rows every card of a category has by the game's rules: read/<game>/game_rules.jsonl; flat_ref origin game), card_link (levels into, generates), ability (given_by_effect for abilities an effect
