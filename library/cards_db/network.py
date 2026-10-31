@@ -797,6 +797,7 @@ def aimed_rows(c, game):
         if origin == 'uses_keyword' and not (act in BOOST and (a, via) in mine_status): continue
         if act == 'give_keyword' and kind == 'position': kind = 'unit_or_structure'  # a shielded tile shields the unit on it
         if zone in ('hand', 'deck', 'deck_top', 'deck_bottom') or act in ('cost_change', 'cost_set'): CACHE.setdefault(('handrows', game), set()).add((a, act))
+        if act == 'return_card' and zone == 'exhausted': CACHE.setdefault(('from_exhaust', game), set()).add(a)  # "a consumed spell"
         if act == 'increase_effect' and kw and 'keyword is' not in (w or ''):  # "Impact deals 2 more": the cards with Impact
             w = ';'.join(x for x in (w, f'keyword is {kw}') if x); kind = kind if kind in KIND_CAT else 'any'
         named = any(p.startswith(NAMES_ONE) or (kind == 'keyword' and p.startswith('keyword in ')) for p in (w or '').split(';'))  # Focus: the Orbs
@@ -915,7 +916,8 @@ def aimed(c, game, nodes, broad):
         k = 'any' if kind in ('effect', 'card') else 'board' if kind in ('any', 'anything') else kind
         if kind == 'effect':  # an effect picked by its keyword ("Trap effects"): the cards that carry the keyword
             w = ';'.join(p for p in (w or '').split(';') if p.startswith('keyword'))
-        hits = [b for b in nodes if b != a and b in cards and matches(c, game, cards[b], k, w)]
+        hits = [b for b in nodes if b != a and b in cards and matches(c, game, cards[b], k, w) and (b not in dead_weight(c) or act == 'can')]  # help on a
+        # card that is never played and does nothing (Deadweight) helps nothing; letting it be played does (Blue Candle)
         if 'in_circuit' in (w or ''):  # "other creatures within a circuit": the Conduit cards that close it are its ends, not in it
             hits = [b for b in hits if b not in circuit_ends(c, game)]
         if (a, act) in CACHE.get(('handrows', game), ()):  # a card in hand or a cost: Wraithlings summoned onto the board are never there
@@ -944,6 +946,8 @@ def aimed(c, game, nodes, broad):
                     ('cant', 'targeted'): 'protects it from targeting', ('cant', 'given_keyword'): f'keeps {kwn(kw) or "a status"} off it'}.get((act, pev), what + f' ({pev})')
         at = where(w)  # who benefits from a place: "when next to it", "in its circuit" (positional games; Inscryption Leader)
         if act == 'return_card':  # "put all cost 0 cards from your discard pile into your hand" (All for One): it brings them back
+            if a in CACHE.get(('from_exhaust', game), ()):  # "return a consumed spell" (Echowright): only cards that consume themselves are there
+                hits = [b for b in hits if any(kw_tree(c, k) == 'exhaust' for k in cards[b]['kws'])]
             for b in hits: out[(a, b)].append(('puts', 1.0 / max(1, len(hits)), 'brings it back to your hand'))
             continue
         for b in hits:
@@ -1138,6 +1142,15 @@ def capped(c):
         CACHE['capped'] = {(a, e) for a, e in c.execute("""select ability, event from flat_if where op in ('lt','le') and event is not null
                            and test in ('event_count','count','amount_event_count')""") if (a, e) not in waits}
     return CACHE['capped']
+
+
+def dead_weight(c):
+    """cards never played that do nothing themselves (Deadweight: "Unplayable. Unpurgeable."); a card that acts from the hand
+    (Bone Dog's Favor's Reserve) is not one"""
+    if 'dead' not in CACHE:
+        acting = {a for (a,) in c.execute("select distinct card from flat_do where origin='own' and coalesce(on_pick,'') != 'self'")}
+        CACHE['dead'] = unplayable(c) - acting
+    return CACHE['dead']
 
 
 def unplayable(c):

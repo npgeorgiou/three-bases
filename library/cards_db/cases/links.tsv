@@ -85,3 +85,7 @@ lk83	stormbound	Moment’s Peace	Mystwives	line	strength	Claude 31 Oct 2026: a s
 lk84	stormbound	Treasurous Bosuns	Strict Quartermasters	line	Pirate	Claude 31 Oct 2026: Bosuns is a Pirate; its own text lines stay
 lk85	faeria	Message in a Bottle	Triton Stargazer	none	fills your hand	Claude 31 Oct 2026: Triton Stargazer checks the cards it draws itself for a Treasure Map
 lk86	runeterra	Trifarian Assessor	LeBlanc (level 2)	none	fills your hand	Claude 31 Oct 2026: LeBlanc wants a Mirror Image in hand; a random draw is not one
+lk87	monster_train	Harness the Titan	Deadweight	none	Magic Power	Claude 31 Oct 2026: Deadweight is never played and does nothing; Magic Power on it helps nothing
+lk88	monster_train	Preserve	Bone Dog's Favor	line	kept in hand	Claude 31 Oct 2026: Bone Dog's Favor acts from the hand (Reserve); keeping it there helps
+lk89	monster_train	Deadweight	Dante the Deceptive	line	Blight	Claude 31 Oct 2026: Dante wants Blights; Deadweight is one
+lk90	sts1	Blue Candle	Injury	line	played	Claude 31 Oct 2026: Blue Candle lets curses be played; that is the help an unplayable card can get

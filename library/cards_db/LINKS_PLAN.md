@@ -11,10 +11,10 @@ feed which. `links.py` stores every line network.py draws between two cards that
 
 ## Done
 Step 1 (which cards can share a deck: deck_analysis.can_share) and step 2 (links.py, links.sqlite).
-Step 3 for Inscryption, Into the Breach and Stormbound.
+Step 3 for Inscryption, Into the Breach, Stormbound and Monster Train.
 
 ## Step 3. Check the lines, one game at a time
-Order of the games left: Monster Train, Slay the Spire, Faeria, Duelyst, Runeterra.
+Order of the games left: Slay the Spire, Faeria, Duelyst, Runeterra.
 
 Each game gets two checks. Both scripts print a card's text only the first time, and skip lines read before
 (cases/links_checked.tsv) or already printed.
