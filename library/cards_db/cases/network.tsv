@@ -110,8 +110,8 @@ ni14	inscryption	Energy Bot, Shieldbot, Sniper Bot, Double Gunner, Empty Vessel	
 ni15	inscryption	Alpha, Wolf, Moose Buck	Alpha	Wolf	line		Claude (v39): Leader (wiki: "Creatures adjacent to a card bearing this sigil gain 1 Power") boosts the units next to Alpha; a keyword's effect on other cards is a line too
 ni16	inscryption	Daus, Bell Tentacle	Bell Tentacle	Daus	line		Claude (v39): Daus strikes a card that attacks a Chime or Bell Tentacle (wiki Special Card Behaviours): the card it names
 ndu01	duelyst	Vaath Dying Wish	Spelljammer	Dagona	none		Claude, deck read: a counterattack hits the attacker, an enemy; Dagona's Dying Wish is its own death (family 1)
-ndu02	duelyst	Cassyva Replace Abomination	Healing Mystic	Letigress	none	attack	Claude, deck read: Letigress waits for the General attacking, not any unit (family 2)
-ndu03	duelyst	Cassyva Replace Abomination	Cassyva Soulreaper	Letigress	line		Claude, deck read: the General attacks: a cub joins the pack
+ndu02	duelyst	Cassyva Replace Abomination	Healing Mystic	Letigress	none	waits	Claude, deck read: Letigress waits for the General attacking, not any unit (family 2)
+ndu03	duelyst	Cassyva Replace Abomination	Cassyva Soulreaper	Letigress	none		Claude 31 Oct 2026: every General attacks by the rules (L2); the old case (a cub joins the pack) said the opposite
 ndu04	duelyst	Argeon Mechaz0r	Lifestream	Argeon Highmayne	none		Claude, deck read: the General is no minion to heal or draw (family 2)
 ndu05	duelyst	Vaath Dying Wish	Overload	Lavaslasher	none		Claude, deck read: +1 Attack to the General helps no minion (family 3)
 ndu06	duelyst	Shidai Artifacts	Mask of Shadows	Shidai Stormblossom	line		guide: Mask of Shadows gives the General Backstab and Attack
@@ -282,7 +282,7 @@ n281	runeterra	Swain Ziggs	Captain Farron	Swain	none	(levels it up)	Claude 31 Oc
 n282	runeterra	Elu Thresh	Hecarim	Thresh	none	(levels it up)	Claude 31 Oct 2026: Overwhelm kills no more units; the Spectral Riders' deaths are theirs
 n283	runeterra	Akshan Riven	Blade of the Exile	Akshan	none	strike	Claude 31 Oct 2026: Quick Attack adds no strike
 n284	runeterra	Hecarim Zed	Zed	Hecarim	line	(levels it up)	Kaptain n250 thinking: a unit summoned attacking is an Ephemeral attacker for Hecarim
-n285	runeterra	Draven Viktor	Chump Whump	Get Excited!	none	cards to discard	Kaptain 31 Oct 2026: any card can be discarded; making cards is no fuel
+n285	runeterra	Draven Viktor	Chump Whump	Get Excited!	none		Kaptain 31 Oct 2026: any card can be discarded; making cards is no fuel
 n286	faeria	Fast Rakoans	Demon Wrangler	Imperial Trooper	none	moves	Claude 31 Oct 2026: Flying is the Demon Wing's own keyword; Demon Wrangler moves nothing
 n287	faeria	Tarum Combo	Tarum, the Forest World	Oak Father	line		Claude 31 Oct 2026: Tarum makes forests; Oak Father grows for each forest
 n288	duelyst	Lilithe Swarm	Bloodtear Alchemist	Horn of the Forsaken	none	damages	Claude 31 Oct 2026: Horn waits for the General's damage, not any card's

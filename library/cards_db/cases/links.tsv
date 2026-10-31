@@ -1,0 +1,36 @@
+id	game	from	to	expect	reason	source
+lk01	inscryption	Hammer	Wild Bull	none	can damage it	Kaptain 31 Oct 2026: my damage on my own card only when that card gains from it
+lk02	inscryption	Explode Bot	Adder	none	can damage it	Kaptain 31 Oct 2026: Adder gains nothing from being damaged
+lk03	inscryption	Hammer	Bomb Latcher	line	kills it for its death effect	Kaptain 31 Oct 2026: Bomb Latcher's death effect
+lk04	inscryption	Gem Detonator	Explode Bot	line	can damage it	Claude 31 Oct 2026, from the texts: Explode Bot explodes when it dies
+lk05	stormbound	Pricey Freedom	Siegebreakers	none	can kill it	Claude 31 Oct 2026: the same error in Stormbound (Kaptain: 408 can kill it lines)
+lk06	duelyst	Vellumscry	Impervious Giago	none	can kill it	Claude 31 Oct 2026: the same error in Duelyst
+lk07	faeria	Feed the Forest	Shifting Octopus	none	can kill it	Claude 31 Oct 2026: the same error in Faeria
+lk08	monster_train	Crushing Demise	Lady of the House	none	can kill it	Claude 31 Oct 2026: the same error in Monster Train
+lk09	stormbound	Minion Launchers	Diehards	line	can damage it	Claude 31 Oct 2026, from the texts: Diehards respawn when they die
+lk10	inscryption	Hammer	Ouroboros	line	kills it for its death effect	Kaptain 31 Oct 2026: lines to cards that gain from dying stay
+lk11	inscryption	Gravedigger	Curious Egg	none	it asks for	Kaptain 31 Oct 2026: Curious Egg asks for the tribes, not for any unit
+lk12	inscryption	Dire Wolf Pup	Curious Egg	line	is a Canine it asks for	Kaptain 31 Oct 2026: a creature of each tribe in the deck
+lk13	inscryption	Steambot	Curious Egg	none	it asks for	Kaptain 31 Oct 2026: a Power or Health number is what every creature has
+lk14	inscryption	*	The Limoncello	none		Kaptain 31 Oct 2026: a boss's card is no card of mine
+lk15	inscryption	*	The Moon	none		Kaptain 31 Oct 2026: a boss's card is no card of mine
+lk16	inscryption	*	Gold Nugget	none		Kaptain 31 Oct 2026: a boss's card is no card of mine
+lk17	inscryption	*	Dead Tree	none		Kaptain 31 Oct 2026: a card of the map is no card of mine
+lk18	inscryption	*	Melter	none		wiki Cards page: boss exclusive in Act II
+lk19	inscryption	*	Kingfisher	line		Kingfisher is boss exclusive in Act II but an Act I card choice
+lk20	duelyst	*	Restoring Light	none		Claude 31 Oct 2026: made only by boss Generals, the same error in Duelyst
+lk21	inscryption	Alpha	Practice Wizard	none		Kaptain 31 Oct 2026: the Finale's Act I and Magnificus parts are different decks (wiki Finale)
+lk22	inscryption	Alpha	Frank & Stein	none		wiki Finale: Leshy's part uses the Act I deck, Grimora's part Undead cards
+lk23	inscryption	Alpha	Kingfisher	line	gives it +1|+0	Claude 31 Oct 2026, from the texts: Leader next to an Act I card
+lk24	inscryption	Hoggy Bank	Gembound Ripper	none	pays for it	Claude 31 Oct 2026, from the texts: 4 Bones pay no Energy cost
+lk25	inscryption	Hoggy Bank	Wolverine	line	Bones	Claude 31 Oct 2026, from the texts: Bones pay Wolverine's 5 Bones
+lk26	inscryption	Master Bleene	Mantis God	none	sacrificed	Claude 31 Oct 2026, from the texts: True Scholar sacrifices itself to draw; that pays no Blood
+lk27	inscryption	Elk Fawn	Sentry Spore	none	moves	Claude 31 Oct 2026, from the texts: Sprinter moves itself, Sentry waits for an enemy moving (L9)
+lk28	inscryption	Wiseclock	Good Fish	line	moves	Claude 31 Oct 2026, from the texts: Wiseclock turns all creatures, enemies too
+lk29	inscryption	Scissors	Raccoon	line	enemy units die	Claude 31 Oct 2026, from the texts: Scavenger gives Bones when opposing creatures die
+lk30	inscryption	Skinning Knife	Pelts (Wolf)	line	creates	Claude 31 Oct 2026, from the texts: "you draw a Pelt card"
+lk31	inscryption	Frozen Opossum	Ant Queen	none		Claude 31 Oct 2026, from the texts: Frozen Away releases the creature inside, not an Ant
+lk32	inscryption	Field Mice	Hand Tentacle	line	fills your hand	Claude 31 Oct 2026, from the texts: Fecundity puts a copy in the hand; Hand Tentacle counts the hand
+lk33	inscryption	Orange Mage	Ruby Mox	line	+1|+0	Claude 31 Oct 2026, from the texts: Gem Animator gives Mox cards +1 Power; a Mox card is a creature card with the Terrain trait
+lk34	inscryption	Orlu's Vessel	Mage Knight	none		wiki Side Deck: gem Vessels are Act III, Mage Knight Act II
+lk35	runeterra	The Poro King	Poro Snax	line	creates	Claude 31 Oct 2026: a card made by its name, the same error in Runeterra

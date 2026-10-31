@@ -21,7 +21,7 @@ def main():
     lib = source.lib(); R = random.Random(game)
     nm = {i: n for i, n in c.execute('select id, name from card where game=?', (game,))}
     txt = lambda i: ' '.join(((lib.execute('select text from entities where id=?', (i,)).fetchone() or [''])[0] or '').split()) or '(no text)'
-    owned = [i for (i,) in c.execute(links.OWNED, (game,))]
+    owned = sorted(links.owned(c, game))
     rows = c.execute('select l.a, l.b, p.kind, p.text from L.link l join L.phrase p on p.id=l.phrase where l.game=?', (game,)).fetchall()
     by_pair = collections.defaultdict(list)
     for a, b, k, t in rows: by_pair[(a, b)].append((k, t))

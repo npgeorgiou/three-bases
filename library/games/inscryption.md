@@ -56,12 +56,19 @@ side deck, placing on any empty space of one's own row.
 ## Deck rule (deck_analysis.DECK_RULES, can_share; 31 Oct 2026)
 Each act builds its own deck. Act I: Leshy's run, from a starting deck of Leshy's and Grimora's card types
 (en.wikipedia.org/wiki/Inscryption); Act II: cards of all four Scrybes are collected and one deck may mix them (Wikipedia);
-Act III: P03's run. Which act a card is in: the wiki page categories (Act I, Act II, Act III, Finale; sources/
+Act III: P03's run. The Finale (inscryption.fandom.com/wiki/Finale and /wiki/Cards, read 31 Oct 2026) has two decks of its own:
+Grimora's part (3 Gravediggers, 2 Frank & Steins and one card choice of Bonehound, Banshee, Revenant; Skeleton side deck) and
+Magnificus' part (Mox cards: the Cards page's "Finale Cards, Magickal" list; Mox side deck); Leshy's part "uses the same deck
+they did in Act I". So a Finale card is Finale Grimora or Finale Magnificus (and Act II, where all fifteen are in the card
+lists), and Alpha, Magpie, Turkey Vulture (Leshy's part) are Act I. Which act a card is in: the wiki page categories (Act I, Act II, Act III, Finale; sources/
 inscryption_wiki_cards*.jsonl), plus the act a deck in decks.tsv names. Kaycee's Mod counts as Act I (Claude: it is the Act I
 run as its own mode). A card the wiki gives no act gets one from the act's own costs (Kaptain 31 Oct 2026: Act I has only Blood and Bones, no
-Mox gems; Act III only Energy): Mox cost or a Mox gem -> Act II or Finale, Energy -> Act II or III, Blood or Bones -> Act I
+Mox gems; Act III only Energy): Mox cost or a Mox gem -> Act II or Finale Magnificus, Energy -> Act II or III, Blood or Bones -> Act I
 or II. Pelts are Act I only (Kaptain: Act II pays with Foils, no Pelts). Items: Act I or III (Claude: Act II has no items).
-A made card with no cost takes its maker's acts (Chime from Daus). Two cards share a deck when they have an act in common;
+A made card with no cost takes its maker's acts (Chime from Daus).
+Cards no player owns (links.INSCRYPTION_NOT_OWNED): the wiki Cards page's "Non-obtainable / Boss exclusive" lists of every act
+(Bait Bucket, Gold Nugget, the Fir trees, Pack Mule, The Moon, The Limoncello, Melter, Dead Tree, Tombstone, ...), unless the
+card is a card choice in another act or a deck lists it (Kingfisher, Coyote); a card only those make goes too (Skeleton Crew). Two cards share a deck when they have an act in common;
 20 cards with none of these (Boulder, Stump, the Fir trees, Friend) share with every card.
 
 ## Sources and notes

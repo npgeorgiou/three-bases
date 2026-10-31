@@ -15,7 +15,8 @@ DECK_RULES = {  # the games' own deck-building rules (not card data; sources in 
     'faeria': {'size': 30, 'copies': 3, 'factions': None, 'neutral': ()},
     'sts1': {'factions': 1, 'neutral': ('Colorless', 'Curse')},
     'monster_train': {'factions': 2, 'neutral': ('Clanless',), 'one_of': ('hero',)},
-    'inscryption': {'factions': None, 'neutral': (), 'acts': ('Act I', 'Act II', 'Act III', 'Finale'), 'same_act': {"Kaycee's Mod": 'Act I'}},
+    'inscryption': {'factions': None, 'neutral': (), 'acts': ('Act I', 'Act II', 'Act III', 'Finale Grimora', 'Finale Magnificus'),
+                    'same_act': {"Kaycee's Mod": 'Act I'}},
     'into_the_breach': {'factions': None, 'neutral': (), 'never_category': ('terrain',)},
 }
 _ACTS = {}
@@ -31,6 +32,9 @@ def card_acts(c, game):
     for f in ('inscryption_wiki_cards.jsonl', 'inscryption_wiki_cards_more.jsonl'):
         for line in open(os.path.join(here, '..', 'sources', f)):
             d = json.loads(line); by_name[d['title'].lower()] |= {a for a in acts if a in d.get('cats', [])}
+            if 'Finale' in d.get('cats', []): by_name[d['title'].lower()] |= finale_acts(d['title'])
+            if 'Vessels' in d.get('cats', []): by_name[d['title'].lower()].add('Act III')  # the Act III side deck: Empty Vessels,
+            # and the gem Vessels that upgrade them (wiki Side Deck, read 31 Oct 2026)
     for f in ('decks.tsv', 'cases/decks.tsv'):
         for row in open(os.path.join(here, f)):
             p = row.rstrip('\n').split('\t'); g, deck, cards = (p[0], p[1], p[3]) if f == 'decks.tsv' else (p[1], p[2], p[3])
@@ -40,6 +44,7 @@ def card_acts(c, game):
     known = {i: {same.get(a, a) for a in by_name.get(n.lower(), ())} for i, n in c.execute('select id, name from card where game=?', (game,))}
     for i, n in c.execute('select id, name from card where game=?', (game,)):
         known[i] |= {a for a in DECK_RULES[game]['acts'] if n.endswith('(' + a + ')')}  # "Mole (Act III)"
+        if n.endswith(' Vessel'): known[i] = {'Act III'}  # a Vessel is the Act III side deck (wiki Side Deck)
     made = c.execute("select card, card_ref from flat_do where act in ('summon', 'create', 'transform') and card_ref is not null").fetchall()
     cards = c.execute('select id, name, coalesce(category, ""), coalesce(cost_text, "") from card where game=?', (game,)).fetchall()
     found = dict(known)
@@ -51,11 +56,23 @@ def card_acts(c, game):
     return found
 
 
+# the Finale's decks (wiki Finale and Cards pages, read 31 Oct 2026): Grimora's section plays Undead cards with a Skeleton side
+# deck, Magnificus' section Mox cards with a Mox side deck, Leshy's section "the same deck they did in Act I"
+FINALE = {'Finale Grimora': ('Skeleton', 'Gravedigger', 'Banshee', 'Revenant', 'Frank & Stein', 'Bonehound'),
+          'Finale Magnificus': ('Emerald Mox', 'Ruby Mox', 'Sapphire Mox', 'Junior Sage', 'Practice Wizard', 'Orange Mage',
+                                'Ruby Golem', 'Blue Mage', 'Gem Fiend')}
+
+
+def finale_acts(title):
+    """a Finale card's acts: its Finale part, and Act II, whose card lists on the wiki Cards page hold all fifteen (Orange Mage)"""
+    return next(({a, 'Act II'} for a, names in FINALE.items() if title in names), {'Act I'})
+
+
 def by_cost(name, category, cost_text, maker_acts):
     """Inscryption acts of a card the wiki gives no act: each act's own costs (Act I Blood and Bones only, Act III Energy,
-    Mox gems in Act II and the Finale), Pelts only in Act I, no items in Act II, or the acts of the cards that make it"""
+    Mox gems in Act II and Magnificus' Finale), Pelts only in Act I, no items in Act II, or the acts of the cards that make it"""
     if name.startswith('Pelts'): return {'Act I'}
-    if 'Mox' in cost_text or 'Mox' in name: x = {'Act II', 'Finale'}
+    if 'Mox' in cost_text or 'Mox' in name: x = {'Act II', 'Finale Magnificus'}
     elif 'Energy' in cost_text: x = {'Act II', 'Act III'}
     elif 'Blood' in cost_text or 'Bones' in cost_text: x = {'Act I', 'Act II'}
     elif category == 'item': x = {'Act I', 'Act III'}

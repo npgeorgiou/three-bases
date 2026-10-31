@@ -137,8 +137,8 @@ Read: any FAILED line, and the audit lists. After a change to network.py only: `
 
 ## Open work, in Kaptain's order
 1. The line table for design questions: LINKS_PLAN.md, step by step, each step reported to Kaptain and approved. Steps 1
-   (deck rules) and 2 (links.py writes links.sqlite) done; step 3 started: its "State" says what is done, Kaptain's four
-   decisions to apply first, and how to do the full check. Kaptain wants step 3 finished so that step 4 starts clean.
+   and 2 done; step 3: Kaptain's four decisions applied and Inscryption round 1 checked (LINKS_PLAN.md step 3 "State"); next:
+   Inscryption round 2, then the other seven games, one at a time. Table cases: cases/links.tsv (run by links.py).
 
 ## When you finish
 Commit and push every finished step. Update "State" and "Open work" above (keep them short: no history; git log has it).

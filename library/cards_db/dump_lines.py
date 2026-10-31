@@ -3,6 +3,7 @@
   python3 dump_lines.py <out.tsv>                 write game, deck, from, to, kind, weight, reason for every deck of every game
   python3 dump_lines.py --diff <before> <after>   per game: lines and pairs before -> after; then every lost and every new
                                                   reason with how many lines and three examples (read them all)
+  python3 dump_lines.py --table <out.tsv>         the same for links.sqlite (deck "-", reason with {A} and {B}), to diff the table
   python3 dump_lines.py --find <file> <text>      lines whose reason holds the text, counted per game (the same error elsewhere)
 """
 import collections, csv, os, sys, sqlite3
@@ -26,6 +27,15 @@ def dump(out):
     print(out)
 
 
+def table(out):
+    c = sqlite3.connect(os.path.join(HERE, 'cards.sqlite')); c.execute(f"attach database '{os.path.join(HERE, 'links.sqlite')}' as L")
+    nm = dict(c.execute('select id, name from card'))
+    with open(out, 'w', encoding='utf-8') as f:
+        for g, a, b, k, w, t in c.execute('select l.game, l.a, l.b, p.kind, l.weight, p.text from L.link l join L.phrase p on p.id=l.phrase'):
+            f.write('\t'.join((g, '-', nm[a], nm[b], k, f'{w:.3f}', t)) + '\n')
+    print(out)
+
+
 def load(path):
     return [l.rstrip('\n').split('\t') for l in open(path, encoding='utf-8')]
 
@@ -36,7 +46,8 @@ def diff(before, after):
         b = [r for r in B if r[0] == g]; a = [r for r in A if r[0] == g]
         pb, pa = {tuple(r[1:4]) for r in b}, {tuple(r[1:4]) for r in a}
         print(f'{g}: lines {len(b)} -> {len(a)}, pairs {len(pb)} -> {len(pa)} ({len(pb - pa)} gone, {len(pa - pb)} new)')
-    kb = {tuple(r[:5] + r[6:]) for r in B}; ka = {tuple(r[:5] + r[6:]) for r in A}
+    same = lambda why: '; also '.join(sorted(why.split('; also ')))  # the order of a pair's reasons is no change
+    kb = {tuple(r[:5] + [same(r[6])]) for r in B}; ka = {tuple(r[:5] + [same(r[6])]) for r in A}
     for title, xs in (('GONE', kb - ka), ('NEW', ka - kb)):
         grp = collections.defaultdict(list)
         for g, d, x, y, k, why in xs: grp[(g, k, why)].append(f'{x} -> {y} ({d})')
@@ -53,5 +64,6 @@ def find(path, text):
 if __name__ == '__main__':
     a = sys.argv[1:]
     if a[:1] == ['--diff']: diff(a[1], a[2])
+    elif a[:1] == ['--table']: table(a[1])
     elif a[:1] == ['--find']: find(a[1], ' '.join(a[2:]))
     else: dump(a[0])

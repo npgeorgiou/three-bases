@@ -84,27 +84,26 @@ Report: the numbers.
       missed;
    f) for decks that have special cards like Champion, Heroes, Legends, etc., check all their links;
    g) don't re-check links that are checked by previous steps.
-   State (31 Oct 2026, end of the step-1/2 chat):
-   - Done: links_check.py (3.1 and 3.3) for all games: 0 zero-check lines; deck differences left are only the expected (a)
-     (a collectible card a deck does not list but makes: Fledgling Imp, Mighty Poro). links.only_made: in the whole game a
-     card only other cards make (token, created card, level-up form; Inscryption: no offer category on its wiki page) is
-     "made" as in a deck (Lilithe -> Inkling Surge goes through the Wraithling; "through Chime" level lines). This changed
-     only links.sqlite, not the deck pages. It has no test cases yet: add them (a cases file for the table, run by links.py).
-   - NOT done: the a-g check above. Only part of Inscryption's a) and d) was read. No other game, no deck, no f). This is
-     the main work of the next chat.
-   Decisions of Kaptain (31 Oct 2026) to apply first, each for every game, each with network.tsv cases:
-   1. "can damage it" / "can kill it" (kind targets) from my card to my own card: keep the line only when the damaged card
-      gains from it (its own death or damage effect: Hammer -> Bomb Latcher), and keep every line to cards that gain when
-      units are damaged, die or take damage (they are "waits" lines). Today every game has the useless ones (Hammer ->
-      Wild Bull, Explode Bot -> Adder; Stormbound "can kill it": 408 lines).
-   2. Curious Egg has 200 partners: every unit is "a unit it asks for" (Finical Hatchling read as "any unit": L1). Find
-      where the keyword's need comes from (not in read/inscryption; look in keywords_stub, the library, the auto records)
-      and read it from its text.
-   3. Opponent-only cards are owned (The Limoncello, The Moon, Gold Nugget, Dead Tree get lines). An Inscryption card is
-      owned when the game offers it (wiki offer category), a deck lists it, or an owned card makes it. Then check the other
-      games for the same: a card only an enemy, a boss or a map uses must not be owned.
-   4. Act "Finale" joins Act I and Act II cards (Alpha -> Practice Wizard): find what deck the player uses in the Finale
-      (source), then keep, change or drop the group.
+   State (31 Oct 2026, end of the second step-3 chat):
+   - Kaptain's four decisions are applied, each with cases (cases/links.tsv, checked at the end of links.py; cases/share.tsv):
+     1. my "can damage it / can kill it" on my own card only when that card gains (network.HARM_GAIN, self_gains); 2. Curious
+     Egg: a Power or Health number is no need (L1), its tribes are; 3. links.owned(): Inscryption's "Non-obtainable / Boss
+     exclusive" lists (wiki Cards page), and in every game a no-rarity card only bosses or monsters make (Duelyst: 7 boss
+     spells, Magma); 4. the Finale is two decks, Finale Grimora and Finale Magnificus (wiki Finale); Leshy's part is Act I.
+   - Inscryption round 1 of the a-g check is read whole (links_audit a-f, deck_audit of all 18 decks). Causes found and fixed
+     for every game, each with cases: resource-blind "pays for it" (Hoggy Bank's Bones paid Energy cards; spell mana paid
+     units); an effect's sacrifice paid Blood (Master Bleene); my self-mover fed "an enemy moves" (Sprinter -> Sentry); keyword
+     triggers on deaths were no need (Scavenger, Corpse Eater, Double Death); a card made by its name had no line (Skinning
+     Knife -> Pelts, Solitude -> Husks); "the creature inside" read as any unit (Frozen Opossum -> Ants); a keyword's copy in
+     hand did not fill the hand (Fecundity -> Hand Tentacle); Inscryption terrain cards are creatures (Gem Animator -> Mox);
+     Vessels are Act III only; "whenever your General attacks" fed by every General's attack (L2; ndu03 rewritten).
+   - All counts after round 1: dump_lines.py --diff, deck lines and table, read whole; links_check 0 differences except the
+     expected (a); zero checks 0; cases pass (Stormbound csb09-11, csb13 still open; Runeterra n56 stale).
+   - Seen, not fixed: Corpse Eater fires only on deaths "by combat" (its reading lacks that: Hammer -> Corpse Maggots is
+     wrong); Runeterra has Molten Shield twice (a plain and a "(created)" entry).
+   - NOT done: Inscryption round 2 (rerun links_audit and deck_audit, read all, until a round finds nothing); the other 7
+     games (links_audit + deck_audit for every deck): Stormbound, Monster Train, Into the Breach, Slay the Spire, Faeria,
+     Duelyst, Runeterra. Next chat: start with Inscryption round 2, then one game at a time.
    How to do the a-g check (Kaptain: "this check pretty much checks every link in the many decks we have"):
    - Every game, one at a time: `links_audit.py <game> > /tmp/a.txt`, plus `deck_audit.py <game>` for every deck of the game.
      Read ALL of both outputs, in parts of about 150 lines, every line against both card texts as a player. Big output is

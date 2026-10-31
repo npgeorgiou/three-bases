@@ -16,7 +16,7 @@ def main():
              for r in csv.DictReader(open(os.path.join(HERE, f), encoding='utf-8'), delimiter='\t')]
     decks = list({(r['game'], r['deck']): r for r in decks}.values())
     for game in games:
-        owned = {i for (i,) in c.execute(links.OWNED, (game,))}
+        owned = links.owned(c, game)
         nm = {i: n for i, n in c.execute('select id, name from card where game=?', (game,))}
         table = collections.defaultdict(set)
         for a, b, k, t in c.execute('select l.a, l.b, p.kind, p.text from L.link l join L.phrase p on p.id=l.phrase where l.game=?', (game,)):
