@@ -24,6 +24,8 @@ questions first and wait. Never invent rules or mechanics; mark suggestions as y
 4. **One rebuild per round**: `check_all.py <game>` loads all games once (about 25 minutes). Never `run.py` once per game.
    After a change to network.py only: `check_all.py --no-load` (minutes).
 5. **Read cards like a player**: what does it need, who gives it that, what does it make, what does that card do.
+6. **A check is done only when all its output was read.** Never sample less, skip a game or hand over because the output
+   is long: read it in parts and pace the work. Say plainly what was not checked; never let a partial check look done.
 
 ## Rules every line must keep (network.py; each is a rule for every game)
 - L1 A line comes from what a card's TEXT does, never from what every card does or is. Every card can be played, drawn,
@@ -135,8 +137,8 @@ Read: any FAILED line, and the audit lists. After a change to network.py only: `
 
 ## Open work, in Kaptain's order
 1. The line table for design questions: LINKS_PLAN.md, step by step, each step reported to Kaptain and approved. Steps 1
-   (deck rules) and 2 (links.py writes links.sqlite) done; next: step 3, once Kaptain approves step 2.
-   Kaptain's first message to that chat: "Read library/cards_db/START_DATABASE.md and LINKS_PLAN.md and do step 1."
+   (deck rules) and 2 (links.py writes links.sqlite) done; step 3 started: its "State" says what is done, Kaptain's four
+   decisions to apply first, and how to do the full check. Kaptain wants step 3 finished so that step 4 starts clean.
 
 ## When you finish
 Commit and push every finished step. Update "State" and "Open work" above (keep them short: no history; git log has it).

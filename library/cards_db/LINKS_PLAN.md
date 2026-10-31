@@ -84,26 +84,36 @@ Report: the numbers.
       missed;
    f) for decks that have special cards like Champion, Heroes, Legends, etc., check all their links;
    g) don't re-check links that are checked by previous steps.
-   State (31 Oct): links_check.py does 3.1 and 3.3 for all games: 0 zero-check lines; the only deck differences left are
-   expected (a) (a collectible card a deck does not list but makes: Fledgling Imp, Mighty Poro). Fixed on the way: in the whole
-   game a card only other cards make (token, created card, level-up form; Inscryption: no offer category on its wiki page) is
-   now "made" as in a deck (links.only_made), so Lilithe -> Inkling Surge goes through the Wraithling and "through Chime" level
-   lines exist. links_audit.py written; Inscryption audit read in part (a, d), findings, each waiting for Kaptain's OK:
-   - "can damage it" / "can kill it" (kind targets) from my card to my own card with no need for it (Hammer -> Wild Bull,
-     Explode Bot -> Adder, Gem Detonator -> Automaton): harm on my own card helps nothing (L9). Proposed: the table stores no
-     targets line between two cards of one deck unless the target gains from it (then it is already a "waits" line).
-   - Curious Egg has 200 partners: "is a unit it asks for" from every unit (Finical Hatchling read as "any unit": L1). Trace
-     the keyword's rows (it is not in read/inscryption; look in keywords_stub or the library) and fix the need.
-   - Opponent-only cards are "owned": The Limoncello, The Moon, Gold Nugget, Dead Tree get lines. Proposed: an Inscryption
-     card is owned when the game offers it (wiki offer category), a deck lists it, or an owned card makes it.
-   - Act "Finale" joins Act I and Act II cards (Alpha -> Practice Wizard): check what the Finale deck is before keeping it.
-   Kaptain 31 Oct: fix 2 and 3, check 4. Fix 1 waits for his answer: it is not how the other games do it; every game has
-   these lines (Stormbound "can kill it": 408), so the fix would change every game.
-   Not done yet (Kaptain: "fix everything so the next chat only has to do step 4 from a clean base"): the links_audit.py
-   check a-f was read for Inscryption only, in part, and deck_audit.py (process C) was not run for any deck in this chat.
-   links_check.py only shows that the table equals the deck pages; it does not show that a line is right. Next chat: for
-   every game, run links_audit.py and deck_audit.py, read ALL of the output against both texts, fix every error by its cause
-   for every game with network.tsv cases (START_DATABASE.md rules 1-3), rebuild, repeat until a round finds nothing.
+   State (31 Oct 2026, end of the step-1/2 chat):
+   - Done: links_check.py (3.1 and 3.3) for all games: 0 zero-check lines; deck differences left are only the expected (a)
+     (a collectible card a deck does not list but makes: Fledgling Imp, Mighty Poro). links.only_made: in the whole game a
+     card only other cards make (token, created card, level-up form; Inscryption: no offer category on its wiki page) is
+     "made" as in a deck (Lilithe -> Inkling Surge goes through the Wraithling; "through Chime" level lines). This changed
+     only links.sqlite, not the deck pages. It has no test cases yet: add them (a cases file for the table, run by links.py).
+   - NOT done: the a-g check above. Only part of Inscryption's a) and d) was read. No other game, no deck, no f). This is
+     the main work of the next chat.
+   Decisions of Kaptain (31 Oct 2026) to apply first, each for every game, each with network.tsv cases:
+   1. "can damage it" / "can kill it" (kind targets) from my card to my own card: keep the line only when the damaged card
+      gains from it (its own death or damage effect: Hammer -> Bomb Latcher), and keep every line to cards that gain when
+      units are damaged, die or take damage (they are "waits" lines). Today every game has the useless ones (Hammer ->
+      Wild Bull, Explode Bot -> Adder; Stormbound "can kill it": 408 lines).
+   2. Curious Egg has 200 partners: every unit is "a unit it asks for" (Finical Hatchling read as "any unit": L1). Find
+      where the keyword's need comes from (not in read/inscryption; look in keywords_stub, the library, the auto records)
+      and read it from its text.
+   3. Opponent-only cards are owned (The Limoncello, The Moon, Gold Nugget, Dead Tree get lines). An Inscryption card is
+      owned when the game offers it (wiki offer category), a deck lists it, or an owned card makes it. Then check the other
+      games for the same: a card only an enemy, a boss or a map uses must not be owned.
+   4. Act "Finale" joins Act I and Act II cards (Alpha -> Practice Wizard): find what deck the player uses in the Finale
+      (source), then keep, change or drop the group.
+   How to do the a-g check (Kaptain: "this check pretty much checks every link in the many decks we have"):
+   - Every game, one at a time: `links_audit.py <game> > /tmp/a.txt`, plus `deck_audit.py <game>` for every deck of the game.
+     Read ALL of both outputs, in parts of about 150 lines, every line against both card texts as a player. Big output is
+     no reason to skip or sample less: read it in more parts and pace the work.
+   - Write each error down in one sentence (the wrong thinking), find the same thinking in every game, fix it once in
+     network.py (or the readings by a fixes/ script), add network.tsv cases, then process C (dump before and after, read
+     every gone and new group), `check_all.py --no-load`, `links.py`, `links_check.py`. Record what was read with --record.
+   - Repeat the round until a whole round finds no error. Only then is step 3 done; report per cause: what was wrong, the
+     fix, counts per game.
 3. **Zero checks** (a query each, must give 0): lines between two cards that cannot share a deck; lines with an end that
    is not a card a player owns.
 4. Every wrong line: name the cause in one sentence (the thinking, not the card), fix it in network.py for every game,
