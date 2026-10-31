@@ -69,3 +69,7 @@ lk67	into_the_breach	Prime Spear	Auto-Shields	none		Claude 31 Oct 2026: Auto-Shi
 lk68	into_the_breach	Combat Mech	Psionic Receiver	none	asks for	Claude 31 Oct 2026: every squad is Mechs; all-Mech passives ask for none
 lk69	into_the_breach	Techno-Scarab	Networked Shielding	none	asks for	Claude 31 Oct 2026: the same for every all-Mech passive
 lk70	into_the_breach	*	Smoke Tile	none		Claude 31 Oct 2026: map tiles are no cards a player owns
+lk71	stormbound	Treasurous Bosuns	Westwind Sailors	none	draws it	Claude 31 Oct 2026: "a cheaper card from your deck" can be any card; every card can be drawn (L1)
+lk72	stormbound	Sparkly Kitties	Westwind Sailors	none	Confuse	Claude 31 Oct 2026: confusing my own unit is a drawback, no help
+lk73	stormbound	Sparkly Kitties	Temple of the Mind	line	Confuse	Claude 31 Oct 2026: Temple of the Mind kills confused units
+lk74	stormbound	Timber Alchemists	Westwind Sailors	none	remove keywords	Claude 31 Oct 2026: taking statuses from any friendly unit is no line to every unit

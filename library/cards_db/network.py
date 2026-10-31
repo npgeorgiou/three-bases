@@ -585,6 +585,8 @@ def lines_of(c, game):
                              (m, ab, sq)).fetchone()
             if prev: k, w = prev[0], ';'.join(x for x in (prev[1] or '').split(';') if x.split(' ')[0] in ('card', 'type', 'category', 'keyword', 'name_has'))
         hit = [t for t, x in cards.items() if t != m and matches(c, game, x, k if k in KIND_CAT else 'any', w)]
+        if len(hit) >= 0.9 * kind_count(c, game, k if k in KIND_CAT else 'any', None): continue  # "a cheaper card from your deck"
+        # (Treasurous Bosuns) finds almost any card: every card can be drawn (L1)
         say = 'draws it from the deck' if act == 'draw' else 'picks it from the deck' if act == 'choose_card' else \
             f"puts it into play from {'the hand' if z == 'hand' else 'the deck'}"
         for t in hit: out[(m, t)].append(('puts', 1.0 / max(1, len(hit)), say))
@@ -714,6 +716,9 @@ def lines_of(c, game):
         for t in pushers - {m}: out[(m, t)].append(('type', 1.0 / len(pushers), say))
     CACHE[('lines', game)] = out
     return out
+
+
+BAD_STATUS = ('disable', 'immobilize', 'attack_lock', 'damage_over_time', 'debuff', 'forced_movement')  # statuses that hurt
 
 
 NOT_AIMED = PUTS + ('repeat', 'increase_effect', 'level_up', 'draw', 'discard', 'shuffle_into_deck', 'put_on_top', 'look', 'reveal',
@@ -945,6 +950,9 @@ def aimed(c, game, nodes, broad):
             if rule: out[(a, b)].append(('boosts' if isinstance(rule, str) else 'rules', 1.0 / n, what + at))  # stats given make it stronger; the rest change how it works
             elif helps_it(c, act, kw, ps): out[(a, b)].append(('boosts', 0.5 / max(1, len(hits)), aim_said(act, kwn(kw), ps) + at))
             elif act in HARM_GAIN and not gains.get(b, set()) & HARM_GAIN[act]: continue  # my harm on my card: only for its own effect
+            elif act == 'give_keyword' and kw_tree(c, kw) in BAD_STATUS: continue  # Sparkly Kitties confuses a friend: a drawback, no help
+            elif act in ('remove_keyword', 'remove_keywords') and not kw: continue  # "steal all statuses from friendly units" (Timber Alchemists): every
+            # unit can have one (L1); its partners are the cards that give statuses
             else: out[(a, b)].append(('targets', 0.5 / n, aim_said(act, kwn(kw), ps) + at))  # help aimed at one card of a kind helps
             # each card it can hit (Oakling's +5|+5 to a random green creature, Horsemaster's Charge, a 7 cost cut), weight shared
     return out

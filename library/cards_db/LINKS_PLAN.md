@@ -11,7 +11,7 @@ feed which. `links.py` stores every line network.py draws between two cards that
 
 ## Done
 Step 1 (which cards can share a deck: deck_analysis.can_share) and step 2 (links.py, links.sqlite).
-Step 3 for Inscryption and Into the Breach.
+Step 3 for Inscryption and Into the Breach. Stormbound started (see Open).
 
 ## Step 3. Check the lines, one game at a time
 Order of the games left: Stormbound, Monster Train, Slay the Spire, Faeria, Duelyst, Runeterra.
@@ -19,20 +19,22 @@ Order of the games left: Stormbound, Monster Train, Slay the Spire, Faeria, Duel
 Each game gets two checks. Both scripts print a card's text only the first time, and skip lines read before
 (cases/links_checked.tsv) or already printed.
 
+Limits are 10 (Kaptain, 31 Oct 2026: fewer tokens).
+
 **Check 1, the whole game:** `links_audit.py <game> > /tmp/a.txt`
-- a) the 30 cards with the most partners, all their lines (many partners usually means a rule that fires for every card: L1, L2)
-- b) the 30 cards with the fewest partners, all their lines, beside 15 random cards of a deck: is a line missed?
-- c) 5 random lines of each of the 20 most used reasons
-- d) 30 random lines
-- e) up to 20 cards with no partner, beside 15 random cards of a deck: is a line missed?
+- a) the 10 cards with the most partners, all their lines (many partners usually means a rule that fires for every card: L1, L2)
+- b) the 10 cards with the fewest partners, all their lines, beside 10 random cards of a deck: is a line missed?
+- c) 5 random lines of each of the 10 most used reasons
+- d) 10 random lines
+- e) up to 10 cards with no partner, beside 10 random cards of a deck: is a line missed?
 - f) the special cards of every deck (champions, heroes, Generals, legends): all their lines
 
 **Check 2, every deck:** `deck_audit.py <game> > /tmp/d.txt`, for each deck of the game:
-- a) the 20 cards with the most lines, all their lines
-- b) the 20 cards with the fewest lines, all their lines, beside 15 random cards of the deck: is a line missed?
-- c) 5 random lines of each of the deck's 20 most used reasons
-- d) 30 random lines
-- e) up to 20 cards with no line, beside 15 random cards of the deck: is a line missed?
+- a) the 10 cards with the most lines, all their lines
+- b) the 10 cards with the fewest lines, all their lines, beside 10 random cards of the deck: is a line missed?
+- c) 5 random lines of each of the deck's 10 most used reasons
+- d) 10 random lines
+- e) up to 10 cards with no line, beside 10 random cards of the deck: is a line missed?
 - f) the deck's special cards: all their lines
 
 **How to work (fast, few tokens):**
@@ -50,6 +52,12 @@ Each game gets two checks. Both scripts print a card's text only the first time,
 Everything the checks print is read; if something was not read, say so plainly.
 
 ## Open (seen, not fixed)
+- Stormbound, round 1 (31 Oct 2026): read part a of the whole-game check only (the 10 cards with most partners). Not read yet:
+  parts b-f of the whole-game check, and the whole deck check. Fixed: Treasurous Bosuns drew "any card" (274 lines),
+  Sparkly Kitties' Confuse on my own unit (154), Timber Alchemists taking statuses from every unit (210); cases lk71-lk74.
+  Found, not fixed: Clap of Thunder wants EMPTY hand spaces, but cards that fill the hand are linked to it;
+  Spellbinder Zhevana's kills come from its own damage, but every strength giver "helps my units kill" for it;
+  Mystwives needs a stronger friendly unit, and every unit is linked as "a unit it asks for" (a stat number is no need).
 - Into the Breach: pilots now have no lines. Kaptain (31 Oct 2026): a pilot is like an item a mech carries; it can move to
   any mech, and a mech can have none. So a pilot's effect on its mech can link to the weapons a mech carries (Bethany Jones'
   starting Shield keeps Cryo-Launcher's freeze off; Isaac Jones' extra Reset Turn feeds Adam). Not built yet.
