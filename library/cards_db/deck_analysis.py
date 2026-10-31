@@ -19,6 +19,7 @@ DECK_RULES = {  # the games' own deck-building rules (not card data; sources in 
     'into_the_breach': {'factions': None, 'neutral': (), 'never_category': ('terrain',)},
 }
 _ACTS = {}
+_CARD = {}  # game -> id -> (regions, category)
 
 
 def card_acts(c, game):
@@ -65,7 +66,9 @@ def by_cost(name, category, cost_text, maker_acts):
 def can_share(c, game, a, b):
     """True when cards a and b (ids) can be in one deck or run together, by the game's own deck rule"""
     rule = DECK_RULES[game]
-    (ra, ka), (rb, kb) = [c.execute('select coalesce(regions, ""), coalesce(category, "") from card where id=?', (i,)).fetchone() for i in (a, b)]
+    if game not in _CARD:
+        _CARD[game] = {i: (r, k) for i, r, k in c.execute('select id, coalesce(regions, ""), coalesce(category, "") from card where game=?', (game,))}
+    (ra, ka), (rb, kb) = _CARD[game][a], _CARD[game][b]
     fa, fb = ({r for r in x.split(';') if r} for x in (ra, rb))
     if (fa | fb) & set(rule.get('never', ())) or {ka, kb} & set(rule.get('never_category', ())): return False
     if ka == kb and ka in rule.get('one_of', ()) and a != b: return False

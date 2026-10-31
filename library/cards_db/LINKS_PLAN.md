@@ -54,7 +54,7 @@ card's `card.regions` (several joined by ";"). Write `can_share(c, game, a, b)` 
 game that must share and 5 that must not, checked by a small test at the end of links.py.
 Report: each game's rule in one line, with its source.
 
-## Step 2. Build links.sqlite
+## Step 2. Build links.sqlite (done 31 Oct: links.py, in run.py; all games 4 minutes, 116 MB)
 links.py, for each game:
 1. The cards a player owns: `select id from card where game=? and is_keyword=0 and is_stub=0 and coalesce(category,'')
    not in ('game_rule','boss','monster','event','modifier','tribe')`. Print 10 random names per game and check them.

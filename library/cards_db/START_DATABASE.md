@@ -79,7 +79,7 @@ questions first and wait. Never invent rules or mechanics; mark suggestions as y
 | Decks | decks.tsv, cases/decks.tsv; pages network.html (network_page.py) |
 | Per-game review records (needed by the build) | deck_read_<game>.md |
 | Questions | ask.py, mechanics.py, connections.py, deck_analysis.py; START_QUESTIONS.md |
-| The planned line table (next work) | LINKS_PLAN.md, QUESTION_BANK.md |
+| The planned line table (next work) | LINKS_PLAN.md, QUESTION_BANK.md; links.py -> links.sqlite (not in git) |
 | Each game's rules, terms, real-world cases | library/games/<game>.md |
 
 ## Every check and test, and when it runs
@@ -134,8 +134,8 @@ Read: any FAILED line, and the audit lists. After a change to network.py only: `
   (Fealty); Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain).
 
 ## Open work, in Kaptain's order
-1. The line table for design questions: LINKS_PLAN.md, step by step, each step reported to Kaptain and approved. Step 1
-   (deck rules) done; next: step 2, once Kaptain approves step 1.
+1. The line table for design questions: LINKS_PLAN.md, step by step, each step reported to Kaptain and approved. Steps 1
+   (deck rules) and 2 (links.py writes links.sqlite) done; next: step 3, once Kaptain approves step 2.
    Kaptain's first message to that chat: "Read library/cards_db/START_DATABASE.md and LINKS_PLAN.md and do step 1."
 
 ## When you finish
