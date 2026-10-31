@@ -1,6 +1,8 @@
-"""The check of links.sqlite for one game (LINKS_PLAN.md step 3.2, Kaptain 31 Oct 2026), both card texts beside each line:
-  a) the 20 cards with the most partners (a rule that fires for every card: START_DATABASE.md L1, L2)
-  b) the 20 cards with the least partners, each with 15 random cards of a deck it is in: should one be linked?
+"""The check of links.sqlite for one game (LINKS_PLAN.md step 3.2, Kaptain 31 Oct 2026). A card's text is printed the first
+time the card appears, later only its name (read the text where it first stands); lines of one card with one reason are one
+group (judge the reason once, it holds for every card of the group):
+  a) the 30 cards with the most partners, all their lines grouped by reason (a rule that fires for every card: L1, L2)
+  b) the 30 cards with the least partners, all their lines, each with 15 random cards of a deck it is in: should one be linked?
   c) 5 random lines of each of the 20 most used phrases
   d) 30 random lines
   e) 20 cards with no partner, each with 15 random cards of a deck it is in: should one be linked?
@@ -20,7 +22,11 @@ def main():
     c = sqlite3.connect(os.path.join(HERE, 'cards.sqlite')); c.execute(f"attach database '{os.path.join(HERE, 'links.sqlite')}' as L")
     lib = source.lib(); R = random.Random(game)
     nm = {i: n for i, n in c.execute('select id, name from card where game=?', (game,))}
-    txt = lambda i: ' '.join(((lib.execute('select text from entities where id=?', (i,)).fetchone() or [''])[0] or '').split()) or '(no text)'
+    full_txt = lambda i: ' '.join(((lib.execute('select text from entities where id=?', (i,)).fetchone() or [''])[0] or '').split()) or '(no text)'
+    told = set()
+    def txt(i):  # the text once; after that the name says it
+        if i in told: return '(text above)'
+        told.add(i); return full_txt(i)
     owned = sorted(links.owned(c, game))
     rows = c.execute('select l.a, l.b, p.kind, p.text from L.link l join L.phrase p on p.id=l.phrase where l.game=?', (game,)).fetchall()
     by_pair = collections.defaultdict(list)
@@ -50,13 +56,21 @@ def main():
 
     print(f'=== {game}: {len(owned)} cards, {len(by_pair)} pairs, {len(rows)} rows')
     linked = sorted((i for i in owned if partners[i]), key=lambda i: (-len(partners[i]), nm[i]))
-    print('-- a) most partners: is each a real reason, or one that fires for every card?')
-    for i in linked[:20]:
-        card(i); outs = [b for (a, b) in by_pair if a == i]; ins = [a for (a, b) in by_pair if b == i]
-        for b in R.sample(outs, min(3, len(outs))): line(i, b, False)
-        for a in R.sample(ins, min(3, len(ins))): line(a, i, False)
-    print('-- b) least partners, with 15 cards of a deck it is in: should one be linked?')
-    for i in linked[::-1][:20]:
+    def groups(i):  # every line of the card, one row per direction and reason, with the partners' names
+        g = collections.defaultdict(list)
+        for (a, b), ls in by_pair.items():
+            if i in (a, b) and (nm[a], nm[b]) not in seen:  # a line checked before (--record) is not shown again
+                for k, t in ls: g[('->' if a == i else '<-', k, t)].append(b if a == i else a)
+        for (d, k, t), os_ in sorted(g.items(), key=lambda x: -len(x[1])):
+            names = ', '.join(nm[o] for o in os_[:6]) + (f' and {len(os_) - 6} more' if len(os_) > 6 else '')
+            print(f"  {d} {k}: {t.replace('{A}', 'A').replace('{B}', 'B')} ({len(os_)}): {names}")
+            for o in os_:
+                p_ = (nm[i], nm[o]) if d == '->' else (nm[o], nm[i])
+                if p_ not in seen: seen.add(p_); shown.append(p_)
+    print('-- a) the 30 cards with most partners: is each reason real, or one that fires for every card?')
+    for i in linked[:30]: card(i); groups(i)
+    print('-- b) the 30 cards with least partners, with 15 cards of a deck it is in: should one be linked?')
+    for i in linked[::-1][:30]:
         card(i)
         for a, b in [p for p in by_pair if i in p]: line(a, b, False)
         compare(i)
@@ -83,7 +97,7 @@ def main():
         print(f'= {deck}')
         for i in sp:
             card(i)
-            for a, b in [p for p in by_pair if i in p and (p[0] in ids and p[1] in ids)]: line(a, b)
+            for a, b in [p for p in by_pair if i in p and (p[0] in ids and p[1] in ids)]: line(a, b, False)
     if record:
         with open(CHECKED, 'a', encoding='utf-8') as f:
             for a, b in shown: f.write(f'{game}\t{a}\t{b}\n')

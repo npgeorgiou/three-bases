@@ -1683,6 +1683,15 @@ def actor_help_lines(c, game, nodes):
         why = 'makes it cheaper' if act == 'cost_change' and '=-' in (ps or '') else ('help ' + stats_said(ps))[5:] if act == 'stat_change' else 'gives it a keyword'
         for t in takers:
             if t in cards: out[(a, t)].append(('boosts', 1.0 / len(takers), why + f' (when it is {ev.replace("_", " ")} for it)'))
+    # a card that is sacrificed and does not die (Many Lives: Cat) pays the Blood of every card that needs sacrifices, again and
+    # again (Kaptain 31 Oct 2026: Cat -> Urayuli)
+    for (a,) in c.execute(f"""select distinct d.card from flat_do d join flat_when w on w.card=d.card and w.ability=d.ability where
+            d.act='cant' and d.on_pick='self' and d.params like '%event=dies%' and w.event='sacrificed' and w.obj_pick='self'
+            and d.origin in ('own','has_keyword') and d.card in ({marks})""", L).fetchall():
+        takers = {t for (t,) in c.execute(f"""select distinct card from flat_ref where role='condition' and happening='sacrificed'
+                  and coalesce(side,'') in ('mine','any','') and coalesce(pick,'') not in ('self','actor_self') and card in ({marks})""", L)} - {a}
+        for t in takers:
+            if t in cards: out[(a, t)].append(('boosts', 1.0 / len(takers), 'pays for it again and again: it is sacrificed and does not die'))
     return out
 
 

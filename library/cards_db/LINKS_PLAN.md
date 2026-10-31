@@ -73,61 +73,55 @@ Report: the numbers.
    (b) "draws a card of kind X" is shared among the X cards of the list, so phrases match but weights do not;
    (c) Into the Breach "carries" lines come from the deck's order (a mech, then what it carries) and are not card links:
    the table has none. Every other difference is a bug: find its cause.
-2. **links_audit.py <game>** (Kaptain 31 Oct 2026; write it like deck_audit.py, both card texts beside each line):
-   a) the 20 cards with the most partners (many partners usually means a rule that fires for every card: START_DATABASE.md
-      L1, L2);
-   b) the 20 cards with the least partners, also compared with 15 random cards on the deck, to see if links should be
-      existing and are missed;
-   c) 5 random lines of each of the 20 most used phrases;
-   d) 30 random lines, to find wrong links;
-   e) the 20 cards with no partner, compared with 15 random cards on the deck, to see if links should be existing and are
-      missed;
-   f) for decks that have special cards like Champion, Heroes, Legends, etc., check all their links;
-   g) don't re-check links that are checked by previous steps.
-   State (31 Oct 2026, end of the second step-3 chat):
+2. **links_audit.py <game>** (Kaptain 31 Oct 2026), the table check, and **deck_audit.py <game>**, the deck check. Both print a
+   card's text the first time the card appears and later only its name, and a line already read is not printed again.
+   links_audit prints:
+   a) the 30 cards with the most partners, every line of each, grouped by direction and reason (one row: the reason, how
+      many cards, their names): many partners usually means a rule that fires for every card (START_DATABASE.md L1, L2);
+      a reason judged once holds for the whole group;
+   b) the 30 cards with the least partners, all their lines, each beside 15 random cards of a deck it is in: is a line missed?
+   c) 5 random lines of each of the 20 most used reasons;
+   d) 30 random lines;
+   e) up to 20 cards with no partner, each beside 15 random cards of a deck it is in;
+   f) the special cards of every deck (champions, heroes, Generals, legends): all their lines inside the deck;
+   g) lines in cases/links_checked.tsv (read before, written by `links_audit.py <game> --record`) are not shown again, by
+      either script.
+
+   **How a game is checked (the way to work; Kaptain 31 Oct 2026: fast, few tokens, a small context).** Scripts cost nothing;
+   what costs is reading. So read each thing once, judge a reason once for its whole group, and in later rounds read only what
+   a fix changed.
+   - Round 1: `links.py <game>` (seconds; Runeterra about 9 minutes), `dump_lines.py --table /tmp/tb0.tsv`,
+     `dump_lines.py /tmp/d0.tsv` (all games' decks, under a minute), `links_audit.py <game> > /tmp/a.txt`,
+     `deck_audit.py <game> > /tmp/d.txt`. Read ALL of both, in parts of about 150 lines, as a player, against the texts.
+     Write every error down in one sentence (the wrong thinking); read on, do not fix yet.
+   - Fix: each cause once, for every game, in network.py or by a fixes/ script; cases for each (network.tsv, links.tsv).
+     Then one rebuild of the game (`links.py <game>`), `dump_lines.py --table /tmp/tb1.tsv`, `dump_lines.py /tmp/d1.tsv`.
+   - Read what changed: `dump_lines.py --diff /tmp/tb0.tsv /tmp/tb1.tsv` (this game's table) and `--diff /tmp/d0.tsv
+     /tmp/d1.tsv` (every game's decks: a fix for one game changes others; their tables are read in their own turn).
+     Every gone and new reason group, against the texts. Then `links_audit.py <game> --record` (marks what round 1 showed
+     as read).
+   - A round is: rerun both audits, which now show only lines not read before (new lines from the fixes, new samples),
+     read all of it, fix. Several rounds are needed because a fix makes lines nobody has read yet (GR1ZZ got 36 when its
+     forms were fixed) and can uncover an error the old lines hid. The game is done when a round finds no error.
+   - End of the game: `check_all.py --no-load` (about 3 minutes, every game's cases), commit, push.
+   - Size (31 Oct 2026, round 1 of a game): Inscryption about 65 KB of output, Into the Breach about 255 KB; Runeterra will be
+     far bigger. One chat holds about 300 KB of reading, so without agents a chat checks one to three games.
+   - Faster, all games in one chat (needs Kaptain's yes): one agent per game reads that game's audit output and returns
+     only the lines it finds wrong or missing, each with both texts and its reason; the main chat judges each, fixes the
+     causes for every game and does the rebuilds and diffs. Only the main chat changes files.
+   State (31 Oct 2026, end of the third step-3 chat):
    - Kaptain's four decisions are applied, each with cases (cases/links.tsv, checked at the end of links.py; cases/share.tsv):
      1. my "can damage it / can kill it" on my own card only when that card gains (network.HARM_GAIN, self_gains); 2. Curious
      Egg: a Power or Health number is no need (L1), its tribes are; 3. links.owned(): Inscryption's "Non-obtainable / Boss
      exclusive" lists (wiki Cards page), and in every game a no-rarity card only bosses or monsters make (Duelyst: 7 boss
      spells, Magma); 4. the Finale is two decks, Finale Grimora and Finale Magnificus (wiki Finale); Leshy's part is Act I.
-   - Inscryption round 1 of the a-g check is read whole (links_audit a-f, deck_audit of all 18 decks). Causes found and fixed
-     for every game, each with cases: resource-blind "pays for it" (Hoggy Bank's Bones paid Energy cards; spell mana paid
-     units); an effect's sacrifice paid Blood (Master Bleene); my self-mover fed "an enemy moves" (Sprinter -> Sentry); keyword
-     triggers on deaths were no need (Scavenger, Corpse Eater, Double Death); a card made by its name had no line (Skinning
-     Knife -> Pelts, Solitude -> Husks); "the creature inside" read as any unit (Frozen Opossum -> Ants); a keyword's copy in
-     hand did not fill the hand (Fecundity -> Hand Tentacle); Inscryption terrain cards are creatures (Gem Animator -> Mox);
-     Vessels are Act III only; "whenever your General attacks" fed by every General's attack (L2; ndu03 rewritten).
-   - All counts after round 1: dump_lines.py --diff, deck lines and table, read whole; links_check 0 differences except the
-     expected (a); zero checks 0; cases pass (Stormbound csb09-11, csb13 still open; Runeterra n56 stale).
-   - Seen, not fixed: Runeterra has Molten Shield twice (a plain and a "(created)" entry).
-   - Inscryption round 2 read whole (links_audit, deck_audit); 7 causes fixed for every game, with cases (links.tsv lk36-lk50,
-     network.tsv n295-n299): a gain on the card it is sacrificed for reached every unit as "more power" (Mealworm -> Bat), and
-     a stat said twice; "within a circuit" reached the Conduit cards that close it; a unit made on the enemy side was mine
-     (Cuckoo's Broken Egg, Stormbound Dubious Hags' enemy Raven); a keyword's one-target hit fed "an enemy dies" (Sharp
-     Quills, L11); "refill your mana" paid for nothing (Extra Battery, Runeterra The Forge Of Tomorrow); two forms that turn
-     into each other were both "only made" (GR1ZZ, Transformer); "perishes by combat" was fed by effect kills (Hammer -> Corpse
-     Maggots); "Consumable Items" (a wiki page) was a card. Round 3: the audits' new lines read, nothing found. Inscryption done.
-   - Open for Kaptain: Many Lives (Cat: "does not die when sacrificed") pays Blood again and again; today no line.
-   - NOT done: the other 7 games (links_audit + deck_audit for every deck), in the order below.
-   Pace (Kaptain 31 Oct 2026: the last chat spent 30 minutes and checked only Inscryption; most time went to rebuilds):
-   - Rebuild only the game being checked: `links.py <game>` (seconds; Runeterra alone takes about 9 minutes, so rebuild it only
-     when Runeterra is the game). `dump_lines.py --table` before and after, `--diff` on that game's rows.
-   - Read the whole game's output first and write every error down; then fix all causes, then one rebuild. Not a rebuild per fix.
-   - After a fix: `cases/run.py <game>` for the games the fix touches; `check_all.py --no-load` (about 10 minutes) once, at
-     the end of a game, not after every fix.
-   - Order: Into the Breach, Monster Train, Stormbound, Slay the Spire, Faeria, Duelyst, Runeterra last.
-     Commit and push after each game, so a chat that ends loses nothing.
-   - Rule 6 still holds: all output of links_audit and deck_audit is read, nothing sampled.
-   - Agents (one game each) only if Kaptain says yes; ask him first.
-   How to do the a-g check (Kaptain: "this check pretty much checks every link in the many decks we have"):
-   - Every game, one at a time: `links_audit.py <game> > /tmp/a.txt`, plus `deck_audit.py <game>` for every deck of the game.
-     Read ALL of both outputs, in parts of about 150 lines, every line against both card texts as a player. Big output is
-     no reason to skip or sample less: read it in more parts and pace the work.
-   - Write each error down in one sentence (the wrong thinking), find the same thinking in every game, fix it once in
-     network.py (or the readings by a fixes/ script), add network.tsv cases, then process C (dump before and after, read
-     every gone and new group), `check_all.py --no-load`, `links.py`, `links_check.py`. Record what was read with --record.
-   - Repeat the round until a whole round finds no error. Only then is step 3 done; report per cause: what was wrong, the
-     fix, counts per game.
+     5. Many Lives (Cat) pays Blood again and again: "pays for it again and again" to every Blood card (Cat -> Urayuli).
+   - Inscryption done (rounds 1-3; what round 1 and 2 fixed: git log). Its read lines are in cases/links_checked.tsv.
+   - Seen, not fixed: Runeterra has Molten Shield twice (a plain and a "(created)" entry); Stormbound cases csb09-11, csb13
+     fail; Runeterra n56 and Slay the Spire nst36 are stale must-not cases (rewrite them in that game's turn).
+   - Next: Into the Breach round 1 (links.sqlite is not in git: `links.py into_the_breach` first), then Monster Train, Stormbound, Slay the Spire,
+     Faeria, Duelyst, Runeterra last. Commit and push after each game.
+   - Rule 6 holds: every line the audits print is read, nothing sampled; say plainly what was not read.
 3. **Zero checks** (a query each, must give 0): lines between two cards that cannot share a deck; lines with an end that
    is not a card a player owns.
 4. Every wrong line: name the cause in one sentence (the thinking, not the card), fix it in network.py for every game,

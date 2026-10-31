@@ -22,7 +22,7 @@ questions first and wait. Never invent rules or mechanics; mark suggestions as y
    comes back broken.
 3. **Dump all lines before and after** (`dump_lines.py`), read EVERY gone and new reason group in every game.
 4. **One rebuild per round**: `check_all.py <game>` loads all games once (about 25 minutes). Never `run.py` once per game.
-   After a change to network.py only: `check_all.py --no-load` (minutes).
+   After a change to network.py only: `check_all.py --no-load` (about 3 minutes).
 5. **Read cards like a player**: what does it need, who gives it that, what does it make, what does that card do.
 6. **A check is done only when all its output was read.** Never sample less, skip a game or hand over because the output
    is long: read it in parts and pace the work. Say plainly what was not checked; never let a partial check look done.
@@ -137,8 +137,8 @@ Read: any FAILED line, and the audit lists. After a change to network.py only: `
 
 ## Open work, in Kaptain's order
 1. The line table for design questions: LINKS_PLAN.md, step by step, each step reported to Kaptain and approved. Steps 1
-   and 2 done; step 3: Kaptain's four decisions applied and Inscryption round 1 checked (LINKS_PLAN.md step 3 "State"); next:
-   Inscryption round 2, then the other seven games, one at a time. Table cases: cases/links.tsv (run by links.py).
+   and 2 done; step 3: Inscryption done; next: Into the Breach, then the other six games, one at a time, the way LINKS_PLAN.md
+   step 3 "How a game is checked" says. Table cases: cases/links.tsv (run by links.py).
 
 ## When you finish
 Commit and push every finished step. Update "State" and "Open work" above (keep them short: no history; git log has it).
