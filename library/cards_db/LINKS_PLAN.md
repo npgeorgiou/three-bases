@@ -19,22 +19,20 @@ Order of the games left: Monster Train, Slay the Spire, Faeria, Duelyst, Runeter
 Each game gets two checks. Both scripts print a card's text only the first time, and skip lines read before
 (cases/links_checked.tsv) or already printed.
 
-Limits are 5 (Kaptain, 31 Oct 2026: fewer tokens).
-
 **Check 1, the whole game:** `links_audit.py <game> > /tmp/a.txt`
-- a) the 5 cards with the most partners, all their lines (many partners usually means a rule that fires for every card: L1, L2)
-- b) the 5 cards with the fewest partners, all their lines, beside 5 random cards of a deck: is a line missed?
-- c) 5 random lines of each of the 5 most used reasons
-- d) 5 random lines
-- e) up to 5 cards with no partner, beside 5 random cards of a deck: is a line missed?
+- a) the 30 cards with the most partners, all their lines (many partners usually means a rule that fires for every card: L1, L2)
+- b) the 30 cards with the fewest partners, all their lines, beside 15 random cards of a deck: is a line missed?
+- c) 5 random lines of each of the 20 most used reasons
+- d) 30 random lines
+- e) up to 20 cards with no partner, beside 15 random cards of a deck: is a line missed?
 - f) the special cards of every deck (champions, heroes, Generals, legends): all their lines
 
 **Check 2, every deck:** `deck_audit.py <game> > /tmp/d.txt`, for each deck of the game:
-- a) the 5 cards with the most lines, all their lines
-- b) the 5 cards with the fewest lines, all their lines, beside 5 random cards of the deck: is a line missed?
-- c) 5 random lines of each of the deck's 5 most used reasons
-- d) 5 random lines
-- e) up to 5 cards with no line, beside 5 random cards of the deck: is a line missed?
+- a) the 20 cards with the most lines, all their lines
+- b) the 20 cards with the fewest lines, all their lines, beside 15 random cards of the deck: is a line missed?
+- c) 5 random lines of each of the deck's 20 most used reasons
+- d) 30 random lines
+- e) up to 20 cards with no line, beside 15 random cards of the deck: is a line missed?
 - f) the deck's special cards: all their lines
 
 **How to work (fast, few tokens):**
@@ -50,6 +48,10 @@ Limits are 5 (Kaptain, 31 Oct 2026: fewer tokens).
    until a round finds no error.
 6. `check_all.py --no-load` (3 minutes, all games' tests), commit, push, report.
 Everything the checks print is read; if something was not read, say so plainly.
+**Tests:** add a test (cases/links.tsv or cases/network.tsv) for every fixed line you are ABSOLUTELY CERTAIN about from
+both card texts: one that must be gone, and one real line of the same cards that must stay. Nothing you are unsure of.
+**Report:** after every fix, tell Kaptain how many lines it removed (and added) in each game, from the table diff and the
+deck diff (`dump_lines.py --diff`).
 **Fix every error the checks find in the same chat, for every game, before you stop** (Kaptain, 31 Oct 2026). Do not leave
 found errors as notes for the next chat. If the tokens run out, stop reading new output and fix what you found first.
 

@@ -77,3 +77,11 @@ lk75	stormbound	Freebooters	Clap of Thunder	none	fills your hand	Claude 31 Oct 2
 lk76	stormbound	Treasurous Bosuns	Lucky Charmers	none	fills your hand	Claude 31 Oct 2026: Lucky Charmers counts Pirates in hand; Bosuns draws any card
 lk77	stormbound	Clap of Thunder	Spellbinder Zhevana	none	helps my units kill	Claude 31 Oct 2026: Zhevana counts the units its own damage destroys
 lk78	stormbound	Westwind Sailors	Mystwives	none	asks for	Claude 31 Oct 2026: "a stronger friendly unit" can be any unit; a stat number is no need
+lk79	stormbound	Malicious Discard	Clap of Thunder	line	empties your hand	Claude 31 Oct 2026: discarding makes the empty hand spaces Clap of Thunder counts
+lk80	stormbound	Freebooters	Lucky Charmers	line	Pirate	Claude 31 Oct 2026: Lucky Charmers counts Pirates; Freebooters is one
+lk81	stormbound	Brood Sages	Timber Alchemists	line	Poison	Claude 31 Oct 2026: Timber Alchemists gains for each status it takes; Brood Sages gives Poison
+lk82	stormbound	Frosthexers	Spellbinder Zhevana	line	Freeze	Claude 31 Oct 2026: Zhevana damages frozen units; Frosthexers freezes them
+lk83	stormbound	Moment’s Peace	Mystwives	line	strength	Claude 31 Oct 2026: a strength gift still helps Mystwives
+lk84	stormbound	Treasurous Bosuns	Strict Quartermasters	line	Pirate	Claude 31 Oct 2026: Bosuns is a Pirate; its own text lines stay
+lk85	faeria	Message in a Bottle	Triton Stargazer	none	fills your hand	Claude 31 Oct 2026: Triton Stargazer checks the cards it draws itself for a Treasure Map
+lk86	runeterra	Trifarian Assessor	LeBlanc (level 2)	none	fills your hand	Claude 31 Oct 2026: LeBlanc wants a Mirror Image in hand; a random draw is not one

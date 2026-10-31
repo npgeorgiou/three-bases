@@ -1,11 +1,11 @@
 """The check of links.sqlite for one game (LINKS_PLAN.md step 3.2, Kaptain 31 Oct 2026). A card's text is printed the first
 time the card appears, later only its name (read the text where it first stands); lines of one card with one reason are one
 group (judge the reason once, it holds for every card of the group):
-  a) the 5 cards with the most partners, all their lines grouped by reason (a rule that fires for every card: L1, L2)
-  b) the 5 cards with the least partners, all their lines, each with 5 random cards of a deck it is in: should one be linked?
-  c) 5 random lines of each of the 5 most used phrases
-  d) 5 random lines
-  e) 5 cards with no partner, each with 5 random cards of a deck it is in: should one be linked?
+  a) the 30 cards with the most partners, all their lines grouped by reason (a rule that fires for every card: L1, L2)
+  b) the 30 cards with the least partners, all their lines, each with 15 random cards of a deck it is in: should one be linked?
+  c) 5 random lines of each of the 20 most used phrases
+  d) 30 random lines
+  e) 20 cards with no partner, each with 15 random cards of a deck it is in: should one be linked?
   f) the special cards of every deck (champions, heroes, Generals, legends): all their lines inside the deck
 Lines already in cases/links_checked.tsv are not shown again (g); --record adds every shown line to it.
 Read every printed line against both texts as a player. Each wrong or missing line is fixed by its cause, for every game.
@@ -49,10 +49,10 @@ def main():
     def card(i):
         print(f"{nm[i]} ({len(partners[i])} partners): {txt(i)}")
 
-    def compare(i):  # 5 cards of a deck it is in (else of the game, that can share a deck with it)
+    def compare(i):  # 15 cards of a deck it is in (else of the game, that can share a deck with it)
         pool = next((ids for _, ids in deck_ids if i in ids), None)
         pool = [x for x in (pool or owned) if x != i and x not in partners[i] and deck_analysis.can_share(c, game, i, x)]
-        for x in R.sample(pool, min(5, len(pool))): print(f"    ? {nm[x]}: {txt(x)}")
+        for x in R.sample(pool, min(15, len(pool))): print(f"    ? {nm[x]}: {txt(x)}")
 
     print(f'=== {game}: {len(owned)} cards, {len(by_pair)} pairs, {len(rows)} rows')
     linked = sorted((i for i in owned if partners[i]), key=lambda i: (-len(partners[i]), nm[i]))
@@ -67,29 +67,29 @@ def main():
             for o in os_:
                 p_ = (nm[i], nm[o]) if d == '->' else (nm[o], nm[i])
                 if p_ not in seen: seen.add(p_); shown.append(p_)
-    print('-- a) the 5 cards with most partners: is each reason real, or one that fires for every card?')
-    for i in linked[:5]: card(i); groups(i)
-    print('-- b) the 5 cards with least partners, with 5 cards of a deck it is in: should one be linked?')
-    for i in linked[::-1][:5]:
+    print('-- a) the 30 cards with most partners: is each reason real, or one that fires for every card?')
+    for i in linked[:30]: card(i); groups(i)
+    print('-- b) the 30 cards with least partners, with 15 cards of a deck it is in: should one be linked?')
+    for i in linked[::-1][:30]:
         card(i)
         for a, b in [p for p in by_pair if i in p]: line(a, b, False)
         compare(i)
-    print('-- c) 5 random lines of each of the 5 most used reasons')
+    print('-- c) 5 random lines of each of the 20 most used reasons')
     per = collections.defaultdict(list)
     for (a, b), ls in by_pair.items():
         for k, t in ls: per[(k, t)].append((a, b))
-    for (k, t), ps in sorted(per.items(), key=lambda x: -len(x[1]))[:5]:
+    for (k, t), ps in sorted(per.items(), key=lambda x: -len(x[1]))[:20]:
         print(f'- {k}: {t} ({len(ps)} lines)')
         for a, b in R.sample(ps, min(5, len(ps))): line(a, b)
-    print('-- d) 5 random lines')
+    print('-- d) 30 random lines')
     n = 0
     for a, b in R.sample(list(by_pair), len(by_pair)):
         n += line(a, b)
-        if n == 5: break
-    print('-- e) cards with no partner, with 5 cards of a deck it is in: should one be linked?')
+        if n == 30: break
+    print('-- e) cards with no partner, with 15 cards of a deck it is in: should one be linked?')
     lone = [i for i in owned if not partners[i]]
     print(f'{len(lone)} cards have no partner')
-    for i in R.sample(lone, min(5, len(lone))): card(i); compare(i)
+    for i in R.sample(lone, min(20, len(lone))): card(i); compare(i)
     print('-- f) special cards of each deck: all their lines inside the deck')
     for deck, ids in deck_ids:
         sp = [i for i in ids if c.execute('select 1 from card where id=? and (category in (?, ?) or rarity in (?, ?, ?))', (i,) + SPECIAL_CAT + SPECIAL_RARITY).fetchone()]

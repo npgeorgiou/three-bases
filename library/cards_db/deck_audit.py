@@ -1,9 +1,9 @@
 """The deck check (LINKS_PLAN.md step 3, check 2; Kaptain 31 Oct 2026). For each deck of the game it prints:
-  a) the 5 cards with the most lines, every line in or out (many lines usually means a rule that fires for every card: L1, L2)
-  b) the 5 cards with the fewest lines (at least one), every line, beside 5 random cards of the deck: is a line missed?
-  c) 5 random lines of each of the deck's 5 most used reasons
-  d) 5 random lines
-  e) up to 5 cards with no line, beside 5 random cards of the deck: is a line missed?
+  a) the 20 cards with the most lines, every line in or out (many lines usually means a rule that fires for every card: L1, L2)
+  b) the 20 cards with the fewest lines (at least one), every line, beside 15 random cards of the deck: is a line missed?
+  c) 5 random lines of each of the deck's 20 most used reasons
+  d) 30 random lines
+  e) up to 20 cards with no line, beside 15 random cards of the deck: is a line missed?
   f) the deck's special cards (champions, heroes, Generals, legends): every line
 A line printed once (in any deck, or read before: cases/links_checked.tsv) is not printed again. A card's text is printed the
 first time the card appears, later "(text above)". Read every printed line against both texts as a player.
@@ -45,24 +45,24 @@ def main():
                 if i in (l['from'], l['to']): show(l)
         def beside(group):
             others = [i for i in nm if i not in group]
-            for i in R.sample(others, min(5, len(others))): print(f"    ? {nm[i]}: {tx(i)}")
+            for i in R.sample(others, min(15, len(others))): print(f"    ? {nm[i]}: {tx(i)}")
         deg = {i: sum(1 for l in d['lines'] if i in (l['from'], l['to'])) for i in nm}
         print(f"=== {r['game']} / {r['deck']}: {len(nm)} cards, {len(d['lines'])} lines")
-        print('-- a) the 5 cards with the most lines')
-        for i in sorted(nm, key=lambda i: (-deg[i], nm[i]))[:5]: card_lines(i)
-        print('-- b) the 5 cards with the fewest lines, beside 5 random cards of the deck: is a line missed?')
-        low = sorted((i for i in nm if deg[i]), key=lambda i: (deg[i], nm[i]))[:5]
+        print('-- a) the 20 cards with the most lines')
+        for i in sorted(nm, key=lambda i: (-deg[i], nm[i]))[:20]: card_lines(i)
+        print('-- b) the 20 cards with the fewest lines, beside 15 random cards of the deck: is a line missed?')
+        low = sorted((i for i in nm if deg[i]), key=lambda i: (deg[i], nm[i]))[:20]
         for i in low: card_lines(i)
         beside(low)
-        print("-- c) 5 random lines of each of the deck's 5 most used reasons")
+        print("-- c) 5 random lines of each of the deck's 20 most used reasons")
         by = collections.defaultdict(list)
         for l in d['lines']: by[l['why']].append(l)
-        for why, ls in sorted(by.items(), key=lambda x: -len(x[1]))[:5]:
+        for why, ls in sorted(by.items(), key=lambda x: -len(x[1]))[:20]:
             for l in R.sample(ls, min(5, len(ls))): show(l)
-        print('-- d) 5 random lines')
-        for l in R.sample(d['lines'], min(5, len(d['lines']))): show(l)
-        none = sorted(i for i in nm if not deg[i])[:5]
-        print(f'-- e) {len(none)} cards with no line, beside 5 random cards of the deck: is a line missed?')
+        print('-- d) 30 random lines')
+        for l in R.sample(d['lines'], min(30, len(d['lines']))): show(l)
+        none = sorted(i for i in nm if not deg[i])[:20]
+        print(f'-- e) {len(none)} cards with no line, beside 15 random cards of the deck: is a line missed?')
         for i in none: print(f"{nm[i]}: {tx(i)}")
         if none: beside(none)
         print('-- f) special cards: every line')
