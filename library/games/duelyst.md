@@ -27,6 +27,12 @@ each line names its source. Checked 29 Oct 2026.*
 - Bloodbound Spell: each General's own spell; it counts down each turn until it refreshes (tutorial lesson 4).
 - Effects that only target minions do not apply to Generals (medium_tip_19).
 
+## Deck rule (deck_analysis.DECK_RULES, can_share; 31 Oct 2026)
+A deck is 40 cards: one General and 39 cards from that General's faction plus Neutral, at most 3 copies of a card
+(bandainamcoent.com/news/new-player-guide-getting-started, 3 Nov 2017). So a Lyonar card and a Songhai card never share a
+deck, and two Generals never do. Tutorial cards and the Boss battle cards (Living Flame, Holiday Gift) are no deck cards:
+boss battles are fights against computer bosses with their own decks (mmobomb.com/news/duelyst-testing-boss-battles-taking-daily-challenges-offline).
+
 ## Sources and notes
 
 Sources:

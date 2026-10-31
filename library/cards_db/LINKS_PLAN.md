@@ -45,7 +45,7 @@ names, replace the longer name first ("Zed (level 2)" before "Zed"). Store the p
 - **Cards a player owns**: cards that can be in a deck or a run. Not: Slay the Spire monsters and bosses, Into the
   Breach Vek, run events and modifiers, keywords, stub names, game-rule entries. No stored line has one of these at an end.
 
-## Step 1. Deck rules for all 8 games
+## Step 1. Deck rules for all 8 games (done 31 Oct: DECK_RULES, can_share, share_failures in deck_analysis.py; pairs in cases/share.tsv; sources under "Deck rule" in library/games/<game>.md)
 `deck_analysis.DECK_RULES` has Runeterra (2 regions) and Stormbound (1 faction + Neutral). Look up the other six in each
 game's own rules and cite the page in `library/games/<game>.md`: Duelyst, Faeria (how colours are limited), Slay the
 Spire (one character plus Colorless cards; Curses and Statuses are not build cards), Monster Train (a primary and an

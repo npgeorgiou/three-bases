@@ -18,6 +18,11 @@ One file per game: the game, its factions, the source summary, the mechanics (pa
 - Attacking: units are moved onto the battlefield and fight the defenders' blockers; an attacker that is not blocked strikes the
   opponent's Nexus (round FAQ). Win by bringing the enemy Nexus to 0.
 
+## Deck rule (deck_analysis.DECK_RULES, can_share; 31 Oct 2026)
+A deck is 40 cards of two regions; a Runeterra champion's Origin takes one of the two region slots: 2 origins,
+1 origin and 1 region, or 2 regions (support.riotgames.com/en-us/legends-of-runeterra/gameplay/runeterran-champions). So any
+two cards can share a deck.
+
 ## Sources and notes
 
 Sources:

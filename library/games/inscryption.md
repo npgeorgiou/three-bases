@@ -53,6 +53,14 @@ Side Deck (12407), Starter Deck (11826), Special Card Behaviours (12544).*
 Not written as game rules (they say nothing about which cards belong together): Energy refilling each turn, drawing from the
 side deck, placing on any empty space of one's own row.
 
+## Deck rule (deck_analysis.DECK_RULES, can_share; 31 Oct 2026)
+Each act builds its own deck. Act I: Leshy's run, from a starting deck of Leshy's and Grimora's card types
+(en.wikipedia.org/wiki/Inscryption); Act II: cards of all four Scrybes are collected and one deck may mix them (Wikipedia);
+Act III: P03's run. Which act a card is in: the wiki page categories (Act I, Act II, Act III, Finale; sources/
+inscryption_wiki_cards*.jsonl), plus the act a deck in decks.tsv names. Kaycee's Mod counts as Act I (Claude: it is the Act I
+run as its own mode). Two cards share a deck when they have an act in common; a card with no known act (100 cards, most of
+them made cards: Pelts, Vessels, Mox gems) shares with every card.
+
 ## Sources and notes
 
 Sources:

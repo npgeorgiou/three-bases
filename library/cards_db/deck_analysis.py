@@ -5,10 +5,64 @@ Usage (through ask.py): ask.py <game> analyze "<card>, <card>, ..." """
 import collections, os, re
 import mechanics
 
-DECK_RULES = {  # the games' own deck-building rules (not card data)
-    'runeterra': {'size': 40, 'copies': 3, 'factions': 2, 'neutral': None},
-    'stormbound': {'size': 12, 'copies': 1, 'factions': 1, 'neutral': 'Neutral'},
+DECK_RULES = {  # the games' own deck-building rules (not card data; sources in library/games/<game>.md "Deck rule")
+    # factions: how many factions one deck may hold (None: no limit); neutral: regions any deck may add;
+    # never: regions no deck holds; one_of: categories a deck holds one of; acts: a deck is built in one act
+    # (same_act: a mode played like that act)
+    'runeterra': {'size': 40, 'copies': 3, 'factions': 2, 'neutral': ()},
+    'stormbound': {'size': 12, 'copies': 1, 'factions': 1, 'neutral': ('Neutral',)},
+    'duelyst': {'size': 40, 'copies': 3, 'factions': 1, 'neutral': ('Neutral',), 'never': ('Tutorial', 'Boss'), 'one_of': ('leader',)},
+    'faeria': {'size': 30, 'copies': 3, 'factions': None, 'neutral': ()},
+    'sts1': {'factions': 1, 'neutral': ('Colorless', 'Curse')},
+    'monster_train': {'factions': 2, 'neutral': ('Clanless',), 'one_of': ('hero',)},
+    'inscryption': {'factions': None, 'neutral': (), 'acts': ('Act I', 'Act II', 'Act III', 'Finale'), 'same_act': {"Kaycee's Mod": 'Act I'}},
+    'into_the_breach': {'factions': None, 'neutral': (), 'never_category': ('terrain',)},
 }
+_ACTS = {}
+
+
+def card_acts(c, game):
+    """card id -> the acts it is found in: the wiki's categories, plus the act a deck of decks.tsv names; no act known: any"""
+    if game in _ACTS: return _ACTS[game]
+    import json
+    here = os.path.dirname(os.path.abspath(__file__)); by_name = collections.defaultdict(set)
+    same = DECK_RULES[game]['same_act']; acts = DECK_RULES[game]['acts'] + tuple(same)
+    for f in ('inscryption_wiki_cards.jsonl', 'inscryption_wiki_cards_more.jsonl'):
+        for line in open(os.path.join(here, '..', 'sources', f)):
+            d = json.loads(line); by_name[d['title'].lower()] |= {a for a in acts if a in d.get('cats', [])}
+    for f in ('decks.tsv', 'cases/decks.tsv'):
+        for row in open(os.path.join(here, f)):
+            p = row.rstrip('\n').split('\t'); g, deck, cards = (p[0], p[1], p[3]) if f == 'decks.tsv' else (p[1], p[2], p[3])
+            act = next((a for a in sorted(acts, key=len, reverse=True) if g == game and deck.startswith(a + ' ')), None)
+            if act:
+                for i in parse_deck(c, game, cards)[0]: by_name[mechanics.name(c, i).lower()].add(act)
+    _ACTS[game] = {i: {same.get(a, a) for a in by_name.get(n.lower(), ())} for i, n in c.execute('select id, name from card where game=?', (game,))}
+    return _ACTS[game]
+
+
+def can_share(c, game, a, b):
+    """True when cards a and b (ids) can be in one deck or run together, by the game's own deck rule"""
+    rule = DECK_RULES[game]
+    (ra, ka), (rb, kb) = [c.execute('select coalesce(regions, ""), coalesce(category, "") from card where id=?', (i,)).fetchone() for i in (a, b)]
+    fa, fb = ({r for r in x.split(';') if r} for x in (ra, rb))
+    if (fa | fb) & set(rule.get('never', ())) or {ka, kb} & set(rule.get('never_category', ())): return False
+    if ka == kb and ka in rule.get('one_of', ()) and a != b: return False
+    if 'acts' in rule:
+        xa, xb = card_acts(c, game)[a], card_acts(c, game)[b]
+        if xa and xb and not xa & xb: return False
+    fa, fb = fa - set(rule['neutral']), fb - set(rule['neutral'])
+    if not fa or not fb or rule['factions'] is None or rule['factions'] >= 2: return True
+    return bool(fa & fb)
+
+
+def share_failures(c):
+    """cases/share.tsv: pairs that must or must not share a deck; returns the rows can_share gets wrong"""
+    bad = []
+    for row in list(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'cases', 'share.tsv')))[1:]:
+        g, a, b, must, why = row.rstrip('\n').split('\t')
+        ids = [c.execute('select id from card where game=? and name=? and is_keyword=0 and is_stub=0', (g, n)).fetchone() for n in (a, b)]
+        if None in ids or can_share(c, g, ids[0][0], ids[1][0]) != (must == 'yes'): bad.append(row.strip())
+    return bad
 SAY = {  # what happens, in plain words; {who} = your / enemy / any
     'dies': '{who} units die', 'killed': '{who} units are killed', 'damaged': '{who} units or players take damage',
     'survives_damage': '{who} units survive damage', 'nexus_damaged': '{whos} takes damage', 'summoned': '{who} units enter play',
@@ -113,11 +167,11 @@ def analyze(c, game, text):
     # the deck and the game's rules
     reg = {i: [r for r in (c.execute('select regions from card where id=?', (i,)).fetchone()[0] or '').split(';') if r] for i in deck}
     rule = DECK_RULES.get(game, {})
-    facs = collections.Counter(r for rs in reg.values() for r in rs if r != rule.get('neutral'))
+    facs = collections.Counter(r for rs in reg.values() for r in rs if r not in rule.get('neutral', ()))
     head = f'{len(deck)} different cards, ' + ', '.join(f'{f} {n}' for f, n in facs.most_common()) + '.'
     import itertools
-    own = [set(rs) - {rule.get('neutral')} for rs in reg.values() if set(rs) - {rule.get('neutral')}]
-    if rule and not any(all(o & set(pick) for o in own) for pick in itertools.combinations(facs, min(rule['factions'], len(facs)))):
+    own = [set(rs) - set(rule.get('neutral', ())) for rs in reg.values() if set(rs) - set(rule.get('neutral', ()))]
+    if rule.get('factions') and not any(all(o & set(pick) for o in own) for pick in itertools.combinations(facs, min(rule['factions'], len(facs)))):
         head += f" The data puts these cards in {len(facs)} factions; {game} decks allow {rule['factions']}."
     out.append(head)
     if unknown: out.append('Not found in ' + game + ': ' + ', '.join(unknown) + '.')

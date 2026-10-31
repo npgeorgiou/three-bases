@@ -30,6 +30,12 @@ No record in read/sts1/game_rules.jsonl: no card category does anything its text
 effect, including every Attack's damage, is on the card), and what the rules do for every card (draw 5, 3 energy, discard the
 hand) is no combo between cards (Kaptain, 30 Oct 2026).
 
+## Deck rule (deck_analysis.DECK_RULES, can_share; 31 Oct 2026)
+A run is one character: its own cards, plus Colorless cards (any character gets them from the Shop, events or Prismatic
+Shard; slaythespire.wiki.gg/wiki/Card), plus Curses, which events add to any deck (slay-the-spire.fandom.com/wiki/Cards).
+Most relics are for every character; a few belong to one character (slay-the-spire.fandom.com/wiki/Relics). Potions are for
+every character in the data. So an Ironclad card and a Silent card or relic never share a run.
+
 ## Sources and notes
 
 Sources:

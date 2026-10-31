@@ -42,6 +42,12 @@ each line names its page. Used for read/into_the_breach/game_rules.jsonl (cards_
   starting weapon fills one slot, the second holds the starting passive or one extra weapon; never two extra weapons
   (Kaptain, 30 Oct 2026). A starting weapon can be swapped for another.
 
+## Deck rule (deck_analysis.DECK_RULES, can_share; 31 Oct 2026)
+A custom squad takes any three unlocked mechs, also several of one class or one mech twice
+(intothebreach.gamepedia.com/Squads); any mech can carry any weapon (a weapon of another class costs one more reactor core;
+Cyborg mechs: intothebreach.fandom.com, Secret Squad) and Passives are for every class (wiki Passives); pilots go in any mech.
+So any two squad cards can share a run; map tiles are no squad cards.
+
 ## Sources and notes
 
 Sources:

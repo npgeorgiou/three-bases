@@ -34,6 +34,13 @@ One file per game: the game, its factions, the source summary, the mechanics (pa
 - Ranged (Keyword Rulings; Kaptain): attacks the first enemy in a straight line, at any range, needing line of sight (a unit in
   between blocks it); it cannot attack after moving normally (moves by effects, Flash Wind, do not stop it).
 
+## Deck rule (deck_analysis.DECK_RULES, can_share; 31 Oct 2026)
+A deck is 30 cards, at most 3 copies (boards.faeria.com/t/my-first-few-thoughts-and-feedback-about-faeria-in-general/794);
+colours are not limited: a deck can mix any colours, only the land a card needs limits it (faeria.com/the-hub/guide/438-deck-building
+on multi-coloured decks; land needs above). Pandora cards are the treasures of the Pandora draft mode; a drafted treasure joins
+that deck when Pandora opens (faeria.com/the-hub/guide/72-faeria-academy-chapter-5-complete-pandora-breakdown). So any two cards
+can share a deck.
+
 ## Sources and notes
 
 Sources:

@@ -1,0 +1,68 @@
+game	a	b	share	why
+runeterra	Dauntless Vanguard	Hunt the Weak	yes	two regions per deck: Demacia and Noxus
+runeterra	Tianna Crownguard	Rune Prison	yes	one region and one Runeterra origin
+runeterra	Varus	World Ender	yes	two Runeterra origins
+runeterra	Tenor of Terror	Cithria, Lady of Clouds	yes	a two-region card fits with Demacia
+runeterra	Cithria, Lady of Clouds	Swain's Ravenous Flock	yes	two regions per deck
+stormbound	Dawnsparks	Rockworkers	yes	both Winter
+stormbound	Dawnsparks	Snowdrifts	yes	Winter plus Neutral
+stormbound	Grim Couriers	Bluesail Raiders	yes	Swarm plus Neutral
+stormbound	Snowdrifts	Westwind Sailors	yes	both Neutral
+stormbound	Amberhides	Crimson Sentry	yes	both Shadowfen
+stormbound	Dawnsparks	Grim Couriers	no	Winter and Swarm: one faction per deck
+stormbound	Rockworkers	Amberhides	no	Winter and Shadowfen
+stormbound	Reckless Rushers	Armed Schemers	no	Swarm and Ironclad
+stormbound	Crimson Sentry	Operators	no	Shadowfen and Ironclad
+stormbound	Sleetstompers	Chaotic Pupil	no	Winter and Ironclad
+duelyst	Argeon Highmayne	Windcliffe Alarmist	yes	a Lyonar General and a Lyonar minion
+duelyst	Argeon Highmayne	Oni	yes	Lyonar plus Neutral
+duelyst	Keshrai Fanblade	Katara	yes	both Songhai
+duelyst	Reva Eventide	Inquisitor Kron	yes	Songhai plus Neutral
+duelyst	Oni	Prismatic Illusionist	yes	both Neutral
+duelyst	Windcliffe Alarmist	Katara	no	Lyonar and Songhai: one faction per deck
+duelyst	Argeon Highmayne	Brome Warcrest	no	one General per deck
+duelyst	Reva Eventide	Echo Deliverant	no	Songhai and Vanar
+duelyst	Gro (tutorial)	Oni	no	tutorial cards are no deck cards
+duelyst	Living Flame	Argeon Highmayne	no	boss battle cards are no deck cards
+faeria	Blood Singer	Frogify	yes	colours mix freely
+faeria	Thyrian Golem	Shaytan Assassin	yes	colours mix freely
+faeria	Kobold Smuggler	Master Swordsman	yes	colour plus Neutral
+faeria	Hammer of Destruction	Blood Singer	yes	Pandora treasure in a Pandora deck
+faeria	Emerald Yak	Keldran Soldier	yes	colours mix freely
+sts1	Dark Embrace	Sword Boomerang	yes	both Ironclad
+sts1	Dagger Throw	Violence	yes	Silent plus a Colorless card
+sts1	Hologram+	Doubt	yes	a Curse can enter any deck
+sts1	Burning Blood	Dark Embrace	yes	Ironclad relic and Ironclad card
+sts1	Gambling Chip	Terror	yes	a relic of every character
+sts1	Dark Embrace	Dagger Throw	no	Ironclad and Silent: one character per run
+sts1	Ring of the Snake	Sword Boomerang	no	a Silent relic with an Ironclad card
+sts1	Buffer+	Terror	no	Defect and Silent
+sts1	Pure Water	Black Blood	no	Watcher and Ironclad relics
+sts1	Captain's Wheel	Hologram+	no	Watcher relic with a Defect card
+monster_train	Crucible Warden	Rootseeds	yes	two clans per run
+monster_train	Primordium	Rootseeds	yes	an Umbra champion with an allied clan
+monster_train	Railbeater	Self-Mutilation	yes	a clan plus Clanless
+monster_train	Shardtail Queen	Horned Warrior	yes	a champion and its clan
+monster_train	Kinhost Vessel	Siren's Song	yes	two clans per run
+monster_train	Primordium	Penumbra	no	one champion per run
+monster_train	Shardtail Queen	The Sentient	no	one champion per run
+monster_train	Hornbreaker Prince	Wyldenten	no	one champion per run
+monster_train	The Sentient	Penumbra	no	one champion per run
+monster_train	Shardtail Queen	Hornbreaker Prince	no	one champion per run
+inscryption	Bone Heap	Skelemagus	yes	Act II mixes all four Scrybes
+inscryption	Bat	Mantis	yes	both Act I
+inscryption	Bounty Hunter	Fishbot	yes	both Act III
+inscryption	Dire Wolf	Caged Wolf	yes	Kaycee's Mod is played like Act I
+inscryption	Bone Heap	Emerald Mox	yes	Act II mixes all four Scrybes
+inscryption	Bat	Bounty Hunter	no	Act I and Act III
+inscryption	Mantis	Broken Bot	no	Act I and Act III
+inscryption	Beaver	Bone Heap	no	Act I and Act II
+inscryption	Bounty Hunter	Emerald Mox	no	Act III and Act II
+inscryption	Dire Wolf	GR1ZZ	no	Kaycee's Mod and Act III
+into_the_breach	Leap Mech	Rocket Mech	yes	a custom squad takes any mechs
+into_the_breach	Techno-Beetle	Laser Mech	yes	a custom squad takes any mechs
+into_the_breach	Artillery Mech	Shield Placer	yes	any mech can carry any weapon
+into_the_breach	Kai Miller	Ice Mech	yes	any pilot in any mech
+into_the_breach	Kickoff Boosters	Janus Cannon	yes	any mech can carry them
+into_the_breach	Mountain Tile	Leap Mech	no	a map tile is no squad card
+into_the_breach	Water Tile	Rocket Mech	no	a map tile is no squad card

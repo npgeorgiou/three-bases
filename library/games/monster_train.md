@@ -16,6 +16,12 @@ One file per game: the game, its factions, the source summary, the mechanics (pa
 - Floors: three floors where units are placed, and the Pyre on top; combat happens on the floor the enemies are on; enemies
   climb one floor at the end of each turn if they survive; an enemy that reaches the top attacks the Pyre.
 
+## Deck rule (deck_analysis.DECK_RULES, can_share; 31 Oct 2026)
+A run picks a primary and an allied clan and gets all cards of both (playstation.com/games/monster-train,
+official description); the primary clan gives the one Champion (gamereactor.eu/monster-train-beta-impressions). Clanless
+cards are in every run (Shiny Shoe in pcgamer.com's Monster Train 2 Q&A: "a clanless card, so anyone can receive it").
+So two cards of two clans share a run; two Champions never do.
+
 ## Sources and notes
 
 Sources:

@@ -134,7 +134,8 @@ Read: any FAILED line, and the audit lists. After a change to network.py only: `
   (Fealty); Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain).
 
 ## Open work, in Kaptain's order
-1. The line table for design questions: LINKS_PLAN.md, step by step, each step reported to Kaptain and approved.
+1. The line table for design questions: LINKS_PLAN.md, step by step, each step reported to Kaptain and approved. Step 1
+   (deck rules) done; next: step 2, once Kaptain approves step 1.
    Kaptain's first message to that chat: "Read library/cards_db/START_DATABASE.md and LINKS_PLAN.md and do step 1."
 
 ## When you finish
