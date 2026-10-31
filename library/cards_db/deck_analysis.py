@@ -36,8 +36,30 @@ def card_acts(c, game):
             act = next((a for a in sorted(acts, key=len, reverse=True) if g == game and deck.startswith(a + ' ')), None)
             if act:
                 for i in parse_deck(c, game, cards)[0]: by_name[mechanics.name(c, i).lower()].add(act)
-    _ACTS[game] = {i: {same.get(a, a) for a in by_name.get(n.lower(), ())} for i, n in c.execute('select id, name from card where game=?', (game,))}
-    return _ACTS[game]
+    known = {i: {same.get(a, a) for a in by_name.get(n.lower(), ())} for i, n in c.execute('select id, name from card where game=?', (game,))}
+    for i, n in c.execute('select id, name from card where game=?', (game,)):
+        known[i] |= {a for a in DECK_RULES[game]['acts'] if n.endswith('(' + a + ')')}  # "Mole (Act III)"
+    made = c.execute("select card, card_ref from flat_do where act in ('summon', 'create', 'transform') and card_ref is not null").fetchall()
+    cards = c.execute('select id, name, coalesce(category, ""), coalesce(cost_text, "") from card where game=?', (game,)).fetchall()
+    found = dict(known)
+    for _ in range(3):  # a made card takes its maker's acts, also when the maker's acts come from its own cost
+        makers = collections.defaultdict(set)
+        for a, r in made: makers[r] |= found.get(a, set())
+        found = {i: known[i] or by_cost(n, k, ct, makers.get(i, set())) for i, n, k, ct in cards}
+    _ACTS[game] = found
+    return found
+
+
+def by_cost(name, category, cost_text, maker_acts):
+    """Inscryption acts of a card the wiki gives no act: each act's own costs (Act I Blood and Bones only, Act III Energy,
+    Mox gems in Act II and the Finale), Pelts only in Act I, no items in Act II, or the acts of the cards that make it"""
+    if name.startswith('Pelts'): return {'Act I'}
+    if 'Mox' in cost_text or 'Mox' in name: x = {'Act II', 'Finale'}
+    elif 'Energy' in cost_text: x = {'Act II', 'Act III'}
+    elif 'Blood' in cost_text or 'Bones' in cost_text: x = {'Act I', 'Act II'}
+    elif category == 'item': x = {'Act I', 'Act III'}
+    else: return set(maker_acts)
+    return x & maker_acts or x
 
 
 def can_share(c, game, a, b):

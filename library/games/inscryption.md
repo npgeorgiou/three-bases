@@ -58,8 +58,11 @@ Each act builds its own deck. Act I: Leshy's run, from a starting deck of Leshy'
 (en.wikipedia.org/wiki/Inscryption); Act II: cards of all four Scrybes are collected and one deck may mix them (Wikipedia);
 Act III: P03's run. Which act a card is in: the wiki page categories (Act I, Act II, Act III, Finale; sources/
 inscryption_wiki_cards*.jsonl), plus the act a deck in decks.tsv names. Kaycee's Mod counts as Act I (Claude: it is the Act I
-run as its own mode). Two cards share a deck when they have an act in common; a card with no known act (100 cards, most of
-them made cards: Pelts, Vessels, Mox gems) shares with every card.
+run as its own mode). A card the wiki gives no act gets one from the act's own costs (Kaptain 31 Oct 2026: Act I has only Blood and Bones, no
+Mox gems; Act III only Energy): Mox cost or a Mox gem -> Act II or Finale, Energy -> Act II or III, Blood or Bones -> Act I
+or II. Pelts are Act I only (Kaptain: Act II pays with Foils, no Pelts). Items: Act I or III (Claude: Act II has no items).
+A made card with no cost takes its maker's acts (Chime from Daus). Two cards share a deck when they have an act in common;
+20 cards with none of these (Boulder, Stump, the Fir trees, Friend) share with every card.
 
 ## Sources and notes
 
