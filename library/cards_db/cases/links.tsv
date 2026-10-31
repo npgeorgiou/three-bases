@@ -52,3 +52,20 @@ lk50	inscryption	Hammer	Corpse Maggots	none		Corpse Eater text: it fires on a ca
 lk51	inscryption	Cat	Urayuli	line	again and again	Kaptain 31 Oct 2026: Many Lives, Cat is sacrificed again and again and pays Blood
 lk52	inscryption	Child 13	Black Goat	line	again and again	Kaptain 31 Oct 2026: the same for every Many Lives card
 lk53	inscryption	Cat	Bat	none		Bat costs Bones: no sacrifice pays it
+lk54	into_the_breach	Enrage Shot	Burst Beam	none	makes it attack	Claude 31 Oct 2026: Enrage Shot makes a unit attack; it fires no weapon a mech carries
+lk55	into_the_breach	Enrage Shot	Vek Hormones	line		Claude 31 Oct 2026: a Vek forced to attack another Vek gets Vek Hormones' bonus
+lk56	into_the_breach	Force Swap	Harold Schmidt	none	heals it	Claude 31 Oct 2026: Harold pushes when he repairs; another card's heal is no repair
+lk57	into_the_breach	Push Beam	Rosie Rivets	none	for its effect	Claude 31 Oct 2026: After Move is the mech's own move; a push is not it
+lk58	into_the_breach	Def. Shrapnel	Stabilizers	none		Claude 31 Oct 2026: Stabilizers only keeps blocking damage off my Mechs; it wants no bumps
+lk59	into_the_breach	Def. Shrapnel	Force Amp	line	bump	Claude 31 Oct 2026: Force Amp adds bump damage to Vek
+lk60	into_the_breach	Shield Projector	Isaac Jones	none		Claude 31 Oct 2026: a pilot is no unit; shields go to the mech
+lk61	into_the_breach	Repair Drop	Silica	none		Claude 31 Oct 2026: a pilot is no unit; heals go to the mech
+lk62	into_the_breach	Shield Projector	Combat Mech	line	Energy Shield	Claude 31 Oct 2026: a mech keeps its shield line (Kaptain's decks)
+lk63	into_the_breach	Grid Repulse	Cryo-Launcher	none	Frozen	Claude 31 Oct 2026: Grid Repulse shields a building, never the frozen mech
+lk64	into_the_breach	Critical Shields	Ice Generator	none	Frozen	Claude 31 Oct 2026: Critical Shields shields buildings only
+lk65	into_the_breach	Repulse	Cryo-Launcher	line	Frozen	Claude 31 Oct 2026: Repulse shields an adjacent ally: it keeps Frozen off
+lk66	into_the_breach	Grid Charger	Critical Shields	none		Claude 31 Oct 2026: Critical Shields wants the grid at 1; charging it works against that
+lk67	into_the_breach	Prime Spear	Auto-Shields	none		Claude 31 Oct 2026: Auto-Shields shields a hit building; my own hits on my buildings feed nothing
+lk68	into_the_breach	Combat Mech	Psionic Receiver	none	asks for	Claude 31 Oct 2026: every squad is Mechs; all-Mech passives ask for none
+lk69	into_the_breach	Techno-Scarab	Networked Shielding	none	asks for	Claude 31 Oct 2026: the same for every all-Mech passive
+lk70	into_the_breach	*	Smoke Tile	none		Claude 31 Oct 2026: map tiles are no cards a player owns

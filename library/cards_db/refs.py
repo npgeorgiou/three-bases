@@ -169,6 +169,8 @@ def build(c):
             # what raises that stat makes the card stronger (network.py boost_lines: more health, more power)
             elif op in ('ge', 'gt'): sevs = tuple(e for e in sevs if e not in ('damaged', 'nexus_damaged'))
             elif op in ('le', 'lt'): sevs = tuple(e for e in sevs if e != 'healed')
+            elif op == 'eq' and fk == 'player': sevs = tuple(e for e in sevs if e != 'healed')  # "Power Grid reduced to 1" (Critical
+            # Shields): a player starts full, only damage brings it there
             for sev in sevs:
                 ins(card, o, v, ab, 'condition', sev, fk or 'unit', fs, fp, w=fw)  # a unit's stat unless a player's is named ("its Life" of "it")
         state_rows(card, o, v, ab, fk, fs, fp, fw, fz)

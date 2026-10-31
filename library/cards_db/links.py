@@ -6,7 +6,8 @@ import network, deck_analysis
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OWNED = ("select id from card where game=? and is_keyword=0 and is_stub=0 and coalesce(category,'') not in "
-         "('game_rule','boss','monster','event','modifier','tribe')")
+         "('game_rule','boss','monster','event','modifier','tribe') "
+         "and not (coalesce(category,'')='terrain' and game not in ('inscryption'))")  # map tiles; Inscryption's Terrain cards are creatures
 WORD_KIND = {w: k for k, w in network.KIND_WORD.items()}
 NO_STORE = ('carries',)  # Into the Breach: a mech and what it carries comes from a deck's order, not from two cards
 

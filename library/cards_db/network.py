@@ -38,6 +38,10 @@ EVERY_GAME = deck_analysis.EVERY_GAME
 # games whose terrain cards are creature cards with a trait (Inscryption wiki Traits: "Terrain: cannot be sacrificed"; a Mox card
 # is on the board, has Power and Health and is hit like a creature: Gem Animator gives Mox cards +1 Power)
 TERRAIN_CREATURES = ('inscryption',)
+# a hero that sits in a unit and is no unit itself (Into the Breach pilots): help aimed at units does not reach it
+PILOT_GAMES = ('into_the_breach',)
+# a type every deck of the game is made of (every squad is Mechs): "all my Mechs" asks for none, it helps them
+EVERY_DECK_TYPE = {'into_the_breach': 'Mech'}
 
 
 def cards_of(c, game):
@@ -54,6 +58,7 @@ def cards_of(c, game):
             pw, hp = (float(a) if a.strip().isdigit() else None), (float(b) if b.strip().isdigit() else None)
         strength = str(st.get('strength', '')).split('/')[0]
         if cat == 'terrain' and game in TERRAIN_CREATURES: cat = 'unit'  # the Terrain trait marks a creature card (Mox, Boulder)
+        if cat == 'hero' and game in PILOT_GAMES: cat = 'pilot'  # a pilot acts through its mech; a shield or heal goes to the mech
         d[i] = {'id': i, 'name': n, 'cat': cat, 'regions': set((regions or '').split(';')) - {''}, 'rarity': rar,
                 'power': pw, 'health': hp, 'strength': float(strength) if strength.replace('.', '').isdigit() else None,
                 'types': set(), 'kws': set(), 'acts': set(), 'cost': cost,  # cost: "a card that costs 7 or more" (was never read)
@@ -329,6 +334,10 @@ def lines_of(c, game):
                 where act='give_keyword' and origin='own' and coalesce(on_side,'mine')='mine' and coalesce(on_pick,'')!='self'""")}
     cost_rules = {rule_name.get(e) for (e,) in c.execute('select entry from game_rule where cost_has is not null')}
     actor_side = {(a, b): sd for a, b, sd in c.execute("select card, ability, actor_side from flat_when where actor_side is not null")}
+    # "when I attack" of a weapon, "when repairing" of a pilot: the holder uses it (Enrage Shot makes a Vek attack, it fires no
+    # weapon a mech carries; Force Swap's heal is no repair by Harold Schmidt): only the card itself does it
+    own_use = {(a, b) for a, b in c.execute("select card, ability from flat_when where actor_pick='self' and obj_pick is null")
+               if a in cards and cards[a]['cat'] in ('ability', 'pilot')}
     doer_helps = doer_help_abilities(c)
     # damage only from bumps ("Vek take +1 damage from Bumps", Force Amp): what pushes enemies into things feeds it, not damage
     bump_abs = {}
@@ -360,7 +369,7 @@ def lines_of(c, game):
             if h in ('dies', 'killed') and side == 'enemy' and origin in ('own', 'has_keyword') and ab in plain_hits: continue  # a plain hit on one
             # enemy (Strike) is what every attack does: it feeds no "when an enemy dies" (Kaptain 30 Oct 2026); poison, hits on all,
             # kill effects and damage boosts still do
-            if pick == 'self' and not kind: kind = {'leader': 'player', 'hero': 'unit'}.get(cards[card]['cat'], cards[card]['cat'])  # it
+            if pick == 'self' and not kind: kind = {'leader': 'player', 'hero': 'unit', 'pilot': 'unit'}.get(cards[card]['cat'], cards[card]['cat'])  # it
             # moves itself as what it is: Azurite Lion moving is no General moving (Zeal)
             makes[h].add((card, side, kw, kind, pick, w, ref, rule_name.get(via, 'rules') if origin == 'game' else False))
             if origin != 'game': own_makes[card].add(h)
@@ -384,7 +393,7 @@ def lines_of(c, game):
         if origin == 'gives' and card in self_given: origin = 'own'  # "Last Breath: the next time an Ephemeral ally attacks, revive
         # me": an ability it gives its own player or itself is its own need (Hecarim's Ephemeral attackers set off Shark Chariot)
         if (origin != 'own' and not kwcond and not cost) or \
-           (pick == 'self' and h in ('played', 'summoned')) or pick == 'actor_self': continue  # "I've killed 4": only the card itself
+           (pick == 'self' and h in ('played', 'summoned')) or pick == 'actor_self' or (role == 'trigger' and (card, ab) in own_use): continue  # "I've killed 4": only the card itself
         if ab in helps or (role == 'trigger' and (ab in doer_helps or ab in bump_abs)): continue  # "heal the Mech that kills": it helps the killer
         # (doer_help_lines), it waits for no kill
         if ab in harm_abs or (role == 'trigger' and ab in protect_abilities(c)) or (role == 'condition' and (ab, h) in capped(c)): continue  # "take 1 damage when summoned" (Kujata): it
@@ -656,6 +665,7 @@ def lines_of(c, game):
                 if len(b) == 3 and b[:2] == ['type', 'is'] and b[2].isdigit(): has[int(b[2])].add((m, 'makes'))
     for t, ts in asks.items():
         tn = c.execute('select name from type where id=?', (t,)).fetchone()
+        if tn and EVERY_DECK_TYPE.get(game) == tn[0]: continue  # every squad is Mechs: Psionic Receiver asks for none (L1)
         for m, how in has.get(t, ()):
             for x in ts - {m}:
                 what = f'{"is" if how == "is" else "makes"} {"an" if tn and tn[0][:1] in "AEIOU" else "a"} {tn[0] if tn else "card of the type"}'
@@ -678,7 +688,7 @@ def lines_of(c, game):
         out[k_] = keep
     pushers = {a for (a,) in c.execute("""select distinct card from flat_ref where role='makes' and happening='moves' and origin in ('own','uses_keyword')
                and coalesce(side,'') in ('enemy','','any') and coalesce(pick,'') not in ('self')""") if a in cards}
-    for t in set(bump_abs.values()) & set(cards):
+    for t in {a_ for ab_, a_ in bump_abs.items() if ab_ not in protect_abilities(c)} & set(cards):  # Stabilizers keeps damage off
         for m in pushers - {t}: out[(m, t)].append(('waits', 1.0 / len(pushers), '{A} pushes enemy units into things (bump damage)'))
     # a card that puts a status on itself which damage takes off (Cryo-Launcher freezes the Ice Mech; Frozen ends when damaged):
     # a card that can hit my units frees it; a card that shields my units stops it (Energy Shield keeps new bad statuses off)
@@ -691,7 +701,8 @@ def lines_of(c, game):
         hitters_ = {a for (a,) in c.execute("""select distinct card from flat_do where act='damage' and origin='own' and on_side is null
                     and on_pick in ('chosen','nearest','all')""") if a in cards}
         shielders = {a for a, k in c.execute("""select card, keyword_ref from flat_do where act='give_keyword' and origin='own'
-                     and coalesce(on_side,'mine')='mine' and coalesce(on_pick,'') not in ('self','it')""") if a in cards and k in blockers}
+                     and coalesce(on_side,'mine')='mine' and coalesce(on_pick,'') not in ('self','it') and coalesce(on_kind,'') not in ('landmark','building')""")
+                     if a in cards and k in blockers}  # a shield on buildings (Grid Repulse, Critical Shields) reaches no mech
         for t, k in selfstat:
             kn = mechanics.name(c, k)
             for m in hitters_ - {t}: out[(m, t)].append(('heals', 0.5 / len(hitters_), f'{{A}} can hit {{Bc}} while it is {kn}: the hit frees it'))
@@ -996,7 +1007,10 @@ def protect_abilities(c):
     if 'protab' not in CACHE:
         acts = collections.defaultdict(set)
         for ab_, act in c.execute("select ability, act from flat_do where origin='own'"): acts[ab_].add(act)
-        CACHE['protab'] = {a for a in help_abilities(c) if acts[a] <= {'negate_damage', 'damage_reduction'}}
+        for ab_, k_ in c.execute("select ability, keyword_ref from flat_do where origin='own' and act='give_keyword' and on_pick='it'"):
+            if kw_tree(c, k_) in ('shield', 'damage_reduction', 'immunity'): acts[ab_] = (acts[ab_] - {'give_keyword'}) | {'negate_damage'}
+        CACHE['protab'] = {a for a in help_abilities(c) if acts[a] <= {'negate_damage', 'damage_reduction'}}  # Auto-Shields: a shield on
+        # the building that was hit wants no hits
     return CACHE['protab']
 
 
@@ -1968,6 +1982,8 @@ def merge_places(ls):
 def one_link(ls):
     ls = list({(k, y): (k, w, y) for k, w, y in ls}.values())  # one card doing a thing twice (when summoned, when attacking) is one reason
     ls = merge_places(ls)
+    plain = {(k, y) for k, _, y in ls}
+    ls = [x for x in ls if not (re.search(r' \(when [^)]*\)$', x[2]) and (x[0], re.sub(r' \(when [^)]*\)$', '', x[2])) in plain)]  # said once (Shield Array)
     if len(ls) > 1: ls = [x for x in ls if x[0] != 'targets'] or ls  # "can aim at it" only when nothing else joins them
     ls.sort(key=lambda x: (KIND_ORDER.index(x[0]) if x[0] in KIND_ORDER else 99, -x[1]))
     k, w, y = ls[0]
