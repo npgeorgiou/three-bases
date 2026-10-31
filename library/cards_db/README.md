@@ -42,7 +42,7 @@ equal mechanics of different games share one concept of the concept tree (Stun a
 | `status.py`, `STATUS.md`, `compare.py`, `examples.py`, `QUERIES.md` | Progress from the files; first vs second reading; example questions with answers |
 | `exclude.tsv`, `excluded/` | Entries left out on purpose and their old records |
 | `input/`, `read/`, `second/` | Reader input; reader output (the source) with proposals; the independent second reading of a 10% sample |
-| `DESIGN_ANSWERS.md` | Why design answers were weak and the plan to fix them (item 7: every line of every game) |
+| `LINKS_PLAN.md`, `QUESTION_BANK.md` | The plan for every card connection as a table, built to answer design questions; the questions it must answer |
 | `CHANGES.md`, `RESULTS.md`, `HANDOFF.md` | Every change to shapes, values and rules; each game's results; where the work stands |
 
 ## Tables in cards.sqlite

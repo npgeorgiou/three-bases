@@ -226,14 +226,14 @@ combo	Lulu	Flame Chompers!	early tempo swing	https://mobalytics.gg/?p=15986
 combo	Towering Pairofant	Curious Changelings	surprise lethal	https://mobalytics.gg/?p=15986
 combo	The Grand Plaza	Aurelion Sol	board, then finisher	https://mobalytics.gg/blog/lor/lor-5-top-decks-ranked/
 # dropped 31 Oct (Claude, Kaptain asked to drop wrong cases): both heal; neither sets the other off	# combo	Solari Sunforger	Starshaping	heal back	https://mobalytics.gg/blog/lor/lor-5-top-decks-ranked/
-# dropped 31 Oct (Claude, Kaptain asked to drop wrong cases): two answers to threats; neither sets the other off	# combo	Hush	Single Combat	answer threats	https://mobalytics.gg/blog/lor/lor-5-top-decks-ranked/
+# dropped 31 Oct (Claude, Kaptain asked to drop wrong cases): Hush silences a unit, Single Combat makes an ally and an enemy strike each other; neither sets the other off	# combo	Hush	Single Combat	answer threats	https://mobalytics.gg/blog/lor/lor-5-top-decks-ranked/
 combo	Karma	Lux	Lux stacks twice as fast	https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/
 combo	Ezreal	Trueshot Barrage	stabilises and levels Ezreal	https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/
 # dropped 31 Oct (Claude, Kaptain asked to drop wrong cases): Entreat draws a champion; Mystic Shot is a spell	# combo	Entreat	Mystic Shot	Entreat fetches Mystic Shot	https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/
-combo	Chump Whump	Rummage	fuel for the discard	https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/
-combo	Chump Whump	Get Excited!	fuel for the discard	https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/
+# dropped 31 Oct (Kaptain): Mushroom Clouds have no effect when discarded; any card in hand can be discarded, so making cards is no fuel	# combo	Chump Whump	Rummage	fuel for the discard	https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/
+# dropped 31 Oct (Kaptain): Mushroom Clouds have no effect when discarded; any card in hand can be discarded, so making cards is no fuel	# combo	Chump Whump	Get Excited!	fuel for the discard	https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/
 # dropped 31 Oct (Claude, Kaptain asked to drop wrong cases): the guide's Deny is the enemy's answer to Judgment, not a partner	# combo	Judgment	Deny	Deny protects Judgment	https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/
-# dropped 31 Oct (Claude, Kaptain asked to drop wrong cases): two answers to Elusives; neither sets the other off	# combo	Judgment	Purify	Purify punishes Elusives	https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/
+# dropped 31 Oct (Claude, Kaptain asked to drop wrong cases): Judgment makes a battling ally strike all battling enemies, Purify silences a follower; neither sets the other off	# combo	Judgment	Purify	Purify punishes Elusives	https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/
 combo	Stand Alone	Emerald Awakener	good against aggro	https://mobalytics.gg/blog/lor-how-to-play-control-ezreal-lux-karma/
 combo	Curious Shellfolk	Ezreal	engine, then Ezreal closes	https://mobalytics.gg/blog/lor/lor-deck-guide-ezreal-vi-pranks/
 combo	Ezreal	Timewinder	two Ezreal triggers	https://mobalytics.gg/blog/lor/lor-deck-guide-ezreal-vi-pranks/

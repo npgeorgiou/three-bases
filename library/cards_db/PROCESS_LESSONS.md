@@ -396,3 +396,35 @@ Ephemeral: it feeds Hecarim), deck_analysis plan lines keyed by who ("Your Ephem
 Same day: a card that acts on what something left (Undying Revenge revives a dead ally, Scorched Earth kills a damaged unit) had
 its line drawn as one card among all that care about deaths: weight 0.009, reason "makes your units die". Now such a line says
 what the card does to them ("makes your units die: Undying Revenge brings them back") and weighs as a direct combo (0.25).
+
+## Kaptain's check of the Runeterra level-up lines (31 Oct 2026, v65; fixed by rule in every game)
+Kaptain checked only champion level-up lines and found errors in almost every deck. Each is one family; the thinking that
+made it, and where else it lived:
+1. **"Every unit can do it" was let through for level-ups** (Poppy, Zed: Living Shadow and every unit "by fighting"; Ashe ->
+   LeBlanc, Jagged Butcher -> Gangplank). An exception (n53) let rule lines feed level-up counts. Removed everywhere; a fight
+   keyword now serves only the need it really does (Overwhelm and evasion: the Nexus hit; deathtouch: kills; Quick Attack
+   and Fearsome: nothing). Same thinking found: Captain Farron's Overwhelm counted as non-combat damage for Swain; Quick
+   Attack given by Blade of the Exile counted as a strike for Akshan; Hecarim's Overwhelm counted as kills for Thresh.
+2. **A help that does not do the need** (Sharpsight, Twin Disciplines, For Demacia!, Poppy -> Zed; Tybaulk -> Gwen): power was
+   counted as reaching the Nexus and as level-up damage (network.HELPS). Now only evasion, Overwhelm and another attack reach
+   the Nexus; another attack is Rally or a free attack only (not a strike now: Concerted Strike -> Poppy, Judgment -> Poppy
+   gone). Same thinking: a card's own keyword (Young Witch's Elusive) counted as help it gives to Zed.
+3. **A makes B, B acts on C, A got a line to C** (Targonian Tellstones -> Braum, Ravenbloom Conservatory -> Gwen, Vikrash and
+   Nilah -> Janna "through Slipstream"): network.py passed every made card's level-up lines to its maker (83 lines in
+   Runeterra). Now only planted cards that go off by themselves (Chimes, Kaptain n31/n32). Same thinking in the data:
+   planting a Chime counted as making an ally (Byrd -> Norra) and as a card to play (Esmus -> Zoe); summoning a named card had
+   no kind, so Tail of the Dragon counted as a landmark for Malphite (refs.py now gives made cards their own kind).
+4. **A limit read as a need** (Janna: "the first 3 times you draw" made draws "enable" her): count conditions with op le/lt
+   or eq 0 are no needs (refs.py). Same family as FTL and Ethereal, which had been fixed one by one.
+5. **A state the counted cards must be in was read as fed by the card's own trigger** (Janna's discount on drawn cards
+   "levels her up from what it then does"): the player still has to play them. lvl self-feeding now uses only the counted
+   happening, not the state.
+6. **A count read with the wrong actor** (Poppy "I've attacked with allies 3 times" was read as any ally's attacks):
+   fixes/runeterra/v64.py, by rule over every "Level up: I've ..." text; only Poppy was wrong.
+7. **Costs as printed, not as paid** (Lux "6+ mana of spells" had no line at all; Thermogenic Beam is printed 0 but spends
+   all mana): card.cost_x marks variable costs in every game (X costs in Slay the Spire and Monster Train too);
+   network.spent_lines links spells costing the count or more, or with a variable cost.
+8. **My own rule of 31 Oct was the same error as 1** (Chump Whump -> Get Excited!: any card in hand can be discarded):
+   removed; the real link is to cards with a discard effect, which existed already.
+Why the deck check missed them: it read the 3 most and 3 least linked cards; level-up lines sit in the middle. The deck
+check now also reads every level-up line of every deck (HANDOFF box).

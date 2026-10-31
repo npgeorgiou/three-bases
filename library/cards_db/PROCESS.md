@@ -429,6 +429,19 @@ Then audit again. Write the families found in deck_read_<game>.md.
   unless a card of the deck replaces it ("Replaces Burning Blood": Black Blood). deck_analysis.starters, rarity starter.
 - **Read the game's own limits on a mechanic** (wiki): Dexterity adds only to Block a card gives when played, not to a
   Power's later Block or Entrench's doubling; Lock-On only to Orb damage.
+- **The rules are no combo, not even for a level-up (Kaptain 31 Oct 2026: "we know units can attack").** Every unit
+  attacks, strikes and deals damage; only a card whose own text adds an attack (Rally, a free attack), a strike now, a second
+  strike, Overwhelm or evasion helps a count of attacks, strikes, Nexus hits or damage. Cases n15 and n53 were flipped.
+- **A makes B, B acts on C: A gets NO line to C (Kaptain, said many times).** Targonian Tellstones makes Blessing of
+  Targon; only the Blessing helps Braum. A's own act of making links to what waits for that making (Zed summons Ephemeral
+  units). Only planted cards that go off by themselves when drawn are the planter's act (n31, n32: Chimes for Bard).
+- **A help must do the very thing needed.** Power does not get a unit past blockers (Sharpsight, For Demacia! do not
+  help Zed hit the Nexus) and does not deal a champion's level-up damage (Tybaulk does not level Gwen). Health and
+  protection do help "survive damage" (Blessing of Targon -> Braum).
+- **Read who does a count.** "Level up: I've attacked with allies 3 times" is Poppy's own attacks; check the actor of every
+  count against the text ("I've" = the card, "I've seen you" = the player).
+- **Costs as paid.** "X" costs and "spend all your mana" (Thermogenic Beam) are variable (card.cost_x); a count of mana spent
+  on spells (Lux: 6+) is met by a spell costing 6+ or with a variable cost.
 - **Drawbacks and limits are no needs.** "Lose 1 energy when drawn" (Void) wants no draws; "if you played fewer than 3
   cards" (FTL) wants no plays; "if this is still in your hand" (Ethereal) wants no full hand.
 

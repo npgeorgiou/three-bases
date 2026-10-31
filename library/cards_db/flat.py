@@ -309,6 +309,10 @@ RULES = [
 
 def derive(c):
     """flat_concept: concepts of the rows themselves, the keywords' concepts, and the shape rules above."""
+    # "summon a Flying Demon Wing": Flying is the made card's own keyword, not one this card gives (Demon Wrangler moves nothing)
+    c.execute("""delete from flat_do where rowid in (select g.rowid from flat_do s join flat_do g on g.card=s.card and g.ability=s.ability
+                 and g.origin=s.origin where s.act in ('summon','create') and s.card_ref is not null and g.act='give_keyword' and g.on_pick='it'
+                 and g.seq>s.seq and exists (select 1 from card_keyword ck where ck.card=s.card_ref and ck.keyword=g.keyword_ref))""")
     c.execute("insert into flat_concept select distinct card, concept, 'row' from flat_do where concept is not null and concept!=''")
     c.execute("insert into flat_concept select distinct card, concept, 'row' from flat_when where concept is not null and concept!=''")
     c.execute("insert into flat_concept select distinct card, concept, 'row' from flat_if where concept is not null and concept!=''")

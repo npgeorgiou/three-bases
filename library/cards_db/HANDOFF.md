@@ -20,6 +20,11 @@
 > Living Shadows. Fixed as thinking: a card is judged with everything it makes (flat_made; ask.py counts makers
 > "Zed (via Living Shadow)"; arrival buffs reach only cards that print the keyword; deck_audit prints what each card makes).
 
+> **LINE ERRORS KAPTAIN FOUND AGAIN AND AGAIN (31 Oct 2026; PROCESS "Rules for links"): (1) a line from what every card does
+> (attacking, discarding, having Life); (2) A makes B, B acts on C, and A gets a line to C; (3) a help that does not do
+> the need (power for Nexus hits); (4) a limit read as a need ("the first 3 times you draw"); (5) a count read with the
+> wrong actor. Before showing any network, read every level-up line of every deck against both card texts.**
+
 ## Start of a chat
 1. Clone with the library (CLAUDE.md "Start of a chat", then `git sparse-checkout disable`). Read only this file first.
 2. cards.sqlite is committed and current: questions need no build (`ask.py runeterra ...`).

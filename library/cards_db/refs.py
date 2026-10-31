@@ -30,6 +30,7 @@ BY_ME = {'killed', 'damaged', 'nexus_damaged', 'challenges'}  # done by the card
 HARM = {'damage', 'kill', 'obliterate', 'capture', 'stun', 'silence', 'transform'}  # harm aimed at a chosen target of either side
 TO_OBJECT = {('harvest', 'harvests'), ('set_terrain', 'terrain_changed')}  # "X harvests from a well": the unit is the actor, the space the object (like strikes)
 BOARD_KINDS = {'unit', 'landmark', 'unit_or_structure', 'anything', 'any', None, 'player'}  # a player on the board: a leader (Duelyst General)
+CARD_KIND = {'unit': 'unit', 'hero': 'unit', 'building': 'landmark', 'spell': 'spell', 'item': 'equipment', 'leader': 'player'}  # a named card's kind
 KIND_OF_CAT = {'unit': 'unit', 'hero': 'unit', 'leader': 'player'}  # the kind a card of a category is on the board
 NOT_UNIT_DEATH = {'dies', 'killed', 'survives_damage', 'damaged'}  # destroying an artifact or equipment kills no unit (Duelyst EMP)
 # a stat tested or counted, and the happenings that change it, for a player and for a unit
@@ -140,8 +141,10 @@ def build(c):
                   and act in ('kill','damage','obliterate','sacrifice','return_to_hand','transform','silence')""")}  # harm on either side goes to enemies
     costs = {(a, b) for a, b in c.execute("select card, ability from flat_do where act in ('cost_set','cost_change') and on_pick='self'")}
     for r in c.execute('select card, origin, via, ability, event, of_kind, of_side, of_pick, of_zone, of_with, ev_obj_kind, '
-                       'ev_obj_side, ev_obj_with, ev_obj_pick, test, attr, ev_actor_pick, ev_actor_kind, ev_actor_with from flat_if').fetchall():
-        card, o, v, ab, ev, fk, fs, fp, fz, fw, ek, es, ew, ep, test, at, eap, eak, eaw = r
+                       'ev_obj_side, ev_obj_with, ev_obj_pick, test, attr, ev_actor_pick, ev_actor_kind, ev_actor_with, op, n from flat_if').fetchall():
+        card, o, v, ab, ev, fk, fs, fp, fz, fw, ek, es, ew, ep, test, at, eap, eak, eaw, cop, cn = r
+        # a cap is no need: "the first 3 times you draw each round" (Janna) is not helped by drawing; it only stops counting
+        if ev and test in ('event_count', 'count', 'amount_count') and (cop in ('le', 'lt') or (cop == 'eq' and not cn)): continue
         if eap == 'self' and ep != 'self': ep = 'actor_self' if ev in BY_ME else 'self'  # "I've killed": only the card itself does it
         # the thing the counted event happens to ("I've survived 10+ damage": of self) decides whose it is
         if ev:
@@ -182,6 +185,7 @@ def build(c):
                 and coalesce(actor_side,'')='' and (obj_side='mine' or obj_pick='self')""", sorted(DONE_BY | {'damaged'}))}
     entry_abs = {(a, b) for a, b in c.execute("select card, ability from flat_when where event in ('played','summoned') and obj_pick='self'")}
     ev_of = {(a, b): e for a, b, e in c.execute("select card, ability, event from flat_when where actor_pick='self' and obj_pick is null")}
+    planted = {(a, k): r for a, k, r in c.execute("select card, keyword_ref, card_ref from flat_do where origin='own' and act='keyword_action' and card_ref is not null")}
     for r in c.execute('select card, origin, via, ability, act, on_kind, on_side, on_pick, on_zone, on_with, keyword_ref, card_ref, '
                        'param_event, to_kind, to_with, to_side, to_pick, params from flat_do').fetchall():
         card, o, v, ab, act, k, s, p, z, w, kw, cref, pev, to_k, to_w, to_s, to_p, ps = r
@@ -198,9 +202,13 @@ def build(c):
         # "it" in an ability on my own attack, strike or damage ("Backstab: deals extra damage to it"; Touch of Death: "when this
         # damages another creature, that creature perishes") is what I fight: an enemy
         if p == 'it' and not s and ev_of.get((card, ab)) in ('attacks', 'strikes', 'damaged', 'fights'): k, s = k or 'any', 'enemy'
-        # a thing the player chooses on the board is targeted (Ezreal counts "targeted enemies", Fated waits for it)
+        if cref and not k and act in ('summon', 'create', 'play_card', 'revive', 'copy'):  # "summon a Tail of the Dragon": the made
+            k = CARD_KIND.get(cat.get(cref))  # thing is of the named card's kind (a unit is no landmark for Malphite)
+        if o == 'uses_keyword' and (card, v) in planted and act in ('create', 'summon'):  # "plant a Chime" (Byrd): what is made is the
+            pc = cat.get(planted[(card, v)]); k = KIND_OF_CAT.get(pc, 'spell' if pc == 'spell' else 'card')  # planted card, of its own kind (a Chime is no ally for Norra)
+        # a thing the player chooses on the board is targeted (not by the game's rules: a unit's attack targets nothing) (Ezreal counts "targeted enemies", Fated waits for it)
         for tk, ts, tp in ((k, s, p), (to_k, to_s, to_p)):
-            if tp == 'chosen' and act != 'choose_one' and z in (None, 'board') and tk in ('unit', 'any', 'anything', 'unit_or_structure', 'player', None):
+            if cat.get(card) != 'game_rule' and tp == 'chosen' and act not in ('choose_one', 'summon', 'create', 'play_card', 'revive', 'draw', 'discard') and z in (None, 'board') and tk in ('unit', 'any', 'anything', 'unit_or_structure', 'player', None):
                 ins(card, o, v, ab, 'makes', 'targeted', tk or 'any', ts or '', 'chosen')
         for ev, *kwn in causes.get(('act', act), []):
             if (act, ev) in TO_OBJECT and (to_k or to_s or to_p):  # the space it happens on is the event's object, the mover its actor

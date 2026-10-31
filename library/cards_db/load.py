@@ -11,7 +11,8 @@ import source
 SCHEMA = """
 create table vocab(field text, value text, meaning text, tree text, causes text, added text, primary key(field, value));
 create table card(id integer primary key, game text, name text, category text, speed text, cost real, power real,
-  health real, regions text, rarity text, is_keyword integer, is_stub integer default 0, stats text, cost_text text);
+  health real, regions text, rarity text, is_keyword integer, is_stub integer default 0, stats text, cost_text text,
+  cost_x integer default 0);  -- cost_x: the mana paid is not printed ("X", "spend all your mana")
 create table type(id integer primary key, game text, name text, tribe_entry integer);
 create table card_type(card integer, type integer);
 create table card_keyword(card integer, keyword integer);
@@ -188,6 +189,11 @@ def main():
             if pat.search(_re.sub(r'[ \t]+', ' ', (t or '').lower())) and out.execute('select 1 from card where id=? and is_keyword=0', (i,)).fetchone() \
                     and not out.execute('select 1 from card_keyword where card=? and keyword=?', (i, k)).fetchone():
                 out.execute('insert into card_keyword(card, keyword) values(?,?)', (i, k))
+    # a variable cost: "X" in the cost (Slay the Spire, Monster Train) or a card played by spending all mana (Thermogenic Beam,
+    # printed 0): the mana spent can be anything, so "6+ mana of spells" (Lux) can be met by one such card
+    out.execute("update card set cost_x=1 where is_keyword=0 and (' ' || coalesce(cost_text,'') || ' ') glob '*[ (]X[ )]*'")
+    out.execute("""update card set cost_x=1 where id in (select b.card from ability b join event v on v.id=b.event join effect e on e.ability=b.id
+                   join param p on p.effect=e.id join amount a on a.id=p.amount where v.event='played' and e.act='spend_mana' and a.x='full')""")
     import flat; flat.build(out); flat.derive(out); import refs; refs.build(out)  # the query layer: general rows with keywords expanded and concepts
     out.commit()
 

@@ -1,20 +1,15 @@
-# Next chat: card database (31 Oct 2026, v64)
+# Next chat: card database (31 Oct 2026, v65)
 
 Read HANDOFF.md first (its boxes are the rules most often broken), then PROCESS.md and PROCESS_LESSONS.md, and
 library/README.md (what the library is for and how design questions are asked). Everything below is pushed.
 
 ## Open, in Kaptain's order
-Done 31 Oct (v59-v63, CHANGES.md). Real-world: 240 of 263 hold. The three checks after an import: PROCESS 4b; how to think:
-HANDOFF.md.
-1. Item 7 (Kaptain said build it, 31 Oct): every card-to-card line as a table in cards.sqlite (from, to, kind, reason), built
-   with the database. Lines between EVERY pair of cards of a game, whatever their faction (not only deck cards): Kaptain
-   judges ideas by what worked in other games, so each game's deck rules must hold. Queries limit the lines to the faction
-   mixes a deck may have (Runeterra: 2 regions per deck, 10 regions = 45 pairs; deck_analysis.py RULES has each game's
-   rule). Then: lines per card as a first measure of deck feasibility and of mechanic feasibility ("ideas for factions").
-   Check the table's size per game first.
-2. Done 31 Oct (v64): every real-world combo holds; 11 wrong cases dropped. `ask.py kit` answers are weak: the examples are
-   the faction's most-tagged cards, not cards that show the asked mix, and a broad concept (drawback, protection) swamps a
-   narrow one (selection). Plan for design answers: DESIGN_ANSWERS.md (waiting for Kaptain).
+Done 31 Oct (v64-v65, CHANGES.md; PROCESS_LESSONS "Kaptain's check of the Runeterra level-up lines"). The three checks after
+an import: PROCESS 4b; how to think: HANDOFF.md.
+1. **Item 7, the card connections as a table, for design questions: LINKS_PLAN.md (read all of it), with QUESTION_BANK.md.**
+   Kaptain asked for the plan to be followed exactly, step by step, each step reported and approved. Section 3 (accuracy
+   rules) comes before any table.
+2. Kaptain's earlier cases n15 and n53 were flipped by his 31 Oct rule ("we know units can attack"); tell him if he asks.
 
 ## Not this chat's work unless asked
 - Stormbound csb09-csb13 (poisoned-unit combos) fail; Runeterra n56 and Slay the Spire nst36 must be rewritten.

@@ -394,3 +394,16 @@ Each change: date, what changed, the card that caused it, and which records were
   -> Three Wishes); (7) realworld.py judges a card with what it makes and carries (a mech's starting weapon and passive) and, in
   Inscryption, a sigil as worn by the card or tribe named with it. 11 wrong cases dropped (commented in library/games/*.md with
   the reason). Deck lines: 0 gone, 301 new (153 discard fuel, 48 targeting, 100 Faeria land costs). Real-world 240 of 263.
+- 31 Oct 2026, v65 (Kaptain's check of Runeterra level-up lines; PROCESS_LESSONS "Kaptain's check of the Runeterra level-up
+  lines" has each family): v64's discard-fuel rule removed (any card can be discarded) and stat readers use only units that
+  grow the stat; rule lines no longer feed level-ups (cases n15, n53 flipped by Kaptain's 31 Oct rule); network.HELPS: power
+  no longer reaches the Nexus or adds damage, another attack = Rally or a free attack; a fight keyword serves only its own
+  needs (KW_NEEDS: Overwhelm/evasion the Nexus, deathtouch kills, Quick Attack nothing; Overwhelm damage is combat damage);
+  a unit summoned attacking while attacking is no new attack (JOINS); a card's own keyword is no help it gives; made cards'
+  level-up lines pass to the maker only when planted (Chimes, n31/n32); refs.py: count caps are no needs, a planted card and
+  a summoned named card have their own kind, the game's fight rule targets nothing; flat.py drops "summon a Flying Demon
+  Wing" re-giving a printed keyword; load.py card.cost_x (X costs, "spend all your mana") and network.spent_lines (Lux);
+  "your General deals damage" needs the General (Duelyst); fixes/runeterra/v64.py ("I've attacked" = the card itself:
+  Poppy). Deck lines from the start of 31 Oct: Runeterra 5003 -> 4726 (334 gone, 57 new), Duelyst 1342 -> 1333, Faeria
+  1558 -> 1642 (land costs), Slay the Spire 533 -> 537, others unchanged. Real-world 238 of 261 (Chump Whump cases dropped).
+  LINKS_PLAN.md and QUESTION_BANK.md: the plan for item 7 (replaces DESIGN_ANSWERS.md).
