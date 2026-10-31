@@ -137,7 +137,7 @@ Read: any FAILED line, and the audit lists. After a change to network.py only: `
 
 ## Open work, in Kaptain's order
 1. The line table for design questions: LINKS_PLAN.md, step by step, each step reported to Kaptain and approved. Steps 1
-   and 2 done; step 3: Inscryption done; next: Into the Breach, then the other six games, one at a time, the way LINKS_PLAN.md
+   and 2 done; step 3: Inscryption done; Into the Breach rounds 1-2 done, one question to Kaptain open (LINKS_PLAN.md State); then the other six games, one at a time, the way LINKS_PLAN.md
    step 3 "How a game is checked" says. Table cases: cases/links.tsv (run by links.py).
 
 ## When you finish

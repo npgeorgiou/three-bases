@@ -119,7 +119,11 @@ Report: the numbers.
    - Inscryption done (rounds 1-3; what round 1 and 2 fixed: git log). Its read lines are in cases/links_checked.tsv.
    - Seen, not fixed: Runeterra has Molten Shield twice (a plain and a "(created)" entry); Stormbound cases csb09-11, csb13
      fail; Runeterra n56 and Slay the Spire nst36 are stale must-not cases (rewrite them in that game's turn).
-   - Next: Into the Breach round 1 (links.sqlite is not in git: `links.py into_the_breach` first), then Monster Train, Stormbound, Slay the Spire,
+   - Into the Breach: rounds 1-2 done (fixes: git log; cases lk54-lk70). Open: 12 pilots have no line (Bethany Jones' starting
+     Shield and Cryo-Launcher; Isaac Jones' extra Reset Turn and Adam): waits for Kaptain's answer whether a pilot's effect on its own
+     mech links to the weapons that mech carries. Also open: Repair Field reads any heal as a repair; Gana acts once at deploy, so
+     nothing moves units into place for it; Targeted Strike "summons" Air Strike (a map hazard, decks only).
+   - Next: Into the Breach round 3 after that answer, then Monster Train, Stormbound, Slay the Spire,
      Faeria, Duelyst, Runeterra last. Commit and push after each game.
    - Rule 6 holds: every line the audits print is read, nothing sampled; say plainly what was not read.
 3. **Zero checks** (a query each, must give 0): lines between two cards that cannot share a deck; lines with an end that
