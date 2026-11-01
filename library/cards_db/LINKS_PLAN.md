@@ -11,7 +11,78 @@ feed which. `links.py` stores every line network.py draws between two cards that
 
 ## Done
 Step 1 (which cards can share a deck: deck_analysis.can_share) and step 2 (links.py, links.sqlite).
-Step 3 for Inscryption, Into the Breach, Stormbound and Monster Train.
+Step 3 for Inscryption, Into the Breach, Stormbound and Monster Train. Next: step 3a below, then Slay the Spire.
+
+## NEXT: Step 3a. Drop generic "gives X" lines (Kaptain 1 Nov 2026; do this before any more game checks)
+
+### What Kaptain decided, and why
+A line stays only when the texts of BOTH cards work together. "Guardian Stone gives Armor to friendly units" linked to all 103
+units of Monster Train, and a Stormbound strength card to 215 units. Such a line only says "A helps any unit" and "B is a unit":
+two counts, multiplied into thousands of rows. It makes the table huge and slow (Runeterra about 830,000 rows), and it swamps
+every design question (QUESTION_BANK.md group K): the biggest faction always "links" most, and real combos drown.
+"Protection buys time for big units" (K1, K6) is a pattern between mechanics; the answer says it from counts of cards per
+faction, not from lines. Kaptain's earlier tests that keep generic help (nfa19 Oakling -> Grove Guardian, nfa20 Khalim's
+Training -> Manta Rider, ntb7 Repulse -> Jet Mech, lk62 Shield Projector -> Combat Mech, lk83 Moment's Peace -> Mystwives)
+are replaced by this decision: flip them to `none`, citing "Kaptain 1 Nov 2026".
+
+### How lines are made today (read these before changing anything)
+- `network.aimed()` (with `aimed_rows()`): an effect of card A aimed at my cards of a kind ("give a friendly unit +2|+2",
+  "heal a unit", "give allies Armor"). Each card B the filter matches gets a line. Kinds: `boosts`/`stronger` ("can give it
+  +2|+2"), `keyword` ("gives it Armor"), `heals` ("can heal it"), `rules` ("changes how it works: gives it Stealth"),
+  `targets` ("can aim at it": can move it, can return it to hand, can copy it). `narrowed` says the filter names something
+  more than a kind (a type, a keyword, a card, a cost): "your Dragons get +2" is narrowed.
+  **This is where almost all generic lines come from.**
+- `network.boost_lines()` with `HELPS`: help that fills a NEED written on B ("Overwhelm unit: more power reaches the
+  Nexus", "needs to survive damage: more health", "level up when it kills: more power"). These are real: keep them.
+- `lines_of()`: waits (A makes what B's trigger waits for: "heals it for its effect", "kills it for its death effect"),
+  levels, puts (summons, creates), type (B asks for a type A is), positional lines (A moves units, B acts by place).
+  Real: keep them (they were checked game by game).
+- `one_link()` joins a pair's reasons; it already drops a `targets` reason when another reason joins the pair.
+
+### The rule to build
+Drop a line from `aimed()` when ALL of these hold:
+1. the filter is not narrowed (it picks "a unit", "friendly units", "a card", "an ally", maybe with a place like "next to it");
+2. the pair has no other reason (no waits, levels, puts, type, HELPS line, positional line);
+3. B's own text does not USE what A gives (the list below).
+Keep it otherwise. Do it in one place (after all reasons of a pair are known, e.g. in `network()` before `one_link`), so a
+generic reason that sits beside a real one is simply not said.
+
+### When B's text USES the help (keep these; some are not obvious)
+Check that each exists as a line after the change; where one is missing, add the rule (it is real, not generic):
+- B triggers on getting it: "when healed", "when given a keyword/status", "when buffed", "when targeted", Etch/Incant-like
+  triggers on being picked. (waits lines; check they survive.)
+- B counts it or levels from it: "I've been healed 3 times", "allies with Barrier", "units with 5+ power" where A gives exactly that.
+- B's text reads the stat A raises: "deal damage equal to its power", "gain strength equal to..." (Lady Rime spends mana for
+  strength; Gift of Steel -> Gabrian Enchantment: more Life becomes more Attack, test nfa35, keep).
+- The help multiplies B's own text: more power to a unit that hits several times (Multistrike, Quick Attack's extra strike,
+  Into the Breach multi-hit weapons), Overwhelm, Lifesteal, "deals damage to all"; health or armor to a unit that hurts
+  itself (Unstable Cannon, Ramming Engines, Hydraulic Legs) or has Taunt/Challenger; a shield to a unit that freezes itself
+  (Cryo-Launcher: already a rule, keep).
+- Bounce or copy of my own unit with an on-play / Summon / Opening Gambit / Last Breath effect: playing it again repeats the
+  effect ("can return it to hand" to Imp units with Summon is real; to a vanilla unit it is generic).
+- Ready / untap / an extra action to a unit with an on-attack or activated ability.
+- Removing a status from my units (cleanse, "keeps X off it") only toward cards that put that status on my own side
+  (Sparkly Kitties confuses a friend, Smoke Pellets smokes allies, Cryo-Launcher freezes itself).
+- Movement ("can move it") only toward a card that acts by position (those are the positional type lines; "can move it"
+  alone is generic).
+- A cost cut only toward cards its filter or size fits: a cut of 2+ already narrows to cards that cost that much (Bargain);
+  "makes it cheaper" to every card is generic.
+- Help a game's rules tie to a kind (Slay the Spire: Strength only adds to Attacks; Focus only to Orbs; L6, L13): the
+  filter is the mechanism, not just a kind. Keep these and check them against test n289 and the sts1 tests.
+- Positional help ("+1 to units next to it", Stormbound "units in front") is generic unless B also acts by place.
+If unsure about a family, keep it, write it in "Open" with one card example, and ask Kaptain at the end.
+
+### How to do it
+1. Save the lines first: `dump_lines.py --table /tmp/tb0.tsv` (after `links.py` for all games; Runeterra about 8 minutes)
+   and `dump_lines.py /tmp/d0.tsv`.
+2. Change network.py once (above), rebuild all tables, dump again, `--diff` both. Read every gone reason group in every
+   game: each must be generic by the rule; any group where B's text uses the help is a bug in the change.
+3. Tests (only lines you are ABSOLUTELY CERTAIN about from both texts): for each family above one `line` test that must stay,
+   and one `none` test of a generic line that must go, per game where the family exists. Flip the old tests listed above.
+4. `check_all.py --no-load` (all games' tests), commit, push.
+5. Report to Kaptain: rows before and after per game (table and decks), the families kept, one example each. Tell him the
+   deck pages (network.html) lose these lines too.
+Then continue step 3 with Slay the Spire.
 
 ## Step 3. Check the lines, one game at a time
 Order of the games left: Slay the Spire, Faeria, Duelyst, Runeterra.

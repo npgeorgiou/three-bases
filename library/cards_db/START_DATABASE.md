@@ -140,7 +140,7 @@ Read: any FAILED line, and the audit lists. After a change to network.py only: `
 
 ## Open work, in Kaptain's order
 1. Check every line, one game at a time: LINKS_PLAN.md step 3 (a whole-game check and a deck check per game).
-   Inscryption, Into the Breach, Stormbound and Monster Train done; next Slay the Spire.
+   Inscryption, Into the Breach, Stormbound and Monster Train done; next: drop generic "gives X" lines (LINKS_PLAN.md step 3a), then Slay the Spire.
 
 ## When you finish
 Commit and push every finished step. Update "State" and "Open work" above (keep them short: no history; git log has it).
