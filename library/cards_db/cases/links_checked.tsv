@@ -13408,3 +13408,1490 @@ monster_train	Ritual of Battle	Hornbreaker Prince
 monster_train	Dark Deal	Hornbreaker Prince
 monster_train	Hornbreaker Prince	Deranged Brute
 monster_train	Hornbreaker Prince	Battering Ram
+monster_train	Vinemother	Guardian Stone
+monster_train	Vinemother	Wyldenten
+monster_train	Steelworker	Hornbreaker Prince
+monster_train	Steelworker	Shardtail Queen
+monster_train	Steelworker	Queen's Impling
+monster_train	Steelworker	Branded Warrior
+monster_train	Steelworker	Deranged Brute
+monster_train	Steelworker	Horned Warrior
+monster_train	Steelworker	Impish Scholar
+monster_train	Steelworker	Molting Imp
+monster_train	Steelworker	Pyre Chomper
+monster_train	Steelworker	Railbeater
+monster_train	Steelworker	Alpha Fiend
+monster_train	Steelworker	Demon Fiend
+monster_train	Steelworker	Consumer of Crowns
+monster_train	Steelworker	Apex Imp
+monster_train	Steelworker	Animus of Will
+monster_train	Steelworker	Awoken Hollow
+monster_train	Steelworker	Edge Prior
+monster_train	Steelworker	Husk Hermit
+monster_train	Steelworker	Shard Channeler
+monster_train	Steelworker	Shattered Shell
+monster_train	Steelworker	Thorned Hollow
+monster_train	Steelworker	Vinemother
+monster_train	Steelworker	Wildwood Custodian
+monster_train	Steelworker	Wilting Sapwood
+monster_train	Steelworker	Steelsinger
+monster_train	Steelworker	Tethys Titansbane
+monster_train	Steelworker	Coldcaelia
+monster_train	Steelworker	Cuttlehex
+monster_train	Steelworker	Icy Cilophyte
+monster_train	Steelworker	Titan Sentry
+monster_train	Steelworker	Penumbra
+monster_train	Steelworker	Primordium
+monster_train	Steelworker	Antumbra Morsel
+monster_train	Steelworker	Magma Morsel
+monster_train	Steelworker	Morsel Excavator
+monster_train	Steelworker	Morsel Jeweler
+monster_train	Steelworker	Morsel Miner
+monster_train	Steelworker	Rubble Morsel
+monster_train	Steelworker	Crucible Collector
+monster_train	Steelworker	Crucible Warden
+monster_train	Steelworker	Ember Forge
+monster_train	Steelworker	Morselmaster
+monster_train	Steelworker	Alloyed Construct
+monster_train	Steelworker	Morselmaker
+monster_train	Steelworker	Overgorger
+monster_train	Steelworker	Shadoweater
+monster_train	Steelworker	Shadowsiege
+monster_train	Steelworker	Morsel-Made
+monster_train	Steelworker	Dreg
+monster_train	Steelworker	Bounty Stalker
+monster_train	Steelworker	Draff
+monster_train	Steelworker	Entombed Explosive
+monster_train	Steelworker	Lady of the House
+monster_train	Steelworker	Lady of the Reformed
+monster_train	Steelworker	Paraffin Enforcer
+monster_train	Steelworker	Paraffin Thug
+monster_train	Steelworker	Remnant Host
+monster_train	Steelworker	Votivary
+monster_train	Steelworker	Wickless Tycoon
+monster_train	Steelworker	Legion of Wax
+monster_train	Steelworker	Bog Fly
+monster_train	Steelworker	Kinhost Carapace
+monster_train	Steelworker	Kinhost Vessel
+monster_train	Steelworker	Kinhost Pupa
+monster_train	Steelworker	First of Kin
+monster_train	Steelworker	Shardsoul Carver
+monster_train	Steelworker	Bogdeep Cocoon
+monster_train	Steelworker	Bog Wurmling
+monster_train	Steelworker	Glareminder
+monster_train	Steelworker	Glugsider
+monster_train	Steelworker	Spikedriver Colony
+monster_train	Steelworker	Dante the Deceptive
+monster_train	Steelworker	Train Steward
+monster_train	Steelworker	Heph the Blacksmith
+monster_train	Steelworker	Twin of Wax
+monster_train	Steelworker	Mote of Wax
+monster_train	Unleash the Wildwood	Steelworker
+monster_train	Engraft	Steelworker
+monster_train	Glimmer	Steelworker
+monster_train	Restoration Detonation	Steelworker
+monster_train	Restore	Steelworker
+monster_train	Adaptive Mutation	Steelworker
+monster_train	Focused Growth	Steelworker
+monster_train	Awake	Steelworker
+monster_train	Purifying Cleanse	Steelworker
+monster_train	Spike of the Hellhorned	Steelworker
+monster_train	Rage Serum	Steelworker
+monster_train	Enflame	Steelworker
+monster_train	Ritual of Battle	Steelworker
+monster_train	Perils of Production	Steelworker
+monster_train	Fortify	Steelworker
+monster_train	Alloy of the Ancients	Steelworker
+monster_train	Symphony of the Soul	Steelworker
+monster_train	Void Binding	Steelworker
+monster_train	Grovel	Steelworker
+monster_train	Thy Holiest Shield	Steelworker
+monster_train	Onehorn's Tome	Steelworker
+monster_train	Furnace Tap	Steelworker
+monster_train	Wildwood Sap	Steelworker
+monster_train	Spreading Spores	Steelworker
+monster_train	Cycle of Life	Steelworker
+monster_train	Echo Infusion	Steelworker
+monster_train	Steelworker	Battering Ram
+monster_train	Steelworker	Reinforce
+monster_train	Steelworker	Symphony of the Soul
+monster_train	Branded Warrior	Steelworker
+monster_train	Pyre Shards	Steelworker
+monster_train	Razorsharp Edge	Steelworker
+monster_train	Rootseeds	Steelworker
+monster_train	Steel Enhancer	Steelworker
+monster_train	Wildwood Tome	Steelworker
+monster_train	Sharpen	Steelworker
+monster_train	Immortal Trade	Steelworker
+monster_train	Umbra Stone	Steelworker
+monster_train	Gem Trove	Steelworker
+monster_train	Waxen Spike	Steelworker
+monster_train	Engulfed in Smoke	Steelworker
+monster_train	Remnant Pact	Steelworker
+monster_train	Wicklash	Steelworker
+monster_train	Echo Transfer	Steelworker
+monster_train	Shelter	Steelworker
+monster_train	Soul Siphon	Steelworker
+monster_train	Echoes of the Past	Steelworker
+monster_train	Titan Sentry	Wickless Tycoon
+monster_train	Wicked Blaze	Wickless Tycoon
+monster_train	Wicklash	Wickless Tycoon
+monster_train	Shardtail Queen	Wickless Tycoon
+monster_train	Sacred Wicks	Wickless Tycoon
+monster_train	Dark Deal	Wickless Tycoon
+monster_train	Pyre Shards	Wickless Tycoon
+monster_train	Hallowed Halls	Wickless Tycoon
+monster_train	Icy Cilophyte	Wickless Tycoon
+monster_train	Thorned Hollow	Wickless Tycoon
+monster_train	Sharpen	Wickless Tycoon
+monster_train	Cannibalize	Wickless Tycoon
+monster_train	Crushing Demise	Wickless Tycoon
+monster_train	Glimmer	Wickless Tycoon
+monster_train	Ancient Resonance	Wickless Tycoon
+monster_train	Kinhost Pupa	Wickless Tycoon
+monster_train	Crypt Builder	Wickless Tycoon
+monster_train	Queen's Impling	Wickless Tycoon
+monster_train	Cycle of Life	Wickless Tycoon
+monster_train	Flash Freeze	Wickless Tycoon
+monster_train	Bramble Lash	Wickless Tycoon
+monster_train	Glareminder	Wickless Tycoon
+monster_train	Coldcaelia	Wickless Tycoon
+monster_train	Titanstooth	Wickless Tycoon
+monster_train	Imp-pressive	Wickless Tycoon
+monster_train	Petrified Skull	Wickless Tycoon
+monster_train	Lady of the Reformed	Wickless Tycoon
+monster_train	Hallowed Drippings	Wickless Tycoon
+monster_train	Shadoweater	Wickless Tycoon
+monster_train	Waxen Spike	Wickless Tycoon
+monster_train	Memento Mori	Wickless Tycoon
+monster_train	Vent	Wickless Tycoon
+monster_train	Onehorn's Tome	Wickless Tycoon
+monster_train	Primitive Mold	Wickless Tycoon
+monster_train	Battering Ram	Wickless Tycoon
+monster_train	Spreading Spores	Wickless Tycoon
+monster_train	The Sentient	Wickless Tycoon
+monster_train	Sting	Wickless Tycoon
+monster_train	Forever Consumed	Wickless Tycoon
+monster_train	Proclamation	Wickless Tycoon
+monster_train	Shattered Shell	Wickless Tycoon
+monster_train	Entombed Explosive	Wickless Tycoon
+monster_train	Wurmkin Spike	Wickless Tycoon
+monster_train	Crystalline Seeds	Wickless Tycoon
+monster_train	Shroud Spike	Wickless Tycoon
+monster_train	Blazing Bolts	Wickless Tycoon
+monster_train	Soul Cripple	Wickless Tycoon
+monster_train	Echo Snare	Wickless Tycoon
+monster_train	Vine Grasp	Wickless Tycoon
+monster_train	Restoration Detonation	Wickless Tycoon
+monster_train	Spike of the Stygian	Wickless Tycoon
+monster_train	Tethys Titansbane	Wickless Tycoon
+monster_train	Inferno	Wickless Tycoon
+monster_train	A Fatal Melting	Wickless Tycoon
+monster_train	Molded	Wickless Tycoon
+monster_train	Glugsider	Wickless Tycoon
+monster_train	Branding Rite	Wickless Tycoon
+monster_train	Forgone Power	Wickless Tycoon
+monster_train	Frozen Lance	Wickless Tycoon
+monster_train	Purifying Cleanse	Wickless Tycoon
+monster_train	Urchin Spines	Wickless Tycoon
+monster_train	Husk Hermit	Wickless Tycoon
+monster_train	Molting Imp	Wickless Tycoon
+monster_train	Imp-portant Work	Wickless Tycoon
+monster_train	Hosting Kin	Wickless Tycoon
+monster_train	Railbeater	Wickless Tycoon
+monster_train	Imp-olate	Wickless Tycoon
+monster_train	Mortal Entrapment	Wickless Tycoon
+monster_train	Forced Contamination	Wickless Tycoon
+monster_train	Dripfall	Wickless Tycoon
+monster_train	Hidden Passage	Wickless Tycoon
+monster_train	Tiresome Climb	Wickless Tycoon
+monster_train	March of Shields	Wickless Tycoon
+monster_train	Restoring Retreat	Wickless Tycoon
+monster_train	Cave In	Wickless Tycoon
+monster_train	Trap Chute	Wickless Tycoon
+monster_train	Soulcrushing Guilt	Wickless Tycoon
+monster_train	Unleash the Wildwood	Wickless Tycoon
+monster_train	Engraft	Wickless Tycoon
+monster_train	Restore	Wickless Tycoon
+monster_train	Adaptive Mutation	Wickless Tycoon
+monster_train	Focused Growth	Wickless Tycoon
+monster_train	Awake	Wickless Tycoon
+monster_train	Dreg	Wickless Tycoon
+monster_train	Lady of the House	Wickless Tycoon
+monster_train	Kinhost Vessel	Wickless Tycoon
+monster_train	Draff	Wickless Tycoon
+monster_train	Bog Chrysalis	Wickless Tycoon
+monster_train	Bogdeep Cocoon	Wickless Tycoon
+monster_train	Animus of Will	Wickless Tycoon
+monster_train	Dante the Deceptive	Wickless Tycoon
+monster_train	Spikedriver Colony	Wickless Tycoon
+monster_train	Hornbreaker Prince	Wickless Tycoon
+monster_train	Horned Warrior	Wickless Tycoon
+monster_train	Spike of the Hellhorned	Wickless Tycoon
+monster_train	Rage Serum	Wickless Tycoon
+monster_train	Enflame	Wickless Tycoon
+monster_train	Ritual of Battle	Wickless Tycoon
+monster_train	Perils of Production	Wickless Tycoon
+monster_train	Prismal Dust	Wickless Tycoon
+monster_train	Void Binding	Wickless Tycoon
+monster_train	Grovel	Wickless Tycoon
+monster_train	Thy Holiest Shield	Wickless Tycoon
+monster_train	Fortify	Wickless Tycoon
+monster_train	Alloy of the Ancients	Wickless Tycoon
+monster_train	Symphony of the Soul	Wickless Tycoon
+monster_train	Steel Pulleyclaw	Wickless Tycoon
+monster_train	Echo Infusion	Wickless Tycoon
+monster_train	Furnace Tap	Wickless Tycoon
+monster_train	Wildwood Sap	Wickless Tycoon
+monster_train	Wickless Tycoon	Shardtail Queen
+monster_train	Branded Warrior	Wickless Tycoon
+monster_train	Razorsharp Edge	Wickless Tycoon
+monster_train	Rootseeds	Wickless Tycoon
+monster_train	Steel Enhancer	Wickless Tycoon
+monster_train	Wildwood Tome	Wickless Tycoon
+monster_train	Immortal Trade	Wickless Tycoon
+monster_train	Umbra Stone	Wickless Tycoon
+monster_train	Gem Trove	Wickless Tycoon
+monster_train	Engulfed in Smoke	Wickless Tycoon
+monster_train	Remnant Pact	Wickless Tycoon
+monster_train	Echo Transfer	Wickless Tycoon
+monster_train	Shelter	Wickless Tycoon
+monster_train	Soul Siphon	Wickless Tycoon
+monster_train	Echoes of the Past	Wickless Tycoon
+monster_train	Branded Warrior	Hornbreaker Prince
+monster_train	Branded Warrior	Shardtail Queen
+monster_train	Branded Warrior	Queen's Impling
+monster_train	Branded Warrior	Deranged Brute
+monster_train	Branded Warrior	Horned Warrior
+monster_train	Branded Warrior	Impish Scholar
+monster_train	Branded Warrior	Molting Imp
+monster_train	Branded Warrior	Pyre Chomper
+monster_train	Branded Warrior	Railbeater
+monster_train	Branded Warrior	Alpha Fiend
+monster_train	Branded Warrior	Demon Fiend
+monster_train	Branded Warrior	Consumer of Crowns
+monster_train	Branded Warrior	Apex Imp
+monster_train	Branded Warrior	The Sentient
+monster_train	Branded Warrior	Animus of Speed
+monster_train	Branded Warrior	Animus of Will
+monster_train	Branded Warrior	Awoken Hollow
+monster_train	Branded Warrior	Edge Prior
+monster_train	Branded Warrior	Husk Hermit
+monster_train	Branded Warrior	Shard Channeler
+monster_train	Branded Warrior	Shattered Shell
+monster_train	Branded Warrior	Thorned Hollow
+monster_train	Branded Warrior	Vinemother
+monster_train	Branded Warrior	Wildwood Custodian
+monster_train	Branded Warrior	Wilting Sapwood
+monster_train	Branded Warrior	Steelsinger
+monster_train	Branded Warrior	Tethys Titansbane
+monster_train	Branded Warrior	Coldcaelia
+monster_train	Branded Warrior	Cuttlehex
+monster_train	Branded Warrior	Icy Cilophyte
+monster_train	Branded Warrior	Titan Sentry
+monster_train	Branded Warrior	Penumbra
+monster_train	Branded Warrior	Primordium
+monster_train	Branded Warrior	Antumbra Morsel
+monster_train	Branded Warrior	Magma Morsel
+monster_train	Branded Warrior	Morsel Excavator
+monster_train	Branded Warrior	Morsel Jeweler
+monster_train	Branded Warrior	Morsel Miner
+monster_train	Branded Warrior	Rubble Morsel
+monster_train	Branded Warrior	Crucible Collector
+monster_train	Branded Warrior	Crucible Warden
+monster_train	Branded Warrior	Ember Forge
+monster_train	Branded Warrior	Morselmaster
+monster_train	Branded Warrior	Alloyed Construct
+monster_train	Branded Warrior	Morselmaker
+monster_train	Branded Warrior	Overgorger
+monster_train	Branded Warrior	Shadoweater
+monster_train	Branded Warrior	Shadowsiege
+monster_train	Branded Warrior	Morsel-Made
+monster_train	Branded Warrior	Dreg
+monster_train	Branded Warrior	Draff
+monster_train	Branded Warrior	Entombed Explosive
+monster_train	Branded Warrior	Lady of the House
+monster_train	Branded Warrior	Lady of the Reformed
+monster_train	Branded Warrior	Paraffin Enforcer
+monster_train	Branded Warrior	Paraffin Thug
+monster_train	Branded Warrior	Remnant Host
+monster_train	Branded Warrior	Votivary
+monster_train	Branded Warrior	Legion of Wax
+monster_train	Branded Warrior	Bog Fly
+monster_train	Branded Warrior	Bog Chrysalis
+monster_train	Branded Warrior	Kinhost Carapace
+monster_train	Branded Warrior	Kinhost Vessel
+monster_train	Branded Warrior	Kinhost Pupa
+monster_train	Branded Warrior	First of Kin
+monster_train	Branded Warrior	Shardsoul Carver
+monster_train	Branded Warrior	Bogdeep Cocoon
+monster_train	Branded Warrior	Bog Wurmling
+monster_train	Branded Warrior	Glareminder
+monster_train	Branded Warrior	Glugsider
+monster_train	Branded Warrior	Spikedriver Colony
+monster_train	Branded Warrior	Dante the Deceptive
+monster_train	Branded Warrior	Train Steward
+monster_train	Branded Warrior	Heph the Blacksmith
+monster_train	Branded Warrior	Twin of Wax
+monster_train	Unleash the Wildwood	Branded Warrior
+monster_train	Engraft	Branded Warrior
+monster_train	Glimmer	Branded Warrior
+monster_train	Restoration Detonation	Branded Warrior
+monster_train	Restore	Branded Warrior
+monster_train	Adaptive Mutation	Branded Warrior
+monster_train	Focused Growth	Branded Warrior
+monster_train	Awake	Branded Warrior
+monster_train	Purifying Cleanse	Branded Warrior
+monster_train	Spike of the Hellhorned	Branded Warrior
+monster_train	Rage Serum	Branded Warrior
+monster_train	Enflame	Branded Warrior
+monster_train	Ritual of Battle	Branded Warrior
+monster_train	Perils of Production	Branded Warrior
+monster_train	Prismal Dust	Branded Warrior
+monster_train	Void Binding	Branded Warrior
+monster_train	Grovel	Branded Warrior
+monster_train	Thy Holiest Shield	Branded Warrior
+monster_train	Fortify	Branded Warrior
+monster_train	Alloy of the Ancients	Branded Warrior
+monster_train	Symphony of the Soul	Branded Warrior
+monster_train	Onehorn's Tome	Branded Warrior
+monster_train	Furnace Tap	Branded Warrior
+monster_train	Wildwood Sap	Branded Warrior
+monster_train	Spreading Spores	Branded Warrior
+monster_train	Cycle of Life	Branded Warrior
+monster_train	Echo Infusion	Branded Warrior
+monster_train	Branded Warrior	Last Stand
+monster_train	Branded Warrior	Symphony of the Soul
+monster_train	Deranged Brute	Branded Warrior
+monster_train	Last Stand	Branded Warrior
+monster_train	Pyre Shards	Branded Warrior
+monster_train	Razorsharp Edge	Branded Warrior
+monster_train	Rootseeds	Branded Warrior
+monster_train	Steel Enhancer	Branded Warrior
+monster_train	Wildwood Tome	Branded Warrior
+monster_train	Sharpen	Branded Warrior
+monster_train	Immortal Trade	Branded Warrior
+monster_train	Umbra Stone	Branded Warrior
+monster_train	Gem Trove	Branded Warrior
+monster_train	Waxen Spike	Branded Warrior
+monster_train	Engulfed in Smoke	Branded Warrior
+monster_train	Remnant Pact	Branded Warrior
+monster_train	Wicklash	Branded Warrior
+monster_train	Echo Transfer	Branded Warrior
+monster_train	Shelter	Branded Warrior
+monster_train	Soul Siphon	Branded Warrior
+monster_train	Echoes of the Past	Branded Warrior
+monster_train	Perils of Production	Hornbreaker Prince
+monster_train	Perils of Production	Shardtail Queen
+monster_train	Perils of Production	Queen's Impling
+monster_train	Perils of Production	Deranged Brute
+monster_train	Perils of Production	Horned Warrior
+monster_train	Perils of Production	Impish Scholar
+monster_train	Perils of Production	Molting Imp
+monster_train	Perils of Production	Pyre Chomper
+monster_train	Perils of Production	Railbeater
+monster_train	Perils of Production	Alpha Fiend
+monster_train	Perils of Production	Demon Fiend
+monster_train	Perils of Production	Consumer of Crowns
+monster_train	Perils of Production	The Sentient
+monster_train	Perils of Production	Animus of Speed
+monster_train	Perils of Production	Animus of Will
+monster_train	Perils of Production	Awoken Hollow
+monster_train	Perils of Production	Edge Prior
+monster_train	Perils of Production	Husk Hermit
+monster_train	Perils of Production	Shard Channeler
+monster_train	Perils of Production	Shattered Shell
+monster_train	Perils of Production	Thorned Hollow
+monster_train	Perils of Production	Vinemother
+monster_train	Perils of Production	Wildwood Custodian
+monster_train	Perils of Production	Wilting Sapwood
+monster_train	Perils of Production	Steelsinger
+monster_train	Perils of Production	Tethys Titansbane
+monster_train	Perils of Production	Coldcaelia
+monster_train	Perils of Production	Cuttlehex
+monster_train	Perils of Production	Icy Cilophyte
+monster_train	Perils of Production	Titan Sentry
+monster_train	Perils of Production	Penumbra
+monster_train	Perils of Production	Primordium
+monster_train	Perils of Production	Antumbra Morsel
+monster_train	Perils of Production	Magma Morsel
+monster_train	Perils of Production	Morsel Excavator
+monster_train	Perils of Production	Morsel Jeweler
+monster_train	Perils of Production	Morsel Miner
+monster_train	Perils of Production	Rubble Morsel
+monster_train	Perils of Production	Crucible Collector
+monster_train	Perils of Production	Crucible Warden
+monster_train	Perils of Production	Ember Forge
+monster_train	Perils of Production	Morselmaster
+monster_train	Perils of Production	Alloyed Construct
+monster_train	Perils of Production	Morselmaker
+monster_train	Perils of Production	Overgorger
+monster_train	Perils of Production	Shadoweater
+monster_train	Perils of Production	Shadowsiege
+monster_train	Perils of Production	Morsel-Made
+monster_train	Perils of Production	Dreg
+monster_train	Perils of Production	Bounty Stalker
+monster_train	Perils of Production	Draff
+monster_train	Perils of Production	Entombed Explosive
+monster_train	Perils of Production	Lady of the House
+monster_train	Perils of Production	Lady of the Reformed
+monster_train	Perils of Production	Paraffin Enforcer
+monster_train	Perils of Production	Paraffin Thug
+monster_train	Perils of Production	Remnant Host
+monster_train	Perils of Production	Votivary
+monster_train	Perils of Production	Legion of Wax
+monster_train	Perils of Production	Bog Fly
+monster_train	Perils of Production	Bog Chrysalis
+monster_train	Perils of Production	Kinhost Carapace
+monster_train	Perils of Production	Kinhost Vessel
+monster_train	Perils of Production	Kinhost Pupa
+monster_train	Perils of Production	First of Kin
+monster_train	Perils of Production	Shardsoul Carver
+monster_train	Perils of Production	Bogdeep Cocoon
+monster_train	Perils of Production	Bog Wurmling
+monster_train	Perils of Production	Glareminder
+monster_train	Perils of Production	Glugsider
+monster_train	Perils of Production	Spikedriver Colony
+monster_train	Perils of Production	Dante the Deceptive
+monster_train	Perils of Production	Train Steward
+monster_train	Perils of Production	Heph the Blacksmith
+monster_train	Perils of Production	Twin of Wax
+monster_train	Perils of Production	Mote of Wax
+monster_train	Perils of Production	Battering Ram
+monster_train	Perils of Production	Inferno
+monster_train	Perils of Production	Last Stand
+monster_train	Perils of Production	Reinforce
+monster_train	Perils of Production	Ritual of Battle
+monster_train	Perils of Production	Onehorn's Tome
+monster_train	Perils of Production	Awake
+monster_train	Perils of Production	Cycle of Life
+monster_train	Perils of Production	Hoarfrost Effigy
+monster_train	Perils of Production	Crypt Builder
+monster_train	Perils of Production	Guardian's Amulet
+monster_train	Perils of Production	Ice Tornado
+monster_train	Perils of Production	Titanstooth
+monster_train	Perils of Production	Blazing Bolts
+monster_train	Perils of Production	Excavation Eruption
+monster_train	Perils of Production	Gem Trove
+monster_train	Perils of Production	Memento Mori
+monster_train	Perils of Production	Mortal Entrapment
+monster_train	Perils of Production	Calcified Ember
+monster_train	Perils of Production	Spike of the Hellhorned
+monster_train	Perils of Production	Vent
+monster_train	Perils of Production	Awoken's Rail Spike
+monster_train	Perils of Production	Spike of the Stygian
+monster_train	Perils of Production	Forever Consumed
+monster_train	Perils of Production	Kindle
+monster_train	Perils of Production	Mine Collapse
+monster_train	Perils of Production	Prism Retrieval
+monster_train	Perils of Production	Shroud Spike
+monster_train	Perils of Production	Waxen Spike
+monster_train	Perils of Production	Wurmkin Spike
+monster_train	Perils of Production	Automatic Railspikes
+monster_train	Perils of Production	Bone Rattler
+monster_train	Perils of Production	Boneshine
+monster_train	Perils of Production	Gift of Gratitude
+monster_train	Perils of Production	Most Blessed Sword
+monster_train	Perils of Production	Thy Holiest Shield
+monster_train	Perils of Production	Symphony of the Soul
+monster_train	Deranged Brute	Perils of Production
+monster_train	Engraft	Hornbreaker Prince
+monster_train	Engraft	Shardtail Queen
+monster_train	Engraft	Deranged Brute
+monster_train	Engraft	Horned Warrior
+monster_train	Engraft	Impish Scholar
+monster_train	Engraft	Molting Imp
+monster_train	Engraft	Pyre Chomper
+monster_train	Engraft	Railbeater
+monster_train	Engraft	Alpha Fiend
+monster_train	Engraft	Demon Fiend
+monster_train	Engraft	Consumer of Crowns
+monster_train	Engraft	Apex Imp
+monster_train	Engraft	The Sentient
+monster_train	Engraft	Animus of Speed
+monster_train	Engraft	Animus of Will
+monster_train	Engraft	Awoken Hollow
+monster_train	Engraft	Edge Prior
+monster_train	Engraft	Husk Hermit
+monster_train	Engraft	Shard Channeler
+monster_train	Engraft	Shattered Shell
+monster_train	Engraft	Thorned Hollow
+monster_train	Engraft	Vinemother
+monster_train	Engraft	Wildwood Custodian
+monster_train	Engraft	Wilting Sapwood
+monster_train	Engraft	Steelsinger
+monster_train	Engraft	Tethys Titansbane
+monster_train	Engraft	Coldcaelia
+monster_train	Engraft	Cuttlehex
+monster_train	Engraft	Icy Cilophyte
+monster_train	Engraft	Titan Sentry
+monster_train	Engraft	Penumbra
+monster_train	Engraft	Primordium
+monster_train	Engraft	Antumbra Morsel
+monster_train	Engraft	Magma Morsel
+monster_train	Engraft	Morsel Excavator
+monster_train	Engraft	Morsel Jeweler
+monster_train	Engraft	Morsel Miner
+monster_train	Engraft	Rubble Morsel
+monster_train	Engraft	Crucible Collector
+monster_train	Engraft	Crucible Warden
+monster_train	Engraft	Ember Forge
+monster_train	Engraft	Morselmaster
+monster_train	Engraft	Alloyed Construct
+monster_train	Engraft	Morselmaker
+monster_train	Engraft	Overgorger
+monster_train	Engraft	Shadoweater
+monster_train	Engraft	Shadowsiege
+monster_train	Engraft	Morsel-Made
+monster_train	Engraft	Dreg
+monster_train	Engraft	Bounty Stalker
+monster_train	Engraft	Draff
+monster_train	Engraft	Entombed Explosive
+monster_train	Engraft	Lady of the House
+monster_train	Engraft	Lady of the Reformed
+monster_train	Engraft	Paraffin Enforcer
+monster_train	Engraft	Paraffin Thug
+monster_train	Engraft	Remnant Host
+monster_train	Engraft	Votivary
+monster_train	Engraft	Legion of Wax
+monster_train	Engraft	Bog Fly
+monster_train	Engraft	Bog Chrysalis
+monster_train	Engraft	Kinhost Carapace
+monster_train	Engraft	Kinhost Vessel
+monster_train	Engraft	Kinhost Pupa
+monster_train	Engraft	First of Kin
+monster_train	Engraft	Shardsoul Carver
+monster_train	Engraft	Bogdeep Cocoon
+monster_train	Engraft	Glareminder
+monster_train	Engraft	Glugsider
+monster_train	Engraft	Spikedriver Colony
+monster_train	Engraft	Dante the Deceptive
+monster_train	Engraft	Train Steward
+monster_train	Engraft	Heph the Blacksmith
+monster_train	Engraft	Twin of Wax
+monster_train	Engraft	Mote of Wax
+monster_train	Engraft	Spike of the Hellhorned
+monster_train	Engraft	Vent
+monster_train	Engraft	Awoken's Rail Spike
+monster_train	Engraft	Spike of the Stygian
+monster_train	Engraft	Forever Consumed
+monster_train	Engraft	Kindle
+monster_train	Engraft	Mine Collapse
+monster_train	Engraft	Prism Retrieval
+monster_train	Engraft	Prismal Dust
+monster_train	Engraft	Shroud Spike
+monster_train	Engraft	Waxen Spike
+monster_train	Engraft	Wurmkin Spike
+monster_train	Engraft	Automatic Railspikes
+monster_train	Engraft	Bone Rattler
+monster_train	Engraft	Boneshine
+monster_train	Engraft	Gift of Gratitude
+monster_train	Engraft	Most Blessed Sword
+monster_train	Engraft	Thy Holiest Shield
+monster_train	Engraft	Battering Ram
+monster_train	Engraft	Inferno
+monster_train	Engraft	Last Stand
+monster_train	Engraft	Reinforce
+monster_train	Engraft	Ritual of Battle
+monster_train	Engraft	Awake
+monster_train	Engraft	Cycle of Life
+monster_train	Engraft	Crypt Builder
+monster_train	Engraft	Guardian's Amulet
+monster_train	Engraft	Ice Tornado
+monster_train	Engraft	Titanstooth
+monster_train	Engraft	Blazing Bolts
+monster_train	Engraft	Excavation Eruption
+monster_train	Engraft	Memento Mori
+monster_train	Engraft	Mortal Entrapment
+monster_train	Engraft	Calcified Ember
+monster_train	Edge Prior	Engraft
+monster_train	Symphony of the Soul	Hornbreaker Prince
+monster_train	Symphony of the Soul	Shardtail Queen
+monster_train	Symphony of the Soul	Queen's Impling
+monster_train	Symphony of the Soul	Deranged Brute
+monster_train	Symphony of the Soul	Horned Warrior
+monster_train	Symphony of the Soul	Impish Scholar
+monster_train	Symphony of the Soul	Molting Imp
+monster_train	Symphony of the Soul	Pyre Chomper
+monster_train	Symphony of the Soul	Railbeater
+monster_train	Symphony of the Soul	Alpha Fiend
+monster_train	Symphony of the Soul	Demon Fiend
+monster_train	Symphony of the Soul	Consumer of Crowns
+monster_train	Symphony of the Soul	Apex Imp
+monster_train	Symphony of the Soul	The Sentient
+monster_train	Symphony of the Soul	Animus of Speed
+monster_train	Symphony of the Soul	Animus of Will
+monster_train	Symphony of the Soul	Awoken Hollow
+monster_train	Symphony of the Soul	Edge Prior
+monster_train	Symphony of the Soul	Husk Hermit
+monster_train	Symphony of the Soul	Shard Channeler
+monster_train	Symphony of the Soul	Shattered Shell
+monster_train	Symphony of the Soul	Thorned Hollow
+monster_train	Symphony of the Soul	Vinemother
+monster_train	Symphony of the Soul	Wildwood Custodian
+monster_train	Symphony of the Soul	Wilting Sapwood
+monster_train	Symphony of the Soul	Steelsinger
+monster_train	Symphony of the Soul	Coldcaelia
+monster_train	Symphony of the Soul	Cuttlehex
+monster_train	Symphony of the Soul	Icy Cilophyte
+monster_train	Symphony of the Soul	Titan Sentry
+monster_train	Symphony of the Soul	Penumbra
+monster_train	Symphony of the Soul	Primordium
+monster_train	Symphony of the Soul	Antumbra Morsel
+monster_train	Symphony of the Soul	Magma Morsel
+monster_train	Symphony of the Soul	Morsel Excavator
+monster_train	Symphony of the Soul	Morsel Jeweler
+monster_train	Symphony of the Soul	Morsel Miner
+monster_train	Symphony of the Soul	Rubble Morsel
+monster_train	Symphony of the Soul	Crucible Collector
+monster_train	Symphony of the Soul	Crucible Warden
+monster_train	Symphony of the Soul	Ember Forge
+monster_train	Symphony of the Soul	Morselmaster
+monster_train	Symphony of the Soul	Alloyed Construct
+monster_train	Symphony of the Soul	Morselmaker
+monster_train	Symphony of the Soul	Overgorger
+monster_train	Symphony of the Soul	Shadoweater
+monster_train	Symphony of the Soul	Shadowsiege
+monster_train	Symphony of the Soul	Morsel-Made
+monster_train	Symphony of the Soul	Dreg
+monster_train	Symphony of the Soul	Bounty Stalker
+monster_train	Symphony of the Soul	Draff
+monster_train	Symphony of the Soul	Entombed Explosive
+monster_train	Symphony of the Soul	Lady of the House
+monster_train	Symphony of the Soul	Lady of the Reformed
+monster_train	Symphony of the Soul	Paraffin Enforcer
+monster_train	Symphony of the Soul	Paraffin Thug
+monster_train	Symphony of the Soul	Remnant Host
+monster_train	Symphony of the Soul	Votivary
+monster_train	Symphony of the Soul	Legion of Wax
+monster_train	Symphony of the Soul	Bog Fly
+monster_train	Symphony of the Soul	Bog Chrysalis
+monster_train	Symphony of the Soul	Kinhost Carapace
+monster_train	Symphony of the Soul	Kinhost Vessel
+monster_train	Symphony of the Soul	Kinhost Pupa
+monster_train	Symphony of the Soul	First of Kin
+monster_train	Symphony of the Soul	Shardsoul Carver
+monster_train	Symphony of the Soul	Bogdeep Cocoon
+monster_train	Symphony of the Soul	Bog Wurmling
+monster_train	Symphony of the Soul	Glareminder
+monster_train	Symphony of the Soul	Glugsider
+monster_train	Symphony of the Soul	Spikedriver Colony
+monster_train	Symphony of the Soul	Dante the Deceptive
+monster_train	Symphony of the Soul	Train Steward
+monster_train	Symphony of the Soul	Heph the Blacksmith
+monster_train	Symphony of the Soul	Twin of Wax
+monster_train	Symphony of the Soul	Mote of Wax
+monster_train	Spike of the Hellhorned	Symphony of the Soul
+monster_train	Enflame	Symphony of the Soul
+monster_train	Prism Retrieval	Symphony of the Soul
+monster_train	Dark Deal	Symphony of the Soul
+monster_train	Rage Serum	Symphony of the Soul
+monster_train	Void Binding	Symphony of the Soul
+monster_train	Ritual of Battle	Symphony of the Soul
+monster_train	The Sentient	Symphony of the Soul
+monster_train	Waxen Spike	Symphony of the Soul
+monster_train	Primitive Mold	Symphony of the Soul
+monster_train	Sacred Wicks	Symphony of the Soul
+monster_train	Awoken Hollow	Symphony of the Soul
+monster_train	Channelsong	Symphony of the Soul
+monster_train	Sacrificial Resurrection	Symphony of the Soul
+monster_train	Razorsharp Edge	Symphony of the Soul
+monster_train	Rootseeds	Symphony of the Soul
+monster_train	Molded	Symphony of the Soul
+monster_train	Steel Enhancer	Symphony of the Soul
+monster_train	Wicklash	Symphony of the Soul
+monster_train	Sharpen	Symphony of the Soul
+monster_train	Wicked Blaze	Symphony of the Soul
+monster_train	Hallowed Halls	Symphony of the Soul
+monster_train	Spike of the Stygian	Symphony of the Soul
+monster_train	Echo Transfer	Symphony of the Soul
+monster_train	Drain	Symphony of the Soul
+monster_train	Echoes of the Past	Symphony of the Soul
+monster_train	Fortify	Symphony of the Soul
+monster_train	Reinforce	Symphony of the Soul
+monster_train	March of Shields	Symphony of the Soul
+monster_train	Primordium	Symphony of the Soul
+monster_train	Branding Rite	Symphony of the Soul
+monster_train	Alloy of the Ancients	Symphony of the Soul
+monster_train	Shelter	Symphony of the Soul
+monster_train	Symphony of the Soul	Echo Break
+monster_train	Symphony of the Soul	Shelter
+monster_train	Symphony of the Soul	Ancient Resonance
+monster_train	Symphony of the Soul	Forgotten Trade
+monster_train	Symphony of the Soul	Echoes of the Past
+monster_train	Hornbreaker Prince	Symphony of the Soul
+monster_train	Apex Imp	Symphony of the Soul
+monster_train	Kinhost Pupa	Symphony of the Soul
+monster_train	Railbeater	Symphony of the Soul
+monster_train	Shardsoul Carver	Symphony of the Soul
+monster_train	Symphony of the Soul	Battering Ram
+monster_train	Symphony of the Soul	Reinforce
+monster_train	Molting Imp	Shardtail Queen
+monster_train	Pyre Chomper	Shardtail Queen
+monster_train	Apex Imp	Shardtail Queen
+monster_train	Deranged Brute	Shardtail Queen
+monster_train	Horned Warrior	Shardtail Queen
+monster_train	Railbeater	Shardtail Queen
+monster_train	Alpha Fiend	Shardtail Queen
+monster_train	Demon Fiend	Shardtail Queen
+monster_train	Consumer of Crowns	Shardtail Queen
+monster_train	Animus of Speed	Shardtail Queen
+monster_train	Animus of Will	Shardtail Queen
+monster_train	Awoken Hollow	Shardtail Queen
+monster_train	Edge Prior	Shardtail Queen
+monster_train	Husk Hermit	Shardtail Queen
+monster_train	Shard Channeler	Shardtail Queen
+monster_train	Shattered Shell	Shardtail Queen
+monster_train	Thorned Hollow	Shardtail Queen
+monster_train	Vinemother	Shardtail Queen
+monster_train	Wildwood Custodian	Shardtail Queen
+monster_train	Wilting Sapwood	Shardtail Queen
+monster_train	Steelsinger	Shardtail Queen
+monster_train	Coldcaelia	Shardtail Queen
+monster_train	Cuttlehex	Shardtail Queen
+monster_train	Icy Cilophyte	Shardtail Queen
+monster_train	Titan Sentry	Shardtail Queen
+monster_train	Crucible Collector	Shardtail Queen
+monster_train	Crucible Warden	Shardtail Queen
+monster_train	Ember Forge	Shardtail Queen
+monster_train	Morselmaster	Shardtail Queen
+monster_train	Alloyed Construct	Shardtail Queen
+monster_train	Morselmaker	Shardtail Queen
+monster_train	Overgorger	Shardtail Queen
+monster_train	Shadoweater	Shardtail Queen
+monster_train	Shadowsiege	Shardtail Queen
+monster_train	Morsel-Made	Shardtail Queen
+monster_train	Dreg	Shardtail Queen
+monster_train	Bounty Stalker	Shardtail Queen
+monster_train	Draff	Shardtail Queen
+monster_train	Entombed Explosive	Shardtail Queen
+monster_train	Lady of the House	Shardtail Queen
+monster_train	Lady of the Reformed	Shardtail Queen
+monster_train	Paraffin Enforcer	Shardtail Queen
+monster_train	Paraffin Thug	Shardtail Queen
+monster_train	Remnant Host	Shardtail Queen
+monster_train	Votivary	Shardtail Queen
+monster_train	Legion of Wax	Shardtail Queen
+monster_train	Bog Fly	Shardtail Queen
+monster_train	Bog Chrysalis	Shardtail Queen
+monster_train	Kinhost Carapace	Shardtail Queen
+monster_train	Kinhost Vessel	Shardtail Queen
+monster_train	Kinhost Pupa	Shardtail Queen
+monster_train	First of Kin	Shardtail Queen
+monster_train	Shardsoul Carver	Shardtail Queen
+monster_train	Bogdeep Cocoon	Shardtail Queen
+monster_train	Bog Wurmling	Shardtail Queen
+monster_train	Glareminder	Shardtail Queen
+monster_train	Spikedriver Colony	Shardtail Queen
+monster_train	Dante the Deceptive	Shardtail Queen
+monster_train	Train Steward	Shardtail Queen
+monster_train	Heph the Blacksmith	Shardtail Queen
+monster_train	Unleash the Wildwood	Shardtail Queen
+monster_train	Glimmer	Shardtail Queen
+monster_train	Restoration Detonation	Shardtail Queen
+monster_train	Restore	Shardtail Queen
+monster_train	Adaptive Mutation	Shardtail Queen
+monster_train	Focused Growth	Shardtail Queen
+monster_train	Awake	Shardtail Queen
+monster_train	Purifying Cleanse	Shardtail Queen
+monster_train	Spike of the Hellhorned	Shardtail Queen
+monster_train	Rage Serum	Shardtail Queen
+monster_train	Enflame	Shardtail Queen
+monster_train	Ritual of Battle	Shardtail Queen
+monster_train	Prismal Dust	Shardtail Queen
+monster_train	Grovel	Shardtail Queen
+monster_train	Thy Holiest Shield	Shardtail Queen
+monster_train	Shardtail Queen	Imp-portant Work
+monster_train	Shardtail Queen	Imp-pressive
+monster_train	Shardtail Queen	Consumer of Crowns
+monster_train	Shardtail Queen	Molting Imp
+monster_train	Shardtail Queen	Pyre Chomper
+monster_train	Shardtail Queen	Apex Imp
+monster_train	Shardtail Queen	Primitive Mold
+monster_train	Shardtail Queen	Sacred Wicks
+monster_train	Shardtail Queen	Hallowed Halls
+monster_train	Shardtail Queen	Memories of the Melted
+monster_train	Shardtail Queen	A Fatal Melting
+monster_train	Shardtail Queen	Memento Mori
+monster_train	Imp-pressive	Shardtail Queen
+monster_train	Imp-portant Work	Shardtail Queen
+monster_train	Fortify	Shardtail Queen
+monster_train	Alloy of the Ancients	Shardtail Queen
+monster_train	Onehorn's Tome	Shardtail Queen
+monster_train	Furnace Tap	Shardtail Queen
+monster_train	Pyre Shards	Shardtail Queen
+monster_train	Razorsharp Edge	Shardtail Queen
+monster_train	Rootseeds	Shardtail Queen
+monster_train	Steel Enhancer	Shardtail Queen
+monster_train	Wildwood Tome	Shardtail Queen
+monster_train	Sharpen	Shardtail Queen
+monster_train	Spreading Spores	Shardtail Queen
+monster_train	Cycle of Life	Shardtail Queen
+monster_train	Immortal Trade	Shardtail Queen
+monster_train	Umbra Stone	Shardtail Queen
+monster_train	Gem Trove	Shardtail Queen
+monster_train	Waxen Spike	Shardtail Queen
+monster_train	Engulfed in Smoke	Shardtail Queen
+monster_train	Remnant Pact	Shardtail Queen
+monster_train	Wicklash	Shardtail Queen
+monster_train	Echo Transfer	Shardtail Queen
+monster_train	Shelter	Shardtail Queen
+monster_train	Soul Siphon	Shardtail Queen
+monster_train	Echoes of the Past	Shardtail Queen
+monster_train	Shardtail Queen	Mortal Entrapment
+monster_train	Waxen Spike	Hornbreaker Prince
+monster_train	Waxen Spike	Queen's Impling
+monster_train	Waxen Spike	Deranged Brute
+monster_train	Waxen Spike	Horned Warrior
+monster_train	Waxen Spike	Impish Scholar
+monster_train	Waxen Spike	Molting Imp
+monster_train	Waxen Spike	Pyre Chomper
+monster_train	Waxen Spike	Railbeater
+monster_train	Waxen Spike	Alpha Fiend
+monster_train	Waxen Spike	Demon Fiend
+monster_train	Waxen Spike	Consumer of Crowns
+monster_train	Waxen Spike	Apex Imp
+monster_train	Waxen Spike	The Sentient
+monster_train	Waxen Spike	Animus of Speed
+monster_train	Waxen Spike	Animus of Will
+monster_train	Waxen Spike	Awoken Hollow
+monster_train	Waxen Spike	Edge Prior
+monster_train	Waxen Spike	Husk Hermit
+monster_train	Waxen Spike	Shard Channeler
+monster_train	Waxen Spike	Shattered Shell
+monster_train	Waxen Spike	Thorned Hollow
+monster_train	Waxen Spike	Vinemother
+monster_train	Waxen Spike	Wildwood Custodian
+monster_train	Waxen Spike	Wilting Sapwood
+monster_train	Waxen Spike	Steelsinger
+monster_train	Waxen Spike	Tethys Titansbane
+monster_train	Waxen Spike	Coldcaelia
+monster_train	Waxen Spike	Cuttlehex
+monster_train	Waxen Spike	Icy Cilophyte
+monster_train	Waxen Spike	Titan Sentry
+monster_train	Waxen Spike	Penumbra
+monster_train	Waxen Spike	Primordium
+monster_train	Waxen Spike	Antumbra Morsel
+monster_train	Waxen Spike	Magma Morsel
+monster_train	Waxen Spike	Morsel Excavator
+monster_train	Waxen Spike	Morsel Jeweler
+monster_train	Waxen Spike	Morsel Miner
+monster_train	Waxen Spike	Rubble Morsel
+monster_train	Waxen Spike	Crucible Collector
+monster_train	Waxen Spike	Crucible Warden
+monster_train	Waxen Spike	Ember Forge
+monster_train	Waxen Spike	Morselmaster
+monster_train	Waxen Spike	Alloyed Construct
+monster_train	Waxen Spike	Morselmaker
+monster_train	Waxen Spike	Overgorger
+monster_train	Waxen Spike	Shadoweater
+monster_train	Waxen Spike	Shadowsiege
+monster_train	Waxen Spike	Morsel-Made
+monster_train	Waxen Spike	Dreg
+monster_train	Waxen Spike	Bounty Stalker
+monster_train	Waxen Spike	Draff
+monster_train	Waxen Spike	Entombed Explosive
+monster_train	Waxen Spike	Lady of the House
+monster_train	Waxen Spike	Lady of the Reformed
+monster_train	Waxen Spike	Paraffin Enforcer
+monster_train	Waxen Spike	Paraffin Thug
+monster_train	Waxen Spike	Remnant Host
+monster_train	Waxen Spike	Votivary
+monster_train	Waxen Spike	Legion of Wax
+monster_train	Waxen Spike	Bog Fly
+monster_train	Waxen Spike	Bog Chrysalis
+monster_train	Waxen Spike	Kinhost Carapace
+monster_train	Waxen Spike	Kinhost Vessel
+monster_train	Waxen Spike	Kinhost Pupa
+monster_train	Waxen Spike	First of Kin
+monster_train	Waxen Spike	Shardsoul Carver
+monster_train	Waxen Spike	Bogdeep Cocoon
+monster_train	Waxen Spike	Bog Wurmling
+monster_train	Waxen Spike	Glareminder
+monster_train	Waxen Spike	Glugsider
+monster_train	Waxen Spike	Spikedriver Colony
+monster_train	Waxen Spike	Dante the Deceptive
+monster_train	Waxen Spike	Train Steward
+monster_train	Waxen Spike	Heph the Blacksmith
+monster_train	Waxen Spike	Twin of Wax
+monster_train	Waxen Spike	Mote of Wax
+monster_train	Imp-portant Work	Waxen Spike
+monster_train	Pyre Chomper	Waxen Spike
+monster_train	Wilting Sapwood	Waxen Spike
+monster_train	Kindle	Waxen Spike
+monster_train	Mine Collapse	Waxen Spike
+monster_train	Rubble Morsel	Waxen Spike
+monster_train	Excavation Eruption	Waxen Spike
+monster_train	Memories of the Melted	Waxen Spike
+monster_train	Forgotten Trade	Waxen Spike
+monster_train	Unearthed Remains	Waxen Spike
+monster_train	Excavated Ember	Waxen Spike
+monster_train	Pyre-Gro	Waxen Spike
+monster_train	Ember Forge	Waxen Spike
+monster_train	Engine Upgrade	Waxen Spike
+monster_train	Impish Scholar	Waxen Spike
+monster_train	Broken Memories	Waxen Spike
+monster_train	Wurmkin Etchings	Waxen Spike
+monster_train	Waxen Spike	Primitive Mold
+monster_train	Waxen Spike	Sacred Wicks
+monster_train	Waxen Spike	Hallowed Halls
+monster_train	Waxen Spike	Hallowed Drippings
+monster_train	Waxen Spike	Memories of the Melted
+monster_train	Waxen Spike	A Fatal Melting
+monster_train	Waxen Spike	Memento Mori
+monster_train	Shelter	Hornbreaker Prince
+monster_train	Shelter	Queen's Impling
+monster_train	Shelter	Deranged Brute
+monster_train	Shelter	Horned Warrior
+monster_train	Shelter	Impish Scholar
+monster_train	Shelter	Molting Imp
+monster_train	Shelter	Pyre Chomper
+monster_train	Shelter	Railbeater
+monster_train	Shelter	Alpha Fiend
+monster_train	Shelter	Demon Fiend
+monster_train	Shelter	Consumer of Crowns
+monster_train	Shelter	Apex Imp
+monster_train	Shelter	The Sentient
+monster_train	Shelter	Animus of Speed
+monster_train	Shelter	Animus of Will
+monster_train	Shelter	Awoken Hollow
+monster_train	Shelter	Edge Prior
+monster_train	Shelter	Husk Hermit
+monster_train	Shelter	Shard Channeler
+monster_train	Shelter	Shattered Shell
+monster_train	Shelter	Thorned Hollow
+monster_train	Shelter	Vinemother
+monster_train	Shelter	Wildwood Custodian
+monster_train	Shelter	Wilting Sapwood
+monster_train	Shelter	Steelsinger
+monster_train	Shelter	Tethys Titansbane
+monster_train	Shelter	Coldcaelia
+monster_train	Shelter	Cuttlehex
+monster_train	Shelter	Icy Cilophyte
+monster_train	Shelter	Titan Sentry
+monster_train	Shelter	Penumbra
+monster_train	Shelter	Primordium
+monster_train	Shelter	Antumbra Morsel
+monster_train	Shelter	Magma Morsel
+monster_train	Shelter	Morsel Excavator
+monster_train	Shelter	Morsel Jeweler
+monster_train	Shelter	Morsel Miner
+monster_train	Shelter	Rubble Morsel
+monster_train	Shelter	Crucible Collector
+monster_train	Shelter	Crucible Warden
+monster_train	Shelter	Ember Forge
+monster_train	Shelter	Morselmaster
+monster_train	Shelter	Alloyed Construct
+monster_train	Shelter	Morselmaker
+monster_train	Shelter	Overgorger
+monster_train	Shelter	Shadowsiege
+monster_train	Shelter	Morsel-Made
+monster_train	Shelter	Dreg
+monster_train	Shelter	Bounty Stalker
+monster_train	Shelter	Draff
+monster_train	Shelter	Entombed Explosive
+monster_train	Shelter	Lady of the House
+monster_train	Shelter	Lady of the Reformed
+monster_train	Shelter	Paraffin Enforcer
+monster_train	Shelter	Paraffin Thug
+monster_train	Shelter	Remnant Host
+monster_train	Shelter	Votivary
+monster_train	Shelter	Legion of Wax
+monster_train	Shelter	Bog Fly
+monster_train	Shelter	Bog Chrysalis
+monster_train	Shelter	Kinhost Carapace
+monster_train	Shelter	Kinhost Vessel
+monster_train	Shelter	Kinhost Pupa
+monster_train	Shelter	First of Kin
+monster_train	Shelter	Shardsoul Carver
+monster_train	Shelter	Bogdeep Cocoon
+monster_train	Shelter	Bog Wurmling
+monster_train	Shelter	Glareminder
+monster_train	Shelter	Spikedriver Colony
+monster_train	Shelter	Dante the Deceptive
+monster_train	Shelter	Train Steward
+monster_train	Shelter	Heph the Blacksmith
+monster_train	Shelter	Twin of Wax
+monster_train	Shelter	Mote of Wax
+monster_train	Echo Transfer	Shelter
+monster_train	Echo Infusion	Shelter
+monster_train	Bogdeep Cocoon	Shelter
+monster_train	Revenge of the Damned	Shelter
+monster_train	Soul Siphon	Shelter
+monster_train	Kinhost Vessel	Shelter
+monster_train	Bog Chrysalis	Shelter
+monster_train	Soulcrushing Guilt	Shelter
+monster_train	Echoes of the Past	Shelter
+monster_train	Forced Contamination	Shelter
+monster_train	Glugsider	Shelter
+monster_train	Bounding Echoes	Shelter
+monster_train	Unearthed Remains	Shelter
+monster_train	Proclamation	Shelter
+monster_train	Eternal Kinstone	Shelter
+monster_train	Impish Scholar	Shelter
+monster_train	Broken Memories	Shelter
+monster_train	Wurmkin Etchings	Shelter
+monster_train	Shelter	Battering Ram
+monster_train	Shelter	Reinforce
+monster_train	Echoes of the Past	Hornbreaker Prince
+monster_train	Echoes of the Past	Queen's Impling
+monster_train	Echoes of the Past	Deranged Brute
+monster_train	Echoes of the Past	Horned Warrior
+monster_train	Echoes of the Past	Impish Scholar
+monster_train	Echoes of the Past	Molting Imp
+monster_train	Echoes of the Past	Pyre Chomper
+monster_train	Echoes of the Past	Railbeater
+monster_train	Echoes of the Past	Alpha Fiend
+monster_train	Echoes of the Past	Demon Fiend
+monster_train	Echoes of the Past	Consumer of Crowns
+monster_train	Echoes of the Past	Apex Imp
+monster_train	Echoes of the Past	The Sentient
+monster_train	Echoes of the Past	Animus of Speed
+monster_train	Echoes of the Past	Animus of Will
+monster_train	Echoes of the Past	Awoken Hollow
+monster_train	Echoes of the Past	Edge Prior
+monster_train	Echoes of the Past	Husk Hermit
+monster_train	Echoes of the Past	Shard Channeler
+monster_train	Echoes of the Past	Shattered Shell
+monster_train	Echoes of the Past	Thorned Hollow
+monster_train	Echoes of the Past	Vinemother
+monster_train	Echoes of the Past	Wildwood Custodian
+monster_train	Echoes of the Past	Wilting Sapwood
+monster_train	Echoes of the Past	Steelsinger
+monster_train	Echoes of the Past	Tethys Titansbane
+monster_train	Echoes of the Past	Coldcaelia
+monster_train	Echoes of the Past	Cuttlehex
+monster_train	Echoes of the Past	Icy Cilophyte
+monster_train	Echoes of the Past	Titan Sentry
+monster_train	Echoes of the Past	Penumbra
+monster_train	Echoes of the Past	Primordium
+monster_train	Echoes of the Past	Antumbra Morsel
+monster_train	Echoes of the Past	Magma Morsel
+monster_train	Echoes of the Past	Morsel Excavator
+monster_train	Echoes of the Past	Morsel Jeweler
+monster_train	Echoes of the Past	Morsel Miner
+monster_train	Echoes of the Past	Rubble Morsel
+monster_train	Echoes of the Past	Crucible Collector
+monster_train	Echoes of the Past	Crucible Warden
+monster_train	Echoes of the Past	Ember Forge
+monster_train	Echoes of the Past	Morselmaster
+monster_train	Echoes of the Past	Alloyed Construct
+monster_train	Echoes of the Past	Morselmaker
+monster_train	Echoes of the Past	Overgorger
+monster_train	Echoes of the Past	Shadoweater
+monster_train	Echoes of the Past	Shadowsiege
+monster_train	Echoes of the Past	Morsel-Made
+monster_train	Echoes of the Past	Dreg
+monster_train	Echoes of the Past	Bounty Stalker
+monster_train	Echoes of the Past	Draff
+monster_train	Echoes of the Past	Entombed Explosive
+monster_train	Echoes of the Past	Lady of the House
+monster_train	Echoes of the Past	Lady of the Reformed
+monster_train	Echoes of the Past	Paraffin Enforcer
+monster_train	Echoes of the Past	Paraffin Thug
+monster_train	Echoes of the Past	Remnant Host
+monster_train	Echoes of the Past	Votivary
+monster_train	Echoes of the Past	Legion of Wax
+monster_train	Echoes of the Past	Bog Fly
+monster_train	Echoes of the Past	Bog Chrysalis
+monster_train	Echoes of the Past	Kinhost Carapace
+monster_train	Echoes of the Past	Kinhost Vessel
+monster_train	Echoes of the Past	Kinhost Pupa
+monster_train	Echoes of the Past	First of Kin
+monster_train	Echoes of the Past	Shardsoul Carver
+monster_train	Echoes of the Past	Bogdeep Cocoon
+monster_train	Echoes of the Past	Bog Wurmling
+monster_train	Echoes of the Past	Glareminder
+monster_train	Echoes of the Past	Glugsider
+monster_train	Echoes of the Past	Spikedriver Colony
+monster_train	Echoes of the Past	Dante the Deceptive
+monster_train	Echoes of the Past	Train Steward
+monster_train	Echoes of the Past	Heph the Blacksmith
+monster_train	Echoes of the Past	Twin of Wax
+monster_train	Echoes of the Past	Mote of Wax
+monster_train	Echo Transfer	Echoes of the Past
+monster_train	Echo Infusion	Echoes of the Past
+monster_train	Bogdeep Cocoon	Echoes of the Past
+monster_train	Revenge of the Damned	Echoes of the Past
+monster_train	Soul Siphon	Echoes of the Past
+monster_train	Kinhost Vessel	Echoes of the Past
+monster_train	Bog Chrysalis	Echoes of the Past
+monster_train	Soulcrushing Guilt	Echoes of the Past
+monster_train	Forced Contamination	Echoes of the Past
+monster_train	Glugsider	Echoes of the Past
+monster_train	Bounding Echoes	Echoes of the Past
+monster_train	Unearthed Remains	Echoes of the Past
+monster_train	Proclamation	Echoes of the Past
+monster_train	Eternal Kinstone	Echoes of the Past
+monster_train	Echoes of the Past	Echo Break
+monster_train	Echoes of the Past	Ancient Resonance
+monster_train	Echoes of the Past	Forgotten Trade
+monster_train	Spike of the Hellhorned	Hornbreaker Prince
+monster_train	Spike of the Hellhorned	Queen's Impling
+monster_train	Spike of the Hellhorned	Deranged Brute
+monster_train	Spike of the Hellhorned	Horned Warrior
+monster_train	Spike of the Hellhorned	Impish Scholar
+monster_train	Spike of the Hellhorned	Molting Imp
+monster_train	Spike of the Hellhorned	Pyre Chomper
+monster_train	Spike of the Hellhorned	Railbeater
+monster_train	Spike of the Hellhorned	Alpha Fiend
+monster_train	Spike of the Hellhorned	Demon Fiend
+monster_train	Spike of the Hellhorned	Consumer of Crowns
+monster_train	Spike of the Hellhorned	Apex Imp
+monster_train	Spike of the Hellhorned	The Sentient
+monster_train	Spike of the Hellhorned	Animus of Speed
+monster_train	Spike of the Hellhorned	Animus of Will
+monster_train	Spike of the Hellhorned	Awoken Hollow
+monster_train	Spike of the Hellhorned	Edge Prior
+monster_train	Spike of the Hellhorned	Husk Hermit
+monster_train	Spike of the Hellhorned	Shard Channeler
+monster_train	Spike of the Hellhorned	Shattered Shell
+monster_train	Spike of the Hellhorned	Thorned Hollow
+monster_train	Spike of the Hellhorned	Vinemother
+monster_train	Spike of the Hellhorned	Wildwood Custodian
+monster_train	Spike of the Hellhorned	Wilting Sapwood
+monster_train	Spike of the Hellhorned	Steelsinger
+monster_train	Spike of the Hellhorned	Tethys Titansbane
+monster_train	Spike of the Hellhorned	Coldcaelia
+monster_train	Spike of the Hellhorned	Cuttlehex
+monster_train	Spike of the Hellhorned	Icy Cilophyte
+monster_train	Spike of the Hellhorned	Titan Sentry
+monster_train	Spike of the Hellhorned	Penumbra
+monster_train	Spike of the Hellhorned	Primordium
+monster_train	Spike of the Hellhorned	Antumbra Morsel
+monster_train	Spike of the Hellhorned	Magma Morsel
+monster_train	Spike of the Hellhorned	Morsel Excavator
+monster_train	Spike of the Hellhorned	Morsel Jeweler
+monster_train	Spike of the Hellhorned	Morsel Miner
+monster_train	Spike of the Hellhorned	Rubble Morsel
+monster_train	Spike of the Hellhorned	Crucible Collector
+monster_train	Spike of the Hellhorned	Crucible Warden
+monster_train	Spike of the Hellhorned	Ember Forge
+monster_train	Spike of the Hellhorned	Morselmaster
+monster_train	Spike of the Hellhorned	Alloyed Construct
+monster_train	Spike of the Hellhorned	Morselmaker
+monster_train	Spike of the Hellhorned	Overgorger
+monster_train	Spike of the Hellhorned	Shadoweater
+monster_train	Spike of the Hellhorned	Shadowsiege
+monster_train	Spike of the Hellhorned	Morsel-Made
+monster_train	Spike of the Hellhorned	Dreg
+monster_train	Spike of the Hellhorned	Bounty Stalker
+monster_train	Spike of the Hellhorned	Draff
+monster_train	Spike of the Hellhorned	Entombed Explosive
+monster_train	Spike of the Hellhorned	Lady of the House
+monster_train	Spike of the Hellhorned	Lady of the Reformed
+monster_train	Spike of the Hellhorned	Paraffin Enforcer
+monster_train	Spike of the Hellhorned	Paraffin Thug
+monster_train	Spike of the Hellhorned	Remnant Host
+monster_train	Spike of the Hellhorned	Votivary
+monster_train	Spike of the Hellhorned	Legion of Wax
+monster_train	Spike of the Hellhorned	Bog Fly
+monster_train	Spike of the Hellhorned	Bog Chrysalis
+monster_train	Spike of the Hellhorned	Kinhost Carapace
+monster_train	Spike of the Hellhorned	Kinhost Vessel
+monster_train	Spike of the Hellhorned	Kinhost Pupa
+monster_train	Spike of the Hellhorned	Shardsoul Carver
+monster_train	Spike of the Hellhorned	Bogdeep Cocoon
+monster_train	Spike of the Hellhorned	Bog Wurmling
+monster_train	Spike of the Hellhorned	Glareminder
+monster_train	Spike of the Hellhorned	Glugsider
+monster_train	Spike of the Hellhorned	Spikedriver Colony
+monster_train	Spike of the Hellhorned	Dante the Deceptive
+monster_train	Spike of the Hellhorned	Train Steward
+monster_train	Spike of the Hellhorned	Heph the Blacksmith
+monster_train	Spike of the Hellhorned	Twin of Wax
+monster_train	Spike of the Hellhorned	Mote of Wax
+monster_train	Imp-portant Work	Spike of the Hellhorned
+monster_train	Pyre Chomper	Spike of the Hellhorned
+monster_train	Wilting Sapwood	Spike of the Hellhorned
+monster_train	Kindle	Spike of the Hellhorned
+monster_train	Mine Collapse	Spike of the Hellhorned
+monster_train	Excavation Eruption	Spike of the Hellhorned
+monster_train	Memories of the Melted	Spike of the Hellhorned
+monster_train	Forgotten Trade	Spike of the Hellhorned
+monster_train	Unearthed Remains	Spike of the Hellhorned
+monster_train	Excavated Ember	Spike of the Hellhorned
+monster_train	Pyre-Gro	Spike of the Hellhorned
+monster_train	Ember Forge	Spike of the Hellhorned
+monster_train	Engine Upgrade	Spike of the Hellhorned
+monster_train	Impish Scholar	Spike of the Hellhorned
+monster_train	Broken Memories	Spike of the Hellhorned
+monster_train	Wurmkin Etchings	Spike of the Hellhorned
+monster_train	Spike of the Hellhorned	Last Stand
+monster_train	Spike of the Hellhorned	Battering Ram
+monster_train	Spike of the Hellhorned	Reinforce
+monster_train	Deranged Brute	Spike of the Hellhorned
+monster_train	Titan Sentry	Mortal Entrapment
+monster_train	Dark Deal	Mortal Entrapment
+monster_train	Pyre Shards	Mortal Entrapment
+monster_train	Automatic Railspikes	Mortal Entrapment
+monster_train	Icy Cilophyte	Mortal Entrapment
+monster_train	Thorned Hollow	Mortal Entrapment
+monster_train	Sharpen	Mortal Entrapment
+monster_train	Plink	Mortal Entrapment
+monster_train	Glimmer	Mortal Entrapment
+monster_train	Ancient Resonance	Mortal Entrapment
+monster_train	Kinhost Pupa	Mortal Entrapment
+monster_train	Crypt Builder	Mortal Entrapment
+monster_train	Queen's Impling	Mortal Entrapment
+monster_train	Cycle of Life	Mortal Entrapment
+monster_train	Flash Freeze	Mortal Entrapment
+monster_train	Excavation Eruption	Mortal Entrapment
+monster_train	Bramble Lash	Mortal Entrapment
+monster_train	Glareminder	Mortal Entrapment
+monster_train	Coldcaelia	Mortal Entrapment
+monster_train	Titanstooth	Mortal Entrapment
+monster_train	Imp-pressive	Mortal Entrapment
+monster_train	Shadoweater	Mortal Entrapment
+monster_train	Memento Mori	Mortal Entrapment
+monster_train	Vent	Mortal Entrapment
+monster_train	Hoarfrost Effigy	Mortal Entrapment
+monster_train	Battering Ram	Mortal Entrapment
+monster_train	Spreading Spores	Mortal Entrapment
+monster_train	The Sentient	Mortal Entrapment
+monster_train	Sting	Mortal Entrapment
+monster_train	Forever Consumed	Mortal Entrapment
+monster_train	Proclamation	Mortal Entrapment
+monster_train	Shattered Shell	Mortal Entrapment
+monster_train	Entombed Explosive	Mortal Entrapment
+monster_train	Wurmkin Spike	Mortal Entrapment
+monster_train	Ice Tornado	Mortal Entrapment
+monster_train	Crystalline Seeds	Mortal Entrapment
+monster_train	Blazing Bolts	Mortal Entrapment
+monster_train	Soul Cripple	Mortal Entrapment
+monster_train	Mine Collapse	Mortal Entrapment
+monster_train	Echo Snare	Mortal Entrapment
+monster_train	Most Blessed Sword	Mortal Entrapment
+monster_train	Vine Grasp	Mortal Entrapment
+monster_train	Restoration Detonation	Mortal Entrapment
+monster_train	Spike of the Stygian	Mortal Entrapment
+monster_train	Revenge of the Damned	Mortal Entrapment
+monster_train	Tethys Titansbane	Mortal Entrapment
+monster_train	Inferno	Mortal Entrapment
+monster_train	Torch	Mortal Entrapment
+monster_train	A Fatal Melting	Mortal Entrapment
+monster_train	Glugsider	Mortal Entrapment
+monster_train	Antumbra Assault	Mortal Entrapment
+monster_train	Echo Break	Mortal Entrapment
+monster_train	Branding Rite	Mortal Entrapment
+monster_train	Frozen Lance	Mortal Entrapment
+monster_train	Forgone Power	Mortal Entrapment
+monster_train	Urchin Spines	Mortal Entrapment
+monster_train	Husk Hermit	Mortal Entrapment
+monster_train	Molting Imp	Mortal Entrapment
+monster_train	Horn Break	Mortal Entrapment
+monster_train	Subsuming Blade	Mortal Entrapment
+monster_train	Hosting Kin	Mortal Entrapment
+monster_train	Railbeater	Mortal Entrapment
+monster_train	Imp-olate	Mortal Entrapment
+monster_train	Forced Contamination	Mortal Entrapment
+monster_train	Pyre Chomper	Mortal Entrapment
+monster_train	Wilting Sapwood	Mortal Entrapment
+monster_train	Rubble Morsel	Mortal Entrapment
+monster_train	Unearthed Remains	Mortal Entrapment
+monster_train	Excavated Ember	Mortal Entrapment
+monster_train	Pyre-Gro	Mortal Entrapment
+monster_train	Ember Forge	Mortal Entrapment
+monster_train	Engine Upgrade	Mortal Entrapment
+monster_train	Edge Prior	Mortal Entrapment
+monster_train	Mortal Entrapment	Bounty Stalker
+monster_train	Mortal Entrapment	Entombed Explosive
+monster_train	Mortal Entrapment	Remnant Host
+monster_train	Mortal Entrapment	Votivary
+monster_train	Mortal Entrapment	Legion of Wax
+monster_train	Mortal Entrapment	Bog Chrysalis
+monster_train	Mortal Entrapment	Kinhost Vessel
+monster_train	Mortal Entrapment	Bogdeep Cocoon
+monster_train	Mortal Entrapment	Spikedriver Colony
+monster_train	Mortal Entrapment	Twin of Wax
+monster_train	Mortal Entrapment	Hornbreaker Prince
+monster_train	Mortal Entrapment	The Sentient
+monster_train	Mortal Entrapment	Wilting Sapwood
+monster_train	Mortal Entrapment	Titan Sentry
+monster_train	Mortal Entrapment	Lady of the Reformed
+monster_train	Mortal Entrapment	Glugsider
+monster_train	Animus of Will	Mortal Entrapment
+monster_train	Dante the Deceptive	Mortal Entrapment
+monster_train	Spikedriver Colony	Mortal Entrapment
+monster_train	Hornbreaker Prince	Mortal Entrapment
+monster_train	Draff	Mortal Entrapment
+monster_train	Horned Warrior	Mortal Entrapment
+monster_train	Umbra Stone	Mortal Entrapment
+monster_train	Prismal Dust	Hornbreaker Prince
+monster_train	Prismal Dust	Queen's Impling
+monster_train	Prismal Dust	Deranged Brute
+monster_train	Prismal Dust	Horned Warrior
+monster_train	Prismal Dust	Impish Scholar
+monster_train	Prismal Dust	Molting Imp
+monster_train	Prismal Dust	Pyre Chomper
+monster_train	Prismal Dust	Railbeater
+monster_train	Prismal Dust	Alpha Fiend
+monster_train	Prismal Dust	Demon Fiend
+monster_train	Prismal Dust	Consumer of Crowns
+monster_train	Prismal Dust	Apex Imp
+monster_train	Prismal Dust	The Sentient
+monster_train	Prismal Dust	Animus of Speed
+monster_train	Prismal Dust	Animus of Will
+monster_train	Prismal Dust	Awoken Hollow
+monster_train	Prismal Dust	Edge Prior
+monster_train	Prismal Dust	Husk Hermit
+monster_train	Prismal Dust	Shard Channeler
+monster_train	Prismal Dust	Shattered Shell
+monster_train	Prismal Dust	Thorned Hollow
+monster_train	Prismal Dust	Vinemother
+monster_train	Prismal Dust	Wildwood Custodian
+monster_train	Prismal Dust	Wilting Sapwood
+monster_train	Prismal Dust	Steelsinger
+monster_train	Prismal Dust	Tethys Titansbane
+monster_train	Prismal Dust	Coldcaelia
+monster_train	Prismal Dust	Cuttlehex
+monster_train	Prismal Dust	Icy Cilophyte
+monster_train	Prismal Dust	Titan Sentry
+monster_train	Prismal Dust	Penumbra
+monster_train	Prismal Dust	Primordium
+monster_train	Prismal Dust	Antumbra Morsel
+monster_train	Prismal Dust	Magma Morsel
+monster_train	Prismal Dust	Morsel Excavator
+monster_train	Prismal Dust	Morsel Jeweler
+monster_train	Prismal Dust	Morsel Miner
+monster_train	Prismal Dust	Rubble Morsel
+monster_train	Prismal Dust	Crucible Collector
+monster_train	Prismal Dust	Crucible Warden
+monster_train	Prismal Dust	Ember Forge
+monster_train	Prismal Dust	Morselmaster
+monster_train	Prismal Dust	Alloyed Construct
+monster_train	Prismal Dust	Morselmaker
+monster_train	Prismal Dust	Overgorger
+monster_train	Prismal Dust	Shadoweater
+monster_train	Prismal Dust	Shadowsiege
+monster_train	Prismal Dust	Morsel-Made
+monster_train	Prismal Dust	Dreg
+monster_train	Prismal Dust	Bounty Stalker
+monster_train	Prismal Dust	Draff
+monster_train	Prismal Dust	Entombed Explosive
+monster_train	Prismal Dust	Lady of the House
+monster_train	Prismal Dust	Lady of the Reformed
+monster_train	Prismal Dust	Paraffin Enforcer
+monster_train	Prismal Dust	Paraffin Thug
+monster_train	Prismal Dust	Remnant Host
+monster_train	Prismal Dust	Votivary
+monster_train	Prismal Dust	Legion of Wax
+monster_train	Prismal Dust	Bog Fly
+monster_train	Prismal Dust	Bog Chrysalis
+monster_train	Prismal Dust	Kinhost Carapace
+monster_train	Prismal Dust	Kinhost Vessel
+monster_train	Prismal Dust	Kinhost Pupa
+monster_train	Prismal Dust	First of Kin
+monster_train	Prismal Dust	Shardsoul Carver
+monster_train	Prismal Dust	Bogdeep Cocoon
+monster_train	Prismal Dust	Bog Wurmling
+monster_train	Prismal Dust	Glareminder
+monster_train	Prismal Dust	Glugsider
+monster_train	Prismal Dust	Spikedriver Colony
+monster_train	Prismal Dust	Dante the Deceptive
+monster_train	Prismal Dust	Train Steward
+monster_train	Prismal Dust	Heph the Blacksmith
+monster_train	Prismal Dust	Twin of Wax
+monster_train	Prismal Dust	Mote of Wax
+monster_train	Imp-portant Work	Prismal Dust
+monster_train	Pyre Chomper	Prismal Dust
+monster_train	Wilting Sapwood	Prismal Dust
+monster_train	Kindle	Prismal Dust
+monster_train	Mine Collapse	Prismal Dust
+monster_train	Rubble Morsel	Prismal Dust
+monster_train	Excavation Eruption	Prismal Dust
+monster_train	Memories of the Melted	Prismal Dust
+monster_train	Forgotten Trade	Prismal Dust
+monster_train	Unearthed Remains	Prismal Dust
+monster_train	Excavated Ember	Prismal Dust
+monster_train	Pyre-Gro	Prismal Dust
+monster_train	Ember Forge	Prismal Dust
+monster_train	Engine Upgrade	Prismal Dust
+monster_train	Impish Scholar	Prismal Dust
+monster_train	Broken Memories	Prismal Dust
+monster_train	Wurmkin Etchings	Prismal Dust
+monster_train	Tethys Titansbane	Frozen Lance
+monster_train	Forgone Power	Hoarfrost Effigy
+monster_train	Impish Scholar	Deep Offering
+monster_train	Broken Memories	Deep Offering
+monster_train	Wurmkin Etchings	Deep Offering
+monster_train	Deep Offering	First of Kin
+monster_train	Deep Offering	Bog Wurmling
+monster_train	Deep Offering	Glareminder
+monster_train	Accelerated Incubation	First of Kin
+monster_train	Accelerated Incubation	Bog Wurmling
+monster_train	Accelerated Incubation	Glareminder
+monster_train	Impish Scholar	Accelerated Incubation
+monster_train	Broken Memories	Accelerated Incubation
+monster_train	Wurmkin Etchings	Accelerated Incubation
+monster_train	Adaptive Mutation	Mote of Wax
+monster_train	Restoration Detonation	Wildwood Custodian
+monster_train	Enflame	The Sentient
+monster_train	Ritual of Battle	Wildwood Custodian
+monster_train	Rage Serum	Vinemother
+monster_train	Grovel	Magma Morsel
+monster_train	Grovel	Wildwood Custodian
+monster_train	Grovel	Shadowsiege
+monster_train	Grovel	Thorned Hollow
+monster_train	Hallowed Drippings	Kinhost Vessel
+monster_train	Wicklash	Bogdeep Cocoon
+monster_train	Petrified Skull	Spikedriver Colony
+monster_train	Pyre Chomper	Cycle of Life
+monster_train	Engine Upgrade	Hoarfrost Effigy
+monster_train	Fortify	Kinhost Vessel
+monster_train	Alloy of the Ancients	Alpha Fiend
+monster_train	Alloy of the Ancients	Vinemother
+monster_train	Excavated Ember	Awoken's Rail Spike
+monster_train	Kindle	Mine Collapse
+monster_train	Engine Upgrade	Kindle
+monster_train	Engine Upgrade	First of Kin
+monster_train	Channelsong	Bog Wurmling
+monster_train	Excavated Ember	Bog Wurmling
+monster_train	Broken Memories	Soul Siphon
+monster_train	Impish Scholar	Steel Pulleyclaw
+monster_train	Impish Scholar	Prism Retrieval
+monster_train	Wurmkin Etchings	Remnant Pact
+monster_train	Awoken Hollow	Bog Wurmling
+monster_train	Prism Retrieval	Alloyed Construct
+monster_train	Drain	Draff
+monster_train	Furnace Tap	Draff
+monster_train	Onehorn's Tome	Kinhost Carapace
+monster_train	Furnace Tap	Votivary
+monster_train	Onehorn's Tome	Hornbreaker Prince
+monster_train	Spreading Spores	Penumbra
+monster_train	Spreading Spores	Husk Hermit
+monster_train	Cycle of Life	Legion of Wax
+monster_train	Echo Infusion	Steelsinger
+monster_train	Echo Infusion	Shadowsiege
+monster_train	Cycle of Life	Crucible Collector
+monster_train	Echo Infusion	Alloyed Construct
+monster_train	Unearthed Remains	Shroud Spike
+monster_train	Ritual of Battle	Husk Hermit
+monster_train	Umbra Stone	Bogdeep Cocoon
+monster_train	Awoken Hollow	Animus of Will
+monster_train	Plink	Alloyed Construct
+monster_train	Dreg	Paraffin Enforcer
+monster_train	Thy Holiest Shield	Legion of Wax
+monster_train	Echo Transfer	Shard Channeler
+monster_train	Engine Upgrade	Reinforce
+monster_train	Impish Scholar	Pyre-Gro
+monster_train	Wildwood Tome	Draff
+monster_train	Channelsong	Heph the Blacksmith
+monster_train	Sharpen	Edge Prior
+monster_train	Immortal Trade	Steelsinger
+monster_train	Tethys Titansbane	Vent
+monster_train	Enflame	Legion of Wax
+monster_train	Horn Break	Glugsider
+monster_train	Steel Enhancer	Magma Morsel
+monster_train	Lady of the House	Sacred Wicks
+monster_train	Edge Prior	Hoarfrost Effigy
+monster_train	Flash Freeze	Memories of the Melted
+monster_train	Fortify	Lady of the Reformed
+monster_train	Flash Freeze	Votivary
+monster_train	Fortify	Dante the Deceptive
+monster_train	Spreading Spores	Edge Prior
+monster_train	Steel Enhancer	Queen's Impling
+monster_train	Restoration Detonation	Horned Warrior
+monster_train	Umbra Stone	Morselmaker
+monster_train	Bog Chrysalis	A Fatal Melting
+monster_train	Mine Collapse	Onehorn's Tome

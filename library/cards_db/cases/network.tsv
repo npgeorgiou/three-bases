@@ -119,7 +119,7 @@ ndu07	duelyst	Shidai Artifacts	Flicker	Mask of Shadows	line		guide: Flicker tele
 ndu08	duelyst	Kaleos Trial of Songhai	EMP	Dagona	none		Claude, deck read: destroying artifacts kills no minion (family 5)
 ndu09	duelyst	Vaath Dying Wish	Unseven	Dagona	line		guide: Unseven pulls Dagona from the action bar
 ndu10	duelyst	Kaleos Trial of Songhai	Scroll Bandit	Battle Panddo	none		Claude, deck read: Backstab's damage hits the enemy attacked (families 1, 4)
-ndu11	duelyst	Kaleos Trial of Songhai	Heartseeker	Hideatsu the Ebon Ox	line		guide: every minion summoned from the action bar counts for the Trial (family 8)
+ndu11	duelyst	Kaleos Trial of Songhai	Heartseeker	Hideatsu the Ebon Ox	none		Kaptain 1 Nov 2026: being a minion is no interaction; every minion counts for the Trial
 ndu12	duelyst	Kaleos Trial of Songhai	Blink	Scroll Bandit	line		Claude, deck read: teleporting the Bandit behind an enemy is what Backstab needs (family 9)
 ndu13	duelyst	Cassyva Replace Abomination	Aethermaster	White Widow	line		guide: more replaces set off White Widow (family 11)
 ndu14	duelyst	Lilithe Darkfire	Lilithe Blightchaser	Phantasm	none		Claude, deck read: my Wraithlings are no opponent's summons (family 7)

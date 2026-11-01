@@ -31,6 +31,9 @@ questions first and wait. Never invent rules or mechanics; mark suggestions as y
 - L1 A line comes from what a card's TEXT does, never from what every card does or is. Every card can be played, drawn,
   discarded, can attack and has Life: none of these makes a line (Chump Whump -> Get Excited!: no; any card can be
   discarded. "Whenever you play a card", After Image: no line from every card).
+- L1b Kaptain 1 Nov 2026: a draw, a return to hand or a tutor by kind only ("draw a unit", "return a spell") makes no line: any
+  card of that kind can be drawn. "Whenever you play a spell" or "the number of spells in your deck" makes no line where most
+  of the game's cards are of that kind (Monster Train's Incant); a minority kind is a deck choice and keeps its line (Annie).
 - L2 The game's rules are no combo, also not for a level-up. Kaptain: what every card can do counts for nothing
   (Living Shadow -> Zed, any unit -> Poppy, Jagged Butcher -> Gangplank, Ashe -> LeBlanc: no line). Only a card whose
   own text adds an attack (Rally, a free attack), a strike now, a second strike, or a keyword that does the need

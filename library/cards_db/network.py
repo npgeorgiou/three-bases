@@ -586,6 +586,8 @@ def lines_of(c, game):
             if prev: k, w = prev[0], ';'.join(x for x in (prev[1] or '').split(';') if x.split(' ')[0] in ('card', 'type', 'category', 'keyword', 'name_has'))
         hit = [t for t, x in cards.items() if t != m and matches(c, game, x, k if k in KIND_CAT else 'any', w)]
         if len(hit) >= 0.9 * kind_count(c, game, k if k in KIND_CAT else 'any', None): continue  # "a cheaper card from your deck"
+        if not [p for p in (w or '').split(';') if p and p.split(' ')[0] not in ('category', 'kind') + PLAY_STATE]: continue  # "draw a
+        # unit" (Channelsong): every unit can be drawn; only a narrower filter (a type, a keyword, a name) makes a line (L1)
         # (Treasurous Bosuns) finds almost any card: every card can be drawn (L1)
         say = 'draws it from the deck' if act == 'draw' else 'picks it from the deck' if act == 'choose_card' else \
             f"puts it into play from {'the hand' if z == 'hand' else 'the deck'}"
@@ -946,6 +948,8 @@ def aimed(c, game, nodes, broad):
                     ('cant', 'targeted'): 'protects it from targeting', ('cant', 'given_keyword'): f'keeps {kwn(kw) or "a status"} off it'}.get((act, pev), what + f' ({pev})')
         at = where(w)  # who benefits from a place: "when next to it", "in its circuit" (positional games; Inscryption Leader)
         if act == 'return_card':  # "put all cost 0 cards from your discard pile into your hand" (All for One): it brings them back
+            if not narrowed and a not in CACHE.get(('from_exhaust', game), ()): continue  # "return a spell from the discard pile"
+            # (Returned Soul): any spell can be returned; only a narrower filter makes a line (L1, like draws)
             if a in CACHE.get(('from_exhaust', game), ()):  # "return a consumed spell" (Echowright): only cards that consume themselves are there
                 hits = [b for b in hits if any(kw_tree(c, k) == 'exhaust' for k in cards[b]['kws'])]
             for b in hits: out[(a, b)].append(('puts', 1.0 / max(1, len(hits)), 'brings it back to your hand'))
@@ -1144,6 +1148,15 @@ def capped(c):
     return CACHE['capped']
 
 
+def most_cards(c, game, kind):
+    """half or more of the game's cards are of this kind (Monster Train: spells): being one says nothing"""
+    key = ('most', game, kind)
+    if key not in CACHE:
+        allc = [x for x in cards_of(c, game).values() if x['cat'] not in ('keyword',)]
+        CACHE[key] = kind in KIND_CAT and sum(1 for x in allc if x['cat'] in KIND_CAT[kind]) >= 0.5 * max(1, len(allc))
+    return CACHE[key]
+
+
 def dead_weight(c):
     """cards never played that do nothing themselves (Deadweight: "Unplayable. Unpurgeable."); a card that acts from the hand
     (Bone Dog's Favor's Reserve) is not one"""
@@ -1175,12 +1188,16 @@ def played_lines(c, game, nodes, broad):
         # acts on the card that sets it off: it is aimed at that card, not waiting for it (Rage, Choke act on others: they wait)
         k = kind or ('card' if h in ('played', 'drawn') else 'unit')
         narrowed = any(p and p.split(' ')[0] not in PLAY_STATE and p.split(' ')[1:2] != ['not'] for p in (w or '').split(';'))
+        narrowed = narrowed and any(p and p.split(' ')[0] != 'category' for p in (w or '').split(';') if p.split(' ')[0] not in PLAY_STATE)
         if not narrowed and (k in ('card', 'any', 'anything', None) or k in every_card_kinds(c, game) or (k == 'unit' and h == 'summoned')
-                             or not broad):
+                             or not broad or most_cards(c, game, k)):  # "whenever you play a spell" where most cards are spells
+            # (Monster Train's Incant): being one is no interaction (L1; Kaptain 1 Nov 2026); a minority kind is a deck choice (Annie)
             if h == 'played' and role == 'trigger' and broad:  # "whenever you play a card" (A Thousand Cuts): not every card, but
                 # the cards that make more cards to play (Blade Dance's Shivs) set it off more
-                mk = {a for (a,) in c.execute(f"""select distinct card from flat_do where origin='own' and act in ('create','copy')
-                      and coalesce(on_side,'mine')='mine' and coalesce(on_zone,'hand') in ('hand') and card in ({marks})""", list(nodes))} - {t}
+                mk = {a for a, ref, ok in c.execute(f"""select distinct card, card_ref, on_kind from flat_do where origin='own' and act in ('create','copy')
+                      and coalesce(on_side,'mine')='mine' and coalesce(on_zone,'hand') in ('hand') and card in ({marks})""", list(nodes))
+                      if k in ('card', 'any', 'anything', None) or k in every_card_kinds(c, game) or ok == k or (ref in cards and cards[ref]['cat'] in KIND_CAT.get(k, {k}))} - {t}
+                # "whenever you play a spell": only what makes spells (Vinemother's Stings) sets it off more
                 for a in mk:
                     if ('waits', 0.5 / len(mk), 'makes more cards to play') not in out[(a, t)]: out[(a, t)].append(('waits', 0.5 / len(mk), 'makes more cards to play'))
             continue
@@ -1255,6 +1272,8 @@ def need_lines(c, game, nodes, broad):
         what = 'a card it acts on' if kind == 'any' else f'a {"landmark or structure" if kind == "landmark" else kind} it asks for'
         kws_ = [mechanics.name(c, int(p.split(' ')[2])) for p in (w or '').split(';') if p.startswith('keyword is ') and p.split(' ')[2].isdigit()]
         if not kws_ and not counted and any(p.split(' ')[:2] in (['type', 'is'], ['type', 'in']) for p in (w or '').split(';')): continue  # the type line says it ("is a Conduit card it asks for")
+        if kind != 'any' and most_cards(c, game, kind) and not [p for p in (w or '').split(';') if p and p.removeprefix('of:').split(' ')[0] not in ('category', 'position', 'distance', 'right_of', 'origin', 'level', 'countdown')]:  # a status ("poisoned units") narrows
+            continue  # "the number of spells in your deck" (Ancient Synergy): every spell is one; a kind alone is no need (L1)
         if not counted and kind != 'any' and w and all(p.removeprefix('of:').split(' ')[0] in ('position', 'strength', 'power', 'health', 'cost')
                                                         for p in w.split(';') if p): continue  # "a stronger friendly unit next to it" (Mystwives):
         # any unit can be that; a place or a stat number is no need (L1; Kaptain 31 Oct 2026, Curious Egg)

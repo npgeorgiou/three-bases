@@ -79,7 +79,6 @@ lk77	stormbound	Clap of Thunder	Spellbinder Zhevana	none	helps my units kill	Cla
 lk78	stormbound	Westwind Sailors	Mystwives	none	asks for	Claude 31 Oct 2026: "a stronger friendly unit" can be any unit; a stat number is no need
 lk79	stormbound	Malicious Discard	Clap of Thunder	line	empties your hand	Claude 31 Oct 2026: discarding makes the empty hand spaces Clap of Thunder counts
 lk80	stormbound	Freebooters	Lucky Charmers	line	Pirate	Claude 31 Oct 2026: Lucky Charmers counts Pirates; Freebooters is one
-lk81	stormbound	Brood Sages	Timber Alchemists	line	Poison	Claude 31 Oct 2026: Timber Alchemists gains for each status it takes; Brood Sages gives Poison
 lk82	stormbound	Frosthexers	Spellbinder Zhevana	line	Freeze	Claude 31 Oct 2026: Zhevana damages frozen units; Frosthexers freezes them
 lk83	stormbound	Moment’s Peace	Mystwives	line	strength	Claude 31 Oct 2026: a strength gift still helps Mystwives
 lk84	stormbound	Treasurous Bosuns	Strict Quartermasters	line	Pirate	Claude 31 Oct 2026: Bosuns is a Pirate; its own text lines stay
@@ -89,3 +88,10 @@ lk87	monster_train	Harness the Titan	Deadweight	none	Magic Power	Claude 31 Oct 2
 lk88	monster_train	Preserve	Bone Dog's Favor	line	kept in hand	Claude 31 Oct 2026: Bone Dog's Favor acts from the hand (Reserve); keeping it there helps
 lk89	monster_train	Deadweight	Dante the Deceptive	line	Blight	Claude 31 Oct 2026: Dante wants Blights; Deadweight is one
 lk90	sts1	Blue Candle	Injury	line	played	Claude 31 Oct 2026: Blue Candle lets curses be played; that is the help an unplayable card can get
+lk91	monster_train	Channelsong	Guardian Stone	none	draws it	Kaptain 1 Nov 2026: "draw a unit" can draw any unit; every card can be drawn
+lk92	monster_train	Titanstooth	Guardian Stone	none	counts when played	Kaptain 1 Nov 2026: Incant fires on any spell; being a spell is no interaction
+lk93	monster_train	Gifts for a Guard	Ice and Pyre	none	draws it	Claude 1 Nov 2026: "draw 3 spells" can draw any spell (same error)
+lk94	monster_train	Total Recall	Ancient Synergy	none	asks for	Claude 1 Nov 2026: Ancient Synergy counts every spell in the deck; being a spell is no interaction
+lk95	monster_train	Queen's Impling	Shardtail Queen	line	Imp	Claude 1 Nov 2026: Shardtail Queen asks for Imps; a named type stays
+lk96	monster_train	Vinemother	Wyldenten	line	more cards to play	Claude 1 Nov 2026: Vinemother makes Sting spells; Wyldenten's Incant fires on spells played
+lk97	monster_train	Returned Soul	Ice and Pyre	none	brings it back	Claude 1 Nov 2026: "return a spell from the discard pile" can return any spell (same error as draws)
