@@ -1,12 +1,10 @@
-# Reading status: into_the_breach
+# Reading status: monster_train
 
-Made by `status.py into_the_breach` from the files. done 6, problems 0, partial 0, todo 0.
+Made by `status.py monster_train` from the files. done 4, problems 0, partial 0, todo 0.
 
 | batch | cards | read | state |
 |---|---|---|---|
-| batch_001 | 54 | 54 | done |
-| batch_002 | 41 | 41 | done |
-| batch_003 | 79 | 79 | done |
-| batch_004 | 125 | 125 | done |
-| keywords | 27 | 27 | done |
-| second_001 | 30 | 30 | done |
+| batch_001 | 278 | 278 | done |
+| batch_002 | 1 | 1 | done |
+| keywords | 70 | 70 | done |
+| second_001 | 28 | 28 | done |

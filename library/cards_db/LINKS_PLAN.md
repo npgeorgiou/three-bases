@@ -10,31 +10,59 @@ feed which. `links.py` stores every line network.py draws between two cards that
 (not in git; `links.py <game>` rebuilds it in seconds, Runeterra about 9 minutes). So the lines must be right.
 
 ## Done
-Step 1 (which cards can share a deck: deck_analysis.can_share) and step 2 (links.py, links.sqlite).
-Step 3 for Inscryption, Into the Breach, Stormbound and Monster Train. Step 3a (Kaptain 1 Nov 2026): generic help lines dropped,
-now rule L14 in START_DATABASE.md. Next: step 3, Slay the Spire.
+Step 1 (which cards can share a deck: deck_analysis.can_share) and step 2 (links.py, links.sqlite). A first step 3 pass for
+Inscryption, Into the Breach, Stormbound and Monster Train. Since then the line rules changed a lot (Kaptain 1-2 Nov 2026: rules
+L14-L17 in START_DATABASE.md), so every game is checked again.
+
+## How lines are made (read before changing anything; network.py)
+- `lines_of()`: what A's text makes happen that B's text waits for, counts or levels from ("kills it for its death effect",
+  "damages the enemy player (levels it up)"); A makes or puts B into play; types B asks for; positional lines (A moves units,
+  B acts by place); revive or summon by kind to cards with a summon effect (L17).
+- `aimed()` with `aimed_rows()`: A's effect aimed at my cards of a kind. Help (stats, keywords, heal, cost) to any card of a
+  kind, and every other act on a card (strike, return, copy, damage), links only where `use_of()` finds that B's own text or
+  keywords use it, and the line says why (L14, L16). A keyword's effect on cards with the same keyword gives no line (L15).
+- `boost_lines()` with `HELPS`: help that fills a need written on B (Overwhelm or Elusive to "hit the Nexus", health to
+  "survive damage", more power to a unit whose keywords use power: `HIT_KW`; a stat B's text reads; paying for expensive cards).
+- `played_lines()`, `need_lines()`: B counts or asks for cards of a kind ("6+ cost spells played", "6+ mana of spells", "if
+  you have a landmark"): the cards of that kind (only a minority kind, L1b) and cards that make such a card (`made_cards()`).
+- `object_help_lines()` ("when you summon an ally, grant it +1|+1") and `gives_lines()` (more damage for units that strike):
+  filtered by `use_of()` like aimed help. `state_giver_lines()`, `actor_help_lines()`, `stat_reader_lines()`: a keyword or stat
+  that B's own text names.
+- `one_link()` joins a pair's reasons into one line; a bare "can aim at it" reason is never shown (L16).
 
 ## Step 3. Check the lines, one game at a time
-Order of the games left: Slay the Spire, Faeria, Duelyst, Runeterra.
+Order: Runeterra (Kaptain knows it best), then Slay the Spire, Faeria, Duelyst, Stormbound, Monster Train, Inscryption, Into
+the Breach. Fix every error by its cause, for every game, never card by card (START_DATABASE.md rule 1).
 
 Each game gets two checks. Both scripts print a card's text only the first time, and skip lines read before
-(cases/links_checked.tsv) or already printed.
+(cases/links_checked.tsv) or already printed. The scripts still print the old amounts (30 cards, 15 random cards...): before the
+first check, change links_audit.py and deck_audit.py to print exactly the parts below.
 
 **Check 1, the whole game:** `links_audit.py <game> > /tmp/a.txt`
-- a) the 30 cards with the most partners, all their lines (many partners usually means a rule that fires for every card: L1, L2)
-- b) the 30 cards with the fewest partners, all their lines, beside 15 random cards of a deck: is a line missed?
-- c) 5 random lines of each of the 20 most used reasons
-- d) 30 random lines
-- e) up to 20 cards with no partner, beside 15 random cards of a deck: is a line missed?
-- f) the special cards of every deck (champions, heroes, Generals, legends): all their lines
+- a) the 2% cards with the most partners, all their lines (many partners usually means a rule that fires for every card: L1,
+  L2): is a line wrong?
+- b) the 2% cards with the fewest partners (exclude those with 0 partners), all their lines, juxtaposed to your knowledge of
+  the game: is a line missed?
+- b) the 2% cards with no partners, all their lines, juxtaposed to your knowledge of the game: is a line missed?
+- c) the 2% cards with no partner, beside 50 random cards of the faction of the examined card: is a line missed?
+- d) 50 random lines: is something wrong/missing?
+- e) 50 random lines of each of the 20 most used reasons: is something wrong/missing?
+- f) the special cards of every deck (champions, heroes, Generals, legends), all their lines, juxtaposed to your knowledge of
+  the game: is something wrong/missing?
+- g) of course, as you go down these steps, exclude links that are examined by previous steps.
 
 **Check 2, every deck:** `deck_audit.py <game> > /tmp/d.txt`, for each deck of the game:
-- a) the 20 cards with the most lines, all their lines
-- b) the 20 cards with the fewest lines, all their lines, beside 15 random cards of the deck: is a line missed?
-- c) 5 random lines of each of the deck's 20 most used reasons
-- d) 30 random lines
-- e) up to 20 cards with no line, beside 15 random cards of the deck: is a line missed?
-- f) the deck's special cards: all their lines
+- a) the 10 cards with the most partners, all their lines (many partners usually means a rule that fires for every card: L1,
+  L2): is a line wrong?
+- b) the 10 cards with the fewest partners (exclude those with 0 partners), all their lines, juxtaposed to your knowledge of
+  the game: is a line missed?
+- b) the 10 cards with no partners at all, all their lines, juxtaposed to your knowledge of the game: is a line missed?
+- c) the 10 cards with no partner, beside 10 random cards of the examined deck: is a line missed?
+- d) 10 random lines: is something wrong/missing?
+- e) 5 random lines of each of the 5 most used reasons: is something wrong/missing?
+- f) the special cards of every deck (champions, heroes, Generals, legends), all their lines, juxtaposed to your knowledge of
+  the game: is something wrong/missing?
+- g) of course, as you go down these steps, exclude links that are examined by previous steps.
 
 **How to work (fast, few tokens):**
 1. `links.py <game>`, then save the lines as they are now: `dump_lines.py --table /tmp/tb0.tsv` and `dump_lines.py /tmp/d0.tsv`.

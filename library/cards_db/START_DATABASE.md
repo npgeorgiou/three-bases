@@ -102,7 +102,7 @@ questions first and wait. Never invent rules or mechanics; mark suggestions as y
 | Reading rules and record shapes (what readers follow) | BRIEF.md, READER_PROMPT.md |
 | Values and concepts | vocab.tsv, library/concept_tree.txt |
 | Build: rows -> cards.sqlite | run.py (one game's full build), load.py, flat.py, refs.py |
-| Lines between cards | network.py (rules: lines_of, aimed, boost_lines with HELPS, the *_lines functions) |
+| Lines between cards | network.py; what each part does: LINKS_PLAN.md "How lines are made" |
 | Decks | decks.tsv, cases/decks.tsv; pages network.html (network_page.py) |
 | Per-game review records (needed by the build) | deck_read_<game>.md |
 | Questions | ask.py, mechanics.py, connections.py, deck_analysis.py; START_QUESTIONS.md |
@@ -158,12 +158,13 @@ Read: any FAILED line, and the audit lists. After a change to network.py only: `
   the Spire nst36 are must-not cases whose reason no deck says any more: rewrite them.
 - Real-world cases: 238 of 261 hold.
 - Known open: a card placed by its text near the leader (Conscript) draws no line to a card acting near the leader
-  (Fealty); Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain). Two cards
-  with effects have no text in the sources, so no rows: Stormbound's Fort of Ebonrock, Monster Train's Olde Magic.
+  (Fealty); Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain). Monster
+  Train's Olde Magic is built by the player at an event: its text and record (read/monster_train/event_cards.jsonl) list the
+  choices the wiki gives, with no numbers. Stormbound's Fort of Ebonrock has no ability (a plain structure).
 
 ## Open work, in Kaptain's order
-1. Check every line, one game at a time: LINKS_PLAN.md step 3 (a whole-game check and a deck check per game).
-   Inscryption, Into the Breach, Stormbound and Monster Train done; next: Slay the Spire.
+1. Check every line again, one game at a time, Runeterra first: LINKS_PLAN.md step 3 (a whole-game check and a deck check
+   per game; first change links_audit.py and deck_audit.py to print the parts listed there). Fix by cause, for every game.
 
 ## When you finish
 Commit and push every finished step. Update "State" and "Open work" above (keep them short: no history; git log has it).
