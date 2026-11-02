@@ -11,12 +11,13 @@
 Token limit (Kaptain, 2 Nov 2026): no list holds more than 100 cards. Where more are due, a share is taken from each reason
 (or faction), so every reason stays seen: the cards a part starts from are at most 100, and the partners or compared cards
 beside them are at most 100. The estimated tokens of the output are printed to stderr.
-A card's text is printed the first time the card appears, later "(text above)". --record adds every printed line to
+A card's rows (one line, SYNTAX.md) are printed the first time the card appears, later "(text above)". --record adds every printed line to
 cases/links_checked.tsv. Read every printed line against both texts as a player.
 Usage: links_audit.py <game> [--record] > a.txt"""
 import collections, csv, os, random, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import deck_analysis, links, source
+import rows as card_rows
 CHECKED = os.path.join(HERE, 'cases', 'links_checked.tsv')
 SPECIAL_CAT, SPECIAL_RARITY = ('hero', 'leader'), ('legendary', 'champion', 'Champion')
 CAP = 100  # most cards in any list (Kaptain, 2 Nov 2026)
@@ -49,7 +50,7 @@ def main():
     lib = source.lib(); R = random.Random(game)
     nm = {i: n for i, n in c.execute('select id, name from card where game=?', (game,))}
     region = {i: [x for x in (r or '').split(',') if x] for i, r in c.execute('select id, regions from card where game=?', (game,))}
-    full_txt = lambda i: ' '.join(((lib.execute('select text from entities where id=?', (i,)).fetchone() or [''])[0] or '').split()) or '(no text)'
+    full_txt = card_rows.compact  # the card's rows (SYNTAX.md); readers judge lines by them
     told = set()
     def txt(i):  # the text once; after that the name says it
         if i in told: return '(text above)'

@@ -91,6 +91,10 @@ checks, also for a new import, keeps this):**
   20 reasons) and the champions' lines.
 - Readers: one game at a time, never all games at once. A reader appends its findings to its file after every piece it reads
   (about 150 lines), with the line range, so a stop loses nothing. It reads only START_DATABASE.md L1-L22, not other docs.
+- Readers judge lines by the cards' rows, not by the card texts (Kaptain, 2 Nov 2026: a text is read differently each time;
+  rows say one thing). The scripts print each card's rows on one line (`rows.compact`) with the start of its text; readers
+  read SYNTAX.md (`rows.py --syntax` makes it) and START_DATABASE.md L1-L22 first. A row that does not say what the start of
+  the text says goes on a separate list for Claude.
 - Readers run on Sonnet (Kaptain, 2 Nov 2026); Claude checks every cause they report against both card texts before fixing.
 - A reader reports causes, not single lines; once a reason group is judged, it does not look up more texts for it.
 - Findings of a round that stopped early are kept in `audit/` (one file per reader part) until their causes are fixed.

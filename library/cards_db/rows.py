@@ -61,7 +61,60 @@ def show(cid):
     for r in rows: print('| ' + ' | '.join(x.replace('|', '/') for x in r) + ' |')
     print()
 
+def compact(cid, label=60):
+    """The card's rows on one line, for the line checks (SYNTAX.md): KW: keywords | WHEN event IF cond DO act who ... ; THEN ..."""
+    text = ' '.join(((lib.execute('select text from entities where id=?', (cid,)).fetchone() or [''])[0] or '').split())
+    parts = []
+    kws = [nm(k) for (k,) in c.execute('select keyword from card_keyword where card=?', (cid,))]
+    if kws: parts.append('KW: ' + ', '.join(kws))
+    for aid, ev, lim in c.execute('select id, event, lim from ability where card=? order by seq', (cid,)):
+        effs = []
+        for link, act, on, to, zone, cr, kr, lasts, eid in c.execute(
+                'select link, act, on_target, to_target, zone, card_ref, keyword_ref, lasts, id from effect where ability=? order by seq', (aid,)):
+            ps = ', '.join(f'{p}={amount(a) if a else v}' for p, a, v in c.execute('select param, amount, value from param where effect=?', (eid,)))
+            ref = ' '.join(x for x in (nm(cr) if cr else '', nm(kr) if kr else '') if x)
+            e = ' '.join(x for x in (act, target(on), ('to ' + target(to)) if to else '', ('in ' + zone) if zone else '',
+                                     f'<{ref}>' if ref else '', f'({ps})' if ps else '', ('for ' + lasts) if lasts else '') if x)
+            effs.append(('OR ' if link == 'or' else 'THEN ' if effs else '') + e)
+        cd = conds(aid)
+        parts.append('WHEN ' + event(ev) + (f' [{lim}]' if lim else '') + (' IF ' + cd if cd else '') + ' DO ' + ' '.join(effs))
+    lab = text if len(text) <= label else text[:label].rsplit(' ', 1)[0] + '...'
+    return ' | '.join(parts) + f'  «{lab}»' if parts else f'(no rows)  «{lab}»'
+
+
+HEAD = """# How to read a card's rows (the line checks; made by `rows.py --syntax`, do not edit by hand)
+Each card is printed on one line: `KW: <keywords> | WHEN ... IF ... DO ... | WHEN ...  «start of the card text»`.
+- `KW:` the card's keywords. What a keyword does is its own entry's rows, not repeated on the card.
+- `WHEN <event> [by <actor>] [of <object>] [<limit>]`: one ability and what sets it off. `always` = on while its IF holds.
+- `IF <test> ...`: conditions, joined by `;`. `event_count <event> ... ge 2 this_game` = the event happened 2+ times this game.
+- `DO <act> <who> [to <who>] [in <zone>] <card or keyword it names> (numbers) [for <how long>]`: the effect. `THEN` = the next
+  effect of the same ability; `OR` = a choice between effects.
+- A who (target) is `[number] [pick] [side] [kind] [in zone] [filter]...`: `chosen mine unit` = a unit of mine the player
+  picks; `all enemy unit`; `self` = the card itself; `it` = the target of the effect before. A filter is `[attr op value]`:
+  `[card in Zed]` = the card named Zed; `[cost ge 6]` = cost 6 or more.
+- Numbers: `power=1, health=1` (stats given); `amount=2`; `stat power of (self)` = my power.
+- «...» is the start of the card text, only to notice a row that does not say what the card says; judge lines by the rows.
+Values below: field, value, meaning (vocab.tsv). Only values the database uses.
+"""
+
+
+def syntax():
+    used = {'act': 'select distinct act from effect', 'event': 'select distinct event from event', 'test': 'select distinct test from cond',
+            'pick': 'select distinct pick from target', 'side': 'select distinct side from target', 'kind': 'select distinct kind from target',
+            'zone': 'select distinct zone from target', 'lasts': 'select distinct lasts from effect', 'attr': 'select distinct attr from filter',
+            'op': 'select distinct op from filter', 'span': 'select distinct span from cond'}
+    out = [HEAD]
+    for f, q in used.items():
+        vals = {v for (v,) in c.execute(q) if v}
+        rows_ = [r for r in c.execute('select value, meaning from vocab where field=? order by value', (f,)) if r[0] in vals]
+        if not rows_: continue
+        out.append(f'\n**{f}**')
+        out += [f'- `{v}`: {(m or "").split(". ")[0][:110]}' for v, m in rows_]
+    open(os.path.join(HERE, 'SYNTAX.md'), 'w', encoding='utf-8').write('\n'.join(out) + '\n')
+
+
 if __name__ == '__main__':
+    if sys.argv[1] == '--syntax': syntax(); sys.exit()
     if sys.argv[1] == '--random':
         random.seed(int(sys.argv[3]) if len(sys.argv) > 3 else 1)
         ids = [i for (i,) in c.execute("select a.card from ability a join card cd on cd.id=a.card where cd.is_keyword=0 group by a.card")]

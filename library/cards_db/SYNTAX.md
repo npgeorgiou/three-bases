@@ -1,0 +1,293 @@
+# How to read a card's rows (the line checks; made by `rows.py --syntax`, do not edit by hand)
+Each card is printed on one line: `KW: <keywords> | WHEN ... IF ... DO ... | WHEN ...  «start of the card text»`.
+- `KW:` the card's keywords. What a keyword does is its own entry's rows, not repeated on the card.
+- `WHEN <event> [by <actor>] [of <object>] [<limit>]`: one ability and what sets it off. `always` = on while its IF holds.
+- `IF <test> ...`: conditions, joined by `;`. `event_count <event> ... ge 2 this_game` = the event happened 2+ times this game.
+- `DO <act> <who> [to <who>] [in <zone>] <card or keyword it names> (numbers) [for <how long>]`: the effect. `THEN` = the next
+  effect of the same ability; `OR` = a choice between effects.
+- A who (target) is `[number] [pick] [side] [kind] [in zone] [filter]...`: `chosen mine unit` = a unit of mine the player
+  picks; `all enemy unit`; `self` = the card itself; `it` = the target of the effect before. A filter is `[attr op value]`:
+  `[card in Zed]` = the card named Zed; `[cost ge 6]` = cost 6 or more.
+- Numbers: `power=1, health=1` (stats given); `amount=2`; `stat power of (self)` = my power.
+- «...» is the start of the card text, only to notice a row that does not say what the card says; judge lines by the rows.
+Values below: field, value, meaning (vocab.tsv). Only values the database uses.
+
+
+**act**
+- `attach`: attach the source to the target unit
+- `become_leader`: the target becomes its player's leader unit, whose life is the player's (Duelyst "becomes your General")
+- `can`: the target may do something normally forbidden (param event)
+- `cant`: the target cannot do the event named in param event (attack, block, be targeted, ...)
+- `capacity_change`: change how many units a lane or floor holds (params amount; on = the lane, kind position; Monster Train Capaci
+- `capture`: remove the target until the capturer leaves play
+- `challenge`: force a unit to block / choose its blocker
+- `choose_card`: pick a card among options (Invoke, Manifest, Predict, Discover)
+- `choose_one`: the player chooses one of the following effects (they carry link=or)
+- `copy`: make a copy of the target in a zone
+- `copy_keywords`: the "on" target gets the keywords of the "to" target (filter which: state positive / negative)
+- `copy_upgrades`: the "on" units get the upgrades, enhancements and stat changes of the "to" card (Monster Train Legion of Wax: 
+- `cost_change`: change the cost of the target (signed param cost)
+- `cost_set`: set the target's cost to params cost
+- `countdown_advance`: make a Countdown count down (param amount)
+- `counter`: negate a spell or skill
+- `create`: create a card (linked) in a zone
+- `damage`: deal damage
+- `damage_reduction`: damage the target takes is reduced by param amount (Tough)
+- `discard`: discard cards
+- `donate`: give my own unit or card to the opponent (Stormbound "convert itself"); taking an enemy's is steal
+- `double_strike`: the target strikes before and together with the unit it fights (Double Attack)
+- `draw`: draw cards (the target says which cards and from where)
+- `eat`: the actor unit eats the target unit (it is removed; Monster Train feeding on Morsels)
+- `empty_resource`: remove the resource stored on the "on" board spaces (Faeria: empty a faeria well)
+- `end_turn`: the player's turn ends now (Faeria Doomsday)
+- `excess_damage`: damage beyond what kills the struck unit goes to the target (Overwhelm: target enemy player)
+- `exhaust`: remove the target card for the rest of the battle (Monster Train Consume pile, Slay the Spire exhaust)
+- `extra_turn`: the player takes another turn after this one (Faeria Ocarina)
+- `first_strike`: the target strikes before the unit it fights (Quick Attack)
+- `gain_attack_token`: the player gains the attack token (Rally)
+- `give_ability`: give the target the ability in the effect key "ability" (a whole ABILITY)
+- `give_keyword`: give the target the linked keyword
+- `give_random_keyword`: give the target a random keyword (filters on the keyword in "on" are not used; use params amount)
+- `give_type`: give the target the type in the effect key "type"
+- `gold_gain`: gain gold, a currency kept between battles for shops (params amount)
+- `grow`: raise the target's Power and Health to at least the given values ("grows up to 4|4", "grow to the highest Powe
+- `harvest`: the unit collects a resource from a board space next to it (Faeria harvesting faeria from a well)
+- `heal`: restore Health or player life
+- `increase_effect`: the target's effects or numbers are increased (param amount)
+- `keyword_action`: do what the linked keyword describes (Recall, Invoke, Predict, Toss, Nab, ...)
+- `kill`: kill (destroy) without damage
+- `level_up`: level up the target champion
+- `look`: look at cards without taking them
+- `mana_gain`: refill or gain mana / spell mana (param amount, kind via target)
+- `mark`: mark the target for a later effect
+- `max_mana_change`: gain or lose mana gems (params amount, signed; empty gem = not refilled)
+- `move`: move the target to another position or zone
+- `negate_damage`: prevent damage to the target
+- `obliterate`: remove from the game; no death effects
+- `play_card`: play the target or the linked card without paying (cast it)
+- `put_on_top`: put the target on top of a deck
+- `random_one`: one of the following effects happens at random (they carry link or); the player choosing is choose_one
+- `ready`: the target may move and attack again this turn (Duelyst "reactivate")
+- `redirect_attack`: turn an enemy's announced attack the other way, so it hits other tiles (Into the Breach: flip its attack direc
+- `refill_resource`: fill the "on" board spaces' stored resource again (Faeria: refill a faeria well)
+- `refresh`: a used spell or ability can be used again now (Duelyst "refresh your Bloodbound Spell")
+- `remove_keyword`: remove the linked keyword from the target
+- `remove_keywords`: remove all keywords of a kind from the target (filter in "to": state positive / negative)
+- `repeat`: cast or trigger the target effect again
+- `return_card`: put a card back into hand from the discard, exhausted or removed zone (zone = where it goes)
+- `return_to_hand`: return a unit in play to its owner's hand (Recall)
+- `reveal`: reveal cards
+- `revive`: return a dead unit to play
+- `run_rule`: changes how the run works outside fights: map, rest sites, shops, rewards, chests, Ascension difficulty
+- `sacrifice`: the owner gives up their own unit to pay a cost or for an effect; it dies (Inscryption Blood, Monster Train Sa
+- `set_terrain`: change the ground of the "on" spaces to the terrain the "to" target has (Faeria create, transform or destroy a
+- `shuffle_into_deck`: shuffle the target into a deck
+- `shuffle_stats`: shuffle the target's stats (the card text's words; no definition text in the library)
+- `silence`: remove all keywords, abilities and ongoing effects
+- `spend_mana`: spend mana (params amount)
+- `start_attack`: start a free attack with the targets
+- `stat_change`: change Power and/or Health by the params (signed)
+- `stat_set`: set Power and/or Health to the params
+- `steal`: take control of an enemy unit or board space (Faeria: gain control of a land; lasts this_round when the text s
+- `strike`: the target unit strikes another target now
+- `strike_with`: the target strikes with the stat in param attr instead of Power (Formidable)
+- `stun`: stun (cannot attack or block this round, removed from combat)
+- `summon`: put a unit (linked or described) into play
+- `swap`: swap the positions of the targets
+- `swap_stats`: the "on" unit and the "to" unit exchange Power and Health values (Swapbot's Swap)
+- `transform`: turn the target into another card (linked or described)
+- `unequip`: remove the target's equipment
+- `win_game`: the player wins the game
+
+**event**
+- `activated`: the player chooses to use it (landmark activation, skill-like use)
+- `always`: no event: the ability is on as long as its conditions hold (static)
+- `attack_done`: a unit has finished an attack, also a forced one ("After attacking")
+- `attack_token_gained`: a player gains the attack token
+- `attacks`: a unit attacks (declared as attacker)
+- `blocks`: a unit blocks
+- `challenges`: a unit challenges (forces a blocker)
+- `combat_end`: the fight is over for this turn (Monster Train Resolve: after combat)
+- `combat_start`: a fight starts, or a unit's own turn in a fight starts (Monster Train Action)
+- `countdown_done`: a Countdown reaches 0
+- `counts_down`: a Countdown goes down by one (When I count down)
+- `created`: a card is created (in hand, deck or play)
+- `damaged`: a unit or player takes damage
+- `dies`: a unit dies (Last Breath when the object is self)
+- `discarded`: a card is discarded
+- `drawn`: a card is drawn
+- `eats`: a unit eats another (actor the eater, object the eaten unit; Monster Train Gorge, Eaten)
+- `equipped`: an item or equipment is attached to a unit
+- `exhausted`: a card is removed for the rest of the battle after use (Monster Train Consume, Etch)
+- `fights`: a unit exchanges attacks with a unit, structure or player, attacking or attacked, not hit from range (Faeria C
+- `game_start`: the game starts
+- `given_keyword`: a unit is given a keyword (Stun, Barrier, ...)
+- `harvests`: a unit collects a resource from a board space next to it: actor the unit, object the space (like strikes: Faer
+- `healed`: a unit or player is healed
+- `kept_in_hand`: a card is still in its owner's hand when the turn ends (Monster Train Reserve)
+- `keyword_used`: an action keyword is used (object carries the keyword filter: Plant, Toss, Predict...)
+- `killed`: the actor kills the object (Slay when the actor is the player)
+- `leaves_play`: a card leaves play by any means
+- `levels_up`: a champion levels up
+- `mana_refilled`: mana or spell mana is refilled
+- `mana_spent`: mana is spent (object: what it was spent on)
+- `moves`: a unit is about to move ("Before moving": on play if it moves, then each turn)
+- `moves_onto`: a unit has moved onto a board space: object the moving unit (as for moves), the space as its position filter s
+- `nexus_damaged`: a player is damaged (any source)
+- `played`: the actor card is played from hand (Play:, a spell being cast)
+- `predicts`: the player Predicts
+- `recalled`: a unit is returned to hand (Recall)
+- `removed_from_deck`: a card is removed from the deck between fights (shop, events)
+- `resource_gained`: a player gains a resource other than mana (object: the resource, e.g
+- `revived`: a unit is revived
+- `round_end`: the round ends, for both players (Runeterra Round End); a player's own turn is turn_end
+- `round_start`: the round starts, for both players (Runeterra Round Start); a player's own turn is turn_start
+- `run_event`: something happens on the run between fights: resting, entering a room, a shop or a rest site, opening a chest,
+- `sacrificed`: a unit is given up by its owner to pay a cost (object the sacrificed unit, actor the card it pays for; Inscryp
+- `shuffled`: a card is shuffled into a deck
+- `spell_resolves`: a spell or skill finishes (Imbue)
+- `stat_changed`: a unit gets a stat change (buff or debuff)
+- `strikes`: a unit strikes (deals damage with its Power)
+- `strikes_nexus`: a unit hits the enemy player (Runeterra Nexus Strike; Stormbound: reaching the enemy base)
+- `summoned`: a unit enters play by any means
+- `supports`: a unit supports the ally to its right (actor the supporter, object the supported)
+- `survives_damage`: a unit takes damage and does not die
+- `targeted`: a card is targeted by a spell, skill or ability
+- `terrain_changed`: a board space's ground changes (Faeria "whenever you create forest")
+- `transformed`: a card transforms
+- `trap_activated`: a Trap or Boon attached to a card activates
+- `turn_end`: the actor player's turn ends
+- `turn_option_chosen`: the player picks one of the choices every turn offers (Faeria power wheel; object kind mana = the +1 faeria ch
+- `turn_start`: the actor player's turn starts ("At the start of your turn"; structures act, then units move)
+
+**test**
+- `amount`: the amount in value compares op n (totals: "5+ units Stunned or Recalled")
+- `attack_token`: the player has (op is) or lacks (op not) the attack token
+- `chance`: happens with chance n percent
+- `count`: a count of things meets op n (field of: a target)
+- `event_count`: an event happened op n times in span
+- `first_card`: this is (or is not, op not) the first card played this round (Daybreak / Nightfall)
+- `have`: the player has a matching card (Behold when zone hand+board)
+- `it_matches`: the event's object matches the filters
+- `keyword_condition`: the linked condition keyword holds (Plunder, Flow, Allegiance, Reputation, Empowered...)
+- `last_card`: the card played just before this one matches the filters of "of" ("if the last card played was an Attack")
+- `level`: the card's level compared with n (op eq, le, ge): for words that change by level ("bordering/bordering/surroun
+- `max_mana`: the player's max mana op n (Enlightened)
+- `stage`: the ability belongs to stage n of a staged card (I, II, III)
+- `stat`: a stat of a target meets op n
+- `upgrade_path`: the card took upgrade path n (n = the path's place in the card's list; Monster Train champion paths)
+- `upgraded`: upgrade n of the card is powered (n = its place in the card's list; Into the Breach weapons, where both upgrad
+
+**pick**
+- `actor`: the event's actor
+- `all`: all that match
+- `attached_to`: the unit this is attached to
+- `bottom`: bottom of the zone
+- `chosen`: chosen by the player
+- `highest`: highest value of the target key "by" (an attr)
+- `highest_cost`: highest cost
+- `it`: the event's object, or the previous effect's target
+- `left_of_self`: the unit to my left
+- `lowest`: lowest value of the target key "by" (an attr)
+- `lowest_cost`: lowest cost
+- `nearest`: the one closest to of (or to the card itself) ("the nearest enemy", "the closest enemy")
+- `owner`: the owner of the event's object or of the previous target
+- `random`: random
+- `right_of_self`: the unit to my right
+- `self`: the card that has the ability
+- `strongest`: not written: normalize N10 makes it pick highest, by power (or strength)
+- `top`: top of the zone
+
+**side**
+- `any`: either side
+- `enemy`: the opponent's
+- `mine`: mine / allied
+
+**kind**
+- `any`: a unit or a player (anything)
+- `anything`: a unit, a structure or a player ("an enemy" where the rules count all three)
+- `card`: a card in a zone other than play
+- `effect`: an effect or ability (for counter, repeat)
+- `equipment`: an equipment or item
+- `gem`: a coloured resource a card provides while it is in play, paying the cards of that colour (Inscryption Mox gems
+- `keyword`: a keyword (for counting keywords)
+- `landmark`: a non-unit card that stays on the board (Runeterra landmark, Stormbound structure)
+- `lane_resource`: a resource stored in a lane or floor and spent by cards (Monster Train Echo)
+- `lane_resource_slot`: a slot that holds a lane resource (Monster Train Echo slot)
+- `mana`: mana
+- `player`: a player: their life total (Runeterra Nexus, Stormbound base)
+- `position`: a board space
+- `secondary_resource`: a player's resource besides mana, gained and spent by cards (Inscryption Bones: gained when cards die, spent t
+- `slot`: a slot that holds what the player channels or keeps (Slay the Spire Orb slots, potion slots)
+- `spell`: a spell or skill
+- `spell_mana`: spell mana
+- `unit`: a unit (follower or champion)
+- `unit_or_structure`: a unit or a non-unit card on the board ("unit or structure")
+
+**zone**
+- `attached`: attached to a unit or card
+- `board`: in play
+- `deck`: deck
+- `deck_bottom`: bottom of deck
+- `deck_top`: top of deck
+- `discard`: discard pile / dead
+- `everywhere`: play, hand, deck and later created (Everywhere)
+- `exhausted`: cards removed for the rest of the battle after use (Monster Train Consume pile)
+- `hand`: hand
+- `removed`: removed from the game / captured
+
+**lasts**
+- `instant`: one-time
+- `n_rounds`: for param rounds rounds
+- `next_card`: until the next card is played
+- `next_own_turn`: until the end of the holder's next turn ("lasts one turn": Stormbound Freeze, Confuse)
+- `next_round`: through the next round
+- `permanent`: for the rest of the game
+- `this_round`: until the round ends
+- `this_run`: for the rest of the run, in later battles too (roguelike "permanently", "permanent copy")
+- `unstated`: the text does not say how long
+- `while`: while the ability's conditions hold or the source is in play
+- `while_attached`: while attached
+
+**attr**
+- `card`: is the linked card
+- `category`: is of a category (value from category)
+- `cost`: cost
+- `countdown`: a Countdown value
+- `damage`: the damage dealt (for event_count and stat sums)
+- `distance`: how many spaces away from of, counted in steps on the board's grid ("moves up to 2 spaces", "within 3 spaces";
+- `does`: a card whose own effects include the act in val ("spells that deal damage or kill": does in damage, kill)
+- `health`: health stat (Runeterra Health); a game with one stat uses strength
+- `keyword`: has the linked keyword
+- `level`: a card's level, in games where cards have levels
+- `name_has`: the card name contains the word in ref (card families: Crimson, Storm Conduit)
+- `origin`: how the card got there (value from state)
+- `position`: where the thing is, relative to the filter's "of" target (default the card itself); value from position
+- `power`: attack stat (Runeterra Power); a game with one stat uses strength
+- `rarity`: a rarity (value from rarity)
+- `region`: is from a region (value from region)
+- `right_of`: is to the right of the linked card's unit on the board (ref = card name: "on Vladimir's right")
+- `state`: is in a state (value from state)
+- `strength`: one stat that is both attack and health, lowered by damage (Stormbound strength)
+- `targets`: a spell or skill whose target is the linked card ("enemy spells targeting Evelynn")
+- `terrain`: the kind of ground of a board space; value from terrain (Faeria lands)
+- `total_stats`: Power plus Health
+- `type`: has the linked type
+
+**op**
+- `eq`: equals
+- `ge`: at least
+- `gt`: more than
+- `in`: is one of vals (or refs)
+- `is`: is / has
+- `le`: at most
+- `lt`: less than
+- `not`: is not / lacks
+
+**span**
+- `different_rounds`: counts the rounds in which the event happened at least once ("in 5+ different rounds", "for each different rou
+- `last_round`: last round
+- `now`: at this moment
+- `this_game`: this game
+- `this_round`: this round
+- `this_turn`: this action
