@@ -26,6 +26,14 @@ output files, which are gone (the scripts changed); the causes and example lines
 
 The files hold about 160 causes; many repeat across files (the same rule seen by several readers). They are not merged yet.
 
+## Later files (2 Nov 2026, evening)
+- `merged_old.md`: the 16 files above merged into 95 distinct causes. Its example lines are lines the OLD readers judged
+  WRONG; many of those judgements were themselves wrong (Kaptain: "The Dreadway -> Decimate" is a combo that works).
+- `merged_with_rows.md`: the same, with both cards' rows, the line as it is now and any test case under each example.
+- `verdict_1.md`-`verdict_4.md`: each cause checked again against the rows and L1-L22: REAL 73, PARTLY 18 (which examples
+  are wrong and which right is written there), NOT REAL 4. Fix only REAL causes and the wrong examples of PARTLY ones.
+- `causes_a_runeterra.md`, `causes_d_runeterra_*.md`: the NEW check of Runeterra (rows, Sonnet readers).
+
 ## What is left (for whichever chat finishes the check)
 1. Merge the causes of all 16 files into one list of distinct causes. Check each against the rows of its example pairs
    (LINKS_PLAN.md Lessons: call the line functions for that pair). Drop what the rows do not support.
