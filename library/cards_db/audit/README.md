@@ -31,8 +31,7 @@ The files hold about 160 causes; many repeat across files (the same rule seen by
    (LINKS_PLAN.md Lessons: call the line functions for that pair). Drop what the rows do not support.
 2. Fix every remaining cause once, for every game, with test cases (LINKS_PLAN.md "Tests"); `links.py`,
    `check_all.py --no-load`, `realworld.py`.
-3. Change links_audit.py and deck_audit.py to the NEW checks (LINKS_PLAN.md step 3; Kaptain decides first: every reason, or
-   the reasons that hold 90% of the lines).
+3. (done) links_audit.py and deck_audit.py print the NEW checks (LINKS_PLAN.md step 3).
 4. Run the new checks for the 4 games, one game at a time (Sonnet readers, findings saved as they go); fix what they find.
    The new Check 1 is needed for all 4 games (the old one read random lines, not every reason). The new Check 2 is needed
    for all decks of Runeterra, Faeria and Duelyst; Slay the Spire's decks were read whole by the old check, run the new one

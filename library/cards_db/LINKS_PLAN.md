@@ -37,13 +37,10 @@ the Breach. Fix every error by its cause, for every game, never card by card (ST
 Each game gets two checks (Kaptain, 2 Nov 2026; this replaces the old parts a-i, which printed 2.5 MB for four games). A
 wrong line always comes from one rule, and each rule shows as one reason ("kills it for its death effect"), so a reason is
 judged once, not by many random lines. Cards are shown by their rows (one line each, SYNTAX.md), never by their text.
-**The scripts do not do this yet: links_audit.py and deck_audit.py still print the old parts (with the 100-card limit).
-Change them to the parts below before the next check.**
 
 **Check 1, the whole game:** `links_audit.py <game>`. Its only question: is this reason's rule right?
 - For every reason of the game: one line, with both cards' rows. Pick the pair whose two cards have the fewest rows (quick to
-  read). How many reasons: OPEN, Kaptain decides: every reason, or only the biggest reasons that hold 90% of the lines (2 Nov
-  2026 numbers: Runeterra 471 reasons, 104 hold 90%; Slay the Spire 94 / 32; Faeria 105 / 37; Duelyst 205 / 80).
+  read). How many reasons (Kaptain, 2 Nov 2026): the biggest reasons that together hold 90% of the lines (2 Nov 2026 numbers: Runeterra 471 reasons, 104 hold 90%; Slay the Spire 94 / 32; Faeria 105 / 37; Duelyst 205 / 80).
 - For the 20 biggest reasons: 4 more lines, each from a different card than the lines before (a rule right for one card can
   fire too widely for others).
 - No missed-line part in the game check (Kaptain, 2 Nov 2026): cards with no partner beside random cards of their faction

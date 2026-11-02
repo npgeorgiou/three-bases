@@ -1,37 +1,15 @@
-"""Check 1 of LINKS_PLAN.md step 3: the whole game (Kaptain, 2 Nov 2026). It prints, in this order:
-  a) the top 10 reasons for links: are we linking too much for generic reasons?
-  b) the 2% cards with the most partners, all their lines (by reason, with the partners): linking too much for generic reasons?
-  c) the 2% cards with the fewest partners (at least one), all their lines: is a line missed?
-  d) 2% of the cards with no partner, their texts: is a line missed?
-  e) the same cards, beside 50 random cards of their faction: is a line missed?
-  f) 50 random lines: is something wrong or missing?
-  g) 50 random lines of each of the 20 most used reasons: is something wrong or missing?
-  h) the special cards of every deck (champions, heroes, Generals, legends), all their lines: is something wrong or missing?
-  i) a line printed in an earlier part, or read before (cases/links_checked.tsv), is not printed again.
-Token limit (Kaptain, 2 Nov 2026): no list holds more than 100 cards. Where more are due, a share is taken from each reason
-(or faction), so every reason stays seen: the cards a part starts from are at most 100, and the partners or compared cards
-beside them are at most 100. The estimated tokens of the output are printed to stderr.
-A card's rows (one line, SYNTAX.md) are printed the first time the card appears, later "(text above)". --record adds every printed line to
-cases/links_checked.tsv. Read every printed line against both texts as a player.
+"""Check 1 of LINKS_PLAN.md step 3: the whole game (Kaptain, 2 Nov 2026). Is each reason's rule right?
+For the biggest reasons that together hold 90% of the game's lines, it prints one line per reason (the pair whose cards have
+the fewest rows), and for the 20 biggest reasons 4 more lines, each from cards not shown for that reason yet. Cards are shown
+by their rows on one line (SYNTAX.md), the first time they appear; later "(rows above)". A line printed before or read before
+(cases/links_checked.tsv) is not printed again. --record adds every printed line to cases/links_checked.tsv. The estimated
+tokens of the output go to stderr.
 Usage: links_audit.py <game> [--record] > a.txt"""
-import collections, csv, os, random, sqlite3, sys
+import collections, csv, os, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
-import deck_analysis, links, source
 import rows as card_rows
 CHECKED = os.path.join(HERE, 'cases', 'links_checked.tsv')
-SPECIAL_CAT, SPECIAL_RARITY = ('hero', 'leader'), ('legendary', 'champion', 'Champion')
-CAP = 100  # most cards in any list (Kaptain, 2 Nov 2026)
-
-
-def spread(items, key, n=CAP):
-    """At most n items, an equal share from each group of key (round robin), in the given order inside a group."""
-    g = collections.defaultdict(list)
-    for x in items: g[key(x)].append(x)
-    out, qs = [], [list(v) for _, v in sorted(g.items(), key=lambda kv: str(kv[0]))]
-    while len(out) < n and any(qs):
-        for q in qs:
-            if q and len(out) < n: out.append(q.pop(0))
-    return out
+SHARE, TOP, MORE = 0.9, 20, 4  # reasons holding 90% of lines; the 20 biggest get 4 more lines
 
 
 class Count:  # counts what is printed, for the token estimate
@@ -43,112 +21,42 @@ class Count:  # counts what is printed, for the token estimate
 OUT = Count(sys.stdout)
 
 
+def size(c):  # rows per card, to pick quick-to-read pairs
+    return collections.Counter(i for (i,) in c.execute('select a.card from effect e join ability a on a.id=e.ability'))
+
+
 def main():
     sys.stdout = OUT
     game, record = sys.argv[1], '--record' in sys.argv
     c = sqlite3.connect(os.path.join(HERE, 'cards.sqlite')); c.execute(f"attach database '{os.path.join(HERE, 'links.sqlite')}' as L")
-    lib = source.lib(); R = random.Random(game)
     nm = {i: n for i, n in c.execute('select id, name from card where game=?', (game,))}
-    region = {i: [x for x in (r or '').split(',') if x] for i, r in c.execute('select id, regions from card where game=?', (game,))}
-    full_txt = card_rows.compact  # the card's rows (SYNTAX.md); readers judge lines by them
     told = set()
-    def txt(i):  # the text once; after that the name says it
-        if i in told: return '(text above)'
-        told.add(i); return full_txt(i)
-    owned = sorted(links.owned(c, game))
-    rows = c.execute('select l.a, l.b, p.kind, p.text from L.link l join L.phrase p on p.id=l.phrase where l.game=?', (game,)).fetchall()
-    by_pair = collections.defaultdict(list)
-    for a, b, k, t in rows: by_pair[(a, b)].append((k, t))
-    partners = collections.defaultdict(set)
-    for a, b in by_pair: partners[a].add(b); partners[b].add(a)
+    def rw(i):
+        if i in told: return '(rows above)'
+        told.add(i); return card_rows.compact(i)
     per = collections.defaultdict(list)
-    for (a, b), ls in by_pair.items():
-        for k, t in ls: per[(k, t)].append((a, b))
-    top = sorted(per.items(), key=lambda x: -len(x[1]))
+    for a, b, k, t in c.execute('select l.a, l.b, p.kind, p.text from L.link l join L.phrase p on p.id=l.phrase where l.game=?', (game,)):
+        per[(k, t)].append((a, b))
+    total = sum(len(v) for v in per.values())
     seen = {tuple(r[1:]) for r in csv.reader(open(CHECKED, encoding='utf-8'), delimiter='\t') if r and r[0] == game} if os.path.exists(CHECKED) else set()
-    shown = []
-    decks = [r for f in ('decks.tsv', os.path.join('cases', 'decks.tsv'))
-             for r in csv.DictReader(open(os.path.join(HERE, f), encoding='utf-8'), delimiter='\t') if r['game'] == game]
-    deck_ids = [list(dict.fromkeys(deck_analysis.parse_deck(c, game, r['cards'])[0])) for r in decks]
-    say = lambda t, a, b: t.replace('{A}', nm[a]).replace('{B}', nm[b])
-
-    def line(a, b):  # one line with both texts, if not printed before
-        if (nm[a], nm[b]) in seen: return False
-        for k, t in by_pair[(a, b)]: print(f"  {nm[a]} -> {nm[b]}: {k}: {say(t, a, b)}")
-        print(f"     {nm[a]}: {txt(a)}\n     {nm[b]}: {txt(b)}")
-        seen.add((nm[a], nm[b])); shown.append((nm[a], nm[b])); return True
-
-    def card(i):
-        print(f"{nm[i]} ({len(partners[i])} partners): {txt(i)}")
-
-    def groups(i):  # every line of the card not printed before, one row per direction and reason, with at most 100 partners
-        g = collections.defaultdict(list)
-        for o in partners[i]:
-            for a, b in ((i, o), (o, i)):
-                if (a, b) in by_pair and (nm[a], nm[b]) not in seen:
-                    for k, t in by_pair[(a, b)]: g[('->' if a == i else '<-', k, t)].append(o)
-        pick = set(spread([(r, o) for r, os_ in g.items() for o in R.sample(os_, len(os_))], lambda x: x[0]))
-        for (d, k, t), os_ in sorted(g.items(), key=lambda x: (-len(x[1]), x[0])):
-            show = sorted((o for o in os_ if ((d, k, t), o) in pick), key=lambda o: nm[o])
-            names = ', '.join(nm[o] for o in show) + (f' and {len(os_) - len(show)} more' if len(os_) > len(show) else '')
-            print(f"  {d} {k}: {t.replace('{A}', 'A').replace('{B}', 'B')} ({len(os_)}): {names}")
-            for o in show:
-                p_ = (nm[i], nm[o]) if d == '->' else (nm[o], nm[i])
-                if p_ not in seen: seen.add(p_); shown.append(p_)
-
-    def own_lines(i):  # the card's lines not printed before, one by one with the partner's text; at most 100 partners
-        main = lambda o: (by_pair.get((i, o)) or by_pair.get((o, i)))[0]
-        for o in sorted(spread(R.sample(sorted(partners[i]), len(partners[i])), main), key=lambda o: nm[o]):
-            for a, b in ((i, o), (o, i)):
-                if (a, b) in by_pair and (nm[a], nm[b]) not in seen:
-                    for k, t in by_pair[(a, b)]: print(f"  {nm[a]} -> {nm[b]}: {k}: {say(t, a, b)}")
-                    print(f"     {nm[o]}: {txt(o)}")
-                    seen.add((nm[a], nm[b])); shown.append((nm[a], nm[b]))
-
-    n2 = max(1, round(len(owned) * 0.02))
-    print(f'=== {game}: {len(owned)} cards, {len(by_pair)} pairs, {len(rows)} rows; 2% = {n2} cards')
-    print('-- a) the top 10 reasons for links: are we linking too much for generic reasons?')
-    for (k, t), ps in top[:10]:
-        print(f"- {k}: {t} ({len(ps)} lines, {100 * len(ps) / len(rows):.1f}%; from {len({a for a, _ in ps})} cards to {len({b for _, b in ps})} cards)")
-    linked = sorted((i for i in owned if partners[i]), key=lambda i: (-len(partners[i]), nm[i]))
-    def main_reason(i):  # the reason most of the card's lines give: the share key for start cards
-        n = collections.Counter(r for o in partners[i] for p in ((i, o), (o, i)) for r in by_pair.get(p, []))
-        return n.most_common(1)[0][0] if n else ''
-    print(f'-- b) the {n2} cards with the most partners, all their lines: linking too much for generic reasons?')
-    for i in spread(linked[:n2], main_reason): card(i); groups(i)
-    print(f'-- c) the {n2} cards with the fewest partners (at least one), all their lines: is a line missed?')
-    for i in spread(sorted(linked, key=lambda i: (len(partners[i]), nm[i]))[:n2], main_reason): card(i); own_lines(i)
-    lone = [i for i in owned if not partners[i]]
-    pick = sorted(spread(R.sample(lone, min(n2, len(lone))), lambda i: (region[i] or [''])[0]), key=lambda i: nm[i])
-    print(f'-- d) {len(pick)} of the {len(lone)} cards with no partner: is a line missed?')
-    for i in pick: card(i)
-    print('-- e) the same cards, beside 50 random cards of their faction (at most 100 in all, a share per faction): is a line missed?')
-    by_fac = collections.defaultdict(list)
-    for i in pick: by_fac[(region[i] or [''])[0]].append(i)
-    pools = {fac: R.sample(p, min(50, len(p))) for fac, ids in by_fac.items()
-             for p in [[x for x in owned if x not in ids and (fac in region[x] if fac else not region[x])]]}
-    keep = set(spread([(f, x) for f, xs in pools.items() for x in xs], lambda y: y[0]))
-    for fac, ids in sorted(by_fac.items()):
-        print(f"= {fac or '(no faction)'}: {', '.join(nm[i] for i in ids)}")
-        for x in pools[fac]:
-            if (fac, x) in keep: print(f"    ? {nm[x]}: {txt(x)}")
-    print('-- f) 50 random lines: is something wrong or missing?')
-    n = 0
-    for a, b in R.sample(list(by_pair), len(by_pair)):
-        n += line(a, b)
-        if n == 50: break
-    print('-- g) random lines of each of the 20 most used reasons (50 each, at most 100 in all, a share per reason): is something wrong or missing?')
-    fresh = {(k, t): [p for p in R.sample(ps, len(ps)) if (nm[p[0]], nm[p[1]]) not in seen][:50] for (k, t), ps in top[:20]}
-    keep = set(spread([(r, p) for r, ps in fresh.items() for p in ps], lambda y: y[0]))
-    for (k, t), ps in top[:20]:
-        print(f'- {k}: {t} ({len(ps)} lines)')
-        for p in fresh[(k, t)]:
-            if ((k, t), p) in keep: line(*p)
-    print('-- h) the special cards of every deck, all their lines: is something wrong or missing?')
-    sp = sorted({i for ids in deck_ids for i in ids if c.execute(
-        'select 1 from card where id=? and (category in (?, ?) or rarity in (?, ?, ?))', (i,) + SPECIAL_CAT + SPECIAL_RARITY).fetchone()},
-        key=lambda i: nm[i])
-    for i in sorted(spread(R.sample(sp, len(sp)), lambda i: (region[i] or [''])[0]), key=lambda i: nm[i]): card(i); groups(i)
+    n_rows = size(c); shown = []
+    keep, s = [], 0
+    for r, ps in sorted(per.items(), key=lambda x: -len(x[1])):
+        if s >= SHARE * total: break
+        keep.append((r, ps)); s += len(ps)
+    print(f'=== {game}: {total} lines, {len(per)} reasons; the {len(keep)} biggest hold {100 * s / total:.0f}% of the lines')
+    for rank, ((k, t), ps) in enumerate(keep):
+        fresh = sorted((p for p in ps if (nm[p[0]], nm[p[1]]) not in seen), key=lambda p: (n_rows[p[0]] + n_rows[p[1]], nm[p[0]], nm[p[1]]))
+        if not fresh: continue
+        pick, used = [fresh[0]], {fresh[0][0], fresh[0][1]}
+        if rank < TOP:
+            for p in fresh[1:]:
+                if len(pick) > MORE: break
+                if p[0] not in used and p[1] not in used: pick.append(p); used |= {p[0], p[1]}
+        print(f'\n## {k}: {t} ({len(ps)} lines)')
+        for a, b in pick:
+            print(f'  {nm[a]} -> {nm[b]}\n     {nm[a]}: {rw(a)}\n     {nm[b]}: {rw(b)}')
+            seen.add((nm[a], nm[b])); shown.append((nm[a], nm[b]))
     print(f'about {OUT.n // 4} tokens printed', file=sys.stderr)
     if record:
         with open(CHECKED, 'a', encoding='utf-8') as f:
