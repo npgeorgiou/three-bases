@@ -403,6 +403,8 @@ def lines_of(c, game):
             if origin == 'has_keyword' and not pick and kw_tree(c, via) in HIT_KW + ('lifesteal', 'deathtouch') and \
                     h in ('strikes', 'strikes_nexus', 'fights', 'attacks', 'nexus_damaged'):
                 pick = 'self'  # a fight keyword works for the card that has it (Nasus's Fearsome gets Nasus, not Abyssal Eye, to the Nexus)
+            if origin == 'has_keyword' and pick == 'self' and cards[card]['cat'] not in ('unit', 'hero', 'building', 'leader', 'pilot'): continue  # a
+            # spell naming a keyword it gives the enemy (Grotesque Gift's Gloom) does not have it: the keyword's own work is no act of the spell (L9, L15)
             if origin == 'has_keyword' and not pick and h in ('moves', 'moves_onto'): pick = 'self'  # a move keyword moves only its own
             # card (Kaptain 3 Nov 2026: Dragonlark's Flying puts no other unit around Vigilator; L20)
             if pick == 'self' and not kind: kind = {'leader': 'player', 'hero': 'unit', 'pilot': 'unit'}.get(cards[card]['cat'], cards[card]['cat'])  # it
