@@ -68,6 +68,16 @@ questions first and wait. Never invent rules or mechanics; mark suggestions as y
   from ("when healed", "allies with Barrier", "Level up: targeted"). The code: network.uses_help(); a new game's keywords
   join it through their concept (vocab.tsv), never by name. A new kind of help gets its use written there, never a line to
   every card.
+- L15 Kaptain 2 Nov 2026: what a keyword does to cards with the same keyword is the keyword's rule, no line (Pyke's Lurk grants
+  Lurkers +1|+0: no line from one Lurker to another), unless the receiving card's own text uses it (Xerxa'Reth: "If I have 8+
+  Power"; Gwen: "when another ally gains Power from Hallowed"). A card's own needs are its text and its reaction keywords (Revenge, Slay),
+  never a keyword's inner working (Barrier pops when damaged, Challenger picks when attacking). "+1|+0" raises no Health.
+- L16 A line said only as "can aim at it" is no reason. An act on a card (strike, return, copy, damage) links only with the
+  card's own reason ("makes it attack or strike again: its own effect goes off").
+- L17 Putting my units into play by kind (revive, summon from the deck or discard) links to cards whose "when I'm summoned" goes
+  off (The Harrowing -> Captain Farron). A card that makes a card by description links to a card that counts such cards played
+  (Ferros Financier manifests a 6+ cost spell: Jayce, Lux). A count of mana spent on a kind ("6+ mana of spells", Lux) is fed
+  like a count of that kind played.
 - L13 Per game settings: network.EXPENSIVE (the cost from which a card is expensive); a deck holds what the game gives
   every deck of its character (Slay the Spire's starting relic) unless a card replaces it; read the game's own limits of
   a mechanic (Dexterity adds only to Block a card gives when played).

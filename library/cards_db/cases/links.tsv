@@ -2,12 +2,12 @@ id	game	from	to	expect	reason	source
 lk01	inscryption	Hammer	Wild Bull	none	can damage it	Kaptain 31 Oct 2026: my damage on my own card only when that card gains from it
 lk02	inscryption	Explode Bot	Adder	none	can damage it	Kaptain 31 Oct 2026: Adder gains nothing from being damaged
 lk03	inscryption	Hammer	Bomb Latcher	line	kills it for its death effect	Kaptain 31 Oct 2026: Bomb Latcher's death effect
-lk04	inscryption	Gem Detonator	Explode Bot	line	can damage it	Claude 31 Oct 2026, from the texts: Explode Bot explodes when it dies
+lk04	inscryption	Gem Detonator	Explode Bot	line	damages it	Claude 31 Oct 2026, from the texts: Explode Bot explodes when it dies
 lk05	stormbound	Pricey Freedom	Siegebreakers	none	can kill it	Claude 31 Oct 2026: the same error in Stormbound (Kaptain: 408 can kill it lines)
 lk06	duelyst	Vellumscry	Impervious Giago	none	can kill it	Claude 31 Oct 2026: the same error in Duelyst
 lk07	faeria	Feed the Forest	Shifting Octopus	none	can kill it	Claude 31 Oct 2026: the same error in Faeria
 lk08	monster_train	Crushing Demise	Lady of the House	none	can kill it	Claude 31 Oct 2026: the same error in Monster Train
-lk09	stormbound	Minion Launchers	Diehards	line	can damage it	Claude 31 Oct 2026, from the texts: Diehards respawn when they die
+lk09	stormbound	Minion Launchers	Diehards	line	damages it	Claude 31 Oct 2026, from the texts: Diehards respawn when they die
 lk10	inscryption	Hammer	Ouroboros	line	kills it for its death effect	Kaptain 31 Oct 2026: lines to cards that gain from dying stay
 lk11	inscryption	Gravedigger	Curious Egg	none	it asks for	Kaptain 31 Oct 2026: Curious Egg asks for the tribes, not for any unit
 lk12	inscryption	Dire Wolf Pup	Curious Egg	line	is a Canine it asks for	Kaptain 31 Oct 2026: a creature of each tribe in the deck
@@ -112,3 +112,13 @@ lk111	runeterra	Sumpworks Map	Vi	line	Elusive	Kaptain 1 Nov 2026 (L14): Elusive 
 lk112	runeterra	The Harrowing	Captain Farron	line	summon effect	Kaptain 2 Nov 2026: revived, its "when I am summoned" goes off again
 lk113	runeterra	Glimpse Beyond	Ceaseless Sentry	line	death effect	Kaptain 2 Nov 2026: killing it sets off its Last Breath
 lk114	runeterra	The Harrowing	Mighty Poro	none	brings it back	Claude 2 Nov 2026: a unit with no summon effect gains nothing from being revived (L14)
+lk115	runeterra	Pyke	Xer'sai Caller	none	+1|+0	Kaptain 2 Nov 2026 (L15): Lurk granting Lurkers +1|+0 is Lurk's rule, no line between Lurkers
+lk116	runeterra	Pyke	Vladimir	none	health	Claude 2 Nov 2026 (L15): Lurk gives +1|+0, no health, and only to Lurkers
+lk117	runeterra	Ferros Financier	Jayce	line	spell it counts	Kaptain 2 Nov 2026 (L17): it manifests a 6+ cost spell; Jayce counts two played
+lk118	runeterra	Ferros Financier	Lux	line	spell it counts	Kaptain 2 Nov 2026 (L17): a 6+ cost spell is 6 mana of spells for Lux
+lk119	runeterra	Final Spark	Lux	line	counts when played	Kaptain 2 Nov 2026 (L17): every spell played adds to Lux's 6+ mana of spells
+lk120	runeterra	Eclipse Dragon	Aurelion Sol	line	stats	Claude 2 Nov 2026 (L15): Fury grows Eclipse Dragon itself; Aurelion Sol counts allies' total Power
+lk121	runeterra	Poison Puffcap	Puffcap Peddler	none	played	Claude 2 Nov 2026 (L17): a planted trap goes off when drawn and is never played
+lk122	runeterra	Fading Husk	Sting Officer	line		Claude 2 Nov 2026 (L15): Fading Husk gives its Elusive to the ally played; the same keyword on both is no reason to drop it
+lk123	runeterra	Shadows of the Past	The Leviathan	none	can return it to hand	Kaptain 2 Nov 2026 (L16): no bare can-aim-at reason
+lk124	runeterra	Shadows of the Past	The Leviathan	line	summon effect goes off again	Kaptain 2 Nov 2026 (L16): recalled and played again, its summon effect draws Swain again
