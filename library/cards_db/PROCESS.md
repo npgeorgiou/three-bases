@@ -20,6 +20,18 @@ reads the words and misses the play.
 After the import, the lines are checked by LINKS_PLAN.md step 3 (Check 1, the whole game: one judgement per reason and rule;
 Check 2, every deck). Keep its "Token economy".
 
+## How to keep an import cheap (Kaptain, 2 Nov 2026: one check round used up his 5-hour limit; learned the hard way)
+- Scripts are free; reading costs. Every check script prints the size of its output: look before anyone reads it.
+- The main chat reads no long output itself. It hands pieces to fresh agents and reads only their short findings; every
+  tool call of a long chat sends the whole conversation again, so a long main chat is the most expensive thing there is.
+- An agent reads its whole piece (at most about 15,000 tokens) in ONE call, never in small parts; a fresh agent per piece.
+  Give it one file with everything it needs (built by a script: `audit_pieces.py`), so it makes no lookups.
+- Readers are Sonnet; checking their findings against the rows is Opus. Readers are often wrong (a reader called
+  "The Dreadway -> Decimate" wrong; it is a combo that works): never fix from reader findings directly.
+- Judge each rule once with a few varied examples, not many random samples. Judge lines by the rows (one meaning), not by
+  card texts (read differently each time).
+- One game at a time; never many agents on many games at once. Save every finding to the repo as soon as it arrives.
+
 ## Think in families, every time (Kaptain, 30 Oct 2026: the lesson every import repeated)
 Kaptain checks one deck and finds errors in every round, because each fix covered only the cards he named. Before you say
 "done" or "no other card has this", do all of these:

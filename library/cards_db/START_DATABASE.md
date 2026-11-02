@@ -193,8 +193,8 @@ LINKS_PLAN.md "Token economy" (at most 100 cards per list, one game at a time, r
   choices the wiki gives, with no numbers. Stormbound's Fort of Ebonrock has no ability (a plain structure).
 
 ## Open work, in Kaptain's order
-1. Finish the line check of Runeterra, Slay the Spire, Faeria and Duelyst (Kaptain, 2 Nov 2026). Done so far and the steps
-   left: `audit/README.md`. The check method changed on 2 Nov 2026 to save tokens: LINKS_PLAN.md step 3 and "Token economy".
+1. Finish the line check of Runeterra, Slay the Spire, Faeria and Duelyst (Kaptain, 2 Nov 2026): the handover with what is
+   done and every step left is `audit/README.md`. Runeterra is read, nothing is fixed yet. The check method changed on 2 Nov 2026 to save tokens: LINKS_PLAN.md step 3 and "Token economy".
 2. Then the same check for Stormbound, Monster Train, Inscryption, Into the Breach.
 
 ## When you finish
