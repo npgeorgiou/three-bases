@@ -7,6 +7,19 @@ The database is one place for all games: questions run across games (`ask.py all
 generic. A game's own words live only in the card texts, its keyword entries and its types; what cards DO is said with
 vocab.tsv values and concepts that any game can share.
 
+## What the rows are for: lines between cards (read before reading a single card; Kaptain, 2 Nov 2026)
+The rows are not the goal. From them, network.py later draws the LINES between cards ("A kills it for its death effect",
+"A makes it cheaper"), and Kaptain designs factions from those lines. So the rows must hold every part of a card that another
+card can feed or use: what sets it off, what it counts, what it needs, what it makes, who it aims at, and the game's own
+rules (how units fight, move, pay, reach the enemy player). A part left out draws no line; a part read wrong draws wrong lines
+in every deck.
+That needs a very good knowledge of the game, before and during the reading: how it is played, which combos its players use,
+what its keywords really do, which cards are deck choices and which are things every card does. Get it from the game's own
+sources and its players' guides (step 0, `library/games/<game>.md`), never from memory. A reader who does not know the game
+reads the words and misses the play.
+After the import, the lines are checked by LINKS_PLAN.md step 3 (Check 1, the whole game: one judgement per reason and rule;
+Check 2, every deck). Keep its "Token economy".
+
 ## Think in families, every time (Kaptain, 30 Oct 2026: the lesson every import repeated)
 Kaptain checks one deck and finds errors in every round, because each fix covered only the cards he named. Before you say
 "done" or "no other card has this", do all of these:
@@ -234,12 +247,10 @@ supplement_<game>.py). The shared files need care:
    Each gap is fixed for every card of every game (a rule, never one card), becomes a cases/network.tsv row, and a rule
    that holds for every game goes into START_DATABASE.md "Rules every line must keep". Never add a line that every unit or
    card of a kind gets from one helper (rule L14: "gives friendly units Armor" links only to cards that use Armor).
-   **Then the deck check (Kaptain, 30 Oct 2026; part of every import, and of every later network change):**
-   `deck_audit.py <game>` and read all of it, as "Audit every deck yourself" says: per deck the 3 most linked and the 3 least
-   linked cards with every line and the cards they link to, 10 other cards at random (should one of them be linked with a
-   least linked card?), and 10 other random lines, each checked yourself against both
-   card texts. Every mistake found is fixed generally: by its cause, in the shared rule, for every game, and before fixing,
-   ask what else the same cause breaks outside the decks (the decks show only a tiny part of each game). Dump before and
+   **Then the line checks (part of every import, and of every later network change):** LINKS_PLAN.md step 3, Check 1
+   (`links_audit.py <game>`) and Check 2 (`deck_audit.py <game>`, all decks), within its "Token economy". Every mistake found is
+   fixed generally: by its cause, in the shared rule, for every game, and before fixing, ask what else the same cause breaks
+   outside the decks (the decks show only a tiny part of each game). Dump before and
    after, read the diff, add a case. A game is not done before its deck check is written in deck_read_<game>.md.
 
 ### 3. Case tests (`cases/`)

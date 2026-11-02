@@ -25,7 +25,7 @@ questions first and wait. Never invent rules or mechanics; mark suggestions as y
    After a change to network.py only: `check_all.py --no-load` (about 3 minutes).
 5. **Read cards like a player**: what does it need, who gives it that, what does it make, what does that card do.
 6. **A check is done only when all its output was read.** Never sample less, skip a game or hand over because the output
-   is long: read it in parts and pace the work. Say plainly what was not checked; never let a partial check look done.
+   is long: split it into pieces (a reader reads its piece in one call: LINKS_PLAN.md "Token economy"). Say plainly what was not checked; never let a partial check look done.
 
 ## Rules every line must keep (network.py; each is a rule for every game)
 - L1 A line comes from what a card's TEXT does, never from what every card does or is. Every card can be played, drawn,

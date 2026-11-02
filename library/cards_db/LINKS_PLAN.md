@@ -39,10 +39,13 @@ wrong line always comes from one rule, and each rule shows as one reason ("kills
 judged once, not by many random lines. Cards are shown by their rows (one line each, SYNTAX.md), never by their text.
 
 **Check 1, the whole game:** `links_audit.py <game>`. Its only question: is this reason's rule right?
-- For every reason of the game: one line, with both cards' rows. Pick the pair whose two cards have the fewest rows (quick to
-  read). How many reasons (Kaptain, 2 Nov 2026): the biggest reasons that together hold 90% of the lines (2 Nov 2026 numbers: Runeterra 471 reasons, 104 hold 90%; Slay the Spire 94 / 32; Faeria 105 / 37; Duelyst 205 / 80).
-- For the 20 biggest reasons: 4 more lines, each from a different card than the lines before (a rule right for one card can
-  fire too widely for others).
+- A reason is its sentence AND the rule that made it (Kaptain, 2 Nov 2026: one sentence can come from several rules, each
+  reading other parts of the rows). links.py stores the rule as `link.site`, the network.py line that added the line
+  (network.Out notes it). On 2 Nov 2026 only 6 Runeterra sentences came from 2+ rules, but inside one rule the lines come from
+  cards with very different rows.
+- The reasons that together hold 90% of the game's lines (Kaptain, 2 Nov 2026), biggest first: 2 lines each, 5 for the 20
+  biggest, each from a different row shape (A's acts, B's events) and different cards, quickest to read first. Lines of the
+  reason read before count toward that number.
 - No missed-line part in the game check (Kaptain, 2 Nov 2026): cards with no partner beside random cards of their faction
   found little; decks are built for cards to work together, so missed lines are looked for in Check 2.
 - A line printed or read before (cases/links_checked.tsv) is not printed again.
@@ -62,9 +65,8 @@ line found for free. Readers then look only where realworld.py has no case.
 **How to work (fast, few tokens):**
 1. `links.py` (all games, about 1 minute), then save the lines as they are now: `dump_lines.py --table /tmp/tb0.tsv` and
    `dump_lines.py /tmp/d0.tsv`.
-2. Run both checks for one game. Check "about N tokens printed" first. Readers (Sonnet; pieces of about 300 lines with a
-   fresh reader per piece is Claude's suggestion, not decided) read ALL the output against the rows, write each error as a cause (the wrong thinking in one sentence),
-   and save after every piece. Do not fix yet.
+2. Run both checks for one game. Check "about N tokens printed" first. Readers (Sonnet, one piece of at most 15,000 tokens each, read in one call;
+   see "Token economy") read ALL the output against the rows and write each error as a cause (the wrong thinking in one sentence). Do not fix yet.
 3. Claude merges the causes of all pieces, checks each against the rows (call the line functions for that pair, see
    Lessons), and fixes each cause once, for every game (network.py, or a fixes/ script for a wrong reading). A change to
    records or refs.py needs `check_all.py <game>`; a change to network.py only needs `links.py`.
@@ -77,16 +79,17 @@ Everything the checks print is read; if something was not read, say so plainly.
 
 **Token economy (Kaptain, 2 Nov 2026; a chat used up his 5-hour limit on one round of reading; every chat that runs these
 checks, also for a new import, keeps this):**
-- Claude's suggestion, not decided: pieces of about 300 lines, a fresh reader per piece (a reader's cost grows with everything
-  it has read).
+- A reader reads its whole piece in ONE Read call, never in small parts (Kaptain, 2 Nov 2026). Every tool call sends the
+  reader's whole conversation again, so reading a piece in 9 parts paid for the start of it 9 times. A piece is at most about
+  15,000 tokens (60 KB; the scripts print the size). A reader makes 4 calls: read the rules (START_DATABASE.md lines 30-108),
+  read SYNTAX.md, read its piece, write its findings; no card lookups. A fresh reader per piece.
 - No list holds more than 100 cards. Where a part has more, the scripts take a share from each reason (start cards: their main
   reason; partners: the reason of the line; compared cards: their faction), so every reason stays seen. Both scripts print
   "about N tokens printed" to stderr: read that number before reading the output.
 - What made the cost: four games' output was 2.5 MB (about 620,000 tokens), read by 16 readers at once on the strongest
   model, each also reading the rules and looking up card texts. Most of it was part g (50 lines with both texts for each of
   20 reasons) and the champions' lines.
-- Readers: one game at a time, never all games at once. A reader appends its findings to its file after every piece it reads
-  (about 150 lines), with the line range, so a stop loses nothing. It reads only START_DATABASE.md L1-L22, not other docs.
+- Readers: one game at a time, never all games at once. Small pieces with one reader each keep a stop from losing much. It reads only START_DATABASE.md L1-L22, not other docs.
 - Readers judge lines by the cards' rows, not by the card texts (Kaptain, 2 Nov 2026: a text is read differently each time;
   rows say one thing). The card reading is done (Kaptain, 2 Nov 2026): the checks print only each card's rows on one line
   (`rows.compact`), no text, and nobody compares rows with texts here. Readers read SYNTAX.md (`rows.py --syntax`) and

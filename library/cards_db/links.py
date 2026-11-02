@@ -1,5 +1,6 @@
 """Every line network.py draws between two cards of one game that can share a deck, stored in links.sqlite (not in git; rebuilt
-from cards.sqlite). Tables: phrase(id, kind, text) with the two cards' names as {A} and {B}; link(game, a, b, phrase, weight).
+from cards.sqlite). Tables: phrase(id, kind, text) with the two cards' names as {A} and {B}; link(game, a, b, phrase, weight, site): site = the
+network.py line of the rule that made it (one sentence can come from several rules).
 Usage: links.py [game ...]   (no game: all; a game's old rows are replaced; then the cases of cases/links.tsv)"""
 import collections, csv, os, random, sqlite3, sys, time
 import network, deck_analysis
@@ -125,7 +126,8 @@ def build(c, L, game):
             key = (k, as_phrase(part, names[a], names[b]))
             if key not in phr:
                 phr[key] = L.execute('insert into phrase(kind, text) values (?, ?)', key).lastrowid
-            L.execute('insert into link values (?, ?, ?, ?, ?)', (game, a, b, phr[key], weight)); rows += 1; got = True
+            site = min(network.SITE.get((a, b, part)) or network.SITE.get((a, b, why)) or {0})
+            L.execute('insert into link values (?, ?, ?, ?, ?, ?)', (game, a, b, phr[key], weight, site)); rows += 1; got = True
         pairs += got
     used = L.execute('select count(distinct phrase) from link where game=?', (game,)).fetchone()[0]
     print(f'{game}: {len(ids)} cards, {pairs} pairs, {rows} rows, {used} phrases, {time.time() - t:.0f} s')
@@ -152,7 +154,7 @@ def main():
     games = sys.argv[1:] or [g for (g,) in c.execute('select distinct game from card order by game')]
     L = sqlite3.connect(os.path.join(HERE, 'links.sqlite'))
     L.executescript("""create table if not exists phrase(id integer primary key, kind text, text text);
-        create table if not exists link(game text, a integer, b integer, phrase integer, weight real);
+        create table if not exists link(game text, a integer, b integer, phrase integer, weight real, site integer);
         create index if not exists la on link(game, a); create index if not exists lb on link(game, b);
         create index if not exists lp on link(phrase);""")
     for g in games: build(c, L, g); L.commit()
