@@ -31,12 +31,12 @@ lk29	inscryption	Scissors	Raccoon	line	enemy units die	Claude 31 Oct 2026, from 
 lk30	inscryption	Skinning Knife	Pelts (Wolf)	line	creates	Claude 31 Oct 2026, from the texts: "you draw a Pelt card"
 lk31	inscryption	Frozen Opossum	Ant Queen	none		Claude 31 Oct 2026, from the texts: Frozen Away releases the creature inside, not an Ant
 lk32	inscryption	Field Mice	Hand Tentacle	line	fills your hand	Claude 31 Oct 2026, from the texts: Fecundity puts a copy in the hand; Hand Tentacle counts the hand
-lk33	inscryption	Orange Mage	Ruby Mox	line	+1|+0	Claude 31 Oct 2026, from the texts: Gem Animator gives Mox cards +1 Power; a Mox card is a creature card with the Terrain trait
+lk33	inscryption	Orange Mage	Ruby Mox	line	more power	Claude 31 Oct 2026, from the texts: Gem Animator gives Mox cards +1 Power; a Mox card is a creature card with the Terrain trait
 lk34	inscryption	Orlu's Vessel	Mage Knight	none		wiki Side Deck: gem Vessels are Act III, Mage Knight Act II
 lk35	runeterra	The Poro King	Poro Snax	line	creates	Claude 31 Oct 2026: a card made by its name, the same error in Runeterra
 lk36	inscryption	Mealworm	Bat	none		Claude 31 Oct 2026, from the texts: Morsel feeds only the card Mealworm is sacrificed for; Bat costs Bones, nothing is sacrificed
-lk37	inscryption	Mealworm	Raven	none	hits harder	Claude 31 Oct 2026: Morsel is said once ("gives it X|X"), not again as "more power"
-lk38	inscryption	Mealworm	Raven	line	X|X	Claude 31 Oct 2026, from the texts: Raven costs 2 Blood, Mealworm can be sacrificed for it
+lk37	inscryption	Mealworm	Raven	none	more power:	Claude 31 Oct 2026: Morsel is said once ("gives it X|X"), not again as "more power"
+lk38	inscryption	Mealworm	Raven	line	more power and health	Claude 31 Oct 2026, from the texts: Raven costs 2 Blood, Mealworm can be sacrificed for it
 lk39	inscryption	Buff Conduit	Null Conduit	none	+1|+0	wiki sigils: Attack Conduit gives "other creatures within a circuit" power; the Conduits are its ends
 lk40	inscryption	Buff Conduit	Energy Conduit	none	+1|+0	wiki sigils: the Conduit cards close the circuit, they are not in it
 lk41	inscryption	Buff Conduit	Kind Cell	none	+1|+0	Kaptain 1 Nov 2026 (L14): Kind Cell uses no power; the Conduit line stays
@@ -107,7 +107,7 @@ lk106	duelyst	Primus Fist	Silverguard Knight	none	+2|+0	Kaptain 1 Nov 2026 (L14)
 lk107	monster_train	Guardian Stone	Titan Sentry	none	Armor	Kaptain 1 Nov 2026 (L14): Revenge fires when damaged; Armor only stops it
 lk108	stormbound	Potion of Growth	Wild Saberpaws	none	strength	Kaptain 1 Nov 2026 (L14): its text is about speed when played
 lk109	faeria	Demon Wrangler	Wind Soldier	none	sacrifice	Kaptain 1 Nov 2026 (L14): Wind Soldier has no Last Words
-lk110	monster_train	Rage Serum	Hornbreaker Prince	line	Rage	Kaptain 1 Nov 2026 (L14): Hornbreaker Prince gives itself Multistrike; Rage hits harder every strike
+lk110	monster_train	Rage Serum	Hornbreaker Prince	none	Rage	Kaptain 1 Nov 2026 (L14): Hornbreaker Prince gives itself Multistrike; Rage hits harder every strike; Kaptain 2 Nov 2026: more damage is generic unless the card text itself reads the damage (L18)
 lk111	runeterra	Sumpworks Map	Vi	line	Elusive	Kaptain 1 Nov 2026 (L14): Elusive gets her big strike through; she levels from a 10+ damage strike
 lk112	runeterra	The Harrowing	Captain Farron	line	summon effect	Kaptain 2 Nov 2026: revived, its "when I am summoned" goes off again
 lk113	runeterra	Glimpse Beyond	Ceaseless Sentry	line	death effect	Kaptain 2 Nov 2026: killing it sets off its Last Breath
@@ -119,10 +119,10 @@ lk118	runeterra	Ferros Financier	Lux	line	spell it needs played	Kaptain 2 Nov 20
 lk119	runeterra	Final Spark	Lux	line	needs played for its count	Kaptain 2 Nov 2026 (L17): every spell played adds to Lux's 6+ mana of spells
 lk120	runeterra	Eclipse Dragon	Aurelion Sol	line	stats	Claude 2 Nov 2026 (L15): Fury grows Eclipse Dragon itself; Aurelion Sol counts allies' total Power
 lk121	runeterra	Poison Puffcap	Puffcap Peddler	none	played	Claude 2 Nov 2026 (L17): a planted trap goes off when drawn and is never played
-lk122	runeterra	Fading Husk	Sting Officer	line		Claude 2 Nov 2026 (L15): Fading Husk gives its Elusive to the ally played; the same keyword on both is no reason to drop it
+lk122	runeterra	Fading Husk	Sting Officer	none	more power	Claude 2 Nov 2026 (L15): Fading Husk gives its Elusive to the ally played; the same keyword on both is no reason to drop it; Kaptain 2 Nov 2026: more damage is generic unless the card text itself reads the damage (L18)
 lk123	runeterra	Shadows of the Past	The Leviathan	none	can return it to hand	Kaptain 2 Nov 2026 (L16): no bare can-aim-at reason
 lk124	runeterra	Shadows of the Past	The Leviathan	line	summon effect goes off again	Kaptain 2 Nov 2026 (L16): recalled and played again, its summon effect draws Swain again
-lk125	monster_train	Olde Magic	Hornbreaker Prince	line	Rage	Claude 2 Nov 2026: Olde Magic can be built with Rage (wiki, Concealed Caverns); Hornbreaker Prince gives itself Multistrike
+lk125	monster_train	Olde Magic	Hornbreaker Prince	none	Rage	Claude 2 Nov 2026: Olde Magic can be built with Rage (wiki, Concealed Caverns); Hornbreaker Prince gives itself Multistrike; Kaptain 2 Nov 2026: more damage is generic unless the card text itself reads the damage (L18)
 lk126	runeterra	Draven's Biggest Fan	Beguiling Cobra	none	playing sets off	Kaptain 2 Nov 2026 (L19): "another follower" is any unit, generic
 lk127	runeterra	Evil Imperfectionist	Black Market Merchant	none	cop	Kaptain 2 Nov 2026 (L19): copies into the deck are one more card of any kind, generic
 lk128	runeterra	Dawn and Dusk	Vekauran Vagabond	none	cop	Kaptain 2 Nov 2026 (L19): a copy of any ally is generic
@@ -130,7 +130,7 @@ lk129	runeterra	Spectral Matron	Chempunk Shredder	none	cop	Kaptain 2 Nov 2026 (L
 lk130	runeterra	Emperor's Divide	For The Fallen	none	into play	Claude 2 Nov 2026 (L20): Sand Soldiers are no Elites
 lk131	runeterra	Nasus	Abyssal Eye	none	hit the enemy player	Claude 2 Nov 2026 (L20): Nasus's Fearsome gets only Nasus to the Nexus
 lk132	sts1	Sling of Courage	Clothesline	none	bigger	Kaptain 2 Nov 2026: Strength helps one plain hit no more than any Attack
-lk133	sts1	Sling of Courage	Twin Strike	line	each hit	Kaptain 2 Nov 2026: a card that hits several times gains from Strength on each hit
+lk133	sts1	Sling of Courage	Twin Strike	none	each hit	Kaptain 2 Nov 2026: a card that hits several times gains from Strength on each hit; Kaptain 2 Nov 2026: more damage is generic unless the card text itself reads the damage (L18)
 lk134	sts1	Burst	Bloodletting	none	plays it again	Kaptain 2 Nov 2026: a repeat of any Skill is generic
 lk135	sts1	Secret Technique+	Bloodletting	none	back to your hand	Kaptain 2 Nov 2026: half the cards are Skills; picking one is generic
 lk136	sts1	Good Instincts	Auto-Shields	none	Block	Auto-Shields gains Block only when you have none

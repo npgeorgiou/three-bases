@@ -320,7 +320,7 @@ def help_kind(why):
     if y.startswith(('another attack', 'more health or protection', 'helps my units', 'helps it hit', 'more damage', 'fills your hand',
                      'empties your hand')): return 'waits'  # makes what it waits for happen more
     g = next((y.split(x, 1)[1] for x in ('can give it ', 'gives it ') if y.startswith(x)), None)
-    if g is not None and not (g[:1] in '+-0123456789' or g.startswith(('X|', 'X '))): return 'keyword'
+    if g is not None and not (g[:1] in '+-0123456789' or g.startswith(('X|', 'X ', 'more '))): return 'keyword'
     return 'stronger'
 
 
@@ -339,6 +339,7 @@ def lines_of(c, game):
     helps = adder_abilities(c, game)  # "your spells deal 1 extra damage" waits for nothing: it helps those cards (gives_lines)
     rule_name = {i: n.removeprefix('Game rule: ') for i, n in c.execute("select id, name from card where category='game_rule'")}
     harm_abs = harm_abilities(c)
+    land_takers = {a for (a,) in c.execute("select card from flat_do where act='steal' and on_kind='position'")}
     lacks = {(ab, int(p.split(' ')[2])) for ab, w in c.execute("select ability, of_with from flat_if where test='have' and op='not' and of_with like '%keyword is %'")
              for p in (w or '').split(';') if p.startswith('keyword is ') and p.split(' ')[2].isdigit()}
     gives_kw = {(a, k): (ok, os_) for a, k, ok, os_ in c.execute("""select card, keyword_ref, on_kind, coalesce(on_side,'mine') from flat_do
@@ -549,7 +550,11 @@ def lines_of(c, game):
                 # every unit can be sacrificed and every death gives a Bone: what the rules let every unit do pays for nothing
                 # (Kaptain 30 Oct 2026: lines are combos between card abilities); a card that pays by its own text keeps its line
                 if rule and (cost or tkind in RESOURCE_WORD): continue  # also Bones spent by an ability (Enlarge)
-                if cost: say += ' (pays its cost)'
+                if cost and h == 'terrain_changed':  # Ring of Dominion -> a card that needs lake lands: it pays the land cost, and
+                    # the land it turns can be the enemy's, which it then takes (Kaptain 2 Nov 2026)
+                    say = 'turns a land into the colour it needs: helps pay its land cost' + \
+                          (', and can take that land from the enemy' if m in land_takers else '')
+                elif cost: say += ' (pays its cost)'
                 if rule and not cost and h in own_makes[m]: continue  # its own ability does it already (Sejuani hits the Nexus herself)
                 if rule and not cost and (rule != 'units fight' or not fights_for(m, h)) and not any(
                         p.split(' ')[0] in ('card', 'name_has', 'type', 'keyword') for p in (tw or '').split(';')):
@@ -814,13 +819,17 @@ def aim_said(act, kw, ps):
 
 
 def stats_said(ps):
-    """'power=1.0;health=0.0' -> 'gives it +1|+0'; a stat change with other numbers (strength) -> 'gives it +N strength'"""
+    """a stat change in one of three families (Kaptain 2 Nov 2026: "+1|+1" and "+2|+2" are one reason): 'gives it more power',
+    'gives it more health', 'gives it more power and health' (Stormbound's one stat: 'more strength'), or 'lowers its stats'"""
     d = dict(p.split('=', 1) for p in (ps or '').split(';') if '=' in p)
-    num = lambda x: (x.removesuffix('.0') if x.lstrip('-').replace('.', '').isdigit() else 'X')
-    sign = lambda x: x if x.startswith('-') or x == 'X' else '+' + x
-    if 'power' in d or 'health' in d: return f"gives it {sign(num(d.get('power', '0')))}|{sign(num(d.get('health', '0')))}"
-    k = next(iter(d), None)
-    return f'gives it {sign(num(d[k]))} {k}' if k else 'changes its stats'
+    up = lambda k: k in d and not d[k].startswith('-') and d[k].replace('.', '').strip('0') != ''
+    if up('strength'): return 'gives it more strength'
+    if up('power') and up('health'): return 'gives it more power and health'
+    if up('power'): return 'gives it more power'
+    if up('health'): return 'gives it more health'
+    return 'lowers its stats' if any(v.startswith('-') for k, v in d.items() if k in ('power', 'health', 'strength')) else 'gives it more stats'
+
+
 
 
 def aimed_rows(c, game):
@@ -955,9 +964,9 @@ def circuit_ends(c, game):
 
 # Kaptain 1 Nov 2026: help aimed at any card of a kind ("give an ally +2|+0") links only to a card whose own text or keywords use
 # it toward its goal (Wuju Style -> Patched Porobot: no line; +power to an Elusive or Overwhelm unit: a line)
-POWER_USE = ('excess_damage', 'multi_attack', 'lifesteal')  # keywords whose own effect is counted in power: Overwhelm's damage past
-# the blocker, Double Attack's second hit, Lifesteal's heal (Kaptain 2 Nov 2026: Elusive, Fearsome, Challenger, Quick Attack alone
-# do not use more power; with "Nexus Strike:" or a Nexus need they do: hit_use)
+POWER_USE = ('lifesteal',)  # keywords whose own text reads the damage dealt (Lifesteal heals by it). More power for anything
+# else is generic (Kaptain 2 Nov 2026): Overwhelm, Elusive, Double Attack, "Strike:" or a kill hit harder only by the game's goal,
+# not by their text; a text that needs one big strike (Vi: 10+ damage) or gets something from the damage (Reaper) keeps it
 GUARD_USE = ('taunt',)  # keywords that make a unit take or seek fights: more health or protection keeps it there
 DEFENCE_KW = ('shield', 'damage_reduction', 'immunity', 'regeneration', 'block_armor', 'cheat_death', 'defence_gain', 'protection', 'heal')
 FIGHT_EVENTS = ('strikes', 'attacks', 'attack_done', 'fights', 'challenges', 'activated', 'strikes_nexus')
@@ -996,6 +1005,7 @@ def generic_use(c, game):
     for i, w in c.execute("select card, of_with from flat_if where origin='own' and of_with like '%keyword is %'"):
         d[i]['counts_kw'] |= {int(x) for x in re.findall(r'keyword is (\d+)', w or '')}
     for (i,) in c.execute("select card from flat_do where origin='own' and act in ('start_attack','strike') and on_pick='self'"): d[i]['flags'].add('fights')
+    # its own text makes it fight or strike (Deepwood Stalker): the damage is its power
     for (i,) in c.execute("select distinct card from flat_do where origin='own'"): d[i]['flags'].add('acts')
     for (i,) in c.execute("""select card from flat_if where origin in ('own','has_keyword') and of_kind='player' and coalesce(of_side,'mine')='mine'
             and of_with like '%position %'"""):
@@ -1003,14 +1013,10 @@ def generic_use(c, game):
     for (i,) in c.execute("""select card from flat_ref where role!='makes' and origin in ('own','has_keyword') and happening='strikes'
             and coalesce(obj_with,'') || coalesce(actor_with,'') like '%damage ge%'"""):
         d[i]['flags'].add('big_strike')  # it needs one strike of a size (Vi: 10+ damage)
-    # its own ability gains from hitting harder (Kaptain 2 Nov 2026): one big strike, a kill by itself ("Slay:", "when I kill"),
-    # or a hit on the enemy player it is sure to make (Elusive or Overwhelm, and "Nexus Strike:" or "damage the enemy Nexus")
-    for i, x in d.items():
-        if 'big_strike' in x['flags'] or (x['trees'] & {'evasion', 'excess_damage'} and x['needs'] & {'strikes_nexus', 'nexus_damaged'}):
-            x['flags'].add('hit_use')
-    for (i,) in c.execute("""select card from flat_when where event in ('killed') and coalesce(actor_pick,'') in ('self','actor_self')
-            and (origin='own' or origin='has_keyword')"""):
-        d[i]['flags'].add('hit_use')
+    lvl = level_abilities(c)  # a champion that levels up from Nexus damage and has Overwhelm or Elusive (Darius): more power
+    # levels it sooner, its own level text counts that damage (Kaptain's checks n33, n34)
+    for i, ab in c.execute("select card, ability from flat_ref where role!='makes' and happening='nexus_damaged' and origin in ('own','has_keyword')"):
+        if i in d and ab in lvl and d[i]['trees'] & {'evasion', 'excess_damage'}: d[i]['flags'].add('level_hit')
     CACHE[('use', game)] = d
     return d
 
@@ -1056,14 +1062,12 @@ def use_of(c, game, b, act, kw, ps, w=None):
         return f'gives it {kwn}: its strike gets through in full'  # Sumpworks Map -> Vi: "struck for 10+ damage in one strike"
     up = lambda *ks: act in ('stat_change', 'grow') and any(k in p and raises(p[k]) for k in ks)
     if up('power', 'strength') or (act == 'give_keyword' and tree in ('attack_gain', 'temporary_buff')):
-        if u['trees'] & set(POWER_USE) or u['flags'] & {'hit_use', 'fights'}: return 'more power: it hits harder'
+        if u['trees'] & set(POWER_USE) or u['flags'] & {'big_strike', 'fights', 'level_hit'} or b in gains_back(c, game): return 'more power: its text uses the damage it deals'
     if up('health', 'strength') or act in ('heal', 'negate_damage', 'damage_reduction') or (act == 'give_keyword' and tree in DEFENCE_KW) \
             or (act == 'cant' and pev in ('dies', 'targeted')):  # "can't drop below 1 health" (Survival Skills)
         if u['trees'] & set(GUARD_USE): return 'keeps it alive in the fights it takes on'
     if act == 'repeat' and b in doublers(c, game): return 'plays it again: its doubling doubles again'  # Burst -> Catalyst
     if act == 'increase_effect' and b in gains_back(c, game): return 'its damage is bigger, and so is what it gets back from it'  # Strength -> Reaper
-    if act == 'increase_effect' and b in multi_hit(c, game): return 'hits several times: each hit gets bigger'  # Strength ->
-    # Twin Strike, Sword Boomerang; one big hit (Bludgeon) gets no more from it than any other Attack
     # a repeat or a bigger effect for any card ("trigger the ability of a friendly unit", "double the buffs") is generic: any card
     # with an effect can be its target (Kaptain 2 Nov 2026); a named keyword or kind keeps it (Strength -> Attacks, Focus -> Orbs)
     if (act in ('remove_keyword', 'remove_keywords') or (act == 'cant' and pev == 'given_keyword')) and kw and kw in u['gives_kw']:
@@ -1072,14 +1076,6 @@ def use_of(c, game, b, act, kw, ps, w=None):
     if act == 'refresh' and cards[b]['cat'] not in KIND_CAT['unit'] and 'acts' in u['flags']: return 'lets you use it again'  # a General's
     # spell refreshed (Cryptographer -> Malice): its effect again
     return None
-
-
-def multi_hit(c, game):
-    """cards that deal damage or give Block several times in one go ("deal 3 damage 3 times")"""
-    if ('multi', game) not in CACHE:
-        CACHE[('multi', game)] = {b for b, ps in c.execute("select card, params from flat_do where origin='own' and act in ('damage','block_armor','shield')")
-                                  if 'times=' in (ps or '') and b in cards_of(c, game)}
-    return CACHE[('multi', game)]
 
 
 def gains_back(c, game):
@@ -1789,10 +1785,11 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
             union select id from card where category='leader' and id in ({marks})""",  # a leader fights by the rules: power makes it hit harder
             list(HIT_KW) + L + L + L).fetchall():
         u_ = generic_use(c, game)[t]
-        if not (u_['trees'] & set(POWER_USE) or u_['flags'] & {'hit_use', 'fights'}): continue  # L18: its keyword or ability must count power
+        if not (u_['trees'] & set(POWER_USE) or u_['flags'] & {'big_strike', 'fights', 'level_hit'} or t in gains_back(c, game)): continue  # L18: its own text must
+        # read the damage it deals (Kaptain 2 Nov 2026)
         for a in power - {t}:
             if not aim_fits(a, t, True) or not reaches(a, t) or (a, t) in stat_help: continue
-            if not any(k in ('boosts', 'levels') for k, *_ in out[(a, t)]): out[(a, t)].append(('boosts', 0.25 / count(('attack_gain',)), 'more power: it hits harder'))
+            if not any(k in ('boosts', 'levels') for k, *_ in out[(a, t)]): out[(a, t)].append(('boosts', 0.25 / count(('attack_gain',)), 'more power: its text uses the damage it deals'))
     q = lambda sql, *a: {x for (x,) in c.execute(sql.format(marks=marks), list(a) + L * sql.count('{marks}'))}
     movers_mine = q("""select card from flat_do where origin='own' and act in ('move','swap') and coalesce(on_side,'mine') in ('mine','any')
             and coalesce(on_kind,'unit') in ('unit','any') and coalesce(on_pick,'') not in ('self') and card in ({marks})""")
@@ -2242,7 +2239,7 @@ def network(c, game, ids, broad=True):
     for (a, b), ls in allg.items():
         if a in nodes and b in nodes: lines[(a, b)] += ls
     am = aimed(c, game, nodes, broad)
-    stat_help = {p for src in (am, lines) for p, ls in src.items() if any(re.search(r'gives? it [+-]?\d|\|', y) for _, _, y in ls)}  # A gives B stats already:
+    stat_help = {p for src in (am, lines) for p, ls in src.items() if any(re.search(r'gives? it (more (stats|power|health|strength)|[+-]?\d)|\|', y) for _, _, y in ls)}  # A gives B stats already:
     # "more power / more health" from the same gain says it twice
     for f in (am, played_lines(c, game, nodes, broad), need_lines(c, game, nodes, broad),
               boost_lines(c, game, nodes, stat_help, {p for p, ls in am.items() if any('cheaper' in y or 'cost' in y for _, _, y in ls)}), gives_lines(c, game, nodes), object_help_lines(c, game, nodes, broad),

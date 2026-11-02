@@ -25,8 +25,8 @@ L14-L20 in START_DATABASE.md), so every game is checked again.
   "survive damage", more power to a unit whose keywords use power: `HIT_KW`; a stat B's text reads; paying for expensive cards).
 - `played_lines()`, `need_lines()`: B counts or asks for cards of a kind ("6+ cost spells played", "6+ mana of spells", "if
   you have a landmark"): the cards of that kind (only a minority kind, L1b) and cards that make such a card (`made_cards()`).
-- `object_help_lines()` ("when you summon an ally, grant it +1|+1") and `gives_lines()` (more damage for units that strike):
-  filtered by `use_of()` like aimed help. `state_giver_lines()`, `actor_help_lines()`, `stat_reader_lines()`: a keyword or stat
+- `object_help_lines()` ("when you summon an ally, grant it +1|+1") and `gives_lines()` ("your spells deal 1 more damage"):
+  filtered by `use_of()` like aimed help; more damage alone is never a use (L18). `state_giver_lines()`, `actor_help_lines()`, `stat_reader_lines()`: a keyword or stat
   that B's own text names.
 - `one_link()` joins a pair's reasons into one line; a bare "can aim at it" reason is never shown (L16).
 
@@ -35,48 +35,65 @@ Order: Runeterra (Kaptain knows it best), then Slay the Spire, Faeria, Duelyst, 
 the Breach. Fix every error by its cause, for every game, never card by card (START_DATABASE.md rule 1).
 
 Each game gets two checks. Both scripts print a card's text only the first time, and skip lines read before
-(cases/links_checked.tsv) or already printed. The scripts still print the old amounts (30 cards, 15 random cards...): before the
-first check, change links_audit.py and deck_audit.py to print exactly the parts below.
+(cases/links_checked.tsv) or already printed. The scripts still print the old amounts (30 cards, 15 random cards...) and no
+top reasons: before the first check, change links_audit.py and deck_audit.py to print exactly the parts below, in that order.
 
-**Check 1, the whole game:** `links_audit.py <game> > /tmp/a.txt`
-- a) the 2% cards with the most partners, all their lines (many partners usually means a rule that fires for every card: L1,
-  L2): is a line wrong?
-- b) the 2% cards with the fewest partners (exclude those with 0 partners), all their lines, juxtaposed to your knowledge of
+**Check 1, the whole game:** `links_audit.py <game> > /tmp/a.txt` (Kaptain, 2 Nov 2026, word for word)
+- a) the top 10 reasons for links: Are we linking too much for generic reasons, against the rule "only links that create
+  interact with or strengthen the cards' abilities"?
+- b) the 2% cards with the most partners, all their lines (many partners usually means a rule that fires for every card: L1,
+  L2): Are we linking too much for generic reasons, against the rule?
+- c) the 2% cards with the fewest partners (exclude those with 0 partners), all their lines, juxtaposed to your knowledge of
   the game: is a line missed?
-- b) the 2% cards with no partners, all their lines, juxtaposed to your knowledge of the game: is a line missed?
-- c) the 2% cards with no partner, beside 50 random cards of the faction of the examined card: is a line missed?
-- d) 50 random lines: is something wrong/missing?
-- e) 50 random lines of each of the 20 most used reasons: is something wrong/missing?
-- f) the special cards of every deck (champions, heroes, Generals, legends), all their lines, juxtaposed to your knowledge of
-  the game: is something wrong/missing?
-- g) of course, as you go down these steps, exclude links that are examined by previous steps.
+- d) the 2% cards with the no partners, all their lines, juxtaposed to your knowledge of the game: is a line missed?
+- e) the 2% cards with no partner, beside 50 random cards of the faction of the examined cart: is a line missed?
+- f) 50 random lines: Is something wrong/missing?
+- g) 50 random lines of each of the 20 most used reasons: Is something wrong/missing?
+- h) the special cards of every deck (champions, heroes, Generals, legends), all their lines, juxtaposed to your knowledge of
+  the game: Is something wrong/missing?
+- i) Of course, as you go down these steps, exclude links that are examined by previous steps
 
 **Check 2, every deck:** `deck_audit.py <game> > /tmp/d.txt`, for each deck of the game:
-- a) the 10 cards with the most partners, all their lines (many partners usually means a rule that fires for every card: L1,
-  L2): is a line wrong?
-- b) the 10 cards with the fewest partners (exclude those with 0 partners), all their lines, juxtaposed to your knowledge of
+- a) the top 5 reasons for links: Are we linking too much for generic reasons, against the rule?
+- b) the 10 cards with the most partners, all their lines (many partners usually means a rule that fires for every card: L1,
+  L2): Are we linking too much for generic reasons, against the rule?
+- c) the 10 cards with the fewest partners (exclude those with 0 partners), all their lines, juxtaposed to your knowledge of
   the game: is a line missed?
-- b) the 10 cards with no partners at all, all their lines, juxtaposed to your knowledge of the game: is a line missed?
-- c) the 10 cards with no partner, beside 10 random cards of the examined deck: is a line missed?
-- d) 10 random lines: is something wrong/missing?
-- e) 5 random lines of each of the 5 most used reasons: is something wrong/missing?
-- f) the special cards of every deck (champions, heroes, Generals, legends), all their lines, juxtaposed to your knowledge of
-  the game: is something wrong/missing?
-- g) of course, as you go down these steps, exclude links that are examined by previous steps.
+- d) the 10 cards with the no partners at all, all their lines, juxtaposed to your knowledge of the game: is a line missed?
+- e) the 10 cards with no partner, beside 10 random cards of the examined deck: is a line missed?
+- f) 10 random lines: Is something wrong/missing?
+- g) 5 random lines of each of the 5 most used reasons: Is something wrong/missing?
+- h) the special cards of every deck (champions, heroes, Generals, legends), all their lines, juxtaposed to your knowledge of
+  the game: Is something wrong/missing?
+- i) Of course, as you go down these steps, exclude links that are examined by previous steps
 
 **How to work (fast, few tokens):**
-1. `links.py <game>`, then save the lines as they are now: `dump_lines.py --table /tmp/tb0.tsv` and `dump_lines.py /tmp/d0.tsv`.
+1. `links.py` (all games, about 1 minute), then save the lines as they are now: `dump_lines.py --table /tmp/tb0.tsv` and
+   `dump_lines.py /tmp/d0.tsv`.
 2. Run both checks. Read ALL their output, in parts of about 150 lines, as a player, against the card texts.
    Write each error down in one sentence (the wrong thinking). Do not fix yet.
-3. Fix each cause once, for every game (network.py, or a fixes/ script for a wrong reading). Add a test case for each
-   (cases/links.tsv or cases/network.tsv). A change to records or refs.py needs `check_all.py <game>` (25 minutes);
-   a change to network.py only needs `links.py <game>`.
-4. Save the lines again (`/tmp/tb1.tsv`, `/tmp/d1.tsv`) and read the differences: `dump_lines.py --diff /tmp/tb0.tsv
-   /tmp/tb1.tsv` and `--diff /tmp/d0.tsv /tmp/d1.tsv`. Every gone and new group, against the texts.
+3. Fix each cause once, for every game (network.py, or a fixes/ script for a wrong reading). A change to records or refs.py
+   needs `check_all.py <game>`; a change to network.py only needs `links.py`.
+4. Save the lines again and read the differences: `dump_lines.py --diff /tmp/tb0.tsv /tmp/tb1.tsv` (and the deck files).
+   Every gone and new group, against the texts.
 5. `links_audit.py <game> --record` (marks what was read). Run both checks again: they now show only new lines. Repeat
    until a round finds no error.
-6. `check_all.py --no-load` (3 minutes, all games' tests), commit, push, report.
+6. `check_all.py --no-load` (about 1.5 minutes, all games' tests), `realworld.py`, commit, push, report.
 Everything the checks print is read; if something was not read, say so plainly.
+
+**Lessons (a chat lost an hour on these; do not repeat them):**
+- Decide every rule from Kaptain's rules (START_DATABASE L1-L22) BEFORE changing code. Never fix, rebuild, look, fix again in
+  a loop: read all the groups first, write the causes, then make all fixes in one pass and rebuild once.
+- To see why one line exists, call the line functions for that one pair (a short script importing network: lines_of, aimed,
+  played_lines, need_lines, boost_lines, object_help_lines, gives_lines...); it runs in under a second. Never rebuild to test one pair.
+- Before running the full tests, look at the existing cases a fix touches (`grep` the card names in cases/*.tsv). A case
+  written by Kaptain ("Kaptain <date>" in its source) is his decision: never flip it without his newer rule; a case written by
+  Claude may be rewritten when a newer Kaptain rule says so, citing that rule.
+- Shares are measured among cards of the same kind (Attacks among playable cards, not among relics and monsters), and
+  makers are counted by their own text, not by the game's rules (every unit can kill in a fight).
+- A filter's parts that only say where (position, "of:" what a place is measured from) narrow no card.
+- Never wait on long blind runs: check one pair or one game first; the full run is the last step.
+
 **Tests:** add a test (cases/links.tsv or cases/network.tsv) for every fixed line you are ABSOLUTELY CERTAIN about from
 both card texts: one that must be gone, and one real line of the same cards that must stay. Nothing you are unsure of.
 **Report:** after every fix, tell Kaptain how many lines it removed (and added) in each game, from the table diff and the
@@ -91,7 +108,7 @@ found errors as notes for the next chat. If the tokens run out, stop reading new
 - Into the Breach: Repair Field counts any heal as a repair; Gana acts once at deploy, yet weapons get lines that move units
   next to it; Targeted Strike "summons" Air Strike (a map hazard; decks only).
 - Runeterra has Molten Shield twice (a plain and a "(created)" entry). Stormbound tests csb09-csb11, csb13 fail.
-  Runeterra n56 and Slay the Spire nst36 are must-not tests whose reason no deck says any more: rewrite them in that game's turn.
+  Must-not tests whose reason no deck says any more: START_DATABASE.md "State"; rewrite them in that game's turn.
 
 ## Step 4. Missing concepts (show Kaptain first; change nothing before his OK)
 The questions need things the concepts do not say. Propose each with 3 example cards per game that has it:

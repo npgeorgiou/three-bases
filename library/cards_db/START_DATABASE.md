@@ -37,7 +37,7 @@ questions first and wait. Never invent rules or mechanics; mark suggestions as y
 - L2 The game's rules are no combo, also not for a level-up. Kaptain: what every card can do counts for nothing
   (Living Shadow -> Zed, any unit -> Poppy, Jagged Butcher -> Gangplank, Ashe -> LeBlanc: no line). Only a card whose
   own text adds an attack (Rally, a free attack), a strike now, a second strike, or a keyword that does the need
-  (Overwhelm and Elusive reach the Nexus, deathtouch kills) makes the line.
+  (Overwhelm and Elusive reach the Nexus for a card that needs it, deathtouch kills) makes the line.
 - L3 A makes B, B acts on C: A gets NO line to C (Targonian Tellstones makes Blessing of Targon; only the Blessing helps
   Braum). A's own act of making does link to a card that waits for that making (Zed summons Ephemeral units: Moonlit
   Glenkeeper). Only a planted card that goes off by itself when drawn counts as the planter's act (Chimes for Bard).
@@ -53,41 +53,18 @@ questions first and wait. Never invent rules or mechanics; mark suggestions as y
 - L10 Line words say what a player says: triggers (a reaction), enables (a count or a thing that must be there), makes
   stronger / cheaper, helps it level up, puts it into play, can aim at it. A cost that drops for each X: what does X
   "makes it cheaper" (Gambling Chip -> Eviscerate), never "enables". One reason is said once, by its strongest kind.
-- L11 A plain hit on one target (Strike, Mystic Shot) feeds no "when an enemy dies"; poison, hits on all, kill effects and
-  damage boosts do.
+- L11 A plain hit on one target (Strike, Mystic Shot) feeds no "when an enemy dies"; poison, hits on all and kill effects do
+  (damage boosts: L18).
 - L12 Say who gets it: where the player is no card (Slay the Spire), a status on the player is "gives you Strength".
 - L14 Kaptain 1 Nov 2026: help aimed at any card of a kind ("give an ally +2|+0", "heal a unit", "copy an ally", "a unit
-  strikes", "when you summon an ally, grant it +1|+1") makes a line only to a card whose own text or keywords use that help
-  toward its goal. Wuju Style -> Patched Porobot: no line (+power does nothing for its text). Tiny Spear -> Zap Sprayfin: a
-  line (Elusive: more power hits the Nexus harder). A faction or card kind ("a green creature", "a Demacia ally", "a
-  follower") is no narrower than a deck. Kept: +power and health as L18 says; a strike, attack or ready to a card with
-  "Strike:"/"Attack:" or an activated ability; a copy as L19 says; a return to hand of a card with Play or Summon; a sacrifice
-  of a card with Last Words; a cleanse to a card that puts that status on my side; help aimed near my leader to a card that acts
-  near it (Roar -> Windblade Adept's Zeal); a keyword a card gives itself counts as its own; anything a card waits for, counts or levels
-  from ("when healed", "allies with Barrier", "Level up: targeted"). The code: network.uses_help(); a new game's keywords
-  join it through their concept (vocab.tsv), never by name. A new kind of help gets its use written there, never a line to
-  every card.
-- L18 "makes stronger": more power links only to a unit whose own keyword turns power into more effect (Challenger kills what
-  it picks, Overwhelm and Elusive or Fearsome put the damage into the Nexus, Quick or Double Attack, Lifesteal, Ranged), whose
-  own text makes it strike or needs one big strike or a kill (Vi, Slay), and to a leader. More health links to Taunt or Challenger
-  units. A unit with none of these gets no line from "+X|+X to an ally" (Professor Von Mech). Kaptain's checks n33, n34 (Darius),
-  n36 (Trifarian Gloryseeker), nfa19, nfa02 hold this.
-- L19 Kaptain 2 Nov 2026, copies: a copy put into hand or deck is one more card of any kind, generic, no line. A copy put into
-  play links only to cards whose summon or death effect it sets off (Dawn and Dusk -> Vekauran Vagabond); a summoned copy is
-  not played, so a Play effect does not count. "When you play a follower" (Beguiling Cobra) is any unit, generic (L1b).
-- L20 A fight keyword (Elusive, Fearsome, Overwhelm, Quick Attack...) works for the card that has it: Nasus's Fearsome gets
-  Nasus to the Nexus, not Abyssal Eye. A card made by name must be the kind the need asks ("when you summon an Elite": Emperor's
-  Divide's Sand Soldiers are none).
-- L21 Kaptain 2 Nov 2026, what most cards do is no deck choice: a filter that half the cards of the kind pass ("costs 2 or more",
-  "a creature with higher Attack than Life") or a type that a fifth of its own kind has (Slay the Spire's Skill, Attack: share
-  among cards, not relics) is generic for a pick, tutor, repeat or boost (Secret Technique, Burst: no line); a count of a minority
-  type stays (Kunai, Rage: "every Attack played", Kaptain 30 Oct 2026). The spell, landmark, equipment exception for repeats only
-  holds where spells are a minority. Damage or kills that a quarter of the game's cards make by their own text (Slay the Spire,
-  Monster Train) feed no "whenever damage is dealt" trigger (Envenom, The Boot), unless it levels up or the doer is the enemy (Vek
-  Hormones). Strength, Dexterity, Magic Power, Vulnerable, Wrath: a line only to a card that hits or gives it several times in one
-  go (Twin Strike), gets something back from its damage (Reaper), or doubles what is there (Burst -> Catalyst). "Draw until you
-  have 6" (Expertise) wants an empty hand; "if you have no Block" (Auto-Shields) wants none. A repeat of "Summon effects"
-  (Transcendimp) goes only to cards with Summon. "Summoned near your General" (Call to Arms) narrows no card.
+  strikes", "when you summon an ally, grant it +1|+1") makes a line only to a card whose own text uses that help. Wuju Style ->
+  Patched Porobot: no line. A faction or card kind ("a green creature", "a Demacia ally", "a follower") is no narrower than a
+  deck. Kept: power and health as L18 says; a strike, attack or ready to a card with "Strike:"/"Attack:" or an activated
+  ability; a copy as L19 says; a return to hand of a card with Play or Summon; a sacrifice of a card with Last Words; a cleanse
+  to a card that puts that status on my side; help aimed near my leader to a card that acts near it (Roar -> Windblade Adept's
+  Zeal); a keyword a card gives itself counts as its own; anything a card waits for, counts or levels from ("when healed",
+  "allies with Barrier", "Level up: targeted"). The code: network.uses_help() / use_of(); a new game's keywords join it through
+  their concept (vocab.tsv), never by name. A new kind of help gets its use written there, never a line to every card.
 - L15 Kaptain 2 Nov 2026: what a keyword does to cards with the same keyword is the keyword's rule, no line (Pyke's Lurk grants
   Lurkers +1|+0: no line from one Lurker to another), unless the receiving card's own text uses it (Xerxa'Reth: "If I have 8+
   Power"; Gwen: "when another ally gains Power from Hallowed"). A card's own needs are its text and its reaction keywords (Revenge, Slay),
@@ -98,6 +75,34 @@ questions first and wait. Never invent rules or mechanics; mark suggestions as y
   off (The Harrowing -> Captain Farron). A card that makes a card by description links to a card that counts such cards played
   (Ferros Financier manifests a 6+ cost spell: Jayce, Lux). A count of mana spent on a kind ("6+ mana of spells", Lux) is fed
   like a count of that kind played.
+- L18 Kaptain 2 Nov 2026, more damage is generic: more power, Strength, Dexterity, Magic Power, Vulnerable, Wrath, Mantra or
+  A.C.I.D. make NO line because a card hits, has Overwhelm, Elusive, Fearsome, Quick or Double Attack, Multistrike, hits several
+  times (Twin Strike), or has "Strike:", "Nexus Strike:" or "Slay:". That is the game's goal (more damage is always good), not the
+  card's text. Never bring back "after that it can hit for more power". A line stays only where the card's own text reads the
+  damage or the stat: it deals damage by its power in a fight its text starts (Deepwood Stalker), needs one big strike (Vi: 10+
+  damage), gets something back from the damage (Reaper, Lifesteal), doubles what is there (Burst -> Catalyst), reads its power
+  ("double my Power", "grant it my stats"), or is a champion that levels up from Nexus damage and has Overwhelm or Elusive
+  (Darius; Kaptain's checks n33, n34). More health links only to Taunt units and to cards that wait to survive damage. Stat
+  help is said in three families, never with the numbers: "gives it more power", "gives it more health", "gives it more power
+  and health" (Stormbound: "more strength"; less: "lowers its stats").
+- L19 Kaptain 2 Nov 2026, copies: a copy put into hand or deck is one more card of any kind, generic, no line. A copy put into
+  play links only to cards whose summon or death effect it sets off (Dawn and Dusk -> Vekauran Vagabond); a summoned copy is
+  not played, so a Play effect does not count. "When you play a follower" (Beguiling Cobra) is any unit, generic (L1b).
+- L20 A fight keyword (Elusive, Fearsome, Overwhelm, Quick Attack...) works for the card that has it: Nasus's Fearsome gets
+  Nasus to the Nexus, not Abyssal Eye. A card made by name must be the kind the need asks ("when you summon an Elite": Emperor's
+  Divide's Sand Soldiers are none). Giving Overwhelm or Elusive to a card whose text needs to hit the Nexus is a line ("helps
+  it hit the enemy player").
+- L21 Kaptain 2 Nov 2026, what most cards do is no deck choice: a filter that half the cards of the kind pass ("costs 2 or more",
+  "a creature with higher Attack than Life", "summoned near your General") or a type that a fifth of its own kind has (Slay the
+  Spire's Skill, Attack) is generic for a pick, tutor, repeat or boost (Secret Technique, Burst: no line); a count of a minority
+  type stays (Kunai, Rage: "every Attack played", Kaptain 30 Oct 2026). A repeat or bigger effect for spells, landmarks or
+  equipment stays only where they are a minority (Doctor Mia; not Monster Train's spells). Damage or kills that a quarter of the
+  game's cards make by their own text feed no "whenever damage is dealt" trigger (Envenom, The Boot), unless it levels up or the
+  doer is the enemy (Vek Hormones). Read wants right: "draw until you have 6" (Expertise) wants an empty hand; "if you have no
+  Block" (Auto-Shields) wants none; "repeat Summon effects" (Transcendimp) is for cards with Summon.
+- L22 Kaptain 2 Nov 2026, resources: what pays a card's cost is a line. A land changed to the colour a card needs pays its land
+  cost (Faeria's Ring of Dominion: "turns a land into the colour it needs: helps pay its land cost, and can take that land from
+  the enemy").
 - L13 Per game settings: network.EXPENSIVE (the cost from which a card is expensive); a deck holds what the game gives
   every deck of its character (Slay the Spire's starting relic) unless a card replaces it; read the game's own limits of
   a mechanic (Dexterity adds only to Block a card gives when played).
@@ -171,12 +176,16 @@ Read: any FAILED line, and the audit lists. After a change to network.py only: `
 
 **The game itself** (not the database) has its own: tools/build.py, tools/simtest.js, tools/smoke.js (CLAUDE.md).
 
-## State (2 Nov 2026, v66)
+## State (2 Nov 2026, v67)
 - All 8 games imported. Kaptain approved Runeterra and Into the Breach; Slay the Spire done; Inscryption reviewed;
   Stormbound, Monster Train, Faeria, Duelyst wait for his check of their deck networks.
-- Cases: all pass except Stormbound csb09-csb13 (poisoned-unit combos, an old cause not yet traced). Runeterra n56 and Slay
-  the Spire nst36 are must-not cases whose reason no deck says any more: rewrite them.
+- Cases: all pass except Stormbound csb09-csb13 (poisoned-unit combos, an old cause not yet traced). Must-not cases whose reason no
+  deck says any more (rewrite them): Runeterra n56, Duelyst ndu23 ndu47, Inscryption n299, Into the Breach ntb15-17, Slay
+  the Spire nst30 nst36.
 - Real-world cases: 238 of 261 hold.
+- Lines after rules L18-L22 (2 Nov 2026): Runeterra 269,314; Faeria 18,753; Duelyst 15,415; Slay the Spire 10,552; Into
+  the Breach 6,570; Monster Train 3,439; Stormbound 3,066; Inscryption 1,165. The 20 biggest reasons of every game were read
+  once against L1-L22; the full checks of LINKS_PLAN step 3 are not done yet.
 - Known open: a card placed by its text near the leader (Conscript) draws no line to a card acting near the leader
   (Fealty); Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain). Monster
   Train's Olde Magic is built by the player at an event: its text and record (read/monster_train/event_cards.jsonl) list the

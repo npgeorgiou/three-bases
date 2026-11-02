@@ -131,7 +131,7 @@ ndu19	duelyst	Argeon Intensify Riftwalker	Windblade Adept	Afterblaze	line		Claud
 ndu20	duelyst	Argeon Mechaz0r	Helm of MECHAZ0R	MECHAZ0R!	line		guide: the pieces build MECHAZ0R! (family 17)
 ndu21	duelyst	Vaath Dying Wish	Kujata	Juggernaut	line		Claude, deck read: Kujata's damage on summon sets off Juggernaut
 ndu22	duelyst	Kaleos Trial of Songhai	Juxtaposition	Bonereaper	line		Claude, deck read: switching an enemy next to Bonereaper puts it in reach of its end-of-turn damage
-ndu23	duelyst	Vaath Dying Wish	Juggernaut	Lavaslasher	none	hits harder	Claude, deck read: Grow makes only Juggernaut stronger (family 19)
+ndu23	duelyst	Vaath Dying Wish	Juggernaut	Lavaslasher	none	more power:	Claude, deck read: Grow makes only Juggernaut stronger (family 19)
 ndu24	duelyst	Cassyva Replace Abomination	Aethermaster	Cassyva Soulreaper	none		Claude, deck read: an extra replace helps the player, not the General card (family 20)
 ndu25	duelyst	Cassyva Replace Abomination	Healing Mystic	Abhorrent Unbirth	none		Claude, deck read: Unbirth destroys my minions itself; it waits for no deaths (family 21) (reason rewritten 30 Oct 2026: the old wording was said by no line, so the case could not fail)
 ndu26	duelyst	Lilithe Darkfire	Phantasm	Wraithling	none		Claude, deck read: Wraithlings are summoned onto the board, never in the action bar (family 22)
@@ -295,5 +295,5 @@ n294	into_the_breach	Custom: Laser Combat Judo	Vice Fist	Burst Beam	line	in a li
 n295	runeterra	Jayce Sentinels	The Forge Of Tomorrow	Shock Blast	line	pays for it	Claude 31 Oct 2026, from the texts: "refill your spell mana" pays the next 6-cost spell
 n296	runeterra	Caitlyn Teemo	Poison Dart	Poison Puffcap	line	plants	Claude 31 Oct 2026: a card planted in the enemy deck stays my act
 n297	stormbound	Meow	Dubious Hags	Token Ravens	none		Dubious Hags text: it spawns an ENEMY Raven
-n298	inscryption	Kaycee's Mod Mantis God (gamersdecide, core)	Mealworm	Mantis God	line	X|X	Claude 31 Oct 2026: Morsel feeds the card it is sacrificed for (Mantis God costs Blood), said once as X|X (table case: Mealworm -> Raven)
+n298	inscryption	Kaycee's Mod Mantis God (gamersdecide, core)	Mealworm	Mantis God	line	more power and health	Claude 31 Oct 2026: Morsel feeds the card it is sacrificed for (Mantis God costs Blood), said once as X|X (table case: Mealworm -> Raven)
 n299	inscryption	Act III Mycobot (gamersdecide, core)	Buff Conduit	Null Conduit	none	+1|+0	wiki sigils: the Conduits close the circuit, they are not in it
