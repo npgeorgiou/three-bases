@@ -60,14 +60,24 @@ questions first and wait. Never invent rules or mechanics; mark suggestions as y
   strikes", "when you summon an ally, grant it +1|+1") makes a line only to a card whose own text or keywords use that help
   toward its goal. Wuju Style -> Patched Porobot: no line (+power does nothing for its text). Tiny Spear -> Zap Sprayfin: a
   line (Elusive: more power hits the Nexus harder). A faction or card kind ("a green creature", "a Demacia ally", "a
-  follower") is no narrower than a deck. Kept: +power to Elusive, Overwhelm, Quick/Double Attack, Challenger, Lifesteal or
-  Ranged units and to a leader; health or protection to Taunt or Challenger units; a strike, attack or ready to a card with
-  "Strike:"/"Attack:" or an activated ability; a copy or return to hand of a card with Play, Summon or Last Breath; a sacrifice
+  follower") is no narrower than a deck. Kept: +power and health as L18 says; a strike, attack or ready to a card with
+  "Strike:"/"Attack:" or an activated ability; a copy as L19 says; a return to hand of a card with Play or Summon; a sacrifice
   of a card with Last Words; a cleanse to a card that puts that status on my side; help aimed near my leader to a card that acts
   near it (Roar -> Windblade Adept's Zeal); a keyword a card gives itself counts as its own; anything a card waits for, counts or levels
   from ("when healed", "allies with Barrier", "Level up: targeted"). The code: network.uses_help(); a new game's keywords
   join it through their concept (vocab.tsv), never by name. A new kind of help gets its use written there, never a line to
   every card.
+- L18 "makes stronger": more power links only to a unit whose own keyword turns power into more effect (Challenger kills what
+  it picks, Overwhelm and Elusive or Fearsome put the damage into the Nexus, Quick or Double Attack, Lifesteal, Ranged), whose
+  own text makes it strike or needs one big strike or a kill (Vi, Slay), and to a leader. More health links to Taunt or Challenger
+  units. A unit with none of these gets no line from "+X|+X to an ally" (Professor Von Mech). Kaptain's checks n33, n34 (Darius),
+  n36 (Trifarian Gloryseeker), nfa19, nfa02 hold this.
+- L19 Kaptain 2 Nov 2026, copies: a copy put into hand or deck is one more card of any kind, generic, no line. A copy put into
+  play links only to cards whose summon or death effect it sets off (Dawn and Dusk -> Vekauran Vagabond); a summoned copy is
+  not played, so a Play effect does not count. "When you play a follower" (Beguiling Cobra) is any unit, generic (L1b).
+- L20 A fight keyword (Elusive, Fearsome, Overwhelm, Quick Attack...) works for the card that has it: Nasus's Fearsome gets
+  Nasus to the Nexus, not Abyssal Eye. A card made by name must be the kind the need asks ("when you summon an Elite": Emperor's
+  Divide's Sand Soldiers are none).
 - L15 Kaptain 2 Nov 2026: what a keyword does to cards with the same keyword is the keyword's rule, no line (Pyke's Lurk grants
   Lurkers +1|+0: no line from one Lurker to another), unless the receiving card's own text uses it (Xerxa'Reth: "If I have 8+
   Power"; Gwen: "when another ally gains Power from Hallowed"). A card's own needs are its text and its reaction keywords (Revenge, Slay),

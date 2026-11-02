@@ -7,17 +7,18 @@
   6 pattern_check.py (word check; open flags are listed, not a failure); audit_links.py (links that cannot exist, listed)
   7 status.py, examples.py (STATUS.md, QUERIES.md)
 Usage: run.py <game>"""
-import glob, os, subprocess, sys
+import glob, os, subprocess, sys, time
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
 def step(name, cmd, ok=lambda out: True):
+    t = time.time()
     r = subprocess.run([sys.executable] + cmd, cwd=HERE, capture_output=True, text=True)
     out = (r.stdout + r.stderr).strip()
     last = out.splitlines()[-1] if out else ''
     if r.returncode or not ok(out):
         print(f'FAILED {name}:\n{out[-3000:]}'); sys.exit(1)
-    print(f'ok  {name}: {last}')
+    print(f'ok  {name} ({time.time() - t:.0f} s): {last}')
     return out
 
 

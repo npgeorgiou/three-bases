@@ -2,3 +2,4 @@ __pycache__/
 library/cards_db/read/*/*.part*.jsonl
 library/cards_db/second/*/*.part*.jsonl
 library/cards_db/links.sqlite
+library/cards_db/cases/REPORT_*.md

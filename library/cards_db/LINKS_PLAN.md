@@ -12,7 +12,7 @@ feed which. `links.py` stores every line network.py draws between two cards that
 ## Done
 Step 1 (which cards can share a deck: deck_analysis.can_share) and step 2 (links.py, links.sqlite). A first step 3 pass for
 Inscryption, Into the Breach, Stormbound and Monster Train. Since then the line rules changed a lot (Kaptain 1-2 Nov 2026: rules
-L14-L17 in START_DATABASE.md), so every game is checked again.
+L14-L20 in START_DATABASE.md), so every game is checked again.
 
 ## How lines are made (read before changing anything; network.py)
 - `lines_of()`: what A's text makes happen that B's text waits for, counts or levels from ("kills it for its death effect",

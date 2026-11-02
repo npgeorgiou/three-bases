@@ -234,7 +234,8 @@ def build(c):
             for ev, *kwn in causes.get(('keyword', kwname.get(kw, '')), []): ins(card, o, v, ab, 'makes', ev, k, s, p, kw, w=w)  # on what it is given to ("give the Demon Wing Flying")
         if act == 'cant' and pev == 'blocks' and s == 'enemy' and (p == 'self' or k in ('unit', None)):  # can't be blocked: hits the enemy player
             for ev in ('nexus_damaged', 'damaged'): ins(card, o, v, ab, 'makes', ev, 'player', 'enemy', None)
-            ins(card, o, v, ab, 'makes', 'strikes_nexus', 'unit', 'mine', p)  # the unit itself strikes the Nexus
+            ins(card, o, v, ab, 'makes', 'strikes_nexus', 'unit', 'mine', 'self')  # the unit itself strikes the Nexus (p is the enemies
+            # that cannot block, not my units: Nasus's Fearsome gets only Nasus there)
         if act == 'gain_attack_token':  # the attack token (Rally): my units attack again, their Attack effects happen again
             ins(card, o, v, ab, 'makes', 'attacks', 'unit', 'mine', None)
         if act in ('first_strike', 'double_strike', 'strike_with') and s in ('mine', None) and p in ('self', 'all', 'chosen', None):  # my unit strikes: an enemy takes damage

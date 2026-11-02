@@ -4,7 +4,7 @@ reloads all eight games (load.py always loads every game), so eight runs reload 
                                it), then cases and link audit for every other game (no reload)
   check_all.py --no-load       a change to network.py only (lines, wording): it reads cards.sqlite, nothing to reload; cases
                                and link audit for every game"""
-import os, subprocess, sys
+import concurrent.futures, os, subprocess, sys, time
 HERE = os.path.dirname(os.path.abspath(__file__))
 GAMES = ['runeterra', 'stormbound', 'monster_train', 'duelyst', 'faeria', 'inscryption', 'into_the_breach', 'sts1']
 
@@ -20,10 +20,13 @@ def main():
     if arg != '--no-load':
         print('\n'.join(l for l in out(['run.py', arg]) if not l.startswith(('ok  normalize', 'ok  check'))))
         rest = [g for g in GAMES if g != arg]
-    for g in rest:
-        cases = [l for l in out(['cases/run.py', g]) if l]
+    def one(g):  # each game in its own processes, all games at once (they only read cards.sqlite)
+        t = time.time()
+        cases = [l for l in out(['cases/run.py', g, '--report', f'cases/REPORT_{g}.md']) if l]
         audit = next((l for l in out(['audit_links.py', g]) if 'link findings' in l), '')
-        print(f'{g}: {" | ".join(cases[-2:])} | {audit.strip()}')
+        return f'{g}: {" | ".join(cases[-2:])} | {audit.strip()} ({time.time() - t:.0f} s)'
+    with concurrent.futures.ThreadPoolExecutor(max_workers=len(rest)) as ex:
+        for line in ex.map(one, rest): print(line)
 
 
 main()

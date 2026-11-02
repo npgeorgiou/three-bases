@@ -105,7 +105,8 @@ def main():
         out.insert(3, f"**Cases whose reason no line says any more (rewrite them): {', '.join(path_stale)}**\n")
         print('must-not cases whose reason no deck of the game says (reworded, or every such line is gone): ' + ', '.join(path_stale))
     out.insert(3, f'**{passed} of {total} cases pass.**\n')
-    open(os.path.join(HERE, 'REPORT.md'), 'w').write('\n'.join(out) + '\n'); print(f'{passed} of {total} cases pass')
+    rep = sys.argv[sys.argv.index('--report') + 1] if '--report' in sys.argv else 'REPORT.md'  # parallel runs write their own file
+    open(os.path.join(HERE, os.path.basename(rep)), 'w').write('\n'.join(out) + '\n'); print(f'{passed} of {total} cases pass')
 
 if __name__ == '__main__':
     main()

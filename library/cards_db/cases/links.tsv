@@ -89,7 +89,7 @@ lk88	monster_train	Preserve	Bone Dog's Favor	line	kept in hand	Claude 31 Oct 202
 lk89	monster_train	Deadweight	Dante the Deceptive	line	Blight	Claude 31 Oct 2026: Dante wants Blights; Deadweight is one
 lk90	sts1	Blue Candle	Injury	line	played	Claude 31 Oct 2026: Blue Candle lets curses be played; that is the help an unplayable card can get
 lk91	monster_train	Channelsong	Guardian Stone	none	draws it	Kaptain 1 Nov 2026: "draw a unit" can draw any unit; every card can be drawn
-lk92	monster_train	Titanstooth	Guardian Stone	none	counts when played	Kaptain 1 Nov 2026: Incant fires on any spell; being a spell is no interaction
+lk92	monster_train	Titanstooth	Guardian Stone	none	playing sets off	Kaptain 1 Nov 2026: Incant fires on any spell; being a spell is no interaction
 lk93	monster_train	Gifts for a Guard	Ice and Pyre	none	draws it	Claude 1 Nov 2026: "draw 3 spells" can draw any spell (same error)
 lk94	monster_train	Total Recall	Ancient Synergy	none	asks for	Claude 1 Nov 2026: Ancient Synergy counts every spell in the deck; being a spell is no interaction
 lk95	monster_train	Queen's Impling	Shardtail Queen	line	Imp	Claude 1 Nov 2026: Shardtail Queen asks for Imps; a named type stays
@@ -114,12 +114,18 @@ lk113	runeterra	Glimpse Beyond	Ceaseless Sentry	line	death effect	Kaptain 2 Nov 
 lk114	runeterra	The Harrowing	Mighty Poro	none	brings it back	Claude 2 Nov 2026: a unit with no summon effect gains nothing from being revived (L14)
 lk115	runeterra	Pyke	Xer'sai Caller	none	+1|+0	Kaptain 2 Nov 2026 (L15): Lurk granting Lurkers +1|+0 is Lurk's rule, no line between Lurkers
 lk116	runeterra	Pyke	Vladimir	none	health	Claude 2 Nov 2026 (L15): Lurk gives +1|+0, no health, and only to Lurkers
-lk117	runeterra	Ferros Financier	Jayce	line	spell it counts	Kaptain 2 Nov 2026 (L17): it manifests a 6+ cost spell; Jayce counts two played
-lk118	runeterra	Ferros Financier	Lux	line	spell it counts	Kaptain 2 Nov 2026 (L17): a 6+ cost spell is 6 mana of spells for Lux
-lk119	runeterra	Final Spark	Lux	line	counts when played	Kaptain 2 Nov 2026 (L17): every spell played adds to Lux's 6+ mana of spells
+lk117	runeterra	Ferros Financier	Jayce	line	spell it needs played	Kaptain 2 Nov 2026 (L17): it manifests a 6+ cost spell; Jayce counts two played
+lk118	runeterra	Ferros Financier	Lux	line	spell it needs played	Kaptain 2 Nov 2026 (L17): a 6+ cost spell is 6 mana of spells for Lux
+lk119	runeterra	Final Spark	Lux	line	needs played for its count	Kaptain 2 Nov 2026 (L17): every spell played adds to Lux's 6+ mana of spells
 lk120	runeterra	Eclipse Dragon	Aurelion Sol	line	stats	Claude 2 Nov 2026 (L15): Fury grows Eclipse Dragon itself; Aurelion Sol counts allies' total Power
 lk121	runeterra	Poison Puffcap	Puffcap Peddler	none	played	Claude 2 Nov 2026 (L17): a planted trap goes off when drawn and is never played
 lk122	runeterra	Fading Husk	Sting Officer	line		Claude 2 Nov 2026 (L15): Fading Husk gives its Elusive to the ally played; the same keyword on both is no reason to drop it
 lk123	runeterra	Shadows of the Past	The Leviathan	none	can return it to hand	Kaptain 2 Nov 2026 (L16): no bare can-aim-at reason
 lk124	runeterra	Shadows of the Past	The Leviathan	line	summon effect goes off again	Kaptain 2 Nov 2026 (L16): recalled and played again, its summon effect draws Swain again
 lk125	monster_train	Olde Magic	Hornbreaker Prince	line	Rage	Claude 2 Nov 2026: Olde Magic can be built with Rage (wiki, Concealed Caverns); Hornbreaker Prince gives itself Multistrike
+lk126	runeterra	Draven's Biggest Fan	Beguiling Cobra	none	playing sets off	Kaptain 2 Nov 2026 (L19): "another follower" is any unit, generic
+lk127	runeterra	Evil Imperfectionist	Black Market Merchant	none	cop	Kaptain 2 Nov 2026 (L19): copies into the deck are one more card of any kind, generic
+lk128	runeterra	Dawn and Dusk	Vekauran Vagabond	line	summon or death effect	Kaptain 2 Nov 2026 (L19): the summoned copy sets off its "when I am summoned"
+lk129	runeterra	Spectral Matron	Chempunk Shredder	none	cop	Kaptain 2 Nov 2026 (L19): a summoned copy is not played; its Play effect does not go off
+lk130	runeterra	Emperor's Divide	For The Fallen	none	into play	Claude 2 Nov 2026 (L20): Sand Soldiers are no Elites
+lk131	runeterra	Nasus	Abyssal Eye	none	hit the enemy player	Claude 2 Nov 2026 (L20): Nasus's Fearsome gets only Nasus to the Nexus

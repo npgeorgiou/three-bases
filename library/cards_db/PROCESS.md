@@ -269,9 +269,10 @@ does a line between two cards make sense to a player. Every point he finds is fi
 ### 4b. The three checks after every import (Kaptain, 31 Oct 2026)
 1. Line checks: LINKS_PLAN.md step 3, both checks (the whole game with `links_audit.py <game>`, every deck with
    `deck_audit.py <game>`), read like a player. Lines are made by network.py for every game alike ("How lines are made" in
-   LINKS_PLAN.md) under rules L1-L17 (START_DATABASE.md): a new game gets no line code of its own. Its keywords join through
+   LINKS_PLAN.md) under rules L1-L20 (START_DATABASE.md): a new game gets no line code of its own. Its keywords join through
    their concepts in vocab.tsv: a reaction keyword ("Strike:", "Last Words") needs a reaction concept (on_attack,
-   death_trigger...; network.TRIGGER_KW), a keyword that uses power one of network.POWER_USE, or its lines will be missed.
+   death_trigger...; network.TRIGGER_KW), an evasion keyword the concept evasion or excess_damage (L18, L20), or its lines will
+   be missed.
 2. Real-world cases: `realworld.py <game>`; read every miss and decide whether the data, the question or the case is wrong
    (cases are mostly right; a wrong case is shown to Kaptain with the card texts, never changed quietly).
 3. Design questions per faction: `design_questions.py`, then read every answer for the new game's factions like a designer;
