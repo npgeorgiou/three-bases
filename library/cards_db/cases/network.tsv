@@ -34,7 +34,7 @@ n32	runeterra	Bard Norra	Byrd, The Bellringer	Bard	line		Kaptain: planting Chime
 n33	runeterra	Darius Gnar	Yadulski Snowdog	Darius	line		Kaptain: more damage helps Darius level up
 n34	runeterra	Darius Gnar	Brothers' Bond	Darius	line		Kaptain: more damage helps Darius level up
 n35	runeterra	Darius Gnar	Darius	Mega Gnar (level 2)	none		Kaptain: nothing Darius does is what Mega Gnar waits for
-n36	runeterra	Ashe LeBlanc	Avarosan Hearthguard	Trifarian Gloryseeker	line		Kaptain: Gloryseeker (Challenger) benefits from more Power
+n36	runeterra	Ashe LeBlanc	Avarosan Hearthguard	Trifarian Gloryseeker	none		Kaptain 2 Nov 2026 (L18): Challenger alone gains nothing from more power
 n37	runeterra	Ashe LeBlanc	Incisive Tactician	Ashe	line		Kaptain: Rally gives another attack, Ashe levels from her Attack
 n38	runeterra	Braum Zoe	Cosmic Youngling	Braum	none		Kaptain 30 Oct 2026: Cosmic Youngling heals itself and the Nexus, no one else (was: more health helps Braum survive damage)
 n39	runeterra	Braum Zoe	Targonian Tellstones	Zoe	line		Kaptain: creating cards helps Zoe play 10 different cards
@@ -64,7 +64,7 @@ n62	runeterra	Aphelios Zoe	Duskpetal Dust	Pale Cascade	line		Claude, deck read: 
 n63	stormbound	IC pirate	First Mutineer	Northsea Dogs	line		Claude, deck read: discarding helps Northsea Dogs be the last card in hand
 n64	stormbound	Chronobreak	Heliotroopers	Sunbeam Serpents	none		Claude, deck read: Heliotroopers poisons itself, it is no Dragon
 nfa01	faeria	Beastmaster Green	Oakling	Deepwood Stalker	line		guide https://www.faeria.com/the-hub/deck/4570-no-dlc-beastmaster-green: Oakling's buffs help Deepwood Stalker (a green creature in hand)
-nfa02	faeria	Red Archers	Gift of Steel	Hilltop Archer	line		guide https://www.faeria.com/the-hub/deck/4854-no-dlc-red-archers: Gift of Steel adds damage to repeated archer attacks
+nfa02	faeria	Red Archers	Gift of Steel	Hilltop Archer	none		Kaptain 2 Nov 2026 (L18): Ranged Attack alone gains nothing from more Attack
 ni01	inscryption	Act II Undead starter	Gravedigger	Zombie	line		Claude 29 Oct 2026 (v36): Bone Digger gives Bones, Zombie costs 2 Bones (cost needs from the game's rules)
 ni02	inscryption	Act II Undead starter	Skeleton	Frank & Stein	none		Kaptain 30 Oct 2026: what every unit does by the rules (is sacrificed, gives a Bone when it dies) makes no line; was a 'line' case (v36-v41)
 ni03	inscryption	Squirrel, Stoat, Warren, Adder, Hawk	Squirrel	Hawk	none		Kaptain 30 Oct 2026: what every unit does by the rules (is sacrificed, gives a Bone when it dies) makes no line; was a 'line' case (v36-v41)
@@ -189,9 +189,9 @@ ntb4	into_the_breach	Steel Judoka	Vice Fist	Vek Hormones	none	damages enemy unit
 ntb6	into_the_breach	Spartan Shield, Vek Hormones	Spartan Shield	Vek Hormones	line	damages enemy units	Claude (v48, F11): Spartan Shield turns an enemy's attack onto other enemies, which sets off Vek Hormones (v52: the squad lists its weapons)
 ntb5	into_the_breach	Mist Eaters	Reverse Thrusters	Nanofilter Mending	line	Smoke	Claude (v48, F12): Reverse Thrusters leaves Smoke; Nanofilter Mending repairs Mechs on Smoke (v52: the squad lists its weapons)
 nst01	sts1	Ironclad Pain (gamersdecide)	Reaper	Flex	none		Claude (v50 deck read): Flex gives Strength, which makes Attacks bigger; it asks for no Attack
-nst02	sts1	Ironclad Pain (gamersdecide)	Flex	Reaper	line	bigger	Claude (v50 deck read): Strength makes Reaper's damage bigger
+nst02	sts1	Ironclad Pain (gamersdecide)	Flex	Reaper	line	gets back	Claude (v50 deck read): Strength makes Reaper's damage bigger
 nst03	sts1	Silent Shiv (gamersdecide)	Shiv	Accuracy	none		Claude (v50 deck read): Accuracy makes Shivs bigger (one line, Accuracy -> Shiv)
-nst04	sts1	Silent Poison (gamersdecide)	Burst	Catalyst	line	plays it again	Claude (v50 deck read): Burst plays the next Skill twice
+nst04	sts1	Silent Poison (gamersdecide)	Burst	Catalyst	line	doubling doubles	Claude (v50 deck read): Burst plays the next Skill twice
 nst05	sts1	Silent Poison (gamersdecide)	Catalyst	Burst	none		Claude (v50 deck read): Burst asks for no Skill, it repeats one
 nst06	sts1	Ironclad Body Slam (highgroundgaming)	Shrug It Off	Ghostly Armor	none		Claude (v50 deck read): Ethereal's "still in hand" is a drawback, no hand to fill
 nst07	sts1	Silent Discard (gamersdecide)	Reflex	Gambling Chip	none		Claude (v50 deck read): Gambling Chip counts the cards it discards itself
@@ -221,15 +221,15 @@ ntb11	into_the_breach	Rift Walkers	Combat Mech	Titan Fist	line	carries	Kaptain 3
 ntb12	into_the_breach	Steel Judoka	Confuse Shot	Vek Hormones	line	damages enemy units	Claude (v53, F26): a turned Vek attack hits other Vek, which Vek Hormones adds to
 ntb13	into_the_breach	Mist Eaters	Smoke Pellets	Smog Mech	none		Kaptain 1 Nov 2026 (L14): Ally Immune only stops Smoke Pellets' own Smoke; Smog Mech's Smoke is not touched
 ntb14	into_the_breach	Cataclysm	Flood Drill	Hydraulic Lifter	line	makes holes	Kaptain 30 Oct 2026 (F27): Flood Drill makes a hole; what moves Vek can push them into it
-ntb15	into_the_breach	Hazardous Mechs	A.C.I.D. Projector	Unstable Cannon	line	gives A.C.I.D.	Claude (v53, F28): A.C.I.D. doubles weapon damage against the Vek it is on
+ntb15	into_the_breach	Hazardous Mechs	A.C.I.D. Projector	Unstable Cannon	none	gives A.C.I.D.	Claude (v53, F28): A.C.I.D. doubles weapon damage against the Vek it is on; Kaptain 2 Nov 2026: a damage multiplier for any weapon is generic
 ntb16	into_the_breach	Hazardous Mechs	A.C.I.D. Projector	Force Amp	none	gives A.C.I.D.	Claude (v53, F28): bump damage is no weapon damage; A.C.I.D. does not double it
-ntb17	into_the_breach	Heat Sinkers	Heat Engines	Napalm Mech	line	Boost	Claude (v53, F29): Heat Engines gives Boost to Mechs on Fire; Fire is a status, not printed
+ntb17	into_the_breach	Heat Sinkers	Heat Engines	Napalm Mech	none	Boost	Kaptain 2 Nov 2026 (L18): Napalm Mech has nothing that uses Boost
 ntb18	into_the_breach	Frozen Titans	Janus Cannon	Cryo-Launcher	line	frees it	Claude (v53, F30): a hit frees the frozen Ice Mech (guide: Janus Cannon thaws it)
 nst26	sts1	Silent Shiv (highgroundgaming)	Blade Dance	A Thousand Cuts	line	more cards to play	Kaptain 30 Oct 2026 (h): Shivs are more cards played, more A Thousand Cuts damage
 nst27	sts1	Ironclad Pain (gamersdecide)	Reaper	Rage	line	Attack	Kaptain 30 Oct 2026 (audit): Rage gains Block for each Attack played
 nst28	sts1	Defect Snecko Eye (gamersdecide)	Snecko Eye	Meteor Strike	line	pays for it	Kaptain 30 Oct 2026 (f): random costs pay for big cards
 nst29	sts1	Defect Claw (gamersdecide)	Scrape	Claw	line	keeps it	Claude (audit): Scrape keeps the 0-cost cards it draws
-nst30	sts1	Watcher Divinity (gamersdecide)	Devotion	Smite	line	Mantra	Claude (audit): 10 Mantra is Divinity, triple damage
+nst30	sts1	Watcher Divinity (gamersdecide)	Devotion	Smite	none	Mantra	Claude (audit): 10 Mantra is Divinity, triple damage; Kaptain 2 Nov 2026: more damage for any damage card is generic, Smite is one plain hit
 nst31	sts1	Ironclad Body Slam (highgroundgaming)	Pure Water	Miracle	none		Kaptain 30 Oct 2026 (i): a deck gets only its own character's starting relic
 nst32	sts1	Watcher Stance Change (highgroundgaming)	Flurry of Blows	Bottled Flame	none		Claude (audit): Bottled Flame picks an Attack, it asks for none
 nst33	sts1	Defect Lightning (highgroundgaming)	Capacitor	Electrodynamics	line	more slots	Claude (audit): more Orb slots keep more Lightning

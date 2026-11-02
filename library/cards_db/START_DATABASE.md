@@ -78,6 +78,16 @@ questions first and wait. Never invent rules or mechanics; mark suggestions as y
 - L20 A fight keyword (Elusive, Fearsome, Overwhelm, Quick Attack...) works for the card that has it: Nasus's Fearsome gets
   Nasus to the Nexus, not Abyssal Eye. A card made by name must be the kind the need asks ("when you summon an Elite": Emperor's
   Divide's Sand Soldiers are none).
+- L21 Kaptain 2 Nov 2026, what most cards do is no deck choice: a filter that half the cards of the kind pass ("costs 2 or more",
+  "a creature with higher Attack than Life") or a type that a fifth of its own kind has (Slay the Spire's Skill, Attack: share
+  among cards, not relics) is generic for a pick, tutor, repeat or boost (Secret Technique, Burst: no line); a count of a minority
+  type stays (Kunai, Rage: "every Attack played", Kaptain 30 Oct 2026). The spell, landmark, equipment exception for repeats only
+  holds where spells are a minority. Damage or kills that a quarter of the game's cards make by their own text (Slay the Spire,
+  Monster Train) feed no "whenever damage is dealt" trigger (Envenom, The Boot), unless it levels up or the doer is the enemy (Vek
+  Hormones). Strength, Dexterity, Magic Power, Vulnerable, Wrath: a line only to a card that hits or gives it several times in one
+  go (Twin Strike), gets something back from its damage (Reaper), or doubles what is there (Burst -> Catalyst). "Draw until you
+  have 6" (Expertise) wants an empty hand; "if you have no Block" (Auto-Shields) wants none. A repeat of "Summon effects"
+  (Transcendimp) goes only to cards with Summon. "Summoned near your General" (Call to Arms) narrows no card.
 - L15 Kaptain 2 Nov 2026: what a keyword does to cards with the same keyword is the keyword's rule, no line (Pyke's Lurk grants
   Lurkers +1|+0: no line from one Lurker to another), unless the receiving card's own text uses it (Xerxa'Reth: "If I have 8+
   Power"; Gwen: "when another ally gains Power from Hallowed"). A card's own needs are its text and its reaction keywords (Revenge, Slay),

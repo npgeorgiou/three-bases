@@ -21,7 +21,7 @@ lk19	inscryption	*	Kingfisher	line		Kingfisher is boss exclusive in Act II but a
 lk20	duelyst	*	Restoring Light	none		Claude 31 Oct 2026: made only by boss Generals, the same error in Duelyst
 lk21	inscryption	Alpha	Practice Wizard	none		Kaptain 31 Oct 2026: the Finale's Act I and Magnificus parts are different decks (wiki Finale)
 lk22	inscryption	Alpha	Frank & Stein	none		wiki Finale: Leshy's part uses the Act I deck, Grimora's part Undead cards
-lk23	inscryption	Alpha	Kingfisher	line	gives it +1|+0	Claude 31 Oct 2026, from the texts: Leader next to an Act I card
+lk23	inscryption	Alpha	Kingfisher	none	+1|+0	Kaptain 2 Nov 2026 (L18): Airborne alone gains nothing from more power
 lk24	inscryption	Hoggy Bank	Gembound Ripper	none	pays for it	Claude 31 Oct 2026, from the texts: 4 Bones pay no Energy cost
 lk25	inscryption	Hoggy Bank	Wolverine	line	Bones	Claude 31 Oct 2026, from the texts: Bones pay Wolverine's 5 Bones
 lk26	inscryption	Master Bleene	Mantis God	none	sacrificed	Claude 31 Oct 2026, from the texts: True Scholar sacrifices itself to draw; that pays no Blood
@@ -100,7 +100,7 @@ lk99	runeterra	Ophelis Gardener	Eye of the Dragon	none	heal	Kaptain 1 Nov 2026 (
 lk100	runeterra	Spirit's Refuge	Gust Monk	none	Barrier	Kaptain 1 Nov 2026 (L14): only creates a Cloud Stance when summoned
 lk101	runeterra	Draven's Whirling Death	Professor Von Mech	none	strike	Kaptain 1 Nov 2026 (L14): its text acts only when summoned
 lk102	runeterra	Captivated Audience	Steadfast Elkin	none	copies	Kaptain 1 Nov 2026 (L14): a copy repeats nothing of its Equip text
-lk103	runeterra	Tiny Spear	Zap Sprayfin	line		Kaptain 1 Nov 2026 (L14): Zap Sprayfin is Elusive: more power hits the Nexus harder
+lk103	runeterra	Tiny Spear	Zap Sprayfin	none		Kaptain 2 Nov 2026 (L18): Elusive alone; Zap Sprayfin's text gains nothing from power
 lk104	runeterra	Black Powder Grenade	Legion Grenadier	line		Claude 2 Nov 2026: 1 damage kills it, its Last Breath hits the Nexus
 lk105	duelyst	Healing Mystic	Desolator	none	heal	Kaptain 1 Nov 2026 (L14): Opening Gambit and Dying Wish need no health
 lk106	duelyst	Primus Fist	Silverguard Knight	none	+2|+0	Kaptain 1 Nov 2026 (L14): Provoke uses health, not attack; its Zeal gives its own attack
@@ -125,7 +125,20 @@ lk124	runeterra	Shadows of the Past	The Leviathan	line	summon effect goes off ag
 lk125	monster_train	Olde Magic	Hornbreaker Prince	line	Rage	Claude 2 Nov 2026: Olde Magic can be built with Rage (wiki, Concealed Caverns); Hornbreaker Prince gives itself Multistrike
 lk126	runeterra	Draven's Biggest Fan	Beguiling Cobra	none	playing sets off	Kaptain 2 Nov 2026 (L19): "another follower" is any unit, generic
 lk127	runeterra	Evil Imperfectionist	Black Market Merchant	none	cop	Kaptain 2 Nov 2026 (L19): copies into the deck are one more card of any kind, generic
-lk128	runeterra	Dawn and Dusk	Vekauran Vagabond	line	summon or death effect	Kaptain 2 Nov 2026 (L19): the summoned copy sets off its "when I am summoned"
+lk128	runeterra	Dawn and Dusk	Vekauran Vagabond	none	cop	Kaptain 2 Nov 2026 (L19): a copy of any ally is generic
 lk129	runeterra	Spectral Matron	Chempunk Shredder	none	cop	Kaptain 2 Nov 2026 (L19): a summoned copy is not played; its Play effect does not go off
 lk130	runeterra	Emperor's Divide	For The Fallen	none	into play	Claude 2 Nov 2026 (L20): Sand Soldiers are no Elites
 lk131	runeterra	Nasus	Abyssal Eye	none	hit the enemy player	Claude 2 Nov 2026 (L20): Nasus's Fearsome gets only Nasus to the Nexus
+lk132	sts1	Sling of Courage	Clothesline	none	bigger	Kaptain 2 Nov 2026: Strength helps one plain hit no more than any Attack
+lk133	sts1	Sling of Courage	Twin Strike	line	each hit	Kaptain 2 Nov 2026: a card that hits several times gains from Strength on each hit
+lk134	sts1	Burst	Bloodletting	none	plays it again	Kaptain 2 Nov 2026: a repeat of any Skill is generic
+lk135	sts1	Secret Technique+	Bloodletting	none	back to your hand	Kaptain 2 Nov 2026: half the cards are Skills; picking one is generic
+lk136	sts1	Good Instincts	Auto-Shields	none	Block	Auto-Shields gains Block only when you have none
+lk137	sts1	Thinking Ahead+	Expertise	none	fills your hand	Expertise draws until 6: a full hand draws less
+lk138	sts1	Smite	Envenom	none	damages	Kaptain 2 Nov 2026: what most cards do (deal damage) feeds no trigger by each card
+lk139	sts1	Damaru	Conclude	none	Mantra	Kaptain 2 Nov 2026: more damage for any damage card is generic
+lk140	sts1	Speed Potion	Dash	none	Block it gives bigger	Kaptain 2 Nov 2026: Dexterity helps each Block card the same
+lk141	monster_train	Transcendimp	Imp-pressive	none	Summon effects	Imp-pressive is a spell with no Summon effect
+lk142	monster_train	Gifts for a Guard	Channelsong	none	bigger	Kaptain 2 Nov 2026: most cards are spells; Magic Power on any spell is generic
+lk143	duelyst	Call to Arms	Prismatic Illusionist	none	+3|+3	Kaptain 2 Nov 2026: every minion summoned near the General gets it; generic
+lk144	faeria	Queen's Assassin	Shedim Pest	none	asks for	most creatures pass the filter: generic
