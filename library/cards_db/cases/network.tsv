@@ -43,7 +43,7 @@ n41	monster_train	Frostbite build (Tethys)	Crystalline Seeds	Tethys Titansbane	n
 n42	monster_train	Frostbite build (Tethys)	Tethys Titansbane	Titan Sentry	none	Frostbite	Kaptain: Tethys does not give my units Frostbite
 n43	runeterra	Annie Gwen	Tybaulk	Torment	line		Kaptain 29 Oct 2026: Tybaulk's extra damage reaches Skills that deal damage through a keyword (Drain)
 n44	runeterra	Annie Gwen	Tybaulk	Vile Feast	line		Kaptain: Tybaulk's extra damage reaches spells that Drain
-n45	runeterra	Annie Gwen	Tybaulk	Armed Acquisitioner	line		Kaptain: Tybaulk grants allies everywhere +1|+0
+n45	runeterra	Annie Gwen	Tybaulk	Armed Acquisitioner	none		Kaptain 1 Nov 2026 (L14, replaces Kaptain's earlier check): +1|+0 does nothing for Armed Acquisitioner's Play
 n46	runeterra	Annie Gwen	Tybaulk	Annie	none	its damage	Kaptain: Tybaulk's extra damage is for spells and Skills, not units
 n47	monster_train	Hellhorned rage	Deranged Brute	Rage Serum	line		Claude, same family as Tybaulk: a boost to a status helps the cards that give it
 n48	runeterra	Braum Zoe	Sunburst	Braum	none		Kaptain 29 Oct 2026: Sunburst deals 6, Braum has 6 health: he does not survive it
@@ -55,7 +55,7 @@ n53	runeterra	Ping City	Jagged Butcher	Gangplank	none		Kaptain: what every card 
 n54	runeterra	Ping City	Powder Keg	Gangplank	none	by fighting	Claude, from the game rule: an Immobile unit never attacks
 n55	runeterra	Ashe LeBlanc	Incisive Tactician	Yadulski Snowdog	line		Kaptain: Rally makes my units attack again, so their Attack effects happen again
 n56	runeterra	Braum Zoe	Spirits Unleashed	Braum	none	rules:	Kaptain: Spirits Unleashed gives allies +1|+1, it does not change how they work
-n57	monster_train	Imp build (Shardtail Queen)	Fledgling Imp	Impish Scholar	line		Claude: Rage given to friendly units makes them stronger
+n57	monster_train	Imp build (Shardtail Queen)	Fledgling Imp	Impish Scholar	none		Kaptain 1 Nov 2026 (L14): Impish Scholar uses no Rage
 n58	runeterra	Swain Ziggs	Bomber Twins	Ziggs	line		Claude, deck read 29 Oct 2026: Ziggs levels by destroying allied landmarks; Bomber Twins makes landmarks
 n59	runeterra	Swain Ziggs	Conchologist	Swain	none		Claude, deck read: Swain counts non-combat damage, a unit fighting is combat damage
 n60	runeterra	Lurkers	Aspiring Chronomancer	Pyke	none		Claude, deck read: Pyke counts damage dealt by allied Pykes only
@@ -93,8 +93,8 @@ nfa15	faeria	Voice of Hunger Control	Time of Legends	Voice of Hunger	none	enter	
 nfa16	faeria	Midrange Sacrifice	Iona's Smile	Soul Eater	line		Claude, deck read: Iona's Smile draws Flying creatures from the deck
 nfa17	faeria	Midrange Sacrifice	Iona's Smile	Demon Wing	none	draws it	Claude, deck read: Demon Wing is made by Demon Wrangler, it is in no deck to draw
 nfa18	faeria	Voice of Hunger Control	Voice of Hunger	Eredon, Voice of All	line		guide: the deck wins through Voice of Hunger and Eredon (Voice destroys Eredon, its Last Words buff the deck)
-nfa19	faeria	Beastmaster Green	Oakling	Grove Guardian	line	stronger:	Kaptain 29 Oct 2026: Oakling makes every green creature stronger (a random one in hand)
-nfa20	faeria	Yellow Monstrosity	Khalim's Training	Manta Rider	line	stronger:	Kaptain: the Training helps any creature, not only Shaytan Monstrosity
+nfa19	faeria	Beastmaster Green	Oakling	Grove Guardian	line		Kaptain 1 Nov 2026 (L14): Grove Guardian has Taunt, more health keeps it there
+nfa20	faeria	Yellow Monstrosity	Khalim's Training	Manta Rider	none		Kaptain 1 Nov 2026 (L14): Manta Rider's Last Words use no Attack or Flying
 nfa21	faeria	Red Combat	Syland Horsemaster	Bomb Slinger	line	moves:	Kaptain: Charge moves my units forward; land is built next to them, so the Slinger enters next to enemies
 nfa22	faeria	Red Archers	Flame Burst	Hilltop Archer	line	clears:	Kaptain: removing the unit in the way clears a Ranged unit's straight line
 nfa23	faeria	Bargain (Krog)	Red Devil	Krog, the Ogre King	line	cheaper:	Kaptain: gaining 5 faeria pays for the big cards
@@ -107,7 +107,7 @@ nfa29	faeria	Blue Jump	Gabrian Archon	Wavecrash Colossus	none	stronger:	Kaptain:
 nfa30	faeria	Bargain (Krog)	Bold Bargainer	Krog, the Ogre King	line	cheaper:	Kaptain: a 7 cost cut must help the expensive cards
 ni13	inscryption	Rabbit, Tadpole, Geck, Pelts (Rabbit), Squirrel	Rabbit	Bullfrog	none	sacrificed	Claude (v38): Bullfrog comes from Tadpole growing (wiki Fledgling), it is never played, so no sacrifice pays for it
 ni14	inscryption	Energy Bot, Shieldbot, Sniper Bot, Double Gunner, Empty Vessel	Sniper Bot	Double Gunner	none		Claude (v38): two strikers, nothing between them
-ni15	inscryption	Alpha, Wolf, Moose Buck	Alpha	Wolf	line		Claude (v39): Leader (wiki: "Creatures adjacent to a card bearing this sigil gain 1 Power") boosts the units next to Alpha; a keyword's effect on other cards is a line too
+ni15	inscryption	Alpha, Wolf, Moose Buck	Alpha	Wolf	none		Kaptain 1 Nov 2026 (L14): Wolf has no text that uses more power
 ni16	inscryption	Daus, Bell Tentacle	Bell Tentacle	Daus	line		Claude (v39): Daus strikes a card that attacks a Chime or Bell Tentacle (wiki Special Card Behaviours): the card it names
 ndu01	duelyst	Vaath Dying Wish	Spelljammer	Dagona	none		Claude, deck read: a counterattack hits the attacker, an enemy; Dagona's Dying Wish is its own death (family 1)
 ndu02	duelyst	Cassyva Replace Abomination	Healing Mystic	Letigress	none	waits	Claude, deck read: Letigress waits for the General attacking, not any unit (family 2)
@@ -136,7 +136,7 @@ ndu24	duelyst	Cassyva Replace Abomination	Aethermaster	Cassyva Soulreaper	none		
 ndu25	duelyst	Cassyva Replace Abomination	Healing Mystic	Abhorrent Unbirth	none		Claude, deck read: Unbirth destroys my minions itself; it waits for no deaths (family 21) (reason rewritten 30 Oct 2026: the old wording was said by no line, so the case could not fail)
 ndu26	duelyst	Lilithe Darkfire	Phantasm	Wraithling	none		Claude, deck read: Wraithlings are summoned onto the board, never in the action bar (family 22)
 ndu27	duelyst	Lilithe Darkfire	Darkfire Sacrifice	Wraithling	none	cheaper	Claude, deck read: as ndu26, a lower cost is no help to a token
-ndu28	duelyst	Cassyva Replace Abomination	Healing Mystic	Cassyva Soulreaper	line		Claude, deck read: "restore 2 Health to anything" can heal my General (family 13)
+ndu28	duelyst	Cassyva Replace Abomination	Healing Mystic	Cassyva Soulreaper	none		Kaptain 1 Nov 2026 (L14): healing "anything" is generic; the General\'s text uses no health
 ndu29	duelyst	Lilithe Darkfire	Wraithling	Inkling Surge	line		guide: Inkling Surge draws when another Wraithling is out; Lilithe and Vorpal Reaver put Wraithlings into play
 ndu31	duelyst	Lilithe Darkfire	Vorpal Reaver	Inkling Surge	none	makes	Kaptain 30 Oct 2026: makers put the Wraithling into play; the Wraithling enables Inkling Surge, not its makers
 ndu30	duelyst	Faie Blood Taura	White Asp	Blazing Spines	none	names	Claude, deck read: Blazing Spines names the walls it summons itself; it asks for no other wall maker (family 24)
@@ -213,13 +213,13 @@ nst22	sts1	Ironclad Barricade (Steam, Jeff)	Barricade	Shrug It Off	line	keeps th
 nst23	sts1	Ironclad Strength (gamersdecide)	Bag of Marbles	Reaper	line	Vulnerable	Kaptain 30 Oct 2026: Vulnerable makes damage cards stronger
 nst24	sts1	Silent Discard (gamersdecide)	Gambling Chip	Eviscerate	line	cheaper:	Kaptain 30 Oct 2026: discards make Eviscerate cheaper
 nst25	sts1	Ironclad Strength (gamersdecide)	Flex	Heavy Blade	line	gives you Strength	Kaptain 30 Oct 2026: Strength goes to the player
-ntb7	into_the_breach	Rusting Hulks	Repulse	Jet Mech	line	gives it Energy Shield	Claude (v51, F14): Shield Friendly shields every adjacent ally, nothing is chosen (v52: the squad lists its weapons)
+ntb7	into_the_breach	Rusting Hulks	Repulse	Jet Mech	none		Kaptain 1 Nov 2026 (L14): Jet Mech's bombs use no shield
 ntb8	into_the_breach	Run: Rusting Hulks (Sevastromo, Unfair)	Rocket Artillery	Force Amp	line	bump damage	Claude (v52, F22): pushes cause the bumps Force Amp adds damage to
 ntb9	into_the_breach	Run: Rusting Hulks (Sevastromo, Unfair)	Aerial Bombs	Force Amp	none		Claude (v52, F22): Aerial Bombs push nothing; plain damage is no bump
 ntb10	into_the_breach	Run: Rift Walkers (Sevastromo, Unfair)	Titan Fist	Artemis Artillery	line	acts on units	Kaptain 30 Oct 2026 (F20): the squad lists its weapons, the lines are between weapons
 ntb11	into_the_breach	Rift Walkers	Combat Mech	Titan Fist	line	carries	Kaptain 30 Oct 2026 (F24): the weapon of each mech is linked with its mech
 ntb12	into_the_breach	Steel Judoka	Confuse Shot	Vek Hormones	line	damages enemy units	Claude (v53, F26): a turned Vek attack hits other Vek, which Vek Hormones adds to
-ntb13	into_the_breach	Mist Eaters	Smoke Pellets	Smog Mech	line	keeps Smoke off it	Claude (v53, F25): Ally Immune keeps Smoke off my mechs; it removes none
+ntb13	into_the_breach	Mist Eaters	Smoke Pellets	Smog Mech	none		Kaptain 1 Nov 2026 (L14): Ally Immune only stops Smoke Pellets' own Smoke; Smog Mech's Smoke is not touched
 ntb14	into_the_breach	Cataclysm	Flood Drill	Hydraulic Lifter	line	makes holes	Kaptain 30 Oct 2026 (F27): Flood Drill makes a hole; what moves Vek can push them into it
 ntb15	into_the_breach	Hazardous Mechs	A.C.I.D. Projector	Unstable Cannon	line	gives A.C.I.D.	Claude (v53, F28): A.C.I.D. doubles weapon damage against the Vek it is on
 ntb16	into_the_breach	Hazardous Mechs	A.C.I.D. Projector	Force Amp	none	gives A.C.I.D.	Claude (v53, F28): bump damage is no weapon damage; A.C.I.D. does not double it

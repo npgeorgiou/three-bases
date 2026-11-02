@@ -39,13 +39,13 @@ lk37	inscryption	Mealworm	Raven	none	hits harder	Claude 31 Oct 2026: Morsel is s
 lk38	inscryption	Mealworm	Raven	line	X|X	Claude 31 Oct 2026, from the texts: Raven costs 2 Blood, Mealworm can be sacrificed for it
 lk39	inscryption	Buff Conduit	Null Conduit	none	+1|+0	wiki sigils: Attack Conduit gives "other creatures within a circuit" power; the Conduits are its ends
 lk40	inscryption	Buff Conduit	Energy Conduit	none	+1|+0	wiki sigils: the Conduit cards close the circuit, they are not in it
-lk41	inscryption	Buff Conduit	Kind Cell	line	+1|+0	wiki sigils: a creature within the circuit gains 1 power
+lk41	inscryption	Buff Conduit	Kind Cell	none	+1|+0	Kaptain 1 Nov 2026 (L14): Kind Cell uses no power; the Conduit line stays
 lk42	inscryption	Cuckoo	Broken Egg	none		Brood Parasite text: the Egg is created on the opposing space, the enemy gets it
 lk43	inscryption	*	Broken Egg	none		Claude 31 Oct 2026: a card made only on the enemy side is no card a player owns
 lk44	inscryption	Porcupine	Raccoon	none		START_DATABASE L11: Sharp Quills is a plain hit on one attacker, it feeds no "when an enemy dies"
 lk45	inscryption	Dire Wolf	Raccoon	line	enemy units die	L2: a second strike (Double Strike) still kills more
 lk46	inscryption	Extra Battery	GR1ZZ	line	pays for it	Claude 31 Oct 2026, from the texts: Extra Battery refills Energy to the maximum; GR1ZZ costs 6 Energy
-lk47	inscryption	Bomb Latcher	GR1ZZ	line	Detonator	Claude 31 Oct 2026: a Transformer card is played as its first form (GR1ZZ), not only made
+lk47	inscryption	Bomb Latcher	GR1ZZ	none	Detonator	Kaptain 1 Nov 2026 (L14): a random creature gets Detonator; GR1ZZ uses none of it
 lk48	inscryption	GR1ZZ	GR1ZZ (Beast Form)	line	levels into	Transformer text: it changes Beast mode at the start of your turn
 lk49	inscryption	*	Consumable Items	none		Claude 31 Oct 2026: the wiki page about all items is no card
 lk50	inscryption	Hammer	Corpse Maggots	none		Corpse Eater text: it fires on a card that perishes by combat; the Hammer kills by an effect
@@ -60,7 +60,7 @@ lk58	into_the_breach	Def. Shrapnel	Stabilizers	none		Claude 31 Oct 2026: Stabili
 lk59	into_the_breach	Def. Shrapnel	Force Amp	line	bump	Claude 31 Oct 2026: Force Amp adds bump damage to Vek
 lk60	into_the_breach	Shield Projector	Isaac Jones	none		Claude 31 Oct 2026: a pilot is no unit; shields go to the mech
 lk61	into_the_breach	Repair Drop	Silica	none		Claude 31 Oct 2026: a pilot is no unit; heals go to the mech
-lk62	into_the_breach	Shield Projector	Combat Mech	line	Energy Shield	Claude 31 Oct 2026: a mech keeps its shield line (Kaptain's decks)
+lk62	into_the_breach	Shield Projector	Combat Mech	none	Energy Shield	Kaptain 1 Nov 2026 (L14): its weapon uses no shield
 lk63	into_the_breach	Grid Repulse	Cryo-Launcher	none	Frozen	Claude 31 Oct 2026: Grid Repulse shields a building, never the frozen mech
 lk64	into_the_breach	Critical Shields	Ice Generator	none	Frozen	Claude 31 Oct 2026: Critical Shields shields buildings only
 lk65	into_the_breach	Repulse	Cryo-Launcher	line	Frozen	Claude 31 Oct 2026: Repulse shields an adjacent ally: it keeps Frozen off
@@ -80,7 +80,7 @@ lk78	stormbound	Westwind Sailors	Mystwives	none	asks for	Claude 31 Oct 2026: "a 
 lk79	stormbound	Malicious Discard	Clap of Thunder	line	empties your hand	Claude 31 Oct 2026: discarding makes the empty hand spaces Clap of Thunder counts
 lk80	stormbound	Freebooters	Lucky Charmers	line	Pirate	Claude 31 Oct 2026: Lucky Charmers counts Pirates; Freebooters is one
 lk82	stormbound	Frosthexers	Spellbinder Zhevana	line	Freeze	Claude 31 Oct 2026: Zhevana damages frozen units; Frosthexers freezes them
-lk83	stormbound	Moment’s Peace	Mystwives	line	strength	Claude 31 Oct 2026: a strength gift still helps Mystwives
+lk83	stormbound	Moment’s Peace	Mystwives	none	strength	Kaptain 1 Nov 2026 (L14): Mystwives asks for a stronger neighbour, not its own strength
 lk84	stormbound	Treasurous Bosuns	Strict Quartermasters	line	Pirate	Claude 31 Oct 2026: Bosuns is a Pirate; its own text lines stay
 lk85	faeria	Message in a Bottle	Triton Stargazer	none	fills your hand	Claude 31 Oct 2026: Triton Stargazer checks the cards it draws itself for a Treasure Map
 lk86	runeterra	Trifarian Assessor	LeBlanc (level 2)	none	fills your hand	Claude 31 Oct 2026: LeBlanc wants a Mirror Image in hand; a random draw is not one
@@ -95,3 +95,17 @@ lk94	monster_train	Total Recall	Ancient Synergy	none	asks for	Claude 1 Nov 2026:
 lk95	monster_train	Queen's Impling	Shardtail Queen	line	Imp	Claude 1 Nov 2026: Shardtail Queen asks for Imps; a named type stays
 lk96	monster_train	Vinemother	Wyldenten	line	more cards to play	Claude 1 Nov 2026: Vinemother makes Sting spells; Wyldenten's Incant fires on spells played
 lk97	monster_train	Returned Soul	Ice and Pyre	none	brings it back	Claude 1 Nov 2026: "return a spell from the discard pile" can return any spell (same error as draws)
+lk98	runeterra	Wuju Style	Patched Porobot	none	+2|+0	Kaptain 1 Nov 2026 (L14): +power does nothing for its text
+lk99	runeterra	Ophelis Gardener	Eye of the Dragon	none	heal	Kaptain 1 Nov 2026 (L14): it never needs health; it summons a Dragonling
+lk100	runeterra	Spirit's Refuge	Gust Monk	none	Barrier	Kaptain 1 Nov 2026 (L14): only creates a Cloud Stance when summoned
+lk101	runeterra	Draven's Whirling Death	Professor Von Mech	none	strike	Kaptain 1 Nov 2026 (L14): its text acts only when summoned
+lk102	runeterra	Captivated Audience	Steadfast Elkin	none	copies	Kaptain 1 Nov 2026 (L14): a copy repeats nothing of its Equip text
+lk103	runeterra	Tiny Spear	Zap Sprayfin	line		Kaptain 1 Nov 2026 (L14): Zap Sprayfin is Elusive: more power hits the Nexus harder
+lk104	runeterra	Black Powder Grenade	Legion Grenadier	line		Claude 2 Nov 2026: 1 damage kills it, its Last Breath hits the Nexus
+lk105	duelyst	Healing Mystic	Desolator	none	heal	Kaptain 1 Nov 2026 (L14): Opening Gambit and Dying Wish need no health
+lk106	duelyst	Primus Fist	Silverguard Knight	none	+2|+0	Kaptain 1 Nov 2026 (L14): Provoke uses health, not attack; its Zeal gives its own attack
+lk107	monster_train	Guardian Stone	Titan Sentry	none	Armor	Kaptain 1 Nov 2026 (L14): Revenge fires when damaged; Armor only stops it
+lk108	stormbound	Potion of Growth	Wild Saberpaws	none	strength	Kaptain 1 Nov 2026 (L14): its text is about speed when played
+lk109	faeria	Demon Wrangler	Wind Soldier	none	sacrifice	Kaptain 1 Nov 2026 (L14): Wind Soldier has no Last Words
+lk110	monster_train	Rage Serum	Hornbreaker Prince	line	Rage	Kaptain 1 Nov 2026 (L14): Hornbreaker Prince gives itself Multistrike; Rage hits harder every strike
+lk111	runeterra	Sumpworks Map	Vi	line	Elusive	Kaptain 1 Nov 2026 (L14): Elusive gets her big strike through; she levels from a 10+ damage strike

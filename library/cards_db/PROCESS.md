@@ -232,7 +232,8 @@ supplement_<game>.py). The shared files need care:
    which cards in the deck give it that; what does it give, and to whom; is every line's reason true by the texts? Kaptain
    found 15 gaps in 9 decks that 500 passing cases had not shown, and Claude's own read of 9 decks found 8 more families.
    Each gap is fixed for every card of every game (a rule, never one card), becomes a cases/network.tsv row, and a rule
-   that holds for every game goes into START_DATABASE.md "Rules every line must keep".
+   that holds for every game goes into START_DATABASE.md "Rules every line must keep". Never add a line that every unit or
+   card of a kind gets from one helper (rule L14: "gives friendly units Armor" links only to cards that use Armor).
    **Then the deck check (Kaptain, 30 Oct 2026; part of every import, and of every later network change):**
    `deck_audit.py <game>` and read all of it, as "Audit every deck yourself" says: per deck the 3 most linked and the 3 least
    linked cards with every line and the cards they link to, 10 other cards at random (should one of them be linked with a

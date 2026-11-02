@@ -56,6 +56,18 @@ questions first and wait. Never invent rules or mechanics; mark suggestions as y
 - L11 A plain hit on one target (Strike, Mystic Shot) feeds no "when an enemy dies"; poison, hits on all, kill effects and
   damage boosts do.
 - L12 Say who gets it: where the player is no card (Slay the Spire), a status on the player is "gives you Strength".
+- L14 Kaptain 1 Nov 2026: help aimed at any card of a kind ("give an ally +2|+0", "heal a unit", "copy an ally", "a unit
+  strikes", "when you summon an ally, grant it +1|+1") makes a line only to a card whose own text or keywords use that help
+  toward its goal. Wuju Style -> Patched Porobot: no line (+power does nothing for its text). Tiny Spear -> Zap Sprayfin: a
+  line (Elusive: more power hits the Nexus harder). A faction or card kind ("a green creature", "a Demacia ally", "a
+  follower") is no narrower than a deck. Kept: +power to Elusive, Overwhelm, Quick/Double Attack, Challenger, Lifesteal or
+  Ranged units and to a leader; health or protection to Taunt or Challenger units; a strike, attack or ready to a card with
+  "Strike:"/"Attack:" or an activated ability; a copy or return to hand of a card with Play, Summon or Last Breath; a sacrifice
+  of a card with Last Words; a cleanse to a card that puts that status on my side; help aimed near my leader to a card that acts
+  near it (Roar -> Windblade Adept's Zeal); a keyword a card gives itself counts as its own; anything a card waits for, counts or levels
+  from ("when healed", "allies with Barrier", "Level up: targeted"). The code: network.uses_help(); a new game's keywords
+  join it through their concept (vocab.tsv), never by name. A new kind of help gets its use written there, never a line to
+  every card.
 - L13 Per game settings: network.EXPENSIVE (the cost from which a card is expensive); a deck holds what the game gives
   every deck of its character (Slay the Spire's starting relic) unless a card replaces it; read the game's own limits of
   a mechanic (Dexterity adds only to Block a card gives when played).
@@ -129,18 +141,19 @@ Read: any FAILED line, and the audit lists. After a change to network.py only: `
 
 **The game itself** (not the database) has its own: tools/build.py, tools/simtest.js, tools/smoke.js (CLAUDE.md).
 
-## State (31 Oct 2026, v65)
+## State (2 Nov 2026, v66)
 - All 8 games imported. Kaptain approved Runeterra and Into the Breach; Slay the Spire done; Inscryption reviewed;
   Stormbound, Monster Train, Faeria, Duelyst wait for his check of their deck networks.
 - Cases: all pass except Stormbound csb09-csb13 (poisoned-unit combos, an old cause not yet traced). Runeterra n56 and Slay
   the Spire nst36 are must-not cases whose reason no deck says any more: rewrite them.
 - Real-world cases: 238 of 261 hold.
 - Known open: a card placed by its text near the leader (Conscript) draws no line to a card acting near the leader
-  (Fealty); Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain).
+  (Fealty); Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain). Two cards
+  with effects have no text in the sources, so no rows: Stormbound's Fort of Ebonrock, Monster Train's Olde Magic.
 
 ## Open work, in Kaptain's order
 1. Check every line, one game at a time: LINKS_PLAN.md step 3 (a whole-game check and a deck check per game).
-   Inscryption, Into the Breach, Stormbound and Monster Train done; next: drop generic "gives X" lines (LINKS_PLAN.md step 3a), then Slay the Spire.
+   Inscryption, Into the Breach, Stormbound and Monster Train done; next: Slay the Spire.
 
 ## When you finish
 Commit and push every finished step. Update "State" and "Open work" above (keep them short: no history; git log has it).
