@@ -49,7 +49,7 @@ const CARD={hero:['#facc15','champion'],unit:['#7dd3fc','unit'],spell:['#c4b5fd'
 const R=14,NS='http://www.w3.org/2000/svg',svg=document.getElementById('draw'),tip=document.getElementById('tip');
 const hidden=new Set();let cur=0,sel=null,hov=null,vb=null,d=null,N=[],ix={},els={},game=D[0].game;
 // focus: one card (its lines) or a section of the sidebar (its cards and the lines between them); one at a time
-const one=i=>({nodes:new Set([i]),pairs:null,card:i});
+let DIR={};const one=i=>({nodes:new Set([i]),pairs:null,card:i,dir:DIR[i]||'both'});  // a card's lines: in, out or both (double click)
 const oneLine=i=>{const l=d.lines[i];return {nodes:new Set([ix[l.from],ix[l.to]]),pairs:null,card:null,line:i,key:'l'+i}};
 function games(){const G=[...new Set(D.map(x=>x.game))],g=document.getElementById('games');g.innerHTML='';
  G.forEach(x=>{const b=document.createElement('button');b.textContent=x.replace('_',' ');b.className=x===game?'on':'';
@@ -119,15 +119,15 @@ function draw(){svg.innerHTML='';const defs=el('defs',{}),seen={},bend=[];
   const sx=a.x+(mx-a.x)/Math.hypot(mx-a.x,my-a.y)*R,sy=a.y+(my-a.y)/Math.hypot(mx-a.x,my-a.y)*R;
   const ex=b.x-(b.x-mx)/Math.hypot(b.x-mx,b.y-my)*(R+2),ey=b.y-(b.y-my)/Math.hypot(b.x-mx,b.y-my)*(R+2);
   const dd=`M${sx},${sy} Q${mx},${my} ${ex},${ey}`,c=LINE[l.kind][0];
-  const ln=el('path',{d:dd,fill:'none',stroke:c,'stroke-width':l.kind==='targets'?2:2+Math.min(3,l.weight*6),'marker-end':`url(#m${l.kind})`});
+  const ln=el('path',{d:dd,fill:'none',stroke:c,'stroke-width':l.kind==='targets'?2:2+Math.min(3,l.weight*6),'marker-end':`url(#m${l.kind})`,'pointer-events':'none'});  // only the wide hit path below takes the pointer
   if(l.kind==='levelsinto')ln.setAttribute('stroke-dasharray','2 3');
-  const hit=el('path',{d:dd,fill:'none',stroke:'transparent','stroke-width':10,'data-l':i,style:'cursor:pointer'});gl.append(ln,hit);els.lines.push(ln)});
+  const hit=el('path',{d:dd,fill:'none',stroke:'#000','stroke-opacity':0,'stroke-width':12,'vector-effect':'non-scaling-stroke','pointer-events':'stroke','data-l':i,style:'cursor:pointer'});gl.append(ln,hit);els.lines.push(ln)});
  N.forEach((n,i)=>{const g=el('g',{});const c=el('circle',{cx:n.x,cy:n.y,r:R,fill:col(n),stroke:'currentColor','stroke-width':n.made?1.5:2,'data-n':i,style:'cursor:pointer;color:var(--fg)'});
   if(n.made)c.setAttribute('stroke-dasharray','3 3');const t=el('text',{x:n.x+R+5,y:n.y+4});t.textContent=n.name+info(n);g.append(c,t);gn.appendChild(g);els.nodes.push(g)});
  mark()}
 // what a click locked: its cards and lines; while locked, pointing reacts only to them, and a right click copies only them
 let lockN=null,lockL=null;const SOFT=new Set(['stronger','cheaper','keyword','heals','moves','clears','boosts']);
-function touches(f,l,i){const a=ix[l.from],b=ix[l.to];return f.line!=null?i===f.line:f.card!=null?(a===f.card||b===f.card):f.pairs?f.pairs.has(a+'>'+b):(f.nodes.has(a)&&f.nodes.has(b))}
+function touches(f,l,i){const a=ix[l.from],b=ix[l.to];return f.line!=null?i===f.line:f.card!=null?(f.dir==='in'?b===f.card:f.dir==='out'?a===f.card:(a===f.card||b===f.card)):f.pairs?f.pairs.has(a+'>'+b):(f.nodes.has(a)&&f.nodes.has(b))}
 function lock(){if(!sel){lockN=lockL=null;return}lockN=new Set(sel.nodes);lockL=new Set();
  d.lines.forEach((l,i)=>{if(!hidden.has(l.kind)&&touches(sel,l,i)){lockL.add(i);lockN.add(ix[l.from]);lockN.add(ix[l.to])}})}
 function mark(){lock();const f=hov||sel,on=new Set(f?f.nodes:[]);
@@ -135,14 +135,15 @@ function mark(){lock();const f=hov||sel,on=new Set(f?f.nodes:[]);
   const touch=!!f&&touches(f,l,i);
   ln.style.display=show?'':'none';els.lines[i].nextSibling.style.display=show?'':'none';
   if(touch&&show){on.add(a);on.add(b)}
-  ln.style.opacity=!f?(l.kind==='targets'?.3:SOFT.has(l.kind)?.35:.8):touch?1:.08;  // help lines softer: the combos stand outln.style.filter=touch?'saturate(1.6)':'';
+  ln.style.opacity=!f?(l.kind==='targets'?.3:SOFT.has(l.kind)?.35:.8):touch?1:.08;  // help lines softer: the combos stand out
+  ln.style.filter=touch?'saturate(1.6)':'';
   ln.style.strokeWidth=f&&f.line===i?String(4+Math.min(3,l.weight*6)):''});
  els.nodes.forEach((g,i)=>{g.style.opacity=!f||on.has(i)?1:.25;g.lastChild.style.fontWeight=f&&on.has(i)?'700':'';g.firstChild.setAttribute('r',sel&&sel.nodes.has(i)?R+4:R)});
  document.querySelectorAll('.chip').forEach(c=>c.style.outline=sel&&sel.card!=null&&ix[+c.dataset.id]===sel.card?'2px solid var(--fg)':'');
  document.querySelectorAll('.sec').forEach(x=>x.classList.toggle('on',!!sel&&sel.key===x.dataset.key))}
 svg.onmousemove=e=>{if(drag&&drag.moved)return;let t=e.target;let h='';
  if(lockN&&((t.dataset.n&&!lockN.has(+t.dataset.n))||(t.dataset.l&&!lockL.has(+t.dataset.l))))t={dataset:{}};  // outside the locked part
- if(t.dataset.n){const n=N[+t.dataset.n];hov=one(+t.dataset.n);h=`<b>${esc(n.name)}</b>${esc(info(n))} <span style="color:var(--mut)">${esc((CARD[n.cat]||['',n.cat])[1])}${n.types&&n.types.length?' \u00b7 '+esc(n.types.join(', ')):''}${n.made?', made by the deck':''}</span><br>${n.keywords.length?'<i>'+esc(n.keywords.join(', '))+'</i><br>':''}${esc(n.text)}`}
+ if(t.dataset.n){const n=N[+t.dataset.n];hov=one(+t.dataset.n);const dir=DIR[+t.dataset.n];h=`${dir&&dir!=='both'?'<span style="color:var(--mut)">only '+(dir==='in'?'lines into it':'lines out of it')+'</span><br>':''}<b>${esc(n.name)}</b>${esc(info(n))} <span style="color:var(--mut)">${esc((CARD[n.cat]||['',n.cat])[1])}${n.types&&n.types.length?' \u00b7 '+esc(n.types.join(', ')):''}${n.made?', made by the deck':''}</span><br>${n.keywords.length?'<i>'+esc(n.keywords.join(', '))+'</i><br>':''}${esc(n.text)}`}
  else if(t.dataset.l){const l=d.lines[+t.dataset.l];hov=oneLine(+t.dataset.l);h=`${esc(N[ix[l.from]].name)} &rarr; ${esc(N[ix[l.to]].name)}<br><b>${l.why.split('; also ').map(esc).join('<br>')}</b><br><span style="color:var(--mut)">${LINE[l.kind][1]}</span>`}
  else hov=null;
  mark();tip.style.display=h?'block':'none';tip.innerHTML=h;tip.style.left=Math.min(innerWidth-360,e.clientX+14)+'px';tip.style.top=Math.min(innerHeight-120,e.clientY+14)+'px'};
@@ -159,12 +160,13 @@ svg.oncontextmenu=e=>{const t=e.target;
   copy(`${d.game} / ${d.deck}\n`+head.join('\n')+'\n'+[...lockL].map(i=>'  '+tl(d.lines[i])).join('\n'),e);return}
  if(t.dataset.n){e.preventDefault();copy(`${d.game} / ${d.deck}\n`+tn(+t.dataset.n),e)}
  else if(t.dataset.l){e.preventDefault();copy(`${d.game} / ${d.deck}\n`+tl(d.lines[+t.dataset.l]),e)}};
+svg.ondblclick=e=>{if(!e.target.dataset.n)return;const i=+e.target.dataset.n;DIR[i]={both:'in',in:'out',out:'both'}[DIR[i]||'both'];sel=one(i);hov=null;mark()};
 svg.onclick=e=>{if(e.target.dataset.n){const i=+e.target.dataset.n;sel=sel&&sel.card===i?null:one(i);mark()}
  else if(e.target.dataset.l&&!(drag&&drag.moved)){const i=+e.target.dataset.l;sel=sel&&sel.line===i?null:oneLine(i);mark()}};
 function legend(){const cats=[...new Set(N.map(n=>n.cat))],kinds=new Set(d.lines.map(l=>l.kind));
  let h='<b>Cards</b>'+cats.map(c=>`<div class="k n"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="${(CARD[c]||['#ccc'])[0]}" stroke="currentColor"/></svg>${esc((CARD[c]||['',c])[1])}</div>`).join('')
   +'<div class="k n"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="none" stroke="currentColor" stroke-dasharray="2 2"/></svg>made by the deck</div>'
-  +'<b>Lines: A &rarr; B (click to hide)</b>'+Object.entries(LINE).filter(([k])=>kinds.has(k)).map(([k,[c,t]])=>`<div class="k${hidden.has(k)?' off':''}" data-k="${k}"><svg width="26" height="10"><line x1="1" y1="5" x2="25" y2="5" stroke="${c}" stroke-width="3" ${k==='levelsinto'?'stroke-dasharray="2 3"':''}/></svg>${t}</div>`).join('');
+  +'<div class="k n" style="color:var(--mut)">double click a card: lines into it, out of it, both</div><b>Lines: A &rarr; B (click to hide)</b>'+Object.entries(LINE).filter(([k])=>kinds.has(k)).map(([k,[c,t]])=>`<div class="k${hidden.has(k)?' off':''}" data-k="${k}"><svg width="26" height="10"><line x1="1" y1="5" x2="25" y2="5" stroke="${c}" stroke-width="3" ${k==='levelsinto'?'stroke-dasharray="2 3"':''}/></svg>${t}</div>`).join('');
  const L=document.getElementById('legend');L.innerHTML=h;L.querySelectorAll('[data-k]').forEach(x=>x.onclick=()=>{const k=x.dataset.k;hidden.has(k)?hidden.delete(k):hidden.add(k);legend();mark()})}
 function chip(id){const n=N[ix[id]];return `<span class="chip${n.made?' made':''}" data-id="${id}"><i style="background:${col(n)}"></i>${esc(n.name)}</span>`}
 const SEC={};let nsec=0;
@@ -185,7 +187,7 @@ function side(){const m=d.m,s=document.getElementById('side');nsec=0;
  s.querySelectorAll('.sec').forEach(x=>{const f=SEC[x.dataset.key];x.onclick=()=>{sel=same(sel,f)?null:f;mark()};x.onmouseenter=()=>{hov=f;mark()};x.onmouseleave=()=>{hov=null;mark()}});
  s.querySelectorAll('.chip').forEach(c=>{const i=ix[+c.dataset.id];c.onclick=e=>{e.stopPropagation();sel=sel&&sel.card===i?null:one(i);mark()};
   c.onmouseenter=e=>{e.stopPropagation();hov=one(i);mark()};c.onmouseleave=()=>{hov=null;mark()}})}
-function show(){d=D[cur];N=d.nodes;ix={};N.forEach((n,i)=>ix[n.id]=i);tabs();layout();draw();fit();legend();side();mark()}
+function show(){DIR={};d=D[cur];N=d.nodes;ix={};N.forEach((n,i)=>ix[n.id]=i);tabs();layout();draw();fit();legend();side();mark()}
 games();show();
 </script></body></html>'''
 

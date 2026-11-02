@@ -565,6 +565,18 @@ def lines_of(c, game):
         out[(m, ref)].append(('puts', 1.0 / putters[ref], {'summon': 'summons', 'create': 'creates', 'copy': 'copies', 'revive': 'brings back',
                                                            'play_card': 'plays', 'keyword_action': 'plants', 'skill': 'casts its skill',
                                                            'own_spell': 'casts its own spell'}[act]))
+    # my units put into play by kind, from the discard, deck or hand ("revive the 6 strongest allies", "summon a unit from your
+    # deck"): its own "when I'm summoned" goes off again (The Harrowing -> Captain Farron); a Play effect does not
+    entry = collections.defaultdict(set)
+    for i, e in c.execute("select card, event from flat_when where origin='own' and obj_pick='self' and event in ('summoned','played')"): entry[i].add(e)
+    for m, act, k, w, zone in c.execute("""select card, act, on_kind, on_with, on_zone from flat_do where origin='own' and card_ref is null
+            and coalesce(on_side,'mine') in ('mine','any') and coalesce(on_pick,'') not in ('self','it') and ((act='revive') or
+            (act in ('summon','play_card') and on_zone in ('deck','deck_top','hand','discard')))""").fetchall():
+        if m not in cards: continue
+        want = {'played', 'summoned'} if act == 'play_card' else {'summoned'}
+        hits = [t for t, x in cards.items() if t != m and entry.get(t, set()) & want and matches(c, game, x, k if k in KIND_CAT else 'unit', w)]
+        for t in hits: out[(m, t)].append(('waits', 0.5 / len(hits), {'revive': 'brings it back: its summon effect goes off',
+                                           'summon': 'puts it into play: its summon effect goes off', 'play_card': 'plays it: its effect goes off'}[act]))
     # a draw that names what it takes from the deck ("draw the top legend", "draw a Beast") finds those cards
     # (and a summon from the hand or deck by what it is: "summon a minion with Dying Wish from your action bar", Unseven); "a copy
     # of it" is a card the earlier effect can pick (Lifestream heals a minion, then draws a copy of it: minions only)

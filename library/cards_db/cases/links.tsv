@@ -109,3 +109,6 @@ lk108	stormbound	Potion of Growth	Wild Saberpaws	none	strength	Kaptain 1 Nov 202
 lk109	faeria	Demon Wrangler	Wind Soldier	none	sacrifice	Kaptain 1 Nov 2026 (L14): Wind Soldier has no Last Words
 lk110	monster_train	Rage Serum	Hornbreaker Prince	line	Rage	Kaptain 1 Nov 2026 (L14): Hornbreaker Prince gives itself Multistrike; Rage hits harder every strike
 lk111	runeterra	Sumpworks Map	Vi	line	Elusive	Kaptain 1 Nov 2026 (L14): Elusive gets her big strike through; she levels from a 10+ damage strike
+lk112	runeterra	The Harrowing	Captain Farron	line	summon effect	Kaptain 2 Nov 2026: revived, its "when I am summoned" goes off again
+lk113	runeterra	Glimpse Beyond	Ceaseless Sentry	line	death effect	Kaptain 2 Nov 2026: killing it sets off its Last Breath
+lk114	runeterra	The Harrowing	Mighty Poro	none	brings it back	Claude 2 Nov 2026: a unit with no summon effect gains nothing from being revived (L14)
