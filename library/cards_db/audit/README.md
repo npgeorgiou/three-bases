@@ -1,48 +1,54 @@
-# Findings of the stopped check round (2 Nov 2026), and what is left of the check of 4 games
+# Handover: the line check of Runeterra, Slay the Spire, Faeria, Duelyst (2 Nov 2026)
 
-## Where these files come from
-Kaptain asked for the line check of Runeterra, Slay the Spire, Faeria and Duelyst. Claude ran the OLD checks of
-LINKS_PLAN.md step 3 (before the token limits): `links_audit.py <game>` (Check 1, the whole game: top 10 reasons, the 2% of
-cards with most partners, the 2% with fewest, the 2% with none beside 50 cards of their faction, 50 random lines, 50 lines
-of each of the 20 biggest reasons, the champions/Generals/legends) and `deck_audit.py <game>` (Check 2, per deck: top 5
-reasons, 10 cards with most partners, 10 with fewest, 10 with none beside 10 deck cards, 10 random lines, 5 lines of each of
-the 5 biggest reasons, special cards). Cards were shown by their TEXT. 16 readers (Opus) read pieces at once and used up
-Kaptain's 5-hour limit; each was then told to write what it had found and stop.
+Kaptain asked for the line check (LINKS_PLAN.md step 3) of these 4 games, then a fix of every error by its cause, the
+tests, a rewrite of the must-not cases in START_DATABASE.md "State", a push, and network.html sent to him.
+Read first: START_DATABASE.md, LINKS_PLAN.md step 3 with "Token economy" (the method changed on 2 Nov 2026), SYNTAX.md.
 
-Each file: the reader's piece, its causes (the wrong thinking, the rule it breaks, example lines), an unsure list and lines
-checked as correct. File names: r = Runeterra, s = Slay the Spire, f = Faeria, u = Duelyst. Line numbers are of the old
-output files, which are gone (the scripts changed); the causes and example lines stay valid, because no line was changed.
+## Done
+- Runeterra is READ in full with the new method (rows, one judgement per reason and rule, all decks). Not fixed yet.
+- An older round (card texts, random samples, before the token limits) read about half of all 4 games. Its causes are
+  merged and verified: `merged_old.md` (95 causes; its example lines are lines the old readers judged WRONG, and many of
+  those judgements were wrong: Kaptain, "The Dreadway -> Decimate is a combo that works"), `merged_with_rows.md` (each
+  example with both cards' rows, the line as it is now, its test cases), `verdict_1.md`-`verdict_4.md` (each cause checked
+  again: REAL 73, PARTLY 18 with the wrong and right examples named, NOT REAL 4). Fix only REAL causes and the wrong
+  examples of PARTLY ones.
+- Nothing is fixed yet in network.py; no line changed. Kaptain's case n300 (The Dreadway -> Decimate must stay) is added.
 
-| Game | Check | Files | Read |
-|---|---|---|---|
-| Runeterra | 1, whole game | r1-r5 | about 58%: top reasons, most/fewest/no partners all; random lines partly; 6 of the 20 biggest reasons; champions A to Janna |
-| Runeterra | 2, decks | r6, r7 | about 30% of the deck output |
-| Slay the Spire | 1 | s1 | about 45%: parts up to the random lines all; the 20 biggest reasons partly |
-| Slay the Spire | 2 | s2 | all |
-| Faeria | 1 | f1, f2 | about 56%: all but the second half of the 20 biggest reasons |
-| Faeria | 2 | f3, f4 | about 57% |
-| Duelyst | 1 | u1, u2 | all |
-| Duelyst | 2 | u3 | about 46% |
+## Files
+- `causes_r*/s*/f*/u*.md`: the old round's raw findings (merged into merged_old.md; keep only until fixed).
+- Runeterra, new method: `causes_a_runeterra.md` and `causes_d_runeterra_1.md`, `_3.md`, `_4.md` (first pass of the new
+  checks), `v3_causes_a_runeterra.md`, `v3_causes_d_runeterra_p2_1.md`-`_3.md` (the rest). About 77 raw causes, NOT merged
+  and NOT verified yet.
+- `READER_JOB.md`, `VERIFIER_JOB.md`: the job texts given to readers and verifiers (append the piece's path and the output
+  file). `../audit_pieces.py`: `split` cuts a check output into pieces read in one call; `verify` adds rows, current line
+  and cases under every example of a causes file.
 
-The files hold about 160 causes; many repeat across files (the same rule seen by several readers). They are not merged yet.
+## Steps left, in order
+1. Runeterra: merge the 8 Runeterra files above into distinct causes (one Sonnet agent, as merged_old.md was made), then
+   `audit_pieces.py verify <merged> <out>`, split it (`audit_pieces.py split`), and give each piece to a verifier
+   (`VERIFIER_JOB.md`, a fresh Opus agent per piece; 4 tool calls each).
+2. Fix every verified cause once, for every game (old verdicts + Runeterra), in ONE pass: decide each from L1-L22 before
+   changing code; one pair is checked with the line functions (LINKS_PLAN.md Lessons), never by a rebuild. Each fix gets
+   test cases (cases/network.tsv: one line that must go, one that must stay). Before: `dump_lines.py --table /tmp/tb0.tsv`;
+   after `links.py`: the diff, every gone and new reason group read (one line each). Then `check_all.py --no-load`,
+   `realworld.py`. Report per game how many lines each fix removed and added.
+3. Slay the Spire, then Faeria, then Duelyst, one game at a time: `links_audit.py <game>` and `deck_audit.py <game>`
+   (they skip lines in cases/links_checked.tsv), `audit_pieces.py split`, one Sonnet reader per piece (`READER_JOB.md`),
+   merge, verify, fix as in 2. 2 Nov 2026 sizes: whole-game checks about 6,000 (Slay the Spire), 8,000 (Faeria), 13,000
+   (Duelyst) tokens; deck checks about 23,000, 56,000, 32,000.
+4. After each game: `links_audit.py <game> --record`, so a rerun shows only new lines.
+5. Rewrite the must-not cases listed in START_DATABASE.md "State" (their reason is said by no deck any more).
+6. Commit, push, `network_page.py`, load network.html in a browser with no errors, send it to Kaptain. Delete this folder.
 
-## Later files (2 Nov 2026, evening)
-- `merged_old.md`: the 16 files above merged into 95 distinct causes. Its example lines are lines the OLD readers judged
-  WRONG; many of those judgements were themselves wrong (Kaptain: "The Dreadway -> Decimate" is a combo that works).
-- `merged_with_rows.md`: the same, with both cards' rows, the line as it is now and any test case under each example.
-- `verdict_1.md`-`verdict_4.md`: each cause checked again against the rows and L1-L22: REAL 73, PARTLY 18 (which examples
-  are wrong and which right is written there), NOT REAL 4. Fix only REAL causes and the wrong examples of PARTLY ones.
-- `causes_a_runeterra.md`, `causes_d_runeterra_*.md`: the NEW check of Runeterra (rows, Sonnet readers).
-
-## What is left (for whichever chat finishes the check)
-1. Merge the causes of all 16 files into one list of distinct causes. Check each against the rows of its example pairs
-   (LINKS_PLAN.md Lessons: call the line functions for that pair). Drop what the rows do not support.
-2. Fix every remaining cause once, for every game, with test cases (LINKS_PLAN.md "Tests"); `links.py`,
-   `check_all.py --no-load`, `realworld.py`.
-3. (done) links_audit.py and deck_audit.py print the NEW checks (LINKS_PLAN.md step 3).
-4. Run the new checks for the 4 games, one game at a time (Sonnet readers, findings saved as they go); fix what they find.
-   The new Check 1 is needed for all 4 games (the old one read random lines, not every reason). The new Check 2 is needed
-   for all decks of Runeterra, Faeria and Duelyst; Slay the Spire's decks were read whole by the old check, run the new one
-   anyway for its no-partner part with rows.
-5. Rewrite the must-not cases listed in START_DATABASE.md "State".
-6. Commit, push, send Kaptain network.html (`network_page.py`). Then delete this folder.
+## How to keep it cheap (what this round learned; also in LINKS_PLAN.md "Token economy" and PROCESS.md)
+- Scripts are free; reading costs. Check the printed token size before anyone reads.
+- The main chat reads no check output itself. Readers do, each in a fresh agent; the main chat reads only their short
+  verdicts. A long main chat is expensive: every tool call sends its whole conversation again. Start the fixing in a
+  fresh chat when this one is long.
+- A reader reads its whole piece (at most about 15,000 tokens) in one call, plus the rules and SYNTAX.md: 4 calls in all.
+  Reading in small parts paid for the start of the piece again with every part.
+- Judge each reason and rule once, with a few lines from different row shapes, not random samples.
+- Readers judge by rows, not texts (a text is read differently each time). Readers are Sonnet; verifiers are Opus.
+- Readers are often wrong: never fix from reader findings directly. Merge, then verify with a file that already holds
+  everything needed (rows, current line, cases), built by a script.
+- Save every finding to the repo as soon as it arrives.
