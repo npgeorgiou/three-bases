@@ -61,9 +61,8 @@ def show(cid):
     for r in rows: print('| ' + ' | '.join(x.replace('|', '/') for x in r) + ' |')
     print()
 
-def compact(cid, label=60):
+def compact(cid):
     """The card's rows on one line, for the line checks (SYNTAX.md): KW: keywords | WHEN event IF cond DO act who ... ; THEN ..."""
-    text = ' '.join(((lib.execute('select text from entities where id=?', (cid,)).fetchone() or [''])[0] or '').split())
     parts = []
     kws = [nm(k) for (k,) in c.execute('select keyword from card_keyword where card=?', (cid,))]
     if kws: parts.append('KW: ' + ', '.join(kws))
@@ -78,12 +77,11 @@ def compact(cid, label=60):
             effs.append(('OR ' if link == 'or' else 'THEN ' if effs else '') + e)
         cd = conds(aid)
         parts.append('WHEN ' + event(ev) + (f' [{lim}]' if lim else '') + (' IF ' + cd if cd else '') + ' DO ' + ' '.join(effs))
-    lab = text if len(text) <= label else text[:label].rsplit(' ', 1)[0] + '...'
-    return ' | '.join(parts) + f'  «{lab}»' if parts else f'(no rows)  «{lab}»'
+    return ' | '.join(parts) if parts else '(no rows)'
 
 
 HEAD = """# How to read a card's rows (the line checks; made by `rows.py --syntax`, do not edit by hand)
-Each card is printed on one line: `KW: <keywords> | WHEN ... IF ... DO ... | WHEN ...  «start of the card text»`.
+Each card is printed on one line: `KW: <keywords> | WHEN ... IF ... DO ... | WHEN ...`. The card reading is done: judge lines by the rows only.
 - `KW:` the card's keywords. What a keyword does is its own entry's rows, not repeated on the card.
 - `WHEN <event> [by <actor>] [of <object>] [<limit>]`: one ability and what sets it off. `always` = on while its IF holds.
 - `IF <test> ...`: conditions, joined by `;`. `event_count <event> ... ge 2 this_game` = the event happened 2+ times this game.
@@ -93,7 +91,6 @@ Each card is printed on one line: `KW: <keywords> | WHEN ... IF ... DO ... | WHE
   picks; `all enemy unit`; `self` = the card itself; `it` = the target of the effect before. A filter is `[attr op value]`:
   `[card in Zed]` = the card named Zed; `[cost ge 6]` = cost 6 or more.
 - Numbers: `power=1, health=1` (stats given); `amount=2`; `stat power of (self)` = my power.
-- «...» is the start of the card text, only to notice a row that does not say what the card says; judge lines by the rows.
 Values below: field, value, meaning (vocab.tsv). Only values the database uses.
 """
 
