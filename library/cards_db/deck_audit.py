@@ -8,6 +8,8 @@
   g) 5 random lines of each of the 5 most used reasons: is something wrong or missing?
   h) the deck's special cards (champions, heroes, Generals, legends), all their lines: is something wrong or missing?
   i) a line printed before (in an earlier part or deck, or read before: cases/links_checked.tsv) is not printed again.
+Token limit (Kaptain, 2 Nov 2026): a card's lines show at most 100 partners, a share from each reason. The estimated tokens of
+the output are printed to stderr.
 A card's text is printed the first time the card appears, later "(text above)". Read every printed line against both texts.
 Usage: deck_audit.py <game> [deck name part] > d.txt"""
 import collections, csv, os, random, re, sqlite3, sys
@@ -15,9 +17,11 @@ HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import network_page, source
 LINE = dict(re.findall(r"(\w+):\['#\w+','([^']+)'\]", network_page.PAGE.split('const LINE=')[1].split(';')[0]))  # the page's kind names
 SPECIAL_CAT, SPECIAL_RARITY = ('hero', 'leader'), ('legendary', 'champion', 'Champion')
+from links_audit import spread, OUT
 
 
 def main():
+    sys.stdout = OUT
     game, part = sys.argv[1], (sys.argv[2].lower() if len(sys.argv) > 2 else '')
     c = sqlite3.connect(os.path.join(HERE, 'cards.sqlite')); lib = source.lib()
     rows = [r for f in ('decks.tsv', os.path.join('cases', 'decks.tsv'))
@@ -44,10 +48,10 @@ def main():
             return True
         partners = collections.defaultdict(set)
         for l in d['lines']: partners[l['from']].add(l['to']); partners[l['to']].add(l['from'])
-        def card_lines(i):
+        def card_lines(i):  # at most 100 partners, a share from each reason
             print(f"{nm[i]} ({len(partners[i])} partners): {tx(i)}")
-            for l in d['lines']:
-                if i in (l['from'], l['to']): show(l)
+            ls = [l for l in d['lines'] if i in (l['from'], l['to'])]
+            for l in spread(R.sample(ls, len(ls)), lambda l: l['why']): show(l)
         by = collections.defaultdict(list)
         for l in d['lines']: by[l['why']].append(l)
         top = sorted(by.items(), key=lambda x: -len(x[1]))
@@ -80,6 +84,7 @@ def main():
                 if n == 5: break
         print('-- h) special cards, all their lines: is something wrong or missing?')
         for i in sorted((i for i in nm if i in special), key=lambda i: nm[i]): card_lines(i)
+    print(f'about {OUT.n // 4} tokens printed', file=sys.stderr)
 
 
 if __name__ == '__main__': main()

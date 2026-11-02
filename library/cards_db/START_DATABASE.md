@@ -165,7 +165,8 @@ Read: any FAILED line, and the audit lists. After a change to network.py only: `
    `design_questions.py` (read the new game's answers).
 7. Done when PROCESS.md step 5 holds; Kaptain checks the deck pages (`network_page.py` makes network.html).
 
-**C. Checking lines (after any change to lines, and whenever Kaptain says check):** scripts plus Claude reading.
+**C. Checking lines (after any change to lines, and whenever Kaptain says check):** scripts plus Claude reading. Keep
+LINKS_PLAN.md "Token economy" (at most 100 cards per list, one game at a time, readers save findings as they go).
 1. Before the change: `dump_lines.py /tmp/before.tsv`. After: `dump_lines.py /tmp/after.tsv` and
    `dump_lines.py --diff /tmp/before.tsv /tmp/after.tsv`. Read every gone and new reason group, in every game.
 2. `deck_audit.py <game>` for each game whose lines changed (the deck check of LINKS_PLAN.md step 3). Read all of

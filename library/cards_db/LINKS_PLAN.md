@@ -35,8 +35,8 @@ Order: Runeterra (Kaptain knows it best), then Slay the Spire, Faeria, Duelyst, 
 the Breach. Fix every error by its cause, for every game, never card by card (START_DATABASE.md rule 1).
 
 Each game gets two checks. Both scripts print a card's text only the first time, and skip lines read before
-(cases/links_checked.tsv) or already printed. The scripts still print the old amounts (30 cards, 15 random cards...) and no
-top reasons: before the first check, change links_audit.py and deck_audit.py to print exactly the parts below, in that order.
+(cases/links_checked.tsv) or already printed. They print exactly the parts below, in that order, within the token limits under
+"Token economy".
 
 **Check 1, the whole game:** `links_audit.py <game> > /tmp/a.txt` (Kaptain, 2 Nov 2026, word for word)
 - a) the top 10 reasons for links: Are we linking too much for generic reasons, against the rule "only links that create
@@ -80,6 +80,19 @@ top reasons: before the first check, change links_audit.py and deck_audit.py to 
    until a round finds no error.
 6. `check_all.py --no-load` (about 1.5 minutes, all games' tests), `realworld.py`, commit, push, report.
 Everything the checks print is read; if something was not read, say so plainly.
+
+**Token economy (Kaptain, 2 Nov 2026; a chat used up his 5-hour limit on one round of reading; every chat that runs these
+checks, also for a new import, keeps this):**
+- No list holds more than 100 cards. Where a part has more, the scripts take a share from each reason (start cards: their main
+  reason; partners: the reason of the line; compared cards: their faction), so every reason stays seen. Both scripts print
+  "about N tokens printed" to stderr: read that number before reading the output.
+- What made the cost: four games' output was 2.5 MB (about 620,000 tokens), read by 16 readers at once on the strongest
+  model, each also reading the rules and looking up card texts. Most of it was part g (50 lines with both texts for each of
+  20 reasons) and the champions' lines.
+- Readers: one game at a time, never all games at once. A reader appends its findings to its file after every piece it reads
+  (about 150 lines), with the line range, so a stop loses nothing. It reads only START_DATABASE.md L1-L22, not other docs.
+- A reader reports causes, not single lines; once a reason group is judged, it does not look up more texts for it.
+- Findings of a round that stopped early are kept in `audit/` (one file per reader part) until their causes are fixed.
 
 **Lessons (a chat lost an hour on these; do not repeat them):**
 - Decide every rule from Kaptain's rules (START_DATABASE L1-L22) BEFORE changing code. Never fix, rebuild, look, fix again in
