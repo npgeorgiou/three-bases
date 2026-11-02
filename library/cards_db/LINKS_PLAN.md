@@ -96,6 +96,9 @@ checks, also for a new import, keeps this):**
   START_DATABASE.md L1-L22 first.
 - Readers run on Sonnet (Kaptain, 2 Nov 2026); Claude checks every cause they report against the rows before fixing.
 - A reader reports causes, not single lines; once a reason group is judged, it does not look up more texts for it.
+- Fixes are made in the main chat, never by an agent (Kaptain, 3 Nov 2026: a fixer agent ran 42 minutes alone, used half his
+  tokens and changed nothing). Agents only read (readers, verifiers) with a fixed number of calls; never start an agent whose
+  number of calls is not fixed in its job text.
 - Findings of a round that stopped early are kept in `audit/` (one file per reader part) until their causes are fixed.
 
 **Lessons (a chat lost an hour on these; do not repeat them):**

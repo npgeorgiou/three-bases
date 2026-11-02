@@ -27,7 +27,7 @@ Read first: START_DATABASE.md, LINKS_PLAN.md step 3 with "Token economy" (the me
 1. Runeterra: merge the 8 Runeterra files above into distinct causes (one Sonnet agent, as merged_old.md was made), then
    `audit_pieces.py verify <merged> <out>`, split it (`audit_pieces.py split`), and give each piece to a verifier
    (`VERIFIER_JOB.md`, a fresh Opus agent per piece; 4 tool calls each).
-2. Fix every verified cause once, for every game (old verdicts + Runeterra), in ONE pass: decide each from L1-L22 before
+2. Fix in the main chat, never by an agent (LINKS_PLAN.md "Token economy"). Fix every verified cause once, for every game (old verdicts + Runeterra), in ONE pass: decide each from L1-L22 before
    changing code; one pair is checked with the line functions (LINKS_PLAN.md Lessons), never by a rebuild. Each fix gets
    test cases (cases/network.tsv: one line that must go, one that must stay). Before: `dump_lines.py --table /tmp/tb0.tsv`;
    after `links.py`: the diff, every gone and new reason group read (one line each). Then `check_all.py --no-load`,
