@@ -34,55 +34,54 @@ L14-L20 in START_DATABASE.md), so every game is checked again.
 Order: Runeterra (Kaptain knows it best), then Slay the Spire, Faeria, Duelyst, Stormbound, Monster Train, Inscryption, Into
 the Breach. Fix every error by its cause, for every game, never card by card (START_DATABASE.md rule 1).
 
-Each game gets two checks. Both scripts print a card's text only the first time, and skip lines read before
-(cases/links_checked.tsv) or already printed. They print exactly the parts below, in that order, within the token limits under
-"Token economy".
+Each game gets two checks (Kaptain, 2 Nov 2026; this replaces the old parts a-i, which printed 2.5 MB for four games). A
+wrong line always comes from one rule, and each rule shows as one reason ("kills it for its death effect"), so a reason is
+judged once, not by many random lines. Cards are shown by their rows (one line each, SYNTAX.md), never by their text.
+**The scripts do not do this yet: links_audit.py and deck_audit.py still print the old parts (with the 100-card limit).
+Change them to the parts below before the next check.**
 
-**Check 1, the whole game:** `links_audit.py <game> > /tmp/a.txt` (Kaptain, 2 Nov 2026, word for word)
-- a) the top 10 reasons for links: Are we linking too much for generic reasons, against the rule "only links that create
-  interact with or strengthen the cards' abilities"?
-- b) the 2% cards with the most partners, all their lines (many partners usually means a rule that fires for every card: L1,
-  L2): Are we linking too much for generic reasons, against the rule?
-- c) the 2% cards with the fewest partners (exclude those with 0 partners), all their lines, juxtaposed to your knowledge of
-  the game: is a line missed?
-- d) the 2% cards with the no partners, all their lines, juxtaposed to your knowledge of the game: is a line missed?
-- e) the 2% cards with no partner, beside 50 random cards of the faction of the examined cart: is a line missed?
-- f) 50 random lines: Is something wrong/missing?
-- g) 50 random lines of each of the 20 most used reasons: Is something wrong/missing?
-- h) the special cards of every deck (champions, heroes, Generals, legends), all their lines, juxtaposed to your knowledge of
-  the game: Is something wrong/missing?
-- i) Of course, as you go down these steps, exclude links that are examined by previous steps
+**Check 1, the whole game:** `links_audit.py <game>`. Its only question: is this reason's rule right?
+- For every reason of the game: one line, with both cards' rows. Pick the pair whose two cards have the fewest rows (quick to
+  read). How many reasons: OPEN, Kaptain decides: every reason, or only the biggest reasons that hold 90% of the lines (2 Nov
+  2026 numbers: Runeterra 471 reasons, 104 hold 90%; Slay the Spire 94 / 32; Faeria 105 / 37; Duelyst 205 / 80).
+- For the 20 biggest reasons: 4 more lines, each from a different card than the lines before (a rule right for one card can
+  fire too widely for others).
+- No missed-line part in the game check (Kaptain, 2 Nov 2026): cards with no partner beside random cards of their faction
+  found little; decks are built for cards to work together, so missed lines are looked for in Check 2.
+- A line printed or read before (cases/links_checked.tsv) is not printed again.
 
-**Check 2, every deck:** `deck_audit.py <game> > /tmp/d.txt`, for each deck of the game:
-- a) the top 5 reasons for links: Are we linking too much for generic reasons, against the rule?
-- b) the 10 cards with the most partners, all their lines (many partners usually means a rule that fires for every card: L1,
-  L2): Are we linking too much for generic reasons, against the rule?
-- c) the 10 cards with the fewest partners (exclude those with 0 partners), all their lines, juxtaposed to your knowledge of
-  the game: is a line missed?
-- d) the 10 cards with the no partners at all, all their lines, juxtaposed to your knowledge of the game: is a line missed?
-- e) the 10 cards with no partner, beside 10 random cards of the examined deck: is a line missed?
-- f) 10 random lines: Is something wrong/missing?
-- g) 5 random lines of each of the 5 most used reasons: Is something wrong/missing?
-- h) the special cards of every deck (champions, heroes, Generals, legends), all their lines, juxtaposed to your knowledge of
-  the game: Is something wrong/missing?
-- i) Of course, as you go down these steps, exclude links that are examined by previous steps
+**Check 2, every deck:** `deck_audit.py <game>`, for ALL decks of the game (Kaptain, 2 Nov 2026). Per deck only:
+- a) the deck's cards with no partner inside the deck, each beside 10 cards of the deck: first the deck's cards whose rows
+  name the same thing (the same keyword, card name, type or event), then random deck cards up to 10. Is a line missed?
+- b) the deck's cards with the fewest partners (at least one), all their lines: in a deck built to work together, one
+  partner is suspicious. Is a line missed?
+- c) the deck's special cards (champions, heroes, Generals, legends): one line per reason. Is something wrong or missing?
+- No top reasons, most partners, random lines or lines per reason in the deck check: Check 1 judges every reason.
+- A line or card printed in an earlier deck is not printed again.
+
+**Before Check 2:** run `realworld.py <game>` (a script, no tokens): every combo a guide names that has no line is a missed
+line found for free. Readers then look only where realworld.py has no case.
 
 **How to work (fast, few tokens):**
 1. `links.py` (all games, about 1 minute), then save the lines as they are now: `dump_lines.py --table /tmp/tb0.tsv` and
    `dump_lines.py /tmp/d0.tsv`.
-2. Run both checks. Read ALL their output, in parts of about 150 lines, as a player, against the card texts.
-   Write each error down in one sentence (the wrong thinking). Do not fix yet.
-3. Fix each cause once, for every game (network.py, or a fixes/ script for a wrong reading). A change to records or refs.py
-   needs `check_all.py <game>`; a change to network.py only needs `links.py`.
+2. Run both checks for one game. Check "about N tokens printed" first. Readers (Sonnet; pieces of about 300 lines with a
+   fresh reader per piece is Claude's suggestion, not decided) read ALL the output against the rows, write each error as a cause (the wrong thinking in one sentence),
+   and save after every piece. Do not fix yet.
+3. Claude merges the causes of all pieces, checks each against the rows (call the line functions for that pair, see
+   Lessons), and fixes each cause once, for every game (network.py, or a fixes/ script for a wrong reading). A change to
+   records or refs.py needs `check_all.py <game>`; a change to network.py only needs `links.py`.
 4. Save the lines again and read the differences: `dump_lines.py --diff /tmp/tb0.tsv /tmp/tb1.tsv` (and the deck files).
-   Every gone and new group, against the texts.
+   Every gone and new reason group, one line each.
 5. `links_audit.py <game> --record` (marks what was read). Run both checks again: they now show only new lines. Repeat
    until a round finds no error.
-6. `check_all.py --no-load` (about 1.5 minutes, all games' tests), `realworld.py`, commit, push, report.
+6. `check_all.py --no-load` (about 3 minutes, all games' tests), `realworld.py`, commit, push, report.
 Everything the checks print is read; if something was not read, say so plainly.
 
 **Token economy (Kaptain, 2 Nov 2026; a chat used up his 5-hour limit on one round of reading; every chat that runs these
 checks, also for a new import, keeps this):**
+- Claude's suggestion, not decided: pieces of about 300 lines, a fresh reader per piece (a reader's cost grows with everything
+  it has read).
 - No list holds more than 100 cards. Where a part has more, the scripts take a share from each reason (start cards: their main
   reason; partners: the reason of the line; compared cards: their faction), so every reason stays seen. Both scripts print
   "about N tokens printed" to stderr: read that number before reading the output.

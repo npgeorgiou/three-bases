@@ -186,15 +186,16 @@ LINKS_PLAN.md "Token economy" (at most 100 cards per list, one game at a time, r
 - Real-world cases: 238 of 261 hold.
 - Lines after rules L18-L22 (2 Nov 2026): Runeterra 269,314; Faeria 18,753; Duelyst 15,415; Slay the Spire 10,552; Into
   the Breach 6,570; Monster Train 3,439; Stormbound 3,066; Inscryption 1,165. The 20 biggest reasons of every game were read
-  once against L1-L22; the full checks of LINKS_PLAN step 3 are not done yet.
+  once against L1-L22; the check of LINKS_PLAN step 3 stopped half way for 4 games (audit/README.md).
 - Known open: a card placed by its text near the leader (Conscript) draws no line to a card acting near the leader
   (Fealty); Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain). Monster
   Train's Olde Magic is built by the player at an event: its text and record (read/monster_train/event_cards.jsonl) list the
   choices the wiki gives, with no numbers. Stormbound's Fort of Ebonrock has no ability (a plain structure).
 
 ## Open work, in Kaptain's order
-1. Check every line again, one game at a time, Runeterra first: LINKS_PLAN.md step 3 (a whole-game check and a deck check
-   per game; first change links_audit.py and deck_audit.py to print the parts listed there). Fix by cause, for every game.
+1. Finish the line check of Runeterra, Slay the Spire, Faeria and Duelyst (Kaptain, 2 Nov 2026). Done so far and the steps
+   left: `audit/README.md`. The check method changed on 2 Nov 2026 to save tokens: LINKS_PLAN.md step 3 and "Token economy".
+2. Then the same check for Stormbound, Monster Train, Inscryption, Into the Breach.
 
 ## When you finish
 Commit and push every finished step. Update "State" and "Open work" above (keep them short: no history; git log has it).
