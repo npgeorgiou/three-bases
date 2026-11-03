@@ -101,7 +101,7 @@ nfa23	faeria	Bargain (Krog)	Red Devil	Krog, the Ogre King	line	cheaper:	Kaptain:
 nfa24	faeria	Bargain (Krog)	Krog, the Ogre King	Krog's Dinner	none		Kaptain: the Dinner only destroys itself when Krog comes; it needs nothing from Krog
 nfa25	faeria	Yellow Monstrosity	Soul Drain	Shaytan Monstrosity	none	your units die	Kaptain: a drain is played on enemies; it is no friendly death
 nfa26	faeria	Yellow Monstrosity	Flash Wind	Mistral Guide	line	moves:	Kaptain: moving Mistral Guide decides where the units summoned next to it get Dash and Flying
-nfa27	faeria	Blue Jump	Battle Toads	Wavecrash Colossus	line	moves:	Kaptain: Battle Toads and Sunken Tower are in the deck for a reason: units and lands forward reach the enemy wells
+nfa27	faeria	Blue Jump	Battle Toads	Wavecrash Colossus	none	moves	Kaptain 3 Nov 2026: a unit that moves itself gives no line to cards that depend on positions (was: Battle Toads frogs reach the enemy wells)
 nfa28	faeria	Blue Jump	Sunken Tower	Wavecrash Colossus	line	moves:	Kaptain: as nfa27
 nfa29	faeria	Blue Jump	Gabrian Archon	Wavecrash Colossus	none	stronger:	Kaptain: Archon does not help the Colossus; the Colossus helps the Archon; 30 Oct: the complaint was "makes it stronger"; Archon has Charge 2, so it may still move into place (Claude, asked Kaptain)
 nfa30	faeria	Bargain (Krog)	Bold Bargainer	Krog, the Ogre King	line	cheaper:	Kaptain: a 7 cost cut must help the expensive cards
@@ -160,7 +160,7 @@ ndu38	duelyst	Cassyva Replace Abomination	Letigress	Punish	none		Kaptain: as ndu
 ndu39	duelyst	Shidai Artifacts	Cyclone Mask	Shidai Stormblossom	line		Kaptain: Cyclone Mask gives the General Ranged
 ndu40	duelyst	Argeon Dawn's Eye aggro	Argeon Highmayne	Roar	line		Kaptain: the General's spell is its own card
 ndu41	duelyst	Argeon Dawn's Eye aggro	Roar	Windblade Adept	line		Kaptain: as ndu40, its effects sit on the spell
-ndu42	duelyst	Argeon Dawn's Eye aggro	Azurite Lion	Holy Immolation	line		Kaptain: Celerity moves the Lion next to enemies
+ndu42	duelyst	Argeon Dawn's Eye aggro	Azurite Lion	Holy Immolation	none	moves	Kaptain 3 Nov 2026: a unit that moves itself gives no line to cards that depend on positions (was: Celerity moves the Lion next to enemies)
 ndu43	duelyst	Argeon Dawn's Eye aggro	Azurite Lion	Windblade Adept	none		Claude: the Lion moving is no General moving (reason rewritten 30 Oct 2026: the old wording was said by no line, so the case could not fail)
 ndu44	duelyst	Ciphyron Build	Rescue-RX	Timekeeper	none		Kaptain: Timekeeper helps the buildings, it waits for nothing
 ndu45	duelyst	Ciphyron Build	Timekeeper	Rescue-RX	line		Kaptain: as ndu44
@@ -321,3 +321,13 @@ n321	runeterra	Greathorn Companion, Greenfang Warden	Greathorn Companion	Greenfa
 n322	runeterra	Greathorn Companion, Angel	Greathorn Companion	Angel	none	enemy player	audit 3 Nov 2026: a second attack gets no unit past blockers (L4)
 n325	runeterra	Might, Scorched Earth	Might	Scorched Earth	none	more damage	audit 3 Nov 2026: Overwhelm deals no unit damage (L4, L18)
 n326	runeterra	Warlord's Palace, Akshan	Warlord's Palace	Akshan	none	; also	audit 3 Nov 2026: one fact said once (L10)
+n327	runeterra	Mirror Image, Omen Hawk	Mirror Image	Omen Hawk	line	summon effect	audit 3 Nov 2026: a copy put into play sets off its summon effect (L19)
+n328	runeterra	Feel The Rush, Gangplank	Feel The Rush	Gangplank	line	summon effect	audit 3 Nov 2026: champions put into play: their summon effect goes off (L17)
+n329	runeterra	Angel, Cunning Kitten	Angel	Cunning Kitten	none	creates	audit 3 Nov 2026: Angel creates Coins, not the Kitten (L20)
+n330	runeterra	Acoustician, Norra	Acoustician	Norra	none	creates	audit 3 Nov 2026: Acoustician creates spells; Norra counts created units (L20)
+n331	runeterra	Noxian Fervor, Scrappy Bomb	Noxian Fervor	Scrappy Bomb	none	kills it	audit 3 Nov 2026: Noxian Fervor hits units; Scrappy Bomb is a landmark (L8)
+n332	runeterra	Nautilus, Alpha Wildclaw	Nautilus	Alpha Wildclaw	none	copies	audit 3 Nov 2026: a copy into the deck is generic (L19)
+n333	runeterra	Avarosan Sentry, Trundle	Avarosan Sentry	Trundle (level 2)	none	fills your hand	audit 3 Nov 2026: Trundle counts 8+ cost cards in hand; a top-card draw brings none (L1b)
+n334	runeterra	Mageseeker Junior, Assembly Line	Mageseeker Junior	Assembly Line	none	pays for it	audit 3 Nov 2026: setting cheap spells to cost 3 raises costs (L10)
+n335	runeterra	Rummage, Jinx	Rummage	Jinx	none	empties your hand	audit 3 Nov 2026: Rummage draws as many as it discards (L4)
+n336	runeterra	Senna, Absorb Soul	Senna (level 2)	Absorb Soul	line	cheaper	audit 3 Nov 2026: Drain damages, so Senna's cost cut fits (verdict rt 41)

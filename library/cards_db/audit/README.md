@@ -19,20 +19,15 @@ Read first: START_DATABASE.md, LINKS_PLAN.md step 3 with "Token economy" and "Le
 - `../pair.py <game> "A" "B" ...`: why one line exists (the network.py line of each reason). Use it for every cause.
 
 ## Done (3 Nov 2026)
-- Fixed: old causes 1-11, 13-16, 25, part of 28-29; Runeterra causes 1-6, 8-14, 16-18, 21 (partly where fixlog.md says).
-  Test cases n301-n322, n325, n326. All network.tsv cases pass except the ones below.
-- Pairs removed against the table before the fixes (links.sqlite, all lines that can exist): Runeterra 21,882 (83 new),
-  Faeria 6,809, Duelyst 1,281, Slay the Spire 130, Stormbound 107, Into the Breach 90, Monster Train 39, Inscryption 4.
-  Faeria's drop is mostly the move rule above.
-
-## Open, for Kaptain to decide (his own cases now fail under his 3 Nov rule)
-1. ndu42 (Kaptain: "Celerity moves the Lion next to enemies", Azurite Lion -> Holy Immolation) and nfa27 (Kaptain: Battle
-   Toads' Jump frogs reach the enemy wells) fail: under his 3 Nov rule a unit moving itself gives no line. Ask him which holds.
-2. Real-world case Zealous Crusader -> Khalim's Prayer (Faeria guide combo) broke for the same reason (Crusader's own Charge).
+- Fixed: see fixlog.md (old causes 1-11, 13-16, 25, 34, parts of 28-29; Runeterra 1-6, 8-14, 16-18, 21, 25, 28-29, 32, 40, 42, 48,
+  51). Test cases n301-n336. All network.tsv cases pass except Stormbound csb09-csb13 (old, not traced).
+- Pairs removed (and added) against the table before the fixes (links.sqlite): Runeterra 25,603 (2,765 new), Faeria 6,946,
+  Duelyst 1,387, Slay the Spire 289, Stormbound 156, Into the Breach 90, Monster Train 45, Inscryption 4. Real-world: 237 of 261
+  (Zealous Crusader -> Khalim's Prayer is gone by Kaptain's 3 Nov rule).
 
 ## Steps left, in order
 1. Fix the causes NOT REACHED in fixlog.md, in one pass: decide each from L1-L22, check with pair.py, edit network.py, add one
-   `none` and one `line` case per cause (cases/network.tsv, next id n327). Then `links.py`, `dump_lines.py --table` and
+   `none` and one `line` case per cause (cases/network.tsv, next id n337). Then `links.py`, `dump_lines.py --table` and
    `--diff /tmp/tb0.tsv` (make tb0 first from the commit before 3 Nov's fixes if /tmp is empty), `check_all.py --no-load`,
    `realworld.py` (237 of 261 hold now; 238 before).
 2. Rewrite the must-not cases whose reason no deck says any more (check_all.py lists them; START_DATABASE.md "State").

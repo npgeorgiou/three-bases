@@ -529,6 +529,14 @@ def lines_of(c, game):
                 # that hits other enemies (Vek Hormones) waits for what few cards do: turning the enemy's attack (Spartan Shield)
                 if not kinds_fit(mkind, tkind): continue
                 if m in home_m and h in ('moves', 'moves_onto') and 'position enemy' in (tw or ''): continue
+                if tpick == 'self' and mkind in KIND_CAT and mkind != 'player' and cards[t]['cat'] not in KIND_CAT[mkind]: continue  # Noxian Fervor hits units:
+                # Scrappy Bomb, a landmark, is never its target (L8)
+                if h == 'created' and role == 'state' and not tpick and not tkind: tpick = 'self'  # "if I was created" (Cunning Kitten)
+                mcats = {x for p_ in (mw or '').split(';') if p_.startswith(('category is ', 'category in ')) for x in p_.split(' ')[2:]}
+                if mcats and tkind in KIND_CAT and not {y for x in mcats for y in CAT.get(x, {x})} & (KIND_CAT[tkind] | {tkind}): continue  # Acoustician creates spells, Norra
+                # counts created units (L20)
+                if tpick == 'self' and h in ('created', 'summoned', 'drawn') and mref and mref != t: continue  # Angel creates Coins, never
+                # the Cunning Kitten that waits to be created (L20)
                 if tpick == 'self' and mkind == 'player' and h in ('moves', 'moves_onto') and cards[t]['cat'] != 'leader': continue  # done to my General or player, never to
                 # this card (L7: Mist Walking moves the General, not Gore Horn)
                 if mpick == 'self' and tpick == 'self': continue  # each card about itself ("when I level up"): no link between two cards
@@ -638,9 +646,12 @@ def lines_of(c, game):
     for i, e in c.execute("select card, event from flat_when where origin='own' and obj_pick='self' and event in ('summoned','played')"): entry[i].add(e)
     for m, act, k, w, zone in c.execute("""select card, act, on_kind, on_with, on_zone from flat_do where origin='own' and card_ref is null
             and coalesce(on_side,'mine') in ('mine','any') and coalesce(on_pick,'') not in ('self','it') and ((act='revive') or
-            (act in ('summon','play_card') and on_zone in ('deck','deck_top','hand','discard')))""").fetchall():
+            (act in ('summon','play_card') and on_zone in ('deck','deck_top','hand','discard','everywhere')) or
+            (act='copy' and on_zone='board' and coalesce(eff_zone,'board')='board'))""").fetchall():  # Feel The Rush summons champions
+            # from anywhere; Mirror Image copies a unit into play: its summon effect goes off (L17, L19)
         if m not in cards: continue
         want = {'played', 'summoned'} if act == 'play_card' else {'summoned'}
+        if act == 'copy': act = 'summon'
         hits = [t for t, x in cards.items() if t != m and entry.get(t, set()) & want and matches(c, game, x, k if k in KIND_CAT else 'unit', w)]
         for t in hits: out[(m, t)].append(('waits', 0.5 / len(hits), {'revive': 'brings it back: its summon effect goes off',
                                            'summon': 'puts it into play: its summon effect goes off', 'play_card': 'plays it: its effect goes off'}[act]))
@@ -1160,6 +1171,7 @@ def aimed(c, game, nodes, broad):
     rows, makers = aimed_rows(c, game); gains = self_gains(c, nodes)
     for a, act, kind, w, kw, rule, narrowed, ps, kv in rows:
         if a not in nodes or (not narrowed and not broad): continue
+        if act == 'cost_set' and re.search(r'cost (lt|le) ', w or ''): continue  # it raises costs (Mageseeker Junior): no help
         k = 'any' if kind in ('effect', 'card') else 'board' if kind in ('any', 'anything') else kind
         if kind == 'effect':  # an effect picked by its keyword ("Trap effects"): the cards that carry the keyword
             w = ';'.join(p for p in (w or '').split(';') if p.startswith('keyword'))
@@ -1189,7 +1201,10 @@ def aimed(c, game, nodes, broad):
         n = len(makers[(act, kind, kw, rule if rule in (True, False, 'boost') else True)])
         if rule == 'boost':
             kind_, x, why = BOOST.get(act, ('boosts', 1.0, 'lets it do more'))
-            for b in hits: out[(a, b)].append((kind_, x / n, (use_of(c, game, b, act, kw, ps, w) or why) if act == 'copy' or not sharp else why))  # a copy
+            for b in hits:
+                y_ = use_of(c, game, b, act, kw, ps, w) if act == 'copy' or not sharp else why
+                if act == 'copy' and not y_: continue  # a copy into hand or deck is one more card: no line (L19: Nautilus -> Alpha Wildclaw)
+                out[(a, b)].append((kind_, x / n, y_ or why))  # a copy
             # says why it counts (its summon or death effect goes off)
             for k in (int(p.split(' ')[2]) for p in (w or '').split(';') if p.startswith(('keyword is ', 'keyword in ')) and p.split(' ')[2].isdigit()
                       and (kind in ('keyword', 'effect', 'card', 'any') or int(p.split(' ')[2]) == kw)):  # the keyword made stronger, not a filter on the
@@ -1509,6 +1524,7 @@ def played_lines(c, game, nodes, broad):
                              or not broad or most_cards(c, game, k)):  # "whenever you play a spell" where most cards are spells
             # (Monster Train's Incant): being one is no interaction (L1; Kaptain 1 Nov 2026); a minority kind is a deck choice (Annie)
             if h == 'played' and role == 'trigger' and broad:  # "whenever you play a card" (A Thousand Cuts): not every card, but
+                # Kaptain's nst26 keeps it (Blade Dance -> A Thousand Cuts)
                 # the cards that make more cards to play (Blade Dance's Shivs) set it off more
                 mk = {a for a, ref, ok in c.execute(f"""select distinct card, card_ref, on_kind from flat_do where origin='own' and act in ('create','copy')
                       and coalesce(on_side,'mine')='mine' and coalesce(on_zone,'hand') in ('hand') and card in ({marks})""", list(nodes))
@@ -1809,8 +1825,11 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
         # Scrawl): the fewer cards in hand, the more it draws
         if any(a_ in ('damage', 'lose_life') and s_ == 'mine' for a_, p_, s_ in dos): continue  # "lose 1 HP per card in hand" (Regret):
         # a full hand hurts it, it wants none
-        helpers = hand(('discard',), 0) if few else hand(('create', 'copy', 'return_to_hand'), 0, 'has_keyword') | hand(('draw',), 1)  # a draw goes to hand
-        named = [p_ for p_ in (ow_ or '').split(';') if p_.split(' ')[:2] in (['type', 'is'], ['card', 'is'], ['name_has', 'is'])]
+        refill = {a for (a,) in c.execute("""select d.card from flat_do d join flat_do x on x.card=d.card and x.ability=d.ability where
+                  d.act='discard' and x.act in ('draw','create')""")}  # Rummage discards 2 and draws 2: the hand is never empty (L4)
+        helpers = (hand(('discard',), 0) - refill) if few else hand(('create', 'copy', 'return_to_hand'), 0, 'has_keyword') | hand(('draw',), 1)  # a draw goes to hand
+        named = [p_ for p_ in (ow_ or '').split(';') if p_.split(' ')[:2] in (['type', 'is'], ['card', 'is'], ['name_has', 'is']) or p_.startswith('cost ')]
+        # "cards that cost 8+ in hand" (Trundle level 2): a draw of the top card brings none (L1b)
         if named and not few:  # "for each Pirate in your hand" (Lucky Charmers): only what brings such cards fills it
             helpers = {a for a in helpers if any(all(p_ in (w_ or '') for p_ in named) for (w_,) in c.execute(
                        "select on_with from flat_do where card=? and act in ('draw','create','copy','return_to_hand')", (a,)))}
@@ -1871,6 +1890,7 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
             n_ = float(x.lstrip('-')) if act != 'cost_set' and x.lstrip('-').replace('.', '', 1).isdigit() else None
             if act == 'mana_gain' and x == 'full': n_ = 99.0  # "refill your mana" / "replenishes Energy up to the maximum" (Extra Battery) pays any card
             if act == 'cost_change' and not x.startswith('-'): continue  # a cost raised pays nothing
+            if act == 'cost_set' and re.search(r'cost (lt|le) ', w_ or ''): continue  # "spells under 3 cost 3" (Mageseeker Junior) raises costs
             if act in ('mana_gain', 'max_mana_change') and res in ('secondary_resource', 'gem', 'lane_resource'): continue  # Bones, a Mox gem: the resource lines say
             # it, for the cards paid in that resource (Hoggy Bank's 4 Bones pay no Energy card: Gembound Ripper)
             if act in ('mana_gain', 'max_mana_change') and res == 'spell_mana': w_ = ';'.join(x_ for x_ in (w_, 'category is spell') if x_)

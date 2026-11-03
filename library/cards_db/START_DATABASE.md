@@ -180,13 +180,13 @@ LINKS_PLAN.md "Token economy" (at most 100 cards per list, one game at a time, r
 ## State (3 Nov 2026)
 - All 8 games imported. Kaptain approved Runeterra and Into the Breach; Slay the Spire done; Inscryption reviewed;
   Stormbound, Monster Train, Faeria, Duelyst wait for his check of their deck networks.
-- Cases: all pass except Stormbound csb09-csb13 (poisoned-unit combos, an old cause not yet traced) and Kaptain's ndu42, nfa27
-  (they conflict with his 3 Nov rule that a unit moving itself gives no line: ask him). Must-not cases whose reason no deck
+- Cases: all pass except Stormbound csb09-csb13 (poisoned-unit combos, an old cause not yet traced). Kaptain 3 Nov 2026: a unit
+  that moves itself gives no line to cards that depend on positions (Faeria, Duelyst). Must-not cases whose reason no deck
   says any more (rewrite them): Runeterra n56, Duelyst ndu23 ndu47, Inscryption n299, Into the Breach ntb15-17, Slay the
   Spire nst30 nst36.
-- Real-world cases: 237 of 261 hold (Zealous Crusader -> Khalim's Prayer broke by the same 3 Nov rule).
-- Lines (3 Nov 2026, pairs in links.sqlite): Runeterra 193,514; Faeria 10,424; Duelyst 13,476; Slay the Spire 9,238; Into the
-  Breach 6,138; Monster Train 3,115; Stormbound 2,746; Inscryption 1,080.
+- Real-world cases: 237 of 261 hold (Zealous Crusader -> Khalim's Prayer is gone by Kaptain's 3 Nov rule).
+- Lines (3 Nov 2026, pairs in links.sqlite): Runeterra 192,475; Faeria 10,287; Duelyst 13,370; Slay the Spire 9,079; Into the
+  Breach 6,138; Monster Train 3,109; Stormbound 2,697; Inscryption 1,080.
 - Known open: a card placed by its text near the leader (Conscript) draws no line to a card acting near the leader
   (Fealty); Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain). Monster
   Train's Olde Magic is built by the player at an event: its text and record (read/monster_train/event_cards.jsonl) list the

@@ -21,4 +21,14 @@ rt 4: FIXED a keyword's work on others is the keyword's rule in boost_lines havi
 rt 5: FIXED a second attack is no Nexus reach (fights_for); own Elusive/Overwhelm still reaches the Nexus for a champion's level-up (n12).
 rt 14: PARTLY: keyword and stat filters fixed; tribe filters kept (ndu34); Rek'Sai -> Sharkling still a line (Lurk).
 rt 18, 21: PARTLY: more damage to my own cards is no help (gives_lines); The Dreadway -> Darkwater Scourge still a line.
-NOT REACHED (open for the next chat, in this order): old 17-24, 26-27, 30-49, 51-55, 57-75, 77-91, 93-95; rt 7 on in verdict_rt_1.md (19-31 except 22, 27 NOT REAL) and all of verdict_rt_2.md.
+Kaptain 3 Nov 10:21: a unit that moves itself gives no line to cards that depend on positions; ndu42, nfa27 rewritten; Zealous Crusader -> Khalim's Prayer (real-world) accepted as no line.
+rt 25: FIXED a made card must be the kind or the card the need asks (lines_of: "if I was created" is about itself, created category vs counted kind).
+rt 28: FIXED hand counts with a cost filter take only helpers that bring such cards.
+rt 29, old 34 (copies into deck): FIXED a copy with no use is no line (aimed).
+rt 32: FIXED a harm on units never hits a landmark (lines_of kind check).
+rt 40: FIXED "spells under 3 cost 3" raises costs: pays nothing (boost_lines, aimed).
+rt 42: FIXED discards that draw again do not empty the hand.
+rt 48, 51: FIXED (missed lines) copies put into play and champions summoned from anywhere set off summon effects.
+rt 26, old 33: NOT FIXED: Kaptain's nst26 keeps "makes more cards to play" (Blade Dance -> A Thousand Cuts).
+rt 33, old 16 tribes: NOT FIXED: Kaptain's ndu34 keeps help to a tribe (Oakenheart -> Mechs).
+NOT REACHED (open for the next chat, in this order): old 17-24, 26-27, 30-32, 35-49, 51-55, 57-75, 77-91, 93-95; rt 19-20, 23-24, 30, 34-35, 37, 39, 41 (Fast part), 44, 46, 49-50, 52-53, 55, 57-61.
