@@ -71,6 +71,19 @@ Example answers: QUERIES.md. Kaptain's standing questions with their current ans
   (map in CLAUDE.md). Test every card and deck against them: each lane camp is 3x3 with 3 front cells (the dots); melee
   reaches only the enemy front row, deeper rows only Ranged, Pike, spells and abilities; front units never shield back units;
   count the cells a deck's units fill in one lane; check what each unit can still reach from where it must stand.
+- Think it through like a player (Kaptain, 3 Nov 2026), for every card and every combo, before suggesting it:
+  - Hand: decks of 30-40 with 3 copies, 2 draws a round. Is the card in hand when it is needed? A setup of two named cards
+    is rare; one that needs a second copy of itself is rarer.
+  - Board: where exactly does it stand (row, column), what does it reach from there, and is that cell free then?
+  - Enemy: what does the enemy do with its next action? Front-row units die easily. If the first card of a setup dies
+    before the second arrives, the setup is dead.
+  - Timing: what happens during the round, what at round end (after both pass, when the enemy can't answer), what counts
+    for the dots.
+  - Worth: is the card better than a plain unit of the same cost in that spot? If not, drop it.
+- A combo is not a list of buffs. Two cards are a combo only when one changes what the other does or sets it off again
+  (a loop, a conversion, a rule change), so together they do something neither does alone, not just bigger numbers.
+  Test: take either card away; does the other lose its point? Show each combo as a played sequence: card, cell, what the
+  enemy can do, result.
 - Self-check before sending: per part, which commands ran; say plainly which parts have no library grounding.
 Known weakness: `kit` shows a faction's most-tagged cards, not cards that show the asked mix, and a broad concept
 (protection, drawback) drowns a narrow one (selection). Do not answer from `kit` alone.
