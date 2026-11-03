@@ -44,11 +44,6 @@ hearthstone	Grim Patron	Warsong Commander	survive damage -> summon	each survivin
 hearthstone	Doomsayer	Frost Nova	freeze -> board wipe	freeze protects the doomsayer until it wipes the board	freeze as protection: disable on the enemy is not linked to a delayed board wipe
 hearthstone	Lightwarden	Circle of Healing	heal -> growth	healing grows the minion	
 hearthstone	Wild Growth	Malygos	ramp -> big payoff	extra mana reaches the expensive payoff sooner	
-hs_battlegrounds	Titus Rivendare	Selfless Hero	deathrattle doubling	the shield deathrattle fires twice	
-hs_battlegrounds	Mama Bear	Pack Leader	summon -> buff	summoned units are buffed twice over	
-hs_battlegrounds	Soul Juggler	Imp Gang Boss	demon dies -> damage	imps die and throw souls	
-hs_battlegrounds	Khadgar	Imp Gang Boss	summon doubling	twice the imps	
-hs_battlegrounds	Deflect-o-Bot	Kaboom Bot	mech summon -> shield	the bomb kills, the bot regains its shield	
 runeterra	Hecarim	Shark Chariot	ephemeral summons -> revive	attacking with Ephemeral allies revives the Chariot each attack	
 runeterra	Thresh	Kalista	revive	revive the strongest dead champion	
 runeterra	Ezreal	Mystic Shot	targeting spells -> level	spells that target the enemy level the champion	

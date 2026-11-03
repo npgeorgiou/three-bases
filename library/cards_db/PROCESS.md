@@ -121,7 +121,7 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
      github.com/abrakam/Faeria_Cards 12b7207, its README defines the keywords); `duelyst_cards.psv` (1116 cards, conv_duelyst.py
      over github.com/open-duelyst/duelyst 2843f24; its tutorial and tips are the rules source). Named sources: Lorcana (npm
      lorcana-oracle), Star Wars: Unlimited (swucardex-data a86faed), Elder Scrolls: Legends (TESLegendsTracker c541e82), Slay
-     the Spire (wiki Module:Cards/data), Slay the Spire 2 (Kaptain's lists, 12 Oct 2026), Gwent (gwent.one v14.8), Magic
+     the Spire (wiki Module:Cards/data), Gwent (gwent.one v14.8), Magic
      (MTGJSON AtomicCards, Scryfall tokens), Shadowverse (Portal API), 40k and Age of Sigmar (BSData).
    - `library/games/<game>.md`: research, sources, keyword terms with their pages. Drop terms marked "assumed".
    - `library/cards_db/supplement/<game>*`: games already imported.

@@ -20,7 +20,7 @@ FULL; cards and their powers share card codes, so a partial supplement would dro
   them already: Plated Armor, Mark, Hex, Stasis, Surrounded, Metallicize (a potion gives it; category keyword). Left out (glossary terms no card uses,
   PROCESS 0.5): powers that only repeat a glossary keyword (Strength, Weakened = Weak ...), powers that only repeat their
   card's text (Barricade, Demon Form ...), powers no text names (enemy powers such as Curl Up, Thievery), and the glossary
-  keywords Opener (a Slay the Spire 2 word) and Vigor, which no text uses.
+  keywords Opener and Vigor, which no text uses.
 - One name, two entries: each character's Strike and Defend are "Strike (Ironclad)" ...
   (the wiki's own page names); two monsters of one name take their kind from the game's code ("Louse (defensive)",
   "Slaver (blue)"); the event Golden Idol is "Golden Idol (event)" (the relic keeps the name). A keyword may share a card's
