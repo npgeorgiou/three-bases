@@ -550,7 +550,7 @@ def lines_of(c, game):
     share = collections.Counter((h, ms) for h, ms_ in makes.items() for ms in {(x[1] or '') for x in ms_}
                                 for m in {x[0] for x in ms_ if (x[1] or '') == ms and not x[7]})  # by the cards' own text, not the rules' fights
     common = {k for k, v in share.items() if k[0] in ('damaged', 'killed', 'dies', 'survives_damage') and k[1] in ('enemy', '') and v >= 0.25 * len(cards)}
-    from_kw = collections.defaultdict(set)  # "when an ally gains Power from Hallowed" (Gwen): only a change Hallowed makes (verdict 27)
+    from_kw = collections.defaultdict(set)  # "when an ally gains Power from Hallowed" (Gwen): only a change Hallowed makes ()
     for t, h, k in c.execute("select w.card, w.event, k.ref_keyword from cond k join flat_when w on w.ability=k.ability where k.test='keyword_condition' and k.ref_keyword is not null and w.event='stat_changed'"):
         from_kw[(t, h)].add(k)
     kw_givers = lambda k: CACHE.setdefault(('kwg', game, k), givers_of(c, game, k, list(cards)))
@@ -586,7 +586,7 @@ def lines_of(c, game):
                     who = ';'.join(p for p in (mw or '').split(';') if p.split(' ')[:2] in (['card', 'is'], ['type', 'is'], ['type', 'in'],
                                                                                         ['name_has', 'is'], ['keyword', 'is']))  # "another Rakoan";
                     # "ready all Ranged units" (Bombard) reaches only a card with Ranged
-                    who = ';'.join(x for x in (who, state_filter(c, game, mw), trig_state_of(c, game, m) if mpick == 'it' else '') if x)  # "an Ephemeral ally" (Soul Shepherd -> Vi: no line, verdict 22)
+                    who = ';'.join(x for x in (who, state_filter(c, game, mw), trig_state_of(c, game, m) if mpick == 'it' else '') if x)  # "an Ephemeral ally" (Soul Shepherd -> Vi: no line)
                     if who and not matches(c, game, cards[t], 'any', who): continue
                 if tkind in RESOURCE_WORD and not colour_fit(tw, mw): continue  # a Green Mox cost is paid by a Green gem only
                 if mpick == 'self':  # what a card does to itself feeds only a need its own kind fits ("the strongest friendly Dragon")
@@ -1107,14 +1107,14 @@ def generic_use(c, game):
         if origin != 'own' and kw_tree(c, via) not in TRIGGER_KW: continue  # a keyword's inner working (Barrier pops when damaged,
         # Challenger picks when attacking) is no need of the card; a keyword that is a reaction is (Revenge: when damaged)
         if h in ('given_keyword', 'keyword_used', 'keyword_removed'): d[i]['kw_needs'].add((h, k))  # which keyword it waits for
-        elif not (h == 'stat_changed' and i in kw_stat): d[i]['needs'].add(h)  # Power gained from Hallowed (Gwen) comes only from Hallowed (verdict 27)
+        elif not (h == 'stat_changed' and i in kw_stat): d[i]['needs'].add(h)  # Power gained from Hallowed (Gwen) comes only from Hallowed ()
     for i, k in c.execute("""select card, keyword_ref from flat_do where origin='own' and act='give_keyword' and keyword_ref is not null
             and (coalesce(on_side,'mine') in ('mine','any') or on_pick in ('self','it'))"""): d[i]['gives_kw'].add(k)
     for i, w in c.execute("select card, of_with from flat_if where origin='own' and of_with like '%keyword is %'"):
         d[i]['counts_kw'] |= {int(x) for x in re.findall(r'keyword is (\d+)', w or '')}
     for i, ab in c.execute("select card, ability from flat_do where origin='own' and act in ('start_attack','strike') and on_pick='self'"):
         d[i]['flags'].add('play_fights' if on_play(c, ab) else 'fights')  # a fight when it is played is over before a boost on the board
-        # reaches it (verdict 21: Spirit Spice -> Barrensky Vermin); only help that reaches it in hand counts then
+        # reaches it (Spirit Spice -> Barrensky Vermin); only help that reaches it in hand counts then
     # its own text makes it fight or strike (Deepwood Stalker): the damage is its power
     for (i,) in c.execute("select distinct card from flat_do where origin='own'"): d[i]['flags'].add('acts')
     for (i,) in c.execute("select card from flat_ref where origin='own' and role='trigger' and pick='actor_self' and happening in ('killed','damaged')"):
@@ -1183,8 +1183,8 @@ def use_of(c, game, b, act, kw, ps, w=None):
     if up('power') and b in own_power_readers(c): return 'more power: its text reads its power'  # Poppy: "allies with less power than me" (L18)
     if up('power', 'strength') or (act == 'give_keyword' and tree in ('attack_gain', 'temporary_buff')):
         if u['trees'] & set(POWER_USE) or u['flags'] & {'big_strike', 'fights', 'level_hit'} or ('play_fights' in u['flags'] and 'hand' in (w or '')) or (b in gains_back(c, game) and not fixed_hit(c, b)):
-            return 'more power: its text uses the damage it deals'  # a fixed amount is not its power (verdict 19: Path to Paradise -> Enslaved Priest)
-    # a heal is no more health (L18): it does not keep a fighting unit alive (verdict 18: Lux Ignis -> Fireblazer)
+            return 'more power: its text uses the damage it deals'  # a fixed amount is not its power (Path to Paradise -> Enslaved Priest)
+    # a heal is no more health (L18): it does not keep a fighting unit alive (Lux Ignis -> Fireblazer)
     if up('health', 'strength') or act in ('negate_damage', 'damage_reduction') or (act == 'give_keyword' and tree in DEFENCE_KW) \
             or (act == 'cant' and pev in ('dies', 'targeted')):  # "can't drop below 1 health" (Survival Skills)
         if u['trees'] & set(GUARD_USE): return 'keeps it alive in the fights it takes on'
@@ -1331,22 +1331,22 @@ def aimed(c, game, nodes, broad):
         if (act == 'repeat' or (act == 'increase_effect' and kind != 'spell')) and kind in ('landmark', 'spell', 'equipment') and \
                 kind_count(c, game, kind, None) < 0.5 * kind_count(c, game, 'any', None): sharp = True  # a smaller kind of card
         # (Doctor Mia triggers structures; Kaptain's check n17) is a deck choice (L1b); more spell damage is not: only a spell whose
-        # text uses its damage (verdict 24: Powder Keg -> Advanced Intel, Crescent Spear -> Phoenix Fire: no line) not when most cards are spells (Slay the Spire)
+        # text uses its damage (Powder Keg -> Advanced Intel, Crescent Spear -> Phoenix Fire: no line) not when most cards are spells (Slay the Spire)
         if act in ('stat_change', 'grow') and kind != 'player' and not any(p.startswith(('type is', 'type in')) for p in (w or '').split(';')):
             sharp = False  # stats to units with a keyword or a stat go only to a unit whose text uses them (L14, L18: Rek'Sai's Lurkers ->
             # Sharkling: no line); a tribe stays a deck choice (Kaptain's ndu34: Oakenheart helps the Mechs)
-        if act == 'increase_effect' and kind == 'spell' and 'keyword i' not in (w or ''): sharp = False  # more spell damage (verdict 24)
+        if act == 'increase_effect' and kind == 'spell' and 'keyword i' not in (w or ''): sharp = False  # more spell damage ()
         if act == 'give_keyword' and kw and kw_tree(c, kw) == 'spell_speed': sharp = False  # a spell's speed is help to a whole kind
         # (Senna makes damage spells Fast): only a card whose text uses it (L14)
         if act == 'increase_effect' and 'keyword i' not in (w or ''):
             hits = [b for b in hits if b in numbered(c, game)]  # no number to make bigger (Alatis -> Dragonling, Powder Keg -> Paralyzing Bite)
         if not sharp and (kind != 'player' or act in ('heal', 'stat_change', 'grow')) and act != 'return_card' and act not in HARM_GAIN:
-            # heal or stats for the General go only to a General whose text uses them (verdict 17: Aer Pridebeak -> Argeon Highmayne)  # help to any card of a kind: only
+            # heal or stats for the General go only to a General whose text uses them (Aer Pridebeak -> Argeon Highmayne)  # help to any card of a kind: only
             # cards that use it (Kaptain 1 Nov 2026); "your General" is one card; harm on my card is kept only for its own effect below
             wh = (w or '') + (';zone hand' if a in to_hand(c) else '')  # help to cards in hand reaches a card before it is played (Oakling, nfa01)
             hits = [b for b in hits if uses_help(c, game, b, act, kw, ps, wh)]
             if act in ('stat_change', 'grow') and a in all_raisers(c):  # all my units raised alike: no ally passes a filter by my own
-                # power that it failed before (For Demacia! -> Poppy; verdict rt 50)
+                # power that it failed before (For Demacia! -> Poppy)
                 hits = [b for b in hits if use_of(c, game, b, act, kw, ps, w) != 'more power: its text reads its power']
         n = len(makers[(act, kind, kw, rule if rule in (True, False, 'boost') else True)])
         if rule == 'boost':
@@ -1611,7 +1611,7 @@ def unplayable(c):
                                and origin in ('own','has_keyword') and coalesce(lasts,'while')='while'""")} | {a for (a,) in c.execute("""select id from card k
                                where category in ('spell','ability') and is_keyword=0 and not exists (select 1 from flat_do d where d.card=k.id)
                                and not exists (select 1 from flat_when w where w.card=k.id) and not exists (select 1 from flat_if f where f.card=k.id)""")}
-        # a spell or skill with no rows is a deck rule (Grandmaster at Arms), not a card anyone plays (verdict 59)
+        # a spell or skill with no rows is a deck rule (Grandmaster at Arms), not a card anyone plays ()
     return CACHE['unplayable']
 
 
@@ -1692,7 +1692,7 @@ def played_lines(c, game, nodes, broad):
                 mk = {a for a, ref, ok in c.execute(f"""select distinct card, card_ref, on_kind from flat_do where origin='own' and act in ('create','copy')
                       and coalesce(on_side,'mine')='mine' and coalesce(on_zone,'hand') in ('hand') and (params like '%amount=x%' or cast(substr(params,
                       instr(params,'amount=')+7) as real) >= 2) and card in ({marks})""", list(nodes))  # several cards (Blade Dance's 3 Shivs);
-                      # one more card is no more plays (verdict 33: Beta -> After Image+, Annie -> Breakneck Husk)
+                      # one more card is no more plays (Beta -> After Image+, Annie -> Breakneck Husk)
                       if k in ('card', 'any', 'anything', None) or k in every_card_kinds(c, game) or ok == k or (ref in cards and cards[ref]['cat'] in KIND_CAT.get(k, {k}))} - {t}
                 # "whenever you play a spell": only what makes spells (Vinemother's Stings) sets it off more
                 for a in mk:
@@ -1868,7 +1868,7 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
                 and not (coalesce(on_kind,'') = 'player' and act in ('heal','stat_change','grow',
                 'negate_damage','damage_reduction','give_keyword','give_ability')) and card in ({marks})""", L)}  # on my
         # units: healing itself and my Nexus helps no other unit (Cosmic Youngling); Rally on the player does (another attack); making a
-        # card is no help, the made card helps; a keyword it uses only on itself (Ornn level 2 forges himself) helps no other (verdict 22)
+        # card is no help, the made card helps; a keyword it uses only on itself (Ornn level 2 forges himself) helps no other ()
         # (L3: Aurelion Sol makes Celestial cards, he does not help Braum); what a keyword the
         # card has does to others is the keyword's rule (L15: Scout readies Scouts: Greathorn Companion -> Greenfang Warden, no line)  # it acts on other cards of mine, not only on itself
         # a gain on the card it is sacrificed for (Mealworm: Morsel) reaches only that card: lines_of draws it, not every unit here
@@ -1924,7 +1924,7 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
                         ['name_has', 'is'], ['keyword', 'is'], ['region', 'is'], ['card', 'not'])))
     for a, w_ in c.execute(f"""select d.card, w.obj_with from flat_do d join flat_when w on w.ability=d.ability where d.on_pick='it' and
             d.origin='own' and d.act in ('stat_change','give_keyword','heal','grow') and w.obj_with like 'state is %' and d.card in ({marks})""", L):
-        # "when an Ephemeral ally is summoned, give it +1|+1" (Soul Shepherd): it lands only on Ephemeral units (verdict 22)
+        # "when an Ephemeral ally is summoned, give it +1|+1" (Soul Shepherd): it lands only on Ephemeral units ()
         ks = state_filter(c, game, w_)
         if ks: ident[a] = [w0 for w0 in ident[a] if w0] + [ks]
     def lands_on(a, t):
@@ -1957,7 +1957,7 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
                     and coalesce(d.on_side,'mine') in ('mine','any') and coalesce(d.on_kind,'unit') in ('unit','any') and (d.act in ('move','swap')
                     or (d.act='give_keyword' and v.tree='movement')) and d.ability not in (select ability from flat_do where act='transform')
                     and not (d.act in ('move','swap') and (coalesce(d.eff_zone,'') like 'deck%' or coalesce(d.eff_zone,'') like 'hand%'))
-                    and d.card in ({marks})""", L): move_rows[a].append(w_)  # into the deck or hand is no move on the board (verdict 55: Sugary Snare); a transformed unit has lost its text (Frogify -> Oradrim Monk)
+                    and d.card in ({marks})""", L): move_rows[a].append(w_)  # into the deck or hand is no move on the board (Sugary Snare); a transformed unit has lost its text (Frogify -> Oradrim Monk)
             helpers = set(move_rows)  # a card's own move keyword moves only itself: no help to others (Kaptain 3 Nov 2026)
             home_movers = {a for (a,) in c.execute(f"""select card from flat_do where origin='own' and act in ('move','swap') and to_side='mine'
                            and card in ({marks})""", L)}  # it moves units onto my own land (Desert Twister): never onto enemy land
@@ -2007,7 +2007,7 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
     for t, ab, op, n_, ok_, ow_ in c.execute(f"""select card, ability, op, n, of_kind, of_with from flat_if where of_zone='hand' and coalesce(of_side,'mine')='mine'
             and test in ('count','amount_count','have') and coalesce(of_pick,'') not in ('self','chosen') and card in ({marks})""", L).fetchall():
         # not the card itself in hand (Ethereal: "if this is still in your hand"), nor what it picks there itself (Gambling Chip)
-        if op == 'not' and 'card is ' in (ow_ or ''): continue  # "if you don't have Pokey Stick": one missing card, not an empty hand (verdict 32)
+        if op == 'not' and 'card is ' in (ow_ or ''): continue  # "if you don't have Pokey Stick": one missing card, not an empty hand ()
         few = (op in ('eq', 'le', 'lt') and (n_ or 0) <= 1) or op == 'not' or ok_ == 'position'  # "no cards in hand" (have not, N22);
         # "for each empty card space in your hand" (Clap of Thunder): it wants an empty hand
         dos = c.execute("select act, params, coalesce(on_side,'mine') from flat_do where card=? and ability=? and origin='own'", (t, ab)).fetchall()
@@ -2028,11 +2028,11 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
     # a stat it tests ("an ally with 5+ Power"): more of that stat
     power = having(('attack_gain',), False)
     unreached = lambda ab, ok: ok == 'player' or c.execute("select 1 from flat_do where ability=? and on_zone='deck' and act!='draw'", (ab,)).fetchone()
-    # the General's stat (Drogon) or the stats of units still in the deck (The Tuskraider) are not raised by help to my units (verdict 19)
+    # the General's stat (Drogon) or the stats of units still in the deck (The Tuskraider) are not raised by help to my units ()
     for t, ab, fp, ok in c.execute(f"""select card, ability, of_pick, of_kind from flat_if where test in ('stat','amount_stat') and attr='power' and card in ({marks}) and not exists (select 1 from flat_do d where d.ability=flat_if.ability and flat_if.of_pick='it' and d.on_pick in ('chosen','random')
             and coalesce(d.on_side,'any')!='mine' and d.act in ('kill','damage','obliterate','sacrifice','return_to_hand','transform','silence'))""", L).fetchall():
         if unreached(ab, ok) or (fp == 'self' and on_play(c, ab)): continue  # its power when it is played: a boost on the board comes
-        # too late (verdict 21: Rising Spell Force -> Banana Blaster)
+        # too late (Rising Spell Force -> Banana Blaster)
         for a in power - {t}:
             if aim_fits(a, t) and (fp != 'self' or reaches(a, t)) and (a, t) not in stat_help: out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.5 / count(('attack_gain',)), 'more power' + (' (levels it up)' if ab in lvl else '')))
     # a stat it tests high or uses as an amount ("a creature with 5+ Life", "faeria equal to its Life"): more of that stat
@@ -2403,9 +2403,9 @@ def gives_lines(c, game, nodes):
         ks = [k for (k,) in c.execute("select ref_keyword from cond where ability=? and test='keyword_condition' and ref_keyword is not null", (ab,))] if h == 'stat_changed' else []
         for m in doers(h):
             if m == a or m not in cards or (akind in KIND_CAT and not matches(c, game, cards[m], akind, w)): continue
-            if ks and not any(k in cards[m]['kws'] or m in givers_of(c, game, k, L) for k in ks): continue  # only Power from Hallowed (verdict 27)
+            if ks and not any(k in cards[m]['kws'] or m in givers_of(c, game, k, L) for k in ks): continue  # only Power from Hallowed ()
             if named_to.get(a) and not any(matches(c, game, cards[m], 'any', w_) for w_ in named_to[a]): continue  # the ability goes to the
-            # cards it names (Twisted Catalyzer: Darkness); only they set it off, not every card that deals damage (verdict 65)
+            # cards it names (Twisted Catalyzer: Darkness); only they set it off, not every card that deals damage ()
             out[(m, a)].append(('waits', 0.1, f'{say} (for the ability it gives)'))
     return out
 
@@ -2486,7 +2486,7 @@ def stat_reader_lines(c, game, nodes):
     grows = collections.defaultdict(set)  # unit -> stats it raises on itself
     for t, ps in c.execute(f"""select card, params from flat_do d where origin='own' and on_pick='self' and act in ('stat_change','grow')
             and not exists (select 1 from cond k where k.ability=d.ability and k.test='keyword_condition' and k.ref_keyword is not null)
-            and card in ({marks})""", L):  # a growth only from another keyword (Gwen: Power from Hallowed) is not its own (verdict 27)
+            and card in ({marks})""", L):  # a growth only from another keyword (Gwen: Power from Hallowed) is not its own ()
         for x in (ps or '').split(';'):
             if '=' in x and not x.split('=', 1)[1].startswith('-'): grows[t].add(x.split('=', 1)[0])
     word = {'power': 'Attack', 'health': 'Life'} if game == 'faeria' else {'power': 'Power', 'health': 'Health'}
