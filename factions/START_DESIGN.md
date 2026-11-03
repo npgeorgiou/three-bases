@@ -93,6 +93,13 @@ Candidates (raw brainstorming, not designs): `factions/3-candidates/`.
 Every one of these failed in the first five factions. Check each before sending.
 - Work in stages, Kaptain checks each: (1) identity, 3-5 mechanics, the web between them, "weak at" list, for ONE faction;
   (2) ~20 key cards with needs/makes lines; (3) the rest. Never a whole faction (or five) in one go.
+- Theme first (Kaptain, 3 Nov 2026): every faction has a real theme to draw from (e.g. the Siegewrights: World War I), giving
+  10+ characteristics (how they fight, live, trade, believe, what they fear and lack). Thin identities give no mechanics.
+- A mechanic is a broad notion of give-and-take that many cards work through, e.g. "I damage my own units -> I gain from
+  damaged units". What one unit does (a cannon fires, a keg explodes) is a unit effect, never a mechanic.
+- One card idea (Projectiles) fills a few cards (at most ~7 in 100), never a faction. Projectiles: think of kinds (not
+  every one just lands and explodes).
+- Only the game's own words: no "wall" or other terms the game does not have.
 - Mechanics: buffs, damage and stats are not mechanics. Each mechanic is written with the traits it comes from and the
   other mechanics it feeds and is fed by; a mechanic that feeds none of the others is cut.
 - Two families: about a third of the cards belong to two mechanics (set up one, cash in another), so chains form. A deck

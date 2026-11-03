@@ -1,6 +1,8 @@
 ==================================================================
 SIEGEWRIGHTS — stage 1: identity, mechanics, web, strong/weak (3 Nov 2026; Claude's design for Kaptain to check)
 ==================================================================
+REJECTED by Kaptain (3 Nov 2026): the five "mechanics" are unit effects, not mechanics; Projectiles cannot carry a faction
+(at most ~7 cards); no "wall" in the game; maybe 2 kinds of Projectile; theme it on World War I. To be redone.
 No cards yet (stage 2). Check this web: python3 tools/network_check.py factions/designs/siegewrights.txt
 
 WHO THEY ARE
