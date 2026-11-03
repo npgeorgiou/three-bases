@@ -377,3 +377,6 @@ n379	runeterra	Grandmaster at Arms, Annie	Grandmaster at Arms	Annie	none		audit 
 n380	runeterra	Jax, Grandmaster at Arms	Jax	Grandmaster at Arms	none		audit 3 Nov 2026: old 59: no one casts a deck rule
 n381	sts1	Beta, After Image+	Beta	After Image+	none		audit 3 Nov 2026: old 33: one more card made is no more plays (L1)
 n382	runeterra	Annie, Breakneck Husk	Annie	Breakneck Husk	none		audit 3 Nov 2026: old 33: one more card made is no more plays (L1)
+n383	runeterra	Annie, Twisted Catalyzer	Annie	Twisted Catalyzer	none		audit 3 Nov 2026: old 65: the ability it gives goes only to the Darkness cards it names
+n384	runeterra	Sugary Snare, Snowy Razorclaw	Sugary Snare	Snowy Razorclaw	none		audit 3 Nov 2026: old 55: a unit put into the deck moves nowhere on the board
+n385	runeterra	Spinning Axe, Gnar	Spinning Axe	Gnar	none		audit 3 Nov 2026: old 32: "if you don't have Pokey Stick" asks for one missing card, not an empty hand

@@ -1918,7 +1918,8 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
                     v.field='keyword' and v.value in (k.name, k.game || ':' || k.name) where d.origin='own' and coalesce(d.on_pick,'') not in ('self')
                     and coalesce(d.on_side,'mine') in ('mine','any') and coalesce(d.on_kind,'unit') in ('unit','any') and (d.act in ('move','swap')
                     or (d.act='give_keyword' and v.tree='movement')) and d.ability not in (select ability from flat_do where act='transform')
-                    and d.card in ({marks})""", L): move_rows[a].append(w_)  # a transformed unit has lost its text (Frogify -> Oradrim Monk)
+                    and not (d.act in ('move','swap') and (coalesce(d.eff_zone,'') like 'deck%' or coalesce(d.eff_zone,'') like 'hand%'))
+                    and d.card in ({marks})""", L): move_rows[a].append(w_)  # into the deck or hand is no move on the board (verdict 55: Sugary Snare); a transformed unit has lost its text (Frogify -> Oradrim Monk)
             helpers = set(move_rows)  # a card's own move keyword moves only itself: no help to others (Kaptain 3 Nov 2026)
             home_movers = {a for (a,) in c.execute(f"""select card from flat_do where origin='own' and act in ('move','swap') and to_side='mine'
                            and card in ({marks})""", L)}  # it moves units onto my own land (Desert Twister): never onto enemy land
@@ -1968,6 +1969,7 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
     for t, ab, op, n_, ok_, ow_ in c.execute(f"""select card, ability, op, n, of_kind, of_with from flat_if where of_zone='hand' and coalesce(of_side,'mine')='mine'
             and test in ('count','amount_count','have') and coalesce(of_pick,'') not in ('self','chosen') and card in ({marks})""", L).fetchall():
         # not the card itself in hand (Ethereal: "if this is still in your hand"), nor what it picks there itself (Gambling Chip)
+        if op == 'not' and 'card is ' in (ow_ or ''): continue  # "if you don't have Pokey Stick": one missing card, not an empty hand (verdict 32)
         few = (op in ('eq', 'le', 'lt') and (n_ or 0) <= 1) or op == 'not' or ok_ == 'position'  # "no cards in hand" (have not, N22);
         # "for each empty card space in your hand" (Clap of Thunder): it wants an empty hand
         dos = c.execute("select act, params, coalesce(on_side,'mine') from flat_do where card=? and ability=? and origin='own'", (t, ab)).fetchall()
@@ -2352,6 +2354,9 @@ def gives_lines(c, game, nodes):
         # gives it several times in one go gets more from it (Kaptain 2 Nov 2026)
         for m in gs: out[(a, m)].append(('boosts', 1.0 / len(gs), f'makes the {mechanics.name(c, k)} it gives bigger'))
     skip = adder_abilities(c, game)
+    named_to = collections.defaultdict(list)
+    for a, w_ in c.execute(f"select card, on_with from flat_do where act='give_ability' and origin='own' and on_with like '%card is %' and card in ({marks})", L):
+        named_to[a].append(';'.join(p for p in w_.split(';') if p.startswith('card is ')))
     for a, h, ab, akind in c.execute(f"""select distinct card, event, ability, actor_kind from flat_when where origin='gives'
             and coalesce(actor_side,'mine')='mine' and coalesce(obj_pick,'')!='self' and card in ({marks})""", L).fetchall():  # "when this
         # is built" (Manakite Drifter) is about the card itself: Eternity Painter's transform of enemies gives it nothing
@@ -2361,6 +2366,8 @@ def gives_lines(c, game, nodes):
         for m in doers(h):
             if m == a or m not in cards or (akind in KIND_CAT and not matches(c, game, cards[m], akind, w)): continue
             if ks and not any(k in cards[m]['kws'] or m in givers_of(c, game, k, L) for k in ks): continue  # only Power from Hallowed (verdict 27)
+            if named_to.get(a) and not any(matches(c, game, cards[m], 'any', w_) for w_ in named_to[a]): continue  # the ability goes to the
+            # cards it names (Twisted Catalyzer: Darkness); only they set it off, not every card that deals damage (verdict 65)
             out[(m, a)].append(('waits', 0.1, f'{say} (for the ability it gives)'))
     return out
 
