@@ -1,0 +1,91 @@
+==================================================================
+SIEGEWRIGHTS — stage 1: identity, mechanics, web, strong/weak (3 Nov 2026; Claude's design for Kaptain to check)
+==================================================================
+No cards yet (stage 2). Check this web: python3 tools/network_check.py factions/designs/siegewrights.txt
+
+WHO THEY ARE
+A guild of engineers and gunners. They never march to a fight: they bring the wall and the shot to it. Every keg, every
+gun, every cart stands where the plan says. Nothing is wasted: a spent shell is scrap, scrap is a new shell. They are
+slow to set up and terrible once set up. What the player should feel: building the battery, then the volley; what the
+enemy should feel: a lit fuse sitting in his own camp.
+Traits: patient, engineered, explosive, thrifty, rooted.
+How they win: kegs hold the front row; cannons in rows 2-3 fire shot into the enemy camp. Shot that hits a unit damages
+it; shot that lands in a FREE cell stays there as the Siegewrights' unit and takes that dot (summary/08: units you
+control in the enemy camp count for your dots; the enemy cannot place in a cell it fills, so only killing it frees it).
+
+THE FIVE MECHANICS (from the traits)
+1. AMMUNITION (engineered, explosive). Projectile: a keyword. A Projectile is a 1-cell unit, Immobile, strength 0,
+   defence only, with an Impact text (what it does when it lands). Kaptain's rule: it is cheap, because the player pays
+   twice (place it, then fire it). Placed in your front row it is also a wall that holds a dot until fired or killed.
+   The decision: keep it as a wall or fire it, and where to place it (beside which cannon, in the front row or not).
+   Answer: kill it (it is weak) — which sets off Powder (4).
+2. BATTERIES (patient, rooted). Cannons stand in rows 2-3 (melee cannot reach them). A cannon fires an adjacent
+   Projectile instead of attacking, paying what its attack costs (the Ogre Thrower's throw, built): it lands on any cell
+   of the enemy camp in its lane. Kinds of cannon change the shot (a mortar that lands only in the enemy rows 2-3, a
+   ballista whose shot passes the first unit and lands behind it). Timing: firing is an action during the round, so the
+   enemy answers with his next action. Answer: Ranged units and spells on the back rows; or keep the front row full so
+   there is no free cell to land in.
+3. BREACH (explosive; the reverse of rooted). Your units in the enemy camp: lodged shot. A lodged unit in the enemy
+   front row holds that dot for you until it is killed. Lodged shot has Fuse texts: "Round end: if I'm in the enemy camp,
+   I deal 2 damage to the enemies beside me, then I die" — round end is when the enemy can no longer answer, so the
+   enemy must spend an action and supply to kill it before passing (and killing it may set off Powder). Cards at home
+   gain while you have units in the enemy camp of their lane.
+4. POWDER (explosive). Projectiles have Death texts: when one dies, it damages the units beside it, both sides. So a
+   keg in your front row that the enemy strikes hurts the striker's neighbours and the striker (the two front rows touch);
+   kegs side by side set each other off (Kaptain's "damage that travels to edge-connected units"). The decision for the
+   enemy: attack the kegs and lose units, or leave them and lose the dots. Answer: Ranged and spells from afar, or
+   Incorporeal/Armoured units against the blast.
+5. SALVAGE (thrifty). When Projectiles die, their scrap comes back: cards that return Projectile cards from the discard
+   pile to the hand, a foundry that makes a Shot token beside a cannon at round start, and the faction's draw ("Round
+   end: if 2 or more of your Projectiles died this round, draw a card", once per round per card).
+
+WEB (the lines the network check reads; tags are things in play)
+MECHANIC Ammunition | makes: projectile-ready, front-wall | needs: cannon, projectile-back
+MECHANIC Batteries | makes: cannon, impact, lodged, projectile-dies | needs: projectile-ready, enemy-cell-freed
+MECHANIC Breach | makes: enemy-dot-taken, enemy-action-spent, projectile-dies, enemy-damaged | needs: lodged
+MECHANIC Powder | makes: enemy-damaged, enemy-killed, enemy-cell-freed, projectile-dies | needs: projectile-dies, front-wall, impact
+MECHANIC Salvage | makes: projectile-back, card-drawn | needs: projectile-dies
+Loops: fire -> lands on a unit (Impact, dies: Powder, Salvage) or in a free cell (Breach: the enemy pays to kill it:
+Powder, Salvage) -> Salvage brings the shot back -> fire again. The wall side: a keg in the front row -> the enemy
+strikes it -> Powder -> Salvage. Every Projectile card belongs to two mechanics at least (Ammunition + Powder or Breach).
+
+WAYS TO PLAY (one faction, several decks)
+- Bombardment: many cannons, the Salvage loop keeps them fed; kill the enemy's front holders, which also cuts his supply.
+- Breach: Powder clears enemy front cells, then shot lands in them and takes the dots; win with the enemy's own cells.
+- Minefield: front-row kegs and few cannons; the enemy loses units attacking the walls; win by holding at round end.
+- Chain: kegs packed side by side (at home, or a cluster lodged in the enemy camp) going off one after another.
+
+STRONG AT / ONLY A LITTLE / WEAK AT
+- Strong: back-row damage into the enemy camp, cheap front walls, taking dots from inside the enemy camp.
+- Only a little: moving its own units (a cart or two that move shot beside a cannon on Place), restoring shields of walls,
+  supply (plain Supply +1 crews), spells (powder spells, rapid fire, salvage; ~25% of the cards).
+- Weak at: movement and lane changes, healing big units, big strong melee bodies, a fast first round (two actions, a
+  cannon and a shot, before the first volley, and the enemy sees them coming), protecting what it lodged.
+
+ROWS, LANES, CONTROL, SELF-SUFFICIENCY, INTERACTION
+- Rows: front row kegs and crews; rows 2-3 cannons and foundries (a cannon in the middle row centre has 8 cells beside it,
+  in the back row only 5: where to stand is the puzzle).
+- Between lanes: the Trebuchet (fires into ANY lane; one or two cards only), a powder cart that brings shot to another
+  lane's cannon (Outrider on one card only).
+- Lane control: "as long as you hold this lane's base, my Projectiles cost 1 less" (the garrison); "if you don't hold
+  this lane's base, my Impact deals +1" (the desperate bombardment); some cards with both.
+- Self-sufficiency: holds dots (kegs, lodged shot), removes (Impact, Powder), supply (Supply +1 crews, the foundry's free
+  Shot tokens), draw (Salvage, once per round).
+- Interaction: high. Lodged shot forces the enemy to act; kegs punish his attacks; he chooses which loss to take.
+
+LIBRARY (commands run: factions/compare self_destruct, both death_trigger aoe_damage, compare recycle, both summon
+zone_control, text search for throws and bombs)
+- Into the Breach: the Blobber throws a blob that becomes a unit on the enemy side and explodes later; the Bombling
+  Mech launches a Walking Bomb that lives one turn; the Pitcher throws an adjacent unit (-> Batteries, Breach).
+- Duelyst: Luminous Charge, joined 0/1 walls that deal damage to nearby enemies when destroyed (-> Ammunition + Powder:
+  a wall that is a bomb); Grasp of Agony, an enemy that explodes when it dies (-> Breach).
+- Inscryption Technology: Explode Bot (Detonator) and Bomb Latcher (gives the bomb to another card on death) (-> Powder).
+- Faeria: Hammer of Destruction shuffles itself back into the deck after use; Rain of Fish lands units on random spaces
+  that deal damage where they land (-> Salvage, Impact).
+- No library source: the Fuse at round end against an enemy who must answer first (Claude's, from this game's round end).
+
+NEW RULES THIS NEEDS (for Kaptain)
+- Projectile keyword and its value (Claude's suggestion: it includes Immobile and strength 0 and is worth -1, so a 1-supply
+  Projectile is 0|2 with a 1-point Impact text; Kaptain said a 1:0|5 Immobile is too much defence).
+- Impact: a trigger when a fired Projectile lands (on a unit: after its strike; in a free cell: when it is placed there).
+- Cannon firing reuses the Ogre Thrower's throw, limited to the cannon's own lane and to adjacent Projectiles.

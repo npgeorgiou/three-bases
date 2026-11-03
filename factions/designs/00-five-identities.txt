@@ -1,0 +1,44 @@
+==================================================================
+THE FIVE NEW FACTIONS, FROM ZERO (3 Nov 2026; Claude's proposal, stage 0: identities only, for Kaptain to check)
+==================================================================
+They replace the five in the game once each is designed (START_DESIGN 2b stages). Each line: who they are, the traits
+their mechanics come from, how they win, strong at / weak at, and how they contrast with the others.
+
+1. SIEGEWRIGHTS — a guild of engineers and gunners (Kaptain's Projectiles idea).
+   Traits: patient, engineered, explosive, thrifty, rooted.
+   Win: build a battery in the back rows, hold the front with powder kegs, then fire shot into the enemy camp; shot that
+   lands in a free cell stays there and takes the enemy's dot.
+   Strong: back-row damage, holding the front cheaply, units in the enemy camp. Weak: own movement, healing, big melee
+   bodies, a fast start. Contrast: the slowest start, the strongest set-up turns; the Hunters punish it early.
+   Full stage 1: factions/designs/siegewrights.txt.
+
+2. LODESTONES — a stone people with the pull of the earth (Kaptain's all-Immobile idea, joined with forced movement).
+   Traits: unmoving, heavy, attracting, crushing, ancient.
+   Win: their monuments never move; they move the ENEMY: pull back-row enemies forward to face the monuments, crush
+   what cannot move further, tax what stands in front of them.
+   Strong: forced movement (signature), round-end damage to what faces them. Weak: own movement and lane changes,
+   card draw, spells that buff. Contrast: they move the enemy while the Siegewrights move nothing.
+
+3. GLYPHWRIGHTS — spellcasters who write magic into the ground.
+   Traits: scholarly, positional, lingering, transforming, growing.
+   Win: spells are cast THROUGH their units (where the caster stands decides what the spell hits), leave glyphs in the
+   cells they touch, and grow into stronger spells in the deck; their apprentices become spells when they die.
+   Strong: back-row reach, card creation (signature). Weak: holding dots with bodies, defence gains, big units.
+   Contrast: units and spells turn into each other; every other faction keeps them apart.
+
+4. BROKERS — smugglers and dealers who live off the enemy.
+   Traits: greedy, sly, well-informed, bargaining, opportunist.
+   Win: tax the enemy's actions for supply, take copies of the enemy's cards and play them, slip worthless goods into
+   the enemy deck.
+   Strong: interaction (the highest), stealing and seeing cards (signature). Weak: raw damage, big units, defence.
+   Contrast: the only faction whose plan runs on the enemy's cards and actions.
+
+5. HUNTERS — a hunting people who chase the weak.
+   Traits: fast, hungry, pack, tracking, trophy-taking.
+   Win: mark prey, kill it, and grow the lane's supply from trophies while the enemy's lane loses its income; back-row
+   chargers strike from far behind (Kaptain's Charge-from-the-back idea).
+   Strong: early pressure, removal of weak units, supply from kills (signature). Weak: defence, late game, spells,
+   holding after a lost fight. Contrast: the fastest; "the enemy with the least defence" belongs only here.
+
+Shared hooks for two-faction decks later (each faction answers them its own way, Strixhaven-style): a unit dies, a unit
+enters the enemy camp, an enemy is moved, a spell is cast.

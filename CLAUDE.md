@@ -36,6 +36,7 @@ Game source is `src/game/`, joined in `src/game/parts.txt` order by `python3 too
 - `python3 tools/find.py card <name>` — the card's data line and its summary lines.
 - `python3 tools/find.py where <identifier>` — definition and uses in the game code.
 - `python3 tools/find.py doc <text>` — matching lines in summary/ and factions/.
+- `python3 tools/network_check.py factions/designs/<faction>.txt` — the network check of a faction design (mechanics, cards, decks: setups per cash-in, cards in two mechanics, needs with no maker, twins). Format in the tool's header.
 - Otherwise `grep -n` in the one file the map names. Then read only the lines needed (`sed -n 'a,bp'` or Read with offset/limit, usually under 80 lines). Never read a whole part, doc or HTML file; never grep the built HTML.
 
 ## Where things go (AGREED, 12 Oct 2026; never break this)

@@ -6,7 +6,7 @@ Work plan (AGREED): step 1, faction candidates from the inspiration library (par
 
 Files (lines, then contents). Read only the file a task needs; find lines across files with: python3 tools/find.py doc <text>
 
-START_DESIGN.md                   143  START HERE for any faction or card design: rules to know, design rules, library search, checks
+START_DESIGN.md                   144  START HERE for any faction or card design: rules to know, design rules, library search, checks
 3-candidates/00-notes.txt             9  3. Candidates: review notes, how the list was built, terms
 3-candidates/E1-tagma.txt            18  E1. TAGMA — the Byzantine army (all-round)
 3-candidates/E2-ashfang-horde.txt    12  E2. ASHFANG HORDE — the war host of fury and fire
@@ -40,6 +40,8 @@ START_DESIGN.md                   143  START HERE for any faction or card design
 9-new-factions.txt                  41  9. THE FIVE NEW FACTIONS in the game for testing (identity, mechanics, specials)
 8-rejected-and-cut.txt                6  8. REJECTED AND CUT (don't reintroduce without asking)
 10-outside-design-guides.txt        79  10. What outside design guides teach (Hearthstone, Rosewater, Slay the Spire...) and what they mean here
+designs/00-five-identities.txt     44  The five new factions from zero: identities, traits, strong/weak, contrast (stage 0)
+designs/siegewrights.txt           91  Siegewrights stage 1: mechanics, web (network_check lines), ways to play, strong/weak
 
 ==================================================================
 1. CURRENT FACTIONS
