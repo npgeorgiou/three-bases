@@ -14,6 +14,7 @@ Kaptain's browser card game. Work on the clone, commit and push every change to 
 - Clone without the 121 MB library unless the task is about it:
   `git clone -q --depth 1 --filter=blob:none --no-checkout https://github.com/npgeorgiou/three-bases /home/claude/three-bases && cd /home/claude/three-bases && git sparse-checkout set --no-cone '/*' '!/library/' && git checkout -q main`
   (library task: `git sparse-checkout disable`).
+- Any design work is a library task, even when no library file is named: factions, cards, mechanics, combos, decks, brainstorms. Clone with the library and read `library/cards_db/START_QUESTIONS.md` whole before answering.
 - This file is the only file read at the start. Do not open the README, todo.md, summary/ or factions/ indexes, or any code until the task needs it, then use the map below to go straight to the right file.
 
 ## Map: where each thing lives
@@ -26,7 +27,7 @@ Game source is `src/game/`, joined in `src/game/parts.txt` order by `python3 too
 - CSS: `css/1-tokens-layout-toolbar.css` (colours, layout, piles, faction colours, toolbar) · `css/2-board-units-cards-hands.css` · `css/3-tooltips-fx-dialogs-prompt.css`. HTML: `shell/body.html` (pages, dialogs).
 - Design docs: `summary/` (the game as it is now; one file per section, faction cards in `summary/11-faction-<name>.txt`, index `summary/README.txt`). `factions/` (ideas: one file per part, one per candidate in `factions/3-candidates/`, index `factions/README.txt`). `todo.md` (open work). Cross-references like "section 7" mean the summary file starting with `07-`.
 - AI lab: `three-bases-ai-lab.html` (one file, not split yet; Kaptain will redesign it — split it the same way when that work starts). Never remove the lab or anything related to it.
-- Card database (what cards do, as linked rows): `library/cards_db/`. Entry files, read whole first: `START_DATABASE.md` for chats that import a game or change the database (rules, every check and test, state, open work), `START_QUESTIONS.md` for chats that answer design questions. Runeterra, Into the Breach and Slay the Spire done; Stormbound, Monster Train, Faeria, Duelyst wait for Kaptain's check.
+- Card database (what cards do, as linked rows): `library/cards_db/`. Entry files, read whole first: `START_DATABASE.md` for chats that import a game or change the database (rules, every check and test, state, open work), `START_QUESTIONS.md` for every design request (questions, faction sketches, card ideas, combo hunts, deck ideas). Runeterra, Into the Breach and Slay the Spire done; Stormbound, Monster Train, Faeria, Duelyst wait for Kaptain's check.
 - Library: `library/README.md` (what is there and how to ask design questions). Concepts are organised by outcome (e.g. "no damage output" covers "can't attack" and "strength 0"), not by mechanism (`library/concept_tree.txt`); combos emerge from card mechanics as links, never added from outside sources. Excluded entirely: Shadowverse: Worlds Beyond, D&D 5e, Blood Bowl, Kill Team, Warhammer Underworlds; cut any game whose data could drown out the others. Kaptain doesn't have the raw library-corpus.zip, so dropped cards must come from other reachable sources. Library changes are committed and pushed here; present results to Kaptain before changing concepts.
 
 ## Finding things (before reading anything)
@@ -45,7 +46,7 @@ Game source is `src/game/`, joined in `src/game/parts.txt` order by `python3 too
 When something changes state (an idea gets built, a to-do gets decided), move it to its home in the same turn.
 
 ## Workflow
-- summary/ is the source of truth for rules and UI: never contradict it without telling Kaptain. Never invent rules, stats or mechanics; mark suggestions as Claude's.
+- summary/ is the source of truth for rules and UI: never contradict it without telling Kaptain. Never invent rules, stats or mechanics; mark suggestions as Claude's. Design answers never come from general knowledge: every suggested mechanic starts from what the library found, and anything with no library source is marked as Claude's.
 - Change only what was asked. Fix bugs generically: when one card shows a problem, check every card with the same problem (`find.py kw`).
 - Every fix gets test cases (Kaptain, 31 Oct 2026): one for each point Kaptain raised and one for each similar error found, so a later fix cannot quietly undo it (card database: `cases/network.tsv`; game: a scenario or simtest check).
 - Visuals (layout, readability, animations) must look deliberate and clear.

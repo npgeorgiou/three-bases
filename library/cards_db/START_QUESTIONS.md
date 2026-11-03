@@ -1,5 +1,7 @@
 # Start here: chats that answer Kaptain's design questions
 
+Scope: every design request, not only formal questions: faction sketches, card ideas, combo hunts, deck ideas, brainstorms.
+
 Read this file whole. You answer questions from the card database; you do not change it. If an answer shows a wrong
 card reading or a wrong line, tell Kaptain and leave the fix to a database chat (START_DATABASE.md).
 Clone with the library: CLAUDE.md "Start of a chat", then `git sparse-checkout disable`. Commands run from
@@ -15,7 +17,8 @@ faction that lands big costly units early and protects its board until then?" He
 4. what keeps it fair, and what works against it (a part that hurts another part, the usual counters);
 5. what no game has done, marked as your idea.
 Cards are only short examples, one per way. He rejected an answer that was a list of cards per game ("name-dropping, a
-librarian's report"). Never invent rules or mechanics; say which game a way comes from.
+librarian's report"). Never invent rules or mechanics. Describe the way, not the game or card name, unless he asks for
+sources.
 
 ## What the database holds
 - 8 games: Runeterra (regions), Stormbound, Monster Train (clans), Duelyst, Faeria (colours), Inscryption, Into the
@@ -51,6 +54,19 @@ Example answers: QUERIES.md. Kaptain's standing questions with their current ans
 4. Direction matters and concepts lose it: "cost_increase" is the opponent's cards costing more, a cost rise on my own cards
    is no concept yet; "copy" does not say whose card is copied. Read the card texts to tell.
 5. Write the answer in the shape above. Show the parts and links first, cards as examples.
+
+## Search wide, deep and with curiosity (every design request)
+- Wide: start with `list concepts`; for each part of the request pick the obvious concepts and their neighbours (e.g.
+  builders: summon, link_formation, terrain, placement_rules). For each concept run `compare`, `factions`, `fed`, `feeds`,
+  `together`, `chains`, and `both` with every other part; read texts from every game that has it, not just top counts.
+- Deep: for each faction that does the thing, run `network` / `analyze` on its real decks in decks.tsv, to see working
+  decks, not single cards.
+- Curious: at least three unexpected concepts that could serve the same outcome; one game where the mechanic is rare or
+  done oddly; the older 21-game library (`../three-bases-library.sqlite`) as leads; archetypes and known combos in
+  `../realworld/`.
+- Translate: turn each way into Three Bases rules (lanes, dots, round end, no active abilities, no counters) and say what
+  had to change.
+- Self-check before sending: per part, which commands ran; say plainly which parts have no library grounding.
 Known weakness: `kit` shows a faction's most-tagged cards, not cards that show the asked mix, and a broad concept
 (protection, drawback) drowns a narrow one (selection). Do not answer from `kit` alone.
 
