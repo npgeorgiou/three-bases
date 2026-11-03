@@ -1104,6 +1104,9 @@ def generic_use(c, game):
     # levels it sooner, its own level text counts that damage (Kaptain's checks n33, n34)
     for i, ab in c.execute("select card, ability from flat_ref where role!='makes' and happening='nexus_damaged' and origin in ('own','has_keyword')"):
         if i in d and ab in lvl and d[i]['trees'] & {'evasion', 'excess_damage'}: d[i]['flags'].add('level_hit')
+    for i, w in c.execute("select card, ev_actor_with from flat_if where test='event_count' and attr='damage' and ev_actor_with like 'card is %'"):
+        if i in d and f'card is {i}' in w: d[i]['flags'].add('level_hit')  # it counts the damage it deals itself
+        # ("Allied Master Yis have done 12+ damage", Kaptain 3 Nov 2026): more power makes that sooner
     CACHE[('use', game)] = d
     return d
 
