@@ -138,6 +138,7 @@ How to ask: `library/cards_db/START_QUESTIONS.md` (commands, how to build an ans
   Show it as a played sequence: card, cell, what the enemy can do, result.
 
 ## 5. Before sending
+The network check is part of the design, not an extra: run it on every faction and every deck to show the interactions are thick (setups per cash-in, cards in two families, needs with no maker). Until the tool exists, do it by hand from the needs/makes lines and show the result.
 Per mechanic: which commands ran; which parts have no library source. If the library's tables or queries could not
 answer something the design needed (a missing link between cards, a missing query), say so to Kaptain. Every card passes 1b, the costing check and the
 frequency check. Talk to Kaptain as CLAUDE.md says: short, plain, his words, one question at a time, last.
