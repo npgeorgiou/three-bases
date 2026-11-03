@@ -64,6 +64,7 @@ function applyAuras(s) {
       if (c.adjAura) for (const a of near) { a.bs += c.adjAura.s; a.bd += c.adjAura.d; }
     }
   }
+  fxAuras(s);
   // a lost defence bonus never takes shields away: defence left = min(what it had, its defence without the bonus)
   for (let i = 0; i < units.length; i++) {
     const u = units[i], lost = before[i] - u.bd;

@@ -1,4 +1,9 @@
 const KEYWORDS = {
+  'Projectile':'A unit a Cannon beside it can fire: the Cannon\'s attack throws it at an enemy in the Cannon\'s lane; it strikes that enemy with its strength and dies there.',
+  'Cannon':'Instead of attacking, it can fire an adjacent Projectile at an enemy in its lane (costs what an attack costs). It can\'t throw anything else.',
+  'Echo':'A copy of a unit, placed beside it; it fades at the end of the round and leaves no card behind.',
+  'Ranged':'Can attack any enemy in its lane, from any row.',
+  'Supply':'Adds supply to its lane at each round start.',
   'Everywhere':'Paid from one lane, it works in all three lanes.',
   'Carry-over':'Supply you keep between rounds. At round end your unspent lane supply is added to it, up to 5 in total; you can spend it in any lane.',
   'Immobile':'Can\'t move.',

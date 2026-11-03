@@ -131,6 +131,7 @@ function placeUnit(s, p, u, line, own) {
   processDeaths(s);
   if (byId(s, u.id)) { exPlace(s, p, u); processDeaths(s); }
   if (byId(s, u.id)) { startOnPlace(s, p, u); processDeaths(s); }
+  if (byId(s, u.id)) { fxPlaced(s, p, u); processDeaths(s); }
   if (own && byId(s, u.id)) { own(); processDeaths(s); }
   // enemy Akritai react only once its Place effects are done (after a Place choice, once it is made)
   if (!byId(s, u.id) || !startCols.length) return;

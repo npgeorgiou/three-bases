@@ -1,19 +1,22 @@
 const DECKS = {
-  tagma:{name:'Tagma',fac:'t',list:[]},
-  horde:{name:'Ashfang Horde',fac:'h',list:[]},
-  exanimati:{name:'Exanimati',fac:'x',list:[]},
+  siegeworks:{name:'Siegeworks',fac:'g',list:[]},
+  arcanists:{name:'Arcanists',fac:'r',list:[]},
+  wanderers:{name:'Wanderers',fac:'w',list:[]},
+  echoes:{name:'Echoes',fac:'e',list:[]},
+  monoliths:{name:'Monoliths',fac:'m',list:[]},
 };
-/** Premade decks: three per faction, each built around one side of it. */
-const PREMADE_VERSION = 4;   // raising it replaces the premade decks stored in a browser with these lists
+/** Premade decks: each built around one side of its faction. */
+const PREMADE_VERSION = 5;   // raising it replaces the premade decks stored in a browser with these lists
 const PREMADE = [
-  { id: 'p-t1', name: 'Tagma — Shield Line', cards: { pavisarios: 3, stratiotes: 3, skoutatoi: 3, kontarioi: 3, hiereus: 3, komes: 3, menavlatoi: 3, thureophoroi: 3, strategos: 2, synaspismos: 3, hodegetria: 2 } },
-  { id: 'p-t2', name: 'Tagma — Riders and Archers', cards: { kursor: 3, mandator: 3, stratiotes: 3, toxotes: 3, tourmarches: 3, kavallarios: 3, sphendonetes: 2, hippotoxotai: 3, reform: 3, annona: 3, greekfire: 2 } },
-  { id: 'p-t3', name: 'Tagma — Guard and Envoys', cards: { stratiotes: 3, mitaton: 3, voukinator: 3, monomachos: 3, presbeutes: 3, komes: 2, doryphoroi: 3, varangoi: 3, varangianguard: 3, monomachia: 3, bribe: 2 } },
-  { id: 'p-h1', name: 'Ashfang Horde — Warhorns', cards: { warhorn: 3, gutsack: 3, fleshshield: 3, bilebloater: 3, undyingreaver: 3, carrionchief: 3, bonebreaker: 3, bloodidol: 3, scarredvet: 2, cull: 2, hellfire: 2 } },
-  { id: 'p-h2', name: 'Ashfang Horde — Blood Rites', cards: { paineater: 3, bloodletter: 3, cinderimp: 3, blooddrum: 3, bleedingogre: 3, gorehound: 3, cavetroll: 3, pitfighter: 3, scarredvet: 3, rainblood: 2, cuts: 2, hellfire: 2 } },
-  { id: 'p-h3', name: 'Ashfang Horde — Sacrifices', cards: { gutsack: 3, fleshshield: 3, bilebloater: 3, undyingreaver: 3, bloodidol: 3, carrionchief: 3, bonebreaker: 3, ironbehemoth: 2, martyrdom: 3, bloodtithe: 2, carrionfeast: 3 } },
-  { id: 'p-x1', name: 'Exanimati — The Mist', cards: { gravewisp: 3, mourner: 3, ashenpenitent: 3, wakecandle: 3, lanternwisp: 3, corpsecandle: 3, strix: 3, bellringer: 2, shadeshepherd: 2, reaper: 2, gravetoll: 2, lastrites: 2, massgrave: 2, danse: 2, debt: 2 } },
-  { id: 'p-x2', name: 'Exanimati — The Returned', cards: { bonethrall: 3, labourer: 3, barrowrevenant: 3, embalmer: 3, tombwarden: 3, ninthknight: 3, weepingbride: 2, mardoc: 2, banner: 2, clerk: 2, embalming: 3, lastrites: 2 } },
-  { id: 'p-x3', name: 'Exanimati — Plague and Withering', cards: { bonethrall: 3, acolyte: 3, flagellant: 2, feverseer: 3, plagueslinger: 3, duelist: 3, executioner: 3, plagueherald: 2, leperknight: 2, ophra: 2, miasma: 2, creepingrot: 2, hymn: 2, contagion: 2, execution: 2 } },
+  { id: 'p-g1', name: 'Siegeworks — Big Guns', cards: { g_loader: 3, g_monkey: 3, g_ballista: 3, g_mangonel: 3, g_stone: 3, g_firepot: 3, g_mantlet: 3, g_wagon: 3, g_mastergun: 2, g_ordnance: 2, g_volley: 2, g_makeready: 2, g_breach: 2 } },
+  { id: 'p-g2', name: 'Siegeworks — Walls and Sappers', cards: { g_mantlet: 3, g_gabion: 3, g_palisade: 3, g_sapper: 3, g_architect: 2, g_sappercap: 2, g_pioneer: 3, g_wagon: 3, g_handgunner: 3, g_arbalist: 3, g_fortify: 2, g_brace: 2, g_demolish: 1 } },
+  { id: 'p-r1', name: 'Arcanists — Spark College', cards: { r_initiate: 3, r_apprentice: 3, r_familiar: 3, r_scribe: 3, r_conduit: 3, r_well: 3, r_prodigy: 2, r_stormcaller: 2, r_kindle: 3, r_brilliance: 2, r_firebolt: 3, r_chain: 2, r_study: 2 } },
+  { id: 'p-r2', name: 'Arcanists — Golems and Wards', cards: { r_alchemist: 3, r_artificer: 3, r_golemist: 2, r_wardmage: 3, r_sentinel: 3, r_spellguard: 3, r_mentor: 2, r_archivist: 2, r_conjure: 3, r_lesson2: 3, r_mirrorshield: 2, r_surge: 3, r_fireball: 2 } },
+  { id: 'p-w1', name: 'Wanderers — Riders of the Steppe', cards: { w_outrider: 3, w_lancer: 3, w_raider: 3, w_harrier: 3, w_beacon: 3, w_mule: 3, w_wagon: 3, w_pathfinder: 2, w_raiderchief: 2, w_windseer: 2, w_ride: 3, w_shot: 3, w_bolas: 2 } },
+  { id: 'p-w2', name: 'Wanderers — Caravans and Exiles', cards: { w_camelteam: 3, w_caravanmaster: 2, w_merchant: 3, w_trader: 3, w_spearman: 3, w_guard: 3, w_elder: 2, w_sweeper: 3, w_khan: 2, w_exile: 3, w_trade: 2, w_volley: 2, w_mend: 2 } },
+  { id: 'p-e1', name: 'Echoes — Mirror Host', cards: { e_twin: 3, e_mirror: 3, e_reflect: 3, e_resonator: 3, e_lens: 2, e_seer: 3, e_oldman: 3, e_loopknight: 3, e_chronarch: 1, e_echospell: 3, e_chorus: 2, e_pastblow: 3, e_rewind: 2 } },
+  { id: 'p-e2', name: 'Echoes — Chroniclers', cards: { e_acolyte: 3, e_scribe: 3, e_chronicler: 3, e_conductor: 2, e_recaller: 2, e_sentinel: 3, e_oldman: 3, e_oracle: 3, e_paradox: 2, e_timekeeper: 2, e_remember: 2, e_twice: 3, e_again: 2, e_rewind: 1 } },
+  { id: 'p-m1', name: 'Monoliths — Waking Spirits', cards: { m_shrine: 3, m_obelisk: 3, m_cairn: 3, m_spiritcaller: 3, m_arch: 2, m_hearth: 3, m_effigy: 3, m_sunpyramid: 1, m_oraclestone: 2, m_awaken: 3, m_rally: 2, m_sunbeam: 3, m_inscribe: 2 } },
+  { id: 'p-m2', name: 'Monoliths — The Stone Line', cards: { m_totem: 3, m_pillar: 3, m_menhir: 3, m_dolmen: 3, m_statue: 3, m_hearth: 3, m_wall: 2, m_ancestor: 2, m_waking: 2, m_ley: 3, m_rockfall: 3, m_consecrate: 2, m_judgement: 2 } },
 ];
 

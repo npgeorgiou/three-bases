@@ -7,7 +7,7 @@ function kill(s, u, why, opt = {}) {
   s.units = s.units.filter(x => x.id !== u.id);
   // a tombstone keeps its cells (no dots, no actions) until its death resolves
   if (!opt.noTomb) s.tombs = [...(s.tombs || []), { id: u.id, card: u.card, owner: u.owner, ctl: ctl(u), lane: u.lane, cells: cellsOf(u).map(x => [x[0], x[1]]), u: s.noFx ? null : { ...u } }];
-  if (keepsCard(u.card)) s.players[ctl(u)].discard.push(baseKey(u.card));
+  if (keepsCard(u.card) && !u.tok) s.players[ctl(u)].discard.push(baseKey(u.card));
   // Danse Macabre: where each of p's units died this round
   { const P = s.players[ctl(u)]; P.fell = [...(P.fell || []).filter(x => x.round === s.round), { round: s.round, card: u.card, lane: u.lane, camp: u.owner, r: u.r, c: u.c, o: u.o, sh: u.sh ? normShape(cellsOf(u)) : null }]; }
   for (const k of u.extra || []) s.players[ctl(u)].discard.push(k);
@@ -31,6 +31,7 @@ function survived(s, u) {
     u.pd = (u.pd || 0) + 1;
     log(s, `${unitName(v)} harden ${unitName(u)}: +1 defence.`);
   }
+  fxFire(s, 'survive', u);
   applyAuras(s);
 }
 
@@ -277,6 +278,7 @@ function drainDeaths(s) {
     if (c.deathAdjHeal) for (const a of targetsOf(s, u, 'deathAdjHeal')) restoreShields(s, a, c.deathAdjHeal, unitName(u));
     if (c.deathDraw) { const n = drawCards(s, ctl(u), c.deathDraw); if (n) { log(s, `${unitName(u)}: ${deckName(s, ctl(u))} draws ${n}.`); emit(s, { draw: ctl(u), n }); } }
     exDeath(s, u);
+    fxDied(s, u);
     // returns to the hand only if no Revenant return took its card first
     if (c.deathReturn) {
       const P = s.players[ctl(u)], i = P.discard.lastIndexOf(baseKey(u.card));

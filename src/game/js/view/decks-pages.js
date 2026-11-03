@@ -8,7 +8,7 @@ const deckStore = (() => {
   let st = null;
   try { st = JSON.parse(localStorage.getItem(DECK_STORE) || 'null'); } catch (e) { st = null; }
   const copy = d => ({ id: d.id, name: d.name, cards: { ...d.cards } });
-  if (!st || !Array.isArray(st.decks)) st = { decks: PREMADE.map(copy), pick: 'p-t1', opp: 'p-h1', seenPre: PREMADE.map(d => d.id) };
+  if (!st || !Array.isArray(st.decks)) st = { decks: PREMADE.map(copy), pick: PREMADE[0].id, opp: PREMADE[1].id, seenPre: PREMADE.map(d => d.id) };
   // the earlier placeholder premade decks are dropped; premade decks this browser hasn't seen yet join the list once
   st.decks = st.decks.filter(d => !['pre-tagma', 'pre-horde', 'pre-exanimati'].includes(d.id));
   delete st.seen;
@@ -16,7 +16,11 @@ const deckStore = (() => {
   for (const d of PREMADE) if (!st.seenPre.includes(d.id)) { st.seenPre.push(d.id); if (!st.decks.some(x => x.id === d.id)) st.decks.push(copy(d)); }
   // new premade lists replace the stored copies of the premade decks (the player's own decks are kept)
   if (st.preVer !== PREMADE_VERSION) { for (const d of PREMADE) { const i = st.decks.findIndex(x => x.id === d.id); if (i >= 0) st.decks[i] = copy(d); else st.decks.push(copy(d)); } st.preVer = PREMADE_VERSION; }
-  for (const d of st.decks) for (const k of Object.keys(d.cards)) if (!CARDS[k] || CARDS[k].token) delete d.cards[k];
+  for (const d of st.decks) for (const k of Object.keys(d.cards)) if (!CARDS[k] || CARDS[k].token || !FAC_DECK[CARDS[k].fac]) delete d.cards[k];
+  // premade decks of factions no longer in the game are dropped
+  st.decks = st.decks.filter(d => !d.id.startsWith('p-') || PREMADE.some(x => x.id === d.id));
+  if (!st.decks.some(d => d.id === st.pick)) st.pick = PREMADE[0].id;
+  if (st.opp !== 'random' && !st.decks.some(d => d.id === st.opp)) st.opp = PREMADE[1].id;
   return st;
 })();
 function saveDecks() { try { localStorage.setItem(DECK_STORE, JSON.stringify(deckStore)); } catch (e) { /* kept for this visit only */ } }
@@ -32,7 +36,7 @@ let testGames = (() => { try { return localStorage.getItem(TEST_STORE) === '1'; 
 function setTestGames(on) { testGames = on; try { localStorage.setItem(TEST_STORE, on ? '1' : '0'); } catch (e) { /* not remembered */ } }
 const deckPlayable = d => (testGames ? deckCount(d) > 0 : deckReady(d));
 const deckById = id => deckStore.decks.find(d => d.id === id) || null;
-const facName = f => (f ? DECKS[FAC_DECK[f]].name : 'No faction yet');
+const facName = f => (f && FAC_DECK[f] ? DECKS[FAC_DECK[f]].name : 'No faction yet');
 /** Deck order: cost (a unit's supply, a tactic's cost), then strength, then defence, then name. */
 const cardCost = c => (c.tactic ? (typeof c.cost === 'number' ? c.cost : 0) : c.sup);
 const byDeckOrder = (a, b) => {
@@ -115,7 +119,7 @@ function deleteDeck(id) {
 /* ---------- deck builder ---------- */
 let edit = null;   // { id, name, cards, dirty }
 /** Each faction's symbol (an existing card art) and the factions the card list shows (none picked: all). */
-const FAC_ART = { t: 'shield', h: 'fangs', x: 'skull' };
+const FAC_ART = { t: 'shield', h: 'fangs', x: 'skull', ...FAC_GLYPH };
 const bFacs = new Set(), dFacs = new Set(), bTypes = new Set();   // bTypes: 'u' units, 's' spells (none picked: both)
 let bExclude = false;   // search toggle: include (green) or exclude (red) the matches   // the builder's and the decks page's faction filters
 function openBuilder(id) {

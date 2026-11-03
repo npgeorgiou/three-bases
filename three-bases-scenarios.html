@@ -100,6 +100,11 @@ button:focus-visible { outline: 3px solid var(--tl); outline-offset: 2px; }
 .f-t { --fill: var(--tf); --line: var(--tl); --text: var(--ti); --spell: var(--ts); }
 .f-h { --fill: var(--hf); --line: var(--hl); --text: var(--hi); --spell: var(--hs); }
 .f-x { --fill: var(--xf); --line: var(--xl); --text: var(--xi); --spell: var(--xs); }
+.f-g { --fill: #4B4032; --line: #E0A24A; --text: #F3E6CF; --spell: #6A5A45; }   /* Siegeworks */
+.f-r { --fill: #1F3A6B; --line: #8FD3FF; --text: #E4F2FF; --spell: #2F5290; }   /* Arcanists */
+.f-w { --fill: #6B5420; --line: #F0D27A; --text: #FBF1D6; --spell: #8A6E2C; }   /* Wanderers */
+.f-e { --fill: #3D2B5E; --line: #C9B6FF; --text: #EFE8FF; --spell: #55407D; }   /* Echoes */
+.f-m { --fill: #3E4A44; --line: #C8D6C2; --text: #EEF3EA; --spell: #56655D; }   /* Monoliths */
 .unit.ghost > .ubody { fill-opacity: .62; stroke-dasharray: 5 3; }
 .unit.ghost > .uart { opacity: .7; }
 .unit .ctlmark { fill: none; stroke-width: 3.5; pointer-events: none; }
@@ -869,7 +874,593 @@ const CARDS = {
   longnight:{name:'The Long Night',fac:'x',tactic:'lane',cost:6,art:'mist',text:'Pick a lane: every enemy there loses 2 strength.'},
 };
 
+/* ---------- new factions (Nov 2026): compact card lines, effects in fx (rules/fx.js) ----------
+   U(key, name, supply, strength, defence, size, extra, text): a unit; T(...): a token unit.
+   S(key, name, cost, target, cast, text): a spell; target 'lane' | 'enemy' | 'own' | 'any' | 'column'. */
+const FAC_GLYPH = { g: 'wheel', r: 'star', w: 'boot', e: 'hourglass', m: 'moon' };
+const U = (key, name, sup, str, def, size, x, text) => [key, { name, size, sup, str, def, ...x, text }];
+const T = (...a) => { const r = U(...a); r[1].token = true; return r; };
+const S = (key, name, cost, tactic, cast, text, x = {}) => [key, { name, tactic, cost, cast, text, ...x }];
+function addFaction(fac, rows) {
+  for (const [k, v] of rows) {
+    if (v.of) { for (const f of v.fx || []) f.of = f.of || v.of; delete v.of; }
+    CARDS[k] = { ...v, fac, art: FAC_GLYPH[fac] };
+  }
+}
+// shorthands for effects
+const ON = (on, ...ops) => ({ on, do: ops });
+const ONCE = (on, ...ops) => ({ on, lim: 'round', do: ops });
+const HOLD = { hold: 1 }, NOHOLD = { hold: 0 };
+/* ---------- Siegeworks: siege engineers; Cannons fire Projectiles from the back rows, walls hold the front ---------- */
+const SHOT = { token: 'g_shot', at: 'adj' };
+addFaction('g', [
+  // tokens
+  T('g_shot', 'Shot', 1, 1, 1, 1, { proj: 1 }, '[[Projectile]].'),
+  T('g_stake', 'Stake Wall', 1, 0, 3, 1, { fixed: 1 }, '[[Immobile]].'),
+  // Projectiles
+  U('g_stone', 'Stone Shot', 1, 2, 1, 1, { proj: 1 }, '[[Projectile]].'),
+  U('g_firepot', 'Firepot', 1, 1, 1, 1, { proj: 1, fx: [ON('death', { dmg: 1, to: 'adjEnemies' })] }, '[[Projectile]]. Death: deals 1 damage to each enemy adjacent to me.'),
+  U('g_smokepot', 'Smoke Pot', 1, 0, 2, 1, { proj: 1, fx: [ON('death', { buff: [-1, 0], rnd: 1, to: 'adjEnemies' })] }, '[[Projectile]]. Death: enemies adjacent to me get -1 strength this round.'),
+  U('g_caltrop', 'Caltrop Jar', 2, 0, 2, 1, { proj: 1, fx: [ON('death', { stun: 1, to: 'adjEnemies' })] }, '[[Projectile]]. Death: enemies adjacent to me can\'t move or attack this round.'),
+  U('g_chainshot', 'Chain Shot', 2, 2, 1, 1, { proj: 1, fx: [ON('death', { chain: 2, to: 'adjEnemies' })] }, '[[Projectile]]. Death: deals 2 damage to an adjacent enemy, then 1 to an enemy beside that one.'),
+  U('g_tarpot', 'Tar Pot', 2, 1, 2, 1, { proj: 1, fx: [ON('death', { buff: [-1, 0], to: 'adjEnemies' })] }, '[[Projectile]]. Death: enemies adjacent to me lose 1 strength.'),
+  U('g_ironball', 'Iron Ball', 3, 4, 2, 1, { proj: 1 }, '[[Projectile]].'),
+  U('g_powder', 'Powder Charge', 3, 1, 1, 1, { proj: 1, fx: [ON('death', { dmg: 3, to: 'adjEnemies' })] }, '[[Projectile]]. Death: deals 3 damage to each enemy adjacent to me.'),
+  U('g_hailshot', 'Hail Shot', 2, 1, 1, 1, { proj: 1, fx: [ON('death', { dmg: 1, to: 'enemyFront' })] }, '[[Projectile]]. Death: deals 1 damage to each enemy in the enemy front row of my lane.'),
+  U('g_signalshell', 'Signal Shell', 1, 1, 1, 1, { proj: 1, fx: [ON('death', { draw: 1, if: { min: ['allies:cannon', 2] } })] }, '[[Projectile]]. Death: if you have 2 or more [[Cannon]]s in my lane, draw a card.'),
+  // Cannons
+  U('g_scorpion', 'Scorpion', 1, 0, 2, 1, { thrower: 1, cannon: 1 }, '[[Cannon]].'),
+  U('g_ballista', 'Ballista', 2, 0, 4, 1, { thrower: 1, cannon: 1 }, '[[Cannon]].'),
+  U('g_mangonel', 'Mangonel', 3, 1, 5, 1, { thrower: 1, cannon: 1 }, '[[Cannon]].'),
+  U('g_onager', 'Onager', 4, 0, 4, 2, { thrower: 1, cannon: 1, armoured: 1 }, '[[Cannon]]. [[Armoured]].'),
+  U('g_bombard', 'Bombard', 4, 0, 5, 1, { thrower: 1, cannon: 1, fx: [ON('place', SHOT)] }, '[[Cannon]]. Place: places a {{card:g_shot|Shot}} beside me.'),
+  U('g_trebuchet', 'Trebuchet', 5, 0, 7, 2, { thrower: 1, cannon: 1, far: 1 }, '[[Cannon]] that can fire into ANY lane.'),
+  U('g_springald', 'Springald', 2, 0, 3, 1, { thrower: 1, cannon: 1, fx: [ONCE('allyDeath', { pool: 1 })], of: 'proj' }, '[[Cannon]]. Once per round, when one of your [[Projectile]]s dies in my lane: +1 supply in my lane this round.'),
+  U('g_rolling', 'Rolling Battery', 3, 0, 4, 1, { thrower: 1, cannon: 1, lightfooted: 1, moves: 2 }, '[[Cannon]]. [[Lightfooted]].'),
+  U('g_mortar', 'Mortar', 3, 0, 4, 1, { thrower: 1, cannon: 1, fx: [ON('roundEnd', { dmg: 1, to: 'enemyBack', if: { min: ['adj:proj', 1] } })] }, '[[Cannon]]. Round end: if a [[Projectile]] is beside me, deals 1 damage to each enemy in the enemy back rows.'),
+  U('g_hwacha', 'Fire-Arrow Cart', 4, 0, 5, 2, { thrower: 1, cannon: 1, fx: [ON('attack', { dmg: 1, to: 'enemyFront' })] }, '[[Cannon]]. After I attack or fire: deals 1 damage to each enemy in the enemy front row.'),
+  // crews and foundries: make Projectiles
+  U('g_loader', 'Loader', 1, 1, 1, 1, { fx: [ON('place', SHOT)] }, 'Place: places a {{card:g_shot|Shot}} beside me.'),
+  U('g_monkey', 'Powder Monkey', 1, 1, 1, 1, { fx: [ON('roundEnd', { ...SHOT, if: { min: ['adj:cannon', 1] } })] }, 'Round end: if a [[Cannon]] is beside me, places a {{card:g_shot|Shot}} beside me.'),
+  U('g_crew', 'Gun Crew', 2, 1, 2, 1, { fx: [ON('place', SHOT), ON('death', SHOT)] }, 'Place and Death: places a {{card:g_shot|Shot}} beside me.'),
+  U('g_foundry', 'Foundry', 3, 0, 5, 2, { fixed: 1, fx: [ON('roundEnd', SHOT)] }, '[[Immobile]]. Round end: places a {{card:g_shot|Shot}} beside me.'),
+  U('g_kiln', 'Shot Kiln', 2, 0, 4, 1, { fixed: 1, fx: [ON('roundStart', { ...SHOT, if: HOLD })] }, '[[Immobile]]. Round start: if you hold this lane\'s base, places a {{card:g_shot|Shot}} beside me.'),
+  U('g_armourer', 'Armourer', 2, 1, 3, 1, { fx: [ON('allyPlace', { buff: [1, 0], to: 'it' })], of: 'proj' }, 'Whenever one of your [[Projectile]]s is placed in my lane, it gains +1 strength.'),
+  U('g_ammo', 'Ammunition Cart', 2, 0, 1, 1, { bonus: 1, fx: [ON('death', { ...SHOT, n: 2 })] }, '[[Supply]] +1. Death: places 2 {{card:g_shot|Shots}} in my lane.'),
+  U('g_quarter', 'Quartermaster', 2, 1, 2, 1, { fx: [ON('place', { draw: 1, if: { min: ['allies:proj', 2] } })] }, 'Place: if you have 2 or more [[Projectile]]s in my lane, draw a card.'),
+  U('g_smith', 'Siege Smith', 3, 2, 3, 1, { fx: [ON('place', { buff: [1, 1], to: 'allies:cannon' })] }, 'Place: [[Cannon]]s in my lane gain +1|+1.'),
+  U('g_engineer', 'Siege Engineer', 2, 1, 3, 1, { fx: [ONCE('allyDeath', { carry: 1 })], of: 'proj' }, 'Once per round, when one of your [[Projectile]]s dies in my lane: +1 carry-over.'),
+  U('g_spotter', 'Spotter', 2, 2, 2, 1, { fx: [ONCE('allyDeath', { dmg: 1, to: 'weakest' })], of: 'proj' }, 'Once per round, when one of your [[Projectile]]s dies in my lane: deals 1 damage to the enemy with the least defence in my lane.'),
+  U('g_mastergun', 'Master Gunner', 3, 1, 4, 1, { fx: [ON('allyDeath', { buff: [1, 0], to: 'self' })], of: 'proj' }, 'Whenever one of your [[Projectile]]s dies in my lane, I gain +1 strength.'),
+  U('g_rangefinder', 'Rangefinder', 3, 2, 1, 1, { ranged: 1, fx: [ON('place', { buff: [1, 0], to: 'allies:proj' })] }, '[[Ranged]]. Place: your [[Projectile]]s in my lane gain +1 strength.'),
+  // walls and holders
+  U('g_mantlet', 'Mantlet', 1, 0, 5, 1, { fixed: 1 }, '[[Immobile]].'),
+  U('g_gabion', 'Gabion', 2, 0, 6, 1, { fixed: 1, guard: 1 }, '[[Immobile]]. [[Bodyguard]].'),
+  U('g_palisade', 'Palisade', 2, 1, 5, 1, { fixed: 1, fx: [ON('survive', { dmg: 1, to: 'facing' })] }, '[[Immobile]]. When I survive damage: deals 1 damage to the enemy facing me.'),
+  U('g_earthwork', 'Earthwork', 3, 0, 7, 2, { fixed: 1, aura: [{ to: 'row', d: 1 }] }, '[[Immobile]]. Other allies in my row have +1 defence.'),
+  U('g_sandbags', 'Sandbag Line', 2, 0, 4, 2, { fixed: 1, fx: [ON('place', { token: 'g_stake', at: 'front' })] }, '[[Immobile]]. Place: places a {{card:g_stake|Stake Wall}} in my front row.'),
+  U('g_bastion', 'Bastion', 5, 2, 5, 4, { fixed: 1, armoured: 1 }, '[[Immobile]]. [[Armoured]].'),
+  U('g_siegetower', 'Siege Tower', 5, 3, 4, 2, { guard: 1, fx: [ON('place', { kw: 'armoured', rnd: 1, to: 'adj' })] }, '[[Bodyguard]]. Place: allies beside me are [[Armoured]] this round.'),
+  U('g_watchtower', 'Watchtower', 4, 2, 4, 2, { fixed: 1, ranged: 1 }, '[[Immobile]]. [[Ranged]].'),
+  // soldiers
+  U('g_pioneer', 'Pioneer', 1, 1, 1, 1, { fx: [ON('place', { token: 'g_stake', at: 'front' })] }, 'Place: places a {{card:g_stake|Stake Wall}} in my front row.', ),
+  U('g_halberd', 'Halberdier', 2, 2, 2, 1, { reach: 1 }, '[[Pike]].'),
+  U('g_arbalist', 'Arbalist', 3, 2, 2, 1, { ranged: 1 }, '[[Ranged]].'),
+  U('g_paviser', 'Pavise Crossbowman', 4, 2, 3, 1, { ranged: 1 }, '[[Ranged]].'),
+  U('g_grenadier', 'Grenadier', 2, 1, 2, 1, { fx: [ON('place', { dmg: 1, to: 'weakest' })] }, 'Place: deals 1 damage to the enemy with the least defence in my lane.'),
+  U('g_bombardier', 'Bombardier', 3, 2, 3, 1, { fx: [ON('attack', { dmg: 1, to: 'itAdj' })] }, 'After I attack: deals 1 damage to each enemy adjacent to the one I attacked.'),
+  U('g_sapper', 'Sapper', 2, 2, 2, 1, { fx: [ON('death', { dmg: 2, to: 'adjEnemies' })] }, 'Death: deals 2 damage to each enemy adjacent to me.'),
+  U('g_miner', 'Miner', 3, 2, 3, 1, { fx: [ON('place', { dmg: 1, to: 'colEnemies' })] }, 'Place: deals 1 damage to each enemy in my column.'),
+  U('g_ram', 'Battering Ram', 4, 4, 2, 2, { push: 1 }, '[[Push]].'),
+  U('g_mantletmen', 'Mantlet Bearers', 3, 2, 3, 2, { fx: [ON('place', { kw: 'armoured', rnd: 1, to: 'self' })] }, 'Place: I am [[Armoured]] this round.'),
+  U('g_handgunner', 'Handgunner', 2, 3, 1, 1, { fx: [ON('place', { dmg: 1, to: 'facing' })] }, 'Place: deals 1 damage to the enemy facing me.'),
+  U('g_petard', 'Petardier', 3, 1, 2, 1, { fx: [ON('death', { dmg: 3, to: 'facing' })] }, 'Death: deals 3 damage to the enemy facing me.'),
+  U('g_veteran', 'Garrison Veteran', 3, 3, 3, 1, { fx: [ON('survive', { buff: [1, 0], to: 'self' })] }, 'When I survive damage, I gain +1 strength.'),
+  U('g_marshal', 'Siege Marshal', 4, 3, 4, 1, { aura: [{ to: 'allies:cannon', s: 0, d: 2 }] }, 'Your [[Cannon]]s in my lane have +2 defence.'),
+  U('g_wagon', 'Supply Wagon', 2, 0, 2, 1, { bonus: 1 }, '[[Supply]] +1.'),
+  U('g_powderwagon', 'Powder Wagon', 3, 0, 2, 1, { bonus: 1, outrider: 1, fx: [ON('arrive', SHOT)] }, '[[Supply]] +1. [[Outrider]]. When I arrive from another lane: places a {{card:g_shot|Shot}} beside me.'),
+  U('g_depot', 'Powder Depot', 3, 0, 4, 1, { bonus: 1, fixed: 1 }, '[[Supply]] +1. [[Immobile]].'),
+  U('g_courier', 'Ordnance Courier', 1, 1, 1, 1, { outrider: 1 }, '[[Outrider]].'),
+  U('g_breacher', 'Breacher', 4, 4, 3, 1, { fx: [ON('attack', { buff: [-1, 0], to: 'it' })] }, 'After I attack: the unit I attacked loses 1 strength, if it lives.'),
+  U('g_ironclad', 'Iron Wagon-Fort', 6, 4, 6, 4, { fixed: 1, fx: [ON('roundEnd', { dmg: 1, to: 'facing' })] }, '[[Immobile]]. Round end: deals 1 damage to the enemy facing me.'),
+  U('g_colossus', 'Siege Colossus', 7, 5, 3, 4, { armoured: 1, push: 1 }, '[[Armoured]]. [[Push]].'),
+  U('g_cannoneer', 'Cannoneer', 2, 1, 3, 1, { fx: [ON('allyPlace', { buff: [0, 1], to: 'it' })], of: 'cannon' }, 'Whenever one of your [[Cannon]]s is placed in my lane, it gains +1 defence.'),
+  U('g_tinker', 'Tinker', 1, 0, 2, 1, { fx: [ON('place', { heal: 2, to: 'hurtAlly' })] }, 'Place: restores 2 defence to your most damaged unit in my lane.'),
+  U('g_mender', 'Wall Mender', 2, 1, 3, 1, { fx: [ON('roundEnd', { heal: 1, to: 'adj' })] }, 'Round end: restores 1 defence to each ally beside me.'),
+  U('g_bulwark', 'Bulwark Sergeant', 3, 2, 4, 1, { aura: [{ to: 'adj:fixed', d: 1 }] }, 'Your [[Immobile]] allies beside me have +1 defence.'),
+  U('g_mineshaft', 'Mineshaft', 2, 0, 3, 1, { fixed: 1, fx: [ON('roundEnd', { dmg: 1, to: 'colEnemies', if: NOHOLD })] }, '[[Immobile]]. Round end: if you don\'t hold this lane\'s base, deals 1 damage to each enemy in my column.'),
+  // the five special units
+  U('g_ordnance', 'Master of Ordnance', 2, 1, 3, 1, { aura: [{ to: 'allies:proj', s: 1, if: HOLD }], fx: [ON('place', SHOT)] }, 'Place: places a {{card:g_shot|Shot}} beside me. As long as you hold this lane\'s base, your [[Projectile]]s in my lane have +1 strength.'),
+  U('g_sappercap', 'Sapper Captain', 3, 3, 3, 1, { fx: [ON('death', { dmg: 3, to: 'adjEnemies' }), ON('roundEnd', { dmg: 2, to: 'colEnemies', if: NOHOLD })] }, 'Round end: if you don\'t hold this lane\'s base, deals 2 damage to each enemy in my column. Death: deals 3 damage to each enemy adjacent to me.'),
+  U('g_architect', 'Chief Architect', 4, 2, 5, 1, { aura: [{ to: 'allies:fixed', d: 2, if: HOLD }], fx: [ON('roundEnd', { heal: 1, to: 'allies', if: HOLD })] }, 'As long as you hold this lane\'s base, your [[Immobile]] allies in my lane have +2 defence. Round end: if you hold it, restores 1 defence to each ally in my lane.'),
+  U('g_warwagon', 'War Wagon', 5, 2, 4, 2, { thrower: 1, cannon: 1, outrider: 1, aura: [{ to: 'self', s: 2, if: HOLD }], fx: [ON('arrive', { ...SHOT, n: 2 })] }, '[[Cannon]]. [[Outrider]]. When I arrive from another lane: places 2 {{card:g_shot|Shots}} beside me. As long as you hold this lane\'s base, I have +2 strength.'),
+  U('g_greatbomb', 'The Great Bombard', 7, 0, 9, 4, { thrower: 1, cannon: 1, far: 1, fx: [ON('roundEnd', { ...SHOT, if: HOLD })] }, '[[Cannon]] that can fire into ANY lane. Round end: if you hold this lane\'s base, places a {{card:g_shot|Shot}} beside me.'),
+  // spells
+  S('g_volley', 'Volley', 2, 'lane', { need: 'enemies', do: [{ dmg: 1, to: 'enemyFront' }] }, 'Pick a lane: deals 1 damage to each enemy in the enemy front row.'),
+  S('g_bombardment', 'Bombardment', 4, 'lane', { need: 'enemies', do: [{ dmg: 2, to: 'enemyBack' }] }, 'Pick a lane: deals 2 damage to each enemy in the enemy back rows.'),
+  S('g_ricochet', 'Ricochet Shot', 2, 'enemy', { do: [{ ricochet: 2, to: 'it' }] }, 'Deals 2 damage to an enemy, then 2 to the enemy in front of it.'),
+  S('g_grapeshot', 'Grapeshot', 3, 'column', { do: [{ dmg: 2, to: 'colEnemies' }] }, 'Pick a column of an enemy camp: deals 2 damage to each enemy in it.'),
+  S('g_makeready', 'Make Ready', 1, 'lane', { need: 'allies', do: [{ token: 'g_shot', n: 2 }] }, 'Pick a lane where you have units: places 2 {{card:g_shot|Shots}} in your camp there.'),
+  S('g_requisition', 'Requisition', 2, 'lane', { do: [{ draw: 1 }, { token: 'g_shot' }] }, 'Pick a lane: draw a card, and place a {{card:g_shot|Shot}} in your camp there.'),
+  S('g_fortify', 'Fortify', 2, 'own', { do: [{ buff: [0, 3], to: 'it' }, { kw: 'armoured', rnd: 1, to: 'it' }] }, 'An ally gains +3 defence and is [[Armoured]] this round.'),
+  S('g_undermine', 'Undermine', 4, 'lane', { need: 'enemies', do: [{ dmg: 2, to: 'enemyFront' }] }, 'Pick a lane: deals 2 damage to each enemy in the enemy front row.'),
+  S('g_breach', 'Breach', 3, 'enemy', { do: [{ dmg: 4, to: 'it' }] }, 'Deals 4 damage to an enemy.'),
+  S('g_siegeworks', 'Siege Works', 3, 'lane', { need: 'allies', do: [{ buff: [1, 1], to: 'team:cannon' }, { token: 'g_shot' }] }, 'Pick a lane: your [[Cannon]]s there gain +1|+1, and a {{card:g_shot|Shot}} is placed in your camp there.'),
+  S('g_overcharge', 'Overcharge', 1, 'own', { do: [{ buff: [2, 0], rnd: 1, to: 'it' }] }, 'An ally gains +2 strength this round.'),
+  S('g_barrage', 'Rolling Barrage', 6, 'lane', { all: 1, do: [{ dmg: 1, to: 'enemies' }] }, 'Paid in one lane, cast in ALL lanes: deals 1 damage to each enemy.'),
+  S('g_earthworks', 'Dig In', 2, 'lane', { do: [{ token: 'g_stake', at: 'front', n: 2 }] }, 'Pick a lane: places 2 {{card:g_stake|Stake Walls}} in your front row there.'),
+  S('g_counter', 'Counter-Battery', 3, 'enemy', { do: [{ dmg: 2, to: 'it' }, { dmg: 1, to: 'itAdj' }] }, 'Deals 2 damage to an enemy and 1 to each enemy adjacent to it.'),
+  S('g_train', 'Ammunition Train', 3, 'lane', { do: [{ token: 'g_shot', lanes: 'all' }] }, 'Paid in one lane: places a {{card:g_shot|Shot}} in your camp in each lane.'),
+  S('g_salvage', 'Salvage', 1, 'lane', { need: 'allies', do: [{ heal: 2, to: 'team' }] }, 'Pick a lane: restores 2 defence to each ally there.'),
+  S('g_pitch', 'Pitch and Fire', 2, 'column', { do: [{ dmg: 1, to: 'colEnemies' }, { buff: [-1, 0], rnd: 1, to: 'colEnemies' }] }, 'Pick a column of an enemy camp: deals 1 damage to each enemy in it; they get -1 strength this round.'),
+  S('g_demolish', 'Demolish', 5, 'enemy', { do: [{ kill: 1, to: 'it' }] }, 'Kills an enemy.'),
+  S('g_toil', 'Engineers\' Toil', 2, 'own', { do: [{ heal: 3, to: 'it' }, { buff: [0, 1], to: 'it' }] }, 'Restores 3 defence to an ally; it gains +1 defence.'),
+  S('g_loadguns', 'Load the Guns', 2, 'lane', { need: 'allies', do: [{ buff: [1, 0], to: 'team:proj' }] }, 'Pick a lane: your [[Projectile]]s there gain +1 strength.'),
+  S('g_crossfire', 'Crossfire', 3, 'lane', { need: 'enemies', do: [{ dmg: { count: 'team:cannon' }, to: 'weakest' }] }, 'Pick a lane: deals 1 damage for each of your [[Cannon]]s there to the enemy with the least defence there.'),
+  S('g_entrench', 'Entrench', 1, 'own', { do: [{ kw: 'fixed', to: 'it' }, { buff: [0, 3], to: 'it' }] }, 'An ally becomes [[Immobile]] and gains +3 defence.'),
+  S('g_minefield', 'Sow the Field', 2, 'lane', { do: [{ token: 'g_shot', at: 'front', n: 2 }] }, 'Pick a lane: places 2 {{card:g_shot|Shots}} in your front row there.'),
+  S('g_concuss', 'Concussion', 2, 'enemy', { do: [{ dmg: 1, to: 'it' }, { stun: 1, to: 'it' }] }, 'Deals 1 damage to an enemy; it can\'t move or attack this round.'),
+  S('g_flare', 'Signal Flare', 1, 'lane', { do: [{ draw: 1, if: { min: ['team:cannon', 1] } }, { buff: [1, 0], rnd: 1, to: 'team:proj' }] }, 'Pick a lane: your [[Projectile]]s there get +1 strength this round; if you have a [[Cannon]] there, draw a card.'),
+  S('g_shell', 'Shellfire', 3, 'enemy', { do: [{ dmg: 2, to: 'it' }, { push: 1, to: 'it' }] }, 'Deals 2 damage to an enemy and [[Push]]es it one row back.'),
+  S('g_regroup', 'Strike Camp', 2, 'own', { do: [{ ride: 1, to: 'it' }] }, 'An ally (not [[Immobile]]) moves to another lane: the same cell if free, else the first free one.'),
+  S('g_firestorm', 'Firestorm of Pots', 5, 'lane', { need: 'enemies', do: [{ dmg: 2, to: 'enemies' }] }, 'Pick a lane: deals 2 damage to each enemy there.'),
+  S('g_brace', 'Brace the Walls', 2, 'lane', { need: 'allies', do: [{ buff: [0, 2], rnd: 1, to: 'team' }] }, 'Pick a lane: your units there get +2 defence this round.'),
+  S('g_drill', 'Gun Drill', 2, 'own', { do: [{ buff: [1, 2], to: 'it' }] }, 'An ally gains +1|+2.'),
+  S('g_powderstore', 'Powder Store', 3, 'lane', { do: [{ pool: 2 }, { token: 'g_shot' }] }, 'Pick a lane: +2 supply there this round, and a {{card:g_shot|Shot}} is placed in your camp there.'),
+]);
+/* ---------- Arcanists: a college of spellwrights; spells are the army, Sparks are made, adepts grow as spells are cast ---------- */
+const SPARK = { card: 'r_spark' };
+addFaction('r', [
+  // tokens: made spells and conjured units
+  S('r_spark', 'Spark', 0, 'enemy', { do: [{ dmg: 1, to: 'it' }] }, 'Deals 1 damage to an enemy.', { token: true }),
+  S('r_bolt', 'Arc Bolt', 1, 'enemy', { do: [{ dmg: 3, to: 'it' }] }, 'Deals 3 damage to an enemy.', { token: true }),
+  S('r_flare2', 'Greater Flare', 2, 'lane', { need: 'enemies', do: [{ dmg: 2, to: 'enemies' }] }, 'Pick a lane: deals 2 damage to each enemy there.', { token: true }),
+  S('r_ward2', 'Greater Ward', 1, 'lane', { need: 'allies', do: [{ buff: [0, 3], rnd: 1, to: 'team' }] }, 'Pick a lane: your units there get +3 defence this round.', { token: true }),
+  S('r_storm2', 'Tempest', 3, 'enemy', { do: [{ chain: 4, to: 'it' }] }, 'Deals 4 damage to an enemy, then 3 to an enemy beside it, then 2, then 1.', { token: true }),
+  T('r_golem', 'Clay Golem', 3, 3, 4, 1, {}, 'A conjured golem.'),
+  T('r_mote', 'Mana Mote', 1, 0, 1, 1, { bonus: 1 }, '[[Supply]] +1.'),
+  // adepts: grow and strike when you cast spells
+  U('r_apprentice', 'Apprentice', 1, 1, 1, 1, { fx: [ON('spell', { buff: [1, 0], rnd: 1, to: 'self' })] }, 'Whenever you cast a spell, I get +1 strength this round.'),
+  U('r_initiate', 'Initiate', 1, 0, 2, 1, { fx: [ON('place', SPARK)] }, 'Place: a {{card:r_spark|Spark}} into your hand.'),
+  U('r_familiar', 'Familiar', 1, 1, 1, 1, { fx: [ON('death', SPARK)] }, 'Death: a {{card:r_spark|Spark}} into your hand.'),
+  U('r_scribe', 'Battle Scribe', 2, 1, 2, 1, { fx: [ONCE('spell', { dmg: 1, to: 'facing' })] }, 'Once per round, when you cast a spell: deals 1 damage to the enemy facing me.'),
+  U('r_wardmage', 'Ward Mage', 2, 0, 4, 1, { fx: [ONCE('spell', { heal: 1, to: 'team' })] }, 'Once per round, when you cast a spell: restores 1 defence to each ally in my lane.'),
+  U('r_battlemage', 'Battlemage', 3, 1, 2, 1, { ranged: 1, fx: [ON('spell', { buff: [1, 0], rnd: 1, to: 'self' })] }, '[[Ranged]]. Whenever you cast a spell, I get +1 strength this round.'),
+  U('r_pyromancer', 'Pyromancer', 3, 2, 2, 1, { fx: [ONCE('spell', { dmg: 1, to: 'enemyFront' })] }, 'Once per round, when you cast a spell: deals 1 damage to each enemy in the enemy front row.'),
+  U('r_frostmage', 'Frost Mage', 3, 1, 4, 1, { fx: [ONCE('spell', { stun: 1, to: 'facing' })] }, 'Once per round, when you cast a spell: the enemy facing me can\'t move or attack this round.'),
+  U('r_conduit', 'Spell Conduit', 2, 0, 3, 1, { fx: [ON('roundEnd', { draw: 1, if: { spells: 2 } })] }, 'Round end: if you cast 2 or more spells this round, draw a card.'),
+  U('r_well', 'Mana Well', 2, 0, 2, 1, { bonus: 1 }, '[[Supply]] +1.'),
+  U('r_leyline', 'Ley Keeper', 3, 0, 3, 1, { bonus: 1, fx: [ONCE('spell', { pool: 1 })] }, '[[Supply]] +1. Once per round, when you cast a spell: +1 supply in my lane this round.'),
+  U('r_spellguard', 'Spellguard', 2, 1, 3, 1, { fx: [ON('spell', { buff: [0, 1], rnd: 1, to: 'self' })] }, 'Whenever you cast a spell, I get +1 defence this round.'),
+  U('r_runeknight', 'Rune Knight', 4, 3, 4, 1, { fx: [ONCE('spell', { buff: [1, 1], to: 'self' })] }, 'Once per round, when you cast a spell, I gain +1|+1.'),
+  U('r_spellsword', 'Spellsword', 2, 2, 2, 1, { fx: [ON('place', { buff: [1, 0], to: 'self', if: { spells: 1 } })] }, 'Place: if you cast a spell this round, I gain +1 strength.'),
+  U('r_evoker', 'Evoker', 2, 1, 2, 1, { fx: [ON('place', { dmg: 1, to: 'weakest', if: { spells: 1 } })] }, 'Place: if you cast a spell this round, deals 1 damage to the enemy with the least defence in my lane.'),
+  U('r_channeler', 'Channeler', 4, 2, 4, 1, { fx: [ON('place', { card: 'r_bolt', if: { spells: 2 } })] }, 'Place: if you cast 2 or more spells this round, an {{card:r_bolt|Arc Bolt}} into your hand.'),
+  U('r_illusionist', 'Illusionist', 2, 1, 1, 1, { fx: [ON('death', { card: 'r_ward2' })] }, 'Death: a {{card:r_ward2|Greater Ward}} into your hand.'),
+  U('r_artificer', 'Artificer', 3, 1, 3, 1, { fx: [ON('place', { token: 'r_golem', if: { spells: 1 } })] }, 'Place: if you cast a spell this round, places a {{card:r_golem|Clay Golem}} in my lane.'),
+  U('r_golemist', 'Golem Shaper', 4, 2, 4, 1, { fx: [ON('allyPlace', { buff: [1, 1], to: 'it' })], of: 'token' }, 'Whenever a conjured unit of yours is placed in my lane, it gains +1|+1.'),
+  U('r_sentinel', 'Arcane Sentinel', 3, 1, 4, 1, { guard: 1, fx: [ONCE('survive', SPARK)] }, '[[Bodyguard]]. Once per round, when I survive damage: a {{card:r_spark|Spark}} into your hand.'),
+  U('r_mentor', 'Mentor', 3, 2, 3, 1, { fx: [ON('place', { buff: [1, 1], to: 'allies' })] }, 'Place: other allies in my lane gain +1|+1.'),
+  U('r_warden', 'Glyph Warden', 3, 1, 5, 1, { aura: [{ to: 'row', d: 1 }] }, 'Other allies in my row have +1 defence.'),
+  U('r_spirit', 'Bound Spirit', 2, 2, 1, 1, { fx: [ON('place', { buff: [0, 2], to: 'self', if: { spells: 1 } })] }, 'Place: if you cast a spell this round, I gain +2 defence.'),
+  U('r_alchemist', 'Alchemist', 2, 1, 2, 1, { fx: [ON('place', { token: 'r_mote' })] }, 'Place: places a {{card:r_mote|Mana Mote}} in my lane.'),
+  U('r_seer', 'Star Seer', 3, 1, 3, 1, { fx: [ON('place', { draw: 1, if: { spells: 2 } })] }, 'Place: if you cast 2 or more spells this round, draw a card.'),
+  U('r_magus', 'Magus of Embers', 5, 3, 3, 1, { ranged: 1, fx: [ONCE('spell', { dmg: 1, to: 'enemies' })] }, '[[Ranged]]. Once per round, when you cast a spell: deals 1 damage to each enemy in my lane.'),
+  U('r_wyrm', 'Spell-Eater Wyrm', 6, 4, 6, 2, { fx: [ON('spell', { buff: [1, 0], to: 'self' })] }, 'Whenever you cast a spell, I gain +1 strength.'),
+  U('r_titan', 'Runebound Titan', 7, 6, 4, 4, { fx: [ON('place', { dmg: 2, to: 'enemies', if: { spells: 2 } })] }, 'Place: if you cast 2 or more spells this round, deals 2 damage to each enemy in my lane.'),
+  U('r_page', 'Page of the College', 1, 2, 1, 1, {}, 'A plain student.'),
+  U('r_apprentice2', 'Hedge Witch', 2, 2, 1, 1, { fx: [ON('death', { card: 'r_spark', n: 2 })] }, 'Death: 2 {{card:r_spark|Sparks}} into your hand.'),
+  U('r_shieldmage', 'Shield Mage', 4, 2, 4, 2, { fx: [ONCE('spell', { kw: 'armoured', rnd: 1, to: 'adj' })] }, 'Once per round, when you cast a spell: allies beside me are [[Armoured]] this round.'),
+  U('r_portal', 'Portal Keeper', 3, 1, 3, 1, { outrider: 1, fx: [ON('arrive', SPARK)] }, '[[Outrider]]. When I arrive from another lane: a {{card:r_spark|Spark}} into your hand.'),
+  U('r_lecturer', 'Lecturer', 2, 1, 3, 1, { fx: [ON('roundStart', { buff: [1, 0], rnd: 1, to: 'allies' })] }, 'Round start: other allies in my lane get +1 strength this round.'),
+  U('r_stormkin', 'Storm Elemental', 4, 3, 3, 1, { fx: [ON('place', { chain: 2, to: 'facing' })] }, 'Place: deals 2 damage to the enemy facing me, then 1 to an enemy beside it.'),
+  U('r_flamekin', 'Flame Elemental', 3, 3, 2, 1, { fx: [ON('death', { dmg: 2, to: 'facing' })] }, 'Death: deals 2 damage to the enemy facing me.'),
+  U('r_earthkin', 'Earth Elemental', 5, 3, 5, 2, { fx: [ON('survive', { buff: [0, 1], to: 'self' })] }, 'When I survive damage, I gain +1 defence.'),
+  U('r_mirrorimage', 'Mirror Adept', 2, 1, 2, 1, { fx: [ON('death', { card: 'r_spark' }), ON('place', { buff: [1, 0], to: 'self', if: { spells: 2 } })] }, 'Place: if you cast 2 or more spells this round, I gain +1 strength. Death: a {{card:r_spark|Spark}} into your hand.'),
+  U('r_dean', 'Dean of Battle Magic', 5, 3, 6, 1, { aura: [{ to: 'allies', s: 1 }] }, 'Other allies in my lane have +1 strength.'),
+  // the five special units
+  U('r_prodigy', 'Spellblade Prodigy', 2, 1, 2, 1, { fx: [ON('spell', { buff: [1, 0], to: 'self', if: HOLD }), ON('spell', { buff: [1, 0], rnd: 1, to: 'self', if: NOHOLD })] }, 'Whenever you cast a spell, I get +1 strength this round. As long as you hold this lane\'s base, I gain it for good instead.'),
+  U('r_stormcaller', 'Stormcaller', 4, 2, 4, 1, { fx: [ONCE('spell', { chain: 2, to: 'facing', if: NOHOLD }), ONCE('spell', { chain: 3, to: 'facing', if: HOLD })] }, 'Once per round, when you cast a spell: deals 2 damage to the enemy facing me, then 1 to an enemy beside it (3, 2, 1 as long as you hold this lane\'s base).'),
+  U('r_archivist', 'Keeper of Scrolls', 3, 1, 4, 1, { fx: [ON('roundEnd', { card: 'r_bolt', if: { spells: 3 } }), ON('roundEnd', { card: 'r_spark', if: { hold: 1 } })] }, 'Round end: if you cast 3 or more spells this round, an {{card:r_bolt|Arc Bolt}} into your hand; if you hold this lane\'s base, a {{card:r_spark|Spark}} too.'),
+  U('r_tower', 'Mage Tower', 5, 0, 8, 2, { fixed: 1, fx: [ONCE('spell', { dmg: 1, to: 'weakest', if: NOHOLD }), ONCE('spell', { dmg: 1, to: 'enemyFront', if: HOLD })] }, '[[Immobile]]. Once per round, when you cast a spell: deals 1 damage to the enemy with the least defence in my lane; as long as you hold this lane\'s base, to each enemy in the enemy front row instead.'),
+  U('r_archmage', 'The Archmage', 7, 4, 6, 4, { fx: [ON('place', { again: 1 }), ON('spell', { buff: [1, 1], to: 'self', if: HOLD })] }, 'Place: the last spell you cast this round comes back into your hand. As long as you hold this lane\'s base, whenever you cast a spell I gain +1|+1.'),
+  U('r_acolyte', 'Spark Acolyte', 1, 1, 1, 1, { fx: [ONCE('spell', { buff: [0, 1], to: 'self' })] }, 'Once per round, when you cast a spell, I gain +1 defence.'),
+  U('r_runecarver', 'Runecarver', 2, 1, 3, 1, { fx: [ON('place', { card: 'r_spark', if: HOLD })] }, 'Place: if you hold this lane\'s base, a {{card:r_spark|Spark}} into your hand.'),
+  U('r_skyreader', 'Sky Reader', 2, 1, 1, 1, { ranged: 1 }, '[[Ranged]].'),
+  U('r_warlock', 'Warlock', 3, 2, 3, 1, { fx: [ON('enemyDeath', { buff: [1, 0], rnd: 1, to: 'self' })] }, 'Whenever an enemy in my lane dies, I get +1 strength this round.'),
+  U('r_magistrate', 'Magistrate of the Arts', 4, 2, 5, 1, { fx: [ON('place', { buff: [1, 0], to: 'allies:ranged' })] }, 'Place: your [[Ranged]] allies in my lane gain +1 strength.'),
+  U('r_bladedancer', 'Blade Dancer', 3, 3, 2, 1, { lightfooted: 1, moves: 2, fx: [ON('spell', { buff: [1, 0], rnd: 1, to: 'self' })] }, '[[Lightfooted]]. Whenever you cast a spell, I get +1 strength this round.'),
+  U('r_crystal', 'Focus Crystal', 2, 0, 3, 1, { fixed: 1, bonus: 1 }, '[[Immobile]]. [[Supply]] +1.'),
+  U('r_phoenix', 'Ember Phoenix', 4, 3, 3, 1, { fx: [ON('death', { card: 'r_flare2' })] }, 'Death: a {{card:r_flare2|Greater Flare}} into your hand.'),
+  U('r_doorwarden', 'Door Warden', 2, 1, 3, 1, { guard: 1 }, '[[Bodyguard]].'),
+  U('r_thaumaturge', 'Thaumaturge', 5, 3, 5, 2, { fx: [ON('place', { heal: 3, to: 'team' }), ONCE('spell', { heal: 1, to: 'allies' })] }, 'Place: restores 3 defence to each ally in my lane. Once per round, when you cast a spell: restores 1 to each other ally there.'),
+  U('r_construct', 'Arcane Construct', 6, 5, 5, 2, { fx: [ON('place', { token: 'r_golem', if: { spells: 1 } })] }, 'Place: if you cast a spell this round, places a {{card:r_golem|Clay Golem}} in my lane.'),
+  U('r_tutor', 'Tutor', 3, 1, 3, 1, { fx: [ON('place', { card: 'r_lesson1' })] }, 'Place: an {{card:r_lesson1|Ember Lesson}} into your hand.'),
+  S('r_spellstorm', 'Spellstorm', 3, 'lane', { need: 'enemies', do: [{ dmg: { count: 'team', x: 1 }, to: 'weakest' }] }, 'Pick a lane: deals 1 damage for each of your units there to the enemy with the least defence there.'),
+  S('r_ward', 'Ward', 1, 'own', { do: [{ buff: [0, 2], to: 'it' }] }, 'An ally gains +2 defence.'),
+  S('r_arcburst', 'Arc Burst', 2, 'column', { do: [{ dmg: 1, to: 'colEnemies' }, SPARK] }, 'Pick a column of an enemy camp: deals 1 damage to each enemy in it; a {{card:r_spark|Spark}} into your hand.'),
+  S('r_scatter', 'Scatter', 2, 'enemy', { do: [{ push: 1, to: 'it' }, { dmg: 1, to: 'it' }] }, '[[Push]]es an enemy one row back and deals 1 damage to it.'),
+  S('r_hasten', 'Hasten Study', 2, 'lane', { do: [{ draw: 1 }, SPARK] }, 'Pick a lane to pay in: draw a card; a {{card:r_spark|Spark}} into your hand.'),
+  S('r_golemcall', 'Call the Golems', 4, 'lane', { do: [{ token: 'r_golem' }, { buff: [1, 1], to: 'team:token' }] }, 'Pick a lane: places a {{card:r_golem|Clay Golem}} there; your conjured units there gain +1|+1.'),
+  // spells
+  S('r_firebolt', 'Firebolt', 2, 'enemy', { do: [{ dmg: 2, to: 'it' }] }, 'Deals 2 damage to an enemy.'),
+  S('r_kindle', 'Kindle', 1, 'enemy', { do: [{ dmg: 1, to: 'it' }, SPARK] }, 'Deals 1 damage to an enemy, and a {{card:r_spark|Spark}} into your hand.'),
+  S('r_brilliance', 'Arcane Brilliance', 3, 'lane', { do: [{ card: 'r_spark', n: 3 }] }, 'Pick a lane to pay in: 3 {{card:r_spark|Sparks}} into your hand.'),
+  S('r_study', 'Study', 1, 'lane', { do: [{ draw: 1 }] }, 'Pick a lane to pay in: draw a card.'),
+  S('r_chain', 'Chain Lightning', 3, 'enemy', { do: [{ chain: 3, to: 'it' }] }, 'Deals 3 damage to an enemy, then 2 to an enemy beside it, then 1 to an enemy beside that one.'),
+  S('r_prism', 'Prism Bolt', 2, 'enemy', { do: [{ ricochet: 2, to: 'it', then: 1 }] }, 'Deals 2 damage to an enemy, then it ricochets: 1 to the enemy in front of it.'),
+  S('r_missiles', 'Arcane Missiles', 2, 'lane', { need: 'enemies', do: [{ dmg: 1, to: 'weakest' }, { dmg: 1, to: 'weakest' }, { dmg: 1, to: 'weakest' }] }, 'Pick a lane: three times, deals 1 damage to the enemy with the least defence there.'),
+  S('r_flamewave', 'Flame Wave', 4, 'lane', { need: 'enemies', do: [{ dmg: 1, to: 'enemies' }, { dmg: 1, to: 'enemyFront' }] }, 'Pick a lane: deals 1 damage to each enemy there, and 1 more to each in the enemy front row.'),
+  S('r_surge', 'Mana Surge', 0, 'lane', { do: [{ pool: 1 }] }, 'Pick a lane: +1 supply there this round.'),
+  S('r_conjure', 'Conjure Golem', 3, 'lane', { do: [{ token: 'r_golem' }] }, 'Pick a lane: places a {{card:r_golem|Clay Golem}} in your camp there.'),
+  S('r_binding', 'Binding Glyph', 2, 'enemy', { do: [{ stun: 1, to: 'it' }] }, 'An enemy can\'t move or attack this round.'),
+  S('r_mirrorshield', 'Mirror Shield', 1, 'own', { do: [{ buff: [0, 2], rnd: 1, to: 'it' }, { kw: 'armoured', rnd: 1, to: 'it' }] }, 'An ally gets +2 defence and is [[Armoured]] this round.'),
+  S('r_blink', 'Blink', 1, 'own', { do: [{ ride: 1, to: 'it' }] }, 'An ally (not [[Immobile]]) moves to another lane: the same cell if free, else the first free one.'),
+  S('r_leyline2', 'Ley Line', 4, 'lane', { all: 1, do: [{ buff: [1, 0], rnd: 1, to: 'team' }] }, 'Paid in one lane, cast in ALL lanes: your units get +1 strength this round.'),
+  S('r_mindlash', 'Mind Lash', 2, 'enemy', { do: [{ dmg: 1, to: 'it' }, { buff: [-2, 0], rnd: 1, to: 'it' }] }, 'Deals 1 damage to an enemy; it gets -2 strength this round.'),
+  S('r_disintegrate', 'Disintegrate', 6, 'any', { do: [{ kill: 1, to: 'it' }] }, 'Kills a unit.'),
+  S('r_fireball', 'Fireball', 4, 'enemy', { do: [{ dmg: 3, to: 'it' }, { dmg: 1, to: 'itAdj' }] }, 'Deals 3 damage to an enemy and 1 to each enemy adjacent to it.'),
+  S('r_overload', 'Overload', 2, 'own', { do: [{ buff: [3, 0], rnd: 1, to: 'it' }] }, 'An ally gets +3 strength this round.'),
+  S('r_lesson1', 'Ember Lesson', 1, 'enemy', { do: [{ dmg: 1, to: 'it' }, { card: 'r_flare2', to: 'deck' }] }, 'Deals 1 damage to an enemy. Shuffle a {{card:r_flare2|Greater Flare}} into your deck.'),
+  S('r_lesson2', 'Ward Lesson', 1, 'own', { do: [{ buff: [0, 1], to: 'it' }, { card: 'r_ward2', to: 'deck' }] }, 'An ally gains +1 defence. Shuffle a {{card:r_ward2|Greater Ward}} into your deck.'),
+  S('r_lesson3', 'Storm Lesson', 2, 'enemy', { do: [{ chain: 2, to: 'it' }, { card: 'r_storm2', to: 'deck' }] }, 'Deals 2 damage to an enemy, then 1 to an enemy beside it. Shuffle a {{card:r_storm2|Tempest}} into your deck.'),
+  S('r_thesis', 'Thesis', 3, 'lane', { do: [{ card: 'r_bolt' }, { card: 'r_spark' }] }, 'Pick a lane to pay in: an {{card:r_bolt|Arc Bolt}} and a {{card:r_spark|Spark}} into your hand.'),
+  S('r_meteor', 'Meteor', 7, 'enemy', { do: [{ dmg: 6, to: 'it' }, { dmg: 2, to: 'itAdj' }] }, 'Deals 6 damage to an enemy and 2 to each enemy adjacent to it.'),
+  S('r_frostnova', 'Frost Nova', 4, 'lane', { need: 'enemies', do: [{ stun: 1, to: 'enemyFront' }] }, 'Pick a lane: enemies in the enemy front row can\'t move or attack this round.'),
+  S('r_empower', 'Empower', 2, 'own', { do: [{ buff: [1, 1], to: 'it' }, SPARK] }, 'An ally gains +1|+1; a {{card:r_spark|Spark}} into your hand.'),
+  S('r_siphon', 'Siphon', 2, 'enemy', { do: [{ dmg: 2, to: 'it' }, { heal: 2, to: 'team' }] }, 'Deals 2 damage to an enemy; restores 2 defence to each of your units in its lane.'),
+  S('r_shatter', 'Shatter', 3, 'enemy', { do: [{ dmg: 2, to: 'it' }, { buff: [0, -1], to: 'it' }] }, 'Deals 2 damage to an enemy; it loses 1 defence for good.'),
+  S('r_animate', 'Animate Clay', 5, 'lane', { do: [{ token: 'r_golem', n: 2 }] }, 'Pick a lane: places 2 {{card:r_golem|Clay Golems}} in your camp there.'),
+  S('r_focus', 'Focus', 1, 'own', { do: [{ buff: [1, 0], to: 'it' }] }, 'An ally gains +1 strength.'),
+  S('r_lightning', 'Lightning Strike', 3, 'enemy', { do: [{ dmg: 3, to: 'it' }] }, 'Deals 3 damage to an enemy.'),
+  S('r_arcanewall', 'Arcane Wall', 2, 'lane', { need: 'allies', do: [{ buff: [0, 2], rnd: 1, to: 'team' }] }, 'Pick a lane: your units there get +2 defence this round.'),
+  S('r_quicken', 'Quicken', 1, 'own', { do: [{ buff: [1, 0], rnd: 1, to: 'it' }, { draw: 1, if: { spells: 2 } }] }, 'An ally gets +1 strength this round; if this is your third spell this round, draw a card.'),
+  S('r_combust', 'Combustion', 3, 'column', { do: [{ dmg: 2, to: 'colEnemies' }] }, 'Pick a column of an enemy camp: deals 2 damage to each enemy in it.'),
+  S('r_sparkstorm', 'Spark Storm', 2, 'lane', { need: 'enemies', do: [{ dmg: 1, to: 'enemyFront' }, SPARK] }, 'Pick a lane: deals 1 damage to each enemy in the enemy front row; a {{card:r_spark|Spark}} into your hand.'),
+  S('r_rift', 'Rift', 3, 'enemy', { do: [{ displace: 1, to: 'it' }] }, 'An enemy (not [[Immobile]]) is sent to another lane: the same cell if free, else the first free one.'),
+  S('r_inferno', 'Inferno', 6, 'lane', { need: 'enemies', do: [{ dmg: 3, to: 'enemies' }] }, 'Pick a lane: deals 3 damage to each enemy there.'),
+  S('r_hex', 'Hex', 2, 'enemy', { do: [{ buff: [-2, 0], to: 'it' }] }, 'An enemy loses 2 strength.'),
+  S('r_recall', 'Recollection', 2, 'lane', { do: [{ again: 1 }] }, 'Pick a lane to pay in: the last spell you cast this round comes back into your hand.', { noAgain: true }),
+  S('r_renew', 'Renewal', 2, 'lane', { need: 'allies', do: [{ heal: 3, to: 'team' }] }, 'Pick a lane: restores 3 defence to each ally there.'),
+]);
+/* ---------- Wanderers: steppe nomads and caravans; they ride between lanes, fight where the enemy is not, and send holders away ---------- */
+const OR = { outrider: 1 };
+addFaction('w', [
+  T('w_pony', 'Remount', 1, 1, 1, 1, { outrider: 1 }, '[[Outrider]].'),
+  T('w_camp', 'Camp Fire', 1, 0, 2, 1, { fixed: 1, bonus: 1 }, '[[Immobile]]. [[Supply]] +1.'),
+  // riders: arrive triggers
+  U('w_scout', 'Steppe Scout', 1, 1, 1, 1, { ...OR }, '[[Outrider]].'),
+  U('w_outrider', 'Outrider', 1, 0, 1, 1, { ...OR, fx: [ON('arrive', { buff: [1, 0], rnd: 1, to: 'self' })] }, '[[Outrider]]. When I arrive from another lane, I get +1 strength this round.'),
+  U('w_horsearcher', 'Horse Archer', 3, 1, 2, 1, { ...OR, ranged: 1 }, '[[Outrider]]. [[Ranged]].'),
+  U('w_lancer', 'Lancer', 2, 2, 1, 1, { ...OR, fx: [ON('arrive', { strike: 1, to: 'nearest' })] }, '[[Outrider]]. When I arrive from another lane: I strike the nearest enemy I can reach.'),
+  U('w_raider', 'Raider', 2, 2, 1, 1, { ...OR, lightfooted: 1, moves: 2 }, '[[Outrider]]. [[Lightfooted]].'),
+  U('w_skirmisher', 'Hit-and-Run Rider', 2, 1, 1, 1, { ...OR, lightfooted: 1, moves: 2, fx: [ON('attack', { buff: [0, 1], rnd: 1, to: 'self' })] }, '[[Outrider]]. [[Lightfooted]]. After I attack, I get +1 defence this round.'),
+  U('w_heavyhorse', 'Heavy Horse', 4, 3, 3, 1, { ...OR, fx: [ON('arrive', { buff: [1, 1], rnd: 1, to: 'self' })] }, '[[Outrider]]. When I arrive from another lane, I get +1|+1 this round.'),
+  U('w_cataphract', 'Steppe Cataphract', 5, 4, 3, 1, { ...OR, armoured: 1 }, '[[Outrider]]. [[Armoured]].'),
+  U('w_harrier', 'Harrier', 2, 2, 1, 1, { ...OR, fx: [ON('arrive', { dmg: 1, to: 'weakest' })] }, '[[Outrider]]. When I arrive from another lane: deals 1 damage to the enemy with the least defence in my lane.'),
+  U('w_wolfrider', 'Wolf Rider', 3, 3, 2, 1, { ...OR, fx: [ON('arrive', { strike: 1, to: 'nearest' })] }, '[[Outrider]]. When I arrive from another lane: I strike the nearest enemy I can reach.'),
+  U('w_lasso', 'Lasso Rider', 3, 1, 3, 1, { ...OR, fx: [ON('arrive', { pull: 1, to: 'facing' })] }, '[[Outrider]]. When I arrive from another lane: the enemy facing me is [[Pull]]ed forward.'),
+  U('w_sweeper', 'Plains Sweeper', 4, 2, 4, 1, { ...OR, fx: [ON('arrive', { displace: 1, to: 'facing' })] }, '[[Outrider]]. When I arrive from another lane: the enemy facing me is sent to another lane.'),
+  U('w_beacon', 'Smoke Signaller', 2, 1, 2, 1, { fx: [ON('allyArrive', { buff: [1, 0], rnd: 1, to: 'it' })] }, 'Whenever an ally arrives in my lane from another lane, it gets +1 strength this round.'),
+  U('w_herald', 'Horn Herald', 3, 2, 3, 1, { fx: [ONCE('allyArrive', { pool: 1 })] }, 'Once per round, when an ally arrives in my lane from another lane: +1 supply in my lane this round.'),
+  U('w_falconer', 'Falconer', 2, 1, 1, 1, { ranged: 1, fx: [] }, '[[Ranged]].'),
+  U('w_pathfinder2', 'Trail Guide', 2, 1, 2, 1, { fx: [ON('place', { draw: 1, if: { alone: 1 } })] }, 'Place: if I am your only unit in my lane, draw a card.'),
+  // caravans: supply carried between lanes
+  U('w_mule', 'Pack Mule', 1, 0, 1, 1, { ...OR, fx: [ON('arrive', { pool: 1 })] }, '[[Outrider]]. When I arrive from another lane: +1 supply in my lane this round.'),
+  U('w_wagon', 'Caravan Wagon', 2, 0, 2, 1, { bonus: 1 }, '[[Supply]] +1.'),
+  U('w_camelteam', 'Camel Train', 3, 0, 2, 1, { ...OR, bonus: 1, fx: [ON('arrive', { pool: 1 })] }, '[[Outrider]]. [[Supply]] +1. When I arrive from another lane: +1 more supply there this round.'),
+  U('w_merchant', 'Silk Merchant', 2, 1, 2, 1, { fx: [ON('place', { carry: 1 })] }, 'Place: +1 carry-over.'),
+  U('w_yurt', 'Yurt', 2, 0, 4, 1, { fixed: 1, bonus: 1 }, '[[Immobile]]. [[Supply]] +1.'),
+  U('w_trader', 'Wandering Trader', 3, 1, 3, 1, { ...OR, fx: [ONCE('arrive', { draw: 1 })] }, '[[Outrider]]. Once per round, when I arrive from another lane: draw a card.'),
+  // holders and support
+  U('w_herder', 'Herder', 1, 1, 2, 1, {}, 'A plain herder.'),
+  U('w_spearman', 'Clan Spearman', 2, 2, 3, 1, {}, 'A plain spearman.'),
+  U('w_guard', 'Camp Guard', 2, 1, 3, 1, { guard: 1 }, '[[Bodyguard]].'),
+  U('w_shaman', 'Sky Shaman', 3, 1, 3, 1, { fx: [ON('allyArrive', { heal: 2, to: 'it' })] }, 'Whenever an ally arrives in my lane from another lane, it restores 2 defence.'),
+  U('w_elder', 'Clan Elder', 3, 1, 4, 1, { aura: [{ to: 'allies', d: 1 }] }, 'Other allies in my lane have +1 defence.'),
+  U('w_bannerman', 'Horsetail Banner', 2, 0, 3, 1, { aura: [{ to: 'allies:outrider', s: 1 }] }, 'Your [[Outrider]]s in my lane have +1 strength.'),
+  U('w_hunter', 'Hunter', 2, 2, 2, 1, { fx: [ON('enemyDeath', { buff: [1, 0], to: 'self' })] }, 'Whenever an enemy in my lane dies, I gain +1 strength.'),
+  U('w_ambusher', 'Ambusher', 3, 3, 2, 1, { fx: [ON('place', { strike: 1, to: 'nearest', if: { alone: 1 } })] }, 'Place: if I am your only unit in my lane, I strike the nearest enemy I can reach.'),
+  U('w_dustdevil', 'Dust Devil', 2, 1, 1, 1, { ...OR, fx: [ON('arrive', { buff: [-1, 0], rnd: 1, to: 'adjEnemies' })] }, '[[Outrider]]. When I arrive from another lane: enemies I touch get -1 strength this round.'),
+  U('w_bowman', 'Recurve Bowman', 3, 2, 2, 1, { ranged: 1 }, '[[Ranged]].'),
+  U('w_rider_cap', 'Rider Captain', 4, 3, 3, 1, { ...OR, fx: [ON('arrive', { buff: [1, 0], rnd: 1, to: 'allies' })] }, '[[Outrider]]. When I arrive from another lane: other allies there get +1 strength this round.'),
+  U('w_courier', 'Yam Courier', 1, 0, 1, 1, { ...OR, fx: [ON('arrive', { carry: 1 })] }, '[[Outrider]]. When I arrive from another lane: +1 carry-over.'),
+  U('w_nightrider', 'Night Rider', 3, 2, 3, 1, { ...OR, fx: [ON('arrive', { stun: 1, to: 'facing' })] }, '[[Outrider]]. When I arrive from another lane: the enemy facing me can\'t move or attack this round.'),
+  U('w_mammoth', 'Steppe Mammoth', 6, 5, 2, 4, { fx: [ON('place', { push: 1, to: 'enemyFront' })] }, 'Place: each enemy in the enemy front row is [[Push]]ed one row back.'),
+  U('w_ox', 'War Ox Cart', 4, 2, 3, 2, { ...OR, guard: 1 }, '[[Outrider]]. [[Bodyguard]].'),
+  U('w_brave', 'Young Brave', 1, 1, 1, 1, { fx: [ON('place', { buff: [0, 1], to: 'self', if: { alone: 1 } })] }, 'Place: if I am your only unit in my lane, I gain +1 defence.'),
+  U('w_eagle', 'Eagle Hunter', 4, 2, 2, 1, { ranged: 1, ...OR }, '[[Ranged]]. [[Outrider]].'),
+  U('w_bonesetter', 'Bonesetter', 2, 0, 3, 1, { fx: [ON('roundEnd', { heal: 2, to: 'hurtAlly' })] }, 'Round end: restores 2 defence to your most damaged unit in my lane.'),
+  U('w_tracker', 'Tracker', 2, 2, 2, 1, { fx: [ON('place', { dmg: 1, to: 'enemyBack' })] }, 'Place: deals 1 damage to each enemy in the enemy back rows of my lane.'),
+  U('w_storyteller', 'Storyteller', 2, 1, 2, 1, { fx: [ON('death', { draw: 1 })] }, 'Death: draw a card.'),
+  U('w_clanchief', 'Clan Chief', 5, 4, 5, 1, { aura: [{ to: 'allies', s: 1 }] }, 'Other allies in my lane have +1 strength.'),
+  U('w_horde', 'Horde Rider', 3, 2, 2, 1, { ...OR, fx: [ON('place', { token: 'w_pony' })] }, '[[Outrider]]. Place: places a {{card:w_pony|Remount}} in my lane.'),
+  U('w_dunesailor', 'Dune Sailor', 3, 2, 3, 1, { ...OR, lightfooted: 1, moves: 2 }, '[[Outrider]]. [[Lightfooted]].'),
+  U('w_windrunner', 'Windrunner', 2, 1, 2, 1, { ...OR, fx: [ON('arrive', { buff: [1, 1], rnd: 1, to: 'adj' })] }, '[[Outrider]]. When I arrive from another lane: allies beside me get +1|+1 this round.'),
+  U('w_kumis', 'Kumis Brewer', 2, 1, 2, 1, { fx: [ON('roundStart', { heal: 1, to: 'team' })] }, 'Round start: restores 1 defence to each ally in my lane.'),
+  U('w_siegebreaker', 'Ram Riders', 5, 4, 3, 2, { ...OR, push: 1 }, '[[Outrider]]. [[Push]].'),
+  U('w_vanguard', 'Vanguard Rider', 3, 3, 3, 1, { ...OR }, '[[Outrider]].'),
+  U('w_matriarch', 'Herd Matriarch', 4, 2, 5, 1, { fx: [ON('allyArrive', { buff: [0, 1], to: 'it' })] }, 'Whenever an ally arrives in my lane from another lane, it gains +1 defence.'),
+  U('w_firedancer', 'Fire Dancer', 3, 2, 2, 1, { ...OR, fx: [ON('arrive', { dmg: 1, to: 'enemyFront' })] }, '[[Outrider]]. When I arrive from another lane: deals 1 damage to each enemy in the enemy front row.'),
+  U('w_hawk', 'Hawk Master', 3, 1, 3, 1, { fx: [ON('place', { dmg: 2, to: 'weakest' })] }, 'Place: deals 2 damage to the enemy with the least defence in my lane.'),
+  U('w_scoutcap', 'Scout Captain', 3, 2, 2, 1, { ...OR, fx: [ON('arrive', { dmg: 1, to: 'enemyBack' })] }, '[[Outrider]]. When I arrive from another lane: deals 1 damage to each enemy in the enemy back rows.'),
+  U('w_nomadqueen', 'Nomad Queen', 5, 3, 5, 1, { ...OR, fx: [ON('arrive', { heal: 2, to: 'team' })] }, '[[Outrider]]. When I arrive from another lane: restores 2 defence to each ally there.'),
+  U('w_bandit', 'Road Bandit', 2, 2, 1, 1, { ...OR, fx: [ON('attack', { carry: 1 })] }, '[[Outrider]]. After I attack: +1 carry-over.'),
+  U('w_sentry', 'Hill Sentry', 2, 1, 3, 1, { fx: [ON('enemyDeath', { heal: 1, to: 'self' })] }, 'Whenever an enemy in my lane dies, I restore 1 defence.'),
+  U('w_warhorse', 'Warhorse Breeder', 3, 1, 3, 1, { fx: [ON('place', { token: 'w_pony', n: 2 })] }, 'Place: places 2 {{card:w_pony|Remounts}} in my lane.'),
+  U('w_dustcaller', 'Dust Caller', 3, 1, 3, 1, { fx: [ON('allyArrive', { buff: [-1, 0], rnd: 1, to: 'enemyFront' })] }, 'Whenever an ally arrives in my lane from another lane, enemies in the enemy front row get -1 strength this round.'),
+  U('w_strider', 'Long Strider', 4, 3, 3, 1, { ...OR, lightfooted: 1, moves: 2 }, '[[Outrider]]. [[Lightfooted]].'),
+  U('w_glory', 'Glory Seeker', 3, 3, 2, 1, { ...OR, fx: [ON('enemyDeath', { buff: [1, 0], to: 'self' })] }, '[[Outrider]]. Whenever an enemy in my lane dies, I gain +1 strength.'),
+  U('w_waterbearer', 'Water Bearer', 1, 0, 1, 1, { ...OR, fx: [ON('arrive', { heal: 1, to: 'team' })] }, '[[Outrider]]. When I arrive from another lane: restores 1 defence to each ally there.'),
+  // the five special units
+  U('w_khan', 'Khan of the Roads', 6, 4, 5, 2, { ...OR, aura: [{ to: 'allies', s: 1, if: HOLD }], fx: [ON('arrive', { displace: 1, to: 'facing' })] }, '[[Outrider]]. When I arrive from another lane: the enemy facing me is sent to another lane. As long as you hold this lane\'s base, other allies here have +1 strength.'),
+  U('w_pathfinder', 'Pathfinder', 2, 1, 2, 1, { ...OR, fx: [ONCE('arrive', { draw: 1, if: NOHOLD })] }, '[[Outrider]]. Once per round, when I arrive in a lane whose base you don\'t hold: draw a card.'),
+  U('w_caravanmaster', 'Caravan Master', 3, 1, 1, 1, { ...OR, bonus: 1, fx: [ON('arrive', { pool: 2, if: HOLD }), ON('arrive', { pool: 1, if: NOHOLD })] }, '[[Outrider]]. [[Supply]] +1. When I arrive from another lane: +1 supply there this round (+2 if you hold its base).'),
+  U('w_raiderchief', 'Raider Chief', 4, 3, 2, 1, { ...OR, lightfooted: 1, moves: 2, aura: [{ to: 'self', s: 2, if: NOHOLD }], fx: [ON('arrive', { strike: 1, to: 'nearest' })] }, '[[Outrider]]. [[Lightfooted]]. When I arrive from another lane: I strike the nearest enemy I can reach. As long as you don\'t hold this lane\'s base, I have +2 strength.'),
+  U('w_windseer', 'Wind Seer', 3, 1, 3, 1, { fx: [ON('allyArrive', { buff: [1, 1], to: 'it', if: HOLD }), ON('allyArrive', { buff: [1, 1], rnd: 1, to: 'it', if: NOHOLD })] }, 'Whenever an ally arrives in my lane from another lane, it gets +1|+1 this round; as long as you hold this lane\'s base, for good.'),
+  // spells
+  S('w_ride', 'Ride Out', 1, 'own', { do: [{ ride: 1, to: 'it' }] }, 'An ally (not [[Immobile]]) rides to another lane: the same cell if free, else the first free one.'),
+  S('w_exile', 'Drive Off', 3, 'enemy', { do: [{ displace: 1, to: 'it' }] }, 'An enemy (not [[Immobile]]) is sent to another lane: the same cell if free, else the first free one.'),
+  S('w_scatter', 'Scatter the Herd', 5, 'lane', { need: 'enemies', do: [{ displace: 1, to: 'enemyFront' }] }, 'Pick a lane: each enemy in the enemy front row is sent to another lane.'),
+  S('w_volley', 'Arrow Rain', 3, 'lane', { need: 'enemies', do: [{ dmg: 1, to: 'enemies' }] }, 'Pick a lane: deals 1 damage to each enemy there.'),
+  S('w_feint', 'Feigned Retreat', 2, 'own', { do: [{ ride: 1, to: 'it' }, { buff: [2, 0], rnd: 1, to: 'it' }] }, 'An ally rides to another lane and gets +2 strength this round.'),
+  S('w_scoutahead', 'Scout Ahead', 1, 'lane', { do: [{ draw: 1, if: { max: ['team', 0] } }, { carry: 1 }] }, 'Pick a lane: +1 carry-over; if you have no units there, draw a card.'),
+  S('w_trade', 'Barter', 2, 'lane', { do: [{ carry: 2 }] }, 'Pick a lane to pay in: +2 carry-over.'),
+  S('w_shot', 'Parthian Shot', 2, 'enemy', { do: [{ dmg: 2, to: 'it' }] }, 'Deals 2 damage to an enemy.'),
+  S('w_lassospell', 'Throw the Lasso', 1, 'enemy', { do: [{ pull: 1, to: 'it' }] }, 'An enemy is [[Pull]]ed straight forward.'),
+  S('w_stampede', 'Stampede', 4, 'lane', { need: 'enemies', do: [{ push: 1, to: 'enemyFront' }, { dmg: 1, to: 'enemyFront' }] }, 'Pick a lane: each enemy in the enemy front row is [[Push]]ed one row back, then takes 1 damage.'),
+  S('w_camp', 'Make Camp', 2, 'lane', { do: [{ token: 'w_camp', at: 'back' }] }, 'Pick a lane: places a {{card:w_camp|Camp Fire}} in your back rows there.'),
+  S('w_remounts', 'Remounts', 2, 'lane', { do: [{ token: 'w_pony', n: 2 }] }, 'Pick a lane: places 2 {{card:w_pony|Remounts}} in your camp there.'),
+  S('w_greatride', 'The Great Ride', 4, 'lane', { need: 'allies', do: [{ ride: 1, to: 'team:outrider' }] }, 'Pick a lane: each of your [[Outrider]]s there rides to another lane.'),
+  S('w_warcry', 'War Cry', 2, 'lane', { need: 'allies', do: [{ buff: [1, 0], rnd: 1, to: 'team' }] }, 'Pick a lane: your units there get +1 strength this round.'),
+  S('w_dust', 'Dust Storm', 2, 'lane', { need: 'enemies', do: [{ buff: [-1, 0], rnd: 1, to: 'enemies' }] }, 'Pick a lane: enemies there get -1 strength this round.'),
+  S('w_ambush', 'Ambush', 3, 'enemy', { do: [{ dmg: 3, to: 'it' }] }, 'Deals 3 damage to an enemy.'),
+  S('w_hunt', 'The Hunt', 4, 'enemy', { do: [{ dmg: 2, to: 'it' }, { stun: 1, to: 'it' }, { dmg: 1, to: 'itAdj' }] }, 'Deals 2 damage to an enemy and 1 to each enemy adjacent to it; it can\'t move or attack this round.'),
+  S('w_mend', 'Herbal Poultice', 1, 'own', { do: [{ heal: 3, to: 'it' }] }, 'Restores 3 defence to an ally.'),
+  S('w_migration', 'Migration', 3, 'lane', { need: 'allies', do: [{ ride: 1, to: 'team' }, { draw: 1 }] }, 'Pick a lane: each of your units there (not [[Immobile]]) rides to another lane; draw a card.'),
+  S('w_sandtrap', 'Quicksand', 2, 'enemy', { do: [{ stun: 1, to: 'it' }, { buff: [0, -1], to: 'it' }] }, 'An enemy loses 1 defence for good and can\'t move or attack this round.'),
+  S('w_raid', 'Night Raid', 3, 'lane', { need: 'enemies', do: [{ dmg: 2, to: 'enemyBack' }] }, 'Pick a lane: deals 2 damage to each enemy in the enemy back rows.'),
+  S('w_encircle', 'Encircle', 4, 'enemy', { do: [{ dmg: { count: 'team', x: 1 }, to: 'it' }] }, 'Deals 1 damage to an enemy for each of your units in its lane.'),
+  S('w_horsemanship', 'Horsemanship', 1, 'own', { do: [{ kw: 'outrider', to: 'it' }, { buff: [1, 0], to: 'it' }] }, 'An ally gains [[Outrider]] and +1 strength.'),
+  S('w_tribute', 'Tribute', 3, 'lane', { do: [{ pool: 3 }] }, 'Pick a lane: +3 supply there this round.'),
+  S('w_vanish', 'Vanish into the Grass', 2, 'own', { do: [{ ride: 1, to: 'it' }, { heal: 2, to: 'it' }] }, 'An ally rides to another lane and restores 2 defence.'),
+  S('w_cavalrycharge', 'Cavalry Charge', 5, 'lane', { need: 'allies', do: [{ buff: [2, 0], rnd: 1, to: 'team:outrider' }, { draw: 1, if: HOLD }] }, 'Pick a lane: your [[Outrider]]s there get +2 strength this round; if you hold its base, draw a card.'),
+  S('w_sending', 'Sent Away', 6, 'lane', { need: 'enemies', do: [{ displace: 1, to: 'enemies' }] }, 'Pick a lane: each enemy there (not [[Immobile]]) is sent to another lane.'),
+  S('w_bolas', 'Bolas', 1, 'enemy', { do: [{ stun: 1, to: 'it' }] }, 'An enemy can\'t move or attack this round.'),
+  S('w_spoils', 'Spoils', 2, 'lane', { need: 'allies', do: [{ buff: [1, 1], to: 'team', if: HOLD }, { carry: 1 }] }, 'Pick a lane: +1 carry-over; if you hold its base, your units there gain +1|+1.'),
+  S('w_tidings', 'Tidings from Afar', 1, 'lane', { do: [{ draw: 1, if: { min: ['otherLanes', 2] } }, { carry: 1 }] }, 'Pick a lane: +1 carry-over; if you have 2 or more units in the other lanes, draw a card.'),
+  S('w_swiftness', 'Swiftness', 1, 'own', { do: [{ kw: 'outrider', to: 'it' }, { ride: 1, to: 'it' }] }, 'An ally gains [[Outrider]] and rides to another lane.'),
+  S('w_horsetheft', 'Horse Theft', 2, 'enemy', { do: [{ stun: 1, to: 'it' }, { carry: 1 }] }, 'An enemy can\'t move or attack this round; +1 carry-over.'),
+  S('w_flank', 'Flank Attack', 3, 'enemy', { do: [{ dmg: 2, to: 'it' }, { dmg: 1, to: 'inFrontOfIt' }] }, 'Deals 2 damage to an enemy and 1 to the enemy in front of it.'),
+  S('w_gather', 'Gathering of Clans', 4, 'lane', { do: [{ token: 'w_pony', n: 2 }, { buff: [1, 0], to: 'team:outrider' }] }, 'Pick a lane: places 2 {{card:w_pony|Remounts}} there; your [[Outrider]]s there gain +1 strength.'),
+]);
+/* ---------- Echoes: chroniclers who live in loops of time; deeds repeat, copies return, and what was done can be undone ---------- */
+const ECHO = { echo: 1, to: 'self' };
+addFaction('e', [
+  T('e_mote', 'Moment', 1, 1, 1, 1, {}, 'A moment made flesh.'),
+  // echo makers: an Echo of me appears (a fading copy)
+  U('e_twin', 'Twin Novice', 1, 1, 1, 1, { fx: [ON('place', ECHO)] }, 'Place: an [[Echo]] of me appears beside me.'),
+  U('e_mirror', 'Mirror Guard', 2, 1, 3, 1, { fx: [ON('place', ECHO)] }, 'Place: an [[Echo]] of me appears beside me.'),
+  U('e_reflect', 'Reflecting Blade', 3, 2, 3, 1, { fx: [ON('place', { dmg: 1, to: 'facing' }), ON('place', ECHO)] }, 'Place: deals 1 damage to the enemy facing me, and an [[Echo]] of me appears beside me (it deals its damage too).'),
+  U('e_doubler', 'Doubling Archer', 4, 2, 2, 1, { ranged: 1, fx: [ON('place', ECHO)] }, '[[Ranged]]. Place: an [[Echo]] of me appears beside me.'),
+  U('e_lingering', 'Lingering Shade', 2, 2, 1, 1, { fx: [ON('death', { token: 'e_mote' })] }, 'Death: places a {{card:e_mote|Moment}} in my lane.'),
+  U('e_herald', 'Herald of Echoes', 3, 1, 3, 1, { fx: [ON('place', { echo: 1, to: 'allies' })] }, 'Place: an [[Echo]] of each other ally in my lane appears beside it.'),
+  U('e_resonator', 'Resonator', 2, 1, 2, 1, { fx: [ON('allyPlace', { buff: [1, 0], rnd: 1, to: 'it' })] }, 'Whenever an ally is placed in my lane, it gets +1 strength this round (Echoes too).'),
+  U('e_bellkeeper', 'Bell Keeper', 3, 1, 4, 1, { fx: [ONCE('allyPlace', { heal: 1, to: 'team' })] }, 'Once per round, when an ally is placed in my lane: restores 1 defence to each ally there.'),
+  // copiers: a copy into your hand
+  U('e_scribe', 'Copyist', 2, 1, 2, 1, { fx: [ON('place', { copy: 1, to: 'strongest' })] }, 'Place: a copy of the enemy with the most strength in my lane into your hand.'),
+  U('e_chronicler', 'Chronicler', 3, 1, 3, 1, { fx: [ON('death', { copy: 1, to: 'self' })] }, 'Death: a copy of me into your hand.'),
+  U('e_archivist', 'Archivist', 2, 0, 3, 1, { fx: [ON('place', { copy: 1, to: 'adj' })] }, 'Place: a copy of each ally beside me into your hand.'),
+  U('e_memory', 'Memory Thief', 3, 2, 2, 1, { fx: [ON('attack', { copy: 1, to: 'it' })] }, 'After I attack: a copy of the unit I attacked into your hand, if it lives.'),
+  U('e_recaller', 'Recaller', 2, 1, 2, 1, { fx: [ON('place', { again: 1 })] }, 'Place: the last spell you cast this round comes back into your hand.'),
+  // replayers: Place effects fire again
+  U('e_conductor', 'Time Conductor', 3, 1, 3, 1, { fx: [ON('place', { replace: 1, to: 'adj' })] }, 'Place: the Place effects of each ally beside me happen again.'),
+  U('e_metronome', 'Metronome', 2, 0, 3, 1, { fixed: 1, fx: [ON('roundStart', { replace: 1, to: 'adj' })] }, '[[Immobile]]. Round start: the Place effects of each ally beside me happen again.'),
+  U('e_deja', 'Déjà Vu Knight', 4, 3, 4, 1, { fx: [ON('survive', { buff: [1, 0], to: 'self' })] }, 'When I survive damage, I gain +1 strength.'),
+  // holders
+  U('e_acolyte', 'Acolyte of the Hour', 1, 1, 2, 1, {}, 'A plain acolyte.'),
+  U('e_sentinel', 'Hourglass Sentinel', 2, 1, 3, 1, { guard: 1 }, '[[Bodyguard]].'),
+  U('e_warden', 'Loop Warden', 3, 2, 4, 1, { fx: [ON('roundStart', { heal: 9, to: 'self' })] }, 'Round start: I restore all my defence.'),
+  U('e_pendulum', 'Pendulum Guard', 3, 2, 3, 1, { fx: [ON('roundEnd', { buff: [0, 1], to: 'self' })] }, 'Round end: I gain +1 defence.'),
+  U('e_spiral', 'Spiral Dancer', 2, 2, 1, 1, { lightfooted: 1, moves: 2 }, '[[Lightfooted]].'),
+  U('e_returning', 'Returning Soldier', 3, 3, 2, 1, { fx: [ON('death', { copy: 1, to: 'self', if: HOLD })] }, 'Death: if you hold this lane\'s base, a copy of me into your hand.'),
+  U('e_oldman', 'Old Man of the Clock', 2, 0, 2, 1, { bonus: 1 }, '[[Supply]] +1.'),
+  U('e_sandkeeper', 'Sand Keeper', 3, 0, 3, 1, { bonus: 1, fx: [ON('place', ECHO)] }, '[[Supply]] +1. Place: an [[Echo]] of me appears beside me (it gives supply only if it lives to round start).'),
+  U('e_hourguard', 'Guard of the Last Hour', 5, 4, 5, 1, { fx: [ON('roundEnd', { dmg: 1, to: 'facing' })] }, 'Round end: deals 1 damage to the enemy facing me.'),
+  U('e_twinblade', 'Twinblade', 3, 2, 2, 1, { flurry: 1 }, '[[Flurry]].'),
+  U('e_ghostecho', 'Echo of a Hero', 4, 3, 3, 1, { fx: [ON('place', ECHO), ON('place', { buff: [1, 1], to: 'self', if: HOLD })] }, 'Place: an [[Echo]] of me appears beside me; if you hold this lane\'s base, I gain +1|+1.'),
+  U('e_seer', 'Seer of Repeats', 2, 1, 2, 1, { fx: [ON('place', { draw: 1, if: { min: ['allies:tok', 1] } })] }, 'Place: if an [[Echo]] of yours is in my lane, draw a card.'),
+  U('e_mimic', 'Mimic', 3, 0, 3, 1, { fx: [ON('place', { echo: 1, to: 'adj' })] }, 'Place: an [[Echo]] of each ally beside me appears.'),
+  U('e_breaker', 'Loop Breaker', 4, 3, 4, 1, { fx: [ON('place', { stun: 1, to: 'facing' })] }, 'Place: the enemy facing me can\'t move or attack this round.'),
+  U('e_mender', 'Mender of Moments', 2, 0, 3, 1, { fx: [ON('allyDeath', { token: 'e_mote' })], of: 'tok' }, 'Whenever an [[Echo]] of yours in my lane fades or dies, places a {{card:e_mote|Moment}} in my lane.'),
+  U('e_clockwork', 'Clockwork Soldier', 2, 2, 2, 1, { fx: [ON('roundStart', { buff: [1, 0], rnd: 1, to: 'self' })] }, 'Round start: I get +1 strength this round.'),
+  U('e_reprise', 'Reprise Bard', 3, 1, 3, 1, { fx: [ONCE('allyPlace', { buff: [0, 1], to: 'it' })] }, 'Once per round, when an ally is placed in my lane, it gains +1 defence.'),
+  U('e_giant', 'Giant of Ages', 6, 5, 5, 2, { fx: [ON('place', { echo: 1, to: 'allies' })] }, 'Place: an [[Echo]] of each other ally in my lane appears beside it.'),
+  U('e_titan', 'Titan Remembered', 8, 7, 5, 4, { fx: [ON('death', { copy: 1, to: 'self' })] }, 'Death: a copy of me into your hand.'),
+  U('e_spark', 'Spark of Yesterday', 1, 1, 1, 1, { fx: [ON('death', { token: 'e_mote' })] }, 'Death: places a {{card:e_mote|Moment}} in my lane.'),
+  U('e_watcher', 'Watcher of Hours', 3, 2, 2, 1, { ranged: 1, fx: [] }, '[[Ranged]].'),
+  U('e_sage', 'Sage of Cycles', 4, 2, 5, 1, { fx: [ON('roundEnd', { heal: 1, to: 'team' })] }, 'Round end: restores 1 defence to each ally in my lane.'),
+  U('e_herdsman', 'Herd of Moments', 3, 1, 2, 1, { fx: [ON('place', { token: 'e_mote', n: 2 })] }, 'Place: places 2 {{card:e_mote|Moments}} in my lane.'),
+  U('e_courier', 'Courier of Days', 2, 1, 2, 1, { outrider: 1 }, '[[Outrider]].'),
+  U('e_strider', 'Time Strider', 3, 2, 2, 1, { outrider: 1, fx: [ON('arrive', ECHO)] }, '[[Outrider]]. When I arrive from another lane: an [[Echo]] of me appears beside me.'),
+  U('e_lens', 'Lens of Ages', 3, 0, 5, 1, { fixed: 1, aura: [{ to: 'allies:tok', s: 1, d: 1 }] }, '[[Immobile]]. Your [[Echo]]es in my lane have +1|+1.'),
+  U('e_duelist', 'Repeating Duelist', 3, 3, 3, 1, { fx: [ON('attack', { buff: [1, 0], rnd: 1, to: 'self' })] }, 'After I attack, I get +1 strength this round.'),
+  U('e_spearwall', 'Twice-Set Spears', 3, 2, 3, 1, { reach: 1, fx: [ON('place', ECHO)] }, '[[Pike]]. Place: an [[Echo]] of me appears beside me.'),
+  U('e_chimes', 'Chime Tower', 4, 0, 7, 2, { fixed: 1, fx: [ON('roundEnd', { dmg: { count: 'allies:tok' }, to: 'weakest' })] }, '[[Immobile]]. Round end: deals 1 damage for each [[Echo]] of yours in my lane to the enemy with the least defence there.'),
+  U('e_keeper', 'Keeper of the Last Word', 2, 1, 3, 1, { fx: [ON('place', { card: 'e_rewind', if: NOHOLD })] }, 'Place: if you don\'t hold this lane\'s base, a {{card:e_rewind|Turn Back the Hour}} into your hand.'),
+  U('e_parade', 'Parade of Selves', 5, 3, 4, 1, { fx: [ON('place', ECHO), ON('place', { echo: 1, to: 'adj' })] }, 'Place: an [[Echo]] of me and of each ally beside me appears.'),
+  U('e_page', 'Page of Hours', 1, 1, 1, 1, { fx: [ON('death', { copy: 1, to: 'self', if: NOHOLD })] }, 'Death: if you don\'t hold this lane\'s base, a copy of me into your hand.'),
+  U('e_guardian', 'Guardian of Once', 4, 2, 4, 1, { guard: 1, fx: [ON('place', ECHO)] }, '[[Bodyguard]]. Place: an [[Echo]] of me appears beside me.'),
+  U('e_repeater', 'Repeater', 3, 2, 1, 1, { ranged: 1, fx: [ON('attack', { dmg: 1, to: 'it' })] }, '[[Ranged]]. After I attack: deals 1 more damage to the unit I attacked.'),
+  U('e_eternal', 'Eternal Squire', 2, 2, 2, 1, { fx: [ON('roundStart', { heal: 9, to: 'self' })] }, 'Round start: I restore all my defence.'),
+  U('e_foreseer', 'Foreseer', 3, 1, 3, 1, { fx: [ONCE('allyPlace', { draw: 1, if: { min: ['team:tok', 2] } })] }, 'Once per round, when an ally is placed in my lane: if you have 2 or more [[Echo]]es there, draw a card.'),
+  U('e_mirrorwall', 'Mirror Wall', 3, 0, 6, 2, { fixed: 1, fx: [ON('survive', { dmg: 1, to: 'facing' })] }, '[[Immobile]]. When I survive damage: deals 1 damage to the enemy facing me.'),
+  U('e_twinmage', 'Twin Mage', 4, 2, 4, 1, { fx: [ONCE('spell', { echo: 1, to: 'self' })] }, 'Once per round, when you cast a spell: an [[Echo]] of me appears beside me.'),
+  U('e_relic', 'Relic Bearer', 2, 1, 3, 1, { fx: [ON('place', { card: 'e_again' })] }, 'Place: a {{card:e_again|Once More}} into your hand.'),
+  U('e_drummer', 'Drummer of Beats', 2, 1, 2, 1, { fx: [ON('allyPlace', { buff: [0, 1], rnd: 1, to: 'it' })] }, 'Whenever an ally is placed in my lane, it gets +1 defence this round.'),
+  U('e_sleeper', 'Sleeper', 5, 5, 4, 1, { fx: [ON('place', { stun: 1, to: 'self' })] }, 'Place: I can\'t move or attack this round.'),
+  // the five special units
+  U('e_loopknight', 'Knight of the Loop', 3, 2, 3, 1, { fx: [ON('place', ECHO), ON('death', { copy: 1, to: 'self', if: HOLD })] }, 'Place: an [[Echo]] of me appears beside me. Death: if you hold this lane\'s base, a copy of me into your hand.'),
+  U('e_oracle', 'Oracle of Returns', 2, 1, 2, 1, { fx: [ON('place', { replace: 1, to: 'adj', if: HOLD }), ON('place', { draw: 1, if: NOHOLD })] }, 'Place: if you hold this lane\'s base, the Place effects of each ally beside me happen again; if not, draw a card.'),
+  U('e_timekeeper', 'Timekeeper', 4, 2, 5, 1, { fx: [ONCE('spell', { again: 1, if: HOLD })] }, 'Once per round, when you cast a spell: if you hold this lane\'s base, it comes back into your hand.'),
+  U('e_paradox', 'The Paradox', 5, 4, 5, 1, { aura: [{ to: 'self', s: 2, d: 2, if: NOHOLD }], fx: [ON('death', { copy: 1, to: 'self' })] }, 'As long as you don\'t hold this lane\'s base, I have +2|+2. Death: a copy of me into your hand.'),
+  U('e_chronarch', 'Chronarch', 7, 4, 7, 2, { fx: [ON('place', { echo: 1, to: 'allies' }), ON('roundStart', { echo: 1, to: 'allies', if: HOLD })] }, 'Place: an [[Echo]] of each other ally in my lane appears beside it. Round start: if you hold this lane\'s base, again.'),
+  // spells
+  S('e_rewind', 'Turn Back the Hour', 3, 'lane', { undo: 1, do: [{ undo: 1 }] }, 'Undoes the enemy\'s last action, if it came right before this: the board, its hand and its supply go back to how they were.', { noAgain: true }),
+  S('e_again', 'Once More', 1, 'lane', { do: [{ again: 1 }] }, 'Pick a lane to pay in: the last spell you cast this round comes back into your hand.', { noAgain: true }),
+  S('e_echospell', 'Call the Echo', 1, 'own', { do: [{ echo: 1, to: 'it' }] }, 'An [[Echo]] of an ally appears beside it.'),
+  S('e_chorus', 'Chorus', 4, 'lane', { need: 'allies', do: [{ echo: 1, to: 'team' }] }, 'Pick a lane: an [[Echo]] of each of your units there appears beside it.'),
+  S('e_reprisespell', 'Reprise', 2, 'own', { do: [{ replace: 1, to: 'it' }] }, 'An ally\'s Place effects happen again.'),
+  S('e_remember', 'Remember', 2, 'own', { do: [{ copy: 1, to: 'it' }] }, 'A copy of an ally into your hand.'),
+  S('e_steal', 'Borrowed Memory', 3, 'enemy', { do: [{ copy: 1, to: 'it' }] }, 'A copy of an enemy into your hand.'),
+  S('e_recount', 'Recount', 2, 'lane', { do: [{ draw: 1 }, { token: 'e_mote' }] }, 'Pick a lane: draw a card, and a {{card:e_mote|Moment}} is placed in your camp there.'),
+  S('e_doublestrike', 'Double Strike', 2, 'enemy', { do: [{ dmg: 1, to: 'it' }, { dmg: 1, to: 'it' }] }, 'Deals 1 damage to an enemy, twice.'),
+  S('e_twice', 'Twice Told', 3, 'enemy', { do: [{ dmg: 2, to: 'it' }, { dmg: 2, to: 'it' }] }, 'Deals 2 damage to an enemy, twice.'),
+  S('e_freeze', 'Stopped Clock', 2, 'enemy', { do: [{ stun: 1, to: 'it' }] }, 'An enemy can\'t move or attack this round.'),
+  S('e_haste', 'Borrowed Time', 1, 'lane', { do: [{ pool: 1 }, { draw: 1, if: { spells: 2 } }] }, 'Pick a lane: +1 supply there this round; if this is your third spell this round, draw a card.'),
+  S('e_fade', 'Unmake', 5, 'enemy', { do: [{ kill: 1, to: 'it' }] }, 'Kills an enemy.'),
+  S('e_age', 'Age', 3, 'enemy', { do: [{ buff: [-1, -1], to: 'it' }, { dmg: 1, to: 'it' }] }, 'An enemy loses 1 strength and 1 defence for good, and takes 1 damage.'),
+  S('e_youth', 'Youth', 2, 'own', { do: [{ heal: 9, to: 'it' }, { buff: [0, 1], to: 'it' }] }, 'An ally restores all its defence and gains +1 defence.'),
+  S('e_loop', 'Closed Loop', 2, 'lane', { need: 'allies', do: [{ buff: [1, 1], rnd: 1, to: 'team:tok' }, { echo: 1, to: 'hurtAlly' }] }, 'Pick a lane: your [[Echo]]es there get +1|+1 this round; an [[Echo]] of your most damaged unit there appears.'),
+  S('e_moments', 'Gather Moments', 2, 'lane', { do: [{ token: 'e_mote', n: 2 }] }, 'Pick a lane: places 2 {{card:e_mote|Moments}} in your camp there.'),
+  S('e_echoarmy', 'Army of Yesterday', 6, 'lane', { need: 'allies', do: [{ echo: 1, to: 'team' }, { buff: [1, 0], rnd: 1, to: 'team' }] }, 'Pick a lane: an [[Echo]] of each of your units there appears; then your units there get +1 strength this round.'),
+  S('e_reflection', 'Reflection', 2, 'enemy', { do: [{ dmg: { count: 'team:tok', plus: 1 }, to: 'it' }] }, 'Deals 1 damage to an enemy, +1 for each [[Echo]] of yours in its lane.'),
+  S('e_hourglass', 'Turn the Hourglass', 2, 'lane', { need: 'allies', do: [{ heal: 2, to: 'team' }] }, 'Pick a lane: restores 2 defence to each of your units there.'),
+  S('e_rerun', 'Rerun', 3, 'lane', { need: 'allies', do: [{ replace: 1, to: 'team' }] }, 'Pick a lane: the Place effects of each of your units there happen again.'),
+  S('e_slow', 'Slow Time', 3, 'lane', { need: 'enemies', do: [{ buff: [-1, 0], rnd: 1, to: 'enemies' }, { stun: 1, to: 'strongest' }] }, 'Pick a lane: enemies there get -1 strength this round; the strongest can\'t move or attack this round.'),
+  S('e_pastblow', 'Blow from the Past', 2, 'enemy', { do: [{ dmg: 2, to: 'it' }] }, 'Deals 2 damage to an enemy.'),
+  S('e_futureblow', 'Blow from the Future', 4, 'enemy', { do: [{ dmg: 4, to: 'it' }] }, 'Deals 4 damage to an enemy.'),
+  S('e_mirrorimage', 'Mirror Image', 2, 'own', { do: [{ echo: 1, to: 'it' }, { buff: [0, 1], to: 'it' }] }, 'An ally gains +1 defence, and an [[Echo]] of it appears beside it.'),
+  S('e_rift', 'Time Rift', 4, 'enemy', { do: [{ displace: 1, to: 'it' }, { stun: 1, to: 'it' }] }, 'An enemy is sent to another lane and can\'t move or attack this round.'),
+  S('e_cycle', 'Cycle of Ages', 3, 'lane', { do: [{ draw: 1 }, { again: 1 }] }, 'Pick a lane to pay in: draw a card; the last spell you cast this round comes back into your hand.', { noAgain: true }),
+  S('e_lesson', 'Lesson Repeated', 1, 'own', { do: [{ buff: [1, 0], to: 'it' }, { buff: [1, 0], rnd: 1, to: 'it' }] }, 'An ally gains +1 strength, and +1 more this round.'),
+  S('e_ripple', 'Ripple', 3, 'lane', { need: 'enemies', do: [{ dmg: 1, to: 'enemies' }, { dmg: 1, to: 'enemies' }] }, 'Pick a lane: deals 1 damage to each enemy there, twice.'),
+  S('e_lasthour', 'The Last Hour', 5, 'lane', { all: 1, do: [{ heal: 2, to: 'team' }] }, 'Paid in one lane, cast in ALL lanes: restores 2 defence to each of your units.'),
+  S('e_shift', 'Shift', 1, 'own', { do: [{ ride: 1, to: 'it' }] }, 'An ally (not [[Immobile]]) moves to another lane: the same cell if free, else the first free one.'),
+  S('e_twinspell', 'Twin Bolt', 2, 'enemy', { do: [{ dmg: 1, to: 'it' }, { dmg: 1, to: 'itAdj' }, { dmg: 1, to: 'it' }] }, 'Deals 1 damage to an enemy, 1 to each enemy adjacent to it, then 1 more to it.'),
+  S('e_preserve', 'Preserve', 1, 'own', { do: [{ kw: 'armoured', rnd: 1, to: 'it' }, { buff: [0, 1], rnd: 1, to: 'it' }] }, 'An ally gets +1 defence and is [[Armoured]] this round.'),
+  S('e_relive', 'Relive', 3, 'lane', { need: 'allies', do: [{ replace: 1, to: 'team' }, { draw: 1 }] }, 'Pick a lane: the Place effects of each of your units there happen again; draw a card.'),
+  S('e_mirrorstrike', 'Mirror Strike', 2, 'enemy', { do: [{ dmg: { count: 'team', x: 1 }, to: 'it' }] }, 'Deals 1 damage to an enemy for each of your units in its lane.'),
+  S('e_skip', 'Skipped Moment', 1, 'enemy', { do: [{ buff: [-2, 0], rnd: 1, to: 'it' }] }, 'An enemy gets -2 strength this round.'),
+  S('e_rewrite', 'Rewrite', 4, 'enemy', { do: [{ buff: [-2, -2], to: 'it' }] }, 'An enemy loses 2 strength and 2 defence for good.'),
+  S('e_moment', 'A Single Moment', 0, 'lane', { do: [{ token: 'e_mote' }] }, 'Pick a lane: places a {{card:e_mote|Moment}} in your camp there.'),
+]);
+/* ---------- Monoliths: an ancient stone people; every unit is a carved monument that never moves, wakes spirits and rules its column ---------- */
+const IM = { fixed: 1 }, SPIRIT = { token: 'm_spirit' }, SPIRIT_F = { token: 'm_spirit', at: 'front' };
+addFaction('m', [
+  T('m_spirit', 'Stone Spirit', 1, 1, 2, 1, {}, 'A spirit woken from the stone. It can move.'),
+  T('m_guardian', 'Temple Guardian', 3, 3, 4, 1, {}, 'A great spirit of the temple. It can move.'),
+  // spirit makers (obelisks)
+  U('m_shrine', 'Wayside Shrine', 1, 0, 3, 1, { ...IM, fx: [ON('place', SPIRIT_F)] }, '[[Immobile]]. Place: places a {{card:m_spirit|Stone Spirit}} in my front row.'),
+  U('m_obelisk', 'Obelisk', 3, 0, 6, 1, { ...IM, fx: [ON('roundStart', SPIRIT_F)] }, '[[Immobile]]. Round start: places a {{card:m_spirit|Stone Spirit}} in my front row.'),
+  U('m_sunobelisk', 'Sun Obelisk', 4, 1, 6, 1, { ...IM, fx: [ON('roundStart', { ...SPIRIT_F, if: HOLD }), ON('roundEnd', { dmg: 1, to: 'facing' })] }, '[[Immobile]]. Round start: if you hold this lane\'s base, places a {{card:m_spirit|Stone Spirit}} in my front row. Round end: deals 1 damage to the enemy facing me.'),
+  U('m_cairn', 'Cairn', 2, 0, 5, 1, { ...IM, fx: [ON('death', { ...SPIRIT, n: 2 })] }, '[[Immobile]]. Death: places 2 {{card:m_spirit|Stone Spirits}} in my lane.'),
+  U('m_gate', 'Spirit Gate', 5, 0, 9, 2, { ...IM, fx: [ON('roundStart', SPIRIT_F)] }, '[[Immobile]]. Round start: places a {{card:m_spirit|Stone Spirit}} in my front row.'),
+  U('m_temple', 'Temple of the Guardian', 6, 0, 10, 4, { ...IM, fx: [ON('place', { token: 'm_guardian', at: 'front' }), ON('roundStart', { token: 'm_guardian', at: 'front', if: HOLD })] }, '[[Immobile]]. Place: places a {{card:m_guardian|Temple Guardian}} in my front row; round start: again, if you hold this lane\'s base.'),
+  U('m_spiritcaller', 'Spirit Caller', 2, 1, 4, 1, { ...IM, fx: [ON('allyPlace', { buff: [1, 0], to: 'it' })], of: 'token' }, '[[Immobile]]. Whenever a spirit of yours is placed in my lane, it gains +1 strength.'),
+  U('m_rest', 'Ancestor\'s Rest', 3, 0, 6, 1, { ...IM, fx: [ON('allyDeath', { heal: 1, to: 'team' })], of: 'token' }, '[[Immobile]]. Whenever a spirit of yours in my lane dies: restores 1 defence to each ally in my lane.'),
+  // column and row rulers
+  U('m_totem', 'Carved Totem', 1, 1, 3, 1, { ...IM, aura: [{ to: 'col', s: 1 }] }, '[[Immobile]]. Other allies in my column have +1 strength.'),
+  U('m_pillar', 'Pillar', 2, 1, 5, 1, { ...IM, aura: [{ to: 'col', d: 1 }] }, '[[Immobile]]. Other allies in my column have +1 defence.'),
+  U('m_stele', 'Stele of Law', 3, 1, 6, 1, { ...IM, aura: [{ to: 'row', s: 1, d: 1 }] }, '[[Immobile]]. Other allies in my row have +1|+1.'),
+  U('m_menhir', 'Menhir', 2, 2, 4, 1, { ...IM, fx: [ON('roundEnd', { dmg: 1, to: 'facing' })] }, '[[Immobile]]. Round end: deals 1 damage to the enemy facing me.'),
+  U('m_dolmen', 'Dolmen', 4, 2, 7, 1, { ...IM, fx: [ON('roundEnd', { dmg: 2, to: 'facing' })] }, '[[Immobile]]. Round end: deals 2 damage to the enemy facing me.'),
+  U('m_monolith', 'Monolith', 5, 2, 8, 2, { ...IM, fx: [ON('roundEnd', { dmg: 1, to: 'colEnemies' })] }, '[[Immobile]]. Round end: deals 1 damage to each enemy in my column(s).'),
+  U('m_eye', 'Watching Eye', 3, 0, 5, 1, { ...IM, ranged: 1 }, '[[Immobile]]. [[Ranged]].'),
+  U('m_sling', 'Sling Altar', 2, 1, 3, 1, { ...IM, ranged: 1 }, '[[Immobile]]. [[Ranged]].'),
+  U('m_spire', 'Spire', 4, 2, 5, 1, { ...IM, ranged: 1 }, '[[Immobile]]. [[Ranged]].'),
+  U('m_arch', 'Arch of Triumph', 4, 1, 7, 2, { ...IM, aura: [{ to: 'allies:token', s: 1, d: 1 }] }, '[[Immobile]]. Your spirits in my lane have +1|+1.'),
+  U('m_hearth', 'Hearthstone', 2, 0, 4, 1, { ...IM, bonus: 1 }, '[[Immobile]]. [[Supply]] +1.'),
+  U('m_cistern', 'Cistern', 3, 0, 4, 1, { ...IM, bonus: 1, fx: [ON('roundEnd', { heal: 1, to: 'adj' })] }, '[[Immobile]]. [[Supply]] +1. Round end: restores 1 defence to each ally beside me.'),
+  U('m_quarry', 'Quarry', 4, 0, 3, 2, { ...IM, bonus: 2 }, '[[Immobile]]. [[Supply]] +2.'),
+  U('m_wall', 'Cyclopean Wall', 3, 0, 8, 2, { ...IM }, '[[Immobile]].'),
+  U('m_gatehouse', 'Gatehouse', 3, 1, 6, 1, { ...IM, guard: 1 }, '[[Immobile]]. [[Bodyguard]].'),
+  U('m_statue', 'Warrior Statue', 2, 3, 3, 1, { ...IM }, '[[Immobile]].'),
+  U('m_lionstatue', 'Lion Statue', 3, 4, 4, 1, { ...IM, fx: [ON('survive', { buff: [1, 0], to: 'self' })] }, '[[Immobile]]. When I survive damage, I gain +1 strength.'),
+  U('m_sphinx', 'Sphinx', 5, 4, 7, 1, { ...IM, fx: [ON('place', { stun: 1, to: 'facing' })] }, '[[Immobile]]. Place: the enemy facing me can\'t move or attack this round.'),
+  U('m_ziggurat', 'Ziggurat', 7, 3, 9, 4, { ...IM, aura: [{ to: 'allies', d: 1 }] }, '[[Immobile]]. Other allies in my lane have +1 defence.'),
+  U('m_runestone', 'Runestone', 2, 0, 4, 1, { ...IM, fx: [ON('place', { draw: 1, if: { min: ['team:fixed', 3] } })] }, '[[Immobile]]. Place: if you have 3 or more [[Immobile]] units in my lane (me included), draw a card.'),
+  U('m_altar', 'Altar of Ash', 2, 1, 3, 1, { ...IM, fx: [ON('allyDeath', { buff: [1, 0], to: 'self' })] }, '[[Immobile]]. Whenever an ally in my lane dies, I gain +1 strength.'),
+  U('m_idol', 'Idol of Plenty', 3, 0, 5, 1, { ...IM, fx: [ON('roundEnd', { carry: 1, if: HOLD })] }, '[[Immobile]]. Round end: if you hold this lane\'s base, +1 carry-over.'),
+  U('m_mask', 'Stone Mask', 1, 2, 2, 1, { ...IM }, '[[Immobile]].'),
+  U('m_brazier', 'Brazier', 2, 1, 3, 1, { ...IM, fx: [ON('roundEnd', { dmg: 1, to: 'adjEnemies' })] }, '[[Immobile]]. Round end: deals 1 damage to each enemy touching me.'),
+  U('m_sundial', 'Sundial', 2, 0, 4, 1, { ...IM, fx: [ON('roundStart', { buff: [1, 0], rnd: 1, to: 'col' })] }, '[[Immobile]]. Round start: other allies in my column get +1 strength this round.'),
+  U('m_tomb', 'Kings\' Tomb', 4, 0, 7, 2, { ...IM, fx: [ON('death', { token: 'm_guardian' })] }, '[[Immobile]]. Death: places a {{card:m_guardian|Temple Guardian}} in my lane.'),
+  U('m_gargoyle', 'Gargoyle', 3, 3, 4, 1, { ...IM, fx: [ON('roundEnd', { buff: [0, 1], to: 'self', if: { front: 1 } })] }, '[[Immobile]]. Round end: if I am in your front row, I gain +1 defence.'),
+  U('m_colossi', 'Twin Colossi', 6, 4, 8, 2, { ...IM, fx: [ON('roundEnd', { dmg: 1, to: 'enemyFront' })] }, '[[Immobile]]. Round end: deals 1 damage to each enemy in the enemy front row.'),
+  U('m_mosaic', 'Mosaic Floor', 3, 0, 6, 2, { ...IM, aura: [{ to: 'row', s: 1 }] }, '[[Immobile]]. Other allies in my row have +1 strength.'),
+  U('m_bell', 'Great Bell', 4, 0, 7, 1, { ...IM, fx: [ON('roundStart', { buff: [1, 1], rnd: 1, to: 'allies' })] }, '[[Immobile]]. Round start: other allies in my lane get +1|+1 this round.'),
+  U('m_forge', 'Stone Forge', 3, 1, 5, 1, { ...IM, fx: [ON('roundEnd', { buff: [1, 0], to: 'adj:token' })] }, '[[Immobile]]. Round end: spirits beside me gain +1 strength.'),
+  U('m_oracle2', 'Speaking Stone', 2, 0, 3, 1, { ...IM, fx: [ON('death', { draw: 1 })] }, '[[Immobile]]. Death: draw a card.'),
+  U('m_observatory', 'Observatory', 4, 0, 6, 2, { ...IM, fx: [ON('roundEnd', { dmg: 1, to: 'enemyBack' })] }, '[[Immobile]]. Round end: deals 1 damage to each enemy in the enemy back rows of my lane.'),
+  U('m_trap', 'Stone Jaws', 2, 2, 2, 1, { ...IM, riposte: 1 }, '[[Immobile]]. [[Riposte]].'),
+  U('m_effigy', 'Effigy', 1, 1, 2, 1, { ...IM, fx: [ON('death', SPIRIT)] }, '[[Immobile]]. Death: places a {{card:m_spirit|Stone Spirit}} in my lane.'),
+  U('m_rampart', 'Rampart', 4, 2, 5, 2, { ...IM, armoured: 1 }, '[[Immobile]]. [[Armoured]].'),
+  U('m_sanctum', 'Sanctum', 5, 0, 9, 2, { ...IM, fx: [ON('roundEnd', { heal: 2, to: 'team', if: HOLD })] }, '[[Immobile]]. Round end: if you hold this lane\'s base, restores 2 defence to each ally in my lane.'),
+  U('m_beacon', 'Signal Pyre', 3, 1, 5, 1, { ...IM, fx: [ON('roundEnd', { dmg: 1, to: 'weakest', if: { other: 'm_beacon' } })] }, '[[Immobile]]. Round end: if you have another Signal Pyre in another lane, deals 1 damage to the enemy with the least defence in my lane.'),
+  U('m_pyramidlet', 'Step Pyramid', 5, 2, 6, 4, { ...IM, fx: [ON('place', { ...SPIRIT_F, n: 2 })] }, '[[Immobile]]. Place: places 2 {{card:m_spirit|Stone Spirits}} in my front row.'),
+  U('m_guardstatue', 'Sentinel Statue', 3, 2, 6, 1, { ...IM }, '[[Immobile]].'),
+  U('m_peak', 'Mountain Shrine', 6, 3, 9, 2, { ...IM, fx: [ON('place', { buff: [0, 2], to: 'allies' })] }, '[[Immobile]]. Place: other allies in my lane gain +2 defence.'),
+  U('m_votive', 'Votive Stones', 1, 0, 4, 1, { ...IM, fx: [ON('place', { heal: 2, to: 'hurtAlly' })] }, '[[Immobile]]. Place: restores 2 defence to your most damaged unit in my lane.'),
+  U('m_thrower', 'Boulder Catapult', 4, 0, 7, 1, { ...IM, thrower: 1, cannon: 1 }, '[[Immobile]]. [[Cannon]].'),
+  U('m_boulder', 'Rolling Boulder', 2, 3, 1, 1, { proj: 1 }, '[[Projectile]]. It can move.'),
+  U('m_crypt', 'Crypt Door', 3, 0, 7, 1, { ...IM, guard: 1 }, '[[Immobile]]. [[Bodyguard]].'),
+  U('m_horn', 'Stone Horn', 2, 0, 4, 1, { ...IM, fx: [ON('allyPlace', { buff: [1, 0], rnd: 1, to: 'it' })] }, '[[Immobile]]. Whenever an ally is placed in my lane, it gets +1 strength this round.'),
+  U('m_megalith', 'Megalith', 8, 5, 9, 4, { ...IM, fx: [ON('roundEnd', { dmg: 2, to: 'colEnemies' })] }, '[[Immobile]]. Round end: deals 2 damage to each enemy in my columns.'),
+  U('m_skyeye', 'Eye of the Sky', 5, 2, 6, 1, { ...IM, ranged: 1, fx: [ON('roundEnd', { dmg: 1, to: 'weakest' })] }, '[[Immobile]]. [[Ranged]]. Round end: deals 1 damage to the enemy with the least defence in my lane.'),
+  U('m_spiritwell', 'Spirit Well', 3, 0, 5, 1, { ...IM, bonus: 1, fx: [ON('death', SPIRIT)] }, '[[Immobile]]. [[Supply]] +1. Death: places a {{card:m_spirit|Stone Spirit}} in my lane.'),
+  U('m_threshold', 'Threshold Stone', 1, 1, 3, 1, { ...IM, fx: [ON('place', { buff: [0, 1], to: 'self', if: { front: 1 } })] }, '[[Immobile]]. Place: if I am in your front row, I gain +1 defence.'),
+  U('m_king', 'Stone King', 7, 5, 9, 2, { ...IM, aura: [{ to: 'allies', s: 1 }] }, '[[Immobile]]. Other allies in my lane have +1 strength.'),
+  U('m_pool', 'Reflecting Pool', 2, 0, 4, 1, { ...IM, fx: [ON('roundEnd', { heal: 2, to: 'hurtAlly' })] }, '[[Immobile]]. Round end: restores 2 defence to your most damaged unit in my lane.'),
+  // the five special units
+  U('m_sunpyramid', 'Pyramid of the Sun', 8, 3, 11, 4, { ...IM, fx: [ON('roundEnd', { token: 'm_spirit', lanes: 'all', at: 'front', if: HOLD })] }, '[[Immobile]]. Round end: if you hold this lane\'s base, places a {{card:m_spirit|Stone Spirit}} in your front row in each lane.'),
+  U('m_ancestor', 'Totem of the Ancestors', 2, 1, 4, 1, { ...IM, aura: [{ to: 'col', s: 1 }, { to: 'col', s: 1, d: 1, if: HOLD }] }, '[[Immobile]]. Other allies in my column have +1 strength; as long as you hold this lane\'s base, +2|+1.'),
+  U('m_oraclestone', 'Oracle Stone', 3, 0, 6, 1, { ...IM, fx: [ON('roundEnd', { draw: 1, if: HOLD })] }, '[[Immobile]]. Round end: if you hold this lane\'s base, draw a card.'),
+  U('m_waking', 'Waking Colossus', 6, 4, 6, 4, { ...IM, aura: [{ to: 'self', s: 3, if: HOLD }], fx: [ON('roundEnd', { dmg: 2, to: 'facing' })] }, '[[Immobile]]. Round end: deals 2 damage to the enemy facing me. As long as you hold this lane\'s base, I have +3 strength.'),
+  U('m_ley', 'Ley Obelisk', 3, 1, 5, 1, { ...IM, aura: [{ to: 'self', d: 2, if: { other: 'm_ley' } }], fx: [ON('roundEnd', { dmg: 1, to: 'colEnemies', if: { other: 'm_ley' } }), ON('roundEnd', { token: 'm_spirit', at: 'front', if: { other: 'm_ley', hold: 0 } })] }, '[[Immobile]]. While you have a Ley Obelisk in another lane: I have +2 defence, and at round end I deal 1 damage to each enemy in my column; if you also don\'t hold this lane\'s base, a {{card:m_spirit|Stone Spirit}} wakes in my front row.'),
+  // spells
+  S('m_awaken', 'Awaken', 2, 'lane', { do: [{ token: 'm_spirit', at: 'front', n: 2 }] }, 'Pick a lane: places 2 {{card:m_spirit|Stone Spirits}} in your front row there.'),
+  S('m_rockfall', 'Rockfall', 3, 'column', { do: [{ dmg: 2, to: 'colEnemies' }] }, 'Pick a column of an enemy camp: deals 2 damage to each enemy in it.'),
+  S('m_quake', 'Earthquake', 5, 'lane', { need: 'enemies', do: [{ dmg: 2, to: 'enemies' }] }, 'Pick a lane: deals 2 damage to each enemy there.'),
+  S('m_petrify', 'Petrify', 2, 'enemy', { do: [{ kw: 'fixed', to: 'it' }, { stun: 1, to: 'it' }] }, 'An enemy becomes [[Immobile]] and can\'t attack this round.'),
+  S('m_carve', 'Carve Anew', 1, 'own', { do: [{ heal: 3, to: 'it' }] }, 'Restores 3 defence to an ally.'),
+  S('m_consecrate', 'Consecrate', 2, 'lane', { need: 'allies', do: [{ buff: [0, 1], to: 'team' }] }, 'Pick a lane: your units there gain +1 defence.'),
+  S('m_sunbeam', 'Sunbeam', 2, 'enemy', { do: [{ dmg: 2, to: 'it' }] }, 'Deals 2 damage to an enemy.'),
+  S('m_judgement', 'Judgement of Stone', 4, 'enemy', { do: [{ dmg: 4, to: 'it' }] }, 'Deals 4 damage to an enemy.'),
+  S('m_crush', 'Crush', 6, 'enemy', { do: [{ kill: 1, to: 'it' }] }, 'Kills an enemy.'),
+  S('m_rite', 'Rite of Waking', 3, 'lane', { do: [{ token: 'm_guardian', at: 'front' }] }, 'Pick a lane: places a {{card:m_guardian|Temple Guardian}} in your front row there.'),
+  S('m_inscribe', 'Inscription', 1, 'lane', { do: [{ draw: 1, if: { min: ['team:fixed', 2] } }, { carry: 1 }] }, 'Pick a lane: +1 carry-over; if you have 2 or more [[Immobile]] units there, draw a card.'),
+  S('m_gaze', 'Gaze of the Idol', 2, 'enemy', { do: [{ stun: 1, to: 'it' }, { buff: [-1, 0], rnd: 1, to: 'it' }] }, 'An enemy gets -1 strength and can\'t move or attack this round.'),
+  S('m_pilgrims', 'Pilgrimage', 2, 'lane', { do: [{ pool: 2 }] }, 'Pick a lane: +2 supply there this round.'),
+  S('m_offering', 'Offering', 1, 'own', { do: [{ buff: [1, 1], to: 'it' }] }, 'An ally gains +1|+1.'),
+  S('m_rally', 'Call of the Stones', 3, 'lane', { need: 'allies', do: [{ buff: [1, 0], rnd: 1, to: 'team' }, { buff: [1, 1], rnd: 1, to: 'team:token' }] }, 'Pick a lane: your units there get +1 strength this round, your spirits +2|+1.'),
+  S('m_landslide', 'Landslide', 4, 'lane', { need: 'enemies', do: [{ dmg: 1, to: 'enemies' }, { push: 1, to: 'enemyFront' }] }, 'Pick a lane: deals 1 damage to each enemy there; enemies in the enemy front row are [[Push]]ed one row back.'),
+  S('m_erosion', 'Erosion', 3, 'enemy', { do: [{ buff: [0, -2], to: 'it' }] }, 'An enemy loses 2 defence for good.'),
+  S('m_wake', 'Wake the Dead Kings', 5, 'lane', { do: [{ token: 'm_guardian', n: 2 }] }, 'Pick a lane: places 2 {{card:m_guardian|Temple Guardians}} in your camp there.'),
+  S('m_harmony', 'Harmony of Stones', 4, 'lane', { all: 1, do: [{ token: 'm_spirit', at: 'front' }] }, 'Paid in one lane, cast in ALL lanes: places a {{card:m_spirit|Stone Spirit}} in your front row in each lane.'),
+  S('m_sacredground', 'Sacred Ground', 2, 'lane', { need: 'allies', do: [{ heal: 2, to: 'team' }, { buff: [0, 1], to: 'team', if: HOLD }] }, 'Pick a lane: restores 2 defence to each of your units there; if you hold its base, they also gain +1 defence.'),
+  S('m_shards', 'Shard Storm', 3, 'lane', { need: 'enemies', do: [{ dmg: { count: 'team:fixed' }, to: 'weakest' }] }, 'Pick a lane: deals 1 damage for each of your [[Immobile]] units there to the enemy with the least defence there.'),
+  S('m_lightning', 'Wrath of the Sky', 3, 'enemy', { do: [{ dmg: 2, to: 'it' }, { dmg: 1, to: 'itAdj' }] }, 'Deals 2 damage to an enemy and 1 to each enemy adjacent to it.'),
+  S('m_ritual', 'Ritual of Stone', 2, 'own', { do: [{ buff: [0, 3], to: 'it' }] }, 'An ally gains +3 defence.'),
+  S('m_rouse', 'Rouse', 1, 'own', { do: [{ buff: [2, 0], rnd: 1, to: 'it' }] }, 'An ally gets +2 strength this round.'),
+  S('m_spiritwalk', 'Spirit Walk', 2, 'own', { do: [{ ride: 1, to: 'it' }, { buff: [1, 1], rnd: 1, to: 'it' }] }, 'An ally (not [[Immobile]], a spirit) moves to another lane and gets +1|+1 this round.'),
+  S('m_omen', 'Omen', 1, 'lane', { do: [{ draw: 1, if: HOLD }, { token: 'm_spirit', if: NOHOLD }] }, 'Pick a lane: if you hold its base, draw a card; if not, a {{card:m_spirit|Stone Spirit}} wakes in your camp there.'),
+  S('m_stoneskin', 'Stoneskin', 2, 'lane', { need: 'allies', do: [{ kw: 'armoured', rnd: 1, to: 'team' }] }, 'Pick a lane: your units there are [[Armoured]] this round.'),
+  S('m_doom', 'Doom of Ages', 7, 'lane', { need: 'enemies', do: [{ dmg: 3, to: 'enemies' }] }, 'Pick a lane: deals 3 damage to each enemy there.'),
+  S('m_seal', 'Seal the Tomb', 3, 'enemy', { do: [{ stun: 1, to: 'it' }, { dmg: 2, to: 'it' }] }, 'Deals 2 damage to an enemy; it can\'t move or attack this round.'),
+  S('m_rubble', 'Rubble', 1, 'enemy', { do: [{ dmg: 1, to: 'it' }, { stun: 1, to: 'it' }] }, 'Deals 1 damage to an enemy; it can\'t move or attack this round.'),
+  S('m_pilgrimage2', 'Pilgrims Arrive', 2, 'lane', { do: [{ token: 'm_spirit' }, { carry: 1 }] }, 'Pick a lane: a {{card:m_spirit|Stone Spirit}} wakes in your camp there; +1 carry-over.'),
+  S('m_ancestors', 'Voice of the Ancestors', 3, 'lane', { do: [{ draw: 1 }, { buff: [0, 1], to: 'team:fixed' }] }, 'Pick a lane: draw a card; your [[Immobile]] units there gain +1 defence.'),
+  S('m_eclipse', 'Eclipse', 4, 'lane', { need: 'enemies', do: [{ buff: [-2, 0], rnd: 1, to: 'enemies' }] }, 'Pick a lane: enemies there get -2 strength this round.'),
+  S('m_cleave', 'Split the Stone', 3, 'enemy', { do: [{ dmg: 3, to: 'it' }] }, 'Deals 3 damage to an enemy.'),
+  S('m_sundown', 'Sundown', 2, 'lane', { need: 'enemies', do: [{ dmg: 1, to: 'enemyFront' }] }, 'Pick a lane: deals 1 damage to each enemy in the enemy front row.'),
+]);
 const KEYWORDS = {
+  'Projectile':'A unit a Cannon beside it can fire: the Cannon\'s attack throws it at an enemy in the Cannon\'s lane; it strikes that enemy with its strength and dies there.',
+  'Cannon':'Instead of attacking, it can fire an adjacent Projectile at an enemy in its lane (costs what an attack costs). It can\'t throw anything else.',
+  'Echo':'A copy of a unit, placed beside it; it fades at the end of the round and leaves no card behind.',
+  'Ranged':'Can attack any enemy in its lane, from any row.',
+  'Supply':'Adds supply to its lane at each round start.',
   'Everywhere':'Paid from one lane, it works in all three lanes.',
   'Carry-over':'Supply you keep between rounds. At round end your unspent lane supply is added to it, up to 5 in total; you can spend it in any lane.',
   'Immobile':'Can\'t move.',
@@ -907,22 +1498,25 @@ const KEYWORDS = {
 };
 
 const DECKS = {
-  tagma:{name:'Tagma',fac:'t',list:[]},
-  horde:{name:'Ashfang Horde',fac:'h',list:[]},
-  exanimati:{name:'Exanimati',fac:'x',list:[]},
+  siegeworks:{name:'Siegeworks',fac:'g',list:[]},
+  arcanists:{name:'Arcanists',fac:'r',list:[]},
+  wanderers:{name:'Wanderers',fac:'w',list:[]},
+  echoes:{name:'Echoes',fac:'e',list:[]},
+  monoliths:{name:'Monoliths',fac:'m',list:[]},
 };
-/** Premade decks: three per faction, each built around one side of it. */
-const PREMADE_VERSION = 4;   // raising it replaces the premade decks stored in a browser with these lists
+/** Premade decks: each built around one side of its faction. */
+const PREMADE_VERSION = 5;   // raising it replaces the premade decks stored in a browser with these lists
 const PREMADE = [
-  { id: 'p-t1', name: 'Tagma — Shield Line', cards: { pavisarios: 3, stratiotes: 3, skoutatoi: 3, kontarioi: 3, hiereus: 3, komes: 3, menavlatoi: 3, thureophoroi: 3, strategos: 2, synaspismos: 3, hodegetria: 2 } },
-  { id: 'p-t2', name: 'Tagma — Riders and Archers', cards: { kursor: 3, mandator: 3, stratiotes: 3, toxotes: 3, tourmarches: 3, kavallarios: 3, sphendonetes: 2, hippotoxotai: 3, reform: 3, annona: 3, greekfire: 2 } },
-  { id: 'p-t3', name: 'Tagma — Guard and Envoys', cards: { stratiotes: 3, mitaton: 3, voukinator: 3, monomachos: 3, presbeutes: 3, komes: 2, doryphoroi: 3, varangoi: 3, varangianguard: 3, monomachia: 3, bribe: 2 } },
-  { id: 'p-h1', name: 'Ashfang Horde — Warhorns', cards: { warhorn: 3, gutsack: 3, fleshshield: 3, bilebloater: 3, undyingreaver: 3, carrionchief: 3, bonebreaker: 3, bloodidol: 3, scarredvet: 2, cull: 2, hellfire: 2 } },
-  { id: 'p-h2', name: 'Ashfang Horde — Blood Rites', cards: { paineater: 3, bloodletter: 3, cinderimp: 3, blooddrum: 3, bleedingogre: 3, gorehound: 3, cavetroll: 3, pitfighter: 3, scarredvet: 3, rainblood: 2, cuts: 2, hellfire: 2 } },
-  { id: 'p-h3', name: 'Ashfang Horde — Sacrifices', cards: { gutsack: 3, fleshshield: 3, bilebloater: 3, undyingreaver: 3, bloodidol: 3, carrionchief: 3, bonebreaker: 3, ironbehemoth: 2, martyrdom: 3, bloodtithe: 2, carrionfeast: 3 } },
-  { id: 'p-x1', name: 'Exanimati — The Mist', cards: { gravewisp: 3, mourner: 3, ashenpenitent: 3, wakecandle: 3, lanternwisp: 3, corpsecandle: 3, strix: 3, bellringer: 2, shadeshepherd: 2, reaper: 2, gravetoll: 2, lastrites: 2, massgrave: 2, danse: 2, debt: 2 } },
-  { id: 'p-x2', name: 'Exanimati — The Returned', cards: { bonethrall: 3, labourer: 3, barrowrevenant: 3, embalmer: 3, tombwarden: 3, ninthknight: 3, weepingbride: 2, mardoc: 2, banner: 2, clerk: 2, embalming: 3, lastrites: 2 } },
-  { id: 'p-x3', name: 'Exanimati — Plague and Withering', cards: { bonethrall: 3, acolyte: 3, flagellant: 2, feverseer: 3, plagueslinger: 3, duelist: 3, executioner: 3, plagueherald: 2, leperknight: 2, ophra: 2, miasma: 2, creepingrot: 2, hymn: 2, contagion: 2, execution: 2 } },
+  { id: 'p-g1', name: 'Siegeworks — Big Guns', cards: { g_loader: 3, g_monkey: 3, g_ballista: 3, g_mangonel: 3, g_stone: 3, g_firepot: 3, g_mantlet: 3, g_wagon: 3, g_mastergun: 2, g_ordnance: 2, g_volley: 2, g_makeready: 2, g_breach: 2 } },
+  { id: 'p-g2', name: 'Siegeworks — Walls and Sappers', cards: { g_mantlet: 3, g_gabion: 3, g_palisade: 3, g_sapper: 3, g_architect: 2, g_sappercap: 2, g_pioneer: 3, g_wagon: 3, g_handgunner: 3, g_arbalist: 3, g_fortify: 2, g_brace: 2, g_demolish: 1 } },
+  { id: 'p-r1', name: 'Arcanists — Spark College', cards: { r_initiate: 3, r_apprentice: 3, r_familiar: 3, r_scribe: 3, r_conduit: 3, r_well: 3, r_prodigy: 2, r_stormcaller: 2, r_kindle: 3, r_brilliance: 2, r_firebolt: 3, r_chain: 2, r_study: 2 } },
+  { id: 'p-r2', name: 'Arcanists — Golems and Wards', cards: { r_alchemist: 3, r_artificer: 3, r_golemist: 2, r_wardmage: 3, r_sentinel: 3, r_spellguard: 3, r_mentor: 2, r_archivist: 2, r_conjure: 3, r_lesson2: 3, r_mirrorshield: 2, r_surge: 3, r_fireball: 2 } },
+  { id: 'p-w1', name: 'Wanderers — Riders of the Steppe', cards: { w_outrider: 3, w_lancer: 3, w_raider: 3, w_harrier: 3, w_beacon: 3, w_mule: 3, w_wagon: 3, w_pathfinder: 2, w_raiderchief: 2, w_windseer: 2, w_ride: 3, w_shot: 3, w_bolas: 2 } },
+  { id: 'p-w2', name: 'Wanderers — Caravans and Exiles', cards: { w_camelteam: 3, w_caravanmaster: 2, w_merchant: 3, w_trader: 3, w_spearman: 3, w_guard: 3, w_elder: 2, w_sweeper: 3, w_khan: 2, w_exile: 3, w_trade: 2, w_volley: 2, w_mend: 2 } },
+  { id: 'p-e1', name: 'Echoes — Mirror Host', cards: { e_twin: 3, e_mirror: 3, e_reflect: 3, e_resonator: 3, e_lens: 2, e_seer: 3, e_oldman: 3, e_loopknight: 3, e_chronarch: 1, e_echospell: 3, e_chorus: 2, e_pastblow: 3, e_rewind: 2 } },
+  { id: 'p-e2', name: 'Echoes — Chroniclers', cards: { e_acolyte: 3, e_scribe: 3, e_chronicler: 3, e_conductor: 2, e_recaller: 2, e_sentinel: 3, e_oldman: 3, e_oracle: 3, e_paradox: 2, e_timekeeper: 2, e_remember: 2, e_twice: 3, e_again: 2, e_rewind: 1 } },
+  { id: 'p-m1', name: 'Monoliths — Waking Spirits', cards: { m_shrine: 3, m_obelisk: 3, m_cairn: 3, m_spiritcaller: 3, m_arch: 2, m_hearth: 3, m_effigy: 3, m_sunpyramid: 1, m_oraclestone: 2, m_awaken: 3, m_rally: 2, m_sunbeam: 3, m_inscribe: 2 } },
+  { id: 'p-m2', name: 'Monoliths — The Stone Line', cards: { m_totem: 3, m_pillar: 3, m_menhir: 3, m_dolmen: 3, m_statue: 3, m_hearth: 3, m_wall: 2, m_ancestor: 2, m_waking: 2, m_ley: 3, m_rockfall: 3, m_consecrate: 2, m_judgement: 2 } },
 ];
 
 const ART = {
@@ -1415,6 +2009,7 @@ function applyAuras(s) {
       if (c.adjAura) for (const a of near) { a.bs += c.adjAura.s; a.bd += c.adjAura.d; }
     }
   }
+  fxAuras(s);
   // a lost defence bonus never takes shields away: defence left = min(what it had, its defence without the bonus)
   for (let i = 0; i < units.length; i++) {
     const u = units[i], lost = before[i] - u.bd;
@@ -1494,7 +2089,7 @@ function kill(s, u, why, opt = {}) {
   s.units = s.units.filter(x => x.id !== u.id);
   // a tombstone keeps its cells (no dots, no actions) until its death resolves
   if (!opt.noTomb) s.tombs = [...(s.tombs || []), { id: u.id, card: u.card, owner: u.owner, ctl: ctl(u), lane: u.lane, cells: cellsOf(u).map(x => [x[0], x[1]]), u: s.noFx ? null : { ...u } }];
-  if (keepsCard(u.card)) s.players[ctl(u)].discard.push(baseKey(u.card));
+  if (keepsCard(u.card) && !u.tok) s.players[ctl(u)].discard.push(baseKey(u.card));
   // Danse Macabre: where each of p's units died this round
   { const P = s.players[ctl(u)]; P.fell = [...(P.fell || []).filter(x => x.round === s.round), { round: s.round, card: u.card, lane: u.lane, camp: u.owner, r: u.r, c: u.c, o: u.o, sh: u.sh ? normShape(cellsOf(u)) : null }]; }
   for (const k of u.extra || []) s.players[ctl(u)].discard.push(k);
@@ -1518,6 +2113,7 @@ function survived(s, u) {
     u.pd = (u.pd || 0) + 1;
     log(s, `${unitName(v)} harden ${unitName(u)}: +1 defence.`);
   }
+  fxFire(s, 'survive', u);
   applyAuras(s);
 }
 
@@ -1764,6 +2360,7 @@ function drainDeaths(s) {
     if (c.deathAdjHeal) for (const a of targetsOf(s, u, 'deathAdjHeal')) restoreShields(s, a, c.deathAdjHeal, unitName(u));
     if (c.deathDraw) { const n = drawCards(s, ctl(u), c.deathDraw); if (n) { log(s, `${unitName(u)}: ${deckName(s, ctl(u))} draws ${n}.`); emit(s, { draw: ctl(u), n }); } }
     exDeath(s, u);
+    fxDied(s, u);
     // returns to the hand only if no Revenant return took its card first
     if (c.deathReturn) {
       const P = s.players[ctl(u)], i = P.discard.lastIndexOf(baseKey(u.card));
@@ -1928,6 +2525,7 @@ function placeUnit(s, p, u, line, own) {
   processDeaths(s);
   if (byId(s, u.id)) { exPlace(s, p, u); processDeaths(s); }
   if (byId(s, u.id)) { startOnPlace(s, p, u); processDeaths(s); }
+  if (byId(s, u.id)) { fxPlaced(s, p, u); processDeaths(s); }
   if (own && byId(s, u.id)) { own(); processDeaths(s); }
   // enemy Akritai react only once its Place effects are done (after a Place choice, once it is made)
   if (!byId(s, u.id) || !startCols.length) return;
@@ -2312,10 +2910,11 @@ function startRound(s, first) {
     s.pool[p][lane] = s.poolStart[p][lane] = laneSupply(s, p, lane);
   }
   s.cur = s.starter; s.passed = null; s.acts = 0; s.actor = null; s.pending = null;
-  s.ownerStart = s.owner.slice();
+  s.ownerStart = s.owner.slice(); s.undoSnap = null;
   for (const u of s.units) { u.moved = false; u.attacked = false; u.atk = 0; u.mv = 0; u.armUsed = false; }
   log(s, `Round ${s.round} begins. ${deckName(s, s.starter)} acts first.`);
   emit(s, { round: s.round, starter: s.starter });
+  for (const p of [s.starter, other(s.starter)]) fxEach(s, 'roundStart', p);
   if (first) return;
   for (const p of [s.starter, other(s.starter)]) {
     const n = drawCards(s, p, DRAW_PER_ROUND);
@@ -2551,6 +3150,7 @@ function runRoundEndAbilities(s, p) {
     for (const flag in ROUND_END) if (c[flag] && byId(s, u.id)) { ROUND_END[flag](s, u, c, p); processDeaths(s); }
     exRoundEnd(s, u, p);
     processDeaths(s);
+    if (byId(s, id)) { fxFire(s, 'roundEnd', byId(s, id)); processDeaths(s); }
   }
 }
 
@@ -2661,6 +3261,7 @@ function canAdvance(s, p, lane) {
 function spellOptions(s, p, k, forAi = true) {
   const out = [], enemies = s.units.filter(u => ctl(u) !== p), own = s.units.filter(u => ctl(u) === p);
   const ok = (a, lane) => canPay(s, lane, spellCost(s, k, a)) && out.push(a);
+  if (CARDS[k].cast) { fxSpellOptions(s, p, k, ok); return out; }
   switch (k) {
     case 'annona': LANES.forEach(lane => ok({ lane }, lane)); break;
     case 'reform': case 'hodegetria':
@@ -2969,20 +3570,274 @@ const TACTICS = {
   },
 };
 
+/* ---------- general card effects (fx): card data says when, who and what; no per-card code ----------
+   Unit: fx: [{on, if, lim, of, do: [op, ...]}], aura: [{to, s, d, if}]. Spell: cast: {do: [op, ...], need}.
+   on: place, death, roundEnd, roundStart, survive, attack, move, arrive (I come from another lane), spell (you cast one),
+       allyPlace, allyDeath, enemyDeath, allyArrive (in my lane). of: a card flag the other unit must have (e.g. 'proj').
+   lim: 'round' = at most once per round per unit. Amounts: a number, or {count: selector, x: multiplier, plus}. */
+const FX_ONCE = 'round';
+const fxCamp = (s, owner, lane) => s.units.filter(x => x.lane === lane && x.owner === owner);
+const touches = (u, a) => cellsOf(u).some(([r, c]) => cellsOf(a).some(([ar, ac]) => Math.abs(r - ar) <= 1 && Math.abs(c - ac) <= 1));
+const edgeTouch = (u, a) => cellsOf(u).some(([r, c]) => cellsOf(a).some(([ar, ac]) => Math.abs(r - ar) + Math.abs(c - ac) === 1));
+const fxAlive = (s, u) => (u ? byId(s, u.id) : null);
+/** The enemy nearest to the base in u's own column(s) of the facing camp. */
+function fxFacing(s, u) {
+  const foe = s.units.filter(t => ctl(t) !== ctl(u) && t.lane === u.lane && t.owner !== u.owner && colsOf(t).some(c => colsOf(u).includes(c)));
+  return foe.sort((a, b) => Math.abs(Math.min(...cellsOf(a).map(x => x[0])) - frontRow(a.owner)) - Math.abs(Math.min(...cellsOf(b).map(x => x[0])) - frontRow(b.owner)))[0] || null;
+}
+const lanesOf = c => (c.all ? LANES : [c.lane]);
+const FX_SEL = {
+  self: (s, c) => one(fxAlive(s, c.u)),
+  it: (s, c) => one(fxAlive(s, c.t)),
+  facing: (s, c) => one(c.u && fxFacing(s, c.u)),
+  nearest: (s, c) => one(c.u && byId(s, c.u.id) ? strikeTarget(s, c.u) : null),
+  enemies: (s, c) => s.units.filter(x => lanesOf(c).includes(x.lane) && ctl(x) !== c.p),
+  allies: (s, c) => s.units.filter(x => lanesOf(c).includes(x.lane) && ctl(x) === c.p && (!c.u || x.id !== c.u.id)),
+  team: (s, c) => s.units.filter(x => lanesOf(c).includes(x.lane) && ctl(x) === c.p),
+  adj: (s, c) => (c.u ? fxCamp(s, c.u.owner, c.u.lane).filter(x => x.id !== c.u.id && ctl(x) === c.p && touches(c.u, x)) : []),
+  adjEnemies: (s, c) => (c.u ? fxCamp(s, c.u.owner, c.u.lane).filter(x => x.id !== c.u.id && ctl(x) !== c.p && touches(c.u, x)) : []),
+  row: (s, c) => (c.u ? fxCamp(s, c.u.owner, c.u.lane).filter(x => x.id !== c.u.id && ctl(x) === c.p && rowsOf(x).some(r => rowsOf(c.u).includes(r))) : []),
+  col: (s, c) => (c.u ? fxCamp(s, c.u.owner, c.u.lane).filter(x => x.id !== c.u.id && ctl(x) === c.p && colsOf(x).some(k => colsOf(c.u).includes(k))) : []),
+  colEnemies: (s, c) => s.units.filter(x => x.lane === c.lane && ctl(x) !== c.p && colsOf(x).includes(c.col ?? (c.u ? colsOf(c.u)[0] : 1))),
+  enemyFront: (s, c) => FX_SEL.enemies(s, c).filter(x => inFront(x)),
+  enemyBack: (s, c) => FX_SEL.enemies(s, c).filter(x => !inFront(x)),
+  weakest: (s, c) => one(FX_SEL.enemies(s, c).sort((a, b) => defenceOf(a) - defenceOf(b) || byReadingOrder(a, b))[0]),
+  strongest: (s, c) => one(FX_SEL.enemies(s, c).sort((a, b) => strengthOf(b) - strengthOf(a) || byReadingOrder(a, b))[0]),
+  hurtAlly: (s, c) => one(FX_SEL.team(s, c).filter(x => (x.dmg || 0) > 0).sort((a, b) => b.dmg - a.dmg)[0]),
+  allEnemies: (s, c) => s.units.filter(x => ctl(x) !== c.p),
+  allAllies: (s, c) => s.units.filter(x => ctl(x) === c.p && (!c.u || x.id !== c.u.id)),
+  itAdj: (s, c) => (c.t ? fxCamp(s, c.t.owner, c.t.lane).filter(x => x.id !== c.t.id && ctl(x) === ctl(c.t) && touches(c.t, x)) : []),
+  inFrontOfIt: (s, c) => { const t = c.t; if (!t) return []; const r = Math.min(...cellsOf(t).map(x => x[0] * fwd(t.owner))) * fwd(t.owner) + fwd(t.owner);
+    return one(fxCamp(s, t.owner, t.lane).find(x => x.id !== t.id && cellsOf(x).some(([xr, xc]) => xr === r && colsOf(t).includes(xc)))); },
+  otherLanes: (s, c) => s.units.filter(x => ctl(x) === c.p && x.lane !== c.lane),
+};
+function fxSel(s, c, to) {
+  if (!to) return one(fxAlive(s, c.t) || fxAlive(s, c.u));
+  const [name, f] = to.split(':');
+  let out = (FX_SEL[name] || (() => []))(s, c).filter(Boolean);
+  if (f) out = out.filter(x => cardOf(x)[f] || (x.kw && x.kw[f]) || x[f]);
+  return out;
+}
+const fxAmount = (s, c, n) => (typeof n === 'number' ? n : n ? fxSel(s, c, n.count).length * (n.x || 1) + (n.plus || 0) : 0);
+const spellsThisRound = (s, p) => (s.players[p].spR === s.round ? s.players[p].spN : 0);
+/** Whether the condition holds now. */
+function fxIf(s, c, w) {
+  if (!w) return true;
+  if (w.hold !== undefined && (laneOwner(s, c.lane) === c.p) !== !!w.hold) return false;
+  if (w.front && !(c.u && inFront(c.u))) return false;
+  if (w.back && !(c.u && !inFront(c.u))) return false;
+  if (w.min && fxSel(s, c, w.min[0]).length < w.min[1]) return false;
+  if (w.max && fxSel(s, c, w.max[0]).length > w.max[1]) return false;
+  if (w.spells && spellsThisRound(s, c.p) < w.spells) return false;
+  if (w.other && !s.units.some(x => ctl(x) === c.p && x.lane !== c.lane && baseKey(x.card) === w.other)) return false;
+  if (w.alone && s.units.some(x => ctl(x) === c.p && x.lane === c.lane && (!c.u || x.id !== c.u.id))) return false;
+  return true;
+}
+/** A free spot for a 1-cell (or k-shaped) unit: next to u, in the front row, the back rows, or anywhere. */
+function fxSpot(s, p, lane, k, at, u) {
+  let spots = freeSpots(s, p, lane, k);
+  if (at === 'adj' && u) spots = spots.filter(x => cellsAt(CARDS[k].size, x.r, x.c, x.o).some(([r, cc]) => cellsOf(u).some(([ur, uc]) => Math.max(Math.abs(r - ur), Math.abs(cc - uc)) === 1)));
+  if (at === 'front') spots = spots.filter(x => x.r === frontRow(p));
+  if (at === 'back') spots = spots.filter(x => x.r !== frontRow(p));
+  return spots[0] || null;
+}
+/** Move unit t to another lane (same cell if free, else the first free spot); the next lane that has room. */
+function fxRelocate(s, t, why, lane) {
+  const camp = t.owner, k = t.card, lanes = lane !== undefined ? [lane] : [1, 2].map(d => (t.lane + d) % 3);
+  for (const l of lanes) {
+    if (l === t.lane) continue;
+    const same = fitsCells(s, camp, l, offsetsOf(t, t.o), t.r, t.c, t.id) ? { r: t.r, c: t.c, o: t.o } : null;
+    const spot = same || freeSpots(s, camp, l, k)[0];
+    if (!spot) continue;
+    const from = t.lane;
+    emit(s, { move: t.id, path: [[t.r, t.c], [spot.r, spot.c]], o: spot.o, toLane: l, steps: 3 });
+    Object.assign(t, { lane: l, r: spot.r, c: spot.c, o: spot.o });
+    applyAuras(s);
+    log(s, `${unitName(t)} ${why} from lane ${from + 1} to lane ${l + 1}.`);
+    fxArrived(s, t);
+    return true;
+  }
+  return false;
+}
+/** Back in time: the board, the enemy's hand, deck, discard and supply as they were before its last action. */
+function fxUndo(s, p) {
+  const S = s.undoSnap && s.undoSnap[other(p)];
+  if (!S || S.turn !== s.turn - 1) { log(s, 'Nothing to turn back.'); return; }
+  const q = other(p), Q = s.players[q];
+  s.units = JSON.parse(S.units); s.owner = S.owner.slice(); s.pool[q] = S.pool.slice();
+  Object.assign(Q, JSON.parse(S.P)); s.players[p].discard = S.myDiscard.slice();
+  s.tombs = [];
+  emit(s, { rewind: true });
+  log(s, `Time turns back: ${deckName(s, q)}'s last action is undone.`);
+}
+const FX_OPS = {
+  dmg(s, c, o) { const n = fxAmount(s, c, o.dmg); for (const t of fxSel(s, c, o.to)) dealDamage(s, c.u && !c.spell ? abilityHit(c.u, n) : n, t, c.label, fxAlive(s, c.u)); },
+  strike(s, c, o) { const u = fxAlive(s, c.u); if (u) for (const t of fxSel(s, c, o.to || 'nearest')) if (byId(s, u.id)) strike(s, u, t, c.label); },
+  chain(s, c, o) {
+    let n = fxAmount(s, c, o.chain), t = fxSel(s, c, o.to)[0];
+    const hit = new Set();
+    while (t && n > 0) {
+      hit.add(t.id); const at = { ...t };
+      dealDamage(s, n, t, c.label, fxAlive(s, c.u)); processDeaths(s); n--;
+      t = s.units.filter(x => !hit.has(x.id) && x.lane === at.lane && x.owner === at.owner && ctl(x) === ctl(at) && edgeTouch(at, x)).sort(byReadingOrder)[0];
+    }
+  },
+  ricochet(s, c, o) {
+    const n = fxAmount(s, c, o.ricochet), t = fxSel(s, c, o.to)[0];
+    if (!t) return;
+    const next = FX_SEL.inFrontOfIt(s, { ...c, t })[0];
+    dealDamage(s, n, t, c.label, fxAlive(s, c.u)); processDeaths(s);
+    if (next && byId(s, next.id)) dealDamage(s, o.then ?? n, next, c.label + ' (ricochet)', fxAlive(s, c.u));
+  },
+  buff(s, c, o) {
+    const [a, d] = o.buff, x = o.per ? fxSel(s, c, o.per).length : 1;
+    for (const t of fxSel(s, c, o.to)) {
+      if (o.rnd) { t.ts = (t.ts || 0) + a * x; t.td = (t.td || 0) + d * x; } else { t.ps = (t.ps || 0) + a * x; t.pd = (t.pd || 0) + d * x; }
+      if (a || d) log(s, `${unitName(t)} ${a * x >= 0 ? '+' : ''}${a * x}|${d * x >= 0 ? '+' : ''}${d * x}${o.rnd ? ' this round' : ''} (${c.label}).`);
+    }
+    emit(s, { grow: fxSel(s, c, o.to).map(t => t.id) });
+  },
+  heal(s, c, o) { for (const t of fxSel(s, c, o.to)) restoreShields(s, t, fxAmount(s, c, o.heal), c.label); },
+  draw(s, c, o) { drawFor(s, c.p, fxAmount(s, c, o.draw), c.label); },
+  carry(s, c, o) { const P = s.players[c.p]; P.reserve = Math.min(MAX_CARRY, P.reserve + fxAmount(s, c, o.carry)); log(s, `${c.label}: carry-over ${P.reserve}.`); },
+  pool(s, c, o) { const l = o.lane === 'it' && c.t ? c.t.lane : c.lane; s.pool[c.p][l] += fxAmount(s, c, o.pool); log(s, `${c.label}: +${fxAmount(s, c, o.pool)} supply in lane ${l + 1} this round.`); },
+  token(s, c, o) {
+    const n = fxAmount(s, c, o.n ?? 1), lanes = o.lanes === 'all' ? LANES : o.lanes === 'other' ? LANES.filter(l => l !== c.lane) : [c.lane];
+    for (const l of lanes) for (let i = 0; i < n; i++) {
+      const spot = fxSpot(s, c.p, l, o.token, o.at, l === c.lane ? fxAlive(s, c.u) || c.u : null);
+      if (spot) spawn(s, c.p, o.token, l, spot.r, spot.c, spot.o);
+    }
+  },
+  kw(s, c, o) { for (const t of fxSel(s, c, o.to)) { if (o.kw === 'armoured' && o.rnd) t.tArm = true; else giveKw(t, o.kw); log(s, `${unitName(t)} gains ${KW_NAME[o.kw] || o.kw} (${c.label}).`); } },
+  kill(s, c, o) { for (const t of fxSel(s, c, o.to)) kill(s, t, c.label); },
+  push(s, c, o) { for (const t of fxSel(s, c, o.to)) if (!kw(t, 'fixed')) slide(s, t, -fwd(t.owner), o.push || 1); },
+  pull(s, c, o) { for (const t of fxSel(s, c, o.to)) if (!kw(t, 'fixed')) slide(s, t, fwd(t.owner)); },
+  displace(s, c, o) { for (const t of fxSel(s, c, o.to)) if (!kw(t, 'fixed')) fxRelocate(s, t, 'is sent away'); },
+  ride(s, c, o) { for (const t of fxSel(s, c, o.to || 'self')) if (!kw(t, 'fixed')) fxRelocate(s, t, 'rides'); },
+  stun(s, c, o) { for (const t of fxSel(s, c, o.to)) { Object.assign(t, { attacked: true, moved: true, mv: 9, atk: 9 }); log(s, `${unitName(t)} can't act this round (${c.label}).`); } },
+  card(s, c, o) {
+    const P = s.players[c.p];
+    for (let i = 0; i < fxAmount(s, c, o.n ?? 1); i++) {
+      if (o.to === 'deck') { P.draw.splice(Math.floor(Math.random() * (P.draw.length + 1)), 0, o.card); log(s, `${c.label}: ${CARDS[o.card].name} is shuffled into the deck.`); }
+      else if (P.hand.length < HAND_LIMIT) { P.hand.push(o.card); emit(s, { handIn: c.p, k: o.card, from: 'deck' }); log(s, `${c.label}: ${CARDS[o.card].name} into the hand.`); }
+    }
+  },
+  copy(s, c, o) {
+    const P = s.players[c.p];
+    for (const t of fxSel(s, c, o.to)) if (P.hand.length < HAND_LIMIT && !cardOf(t).token) { const k = baseKey(t.card); P.hand.push(k); emit(s, { handIn: c.p, k, from: 'deck' }); log(s, `${c.label}: a copy of ${CARDS[k].name} into the hand.`); }
+  },
+  echo(s, c, o) {
+    for (const t of fxSel(s, c, o.to)) {
+      if (t.tok) continue;   // echoes do not echo again
+      const k = baseKey(t.card), spot = fxSpot(s, ctl(t), t.lane, k, 'adj', t);
+      if (spot) spawn(s, ctl(t), k, t.lane, spot.r, spot.c, spot.o, `An echo of ${unitName(t)} appears.`, { tok: 1, kw: { fade: 1 } });
+    }
+  },
+  again(s, c, o) { const P = s.players[c.p], k = P.lastSp; if (k && P.hand.length < HAND_LIMIT && !CARDS[k].noAgain) { P.hand.push(k); emit(s, { handIn: c.p, k, from: 'discard' }); log(s, `${c.label}: ${CARDS[k].name} again into the hand.`); } },
+  replace(s, c, o) { for (const t of fxSel(s, c, o.to)) fxFire(s, 'place', t, { again: true }); },
+  undo(s, c) { fxUndo(s, c.p); },
+};
+/** Run a list of ops with context c. */
+function fxRun(s, c, ops) {
+  for (const o of ops) {
+    if (o.if && !fxIf(s, c, o.if)) continue;
+    const op = Object.keys(FX_OPS).find(k => k in o);
+    if (op) { FX_OPS[op](s, c, o); processDeaths(s); }
+  }
+}
+/** Fire the `on` effects of unit u (alive, or a dead copy for death). ev: the other unit of the event. */
+function fxFire(s, on, u, extra = {}) {
+  const card = cardOf(u);
+  if (!card || !card.fx) return;
+  card.fx.forEach((f, i) => {
+    if (f.on !== on) return;
+    if (extra.ev && f.of && !(cardOf(extra.ev)[f.of] || (extra.ev.kw && extra.ev.kw[f.of]))) return;
+    if (u.tok && f.do.some(o => 'echo' in o)) return;
+    if (extra.again && f.do.some(o => 'replace' in o || 'again' in o)) return;   // a replay never replays again
+    const c = { p: ctl(u), u, t: extra.ev || null, lane: u.lane, label: unitName(u), k: extra.k };
+    if (!fxIf(s, c, f.if)) return;
+    if (f.lim === FX_ONCE) { u.fxl = u.fxl || {}; if (u.fxl[i] === s.round) return; u.fxl[i] = s.round; }
+    fxRun(s, c, f.do);
+  });
+}
+const fxWatchers = (s, p, lane, skip) => s.units.filter(x => ctl(x) === p && (lane === null || x.lane === lane) && x.id !== skip && cardOf(x).fx).sort(byReadingOrder);
+function fxPlaced(s, p, u) {
+  if (!byId(s, u.id)) return;
+  fxFire(s, 'place', u);
+  for (const w of fxWatchers(s, p, u.lane, u.id)) if (byId(s, w.id)) fxFire(s, 'allyPlace', w, { ev: u });
+}
+function fxDied(s, u) {
+  fxFire(s, 'death', u);
+  for (const w of fxWatchers(s, ctl(u), u.lane, u.id)) if (byId(s, w.id)) fxFire(s, 'allyDeath', w, { ev: u });
+  for (const w of fxWatchers(s, other(ctl(u)), u.lane, u.id)) if (byId(s, w.id)) fxFire(s, 'enemyDeath', w, { ev: u });
+}
+function fxArrived(s, u) {
+  if (!byId(s, u.id)) return;
+  fxFire(s, 'arrive', u);
+  for (const w of fxWatchers(s, ctl(u), u.lane, u.id)) if (byId(s, w.id)) fxFire(s, 'allyArrive', w, { ev: u });
+  processDeaths(s);
+}
+function fxSpellCast(s, p, k) {
+  const P = s.players[p];
+  if (P.spR !== s.round) { P.spR = s.round; P.spN = 0; }
+  P.spN++; P.lastSp = k;
+  for (const w of fxWatchers(s, p, null)) if (byId(s, w.id)) fxFire(s, 'spell', w, { k });
+}
+function fxEach(s, on, p) { for (const w of fxWatchers(s, p, null)) if (byId(s, w.id)) { fxFire(s, on, w); processDeaths(s); } }
+/** Position bonuses from card.aura, recomputed with the other auras. */
+function fxAuras(s) {
+  for (const u of s.units) {
+    const A = cardOf(u).aura;
+    if (!A) continue;
+    for (const a of A) {
+      const c = { p: ctl(u), u, lane: u.lane };
+      if (!fxIf(s, c, a.if)) continue;
+      for (const t of fxSel(s, c, a.to || 'self')) { t.bs += a.s || 0; t.bd += a.d || 0; }
+    }
+  }
+}
+/** Generic spells: their legal targets (cast.need: 'allies' | 'enemies' | 'units' must be in the lane). */
+function fxSpellOptions(s, p, k, ok) {
+  const card = CARDS[k], need = card.cast.need, enemies = s.units.filter(u => ctl(u) !== p), own = s.units.filter(u => ctl(u) === p);
+  const has = lane => !need || (need === 'allies' ? unitsIn(s, p, lane).length : need === 'enemies' ? unitsIn(s, other(p), lane).length : s.units.some(u => u.lane === lane));
+  if (card.cast.undo && !(s.undoSnap && s.undoSnap[other(p)] && s.undoSnap[other(p)].turn === s.turn - 1)) return;
+  if (card.tactic === 'lane') LANES.forEach(lane => { if (has(lane)) ok({ lane }, lane); });
+  else if (card.tactic === 'enemy') enemies.forEach(t => ok({ tid: t.id }, t.lane));
+  else if (card.tactic === 'own') own.forEach(t => ok({ vid: t.id }, t.lane));
+  else if (card.tactic === 'any') s.units.forEach(t => ok({ tid: t.id }, t.lane));
+  else if (card.tactic === 'column') LANES.forEach(lane => [0, 1, 2].forEach(col => { if (unitsIn(s, other(p), lane).some(u => colsOf(u).includes(col))) ok({ lane, col }, lane); }));
+}
+function fxCast(s, p, a, lane, k) {
+  const card = CARDS[k], t = byId(s, a.tid ?? a.vid);
+  fxRun(s, { p, u: null, t, lane, col: a.col, label: card.name, spell: true, all: !!card.cast.all }, card.cast.do);
+}
+const FX_UNDO_KEYS = new Set(Object.keys(CARDS).filter(k => CARDS[k].cast && CARDS[k].cast.undo));
+/** Kept before each action when the other side holds a card that can undo it. */
+function fxKeepUndo(s, p) {
+  if (!FX_UNDO_KEYS.size) return;
+  s.undoSnap = s.undoSnap || {};
+  if (!s.players[other(p)].hand.some(k => FX_UNDO_KEYS.has(k))) { delete s.undoSnap[p]; return; }
+  const P = s.players[p];
+  s.undoSnap[p] = { p, turn: s.turn, units: JSON.stringify(s.units), owner: s.owner.slice(), pool: s.pool[p].slice(),
+    P: JSON.stringify({ hand: P.hand, draw: P.draw, discard: P.discard, reserve: P.reserve }), myDiscard: s.players[other(p)].discard.slice() };
+}
 /* ---------- Ogre Thrower ---------- */
 /** Allies unit u could throw now (adjacent, 1 cell, not Immobile), if it still has an attack it can pay for. */
 function throwables(s, u) {
   if (!u || !cardOf(u).thrower || ctl(u) !== s.cur || s.pending || u.attacked || !canPay(s, u.lane, attackCost(u))) return [];
+  if (cardOf(u).cannon) return adjacentAllies(s, u).filter(a => cellsOf(a).length === 1 && cardOf(a).proj);
   return adjacentAllies(s, u).filter(a => cellsOf(a).length === 1 && !kw(a, 'fixed'));
 }
 /** Cells of u's lane, in either camp, where ally a can be thrown: free cells, or units that can be struck (not u or a). */
 function throwTargets(s, u, a) {
-  const out = [];
+  const out = [], cannon = cardOf(u).cannon;
   for (const lane of LANES) for (const camp of [0, 1]) {
+    if (cannon && (camp === ctl(u) || (lane !== u.lane && !cardOf(u).far))) continue;
     const map = occupancy(s, camp, lane);
     for (let r = 0; r < ROWS; r++) for (let c = 0; c < COLS; c++) {
       const t = map[r + ',' + c];
       if (t && (t.id === u.id || t.id === a.id || isIncorp(t))) continue;
+      if (cannon && (!t || ctl(t) === ctl(u))) continue;
       out.push({ lane, owner: camp, r, c });
     }
   }
@@ -3020,7 +3875,8 @@ const ACTIONS = {
     applyAuras(s);
     log(s, lane === from ? unitName(u) + ' moves.' : `${unitName(u)} rides from lane ${from + 1} to lane ${lane + 1}.`);
     arrive(s, u, before);
-
+    if (byId(s, u.id)) { fxFire(s, 'move', u); processDeaths(s); }
+    if (lane !== from) fxArrived(s, u);
   },
   attack(s, p, a) {
     const u = byId(s, a.id), t = byId(s, a.tid);
@@ -3035,6 +3891,7 @@ const ACTIONS = {
     }
     strike(s, u, t, unitName(u));
     processDeaths(s);
+    if (byId(s, u.id)) { fxFire(s, 'attack', u, { ev: byId(s, a.tid) || t }); processDeaths(s); }
     if (isReckless(u) && byId(s, u.id)) kill(s, u, 'reckless');
   },
   tactic(s, p, a) {
@@ -3043,7 +3900,9 @@ const ACTIONS = {
     P.hand.splice(a.hi, 1);
     emit(s, { spell: k, p, fxl: (card.tactic === 'lane' && !NO_LANE_FX.includes(k)) || card.tactic === 'column' ? lane : null, fxc: card.tactic === 'column' ? a.col : null, fxt: a.tid ?? a.vid ?? null });
     log(s, `${deckName(s, p)} plays ${card.name}${k === 'cuts' ? ` (X = ${a.n})` : ''}.`);
-    TACTICS[k](s, p, a, lane);
+    if (card.cast) fxCast(s, p, a, lane, k); else TACTICS[k](s, p, a, lane);
+    processDeaths(s);
+    fxSpellCast(s, p, k);
     processDeaths(s);   // its deaths resolve while the card is still in play
     P.discard.push(k);
     emit(s, { spellEnd: k, p });
@@ -3207,7 +4066,7 @@ function applyAction(s, a) {
     s.passed = p; s.cur = other(p); s.turn++;
     return s;
   }
-  if (!PENDING_STEPS.has(a.t)) { s.acts++; s.passed = null; }
+  if (!PENDING_STEPS.has(a.t)) { s.acts++; s.passed = null; fxKeepUndo(s, p); }
   ACTIONS[a.t](s, p, a);
   processDeaths(s);
   mergeLinks(s);
@@ -3684,7 +4543,7 @@ const artSvg = key => `<svg viewBox="0 0 100 100" class="art" aria-hidden="true"
 /** A card's icon (inner SVG): one glyph per card; every unit has a glyph of its own. */
 const artInner = k => `<path d="${ART[CARDS[k].art]}"/>`;
 const cardArt = k => `<svg viewBox="0 0 100 100" class="art" aria-hidden="true">${artInner(k)}</svg>`;
-const deckArt = fac => artSvg(fac === 't' ? 'wreath' : fac === 'x' ? 'lantern' : 'fangs');
+const deckArt = fac => artSvg(FAC_GLYPH[fac] || (fac === 't' ? 'wreath' : fac === 'x' ? 'lantern' : 'fangs'));
 
 /* ---------- keywords ---------- */
 const KEYWORD_RE = /\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g;
@@ -5461,7 +6320,7 @@ const deckStore = (() => {
   let st = null;
   try { st = JSON.parse(localStorage.getItem(DECK_STORE) || 'null'); } catch (e) { st = null; }
   const copy = d => ({ id: d.id, name: d.name, cards: { ...d.cards } });
-  if (!st || !Array.isArray(st.decks)) st = { decks: PREMADE.map(copy), pick: 'p-t1', opp: 'p-h1', seenPre: PREMADE.map(d => d.id) };
+  if (!st || !Array.isArray(st.decks)) st = { decks: PREMADE.map(copy), pick: PREMADE[0].id, opp: PREMADE[1].id, seenPre: PREMADE.map(d => d.id) };
   // the earlier placeholder premade decks are dropped; premade decks this browser hasn't seen yet join the list once
   st.decks = st.decks.filter(d => !['pre-tagma', 'pre-horde', 'pre-exanimati'].includes(d.id));
   delete st.seen;
@@ -5469,7 +6328,11 @@ const deckStore = (() => {
   for (const d of PREMADE) if (!st.seenPre.includes(d.id)) { st.seenPre.push(d.id); if (!st.decks.some(x => x.id === d.id)) st.decks.push(copy(d)); }
   // new premade lists replace the stored copies of the premade decks (the player's own decks are kept)
   if (st.preVer !== PREMADE_VERSION) { for (const d of PREMADE) { const i = st.decks.findIndex(x => x.id === d.id); if (i >= 0) st.decks[i] = copy(d); else st.decks.push(copy(d)); } st.preVer = PREMADE_VERSION; }
-  for (const d of st.decks) for (const k of Object.keys(d.cards)) if (!CARDS[k] || CARDS[k].token) delete d.cards[k];
+  for (const d of st.decks) for (const k of Object.keys(d.cards)) if (!CARDS[k] || CARDS[k].token || !FAC_DECK[CARDS[k].fac]) delete d.cards[k];
+  // premade decks of factions no longer in the game are dropped
+  st.decks = st.decks.filter(d => !d.id.startsWith('p-') || PREMADE.some(x => x.id === d.id));
+  if (!st.decks.some(d => d.id === st.pick)) st.pick = PREMADE[0].id;
+  if (st.opp !== 'random' && !st.decks.some(d => d.id === st.opp)) st.opp = PREMADE[1].id;
   return st;
 })();
 function saveDecks() { try { localStorage.setItem(DECK_STORE, JSON.stringify(deckStore)); } catch (e) { /* kept for this visit only */ } }
@@ -5485,7 +6348,7 @@ let testGames = (() => { try { return localStorage.getItem(TEST_STORE) === '1'; 
 function setTestGames(on) { testGames = on; try { localStorage.setItem(TEST_STORE, on ? '1' : '0'); } catch (e) { /* not remembered */ } }
 const deckPlayable = d => (testGames ? deckCount(d) > 0 : deckReady(d));
 const deckById = id => deckStore.decks.find(d => d.id === id) || null;
-const facName = f => (f ? DECKS[FAC_DECK[f]].name : 'No faction yet');
+const facName = f => (f && FAC_DECK[f] ? DECKS[FAC_DECK[f]].name : 'No faction yet');
 /** Deck order: cost (a unit's supply, a tactic's cost), then strength, then defence, then name. */
 const cardCost = c => (c.tactic ? (typeof c.cost === 'number' ? c.cost : 0) : c.sup);
 const byDeckOrder = (a, b) => {
@@ -5568,7 +6431,7 @@ function deleteDeck(id) {
 /* ---------- deck builder ---------- */
 let edit = null;   // { id, name, cards, dirty }
 /** Each faction's symbol (an existing card art) and the factions the card list shows (none picked: all). */
-const FAC_ART = { t: 'shield', h: 'fangs', x: 'skull' };
+const FAC_ART = { t: 'shield', h: 'fangs', x: 'skull', ...FAC_GLYPH };
 const bFacs = new Set(), dFacs = new Set(), bTypes = new Set();   // bTypes: 'u' units, 's' spells (none picked: both)
 let bExclude = false;   // search toggle: include (green) or exclude (red) the matches   // the builder's and the decks page's faction filters
 function openBuilder(id) {

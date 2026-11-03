@@ -1,0 +1,41 @@
+==================================================================
+9. THE FIVE NEW FACTIONS (3 Nov 2026; Claude's design, in the game for testing; replaced Tagma, Horde, Exanimati in the deck builder)
+==================================================================
+Cards: src/game/js/cards/new-<faction>.js (one line per card; effects are data, run by src/game/js/rules/fx.js). Library leads in brackets.
+
+SIEGEWORKS (g) — siege engineers. They win from the back rows: Cannons fire Projectiles at enemy holders while cheap Immobile walls hold the dots.
+- Projectiles: cheap 1-cell units; a Cannon beside one can fire it instead of attacking (paid like an attack), at an enemy in its lane; it strikes and dies there, so Death effects (Firepot, Caltrop Jar, Powder Charge) go off in the enemy camp. [Into the Breach artillery; Inscryption Technology Explode Bot]
+- Crews and foundries make Shot tokens beside Cannons (Loader, Powder Monkey, Foundry); payoffs fire when a Projectile dies (Master Gunner, Spotter, Siege Engineer).
+- Walls: Mantlet, Gabion, Palisade, Earthwork hold the front row cheaply.
+- Back rows: Cannons and crews. Between lanes: Trebuchet and The Great Bombard fire into ANY lane; Powder Wagon, War Wagon ride. Draw: Quartermaster, Requisition, Signal Shell.
+- Special: Master of Ordnance, Sapper Captain, Chief Architect, War Wagon, The Great Bombard.
+
+ARCANISTS (r) — a college of spellwrights. Spells are the army; adepts in the back rows grow and strike each time a spell is cast.
+- Spark making: cards that put Sparks (0-cost, 1 damage) into the hand; lessons shuffle stronger spells into the deck (Ember Lesson -> Greater Flare). [Duelyst Songhai; Slay the Spire Defect]
+- Spell triggers on units: once per round per unit for damage or cards, unbounded only for stat gains.
+- Chain Lightning, Prism Bolt (ricochet), golems conjured by spells hold the front.
+- Draw: Spell Conduit (round end, 2+ spells), Study, Star Seer. Between lanes: Blink, Rift, Ley Line (ALL lanes, rare), Portal Keeper.
+- Special: Spellblade Prodigy, Stormcaller, Keeper of Scrolls, Mage Tower, The Archmage.
+
+WANDERERS (w) — steppe nomads and caravans. They decide which lane the fight is in: ride in where the enemy is weak, send enemy holders away.
+- Outrider on most units; arrive triggers (Lancer strikes, Plains Sweeper sends the facing enemy to another lane). [Faeria Blue; Inscryption Sprinter]
+- Caravans carry supply: arriving gives that lane supply this round (Pack Mule, Camel Train, Caravan Master).
+- Displace: Drive Off, Scatter the Herd, Sent Away; allies in a lane gain when riders arrive (Smoke Signaller, Wind Seer).
+- Draw: Trail Guide and Pathfinder (alone / a lane you don't hold), Wandering Trader (once per round). Between lanes: the whole faction.
+- Special: Khan of the Roads, Pathfinder, Caravan Master, Raider Chief, Wind Seer.
+
+ECHOES (e) — chroniclers who live in loops of time. Every deed happens twice; copies return; the enemy's last action can be undone.
+- Echo: a fading copy of a unit beside it (its Place effects fire again; it leaves no card). [Slay the Spire Echo Form; Runeterra Piltover & Zaun]
+- Copies into the hand (Copyist, Chronicler, Remember), last spell back (Once More, Recaller), Place effects again (Time Conductor, Reprise).
+- Turn Back the Hour: undoes the enemy's last action (Kaptain's "back in time" idea).
+- Draw: Seer of Repeats, Recount, Oracle of Returns. Between lanes: Time Strider, Shift, Time Rift, The Last Hour.
+- Special: Knight of the Loop, Oracle of Returns, Timekeeper, The Paradox, Chronarch.
+
+MONOLITHS (m) — an ancient stone people. Every unit is an Immobile monument (+2 stats for it); only the spirits they wake can move.
+- Obelisks wake Stone Spirits in the front row each round (round start, so they hold dots at round end). [Duelyst Vetruvian obelysks]
+- Column and row rulers: Totems, Pillars, Steles give bonuses; Menhir, Dolmen, Monolith damage the enemy facing them at round end, from any row.
+- Sanctity: many cards grow while you hold the lane's base.
+- Draw: Runestone, Oracle Stone, Speaking Stone, Inscription. Between lanes: Ley Obelisk and Signal Pyre work with their twin in another lane; Pyramid of the Sun and Harmony of Stones reach all lanes.
+- Special: Pyramid of the Sun, Totem of the Ancestors, Oracle Stone, Waking Colossus, Ley Obelisk.
+
+Test results (3 Nov 2026, Claude): 100 random games and 30 Benchmark games without errors; every effect fires. Balance is untested beyond that.

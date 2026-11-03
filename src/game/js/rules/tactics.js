@@ -29,6 +29,7 @@ function canAdvance(s, p, lane) {
 function spellOptions(s, p, k, forAi = true) {
   const out = [], enemies = s.units.filter(u => ctl(u) !== p), own = s.units.filter(u => ctl(u) === p);
   const ok = (a, lane) => canPay(s, lane, spellCost(s, k, a)) && out.push(a);
+  if (CARDS[k].cast) { fxSpellOptions(s, p, k, ok); return out; }
   switch (k) {
     case 'annona': LANES.forEach(lane => ok({ lane }, lane)); break;
     case 'reform': case 'hodegetria':

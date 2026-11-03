@@ -37,6 +37,7 @@ START_DESIGN.md                   119  START HERE for any faction or card design
 5-card-design-method.txt             21  5. CARD DESIGN METHOD (11 Oct 2026; Claude's proposal after Kaptain's critique of the thre
 6-faction-entry-format.txt           17  6. FACTION ENTRY FORMAT (11 Oct 2026; Claude's proposal from the agreed points in Part 5)
 7-ideas-kept-for-later.txt           18  7. IDEAS KEPT FOR LATER (moved from summary/, 12 Oct 2026)
+9-new-factions.txt                  41  9. THE FIVE NEW FACTIONS in the game for testing (identity, mechanics, specials)
 8-rejected-and-cut.txt                6  8. REJECTED AND CUT (don't reintroduce without asking)
 
 ==================================================================

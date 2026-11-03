@@ -29,7 +29,8 @@ const ACTIONS = {
     applyAuras(s);
     log(s, lane === from ? unitName(u) + ' moves.' : `${unitName(u)} rides from lane ${from + 1} to lane ${lane + 1}.`);
     arrive(s, u, before);
-
+    if (byId(s, u.id)) { fxFire(s, 'move', u); processDeaths(s); }
+    if (lane !== from) fxArrived(s, u);
   },
   attack(s, p, a) {
     const u = byId(s, a.id), t = byId(s, a.tid);
@@ -44,6 +45,7 @@ const ACTIONS = {
     }
     strike(s, u, t, unitName(u));
     processDeaths(s);
+    if (byId(s, u.id)) { fxFire(s, 'attack', u, { ev: byId(s, a.tid) || t }); processDeaths(s); }
     if (isReckless(u) && byId(s, u.id)) kill(s, u, 'reckless');
   },
   tactic(s, p, a) {
@@ -52,7 +54,9 @@ const ACTIONS = {
     P.hand.splice(a.hi, 1);
     emit(s, { spell: k, p, fxl: (card.tactic === 'lane' && !NO_LANE_FX.includes(k)) || card.tactic === 'column' ? lane : null, fxc: card.tactic === 'column' ? a.col : null, fxt: a.tid ?? a.vid ?? null });
     log(s, `${deckName(s, p)} plays ${card.name}${k === 'cuts' ? ` (X = ${a.n})` : ''}.`);
-    TACTICS[k](s, p, a, lane);
+    if (card.cast) fxCast(s, p, a, lane, k); else TACTICS[k](s, p, a, lane);
+    processDeaths(s);
+    fxSpellCast(s, p, k);
     processDeaths(s);   // its deaths resolve while the card is still in play
     P.discard.push(k);
     emit(s, { spellEnd: k, p });
@@ -216,7 +220,7 @@ function applyAction(s, a) {
     s.passed = p; s.cur = other(p); s.turn++;
     return s;
   }
-  if (!PENDING_STEPS.has(a.t)) { s.acts++; s.passed = null; }
+  if (!PENDING_STEPS.has(a.t)) { s.acts++; s.passed = null; fxKeepUndo(s, p); }
   ACTIONS[a.t](s, p, a);
   processDeaths(s);
   mergeLinks(s);

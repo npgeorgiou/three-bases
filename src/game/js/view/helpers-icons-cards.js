@@ -34,7 +34,7 @@ const artSvg = key => `<svg viewBox="0 0 100 100" class="art" aria-hidden="true"
 /** A card's icon (inner SVG): one glyph per card; every unit has a glyph of its own. */
 const artInner = k => `<path d="${ART[CARDS[k].art]}"/>`;
 const cardArt = k => `<svg viewBox="0 0 100 100" class="art" aria-hidden="true">${artInner(k)}</svg>`;
-const deckArt = fac => artSvg(fac === 't' ? 'wreath' : fac === 'x' ? 'lantern' : 'fangs');
+const deckArt = fac => artSvg(FAC_GLYPH[fac] || (fac === 't' ? 'wreath' : fac === 'x' ? 'lantern' : 'fangs'));
 
 /* ---------- keywords ---------- */
 const KEYWORD_RE = /\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g;

@@ -90,6 +90,11 @@ button:focus-visible { outline: 3px solid var(--tl); outline-offset: 2px; }
 .f-t { --fill: var(--tf); --line: var(--tl); --text: var(--ti); --spell: var(--ts); }
 .f-h { --fill: var(--hf); --line: var(--hl); --text: var(--hi); --spell: var(--hs); }
 .f-x { --fill: var(--xf); --line: var(--xl); --text: var(--xi); --spell: var(--xs); }
+.f-g { --fill: #4B4032; --line: #E0A24A; --text: #F3E6CF; --spell: #6A5A45; }   /* Siegeworks */
+.f-r { --fill: #1F3A6B; --line: #8FD3FF; --text: #E4F2FF; --spell: #2F5290; }   /* Arcanists */
+.f-w { --fill: #6B5420; --line: #F0D27A; --text: #FBF1D6; --spell: #8A6E2C; }   /* Wanderers */
+.f-e { --fill: #3D2B5E; --line: #C9B6FF; --text: #EFE8FF; --spell: #55407D; }   /* Echoes */
+.f-m { --fill: #3E4A44; --line: #C8D6C2; --text: #EEF3EA; --spell: #56655D; }   /* Monoliths */
 .unit.ghost > .ubody { fill-opacity: .62; stroke-dasharray: 5 3; }
 .unit.ghost > .uart { opacity: .7; }
 .unit .ctlmark { fill: none; stroke-width: 3.5; pointer-events: none; }

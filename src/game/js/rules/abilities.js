@@ -226,6 +226,7 @@ function runRoundEndAbilities(s, p) {
     for (const flag in ROUND_END) if (c[flag] && byId(s, u.id)) { ROUND_END[flag](s, u, c, p); processDeaths(s); }
     exRoundEnd(s, u, p);
     processDeaths(s);
+    if (byId(s, id)) { fxFire(s, 'roundEnd', byId(s, id)); processDeaths(s); }
   }
 }
 
