@@ -36,7 +36,7 @@ The rules for lines (L1-L24) are in LINE_RULES.md: read it before judging a line
 | Rules for lines | LINE_RULES.md |
 | How network.py makes lines; the line check after an import; the planned line table | LINKS_PLAN.md |
 | What card readers follow | READER_PROMPT.md (the job), BRIEF.md (shapes, reading rules, game words), SYNTAX.md (rows as printed) |
-| Line check agents | checks/LINE_READER_JOB.md, checks/LINE_VERIFIER_JOB.md; causes still open: checks/open_causes.md |
+| Line check agents (imports only) | checks/LINE_READER_JOB.md, checks/LINE_VERIFIER_JOB.md, causes.py |
 | Values and concepts | vocab.tsv, library/concept_tree.txt |
 | Build: rows -> cards.sqlite | run.py (one game), check_all.py (all games), load.py, flat.py, refs.py |
 | Lines between cards | network.py; why one line exists: pair.py; all lines: links.py -> links.sqlite (not in git) |
@@ -76,22 +76,19 @@ push, give network.html to Kaptain.
 - All 8 games imported. Kaptain approved Runeterra and Into the Breach; Slay the Spire done; Inscryption reviewed; Stormbound,
   Monster Train, Faeria, Duelyst wait for his check of their deck networks.
 - Cases: all pass. Must-not cases whose old reason no line says any more were made strict (no line at all); n56, n352,
-  ntb15-16 and nst36 keep theirs because the pair still has a line for another reason. The next case id is n387.
+  ntb15-16 and nst36 keep theirs because the pair still has a line for another reason. The next case id is n396.
 - Real-world cases: 237 of 261 hold (Zealous Crusader -> Khalim's Prayer is gone by a rule of Kaptain's of 3 Nov 2026, before L24; the other 23 are faction-label checks).
 - Lines (pairs in links.sqlite, 3 Nov 2026): Runeterra 204,097; Duelyst 12,793; Faeria 10,014; Slay the Spire 8,797; Into the
   Breach 6,137; Monster Train 3,092; Stormbound 2,686; Inscryption 1,080.
-- Known open (also checks/open_causes.md and LINKS_PLAN.md "Open"): a card placed by its text near the leader (Conscript) draws
+- The 8-game line check is finished (3 Nov 2026): its causes touching 1000+ lines were fixed, the rest were dropped. Line checks
+  are done only by the chat that imports a game (LINKS_PLAN.md step 3).
+- Known open (also LINKS_PLAN.md "Open"): a card placed by its text near the leader (Conscript) draws
   no line to a card acting near the leader (Fealty); Adaptive Mutation's stat swap has no line; Monster Train has no full decks
   as text (ask Kaptain). Monster Train's Olde Magic is built by the player at an event: its record
   (read/monster_train/event_cards.jsonl) lists the wiki's choices, with no numbers. Stormbound's Fort of Ebonrock has no ability.
 
 ## Open work, in Kaptain's order
-1. L24 (Kaptain, 3 Nov 2026): everything that helps a level-up condition is a line. Gwen's rows level her from 10+ damage dealt,
-   so Tybaulk -> Gwen should be "helps it level up"; n269 (none) and open cause 19 follow the old rule. Fix it for every game
-   and level-up kind, flip n269, add cases.
-2. The other causes in `checks/open_causes.md` (biggest first; `causes.py checks/open_causes.md` gives the fixer's sheet).
-   Fixes are made in the main chat, never by an agent (3 Nov 2026).
-3. A newly imported game gets the line check of LINKS_PLAN.md step 3.
+1. A newly imported game gets the line check of LINKS_PLAN.md step 3; its fixes are made in the main chat, never by an agent.
 
 ## When you finish
 Commit and push every finished step. Update "State" and "Open work" above (short, no history: git log has it).

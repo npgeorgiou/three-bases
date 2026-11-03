@@ -203,7 +203,7 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
    in 9 decks that 500 passing cases had not shown).
    `deck_read_<game>.md` is the import's working record: each family a "## F<n> <name>" with "Root cause:", "Same error
    elsewhere:" (counts per game) and "Fix:" lines (`run.py` fails without them: review_check.py). Once Kaptain approves the
-   game, move its open items to checks/open_causes.md or "State" and delete the file.
+   game, move its open items to LINKS_PLAN.md "Open" or "State" and delete the file.
    Then the line check: LINKS_PLAN.md step 3.
 
 ### 3. Case tests (`cases/`)

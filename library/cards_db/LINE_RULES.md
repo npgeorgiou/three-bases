@@ -78,4 +78,4 @@ not taste. A case in cases/network.tsv written by Kaptain ("Kaptain <date>" in i
 - L23 (3 Nov 2026) A unit that moves itself gives no line to cards that depend on positions (Faeria, Duelyst).
 - L24 (Kaptain, 3 Nov 2026) Everything that helps a champion's level-up condition (and the same in other games: a card that
   grows, levels or transforms when a condition is met) is a link, said "helps it level up". Gwen levels from dealing 10+
-  damage, so more power for Gwen (Tybaulk) helps her level. Older rules and cases that say otherwise (n269) give way to this.
+  damage, so more power for Gwen (Tybaulk) helps her level. (Tybaulk -> Gwen, Master Yi: n269, n387.)

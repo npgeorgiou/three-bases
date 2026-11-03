@@ -29,7 +29,7 @@ equal mechanics of different games share one concept of the concept tree (Stun a
 | `network_page.py`, `decks.tsv`, `network.html` | Decks from the web (with source; and cases/decks.tsv) drawn as networks in one page that opens offline, by game; a right click copies a card's or a line's terse text |
 | `deck_lines.py <game\|all> [deck]` | The same networks as terse text (what the right click copies): how decks are read |
 | `links_audit.py <game>`, `deck_audit.py <game>`, `audit_pieces.py` | The line check's two prints (each reason of a game; every deck: cards with no or few partners, the special cards), cut into pieces for agents |
-| `causes.py <reader or verdict files>`, `checks/` | The line check after an import (LINKS_PLAN.md step 3): job texts for line readers and verifiers; causes.py adds each cause's current lines, network.py lines, cases and rows and sorts the causes for the fixer; `checks/open_causes.md`: causes still open |
+| `causes.py <reader or verdict files>`, `checks/` | The line check after an import (LINKS_PLAN.md step 3): job texts for line readers and verifiers; causes.py adds each cause's current lines, network.py lines, cases and rows and sorts the causes for the fixer |
 | `pair.py <game> "A" "B" ...` | Why one line exists: the network.py line of each reason |
 | `dump_lines.py` | Every line of every deck of every game, before/after a change (`--diff`, `--find`) |
 | `audit_text.py`, `audit_text_explained.tsv` | Words in a card's text its rows do not show ("or the enemy Nexus", "spells and Skills", "everywhere" ...), run by run.py; flags read and found right are listed with the reason |

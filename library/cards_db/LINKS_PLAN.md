@@ -64,7 +64,7 @@ fixed by its cause, for every game, in the main chat; agents only read (PROCESS.
 8. Per fix: one `none` and one `line` case in cases/network.tsv. After about 5 fixes: `check_all.py --no-load`.
 9. At the end: `links.py`, `dump_lines.py --table /tmp/tb1.tsv`, `--diff /tmp/tb0.tsv /tmp/tb1.tsv`, `realworld.py`,
    `check_all.py --no-load` (rewrite the must-not cases it lists), commit, push, report the lines gone and added per game.
-   Causes left unfixed go to `checks/open_causes.md` in the verdict format (causes.py reads it).
+   The import is not done while a verified cause is unfixed.
 
 ## Open (seen, not fixed)
 - Into the Breach: pilots have no lines. Kaptain (31 Oct 2026): a pilot is like an item a mech carries; it can move to any mech,
@@ -78,7 +78,6 @@ fixed by its cause, for every game, in the main chat; agents only read (PROCESS.
 - Slay the Spire: Through Violence (made by Reach Heaven) is not in the library; add it to supplement_sts1.py when a source is
   reachable (wiki.gg and fandom were not, 30 Oct 2026).
 - Inscryption: The Moon's "pull small creatures into its orbit" states no place; written as Squirrels moving bordering (unsure).
-- The causes the 8-game check left open: `checks/open_causes.md`.
 
 ## Next: the line table for design questions
 ### Step 4. Missing concepts (show Kaptain first; change nothing before his OK)

@@ -1,5 +1,5 @@
 """causes.py <reader or verdict files> [--out FILE]: the sheet for verifiers (from line readers' files) and for the fixer (from
-verdict files or checks/open_causes.md). LINKS_PLAN.md step 3.
+verdict files). LINKS_PLAN.md step 3.
 
 For every CAUSE (reader), REAL or PARTLY cause (verifier; NOT REAL and GONE are skipped), MISSED ones included, it adds what a fixer would otherwise look up one by one:
   - each example pair's game, its current line (NONE = gone) and the network.py lines that made it;

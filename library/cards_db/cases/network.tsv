@@ -266,7 +266,7 @@ n265	runeterra	Braum Zoe	Targonian Tellstones	Braum	none	(levels it up)	Kaptain 
 n266	runeterra	Braum Zoe	Blessing of Targon	Braum	line	(levels it up)	Kaptain 31 Oct 2026: +3|+3 helps Braum survive damage
 n267	runeterra	Braum Zoe	Esmus, Breath of the World	Zoe	none	different cards	Claude 31 Oct 2026: a planted Chime goes off when drawn and is never played: no new name for Zoe
 n268	runeterra	Annie Gwen	Ravenbloom Conservatory	Gwen	none	(levels it up)	Kaptain 31 Oct 2026: A makes B (Tybaulk), B helps C: A gets no line to C
-n269	runeterra	Annie Gwen	Tybaulk	Gwen	none	(levels it up)	Kaptain 31 Oct 2026: +1|+0 does not level Gwen
+n269	runeterra	Annie Gwen	Tybaulk	Gwen	line	helps it level up	Kaptain 3 Nov 2026 (L24): what helps a level-up condition is a line; Gwen levels from 10+ damage dealt (was none, 31 Oct)
 n270	runeterra	Janna Nilah	Vikrash the Exuberant	Janna	none	(levels it up)	Kaptain 31 Oct 2026: Vikrash makes Slipstream; Slipstream's lines are its own
 n271	runeterra	Janna Nilah	Nilah	Janna	none	(levels it up)	Kaptain 31 Oct 2026: Nilah makes Slipstream; Slipstream's lines are its own
 n272	runeterra	Janna Nilah	Slipstream	Janna	none	(levels it up)	Kaptain 31 Oct 2026: draws do not level Janna; the player still has to play the cards she makes cheaper
@@ -372,7 +372,7 @@ n374	runeterra	Ornn (level 2), Wrought Colossus	Ornn (level 2)	Wrought Colossus	
 n375	runeterra	Here to Help, Gangplank	Here to Help	Gangplank	line		audit 3 Nov 2026: old 22: +2 power to a damaged Gangplank, who levels from Nexus damage (L18)
 n376	duelyst	Crescent Spear, Phoenix Fire	Crescent Spear	Phoenix Fire	none		audit 3 Nov 2026: old 24: more spell damage for a spell that just hits is generic (L18)
 n377	runeterra	The Dreadway, Decimate	The Dreadway	Decimate	line		audit 3 Nov 2026: old 24: The Dreadway doubles what is there (Kaptain)
-n378	runeterra	Tybaulk, Gwen	Tybaulk	Gwen	none		audit 3 Nov 2026: old 27: Gwen waits for Power gained from Hallowed, not any stat change
+n378	runeterra	Tybaulk, Gwen	Tybaulk	Gwen	none	does what it waits for	audit 3 Nov 2026: old 27: Gwen waits for Power gained from Hallowed, not any stat change (her level-up line stays, n269)
 n379	runeterra	Grandmaster at Arms, Annie	Grandmaster at Arms	Annie	none		audit 3 Nov 2026: old 59: Grandmaster at Arms is a deck rule with no rows, never played
 n380	runeterra	Jax, Grandmaster at Arms	Jax	Grandmaster at Arms	none		audit 3 Nov 2026: old 59: no one casts a deck rule
 n381	sts1	Beta, After Image+	Beta	After Image+	none		audit 3 Nov 2026: old 33: one more card made is no more plays (L1)
@@ -381,3 +381,12 @@ n383	runeterra	Annie, Twisted Catalyzer	Annie	Twisted Catalyzer	none		audit 3 No
 n384	runeterra	Sugary Snare, Snowy Razorclaw	Sugary Snare	Snowy Razorclaw	none		audit 3 Nov 2026: old 55: a unit put into the deck moves nowhere on the board
 n385	runeterra	Spinning Axe, Gnar	Spinning Axe	Gnar	none		audit 3 Nov 2026: old 32: "if you don't have Pokey Stick" asks for one missing card, not an empty hand
 n386	runeterra	Mentor of the Stones, Master Yi	Mentor of the Stones	Master Yi	line	more power	Kaptain 3 Nov 2026: Master Yi levels up when allied Master Yis have done 12+ damage, so more power helps it
+n387	runeterra	Tybaulk, Master Yi	Tybaulk	Master Yi	line	helps it level up	Kaptain 3 Nov 2026 (L24): Master Yi levels from damage he deals
+n388	runeterra	Rek'Sai, Sharkling	Rek'Sai	Sharkling	none		open cause 4, L15: Rek'Sai's text repeats Lurk; Lurk on Lurkers is the keyword's rule
+n389	runeterra	Rumble (level 2), Gnar	Rumble (level 2)	Gnar	none	cheaper	open cause 5: Rumble helps Mecha Yordles; Gnar is no Mecha (the level-up line stays)
+n390	runeterra	Rumble (level 2), Gnar	Rumble (level 2)	Gnar	line	levels it up	open cause 5: Impact damages the Nexus, which levels Gnar
+n391	runeterra	Gnar, Skrappy's Partsapalooza	Gnar	Skrappy's Partsapalooza	none		open cause 5: it asks for Mecha Yordles; Gnar is no Mecha
+n392	runeterra	Conchologist, Lux (level 2)	Conchologist	Lux (level 2)	none		open cause 1, L17: one spell of 6+ mana; Conchologist manifests spells costing 3 or less
+n393	runeterra	Ferros Financier, Lux (level 2)	Ferros Financier	Lux (level 2)	line		L17: Ferros Financier manifests a 6+ cost spell
+n394	duelyst	Lurking Fear, Xerroloth	Lurking Fear	Xerroloth	none		open cause 3, L9: Sentinel goes off on the opponent's turn; my spells only reveal it
+n395	duelyst	Firestarter, Night Watcher	Firestarter	Night Watcher	none		open cause 3, L5: Night Watcher exhausts my own Rush minions too: a drawback
