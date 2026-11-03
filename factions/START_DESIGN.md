@@ -99,6 +99,9 @@ Every one of these failed in the first five factions. Check each before sending.
   cards play off each other inside a mechanic) -> CARDS that implement the mechanics. Never call an interaction a
   mechanic. A mechanic must be broad enough to carry dozens of cards, and the mechanics must feed each other, not
   only a few example cards. No unit types or card kinds that split the deck (no "crew", no Yin/Yang dichotomy).
+- How broad (measured 3 Nov 2026 with `analyze` on whole factions): Shadow Isles' "units die" is made by 103 and used by
+  55 of its 221 cards; Faeria's land building by ~60 of 72. A real mechanic is a thing in play that dozens of cards
+  make AND dozens use; a trigger only 5 cards could use is an interaction, not a mechanic.
 - A mechanic is a broad notion that many cards work through, written in Kaptain's form "I do X -> I benefit from X", e.g. "I damage my own units -> I gain from
   damaged units". What one unit does (a cannon fires, a keg explodes) is a unit effect, never a mechanic.
 - Mechanics: buffs, damage and stats are not mechanics. Each mechanic is written with the traits it comes from and the
