@@ -1,11 +1,12 @@
 THREE BASES — FACTIONS
 The game as it might become: planned factions, faction candidates, card and rule ideas, the design method for new factions, and rejected ideas. The current factions and their cards are in summary/ section 11.
-Goal (AGREED, 11 Oct 2026): 100 cards per faction; spells are 20% to 50% of a faction's cards, depending on its profile.
+Goal (AGREED, 11 Oct 2026): at least 100 cards per faction, usually more (3 Nov 2026); spells are 20% to 50% of a faction's cards, depending on its profile.
 Work plan (AGREED): step 1, faction candidates from the inspiration library (part 3), discussed at length; step 2, the list of factions to use, then their cards.
 
 
 Files (lines, then contents). Read only the file a task needs; find lines across files with: python3 tools/find.py doc <text>
 
+START_DESIGN.md                   119  START HERE for any faction or card design: rules to know, design rules, library search, checks
 3-candidates/00-notes.txt             9  3. Candidates: review notes, how the list was built, terms
 3-candidates/E1-tagma.txt            18  E1. TAGMA — the Byzantine army (all-round)
 3-candidates/E2-ashfang-horde.txt    12  E2. ASHFANG HORDE — the war host of fury and fire
@@ -32,8 +33,8 @@ Files (lines, then contents). Read only the file a task needs; find lines across
 3-candidates/C20-bonds.txt           19  C20. BONDS — paired units share everything (new idea)
 3-candidates/C21-terraformers.txt    18  C21. TERRAFORMERS — shapes the cells (terrain; new idea)
 3-candidates/C22-rotborn.txt         18  C22. ROTBORN — remains that feed growth (planned; part 2)
-4-kaptains-ideas.txt                 50  4. KAPTAIN'S IDEAS (11 Oct 2026, written while reading Runeterra's Noxus and Faeria's red 
-5-card-design-method.txt             20  5. CARD DESIGN METHOD (11 Oct 2026; Claude's proposal after Kaptain's critique of the thre
+4-kaptains-ideas.txt                 64  4. KAPTAIN'S IDEAS (11 Oct 2026, written while reading Runeterra's Noxus and Faeria's red 
+5-card-design-method.txt             21  5. CARD DESIGN METHOD (11 Oct 2026; Claude's proposal after Kaptain's critique of the thre
 6-faction-entry-format.txt           17  6. FACTION ENTRY FORMAT (11 Oct 2026; Claude's proposal from the agreed points in Part 5)
 7-ideas-kept-for-later.txt           18  7. IDEAS KEPT FOR LATER (moved from summary/, 12 Oct 2026)
 8-rejected-and-cut.txt                6  8. REJECTED AND CUT (don't reintroduce without asking)

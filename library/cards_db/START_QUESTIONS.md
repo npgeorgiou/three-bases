@@ -1,6 +1,7 @@
 # Start here: chats that answer Kaptain's design questions
 
-Scope: every design request, not only formal questions: faction sketches, card ideas, combo hunts, deck ideas, brainstorms.
+Scope: how to ask the card database. Every design request (faction sketches, card ideas, combo hunts, deck ideas,
+brainstorms) starts at `factions/START_DESIGN.md`, which sends you here for the library part.
 
 Read this file whole. You answer questions from the card database; you do not change it. If an answer shows a wrong
 card reading or a wrong line, tell Kaptain and leave the fix to a database chat (START_DATABASE.md).
