@@ -1,0 +1,66 @@
+==================================================================
+IRONFRONT — stage 1 (3 Nov 2026; Claude's design for Kaptain to check). Theme: World War I.
+==================================================================
+Check: python3 tools/network_check.py factions/designs/ironfront.txt
+
+THEME: WHAT THEY ARE LIKE
+- They dig in: trenches, sandbags, waiting for days under fire.
+- Attrition: a war won by who can lose more men; the dead are replaced by the next draft.
+- The front and the rear: men rot in the front line (mud, shell shock) and are rotated back to rest.
+- Artillery: barrages from far behind, creeping forward row by row; shells that burst, shells that bury themselves.
+- Going over the top: after the long wait, everyone at once on the whistle.
+- War industry: factories turn money into shells; trains bring them to the front.
+- No man's land: the ground between is death; wire and machine guns make the enemy pay for every step.
+- Tanks: slow new machines that break a line.
+- Mines and tunnels: sappers dig under the enemy and blow him up from below.
+- Observation: balloons and spotters tell the guns where to fire.
+- Medals and memorials: the fallen are honoured; their names make the others braver.
+- Stalemate: little moves; whoever breaks first loses.
+
+MECHANICS (each a give-and-take that many cards work through)
+1. HOLD, THEN RELEASE. Give: the action (a unit that does not move or attack this round). Take: it grows at round end
+   ("Round end: if I didn't act this round, I gain +1 strength", lasting). Release cards spend it: all units that dug in
+   strike at once (over the top), or a unit's grown strength becomes damage. The decision each turn: act now or wait.
+   Answer: kill the waiting units before they grow, or force them to act. [library: Slay the Spire Watcher, Calm stores
+   and Wrath spends; Runeterra Blighted Battleaxe, "if my bearer didn't attack this round"]
+2. ATTRITION. Give: your own units (cheap men in the front row that die). Take: each death replaces itself: supply,
+   a cheaper next unit in that lane, a card from the deck ("the next draft"), medals that make the others braver. The
+   decision: which units to spend. Answer: kill the replacements' source, or don't kill (leave them standing).
+   [library: Monster Train Melting Remnant, units that burn out and come back (Reform); Stormbound Swarm, value on
+   death; Shadow Isles' death counts]
+3. THE FRONT WEARS, THE REAR RECOVERS. Give: front-row units lose a shield at each round end (mud, shell shock) — so
+   they are cheap for their stats. Take: units in rows 2-3 restore shields; relief cards swap a worn front unit with a
+   fresh one behind it, and both gain from the swap. Gives rows 2-3 a real job (the reserve). Answer: kill the reserve
+   with Ranged and spells. [library: Duelyst Vetruvian rows; Claude's: the wear/rest split]
+4. FIRE FROM THE REAR. Give: guns in rows 2-3 that do nothing in melee. Take: damage into the enemy camp's deep rows,
+   by rows (a barrage on one enemy row) and by spotters (a unit in the front row tells the guns which column). A few
+   Projectiles live here, two kinds: shells that burst where they land, and duds or mines that land, stay and go off
+   when an enemy is placed beside them. Answer: Ranged, spells, empty rows. [library: Into the Breach artillery and
+   the Blobber's thrown blob that stays and explodes; Kaptain's cannon idea]
+5. NO MAN'S LAND. Give: you leave the enemy free to come. Take: every enemy that is placed into or moved into the front
+   row facing your nests and wire takes damage (the enemy pays for each step). Joins (2): the enemy losses at the front
+   are the other side of your own. Answer: place in other columns, Ranged from behind. [library: Akritai react to
+   arrivals in Tagma (only the idea of a reaction; Tagma keeps its card); Into the Breach's damage on entering tiles]
+
+WEB
+MECHANIC Hold | makes: grown-strength, idle-units, enemy-damaged | needs: units-survive, enemy-front-thinned
+MECHANIC Attrition | makes: fresh-units, supply, cards | needs: own-front-deaths
+MECHANIC FrontRear | makes: own-front-deaths, units-survive, fresh-front | needs: fresh-units, reserve-units
+MECHANIC Rear | makes: enemy-damaged, enemy-front-thinned, reserve-units | needs: idle-units, spotted-columns, supply
+MECHANIC NoMansLand | makes: enemy-damaged, enemy-front-thinned, spotted-columns | needs: fresh-front
+How they feed: idle units (1) are what the guns need cover from (4); the front wears (3) and dies (2), the dead come
+back fresh (2) into the front (3), where they face the enemy's arrivals (5); the guns and the wire thin the enemy front
+(4, 5), so the release (1) finds weak targets. A card in two: a rifleman who digs in (1) and gives supply when he dies
+(2); a howitzer that grows while idle (1 + 4); a medic in row 2 who restores shields (3) and raises a medal on a
+death (2).
+
+WAYS TO PLAY: Trench (dig in, then over the top) · Meat grinder (cheap front units dying for value) · Big guns (the rear
+does the killing, the front only holds) · Kill zone (wire and nests; the enemy breaks itself on the front).
+
+STRONG AT: holding the front at round end, long rounds, deep-row damage. ONLY A LITTLE: movement (relief swaps on
+Place), draw (the next draft, once per death of a card that says so), tanks (a few big slow units). WEAK AT: a fast
+start, lane changes, healing big units, fighting while acting every turn (they lose their growth).
+BETWEEN LANES: trains (a few cards that send supply or a unit to another lane's reserve); railway guns that fire into
+another lane (one or two cards). LANE CONTROL: "as long as you hold this lane's base, my units dig in even if they
+moved" / "if you don't, my release deals +1".
+FEEL: the long wait under fire, then everything at once.
