@@ -392,11 +392,20 @@ def lines_of(c, game):
         if (a_, ab_) not in state_use and act_ in AIM:
             v_, _, rest_ = AIM[act_].format(kw=mechanics.name(c, kw_) if kw_ else 'a keyword').removeprefix('can ').replace(' it', ' them').partition(' ')
             state_use[(a_, ab_)] = (v_ if v_.endswith('s') else v_ + 'es' if v_.endswith(('sh', 'ch', 'x')) else v_ + 's') + ' ' + rest_  # "brings them back"
+    it_side = {ab_: sd_ for ab_, sd_ in c.execute("select ability, side from flat_ref where role='trigger' and side in ('enemy','mine') and coalesce(pick,'')!='self'")}
+    it_side = {ab_: sd_ for ab_, sd_ in it_side.items() if not c.execute("select 1 from flat_do where ability=? and origin='own' and on_pick not in ('self','it') limit 1", (ab_,)).fetchone()}
+    self_kw = {(a_, k_) for a_, k_ in c.execute("""select g.card, g.keyword_ref from flat_do g where g.origin='own' and g.act='give_keyword'
+               and (g.on_pick='self' or (g.on_pick='it' and exists (select 1 from flat_do d where d.ability=g.ability and d.seq<g.seq
+               and d.act in ('copy','create','summon') and d.on_pick='self')))""")}
     for card, origin, ab, role, h, side, kw, pick, kind, w, ref, ak, aw, via in c.execute(
             'select card, origin, ability, role, happening, side, keyword, pick, kind, obj_with, ref, actor_kind, actor_with, via from flat_ref'):
         if card not in cards: continue
         if role == 'makes':
             if ab in kw_adds: continue
+            if pick == 'it' and not side and origin == 'own' and ab in it_side: side = it_side[ab]  # "when you Stun an enemy, I strike
+            # it" (Yasuo): it is that enemy
+            if origin == 'uses_keyword' and pick == 'it' and not side and (card, via) in self_kw: pick = 'self'  # a keyword it gives its own
+            # copy (Prancing Sea Spirits' Ephemeral): that death is its own, no kill for other cards (L9, L14)
             if h in ('dies', 'killed') and side == 'enemy' and origin in ('own', 'has_keyword') and ab in plain_hits: continue  # a plain hit on one
             # enemy (Strike) is what every attack does: it feeds no "when an enemy dies" (Kaptain 30 Oct 2026); poison, hits on all,
             # kill effects and damage boosts still do
@@ -410,6 +419,8 @@ def lines_of(c, game):
             if pick == 'self' and not kind: kind = {'leader': 'player', 'hero': 'unit', 'pilot': 'unit'}.get(cards[card]['cat'], cards[card]['cat'])  # it
             # moves itself as what it is: Azurite Lion moving is no General moving (Zeal)
             makes[h].add((card, side, kw, kind, pick, w, ref, rule_name.get(via, 'rules') if origin == 'game' else False))
+            if h == 'attacks' and origin == 'own': makes['strikes'].add((card, side, kw, kind, pick, w, ref, False))  # an attack it gives
+            # (Rally) is a strike too: "when I strike" goes off (Golden Aegis -> Akshan; L2, L4)
             if origin != 'game': own_makes[card].add(h); made_by[(card, h)].add('fight_kw' if origin == 'has_keyword' and kw_tree(c, via) in HIT_KW + ('aoe_damage', 'deathtouch', 'lifesteal') else origin)
             ok_ = KW_NEEDS.get(kw_tree(c, via)) if origin == 'has_keyword' or (origin == 'uses_keyword' and (card, via) in grants) else None  # a
             # fight keyword it has or grants (Quick Attack); not one it uses as an action (Drain deals damage itself: Vile Feast)
@@ -486,6 +497,9 @@ def lines_of(c, game):
     # cards that make an enemy unit act (strike, attack, turn its attack): only these do what an enemy must do
     enemy_doers = {a for (a,) in c.execute("""select card from flat_do where act in ('strike','start_attack','redirect_attack')
                    and coalesce(on_side,'') in ('enemy','')""")}
+    strikers = {a_ for (a_,) in c.execute("""select card from flat_do where origin='own' and act in ('strike','start_attack')
+                and coalesce(on_side,'mine')='mine' and on_pick in ('chosen','all','random')""")}
+
     def doer_fits(m, actor, h=None):
         """who must do it ("an ally deals damage", "allied Pykes"): the card itself, or a card that makes such a unit fight; the
         player does most things through any card ("whenever you replace a card"), but fights only as its leader ("whenever your
@@ -498,6 +512,8 @@ def lines_of(c, game):
         k = ak if ak in KIND_CAT else 'any'
         if who_fits(c, game, as_doer(c, game, cards[m]), k, aw): return True
         # a card that makes units fight: only if a unit it sends can be the one named (Dragon Ambush sends Dragonlings, not Zed)
+        if ak in ('unit', None) and m in strikers and can_aim_at(c, game, m, 'unit', aw, ('strike', 'start_attack')): return True  # "an ally
+        # strikes" (Bone Skewer) can be a named ally ("allied Pykes have dealt 15+ damage"; L2: a strike now)
         return ak in ('unit', None) and m in fighters and not any(p.split(' ')[0] in ('card', 'name_has', 'type') for p in (aw or '').split(';')) \
             and can_aim_at(c, game, m, 'unit', aw, SEND_ACTS)
     # a card whose own triggers make what its level-up counts (Ashe frostbites when she attacks): feeding the trigger levels it
@@ -627,8 +643,14 @@ def lines_of(c, game):
     for m, kw_, w_ in c.execute("select card, keyword_ref, on_with from flat_do where act='keyword_action' and origin='own' and on_with like '%card is %'"):
         if kw_ in mk_kws and m in cards:  # "Manifest an Otterpus or ...": it makes the card it names
             put += [(m, int(x), 'create') for x in re.findall(r'card is (\d+)', w_) if int(x) in cards and int(x) != m]
+    gen_ = {(m, ref) for m, ref in c.execute("select src, dst from card_link where rel='generates'")}
+    lv_ = collections.defaultdict(set)
+    for m, b in c.execute("select src, dst from card_link where rel='transforms_into'"): lv_[m].add(b)
+    named_ = {(m, ref) for m, ref in c.execute("select card, card_ref from flat_do where origin='own' and card_ref is not null")}
     put += [(m, ref, 'skill') for m, ref in c.execute("select l.src, l.dst from card_link l join card d on d.id=l.dst where l.rel='generates' "
-                                                       "and d.category='ability'") if m in cards and ref in cards]  # a unit's skill
+                                                       "and d.category='ability'") if m in cards and ref in cards
+            and not ((m, ref) not in named_ and any((b, ref) in gen_ for b in lv_[m]))]  # a unit's skill; one only its level-up casts
+            # is not the base card's (Gangplank's rows summon Powder Keg; Powderful Explosion is Gangplank level 2's)
     put += [(m, ref, 'own_spell') for m, ref in c.execute("select l.src, l.dst from card_link l join card s on s.id=l.src where l.rel='generates' "
                                                            "and s.category='leader'") if m in cards and ref in cards]  # a General's spell
     # a card made by its name, not its id ("you draw a Pelt card": Skinning Knife; "create a Poro"): the cards whose name fits
@@ -662,7 +684,8 @@ def lines_of(c, game):
     for m, w in c.execute("""select d.card, x.on_with from flat_do d join flat_do x on x.card=d.card and x.ability=d.ability and x.seq>d.seq
             where d.origin='own' and d.act='draw' and coalesce(d.on_side,'mine')='mine' and x.act='discard' and x.on_pick='it'
             and coalesce(x.on_with,'')!=''""").fetchall():
-        if m not in cards: continue
+        if m not in cards or all(q.split(' ')[0] in ('category', 'kind') for q in w.split(';') if q): continue  # it keeps cards by kind
+        # only (Realm Warp discards the followers drawn): any card of that kind can be drawn (L1b)
         kept = [t for t, x in cards.items() if t != m and x['cat'] in KIND_CAT['spell'] | KIND_CAT['unit'] and x['cost'] is not None
                 and not matches(c, game, x, 'any', w)]
         for t in kept: out[(m, t)].append(('puts', 1.0 / max(1, len(kept)), 'draws it and keeps it'))
@@ -676,6 +699,9 @@ def lines_of(c, game):
             if prev: k, w = prev[0], ';'.join(x for x in (prev[1] or '').split(';') if x.split(' ')[0] in ('card', 'type', 'category', 'keyword', 'name_has'))
         hit = [t for t, x in cards.items() if t != m and matches(c, game, x, k if k in KIND_CAT else 'any', w)]
         if len(hit) >= 0.5 * kind_count(c, game, k if k in KIND_CAT else 'any', None): continue  # "a cheaper card from your deck"
+        kw_ = ';'.join(p for p in (w or '').split(';') if p.split(' ')[0] in ('category', 'kind'))  # the share among its own kind
+        if kw_ and len(hit) >= 0.5 * sum(1 for t, x in cards.items() if t != m and matches(c, game, x, k if k in KIND_CAT else 'any', kw_)): continue
+        # (Zap Sprayfin's "a spell that costs 3 or less": most spells; L21)
         if not [p for p in (w or '').split(';') if p and p.split(' ')[0] not in ('category', 'kind') + PLAY_STATE and not broad_part(c, game, p)]: continue  # "draw a
         # unit" (Channelsong): every unit can be drawn; only a narrower filter (a type, a keyword, a name) makes a line (L1)
         # (Treasurous Bosuns) finds almost any card: every card can be drawn (L1)
@@ -895,6 +921,7 @@ def aimed_rows(c, game):
             and not (act = 'give_ability' and on_kind = 'player')  -- a delayed effect the player gets ("if it dies this turn") is no help to the leader card"""):
         # "you may replace an additional card": the player handles more cards, its leader card gets nothing
         if a not in cards: continue
+        if act == 'keyword_action' and kw and kw_tree(c, kw) == 'return_to_hand': act = 'return_to_hand'  # Recall (Will of Ionia) is a return
         kv = via if origin == 'has_keyword' else None  # the card's own keyword does it (Lurk)
         if act == 'copy': ps = ';'.join(x for x in (ps, f'copy_to={ez or "board"}') if x)  # where the copy goes: a hand or deck copy is
         # one more card of any kind (generic, L14); a copy put on the board sets off its summon and death effects
@@ -1056,6 +1083,8 @@ def generic_use(c, game):
     for (i,) in c.execute("select card from flat_do where origin='own' and act in ('start_attack','strike') and on_pick='self'"): d[i]['flags'].add('fights')
     # its own text makes it fight or strike (Deepwood Stalker): the damage is its power
     for (i,) in c.execute("select distinct card from flat_do where origin='own'"): d[i]['flags'].add('acts')
+    for (i,) in c.execute("select card from flat_ref where origin='own' and role='trigger' and pick='actor_self' and happening in ('killed','damaged')"):
+        d[i]['flags'].add('own_hits')  # "when I kill an enemy" (Pyke level 2): a strike it is made to do sets it off
     for (i,) in c.execute("""select card from flat_if where origin in ('own','has_keyword') and of_kind='player' and coalesce(of_side,'mine')='mine'
             and of_with like '%position %'"""):
         d[i]['flags'].add('near_leader')  # it acts when my leader stands near it (Zeal)
@@ -1102,14 +1131,17 @@ def use_of(c, game, b, act, kw, ps, w=None):
     if act == 'sacrifice' and u['self_when'] & {'dies', 'sacrificed'}: return 'sacrifices it: its death effect goes off'
     if act in ('strike', 'start_attack', 'ready') or (act == 'can' and pev in ('attacks', 'strikes')) or (act == 'give_keyword' and tree == 'multi_attack'):
         if u['self_when'] & set(FIGHT_EVENTS): return 'makes it attack or strike again: its own effect goes off'  # "Strike:", "Attack:"
+        if act in ('strike', 'start_attack') and 'own_hits' in u['flags']: return 'makes it strike: its effect goes off when it hits or kills'
     made = set(HELP_MAKES.get(act, ())) & u['needs'] | {h for h, k in u['kw_needs'] if h in HELP_MAKES.get(act, ()) and kw and k in (None, kw)}
     if made: return f'does what it waits for or counts ({", ".join(sorted(made)).replace("_", " ")})'
     if 'position ' in (w or '') and ('of player' in w or 'of:kind is player' in w) and 'near_leader' in u['flags']:
         return 'helps it near your leader, where its own effect works'  # Roar -> Windblade Adept's Zeal
     if act == 'give_keyword' and kw and (kw in u['counts_kw'] or 'given_keyword' in u['self_when']): return f'gives it {kwn}, which it counts'
+    if act == 'give_keyword' and kw and b in sharers(c): return f'gives it {kwn}, which it passes to its allies'  # Sivir level 2 (L14)
     if act == 'give_keyword' and tree in ('evasion', 'excess_damage') and ('big_strike' in u['flags'] or u['needs'] & {'strikes_nexus', 'nexus_damaged'}):
         return f'gives it {kwn}: its strike gets through in full'  # Sumpworks Map -> Vi: "struck for 10+ damage in one strike"
     up = lambda *ks: act in ('stat_change', 'grow') and any(k in p and raises(p[k]) for k in ks)
+    if up('power') and b in own_power_readers(c): return 'more power: its text reads its power'  # Poppy: "allies with less power than me" (L18)
     if up('power', 'strength') or (act == 'give_keyword' and tree in ('attack_gain', 'temporary_buff')):
         if u['trees'] & set(POWER_USE) or u['flags'] & {'big_strike', 'fights', 'level_hit'} or b in gains_back(c, game): return 'more power: its text uses the damage it deals'
     if up('health', 'strength') or act in ('heal', 'negate_damage', 'damage_reduction') or (act == 'give_keyword' and tree in DEFENCE_KW) \
@@ -1147,6 +1179,41 @@ def doublers(c, game):
             and f.of_with = 'keyword is ' || d.keyword_ref where d.origin='own' and d.act='give_keyword' and d.params='amount=count'""") if b in cs}
         # "double the enemy's Poison" (Catalyst, Limit Break, Entrench): gives as much again as there is
     return CACHE[('dbl', game)]
+
+
+def sharers(c):
+    """cards whose text shares their own keywords with allies (Sivir level 2: "attacking allies have my keywords")"""
+    if 'sharers' not in CACHE:
+        CACHE['sharers'] = {b for (b,) in c.execute("select card from flat_do where origin='own' and act='copy_keywords' and (on_pick='self' or to_pick='self')")}
+    return CACHE['sharers']
+
+
+def own_power_readers(c):
+    """cards whose filter is measured by their own power ("allies with equal or less power than me", Poppy)"""
+    if 'pread' not in CACHE:
+        ids_ = {str(i) for (i,) in c.execute("select a.id from amount a join target t on t.id=a.of_target where a.attr='power' and t.pick='self'")}
+        CACHE['pread'] = {b for b, w_ in c.execute("select card, on_with from flat_do where origin='own' and on_with like '%power %'")
+                          if any(re.match(r'power (le|lt|ge|gt|eq) (\d+)$', q) and q.split(' ')[2] in ids_ for q in (w_ or '').split(';'))}
+    return CACHE['pread']
+
+
+def all_raisers(c):
+    """cards that raise the stats of all my units at once"""
+    if 'allr' not in CACHE:
+        CACHE['allr'] = {a for (a,) in c.execute("""select card from flat_do where origin='own' and act in ('stat_change','grow')
+                         and on_pick='all' and coalesce(on_side,'mine')='mine' and coalesce(on_with,'')=''""")}
+    return CACHE['allr']
+
+
+def numbered(c, game):
+    """cards with a number of their own that a bigger effect raises; a harm on my own side is no number to raise (Poison Puffcap)"""
+    if ('num', game) not in CACHE:
+        cs = cards_of(c, game); keys = ('amount', 'power', 'health', 'strength', 'times', 'cost')
+        CACHE[('num', game)] = {b for b, act, sd, ps in c.execute("select card, act, on_side, params from flat_do where origin='own'")
+                                if b in cs and any(x.split('=', 1)[0] in keys for x in (ps or '').split(';') if '=' in x)
+                                and not (act in ('damage', 'kill', 'discard', 'sacrifice') and sd == 'mine')} | \
+            {b for b, x in cs.items() if x['x_cost']}  # an X card's X is its number (Chemical X -> Conjure Blade)
+    return CACHE[('num', game)]
 
 
 def uses_help(c, game, b, act, kw, ps, w=None):
@@ -1196,9 +1263,16 @@ def aimed(c, game, nodes, broad):
         if act in ('stat_change', 'grow') and kind != 'player' and not any(p.startswith(('type is', 'type in')) for p in (w or '').split(';')):
             sharp = False  # stats to units with a keyword or a stat go only to a unit whose text uses them (L14, L18: Rek'Sai's Lurkers ->
             # Sharkling: no line); a tribe stays a deck choice (Kaptain's ndu34: Oakenheart helps the Mechs)
+        if act == 'give_keyword' and kw and kw_tree(c, kw) == 'spell_speed': sharp = False  # a spell's speed is help to a whole kind
+        # (Senna makes damage spells Fast): only a card whose text uses it (L14)
+        if act == 'increase_effect' and 'keyword i' not in (w or ''):
+            hits = [b for b in hits if b in numbered(c, game)]  # no number to make bigger (Alatis -> Dragonling, Powder Keg -> Paralyzing Bite)
         if not sharp and kind != 'player' and act != 'return_card' and act not in HARM_GAIN:  # help to any card of a kind: only
             # cards that use it (Kaptain 1 Nov 2026); "your General" is one card; harm on my card is kept only for its own effect below
             hits = [b for b in hits if uses_help(c, game, b, act, kw, ps, w)]
+            if act in ('stat_change', 'grow') and a in all_raisers(c):  # all my units raised alike: no ally passes a filter by my own
+                # power that it failed before (For Demacia! -> Poppy; verdict rt 50)
+                hits = [b for b in hits if use_of(c, game, b, act, kw, ps, w) != 'more power: its text reads its power']
         n = len(makers[(act, kind, kw, rule if rule in (True, False, 'boost') else True)])
         if rule == 'boost':
             kind_, x, why = BOOST.get(act, ('boosts', 1.0, 'lets it do more'))
@@ -1235,8 +1309,10 @@ def aimed(c, game, nodes, broad):
             continue
         for b in hits:
             if act in ('move', 'swap') and a in home_only(c)[0] and b in home_only(c)[1]: continue  # onto my land, it needs enemy land
+            said_ = (use_of(c, game, b, act, kw, ps, w) if not sharp and act == 'give_keyword' and not rule else None)  # a keyword given
+            # to any ally: say how its text uses it (L16: Lucky Find -> Sivir level 2)
             if rule: out[(a, b)].append(('boosts' if isinstance(rule, str) else 'rules', 1.0 / n, what + at))  # stats given make it stronger; the rest change how it works
-            elif helps_it(c, act, kw, ps): out[(a, b)].append(('boosts', 0.5 / max(1, len(hits)), aim_said(act, kwn(kw), ps) + at))
+            elif helps_it(c, act, kw, ps): out[(a, b)].append(('boosts', 0.5 / max(1, len(hits)), (said_ or aim_said(act, kwn(kw), ps)) + at))
             elif act in HARM_GAIN and not gains.get(b, set()) & HARM_GAIN[act]: continue  # my harm on my card: only for its own effect
             elif act == 'give_keyword' and kw_tree(c, kw) in BAD_STATUS: continue  # Sparkly Kitties confuses a friend: a drawback, no help
             elif act in ('remove_keyword', 'remove_keywords') and not kw: continue  # "steal all statuses from friendly units" (Timber Alchemists): every
@@ -1559,6 +1635,13 @@ def played_lines(c, game, nodes, broad):
                 say = f'makes a {mk} whose {GERUND.get(h, h)} sets off its effect' if role == 'trigger' else f'makes a {mk} it needs {h} for its count'
                 if not any(l[2].startswith(say) for l in out[(a, t)]):
                     out[(a, t)].append(('levels', 1.0 / n, say + ' (levels it up)') if ab in lvl else ('waits' if role == 'trigger' else 'type', 0.5 / n, say))
+    for t, ab in c.execute(f"""select card, ability from flat_if where test in ('amount_distinct','distinct') and attr='region'
+            and card in ({marks})""", list(nodes)).fetchall():  # "allies from 10 regions" (The Bandle Tree): cards that make
+        # multi-region or other-region cards bring more regions (L17)
+        for (a,) in c.execute(f"""select distinct card from flat_do where origin='own' and act in ('create','summon','keyword_action')
+                and coalesce(on_side,'mine')='mine' and (on_with like '%multi_region%' or on_with like '%region not own_regions%') and card in ({marks})""", list(nodes)):
+            if a != t: out[(a, t)].append(('levels' if ab in lvl else 'type', 0.5, 'makes a card from more regions: more regions for its count' +
+                                           (' (levels it up)' if ab in lvl else '')))
     for t, ab in c.execute(f"""select card, ability from flat_if where test in ('amount_distinct','distinct') and event='played'
             and card in ({marks})""", list(nodes)).fetchall():
         # cards that make cards I then play: not planted Chimes or traps, which go off by themselves when drawn and are never
@@ -2305,9 +2388,13 @@ def self_gains(c, nodes):
     """card -> what done to it sets off its own effect (dies, killed, damaged, survives_damage, sacrificed). A death keyword (Last
     Breath, Dying Wish) is its effect; a shield keyword that fires on damage (Barrier, Forcefield) is no effect anyone damages it for"""
     marks = ','.join('?' * len(nodes)); wants = collections.defaultdict(set)
-    for t, h in c.execute(f"""select card, happening from flat_ref where role='trigger' and pick='self' and (origin='own' or
+    shield_ = {ab for (ab,) in c.execute("select ability from flat_do group by ability having min(act in ('negate_damage','damage_reduction'))=1")}
+    by_enemy_ = {ab for (ab,) in c.execute("select ability from flat_when where actor_side='enemy'")}
+    for t, h, ab_ in c.execute(f"""select card, happening, ability from flat_ref where role='trigger' and pick='self' and (origin='own' or
             (origin='has_keyword' and happening in ('dies','killed'))) and happening in ('dies','killed','damaged','survives_damage','sacrificed')
-            and card in ({marks})""", list(nodes)): wants[t].add(h)
+            and card in ({marks})""", list(nodes)):
+        if ab_ in shield_ or ab_ in by_enemy_: continue  # it only stops the damage, or fires only on enemy damage (Petricite Charger)
+        wants[t].add(h)
     return wants
 
 

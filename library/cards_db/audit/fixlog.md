@@ -32,5 +32,16 @@ rt 48, 51: FIXED (missed lines) copies put into play and champions summoned from
 rt 26, old 33: NOT FIXED: Kaptain's nst26 keeps "makes more cards to play" (Blade Dance -> A Thousand Cuts).
 rt 33, old 16 tribes: NOT FIXED: Kaptain's ndu34 keeps help to a tribe (Oakenheart -> Mechs).
 rt 39: ALREADY GONE (Belvethi Elder -> Braum). rt 52 (The Bandle Tree), rt 53 (Faces of the Old Ones), rt 57 (The Sky Shadows): rt 53 and 57 FIXED (a minority card filter in "if you have" is a need, need_lines); rt 49, rt 55: FIXED (power raisers feed counts of units with a power floor, stat_reader_lines); rt 58: FIXED (a keyword given to the drawn copy, state_giver_lines); rt 59: FIXED for return_to_hand with no side (aimed_rows); Will of Ionia's Recall (a keyword action) not yet.
-NOT REACHED, Runeterra (verdict_rt_*.md): rt 19 (Alatis -> Dragonling "bigger"), 20 (power to Master Yi level 2), 23 (Zap Sprayfin's draw by a broad filter), 24 (Realm Warp -> Elder Dragon level 2), 30 (Powder Keg -> Poison Puffcap, Yasuo level 2 -> Blue Sentinel), 34 (Gangplank level 1 -> Powderful Explosion), 35 (Prancing Sea Spirits kills), 37 (ALREADY GONE), 41 (Senna's Fast part), 44 (spells of 3 or less for Lux level 2), 46 (Bone Skewer -> Pyke, missed), 50 (Poppy partly), 52 (The Bandle Tree, missed), 59 (Will of Ionia Recall), 60 (Rally -> Akshan, missed), 61 (keywords to allies -> Sivir level 2, missed).
+rt 19, 30 (Powder Keg -> Poison Puffcap): FIXED a bigger effect needs a number of the card's own, not a harm on my side (numbered(); X cards count). Psionic Strike -> Scioness Sajj gone with it (a General's hits are rules, L18).
+rt 23: FIXED a tutor's share is measured among its own kind (Zap Sprayfin: most spells cost 3 or less).
+rt 24, old 31 (Realm Warp): FIXED keeping drawn cards by kind only is no line.
+rt 30: FIXED shields and enemy-only damage triggers are no effect I damage it for (self_gains); "it" after "when you Stun an enemy" is that enemy (it_side).
+rt 34: FIXED a skill only the level-up casts is not the base card's (Gangplank, Twisted Fate -> Powderful Explosion).
+rt 35: FIXED a keyword given to its own copy (Ephemeral) makes its own death, no kill (self_kw).
+rt 41: FIXED a spell's speed is help to a whole kind (only users).
+rt 46: FIXED a strike now reaches a named doer (doer_fits strikers) and "when I kill" (use_of own_hits).
+rt 50: FIXED a card reading its own power gets power help (own_power_readers), not from raise-all cards (all_raisers).
+rt 52: FIXED makers of multi-region cards feed a region count. rt 59: FIXED Recall is a return to hand. rt 60: FIXED an own attack (Rally) is a strike too. rt 61: FIXED a keyword given to a card that shares its keywords (sharers); the reason says the use.
+rt 20, 44: NOT REAL: Master Yi level 2's "Attack: I strike" is a strike its text starts (L18 Deepwood Stalker); Lux level 2 counts mana of spells (L17).
+Tests n343-n362.
 NOT REACHED, old round (verdict_1-4.md; each cause's games are in its card names; Runeterra examples inside them are Runeterra work): 17-24, 26-27, 30-32, 35-49, 51-55, 57-75, 77-91, 93-95.

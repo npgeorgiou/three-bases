@@ -337,3 +337,23 @@ n339	runeterra	Avarosan Hearthguard, Trifarian Assessor	Avarosan Hearthguard	Tri
 n340	runeterra	Troll Chant, Reckoning	Troll Chant	Reckoning	none	power it counts	audit 3 Nov 2026: Troll Chant gives my units no power
 n341	runeterra	Stalking Shadows, Hecarim	Stalking Shadows	Hecarim	line	Ephemeral	audit 3 Nov 2026: the drawn copy is Ephemeral, Hecarim counts Ephemeral attackers
 n342	runeterra	Defiant Dance, Dunekeeper	Defiant Dance	Dunekeeper	line	returns it to hand	audit 3 Nov 2026: a return to hand replays a summon effect (L14)
+n343	runeterra	Powder Keg, Paralyzing Bite, Mystic Shot	Powder Keg	Paralyzing Bite	none	bigger	audit 3 Nov 2026: a stun has no number to make bigger (rt 19, L14)
+n344	runeterra	Powder Keg, Paralyzing Bite, Mystic Shot	Powder Keg	Mystic Shot	line	bigger	audit 3 Nov 2026: Mystic Shot deals 2: Powder Keg adds 1
+n345	runeterra	Zap Sprayfin, Make it Rain	Zap Sprayfin	Make it Rain	none	draws it	audit 3 Nov 2026: most spells cost 3 or less: a draw by kind (rt 23, L1b, L21)
+n346	runeterra	Realm Warp, Elder Dragon	Realm Warp	Elder Dragon (level 2)	none	keeps it	audit 3 Nov 2026: keeping the cards that are not followers is a draw by kind (rt 24, L1b)
+n347	runeterra	Avalanche, Petricite Charger	Avalanche	Petricite Charger	none	damages it	audit 3 Nov 2026: Petricite Charger only stops damage from enemy spells (rt 30, L9)
+n348	runeterra	Yasuo, Blue Sentinel	Yasuo (level 2)	Blue Sentinel	none	death effect	audit 3 Nov 2026: Yasuo strikes the stunned enemy, never my Blue Sentinel (rt 30, L9)
+n349	runeterra	Gangplank, Powderful Explosion	Gangplank	Powderful Explosion	none	skill	audit 3 Nov 2026: only Gangplank level 2 casts Powderful Explosion (rt 34)
+n350	runeterra	Gangplank, Powderful Explosion	Gangplank (level 2)	Powderful Explosion	line	skill	audit 3 Nov 2026: Gangplank level 2 casts Powderful Explosion
+n351	runeterra	Prancing Sea Spirits, Ceaseless Sentry	Prancing Sea Spirits	Ceaseless Sentry	none	death effect	audit 3 Nov 2026: its Ephemeral copy is itself: it kills nothing of mine (rt 35, L9)
+n352	runeterra	Senna, Absorb Soul	Senna (level 2)	Absorb Soul	none	Fast	audit 3 Nov 2026: Fast is help to a whole kind; Absorb Soul does not use speed (rt 41, L14)
+n353	runeterra	Senna, Absorb Soul	Senna (level 2)	Absorb Soul	line	cheaper	audit 3 Nov 2026: Absorb Soul is a damage spell: Senna makes it cost 1 less
+n354	runeterra	Bone Skewer, Pyke	Bone Skewer	Pyke	line	levels it up	audit 3 Nov 2026: a strike now by Pyke counts toward his 15 damage (rt 46, L2)
+n355	runeterra	Frenzied Feast, Pyke	Frenzied Feast	Pyke (level 2)	line	strike	audit 3 Nov 2026: Pyke strikes and kills: his 'when I kill' goes off (rt 46, L2)
+n356	runeterra	For Demacia!, Poppy	For Demacia!	Poppy	none	reads its power	audit 3 Nov 2026: all allies raised alike: no more allies pass Poppy's filter (rt 50, L18)
+n357	runeterra	Twin Disciplines, Poppy	Twin Disciplines	Poppy	line	power	audit 3 Nov 2026: more power on Poppy lets more allies get her bonus (rt 50, L18)
+n358	runeterra	Loping Telescope, The Bandle Tree	Loping Telescope	The Bandle Tree	line	regions	audit 3 Nov 2026: a multi-region follower adds regions to the Bandle Tree's count (rt 52, L17)
+n359	runeterra	Will of Ionia, Icevale Archer	Will of Ionia	Icevale Archer	line	returns it to hand	audit 3 Nov 2026: Recall replays Icevale Archer's Play (rt 59, L14)
+n360	runeterra	Golden Aegis, Akshan	Golden Aegis	Akshan	line	strike	audit 3 Nov 2026: Rally gives another attack: Akshan strikes again (rt 60, L2)
+n361	runeterra	Sion Returned, Draven	Sion Returned	Draven (level 2)	line	strike	audit 3 Nov 2026: Rally gives another attack: Draven strikes again (rt 60, L2)
+n362	runeterra	Lucky Find, Sivir	Lucky Find	Sivir (level 2)	line	passes	audit 3 Nov 2026: a keyword on Sivir goes to her attacking allies (rt 61, L14)
