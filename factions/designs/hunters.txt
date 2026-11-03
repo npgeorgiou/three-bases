@@ -1,66 +1,91 @@
 ==================================================================
 WILD HUNT — stage 1 (3 Nov 2026; Claude's design for Kaptain to check). Theme: the Wild Hunt of northern European
-folklore (Odin's or Herne's ghostly hunt riding the storm, its hounds and horns) and real medieval hunting.
+folk tales (Odin's or Herne's ghostly hunt riding the storm with hounds and horns), and real medieval hunting.
 ==================================================================
-Check: python3 tools/network_check.py factions/designs/hunters.txt
+Stage 1 has no cards yet. The example cards below only show the idea; they have no costs or stats.
 
-THEME: WHAT THEY ARE LIKE
-- The chase: once they have the scent, they never stop.
-- Marking the quarry: the huntsman chooses one animal and the whole hunt goes after it.
-- Hounds: packs of dogs that wear the prey down before the hunters arrive.
-- The horn: a call that brings the whole hunt at once.
-- Blood trail: a wounded animal is easy to follow and easy to finish.
-- Trophies: antlers, skins and heads; the hunter's standing grows with each kill.
-- Riding the storm: the Hunt crosses the sky from place to place in one night.
-- Fear: villagers lock their doors; who sees the Hunt is swept along or flees.
-- The leader: a great huntsman (Odin, Herne) at the head; everyone follows his choice.
-- Hunger: the Hunt must keep killing; if it stops, it fades.
-- Night and moon: strongest in the dark, when the prey can't see them.
-- The feast: the kill is shared; the pack eats and grows.
+THE THEME
+The Wild Hunt are ghostly huntsmen. What they are like:
+- Once they have the scent, they never stop.
+- The huntsman chooses one animal, and the whole hunt goes after it.
+- Packs of hounds wear the prey down before the hunters arrive.
+- A horn call brings the whole hunt at once.
+- A wounded animal leaves a blood trail; it is easy to follow and easy to finish.
+- They take trophies: antlers, skins, heads. A hunter's standing grows with each kill.
+- They ride across the sky in the storm, from place to place in one night.
+- Villagers lock their doors in fear; whoever sees the Hunt is swept along or flees.
+- A great huntsman leads, and everyone follows his choice.
+- The Hunt must keep killing; if it stops, it fades away.
+- They are strongest at night, when the prey can't see them.
+- The kill is shared at a feast, and the pack grows.
 
-MECHANICS
-1. THE QUARRY. Give: commit to one enemy (Mark it; one Mark per lane at a time). Take: strikes on the marked enemy deal
-   double (Kaptain's Mark idea), and many cards gain while the quarry lives or when it dies. The decision: which enemy
-   is worth the whole hunt. Answer: protect it, move it away, let it die cheaply. NEW RULE (Mark). [library: Monster
-   Train Stygian Guard mark (10%); Runeterra Freljord and Noxus marks; Duelyst Grasp of Agony]
-2. BLOOD TRAIL. Give: first hits that don't kill (hounds that bite: low strength, many strikes). Take: cards that gain
-   from Bloodied enemies (the game's state: less defence than its card): finish them for a bonus, the hunters gain
-   strength on a Bloodied target, the trail lets a hunter strike it from the back rows. "I wound -> I benefit from
-   wounded enemies." Answer: restore shields (ends Bloodied), Armoured. [library: damage -> condition_life -> on_kill
-   (Duelyst, Monster Train, Runeterra); Runeterra Noxus "damaged enemy"]
-3. TROPHIES. Give: they have no other income engine; they must keep killing. Take: each kill makes the hunter's lane
-   richer (Kaptain's idea: units that permanently gain own produced supply on a kill) while the enemy's lane loses that
-   unit's supply: a double swing. Their draw card sits here ("the feast": draw when the quarry dies, once per round).
-   Answer: give them nothing to kill (few, big units). [library: on_kill -> stat_multiply (Duelyst, Runeterra);
-   Inscryption Beast bones from deaths; resource_gain on kill (Monster Train)]
-4. THE HORN. Give: units held in hand (not played one by one). Take: horn cards and Place effects that reward several
-   hunters arriving in the same lane in one round (the pack gathers): each hunter placed after the first gains, and
-   back-row riders charge in on the horn (Kaptain's Charge-from-the-back idea: move and attack in one go). Answer: kill
-   the first arrivals, keep the front row full so the riders have no target. [library: Duelyst Lyonar "units enter
-   play"; Monster Train Hellhorned; Faeria Yellow Charge/Haste]
-5. HUNGER. Give: hunters that don't kill fade: "Round end: if no enemy died in my lane this round, I lose 1 shield".
-   Take: stats above the curve for their cost (a drawback, paid as the rules say). Pushes the faction to attack every
-   round; makes the enemy's choice to hide meaningful. Answer: hide, trade slowly. [library: Monster Train Melting
-   Remnant Burnout; Runeterra Shadow Isles ephemeral]
+THE FIVE MECHANICS
 
-WEB
+1. "I choose one enemy as my prey -> everything I have hits it harder."
+   A card marks one enemy unit (one mark per lane at a time). Strikes on the marked enemy deal double (your Mark idea),
+   and many cards gain while the prey lives, or when it dies. The player chooses which enemy is worth the whole hunt.
+   The enemy answers by protecting it, moving it away, or letting it die cheaply.
+   NEW RULE: Mark.
+   Example card: a huntsman who, when placed, marks the enemy facing him.
+   Library: marks in Monster Train's Stygian Guard, Runeterra's Freljord and Noxus; Duelyst's Grasp of Agony.
+
+2. "My hounds hit without killing -> my hunters gain against wounded enemies."
+   Their hounds have low strength and strike often, so the enemy is left Bloodied (less defence than its card shows).
+   Other cards gain from Bloodied enemies: they finish them for a bonus, gain strength against them, or reach them from
+   the back rows. The enemy answers by restoring shields (that ends Bloodied), or with Armoured units.
+   Example card: a finisher who gains +2 strength when he attacks a Bloodied enemy.
+   Library: damage, then a check on the target's health, then a kill (Duelyst, Monster Train, Runeterra); Runeterra's
+   Noxus (cards that care about damaged enemies).
+
+3. "I kill -> my lane gets richer and the enemy's poorer."
+   Each kill makes the hunter's lane give more supply, for good (your idea: units that permanently gain their own
+   supply on a kill), while the enemy's lane loses the dead unit's supply. Their draw card is here: the feast, which
+   draws a card when the prey dies (once per round). They have no other way to get rich, so they must keep killing.
+   The enemy answers by giving them nothing to kill: few, big units.
+   Example card: a trophy hunter who gains Supply +1 each time his strike kills.
+   Library: units that grow on a kill (Duelyst, Runeterra); Inscryption's Beast (bones from deaths); Monster Train
+   (resources on a kill).
+
+4. "I hold my hunters in hand and play several in one round -> they arrive as a pack."
+   Horn cards and Place effects reward several hunters arriving in the same lane in one round: each one placed after
+   the first gains. On the horn, riders in the back rows move up and attack in one go (your idea: Charge units in back
+   rows that move and attack together, paying both). The enemy answers by killing the first arrivals, or by keeping his
+   front row full so the riders have no target.
+   Example card: a horn spell: the hunters you place in this lane this round gain +1|+1.
+   Library: Duelyst's Lyonar (units entering play); Monster Train's Hellhorned; Faeria's Yellow (charging units).
+
+5. "My hunters fade if they don't kill -> they are stronger for their cost."
+   A hungry hunter loses 1 shield at each round end in which no enemy died in his lane. That drawback buys him stats
+   above the curve (the rules on drawbacks). It pushes the faction to attack every round, and it makes the enemy's
+   choice to hide matter. The enemy answers by hiding and trading slowly.
+   Example card: a hungry hound, strong for its cost, that loses 1 shield at each round end without a kill in its lane.
+   Library: Monster Train's Melting Remnant (Burnout); Runeterra's Shadow Isles (units that fade).
+
+HOW THE MECHANICS FEED EACH OTHER
+- The horn brings many hunters (4), whose many small strikes leave enemies Bloodied (2).
+- The prey takes double (1) and dies.
+- Kills pay trophies (3), which pay for the next horn (4) and keep the hungry hunters from fading (5).
+- Cards in two mechanics: a hound that leaves enemies Bloodied (2) and gains from the horn (4); a huntsman who marks
+  when placed (1) and takes a trophy when he kills (3).
+For the network check (python3 tools/network_check.py factions/designs/hunters.txt):
 MECHANIC Quarry | makes: marked-enemy, enemy-killed, quarry-dies | needs: strikes, enemy-in-reach
 MECHANIC BloodTrail | makes: bloodied-enemies, strikes, enemy-killed | needs: many-strikes, marked-enemy
 MECHANIC Trophies | makes: supply, cards, grown-hunters | needs: enemy-killed, quarry-dies
 MECHANIC Horn | makes: many-strikes, strikes, enemy-in-reach | needs: supply, cards
 MECHANIC Hunger | makes: cheap-stats, many-strikes | needs: enemy-killed, grown-hunters
-How they feed: the horn brings many hunters (4), whose many small strikes bloody enemies (2); the quarry takes double
-(1) and dies; kills pay trophies (3), which pay for the next horn (4) and keep the hungry hunters fed (5). A card in two:
-a hound that bloodies (2) and gains from the horn (4); a huntsman that marks on Place (1) and takes a trophy on its kill
-(3).
 
-WAYS TO PLAY: The quarry (one mark, everything on it) · Hounds (many cheap strikes, Bloodied finishers) · The ride
-(back-row riders charging in on the horn) · Feast (trophy economy, out-earn the enemy).
+WAYS TO PLAY THE FACTION
+- The prey: one mark, everything goes at it.
+- Hounds: many cheap strikes, then the finishers.
+- The ride: back-row riders charging in on the horn.
+- Feast: kill for supply and out-earn the enemy.
 
-STRONG AT: early pressure, removal of weak and wounded units, supply from kills (shared signature with the Brokers).
-ONLY A LITTLE: lane changes (riding the storm: a few riders move to a lane where the quarry fled; Outrider on very few),
-spells (~25%: horns, marks, the feast). WEAK AT: defence, the late game, holding after a lost fight, big units, area
-damage, cards that work without killing.
-LANE CONTROL: "as long as you hold this lane's base, my trophies give +1 more"; "if you don't, I'm hungrier: +1
-strength".
-FEEL: the chase: choose the prey, run it down, feast, choose again.
+STRONG, A LITTLE, WEAK
+- Strong at: early pressure, killing weak and wounded units, supply from kills.
+- Only a little: changing lanes (riding the storm: a few riders go to the lane the prey fled to; Outrider on very few),
+  spells (about 25%: horns, marks, the feast).
+- Weak at: defence, the late game, holding a lane after losing a fight, big units, damage to many units at once,
+  cards that work without killing.
+- Holding the lane's base: "As long as you hold this lane's base, my trophies give 1 more." "If you don't, I'm
+  hungrier: +1 strength."
+- How it should feel: the chase: choose the prey, run it down, feast, choose again.

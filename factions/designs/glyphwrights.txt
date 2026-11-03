@@ -1,66 +1,96 @@
 ==================================================================
-GLYPHWRIGHTS — stage 1 (3 Nov 2026; Claude's design for Kaptain to check). Theme: Daoist talisman masters of old China
-(fu talismans, yin and yang, feng shui, paper effigies, the flow of qi, alchemy of long life).
+GLYPHWRIGHTS — stage 1 (3 Nov 2026; Claude's design for Kaptain to check). Theme: the Daoist talisman masters of old
+China.
 ==================================================================
-Check: python3 tools/network_check.py factions/designs/glyphwrights.txt
+Stage 1 has no cards yet. The example cards below only show the idea; they have no costs or stats.
 
-THEME: WHAT THEY ARE LIKE
-- Talismans: magic written in ink on paper strips and stuck on people, doors, corpses; it works as long as it stays.
-- Burning: a talisman is burned to release its power all at once.
-- Yin and yang: every force has its opposite; balance between them is strength; too much of one is weakness.
-- Feng shui: where a thing stands and which way it faces decides its luck.
-- Qi flows: energy runs along lines and through connected things, like water in channels.
-- Paper effigies: paper soldiers, servants and horses brought to life (and burned as offerings to the dead).
-- Calligraphy: the brush and the written word; a scholar copies and improves the old texts.
-- Alchemy: elixirs that lengthen life; slow, patient growth.
-- Exorcism: driving out spirits, sealing them with a talisman.
-- The I Ching: everything changes into its opposite in turn.
-- Masters and disciples: a master teaches, the disciple carries the lesson on.
-- Mountains and hermitages: they keep to the back, far from the fighting.
+THE THEME
+The Glyphwrights are Daoist priests who write magic. What they are like:
+- They write spells in ink on strips of paper (talismans) and stick them on people, doors and the dead. A talisman works
+  as long as it stays stuck.
+- A talisman can be burned to let all its power out at once.
+- Every force has its opposite: yin and yang. Balance between them is strength; too much of one is weakness.
+- Where a thing stands and which way it faces decides its luck (feng shui).
+- Energy (qi) flows along lines and through things that touch, like water in channels.
+- They make paper soldiers, servants and horses, and bring them to life.
+- They copy the old texts with a brush and improve them; the written word is power.
+- They brew elixirs for long life: slow, patient growth.
+- They drive out spirits and seal them with a talisman.
+- Everything changes into its opposite in turn (the I Ching).
+- A master teaches, and the disciple carries the lesson on.
+- They live in mountain hermitages, far behind the fighting.
 
-MECHANICS
-1. YIN AND YANG. Every one of their cards is Yin (protects, restores, binds: works on your units) or Yang (strikes,
-   burns, drives out: works on the enemy). Give: you can't just play your best card; the order matters. Take: a card
-   played after one of the other kind gets its "balanced" bonus; two of the same kind in a row are weaker (or cost 1
-   more). The decision every turn: which kind comes next. Answer: kill the unit a Yin card was meant for, so the chain
-   breaks. NEW RULE (a card's kind, and "your last card"). [library: Slay the Spire Watcher stances (in and out of
-   Calm/Wrath); Runeterra Ionia "if you've played 2+ spells"; Claude's: alternation as the condition]
-2. TALISMANS. Give: a spell's effect now. Take: a talisman spell is stuck on a unit (yours or the enemy's) and stays on
-   it: it works while it stays (a seal on an enemy, a ward on an ally), and other cards BURN talismans for a big effect
-   at once. Kaptain's attachment idea ("items"). Answer: kill the unit that carries it (the talisman is lost, or goes
-   back to its owner's hand, item rule). NEW RULE (attached spells). [library: Runeterra equipment (Bandle City, Noxus:
-   The Papertree, Furious Wielder); Duelyst Vetruvian attachments]
-3. PAPER AND INK. Give: their units are paper (low defence). Take: units and spells turn into each other: some spells
-   make paper soldiers; a paper unit that dies puts a spell into your hand (Kaptain's babushka idea); burning a talisman
-   can raise a paper soldier in its cell. Answer: kill them with something that doesn't let them die "properly" (no
-   such answer for most factions: they are weak to plain numbers instead). [library: Faeria and Duelyst "summon on
-   spell", generate_cards in Songhai; Runeterra spells that create units]
-4. QI FLOWS. Give: their units must touch edge to edge (packed, easy to hit together). Take: what you cast on one unit
-   flows along edge-connected units: a Yin ward spreads to every touching ally, reduced by 1 each step; a Yang strike on
-   an enemy flows through touching enemies (Kaptain's chain lightning, damage that travels to edge-connected units).
-   Answer: break the line (kill the middle unit), keep their own units apart. [library: Monster Train/Runeterra chain
-   damage (Prism Bolt-like ricochet), Duelyst Magmar adjacency; Claude's: reduced flow on allies]
-5. THE MASTER'S LESSON. Give: a weak first copy of a spell. Take: cast, it puts a better version into the deck
-   (the disciple improves the text) — Kaptain's "spells that create more powerful spells in the deck". Their draw card
-   sits here ("study": draw one of your improved spells). Answer: win before the improved spells come. [library:
-   Runeterra champion spells that shuffle stronger versions; Faeria Hammer of Destruction, back into the deck]
+THE FIVE MECHANICS
 
-WEB
+1. "I play my two kinds of card in turn -> each card played after the other kind is stronger."
+   Every card of theirs is Yin (it protects, restores or binds; it works on your units) or Yang (it strikes, burns or
+   drives out; it works on the enemy). A card played right after a card of the other kind gets its bonus. Two of the
+   same kind in a row are weaker. So the player can't just play his best card; the order matters. The enemy answers by
+   killing the unit a Yin card was meant for, which breaks the order.
+   NEW RULE: a card's kind, and "your last card".
+   Example card: a Yang spell that deals 2 damage, or 4 if your last card was Yin.
+   Library: Slay the Spire's Watcher (going in and out of Calm and Wrath); Runeterra's Ionia ("if you've played 2+
+   spells"). Alternating kinds is my idea.
+
+2. "I stick a spell on a unit -> it keeps working, and later I burn it for a big effect."
+   A talisman is a spell that stays on a unit (yours or the enemy's). While it stays, it works: a seal on an enemy
+   holds it back, a ward on an ally protects it. Other cards burn talismans for a big effect at once. This is your idea
+   of items: cards attached to units. The enemy answers by killing the unit that carries it.
+   NEW RULE: spells attached to units.
+   Example card: a seal talisman: the enemy unit carrying it can't attack; when it is burned, it deals 3 damage to that
+   unit.
+   Library: Runeterra's equipment (Bandle City, Noxus: The Papertree, Furious Wielder); Duelyst's Vetruvian
+   attachments.
+
+3. "My units are made of paper -> when they die they turn back into spells."
+   Their units have low defence. Some spells make paper soldiers. A paper unit that dies puts a spell into your hand
+   (your babushka idea). Burning a talisman can raise a paper soldier in its cell. So units and spells keep turning into
+   each other. The enemy answers by killing them with plain numbers; they are weak to that.
+   Example card: a paper soldier that, when it dies, puts a small Yang spell into your hand.
+   Library: spells that make units and units that make spells (Duelyst's Songhai, Faeria, Runeterra).
+
+4. "My units stand edge to edge -> what I cast on one flows through all of them."
+   A Yin ward cast on one ally spreads to every ally touching it, 1 weaker at each step. A Yang strike on an enemy flows
+   on to the enemies touching it (your chain lightning idea, damage that travels to edge-connected units). The player
+   must keep his units packed, so they are easy to hit together. The enemy answers by killing the middle unit to break
+   the line, and by keeping his own units apart.
+   Example card: a spell that deals 3 damage to an enemy, then 2 to an enemy touching it, then 1 to the next.
+   Library: chain damage in Monster Train and Runeterra; Duelyst's Magmar (cards that care about touching units). The
+   ward that spreads to allies is my idea.
+
+5. "I cast a weak spell -> it puts a better version of itself into my deck."
+   The first copy of a spell is weak. Once cast, it shuffles an improved copy into the deck, like a disciple improving a
+   master's text (your idea: spells that create more powerful spells in the deck). Their draw card is here: it draws one
+   of your improved spells. The enemy answers by winning before the improved spells come.
+   Example card: a small talisman that, once cast, shuffles a stronger talisman into your deck.
+   Library: Runeterra's champion spells that shuffle stronger versions; Faeria's Hammer of Destruction (goes back into
+   the deck).
+
+HOW THE MECHANICS FEED EACH OTHER
+- Talismans (2) and the improving spells (5) are the Yin and Yang cards (1).
+- The bonus for the right order (1) makes the flow (4) reach further.
+- Paper soldiers carry talismans (2) and connect the flow (4).
+- Paper units die and come back as spells (3), which are cast and improve (5).
+- Cards in two mechanics: a Yin talisman that wards a paper soldier and flows to its neighbours (2 and 4); a Yang
+  spell that, cast after a Yin card, also raises a paper soldier (1 and 3).
+For the network check (python3 tools/network_check.py factions/designs/glyphwrights.txt):
 MECHANIC YinYang | makes: balanced-bonus, spells-cast | needs: yin-cards, yang-cards
 MECHANIC Talismans | makes: talismans-on-units, yin-cards, yang-cards, burn-effects | needs: units-to-carry, spells-cast
 MECHANIC PaperInk | makes: units-to-carry, spells-in-hand, connected-units | needs: burn-effects, paper-dies
 MECHANIC QiFlows | makes: enemy-damaged, paper-dies, yin-cards, yang-cards | needs: connected-units, balanced-bonus
 MECHANIC Lesson | makes: better-spells, cards, spells-cast, yin-cards, yang-cards | needs: spells-cast, spells-in-hand
-How they feed: talismans and lesson spells are the Yin/Yang cards (1); the balanced bonus makes the flow reach further
-(4); paper soldiers carry talismans (2) and connect the flow (4); paper dies and returns as spells (3) that are cast
-(5) and improve. A card in two: a Yin talisman that wards a paper soldier and flows to its neighbours (2 + 4); a Yang
-spell that, cast balanced, also raises a paper soldier (1 + 3).
 
-WAYS TO PLAY: Balance (perfect alternation, small cards) · Seals (talismans on enemy units that stop them; burn them
-later) · Paper army (cheap paper soldiers, spells from their deaths) · Flow (a packed line where one cast hits all).
+WAYS TO PLAY THE FACTION
+- Balance: perfect Yin, Yang, Yin, Yang order with small cards.
+- Seals: talismans on enemy units that hold them back, burned later.
+- Paper army: many cheap paper soldiers, and the spells their deaths give.
+- Flow: a packed line of units where one spell hits or protects them all.
 
-STRONG AT: spells (40-50% of the cards), card creation (signature), reaching the enemy back rows with spells,
-interaction (seals). ONLY A LITTLE: holding dots with bodies (paper soldiers do it badly), supply (Supply +1 disciples).
-WEAK AT: big units, defence, front-row melee, lane changes (one or two spells that cast in another lane, very rare).
-LANE CONTROL: "as long as you hold this lane's base, my talismans can't be removed"; "if you don't, burn me for +2".
-FEEL: a calligrapher's game: the right stroke after the right stroke.
+STRONG, A LITTLE, WEAK
+- Strong at: spells (40-50% of the cards), creating cards, reaching the enemy back rows with spells, holding enemy
+  units back with seals.
+- Only a little: holding dots with bodies (paper soldiers do it badly), supply (Supply +1 disciples).
+- Weak at: big units, defence, melee in the front row, changing lanes (one or two spells cast in another lane).
+- Holding the lane's base: "As long as you hold this lane's base, my talismans can't be removed." "If you don't, burning
+  me deals 2 more."
+- How it should feel: like calligraphy: the right stroke after the right stroke.

@@ -1,66 +1,95 @@
 ==================================================================
-BROKERS — stage 1 (3 Nov 2026; Claude's design for Kaptain to check). Theme: the 1920s Prohibition gangs (bootleggers,
-speakeasies, rackets, crooked police, Chicago and New York).
+BROKERS — stage 1 (3 Nov 2026; Claude's design for Kaptain to check). Theme: the gangs of the 1920s Prohibition in
+America (bootleggers, hidden bars, rackets, bought police).
 ==================================================================
-Check: python3 tools/network_check.py factions/designs/brokers.txt
+Stage 1 has no cards yet. The example cards below only show the idea; they have no costs or stats.
 
-THEME: WHAT THEY ARE LIKE
-- Protection rackets: shops pay every week to be "left alone".
-- Bootlegging: forbidden goods smuggled along hidden routes, from city to city.
-- Speakeasies: hidden bars behind ordinary fronts; the money flows in at night.
-- Bribes: police, judges and rivals' men bought; everyone has a price.
-- Informants: they know who said what, where the shipment is, what the rival plans.
-- Loans and debts: the loan shark gives money now and takes much more later; nobody escapes a debt.
-- Laundering: dirty money made clean through businesses; one kind of wealth turned into another.
-- Hits: one chosen man disappears; a contract on his name.
-- Rival gangs and turf: every street belongs to someone.
-- Gambling: dice, numbers, rigged games; they always know the odds.
-- Family loyalty: the crew protects its own; a traitor is punished.
-- Lawyers and alibis: they walk away from what they did.
+THE THEME
+The Brokers are gangsters. What they are like:
+- Protection rackets: shops pay them every week to be "left alone".
+- They smuggle forbidden drink along hidden routes, from city to city.
+- They run hidden bars behind ordinary shop fronts; the money comes in at night.
+- They bribe police, judges and the rivals' men. Everyone has a price.
+- They have informants: they know who said what, where the shipment is, what the rival plans.
+- The loan shark gives money now and takes much more back later. Nobody escapes a debt.
+- They launder money: dirty money is made clean through businesses; one kind of wealth becomes another.
+- A contract on a man's name, and he disappears.
+- Every street belongs to some gang.
+- They run dice and rigged games; they always know the odds.
+- The crew protects its own, and a traitor is punished.
+- Their lawyers get them off for whatever they did.
 
-MECHANICS
-1. DEBT. Give: something now to the enemy, or a promise of your own later. Take: more later. Your loans: gain supply or
-   a card now, and the card's "collection" takes it back at a set time (round end) with interest from the enemy if you
-   can, from you if you can't. Loans to the enemy: the enemy gets supply or a card now and pays you more at round end
-   (gift cards he must play or pay). A two-sided give-and-take, the faction's core. Answer: refuse to pay by ending the
-   round with nothing to take, kill the collector. NEW RULE (cards given to the enemy). [library: Inscryption
-   Technology enemy_benefit; Stormbound Shadowfen and Duelyst donate; Hearthstone plague cards (Part 7 idea)]
-2. PROTECTION. Give: you let the enemy act. Take: each time an enemy unit facing one of your racketeers moves or attacks
-   (or is placed facing it), you gain 1 supply in that lane (once per enemy unit per round). The enemy's own actions
-   pay you, whatever they cost him; the decision is which enemy to stand in front of (the one that must act). Answer: kill the racketeer first, act in other columns. [library: Claude's (this game's per-action cost);
-   closest: Runeterra Bilgewater plunder, Monster Train Stygian Guard "cards are played" triggers]
-3. INFORMANTS. Give: actions spent on looking (cards that show the enemy's hand or next card). Take: the cards that
-   know: a hit that names a card the enemy holds, a copy of a card you saw (you can play the enemy's own cards: the
-   signature, stealing cards). Answer: play out the hand, hold few cards. [library: Runeterra Bandle City and Shurima
-   information (11%, 8%); Duelyst Songhai; steal chains steal -> destroy -> on_kill]
-4. LAUNDERING. Give: one kind of wealth. Take: another: a unit sold back to the hand for supply, supply paid for a card,
-   a stolen card paid for with the enemy's own supply. Turns the takings of (1)-(3) into what the board needs.
-   Answer: none directly; it is slow (each step is an action the enemy can answer). [library: resource_conversion
-   (Inscryption Undead); Faeria Pandora; Monster Train shop gold]
-5. THE CREW. Give: their units are cheap and weak alone. Take: crew units protect each other: when a crew unit is
-   struck, another of the crew answers (the enemy pays a price for every hit); a crew unit that dies is avenged (a
-   contract on its killer). Answer: area damage, kill the strongest first. [library: Duelyst Lyonar and Runeterra
-   Demacia "when an ally is struck"; mark_target (Monster Train Stygian Guard)]
+THE FIVE MECHANICS
 
-WEB
+1. "I lend now, to myself or to the enemy -> I collect more later."
+   A loan to yourself: you get supply or a card now, and at round end it is collected back, with interest from the
+   enemy if one of your collectors stands in the lane, from you if not. A loan to the enemy: a card goes into the
+   enemy's hand that gives him supply now, and at round end he pays you more than he got. The enemy answers by killing
+   the collector, or by holding nothing to pay with.
+   NEW RULE: cards given to the enemy.
+   Example card: a loan shark who, when placed, gives the enemy 2 supply in this lane; at round end the enemy loses 3
+   carry-over and you gain it.
+   Library: Inscryption's Technology (cards that help the enemy); Stormbound's Shadowfen and Duelyst (units given to the
+   enemy); the Hearthstone plague cards from Part 7.
+
+2. "I let the enemy act -> his actions pay me."
+   Each time an enemy unit standing facing one of their racketeers moves or attacks, or is placed there, you gain 1
+   supply in that lane (once per enemy unit per round). Every action pays the same, whatever it costs the enemy, so
+   the player chooses which enemy unit to stand in front of: the one that has to act. The enemy answers by killing the
+   racketeer first, or by acting with units in other columns.
+   Example card: a racketeer: when the enemy unit facing me attacks, you gain 1 supply.
+   Library: none close; this comes from this game's rule that every action costs supply (my idea).
+
+3. "I look at the enemy's cards -> I play them against him."
+   Some cards show the enemy's hand or his next card. Other cards use what you saw: a contract that names a card in the
+   enemy's hand, a copy of an enemy card that you can play. The enemy answers by playing out his hand and holding few
+   cards.
+   Example card: an informant who, when placed, shows you the enemy's hand and puts a copy of one of its cards into
+   yours.
+   Library: Runeterra's Bandle City and Shurima (seeing cards); Duelyst's Songhai; stealing that leads to a kill in
+   Into the Breach, Runeterra and Stormbound.
+
+4. "I turn one kind of wealth into another -> I always have what the board needs."
+   A unit sold back to the hand gives supply; supply buys a card; a stolen card is paid for with the enemy's supply. It
+   turns what the other mechanics bring in into what is needed now. The enemy can't stop it directly, but every step
+   is an action he can answer.
+   Example card: a front business: when placed, return one of your units to your hand and gain supply equal to its
+   cost.
+   Library: Inscryption (one resource turned into another); Faeria's Pandora; Monster Train's shop gold.
+
+5. "My units are cheap and weak alone -> the crew pays back every hit."
+   When a crew unit is struck, another unit of the crew strikes back at the attacker. When a crew unit dies, its killer
+   gets a contract on him (a mark for the crew's revenge). The enemy pays for every hit he makes. The enemy answers with
+   damage to many units at once, and by killing the strongest first.
+   Example card: an enforcer: when an ally next to me is struck, I strike the attacker.
+   Library: Duelyst's Lyonar and Runeterra's Demacia ("when an ally is struck"); marks in Monster Train's Stygian Guard.
+
+HOW THE MECHANICS FEED EACH OTHER
+- The rackets (2) and the loans (1) bring supply, which pays for looking at cards (3) and turning wealth around (4).
+- A card you gave the enemy is a card you know he holds (1 and 3).
+- Stolen cards are sold or played (4).
+- The crew (5) are the racketeers and collectors, and every hit on them makes the enemy act next to them (2).
+- Cards in two mechanics: a racketeer who taxes the facing enemy (2) and, sold back to the hand, gives what he took as
+  supply (4); a loan card (1) that also shows you the enemy's hand (3).
+For the network check (python3 tools/network_check.py factions/designs/brokers.txt):
 MECHANIC Debt | makes: supply, cards, enemy-pays, enemy-cards-given | needs: supply, collectors
 MECHANIC Protection | makes: supply, enemy-acts-less | needs: racketeers-facing, enemy-acts
 MECHANIC Informants | makes: enemy-hand-known, stolen-cards, contracts | needs: supply, enemy-cards-given
 MECHANIC Laundering | makes: supply, cards, collectors, racketeers-facing | needs: stolen-cards, supply, units-to-sell
 MECHANIC Crew | makes: units-to-sell, collectors, racketeers-facing, enemy-acts | needs: contracts, supply
-How they feed: protection (2) and debt (1) bring supply that buys looking (3) and laundering (4); cards given to the
-enemy are cards you know he holds (1 -> 3); stolen cards are laundered into supply or played (4); the crew (5) are the
-racketeers and collectors, and every hit on them makes the enemy act near them (2). A card in two: a racketeer who
-taxes the facing enemy (2) and, sold back to the hand, gives its taxes back as supply (4); a loan card (1) that also
-shows you the enemy's hand (3).
 
-WAYS TO PLAY: Racket (many racketeers; the enemy's actions fund you) · Loan shark (gifts that the enemy pays back
-double) · Informants (steal and play the enemy's best cards) · The crew (cheap units that punish every hit).
+WAYS TO PLAY THE FACTION
+- Racket: many racketeers; the enemy's own actions pay for everything.
+- Loan shark: gifts that the enemy pays back double.
+- Informants: steal the enemy's best cards and play them.
+- The crew: cheap units that punish every hit.
 
-STRONG AT: interaction (the highest), stealing and seeing cards (signature), supply play (shared signature, with the
-Hunters' trophies the only other). ONLY A LITTLE: damage (contracts and hits, few), defence (the crew). WEAK AT: big
-units, raw damage, holding a lane by force, area damage, healing.
-BETWEEN LANES: smuggling: supply taken in one lane delivered to another (bootleg routes, a few cards); one gangster
-with Outrider (the getaway car). LANE CONTROL: "as long as you hold this lane's base, my racket takes 2"; "if you
-don't, my loans cost the enemy 1 more".
-FEEL: the enemy pays for everything he does, and you smile.
+STRONG, A LITTLE, WEAK
+- Strong at: playing against the enemy (the most of all five), stealing and seeing cards, supply taken from the enemy.
+- Only a little: damage (a few contracts and hits), defence (the crew).
+- Weak at: big units, plain damage, holding a lane by force, damage to many units at once, healing.
+- Between lanes: smuggling: supply taken in one lane delivered to another (a few cards); one gangster with Outrider
+  (the getaway car).
+- Holding the lane's base: "As long as you hold this lane's base, my racket takes 2." "If you don't, my loans cost the
+  enemy 1 more."
+- How it should feel: the enemy pays for everything he does.

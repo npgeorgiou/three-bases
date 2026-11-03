@@ -40,12 +40,12 @@ START_DESIGN.md                   148  START HERE for any faction or card design
 9-new-factions.txt                  41  9. THE FIVE NEW FACTIONS in the game for testing (identity, mechanics, specials)
 8-rejected-and-cut.txt                6  8. REJECTED AND CUT (don't reintroduce without asking)
 10-outside-design-guides.txt        79  10. What outside design guides teach (Hearthstone, Rosewater, Slay the Spire...) and what they mean here
-designs/00-five-identities.txt     27  The five new factions from zero: overview, contrast, signatures, new rules needed
-designs/ironfront.txt              66  Ironfront (World War I) stage 1: theme, mechanics, web, ways to play
-designs/lodestones.txt             64  Lodestones (megaliths, all Immobile) stage 1
-designs/glyphwrights.txt           66  Glyphwrights (Daoist talismans) stage 1
-designs/brokers.txt                66  Brokers (Prohibition gangs) stage 1
-designs/hunters.txt                66  Wild Hunt stage 1
+designs/00-five-identities.txt     52  The five new factions from zero: overview, contrast, signatures, new rules needed
+designs/ironfront.txt              90  Ironfront (World War I) stage 1: theme, mechanics, web, ways to play
+designs/lodestones.txt             88  Lodestones (megaliths, all Immobile) stage 1
+designs/glyphwrights.txt           96  Glyphwrights (Daoist talismans) stage 1
+designs/brokers.txt                95  Brokers (Prohibition gangs) stage 1
+designs/hunters.txt                91  Wild Hunt stage 1
 
 ==================================================================
 1. CURRENT FACTIONS

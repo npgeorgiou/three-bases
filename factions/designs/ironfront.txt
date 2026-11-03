@@ -1,66 +1,90 @@
 ==================================================================
 IRONFRONT — stage 1 (3 Nov 2026; Claude's design for Kaptain to check). Theme: World War I.
 ==================================================================
-Check: python3 tools/network_check.py factions/designs/ironfront.txt
+Stage 1 has no cards yet. The example cards below only show the idea; they have no costs or stats.
 
-THEME: WHAT THEY ARE LIKE
-- They dig in: trenches, sandbags, waiting for days under fire.
-- Attrition: a war won by who can lose more men; the dead are replaced by the next draft.
-- The front and the rear: men rot in the front line (mud, shell shock) and are rotated back to rest.
-- Artillery: barrages from far behind, creeping forward row by row; shells that burst, shells that bury themselves.
-- Going over the top: after the long wait, everyone at once on the whistle.
-- War industry: factories turn money into shells; trains bring them to the front.
-- No man's land: the ground between is death; wire and machine guns make the enemy pay for every step.
-- Tanks: slow new machines that break a line.
-- Mines and tunnels: sappers dig under the enemy and blow him up from below.
-- Observation: balloons and spotters tell the guns where to fire.
-- Medals and memorials: the fallen are honoured; their names make the others braver.
-- Stalemate: little moves; whoever breaks first loses.
+THE THEME
+The Ironfront are the armies of World War I. What they are like:
+- They dig trenches and wait in them for days under fire.
+- The war is won by whoever can lose more men. The dead are replaced by the next men called up.
+- Men in the front line wear down from mud and shell shock. They are sent back to rest and others take their place.
+- Their guns stand far behind the front and fire over it, row by row.
+- After the long wait, everyone climbs out of the trench at once on the whistle ("going over the top").
+- Factories turn money into shells, and trains bring the shells to the front.
+- The ground between the armies is deadly. Barbed wire and machine guns make the enemy pay for every step.
+- Tanks are new, slow machines that break through a line.
+- Sappers dig tunnels under the enemy and blow him up from below.
+- Spotters in balloons tell the guns where to fire.
+- The fallen get medals and memorials, and their names make the others braver.
+- Little moves. Whoever breaks first loses.
 
-MECHANICS (each a give-and-take that many cards work through)
-1. HOLD, THEN RELEASE. Give: the action (a unit that does not move or attack this round). Take: it grows at round end
-   ("Round end: if I didn't act this round, I gain +1 strength", lasting). Release cards spend it: all units that dug in
-   strike at once (over the top), or a unit's grown strength becomes damage. The decision each turn: act now or wait.
-   Answer: kill the waiting units before they grow, or force them to act. [library: Slay the Spire Watcher, Calm stores
-   and Wrath spends; Runeterra Blighted Battleaxe, "if my bearer didn't attack this round"]
-2. ATTRITION. Give: your own units (cheap men in the front row that die). Take: each death replaces itself: supply,
-   a cheaper next unit in that lane, a card from the deck ("the next draft"), medals that make the others braver. The
-   decision: which units to spend. Answer: kill the replacements' source, or don't kill (leave them standing).
-   [library: Monster Train Melting Remnant, units that burn out and come back (Reform); Stormbound Swarm, value on
-   death; Shadow Isles' death counts]
-3. THE FRONT WEARS, THE REAR RECOVERS. Give: front-row units lose a shield at each round end (mud, shell shock) — so
-   they are cheap for their stats. Take: units in rows 2-3 restore shields; relief cards swap a worn front unit with a
-   fresh one behind it, and both gain from the swap. Gives rows 2-3 a real job (the reserve). Answer: kill the reserve
-   with Ranged and spells. [library: Duelyst Vetruvian rows; Claude's: the wear/rest split]
-4. FIRE FROM THE REAR. Give: guns in rows 2-3 that do nothing in melee. Take: damage into the enemy camp's deep rows,
-   by rows (a barrage on one enemy row) and by spotters (a unit in the front row tells the guns which column). A few
-   Projectiles live here, two kinds: shells that burst where they land, and duds or mines that land, stay and go off
-   when an enemy is placed beside them. Answer: Ranged, spells, empty rows. [library: Into the Breach artillery and
-   the Blobber's thrown blob that stays and explodes; Kaptain's cannon idea]
-5. NO MAN'S LAND. Give: you leave the enemy free to come. Take: every enemy that is placed into or moved into the front
-   row facing your nests and wire takes damage (the enemy pays for each step). Joins (2): the enemy losses at the front
-   are the other side of your own. Answer: place in other columns, Ranged from behind. [library: Akritai react to
-   arrivals in Tagma (only the idea of a reaction; Tagma keeps its card); Into the Breach's damage on entering tiles]
+THE FIVE MECHANICS
 
-WEB
+1. "My units don't move or attack this round -> at round end they gain strength."
+   A unit that waits all round gains +1 strength at round end, and keeps it. Other cards spend that strength: one card
+   makes every unit that waited strike at once (going over the top). Each turn the player chooses: act now, or wait and
+   grow. The enemy answers by killing the waiting units before they grow, or by attacking them so they must answer.
+   Example card: a rifleman who gains +1 strength at each round end in which he did not act.
+   Library: Slay the Spire's Watcher (Calm stores energy, Wrath spends it); Runeterra's Blighted Battleaxe ("if my
+   bearer didn't attack this round").
+
+2. "My units die -> I get fresh units, supply or cards."
+   Their front-row units are cheap and are meant to die. When one dies, something replaces it: supply for its lane, the
+   next unit placed in that lane costs less, or a card is drawn ("the next men called up"). The player chooses which
+   units to spend. The enemy answers by not killing them, or by killing the unit that gives the replacements.
+   Example card: a conscript who, when he dies, makes the next unit you place in his lane cost 1 less.
+   Library: Monster Train's Melting Remnant (units that burn out and come back); Stormbound's Swarm (value on death).
+
+3. "My front row wears down -> my back rows recover and relieve them."
+   Front-row units lose 1 shield at each round end (mud, shell shock); that is why they are cheap for their stats. Units
+   in rows 2-3 restore their shields. Some cards swap a worn front unit with a fresh unit behind it, and both gain from
+   the swap. This gives rows 2-3 a real job: the reserve. The enemy answers by hitting the reserve with Ranged units
+   and spells.
+   Example card: a stretcher bearer in row 2 who restores 1 shield to the unit in front of him at round end.
+   Library: Duelyst's Vetruvian (cards that care about rows). The wear-down and rest is my idea.
+
+4. "My guns stand in rows 2-3, where they can't fight in melee -> they hit the enemy's back rows."
+   Guns fire into the enemy camp: some hit a whole enemy row, some hit the column a spotter in the front row points at.
+   The few Projectiles of the faction belong here, in two kinds: shells that burst where they land, and mines that land,
+   stay in the enemy camp, and go off when an enemy is placed next to them. The enemy answers with Ranged units and
+   spells against the guns, or by keeping rows empty.
+   Example card: a howitzer that deals damage to every enemy in one row of the enemy camp at round end.
+   Library: Into the Breach's artillery; Into the Breach's Blobber, which throws a blob that stays and explodes later;
+   your cannon idea.
+
+5. "I let the enemy come into his front row -> every enemy that arrives there pays for it."
+   An enemy unit that is placed or moved into the enemy front row, facing one of their machine-gun nests or wire, takes
+   damage. The enemy loses units at the front, just as the Ironfront do (mechanic 2). The enemy answers by placing in
+   other columns, or by fighting from his back rows with Ranged units.
+   Example card: a machine-gun nest that deals 1 damage to each enemy placed in the cell facing it.
+   Library: Into the Breach (damage when a unit enters a tile).
+
+HOW THE MECHANICS FEED EACH OTHER
+- The waiting units (1) need the guns (4) to do the fighting while they wait.
+- The front row wears down (3) and dies (2); the dead come back as fresh units (2), who stand at the front (3) and
+  face the enemy's arrivals (5).
+- The guns (4) and the nests (5) weaken the enemy's front, so when the waiting units strike (1), they find weak targets.
+- Cards in two mechanics: a rifleman who waits and grows (1) and gives supply when he dies (2); a howitzer that grows
+  while it waits (1 and 4); a stretcher bearer who restores shields (3) and raises a medal when a unit dies (2).
+For the network check (python3 tools/network_check.py factions/designs/ironfront.txt):
 MECHANIC Hold | makes: grown-strength, idle-units, enemy-damaged | needs: units-survive, enemy-front-thinned
 MECHANIC Attrition | makes: fresh-units, supply, cards | needs: own-front-deaths
 MECHANIC FrontRear | makes: own-front-deaths, units-survive, fresh-front | needs: fresh-units, reserve-units
 MECHANIC Rear | makes: enemy-damaged, enemy-front-thinned, reserve-units | needs: idle-units, spotted-columns, supply
 MECHANIC NoMansLand | makes: enemy-damaged, enemy-front-thinned, spotted-columns | needs: fresh-front
-How they feed: idle units (1) are what the guns need cover from (4); the front wears (3) and dies (2), the dead come
-back fresh (2) into the front (3), where they face the enemy's arrivals (5); the guns and the wire thin the enemy front
-(4, 5), so the release (1) finds weak targets. A card in two: a rifleman who digs in (1) and gives supply when he dies
-(2); a howitzer that grows while idle (1 + 4); a medic in row 2 who restores shields (3) and raises a medal on a
-death (2).
 
-WAYS TO PLAY: Trench (dig in, then over the top) · Meat grinder (cheap front units dying for value) · Big guns (the rear
-does the killing, the front only holds) · Kill zone (wire and nests; the enemy breaks itself on the front).
+WAYS TO PLAY THE FACTION
+- Trench: units wait and grow, then all strike at once.
+- Meat grinder: many cheap front units that die and are replaced, each death worth something.
+- Big guns: the back rows do the killing; the front only holds the dots.
+- Kill zone: nests and wire; the enemy loses units just by coming to the front.
 
-STRONG AT: holding the front at round end, long rounds, deep-row damage. ONLY A LITTLE: movement (relief swaps on
-Place), draw (the next draft, once per death of a card that says so), tanks (a few big slow units). WEAK AT: a fast
-start, lane changes, healing big units, fighting while acting every turn (they lose their growth).
-BETWEEN LANES: trains (a few cards that send supply or a unit to another lane's reserve); railway guns that fire into
-another lane (one or two cards). LANE CONTROL: "as long as you hold this lane's base, my units dig in even if they
-moved" / "if you don't, my release deals +1".
-FEEL: the long wait under fire, then everything at once.
+STRONG, A LITTLE, WEAK
+- Strong at: holding the front row at round end, long rounds, damage to the enemy's back rows.
+- Only a little: movement (the relief swaps), drawing cards (the next men called up), tanks (a few big slow units).
+- Weak at: a fast start, changing lanes, healing big units, and fighting every turn (units that act don't grow).
+- Between lanes: trains that send supply or a unit to another lane, and one or two railway guns that fire into another
+  lane.
+- Holding the lane's base: "As long as you hold this lane's base, my units grow even if they moved." "If you don't,
+  going over the top deals 1 more damage."
+- How it should feel: the long wait under fire, then everything at once.

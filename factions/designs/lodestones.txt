@@ -1,64 +1,88 @@
 ==================================================================
-LODESTONES — stage 1 (3 Nov 2026; Claude's design for Kaptain to check). Theme: the Neolithic megalith builders
-(Stonehenge, Carnac, Newgrange, the moai). Every unit Immobile (Kaptain's idea).
+LODESTONES — stage 1 (3 Nov 2026; Claude's design for Kaptain to check). Theme: the Stone Age builders of
+Stonehenge, Carnac and Easter Island. Every unit is Immobile (your idea).
 ==================================================================
-Check: python3 tools/network_check.py factions/designs/lodestones.txt
+Stage 1 has no cards yet. The example cards below only show the idea; they have no costs or stats.
 
-THEME: WHAT THEY ARE LIKE
-- Stones that never move once raised; they will stand for thousands of years.
-- Raised by many hands: whole villages hauling one stone on ropes and rollers.
-- Hauling: they know how to drag great weights where they want them.
-- Alignments: rows of standing stones in long lines (Carnac); a stone in line with another means something.
-- Sun and stars: built to the solstice; the stones are a calendar; the longer the year turns, the more they mean.
-- Ancestors: the dead are laid in stone tombs; the stones hold their spirits.
-- Circles: henges enclose sacred ground; what is inside belongs to them.
-- Patience: nothing hurried; they win by outlasting.
-- Gatherings: at the solstice the tribes meet at the stones; feasts.
-- Markers: a menhir claims the land around it.
-- Weight: a fallen stone crushes what is under it.
-- Few and big: a few great works, not many small ones.
+THE THEME
+The Lodestones are the people who raised the great standing stones. What they are like:
+- Once a stone is raised, it never moves again. It stands for thousands of years.
+- A whole village hauls one stone, on ropes and rollers.
+- So they know how to drag great weights wherever they want them.
+- They set stones in long straight lines (Carnac). A stone in line with another means something.
+- The stones are built to the sun and the stars; they are a calendar. The longer the year turns, the more they mean.
+- The dead are laid in stone tombs, and the stones hold their spirits.
+- Stone circles close off sacred ground. What is inside belongs to them.
+- Nothing is hurried. They win by outlasting.
+- At midsummer the tribes gather at the stones for feasts.
+- A standing stone claims the land around it.
+- A falling stone crushes what is under it.
+- They make a few great works, not many small ones.
 
-MECHANICS
-1. THE WORLD COMES TO ME. Give: no unit of theirs ever moves (all Immobile). Take: they move the enemy: drag enemy
-   units forward toward the base, pull them into the column of a stone, swap two enemies. The decision: where to put
-   each enemy so the other mechanics hit it. Answer: units that can't be moved, empty rows behind. [library: forced
-   movement chains: forced_movement -> removal -> on_kill (Duelyst, Into the Breach, Runeterra, Stormbound);
-   forced_movement -> adjacency -> zone_control]
-2. CRUSH. Give: the enemy keeps its units packed. Take: an enemy dragged into another unit, or into the base edge where
-   it can't go further, takes damage, and so does what it hit (both enemies, the base side does not move). Packed enemy
-   camps hurt themselves. Topple: a stone can be thrown down on purpose onto the enemies facing it, dealing damage equal
-   to its defence (give the stone, take the blow; grown stones fall harder). Answer: spread out (which leaves dots open). [library: Into the Breach bump damage, Force Amp
-   "+1 damage from Bumps"]
-3. ALIGNMENT. Give: their stones must stand in set columns (the enemy knows where). Take: stones in the same column in
-   two or three lanes share their gains and their round-end damage between lanes (their between-lanes job), and
-   enemies standing in a stone's column are hit by it at round end. Joins (1): drag enemies into the aligned columns.
-   Answer: keep out of those columns (dragging puts them back). [library: Duelyst Vetruvian rows/obelysks; Claude's:
-   alignment across lanes]
-4. THE TURNING YEAR. Give: weak first rounds (few, slow, big stones). Take: every stone gains a little at each round end
-   it stands through (lasting +0|+1 or +1|+0; no counters), and some cards ask "from round 4 on". The game gets worse
-   for the enemy each round. Answer: win early, kill stones before they grow. [library: Inscryption Giant, "+1 Power
-   every turn"; Stormbound/Duelyst turn-start growth]
-5. THE ANCESTORS' GROUND. Give: their dead (they have few units, each death hurts). Take: when a stone falls, its
-   ground stays sacred: the cell keeps a mark where enemies placed or dragged into it take damage, and the next stone
-   raised there is cheaper. Answer: kill them where it costs them least. NEW RULE (marked cells). [library: Duelyst
-   Abyssian shadow creep (cells that damage); Claude's: the cell that makes the next stone cheaper]
+THE FIVE MECHANICS
 
-WEB
+1. "My units can never move -> I drag enemy units where I want them."
+   Their cards move enemy units: drag one forward toward the base, pull one into the column of a stone, swap two enemy
+   units. The player chooses where to put each enemy so the other mechanics hit it. The enemy answers with units that
+   can't be moved, or by leaving no free cells to be dragged into.
+   Example card: a hauling stone that, when placed, drags the enemy unit in its column forward as far as it can go.
+   Library: forced-movement chains that end in a kill (Duelyst, Into the Breach, Runeterra, Stormbound).
+
+2. "I pack the enemy units together -> they crush each other."
+   An enemy unit dragged into another unit, or against the edge where it can't go further, takes damage, and so does
+   the unit it hit. Also, a stone can be thrown down on purpose onto the enemy units facing it, dealing damage equal to
+   its defence: the player loses the stone and the enemy takes the blow. Grown stones (mechanic 4) fall harder. The
+   enemy answers by spreading out, which leaves dots open.
+   Example card: a spell that topples one of your stones onto the enemy facing it.
+   Library: Into the Breach (units pushed into other units take damage; Force Amp, "+1 damage from bumps").
+
+3. "My stones stand in the same columns -> they share their power across lanes."
+   Stones in the same column in two or three lanes help each other: what one gains, the others gain, and their
+   round-end damage is shared. Enemy units standing in a stone's column are hit by it at round end. This is the
+   faction's job between lanes. The enemy knows where the stones stand and tries to keep out of those columns, so the
+   dragging (mechanic 1) puts them back.
+   Example card: a menhir that deals 1 damage at round end to the enemy facing it, and to the enemies facing each
+   stone of yours in the same column in the other lanes.
+   Library: Duelyst's Vetruvian obelisks. Sharing across lanes is my idea.
+
+4. "My stones are weak in the first rounds -> they grow every round they stand."
+   Every stone gains a little at each round end it survives (+1 defence or +1 strength, and keeps it). Some cards get a
+   bonus from round 4 on. Each round the game gets worse for the enemy. The enemy answers by winning early, or by
+   killing stones before they grow.
+   Example card: an old stone that gains +0|+1 at each round end.
+   Library: Inscryption's Giant ("+1 power every turn"); turn-start growth in Duelyst and Stormbound.
+
+5. "My stones fall -> the ground where they stood stays sacred."
+   When a stone dies, its cell stays marked. An enemy unit placed or dragged into a marked cell takes damage, and the
+   next stone raised on that cell costs less. The enemy answers by killing stones where it costs him least.
+   NEW RULE: marked cells.
+   Example card: a burial mound that, when it dies, marks its cell.
+   Library: Duelyst's Abyssian Shadow Creep (cells that damage). The cheaper stone is my idea.
+
+HOW THE MECHANICS FEED EACH OTHER
+- Dragging (1) packs the enemy (2) and puts enemies in a stone's column (3).
+- Crushed and lined-up enemies die, so the stones stand longer and grow (4).
+- Grown stones topple harder (2). A toppled stone leaves sacred ground (5), and the enemy is dragged onto it (1).
+- Cards in two mechanics: a stone that drags an enemy when placed (1) and hits its column at round end (3); a tomb
+  that grows each round (4) and leaves sacred ground when it dies (5).
+For the network check (python3 tools/network_check.py factions/designs/lodestones.txt):
 MECHANIC ComesToMe | makes: enemy-moved, enemy-packed, enemy-in-column | needs: stones-standing, sacred-cells
 MECHANIC Crush | makes: enemy-damaged, enemy-killed, stone-dies | needs: enemy-packed, enemy-moved, stones-grown
 MECHANIC Alignment | makes: enemy-damaged, stones-standing, cross-lane | needs: enemy-in-column, stones-standing
 MECHANIC TurningYear | makes: stones-standing, stones-grown | needs: stones-standing, cheap-stones, enemy-killed
 MECHANIC AncestorsGround | makes: enemy-damaged, cheap-stones, sacred-cells | needs: stone-dies
-How they feed: dragging (1) packs enemies (2) and puts them in a stone's column (3); crushed and aligned enemies die,
-which keeps the stones standing longer (4); grown stones (4) topple harder (2); a stone that falls (5) leaves ground that makes the next one cheaper and punishes enemies dragged onto it (1). A card in two: a
-stone that drags an enemy on Place (1) and hits its column at round end (3); a tomb that grows each round (4) and
-leaves sacred ground (5).
 
-WAYS TO PLAY: Hauling (drag and crush; most interaction) · The long line (aligned stones across all lanes) · Henge
-(few huge stones that grow, outlast) · Barrow ground (stones that fall and come back cheaper on sacred cells).
+WAYS TO PLAY THE FACTION
+- Hauling: drag and crush the enemy; the most interaction.
+- The long line: stones in the same column in all three lanes.
+- Henge: a few huge stones that grow and outlast the enemy.
+- Barrow ground: stones that fall on purpose and come back cheaper on sacred cells.
 
-STRONG AT: control of where enemies stand, round-end damage, the late game, acting between lanes (alignment).
-ONLY A LITTLE: spells (~20%: hauling and the solstice), supply (plain Supply +1 workers). WEAK AT: own movement and
-lane changes, card draw (one card: the oracle stone), a fast start, many small units, reach without a stone in line.
-LANE CONTROL: "as long as you hold this lane's base, the enemies I drag take 1 damage"; "if you don't, I drag twice".
-FEEL: the enemy army slowly pulled onto the stones.
+STRONG, A LITTLE, WEAK
+- Strong at: deciding where enemy units stand, round-end damage, the late game, acting between lanes.
+- Only a little: spells (about 20%: hauling and midsummer), supply (plain Supply +1 workers).
+- Weak at: moving or changing lanes, drawing cards (one card: the oracle stone), a fast start, many small units,
+  reaching enemies that are not in a stone's column.
+- Holding the lane's base: "As long as you hold this lane's base, the enemies I drag take 1 damage." "If you don't, I
+  drag twice."
+- How it should feel: the enemy army slowly pulled onto the stones.
