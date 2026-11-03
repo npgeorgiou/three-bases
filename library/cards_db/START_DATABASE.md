@@ -78,7 +78,7 @@ push, give network.html to Kaptain.
 - Cases: all pass. Must-not cases whose old reason no line says any more were made strict (no line at all); n56, n352,
   ntb15-16 and nst36 keep theirs because the pair still has a line for another reason. The next case id is n396.
 - Real-world cases: 237 of 261 hold (Zealous Crusader -> Khalim's Prayer is gone by a rule of Kaptain's of 3 Nov 2026, before L24; the other 23 are faction-label checks).
-- Lines (pairs in links.sqlite, 3 Nov 2026): Runeterra 204,097; Duelyst 12,793; Faeria 10,014; Slay the Spire 8,797; Into the
+- Lines (pairs in links.sqlite, 3 Nov 2026): Runeterra 201,006; Duelyst 12,427; Faeria 10,014; Slay the Spire 8,797; Into the
   Breach 6,137; Monster Train 3,092; Stormbound 2,686; Inscryption 1,080.
 - The 8-game line check is finished (3 Nov 2026): its causes touching 1000+ lines were fixed, the rest were dropped. Line checks
   are done only by the chat that imports a game (LINKS_PLAN.md step 3).
