@@ -1080,7 +1080,9 @@ def generic_use(c, game):
             and (coalesce(on_side,'mine') in ('mine','any') or on_pick in ('self','it'))"""): d[i]['gives_kw'].add(k)
     for i, w in c.execute("select card, of_with from flat_if where origin='own' and of_with like '%keyword is %'"):
         d[i]['counts_kw'] |= {int(x) for x in re.findall(r'keyword is (\d+)', w or '')}
-    for (i,) in c.execute("select card from flat_do where origin='own' and act in ('start_attack','strike') and on_pick='self'"): d[i]['flags'].add('fights')
+    for i, ab in c.execute("select card, ability from flat_do where origin='own' and act in ('start_attack','strike') and on_pick='self'"):
+        d[i]['flags'].add('play_fights' if on_play(c, ab) else 'fights')  # a fight when it is played is over before a boost on the board
+        # reaches it (verdict 21: Spirit Spice -> Barrensky Vermin); only help that reaches it in hand counts then
     # its own text makes it fight or strike (Deepwood Stalker): the damage is its power
     for (i,) in c.execute("select distinct card from flat_do where origin='own'"): d[i]['flags'].add('acts')
     for (i,) in c.execute("select card from flat_ref where origin='own' and role='trigger' and pick='actor_self' and happening in ('killed','damaged')"):
@@ -1143,8 +1145,10 @@ def use_of(c, game, b, act, kw, ps, w=None):
     up = lambda *ks: act in ('stat_change', 'grow') and any(k in p and raises(p[k]) for k in ks)
     if up('power') and b in own_power_readers(c): return 'more power: its text reads its power'  # Poppy: "allies with less power than me" (L18)
     if up('power', 'strength') or (act == 'give_keyword' and tree in ('attack_gain', 'temporary_buff')):
-        if u['trees'] & set(POWER_USE) or u['flags'] & {'big_strike', 'fights', 'level_hit'} or b in gains_back(c, game): return 'more power: its text uses the damage it deals'
-    if up('health', 'strength') or act in ('heal', 'negate_damage', 'damage_reduction') or (act == 'give_keyword' and tree in DEFENCE_KW) \
+        if u['trees'] & set(POWER_USE) or u['flags'] & {'big_strike', 'fights', 'level_hit'} or ('play_fights' in u['flags'] and 'hand' in (w or '')) or (b in gains_back(c, game) and not fixed_hit(c, b)):
+            return 'more power: its text uses the damage it deals'  # a fixed amount is not its power (verdict 19: Path to Paradise -> Enslaved Priest)
+    # a heal is no more health (L18): it does not keep a fighting unit alive (verdict 18: Lux Ignis -> Fireblazer)
+    if up('health', 'strength') or act in ('negate_damage', 'damage_reduction') or (act == 'give_keyword' and tree in DEFENCE_KW) \
             or (act == 'cant' and pev in ('dies', 'targeted')):  # "can't drop below 1 health" (Survival Skills)
         if u['trees'] & set(GUARD_USE): return 'keeps it alive in the fights it takes on'
     if act == 'repeat' and b in doublers(c, game): return 'plays it again: its doubling doubles again'  # Burst -> Catalyst
@@ -1157,6 +1161,25 @@ def use_of(c, game, b, act, kw, ps, w=None):
     if act == 'refresh' and cards[b]['cat'] not in KIND_CAT['unit'] and 'acts' in u['flags']: return 'lets you use it again'  # a General's
     # spell refreshed (Cryptographer -> Malice): its effect again
     return None
+
+
+def to_hand(c):
+    """cards that give stats to my cards in hand"""
+    if 'to_hand' not in CACHE:
+        CACHE['to_hand'] = {a for (a,) in c.execute("select card from flat_do where origin='own' and act in ('stat_change','grow') and on_zone='hand'")}
+    return CACHE['to_hand']
+
+
+def on_play(c, ab):
+    """the ability goes off only when its own card is played or summoned"""
+    ws = c.execute("select event, obj_pick from flat_when where ability=?", (ab,)).fetchall()
+    return bool(ws) and all(e in ('played', 'summoned') and p == 'self' for e, p in ws)
+
+
+def fixed_hit(c, b):
+    """its own damage is a fixed number ("deal 2 damage, heal that much", Enslaved Priest): more power does not change it"""
+    return all(re.match(r'amount=[\d.]+(;|$)', ps or '') for (ps,) in c.execute("select params from flat_do where card=? and origin='own' and act='damage'", (b,))) \
+        and bool(c.execute("select 1 from flat_do where card=? and origin='own' and act='damage'", (b,)).fetchone())
 
 
 def gains_back(c, game):
@@ -1267,9 +1290,11 @@ def aimed(c, game, nodes, broad):
         # (Senna makes damage spells Fast): only a card whose text uses it (L14)
         if act == 'increase_effect' and 'keyword i' not in (w or ''):
             hits = [b for b in hits if b in numbered(c, game)]  # no number to make bigger (Alatis -> Dragonling, Powder Keg -> Paralyzing Bite)
-        if not sharp and kind != 'player' and act != 'return_card' and act not in HARM_GAIN:  # help to any card of a kind: only
+        if not sharp and (kind != 'player' or act in ('heal', 'stat_change', 'grow')) and act != 'return_card' and act not in HARM_GAIN:
+            # heal or stats for the General go only to a General whose text uses them (verdict 17: Aer Pridebeak -> Argeon Highmayne)  # help to any card of a kind: only
             # cards that use it (Kaptain 1 Nov 2026); "your General" is one card; harm on my card is kept only for its own effect below
-            hits = [b for b in hits if uses_help(c, game, b, act, kw, ps, w)]
+            wh = (w or '') + (';zone hand' if a in to_hand(c) else '')  # help to cards in hand reaches a card before it is played (Oakling, nfa01)
+            hits = [b for b in hits if uses_help(c, game, b, act, kw, ps, wh)]
             if act in ('stat_change', 'grow') and a in all_raisers(c):  # all my units raised alike: no ally passes a filter by my own
                 # power that it failed before (For Demacia! -> Poppy; verdict rt 50)
                 hits = [b for b in hits if use_of(c, game, b, act, kw, ps, w) != 'more power: its text reads its power']
@@ -1925,17 +1950,22 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
             out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.3, ('empties your hand' if few else 'fills your hand') + (' (levels it up)' if ab in lvl else '')))
     # a stat it tests ("an ally with 5+ Power"): more of that stat
     power = having(('attack_gain',), False)
-    for t, ab, fp in c.execute(f"""select card, ability, of_pick from flat_if where test in ('stat','amount_stat') and attr='power' and card in ({marks}) and not exists (select 1 from flat_do d where d.ability=flat_if.ability and flat_if.of_pick='it' and d.on_pick in ('chosen','random')
+    unreached = lambda ab, ok: ok == 'player' or c.execute("select 1 from flat_do where ability=? and on_zone='deck' and act!='draw'", (ab,)).fetchone()
+    # the General's stat (Drogon) or the stats of units still in the deck (The Tuskraider) are not raised by help to my units (verdict 19)
+    for t, ab, fp, ok in c.execute(f"""select card, ability, of_pick, of_kind from flat_if where test in ('stat','amount_stat') and attr='power' and card in ({marks}) and not exists (select 1 from flat_do d where d.ability=flat_if.ability and flat_if.of_pick='it' and d.on_pick in ('chosen','random')
             and coalesce(d.on_side,'any')!='mine' and d.act in ('kill','damage','obliterate','sacrifice','return_to_hand','transform','silence'))""", L).fetchall():
+        if unreached(ab, ok) or (fp == 'self' and on_play(c, ab)): continue  # its power when it is played: a boost on the board comes
+        # too late (verdict 21: Rising Spell Force -> Banana Blaster)
         for a in power - {t}:
             if aim_fits(a, t) and (fp != 'self' or reaches(a, t)) and (a, t) not in stat_help: out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.5 / count(('attack_gain',)), 'more power' + (' (levels it up)' if ab in lvl else '')))
     # a stat it tests high or uses as an amount ("a creature with 5+ Life", "faeria equal to its Life"): more of that stat
     health = having(('defence_gain',), False)
-    for t, ab, fp in c.execute(f"""select card, ability, of_pick from flat_if where attr in ('health', 'total_stats') and (test='amount_stat' or
+    for t, ab, fp, ok in c.execute(f"""select card, ability, of_pick, of_kind from flat_if where attr in ('health', 'total_stats') and (test='amount_stat' or
             (test='stat' and coalesce(op,'') in ('ge','gt'))) and coalesce(of_side,'mine')!='enemy' and card in ({marks}) and not exists
             (select 1 from flat_if x where x.card=flat_if.card and x.ability=flat_if.ability and x.test='amount') and not exists (select 1 from flat_do d where d.ability=flat_if.ability and flat_if.of_pick='it' and d.on_pick in ('chosen','random')
             and coalesce(d.on_side,'any')!='mine' and d.act in ('kill','damage','obliterate','sacrifice','return_to_hand','transform','silence'))""", L).fetchall():  # a threshold wants nothing;
         # a stat of what the player picks on either side is the biggest there is (Martyrdom)
+        if unreached(ab, ok): continue
         for a in health - {t}:
             if aim_fits(a, t) and (fp != 'self' or reaches(a, t)) and (a, t) not in stat_help:  # its own stat: the gain must reach it
                 out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.5 / count(('defence_gain',)), 'more health' + (' (levels it up)' if ab in lvl else '')))

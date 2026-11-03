@@ -45,4 +45,5 @@ rt 52: FIXED makers of multi-region cards feed a region count. rt 59: FIXED Reca
 rt 20, 44: NOT REAL: Master Yi level 2's "Attack: I strike" is a strike its text starts (L18 Deepwood Stalker); Lux level 2 counts mana of spells (L17).
 Tests n343-n362.
 Stormbound csb09-csb13: FIXED a keyword name is looked up in the card's own game (refs.py kwid_for: Stormbound's Poison was Slay the Spire's). Duelyst Stun givers -> Cryoblade, Essence Sculpt now found. Tests n363-n364.
-NOT REACHED, old round (verdict_1-4.md; each cause's games are in its card names; Runeterra examples inside them are Runeterra work): 17-24, 26-27, 30-32, 35-49, 51-55, 57-75, 77-91, 93-95.
+NOT REACHED, old round (verdict_1-4.md; each cause's games are in its card names; Runeterra examples inside them are Runeterra work): 22, 24, 26-27, 30-32, 35-49, 51-55, 57-75, 77-91, 93-95.
+- old 17 (aimed: heal/stats to the General need a General whose text uses them), old 18 (use_of: a heal is no more health), old 19 (stat tests: no General's stat, no deck units; fixed_hit), old 21 (play_fights, on_play; to_hand keeps nfa01). Cases n365-n372. Old 20, 23: already gone.

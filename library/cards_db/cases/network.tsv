@@ -359,3 +359,11 @@ n361	runeterra	Sion Returned, Draven	Sion Returned	Draven (level 2)	line	strike	
 n362	runeterra	Lucky Find, Sivir	Lucky Find	Sivir (level 2)	line	passes	audit 3 Nov 2026: a keyword on Sivir goes to her attacking allies (rt 61, L14)
 n363	stormbound	Copperskin Ranger, Amberhides	Copperskin Ranger	Amberhides	line	Poison	audit 3 Nov 2026: a keyword name is looked up in the card's own game: Stormbound Poison feeds "drain a poisoned unit" (csb09)
 n364	duelyst	Crystallize, Cryoblade	Crystallize	Cryoblade	line		audit 3 Nov 2026: a state is given by the keyword of its own game (Stunned: Duelyst's Stun)
+n365	duelyst	Aer Pridebeak, Argeon Highmayne	Aer Pridebeak	Argeon Highmayne	none	heal	audit 3 Nov 2026: old 17: a General whose only text is a Bloodbound Spell uses no heal or power
+n366	duelyst	Dawn's Eye, Argeon Highmayne	Dawn's Eye	Argeon Highmayne	none	power	audit 3 Nov 2026: old 17: power for the General goes only to a General whose text uses it
+n367	duelyst	Lux Ignis, Fireblazer	Lux Ignis	Fireblazer	none	heal	audit 3 Nov 2026: old 18: a heal is no more health; Provoke does not use a heal (L14, L18)
+n368	runeterra	Adept Weaponsmith, The Tuskraider	Adept Weaponsmith	The Tuskraider	none	health	audit 3 Nov 2026: old 19: it reads the stats of units in the deck, which help on the board does not reach
+n369	duelyst	Mirkblood Devourer, Drogon	Mirkblood Devourer	Drogon	none	power	audit 3 Nov 2026: old 19: it reads the General's power, not a unit's
+n370	faeria	Path to Paradise, Enslaved Priest	Path to Paradise	Enslaved Priest	none	power	audit 3 Nov 2026: old 19: its damage is a fixed 2, not its power
+n371	faeria	Spirit Spice, Barrensky Vermin	Spirit Spice	Barrensky Vermin	none	power	audit 3 Nov 2026: old 21: its fight when played is over before a boost on the board reaches it
+n372	runeterra	Rising Spell Force, Banana Blaster	Rising Spell Force	Banana Blaster	none	power	audit 3 Nov 2026: old 21: it reads its power when played; a board boost comes too late
