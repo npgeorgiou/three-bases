@@ -372,3 +372,8 @@ n374	runeterra	Ornn (level 2), Wrought Colossus	Ornn (level 2)	Wrought Colossus	
 n375	runeterra	Here to Help, Gangplank	Here to Help	Gangplank	line		audit 3 Nov 2026: old 22: +2 power to a damaged Gangplank, who levels from Nexus damage (L18)
 n376	duelyst	Crescent Spear, Phoenix Fire	Crescent Spear	Phoenix Fire	none		audit 3 Nov 2026: old 24: more spell damage for a spell that just hits is generic (L18)
 n377	runeterra	The Dreadway, Decimate	The Dreadway	Decimate	line		audit 3 Nov 2026: old 24: The Dreadway doubles what is there (Kaptain)
+n378	runeterra	Tybaulk, Gwen	Tybaulk	Gwen	none		audit 3 Nov 2026: old 27: Gwen waits for Power gained from Hallowed, not any stat change
+n379	runeterra	Grandmaster at Arms, Annie	Grandmaster at Arms	Annie	none		audit 3 Nov 2026: old 59: Grandmaster at Arms is a deck rule with no rows, never played
+n380	runeterra	Jax, Grandmaster at Arms	Jax	Grandmaster at Arms	none		audit 3 Nov 2026: old 59: no one casts a deck rule
+n381	sts1	Beta, After Image+	Beta	After Image+	none		audit 3 Nov 2026: old 33: one more card made is no more plays (L1)
+n382	runeterra	Annie, Breakneck Husk	Annie	Breakneck Husk	none		audit 3 Nov 2026: old 33: one more card made is no more plays (L1)

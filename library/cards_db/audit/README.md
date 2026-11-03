@@ -29,7 +29,7 @@ Read first: START_DATABASE.md, LINKS_PLAN.md step 3 with "Token economy" and "Le
 1. Runeterra: done (fixlog.md). Stormbound csb09-csb13: done.
 2. Old round: the causes in fixlog.md "NOT REACHED, old round", in one pass. Check each with pair.py, decide from L1-L22, grep
    the card names in cases/*.tsv first (Kaptain's cases win), edit network.py, add one `none` and one `line` case per cause
-   (next id n378). `python3 audit/triage.py 35,36,...` prints each example pair's current line (W = wrong or missed, R = right).
+   (next id n383). `python3 audit/triage.py 35,36,...` prints each example pair's current line (W = wrong or missed, R = right).
    Run check_all.py --no-load after each group of about 5 causes.
 3. Then `links.py`; save the table before the first fix (`dump_lines.py --table /tmp/tb0.tsv`) and diff after; `realworld.py`
    (237 of 261 must hold).

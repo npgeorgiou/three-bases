@@ -654,7 +654,7 @@ def lines_of(c, game):
     for m, b in c.execute("select src, dst from card_link where rel='transforms_into'"): lv_[m].add(b)
     named_ = {(m, ref) for m, ref in c.execute("select card, card_ref from flat_do where origin='own' and card_ref is not null")}
     put += [(m, ref, 'skill') for m, ref in c.execute("select l.src, l.dst from card_link l join card d on d.id=l.dst where l.rel='generates' "
-                                                       "and d.category='ability'") if m in cards and ref in cards
+                                                       "and d.category='ability'") if m in cards and ref in cards and ref not in unplayable(c)
             and not ((m, ref) not in named_ and any((b, ref) in gen_ for b in lv_[m]))]  # a unit's skill; one only its level-up casts
             # is not the base card's (Gangplank's rows summon Powder Keg; Powderful Explosion is Gangplank level 2's)
     put += [(m, ref, 'own_spell') for m, ref in c.execute("select l.src, l.dst from card_link l join card s on s.id=l.src where l.rel='generates' "
@@ -1575,7 +1575,10 @@ def unplayable(c):
     """cards that can never be played (Unplayable: Void, curses): never a card played"""
     if 'unplayable' not in CACHE:
         CACHE['unplayable'] = {a for (a,) in c.execute("""select card from flat_do where act='cant' and param_event='played' and on_pick='self'
-                               and origin in ('own','has_keyword') and coalesce(lasts,'while')='while'""")}
+                               and origin in ('own','has_keyword') and coalesce(lasts,'while')='while'""")} | {a for (a,) in c.execute("""select id from card k
+                               where category in ('spell','ability') and is_keyword=0 and not exists (select 1 from flat_do d where d.card=k.id)
+                               and not exists (select 1 from flat_when w where w.card=k.id) and not exists (select 1 from flat_if f where f.card=k.id)""")}
+        # a spell or skill with no rows is a deck rule (Grandmaster at Arms), not a card anyone plays (verdict 59)
     return CACHE['unplayable']
 
 
@@ -1649,7 +1652,9 @@ def played_lines(c, game, nodes, broad):
                 # Kaptain's nst26 keeps it (Blade Dance -> A Thousand Cuts)
                 # the cards that make more cards to play (Blade Dance's Shivs) set it off more
                 mk = {a for a, ref, ok in c.execute(f"""select distinct card, card_ref, on_kind from flat_do where origin='own' and act in ('create','copy')
-                      and coalesce(on_side,'mine')='mine' and coalesce(on_zone,'hand') in ('hand') and card in ({marks})""", list(nodes))
+                      and coalesce(on_side,'mine')='mine' and coalesce(on_zone,'hand') in ('hand') and (params like '%amount=x%' or cast(substr(params,
+                      instr(params,'amount=')+7) as real) >= 2) and card in ({marks})""", list(nodes))  # several cards (Blade Dance's 3 Shivs);
+                      # one more card is no more plays (verdict 33: Beta -> After Image+, Annie -> Breakneck Husk)
                       if k in ('card', 'any', 'anything', None) or k in every_card_kinds(c, game) or ok == k or (ref in cards and cards[ref]['cat'] in KIND_CAT.get(k, {k}))} - {t}
                 # "whenever you play a spell": only what makes spells (Vinemother's Stings) sets it off more
                 for a in mk:
