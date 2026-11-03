@@ -64,7 +64,7 @@ use them), `factions/7-ideas-kept-for-later.txt`, and `factions/8-rejected-and-c
 Candidates (raw brainstorming, not designs): `factions/3-candidates/`.
 - Identity first: who they are, with the depth of Kaptain's Tagma text (`3-candidates/E1-tagma.txt`), and how they win.
   Every mechanic serves the identity. A library way found elsewhere is not a reason to use it.
-- 3-5 core mechanics (mechanics, not keywords; keywords only serve mechanics), each faction its own keyword set.
+- About 4-6 signature mechanics (section 2b; mechanics, not keywords: keywords only serve mechanics), and 2-3 characteristic keywords of its own.
 - A web of cards that set things up and cards that cash them in: each cash-in card has 3+ cards that set it up, each
   setup card feeds 2+ cash-in cards. Give each card a "needs / makes" line so the web can be checked.
 - Signature mechanics (copying, deck search, draw, card creation, forced movement, supply play, resurrection, bonds,
@@ -96,36 +96,38 @@ Candidates (raw brainstorming, not designs): `factions/3-candidates/`.
 - Card text voice: "I / me / my" for the card itself (summary/09). Only mechanics are taken from other games, never
   names or wording.
 
+Old drafts: `factions/designs/` (3 Nov 2026) was made before the chain below; never reuse it.
+
 ## 2b. Checks from Kaptain's critique of the five new factions (3 Nov 2026; sources in `factions/10-outside-design-guides.txt`)
 Every one of these failed in the first five factions. Check each before sending.
-- Work in stages, Kaptain checks each: (1) identity, 3-5 mechanics, the web between them, "weak at" list, for ONE faction;
-  (2) ~20 key cards with needs/makes lines; (3) the rest. Never a whole faction (or five) in one go.
-- Theme first (Kaptain, 3 Nov 2026): every faction has a real theme to draw from (e.g. the Siegewrights: World War I), giving
-  10+ characteristics (how they fight, live, trade, believe, what they fear and lack). Thin identities give no mechanics.
-- The chain (Kaptain, 4 Nov 2026): THEME -> IDENTITY -> MECHANICS -> CARDS. The identity is one line saying how the
-  faction plays and wins (Noxus: aggressive, kills with strikes; Shadow Isles: death, with kill spells, resurrection,
-  Ephemerals). Never jump from theme to mechanics without it; every mechanic serves the identity.
-- Four levels (Kaptain, 3 Nov 2026): THEME -> MECHANICS (broad notions, few, that feed each other) -> INTERACTIONS (how
-  cards play off each other inside a mechanic) -> CARDS that implement the mechanics. Never call an interaction a
-  mechanic. A mechanic must be broad enough to carry dozens of cards, and the mechanics must feed each other, not
-  only a few example cards. No unit types or card kinds that split the deck (no "crew", no Yin/Yang dichotomy).
-- How broad (measured 3 Nov 2026 with `analyze` on whole factions): Shadow Isles' "units die" is made by 103 and used by
-  55 of its 221 cards; Faeria's land building by ~60 of 72. A real mechanic is a thing in play that dozens of cards
-  make AND dozens use; a trigger only 5 cards could use is an interaction, not a mechanic.
-- From theme to mechanics: the theme gives SEVERAL signature mechanics, each a broad thing in play, all interacting
-  with each other (Shadow Isles: death, damage, sacrifice, destroy, Fearsome, Ephemeral — sacrifice and destroy make
-  deaths, Ephemeral units attack and die, deaths feed the rest). Not one or two, and not each trait as a separate
-  narrow rule (Kaptain, 4 Nov 2026).
-- A mechanic is a broad notion that many cards work through, written in Kaptain's form "I do X -> I benefit from X", e.g. "I damage my own units -> I gain from
-  damaged units". What one unit does (a cannon fires, a keg explodes) is a unit effect, never a mechanic.
-- Mechanics: buffs, damage and stats are not mechanics. Each mechanic is written with the traits it comes from and the
-  other mechanics it feeds and is fed by; a mechanic that feeds none of the others is cut.
-- Two families: about a third of the cards belong to two mechanics (set up one, cash in another), so chains form. A deck
-  of one recipe copied onto every card fails; the faction must be playable in 3+ different ways.
+- THE CHAIN (Kaptain, 4 Nov 2026): NAME + ICON -> THEME -> IDENTITY -> MECHANICS -> INTERACTIONS -> CARDS.
+  - Theme: a real theme to draw from (World War I, Neolithic megaliths, 1920s gangs...), with 10+ characteristics: how
+    they fight, live, trade, believe, what they fear and lack. A thin theme gives no mechanics.
+  - Identity: ONE line saying how the faction plays and wins, as clear as Noxus ("aggressive, kills with strikes") or
+    Shadow Isles ("death: kill spells, resurrection, Ephemerals"). Never jump from theme to mechanics without it;
+    every mechanic serves it.
+  - Mechanics: SEVERAL (about 4-6) signature things in play, each broad, all interacting. Shadow Isles: death, damage,
+    sacrifice, destroy, Fearsome, Ephemeral; sacrifice and destroy make deaths, Ephemeral units attack and die,
+    deaths feed the rest. Written in Kaptain's form "I do X -> I benefit from Y" ("I damage my own units -> I gain
+    from damaged units"). Broad means dozens of cards make it AND dozens use it (measured: Shadow Isles' "units die"
+    is made by 103 and used by 55 of 221 cards). Built on the game's basic things: units die, damage, supply and
+    carry-over, cells, rows and the front row, dots, round end, cards in hand and discard pile, moves, spells cast.
+  - Interactions: how cards play off each other inside and between mechanics (a trigger only 5 cards could use).
+    Never call an interaction a mechanic, never call one unit's effect (a cannon fires) a mechanic, and never turn
+    each trait of the theme into its own narrow rule. Buffs and stats alone are not mechanics.
+  - No unit types or card kinds that split the deck (no "crew", no Yin/Yang).
+  - The core must also work with OTHER factions' units (a part that joins any unit, any unit wound by carry-over), so
+    two-faction decks work; the side ideas (bombs, gears) stay small groups.
+- Stages, Kaptain checks each: (1) name, icon, theme, identity, mechanics, groups, strong/weak (several factions may be
+  done together at this stage); (2) ~20 key cards of ONE faction with needs/makes lines, network check; (3) the rest.
+- Mechanics feed each other (not only through a few example cards); write which mechanic feeds which, and run
+  `tools/network_check.py`. About a third of the cards belong to two mechanics, so chains form. The faction is
+  playable in 3+ different ways (its groups).
+- Every effect must change something that would not happen anyway (all Clockwork units act at round end, so "when
+  one acts, the touching ones act too" is empty).
+- Only the game's own words (no "wall"); explain with card examples in full plain sentences, never condensed notes.
 - Strong at / only a little / weak at: written in the entry; no card gives a faction what its weak list says (Dean of
   Battle Magic, melee buffs, on Arcanists). Factions contrast with each other and each has a few cards against the others.
-- Every effect must change something that would not happen anyway ("when one acts at round end, the touching ones act
-  too" is empty if they all act at round end already).
 - Conditions serve the identity: "the enemy with the least defence" only in a faction about hunting weak units.
 - Twins: write each card's effect in a few words, sort, compare. Two cards with the same effect, or the same result
   (Spark of Yesterday and Twin Novice), at the same cost: change or cut one. Same for near-twins (Pioneer, Wayside Shrine).
@@ -151,6 +153,8 @@ How to ask: `library/cards_db/START_QUESTIONS.md` (commands, how to build an ans
   ```
   Factions per game: `select game, regions, count(*) from card group by 1,2`. Positional and location games first
   (Duelyst, Faeria, Stormbound, Into the Breach, Inscryption).
+- Measure a real faction's mechanics: `analyze` lists what its cards make happen and which cards use it, without
+  counts; count the names on each line (made by / used by) to see which things carry the faction.
 - Curious: at least three unexpected concepts that serve the same outcome; one game where the mechanic is rare or odd.
 - Translate each way into Three Bases (section 1b) and say what had to change. Anything with no library source is
   marked as Claude's idea.
