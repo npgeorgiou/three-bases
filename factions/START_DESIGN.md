@@ -141,6 +141,26 @@ Every one of these failed in the first five factions. Check each before sending.
   camp). Do the needs/makes check for every deck made, and say which deck lines were checked.
 - No flavour text on cards.
 
+## 2c. Critique yourself before sending (lessons of the 3-4 Nov 2026 chat; Kaptain should never have to point these out)
+- Compare with a real faction: run `analyze` on a real faction of the same kind (Noxus for aggro, Shadow Isles for
+  death...) and count what its cards make and use. Your faction must be as broad and as dense: if a mechanic could
+  not carry dozens of cards, it is an interaction.
+- Can all 100+ cards have a place? Before any card, estimate how many cards each mechanic gives (dozens each) and
+  check that 100+ fit without filler. Too complex to fill, or too narrow to fill: rework before sending.
+- A mechanic that limits the player (an order to follow, a card kind, a position) must pay back big; otherwise nobody
+  plays it.
+- How does it actually happen? For every effect, say how it works with the game's existing rules (supply, hand,
+  cells, round end). If it needs something the game doesn't have, mark it NEW RULE; never assume a mechanism ("a card
+  in the enemy's hand gives him supply" — how?).
+- The identity test: could the identity line describe another faction? Does every mechanic serve it? If you can't say
+  in one line how the faction plays and wins, you have no identity yet.
+- One critique, every faction: when Kaptain points out an error on one faction or card, find and fix the same error in
+  all the others before he does.
+- Network check tags must be specific: a generic tag ("supply", "damage") makes everything look connected.
+- Kaptain's own ideas (Projectiles, Immobile faction, Mark, back-in-time) are a few cards or one mechanic inside a
+  faction, never stretched into a whole faction.
+- Before sending, go through every line of 2b and 2c and know which one each part of the design passes.
+
 ## 3. Search the library (wide, deep, curious)
 How to ask: `library/cards_db/START_QUESTIONS.md` (commands, how to build an answer; read it whole). In short:
 - Wide: `ask.py all list concepts`; per mechanic `compare`, `factions`, `fed`, `feeds`, `together`, `chains`, and `both`
