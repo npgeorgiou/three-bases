@@ -331,3 +331,9 @@ n333	runeterra	Avarosan Sentry, Trundle	Avarosan Sentry	Trundle (level 2)	none	f
 n334	runeterra	Mageseeker Junior, Assembly Line	Mageseeker Junior	Assembly Line	none	pays for it	audit 3 Nov 2026: setting cheap spells to cost 3 raises costs (L10)
 n335	runeterra	Rummage, Jinx	Rummage	Jinx	none	empties your hand	audit 3 Nov 2026: Rummage draws as many as it discards (L4)
 n336	runeterra	Senna, Absorb Soul	Senna (level 2)	Absorb Soul	line	cheaper	audit 3 Nov 2026: Drain damages, so Senna's cost cut fits (verdict rt 41)
+n337	runeterra	Feel The Rush, Faces of the Old Ones	Feel The Rush	Faces of the Old Ones	line	asks for	audit 3 Nov 2026: an 8+ cost card is a minority it needs (L1b, L21)
+n338	runeterra	Aphelios, The Sky Shadows	Aphelios	The Sky Shadows	line	asks for	audit 3 Nov 2026: a Nightfall card is a minority it needs (L1b)
+n339	runeterra	Avarosan Hearthguard, Trifarian Assessor	Avarosan Hearthguard	Trifarian Assessor	line	power it counts	audit 3 Nov 2026: Assessor counts units with 5+ power (L18 reads the stat)
+n340	runeterra	Troll Chant, Reckoning	Troll Chant	Reckoning	none	power it counts	audit 3 Nov 2026: Troll Chant gives my units no power
+n341	runeterra	Stalking Shadows, Hecarim	Stalking Shadows	Hecarim	line	Ephemeral	audit 3 Nov 2026: the drawn copy is Ephemeral, Hecarim counts Ephemeral attackers
+n342	runeterra	Defiant Dance, Dunekeeper	Defiant Dance	Dunekeeper	line	returns it to hand	audit 3 Nov 2026: a return to hand replays a summon effect (L14)

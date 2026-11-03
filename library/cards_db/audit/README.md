@@ -19,16 +19,18 @@ Read first: START_DATABASE.md, LINKS_PLAN.md step 3 with "Token economy" and "Le
 - `../pair.py <game> "A" "B" ...`: why one line exists (the network.py line of each reason). Use it for every cause.
 
 ## Done (3 Nov 2026)
-- Fixed: see fixlog.md (old causes 1-11, 13-16, 25, 34, parts of 28-29; Runeterra 1-6, 8-14, 16-18, 21, 25, 28-29, 32, 40, 42, 48,
-  51). Test cases n301-n336. All network.tsv cases pass except Stormbound csb09-csb13 (old, not traced).
-- Pairs removed (and added) against the table before the fixes (links.sqlite): Runeterra 25,603 (2,765 new), Faeria 6,946,
-  Duelyst 1,387, Slay the Spire 289, Stormbound 156, Into the Breach 90, Monster Train 45, Inscryption 4. Real-world: 237 of 261
-  (Zealous Crusader -> Khalim's Prayer is gone by Kaptain's 3 Nov rule).
+- Fixed: see fixlog.md. Test cases n301-n342. All network.tsv cases pass except Stormbound csb09-csb13 (old, not traced).
+- Pairs gone (new) against the table before the fixes: Runeterra 25,475 (5,776 new), Faeria 6,946, Duelyst 1,387, Slay the
+  Spire 289, Stormbound 156, Into the Breach 90, Monster Train 45, Inscryption 4. Real-world: 237 of 261 (238 before: Zealous
+  Crusader -> Khalim's Prayer is gone by Kaptain's 3 Nov rule; the other 23 misses are faction-label checks, not lines).
 
 ## Steps left, in order
-1. Fix the causes NOT REACHED in fixlog.md, in one pass: decide each from L1-L22, check with pair.py, edit network.py, add one
-   `none` and one `line` case per cause (cases/network.tsv, next id n337). Then `links.py`, `dump_lines.py --table` and
-   `--diff /tmp/tb0.tsv` (make tb0 first from the commit before 3 Nov's fixes if /tmp is empty), `check_all.py --no-load`,
-   `realworld.py` (237 of 261 hold now; 238 before).
-2. Rewrite the must-not cases whose reason no deck says any more (check_all.py lists them; START_DATABASE.md "State").
-3. Commit, push, `network_page.py`, load network.html with no errors, send it to Kaptain. Delete this folder.
+1. Runeterra: the causes in fixlog.md "NOT REACHED, Runeterra" (16 left: wrong lines and missed lines).
+2. Old round: the causes in fixlog.md "NOT REACHED, old round", in one pass. Check each with pair.py, decide from L1-L22, grep
+   the card names in cases/*.tsv first (Kaptain's cases win), edit network.py, add one `none` and one `line` case per cause
+   (next id n343). Run check_all.py --no-load after each group of about 5 causes.
+3. Then `links.py`; save the table before the first fix (`dump_lines.py --table /tmp/tb0.tsv`) and diff after; `realworld.py`
+   (237 of 261 must hold).
+4. Rewrite the must-not cases whose reason no deck says any more (check_all.py lists them).
+5. The new-method check (LINKS_PLAN.md step 3) of Slay the Spire, Faeria, Duelyst was not started (Kaptain: another chat).
+6. Commit, push, `network_page.py`, load network.html with no errors, send it to Kaptain. Delete this folder when 1-2 are done.

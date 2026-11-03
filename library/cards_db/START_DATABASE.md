@@ -185,7 +185,7 @@ LINKS_PLAN.md "Token economy" (at most 100 cards per list, one game at a time, r
   says any more (rewrite them): Runeterra n56, Duelyst ndu23 ndu47, Inscryption n299, Into the Breach ntb15-17, Slay the
   Spire nst30 nst36.
 - Real-world cases: 237 of 261 hold (Zealous Crusader -> Khalim's Prayer is gone by Kaptain's 3 Nov rule).
-- Lines (3 Nov 2026, pairs in links.sqlite): Runeterra 192,475; Faeria 10,287; Duelyst 13,370; Slay the Spire 9,079; Into the
+- Lines (3 Nov 2026, pairs in links.sqlite): Runeterra 195,614; Faeria 10,287; Duelyst 13,370; Slay the Spire 9,079; Into the
   Breach 6,138; Monster Train 3,109; Stormbound 2,697; Inscryption 1,080.
 - Known open: a card placed by its text near the leader (Conscript) draws no line to a card acting near the leader
   (Fealty); Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain). Monster

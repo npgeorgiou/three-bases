@@ -113,6 +113,17 @@ checks, also for a new import, keeps this):**
   makers are counted by their own text, not by the game's rules (every unit can kill in a fight).
 - A filter's parts that only say where (position, "of:" what a place is measured from) narrow no card.
 - Never wait on long blind runs: check one pair or one game first; the full run is the last step.
+- `pair.py <game> "A" "B" ...` (3 Nov 2026) prints the line of one pair and the network.py line (site) of each reason. Batch 10-15
+  pairs per call (about 12 s). To compare with the code before a fix, copy the old network.py into a folder and put that folder
+  first on sys.path.
+- Before flipping a line, grep the pair's card names in cases/*.tsv: a checker's REAL verdict can contradict a case Kaptain
+  wrote (Blade Dance -> A Thousand Cuts, nst26; Oakenheart -> the Mechs, ndu34). His case wins; write the conflict in fixlog.md.
+- A fix that narrows a rule must keep its exception for level-ups and Kaptain's cases: run check_all.py --no-load after each
+  group of fixes, not only at the end (a fix for "own fight keyword" first removed n12's Amateur Aeronaut -> Darius).
+- Wording causes ("one fact said twice") are fixed once in one_link() (topic(): one reason per topic, strongest kind first),
+  never per pair.
+- Agents only read (readers, verifiers) with a fixed number of calls. A fixer agent ran 42 minutes, used half of Kaptain's
+  limit and changed nothing (3 Nov 2026).
 
 **Tests:** add a test (cases/links.tsv or cases/network.tsv) for every fixed line you are ABSOLUTELY CERTAIN about from
 both card texts: one that must be gone, and one real line of the same cards that must stay. Nothing you are unsure of.

@@ -911,7 +911,8 @@ def aimed_rows(c, game):
         if act in BOOST and cref is None and (side in ('mine', 'any', None) or named):
             if kind in KIND_CAT or named or kind in ('card', 'effect', 'any', 'anything'): rows.append((a, act, kind, w, kw, 'boost', named, ps, kv))
             continue
-        if act in NOT_AIMED or (side not in ('mine', 'any') and not (side is None and helps_it(c, act, kw, ps))): continue  # no side
+        if act in NOT_AIMED or (side not in ('mine', 'any') and not (side is None and (helps_it(c, act, kw, ps) or act == 'return_to_hand'))): continue  # no side
+        # a return to hand of either side: on my unit with a Play or summon effect it is a replay (L14: Defiant Dance -> Dunekeeper)
         # (N18: "a creature", either side): help is aimed at mine (Khalim's Training), harm at enemies
         # a lasting change to all my cards of a kind, or to them in hand and deck too ("grant allies everywhere +1|+0"): it rules them
         rule = pick == 'all' and side == 'mine' and act not in NOT_AIMED and ((act in RULES and lasts in ('while', 'permanent', None)) or
@@ -1601,6 +1602,9 @@ def need_lines(c, game, nodes, broad):
         if narrowed and kind in KIND_CAT and kind_count(c, game, kind, w) >= 0.5 * kind_count(c, game, kind, None): narrowed = False  # most
         # creatures pass the filter ("a creature with higher Attack than Life", Shedim Pest, read as any): no deck choice
         if kind in KIND_CAT and kind != 'player' and (narrowed or kind != 'unit'): needs.append((t, kind, w))  # a player is always there
+        elif kind in (None, 'card') and narrowed and kind_count(c, game, 'any', w) < 0.5 * kind_count(c, game, 'any', None):
+            needs.append((t, 'any', w))  # "if you have an 8+ cost card" (Faces of the Old Ones), "a Nightfall card" (The Sky Shadows):
+            # a minority of cards is a deck choice (L1b, L21)
     # a keyword's effects acted on ("activate the effects of all traps"): the cards that carry the keyword
     for t, k in c.execute(f"""select card, keyword_ref from flat_do where act='keyword_action' and card_ref is null and keyword_ref is not null
             and on_kind is null and origin='own' and card in ({marks})""", list(nodes)).fetchall():
@@ -1613,7 +1617,8 @@ def need_lines(c, game, nodes, broad):
         counted = (w or '').endswith(';counted'); w = (w or '').removesuffix(';counted')  # "each event you've played": it counts what
         # happens: "enables" (a count, no reaction)
         cnt = kind_count(c, game, kind, w)
-        what = 'a card it acts on' if kind == 'any' else f'a {"landmark or structure" if kind == "landmark" else kind} it asks for'
+        what = ('a card it acts on' if 'keyword_action' in (w or '') or not any(p_.startswith(('cost ', 'keyword ', 'type ')) for p_ in (w or '').split(';'))
+                else 'a card it asks for') if kind == 'any' else f'a {"landmark or structure" if kind == "landmark" else kind} it asks for'
         kws_ = [mechanics.name(c, int(p.split(' ')[2])) for p in (w or '').split(';') if p.startswith('keyword is ') and p.split(' ')[2].isdigit()]
         if not kws_ and not counted and any(p.split(' ')[:2] in (['type', 'is'], ['type', 'in']) for p in (w or '').split(';')): continue  # the type line says it ("is a Conduit card it asks for")
         if kind != 'any' and most_cards(c, game, kind) and not [p for p in (w or '').split(';') if p and p.removeprefix('of:').split(' ')[0] not in ('category', 'position', 'distance', 'right_of', 'origin', 'level', 'countdown')]:  # a status ("poisoned units") narrows
@@ -2122,8 +2127,9 @@ def state_giver_lines(c, game, nodes):
     cards = cards_of(c, game); out = Lines(); marks = ','.join('?' * len(nodes)); L = list(nodes); lvl = level_abilities(c)
     gives = collections.defaultdict(set)
     for a, k in c.execute(f"""select card, keyword_ref from flat_do where act='give_keyword' and origin='own' and coalesce(on_side,'mine')
-            in ('mine','any') and coalesce(on_pick,'') not in ('self','owner') and coalesce(on_kind,'unit') in ('unit','any','anything')
-            and card in ({marks})""", L): gives[k].add(a)
+            in ('mine','any') and coalesce(on_pick,'') not in ('self','owner') and (coalesce(on_kind,'unit') in ('unit','any','anything')
+            or (on_kind='card' and on_pick='it')) and card in ({marks})""", L): gives[k].add(a)  # "copy it, it is Ephemeral" (Stalking
+            # Shadows): the follower it draws
     for t, ab, role, aw, ow in c.execute(f"""select card, ability, role, actor_with, obj_with from flat_ref where role in ('condition','trigger')
             and origin='own' and coalesce(side,'mine') in ('mine','any','') and card in ({marks})""", L).fetchall():
         for k in set(kw_states(c, game, aw)) | set(kw_states(c, game, ow)):
@@ -2268,6 +2274,17 @@ def stat_reader_lines(c, game, nodes):
               where a.x='stat' and t.pick='it' and o.pick in ('chosen','it','all') and coalesce(o.side,'mine') in ('mine','any')
               and e.act in ('stat_change','stat_set') and p.param in ('power','health') and a.attr in ('power','health')
               and b.card in ({marks})""", L).fetchall()
+    # a count of my units with a power floor ("units with 5+ power", Trifarian Assessor, Reckoning): its text reads the stat, so
+    # what raises my units' power feeds it (L18 "reads its power"; Kaptain's n16: Fury of the North -> Reckoning)
+    floors = {t for (t,) in c.execute(f"""select card from flat_if where test in ('count','amount_count','have') and coalesce(of_side,'mine')='mine'
+              and of_with like '%power ge %' and card in ({marks})""", L)} | {t for (t,) in c.execute(f"""select card from flat_do
+              where params like '%count of%' and on_with is not null and params like '%power ge %' and card in ({marks})""", L)}
+    if floors:
+        raisers = {a for a, ps in c.execute(f"""select card, params from flat_do where origin='own' and act in ('stat_change','grow')
+                   and coalesce(on_side,'mine')='mine' and coalesce(on_pick,'') not in ('self') and coalesce(on_kind,'unit') in ('unit','any')
+                   and card in ({marks})""", L) if re.search(r'power=\d', ps or '')}
+        for t in floors:
+            for a in raisers - {t}: out[(a, t)].append(('stronger', 0.3, 'raises my units to the power it counts'))
     if not readers: return out
     grows = collections.defaultdict(set)  # unit -> stats it raises on itself
     for t, ps in c.execute(f"""select card, params from flat_do where origin='own' and on_pick='self' and act in ('stat_change','grow')
