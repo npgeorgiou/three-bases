@@ -90,6 +90,9 @@ Judge only data quality, never how much the game looks like Three Bases (ideas c
 complete, with codes, tokens and every form; keyword definitions from the game's own source (not "Claude's summary" or
 "inference"); rules from the game's own pages; real decks from players; combos named by players. Check the library entries
 and the repo's sources first, then the online sources, and say which parts were only searched, not opened.
+Data quality means what helps the rows and the lines: fields that already say what a card does (its triggers, keywords with
+values, the cards it creates or names), card wording written to a fixed template, every keyword's exact rule from the
+game's own rulebook, and players' combos and decks that test the lines. Completeness alone is not enough.
 
 ## Open work, in Kaptain's order
 1. A newly imported game gets the line check of LINKS_PLAN.md step 3; its fixes are made in the main chat, never by an agent.
