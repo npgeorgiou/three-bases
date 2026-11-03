@@ -121,6 +121,8 @@ Every one of these failed in the first five factions. Check each before sending.
   of one recipe copied onto every card fails; the faction must be playable in 3+ different ways.
 - Strong at / only a little / weak at: written in the entry; no card gives a faction what its weak list says (Dean of
   Battle Magic, melee buffs, on Arcanists). Factions contrast with each other and each has a few cards against the others.
+- Every effect must change something that would not happen anyway ("when one acts at round end, the touching ones act
+  too" is empty if they all act at round end already).
 - Conditions serve the identity: "the enemy with the least defence" only in a faction about hunting weak units.
 - Twins: write each card's effect in a few words, sort, compare. Two cards with the same effect, or the same result
   (Spark of Yesterday and Twin Novice), at the same cost: change or cut one. Same for near-twins (Pioneer, Wayside Shrine).
