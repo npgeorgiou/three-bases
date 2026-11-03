@@ -66,6 +66,11 @@ Example answers: QUERIES.md. Kaptain's standing questions with their current ans
   `../realworld/`.
 - Translate: turn each way into Three Bases rules (lanes, dots, round end, no active abilities, no counters) and say what
   had to change.
+- Board and rules check (Kaptain, 3 Nov 2026), before any card is suggested: read summary/ sections 03-08 and 10
+  (board, winning, rounds, units, areas, rulings, keywords); a rule not written there is looked up quickly in the game code
+  (map in CLAUDE.md). Test every card and deck against them: each lane camp is 3x3 with 3 front cells (the dots); melee
+  reaches only the enemy front row, deeper rows only Ranged, Pike, spells and abilities; front units never shield back units;
+  count the cells a deck's units fill in one lane; check what each unit can still reach from where it must stand.
 - Self-check before sending: per part, which commands ran; say plainly which parts have no library grounding.
 Known weakness: `kit` shows a faction's most-tagged cards, not cards that show the asked mix, and a broad concept
 (protection, drawback) drowns a narrow one (selection). Do not answer from `kit` alone.
