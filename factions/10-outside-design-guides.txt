@@ -1,0 +1,79 @@
+==================================================================
+10. WHAT OUTSIDE DESIGN GUIDES TEACH (3 Nov 2026; Claude's reading, after Kaptain's critique of the five new factions)
+==================================================================
+Each guide: what it says (in short), whether it helps Three Bases, and what it means here. The rules taken from it are in
+factions/START_DESIGN.md section 2b. Ideas marked "Claude's" are not from the guide.
+
+A. STRENGTHS, LIMITS, WEAKNESSES (Hearthstone, "Developer Insights: Class Identity", 2019)
+- Each class has a fantasy, things it is good at, things it may do only a few times at low power, and things it cannot do.
+  Weaknesses matter as much as strengths: they let the designers push the strengths further, and they let the enemy plan
+  before seeing a card. Two cards were removed from the game only because they gave a class something on its weak list.
+- Helps: yes. Our faction entries list what a faction does, never what it must not do. Three Bases: every faction gets a
+  "weak at" line and a "only a little" line. Example of the miss: melee buffs (Dean of Battle Magic) on the Arcanists.
+
+B. TRAITS BECOME MECHANICS; CONTRAST; TOOLS AGAINST EACH OTHER (Rosewater, "Battle Plans", 2015)
+- Pick about five traits of the faction (the Eldrazi: ancient, huge, alien, linked, hungry) and turn each into a mechanic.
+  Then make the factions contrast (big and slow against small and fast). Give each faction a plan with a weak spot the
+  others can hit, and a few cards that punish the others. Let cards of two factions work together quietly, or decks repeat.
+- Helps: yes. Our docs have identity first, but no step that turns traits into mechanics, no contrast between factions,
+  and no tools against the others.
+
+C. WHAT A FACTION NEEDS (Rosewater, "Faction Packed", 2018)
+- A faction with no mechanical identity is not seen as a faction at all. Speed, curve, win route, strengths and weaknesses
+  must all match who they are. Decide what the player should feel. Factions that share decks need to work together.
+  Across all factions cover fast and slow, threats and answers, unit-heavy and spell-heavy.
+- Helps: partly (most is already in our method). New: "what should the player feel" in each entry.
+
+D. SAME HOOK, DIFFERENT USE (Rosewater, Strixhaven Part 2, 2021)
+- Five factions shared one trigger (casting a spell), and each used it its own way: one grew its units, one built to one
+  big spell, one gained and spent life. Each faction was built on a tension inside itself, not on what its parts share.
+- Helps: yes, for mixed decks later. Three Bases: a few shared hooks (a unit dies, a spell is cast, a unit enters a lane)
+  that each faction answers in its own way. This is how two-faction decks can work without copying cards.
+
+E. FINDING A MECHANIC AND ITS LIMITS (Rosewater, "Nuts & Bolts #17", 2025)
+- Mechanics come from a need the set has, a quality cards already share, or a problem found in testing. Before designing
+  cards, write the mechanic's space: which cards can have it, when it happens, what that timing rules out ("an end-of-turn
+  trigger does not go with a temporary combat boost"). Solve problems with mechanics, not with more power. Build test
+  decks early.
+- Helps: yes. The timing question is exactly the "-1 strength this round" mistake: in Three Bases the enemy can simply not
+  attack that round, and units almost never move, so "can't move this round" is close to nothing.
+
+F. A MECHANIC THAT NEEDS PARTNERS NEEDS MANY CARDS (Rosewater, "Nuts & Bolts #12", 2020)
+- A mechanic that works alone plays well anywhere; one that needs partner cards needs many of them. Count how many cards
+  of each mechanic a deck holds. Write a placeholder for each need ("a card that brings this unit into the enemy camp")
+  before the cards exist, and fill it.
+- Helps: yes. The Sapper in a deck that cannot carry him to the enemy camp is a missing placeholder. Three Bases: with 2
+  draws a round and 30-40 cards, a cash-in card needs enough setup cards in the deck to be in hand in time.
+
+G. MECHANICS THAT MULTIPLY (Goblin Artisans, "Multiplicative design", 2018)
+- One element that works with many others beats one that works with one (a key opens one door; wind moves enemies, fire,
+  sails). Wide triggers ("when a unit dies here") link to more cards than narrow ones ("when a Projectile dies").
+  Mechanics with many contact points link best. A mechanic that needs partners still becomes a web if it has enough cards
+  and the cards interact in different ways; tribes with no crossing cards stayed lines (Ixalan).
+- Helps: yes, the most. This is Kaptain's point that cards must belong to two families and be parts of chains.
+
+H. CARDS THAT ARE BOTH SETUP AND CASH-IN (Riptide Lab forum, "Bosses vs leaders")
+- Some cards wait for others to do the work and give nothing themselves; others are part of the theme and gain from it
+  (an enchantment that rewards enchantments also sets off the other enchantment cards). Also: how good a card is alone
+  against with its partners. A deck wants many cards of the second kind and a few of the first.
+- Helps: yes. Three Bases: prefer cards that set up one mechanic and cash in another (a wall that is also a Projectile).
+
+I. EVERY CARD HAS A PURPOSE; CUT HARD (Slay the Spire, Giovannetti, GDC 2019)
+- Cards need not be equally strong, but each must be a build-around or a staple. They made thousands of ideas and cut most
+  of them; arguments were settled by play data (win rate, pick rate per card).
+- Helps: partly; method step 8 (simulator) already says this. New: cut twins. Two cards with the same effect at the same
+  cost (Spell Conduit and Star Seer) means one goes.
+
+J. ATTITUDE (Rosewater, "Twenty Years, Twenty Lessons", GDC 2016)
+- Restrictions breed creativity; interesting is not the same as fun; a game everyone likes and no one loves fails; a small
+  change can change everything. Helps: only as attitude.
+
+K. THE GAME'S OWN RULES DECIDE WHAT IS STRONG (Runeterra)
+- Their designers said protection and buff spells are much better than removal in their game, because champions level up
+  over several turns. Players also said regions built for pairs lost their own identity.
+- Helps: yes, as a warning. Never take a card's value from another game; check it on this board (START_DESIGN 1b). Keep
+  each faction's core whole on its own; mixing hooks stay small.
+
+What did not help: general "how to design a card game" pages and AI prompt pages (no method), mana curve and rarity advice
+(Three Bases has lane supply and no rarity), draft signposts (no draft here). Claude's idea from signposts: the 5 special
+units of a faction could each point to one way to play it.

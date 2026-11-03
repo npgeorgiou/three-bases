@@ -89,6 +89,29 @@ Candidates (raw brainstorming, not designs): `factions/3-candidates/`.
 - Card text voice: "I / me / my" for the card itself (summary/09). Only mechanics are taken from other games, never
   names or wording.
 
+## 2b. Checks from Kaptain's critique of the five new factions (3 Nov 2026; sources in `factions/10-outside-design-guides.txt`)
+Every one of these failed in the first five factions. Check each before sending.
+- Work in stages, Kaptain checks each: (1) identity, 3-5 mechanics, the web between them, "weak at" list, for ONE faction;
+  (2) ~20 key cards with needs/makes lines; (3) the rest. Never a whole faction (or five) in one go.
+- Mechanics: buffs, damage and stats are not mechanics. Each mechanic is written with the traits it comes from and the
+  other mechanics it feeds and is fed by; a mechanic that feeds none of the others is cut.
+- Two families: about a third of the cards belong to two mechanics (set up one, cash in another), so chains form. A deck
+  of one recipe copied onto every card fails; the faction must be playable in 3+ different ways.
+- Strong at / only a little / weak at: written in the entry; no card gives a faction what its weak list says (Dean of
+  Battle Magic, melee buffs, on Arcanists). Factions contrast with each other and each has a few cards against the others.
+- Conditions serve the identity: "the enemy with the least defence" only in a faction about hunting weak units.
+- Twins: write each card's effect in a few words, sort, compare. Two cards with the same effect, or the same result
+  (Spark of Yesterday and Twin Novice), at the same cost: change or cut one. Same for near-twins (Pioneer, Wayside Shrine).
+- Rule-breaking keywords (Outrider, moving between lanes, anything that bends the board rules) sit on a few cards only.
+- Worth on this board: "this round" penalties (-1 strength, can't attack) are worth almost nothing, the enemy just waits;
+  "can't move" is near nothing, units rarely move. Prefer effects that last or act now.
+- Costing: a drawback is paid for with more than the curve; Immobile's bonus is small (1:0|5 is too much defence);
+  a card paid twice (Projectiles: placed, then thrown) is cheaper for it.
+- Keywords on one card only with a reason (two Push keywords on Siegework: what on it uses Push?).
+- Feasibility per deck: every need on every card has a maker in the same faction (a Sapper needs a way into the enemy
+  camp). Do the needs/makes check for every deck made, and say which deck lines were checked.
+- No flavour text on cards.
+
 ## 3. Search the library (wide, deep, curious)
 How to ask: `library/cards_db/START_QUESTIONS.md` (commands, how to build an answer; read it whole). In short:
 - Wide: `ask.py all list concepts`; per mechanic `compare`, `factions`, `fed`, `feeds`, `together`, `chains`, and `both`
