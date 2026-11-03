@@ -6,7 +6,7 @@ Base bonuses: each game the bases are assigned at random from a large pool, so c
 Steps for every faction:
 1. Read cards, not statistics: the 30-50 most characteristic cards of each source faction (small-set games and Marvel Snap included); write each card's play pattern (the decision it creates, what it rewards) and its Three Bases translation.
 2. Engine map: one idea; enablers -> payoffs drawn as a web. Every payoff has 3+ enablers in the faction, every enabler feeds 2+ payoffs; an enabler that also hurts the enemy beats one that only hurts you.
-3. A moment per card: when, where and why to play it must be a real decision; at most ~15% plain keyword-plus-stats bodies.
+3. A moment per card: when, where and why to play it must be a real decision; almost no card without a keyword or text (Kaptain, 4 Nov 2026; START_DESIGN 2).
 4. Interaction share: cards that touch the enemy or answer what the enemy does (on enemy placed, on struck, survives damage, punish). The share differs per faction: playful/disruptive factions high, straightforward factions lower (AGREED, 11 Oct 2026).
 5. Card variety and signatures (AGREED, 11 Oct 2026):
    - Each faction: 3-5 core mechanics (mechanics, not keywords; keywords only enable mechanics), and its own keyword set. Not every faction gets every mechanic or keyword.

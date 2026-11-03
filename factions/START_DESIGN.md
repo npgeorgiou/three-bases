@@ -71,6 +71,8 @@ Candidates (raw brainstorming, not designs): `factions/3-candidates/`.
   stealing...) belong to 1, at most 2 factions; elsewhere only on a very few cards, in that faction's own character.
 - Self-sufficiency: every faction alone can hold dots, remove enemies, get supply (plain Supply +1 units are fine), and
   draw (at least 1 draw card, tied to its signature).
+- Draw is simple: a plain "draw X", or a condition tied to the faction's mechanics. Never a hard condition such as an
+  enemy's death (Kaptain, 4 Nov 2026).
 - Draw is rare and bounded: only on effects that fire once per card (spell, Place, own death) or once per round. Never
   on repeated events ("whenever an ally dies, draw").
 - Between lanes: every faction has at least 1 card that acts between lanes, fitting the faction (moving units, throws,
@@ -81,7 +83,9 @@ Candidates (raw brainstorming, not designs): `factions/3-candidates/`.
 - Spells 20-50% of the cards. At least 100 cards per faction; usually more.
 - Lane control: cards that check "as long as you hold this lane's base", "if you don't", or both. Never a specific
   base bonus.
-- At most ~15% plain keyword-plus-stats bodies; each card must be a real decision (when, where, why).
+- Almost no card without a keyword or text: loads of passives, triggers, Death and Place effects (Kaptain, 4 Nov 2026).
+  Every card has its place in the faction's mechanics and is a real decision (when, where, why).
+- Each faction has 2-3 characteristic keywords of its own (Kaptain, 4 Nov 2026).
 - Interaction with the enemy: high for playful/disruptive factions, lower for straightforward ones.
 - Decks will mix 2 factions later: give each faction hooks others can use (e.g. Projectiles, Part 4).
 - Unit SUPPLY +/- N to balance a unit is allowed but rare.
