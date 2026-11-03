@@ -85,6 +85,12 @@ push, give network.html to Kaptain.
   as text (ask Kaptain). Monster Train's Olde Magic is built by the player at an event: its record
   (read/monster_train/event_cards.jsonl) lists the wiki's choices, with no numbers. Stormbound's Fort of Ebonrock has no ability.
 
+## Choosing the next game (Kaptain, 3 Nov 2026)
+Judge only data quality, never how much the game looks like Three Bases (ideas come from any game). For each game: cards
+complete, with codes, tokens and every form; keyword definitions from the game's own source (not "Claude's summary" or
+"inference"); rules from the game's own pages; real decks from players; combos named by players. Check the library entries
+and the repo's sources first, then the online sources, and say which parts were only searched, not opened.
+
 ## Open work, in Kaptain's order
 1. A newly imported game gets the line check of LINKS_PLAN.md step 3; its fixes are made in the main chat, never by an agent.
 
