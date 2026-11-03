@@ -80,6 +80,9 @@ Example answers: QUERIES.md. Kaptain's standing questions with their current ans
   - Timing: what happens during the round, what at round end (after both pass, when the enemy can't answer), what counts
     for the dots.
   - Worth: is the card better than a plain unit of the same cost in that spot? If not, drop it.
+- Identity check: first write the faction's identity in one sentence; every mechanic must serve it. A library way found on
+  similar cards elsewhere (e.g. buildings that damage themselves) is not a reason to use it. Never take another faction's
+  identity (summary/11-faction-*.txt), e.g. self-damage belongs to the Ashfang Horde; cross-faction ideas only when asked.
 - A combo is not a list of buffs. Two cards are a combo only when one changes what the other does or sets it off again
   (a loop, a conversion, a rule change), so together they do something neither does alone, not just bigger numbers.
   Test: take either card away; does the other lose its point? Show each combo as a played sequence: card, cell, what the

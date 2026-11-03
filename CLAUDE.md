@@ -8,6 +8,7 @@ Kaptain's browser card game. Work on the clone, commit and push every change to 
 - Never use words Kaptain hasn't used or agreed to (no "happening", "payoff", "generic layer", "flat_ref", etc.); explain with a card example instead.
 - One question at a time, answerable with yes/no or a choice. Put it last, alone, clearly marked as the question.
 - No recaps, no lists of everything done, no caveats unless they change what Kaptain must decide.
+- When a mistake is found, fix its cause in the docs (this file or the entry file the task uses) in the same turn, then say in one line what changed; never only admit it.
 - When Kaptain says he doesn't understand or doesn't know something, explain it plainly and wait. Do not act until he answers.
 
 ## Start of a chat (token budget: read nothing else)
