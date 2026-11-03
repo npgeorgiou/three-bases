@@ -382,7 +382,7 @@ def lines_of(c, game):
         gv[a_].add((k_ == 'player' and s_ in ('mine', None)) or p_ in ('self', 'owner'))
     self_given = {a_ for a_, x in gv.items() if x == {True}}
     hit_abs = {a_ for (a_,) in c.execute("""select ability from flat_do where origin='own' and act in ('damage','kill','obliterate')
-               and coalesce(on_side,'')='' and coalesce(on_pick,'') not in ('self','it','all')""")}  # a harm on one unit of no named side
+               and coalesce(on_side,'')='' and on_pick='chosen'""")}  # a harm on a unit the player picks, of no named side
     # what a card does to the things a happening left ("revive the strongest dead ally": it brings back what died)
     state_use = {}
     for a_, ab_, act_, kw_ in c.execute("""select card, ability, act, keyword_ref from flat_do where origin='own' and
@@ -478,10 +478,11 @@ def lines_of(c, game):
     def fights_for(m, h, side=None):  # its own text or keyword makes it fight more for this need (Hecarim's Overwhelm kills no more units: Thresh)
         if m in rule_fighters: return True
         ks = fight_kw.get(m, ())
-        return 'multi_attack' in ks or ('aoe_damage' in ks and h in ('damaged', 'dies', 'killed', 'survives_damage') and side == 'enemy') or \
+        return ('multi_attack' in ks and h not in ('nexus_damaged', 'strikes_nexus')) or ('aoe_damage' in ks and h in ('damaged', 'dies', 'killed', 'survives_damage') and side == 'enemy') or \
             ('excess_damage' in ks and h in ('nexus_damaged', 'strikes_nexus'))
     # or hits more than one (Celerity, Frenzy, Overwhelm); Ranged or Quick Attack only change how one attack goes; Frenzy's extra
-    # hits feed only a need about enemies, not "whenever a unit dies" (Piercing Mantis -> Gate to the Undervault: no line, L21)
+    # hits feed only a need about enemies, not "whenever a unit dies" (Piercing Mantis -> Gate to the Undervault: no line, L21); a
+    # second attack gets no unit past blockers to the Nexus (L4: Greathorn Companion's Scout -> Angel's Plunder, no line)
     # cards that make an enemy unit act (strike, attack, turn its attack): only these do what an enemy must do
     enemy_doers = {a for (a,) in c.execute("""select card from flat_do where act in ('strike','start_attack','redirect_attack')
                    and coalesce(on_side,'') in ('enemy','')""")}
@@ -521,14 +522,14 @@ def lines_of(c, game):
         for m, ms, mk, mkind, mpick, mw, mref, rule in makes.get(h, ()):
             for t, ts_, tk, tkind, tpick, tw, lv, role, actor, cost, cheap, use in ts:
                 if m == t or not mechanics.FIT(ms, ts_) or not (mk is None or tk is None or mk == tk): continue
-                if not rule and made_by.get((m, h)) == {'fight_kw'} and (h in ('nexus_damaged', 'strikes_nexus', 'strikes', 'fights', 'attacks')
+                if not rule and not lv and made_by.get((m, h)) == {'fight_kw'} and (h in ('nexus_damaged', 'strikes_nexus', 'strikes', 'fights', 'attacks')
                         or (h in OWN_LOSS and ts_ != 'enemy')):  # Frenzy's hits feed no "whenever a unit dies" (Piercing Mantis -> Gate)
                     continue  # made only by its own fight keyword: an attack any unit makes (L2, L20: Alpha Wildclaw -> Snowy Razorclaw)
                 if (h, ms or '') in common and tpick != 'self' and not lv and not (actor and actor[2] == 'enemy'): continue  # an enemy
                 # that hits other enemies (Vek Hormones) waits for what few cards do: turning the enemy's attack (Spartan Shield)
                 if not kinds_fit(mkind, tkind): continue
                 if m in home_m and h in ('moves', 'moves_onto') and 'position enemy' in (tw or ''): continue
-                if tpick == 'self' and mkind == 'player' and cards[t]['cat'] != 'leader': continue  # done to my General or player, never to
+                if tpick == 'self' and mkind == 'player' and h in ('moves', 'moves_onto') and cards[t]['cat'] != 'leader': continue  # done to my General or player, never to
                 # this card (L7: Mist Walking moves the General, not Gore Horn)
                 if mpick == 'self' and tpick == 'self': continue  # each card about itself ("when I level up"): no link between two cards
                 if not names_fit(c, game, cards, tw, mw, mref): continue
@@ -1179,6 +1180,9 @@ def aimed(c, game, nodes, broad):
         if act in ('repeat', 'increase_effect') and kind in ('landmark', 'spell', 'equipment') and \
                 kind_count(c, game, kind, None) < 0.5 * kind_count(c, game, 'any', None): sharp = True  # a smaller kind of card
         # (Doctor Mia triggers structures; Kaptain's check n17) is a deck choice (L1b); not when most cards are spells (Slay the Spire)
+        if act in ('stat_change', 'grow') and kind != 'player' and not any(p.startswith(('type is', 'type in')) for p in (w or '').split(';')):
+            sharp = False  # stats to units with a keyword or a stat go only to a unit whose text uses them (L14, L18: Rek'Sai's Lurkers ->
+            # Sharkling: no line); a tribe stays a deck choice (Kaptain's ndu34: Oakenheart helps the Mechs)
         if not sharp and kind != 'player' and act != 'return_card' and act not in HARM_GAIN:  # help to any card of a kind: only
             # cards that use it (Kaptain 1 Nov 2026); "your General" is one card; harm on my card is kept only for its own effect below
             hits = [b for b in hits if uses_help(c, game, b, act, kw, ps, w)]
@@ -1626,7 +1630,7 @@ HELPS = [
     # each help must do the very thing needed (Kaptain 31 Oct 2026): power gets no unit past blockers (Zed: Sharpsight, For Demacia!
     # are no help), nor deals a level-up's damage (Gwen: Tybaulk); only evasion, Overwhelm, another attack or strike reach the Nexus
     (('nexus_damaged', 'strikes_nexus'), ('enemy', '', 'mine'), ('excess_damage', 'evasion', 'multi_attack', 'extra_turn', 'start_attack'), 'helps it hit the enemy player'),
-    (('damaged',), ('enemy', ''), ('excess_damage',), 'more damage'),  # not power: any attacker damages enemies (Punish, Kaptain 30 Oct 2026)
+    # Overwhelm adds no damage to a unit: its extra goes to the Nexus (L4, L18: Might -> Scorched Earth, Sion -> Ravenous Flock: no line)
     (('killed',), ('enemy', '', 'mine', 'any'), ATTACK + ('first_strike', 'target_choice'), 'helps my units kill'),
     (('strikes',), ('enemy', '', 'mine', 'any'), ('multi_attack', 'extra_turn', 'start_attack'), 'helps my units strike more'),
     # another attack: an attack token (Rally) or a free attack; striking twice, a strike now or a unit summoned attacking is not one
@@ -1669,14 +1673,15 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
                 and act not in ('create','summon','choose_card','keyword_action','copy','draw') and coalesce(on_pick,'') not in ('self','owner') and not (coalesce(on_kind,'') = 'player' and act in ('heal','stat_change','grow',
                 'negate_damage','damage_reduction','give_keyword','give_ability')) and card in ({marks})""", L)}  # on my
         # units: healing itself and my Nexus helps no other unit (Cosmic Youngling); Rally on the player does (another attack); making a
-        # card is no help, the made card helps (L3: Aurelion Sol makes Celestial cards, he does not help Braum)  # it acts on other cards of mine, not only on itself
+        # card is no help, the made card helps (L3: Aurelion Sol makes Celestial cards, he does not help Braum); what a keyword the
+        # card has does to others is the keyword's rule (L15: Scout readies Scouts: Greathorn Companion -> Greenfang Warden, no line)  # it acts on other cards of mine, not only on itself
         # a gain on the card it is sacrificed for (Mealworm: Morsel) reaches only that card: lines_of draws it, not every unit here
         stat = {'attack_gain': ('power', 'strength'), 'defence_gain': ('health', 'strength')}  # strength is both (Stormbound)
         want = {y for x in concepts if x in stat for y in stat[x]}; rest = tuple(x for x in concepts if x not in stat)
         def gains(act, ps):  # the stat it raises ("+2 Attack" raises no Health)
             p = dict(x.split('=', 1) for x in (ps or '').split(';') if '=' in x)
             return act in ('stat_change', 'grow') and any(k in p and raises(p[k]) for k in want)
-        rows = [(a, own) for a, own, act, ps, con, k, w in c.execute(f"""select card, coalesce(on_pick,'') in ('self','owner','actor') or act='counter' or coalesce(on_side,'mine') not in
+        rows = [(a, own) for a, own, act, ps, con, k, w in c.execute(f"""select card, coalesce(on_pick,'') in ('self','owner','actor') or act='counter' or origin='has_keyword' or coalesce(on_side,'mine') not in
                 ('mine','any') or (coalesce(on_kind,'') = 'player' and act in ('heal','stat_change','grow','negate_damage','damage_reduction',
                 'give_keyword','give_ability')), act, params, concept, on_kind, on_with from flat_do where origin in ('own','uses_keyword','has_keyword') and card in ({marks})""", L)
                 if ((con in rest or act in rest) or gains(act, ps)) and (want and gains(act, ps) and reach[a].append((k, w)) or True)
@@ -1752,7 +1757,10 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
             home_movers = {a for (a,) in c.execute(f"""select card from flat_do where origin='own' and act in ('move','swap') and to_side='mine'
                            and card in ({marks})""", L)}  # it moves units onto my own land (Desert Twister): never onto enemy land
         movers = helpers
-        own_kw = helpers - having(concepts, False) if hs[0] == 'nexus_damaged' else set()  # helps by its own keyword only (Young
+        own_kw = helpers - having(concepts, False) if hs[0] == 'nexus_damaged' else set()
+        own_reach = {a: 1 for (a,) in c.execute(f"""select ck.card from card_keyword ck join card k on k.id=ck.keyword join vocab v on
+                     v.field='keyword' and v.value in (k.name, k.game || ':' || k.name) where v.tree in ('evasion','excess_damage')
+                     and ck.card in ({marks})""", L)}  # Elusive, Overwhelm: past blockers; Scout's second attack is no reach (L4)  # helps by its own keyword only (Young
         # Witch is Elusive): it helps a need that it can be the doer of, not "Zed or allied Living Shadows strike the Nexus"
         for t, ab, h, side, role, pick, ak, aw in needs:
             if h not in hs or side not in sides: continue
@@ -1780,7 +1788,8 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
             lv = ab in lvl
             if why.endswith('*') and not lv: continue
             for a in helpers_t - {t}:
-                if a in own_kw: continue  # a reach keyword works only for the card that has it (L20: Abyssal Eye -> Dashing Dandy: no line)
+                if a in own_kw and not (lv and own_reach.get(a) and not (aw and not matches(c, game, cards[a], ak if ak in KIND_CAT else 'any', aw))): continue  # a reach keyword works only for the card that has it (L20: Abyssal Eye -> Dashing
+                # Dandy: no line); it does reach the Nexus for a champion's level-up (L2, Kaptain's n12: Amateur Aeronaut -> Darius)
                 if not (aim_fits(a, t, given=bool(set(concepts) & set(GIVEN))) if pick == 'self' else leader_fits(a, t)): continue  # help on itself must land on it
                 # who must do it ("Zed or allied Living Shadows strike the Nexus"): the help must land on such a card
                 if aw and pick != 'self' and not can_aim_at(c, game, a, ak if ak in KIND_CAT else 'any', aw): continue
@@ -2077,8 +2086,10 @@ def object_help_lines(c, game, nodes, broad):
         k = 'any' if kind in (None, 'card', 'any', 'anything') else kind
         hits = [b for b in L if b != a and b in cards and matches(c, game, cards[b], k, w) and all(x in cards[b]['kws'] for x in arrive_kws)]
         for b in hits:
-            ws = [y if sharp else use_of(c, game, b, act, kw, ps) for y, act, kw, ps in whys if sharp or uses_help(c, game, b, act, kw, ps)]  # "when you summon an ally, grant it
-            # +1|+1": only the units that use it (Kaptain 1 Nov 2026)
+            loose = lambda act: sharp and (act not in ('stat_change', 'grow') or 'type ' in (w or ''))  # stats to "an Elite" or "a Flying unit" go only to a unit
+            # whose own text uses them (L14, L18: Drakkar Skycaptain's Flying units -> Airbot: no line); a tribe is a deck choice (ndu34)
+            ws = [y if loose(act) else use_of(c, game, b, act, kw, ps) for y, act, kw, ps in whys if loose(act) or uses_help(c, game, b, act, kw, ps)]  # "when
+            # you summon an ally, grant it +1|+1": only the units that use it (Kaptain 1 Nov 2026)
             if not ws: continue
             when = '' if all(y.startswith(('plays it again', 'makes its effect bigger', 'hits several', 'its damage is bigger')) for y in ws) else ' when it comes'  # it is played: it comes
             out[(a, b)].append(('boosts', 0.5 / max(1, len(hits)), ', '.join(dict.fromkeys(ws)) + when))
@@ -2136,7 +2147,8 @@ def gives_lines(c, game, nodes):
     given ability ("when you summon an ally, grant its keywords": Zoe level 2)"""
     cards = cards_of(c, game); out = Lines(); marks = ','.join('?' * len(nodes)); L = list(nodes)
     doers = lambda h: {m for (m,) in c.execute(f"""select distinct card from flat_ref where role='makes' and happening=? and
-            origin in ('own','uses_keyword') and coalesce(pick,'') not in ('self','it') and card in ({marks})""", [h] + L)}
+            origin in ('own','uses_keyword') and coalesce(pick,'') not in ('self','it') and coalesce(side,'')!='mine' and card in ({marks})""", [h] + L)}
+    # damage to my own cards is a drawback: more of it helps nothing (L5: The Dreadway -> Darkwater Scourge, no line)
     found = adders(c, game); n = collections.Counter(h for _, _, h, *_ in found)
     for a, ab, h, kind, w, (act, ps) in found:
         if a not in nodes: continue
@@ -2408,6 +2420,18 @@ def merge_places(ls):
     return [(k_, w_, f'{{A}} moves {who}, and {{B}} acts on units {" or ".join(sorted(places))}')] + rest
 
 
+TOPICS = (('nexus', r'enemy player|the Nexus'), ('cost', r'cheaper|its cost|pays? '), ('countdown', r'countdown'),
+          ('attack', r'attack again|another attack|attack for its effect|Rally|makes? (it|your units) attack'),
+          ('power', r'power|stats|health|stronger|strength'), ('stun', r'Stun'), ('lurk', r'Lurk'),
+          ('is', r'^is (a|an|the) '), ('puts', r'^(plays|casts its|casts|summons|creates|copies)'))
+
+
+def topic(y):
+    """what a reason is about: two reasons of one pair about the same thing say one fact twice"""
+    y = re.sub(r' \(levels it up\)| \(by [^)]*\)', '', y)
+    return next((n for n, r in TOPICS if re.search(r, y)), y)
+
+
 def one_link(ls):
     ls = list({(k, y): (k, w, y) for k, w, y in ls}.values())  # one card doing a thing twice (when summoned, when attacking) is one reason
     ls = merge_places(ls)
@@ -2415,6 +2439,12 @@ def one_link(ls):
     ls = [x for x in ls if not (re.search(r' \(when [^)]*\)$', x[2]) and (x[0], re.sub(r' \(when [^)]*\)$', '', x[2])) in plain)]  # said once (Shield Array)
     if len(ls) > 1: ls = [x for x in ls if x[0] != 'targets'] or ls  # "can aim at it" only when nothing else joins them
     ls.sort(key=lambda x: (KIND_ORDER.index(x[0]) if x[0] in KIND_ORDER else 99, -x[1]))
+    seen, kept = set(), []  # one reason is said once, by its strongest kind (L10): one fact read by two rules is one reason
+    for x in ls:
+        tp = topic(x[2])
+        if tp and tp in seen: continue
+        seen.add(tp); kept.append(x)
+    ls = kept
     k, w, y = ls[0]
     more = [f'{KIND_WORD.get(k2, k2) + ": " if k2 != k else ""}{y2}' for k2, _, y2 in ls[1:]]
     return [(k, max(x[1] for x in ls), '; also '.join([y] + more))]

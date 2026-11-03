@@ -88,7 +88,7 @@ nfa10	faeria	Bargain (Krog)	Krog's Dinner	Krog, the Ogre King	line	cheaper:	guid
 nfa11	faeria	Bargain (Krog)	Bold Bargainer	Ogre Dance	none		Claude, deck read: Ogre Dance costs 4; a 7 cut is for cards costing 7 or more
 nfa12	faeria	Red Combat	Garudan, Heart of the Mountain	Bomb Slinger	none	enemy	Claude, deck read: Garudan moving is my unit moving, not an enemy coming next to the Slinger (reason rewritten 30 Oct 2026: the old wording was said by no line, so the case could not fail)
 nfa13	faeria	Yellow Flyers	Celestial Tower	Khalim, Sky Prodigy	line		Claude, deck read: Charge 3 from the Tower gets Khalim to the enemy god
-nfa14	faeria	Red Blue Mobility Burn	Syland Horsemaster	Grim Guard	line		guide title: mobility gets Combat creatures into fights (Grim Guard hits the god for 2)
+nfa14	faeria	Red Blue Mobility Burn	Syland Horsemaster	Grim Guard	none	moves	rewritten 3 Nov 2026 by Kaptain's L2/L4: Combat goes off in any fight Grim Guard has; moving it adds no fight (was: guide title, mobility gets Combat creatures into fights)
 nfa15	faeria	Voice of Hunger Control	Time of Legends	Voice of Hunger	none	enter	Claude, deck read: Wild changes the land colours a card needs, not where it enters
 nfa16	faeria	Midrange Sacrifice	Iona's Smile	Soul Eater	line		Claude, deck read: Iona's Smile draws Flying creatures from the deck
 nfa17	faeria	Midrange Sacrifice	Iona's Smile	Demon Wing	none	draws it	Claude, deck read: Demon Wing is made by Demon Wrangler, it is in no deck to draw
@@ -298,3 +298,26 @@ n297	stormbound	Meow	Dubious Hags	Token Ravens	none		Dubious Hags text: it spawn
 n298	inscryption	Kaycee's Mod Mantis God (gamersdecide, core)	Mealworm	Mantis God	line	more power and health	Claude 31 Oct 2026: Morsel feeds the card it is sacrificed for (Mantis God costs Blood), said once as X|X (table case: Mealworm -> Raven)
 n299	inscryption	Act III Mycobot (gamersdecide, core)	Buff Conduit	Null Conduit	none	+1|+0	wiki sigils: the Conduits close the circuit, they are not in it
 n300	runeterra	The Dreadway, Decimate	The Dreadway	Decimate	line	doubles its damage	Kaptain 2 Nov 2026: "The Dreadway -> Decimate is a combo that works" (Dreadway doubles the damage of a spell that only deals damage)
+n301	faeria	Ghost Dragon, Lost Explorer	Ghost Dragon	Lost Explorer	none	moves my units or land forward	audit 3 Nov 2026: a unit's own Flying moves only itself (Kaptain 3 Nov 2026)
+n302	faeria	Syland Horsemaster, Bomb Slinger	Syland Horsemaster	Bomb Slinger	line	moves my units or land forward	audit 3 Nov 2026: Horsemaster gives Charge to my unit (Kaptain's nfa21)
+n303	faeria	Wood Elemental, Wavecrash Colossus	Wood Elemental	Wavecrash Colossus	none	moves my units or land forward	audit 3 Nov 2026: making land moves no unit (L1)
+n304	faeria	Desert Twister, Baldurion, Evil Archsmith	Desert Twister	Baldurion, Evil Archsmith	none	moves it	audit 3 Nov 2026: Teleport to my own desert reaches no enemy land (L1)
+n305	duelyst	Dragonlark, Vigilator	Dragonlark	Vigilator	none	moves your units	audit 3 Nov 2026: Flying moves only Dragonlark; every unit moves (L20, L1)
+n306	duelyst	Mist Walking, Gore Horn	Mist Walking	Gore Horn	none	moves Gore Horn	audit 3 Nov 2026: Mist Walking moves the General (L7)
+n307	duelyst	Bombard, Penumbraxx	Bombard	Penumbraxx	none	moves Penumbraxx	audit 3 Nov 2026: Bombard readies only Ranged units
+n308	faeria	Windborne Champion, King's Guard	Windborne Champion	King's Guard	none	moves it where it must be	audit 3 Nov 2026: Combat goes off in any fight; moving adds none (L2, L4)
+n309	faeria	Seed of Paradise, Defender of the Homeland	Seed of Paradise	Defender of the Homeland	none	moves it within reach	audit 3 Nov 2026: the enemy must attack me (L9)
+n310	faeria	Volcanic Colossus, Oradrim Sagittarius	Volcanic Colossus	Oradrim Sagittarius	none	hit the enemy player	audit 3 Nov 2026: Ranged Attack adds no attack (L2)
+n311	faeria	Frogify, Oradrim Monk	Frogify	Oradrim Monk	none	moves it within reach	audit 3 Nov 2026: the frog has lost the Monk's text (L1)
+n312	duelyst	Eternity Painter, Manakite Drifter	Eternity Painter	Manakite Drifter	none	transforms cards	audit 3 Nov 2026: Painter transforms enemies; Build is about the Drifter itself
+n313	duelyst	Disciple of Yggdra, Architect-T2K5	Disciple of Yggdra	Architect-T2K5	line	transforms cards	audit 3 Nov 2026: Disciple transforms itself, which Architect waits for
+n314	faeria	Astral Weapon, Destructive Volley	Astral Weapon	Destructive Volley	none	has Flying	audit 3 Nov 2026: Volley is aimed at enemy Flying units (L9)
+n315	runeterra	Abyssal Eye, Dashing Dandy	Abyssal Eye	Dashing Dandy	none	enemy player	audit 3 Nov 2026: Abyssal Eye's own keyword works only for itself (L20)
+n316	runeterra	Amateur Aeronaut, Darius	Amateur Aeronaut	Darius	line	levels it up	audit 3 Nov 2026: Elusive reaches the Nexus for Darius's level-up (Kaptain's n12)
+n317	duelyst	Faie Bloodwing, Resonance Scythe	Faie Bloodwing	Resonance Scythe	none	kills enemy units	audit 3 Nov 2026: fighting gives no Stunned enemy (L2)
+n318	duelyst	Piercing Mantis, Gate to the Undervault	Piercing Mantis	Gate to the Undervault	none	makes units die	audit 3 Nov 2026: any unit death sets off Gate; Frenzy adds nothing (L21)
+n319	runeterra	Aurelion Sol, Braum	Aurelion Sol	Braum	none	survives damage	audit 3 Nov 2026: Sol makes Celestial cards; they help, not Sol (L3)
+n321	runeterra	Greathorn Companion, Greenfang Warden	Greathorn Companion	Greenfang Warden	none	another attack	audit 3 Nov 2026: Scout readying Scouts is the keyword's rule (L15)
+n322	runeterra	Greathorn Companion, Angel	Greathorn Companion	Angel	none	enemy player	audit 3 Nov 2026: a second attack gets no unit past blockers (L4)
+n325	runeterra	Might, Scorched Earth	Might	Scorched Earth	none	more damage	audit 3 Nov 2026: Overwhelm deals no unit damage (L4, L18)
+n326	runeterra	Warlord's Palace, Akshan	Warlord's Palace	Akshan	none	; also	audit 3 Nov 2026: one fact said once (L10)

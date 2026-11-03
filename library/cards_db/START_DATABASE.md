@@ -127,7 +127,7 @@ questions first and wait. Never invent rules or mechanics; mark suggestions as y
 | Reading rules and record shapes (what readers follow) | BRIEF.md, READER_PROMPT.md |
 | Values and concepts | vocab.tsv, library/concept_tree.txt |
 | Build: rows -> cards.sqlite | run.py (one game's full build), load.py, flat.py, refs.py |
-| Lines between cards | network.py; what each part does: LINKS_PLAN.md "How lines are made" |
+| Lines between cards | network.py; what each part does: LINKS_PLAN.md "How lines are made"; why one line exists: pair.py |
 | Decks | decks.tsv, cases/decks.tsv; pages network.html (network_page.py) |
 | Per-game review records (needed by the build) | deck_read_<game>.md |
 | Questions | ask.py, mechanics.py, connections.py, deck_analysis.py; START_QUESTIONS.md |
@@ -177,25 +177,26 @@ LINKS_PLAN.md "Token economy" (at most 100 cards per list, one game at a time, r
 
 **The game itself** (not the database) has its own: tools/build.py, tools/simtest.js, tools/smoke.js (CLAUDE.md).
 
-## State (2 Nov 2026, v67)
+## State (3 Nov 2026)
 - All 8 games imported. Kaptain approved Runeterra and Into the Breach; Slay the Spire done; Inscryption reviewed;
   Stormbound, Monster Train, Faeria, Duelyst wait for his check of their deck networks.
-- Cases: all pass except Stormbound csb09-csb13 (poisoned-unit combos, an old cause not yet traced). Must-not cases whose reason no
-  deck says any more (rewrite them): Runeterra n56, Duelyst ndu23 ndu47, Inscryption n299, Into the Breach ntb15-17, Slay
-  the Spire nst30 nst36.
-- Real-world cases: 238 of 261 hold.
-- Lines after rules L18-L22 (2 Nov 2026): Runeterra 269,314; Faeria 18,753; Duelyst 15,415; Slay the Spire 10,552; Into
-  the Breach 6,570; Monster Train 3,439; Stormbound 3,066; Inscryption 1,165. The 20 biggest reasons of every game were read
-  once against L1-L22; the check of LINKS_PLAN step 3 stopped half way for 4 games (audit/README.md).
+- Cases: all pass except Stormbound csb09-csb13 (poisoned-unit combos, an old cause not yet traced) and Kaptain's ndu42, nfa27
+  (they conflict with his 3 Nov rule that a unit moving itself gives no line: ask him). Must-not cases whose reason no deck
+  says any more (rewrite them): Runeterra n56, Duelyst ndu23 ndu47, Inscryption n299, Into the Breach ntb15-17, Slay the
+  Spire nst30 nst36.
+- Real-world cases: 237 of 261 hold (Zealous Crusader -> Khalim's Prayer broke by the same 3 Nov rule).
+- Lines (3 Nov 2026, pairs in links.sqlite): Runeterra 193,514; Faeria 10,424; Duelyst 13,476; Slay the Spire 9,238; Into the
+  Breach 6,138; Monster Train 3,115; Stormbound 2,746; Inscryption 1,080.
 - Known open: a card placed by its text near the leader (Conscript) draws no line to a card acting near the leader
   (Fealty); Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain). Monster
   Train's Olde Magic is built by the player at an event: its text and record (read/monster_train/event_cards.jsonl) list the
   choices the wiki gives, with no numbers. Stormbound's Fort of Ebonrock has no ability (a plain structure).
 
 ## Open work, in Kaptain's order
-1. Finish the line check of Runeterra, Slay the Spire, Faeria and Duelyst (Kaptain, 2 Nov 2026): the handover with what is
-   done and every step left is `audit/README.md`. Runeterra is read, nothing is fixed yet. The check method changed on 2 Nov 2026 to save tokens: LINKS_PLAN.md step 3 and "Token economy".
-2. Then the same check for Stormbound, Monster Train, Inscryption, Into the Breach.
+1. Finish fixing the verified causes of Runeterra and of the old round (all 4 games): handover `audit/README.md`, done and
+   not reached in `audit/fixlog.md`. Fixes are made in the main chat, never by an agent (Kaptain, 3 Nov 2026).
+2. The line check (LINKS_PLAN.md step 3) of Slay the Spire, Faeria, Duelyst, then Stormbound, Monster Train, Inscryption, Into
+   the Breach: a separate chat (Kaptain, 3 Nov 2026).
 
 ## When you finish
 Commit and push every finished step. Update "State" and "Open work" above (keep them short: no history; git log has it).

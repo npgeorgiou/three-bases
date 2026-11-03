@@ -1,54 +1,39 @@
-# Handover: the line check of Runeterra, Slay the Spire, Faeria, Duelyst (2 Nov 2026)
+# Handover: fixing the verified causes (3 Nov 2026)
 
-Kaptain asked for the line check (LINKS_PLAN.md step 3) of these 4 games, then a fix of every error by its cause, the
-tests, a rewrite of the must-not cases in START_DATABASE.md "State", a push, and network.html sent to him.
-Read first: START_DATABASE.md, LINKS_PLAN.md step 3 with "Token economy" (the method changed on 2 Nov 2026), SYNTAX.md.
+Kaptain asked (2-3 Nov 2026) for the line check of Runeterra, Slay the Spire, Faeria and Duelyst, then a fix of every error
+by its cause. Runeterra is read and verified; the old round's causes of all 4 games are verified. Fixing is half done.
+Read first: START_DATABASE.md, LINKS_PLAN.md step 3 with "Token economy" and "Lessons".
 
-## Done
-- Runeterra is READ in full with the new method (rows, one judgement per reason and rule, all decks). Not fixed yet.
-- An older round (card texts, random samples, before the token limits) read about half of all 4 games. Its causes are
-  merged and verified: `merged_old.md` (95 causes; its example lines are lines the old readers judged WRONG, and many of
-  those judgements were wrong: Kaptain, "The Dreadway -> Decimate is a combo that works"), `merged_with_rows.md` (each
-  example with both cards' rows, the line as it is now, its test cases), `verdict_1.md`-`verdict_4.md` (each cause checked
-  again: REAL 73, PARTLY 18 with the wrong and right examples named, NOT REAL 4). Fix only REAL causes and the wrong
-  examples of PARTLY ones.
-- Nothing is fixed yet in network.py; no line changed. Kaptain's case n300 (The Dreadway -> Decimate must stay) is added.
+## Rules for this work (Kaptain, 3 Nov 2026)
+- Fixes are made in the main chat, never by an agent. No agent starts without a fixed number of calls in its job text.
+- A unit's own Flying, Dash, Jump, Charge or Celerity moves only that unit: it gives no line to cards that need to enter near the
+  enemy or act around units (Ghost Dragon -> Lost Explorer, Dragonlark -> Vigilator: no line). A card that gives a move keyword
+  to my units keeps its line (Syland Horsemaster -> Bomb Slinger, nfa21).
+- The fixing chat does not start the checks of Slay the Spire, Faeria or Duelyst (LINKS_PLAN.md step 3): another chat does.
 
 ## Files
-- `causes_r*/s*/f*/u*.md`: the old round's raw findings (merged into merged_old.md; keep only until fixed).
-- Runeterra, new method: `causes_a_runeterra.md` and `causes_d_runeterra_1.md`, `_3.md`, `_4.md` (first pass of the new
-  checks), `v3_causes_a_runeterra.md`, `v3_causes_d_runeterra_p2_1.md`-`_3.md` (the rest). About 77 raw causes, NOT merged
-  and NOT verified yet.
-- `READER_JOB.md`, `VERIFIER_JOB.md`: the job texts given to readers and verifiers (append the piece's path and the output
-  file). `../audit_pieces.py`: `split` cuts a check output into pieces read in one call; `verify` adds rows, current line
-  and cases under every example of a causes file.
+- `verdict_1.md`-`verdict_4.md`: the old round's causes (1-95; Faeria, Duelyst, Runeterra, Slay the Spire), each REAL / PARTLY /
+  NOT REAL with wrong and right examples. `verdict_rt_1.md`, `verdict_rt_2.md`: Runeterra's causes (1-31 and 31-61).
+- `fixlog.md`: what is fixed, how (which network.py function), what is partly fixed, and the causes NOT REACHED.
+- `READER_JOB.md`, `VERIFIER_JOB.md`: job texts for the checks of the other games.
+- `../pair.py <game> "A" "B" ...`: why one line exists (the network.py line of each reason). Use it for every cause.
+
+## Done (3 Nov 2026)
+- Fixed: old causes 1-11, 13-16, 25, part of 28-29; Runeterra causes 1-6, 8-14, 16-18, 21 (partly where fixlog.md says).
+  Test cases n301-n322, n325, n326. All network.tsv cases pass except the ones below.
+- Pairs removed against the table before the fixes (links.sqlite, all lines that can exist): Runeterra 21,882 (83 new),
+  Faeria 6,809, Duelyst 1,281, Slay the Spire 130, Stormbound 107, Into the Breach 90, Monster Train 39, Inscryption 4.
+  Faeria's drop is mostly the move rule above.
+
+## Open, for Kaptain to decide (his own cases now fail under his 3 Nov rule)
+1. ndu42 (Kaptain: "Celerity moves the Lion next to enemies", Azurite Lion -> Holy Immolation) and nfa27 (Kaptain: Battle
+   Toads' Jump frogs reach the enemy wells) fail: under his 3 Nov rule a unit moving itself gives no line. Ask him which holds.
+2. Real-world case Zealous Crusader -> Khalim's Prayer (Faeria guide combo) broke for the same reason (Crusader's own Charge).
 
 ## Steps left, in order
-1. Runeterra: merge the 8 Runeterra files above into distinct causes (one Sonnet agent, as merged_old.md was made), then
-   `audit_pieces.py verify <merged> <out>`, split it (`audit_pieces.py split`), and give each piece to a verifier
-   (`VERIFIER_JOB.md`, a fresh Opus agent per piece; 4 tool calls each).
-2. Fix in the main chat, never by an agent (LINKS_PLAN.md "Token economy"). Fix every verified cause once, for every game (old verdicts + Runeterra), in ONE pass: decide each from L1-L22 before
-   changing code; one pair is checked with the line functions (LINKS_PLAN.md Lessons), never by a rebuild. Each fix gets
-   test cases (cases/network.tsv: one line that must go, one that must stay). Before: `dump_lines.py --table /tmp/tb0.tsv`;
-   after `links.py`: the diff, every gone and new reason group read (one line each). Then `check_all.py --no-load`,
-   `realworld.py`. Report per game how many lines each fix removed and added.
-3. Slay the Spire, then Faeria, then Duelyst, one game at a time: `links_audit.py <game>` and `deck_audit.py <game>`
-   (they skip lines in cases/links_checked.tsv), `audit_pieces.py split`, one Sonnet reader per piece (`READER_JOB.md`),
-   merge, verify, fix as in 2. 2 Nov 2026 sizes: whole-game checks about 6,000 (Slay the Spire), 8,000 (Faeria), 13,000
-   (Duelyst) tokens; deck checks about 23,000, 56,000, 32,000.
-4. After each game: `links_audit.py <game> --record`, so a rerun shows only new lines.
-5. Rewrite the must-not cases listed in START_DATABASE.md "State" (their reason is said by no deck any more).
-6. Commit, push, `network_page.py`, load network.html in a browser with no errors, send it to Kaptain. Delete this folder.
-
-## How to keep it cheap (what this round learned; also in LINKS_PLAN.md "Token economy" and PROCESS.md)
-- Scripts are free; reading costs. Check the printed token size before anyone reads.
-- The main chat reads no check output itself. Readers do, each in a fresh agent; the main chat reads only their short
-  verdicts. A long main chat is expensive: every tool call sends its whole conversation again. Start the fixing in a
-  fresh chat when this one is long.
-- A reader reads its whole piece (at most about 15,000 tokens) in one call, plus the rules and SYNTAX.md: 4 calls in all.
-  Reading in small parts paid for the start of the piece again with every part.
-- Judge each reason and rule once, with a few lines from different row shapes, not random samples.
-- Readers judge by rows, not texts (a text is read differently each time). Readers are Sonnet; verifiers are Opus.
-- Readers are often wrong: never fix from reader findings directly. Merge, then verify with a file that already holds
-  everything needed (rows, current line, cases), built by a script.
-- Save every finding to the repo as soon as it arrives.
+1. Fix the causes NOT REACHED in fixlog.md, in one pass: decide each from L1-L22, check with pair.py, edit network.py, add one
+   `none` and one `line` case per cause (cases/network.tsv, next id n327). Then `links.py`, `dump_lines.py --table` and
+   `--diff /tmp/tb0.tsv` (make tb0 first from the commit before 3 Nov's fixes if /tmp is empty), `check_all.py --no-load`,
+   `realworld.py` (237 of 261 hold now; 238 before).
+2. Rewrite the must-not cases whose reason no deck says any more (check_all.py lists them; START_DATABASE.md "State").
+3. Commit, push, `network_page.py`, load network.html with no errors, send it to Kaptain. Delete this folder.
