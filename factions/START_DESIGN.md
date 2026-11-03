@@ -86,6 +86,9 @@ Candidates (raw brainstorming, not designs): `factions/3-candidates/`.
 - Almost no card without a keyword or text: loads of passives, triggers, Death and Place effects (Kaptain, 4 Nov 2026).
   Every card has its place in the faction's mechanics and is a real decision (when, where, why).
 - Each faction has 2-3 characteristic keywords of its own (Kaptain, 4 Nov 2026).
+- The 100+ cards form a few cohesive, obvious groups (ways to play), and the groups mix with each other within the
+  faction. The 5 special units (champions) each have their place in this mesh: each anchors a group and links it to
+  another (Kaptain, 4 Nov 2026).
 - Interaction with the enemy: high for playful/disruptive factions, lower for straightforward ones.
 - Decks will mix 2 factions later: give each faction hooks others can use (e.g. Projectiles, Part 4).
 - Unit SUPPLY +/- N to balance a unit is allowed but rare.
