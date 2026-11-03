@@ -16,10 +16,11 @@ Read first: START_DATABASE.md, LINKS_PLAN.md step 3 with "Token economy" and "Le
   NOT REAL with wrong and right examples. `verdict_rt_1.md`, `verdict_rt_2.md`: Runeterra's causes (1-31 and 31-61).
 - `fixlog.md`: what is fixed, how (which network.py function), what is partly fixed, and the causes NOT REACHED.
 - `READER_JOB.md`, `VERIFIER_JOB.md`: job texts for the checks of the other games.
+- `triage.py`: the current line of every example pair of the causes asked.
 - `../pair.py <game> "A" "B" ...`: why one line exists (the network.py line of each reason). Use it for every cause.
 
 ## Done (3 Nov 2026)
-- Fixed: see fixlog.md. Test cases n301-n342. All network.tsv cases pass except Stormbound csb09-csb13 (old, not traced).
+- Fixed: see fixlog.md. Test cases n301-n364. All cases pass.
 - Pairs gone (new) against the table before the fixes: Runeterra 25,475 (5,776 new), Faeria 6,946, Duelyst 1,387, Slay the
   Spire 289, Stormbound 156, Into the Breach 90, Monster Train 45, Inscryption 4. Real-world: 237 of 261 (238 before: Zealous
   Crusader -> Khalim's Prayer is gone by Kaptain's 3 Nov rule; the other 23 misses are faction-label checks, not lines).
@@ -28,8 +29,8 @@ Read first: START_DATABASE.md, LINKS_PLAN.md step 3 with "Token economy" and "Le
 1. Runeterra: done (fixlog.md). Stormbound csb09-csb13: done.
 2. Old round: the causes in fixlog.md "NOT REACHED, old round", in one pass. Check each with pair.py, decide from L1-L22, grep
    the card names in cases/*.tsv first (Kaptain's cases win), edit network.py, add one `none` and one `line` case per cause
-   (next id n365). `python3 /tmp/triage.py <cause numbers>` is not kept: write a short script that runs network.network for each
-   example pair of a cause (both cards in one game) to see which wrong lines still exist. Run check_all.py --no-load after each group of about 5 causes.
+   (next id n365). `python3 audit/triage.py 35,36,...` prints each example pair's current line (W = wrong or missed, R = right).
+   Run check_all.py --no-load after each group of about 5 causes.
 3. Then `links.py`; save the table before the first fix (`dump_lines.py --table /tmp/tb0.tsv`) and diff after; `realworld.py`
    (237 of 261 must hold).
 4. Rewrite the must-not cases whose reason no deck says any more (check_all.py lists them).
