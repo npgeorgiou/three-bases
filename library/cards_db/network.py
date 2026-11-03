@@ -531,6 +531,10 @@ def lines_of(c, game):
     share = collections.Counter((h, ms) for h, ms_ in makes.items() for ms in {(x[1] or '') for x in ms_}
                                 for m in {x[0] for x in ms_ if (x[1] or '') == ms and not x[7]})  # by the cards' own text, not the rules' fights
     common = {k for k, v in share.items() if k[0] in ('damaged', 'killed', 'dies', 'survives_damage') and k[1] in ('enemy', '') and v >= 0.25 * len(cards)}
+    from_kw = collections.defaultdict(set)  # "when an ally gains Power from Hallowed" (Gwen): only a change Hallowed makes (verdict 27)
+    for t, h, k in c.execute("select w.card, w.event, k.ref_keyword from cond k join flat_when w on w.ability=k.ability where k.test='keyword_condition' and k.ref_keyword is not null and w.event='stat_changed'"):
+        from_kw[(t, h)].add(k)
+    kw_givers = lambda k: CACHE.setdefault(('kwg', game, k), givers_of(c, game, k, list(cards)))
     home_m = home_only(c)[0]  # it moves units only onto my own land (Desert Twister): no unit reaches enemy land by it
     for h, ts in takes.items():
         carers = collections.defaultdict(set)
@@ -544,6 +548,7 @@ def lines_of(c, game):
                 if (h, ms or '') in common and tpick != 'self' and not lv and not (actor and actor[2] == 'enemy'): continue  # an enemy
                 # that hits other enemies (Vek Hormones) waits for what few cards do: turning the enemy's attack (Spartan Shield)
                 if not kinds_fit(mkind, tkind): continue
+                if from_kw.get((t, h)) and not any(k in cards.get(m, {}).get('kws', ()) or m in kw_givers(k) for k in from_kw[(t, h)]): continue
                 if m in home_m and h in ('moves', 'moves_onto') and 'position enemy' in (tw or ''): continue
                 if tpick == 'self' and mkind in KIND_CAT and mkind != 'player' and cards[t]['cat'] not in KIND_CAT[mkind]: continue  # Noxian Fervor hits units:
                 # Scrappy Bomb, a landmark, is never its target (L8)
@@ -1071,12 +1076,13 @@ def generic_use(c, game):
     for i, e, origin, via in c.execute("""select card, event, origin, via from flat_when where origin in ('own','has_keyword')
             and (obj_pick in ('self','actor_self') or (origin='has_keyword' and obj_pick is null))"""):
         if origin == 'own' or kw_tree(c, via) in TRIGGER_KW: d[i]['self_when'].add(e)  # "Strike:", "Slay:" as keywords (Monster Train)
+    kw_stat = {t for (t,) in c.execute("select w.card from cond k join flat_when w on w.ability=k.ability where k.test='keyword_condition' and k.ref_keyword is not null and w.event='stat_changed'")}
     for i, h, origin, via, k in c.execute("""select card, happening, origin, via, keyword from flat_ref where role!='makes' and origin in ('own','has_keyword')
             and coalesce(side,'') in ('','mine','any')"""):
         if origin != 'own' and kw_tree(c, via) not in TRIGGER_KW: continue  # a keyword's inner working (Barrier pops when damaged,
         # Challenger picks when attacking) is no need of the card; a keyword that is a reaction is (Revenge: when damaged)
         if h in ('given_keyword', 'keyword_used', 'keyword_removed'): d[i]['kw_needs'].add((h, k))  # which keyword it waits for
-        else: d[i]['needs'].add(h)
+        elif not (h == 'stat_changed' and i in kw_stat): d[i]['needs'].add(h)  # Power gained from Hallowed (Gwen) comes only from Hallowed (verdict 27)
     for i, k in c.execute("""select card, keyword_ref from flat_do where origin='own' and act='give_keyword' and keyword_ref is not null
             and (coalesce(on_side,'mine') in ('mine','any') or on_pick in ('self','it'))"""): d[i]['gives_kw'].add(k)
     for i, w in c.execute("select card, of_with from flat_if where origin='own' and of_with like '%keyword is %'"):
@@ -2346,8 +2352,10 @@ def gives_lines(c, game, nodes):
         # is built" (Manakite Drifter) is about the card itself: Eternity Painter's transform of enemies gives it nothing
         if ab in skip: continue
         say = act_say(c, h, '', None); w = actor_of(c, ab)[3]
+        ks = [k for (k,) in c.execute("select ref_keyword from cond where ability=? and test='keyword_condition' and ref_keyword is not null", (ab,))] if h == 'stat_changed' else []
         for m in doers(h):
             if m == a or m not in cards or (akind in KIND_CAT and not matches(c, game, cards[m], akind, w)): continue
+            if ks and not any(k in cards[m]['kws'] or m in givers_of(c, game, k, L) for k in ks): continue  # only Power from Hallowed (verdict 27)
             out[(m, a)].append(('waits', 0.1, f'{say} (for the ability it gives)'))
     return out
 
@@ -2426,8 +2434,9 @@ def stat_reader_lines(c, game, nodes):
             for a in raisers - {t}: out[(a, t)].append(('stronger', 0.3, 'raises my units to the power it counts'))
     if not readers: return out
     grows = collections.defaultdict(set)  # unit -> stats it raises on itself
-    for t, ps in c.execute(f"""select card, params from flat_do where origin='own' and on_pick='self' and act in ('stat_change','grow')
-            and card in ({marks})""", L):
+    for t, ps in c.execute(f"""select card, params from flat_do d where origin='own' and on_pick='self' and act in ('stat_change','grow')
+            and not exists (select 1 from cond k where k.ability=d.ability and k.test='keyword_condition' and k.ref_keyword is not null)
+            and card in ({marks})""", L):  # a growth only from another keyword (Gwen: Power from Hallowed) is not its own (verdict 27)
         for x in (ps or '').split(';'):
             if '=' in x and not x.split('=', 1)[1].startswith('-'): grows[t].add(x.split('=', 1)[0])
     word = {'power': 'Attack', 'health': 'Life'} if game == 'faeria' else {'power': 'Power', 'health': 'Health'}
