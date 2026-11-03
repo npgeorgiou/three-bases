@@ -298,95 +298,95 @@ n297	stormbound	Meow	Dubious Hags	Token Ravens	none		Dubious Hags text: it spawn
 n298	inscryption	Kaycee's Mod Mantis God (gamersdecide, core)	Mealworm	Mantis God	line	more power and health	Claude 31 Oct 2026: Morsel feeds the card it is sacrificed for (Mantis God costs Blood), said once as X|X (table case: Mealworm -> Raven)
 n299	inscryption	Act III Mycobot (gamersdecide, core)	Buff Conduit	Null Conduit	none		wiki sigils: the Conduits close the circuit, they are not in it
 n300	runeterra	The Dreadway, Decimate	The Dreadway	Decimate	line	doubles its damage	Kaptain 2 Nov 2026: "The Dreadway -> Decimate is a combo that works" (Dreadway doubles the damage of a spell that only deals damage)
-n301	faeria	Ghost Dragon, Lost Explorer	Ghost Dragon	Lost Explorer	none	moves my units or land forward	audit 3 Nov 2026: a unit's own Flying moves only itself (Kaptain 3 Nov 2026)
-n302	faeria	Syland Horsemaster, Bomb Slinger	Syland Horsemaster	Bomb Slinger	line	moves my units or land forward	audit 3 Nov 2026: Horsemaster gives Charge to my unit (Kaptain's nfa21)
-n303	faeria	Wood Elemental, Wavecrash Colossus	Wood Elemental	Wavecrash Colossus	none	moves my units or land forward	audit 3 Nov 2026: making land moves no unit (L1)
-n304	faeria	Desert Twister, Baldurion, Evil Archsmith	Desert Twister	Baldurion, Evil Archsmith	none	moves it	audit 3 Nov 2026: Teleport to my own desert reaches no enemy land (L1)
-n305	duelyst	Dragonlark, Vigilator	Dragonlark	Vigilator	none	moves your units	audit 3 Nov 2026: Flying moves only Dragonlark; every unit moves (L20, L1)
-n306	duelyst	Mist Walking, Gore Horn	Mist Walking	Gore Horn	none		audit 3 Nov 2026: Mist Walking moves the General (L7)
-n307	duelyst	Bombard, Penumbraxx	Bombard	Penumbraxx	none		audit 3 Nov 2026: Bombard readies only Ranged units
-n308	faeria	Windborne Champion, King's Guard	Windborne Champion	King's Guard	none		audit 3 Nov 2026: Combat goes off in any fight; moving adds none (L2, L4)
-n309	faeria	Seed of Paradise, Defender of the Homeland	Seed of Paradise	Defender of the Homeland	none	moves it within reach	audit 3 Nov 2026: the enemy must attack me (L9)
-n310	faeria	Volcanic Colossus, Oradrim Sagittarius	Volcanic Colossus	Oradrim Sagittarius	none		audit 3 Nov 2026: Ranged Attack adds no attack (L2)
-n311	faeria	Frogify, Oradrim Monk	Frogify	Oradrim Monk	none	moves it within reach	audit 3 Nov 2026: the frog has lost the Monk's text (L1)
-n312	duelyst	Eternity Painter, Manakite Drifter	Eternity Painter	Manakite Drifter	none	transforms cards	audit 3 Nov 2026: Painter transforms enemies; Build is about the Drifter itself
-n313	duelyst	Disciple of Yggdra, Architect-T2K5	Disciple of Yggdra	Architect-T2K5	line	transforms cards	audit 3 Nov 2026: Disciple transforms itself, which Architect waits for
-n314	faeria	Astral Weapon, Destructive Volley	Astral Weapon	Destructive Volley	none	has Flying	audit 3 Nov 2026: Volley is aimed at enemy Flying units (L9)
-n315	runeterra	Abyssal Eye, Dashing Dandy	Abyssal Eye	Dashing Dandy	none	enemy player	audit 3 Nov 2026: Abyssal Eye's own keyword works only for itself (L20)
-n316	runeterra	Amateur Aeronaut, Darius	Amateur Aeronaut	Darius	line	levels it up	audit 3 Nov 2026: Elusive reaches the Nexus for Darius's level-up (Kaptain's n12)
-n317	duelyst	Faie Bloodwing, Resonance Scythe	Faie Bloodwing	Resonance Scythe	none		audit 3 Nov 2026: fighting gives no Stunned enemy (L2)
-n318	duelyst	Piercing Mantis, Gate to the Undervault	Piercing Mantis	Gate to the Undervault	none	makes units die	audit 3 Nov 2026: any unit death sets off Gate; Frenzy adds nothing (L21)
-n319	runeterra	Aurelion Sol, Braum	Aurelion Sol	Braum	none	survives damage	audit 3 Nov 2026: Sol makes Celestial cards; they help, not Sol (L3)
-n321	runeterra	Greathorn Companion, Greenfang Warden	Greathorn Companion	Greenfang Warden	none	another attack	audit 3 Nov 2026: Scout readying Scouts is the keyword's rule (L15)
-n322	runeterra	Greathorn Companion, Angel	Greathorn Companion	Angel	none	enemy player	audit 3 Nov 2026: a second attack gets no unit past blockers (L4)
-n325	runeterra	Might, Scorched Earth	Might	Scorched Earth	none		audit 3 Nov 2026: Overwhelm deals no unit damage (L4, L18)
-n326	runeterra	Warlord's Palace, Akshan	Warlord's Palace	Akshan	none	; also	audit 3 Nov 2026: one fact said once (L10)
-n327	runeterra	Mirror Image, Omen Hawk	Mirror Image	Omen Hawk	line	summon effect	audit 3 Nov 2026: a copy put into play sets off its summon effect (L19)
-n328	runeterra	Feel The Rush, Gangplank	Feel The Rush	Gangplank	line	summon effect	audit 3 Nov 2026: champions put into play: their summon effect goes off (L17)
-n329	runeterra	Angel, Cunning Kitten	Angel	Cunning Kitten	none	creates	audit 3 Nov 2026: Angel creates Coins, not the Kitten (L20)
-n330	runeterra	Acoustician, Norra	Acoustician	Norra	none	creates	audit 3 Nov 2026: Acoustician creates spells; Norra counts created units (L20)
-n331	runeterra	Noxian Fervor, Scrappy Bomb	Noxian Fervor	Scrappy Bomb	none	kills it	audit 3 Nov 2026: Noxian Fervor hits units; Scrappy Bomb is a landmark (L8)
-n332	runeterra	Nautilus, Alpha Wildclaw	Nautilus	Alpha Wildclaw	none		audit 3 Nov 2026: a copy into the deck is generic (L19)
-n333	runeterra	Avarosan Sentry, Trundle	Avarosan Sentry	Trundle (level 2)	none		audit 3 Nov 2026: Trundle counts 8+ cost cards in hand; a top-card draw brings none (L1b)
-n334	runeterra	Mageseeker Junior, Assembly Line	Mageseeker Junior	Assembly Line	none	pays for it	audit 3 Nov 2026: setting cheap spells to cost 3 raises costs (L10)
-n335	runeterra	Rummage, Jinx	Rummage	Jinx	none	empties your hand	audit 3 Nov 2026: Rummage draws as many as it discards (L4)
-n336	runeterra	Senna, Absorb Soul	Senna (level 2)	Absorb Soul	line	cheaper	audit 3 Nov 2026: Drain damages, so Senna's cost cut fits (verdict rt 41)
-n337	runeterra	Feel The Rush, Faces of the Old Ones	Feel The Rush	Faces of the Old Ones	line	asks for	audit 3 Nov 2026: an 8+ cost card is a minority it needs (L1b, L21)
-n338	runeterra	Aphelios, The Sky Shadows	Aphelios	The Sky Shadows	line	asks for	audit 3 Nov 2026: a Nightfall card is a minority it needs (L1b)
-n339	runeterra	Avarosan Hearthguard, Trifarian Assessor	Avarosan Hearthguard	Trifarian Assessor	line	power it counts	audit 3 Nov 2026: Assessor counts units with 5+ power (L18 reads the stat)
-n340	runeterra	Troll Chant, Reckoning	Troll Chant	Reckoning	none	power it counts	audit 3 Nov 2026: Troll Chant gives my units no power
-n341	runeterra	Stalking Shadows, Hecarim	Stalking Shadows	Hecarim	line	Ephemeral	audit 3 Nov 2026: the drawn copy is Ephemeral, Hecarim counts Ephemeral attackers
-n342	runeterra	Defiant Dance, Dunekeeper	Defiant Dance	Dunekeeper	line	returns it to hand	audit 3 Nov 2026: a return to hand replays a summon effect (L14)
-n343	runeterra	Powder Keg, Paralyzing Bite, Mystic Shot	Powder Keg	Paralyzing Bite	none	bigger	audit 3 Nov 2026: a stun has no number to make bigger (rt 19, L14)
-n344	runeterra	Powder Keg, Paralyzing Bite, Mystic Shot	Powder Keg	Mystic Shot	none	bigger	audit 3 Nov 2026: Mystic Shot just hits: more spell damage is generic (old 24, L18)
-n345	runeterra	Zap Sprayfin, Make it Rain	Zap Sprayfin	Make it Rain	none	draws it	audit 3 Nov 2026: most spells cost 3 or less: a draw by kind (rt 23, L1b, L21)
-n346	runeterra	Realm Warp, Elder Dragon	Realm Warp	Elder Dragon (level 2)	none		audit 3 Nov 2026: keeping the cards that are not followers is a draw by kind (rt 24, L1b)
-n347	runeterra	Avalanche, Petricite Charger	Avalanche	Petricite Charger	none	damages it	audit 3 Nov 2026: Petricite Charger only stops damage from enemy spells (rt 30, L9)
-n348	runeterra	Yasuo, Blue Sentinel	Yasuo (level 2)	Blue Sentinel	none	death effect	audit 3 Nov 2026: Yasuo strikes the stunned enemy, never my Blue Sentinel (rt 30, L9)
-n349	runeterra	Gangplank, Powderful Explosion	Gangplank	Powderful Explosion	none	skill	audit 3 Nov 2026: only Gangplank level 2 casts Powderful Explosion (rt 34)
-n350	runeterra	Gangplank, Powderful Explosion	Gangplank (level 2)	Powderful Explosion	line	skill	audit 3 Nov 2026: Gangplank level 2 casts Powderful Explosion
-n351	runeterra	Prancing Sea Spirits, Ceaseless Sentry	Prancing Sea Spirits	Ceaseless Sentry	none	death effect	audit 3 Nov 2026: its Ephemeral copy is itself: it kills nothing of mine (rt 35, L9)
-n352	runeterra	Senna, Absorb Soul	Senna (level 2)	Absorb Soul	none	Fast	audit 3 Nov 2026: Fast is help to a whole kind; Absorb Soul does not use speed (rt 41, L14)
-n353	runeterra	Senna, Absorb Soul	Senna (level 2)	Absorb Soul	line	cheaper	audit 3 Nov 2026: Absorb Soul is a damage spell: Senna makes it cost 1 less
-n354	runeterra	Bone Skewer, Pyke	Bone Skewer	Pyke	line	levels it up	audit 3 Nov 2026: a strike now by Pyke counts toward his 15 damage (rt 46, L2)
-n355	runeterra	Frenzied Feast, Pyke	Frenzied Feast	Pyke (level 2)	line	strike	audit 3 Nov 2026: Pyke strikes and kills: his 'when I kill' goes off (rt 46, L2)
-n356	runeterra	For Demacia!, Poppy	For Demacia!	Poppy	none		audit 3 Nov 2026: all allies raised alike: no more allies pass Poppy's filter (rt 50, L18)
-n357	runeterra	Twin Disciplines, Poppy	Twin Disciplines	Poppy	line	power	audit 3 Nov 2026: more power on Poppy lets more allies get her bonus (rt 50, L18)
-n358	runeterra	Loping Telescope, The Bandle Tree	Loping Telescope	The Bandle Tree	line	regions	audit 3 Nov 2026: a multi-region follower adds regions to the Bandle Tree's count (rt 52, L17)
-n359	runeterra	Will of Ionia, Icevale Archer	Will of Ionia	Icevale Archer	line	returns it to hand	audit 3 Nov 2026: Recall replays Icevale Archer's Play (rt 59, L14)
-n360	runeterra	Golden Aegis, Akshan	Golden Aegis	Akshan	line	strike	audit 3 Nov 2026: Rally gives another attack: Akshan strikes again (rt 60, L2)
-n361	runeterra	Sion Returned, Draven	Sion Returned	Draven (level 2)	line	strike	audit 3 Nov 2026: Rally gives another attack: Draven strikes again (rt 60, L2)
-n362	runeterra	Lucky Find, Sivir	Lucky Find	Sivir (level 2)	line	passes	audit 3 Nov 2026: a keyword on Sivir goes to her attacking allies (rt 61, L14)
-n363	stormbound	Copperskin Ranger, Amberhides	Copperskin Ranger	Amberhides	line	Poison	audit 3 Nov 2026: a keyword name is looked up in the card's own game: Stormbound Poison feeds "drain a poisoned unit" (csb09)
-n364	duelyst	Crystallize, Cryoblade	Crystallize	Cryoblade	line		audit 3 Nov 2026: a state is given by the keyword of its own game (Stunned: Duelyst's Stun)
-n365	duelyst	Aer Pridebeak, Argeon Highmayne	Aer Pridebeak	Argeon Highmayne	none	heal	audit 3 Nov 2026: old 17: a General whose only text is a Bloodbound Spell uses no heal or power
-n366	duelyst	Dawn's Eye, Argeon Highmayne	Dawn's Eye	Argeon Highmayne	none	power	audit 3 Nov 2026: old 17: power for the General goes only to a General whose text uses it
-n367	duelyst	Lux Ignis, Fireblazer	Lux Ignis	Fireblazer	none	heal	audit 3 Nov 2026: old 18: a heal is no more health; Provoke does not use a heal (L14, L18)
-n368	runeterra	Adept Weaponsmith, The Tuskraider	Adept Weaponsmith	The Tuskraider	none	health	audit 3 Nov 2026: old 19: it reads the stats of units in the deck, which help on the board does not reach
-n369	duelyst	Mirkblood Devourer, Drogon	Mirkblood Devourer	Drogon	none	power	audit 3 Nov 2026: old 19: it reads the General's power, not a unit's
-n370	faeria	Path to Paradise, Enslaved Priest	Path to Paradise	Enslaved Priest	none	power	audit 3 Nov 2026: old 19: its damage is a fixed 2, not its power
-n371	faeria	Spirit Spice, Barrensky Vermin	Spirit Spice	Barrensky Vermin	none	power	audit 3 Nov 2026: old 21: its fight when played is over before a boost on the board reaches it
-n372	runeterra	Rising Spell Force, Banana Blaster	Rising Spell Force	Banana Blaster	none	power	audit 3 Nov 2026: old 21: it reads its power when played; a board boost comes too late
-n373	runeterra	Soul Shepherd, Vi	Soul Shepherd	Vi	none		audit 3 Nov 2026: old 22: Soul Shepherd gives +1|+1 only to Ephemeral allies
-n374	runeterra	Ornn (level 2), Wrought Colossus	Ornn (level 2)	Wrought Colossus	none		audit 3 Nov 2026: old 22: Ornn level 2 forges only himself
-n375	runeterra	Here to Help, Gangplank	Here to Help	Gangplank	line		audit 3 Nov 2026: old 22: +2 power to a damaged Gangplank, who levels from Nexus damage (L18)
-n376	duelyst	Crescent Spear, Phoenix Fire	Crescent Spear	Phoenix Fire	none		audit 3 Nov 2026: old 24: more spell damage for a spell that just hits is generic (L18)
-n377	runeterra	The Dreadway, Decimate	The Dreadway	Decimate	line		audit 3 Nov 2026: old 24: The Dreadway doubles what is there (Kaptain)
-n378	runeterra	Tybaulk, Gwen	Tybaulk	Gwen	none	does what it waits for	audit 3 Nov 2026: old 27: Gwen waits for Power gained from Hallowed, not any stat change (her level-up line stays, n269)
-n379	runeterra	Grandmaster at Arms, Annie	Grandmaster at Arms	Annie	none		audit 3 Nov 2026: old 59: Grandmaster at Arms is a deck rule with no rows, never played
-n380	runeterra	Jax, Grandmaster at Arms	Jax	Grandmaster at Arms	none		audit 3 Nov 2026: old 59: no one casts a deck rule
-n381	sts1	Beta, After Image+	Beta	After Image+	none		audit 3 Nov 2026: old 33: one more card made is no more plays (L1)
-n382	runeterra	Annie, Breakneck Husk	Annie	Breakneck Husk	none		audit 3 Nov 2026: old 33: one more card made is no more plays (L1)
-n383	runeterra	Annie, Twisted Catalyzer	Annie	Twisted Catalyzer	none		audit 3 Nov 2026: old 65: the ability it gives goes only to the Darkness cards it names
-n384	runeterra	Sugary Snare, Snowy Razorclaw	Sugary Snare	Snowy Razorclaw	none		audit 3 Nov 2026: old 55: a unit put into the deck moves nowhere on the board
-n385	runeterra	Spinning Axe, Gnar	Spinning Axe	Gnar	none		audit 3 Nov 2026: old 32: "if you don't have Pokey Stick" asks for one missing card, not an empty hand
+n301	faeria	Ghost Dragon, Lost Explorer	Ghost Dragon	Lost Explorer	none	moves my units or land forward	3 Nov 2026: a unit's own Flying moves only itself (Kaptain 3 Nov 2026)
+n302	faeria	Syland Horsemaster, Bomb Slinger	Syland Horsemaster	Bomb Slinger	line	moves my units or land forward	3 Nov 2026: Horsemaster gives Charge to my unit (Kaptain's nfa21)
+n303	faeria	Wood Elemental, Wavecrash Colossus	Wood Elemental	Wavecrash Colossus	none	moves my units or land forward	3 Nov 2026: making land moves no unit (L1)
+n304	faeria	Desert Twister, Baldurion, Evil Archsmith	Desert Twister	Baldurion, Evil Archsmith	none	moves it	3 Nov 2026: Teleport to my own desert reaches no enemy land (L1)
+n305	duelyst	Dragonlark, Vigilator	Dragonlark	Vigilator	none	moves your units	3 Nov 2026: Flying moves only Dragonlark; every unit moves (L20, L1)
+n306	duelyst	Mist Walking, Gore Horn	Mist Walking	Gore Horn	none		3 Nov 2026: Mist Walking moves the General (L7)
+n307	duelyst	Bombard, Penumbraxx	Bombard	Penumbraxx	none		3 Nov 2026: Bombard readies only Ranged units
+n308	faeria	Windborne Champion, King's Guard	Windborne Champion	King's Guard	none		3 Nov 2026: Combat goes off in any fight; moving adds none (L2, L4)
+n309	faeria	Seed of Paradise, Defender of the Homeland	Seed of Paradise	Defender of the Homeland	none	moves it within reach	3 Nov 2026: the enemy must attack me (L9)
+n310	faeria	Volcanic Colossus, Oradrim Sagittarius	Volcanic Colossus	Oradrim Sagittarius	none		3 Nov 2026: Ranged Attack adds no attack (L2)
+n311	faeria	Frogify, Oradrim Monk	Frogify	Oradrim Monk	none	moves it within reach	3 Nov 2026: the frog has lost the Monk's text (L1)
+n312	duelyst	Eternity Painter, Manakite Drifter	Eternity Painter	Manakite Drifter	none	transforms cards	3 Nov 2026: Painter transforms enemies; Build is about the Drifter itself
+n313	duelyst	Disciple of Yggdra, Architect-T2K5	Disciple of Yggdra	Architect-T2K5	line	transforms cards	3 Nov 2026: Disciple transforms itself, which Architect waits for
+n314	faeria	Astral Weapon, Destructive Volley	Astral Weapon	Destructive Volley	none	has Flying	3 Nov 2026: Volley is aimed at enemy Flying units (L9)
+n315	runeterra	Abyssal Eye, Dashing Dandy	Abyssal Eye	Dashing Dandy	none	enemy player	3 Nov 2026: Abyssal Eye's own keyword works only for itself (L20)
+n316	runeterra	Amateur Aeronaut, Darius	Amateur Aeronaut	Darius	line	levels it up	3 Nov 2026: Elusive reaches the Nexus for Darius's level-up (Kaptain's n12)
+n317	duelyst	Faie Bloodwing, Resonance Scythe	Faie Bloodwing	Resonance Scythe	none		3 Nov 2026: fighting gives no Stunned enemy (L2)
+n318	duelyst	Piercing Mantis, Gate to the Undervault	Piercing Mantis	Gate to the Undervault	none	makes units die	3 Nov 2026: any unit death sets off Gate; Frenzy adds nothing (L21)
+n319	runeterra	Aurelion Sol, Braum	Aurelion Sol	Braum	none	survives damage	3 Nov 2026: Sol makes Celestial cards; they help, not Sol (L3)
+n321	runeterra	Greathorn Companion, Greenfang Warden	Greathorn Companion	Greenfang Warden	none	another attack	3 Nov 2026: Scout readying Scouts is the keyword's rule (L15)
+n322	runeterra	Greathorn Companion, Angel	Greathorn Companion	Angel	none	enemy player	3 Nov 2026: a second attack gets no unit past blockers (L4)
+n325	runeterra	Might, Scorched Earth	Might	Scorched Earth	none		3 Nov 2026: Overwhelm deals no unit damage (L4, L18)
+n326	runeterra	Warlord's Palace, Akshan	Warlord's Palace	Akshan	none	; also	3 Nov 2026: one fact said once (L10)
+n327	runeterra	Mirror Image, Omen Hawk	Mirror Image	Omen Hawk	line	summon effect	3 Nov 2026: a copy put into play sets off its summon effect (L19)
+n328	runeterra	Feel The Rush, Gangplank	Feel The Rush	Gangplank	line	summon effect	3 Nov 2026: champions put into play: their summon effect goes off (L17)
+n329	runeterra	Angel, Cunning Kitten	Angel	Cunning Kitten	none	creates	3 Nov 2026: Angel creates Coins, not the Kitten (L20)
+n330	runeterra	Acoustician, Norra	Acoustician	Norra	none	creates	3 Nov 2026: Acoustician creates spells; Norra counts created units (L20)
+n331	runeterra	Noxian Fervor, Scrappy Bomb	Noxian Fervor	Scrappy Bomb	none	kills it	3 Nov 2026: Noxian Fervor hits units; Scrappy Bomb is a landmark (L8)
+n332	runeterra	Nautilus, Alpha Wildclaw	Nautilus	Alpha Wildclaw	none		3 Nov 2026: a copy into the deck is generic (L19)
+n333	runeterra	Avarosan Sentry, Trundle	Avarosan Sentry	Trundle (level 2)	none		3 Nov 2026: Trundle counts 8+ cost cards in hand; a top-card draw brings none (L1b)
+n334	runeterra	Mageseeker Junior, Assembly Line	Mageseeker Junior	Assembly Line	none	pays for it	3 Nov 2026: setting cheap spells to cost 3 raises costs (L10)
+n335	runeterra	Rummage, Jinx	Rummage	Jinx	none	empties your hand	3 Nov 2026: Rummage draws as many as it discards (L4)
+n336	runeterra	Senna, Absorb Soul	Senna (level 2)	Absorb Soul	line	cheaper	3 Nov 2026: Drain damages, so Senna's cost cut fits (verdict rt 41)
+n337	runeterra	Feel The Rush, Faces of the Old Ones	Feel The Rush	Faces of the Old Ones	line	asks for	3 Nov 2026: an 8+ cost card is a minority it needs (L1b, L21)
+n338	runeterra	Aphelios, The Sky Shadows	Aphelios	The Sky Shadows	line	asks for	3 Nov 2026: a Nightfall card is a minority it needs (L1b)
+n339	runeterra	Avarosan Hearthguard, Trifarian Assessor	Avarosan Hearthguard	Trifarian Assessor	line	power it counts	3 Nov 2026: Assessor counts units with 5+ power (L18 reads the stat)
+n340	runeterra	Troll Chant, Reckoning	Troll Chant	Reckoning	none	power it counts	3 Nov 2026: Troll Chant gives my units no power
+n341	runeterra	Stalking Shadows, Hecarim	Stalking Shadows	Hecarim	line	Ephemeral	3 Nov 2026: the drawn copy is Ephemeral, Hecarim counts Ephemeral attackers
+n342	runeterra	Defiant Dance, Dunekeeper	Defiant Dance	Dunekeeper	line	returns it to hand	3 Nov 2026: a return to hand replays a summon effect (L14)
+n343	runeterra	Powder Keg, Paralyzing Bite, Mystic Shot	Powder Keg	Paralyzing Bite	none	bigger	3 Nov 2026: a stun has no number to make bigger (rt 19, L14)
+n344	runeterra	Powder Keg, Paralyzing Bite, Mystic Shot	Powder Keg	Mystic Shot	none	bigger	3 Nov 2026: Mystic Shot just hits: more spell damage is generic (old 24, L18)
+n345	runeterra	Zap Sprayfin, Make it Rain	Zap Sprayfin	Make it Rain	none	draws it	3 Nov 2026: most spells cost 3 or less: a draw by kind (rt 23, L1b, L21)
+n346	runeterra	Realm Warp, Elder Dragon	Realm Warp	Elder Dragon (level 2)	none		3 Nov 2026: keeping the cards that are not followers is a draw by kind (rt 24, L1b)
+n347	runeterra	Avalanche, Petricite Charger	Avalanche	Petricite Charger	none	damages it	3 Nov 2026: Petricite Charger only stops damage from enemy spells (rt 30, L9)
+n348	runeterra	Yasuo, Blue Sentinel	Yasuo (level 2)	Blue Sentinel	none	death effect	3 Nov 2026: Yasuo strikes the stunned enemy, never my Blue Sentinel (rt 30, L9)
+n349	runeterra	Gangplank, Powderful Explosion	Gangplank	Powderful Explosion	none	skill	3 Nov 2026: only Gangplank level 2 casts Powderful Explosion (rt 34)
+n350	runeterra	Gangplank, Powderful Explosion	Gangplank (level 2)	Powderful Explosion	line	skill	3 Nov 2026: Gangplank level 2 casts Powderful Explosion
+n351	runeterra	Prancing Sea Spirits, Ceaseless Sentry	Prancing Sea Spirits	Ceaseless Sentry	none	death effect	3 Nov 2026: its Ephemeral copy is itself: it kills nothing of mine (rt 35, L9)
+n352	runeterra	Senna, Absorb Soul	Senna (level 2)	Absorb Soul	none	Fast	3 Nov 2026: Fast is help to a whole kind; Absorb Soul does not use speed (rt 41, L14)
+n353	runeterra	Senna, Absorb Soul	Senna (level 2)	Absorb Soul	line	cheaper	3 Nov 2026: Absorb Soul is a damage spell: Senna makes it cost 1 less
+n354	runeterra	Bone Skewer, Pyke	Bone Skewer	Pyke	line	levels it up	3 Nov 2026: a strike now by Pyke counts toward his 15 damage (rt 46, L2)
+n355	runeterra	Frenzied Feast, Pyke	Frenzied Feast	Pyke (level 2)	line	strike	3 Nov 2026: Pyke strikes and kills: his 'when I kill' goes off (rt 46, L2)
+n356	runeterra	For Demacia!, Poppy	For Demacia!	Poppy	none		3 Nov 2026: all allies raised alike: no more allies pass Poppy's filter (rt 50, L18)
+n357	runeterra	Twin Disciplines, Poppy	Twin Disciplines	Poppy	line	power	3 Nov 2026: more power on Poppy lets more allies get her bonus (rt 50, L18)
+n358	runeterra	Loping Telescope, The Bandle Tree	Loping Telescope	The Bandle Tree	line	regions	3 Nov 2026: a multi-region follower adds regions to the Bandle Tree's count (rt 52, L17)
+n359	runeterra	Will of Ionia, Icevale Archer	Will of Ionia	Icevale Archer	line	returns it to hand	3 Nov 2026: Recall replays Icevale Archer's Play (rt 59, L14)
+n360	runeterra	Golden Aegis, Akshan	Golden Aegis	Akshan	line	strike	3 Nov 2026: Rally gives another attack: Akshan strikes again (rt 60, L2)
+n361	runeterra	Sion Returned, Draven	Sion Returned	Draven (level 2)	line	strike	3 Nov 2026: Rally gives another attack: Draven strikes again (rt 60, L2)
+n362	runeterra	Lucky Find, Sivir	Lucky Find	Sivir (level 2)	line	passes	3 Nov 2026: a keyword on Sivir goes to her attacking allies (rt 61, L14)
+n363	stormbound	Copperskin Ranger, Amberhides	Copperskin Ranger	Amberhides	line	Poison	3 Nov 2026: a keyword name is looked up in the card's own game: Stormbound Poison feeds "drain a poisoned unit" (csb09)
+n364	duelyst	Crystallize, Cryoblade	Crystallize	Cryoblade	line		3 Nov 2026: a state is given by the keyword of its own game (Stunned: Duelyst's Stun)
+n365	duelyst	Aer Pridebeak, Argeon Highmayne	Aer Pridebeak	Argeon Highmayne	none	heal	3 Nov 2026: a General whose only text is a Bloodbound Spell uses no heal or power
+n366	duelyst	Dawn's Eye, Argeon Highmayne	Dawn's Eye	Argeon Highmayne	none	power	3 Nov 2026: power for the General goes only to a General whose text uses it
+n367	duelyst	Lux Ignis, Fireblazer	Lux Ignis	Fireblazer	none	heal	3 Nov 2026: a heal is no more health; Provoke does not use a heal (L14, L18)
+n368	runeterra	Adept Weaponsmith, The Tuskraider	Adept Weaponsmith	The Tuskraider	none	health	3 Nov 2026: it reads the stats of units in the deck, which help on the board does not reach
+n369	duelyst	Mirkblood Devourer, Drogon	Mirkblood Devourer	Drogon	none	power	3 Nov 2026: it reads the General's power, not a unit's
+n370	faeria	Path to Paradise, Enslaved Priest	Path to Paradise	Enslaved Priest	none	power	3 Nov 2026: its damage is a fixed 2, not its power
+n371	faeria	Spirit Spice, Barrensky Vermin	Spirit Spice	Barrensky Vermin	none	power	3 Nov 2026: its fight when played is over before a boost on the board reaches it
+n372	runeterra	Rising Spell Force, Banana Blaster	Rising Spell Force	Banana Blaster	none	power	3 Nov 2026: it reads its power when played; a board boost comes too late
+n373	runeterra	Soul Shepherd, Vi	Soul Shepherd	Vi	none		3 Nov 2026: Soul Shepherd gives +1|+1 only to Ephemeral allies
+n374	runeterra	Ornn (level 2), Wrought Colossus	Ornn (level 2)	Wrought Colossus	none		3 Nov 2026: Ornn level 2 forges only himself
+n375	runeterra	Here to Help, Gangplank	Here to Help	Gangplank	line		3 Nov 2026: +2 power to a damaged Gangplank, who levels from Nexus damage (L18)
+n376	duelyst	Crescent Spear, Phoenix Fire	Crescent Spear	Phoenix Fire	none		3 Nov 2026: more spell damage for a spell that just hits is generic (L18)
+n377	runeterra	The Dreadway, Decimate	The Dreadway	Decimate	line		3 Nov 2026: The Dreadway doubles what is there (Kaptain)
+n378	runeterra	Tybaulk, Gwen	Tybaulk	Gwen	none	does what it waits for	3 Nov 2026: Gwen waits for Power gained from Hallowed, not any stat change (her level-up line stays, n269)
+n379	runeterra	Grandmaster at Arms, Annie	Grandmaster at Arms	Annie	none		3 Nov 2026: Grandmaster at Arms is a deck rule with no rows, never played
+n380	runeterra	Jax, Grandmaster at Arms	Jax	Grandmaster at Arms	none		3 Nov 2026: no one casts a deck rule
+n381	sts1	Beta, After Image+	Beta	After Image+	none		3 Nov 2026: one more card made is no more plays (L1)
+n382	runeterra	Annie, Breakneck Husk	Annie	Breakneck Husk	none		3 Nov 2026: one more card made is no more plays (L1)
+n383	runeterra	Annie, Twisted Catalyzer	Annie	Twisted Catalyzer	none		3 Nov 2026: the ability it gives goes only to the Darkness cards it names
+n384	runeterra	Sugary Snare, Snowy Razorclaw	Sugary Snare	Snowy Razorclaw	none		3 Nov 2026: a unit put into the deck moves nowhere on the board
+n385	runeterra	Spinning Axe, Gnar	Spinning Axe	Gnar	none		3 Nov 2026: "if you don't have Pokey Stick" asks for one missing card, not an empty hand
 n386	runeterra	Mentor of the Stones, Master Yi	Mentor of the Stones	Master Yi	line	more power	Kaptain 3 Nov 2026: Master Yi levels up when allied Master Yis have done 12+ damage, so more power helps it
 n387	runeterra	Tybaulk, Master Yi	Tybaulk	Master Yi	line	helps it level up	Kaptain 3 Nov 2026 (L24): Master Yi levels from damage he deals
-n388	runeterra	Rek'Sai, Sharkling	Rek'Sai	Sharkling	none		open cause 4, L15: Rek'Sai's text repeats Lurk; Lurk on Lurkers is the keyword's rule
-n389	runeterra	Rumble (level 2), Gnar	Rumble (level 2)	Gnar	none	cheaper	open cause 5: Rumble helps Mecha Yordles; Gnar is no Mecha (the level-up line stays)
-n390	runeterra	Rumble (level 2), Gnar	Rumble (level 2)	Gnar	line	levels it up	open cause 5: Impact damages the Nexus, which levels Gnar
-n391	runeterra	Gnar, Skrappy's Partsapalooza	Gnar	Skrappy's Partsapalooza	none		open cause 5: it asks for Mecha Yordles; Gnar is no Mecha
-n392	runeterra	Conchologist, Lux (level 2)	Conchologist	Lux (level 2)	none		open cause 1, L17: one spell of 6+ mana; Conchologist manifests spells costing 3 or less
+n388	runeterra	Rek'Sai, Sharkling	Rek'Sai	Sharkling	none		3 Nov 2026: L15: Rek'Sai's text repeats Lurk; Lurk on Lurkers is the keyword's rule
+n389	runeterra	Rumble (level 2), Gnar	Rumble (level 2)	Gnar	none	cheaper	3 Nov 2026: Rumble helps Mecha Yordles; Gnar is no Mecha (the level-up line stays)
+n390	runeterra	Rumble (level 2), Gnar	Rumble (level 2)	Gnar	line	levels it up	3 Nov 2026: Impact damages the Nexus, which levels Gnar
+n391	runeterra	Gnar, Skrappy's Partsapalooza	Gnar	Skrappy's Partsapalooza	none		3 Nov 2026: it asks for Mecha Yordles; Gnar is no Mecha
+n392	runeterra	Conchologist, Lux (level 2)	Conchologist	Lux (level 2)	none		3 Nov 2026: L17: one spell of 6+ mana; Conchologist manifests spells costing 3 or less
 n393	runeterra	Ferros Financier, Lux (level 2)	Ferros Financier	Lux (level 2)	line		L17: Ferros Financier manifests a 6+ cost spell
-n394	duelyst	Lurking Fear, Xerroloth	Lurking Fear	Xerroloth	none		open cause 3, L9: Sentinel goes off on the opponent's turn; my spells only reveal it
-n395	duelyst	Firestarter, Night Watcher	Firestarter	Night Watcher	none		open cause 3, L5: Night Watcher exhausts my own Rush minions too: a drawback
+n394	duelyst	Lurking Fear, Xerroloth	Lurking Fear	Xerroloth	none		3 Nov 2026: L9: Sentinel goes off on the opponent's turn; my spells only reveal it
+n395	duelyst	Firestarter, Night Watcher	Firestarter	Night Watcher	none		3 Nov 2026: L5: Night Watcher exhausts my own Rush minions too: a drawback
