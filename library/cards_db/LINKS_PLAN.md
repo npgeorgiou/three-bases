@@ -10,9 +10,9 @@ feed which. `links.py` stores every line network.py draws between two cards that
 (not in git; `links.py <game>` rebuilds it in seconds, Runeterra about 9 minutes). So the lines must be right.
 
 ## Done
-Step 1 (which cards can share a deck: deck_analysis.can_share) and step 2 (links.py, links.sqlite). A first step 3 pass for
-Inscryption, Into the Breach, Stormbound and Monster Train. Since then the line rules changed a lot (Kaptain 1-2 Nov 2026: rules
-L14-L20 in START_DATABASE.md), so every game is checked again.
+Step 1 (which cards can share a deck: deck_analysis.can_share), step 2 (links.py, links.sqlite) and step 3 for all 8 games
+(finished 3 Nov 2026; the causes left unfixed then are listed under "Open"). From now on step 3 runs only for a newly
+imported game.
 
 ## How lines are made (read before changing anything; network.py)
 - `lines_of()`: what A's text makes happen that B's text waits for, counts or levels from ("kills it for its death effect",
@@ -30,107 +30,36 @@ L14-L20 in START_DATABASE.md), so every game is checked again.
   that B's own text names.
 - `one_link()` joins a pair's reasons into one line; a bare "can aim at it" reason is never shown (L16).
 
-## Step 3. Check the lines, one game at a time
-Order: Runeterra (Kaptain knows it best), then Slay the Spire, Faeria, Duelyst, Stormbound, Monster Train, Inscryption, Into
-the Breach. Fix every error by its cause, for every game, never card by card (START_DATABASE.md rule 1).
+## Step 3. The line check after importing a game
+Done once for the new game, right after its import (PROCESS.md 4b). Fix every error by its cause, for every game, never
+card by card (START_DATABASE.md rule 1). Cards are shown by their rows (SYNTAX.md), never by their text.
 
-Each game gets two checks (Kaptain, 2 Nov 2026; this replaces the old parts a-i, which printed 2.5 MB for four games). A
-wrong line always comes from one rule, and each rule shows as one reason ("kills it for its death effect"), so a reason is
-judged once, not by many random lines. Cards are shown by their rows (one line each, SYNTAX.md), never by their text.
+**Steps, in order:**
+1. `links.py` (all games, about 2 minutes), then save the table: `dump_lines.py --table /tmp/tb0.tsv`.
+2. `realworld.py <game>`: every combo a guide names that has no line is a missed line found for free.
+3. Print the two checks: `links_audit.py <game>` (each reason of the game: is its rule right?) and `deck_audit.py <game>`
+   (every deck: cards with no or few partners, the special cards). Both print "about N tokens" to stderr; cut the output
+   into pieces of at most 15,000 tokens.
+4. Readers: one agent per piece, job text `checks/READER_JOB.md` + the piece path. They write causes in the causes.py format.
+5. `causes.py <reader files> --out /tmp/pieces.md`: adds to every cause the line as it is now, the network.py line that made
+   it, the cases with both cards (CONFLICT = a case says the opposite) and both cards' rows. Cut it into pieces.
+6. Verifiers: one agent per piece, job text `checks/VERIFIER_JOB.md`. They write verdict files.
+7. `causes.py <verdict files>` writes `causes_sheet.md`, biggest first: each cause with all a fixer needs, and how many lines
+   of the table come from the same reason and network.py line. Fix from the top; skip CONFLICT causes (Kaptain's case wins)
+   and GONE ones. No other lookups are needed; `pair.py <game> "A" "B"` only to check a fix.
+8. Per fix: one `none` and one `line` case in cases/network.tsv. After about 5 fixes: `check_all.py --no-load`.
+9. At the end: `links.py`, `dump_lines.py --table /tmp/tb1.tsv`, `dump_lines.py --diff /tmp/tb0.tsv /tmp/tb1.tsv`,
+   `realworld.py`, `check_all.py --no-load` (it lists must-not cases whose reason no deck says any more: rewrite them),
+   commit, push, report to Kaptain the lines gone and added per game.
 
-**Check 1, the whole game:** `links_audit.py <game>`. Its only question: is this reason's rule right?
-- A reason is its sentence AND the rule that made it (Kaptain, 2 Nov 2026: one sentence can come from several rules, each
-  reading other parts of the rows). links.py stores the rule as `link.site`, the network.py line that added the line
-  (network.Out notes it). On 2 Nov 2026 only 6 Runeterra sentences came from 2+ rules, but inside one rule the lines come from
-  cards with very different rows.
-- The reasons that together hold 90% of the game's lines (Kaptain, 2 Nov 2026), biggest first: 2 lines each, 5 for the 20
-  biggest, each from a different row shape (A's acts, B's events) and different cards, quickest to read first. Lines of the
-  reason read before count toward that number.
-- No missed-line part in the game check (Kaptain, 2 Nov 2026): cards with no partner beside random cards of their faction
-  found little; decks are built for cards to work together, so missed lines are looked for in Check 2.
-- A line printed or read before (cases/links_checked.tsv) is not printed again.
-
-**Check 2, every deck:** `deck_audit.py <game>`, for ALL decks of the game (Kaptain, 2 Nov 2026). Per deck only:
-- a) the deck's cards with no partner inside the deck, each beside 10 cards of the deck: first the deck's cards whose rows
-  name the same thing (the same keyword, card name, type or event), then random deck cards up to 10. Is a line missed?
-- b) the deck's cards with the fewest partners (at least one), all their lines: in a deck built to work together, one
-  partner is suspicious. Is a line missed?
-- c) the deck's special cards (champions, heroes, Generals, legends): one line per reason. Is something wrong or missing?
-- No top reasons, most partners, random lines or lines per reason in the deck check: Check 1 judges every reason.
-- A line or card printed in an earlier deck is not printed again.
-
-**Before Check 2:** run `realworld.py <game>` (a script, no tokens): every combo a guide names that has no line is a missed
-line found for free. Readers then look only where realworld.py has no case.
-
-**How to work (fast, few tokens):**
-1. `links.py` (all games, about 1 minute), then save the lines as they are now: `dump_lines.py --table /tmp/tb0.tsv` and
-   `dump_lines.py /tmp/d0.tsv`.
-2. Run both checks for one game. Check "about N tokens printed" first. Readers (Sonnet, one piece of at most 15,000 tokens each, read in one call;
-   see "Token economy") read ALL the output against the rows and write each error as a cause (the wrong thinking in one sentence). Do not fix yet.
-3. Claude merges the causes of all pieces, checks each against the rows (call the line functions for that pair, see
-   Lessons), and fixes each cause once, for every game (network.py, or a fixes/ script for a wrong reading). A change to
-   records or refs.py needs `check_all.py <game>`; a change to network.py only needs `links.py`.
-4. Save the lines again and read the differences: `dump_lines.py --diff /tmp/tb0.tsv /tmp/tb1.tsv` (and the deck files).
-   Every gone and new reason group, one line each.
-5. `links_audit.py <game> --record` (marks what was read). Run both checks again: they now show only new lines. Repeat
-   until a round finds no error.
-6. `check_all.py --no-load` (about 3 minutes, all games' tests), `realworld.py`, commit, push, report.
-Everything the checks print is read; if something was not read, say so plainly.
-
-**Token economy (Kaptain, 2 Nov 2026; a chat used up his 5-hour limit on one round of reading; every chat that runs these
-checks, also for a new import, keeps this):**
-- A reader reads its whole piece in ONE Read call, never in small parts (Kaptain, 2 Nov 2026). Every tool call sends the
-  reader's whole conversation again, so reading a piece in 9 parts paid for the start of it 9 times. A piece is at most about
-  15,000 tokens (60 KB; the scripts print the size). A reader makes 4 calls: read the rules (START_DATABASE.md lines 30-108),
-  read SYNTAX.md, read its piece, write its findings; no card lookups. A fresh reader per piece.
-- No list holds more than 100 cards. Where a part has more, the scripts take a share from each reason (start cards: their main
-  reason; partners: the reason of the line; compared cards: their faction), so every reason stays seen. Both scripts print
-  "about N tokens printed" to stderr: read that number before reading the output.
-- What made the cost: four games' output was 2.5 MB (about 620,000 tokens), read by 16 readers at once on the strongest
-  model, each also reading the rules and looking up card texts. Most of it was part g (50 lines with both texts for each of
-  20 reasons) and the champions' lines.
-- Readers: one game at a time, never all games at once. Small pieces with one reader each keep a stop from losing much. It reads only START_DATABASE.md L1-L22, not other docs.
-- Readers judge lines by the cards' rows, not by the card texts (Kaptain, 2 Nov 2026: a text is read differently each time;
-  rows say one thing). The card reading is done (Kaptain, 2 Nov 2026): the checks print only each card's rows on one line
-  (`rows.compact`), no text, and nobody compares rows with texts here. Readers read SYNTAX.md (`rows.py --syntax`) and
-  START_DATABASE.md L1-L22 first.
-- Readers run on Sonnet (Kaptain, 2 Nov 2026); Claude checks every cause they report against the rows before fixing.
-- A reader reports causes, not single lines; once a reason group is judged, it does not look up more texts for it.
-- Fixes are made in the main chat, never by an agent (Kaptain, 3 Nov 2026: a fixer agent ran 42 minutes alone, used half his
-  tokens and changed nothing). Agents only read (readers, verifiers) with a fixed number of calls; never start an agent whose
-  number of calls is not fixed in its job text.
-- Findings of a round that stopped early are kept in `audit/` (one file per reader part) until their causes are fixed.
-
-**Lessons (a chat lost an hour on these; do not repeat them):**
-- Decide every rule from Kaptain's rules (START_DATABASE L1-L22) BEFORE changing code. Never fix, rebuild, look, fix again in
-  a loop: read all the groups first, write the causes, then make all fixes in one pass and rebuild once.
-- To see why one line exists, call the line functions for that one pair (a short script importing network: lines_of, aimed,
-  played_lines, need_lines, boost_lines, object_help_lines, gives_lines...); it runs in under a second. Never rebuild to test one pair.
-- Before running the full tests, look at the existing cases a fix touches (`grep` the card names in cases/*.tsv). A case
-  written by Kaptain ("Kaptain <date>" in its source) is his decision: never flip it without his newer rule; a case written by
-  Claude may be rewritten when a newer Kaptain rule says so, citing that rule.
-- Shares are measured among cards of the same kind (Attacks among playable cards, not among relics and monsters), and
-  makers are counted by their own text, not by the game's rules (every unit can kill in a fight).
-- A filter's parts that only say where (position, "of:" what a place is measured from) narrow no card.
-- Never wait on long blind runs: check one pair or one game first; the full run is the last step.
-- `pair.py <game> "A" "B" ...` (3 Nov 2026) prints the line of one pair and the network.py line (site) of each reason. Batch 10-15
-  pairs per call (about 12 s). To compare with the code before a fix, copy the old network.py into a folder and put that folder
-  first on sys.path.
-- Before flipping a line, grep the pair's card names in cases/*.tsv: a checker's REAL verdict can contradict a case Kaptain
-  wrote (Blade Dance -> A Thousand Cuts, nst26; Oakenheart -> the Mechs, ndu34). His case wins; write the conflict in fixlog.md.
-- A fix that narrows a rule must keep its exception for level-ups and Kaptain's cases: run check_all.py --no-load after each
-  group of fixes, not only at the end (a fix for "own fight keyword" first removed n12's Amateur Aeronaut -> Darius).
-- Wording causes ("one fact said twice") are fixed once in one_link() (topic(): one reason per topic, strongest kind first),
-  never per pair.
-- Agents only read (readers, verifiers) with a fixed number of calls. A fixer agent ran 42 minutes, used half of Kaptain's
-  limit and changed nothing (3 Nov 2026).
-
-**Tests:** add a test (cases/links.tsv or cases/network.tsv) for every fixed line you are ABSOLUTELY CERTAIN about from
-both card texts: one that must be gone, and one real line of the same cards that must stay. Nothing you are unsure of.
-**Report:** after every fix, tell Kaptain how many lines it removed (and added) in each game, from the table diff and the
-deck diff (`dump_lines.py --diff`).
-**Fix every error the checks find in the same chat, for every game, before you stop** (Kaptain, 31 Oct 2026). Do not leave
-found errors as notes for the next chat. If the tokens run out, stop reading new output and fix what you found first.
+**Rules for the check (Kaptain, 2-3 Nov 2026):**
+- Agents only read (readers, verifiers), on Sonnet, with the fixed number of calls their job text gives; each reads its whole
+  piece in one call. Fixes are made in the main chat, never by an agent.
+- A reader reports causes, not single lines, and judges by the rows, never by card texts.
+- A case written by Kaptain ("Kaptain <date>" in its source) is his decision: never flip it without his newer rule.
+- A fix that narrows a rule keeps its exceptions for level-ups and Kaptain's cases.
+- Wording causes ("one fact said twice") are fixed once in one_link(), never per pair.
+- Fix every error the check finds in the same chat; if tokens run out, stop reading new output and fix what was found.
 
 ## Open (seen, not fixed)
 - Into the Breach: pilots now have no lines. Kaptain (31 Oct 2026): a pilot is like an item a mech carries; it can move to
@@ -138,8 +67,8 @@ found errors as notes for the next chat. If the tokens run out, stop reading new
   starting Shield keeps Cryo-Launcher's freeze off; Isaac Jones' extra Reset Turn feeds Adam). Not built yet.
 - Into the Breach: Repair Field counts any heal as a repair; Gana acts once at deploy, yet weapons get lines that move units
   next to it; Targeted Strike "summons" Air Strike (a map hazard; decks only).
-- Runeterra has Molten Shield twice (a plain and a "(created)" entry). Stormbound tests csb09-csb11, csb13 fail.
-  Must-not tests whose reason no deck says any more: START_DATABASE.md "State"; rewrite them in that game's turn.
+- Runeterra has Molten Shield twice (a plain and a "(created)" entry).
+- The causes the 8-game check left open: `checks/open_causes.md`.
 
 ## Step 4. Missing concepts (show Kaptain first; change nothing before his OK)
 The questions need things the concepts do not say. Propose each with 3 example cards per game that has it:

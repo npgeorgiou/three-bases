@@ -29,6 +29,8 @@ equal mechanics of different games share one concept of the concept tree (Stun a
 | `network_page.py`, `decks.tsv`, `network.html` | Decks from the web (with source; and cases/decks.tsv) drawn as networks in one page that opens offline, by game; a right click copies a card's or a line's terse text |
 | `deck_lines.py <game\|all> [deck]` | The same networks as terse text (what the right click copies): how decks are read |
 | `deck_audit.py <game>` | The self-check after every network change: per deck the 3 most and 3 least linked cards, 10 random other cards (should one link to a least linked card?) and 10 random lines, with texts |
+| `causes.py <reader or verdict files>`, `checks/` | The line check after an import (LINKS_PLAN.md step 3): job texts for readers and verifiers; causes.py adds each cause's current lines, network.py lines, cases and rows and sorts the causes for the fixer; `checks/open_causes.md`: causes still open |
+| `pair.py <game> "A" "B" ...` | Why one line exists: the network.py line of each reason |
 | `dump_lines.py` | Every line of every deck of every game, before/after a change (`--diff`, `--find`) |
 | `audit_text.py`, `audit_text_explained.tsv` | Words in a card's text its rows do not show ("or the enemy Nexus", "spells and Skills", "everywhere" ...), run by run.py; flags read and found right are listed with the reason |
 | `audit_links.py` | Links that cannot exist (needs nothing makes, keywords without concept or record, missing level-up forms, misread names); run by run.py |

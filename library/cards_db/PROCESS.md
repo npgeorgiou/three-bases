@@ -290,7 +290,7 @@ per family. No check files are written for Kaptain. Kaptain checks the deck netw
 does a line between two cards make sense to a player. Every point he finds is fixed as "Fixing a review" says.
 
 ### 4b. The three checks after every import (Kaptain, 31 Oct 2026)
-1. Line checks: LINKS_PLAN.md step 3, both checks (the whole game with `links_audit.py <game>`, every deck with
+1. Line checks: LINKS_PLAN.md step 3 (readers, verifiers, then `causes.py` writes the fixer's sheet), both checks (the whole game with `links_audit.py <game>`, every deck with
    `deck_audit.py <game>`), read like a player. Lines are made by network.py for every game alike ("How lines are made" in
    LINKS_PLAN.md) under rules L1-L20 (START_DATABASE.md): a new game gets no line code of its own. Its keywords join through
    their concepts in vocab.tsv: a reaction keyword ("Strike:", "Last Words") needs a reaction concept (on_attack,

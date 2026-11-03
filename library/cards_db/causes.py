@@ -39,7 +39,7 @@ def rows(i):
             ['do ' + x for x in q("select ability, origin, act, on_kind, on_side, on_pick, on_zone, on_with, params from flat_do where card=?")])
 
 
-def pair(a, b, wrong):
+def pair(a, b, wrong, ex):
     (an, A), (bn, B) = ids(a), ids(b)
     ps = [(x, y, g) for x, g in A for y, g2 in B if g == g2]
     if not ps: return None
@@ -50,25 +50,26 @@ def pair(a, b, wrong):
     sites = sorted({s for k, v in network.SITE.items() if k[:2] == (x, y) for s in v})
     cs = [r for r in cases if r['game'] == g and r['from'] in (an, '*') and r['to'] == bn]
     clash = [r['id'] for r in cs if (r['expect'] == 'line') == wrong]
-    return dict(a=an, b=bn, x=x, y=y, game=g, why=why, sites=sites, cases=cs, clash=clash, wrong=wrong,
-                open=(why != 'NONE') == wrong)
+    return dict(a=an, b=bn, x=x, y=y, game=g, why=why, sites=sites, cases=cs, clash=clash, wrong=wrong, ex=ex,
+                open=(why != 'NONE') == wrong)  # wrong = a line here is wrong; for a missed line it is False and NONE is the error
 
 
 sheet = []
 for f in args:
     for line in open(f, encoding='utf-8'):
-        m = re.match(r'(\d+)\. (REAL|PARTLY)\b:? ?(.*?)(?: Wrong examples: (.*?)\.)?(?: Right examples: (.*?)\.?)?$', line.strip())
+        m = re.match(r'(\d+)\. ((?:MISSED )?(?:REAL|PARTLY|CAUSE))\b:? ?(.*?)(?: Wrong examples: (.*?)\.)?(?: Right examples: (.*?)\.?)?$', line.strip())
         if not m: continue
         n, verdict, why, w, r = m.groups()
+        missed = verdict.startswith('MISSED')  # its wrong examples are lines that should exist
         ps = []
         for txt, wrong in ((w or '', True), (r or '', False)):
             for p in re.split(r', (?=[^,]*->)', txt):
-                if '->' in p: ps.append(pair(*[s.strip() for s in p.split('->', 1)], wrong))
+                if '->' in p: ps.append(pair(*[s.strip() for s in p.split('->', 1)], wrong != missed, 'W' if wrong else 'R'))
         ps = [p for p in ps if p]
-        worth = sum(site_n[(p['game'], s, part)] for p in ps if p['wrong'] and p['open'] for s in p['sites']
+        worth = sum(site_n[(p['game'], s, part)] for p in ps if p['ex'] == 'W' and p['open'] for s in p['sites']
                     for part in set(re.split(r'; also [^:]*: |; ', p['why'])))  # the same reason from the same code line
         state = 'CONFLICT ' + ','.join(sorted({x for p in ps for x in p['clash']})) if any(p['clash'] for p in ps) else \
-            'open' if any(p['wrong'] and p['open'] for p in ps) else 'gone'
+            'open' if any(p['ex'] == 'W' and p['open'] for p in ps) else 'gone'
         sheet.append((worth, f, n, verdict, why, ps, state))
 
 sheet.sort(key=lambda s: (s[6] != 'open', -s[0]))
@@ -76,11 +77,11 @@ with open(out_path, 'w', encoding='utf-8') as o:
     for worth, f, n, verdict, why, ps, state in sheet:
         o.write(f'## {os.path.basename(f)} {n} ({verdict}, {state}, {worth} table lines from the same code)\n{why}\n')
         for p in ps:
-            o.write(f"- {'W' if p['wrong'] else 'R'} {p['game']}: {p['a']} -> {p['b']}: {p['why'][:160]} | network.py {p['sites']}"
+            o.write(f"- {p['ex']} {p['game']}: {p['a']} -> {p['b']}: {p['why'][:160]} | network.py {p['sites']}"
                     + (f" | cases {', '.join(r['id'] + ' ' + r['expect'] for r in p['cases'])}" if p['cases'] else '') + '\n')
         seen = set()
         for p in ps:
-            if not (p['wrong'] and p['open']): continue
+            if not (p['ex'] == 'W' and p['open']): continue
             for name, i in ((p['a'], p['x']), (p['b'], p['y'])):
                 if i in seen: continue
                 seen.add(i)
