@@ -338,7 +338,7 @@ n340	runeterra	Troll Chant, Reckoning	Troll Chant	Reckoning	none	power it counts
 n341	runeterra	Stalking Shadows, Hecarim	Stalking Shadows	Hecarim	line	Ephemeral	3 Nov 2026: the drawn copy is Ephemeral, Hecarim counts Ephemeral attackers
 n342	runeterra	Defiant Dance, Dunekeeper	Defiant Dance	Dunekeeper	line	returns it to hand	3 Nov 2026: a return to hand replays a summon effect (L14)
 n343	runeterra	Powder Keg, Paralyzing Bite, Mystic Shot	Powder Keg	Paralyzing Bite	none	bigger	3 Nov 2026: a stun has no number to make bigger (rt 19, L14)
-n344	runeterra	Powder Keg, Paralyzing Bite, Mystic Shot	Powder Keg	Mystic Shot	none	bigger	3 Nov 2026: Mystic Shot just hits: more spell damage is generic (old 24, L18)
+n344	runeterra	Powder Keg, Paralyzing Bite, Mystic Shot	Powder Keg	Mystic Shot	none	bigger	3 Nov 2026: Mystic Shot just hits: more spell damage is generic (L18)
 n345	runeterra	Zap Sprayfin, Make it Rain	Zap Sprayfin	Make it Rain	none	draws it	3 Nov 2026: most spells cost 3 or less: a draw by kind (rt 23, L1b, L21)
 n346	runeterra	Realm Warp, Elder Dragon	Realm Warp	Elder Dragon (level 2)	none		3 Nov 2026: keeping the cards that are not followers is a draw by kind (rt 24, L1b)
 n347	runeterra	Avalanche, Petricite Charger	Avalanche	Petricite Charger	none	damages it	3 Nov 2026: Petricite Charger only stops damage from enemy spells (rt 30, L9)
