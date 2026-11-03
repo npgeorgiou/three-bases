@@ -5,7 +5,7 @@
   4 load.py (cards.sqlite and the query layer)
   5 cases/run.py (all cases must pass)
   6 pattern_check.py (word check; open flags are listed, not a failure); audit_links.py (links that cannot exist, listed)
-  7 status.py, examples.py (STATUS.md, QUERIES.md)
+  7 status.py (reading progress, printed), examples.py (QUERIES.md), review_check.py (deck_read_<game>.md, while one exists)
 Usage: run.py <game>"""
 import glob, os, subprocess, sys, time
 HERE = os.path.dirname(os.path.abspath(__file__))

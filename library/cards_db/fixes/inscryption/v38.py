@@ -1,4 +1,4 @@
-"""Inscryption records, 29 Oct 2026 (v38), from deck_read_inscryption.md; by rule over the sigil texts, safe to run twice.
+"""Inscryption records, 29 Oct 2026 (v38), from deck_read_inscryption.md (deleted 3 Nov 2026; in git history); by rule over the sigil texts, safe to run twice.
 1. A strike into an empty opposing space hits the opponent (wiki Card Battle: "cards striking empty board spaces" tip the
    scale; Omni Strike: "It will strike directly if no creatures oppose it"): every strike a sigil aims at opposing spaces
    (Bifurcated, Trifurcated, Trifurcated When Powered, Sniper) also strikes the enemy player, link or. Double Strike

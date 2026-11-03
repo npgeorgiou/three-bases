@@ -1,4 +1,4 @@
-"""Into the Breach, 30 Oct 2026, after the first build: the families of deck_read_into_the_breach.md "Before the fix", by
+"""Into the Breach, 30 Oct 2026, after the first build: the families of deck_read_into_the_breach.md (deleted 3 Nov 2026; in git history) "Before the fix", by
 rule; safe to run twice.
 F1 damage that changes with distance or hits ("Damage: 3-1", "2 damage reduced by range"): amount x range, lowest first.
 F2 "flip its attack direction": act redirect_attack (vocab v48).

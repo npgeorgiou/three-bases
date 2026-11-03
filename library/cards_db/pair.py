@@ -1,5 +1,5 @@
 """pair.py <game> "A" "B" ["A2" "B2" ...]: the line network.py draws for just those two cards, with the network.py line (site) of each
-reason; about 12 s per call, many pairs per call. Use it to see why one line exists (LINKS_PLAN.md Lessons); never rebuild for that."""
+reason; about 12 s per call, many pairs per call. Use it to see why one line exists (LINKS_PLAN.md "How lines are made"); never rebuild for that."""
 import sys, os
 D = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, D); os.chdir(D)
 import sqlite3, network, rows

@@ -1,5 +1,6 @@
-"""Tools for the line checks (LINKS_PLAN.md step 3, "Token economy"). Scripts cost no tokens; they prepare what readers read.
-  audit_pieces.py split <file> [max_bytes=55000]   cut a check output into pieces a reader reads in ONE call (at deck borders)
+"""Tools for the line checks (LINKS_PLAN.md step 3; PROCESS.md "Token economy"). Scripts cost no tokens; they prepare what readers read.
+  audit_pieces.py split <file> [max_bytes=55000]   cut a check output into pieces a reader reads in ONE call (at deck borders;
+                                                   each piece shows every card's rows once)
   audit_pieces.py verify <causes.md> <out.md>      under every example line "- A -> B: ..." of a causes file, add both cards'
                                                    rows, the line as it is now (NONE = gone) and the test cases of that pair,
                                                    so a verifier needs no lookups (its "Games: ..." line picks the game)"""
@@ -15,6 +16,16 @@ def split(f, cap=55000):
         if (l.startswith('=== ') and cur and n > cap * 0.6) or n > cap: parts.append(cur); cur, n = [], 0
         cur.append(l); n += len(l) + 1
     if cur: parts.append(cur)
+    first, R = {}, re.compile(r'^(\s+)(.+?): (.*)$')  # a card's rows as first printed; a later piece repeats them once
+    for p in parts:
+        told = set()
+        for j, l in enumerate(p):
+            m = R.match(l)
+            if not m: continue
+            if m.group(3) == '(rows above)' and m.group(2) not in told and m.group(2) in first:
+                p[j] = f'{m.group(1)}{m.group(2)}: {first[m.group(2)]}'
+            elif m.group(3) != '(rows above)': first.setdefault(m.group(2), m.group(3))
+            told.add(m.group(2))
     for i, p in enumerate(parts, 1):
         nm = f'{f.rsplit(".", 1)[0]}_{i}.txt'; open(nm, 'w', encoding='utf-8').write('\n'.join(p)); print(nm, sum(len(x) + 1 for x in p))
 

@@ -1,5 +1,5 @@
 """Into the Breach, 30 Oct 2026, Claude's check of 20 cards (CHECK_20_into_the_breach.md): the families of
-deck_read_into_the_breach.md "Check of 20 cards", by rule; safe to run twice.
+deck_read_into_the_breach.md (deleted 3 Nov 2026; in git history) "Check of 20 cards", by rule; safe to run twice.
 F13 Flying "can be positioned at any terrain tile, except mountains and other units; mountains and unfriendly units can be
     overflown": passing over is no place to stop; the can-move rows onto mountains and onto enemy units go.
 F14 "Shield adjacent ally or Building" (Repulse, Pulse Mech): every adjacent ally or building, nothing is chosen.

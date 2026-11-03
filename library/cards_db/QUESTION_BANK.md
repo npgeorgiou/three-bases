@@ -45,7 +45,7 @@ faction-design columns, Felix Moll's set-up and pay-off archetypes (Game Develop
   !"the first time each round" limits.
 - K11 A deck that thrives on cards that create other cards in my hand. Parts: generate_cards[mine, zone=hand]; count of
   created or played created cards (Viktor); hand_size; cost_reduction on created cards. Links: makers -> counters.
-  Remember: making cards is no fuel for "discard" or "play any card" needs (START_DATABASE.md L1).
+  Remember: making cards is no fuel for "discard" or "play any card" needs (LINE_RULES.md L1).
 - K12 A faction that creates spells on the fly by combining cards. Parts: generate_cards[on=spell]; merge_attach;
   transform; copy[on=spell]; combo_sequence. Links: what is combined -> the spell made. Expect almost no game does it
   as written: say the closest ones and that it is new ground.

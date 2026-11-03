@@ -1,4 +1,4 @@
-"""Duelyst, 29 Oct 2026 (v38 deck read, deck_read_duelyst.md), by rule; safe to run twice.
+"""Duelyst, 29 Oct 2026 (v38 deck read, deck_read_duelyst.md (deleted 3 Nov 2026; in git history)), by rule; safe to run twice.
 - The MECHAZ0R keyword (its entry says only "When MECHAZ0R is complete, lookout!") gets what the game's code does
   (open-duelyst app/sdk/playerModifiers/playerModifierMechazorBuildProgress.coffee: each piece adds 20%; when the pieces
   played reach 100% the card played deploys MECHAZ0R!): used as an action, if the MECHAZ0R progress used this game adds up to

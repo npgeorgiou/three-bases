@@ -4,6 +4,12 @@ You read card texts and write what each card DOES as JSON records. Every value i
 `vocab.tsv` (column `value`, grouped by `field`), or the exact name of another card, keyword or type (the script turns names into
 links). Never write free text. Never guess a rule the text does not state.
 
+Before the first card, know the game: how it is played, what its keywords really do, which combos its players build
+(READER_PROMPT.md step 1). The records are used to draw lines between cards ("A kills it for its death effect", "A makes it
+cheaper"): every part another card can feed or use (what sets it off, what it counts, needs, makes, aims at) must be in them; a
+part left out or read wrong draws wrong lines in every deck. Read everything above "Game words: Runeterra", then only your
+game's "Game words" section.
+
 ## Same values in every game
 Every game is written with the same values, so one question finds cards of all games. Use the existing value that means the
 same thing (the game's words are mapped in "Game words: <game>" below); propose a new value only when none fits, worded so
@@ -273,8 +279,6 @@ III: Reduce the cost of a random card in hand by 5.
 - Frostbite sets a unit's Power to 0 this round: a frostbitten unit can still block (attack_zero, never cant_block).
 - Overwhelm adds no damage: damage past the blocker's health goes to the enemy Nexus (excess_damage; in a deck network it
   "helps it hit the enemy player").
-- "spells and Skills" / "Fast spells, Slow spells, and Skills": category in spell, skill on every target the phrase names.
-- "cost reduced cards": state cost_reduced on the counted cards.
 
 ## Game words: Stormbound
 Stormbound has no Keywords field: describe everything the text says. Its glossary keywords (Poison, Vitalize, Freeze, Confuse,

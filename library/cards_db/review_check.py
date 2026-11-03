@@ -6,7 +6,7 @@ sections are free). Each family must say:
   Same error elsewhere:  what the same cause does in this game's other decks and in every other game (counts, examples),
                          or why it cannot happen there
   Fix:                   the rule that replaced it, for every card of every game
-A family without these three lines fails the build: it is the sign of a fix made for one card (PROCESS.md, "Fixing a review").
+A family without these three lines fails the build: it is the sign of a fix made for one card (PROCESS.md, "Fixing errors").
 """
 import os, re, sys
 

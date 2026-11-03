@@ -1,13 +1,15 @@
-"""causes.py <verdict file> [...] [--out FILE]: the fixer's sheet for verified causes (run after the verifiers, before any fix).
+"""causes.py <reader or verdict files> [--out FILE]: the sheet for verifiers (from line readers' files) and for the fixer (from
+verdict files or checks/open_causes.md). LINKS_PLAN.md step 3.
 
-For every REAL or PARTLY cause it adds what a fixer would otherwise look up one by one:
+For every CAUSE (reader), REAL or PARTLY cause (verifier; NOT REAL and GONE are skipped), MISSED ones included, it adds what a fixer would otherwise look up one by one:
   - each example pair's game, its current line (NONE = gone) and the network.py lines that made it;
-  - the rows of both cards (when / if / do), short;
+  - the rows of both cards (when / if / do), short, for the wrong examples still open;
   - the cases in cases/*.tsv with both cards, and a CONFLICT mark when a case says the opposite (the case wins: skip the cause);
   - how many lines of the whole table (links.sqlite, build it first with links.py) come from the same network.py lines:
     lines with the same reason from the same code: the lines one fix there can change. Causes are sorted by it, biggest first.
 Writes the sheet to --out (default causes_sheet.md) and prints one short line per cause: number, worth, games, state.
-Verdict format (VERIFIER_JOB.md): "N. VERDICT: why. Wrong examples: A -> B, ... Right examples: A -> B, ..."
+One cause per line (checks/LINE_READER_JOB.md, LINE_VERIFIER_JOB.md): "N. VERDICT: why. Wrong examples: A -> B, ... Right
+examples: A -> B, ..." (an optional "[note]" at the end is kept out of the examples).
 """
 import collections, csv, glob, os, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE); os.chdir(HERE)
@@ -57,7 +59,8 @@ def pair(a, b, wrong, ex):
 sheet = []
 for f in args:
     for line in open(f, encoding='utf-8'):
-        m = re.match(r'(\d+)\. ((?:MISSED )?(?:REAL|PARTLY|CAUSE))\b:? ?(.*?)(?: Wrong examples: (.*?)\.)?(?: Right examples: (.*?)\.?)?$', line.strip())
+        m = re.match(r'(\d+)\. ((?:MISSED )?(?:REAL|PARTLY|CAUSE))\b:? ?(.*?)(?: Wrong examples: (.*?)\.(?= Right examples:| \[|$))?'
+                     r'(?: Right examples: (.*?)\.?(?: \[[^\]]*\])?)?$', line.strip())  # "Dr. Mundo": a full stop ends a list only before the next part
         if not m: continue
         n, verdict, why, w, r = m.groups()
         missed = verdict.startswith('MISSED')  # its wrong examples are lines that should exist

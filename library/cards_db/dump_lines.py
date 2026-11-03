@@ -1,4 +1,4 @@
-"""dump_lines.py: every deck network line of every game, to compare before and after a fix (PROCESS.md "Fixing a review").
+"""dump_lines.py: every deck network line of every game, to compare before and after a fix (PROCESS.md "Fixing errors").
 
   python3 dump_lines.py <out.tsv>                 write game, deck, from, to, kind, weight, reason for every deck of every game
   python3 dump_lines.py --diff <before> <after>   per game: lines and pairs before -> after; then every lost and every new

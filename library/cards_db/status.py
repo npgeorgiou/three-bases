@@ -1,6 +1,6 @@
 """Where the reading of a game stands, from the files alone (no memory of earlier chats needed). For every input batch:
 done (all cards read, check passes), problems (all read, check fails), partial (some cards or only part files), todo.
-Writes STATUS.md and prints it.  Usage: status.py <game>"""
+Prints it.  Usage: status.py <game>"""
 import glob, json, os, subprocess, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -33,7 +33,7 @@ def main():
         rows.append(f'| {name} | {len(want)} | {len(got | ids(os.path.join(HERE, folder, game, name + ".part*.jsonl")))} | {state} |')
     text = (f'# Reading status: {game}\n\nMade by `status.py {game}` from the files. done {tot["done"]}, problems {tot["problems"]}, '
             f'partial {tot["partial"]}, todo {tot["todo"]}.\n\n| batch | cards | read | state |\n|---|---|---|---|\n' + '\n'.join(rows) + '\n')
-    open(os.path.join(HERE, 'STATUS.md'), 'w').write(text); print(text)
+    print(text)
 
 if __name__ == '__main__':
     main()

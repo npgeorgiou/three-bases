@@ -17,8 +17,8 @@ equal mechanics of different games share one concept of the concept tree (Stun a
 | `check_all.py <game>` / `--no-load` | After a change: one reload (or none after a network.py change), then every game's cases and link audit (HANDOFF box) |
 | `ask.py` | Questions answered with card names, per game or across games (`ask.py all ...`; QUERIES.md shows examples) |
 | `START_DATABASE.md`, `START_QUESTIONS.md` | Entry files: rules, checks, state, open work; how to answer design questions |
-| `PROCESS.md` | The framework: rules, steps, gates, fixing a review, checking networks, mistakes not to repeat |
-| `BRIEF.md`, `READER_PROMPT.md` | What readers follow: record shapes, reading rules, approved examples; the reader prompt |
+| `PROCESS.md`, `LINE_RULES.md`, `LINKS_PLAN.md` | Import steps, data rules, token economy, fixing errors; the rules for lines (L1-L24); how network.py makes lines and the line check |
+| `BRIEF.md`, `READER_PROMPT.md`, `SYNTAX.md` | What card readers follow: record shapes, reading rules, approved examples; the reader job; rows as printed |
 | `vocab.tsv` | Every allowed value per field: meaning, concept-tree concept, and the events it causes (`causes`) |
 | `names.tsv` | Names readers took for a keyword or card that are something else (keyword, card, type, name family, or dropped), per game, with reasons |
 | `source.py`, `supplement/`, `supplement_<game>.py` | Cards come from the library plus `supplement/<game>.jsonl` (cards and keywords the library lacks, from the game's own data) and `<game>_kaptain.jsonl` (definitions Kaptain gave); id blocks per game in source.py |
@@ -28,20 +28,20 @@ equal mechanics of different games share one concept of the concept tree (Stun a
 | `deck_analysis.py` | A deck explained in plain words from the rows: plan, level-ups, control, support, card flow, key cards, weak spots (`ask.py <game> analyze`) |
 | `network_page.py`, `decks.tsv`, `network.html` | Decks from the web (with source; and cases/decks.tsv) drawn as networks in one page that opens offline, by game; a right click copies a card's or a line's terse text |
 | `deck_lines.py <game\|all> [deck]` | The same networks as terse text (what the right click copies): how decks are read |
-| `deck_audit.py <game>` | The self-check after every network change: per deck the 3 most and 3 least linked cards, 10 random other cards (should one link to a least linked card?) and 10 random lines, with texts |
-| `causes.py <reader or verdict files>`, `checks/` | The line check after an import (LINKS_PLAN.md step 3): job texts for readers and verifiers; causes.py adds each cause's current lines, network.py lines, cases and rows and sorts the causes for the fixer; `checks/open_causes.md`: causes still open |
+| `links_audit.py <game>`, `deck_audit.py <game>`, `audit_pieces.py` | The line check's two prints (each reason of a game; every deck: cards with no or few partners, the special cards), cut into pieces for agents |
+| `causes.py <reader or verdict files>`, `checks/` | The line check after an import (LINKS_PLAN.md step 3): job texts for line readers and verifiers; causes.py adds each cause's current lines, network.py lines, cases and rows and sorts the causes for the fixer; `checks/open_causes.md`: causes still open |
 | `pair.py <game> "A" "B" ...` | Why one line exists: the network.py line of each reason |
 | `dump_lines.py` | Every line of every deck of every game, before/after a change (`--diff`, `--find`) |
 | `audit_text.py`, `audit_text_explained.tsv` | Words in a card's text its rows do not show ("or the enemy Nexus", "spells and Skills", "everywhere" ...), run by run.py; flags read and found right are listed with the reason |
 | `audit_links.py` | Links that cannot exist (needs nothing makes, keywords without concept or record, missing level-up forms, misread names); run by run.py |
-| `network.py`, `NETWORK_DRAFT.md` | A deck, a faction or a whole game as a network of cards: central cards, chains, groups, loose cards (`ask.py <game> network`); the plan it follows |
+| `network.py`, `links.py` | A deck, a faction or a whole game as a network of cards: central cards, chains, groups, loose cards (`ask.py <game> network`); every line of a game into links.sqlite |
 | `mechanics.py` | Questions about mechanics (concepts) and decks, links inside each game added up over games |
 | `connections.py` | How one card sets off another, every reason ranked, most direct first |
 | `pattern_check.py`, `patterns/` | Word check: `patterns.tsv` (wording rules, each judged once), `verdicts.tsv` (flags decided once), `<game>_flags.tsv` (open flags) |
 | `reread.py` | Re-read chosen cards under the current brief; merge replaces the old readings (kept in `replaced/`, re-read output in `fixes/`) |
 | `cases/` | Case tests (mechanics, decks and combos from players' guides, regions), `run.py`, REPORT.md, DROPPED.md |
 | `rows.py` | A card's text and rows with names (`ask.py <game> card <name>`) |
-| `status.py`, `STATUS.md`, `compare.py`, `examples.py`, `QUERIES.md` | Progress from the files; first vs second reading; example questions with answers |
+| `status.py`, `compare.py`, `examples.py`, `QUERIES.md` | Reading progress from the files (printed); first vs second reading; example questions with answers |
 | `exclude.tsv`, `excluded/` | Entries left out on purpose and their old records |
 | `input/`, `read/`, `second/` | Reader input; reader output (the source) with proposals; the independent second reading of a 10% sample |
 | `LINKS_PLAN.md`, `QUESTION_BANK.md` | The plan for every card connection as a table, built to answer design questions; the questions it must answer |
