@@ -102,6 +102,10 @@ Every one of these failed in the first five factions. Check each before sending.
 - How broad (measured 3 Nov 2026 with `analyze` on whole factions): Shadow Isles' "units die" is made by 103 and used by
   55 of its 221 cards; Faeria's land building by ~60 of 72. A real mechanic is a thing in play that dozens of cards
   make AND dozens use; a trigger only 5 cards could use is an interaction, not a mechanic.
+- From theme to mechanic: find the CORE of the theme (Shadow Isles: the dead; Noxus: strength, conquest) and the basic
+  thing in play that shows it (units die; damage dealt). The faction makes more of that thing and uses it more than any
+  other. The theme's other traits (ghosts that fade, the dead returning, fear, night) become interactions on that thing,
+  not mechanics of their own. Never turn each trait into its own mechanic.
 - A mechanic is a broad notion that many cards work through, written in Kaptain's form "I do X -> I benefit from X", e.g. "I damage my own units -> I gain from
   damaged units". What one unit does (a cannon fires, a keg explodes) is a unit effect, never a mechanic.
 - Mechanics: buffs, damage and stats are not mechanics. Each mechanic is written with the traits it comes from and the
