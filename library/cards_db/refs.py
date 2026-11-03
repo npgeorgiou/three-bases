@@ -41,7 +41,10 @@ STAT_EVENTS = {'health': {'player': ('nexus_damaged', 'healed'), 'unit': ('stat_
 
 def build(c):
     c.executescript(SCHEMA)
-    kwid = {n.lower(): i for i, n in c.execute('select id, name from card where is_keyword=1')}
+    kwg = {(g, n.lower()): i for i, g, n in c.execute('select id, game, name from card where is_keyword=1')}  # a keyword name is one
+    # per game: Stormbound's Poison is not Slay the Spire's (csb09-csb13)
+    game_of = dict(c.execute('select id, game from card'))
+    kwid_for = lambda card, n: kwg.get((game_of.get(card), n.lower()))
     causes = {}
     for f, v, cs in c.execute("select field, value, causes from vocab where causes!='' and causes is not null"):
         causes[(f, v)] = [x.split(':') for x in cs.split(';')]
@@ -73,7 +76,7 @@ def build(c):
     def state_rows(card, origin, via, ab, kind, side, pick, withs, zone, entering=False, helpful=False):
         for st in re.findall(r'state (?:is|in) ([a-z_]+)', withs or ''):
             for ev, *kw in causes.get(('state', st), []):
-                ins(card, origin, via, ab, 'state', ev, kind, side, pick, kwid.get(kw[0].lower()) if kw else None, state=st)
+                ins(card, origin, via, ab, 'state', ev, kind, side, pick, kwid_for(card, kw[0]) if kw else None, state=st)
         if zone and kind == 'unit':
             for ev, *_ in causes.get(('zone', zone), []): ins(card, origin, via, ab, 'state', ev, kind, side, pick, w=withs)  # "if Krog has
             # died": Krog's death, not any death (the filter was dropped)
@@ -104,13 +107,13 @@ def build(c):
         """every keyword a filter names: "keyword is X", or "keyword in X" rows (one of them: traps or boons)"""
         return [int(k) for k in re.findall(r'(?<![a-z:])keyword (?:is|in) (\d+)', withs or '')]
 
-    def kw_of(withs):
+    def kw_of(withs, card=None):
         """the keyword a filter names, or the one that gives the state it names (given_keyword happenings)"""
         m = re.search(r'keyword is (\d+)', withs or '')
         if m: return int(m.group(1))
         for st in re.findall(r'state (?:is|in) ([a-z_]+)', withs or ''):
             for ev, *kw in causes.get(('state', st), []):
-                if kw: return kwid.get(kw[0].lower())
+                if kw: return kwid_for(card, kw[0])
         return None
 
     cleanup = {a for (a,) in c.execute("""select ability from flat_do group by ability having sum(case when act in
@@ -129,7 +132,7 @@ def build(c):
             if ev in DONE_BY and as_ == 'enemy' and ap != 'self': side = 'enemy'  # "if a Chime is attacked": an enemy attacks, not mine
             if ap == 'self' and op != 'self':  # "Strike: ... the attacked unit": it is about the card striking, not the unit hit
                 pk = 'actor_self' if ev in BY_ME else 'self'
-            for k in (kws_of(ow) if len(kws_of(ow)) > 1 else [kw_of(ow)]):  # "traps or boons": one row per keyword, never "any keyword"
+            for k in (kws_of(ow) if len(kws_of(ow)) > 1 else [kw_of(ow, card)]):  # "traps or boons": one row per keyword, never "any keyword"
                 ins(card, o, v, ab, 'trigger', ev, ok if obj or doer else ak, side, pk, k, w=ow if obj or doer else aw,
                     ak=ak if obj or doer else None, aw=aw if obj or doer else None)
         state_rows(card, o, v, ab, ok, os_, op, ow, 'deck' if ev in ('drawn', 'played', 'discarded') else None,  # "draw a Flying
@@ -148,7 +151,7 @@ def build(c):
         if eap == 'self' and ep != 'self': ep = 'actor_self' if ev in BY_ME else 'self'  # "I've killed": only the card itself does it
         # the thing the counted event happens to ("I've survived 10+ damage": of self) decides whose it is
         if ev:
-            for k in (kws_of(ew) if len(kws_of(ew)) > 1 else [kw_of(ew)]):
+            for k in (kws_of(ew) if len(kws_of(ew)) > 1 else [kw_of(ew, card)]):
                 ins(card, o, v, ab, 'condition', ev, ek or fk, es or fs, ep or fp, k, w=ew or fw, ak=eak, aw=eaw)
         elif fk in ('mana', 'secondary_resource', 'gem', 'lane_resource'): ins(card, o, v, ab, 'condition', 'mana_refilled', fk, fs, fp, w=fw)  # counts my mana or another resource: fed by gaining it
         elif fk == 'position' and fw and 'terrain is ' in fw and 'position ' not in fw and test in ('count', 'have', 'amount_count'):  # (where a unit stands is no ground made)  # "for each forest you control":
@@ -223,7 +226,7 @@ def build(c):
                     else: continue
                 ins(card, o, v, ab, 'makes', ev, to_k, to_s, to_p, w=to_w); continue
             if act == 'give_ability' and ev == 'given_keyword' and k == 'player': continue  # an ability given to the player is no keyword
-            ins(card, o, v, ab, 'makes', ev, k, s, p, kwid.get(kwn[0].lower()) if kwn else kw, w=w, ref=cref)
+            ins(card, o, v, ab, 'makes', ev, k, s, p, kwid_for(card, kwn[0]) if kwn else kw, w=w, ref=cref)
         if act == 'strike' and to_k == 'player': ins(card, o, v, ab, 'makes', 'strikes_nexus', k or 'unit', s or 'mine', p)
         if act == 'swap' and (to_k or to_p):  # "swap places with a nearby tile" (Swap Mech): the unit there moves too
             for ev in ('moves', 'moves_onto'):

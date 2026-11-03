@@ -357,3 +357,5 @@ n359	runeterra	Will of Ionia, Icevale Archer	Will of Ionia	Icevale Archer	line	r
 n360	runeterra	Golden Aegis, Akshan	Golden Aegis	Akshan	line	strike	audit 3 Nov 2026: Rally gives another attack: Akshan strikes again (rt 60, L2)
 n361	runeterra	Sion Returned, Draven	Sion Returned	Draven (level 2)	line	strike	audit 3 Nov 2026: Rally gives another attack: Draven strikes again (rt 60, L2)
 n362	runeterra	Lucky Find, Sivir	Lucky Find	Sivir (level 2)	line	passes	audit 3 Nov 2026: a keyword on Sivir goes to her attacking allies (rt 61, L14)
+n363	stormbound	Copperskin Ranger, Amberhides	Copperskin Ranger	Amberhides	line	Poison	audit 3 Nov 2026: a keyword name is looked up in the card's own game: Stormbound Poison feeds "drain a poisoned unit" (csb09)
+n364	duelyst	Crystallize, Cryoblade	Crystallize	Cryoblade	line		audit 3 Nov 2026: a state is given by the keyword of its own game (Stunned: Duelyst's Stun)

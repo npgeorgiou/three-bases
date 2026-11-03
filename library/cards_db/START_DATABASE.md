@@ -180,7 +180,7 @@ LINKS_PLAN.md "Token economy" (at most 100 cards per list, one game at a time, r
 ## State (3 Nov 2026)
 - All 8 games imported. Kaptain approved Runeterra and Into the Breach; Slay the Spire done; Inscryption reviewed;
   Stormbound, Monster Train, Faeria, Duelyst wait for his check of their deck networks.
-- Cases: all pass except Stormbound csb09-csb13 (poisoned-unit combos, an old cause not yet traced). Kaptain 3 Nov 2026: a unit
+- Cases: all pass. Kaptain 3 Nov 2026: a unit
   that moves itself gives no line to cards that depend on positions (Faeria, Duelyst). Must-not cases whose reason no deck
   says any more (rewrite them): Runeterra n56, Duelyst ndu23 ndu47, Inscryption n299, Into the Breach ntb15-17, Slay the
   Spire nst30 nst36.
@@ -193,7 +193,7 @@ LINKS_PLAN.md "Token economy" (at most 100 cards per list, one game at a time, r
   choices the wiki gives, with no numbers. Stormbound's Fort of Ebonrock has no ability (a plain structure).
 
 ## Open work, in Kaptain's order
-1. Finish fixing the verified causes of Runeterra and of the old round (all 4 games): handover `audit/README.md`, done and
+1. Finish fixing the verified causes of the old round (all 4 games; Runeterra's own causes are done): handover `audit/README.md`, done and
    not reached in `audit/fixlog.md`. Fixes are made in the main chat, never by an agent (Kaptain, 3 Nov 2026).
 2. The line check (LINKS_PLAN.md step 3) of Slay the Spire, Faeria, Duelyst, then Stormbound, Monster Train, Inscryption, Into
    the Breach: a separate chat (Kaptain, 3 Nov 2026).

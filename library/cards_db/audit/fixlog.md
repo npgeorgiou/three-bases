@@ -44,4 +44,5 @@ rt 50: FIXED a card reading its own power gets power help (own_power_readers), n
 rt 52: FIXED makers of multi-region cards feed a region count. rt 59: FIXED Recall is a return to hand. rt 60: FIXED an own attack (Rally) is a strike too. rt 61: FIXED a keyword given to a card that shares its keywords (sharers); the reason says the use.
 rt 20, 44: NOT REAL: Master Yi level 2's "Attack: I strike" is a strike its text starts (L18 Deepwood Stalker); Lux level 2 counts mana of spells (L17).
 Tests n343-n362.
+Stormbound csb09-csb13: FIXED a keyword name is looked up in the card's own game (refs.py kwid_for: Stormbound's Poison was Slay the Spire's). Duelyst Stun givers -> Cryoblade, Essence Sculpt now found. Tests n363-n364.
 NOT REACHED, old round (verdict_1-4.md; each cause's games are in its card names; Runeterra examples inside them are Runeterra work): 17-24, 26-27, 30-32, 35-49, 51-55, 57-75, 77-91, 93-95.

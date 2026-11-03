@@ -25,10 +25,11 @@ Read first: START_DATABASE.md, LINKS_PLAN.md step 3 with "Token economy" and "Le
   Crusader -> Khalim's Prayer is gone by Kaptain's 3 Nov rule; the other 23 misses are faction-label checks, not lines).
 
 ## Steps left, in order
-1. Runeterra: the causes in fixlog.md "NOT REACHED, Runeterra" (16 left: wrong lines and missed lines).
+1. Runeterra: done (fixlog.md). Stormbound csb09-csb13: done.
 2. Old round: the causes in fixlog.md "NOT REACHED, old round", in one pass. Check each with pair.py, decide from L1-L22, grep
    the card names in cases/*.tsv first (Kaptain's cases win), edit network.py, add one `none` and one `line` case per cause
-   (next id n343). Run check_all.py --no-load after each group of about 5 causes.
+   (next id n365). `python3 /tmp/triage.py <cause numbers>` is not kept: write a short script that runs network.network for each
+   example pair of a cause (both cards in one game) to see which wrong lines still exist. Run check_all.py --no-load after each group of about 5 causes.
 3. Then `links.py`; save the table before the first fix (`dump_lines.py --table /tmp/tb0.tsv`) and diff after; `realworld.py`
    (237 of 261 must hold).
 4. Rewrite the must-not cases whose reason no deck says any more (check_all.py lists them).
