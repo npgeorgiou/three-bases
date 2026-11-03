@@ -131,7 +131,7 @@ ndu19	duelyst	Argeon Intensify Riftwalker	Windblade Adept	Afterblaze	line		Claud
 ndu20	duelyst	Argeon Mechaz0r	Helm of MECHAZ0R	MECHAZ0R!	line		guide: the pieces build MECHAZ0R! (family 17)
 ndu21	duelyst	Vaath Dying Wish	Kujata	Juggernaut	line		Claude, deck read: Kujata's damage on summon sets off Juggernaut
 ndu22	duelyst	Kaleos Trial of Songhai	Juxtaposition	Bonereaper	line		Claude, deck read: switching an enemy next to Bonereaper puts it in reach of its end-of-turn damage
-ndu23	duelyst	Vaath Dying Wish	Juggernaut	Lavaslasher	none	more power:	Claude, deck read: Grow makes only Juggernaut stronger (family 19)
+ndu23	duelyst	Vaath Dying Wish	Juggernaut	Lavaslasher	none		Claude, deck read: Grow makes only Juggernaut stronger (family 19)
 ndu24	duelyst	Cassyva Replace Abomination	Aethermaster	Cassyva Soulreaper	none		Claude, deck read: an extra replace helps the player, not the General card (family 20)
 ndu25	duelyst	Cassyva Replace Abomination	Healing Mystic	Abhorrent Unbirth	none		Claude, deck read: Unbirth destroys my minions itself; it waits for no deaths (family 21) (reason rewritten 30 Oct 2026: the old wording was said by no line, so the case could not fail)
 ndu26	duelyst	Lilithe Darkfire	Phantasm	Wraithling	none		Claude, deck read: Wraithlings are summoned onto the board, never in the action bar (family 22)
@@ -165,7 +165,7 @@ ndu43	duelyst	Argeon Dawn's Eye aggro	Azurite Lion	Windblade Adept	none		Claude:
 ndu44	duelyst	Ciphyron Build	Rescue-RX	Timekeeper	none		Kaptain: Timekeeper helps the buildings, it waits for nothing
 ndu45	duelyst	Ciphyron Build	Timekeeper	Rescue-RX	line		Kaptain: as ndu44
 ndu46	duelyst	Argeon Dawn's Eye aggro	Tempest	Arclyte Regalia	none		Claude: Regalia's damage prevention waits for nothing
-ndu47	duelyst	Kaleos Trial of Songhai	Dispirited Prisoner	Hideatsu the Ebon Ox	none	needs played	Claude: a token is summoned, never played from the action bar
+ndu47	duelyst	Kaleos Trial of Songhai	Dispirited Prisoner	Hideatsu the Ebon Ox	none		Claude: a token is summoned, never played from the action bar
 nfa41	faeria	Yellow Monstrosity	Manta Rider	Windborne Emissary	line	type:	Kaptain 30 Oct 2026: a flyer enables the Emissary ('while you control another flying creature')
 nfa42	faeria	Blue Yellow Events	Shifting Tide	Windstorm Colossus	line	cheaper:	Kaptain 30 Oct 2026: the Colossus counts the events played: does what it waits for (rewritten 30 Oct 2026, Kaptain: a count is part of "enables"; "triggers" only for reactions); rewritten 30 Oct 2026 (sts1 chat), Kaptain: a card whose cost drops for each X is made cheaper by X (Gambling Chip -> Eviscerate)
 nfa43	faeria	Bargain (Krog)	Bold Bargainer	Krog, the Ogre King	none	stronger:	Kaptain 30 Oct 2026: a cost cut makes cheaper, not stronger
@@ -223,13 +223,13 @@ ntb13	into_the_breach	Mist Eaters	Smoke Pellets	Smog Mech	none		Kaptain 1 Nov 20
 ntb14	into_the_breach	Cataclysm	Flood Drill	Hydraulic Lifter	line	makes holes	Kaptain 30 Oct 2026 (F27): Flood Drill makes a hole; what moves Vek can push them into it
 ntb15	into_the_breach	Hazardous Mechs	A.C.I.D. Projector	Unstable Cannon	none	gives A.C.I.D.	Claude (v53, F28): A.C.I.D. doubles weapon damage against the Vek it is on; Kaptain 2 Nov 2026: a damage multiplier for any weapon is generic
 ntb16	into_the_breach	Hazardous Mechs	A.C.I.D. Projector	Force Amp	none	gives A.C.I.D.	Claude (v53, F28): bump damage is no weapon damage; A.C.I.D. does not double it
-ntb17	into_the_breach	Heat Sinkers	Heat Engines	Napalm Mech	none	Boost	Kaptain 2 Nov 2026 (L18): Napalm Mech has nothing that uses Boost
+ntb17	into_the_breach	Heat Sinkers	Heat Engines	Napalm Mech	none		Kaptain 2 Nov 2026 (L18): Napalm Mech has nothing that uses Boost
 ntb18	into_the_breach	Frozen Titans	Janus Cannon	Cryo-Launcher	line	frees it	Claude (v53, F30): a hit frees the frozen Ice Mech (guide: Janus Cannon thaws it)
 nst26	sts1	Silent Shiv (highgroundgaming)	Blade Dance	A Thousand Cuts	line	more cards to play	Kaptain 30 Oct 2026 (h): Shivs are more cards played, more A Thousand Cuts damage
 nst27	sts1	Ironclad Pain (gamersdecide)	Reaper	Rage	line	Attack	Kaptain 30 Oct 2026 (audit): Rage gains Block for each Attack played
 nst28	sts1	Defect Snecko Eye (gamersdecide)	Snecko Eye	Meteor Strike	line	pays for it	Kaptain 30 Oct 2026 (f): random costs pay for big cards
 nst29	sts1	Defect Claw (gamersdecide)	Scrape	Claw	line	keeps it	Claude (audit): Scrape keeps the 0-cost cards it draws
-nst30	sts1	Watcher Divinity (gamersdecide)	Devotion	Smite	none	Mantra	Claude (audit): 10 Mantra is Divinity, triple damage; Kaptain 2 Nov 2026: more damage for any damage card is generic, Smite is one plain hit
+nst30	sts1	Watcher Divinity (gamersdecide)	Devotion	Smite	none		Claude (audit): 10 Mantra is Divinity, triple damage; Kaptain 2 Nov 2026: more damage for any damage card is generic, Smite is one plain hit
 nst31	sts1	Ironclad Body Slam (highgroundgaming)	Pure Water	Miracle	none		Kaptain 30 Oct 2026 (i): a deck gets only its own character's starting relic
 nst32	sts1	Watcher Stance Change (highgroundgaming)	Flurry of Blows	Bottled Flame	none		Claude (audit): Bottled Flame picks an Attack, it asks for none
 nst33	sts1	Defect Lightning (highgroundgaming)	Capacitor	Electrodynamics	line	more slots	Claude (audit): more Orb slots keep more Lightning
@@ -296,38 +296,38 @@ n295	runeterra	Jayce Sentinels	The Forge Of Tomorrow	Shock Blast	line	pays for i
 n296	runeterra	Caitlyn Teemo	Poison Dart	Poison Puffcap	line	plants	Claude 31 Oct 2026: a card planted in the enemy deck stays my act
 n297	stormbound	Meow	Dubious Hags	Token Ravens	none		Dubious Hags text: it spawns an ENEMY Raven
 n298	inscryption	Kaycee's Mod Mantis God (gamersdecide, core)	Mealworm	Mantis God	line	more power and health	Claude 31 Oct 2026: Morsel feeds the card it is sacrificed for (Mantis God costs Blood), said once as X|X (table case: Mealworm -> Raven)
-n299	inscryption	Act III Mycobot (gamersdecide, core)	Buff Conduit	Null Conduit	none	+1|+0	wiki sigils: the Conduits close the circuit, they are not in it
+n299	inscryption	Act III Mycobot (gamersdecide, core)	Buff Conduit	Null Conduit	none		wiki sigils: the Conduits close the circuit, they are not in it
 n300	runeterra	The Dreadway, Decimate	The Dreadway	Decimate	line	doubles its damage	Kaptain 2 Nov 2026: "The Dreadway -> Decimate is a combo that works" (Dreadway doubles the damage of a spell that only deals damage)
 n301	faeria	Ghost Dragon, Lost Explorer	Ghost Dragon	Lost Explorer	none	moves my units or land forward	audit 3 Nov 2026: a unit's own Flying moves only itself (Kaptain 3 Nov 2026)
 n302	faeria	Syland Horsemaster, Bomb Slinger	Syland Horsemaster	Bomb Slinger	line	moves my units or land forward	audit 3 Nov 2026: Horsemaster gives Charge to my unit (Kaptain's nfa21)
 n303	faeria	Wood Elemental, Wavecrash Colossus	Wood Elemental	Wavecrash Colossus	none	moves my units or land forward	audit 3 Nov 2026: making land moves no unit (L1)
 n304	faeria	Desert Twister, Baldurion, Evil Archsmith	Desert Twister	Baldurion, Evil Archsmith	none	moves it	audit 3 Nov 2026: Teleport to my own desert reaches no enemy land (L1)
 n305	duelyst	Dragonlark, Vigilator	Dragonlark	Vigilator	none	moves your units	audit 3 Nov 2026: Flying moves only Dragonlark; every unit moves (L20, L1)
-n306	duelyst	Mist Walking, Gore Horn	Mist Walking	Gore Horn	none	moves Gore Horn	audit 3 Nov 2026: Mist Walking moves the General (L7)
-n307	duelyst	Bombard, Penumbraxx	Bombard	Penumbraxx	none	moves Penumbraxx	audit 3 Nov 2026: Bombard readies only Ranged units
-n308	faeria	Windborne Champion, King's Guard	Windborne Champion	King's Guard	none	moves it where it must be	audit 3 Nov 2026: Combat goes off in any fight; moving adds none (L2, L4)
+n306	duelyst	Mist Walking, Gore Horn	Mist Walking	Gore Horn	none		audit 3 Nov 2026: Mist Walking moves the General (L7)
+n307	duelyst	Bombard, Penumbraxx	Bombard	Penumbraxx	none		audit 3 Nov 2026: Bombard readies only Ranged units
+n308	faeria	Windborne Champion, King's Guard	Windborne Champion	King's Guard	none		audit 3 Nov 2026: Combat goes off in any fight; moving adds none (L2, L4)
 n309	faeria	Seed of Paradise, Defender of the Homeland	Seed of Paradise	Defender of the Homeland	none	moves it within reach	audit 3 Nov 2026: the enemy must attack me (L9)
-n310	faeria	Volcanic Colossus, Oradrim Sagittarius	Volcanic Colossus	Oradrim Sagittarius	none	hit the enemy player	audit 3 Nov 2026: Ranged Attack adds no attack (L2)
+n310	faeria	Volcanic Colossus, Oradrim Sagittarius	Volcanic Colossus	Oradrim Sagittarius	none		audit 3 Nov 2026: Ranged Attack adds no attack (L2)
 n311	faeria	Frogify, Oradrim Monk	Frogify	Oradrim Monk	none	moves it within reach	audit 3 Nov 2026: the frog has lost the Monk's text (L1)
 n312	duelyst	Eternity Painter, Manakite Drifter	Eternity Painter	Manakite Drifter	none	transforms cards	audit 3 Nov 2026: Painter transforms enemies; Build is about the Drifter itself
 n313	duelyst	Disciple of Yggdra, Architect-T2K5	Disciple of Yggdra	Architect-T2K5	line	transforms cards	audit 3 Nov 2026: Disciple transforms itself, which Architect waits for
 n314	faeria	Astral Weapon, Destructive Volley	Astral Weapon	Destructive Volley	none	has Flying	audit 3 Nov 2026: Volley is aimed at enemy Flying units (L9)
 n315	runeterra	Abyssal Eye, Dashing Dandy	Abyssal Eye	Dashing Dandy	none	enemy player	audit 3 Nov 2026: Abyssal Eye's own keyword works only for itself (L20)
 n316	runeterra	Amateur Aeronaut, Darius	Amateur Aeronaut	Darius	line	levels it up	audit 3 Nov 2026: Elusive reaches the Nexus for Darius's level-up (Kaptain's n12)
-n317	duelyst	Faie Bloodwing, Resonance Scythe	Faie Bloodwing	Resonance Scythe	none	kills enemy units	audit 3 Nov 2026: fighting gives no Stunned enemy (L2)
+n317	duelyst	Faie Bloodwing, Resonance Scythe	Faie Bloodwing	Resonance Scythe	none		audit 3 Nov 2026: fighting gives no Stunned enemy (L2)
 n318	duelyst	Piercing Mantis, Gate to the Undervault	Piercing Mantis	Gate to the Undervault	none	makes units die	audit 3 Nov 2026: any unit death sets off Gate; Frenzy adds nothing (L21)
 n319	runeterra	Aurelion Sol, Braum	Aurelion Sol	Braum	none	survives damage	audit 3 Nov 2026: Sol makes Celestial cards; they help, not Sol (L3)
 n321	runeterra	Greathorn Companion, Greenfang Warden	Greathorn Companion	Greenfang Warden	none	another attack	audit 3 Nov 2026: Scout readying Scouts is the keyword's rule (L15)
 n322	runeterra	Greathorn Companion, Angel	Greathorn Companion	Angel	none	enemy player	audit 3 Nov 2026: a second attack gets no unit past blockers (L4)
-n325	runeterra	Might, Scorched Earth	Might	Scorched Earth	none	more damage	audit 3 Nov 2026: Overwhelm deals no unit damage (L4, L18)
+n325	runeterra	Might, Scorched Earth	Might	Scorched Earth	none		audit 3 Nov 2026: Overwhelm deals no unit damage (L4, L18)
 n326	runeterra	Warlord's Palace, Akshan	Warlord's Palace	Akshan	none	; also	audit 3 Nov 2026: one fact said once (L10)
 n327	runeterra	Mirror Image, Omen Hawk	Mirror Image	Omen Hawk	line	summon effect	audit 3 Nov 2026: a copy put into play sets off its summon effect (L19)
 n328	runeterra	Feel The Rush, Gangplank	Feel The Rush	Gangplank	line	summon effect	audit 3 Nov 2026: champions put into play: their summon effect goes off (L17)
 n329	runeterra	Angel, Cunning Kitten	Angel	Cunning Kitten	none	creates	audit 3 Nov 2026: Angel creates Coins, not the Kitten (L20)
 n330	runeterra	Acoustician, Norra	Acoustician	Norra	none	creates	audit 3 Nov 2026: Acoustician creates spells; Norra counts created units (L20)
 n331	runeterra	Noxian Fervor, Scrappy Bomb	Noxian Fervor	Scrappy Bomb	none	kills it	audit 3 Nov 2026: Noxian Fervor hits units; Scrappy Bomb is a landmark (L8)
-n332	runeterra	Nautilus, Alpha Wildclaw	Nautilus	Alpha Wildclaw	none	copies	audit 3 Nov 2026: a copy into the deck is generic (L19)
-n333	runeterra	Avarosan Sentry, Trundle	Avarosan Sentry	Trundle (level 2)	none	fills your hand	audit 3 Nov 2026: Trundle counts 8+ cost cards in hand; a top-card draw brings none (L1b)
+n332	runeterra	Nautilus, Alpha Wildclaw	Nautilus	Alpha Wildclaw	none		audit 3 Nov 2026: a copy into the deck is generic (L19)
+n333	runeterra	Avarosan Sentry, Trundle	Avarosan Sentry	Trundle (level 2)	none		audit 3 Nov 2026: Trundle counts 8+ cost cards in hand; a top-card draw brings none (L1b)
 n334	runeterra	Mageseeker Junior, Assembly Line	Mageseeker Junior	Assembly Line	none	pays for it	audit 3 Nov 2026: setting cheap spells to cost 3 raises costs (L10)
 n335	runeterra	Rummage, Jinx	Rummage	Jinx	none	empties your hand	audit 3 Nov 2026: Rummage draws as many as it discards (L4)
 n336	runeterra	Senna, Absorb Soul	Senna (level 2)	Absorb Soul	line	cheaper	audit 3 Nov 2026: Drain damages, so Senna's cost cut fits (verdict rt 41)
@@ -340,7 +340,7 @@ n342	runeterra	Defiant Dance, Dunekeeper	Defiant Dance	Dunekeeper	line	returns i
 n343	runeterra	Powder Keg, Paralyzing Bite, Mystic Shot	Powder Keg	Paralyzing Bite	none	bigger	audit 3 Nov 2026: a stun has no number to make bigger (rt 19, L14)
 n344	runeterra	Powder Keg, Paralyzing Bite, Mystic Shot	Powder Keg	Mystic Shot	none	bigger	audit 3 Nov 2026: Mystic Shot just hits: more spell damage is generic (old 24, L18)
 n345	runeterra	Zap Sprayfin, Make it Rain	Zap Sprayfin	Make it Rain	none	draws it	audit 3 Nov 2026: most spells cost 3 or less: a draw by kind (rt 23, L1b, L21)
-n346	runeterra	Realm Warp, Elder Dragon	Realm Warp	Elder Dragon (level 2)	none	keeps it	audit 3 Nov 2026: keeping the cards that are not followers is a draw by kind (rt 24, L1b)
+n346	runeterra	Realm Warp, Elder Dragon	Realm Warp	Elder Dragon (level 2)	none		audit 3 Nov 2026: keeping the cards that are not followers is a draw by kind (rt 24, L1b)
 n347	runeterra	Avalanche, Petricite Charger	Avalanche	Petricite Charger	none	damages it	audit 3 Nov 2026: Petricite Charger only stops damage from enemy spells (rt 30, L9)
 n348	runeterra	Yasuo, Blue Sentinel	Yasuo (level 2)	Blue Sentinel	none	death effect	audit 3 Nov 2026: Yasuo strikes the stunned enemy, never my Blue Sentinel (rt 30, L9)
 n349	runeterra	Gangplank, Powderful Explosion	Gangplank	Powderful Explosion	none	skill	audit 3 Nov 2026: only Gangplank level 2 casts Powderful Explosion (rt 34)
@@ -350,7 +350,7 @@ n352	runeterra	Senna, Absorb Soul	Senna (level 2)	Absorb Soul	none	Fast	audit 3 
 n353	runeterra	Senna, Absorb Soul	Senna (level 2)	Absorb Soul	line	cheaper	audit 3 Nov 2026: Absorb Soul is a damage spell: Senna makes it cost 1 less
 n354	runeterra	Bone Skewer, Pyke	Bone Skewer	Pyke	line	levels it up	audit 3 Nov 2026: a strike now by Pyke counts toward his 15 damage (rt 46, L2)
 n355	runeterra	Frenzied Feast, Pyke	Frenzied Feast	Pyke (level 2)	line	strike	audit 3 Nov 2026: Pyke strikes and kills: his 'when I kill' goes off (rt 46, L2)
-n356	runeterra	For Demacia!, Poppy	For Demacia!	Poppy	none	reads its power	audit 3 Nov 2026: all allies raised alike: no more allies pass Poppy's filter (rt 50, L18)
+n356	runeterra	For Demacia!, Poppy	For Demacia!	Poppy	none		audit 3 Nov 2026: all allies raised alike: no more allies pass Poppy's filter (rt 50, L18)
 n357	runeterra	Twin Disciplines, Poppy	Twin Disciplines	Poppy	line	power	audit 3 Nov 2026: more power on Poppy lets more allies get her bonus (rt 50, L18)
 n358	runeterra	Loping Telescope, The Bandle Tree	Loping Telescope	The Bandle Tree	line	regions	audit 3 Nov 2026: a multi-region follower adds regions to the Bandle Tree's count (rt 52, L17)
 n359	runeterra	Will of Ionia, Icevale Archer	Will of Ionia	Icevale Archer	line	returns it to hand	audit 3 Nov 2026: Recall replays Icevale Archer's Play (rt 59, L14)
