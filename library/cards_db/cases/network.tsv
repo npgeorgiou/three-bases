@@ -338,7 +338,7 @@ n340	runeterra	Troll Chant, Reckoning	Troll Chant	Reckoning	none	power it counts
 n341	runeterra	Stalking Shadows, Hecarim	Stalking Shadows	Hecarim	line	Ephemeral	audit 3 Nov 2026: the drawn copy is Ephemeral, Hecarim counts Ephemeral attackers
 n342	runeterra	Defiant Dance, Dunekeeper	Defiant Dance	Dunekeeper	line	returns it to hand	audit 3 Nov 2026: a return to hand replays a summon effect (L14)
 n343	runeterra	Powder Keg, Paralyzing Bite, Mystic Shot	Powder Keg	Paralyzing Bite	none	bigger	audit 3 Nov 2026: a stun has no number to make bigger (rt 19, L14)
-n344	runeterra	Powder Keg, Paralyzing Bite, Mystic Shot	Powder Keg	Mystic Shot	line	bigger	audit 3 Nov 2026: Mystic Shot deals 2: Powder Keg adds 1
+n344	runeterra	Powder Keg, Paralyzing Bite, Mystic Shot	Powder Keg	Mystic Shot	none	bigger	audit 3 Nov 2026: Mystic Shot just hits: more spell damage is generic (old 24, L18)
 n345	runeterra	Zap Sprayfin, Make it Rain	Zap Sprayfin	Make it Rain	none	draws it	audit 3 Nov 2026: most spells cost 3 or less: a draw by kind (rt 23, L1b, L21)
 n346	runeterra	Realm Warp, Elder Dragon	Realm Warp	Elder Dragon (level 2)	none	keeps it	audit 3 Nov 2026: keeping the cards that are not followers is a draw by kind (rt 24, L1b)
 n347	runeterra	Avalanche, Petricite Charger	Avalanche	Petricite Charger	none	damages it	audit 3 Nov 2026: Petricite Charger only stops damage from enemy spells (rt 30, L9)
@@ -367,3 +367,8 @@ n369	duelyst	Mirkblood Devourer, Drogon	Mirkblood Devourer	Drogon	none	power	aud
 n370	faeria	Path to Paradise, Enslaved Priest	Path to Paradise	Enslaved Priest	none	power	audit 3 Nov 2026: old 19: its damage is a fixed 2, not its power
 n371	faeria	Spirit Spice, Barrensky Vermin	Spirit Spice	Barrensky Vermin	none	power	audit 3 Nov 2026: old 21: its fight when played is over before a boost on the board reaches it
 n372	runeterra	Rising Spell Force, Banana Blaster	Rising Spell Force	Banana Blaster	none	power	audit 3 Nov 2026: old 21: it reads its power when played; a board boost comes too late
+n373	runeterra	Soul Shepherd, Vi	Soul Shepherd	Vi	none		audit 3 Nov 2026: old 22: Soul Shepherd gives +1|+1 only to Ephemeral allies
+n374	runeterra	Ornn (level 2), Wrought Colossus	Ornn (level 2)	Wrought Colossus	none		audit 3 Nov 2026: old 22: Ornn level 2 forges only himself
+n375	runeterra	Here to Help, Gangplank	Here to Help	Gangplank	line		audit 3 Nov 2026: old 22: +2 power to a damaged Gangplank, who levels from Nexus damage (L18)
+n376	duelyst	Crescent Spear, Phoenix Fire	Crescent Spear	Phoenix Fire	none		audit 3 Nov 2026: old 24: more spell damage for a spell that just hits is generic (L18)
+n377	runeterra	The Dreadway, Decimate	The Dreadway	Decimate	line		audit 3 Nov 2026: old 24: The Dreadway doubles what is there (Kaptain)

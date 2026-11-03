@@ -562,6 +562,7 @@ def lines_of(c, game):
                     who = ';'.join(p for p in (mw or '').split(';') if p.split(' ')[:2] in (['card', 'is'], ['type', 'is'], ['type', 'in'],
                                                                                         ['name_has', 'is'], ['keyword', 'is']))  # "another Rakoan";
                     # "ready all Ranged units" (Bombard) reaches only a card with Ranged
+                    who = ';'.join(x for x in (who, state_filter(c, game, mw), trig_state_of(c, game, m) if mpick == 'it' else '') if x)  # "an Ephemeral ally" (Soul Shepherd -> Vi: no line, verdict 22)
                     if who and not matches(c, game, cards[t], 'any', who): continue
                 if tkind in RESOURCE_WORD and not colour_fit(tw, mw): continue  # a Green Mox cost is paid by a Green gem only
                 if mpick == 'self':  # what a card does to itself feeds only a need its own kind fits ("the strongest friendly Dragon")
@@ -1163,6 +1164,17 @@ def use_of(c, game, b, act, kw, ps, w=None):
     return None
 
 
+def trig_state_of(c, game, m):
+    """the keyword states its triggers ask of the unit it then acts on ("when an Ephemeral ally is summoned, give it", Soul Shepherd)"""
+    return ';'.join(dict.fromkeys(x for (w,) in c.execute("select obj_with from flat_when where card=? and obj_with like 'state is %'", (m,))
+                                  for x in [state_filter(c, game, w)] if x))
+
+
+def state_filter(c, game, w):
+    """a filter "state is ephemeral" as the game's keyword of that name ("keyword is <id>"), when the state is a keyword"""
+    return ';'.join(f'keyword is {k}' for k in (state_kw(c, game, p[9:]) for p in (w or '').split(';') if p.startswith('state is ')) if k)
+
+
 def to_hand(c):
     """cards that give stats to my cards in hand"""
     if 'to_hand' not in CACHE:
@@ -1280,12 +1292,14 @@ def aimed(c, game, nodes, broad):
         kc_ = kind if kind in KIND_CAT else 'any'
         if sharp and kind_count(c, game, kc_, w) >= 0.5 * kind_count(c, game, kc_, None): sharp = False  # a filter
         # most cards of the kind pass ("costs 2 or more", Blood Song) is no deck choice
-        if act in ('repeat', 'increase_effect') and kind in ('landmark', 'spell', 'equipment') and \
+        if (act == 'repeat' or (act == 'increase_effect' and kind != 'spell')) and kind in ('landmark', 'spell', 'equipment') and \
                 kind_count(c, game, kind, None) < 0.5 * kind_count(c, game, 'any', None): sharp = True  # a smaller kind of card
-        # (Doctor Mia triggers structures; Kaptain's check n17) is a deck choice (L1b); not when most cards are spells (Slay the Spire)
+        # (Doctor Mia triggers structures; Kaptain's check n17) is a deck choice (L1b); more spell damage is not: only a spell whose
+        # text uses its damage (verdict 24: Powder Keg -> Advanced Intel, Crescent Spear -> Phoenix Fire: no line) not when most cards are spells (Slay the Spire)
         if act in ('stat_change', 'grow') and kind != 'player' and not any(p.startswith(('type is', 'type in')) for p in (w or '').split(';')):
             sharp = False  # stats to units with a keyword or a stat go only to a unit whose text uses them (L14, L18: Rek'Sai's Lurkers ->
             # Sharkling: no line); a tribe stays a deck choice (Kaptain's ndu34: Oakenheart helps the Mechs)
+        if act == 'increase_effect' and kind == 'spell' and 'keyword i' not in (w or ''): sharp = False  # more spell damage (verdict 24)
         if act == 'give_keyword' and kw and kw_tree(c, kw) == 'spell_speed': sharp = False  # a spell's speed is help to a whole kind
         # (Senna makes damage spells Fast): only a card whose text uses it (L14)
         if act == 'increase_effect' and 'keyword i' not in (w or ''):
@@ -1799,10 +1813,14 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
     def having(concepts, units_too):
         q = ','.join('?' * len(concepts))
         acting = {a for (a,) in c.execute(f"""select card from flat_do where origin in ('own','uses_keyword') and coalesce(on_side,'mine') in ('mine','any')
-                and act not in ('create','summon','choose_card','keyword_action','copy','draw') and coalesce(on_pick,'') not in ('self','owner') and not (coalesce(on_kind,'') = 'player' and act in ('heal','stat_change','grow',
+                and act not in ('create','summon','choose_card','keyword_action','copy','draw') and coalesce(on_pick,'') not in ('self','owner')
+                and not (origin='uses_keyword' and exists (select 1 from flat_do k where k.card=flat_do.card and k.act='keyword_action' and k.keyword_ref=flat_do.via)
+                and not exists (select 1 from flat_do k where k.card=flat_do.card and k.act='keyword_action' and k.keyword_ref=flat_do.via and coalesce(k.on_pick,'')!='self'))
+                and not (coalesce(on_kind,'') = 'player' and act in ('heal','stat_change','grow',
                 'negate_damage','damage_reduction','give_keyword','give_ability')) and card in ({marks})""", L)}  # on my
         # units: healing itself and my Nexus helps no other unit (Cosmic Youngling); Rally on the player does (another attack); making a
-        # card is no help, the made card helps (L3: Aurelion Sol makes Celestial cards, he does not help Braum); what a keyword the
+        # card is no help, the made card helps; a keyword it uses only on itself (Ornn level 2 forges himself) helps no other (verdict 22)
+        # (L3: Aurelion Sol makes Celestial cards, he does not help Braum); what a keyword the
         # card has does to others is the keyword's rule (L15: Scout readies Scouts: Greathorn Companion -> Greenfang Warden, no line)  # it acts on other cards of mine, not only on itself
         # a gain on the card it is sacrificed for (Mealworm: Morsel) reaches only that card: lines_of draws it, not every unit here
         stat = {'attack_gain': ('power', 'strength'), 'defence_gain': ('health', 'strength')}  # strength is both (Stormbound)
@@ -1810,7 +1828,10 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
         def gains(act, ps):  # the stat it raises ("+2 Attack" raises no Health)
             p = dict(x.split('=', 1) for x in (ps or '').split(';') if '=' in x)
             return act in ('stat_change', 'grow') and any(k in p and raises(p[k]) for k in want)
-        rows = [(a, own) for a, own, act, ps, con, k, w in c.execute(f"""select card, coalesce(on_pick,'') in ('self','owner','actor') or act='counter' or origin='has_keyword' or coalesce(on_side,'mine') not in
+        rows = [(a, own) for a, own, act, ps, con, k, w in c.execute(f"""select card, coalesce(on_pick,'') in ('self','owner','actor') or act='counter' or origin='has_keyword'
+                or (origin='uses_keyword' and exists (select 1 from flat_do k where k.card=flat_do.card and k.act='keyword_action' and k.keyword_ref=flat_do.via)
+                and not exists (select 1 from flat_do k where k.card=flat_do.card and k.act='keyword_action' and k.keyword_ref=flat_do.via and coalesce(k.on_pick,'')!='self'))
+                or coalesce(on_side,'mine') not in
                 ('mine','any') or (coalesce(on_kind,'') = 'player' and act in ('heal','stat_change','grow','negate_damage','damage_reduction',
                 'give_keyword','give_ability')), act, params, concept, on_kind, on_with from flat_do where origin in ('own','uses_keyword','has_keyword') and card in ({marks})""", L)
                 if ((con in rest or act in rest) or gains(act, ps)) and (want and gains(act, ps) and reach[a].append((k, w)) or True)
@@ -1852,6 +1873,11 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
             and card in ({marks})""", L):
         ident[a].append(';'.join(q_ for q_ in (w_ or '').split(';') if q_.split(' ')[:2] in (['card', 'is'], ['type', 'is'], ['type', 'in'],
                         ['name_has', 'is'], ['keyword', 'is'], ['region', 'is'], ['card', 'not'])))
+    for a, w_ in c.execute(f"""select d.card, w.obj_with from flat_do d join flat_when w on w.ability=d.ability where d.on_pick='it' and
+            d.origin='own' and d.act in ('stat_change','give_keyword','heal','grow') and w.obj_with like 'state is %' and d.card in ({marks})""", L):
+        # "when an Ephemeral ally is summoned, give it +1|+1" (Soul Shepherd): it lands only on Ephemeral units (verdict 22)
+        ks = state_filter(c, game, w_)
+        if ks: ident[a] = [w0 for w0 in ident[a] if w0] + [ks]
     def lands_on(a, t):
         return not ident.get(a) or any(not who or matches(c, game, cards[t], 'any', who) for who in ident[a])
     # help a card gives only through a keyword it has, to cards with the same keyword, is that keyword's rule (Lurk: every Lurker

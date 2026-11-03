@@ -1,88 +1,67 @@
-# Case tests: faeria
+# Case tests: duelyst
 
-Made by `cases/run.py faeria`.
-**137 of 137 cases pass.**
+Made by `cases/run.py duelyst`.
+**109 of 109 cases pass.**
 
-**Cases whose reason no line says any more (rewrite them): n308, n310**
+**Cases whose reason no line says any more (rewrite them): ndu23, ndu47, n306, n307, n317**
 
 
 ## Mechanics (expected cards from the texts)
 
 | case | question | expected | found | recall | extra | pass |
 |---|---|---|---|---|---|---|
-| mx01 | a trigger on another unit dying is other_death_trigger | 0 | 0 | 100% | 11 | yes |
-| mx02 | moving enemy units is forced_movement | 0 | 0 | 100% | 38 | yes |
-| mx03 | a plain draw is one form: zone deck_top, no pick top | 26 | 26 | 100% | 16 | yes |
-| mx10 | damage to the enemy player is Nexus damage (kinds kept, v30) | 0 | 0 | 100% | 356 | yes |
-| mx11 | moving or pushing units makes units move (positions change, v30) | 0 | 0 | 100% | 148 | yes |
-| fa01 | Gift triggers | 122 | 122 | 100% | 133 | yes |
-| fa02 | Last Words triggers | 32 | 32 | 100% | 0 | yes |
-| fa03 | Production triggers | 18 | 18 | 100% | 0 | yes |
-| fa04 | Combat triggers | 17 | 17 | 100% | 0 | yes |
-| fa05 | Corrupt triggers | 14 | 14 | 100% | 0 | yes |
-| fa06 | Activate abilities | 11 | 11 | 100% | 8 | yes |
-| fa07 | end of your turn | 11 | 11 | 100% | 10 | yes |
-| fa08 | rewards attacking a god | 10 | 10 | 100% | 2 | yes |
-| fa09 | harvest triggers | 8 | 8 | 100% | 2 | yes |
-| fa10 | Flying | 63 | 63 | 100% | 11 | yes |
-| fa11 | Charge | 33 | 33 | 100% | 14 | yes |
-| fa12 | Jump | 23 | 23 | 100% | 9 | yes |
-| fa13 | Dash | 25 | 25 | 100% | 3 | yes |
-| fa14 | Taunt | 22 | 22 | 100% | 8 | yes |
-| fa15 | Haste | 9 | 9 | 100% | 5 | yes |
-| fa16 | Protection | 7 | 7 | 100% | 5 | yes |
-| fa17 | Ranged Attack | 8 | 8 | 100% | 2 | yes |
-| fa18 | Divine | 6 | 6 | 100% | 3 | yes |
-| fa19 | Deathtouch | 5 | 5 | 100% | 1 | yes |
-| fa20 | Aquatic | 6 | 6 | 100% | 0 | yes |
-| fa21 | swallows a creature | 6 | 6 | 100% | 4 | yes |
-| fa22 | discovers a card | 9 | 9 | 100% | 0 | yes |
-| fa23 | makes cards wild | 15 | 15 | 100% | 0 | yes |
-| fa24 | gains faeria | 22 | 22 | 100% | 4 | yes |
-| fa25 | cheaper cards | 37 | 37 | 100% | 8 | yes |
-| fa26 | stat buffs | 126 | 126 | 100% | 24 | yes |
-| fa27 | creates or changes lands | 12 | 12 | 100% | 6 | yes |
-| fa28 | counts my lands of a colour | 9 | 9 | 100% | 9 | yes |
-| fa29 | adjacent things | 45 | 45 | 100% | 31 | yes |
-| fa30 | damage to the enemy god | 11 | 11 | 100% | 35 | yes |
-| fa31 | transforms a creature | 6 | 6 | 100% | 3 | yes |
-| fa32 | fights | 3 | 3 | 100% | 1 | yes |
-| fa33 | teleports | 4 | 4 | 100% | 38 | yes |
-| fa34 | summons units | 20 | 20 | 100% | 20 | yes |
-| fa35 | draws cards | 26 | 26 | 100% | 16 | yes |
-| mx12 | a unit that moves (onto a space) is the event's object, never its actor (N16, Sentry, v36, v38) | 0 | 0 | 100% | 18 | yes |
-| mx13 | can't be targeted by spells: the cant is on the spells, the protected unit is "to" (N19, v37) | 0 | 0 | 100% | 0 | yes |
-| mx14 | a dead unit put into play is revive, never summon from the discard (N20, v37) | 0 | 0 | 100% | 0 | yes |
-| mx15 | a trigger that holds only "this turn" is an ability given to the player for this turn (v37, Duelyst) | 0 | 0 | 100% | 2 | yes |
-| fa36 | placement: where a unit may be summoned | 7 | 7 | 100% | 1 | yes |
-| fa37 | taking a land | 1 | 1 | 100% | 39 | yes |
-| fa38 | reward for harvesting enemy wells | 5 | 5 | 100% | 0 | yes |
-| fa39 | area shapes (on or adjacent to a space) | 2 | 2 | 100% | 0 | yes |
-| fa40 | counts my lands | 10 | 10 | 100% | 57 | yes |
-| fa41 | neighbours in a trigger | 3 | 3 | 100% | 73 | yes |
-| fa42 | Corrupt is entering enemy territory | 14 | 14 | 100% | 4 | yes |
-| fa43 | a trigger label written "Corrupt -" is the card's keyword | 14 | 14 | 100% | 0 | yes |
-| mx13 | an effect on the creature opposing it is about lanes (concept lanes from same_lane, v38) | 0 | 0 | 100% | 0 | yes |
+| mx01 | a trigger on another unit dying is other_death_trigger | 0 | 0 | 100% | 21 | yes |
+| mx02 | moving enemy units is forced_movement | 1 | 1 | 100% | 35 | yes |
+| mx03 | a plain draw is one form: zone deck_top, no pick top | 52 | 52 | 100% | 17 | yes |
+| mx10 | damage to the enemy player is Nexus damage (kinds kept, v30) | 0 | 0 | 100% | 680 | yes |
+| mx11 | moving or pushing units makes units move (positions change, v30) | 1 | 1 | 100% | 109 | yes |
+| mx12 | a unit that moves (onto a space) is the event's object, never its actor (N16, Sentry, v36, v38) | 0 | 0 | 100% | 7 | yes |
+| du01 | Opening Gambit triggers | 118 | 118 | 100% | 420 | yes |
+| du02 | Dying Wish triggers | 48 | 48 | 100% | 14 | yes |
+| du03 | Deathwatch triggers | 8 | 8 | 100% | 14 | yes |
+| du04 | Blood Surge triggers | 17 | 17 | 100% | 0 | yes |
+| du05 | Grow | 10 | 10 | 100% | 49 | yes |
+| du06 | start of your turn | 17 | 17 | 100% | 42 | yes |
+| du07 | end of your turn | 17 | 17 | 100% | 24 | yes |
+| du08 | Zeal | 10 | 10 | 100% | 20 | yes |
+| du09 | Infiltrate | 6 | 6 | 100% | 24 | yes |
+| du10 | Bond | 8 | 8 | 100% | 22 | yes |
+| du11 | Backstab | 18 | 18 | 100% | 0 | yes |
+| du12 | Stun | 14 | 14 | 100% | 6 | yes |
+| du13 | Dispel | 13 | 13 | 100% | 0 | yes |
+| du14 | Shadow Creep made | 7 | 7 | 100% | 15 | yes |
+| du15 | summon Wraithlings | 13 | 13 | 100% | 1 | yes |
+| du16 | teleport | 21 | 21 | 100% | 19 | yes |
+| du17 | equipped artifacts on the General | 29 | 29 | 100% | 11 | yes |
+| du18 | Intensify | 13 | 13 | 100% | 525 | yes |
+| du19 | Sentinel | 15 | 15 | 100% | 53 | yes |
+| du20 | Build | 14 | 14 | 100% | 0 | yes |
+| du21 | Provoke | 38 | 38 | 100% | 6 | yes |
+| du22 | Rush | 15 | 15 | 100% | 5 | yes |
+| du23 | Flying | 31 | 31 | 100% | 10 | yes |
+| du24 | Ranged | 29 | 29 | 100% | 3 | yes |
+| du25 | Frenzy | 20 | 20 | 100% | 8 | yes |
+| du26 | Celerity | 15 | 15 | 100% | 7 | yes |
+| du27 | Forcefield | 15 | 15 | 100% | 6 | yes |
+| du28 | Airdrop | 10 | 10 | 100% | 1 | yes |
+| du29 | Rebirth | 8 | 8 | 100% | 1 | yes |
+| du30 | Blast | 5 | 5 | 100% | 2 | yes |
+| mx13 | can't be targeted by spells: the cant is on the spells, the protected unit is "to" (N19, v37) | 6 | 6 | 100% | 2 | yes |
+| mx14 | a dead unit put into play is revive, never summon from the discard (N20, v37) | 1 | 1 | 100% | 16 | yes |
+| mx15 | a trigger that holds only "this turn" is an ability given to the player for this turn (v37, Duelyst) | 3 | 3 | 100% | 8 | yes |
+| mx13 | an effect on the creature opposing it is about lanes (concept lanes from same_lane, v38) | 0 | 0 | 100% | 20 | yes |
 | mx14 | a strike on the spaces beside the opposing one reaches other lanes (cross_lane, v38) | 0 | 0 | 100% | 0 | yes |
 | mx15 | within a circuit is a formation (link_formation, v38) | 0 | 0 | 100% | 0 | yes |
-| mx16 | more or faster base resource (base_resource_gain, v38) | 0 | 0 | 100% | 25 | yes |
+| mx16 | more or faster base resource (base_resource_gain, v38) | 0 | 0 | 100% | 6 | yes |
+| du31 | attacking from behind, or getting behind an enemy, is flanking (v40) | 17 | 17 | 100% | 0 | yes |
+| du32 | being on the enemy side is territory (Infiltrate, v39) | 0 | 0 | 100% | 7 | yes |
+| du33 | named areas (2x2, 3x3, corners, starting side) are area shapes (v40) | 12 | 12 | 100% | 12 | yes |
+| du34 | a stun makes a unit unable to act (v40; not a minion stunning itself, Meltwater Moose) | 13 | 13 | 100% | 4 | yes |
 
 ## Combos (the enabler must set off the payoff)
 
 | case | enabler | payoff | why | found as | pass |
 |---|---|---|---|---|---|
-| cfa01 | Feed the Forest | Oakling | destroying Oakling triggers its Last Words and gains faeria | event: kill -> dies | yes |
-| cfa02 | Feed the Forest | Ruunin, the Relentless | each death returns Ruunin bigger; Feed the Forest turns her Life into faeria | state: dies | yes |
-| cfa03 | Feed the Forest | Tarum, the Forest World | destroying Tarum gains faeria and its Last Words fills the world with forests | event: kill -> dies | yes |
-| cfa05 | Doomsday | Soul Eater | Doomsday destroys every creature; each friendly death grows Soul Eater in hand | condition: kill -> dies | yes |
-| cfa06 | Doomgate, Door to Oblivion | Annoying Gnat | sacrificing the Gnat draws a card; its Last Words summons it again | event: kill -> dies | yes |
-| cfa07 | Famine | Ruby Yak | Famine damages every Yak; Ruby Yak hits the opponent once for each damaged Yak | event: damage -> damaged | yes |
-| cfa08 | Ulani's Medallion | Ruby Yak | the Medallion turns your other creatures into copies of Ruby Yak | copies: turns my units into copies of it | yes |
-| cfa09 | Rain of Fish | Ulani's Medallion | Rain of Fish fills the board with creatures for the Medallion to copy | target: my units | yes |
-| cfa10 | Ruunin, the Relentless | Shaytan Monstrosity | each time Ruunin dies, Monstrosity drains her Attack | trigger: dies | yes |
-| cfa13 | Voice of Hunger | Eredon, Voice of All | the deck wins through the Voice of Hunger and Eredon combo | event: kill -> dies | yes |
-| cfa14 | Famine | Plague Bearer | Famine is an extra trigger for Plague Bearer | event: damage -> dies | yes |
-| cfa15 | Falcon Dive | Plague Bearer | Falcon Dive is an extra trigger for Plague Bearer | event: damage -> dies | yes |
 
 ## Region identity (signature, splash, archetype)
 
@@ -93,77 +72,70 @@ Made by `cases/run.py faeria`.
 
 | case | deck | must say | missing | pass |
 |---|---|---|---|---|
-| dfa01 | Midrange Sacrifice | your units die: made by demon wrangler, lord of the wastes;use it: soul eater | - | yes |
-| dfa02 | Voice of Hunger Control | get value when they die: eredon, voice of all | - | yes |
-| dfa03 | Bargain (Krog) | pays for big cards (more mana, cheaper cards): bold bargainer;krog, the ogre king | - | yes |
-| dfa04 | Fast Rakoans | rakoan cards: are or make them | - | yes |
-| dfa05 | Blue Yellow Events | spells you play:;set off: windstorm archer | - | yes |
 
 ## Deck networks (a line must be there, or must not)
 
 | case | deck | from | to | expect | found | pass |
 |---|---|---|---|---|---|---|
-| nfa01 | Beastmaster Green | Oakling | Deepwood Stalker | line  | stronger: can give it more power and health | yes |
-| nfa02 | Red Archers | Gift of Steel | Hilltop Archer | none  | - | yes |
-| nfa03 | Fast Rakoans | Rakoan Illusionist | Imperial Trooper | none  | - | yes |
-| nfa04 | Fast Rakoans | Airbot | Imperial Trooper | none moves it | - | yes |
-| nfa05 | Beastmaster Green | Time of Legends | Eredon, Voice of All | line puts: | puts: draws it from the deck | yes |
-| nfa06 | Beastmaster Green | The Emperor's Command | Feed the Forest | none  | - | yes |
-| nfa07 | Blue Jump | Wavecrash Colossus | Gabrian Commander | line  | waits: is a card whose drawing sets off its effect | yes |
-| nfa08 | Blue Jump | Ninja Toad | Gabrian Commander | none  | - | yes |
-| nfa09 | Yellow Flyers | Windborne Champion | Drakkar Skycaptain | none get Flying | - | yes |
-| nfa10 | Bargain (Krog) | Krog's Dinner | Krog, the Ogre King | line cheaper: | puts: draws it from the deck; also brings it back to your hand; also makes cheap | yes |
-| nfa11 | Bargain (Krog) | Bold Bargainer | Ogre Dance | none  | - | yes |
-| nfa12 | Red Combat | Garudan, Heart of the Mountain | Bomb Slinger | none enemy | - | yes |
-| nfa13 | Yellow Flyers | Celestial Tower | Khalim, Sky Prodigy | line  | moves: moves it within reach of the enemy player | yes |
-| nfa14 | Red Blue Mobility Burn | Syland Horsemaster | Grim Guard | none moves | - | yes |
-| nfa15 | Voice of Hunger Control | Time of Legends | Voice of Hunger | none enter | - | yes |
-| nfa16 | Midrange Sacrifice | Iona's Smile | Soul Eater | line  | puts: draws it from the deck | yes |
-| nfa17 | Midrange Sacrifice | Iona's Smile | Demon Wing | none draws it | - | yes |
-| nfa18 | Voice of Hunger Control | Voice of Hunger | Eredon, Voice of All | line  | waits: kills it for its death effect | yes |
-| nfa19 | Beastmaster Green | Oakling | Grove Guardian | line  | stronger: can give it more power and health | yes |
-| nfa20 | Yellow Monstrosity | Khalim's Training | Manta Rider | none  | - | yes |
-| nfa21 | Red Combat | Syland Horsemaster | Bomb Slinger | line moves: | moves: moves my units or land forward: it can enter where it needs to be | yes |
-| nfa22 | Red Archers | Flame Burst | Hilltop Archer | line clears: | clears: clears its line of fire | yes |
-| nfa23 | Bargain (Krog) | Red Devil | Krog, the Ogre King | line cheaper: | cheaper: pays for it: more mana or a lower cost | yes |
-| nfa24 | Bargain (Krog) | Krog, the Ogre King | Krog's Dinner | none  | - | yes |
-| nfa25 | Yellow Monstrosity | Soul Drain | Shaytan Monstrosity | none your units die | - | yes |
-| nfa26 | Yellow Monstrosity | Flash Wind | Mistral Guide | line moves: | moves: moves it where the units summoned next to it are needed | yes |
-| nfa27 | Blue Jump | Battle Toads | Wavecrash Colossus | none moves | - | yes |
-| nfa28 | Blue Jump | Sunken Tower | Wavecrash Colossus | line moves: | moves: moves my units or land forward: they reach enemy ground | yes |
-| nfa29 | Blue Jump | Gabrian Archon | Wavecrash Colossus | none stronger: | - | yes |
-| nfa30 | Bargain (Krog) | Bold Bargainer | Krog, the Ogre King | line cheaper: | cheaper: can make it cheaper | yes |
-| nfa31 | Blue Yellow Events | Shifting Tide | Windstorm Colossus | none waits: | cheaper: is a spell it needs played for its count | yes |
-| nfa32 | Yellow Monstrosity | Manta Rider | Windborne Emissary | none waits: | type: has Flying; also makes your units get Flying; also is a unit with Flying i | yes |
-| nfa33 | Red Combat | Underground Boss | Bomb Slinger | none  | - | yes |
-| nfa34 | Red Blue Mobility Burn | Seifer, Blood Tyrant | Gabrian Enchantment | none  | - | yes |
-| nfa35 | Red Blue Mobility Burn | Gift of Steel | Gabrian Enchantment | line stronger: | stronger: more health | yes |
-| nfa36 | Midrange Sacrifice | Demon Wing | Soul Eater | none  | - | yes |
-| nfa37 | Midrange Sacrifice | Lord of the Wastes | Soul Eater | line type: makes your units die | type: makes your units die | yes |
-| nfa38 | Midrange Sacrifice | Lord of the Wastes | Village Elder | line waits: kills it for its death effect | waits: kills it for its death effect | yes |
-| nfa39 | Bargain (Krog) | Krog's Dinner | Meteor | none  | - | yes |
-| nfa40 | Voice of Hunger Control | Falcon Dive | Plague Bearer | line waits: kills it for its death effect | waits: kills it for its death effect | yes |
-| nfa41 | Yellow Monstrosity | Manta Rider | Windborne Emissary | line type: | type: has Flying; also makes your units get Flying; also is a unit with Flying i | yes |
-| nfa42 | Blue Yellow Events | Shifting Tide | Windstorm Colossus | line cheaper: | cheaper: is a spell it needs played for its count | yes |
-| nfa43 | Bargain (Krog) | Bold Bargainer | Krog, the Ogre King | none stronger: | cheaper: can make it cheaper | yes |
-| nfa44 | Red Combat | Underground Brigand | Bomb Slinger | none  | - | yes |
-| nfa45 | Red Blue Mobility Burn | Gift of Steel | Gabrian Enchantment | none waits: | stronger: more health | yes |
-| nfa46 | Midrange Sacrifice | Village Elder | Soul Eater | none  | - | yes |
-| nfa47 | Midrange Sacrifice | Wind Soldier | Soul Eater | line type: | type: dies by its own effect | yes |
-| nfa48 | Bargain (Krog) | Krog's Dinner | Ogre Battler | none  | - | yes |
-| nfa49 | Yellow Monstrosity | Khalim's Training | Windborne Emissary | line type: | type: makes your units get Flying | yes |
-| nfa50 | Voice of Hunger Control | Falcon Dive | Eredon, Voice of All | none death effect | - | yes |
-| n241 | Auroras Dreamer | Water Elemental | Radiance, Imperial Airship | none  | - | yes |
-| n286 | Fast Rakoans | Demon Wrangler | Imperial Trooper | none moves | - | yes |
-| n287 | Tarum Combo | Tarum, the Forest World | Oak Father | line  | type: changes the land; also turns a land into the colour it needs: helps pay it | yes |
-| n301 | Ghost Dragon, Lost Explorer | Ghost Dragon | Lost Explorer | none moves my units or land forward | - | yes |
-| n302 | Syland Horsemaster, Bomb Slinger | Syland Horsemaster | Bomb Slinger | line moves my units or land forward | moves: moves my units or land forward: it can enter where it needs to be | yes |
-| n303 | Wood Elemental, Wavecrash Colossus | Wood Elemental | Wavecrash Colossus | none moves my units or land forward | - | yes |
-| n304 | Desert Twister, Baldurion, Evil Archsmith | Desert Twister | Baldurion, Evil Archsmith | none moves it | - | yes |
-| n308 | Windborne Champion, King's Guard | Windborne Champion | King's Guard | none moves it where it must be | - | yes |
-| n309 | Seed of Paradise, Defender of the Homeland | Seed of Paradise | Defender of the Homeland | none moves it within reach | - | yes |
-| n310 | Volcanic Colossus, Oradrim Sagittarius | Volcanic Colossus | Oradrim Sagittarius | none hit the enemy player | - | yes |
-| n311 | Frogify, Oradrim Monk | Frogify | Oradrim Monk | none moves it within reach | - | yes |
-| n314 | Astral Weapon, Destructive Volley | Astral Weapon | Destructive Volley | none has Flying | - | yes |
-| n370 | Path to Paradise, Enslaved Priest | Path to Paradise | Enslaved Priest | none power | - | yes |
-| n371 | Spirit Spice, Barrensky Vermin | Spirit Spice | Barrensky Vermin | none power | - | yes |
+| ndu01 | Vaath Dying Wish | Spelljammer | Dagona | none  | - | yes |
+| ndu02 | Cassyva Replace Abomination | Healing Mystic | Letigress | none waits | - | yes |
+| ndu03 | Cassyva Replace Abomination | Cassyva Soulreaper | Letigress | none  | - | yes |
+| ndu04 | Argeon Mechaz0r | Lifestream | Argeon Highmayne | none  | - | yes |
+| ndu05 | Vaath Dying Wish | Overload | Lavaslasher | none  | - | yes |
+| ndu06 | Shidai Artifacts | Mask of Shadows | Shidai Stormblossom | line  | keyword: can give it Backstab | yes |
+| ndu07 | Shidai Artifacts | Flicker | Mask of Shadows | line  | type: Flicker moves your units, and Mask of Shadows acts on units behind its tar | yes |
+| ndu08 | Kaleos Trial of Songhai | EMP | Dagona | none  | - | yes |
+| ndu09 | Vaath Dying Wish | Unseven | Dagona | line  | puts: puts it into play from the hand | yes |
+| ndu10 | Kaleos Trial of Songhai | Scroll Bandit | Battle Panddo | none  | - | yes |
+| ndu11 | Kaleos Trial of Songhai | Heartseeker | Hideatsu the Ebon Ox | none  | - | yes |
+| ndu12 | Kaleos Trial of Songhai | Blink | Scroll Bandit | line  | type: Blink moves Scroll Bandit, and Scroll Bandit acts on units behind its targ | yes |
+| ndu13 | Cassyva Replace Abomination | Aethermaster | White Widow | line  | waits: shuffles cards into the deck | yes |
+| ndu14 | Lilithe Darkfire | Lilithe Blightchaser | Phantasm | none  | - | yes |
+| ndu15 | Lilithe Darkfire | Grasp of Agony | Vorpal Reaver | none  | - | yes |
+| ndu16 | Argeon Intensify Riftwalker | Lifestream | Sunstrike | none  | - | yes |
+| ndu17 | Argeon Intensify Riftwalker | Sunstrike | Lifestream | none  | - | yes |
+| ndu18 | Faie Blood Taura | Flameblood Warlock | Blood Taura | line  | type: damages your leader | yes |
+| ndu19 | Argeon Intensify Riftwalker | Windblade Adept | Afterblaze | line  | type: is a unit with Zeal it counts or asks for | yes |
+| ndu20 | Argeon Mechaz0r | Helm of MECHAZ0R | MECHAZ0R! | line  | puts: summons | yes |
+| ndu21 | Vaath Dying Wish | Kujata | Juggernaut | line  | waits: damages it for its effect | yes |
+| ndu22 | Kaleos Trial of Songhai | Juxtaposition | Bonereaper | line  | type: Juxtaposition moves Bonereaper and enemy units, and Bonereaper acts on uni | yes |
+| ndu23 | Vaath Dying Wish | Juggernaut | Lavaslasher | none more power: | - | yes |
+| ndu24 | Cassyva Replace Abomination | Aethermaster | Cassyva Soulreaper | none  | - | yes |
+| ndu25 | Cassyva Replace Abomination | Healing Mystic | Abhorrent Unbirth | none  | - | yes |
+| ndu26 | Lilithe Darkfire | Phantasm | Wraithling | none  | - | yes |
+| ndu27 | Lilithe Darkfire | Darkfire Sacrifice | Wraithling | none cheaper | - | yes |
+| ndu28 | Cassyva Replace Abomination | Healing Mystic | Cassyva Soulreaper | none  | - | yes |
+| ndu29 | Lilithe Darkfire | Wraithling | Inkling Surge | line  | type: is the Wraithling it names | yes |
+| ndu31 | Lilithe Darkfire | Vorpal Reaver | Inkling Surge | none makes | - | yes |
+| ndu30 | Faie Blood Taura | White Asp | Blazing Spines | none names | - | yes |
+| ndu32 | Argeon Mechaz0r | Lifestream | Martyrdom | none  | - | yes |
+| ndu33 | Argeon Mechaz0r | Helm of MECHAZ0R | Oakenheart | none  | - | yes |
+| ndu34 | Argeon Mechaz0r | Oakenheart | Helm of MECHAZ0R | line  | stronger: gives it more power and health | yes |
+| ndu35 | Vaath Dying Wish | Ragebinder | Golem Metallurgist | none  | - | yes |
+| ndu36 | Vaath Dying Wish | Golem Metallurgist | Ragebinder | line  | cheaper: makes it cheaper when it comes | yes |
+| ndu37 | Cassyva Replace Abomination | Aethermaster | Punish | none  | - | yes |
+| ndu38 | Cassyva Replace Abomination | Letigress | Punish | none  | - | yes |
+| ndu39 | Shidai Artifacts | Cyclone Mask | Shidai Stormblossom | line  | keyword: can give it Ranged | yes |
+| ndu40 | Argeon Dawn's Eye aggro | Argeon Highmayne | Roar | line  | puts: casts its own spell | yes |
+| ndu41 | Argeon Dawn's Eye aggro | Roar | Windblade Adept | line  | stronger: can give it more power | yes |
+| ndu42 | Argeon Dawn's Eye aggro | Azurite Lion | Holy Immolation | none moves | - | yes |
+| ndu43 | Argeon Dawn's Eye aggro | Azurite Lion | Windblade Adept | none  | - | yes |
+| ndu44 | Ciphyron Build | Rescue-RX | Timekeeper | none  | - | yes |
+| ndu45 | Ciphyron Build | Timekeeper | Rescue-RX | line  | stronger: can speed up its countdown | yes |
+| ndu46 | Argeon Dawn's Eye aggro | Tempest | Arclyte Regalia | none  | - | yes |
+| ndu47 | Kaleos Trial of Songhai | Dispirited Prisoner | Hideatsu the Ebon Ox | none needs played | - | yes |
+| n240 | Brome Swarm | Warblade | Fealty | none  | - | yes |
+| n288 | Lilithe Swarm | Bloodtear Alchemist | Horn of the Forsaken | none damages | - | yes |
+| n305 | Dragonlark, Vigilator | Dragonlark | Vigilator | none moves your units | - | yes |
+| n306 | Mist Walking, Gore Horn | Mist Walking | Gore Horn | none moves Gore Horn | - | yes |
+| n307 | Bombard, Penumbraxx | Bombard | Penumbraxx | none moves Penumbraxx | - | yes |
+| n312 | Eternity Painter, Manakite Drifter | Eternity Painter | Manakite Drifter | none transforms cards | - | yes |
+| n313 | Disciple of Yggdra, Architect-T2K5 | Disciple of Yggdra | Architect-T2K5 | line transforms cards | waits: transforms cards | yes |
+| n317 | Faie Bloodwing, Resonance Scythe | Faie Bloodwing | Resonance Scythe | none kills enemy units | - | yes |
+| n318 | Piercing Mantis, Gate to the Undervault | Piercing Mantis | Gate to the Undervault | none makes units die | - | yes |
+| n364 | Crystallize, Cryoblade | Crystallize | Cryoblade | line  | type: makes enemy units get a keyword or status | yes |
+| n365 | Aer Pridebeak, Argeon Highmayne | Aer Pridebeak | Argeon Highmayne | none heal | - | yes |
+| n366 | Dawn's Eye, Argeon Highmayne | Dawn's Eye | Argeon Highmayne | none power | - | yes |
+| n367 | Lux Ignis, Fireblazer | Lux Ignis | Fireblazer | none heal | - | yes |
+| n369 | Mirkblood Devourer, Drogon | Mirkblood Devourer | Drogon | none power | - | yes |
+| n376 | Crescent Spear, Phoenix Fire | Crescent Spear | Phoenix Fire | none  | - | yes |
