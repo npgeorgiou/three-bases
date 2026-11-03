@@ -95,6 +95,10 @@ Every one of these failed in the first five factions. Check each before sending.
   (2) ~20 key cards with needs/makes lines; (3) the rest. Never a whole faction (or five) in one go.
 - Theme first (Kaptain, 3 Nov 2026): every faction has a real theme to draw from (e.g. the Siegewrights: World War I), giving
   10+ characteristics (how they fight, live, trade, believe, what they fear and lack). Thin identities give no mechanics.
+- Four levels (Kaptain, 3 Nov 2026): THEME -> MECHANICS (broad notions, few, that feed each other) -> INTERACTIONS (how
+  cards play off each other inside a mechanic) -> CARDS that implement the mechanics. Never call an interaction a
+  mechanic. A mechanic must be broad enough to carry dozens of cards, and the mechanics must feed each other, not
+  only a few example cards. No unit types or card kinds that split the deck (no "crew", no Yin/Yang dichotomy).
 - A mechanic is a broad notion that many cards work through, written in Kaptain's form "I do X -> I benefit from X", e.g. "I damage my own units -> I gain from
   damaged units". What one unit does (a cannon fires, a keg explodes) is a unit effect, never a mechanic.
 - Mechanics: buffs, damage and stats are not mechanics. Each mechanic is written with the traits it comes from and the
