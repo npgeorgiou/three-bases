@@ -1,6 +1,6 @@
 # Three Bases — rules for Claude
 
-Kaptain's browser card game. Work on the clone, commit and push every change to `main`.
+Kaptain's browser card game. Work on the clone and commit to `main`; push only when Kaptain asks.
 
 ## How to talk to Kaptain
 - Short sentences. Plain everyday words. Say what happened and what you need, nothing else.
@@ -54,7 +54,7 @@ When something changes state (an idea gets built, a to-do gets decided), move it
 - Visuals (layout, readability, animations) must look deliberate and clear.
 - Edit with Edit or small scripted replacements on the part file; never rewrite whole files; never re-read a file after editing it.
 - After a code change: `python3 tools/build.py` (joins parts, syntax-checks, warns about oversized files), then `node tools/simtest.js` (headless games; prints a hash). A refactor must keep the hash; a rules change may change it, then check the changed behaviour with one short targeted test. UI changes: `node tools/smoke.js` (page loads without script errors). Paste no command output into replies.
-- Commit and push. Give Kaptain only the changed built HTML files (game, scenarios, AI lab) as downloads, never text files (he reads those on GitHub). Never publish anything as an artifact.
+- Commit; push only when Kaptain asks. Give Kaptain only the changed built HTML files (game, scenarios, AI lab) as downloads, never text files (he reads those on GitHub). Never publish anything as an artifact.
 - Summary updates are done in one pass after the current work: while game changes are not yet written into summary/, end every reply with a reminder that Kaptain should tell Claude to save the summary (= write those changes into summary/ and push). No unsaved changes, no reminder.
 
 ## Keeping the structure (check before every commit)
