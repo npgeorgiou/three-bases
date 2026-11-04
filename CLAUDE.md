@@ -10,6 +10,7 @@ Kaptain's browser card game. Work on the clone and commit to `main`; push only w
 - No recaps, no lists of everything done, no caveats unless they change what Kaptain must decide.
 - When a mistake is found, fix its cause in the docs (this file or the entry file the task uses) in the same turn, then say in one line what changed; never only admit it.
 - When Kaptain says he doesn't understand or doesn't know something, explain it plainly and wait. Do not act until he answers.
+- When a message asks for suggestions or shares a plan, even next to a task ("make X, and look at my plan"), agree the whole plan in conversation first. No code, no measurements, until he says go.
 
 ## Start of a chat (token budget: read nothing else)
 - Clone without the 121 MB library unless the task is about it:
