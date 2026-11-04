@@ -1,6 +1,5 @@
 /* ---------- Horologers: clockmakers whose machines act at round end; winding makes them act again, broken machines become Spare Parts ---------- */
-const RE = (...ops) => ON('roundEnd', ...ops), PL = (...ops) => ON('place', ...ops), DIE = (...ops) => ON('death', ...ops);
-const STRIKE = { strike: 1 }, PART = { card: 'c_part' }, WIND_IT = { tick: 'it' }, IM_ = { fixed: 1 };
+const PART = { card: 'c_part' }, WIND_IT = { tick: 'it' }, IM_ = { fixed: 1 };
 const GEARED = '[[Geared]]', SALV = '[[Salvage]]', WOUND = '[[Wound]]';
 addFaction('c', [
   // tokens

@@ -1,0 +1,103 @@
+CARD Knife Dancer | 1 - 1|1 | Place: deals 1 damage to the enemy facing me. | mech: Obsidian cuts | makes: enemy-bloodied
+CARD Willing Victim | 1 - 1|1 | Death: deals 1 damage to the enemy facing me. | mech: Offering | makes: victim-behind, ally-dies, enemy-bloodied
+CARD Marigold Child | 1 - 0|2 | Death: your other units in my lane gain +1 strength this round. | mech: Offering, Harvest | makes: victim-behind, ally-dies, strong-striker
+CARD Obsidian Youth | 1 - 1|1 | Obsidian. | mech: Finishing the wounded | makes: enemy-dies | needs: enemy-bloodied
+CARD Drummer of the Dead | 1 - 0|2 | Toll. | mech: The toll | makes: strong-striker | needs: many-deaths
+CARD Skull Collector | 2 - 2|1 | Whenever another unit in my lane dies, I gain +1 strength. | mech: Harvest | makes: strong-striker | needs: ally-dies, enemy-dies
+CARD Bloodletter | 1 - 1|1 | Offering. Place: if offered, +2 supply in this lane this round. | mech: Offering | makes: supply-now, ally-dies | needs: victim-behind
+CARD Young Captor | 1 - 1|1 | Whenever my strike kills an enemy: +1 carry-over. | mech: Finishing the wounded | makes: supply-now | needs: enemy-bloodied
+CARD Wailing Woman | 1 - 0|1 | Death: deals 1 damage to each Bloodied enemy in my lane. | mech: Offering, Finishing the wounded | makes: victim-behind, ally-dies, enemy-dies, many-deaths | needs: enemy-bloodied
+CARD Skull Jar | 1 - 0|3 | Immobile. Death: places a Captive in my lane, outside the front row. | mech: Offering | makes: victim-behind, ally-dies
+CARD Jaguar Scout | 2 - 2|2 | Obsidian. | mech: Finishing the wounded | makes: enemy-dies | needs: enemy-bloodied
+CARD Eagle Archer | 2 - 1|1 | Ranged. | mech: Obsidian cuts | makes: enemy-bloodied, rear-hit
+CARD Tribute of Cacao | spell 1 | +1 carry-over; +1 more if 2 or more units died this round. | mech: The toll | makes: supply | needs: many-deaths
+CARD Temple Guard | 2 - 1|2 | Whenever another unit in my lane dies, I gain +1 defence. | mech: Harvest | makes: holder | needs: ally-dies, enemy-dies
+CARD Steps Priest | 2 - 1|2 | Whenever another ally in my lane dies, deals 1 damage to the enemy facing me. | mech: Harvest, Obsidian cuts | makes: enemy-bloodied | needs: ally-dies
+CARD Sun Dancer | 2 - 2|2 | Offering. Place: if offered, I gain +2/+1. | mech: Offering | makes: strong-striker, ally-dies | needs: victim-behind
+CARD Flint Cutter | 2 - 1|2 | Place: deals 1 damage to each enemy in the enemy front row. | mech: Obsidian cuts | makes: enemy-bloodied, many-deaths
+CARD Toll Warrior | 2 - 1|2 | Toll. Obsidian. | mech: The toll, Finishing the wounded | makes: enemy-dies | needs: enemy-bloodied, many-deaths
+CARD Flower Warrior | 2 - 2|1 | Whenever my strike kills an enemy: a Captive in my lane, outside the front row. | mech: Finishing the wounded, Harvest | makes: victim-behind | needs: enemy-bloodied
+CARD Marigold Mourner | 2 - 1|2 | Death: deals 1 damage to each Bloodied enemy in my lane. | mech: Finishing the wounded | makes: enemy-dies, ally-dies | needs: enemy-bloodied
+CARD Calendar Priest | 2 - 1|2 | Place: draw a card if 2 or more units died this round. | mech: The toll | needs: many-deaths
+CARD Flower War Captain | 2 - 1|2 | Has +2 strength while you don't hold this lane's base. | mech: Finishing the wounded | makes: strong-striker | needs: enemy-bloodied
+CARD Maize Offering | 2 - 1|1 | Offering. Place: if offered, +3 supply in this lane this round. | mech: Offering | makes: supply-now, ally-dies | needs: victim-behind
+CARD Obsidian Priest | 2 - 1|2 | Whenever an enemy in my lane dies, deals 1 damage to the enemy facing me. | mech: Harvest, Obsidian cuts | makes: enemy-bloodied | needs: enemy-dies
+CARD Stone Knife Bearer | 2 - 2|1 | Obsidian. Death: deals 1 damage to the enemy facing me. | mech: Finishing the wounded, Offering | makes: enemy-dies, enemy-bloodied, victim-behind
+CARD Conch Blower | 2 - 1|3 | Whenever another ally in my lane dies, your other units in my lane gain +1 strength this round. | mech: Harvest | makes: strong-striker | needs: ally-dies
+CARD Messenger of the Dead | 2 - 1|1 | Death: deals 1 damage to each Bloodied enemy in every lane. | mech: Finishing the wounded, Offering | makes: enemy-dies, victim-behind, other-lanes, many-deaths | needs: enemy-bloodied
+CARD Runner of the Flower War | 2 - 2|1 | Outrider. Obsidian. | mech: Finishing the wounded | makes: enemy-dies, other-lanes | needs: enemy-bloodied
+CARD Jaguar Warrior | 3 - 3|2 | Obsidian. Toll. | mech: Finishing the wounded, The toll | makes: enemy-dies | needs: enemy-bloodied, many-deaths
+CARD Eagle Warrior | 3 - 2|1 | Ranged. Obsidian. | mech: Finishing the wounded | makes: enemy-dies, rear-hit | needs: enemy-bloodied
+CARD Altar Priest | 3 - 2|3 | Offering. Place: if offered, deals 3 damage to the enemy facing me. | mech: Offering, Obsidian cuts | makes: ally-dies, enemy-bloodied | needs: victim-behind
+CARD Skull Rack | 3 - 0|6 | Immobile. Round end: deals 1 damage to the enemy facing me for each unit that died this round (up to 3). | mech: The toll | makes: enemy-bloodied | needs: many-deaths
+CARD Obsidian Knight | 3 - 2|3 | Obsidian. Place: deals 1 damage to the enemy facing me. | mech: Finishing the wounded, Obsidian cuts | makes: enemy-dies, enemy-bloodied
+CARD Harvest Lord | 3 - 2|3 | Whenever another unit in my lane dies, I gain +1 strength. | mech: Harvest | makes: strong-striker, holder | needs: ally-dies, enemy-dies
+CARD Captive Taker | 3 - 2|3 | Place: places a Captive in my lane, outside the front row. | mech: Offering | makes: victim-behind | needs: holder
+CARD Blood Priestess | 3 - 1|4 | Whenever another ally in my lane dies: +1 carry-over (once per round). | mech: Harvest | makes: supply | needs: ally-dies
+CARD Sun Singer | 3 - 1|3 | Round end: if 2 or more units died this round, deals 2 damage to the strongest enemy in my lane. | mech: The toll | makes: enemy-bloodied, enemy-dies | needs: many-deaths
+CARD Rain Priest | 3 - 1|3 | Offering. Place: if offered, +1 carry-over and draw a card. | mech: Offering | makes: supply, ally-dies | needs: victim-behind
+CARD Knife Priest | 3 - 2|3 | Round end: deals 1 damage to the enemy with the least defence in my lane. | mech: Obsidian cuts | makes: enemy-bloodied
+CARD Heart Priest | 3 - 1|2 | Round end: kills the Bloodied enemy in my lane with the least defence. | mech: Finishing the wounded | makes: enemy-dies | needs: enemy-bloodied
+CARD Bone Dancer | 3 - 2|1 | Toll. Death: deals 1 damage to each enemy in the enemy front row. | mech: The toll, Offering | makes: enemy-bloodied, victim-behind, many-deaths | needs: many-deaths
+CARD Mask Dancer | 3 - 2|3 | Whenever an enemy in my lane dies, I gain +1/+1. | mech: Harvest | makes: holder, strong-striker | needs: enemy-dies
+CARD Eagle Herald | 3 - 2|3 | Round end: if you hold this lane's base, +1 carry-over; if you don't, deals 1 damage to each Bloodied enemy in my lane. | mech: Finishing the wounded | makes: supply, enemy-dies | needs: enemy-bloodied, holder
+CARD Sun Altar | 3 - 1|6 | Immobile. Round end: if you hold this lane's base, deals 1 damage to each Bloodied enemy in my lane. | mech: Finishing the wounded | makes: enemy-dies | needs: enemy-bloodied, holder
+CARD Jaguar Knight | 4 - 3|2 | Obsidian. Toll. Whenever my strike kills an enemy, I may attack again this round (once per round). | mech: Finishing the wounded, The toll | makes: enemy-dies, ally-dies | needs: enemy-bloodied, many-deaths | champion
+CARD High Priestess of the Steps | 4 - 2|3 | Offering. Place: if offered, deals 3 damage to the enemy facing me and draw a card. | mech: Offering, Obsidian cuts | makes: ally-dies, enemy-bloodied | needs: victim-behind, supply-now | champion
+CARD Keeper of the Skull Rack | 4 - 2|4 | Whenever another unit in my lane dies, I gain +1/+1. | mech: Harvest | makes: holder, strong-striker | needs: ally-dies, victim-behind, enemy-dies | champion
+CARD Lady of the Marigold Path | 4 - 2|4 | Whenever another ally in my lane dies, I gain +1 defence. Round end: draw a card if 2 or more units died this round (once per round). | mech: The toll, Offering | makes: holder | needs: many-deaths, victim-behind, ally-dies | champion
+CARD Obsidian Shieldbearer | 4 - 2|5 | Toll. | mech: The toll | makes: holder | needs: many-deaths
+CARD Altar Executioner | 4 - 2|3 | Place: kills the Bloodied enemy in my lane with the least defence. | mech: Finishing the wounded | makes: enemy-dies | needs: enemy-bloodied
+CARD Eagle Lord | 4 - 2|1 | Ranged. Obsidian. Toll. | mech: Finishing the wounded, The toll | makes: enemy-dies, rear-hit | needs: enemy-bloodied, many-deaths
+CARD Great Drum of the Dead | 4 - 0|6 | Immobile. Other allies in my lane have +1 strength for each unit that died this round (up to 3). | mech: The toll | makes: strong-striker | needs: many-deaths
+CARD Speaker of War | 5 - 3|4 | Place: deals 1 damage to each enemy in my lane. | mech: Obsidian cuts | makes: enemy-bloodied, many-deaths | needs: supply
+CARD Priest of the Fifth Sun | 5 - 2|5 | Whenever another ally in my lane dies, deals 1 damage to each enemy in my lane. | mech: Harvest, Obsidian cuts | makes: enemy-bloodied, many-deaths | needs: ally-dies, supply
+CARD Jaguar Lord | 5 - 4|3 | Obsidian. Toll. Whenever my strike kills an enemy, I gain +1/+1. | mech: Finishing the wounded, The toll | makes: enemy-dies, holder | needs: enemy-bloodied, many-deaths, supply
+CARD Feathered Serpent Dancer | 5 - 3|3 | Toll. Whenever another unit in my lane dies, deals 1 damage to the enemy with the least defence here. | mech: Harvest, The toll | makes: enemy-bloodied, many-deaths | needs: ally-dies, enemy-dies, supply
+CARD The Sun-Eater | 6 - 3|3 ▪▪ | Toll 2 (+2 strength for each unit that died this round). Round end: deals damage equal to the units that died this round (up to 5) to the enemy facing me. | mech: The toll, Obsidian cuts | makes: enemy-bloodied, strong-striker | needs: many-deaths, supply-now, supply | champion
+CARD Temple Pyramid | 6 - 0|7 ▪▪▪▪ | Immobile. Round end: deals 1 damage to each enemy in my lane. Whenever another ally in my lane dies: +1 carry-over (once per round). | mech: Obsidian cuts, Harvest | makes: enemy-bloodied, supply, many-deaths | needs: ally-dies, supply
+CARD Obsidian Colossus | 7 - 5|4 ▪▪▪▪ | Toll. Obsidian. | mech: The toll, Finishing the wounded | makes: enemy-dies, holder | needs: enemy-bloodied, supply, many-deaths
+CARD Ritual Cutter | 3 - 1|3 | Whenever another ally is placed in my lane, deals 1 damage to the enemy facing me. | mech: Obsidian cuts | makes: enemy-bloodied | needs: victim-behind
+CARD Star Demon Mask | 4 - 3|3 | Has +1/+1 for each Bloodied enemy in my lane (up to 3). | mech: Finishing the wounded | makes: strong-striker, holder | needs: enemy-bloodied
+CARD War Priest | 4 - 2|4 | Offering. Place: if offered, your other units in my lane gain +1/+1. | mech: Offering, Harvest | makes: strong-striker, ally-dies | needs: victim-behind
+CARD The Chosen One | 2 - 2|3 | Death: your other units in my lane gain +2 strength. | mech: Offering, Harvest | makes: victim-behind, ally-dies, strong-striker
+CARD Keeper of Days | 3 - 1|4 | Toll. Round end: +1 carry-over if 3 or more units died this round (once per round). | mech: The toll | makes: supply, holder | needs: many-deaths
+CARD Wind of Knives | 4 - 2|3 | Round end: deals 1 damage to each enemy in the enemy front row. | mech: Obsidian cuts | makes: enemy-bloodied, many-deaths
+CARD Obsidian Moth | 1 - 1|1 | Death: deals 1 damage to the enemy with the least defence in my lane. | mech: Offering, Obsidian cuts | makes: victim-behind, enemy-bloodied
+CARD Shield of the Altar | 3 - 1|5 | Bodyguard. | mech: Offering | makes: holder | needs: victim-behind
+CARD Jaguar Cub | 1 - 1|1 | Whenever my strike kills an enemy, I gain +1/+1. | mech: Finishing the wounded | makes: holder | needs: enemy-bloodied
+CARD Feather Priest | 2 - 1|2 | Whenever an enemy in my lane dies: a Captive in my lane, outside the front row (once per round). | mech: Harvest, Offering | makes: victim-behind | needs: enemy-dies
+CARD Twin Jaguars | 4 - 3|2 ▪▪ | Obsidian. Toll. | mech: Finishing the wounded, The toll | makes: enemy-dies | needs: enemy-bloodied, supply-now, many-deaths
+CARD Hail Caller | 4 - 2|4 | Round end: deals 1 damage to each enemy in my column. | mech: Obsidian cuts | makes: enemy-bloodied, rear-hit, many-deaths
+CARD Altar Guardian | 5 - 3|5 | Bodyguard. Toll. | mech: The toll, Offering | makes: holder | needs: victim-behind, many-deaths, supply
+CARD Cacao Merchant | 2 - 1|2 | Whenever an enemy in my lane dies: +1 carry-over (once per round). | mech: Harvest | makes: supply | needs: enemy-dies
+CARD Blood Rain | spell 3 | Pick a lane: deals 1 damage to each enemy there; your units there gain +1 strength this round. | mech: Obsidian cuts, The toll | makes: enemy-bloodied, strong-striker, many-deaths
+CARD Obsidian Blade | spell 1 | An ally gains +2 strength this round. | mech: Finishing the wounded | makes: strong-striker | needs: enemy-bloodied
+CARD Smoke of Copal | spell 2 | Pick a lane: your units there gain +1 defence; a Captive in your camp there, outside the front row. | mech: Offering, Harvest | makes: holder, victim-behind
+CARD War Drums of the Dead | spell 2 | Pick a lane: if 3 or more units died this round, your units there gain +1 strength and you draw a card. | mech: The toll | makes: strong-striker | needs: many-deaths, holder
+CARD Knife Thrower | 3 - 1|2 | Ranged. Place: deals 1 damage to the enemy with the least defence in my lane. | mech: Obsidian cuts | makes: enemy-bloodied, rear-hit
+CARD Obsidian Cut | spell 1 | Deals 1 damage to an enemy and to each enemy touching it. | mech: Obsidian cuts | makes: enemy-bloodied, many-deaths
+CARD Heart Taken | spell 2 | Kill a Bloodied enemy. | mech: Finishing the wounded | makes: enemy-dies | needs: enemy-bloodied
+CARD Rain of Obsidian | spell 2 | Pick a lane: deals 1 damage to each enemy there. | mech: Obsidian cuts | makes: enemy-bloodied, many-deaths
+CARD Drop of Blood | spell 1 | An ally of yours dies; +2 supply in its lane this round. | mech: Offering | makes: ally-dies, supply-now | needs: victim-behind
+CARD Codex of Days | spell 2 | Draw a card; draw another if 3 or more units died this round. | mech: The toll | needs: many-deaths
+CARD Flower War | spell 2 | Deals 2 damage to an enemy; a Captive in your camp in that lane. | mech: Obsidian cuts, Offering | makes: enemy-bloodied, victim-behind
+CARD Feed the Sun | spell 2 | Pick a lane: your units there gain +1 strength this round for each unit that died this round. | mech: The toll | makes: strong-striker | needs: many-deaths
+CARD Day of the Dead | spell 4 | Everywhere: your units in every lane gain +1 strength this round; if 3 or more units died this round, they also gain +1 strength. | mech: The toll | makes: strong-striker | needs: many-deaths
+CARD Great Offering | spell 2 | An ally of yours deals damage equal to its strength +1 to the enemy facing it, then dies. | mech: Offering, Obsidian cuts | makes: ally-dies, enemy-bloodied | needs: strong-striker
+CARD Execution | spell 3 | Kill a Bloodied enemy; then draw a card if any unit died this round. | mech: Finishing the wounded | makes: enemy-dies, ally-dies | needs: enemy-bloodied
+CARD Storm of Knives | spell 3 | Pick a lane: deals 1 damage to each enemy there, twice. | mech: Obsidian cuts | makes: enemy-bloodied, enemy-dies, many-deaths
+CARD Ring the Toll | spell 1 | An ally gains +1 strength for each unit that died this round. | mech: The toll | makes: strong-striker | needs: many-deaths
+CARD The Marigold Path | spell 1 | An ally of yours dies; draw a card. | mech: Offering | makes: ally-dies | needs: victim-behind
+CARD Let Blood | spell 1 | Deals 1 damage to an enemy; your units in its lane gain +1 strength this round. | mech: Obsidian cuts | makes: enemy-bloodied, strong-striker
+CARD Take Captives | spell 2 | Pick a lane: two Captives in your camp there, outside the front row. | mech: Offering | makes: victim-behind, many-deaths | needs: holder
+CARD Altar Fire | spell 3 | Pick a lane: deals 2 damage to each Bloodied enemy there. | mech: Finishing the wounded | makes: enemy-dies | needs: enemy-bloodied
+CARD Count the Skulls | spell 2 | Deals 1 damage to an enemy, +1 for each unit that died this round (up to 5). | mech: The toll, Finishing the wounded | makes: enemy-dies | needs: many-deaths
+CARD Jaguar Leap | spell 2 | An ally strikes the nearest enemy it could attack. | mech: Finishing the wounded | makes: enemy-dies, enemy-bloodied | needs: strong-striker
+CARD Song of Mourning | spell 2 | Pick a lane: if 2 or more units died this round, your units there gain +1/+1. | mech: Harvest, The toll | makes: holder | needs: ally-dies, enemy-dies
+CARD Bloody Dawn | spell 3 | An ally of yours dies; your other units in its lane gain +2 strength. | mech: Offering, Harvest | makes: ally-dies, strong-striker, many-deaths | needs: victim-behind
+CARD Finish Them | spell 4 | Pick a lane: kill the Bloodied enemy there with the least defence, then deal 1 damage to each other Bloodied enemy there. | mech: Finishing the wounded | makes: enemy-dies, many-deaths | needs: enemy-bloodied
+CARD Spirits Guide the Way | spell 1 | Pick a lane: your units there gain +1 defence this round; if 2 or more units died this round, also restore 2 of their shields. | mech: The toll | makes: holder | needs: many-deaths
+CARD Obsidian Hail | spell 3 | Pick a column of an enemy camp: deals 2 damage to each enemy in it. | mech: Obsidian cuts | makes: enemy-bloodied, rear-hit, many-deaths
+CARD Heart Fire | spell 1 | Deals 2 damage to a Bloodied enemy. | mech: Finishing the wounded | makes: enemy-dies | needs: enemy-bloodied
+CARD Eagle Dive | spell 2 | Deals 2 damage to an enemy; 4 if it was already Bloodied. | mech: Obsidian cuts, Finishing the wounded | makes: enemy-dies, enemy-bloodied

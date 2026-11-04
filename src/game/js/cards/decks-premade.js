@@ -5,6 +5,7 @@ const DECKS = {
   echoes:{name:'Echoes',fac:'e',list:[]},
   monoliths:{name:'Monoliths',fac:'m',list:[]},
   horologers:{name:'Horologers',fac:'c',list:[]},
+  sunfeeders:{name:'Sunfeeders',fac:'d',list:[]},
 };
 /** Premade decks: each built around one side of its faction. */
 const PREMADE_VERSION = 6;   // raising it replaces the premade decks stored in a browser with these lists
@@ -21,5 +22,7 @@ const PREMADE = [
   { id: 'p-m2', name: 'Monoliths — The Stone Line', cards: { m_totem: 3, m_pillar: 3, m_menhir: 3, m_dolmen: 3, m_statue: 3, m_hearth: 3, m_wall: 2, m_ancestor: 2, m_waking: 2, m_ley: 3, m_rockfall: 3, m_consecrate: 2, m_judgement: 2 } },
   { id: 'p-c1', name: 'Horologers — The Gear Train', cards: { c_ticker: 3, c_cogsoldier: 3, c_mainspring: 3, c_ratchet: 3, c_drummer: 2, c_gearsmith: 2, c_escapement: 2, c_foundry: 2, c_tower: 1, c_orrery: 1, c_horologer: 1, c_key: 3, c_trainwind: 2, c_fullwind: 2, c_blueprints: 2, c_boiler: 2 } },
   { id: 'p-c2', name: 'Horologers — The Scrap Yard', cards: { c_spentspring: 3, c_bomb: 3, c_scrapper: 3, c_salvager: 2, c_partsman: 2, c_scrapgolem: 2, c_mistress: 1, c_colossus: 1, c_journeyman: 2, c_toymaker: 2, c_rewinder: 2, c_sentinel: 2, c_key: 3, c_strip: 2, c_unwind: 2, c_rights: 2, c_blueprints: 2 } },
+  { id: 'p-d1', name: 'Sunfeeders — The Cutting Rain', cards: { d_knifedancer: 3, d_youth: 3, d_jaguarscout: 3, d_flintcutter: 2, d_tollwarrior: 2, d_jaguar: 3, d_obsidianknight: 2, d_eagle: 2, d_heartpriest: 2, d_jaguarknight: 1, d_executioner: 1, d_cut: 3, d_heart: 3, d_rain: 2, d_codex: 2 } },
+  { id: 'p-d2', name: 'Sunfeeders — The Temple Steps', cards: { d_victim: 3, d_marigold: 3, d_captivetaker: 2, d_bloodletter: 2, d_sundancer: 3, d_altarpriest: 3, d_priestess: 1, d_rackkeeper: 1, d_lady: 1, d_stepspriest: 2, d_templeguard: 2, d_conch: 2, d_suneater: 1, d_captives: 2, d_drop: 2, d_path: 2, d_feed: 2 } },
 ];
 

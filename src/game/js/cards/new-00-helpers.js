@@ -15,6 +15,8 @@ function addFaction(fac, rows) {
 const ON = (on, ...ops) => ({ on, do: ops });
 const ONCE = (on, ...ops) => ({ on, lim: 'round', do: ops });
 const HOLD = { hold: 1 }, NOHOLD = { hold: 0 };
+const RE = (...ops) => ON('roundEnd', ...ops), PL = (...ops) => ON('place', ...ops), DIE = (...ops) => ON('death', ...ops);
+const STRIKE = { strike: 1 }, IT = 'it';
 /* Keywords of the seven factions of 4 Nov 2026, written out as effects (their texts are in keywords.js). */
 function kwFx(c) {
   const fx = c.fx ? c.fx.slice() : [], aura = c.aura ? c.aura.slice() : [];
