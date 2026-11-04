@@ -59,3 +59,6 @@ REWORK (Kaptain's points of 4 Nov 2026, START_DESIGN "Rosters"): Place effects o
 effects on 10-15%; cost 1-4 cards already combine; 6+ units use what the lane has set up (each entry's THE CURVE section
 names them); removal / disruption / protection levels are in each entry. Scenarios of the seven factions:
 three-bases-scenarios.html (src/scenarios/scenarios.html), two boards per faction.
+COSTING NOTE (Benchmark, 4 Nov 2026): after the runs most units sit 1 defence above the supply-to-stats budget of summary/
+section 9 (all units of six factions got +1 defence; the Rootkin trees with 3+ defence lost 1). Kaptain decides whether the
+budget itself should change or the factions go back to it with other fixes.
