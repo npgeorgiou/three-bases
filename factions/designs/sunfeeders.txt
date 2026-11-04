@@ -57,7 +57,8 @@ MECHANIC Harvest | makes: victim-behind, strong-striker | needs: ally-dies, enem
 KEYWORDS OF ITS OWN
 - Toll (value 1 per point): I have +1 strength for each unit that died this round, on either side.
 - Obsidian (value 1): when my strike leaves an enemy Bloodied, it dies.
-- Offering (value 0; the effect is costed per card): Place: the ally directly behind me dies. "If offered" effects need it.
+- Offering (value 0; the effect is costed per card): Place: the ally directly behind me dies and its supply goes to your
+  carry-over (Benchmark, 4 Nov 2026: offerings cut the lane's income, so the tribute pays it back). "If offered" effects need it.
 Shared keywords used: Ranged (eagle archers), Sacrifice (none; Offering replaces it here), Charge (jaguar runners, few).
 
 GROUPS

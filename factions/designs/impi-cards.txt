@@ -1,86 +1,86 @@
-CARD Young Runner | 1 - 1|1 | Onrush. | mech: Waves, The loins | makes: ally-attacks, ally-dies | needs: ally-attacks
-CARD Horn Boy | 1 - 1|1 | Flanker. Death: your other units in my lane gain +1 strength this round. | mech: The horns, The loins | makes: side-front, enemy-killed, ally-dies
-CARD Waiting Boy | 1 - 1|1 | Reserve. | mech: The loins | makes: side-front | needs: ally-dies
-CARD Herd Boy | 1 - 1|1 | Whenever my strike kills an enemy: +1 carry-over. | mech: The herds, Washing the spear | makes: supply-now | needs: enemy-killed
-CARD Spear Carrier | 1 - 1|1 | When I attack, the allies beside me gain +1 strength this round. | mech: Waves, The loins | makes: ally-attacks, strong-attacker, ally-dies
-CARD Scout | 1 - 1|1 | Lightfooted. | mech: The horns | makes: side-front
-CARD Eager Recruit | 1 - 2|2 | Reckless. Death: your other units in my lane gain +1 strength this round. | mech: Waves, The loins | makes: ally-dies, ally-attacks | needs: strong-attacker
-CARD War Drummer | 1 - 0|2 | Whenever another ally in my lane attacks, it gains +1 defence this round. | mech: Waves | makes: strong-attacker | needs: ally-attacks
-CARD Spear Warrior | 2 - 2|1 | Onrush. Whenever my strike kills an enemy, I gain +1 strength. Death: your other units in my lane gain +1 strength this round. | mech: Waves, Washing the spear | makes: ally-attacks, ally-dies | needs: ally-attacks, enemy-killed
-CARD Horn Warrior | 2 - 1|1 | Flanker. Place: I strike the nearest enemy I could attack. | mech: The horns | makes: side-front, enemy-killed | needs: strong-attacker, holder
-CARD Chest Warrior | 2 - 1|2 | Has +2 defence while in the middle column of your front row. | mech: The horns | makes: holder | needs: side-front
-CARD Loin Warrior | 2 - 2|2 | Reserve. | mech: The loins | makes: side-front, front-refilled | needs: ally-dies
-CARD Cattle Raider | 2 - 2|2 | Whenever my strike kills an enemy: +1 supply in this lane this round. | mech: The herds, Washing the spear | makes: supply-now | needs: enemy-killed
-CARD Close Stabber | 2 - 2|1 | Whenever my strike kills an enemy, I may attack again this round. | mech: Washing the spear | makes: ally-attacks, enemy-killed | needs: strong-attacker
-CARD Hide Shield Bearer | 2 - 1|2 | Bodyguard. Death: +1 carry-over. | mech: The horns, The loins | makes: holder, ally-dies, supply | needs: front-refilled
-CARD Running Charger | 2 - 2|1 | Charge. | mech: The loins, Waves | makes: ally-attacks, side-front, ally-dies
-CARD Praise Caller | 2 - 1|1 | Onrush. Other allies in my lane have +1 strength while your units attacked 2 or more times this round. | mech: Waves | makes: strong-attacker | needs: ally-attacks
-CARD Cattle Herd | 2 - 0|1 | Supply +1. Death: +1 carry-over. | mech: The herds, The loins | makes: supply, ally-dies
-CARD Veteran of the Chest | 2 - 1|2 | Place: other allies in my row gain +1 strength this round. I have +1 strength while in the middle column of your front row. | mech: The horns, Waves | makes: holder, strong-attacker | needs: side-front
-CARD Blooded Warrior | 2 - 2|1 | Whenever my strike kills an enemy, I restore all my shields and gain +1 defence. | mech: Washing the spear, The horns | makes: holder | needs: enemy-killed
-CARD Runner with News | 2 - 1|2 | Place: draw a card if your units attacked this round. | mech: Waves | needs: ally-attacks
-CARD Light Horn | 2 - 2|1 | Flanker. Lightfooted. | mech: The horns | makes: side-front, enemy-killed
-CARD Hunger for Cattle | 2 - 1|1 | Charge. Has +2 strength while you don't hold this lane's base. | mech: The herds, Waves | makes: ally-attacks, enemy-killed
-CARD Messenger Runner | 2 - 2|1 | Outrider. Onrush. | mech: Waves | makes: ally-attacks, other-lane | needs: ally-attacks
-CARD Wave Leader | 3 - 2|2 | Onrush. Place, and when I attack: your other units in my lane gain +1 strength this round. | mech: Waves | makes: strong-attacker, ally-attacks | needs: ally-attacks
-CARD Horn Runner | 3 - 2|1 | Flanker. Onrush. Place: I strike the nearest enemy I could attack. | mech: The horns, Waves | makes: side-front, enemy-killed | needs: ally-attacks, holder
-CARD Loin Veteran | 3 - 2|2 | Reserve. Whenever I move, I strike the nearest enemy. | mech: The loins | makes: enemy-killed, front-refilled | needs: ally-dies
-CARD Spear Master | 3 - 3|2 | Whenever my strike kills an enemy, I may attack again this round (once per round). | mech: Washing the spear | makes: ally-attacks, enemy-killed | needs: strong-attacker
-CARD Flank Guard | 3 - 2|3 | Flanker. When I survive damage, I gain +1 strength. | mech: The horns | makes: side-front, holder | needs: holder
-CARD Raid Leader | 3 - 2|2 | Place: +1 supply in this lane this round. Whenever my strike kills an enemy: +1 supply here this round, and +1 carry-over (once per round). | mech: The herds, Washing the spear | makes: supply-now, supply | needs: enemy-killed
-CARD War Doctor | 3 - 1|3 | Place: your other units in my lane gain +2 strength this round and restore 1 shield. | mech: Waves | makes: strong-attacker
-CARD Young Regiment | 3 - 1|2 | Onrush. Place: places a Young Warrior beside me. | mech: Waves, The loins | makes: ally-attacks, side-front, ally-dies
-CARD Royal Kraal | 3 - 0|5 | Immobile. As long as you hold this lane's base, other allies in my row have +1 defence. | mech: The horns, The loins | makes: holder | needs: front-refilled, side-front, holder
-CARD Regiment Standard | 3 - 1|2 | Place: your other units in my lane gain +1 strength this round. As long as you hold this lane's base, they have +1 strength; while you don't, I have +2 defence. | mech: Waves, The loins | makes: strong-attacker, holder | needs: front-refilled
-CARD Reserve Captain | 3 - 2|3 | Reserve. Whenever another ally in my lane dies, I gain +1 strength this round. | mech: The loins | makes: front-refilled, strong-attacker | needs: ally-dies
-CARD Twin Spears | 3 - 2|2 | Flurry. | mech: Waves | makes: ally-attacks | needs: strong-attacker
-CARD Cattle Stampede | 3 - 2|1 ▪▪ | Charge. Place: if you don't hold this lane's base, +1 carry-over. | mech: The herds, The loins | makes: ally-attacks, supply
-CARD Induna of the Wave | 4 - 2|2 | Onrush 2 (+2 strength this round whenever another ally in my lane attacks). When I attack, your other units in my lane gain +1 strength this round. | mech: Waves, The horns | makes: strong-attacker, ally-attacks | needs: ally-attacks, side-front | champion
-CARD Horn Captain | 4 - 3|2 | Flanker. Place: I strike the nearest enemy I could attack. Whenever my strike kills an enemy, I may attack again this round (once per round). | mech: The horns, Washing the spear | makes: enemy-killed, ally-attacks | needs: side-front, strong-attacker | champion
-CARD Old Bull of the Loins | 4 - 3|2 | Reserve. Whenever I move, deals 2 damage to the enemy facing me. | mech: The loins, Waves | makes: front-refilled, enemy-killed, holder | needs: ally-dies, supply-now | champion
-CARD Praise Singer | 4 - 2|2 | Other allies in my lane have +1 strength while your units attacked 2 or more times this round. Round end: draw a card if your units attacked 3 or more times this round (once per round). | mech: Waves, Washing the spear | makes: strong-attacker | needs: ally-attacks, enemy-killed | champion
-CARD Spear of the King | 4 - 2|1 | Flurry. Flanker. Place: I strike the nearest enemy I could attack. | mech: The horns, The loins | makes: enemy-killed | needs: front-refilled, ally-dies, holder | champion
-CARD Chest Captain | 4 - 2|3 | Place: pushes the enemy facing me one row back. While I am in the middle column of your front row: I have +2 defence and other allies in my row have +1 strength. | mech: The horns | makes: holder, strong-attacker, enemy-pushed | needs: side-front
-CARD Bull Runner | 4 - 3|2 | Charge. Whenever my strike kills an enemy: +2 supply in this lane this round. | mech: The herds, The loins | makes: supply-now, enemy-killed
-CARD Shield Captain | 4 - 2|4 | Bodyguard. When I survive damage, your other units in my lane gain +1 strength this round. | mech: The horns | makes: holder, strong-attacker
-CARD Warband | 5 - 3|2 ▪▪ | Onrush. Place: places a Young Warrior in my front row. | mech: Waves | makes: ally-attacks, side-front | needs: ally-attacks
-CARD Regiment Commander | 5 - 3|3 | Onrush. When I attack, the allies beside me may attack again this round. | mech: Waves | makes: ally-attacks, strong-attacker | needs: ally-attacks, supply-now
-CARD Great Horn | 5 - 4|2 | Flanker. Onrush. Whenever my strike kills an enemy, I gain +1/+1. | mech: The horns, Washing the spear | makes: enemy-killed | needs: side-front, ally-attacks, supply, holder
-CARD Bull of the Herd | 6 - 4|3 ▪▪ | Charge. Place: +1 supply in this lane this round for each other ally here (up to 4). Whenever my strike kills an enemy: +1 carry-over. | mech: The herds, The loins | makes: ally-attacks, enemy-killed, supply-now | needs: supply, ally-attacks
-CARD Unbroken Regiment | 6 - 3|3 ▪▪▪ | Onrush. Reserve. Place: places a Young Warrior in each free cell of my front row. | mech: Waves, The loins | makes: ally-attacks, front-refilled, side-front | needs: ally-dies, supply
-CARD The Bull King | 7 - 3|4 ▪▪▪▪ | Onrush. Place: your other units in my lane may attack and move again this round, and gain +1 strength this round. | mech: Waves, The horns | makes: strong-attacker, ally-attacks | needs: supply, ally-attacks
-CARD Spear Cub | 1 - 1|1 | Has +1 strength while in a side column of your front row. | mech: The horns | makes: side-front | needs: holder
-CARD Last of the Line | 1 - 0|1 | Death: your other units in my lane may attack again this round. | mech: The loins, Waves | makes: ally-dies, ally-attacks | needs: front-refilled
-CARD Bush Fighter | 3 - 2|2 | Place: I strike the nearest enemy I could attack. I have +1 strength for each attack your units made this round (up to 3). | mech: Waves, Washing the spear | makes: enemy-killed | needs: ally-attacks, strong-attacker
-CARD Cattle Drover | 3 - 1|2 | Supply +1. Place: +1 supply in this lane this round. | mech: The herds | makes: supply, supply-now
-CARD Long Runner | 3 - 2|2 | Outrider. Lightfooted. Whenever I come from another lane, I strike the nearest enemy. | mech: The horns | makes: enemy-killed, other-lane | needs: strong-attacker
-CARD Reed Ambusher | 3 - 3|2 | Reserve. Whenever I move, I gain +1 strength this round. | mech: The loins | makes: front-refilled, ally-attacks | needs: ally-dies
-CARD Battle Doctor | 2 - 1|2 | Whenever another ally in my lane attacks, it restores 1 shield. | mech: Waves, The horns | makes: holder | needs: ally-attacks
-CARD Flank Raider | 3 - 3|2 | Flanker. Whenever my strike kills an enemy: +1 supply in this lane this round. | mech: The horns, The herds | makes: side-front, supply-now | needs: strong-attacker
-CARD Shield Line | 3 - 1|4 | Bodyguard. Has +1 defence while in the middle column of your front row. | mech: The horns | makes: holder | needs: side-front, front-refilled
-CARD Wave Breaker | 4 - 3|2 | Onrush. When I attack, deals 1 damage to each enemy touching the one I attacked. | mech: Waves | makes: ally-attacks, enemy-killed | needs: ally-attacks
-CARD Chest Boy | 1 - 0|1 | Has +1 defence while in the middle column of your front row. Death: the allies in my row gain +1 defence. | mech: The horns, The loins | makes: holder, ally-dies | needs: side-front
-CARD Long Spear | 2 - 1|2 | Pike. Place: I strike the nearest enemy I could attack. | mech: Waves, The loins | makes: ally-attacks, enemy-killed | needs: front-refilled
-CARD Runner of the Loins | 2 - 1|2 | Reserve. Whenever I move, I gain +1 strength. | mech: The loins, Waves | makes: front-refilled, strong-attacker | needs: ally-dies
-CARD Herd Guard | 3 - 2|3 | Reserve. Whenever my strike kills an enemy: +1 carry-over. | mech: The loins, The herds | makes: front-refilled, supply | needs: ally-dies, enemy-killed
-CARD Regiment Drum | 3 - 0|4 | Whenever another ally in my lane attacks, it gains +1 strength this round (before it strikes). | mech: Waves | makes: strong-attacker, enemy-killed | needs: ally-attacks
-CARD Shield Basher | 2 - 1|3 | Push. | mech: The horns | makes: holder, enemy-pushed
-CARD Swift Horn | 3 - 2|2 | Flanker. Charge. | mech: The horns, The loins | makes: side-front, enemy-killed, ally-attacks | needs: holder
-CARD Lion Hunter | 3 - 2|1 | Flanker. Place: I strike the nearest enemy I could attack. Whenever my strike kills an enemy, I gain +1 strength. | mech: Washing the spear, The horns | makes: enemy-killed | needs: side-front, holder
-CARD Victory Dancer | 2 - 2|2 | Whenever an enemy in my lane dies, I gain +1 strength. | mech: Washing the spear | makes: strong-attacker | needs: enemy-killed
-CARD Regiment Elder | 4 - 1|3 | Place: your other units in my lane may attack and move again this round. | mech: Waves | makes: ally-attacks | needs: strong-attacker, supply-now
-CARD Water Carrier | 1 - 0|1 | Place: +1 supply in this lane this round. | mech: The herds | makes: supply-now
-CARD Bull Horn Blower | 2 - 1|2 | Place: your units in your front row in my lane gain +1 strength. | mech: The horns, Waves | makes: strong-attacker | needs: side-front
-CARD Blood-Mad Youth | 1 - 3|1 | Reckless. Death: deals 1 damage to the enemy facing me. | mech: Waves, The loins | makes: ally-attacks, ally-dies, enemy-killed
-CARD Assegai Line | 4 - 3|2 ▪▪ | Onrush. Flanker. | mech: Waves, The horns | makes: ally-attacks, side-front | needs: ally-attacks, holder
+CARD Young Runner | 1 - 1|2 | Onrush. | mech: Waves, The loins | makes: ally-attacks, ally-dies | needs: ally-attacks
+CARD Horn Boy | 1 - 1|2 | Flanker. Death: your other units in my lane gain +1 strength this round. | mech: The horns, The loins | makes: side-front, enemy-killed, ally-dies
+CARD Waiting Boy | 1 - 1|2 | Reserve. | mech: The loins | makes: side-front | needs: ally-dies
+CARD Herd Boy | 1 - 1|2 | Whenever my strike kills an enemy: +1 carry-over. | mech: The herds, Washing the spear | makes: supply-now | needs: enemy-killed
+CARD Spear Carrier | 1 - 1|2 | When I attack, the allies beside me gain +1 strength this round. | mech: Waves, The loins | makes: ally-attacks, strong-attacker, ally-dies
+CARD Scout | 1 - 1|2 | Lightfooted. | mech: The horns | makes: side-front
+CARD Eager Recruit | 1 - 2|3 | Reckless. Death: your other units in my lane gain +1 strength this round. | mech: Waves, The loins | makes: ally-dies, ally-attacks | needs: strong-attacker
+CARD War Drummer | 1 - 0|3 | Whenever another ally in my lane attacks, it gains +1 defence this round. | mech: Waves | makes: strong-attacker | needs: ally-attacks
+CARD Spear Warrior | 2 - 2|2 | Onrush. Whenever my strike kills an enemy, I gain +1 strength. Death: your other units in my lane gain +1 strength this round. | mech: Waves, Washing the spear | makes: ally-attacks, ally-dies | needs: ally-attacks, enemy-killed
+CARD Horn Warrior | 2 - 1|2 | Flanker. Place: I strike the nearest enemy I could attack. | mech: The horns | makes: side-front, enemy-killed | needs: strong-attacker, holder
+CARD Chest Warrior | 2 - 1|3 | Has +2 defence while in the middle column of your front row. | mech: The horns | makes: holder | needs: side-front
+CARD Loin Warrior | 2 - 2|3 | Reserve. | mech: The loins | makes: side-front, front-refilled | needs: ally-dies
+CARD Cattle Raider | 2 - 2|3 | Whenever my strike kills an enemy: +1 supply in this lane this round. | mech: The herds, Washing the spear | makes: supply-now | needs: enemy-killed
+CARD Close Stabber | 2 - 2|2 | Whenever my strike kills an enemy, I may attack again this round. | mech: Washing the spear | makes: ally-attacks, enemy-killed | needs: strong-attacker
+CARD Hide Shield Bearer | 2 - 1|3 | Bodyguard. Death: +1 carry-over. | mech: The horns, The loins | makes: holder, ally-dies, supply | needs: front-refilled
+CARD Running Charger | 2 - 2|2 | Charge. | mech: The loins, Waves | makes: ally-attacks, side-front, ally-dies
+CARD Praise Caller | 2 - 1|2 | Onrush. Other allies in my lane have +1 strength while your units attacked 2 or more times this round. | mech: Waves | makes: strong-attacker | needs: ally-attacks
+CARD Cattle Herd | 2 - 0|2 | Supply +1. Death: +1 carry-over. | mech: The herds, The loins | makes: supply, ally-dies
+CARD Veteran of the Chest | 2 - 1|3 | Place: other allies in my row gain +1 strength this round. I have +1 strength while in the middle column of your front row. | mech: The horns, Waves | makes: holder, strong-attacker | needs: side-front
+CARD Blooded Warrior | 2 - 2|2 | Whenever my strike kills an enemy, I restore all my shields and gain +1 defence. | mech: Washing the spear, The horns | makes: holder | needs: enemy-killed
+CARD Runner with News | 2 - 1|3 | Place: draw a card if your units attacked this round. | mech: Waves | needs: ally-attacks
+CARD Light Horn | 2 - 2|2 | Flanker. Lightfooted. | mech: The horns | makes: side-front, enemy-killed
+CARD Hunger for Cattle | 2 - 1|2 | Charge. Has +2 strength while you don't hold this lane's base. | mech: The herds, Waves | makes: ally-attacks, enemy-killed
+CARD Messenger Runner | 2 - 2|2 | Outrider. Onrush. | mech: Waves | makes: ally-attacks, other-lane | needs: ally-attacks
+CARD Wave Leader | 3 - 2|3 | Onrush. Place, and when I attack: your other units in my lane gain +1 strength this round. | mech: Waves | makes: strong-attacker, ally-attacks | needs: ally-attacks
+CARD Horn Runner | 3 - 2|2 | Flanker. Onrush. Place: I strike the nearest enemy I could attack. | mech: The horns, Waves | makes: side-front, enemy-killed | needs: ally-attacks, holder
+CARD Loin Veteran | 3 - 2|3 | Reserve. Whenever I move, I strike the nearest enemy. | mech: The loins | makes: enemy-killed, front-refilled | needs: ally-dies
+CARD Spear Master | 3 - 3|3 | Whenever my strike kills an enemy, I may attack again this round (once per round). | mech: Washing the spear | makes: ally-attacks, enemy-killed | needs: strong-attacker
+CARD Flank Guard | 3 - 2|4 | Flanker. When I survive damage, I gain +1 strength. | mech: The horns | makes: side-front, holder | needs: holder
+CARD Raid Leader | 3 - 2|3 | Place: +1 supply in this lane this round. Whenever my strike kills an enemy: +1 supply here this round, and +1 carry-over (once per round). | mech: The herds, Washing the spear | makes: supply-now, supply | needs: enemy-killed
+CARD War Doctor | 3 - 1|4 | Place: your other units in my lane gain +2 strength this round and restore 1 shield. | mech: Waves | makes: strong-attacker
+CARD Young Regiment | 3 - 1|3 | Onrush. Place: places a Young Warrior beside me. | mech: Waves, The loins | makes: ally-attacks, side-front, ally-dies
+CARD Royal Kraal | 3 - 0|6 | Immobile. As long as you hold this lane's base, other allies in my row have +1 defence. | mech: The horns, The loins | makes: holder | needs: front-refilled, side-front, holder
+CARD Regiment Standard | 3 - 1|3 | Place: your other units in my lane gain +1 strength this round. As long as you hold this lane's base, they have +1 strength; while you don't, I have +2 defence. | mech: Waves, The loins | makes: strong-attacker, holder | needs: front-refilled
+CARD Reserve Captain | 3 - 2|4 | Reserve. Whenever another ally in my lane dies, I gain +1 strength this round. | mech: The loins | makes: front-refilled, strong-attacker | needs: ally-dies
+CARD Twin Spears | 3 - 2|3 | Flurry. | mech: Waves | makes: ally-attacks | needs: strong-attacker
+CARD Cattle Stampede | 3 - 2|2 ▪▪ | Charge. Place: if you don't hold this lane's base, +1 carry-over. | mech: The herds, The loins | makes: ally-attacks, supply
+CARD Induna of the Wave | 4 - 2|3 | Onrush 2 (+2 strength this round whenever another ally in my lane attacks). When I attack, your other units in my lane gain +1 strength this round. | mech: Waves, The horns | makes: strong-attacker, ally-attacks | needs: ally-attacks, side-front | champion
+CARD Horn Captain | 4 - 3|3 | Flanker. Place: I strike the nearest enemy I could attack. Whenever my strike kills an enemy, I may attack again this round (once per round). | mech: The horns, Washing the spear | makes: enemy-killed, ally-attacks | needs: side-front, strong-attacker | champion
+CARD Old Bull of the Loins | 4 - 3|3 | Reserve. Whenever I move, deals 2 damage to the enemy facing me. | mech: The loins, Waves | makes: front-refilled, enemy-killed, holder | needs: ally-dies, supply-now | champion
+CARD Praise Singer | 4 - 2|3 | Other allies in my lane have +1 strength while your units attacked 2 or more times this round. Round end: draw a card if your units attacked 3 or more times this round (once per round). | mech: Waves, Washing the spear | makes: strong-attacker | needs: ally-attacks, enemy-killed | champion
+CARD Spear of the King | 4 - 2|2 | Flurry. Flanker. Place: I strike the nearest enemy I could attack. | mech: The horns, The loins | makes: enemy-killed | needs: front-refilled, ally-dies, holder | champion
+CARD Chest Captain | 4 - 2|4 | Place: pushes the enemy facing me one row back. While I am in the middle column of your front row: I have +2 defence and other allies in my row have +1 strength. | mech: The horns | makes: holder, strong-attacker, enemy-pushed | needs: side-front
+CARD Bull Runner | 4 - 3|3 | Charge. Whenever my strike kills an enemy: +2 supply in this lane this round. | mech: The herds, The loins | makes: supply-now, enemy-killed
+CARD Shield Captain | 4 - 2|5 | Bodyguard. When I survive damage, your other units in my lane gain +1 strength this round. | mech: The horns | makes: holder, strong-attacker
+CARD Warband | 5 - 3|3 ▪▪ | Onrush. Place: places a Young Warrior in my front row. | mech: Waves | makes: ally-attacks, side-front | needs: ally-attacks
+CARD Regiment Commander | 5 - 3|4 | Onrush. When I attack, the allies beside me may attack again this round. | mech: Waves | makes: ally-attacks, strong-attacker | needs: ally-attacks, supply-now
+CARD Great Horn | 5 - 4|3 | Flanker. Onrush. Whenever my strike kills an enemy, I gain +1/+1. | mech: The horns, Washing the spear | makes: enemy-killed | needs: side-front, ally-attacks, supply, holder
+CARD Bull of the Herd | 6 - 4|4 ▪▪ | Charge. Place: +1 supply in this lane this round for each other ally here (up to 4). Whenever my strike kills an enemy: +1 carry-over. | mech: The herds, The loins | makes: ally-attacks, enemy-killed, supply-now | needs: supply, ally-attacks
+CARD Unbroken Regiment | 6 - 3|4 ▪▪▪ | Onrush. Reserve. Place: places a Young Warrior in each free cell of my front row. | mech: Waves, The loins | makes: ally-attacks, front-refilled, side-front | needs: ally-dies, supply
+CARD The Bull King | 7 - 3|5 ▪▪▪▪ | Onrush. Place: your other units in my lane may attack and move again this round, and gain +1 strength this round. | mech: Waves, The horns | makes: strong-attacker, ally-attacks | needs: supply, ally-attacks
+CARD Spear Cub | 1 - 1|2 | Has +1 strength while in a side column of your front row. | mech: The horns | makes: side-front | needs: holder
+CARD Last of the Line | 1 - 0|2 | Death: your other units in my lane may attack again this round. | mech: The loins, Waves | makes: ally-dies, ally-attacks | needs: front-refilled
+CARD Bush Fighter | 3 - 2|3 | Place: I strike the nearest enemy I could attack. I have +1 strength for each attack your units made this round (up to 3). | mech: Waves, Washing the spear | makes: enemy-killed | needs: ally-attacks, strong-attacker
+CARD Cattle Drover | 3 - 1|3 | Supply +1. Place: +1 supply in this lane this round. | mech: The herds | makes: supply, supply-now
+CARD Long Runner | 3 - 2|3 | Outrider. Lightfooted. Whenever I come from another lane, I strike the nearest enemy. | mech: The horns | makes: enemy-killed, other-lane | needs: strong-attacker
+CARD Reed Ambusher | 3 - 3|3 | Reserve. Whenever I move, I gain +1 strength this round. | mech: The loins | makes: front-refilled, ally-attacks | needs: ally-dies
+CARD Battle Doctor | 2 - 1|3 | Whenever another ally in my lane attacks, it restores 1 shield. | mech: Waves, The horns | makes: holder | needs: ally-attacks
+CARD Flank Raider | 3 - 3|3 | Flanker. Whenever my strike kills an enemy: +1 supply in this lane this round. | mech: The horns, The herds | makes: side-front, supply-now | needs: strong-attacker
+CARD Shield Line | 3 - 1|5 | Bodyguard. Has +1 defence while in the middle column of your front row. | mech: The horns | makes: holder | needs: side-front, front-refilled
+CARD Wave Breaker | 4 - 3|3 | Onrush. When I attack, deals 1 damage to each enemy touching the one I attacked. | mech: Waves | makes: ally-attacks, enemy-killed | needs: ally-attacks
+CARD Chest Boy | 1 - 0|2 | Has +1 defence while in the middle column of your front row. Death: the allies in my row gain +1 defence. | mech: The horns, The loins | makes: holder, ally-dies | needs: side-front
+CARD Long Spear | 2 - 1|3 | Pike. Place: I strike the nearest enemy I could attack. | mech: Waves, The loins | makes: ally-attacks, enemy-killed | needs: front-refilled
+CARD Runner of the Loins | 2 - 1|3 | Reserve. Whenever I move, I gain +1 strength. | mech: The loins, Waves | makes: front-refilled, strong-attacker | needs: ally-dies
+CARD Herd Guard | 3 - 2|4 | Reserve. Whenever my strike kills an enemy: +1 carry-over. | mech: The loins, The herds | makes: front-refilled, supply | needs: ally-dies, enemy-killed
+CARD Regiment Drum | 3 - 0|5 | Whenever another ally in my lane attacks, it gains +1 strength this round (before it strikes). | mech: Waves | makes: strong-attacker, enemy-killed | needs: ally-attacks
+CARD Shield Basher | 2 - 1|4 | Push. | mech: The horns | makes: holder, enemy-pushed
+CARD Swift Horn | 3 - 2|3 | Flanker. Charge. | mech: The horns, The loins | makes: side-front, enemy-killed, ally-attacks | needs: holder
+CARD Lion Hunter | 3 - 2|2 | Flanker. Place: I strike the nearest enemy I could attack. Whenever my strike kills an enemy, I gain +1 strength. | mech: Washing the spear, The horns | makes: enemy-killed | needs: side-front, holder
+CARD Victory Dancer | 2 - 2|3 | Whenever an enemy in my lane dies, I gain +1 strength. | mech: Washing the spear | makes: strong-attacker | needs: enemy-killed
+CARD Regiment Elder | 4 - 1|4 | Place: your other units in my lane may attack and move again this round. | mech: Waves | makes: ally-attacks | needs: strong-attacker, supply-now
+CARD Water Carrier | 1 - 0|2 | Place: +1 supply in this lane this round. | mech: The herds | makes: supply-now
+CARD Bull Horn Blower | 2 - 1|3 | Place: your units in your front row in my lane gain +1 strength. | mech: The horns, Waves | makes: strong-attacker | needs: side-front
+CARD Blood-Mad Youth | 1 - 3|2 | Reckless. Death: deals 1 damage to the enemy facing me. | mech: Waves, The loins | makes: ally-attacks, ally-dies, enemy-killed
+CARD Assegai Line | 4 - 3|3 ▪▪ | Onrush. Flanker. | mech: Waves, The horns | makes: ally-attacks, side-front | needs: ally-attacks, holder
 CARD Ox-hide Wall | spell 2 | Pick a lane: your units there gain +2 defence this round. | mech: The horns | makes: holder | needs: side-front
 CARD Hunt Down | spell 2 | Deals 1 damage to an enemy; your units in its lane gain +1 strength this round. | mech: Washing the spear, Waves | makes: enemy-killed, strong-attacker
 CARD Blood Feud | spell 3 | An ally gains Flurry. | mech: Waves | makes: ally-attacks | needs: strong-attacker
 CARD Spears Up | spell 2 | Pick a lane: your units outside your front row there move straight forward as far as they can; then your units there gain +1 strength this round. | mech: The loins, Waves | makes: front-refilled, strong-attacker
 CARD Ambush from the Reeds | spell 2 | Pick a lane: deals 1 damage to each enemy in the enemy front row there; 2 instead if you have 2 or more units outside your front row there. | mech: The loins | makes: enemy-killed | needs: front-refilled
-CARD Great Induna | 6 - 3|4 | Place: your other units in my lane gain +1 strength this round for each attack your units made this round (up to 4). When I attack, they gain +1 strength this round. | mech: Waves | makes: strong-attacker | needs: ally-attacks, supply
-CARD The Full Impi | 8 - 4|4 ▪▪ | Onrush. Place: places a Young Warrior in each free cell of my lane; then your other units here may attack again this round. | mech: Waves, The loins | makes: ally-attacks, front-refilled, side-front | needs: supply, ally-dies
-CARD The Closing Horns | 7 - 4|4 | Flanker. Place: each other ally in a side column of your front row strikes the nearest enemy it could attack; then I strike. | mech: The horns, Washing the spear | makes: enemy-killed | needs: side-front, supply
+CARD Great Induna | 6 - 3|5 | Place: your other units in my lane gain +1 strength this round for each attack your units made this round (up to 4). When I attack, they gain +1 strength this round. | mech: Waves | makes: strong-attacker | needs: ally-attacks, supply
+CARD The Full Impi | 8 - 4|5 ▪▪ | Onrush. Place: places a Young Warrior in each free cell of my lane; then your other units here may attack again this round. | mech: Waves, The loins | makes: ally-attacks, front-refilled, side-front | needs: supply, ally-dies
+CARD The Closing Horns | 7 - 4|5 | Flanker. Place: each other ally in a side column of your front row strikes the nearest enemy it could attack; then I strike. | mech: The horns, Washing the spear | makes: enemy-killed | needs: side-front, supply
 CARD Charge of the Horns | spell 2 | Pick a lane: your units in your front row there gain +2 strength this round. | mech: The horns, Waves | makes: strong-attacker | needs: side-front
 CARD War Song | spell 1 | Pick a lane: your units there gain +1 strength this round; draw a card if your units attacked 2 or more times this round. | mech: Waves | makes: strong-attacker | needs: ally-attacks
 CARD Strike Again | spell 1 | An ally may attack and move again this round. | mech: Waves | makes: ally-attacks | needs: strong-attacker

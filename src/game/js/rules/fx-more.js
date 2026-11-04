@@ -92,6 +92,7 @@ Object.assign(FX_OPS, {
     const v = fxNextInCol(s, c.u, -1);
     if (!v) return;
     c.offered = true;
+    const P = s.players[c.p]; P.reserve = Math.min(MAX_CARRY, P.reserve + unitSupply(v));   // the offering's tribute
     kill(s, v, `offered by ${c.label}`);
     processDeaths(s);
   },

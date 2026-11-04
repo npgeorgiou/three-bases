@@ -25,7 +25,7 @@ const KEYWORDS = {
   'Wind':'Its round-end effects happen now, during the round (as often as it is wound).',
   'Toll':'Has +1 strength for each unit, on either side, that died this round.',
   'Obsidian':'When my strike leaves an enemy Bloodied (with less defence than its card shows), it dies.',
-  'Offering':'Place: the ally directly behind me dies. My "if offered" effects happen only if one did.',
+  'Offering':'Place: the ally directly behind me dies and its supply goes to your carry-over (up to 5). My "if offered" effects happen only if one did.',
   'Onrush':'Whenever another ally in my lane attacks, I gain +1 strength this round.',
   'Flanker':'Has +2 strength while in a side column of your front row.',
   'Reserve':'When an ally in my lane dies while I am outside the front row, I move straight forward as far as I can (free).',
