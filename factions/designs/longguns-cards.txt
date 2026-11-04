@@ -1,0 +1,101 @@
+CARD Private | 1 - 1|1 | Entrenched. | mech: Trenches | makes: dugin, base | needs: behind
+CARD Forward Observer | 1 - 0|2 | Place: the enemy facing me is Marked. | mech: Spotting, Trenches | makes: marked
+CARD Trench Runner | 1 - 1|1 | Place: a Shell into your hand. | mech: Shells, Over the top | makes: shell
+CARD Sandbag Line | 1 - 0|4 | Immobile. The ally directly in front of me has +1 defence. | mech: Trenches | makes: behind
+CARD Trench Mortar | 1 - 0|1 | Barrage 1. | mech: The barrage | makes: hurt, gun | needs: dugin
+CARD Barbed Wire | 1 - 0|3 | Immobile. Whenever an enemy is placed in my lane, deals 1 damage to it. | mech: Trenches, Over the top | makes: hurt
+CARD Bayonet Private | 1 - 1|1 | Pike. | mech: Over the top | makes: dies | needs: hurt
+CARD Stretcher Bearer | 1 - 0|2 | Round end: restores 1 shield to the ally directly in front of me. | mech: Trenches | makes: behind | needs: dugin
+CARD Line Infantry | 2 - 2|2 | Entrenched. | mech: Trenches | makes: dugin, base | needs: behind
+CARD Field Gun | 2 - 1|1 | Ranged. | mech: The barrage, Spotting | makes: hurt, dies, behind | needs: marked, dugin
+CARD Spotter | 2 - 1|3 | Place: the enemy furthest from the base in my lane is Marked. | mech: Spotting | makes: marked | needs: dugin
+CARD Munitions Depot | 2 - 0|2 | Immobile. Supply +1. Round end: a Shell into your hand (once per round). | mech: Shells | makes: shell, supply
+CARD Light Howitzer | 2 - 0|2 | Barrage 1. Round end: deals 1 more damage to the deepest enemy if any enemy in my lane is Marked. | mech: The barrage, Spotting | makes: hurt, gun, behind | needs: marked, dugin
+CARD Sapper | 2 - 2|1 | Place: deals 1 damage to the enemy facing me; it is Marked. | mech: Spotting, Over the top | makes: marked, hurt
+CARD Trench Sergeant | 2 - 1|2 | Entrenched. Whenever an enemy in my lane dies, the other allies in my row gain +1 strength this round. | mech: Trenches, Over the top | makes: dugin | needs: behind, dies
+CARD Signaller | 2 - 1|2 | Place: draw a card if an enemy in my lane is Marked. | mech: Spotting | needs: marked
+CARD Ammunition Carrier | 2 - 1|2 | Place and Death: a Shell into your hand. | mech: Shells | makes: shell, behind
+CARD Assault Trooper | 2 - 2|1 | Charge. | mech: Over the top | makes: dies | needs: hurt
+CARD Dugout | 2 - 0|6 | Immobile. Round end: restores 1 shield to the ally directly in front of me. | mech: Trenches | makes: behind | needs: dugin, hurt
+CARD Flare Gunner | 2 - 1|2 | Place: each enemy in the enemy front row is Marked. | mech: Spotting, Over the top | makes: marked
+CARD Field Battery | 3 - 1|3 | Barrage 2. | mech: The barrage | makes: hurt, dies, gun, behind | needs: dugin
+CARD Sniper | 3 - 2|1 | Ranged. When I attack, the enemy I attack is Marked (after my strike). | mech: Spotting, The barrage | makes: marked, dies | needs: dugin
+CARD Machine Gun Nest | 3 - 2|3 | Immobile. Flurry. Entrenched. | mech: Trenches, Over the top | makes: dugin, dies | needs: behind
+CARD Trench Veteran | 3 - 2|3 | Entrenched. Whenever an enemy in my lane dies, I gain +1 strength. | mech: Trenches, Over the top | makes: dugin, base | needs: behind, dies
+CARD Quartermaster | 3 - 1|3 | Place: two Shells into your hand. | mech: Shells, Trenches | makes: shell
+CARD Gas Battery | 3 - 0|3 | Round end: a Gas Shell into your hand (once per round). | mech: Shells, The barrage | makes: shell, hurt | needs: supply
+CARD Observation Balloon | 3 - 0|6 | Immobile. Round end: the enemy furthest from the base in my lane is Marked. | mech: Spotting | makes: marked, behind
+CARD Lewis Gunner | 3 - 1|2 | Ranged. Whenever an enemy in my lane dies, I gain +1 strength this round. | mech: The barrage, Over the top | makes: hurt, dies | needs: marked, dies
+CARD Trench Raider | 3 - 2|2 | Charge. Whenever my strike kills an enemy, the next enemy facing me is Marked. | mech: Over the top, Spotting | makes: dies, marked | needs: hurt
+CARD Sector Command | 3 - 1|4 | Round end: if you hold this lane's base, deals 1 damage to the enemy furthest from the base in my lane. | mech: The barrage | makes: hurt | needs: base
+CARD Aid Post | 3 - 0|7 | Immobile. Round end: restores 1 shield to each of your units in your front row in my lane. | mech: Trenches | makes: behind | needs: dugin
+CARD Field Telephone | 3 - 1|3 | Place: draw a card if an enemy in my lane is Marked; then the deepest enemy is Marked. | mech: Spotting | makes: marked | needs: marked
+CARD Heavy Gun | 4 - 1|5 | Immobile. Barrage 3. | mech: The barrage | makes: hurt, dies, gun, behind | needs: dugin
+CARD Chief Observer | 4 - 1|3 | Place: the enemy facing me and the enemy furthest from the base are Marked. Round end: the strongest enemy in my lane is Marked. | mech: Spotting, The barrage | makes: marked | needs: dugin, gun | champion
+CARD Trench Major | 5 - 2|4 | Entrenched. Other allies in my row have +1 strength. Whenever an enemy in my lane dies, they gain +1 strength more this round. | mech: Trenches, Over the top | makes: dugin, base | needs: behind, dies, supply | champion
+CARD Quartermaster General | 4 - 1|3 | Place: two Shells into your hand. Round end: +1 carry-over if you hold this lane's base (once per round). | mech: Shells | makes: shell, supply | needs: base, dugin | champion
+CARD Counter-battery Gun | 4 - 1|2 | Barrage 2. Round end: deals 1 damage to each Marked enemy in my lane. | mech: The barrage, Spotting | makes: hurt, dies, gun | needs: marked, dugin
+CARD Landship | 5 - 3|3 ▪▪ | Armoured. Whenever I move, deals 1 damage to the enemy facing me. | mech: Over the top | makes: dies, hurt | needs: supply
+CARD Stormtrooper | 4 - 2|2 | Charge. Whenever my strike kills an enemy, I may attack again this round (once per round). | mech: Over the top | makes: dies | needs: hurt, marked
+CARD Concrete Redoubt | 4 - 1|8 | Immobile. Entrenched. | mech: Trenches | makes: dugin, base | needs: behind
+CARD Rail Battery | 4 - 1|3 | Barrage 1. Round end: also deals 1 damage to the enemy furthest from the base in each other lane. | mech: The barrage | makes: hurt, gun | needs: dugin, supply
+CARD The Great Howitzer | 6 - 0|5 ▪▪▪▪ | Immobile. Barrage 3. Whenever you cast a Shell, deals 1 damage to the enemy furthest from the base in my lane. | mech: The barrage, Shells | makes: hurt, dies, gun | needs: shell, dugin, supply | champion
+CARD The Railway Gun | 6 - 1|6 ▪▪ | Immobile. Barrage 2. Round end: also deals 2 damage to the enemy furthest from the base in each other lane. | mech: The barrage, Spotting | makes: hurt, dies | needs: marked, supply | champion
+CARD Colonel of the Line | 5 - 2|4 | Entrenched. While I am in your front row, other allies in my lane have +1 defence. | mech: Trenches | makes: dugin, base | needs: behind, supply
+CARD Siege Mortar | 5 - 0|6 ▪▪ | Immobile. Round end: deals 2 damage to each enemy outside the enemy front row. | mech: The barrage | makes: hurt, dies | needs: supply, dugin
+CARD Machine Gun Company | 5 - 2|3 ▪▪ | Flurry. Entrenched. | mech: Trenches, Over the top | makes: dugin, dies | needs: behind, supply
+CARD Field Kitchen | 2 - 0|5 | Immobile. Round end: restores 1 shield to each ally beside me. | mech: Trenches | makes: behind | needs: dugin, supply
+CARD Carrier Pigeon Loft | 2 - 0|5 | Immobile. Round end: draw a card if 2 or more enemies are Marked (once per round). | mech: Spotting | makes: behind | needs: marked
+CARD Light Railway | 3 - 0|3 | Supply +1. Place: a Shell into your hand. | mech: Shells | makes: supply, shell
+CARD Gun Layer | 2 - 1|2 | Whenever you cast a Shell, your Ranged units in my lane gain +1 strength this round. | mech: Shells, The barrage | needs: shell
+CARD Gas Mask Squad | 3 - 2|4 | Entrenched. | mech: Trenches | makes: dugin, base | needs: behind, supply
+CARD Dismounted Cavalry | 3 - 2|3 | Outrider. | mech: Over the top | makes: dies | needs: hurt
+CARD Tunnelling Company | 3 - 1|3 | Place: deals 2 damage to the enemy furthest from the base in my lane. | mech: The barrage, Over the top | makes: hurt, dies
+CARD Whizz-bang Battery | 3 - 1|2 | Ranged. When I attack: a Shell into your hand (once per round). | mech: Shells, The barrage | makes: shell, hurt, dies | needs: marked, dugin
+CARD Support Line | 2 - 1|3 | Whenever another ally in my lane dies, I move straight forward as far as I can. | mech: Trenches, Over the top | makes: behind, dugin
+CARD Ammunition Dump | 3 - 0|3 | Immobile. Supply +1. Death: two Shells into your hand. | mech: Shells | makes: shell, supply | needs: dugin
+CARD Bombardier | 3 - 1|3 | Whenever you cast a Shell, deals 1 damage to the enemy facing me. | mech: Shells | makes: hurt | needs: shell
+CARD Artillery Officer | 4 - 2|3 | Place: each of your units with Barrage in my lane fires its Barrage now. | mech: The barrage | needs: gun
+CARD Chlorine Cylinders | 2 - 0|3 | Immobile. Round end: deals 1 damage to each enemy in the enemy front row. | mech: The barrage, Over the top | makes: hurt
+CARD Second Trench | 3 - 1|6 | Immobile. The ally directly in front of me has +1/+1. | mech: Trenches | makes: behind, base | needs: dugin
+CARD Royal Engineer | 2 - 1|3 | Place: the ally directly in front of me gains +2 defence. | mech: Trenches | makes: behind, base | needs: dugin
+CARD Coastal Gun | 5 - 1|5 | Immobile. Ranged. Barrage 2. | mech: The barrage, Spotting | makes: hurt, dies, gun | needs: marked, supply
+CARD Spotter Plane | 3 - 1|2 | Outrider. Place, and whenever I come from another lane: the enemy furthest from the base in my lane is Marked. | mech: Spotting | makes: marked
+CARD Airship | 6 - 2|5 ▪▪ | Round end: deals 1 damage to each Marked enemy in every lane. | mech: Spotting, The barrage | makes: hurt | needs: marked, supply
+CARD Conscript | 1 - 1|1 | Death: a Rifleman in my lane, outside the front row. | mech: Trenches, Over the top | makes: dugin, behind
+CARD Platoon Officer | 3 - 2|3 | Other allies in my row with Entrenched have +1 strength. | mech: Trenches | needs: dugin
+CARD Stokes Mortar | 2 - 1|2 | Barrage 1. | mech: The barrage | makes: hurt, gun, behind | needs: dugin
+CARD Pillbox | 3 - 1|5 | Immobile. Entrenched. Riposte. | mech: Trenches | makes: dugin, hurt | needs: behind
+CARD Map Room | 3 - 0|4 | Immobile. Round end: deals 1 damage to each Marked enemy in my lane. | mech: Spotting | makes: hurt, dies | needs: marked
+CARD Officer's Whistle | spell 1 | Pick a lane: your units in your front row there gain +1 strength this round; draw a card if any unit died this round. | mech: Over the top | needs: dies, dugin
+CARD Bombardment | spell 3 | Pick a lane: deals 1 damage to each enemy there, and 1 more to the enemy furthest from the base. | mech: The barrage | makes: hurt
+CARD Shrapnel | spell 2 | Pick a column of an enemy camp: deals 1 damage to each enemy in it; 2 to each Marked one. | mech: Spotting, Shells | makes: hurt, dies | needs: marked
+CARD Shell Craters | spell 2 | Pick a lane: deals 1 damage to each enemy in the enemy front row there; a Rifleman in your front row there. | mech: Trenches | makes: dugin, hurt
+CARD Dispatch Rider | spell 1 | A Shell into your hand; draw a card if any enemy is Marked. | mech: Shells, Spotting | makes: shell | needs: marked
+CARD Heavy Barrage | spell 5 | Pick a lane: deals 3 damage to each enemy outside the enemy front row there. | mech: The barrage | makes: hurt, dies | needs: supply
+CARD Gas Masks On | spell 2 | Pick a lane: your units in your front row there are Armoured this round. | mech: Trenches | makes: dugin | needs: behind
+CARD Trench Club | 1 - 1|1 | Whenever my strike kills an enemy, I gain +1/+1. | mech: Over the top | makes: dies | needs: hurt, marked
+CARD Barrage | spell 2 | Pick a lane: deals 1 damage to each enemy there. | mech: The barrage | makes: hurt
+CARD Creeping Barrage | spell 3 | Pick a lane: deals 1 damage to each enemy outside the enemy front row there, then 2 to each enemy in the enemy front row. | mech: The barrage, Over the top | makes: hurt, dies
+CARD Star Shell | spell 1 | Pick a lane: the enemy furthest from the base and the strongest enemy there are Marked. | mech: Spotting | makes: marked
+CARD Orders from the Staff | spell 2 | Draw 2 cards. | mech: Shells | needs: base
+CARD Supply Run | spell 1 | A Shell into your hand; +1 carry-over. | mech: Shells, Trenches | makes: shell, supply
+CARD Over the Top! | spell 2 | Pick a lane: your units in your front row there gain +2 strength this round; your other units there move straight forward as far as they can. | mech: Over the top | makes: dies | needs: hurt
+CARD Dig In | spell 1 | Pick a lane: your units in your front row there gain +1 defence. | mech: Trenches | makes: dugin | needs: behind
+CARD Desperate Defence | spell 2 | Pick a lane: your units there gain +1 defence this round; +2 if you don't hold this lane's base. | mech: Trenches | makes: dugin
+CARD Rail Transfer | spell 1 | An ally rides to a free cell of another lane's camp. | mech: The barrage | makes: gun
+CARD Long-range Shell | spell 2 | Deals 3 damage to an enemy. | mech: Shells, The barrage | makes: dies | needs: marked
+CARD Hurricane Bombardment | spell 4 | Pick a lane: deals 2 damage to each enemy there. | mech: The barrage | makes: hurt, dies | needs: supply
+CARD Ranging Shot | spell 1 | Deals 1 damage to an enemy; it is Marked. | mech: Spotting | makes: marked, hurt
+CARD Gas Attack | spell 3 | Pick a lane: deals 1 damage to each enemy there; a Gas Shell into your hand. | mech: Shells, The barrage | makes: hurt, shell
+CARD Fresh Battalion | spell 2 | Pick a lane: a Rifleman in your front row there and one behind it. | mech: Trenches | makes: dugin, behind
+CARD Counter-battery Fire | spell 2 | Pick a lane: deals 2 damage to the enemy furthest from the base there; then the deepest enemy is Marked. | mech: The barrage, Spotting | makes: hurt, marked
+CARD Shell Shock | spell 1 | Deals 1 damage to an enemy; it can't act this round. | mech: Over the top | makes: hurt
+CARD Artillery Preparation | spell 3 | Pick a lane: the round-end effects of your units outside your front row there happen now. | mech: The barrage | needs: gun
+CARD Hold the Line | spell 1 | An ally gains +2 defence this round and restores 2 shields. | mech: Trenches | makes: dugin
+CARD Double Shell | spell 2 | Two Shells into your hand. | mech: Shells, The barrage | makes: shell
+CARD Map the Targets | spell 2 | Pick a lane: each enemy there is Marked; draw a card. | mech: Spotting | makes: marked
+CARD Mine | spell 3 | Pick a column of an enemy camp: deals 3 damage to each enemy in it. | mech: Over the top, The barrage | makes: dies
+CARD No Man's Land | spell 2 | Pick a lane: deals 1 damage to each enemy in the enemy front row there; 3 instead if your front row there is empty. | mech: The barrage, Over the top | makes: hurt, dies
+CARD Medal for Valour | spell 1 | An ally gains +1/+1. | mech: Over the top | needs: dies
+CARD Fire Step | spell 1 | An ally strikes the nearest enemy it could attack. | mech: Over the top | makes: dies | needs: marked

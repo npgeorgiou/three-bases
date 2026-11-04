@@ -10,6 +10,7 @@ const DECKS = {
   hospice:{name:'Hospice Knights',fac:'b',list:[]},
   starpriests:{name:'Star Priests',fac:'s',list:[]},
   rootkin:{name:'Rootkin',fac:'o',list:[]},
+  longguns:{name:'The Long Guns',fac:'l',list:[]},
 };
 /** Premade decks: each built around one side of its faction. */
 const PREMADE_VERSION = 6;   // raising it replaces the premade decks stored in a browser with these lists
@@ -36,5 +37,7 @@ const PREMADE = [
   { id: 'p-s2', name: 'Star Priests — The Omen Guards', cards: { s_omenchild: 3, s_bullcalf: 3, s_sealbearer: 2, s_bullman: 3, s_bullgate: 1, s_ward: 2, s_kingseer: 1, s_starofseven: 1, s_chiefscribe: 1, s_lward: 3, s_blessing: 3, s_quicksign: 3, s_charmspell: 3, s_invoke: 2, s_laying: 2, s_reading: 2 } },
   { id: 'p-o1', name: 'Rootkin — The Thicket', cards: { o_acorn: 3, o_seedpod: 3, o_hazel: 3, o_mushring: 2, o_leaflitter: 2, o_toadstool: 3, o_mother: 1, o_druid: 1, o_elder: 2, o_compost: 1, o_scatter: 3, o_fall: 2, o_rain: 2, o_whisper: 2, o_mossbed: 2 } },
   { id: 'p-o2', name: 'Rootkin — The Old Grove', cards: { o_youngoak: 3, o_rowan: 3, o_oak: 3, o_ash: 2, o_beech: 2, o_pine: 2, o_deeproot: 1, o_eldest: 1, o_yew: 1, o_rootling: 3, o_nettle: 2, o_vines: 2, o_growth: 3, o_whisper: 2, o_mossbed: 2 } },
+  { id: 'p-l1', name: 'The Long Guns — The Grand Battery', cards: { l_mortar: 3, l_stokes: 2, l_battery: 3, l_greatgun: 2, l_howitzergreat: 1, l_depot: 3, l_runner: 2, l_quarter: 2, l_infantry: 3, l_private: 3, l_gunner: 2, l_bombardier: 2, l_qmgeneral: 1, l_barrage: 2, l_orders: 2 } },
+  { id: 'p-l2', name: 'The Long Guns — Spot and Strike', cards: { l_observer: 3, l_spotter: 2, l_flare: 2, l_fieldgun: 3, l_sniper: 2, l_howitzer: 3, l_chiefobs: 1, l_major: 1, l_sergeant: 2, l_veteran: 2, l_infantry: 3, l_sandbag: 2, l_spotround: 3, l_overthetop: 2, l_longrange: 2, l_dig: 2 } },
 ];
 
