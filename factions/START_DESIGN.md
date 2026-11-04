@@ -115,7 +115,7 @@ randomness: no coin flips, random targets or random cards.
 12. **Spells piled at cost 1-2, units at 3-4.** Stops it: section 2, the spell share at every cost (the gate checks it).
 13. **Answers that deflect.** "Because I did X" is no reason: say why Claude did X and what Claude can't do.
 14. **Rules in docs get skipped.** Stops it: what must happen is a check in `tools/design_gate.py`; the pre-commit hook
-   refuses faction commits that fail it. Never commit with `--no-verify`.
+   refuses commits that change how a faction's cards play while it fails. Never commit with `--no-verify`.
 15. **A rule for the example instead of the cause.** Kaptain named round-end damage; Claude added "at most 10 round-end
    damage cards", which stops nothing else from repeating. Why: patching the named example is quick and looks like a
    fix. Stops it: when Kaptain names one example, find why it happened and fix that (here: step 9).
