@@ -220,12 +220,14 @@ const OPPONENTS = () => [['self', 'itself'], ['bench', 'the Benchmark'], ['strat
  * kept frozen (stored as netData.testopp), so results stay comparable from test to test. Each test records whom it was against.
  */
 const testOpp = () => state.testOpp || { kind: 'bench' };
-const testOppName = () => { const o = testOpp(); return o.kind === 'strategist' ? 'the Strategist' : o.kind === 'net' ? o.name : 'the Benchmark'; };
+const testOppName = () => { const o = testOpp(); return o.kind === 'strategist' ? 'the Strategist' : o.kind === 'net' ? o.name : `the Benchmark (depth ${benchDepth()})`; };   // a new depth marks the chart like a new opponent
+/** How far the Benchmark looks ahead as training opponent and in tests (setting; 1 is about 60 times faster than its full depth). */
+const benchDepth = () => Number($('#tBenchDepth').value) || 1;
 function testOppSpec() {
   const o = testOpp();
   if (o.kind === 'strategist') return { kind: 'strategist', full: strategistConfig({}) };
   if (o.kind === 'net' && netData.testopp) return { kind: 'net', net: 'testopp', play: { replies: false, explore: 0 } };
-  return { kind: 'bench' };
+  return { kind: 'bench', depth: benchDepth() };
 }
 function renderTestOpp() {
   const o = testOpp();
@@ -268,7 +270,7 @@ function opponentSpec(id, self) {
   let o = state.training[id].opponent || 'self';
   if (o === 'mix') { const pool = mixOf(id); o = pool[Math.floor(Math.random() * pool.length)]; }
   if (o === 'self' || o === 'net:' + id) return null;
-  if (o === 'bench') return { kind: 'bench' };
+  if (o === 'bench') return { kind: 'bench', depth: benchDepth() };
   if (o === 'strategist') return { kind: 'strategist', full: strategistConfig({}) };
   if (o === 'ifelse') return { kind: 'ifelse', cfg: ifelseFull(state.ifelse && state.ifelse.v === 4 ? state.ifelse.best : {}) };   // its current tuned values
   if (o.startsWith('net:')) return { kind: 'net', net: 'opp:' + o.slice(4), play: { replies: false, explore: 0 } };

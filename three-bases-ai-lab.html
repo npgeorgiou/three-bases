@@ -334,7 +334,8 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
     <label>Games at once <input type="number" id="tThreads" min="1" max="32"></label>
     <label>Random moves while training (%) <input type="number" id="tExplore" min="0" max="50" step="any" value="5"></label>
     <label>Times each position is learned from <input type="number" id="tUses" min="1" max="50" value="8"></label>
-    <label>Test against <select id="tTestOpp" aria-label="Test opponent"></select></label><input type="file" id="tTestFile" accept=".json,application/json" hidden>
+    <label>Test against <select id="tTestOpp" aria-label="Test opponent"></select></label>
+    <label title="How far the Benchmark looks ahead as training opponent and in tests. 1 is about 60 times faster than 3 (its depth in the game and in tournaments) and picks the same move about 65% of the time">Benchmark depth in training and tests <select id="tBenchDepth"><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option></select></label><input type="file" id="tTestFile" accept=".json,application/json" hidden>
     <label>every <input type="number" id="tEvalEvery" min="100" step="100" value="1000"> games,</label>
     <label>with <input type="number" id="tEvalGames" min="4" step="2" value="100"> test games</label>
     <label title="Every lesson is also learned with lanes 1 and 3 swapped, half of the times it is used"><input type="checkbox" id="tMirror" checked> Learn mirrored positions too</label>
@@ -6315,12 +6316,14 @@ const OPPONENTS = () => [['self', 'itself'], ['bench', 'the Benchmark'], ['strat
  * kept frozen (stored as netData.testopp), so results stay comparable from test to test. Each test records whom it was against.
  */
 const testOpp = () => state.testOpp || { kind: 'bench' };
-const testOppName = () => { const o = testOpp(); return o.kind === 'strategist' ? 'the Strategist' : o.kind === 'net' ? o.name : 'the Benchmark'; };
+const testOppName = () => { const o = testOpp(); return o.kind === 'strategist' ? 'the Strategist' : o.kind === 'net' ? o.name : `the Benchmark (depth ${benchDepth()})`; };   // a new depth marks the chart like a new opponent
+/** How far the Benchmark looks ahead as training opponent and in tests (setting; 1 is about 60 times faster than its full depth). */
+const benchDepth = () => Number($('#tBenchDepth').value) || 1;
 function testOppSpec() {
   const o = testOpp();
   if (o.kind === 'strategist') return { kind: 'strategist', full: strategistConfig({}) };
   if (o.kind === 'net' && netData.testopp) return { kind: 'net', net: 'testopp', play: { replies: false, explore: 0 } };
-  return { kind: 'bench' };
+  return { kind: 'bench', depth: benchDepth() };
 }
 function renderTestOpp() {
   const o = testOpp();
@@ -6363,7 +6366,7 @@ function opponentSpec(id, self) {
   let o = state.training[id].opponent || 'self';
   if (o === 'mix') { const pool = mixOf(id); o = pool[Math.floor(Math.random() * pool.length)]; }
   if (o === 'self' || o === 'net:' + id) return null;
-  if (o === 'bench') return { kind: 'bench' };
+  if (o === 'bench') return { kind: 'bench', depth: benchDepth() };
   if (o === 'strategist') return { kind: 'strategist', full: strategistConfig({}) };
   if (o === 'ifelse') return { kind: 'ifelse', cfg: ifelseFull(state.ifelse && state.ifelse.v === 4 ? state.ifelse.best : {}) };   // its current tuned values
   if (o.startsWith('net:')) return { kind: 'net', net: 'opp:' + o.slice(4), play: { replies: false, explore: 0 } };
@@ -8361,7 +8364,7 @@ $('#threads').value = CORES;
 $('#exportLab').addEventListener('click', exportLab);
 /** The top settings are saved with the rest and restored on the next visit. */
 renderTestOpp();
-const SETTING_INPUTS = ['#tThreads', '#tExplore', '#tUses', '#tEvalEvery', '#tEvalGames', '#tMirror'];
+const SETTING_INPUTS = ['#tThreads', '#tExplore', '#tUses', '#tEvalEvery', '#tEvalGames', '#tMirror', '#tBenchDepth'];
 if (!state.testGames100) { if (state.settings) delete state.settings['#tEvalGames']; state.testGames100 = true; save(); }   // once: test games go to the new default, 100
 for (const sel of SETTING_INPUTS) {
   const el = $(sel), saved = (state.settings || {})[sel];

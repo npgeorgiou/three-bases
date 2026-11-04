@@ -20,7 +20,7 @@ $('#threads').value = CORES;
 $('#exportLab').addEventListener('click', exportLab);
 /** The top settings are saved with the rest and restored on the next visit. */
 renderTestOpp();
-const SETTING_INPUTS = ['#tThreads', '#tExplore', '#tUses', '#tEvalEvery', '#tEvalGames', '#tMirror'];
+const SETTING_INPUTS = ['#tThreads', '#tExplore', '#tUses', '#tEvalEvery', '#tEvalGames', '#tMirror', '#tBenchDepth'];
 if (!state.testGames100) { if (state.settings) delete state.settings['#tEvalGames']; state.testGames100 = true; save(); }   // once: test games go to the new default, 100
 for (const sel of SETTING_INPUTS) {
   const el = $(sel), saved = (state.settings || {})[sel];
