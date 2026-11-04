@@ -1,7 +1,7 @@
 /* ---------- keywords a unit has (printed, gained or moved away) ---------- */
 const KW_FLAGS = ['ranged', 'reach', 'armoured', 'fixed', 'revenant', 'plague', 'incorp', 'afterlife', 'fade', 'riposte', 'flurry', 'marked', 'geared', 'augur'];
 const KW_NAME = { ranged: 'Ranged', reach: 'Pike', armoured: 'Armoured', fixed: 'Immobile', revenant: 'Revenant', plague: 'Plague',
-  incorp: 'Incorporeal', afterlife: 'Afterlife', fade: 'Fading', riposte: 'Riposte', flurry: 'Flurry', marked: 'Marked', geared: 'Geared', augur: 'Augur' };
+  incorp: 'Incorporeal', afterlife: 'Afterlife', fade: 'Fading', riposte: 'Riposte', flurry: 'Flurry', marked: 'Marked', geared: 'Geared', augur: 'Augur', reckless: 'Reckless' };
 /** The value of keyword flag f on unit u: gained keywords (u.kw) count, keywords moved away (u.off) don't. */
 const kw = (u, f) => (u.kw && u.kw[f] ? u.kw[f] : u.off && u.off[f] ? 0 : cardOf(u)[f] || 0);
 /** Give unit u keyword f (copy-on-write, so cloned states stay independent). */
@@ -22,7 +22,7 @@ const moveCost = u => (cardOf(u).lightfooted && (u.mv || 0) >= 1 ? 0 : unitSuppl
 const canMoveAgain = u => (u.mv || 0) < maxMoves(u);
 /** Bloodied: the unit's defence is below its card's printed defence. */
 const isBloodied = u => defenceOf(u) < printedDef(u);
-const isReckless = u => !!(cardOf(u).reckless || u.reck);
+const isReckless = u => !!(cardOf(u).reckless || u.reck || (u.kw && u.kw.reckless));
 /** Armoured: printed, or given until round end (Strategikon). */
 const isArmoured = u => !!(kw(u, 'armoured') || u.tArm || u.ent);
 

@@ -6,6 +6,7 @@ const DECKS = {
   monoliths:{name:'Monoliths',fac:'m',list:[]},
   horologers:{name:'Horologers',fac:'c',list:[]},
   sunfeeders:{name:'Sunfeeders',fac:'d',list:[]},
+  impi:{name:'Impi',fac:'a',list:[]},
 };
 /** Premade decks: each built around one side of its faction. */
 const PREMADE_VERSION = 6;   // raising it replaces the premade decks stored in a browser with these lists
@@ -24,5 +25,7 @@ const PREMADE = [
   { id: 'p-c2', name: 'Horologers — The Scrap Yard', cards: { c_spentspring: 3, c_bomb: 3, c_scrapper: 3, c_salvager: 2, c_partsman: 2, c_scrapgolem: 2, c_mistress: 1, c_colossus: 1, c_journeyman: 2, c_toymaker: 2, c_rewinder: 2, c_sentinel: 2, c_key: 3, c_strip: 2, c_unwind: 2, c_rights: 2, c_blueprints: 2 } },
   { id: 'p-d1', name: 'Sunfeeders — The Cutting Rain', cards: { d_knifedancer: 3, d_youth: 3, d_jaguarscout: 3, d_flintcutter: 2, d_tollwarrior: 2, d_jaguar: 3, d_obsidianknight: 2, d_eagle: 2, d_heartpriest: 2, d_jaguarknight: 1, d_executioner: 1, d_cut: 3, d_heart: 3, d_rain: 2, d_codex: 2 } },
   { id: 'p-d2', name: 'Sunfeeders — The Temple Steps', cards: { d_victim: 3, d_marigold: 3, d_captivetaker: 2, d_bloodletter: 2, d_sundancer: 3, d_altarpriest: 3, d_priestess: 1, d_rackkeeper: 1, d_lady: 1, d_stepspriest: 2, d_templeguard: 2, d_conch: 2, d_suneater: 1, d_captives: 2, d_drop: 2, d_path: 2, d_feed: 2 } },
+  { id: 'p-a1', name: 'Impi — The Wave', cards: { a_runner: 3, a_warrior: 3, a_spearboy: 3, a_drummer: 2, a_induna: 2, a_induna2: 2, a_twinspear: 2, a_bushman: 2, a_regdrum: 2, a_praisesinger: 1, a_regiment: 2, a_warsong: 3, a_again: 2, a_onrush: 2, a_rally: 1 } },
+  { id: 'p-a2', name: 'Impi — Horns and Loins', cards: { a_hornboy: 3, a_hornwarrior: 3, a_chest: 3, a_loinboy: 3, a_loinwarrior: 3, a_horncaptain: 1, a_oldbull: 1, a_kingspear: 1, a_hornrunner: 2, a_reserveleader: 2, a_loinvet: 2, a_chestcap: 1, a_charge: 2, a_advance: 2, a_stab: 2, a_raider: 2 } },
 ];
 

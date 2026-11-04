@@ -1712,6 +1712,123 @@ addFaction('d', [
   S('d_heartfire', 'Heart Fire', 1, 'enemy', { do: [{ dmg: 2, to: 'it', if: { itHurt: 1 } }] }, 'Deals 2 damage to a Bloodied enemy.', { art: 'flame', net: 'Finishing the wounded / enemy-dies / enemy-bloodied' }),
   S('d_eaglestrike', 'Eagle Dive', 2, 'enemy', { do: [{ dmg: 2, to: 'it', if: { itHurt: 1 } }, { dmg: 2, to: 'it' }] }, 'Deals 2 damage to an enemy; 4 if it was already Bloodied.', { art: 'eagle', net: 'Obsidian cuts, Finishing the wounded / enemy-dies, enemy-bloodied / -' }),
 ]);
+/* ---------- Impi: fast regiments that attack in waves; the horns strike from the side columns, the loins run in, kills bring the herds ---------- */
+const ONR = '[[Onrush]]', FLK = '[[Flanker]]', RSV = '[[Reserve]]', ATK = (...ops) => ON('attack', ...ops), KILL = (...ops) => ON('kill', ...ops);
+const SIDE = { side: 1, front: 1 }, MID = { mid: 1, front: 1 };
+addFaction('a', [
+  T('a_youth', 'Young Warrior', 1, 2, 1, 1, { onrush: 1, art: 'spear' }, `${ONR}.`),
+  // supply 1
+  U('a_runner', 'Young Runner', 1, 1, 1, 1, { onrush: 1, art: 'boot', net: 'Waves, The loins / ally-attacks, ally-dies / ally-attacks' }, `${ONR}.`),
+  U('a_hornboy', 'Horn Boy', 1, 1, 1, 1, { flanker: 1, art: 'horns', net: 'The horns, The loins / side-front, enemy-killed, ally-dies / -' }, `${FLK}.`),
+  U('a_loinboy', 'Waiting Boy', 1, 1, 1, 1, { reserve: 1, art: 'hide', net: 'The loins / side-front / ally-dies' }, `${RSV}.`),
+  U('a_herdboy', 'Herd Boy', 1, 1, 1, 1, { art: 'crook', fx: [KILL({ carry: 1 })], net: 'The herds, Washing the spear / supply-now / enemy-killed' }, 'Whenever my strike kills an enemy: +1 carry-over.'),
+  U('a_spearboy', 'Spear Carrier', 1, 1, 1, 1, { art: 'spear', fx: [ATK({ buff: [1, 0], rnd: 1, to: 'adj' })], net: 'Waves, The loins / ally-attacks, strong-attacker, ally-dies / -' }, 'When I attack, the allies beside me gain +1 strength this round.'),
+  U('a_scout', 'Scout', 1, 1, 1, 1, { lightfooted: 1, moves: 2, art: 'eye', net: 'The horns / side-front / -' }, '[[Lightfooted]].'),
+  U('a_eager', 'Eager Recruit', 1, 2, 2, 1, { reckless: 1, art: 'spear', fx: [DIE({ buff: [1, 0], rnd: 1, to: 'allies' })], net: 'Waves, The loins / ally-dies, ally-attacks / strong-attacker' }, '[[Reckless]]. Death: your other units in my lane gain +1 strength this round.'),
+  U('a_drummer', 'War Drummer', 1, 0, 2, 1, { art: 'drum', fx: [ON('allyAttack', { buff: [0, 1], rnd: 1, to: 'it' })], net: 'Waves / strong-attacker / ally-attacks' }, 'Whenever another ally in my lane attacks, it gains +1 defence this round.'),
+  // supply 2
+  U('a_warrior', 'Spear Warrior', 2, 2, 1, 1, { onrush: 1, art: 'spear', fx: [KILL({ buff: [1, 0], to: 'self' })], net: 'Waves, Washing the spear / ally-attacks / ally-attacks, enemy-killed' }, `${ONR}. Whenever my strike kills an enemy, I gain +1 strength.`),
+  U('a_hornwarrior', 'Horn Warrior', 2, 2, 2, 1, { flanker: 1, art: 'horns', net: 'The horns / side-front, enemy-killed / strong-attacker, holder' }, `${FLK}.`),
+  U('a_chest', 'Chest Warrior', 2, 1, 2, 1, { art: 'oxshield', aura: [{ to: 'self', d: 2, if: MID }], net: 'The horns / holder / side-front' }, 'Has +2 defence while in the middle column of your front row.'),
+  U('a_loinwarrior', 'Loin Warrior', 2, 2, 2, 1, { reserve: 1, art: 'hide', net: 'The loins / side-front, front-refilled / ally-dies' }, `${RSV}.`),
+  U('a_raider', 'Cattle Raider', 2, 2, 2, 1, { art: 'horns', fx: [KILL({ pool: 1 })], net: 'The herds, Washing the spear / supply-now / enemy-killed' }, 'Whenever my strike kills an enemy: +1 supply in this lane this round.'),
+  U('a_stabber', 'Close Stabber', 2, 2, 1, 1, { art: 'dagger', fx: [KILL({ ready: 'self' })], net: 'Washing the spear / ally-attacks, enemy-killed / strong-attacker' }, 'Whenever my strike kills an enemy, I may attack again this round.'),
+  U('a_shieldbearer', 'Hide Shield Bearer', 2, 1, 3, 1, { guard: 1, art: 'oxshield', net: 'The horns, The loins / holder / front-refilled' }, '[[Bodyguard]].'),
+  U('a_chargeboy', 'Running Charger', 2, 2, 1, 1, { charge: true, art: 'boot', net: 'The loins, Waves / ally-attacks, side-front, ally-dies / -' }, '[[Charge]].'),
+  U('a_singer', 'Praise Caller', 2, 1, 1, 1, { art: 'notes', onrush: 1, aura: [{ to: 'allies', s: 1, if: { attacks: 2 } }], net: 'Waves / strong-attacker / ally-attacks' }, `${ONR}. Other allies in my lane have +1 strength while your units attacked 2 or more times this round.`),
+  U('a_cattleherd', 'Cattle Herd', 2, 0, 1, 1, { bonus: 1, art: 'horns', fx: [DIE({ carry: 1 })], net: 'The herds, The loins / supply, ally-dies / -' }, '[[Supply]] +1. Death: +1 carry-over.'),
+  U('a_veteran', 'Veteran of the Chest', 2, 2, 2, 1, { art: 'axeshield', aura: [{ to: 'self', s: 1, if: MID }], net: 'The horns, Washing the spear / holder, enemy-killed / side-front' }, 'Has +1 strength while in the middle column of your front row.'),
+  U('a_bloodied', 'Blooded Warrior', 2, 2, 1, 1, { art: 'wound', fx: [KILL({ heal: 9, to: 'self' }, { buff: [0, 1], to: 'self' })], net: 'Washing the spear, The horns / holder / enemy-killed' }, 'Whenever my strike kills an enemy, I restore all my shields and gain +1 defence.'),
+  U('a_runnernews', 'Runner with News', 2, 1, 2, 1, { art: 'scroll', fx: [PL({ draw: 1, if: { attacks: 1 } })], net: 'Waves / - / ally-attacks' }, 'Place: draw a card if your units attacked this round.'),
+  U('a_lighthorn', 'Light Horn', 2, 2, 1, 1, { flanker: 1, lightfooted: 1, moves: 2, art: 'horns', net: 'The horns / side-front, enemy-killed / -' }, `${FLK}. [[Lightfooted]].`),
+  U('a_hungry', 'Hunger for Cattle', 2, 1, 1, 1, { charge: true, art: 'horns', aura: [{ to: 'self', s: 2, if: NOHOLD }], net: 'The herds, Waves / ally-attacks, enemy-killed / -' }, '[[Charge]]. Has +2 strength while you don\'t hold this lane\'s base.'),
+  U('a_messenger', 'Messenger Runner', 2, 2, 1, 1, { outrider: 1, onrush: 1, art: 'boot', net: 'Waves / ally-attacks, other-lane / ally-attacks' }, `[[Outrider]]. ${ONR}.`),
+  // supply 3
+  U('a_induna2', 'Wave Leader', 3, 2, 2, 1, { onrush: 1, art: 'helmhorned', fx: [ATK({ buff: [1, 0], rnd: 1, to: 'allies' })], net: 'Waves / strong-attacker, ally-attacks / ally-attacks' }, `${ONR}. When I attack, your other units in my lane gain +1 strength this round.`),
+  U('a_hornrunner', 'Horn Runner', 3, 3, 2, 1, { flanker: 1, onrush: 1, art: 'horns', net: 'The horns, Waves / side-front, enemy-killed / ally-attacks, holder' }, `${FLK}. ${ONR}.`),
+  U('a_loinvet', 'Loin Veteran', 3, 2, 2, 1, { reserve: 1, art: 'axeshield', fx: [ON('move', { strike: 1 })], net: 'The loins / enemy-killed, front-refilled / ally-dies' }, `${RSV}. Whenever I move, I strike the nearest enemy.`),
+  U('a_spearmaster', 'Spear Master', 3, 3, 2, 1, { art: 'spear', fx: [ONCE('kill', { ready: 'self' })], net: 'Washing the spear / ally-attacks, enemy-killed / strong-attacker' }, 'Whenever my strike kills an enemy, I may attack again this round (once per round).'),
+  U('a_flankguard', 'Flank Guard', 3, 2, 3, 1, { flanker: 1, art: 'oxshield', fx: [ON('survive', { buff: [1, 0], to: 'self' })], net: 'The horns / side-front, holder / holder' }, `${FLK}. When I survive damage, I gain +1 strength.`),
+  U('a_raidleader', 'Raid Leader', 3, 2, 3, 1, { art: 'horns', fx: [ONCE('kill', { carry: 1 }), KILL({ pool: 1 })], net: 'The herds, Washing the spear / supply-now, supply / enemy-killed' }, 'Whenever my strike kills an enemy: +1 supply in this lane this round, and +1 carry-over (once per round).'),
+  U('a_doctor', 'War Doctor', 3, 1, 3, 1, { art: 'vial', fx: [PL({ buff: [2, 0], rnd: 1, to: 'allies' }, { heal: 1, to: 'allies' })], net: 'Waves / strong-attacker / -' }, 'Place: your other units in my lane gain +2 strength this round and restore 1 shield.'),
+  U('a_regiment', 'Young Regiment', 3, 1, 2, 1, { onrush: 1, art: 'spear', fx: [PL({ token: 'a_youth', at: 'adj' })], net: 'Waves, The loins / ally-attacks, side-front, ally-dies / -' }, `${ONR}. Place: places a {{card:a_youth|Young Warrior}} beside me.`),
+  U('a_kraal', 'Royal Kraal', 3, 0, 5, 1, { fixed: 1, art: 'cave', aura: [{ to: 'row', d: 1, if: HOLD }], net: 'The horns, The loins / holder / front-refilled, side-front, holder' }, '[[Immobile]]. As long as you hold this lane\'s base, other allies in my row have +1 defence.'),
+  U('a_standard', 'Regiment Standard', 3, 1, 3, 1, { art: 'flag', aura: [{ to: 'allies', s: 1, if: HOLD }, { to: 'self', d: 2, if: NOHOLD }], net: 'Waves, The loins / strong-attacker, holder / front-refilled' }, 'As long as you hold this lane\'s base, other allies in my lane have +1 strength; while you don\'t, I have +2 defence.'),
+  U('a_reserveleader', 'Reserve Captain', 3, 2, 3, 1, { reserve: 1, art: 'helm', fx: [ON('allyDeath', { buff: [1, 0], rnd: 1, to: 'self' })], net: 'The loins / front-refilled, strong-attacker / ally-dies' }, `${RSV}. Whenever another ally in my lane dies, I gain +1 strength this round.`),
+  U('a_twinspear', 'Twin Spears', 3, 2, 2, 1, { flurry: 1, art: 'crossedspears', net: 'Waves / ally-attacks / strong-attacker' }, '[[Flurry]].'),
+  U('a_stampede', 'Cattle Stampede', 3, 2, 1, 2, { charge: true, art: 'horns', fx: [PL({ carry: 1, if: NOHOLD })], net: 'The herds, The loins / ally-attacks, supply / -' }, '[[Charge]]. Place: if you don\'t hold this lane\'s base, +1 carry-over.'),
+  // supply 4
+  U('a_induna', 'Induna of the Wave', 4, 2, 2, 1, { onrush: 2, art: 'helmhorned', fx: [ATK({ buff: [1, 0], rnd: 1, to: 'allies' })], net: 'Waves, The horns / strong-attacker, ally-attacks / ally-attacks, side-front / champion' }, '[[Onrush]] 2 (+2 strength this round whenever another ally in my lane attacks). When I attack, your other units in my lane gain +1 strength this round.'),
+  U('a_horncaptain', 'Horn Captain', 4, 3, 2, 1, { flanker: 1, art: 'horns', fx: [ONCE('kill', { ready: 'self' }), KILL({ buff: [0, 1], to: 'self' })], net: 'The horns, Washing the spear / enemy-killed, ally-attacks / side-front, strong-attacker / champion' }, `${FLK}. Whenever my strike kills an enemy, I gain +1 defence and may attack again this round (once per round).`),
+  U('a_oldbull', 'Old Bull of the Loins', 4, 3, 2, 1, { reserve: 1, art: 'horns', fx: [ON('move', { dmg: 2, to: 'facing' })], net: 'The loins, Waves / front-refilled, enemy-killed, holder / ally-dies, supply-now / champion' }, `${RSV}. Whenever I move, deals 2 damage to the enemy facing me.`),
+  U('a_praisesinger', 'Praise Singer', 4, 2, 2, 1, { art: 'notes', fx: [ONCE('roundEnd', { draw: 1, if: { attacks: 3 } })], aura: [{ to: 'allies', s: 1, if: { attacks: 2 } }], net: 'Waves, Washing the spear / strong-attacker / ally-attacks, enemy-killed / champion' }, 'Other allies in my lane have +1 strength while your units attacked 2 or more times this round. Round end: draw a card if your units attacked 3 or more times this round (once per round).'),
+  U('a_kingspear', 'Spear of the King', 4, 2, 2, 1, { flurry: 1, flanker: 1, art: 'crossedspears', net: 'The horns, The loins / enemy-killed / front-refilled, ally-dies, holder / champion' }, `[[Flurry]]. ${FLK}.`),
+  U('a_chestcap', 'Chest Captain', 4, 2, 3, 1, { art: 'oxshield', aura: [{ to: 'self', d: 2, if: MID }, { to: 'row', s: 1, if: MID }], net: 'The horns / holder, strong-attacker / side-front' }, 'While I am in the middle column of your front row: I have +2 defence and other allies in my row have +1 strength.'),
+  U('a_bullrunner', 'Bull Runner', 4, 3, 2, 1, { charge: true, art: 'horns', fx: [KILL({ pool: 2 })], net: 'The herds, The loins / supply-now, enemy-killed / -' }, '[[Charge]]. Whenever my strike kills an enemy: +2 supply in this lane this round.'),
+  U('a_shieldwallcap', 'Shield Captain', 4, 2, 4, 1, { guard: 1, art: 'axeshield', fx: [ON('survive', { buff: [1, 0], rnd: 1, to: 'allies' })], net: 'The horns / holder, strong-attacker / -' }, '[[Bodyguard]]. When I survive damage, your other units in my lane gain +1 strength this round.'),
+  U('a_warband', 'Warband', 5, 3, 2, 2, { onrush: 1, art: 'crossedspears', fx: [PL({ token: 'a_youth', at: 'front' })], net: 'Waves / ally-attacks, side-front / ally-attacks' }, `${ONR}. Place: places a {{card:a_youth|Young Warrior}} in my front row.`),
+  // supply 5+
+  U('a_regcommander', 'Regiment Commander', 5, 3, 3, 1, { onrush: 1, art: 'helmhorned', fx: [ATK({ ready: 'adj' })], net: 'Waves / ally-attacks, strong-attacker / ally-attacks, supply-now' }, `${ONR}. When I attack, the allies beside me may attack again this round.`),
+  U('a_greathorn', 'Great Horn', 5, 4, 2, 1, { flanker: 1, onrush: 1, art: 'horns', fx: [KILL({ buff: [1, 1], to: 'self' })], net: 'The horns, Washing the spear / enemy-killed / side-front, ally-attacks, supply, holder' }, `${FLK}. ${ONR}. Whenever my strike kills an enemy, I gain +1|+1.`),
+  U('a_bulllord', 'Bull of the Herd', 6, 4, 4, 2, { charge: true, art: 'horns', fx: [KILL({ carry: 1 })], net: 'The herds, The loins / ally-attacks, enemy-killed, supply / supply' }, '[[Charge]]. Whenever my strike kills an enemy: +1 carry-over.'),
+  U('a_ironregiment', 'Unbroken Regiment', 6, 4, 4, 3, { onrush: 1, reserve: 1, art: 'crossedspears', net: 'Waves, The loins / ally-attacks, front-refilled / ally-dies, supply' }, `${ONR}. ${RSV}.`),
+  U('a_king', 'The Bull King', 7, 3, 3, 4, { onrush: 1, flanker: 1, art: 'crown', aura: [{ to: 'allies', s: 1 }], net: 'Waves, The horns / strong-attacker, holder / supply, ally-attacks' }, `${ONR}. ${FLK}. Other allies in my lane have +1 strength.`),
+  // more early warriors
+  U('a_cub', 'Spear Cub', 1, 1, 1, 1, { art: 'spear', aura: [{ to: 'self', s: 1, if: SIDE }], net: 'The horns / side-front / holder' }, 'Has +1 strength while in a side column of your front row.'),
+  U('a_lastboy', 'Last of the Line', 1, 0, 1, 1, { art: 'hide', fx: [DIE({ ready: 'allies' })], net: 'The loins, Waves / ally-dies, ally-attacks / front-refilled' }, 'Death: your other units in my lane may attack again this round.'),
+  U('a_bushman', 'Bush Fighter', 3, 3, 2, 1, { art: 'axe', aura: [{ to: 'self', s: 1, per: { count: 'attacksR', max: 3 } }], net: 'Waves / strong-attacker / ally-attacks' }, 'Has +1 strength for each attack your units made this round (up to 3).'),
+  U('a_cattledrover', 'Cattle Drover', 3, 1, 3, 1, { bonus: 1, art: 'crook', net: 'The herds / supply / -' }, '[[Supply]] +1.'),
+  U('a_sprinter', 'Long Runner', 3, 2, 2, 1, { outrider: 1, lightfooted: 1, moves: 2, art: 'boot', fx: [ON('arrive', { strike: 1 })], net: 'The horns / enemy-killed, other-lane / strong-attacker' }, '[[Outrider]]. [[Lightfooted]]. Whenever I come from another lane, I strike the nearest enemy.'),
+  U('a_ambusher', 'Reed Ambusher', 3, 3, 2, 1, { reserve: 1, art: 'bow', fx: [ON('move', { buff: [1, 0], rnd: 1, to: 'self' })], net: 'The loins / front-refilled, ally-attacks / ally-dies' }, `${RSV}. Whenever I move, I gain +1 strength this round.`),
+  U('a_witchdoc', 'Battle Doctor', 2, 1, 2, 1, { art: 'vial', fx: [ON('allyAttack', { heal: 1, to: 'it' })], net: 'Waves, The horns / holder / ally-attacks' }, 'Whenever another ally in my lane attacks, it restores 1 shield.'),
+  U('a_flankraider', 'Flank Raider', 3, 3, 2, 1, { flanker: 1, art: 'dagger', fx: [KILL({ pool: 1 })], net: 'The horns, The herds / side-front, supply-now / strong-attacker' }, `${FLK}. Whenever my strike kills an enemy: +1 supply in this lane this round.`),
+  U('a_shieldline', 'Shield Line', 3, 1, 4, 1, { guard: 1, art: 'scutum', aura: [{ to: 'self', d: 1, if: MID }], net: 'The horns / holder / side-front, front-refilled' }, '[[Bodyguard]]. Has +1 defence while in the middle column of your front row.'),
+  U('a_wavebreaker', 'Wave Breaker', 4, 3, 2, 1, { onrush: 1, art: 'club', fx: [ATK({ dmg: 1, to: 'itAdj' })], net: 'Waves / ally-attacks, enemy-killed / ally-attacks' }, `${ONR}. When I attack, deals 1 damage to each enemy touching the one I attacked.`),
+  U('a_chestboy', 'Chest Boy', 1, 0, 2, 1, { art: 'oxshield', aura: [{ to: 'self', d: 1, if: MID }], net: 'The horns / holder / side-front' }, 'Has +1 defence while in the middle column of your front row.'),
+  U('a_spearthrower', 'Long Spear', 2, 2, 2, 1, { reach: 1, art: 'pike', net: 'Waves, The loins / ally-attacks / front-refilled' }, '[[Pike]].'),
+  U('a_loinrunner', 'Runner of the Loins', 2, 1, 2, 1, { reserve: 1, art: 'boot', fx: [ON('move', { buff: [1, 0], to: 'self' })], net: 'The loins, Waves / front-refilled, strong-attacker / ally-dies' }, `${RSV}. Whenever I move, I gain +1 strength.`),
+  U('a_herdguard', 'Herd Guard', 3, 2, 3, 1, { reserve: 1, art: 'crook', fx: [KILL({ carry: 1 })], net: 'The loins, The herds / front-refilled, supply / ally-dies, enemy-killed' }, `${RSV}. Whenever my strike kills an enemy: +1 carry-over.`),
+  U('a_regdrum', 'Regiment Drum', 3, 0, 4, 1, { art: 'drum', fx: [ON('allyAttack', { buff: [1, 0], rnd: 1, to: 'it' })], net: 'Waves / strong-attacker, enemy-killed / ally-attacks' }, 'Whenever another ally in my lane attacks, it gains +1 strength this round (before it strikes).'),
+  U('a_shieldbasher', 'Shield Basher', 2, 1, 3, 1, { push: 1, art: 'oxshield', net: 'The horns / holder, enemy-pushed / -' }, '[[Push]].'),
+  U('a_swifthorn', 'Swift Horn', 3, 2, 2, 1, { flanker: 1, charge: true, art: 'horns', net: 'The horns, The loins / side-front, enemy-killed, ally-attacks / holder' }, `${FLK}. [[Charge]].`),
+  U('a_lionhunter', 'Lion Hunter', 3, 3, 2, 1, { flanker: 1, art: 'paw', fx: [KILL({ buff: [1, 0], to: 'self' })], net: 'Washing the spear, The horns / enemy-killed / side-front, holder' }, `${FLK}. Whenever my strike kills an enemy, I gain +1 strength.`),
+  U('a_victorydancer', 'Victory Dancer', 2, 2, 2, 1, { art: 'notes', fx: [ON('enemyDeath', { buff: [1, 0], to: 'self' })], net: 'Washing the spear / strong-attacker / enemy-killed' }, 'Whenever an enemy in my lane dies, I gain +1 strength.'),
+  U('a_elder', 'Regiment Elder', 4, 1, 3, 1, { art: 'staff', fx: [PL({ ready: 'allies' })], net: 'Waves / ally-attacks / strong-attacker, supply-now' }, 'Place: your other units in my lane may attack and move again this round.'),
+  U('a_watercarrier', 'Water Carrier', 1, 0, 1, 1, { art: 'urn', fx: [PL({ pool: 1 })], net: 'The herds / supply-now / -' }, 'Place: +1 supply in this lane this round.'),
+  U('a_hornblower', 'Bull Horn Blower', 2, 1, 2, 1, { art: 'warhorn', fx: [PL({ buff: [1, 0], to: 'frontAllies' })], net: 'The horns, Waves / strong-attacker / side-front' }, 'Place: your units in your front row in my lane gain +1 strength.'),
+  U('a_madyouth', 'Blood-Mad Youth', 1, 3, 2, 1, { reckless: 1, art: 'wound', net: 'Waves, The loins / ally-attacks, ally-dies, enemy-killed / -' }, '[[Reckless]].'),
+  U('a_assegailine', 'Assegai Line', 4, 3, 2, 2, { onrush: 1, flanker: 1, art: 'crossedspears', net: 'Waves, The horns / ally-attacks, side-front / ally-attacks, holder' }, `${ONR}. ${FLK}.`),
+  S('a_oxhide', 'Ox-hide Wall', 2, 'lane', { need: 'allies', do: [{ buff: [0, 2], rnd: 1, to: 'team' }] }, 'Pick a lane: your units there gain +2 defence this round.', { art: 'oxshield', net: 'The horns / holder / side-front' }),
+  S('a_huntdown', 'Hunt Down', 2, 'enemy', { do: [{ dmg: 1, to: 'it' }, { buff: [1, 0], rnd: 1, to: 'team' }] }, 'Deals 1 damage to an enemy; your units in its lane gain +1 strength this round.', { art: 'paw', net: 'Washing the spear, Waves / enemy-killed, strong-attacker / -' }),
+  S('a_feud', 'Blood Feud', 3, 'own', { do: [{ kw: 'flurry', to: 'it' }] }, 'An ally gains [[Flurry]].', { art: 'crossedswords', net: 'Waves / ally-attacks / strong-attacker' }),
+  S('a_spearsup', 'Spears Up', 2, 'lane', { need: 'allies', do: [{ advance: 'backAllies' }, { buff: [1, 0], rnd: 1, to: 'team' }] }, 'Pick a lane: your units outside your front row there move straight forward as far as they can; then your units there gain +1 strength this round.', { art: 'chevrons', net: 'The loins, Waves / front-refilled, strong-attacker / -' }),
+  S('a_ambush', 'Ambush from the Reeds', 2, 'lane', { need: 'enemies', do: [{ dmg: 1, to: 'enemyFront', if: { min: ['backAllies', 2] } }, { dmg: 1, to: 'enemyFront' }] }, 'Pick a lane: deals 1 damage to each enemy in the enemy front row there; 2 instead if you have 2 or more units outside your front row there.', { art: 'bow', net: 'The loins / enemy-killed / front-refilled' }),
+  // spells
+  S('a_charge', 'Charge of the Horns', 2, 'lane', { need: 'allies', do: [{ buff: [2, 0], rnd: 1, to: 'frontAllies' }] }, 'Pick a lane: your units in your front row there gain +2 strength this round.', { art: 'horns', net: 'The horns, Waves / strong-attacker / side-front' }),
+  S('a_warsong', 'War Song', 1, 'lane', { need: 'allies', do: [{ buff: [1, 0], rnd: 1, to: 'team' }, { draw: 1, if: { attacks: 2 } }] }, 'Pick a lane: your units there gain +1 strength this round; draw a card if your units attacked 2 or more times this round.', { art: 'notes', net: 'Waves / strong-attacker / ally-attacks' }),
+  S('a_again', 'Strike Again', 1, 'own', { do: [{ ready: 'it' }] }, 'An ally may attack and move again this round.', { art: 'cycle', net: 'Waves / ally-attacks / strong-attacker' }),
+  S('a_stab', 'Quick Stab', 1, 'own', { do: [{ itStrike: 1 }] }, 'An ally strikes the nearest enemy it could attack.', { art: 'dagger', net: 'Washing the spear / enemy-killed / strong-attacker' }),
+  S('a_doctoring', 'Doctoring Before Battle', 2, 'lane', { need: 'allies', do: [{ buff: [1, 1], rnd: 1, to: 'team' }, { heal: 1, to: 'team' }] }, 'Pick a lane: your units there gain +1|+1 this round and restore 1 shield.', { art: 'vial', net: 'Waves, The horns / strong-attacker, holder / -' }),
+  S('a_raid', 'Cattle Raid', 1, 'lane', { do: [{ pool: 2 }] }, 'Pick a lane: +2 supply there this round.', { art: 'horns', net: 'The herds, Waves / supply-now / -' }),
+  S('a_longrun', 'Long Run', 1, 'own', { do: [{ ride: 'it' }] }, 'An ally rides to a free cell of another lane\'s camp.', { art: 'boot', net: 'The horns / side-front, other-lane / -' }),
+  S('a_washspear', 'Wash the Spear', 2, 'own', { do: [{ itStrike: 1 }, { buff: [1, 0], to: 'it' }] }, 'An ally strikes the nearest enemy it could attack, then gains +1 strength.', { art: 'spear', net: 'Washing the spear / enemy-killed / strong-attacker' }),
+  S('a_encircle', 'Encircle', 3, 'lane', { need: 'enemies', do: [{ dmg: { count: 'frontAllies', max: 3 }, to: 'enemyFront' }] }, 'Pick a lane: deals 1 damage to each enemy in the enemy front row there for each of your units in your front row (up to 3).', { art: 'horns', net: 'The horns / enemy-killed / side-front' }),
+  S('a_fillranks', 'Fill the Ranks', 2, 'lane', { do: [{ token: 'a_youth', at: 'front' }, { token: 'a_youth', at: 'back' }] }, 'Pick a lane: places a {{card:a_youth|Young Warrior}} in your front row there and one behind.', { art: 'crossedspears', net: 'The loins, Waves / side-front, ally-attacks, ally-dies / -' }),
+  S('a_bloodlust', 'Blood on the Spear', 1, 'own', { do: [{ buff: [1, 0], to: 'it' }, { buff: [2, 0], rnd: 1, to: 'it' }] }, 'An ally gains +1 strength, and +2 more this round.', { art: 'wound', net: 'Washing the spear / strong-attacker / -' }),
+  S('a_waves', 'Waves of Spears', 3, 'lane', { need: 'allies', do: [{ ready: 'team' }] }, 'Pick a lane: your units there may attack and move again this round.', { art: 'waves', net: 'Waves / ally-attacks / strong-attacker, supply-now' }),
+  S('a_spoils', 'Spoils of the Kraal', 1, 'lane', { do: [{ carry: 1 }, { draw: 1, if: { attacks: 2 } }] }, '+1 carry-over; draw a card if your units attacked 2 or more times this round.', { art: 'coin', net: 'The herds, Waves / supply / ally-attacks' }),
+  S('a_advance', 'Close the Gap', 1, 'lane', { need: 'allies', do: [{ advance: 'backAllies' }] }, 'Pick a lane: each of your units outside your front row there moves straight forward as far as it can.', { art: 'chevrons', net: 'The loins / front-refilled, side-front / -' }),
+  S('a_pin', 'Pin the Enemy', 2, 'enemy', { do: [{ stun: 'it' }, { dmg: 1, to: 'it' }] }, 'Deals 1 damage to an enemy; it can\'t act this round.', { art: 'crossedspears', net: 'The horns / enemy-killed / -' }),
+  S('a_throw', 'Thrown Spear', 2, 'enemy', { do: [{ dmg: { count: 'attacksR', max: 3, plus: 1 }, to: 'it' }] }, 'Deals 1 damage to an enemy, +1 for each attack your units made this round (up to 4).', { art: 'spear', net: 'Waves, Washing the spear / enemy-killed / ally-attacks' }),
+  S('a_rally', 'Rally the Regiment', 3, 'lane', { need: 'allies', do: [{ buff: [1, 0], to: 'team' }] }, 'Pick a lane: your units there gain +1 strength.', { art: 'flag', net: 'Waves / strong-attacker / -' }),
+  S('a_bloodfeast', 'Feast of the Victors', 2, 'lane', { need: 'allies', do: [{ heal: 2, to: 'team' }, { carry: 1, if: { attacks: 3 } }] }, 'Pick a lane: restore 2 shields to each of your units there; +1 carry-over if your units attacked 3 or more times this round.', { art: 'cauldron', net: 'The herds / holder, supply / ally-attacks' }),
+  S('a_youngblood', 'Call the Young Men', 1, 'lane', { do: [{ token: 'a_youth', at: 'back' }] }, 'Pick a lane: places a {{card:a_youth|Young Warrior}} in your camp there, outside your front row.', { art: 'spear', net: 'The loins / front-refilled, side-front, ally-dies / -' }),
+  S('a_onrush', 'Onrush', 2, 'lane', { need: 'allies', do: [{ buff: [1, 0], rnd: 1, to: 'team', per: 'attacksR' }] }, 'Pick a lane: your units there gain +1 strength this round for each attack your units made this round.', { art: 'chevrons', net: 'Waves / strong-attacker / ally-attacks' }),
+  S('a_hornsclose', 'The Horns Close', 4, 'lane', { need: 'enemies', do: [{ dmg: 2, to: 'enemyFront', if: { min: ['frontAllies', 3] } }, { dmg: 1, to: 'enemyFront' }] }, 'Pick a lane: deals 1 damage to each enemy in the enemy front row there; 3 instead if your front row there is full.', { art: 'horns', net: 'The horns / enemy-killed / side-front' }),
+  S('a_victory', 'Victory Cry', 2, 'lane', { need: 'allies', do: [{ buff: [1, 1], to: 'team', if: { attacks: 3 } }, { buff: [1, 0], rnd: 1, to: 'team' }] }, 'Pick a lane: your units there gain +1 strength this round; if your units attacked 3 or more times this round, also +1|+1.', { art: 'trumpet', net: 'Waves / strong-attacker, holder / ally-attacks' }),
+  S('a_sacrifice', 'Into the Spears', 1, 'own', { do: [{ buff: [3, 0], rnd: 1, to: 'it' }, { kw: 'reckless', to: 'it' }] }, 'An ally gains +3 strength this round and dies right after its next attack.', { art: 'spear', net: 'Washing the spear, The loins / strong-attacker, ally-dies / -' }),
+  S('a_cattlegift', 'Gift of Cattle', 2, 'lane', { do: [{ carry: 2 }, { draw: 1 }] }, '+2 carry-over; draw a card.', { art: 'horns', net: 'The herds / supply / -' }),
+]);
 const KEYWORDS = {
   'Projectile':'A unit a Cannon beside it can fire: the Cannon\'s attack throws it at an enemy in the Cannon\'s lane; it strikes that enemy with its strength and dies there.',
   'Cannon':'Instead of attacking, it can fire an adjacent Projectile at an enemy in its lane (costs what an attack costs). It can\'t throw anything else.',
@@ -1783,6 +1900,7 @@ const DECKS = {
   monoliths:{name:'Monoliths',fac:'m',list:[]},
   horologers:{name:'Horologers',fac:'c',list:[]},
   sunfeeders:{name:'Sunfeeders',fac:'d',list:[]},
+  impi:{name:'Impi',fac:'a',list:[]},
 };
 /** Premade decks: each built around one side of its faction. */
 const PREMADE_VERSION = 6;   // raising it replaces the premade decks stored in a browser with these lists
@@ -1801,6 +1919,8 @@ const PREMADE = [
   { id: 'p-c2', name: 'Horologers — The Scrap Yard', cards: { c_spentspring: 3, c_bomb: 3, c_scrapper: 3, c_salvager: 2, c_partsman: 2, c_scrapgolem: 2, c_mistress: 1, c_colossus: 1, c_journeyman: 2, c_toymaker: 2, c_rewinder: 2, c_sentinel: 2, c_key: 3, c_strip: 2, c_unwind: 2, c_rights: 2, c_blueprints: 2 } },
   { id: 'p-d1', name: 'Sunfeeders — The Cutting Rain', cards: { d_knifedancer: 3, d_youth: 3, d_jaguarscout: 3, d_flintcutter: 2, d_tollwarrior: 2, d_jaguar: 3, d_obsidianknight: 2, d_eagle: 2, d_heartpriest: 2, d_jaguarknight: 1, d_executioner: 1, d_cut: 3, d_heart: 3, d_rain: 2, d_codex: 2 } },
   { id: 'p-d2', name: 'Sunfeeders — The Temple Steps', cards: { d_victim: 3, d_marigold: 3, d_captivetaker: 2, d_bloodletter: 2, d_sundancer: 3, d_altarpriest: 3, d_priestess: 1, d_rackkeeper: 1, d_lady: 1, d_stepspriest: 2, d_templeguard: 2, d_conch: 2, d_suneater: 1, d_captives: 2, d_drop: 2, d_path: 2, d_feed: 2 } },
+  { id: 'p-a1', name: 'Impi — The Wave', cards: { a_runner: 3, a_warrior: 3, a_spearboy: 3, a_drummer: 2, a_induna: 2, a_induna2: 2, a_twinspear: 2, a_bushman: 2, a_regdrum: 2, a_praisesinger: 1, a_regiment: 2, a_warsong: 3, a_again: 2, a_onrush: 2, a_rally: 1 } },
+  { id: 'p-a2', name: 'Impi — Horns and Loins', cards: { a_hornboy: 3, a_hornwarrior: 3, a_chest: 3, a_loinboy: 3, a_loinwarrior: 3, a_horncaptain: 1, a_oldbull: 1, a_kingspear: 1, a_hornrunner: 2, a_reserveleader: 2, a_loinvet: 2, a_chestcap: 1, a_charge: 2, a_advance: 2, a_stab: 2, a_raider: 2 } },
 ];
 
 const ART = {
@@ -2189,7 +2309,7 @@ function laneSupply(s, p, lane) {
 /* ---------- keywords a unit has (printed, gained or moved away) ---------- */
 const KW_FLAGS = ['ranged', 'reach', 'armoured', 'fixed', 'revenant', 'plague', 'incorp', 'afterlife', 'fade', 'riposte', 'flurry', 'marked', 'geared', 'augur'];
 const KW_NAME = { ranged: 'Ranged', reach: 'Pike', armoured: 'Armoured', fixed: 'Immobile', revenant: 'Revenant', plague: 'Plague',
-  incorp: 'Incorporeal', afterlife: 'Afterlife', fade: 'Fading', riposte: 'Riposte', flurry: 'Flurry', marked: 'Marked', geared: 'Geared', augur: 'Augur' };
+  incorp: 'Incorporeal', afterlife: 'Afterlife', fade: 'Fading', riposte: 'Riposte', flurry: 'Flurry', marked: 'Marked', geared: 'Geared', augur: 'Augur', reckless: 'Reckless' };
 /** The value of keyword flag f on unit u: gained keywords (u.kw) count, keywords moved away (u.off) don't. */
 const kw = (u, f) => (u.kw && u.kw[f] ? u.kw[f] : u.off && u.off[f] ? 0 : cardOf(u)[f] || 0);
 /** Give unit u keyword f (copy-on-write, so cloned states stay independent). */
@@ -2210,7 +2330,7 @@ const moveCost = u => (cardOf(u).lightfooted && (u.mv || 0) >= 1 ? 0 : unitSuppl
 const canMoveAgain = u => (u.mv || 0) < maxMoves(u);
 /** Bloodied: the unit's defence is below its card's printed defence. */
 const isBloodied = u => defenceOf(u) < printedDef(u);
-const isReckless = u => !!(cardOf(u).reckless || u.reck);
+const isReckless = u => !!(cardOf(u).reckless || u.reck || (u.kw && u.kw.reckless));
 /** Armoured: printed, or given until round end (Strategikon). */
 const isArmoured = u => !!(kw(u, 'armoured') || u.tArm || u.ent);
 
