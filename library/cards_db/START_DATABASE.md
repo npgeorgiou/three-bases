@@ -62,7 +62,9 @@ It stops at the first failure:
 8. status.py (reading progress), examples.py (QUERIES.md), review_check.py (families in deck_read_<game>.md, during an import).
 Read: any FAILED line and the audit lists. `check_all.py --no-load` runs only steps 4 and 7.
 
-**B. Importing a game:** PROCESS.md steps 0-5, then the line check (LINKS_PLAN.md step 3).
+**B. Importing a game:** PROCESS.md steps 0-5, then the line check (LINKS_PLAN.md step 3). The line check is two scripts,
+both required, all output read: `links_audit.py <game>` (every reason of the whole game: is its rule right?) and
+`deck_audit.py <game>` (the lines inside every deck). `audit_links.py` (A7) is a different check and does not replace them.
 
 **C. After any change to lines, and whenever Kaptain says check:** PROCESS.md "Fixing errors" (dump before and after, read
 every gone and new reason group); `deck_audit.py <game>` for each game whose lines changed, read whole, with every level-up line

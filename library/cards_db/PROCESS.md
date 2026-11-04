@@ -204,7 +204,9 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
    `deck_read_<game>.md` is the import's working record: each family a "## F<n> <name>" with "Root cause:", "Same error
    elsewhere:" (counts per game) and "Fix:" lines (`run.py` fails without them: review_check.py). Once Kaptain approves the
    game, move its open items to LINKS_PLAN.md "Open" or "State" and delete the file.
-   Then the line check: LINKS_PLAN.md step 3.
+   Then the line check (LINKS_PLAN.md step 3), never skipped: `links_audit.py <game>` checks every reason of the WHOLE game
+   (is its rule right?), `deck_audit.py <game>` checks the lines inside EVERY deck (cards with no or few partners). Both are
+   run and their whole output read (cut into pieces). Not the same as `audit_links.py` (step 2.8, links that cannot exist).
 
 ### 3. Case tests (`cases/`)
 - mechanics.tsv: a question, the expected cards from the texts (regex, or a Keywords-field keyword) and the query; passes at
@@ -223,7 +225,7 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
 ### 4. Claude's and Kaptain's checks
 1. Claude checks 20 random cards against their texts and the step 0.10 sources (`ask.py <game> card <name>`), writes every
    error family into deck_read_<game>.md ("Check of 20 cards"), fixes each once, adds a case per family.
-2. The line check: LINKS_PLAN.md step 3.
+2. The line check: LINKS_PLAN.md step 3 (`links_audit.py` for the whole game, `deck_audit.py` for every deck).
 3. Real-world cases: `realworld.py <game>`; read every miss and decide whether the data, the question or the case is wrong
    (cases are mostly right; a wrong case is shown to Kaptain with the texts, never changed quietly).
 4. Design questions: `design_questions.py`; read every answer for the new game's factions like a designer; a concept that finds
@@ -236,7 +238,7 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
 nothing unexplained; the keyword -> concept list checked twice and shown to Kaptain; 0 open word flags; no proposal need shared
 by cards with different texts; stubs only names nothing defines; `ask.py all compare <its main concepts>` shows its cards next to
 the other games'; every guide deck explained; the 20-card check written; 20 decks found, 10 full decks read card by card, the
-line check done and its errors fixed; "State" says it; everything pushed. After Kaptain's approval, add a few approved records to
+line check done (`links_audit.py` and `deck_audit.py`, all output read) and its errors fixed; "State" says it; everything pushed. After Kaptain's approval, add a few approved records to
 BRIEF.md "Game words: <game>" as worked examples.
 
 ## Fixing errors: by cause, never by example (read before touching any point Kaptain raises)
