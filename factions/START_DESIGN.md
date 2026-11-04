@@ -10,7 +10,9 @@ by holding positions: bases, through the dots of the front rows (summary/04). Ev
 by how it takes, holds or breaks positions. These rules hold for every answer in design work.
 
 **One faction per chat.** Never design more than one faction's cards in one chat. Stages, Kaptain checks each one:
-(1) steps 1-6 below for that faction; (2) about 20 key cards with net lines and checks; (3) the rest, 20 cards at a time.
+(1) steps 1-6 below for that faction; (2) the whole faction: exactly 100 cards, all checks passed. Kaptain does not
+check cards in batches: Claude checks itself after every 20 (step 9), and a separate agent that has not seen the work
+checks the finished faction against this file line by line before it is sent.
 
 1. **Name, icon, theme.** A real theme with 10+ characteristics (2b). A thin theme gives no mechanics.
 2. **The five questions** (Kaptain's directions, 4 Nov 2026). When Kaptain names a faction, answer these before any card:
@@ -45,8 +47,8 @@ by how it takes, holds or breaks positions. These rules hold for every answer in
    opening, its 4-6 middle game, its 6+ finish, its champion, and what the player DOES differently from the other four.
    Two ways that build the same board, or differ only in a keyword, are one way.
 7. **The library, card by card** (section 3; `factions/5-card-design-method.txt` step 1). For each way to play, read
-   30-50 real cards of the closest real factions (Duelyst, Faeria, Stormbound, Monster Train first, then Runeterra and the
-   rest) and write each card's play pattern: what the player decides, what it rewards. This is the pool cards come from.
+   30-50 real cards of the closest real factions, searched in ALL 8 games of the library (Runeterra, Stormbound, Monster
+   Train, Duelyst, Faeria, Inscryption, Into the Breach, Slay the Spire; never only the one Claude knows best) and write each card's play pattern: what the player decides, what it rewards. This is the pool cards come from.
 8. **Effect palette.** For each mechanic, list 10+ DIFFERENT effects (different trigger, result or target), each with
    its library card. Cards are written from the palette, never from the effects the engine already has.
 9. **Cards, 20 at a time**, in the template below, each with its net line, its library card, the costing check (the
@@ -82,7 +84,8 @@ Each point: what went wrong, why Claude really did it, the guard. Read the reaso
    before starting.
 4. **The library was not used card by card**, although `factions/5` step 1 already said "read 30-50 cards". Why:
    reading cards is slow and shows no output, so Claude skipped it to produce cards sooner and took only mechanic names.
-   It also used almost only Runeterra, the game it knows best. Guard: step 7; every card names its library card.
+   It also used almost only Runeterra, the game it knows best. Guard: step 7, all 8 games; every card names its
+   library card.
 5. **One mechanic carried a whole faction** (the clockwork faction was only wind and gears). Why: Claude took the first
    idea of the theme and made it everything. Guard: step 6.
 6. **Spells all "+strength" and "kill"** (Sunfeeders). Why: as in 1, the simplest effects came first. Guard: a spell
@@ -181,7 +184,7 @@ Candidates (raw brainstorming, not designs): `factions/3-candidates/`.
 - Back rows: each faction has a real job for rows 2-3 (see 1b: melee there reaches nothing).
 - Staying power and removal follow the identity, never zero.
 - Spells 20-50% of the cards, and about that share at EVERY cost from 1 to 5 (cost 6+ may be mostly units; Kaptain,
-  4 Nov 2026). At least 100 cards per faction; usually more.
+  4 Nov 2026). Exactly 100 cards per faction, no more, no less (Kaptain, 4 Nov 2026).
 - Removal: each faction removes threats in its own way (THE THINKING PROCESS, step 2.2), never a plain "kill a unit"
   card shared by all.
 - Lane control: cards that check "as long as you hold this lane's base", "if you don't", or both. Never a specific
@@ -189,7 +192,7 @@ Candidates (raw brainstorming, not designs): `factions/3-candidates/`.
 - Almost no card without a keyword or text: loads of passives, triggers, Death and Place effects (Kaptain, 4 Nov 2026).
   Every card has its place in the faction's mechanics and is a real decision (when, where, why).
 - Each faction has 2-3 characteristic keywords of its own (Kaptain, 4 Nov 2026).
-- The 100+ cards form a few cohesive, obvious groups (ways to play), and the groups mix with each other within the
+- The 100 cards form a few cohesive, obvious groups (ways to play), and the groups mix with each other within the
   faction. The 5 special units (champions) each have their place in this mesh: each anchors a group and links it to
   another (Kaptain, 4 Nov 2026).
 - Interaction with the enemy: high for playful/disruptive factions, lower for straightforward ones.
@@ -248,8 +251,8 @@ Every one of these failed in the first five factions. Check each before sending.
 - Compare with a real faction: run `analyze` on a real faction of the same kind (Noxus for aggro, Shadow Isles for
   death...) and count what its cards make and use. Your faction must be as broad and as dense: if a mechanic could
   not carry dozens of cards, it is an interaction.
-- Can all 100+ cards have a place? Before any card, estimate how many cards each mechanic gives (dozens each) and
-  check that 100+ fit without filler. Too complex to fill, or too narrow to fill: rework before sending.
+- Can all 100 cards have a place? Before any card, estimate how many cards each mechanic gives (dozens each) and
+  check that 100 fit without filler. Too complex to fill, or too narrow to fill: rework before sending.
 - A mechanic that limits the player (an order to follow, a card kind, a position) must pay back big; otherwise nobody
   plays it.
 - How does it actually happen? For every effect, say how it works with the game's existing rules (supply, hand,
@@ -275,7 +278,7 @@ How to ask: `library/cards_db/START_QUESTIONS.md` (commands, how to build an ans
   python3 ask.py duelyst analyze "$(cat /tmp/f.txt)"
   ```
   Factions per game: `select game, regions, count(*) from card group by 1,2`. Positional and location games first
-  (Duelyst, Faeria, Stormbound, Into the Breach, Inscryption).
+  (Duelyst, Faeria, Stormbound, Into the Breach, Inscryption), then all the other games: every search covers all 8.
 - Measure a real faction's mechanics: `analyze` lists what its cards make happen and which cards use it, without
   counts; count the names on each line (made by / used by) to see which things carry the faction.
 - Curious: at least three unexpected concepts that serve the same outcome; one game where the mechanic is rare or odd.

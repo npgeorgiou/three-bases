@@ -38,4 +38,5 @@ Work not done yet. Kaptain's requests in his own words where he gave them. Remov
    - Card lists and the deck builder: inside a cost, sort alphabetically, not spells then units.
    - The 5 champions of each faction are shown as champions in the game (marked on the card).
    - Round-end damage everywhere is too strong; and too many cards do the same thing ("strike the nearest enemy", "+strength", "kill"): rebuild each faction from the library's card texts (read 30-50 cards of the closest real factions, write their play patterns), give each faction 5 really different ways to play, and add an effect-level twin check (same trigger + effect + target on more than 2-3 cards is a problem).
-   - Library: the missing queries are Kaptain's to give to a library chat (Claude's list of 4 Nov 2026 evening). Use the Stormbound, Monster Train, Faeria and Duelyst data, not only Runeterra.
+   - Library: the missing queries are Kaptain's to give to a library chat (Claude's list of 4 Nov 2026 evening). Every search covers all 8 games of the library, never only Runeterra.
+   - Each faction has exactly 100 cards (the seven have 100-111: cut to 100).
