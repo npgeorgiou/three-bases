@@ -7,6 +7,7 @@ const DECKS = {
   horologers:{name:'Horologers',fac:'c',list:[]},
   sunfeeders:{name:'Sunfeeders',fac:'d',list:[]},
   impi:{name:'Impi',fac:'a',list:[]},
+  hospice:{name:'Hospice Knights',fac:'b',list:[]},
 };
 /** Premade decks: each built around one side of its faction. */
 const PREMADE_VERSION = 6;   // raising it replaces the premade decks stored in a browser with these lists
@@ -27,5 +28,7 @@ const PREMADE = [
   { id: 'p-d2', name: 'Sunfeeders — The Temple Steps', cards: { d_victim: 3, d_marigold: 3, d_captivetaker: 2, d_bloodletter: 2, d_sundancer: 3, d_altarpriest: 3, d_priestess: 1, d_rackkeeper: 1, d_lady: 1, d_stepspriest: 2, d_templeguard: 2, d_conch: 2, d_suneater: 1, d_captives: 2, d_drop: 2, d_path: 2, d_feed: 2 } },
   { id: 'p-a1', name: 'Impi — The Wave', cards: { a_runner: 3, a_warrior: 3, a_spearboy: 3, a_drummer: 2, a_induna: 2, a_induna2: 2, a_twinspear: 2, a_bushman: 2, a_regdrum: 2, a_praisesinger: 1, a_regiment: 2, a_warsong: 3, a_again: 2, a_onrush: 2, a_rally: 1 } },
   { id: 'p-a2', name: 'Impi — Horns and Loins', cards: { a_hornboy: 3, a_hornwarrior: 3, a_chest: 3, a_loinboy: 3, a_loinwarrior: 3, a_horncaptain: 1, a_oldbull: 1, a_kingspear: 1, a_hornrunner: 2, a_reserveleader: 2, a_loinvet: 2, a_chestcap: 1, a_charge: 2, a_advance: 2, a_stab: 2, a_raider: 2 } },
+  { id: 'p-b1', name: 'Hospice Knights — The Bastion', cards: { b_squire: 3, b_sergeant: 3, b_shieldbro: 2, b_knight: 3, b_bastionguard: 2, b_nurse: 3, b_orderly: 2, b_chaplain: 2, b_castellan: 1, b_mother: 1, b_grandmaster: 1, b_flagbearer: 2, b_mend: 3, b_bookhours: 2, b_prayer: 2, b_granary: 2 } },
+  { id: 'p-b2', name: 'Hospice Knights — The Thorn Hedge', cards: { b_thorn: 3, b_spikeshield: 3, b_watch: 3, b_gatekeeper: 2, b_thornknight: 3, b_sortieknight: 2, b_challenger: 2, b_herald: 2, b_sortiecap: 1, b_galley: 1, b_hedge: 1, b_marshal: 1, b_challenge: 2, b_feint: 2, b_sortie: 2, b_bookhours: 2, b_victualler: 2 } },
 ];
 
