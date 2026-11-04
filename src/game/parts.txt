@@ -5,15 +5,7 @@ css/3-tooltips-fx-dialogs-prompt.css
 shell/body.html
 js/00-intro.js
 js/cards/00-header.js
-js/cards/tagma.js
-js/cards/ashfang.js
-js/cards/exanimati.js
 js/cards/new-00-helpers.js
-js/cards/new-siegeworks.js
-js/cards/new-arcanists.js
-js/cards/new-wanderers.js
-js/cards/new-echoes.js
-js/cards/new-monoliths.js
 js/cards/new-horologers.js
 js/cards/new-sunfeeders.js
 js/cards/new-impi.js

@@ -33,6 +33,8 @@ Object.assign(FX_SEL, {
   frontAllies: (s, c) => FX_SEL.team(s, c).filter(inFront),
   backAllies: (s, c) => FX_SEL.team(s, c).filter(x => !inFront(x)),
   shellsHand: (s, c) => fxCount(s.players[c.p].hand.filter(k => CARDS[k] && CARDS[k].shellCard).length),
+  hurtTeam: (s, c) => FX_SEL.team(s, c).filter(x => (x.dmg || 0) > 0),
+  discardUnits: (s, c) => fxCount(s.players[c.p].discard.filter(k => CARDS[k] && !CARDS[k].tactic).length),
   partsHand: (s, c) => fxCount(s.players[c.p].hand.filter(k => CARDS[k] && CARDS[k].part).length),
   itTwins: (s, c) => (c.t ? s.units.filter(x => ctl(x) === c.p && x.lane !== c.t.lane && baseKey(x.card) === baseKey(c.t.card)) : []),
   otherFront: (s, c) => LANES.filter(l => l !== c.lane).map(l => s.units.filter(x => ctl(x) === c.p && x.lane === l && (cardOf(x).fx || []).some(f => f.on === 'roundEnd')).sort(byReadingOrder)[0]).filter(Boolean),

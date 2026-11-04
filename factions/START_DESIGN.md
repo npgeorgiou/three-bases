@@ -199,6 +199,16 @@ library lead behind each mechanic and behind the champions.
 Benchmark report (Kaptain, 4 Nov 2026): `node tools/cardstats.js <letter>` plays Benchmark games with the faction's premade
 decks and reports per card how often it was played, how often its effects fired and the win rate when played; cards that
 never matter are reworked or cut.
+Rosters (Kaptain, 4 Nov 2026):
+- The curve follows the supply: round 1 has 4 supply, round 2 at most 4 more, so cards of cost 1-4 must already set up and
+  combine (good openings, real interactions); cost 4-6 is each way of playing's middle game; 6+ must do strong things.
+- Expensive units build on what the cheaper ones set up: 6-10 supply has been spent in that lane before them, so their
+  Place effect or passive uses that board (the allies there, the enemies set up, the deaths, spells or winds of the round),
+  and their actions are worth their high cost. Never an average body with a generic ability.
+- Place effects on 30-50% of the units and Death effects on 10-15%: immediate, one-time board impact that the player
+  organised, not only constant effects.
+- Each faction's entry rates its removal, disruption and protection: many / medium / few / very few; cards follow it.
+- Cards that check "you hold this lane's base" get a golden border in the game (automatic).
 Per mechanic: which commands ran; which parts have no library source. If the library's tables or queries could not
 answer something the design needed (a missing link between cards, a missing query), say so to Kaptain. Every card passes 1b, the costing check and the
 frequency check. Talk to Kaptain as CLAUDE.md says: short, plain, his words, one question at a time, last.

@@ -143,7 +143,7 @@ function drawMark(svg, u, role) {
 function drawUnit(svg, u, extraClasses = '', ref = null) {
   let [x0, y0, w, h] = unitRect(u);
   const c = cardOf(u);
-  const cls = ['unit', 'f-' + c.fac, !canMoveAgain(u) && 'nomove', !canAttackAgain(u) && 'noatk', isIncorp(u) && 'ghost']
+  const cls = ['unit', 'f-' + c.fac, !canMoveAgain(u) && 'nomove', !canAttackAgain(u) && 'noatk', isIncorp(u) && 'ghost', BASE_BOUND.has(baseKey(u.card)) && 'bb']
     .filter(Boolean).join(' ') + extraClasses;
   const g = svgEl('g', { class: cls, 'data-id': u.id }, svg);
   if (u.sh && cellsOf(u).length !== (w / CELL) * (h / CELL)) {

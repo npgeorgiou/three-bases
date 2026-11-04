@@ -34,7 +34,7 @@ const artSvg = key => `<svg viewBox="0 0 100 100" class="art" aria-hidden="true"
 /** A card's icon (inner SVG): one glyph per card; every unit has a glyph of its own. */
 const artInner = k => `<path d="${ART[CARDS[k].art]}"/>`;
 const cardArt = k => `<svg viewBox="0 0 100 100" class="art" aria-hidden="true">${artInner(k)}</svg>`;
-const deckArt = fac => artSvg(FAC_GLYPH[fac] || (fac === 't' ? 'wreath' : fac === 'x' ? 'lantern' : 'fangs'));
+const deckArt = fac => artSvg(FAC_GLYPH[fac] || 'shield');
 
 /* ---------- keywords ---------- */
 const KEYWORD_RE = /\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g;
@@ -88,14 +88,17 @@ function cardText(c, u) {
   }).replace(/\{\{card:(\w+)\|([^}]+)\}\}/g, (m, k, n) => `<span class="cref" data-c="${k}">${n}</span>`).replace('{{debt}}', live ? ` <b class="hup">(now ${debtCost(game, side)})</b>` : '').replace('{{tithe}}', live ? ` <b class="hup">(now +${titheGain(game, side)})</b>` : '');
   return keywordHtml(text.replace(/\{\{(\d+|\+)\}\}/g, (m, n) => (n === '+' ? (bonus > 0 ? `, plus ${up(bonus)}` : '') : up(Math.max(0, +n + bonus)))));
 }
+/** Cards that check whether you hold the lane's base get a golden border (card and unit). */
+const BASE_BOUND = new Set(Object.keys(CARDS).filter(k => /"hold":/.test(JSON.stringify([CARDS[k].fx, CARDS[k].aura, CARDS[k].cast]))));
+const bbCls = k => (BASE_BOUND.has(baseKey(k)) ? ' bb' : '');
 function cardHtml(k, u) {
   const c = CARDS[k];
   const text = c.text ? `<span class="ab">${cardText(c, u)}</span>` : '';
   if (c.tactic) {
-    return `<div class="card f-${c.fac} tac">${corner('tm', supplyBadge(c.costLabel || c.cost, true))}`
+    return `<div class="card f-${c.fac} tac${bbCls(k)}">${corner('tm', supplyBadge(c.costLabel || c.cost, true))}`
       + `<span class="nm">${c.name}</span>${cardArt(k)}${text}</div>`;
   }
-  return `<div class="card f-${c.fac}">${corner('tm', supplyBadge(c.sup))}`
+  return `<div class="card f-${c.fac}${bbCls(k)}">${corner('tm', supplyBadge(c.sup))}`
     + (c.str || (c.mods && c.mods.ps) ? cornerStat('tl', 'str', Math.max(0, c.str + ((c.mods && c.mods.ps) || 0)), c.str) : '')
     + (c.def ? cornerStat('tr', 'def', Math.max(1, c.def + ((c.mods && c.mods.pd) || 0)), c.def) : '')
     + `<span class="shape">${shapeMini(c)}</span><span class="nm">${c.name}</span>${cardArt(k)}${text}</div>`;

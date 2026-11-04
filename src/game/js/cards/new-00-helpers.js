@@ -1,7 +1,7 @@
 /* ---------- new factions (Nov 2026): compact card lines, effects in fx (rules/fx.js) ----------
    U(key, name, supply, strength, defence, size, extra, text): a unit; T(...): a token unit.
    S(key, name, cost, target, cast, text): a spell; target 'lane' | 'enemy' | 'own' | 'any' | 'column'. */
-const FAC_GLYPH = { g: 'wheel', r: 'star', w: 'boot', e: 'hourglass', m: 'moon', c: 'clockface', d: 'sunskull', a: 'oxshield', b: 'eightcross', s: 'astar', o: 'oak', l: 'shell' };
+const FAC_GLYPH = { c: 'clockface', d: 'sunskull', a: 'oxshield', b: 'eightcross', s: 'astar', o: 'oak', l: 'shell' };
 const U = (key, name, sup, str, def, size, x, text) => [key, { name, size, sup, str, def, ...x, text }];
 const T = (...a) => { const r = U(...a); r[1].token = true; return r; };
 const S = (key, name, cost, tactic, cast, text, x = {}) => [key, { name, tactic, cost, cast, text, ...x }];

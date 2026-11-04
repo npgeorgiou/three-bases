@@ -122,7 +122,7 @@ const FX_OPS = {
     if (next && byId(s, next.id)) dealDamage(s, o.then ?? n, next, c.label + ' (ricochet)', fxAlive(s, c.u));
   },
   buff(s, c, o) {
-    const [a, d] = o.buff, x = o.per ? fxSel(s, c, o.per).length : 1;
+    const [a, d] = o.buff, x = o.per ? (typeof o.per === 'string' ? fxSel(s, c, o.per).length : fxAmount(s, c, o.per)) : 1;
     for (const t of fxSel(s, c, o.to)) {
       if (o.rnd) { t.ts = (t.ts || 0) + a * x; t.td = (t.td || 0) + d * x; } else { t.ps = (t.ps || 0) + a * x; t.pd = (t.pd || 0) + d * x; }
       if (a || d) log(s, `${unitName(t)} ${a * x >= 0 ? '+' : ''}${a * x}|${d * x >= 0 ? '+' : ''}${d * x}${o.rnd ? ' this round' : ''} (${c.label}).`);

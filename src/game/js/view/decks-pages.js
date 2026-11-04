@@ -119,7 +119,7 @@ function deleteDeck(id) {
 /* ---------- deck builder ---------- */
 let edit = null;   // { id, name, cards, dirty }
 /** Each faction's symbol (an existing card art) and the factions the card list shows (none picked: all). */
-const FAC_ART = { t: 'shield', h: 'fangs', x: 'skull', ...FAC_GLYPH };
+const FAC_ART = { ...FAC_GLYPH };
 const bFacs = new Set(), dFacs = new Set(), bTypes = new Set();   // bTypes: 'u' units, 's' spells (none picked: both)
 let bExclude = false;   // search toggle: include (green) or exclude (red) the matches   // the builder's and the decks page's faction filters
 function openBuilder(id) {

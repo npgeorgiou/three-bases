@@ -12,4 +12,4 @@
    hitsOwn, frenzy, eotShoot, eotShootStr, eotSapper, eotBurn, eotRegen, desert, deathDraw, deathAdjHeal, deathReturn.
    Spells: tactic = 'lane' | 'column' | 'own' | 'enemy' | 'any'; costLabel for variable costs.
    ===================================================================== */
-const CARDS = {
+const CARDS = {};
