@@ -1,81 +1,81 @@
 CARD Acorn | 1 - 1|2 | Immobile. Seeds 1. | mech: Seeding, Leaf-fall | makes: sapling, tree-dies
-CARD Green Shoot | 1 - 0|3 | Immobile. Place: each Sapling beside me gains +1/+1. | mech: Growth | makes: grown-tree | needs: sapling
+CARD Green Shoot | 1 - 0|2 | Immobile. Place: each Sapling beside me gains +1/+1. | mech: Growth | makes: grown-tree | needs: sapling
 CARD Bramble | 1 - 1|2 | Immobile. Place, and round end: if I am in your front row, deals 1 damage to each enemy in my column. | mech: Roots | makes: base-held | needs: tree-stands, enemy-pulled
-CARD Moss | 1 - 0|4 | Immobile. Whenever another ally in my lane dies, I gain +1 defence. | mech: Growth | makes: tree-stands | needs: tree-dies
+CARD Moss | 1 - 0|3 | Immobile. Whenever another ally in my lane dies, I gain +1 defence. | mech: Growth | makes: tree-stands | needs: tree-dies
 CARD Rootling | 1 - 1|1 | Immobile. Roots 1. Place: my Roots strike now. | mech: Roots | makes: base-held | needs: tree-stands
 CARD Seed Pod | 1 - 1|2 | Immobile. Place: places a Sapling in a free cell of my lane. | mech: Seeding | makes: sapling
 CARD Toadstool | 1 - 1|2 | Immobile. Death: each ally that was beside me gains +1/+1. | mech: Leaf-fall, Growth | makes: tree-dies, grown-tree, tree-stands
-CARD Fern | 1 - 0|3 | Immobile. Round end: if you hold this lane's base, each ally beside me gains +1 defence. | mech: Growth, The canopy | makes: grown-tree, tree-stands | needs: base-held
+CARD Fern | 1 - 0|2 | Immobile. Round end: if you hold this lane's base, each ally beside me gains +1 defence. | mech: Growth, The canopy | makes: grown-tree, tree-stands | needs: base-held
 CARD Young Oak | 2 - 1|2 | Immobile. Perennial 1. Place: your Saplings in my lane gain +1 defence. | mech: Growth | makes: grown-tree | needs: sapling
-CARD Hazel | 2 - 1|3 | Immobile. Seeds 2. | mech: Seeding, Leaf-fall | makes: sapling, tree-dies
+CARD Hazel | 2 - 1|2 | Immobile. Seeds 2. | mech: Seeding, Leaf-fall | makes: sapling, tree-dies
 CARD Rowan | 2 - 2|2 | Immobile. Roots 1. Place: my Roots strike now. | mech: Roots | makes: base-held, tree-stands | needs: grown-tree
 CARD Nettle Patch | 2 - 2|2 | Immobile. Place: deals 1 damage to the enemy facing me. Round end: deals 1 damage to it; 2 instead if I am in your front row. | mech: Roots | makes: base-held | needs: sapling, enemy-pulled
-CARD Mossbed | 2 - 0|3 | Immobile. Supply +1. Place: places a Sapling in a free cell of my lane. | mech: Seeding | makes: supply, sapling, tree-dies
-CARD Leaf Litter | 2 - 1|4 | Immobile. Whenever another ally in my lane dies, each ally beside me gains +1/+1. | mech: Leaf-fall, Growth | makes: grown-tree, tree-stands | needs: tree-dies
-CARD Weeping Willow | 2 - 1|4 | Immobile. Round end: restores 1 shield to each ally beside me. | mech: The canopy | makes: tree-stands | needs: sapling
-CARD Climbing Ivy | 2 - 2|4 | Immobile. Place: pulls the enemy facing me straight forward, as far as it can. | mech: Roots | makes: enemy-pulled
-CARD Holly | 2 - 2|4 | Immobile. When an enemy damages me and I survive, deals 1 damage to it. | mech: The canopy, Roots | makes: tree-stands, base-held
-CARD Druid Novice | 2 - 1|4 | Immobile. Place: draw a card if you have 3 or more units in this lane (me included). | mech: Seeding | needs: sapling
-CARD Fairy Ring | 2 - 1|4 | Immobile. Whenever another ally in my lane dies, places a Sapling in a free cell of my lane (once per round). | mech: Leaf-fall, Seeding | makes: sapling | needs: tree-dies
+CARD Mossbed | 2 - 0|2 | Immobile. Supply +1. Place: places a Sapling in a free cell of my lane. | mech: Seeding | makes: supply, sapling, tree-dies
+CARD Leaf Litter | 2 - 1|3 | Immobile. Whenever another ally in my lane dies, each ally beside me gains +1/+1. | mech: Leaf-fall, Growth | makes: grown-tree, tree-stands | needs: tree-dies
+CARD Weeping Willow | 2 - 1|3 | Immobile. Round end: restores 1 shield to each ally beside me. | mech: The canopy | makes: tree-stands | needs: sapling
+CARD Climbing Ivy | 2 - 2|3 | Immobile. Place: pulls the enemy facing me straight forward, as far as it can. | mech: Roots | makes: enemy-pulled
+CARD Holly | 2 - 2|3 | Immobile. When an enemy damages me and I survive, deals 1 damage to it. | mech: The canopy, Roots | makes: tree-stands, base-held
+CARD Druid Novice | 2 - 1|3 | Immobile. Place: draw a card if you have 3 or more units in this lane (me included). | mech: Seeding | needs: sapling
+CARD Fairy Ring | 2 - 1|3 | Immobile. Whenever another ally in my lane dies, places a Sapling in a free cell of my lane (once per round). | mech: Leaf-fall, Seeding | makes: sapling | needs: tree-dies
 CARD Reed Bed | 2 - 2|2 | Immobile. Place: a Sapling in my front row. Round end: another one there if you have 1 or fewer units in it. | mech: Seeding | makes: sapling, base-held, tree-dies
-CARD Old Oak | 3 - 2|3 | Immobile. Perennial 1. Place: each ally beside me gains +1/+1. | mech: Growth | makes: grown-tree, tree-stands | needs: sapling
-CARD Ash Tree | 3 - 2|3 | Immobile. Roots 2. Place: my Roots strike now. | mech: Roots | makes: base-held | needs: grown-tree, sapling
-CARD Elder Bush | 3 - 1|4 | Immobile. Seeds 2. Round end: restores 1 shield to me. | mech: Seeding, Leaf-fall | makes: sapling, tree-dies, tree-stands
-CARD Beech | 3 - 1|5 | Immobile. Place: places a Sapling in my lane. Other allies in my row have +1 defence. | mech: The canopy, Seeding | makes: tree-stands, sapling | needs: sapling
-CARD Tall Pine | 3 - 1|5 | Immobile. Other allies in my column have +1 defence, and +1 strength while you hold this lane's base. | mech: The canopy | makes: tree-stands | needs: base-held
-CARD Compost Heap | 3 - 0|5 | Immobile. Whenever another ally in my lane dies, your other units in my lane gain +1/+1. | mech: Leaf-fall, Growth | makes: grown-tree, tree-stands | needs: tree-dies
-CARD Grove Druid | 3 - 1|5 | Immobile. Place: draw 2 cards if you have 4 or more units in this lane (me included); otherwise draw 1. | mech: Seeding, Growth | needs: sapling, grown-tree | champion
-CARD Blackthorn | 3 - 2|4 | Immobile. Round end: deals 1 damage to each enemy in my column. | mech: Roots | makes: base-held | needs: tree-stands
-CARD Silver Birch | 3 - 1|3 | Immobile. Perennial 1. Round end: if you hold this lane's base, places a Sapling in a free cell of my lane. | mech: Growth, Seeding | makes: sapling, tree-dies, grown-tree | needs: base-held, tree-stands
-CARD Strangling Vine | 3 - 2|3 | Immobile. Place, and round end: pulls the enemy furthest from the base straight forward, as far as it can. | mech: Roots | makes: enemy-pulled
-CARD Rich Loam | 3 - 0|4 | Immobile. Supply +1. Seeds 1. | mech: Seeding, Leaf-fall | makes: sapling, tree-dies, supply
-CARD Acorn Cache | 2 - 1|4 | Immobile. Death: draw a card and place a Sapling in my lane. | mech: Leaf-fall, Seeding | makes: sapling, tree-dies | needs: tree-stands
-CARD Mother of Saplings | 4 - 1|5 | Immobile. Round end: places a Sapling in a free cell of my lane. Whenever a Sapling of yours in my lane dies, I gain +1/+1. | mech: Seeding, Leaf-fall | makes: sapling, grown-tree, tree-dies | needs: tree-dies | champion
-CARD Deep Root | 4 - 1|4 | Immobile. Roots 3. Place: my Roots strike now. | mech: Roots, The canopy | makes: base-held | needs: tree-stands, enemy-pulled | champion
-CARD Ancient Yew | 4 - 1|4 | Immobile. Perennial 1. Place: your Saplings in my lane gain +1/+1. Allies beside me have +1 defence. | mech: Growth, The canopy | makes: grown-tree, tree-stands | needs: sapling
-CARD Hornbeam Hedge | 4 - 2|6 ▪▪ | Immobile. Bodyguard. | mech: The canopy | makes: tree-stands
-CARD Walnut Tree | 4 - 1|5 | Immobile. Seeds 3. | mech: Seeding, Leaf-fall | makes: sapling, tree-dies, tree-stands
-CARD Seed Spitter | 4 - 2|3 | Immobile. Ranged. When I attack, places a Sapling in a free cell of my lane. | mech: Roots, Seeding | makes: sapling, tree-dies
-CARD Rotting Log | 4 - 0|6 ▪▪ | Immobile. Whenever another ally in my lane dies, your other units in my lane gain +1 strength. Death: they gain +1/+1. | mech: Leaf-fall, Growth | makes: grown-tree, tree-stands | needs: tree-dies
-CARD Sacred Grove | 4 - 1|4 | Immobile. Place: if you hold this lane's base, your other units in my lane gain +1/+1. As long as you hold it, they have +1 strength. | mech: The canopy, Growth | makes: grown-tree | needs: base-held
-CARD Old Growth | 4 - 2|4 | Immobile. Round end: I gain +1/+1; +2/+2 instead if you don't hold this lane's base. | mech: Growth | makes: grown-tree, tree-stands
-CARD The Eldest Oak | 8 - 3|6 ▪▪▪▪ | Immobile. Perennial 1. Roots 2. Place: your Saplings in my lane gain +2/+2, then your other units here gain +1/+1. Other allies in my row(s) have +1 defence. | mech: Growth, Roots | makes: grown-tree, tree-stands, base-held | needs: supply, sapling | champion
-CARD Wandering Seed-Wind | 5 - 1|4 | Immobile. Place: places a Sapling in each lane. Round end: places a Sapling in each other lane. | mech: Seeding, Growth | makes: sapling, base-held | needs: supply, grown-tree | champion
-CARD Heartwood Giant | 7 - 2|6 ▪▪▪▪ | Immobile. Perennial 1. Bodyguard. Place: I gain +1/+1 for each other ally in my lane (up to 5). | mech: Growth, The canopy | makes: grown-tree, tree-stands, base-held | needs: supply, sapling
-CARD Great Baobab | 6 - 1|6 ▪▪ | Immobile. Supply +1. Place: your other units in my lane restore all their shields and gain +1 defence. Round end: restores 2 shields to each of them. | mech: The canopy | makes: supply, tree-stands | needs: supply
-CARD World Tree | 9 - 3|5 ▪▪▪▪ | Immobile. Perennial 2. Roots 2. Place: each of your units in every lane gains +1/+1. | mech: Growth, Roots | makes: grown-tree, enemy-hit-roundend | needs: supply
-CARD Thicket | 3 - 2|5 | Immobile. Has +1 defence for each ally beside me (up to 3). | mech: The canopy | makes: tree-stands, base-held | needs: sapling
-CARD Old Stump | 2 - 0|4 | Immobile. Place: a Sapling in my front row. | mech: The canopy, Seeding | makes: tree-stands, base-held, sapling
-CARD Wild Cherry | 3 - 2|5 | Immobile. Death: restores all shields of your other units in my lane. | mech: Leaf-fall, The canopy | makes: tree-dies, tree-stands
-CARD Root Web | 3 - 2|4 | Immobile. Round end: deals 1 damage to it; 2 instead if another ally stands in my column. | mech: Roots | makes: base-held | needs: tree-stands, enemy-pulled
-CARD Lichen | 1 - 0|3 | Immobile. Round end: I gain +1 defence. | mech: Growth | makes: tree-stands
+CARD Old Oak | 3 - 2|2 | Immobile. Perennial 1. Place: each ally beside me gains +1/+1. | mech: Growth | makes: grown-tree, tree-stands | needs: sapling
+CARD Ash Tree | 3 - 2|2 | Immobile. Roots 2. Place: my Roots strike now. | mech: Roots | makes: base-held | needs: grown-tree, sapling
+CARD Elder Bush | 3 - 1|3 | Immobile. Seeds 2. Round end: restores 1 shield to me. | mech: Seeding, Leaf-fall | makes: sapling, tree-dies, tree-stands
+CARD Beech | 3 - 1|4 | Immobile. Place: places a Sapling in my lane. Other allies in my row have +1 defence. | mech: The canopy, Seeding | makes: tree-stands, sapling | needs: sapling
+CARD Tall Pine | 3 - 1|4 | Immobile. Other allies in my column have +1 defence, and +1 strength while you hold this lane's base. | mech: The canopy | makes: tree-stands | needs: base-held
+CARD Compost Heap | 3 - 0|4 | Immobile. Whenever another ally in my lane dies, your other units in my lane gain +1/+1. | mech: Leaf-fall, Growth | makes: grown-tree, tree-stands | needs: tree-dies
+CARD Grove Druid | 3 - 1|4 | Immobile. Place: draw 2 cards if you have 4 or more units in this lane (me included); otherwise draw 1. | mech: Seeding, Growth | needs: sapling, grown-tree | champion
+CARD Blackthorn | 3 - 2|3 | Immobile. Round end: deals 1 damage to each enemy in my column. | mech: Roots | makes: base-held | needs: tree-stands
+CARD Silver Birch | 3 - 1|2 | Immobile. Perennial 1. Round end: if you hold this lane's base, places a Sapling in a free cell of my lane. | mech: Growth, Seeding | makes: sapling, tree-dies, grown-tree | needs: base-held, tree-stands
+CARD Strangling Vine | 3 - 2|2 | Immobile. Place, and round end: pulls the enemy furthest from the base straight forward, as far as it can. | mech: Roots | makes: enemy-pulled
+CARD Rich Loam | 3 - 0|3 | Immobile. Supply +1. Seeds 1. | mech: Seeding, Leaf-fall | makes: sapling, tree-dies, supply
+CARD Acorn Cache | 2 - 1|3 | Immobile. Death: draw a card and place a Sapling in my lane. | mech: Leaf-fall, Seeding | makes: sapling, tree-dies | needs: tree-stands
+CARD Mother of Saplings | 4 - 1|4 | Immobile. Round end: places a Sapling in a free cell of my lane. Whenever a Sapling of yours in my lane dies, I gain +1/+1. | mech: Seeding, Leaf-fall | makes: sapling, grown-tree, tree-dies | needs: tree-dies | champion
+CARD Deep Root | 4 - 1|3 | Immobile. Roots 3. Place: my Roots strike now. | mech: Roots, The canopy | makes: base-held | needs: tree-stands, enemy-pulled | champion
+CARD Ancient Yew | 4 - 1|3 | Immobile. Perennial 1. Place: your Saplings in my lane gain +1/+1. Allies beside me have +1 defence. | mech: Growth, The canopy | makes: grown-tree, tree-stands | needs: sapling
+CARD Hornbeam Hedge | 4 - 2|5 ▪▪ | Immobile. Bodyguard. | mech: The canopy | makes: tree-stands
+CARD Walnut Tree | 4 - 1|4 | Immobile. Seeds 3. | mech: Seeding, Leaf-fall | makes: sapling, tree-dies, tree-stands
+CARD Seed Spitter | 4 - 2|2 | Immobile. Ranged. When I attack, places a Sapling in a free cell of my lane. | mech: Roots, Seeding | makes: sapling, tree-dies
+CARD Rotting Log | 4 - 0|5 ▪▪ | Immobile. Whenever another ally in my lane dies, your other units in my lane gain +1 strength. Death: they gain +1/+1. | mech: Leaf-fall, Growth | makes: grown-tree, tree-stands | needs: tree-dies
+CARD Sacred Grove | 4 - 1|3 | Immobile. Place: if you hold this lane's base, your other units in my lane gain +1/+1. As long as you hold it, they have +1 strength. | mech: The canopy, Growth | makes: grown-tree | needs: base-held
+CARD Old Growth | 4 - 2|3 | Immobile. Round end: I gain +1/+1; +2/+2 instead if you don't hold this lane's base. | mech: Growth | makes: grown-tree, tree-stands
+CARD The Eldest Oak | 8 - 3|5 ▪▪▪▪ | Immobile. Perennial 1. Roots 2. Place: your Saplings in my lane gain +2/+2, then your other units here gain +1/+1. Other allies in my row(s) have +1 defence. | mech: Growth, Roots | makes: grown-tree, tree-stands, base-held | needs: supply, sapling | champion
+CARD Wandering Seed-Wind | 5 - 1|3 | Immobile. Place: places a Sapling in each lane. Round end: places a Sapling in each other lane. | mech: Seeding, Growth | makes: sapling, base-held | needs: supply, grown-tree | champion
+CARD Heartwood Giant | 7 - 2|5 ▪▪▪▪ | Immobile. Perennial 1. Bodyguard. Place: I gain +1/+1 for each other ally in my lane (up to 5). | mech: Growth, The canopy | makes: grown-tree, tree-stands, base-held | needs: supply, sapling
+CARD Great Baobab | 6 - 1|5 ▪▪ | Immobile. Supply +1. Place: your other units in my lane restore all their shields and gain +1 defence. Round end: restores 2 shields to each of them. | mech: The canopy | makes: supply, tree-stands | needs: supply
+CARD World Tree | 9 - 3|4 ▪▪▪▪ | Immobile. Perennial 2. Roots 2. Place: each of your units in every lane gains +1/+1. | mech: Growth, Roots | makes: grown-tree, enemy-hit-roundend | needs: supply
+CARD Thicket | 3 - 2|4 | Immobile. Has +1 defence for each ally beside me (up to 3). | mech: The canopy | makes: tree-stands, base-held | needs: sapling
+CARD Old Stump | 2 - 0|3 | Immobile. Place: a Sapling in my front row. | mech: The canopy, Seeding | makes: tree-stands, base-held, sapling
+CARD Wild Cherry | 3 - 2|4 | Immobile. Death: restores all shields of your other units in my lane. | mech: Leaf-fall, The canopy | makes: tree-dies, tree-stands
+CARD Root Web | 3 - 2|3 | Immobile. Round end: deals 1 damage to it; 2 instead if another ally stands in my column. | mech: Roots | makes: base-held | needs: tree-stands, enemy-pulled
+CARD Lichen | 1 - 0|2 | Immobile. Round end: I gain +1 defence. | mech: Growth | makes: tree-stands
 CARD Sundew | 1 - 1|2 | Immobile. Whenever an enemy is placed in my lane, deals 1 damage to it. | mech: Roots | makes: base-held
-CARD Mistletoe | 2 - 1|4 | Immobile. Round end: the ally directly in front of me gains +1 strength. | mech: Growth | makes: grown-tree
-CARD Green Man | 5 - 2|4 | Immobile. Perennial 1. Place: I gain +1/+1 for each unit that died this round (up to 3). Whenever another ally in my lane dies, I gain +1/+1. | mech: Growth, Leaf-fall | makes: grown-tree | needs: tree-dies, supply
-CARD King of Roots | 6 - 2|6 | Immobile. Roots 2. Place: each of your units with Roots in my lane (me included) strikes with its Roots now. While I am outside your front row, other allies in my lane have +1 strength. | mech: Roots | makes: base-held | needs: tree-stands, supply
-CARD Great Vine | 5 - 2|4 ▪▪ | Immobile. Place, and round end: pulls each enemy outside the enemy front row straight forward, then deals 1 damage to each enemy in the enemy front row. | mech: Roots | makes: enemy-pulled, base-held | needs: supply
-CARD Nursery Log | 2 - 0|5 | Immobile. Saplings beside me have +1/+1. | mech: The canopy, Growth | makes: tree-stands, grown-tree | needs: sapling
-CARD Canopy Oak | 5 - 2|6 ▪▪ | Immobile. Place: your other units in my lane gain +1 defence. They have +1 defence more while I stand. | mech: The canopy | makes: tree-stands | needs: sapling, supply
-CARD Mycelium | 2 - 1|3 | Immobile. Whenever a Sapling of yours in my lane dies, places a Sapling in a free cell of my lane (once per round). | mech: Leaf-fall, Seeding | makes: sapling | needs: sapling
-CARD Redwood | 6 - 3|6 ▪▪ | Immobile. Perennial 1. Place: the other allies in my column(s) gain +2 defence. | mech: Growth, The canopy | makes: grown-tree, tree-stands | needs: supply
-CARD Thornwood | 3 - 2|4 | Immobile. Round end: if you hold this lane's base, deals 1 damage to each enemy in the enemy front row. | mech: Roots | makes: base-held | needs: base-held
-CARD Dryad | 3 - 2|3 | Immobile. Place: places a Sapling beside me. Your Saplings in my lane have +1 strength. | mech: Seeding | makes: sapling, tree-dies
-CARD Woodland Spring | 4 - 1|7 | Immobile. Round end: restores 1 shield to each other ally in my lane. | mech: The canopy | makes: tree-stands | needs: tree-dies, sapling
-CARD Root Snare | 2 - 1|4 | Immobile. Roots 1. Place: pulls the enemy facing me straight forward, as far as it can. | mech: Roots | makes: base-held, enemy-pulled | needs: tree-stands
-CARD Mangrove | 4 - 1|5 | Immobile. Roots 1. Seeds 1. | mech: Seeding, Leaf-fall | makes: sapling, tree-dies, base-held | needs: tree-stands
-CARD Bamboo Grove | 3 - 2|5 | Immobile. Round end: I gain +2 strength. | mech: Growth | makes: grown-tree, tree-stands
-CARD Elm | 2 - 1|4 | Immobile. Place: each ally beside me gains +1 strength. Allies beside me have +1 strength more. | mech: The canopy, Growth | makes: grown-tree | needs: tree-stands
-CARD Root Cellar | 3 - 0|4 | Immobile. Supply +1. Place: +1 supply in this lane this round. Round end: restores 1 shield to me. | mech: Seeding | makes: supply
-CARD Lightning-struck Oak | 3 - 2|4 | Immobile. Death: deals 2 damage to the enemy facing me and places a Sapling in my lane. | mech: Seeding, Leaf-fall | makes: sapling, tree-dies, base-held
+CARD Mistletoe | 2 - 1|3 | Immobile. Round end: the ally directly in front of me gains +1 strength. | mech: Growth | makes: grown-tree
+CARD Green Man | 5 - 2|3 | Immobile. Perennial 1. Place: I gain +1/+1 for each unit that died this round (up to 3). Whenever another ally in my lane dies, I gain +1/+1. | mech: Growth, Leaf-fall | makes: grown-tree | needs: tree-dies, supply
+CARD King of Roots | 6 - 2|5 | Immobile. Roots 2. Place: each of your units with Roots in my lane (me included) strikes with its Roots now. While I am outside your front row, other allies in my lane have +1 strength. | mech: Roots | makes: base-held | needs: tree-stands, supply
+CARD Great Vine | 5 - 2|3 ▪▪ | Immobile. Place, and round end: pulls each enemy outside the enemy front row straight forward, then deals 1 damage to each enemy in the enemy front row. | mech: Roots | makes: enemy-pulled, base-held | needs: supply
+CARD Nursery Log | 2 - 0|4 | Immobile. Saplings beside me have +1/+1. | mech: The canopy, Growth | makes: tree-stands, grown-tree | needs: sapling
+CARD Canopy Oak | 5 - 2|5 ▪▪ | Immobile. Place: your other units in my lane gain +1 defence. They have +1 defence more while I stand. | mech: The canopy | makes: tree-stands | needs: sapling, supply
+CARD Mycelium | 2 - 1|2 | Immobile. Whenever a Sapling of yours in my lane dies, places a Sapling in a free cell of my lane (once per round). | mech: Leaf-fall, Seeding | makes: sapling | needs: sapling
+CARD Redwood | 6 - 3|5 ▪▪ | Immobile. Perennial 1. Place: the other allies in my column(s) gain +2 defence. | mech: Growth, The canopy | makes: grown-tree, tree-stands | needs: supply
+CARD Thornwood | 3 - 2|3 | Immobile. Round end: if you hold this lane's base, deals 1 damage to each enemy in the enemy front row. | mech: Roots | makes: base-held | needs: base-held
+CARD Dryad | 3 - 2|2 | Immobile. Place: places a Sapling beside me. Your Saplings in my lane have +1 strength. | mech: Seeding | makes: sapling, tree-dies
+CARD Woodland Spring | 4 - 1|6 | Immobile. Round end: restores 1 shield to each other ally in my lane. | mech: The canopy | makes: tree-stands | needs: tree-dies, sapling
+CARD Root Snare | 2 - 1|3 | Immobile. Roots 1. Place: pulls the enemy facing me straight forward, as far as it can. | mech: Roots | makes: base-held, enemy-pulled | needs: tree-stands
+CARD Mangrove | 4 - 1|4 | Immobile. Roots 1. Seeds 1. | mech: Seeding, Leaf-fall | makes: sapling, tree-dies, base-held | needs: tree-stands
+CARD Bamboo Grove | 3 - 2|4 | Immobile. Round end: I gain +2 strength. | mech: Growth | makes: grown-tree, tree-stands
+CARD Elm | 2 - 1|3 | Immobile. Place: each ally beside me gains +1 strength. Allies beside me have +1 strength more. | mech: The canopy, Growth | makes: grown-tree | needs: tree-stands
+CARD Root Cellar | 3 - 0|3 | Immobile. Supply +1. Place: +1 supply in this lane this round. Round end: restores 1 shield to me. | mech: Seeding | makes: supply
+CARD Lightning-struck Oak | 3 - 2|3 | Immobile. Death: deals 2 damage to the enemy facing me and places a Sapling in my lane. | mech: Seeding, Leaf-fall | makes: sapling, tree-dies, base-held
 CARD Seed Storm | spell 3 | Pick a lane: a Sapling in each free cell of your front row there. | mech: Seeding | makes: sapling, base-held, tree-dies
 CARD Heart of Oak | spell 2 | An ally gains +1/+1, and +1/+1 more for each Sapling touching it. | mech: Growth | makes: grown-tree | needs: sapling
 CARD Morning Dew | spell 1 | Pick a lane: restore 2 shields to each of your units there; your Saplings there gain +1 defence. | mech: The canopy | needs: sapling, tree-stands
 CARD Prune | spell 1 | A Sapling of yours dies; each ally that touched it gains +1/+1. | mech: Leaf-fall, Growth | makes: tree-dies, grown-tree, tree-stands | needs: sapling
 CARD Creeping Moss | spell 1 | Pick a lane: your units there gain +1 defence. | mech: The canopy | makes: tree-stands | needs: sapling
 CARD Equinox | spell 1 | An ally's round-end effects happen now. | mech: Growth | needs: grown-tree
-CARD Oak Warden | 4 - 2|6 | Immobile. Bodyguard. Perennial 1. | mech: The canopy, Growth | makes: tree-stands, grown-tree | needs: supply
+CARD Oak Warden | 4 - 2|5 | Immobile. Bodyguard. Perennial 1. | mech: The canopy, Growth | makes: tree-stands, grown-tree | needs: supply
 CARD Roots Rise | spell 2 | Deals 2 damage to the enemy facing an ally; the ally gains +1 defence. | mech: Roots | makes: base-held | needs: tree-stands
-CARD Council of the Grove | 7 - 2|6 | Immobile. Place: your other units in my lane gain +1/+1; draw 2 cards if you have 5 or more units here (me included). | mech: Growth, Seeding | makes: grown-tree | needs: sapling, supply
+CARD Council of the Grove | 7 - 2|5 | Immobile. Place: your other units in my lane gain +1/+1; draw 2 cards if you have 5 or more units here (me included). | mech: Growth, Seeding | makes: grown-tree | needs: sapling, supply
 CARD Scatter Seeds | spell 2 | Pick a lane: two Saplings in free cells of your camp there. | mech: Seeding | makes: sapling, tree-dies
 CARD Spring Rain | spell 2 | Pick a lane: your units there gain +1/+1. | mech: Growth | makes: grown-tree, tree-stands | needs: sapling
 CARD Whispering Leaves | spell 1 | Pick a lane: draw a card; draw another if you hold its base. | mech: The canopy | needs: base-held

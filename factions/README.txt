@@ -33,35 +33,35 @@ START_DESIGN.md                   148  START HERE for any faction or card design
 3-candidates/C20-bonds.txt           19  C20. BONDS — paired units share everything (new idea)
 3-candidates/C21-terraformers.txt    18  C21. TERRAFORMERS — shapes the cells (terrain; new idea)
 3-candidates/C22-rotborn.txt         18  C22. ROTBORN — remains that feed growth (planned; part 2)
-4-kaptains-ideas.txt                 64  4. KAPTAIN'S IDEAS (11 Oct 2026, written while reading Runeterra's Noxus and Faeria's red 
-5-card-design-method.txt             21  5. CARD DESIGN METHOD (11 Oct 2026; Claude's proposal after Kaptain's critique of the thre
-6-faction-entry-format.txt           17  6. FACTION ENTRY FORMAT (11 Oct 2026; Claude's proposal from the agreed points in Part 5)
-7-ideas-kept-for-later.txt           18  7. IDEAS KEPT FOR LATER (moved from summary/, 12 Oct 2026)
+4-kaptains-ideas.txt                64  4. KAPTAIN'S IDEAS (11 Oct 2026, written while reading Runeterra's Noxus and Faeria's red 
+5-card-design-method.txt            21  5. CARD DESIGN METHOD (11 Oct 2026; Claude's proposal after Kaptain's critique of the thre
+6-faction-entry-format.txt          17  6. FACTION ENTRY FORMAT (11 Oct 2026; Claude's proposal from the agreed points in Part 5)
+7-ideas-kept-for-later.txt          18  7. IDEAS KEPT FOR LATER (moved from summary/, 12 Oct 2026)
 9-new-factions.txt                  41  9. THE FIVE NEW FACTIONS in the game for testing (identity, mechanics, specials)
-8-rejected-and-cut.txt                6  8. REJECTED AND CUT (don't reintroduce without asking)
+8-rejected-and-cut.txt               6  8. REJECTED AND CUT (don't reintroduce without asking)
 10-outside-design-guides.txt        79  10. What outside design guides teach (Hearthstone, Rosewater, Slay the Spire...) and what they mean here
-11-seven-factions.txt               57  11. The seven factions of 4 Nov 2026 (clockwork, death, aggro, defence, spells, all-Immobile, WWI artillery): overview, new rules, checks
-designs/00-five-identities.txt     52  The five new factions from zero: overview, contrast, signatures, new rules needed
-designs/ironfront.txt              90  Ironfront (World War I) stage 1: theme, mechanics, web, ways to play
-designs/lodestones.txt             88  Lodestones (megaliths, all Immobile) stage 1
-designs/glyphwrights.txt           96  Glyphwrights (Daoist talismans) stage 1
-designs/brokers.txt                95  Brokers (Prohibition gangs) stage 1
-designs/hunters.txt                91  Wild Hunt stage 1
-designs/horologers.txt             102  Horologers (clockwork) stage 1: theme, identity, mechanics, groups, champions
-designs/horologers-cards.txt       108  its card lines (made from the game by tools/design_cards.js)
-designs/sunfeeders.txt              96  Sunfeeders (death, Mexica) stage 1
-designs/sunfeeders-cards.txt       103  its card lines (made from the game by tools/design_cards.js)
-designs/impi.txt                    95  Impi (aggro, Zulu regiments) stage 1
-designs/impi-cards.txt             104  its card lines (made from the game by tools/design_cards.js)
-designs/hospice.txt                 94  Hospice Knights (defence, hospital orders) stage 1
-designs/hospice-cards.txt          101  its card lines (made from the game by tools/design_cards.js)
-designs/starpriests.txt             92  Star Priests (spells, Babylon) stage 1
-designs/starpriests-cards.txt      101  its card lines (made from the game by tools/design_cards.js)
-designs/rootkin.txt                 93  Rootkin (all Immobile, living forest) stage 1
-designs/rootkin-cards.txt          101  its card lines (made from the game by tools/design_cards.js)
-designs/longguns.txt                97  The Long Guns (World War I artillery) stage 1
-designs/longguns-cards.txt         101  its card lines (made from the game by tools/design_cards.js)
-designs/benchmark-seven.txt              36  Benchmark report of the seven factions (win rates, cards never played)
+11-seven-factions.txt               61  11. The seven factions of 4 Nov 2026 (clockwork, death, aggro, defence, spells, all-Immobile, WWI artillery): overview, new rules, checks
+designs/00-five-identities.txt      52  The five new factions from zero: overview, contrast, signatures, new rules needed
+designs/ironfront.txt               90  Ironfront (World War I) stage 1: theme, mechanics, web, ways to play
+designs/lodestones.txt              88  Lodestones (megaliths, all Immobile) stage 1
+designs/glyphwrights.txt            96  Glyphwrights (Daoist talismans) stage 1
+designs/brokers.txt                 95  Brokers (Prohibition gangs) stage 1
+designs/hunters.txt                 91  Wild Hunt stage 1
+designs/horologers.txt             118  Horologers (clockwork) stage 1: theme, identity, mechanics, groups, champions
+designs/horologers-cards.txt       111  its card lines (made from the game by tools/design_cards.js)
+designs/sunfeeders.txt             113  Sunfeeders (death, Mexica) stage 1
+designs/sunfeeders-cards.txt       106  its card lines (made from the game by tools/design_cards.js)
+designs/impi.txt                   111  Impi (aggro, Zulu regiments) stage 1
+designs/impi-cards.txt             107  its card lines (made from the game by tools/design_cards.js)
+designs/hospice.txt                109  Hospice Knights (defence, hospital orders) stage 1
+designs/hospice-cards.txt          104  its card lines (made from the game by tools/design_cards.js)
+designs/starpriests.txt            107  Star Priests (spells, Babylon) stage 1
+designs/starpriests-cards.txt      103  its card lines (made from the game by tools/design_cards.js)
+designs/rootkin.txt                107  Rootkin (all Immobile, living forest) stage 1
+designs/rootkin-cards.txt          102  its card lines (made from the game by tools/design_cards.js)
+designs/longguns.txt               112  The Long Guns (World War I artillery) stage 1
+designs/longguns-cards.txt         103  its card lines (made from the game by tools/design_cards.js)
+designs/benchmark-seven.txt         40  Benchmark report of the seven factions (win rates, cards never played)
 
 ==================================================================
 1. CURRENT FACTIONS
