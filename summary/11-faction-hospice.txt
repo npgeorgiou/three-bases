@@ -1,0 +1,122 @@
+==================================================================
+11. HOSPICE KNIGHTS (faction letter b; 104 cards: 75 units, 29 spells)
+==================================================================
+Theme: the military orders of hospital knights, at the great siege of an island fortress in the 16th century.
+Identity: Few, tough knights who hold the dots by outlasting the enemy: every blow they survive hardens them or is struck back, the hospital restores them, and as long as they hold a base, relief keeps arriving.
+Keywords (value = stat points from the supply budget):
+- Harden (value 1; measured: at 2 the faction lost almost every Benchmark game): when I survive damage, I gain +1 defence.
+- Retaliate N (value N): when I survive damage from an enemy unit, I deal N damage to it.
+- Vigil N (value N): round end: restores N of my shields.
+Champions: Castellan of the Bastion, Knight of the Sortie, Infirmarian Mother, The Grand Master, Relief Galley.
+Design entry: factions/designs/hospice.txt. Cards in the game: src/game/js/cards/new-hospice.js.
+
+Units (supply - strength|defence, size):
+Garrison Spearman  1 - 1|2  Pike.
+Gate Watch  1 - 0|2  Whenever an enemy is placed in my lane, deals 1 damage to it.
+Herbalist  1 - 0|3  Whenever my shields are restored, restores 1 shield to each ally beside me.
+Hospital Orderly  1 - 0|3  Round end: restores 1 shield to each ally beside me.
+Lay Brother  1 - 1|2  Death: each ally beside me gains +1 defence.
+Penitent  1 - 2|3  Place: I take 1 damage.
+Pilgrim  1 - 1|2  Whenever my shields are restored, I gain +1 strength. Death: +1 carry-over.
+Postulant  1 - 0|2  Vigil 1. Death: restores all shields of the ally directly in front of me.
+Squire  1 - 0|2  Harden. Death: restores 1 shield to each ally beside me.
+Thorn Brother  1 - 0|2  Retaliate 1. Death: deals 1 damage to the enemy facing me.
+Almoner  2 - 1|3  Place: draw a card if an ally in my lane has lost shields.
+Banner of the Order  2 - 0|3  As long as you hold this lane's base, other allies in my row have +1 defence.
+Bell of the Hospice  2 - 0|6  Immobile. Whenever an enemy is placed in my lane, restores 1 shield to each of your units in my lane.
+Crossbow Brother  2 - 1|2  Ranged.
+Field Surgeon  2 - 1|3  Whenever another ally in my lane survives damage, it restores 1 shield.
+Gatekeeper  2 - 1|3  Whenever an enemy is placed in my lane, I strike the nearest enemy (once per round).
+Granary  2 - 0|3  Immobile. Supply +1. Round end: restores 1 shield to me.
+Herald of Challenge  2 - 1|3  Place: pulls the enemy facing me straight forward, as far as it can.
+Master of Novices  2 - 1|3  Place: if you hold this lane's base, places a Novice Knight in my front row.
+Oathsworn  2 - 2|2  When I survive damage, I gain +1 defence and restore 1 shield. Death: your other units in my lane gain +1 defence.
+Porter of the Sick  2 - 1|3  Place: restores 2 shields to each ally beside me.
+Scarred Veteran  2 - 1|4  When I survive damage, I gain +1 strength. Place: I strike the nearest enemy I could attack (a sortie).
+Sergeant-at-Arms  2 - 1|4  Harden. Place: I strike the nearest enemy I could attack (a sortie).
+Shield Brother  2 - 1|3  Bodyguard. Place: restores 2 shields to each ally beside me.
+Shield Wall Brother  2 - 1|3  Shield wall.
+Sister of the Ward  2 - 0|4  Round end: restores 2 shields to the most damaged ally in my lane.
+Spiked Shield  2 - 1|2  Retaliate 2. Death: deals 2 damage to the enemy facing me.
+Thorn Wall  2 - 0|7  Immobile. Retaliate 1.
+Vigilant Knight  2 - 2|3  Vigil 1. Place: I strike the nearest enemy I could attack (a sortie).
+Wounded Knight  2 - 2|3  Place: I take 2 damage. Whenever my shields are restored, I gain +1|+1.
+Avenging Knight  3 - 2|4  Whenever another ally in my lane dies, I gain +2 strength. Place: I strike the nearest enemy I could attack (a sortie).
+Bastion Guard  3 - 1|4  Armoured. Place: pulls the enemy facing me straight forward, as far as it can.
+Challenger  3 - 2|5  Place: pulls the enemy facing me straight forward, as far as it can.
+Chaplain  3 - 1|4  Round end: restores 2 shields to the ally directly in front of me. Whenever my shields are restored, I gain +1 defence.
+Cistern Keeper  3 - 0|4  Supply +1. Round end: restores 1 shield to each ally beside me.
+Drawbridge  3 - 0|7  Immobile. Whenever an enemy is placed in my lane, it is pushed one row back (if the cell is free).
+Fencing Master  3 - 2|4  Riposte.
+Halberd Brother  3 - 2|4  Pike. Retaliate 1.
+Infirmarian  3 - 1|5  Round end: restores 1 shield to each other ally in my lane.
+Knight of Iron Will  3 - 1|4  Harden. When I survive damage, your other units in my lane gain +1 strength this round. Place: I strike the nearest enemy I could attack (a sortie).
+Knight of the Hospice  3 - 2|3  Harden. Vigil 1. Death: places a Novice Knight in my front row. Place: I strike the nearest enemy I could attack (a sortie).
+Pilgrim Crusader  3 - 2|3  Harden. Place: I strike the nearest enemy I could attack.
+Reliquary  3 - 0|7  Immobile. Round end: if you hold this lane's base, restores all shields of each other ally in my lane.
+Sally Port  3 - 0|6  Immobile. Whenever an enemy is placed in my lane, the other allies in my row gain +1|+1 this round.
+Sea Watch  3 - 1|4  Round end: if you don't hold this lane's base, restores all shields of each other ally in my row.
+Sortie Rider  3 - 1|4  Whenever an enemy is placed in my lane, deals 2 damage to it.
+Stalwart  3 - 1|5  Harden. Bodyguard. Place: I strike the nearest enemy I could attack (a sortie).
+Thorn Knight  3 - 2|4  Retaliate 2. Place: I strike the nearest enemy I could attack (a sortie).
+Victualler  3 - 1|4  Round end: +1 carry-over if you hold this lane's base (once per round).
+Wall Mason  3 - 0|7  Immobile. Round end: the ally directly in front of me gains +1 defence.
+Hospitaller Knight  4 - 2|4  Whenever another ally in my lane survives damage, I gain +1 defence.
+Infirmarian Mother  4 - 1|5  Round end: restores 2 shields to each of your units in my lane.
+Knight of the Last Gate  4 - 3|4  Retaliate 1. Place: if you don't hold this lane's base, I gain +2|+2.
+Lance of the Order  4 - 3|3  Charge. When I survive damage, I gain +1 defence.
+Marshal of the Order  4 - 2|5  Whenever an enemy is placed in my lane, your units in my lane gain +1 strength this round.
+Master Surgeon  4 - 1|4  Place, and round end: the most damaged ally in my lane gains +1 defence and restores all its shields.
+Novice Hall  4 - 0|6  Immobile. Place, and round end: if you hold this lane's base, places a Novice Knight in my front row.
+Paladin of the Ward  4 - 2|5  Harden. Whenever my shields are restored, I gain +1 strength. Place: I strike the nearest enemy I could attack (a sortie).
+Preceptor  4 - 2|4  Place: draw a card. Round end: restores 1 shield to each other ally in my row.
+Relic Bearer  4 - 1|5  Place: if you hold this lane's base, restores all shields of your other units in my lane. As long as you hold it, they have +1 defence.
+Sentinel of the Wall  4 - 2|4  Vigil 2.
+Thorn Hedge Knight  4 - 2|4  Retaliate 3. Place: I strike the nearest enemy I could attack (a sortie).
+Watchtower  4 - 1|6  Immobile. Ranged. Place: I strike the nearest enemy.
+Castellan of the Bastion  5 - 2|6  Harden. Other allies in my row have +1 defence.
+Iron Knight  5 - 3|4  Armoured. Harden. Place: pulls the enemy facing me straight forward, as far as it can.
+Knight of the Sortie  5 - 2|5  Retaliate 2. Whenever an enemy is placed in my lane, deals 1 damage to it.
+Martyr Knight  5 - 2|4  Retaliate 2. Bodyguard. Death: restores all shields of your other units in my lane.
+Star Bastion  5 - 1|8 ▪▪  Immobile. Harden. Place: other allies in my row gain +2 defence.
+Avenger of the Order  6 - 3|5  Place: deals damage equal to the shields your units in my lane have lost (up to 6) to the strongest enemy here.
+Destrier of the Order  6 - 3|6 ▪▪  Charge. Harden.
+Relief Galley  6 - 1|6 ▪▪  Place: if you hold this lane's base, a Novice Knight in my front row. Round end: if you hold this lane's base, a Novice Knight in each other lane.
+The Grand Master  6 - 3|6  Place: each of your units in my lane that has lost shields gains +1|+1; then all of them restore all their shields. As long as you hold this lane's base, other allies here have +1|+1.
+Hospital Cathedral  7 - 0|8 ▪▪▪▪  Immobile. Vigil 2. Place: restores all shields of each of your units in every lane. Round end: restores 2 shields to each other ally in my lane.
+Relief Fleet  8 - 2|7 ▪▪  Place: places a Novice Knight in the front row of each lane; +2 carry-over if you hold this lane's base.
+The Unbreakable Fortress  8 - 0|11 ▪▪▪▪  Immobile. Place: your other units in my lane gain +2 defence. Round end: restores all shields of each of your units in my lane.
+
+Spells (supply):
+Alms for the Sick  1  Restore 1 shield to an ally; draw a card if it had lost shields.
+Bind the Wounds  1  Restore 3 shields to an ally.
+Call to Battle  1  An enemy is pulled straight forward, toward the base, as far as it can.
+Feigned Retreat  1  An enemy is pulled straight forward as far as it can; your units in its lane gain +1 strength this round.
+Holy Balm  1  Restore 2 shields to an ally; it gains +1 strength.
+Prayer of Endurance  1  Pick a lane: your units there gain +1 defence.
+Saint's Shield  1  An ally is Armoured this round and restores 1 shield.
+Siege Stores  1  +1 carry-over; +2 instead if you hold this lane's base.
+Temper the Steel  1  An ally takes 1 damage, then gains +2 defence.
+Boiling Oil  2  Pick a lane: deals 1 damage to each enemy in the enemy front row there; 2 instead if you hold this lane's base.
+Book of Hours  2  Draw 2 cards.
+Crown of Thorns  2  An ally gains +1 defence and Riposte.
+Garrison  2  Pick a lane: a Novice Knight in your front row there.
+Lance Charge  2  An ally gains +2 strength this round, then strikes the nearest enemy it could attack.
+Last Stand  2  Pick a lane: your units there gain +1 defence this round; +2|+3 instead if you don't hold this lane's base.
+Open the Gates  2  Pick a lane: each enemy outside the enemy front row there is pulled straight forward as far as it can.
+Punish the Bold  2  Deals 1 damage to an enemy; 4 instead if it has already lost shields.
+Sermon  2  Pick a lane: restore 1 shield to each of your units there; they gain +1 strength this round.
+Signal Bell  2  Everywhere: restore 1 shield to each of your units in every lane.
+Sortie!  2  Pick a lane: deals 1 damage to each enemy in the enemy front row there; your units in your front row there gain +1 strength this round.
+Vow of the Order  2  An ally gains +1 defence and restores all its shields; draw a card if you hold its lane's base.
+Ward of the Saint  2  An ally gains +2 defence and is Armoured this round.
+Judgement of the Order  3  An ally deals damage equal to its defence to the enemy facing it.
+Oath of the Wall  3  Pick a lane: your units in your front row there gain Riposte.
+Raise the Bulwark  3  Pick a lane: your units in your front row there gain +2 defence.
+Relief by Sea  3  Pick a lane: a Novice Knight in your front row there; two if you hold this lane's base.
+Repel the Assault  3  Pick a lane: deals 1 damage to each enemy in the enemy front row there and pushes each of them one row back.
+The Great Ward  3  Pick a lane: restore all shields of each of your units there.
+Reinforcements  4  Pick a lane: two Novice Knights in your front row there; +1 carry-over if you hold this lane's base.
+
+Tokens:
+Novice Knight  1 - 1|2  Harden.

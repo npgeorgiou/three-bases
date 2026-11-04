@@ -1,0 +1,124 @@
+==================================================================
+11. SUNFEEDERS (faction letter d; 106 cards: 76 units, 30 spells)
+==================================================================
+Theme: the Mexica (Aztec) world of the 15th century: the flower wars, the temple pyramids, the Day of the Dead.
+Identity: Every death on the board feeds the Sunfeeders: they wound enemies with small cuts and finish the wounded, offer their own units for greater power, and grow with each life taken this round. (Not the Exanimati: no returns, no Shades, no Plague, no discard-pile play. The Sunfeeders profit from deaths happening, the Exanimati from coming back.)
+Keywords (value = stat points from the supply budget):
+- Toll (value 1 per point): I have +1 strength for each unit that died this round, on either side.
+- Obsidian (value 1): when my strike leaves an enemy Bloodied, it dies.
+- Offering (value 0; the effect is costed per card): Place: the ally directly behind me dies and its supply goes to your carry-over (Benchmark, 4 Nov 2026: offerings cut the lane's income, so the tribute pays it back). "If offered" effects need it.
+Champions: Jaguar Knight, High Priestess of the Steps, Keeper of the Skull Rack, Lady of the Marigold Path, The Sun-Eater.
+Design entry: factions/designs/sunfeeders.txt. Cards in the game: src/game/js/cards/new-sunfeeders.js.
+
+Units (supply - strength|defence, size):
+Bloodletter  1 - 1|3  Offering. Place: if offered, +3 supply in this lane this round.
+Drummer of the Dead  1 - 0|4  Toll.
+Jaguar Cub  1 - 1|3  Whenever my strike kills an enemy, I gain +1|+1.
+Knife Dancer  1 - 1|3  Place: deals 1 damage to the enemy facing me.
+Marigold Child  1 - 0|4  Death: your other units in my lane gain +1 strength.
+Obsidian Moth  1 - 1|3  Death: deals 2 damage to the enemy with the least defence in my lane.
+Obsidian Youth  1 - 1|3  Obsidian.
+Skull Jar  1 - 0|5  Immobile. Death: places a Captive in my lane, outside the front row; +1 carry-over.
+Wailing Woman  1 - 0|3  Death: deals 1 damage to each Bloodied enemy in my lane.
+Willing Victim  1 - 1|3  Death: deals 2 damage to the enemy facing me.
+Young Captor  1 - 1|3  Whenever my strike kills an enemy: +1 carry-over.
+Cacao Merchant  2 - 1|4  Whenever an enemy in my lane dies: +1 carry-over (once per round).
+Calendar Priest  2 - 1|4  Place: draw a card if 2 or more units died this round.
+Conch Blower  2 - 1|5  Whenever another ally in my lane dies, your other units in my lane gain +1 strength this round.
+Eagle Archer  2 - 0|3  Ranged. Place: deals 1 damage to the enemy with the least defence in my lane.
+Feather Priest  2 - 1|4  Whenever an enemy in my lane dies: a Captive in my lane, outside the front row (once per round).
+Flint Cutter  2 - 1|4  Place: deals 1 damage to each enemy in the enemy front row.
+Flower War Captain  2 - 1|4  Has +2 strength while you don't hold this lane's base.
+Flower Warrior  2 - 2|3  Whenever my strike kills an enemy: a Captive in my lane, outside the front row.
+Jaguar Scout  2 - 2|3  Obsidian. Place: deals 1 damage to the enemy facing me.
+Maize Offering  2 - 1|3  Offering. Place: if offered, +4 supply in this lane this round.
+Marigold Mourner  2 - 1|4  Death: deals 1 damage to each Bloodied enemy in my lane.
+Messenger of the Dead  2 - 1|3  Death: deals 1 damage to each Bloodied enemy in every lane.
+Obsidian Priest  2 - 1|4  Whenever an enemy in my lane dies, deals 1 damage to the enemy facing me.
+Runner of the Flower War  2 - 2|3  Outrider. Obsidian.
+Skull Collector  2 - 2|3  Whenever another unit in my lane dies, I gain +1 strength.
+Steps Priest  2 - 1|4  Whenever another ally in my lane dies, deals 1 damage to the enemy facing me.
+Stone Knife Bearer  2 - 2|3  Obsidian. Death: deals 1 damage to the enemy facing me.
+Sun Dancer  2 - 2|4  Offering. Place: if offered, I gain +3|+2.
+Temple Guard  2 - 1|5  Whenever another unit in my lane dies, I gain +1 defence.
+The Chosen One  2 - 2|5  Death: your other units in my lane gain +2 strength.
+Toll Warrior  2 - 1|4  Toll. Obsidian.
+Tribute Bearer  2 - 0|3  Supply +1. Death: +1 carry-over.
+Altar Priest  3 - 2|4  Offering. Place: if offered, deals 4 damage to the enemy facing me.
+Blood Priestess  3 - 1|5  Whenever another ally in my lane dies: +1 carry-over (once per round).
+Bone Dancer  3 - 2|2  Toll. Death: deals 1 damage to each enemy in the enemy front row.
+Captive Taker  3 - 2|4  Place: places a Captive in my lane, outside the front row.
+Eagle Herald  3 - 2|4  Round end: if you hold this lane's base, +1 carry-over; if you don't, deals 1 damage to each Bloodied enemy in my lane.
+Eagle Warrior  3 - 2|2  Ranged. Obsidian.
+Harvest Lord  3 - 2|4  Whenever another unit in my lane dies, I gain +1 strength.
+Heart Priest  3 - 1|3  Round end: kills the Bloodied enemy in my lane with the least defence.
+Jaguar Warrior  3 - 3|3  Obsidian. Toll.
+Keeper of Days  3 - 1|4  Toll. Place: +1 carry-over if 2 or more units died this round. Round end: +1 carry-over if 3 or more did (once per round).
+Knife Priest  3 - 2|3  Place, and round end: deals 1 damage to the enemy with the least defence in my lane.
+Knife Thrower  3 - 1|3  Ranged. Place: deals 1 damage to the enemy with the least defence in my lane.
+Mask Dancer  3 - 2|4  Whenever an enemy in my lane dies, I gain +1|+1.
+Obsidian Knight  3 - 2|4  Obsidian. Place: deals 1 damage to the enemy facing me.
+Rain Priest  3 - 1|4  Offering. Place: if offered, +1 carry-over and draw a card.
+Ritual Cutter  3 - 1|4  Whenever another ally is placed in my lane, deals 1 damage to the enemy facing me.
+Shield of the Altar  3 - 1|6  Bodyguard.
+Skull Rack  3 - 0|6  Immobile. Place, and round end: deals 1 damage to the enemy facing me for each unit that died this round (up to 3).
+Sun Altar  3 - 1|7  Immobile. Round end: if you hold this lane's base, deals 1 damage to each Bloodied enemy in my lane.
+Sun Singer  3 - 1|3  Place, and round end: if 2 or more units died this round, deals 2 damage to the strongest enemy in my lane.
+Altar Executioner  4 - 2|4  Place: kills the Bloodied enemy in my lane with the least defence.
+Eagle Lord  4 - 2|2  Ranged. Obsidian. Toll.
+Great Drum of the Dead  4 - 0|7  Immobile. Other allies in my lane have +1 strength for each unit that died this round (up to 3).
+Hail Caller  4 - 2|4  Place, and round end: deals 1 damage to each enemy in my column.
+High Priestess of the Steps  4 - 2|4  Offering. Place: if offered, deals 3 damage to the enemy facing me and draw a card.
+Jaguar Knight  4 - 3|3  Obsidian. Toll. Whenever my strike kills an enemy, I may attack again this round (once per round).
+Keeper of the Skull Rack  4 - 2|5  Whenever another unit in my lane dies, I gain +1|+1.
+Lady of the Marigold Path  4 - 2|5  Whenever another ally in my lane dies, I gain +1 defence. Round end: draw a card if 2 or more units died this round (once per round).
+Obsidian Shieldbearer  4 - 2|5  Toll. Place: I gain +1|+1 for each unit that died this round (up to 3).
+Star Demon Mask  4 - 3|3  Place: deals 1 damage to the enemy facing me. I have +1|+1 for each Bloodied enemy in my lane (up to 3).
+Twin Jaguars  4 - 3|2 ▪▪  Obsidian. Toll. Place: deals 1 damage to each Bloodied enemy in my lane.
+War Priest  4 - 2|5  Offering. Place: if offered, your other units in my lane gain +1|+1.
+Wind of Knives  4 - 2|3  Place, and round end: deals 1 damage to each enemy in the enemy front row.
+Altar Guardian  5 - 3|5  Bodyguard. Toll. Offering. Place: if offered, I gain +2|+2.
+Feathered Serpent Dancer  5 - 3|4  Toll. Whenever another unit in my lane dies, deals 1 damage to the enemy with the least defence here.
+Priest of the Fifth Sun  5 - 2|6  Whenever another ally in my lane dies, deals 1 damage to each enemy in my lane.
+Speaker of War  5 - 3|5  Place: deals 1 damage to each enemy in my lane.
+High Sacrificer  6 - 3|5  Offering. Place: if offered, kills the strongest enemy in my lane.
+Jaguar Lord  6 - 4|5  Obsidian. Toll. Place: kills each Bloodied enemy in my lane. Whenever my strike kills an enemy, I gain +1|+1.
+The Sun-Eater  6 - 3|4 ▪▪  Toll 2 (+2 strength for each unit that died this round). Place: deals 1 damage to each enemy in my lane for each unit that died this round (up to 3). Round end: deals damage equal to the deaths this round (up to 5) to the enemy facing me.
+Obsidian Colossus  7 - 4|5 ▪▪▪▪  Toll. Obsidian. Place: I gain +1|+1 for each unit card in your discard pile (up to 5).
+Temple Pyramid  7 - 0|8 ▪▪▪▪  Immobile. Place: deals 2 damage to each enemy in my lane for each other ally of yours here (up to 8), then those allies are offered (they die). Round end: deals 1 damage to each enemy in my lane.
+Lord of the Skull Rack  8 - 4|7 ▪▪  Toll. Place: your other units in my lane gain +1|+1 for each unit that died this round (up to 4).
+
+Spells (supply):
+Drop of Blood  1  An ally of yours dies; +2 supply in its lane this round.
+Heart Fire  1  Deals 2 damage to a Bloodied enemy.
+Let Blood  1  Deals 1 damage to an enemy; your units in its lane gain +1 strength this round.
+Obsidian Blade  1  An ally gains +2 strength this round.
+Obsidian Cut  1  Deals 1 damage to an enemy and to each enemy touching it.
+Ring the Toll  1  An ally gains +1 strength for each unit that died this round.
+Spirits Guide the Way  1  Pick a lane: your units there gain +1 defence this round; if 2 or more units died this round, also restore 2 of their shields.
+The Marigold Path  1  An ally of yours dies; draw a card.
+Tribute of Cacao  1  +1 carry-over; +1 more if 2 or more units died this round.
+Codex of Days  2  Draw a card; draw another if 3 or more units died this round.
+Count the Skulls  2  Deals 1 damage to an enemy, +1 for each unit that died this round (up to 5).
+Eagle Dive  2  Deals 2 damage to an enemy; 4 if it was already Bloodied.
+Feed the Sun  2  Pick a lane: your units there gain +1 strength this round for each unit that died this round.
+Flower War  2  Deals 2 damage to an enemy; a Captive in your camp in that lane.
+Great Offering  2  An ally of yours deals damage equal to its strength +1 to the enemy facing it, then dies.
+Heart Taken  2  Kill a Bloodied enemy.
+Jaguar Leap  2  An ally strikes the nearest enemy it could attack.
+Rain of Obsidian  2  Pick a lane: deals 1 damage to each enemy there.
+Smoke of Copal  2  Pick a lane: your units there gain +1 defence; a Captive in your camp there, outside the front row.
+Song of Mourning  2  Pick a lane: if 2 or more units died this round, your units there gain +1|+1.
+Take Captives  2  Pick a lane: two Captives in your camp there, outside the front row.
+War Drums of the Dead  2  Pick a lane: if 3 or more units died this round, your units there gain +1 strength and you draw a card.
+Altar Fire  3  Pick a lane: deals 2 damage to each Bloodied enemy there.
+Blood Rain  3  Pick a lane: deals 1 damage to each enemy there; your units there gain +1 strength this round.
+Bloody Dawn  3  An ally of yours dies; your other units in its lane gain +2 strength.
+Execution  3  Kill a Bloodied enemy; then draw a card if any unit died this round.
+Obsidian Hail  3  Pick a column of an enemy camp: deals 2 damage to each enemy in it.
+Storm of Knives  3  Pick a lane: deals 1 damage to each enemy there, twice.
+Day of the Dead  4  Everywhere: your units in every lane gain +1 strength this round; if 3 or more units died this round, they also gain +1 strength.
+Finish Them  4  Pick a lane: kill the Bloodied enemy there with the least defence, then deal 1 damage to each other Bloodied enemy there.
+
+Tokens:
+Captive  1 - 1|1  A captive of the flower war, kept for the altar.

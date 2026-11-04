@@ -62,6 +62,8 @@ designs/rootkin-cards.txt          102  its card lines (made from the game by to
 designs/longguns.txt               112  The Long Guns (World War I artillery) stage 1
 designs/longguns-cards.txt         103  its card lines (made from the game by tools/design_cards.js)
 designs/benchmark-seven.txt         40  Benchmark report of the seven factions (win rates, cards never played)
+removed/                                The removed factions (Tagma, Ashfang Horde, Exanimati): their summary card files, and
+                                        their rulings, keyword values and texts and premade decks (rulings-keywords-decks.txt)
 
 ==================================================================
 1. CURRENT FACTIONS

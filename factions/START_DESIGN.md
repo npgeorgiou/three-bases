@@ -51,10 +51,14 @@ checks the finished faction against this file line by line before it is sent.
    Train, Duelyst, Faeria, Inscryption, Into the Breach, Slay the Spire; never only the one Claude knows best) and write each card's play pattern: what the player decides, what it rewards. This is the pool cards come from.
 8. **Effect palette.** For each mechanic, list 10+ DIFFERENT effects (different trigger, result or target), each with
    its library card. Cards are written from the palette, never from the effects the engine already has.
-9. **Cards, 20 at a time**, in the template below, each with its net line, its library card, the costing check (the
-   budget of summary/09 exactly) and the frequency check. After each 20: the twin check by effect (NEVER DO, 2).
-10. **Checks**: sections 2-5, the network check, the Benchmark report, then play the faction in a browser. Code only
-   after Kaptain agreed the cards.
+9. **Cards, 20 at a time**, in the template below, each with its net line, its source, the costing check (the budget of
+   summary/09 exactly) and the frequency check. After each 20: the twin check by effect (NEVER DO, 2). In the game
+   each card carries `src: '<game>: <card>'` (the library card it grew from) or `src: 'own'` (Claude's own idea: allowed
+   and welcome; the source is there to keep ideas varied, not to forbid imagination), `tv: N` on units (the value of
+   its text in the budget) and `champion: true` on the 5 champions.
+10. **Checks**: sections 2-5, the Benchmark report, and `python3 tools/design_gate.py <letter>` (count, library file,
+   sources, budget, twins, round-end damage, spell share per cost, champions, hovers, network, browser play). The
+   faction is finished only when the gate prints PASS; the pre-commit hook refuses faction commits that fail it.
 
 **Card template** (Kaptain's directions, joined with summary/09):
 - Card Name: [name]
@@ -76,16 +80,16 @@ Each point: what went wrong, why Claude really did it, the guard. Read the reaso
    re-read the library cards right before each batch of 20.
 2. **Twenty cards with the same effect.** Why: Claude only compares cards when a tool makes it, and the twin check
    compared net tags, not effects. Claude took "the check passed" as "the work is good": it prefers a measure it can
-   pass to a judgement it must make. Guard: twin check by trigger + effect + target; one combination on more than 2-3
-   cards fails. A passed check never means a finished design.
+   pass to a judgement it must make. Guard: twin check by trigger + effect + target (design gate); one combination on
+   more than 3 cards fails. A passed check never means a finished design: the gate is the minimum, not the goal.
 3. **700 cards in one chat.** Why: Claude tries to deliver everything asked; when the amount is too big, it lowers the
    quality silently instead of saying so. Its quality drops with volume and with chat length: rules read at the start
    (the budget) fade later. Guard: one faction per chat, 20 cards per batch. If a request is too big to do well, say so
    before starting.
 4. **The library was not used card by card**, although `factions/5` step 1 already said "read 30-50 cards". Why:
    reading cards is slow and shows no output, so Claude skipped it to produce cards sooner and took only mechanic names.
-   It also used almost only Runeterra, the game it knows best. Guard: step 7, all 8 games; every card names its
-   library card.
+   It also used almost only Runeterra, the game it knows best. Guard: step 7, all 8 games, and the library file the
+   design gate requires (5 ways to play x 30 library cards, each found in the database).
 5. **One mechanic carried a whole faction** (the clockwork faction was only wind and gears). Why: Claude took the first
    idea of the theme and made it everything. Guard: step 6.
 6. **Spells all "+strength" and "kill"** (Sunfeeders). Why: as in 1, the simplest effects came first. Guard: a spell
@@ -96,7 +100,7 @@ Each point: what went wrong, why Claude really did it, the guard. Read the reaso
    a win rate. Guard: the budget of summary/09 is exact; balance by reworking cards.
 9. **A crash shipped**: removed cards were still used by the code, and the only test loaded the page without playing.
    Why: Claude counted "it builds and the page loads" as "it works". Guard: after removing cards, `find.py` every name;
-   play a game and every scenario in a browser before saying it works.
+   `node tools/playtest.js` plays games and every scenario in a browser; run it before saying it works.
 10. **Invented words** ("break" for dies) **and rule words without hover** (wind written without [[Wind]]). Guard: only
    the game's words; every rule word on a card links to its hover.
 11. **Design not shown in the game**: champions were marked only in the design files. Guard: what the design marks,
@@ -104,6 +108,8 @@ Each point: what went wrong, why Claude really did it, the guard. Read the reaso
 12. **Spells piled at cost 1-2, units at 3-4.** Guard: section 2, the spell/unit share at every cost.
 13. **Answers that deflect.** "Because I did X" is not a reason. When Kaptain asks why something failed, say why Claude
    did X and what Claude can't do, plainly.
+14. **Rules in docs get skipped** (factions/5 step 1 was written and still skipped). Guard: whatever must happen is a
+   check in `tools/design_gate.py`, and the pre-commit hook enforces it. Never commit with `--no-verify`.
 
 ## 0. Setup
 - Clone with the library (CLAUDE.md "Start of a chat", then `git sparse-checkout disable`). Library commands run from

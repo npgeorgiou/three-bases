@@ -1,0 +1,140 @@
+==================================================================
+REMOVED FACTIONS: rulings, keywords and premade decks (Tagma, Ashfang Horde, Exanimati; removed from the game 4 Nov 2026)
+==================================================================
+Kept so nothing agreed is lost. Their cards: 11-faction-tagma.txt, 11-faction-ashfang-horde.txt, 11-faction-exanimati.txt here.
+The engine code for these keywords (Link, Sacrifice, Revenant, Plague, Pull, Defect...) is still in src/game/js/rules/.
+
+RULINGS (from summary/08):
+- Charge (AGREED, 10 Oct 2026): a unit placed in its own front row doesn't charge (it has no run-up), so a Warhorn unit placed there neither charges nor dies from Reckless. Charge strikes only if the unit reaches its front row, and then every enemy in the facing front-row cells of its columns (not the diagonal ones), each with its full strength (a 2-wide charger can strike two units); a charger stopped short strikes no one. A 0-strength charger that reaches enemies still counts as striking them for the charger only (Reckless fires, so e.g. a Warhorn-charged Powder Keg dies and explodes); the strike does nothing to the target, uses up no Armour and doesn't count as surviving damage. Logged, no animation.
+- Ability damage (Akritai, Cinder Imp, Blood Drum, Blood Sorcerer, Powder Keg, Flesh Shield, Pyre Colossus) adds the unit's current strength bonuses, on every target (own units included). Every damage amount (abilities, charges, attacks) is fixed when the effect starts and stays the same for all its strikes, even if the unit gains or loses strength meanwhile (e.g. a Cinder Imp boosted to 3 that kills the Blood Drum still strikes the enemy with 3); for Death effects, the bonuses it had when it died. A unit's card (hover) shows these numbers with its bonus included, highlighted in a small dark chip; Blood Sorcerer's bonus reads "…1 for each ally struck, plus N".
+- Losing a defence bonus (an aura such as Strategos or Shield wall ends, or a bonus "this round" such as Tourmarches' expires): the unit keeps its current defence if that is at or below its defence without the bonus; otherwise its defence drops to that value. So a unit that lost shields while boosted loses nothing more when the boost ends (as in Legends of Runeterra).
+- Pull (Monomachos): the enemy moves straight forward in its column, toward its base, as far as the cells are free. Monomachos' Place pick (AGREED, October 2026) offers only enemies that can move at least one cell forward; with none, there is no pick.
+- Defect: the unit is placed with the new side in a free spot of that side's camp in the same lane and can't act that round.
+- Akritai react to any arrival into an enemy front-row cell facing them: placement, moves, charges, pulls, Onslaught, defection, returns. A placed unit's own effects fire first (its Place effects, after its Place choice once made, and a Revenant's return effect), then the Akritai react (a Plague Acolyte gives Plague before it is struck).
+- Warhorn: units placed later gain Charge and Reckless; the charge strike counts as their attack, so they die after it; with nobody to strike, or placed in the front row, they survive.
+- Cinder Imp: if it has no other unit in its lane, only the enemy strike happens.
+- Rock Hurler's splash: the cell behind the target gets half its strength, the one after a quarter, rounded down.
+- Thousand Cuts may also target your own units; Armoured blocks only the first of its damage.
+- Monomachia offers only units with strength. Bodyguards also protect each other.
+- Varangian Guard (AGREED, October 2026): it gains its +1 defence after taking the damage for the ally, if it survives.
+- Resurrection (AGREED): the killed unit comes back on your side as the same card, with debuffs that halve its printed strength, defence and supply (rounded down, no minimum; a unit whose defence would halve to 0 can't come back and stays dead). A unit resurrected from the discard pile (Raise the Fallen, Grave Robber, Aurelius, Danse Macabre, Katabasis) comes back fresh: none of its earlier gains, losses or damage. It is placed (Place effects fire), then auras and other area effects apply to it again. With a Banner of the Returned in its lane, a returning Revenant keeps its printed strength; its defence and supply still halve (AGREED, October 2026).
+- Revenants keep their lasting changes (AGREED, 10 Oct 2026): a returning Revenant keeps its lasting stat gains and losses and its gained or lost keywords (e.g. Komes' +1 defence, Tomb Warden's +1|+1, Creeping Rot's -2 strength, a Revenant given by Embalmer); it doesn't keep lost shields or anything "this round". How many times it returns is still decided only by halving the printed stats. Example: a Knight of the Ninth Barrow (3|3) with Komes' +1 defence returns as 1|1 plus +0|+1, and Tomb Warden adds +1|+1: 2|3. On its next death its printed defence 1 would halve to 0, so it stays dead.
+- Returning to the hand with changes (AGREED, 10 Oct 2026): a unit that goes back to the hand (Undying Reaver) keeps its lasting stat changes and its gained or lost keywords; lost shields aren't kept. Its hand card shows the changed strength and defence in green (higher) or red (lower) and adds a line "Kept from the battlefield: …" listing them; played again, the unit comes back with them. Built as a general mechanism (any future card that returns a unit to the hand works the same way); in the discard pile the card is always the plain deck card.
+- One return per death (AGREED, 10 Oct 2026): a dead unit's card can go back only once per death, and the first effect that takes it from the discard pile wins. Revenant goes first, so an embalmed Undying Reaver returns to the board (halved) until its defence would halve to 0; then its card is still in the discard pile and its own Death effect takes it back to the hand (with Revenant kept). Tokens have no card in the discard pile, so an embalmed token still returns.
+- Built choices (AGREED, 10 Oct 2026): Shades have supply 1; Gorvan rises as soon as all four parts are done; Hungering Mass takes the eaten unit's cells; the Ogre Thrower's throw costs what an attack costs.
+
+PREMADE DECKS (from summary/12):
+  - Tagma — Shield Line (31): walls hold the dots in the front row, pikes strike from the second row, Stratiotes give supply from the back row, priests heal. Pavisarios ×3, Stratiotes ×3, Skoutatoi ×3, Kontarioi ×3, Hiereus ×3, Komes ×3, Menavlatoi ×3, Thureophoroi ×3, Strategos ×2, Synaspismos ×3, Ipermachos Stratigos ×2.
+  - Tagma — Riders and Archers (31): ranged units and riders that keep moving; every move feeds the Tourmarches, Reform Ranks moves two units for 1. Kursor ×3, Mandator ×3, Stratiotes ×3, Toxotes ×3, Tourmarches ×3, Kavallarios ×3, Sphendonetes ×2, Hippotoxotai ×3, Reform Ranks ×3, Annona ×3, Greek Fire ×2.
+  - Tagma — Guard and Envoys (31): bodyguards and duels make units survive damage, which Varangoi turn into defence; Pull, Defect and Bribe take enemy units; Voukinator and Mitaton build up a lane. Stratiotes ×3, Mitaton ×3, Voukinator ×3, Monomachos ×3, Presbeutes ×3, Komes ×2, Doryphoroi ×3, Varangoi ×3, Varangian Guard ×3, Monomachia ×3, Bribe ×2.
+  - Ashfang Horde — Warhorns (30; rebuilt October 2026): Warhorn Goblins turn every later unit in their lane into a Reckless charger, and those units pay off when they die (Gutsack Goblins draw, Flesh Shields and Bile Bloaters strike, Undying Reavers return to the hand to charge again), feeding Carrion Chiefs and Bonebreakers; Blood Idols and Scarred Veterans, placed before the horn or in other lanes, survive to hold the dots. Warhorn Goblin ×3, Gutsack Goblin ×3, Flesh Shield ×3, Bile Bloater ×3, Undying Reaver ×3, Carrion Chief ×3, Bonebreaker ×3, Blood Idol ×3, Scarred Veteran ×2, Cull ×2, Hellfire ×2.
+  - Ashfang Horde — Blood Rites (33; rebuilt October 2026): self-damage grows Pain Eaters, Bleeding Ogres and Gorehounds; Blood-Letter, Cinder Imp, Blood Drum, Pit Fighter and Rain of Blood supply the damage; Cave Trolls and Scarred Veterans hold the front; Thousand Cuts and Hellfire finish. Pain Eater ×3, Blood-Letter ×3, Cinder Imp ×3, Blood Drum ×3, Bleeding Ogre ×3, Gorehound ×3, Cave Troll ×3, Pit Fighter ×3, Scarred Veteran ×3, Rain of Blood ×2, Thousand Cuts ×2, Hellfire ×2.
+  - Ashfang Horde — Sacrifices (31; rebuilt October 2026): units that pay off when they die, Blood Idols placed over them, kill-your-own spells; Carrion Chief and Bonebreaker profit from every death; Iron Behemoths hold late. Gutsack Goblin ×3, Flesh Shield ×3, Bile Bloater ×3, Undying Reaver ×3, Blood Idol ×3, Carrion Chief ×3, Bonebreaker ×3, Iron Behemoth ×2, Martyrdom ×3, Blood Tithe ×2, Carrion Feast ×3.
+  - Exanimati — The Mist (37; rebuilt 10 Oct 2026): cheap strong Fading units die each round end and feed Mourners, Strix, Reapers, Shades and card draw; Danse Macabre brings the round's fallen back and Debt of the Fallen finishes cheaply after many deaths. Grave Wisp ×3, Pallid Mourner ×3, Ashen Penitent ×3, Wake Candle ×3, Lantern Wisp ×3, Corpse Candle ×3, Strix ×3, Ossuary Bellringer ×2, Shade Shepherd ×2, Reaper of the Pale Field ×2, Grave Toll ×2, Last Rites ×2, Mass Grave ×2, Danse Macabre ×2, Debt of the Fallen ×2.
+  - Exanimati — The Returned (31; rebuilt 10 Oct 2026): Revenants that come back, more of them through Embalmer and Embalming Rite, stronger through Tomb Warden and Banner; Last Rites kills one to bring it back with a Shade; Clerk of the Dead Ledger takes Last Rites or Embalming Rite back from the discard pile. Bone Thrall ×3, Ossuary Labourer ×3, Barrow Revenant ×3, Embalmer ×3, Tomb Warden ×3, Knight of the Ninth Barrow ×3, Weeping Bride ×2, Captain Mardoc of the Long Watch ×2, Banner of the Returned ×2, Clerk of the Dead Ledger ×2, Embalming Rite ×3, Last Rites ×2.
+  - Exanimati — Plague and Withering (36; rebuilt 10 Oct 2026): Plague and strength loss weaken enemies; Plague Slingers spread it from range, Contagion plagues a whole column, Mother Ophra makes it bite harder and draws; Hollow Duelist and Executioner of Saint Mora punish weakened ones; Bone Thralls hold the dots early; Execution finishes anything. Bone Thrall ×3, Plague Acolyte ×3, Masked Flagellant ×2, Feverseer ×3, Plague Slinger ×3, Hollow Duelist ×3, Executioner of Saint Mora ×3, Plague Herald ×2, Leper Knight ×2, Mother Ophra ×2, Miasma ×2, Creeping Rot ×2, Withering Hymn ×2, Contagion ×2, Execution ×2.
+
+KEYWORD VALUES (from summary/11-factions.txt):
+Tagma:
+Keyword                | Value         | Description
+-----------------------+---------------+------------
+Shield wall            | 1             | Beside another Shield wall unit in its row: +1 defence per such neighbour.
+Link                   | 0             | Touching Link units merge into one unit, adding stats, supply and keywords.
+Pike                   | 1             | Can also attack the enemy front row from your second row.
+Ranged                 | 3             | Can attack any enemy in its lane, from any row.
+Armoured               | 2             | The first damage it takes each round is blocked.
+Lightfooted            | 1             | Moves twice per round, pays for the first move only.
+Skirmisher             | 1             | Has its bonus while no ally is adjacent.
+Outrider               | 1             | Can move to a free spot in another lane's camp.
+Bodyguard              | 1             | Takes the damage aimed at adjacent allies.
+Defect / Pull          | per card      | Defect: an enemy joins your side. Pull: an enemy moves straight forward.
+Supply N               | 3 per point   | Adds N supply to its lane at each round start.
+
+Ashfang Horde:
+Keyword                | Value         | Description
+-----------------------+---------------+------------
+Charge                 | 2             | When placed outside the front row, moves straight forward; in the front row, strikes the enemies right ahead.
+Reckless               | -2            | Dies right after it attacks.
+Push                   | 1             | A surviving front-row enemy it strikes moves one row back.
+Splash                 | 1             | Half of each strike passes to the units right behind the target.
+Overrun                | 1             | A killing strike passes its leftover strength to the units right behind.
+Pack                   | 1             | Bonus per adjacent ally.
+Frenzy                 | 1             | In your front row: strikes the nearest enemy it could attack whenever another ally in its lane dies.
+Sacrifice              | -2            | Must be placed over your own units; they die. Shared with Exanimati.
+Riposte                | 2             | Strikes back an attacker when it survives.
+Flurry                 | 3             | Attacks twice per round, pays once.
+
+Exanimati:
+Keyword                | Value         | Description
+-----------------------+---------------+------------
+Revenant               | 1             | When it dies, it is resurrected in the same cell at halved stats, until its defence would halve to 0.
+Afterlife N            | N + 1         | Death: places N Shades in your camp in its lane.
+Fading                 | -2            | Dies at the end of the round in which it was placed.
+Plague                 | -1 on itself  | Loses 1 shield each round end; when it dies, adjacent allies catch it.
+Immobile               | -2            | Can't move.
+Drain N                | 2N            | Its drains deal N damage and restore up to N shields, even above its card's defence.
+Incorporeal (spice)    | 3             | Can't be struck; only spells can deal damage to it.
+
+KEYWORD TEXTS (from summary/10-keywords.txt):
+Movement, attack and position:
+- Melee: Strikes enemies in its adjacent area; from your front row that area reaches across the base into the enemy front row (section 6).
+- Ranged: Can attack any enemy in its lane, from any row.
+- Pike: Also reaches the enemy front row from your second row (the cells facing it and diagonally next to them).
+- Charge: When it is placed outside your front row, it charges straight forward as far as it can. If it reaches your front row, it strikes each enemy right ahead of it (in the enemy front row, in its columns) with its strength. Short panel: "When placed outside the front row, moves straight forward. If it reaches the front row, strikes the enemies right ahead."
+- Lightfooted: Moves twice per round and pays only for the first move.
+- Outrider: Its move can also take it to a free spot in another lane's camp, paid from the lane it leaves (a move, not an active ability).
+- Immobile (Can't move): Can't move.
+- Push: When its attack strikes a front-row enemy that survives, that enemy moves one row back, if the cells are free.
+- Pull: The enemy moves straight forward, toward the base, as far as the cells are free.
+- Defect: The enemy unit joins your side: it is placed in a free spot of your camp in the same lane (its Place effects trigger) and can't act that round. If no spot is free, nothing happens. Short panel: "Joins your side in a free spot of your camp in the same lane. Can't act that round."
+
+Defence:
+- Shield wall: Shield wall units standing directly beside each other in the same row give each other +1 defence (a unit with two such neighbours gets +2).
+- Armoured: The first damage it takes each round is blocked, whatever its source (spells and your own strikes too).
+- Link (AGREED): Link units of yours touching edges merge in place (they glow, no disappear-and-appear) into one unit of the combined shape at their current stats (bonuses included), adding strength, defence and supply and combining keywords; any connected shape; a merged unit never splits. Shield wall gives +1 defence only, so two Pavisarioi: 1|2 + 1|2 = 2|4. Built choices (Claude's, open to change): merging happens after every action and after round-end abilities; the older unit absorbs the newer; the merged unit counts as moved/attacked if either part had; temporary strength stays temporary; all merged cards go to the discard pile when it dies. Link may also suit the Exanimati (masses that unite).
+- Bodyguard: When an ally adjacent to it would take damage, it takes it instead (not for self-strikes).
+- Skirmisher: Has its bonus while no ally is adjacent.
+- Incorporeal: Can't be struck, and units can't deal damage to it (attacks, Charge, Riposte, ability damage such as Akritai's or round-end damage, and strikes a spell makes a unit deal). Only spells can deal damage to it.
+
+Damage:
+- Strike (AGREED, October 2026): A hit with a unit's strength: its attacks and charges, and strikes with its strength from an ability or a spell. A melee unit strikes only what it could attack. Fixed amounts from abilities and spells are damage dealt, not strikes.
+- Reckless: Dies right after it attacks (a charge strike counts).
+- Overrun: When its strike kills, the leftover strength passes to the units right behind the target, split evenly (rounded down); each one it kills passes its leftover on the same way.
+- Splash: Each unit its attacks strike passes half of that damage (rounded down) to the units right behind it, split evenly (rounded down), and so on backward.
+- "Right behind" follows the struck unit's own cells: the units in the cells directly behind any of its cells (a 2-wide unit can pass to two units). A unit is struck once per attack; an amount that rounds down to 0 stops there.
+- Pack: Has its bonus for each adjacent ally.
+- Frenzy: While in your front row, whenever another ally in its lane dies, strikes the nearest enemy it could attack with its strength.
+- Riposte (AGREED): When it survives an attack, it strikes the attacker back with its strength.
+- Flurry (AGREED): Attacks twice per round and pays only for the first attack.
+- Drain N (AGREED; keyword on the card since October 2026): When it drains a unit, it deals N damage to it and restores up to N of its own shields, even above its card's defence. The card's text says when and whom it drains.
+
+Triggers:
+- Place: Triggers every time the unit is placed on the grid: when you play it from your hand, when it defects to your side, when it is resurrected or returns, and when it appears as a token.
+- Death: Triggers when this unit dies.
+- Round end: A round ends when both players pass in a row. Round-end effects then fire in reading order, round starter first. A unit's strength bonuses add to the strikes its abilities deal to enemies.
+- Supply: Adds this much extra supply to its lane at the start of each round.
+- Sacrifice (AGREED; Horde and Exanimati): The unit can only be placed if its cells cover at least one of your units (and only yours); every unit it covers dies. A 2-cell unit can kill two units (e.g. a 1-cell unit and part of a 3-cell unit, if it covers both); a 3-cell unit covering only one 1-cell unit kills just that one.
+(Round end, Place, Death and Supply need no keyword panels in the game: AGREED, 10 Oct 2026.)
+
+Supply:
+- Carry-over (keyword panel, October 2026): "Supply you keep between rounds. At round end your unspent lane supply is added to it, up to 5 in total; you can spend it in any lane." Shown on Misthophoroi, Gold Grubber, Forologia, Blood Money and Ossuary Tithe.
+
+Spells:
+- Everywhere (AGREED, October 2026): Paid from one lane, it works in all three lanes (Danse Macabre, Thinning of the Veil). No "Anywhere" keyword (rejected).
+
+Death and the discard pile (Exanimati):
+- Revenant (AGREED): When it dies, it is resurrected in the same cell (the resurrection rule: halved printed stats; it is placed, so its Place effects fire again) and keeps Revenant, so it can return again and again until its defence would halve to 0. It keeps its lasting changes (section 8).
+- Plague (AGREED): Loses 1 shield at each round end; when it dies, adjacent units of both sides, in the camp where it died, catch Plague. "Catches Plague" = gains the Plague keyword.
+- Afterlife N (AGREED): Death: places N Shades in free cells of your camp in its lane (front row first, reading order).
+- Fading (AGREED): Dies at the end of the round in which it was placed.
+
+States:
+- Bloodied: Has less defence than its card shows. Defence gains that bring it back up to its card's value end it. Shown in a placed unit's hover panels.
+- Blighted (AGREED as a few Exanimati cards; mostly for the Rotborn): Gives its lane 1 less supply each round (not below 0).
+
+Removed (10 Oct 2026; don't reintroduce without asking): Rot, Wither, Freeze/Frozen, Fungal Remains (and the Fungal Corpse token, which moves to the future Rotborn as a concept).
+
+Plain terms (hover text, no panel): back row (the row of your camp furthest from the base), row (the row or rows of its own camp the unit stands in), column (enemies in the same column face each other), directly in front (the cell next to it on the side of the base, same column), directly beside (the cell left or right of it, same row), adjacent, nearest enemy in its column (section 7).
+
+Keyword panels exist only for the keywords above; other terms are plain text. No browser tooltips anywhere. Wherever a card shows its keyword panels beside it (hand, deck builder, a hovered unit, discard pile, deck list), its keywords have no underline and no hover of their own; only cards shown without panels (starting hand, Aurelius' pick, the spell slot) keep the dotted underline and the hover.
+Card references (October 2026): every card named in a card's text or in its keywords' texts (found by name: Shade, Abomination, Doux, Gorvan, Stratiotes in Levy, the Crown, Sceptre and Blade on Aurelius, and any other) shows by default in the card's side panel, under its keyword panels, as a full card; its name in the text is bold, with no underline and no hover. Tokens have no flavour text, so a search never matches flavour.

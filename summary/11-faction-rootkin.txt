@@ -1,0 +1,120 @@
+==================================================================
+11. ROOTKIN (faction letter o; 102 cards: 71 units, 31 spells)
+==================================================================
+Theme: an ancient living forest of walking-tree legend (the sacred groves of the Celts and Germans; the oaks of Dodona).
+Identity: A rooted forest where nothing moves: every tree grows at each round end, seeds saplings into free cells, feeds its neighbours when it falls and strikes up through its roots; it wins late, when its trees are bigger than anything the enemy has.
+Keywords (value = stat points from the supply budget):
+- Perennial N (value 3 per point; growth that keeps coming): round end, I gain +N|+N.
+- Seeds N (value N + 1): Death: places N Saplings in my lane (front row first).
+- Roots N (value N + 1; it hits from any row): round end, deals N damage to the enemy nearest the base in my column.
+Champions: Grove Druid, Mother of Saplings, Deep Root, The Eldest Oak, Wandering Seed-Wind.
+Design entry: factions/designs/rootkin.txt. Cards in the game: src/game/js/cards/new-rootkin.js.
+
+Units (supply - strength|defence, size):
+Acorn  1 - 1|2  Immobile. Seeds 1.
+Bramble  1 - 1|2  Immobile. Place, and round end: if I am in your front row, deals 1 damage to each enemy in my column.
+Fern  1 - 0|2  Immobile. Round end: if you hold this lane's base, each ally beside me gains +1 defence.
+Green Shoot  1 - 0|2  Immobile. Place: each Sapling beside me gains +1|+1.
+Lichen  1 - 0|2  Immobile. Round end: I gain +1 defence.
+Moss  1 - 0|3  Immobile. Whenever another ally in my lane dies, I gain +1 defence.
+Rootling  1 - 1|1  Immobile. Roots 1. Place: my Roots strike now.
+Seed Pod  1 - 1|2  Immobile. Place: places a Sapling in a free cell of my lane.
+Sundew  1 - 1|2  Immobile. Whenever an enemy is placed in my lane, deals 1 damage to it.
+Toadstool  1 - 1|2  Immobile. Death: each ally that was beside me gains +1|+1.
+Acorn Cache  2 - 1|3  Immobile. Death: draw a card and place a Sapling in my lane.
+Climbing Ivy  2 - 2|3  Immobile. Place: pulls the enemy facing me straight forward, as far as it can.
+Druid Novice  2 - 1|3  Immobile. Place: draw a card if you have 3 or more units in this lane (me included).
+Elm  2 - 1|3  Immobile. Place: each ally beside me gains +1 strength. Allies beside me have +1 strength more.
+Fairy Ring  2 - 1|3  Immobile. Whenever another ally in my lane dies, places a Sapling in a free cell of my lane (once per round).
+Hazel  2 - 1|2  Immobile. Seeds 2.
+Holly  2 - 2|3  Immobile. When an enemy damages me and I survive, deals 1 damage to it.
+Leaf Litter  2 - 1|3  Immobile. Whenever another ally in my lane dies, each ally beside me gains +1|+1.
+Mistletoe  2 - 1|3  Immobile. Round end: the ally directly in front of me gains +1 strength.
+Mossbed  2 - 0|2  Immobile. Supply +1. Place: places a Sapling in a free cell of my lane.
+Mycelium  2 - 1|2  Immobile. Whenever a Sapling of yours in my lane dies, places a Sapling in a free cell of my lane (once per round).
+Nettle Patch  2 - 2|2  Immobile. Place: deals 1 damage to the enemy facing me. Round end: deals 1 damage to it; 2 instead if I am in your front row.
+Nursery Log  2 - 0|4  Immobile. Saplings beside me have +1|+1.
+Old Stump  2 - 0|3  Immobile. Place: a Sapling in my front row.
+Reed Bed  2 - 2|2  Immobile. Place: a Sapling in my front row. Round end: another one there if you have 1 or fewer units in it.
+Root Snare  2 - 1|3  Immobile. Roots 1. Place: pulls the enemy facing me straight forward, as far as it can.
+Rowan  2 - 2|2  Immobile. Roots 1. Place: my Roots strike now.
+Weeping Willow  2 - 1|3  Immobile. Round end: restores 1 shield to each ally beside me.
+Young Oak  2 - 1|2  Immobile. Perennial 1. Place: your Saplings in my lane gain +1 defence.
+Ash Tree  3 - 2|2  Immobile. Roots 2. Place: my Roots strike now.
+Bamboo Grove  3 - 2|4  Immobile. Round end: I gain +2 strength.
+Beech  3 - 1|4  Immobile. Place: places a Sapling in my lane. Other allies in my row have +1 defence.
+Blackthorn  3 - 2|3  Immobile. Round end: deals 1 damage to each enemy in my column.
+Compost Heap  3 - 0|4  Immobile. Whenever another ally in my lane dies, your other units in my lane gain +1|+1.
+Dryad  3 - 2|2  Immobile. Place: places a Sapling beside me. Your Saplings in my lane have +1 strength.
+Elder Bush  3 - 1|3  Immobile. Seeds 2. Round end: restores 1 shield to me.
+Grove Druid  3 - 1|4  Immobile. Place: draw 2 cards if you have 4 or more units in this lane (me included); otherwise draw 1.
+Lightning-struck Oak  3 - 2|3  Immobile. Death: deals 2 damage to the enemy facing me and places a Sapling in my lane.
+Old Oak  3 - 2|2  Immobile. Perennial 1. Place: each ally beside me gains +1|+1.
+Rich Loam  3 - 0|3  Immobile. Supply +1. Seeds 1.
+Root Cellar  3 - 0|3  Immobile. Supply +1. Place: +1 supply in this lane this round. Round end: restores 1 shield to me.
+Root Web  3 - 2|3  Immobile. Round end: deals 1 damage to it; 2 instead if another ally stands in my column.
+Silver Birch  3 - 1|2  Immobile. Perennial 1. Round end: if you hold this lane's base, places a Sapling in a free cell of my lane.
+Strangling Vine  3 - 2|2  Immobile. Place, and round end: pulls the enemy furthest from the base straight forward, as far as it can.
+Tall Pine  3 - 1|4  Immobile. Other allies in my column have +1 defence, and +1 strength while you hold this lane's base.
+Thicket  3 - 2|4  Immobile. Has +1 defence for each ally beside me (up to 3).
+Thornwood  3 - 2|3  Immobile. Round end: if you hold this lane's base, deals 1 damage to each enemy in the enemy front row.
+Wild Cherry  3 - 2|4  Immobile. Death: restores all shields of your other units in my lane.
+Ancient Yew  4 - 1|3  Immobile. Perennial 1. Place: your Saplings in my lane gain +1|+1. Allies beside me have +1 defence.
+Deep Root  4 - 1|3  Immobile. Roots 3. Place: my Roots strike now.
+Hornbeam Hedge  4 - 2|5 ▪▪  Immobile. Bodyguard.
+Mangrove  4 - 1|4  Immobile. Roots 1. Seeds 1.
+Mother of Saplings  4 - 1|4  Immobile. Round end: places a Sapling in a free cell of my lane. Whenever a Sapling of yours in my lane dies, I gain +1|+1.
+Oak Warden  4 - 2|5  Immobile. Bodyguard. Perennial 1.
+Old Growth  4 - 2|3  Immobile. Round end: I gain +1|+1; +2|+2 instead if you don't hold this lane's base.
+Rotting Log  4 - 0|5 ▪▪  Immobile. Whenever another ally in my lane dies, your other units in my lane gain +1 strength. Death: they gain +1|+1.
+Sacred Grove  4 - 1|3  Immobile. Place: if you hold this lane's base, your other units in my lane gain +1|+1. As long as you hold it, they have +1 strength.
+Seed Spitter  4 - 2|2  Immobile. Ranged. When I attack, places a Sapling in a free cell of my lane.
+Walnut Tree  4 - 1|4  Immobile. Seeds 3.
+Woodland Spring  4 - 1|6  Immobile. Round end: restores 1 shield to each other ally in my lane.
+Canopy Oak  5 - 2|5 ▪▪  Immobile. Place: your other units in my lane gain +1 defence. They have +1 defence more while I stand.
+Great Vine  5 - 2|3 ▪▪  Immobile. Place, and round end: pulls each enemy outside the enemy front row straight forward, then deals 1 damage to each enemy in the enemy front row.
+Green Man  5 - 2|3  Immobile. Perennial 1. Place: I gain +1|+1 for each unit that died this round (up to 3). Whenever another ally in my lane dies, I gain +1|+1.
+Wandering Seed-Wind  5 - 1|3  Immobile. Place: places a Sapling in each lane. Round end: places a Sapling in each other lane.
+Great Baobab  6 - 1|5 ▪▪  Immobile. Supply +1. Place: your other units in my lane restore all their shields and gain +1 defence. Round end: restores 2 shields to each of them.
+King of Roots  6 - 2|5  Immobile. Roots 2. Place: each of your units with Roots in my lane (me included) strikes with its Roots now. While I am outside your front row, other allies in my lane have +1 strength.
+Redwood  6 - 3|5 ▪▪  Immobile. Perennial 1. Place: the other allies in my column(s) gain +2 defence.
+Council of the Grove  7 - 2|5  Immobile. Place: your other units in my lane gain +1|+1; draw 2 cards if you have 5 or more units here (me included).
+Heartwood Giant  7 - 2|5 ▪▪▪▪  Immobile. Perennial 1. Bodyguard. Place: I gain +1|+1 for each other ally in my lane (up to 5).
+The Eldest Oak  8 - 3|5 ▪▪▪▪  Immobile. Perennial 1. Roots 2. Place: your Saplings in my lane gain +2|+2, then your other units here gain +1|+1. Other allies in my row(s) have +1 defence.
+World Tree  9 - 3|4 ▪▪▪▪  Immobile. Perennial 2. Roots 2. Place: each of your units in every lane gains +1|+1.
+
+Spells (supply):
+Creeping Moss  1  Pick a lane: your units there gain +1 defence.
+Equinox  1  An ally's round-end effects happen now.
+First Bloom  1  Pick a lane: your Saplings there gain +1 strength; draw a card if you have 2 or more there.
+Grasping Vines  1  An enemy is pulled straight forward, toward the base, as far as it can.
+Healing Sap  1  Restore all shields of an ally; it gains +1 defence.
+Morning Dew  1  Pick a lane: restore 2 shields to each of your units there; your Saplings there gain +1 defence.
+Pollen Cloud  1  Pick a lane: enemies there lose 1 strength this round; a Sapling in your camp there.
+Prune  1  A Sapling of yours dies; each ally that touched it gains +1|+1.
+Sudden Growth  1  An ally gains +2|+2.
+Whispering Leaves  1  Pick a lane: draw a card; draw another if you hold its base.
+Autumn Fall  2  An ally of yours dies; your other units in its lane gain +2|+2.
+Decay  2  Deals 2 damage to an enemy; a Sapling in your camp in its lane.
+Entangle  2  An enemy is pulled straight forward as far as it can; it can't act this round.
+Harvest of the Grove  2  +1 carry-over; +2 if you have 4 or more units in the picked lane.
+Heart of Oak  2  An ally gains +1|+1, and +1|+1 more for each Sapling touching it.
+Long Summer  2  Pick a lane: the round-end effects of your units there happen now.
+Overgrowth  2  Pick a lane: your units there gain +1 defence; a Sapling in your front row there.
+Rings of the Years  2  An ally gains +1|+1; +2|+2 instead if you hold its lane's base.
+Root Strike  2  An ally deals damage equal to its strength to the enemy facing it.
+Roots Rise  2  Deals 2 damage to the enemy facing an ally; the ally gains +1 defence.
+Scatter Seeds  2  Pick a lane: two Saplings in free cells of your camp there.
+Spring Rain  2  Pick a lane: your units there gain +1|+1.
+Thornburst  2  Pick a lane: deals 1 damage to each enemy in the enemy front row there; 2 instead if your front row there is full.
+Under the Canopy  2  Pick a lane: your units there gain +1 defence; your Saplings there are Armoured this round.
+Back-burn  3  Pick a lane: deals 2 damage to each enemy in the enemy front row there, and 1 to each of your units in your front row there.
+Green Wall  3  Pick a lane: your units in your front row there gain +2 defence.
+Seed Storm  3  Pick a lane: a Sapling in each free cell of your front row there.
+Turn of the Seasons  3  Pick a lane: your units there gain +1|+1 and restore all their shields.
+Wisdom of the Ancients  3  Pick a lane: draw 2 cards; a Sapling in your camp there.
+Spreading Roots  4  Everywhere: your units in every lane gain +1|+1.
+Upheaval  4  Pick a lane: deals 1 damage to the strongest enemy there for each of your units there (up to 4).
+
+Tokens:
+Sapling  1 - 0|1  Immobile. Perennial 1.
