@@ -295,8 +295,18 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
    (DEADLY_GROUND) with a case.
 
 ### 1. Reading
-- Card readers: background agents, model sonnet, job READER_PROMPT.md. Three in parallel: cards, keywords, second reading.
-  Never merge, normalize or rebuild while a reader runs (`run.py` refuses while part files exist).
+- What reading is: a card reader is a helper agent (another Claude) that takes one batch file of cards made by step 0.8
+  (`input/<game>/<batch>.jsonl`) and writes each card's rows (event, conditions, effects) into `read/<game>/<batch>.jsonl`.
+- How the import chat starts one: the Agent tool, type general-purpose, model sonnet, in the background, with the text of
+  READER_PROMPT.md as its task, GAME and BATCH filled in. Up to three run in parallel (Kaptain, 5 Nov 2026): the cards, the
+  keywords, the second reading (`input/<game>/second_001.jsonl`), each on its own batch.
+- Safety (Kaptain, 5 Nov 2026: they must not run forever, loop or destroy data, and a token limit must not lose their
+  work): a reader writes its records in parts of about 25 cards as it goes, so a stopped reader loses at most one part; a
+  reader started again on the same batch continues from its parts. It checks its records at most 3 rounds, then marks the
+  rest unsure and stops. It writes only its own batch's files and never runs git or a rebuild. The import chat commits each
+  finished batch at once (`git add read/<game>/<batch>.jsonl`), so finished work is never lost; a reader that has written no
+  new part for 30 minutes is stopped (TaskStop) and started again on the same batch.
+- Never merge, normalize or rebuild while a reader runs (`run.py` refuses while part files exist).
 - Check every keyword record by eye: all cards with a keyword inherit it. A trigger keyword that acts by itself (Monster
   Train Eaten: the unit is eaten after combat) has that act in its record.
 
