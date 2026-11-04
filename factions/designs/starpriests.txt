@@ -91,6 +91,17 @@ ROWS 2-3: the ziggurat priests (Augur, spell reactions) and the scribes.
 FREQUENCY: spell reactions that deal damage or make cards: once per round per unit; stat gains unbounded; draws on spells,
 Place, once per round.
 
+REMOVAL, DISRUPTION, PROTECTION (4 Nov 2026 rework)
+- Removal: many (damage spells, greater tablets, Augur). Disruption: medium (Exorcism, Demon Binder, Great Eclipse, Curse).
+  Protection: medium (wards, Omens that grow, Armoured guards).
+THE CURVE
+- 1-4: Scribes and Temple Guards put Clay Charms in the hand; charms fulfil Omens for 0; lesser tablets fill the deck with
+  greater ones; Storm Caller, Eclipse Watcher and Night Watch reward the spells already cast this round.
+- 4-6: Seer of Eclipses and Lamassu fulfil their own Omen on Place; Chief Scribe copies; Demon Binder stops the strongest.
+- 6+: High Astrologer and The Star of the Seven deal damage for every spell cast this round; High Priestess of the Moon
+  fulfils every Omen in the lane; Grand Magus and The King's Astrologer grow with the round's spells; Great Temple copies the
+  last spell twice; The Great Ziggurat brings two greater tablets.
+
 PREMADE DECKS (in the game; the network check checks each one)
 DECK Fire from the Ziggurat: Star Gazer x3, Astrologer x3, Ziggurat Priest x2, High Astrologer, Star Seer x2, Young Exorcist x3, Storm Caller x2, Lesser Tablet of Fire x3, Lesser Tablet of Storms x2, Fire of Shamash x3, Starfall x2, Burning Sign x3, Reading the Liver x2, Tithe of the Temple x2, Temple Guard x3
 DECK The Omen Guards: Child of Omens x3, Winged Bull Calf x3, Seal Bearer x2, Bull-Man Guard x3, Bull-Man of the Gate, Ward Keeper x2, King's Seer, The Star of the Seven, Chief Scribe, Lesser Tablet of Warding x3, Blessing of the Temple x3, Quick Sign x3, Amulet x3, Invocation x2, Laying of Hands x2, Reading the Liver x2, Lesser Tablet of Fire x2, Temple Granary x3

@@ -93,6 +93,17 @@ ROWS 2-3: the hospital (healers that restore the front), chaplains (allies in fr
 FREQUENCY: Harden, Retaliate and heal triggers fire on every hit (stats and damage only, so unbounded is fine); draw only
 on spells, Place, once per round.
 
+REMOVAL, DISRUPTION, PROTECTION (4 Nov 2026 rework)
+- Removal: few (Retaliate, sortie damage, Avenger of the Order). Disruption: few (pulls and pushes: Bastion Guard, Iron Knight,
+  Drawbridge, Repel the Assault). Protection: many (Harden, Vigil, healing, Bodyguards, Armoured).
+THE CURVE
+- 1-4: Squires and Sergeants harden; Shield Brother and Lay Brother protect their neighbours on Place; Death effects of
+  thorns and squires punish or heal; Gate Watch and Gatekeeper hit arrivals.
+- 4-6: Sentinel, Surgeon and Hospitaller Knight use the damage the line has taken; Castellan and Star Bastion raise rows;
+  Iron Knight pulls the next attacker in.
+- 6+: The Grand Master turns every wounded ally into +1|+1 and heals them; Avenger of the Order strikes with the shields the
+  lane has lost; Hospital Cathedral heals every lane; The Unbreakable Fortress; Relief Fleet puts a Novice in every lane.
+
 PREMADE DECKS (in the game; the network check checks each one)
 DECK The Bastion: Squire x3, Sergeant-at-Arms x3, Shield Brother x3, Knight of the Hospice x3, Bastion Guard x2, Sister of the Ward x3, Hospital Orderly x2, Chaplain x2, Castellan of the Bastion, Infirmarian Mother, The Grand Master, Banner of the Order x2, Bind the Wounds x3, Book of Hours x2, Prayer of Endurance x2, Granary x3, Penitent x2, Temper the Steel
 DECK The Thorn Hedge: Thorn Brother x3, Spiked Shield x3, Gate Watch x2, Gatekeeper x2, Thorn Knight x3, Sortie Rider x2, Challenger x2, Knight of the Sortie, Relief Galley, Thorn Hedge Knight, Marshal of the Order, Call to Battle, Feigned Retreat, Sortie!, Book of Hours, Victualler x2, Bastion Guard x2, Shield Brother x2, Sergeant-at-Arms x3, Bind the Wounds x2, Hospital Orderly, Granary

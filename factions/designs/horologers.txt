@@ -101,6 +101,18 @@ ROWS 2-3: the workings (Mainspring, Pendulum, Counterweight) and the clock-tower
 DRAW, FREQUENCY: Blueprints once per card; Draughtsman once per card (Place); round-end draw always capped once per round,
 also when it is wound (a wound round-end draw has lim round).
 
+REMOVAL, DISRUPTION, PROTECTION (4 Nov 2026 rework)
+- Removal: medium (round-end strikes and damage, wound again during the round). Disruption: very few (Screw Jack pushes).
+  Protection: medium (Armoured guards, repair from the back rows, Bodyguard Shield-Bearer).
+THE CURVE
+- 1-4 (rounds 1-2): Wound machines act as they are placed (Bell Ringer, Gear Hound, Screw Jack); Oil Can Boy and Crank wind
+  what stands beside them; Mainspring behind a Cog Soldier makes it act twice at round end.
+- 4-6 (middle): Master Mechanic, Gear Captain and Master Horologer wind whole rows; Mistress of Salvage turns the round's
+  deaths into Spare Parts; Difference Engine winds its neighbours twice.
+- 6+ (top): The Grand Orrery winds every Geared machine at once; The Great Clock Tower winds the whole lane; Brass Colossus
+  grows with each Geared ally and winds them; Clockwork Dragon hits for each Geared ally; Perpetual Engine makes the whole
+  lane act twice every round end; Great Foundry fills the front row with Cog Troopers.
+
 PREMADE DECKS (in the game; the network check checks each one)
 DECK The Gear Train: Ticking Soldier x3, Cog Soldier x3, Mainspring x3, Ratchet Guard x3, Tick-Tock Drummer x2, Gearsmith x2, Escapement x2, Cog Foundry x2, The Great Clock Tower, The Grand Orrery, Master Horologer, Turn the Key x3, Drive the Train x2, Full Wind x2, Coal Boiler x3, Draughtsman x2
 DECK The Scrap Yard: Spent Spring x3, Clockwork Bomb x3, Scrap Picker x3, Salvager x2, Tinker of Parts x2, Scrap Golem x2, Mistress of Salvage, Brass Colossus, Journeyman, Rewinder x2, Brass Sentinel x2, Turn the Key x3, Strip for Parts, Sudden Release, Salvage Rights, Pendulum x2, Clock Mender, Tighten the Spring x3, Coal Boiler x2, Patron of the Guild, Gate Automaton x2

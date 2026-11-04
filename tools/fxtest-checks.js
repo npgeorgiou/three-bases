@@ -29,4 +29,10 @@ const fr = p => frontRow(p), bk = p => backRow(p);
   ok('Climbing Ivy pulls the enemy facing it, not itself', e.r === fr(q) && u.r === fr(p), e.r + '/' + u.r); }
 { const s = fresh(), p = s.cur; const a = put(s, p, 'a_runner', 0, bk(p), 1); s.players[p].hand = ['a_advance']; s.cur = p;
   applyAction(s, listActions(s).find(x => x.t === 'tactic')); ok('Close the Gap moves the back units forward', a.r === fr(p), a.r); }
+{ const s = fresh(), p = s.cur, q = 1 - p; const a = put(s, p, 'a_hornboy', 0, fr(p), 0); const e = put(s, q, 'b_spearman', 0, fr(q), 0); e.pd = 10;
+  put(s, p, 'a_closinghorns', 0, fr(p), 2); ok('The Closing Horns: the side-column allies strike on its Place', e.dmg >= 3, e.dmg); }
+{ const s = fresh(), p = s.cur, q = 1 - p; const u = put(s, p, 's_bullcalf', 0, fr(p), 1); put(s, p, 's_moonpriestess', 0, bk(p), 1);
+  ok('High Priestess of the Moon: Place makes the allies\' Omens happen', strengthOf(u) === 2, strengthOf(u)); }
+{ const s = fresh(), p = s.cur, q = 1 - p; put(s, p, 'd_victim', 0, fr(p), 0); put(s, p, 'd_victim', 0, fr(p), 2); const e = put(s, q, 'b_spearman', 0, bk(q), 1); e.pd = 10;
+  put(s, p, 'd_pyramid', 0, bk(p), 0); ok('Temple Pyramid: 2 damage per other ally, then they die', e.dmg >= 4 && !s.units.some(x => x.card === 'd_victim'), e.dmg); }
 return out.join('\n') + '\n' + (fails ? fails + ' failed' : 'all passed');

@@ -96,6 +96,17 @@ SELF-SUFFICIENCY
 ROWS 2-3: the guns (Barrage, Ranged field guns) and the second trench line that keeps the front Entrenched.
 FREQUENCY: Barrage once per round end per gun; Shell making once per round per unit; draws on Place or spells.
 
+REMOVAL, DISRUPTION, PROTECTION (4 Nov 2026 rework)
+- Removal: many (Barrage, Shells, Ranged guns on Marked enemies). Disruption: medium (Shell Shock, Barbed Wire, pushes of
+  the barrage). Protection: medium (Entrenched infantry, sandbags, aid posts).
+THE CURVE
+- 1-4: observers mark on Place; Field Gun and Field Battery fire as they arrive; infantry digs in in front of the guns and
+  leaves a Rifleman when it falls.
+- 4-6: Heavy Gun and Rail Battery fire on Place; Counter-battery hits every Marked enemy; Trench Major and Colonel lift the
+  trench line.
+- 6+: The Great Howitzer deals 3 to every Marked enemy; The Railway Gun brings Shells and shells every lane; Airship marks the
+  lane then hits Marked enemies everywhere; General Staff fires every Barrage in every lane; The Siege Howitzer.
+
 PREMADE DECKS (in the game; the network check checks each one)
 DECK The Grand Battery: Trench Mortar x3, Stokes Mortar x2, Field Battery x3, Heavy Gun x2, The Great Howitzer, Munitions Depot x3, Trench Runner x2, Quartermaster x2, Line Infantry x3, Private x3, Gun Layer x2, Bombardier x2, Quartermaster General, Barrage x2, Orders from the Staff x2, Forward Observer x3
 DECK Spot and Strike: Forward Observer x3, Spotter x2, Flare Gunner x2, Field Gun x3, Sniper x2, Light Howitzer x3, Chief Observer, Trench Major, Trench Sergeant x2, Trench Veteran x2, Line Infantry x3, Sandbag Line x2, Ranging Shot x3, Over the Top! x2, Long-range Shell x2, Dig In x2, Munitions Depot x3

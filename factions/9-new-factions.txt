@@ -1,5 +1,5 @@
 ==================================================================
-9. THE FIVE NEW FACTIONS (3 Nov 2026; Claude's design, in the game for testing; replaced Tagma, Horde, Exanimati in the deck builder)
+9. THE FIVE NEW FACTIONS (3 Nov 2026; Claude's design; removed from the game on 4 Nov 2026, replaced by the seven factions of part 11)
 ==================================================================
 Cards: src/game/js/cards/new-<faction>.js (one line per card; effects are data, run by src/game/js/rules/fx.js). Library leads in brackets.
 

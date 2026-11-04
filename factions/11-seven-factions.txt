@@ -6,7 +6,7 @@ artillery faction. Each one has a stage 1 entry in factions/designs/<faction>.tx
 characteristics, one-line identity, 5 mechanics with library leads, how they feed each other, 3 keywords, groups,
 champions, strong/weak, self-sufficiency, premade decks) and its card lines in factions/designs/<faction>-cards.txt.
 Cards in the game: src/game/js/cards/new-<faction>.js. The old drafts in factions/designs/ (brokers, glyphwrights, hunters,
-ironfront, lodestones) were not used. The five factions of 3 Nov 2026 stay in the deck builder next to these seven.
+ironfront, lodestones) were not used. All older factions (Tagma, Horde, Exanimati and the five of 3 Nov 2026) were removed from the game on 4 Nov 2026.
 
 Checks run on every faction: tools/network_check.py on the entry, the cards and both premade decks (0 problems each;
 champions have more partners than the average card and gather different cards), tools/fxtest.js (the new keywords),
@@ -55,3 +55,7 @@ NEW RULES these factions brought (all built; written into summary/ when Kaptain 
 - New moments for card effects: my strike kills, an enemy is placed in my lane, another ally in my lane attacks, one of
   your spells targets me (Omen), my shields are restored, an ally in my lane survives damage; survive knows its attacker.
 - An effect can make a unit move straight forward (Reserve), or attack and move again this round.
+REWORK (Kaptain's points of 4 Nov 2026, START_DESIGN "Rosters"): Place effects on 40-50% of each faction's units and Death
+effects on 10-15%; cost 1-4 cards already combine; 6+ units use what the lane has set up (each entry's THE CURVE section
+names them); removal / disruption / protection levels are in each entry. Scenarios of the seven factions:
+three-bases-scenarios.html (src/scenarios/scenarios.html), two boards per faction.
