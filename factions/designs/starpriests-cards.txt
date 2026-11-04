@@ -1,0 +1,101 @@
+CARD Temple Acolyte | 1 - 1|1 | Whenever you cast a spell, I gain +1 strength this round. | mech: Incantation | needs: spell-cast
+CARD Child of Omens | 1 - 0|2 | Omen: I gain +1/+1. | mech: Omens | makes: guard, shields-lost | needs: ally-spell
+CARD Tablet Scribe | 1 - 0|1 | Place: a Clay Charm into your hand. | mech: Tablets, Omens | makes: cheap-spell, spell-cast, ally-spell
+CARD Star Gazer | 1 - 0|1 | Augur 1. | mech: The ziggurat | makes: augur | needs: damage-spell, guard
+CARD Young Exorcist | 1 - 1|1 | Whenever you cast a spell, deals 1 damage to the enemy facing me (once per round). | mech: Incantation | makes: enemy-hurt | needs: spell-cast
+CARD Temple Door Guard | 1 - 1|1 | Whenever you cast a spell, I restore 1 shield. | mech: Omens | makes: guard, shields-lost | needs: spell-cast
+CARD Novice Reader | 1 - 1|1 | Place: draw a card if you cast 2 or more spells this round. | mech: The night of signs | needs: cheap-spell, tablet-in-deck
+CARD Temple Guard | 2 - 1|2 | Armoured. | mech: Omens | makes: guard, shields-lost
+CARD Winged Bull Calf | 2 - 1|3 | Omen: I gain +1/+1. | mech: Omens | makes: guard, shields-lost | needs: ally-spell
+CARD Incanter | 2 - 1|2 | Whenever you cast a spell, your other units in my lane gain +1 defence this round. | mech: Incantation | needs: spell-cast
+CARD Astrologer | 2 - 0|2 | Augur 1. Place: a Star Spark into your hand. | mech: The ziggurat, Tablets | makes: cheap-spell, spell-cast, augur | needs: damage-spell, guard
+CARD Copyist | 2 - 1|2 | Place: a copy of the last spell you cast into your hand. | mech: Tablets | makes: spell-cast | needs: spell-cast
+CARD Liver Reader | 2 - 1|2 | Omen: draw a card (once per round). | mech: Omens | needs: ally-spell
+CARD Seal Bearer | 2 - 1|2 | Whenever you cast a spell, I restore 1 shield. Omen: I gain +2 defence. | mech: Omens, Incantation | makes: guard, shields-lost | needs: spell-cast, ally-spell
+CARD Temple Granary | 2 - 0|2 | Immobile. Supply +1. Whenever you cast a spell, I restore 1 shield (once per round). | mech: The ziggurat | makes: supply | needs: spell-cast
+CARD Moon Priest | 2 - 1|2 | Round end: a Clay Charm into your hand if you cast 2 or more spells this round (once per round). | mech: The night of signs, Tablets | makes: spell-cast, ally-spell | needs: cheap-spell
+CARD Ward Keeper | 2 - 1|3 | Omen: your other units in my lane gain +1 defence. | mech: Omens | makes: guard | needs: ally-spell, guard
+CARD Spark Priest | 2 - 1|2 | Whenever you cast a spell: a Star Spark into your hand (once per round). | mech: Tablets, Incantation | makes: cheap-spell, spell-cast, damage-spell | needs: spell-cast
+CARD Ziggurat Priest | 3 - 1|3 | Augur 1. Whenever you cast a spell, I gain +1 defence this round. | mech: The ziggurat | makes: augur | needs: damage-spell, guard, spell-cast
+CARD Bull-Man Guard | 3 - 2|3 | Omen: I gain +1/+1 and am Armoured this round. | mech: Omens | makes: guard, shields-lost | needs: ally-spell
+CARD Storm Caller | 3 - 1|3 | Whenever you cast a spell, deals 1 damage to each enemy in my lane (once per round). | mech: Incantation | makes: enemy-hurt | needs: spell-cast
+CARD Tablet Scholar | 3 - 1|3 | Place: a Lesser Tablet of Fire into your hand. | mech: Tablets | makes: cheap-spell, spell-cast, damage-spell, lesser-tablet
+CARD Night Watch | 3 - 1|4 | Round end: draw a card if you cast 3 or more spells this round (once per round). | mech: The night of signs | needs: cheap-spell
+CARD Keeper of Lions | 3 - 1|3 | Omen: places a Conjured Lion in my front row (once per round). | mech: Omens | makes: guard, enemy-hurt | needs: ally-spell
+CARD Exorcist | 4 - 2|3 | Whenever you cast a spell, deals 2 damage to the enemy facing me (once per round). | mech: Incantation | makes: enemy-hurt | needs: spell-cast
+CARD Sky Watcher | 3 - 1|2 | Ranged. Whenever you cast a spell, I gain +1 strength this round. | mech: Incantation | needs: spell-cast
+CARD Tithe Collector | 3 - 1|3 | Whenever you cast your second spell in a round: +1 carry-over (once per round). | mech: The night of signs | makes: supply | needs: cheap-spell, spell-cast
+CARD Bronze Mirror Priest | 3 - 1|3 | Omen: a Clay Charm into your hand (once per round). | mech: Omens, Tablets | makes: cheap-spell, spell-cast | needs: ally-spell
+CARD Star Seer | 3 - 0|3 | Augur 1. Place: draw a card. | mech: The ziggurat | makes: augur | needs: damage-spell, guard, tablet-in-deck
+CARD High Astrologer | 4 - 1|3 | Augur 1. Round end: if you cast 2 or more spells this round, deals 2 damage to the enemy facing me. | mech: The ziggurat, The night of signs | makes: augur, enemy-hurt | needs: damage-spell, guard, cheap-spell | champion
+CARD Bull-Man of the Gate | 4 - 2|3 | Bodyguard. Omen: I gain +1/+1 and restore all my shields. | mech: Omens, Tablets | makes: guard, shields-lost | needs: ally-spell, shields-lost, cheap-spell | champion
+CARD Chief Scribe | 4 - 1|4 | Whenever you cast a spell, the first time each round: a copy of it into your hand. | mech: Tablets, Incantation | makes: cheap-spell, spell-cast | needs: lesser-tablet, damage-spell | champion
+CARD King's Seer | 4 - 1|3 | Place: draw 2 cards; a Clay Charm into your hand. | mech: Tablets, Omens | makes: ally-spell, cheap-spell | needs: tablet-in-deck, guard | champion
+CARD The Star of the Seven | 5 - 2|3 | Whenever you cast a spell, deals 1 damage to the enemy facing me. Omen: draw a card (once per round). | mech: Incantation, Omens | makes: enemy-hurt, guard | needs: spell-cast, ally-spell, supply | champion
+CARD Lamassu | 5 - 3|5 ▪▪ | Omen: I gain +1/+1. | mech: Omens | makes: guard, shields-lost | needs: ally-spell, supply
+CARD Observatory | 5 - 0|7 ▪▪ | Immobile. Augur 2. | mech: The ziggurat | makes: augur | needs: damage-spell, guard, supply
+CARD Demon Binder | 4 - 2|3 | Whenever you cast a spell: the strongest enemy in my lane can't act this round (once per round). | mech: Incantation | needs: spell-cast
+CARD Great Temple | 6 - 0|5 ▪▪▪▪ | Immobile. Augur 1. Whenever you cast a spell, restores 1 shield to each other ally in my lane. Round end: a Lesser Tablet of Sight into your hand if you cast 2 or more spells this round (once per round). | mech: The ziggurat, Tablets | makes: spell-cast, lesser-tablet, augur | needs: cheap-spell, damage-spell, guard, spell-cast, shields-lost, supply
+CARD Grand Magus | 6 - 3|4 | Augur 1. Whenever you cast a spell, I gain +1/+1. | mech: Incantation, The ziggurat | makes: augur | needs: damage-spell, guard, spell-cast, supply
+CARD Temple Hill | 3 - 0|6 | Immobile. Round end: if you hold this lane's base, a Lesser Tablet of Warding into your hand (once per round). | mech: Tablets | makes: cheap-spell, spell-cast, ally-spell, lesser-tablet
+CARD Dream Interpreter | 2 - 1|2 | Omen: a Star Spark into your hand. | mech: Omens, Tablets | makes: cheap-spell, spell-cast, damage-spell | needs: ally-spell
+CARD Hymn Chorus | 2 - 1|2 | Has +1/+1 for each spell you cast this round (up to 3). | mech: The night of signs | makes: guard, shields-lost | needs: cheap-spell
+CARD Eclipse Watcher | 3 - 2|3 | Round end: deals 1 damage to the enemy furthest from the base for each spell you cast this round (up to 3). | mech: The night of signs | makes: enemy-hurt | needs: cheap-spell
+CARD Archivist | 3 - 2|3 | Death: a Lesser Tablet of Sight into your hand. | mech: Tablets | makes: cheap-spell, spell-cast, lesser-tablet
+CARD Serpent Priest | 2 - 2|1 | Omen: deals 2 damage to the enemy facing me. | mech: Omens | makes: enemy-hurt | needs: ally-spell
+CARD Rain Caller | 4 - 1|4 | Whenever you cast a spell, restores 1 shield to each of your units in my lane. | mech: Incantation | needs: spell-cast, shields-lost
+CARD Gate Guardian | 4 - 2|3 | Armoured. Omen: I gain +1 strength. | mech: Omens | makes: guard, shields-lost | needs: ally-spell
+CARD Seventh Priest | 5 - 2|3 | Has +2 strength while you cast 2 or more spells this round. Round end: if you cast 3 or more spells this round, deals 1 damage to each enemy in my lane. | mech: The night of signs | makes: enemy-hurt | needs: cheap-spell, supply
+CARD Temple Treasurer | 3 - 1|3 | Supply +1. | mech: The ziggurat | makes: supply
+CARD Lion Tamer | 2 - 1|1 | Place: places a Conjured Lion in my front row. | mech: Omens, Tablets | makes: guard, enemy-hurt
+CARD Priestess of Twin Omens | 3 - 1|3 | Whenever you cast a spell, I gain +1 defence this round. Omen: your other units in my lane gain +1 strength this round. | mech: Omens, Incantation | needs: ally-spell, spell-cast
+CARD Reciter of Tablets | 2 - 1|2 | Whenever you cast a Lesser Tablet, I gain +1/+1. | mech: Tablets, Incantation | needs: lesser-tablet
+CARD Master of Tablets | 4 - 2|3 | Whenever you cast a Lesser Tablet: draw a card (once per round). | mech: Tablets, Incantation | needs: lesser-tablet
+CARD Calendar Keeper | 3 - 2|3 | Round end: if you cast 3 or more spells this round, I gain +1/+1. | mech: The night of signs, Omens | makes: guard, shields-lost | needs: cheap-spell
+CARD Incense Burner | 1 - 1|3 | Immobile. Whenever you cast a spell, restores 1 shield to the ally directly in front of me. | mech: Incantation, The ziggurat | needs: spell-cast, shields-lost
+CARD Seer of Eclipses | 4 - 1|4 | Omen: deals 2 damage to the enemy facing me. | mech: Omens, The ziggurat | makes: enemy-hurt | needs: ally-spell
+CARD Gate Bull | 3 - 2|3 | Bodyguard. Omen: I gain +1 defence. | mech: Omens | makes: guard | needs: ally-spell, guard
+CARD High Priestess of the Moon | 5 - 2|4 | Whenever you cast a spell, your other units in my lane gain +1 strength this round. Omen: they gain +1/+1. | mech: Incantation, Omens | needs: spell-cast, ally-spell, supply
+CARD Clay Colossus | 6 - 4|6 ▪▪ | Omen: I gain +1/+1. | mech: Omens | makes: guard, shields-lost | needs: ally-spell, supply
+CARD Final Omen | spell 3 | Kill an enemy that has lost shields. | mech: The ziggurat, Incantation | makes: spell-cast | needs: enemy-hurt
+CARD Shower of Charms | spell 2 | Three Clay Charms into your hand. | mech: Tablets, Omens | makes: cheap-spell, spell-cast, ally-spell
+CARD Double Omen | spell 1 | An ally's Omen happens (so twice in all). | mech: Omens | makes: spell-cast, cheap-spell | needs: ally-spell
+CARD Eye of the Stars | spell 1 | Pick a lane: deals 1 damage to the enemy furthest from the base there. | mech: The ziggurat | makes: spell-cast, cheap-spell, damage-spell | needs: augur
+CARD Bless the Front | spell 2 | Pick a lane: your units in your front row there gain +1/+1. | mech: Omens | makes: spell-cast, guard
+CARD Morning Hymn | spell 1 | Draw a card if this is at least your second spell this round; otherwise a Clay Charm into your hand. | mech: The night of signs, Tablets | makes: spell-cast, ally-spell | needs: cheap-spell, tablet-in-deck
+CARD Moonlight | spell 3 | Pick a lane: restore all shields of each of your units there. | mech: Omens | makes: spell-cast, guard | needs: shields-lost
+CARD Curse Tablet | spell 2 | An enemy loses 2 strength. | mech: Incantation | makes: spell-cast
+CARD Great Eclipse | spell 5 | Pick a lane: deals 1 damage to each enemy there; they can't act this round. | mech: The ziggurat | makes: enemy-held, spell-cast, damage-spell, enemy-hurt | needs: augur
+CARD Copy the Tablets | spell 2 | A Lesser Tablet of Fire and a Lesser Tablet of Warding into your hand. | mech: Tablets | makes: cheap-spell, spell-cast, damage-spell, lesser-tablet, ally-spell
+CARD Clay Sentry | 1 - 0|1 | Armoured. | mech: Omens | makes: guard, shields-lost
+CARD Lesser Tablet of Fire | spell 1 | Deals 2 damage to an enemy; a Greater Tablet of Fire is shuffled into your deck. | mech: Tablets, The ziggurat | makes: tablet-in-deck, spell-cast, cheap-spell, lesser-tablet, damage-spell, enemy-hurt
+CARD Lesser Tablet of Warding | spell 1 | An ally gains +1/+1; a Greater Tablet of Warding is shuffled into your deck. | mech: Tablets, Omens | makes: tablet-in-deck, spell-cast, cheap-spell, ally-spell, lesser-tablet, guard
+CARD Lesser Tablet of Sight | spell 1 | Draw a card; a Greater Tablet of Sight is shuffled into your deck. | mech: Tablets | makes: spell-cast, cheap-spell, lesser-tablet | needs: tablet-in-deck
+CARD Lesser Tablet of Storms | spell 2 | Pick a lane: deals 1 damage to each enemy there; a Greater Tablet of Storms is shuffled into your deck. | mech: Tablets | makes: tablet-in-deck, spell-cast, lesser-tablet, damage-spell, enemy-hurt | needs: augur
+CARD Fire of Shamash | spell 2 | Deals 3 damage to an enemy. | mech: The ziggurat | makes: spell-cast, damage-spell, enemy-hurt | needs: augur
+CARD Blessing of the Temple | spell 1 | An ally gains +2 defence. | mech: Omens | makes: spell-cast, cheap-spell, ally-spell, guard
+CARD Reading the Liver | spell 2 | Draw 2 cards. | mech: Tablets | makes: spell-cast | needs: tablet-in-deck
+CARD Amulet | spell 1 | An ally gains +1 strength; a Clay Charm into your hand. | mech: Omens, Tablets | makes: cheap-spell, spell-cast, ally-spell
+CARD Starfall | spell 3 | Pick a lane: deals 1 damage to each enemy there, then 1 more to the enemy there with the least defence. | mech: The ziggurat | makes: spell-cast, damage-spell, enemy-hurt | needs: augur
+CARD Exorcism | spell 2 | Deals 1 damage to an enemy; it can't act this round. | mech: Incantation | makes: enemy-held, spell-cast, damage-spell, enemy-hurt | needs: augur
+CARD Omen of Ruin | spell 2 | Deals 1 damage to an enemy; +2 if it had already lost shields; +1 if you don't hold its lane's base. | mech: The ziggurat | makes: spell-cast, damage-spell | needs: enemy-hurt, augur
+CARD Tithe of the Temple | spell 1 | Pick a lane: +1 carry-over and +1 supply there this round. | mech: The night of signs | makes: spell-cast, cheap-spell, supply
+CARD Invocation | spell 1 | Restore 2 shields to an ally; a Star Spark into your hand. | mech: Omens, Tablets | makes: cheap-spell, spell-cast, damage-spell, ally-spell, guard | needs: shields-lost
+CARD Constellation | spell 2 | Deals 1 damage to an enemy, +1 for each other spell you cast this round (up to 5). | mech: The night of signs | makes: spell-cast, damage-spell, enemy-hurt | needs: cheap-spell, augur
+CARD Seven Stars | spell 4 | Pick a lane: deals 1 damage to each enemy there, +1 for each other spell you cast this round (up to 4). | mech: The night of signs, The ziggurat | makes: spell-cast, damage-spell, enemy-hurt | needs: cheap-spell, augur
+CARD Conjure Lion | spell 2 | Pick a lane: places a Conjured Lion in your front row there. | mech: Omens | makes: guard, enemy-hurt, spell-cast
+CARD Quick Sign | spell 0 | An ally gains +1 strength this round. | mech: Omens, The night of signs | makes: spell-cast, cheap-spell, ally-spell
+CARD Recite Again | spell 1 | The last spell you cast comes back into your hand. | mech: Tablets | makes: spell-cast, cheap-spell | needs: spell-cast
+CARD Library of Tablets | spell 3 | A Lesser Tablet of Fire, a Lesser Tablet of Warding and a Lesser Tablet of Sight into your hand. | mech: Tablets | makes: cheap-spell, spell-cast, damage-spell, lesser-tablet, ally-spell
+CARD Protective Spirit | spell 2 | An ally gains Armoured. | mech: Omens | makes: spell-cast, ally-spell, guard
+CARD Burning Sign | spell 1 | Deals 1 damage to an enemy and each enemy touching it. | mech: The ziggurat | makes: spell-cast, cheap-spell, damage-spell, enemy-hurt
+CARD Consult the Oracle | spell 1 | An ally gains +1 defence; draw a card if you already cast a spell this round. | mech: Omens, The night of signs | makes: spell-cast, ally-spell, guard | needs: cheap-spell, tablet-in-deck
+CARD The Heavens Open | spell 5 | Everywhere: deals 1 damage to each enemy in every lane. | mech: The ziggurat | makes: damage-spell, spell-cast | needs: augur, supply
+CARD Vision of the Night | spell 2 | Draw a card; a Clay Charm and a Star Spark into your hand. | mech: Tablets, The night of signs | makes: cheap-spell, spell-cast, ally-spell, damage-spell | needs: tablet-in-deck
+CARD Chant of Seven | spell 2 | Pick a lane: your units there gain +1/+1 this round; if you cast 3 or more spells this round, they gain +1/+1 instead of only this round. | mech: The night of signs, Omens | makes: spell-cast, guard | needs: cheap-spell
+CARD Laying of Hands | spell 1 | Restore all shields of an ally. | mech: Omens | makes: spell-cast, cheap-spell, ally-spell, guard | needs: shields-lost
+CARD Mirror of Fate | spell 2 | An ally's Place effects happen again. | mech: Omens, Tablets | makes: spell-cast, ally-spell
+CARD Wrath of Adad | spell 4 | Deals 3 damage to an enemy, then 2 to an enemy beside it, then 1. | mech: The ziggurat | makes: spell-cast, damage-spell, enemy-hurt | needs: augur
+CARD Counsel of Priests | spell 2 | An ally gains +1/+1; draw a card if you cast 2 or more spells this round (counting this one). | mech: Omens, The night of signs | makes: spell-cast, ally-spell, guard | needs: cheap-spell, tablet-in-deck
+CARD Sacred Number | spell 1 | Two Star Sparks into your hand. | mech: Tablets, The night of signs | makes: cheap-spell, spell-cast, damage-spell
+CARD Wall of Stars | spell 2 | Pick a lane: your units there gain +2 defence this round and restore 1 shield. | mech: Omens | makes: spell-cast, guard | needs: shields-lost

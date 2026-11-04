@@ -8,6 +8,7 @@ const DECKS = {
   sunfeeders:{name:'Sunfeeders',fac:'d',list:[]},
   impi:{name:'Impi',fac:'a',list:[]},
   hospice:{name:'Hospice Knights',fac:'b',list:[]},
+  starpriests:{name:'Star Priests',fac:'s',list:[]},
 };
 /** Premade decks: each built around one side of its faction. */
 const PREMADE_VERSION = 6;   // raising it replaces the premade decks stored in a browser with these lists
@@ -30,5 +31,7 @@ const PREMADE = [
   { id: 'p-a2', name: 'Impi — Horns and Loins', cards: { a_hornboy: 3, a_hornwarrior: 3, a_chest: 3, a_loinboy: 3, a_loinwarrior: 3, a_horncaptain: 1, a_oldbull: 1, a_kingspear: 1, a_hornrunner: 2, a_reserveleader: 2, a_loinvet: 2, a_chestcap: 1, a_charge: 2, a_advance: 2, a_stab: 2, a_raider: 2 } },
   { id: 'p-b1', name: 'Hospice Knights — The Bastion', cards: { b_squire: 3, b_sergeant: 3, b_shieldbro: 2, b_knight: 3, b_bastionguard: 2, b_nurse: 3, b_orderly: 2, b_chaplain: 2, b_castellan: 1, b_mother: 1, b_grandmaster: 1, b_flagbearer: 2, b_mend: 3, b_bookhours: 2, b_prayer: 2, b_granary: 2 } },
   { id: 'p-b2', name: 'Hospice Knights — The Thorn Hedge', cards: { b_thorn: 3, b_spikeshield: 3, b_watch: 3, b_gatekeeper: 2, b_thornknight: 3, b_sortieknight: 2, b_challenger: 2, b_herald: 2, b_sortiecap: 1, b_galley: 1, b_hedge: 1, b_marshal: 1, b_challenge: 2, b_feint: 2, b_sortie: 2, b_bookhours: 2, b_victualler: 2 } },
+  { id: 'p-s1', name: 'Star Priests — Fire from the Ziggurat', cards: { s_stargazer: 3, s_astrologer: 3, s_ziggurat: 2, s_highastro: 1, s_starseer: 2, s_exorcist: 3, s_stormcaller: 2, s_lfire: 3, s_lstorm: 2, s_firebolt: 3, s_starfall: 2, s_burn: 3, s_reading: 2, s_tithespell: 2 } },
+  { id: 'p-s2', name: 'Star Priests — The Omen Guards', cards: { s_omenchild: 3, s_bullcalf: 3, s_sealbearer: 2, s_bullman: 3, s_bullgate: 1, s_ward: 2, s_kingseer: 1, s_starofseven: 1, s_chiefscribe: 1, s_lward: 3, s_blessing: 3, s_quicksign: 3, s_charmspell: 3, s_invoke: 2, s_laying: 2, s_reading: 2 } },
 ];
 

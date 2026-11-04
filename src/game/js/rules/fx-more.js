@@ -103,5 +103,6 @@ Object.assign(FX_OPS, {
   },
   kill(s, c, o) { let ts = fxSel(s, c, o.to); if (o.first) ts = ts.sort((a, b) => defenceOf(a) - defenceOf(b) || byReadingOrder(a, b)).slice(0, 1); for (const t of ts) kill(s, t, c.label); },
   itStrike(s, c, o) { const u = fxAlive(s, c.t); if (!u) return; for (let i = 0; i < (o.itStrike || 1); i++) { const t = byId(s, u.id) && strikeTarget(s, u); if (t) strike(s, u, t, `${unitName(u)} (${c.label})`); } },
+  omen(s, c, o) { for (const t of fxSel(s, c, o.to || 'it')) fxFire(s, 'targeted', t, { k: c.k }); },
   sup(s, c, o) { for (const t of fxSel(s, c, o.to)) { t.sup = Math.max(1, unitSupply(t) + o.sup); log(s, `${unitName(t)}: supply ${unitSupply(t)} (${c.label}).`); } },
 });
