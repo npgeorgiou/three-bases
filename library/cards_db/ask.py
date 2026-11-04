@@ -21,6 +21,19 @@ question runs across games.
   ask.py <games> kit <concept> [<concept> ...]    a faction built on these: per game the two factions that combine them
                                                   most, their key cards with texts, and what the first concept works with
   ask.py <games> list happenings|concepts         the values these questions take
+Faction design (faction_asks.py; a faction is found by name in the chosen games):
+  ask.py <games> palette <trigger> [faction]      what cards do on one trigger, grouped, count and 2 examples per group
+                                                  (a concept or happening; also place, death, ally_dies, spell_cast, round_end)
+  ask.py <games> curve <faction>                  cards by cost: units and spells per cost, per card trigger -> effect -> target
+  ask.py <games> spells <faction>                 the faction's spells grouped by what they do
+  ask.py <games> removal <faction>|<game>         how it deals with enemy units (kill, damage, push away, take strength, stop,
+                                                  transform, steal, sacrifice to kill), share of each; a game: every faction
+  ask.py <games> protect <faction>|<game>         how it protects its own (armour, shield, immunity, survive death, guard, hide, heal)
+  ask.py <games> ways <faction>                   its groups of tightly linked cards (network.py), key cards, what ties each
+  ask.py <games> scaling chain|conversion|threshold  repeats when a condition holds; gives up one thing for another; changes
+                                                  once a number is reached
+  ask.py <games> only <game>                      concepts only one faction of the game has
+  ask.py <games> lacks <faction>                  concepts the faction never has while at least half its game's others do
   --texts: every card found with its short text (a game with 10 or fewer cards always shows them)
 Cards that make a card with it count too, named "Zed (via Living Shadow)". The game's enemies, bosses and run events are
 left out unless --enemies is given. An unknown concept says so and names the nearest ones.
@@ -29,7 +42,7 @@ one concept: Stun and Freeze are disable, round_start and turn_start are turn_st
 import os, sqlite3, subprocess, sys
 NOT_FACTION = ('neutral', 'boss', 'any', 'colorless', 'curse', 'status', 'token', 'event', 'shared', 'universal', '(none)')  # no faction of its own
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
-import connections, mechanics, deck_analysis, network
+import connections, mechanics, deck_analysis, network, faction_asks
 c = sqlite3.connect(os.path.join(HERE, 'cards.sqlite'))
 
 
@@ -194,6 +207,9 @@ def main():
         out = [n for n in all_ if n != me and connections.explain(c, me, n)][:40]
         inn = [n for n in all_ if n != me and connections.explain(c, n, me)][:40]
         print(f'{me} sets off: ' + ', '.join(out)); print(f'set off {me}: ' + ', '.join(inn))
+    elif q in faction_asks.ASKS:
+        if not args: print(__doc__); return
+        faction_asks.ASKS[q](faction_asks.Ctx(c, games, short_text, SUB), args)
     elif q == 'card': subprocess.run([sys.executable, os.path.join(HERE, 'rows.py')] + args)
     elif q == 'list':
         sql = "select value from vocab where field='event'" if args[0] == 'happenings' else 'select distinct concept from flat_concept'
