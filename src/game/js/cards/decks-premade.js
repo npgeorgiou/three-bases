@@ -9,6 +9,7 @@ const DECKS = {
   impi:{name:'Impi',fac:'a',list:[]},
   hospice:{name:'Hospice Knights',fac:'b',list:[]},
   starpriests:{name:'Star Priests',fac:'s',list:[]},
+  rootkin:{name:'Rootkin',fac:'o',list:[]},
 };
 /** Premade decks: each built around one side of its faction. */
 const PREMADE_VERSION = 6;   // raising it replaces the premade decks stored in a browser with these lists
@@ -33,5 +34,7 @@ const PREMADE = [
   { id: 'p-b2', name: 'Hospice Knights — The Thorn Hedge', cards: { b_thorn: 3, b_spikeshield: 3, b_watch: 3, b_gatekeeper: 2, b_thornknight: 3, b_sortieknight: 2, b_challenger: 2, b_herald: 2, b_sortiecap: 1, b_galley: 1, b_hedge: 1, b_marshal: 1, b_challenge: 2, b_feint: 2, b_sortie: 2, b_bookhours: 2, b_victualler: 2 } },
   { id: 'p-s1', name: 'Star Priests — Fire from the Ziggurat', cards: { s_stargazer: 3, s_astrologer: 3, s_ziggurat: 2, s_highastro: 1, s_starseer: 2, s_exorcist: 3, s_stormcaller: 2, s_lfire: 3, s_lstorm: 2, s_firebolt: 3, s_starfall: 2, s_burn: 3, s_reading: 2, s_tithespell: 2 } },
   { id: 'p-s2', name: 'Star Priests — The Omen Guards', cards: { s_omenchild: 3, s_bullcalf: 3, s_sealbearer: 2, s_bullman: 3, s_bullgate: 1, s_ward: 2, s_kingseer: 1, s_starofseven: 1, s_chiefscribe: 1, s_lward: 3, s_blessing: 3, s_quicksign: 3, s_charmspell: 3, s_invoke: 2, s_laying: 2, s_reading: 2 } },
+  { id: 'p-o1', name: 'Rootkin — The Thicket', cards: { o_acorn: 3, o_seedpod: 3, o_hazel: 3, o_mushring: 2, o_leaflitter: 2, o_toadstool: 3, o_mother: 1, o_druid: 1, o_elder: 2, o_compost: 1, o_scatter: 3, o_fall: 2, o_rain: 2, o_whisper: 2, o_mossbed: 2 } },
+  { id: 'p-o2', name: 'Rootkin — The Old Grove', cards: { o_youngoak: 3, o_rowan: 3, o_oak: 3, o_ash: 2, o_beech: 2, o_pine: 2, o_deeproot: 1, o_eldest: 1, o_yew: 1, o_rootling: 3, o_nettle: 2, o_vines: 2, o_growth: 3, o_whisper: 2, o_mossbed: 2 } },
 ];
 
