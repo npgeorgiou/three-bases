@@ -1,0 +1,36 @@
+BENCHMARK REPORT OF THE SEVEN FACTIONS (4 Nov 2026; node tools/cardstats.js <letter> 4)
+Each faction played 44 Benchmark games (depth 1): its two premade decks plus decks of 12 different cards x3 that together
+cover every card, against the other premade decks of the game (the old five, the seven, both sides). The Benchmark plays
+combos only by accident and 44 games is a small sample, so a card never played is a lead to look at, not a verdict.
+"Card effect never happened" counts only a unit's own card effects (not keywords or position bonuses).
+Change made from it: Harden's value went from 2 to 1 and every Harden unit got +1 defence (the Hospice Knights won 11%
+of their games before, 30% after). The Rootkin win the most (68%); a test without the Saplings' growth did not change that.
+
+HOROLOGERS: games 44, won 24 (55%).
+  Never played: Oil the Works, Clockwork Precision, Pneumatic Post, Commission.
+  Played 3+ times, their card effect never happened: Hour Hand.
+  Best win rates when played (4+ games): Gearsmith 100%, Guild Apprentice 100%, Lamp Lighter 100%, Brass Sentinel 100%, Powder Clock 100%.
+SUNFEEDERS: games 44, won 20 (45%).
+  Never played: Altar Guardian, Blood Rain, Execution, Ring the Toll, Bloody Dawn.
+  Played 3+ times, their card effect never happened: Jaguar Knight.
+  Best win rates when played (4+ games): Tribute of Cacao 80%, Obsidian Moth 75%, Feed the Sun 75%, Obsidian Knight 75%, Marigold Child 71%.
+IMPI: games 44, won 17 (39%).
+  Never played: Bull of the Herd, The Bull King, Blood Feud, Strike Again, Waves of Spears, Close the Gap, Gift of Cattle.
+  Played 3+ times, their card effect never happened: Cattle Herd, Flank Guard.
+  Best win rates when played (4+ games): Wave Leader 100%, Young Regiment 83%, Bush Fighter 75%, Horn Warrior 70%, Close Stabber 67%.
+HOSPICE KNIGHTS: games 44, won 13 (30%).
+  Never played: Sentinel of the Wall.
+  Played 3+ times, their card effect never happened: Destrier of the Order, Lance of the Order, Avenging Knight, Paladin of the Ward, Oathsworn, Herbalist, Pilgrim, Spiked Shield.
+  Best win rates when played (4+ games): Prayer of Endurance 67%, Gate Watch 60%, Lance of the Order 50%, The Grand Master 50%, Lance Charge 50%.
+STAR PRIESTS: games 44, won 16 (36%).
+  Never played: Tablet Scholar, Demon Binder, Shower of Charms, Great Eclipse, Copy the Tablets, Conjure Lion, Recite Again, Vision of the Night, Mirror of Fate, Wrath of Adad.
+  Played 3+ times, their card effect never happened: Serpent Priest, Keeper of Lions, Sky Watcher, Seer of Eclipses.
+  Best win rates when played (4+ games): Ward Keeper 80%, Reading the Liver 80%, Astrologer 75%, Bull-Man of the Gate 75%, King's Seer 75%.
+ROOTKIN: games 44, won 30 (68%).
+  Never played: Green Man.
+  Played 3+ times, their card effect never happened: none.
+  Best win rates when played (4+ games): Ash Tree 100%, Compost Heap 100%, Grove Druid 100%, Nettle Patch 100%, Beech 100%.
+THE LONG GUNS: games 44, won 14 (32%).
+  Never played: Dugout, Field Telephone, Counter-battery Gun, Landship, The Great Howitzer, Whizz-bang Battery, Spotter Plane, Pillbox, Bombardment, Dispatch Rider, Heavy Barrage, Artillery Preparation.
+  Played 3+ times, their card effect never happened: none.
+  Best win rates when played (4+ games): Field Battery 60%, Trench Mortar 57%, Ammunition Carrier 50%, Barbed Wire 50%, Observation Balloon 50%.

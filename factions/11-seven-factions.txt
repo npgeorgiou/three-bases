@@ -1,0 +1,57 @@
+==================================================================
+11. THE SEVEN FACTIONS OF 4 NOV 2026 (Claude's design, built through the chain; in the game for testing)
+==================================================================
+Asked by Kaptain: a clockwork, a death (not the Exanimati), an aggro, a defensive, a spell, an all-Immobile and a World War I
+artillery faction. Each one has a stage 1 entry in factions/designs/<faction>.txt (name, icon, theme with 10+
+characteristics, one-line identity, 5 mechanics with library leads, how they feed each other, 3 keywords, groups,
+champions, strong/weak, self-sufficiency, premade decks) and its card lines in factions/designs/<faction>-cards.txt.
+Cards in the game: src/game/js/cards/new-<faction>.js. The old drafts in factions/designs/ (brokers, glyphwrights, hunters,
+ironfront, lodestones) were not used. The five factions of 3 Nov 2026 stay in the deck builder next to these seven.
+
+Checks run on every faction: tools/network_check.py on the entry, the cards and both premade decks (0 problems each;
+champions have more partners than the average card and gather different cards), tools/fxtest.js (the new keywords),
+tools/simtest.js (100 random games, no errors), tools/smoke.js, tools/cardstats.js (Benchmark report, below).
+
+HOROLOGERS (c, clockface icon) — 17th-18th century clockmakers' guilds and automata.
+  Machines act by themselves at round end; winding makes them act again during the round; broken machines become Spare
+  Parts that wind the next one. Keywords: Geared, Wound, Salvage. Mechanics: striking the hour, winding, gearing,
+  salvage, the workings (back rows). Champions: Master Horologer, The Grand Orrery, Mistress of Salvage, The Great Clock
+  Tower, Brass Colossus. Decks: The Gear Train, The Scrap Yard. 108 cards.
+SUNFEEDERS (d, sun-skull icon) — the Mexica world: flower wars, temple steps, the Day of the Dead.
+  Every death feeds them: cuts wound, Obsidian finishes the wounded, Offerings give their own, the Toll grows with the
+  deaths of the round. Keywords: Toll, Obsidian, Offering. Champions: Jaguar Knight, High Priestess of the Steps, Keeper
+  of the Skull Rack, Lady of the Marigold Path, The Sun-Eater. Decks: The Cutting Rain, The Temple Steps. 103 cards.
+IMPI (a, hide-shield icon) — the Zulu regiments.
+  Fast cheap warriors attack in waves from round 1; the horns hit from the side columns, kills bring cattle (supply) and
+  more attacks, the reserves run in to fill each fallen warrior's cell. Keywords: Onrush, Flanker, Reserve. Champions:
+  Induna of the Wave, Horn Captain, Old Bull of the Loins, Praise Singer, Spear of the King. Decks: The Wave, Horns and
+  Loins. 104 cards.
+HOSPICE KNIGHTS (b, eight-pointed cross icon) — the hospital orders in a besieged island fortress.
+  Few tough knights outlast the enemy: blows they survive harden them or are struck back, the hospital restores them,
+  sorties hit arrivals, and relief comes while they hold the base. Keywords: Harden, Retaliate N, Vigil N. Champions:
+  Castellan of the Bastion, Knight of the Sortie, Infirmarian Mother, The Grand Master, Relief Galley. Decks: The Bastion,
+  The Thorn Hedge. 101 cards.
+STAR PRIESTS (s, eight-pointed star icon) — the astrologer-priests of Babylon.
+  Spells are the army: units react to spells, Omens are fulfilled when a spell targets them, lesser tablets put greater
+  ones into the deck, back-row priests give the spells power. Keywords: Omen, Augur N (Tablet is a name word). Champions:
+  High Astrologer, Bull-Man of the Gate, Chief Scribe, King's Seer, The Star of the Seven. Decks: Fire from the Ziggurat,
+  The Omen Guards. 101 cards (41% spells).
+ROOTKIN (o, oak icon) — a living sacred forest; every unit is Immobile (Kaptain's idea).
+  Nothing moves: trees grow at each round end, seed Saplings, feed their neighbours when they fall and strike up through
+  their roots from any row. Keywords: Perennial N, Seeds N, Roots N. Champions: Grove Druid, Mother of Saplings, Deep
+  Root, The Eldest Oak, Wandering Seed-Wind. Decks: The Thicket, The Old Grove. 101 cards.
+THE LONG GUNS (l, shell icon) — the artillery of the Western Front.
+  Heavy guns in the back rows bombard the enemy's rear at round end, observers mark targets (Kaptain's Mark idea:
+  strikes on a Marked unit deal double damage), dug-in infantry holds the front, and the infantry goes over the top when
+  enemies die. Keywords: Marked, Barrage N, Entrenched. Champions: Chief Observer, Trench Major, Quartermaster General,
+  The Great Howitzer, The Railway Gun. Decks: The Grand Battery, Spot and Strike. 101 cards.
+
+NEW RULES these factions brought (all built; written into summary/ when Kaptain asks to save the summary):
+- Winding: a unit's round-end effects happen now (as often as it is wound); a replayed effect never winds again.
+- Marked: strikes on the unit deal double damage, until it leaves the board.
+- Entrenched: Armoured while in the front row with an ally directly behind.
+- Offering: Place: the ally directly behind dies; "if offered" effects need it.
+- Counts of this round: deaths (Toll), attacks (Onrush cards), spells (already in the game).
+- New moments for card effects: my strike kills, an enemy is placed in my lane, another ally in my lane attacks, one of
+  your spells targets me (Omen), my shields are restored, an ally in my lane survives damage; survive knows its attacker.
+- An effect can make a unit move straight forward (Reserve), or attack and move again this round.

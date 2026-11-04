@@ -51,7 +51,7 @@ MECHANIC The sortie | makes: enemy-damaged, damaged-ally | needs: enemy-arrives
 MECHANIC Relief | makes: survives-damage, enemy-arrives | needs: base-held, hardened-front
 
 KEYWORDS OF ITS OWN
-- Harden (value 2 per point; defence that keeps coming is worth a lot): when I survive damage, I gain +1 defence.
+- Harden (value 1; measured: at 2 the faction lost almost every Benchmark game): when I survive damage, I gain +1 defence.
 - Retaliate N (value N): when I survive damage from an enemy unit, I deal N damage to it.
 - Vigil N (value N): round end: restores N of my shields.
 Shared keywords used: Armoured, Bodyguard, Riposte (a few), Immobile (bastions).
