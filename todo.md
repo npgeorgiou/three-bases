@@ -33,10 +33,9 @@ Work not done yet. Kaptain's requests in his own words where he gave them. Remov
 12. **Kaptain's review of the seven factions (4 Nov 2026, evening). Do these in this order, one faction at a time per chat.**
    - Crash (game and scenarios): `debtCost` in src/game/js/rules/exanimati-death-plague-discard.js reads the removed card `debt`; remove it with the rest of item 10, then play a game and every scenario in a browser (puppeteer: start, mulligan, a few turns), not only smoke.js.
    - "The cost->stats budget is correct, and should be followed": undo the +1 / -1 defence changes of 4 Nov (commits "Balance from Benchmark", "Rootkin -1"); balance with other fixes.
-   - Merge the file Kaptain gives into the docs (not received yet); make the thinking process prominent; the designer takes the "Lead Systems and Balance Designer" identity.
    - Spells/units: inside each faction, at cost 1-5 the split of spells and units is about the faction's own share at every cost level (Horologers: all over the place); high cost may be mostly units.
    - Every rule word on cards has a hover (e.g. Wind is written without [[Wind]]); no invented words: "break" (= dies) goes.
    - Card lists and the deck builder: inside a cost, sort alphabetically, not spells then units.
    - The 5 champions of each faction are shown as champions in the game (marked on the card).
    - Round-end damage everywhere is too strong; and too many cards do the same thing ("strike the nearest enemy", "+strength", "kill"): rebuild each faction from the library's card texts (read 30-50 cards of the closest real factions, write their play patterns), give each faction 5 really different ways to play, and add an effect-level twin check (same trigger + effect + target on more than 2-3 cards is a problem).
-   - Library: report what it lacks for this work (Claude's list in the chat of 4 Nov 2026 evening) and use the Stormbound, Monster Train, Faeria and Duelyst data, not only Runeterra.
+   - Library: the missing queries are Kaptain's to give to a library chat (Claude's list of 4 Nov 2026 evening). Use the Stormbound, Monster Train, Faeria and Duelyst data, not only Runeterra.
