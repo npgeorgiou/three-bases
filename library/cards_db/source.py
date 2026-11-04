@@ -9,12 +9,14 @@ Id blocks, one per game (PROCESS.md step 0.4); a new game writes its line here f
   duelyst     5000001-5999999   cards and glossary keywords from 5000001; Kaptain's definitions from 5900001
   into_the_breach 6000001-6999999 cards and glossary keywords from 6000001; Kaptain's definitions from 6900001
   sts1        7000001-7999999   cards and glossary keywords from 7000001; Kaptain's definitions from 7900001
-  then        8000001-8999999, 9000001-9999999, ... (each game takes the first free block and writes its line here)"""
+  marvel_snap 8000001-8999999   cards and keywords from 8000001; Kaptain's definitions from 8900001
+  then        9000001-9999999, 10000001-10999999, ... (each game takes the first free block and writes its line here)"""
 import glob, json, os, sqlite3
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(HERE, '..', 'three-bases-library.sqlite')
 # a supplement that holds a game's full card list replaces every library entry of these categories (not only same codes)
-FULL = {'inscryption': ('unit', 'terrain'), 'into_the_breach': ('unit', 'ability', 'item', 'hero'), 'sts1': ('spell', 'relic', 'item', 'status', 'keyword', 'monster', 'boss', 'event', 'modifier')}
+FULL = {'inscryption': ('unit', 'terrain'), 'into_the_breach': ('unit', 'ability', 'item', 'hero'), 'sts1': ('spell', 'relic', 'item', 'status', 'keyword', 'monster', 'boss', 'event', 'modifier'),
+        'marvel_snap': ('unit', 'keyword', 'game_rule')}
 COLS = ['id', 'game', 'ext_id', 'name', 'category', 'source_type', 'edition', 'faction', 'subtypes', 'rarity', 'cost', 'cost_num',
         'stats', 'text', 'extra', 'variants']
 

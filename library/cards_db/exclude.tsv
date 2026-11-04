@@ -3,3 +3,4 @@ runeterra	edition	Path of Champions	Path of Champions items are a separate mode;
 stormbound	none		Kaptain wants the base game rules only, no modes (Brawl, Draft, Campaign, Friendly); the library has no mode-only cards, so nothing is removed (28 Oct 2026)
 runeterra	name	Terrify	Terrify is a Path of Champions keyword; Kaptain: delete it (28 Oct 2026)
 into_the_breach	category	game_rule	the library's 10 wiki article pages (Weapons, Squads, Vek, Time Pod, Movement, Health, Grid Power, Corporate Reputation, Passives, Missions) are articles, not cards; the game's rules are read/into_the_breach/game_rules.jsonl (Claude, 30 Oct 2026, for Kaptain's check)
+marvel_snap	source_type	mode variant (marvelsnapzone.com export, snap-dossier a23b31f, 2 Nov 2026)	cards of other modes (Team Clash, Grand Arena, Champions: carddefid = a card's carddefid plus a mode tag); Claude, following Kaptain's base-game-only rule for Runeterra and Stormbound (28 Oct 2026), for his check (5 Nov 2026)
