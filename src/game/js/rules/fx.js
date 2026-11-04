@@ -169,12 +169,15 @@ const FX_OPS = {
   replace(s, c, o) { for (const t of fxSel(s, c, o.to)) fxFire(s, 'place', t, { again: true }); },
   undo(s, c) { fxUndo(s, c.p); },
 };
+const FX_TO_OPS = new Set(['kill', 'stun', 'pull', 'push', 'ride', 'displace', 'replace', 'copy', 'echo', 'tick', 'ready', 'advance', 'omen']);
 /** Run a list of ops with context c. */
 function fxRun(s, c, ops) {
   for (const o of ops) {
     if (o.if && !fxIf(s, c, o.if)) continue;
     const op = Object.keys(FX_OPS).find(k => k in o);
-    if (op) { FX_OPS[op](s, c, o); processDeaths(s); }
+    // { kill: 'it' }, { tick: 'ahead' }...: a selector written as the op's value is its target
+    const oo = op && o.to === undefined && typeof o[op] === 'string' && FX_TO_OPS.has(op) ? { ...o, to: o[op] } : o;
+    if (op) { FX_OPS[op](s, c, oo); processDeaths(s); }
   }
 }
 /** Fire the `on` effects of unit u (alive, or a dead copy for death). ev: the other unit of the event. */

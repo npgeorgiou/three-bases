@@ -25,7 +25,7 @@ function kwFx(c) {
   if (c.toll) aura.push({ to: 'self', s: c.toll, per: { count: 'deathsR' } });
   if (c.obsidian) c.headsman = 1;
   if (c.onrush) fx.push({ on: 'allyAttack', do: [{ buff: [c.onrush, 0], rnd: 1, to: 'self' }] });
-  if (c.flanker) aura.push({ to: 'self', s: c.flanker, if: { front: 1, side: 1 } });
+  if (c.flanker) aura.push({ to: 'self', s: 2 * c.flanker, if: { front: 1, side: 1 } });
   if (c.reserve) fx.push({ on: 'allyDeath', if: { back: 1 }, do: [{ advance: 1 }] });
   if (c.harden) fx.push({ on: 'survive', do: [{ buff: [0, c.harden], to: 'self' }] });
   if (c.retaliate) fx.push({ on: 'survive', do: [{ dmg: c.retaliate, to: 'it' }] });

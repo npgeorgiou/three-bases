@@ -46,6 +46,20 @@ designs/lodestones.txt             88  Lodestones (megaliths, all Immobile) stag
 designs/glyphwrights.txt           96  Glyphwrights (Daoist talismans) stage 1
 designs/brokers.txt                95  Brokers (Prohibition gangs) stage 1
 designs/hunters.txt                91  Wild Hunt stage 1
+designs/horologers.txt             102  Horologers (clockwork) stage 1: theme, identity, mechanics, groups, champions
+designs/horologers-cards.txt       108  its card lines (made from the game by tools/design_cards.js)
+designs/sunfeeders.txt              96  Sunfeeders (death, Mexica) stage 1
+designs/sunfeeders-cards.txt       103  its card lines (made from the game by tools/design_cards.js)
+designs/impi.txt                    95  Impi (aggro, Zulu regiments) stage 1
+designs/impi-cards.txt             104  its card lines (made from the game by tools/design_cards.js)
+designs/hospice.txt                 94  Hospice Knights (defence, hospital orders) stage 1
+designs/hospice-cards.txt          101  its card lines (made from the game by tools/design_cards.js)
+designs/starpriests.txt             92  Star Priests (spells, Babylon) stage 1
+designs/starpriests-cards.txt      101  its card lines (made from the game by tools/design_cards.js)
+designs/rootkin.txt                 93  Rootkin (all Immobile, living forest) stage 1
+designs/rootkin-cards.txt          101  its card lines (made from the game by tools/design_cards.js)
+designs/longguns.txt                97  The Long Guns (World War I artillery) stage 1
+designs/longguns-cards.txt         101  its card lines (made from the game by tools/design_cards.js)
 
 ==================================================================
 1. CURRENT FACTIONS
