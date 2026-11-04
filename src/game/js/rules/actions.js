@@ -38,6 +38,7 @@ const ACTIONS = {
     u.atk = (u.atk || 0) + 1;
     u.attacked = u.atk >= maxAttacks(u);
     log(s, `${unitName(u)} attacks ${unitName(t)}.`);
+    fxAttacked(s, p, u);
     if (cardOf(u).grubber) {
       const P = s.players[p], before = P.reserve;
       P.reserve = Math.min(MAX_CARRY, P.reserve + 1);

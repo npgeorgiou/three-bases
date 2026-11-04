@@ -85,6 +85,7 @@ function restoreShields(s, u, n, source) {
   u.dmg -= restored;
   log(s, `${source} restores ${restored} shield${restored > 1 ? 's' : ''} of ${unitName(u)}.`);
   emit(s, { heal: u.id, n: restored });
+  fxFire(s, 'healed', u);
 }
 
 /**

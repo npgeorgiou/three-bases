@@ -105,6 +105,13 @@ button:focus-visible { outline: 3px solid var(--tl); outline-offset: 2px; }
 .f-w { --fill: #6B5420; --line: #F0D27A; --text: #FBF1D6; --spell: #8A6E2C; }   /* Wanderers */
 .f-e { --fill: #3D2B5E; --line: #C9B6FF; --text: #EFE8FF; --spell: #55407D; }   /* Echoes */
 .f-m { --fill: #3E4A44; --line: #C8D6C2; --text: #EEF3EA; --spell: #56655D; }   /* Monoliths */
+.f-c { --fill: #2E3A46; --line: #D9B45A; --text: #F4ECD6; --spell: #44546A; }   /* Horologers */
+.f-d { --fill: #241E22; --line: #F29A2E; --text: #FBE7CF; --spell: #3E3036; }   /* Sunfeeders */
+.f-a { --fill: #6A3E1E; --line: #F2C78A; --text: #FBEEDC; --spell: #885530; }   /* Impi */
+.f-b { --fill: #6B1E24; --line: #F4F1EA; --text: #FFF6F0; --spell: #8A2F36; }   /* Hospice Knights */
+.f-s { --fill: #1E2F6E; --line: #F2CC5C; --text: #F1EEDD; --spell: #2E4594; }   /* Star Priests */
+.f-o { --fill: #2F4A26; --line: #B8D98A; --text: #EDF5E2; --spell: #43663A; }   /* Rootkin */
+.f-l { --fill: #474A42; --line: #CFC08A; --text: #EEEBDD; --spell: #61655A; }   /* Long Guns */
 .unit.ghost > .ubody { fill-opacity: .62; stroke-dasharray: 5 3; }
 .unit.ghost > .uart { opacity: .7; }
 .unit .ctlmark { fill: none; stroke-width: 3.5; pointer-events: none; }
@@ -877,20 +884,42 @@ const CARDS = {
 /* ---------- new factions (Nov 2026): compact card lines, effects in fx (rules/fx.js) ----------
    U(key, name, supply, strength, defence, size, extra, text): a unit; T(...): a token unit.
    S(key, name, cost, target, cast, text): a spell; target 'lane' | 'enemy' | 'own' | 'any' | 'column'. */
-const FAC_GLYPH = { g: 'wheel', r: 'star', w: 'boot', e: 'hourglass', m: 'moon' };
+const FAC_GLYPH = { g: 'wheel', r: 'star', w: 'boot', e: 'hourglass', m: 'moon', c: 'clockface', d: 'sunskull', a: 'oxshield', b: 'eightcross', s: 'astar', o: 'oak', l: 'shell' };
 const U = (key, name, sup, str, def, size, x, text) => [key, { name, size, sup, str, def, ...x, text }];
 const T = (...a) => { const r = U(...a); r[1].token = true; return r; };
 const S = (key, name, cost, tactic, cast, text, x = {}) => [key, { name, tactic, cost, cast, text, ...x }];
 function addFaction(fac, rows) {
   for (const [k, v] of rows) {
     if (v.of) { for (const f of v.fx || []) f.of = f.of || v.of; delete v.of; }
-    CARDS[k] = { ...v, fac, art: FAC_GLYPH[fac] };
+    CARDS[k] = kwFx({ ...v, fac, art: v.art || FAC_GLYPH[fac] });
   }
 }
 // shorthands for effects
 const ON = (on, ...ops) => ({ on, do: ops });
 const ONCE = (on, ...ops) => ({ on, lim: 'round', do: ops });
 const HOLD = { hold: 1 }, NOHOLD = { hold: 0 };
+/* Keywords of the seven factions of 4 Nov 2026, written out as effects (their texts are in keywords.js). */
+function kwFx(c) {
+  const fx = c.fx ? c.fx.slice() : [], aura = c.aura ? c.aura.slice() : [];
+  if (c.salvage) fx.push({ on: 'death', do: [{ card: 'c_part' }] });
+  if (c.wound) fx.push({ on: 'place', do: [{ tick: 'self' }] });
+  if (c.toll) aura.push({ to: 'self', s: c.toll, per: { count: 'deathsR' } });
+  if (c.obsidian) c.headsman = 1;
+  if (c.onrush) fx.push({ on: 'allyAttack', do: [{ buff: [c.onrush, 0], rnd: 1, to: 'self' }] });
+  if (c.flanker) aura.push({ to: 'self', s: c.flanker, if: { front: 1, side: 1 } });
+  if (c.reserve) fx.push({ on: 'allyDeath', if: { back: 1 }, do: [{ advance: 1 }] });
+  if (c.harden) fx.push({ on: 'survive', do: [{ buff: [0, c.harden], to: 'self' }] });
+  if (c.retaliate) fx.push({ on: 'survive', do: [{ dmg: c.retaliate, to: 'it' }] });
+  if (c.vigil) fx.push({ on: 'roundEnd', do: [{ heal: c.vigil, to: 'self' }] });
+  if (c.perennial) fx.push({ on: 'roundEnd', do: [{ buff: [c.perennial, c.perennial], to: 'self' }] });
+  if (c.seeds) fx.push({ on: 'death', do: [{ token: 'o_sapling', n: c.seeds }] });
+  if (c.roots) fx.push({ on: 'roundEnd', do: [{ dmg: c.roots, to: 'facing' }] });
+  if (c.entrench) aura.push({ to: 'self', arm: 1, if: { front: 1, min: ['behind', 1] } });
+  if (c.barrage) fx.push({ on: 'roundEnd', do: [{ dmg: c.barrage, to: 'deepest' }] });
+  if (fx.length) c.fx = fx;
+  if (aura.length) c.aura = aura;
+  return c;
+}
 /* ---------- Siegeworks: siege engineers; Cannons fire Projectiles from the back rows, walls hold the front ---------- */
 const SHOT = { token: 'g_shot', at: 'adj' };
 addFaction('g', [
@@ -1455,6 +1484,130 @@ addFaction('m', [
   S('m_cleave', 'Split the Stone', 3, 'enemy', { do: [{ dmg: 3, to: 'it' }] }, 'Deals 3 damage to an enemy.'),
   S('m_sundown', 'Sundown', 2, 'lane', { need: 'enemies', do: [{ dmg: 1, to: 'enemyFront' }] }, 'Pick a lane: deals 1 damage to each enemy in the enemy front row.'),
 ]);
+/* ---------- Horologers: clockmakers whose machines act at round end; winding makes them act again, broken machines become Spare Parts ---------- */
+const RE = (...ops) => ON('roundEnd', ...ops), PL = (...ops) => ON('place', ...ops), DIE = (...ops) => ON('death', ...ops);
+const STRIKE = { strike: 1 }, PART = { card: 'c_part' }, WIND_IT = { tick: 'it' }, IM_ = { fixed: 1 };
+const GEARED = '[[Geared]]', SALV = '[[Salvage]]', WOUND = '[[Wound]]';
+addFaction('c', [
+  // tokens
+  S('c_part', 'Spare Part', 0, 'own', { do: [WIND_IT, { heal: 1, to: 'it' }] }, 'Wind an ally (its round-end effects happen now) and restore 1 of its shields.', { token: true, part: 1, art: 'gear' }),
+  T('c_cogling', 'Cogling', 1, 1, 1, 1, { geared: 1, art: 'gear', fx: [RE(STRIKE)] }, `${GEARED}. Round end: I strike the nearest enemy.`),
+  T('c_cogtroop', 'Cog Trooper', 2, 2, 2, 1, { geared: 1, art: 'helm', fx: [RE(STRIKE)] }, `${GEARED}. Round end: I strike the nearest enemy.`),
+  // supply 1
+  U('c_ticker', 'Ticking Soldier', 1, 1, 1, 1, { geared: 1, art: 'helm', fx: [RE(STRIKE)], net: 'Striking the hour, Gearing / rend, geared / wind' }, `${GEARED}. Round end: I strike the nearest enemy.`),
+  U('c_bellboy', 'Bell Ringer', 1, 0, 2, 1, { art: 'bell', fx: [RE({ dmg: 1, to: 'facing' })], net: 'Striking the hour / rend / wind' }, 'Round end: deals 1 damage to the enemy facing me.'),
+  U('c_tinker', 'Tinker Apprentice', 1, 1, 1, 1, { art: 'tongs', fx: [RE({ heal: 1, to: 'adj' })], net: 'The workings / repair, rend / holder' }, 'Round end: restores 1 shield to each ally beside me.'),
+  U('c_spentspring', 'Spent Spring', 1, 2, 1, 1, { salvage: 1, art: 'cycle', fx: [RE({ kill: 'self' })], net: 'Salvage / breaks, part / -' }, `${SALV}. Round end: I break (I die).`),
+  U('c_springtrap', 'Spring Trap', 1, 1, 1, 1, { art: 'spikewheel', fx: [RE({ dmg: 2, to: 'facing' }, { kill: 'self' })], net: 'Striking the hour, Salvage / breaks / wind' }, 'Round end: deals 2 damage to the enemy facing me, then I break (I die).'),
+  U('c_oilboy', 'Oil Can Boy', 1, 0, 1, 1, { art: 'vial', fx: [PL({ tick: 'ahead' })], net: 'Winding, The workings / wind / rend-front' }, 'Place: winds the ally directly in front of me (its round-end effects happen now).'),
+  U('c_crank', 'Crank Handle', 1, 0, 1, 1, { geared: 1, art: 'key', fx: [PL({ tick: 'adj' })], net: 'Winding, Gearing / wind, geared / rend' }, `${GEARED}. Place: winds each ally beside me.`),
+  U('c_bellows', 'Bellows', 1, 0, 3, 1, { ...IM_, art: 'barrel', fx: [RE({ tick: 'ahead' })], net: 'The workings, Winding / wind, back-driver / rend-front' }, '[[Immobile]]. Round end: winds the ally directly in front of me.'),
+  U('c_whistle', 'Steam Whistle', 1, 0, 2, 1, { art: 'trumpet', fx: [RE({ buff: [1, 0], rnd: 1, to: 'row' })], net: 'Striking the hour, Winding / stronger-striker / wind' }, 'Round end: other allies in my row gain +1 strength this round (it counts only when I am wound during the round).'),
+  U('c_guildling', 'Guild Apprentice', 1, 1, 1, 1, { art: 'hammer', fx: [ON('wound', { buff: [1, 1], to: 'self' })], net: 'Winding / holder / wind' }, 'Whenever I am wound, I gain +1|+1.'),
+  U('c_lamp', 'Lamp Lighter', 1, 1, 1, 1, { art: 'lamp', fx: [RE({ heal: 1, to: 'self' }, { heal: 1, to: 'ahead' })], net: 'The workings / repair / holder, rend' }, 'Round end: restores 1 shield to me and to the ally directly in front of me.'),
+  U('c_scrapper', 'Scrap Picker', 1, 1, 1, 1, { salvage: 1, art: 'sack', fx: [ONCE('allyDeath', PART)], net: 'Salvage / part / breaks' }, `${SALV}. Whenever another ally in my lane dies: a Spare Part into your hand (once per round).`),
+  // supply 2
+  U('c_ratchet', 'Ratchet Guard', 2, 1, 2, 1, { armoured: 1, geared: 1, art: 'shield', net: 'Striking the hour, Gearing / holder, geared / repair' }, `[[Armoured]]. ${GEARED}.`),
+  U('c_cogsoldier', 'Cog Soldier', 2, 2, 2, 1, { geared: 1, art: 'helm', fx: [RE(STRIKE)], net: 'Striking the hour, Gearing / rend, rend-front, geared / wind' }, `${GEARED}. Round end: I strike the nearest enemy.`),
+  U('c_mainspring', 'Mainspring', 2, 0, 3, 1, { art: 'cycle', fx: [RE({ tick: 'ahead' })], net: 'The workings, Winding / wind, back-driver / rend-front' }, 'Round end: winds the ally directly in front of me (its round-end effects happen once more).'),
+  U('c_pendulum', 'Pendulum', 2, 0, 3, 1, { art: 'bell', fx: [RE({ heal: 2, to: 'ahead' })], net: 'The workings / repair, back-driver / holder' }, 'Round end: restores 2 shields to the ally directly in front of me.'),
+  U('c_boiler', 'Coal Boiler', 2, 0, 2, 1, { ...IM_, bonus: 1, art: 'cauldron', fx: [RE({ heal: 1, to: 'adj' })], net: 'The workings / supply, repair / -' }, '[[Immobile]]. [[Supply]] +1. Round end: restores 1 shield to each ally beside me.'),
+  U('c_bomb', 'Clockwork Bomb', 2, 1, 1, 1, { salvage: 1, art: 'bomb', fx: [RE({ dmg: 2, to: 'facing' }, { kill: 'self' })], net: 'Salvage, Striking the hour / breaks, part / wind' }, `${SALV}. Round end: deals 2 damage to the enemy facing me, then I break (I die).`),
+  U('c_draughts', 'Draughtsman', 2, 1, 2, 1, { art: 'scroll', fx: [PL({ draw: 1, if: { min: ['geared', 2] } })], net: 'Gearing / - / geared' }, `Place: draw a card if you have 2 or more ${GEARED} units in this lane.`),
+  U('c_journeyman', 'Journeyman', 2, 1, 2, 1, { geared: 1, art: 'hammer', fx: [PL(PART)], net: 'Salvage, Gearing / part, geared / -' }, `${GEARED}. Place: a {{card:c_part|Spare Part}} into your hand.`),
+  U('c_gearhound', 'Gear Hound', 2, 2, 1, 1, { geared: 1, wound: 1, art: 'hound', fx: [RE(STRIKE)], net: 'Striking the hour, Gearing / rend, geared / -' }, `${GEARED}. ${WOUND}. Round end: I strike the nearest enemy.`),
+  U('c_drummer', 'Tick-Tock Drummer', 2, 1, 3, 1, { geared: 1, art: 'drum', fx: [RE({ buff: [1, 0], rnd: 1, to: 'row' })], net: 'Gearing, Winding / stronger-striker, geared / wind' }, `${GEARED}. Round end: other allies in my row gain +1 strength this round (it counts when I am wound during the round).`),
+  U('c_watchman', 'Watchman', 2, 1, 3, 1, { art: 'lantern', fx: [RE({ dmg: 2, to: 'facing', if: NOHOLD })], net: 'Striking the hour / rend, rend-front / wind' }, 'Round end: if you don\'t hold this lane\'s base, deals 2 damage to the enemy facing me.'),
+  U('c_banner', 'Guild Banner', 2, 0, 3, 1, { art: 'pennon', fx: [RE({ heal: 1, to: 'row', if: HOLD }, { heal: 1, to: 'self', if: HOLD })], net: 'The workings / repair, rend / holder, rend-front' }, 'Round end: if you hold this lane\'s base, restores 1 shield to me and to each ally in my row.'),
+  U('c_lever', 'Lever Arm', 2, 2, 2, 1, { geared: 1, reach: 1, art: 'pike', net: 'Gearing / geared, holder / -' }, `${GEARED}. [[Pike]].`),
+  U('c_screwjack', 'Screw Jack', 2, 1, 2, 1, { geared: 1, art: 'tongs', fx: [RE({ push: 1, to: 'facing' })], net: 'Gearing, Striking the hour / rend, geared, enemy-pushed / wind' }, `${GEARED}. Round end: pushes the enemy facing me one row back (if the cell is free).`),
+  U('c_windlancer', 'Wind-up Lancer', 2, 2, 1, 1, { wound: 1, art: 'spear', fx: [RE({ dmg: 1, to: 'facing' })], net: 'Striking the hour, Winding / rend, rend-front / -' }, `${WOUND}. Round end: deals 1 damage to the enemy facing me.`),
+  U('c_toymaker', 'Toymaker', 2, 1, 1, 1, { art: 'chest', fx: [PL({ ...PART, n: 2 })], net: 'Salvage, Winding / part / -' }, 'Place: two {{card:c_part|Spare Parts}} into your hand.'),
+  U('c_flywheel', 'Flywheel', 2, 1, 4, 1, { ...IM_, geared: 1, art: 'wheel', fx: [RE({ heal: 1, to: 'adj:geared' })], net: 'Gearing, The workings / repair, geared / geared' }, `[[Immobile]]. ${GEARED}. Round end: restores 1 shield to each ${GEARED} ally touching me.`),
+  U('c_metronome', 'Metronome', 2, 0, 3, 1, { geared: 1, art: 'hourglass', fx: [RE({ heal: 1, to: 'col' })], net: 'The workings, Gearing / repair, geared / holder, rend' }, `${GEARED}. Round end: restores 1 shield to each other ally in my column.`),
+  U('c_mender', 'Clock Mender', 2, 1, 2, 1, { art: 'needle', fx: [RE({ heal: 2, to: 'hurtAlly' })], net: 'The workings / repair, rend / holder' }, 'Round end: restores 2 shields to the most damaged ally in my lane.'),
+  U('c_clerk', 'Iron Clerk', 2, 1, 2, 1, { salvage: 1, art: 'book', aura: [{ to: 'self', s: 2, if: HOLD }], net: 'Salvage / part, holder / repair' }, `${SALV}. Has +2 strength while you hold this lane's base.`),
+  // supply 3
+  U('c_sentinel', 'Brass Sentinel', 3, 2, 2, 1, { armoured: 1, art: 'greathelm', fx: [RE(STRIKE)], net: 'Striking the hour / rend, rend-front, holder / repair' }, '[[Armoured]]. Round end: I strike the nearest enemy.'),
+  U('c_archer', 'Clockwork Archer', 3, 1, 2, 1, { ranged: 1, art: 'crossbow', fx: [RE(STRIKE)], net: 'Striking the hour / rend / wind, stronger-striker' }, '[[Ranged]]. Round end: I strike the nearest enemy.'),
+  U('c_gearsmith', 'Gearsmith', 3, 2, 3, 1, { geared: 1, art: 'anvil', fx: [RE({ buff: [1, 0], to: 'adj:geared' })], net: 'Gearing / geared, stronger-striker / wind, geared' }, `${GEARED}. Round end: each ${GEARED} ally touching me gains +1 strength.`),
+  U('c_foundry', 'Cog Foundry', 3, 0, 6, 1, { ...IM_, art: 'anvil', fx: [RE({ token: 'c_cogling', at: 'adj' })], net: 'Gearing, The workings / geared, adjacent-machines / wind' }, '[[Immobile]]. Round end: places a {{card:c_cogling|Cogling}} in a free cell beside me.'),
+  U('c_counterweight', 'Counterweight', 3, 0, 5, 1, { art: 'block', fx: [RE({ buff: [0, 1], to: 'ahead' })], net: 'The workings / back-driver, holder / wind' }, 'Round end: the ally directly in front of me gains +1 defence.'),
+  U('c_escapement', 'Escapement', 3, 2, 3, 1, { geared: 1, art: 'gear', fx: [RE(STRIKE), ON('wound', { buff: [1, 0], to: 'self' })], net: 'Gearing, Winding / rend, geared, holder / wind, stronger-striker' }, `${GEARED}. Round end: I strike the nearest enemy. Whenever I am wound, I gain +1 strength.`),
+  U('c_salvager', 'Salvager', 3, 2, 3, 1, { art: 'shovel', fx: [ONCE('allyDeath', PART)], net: 'Salvage / part / breaks' }, 'Whenever another ally in my lane dies: a {{card:c_part|Spare Part}} into your hand (once per round).'),
+  U('c_partsman', 'Tinker of Parts', 3, 2, 2, 1, { art: 'tongs', aura: [{ to: 'self', s: 1, d: 1, per: { count: 'partsHand', max: 3 } }], net: 'Salvage / holder / part' }, 'Has +1|+1 for each {{card:c_part|Spare Part}} in your hand (up to 3).'),
+  U('c_shieldbearer', 'Brass Shield-Bearer', 3, 1, 4, 1, { guard: 1, geared: 1, art: 'scutum', fx: [RE({ heal: 1, to: 'self' })], net: 'Gearing, The workings / holder, geared, rend / repair' }, `[[Bodyguard]]. ${GEARED}. Round end: restores 1 shield to me.`),
+  U('c_cuckoo', 'Cuckoo Clock', 3, 0, 6, 1, { ...IM_, art: 'owl', fx: [RE({ dmg: 1, to: 'colEnemies' })], net: 'Striking the hour / rend / wind, back-driver' }, '[[Immobile]]. Round end: deals 1 damage to each enemy in my column.'),
+  U('c_ledger', 'Workshop Ledger', 3, 1, 4, 1, { art: 'book', fx: [ONCE('roundEnd', { draw: 1, if: { min: ['partsHand', 2] } })], net: 'Salvage / - / part' }, 'Round end: draw a card if you hold 2 or more {{card:c_part|Spare Parts}} (once per round, also when I am wound).'),
+  U('c_keeper', 'Clock Keeper', 3, 2, 3, 1, { art: 'key', fx: [RE({ heal: 2, to: 'row', if: HOLD }, { dmg: 2, to: 'facing', if: NOHOLD })], net: 'Striking the hour, The workings / rend, repair / wind' }, 'Round end: if you hold this lane\'s base, restores 2 shields to each other ally in my row; if you don\'t, deals 2 damage to the enemy facing me.'),
+  U('c_coiler', 'Spring Coiler', 3, 0, 3, 1, { salvage: 1, bonus: 1, art: 'cycle', net: 'Salvage / supply, part / -' }, `${SALV}. [[Supply]] +1.`),
+  U('c_hourhand', 'Hour Hand', 3, 2, 3, 1, { geared: 1, art: 'clockface', fx: [ON('wound', STRIKE)], net: 'Gearing, Winding / geared / wind, stronger-striker' }, `${GEARED}. Whenever I am wound, I strike the nearest enemy.`),
+  U('c_triphammer', 'Trip Hammer', 3, 2, 3, 1, { geared: 1, art: 'hammer', fx: [RE(STRIKE, STRIKE)], net: 'Striking the hour, Gearing / rend, rend-front, geared / wind, stronger-striker' }, `${GEARED}. Round end: I strike the nearest enemy twice.`),
+  U('c_sawmill', 'Saw Mill', 3, 2, 5, 1, { ...IM_, art: 'saw', fx: [RE({ dmg: 2, to: 'facing' })], net: 'Striking the hour / rend, rend-front / wind' }, '[[Immobile]]. Round end: deals 2 damage to the enemy facing me.'),
+  U('c_grenadier', 'Cog Grenadier', 3, 2, 3, 1, { geared: 1, art: 'bomb', fx: [RE({ dmg: 1, to: 'colEnemies' })], net: 'Striking the hour, Gearing / rend, geared / wind' }, `${GEARED}. Round end: deals 1 damage to each enemy in my column.`),
+  U('c_patron', 'Patron of the Guild', 3, 1, 3, 1, { art: 'coin', fx: [PL({ carry: 2 })], net: 'Salvage / supply / -' }, 'Place: +2 carry-over.'),
+  U('c_powderclock', 'Powder Clock', 3, 1, 2, 1, { salvage: 1, art: 'barrel', fx: [RE({ dmg: 2, to: 'colEnemies' }, { kill: 'self' })], net: 'Salvage, Striking the hour / breaks, part / wind' }, `${SALV}. Round end: deals 2 damage to each enemy in my column, then I break (I die).`),
+  // supply 4
+  U('c_bell', 'Clock Tower Bell', 4, 0, 7, 1, { ...IM_, art: 'bell', fx: [ON('wound', { tick: 'otherFront' })], net: 'Winding, The workings / wind, back-driver / wind' }, '[[Immobile]]. Whenever I am wound, I wind the first ally with a round-end effect in each other lane.'),
+  U('c_automaton', 'Brass Automaton', 4, 3, 3, 1, { geared: 1, wound: 1, art: 'helm', fx: [RE(STRIKE)], net: 'Striking the hour, Gearing / rend, rend-front, geared / -' }, `${GEARED}. ${WOUND}. Round end: I strike the nearest enemy.`),
+  U('c_towerbow', 'Tower Crossbow', 4, 2, 2, 1, { ranged: 1, geared: 1, art: 'bow', fx: [RE(STRIKE)], net: 'Striking the hour, Gearing / rend, geared / wind' }, `[[Ranged]]. ${GEARED}. Round end: I strike the nearest enemy.`),
+  U('c_mill', 'Grinding Mill', 4, 1, 7, 1, { ...IM_, art: 'wheel', fx: [RE({ dmg: 1, to: 'enemyFront' })], net: 'Striking the hour / rend / wind' }, '[[Immobile]]. Round end: deals 1 damage to each enemy in the enemy front row.'),
+  U('c_mechanic', 'Master Mechanic', 4, 2, 4, 1, { art: 'tongs', fx: [PL({ tick: 'adj' }, { heal: 2, to: 'adj' })], net: 'Winding, The workings / wind, repair / rend, holder' }, 'Place: winds each ally beside me and restores 2 of their shields.'),
+  U('c_cart', 'Salvage Cart', 4, 2, 4, 1, { salvage: 1, art: 'wheel', fx: [DIE(PART)], net: 'Salvage / part, holder / -' }, `${SALV}. Death: another {{card:c_part|Spare Part}} into your hand.`),
+  U('c_furnace', 'Furnace Engine', 4, 0, 3, 1, { ...IM_, bonus: 2, art: 'flame', fx: [RE({ heal: 1, to: 'self' })], net: 'The workings / supply, rend / -' }, '[[Immobile]]. [[Supply]] +2. Round end: restores 1 shield to me.'),
+  U('c_clockknight', 'Clockwork Knight', 4, 2, 3, 1, { armoured: 1, art: 'greathelm', fx: [RE(STRIKE)], net: 'Striking the hour / rend, rend-front, holder / repair, wind' }, '[[Armoured]]. Round end: I strike the nearest enemy.'),
+  U('c_scrapgolem', 'Scrap Golem', 4, 2, 2, 1, { salvage: 1, art: 'fist', aura: [{ to: 'self', s: 1, d: 1, per: { count: 'partsHand', max: 3 } }], net: 'Salvage / holder, part / part' }, `${SALV}. Has +1|+1 for each {{card:c_part|Spare Part}} in your hand (up to 3).`),
+  U('c_assembly', 'Assembly Line', 4, 0, 5, 2, { ...IM_, art: 'table', fx: [RE({ token: 'c_cogtroop', at: 'front' })], net: 'Gearing, The workings / geared, adjacent-machines, holder / wind' }, '[[Immobile]]. Round end: places a {{card:c_cogtroop|Cog Trooper}} in a free cell of my front row.'),
+  U('c_carriage', 'Steam Carriage', 4, 3, 3, 1, { outrider: 1, art: 'wheel', fx: [RE(STRIKE)], net: 'Striking the hour / rend / wind, supply' }, '[[Outrider]]. Round end: I strike the nearest enemy.'),
+  U('c_regulator', 'Regulator', 4, 1, 5, 1, { geared: 1, art: 'clockface', fx: [ON('wound', { heal: 9, to: 'adj:geared' })], net: 'Gearing, The workings / repair / geared, wind' }, `${GEARED}. Whenever I am wound, restores all shields of each ${GEARED} ally touching me.`),
+  // supply 5+ (champions and big machines)
+  U('c_horologer', 'Master Horologer', 5, 2, 4, 1, { art: 'clockface', fx: [PL({ tick: 'row' }), ONCE('roundEnd', PART)], net: 'Winding, Salvage / wind, part / rend / champion' }, 'Place: winds each other ally in my row. Round end: a {{card:c_part|Spare Part}} into your hand (once per round).'),
+  U('c_orrery', 'The Grand Orrery', 5, 1, 7, 1, { ...IM_, geared: 1, art: 'sun', fx: [RE({ buff: [1, 0], rnd: 1, to: 'allies' }, { heal: 1, to: 'allies' })], net: 'Gearing, Winding / stronger-striker, repair, geared / wind, holder / champion' }, `[[Immobile]]. ${GEARED}. Round end: other allies in my lane gain +1 strength this round and restore 1 shield.`),
+  U('c_mistress', 'Mistress of Salvage', 5, 3, 4, 1, { art: 'crown', fx: [ONCE('allyDeath', PART), ONCE('allyDeath', { buff: [1, 1], to: 'self' })], net: 'Salvage / part, holder / breaks, supply, repair / champion' }, 'Whenever another ally in my lane dies: a {{card:c_part|Spare Part}} into your hand and I gain +1|+1 (once per round).'),
+  U('c_tower', 'The Great Clock Tower', 6, 0, 8, 2, { ...IM_, geared: 1, art: 'tower', fx: [RE({ dmg: 1, to: 'enemies' })], net: 'Striking the hour, Gearing / rend, geared / wind, supply, back-driver / champion' }, `[[Immobile]]. ${GEARED}. Round end: deals 1 damage to each enemy in my lane.`),
+  U('c_colossus', 'Brass Colossus', 7, 3, 4, 4, { armoured: 1, salvage: 1, geared: 1, art: 'fist', fx: [RE(STRIKE), DIE(PART)], net: 'Striking the hour, Salvage / holder, rend / repair, supply, stronger-striker / champion' }, `[[Armoured]]. ${SALV}. ${GEARED}. Round end: I strike the nearest enemy. Death: another {{card:c_part|Spare Part}} into your hand.`),
+  U('c_engine', 'Difference Engine', 5, 1, 6, 2, { ...IM_, art: 'gear', fx: [RE({ tick: 'adj' })], net: 'Winding, The workings / wind, back-driver / rend' }, '[[Immobile]]. Round end: winds each ally beside me.'),
+  U('c_warmachine', 'Clockwork Siege Engine', 6, 3, 6, 2, { ...IM_, art: 'catapult', fx: [RE({ dmg: 2, to: 'enemyBack' })], net: 'Striking the hour / rend / wind, supply' }, '[[Immobile]]. Round end: deals 2 damage to each enemy outside the enemy front row.'),
+  U('c_titan', 'Gear Titan', 6, 4, 5, 2, { geared: 1, art: 'fist', fx: [RE(STRIKE), ON('wound', { buff: [1, 1], to: 'self' })], net: 'Gearing, Striking the hour / rend, holder, geared / wind, stronger-striker, supply' }, `${GEARED}. Round end: I strike the nearest enemy. Whenever I am wound, I gain +1|+1.`),
+  U('c_tally', 'Tally Clerk', 2, 1, 2, 1, { art: 'coin', fx: [ONCE('roundEnd', { carry: 1, if: { deaths: 2 } })], net: 'Salvage / supply / breaks' }, 'Round end: +1 carry-over if 2 or more units died this round (once per round).'),
+  U('c_gearcaptain', 'Gear Captain', 4, 2, 4, 1, { geared: 1, art: 'helmhorned', aura: [{ to: 'adj:geared', s: 1, d: 1 }], net: 'Gearing / holder, stronger-striker / geared' }, `${GEARED}. Other ${GEARED} allies touching me have +1|+1.`),
+  U('c_loader', 'Spring Loader', 3, 1, 3, 1, { art: 'cycle', fx: [PL({ tick: 'behind' })], net: 'Winding, The workings / wind / back-driver' }, 'Place: winds the ally directly behind me (its round-end effects happen now).'),
+  U('c_scrapknight', 'Scrap Knight', 3, 2, 3, 1, { salvage: 1, art: 'axeshield', fx: [PL({ buff: [2, 2], to: 'self', if: { min: ['partsHand', 2] } })], net: 'Salvage / holder, part / part' }, `${SALV}. Place: if you hold 2 or more {{card:c_part|Spare Parts}}, I gain +2|+2.`),
+  U('c_rewinder', 'Rewinder', 4, 2, 4, 1, { art: 'key', fx: [ON('spell', { buff: [1, 1], to: 'self' })], of: 'part', net: 'Salvage, Winding / holder / part' }, 'Whenever you cast a {{card:c_part|Spare Part}}, I gain +1|+1.'),
+  U('c_workshop', 'Guild Workshop', 3, 0, 5, 1, { ...IM_, art: 'anvil', fx: [ONCE('roundEnd', PART, { if: { deaths: 1 } })], net: 'Salvage, The workings / part, rend / breaks' }, '[[Immobile]]. Round end: a {{card:c_part|Spare Part}} into your hand if any unit died this round (once per round).'),
+  U('c_greatspring', 'Great Mainspring', 4, 0, 6, 1, { art: 'cycle', fx: [RE({ tick: 'ahead' }, { tick: 'ahead' })], net: 'The workings, Winding / wind, back-driver / rend-front, supply' }, 'Round end: winds the ally directly in front of me twice.'),
+  U('c_gate', 'Gate Automaton', 3, 2, 3, 1, { armoured: 1, geared: 1, art: 'scutum', net: 'Gearing / holder, geared / repair' }, `[[Armoured]]. ${GEARED}.`),
+  S('c_rebuild', 'Rebuild', 3, 'lane', { do: [{ raise: 'last', max: 4 }] }, 'Pick a lane: the last unit of yours (supply 4 or less) in your discard pile comes back there.', { art: 'anvil', net: 'Salvage / holder, rend / breaks' }),
+  S('c_chaindrive', 'Chain Drive', 2, 'own', { do: [{ buff: [1, 0], to: 'it' }, { buff: [1, 0], to: 'itAdj:geared' }] }, `An ally and each ${GEARED} ally touching it gain +1 strength.`, { art: 'chain', net: 'Gearing / stronger-striker / geared' }),
+  S('c_interlock', 'Interlock', 1, 'own', { do: [{ kw: 'geared', to: 'it' }, { kw: 'geared', to: 'itAdj' }] }, `An ally and each ally touching it gain ${GEARED}.`, { art: 'knot', net: 'Gearing / geared / holder' }),
+  // spells
+  S('c_key', 'Turn the Key', 1, 'own', { do: [WIND_IT] }, 'Wind an ally (its round-end effects happen now).', { art: 'key', net: 'Winding / wind / rend' }),
+  S('c_oil', 'Oil the Works', 1, 'own', { do: [{ heal: 2, to: 'it' }, { tick: 'it', if: { itHas: 'geared' } }] }, `Restore 2 shields to an ally; if it is ${GEARED}, wind it.`, { art: 'vial', net: 'The workings, Gearing / repair, wind / geared, holder' }),
+  S('c_fullwind', 'Full Wind', 2, 'own', { do: [WIND_IT, WIND_IT] }, 'Wind an ally twice.', { art: 'cycle', net: 'Winding / wind / rend' }),
+  S('c_blueprints', 'Blueprints', 2, 'lane', { do: [{ draw: 1 }, { draw: 1, if: { min: ['partsHand', 1] } }] }, 'Draw a card; draw another if you hold a {{card:c_part|Spare Part}}.', { art: 'scroll', net: 'Salvage / - / part' }),
+  S('c_repairs', 'Workshop Repairs', 2, 'lane', { need: 'allies', do: [{ heal: 2, to: 'team' }] }, 'Pick a lane: restore 2 shields to each of your units there.', { art: 'tongs', net: 'The workings / repair / holder' }),
+  S('c_strip', 'Strip for Parts', 1, 'own', { do: [{ kill: 'it' }, { ...PART, n: 2 }] }, 'An ally of yours breaks (dies); two {{card:c_part|Spare Parts}} into your hand.', { art: 'saw', net: 'Salvage / part, breaks / -' }),
+  S('c_overwind', 'Overwind', 3, 'lane', { need: 'allies', do: [{ tick: 'team' }] }, 'Pick a lane: wind each of your units there.', { art: 'cycle', net: 'Winding / wind / rend' }),
+  S('c_trainwind', 'Drive the Train', 2, 'lane', { need: 'allies', do: [{ tick: 'geared' }] }, `Pick a lane: wind each of your ${GEARED} units there.`, { art: 'chain', net: 'Gearing, Winding / wind / geared' }),
+  S('c_tighten', 'Tighten the Spring', 2, 'own', { do: [{ buff: [1, 0], to: 'it' }, WIND_IT] }, 'An ally gains +1 strength, then is wound.', { art: 'cycle', net: 'Winding / wind, stronger-striker / rend' }),
+  S('c_precision', 'Clockwork Precision', 4, 'own', { do: [WIND_IT, WIND_IT, WIND_IT] }, 'Wind an ally three times.', { art: 'clockface', net: 'Winding / wind / rend' }),
+  S('c_plating', 'Brass Plating', 2, 'own', { do: [{ kw: 'armoured', to: 'it' }] }, 'An ally gains [[Armoured]].', { art: 'mail', net: 'The workings / holder / repair' }),
+  S('c_fitgears', 'Fit Gears', 1, 'own', { do: [{ kw: 'geared', to: 'it' }, WIND_IT] }, `An ally gains ${GEARED}, then is wound.`, { art: 'gear', net: 'Gearing / geared, wind / rend' }),
+  S('c_rights', 'Salvage Rights', 1, 'lane', { do: [PART, { ...PART, if: { deaths: 2 } }] }, 'A {{card:c_part|Spare Part}} into your hand; two if 2 or more units died this round.', { art: 'scroll', net: 'Salvage / part / breaks' }),
+  S('c_overclock', 'Overclock', 1, 'own', { do: [WIND_IT, WIND_IT, { dmg: 2, to: 'it' }] }, 'Wind an ally twice; then it takes 2 damage.', { art: 'bolt', net: 'Winding, Salvage / wind, breaks / rend' }),
+  S('c_inspection', 'Guild Inspection', 1, 'lane', { do: [{ draw: 1 }, PART] }, 'Draw a card; a {{card:c_part|Spare Part}} into your hand.', { art: 'eye', net: 'Salvage / draw, part / -' }),
+  S('c_post', 'Pneumatic Post', 2, 'own', { do: [WIND_IT, { tick: 'itTwins' }] }, 'Wind an ally, and each ally with the same name in your other lanes.', { art: 'scroll', net: 'Winding / wind, wind-other-lane / rend' }),
+  S('c_flyinggears', 'Flying Gears', 2, 'column', { do: [{ dmg: 1, to: 'colEnemies' }, PART] }, 'Pick a column of an enemy camp: deals 1 damage to each enemy in it; a {{card:c_part|Spare Part}} into your hand.', { art: 'gear', net: 'Salvage / part / -' }),
+  S('c_timing', 'Perfect Timing', 2, 'own', { do: [WIND_IT, { tick: 'itAdj' }] }, 'Wind an ally and each ally touching it.', { art: 'hourglass', net: 'Winding, Gearing / wind / rend, geared' }),
+  S('c_calibrate', 'Calibrate', 1, 'own', { do: [{ heal: 9, to: 'it' }, { buff: [0, 1], to: 'it', if: { itHas: 'geared' } }] }, `Restore all shields of an ally; if it is ${GEARED}, it gains +1 defence.`, { art: 'needle', net: 'The workings / repair, defence-up / holder, geared' }),
+  S('c_coin', 'Commission', 1, 'lane', { do: [{ carry: 1 }, PART] }, '+1 carry-over; a {{card:c_part|Spare Part}} into your hand.', { art: 'coin', net: 'Salvage / supply, part / -' }),
+  S('c_greatwind', 'The Great Winding', 5, 'lane', { all: 1, do: [{ tick: 'team' }] }, '[[Everywhere]]: wind each of your units in every lane.', { art: 'sun', net: 'Winding / wind, wind-other-lane / rend' }),
+  S('c_alarm', 'Alarm', 1, 'lane', { need: 'allies', do: [{ tick: 'frontAllies' }] }, 'Pick a lane: wind each of your units in your front row there.', { art: 'bell', net: 'Winding / wind / rend-front' }),
+  S('c_unwind', 'Sudden Release', 2, 'own', { do: [WIND_IT, { kill: 'it' }, PART] }, 'Wind an ally, then it breaks (dies); a {{card:c_part|Spare Part}} into your hand.', { art: 'cycle', net: 'Winding, Salvage / wind, breaks, part / rend' }),
+  S('c_rivet', 'Rivet Gun', 2, 'enemy', { do: [{ dmg: { count: 'geared', max: 3, plus: 1 }, to: 'it' }] }, `Deals 1 damage to an enemy, +1 for each of your ${GEARED} units in its lane (up to 3).`, { art: 'bolt', net: 'Gearing / - / geared' }),
+  S('c_scrapstorm', 'Scrap Storm', 3, 'lane', { need: 'enemies', do: [{ dmg: { count: 'partsHand', max: 4 }, to: 'strongest' }] }, 'Pick a lane: deals damage equal to the Spare Parts in your hand (up to 4) to the strongest enemy there.', { art: 'mist', net: 'Salvage / - / part' }),
+  S('c_brace', 'Brace the Frame', 1, 'own', { do: [{ buff: [0, 2], to: 'it' }] }, 'An ally gains +2 defence.', { art: 'block', net: 'The workings / holder / repair' }),
+]);
 const KEYWORDS = {
   'Projectile':'A unit a Cannon beside it can fire: the Cannon\'s attack throws it at an enemy in the Cannon\'s lane; it strikes that enemy with its strength and dies there.',
   'Cannon':'Instead of attacking, it can fire an adjacent Projectile at an enemy in its lane (costs what an attack costs). It can\'t throw anything else.',
@@ -1495,17 +1648,39 @@ const KEYWORDS = {
   'Riposte':'When it survives an attack, it strikes the attacker back with its strength.',
   'Flurry':'Attacks twice per round and pays only for the first attack.',
   'Splash':'Each unit its attacks strike passes half of that damage (rounded down) to the units right behind it, split evenly (rounded down), and so on backward.',
+  // the seven factions of 4 Nov 2026
+  'Geared':'When I am wound, every Geared ally touching me is wound too (each one once per wind).',
+  'Wound':'Place: my round-end effects happen now.',
+  'Salvage':'Death: a Spare Part into your hand (a 0-cost spell: wind an ally and restore 1 of its shields).',
+  'Wind':'Its round-end effects happen now, during the round (as often as it is wound).',
+  'Toll':'Has +1 strength for each unit, on either side, that died this round.',
+  'Obsidian':'When my strike leaves an enemy Bloodied (with less defence than its card shows), it dies.',
+  'Offering':'Place: the ally directly behind me dies. My "if offered" effects happen only if one did.',
+  'Onrush':'Whenever another ally in my lane attacks, I gain +1 strength this round.',
+  'Flanker':'Has +2 strength while in a side column of your front row.',
+  'Reserve':'When an ally in my lane dies while I am outside the front row, I move straight forward as far as I can (free).',
+  'Harden':'When I survive damage, I gain +1 defence.',
+  'Retaliate':'When I survive damage from an enemy unit, I deal that much damage to it (the number on the card).',
+  'Vigil':'Round end: restores that many of my shields (the number on the card).',
+  'Omen':'What follows "Omen:" happens whenever one of your spells targets me.',
+  'Augur':'Your spells deal that much more damage (the number on the card), in every lane.',
+  'Perennial':'Round end: I gain +N|+N (the number on the card).',
+  'Seeds':'Death: places that many Saplings in free cells of my lane, front row first.',
+  'Roots':'Round end: deals that much damage to the enemy nearest the base in my column, from any row.',
+  'Marked':'Strikes on it deal double damage. It stays Marked until it leaves the board.',
+  'Barrage':'Round end: deals that much damage to the enemy furthest from the base in my lane (back row first).',
+  'Entrenched':'While I am in your front row with an ally directly behind me, I am Armoured.',
 };
-
 const DECKS = {
   siegeworks:{name:'Siegeworks',fac:'g',list:[]},
   arcanists:{name:'Arcanists',fac:'r',list:[]},
   wanderers:{name:'Wanderers',fac:'w',list:[]},
   echoes:{name:'Echoes',fac:'e',list:[]},
   monoliths:{name:'Monoliths',fac:'m',list:[]},
+  horologers:{name:'Horologers',fac:'c',list:[]},
 };
 /** Premade decks: each built around one side of its faction. */
-const PREMADE_VERSION = 5;   // raising it replaces the premade decks stored in a browser with these lists
+const PREMADE_VERSION = 6;   // raising it replaces the premade decks stored in a browser with these lists
 const PREMADE = [
   { id: 'p-g1', name: 'Siegeworks — Big Guns', cards: { g_loader: 3, g_monkey: 3, g_ballista: 3, g_mangonel: 3, g_stone: 3, g_firepot: 3, g_mantlet: 3, g_wagon: 3, g_mastergun: 2, g_ordnance: 2, g_volley: 2, g_makeready: 2, g_breach: 2 } },
   { id: 'p-g2', name: 'Siegeworks — Walls and Sappers', cards: { g_mantlet: 3, g_gabion: 3, g_palisade: 3, g_sapper: 3, g_architect: 2, g_sappercap: 2, g_pioneer: 3, g_wagon: 3, g_handgunner: 3, g_arbalist: 3, g_fortify: 2, g_brace: 2, g_demolish: 1 } },
@@ -1517,9 +1692,18 @@ const PREMADE = [
   { id: 'p-e2', name: 'Echoes — Chroniclers', cards: { e_acolyte: 3, e_scribe: 3, e_chronicler: 3, e_conductor: 2, e_recaller: 2, e_sentinel: 3, e_oldman: 3, e_oracle: 3, e_paradox: 2, e_timekeeper: 2, e_remember: 2, e_twice: 3, e_again: 2, e_rewind: 1 } },
   { id: 'p-m1', name: 'Monoliths — Waking Spirits', cards: { m_shrine: 3, m_obelisk: 3, m_cairn: 3, m_spiritcaller: 3, m_arch: 2, m_hearth: 3, m_effigy: 3, m_sunpyramid: 1, m_oraclestone: 2, m_awaken: 3, m_rally: 2, m_sunbeam: 3, m_inscribe: 2 } },
   { id: 'p-m2', name: 'Monoliths — The Stone Line', cards: { m_totem: 3, m_pillar: 3, m_menhir: 3, m_dolmen: 3, m_statue: 3, m_hearth: 3, m_wall: 2, m_ancestor: 2, m_waking: 2, m_ley: 3, m_rockfall: 3, m_consecrate: 2, m_judgement: 2 } },
+  { id: 'p-c1', name: 'Horologers — The Gear Train', cards: { c_ticker: 3, c_cogsoldier: 3, c_mainspring: 3, c_ratchet: 3, c_drummer: 2, c_gearsmith: 2, c_escapement: 2, c_foundry: 2, c_tower: 1, c_orrery: 1, c_horologer: 1, c_key: 3, c_trainwind: 2, c_fullwind: 2, c_blueprints: 2, c_boiler: 2 } },
+  { id: 'p-c2', name: 'Horologers — The Scrap Yard', cards: { c_spentspring: 3, c_bomb: 3, c_scrapper: 3, c_salvager: 2, c_partsman: 2, c_scrapgolem: 2, c_mistress: 1, c_colossus: 1, c_journeyman: 2, c_toymaker: 2, c_rewinder: 2, c_sentinel: 2, c_key: 3, c_strip: 2, c_unwind: 2, c_rights: 2, c_blueprints: 2 } },
 ];
 
 const ART = {
+ clockface:'M50 12A38 38 0 1 0 50.01 12Z M50 50V24 M50 50L68 60 M50 16V22 M84 50H78 M50 84V78 M16 50H22',
+ sunskull:'M50 30C36 30 30 40 30 50C30 58 34 62 38 64V72H62V64C66 62 70 58 70 50C70 40 64 30 50 30Z M38 48H46M54 48H62 M46 72V66 M54 72V66 M50 8V20 M50 80V92 M8 50H20 M80 50H92 M20 20L28 28 M80 20L72 28 M20 80L28 72 M80 80L72 72',
+ oxshield:'M50 10C68 10 74 30 74 50C74 70 68 90 50 90C32 90 26 70 26 50C26 30 32 10 50 10Z M50 10V90 M18 86L82 14 M76 14H84V22',
+ eightcross:'M50 46L36 12L50 22L64 12Z M54 50L88 36L78 50L88 64Z M50 54L64 88L50 78L36 88Z M46 50L12 64L22 50L12 36Z',
+ astar:'M50 8A42 42 0 1 0 50.01 8Z M50 16L56 44L84 50L56 56L50 84L44 56L16 50L44 44Z M28 28L44 44M72 28L56 44M28 72L44 56M72 72L56 56',
+ oak:'M50 90V56 M50 72L36 84 M50 72L64 84 M50 56C30 60 14 50 18 36C20 22 34 14 50 16C66 14 80 22 82 36C86 50 70 60 50 56Z M38 90H62',
+ shell:'M38 88V44C38 26 44 14 50 10C56 14 62 26 62 44V88Z M32 88H68 M38 70H62 M38 77H62',
  hourglass:'M28 10H72M28 90H72M32 10C32 34 48 42 50 50C52 58 68 66 68 90M68 10C68 34 52 42 50 50C48 58 32 66 32 90',
  book:'M50 24C40 16 22 16 12 20V82C22 78 40 78 50 86C60 78 78 78 88 82V20C78 16 60 16 50 24Z M50 24V86',
  chain:'M10 50a14 14 0 0 1 14 -14H42a14 14 0 0 1 0 28H24a14 14 0 0 1 -14 -14Z M58 36H76a14 14 0 0 1 0 28H58a14 14 0 0 1 -14 -14',
@@ -1896,9 +2080,9 @@ function laneSupply(s, p, lane) {
 }
 
 /* ---------- keywords a unit has (printed, gained or moved away) ---------- */
-const KW_FLAGS = ['ranged', 'reach', 'armoured', 'fixed', 'revenant', 'plague', 'incorp', 'afterlife', 'fade', 'riposte', 'flurry'];
+const KW_FLAGS = ['ranged', 'reach', 'armoured', 'fixed', 'revenant', 'plague', 'incorp', 'afterlife', 'fade', 'riposte', 'flurry', 'marked', 'geared', 'augur'];
 const KW_NAME = { ranged: 'Ranged', reach: 'Pike', armoured: 'Armoured', fixed: 'Immobile', revenant: 'Revenant', plague: 'Plague',
-  incorp: 'Incorporeal', afterlife: 'Afterlife', fade: 'Fading', riposte: 'Riposte', flurry: 'Flurry' };
+  incorp: 'Incorporeal', afterlife: 'Afterlife', fade: 'Fading', riposte: 'Riposte', flurry: 'Flurry', marked: 'Marked', geared: 'Geared', augur: 'Augur' };
 /** The value of keyword flag f on unit u: gained keywords (u.kw) count, keywords moved away (u.off) don't. */
 const kw = (u, f) => (u.kw && u.kw[f] ? u.kw[f] : u.off && u.off[f] ? 0 : cardOf(u)[f] || 0);
 /** Give unit u keyword f (copy-on-write, so cloned states stay independent). */
@@ -1921,7 +2105,7 @@ const canMoveAgain = u => (u.mv || 0) < maxMoves(u);
 const isBloodied = u => defenceOf(u) < printedDef(u);
 const isReckless = u => !!(cardOf(u).reckless || u.reck);
 /** Armoured: printed, or given until round end (Strategikon). */
-const isArmoured = u => !!(kw(u, 'armoured') || u.tArm);
+const isArmoured = u => !!(kw(u, 'armoured') || u.tArm || u.ent);
 
 /** Resolution order (summary section 7): page order of the whole board from the seat of the unit's controller. */
 const readingKey = u => seatKey(u, ctl(u));
@@ -2087,6 +2271,7 @@ function kill(s, u, why, opt = {}) {
   if (!opt.silent) emit(s, { dead: u.id });
   if (s.noFx) s.deadUnits = [...(s.deadUnits || []), { ...u }];   // previews: where a unit died
   s.units = s.units.filter(x => x.id !== u.id);
+  s.dR = s.dR && s.dR.r === s.round ? { r: s.round, n: s.dR.n + 1 } : { r: s.round, n: 1 };   // deaths this round (Toll)
   // a tombstone keeps its cells (no dots, no actions) until its death resolves
   if (!opt.noTomb) s.tombs = [...(s.tombs || []), { id: u.id, card: u.card, owner: u.owner, ctl: ctl(u), lane: u.lane, cells: cellsOf(u).map(x => [x[0], x[1]]), u: s.noFx ? null : { ...u } }];
   if (keepsCard(u.card) && !u.tok) s.players[ctl(u)].discard.push(baseKey(u.card));
@@ -2106,14 +2291,16 @@ function kill(s, u, why, opt = {}) {
 }
 
 /** After a unit survives a hit: Pain Eater grows, Varangoi in its lane harden it (+1 defence). */
-function survived(s, u) {
+function survived(s, u, srcId) {
   const c = cardOf(u);
   if (c.pain) { u.ps = (u.ps || 0) + c.pain; log(s, `${unitName(u)} feeds on the pain: +${c.pain} strength.`); }
   for (const v of s.units) if (cardOf(v).veteran && targetsOf(s, v, 'veteran').includes(u)) {
     u.pd = (u.pd || 0) + 1;
     log(s, `${unitName(v)} harden ${unitName(u)}: +1 defence.`);
   }
-  fxFire(s, 'survive', u);
+  const by = srcId ? byId(s, srcId) : null;
+  fxFire(s, 'survive', u, by && ctl(by) !== ctl(u) ? { ev: by } : {});
+  for (const w of fxWatchers(s, ctl(u), u.lane, u.id)) if (byId(s, w.id) && byId(s, u.id)) fxFire(s, 'allySurvive', w, { ev: u });
   applyAuras(s);
 }
 
@@ -2122,6 +2309,7 @@ function survived(s, u) {
 /** notStrike: damage an ability deals (a fixed amount): effects that fire on its strikes don't fire. */
 function hitUnit(s, str, target, source, sourceId, noGuard, byUnit = !!sourceId, notStrike = false) {
   const res = hitOnce(s, str, target, source, sourceId, noGuard, byUnit, notStrike), src = res && sourceId ? byId(s, sourceId) : null;
+  if (src && res.killed && res.t && ctl(res.t) !== ctl(src)) fxFire(s, 'kill', src, { ev: res.t });
   if (!src || !byUnit || notStrike) return res;
   const c = cardOf(src), p = ctl(src);
   if (c.gore && (!res.t || res.t.id !== src.id)) { src.ps = (src.ps || 0) + c.gore; log(s, `${unitName(src)} grows on blood: +${c.gore} strength.`); applyAuras(s); }
@@ -2153,11 +2341,12 @@ function hitOnce(s, str, target, source, sourceId, noGuard, byUnit, notStrike) {
   }
   const src = sourceId ? byId(s, sourceId) : null;
   if (src && !notStrike && cardOf(src).duel && ctl(src) !== ctl(target) && strengthOf(target) < printedStr(target)) str += cardOf(src).duel;
+  if (!notStrike && kw(target, 'marked')) str *= 2;   // Marked: strikes on it deal double damage
   if (isArmoured(target) && !target.armUsed) {
     target.armUsed = true;
     emit(s, { hit: true, src: sourceId || null, from: s.fxFrom || undefined, how: s.fxHow || undefined, t: target.id, str, broke: 0, kill: false, blocked: true });
     log(s, `${source} hits ${unitName(target)}, but its armour holds.`);
-    survived(s, target);
+    survived(s, target, sourceId);
     return { killed: false, excess: 0, t: target };
   }
   const def = defenceOf(target), dies = str >= def;
@@ -2165,7 +2354,7 @@ function hitOnce(s, str, target, source, sourceId, noGuard, byUnit, notStrike) {
   if (dies) { kill(s, target, 'hit by ' + source, { killer: sourceId, silent: true }); return { killed: true, excess: str - def, t: target }; }
   target.dmg = (target.dmg || 0) + str;
   log(s, `${source} hits ${unitName(target)}: ${str} shield${str > 1 ? 's' : ''} lost.`);
-  survived(s, target);
+  survived(s, target, sourceId);
   if (src && !notStrike && ctl(src) !== ctl(target) && byId(s, target.id)) {
     const sc = cardOf(src);
     if (sc.plagueHit) catchPlague(s, target, unitName(src));
@@ -2479,6 +2668,7 @@ function restoreShields(s, u, n, source) {
   u.dmg -= restored;
   log(s, `${source} restores ${restored} shield${restored > 1 ? 's' : ''} of ${unitName(u)}.`);
   emit(s, { heal: u.id, n: restored });
+  fxFire(s, 'healed', u);
 }
 
 /**
@@ -3618,7 +3808,11 @@ function fxSel(s, c, to) {
   if (f) out = out.filter(x => cardOf(x)[f] || (x.kw && x.kw[f]) || x[f]);
   return out;
 }
-const fxAmount = (s, c, n) => (typeof n === 'number' ? n : n ? fxSel(s, c, n.count).length * (n.x || 1) + (n.plus || 0) : 0);
+const fxAmount = (s, c, n) => {
+  if (typeof n === 'number' || !n) return n || 0;
+  if (n.stat) { const u = fxSel(s, c, n.of)[0]; return u ? (n.stat === 'str' ? strengthOf(u) : defenceOf(u)) + (n.plus || 0) : 0; }
+  return Math.min(n.max ?? Infinity, fxSel(s, c, n.count).length * (n.x || 1) + (n.plus || 0));
+};
 const spellsThisRound = (s, p) => (s.players[p].spR === s.round ? s.players[p].spN : 0);
 /** Whether the condition holds now. */
 function fxIf(s, c, w) {
@@ -3631,7 +3825,7 @@ function fxIf(s, c, w) {
   if (w.spells && spellsThisRound(s, c.p) < w.spells) return false;
   if (w.other && !s.units.some(x => ctl(x) === c.p && x.lane !== c.lane && baseKey(x.card) === w.other)) return false;
   if (w.alone && s.units.some(x => ctl(x) === c.p && x.lane === c.lane && (!c.u || x.id !== c.u.id))) return false;
-  return true;
+  return fxIfMore(s, c, w);
 }
 /** A free spot for a 1-cell (or k-shaped) unit: next to u, in the front row, the back rows, or anywhere. */
 function fxSpot(s, p, lane, k, at, u) {
@@ -3671,10 +3865,10 @@ function fxUndo(s, p) {
   log(s, `Time turns back: ${deckName(s, q)}'s last action is undone.`);
 }
 const FX_OPS = {
-  dmg(s, c, o) { const n = fxAmount(s, c, o.dmg); for (const t of fxSel(s, c, o.to)) dealDamage(s, c.u && !c.spell ? abilityHit(c.u, n) : n, t, c.label, fxAlive(s, c.u)); },
+  dmg(s, c, o) { const n = fxAmount(s, c, o.dmg) + fxAugur(s, c); for (const t of fxSel(s, c, o.to)) dealDamage(s, c.u && !c.spell ? abilityHit(c.u, n) : n, t, c.label, fxAlive(s, c.u)); },
   strike(s, c, o) { const u = fxAlive(s, c.u); if (u) for (const t of fxSel(s, c, o.to || 'nearest')) if (byId(s, u.id)) strike(s, u, t, c.label); },
   chain(s, c, o) {
-    let n = fxAmount(s, c, o.chain), t = fxSel(s, c, o.to)[0];
+    let n = fxAmount(s, c, o.chain) + fxAugur(s, c), t = fxSel(s, c, o.to)[0];
     const hit = new Set();
     while (t && n > 0) {
       hit.add(t.id); const at = { ...t };
@@ -3683,7 +3877,7 @@ const FX_OPS = {
     }
   },
   ricochet(s, c, o) {
-    const n = fxAmount(s, c, o.ricochet), t = fxSel(s, c, o.to)[0];
+    const n = fxAmount(s, c, o.ricochet) + fxAugur(s, c), t = fxSel(s, c, o.to)[0];
     if (!t) return;
     const next = FX_SEL.inFrontOfIt(s, { ...c, t })[0];
     dealDamage(s, n, t, c.label, fxAlive(s, c.u)); processDeaths(s);
@@ -3752,8 +3946,9 @@ function fxFire(s, on, u, extra = {}) {
   card.fx.forEach((f, i) => {
     if (f.on !== on) return;
     if (extra.ev && f.of && !(cardOf(extra.ev)[f.of] || (extra.ev.kw && extra.ev.kw[f.of]))) return;
+    if (extra.k && f.of && !(CARDS[extra.k] || {})[f.of]) return;
     if (u.tok && f.do.some(o => 'echo' in o)) return;
-    if (extra.again && f.do.some(o => 'replace' in o || 'again' in o)) return;   // a replay never replays again
+    if (extra.again && f.do.some(o => 'replace' in o || 'again' in o || 'tick' in o)) return;   // a replay never replays again
     const c = { p: ctl(u), u, t: extra.ev || null, lane: u.lane, label: unitName(u), k: extra.k };
     if (!fxIf(s, c, f.if)) return;
     if (f.lim === FX_ONCE) { u.fxl = u.fxl || {}; if (u.fxl[i] === s.round) return; u.fxl[i] = s.round; }
@@ -3765,6 +3960,7 @@ function fxPlaced(s, p, u) {
   if (!byId(s, u.id)) return;
   fxFire(s, 'place', u);
   for (const w of fxWatchers(s, p, u.lane, u.id)) if (byId(s, w.id)) fxFire(s, 'allyPlace', w, { ev: u });
+  for (const w of fxWatchers(s, other(p), u.lane, u.id)) if (byId(s, w.id) && byId(s, u.id)) fxFire(s, 'enemyPlace', w, { ev: u });
 }
 function fxDied(s, u) {
   fxFire(s, 'death', u);
@@ -3786,13 +3982,15 @@ function fxSpellCast(s, p, k) {
 function fxEach(s, on, p) { for (const w of fxWatchers(s, p, null)) if (byId(s, w.id)) { fxFire(s, on, w); processDeaths(s); } }
 /** Position bonuses from card.aura, recomputed with the other auras. */
 function fxAuras(s) {
+  for (const u of s.units) u.ent = 0;
   for (const u of s.units) {
     const A = cardOf(u).aura;
     if (!A) continue;
     for (const a of A) {
       const c = { p: ctl(u), u, lane: u.lane };
       if (!fxIf(s, c, a.if)) continue;
-      for (const t of fxSel(s, c, a.to || 'self')) { t.bs += a.s || 0; t.bd += a.d || 0; }
+      const x = a.per ? fxAmount(s, c, a.per) : 1;
+      for (const t of fxSel(s, c, a.to || 'self')) { t.bs += (a.s || 0) * x; t.bd += (a.d || 0) * x; if (a.arm) t.ent = 1; }
     }
   }
 }
@@ -3810,6 +4008,7 @@ function fxSpellOptions(s, p, k, ok) {
 function fxCast(s, p, a, lane, k) {
   const card = CARDS[k], t = byId(s, a.tid ?? a.vid);
   fxRun(s, { p, u: null, t, lane, col: a.col, label: card.name, spell: true, all: !!card.cast.all }, card.cast.do);
+  if (t && ctl(t) === p && byId(s, t.id)) { fxFire(s, 'targeted', t, { k }); processDeaths(s); }
 }
 const FX_UNDO_KEYS = new Set(Object.keys(CARDS).filter(k => CARDS[k].cast && CARDS[k].cast.undo));
 /** Kept before each action when the other side holds a card that can undo it. */
@@ -3821,6 +4020,112 @@ function fxKeepUndo(s, p) {
   s.undoSnap[p] = { p, turn: s.turn, units: JSON.stringify(s.units), owner: s.owner.slice(), pool: s.pool[p].slice(),
     P: JSON.stringify({ hand: P.hand, draw: P.draw, discard: P.discard, reserve: P.reserve }), myDiscard: s.players[other(p)].discard.slice() };
 }
+/* ---------- more card effects for the seven factions of 4 Nov 2026: winding, offerings, waves, omens, marks ----------
+   Triggers added: kill (my hit kills an enemy), enemyPlace (an enemy is placed in my lane), allyAttack (another ally in my
+   lane attacks), targeted (one of your spells targets me), healed (my shields are restored), allySurvive (an ally in my lane
+   survives damage); survive gets the attacker as "it". Ops added: tick (its round-end effects happen now; Geared allies
+   touching it too), ready (it may move and attack again this round), advance (moves straight forward as far as it can),
+   offer (the ally directly behind me dies; later ops with if: {offered} need it), raise (a unit card from the discard pile
+   comes back), sup (lasting supply change). */
+const deathsThisRound = s => (s.dR && s.dR.r === s.round ? s.dR.n : 0);
+const attacksThisRound = (s, p) => (s.aR && s.aR[p] && s.aR[p].r === s.round ? s.aR[p].n : 0);
+const fxCount = n => Array.from({ length: Math.max(0, n) }, () => ({}));
+/** The ally of u directly behind (dir -1) or in front (dir 1) of it, in the same column. */
+function fxNextInCol(s, u, dir) {
+  if (!u || !byId(s, u.id)) return null;
+  const rows = cellsOf(u).map(x => x[0]), step = fwd(u.owner) * dir;
+  const edge = dir > 0 ? (step < 0 ? Math.min(...rows) : Math.max(...rows)) : (step < 0 ? Math.max(...rows) : Math.min(...rows));
+  const r = edge + step, cols = colsOf(u);
+  return fxCamp(s, u.owner, u.lane).find(x => x.id !== u.id && ctl(x) === ctl(u) && cellsOf(x).some(([xr, xc]) => xr === r && cols.includes(xc))) || null;
+}
+Object.assign(FX_SEL, {
+  deathsR: s => fxCount(deathsThisRound(s)),
+  attacksR: (s, c) => fxCount(attacksThisRound(s, c.p)),
+  spellsR: (s, c) => fxCount(spellsThisRound(s, c.p)),
+  handN: (s, c) => fxCount(s.players[c.p].hand.length),
+  behind: (s, c) => one(fxNextInCol(s, c.u, -1)),
+  ahead: (s, c) => one(fxNextInCol(s, c.u, 1)),
+  itBehind: (s, c) => one(fxNextInCol(s, c.t, -1)),
+  // the enemy furthest from the base in my lane (back row first, then reading order)
+  deepest: (s, c) => one(FX_SEL.enemies(s, c).sort((a, b) => seatKey(b, c.p) - seatKey(a, c.p))[0]),
+  hurtEnemies: (s, c) => FX_SEL.enemies(s, c).filter(isBloodied),
+  marked: (s, c) => FX_SEL.enemies(s, c).filter(x => kw(x, 'marked')),
+  markedAll: (s, c) => s.units.filter(x => ctl(x) !== c.p && kw(x, 'marked')),
+  geared: (s, c) => FX_SEL.team(s, c).filter(x => kw(x, 'geared')),
+  frontAllies: (s, c) => FX_SEL.team(s, c).filter(inFront),
+  backAllies: (s, c) => FX_SEL.team(s, c).filter(x => !inFront(x)),
+  partsHand: (s, c) => fxCount(s.players[c.p].hand.filter(k => CARDS[k] && CARDS[k].part).length),
+  itTwins: (s, c) => (c.t ? s.units.filter(x => ctl(x) === c.p && x.lane !== c.t.lane && baseKey(x.card) === baseKey(c.t.card)) : []),
+  otherFront: (s, c) => LANES.filter(l => l !== c.lane).map(l => s.units.filter(x => ctl(x) === c.p && x.lane === l && (cardOf(x).fx || []).some(f => f.on === 'roundEnd')).sort(byReadingOrder)[0]).filter(Boolean),
+  itFacing: (s, c) => one(c.t && byId(s, c.t.id) ? fxFacing(s, c.t) : null),
+  hurtAll: (s, c) => s.units.filter(x => ctl(x) !== c.p && isBloodied(x)),
+  deepestAll: (s, c) => LANES.filter(l => l !== c.lane).map(l => s.units.filter(x => x.lane === l && ctl(x) !== c.p).sort((a, b) => seatKey(b, c.p) - seatKey(a, c.p))[0]).filter(Boolean),
+  emptyFront: (s, c) => fxCount(3 - [0, 1, 2].filter(col => unitAt(s, c.p, c.lane, frontRow(c.p), col)).length),
+});
+/** Conditions added: bloodied (the other unit), side / mid column, deaths this round, marked, offered, moved, hurt (me). */
+function fxIfMore(s, c, w) {
+  if (w.itHurt && !(c.t && isBloodied(c.t))) return false;
+  if (w.itHas && !(c.t && kw(c.t, w.itHas))) return false;
+  if (w.itNot && c.t && kw(c.t, w.itNot)) return false;
+  if (w.hurt && !(c.u && isBloodied(c.u))) return false;
+  if (w.side && !(c.u && colsOf(c.u).some(k => k !== 1))) return false;
+  if (w.mid && !(c.u && colsOf(c.u).includes(1))) return false;
+  if (w.deaths && deathsThisRound(s) < w.deaths) return false;
+  if (w.itMarked && !(c.t && kw(c.t, 'marked'))) return false;
+  if (w.offered && !c.offered) return false;
+  if (w.still && c.u && (c.u.mv || 0) > 0) return false;
+  if (w.attacks && attacksThisRound(s, c.p) < w.attacks) return false;
+  if (w.hand && s.players[c.p].hand.length < w.hand) return false;
+  return true;
+}
+/** Augur N: your spells deal N more damage for each unit of yours with it (in any lane). */
+const fxAugur = (s, c) => (c.spell ? s.units.filter(x => ctl(x) === c.p).reduce((n, x) => n + (kw(x, 'augur') || 0), 0) : 0);
+/** After u's attack is paid: the attack counter, then Onrush and other allyAttack triggers in its lane. */
+function fxAttacked(s, p, u) {
+  s.aR = s.aR || [null, null];
+  s.aR[p] = s.aR[p] && s.aR[p].r === s.round ? { r: s.round, n: s.aR[p].n + 1 } : { r: s.round, n: 1 };
+  for (const w of fxWatchers(s, p, u.lane, u.id)) if (byId(s, w.id)) fxFire(s, 'allyAttack', w, { ev: u });
+}
+/** Wind: units' round-end effects happen now; a wound Geared unit winds the Geared allies touching it (each once). */
+function fxTick(s, list, label) {
+  const done = new Set(), queue = list.slice();
+  while (queue.length) {
+    const t = queue.shift();
+    if (!t || done.has(t.id) || !byId(s, t.id)) continue;
+    done.add(t.id);
+    log(s, `${unitName(t)} is wound (${label}).`);
+    emit(s, { grow: [t.id] });
+    fxFire(s, 'roundEnd', t, { again: true });
+    fxFire(s, 'wound', t);
+    processDeaths(s);
+    if (byId(s, t.id) && kw(t, 'geared')) for (const g of fxCamp(s, t.owner, t.lane)) if (!done.has(g.id) && ctl(g) === ctl(t) && kw(g, 'geared') && touches(t, g)) queue.push(g);
+  }
+}
+Object.assign(FX_OPS, {
+  tick(s, c, o) { fxTick(s, fxSel(s, c, o.to), c.label); },
+  ready(s, c, o) { for (const t of fxSel(s, c, o.to)) { Object.assign(t, { attacked: false, atk: 0, moved: false, mv: 0 }); log(s, `${unitName(t)} may act again this round (${c.label}).`); } },
+  advance(s, c, o) { for (const t of fxSel(s, c, o.to || 'self')) if (!kw(t, 'fixed') && slide(s, t, fwd(t.owner))) { log(s, `${unitName(t)} advances.`); fxFire(s, 'move', t); } },
+  offer(s, c, o) {
+    const v = fxNextInCol(s, c.u, -1);
+    if (!v) return;
+    c.offered = true;
+    kill(s, v, `offered by ${c.label}`);
+    processDeaths(s);
+  },
+  raise(s, c, o) {
+    const P = s.players[c.p], ks = P.discard.map((k, i) => [k, i]).filter(([k]) => CARDS[k] && !CARDS[k].tactic && !CARDS[k].token && (!o.max || CARDS[k].sup <= o.max));
+    ks.sort((a, b) => (o.raise === 'best' ? CARDS[b[0]].sup - CARDS[a[0]].sup : b[1] - a[1]));
+    for (const [k, i] of ks) {
+      const spot = fxSpot(s, c.p, c.lane, k, o.at);
+      if (!spot) continue;
+      P.discard.splice(i, 1);
+      spawn(s, c.p, k, c.lane, spot.r, spot.c, spot.o, `${CARDS[k].name} comes back from the discard pile (${c.label}).`);
+      return;
+    }
+  },
+  itStrike(s, c, o) { const u = fxAlive(s, c.t); if (!u) return; for (let i = 0; i < (o.itStrike || 1); i++) { const t = byId(s, u.id) && strikeTarget(s, u); if (t) strike(s, u, t, `${unitName(u)} (${c.label})`); } },
+  sup(s, c, o) { for (const t of fxSel(s, c, o.to)) { t.sup = Math.max(1, unitSupply(t) + o.sup); log(s, `${unitName(t)}: supply ${unitSupply(t)} (${c.label}).`); } },
+});
 /* ---------- Ogre Thrower ---------- */
 /** Allies unit u could throw now (adjacent, 1 cell, not Immobile), if it still has an attack it can pay for. */
 function throwables(s, u) {
@@ -3884,6 +4189,7 @@ const ACTIONS = {
     u.atk = (u.atk || 0) + 1;
     u.attacked = u.atk >= maxAttacks(u);
     log(s, `${unitName(u)} attacks ${unitName(t)}.`);
+    fxAttacked(s, p, u);
     if (cardOf(u).grubber) {
       const P = s.players[p], before = P.reserve;
       P.reserve = Math.min(MAX_CARRY, P.reserve + 1);

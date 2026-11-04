@@ -1,0 +1,102 @@
+HOROLOGERS (the clockwork faction) — stage 1 entry, 4 Nov 2026 (Claude's design). Cards: horologers-cards.txt (made from
+the game: node tools/design_cards.js c). In the game: src/game/js/cards/new-horologers.js. Network check:
+python3 tools/network_check.py factions/designs/horologers.txt factions/designs/horologers-cards.txt
+
+NAME AND ICON
+The Horologers. Icon: a clock face with two hands (new glyph "clockface"). Colour: brass on dark blue-grey.
+
+THEME: the clockmakers' guilds of a 17th-18th century European clock city (the astronomical clocks of Prague and Strasbourg,
+the automata of the Jaquet-Droz workshop, the Nuremberg guilds).
+1. Their soldiers are automata: brass machines that do what they were built to do when the hour strikes.
+2. A machine runs on a spring that must be wound; winding it releases its work at once.
+3. Gears mesh: machines that touch drive each other, so one turn of a key moves a whole train.
+4. The weights, pendulums and mainsprings hang at the back of every clock: the workings sit behind the face.
+5. The great clock tower keeps the time of the whole city, every district at once.
+6. Guild masters, journeymen and apprentices; apprentices oil, adjust and repair.
+7. They prize precision and the schedule; they distrust improvisation.
+8. Nothing is wasted: a broken machine is taken apart for spare parts, which go into the next one.
+9. Brass and steel make the machines tough but clumsy: they rarely leave their place.
+10. They live from commissions: patrons pay for pieces, and drawings (blueprints) are guarded secrets.
+11. They fear rust and disorder: a broken chain stops the machine.
+12. Their strength is repetition: the same motion, done again and again, without tiring.
+
+IDENTITY (one line)
+Machines that act by themselves at round end; the Horologers wind them so they act again during the round, and turn every
+broken machine into spare parts that wind the next one.
+
+MECHANICS (each "I do X -> I benefit from Y")
+1. Striking the hour: my machines have round-end effects -> at round end they strike, deal damage, repair and build while
+   the enemy can no longer answer. Most units carry one round-end effect (Ratchet Guard strikes the nearest enemy, Bell
+   Ringer deals 1 damage to the enemy facing it). Library: turn_end (Inscryption Technology, Duelyst).
+2. Winding: I wind a machine -> its round-end effect happens now, during the round, and I can wind the same machine again.
+   Winding comes from spells (Turn the Key), from Place (the keyword Wound: the unit's round-end effect happens as it is
+   placed), from the back rows (Mainspring winds the ally directly in front of it at round end) and from Spare Parts.
+   Library: repeat_trigger (Faeria Imperial Engineer triggers all production abilities; Stormbound Doctor Mia triggers the
+   bordering structures; Monster Train Transcendimp repeats Summon effects).
+3. Gearing: my Geared machines touch each other -> winding one of them winds every Geared machine touching it, and those
+   wind the ones touching them. A train of three Geared units turns one wind into three. Gearing only works on winds,
+   never at the normal round end (where every machine acts anyway). Library: adjacency + repeat_trigger (Doctor Mia).
+4. Salvage: my machines break -> each one with Salvage puts a Spare Part into my hand (a spell for 0: wind an ally and
+   restore 1 of its shields). Parts are what makes winding cheap, and cards that "count your Spare Parts in hand"
+   grow from them. Library: generate_cards on death (Monster Train Umbra), recycle.
+5. The workings: my back-row machines drive the front -> rows 2-3 hold Mainsprings, Pendulums and Counterweights that
+   wind, repair or strengthen the machine directly in front of them. This is the back rows' job. Claude's idea, built
+   on Stormbound's "bordering" structures.
+
+HOW THE MECHANICS FEED EACH OTHER
+- Striking the hour gives Winding something to wind; Winding gives Striking the hour more strikes per round.
+- Gearing multiplies Winding; a geared train is wound by one Spare Part.
+- Salvage feeds Winding (Spare Parts wind) and is fed by machines that break themselves (Spent Spring, Clockwork Bomb:
+  round end, deal damage, then I break).
+- The workings feed Winding (back-row winders) and Striking the hour (Pendulums repair the front so it keeps acting).
+MECHANIC Striking the hour | makes: round-end-effect, machine-breaks | needs: wind, repair
+MECHANIC Winding | makes: wind | needs: round-end-effect, spare-part
+MECHANIC Gearing | makes: wind, geared-train | needs: wind, adjacent-machines
+MECHANIC Salvage | makes: spare-part | needs: machine-breaks
+MECHANIC The workings | makes: wind, repair, adjacent-machines | needs: round-end-effect
+
+KEYWORDS OF ITS OWN (hover texts in the game)
+- Geared (value 0): when I am wound, every Geared ally touching me is wound too (each machine once per wind).
+- Wound (value 1): Place: my round-end effects happen now.
+- Salvage (value 1): Death: a Spare Part into your hand.
+Shared keywords used: Immobile (a few heavy machines), Ranged (clock-tower guns), Armoured (a few brass guards).
+Spare Part (token spell, cost 0): wind an ally and restore 1 of its shields.
+
+GROUPS (ways to play; they mix)
+1. The clock line: Ranged and round-end damage machines in rows 2-3, wound by spells; the front held by Armoured guards.
+   Champion: The Great Clock Tower (round end: deals 1 damage to each enemy in its lane; links to the train group, because
+   it is Geared).
+2. The gear train: Geared units packed edge to edge in one lane, wound by Mainsprings and Spare Parts. Champion: The
+   Grand Orrery (Geared; when wound, every ally in its lane gains +1 strength this round; links to the clock line).
+3. The scrap yard: cheap Salvage machines that break themselves at round end, Spare Parts winding the rest, and units
+   that grow with the Spare Parts in hand. Champion: Mistress of Salvage (round end: a Spare Part for each machine of
+   yours that broke this round, up to 2; links to the gear train, since parts wind trains).
+Two more champions: Master Horologer (Place: wind each ally in its row; anchors winding for every group) and Brass
+Colossus (a 2x2 Armoured front machine with Salvage 2 effects that hold dots; links the scrap yard and the clock line).
+
+STRONG / ONLY A LITTLE / WEAK
+- Strong: damage at round end, many effects in one turn (a wound train), the back rows, staying power through repair.
+- Only a little: drawing cards (Blueprints, Draughtsman), supply (Coal Boiler, Supply +1), between lanes (Clock Tower
+  Bell, Pneumatic Post).
+- Weak: moving (almost every machine stays where it is placed), answering the enemy's moves (no cards react to enemy
+  placements or deaths), strong spells that remove (its spells wind, they rarely deal damage themselves).
+- No card gives it reactions to enemy actions or Outrider-style movement.
+
+INTERACTION WITH THE ENEMY: low to medium. It touches the enemy through round-end strikes and damage, never by reacting.
+
+SELF-SUFFICIENCY
+- Holds dots: Armoured Ratchet Guards, Brass Colossus, repaired front machines.
+- Removes enemies: round-end strikes and damage, wound again during the round; Clock Tower Guns are Ranged.
+- Supply: Coal Boiler (Supply +1), Furnace Engine (Supply +2, Immobile).
+- Draw: Blueprints (spell: draw 2), Draughtsman (Place: draw 1 if you have 2 or more Geared units in its lane),
+  Workshop Ledger (round end: draw 1 if you hold 2 or more Spare Parts; once per round, also when wound).
+- Lane control: Guild Banner (has +2 strength while you hold this lane's base), Watchman (round end: if you don't hold
+  this lane's base, deals 2 damage to the enemy facing it), Clock Keeper (both cases).
+- Between lanes: Clock Tower Bell (when wound, winds one ally in each other lane), Pneumatic Post (spell: wind an ally
+  in ANY lane; extremely rare kind of card).
+- Hooks for two-faction decks: Turn the Key and Spare Parts wind any unit with a round-end effect (the Long Guns'
+  Barrage, the Rootkin's Roots and Perennial, Exanimati round-end units).
+
+ROWS 2-3: the workings (Mainspring, Pendulum, Counterweight) and the clock-tower guns.
+DRAW, FREQUENCY: Blueprints once per card; Draughtsman once per card (Place); round-end draw always capped once per round,
+also when it is wound (a wound round-end draw has lim round).

@@ -6,7 +6,8 @@ Reads a design file (factions/designs/<faction>.txt). Lines it reads (anything e
   CARD <name> | <cost - str|def, size> | <text> | mech: M1, M2 | makes: a, b | needs: c
   DECK <name>: card, card x3, ...
 "makes" and "needs" are short tags for things in play (projectile-dies, lodged, enemy-front-packed ...).
-Usage: python3 tools/network_check.py factions/designs/<faction>.txt [--quiet]
+Usage: python3 tools/network_check.py factions/designs/<faction>.txt [more files of the same faction] [--quiet]
+Card lines of the seven factions of 4 Nov 2026 come from the game: node tools/design_cards.js <letter> > factions/designs/<faction>-cards.txt
 """
 import re, sys
 from collections import defaultdict
@@ -18,9 +19,10 @@ def parse(path):
         if line.startswith('MECHANIC ') or line.startswith('CARD '):
             kind, rest = line.split(' ', 1)
             parts = [p.strip() for p in rest.split(' | ')]
-            e = {'name': parts[0], 'makes': set(), 'needs': set(), 'mech': [], 'cost': '', 'text': ''}
+            e = {'name': parts[0], 'makes': set(), 'needs': set(), 'mech': [], 'cost': '', 'text': '', 'champ': False}
             free = []
             for p in parts[1:]:
+                if p == 'champion': e['champ'] = True; continue
                 m = re.match(r'(makes|needs|mech):\s*(.*)$', p)
                 if m:
                     vals = [v.strip() for v in m.group(2).split(',') if v.strip()]
@@ -68,7 +70,9 @@ def web(entries, label, out):
 
 def main():
     path = sys.argv[1]; quiet = '--quiet' in sys.argv
-    mechs, cards, decks = parse(path)
+    mechs, cards, decks = {}, {}, {}
+    for f in [a for a in sys.argv[1:] if not a.startswith('--')]:
+        m, c, d = parse(f); mechs.update(m); cards.update(c); decks.update(d)
     out, problems = [], []
     if mechs:
         problems += web(list(mechs.values()), 'mechanics', out)
@@ -96,6 +100,24 @@ def main():
             for m in mechs:
                 n = len([c for c in cl if m in c['mech']])
                 out.append(f"  cards in {m}: {n}")
+        # partners: cards that make what a card needs, or need what it makes
+        part = {}
+        for c in cl:
+            part[c['name']] = {o['name'] for o in cl if o is not c and ((o['makes'] & c['needs']) or (c['makes'] & o['needs']))}
+        avg = sum(len(v) for v in part.values()) / len(cl)
+        out.append(f"  partners per card: average {avg:.1f}; fewest: " + ', '.join(f"{n} {len(part[n])}" for n in sorted(part, key=lambda n: len(part[n]))[:8]))
+        champs = [c for c in cl if c['champ']]
+        out.append("  champions: " + (', '.join(f"{c['name']} {len(part[c['name']])}" for c in champs) or 'none marked'))
+        if len(champs) != 5: problems.append(f"{len(champs)} champions marked (5 wanted)")
+        for c in champs:
+            if len(part[c['name']]) < max(15, avg): problems.append(f"champion with few partners: {c['name']} ({len(part[c['name']])}; average {avg:.1f})")
+        for i, a in enumerate(champs):
+            for b in champs[i + 1:]:
+                sa, sb = part[a['name']], part[b['name']]
+                if sa and sb and len(sa & sb) > 0.8 * min(len(sa), len(sb)): problems.append(f"champions gather the same cards (no distinct way to play): {a['name']}, {b['name']}")
+        if avg < 8: problems.append(f"thin network: {avg:.1f} partners per card on average (8 or more wanted)")
+        lone = [n for n in part if len(part[n]) < 3]
+        if lone: problems.append(f"cards with fewer than 3 partners: {', '.join(lone)}")
     for d, items in decks.items():
         missing = [n for n, _ in items if n not in cards]
         if missing: problems.append(f"deck {d}: cards not in the file: {', '.join(missing)}")

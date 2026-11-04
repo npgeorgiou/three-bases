@@ -46,7 +46,11 @@ function fxSel(s, c, to) {
   if (f) out = out.filter(x => cardOf(x)[f] || (x.kw && x.kw[f]) || x[f]);
   return out;
 }
-const fxAmount = (s, c, n) => (typeof n === 'number' ? n : n ? fxSel(s, c, n.count).length * (n.x || 1) + (n.plus || 0) : 0);
+const fxAmount = (s, c, n) => {
+  if (typeof n === 'number' || !n) return n || 0;
+  if (n.stat) { const u = fxSel(s, c, n.of)[0]; return u ? (n.stat === 'str' ? strengthOf(u) : defenceOf(u)) + (n.plus || 0) : 0; }
+  return Math.min(n.max ?? Infinity, fxSel(s, c, n.count).length * (n.x || 1) + (n.plus || 0));
+};
 const spellsThisRound = (s, p) => (s.players[p].spR === s.round ? s.players[p].spN : 0);
 /** Whether the condition holds now. */
 function fxIf(s, c, w) {
@@ -59,7 +63,7 @@ function fxIf(s, c, w) {
   if (w.spells && spellsThisRound(s, c.p) < w.spells) return false;
   if (w.other && !s.units.some(x => ctl(x) === c.p && x.lane !== c.lane && baseKey(x.card) === w.other)) return false;
   if (w.alone && s.units.some(x => ctl(x) === c.p && x.lane === c.lane && (!c.u || x.id !== c.u.id))) return false;
-  return true;
+  return fxIfMore(s, c, w);
 }
 /** A free spot for a 1-cell (or k-shaped) unit: next to u, in the front row, the back rows, or anywhere. */
 function fxSpot(s, p, lane, k, at, u) {
@@ -99,10 +103,10 @@ function fxUndo(s, p) {
   log(s, `Time turns back: ${deckName(s, q)}'s last action is undone.`);
 }
 const FX_OPS = {
-  dmg(s, c, o) { const n = fxAmount(s, c, o.dmg); for (const t of fxSel(s, c, o.to)) dealDamage(s, c.u && !c.spell ? abilityHit(c.u, n) : n, t, c.label, fxAlive(s, c.u)); },
+  dmg(s, c, o) { const n = fxAmount(s, c, o.dmg) + fxAugur(s, c); for (const t of fxSel(s, c, o.to)) dealDamage(s, c.u && !c.spell ? abilityHit(c.u, n) : n, t, c.label, fxAlive(s, c.u)); },
   strike(s, c, o) { const u = fxAlive(s, c.u); if (u) for (const t of fxSel(s, c, o.to || 'nearest')) if (byId(s, u.id)) strike(s, u, t, c.label); },
   chain(s, c, o) {
-    let n = fxAmount(s, c, o.chain), t = fxSel(s, c, o.to)[0];
+    let n = fxAmount(s, c, o.chain) + fxAugur(s, c), t = fxSel(s, c, o.to)[0];
     const hit = new Set();
     while (t && n > 0) {
       hit.add(t.id); const at = { ...t };
@@ -111,7 +115,7 @@ const FX_OPS = {
     }
   },
   ricochet(s, c, o) {
-    const n = fxAmount(s, c, o.ricochet), t = fxSel(s, c, o.to)[0];
+    const n = fxAmount(s, c, o.ricochet) + fxAugur(s, c), t = fxSel(s, c, o.to)[0];
     if (!t) return;
     const next = FX_SEL.inFrontOfIt(s, { ...c, t })[0];
     dealDamage(s, n, t, c.label, fxAlive(s, c.u)); processDeaths(s);
@@ -180,8 +184,9 @@ function fxFire(s, on, u, extra = {}) {
   card.fx.forEach((f, i) => {
     if (f.on !== on) return;
     if (extra.ev && f.of && !(cardOf(extra.ev)[f.of] || (extra.ev.kw && extra.ev.kw[f.of]))) return;
+    if (extra.k && f.of && !(CARDS[extra.k] || {})[f.of]) return;
     if (u.tok && f.do.some(o => 'echo' in o)) return;
-    if (extra.again && f.do.some(o => 'replace' in o || 'again' in o)) return;   // a replay never replays again
+    if (extra.again && f.do.some(o => 'replace' in o || 'again' in o || 'tick' in o)) return;   // a replay never replays again
     const c = { p: ctl(u), u, t: extra.ev || null, lane: u.lane, label: unitName(u), k: extra.k };
     if (!fxIf(s, c, f.if)) return;
     if (f.lim === FX_ONCE) { u.fxl = u.fxl || {}; if (u.fxl[i] === s.round) return; u.fxl[i] = s.round; }
@@ -193,6 +198,7 @@ function fxPlaced(s, p, u) {
   if (!byId(s, u.id)) return;
   fxFire(s, 'place', u);
   for (const w of fxWatchers(s, p, u.lane, u.id)) if (byId(s, w.id)) fxFire(s, 'allyPlace', w, { ev: u });
+  for (const w of fxWatchers(s, other(p), u.lane, u.id)) if (byId(s, w.id) && byId(s, u.id)) fxFire(s, 'enemyPlace', w, { ev: u });
 }
 function fxDied(s, u) {
   fxFire(s, 'death', u);
@@ -214,13 +220,15 @@ function fxSpellCast(s, p, k) {
 function fxEach(s, on, p) { for (const w of fxWatchers(s, p, null)) if (byId(s, w.id)) { fxFire(s, on, w); processDeaths(s); } }
 /** Position bonuses from card.aura, recomputed with the other auras. */
 function fxAuras(s) {
+  for (const u of s.units) u.ent = 0;
   for (const u of s.units) {
     const A = cardOf(u).aura;
     if (!A) continue;
     for (const a of A) {
       const c = { p: ctl(u), u, lane: u.lane };
       if (!fxIf(s, c, a.if)) continue;
-      for (const t of fxSel(s, c, a.to || 'self')) { t.bs += a.s || 0; t.bd += a.d || 0; }
+      const x = a.per ? fxAmount(s, c, a.per) : 1;
+      for (const t of fxSel(s, c, a.to || 'self')) { t.bs += (a.s || 0) * x; t.bd += (a.d || 0) * x; if (a.arm) t.ent = 1; }
     }
   }
 }
@@ -238,6 +246,7 @@ function fxSpellOptions(s, p, k, ok) {
 function fxCast(s, p, a, lane, k) {
   const card = CARDS[k], t = byId(s, a.tid ?? a.vid);
   fxRun(s, { p, u: null, t, lane, col: a.col, label: card.name, spell: true, all: !!card.cast.all }, card.cast.do);
+  if (t && ctl(t) === p && byId(s, t.id)) { fxFire(s, 'targeted', t, { k }); processDeaths(s); }
 }
 const FX_UNDO_KEYS = new Set(Object.keys(CARDS).filter(k => CARDS[k].cast && CARDS[k].cast.undo));
 /** Kept before each action when the other side holds a card that can undo it. */

@@ -5,6 +5,7 @@ function kill(s, u, why, opt = {}) {
   if (!opt.silent) emit(s, { dead: u.id });
   if (s.noFx) s.deadUnits = [...(s.deadUnits || []), { ...u }];   // previews: where a unit died
   s.units = s.units.filter(x => x.id !== u.id);
+  s.dR = s.dR && s.dR.r === s.round ? { r: s.round, n: s.dR.n + 1 } : { r: s.round, n: 1 };   // deaths this round (Toll)
   // a tombstone keeps its cells (no dots, no actions) until its death resolves
   if (!opt.noTomb) s.tombs = [...(s.tombs || []), { id: u.id, card: u.card, owner: u.owner, ctl: ctl(u), lane: u.lane, cells: cellsOf(u).map(x => [x[0], x[1]]), u: s.noFx ? null : { ...u } }];
   if (keepsCard(u.card) && !u.tok) s.players[ctl(u)].discard.push(baseKey(u.card));
@@ -24,14 +25,16 @@ function kill(s, u, why, opt = {}) {
 }
 
 /** After a unit survives a hit: Pain Eater grows, Varangoi in its lane harden it (+1 defence). */
-function survived(s, u) {
+function survived(s, u, srcId) {
   const c = cardOf(u);
   if (c.pain) { u.ps = (u.ps || 0) + c.pain; log(s, `${unitName(u)} feeds on the pain: +${c.pain} strength.`); }
   for (const v of s.units) if (cardOf(v).veteran && targetsOf(s, v, 'veteran').includes(u)) {
     u.pd = (u.pd || 0) + 1;
     log(s, `${unitName(v)} harden ${unitName(u)}: +1 defence.`);
   }
-  fxFire(s, 'survive', u);
+  const by = srcId ? byId(s, srcId) : null;
+  fxFire(s, 'survive', u, by && ctl(by) !== ctl(u) ? { ev: by } : {});
+  for (const w of fxWatchers(s, ctl(u), u.lane, u.id)) if (byId(s, w.id) && byId(s, u.id)) fxFire(s, 'allySurvive', w, { ev: u });
   applyAuras(s);
 }
 
@@ -40,6 +43,7 @@ function survived(s, u) {
 /** notStrike: damage an ability deals (a fixed amount): effects that fire on its strikes don't fire. */
 function hitUnit(s, str, target, source, sourceId, noGuard, byUnit = !!sourceId, notStrike = false) {
   const res = hitOnce(s, str, target, source, sourceId, noGuard, byUnit, notStrike), src = res && sourceId ? byId(s, sourceId) : null;
+  if (src && res.killed && res.t && ctl(res.t) !== ctl(src)) fxFire(s, 'kill', src, { ev: res.t });
   if (!src || !byUnit || notStrike) return res;
   const c = cardOf(src), p = ctl(src);
   if (c.gore && (!res.t || res.t.id !== src.id)) { src.ps = (src.ps || 0) + c.gore; log(s, `${unitName(src)} grows on blood: +${c.gore} strength.`); applyAuras(s); }
@@ -71,11 +75,12 @@ function hitOnce(s, str, target, source, sourceId, noGuard, byUnit, notStrike) {
   }
   const src = sourceId ? byId(s, sourceId) : null;
   if (src && !notStrike && cardOf(src).duel && ctl(src) !== ctl(target) && strengthOf(target) < printedStr(target)) str += cardOf(src).duel;
+  if (!notStrike && kw(target, 'marked')) str *= 2;   // Marked: strikes on it deal double damage
   if (isArmoured(target) && !target.armUsed) {
     target.armUsed = true;
     emit(s, { hit: true, src: sourceId || null, from: s.fxFrom || undefined, how: s.fxHow || undefined, t: target.id, str, broke: 0, kill: false, blocked: true });
     log(s, `${source} hits ${unitName(target)}, but its armour holds.`);
-    survived(s, target);
+    survived(s, target, sourceId);
     return { killed: false, excess: 0, t: target };
   }
   const def = defenceOf(target), dies = str >= def;
@@ -83,7 +88,7 @@ function hitOnce(s, str, target, source, sourceId, noGuard, byUnit, notStrike) {
   if (dies) { kill(s, target, 'hit by ' + source, { killer: sourceId, silent: true }); return { killed: true, excess: str - def, t: target }; }
   target.dmg = (target.dmg || 0) + str;
   log(s, `${source} hits ${unitName(target)}: ${str} shield${str > 1 ? 's' : ''} lost.`);
-  survived(s, target);
+  survived(s, target, sourceId);
   if (src && !notStrike && ctl(src) !== ctl(target) && byId(s, target.id)) {
     const sc = cardOf(src);
     if (sc.plagueHit) catchPlague(s, target, unitName(src));

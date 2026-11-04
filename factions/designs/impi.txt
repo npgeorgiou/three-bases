@@ -1,0 +1,95 @@
+IMPI (the aggro faction) — stage 1 entry, 4 Nov 2026 (Claude's design). Cards: impi-cards.txt (made from the game:
+node tools/design_cards.js a). In the game: src/game/js/cards/new-impi.js. Network check:
+python3 tools/network_check.py factions/designs/impi.txt factions/designs/impi-cards.txt
+
+NAME AND ICON
+The Impi. Icon: a tall oval hide shield with a short spear across it (new glyph "oxshield"). Colour: ochre and cattle-hide.
+
+THEME: the Zulu regiments of the early 19th century.
+1. They run: a regiment could cover fifty miles in a day and attack on arrival.
+2. The buffalo-horns formation: the chest pins the enemy in front, the horns run round the sides, the loins wait behind.
+3. The short stabbing spear: close, fast fighting, one blow after another.
+4. Regiments by age: eager young men attack first, veterans hold and finish.
+5. Wealth in cattle: herds feed the army and are the prize of victory.
+6. Praise singers call out each warrior's deeds; a kill raises the whole line's spirit.
+7. Attacks come in waves, each one pushing the next.
+8. Ox-hide shields: light, for speed, not to hold a line for long.
+9. Discipline: the regiment moves as one at the induna's command.
+10. Warriors who have "washed the spear" (made a kill) are honoured.
+11. They fear long sieges and guns; they lack ranged weapons and heavy armour.
+12. Before battle the warriors are doctored and sprinkled: a burst of strength for the coming fight.
+
+IDENTITY (one line)
+Fast, cheap warriors that attack from the first round in waves: every attack and every kill pushes the next warrior on,
+the horns strike from the side columns, and the reserves run in to take each fallen warrior's cell; they win before the
+enemy is settled.
+
+MECHANICS (each "I do X -> I benefit from Y")
+1. Waves: my units attack -> the other warriors in that lane hit harder this round. The keyword Onrush: whenever another
+   ally in my lane attacks, I gain +1 strength this round. Cards also count the attacks your units made this round.
+   Library: Demacia and Noxus attack triggers ("Your units attack": made by 122 Demacia cards).
+2. The horns: my units stand in the side columns of my front row -> they hit harder; the chest (the middle column) pins.
+   The keyword Flanker: has +2 strength while in a side column of my front row. Middle-column cards give the chest its
+   job (Chest Warrior has +2 defence in the middle column). Library: flanking (Duelyst Songhai Backstab, 13% of its cards).
+3. Washing the spear: my strike kills an enemy -> the killer or the line gains (strength, supply, a fresh warrior, may
+   attack again). Library: on_kill (Demacia, Shadow Isles), untap on a kill (Duelyst Sleet Dasher).
+4. The loins (reserves): my back-row warriors wait -> when an ally in their lane dies, they run straight forward into the
+   free cells. The keyword Reserve. This is the back rows' job: a fallen front warrior is replaced at once, for free,
+   so the enemy's kill does not free the dot. Claude's idea (no library card moves forward on a death; Stormbound units
+   move forward on their own).
+5. The herds: my attacks and kills take cattle -> I get supply in that lane this round (or carry-over) and pay for more
+   attacks in the same round. Attacks cost the attacker's supply, so cheap attackers plus cattle make long waves.
+   Cattle Raider (when its strike kills: +1 supply in this lane this round), Herd Boy (Supply +1). Library:
+   resource_gain on a kill (Bilgewater plunder, Noxus), the Horde's Plunderer in this game.
+
+HOW THE MECHANICS FEED EACH OTHER
+- Waves are set off by any attack; the horns make the first attacks kill; kills (washing the spear) let a warrior attack
+  again, which is one more wave.
+- The reserves fill cells after deaths, so the line keeps attacking (more waves) and keeps the dots.
+- The herds pay for more attacks in the same round, so more waves; waves and the horns make the kills the herds need.
+MECHANIC Waves | makes: ally-attacks, strong-attacker, ally-dies | needs: ally-attacks, supply-this-round
+MECHANIC The horns | makes: enemy-killed, strong-attacker | needs: side-column-front
+MECHANIC Washing the spear | makes: ally-attacks, side-column-front | needs: enemy-killed
+MECHANIC The loins | makes: side-column-front, ally-attacks | needs: ally-dies
+MECHANIC The herds | makes: supply-this-round, ally-attacks | needs: enemy-killed
+
+KEYWORDS OF ITS OWN
+- Onrush (value 1): whenever another ally in my lane attacks, I gain +1 strength this round.
+- Flanker (value 1): has +2 strength while in a side column of my front row.
+- Reserve (value 1): when an ally in my lane dies while I am outside the front row, I move straight forward as far as I
+  can (free; it is not a move action).
+Shared keywords used: Charge (runners), Flurry (a few champions), Lightfooted (scouts).
+
+GROUPS
+1. The wave: many cheap Onrush warriors that attack one after another in one lane. Champion: Induna of the Wave (Onrush 2;
+   when it attacks, the other allies in its lane gain +1 strength this round; links to the horns).
+2. The horns: Flankers in the side columns, the chest in the middle that pins (Bodyguard, defence). Champion: Horn
+   Captain (Flanker; when its strike kills, it may attack again this round, once per round; links to washing the spear).
+3. The loins: Reserves in rows 2-3 behind cheap front warriors; cards that gain when an ally dies. Champion: Old Bull of
+   the Loins (Reserve; when it moves, deals 2 damage to the enemy facing it; links to the wave).
+Two more champions: Praise Singer (round end: draws 1 if your units attacked 3 or more times this round, once per round;
+links the wave and washing the spear) and Spear of the King (Flurry, Flanker; links the horns and the loins).
+
+STRONG / ONLY A LITTLE / WEAK
+- Strong: early dots, many attacks in a turn, kills in the enemy front row.
+- Only a little: drawing, supply (Cattle Herd, Supply +1; Prize Cattle: kill, +1 carry-over), healing (Doctored Warrior).
+- Weak: the enemy back rows (no Ranged, almost no damage spells), late game, big defence, between lanes.
+- No card gives it Ranged or round-end damage to the back rows.
+
+INTERACTION WITH THE ENEMY: medium-high. It attacks every turn; few cards disrupt.
+
+SELF-SUFFICIENCY
+- Holds dots: cheap warriors early; Reserves refill; Chest Warriors in the middle with high defence.
+- Removes: attacks with Onrush and Flanker bonuses; kills set off more attacks.
+- Supply: Cattle Herd (Supply +1), Prize Cattle (when its strike kills: +1 carry-over), Herd Boy.
+- Draw: Praise Singer (round end, once per round), Runner with News (Place: draw 1 if your units attacked this round),
+  War Song (spell: draw 1; your units in the lane gain +1 strength this round).
+- Lane control: Royal Kraal (as long as you hold this lane's base, allies in its row have +1 defence), Hunger for Cattle
+  (Charge unit that has +2 strength if you don't hold this lane's base), Regiment Standard (one effect for each case).
+- Between lanes: Messenger Runner (Outrider), Long Run (spell: an ally rides to a free cell of another lane's camp).
+- Hooks for two-faction decks: Onrush counts any ally's attack (the Horde's Flurry units set off two waves); Reserve
+  moves forward after any ally's death (good behind the Sunfeeders' victims).
+
+ROWS 2-3: the loins (Reserves waiting to fill the front) and runners with Charge that run in from the back.
+FREQUENCY: Onrush and Flanker are stat gains (unbounded is fine); attack again on a kill only once per round per unit;
+draw on Place, spell or once per round.

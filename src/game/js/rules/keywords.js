@@ -1,7 +1,7 @@
 /* ---------- keywords a unit has (printed, gained or moved away) ---------- */
-const KW_FLAGS = ['ranged', 'reach', 'armoured', 'fixed', 'revenant', 'plague', 'incorp', 'afterlife', 'fade', 'riposte', 'flurry'];
+const KW_FLAGS = ['ranged', 'reach', 'armoured', 'fixed', 'revenant', 'plague', 'incorp', 'afterlife', 'fade', 'riposte', 'flurry', 'marked', 'geared', 'augur'];
 const KW_NAME = { ranged: 'Ranged', reach: 'Pike', armoured: 'Armoured', fixed: 'Immobile', revenant: 'Revenant', plague: 'Plague',
-  incorp: 'Incorporeal', afterlife: 'Afterlife', fade: 'Fading', riposte: 'Riposte', flurry: 'Flurry' };
+  incorp: 'Incorporeal', afterlife: 'Afterlife', fade: 'Fading', riposte: 'Riposte', flurry: 'Flurry', marked: 'Marked', geared: 'Geared', augur: 'Augur' };
 /** The value of keyword flag f on unit u: gained keywords (u.kw) count, keywords moved away (u.off) don't. */
 const kw = (u, f) => (u.kw && u.kw[f] ? u.kw[f] : u.off && u.off[f] ? 0 : cardOf(u)[f] || 0);
 /** Give unit u keyword f (copy-on-write, so cloned states stay independent). */
@@ -24,7 +24,7 @@ const canMoveAgain = u => (u.mv || 0) < maxMoves(u);
 const isBloodied = u => defenceOf(u) < printedDef(u);
 const isReckless = u => !!(cardOf(u).reckless || u.reck);
 /** Armoured: printed, or given until round end (Strategikon). */
-const isArmoured = u => !!(kw(u, 'armoured') || u.tArm);
+const isArmoured = u => !!(kw(u, 'armoured') || u.tArm || u.ent);
 
 /** Resolution order (summary section 7): page order of the whole board from the seat of the unit's controller. */
 const readingKey = u => seatKey(u, ctl(u));

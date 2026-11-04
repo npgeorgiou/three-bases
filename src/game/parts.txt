@@ -14,6 +14,7 @@ js/cards/new-arcanists.js
 js/cards/new-wanderers.js
 js/cards/new-echoes.js
 js/cards/new-monoliths.js
+js/cards/new-horologers.js
 js/cards/keywords.js
 js/cards/decks-premade.js
 js/cards/art.js
@@ -29,6 +30,7 @@ js/rules/rounds.js
 js/rules/abilities.js
 js/rules/tactics.js
 js/rules/fx.js
+js/rules/fx-more.js
 js/rules/ogre-thrower.js
 js/rules/actions.js
 js/ai/opponent.js
