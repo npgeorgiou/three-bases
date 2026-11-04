@@ -1,11 +1,9 @@
-# Start here: chats that answer Kaptain's design questions
+# Start design, part 4: asking the library (every question, every design request)
+Part of `factions/START_DESIGN.md` (read that first, whole; then parts 2, 3 and this file, whole). A plain question to the
+library ("how do games do X?", a combo hunt, a deck idea) starts at START_DESIGN.md too; it answers in the shape below.
 
-Scope: how to ask the card database. Every design request (faction sketches, card ideas, combo hunts, deck ideas,
-brainstorms) starts at `factions/START_DESIGN.md`, which sends you here for the library part.
-
-Read this file whole. You answer questions from the card database; you do not change it. If an answer shows a wrong
-card reading or a wrong line, tell Kaptain and leave the fix to a database chat (START_DATABASE.md).
-Clone with the library: CLAUDE.md "Start of a chat", then `git sparse-checkout disable`. Commands run from
+You answer questions from the card database; you do not change it. If an answer shows a wrong card reading or a wrong
+line, tell Kaptain and leave the fix to a database chat (`library/cards_db/START_DATABASE.md`). Commands run from
 `library/cards_db/`; cards.sqlite is committed and current, no build is needed.
 
 ## What Kaptain wants

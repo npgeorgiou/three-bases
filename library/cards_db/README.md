@@ -1,6 +1,6 @@
 # Card database (what cards do, as linked rows)
 
-Start here: START_DATABASE.md (import a game or change the database) or START_QUESTIONS.md (answer design questions).
+Start here: START_DATABASE.md (import a game or change the database) or factions/START_DESIGN.md (designs and questions; part 4 is how to ask).
 
 Games: the 8 games of START_DATABASE.md. One database holds all games, and every question can run
 across them (`ask.py all ...`).
@@ -13,11 +13,11 @@ equal mechanics of different games share one concept of the concept tree (Stun a
 ## Files
 | File | What it is |
 |---|---|
-| `run.py` | The whole build of a game in one command, in the safe order (PROCESS.md step 2.1); it loads every game |
+| `run.py` | The whole build of a game in one command, in the safe order (START_DATABASE.md step 2.1); it loads every game |
 | `check_all.py <game>` / `--no-load` | After a change: one reload (or none after a network.py change), then every game's cases and link audit (HANDOFF box) |
 | `ask.py` | Questions answered with card names, per game or across games (`ask.py all ...`; QUERIES.md shows examples) |
-| `START_DATABASE.md`, `START_QUESTIONS.md` | Entry files: rules, checks, state, open work; how to answer design questions |
-| `PROCESS.md`, `LINE_RULES.md`, `LINKS_PLAN.md` | Import steps, data rules, token economy, fixing errors; the rules for lines (L1-L24); how network.py makes lines and the line check |
+| `START_DATABASE.md` | The start file for changing the database: Part 1 rules, checks, state, open work; Part 2 import steps, data rules, token economy, fixing errors; Part 3 the line check |
+| `LINE_RULES.md`, `LINKS_PLAN.md` | The rules for lines (L1-L24); how network.py makes lines and the planned line table |
 | `BRIEF.md`, `READER_PROMPT.md`, `SYNTAX.md` | What card readers follow: record shapes, reading rules, approved examples; the reader job; rows as printed |
 | `vocab.tsv` | Every allowed value per field: meaning, concept-tree concept, and the events it causes (`causes`) |
 | `names.tsv` | Names readers took for a keyword or card that are something else (keyword, card, type, name family, or dropped), per game, with reasons |
@@ -29,7 +29,7 @@ equal mechanics of different games share one concept of the concept tree (Stun a
 | `network_page.py`, `decks.tsv`, `network.html` | Decks from the web (with source; and cases/decks.tsv) drawn as networks in one page that opens offline, by game; a right click copies a card's or a line's terse text |
 | `deck_lines.py <game\|all> [deck]` | The same networks as terse text (what the right click copies): how decks are read |
 | `links_audit.py <game>`, `deck_audit.py <game>`, `audit_pieces.py` | The line check's two prints (each reason of a game; every deck: cards with no or few partners, the special cards), cut into pieces for agents |
-| `causes.py <reader or verdict files>`, `checks/` | The line check after an import (LINKS_PLAN.md step 3): job texts for line readers and verifiers; causes.py adds each cause's current lines, network.py lines, cases and rows and sorts the causes for the fixer |
+| `causes.py <reader or verdict files>`, `checks/` | The line check after an import (START_DATABASE.md Part 3): job texts for line readers and verifiers; causes.py adds each cause's current lines, network.py lines, cases and rows and sorts the causes for the fixer |
 | `pair.py <game> "A" "B" ...` | Why one line exists: the network.py line of each reason |
 | `dump_lines.py` | Every line of every deck of every game, before/after a change (`--diff`, `--find`) |
 | `audit_text.py`, `audit_text_explained.tsv` | Words in a card's text its rows do not show ("or the enemy Nexus", "spells and Skills", "everywhere" ...), run by run.py; flags read and found right are listed with the reason |

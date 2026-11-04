@@ -1,4 +1,4 @@
-"""Tools for the line checks (LINKS_PLAN.md step 3; PROCESS.md "Token economy"). Scripts cost no tokens; they prepare what readers read.
+"""Tools for the line checks (START_DATABASE.md Part 3; START_DATABASE.md "Token economy"). Scripts cost no tokens; they prepare what readers read.
   audit_pieces.py split <file> [max_bytes=55000]   cut a check output into pieces a reader reads in ONE call (at deck borders;
                                                    each piece shows every card's rows once)
   audit_pieces.py verify <causes.md> <out.md>      under every example line "- A -> B: ..." of a causes file, add both cards'

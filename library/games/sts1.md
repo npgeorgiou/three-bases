@@ -12,7 +12,7 @@ One file per game: the game, its factions, the source summary, the mechanics (pa
 - Win: beat the final boss; Ascension levels add difficulty.
 
 ## The game's rules (from sources)
-Read 30 Oct 2026 for the card database (cards_db, PROCESS step 0.10). [W] = Wikipedia "Slay the Spire", Gameplay section;
+Read 30 Oct 2026 for the card database (cards_db, START_DATABASE.md step 0.10). [W] = Wikipedia "Slay the Spire", Gameplay section;
 [M] = slaythespire.wiki.gg/wiki/Mechanics; [K] = slaythespire.wiki.gg/wiki/Keywords.
 - The player alone fights: each turn a fresh hand of cards and three energy [W]; energy is set to the base energy (3) and 5
   cards are drawn at the start of the turn [M]. Any cards can be played while there is energy to pay their costs [W].

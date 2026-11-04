@@ -105,7 +105,7 @@ def audit(g):
     for con, n in lost.most_common(10): out.append(f'10 {n} cards tagged {con} before have no row for it, e.g. {nm(ex[con])}')
     rules = os.path.join(HERE, 'read', g, 'game_rules.jsonl')
     md = os.path.join(HERE, '..', 'games', g + '.md')
-    if not os.path.exists(rules): out.append(f'8 no game rules: write read/{g}/game_rules.jsonl (PROCESS step 0.10)')
+    if not os.path.exists(rules): out.append(f'8 no game rules: write read/{g}/game_rules.jsonl (START_DATABASE.md step 0.10)')
     if os.path.exists(md):
         s = open(md, encoding='utf-8').read()
         sec = s.split('## The game', 1)[1].split('\n## ', 1)[0] if '## The game' in s else ''

@@ -6,9 +6,10 @@ Work plan (AGREED): step 1, faction candidates from the inspiration library (par
 
 Files (lines, then contents). Read only the file a task needs; find lines across files with: python3 tools/find.py doc <text>
 
-START_DESIGN.md                   110  START HERE for any faction or card design: the thinking process (Lead Systems and Balance Designer), NEVER DO
+START_DESIGN.md                   127  START HERE for every chat that uses the library (faction and card design, every question to the library): the thinking process, NEVER DO
 START_DESIGN-2-rules.md           108  its part 2: setup, this game's rules for design, the design rules
-START_DESIGN-3-checks.md           77  its part 3: Kaptain's checks, self-critique, library search, player view, before sending
+START_DESIGN-3-checks.md           71  its part 3: Kaptain's checks, self-critique, library search, before sending
+START_DESIGN-4-asking.md          102  its part 4: how to ask the library, the shape of an answer, searching wide, thinking like a player
 LESSONS.md                         17  lessons for future factions from building, playtesting and AI-testing (one entry per lesson)
 3-candidates/00-notes.txt             9  3. Candidates: review notes, how the list was built, terms
 3-candidates/E1-tagma.txt            18  E1. TAGMA — the Byzantine army (all-round)

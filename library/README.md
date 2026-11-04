@@ -6,7 +6,7 @@ the cards' own texts, written as rows (what each card does, when, to whom), the 
 ## What is here
 | Path | What it is |
 |---|---|
-| `cards_db/` | The card database: every card of 8 games as rows, the networks of their decks, and the questions (`ask.py`). Start with `cards_db/START_DATABASE.md` (changing it) or `cards_db/START_QUESTIONS.md` (asking it). |
+| `cards_db/` | The card database: every card of 8 games as rows, the networks of their decks, and the questions (`ask.py`). Start with `cards_db/START_DATABASE.md` (changing it) or `../factions/START_DESIGN.md` (using it: designs and questions; part 4 is how to ask). |
 | `three-bases-library.sqlite` | The earlier library: card texts of 17 games (`entities`, the card database reads them) and their tags from text patterns (`entity_concepts`, `entity_links`, `trigger_effect`). The tags are leads for an import (`audit_links.py` 10), not answers. |
 | `realworld/` | How the real-world cases are made (RESEARCH.md), the archetypes, and known combos from other sources. The cases themselves are in `games/<game>.md`; `cards_db/realworld.py` checks them. |
 | `design_questions/` | Kaptain's design questions asked of every game, with their answers (`cards_db/design_questions.py`). |

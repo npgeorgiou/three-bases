@@ -13,7 +13,7 @@ One file per game: the game, its factions, the source summary, the mechanics (pa
 
 ## The game's rules (from sources)
 Researched 30 Oct 2026 from the game's wiki (intothebreach.fandom.com, read through api.php) and Wikipedia's Gameplay section;
-each line names its page. Used for read/into_the_breach/game_rules.jsonl (cards_db PROCESS step 0.10).
+each line names its page. Used for read/into_the_breach/game_rules.jsonl (cards_db START_DATABASE.md step 0.10).
 - How units fight: the player controls three mechs; each turn the player moves each mech and fires one of its weapons
   (Wikipedia, Gameplay). Before the player's turn every active Vek moves to a tile and prepares to attack a tile, aiming for a
   mech, a building or an objective; the attacks happen in the enemy turn unless cancelled or the Vek is killed first (wiki

@@ -1,4 +1,4 @@
-"""Check 2 of LINKS_PLAN.md step 3: every deck (Kaptain, 2 Nov 2026). For each deck of the game it prints:
+"""Check 2 of START_DATABASE.md Part 3: every deck (Kaptain, 2 Nov 2026). For each deck of the game it prints:
   a) the deck's cards with no partner inside the deck (up to 10), each beside 10 cards of the deck: first the cards whose
      rows name the same keyword, card or type, then random deck cards. Is a line missed?
   b) the 10 cards with the fewest partners (at least one), all their lines. Is a line missed?

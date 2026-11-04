@@ -1,5 +1,5 @@
 # Start design, part 2: setup, this game, the design rules
-Part of `factions/START_DESIGN.md` (read that first, whole; then this file and `START_DESIGN-3-checks.md`, whole).
+Part of `factions/START_DESIGN.md` (read that first, whole; then this file and parts 3 and 4, whole).
 
 ## 0. Setup
 - Clone with the library (CLAUDE.md "Start of a chat", then `git sparse-checkout disable`). Library commands run from

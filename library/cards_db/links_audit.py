@@ -1,4 +1,4 @@
-"""Check 1 of LINKS_PLAN.md step 3: the whole game (Kaptain, 2 Nov 2026). Is each reason's rule right?
+"""Check 1 of START_DATABASE.md Part 3: the whole game (Kaptain, 2 Nov 2026). Is each reason's rule right?
 A reason is its sentence AND the rule (network.py line, stored as link.site) that made it: one sentence can come from several
 rules. For the biggest reasons that together hold 90% of the game's lines, it prints 2 lines per reason, 5 for the 20 biggest,
 each from a different row shape (A's acts, B's events) and different cards, quickest to read first. Cards are shown

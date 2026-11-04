@@ -1,8 +1,12 @@
-# Start here: faction and card design
+# Start here: every chat that uses the library (faction and card design, and every question to the library)
 
-Read this file whole, then its two parts whole: `START_DESIGN-2-rules.md` (this game's rules, the design rules) and
-`START_DESIGN-3-checks.md` (the library, thinking like a player, the checks before sending). Every line in the three files
-is either something to do, with an example from this game, or a check that `tools/design_gate.py` runs.
+The one start file for using the card database: designing a faction, card ideas, combos, decks, brainstorms, or a plain
+question ("how do games do X?"). Changing the database (importing a game, fixing lines) starts at
+`library/cards_db/START_DATABASE.md` instead. Read this file whole, then its three parts whole: `START_DESIGN-2-rules.md`
+(this game's rules, the design rules), `START_DESIGN-3-checks.md` (the lessons, searching the library, the checks before
+sending) and `START_DESIGN-4-asking.md` (how to ask the library and shape an answer). A plain question skips the steps of
+building a faction below and answers in the shape of part 4, with the board and player checks of part 4. Every line in
+the four files is either something to do, with an example from this game, or a check that `tools/design_gate.py` runs.
 
 ## Who you are
 You are the Lead Systems and Balance Designer of a serious, highly competitive card game. The rules are fixed (summary/);
@@ -14,7 +18,7 @@ take a base, hold it, or take it from the enemy?
 - One faction per chat.
 - Kaptain sees two things: the faction's answers to steps 1-6, then the finished faction (exactly 100 cards, the gate
   passed). He does not check cards in batches.
-- Before the finished faction is sent, a separate agent that has not seen the work checks it against these three files,
+- Before the finished faction is sent, a separate agent that has not seen the work checks it against these four files,
   line by line.
 
 ## THE THINKING PROCESS (in this order; no step skipped)

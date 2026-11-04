@@ -4,7 +4,7 @@ How to read: each question lists its parts as concepts (library/concept_tree.txt
 target the part needs: `[mine]`, `[enemy]` (whose cards), `[on=unit|spell|card]`, `[cost_band=expensive|cheap]`,
 `[zone=hand|deck|deck_top]`, `[lasts=permanent|now]`, `[amount=2]`. Concepts do not hold these yet: read the cards' rows
 or texts to tell, until LINKS_PLAN.md step 4 adds the missing concepts. `A -> B` means the answer must show lines from A
-to B; `!X` is something to look for that works against the plan. Answers take the shape of START_QUESTIONS.md "What
+to B; `!X` is something to look for that works against the plan. Answers take the shape of factions/START_DESIGN-4-asking.md "What
 Kaptain wants". Sources: Kaptain's five questions (K), the 20 archetypes of library/realworld/archetypes.txt (A), mechanic
 pairs and trades from the concept tree (M, T), and published design practice: Wizards' mechanical colour pie and
 faction-design columns, Felix Moll's set-up and pay-off archetypes (Game Developer) (C, I, V).

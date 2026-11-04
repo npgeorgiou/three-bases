@@ -18,7 +18,7 @@ FULL; cards and their powers share card codes, so a partial supplement would dro
   in the Keywords field, so each card takes the keyword's record.
 - Powers (the game's statuses, category status) are keywords when a text names them and no glossary keyword or card holds
   them already: Plated Armor, Mark, Hex, Stasis, Surrounded, Metallicize (a potion gives it; category keyword). Left out (glossary terms no card uses,
-  PROCESS 0.5): powers that only repeat a glossary keyword (Strength, Weakened = Weak ...), powers that only repeat their
+  START_DATABASE.md step 0.5): powers that only repeat a glossary keyword (Strength, Weakened = Weak ...), powers that only repeat their
   card's text (Barricade, Demon Form ...), powers no text names (enemy powers such as Curl Up, Thievery), and the glossary
   keywords Opener and Vigor, which no text uses.
 - One name, two entries: each character's Strike and Defend are "Strike (Ironclad)" ...

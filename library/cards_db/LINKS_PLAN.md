@@ -1,4 +1,4 @@
-# Lines between cards: how they are made, the line check, the planned line table
+# Lines between cards: how they are made, the planned line table
 
 Read START_DATABASE.md and LINE_RULES.md first. Work in `library/cards_db/`.
 
@@ -42,29 +42,10 @@ and links.sqlite stores the line as `link.site`. To change a line:
    through `TRIGGER_KW`, evasion through `KW_NEEDS`/`HELPS`, help through `use_of()`. A new kind of help gets its use written in
    `use_of()`, never a line to every card. Per game numbers only in `EXPENSIVE`, `CARRIED`, `DEADLY_GROUND` and the like, each
    with its source.
-3. Then PROCESS.md "Fixing errors" 6-7 (dump diff, cases) and `check_all.py --no-load`.
+3. Then START_DATABASE.md "Fixing errors" 6-7 (dump diff, cases) and `check_all.py --no-load`.
 
 ## Step 3. The line check after importing a game
-Done once for a new game, right after its import. Cards are shown by their rows (SYNTAX.md), never by their text. Every error is
-fixed by its cause, for every game, in the main chat; agents only read (PROCESS.md "Token economy").
-1. `links.py`, then save the table: `dump_lines.py --table /tmp/tb0.tsv`.
-2. `realworld.py <game>`: every combo a guide names that has no line is a missed line found for free.
-3. Print the two checks: `links_audit.py <game>` (Check 1: each reason of the game, is its rule right?) and `deck_audit.py <game>`
-   (Check 2: every deck: cards with no or few partners, the special cards). Cut each output with `audit_pieces.py split`.
-4. Line readers: one agent per piece, model sonnet, prompt = `checks/LINE_READER_JOB.md` + the piece path + the findings path
-   (`/tmp/lr_<game>_<n>.md`). They report causes (not single lines) in the one-line format causes.py reads.
-5. `causes.py /tmp/lr_<game>_*.md --out /tmp/vp_<game>.md`: adds to every example its line as it is now, the network.py lines
-   that made it, the cases with both cards (CONFLICT = a case says the opposite) and both cards' rows. Cut it with
-   `audit_pieces.py split`.
-6. Verifiers: one agent per piece, prompt = `checks/LINE_VERIFIER_JOB.md` + the piece path + the verdict path
-   (`/tmp/vv_<game>_<n>.md`).
-7. `causes.py /tmp/vv_<game>_*.md` writes `causes_sheet.md`, biggest first: each REAL or PARTLY cause with all a fixer needs and
-   how many table lines come from the same reason and network.py line. Fix from the top; skip CONFLICT causes (Kaptain's case
-   wins) and gone ones. No other lookups; `pair.py` only to check a fix.
-8. Per fix: one `none` and one `line` case in cases/network.tsv. After about 5 fixes: `check_all.py --no-load`.
-9. At the end: `links.py`, `dump_lines.py --table /tmp/tb1.tsv`, `--diff /tmp/tb0.tsv /tmp/tb1.tsv`, `realworld.py`,
-   `check_all.py --no-load` (rewrite the must-not cases it lists), commit, push, report the lines gone and added per game.
-   The import is not done while a verified cause is unfixed.
+Moved to START_DATABASE.md "The line check" (one start file for every change to the database).
 
 ## Open (seen, not fixed)
 - Into the Breach: pilots have no lines. Kaptain (31 Oct 2026): a pilot is like an item a mech carries; it can move to any mech,
@@ -105,12 +86,12 @@ Add to ask.py (`c.execute("attach database 'links.sqlite' as L")`; ask.py has `u
 Report the output of `plan K1` and `plan K10`, the first 40 lines each.
 
 ### Step 6. Answer Kaptain's test questions (QUESTION_BANK.md K1-K12)
-Run `plan` for each, then write each answer in the shape of START_QUESTIONS.md "What Kaptain wants". Read each like a designer:
+Run `plan` for each, then write each answer in the shape of factions/START_DESIGN-4-asking.md "What Kaptain wants". Read each like a designer:
 an answer that reads like a card list, or a part that found nothing, is a fault of the data or the question; fix its cause
 (steps 3-5). Show Kaptain three answers first (K1, K8, K10).
 
 ### Step 7. Docs
-Update START_DATABASE.md (State, Open work) and START_QUESTIONS.md ("How to build an answer" starts with `plan`). Remove
+Update START_DATABASE.md (State, Open work) and factions/START_DESIGN-4-asking.md ("How to build an answer" starts with `plan`). Remove
 finished steps here.
 
 ## Do not

@@ -1,5 +1,5 @@
 # Start design, part 3: lessons, library, player view, before sending
-Part of `factions/START_DESIGN.md` (read that first, whole; then `START_DESIGN-2-rules.md` and this file, whole).
+Part of `factions/START_DESIGN.md` (read that first, whole; then parts 2, 3 and 4, whole).
 
 ## 2b. Lessons from Kaptain's critiques (3-4 Nov 2026; each one failed once; sources in `factions/10-outside-design-guides.txt`)
 **The faction**
@@ -38,10 +38,10 @@ Part of `factions/START_DESIGN.md` (read that first, whole; then `START_DESIGN-2
 **Working**
 - When Kaptain points out an error on one card or faction, find and fix the same error in all the others first.
 - Network tags are specific ("ally-dies-this-round", not "death"); a vague tag makes everything look connected.
-- Before sending, go through every line of the three files and know which part of the design passes it.
+- Before sending, go through every line of the four files and know which part of the design passes it.
 
 ## 3. Search the library (all 8 games, card by card)
-How to ask: `library/cards_db/START_QUESTIONS.md` (read it whole). Run from `library/cards_db/`.
+How to ask: part 4, `START_DESIGN-4-asking.md`. Run from `library/cards_db/`.
 - For a faction: `ask.py all ways "<faction>"` (its groups of linked cards), `curve` (its cards by cost, each as
   when -> what -> on whom), `spells` (its spells by what they do), `removal` and `protect` (how it removes enemies and
   protects its own), `analyze` on its whole card list (what its cards make happen and which cards use it).
@@ -57,13 +57,7 @@ How to ask: `library/cards_db/START_QUESTIONS.md` (read it whole). Run from `lib
   Nexus" has no meaning here (no player to hit); the nearest thing is a strike on the unit cancelling your dot.
 
 ## 4. Think like a player (every card, every combo)
-- Hand: is it in hand when needed? (2 draws a round, at most 3 copies.)
-- Board: which row and column, what does it reach from there, is that cell free then?
-- Enemy: what does the enemy do with its next action? Does the setup survive it?
-- Timing: during the round, at round end, what counts for the dots?
-- Worth: is it better than a plain unit of the same cost in that cell? If not, drop it.
-- A combo: one card changes what the other does or sets it off again; take either away and the other loses its point.
-  Show it as a played sequence: card, cell, what the enemy can do, result.
+Part 4, "Think it through like a player" (hand, board, enemy, timing, worth, what a combo is).
 
 ## 5. Before sending
 - `python3 tools/network_check.py factions/designs/<faction>.txt factions/designs/<faction>-cards.txt`: 0 problems. It
@@ -72,6 +66,6 @@ How to ask: `library/cards_db/START_QUESTIONS.md` (read it whole). Run from `lib
 - `node tools/cardstats.js <letter>`: Benchmark games with the faction's premades; cards that are never played or never
   fire are changed or cut. Never fix a win rate by changing stats off the budget.
 - `python3 tools/design_gate.py <letter>`: PASS (it runs the network check and the browser play test too).
-- The separate agent's line-by-line check against the three files.
+- The separate agent's line-by-line check against the four files.
 - Tell Kaptain, per mechanic, which library cards it came from and which parts are Claude's own. If the library could
   not answer something the design needed, say so. Talk as CLAUDE.md says: short, plain, one question at a time, last.
