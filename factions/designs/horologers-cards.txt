@@ -1,19 +1,19 @@
 CARD Ticking Soldier | 1 - 1|1 | Geared. Round end: I strike the nearest enemy. | mech: Striking the hour, Gearing | makes: rend, geared | needs: wind
-CARD Bell Ringer | 1 - 0|2 | Round end: deals 1 damage to the enemy facing me. | mech: Striking the hour | makes: rend | needs: wind
-CARD Tinker Apprentice | 1 - 1|1 | Round end: restores 1 shield to each ally beside me. | mech: The workings | makes: repair, rend | needs: holder
+CARD Bell Ringer | 1 - 0|1 | Wound. Round end: deals 1 damage to the enemy facing me. | mech: Striking the hour, Winding | makes: rend, rend-front | needs: wind
+CARD Tinker Apprentice | 1 - 1|1 | Place: restores 2 shields to each ally beside me. | mech: The workings | makes: repair | needs: holder
 CARD Spent Spring | 1 - 2|1 | Salvage. Round end: I break (I die). | mech: Salvage | makes: breaks, part
 CARD Spring Trap | 1 - 1|1 | Round end: deals 2 damage to the enemy facing me, then I break (I die). | mech: Striking the hour, Salvage | makes: breaks | needs: wind
 CARD Oil Can Boy | 1 - 0|1 | Place: winds the ally directly in front of me (its round-end effects happen now). | mech: Winding, The workings | makes: wind | needs: rend-front
 CARD Crank Handle | 1 - 0|1 | Geared. Place: winds each ally beside me. | mech: Winding, Gearing | makes: wind, geared | needs: rend
 CARD Bellows | 1 - 0|3 | Immobile. Round end: winds the ally directly in front of me. | mech: The workings, Winding | makes: wind, back-driver | needs: rend-front
-CARD Steam Whistle | 1 - 0|2 | Round end: other allies in my row gain +1 strength this round (it counts only when I am wound during the round). | mech: Striking the hour, Winding | makes: stronger-striker | needs: wind
+CARD Steam Whistle | 1 - 0|1 | Place, and round end: other allies in my row gain +1 strength this round (at round end it counts only when I am wound). | mech: Striking the hour, Winding | makes: stronger-striker | needs: wind
 CARD Guild Apprentice | 1 - 1|1 | Whenever I am wound, I gain +1/+1. | mech: Winding | makes: holder | needs: wind
-CARD Lamp Lighter | 1 - 1|1 | Round end: restores 1 shield to me and to the ally directly in front of me. | mech: The workings | makes: repair | needs: holder, rend
+CARD Lamp Lighter | 1 - 0|2 | Place: winds the ally directly behind me (its round-end effects happen now). | mech: The workings, Winding | makes: wind | needs: back-driver
 CARD Scrap Picker | 1 - 1|1 | Salvage. Whenever another ally in my lane dies: a Spare Part into your hand (once per round). | mech: Salvage | makes: part | needs: breaks
 CARD Ratchet Guard | 2 - 1|2 | Armoured. Geared. | mech: Striking the hour, Gearing | makes: holder, geared | needs: repair
 CARD Cog Soldier | 2 - 2|2 | Geared. Round end: I strike the nearest enemy. | mech: Striking the hour, Gearing | makes: rend, rend-front, geared | needs: wind
 CARD Mainspring | 2 - 0|3 | Round end: winds the ally directly in front of me (its round-end effects happen once more). | mech: The workings, Winding | makes: wind, back-driver | needs: rend-front
-CARD Pendulum | 2 - 0|3 | Round end: restores 2 shields to the ally directly in front of me. | mech: The workings | makes: repair, back-driver | needs: holder
+CARD Pendulum | 2 - 0|2 | Place, and round end: restores 2 shields to the ally directly in front of me. | mech: The workings | makes: repair, back-driver | needs: holder
 CARD Coal Boiler | 2 - 0|2 | Immobile. Supply +1. Round end: restores 1 shield to each ally beside me. | mech: The workings | makes: supply, repair
 CARD Clockwork Bomb | 2 - 1|1 | Salvage. Round end: deals 2 damage to the enemy facing me, then I break (I die). | mech: Salvage, Striking the hour | makes: breaks, part | needs: wind
 CARD Draughtsman | 2 - 1|2 | Place: draw a card if you have 2 or more Geared units in this lane. | mech: Gearing | needs: geared
@@ -21,31 +21,30 @@ CARD Journeyman | 2 - 1|2 | Geared. Place: a Spare Part into your hand. | mech: 
 CARD Gear Hound | 2 - 2|1 | Geared. Wound. Round end: I strike the nearest enemy. | mech: Striking the hour, Gearing | makes: rend, geared
 CARD Tick-Tock Drummer | 2 - 1|3 | Geared. Round end: other allies in my row gain +1 strength this round (it counts when I am wound during the round). | mech: Gearing, Winding | makes: stronger-striker, geared | needs: wind
 CARD Watchman | 2 - 1|3 | Round end: if you don't hold this lane's base, deals 2 damage to the enemy facing me. | mech: Striking the hour | makes: rend, rend-front | needs: wind
-CARD Guild Banner | 2 - 0|3 | Round end: if you hold this lane's base, restores 1 shield to me and to each ally in my row. | mech: The workings | makes: repair, rend | needs: holder, rend-front
+CARD Guild Banner | 2 - 0|3 | Place: a Spare Part into your hand if you hold this lane's base. Round end: if you hold it, restores 1 shield to each other ally in my row. | mech: The workings, Salvage | makes: repair, part | needs: holder, rend-front
 CARD Lever Arm | 2 - 2|2 | Geared. Pike. | mech: Gearing | makes: geared, holder
-CARD Screw Jack | 2 - 1|2 | Geared. Round end: pushes the enemy facing me one row back (if the cell is free). | mech: Gearing, Striking the hour | makes: rend, geared, enemy-pushed | needs: wind
+CARD Screw Jack | 2 - 1|1 | Geared. Wound. Round end: pushes the enemy facing me one row back (if the cell is free). | mech: Gearing, Striking the hour | makes: rend, geared, enemy-pushed | needs: wind
 CARD Wind-up Lancer | 2 - 2|1 | Wound. Round end: deals 1 damage to the enemy facing me. | mech: Striking the hour, Winding | makes: rend, rend-front
-CARD Toymaker | 2 - 1|1 | Place: two Spare Parts into your hand. | mech: Salvage, Winding | makes: part
 CARD Flywheel | 2 - 1|4 | Immobile. Geared. Round end: restores 1 shield to each Geared ally touching me. | mech: Gearing, The workings | makes: repair, geared | needs: geared
 CARD Metronome | 2 - 0|3 | Geared. Round end: restores 1 shield to each other ally in my column. | mech: The workings, Gearing | makes: repair, geared | needs: holder, rend
-CARD Clock Mender | 2 - 1|2 | Round end: restores 2 shields to the most damaged ally in my lane. | mech: The workings | makes: repair, rend | needs: holder
+CARD Clock Mender | 2 - 1|2 | Place: restores all shields of the most damaged ally in my lane. Round end: restores 1 shield to it. | mech: The workings | makes: repair, rend | needs: holder
 CARD Iron Clerk | 2 - 1|2 | Salvage. Has +2 strength while you hold this lane's base. | mech: Salvage | makes: part, holder | needs: repair
 CARD Brass Sentinel | 3 - 2|2 | Armoured. Round end: I strike the nearest enemy. | mech: Striking the hour | makes: rend, rend-front, holder | needs: repair
 CARD Clockwork Archer | 3 - 1|2 | Ranged. Round end: I strike the nearest enemy. | mech: Striking the hour | makes: rend | needs: wind, stronger-striker
 CARD Gearsmith | 3 - 2|3 | Geared. Round end: each Geared ally touching me gains +1 strength. | mech: Gearing | makes: geared, stronger-striker | needs: wind, geared
-CARD Cog Foundry | 3 - 0|6 | Immobile. Round end: places a Cogling in a free cell beside me. | mech: Gearing, The workings | makes: geared, adjacent-machines | needs: wind
+CARD Cog Foundry | 3 - 0|5 | Immobile. Place, and round end: places a Cogling in a free cell beside me. | mech: Gearing, The workings | makes: geared, adjacent-machines | needs: wind
 CARD Counterweight | 3 - 0|5 | Round end: the ally directly in front of me gains +1 defence. | mech: The workings | makes: back-driver, holder | needs: wind
 CARD Escapement | 3 - 2|3 | Geared. Round end: I strike the nearest enemy. Whenever I am wound, I gain +1 strength. | mech: Gearing, Winding | makes: rend, geared, holder | needs: wind, stronger-striker
-CARD Salvager | 3 - 2|3 | Whenever another ally in my lane dies: a Spare Part into your hand (once per round). | mech: Salvage | makes: part | needs: breaks
-CARD Tinker of Parts | 3 - 2|2 | Has +1/+1 for each Spare Part in your hand (up to 3). | mech: Salvage | makes: holder | needs: part
+CARD Salvager | 3 - 2|2 | Place: a Spare Part if any unit died this round. Whenever another ally in my lane dies: a Spare Part (once per round). | mech: Salvage | makes: part | needs: breaks
+CARD Tinker of Parts | 3 - 2|1 | Place: a Spare Part into your hand. I have +1/+1 for each Spare Part in your hand (up to 3). | mech: Salvage | makes: holder, part | needs: part
 CARD Brass Shield-Bearer | 3 - 1|4 | Bodyguard. Geared. Round end: restores 1 shield to me. | mech: Gearing, The workings | makes: holder, geared, rend | needs: repair
 CARD Cuckoo Clock | 3 - 0|6 | Immobile. Round end: deals 1 damage to each enemy in my column. | mech: Striking the hour | makes: rend | needs: wind, back-driver
 CARD Workshop Ledger | 3 - 1|4 | Round end: draw a card if you hold 2 or more Spare Parts (once per round, also when I am wound). | mech: Salvage | needs: part
-CARD Clock Keeper | 3 - 2|3 | Round end: if you hold this lane's base, restores 2 shields to each other ally in my row; if you don't, deals 2 damage to the enemy facing me. | mech: Striking the hour, The workings | makes: rend, repair | needs: wind
+CARD Clock Keeper | 3 - 2|2 | Place, and round end: if you hold this lane's base, restores 2 shields to each other ally in my row; if you don't, deals 2 damage to the enemy facing me. | mech: Striking the hour, The workings | makes: rend, repair | needs: wind
 CARD Spring Coiler | 3 - 0|3 | Salvage. Supply +1. | mech: Salvage | makes: supply, part
-CARD Hour Hand | 3 - 2|3 | Geared. Whenever I am wound, I strike the nearest enemy. | mech: Gearing, Winding | makes: geared | needs: wind, stronger-striker
+CARD Hour Hand | 3 - 2|2 | Geared. Wound. Whenever I am wound, I strike the nearest enemy. | mech: Gearing, Winding | makes: geared | needs: wind, stronger-striker
 CARD Trip Hammer | 3 - 2|3 | Geared. Round end: I strike the nearest enemy twice. | mech: Striking the hour, Gearing | makes: rend, rend-front, geared | needs: wind, stronger-striker
-CARD Saw Mill | 3 - 2|5 | Immobile. Round end: deals 2 damage to the enemy facing me. | mech: Striking the hour | makes: rend, rend-front | needs: wind
+CARD Saw Mill | 3 - 2|3 | Immobile. Wound. Round end: deals 2 damage to the enemy facing me. | mech: Striking the hour | makes: rend, rend-front | needs: wind
 CARD Cog Grenadier | 3 - 2|3 | Geared. Round end: deals 1 damage to each enemy in my column. | mech: Striking the hour, Gearing | makes: rend, geared | needs: wind
 CARD Patron of the Guild | 3 - 1|3 | Place: +2 carry-over. | mech: Salvage | makes: supply
 CARD Powder Clock | 3 - 1|2 | Salvage. Round end: deals 2 damage to each enemy in my column, then I break (I die). | mech: Salvage, Striking the hour | makes: breaks, part | needs: wind
@@ -57,29 +56,33 @@ CARD Master Mechanic | 4 - 2|4 | Place: winds each ally beside me and restores 2
 CARD Salvage Cart | 4 - 2|4 | Salvage. Death: another Spare Part into your hand. | mech: Salvage | makes: part, holder
 CARD Furnace Engine | 4 - 0|3 | Immobile. Supply +2. Round end: restores 1 shield to me. | mech: The workings | makes: supply, rend
 CARD Clockwork Knight | 4 - 2|3 | Armoured. Round end: I strike the nearest enemy. | mech: Striking the hour | makes: rend, rend-front, holder | needs: repair, wind
-CARD Scrap Golem | 4 - 2|2 | Salvage. Has +1/+1 for each Spare Part in your hand (up to 3). | mech: Salvage | makes: holder, part | needs: part
+CARD Scrap Golem | 4 - 2|2 | Salvage. Has +1/+1 for each Spare Part in your hand (up to 3). | mech: Salvage | makes: holder, breaks | needs: part
 CARD Assembly Line | 4 - 0|5 ▪▪ | Immobile. Round end: places a Cog Trooper in a free cell of my front row. | mech: Gearing, The workings | makes: geared, adjacent-machines, holder | needs: wind
 CARD Steam Carriage | 4 - 3|3 | Outrider. Round end: I strike the nearest enemy. | mech: Striking the hour | makes: rend | needs: wind, supply
 CARD Regulator | 4 - 1|5 | Geared. Whenever I am wound, restores all shields of each Geared ally touching me. | mech: Gearing, The workings | makes: repair | needs: geared, wind
-CARD Master Horologer | 5 - 2|4 | Place: winds each other ally in my row. Round end: a Spare Part into your hand (once per round). | mech: Winding, Salvage | makes: wind, part | needs: rend | champion
-CARD The Grand Orrery | 5 - 1|7 | Immobile. Geared. Round end: other allies in my lane gain +1 strength this round and restore 1 shield. | mech: Gearing, Winding | makes: stronger-striker, repair, geared | needs: wind, holder | champion
-CARD Mistress of Salvage | 5 - 3|4 | Whenever another ally in my lane dies: a Spare Part into your hand and I gain +1/+1 (once per round). | mech: Salvage | makes: part, holder | needs: breaks, supply, repair | champion
-CARD The Great Clock Tower | 6 - 0|8 ▪▪ | Immobile. Geared. Round end: deals 1 damage to each enemy in my lane. | mech: Striking the hour, Gearing | makes: rend, geared | needs: wind, supply, back-driver | champion
-CARD Brass Colossus | 7 - 3|4 ▪▪▪▪ | Armoured. Salvage. Geared. Round end: I strike the nearest enemy. Death: another Spare Part into your hand. | mech: Striking the hour, Salvage | makes: holder, rend | needs: repair, supply, stronger-striker | champion
-CARD Difference Engine | 5 - 1|6 ▪▪ | Immobile. Round end: winds each ally beside me. | mech: Winding, The workings | makes: wind, back-driver | needs: rend
-CARD Clockwork Siege Engine | 6 - 3|6 ▪▪ | Immobile. Round end: deals 2 damage to each enemy outside the enemy front row. | mech: Striking the hour | makes: rend | needs: wind, supply
-CARD Gear Titan | 6 - 4|5 ▪▪ | Geared. Round end: I strike the nearest enemy. Whenever I am wound, I gain +1/+1. | mech: Gearing, Striking the hour | makes: rend, holder, geared | needs: wind, stronger-striker, supply
-CARD Tally Clerk | 2 - 1|2 | Round end: +1 carry-over if 2 or more units died this round (once per round). | mech: Salvage | makes: supply | needs: breaks
-CARD Gear Captain | 4 - 2|4 | Geared. Other Geared allies touching me have +1/+1. | mech: Gearing | makes: holder, stronger-striker | needs: geared
+CARD Master Horologer | 5 - 2|4 | Place: winds each other ally in my row. Round end: a Spare Part into your hand (once per round). | mech: Winding, Salvage | makes: wind, part | needs: rend-front | champion
+CARD The Grand Orrery | 6 - 1|8 | Immobile. Geared. Place: winds each Geared ally in my lane. Round end: other allies in my lane gain +1 strength this round and restore 1 shield. | mech: Gearing, Winding | makes: stronger-striker, repair | needs: geared, wind | champion
+CARD Mistress of Salvage | 5 - 3|3 | Place: a Spare Part for each unit that died this round (up to 3). Whenever another ally in my lane dies: a Spare Part and I gain +1/+1 (once per round). | mech: Salvage | makes: part, holder | needs: breaks, supply, repair, holder | champion
+CARD The Great Clock Tower | 7 - 0|9 ▪▪ | Immobile. Geared. Place: winds each other ally in my lane. Round end: deals 1 damage to each enemy in my lane. | mech: Striking the hour, Gearing | makes: rend, holder | needs: wind, supply, back-driver | champion
+CARD Brass Colossus | 7 - 3|4 ▪▪▪▪ | Armoured. Salvage. Geared. Place: I gain +1/+1 for each Geared unit of yours in my lane (me included, up to 4), then I wind them all. Round end: I strike the nearest enemy. | mech: Striking the hour, Gearing | makes: holder | needs: repair, supply, geared | champion
+CARD Difference Engine | 5 - 1|5 ▪▪ | Immobile. Place: winds each ally beside me twice. Round end: winds each ally beside me. | mech: Winding, The workings | makes: wind, back-driver | needs: rend
+CARD Clockwork Siege Engine | 6 - 3|5 ▪▪ | Immobile. Wound. Round end: deals 2 damage to each enemy outside the enemy front row. | mech: Striking the hour | makes: rend | needs: wind, supply
+CARD Gear Titan | 6 - 3|4 ▪▪ | Geared. Place: I gain +1/+1 for each Spare Part in your hand (up to 4). Round end: I strike the nearest enemy. Whenever I am wound, I gain +1/+1. | mech: Gearing, Salvage | makes: rend, holder, geared | needs: wind, part, supply
+CARD Tally Clerk | 2 - 1|2 | Place: +1 carry-over if any unit died this round; a Spare Part too if 2 or more did. | mech: Salvage | makes: supply, part | needs: breaks
+CARD Gear Captain | 4 - 2|3 | Geared. Place: winds each Geared ally touching me. Other Geared allies touching me have +1/+1. | mech: Gearing | makes: holder, stronger-striker, wind | needs: geared
 CARD Spring Loader | 3 - 1|3 | Place: winds the ally directly behind me (its round-end effects happen now). | mech: Winding, The workings | makes: wind | needs: back-driver
-CARD Scrap Knight | 3 - 2|3 | Salvage. Place: if you hold 2 or more Spare Parts, I gain +2/+2. | mech: Salvage | makes: holder, part | needs: part
-CARD Rewinder | 4 - 2|4 | Whenever you cast a Spare Part, I gain +1/+1. | mech: Salvage, Winding | makes: holder | needs: part
+CARD Scrap Knight | 3 - 2|3 | Salvage. Place: if you hold 2 or more Spare Parts, I gain +2/+2. | mech: Salvage | makes: holder, breaks | needs: part
+CARD Rewinder | 4 - 2|3 | Place: a Spare Part into your hand. Whenever you cast a Spare Part, I gain +1/+1. | mech: Salvage, Winding | makes: holder, part | needs: part
 CARD Guild Workshop | 3 - 0|5 | Immobile. Round end: a Spare Part into your hand if any unit died this round (once per round). | mech: Salvage, The workings | makes: part, rend | needs: breaks
 CARD Great Mainspring | 4 - 0|6 | Round end: winds the ally directly in front of me twice. | mech: The workings, Winding | makes: wind, back-driver | needs: rend-front, supply
-CARD Gate Automaton | 3 - 2|3 | Armoured. Geared. | mech: Gearing | makes: holder, geared | needs: repair
+CARD Gate Automaton | 3 - 2|2 | Armoured. Geared. Place: a Spare Part into your hand. | mech: Gearing, Salvage | makes: holder, geared, part | needs: repair
 CARD Rebuild | spell 3 | Pick a lane: the last unit of yours (supply 4 or less) in your discard pile comes back there. | mech: Salvage | makes: holder, rend | needs: breaks
 CARD Chain Drive | spell 2 | An ally and each Geared ally touching it gain +1 strength. | mech: Gearing | makes: stronger-striker | needs: geared
 CARD Interlock | spell 1 | An ally and each ally touching it gain Geared. | mech: Gearing | makes: geared | needs: holder
+CARD Perpetual Engine | 8 - 0|9 ▪▪▪▪ | Immobile. Place, and round end: winds each other ally in my lane (so at round end they all act twice). | mech: Winding, The workings | makes: wind | needs: rend, supply
+CARD Clockwork Dragon | 7 - 3|5 ▪▪▪ | Ranged. Geared. Place: deals 1 damage to the strongest enemy in my lane for each Geared unit of yours there (me included, up to 5). Round end: I strike the nearest enemy twice. | mech: Striking the hour, Gearing | makes: rend, geared | needs: geared, supply, wind
+CARD Great Foundry | 6 - 0|7 ▪▪ | Immobile. Place: places a Cog Trooper in each free cell of my front row (up to 3). Round end: places a Cogling beside me. | mech: Gearing, The workings | makes: geared, adjacent-machines, holder | needs: supply
+CARD Archmechanist | 6 - 2|5 | Place: a Spare Part for each other ally in my lane (up to 3). Whenever you cast a Spare Part, I strike the nearest enemy. | mech: Salvage, Striking the hour | makes: part | needs: part, supply
 CARD Turn the Key | spell 1 | Wind an ally (its round-end effects happen now). | mech: Winding | makes: wind | needs: rend
 CARD Oil the Works | spell 1 | Restore 2 shields to an ally; if it is Geared, wind it. | mech: The workings, Gearing | makes: repair, wind | needs: geared, holder
 CARD Full Wind | spell 2 | Wind an ally twice. | mech: Winding | makes: wind | needs: rend

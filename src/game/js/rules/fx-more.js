@@ -35,6 +35,8 @@ Object.assign(FX_SEL, {
   shellsHand: (s, c) => fxCount(s.players[c.p].hand.filter(k => CARDS[k] && CARDS[k].shellCard).length),
   hurtTeam: (s, c) => FX_SEL.team(s, c).filter(x => (x.dmg || 0) > 0),
   discardUnits: (s, c) => fxCount(s.players[c.p].discard.filter(k => CARDS[k] && !CARDS[k].tactic).length),
+  sideFront: (s, c) => FX_SEL.team(s, c).filter(x => inFront(x) && colsOf(x).some(k => k !== 1) && (!c.u || x.id !== c.u.id)),
+  lostShields: (s, c) => fxCount(FX_SEL.team(s, c).reduce((n, x) => n + Math.max(0, x.dmg || 0), 0)),
   partsHand: (s, c) => fxCount(s.players[c.p].hand.filter(k => CARDS[k] && CARDS[k].part).length),
   itTwins: (s, c) => (c.t ? s.units.filter(x => ctl(x) === c.p && x.lane !== c.t.lane && baseKey(x.card) === baseKey(c.t.card)) : []),
   otherFront: (s, c) => LANES.filter(l => l !== c.lane).map(l => s.units.filter(x => ctl(x) === c.p && x.lane === l && (cardOf(x).fx || []).some(f => f.on === 'roundEnd')).sort(byReadingOrder)[0]).filter(Boolean),
@@ -107,5 +109,7 @@ Object.assign(FX_OPS, {
   kill(s, c, o) { let ts = fxSel(s, c, o.to); if (o.first) ts = ts.sort((a, b) => defenceOf(a) - defenceOf(b) || byReadingOrder(a, b)).slice(0, 1); for (const t of ts) kill(s, t, c.label); },
   itStrike(s, c, o) { const u = fxAlive(s, c.t); if (!u) return; for (let i = 0; i < (o.itStrike || 1); i++) { const t = byId(s, u.id) && strikeTarget(s, u); if (t) strike(s, u, t, `${unitName(u)} (${c.label})`); } },
   omen(s, c, o) { for (const t of fxSel(s, c, o.to || 'it')) fxFire(s, 'targeted', t, { k: c.k }); },
+  // each selected unit strikes the nearest enemy it could attack
+  strikeWith(s, c, o) { for (const u of fxSel(s, c, o.strikeWith)) { const t = byId(s, u.id) && strikeTarget(s, u); if (t) strike(s, u, t, `${unitName(u)} (${c.label})`); } },
   sup(s, c, o) { for (const t of fxSel(s, c, o.to)) { t.sup = Math.max(1, unitSupply(t) + o.sup); log(s, `${unitName(t)}: supply ${unitSupply(t)} (${c.label}).`); } },
 });

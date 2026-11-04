@@ -1,74 +1,74 @@
-CARD Squire | 1 - 0|2 | Harden. | mech: Enduring | makes: hardened, hit-taker | needs: healed
+CARD Squire | 1 - 0|1 | Harden. Death: restores 1 shield to each ally beside me. | mech: Enduring, The hospital | makes: hardened, hit-taker, healed | needs: healed
 CARD Hospital Orderly | 1 - 0|2 | Round end: restores 1 shield to each ally beside me. | mech: The hospital | makes: healed | needs: damaged
-CARD Thorn Brother | 1 - 0|2 | Retaliate 1. | mech: Striking back | makes: enemy-hurt | needs: hit-taker
+CARD Thorn Brother | 1 - 0|1 | Retaliate 1. Death: deals 1 damage to the enemy facing me. | mech: Striking back | makes: enemy-hurt | needs: hit-taker
 CARD Gate Watch | 1 - 0|1 | Whenever an enemy is placed in my lane, deals 1 damage to it. | mech: The sortie, Striking back | makes: enemy-hurt | needs: enemy-arrives
-CARD Pilgrim | 1 - 1|1 | Whenever my shields are restored, I gain +1 strength. | mech: The hospital | makes: hit-taker | needs: healed
-CARD Lay Brother | 1 - 1|1 | Has +1 strength while you hold this lane's base. | mech: Relief | makes: hit-taker | needs: base-held
-CARD Postulant | 1 - 0|1 | Vigil 1. Round end: restores 1 shield to the ally directly in front of me. | mech: The hospital | makes: healed, hit-taker | needs: damaged, hardened
+CARD Pilgrim | 1 - 1|1 | Whenever my shields are restored, I gain +1 strength. Death: +1 carry-over. | mech: The hospital, Relief | makes: hit-taker, supply | needs: healed
+CARD Lay Brother | 1 - 1|1 | Place: each ally beside me gains +1 defence. | mech: Enduring | makes: hit-taker
+CARD Postulant | 1 - 0|1 | Vigil 1. Death: restores all shields of the ally directly in front of me. | mech: The hospital | makes: healed, hit-taker | needs: damaged
 CARD Sergeant-at-Arms | 2 - 1|3 | Harden. | mech: Enduring | makes: hardened, base-held | needs: healed
-CARD Spiked Shield | 2 - 1|2 | Retaliate 2. | mech: Striking back | makes: enemy-hurt, base-held | needs: hit-taker
+CARD Spiked Shield | 2 - 1|1 | Retaliate 2. Death: deals 2 damage to the enemy facing me. | mech: Striking back | makes: enemy-hurt, base-held | needs: hit-taker
 CARD Sister of the Ward | 2 - 0|3 | Round end: restores 2 shields to the most damaged ally in my lane. | mech: The hospital | makes: healed | needs: damaged
-CARD Shield Brother | 2 - 1|3 | Bodyguard. | mech: Enduring | makes: hit-taker, damaged
+CARD Shield Brother | 2 - 1|2 | Bodyguard. Place: restores 2 shields to each ally beside me. | mech: Enduring, The hospital | makes: hit-taker, damaged, healed | needs: damaged
 CARD Vigilant Knight | 2 - 2|2 | Vigil 1. | mech: The hospital, Enduring | makes: base-held | needs: damaged
 CARD Gatekeeper | 2 - 1|2 | Whenever an enemy is placed in my lane, I strike the nearest enemy (once per round). | mech: The sortie, Enduring | makes: enemy-hurt | needs: enemy-arrives, hardened
 CARD Almoner | 2 - 1|2 | Place: draw a card if an ally in my lane has lost shields. | mech: The hospital | needs: damaged
 CARD Granary | 2 - 0|2 | Immobile. Supply +1. Round end: restores 1 shield to me. | mech: Relief | makes: supply
-CARD Banner of the Order | 2 - 0|3 | As long as you hold this lane's base, other allies in my row have +1 defence. | mech: Relief | makes: hit-taker | needs: base-held
+CARD Banner of the Order | 2 - 0|2 | Place: if you hold this lane's base, other allies in my row gain +1 defence. As long as you hold it, they have +1 defence more. | mech: Relief | makes: hit-taker | needs: base-held
 CARD Scarred Veteran | 2 - 1|3 | When I survive damage, I gain +1 strength. | mech: Enduring, Striking back | makes: enemy-hurt, damaged | needs: healed
 CARD Crossbow Brother | 2 - 1|1 | Ranged. | mech: The sortie, Striking back | needs: enemy-hurt
 CARD Master of Novices | 2 - 1|2 | Place: if you hold this lane's base, places a Novice Knight in my front row. | mech: Relief | makes: hit-taker, base-held | needs: base-held
 CARD Field Surgeon | 2 - 1|2 | Whenever another ally in my lane survives damage, it restores 1 shield. | mech: The hospital | makes: healed | needs: damaged, hit-taker
-CARD Knight of the Hospice | 3 - 2|3 | Harden. Vigil 1. | mech: Enduring, The hospital | makes: hardened, base-held | needs: damaged
+CARD Knight of the Hospice | 3 - 2|2 | Harden. Vigil 1. Death: places a Novice Knight in my front row. | mech: Enduring, The hospital, Relief | makes: hardened, base-held, hit-taker | needs: damaged
 CARD Thorn Knight | 3 - 2|3 | Retaliate 2. | mech: Striking back | makes: enemy-hurt, damaged | needs: healed
-CARD Bastion Guard | 3 - 1|4 | Armoured. | mech: Enduring | makes: hit-taker, base-held
+CARD Bastion Guard | 3 - 1|3 | Armoured. Place: pulls the enemy facing me straight forward, as far as it can. | mech: Enduring, The sortie | makes: hit-taker, base-held, enemy-arrives
 CARD Sortie Rider | 3 - 1|3 | Whenever an enemy is placed in my lane, deals 2 damage to it. | mech: The sortie | makes: enemy-hurt | needs: enemy-arrives, supply
 CARD Infirmarian | 3 - 1|4 | Round end: restores 1 shield to each other ally in my lane. | mech: The hospital | makes: healed | needs: damaged, hit-taker
 CARD Chaplain | 3 - 1|3 | Round end: restores 2 shields to the ally directly in front of me. Whenever my shields are restored, I gain +1 defence. | mech: The hospital, Enduring | makes: healed, hardened | needs: healed, damaged
 CARD Victualler | 3 - 1|3 | Round end: +1 carry-over if you hold this lane's base (once per round). | mech: Relief | makes: supply | needs: base-held
 CARD Knight of Iron Will | 3 - 1|3 | Harden. When I survive damage, your other units in my lane gain +1 strength this round. | mech: Enduring | makes: hardened, enemy-hurt | needs: healed, hit-taker
 CARD Fencing Master | 3 - 2|3 | Riposte. | mech: Striking back | makes: enemy-hurt | needs: hardened
-CARD Sea Watch | 3 - 1|4 | Round end: if you don't hold this lane's base, restores all shields of each other ally in my row. | mech: Relief, The hospital | makes: healed | needs: damaged
+CARD Sea Watch | 3 - 1|3 | Place, and round end: if you don't hold this lane's base, restores all shields of each other ally in my row. | mech: Relief, The hospital | makes: healed | needs: damaged
 CARD Challenger | 3 - 2|4 | Place: pulls the enemy facing me straight forward, as far as it can. | mech: The sortie | makes: enemy-arrives | needs: hit-taker
 CARD Cistern Keeper | 3 - 0|3 | Supply +1. Round end: restores 1 shield to each ally beside me. | mech: Relief, The hospital | makes: supply, healed
-CARD Wall Mason | 3 - 0|7 | Immobile. Round end: the ally directly in front of me gains +1 defence. | mech: Enduring, Relief | makes: hardened, base-held | needs: hit-taker
+CARD Wall Mason | 3 - 0|6 | Immobile. Place, and round end: the ally directly in front of me gains +1 defence. | mech: Enduring, Relief | makes: base-held, hardened | needs: hit-taker
 CARD Castellan of the Bastion | 5 - 2|5 | Harden. Other allies in my row have +1 defence. | mech: Enduring, Relief | makes: hardened, base-held | needs: hit-taker, healed | champion
 CARD Knight of the Sortie | 5 - 2|4 | Retaliate 2. Whenever an enemy is placed in my lane, deals 1 damage to it. | mech: Striking back, The sortie | makes: enemy-hurt, base-held | needs: enemy-arrives, hardened, damaged | champion
 CARD Infirmarian Mother | 4 - 1|4 | Round end: restores 2 shields to each of your units in my lane. | mech: The hospital | makes: healed, base-held | needs: damaged, hit-taker, supply | champion
 CARD Paladin of the Ward | 4 - 2|4 | Harden. Whenever my shields are restored, I gain +1 strength. | mech: Enduring, The hospital | makes: hardened, enemy-hurt | needs: healed
-CARD Watchtower | 4 - 1|6 | Immobile. Ranged. | mech: The sortie | needs: enemy-hurt, enemy-arrives
+CARD Watchtower | 4 - 1|5 | Immobile. Ranged. Place: I strike the nearest enemy. | mech: The sortie | makes: enemy-hurt | needs: enemy-arrives
 CARD Thorn Hedge Knight | 4 - 2|3 | Retaliate 3. | mech: Striking back | makes: enemy-hurt, damaged | needs: hardened, healed
 CARD Lance of the Order | 4 - 3|2 | Charge. When I survive damage, I gain +1 defence. | mech: The sortie, Enduring | makes: enemy-hurt, hardened | needs: enemy-arrives
-CARD Relic Bearer | 4 - 1|5 | As long as you hold this lane's base, other allies in my lane have +1 defence. | mech: Relief | makes: hit-taker | needs: base-held, supply
+CARD Relic Bearer | 4 - 1|4 | Place: if you hold this lane's base, restores all shields of your other units in my lane. As long as you hold it, they have +1 defence. | mech: Relief, The hospital | makes: hit-taker, healed | needs: base-held, damaged
 CARD Preceptor | 4 - 2|3 | Place: draw a card. Round end: restores 1 shield to each other ally in my row. | mech: The hospital | makes: healed | needs: damaged, supply
-CARD The Grand Master | 5 - 2|5 | As long as you hold this lane's base, other allies in my lane have +1/+1. | mech: Relief, Enduring | makes: hit-taker, hardened | needs: base-held, hit-taker | champion
+CARD The Grand Master | 6 - 3|5 | Place: each of your units in my lane that has lost shields gains +1/+1; then all of them restore all their shields. As long as you hold this lane's base, other allies here have +1/+1. | mech: Relief, Enduring | makes: hit-taker, hardened, healed | needs: base-held, damaged | champion
 CARD Relief Galley | 6 - 1|5 ▪▪ | Place: if you hold this lane's base, a Novice Knight in my front row. Round end: if you hold this lane's base, a Novice Knight in each other lane. | mech: Relief | makes: hit-taker, base-held | needs: base-held, supply | champion
-CARD Star Bastion | 5 - 1|9 ▪▪ | Immobile. Harden. | mech: Enduring | makes: hardened, base-held | needs: supply, hit-taker
-CARD Iron Knight | 5 - 3|4 | Armoured. Harden. | mech: Enduring | makes: hardened, damaged | needs: supply, healed
+CARD Star Bastion | 5 - 1|7 ▪▪ | Immobile. Harden. Place: other allies in my row gain +2 defence. | mech: Enduring | makes: hardened, base-held | needs: healed, supply
+CARD Iron Knight | 5 - 3|3 | Armoured. Harden. Place: pulls the enemy facing me straight forward, as far as it can. | mech: Enduring, The sortie | makes: hardened, damaged, enemy-arrives | needs: supply, healed
 CARD Martyr Knight | 5 - 2|3 | Retaliate 2. Bodyguard. Death: restores all shields of your other units in my lane. | mech: Striking back, The hospital | makes: enemy-hurt, healed | needs: supply, hit-taker
 CARD Destrier of the Order | 6 - 3|5 ▪▪ | Charge. Harden. | mech: The sortie, Enduring | makes: enemy-hurt, hardened | needs: supply, enemy-arrives
-CARD Hospital Cathedral | 6 - 0|6 ▪▪▪▪ | Immobile. Vigil 2. Round end: restores 2 shields to each other ally in my lane. | mech: The hospital, Relief | makes: healed | needs: damaged, supply, base-held
-CARD Oathsworn | 2 - 2|1 | When I survive damage, I gain +1 defence and restore 1 shield. | mech: Enduring | makes: hardened | needs: hit-taker
+CARD Hospital Cathedral | 7 - 0|7 ▪▪▪▪ | Immobile. Vigil 2. Place: restores all shields of each of your units in every lane. Round end: restores 2 shields to each other ally in my lane. | mech: The hospital, Relief | makes: healed | needs: damaged, supply, base-held
+CARD Oathsworn | 2 - 2|1 | When I survive damage, I gain +1 defence and restore 1 shield. Death: your other units in my lane gain +1 defence. | mech: Enduring | makes: hardened | needs: hit-taker
 CARD Shield Wall Brother | 2 - 1|2 | Shield wall. | mech: Enduring | makes: hit-taker, base-held | needs: hardened
 CARD Herbalist | 1 - 0|2 | Whenever my shields are restored, restores 1 shield to each ally beside me. | mech: The hospital | makes: healed | needs: healed
 CARD Halberd Brother | 3 - 2|3 | Pike. Retaliate 1. | mech: Striking back | makes: enemy-hurt | needs: damaged
 CARD Avenging Knight | 3 - 2|3 | Whenever another ally in my lane dies, I gain +2 strength. | mech: Striking back | makes: enemy-hurt | needs: hit-taker, damaged
 CARD Drawbridge | 3 - 0|6 | Immobile. Whenever an enemy is placed in my lane, it is pushed one row back (if the cell is free). | mech: The sortie, Relief | makes: base-held | needs: enemy-arrives
-CARD Sentinel of the Wall | 4 - 2|4 | Vigil 2. | mech: The hospital, Enduring | makes: hit-taker, base-held | needs: damaged
+CARD Sentinel of the Wall | 4 - 2|3 | Vigil 2. Place: restores 2 shields to each other ally in my row. | mech: The hospital, Enduring | makes: hit-taker, base-held, healed | needs: damaged
 CARD Bell of the Hospice | 2 - 0|5 | Immobile. Whenever an enemy is placed in my lane, restores 1 shield to each of your units in my lane. | mech: The sortie, The hospital | makes: healed | needs: enemy-arrives
 CARD Penitent | 1 - 2|2 | Place: I take 1 damage. | mech: Enduring, The hospital | makes: damaged
 CARD Wounded Knight | 2 - 2|2 | Place: I take 2 damage. Whenever my shields are restored, I gain +1/+1. | mech: The hospital, Enduring | makes: damaged, hit-taker | needs: healed
 CARD Herald of Challenge | 2 - 1|2 | Place: pulls the enemy facing me straight forward, as far as it can. | mech: The sortie | makes: enemy-arrives
-CARD Hospitaller Knight | 4 - 2|4 | Whenever another ally in my lane survives damage, I gain +1 defence. | mech: Enduring | makes: hardened, hit-taker | needs: damaged, hit-taker
+CARD Hospitaller Knight | 4 - 2|3 | Place: I gain +1 defence for each of your units in my lane that has lost shields (up to 3). Whenever another ally in my lane survives damage, I gain +1 defence. | mech: Enduring | makes: hardened, hit-taker | needs: damaged, hit-taker
 CARD Reliquary | 3 - 0|6 | Immobile. Round end: if you hold this lane's base, restores all shields of each other ally in my lane. | mech: Relief, The hospital | makes: healed | needs: base-held, damaged
 CARD Porter of the Sick | 2 - 1|2 | Place: restores 2 shields to each ally beside me. | mech: The hospital | makes: healed, hit-taker | needs: damaged
 CARD Stalwart | 3 - 1|4 | Harden. Bodyguard. | mech: Enduring | makes: hardened, hit-taker, damaged | needs: healed, base-held
 CARD Thorn Wall | 2 - 0|6 | Immobile. Retaliate 1. | mech: Striking back, Enduring | makes: enemy-hurt, hit-taker
 CARD Marshal of the Order | 4 - 2|4 | Whenever an enemy is placed in my lane, your units in my lane gain +1 strength this round. | mech: The sortie, Relief | makes: enemy-hurt | needs: enemy-arrives, hit-taker
 CARD Sally Port | 3 - 0|5 | Immobile. Whenever an enemy is placed in my lane, the other allies in my row gain +1/+1 this round. | mech: The sortie, Relief | makes: hit-taker | needs: enemy-arrives
-CARD Master Surgeon | 4 - 1|4 | Round end: the most damaged ally in my lane gains +1 defence and restores all its shields. | mech: The hospital | makes: healed, hardened | needs: damaged, supply
-CARD Novice Hall | 4 - 0|6 | Immobile. Round end: if you hold this lane's base, places a Novice Knight in my front row. | mech: Relief | makes: hit-taker, base-held | needs: base-held
-CARD Pilgrim Crusader | 3 - 3|3 | Harden. | mech: Enduring | makes: hardened, enemy-hurt | needs: healed, supply
-CARD Knight of the Last Gate | 4 - 3|4 | Retaliate 1. | mech: Striking back, Relief | makes: enemy-hurt, base-held | needs: healed
+CARD Master Surgeon | 4 - 1|3 | Place, and round end: the most damaged ally in my lane gains +1 defence and restores all its shields. | mech: The hospital | makes: healed, hardened | needs: damaged, supply
+CARD Novice Hall | 4 - 0|5 | Immobile. Place, and round end: if you hold this lane's base, places a Novice Knight in my front row. | mech: Relief | makes: hit-taker, base-held | needs: base-held
+CARD Pilgrim Crusader | 3 - 2|2 | Harden. Place: I strike the nearest enemy I could attack. | mech: Enduring, The sortie | makes: hardened, enemy-hurt | needs: healed, supply
+CARD Knight of the Last Gate | 4 - 3|3 | Retaliate 1. Place: if you don't hold this lane's base, I gain +2/+2. | mech: Striking back, Relief | makes: enemy-hurt, base-held | needs: healed
 CARD Garrison Spearman | 1 - 1|1 | Pike. | mech: The sortie, Striking back | makes: enemy-hurt | needs: enemy-arrives, hit-taker
 CARD Saint's Shield | spell 1 | An ally is Armoured this round and restores 1 shield. | mech: Enduring, The hospital | makes: hit-taker, healed
 CARD Oath of the Wall | spell 3 | Pick a lane: your units in your front row there gain Riposte. | mech: Striking back | makes: enemy-hurt | needs: hit-taker, hardened
@@ -77,6 +77,9 @@ CARD Alms for the Sick | spell 1 | Restore 1 shield to an ally; draw a card if i
 CARD Reinforcements | spell 4 | Pick a lane: two Novice Knights in your front row there; +1 carry-over if you hold this lane's base. | mech: Relief | makes: hit-taker, supply | needs: base-held
 CARD Feigned Retreat | spell 1 | An enemy is pulled straight forward as far as it can; your units in its lane gain +1 strength this round. | mech: The sortie | makes: enemy-arrives | needs: hit-taker
 CARD Open the Gates | spell 2 | Pick a lane: each enemy outside the enemy front row there is pulled straight forward as far as it can. | mech: The sortie | makes: enemy-arrives | needs: base-held
+CARD The Unbreakable Fortress | 8 - 0|10 ▪▪▪▪ | Immobile. Place: your other units in my lane gain +2 defence. Round end: restores all shields of each of your units in my lane. | mech: Enduring, The hospital | makes: hit-taker, healed, base-held | needs: supply, damaged
+CARD Avenger of the Order | 6 - 3|4 | Place: deals damage equal to the shields your units in my lane have lost (up to 6) to the strongest enemy here. | mech: Striking back | makes: enemy-hurt | needs: damaged, supply
+CARD Relief Fleet | 8 - 2|6 ▪▪ | Place: places a Novice Knight in the front row of each lane; +2 carry-over if you hold this lane's base. | mech: Relief | makes: hit-taker, base-held, supply | needs: supply
 CARD Book of Hours | spell 2 | Draw 2 cards. | mech: Relief | needs: base-held
 CARD Bind the Wounds | spell 1 | Restore 3 shields to an ally. | mech: The hospital | makes: healed | needs: damaged
 CARD Ward of the Saint | spell 2 | An ally gains +2 defence and is Armoured this round. | mech: Enduring | makes: hit-taker
