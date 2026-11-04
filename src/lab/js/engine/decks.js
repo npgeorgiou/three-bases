@@ -22,3 +22,17 @@ const MATCHUPS = {
 const scheduledDecks = (i, pairs = DECK_PAIRS) => pairs[Math.floor(i / 2) % pairs.length];
 const randomDecks = () => DECK_PAIRS[Math.floor(Math.random() * DECK_PAIRS.length)];
 
+/** Lab-only plain units, one per cost: size 1, no keywords or effects, strength + defence = the design budget for that
+ *  cost (tools/design_gate.py: 0, 3, 5, 7, 8, 10, then twice the cost). A card measured "with and without" is replaced by
+ *  the plain unit of its cost; these never enter a real deck. */
+const PLAIN_BUDGET = n => [0, 3, 5, 7, 8, 10][n] ?? 2 * n;
+for (let n = 0; n <= 12; n++) {
+  const b = PLAIN_BUDGET(n);
+  CARDS['lab_plain' + n] = { name: `Plain unit (${n})`, fac: 'lab', size: 1, sup: n, cost: n, str: Math.floor(b / 2), def: Math.ceil(b / 2), art: 'helm', text: 'A plain unit for card tests.' };
+}
+const plainFor = key => 'lab_plain' + Math.min(12, Math.max(0, Math.round(CARDS[key].cost || CARDS[key].sup || 0)));
+/** The cards a deck of this faction may hold: its own, no tokens, no lab cards. */
+const factionCards = fac => Object.keys(CARDS).filter(k => CARDS[k].fac === fac && !CARDS[k].token).sort();
+/** Makes a deck known under a key (lab decks are sent to the workers with each game). */
+const labDeck = (key, name, fac, list) => (DECKS[key] = { name, fac, list: list.map(([k, n]) => [k, n]) });
+

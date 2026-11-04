@@ -15,6 +15,8 @@ js/ui/test-chart.js
 js/ui/training-page.js
 js/ui/tournament.js
 js/ui/tune.js
+js/ui/decks-search.js
+js/ui/decks-page.js
 js/ui/results-watch.js
 js/ui/start.js
 shell/tail.html

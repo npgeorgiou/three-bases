@@ -3,14 +3,17 @@
    ===================================================================== */
 
 function showTab(which) {
-  for (const [tab, page, k] of [['#tabTrain', '#trainPage', 'train'], ['#tabTour', '#tourPage', 'tour'], ['#tabTune', '#tunePage', 'tune']]) {
+  for (const [tab, page, k] of [['#tabTrain', '#trainPage', 'train'], ['#tabTour', '#tourPage', 'tour'], ['#tabTune', '#tunePage', 'tune'], ['#tabDecks', '#decksPage', 'decks']]) {
     $(tab).setAttribute('aria-selected', which === k); $(page).hidden = which !== k;
   }
   if (which === 'tune') renderTune();
+  if (which === 'decks') renderDs();
 }
 $('#tabTrain').addEventListener('click', () => showTab('train'));
 $('#tabTour').addEventListener('click', () => showTab('tour'));
 $('#tabTune').addEventListener('click', () => showTab('tune'));
+$('#tabDecks').addEventListener('click', () => showTab('decks'));
+$('#dsThreads').value = CORES;
 $('#tuThreads').value = CORES;
 $('#tThreads').value = CORES;
 $('#threads').value = CORES;

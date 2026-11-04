@@ -54,7 +54,7 @@ class Pool {
       w.job = job;
       w.postMessage({ type: 'game', key: job.key, specs: job.specs, decks: job.decks, record: !!job.record,
         roundCap: ROUND_CAP, actionCap: ACTION_CAP, search: job.search || 0,
-        replay: job.replay, seed: job.seed });
+        replay: job.replay, seed: job.seed, lists: job.lists, agree: !!job.agree });
     }
   }
   busy() { return this.workers.some(w => w.job); }

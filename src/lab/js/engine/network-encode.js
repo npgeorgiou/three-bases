@@ -136,7 +136,8 @@ function encode3(s, me, into) {
   };
   const tally = keys => { const m = new Map(); for (const key of keys) { const j = NET_CARD_INDEX[key]; m.set(j, (m.get(j) || 0) + 1); } return m; };
   // their unseen cards, as unseenCards counts them: their deck list, less each card seen in their discard or on the board
-  const unseen = new Map(F3_DECK_LISTS[s.players[opp].deck]);
+  const od = s.players[opp].deck;
+  const unseen = new Map(F3_DECK_LISTS[od] || (F3_DECK_LISTS[od] = DECKS[od].list.map(([k, n]) => [NET_CARD_INDEX[k], n])));
   for (const key of s.players[opp].discard) { const j = NET_CARD_INDEX[key]; if (unseen.get(j) > 0) unseen.set(j, unseen.get(j) - 1); }
   for (const u of s.units) if (u.owner === opp) { const j = NET_CARD_INDEX[u.card]; if (unseen.get(j) > 0) unseen.set(j, unseen.get(j) - 1); }
   pile(tally(s.players[me].draw)); pile(unseen); pile(tally(s.players[me].dealt || [])); pile(tally(s.players[me].redrawn || []));

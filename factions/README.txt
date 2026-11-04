@@ -9,6 +9,7 @@ Files (lines, then contents). Read only the file a task needs; find lines across
 START_DESIGN.md                   110  START HERE for any faction or card design: the thinking process (Lead Systems and Balance Designer), NEVER DO
 START_DESIGN-2-rules.md           108  its part 2: setup, this game's rules for design, the design rules
 START_DESIGN-3-checks.md           77  its part 3: Kaptain's checks, self-critique, library search, player view, before sending
+LESSONS.md                         17  lessons for future factions from building, playtesting and AI-testing (one entry per lesson)
 3-candidates/00-notes.txt             9  3. Candidates: review notes, how the list was built, terms
 3-candidates/E1-tagma.txt            18  E1. TAGMA — the Byzantine army (all-round)
 3-candidates/E2-ashfang-horde.txt    12  E2. ASHFANG HORDE — the war host of fury and fire

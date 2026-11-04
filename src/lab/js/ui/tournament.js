@@ -33,6 +33,7 @@ function describe(p) {
   return 'Strategist. ' + (changes.length ? 'Changes: ' + changes.join(', ') : 'Default settings.');
 }
 function renderPlayers() {
+  if (typeof renderAgreeChoices === 'function' && $('#sA').options.length) renderAgreeChoices();
   renderRoster();
   const opts = players().map(p => `<option value="${p.id}">${esc(p.name)}</option>`).join('');
   for (const [sel, fallback] of [['#vsAi', 'bench'], ['#wA', 'net-tabula-alone'], ['#wB', 'bench']]) {

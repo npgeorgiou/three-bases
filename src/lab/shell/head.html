@@ -114,6 +114,9 @@ nav.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: 
 .tutable { border-collapse: collapse; font-size: 15px; width: 100%; max-width: 760px; }
 .tutable th, .tutable td { padding: 5px 14px 5px 0; border-bottom: 1px solid var(--line); text-align: right; }
 .tutable th:first-child, .tutable td:first-child { text-align: left; }
+#dsPool .tutable, #dsCards .tutable { max-width: none; }
+.tutable td.dsl, #dsPool .tutable th:last-child { text-align: left; white-space: normal; font-size: 13px; color: var(--muted); min-width: 320px; }
+.dslog { font-size: 14px; color: var(--muted); max-height: 220px; overflow: auto; padding-left: 18px; }
 .tutable th { color: var(--muted); font-weight: 400; font-size: 13px; }
 .tutable tr.ch td:last-child { color: var(--gold); font-weight: 600; }
 .tud { font-size: 11px; }
@@ -281,6 +284,7 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
   <button role="tab" id="tabTrain" aria-selected="true">Training</button>
   <button role="tab" id="tabTour" aria-selected="false">Tournament</button>
   <button role="tab" id="tabTune" aria-selected="false">ifelse AI</button>
+  <button role="tab" id="tabDecks" aria-selected="false">Decks</button>
 </nav>
 
 <div class="page" id="tunePage" hidden>
@@ -302,6 +306,27 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
   <div class="tuchart" id="tuChart"></div>
   <h3 class="tuh">Values</h3>
   <div id="tuTable"></div>
+</div>
+
+<div class="page" id="decksPage" hidden>
+  <h2>Decks</h2>
+  <p class="note tunote">The lab builds its own decks. A pool of 6 decks per faction (its 2 premades and 4 random decks of 10 cards ×3) first plays every deck against every other one. Then, faction by faction, it makes a new deck from the faction's best unfinished deck by swapping one card's copies (or one copy more or less), chosen from the card statistics: out goes the card that adds least, in comes first a card of about the same cost, preferring cards often played with the deck's best cards. The new deck plays every pool deck and replaces the faction's weakest deck only if it scores clearly higher. A deck is finished when 30 decks made from it in a row failed. Each game is played by the same AI on both sides, the two AIs taking turns, so decks are compared, not AIs; every game records which cards were played.</p>
+  <div class="setup">
+    <label>AI 1 <select id="dsP1" aria-label="First AI that plays the decks"></select></label>
+    <label>AI 2 <select id="dsP2" aria-label="Second AI that plays the decks"></select></label>
+    <label>Games per pair of decks <input type="number" id="dsPer" min="2" max="100" step="2" value="10"></label>
+    <label>Games at once <input type="number" id="dsThreads" min="1" max="32"></label>
+    <button class="go" id="dsStart">Start</button><button id="dsPause" disabled>Pause</button><button id="dsReset">Start over</button>
+    <button id="dsYardBtn" title="Each premade plays every pool deck, to see how much better the decks found are">Measure the premades</button>
+    <button id="dsExport">Export</button>
+  </div>
+  <p class="sub" id="dsStatus"></p>
+  <ul class="dslog" id="dsLog"></ul>
+  <div id="dsYard"></div>
+  <div id="dsPool"></div>
+  <h3 class="tuh">Card statistics <select id="dsFac" aria-label="Faction"></select></h3>
+  <p class="note">"Win rate when played" flatters cards that are played when a side is already winning, and "win rate of its decks" flatters cards that sit in strong decks; "With / without" is the fair measure: up to 3 pool decks holding the card play the pool once more with the card's copies replaced by a plain unit of its cost (the design budget's strength and defence, no keywords).</p>
+  <div id="dsCards"></div>
 </div>
 
 <div class="page" id="trainPage">
@@ -357,6 +382,14 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
         against <select id="wB" aria-label="Second player"></select> as
         <select id="wBf" aria-label="Second player's deck"></select>
         <button id="wGo">Watch</button>
+      </div>
+
+      <h2>Same moves</h2>
+      <p class="note">How differently two AIs think: they play each other, and in every position the AI not to move is asked what it would play. The share of positions where both pick the same move.</p>
+      <div class="watchbar">
+        <select id="sA" aria-label="First AI"></select> and <select id="sB" aria-label="Second AI"></select>,
+        <input type="number" id="sN" min="2" max="200" step="2" value="20" aria-label="Games"> games
+        <button id="sGo">Compare</button> <span class="sub" id="sOut"></span>
       </div>
 
       <h2>Standings</h2>

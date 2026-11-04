@@ -213,3 +213,25 @@ $('#wGo').addEventListener('click', () => {
   watchGame([{ name: nameOf(a), spec: specOf(a) }, { name: nameOf(b) + (a === b ? ' (twin)' : ''), spec: specOf(b) }], [$('#wAf').value, $('#wBf').value]);
 });
 
+
+/* ---------- Same moves: how often two AIs pick the same move in the same positions ---------- */
+const agree = { pool: null };
+function renderAgreeChoices() {
+  const opts = players().filter(p => p.kind !== 'random').map(p => `<option value="${p.id}">${esc(p.name)}</option>`).join('');
+  for (const id of ['#sA', '#sB']) { const v = $(id).value; $(id).innerHTML = opts; if (v) $(id).value = v; }
+  if (!$('#sB').value || $('#sB').value === $('#sA').value) $('#sB').selectedIndex = Math.min(1, $('#sB').options.length - 1);
+}
+$('#sGo').addEventListener('click', () => {
+  if (agree.pool) { agree.pool.stop(); agree.pool = null; $('#sGo').textContent = 'Compare'; return; }
+  const a = $('#sA').value, b = $('#sB').value, N = Math.max(2, Math.round(Number($('#sN').value) / 2) * 2 || 20);
+  let started = 0, done = 0, asked = 0, same = 0;
+  const show = () => { $('#sOut').textContent = `${done}/${N} games · same move in ${asked ? Math.round(100 * same / asked) : 0}% of ${asked} positions`; };
+  agree.pool = new Pool(Math.max(1, Math.min(32, Number($('#threads').value) || 1)), Object.fromEntries(NETS.map(n => [n.id, playable(netData[n.id])])), () => {
+    if (started >= N) return null;
+    const g = started++;
+    return { key: 'agree' + g, agree: true, specs: g % 2 ? [specOf(b), specOf(a)] : [specOf(a), specOf(b)], decks: scheduledDecks(g), seed: 11000 + Math.floor(g / 2) };
+  }, r => { done++; asked += r.asked || 0; same += r.same || 0; show(); if (done >= N) { agree.pool.stop(); agree.pool = null; $('#sGo').textContent = 'Compare'; } },
+  (job, msg) => { started--; reportError('A comparison game failed: ' + msg); });
+  $('#sGo').textContent = 'Stop'; show();
+});
+renderAgreeChoices();
