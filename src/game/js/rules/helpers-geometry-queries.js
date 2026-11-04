@@ -103,8 +103,10 @@ const backRow = p => (p === 0 ? ROWS - 1 : 0);
 const fwd = p => (p === 0 ? -1 : 1);
 const inFront = u => cellsOf(u).some(([r]) => r === frontRow(u.owner));
 const inBack = u => cellsOf(u).some(([r]) => r === backRow(u.owner));
-const rowsOf = u => [...new Set(cellsOf(u).map(x => x[0]))];
-const colsOf = u => [...new Set(cellsOf(u).map(x => x[1]))];
+/** Rows and columns a unit covers, worked out once per cell list (cell lists of standard shapes are shared and never change). */
+const ROWS_OF = new WeakMap(), COLS_OF = new WeakMap();
+const rowsOf = u => { const cl = cellsOf(u); let r = ROWS_OF.get(cl); if (!r) { r = Object.freeze([...new Set(cl.map(x => x[0]))]); ROWS_OF.set(cl, r); } return r; };
+const colsOf = u => { const cl = cellsOf(u); let r = COLS_OF.get(cl); if (!r) { r = Object.freeze([...new Set(cl.map(x => x[1]))]); COLS_OF.set(cl, r); } return r; };
 /** Columns in which u stands in its own front row. */
 const frontCols = u => new Set(cellsOf(u).filter(([r]) => r === frontRow(u.owner)).map(x => x[1]));
 const inCamp = (r, c) => r >= 0 && c >= 0 && r < ROWS && c < COLS;

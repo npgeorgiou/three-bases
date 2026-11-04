@@ -224,15 +224,14 @@ function applyAction(s, a) {
   if (!PENDING_STEPS.has(a.t)) { s.acts++; s.passed = null; fxKeepUndo(s, p); }
   ACTIONS[a.t](s, p, a);
   processDeaths(s);
-  mergeLinks(s);
-  applyAuras(s);
+  mergeLinks(s);                                                   // leaves the auras up to date
   updateBases(s);
   if (s.pending && !pendingActions(s).length) s.pending = null;     // nothing left to choose
   if (!s.pending && s.arrQ) {
     const q = s.arrQ;
     s.arrQ = null;
     for (const x of q) { const u = byId(s, x.id); if (u) arriveInto(s, u, x.cols); }
-    processDeaths(s); mergeLinks(s); applyAuras(s); updateBases(s);
+    processDeaths(s); mergeLinks(s); updateBases(s);
   }
   settleTables(s);
   applyAuras(s);

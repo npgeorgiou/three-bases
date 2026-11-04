@@ -19,19 +19,18 @@ function fxParts(key) {
   return (fxPartsCache[key] = out);
 }
 /** The worth of a unit's effects: per part, (timing multiplier on_<when>, 1 if unset) x (worth op_<what>) x amount; 0 while no op_ value is set. */
-const fxWorthCache = new WeakMap();
 function fxWorth(key, c) {
-  let m = fxWorthCache.get(c);
-  if (!m) { m = { on: Object.keys(c).some(x => x.startsWith('op_') && c[x]), v: {} }; fxWorthCache.set(c, m); }
+  let m = c._fxw;                                                     // kept on the values object, hidden from copies and exports
+  if (!m) { m = { on: Object.keys(c).some(x => x.startsWith('op_') && c[x]), v: {} }; Object.defineProperty(c, '_fxw', { value: m }); }
   if (!m.on) return 0;
   if (m.v[key] === undefined) m.v[key] = fxParts(key).reduce((n, [when, what, a]) => n + (c['on_' + when] ?? 1) * (c['op_' + what] || 0) * a, 0);
   return m.v[key];
 }
-function ifelseArmy(s, side, lane, c) {
+function ifelseArmy(s, side, lane, c, safe = isSafeLane(s, side, lane)) {
   const units = unitsIn(s, side, lane).map(u => ({ front: inFront(u),
     worth: ifelseWorth(u, c) + (inFront(u) && (strengthOf(u) > 0 || cardOf(u).def > 1) ? c.front : 0) }));
   let total = 0;
-  if (isSafeLane(s, side, lane)) {
+  if (safe) {
     units.sort((a, b) => (b.front - a.front) || (b.worth - a.worth));
     let held = 0;
     for (const x of units) if (x.front && held < c.safeHolders) { total += x.worth; held++; } else total += x.worth * c.safeExtra;
@@ -92,19 +91,20 @@ function ifelseEval(s, p, goal, c) {
   if (s.winner === p) return 1e6;
   if (s.winner === 'draw') return c.draw;
   if (s.winner !== null) return -1e6;
-  const q = other(p);
+  const q = other(p), dots = LANES.map(lane => dotState(s, lane));
   let v = 0;
   for (const lane of LANES) {
-    const w = goal ? (goal.includes(lane) ? 1 : c.offGoal) : 1, d = dotState(s, lane), owner = ownerOfDots(d);
+    const w = goal ? (goal.includes(lane) ? 1 : c.offGoal) : 1, d = dots[lane], owner = ownerOfDots(d);
     v += w * ((owner === p ? c.base : owner === q ? -c.base : 0) + c.dot * (d.filter(x => x === p).length - d.filter(x => x === q).length));
-    const inc = side => (isSafeLane(s, side, lane) ? c.safeIncome : 1) * Math.min(c.incomeCap, laneSupply(s, side, lane));
-    v += c.income * w * (inc(p) - inc(q)) + c.pool * (s.pool[p][lane] - s.pool[q][lane]);
-    v += (0.5 + 0.5 * w) * (ifelseArmy(s, p, lane, c) - ifelseArmy(s, q, lane, c));
+    const sp = isSafeLane(s, p, lane), sq = isSafeLane(s, q, lane);
+    const inc = (side, safe) => (safe ? c.safeIncome : 1) * Math.min(c.incomeCap, laneSupply(s, side, lane));
+    v += c.income * w * (inc(p, sp) - inc(q, sq)) + c.pool * (s.pool[p][lane] - s.pool[q][lane]);
+    v += (0.5 + 0.5 * w) * (ifelseArmy(s, p, lane, c, sp) - ifelseArmy(s, q, lane, c, sq));
   }
   if (basesKept(s, p) >= 2) v += c.twoBases;     // the win rule: held at round start and now (in the next-round view, start = now)
   if (basesKept(s, q) >= 2) v -= c.twoBasesOpp;
   for (const side of [p, q]) if (basesHeld(s, side) === 1)
-    for (const lane of LANES) if (s.owner[lane] !== side) v += (side === p ? 1 : -1) * c.secondBase * dotState(s, lane).filter(x => x === side).length;
+    for (const lane of LANES) if (s.owner[lane] !== side) v += (side === p ? 1 : -1) * c.secondBase * dots[lane].filter(x => x === side).length;
   if (c.threat) {
     const mine = ifelseThreat(s, p, c), theirs = ifelseThreat(s, q, c);
     v += c.threat * (s.cur === q ? -c.thMineOpp * mine + c.thTheirsOpp * theirs : c.thTheirsMe * theirs - c.thMineMe * mine);
