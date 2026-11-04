@@ -22,7 +22,7 @@ the built HTML; when a rule is unclear, look it up in `src/game/js/rules/` (map 
 - `summary/08-rulings.txt`: how the existing keywords and cards resolve.
 - `summary/09-card-design-rules.txt`: costing, the supply-to-stats budget, card text rules.
 - `summary/10-keywords.txt` and `summary/11-factions.txt`: every keyword, its value, and which faction has it.
-- `summary/11-faction-<name>.txt`: the three current factions (their identities are taken; don't copy them).
+- `summary/11-faction-<name>.txt`: the seven factions in the game (their identities are taken; don't copy them).
 If summary/ and the code disagree, the code wins: tell Kaptain.
 
 **1b. What the rules mean for card design** (check every card and deck against this list):
@@ -47,7 +47,7 @@ If summary/ and the code disagree, the code wins: tell Kaptain.
 - Hand: start 5, redraw up to 3, 2 draws per round (none in round 1), hand limit 10. Decks 30-40 cards, at most 3
   copies. A card is rarely in hand exactly when wanted; a combo of two named cards is rare.
 - Units have no active abilities you press (summary/06). An action that replaces the unit's attack and costs what an
-  attack costs is allowed (the Ogre Thrower's throw). No counters or timers ("at 3 counters..."). Round-end abilities,
+  attack costs is allowed (the throw of the removed Ogre Thrower). No counters or timers ("at 3 counters..."). Round-end abilities,
   Place effects, Death effects, reactions and position bonuses are wanted.
 - Place fires every time a unit enters the grid: from hand, defecting, resurrected, returning, a token.
 - What does NOT exist here, so never copy it from other games: hitting the enemy player or hero, instant-speed answers
@@ -56,46 +56,53 @@ If summary/ and the code disagree, the code wins: tell Kaptain.
 - A rule not written in summary/ and not in the code does not exist. A card that needs one is marked NEW RULE.
 
 ## 2. The design rules (agreed with Kaptain)
-Full text: `factions/5-card-design-method.txt` (method), `factions/6-faction-entry-format.txt` (how a faction is written),
-`summary/09-card-design-rules.txt` (costing). The ideas to draw from: `factions/4-kaptains-ideas.txt` (Kaptain's ideas;
-use them), `factions/7-ideas-kept-for-later.txt`, and `factions/8-rejected-and-cut.txt` (never reintroduce these).
-Candidates (raw brainstorming, not designs): `factions/3-candidates/`.
-- Identity first: who they are, with the depth of Kaptain's Tagma text (`3-candidates/E1-tagma.txt`), and how they win.
-  Every mechanic serves the identity. A library way found elsewhere is not a reason to use it.
-- About 4-6 signature mechanics (section 2b; mechanics, not keywords: keywords only serve mechanics), and 2-3 characteristic keywords of its own.
-- A web of cards that set things up and cards that cash them in: each cash-in card has 3+ cards that set it up, each
-  setup card feeds 2+ cash-in cards. Give each card a "needs / makes" line so the web can be checked.
-- Signature mechanics (copying, deck search, draw, card creation, forced movement, supply play, resurrection, bonds,
-  stealing...) belong to 1, at most 2 factions; elsewhere only on a very few cards, in that faction's own character.
-  The 2-3 monopolies of each faction (THE THINKING PROCESS, step 3) belong to that faction alone (Kaptain, 4 Nov 2026).
-- Self-sufficiency: every faction alone can hold dots, remove enemies, get supply (plain Supply +1 units are fine), and
-  draw (at least 1 draw card, tied to its signature).
-- Draw is simple: a plain "draw X", or a condition tied to the faction's mechanics. Never a hard condition such as an
-  enemy's death (Kaptain, 4 Nov 2026).
-- Draw is rare and bounded: only on effects that fire once per card (spell, Place, own death) or once per round. Never
-  on repeated events ("whenever an ally dies, draw").
-- Between lanes: every faction has at least 1 card that acts between lanes, fitting the faction (moving units, throws,
-  supply used across lanes, a building that reacts to another lane...). Spells paid in one lane and cast in another are
-  EXTREMELY rare; paid in one lane and cast in ALL lanes, very rare.
-- Back rows: each faction has a real job for rows 2-3 (see 1b: melee there reaches nothing).
-- Staying power and removal follow the identity, never zero.
-- Spells 20-50% of the cards, and about that share at EVERY cost from 1 to 5 (cost 6+ may be mostly units; Kaptain,
-  4 Nov 2026). Exactly 100 cards per faction, no more, no less (Kaptain, 4 Nov 2026).
-- Removal: each faction removes threats in its own way (THE THINKING PROCESS, step 2.2), never a plain "kill a unit"
-  card shared by all.
-- Lane control: cards that check "as long as you hold this lane's base", "if you don't", or both. Never a specific
-  base bonus.
-- Almost no card without a keyword or text: loads of passives, triggers, Death and Place effects (Kaptain, 4 Nov 2026).
-  Every card has its place in the faction's mechanics and is a real decision (when, where, why).
-- Each faction has 2-3 characteristic keywords of its own (Kaptain, 4 Nov 2026).
-- The 100 cards form a few cohesive, obvious groups (ways to play), and the groups mix with each other within the
-  faction. The 5 special units (champions) each have their place in this mesh: each anchors a group and links it to
-  another (Kaptain, 4 Nov 2026).
-- Interaction with the enemy: high for playful/disruptive factions, lower for straightforward ones.
-- Decks will mix 2 factions later: give each faction hooks others can use (e.g. Projectiles, Part 4).
-- Unit SUPPLY +/- N to balance a unit is allowed but rare.
-- Costing check on every card (summary/09); frequency check on every trigger (per card / per round / unbounded).
-- Card text voice: "I / me / my" for the card itself (summary/09). Only mechanics are taken from other games, never
-  names or wording.
+More text: `factions/5-card-design-method.txt`, `factions/6-faction-entry-format.txt`, `summary/09-card-design-rules.txt`
+(costing). Ideas to use: `factions/4-kaptains-ideas.txt`, `factions/7-ideas-kept-for-later.txt`. Never reintroduce:
+`factions/8-rejected-and-cut.txt`. Old drafts in `factions/designs/` are never reused.
 
-Old drafts: `factions/designs/` (3 Nov 2026) was made before the chain below; never reuse it.
+**What a faction has**
+- Exactly 100 cards (tokens not counted). Spells are 20-50% of them, and about the same share at every cost from 1 to 5:
+  if 30% of the faction is spells, then about 30% of the cost-2 cards are spells too. Cost 6+ may be mostly units.
+- 2-3 keywords of its own. A keyword serves a mechanic: Barrage serves "guns in the back rows bombard the rear".
+- 5 champions (`champion: true`). Each is the strongest reason to play one way, and is also used by a second way.
+  Example: a champion that grows when allies die is the centre of the death way and also pays off the sacrifice way.
+- The four things every faction can do alone: hold dots (units with enough defence for the front row), remove enemies
+  (its own way, step 2.2), get supply (plain Supply 1 units are fine), and draw (at least 1 draw card).
+- Draw: a plain "draw 1", or a condition from the faction's mechanics ("Place: if an ally died this round, draw 1").
+  Never a condition the player can't arrange (an enemy's death). Only on effects that happen once per card (a spell,
+  Place, its own death) or once per round; never "whenever an ally dies, draw".
+- At least 1 card that acts between lanes: moves a unit to another lane, throws something there, or uses one lane's
+  supply in another. Spells paid in one lane and cast in another are extremely rare; cast in all lanes, very rare.
+- Back rows: melee units in rows 2-3 reach nothing (1b), so the faction needs cards that work from there. Example: a gun
+  with Barrage 1 in row 3 hits the enemy furthest back at each round end.
+- Lane control: some cards check "while you hold this lane's base", some "while you don't", some do one thing in each
+  case. Never a bonus from one specific base (bases are random each game). These cards get a golden border.
+- Almost every card has a keyword or text; almost none is only stats.
+- Hooks for two-faction decks (decks will mix 2 factions later): a few effects that work with any faction's units.
+  Example: a Spare Part winds any unit that has a round-end effect, not only Horologers.
+
+**How cards fit together**
+- Every card says what it makes happen and what it needs (its `net` line), and each "needs" has a card in the faction
+  that makes it. Example: Toll Warrior needs units to die this round; Willing Victim (dies when offered) makes it.
+- Cards that cash something in have 3+ cards that set it up; cards that set something up feed 2+ cards that cash it in.
+- Monopolies (step 3) belong to this faction alone. Other strong mechanics (copying, deck search, draw, card creation,
+  forced movement, resurrection, stealing) belong to 1, at most 2 factions; elsewhere on very few cards.
+- How much it touches the enemy: a disruptive faction has many cards that act on enemy units (push, mark, punish); a
+  straightforward one has fewer.
+
+**The curve** (round 1 gives 4 supply, round 2 at most 4 more)
+- Cost 1-4 cards must already work together: two cost-2 cards played in round 1 should do more together than apart.
+- Cost 4-6 is the middle of each way to play.
+- Cost 6+ cards use what the cheaper cards built in that lane: 6-10 supply has been spent there before them, so their
+  Place effect or ability counts the allies there, the marked enemies, the deaths or spells of the round. Never an
+  average body with a common ability.
+- Place effects on 30-50% of the units and Death effects on 10-15%: they change the board at once, when the player chose.
+- Each faction's entry rates its removal, disruption and protection as many / medium / few / very few; the cards follow it.
+
+**Costing and wording**
+- The budget of summary/09 exactly: strength + defence = budget(supply) - size - keyword values - text value (`tv`). A
+  drawback gives a negative `tv`. Changing a unit's supply by 1 to balance it is allowed but rare.
+- Costing check on every card (summary/09). Frequency check on every trigger: once per card (Place, own death, a spell),
+  once per round (round end of one unit, "once per round"), or unbounded ("whenever an ally dies"). Card advantage and
+  supply are never unbounded.
+- Card text: "I / me / my" for the card itself. Only mechanics come from other games, never names or wording.

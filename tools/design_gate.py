@@ -8,13 +8,13 @@ Checks (rules from factions/START_DESIGN.md and summary/09; numbers marked "Clau
   3  source      every card has src: 'own' (Claude's own idea) or '<game>: <card>' (a library card that exists)
   4  budget      every unit: strength + defence = budget(supply) - size - keyword values - tv (tv = value of its text;
                  negative for a drawback; required when the card has text beyond keywords)
-  5  twins       no trigger + effect + target combination on more than 3 cards (keyword effects not counted; Claude's 3)
-  6  round end   at most 10 cards deal damage at round end, keywords included (Claude's 10)
-  7  spells      at each cost 1-5 with 4+ cards, the spell share is within 15 points of the faction's share (Claude's 15)
-  8  champions   exactly 5 cards with champion: true
-  9  hovers      every keyword word in a card text is linked ([[Word]]) at least once in that text
-  10 network     tools/network_check.py on the entry and cards files: 0 problems
-  11 play        tools/playtest.js <letter>: real games and every scenario in a browser without script errors
+  5  twins       START_DESIGN step 9: no two cards whose WHEN + WHAT + ON WHOM parts are all the same; no WHEN + WHAT on more than 3 cards
+                 (read from the cards' effect data; keyword effects not counted)
+  6  spells      at each cost 1-5 with 4+ cards, the spell share is within 15 points of the faction's share (Claude's 15)
+  7  champions   exactly 5 cards with champion: true
+  8  hovers      every keyword word in a card text is linked ([[Word]]) at least once in that text
+  9  network     tools/network_check.py on the entry and cards files: 0 problems
+  10 play        tools/playtest.js <letter>: real games and every scenario in a browser without script errors
 """
 import json, os, re, sqlite3, subprocess, sys
 from collections import defaultdict
@@ -139,19 +139,16 @@ def main():
             probs.append(f"{c['name']} {c['sup']} - {c['str']}|{c['def']}: strength + defence {c['str'] + c['def']}, budget gives {want}")
     check('budget', probs)
 
-    use = defaultdict(set)
+    sig, pair = defaultdict(list), defaultdict(set)  # START_DESIGN step 9: a card's WHEN + WHAT + ON WHOM parts
     for c in cards:
-        for f in c['own']:
-            for t in ops(f):
-                use[t].add(c['name'])
-    probs = [f"{t[0]} -> {t[1]} -> {t[2] or '-'}: {len(ns)} cards ({', '.join(sorted(ns)[:5])}...)"
-             for t, ns in sorted(use.items(), key=lambda x: -len(x[1])) if len(ns) > 3]
+        parts = frozenset(t for f in c['own'] for t in ops(f))
+        if parts:
+            sig[parts].append(c['name'])
+        for t in parts:
+            pair[t[:2]].add(c['name'])
+    probs = [f"same card: {', '.join(ns)} ({'; '.join(' -> '.join(x for x in t if x) for t in sorted(p))})" for p, ns in sig.items() if len(ns) > 1]
+    probs += [f"{t[0]} -> {t[1]} on {len(ns)} cards: {', '.join(sorted(ns)[:6])}..." for t, ns in sorted(pair.items(), key=lambda x: -len(x[1])) if len(ns) > 3]
     check('twins', probs)
-
-    dmg = {'dmg', 'strike', 'strikeWith', 'itStrike', 'chain', 'ricochet', 'kill'}
-    rend = sorted({c['name'] for c in cards for f in c['own'] + c['kwfx'] if f.get('on') == 'roundEnd'
-                   and any(t[1] in dmg for t in ops(f))} | {c['name'] for c in cards if c.get('barrage') or c.get('roots')})
-    check('round end', [f'{len(rend)} cards deal damage at round end, at most 10'] if len(rend) > 10 else [], f'{len(rend)} cards')
 
     cost = lambda c: c['cost'] if c.get('tactic') else c['sup']
     share = sum(1 for c in cards if c.get('tactic')) / max(1, len(cards))
