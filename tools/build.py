@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """Build the downloadable HTML files from src/.
 
-  python3 tools/build.py          build three-bases-game.html and three-bases-scenarios.html
-  python3 tools/build.py --check  only verify that both files match src/ (exit 1 if not)
+  python3 tools/build.py          build three-bases-game.html, three-bases-scenarios.html and three-bases-ai-lab.html
+  python3 tools/build.py --check  only verify that the three files match src/ (exit 1 if not)
 
 The game is src/game/parts.txt's files joined in that order, byte for byte (parts are
 fragments, not standalone files). The scenarios page is the game with its own title,
 src/scenarios/scenarios.css before </style> and src/scenarios/scenarios.html after the
-game's </script>. Never edit the two HTML files by hand: edit src/ and build.
+game's </script>. The AI lab is src/lab/parts.txt's files joined in order, where the line @game-engine stands for
+the game's card, rules and computer parts (so the lab always plays the game's current cards and rules). Never edit
+the built HTML files by hand: edit src/ and build.
 """
 import os, re, subprocess, sys, tempfile
 
@@ -17,6 +19,7 @@ MAX_LINES = 400  # code parts longer than this should be split at a section or f
 MAX_DOC_LINES = 150  # same for files in summary/ and factions/
 BIG_FILE_LINES = 600  # any other new text file this long should be split too (the AI lab is exempt for now)
 EXEMPT = {'three-bases-game.html', 'three-bases-scenarios.html', 'three-bases-ai-lab.html'}
+ENGINE = re.compile(r'^js/(00-intro|cards/|rules/|ai/)')  # the game parts the lab's engine is made of
 
 
 def read(p):
@@ -54,13 +57,22 @@ def build():
             n = read(p).count('\n')
             if n > BIG_FILE_LINES:
                 warn.append(f'{os.path.relpath(p, ROOT)}: {n} lines (> {BIG_FILE_LINES}); split it with an index')
-    return game, scen, warn
+    lab = []
+    for n in [n.strip() for n in read(os.path.join(SRC, 'lab', 'parts.txt')).splitlines() if n.strip()]:
+        if n == '@game-engine':
+            lab += [read(os.path.join(SRC, 'game', g)) for g in names if ENGINE.match(g)]
+            continue
+        t = read(os.path.join(SRC, 'lab', n))
+        if n.endswith('.js') and t.count('\n') > MAX_LINES:
+            warn.append(f'lab/{n}: {t.count(chr(10))} lines (> {MAX_LINES}); split it')
+        lab.append(t)
+    return game, scen, ''.join(lab), warn
 
 
 def syntax_check(html):
     """node --check on every inline script; returns error text or ''."""
     out = []
-    for k, js in enumerate(re.findall(r'<script>\n(.*?)</script>', html, re.S)):
+    for k, js in enumerate(re.findall(r'<script(?: id="engine")?>\n(.*?)</script>', html, re.S)):
         with tempfile.NamedTemporaryFile('w', suffix='.js', delete=False, encoding='utf-8') as f:
             f.write(js)
         try:
@@ -75,13 +87,13 @@ def syntax_check(html):
 
 
 def main():
-    game, scen, warn = build()
-    files = {'three-bases-game.html': game, 'three-bases-scenarios.html': scen}
+    game, scen, lab, warn = build()
+    files = {'three-bases-game.html': game, 'three-bases-scenarios.html': scen, 'three-bases-ai-lab.html': lab}
     if '--check' in sys.argv:
         bad = [n for n, t in files.items() if not os.path.exists(os.path.join(ROOT, n)) or read(os.path.join(ROOT, n)) != t]
         print('out of date: ' + ', '.join(bad) if bad else 'ok')
         sys.exit(1 if bad else 0)
-    err = syntax_check(scen)
+    err = syntax_check(scen) + syntax_check(lab)
     if err:
         print('SYNTAX ERROR, nothing written:\n' + err)
         sys.exit(1)
