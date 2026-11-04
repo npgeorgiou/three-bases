@@ -633,3 +633,35 @@ that carries it (pick self); a pilot's "Mech" = the mech it pilots (pick self). 
   Mech, lasts while. Pilots: "Mech gains Armored" = give_keyword Natural Armor on self; "+3 Move" = stat_change params movement.
 - Vek text ("Health 3, move 3. Weapons/skills: Pincers: Charge forward to deal 1 damage and push the target.") is read the same
   way: the Vek is self, its targets are units or landmarks of either side unless it says.
+
+## Game words: Marvel Snap
+Marvel Snap has no Keywords field: describe everything the text says. Every card is a character (kind unit, category unit);
+locations are category terrain, a lane each (their text is a rule for the cards there). Both players play at the same time;
+a turn is shared, so it is a round. Sources: library/games/marvel_snap.md "The game's rules (from sources)".
+- Board. A location is a lane: `{"kind": "position"}`. "Here" / "this location" = position same_lane of the card ("of"
+  omitted = the card itself; on a location's own text, the cards at that location). "Other locations" = position same_lane
+  op not. "The location to the left / right" = lane_left / lane_right. "A random location" = position, pick random. "Each
+  location" = position, pick all. "Full" (4 of a player's cards) = count of that side's units at the lane ge 4. Moving a card
+  to another location = move, "to" the location. "Can be moved" / Moveable = `{"act": "can", "params": {"event": "moves"}}`.
+- Power = attr / param power (attack). There is no health and no damage: "+2 Power" = stat_change power 2 (permanent unless
+  the text says "this turn"); "-2 Power" and Afflict = stat_change power -2 on the enemy card; "steal 2 Power" = stat_change
+  power -2 on it, then stat_change power 2 on the stealer (link then); "set its Power to N" = stat_set. "Double its Power" =
+  stat_change by `{"x": "stat", "attr": "power", "of": TARGET}`. Energy = mana: "+1 Energy next turn" = mana_gain; "Max
+  Energy" = max_mana_change; cost = attr cost, "costs 1 less" = cost_change -1.
+- Triggers. "On Reveal:" = played, object self. "Ongoing:" = always. "Activate:" = activated, object self. "End of Turn:" /
+  "At the end of each turn" = round_end; "Start of Turn:" = round_start. "Game Start:" = game_start. "At the end of the game"
+  = game_end. "When this is destroyed" = dies, object self; "when this is discarded" = discarded, object self. "After you
+  play a card" = played with object `{"kind": "unit", "side": "mine"}` (and position same_lane for "here"). "When a card
+  moves" = moves, object the card. "Objective:" = the goal as conds on round_end (the reward happens after the turn).
+  "Quickdraw:" = the ability with cond keyword_condition ref Quickdraw (the card was drawn this turn), and the normal ability
+  with the same cond op not. "Empowered" (a card whose Power was raised permanently) = filter state buffed. "Horde +N" =
+  stat_change power N on card "Zombie Horde" (summon it first if the text says so). "(once per game)" = limit
+  once_per_game; "(once per turn)" = limit once_per_round.
+- Acts. destroy = kill. discard = discard (from hand: kind card, zone hand). "Add a card to your hand" = create, zone hand;
+  "add it to a location" / "put" = summon (not played: no On Reveal); "play it" = play_card. Merge = merge ("on" the card
+  that merges, "to" the one it merges into). "Copy its text / On Reveal" = repeat on that card's ability; a copy of a card =
+  copy. "Switch sides" = donate (my card) or steal (an enemy card). Return to hand = return_to_hand. Shuffle into deck =
+  shuffle_into_deck. Draw = draw. "Can't be destroyed" = cant, params event dies. "Can't be played here" = cant, params
+  event played, "to" the lane.
+- Conditions. "If you're winning here" and other location totals: COND on the lane (propose the value you need). "If you
+  played a card here last turn" = event_count span last_round. "The last card you played" = test last_card.

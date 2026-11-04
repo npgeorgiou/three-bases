@@ -1,0 +1,16 @@
+{"id": 8000750, "name": "On Reveal", "category": "keyword", "text": "Acts once, when the card is turned face up on the board: after it is played, and also when a location or card puts it there, unless something stops On Reveal (Cosmo)."}
+{"id": 8000751, "name": "Ongoing", "category": "keyword", "text": "A lasting effect that holds for as long as the card is on the board."}
+{"id": 8000752, "name": "Activate", "category": "keyword", "text": "The card does nothing when played; from the turn after it was played its player can choose a turn to use the ability, which then happens as that turn plays out."}
+{"id": 8000753, "name": "End of Turn", "category": "keyword", "text": "Acts at the end of every turn while the card is on the board."}
+{"id": 8000754, "name": "Start of Turn", "category": "keyword", "text": "Acts at the start of every turn while the card is on the board."}
+{"id": 8000755, "name": "Game Start", "category": "keyword", "text": "Acts when the game begins, from the deck or hand (Second Dinner: a wording, not yet a keyword with rules of its own)."}
+{"id": 8000756, "name": "Objective", "category": "keyword", "text": "A goal on the card with a counter (0/6); the counter counts from the start of the game, and the reward happens after the turn ends (after End of Turn effects) if the card is in play with the goal met."}
+{"id": 8000757, "name": "Moveable", "category": "keyword", "text": "The card can be moved by its player."}
+{"id": 8000758, "name": "Empowered", "category": "keyword", "text": "A card is Empowered when its Power is raised permanently (also by setting it higher); Power from Ongoing effects does not count."}
+{"id": 8000759, "name": "Quickdraw", "category": "keyword", "text": "The stronger ability after the word is used instead of the normal one when the card is played on the same turn it was drawn."}
+{"id": 8000760, "name": "Horde", "category": "keyword", "text": "The first time you play a Horde card you get a plain Zombie Horde card at a random location with 0 Power; every Horde +N adds N Power to your Zombie Horde."}
+{"id": 8000761, "name": "Merge", "category": "keyword", "text": "A card merges into another: their Power is added together, the merged card goes under the other, and no ability happens again. It frees a place at the location."}
+{"id": 8000762, "name": "Afflict", "category": "keyword", "text": "Give an enemy card negative Power."}
+{"id": 8000763, "name": "Destroy", "category": "keyword", "text": "Remove a card from the board; destroyed cards are gone, there is no graveyard."}
+{"id": 8000764, "name": "Discard", "category": "keyword", "text": "Remove a card from your hand."}
+{"id": 8000765, "name": "Move", "category": "keyword", "text": "A card on the board goes to another location; not past the left or right location and not into a full one; its player, the opponent or a location can move it."}

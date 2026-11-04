@@ -876,3 +876,7 @@ terrain	lava	a board space of lava (Into the Breach Lava; the source says only t
 state	weapon	damage dealt by a weapon or an attack itself, not by a push, a bump, fire or blocking (Into the Breach weapon damage)			30 Oct 2026, v48 (Into the Breach)
 state	bump	damage from being pushed into a unit or an obstacle (Into the Breach Bump)			30 Oct 2026, v48 (Into the Breach)
 state	blocking_emerging	damage for standing on a space an enemy emerges from (Into the Breach blocking emerging Vek)			30 Oct 2026, v48 (Into the Breach)
+event	game_end	the game ends, at the final count (Marvel Snap "At the end of the game", after the last turn)	game_end_trigger		5 Nov 2026, Marvel Snap import (Claude): no event said it
+act	merge	the "on" card merges into the "to" card: one card with both Powers added, the merged one goes under (Marvel Snap Merge; snap.fan Man-Spider preview)	merge_attach		5 Nov 2026, Marvel Snap import (Claude)
+position	lane_left	the lane or location to the left of of (Marvel Snap "the location to the left")			5 Nov 2026, Marvel Snap import (Claude)
+position	lane_right	the lane or location to the right of of (Marvel Snap "the location to the right")			5 Nov 2026, Marvel Snap import (Claude)

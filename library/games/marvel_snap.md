@@ -3,13 +3,36 @@
 One file per game: the game, its factions, the source summary, the mechanics (patterns) and the real-world cases.
 
 ## The game
-*Claude's summary (Oct 2026), from general knowledge of the game and the rules and terms under Mechanics; not from the sources below.*
-- Genre: digital collectible card game (Second Dinner, 2022); 12-card decks, games of 6 turns.
-- Board: 3 locations, revealed one per turn on turns 1-3; each location changes the rules. Up to 4 cards per side per location.
-- Energy: equals the turn number. Both players play face down at the same time; cards reveal in order.
-- Win: have more power at 2 of the 3 locations.
-- Stakes: cubes; Snap doubles them, retreating loses fewer.
-- Keywords: On Reveal, Ongoing, Activate; no factions in the library, combos only.
+Digital collectible card game (Second Dinner, 2022). No factions: cards come in series; the library's tribes are teams named
+on the cards. Claude's earlier summary from memory is replaced by the sourced rules below (5 Nov 2026).
+
+## The game's rules (from sources, read 5 Nov 2026; Claude's words)
+- Deck of 12 cards, one copy of each; 3 cards in the starting hand, one more drawn each turn [R1].
+- Energy starts at 1 and grows by 1 each turn (6 on the last turn); unspent energy is lost [R1].
+- 6 turns; both players play at the same time, then the cards are revealed [R1].
+- Three locations: the left one shows at the start, the middle one before turn 2, the right one before turn 3; each
+  carries its own rule [R1].
+- At most 4 cards per player at a location [R1]; a card can't move past the left or right location or into a full one
+  [T1].
+- After the last turn, whoever has more Power at a location wins it (unless the location says otherwise); 2 of 3 wins
+  the game; a tie in locations goes to total Power, then it is a draw [R1].
+- Reveal order: the player winning more locations reveals first; then the one ahead on Power; else random [U1], [R1].
+- Card abilities resolve first, in reveal order; location abilities after all card abilities [H1].
+- Play / Add / Put / Move: only a card played from hand counts as played; Add and Put place a card without the played
+  effects; Move relocates a card already in play [H2]. On Reveal still happens when a location puts a card into play,
+  unless something stops it [H4].
+- Most cards work only in play; some act from hand (when discarded or destroyed there) or from the deck [H5].
+- An ability tied to a location stays there when the card is moved by another card, and moves with the location when
+  locations swap [H6].
+- Snap doubles the cubes at stake; the final turn doubles them again; retreating loses only the cubes at stake at the
+  start of that turn [R1]. Stakes say nothing about which cards belong together: not written as records.
+
+[R1] marvelsnapzone.com/how-to-play-marvel-snap-for-beginners  [U1] blog.snap.untapped.gg/marvel-snap-wiki-how-priority-works
+[H1]-[H6] marvelsnap.helpshift.com gameplay FAQ: 40 order of operations, 42 Play/Add/Put/Move, 94 cards per location,
+48 On Reveal, 39 when card text has an effect, 50 location-tied abilities. [T1] thegamer.com Marvel Snap cards effects
+explained (8 Nov 2022). Keyword sources: supplement_marvel_snap.py KEYWORDS.
+Written as game_rules.jsonl: the 4-card limit (it links cards that fill a location and cards that need room). The rest is
+what every card does and draws no line between cards.
 
 ## Sources and notes
 
