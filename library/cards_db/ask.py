@@ -27,11 +27,9 @@ Faction design (faction_asks.py; a faction is found by name in the chosen games)
   ask.py <games> curve <faction>                  cards by cost: units and spells per cost, per card trigger -> effect -> target
   ask.py <games> spells <faction>                 the faction's spells grouped by what they do
   ask.py <games> removal <faction>|<game>         how it deals with enemy units (kill, damage, push away, take strength, stop,
-                                                  transform, steal, sacrifice to kill), share of each; a game: every faction
+                                                  silence, transform, steal, sacrifice to kill), share of each; a game: every faction
   ask.py <games> protect <faction>|<game>         how it protects its own (armour, shield, immunity, survive death, guard, hide, heal)
   ask.py <games> ways <faction>                   its groups of tightly linked cards (network.py), key cards, what ties each
-  ask.py <games> scaling chain|conversion|threshold  repeats when a condition holds; gives up one thing for another; changes
-                                                  once a number is reached
   ask.py <games> only <game>                      concepts only one faction of the game has
   ask.py <games> lacks <faction>                  concepts the faction never has while at least half its game's others do
   --texts: every card found with its short text (a game with 10 or fewer cards always shows them)

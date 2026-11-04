@@ -1,4 +1,4 @@
-"""Faction design questions over cards.sqlite (run through ask.py): palette, curve, spells, removal, protect, ways, scaling,
+"""Faction design questions over cards.sqlite (run through ask.py): palette, curve, spells, removal, protect, ways,
 only, lacks. Every answer comes from the stored rows and the concept tree only, the same way for every game."""
 import collections
 import mechanics, network
@@ -11,14 +11,11 @@ ROW_ORIGIN = "origin in ('own','has_keyword','gives')"  # the card's own rows, n
 ALIAS = {'place': ['on_play'], 'play': ['on_play'], 'death': ['death_trigger'], 'ally_dies': ['other_death_trigger'],
          'spell_cast': ['on_spell'], 'round_end': ['turn_end', 'round_end'], 'round_start': ['turn_start', 'round_start']}
 REMOVAL = [('kill', ['destroy', 'banish', 'board_wipe', 'deathtouch']), ('damage', ['damage']),
-           ('push away', ['bounce_enemy', 'forced_movement']), ('take strength', ['debuff']), ('stop', ['suppress']),
+           ('push away', ['bounce_enemy', 'forced_movement']), ('take strength', ['debuff']), ('silence', ['silence']),
+           ('stop', ['no_damage_output', 'cant_block', 'immobilize']),
            ('transform', ['polymorph']), ('steal', ['steal'])]
 PROTECT = [('armour', ['damage_reduction']), ('shield', ['shield']), ('immunity', ['immunity']), ('survive death', ['cheat_death']),
            ('guard', ['bodyguard', 'taunt']), ('hide', ['stealth']), ('heal', ['heal'])]
-PAID = ('discard', 'sacrifice', 'self_destruct', 'life_payment', 'donate', 'self_mill')  # given up whoever it lands on
-HARMED = ('destroy', 'banish', 'damage', 'debuff')  # given up when it lands on my own side
-NOT_GIVEN = ('excess_damage', 'lifesteal', 'multi_target_attack')  # under damage, but a gain for the owner
-COND_TESTS = ('have', 'event_count', 'count', 'keyword_condition', 'it_matches', 'first_card', 'level', 'stat', 'max_mana', 'upgraded')
 
 
 class Ctx:
@@ -73,14 +70,6 @@ def target(kind, side, pick):
     if pick == 'self': return 'itself'
     return ' '.join(x for x in ({'mine': 'my', 'enemy': 'enemy'}.get(side, side), kind) if x) if pick in (None, 'it') else \
         ' '.join(x for x in (pick, {'mine': 'my', 'enemy': 'enemy'}.get(side, side), kind) if x)
-
-
-def gives_up(x, r):
-    """an effect row that costs its owner: a drawback, or harm aimed at my own side"""
-    _, _, _, act, con, kind, side, pick, _ = r
-    if not con or act == 'give_keyword' or con in NOT_GIVEN: return False  # Fleeting on a made card is no payment
-    if any(x.under(con, k) for k in PAID): return side != 'enemy'
-    return (side == 'mine' or pick == 'self') and kind != 'player' and any(x.under(con, k) for k in HARMED)
 
 
 def groups_out(x, groups, n_ex=2, total=None):
@@ -230,45 +219,6 @@ def ways(x, args):
         if best: print(f'  strongest line: {nm(best[1])} -> {best[2]} -> {nm(best[3])}')
 
 
-def scaling(x, args):
-    """ask.py <games> scaling chain|conversion|threshold"""
-    kind = args[0] if args else ''
-    if kind not in ('chain', 'conversion', 'threshold'): print('scaling takes chain, conversion or threshold'); return
-    for g in x.games:
-        ids = list(x.pool(g)); groups = collections.defaultdict(set)
-        if not ids: continue
-        ab_rows = collections.defaultdict(list)
-        for r in x.rows(ids): ab_rows[r[0], r[1]].append(r)
-        conds = collections.defaultdict(list)
-        for card, ab, test, op, n, ev, attr, ok, os_ in x.c.execute(
-                f"select card, ability, test, op, n, event, attr, of_kind, of_side from flat_if where {ROW_ORIGIN} and card in ({','.join(map(str, ids))})"):
-            conds[card, ab].append((test, op, n, ev, attr, ok, os_))
-        for (card, ab), rs in ab_rows.items():
-            if kind == 'chain':  # the effect happens again when a condition holds
-                if not any(r[3] == 'repeat' or r[4] == 'repeat_trigger' for r in rs): continue
-                why = [t for t, op, *_ in conds.get((card, ab), []) if op or t in COND_TESTS]
-                if any(r[8] == 'if_done' for r in rs): why.append('if the first part happened')
-                for w in why: groups[w].add(card)
-            elif kind == 'conversion':  # gives up one thing for another
-                give = [r[4] for r in rs if gives_up(x, r)]
-                get = [r[4] for r in rs if r[4] and not gives_up(x, r) and (x.under(r[4], 'helps_me') or x.under(r[4], 'hurts_enemy'))]
-                for a in dict.fromkeys(give):
-                    for b in dict.fromkeys(get): groups[f'{a} -> {b}'].add(card)
-            else:  # the effect changes once a number is reached
-                for test, op, n, ev, attr, ok, os_ in conds.get((card, ab), []):
-                    if op in ('ge', 'gt') and n and n >= 2:
-                        what = ' '.join(v for v in (test, ev, attr, {'mine': 'my', 'enemy': 'enemy'}.get(os_, os_), ok) if v)
-                        groups[what].add(card)
-        if kind == 'conversion':
-            for (i,) in x.c.execute(f"select card from flat_concept where concept='resource_conversion' and card in ({','.join(map(str, ids))})"):
-                groups['resource_conversion'].add(i)
-        if not groups: continue
-        n = len(set().union(*groups.values())); print(f"## {g}: {n} card{'' if n == 1 else 's'}")
-        top = dict(sorted(groups.items(), key=lambda kv: -len(kv[1]))[:15])
-        groups_out(x, top)
-        if len(groups) > 15: print(f'- and {len(groups) - 15} smaller groups')
-
-
 def concept_counts(x, g):
     """faction -> concept -> cards with it, for one game"""
     pool = x.pool(g); facs = x.factions(g)
@@ -316,4 +266,4 @@ def lacks(x, args):
 
 
 ASKS = {'palette': palette, 'curve': curve, 'spells': spells, 'removal': removal, 'protect': protect, 'ways': ways,
-        'scaling': scaling, 'only': only, 'lacks': lacks}
+        'only': only, 'lacks': lacks}

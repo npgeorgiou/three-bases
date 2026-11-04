@@ -45,10 +45,9 @@ sources.
 | What cards do on one trigger (place, death, round_end, spell_cast, ally_dies, or any trigger concept), grouped, count and 2 examples each | `ask.py all palette <trigger> [faction]` |
 | A faction's cards by cost: units and spells per cost, per card trigger -> effect -> target | `ask.py all curve "<faction>"` |
 | A faction's spells grouped by what they do | `ask.py all spells "<faction>"` |
-| How a faction deals with enemy units (kill, damage, push away, take strength, stop, transform, steal, sacrifice to kill), share of each; a game name gives every faction of it | `ask.py all removal "<faction>"`, `ask.py all removal <game>` |
+| How a faction deals with enemy units (kill, damage, push away, take strength, silence, stop, transform, steal, sacrifice to kill), share of each; a game name gives every faction of it | `ask.py all removal "<faction>"`, `ask.py all removal <game>` |
 | How a faction protects its own (armour, shield, immunity, survive death, guard, hide, heal), share of each; a game name gives every faction | `ask.py all protect "<faction>"`, `ask.py all protect <game>` |
 | A faction's ways to play: groups of tightly linked cards, key cards, what ties each | `ask.py all ways "<faction>"` |
-| Cards that repeat when a condition holds / give up one thing for another / change once a number is reached | `ask.py all scaling chain`, `... conversion`, `... threshold` |
 | Concepts only one faction of a game has (its monopolies) | `ask.py all only <game>` |
 | Concepts a faction never has while at least half its game's other factions do (its blind spots) | `ask.py all lacks "<faction>"` |
 | The values you can ask for | `ask.py all list concepts`, `ask.py all list happenings` |
