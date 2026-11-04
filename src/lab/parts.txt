@@ -14,6 +14,7 @@ js/ui/training-schedule.js
 js/ui/test-chart.js
 js/ui/training-page.js
 js/ui/tournament.js
+js/ui/tune.js
 js/ui/results-watch.js
 js/ui/start.js
 shell/tail.html

@@ -3,9 +3,10 @@
    every judgement is a weighted term, and every weight, width and switch is a tunable value.
    Starting values: the Benchmark's; the Strategist's where only it has the term (goal lanes, off by default).
    ===================================================================== */
-/** [key, label, type, default, extra]: type int [lo, hi] | switch | share (0.01–1) | num (scale used when at 0) */
-const IFELSE_FIELDS = [
-  ['depth', 'Moves looked ahead', 'int', 3, [3, 5]],
+/** [key, label, type, start, extra]: type int [lo, hi] | switch | share (0.01–1) | num (scale used when at 0). The start is the
+ *  game's Benchmark value where it has one (listed here: the earlier Benchmark's), so tuning improves on the Benchmark.
+ *  How far it looks is not tuned: tuning games use the tuning depth, and the check match the Benchmark's own depth. */
+const IFELSE_BASE_FIELDS = [
   ['w1', 'Own moves examined (1st move)', 'int', 8, [1, 16]], ['w2', 'Replies examined (2nd move)', 'int', 6, [1, 16]],
   ['w3', 'Moves examined (3rd move)', 'int', 4, [1, 16]], ['w4', 'Moves examined (4th move)', 'int', 4, [1, 12]],
   ['w5', 'Moves examined (5th move)', 'int', 4, [1, 12]],
@@ -39,8 +40,21 @@ const IFELSE_FIELDS = [
   ['needDots', 'Goal lanes: per missing own dot', 'num', 2], ['needEnemyDots', 'Goal lanes: per enemy dot', 'num', 1.5],
   ['needEnemyPower', 'Goal lanes: per enemy strength and defence', 'num', 0.15], ['needOwnPower', 'Goal lanes: per own strength and defence (less needed)', 'num', 0.1],
   ['needSupply', 'Goal lanes: per own lane supply (less needed)', 'num', 0.2],
+  ['killPref', 'First move: extra per worth of the enemy units it kills', 'num', 1],
+  ['passPen', 'First move: passing right after the opponent passed counts less by', 'num', 40],
+  ['freeCheck', 'Skip free moves that don\'t make the round better (1 = yes)', 'switch', 1],
 ];
+/** Effect values: what each kind of unit effect is worth per point (op_<what>, starts at 0) and how much its timing
+ *  counts (on_<when>, a multiplier, starts at 1), over the effect parts of the game's unit cards (fxParts). */
+const IFELSE_FX_FIELDS = (() => {
+  const whats = new Set(), whens = new Set();
+  for (const key of Object.keys(CARDS)) if (CARDS[key].sup) for (const [when, what] of fxParts(key)) { whens.add(when); whats.add(what); }
+  const say = { s: 'strength an aura gives', d: 'defence an aura gives' };
+  return [...[...whats].sort().map(w => ['op_' + w, `Effect worth per point: ${say[w] || w}`, 'num', 0, 1]),
+    ...[...whens].sort().map(w => ['on_' + w, `Effect timing multiplier: ${w}`, 'num', 1])];
+})();
+const IFELSE_FIELDS = [...IFELSE_BASE_FIELDS, ...IFELSE_FX_FIELDS].map(([k, text, type, def, extra]) => [k, text, type, BENCH_VALUES[k] ?? def, extra]);
 const IFELSE_DEFAULTS = Object.fromEntries(IFELSE_FIELDS.map(f => [f[0], f[3]]));
-/** The ifelse AI's values: its starting values with the given ones on top. */
-const ifelseFull = cfg => ({ ...IFELSE_DEFAULTS, ...(cfg || {}) });
+/** The ifelse AI's values: its starting values with the given ones on top, looking as far ahead as the Benchmark. */
+const ifelseFull = cfg => ({ depth: BENCH_VALUES.depth, ...IFELSE_DEFAULTS, ...(cfg || {}) });
 

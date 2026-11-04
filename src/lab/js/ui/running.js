@@ -54,7 +54,7 @@ class Pool {
       w.job = job;
       w.postMessage({ type: 'game', key: job.key, specs: job.specs, decks: job.decks, record: !!job.record,
         roundCap: ROUND_CAP, actionCap: ACTION_CAP, search: job.search || 0,
-        replay: job.replay });
+        replay: job.replay, seed: job.seed });
     }
   }
   busy() { return this.workers.some(w => w.job); }
@@ -270,7 +270,7 @@ function opponentSpec(id, self) {
   if (o === 'self' || o === 'net:' + id) return null;
   if (o === 'bench') return { kind: 'bench' };
   if (o === 'strategist') return { kind: 'strategist', full: strategistConfig({}) };
-  if (o === 'ifelse') return { kind: 'ifelse', cfg: ifelseFull(state.ifelse && state.ifelse.v === 3 ? state.ifelse.best : {}) };   // its current tuned values
+  if (o === 'ifelse') return { kind: 'ifelse', cfg: ifelseFull(state.ifelse && state.ifelse.v === 4 ? state.ifelse.best : {}) };   // its current tuned values
   if (o.startsWith('net:')) return { kind: 'net', net: 'opp:' + o.slice(4), play: { replies: false, explore: 0 } };
   return null;
 }

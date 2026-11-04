@@ -11,22 +11,46 @@
    promising moves. The opponent's hand is never looked at: it gets a random possible hand.
    ===================================================================== */
 
-/** Every card, in a fixed order, for the card-count inputs. */
+/** Every card, in a fixed order: the row of its printed values in the network's table (no weights belong to a card). */
 const NET_CARD_KEYS = Object.keys(CARDS).sort();
 const NET_CARD_INDEX = Object.fromEntries(NET_CARD_KEYS.map((k, i) => [k, i]));
 
-/** Every property any card has (cost, size, strength, defence, each ability...), scaled to 0..1 by its largest value. */
-const NET_PROPERTIES = (() => {
-  const skip = new Set(['name', 'fac', 'art', 'text']), largest = new Map();
-  const note = (k, v) => largest.set(k, Math.max(largest.get(k) || 0, v === true ? 1 : typeof v === 'number' ? Math.abs(v) : 0));
-  for (const c of Object.values(CARDS)) for (const [k, v] of Object.entries(c)) {
-    if (skip.has(k)) continue;
-    if (v && typeof v === 'object') for (const [sk, sv] of Object.entries(v)) note(k + '.' + sk, sv);
-    else note(k, v);
+/**
+ * What a card is and does, by name, with no card names: its numbers and keywords (cost, size, strength, defence,
+ * Geared ...), and its effects in parts: when + what ("roundEnd:strike"), what + on whom ("strike>nearest"), with
+ * amounts; auras ("aura:s", "aura>adj") and spells ("cast:dmg"). A reworked card is a new mix of known parts;
+ * only a word no card had before is new to the network.
+ */
+const NET_SKIP = new Set(['name', 'fac', 'art', 'text', 'net', 'fx', 'aura', 'cast', 'champion']);
+function cardFeatures(c) {
+  const f = new Map(), add = (k, v) => { if (v) f.set(k, (f.get(k) || 0) + v); };
+  const val = v => (v === true ? 1 : typeof v === 'number' ? Math.abs(v) : v ? 1 : 0);
+  for (const [k, v] of Object.entries(c)) {
+    if (NET_SKIP.has(k) || typeof v === 'string') continue;
+    if (v && typeof v === 'object' && !Array.isArray(v)) { for (const [sk, sv] of Object.entries(v)) add(k + '.' + sk, val(sv)); }
+    else add(k, val(v));
   }
-  return [...largest.entries()].filter(([, m]) => m > 0).map(([k, m]) => ({ k, m })).sort((a, b) => (a.k < b.k ? -1 : 1));
-})();
-/* ---------- network format 3: card dictionary, shared cell layer, hand slots, card counts ----------
+  const ops = (when, list) => {
+    for (const op of list || []) {
+      const to = typeof op.to === 'string' ? op.to : 'self';
+      for (const [k, v] of Object.entries(op)) {
+        if (k === 'to' || k === 'if') continue;
+        if (k === 'kw' && typeof v === 'string') add(when + ':kw:' + v, 1);
+        else if (v && typeof v === 'object' && !('count' in v)) for (const [sk, sv] of Object.entries(v)) add(when + ':' + k + '.' + sk, val(sv));
+        else add(when + ':' + k, val(v));
+        add(k + '>' + to, 1);
+      }
+      if (op.if) add(when + ':if', 1);
+    }
+  };
+  for (const e of c.fx || []) { ops(e.on, e.do); if (e.lim) add(e.on + ':once', 1); if (e.if || e.of) add(e.on + ':if', 1); }
+  if (c.cast) { ops('cast', c.cast.do); if (c.cast.need) add('cast:need', 1); }
+  for (const a of c.aura || []) { add('aura:s', val(a.s)); add('aura:d', val(a.d)); add('aura>' + (a.to || 'self'), 1); if (a.if) add('aura:if', 1); }
+  return f;
+}
+const NET_FEATURES = NET_CARD_KEYS.map(k => cardFeatures(CARDS[k]));
+const NET_PROPERTIES = [...new Set(NET_FEATURES.flatMap(m => [...m.keys()]))].sort();
+/* ---------- network format 3 (version 7): cards by what they are and do, shared cell layer, hand slots, pile totals ----------
    A position is recorded as decimals (NUMS) and card numbers (CARDS: card + 1, 0 = none).
    NUMS: for each of the 54 cells (2 sides x 3 lanes x 3 rows from the front x 3 columns), 20 values:
      unit anchored here; its current strength, defence, damage, strength and defence build-up, temporary
@@ -37,33 +61,30 @@ const NET_PROPERTIES = (() => {
      (mine / theirs);
    per side (me, then them): carry-over / 5, hand size / 10, deck size, discard size;
    the game: round, I started the round, it is my turn, I passed, they passed, rounds in a row without any
-     action / 3, actions this round, my faction (one per faction), their faction (one per faction), how many cards they redrew / 3 (known
-     once the battle has begun);
-   my deck, counted per card; their unseen cards (hand and deck), counted per card; my dealt starting hand,
-     counted per card; the cards I redrew (put back), counted per card.
-   CARDS: the unit anchored in each cell, then my hand (up to 10 cards, in card-list order).
+     action / 3, actions this round, how many cards they redrew / 3 (known once the battle has begun);
+   four piles: my deck, their unseen cards (hand and deck), my dealt starting hand, the cards I redrew (put back);
+     each as its card count and the totals of its cards' printed values / 10 (e.g. how many Place damage effects
+     are still in my deck).
+   CARDS: the unit anchored in each cell, then my hand (up to 10 cards, in card-list order); a card number only
+     picks the card's printed values (cardFeatures) for the cell layer and the hand slots: no card has weights.
    Values with no firm limit use sq(x) = square root of x / 10 (x below 0 counts as 0): 1 -> 0.10, 2 -> 0.14,
    5 -> 0.22, 100 -> 1.00, 400 -> 2.00. Small everyday values stay clearly apart, large ones come through
    distinctly, and nothing is capped. Values with a firm rule limit are divided by that limit. All values are
    stored as decimals. */
 const sq = v => Math.sqrt(Math.max(0, v || 0)) / 10;
 const F3 = (() => {
-  const cards = NET_CARD_KEYS.slice(), props = NET_PROPERTIES.map(p => p.k);
+  const cards = NET_CARD_KEYS.slice(), props = NET_PROPERTIES;
   const NCELL = 2 * LANES.length * ROWS * COLS, HS = HAND_LIMIT, CS = 20;
-  const LANEN = 17, PILES = 4, NREST = LANES.length * LANEN + 8 + 8 + 2 * LAB_FACTIONS.length + PILES * cards.length;
-  return { version: 6, PILES, cards, props, DE: 16, CO: 16, CS, NCELL, HS, LANEN, NREST, RECN: NCELL * CS + NREST, NK: NCELL + HS, hidden: [128, 64] };
+  const LANEN = 17, PILES = 4, FIXED = LANES.length * LANEN + 8 + 8, NREST = FIXED + PILES * (1 + props.length);
+  return { version: 7, PILES, cards, props, DE: 0, CO: 16, CS, NCELL, HS, LANEN, FIXED, NREST, RECN: NCELL * CS + NREST, NK: NCELL + HS, hidden: [128, 64] };
 })();
-/** Each deck's card counts, in card-list order. */
-const F3_DECK_COUNTS = Object.fromEntries(Object.keys(DECKS).map(d => {
-  const c = new Array(F3.cards.length).fill(0);
-  for (const [k, n] of DECKS[d].list) c[NET_CARD_INDEX[k]] += n;
-  return [d, c];
-}));
-/** A card's printed values: abilities 1 or 0, numbers on the square-root scale. */
-const F3_PRINTED = F3.cards.map(key => F3.props.map(pk => {
-  const [a, b] = pk.split('.'), c = CARDS[key], v = b ? (c[a] || {})[b] : c[a];
-  return v === true ? 1 : typeof v === 'number' ? sq(v) : 0;
-}));
+/** A card's printed values: abilities and effect parts as numbers on the square-root scale (true counts 1). */
+const F3_PRINTED = NET_FEATURES.map(m => F3.props.map(pk => sq(m.get(pk) || 0)));
+/** Each deck's list as card number -> copies. */
+const F3_DECK_LISTS = Object.fromEntries(Object.keys(DECKS).map(d => [d, DECKS[d].list.map(([k, n]) => [NET_CARD_INDEX[k], n])]));
+const F3_PILE = new Float32Array(F3.props.length);
+/** The same values as [position, value] pairs of the non-zero ones only, for adding up piles quickly. */
+const F3_SPARSE = F3_PRINTED.map(row => row.flatMap((v, t) => (v ? [[t, v]] : [])));
 function encode3(s, me, into) {
   // into: arrays to write into instead of new ones (a network's input); they are cleared first
   const nums = into ? into.nums.fill(0) : new Float32Array(F3.RECN), cards = into ? into.cards.fill(0) : new Uint16Array(F3.NK), opp = other(me);
@@ -104,14 +125,21 @@ function encode3(s, me, into) {
   }
   put(sq(s.round)); put(s.starter === me ? 1 : 0); put(s.cur === me ? 1 : 0); put(s.passed === me ? 1 : 0); put(s.passed === opp ? 1 : 0);
   put((s.quietRounds || 0) / 3); put(sq(s.acts));
-  for (const side of [me, opp]) for (const f of LAB_FACTIONS) put(DECKS[s.players[side].deck].fac === f ? 1 : 0);
   put(s.redrawDone ? (s.players[opp].redrawn || []).length / MAX_REDRAW : 0);
-  const K = F3.cards.length, count = list => { const c = new Array(K).fill(0); for (const key of list) c[NET_CARD_INDEX[key]]++; return c; };
+  // the four piles, each as its size and its cards' printed-value totals
+  const pile = counts => {                                     // counts: [card number, copies] pairs
+    F3_PILE.fill(0);
+    let n = 0;
+    for (const [j, c] of counts) { if (c <= 0) continue; n += c; for (const [t, v] of F3_SPARSE[j]) F3_PILE[t] += c * v; }
+    put(sq(n));
+    for (let t = 0; t < F3_PILE.length; t++) put(F3_PILE[t] / 10);
+  };
+  const tally = keys => { const m = new Map(); for (const key of keys) { const j = NET_CARD_INDEX[key]; m.set(j, (m.get(j) || 0) + 1); } return m; };
   // their unseen cards, as unseenCards counts them: their deck list, less each card seen in their discard or on the board
-  const unseen = F3_DECK_COUNTS[s.players[opp].deck].slice();
-  for (const key of s.players[opp].discard) { const j = NET_CARD_INDEX[key]; if (unseen[j] > 0) unseen[j]--; }
-  for (const u of s.units) if (u.owner === opp) { const j = NET_CARD_INDEX[u.card]; if (unseen[j] > 0) unseen[j]--; }
-  for (const pile of [count(s.players[me].draw), unseen, count(s.players[me].dealt || []), count(s.players[me].redrawn || [])]) for (const n of pile) put(sq(n));
+  const unseen = new Map(F3_DECK_LISTS[s.players[opp].deck]);
+  for (const key of s.players[opp].discard) { const j = NET_CARD_INDEX[key]; if (unseen.get(j) > 0) unseen.set(j, unseen.get(j) - 1); }
+  for (const u of s.units) if (u.owner === opp) { const j = NET_CARD_INDEX[u.card]; if (unseen.get(j) > 0) unseen.set(j, unseen.get(j) - 1); }
+  pile(tally(s.players[me].draw)); pile(unseen); pile(tally(s.players[me].dealt || [])); pile(tally(s.players[me].redrawn || []));
   const hand = s.players[me].hand.map(key => NET_CARD_INDEX[key]).sort((a, b) => a - b);
   for (let j = 0; j < Math.min(F3.HS, hand.length); j++) cards[F3.NCELL + j] = hand[j] + 1;
   return { nums, cards };
@@ -194,7 +222,7 @@ const netsByName = {};
 function netNamed(name, data) {
   const cur = netsByName[name];
   if (cur && data && data.arch && data.arch.version === F3.version && cur.hidden.join() === data.arch.hidden.join()
-    && data.arch.cards.join() === F3.cards.join() && data.arch.props.join() === F3.props.join()) {
+    && data.arch.props.join() === F3.props.join()) {
     if (cur.src !== data.weights) { cur.w.set(floatsOfB64(data.weights)); cur.src = data.weights; }
     return cur;
   }
@@ -210,19 +238,19 @@ function net3Valid(data, hidden) {
   try {
     if (!data || data.enc !== 3 || !data.arch || data.arch.version !== F3.version || !Array.isArray(data.arch.hidden)) return false;
     if (hidden && data.arch.hidden.join() !== hidden.join()) return false;
-    const L = net3Layout(data.arch.cards.length, data.arch.props.length, data.arch.hidden);
+    const L = net3Layout(data.arch.props.length, data.arch.hidden);
     const w = data.weights, pad = w.endsWith('==') ? 2 : w.endsWith('=') ? 1 : 0;
     return (w.length * 3 / 4 - pad) / 4 === L.total;
   } catch (e) { return false; }
 }
 
-/** Weight layout of a format-3 network, as named blocks (for moving weights between card lists or sizes). */
-function net3Layout(nc, np, hidden) {
-  const CIN = F3.CS + F3.DE + np + 7, MIN = F3.NCELL * F3.CO + F3.HS * (F3.DE + np) + (F3.NREST - F3.PILES * F3.cards.length + F3.PILES * nc);
+/** Weight layout of a format-3 network, as named blocks (for moving weights between printed-value lists or sizes). */
+function net3Layout(np, hidden) {
+  const CIN = F3.CS + np + 7, MIN = F3.NCELL * F3.CO + F3.HS * np + F3.FIXED + F3.PILES * (1 + np);
   const sizes = [MIN, ...hidden, 1], blocks = [];
   let o = 0;
   const add = (name, n) => { blocks.push({ name, o, n }); o += n; };
-  add('D', nc * F3.DE); add('WC', CIN * F3.CO); add('BC', F3.CO);
+  add('WC', CIN * F3.CO); add('BC', F3.CO);
   for (let l = 0; l < sizes.length - 1; l++) { add('W' + l, sizes[l] * sizes[l + 1]); add('B' + l, sizes[l + 1]); }
   return { blocks: Object.fromEntries(blocks.map(b => [b.name, b])), total: o, CIN, MIN, sizes };
 }
@@ -231,7 +259,7 @@ function net3Layout(nc, np, hidden) {
  * exactly the same weights, on every restart; the size-check shapes each have their own fixed start.
  */
 function net3Create(hidden = F3.hidden) {
-  const net = net3Instance(hidden), L = net3Layout(F3.cards.length, F3.props.length, hidden), w = net.w, B = L.blocks;
+  const net = net3Instance(hidden), L = net3Layout(F3.props.length, hidden), w = net.w, B = L.blocks;
   let seed = 0x9E3779B9;
   for (const ch of 'three-bases:' + hidden.join('x')) seed = Math.imul(seed ^ ch.charCodeAt(0), 0x85EBCA6B) >>> 0;
   const rnd = () => {                                          // mulberry32
@@ -241,7 +269,6 @@ function net3Create(hidden = F3.hidden) {
   };
   const gauss = () => { let u = 0, v = 0; while (!u) u = rnd(); while (!v) v = rnd(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); };
   const fill = (b, sd) => { for (let i = 0; i < b.n; i++) w[b.o + i] = sd * gauss(); };
-  fill(B.D, 0.1);                                             // dictionary rows start small and random
   fill(B.WC, Math.sqrt(2 / L.CIN));
   for (let l = 0; l < L.sizes.length - 1; l++) fill(B['W' + l], Math.sqrt(2 / L.sizes[l]));
   return net;
@@ -256,9 +283,9 @@ const floatsOfB64 = s => { const b = atob(s), u = new Uint8Array(b.length); for 
  * input is sparse), the others row by output.
  */
 function net3Grow(data, hidden) {
-  const nc = F3.cards.length, np = F3.props.length, src = floatsOfB64(data.weights);
-  const Lo = net3Layout(nc, np, data.arch.hidden), Ln = net3Layout(nc, np, hidden), net = net3Create(hidden), w = net.w;
-  for (const b of ['D', 'WC', 'BC']) w.set(src.subarray(Lo.blocks[b].o, Lo.blocks[b].o + Lo.blocks[b].n), Ln.blocks[b].o);
+  const np = F3.props.length, src = floatsOfB64(data.weights);
+  const Lo = net3Layout(np, data.arch.hidden), Ln = net3Layout(np, hidden), net = net3Create(hidden), w = net.w;
+  for (const b of ['WC', 'BC']) w.set(src.subarray(Lo.blocks[b].o, Lo.blocks[b].o + Lo.blocks[b].n), Ln.blocks[b].o);
   const deeper = Ln.sizes.length > Lo.sizes.length, layers = deeper ? Lo.sizes.length - 2 : Lo.sizes.length - 1;
   for (let l = 0; l < layers; l++) {
     const at = (i, o, nIn, nOut) => (l === 0 ? i * nOut + o : o * nIn + i);
@@ -273,50 +300,47 @@ function net3Grow(data, hidden) {
   return net3ToData(net);
 }
 function net3ToData(net, withMomentum = false) {
-  return { enc: 3, arch: { version: F3.version, cards: F3.cards, props: F3.props, hidden: net.hidden }, weights: b64OfFloats(net.w),
+  return { enc: 3, arch: { version: F3.version, props: F3.props, hidden: net.hidden }, weights: b64OfFloats(net.w),
     ...(withMomentum && net.train ? { m: b64OfFloats(net.m), v: b64OfFloats(net.v), step: net.step } : {}) };
 }
 /**
- * A saved format-3 network. If the game's card list or printed values have changed since it was saved, its
- * weights are moved to the new layout by name: known cards and values keep what they learned, new ones start
- * fresh (new dictionary rows random, new inputs' weights zero), and the learning momentum starts over.
+ * A saved format-3 network. If the printed values (keywords, effect parts) have changed since it was saved, its
+ * weights are moved to the new layout by name: known values keep what they learned, new ones start at zero, and
+ * the learning momentum starts over. Changed or new cards need nothing: the network never sees card names.
  */
 function net3FromData(data, train = false) {
   if (!data.arch || data.arch.version !== F3.version) throw new Error('This network was made for an older version of the lab and cannot be used.');
   const a = data.arch, net = net3Instance(a.hidden, train), old = floatsOfB64(data.weights);
-  const same = a.cards.join() === F3.cards.join() && a.props.join() === F3.props.join();
-  if (same) {
+  if (a.props.join() === F3.props.join()) {
     if (old.length !== net.P) throw new Error('This network does not fit this version of the lab.');
     net.w.set(old);
     if (train && data.m && data.v) { net.m.set(floatsOfB64(data.m)); net.v.set(floatsOfB64(data.v)); net.step = data.step || 0; }
     return net;
   }
-  const Lo = net3Layout(a.cards.length, a.props.length, a.hidden), Ln = net3Layout(F3.cards.length, F3.props.length, a.hidden);
+  const Lo = net3Layout(a.props.length, a.hidden), Ln = net3Layout(F3.props.length, a.hidden);
   if (old.length !== Lo.total) throw new Error('This network does not fit this version of the lab.');
-  const w = net.w, cardOld = new Map(a.cards.map((k, i) => [k, i])), propOld = new Map(a.props.map((k, i) => [k, i]));
+  const w = net.w, propOld = new Map(a.props.map((k, i) => [k, i]));
+  w.fill(0);
   const copyRow = (bo, bn, rowOld, rowNew, width) => w.set(old.subarray(bo.o + rowOld * width, bo.o + (rowOld + 1) * width), bn.o + rowNew * width);
-  // dictionary rows by card
-  F3.cards.forEach((k, i) => { if (cardOld.has(k)) copyRow(Lo.blocks.D, Ln.blocks.D, cardOld.get(k), i, F3.DE); else for (let t = 0; t < F3.DE; t++) w[Ln.blocks.D.o + i * F3.DE + t] = 0.1 * gaussian(); });
-  // cell layer rows: recorded values, dictionary part, printed values by name, position
-  const pre = F3.CS + F3.DE;
-  for (let j = 0; j < pre; j++) copyRow(Lo.blocks.WC, Ln.blocks.WC, j, j, F3.CO);
-  F3.props.forEach((k, i) => { if (propOld.has(k)) copyRow(Lo.blocks.WC, Ln.blocks.WC, pre + propOld.get(k), pre + i, F3.CO); });
-  for (let j = 0; j < 7; j++) copyRow(Lo.blocks.WC, Ln.blocks.WC, pre + a.props.length + j, pre + F3.props.length + j, F3.CO);
+  const byName = (bo, bn, offOld, offNew, width) => F3.props.forEach((k, i) => { if (propOld.has(k)) copyRow(bo, bn, offOld + propOld.get(k), offNew + i, width); });
+  // cell layer rows: recorded values, printed values by name, position
+  for (let j = 0; j < F3.CS; j++) copyRow(Lo.blocks.WC, Ln.blocks.WC, j, j, F3.CO);
+  byName(Lo.blocks.WC, Ln.blocks.WC, F3.CS, F3.CS, F3.CO);
+  for (let j = 0; j < 7; j++) copyRow(Lo.blocks.WC, Ln.blocks.WC, F3.CS + a.props.length + j, F3.CS + F3.props.length + j, F3.CO);
   w.set(old.subarray(Lo.blocks.BC.o, Lo.blocks.BC.o + F3.CO), Ln.blocks.BC.o);
-  // first main layer rows: cell summaries, hand slots (dictionary part, printed values by name), the rest, card counts by card
-  const H = a.hidden[0], cellRows = F3.NCELL * F3.CO;
+  // first main layer rows: cell summaries, hand slots (printed values by name), the fixed values, piles (size, totals by name)
+  const H = a.hidden[0], cellRows = F3.NCELL * F3.CO, npO = a.props.length, npN = F3.props.length;
   for (let j = 0; j < cellRows; j++) copyRow(Lo.blocks.W0, Ln.blocks.W0, j, j, H);
-  const slotOld = F3.DE + a.props.length, slotNew = F3.DE + F3.props.length;
-  for (let sl = 0; sl < F3.HS; sl++) {
-    for (let t = 0; t < F3.DE; t++) copyRow(Lo.blocks.W0, Ln.blocks.W0, cellRows + sl * slotOld + t, cellRows + sl * slotNew + t, H);
-    F3.props.forEach((k, i) => { if (propOld.has(k)) copyRow(Lo.blocks.W0, Ln.blocks.W0, cellRows + sl * slotOld + F3.DE + propOld.get(k), cellRows + sl * slotNew + F3.DE + i, H); });
+  for (let sl = 0; sl < F3.HS; sl++) byName(Lo.blocks.W0, Ln.blocks.W0, cellRows + sl * npO, cellRows + sl * npN, H);
+  const restOld = cellRows + F3.HS * npO, restNew = cellRows + F3.HS * npN;
+  for (let j = 0; j < F3.FIXED; j++) copyRow(Lo.blocks.W0, Ln.blocks.W0, restOld + j, restNew + j, H);
+  for (let pl = 0; pl < F3.PILES; pl++) {
+    const po = restOld + F3.FIXED + pl * (1 + npO), pn = restNew + F3.FIXED + pl * (1 + npN);
+    copyRow(Lo.blocks.W0, Ln.blocks.W0, po, pn, H);
+    byName(Lo.blocks.W0, Ln.blocks.W0, po + 1, pn + 1, H);
   }
-  const restOld = cellRows + F3.HS * slotOld, restNew = cellRows + F3.HS * slotNew, fixed = F3.NREST - F3.PILES * F3.cards.length;
-  for (let j = 0; j < fixed; j++) copyRow(Lo.blocks.W0, Ln.blocks.W0, restOld + j, restNew + j, H);
-  for (let pile = 0; pile < F3.PILES; pile++) F3.cards.forEach((k, i) => {
-    if (cardOld.has(k)) copyRow(Lo.blocks.W0, Ln.blocks.W0, restOld + fixed + pile * a.cards.length + cardOld.get(k), restNew + fixed + pile * F3.cards.length + i, H);
-  });
-  for (const name of Object.keys(Lo.blocks)) if (name !== 'D' && name !== 'WC' && name !== 'BC' && name !== 'W0') w.set(old.subarray(Lo.blocks[name].o, Lo.blocks[name].o + Lo.blocks[name].n), Ln.blocks[name].o);
+  w.set(old.subarray(Lo.blocks.B0.o, Lo.blocks.B0.o + H), Ln.blocks.B0.o);
+  for (const name of Object.keys(Lo.blocks)) if (!['WC', 'BC', 'W0', 'B0'].includes(name)) w.set(old.subarray(Lo.blocks[name].o, Lo.blocks[name].o + Lo.blocks[name].n), Ln.blocks[name].o);
   return net;
 }
 

@@ -11,7 +11,7 @@ function testNow(id) {
     const g = m.queued++, netSide = g % 2, specs = [];
     specs[netSide] = { kind: 'net', net: 'manual', play: { replies: false, explore: 0 } };   // playing alone, like every test
     specs[1 - netSide] = m.opp;
-    return { key: 'manual' + g, kind: 'test', netSide, specs, decks: scheduledDecks(g) };
+    return { key: 'manual' + g, kind: 'test', netSide, specs, decks: scheduledDecks(g), seed: 9000001 + Math.floor(g / 2) };
   };
   const onResult = (r, job) => {
     if (manual !== m) return;

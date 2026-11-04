@@ -55,7 +55,7 @@ const PRESETS = [
   { id: 'bench', name: 'Benchmark', kind: 'bench', desc: 'The game\'s AI. Sees the opponent\'s hand.' },
   { id: 'random', name: 'Random player', kind: 'random', desc: 'A baseline. Picks a kind of move at random (deploy, move, attack, spell or pass), then a move of that kind.' },
   { id: 'ifelse', name: 'ifelse AI', kind: 'ifelse', desc: 'Sees both hands and searches the real position; every judgement is a weighted term, with the values found by its tuning (the starting values until it finds better).',
-    get cfg() { return (state.ifelse && state.ifelse.v === 3 && state.ifelse.best) || {}; } },
+    get cfg() { return (state.ifelse && state.ifelse.v === 4 && state.ifelse.best) || {}; } },
   { id: 'strategist', name: 'Strategist', kind: 'strategist', desc: 'Goal lanes, rules of thumb, look-ahead over random possible opponent hands.', cfg: {} },
   ...NETS.flatMap(netPresets),
 ];

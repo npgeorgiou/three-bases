@@ -4474,7 +4474,26 @@ const ifelseConfig = cfg => ({ ...cfg });
 
 function ifelseWorth(u, c) {
   const k = cardOf(u);
-  return k.sup * c.uSup + strengthOf(u) * c.uStr + defenceOf(u) * c.uDef + (k.sup + (k.bonus || 0)) * c.uSupBonus;
+  return k.sup * c.uSup + strengthOf(u) * c.uStr + defenceOf(u) * c.uDef + (k.sup + (k.bonus || 0)) * c.uSupBonus + fxWorth(u.card, c);
+}
+/** A unit card's effects in parts [when, what, amount], e.g. Ticking Soldier: ['roundEnd', 'strike', 1]; auras are ['aura', 's' or 'd', amount]. */
+const FX_NOT_WHAT = new Set(['to', 'if', 'n', 'per', 'at', 'first', 'max', 'lanes', 'again', 'raise']);
+const fxPartsCache = {};
+function fxParts(key) {
+  if (fxPartsCache[key]) return fxPartsCache[key];
+  const k = CARDS[key], out = [], amt = v => (typeof v === 'number' ? Math.abs(v) : v ? 1 : 0);
+  for (const e of k.fx || []) for (const op of e.do || []) for (const [w, v] of Object.entries(op)) if (!FX_NOT_WHAT.has(w) && amt(v)) out.push([e.on, w, amt(v)]);
+  for (const a of k.aura || []) { if (a.s) out.push(['aura', 's', Math.abs(a.s)]); if (a.d) out.push(['aura', 'd', Math.abs(a.d)]); }
+  return (fxPartsCache[key] = out);
+}
+/** The worth of a unit's effects: per part, (timing multiplier on_<when>, 1 if unset) x (worth op_<what>) x amount; 0 while no op_ value is set. */
+const fxWorthCache = new WeakMap();
+function fxWorth(key, c) {
+  let m = fxWorthCache.get(c);
+  if (!m) { m = { on: Object.keys(c).some(x => x.startsWith('op_') && c[x]), v: {} }; fxWorthCache.set(c, m); }
+  if (!m.on) return 0;
+  if (m.v[key] === undefined) m.v[key] = fxParts(key).reduce((n, [when, what, a]) => n + (c['on_' + when] ?? 1) * (c['op_' + what] || 0) * a, 0);
+  return m.v[key];
 }
 function ifelseArmy(s, side, lane, c) {
   const units = unitsIn(s, side, lane).map(u => ({ front: inFront(u),

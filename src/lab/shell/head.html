@@ -289,7 +289,13 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
   <div class="setup">
     <label>Games per candidate <input type="number" id="tuGames" min="20" max="2000" step="2" value="300"></label>
     <label>Games at once <input type="number" id="tuThreads" min="1" max="32"></label>
+    <label title="How far the ifelse AI and the Benchmark look ahead in tuning games; lower is much faster">Search depth while tuning <select id="tuDepth"><option value="1">1</option><option value="2">2</option><option value="3">3 (the Benchmark's)</option></select></label>
     <button class="go" id="tuStart">Start</button><button id="tuPause" disabled>Pause</button><button id="tuReset">Start over</button><button id="tuExport" title="The ifelse AI's current values (the centre), for the game">Export ifelse AI</button>
+  </div>
+  <div class="setup">
+    <label>Check match games <input type="number" id="tuCheckN" min="20" max="2000" step="2" value="200"></label>
+    <button id="tuCheck" title="The current values (the centre) play the game's Benchmark at the Benchmark's own depth, every game dealt the same way for both. Only if they win clearly is a file for the game downloaded">Make this the Benchmark</button>
+    <span class="sub" id="tuCheckStatus"></span>
   </div>
   <div class="tuopps" id="tuOpps" role="group" aria-label="Opponents"></div>
   <p class="sub" id="tuStatus"></p>

@@ -6,7 +6,7 @@ function labWorker() {
 
   /** A player's move: { a: the action, random: whether it was a random exploring move }. */
   function choose(spec, s) {
-    if (spec.kind === 'bench') return { a: chooseIfelseAction(s, BENCH_VALUES), random: false };
+    if (spec.kind === 'bench') return { a: chooseIfelseAction(s, spec.depth ? { ...BENCH_VALUES, depth: spec.depth } : BENCH_VALUES), random: false };
     if (spec.kind === 'strategist') return { a: chooseStrategistAction(s, spec.full), random: false };
     if (spec.kind === 'ifelse') return { a: chooseIfelseAction(s, spec.cfg), random: false };
     if (spec.kind === 'random') return { a: randomMove(listActions(s).map(a => ({ a }))).a, random: false };
@@ -18,7 +18,15 @@ function labWorker() {
    * the game ended for that player: 1 won, 0.5 drawn, 0 lost. A game the lab stopped as too long is not
    * learned from. D marks the games one side won, used to measure how well the winner is predicted.
    */
+  /** A game with a seed deals the same shuffles (and the same chance events) every time it is played. */
   function playGame(msg) {
+    if (msg.seed == null) return playGameAs(msg);
+    const real = Math.random;
+    let z = msg.seed >>> 0;
+    Math.random = () => { z = (z + 0x6D2B79F5) >>> 0; let t = Math.imul(z ^ (z >>> 15), z | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+    try { return playGameAs(msg); } finally { Math.random = real; }
+  }
+  function playGameAs(msg) {
     const { specs, decks, record } = msg, replay = msg.replay ? JSON.parse(msg.replay.actions) : null;
     const s = msg.replay ? JSON.parse(msg.replay.init) : newGame(decks[0], decks[1]);   // a library game: its board after the redraws
     s.noFx = true;

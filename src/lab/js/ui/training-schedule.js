@@ -38,7 +38,7 @@ const searchNote = (on, w) => on
  * the tournament, what is running right now, error messages and internal bookkeeping.
  */
 function exportLab() {
-  const shape = d => (d ? { format: d.enc, hidden: d.arch && d.arch.hidden, cards: d.arch && d.arch.cards.length, printedValues: d.arch && d.arch.props.length,
+  const shape = d => (d ? { format: d.enc, hidden: d.arch && d.arch.hidden, printedValues: d.arch && d.arch.props.length,
     learningSteps: d.step || 0 } : null);
   const SKIP = new Set(['failed', 'lastError', 'libCursor', 'libOwn', 'libSession', 'stepsBefore', 'tests', 'size']);
   const record = r => Object.fromEntries(Object.entries(r).filter(([k]) => !SKIP.has(k)));
@@ -52,8 +52,8 @@ function exportLab() {
   const ts = trainingSettings();
   const data = {
     exported: new Date().toISOString(),
-    lab: { networkFormat: 3, dictionaryWidth: F3.DE, cellSummary: F3.CO, cellInputs: F3.CS + F3.DE + F3.props.length + 7, handSlots: F3.HS,
-      mainInputs: F3.NCELL * F3.CO + F3.HS * (F3.DE + F3.props.length) + F3.NREST, hidden: F3.hidden },
+    lab: { networkFormat: 3, networkVersion: F3.version, cellSummary: F3.CO, cellInputs: F3.CS + F3.props.length + 7, handSlots: F3.HS,
+      mainInputs: F3.NCELL * F3.CO + F3.HS * F3.props.length + F3.NREST, hidden: F3.hidden },
     settings: { explore: ts.explore, uses: ts.uses, testEvery: ts.evalEvery, testGames: ts.evalGames, mirror: $('#tMirror').checked },
     ifelse: state.ifelse || null,
     stepSizeRule: { start: LR_START, floor: LR_FLOOR, peak: LR_PEAK, averageFast: EMA_FAST, averageSlow: EMA_SLOW, margin: EMA_MARGIN, confirm: EMA_CONFIRM, wait: EMA_WAIT },
@@ -146,7 +146,7 @@ function startTraining(id) {
       const [how, copy] = item.mode.split('@');
       specs[netSide] = { kind: 'net', net: copy ? 'train~' + copy : 'train', play: TEST_PLAY[how] };
       specs[1 - netSide] = t.testing.opp;
-      return { key: 'test' + id + item.mode + item.j + '-' + k++, kind: 'test', item, netSide, specs, decks: scheduledDecks(item.j) };
+      return { key: 'test' + id + item.mode + item.j + '-' + k++, kind: 'test', item, netSide, specs, decks: scheduledDecks(item.j), seed: 9000001 + Math.floor(item.j / 2) };
     }
     if (loadAhead(t) >= 1) return null;                                        // the learners are behind: wait for them
     if (rec.libSession) {                                                      // learning from the shared library of teacher games
