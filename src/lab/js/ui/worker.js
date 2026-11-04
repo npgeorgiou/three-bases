@@ -7,7 +7,6 @@ function labWorker() {
   /** A player's move: { a: the action, random: whether it was a random exploring move }. */
   function choose(spec, s) {
     if (spec.kind === 'bench') return { a: chooseIfelseAction(s, spec.depth ? { ...BENCH_VALUES, depth: spec.depth } : BENCH_VALUES), random: false };
-    if (spec.kind === 'strategist') return { a: chooseStrategistAction(s, spec.full), random: false };
     if (spec.kind === 'ifelse') return { a: chooseIfelseAction(s, spec.cfg), random: false };
     if (spec.kind === 'random') return { a: randomMove(listActions(s).map(a => ({ a }))).a, random: false };
     return chooseNetActionEx(s, nets[spec.net], spec.play);

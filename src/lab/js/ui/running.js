@@ -209,29 +209,28 @@ function blend(score, hits, tries) {
 
 /**
  * Each AI's training opponent, chosen on its card. 'self' (the default) keeps its usual games; the others replace
- * the second player in its games against itself: the Benchmark, the Strategist, another AI's
- * network (playing alone), or a mix (for each game, at random: itself, the Benchmark, the Strategist or one of the
+ * the second player in its games against itself: the Benchmark, the ifelse AI, another AI's
+ * network (playing alone), or a mix (for each game, at random: itself, the Benchmark, the ifelse AI or one of the
  * other AIs). Learning from the teacher-game library is not affected.
  */
-const OPPONENTS = () => [['self', 'itself'], ['bench', 'the Benchmark'], ['strategist', 'the Strategist'], ['ifelse', 'the ifelse AI'],
+const OPPONENTS = () => [['self', 'itself'], ['bench', 'the Benchmark'], ['ifelse', 'the ifelse AI'],
   ...NETS.map(n => ['net:' + n.id, n.name]), ['mix', 'a mix']];
 /**
- * The test opponent, the same for every AI: the Benchmark (default), the Strategist, or a network loaded from a file and
+ * The test opponent, the same for every AI: the Benchmark (default) or a network loaded from a file and
  * kept frozen (stored as netData.testopp), so results stay comparable from test to test. Each test records whom it was against.
  */
 const testOpp = () => state.testOpp || { kind: 'bench' };
-const testOppName = () => { const o = testOpp(); return o.kind === 'strategist' ? 'the Strategist' : o.kind === 'net' ? o.name : `the Benchmark (depth ${benchDepth()})`; };   // a new depth marks the chart like a new opponent
+const testOppName = () => { const o = testOpp(); return o.kind === 'net' ? o.name : `the Benchmark (depth ${benchDepth()})`; };   // a new depth marks the chart like a new opponent
 /** How far the Benchmark looks ahead as training opponent and in tests (setting; 1 is about 60 times faster than its full depth). */
 const benchDepth = () => Number($('#tBenchDepth').value) || 1;
 function testOppSpec() {
   const o = testOpp();
-  if (o.kind === 'strategist') return { kind: 'strategist', full: strategistConfig({}) };
   if (o.kind === 'net' && netData.testopp) return { kind: 'net', net: 'testopp', play: { replies: false, explore: 0 } };
   return { kind: 'bench', depth: benchDepth() };
 }
 function renderTestOpp() {
   const o = testOpp();
-  $('#tTestOpp').innerHTML = `<option value="bench">the Benchmark</option><option value="strategist">the Strategist</option>`
+  $('#tTestOpp').innerHTML = `<option value="bench">the Benchmark</option>`
     + (o.kind === 'net' ? `<option value="net">${esc(o.name)} (frozen network)</option>` : '') + `<option value="file">a network file…</option>`;
   $('#tTestOpp').value = o.kind;
 }
@@ -244,7 +243,7 @@ function setTestOpp(o) {
 $('#tTestOpp').addEventListener('change', () => {
   const v = $('#tTestOpp').value;
   if (v === 'file') { renderTestOpp(); $('#tTestFile').click(); return; }
-  if (v === 'bench' || v === 'strategist') setTestOpp({ kind: v });
+  if (v === 'bench') setTestOpp({ kind: v });
 });
 $('#tTestFile').addEventListener('change', async () => {
   const f = $('#tTestFile').files[0];
@@ -258,8 +257,8 @@ $('#tTestFile').addEventListener('change', async () => {
     setTestOpp({ kind: 'net', name: file.name || f.name.replace(/\.json$/i, '') });
   } catch (e) { reportError('That file is not a network from this version of the AI lab.'); }
 });
-/** Who can be in an AI's mix: itself, the Benchmark, the Strategist and every other learning AI. */
-const mixChoices = id => ['self', 'bench', 'strategist', 'ifelse', ...NETS.filter(n => n.id !== id).map(n => 'net:' + n.id)];
+/** Who can be in an AI's mix: itself, the Benchmark, the ifelse AI and every other learning AI. */
+const mixChoices = id => ['self', 'bench', 'ifelse', ...NETS.filter(n => n.id !== id).map(n => 'net:' + n.id)];
 /** Who is in it: the members chosen in its mix panel (still existing), or everyone when none were chosen. */
 function mixOf(id) {
   const all = mixChoices(id), chosen = state.training[id].mix;
@@ -271,7 +270,6 @@ function opponentSpec(id, self) {
   if (o === 'mix') { const pool = mixOf(id); o = pool[Math.floor(Math.random() * pool.length)]; }
   if (o === 'self' || o === 'net:' + id) return null;
   if (o === 'bench') return { kind: 'bench', depth: benchDepth() };
-  if (o === 'strategist') return { kind: 'strategist', full: strategistConfig({}) };
   if (o === 'ifelse') return { kind: 'ifelse', cfg: ifelseFull(state.ifelse && state.ifelse.v === 4 ? state.ifelse.best : {}) };   // its current tuned values
   if (o.startsWith('net:')) return { kind: 'net', net: 'opp:' + o.slice(4), play: { replies: false, explore: 0 } };
   return null;

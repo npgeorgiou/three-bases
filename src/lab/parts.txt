@@ -2,7 +2,7 @@ shell/head.html
 @game-engine
 js/engine/decks.js
 js/engine/benchmark-v1.js
-js/engine/strategist.js
+js/engine/known.js
 js/engine/ifelse-fields.js
 js/engine/network-encode.js
 js/engine/network-play.js

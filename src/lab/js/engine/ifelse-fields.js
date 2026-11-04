@@ -1,7 +1,7 @@
 /* =====================================================================
    ifelse AI: sees everything (both hands, the real position) and searches it. No rules of thumb:
    every judgement is a weighted term, and every weight, width and switch is a tunable value.
-   Starting values: the Benchmark's; the Strategist's where only it has the term (goal lanes, off by default).
+   Starting values: the game's Benchmark's (goal lanes start off).
    ===================================================================== */
 /** [key, label, type, start, extra]: type int [lo, hi] | switch | share (0.01–1) | num (scale used when at 0). The start is the
  *  game's Benchmark value where it has one (listed here: the earlier Benchmark's), so tuning improves on the Benchmark.

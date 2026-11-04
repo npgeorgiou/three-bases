@@ -80,10 +80,9 @@ function exportText(pairs, people, sides) {
     const pl = playerById(p.id);
     if (!pl) continue;
     const extra = pl.kind === 'random' ? 'random player (picks a kind of move at random, then a move of that kind)' : pl.kind === 'net' ? `learning AI, trained on ${state.training[pl.net].games} games against itself${state.training[pl.net].teacherGames ? ` and ${state.training[pl.net].teacherGames} teacher games` : ''}`
-      : pl.kind === 'bench' ? 'benchmark AI (sees the opponent\'s hand)' : pl.kind === 'ifelse' ? 'ifelse AI (sees both hands) ' + JSON.stringify(ifelseFull(pl.cfg)) : 'Strategist ' + JSON.stringify(pl.cfg || {});
+      : pl.kind === 'bench' ? 'benchmark AI (sees the opponent\'s hand)' : 'ifelse AI (sees both hands) ' + JSON.stringify(ifelseFull(pl.cfg));
     lines.push(`  ${pl.name}: ${extra}`);
   }
-  lines.push('', 'Strategist defaults: ' + JSON.stringify(STRATEGIST_DEFAULTS));
   return lines.join('\n');
 }
 $('#copy').addEventListener('click', async () => {
@@ -130,7 +129,7 @@ async function watchGame(sides, factions) {
     while (watch.paused && token === watch.token) await wait(150);
     if (token !== watch.token) return;
     const side = s.cur, spec = sides[side].spec;
-    const a = spec.kind === 'bench' ? chooseIfelseAction(s, BENCH_VALUES) : spec.kind === 'ifelse' ? chooseIfelseAction(s, spec.cfg) : spec.kind === 'strategist' ? chooseStrategistAction(s, spec.full)
+    const a = spec.kind === 'bench' ? chooseIfelseAction(s, BENCH_VALUES) : spec.kind === 'ifelse' ? chooseIfelseAction(s, spec.cfg)
       : spec.kind === 'random' ? randomMove(listActions(s).map(x => ({ a: x }))).a
       : chooseNetAction(s, watch.nets[spec.net], spec.play);
     const text = describeAction(s, a, sides[side].name), round = s.round, before = new Set(s.units.map(u => u.id + ':' + u.dmg));

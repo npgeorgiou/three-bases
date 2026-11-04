@@ -1,7 +1,7 @@
 /* =====================================================================
    THE EARLIER BENCHMARK'S SCORE AND SEARCH
    Its hand-tuned score of a position and its shallow search (own action, the opponent's best reply, own best
-   follow-up); used by the Strategist and by a learning AI's "Benchmark search". The lab's Benchmark player is the game's.
+   follow-up); used by a learning AI's "Benchmark search". The lab's Benchmark player is the game's.
    ===================================================================== */
 
 /** Rough worth of a unit on the board. */

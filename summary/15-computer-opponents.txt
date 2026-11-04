@@ -9,5 +9,5 @@ In the game (three-bases-game.html):
 - Effect values (4 Nov 2026): a unit's worth can add values per kind of effect and per timing (op_<what>, on_<when>; see section 16, Tuning). BENCH_VALUES has none yet, so they add nothing and the Benchmark plays as before. New values come from the AI lab's "Make this the Benchmark" file, written into benchmark.js by tools/set_benchmark.py.
 - The Random player: picks a kind of move at random (deploy, move, attack, spell or pass), then a move of that kind; redraws 0-3 random cards.
 - Second player on the same screen.
-- Not in the game yet: the Strategist, the tunable ifelse AI and the learning AIs (lab only).
+- Not in the game yet: the tunable ifelse AI and the learning AIs (lab only).
 - Speed: the look-ahead uses alpha-beta pruning (skips lines that cannot change the choice) and fast board-geometry helpers; moves are identical to the unpruned search (verified on seeded games).

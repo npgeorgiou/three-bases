@@ -298,7 +298,7 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
   </div>
   <div class="setup">
     <label>Check match games <input type="number" id="tuCheckN" min="20" max="2000" step="2" value="200"></label>
-    <button id="tuCheck" title="The current values (the centre) play the game's Benchmark at the Benchmark's own depth, every game dealt the same way for both. Only if they win clearly is a file for the game downloaded">Make this the Benchmark</button>
+    <button id="tuCheck" title="The current values (the centre) play the game's Benchmark, both at the tuning depth, every game dealt the same way for both. Only if they win clearly is a file for the game downloaded">Make this the Benchmark</button>
     <span class="sub" id="tuCheckStatus"></span>
   </div>
   <div class="tuopps" id="tuOpps" role="group" aria-label="Opponents"></div>
@@ -4491,7 +4491,7 @@ const labDeck = (key, name, fac, list) => (DECKS[key] = { name, fac, list: list.
 /* =====================================================================
    THE EARLIER BENCHMARK'S SCORE AND SEARCH
    Its hand-tuned score of a position and its shallow search (own action, the opponent's best reply, own best
-   follow-up); used by the Strategist and by a learning AI's "Benchmark search". The lab's Benchmark player is the game's.
+   follow-up); used by a learning AI's "Benchmark search". The lab's Benchmark player is the game's.
    ===================================================================== */
 
 /** Rough worth of a unit on the board. */
@@ -4625,35 +4625,16 @@ function search(t, p, depth, alpha = -Infinity, beta = Infinity) {
   return best;
 }
 
-/* =====================================================================
-   Strategist AI (new; the game itself still uses the benchmark AI)
-
-   Knowledge: it never sees the opponent's hand or any deck order. Each decision it deals the
-   opponent a random possible hand from the cards not yet seen (optionally several, averaged).
-
-   Goals: every turn each side gets two goal lanes, the ones cheapest to win or keep (with a
-   preference for keeping last turn's goals). Bases, dots, units and income in goal lanes count
-   fully; the third lane counts for less.
-
-   Rules of thumb: no deploys into a lane already safely won (except income units), no deploys
-   into a lane outside the side's goals unless they block an enemy dot, no spending supply on
-   actions that change nothing.
-
-   Look-ahead: its move, the opponent's best replies, its best answers; each line judged as the
-   round would end if both passed then. The move with the best worst-case line is played.
-   ===================================================================== */
-
-const STRATEGIST_DEFAULTS = {
-  base: 250, dot: 50, offGoal: 0.7,          // worth of a base and a dot; share kept in a non-goal lane
-  twoBases: 400,                              // holding two bases (the opponent holding two counts 1.5x against)
-  unitCost: 10, str: 2, def: 3, front: 6,     // unit worth: per supply cost, strength, defence; bonus in the front row
-  income: 12, safeIncome: 0.3, pool: 3,       // per supply of income; share in a safely won lane; per unspent supply
-  carry: 10, hand: 4, threat: 1, lifeline: 1, // carry-over, cards in hand, what can be killed, out-of-supply danger
-  stick: 1.5,                                 // preference for keeping last turn's goal lanes
-  rootWidth: 8, width2: 6, width1: 4,         // actions examined: own first actions, replies, own answers
-  samples: 3,                                 // random opponent hands to average over
-  rules: true,                                // apply the rules of thumb
-};
+/* ---------- what a player can know: the cards the opponent has not shown, and a guessed position ---------- */
+/** Cards of `side`'s faction not yet seen by the other side, as { cardKey: copies }. */
+function unseenCards(s, side) {
+  const left = {};
+  for (const [k, n] of DECKS[s.players[side].deck].list) left[k] = (left[k] || 0) + n;
+  const seen = [...s.players[side].discard, ...s.units.filter(u => u.owner === side).map(u => u.card)];
+  for (const k of seen) if (left[k]) left[k]--;
+  for (const k in left) if (!left[k]) delete left[k];
+  return left;
+}
 
 /** The game as `me` may know it: the opponent holds a random possible hand; decks in unknown order. */
 function sampledView(s, me) {
@@ -4668,184 +4649,10 @@ function sampledView(s, me) {
   return v;
 }
 
-/* ---------- what can be known ---------- */
-
-/** Cards of `side`'s faction not yet seen by the other side, as { cardKey: copies }. */
-function unseenCards(s, side) {
-  const left = {};
-  for (const [k, n] of DECKS[s.players[side].deck].list) left[k] = (left[k] || 0) + n;
-  const seen = [...s.players[side].discard, ...s.units.filter(u => u.owner === side).map(u => u.card)];
-  for (const k of seen) if (left[k]) left[k]--;
-  for (const k in left) if (!left[k]) delete left[k];
-  return left;
-}
-
-/** What `victim` could lose to the other side's unit attacks right now, knowing that Bodyguards protect
- *  their neighbours and that units which already attacked threaten nothing more (cfg switches both). */
-function threatAgainstSeen(s, victim, cfg) {
-  const attacker = other(victim), reserve = s.players[attacker].reserve;
-  let loss = 0;
-  for (const u of s.units.filter(x => ctl(x) === victim)) {
-    if (cfg.threatSeesGuards && !cardOf(u).guard
-      && s.units.some(g => ctl(g) === victim && g !== u && cardOf(g).guard && adjacent(u, g))) continue;
-    const budget = s.pool[attacker][u.lane] + reserve;
-    let best = 0;
-    for (const a of unitsIn(s, attacker, u.lane)) {
-      const c = cardOf(a);
-      if (strengthOf(a) <= 0 || budget < c.sup || (cfg.threatSeesActed && a.attacked)) continue;
-      if (!isIncorp(u) && reaches(a, u)) best = Math.max(best, strengthOf(a));
-    }
-    loss += best >= defenceOf(u) ? unitValue(u) * 0.6 : best * 2;
-  }
-  return loss;
-}
-
-/* ---------- goals ---------- */
-
-/** How much it would take `p` to win (or keep) a lane: missing dots, enemy dots and power, own power and income. */
-function laneNeed(s, p, lane) {
-  const q = other(p), d = dotState(s, lane);
-  const power = side => unitsIn(s, side, lane).reduce((n, u) => n + strengthOf(u) + defenceOf(u), 0);
-  return 2 * Math.max(0, 2 - d.filter(x => x === p).length) + 1.5 * d.filter(x => x === q).length
-    + 0.15 * power(q) - 0.1 * power(p) - 0.2 * laneSupply(s, p, lane);
-}
-
-/** The two lanes `p` fights for: its two bases if it holds two, else the two cheapest to win. */
-function pickGoals(s, p, prev, cfg) {
-  if (basesHeld(s, p) >= 2) return LANES.filter(l => s.owner[l] === p).slice(0, 2);
-  const cost = l => laneNeed(s, p, l) - (prev && prev.includes(l) ? cfg.stick : 0);
-  return LANES.slice().sort((a, b) => cost(a) - cost(b)).slice(0, 2);
-}
-
-/* ---------- score ---------- */
-
-const STRAT_THREAT = { threatSeesGuards: true, threatSeesActed: true };
-
-/** Score of a position for p, valuing p's goal lanes fully and the third lane at the off-goal share. */
-function strategistEvaluate(s, p, goal, cfg) {
-  if (s.winner !== null) return evaluate(s, p);
-  const q = other(p);
-  let v = 0;
-  for (const lane of LANES) {
-    const w = goal.includes(lane) ? 1 : cfg.offGoal, d = dotState(s, lane), owner = ownerOfDots(d);
-    v += w * ((owner === p ? cfg.base : owner === q ? -cfg.base : 0) + cfg.dot * (d.filter(x => x === p).length - d.filter(x => x === q).length));
-    for (const u of s.units) {
-      if (u.lane !== lane) continue;
-      const c = cardOf(u), worth = c.sup * cfg.unitCost + strengthOf(u) * cfg.str + defenceOf(u) * cfg.def
-        + (inFront(u) && (strengthOf(u) > 0 || c.def > 1) ? cfg.front : 0);
-      v += (ctl(u) === p ? 1 : -1) * (0.5 + 0.5 * w) * worth;
-    }
-    const income = side => (isSafeLane(s, side, lane) ? cfg.safeIncome : 1) * Math.min(6, laneSupply(s, side, lane));
-    v += cfg.income * w * (income(p) - income(q)) + cfg.pool * (s.pool[p][lane] - s.pool[q][lane]);
-  }
-  if (basesHeld(s, p) >= 2) v += cfg.twoBases;
-  if (basesHeld(s, q) >= 2) v -= 1.5 * cfg.twoBases;
-  const mine = threatAgainstSeen(s, p, STRAT_THREAT), theirs = threatAgainstSeen(s, q, STRAT_THREAT);
-  v += cfg.threat * (s.cur === q ? -mine + 0.3 * theirs : 0.9 * theirs - 0.3 * mine);
-  const carry = side => (s.carried ? s.carried[side] : projectedCarry(s, side));
-  v += cfg.carry * (carry(p) - carry(q)) + cfg.hand * (s.players[p].hand.length - s.players[q].hand.length);
-  const danger = side => {
-    if (carry(side) > 0) return 0;
-    const n = s.units.filter(u => ctl(u) === side).length;
-    return n === 0 ? 1000 : n === 1 ? 300 : n === 2 ? 100 : 0;
-  };
-  return v + cfg.lifeline * (danger(q) - danger(p));
-}
-
-
-/* ---------- rules of thumb ---------- */
-
-/** Whether a deploy breaks a rule of thumb for the side making it. */
-function breaksRule(s, a, goal) {
-  if (a.t !== 'deploy') return false;
-  const p = s.cur, card = CARDS[s.players[p].hand[a.hi]];
-  if (card.bonus) return false;                                   // income units may go anywhere safe
-  if (isSafeLane(s, p, a.lane)) return true;                      // don't overload a lane already won
-  if (goal.includes(a.lane)) return false;
-  // outside the goals only to block an enemy dot: a front-row spot facing an enemy front unit
-  const cells = cellsAt(card.size, a.r, a.c, a.o).filter(([r]) => r === frontRow(p)).map(([, c]) => c);
-  return !cells.some(c => dotState(s, a.lane)[c] === other(p));
-}
-
-/** Every legal option for the side to move (every placement counts), rules applied, best first. */
-function strategistOptions(t, goals, cfg) {
-  const side = t.cur, out = [];
-  for (const a of listActions(t)) {
-    if (cfg.rules && breaksRule(t, a, goals[side])) continue;
-    const n = cloneState(t);
-    applyAction(n, a);
-    out.push({ a, t: n, v: strategistEvaluate(n, side, goals[side], cfg) });
-  }
-  return out.sort((x, y) => y.v - x.v);
-}
-
-/* ---------- look-ahead ---------- */
-
-function strategistSearch(t, me, depth, goals, cfg, alpha = -Infinity, beta = Infinity) {
-  // alpha-beta pruning, as in the Benchmark's search: called without bounds (as the top level does) the value is
-  // exact; below that, lines that cannot change the result are not looked at
-  if (t.winner !== null) return evaluate(t, me);
-  if (depth === 0 || t.roundOver) {
-    const view = nextRoundView(t);
-    return view.winner !== null ? evaluate(view, me) : strategistEvaluate(view, me, goals[me], cfg);
-  }
-  const mine = t.cur === me, width = depth === 2 ? cfg.width2 : cfg.width1;
-  const options = strategistOptions(t, goals, cfg);
-  const picked = options.slice(0, width), pass = options.find(o => o.a.t === 'pass');
-  if (pass && !picked.includes(pass)) picked.push(pass);
-  let best = mine ? -Infinity : Infinity;
-  for (const o of picked) {
-    if (mine) {
-      const v = strategistSearch(o.t, me, depth - 1, goals, cfg, Math.max(alpha, best), beta);
-      if (v > best) best = v;
-      if (best > beta) return best;
-    } else {
-      const v = strategistSearch(o.t, me, depth - 1, goals, cfg, alpha, Math.min(beta, best));
-      if (v < best) best = v;
-      if (best < alpha) return best;
-    }
-  }
-  return best;
-}
-
-/** Last turn's goal lanes of each computer player, per game. */
-const strategistGoals = new WeakMap();
-
-function chooseStrategistAction(s, cfg = STRATEGIST_DEFAULTS) {
-  const me = s.cur, opp = other(me), memory = strategistGoals.get(s) || [null, null];
-  const totals = new Map();
-  let goalsUsed = null;
-  for (let k = 0; k < cfg.samples; k++) {
-    const t = sampledView(s, me);
-    t.stopAtRoundEnd = true;
-    const goals = [];
-    goals[me] = pickGoals(t, me, memory[me], cfg);
-    goals[opp] = pickGoals(t, opp, memory[opp], cfg);
-    goalsUsed = goals;
-    const now = outcomeOf(t, me);
-    const options = strategistOptions(t, goals, cfg).filter(o => !isPointless(t, o.a, o.t, now));
-    const picked = options.slice(0, cfg.rootWidth), pass = options.find(o => o.a.t === 'pass');
-    if (pass && !picked.includes(pass)) picked.push(pass);
-    for (const o of picked) {
-      const key = JSON.stringify(o.a), v = strategistSearch(o.t, me, 2, goals, cfg);
-      const e = totals.get(key) || { a: o.a, sum: 0, n: 0, cost: actionCost(t, o.a) };
-      e.sum += v; e.n++;
-      totals.set(key, e);
-    }
-  }
-  strategistGoals.set(s, goalsUsed);
-  let best = null;
-  for (const e of totals.values()) {
-    const value = e.sum / e.n;
-    if (!best || value > best.value + 1e-6 || (Math.abs(value - best.value) <= 1e-6 && e.cost < best.cost)) best = { a: e.a, value, cost: e.cost };
-  }
-  return best ? best.a : { t: 'pass' };
-}
-
 /* =====================================================================
    ifelse AI: sees everything (both hands, the real position) and searches it. No rules of thumb:
    every judgement is a weighted term, and every weight, width and switch is a tunable value.
-   Starting values: the Benchmark's; the Strategist's where only it has the term (goal lanes, off by default).
+   Starting values: the game's Benchmark's (goal lanes start off).
    ===================================================================== */
 /** [key, label, type, start, extra]: type int [lo, hi] | switch | share (0.01–1) | num (scale used when at 0). The start is the
  *  game's Benchmark value where it has one (listed here: the earlier Benchmark's), so tuning improves on the Benchmark.
@@ -5429,26 +5236,6 @@ const STORE = 'threeBases.lab.v1', NET_STORE = id => `threeBases.lab.v1.net.${id
 const ROUND_CAP = 40, ACTION_CAP = 500;          // a game still running then ends unfinished (a loss for both)
 const CORES = Math.max(1, (navigator.hardwareConcurrency || 2) - 1);
 
-/* ---------- settings of the configurable Strategist ---------- */
-
-const S_FIELDS = [
-  ['base', 'Worth of holding a base'], ['dot', 'Worth of a dot'],
-  ['offGoal', 'Share a lane outside its two goal lanes still counts (0–1)'],
-  ['twoBases', 'Bonus for holding two bases'], ['unitCost', 'Unit worth per supply it costs'],
-  ['str', 'Unit worth per strength'], ['def', 'Unit worth per defence'], ['front', 'Bonus for a unit in the front row'],
-  ['income', 'Per supply of lane income'], ['safeIncome', 'Share income keeps in a lane already safely won (0–1)'],
-  ['pool', 'Per unspent supply this round'], ['carry', 'Per carry-over'], ['hand', 'Per card in hand'],
-  ['threat', 'Multiplier on what units could kill'], ['lifeline', 'Multiplier on out-of-supply danger'],
-  ['stick', 'Preference for keeping last turn\'s goal lanes'],
-  ['rootWidth', 'Own actions examined per move'], ['width2', 'Opponent replies examined'], ['width1', 'Own answers examined'],
-  ['samples', 'Random opponent hands averaged per move'],
-];
-const strategistConfig = cfg => {
-  const out = { ...STRATEGIST_DEFAULTS };
-  for (const [k] of S_FIELDS) if (cfg && cfg[k] !== undefined) out[k] = cfg[k];
-  return out;
-};
-
 /** Trainers added with "+ New trainer": plain ones that learn like Tabula rasa. Read early, as NETS needs them. */
 const trainerNet = x => ({ id: x.id, name: x.name, added: true,
   desc: 'An added trainer. Starts knowing nothing, or from a network file you load, and learns only from its own training games (against itself, or the opponent chosen below): every position is labelled with who went on to win.' });
@@ -5470,13 +5257,12 @@ const netPresets = n => [                      // (the reply-check version was r
     { id: 'net-' + n.id + '-search', name: n.name + ' · Benchmark search', kind: 'net', net: n.id, play: { search: true },
       desc: 'Learning AI inside the earlier Benchmark\'s look-ahead: the same search and the same view of the opponent\'s hand, but the network scores every position. ' + n.desc },
 ];
-/** The ready-made players; Strategist variants you create are added to these. */
+/** The players. */
 const PRESETS = [
   { id: 'bench', name: 'Benchmark', kind: 'bench', desc: 'The game\'s AI. Sees the opponent\'s hand.' },
   { id: 'random', name: 'Random player', kind: 'random', desc: 'A baseline. Picks a kind of move at random (deploy, move, attack, spell or pass), then a move of that kind.' },
   { id: 'ifelse', name: 'ifelse AI', kind: 'ifelse', desc: 'Sees both hands and searches the real position; every judgement is a weighted term, with the values found by its tuning (the starting values until it finds better).',
     get cfg() { return (state.ifelse && state.ifelse.v === 4 && state.ifelse.best) || {}; } },
-  { id: 'strategist', name: 'Strategist', kind: 'strategist', desc: 'Goal lanes, rules of thumb, look-ahead over random possible opponent hands.', cfg: {} },
   ...NETS.flatMap(netPresets),
 ];
 
@@ -5523,7 +5309,7 @@ function load() {
     if (s && s.results && s.training) return s;
   } catch (e) { /* nothing saved, or unreadable */ }
   return {
-    custom: [], chosen: ['bench', 'strategist'], results: [], plan: null,
+    chosen: ['bench', 'ifelse'], results: [], plan: null,
     training: Object.fromEntries(NETS.map(n => [n.id, freshRecord()])),
   };
 }
@@ -5607,7 +5393,7 @@ netDb.then(db => {
   };
 });
 /**
- * The shared library of teacher games (the Benchmark against the Strategist). Each game is kept as the board after
+ * The shared library of teacher games (games played earlier between coded AIs). Each game is kept as the board after
  * the starting-hand redraws plus the list of moves played; after the redraws the rules involve no chance, so
  * replaying the moves gives exactly the same game, at a tiny fraction of the cost of the two players thinking.
  * Every AI that learns from teacher games takes the library's games
@@ -5704,7 +5490,7 @@ netDb.then(db => {                                     // the same for the netwo
 });
 
 const tune = { running: false, pool: null, k: 0 };          // the ifelse AI's tuning, while it runs
-const players = () => [...PRESETS, ...state.custom];
+const players = () => PRESETS;
 const playerById = id => players().find(p => p.id === id);
 const nameOf = id => (playerById(id) || { name: id }).name;
 
@@ -5714,8 +5500,7 @@ function specOf(id) {
   if (p.kind === 'bench') return { kind: 'bench' };
   if (p.kind === 'random') return { kind: 'random' };
   if (p.kind === 'net') return { kind: 'net', net: p.net, play: p.play };
-  if (p.kind === 'ifelse') return { kind: 'ifelse', cfg: ifelseFull(p.cfg) };
-  return { kind: 'strategist', full: strategistConfig(p.cfg) };
+  return { kind: 'ifelse', cfg: ifelseFull(p.cfg) };
 }
 
 /* =====================================================================
@@ -5727,7 +5512,6 @@ function labWorker() {
   /** A player's move: { a: the action, random: whether it was a random exploring move }. */
   function choose(spec, s) {
     if (spec.kind === 'bench') return { a: chooseIfelseAction(s, spec.depth ? { ...BENCH_VALUES, depth: spec.depth } : BENCH_VALUES), random: false };
-    if (spec.kind === 'strategist') return { a: chooseStrategistAction(s, spec.full), random: false };
     if (spec.kind === 'ifelse') return { a: chooseIfelseAction(s, spec.cfg), random: false };
     if (spec.kind === 'random') return { a: randomMove(listActions(s).map(a => ({ a }))).a, random: false };
     return chooseNetActionEx(s, nets[spec.net], spec.play);
@@ -6305,29 +6089,28 @@ function blend(score, hits, tries) {
 
 /**
  * Each AI's training opponent, chosen on its card. 'self' (the default) keeps its usual games; the others replace
- * the second player in its games against itself: the Benchmark, the Strategist, another AI's
- * network (playing alone), or a mix (for each game, at random: itself, the Benchmark, the Strategist or one of the
+ * the second player in its games against itself: the Benchmark, the ifelse AI, another AI's
+ * network (playing alone), or a mix (for each game, at random: itself, the Benchmark, the ifelse AI or one of the
  * other AIs). Learning from the teacher-game library is not affected.
  */
-const OPPONENTS = () => [['self', 'itself'], ['bench', 'the Benchmark'], ['strategist', 'the Strategist'], ['ifelse', 'the ifelse AI'],
+const OPPONENTS = () => [['self', 'itself'], ['bench', 'the Benchmark'], ['ifelse', 'the ifelse AI'],
   ...NETS.map(n => ['net:' + n.id, n.name]), ['mix', 'a mix']];
 /**
- * The test opponent, the same for every AI: the Benchmark (default), the Strategist, or a network loaded from a file and
+ * The test opponent, the same for every AI: the Benchmark (default) or a network loaded from a file and
  * kept frozen (stored as netData.testopp), so results stay comparable from test to test. Each test records whom it was against.
  */
 const testOpp = () => state.testOpp || { kind: 'bench' };
-const testOppName = () => { const o = testOpp(); return o.kind === 'strategist' ? 'the Strategist' : o.kind === 'net' ? o.name : `the Benchmark (depth ${benchDepth()})`; };   // a new depth marks the chart like a new opponent
+const testOppName = () => { const o = testOpp(); return o.kind === 'net' ? o.name : `the Benchmark (depth ${benchDepth()})`; };   // a new depth marks the chart like a new opponent
 /** How far the Benchmark looks ahead as training opponent and in tests (setting; 1 is about 60 times faster than its full depth). */
 const benchDepth = () => Number($('#tBenchDepth').value) || 1;
 function testOppSpec() {
   const o = testOpp();
-  if (o.kind === 'strategist') return { kind: 'strategist', full: strategistConfig({}) };
   if (o.kind === 'net' && netData.testopp) return { kind: 'net', net: 'testopp', play: { replies: false, explore: 0 } };
   return { kind: 'bench', depth: benchDepth() };
 }
 function renderTestOpp() {
   const o = testOpp();
-  $('#tTestOpp').innerHTML = `<option value="bench">the Benchmark</option><option value="strategist">the Strategist</option>`
+  $('#tTestOpp').innerHTML = `<option value="bench">the Benchmark</option>`
     + (o.kind === 'net' ? `<option value="net">${esc(o.name)} (frozen network)</option>` : '') + `<option value="file">a network file…</option>`;
   $('#tTestOpp').value = o.kind;
 }
@@ -6340,7 +6123,7 @@ function setTestOpp(o) {
 $('#tTestOpp').addEventListener('change', () => {
   const v = $('#tTestOpp').value;
   if (v === 'file') { renderTestOpp(); $('#tTestFile').click(); return; }
-  if (v === 'bench' || v === 'strategist') setTestOpp({ kind: v });
+  if (v === 'bench') setTestOpp({ kind: v });
 });
 $('#tTestFile').addEventListener('change', async () => {
   const f = $('#tTestFile').files[0];
@@ -6354,8 +6137,8 @@ $('#tTestFile').addEventListener('change', async () => {
     setTestOpp({ kind: 'net', name: file.name || f.name.replace(/\.json$/i, '') });
   } catch (e) { reportError('That file is not a network from this version of the AI lab.'); }
 });
-/** Who can be in an AI's mix: itself, the Benchmark, the Strategist and every other learning AI. */
-const mixChoices = id => ['self', 'bench', 'strategist', 'ifelse', ...NETS.filter(n => n.id !== id).map(n => 'net:' + n.id)];
+/** Who can be in an AI's mix: itself, the Benchmark, the ifelse AI and every other learning AI. */
+const mixChoices = id => ['self', 'bench', 'ifelse', ...NETS.filter(n => n.id !== id).map(n => 'net:' + n.id)];
 /** Who is in it: the members chosen in its mix panel (still existing), or everyone when none were chosen. */
 function mixOf(id) {
   const all = mixChoices(id), chosen = state.training[id].mix;
@@ -6367,7 +6150,6 @@ function opponentSpec(id, self) {
   if (o === 'mix') { const pool = mixOf(id); o = pool[Math.floor(Math.random() * pool.length)]; }
   if (o === 'self' || o === 'net:' + id) return null;
   if (o === 'bench') return { kind: 'bench', depth: benchDepth() };
-  if (o === 'strategist') return { kind: 'strategist', full: strategistConfig({}) };
   if (o === 'ifelse') return { kind: 'ifelse', cfg: ifelseFull(state.ifelse && state.ifelse.v === 4 ? state.ifelse.best : {}) };   // its current tuned values
   if (o.startsWith('net:')) return { kind: 'net', net: 'opp:' + o.slice(4), play: { replies: false, explore: 0 } };
   return null;
@@ -6467,7 +6249,7 @@ function restartComparison(id) { for (const lr of stepSizes(id)) { lr.below = 0;
  * game count and the new kind (the teacher-game library during a library session, otherwise its training opponent). Each period is shaded in its own colour.
  */
 const PERIOD_KINDS = () => ({ library: ['the teacher-game library', '#4f7f5a'], self: ['itself', '#6f9fd8'], bench: ['the Benchmark', '#d86f6f'],
-  strategist: ['the Strategist', '#d8b04a'], random: ['the Random player', '#9b9b9b'], mix: ['a mix', '#b07fd8'], ifelse: ['the ifelse AI', '#4fa3c7'],
+  random: ['the Random player', '#9b9b9b'], mix: ['a mix', '#b07fd8'], ifelse: ['the ifelse AI', '#4fa3c7'],
   'net:tabula': ['Tabula rasa', '#5fb8a8'],
   ...Object.fromEntries(NETS.filter(n => n.id !== 'tabula').map((n, i) => ['net:' + n.id, [n.name, ['#7fa8d8', '#d8a07f'][i % 2]]])) });
 function periodKind(id) {
@@ -7092,7 +6874,7 @@ function cardActions(n) {
       <button data-a="test" data-id="${n.id}">${testingNow ? 'Stop test' : 'Test now (100 games)'}</button>
       <button data-a="watch" data-id="${n.id}">Watch a game</button>
       <select data-a="wvs" data-id="${n.id}" aria-label="Opponent to watch it play">
-        <option value="self">against itself</option><option value="bench">against the Benchmark</option><option value="strategist">against the Strategist</option><option value="random">against the Random player</option>
+        <option value="self">against itself</option><option value="bench">against the Benchmark</option><option value="random">against the Random player</option>
       </select>
       <button data-a="download" data-id="${n.id}" title="The network with its whole training record (chart, tests, settings), to continue training later">Export training</button>
       <button data-a="netonly" data-id="${n.id}" title="The network only, without its training record; you name it (suggested: the AI and its latest win rate against the Benchmark)">Export network</button>
@@ -7347,29 +7129,17 @@ function renderRoster() {
   const list = $('#aiList');
   list.innerHTML = '';
   for (const p of players()) {
-    const custom = state.custom.includes(p), row = document.createElement('div');
+    const row = document.createElement('div');
     row.className = 'ai';
     row.innerHTML = `<input type="checkbox" aria-label="Enter ${esc(p.name)}" ${state.chosen.includes(p.id) ? 'checked' : ''}>
-      <div class="name">${esc(p.name)}${custom ? '<span class="tag">yours</span>' : ''}</div>
-      <div class="acts">${custom ? '<button data-a="del">Delete</button>' : ''}</div>
-      <div class="desc">${esc(p.desc || describe(p))}</div>`;
+      <div class="name">${esc(p.name)}</div>
+      <div class="desc">${esc(p.desc || '')}</div>`;
     row.querySelector('input').addEventListener('change', e => {
       state.chosen = e.target.checked ? [...new Set([...state.chosen, p.id])] : state.chosen.filter(x => x !== p.id);
       save();
     });
-    row.querySelectorAll('[data-a]').forEach(b => b.addEventListener('click', async () => {
-      if (b.dataset.a === 'del' && await askYes(`Delete ${p.name}?`, '', 'Delete')) {
-        state.custom = state.custom.filter(x => x !== p);
-        state.chosen = state.chosen.filter(x => x !== p.id);
-        save(); renderPlayers();
-      }
-    }));
     list.appendChild(row);
   }
-}
-function describe(p) {
-  const changes = S_FIELDS.filter(([k]) => p.cfg && p.cfg[k] !== undefined).map(([k]) => `${k} ${p.cfg[k]}`);
-  return 'Strategist. ' + (changes.length ? 'Changes: ' + changes.join(', ') : 'Default settings.');
 }
 function renderPlayers() {
   if (typeof renderAgreeChoices === 'function' && $('#sA').options.length) renderAgreeChoices();
@@ -7473,12 +7243,11 @@ function record(r, job) {
 
 /* ---------- ifelse AI: tuning all its values at once with CMA-ES ---------- */
 
-/** Who the ifelse AI can play against: the Benchmark, the Strategist and every learning AI in the lab (playing as in its tests). */
-const TUNE_OPPS = () => [['bench', 'Benchmark'], ['strategist', 'Strategist'], ...NETS.map(n => ['net:' + n.id, n.name])];
+/** Who the ifelse AI can play against: the Benchmark and every learning AI in the lab (playing as in its tests). */
+const TUNE_OPPS = () => [['bench', 'Benchmark'], ...NETS.map(n => ['net:' + n.id, n.name])];
 const tuneOppName = k => (TUNE_OPPS().find(([x]) => x === k) || [k, k])[1];
 function tuneOppSpec(k, depth) {
   if (k === 'bench') return { kind: 'bench', depth };
-  if (k === 'strategist') return { kind: 'strategist', full: strategistConfig({}) };
   return { kind: 'net', net: k.slice(4), play: { replies: false, explore: 0 } };
 }
 /*
@@ -7657,14 +7426,14 @@ function setTuneDepth(d) {
   if (was) startTune(); else renderTune();
 }
 
-/* ---------- "Make this the Benchmark": a check match against the game's Benchmark at full depth ---------- */
+/* ---------- "Make this the Benchmark": a check match against the game's Benchmark at the tuning depth ---------- */
 const check = { pool: null, run: null };
-/** The values the check match plays and the game would get: the centre, looking as far ahead as the Benchmark. */
+/** The values the game would get: the centre, looking as far ahead as the game's Benchmark (the check match plays them at the tuning depth). */
 const checkValues = () => { const v = { ...ifelseFull(tuneState().best), depth: BENCH_VALUES.depth }; return Object.fromEntries(Object.keys(v).filter(k => k in BENCH_VALUES || k in IFELSE_DEFAULTS || k === 'depth').map(k => [k, v[k]])); };
 function renderCheck() {
   const r = check.run || (tuneState().lastCheck || null);
   $('#tuCheck').textContent = check.pool ? 'Stop the check' : 'Make this the Benchmark';
-  if (!r) { $('#tuCheckStatus').textContent = 'The centre plays the Benchmark at its full depth; only a clear win gives a file for the game.'; return; }
+  if (!r) { $('#tuCheckStatus').textContent = 'The centre plays the Benchmark, both at the tuning depth; only a clear win gives a file for the game.'; return; }
   const n = r.w + r.l + r.d, v = verdict(r.w, r.l);
   $('#tuCheckStatus').textContent = `${check.pool ? 'Checking' : 'Last check'} (generation ${r.gen + 1}): ${n}/${r.N} games, won ${r.w}, lost ${r.l}, drawn ${r.d}`
     + (n ? ` (${tpct((r.w + r.d / 2) / n)})` : '') + (n === r.N || !check.pool ? ` · ${v === 2 ? 'clearly better than the Benchmark: file downloaded' : v === 1 ? 'probably better, not clearly: no file' : v <= -1 ? 'worse than the Benchmark: no file' : 'not clearly better: no file'}` : '');
@@ -7672,7 +7441,7 @@ function renderCheck() {
 function checkJob() {
   const r = check.run;
   if (!r || r.started >= r.N) return null;
-  const j = r.started++, seat = j % 2, mine = { kind: 'ifelse', cfg: r.values }, opp = { kind: 'bench' };
+  const j = r.started++, seat = j % 2, mine = { kind: 'ifelse', cfg: { ...r.values, depth: r.depth } }, opp = { kind: 'bench', depth: r.depth };
   return { key: 'check' + j, j, seat, specs: seat === 0 ? [mine, opp] : [opp, mine], decks: scheduledDecks(j), seed: 7000003 + Math.floor(j / 2) };
 }
 function checkResult(res, job) {
@@ -7702,7 +7471,7 @@ $('#tuCheck').addEventListener('click', () => {
   if (Object.keys(trainings).length) stopAllTraining();
   if (tour.running) pauseTournament();
   const N = Math.max(20, Math.round(Number($('#tuCheckN').value) / 2) * 2 || 200);
-  check.run = { gen: tuneState().gen, N, started: 0, w: 0, l: 0, d: 0, values: checkValues() };
+  check.run = { gen: tuneState().gen, N, started: 0, w: 0, l: 0, d: 0, values: checkValues(), depth: tuneState().depth };
   check.pool = new Pool(Math.max(1, Math.min(32, Number($('#tuThreads').value) || 1)), Object.fromEntries(NETS.map(n => [n.id, playable(netData[n.id])])), checkJob, checkResult,
     (job, msg) => { if (check.run) check.run.started--; reportError('A check game failed: ' + msg); });
   renderCheck();
@@ -8187,10 +7956,9 @@ function exportText(pairs, people, sides) {
     const pl = playerById(p.id);
     if (!pl) continue;
     const extra = pl.kind === 'random' ? 'random player (picks a kind of move at random, then a move of that kind)' : pl.kind === 'net' ? `learning AI, trained on ${state.training[pl.net].games} games against itself${state.training[pl.net].teacherGames ? ` and ${state.training[pl.net].teacherGames} teacher games` : ''}`
-      : pl.kind === 'bench' ? 'benchmark AI (sees the opponent\'s hand)' : pl.kind === 'ifelse' ? 'ifelse AI (sees both hands) ' + JSON.stringify(ifelseFull(pl.cfg)) : 'Strategist ' + JSON.stringify(pl.cfg || {});
+      : pl.kind === 'bench' ? 'benchmark AI (sees the opponent\'s hand)' : 'ifelse AI (sees both hands) ' + JSON.stringify(ifelseFull(pl.cfg));
     lines.push(`  ${pl.name}: ${extra}`);
   }
-  lines.push('', 'Strategist defaults: ' + JSON.stringify(STRATEGIST_DEFAULTS));
   return lines.join('\n');
 }
 $('#copy').addEventListener('click', async () => {
@@ -8237,7 +8005,7 @@ async function watchGame(sides, factions) {
     while (watch.paused && token === watch.token) await wait(150);
     if (token !== watch.token) return;
     const side = s.cur, spec = sides[side].spec;
-    const a = spec.kind === 'bench' ? chooseIfelseAction(s, BENCH_VALUES) : spec.kind === 'ifelse' ? chooseIfelseAction(s, spec.cfg) : spec.kind === 'strategist' ? chooseStrategistAction(s, spec.full)
+    const a = spec.kind === 'bench' ? chooseIfelseAction(s, BENCH_VALUES) : spec.kind === 'ifelse' ? chooseIfelseAction(s, spec.cfg)
       : spec.kind === 'random' ? randomMove(listActions(s).map(x => ({ a: x }))).a
       : chooseNetAction(s, watch.nets[spec.net], spec.play);
     const text = describeAction(s, a, sides[side].name), round = s.round, before = new Set(s.units.map(u => u.id + ':' + u.dmg));
@@ -8380,9 +8148,13 @@ for (const sel of SETTING_INPUTS) {
 }
 window.addEventListener('beforeunload', () => { for (const id of Object.keys(trainings)) saveNets(id); if (Object.keys(trainings).length) save(); });
 for (const old of ['scholar', 'apprentice', 'wanderer']) dropNetRefs(old);   // removed AIs: out of the tournament's entries, training opponents and mixes
+// the Strategist is gone: saved choices that named it fall back to the defaults
+for (const r of Object.values(state.training)) { if (r.opponent === 'strategist') r.opponent = 'self'; if (Array.isArray(r.mix)) r.mix = r.mix.filter(k => k !== 'strategist'); }
+if (state.testOpp && state.testOpp.kind === 'strategist') state.testOpp = { kind: 'bench' };
+delete state.custom;
 for (const r of Object.values(state.training)) if (Array.isArray(r.mix)) r.mix = r.mix.filter(k => !k.startsWith('net:') || NETS.some(n => 'net:' + n.id === k));
 save();
-state.chosen = state.chosen.filter(p => !NETS.some(n => p === 'net-' + n.id));   // the removed reply-check players
+state.chosen = state.chosen.filter(p => playerById(p) && !NETS.some(n => p === 'net-' + n.id));   // the removed reply-check players
 renderTraining();
 renderPlayers();
 renderResults();

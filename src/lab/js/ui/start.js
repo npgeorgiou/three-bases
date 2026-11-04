@@ -36,9 +36,13 @@ for (const sel of SETTING_INPUTS) {
 }
 window.addEventListener('beforeunload', () => { for (const id of Object.keys(trainings)) saveNets(id); if (Object.keys(trainings).length) save(); });
 for (const old of ['scholar', 'apprentice', 'wanderer']) dropNetRefs(old);   // removed AIs: out of the tournament's entries, training opponents and mixes
+// the Strategist is gone: saved choices that named it fall back to the defaults
+for (const r of Object.values(state.training)) { if (r.opponent === 'strategist') r.opponent = 'self'; if (Array.isArray(r.mix)) r.mix = r.mix.filter(k => k !== 'strategist'); }
+if (state.testOpp && state.testOpp.kind === 'strategist') state.testOpp = { kind: 'bench' };
+delete state.custom;
 for (const r of Object.values(state.training)) if (Array.isArray(r.mix)) r.mix = r.mix.filter(k => !k.startsWith('net:') || NETS.some(n => 'net:' + n.id === k));
 save();
-state.chosen = state.chosen.filter(p => !NETS.some(n => p === 'net-' + n.id));   // the removed reply-check players
+state.chosen = state.chosen.filter(p => playerById(p) && !NETS.some(n => p === 'net-' + n.id));   // the removed reply-check players
 renderTraining();
 renderPlayers();
 renderResults();

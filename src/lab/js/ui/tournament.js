@@ -8,29 +8,17 @@ function renderRoster() {
   const list = $('#aiList');
   list.innerHTML = '';
   for (const p of players()) {
-    const custom = state.custom.includes(p), row = document.createElement('div');
+    const row = document.createElement('div');
     row.className = 'ai';
     row.innerHTML = `<input type="checkbox" aria-label="Enter ${esc(p.name)}" ${state.chosen.includes(p.id) ? 'checked' : ''}>
-      <div class="name">${esc(p.name)}${custom ? '<span class="tag">yours</span>' : ''}</div>
-      <div class="acts">${custom ? '<button data-a="del">Delete</button>' : ''}</div>
-      <div class="desc">${esc(p.desc || describe(p))}</div>`;
+      <div class="name">${esc(p.name)}</div>
+      <div class="desc">${esc(p.desc || '')}</div>`;
     row.querySelector('input').addEventListener('change', e => {
       state.chosen = e.target.checked ? [...new Set([...state.chosen, p.id])] : state.chosen.filter(x => x !== p.id);
       save();
     });
-    row.querySelectorAll('[data-a]').forEach(b => b.addEventListener('click', async () => {
-      if (b.dataset.a === 'del' && await askYes(`Delete ${p.name}?`, '', 'Delete')) {
-        state.custom = state.custom.filter(x => x !== p);
-        state.chosen = state.chosen.filter(x => x !== p.id);
-        save(); renderPlayers();
-      }
-    }));
     list.appendChild(row);
   }
-}
-function describe(p) {
-  const changes = S_FIELDS.filter(([k]) => p.cfg && p.cfg[k] !== undefined).map(([k]) => `${k} ${p.cfg[k]}`);
-  return 'Strategist. ' + (changes.length ? 'Changes: ' + changes.join(', ') : 'Default settings.');
 }
 function renderPlayers() {
   if (typeof renderAgreeChoices === 'function' && $('#sA').options.length) renderAgreeChoices();

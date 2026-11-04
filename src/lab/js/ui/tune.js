@@ -1,11 +1,10 @@
 /* ---------- ifelse AI: tuning all its values at once with CMA-ES ---------- */
 
-/** Who the ifelse AI can play against: the Benchmark, the Strategist and every learning AI in the lab (playing as in its tests). */
-const TUNE_OPPS = () => [['bench', 'Benchmark'], ['strategist', 'Strategist'], ...NETS.map(n => ['net:' + n.id, n.name])];
+/** Who the ifelse AI can play against: the Benchmark and every learning AI in the lab (playing as in its tests). */
+const TUNE_OPPS = () => [['bench', 'Benchmark'], ...NETS.map(n => ['net:' + n.id, n.name])];
 const tuneOppName = k => (TUNE_OPPS().find(([x]) => x === k) || [k, k])[1];
 function tuneOppSpec(k, depth) {
   if (k === 'bench') return { kind: 'bench', depth };
-  if (k === 'strategist') return { kind: 'strategist', full: strategistConfig({}) };
   return { kind: 'net', net: k.slice(4), play: { replies: false, explore: 0 } };
 }
 /*
@@ -184,14 +183,14 @@ function setTuneDepth(d) {
   if (was) startTune(); else renderTune();
 }
 
-/* ---------- "Make this the Benchmark": a check match against the game's Benchmark at full depth ---------- */
+/* ---------- "Make this the Benchmark": a check match against the game's Benchmark at the tuning depth ---------- */
 const check = { pool: null, run: null };
-/** The values the check match plays and the game would get: the centre, looking as far ahead as the Benchmark. */
+/** The values the game would get: the centre, looking as far ahead as the game's Benchmark (the check match plays them at the tuning depth). */
 const checkValues = () => { const v = { ...ifelseFull(tuneState().best), depth: BENCH_VALUES.depth }; return Object.fromEntries(Object.keys(v).filter(k => k in BENCH_VALUES || k in IFELSE_DEFAULTS || k === 'depth').map(k => [k, v[k]])); };
 function renderCheck() {
   const r = check.run || (tuneState().lastCheck || null);
   $('#tuCheck').textContent = check.pool ? 'Stop the check' : 'Make this the Benchmark';
-  if (!r) { $('#tuCheckStatus').textContent = 'The centre plays the Benchmark at its full depth; only a clear win gives a file for the game.'; return; }
+  if (!r) { $('#tuCheckStatus').textContent = 'The centre plays the Benchmark, both at the tuning depth; only a clear win gives a file for the game.'; return; }
   const n = r.w + r.l + r.d, v = verdict(r.w, r.l);
   $('#tuCheckStatus').textContent = `${check.pool ? 'Checking' : 'Last check'} (generation ${r.gen + 1}): ${n}/${r.N} games, won ${r.w}, lost ${r.l}, drawn ${r.d}`
     + (n ? ` (${tpct((r.w + r.d / 2) / n)})` : '') + (n === r.N || !check.pool ? ` · ${v === 2 ? 'clearly better than the Benchmark: file downloaded' : v === 1 ? 'probably better, not clearly: no file' : v <= -1 ? 'worse than the Benchmark: no file' : 'not clearly better: no file'}` : '');
@@ -199,7 +198,7 @@ function renderCheck() {
 function checkJob() {
   const r = check.run;
   if (!r || r.started >= r.N) return null;
-  const j = r.started++, seat = j % 2, mine = { kind: 'ifelse', cfg: r.values }, opp = { kind: 'bench' };
+  const j = r.started++, seat = j % 2, mine = { kind: 'ifelse', cfg: { ...r.values, depth: r.depth } }, opp = { kind: 'bench', depth: r.depth };
   return { key: 'check' + j, j, seat, specs: seat === 0 ? [mine, opp] : [opp, mine], decks: scheduledDecks(j), seed: 7000003 + Math.floor(j / 2) };
 }
 function checkResult(res, job) {
@@ -229,7 +228,7 @@ $('#tuCheck').addEventListener('click', () => {
   if (Object.keys(trainings).length) stopAllTraining();
   if (tour.running) pauseTournament();
   const N = Math.max(20, Math.round(Number($('#tuCheckN').value) / 2) * 2 || 200);
-  check.run = { gen: tuneState().gen, N, started: 0, w: 0, l: 0, d: 0, values: checkValues() };
+  check.run = { gen: tuneState().gen, N, started: 0, w: 0, l: 0, d: 0, values: checkValues(), depth: tuneState().depth };
   check.pool = new Pool(Math.max(1, Math.min(32, Number($('#tuThreads').value) || 1)), Object.fromEntries(NETS.map(n => [n.id, playable(netData[n.id])])), checkJob, checkResult,
     (job, msg) => { if (check.run) check.run.started--; reportError('A check game failed: ' + msg); });
   renderCheck();

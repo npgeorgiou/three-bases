@@ -3,7 +3,7 @@
  * game count and the new kind (the teacher-game library during a library session, otherwise its training opponent). Each period is shaded in its own colour.
  */
 const PERIOD_KINDS = () => ({ library: ['the teacher-game library', '#4f7f5a'], self: ['itself', '#6f9fd8'], bench: ['the Benchmark', '#d86f6f'],
-  strategist: ['the Strategist', '#d8b04a'], random: ['the Random player', '#9b9b9b'], mix: ['a mix', '#b07fd8'], ifelse: ['the ifelse AI', '#4fa3c7'],
+  random: ['the Random player', '#9b9b9b'], mix: ['a mix', '#b07fd8'], ifelse: ['the ifelse AI', '#4fa3c7'],
   'net:tabula': ['Tabula rasa', '#5fb8a8'],
   ...Object.fromEntries(NETS.filter(n => n.id !== 'tabula').map((n, i) => ['net:' + n.id, [n.name, ['#7fa8d8', '#d8a07f'][i % 2]]])) });
 function periodKind(id) {

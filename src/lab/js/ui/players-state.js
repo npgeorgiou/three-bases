@@ -9,26 +9,6 @@ const STORE = 'threeBases.lab.v1', NET_STORE = id => `threeBases.lab.v1.net.${id
 const ROUND_CAP = 40, ACTION_CAP = 500;          // a game still running then ends unfinished (a loss for both)
 const CORES = Math.max(1, (navigator.hardwareConcurrency || 2) - 1);
 
-/* ---------- settings of the configurable Strategist ---------- */
-
-const S_FIELDS = [
-  ['base', 'Worth of holding a base'], ['dot', 'Worth of a dot'],
-  ['offGoal', 'Share a lane outside its two goal lanes still counts (0–1)'],
-  ['twoBases', 'Bonus for holding two bases'], ['unitCost', 'Unit worth per supply it costs'],
-  ['str', 'Unit worth per strength'], ['def', 'Unit worth per defence'], ['front', 'Bonus for a unit in the front row'],
-  ['income', 'Per supply of lane income'], ['safeIncome', 'Share income keeps in a lane already safely won (0–1)'],
-  ['pool', 'Per unspent supply this round'], ['carry', 'Per carry-over'], ['hand', 'Per card in hand'],
-  ['threat', 'Multiplier on what units could kill'], ['lifeline', 'Multiplier on out-of-supply danger'],
-  ['stick', 'Preference for keeping last turn\'s goal lanes'],
-  ['rootWidth', 'Own actions examined per move'], ['width2', 'Opponent replies examined'], ['width1', 'Own answers examined'],
-  ['samples', 'Random opponent hands averaged per move'],
-];
-const strategistConfig = cfg => {
-  const out = { ...STRATEGIST_DEFAULTS };
-  for (const [k] of S_FIELDS) if (cfg && cfg[k] !== undefined) out[k] = cfg[k];
-  return out;
-};
-
 /** Trainers added with "+ New trainer": plain ones that learn like Tabula rasa. Read early, as NETS needs them. */
 const trainerNet = x => ({ id: x.id, name: x.name, added: true,
   desc: 'An added trainer. Starts knowing nothing, or from a network file you load, and learns only from its own training games (against itself, or the opponent chosen below): every position is labelled with who went on to win.' });
@@ -50,13 +30,12 @@ const netPresets = n => [                      // (the reply-check version was r
     { id: 'net-' + n.id + '-search', name: n.name + ' · Benchmark search', kind: 'net', net: n.id, play: { search: true },
       desc: 'Learning AI inside the earlier Benchmark\'s look-ahead: the same search and the same view of the opponent\'s hand, but the network scores every position. ' + n.desc },
 ];
-/** The ready-made players; Strategist variants you create are added to these. */
+/** The players. */
 const PRESETS = [
   { id: 'bench', name: 'Benchmark', kind: 'bench', desc: 'The game\'s AI. Sees the opponent\'s hand.' },
   { id: 'random', name: 'Random player', kind: 'random', desc: 'A baseline. Picks a kind of move at random (deploy, move, attack, spell or pass), then a move of that kind.' },
   { id: 'ifelse', name: 'ifelse AI', kind: 'ifelse', desc: 'Sees both hands and searches the real position; every judgement is a weighted term, with the values found by its tuning (the starting values until it finds better).',
     get cfg() { return (state.ifelse && state.ifelse.v === 4 && state.ifelse.best) || {}; } },
-  { id: 'strategist', name: 'Strategist', kind: 'strategist', desc: 'Goal lanes, rules of thumb, look-ahead over random possible opponent hands.', cfg: {} },
   ...NETS.flatMap(netPresets),
 ];
 
@@ -103,7 +82,7 @@ function load() {
     if (s && s.results && s.training) return s;
   } catch (e) { /* nothing saved, or unreadable */ }
   return {
-    custom: [], chosen: ['bench', 'strategist'], results: [], plan: null,
+    chosen: ['bench', 'ifelse'], results: [], plan: null,
     training: Object.fromEntries(NETS.map(n => [n.id, freshRecord()])),
   };
 }
@@ -187,7 +166,7 @@ netDb.then(db => {
   };
 });
 /**
- * The shared library of teacher games (the Benchmark against the Strategist). Each game is kept as the board after
+ * The shared library of teacher games (games played earlier between coded AIs). Each game is kept as the board after
  * the starting-hand redraws plus the list of moves played; after the redraws the rules involve no chance, so
  * replaying the moves gives exactly the same game, at a tiny fraction of the cost of the two players thinking.
  * Every AI that learns from teacher games takes the library's games
@@ -284,7 +263,7 @@ netDb.then(db => {                                     // the same for the netwo
 });
 
 const tune = { running: false, pool: null, k: 0 };          // the ifelse AI's tuning, while it runs
-const players = () => [...PRESETS, ...state.custom];
+const players = () => PRESETS;
 const playerById = id => players().find(p => p.id === id);
 const nameOf = id => (playerById(id) || { name: id }).name;
 
@@ -294,7 +273,6 @@ function specOf(id) {
   if (p.kind === 'bench') return { kind: 'bench' };
   if (p.kind === 'random') return { kind: 'random' };
   if (p.kind === 'net') return { kind: 'net', net: p.net, play: p.play };
-  if (p.kind === 'ifelse') return { kind: 'ifelse', cfg: ifelseFull(p.cfg) };
-  return { kind: 'strategist', full: strategistConfig(p.cfg) };
+  return { kind: 'ifelse', cfg: ifelseFull(p.cfg) };
 }
 

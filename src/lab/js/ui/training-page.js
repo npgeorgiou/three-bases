@@ -151,7 +151,7 @@ function cardActions(n) {
       <button data-a="test" data-id="${n.id}">${testingNow ? 'Stop test' : 'Test now (100 games)'}</button>
       <button data-a="watch" data-id="${n.id}">Watch a game</button>
       <select data-a="wvs" data-id="${n.id}" aria-label="Opponent to watch it play">
-        <option value="self">against itself</option><option value="bench">against the Benchmark</option><option value="strategist">against the Strategist</option><option value="random">against the Random player</option>
+        <option value="self">against itself</option><option value="bench">against the Benchmark</option><option value="random">against the Random player</option>
       </select>
       <button data-a="download" data-id="${n.id}" title="The network with its whole training record (chart, tests, settings), to continue training later">Export training</button>
       <button data-a="netonly" data-id="${n.id}" title="The network only, without its training record; you name it (suggested: the AI and its latest win rate against the Benchmark)">Export network</button>
