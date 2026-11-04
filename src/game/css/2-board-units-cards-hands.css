@@ -148,6 +148,7 @@
 .mini rect { fill: currentColor; opacity: .85; }
 .nm { font: 400 calc(var(--cw) * 0.128)/1.1 var(--disp); margin-top: calc(var(--bs) * 0.62 + var(--cw) * 0.17); }
 .card.tac .nm { margin-top: calc(var(--bs) * 0.62); }
+.card.champ .nm::before, .dlit.champ .dn::before { content: '\2605\00a0'; color: #E8C04A; text-shadow: 0 0 2px #000, 0 0 2px #000; }   /* one of the faction's 5 champions */
 .tag { font-size: calc(var(--cw) * 0.095); opacity: .9; }
 .card .art { width: calc(var(--cw) * 0.24); height: calc(var(--cw) * 0.24); flex: 0 0 auto; }
 .ab { font-size: calc(var(--cw) * 0.106); line-height: 1.12; opacity: .96; overflow: hidden; flex: 1 1 auto; min-height: 0; }

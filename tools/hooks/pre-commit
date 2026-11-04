@@ -1,16 +1,10 @@
 #!/bin/sh
-# Refuses a commit that changes a faction's cards or design files unless that faction passes tools/design_gate.py.
+# Refuses a commit that changes how a faction's cards play (cost, stats, keywords, effects) unless that faction passes
+# tools/design_gate.py. Text, hover links, art and champion marks don't count (tools/hooks/gameplay_changed.js).
 # Turned on at the start of every chat: git config core.hooksPath tools/hooks (CLAUDE.md). Never commit with --no-verify.
 cd "$(git rev-parse --show-toplevel)" || exit 1
-letters=$(git diff --cached --name-only | sed -n \
-  -e 's#^src/game/js/cards/new-horologers\.js$#c#p' -e 's#^src/game/js/cards/new-sunfeeders\.js$#d#p' \
-  -e 's#^src/game/js/cards/new-impi\.js$#a#p' -e 's#^src/game/js/cards/new-hospice\.js$#b#p' \
-  -e 's#^src/game/js/cards/new-starpriests\.js$#s#p' -e 's#^src/game/js/cards/new-rootkin\.js$#o#p' \
-  -e 's#^src/game/js/cards/new-longguns\.js$#l#p' \
-  -e 's#^factions/designs/\(horologers\)[-a-z]*\.txt$#c#p' -e 's#^factions/designs/\(sunfeeders\)[-a-z]*\.txt$#d#p' \
-  -e 's#^factions/designs/\(impi\)[-a-z]*\.txt$#a#p' -e 's#^factions/designs/\(hospice\)[-a-z]*\.txt$#b#p' \
-  -e 's#^factions/designs/\(starpriests\)[-a-z]*\.txt$#s#p' -e 's#^factions/designs/\(rootkin\)[-a-z]*\.txt$#o#p' \
-  -e 's#^factions/designs/\(longguns\)[-a-z]*\.txt$#l#p' | sort -u)
+git diff --cached --name-only | grep -q '^src/game/js/cards/' || exit 0
+letters=$(node tools/hooks/gameplay_changed.js)
 [ -z "$letters" ] && exit 0
 python3 tools/build.py >/dev/null || exit 1
 for f in $letters; do

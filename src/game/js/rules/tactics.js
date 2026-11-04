@@ -3,7 +3,6 @@
 function spellCost(s, k, a) {
   if (k === 'bribe') { const t = byId(s, a.tid); return t ? unitSupply(t) : 0; }
   if (k === 'cuts') return a.n || 0;
-  if (k === 'debt') return debtCost(s, s.cur);
   return CARDS[k].cost;
 }
 /** The lane a spell action works in. */

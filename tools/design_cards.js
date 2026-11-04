@@ -14,12 +14,12 @@ const plain = t => t.replace(/\[\[([^\]|]+)\|[^\]]+\]\]/g, '$1').replace(/\[\[([
 const out = [];
 for (const [k, c] of Object.entries(ctx.C)) {
   if (c.fac !== fac || c.token || !c.net) continue;
-  const [mech, makes, needs, champ] = c.net.split('/').map(x => x.trim());
+  const [mech, makes, needs] = c.net.split('/').map(x => x.trim());
   const cost = c.tactic ? `spell ${c.cost}` : `${c.sup} - ${c.str}|${c.def}${SIZE[c.size] || ''}`;
   const lines = [`CARD ${c.name}`, cost, plain(c.text), `mech: ${mech}`];
   if (makes && makes !== '-') lines.push(`makes: ${makes.replace(/^makes\s*/, '')}`);
   if (needs && needs !== '-') lines.push(`needs: ${needs.replace(/^needs\s*/, '')}`);
-  if (champ === 'champion') lines.push('champion');
+  if (c.champion) lines.push('champion');
   out.push(lines.join(' | '));
 }
 console.log(out.join('\n'));

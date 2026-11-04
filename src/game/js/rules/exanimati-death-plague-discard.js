@@ -4,8 +4,6 @@ const isUnitCard = k => !CARDS[k].tactic;
 const keepsCard = k => !CARDS[k].token;
 /** How many of p's units died this round (Bone Harvest). */
 const diedThisRound = (s, p) => (s.players[p].deathsR === s.round ? s.players[p].deaths : 0);
-/** Debt of the Fallen's cost now: 1 less for each of p's units that died this round, never below 0. */
-const debtCost = (s, p) => Math.max(0, CARDS.debt.cost - diedThisRound(s, p));
 /** Danse Macabre: p's units that died this round and can rise in their own cells now (card in the discard pile, cells free), in resolution order. */
 function fallenToRise(s, p) {
   const D = s.players[p].discard.slice(), out = [];

@@ -18,6 +18,19 @@ take a base, hold it, or take it from the enemy?
   line by line.
 
 ## THE THINKING PROCESS (in this order; no step skipped)
+Steps 1-6 come from the library, never from memory. Run the queries below on all 8 games (`ask.py all ...` from
+`library/cards_db/`; a faction name used by two games, such as Ironclad, needs the game: `ask.py sts1 lacks Ironclad`),
+read 5-10 card texts behind every count, and write the sources (game: card) next to each answer of steps 2, 3, 5 and 6.
+- Step 1: list the factions of every game (section 3) and pick the 6-10 closest to the theme, at least one per board game
+  (Duelyst, Faeria, Stormbound, Into the Breach, Inscryption); run `curve` on each to see what its cards do.
+- Step 2: `removal <game>` and `protect <game>` for all 8 games, `palette place` and `palette death`: which ways to remove and
+  hold exist, and which the six other factions already use (`factions/11-seven-factions.txt`, `summary/11-faction-*.txt`).
+- Step 3: `only <game>` for all 8 games (monopolies real factions have) and `lacks "<faction>"` for the closest factions
+  (their blind spots).
+- Step 5: for each mechanic `compare`, `factions`, `fed`, `feeds`, `together`, `chains`, and `both` with each other
+  mechanic; `analyze` the closest real faction to count how many of its cards make and use the mechanic (30+ wanted).
+- Step 6: `ways "<faction>"` of the closest factions, and `network` / `analyze` on their real decks in `decks.tsv`, to see
+  which cards actually combo in played decks; each way to play names the real ways and combos it comes from.
 1. **Name, icon, theme.** A real theme (World War I artillery, the Zulu regiments, Babylonian astrologers), with 10+ facts
    about how they fight, live, trade, believe, what they fear and what they lack. Each fact is a source of cards later.
 2. **Kaptain's five questions**, answered before any card:

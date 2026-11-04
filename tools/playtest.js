@@ -2,6 +2,8 @@
 /* Browser play test: plays real games in the built HTML files and fails on any script error.
    Game: for each faction, its two premade decks against each other (the player's actions are picked from listActions,
    the computer plays itself), up to N player actions. Scenarios: loads every board and plays a few actions on it.
+   Card checks (first, in a started game): every card's text renders live; deck lists are sorted by cost, then name;
+   each faction shows exactly 5 champions on its cards and deck items; every keyword word in a text has its hover.
      node tools/playtest.js [faction letters, e.g. cd] [--actions N]   (default: all factions, 20 actions)
    Needs puppeteer-core (or puppeteer) and a Chrome, as tools/smoke.js. */
 'use strict';
@@ -33,6 +35,33 @@ const PLAY = async (n, seed) => {
   return `${done} actions, round ${game.round}`;
 };
 
+// in the page, during a game: the card checks; returns a list of problems
+const CARD_CHECKS = () => {
+  const bad = [], keys = Object.keys(CARDS).filter(k => !CARDS[k].base);
+  textSide = 0;
+  for (const k of keys) { try { cardHtml(k); } catch (e) { bad.push(`${k}: text does not render (${e.message})`); } }
+  textSide = null;
+  const facs = [...new Set(keys.map(k => CARDS[k].fac).filter(Boolean))];
+  for (const f of facs) {
+    const list = keys.filter(k => CARDS[k].fac === f && !CARDS[k].token).sort(byDeckOrder);
+    for (let i = 1; i < list.length; i++) {
+      const A = CARDS[list[i - 1]], B = CARDS[list[i]];
+      if (cardCost(A) === cardCost(B) && A.name.localeCompare(B.name) > 0) { bad.push(`deck order, faction ${f}: ${A.name} before ${B.name}`); break; }
+    }
+    const champs = list.filter(k => /class="card [^"]*\bchamp\b/.test(cardHtml(k)) && /\bchamp\b/.test(deckItemHtml(k, 1, false)));
+    if (list.some(k => CARDS[k].champion) && champs.length !== 5) bad.push(`faction ${f}: ${champs.length} champions shown, need 5`);
+  }
+  const forms = w => (w === 'Wind' ? 'wind|winds|winding' : w === 'Strike' ? 'strike|strikes' : w.replace(/-/g, '\\-'));
+  for (const k of keys) {
+    const c = CARDS[k]; if (!c.text) continue;
+    const shown = cardText(c).replace(/<span class="kw"[^>]*>[^<]*<\/span>/g, '').replace(/<[^>]*>[^<]*<\/span>/g, '');
+    const hov = new Set([...cardText(c).matchAll(/data-k="([^"]+)"/g)].map(m => m[1].toLowerCase()));
+    for (const w of Object.keys(KEYWORDS))
+      if (!hov.has(w.toLowerCase()) && new RegExp('\\b(' + forms(w) + ')\\b', 'i').test(shown.replace(/\b(am|is|are|was|be|been|gets|get) wound\b/gi, ''))) bad.push(`${c.name}: '${w}' has no hover`);
+  }
+  return bad;
+};
+
 (async () => {
   const browser = await pptr.launch({ executablePath: chrome, headless: true, args: ['--no-sandbox'] });
   let bad = 0;
@@ -47,6 +76,19 @@ const PLAY = async (n, seed) => {
   };
   const report = (what, res, errs) => { console.log(`${what}: ${errs.length ? 'FAIL ' + errs.slice(0, 3).join(' | ') : 'ok'} (${res})`); bad += errs.length; };
 
+  {
+    const [page, errs] = await open('three-bases-game.html');
+    let res = [];
+    try {
+      res = await page.evaluate(async checks => {
+        deckStore.pick = 'p-c1'; deckStore.opp = 'p-c2'; startGame();
+        const t = Date.now(); while ($('#mull').hidden && Date.now() - t < 10000) await new Promise(r => setTimeout(r, 50));
+        return (eval('(' + checks + ')'))();
+      }, CARD_CHECKS.toString());
+    } catch (e) { errs.push(e.message); }
+    report('card checks', res.length ? res.length + ' problems' : 'all cards', errs.concat(res));
+    await page.close();
+  }
   for (const f of facs) {
     const [page, errs] = await open('three-bases-game.html');
     let res = '';

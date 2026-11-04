@@ -167,10 +167,11 @@ def main():
     probs = []
     for c in cards:
         t = c.get('text', '')
-        linked = set(re.findall(r'\[\[([^\]|]+)', t))
-        bare = re.sub(r'\b(is|are|was|been|gets) wound\b', '', re.sub(r'\[\[[^\]]*\]\]', '', t), flags=re.I)  # the verb, not the keyword
+        linked = {(b or a).lower() for a, b in re.findall(r'\[\[([^\]|]+)(?:\|([^\]]+))?\]\]', t)}  # [[shown|Key]]: the key counts
+        bare = re.sub(r'\b(am|is|are|was|be|been|gets|get) wound\b', '', re.sub(r'\{\{[^}]*\}\}', '', re.sub(r'\[\[[^\]]*\]\]', '', t)), flags=re.I)  # the verb of Wind, not the keyword
         for k in data['kw']:
-            if re.search(r'\b' + re.escape(k) + r'\b', bare, re.I) and k not in linked:
+            forms = {'Wind': r'wind|winds|winding', 'Strike': r'strike|strikes'}.get(k, re.escape(k))
+            if re.search(r'\b(' + forms + r')\b', bare, re.I) and k.lower() not in linked:
                 probs.append(f"{c['name']}: '{k}' without [[{k}]]")
     check('hovers', probs)
 

@@ -81,16 +81,16 @@ let textSide = null;
 function cardText(c, u) {
   const bonus = u ? strengthOf(u) - printedStr(u) : 0, up = n => (bonus > 0 ? `<b class="hup">${n}</b>` : n);
   const side = u && game ? ctl(u) : textSide, live = side !== null && game;
-  // Aurelius: which of the cards it needs are in the discard pile; Ossuary Tithe: what it would give now
+  // {{need:k}}: whether that card is in the discard pile now
   const text = c.text.replace(/\{\{need:(\w+)\}\}/g, (m, k) => {
     const name = CARDS[k].name.split(' ')[0];
     return live ? `<b class="need ${game.players[side].discard.includes(k) ? 'ok' : 'no'} cref" data-c="${k}">${name}</b>` : `<span class="cref" data-c="${k}">${name}</span>`;
-  }).replace(/\{\{card:(\w+)\|([^}]+)\}\}/g, (m, k, n) => `<span class="cref" data-c="${k}">${n}</span>`).replace('{{debt}}', live ? ` <b class="hup">(now ${debtCost(game, side)})</b>` : '').replace('{{tithe}}', live ? ` <b class="hup">(now +${titheGain(game, side)})</b>` : '');
+  }).replace(/\{\{card:(\w+)\|([^}]+)\}\}/g, (m, k, n) => `<span class="cref" data-c="${k}">${n}</span>`);
   return keywordHtml(text.replace(/\{\{(\d+|\+)\}\}/g, (m, n) => (n === '+' ? (bonus > 0 ? `, plus ${up(bonus)}` : '') : up(Math.max(0, +n + bonus)))));
 }
 /** Cards that check whether you hold the lane's base get a golden border (card and unit). */
 const BASE_BOUND = new Set(Object.keys(CARDS).filter(k => /"hold":/.test(JSON.stringify([CARDS[k].fx, CARDS[k].aura, CARDS[k].cast]))));
-const bbCls = k => (BASE_BOUND.has(baseKey(k)) ? ' bb' : '');
+const bbCls = k => (BASE_BOUND.has(baseKey(k)) ? ' bb' : '') + (CARDS[baseKey(k)] && CARDS[baseKey(k)].champion ? ' champ' : '');
 function cardHtml(k, u) {
   const c = CARDS[k];
   const text = c.text ? `<span class="ab">${cardText(c, u)}</span>` : '';

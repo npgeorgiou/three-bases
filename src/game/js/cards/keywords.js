@@ -1,6 +1,6 @@
 const KEYWORDS = {
   'Ranged':'Can attack any enemy in its lane, from any row.',
-  'Supply':'Adds supply to its lane at each round start.',
+  'Supply':'What cards cost; each lane has its own. A unit with Supply N adds N to its lane at each round start.',
   'Everywhere':'Paid from one lane, it works in all three lanes.',
   'Carry-over':'Supply you keep between rounds. At round end your unspent lane supply is added to it, up to 5 in total; you can spend it in any lane.',
   'Immobile':'Can\'t move.',

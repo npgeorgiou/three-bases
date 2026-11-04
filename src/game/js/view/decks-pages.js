@@ -41,7 +41,7 @@ const facName = f => (f && FAC_DECK[f] ? DECKS[FAC_DECK[f]].name : 'No faction y
 const cardCost = c => (c.tactic ? (typeof c.cost === 'number' ? c.cost : 0) : c.sup);
 const byDeckOrder = (a, b) => {
   const A = CARDS[a], B = CARDS[b];
-  return cardCost(A) - cardCost(B) || (A.str ?? -1) - (B.str ?? -1) || (A.def ?? -1) - (B.def ?? -1) || A.name.localeCompare(B.name);
+  return cardCost(A) - cardCost(B) || A.name.localeCompare(B.name);
 };
 /** A unit's shape, small, for deck-list items. */
 function dliShape(card) {
@@ -55,7 +55,7 @@ function deckItemHtml(k, n, clickable) {
   const inner = (c.tactic ? supplyBadge(c.costLabel || c.cost, true) : supplyBadge(c.sup))
     + `<span class="dn">${c.name}</span>${cardArt(k)}${c.tactic ? '' : dliShape(c)}`
     + (c.str ? statBadge('str', c.str) : '') + (c.def ? statBadge('def', c.def) : '');
-  return `<div class="dli"><${tag} class="dlit f-${c.fac}${c.tactic ? ' tac' : ''}" data-k="${k}"${clickable ? `` : ''}>${inner}</${tag}><span class="dc">×${n}</span></div>`;
+  return `<div class="dli"><${tag} class="dlit f-${c.fac}${c.tactic ? ' tac' : ''}${c.champion ? ' champ' : ''}" data-k="${k}"${clickable ? `` : ''}>${inner}</${tag}><span class="dc">×${n}</span></div>`;
 }
 const deckListHtml = (d, clickable) => {
   const keys = Object.keys(d.cards).filter(k => d.cards[k] > 0).sort(byDeckOrder);
