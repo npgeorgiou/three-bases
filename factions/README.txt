@@ -6,7 +6,9 @@ Work plan (AGREED): step 1, faction candidates from the inspiration library (par
 
 Files (lines, then contents). Read only the file a task needs; find lines across files with: python3 tools/find.py doc <text>
 
-START_DESIGN.md                   148  START HERE for any faction or card design: rules to know, design rules, library search, checks
+START_DESIGN.md                   114  START HERE for any faction or card design: the thinking process (Lead Systems and Balance Designer), NEVER DO
+START_DESIGN-2-rules.md           101  its part 2: setup, this game's rules for design, the design rules
+START_DESIGN-3-checks.md          117  its part 3: Kaptain's checks, self-critique, library search, player view, before sending
 3-candidates/00-notes.txt             9  3. Candidates: review notes, how the list was built, terms
 3-candidates/E1-tagma.txt            18  E1. TAGMA — the Byzantine army (all-round)
 3-candidates/E2-ashfang-horde.txt    12  E2. ASHFANG HORDE — the war host of fury and fire

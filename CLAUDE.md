@@ -15,7 +15,7 @@ Kaptain's browser card game. Work on the clone and commit to `main`; push only w
 - Clone without the 121 MB library unless the task is about it:
   `git clone -q --depth 1 --filter=blob:none --no-checkout https://github.com/npgeorgiou/three-bases /home/claude/three-bases && cd /home/claude/three-bases && git sparse-checkout set --no-cone '/*' '!/library/' && git checkout -q main && git config core.hooksPath tools/hooks`
   (library task: `git sparse-checkout disable`).
-- Any design work is a library task, even when no library file is named: factions, cards, mechanics, combos, decks, brainstorms. Clone with the library and read `factions/START_DESIGN.md` whole before answering (it points to the rules, `library/cards_db/START_QUESTIONS.md` and the rest).
+- Any design work is a library task, even when no library file is named: factions, cards, mechanics, combos, decks, brainstorms. Clone with the library and read `factions/START_DESIGN.md` and its two parts (`START_DESIGN-2-rules.md`, `START_DESIGN-3-checks.md`) whole before answering (it points to the rules, `library/cards_db/START_QUESTIONS.md` and the rest).
 - This file is the only file read at the start. Do not open the README, todo.md, summary/ or factions/ indexes, or any code until the task needs it, then use the map below to go straight to the right file.
 
 ## Map: where each thing lives
