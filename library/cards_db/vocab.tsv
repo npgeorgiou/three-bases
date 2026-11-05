@@ -500,6 +500,8 @@ position	lane_below	the lane or floor below of (Monster Train Descend)			28 Oct 
 position	top_lane	the top lane or floor (Monster Train Pyre Room)			28 Oct 2026, v22 (Monster Train)
 position	bottom_lane	the bottom lane or floor			28 Oct 2026, v22 (Monster Train)
 zone	exhausted	cards removed for the rest of the battle after use (Monster Train Consume pile)			28 Oct 2026, v22 (Monster Train)
+zone	discarded	cards discarded from hand, in a pile apart from destroyed cards (Marvel Snap: "a card you discarded")		discarded	5 Nov 2026, Marvel Snap v68: Hela and Ghost Rider bring back discarded cards, not destroyed ones
+zone	discarded_or_dead	the discarded and the destroyed cards together (Marvel Snap: "discarded or destroyed")		discarded;dies	5 Nov 2026, Marvel Snap v68: Firelord, Night Nurse
 lasts	this_run	"for the rest of the run, in later battles too (roguelike ""permanently"", ""permanent copy"")"	deck_modification		28 Oct 2026, v22 (Monster Train)
 x	x_paid	"the X paid for an X-cost card, times inner (inner omitted = 1; ""2 per X"" = inner 2)"			28 Oct 2026, v22 (Monster Train)
 test	upgrade_path	the card took upgrade path n (n = the path's place in the card's list; Monster Train champion paths)			28 Oct 2026, v22 (Monster Train)

@@ -17,7 +17,7 @@ A missed-line cause keeps "MISSED " before its verdict ("MISSED REAL"). Kaptain'
 Decimate is a combo that works." Think like a player: would a good player build these two cards together for this reason?
 Verdict file: each cause ONE line, in exactly this format (causes.py reads it; it skips NOT REAL and GONE):
 "N. VERDICT: one sentence why, with the rule (L-number). Wrong examples: A -> B, A2 -> B2. Right examples: A3 -> B3."
-N is the cause's number from its heading; card names exactly as printed; "Right examples: none." when there are none. Then a
+N is the cause's number from its heading, written alone at the line start (never the file name; numbers may repeat across files, the examples tell them apart); card names exactly as printed; "Right examples: none." when there are none. Then a
 final line starting with "- counts:" (counts per verdict).
 Reply with only the file path and the counts.
 

@@ -7,13 +7,14 @@
 import csv, os, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 G = {'runeterra': 'runeterra', 'slay the spire': 'sts1', 'sts1': 'sts1', 'faeria': 'faeria', 'duelyst': 'duelyst',
-     'stormbound': 'stormbound', 'monster train': 'monster_train', 'inscryption': 'inscryption', 'into the breach': 'into_the_breach'}
+     'stormbound': 'stormbound', 'monster train': 'monster_train', 'inscryption': 'inscryption', 'into the breach': 'into_the_breach',
+     'marvel snap': 'marvel_snap', 'marvel_snap': 'marvel_snap'}
 
 
 def split(f, cap=55000):
     t = open(f, encoding='utf-8').read().split('\n'); parts, cur, n = [], [], 0
     for l in t:
-        if (l.startswith('=== ') and cur and n > cap * 0.6) or n > cap: parts.append(cur); cur, n = [], 0
+        if (l.startswith(('=== ', '## ')) and cur and n > cap * 0.6) or n > cap: parts.append(cur); cur, n = [], 0
         cur.append(l); n += len(l) + 1
     if cur: parts.append(cur)
     first, R = {}, re.compile(r'^(\s+)(.+?): (.*)$')  # a card's rows as first printed; a later piece repeats them once

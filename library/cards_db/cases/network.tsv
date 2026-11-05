@@ -407,3 +407,7 @@ n409	marvel_snap	Majestic Wingbeat, Zombie Galacti	Majestic Wingbeat	Zombie Gala
 n410	runeterra	Lurkers	Rek'Sai (level 2)	Frenzied Feast	line	is a Lurker	Claude 5 Nov 2026: Rek'Sai is a Lurker herself; she makes none
 n411	marvel_snap	Black Widow, Widow's Bite	Black Widow	Widow's Bite	none		Claude 5 Nov 2026: Black Widow adds Widow's Bite to the opponent's hand (normalize N35, fixes/faeria/v36.py)
 n412	faeria	Rapala, the Dopefish, Ruby Fish	Rapala, the Dopefish	Ruby Fish	none		Claude 5 Nov 2026: Rapala fills the opponent's hand with Ruby Fish, not mine
+n413	marvel_snap	M.O.D.O.K., Hela	M.O.D.O.K.	Hela	line		Claude 5 Nov 2026, line check (realworld combo, highgroundgaming): Hela resurrects cards you discarded; M.O.D.O.K. discards the hand (v68)
+n414	marvel_snap	Killmonger, Hela	Killmonger	Hela	none		Claude 5 Nov 2026, line check: Killmonger destroys cards, Hela brings back only discarded ones (v68: discarded and destroyed cards lie apart)
+n415	marvel_snap	Lady Sif, Ghost Rider	Lady Sif	Ghost Rider	line		Claude 5 Nov 2026, line check: Lady Sif discards, Ghost Rider brings back a discarded card (v68)
+n416	marvel_snap	Carnage, Phoenix Force	Carnage	Phoenix Force	line		Claude 5 Nov 2026, line check: Carnage destroys my cards, Phoenix Force revives a destroyed card (v68)

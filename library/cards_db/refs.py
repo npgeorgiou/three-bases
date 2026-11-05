@@ -77,8 +77,9 @@ def build(c):
         for st in re.findall(r'state (?:is|in) ([a-z_]+)', withs or ''):
             for ev, *kw in causes.get(('state', st), []):
                 ins(card, origin, via, ab, 'state', ev, kind, side, pick, kwid_for(card, kw[0]) if kw else None, state=st)
-        if zone and kind == 'unit':
-            for ev, *_ in causes.get(('zone', zone), []): ins(card, origin, via, ab, 'state', ev, kind, side, pick, w=withs)  # "if Krog has
+        if zone and kind in ('unit', 'card'):  # a discarded card of any kind was discarded; only a unit in the discard died
+            for ev, *_ in causes.get(('zone', zone), []):
+                if kind == 'unit' or ev == 'discarded': ins(card, origin, via, ab, 'state', ev, kind, side, pick, w=withs)  # "if Krog has
             # died": Krog's death, not any death (the filter was dropped)
         # units picked by a keyword they have ("friendly units with Rage", "the amount of Armor"): fed by giving that keyword
         for k in (re.findall(r'(?<![a-z:])keyword is (\d+)', withs or '') if kind != 'effect' and not helpful and zone not in ('deck', 'deck_top', 'deck_bottom') else []):  # help to

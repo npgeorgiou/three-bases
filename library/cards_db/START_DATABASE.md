@@ -115,14 +115,21 @@ game's own rulebook, and players' combos and decks that test the lines. Complete
    Discarded are trigger labels like End of Turn (their events are in the rows). Check 10 leads read: play_restriction,
    generate_cards; not read: symmetric_effect, lane_rule, turn_number, cost_condition, cross_lane, tribal, control_reward,
    stat_condition, lane_closure.
-   Next, chat 2 (the lines), in order:
-   - 2.5 decks: the 27 full decks are in decks.tsv; write their cases/decks.tsv and network.tsv rows (none yet) and the
-     combos of library/games/marvel_snap.md "Combos" into cases/combos.tsv.
-   - Part 3 line check (`links_audit.py marvel_snap`, `deck_audit.py marvel_snap`). Lines already seen as doubtful: Power
-     Shot -> Vampire Deacon Frost "changes your units' stats" ("+3 Power" is no stolen Power); Grapple Arrow -> Galactus
-     (Galactus wants to be alone); Mind Shot -> Dragon of the Moon "fills your hand"; Hawkeye Kate Bishop -> Basic Arrow
-     "makes more cards to play" (L1).
-   - Step 4 (`realworld.py marvel_snap`: 10 misses; `design_questions.py`), step 5, then Kaptain checks the deck page.
+   Chat 2 (the lines), in progress. Done: cases/combos.tsv cms01-24 (the Combos of library/games/marvel_snap.md; 16 fail, the
+   misses to trace) and cases/decks.tsv dms01-12 (pockettactics' own explanations; snapcomplete gave no explanations it could
+   reach); the line check's readers and verifiers: findings in checks/marvel_snap/ (lr_* readers, vv_* verdicts,
+   causes_sheet.md: 21 verified causes, biggest first); v68: discarded and destroyed cards lie apart (zones discarded,
+   discarded_or_dead; refs.py: a discarded card of any kind was discarded), cases n413-n416.
+   Next, in order:
+   - Fix causes_sheet.md from the top (one `none` and one `line` case each; after about 5 fixes `check_all.py --no-load`).
+     Kaptain's answer needed first: On Reveal is on 306 of 660 cards; are repeats of On Reveal (Odin, Wong, Absorbing Man)
+     a deck choice or generic (L21)? Odin and Wong have lines now; the verdict said Absorbing Man's are not.
+   - The 16 failing combos and the deck cases that fail (cases/REPORT.md); realworld.py marvel_snap (10 misses at the start).
+     Deck explanations also say "waits for your units get Ongoing ... nothing else in the deck does it" where Ongoing cards
+     are in the deck (Mystique, Onslaught): the cause of verdict 4 (Mystique) and of that wording.
+   - The handover's doubtful lines: Power Shot -> Vampire Deacon Frost, Grapple Arrow -> Galactus (verified wrong),
+     Mind Shot -> Dragon of the Moon, Hawkeye Kate Bishop -> Basic Arrow.
+   - Part 3 step 9, step 4 (`design_questions.py`), step 5, then Kaptain checks the deck page.
    Not written: supplement/marvel_snap_links.jsonl (cards a card creates are linked by the names in its rows).
 
 ## When you finish

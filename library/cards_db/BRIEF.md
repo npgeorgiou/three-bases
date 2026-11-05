@@ -101,6 +101,8 @@ AMOUNT   a number, or `{"x": x, "of": TARGET, "attr": attr, "event": EVENT, "spa
 17. Where cards are: a unit that died ("dead ally", "allies that died", revive) is kind unit, zone discard. A discarded card
    is kind card, zone discard (category unit if the text says unit). An obliterated or Tossed card is zone removed. A Captured
    card is zone removed ("my Captured enemies": side enemy, zone removed).
+   Where discarded and destroyed cards lie apart (Marvel Snap): "a card you discarded" is zone discarded, "destroyed" zone
+   discard, "discarded or destroyed" zone discarded_or_dead.
 18. A copy ("a copy of me", "exact copies of the units stored inside", "an exact copy of an ally's equipment", "an Ephemeral
    copy") = act copy: on = the card or unit copied, zone = where the copy goes. Never summon, create or attach of the original.
 
