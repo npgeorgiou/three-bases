@@ -1785,7 +1785,7 @@ def need_lines(c, game, nodes, broad):
             and coalesce(event,'') not in ('played','summoned','drawn')""", list(nodes)).fetchall():  # played_lines counts those (one rule per need)
         needs.append((t, kind, (w or '') + ';counted'))
     for t, test, kind, side, op, n, w, pick_ in c.execute(f"""select card, test, of_kind, of_side, op, n, of_with, of_pick from flat_if where card in ({marks})
-            and test in ('have','count','amount_count') and coalesce(of_side,'mine') in ('mine','any','')""", list(nodes)):
+            and test in ('have','count','amount_count','last_card') and coalesce(of_side,'mine') in ('mine','any','')""", list(nodes)):  # last_card: "if the last card played was an Ongoing unit" needs such a card
         if op == 'not' or (op in ('eq', 'le', 'lt') and not n): continue  # "no units around": nothing to feed
         # "non-X" narrows nothing; nor does what a place is measured from ("near your General": of:kind is player)
         narrowed = any(p and not p.startswith('of:') and p.split(' ')[0] not in PLAY_STATE + ('card',) and p.split(' ')[1:2] != ['not'] for p in (w or '').split(';'))
