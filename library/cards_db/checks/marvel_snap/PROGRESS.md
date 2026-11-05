@@ -4,9 +4,11 @@
 3. Line readers: done: lr_marvel_snap_1..5.md.
 4. Meanwhile: done: lr_misses.md (19 misses: 15 failing combo cases, dms03, Professor X -> Devil Dinosaur, the two Absorbing
    Man causes); vp_m.md, vp_m_1.txt. causes.py: a pair takes the check's own game first; a note no longer hides examples.
-5. Verifiers: done for the readers' causes: vv_marvel_snap_1..2.md. Running: verifier on vp_m_1.txt -> vv_m_1.md.
-6. Sheet: done: causes_sheet.md (21 causes). Hela's discard cause is fixed (v68, cases n413-n416).
-7. Fixers: next, from the top of causes_sheet.md. Kaptain 5 Nov 2026 (L21 "Kept"): repeats of On Reveal get lines, so the
+5. Verifiers: done for the readers' causes: vv_marvel_snap_1..2.md. Misses: vv_m_1.md, vv_m_2.md (10 MISSED REAL; 5 guide
+   cases CASE WRONG by L18/L1/L9 for Kaptain: Shuri -> Typhoid Mary, Shuri -> Red Skull, Taskmaster -> Red Skull,
+   Taskmaster -> Typhoid Mary, Cable -> Mantis).
+6. Sheet: done: causes_sheet.md (30 open causes C1-C30; before.tsv, tb0.tsv made 5 Nov 2026). Hela's discard cause is fixed (v68, cases n413-n416).
+7. Fixers: running C1 (fix_C1.md); results: Kaptain 5 Nov 2026 (L21 "Kept"): repeats of On Reveal get lines, so the
    Absorbing Man causes (lr_marvel_snap_3.md 5, lr_marvel_snap_4.md 3; verifier said NOT REAL) are REAL: run them through
    steps 5-6 again with lr_misses.md, then fix.
 8-10: not started.

@@ -1,4 +1,4 @@
-## vv_marvel_snap_1.md 2 (REAL, open, 11013 table lines from the same code)
+## C1 vv_marvel_snap_1.md 2 (REAL, open, 11013 table lines from the same code)
 Jane Foster only lowers enemy power and the Grand Design and Venus buff units on the board, none of which feeds Fin Fang Foom's or Zombie Giant-Man's own power read, so more power is generic here (L18, L14).
 - W marvel_snap: Jane Foster Fractured Frontier -> Fin Fang Foom: more power | network.py [2041]
 - W marvel_snap: The Grand Design -> Zombie Giant-Man: more power | network.py [2041]
@@ -36,7 +36,7 @@ Jane Foster only lowers enemy power and the Grand Design and Venus buff units on
     if 3352 it_matches state is buffed
     do 3352 own stat_change unit mine it power=1.0
 
-## vv_marvel_snap_1.md 2 (REAL, open, 2602 table lines from the same code)
+## C2 vv_marvel_snap_1.md 2 (REAL, open, 2602 table lines from the same code)
 Acid Arrow's On Reveal only donates itself to the enemy, so repeating or replaying it is a drawback, not help (L5).
 - W marvel_snap: Astral Projection -> Acid Arrow: repeats its effects; also repeats its On Reveal effects | network.py [1361]
 - W marvel_snap: Toxin -> Acid Arrow: returns it to hand: its Play or summon effect goes off again (when in its lane) | network.py [1405]
@@ -55,7 +55,7 @@ Acid Arrow's On Reveal only donates itself to the enemy, so repeating or replayi
     do 3331 own return_to_hand unit mine all board position is same_lane;card not 8000669
     do 3331 own stat_change self power=product
 
-## vv_marvel_snap_1.md 3 (REAL, open, 2246 table lines from the same code)
+## C3 vv_marvel_snap_1.md 3 (REAL, open, 2246 table lines from the same code)
 Repeating Ongoing or protecting cost 1 units is help aimed at a kind, and J. Jonah Jameson and Broodling have no rows that use it (L14).
 - W marvel_snap: Onslaught -> J. Jonah Jameson: repeats its effects | network.py [1361]
 - W marvel_snap: Caiera -> Broodling: keeps it from dying | network.py [1396]
@@ -69,7 +69,7 @@ Repeating Ongoing or protecting cost 1 units is help aimed at a kind, and J. Jon
     do 2794 own cant unit mine all board cost in 1;cost in 6 event=dies
   Broodling:
 
-## vv_marvel_snap_1.md 8 (REAL, open, 440 table lines from the same code)
+## C4 vv_marvel_snap_1.md 8 (REAL, open, 440 table lines from the same code)
 Making random or any-kind cards is one more card of any kind, so it is no line to Angela or Agony (which need units played in a lane), and Agent 13 does not put cards into the deck that King Eitri draws (L19, L1b).
 - W marvel_snap: Arishem -> Angela: makes more cards to play | network.py [1703]
 - W marvel_snap: Agamotto -> Agony: makes more cards to play | network.py [1703]
@@ -97,7 +97,7 @@ Making random or any-kind cards is one more card of any kind, so it is no line t
     when 3003 activated self
     do 3003 own draw card mine chosen deck state is created
 
-## vv_marvel_snap_1.md 1 (PARTLY, open, 0 table lines from the same code)
+## C5 vv_marvel_snap_1.md 1 (PARTLY, open, 0 table lines from the same code)
 Arana buffs and moves units I play and Kid Omega kills them, so those links to Lancelot, Bucky Barnes and Elixir are real, but Arana does not activate other cards, so the Magus link is wrong (L14, L1).
 - W marvel_snap: Araña -> Magus: makes this happen: activated | network.py []
 - R marvel_snap: Araña -> Lancelot: changes your units' stats; also makes stronger: does what it waits for or counts (stat changed) when it comes | network.py [2314]
@@ -115,7 +115,7 @@ Arana buffs and moves units I play and Kid Omega kills them, so those links to L
     when 3041 activated
     do 3041 own copy_text self
 
-## vv_marvel_snap_1.md 5 (REAL, open, 0 table lines from the same code)
+## C6 vv_marvel_snap_1.md 5 (REAL, open, 0 table lines from the same code)
 Moving a unit into a lane is not what Danger, Drax, Moonstone or Pizza Slice need, a unit that moves gives no line to cards that act in their lane (L14, L23, L9).
 - W marvel_snap: Doctor Strange -> Danger: Doctor Strange moves Danger, and Danger acts on units in its lane | network.py [1405]
 - W marvel_snap: Ghost-Spider -> Drax: Ghost-Spider moves Drax, and Drax acts on units in its lane | network.py []
@@ -150,7 +150,7 @@ Moving a unit into a lane is not what Danger, Drax, Moonstone or Pizza Slice nee
     when 3131 played self
     do 3131 own merge self
 
-## vv_marvel_snap_1.md 6 (REAL, open, 0 table lines from the same code)
+## C7 vv_marvel_snap_1.md 6 (REAL, open, 0 table lines from the same code)
 Wiccan wants no unspent mana and Galactus wants to be alone in the lane, so gaining mana and moving units give the opposite of what they want (L21, L5).
 - W marvel_snap: Herbie Program 01 -> Wiccan: lets you gain mana | network.py []
 - W marvel_snap: Ghost-Spider -> Galactus: Ghost-Spider moves your units, and Galactus acts on units in its lane | network.py []
@@ -174,7 +174,7 @@ Wiccan wants no unspent mana and Galactus wants to be alone in the lane, so gain
     if 2901 amount_stat power position mine position is same_lane
     do 2901 own kill position all position not same_lane
 
-## vv_marvel_snap_1.md 7 (REAL, open, 0 table lines from the same code)
+## C8 vv_marvel_snap_1.md 7 (REAL, open, 0 table lines from the same code)
 Effects on the enemy side (their created cards cost more, their cards or units moved) are credited to my need, and my created cards are not the enemy cards Gorgon changes (L9, L5).
 - W marvel_snap: Beta Ray Bill -> Gorgon: creates cards | network.py []
 - W marvel_snap: Doctor Octopus -> Dagger: Doctor Octopus moves enemy units, and Dagger acts on units in its lane | network.py []
@@ -202,7 +202,7 @@ Effects on the enemy side (their created cards cost more, their cards or units m
     when 2756 always
     do 2756 own cant unit all board position is same_lane event=dies
 
-## vv_marvel_snap_1.md 9 (REAL, open, 0 table lines from the same code)
+## C9 vv_marvel_snap_1.md 9 (REAL, open, 0 table lines from the same code)
 Agent Venom sets deck cards to power 3, which is not buffed and cannot reach the 6 power Wolverine Horseman of War needs (L4, L18).
 - W marvel_snap: Agent Venom -> Wolverine Horseman of War: changes its stats for its effect | network.py []
 - W marvel_snap: Agent Venom -> Elder Dragon of the Moon: changes your units' stats | network.py []
@@ -225,7 +225,7 @@ Agent Venom sets deck cards to power 3, which is not buffed and cannot reach the
     if 2914 amount_count unit mine all board state is buffed;card not 8000218
     do 2914 own stat_change self power=count
 
-## vv_marvel_snap_1.md 1 (MISSED REAL, open, 0 table lines from the same code)
+## C10 vv_marvel_snap_1.md 1 (MISSED REAL, open, 0 table lines from the same code)
 Mystique needs the last card played to be an Ongoing unit, and Ongoing is a minority kind, so a deck choice that keeps its line like Onslaught -> Blue Marvel (L1b, L10).
 - W marvel_snap: Sera -> Mystique: NONE | network.py []
 - W marvel_snap: Mojo -> Mystique: NONE | network.py []
@@ -253,7 +253,7 @@ Mystique needs the last card played to be an Ongoing unit, and Ongoing is a mino
     when 3126 always
     do 3126 own stat_change unit mine all board state is no_abilities power=2.0
 
-## vv_marvel_snap_1.md 2 (MISSED REAL, open, 0 table lines from the same code)
+## C11 vv_marvel_snap_1.md 2 (MISSED REAL, open, 0 table lines from the same code)
 Black Panther doubles his own power, so power added to cards in hand or deck is a setup, the same as "The Dreadway -> Decimate is a combo that works" (L18, L24).
 - W marvel_snap: Okoye -> Black Panther: NONE | network.py []
 - W marvel_snap: Nakia -> Black Panther: NONE | network.py []
@@ -270,7 +270,7 @@ Black Panther doubles his own power, so power added to cards in hand or deck is 
     when 3101 played self
     do 3101 own stat_change card mine all hand power=1.0
 
-## vv_marvel_snap_1.md 2 (MISSED REAL, open, 0 table lines from the same code)
+## C12 vv_marvel_snap_1.md 2 (MISSED REAL, open, 0 table lines from the same code)
 Galactus kills units in the other lanes, which makes units die for Knull's power and Death's cost, the same as Destroyer (L10).
 - W marvel_snap: Galactus -> Knull: NONE | network.py []
 - W marvel_snap: Galactus -> Death: NONE | network.py []
@@ -293,26 +293,7 @@ Galactus kills units in the other lanes, which makes units die for Knull's power
     if 2831 amount_minus
     do 2831 own cost_change self cost=minus
 
-## vv_marvel_snap_2.md 3 (MISSED REAL, open, 0 table lines from the same code)
-Hela's text counts the distinct costs in her discard pile and revives from it, so cards that discard fill what she reads (L17, L10 enables).
-- W marvel_snap: Lady Sif -> Hela: NONE | network.py []
-- W marvel_snap: M.O.D.O.K. -> Hela: NONE | network.py []
-- W marvel_snap: Black Cat -> Hela: NONE | network.py []
-  Lady Sif:
-    when 3018 played self
-    do 3018 own discard card mine highest_cost hand
-  Hela:
-    when 2931 played self
-    if 2931 amount_distinct cost card mine all discard
-    do 2931 own revive unit mine chosen discard
-  M.O.D.O.K.:
-    when 3075 played self
-    do 3075 own discard card mine all hand
-  Black Cat:
-    when 2777 round_end
-    do 2777 own discard self
-
-## vv_marvel_snap_2.md 4 (MISSED REAL, open, 0 table lines from the same code)
+## C13 vv_marvel_snap_2.md 4 (MISSED REAL, open, 0 table lines from the same code)
 Mystique's own text needs the last card played to be an Ongoing unit, and Ongoing is a minority kind, so an Ongoing card is a real deck choice for her (L15, L21, L10 enables).
 - W marvel_snap: Victoria Hand -> Mystique: NONE | network.py []
 - W marvel_snap: Devil Dinosaur -> Mystique: NONE | network.py []
@@ -339,7 +320,7 @@ Mystique's own text needs the last card played to be an Ongoing unit, and Ongoin
     when 3206 always
     do 3206 own cost_change card mine all hand cost=-1.0;min=1.0
 
-## vv_marvel_snap_2.md 7 (REAL, open, 0 table lines from the same code)
+## C14 vv_marvel_snap_2.md 7 (REAL, open, 0 table lines from the same code)
 Fantomex does not make anything activate, a shared Activate keyword is no line, but Zombie Captain Marvel's kills feed Fantomex's count (L15, L1).
 - W marvel_snap: Fantomex -> Zombie Captain Marvel: makes this happen: activated | network.py []
 - R marvel_snap: Zombie Captain Marvel -> Fantomex: makes your units die | network.py []
@@ -356,7 +337,7 @@ Fantomex does not make anything activate, a shared Activate keyword is no line, 
     do 3398 own stat_change self power=product
     do 3398 own move self
 
-## vv_marvel_snap_2.md 8 (REAL, open, 0 table lines from the same code)
+## C15 vv_marvel_snap_2.md 8 (REAL, open, 0 table lines from the same code)
 Galactus needs exactly one of my units in his lane and his rows read no move, so moving units into the lane is help for any card of a kind, not the very thing needed (L4, L14).
 - W marvel_snap: Grapple Arrow -> Galactus: Grapple Arrow moves your units, and Galactus acts on units in its lane | network.py []
 - R marvel_snap: Grapple Arrow -> PymParticle Arrow: Grapple Arrow moves your units, and PymParticle Arrow acts on units in its lane | network.py []
@@ -371,7 +352,7 @@ Galactus needs exactly one of my units in his lane and his rows read no move, so
     if 2901 amount_stat power position mine position is same_lane
     do 2901 own kill position all position not same_lane
 
-## vv_marvel_snap_2.md 1 (REAL, open, 0 table lines from the same code)
+## C16 vv_marvel_snap_2.md 1 (REAL, open, 0 table lines from the same code)
 King Eitri draws created cards only from the deck, and these cards create into the hand, so nothing is there for him to draw (L10 enables, L19).
 - W marvel_snap: Iron Patriot -> King Eitri: creates cards | network.py []
 - W marvel_snap: Scarlet Witch Queen of Chaos -> King Eitri: creates cards | network.py []
@@ -398,7 +379,7 @@ King Eitri draws created cards only from the deck, and these cards create into t
     do 3344 own cost_change card it cost=-2.0
     do 3344 own stat_change card it power=-2.0
 
-## vv_marvel_snap_2.md 4 (MISSED REAL, open, 0 table lines from the same code)
+## C17 vv_marvel_snap_2.md 4 (MISSED REAL, open, 0 table lines from the same code)
 Zombie Giant-Man's text reads the power of the Zombie Horde card, so more power for that card feeds him, as Zombie Mister Fantastic already does (L18).
 - W marvel_snap: The Hunger -> Zombie Giant-Man: NONE | network.py []
 - W marvel_snap: Zombie Scarlet Witch -> Zombie Giant-Man: NONE | network.py []
@@ -414,7 +395,7 @@ Zombie Giant-Man's text reads the power of the Zombie Horde card, so more power 
     when 3407 played unit mine position is same_lane
     do 3407 own stat_change card mine card is 8000742 power=2.0
 
-## vv_marvel_snap_2.md 5 (MISSED REAL, open, 0 table lines from the same code)
+## C18 vv_marvel_snap_2.md 5 (MISSED REAL, open, 0 table lines from the same code)
 SP//dr merges itself onto a unit and Peni Parker and Man-Spider wait for a merge, the same trigger Symbiote Spider-Man already has lines for (L10 triggers).
 - W marvel_snap: SP//dr -> Peni Parker: NONE | network.py []
 - W marvel_snap: SP//dr -> Man-Spider: NONE | network.py []
@@ -435,7 +416,7 @@ SP//dr merges itself onto a unit and Peni Parker and Man-Spider wait for a merge
     do 3046 own merge unit mine it
     do 3047 own stat_change self power=stat
 
-## vv_marvel_snap_2.md 6 (REAL, open, 0 table lines from the same code)
+## C19 vv_marvel_snap_2.md 6 (REAL, open, 0 table lines from the same code)
 Super-Skrull gives Ongoing, not On Reveal, so Astral Projection gets nothing, and Cosmo silences On Reveal units so units given On Reveal work against him (L20, L9, L10).
 - W marvel_snap: Super-Skrull -> Astral Projection: makes your units get On Reveal | network.py []
 - W marvel_snap: High Evolutionary -> Cosmo: makes units get On Reveal | network.py []
@@ -452,7 +433,7 @@ Super-Skrull gives Ongoing, not On Reveal, so Astral Projection gets nothing, an
     when 2818 always
     do 2818 own silence unit all board position is same_lane;keyword is 8000750
 
-## vv_marvel_snap_2.md 1 (REAL, open, 0 table lines from the same code)
+## C20 vv_marvel_snap_2.md 1 (REAL, open, 0 table lines from the same code)
 Invisible Woman's rows read no move, so Grand Master moving my units is help for any card of a kind (L14, L16).
 - W marvel_snap: Grand Master -> Invisible Woman: Grand Master moves your units, and Invisible Woman acts on units in its lane | network.py []
 - R marvel_snap: Wong -> Shuri: plays it again | network.py [2314]
@@ -463,4 +444,159 @@ Invisible Woman's rows read no move, so Grand Master moving my units is help for
   Invisible Woman:
     when 2959 always
     do 2959 own cant unit mine all board position is same_lane event=played
+
+## C21 vv_m_1.md 9 (MISSED REAL, open, 0 table lines from the same code)
+Zero silences the unit played, so it removes Ebony Maw's drawback just as Sauron's line already says (L10 makes it better; same as Sauron -> Ebony Maw).
+- W marvel_snap: Zero -> Ebony Maw: NONE | network.py []
+  Zero:
+    when 3395 played unit mine
+    do 3395 own silence unit mine it
+  Ebony Maw:
+    when 2859 always
+    when 2860 always
+    if 2859 event_count ge 4.0
+    do 2859 own cant self event=played
+    do 2860 own cant card mine all hand event=played
+
+## C22 vv_m_1.md 18 (MISSED REAL, open, 0 table lines from the same code)
+Absorbing Man needs the last unit played to have On Reveal, so On Reveal units enable him, and the owner kept that repeat of a trigger keyword links to every card with it (L21 Kept, L10 enables).
+- W marvel_snap: Brood -> Absorbing Man: NONE | network.py []
+- W marvel_snap: Silver Surfer -> Absorbing Man: NONE | network.py []
+- W marvel_snap: Hazmat -> Absorbing Man: NONE | network.py []
+- W marvel_snap: Magik -> Absorbing Man: NONE | network.py []
+- R marvel_snap: Wong -> Absorbing Man: plays it again | network.py [2314]
+  Brood:
+    when 2789 played self
+    if 2789 amount_stat power self
+    do 2789 own summon amount=2.0;power=stat
+  Absorbing Man:
+    when 2725 played self
+    if 2725 last_card unit mine keyword is 8000750
+    do 2725 own repeat unit mine it board
+  Silver Surfer:
+    when 3221 played self
+    do 3221 own stat_change unit mine all board card not 8000536;cost eq 3449 power=2.0
+  Hazmat:
+    when 2928 played self
+    do 2928 own stat_change unit all board card not 8000234 power=-1.0
+  Magik:
+    when 3039 played self
+    if 3039 amount le 5.0
+    if 3039 amount_event_count
+    do 3039 own set_terrain position position is same_lane
+
+## C23 vv_m_1.md 19 (MISSED REAL, open, 0 table lines from the same code)
+Absorbing Man repeats the On Reveal of the unit played before him, so he makes each On Reveal unit go off again, as Wong does for Odin (L21 Kept, L10 triggers).
+- W marvel_snap: Absorbing Man -> Black Panther: NONE | network.py []
+- W marvel_snap: Absorbing Man -> Luna Snow: NONE | network.py []
+- W marvel_snap: Absorbing Man -> Arnim Zola: NONE | network.py []
+- W marvel_snap: Absorbing Man -> Peni Parker: NONE | network.py []
+  Absorbing Man:
+    when 2725 played self
+    if 2725 last_card unit mine keyword is 8000750
+    do 2725 own repeat unit mine it board
+  Black Panther:
+    when 2779 played self
+    if 2779 amount_stat power self
+    do 2779 own stat_change self power=stat
+  Luna Snow:
+    when 3033 played self
+    do 3033 own summon
+  Arnim Zola:
+    when 2757 played self
+    do 2757 own kill unit mine chosen board position is same_lane;card not 8000034
+    do 2757 own copy unit mine it card not 8000034
+  Peni Parker:
+    when 3127 played self
+    when 3128 merged
+    do 3127 own create
+    do 3128 own mana_gain mana mine amount=1.0
+
+## C24 vv_m_2.md 1 (MISSED REAL, open, 0 table lines from the same code)
+Swarm puts copies of itself back after a discard and Morbius grows for each discard, a case says they combine and no rule forbids it (L10 enables).
+- W marvel_snap: Swarm -> Morbius: NONE | network.py []
+  Swarm:
+    when 3296 discarded self
+    do 3296 own copy self amount=2.0
+    do 3296 own cost_set it cost=0.0
+  Morbius:
+    when 3084 always
+    if 3084 amount_product
+    if 3084 amount_event_count
+    do 3084 own stat_change self power=product
+
+## C25 vv_m_2.md 2 (MISSED REAL, open, 0 table lines from the same code)
+Apocalypse returns itself to hand after a discard, so it can feed Morbius's discard count again, a case says so and no rule forbids it (L10 enables).
+- W marvel_snap: Apocalypse -> Morbius: NONE | network.py []
+  Apocalypse:
+    when 2748 discarded self
+    do 2748 own return_card self
+    do 2748 own stat_change self power=4.0
+  Morbius:
+    when 3084 always
+    if 3084 amount_product
+    if 3084 amount_event_count
+    do 3084 own stat_change self power=product
+
+## C26 vv_m_2.md 4 (MISSED REAL, open, 0 table lines from the same code)
+White Tiger's summon is not a played card, so it still fills a location Storm flooded, a case says so and no rule forbids it (L17).
+- W marvel_snap: Storm -> White Tiger: NONE | network.py []
+  Storm:
+    when 3277 played self
+    do 3277 own cant card all hand event=played
+  White Tiger:
+    when 3373 played self
+    do 3373 own summon power=10.0
+
+## C27 vv_m_2.md 5 (MISSED REAL, open, 0 table lines from the same code)
+Doctor Doom's summons are not played cards, so they still fill a location Storm flooded, a case says so and no rule forbids it (L17).
+- W marvel_snap: Storm -> Doctor Doom: NONE | network.py []
+  Storm:
+    when 3277 played self
+    do 3277 own cant card all hand event=played
+  Doctor Doom:
+    when 2849 played self
+    do 2849 own summon power=5.0
+
+## C28 vv_m_2.md 14 (MISSED REAL, open, 0 table lines from the same code)
+Wave changes costs of cards and Death's cost depends on a count, a case says the deck is built around them and no rule forbids it (L10 makes cheaper).
+- W marvel_snap: Wave -> Death: NONE | network.py []
+  Wave:
+    when 3365 played self
+    do 3365 own cost_change card all max=4.0
+  Death:
+    when 2831 always
+    if 2831 amount_event_count
+    if 2831 amount_minus
+    do 2831 own cost_change self cost=minus
+
+## C29 vv_m_2.md 15 (MISSED REAL, open, 0 table lines from the same code)
+Moon Girl creates copies in hand and The Collector reacts to created cards, a case says they combine and no rule forbids a line from a card's own trigger (L10 triggers).
+- W marvel_snap: The Collector -> Moon Girl: NONE | network.py []
+  The Collector:
+    when 3314 created card mine
+    do 3314 own stat_change self power=1.0
+  Moon Girl:
+    when 3080 played self
+    do 3080 own copy card mine all hand
+
+## C30 vv_m_2.md 17 (MISSED REAL, open, 0 table lines from the same code)
+Professor X stops cards being played from hand, so the hand stays full for Devil Dinosaur's power, a real-world combo and no rule forbids it (L10 enables).
+- W marvel_snap: Professor X -> Devil Dinosaur: NONE | network.py []
+  Professor X:
+    when 3138 always
+    do 3138 own cant card all hand event=played
+    do 3138 own cant card all event=summoned
+    do 3138 own cant unit all board position is same_lane event=dies
+  Devil Dinosaur:
+    when 2836 always
+    if 2836 amount_product
+    if 2836 amount_count card mine all hand
+    do 2836 own stat_change self power=product
+
+## C31 vv_marvel_snap_2.md 3 (MISSED REAL, gone, 0 table lines from the same code)
+Hela's text counts the distinct costs in her discard pile and revives from it, so cards that discard fill what she reads (L17, L10 enables).
+- W marvel_snap: Lady Sif -> Hela: makes you discard cards | network.py []
+- W marvel_snap: M.O.D.O.K. -> Hela: makes you discard cards | network.py [] | cases n413 line
+- W marvel_snap: Black Cat -> Hela: makes you discard cards | network.py []
 
