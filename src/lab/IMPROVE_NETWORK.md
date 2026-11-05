@@ -66,35 +66,31 @@ before coding (CLAUDE.md), and keep every speed or AI check to about a minute.
   33 40. 30% was ahead in every test from 1,000 games on. Since then every AI learns 30% from the next position, and
   the inputs (version 8) also show what changed on a unit in play and this round's deaths and spells per side.
 
-## Why it may be stuck (suggestion, not proven)
-1. **No idea of where units stand relative to each other.** The 54 cell results get separate weights per cell, so any
-   relation between two units ("this unit can hit that one", "that aura reaches this unit") must be learned again for
-   every pair of cells. A unit can affect any other unit, in any lane or camp (Ranged, auras, round-end strikes on the
-   nearest enemy), so limiting the network to neighbours is wrong.
-2. **Some keywords are words, not effects.** `kwFx` (`src/game/js/cards/new-00-helpers.js`) writes many keywords out as
-   effects (Salvage, Wound, Vigil, Roots, Barrage ...), so the network reads them as effect parts. Others are only flags
-   whose rule lives in game code (Ranged, Guard/Bodyguard, Charge, Armoured, Riposte, Flurry ...): the network sees just a
-   name. A new keyword of that kind is a new, unknown input.
-3. **A new kind of effect is a new word.** A new op or trigger in `fx.js` / `fx-more.js` gets a fresh input that starts at
-   zero, so the network knows nothing about it until it has learned it.
-4. It may simply need many more games for 14 decks; only training shows.
-
-## What would make it play any new or changed card (suggestions, in the order Claude would try them)
-1. **Attention over units** (the main step; Kaptain's choice, todo.md item 8). Each unit is one entry with its values plus
-   its position (lane, camp, row, column); every unit looks at every other unit on the board, near or far, and learns
-   which ones matter to it. Relative position (how far apart, same lane or not, which camp) is given for every pair, so a
-   relation is learned once for every place on the board. This means new arithmetic: write its source into the repo
-   this time (plain JavaScript first, or a small WebAssembly written from source kept next to it), so it can be changed
-   later. Keep the outer interface (`net3Instance`: `forward`, gradients, `recs`) so workers, mirroring, saving and the
-   size check keep working, or change them in the same step.
-2. **Every keyword as effect parts.** For each keyword that is only a flag, describe what its rule does in the same parts
-   the effects use (e.g. Ranged: "can strike the back rows"; Guard: "takes hits for neighbours"), either in `kwFx` or in a
-   lab-side table next to `cardFeatures`. Then a new keyword built from known parts is understood from the start.
-3. **Effects as outcome words as well as names.** Next to the op name, give each op its outcome group from
-   `library/concept_tree.txt` (damage, removal, debuff, buff, heal, summon, draw, movement ...), kept in a small table in
-   the lab; a new op only needs its line in that table to be understood as "a kind of damage" before it is learned.
-4. **Train for generality.** Self-play plus the Benchmark (depth 1) as opponents; keep a few earlier versions of the
-   network as opponents (a league), so it doesn't learn to beat only itself.
+## Next steps (Claude's suggestions of 5 Nov 2026, evening; not agreed yet)
+State: with 30% next-move lessons and the unit-state inputs (version 8) it wins 65-70% against the Benchmark.
+Every step must keep the network general: cards seen only by printed values and state, by name; nothing per card
+or per keyword. Each step is compared with the Lessons check or the size check (same games, same steps).
+1. **Re-test what is cheap now that it is stronger.** Look-ahead when playing (its 4 best against every reply) gave
+   no clear gain at 40%; it may at 65%. The Lessons check result (15% / 30% / 45%) decides the share. "Search in
+   training" was never tested with next-move lessons.
+2. **A test that it plays redesigned cards.** Train with some cards held out of every deck, then test on decks
+   that use them; and test a trained network after changing cards (new values, a keyword moved). This measures the
+   main goal; today nothing measures it.
+3. **One card layer for every card.** Today a unit on the board goes through the cell layer, but each of the 10
+   hand slots has its own weights and the piles are plain totals. Instead: one shared layer reads any card's
+   printed values (board, hand, piles), the hand is the sum of its cards' outputs (order no longer matters), and the
+   board cell layer gets that card output as input. A card is learned once, wherever it is. Small speed cost.
+4. **Attention over the units.** Each unit (and each hand card, each lane's base) is one entry: its card layer
+   output, its state, its place. Every entry looks at every other entry; for each pair it also gets their relative
+   place (same lane or not, rows apart, same camp or not), so "this unit can hit that one" is learned once for the
+   whole board. Only occupied cells are entries (about 10-25), so it stays fast enough. Needs new arithmetic: write
+   it as readable JavaScript in the repo, check it against slow plain arithmetic, then speed it up; keep the outer
+   interface (forward, gradients, recs) so workers, mirroring, saving and the size check keep working.
+5. **Move ratings.** A second output that rates every legal move at once, learned from the moves its look-ahead
+   picked in training. Faster play (one pass instead of one per move) and sharper choices between close moves.
+   Biggest change; only after 4.
+6. **Earlier versions of itself as training opponents.** Keep a few saved versions and play them part of the time,
+   so it does not only learn to beat its current self.
 
 ## How to check that it really plays new and changed cards (suggestion)
 - **Held-out cards:** train with a set of cards left out of every deck, then test on decks that hold them.
