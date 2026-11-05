@@ -305,6 +305,10 @@ def build_made(c):
             and happening in ('created','summoned','transformed','played','equipped','shuffled')
             union select src, dst from card_link where rel in ('generates','transforms_into')"""):
         if a != b: step.setdefault(a, set()).add(b)
+    for a, w in c.execute("""select distinct card, obj_with from flat_ref where role='makes' and ref is null and origin in ('own','gives','uses_keyword')
+            and happening in ('created','summoned','transformed','played','equipped','shuffled') and obj_with like '%card i%'""").fetchall():
+        for b in re.findall(r'card (?:is|in) (\d+)', w):  # one of a set by its cards' ids (Agamotto's Ancient Arcana)
+            if a != int(b): step.setdefault(a, set()).add(int(b))
     for a in step:
         seen, front, d = {}, set(step[a]), 1
         while front and d <= 3:

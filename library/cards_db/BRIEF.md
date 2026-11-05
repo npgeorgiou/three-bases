@@ -656,7 +656,9 @@ a turn is shared, so it is a round. Sources: library/games/marvel_snap.md "The g
   "Quickdraw:" = the ability with cond keyword_condition ref Quickdraw (the card was drawn this turn), and the normal ability
   with the same cond op not. "Empowered" (a card whose Power was raised permanently) = filter state buffed. "Horde +N" =
   stat_change power N on card "Zombie Horde" (summon it first if the text says so). "(once per game)" = limit
-  once_per_game; "(once per turn)" = limit once_per_round.
+  once_per_game; "(once per turn)" = limit once_per_round. A location's own text when it is revealed (no "On Reveal:" in
+  its text) = played, object self (normalize N26). "Until the end of next turn" = lasts next_round (N28). "+1 Energy next
+  turn" = mana_gain lasts next_round in the same ability (N34). "Replace a location" = set_terrain, "to" the new one (N30).
 - Acts. destroy = kill. discard = discard (from hand: kind card, zone hand). "Add a card to your hand" = create, zone hand;
   "add it to a location" / "put" = summon (not played: no On Reveal); "play it" = play_card. Merge = merge ("on" the card
   that merges, "to" the one it merges into). "Copy its text / On Reveal" = repeat on that card's ability; a copy of a card =

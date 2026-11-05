@@ -681,7 +681,8 @@ def lines_of(c, game):
     # a card made by its name, not its id ("you draw a Pelt card": Skinning Knife; "create a Poro"; one of a set:
     # Kate Bishop's "add 2 Arrows"): the cards whose name fits
     for m, act, k, w in c.execute("""select card, act, on_kind, on_with from flat_do where act in ('create','summon') and card_ref is null
-            and origin='own' and (on_with like '%name_has is%' or on_with like '%card is%' or on_with like '%card in%')""").fetchall():
+            and origin in ('own','gives') and (on_with like '%name_has is%' or on_with like '%card is%' or on_with like '%card in%')""").fetchall():
+        # also inside an ability the card gives ("your cards have: Quickdraw: Thanos loads an Infinity Shot"), as by card_ref above
         if m in cards: put += [(m, t, act) for t, x in cards.items() if t != m and matches(c, game, x, k if k in KIND_CAT else 'any', w)]
     putters = collections.Counter(ref for _, ref in {(m, ref) for m, ref, _ in put})
     for m, ref, act in put:

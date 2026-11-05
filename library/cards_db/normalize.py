@@ -43,6 +43,18 @@ and second readings). Safe to run any number of times. Each rule is described wh
      names the card (card, or on kind card with only card / name_has filters) is create, zone deck (BRIEF: "Shuffle a Wound
      into your draw pile" = create in zone deck); shuffle_into_deck stays a card already there going back (Marvel Snap
      readers wrote both ways, 5 Nov 2026).
+  N26 a location's own text going off when it appears (category terrain: event summoned, object self) is played, as On Reveal
+     (BRIEF Game words: Marvel Snap; Daily Bugle, Great Portal and Transia were read both ways).
+  N27 the negative of an amount is minus with inner, never product with -1 (The Inversion).
+  N28 "until the end of next turn" is lasts next_round, never n_rounds with rounds 2 (Black Swan, Snowguard Hawk).
+  N29 a card target with the filter category unit is kind unit without the filter (same meaning as N4; Knight's Vow).
+  N30 replacing a location is set_terrain ("to" the new one; a random one when the text names none), never transform (Scarlet
+     Witch, World Forge).
+  N31 revive brings back a unit: its target is kind unit, never card (Firelord).
+  N32 a new card added to a player's hand or deck: whose it is is the side of "on", never a "to" player (Helicarrier).
+  N33 can / cant on a target whose only filter names the card itself is on the card itself, pick self (Domino).
+  N34 "+N Energy next turn" written as a second ability (round_start, limit next_time, only mana_gain) beside an On Reveal is
+     the mana_gain in the On Reveal ability, lasts next_round (Vibro-Shock Gauntlets, Bolts of Balthakk).
   N10 "strongest" / "weakest" are pick highest / lowest by the attack stat: power, or strength in games whose units have
      one stat (Stormbound). One form in every game.
 Usage: normalize.py <game> <file.jsonl> [...]   rewrites the files in place, prints how many records changed."""
@@ -294,6 +306,54 @@ def second_forms(x):
         for v in x: second_forms(v)
 
 
+NEXT_ROUND_ROUNDS = 2  # N28: "for 2 rounds" counts this round and the next
+
+
+def snap_forms(x):
+    """N27-N31 (Marvel Snap second reading, 5 Nov 2026; every game)"""
+    if isinstance(x, dict):
+        if x.get('x') == 'product' and len(x.get('items') or []) == 2 and -1 in x['items']:  # N27
+            inner = [i for i in x['items'] if i != -1][0]; x.clear(); x.update({'x': 'minus', 'inner': inner})
+        if x.get('lasts') == 'n_rounds' and (x.get('params') or {}).get('rounds') == NEXT_ROUND_ROUNDS:  # N28
+            x['lasts'] = 'next_round'; x['params'].pop('rounds')
+            if not x['params']: x.pop('params')
+        if x.get('act') == 'transform' and (x.get('on') or {}).get('kind') == 'position':  # N30
+            x['act'] = 'set_terrain'; x.setdefault('to', {'kind': 'position', 'pick': 'random'})
+        if x.get('act') == 'revive' and (x.get('on') or {}).get('kind') == 'card': x['on']['kind'] = 'unit'  # N31
+        if x.get('kind') == 'card' and isinstance(x.get('with'), list):  # N29
+            cu = [f for f in x['with'] if isinstance(f, dict) and f.get('attr') == 'category' and f.get('val') == 'unit' and f.get('op', 'is') == 'is']
+            if cu:
+                x['kind'] = 'unit'; x['with'] = [f for f in x['with'] if f not in cu]
+                if not x['with']: x.pop('with')
+        if x.get('act') == 'create' and isinstance(x.get('on'), dict) and x['on'].get('kind') in ('card', 'unit') and not x['on'].get('side'):
+            to = x.get('to')  # N32
+            if isinstance(to, dict) and set(to) == {'kind', 'side'} and to['kind'] == 'player': x['on']['side'] = to['side']; x.pop('to')
+        for v in list(x.values()): snap_forms(v)
+    elif isinstance(x, list):
+        for v in x: snap_forms(v)
+
+
+def own_card_forms(r, inputs):
+    """N26, N33, N34"""
+    me = inputs.get(r.get('id')) or {}
+    abs_ = r.get('abilities', [])
+    for ab in abs_:
+        w = ab.get('when') or {}
+        if me.get('category') == 'terrain' and w.get('event') == 'summoned' and (w.get('object') or {}).get('pick') == 'self':
+            w['event'] = 'played'  # N26
+        for e in ab.get('do', []):
+            on = e.get('on')
+            if e.get('act') in ('cant', 'can') and isinstance(on, dict) and on.get('with') == [{'attr': 'card', 'op': 'is', 'ref': me.get('name')}]:
+                e['on'] = {'pick': 'self'}  # N33
+    # N34 "+1 Energy next turn" on reveal: one ability, mana_gain lasts next_round (not a second ability on round_start, next_time)
+    plays = [ab for ab in abs_ if (ab.get('when') or {}).get('event') == 'played' and ((ab.get('when') or {}).get('object') or {}).get('pick') == 'self']
+    for ab in list(abs_):
+        if (plays and (ab.get('when') or {}).get('event') == 'round_start' and ab.get('limit') == 'next_time' and not ab.get('if')
+                and set((ab.get('when') or {})) == {'event'} and ab.get('do') and all(e.get('act') == 'mana_gain' and not e.get('lasts') for e in ab['do'])):
+            for e in ab['do']: plays[0]['do'].append(dict(e, lasts='next_round', link='and'))
+            abs_.remove(ab)
+
+
 def main():
     global STATUS
     game = sys.argv[1]; kinds = keyword_kinds(game); table = names_table(game); STATUS = status_keywords()
@@ -309,6 +369,7 @@ def main():
             strength_picks(r2, 'strength' if game in STRENGTH_GAMES else 'power')
             keyword_trigger_form(r2, STATUS)
             trap_events(r2); moves_object(r2); sacrifice_form(r2, inputs); second_forms(r2)
+            snap_forms(r2); own_card_forms(r2, inputs)
             n += r2 != r; out.append(r2)
         open(path, 'w').write(''.join(json.dumps(r, separators=(',', ':')) + '\n' for r in out))
         print(f'{os.path.basename(path)}: {n} of {len(L)} records changed')
