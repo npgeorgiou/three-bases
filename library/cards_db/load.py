@@ -156,7 +156,7 @@ class Loader:
 
 def main():
     path = os.path.join(HERE, 'cards.sqlite'); tmp = path + '.new'  # built aside, swapped in when complete
-    if os.path.exists(tmp): os.remove(tmp)
+    for f in (tmp, tmp + '-journal'): os.path.exists(f) and os.remove(f)  # a stopped build leaves both behind
     out = sqlite3.connect(tmp); out.executescript(SCHEMA); L = Loader(out)
     for r in csv.DictReader(open(os.path.join(HERE, 'vocab.tsv')), delimiter='\t'):
         L.ins('vocab', **{k: r[k] for k in ('field', 'value', 'meaning', 'tree', 'causes', 'added')})
