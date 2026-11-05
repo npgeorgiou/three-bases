@@ -28,10 +28,10 @@ before coding (CLAUDE.md), and keep every speed or AI check to about a minute.
   test. Units and hand cards were all checked visible to the network (no unknown card keys).
 
 ## Why it may be stuck (suggestion, not proven)
-1. **No idea of neighbours.** The 54 cell results get separate weights per cell, so "a unit facing a 1-defence enemy" or
-   "a unit beside an ally with an aura" must be learned again for every cell pair. With 7 factions and 14 decks that needs
-   far more games. Board-game networks normally use a layer that reads each cell with its neighbours (convolution, as in
-   AlphaZero) or lets every unit look at every other unit (attention; Kaptain prefers attention, todo.md item 8).
+1. **No idea of where units stand relative to each other.** The 54 cell results get separate weights per cell, so any
+   relation between two units ("this unit can hit that one", "that aura reaches this unit") must be learned again for
+   every pair of cells. A unit can affect any other unit, in any lane or camp (Ranged, auras, round-end strikes on the
+   nearest enemy), so limiting the network to neighbours is wrong.
 2. **Some keywords are words, not effects.** `kwFx` (`src/game/js/cards/new-00-helpers.js`) writes many keywords out as
    effects (Salvage, Wound, Vigil, Roots, Barrage ...), so the network reads them as effect parts. Others are only flags
    whose rule lives in game code (Ranged, Guard/Bodyguard, Charge, Armoured, Riposte, Flurry ...): the network sees just a
@@ -41,10 +41,10 @@ before coding (CLAUDE.md), and keep every speed or AI check to about a minute.
 4. It may simply need many more games for 14 decks; only training shows.
 
 ## What would make it play any new or changed card (suggestions, in the order Claude would try them)
-1. **A neighbour-aware layer** (the main step). After the shared cell layer, add a layer that reads each cell together
-   with the cells around it in its camp and the facing camp (same lane), then sums or pools over the board, so a relation
-   is learned once for every position. Alternative: attention over units (each unit's summary looks at every other unit's,
-   with their positions), which also handles units of any size. This means new arithmetic: write its source into the repo
+1. **Attention over units** (the main step; Kaptain's choice, todo.md item 8). Each unit is one entry with its values plus
+   its position (lane, camp, row, column); every unit looks at every other unit on the board, near or far, and learns
+   which ones matter to it. Relative position (how far apart, same lane or not, which camp) is given for every pair, so a
+   relation is learned once for every place on the board. This means new arithmetic: write its source into the repo
    this time (plain JavaScript first, or a small WebAssembly written from source kept next to it), so it can be changed
    later. Keep the outer interface (`net3Instance`: `forward`, gradients, `recs`) so workers, mirroring, saving and the
    size check keep working, or change them in the same step.
