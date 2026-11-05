@@ -104,9 +104,6 @@ combo	Shuri	Red Skull	Shuri doubles the next card's power	https://www.highground
 combo	Zero	Titania	removes the drawback	https://www.highgroundgaming.com/marvel-snap-best-decks/
 combo	Zero	Ebony Maw	removes the drawback	https://www.highgroundgaming.com/marvel-snap-best-decks/
 combo	Sauron	Ebony Maw	removes the drawback	https://www.highgroundgaming.com/marvel-snap-best-decks/
-combo	Taskmaster	Typhoid Mary	Taskmaster copies the last card's power	https://www.highgroundgaming.com/marvel-snap-best-decks/
-combo	Taskmaster	Red Skull	Taskmaster copies the last card's power	https://www.highgroundgaming.com/marvel-snap-best-decks/
-combo	Cable	Mantis	take cards from the opponent's deck	https://www.pocketgamer.com/marvel-snap/best-decks/
 combo	Carnage	Nova	buff all cards on the board	https://www.pocketgamer.com/marvel-snap/best-decks/
 combo	Ant Man	Angela	points in the third location	https://www.pocketgamer.com/marvel-snap/best-decks/
 combo	Doctor Octopus	Mojo	+6 when the spot is empty	https://www.pocketgamer.com/marvel-snap/best-decks/

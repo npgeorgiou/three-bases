@@ -153,12 +153,10 @@ signature	Yellow	sacrifice	sacrificing creatures	https://boards.faeria.com/t/col
 signature	Yellow	life_payment	sacrificing health	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
 signature	Yellow	on_spell	cards buffed by events	https://boards.faeria.com/t/color-identity-color-matchups-fighting-unfavorable-matchups/5292
 archetype	Yellow	aggro_tempo	Yellow Rush	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-archetype	Yellow	control	Yellow control	https://www.faeria.com/the-hub/guide/42-deck-archetypes
 archetype	Yellow	spellslinger	Blue Yellow Events	https://www.faeria.com/the-hub/guide/42-deck-archetypes
 archetype	Blue	spellslinger	Blue Yellow Events	https://www.faeria.com/the-hub/guide/42-deck-archetypes
 archetype	Red	burn	Red Yellow Burn	https://www.faeria.com/the-hub/guide/42-deck-archetypes
 archetype	Green	sacrifice	Green and Yellow sacrifice	https://www.faeria.com/the-hub/guide/42-deck-archetypes
-combo	Khalim's Prayer	Zealous Crusader	orb attacks give faeria and buff the Crusader	https://www.faeria.com/the-hub/guide/42-deck-archetypes
 combo	Feed the Forest	Oakling	destroying Oakling triggers its Last Words (+5/+5 to a green creature in hand) and gains faeria	https://www.faeria.com/the-hub/guide/13-how-to-build-a-green-deck
 combo	Feed the Forest	Ruunin, the Relentless	each death returns Ruunin bigger; Feed the Forest turns her Life into faeria	https://www.faeria.com/the-hub/deck/1720-illusion-of-failed-ruunin
 combo	Feed the Forest	Tarum, the Forest World	destroying Tarum gains 15 faeria and its Last Words fills the world with forests	https://www.faeria.com/the-hub/article/23-aquablad-s-card-review-time-of-legends

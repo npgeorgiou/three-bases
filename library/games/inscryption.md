@@ -148,7 +148,6 @@ heals|heal|\bare healed\b|\bto heal a card\b
 The real-world cases, one per line, tab-separated: `type  a  b  why  source` (see `realworld/RESEARCH.md`). Read by `realworld.py`, `realworld_report.py`, `realworld_why.py` and `learn_recipes.py`.
 
 ```tsv
-signature	Beast	sacrifice	Blood costs paid by sacrifice	https://steamcommunity.com/app/1092790/discussions/0/3553931489687797930
 signature	Beast	generate_cards	Warren puts a Rabbit in hand	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Beast	evasion	Hawk hits past blockers	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide
 signature	Undead	cost_type	Bones	https://primagames.com/gaming/inscryption-scrybe-starting-deck-act-2-guide

@@ -169,9 +169,7 @@ revive|revive|\brevive\b
 The real-world cases, one per line, tab-separated: `type  a  b  why  source` (see `realworld/RESEARCH.md`). Read by `realworld.py`, `realworld_report.py`, `realworld_why.py` and `learn_recipes.py`.
 
 ```tsv
-signature	Demacia	buff	buffing allies	https://mobalytics.gg/blog/lor/legends-of-runeterra-regions-overview/
 signature	Demacia	shield	Barrier	https://mobalytics.gg/blog/lor/legends-of-runeterra-regions-overview/
-signature	Demacia	board_presence	strength in numbers	https://mobalytics.gg/blog/lor/legends-of-runeterra-regions-overview/
 signature	Demacia	target_choice	Challenger	https://mobalytics.gg/blog/lor/legends-of-runeterra-regions-overview/
 signature	Demacia	damage_reduction	Tough	https://www.pcgamer.com/uk/legends-of-runeterra-regions-factions
 signature	Demacia	extra_turn	Rally	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
@@ -181,7 +179,6 @@ signature	Freljord	high_cost	the biggest units	https://mobalytics.gg/blog/lor/le
 signature	Freljord	board_wipe	area board clears	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
 signature	Ionia	return_to_hand	Recall	https://mobalytics.gg/blog/lor/legends-of-runeterra-regions-overview/
 signature	Ionia	bounce_enemy	Recall	https://mobalytics.gg/blog/lor/legends-of-runeterra-regions-overview/
-signature	Ionia	evasion	Elusive	https://mobalytics.gg/blog/lor/legends-of-runeterra-regions-overview/
 signature	Ionia	disable	Stun	https://mobalytics.gg/blog/lor/legends-of-runeterra-regions-overview/
 signature	Ionia	counter_spell	Deny	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
 signature	Noxus	damage	many ways to deal damage	https://mobalytics.gg/blog/lor/legends-of-runeterra-regions-overview/
@@ -201,30 +198,20 @@ signature	Shadow Isles	lifesteal	Drain and Lifesteal	https://www.pcgamer.com/uk/
 signature	Shadow Isles	evasion	Fearsome	https://www.pcgamer.com/uk/legends-of-runeterra-regions-factions
 signature	Bilgewater	self_mill	Toss and Deep	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
 signature	Bilgewater	draw	card draw	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
-signature	Targon	generate_cards	Invoke and card generation	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
 signature	Targon	silence	Hush	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
 signature	Shurima	selection	Predict	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
 signature	Shurima	shield	Spellshield	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
 signature	Shurima	counter_spell	counterspell	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
-signature	Bandle City	summon	token generation	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
-signature	Bandle City	board_presence	swarm	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
 signature	Bandle City	merge_attach	Attach	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
 archetype	Demacia	aggro_tempo	board tempo	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
-archetype	Freljord	control	control	https://www.pcgamer.com/uk/legends-of-runeterra-regions-factions
-archetype	Freljord	ramp	mana ramp, biggest units	https://mobalytics.gg/blog/lor/legends-of-runeterra-regions-overview/
-archetype	Ionia	aggro_tempo	tempo	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
 archetype	Noxus	aggro_tempo	aggro and tempo	https://mobalytics.gg/blog/lor/legends-of-runeterra-regions-overview/
 archetype	Noxus	burn	burn finishers	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
 archetype	Piltover & Zaun	spellslinger	spellslinger	https://mobalytics.gg/blog/lor/legends-of-runeterra-regions-overview/
 archetype	Piltover & Zaun	card_advantage	fast-draw decks	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
 archetype	Shadow Isles	sacrifice	sacrificing units for benefit	https://mobalytics.gg/blog/lor/legends-of-runeterra-regions-overview/
 archetype	Shadow Isles	control	control	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
-archetype	Shadow Isles	swarm	swarming the board	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
 archetype	Bilgewater	aggro_tempo	Pirate Aggro	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
-archetype	Targon	card_advantage	never run out of cards	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
-archetype	Shurima	aggro_tempo	explosive tempo	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
 archetype	Bandle City	swarm	go-wide swarm	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
-archetype	Bandle City	tribal	Yordle and Fae	https://gamersdecide.com/articles/legends-of-runeterra-best-regions
 splash	Demacia	direct_damage	direct damage is limited	https://www.pcgamer.com/uk/legends-of-runeterra-regions-factions
 combo	Ashe	Rimetusk Shaman	Frostbite the strongest enemy	https://www.oneesports.gg/legends-of-runeterra/legends-of-runeterra-beginners-guide-tips-and-strategies-everyone-should-know/
 combo	Lulu	Flame Chompers!	early tempo swing	https://mobalytics.gg/?p=15986

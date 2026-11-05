@@ -146,15 +146,11 @@ signature	Abyssian Host	board_presence	strong in numbers	https://store.steampowe
 signature	Magmar Aspects	permanent_growth	Grow	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Magmar Aspects	revive	Rebirth	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Vanar Kindred	territory_trigger	Infiltrate	https://store.steampowered.com/app/2004320/Duelyst_II/
-signature	Vanar Kindred	removal	swift, precise removal	https://store.steampowered.com/app/2004320/Duelyst_II/
 archetype	Lyonar Kingdoms	sustain	healing, war of attrition	https://store.steampowered.com/app/2004320/Duelyst_II/
 archetype	Songhai Empire	spellslinger	spell synergies and damage combos	https://store.steampowered.com/app/2004320/Duelyst_II/
-archetype	Songhai Empire	positional	displacement and movement	https://store.steampowered.com/app/2004320/Duelyst_II/
 archetype	Abyssian Host	swarm	Wraithlings in numbers	https://store.steampowered.com/app/2004320/Duelyst_II/
 archetype	Abyssian Host	sacrifice	profiting from death	https://store.steampowered.com/app/2004320/Duelyst_II/
 archetype	Magmar Aspects	scaling	Grow	https://store.steampowered.com/app/2004320/Duelyst_II/
-archetype	Vanar Kindred	control	tactical control	https://gamewave.fr/duelyst/duelyst-le-jeu-de-carte-aux-six-factions/
-archetype	Vanar Kindred	positional	battlefield manipulation	https://store.steampowered.com/app/2004320/Duelyst_II/
 ```
 
 ## Notes from the patterns check

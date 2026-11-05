@@ -156,7 +156,6 @@ archetype	Ironclad	scaling	Strength scaling	https://slaythespire.gg/guides/slay-
 archetype	Ironclad	fortress	Bunker	https://www.thegamer.com/slay-the-spire-best-builds/
 archetype	Silent	poison_attrition	Poison	https://www.thegamer.com/slay-the-spire-best-builds/
 archetype	Silent	card_advantage	Discard and Draw	https://www.thegamer.com/slay-the-spire-best-builds/
-archetype	Silent	spellslinger	Momentum, playing many cards	https://www.thegamer.com/slay-the-spire-best-builds/
 archetype	Defect	fortress	Frost Tank	https://www.thegamer.com/slay-the-spire-best-builds/
 archetype	Defect	scaling	Focus stacking, Claw	https://slaythespire.gg/guides/slay-the-spire-best-character
 archetype	Watcher	transformation	stance switching	https://www.thegamer.com/slay-the-spire-best-builds/

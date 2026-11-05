@@ -197,10 +197,8 @@ signature	Melting Remnant	death_trigger	minions with death abilities	https://pro
 signature	Melting Remnant	recycle	Reform returns a dead unit to hand (back to hand is not revive, Kaptain 26 Oct)	https://progameguides.com/monster-train/best-builds-in-monster-train/
 signature	Melting Remnant	self_destruct	Burnout	https://progameguides.com/monster-train/best-builds-in-monster-train/
 signature	Melting Remnant	other_death_trigger	Harvest	https://indiecator.org/2021/07/12/monster-train-my-favourite-clans/
-signature	Wurmkin	buff	Infused cards and Eggs buff monsters	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
 archetype	Hellhorned	aggro_tempo	glass-cannon offence	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
 archetype	Hellhorned	tribal	Imp build	https://progameguides.com/monster-train/best-builds-in-monster-train/
-archetype	Awoken	fortress	tanks	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
 archetype	Stygian Guard	spellslinger	powerful spells	https://progameguides.com/monster-train/best-clans-in-monster-train-ranked/
 archetype	Stygian Guard	poison_attrition	Frostbite	https://progameguides.com/monster-train/best-builds-in-monster-train/
 archetype	Umbra	sacrifice	killing units to buff others	https://indiecator.org/2021/07/12/monster-train-my-favourite-clans/

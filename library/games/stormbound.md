@@ -108,7 +108,6 @@ signature	Ironclad	buff	Boosting Elixir	https://www.bluestacks.com/blog/game-gui
 signature	Ironclad	forced_movement	knockback	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
 archetype	Winter	control	control and attrition	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
 archetype	Winter	ramp	extra mana for big units	https://stormboundkingdomwars.fandom.com/wiki/Winter_Pact?oldid=7023
-archetype	Swarm	aggro_tempo	aggro	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
 archetype	Swarm	swarm	many weak units	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
 archetype	Swarm	tribal	Satyrs	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html
 archetype	Shadowfen	swarm	flooding the board	https://www.bluestacks.com/blog/game-guides/stormbound-kingdom-wars/sbkw-class-guide-en.html

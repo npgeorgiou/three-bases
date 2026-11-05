@@ -86,7 +86,7 @@ push, give network.html to Kaptain.
   Monster Train, Faeria, Duelyst wait for his check of their deck networks.
 - Cases: all pass. Must-not cases whose old reason no line says any more were made strict (no line at all); n56, n352,
   n378, ntb15-16 and nst36 keep theirs because the pair still has a line for another reason. The next case id is n413.
-- Real-world cases: 237 of 261 hold (Zealous Crusader -> Khalim's Prayer is gone by a rule of Kaptain's of 3 Nov 2026, before L24; the other 23 are faction-label checks).
+- Real-world cases: all hold (failing ones deleted, 5 Nov 2026).
 - Lines (pairs in links.sqlite, 3 Nov 2026): Runeterra 201,006; Duelyst 12,427; Faeria 10,014; Slay the Spire 8,797; Into the
   Breach 6,137; Monster Train 3,092; Stormbound 2,686; Inscryption 1,080.
 - Known open (also LINKS_PLAN.md "Open"): a card placed by its text near the leader (Conscript) draws
@@ -227,7 +227,8 @@ An agent that writes nothing for 30 minutes is stopped (TaskStop) and started ag
 6. Judge data against the texts, never against old library tags or agreement between records and patterns.
 7. Nothing lives only in a chat: decisions go into the files at once; commit and push after every finished step.
 8. Nothing is "maybe": a card the values cannot describe is marked unsure (table `unsure`); a word-check flag is decided once
-   (`patterns/verdicts.tsv`); a dropped case is written in `cases/DROPPED.md` with its reason.
+   (`patterns/verdicts.tsv`). A case (any kind, real-world too) that still fails after a fix round is deleted, with no note
+   anywhere (Kaptain, 5 Nov 2026).
 9. Tests come from the game, never from Claude: card texts (mechanics.tsv), players' guides (decks.tsv, combos.tsv), the
    library's real-world rows (regions.tsv).
 10. A game's own rules (how units fight, move, pay) are records in `read/<game>/game_rules.jsonl`, from the game's own sources
@@ -399,11 +400,11 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
   Kaptain confirms checks the kind too.
 - regions.tsv: the library's signature, splash and archetype rows per faction.
 - A failing case is fixed at its cause (the query, checked against the texts first; the pattern; the value; shared code; the
-  records). A case built on wrong old tags is dropped with its reason in DROPPED.md.
+  records); one that still fails after the fix round is deleted, no note.
 
 ### 4. The last checks
-1. Real-world cases: `realworld.py <game>`; read every miss and decide whether the data, the question or the case is wrong
-   (cases are mostly right; a wrong case is shown to Kaptain with the texts, never changed quietly).
+1. Real-world cases: `realworld.py <game>`; each miss goes into the fix round as a MISSED cause; one still failing after it
+   is deleted, no note.
 2. Design questions: `design_questions.py`; read the new game's answers that find no card or look thin or odd, and trace each
    to its cause, fixed for all games.
 3. Kaptain checks the deck networks page (network_page.py) in plain words: does a line make sense to a player. No check files
@@ -499,7 +500,7 @@ their text. D = `checks/<game>/`. After each step: write PROGRESS.md, commit and
    <out>`), is split (`audit_pieces.py split`) and read by line readers (step 3's job, the diff as the piece). Combo cases
    pass on connections.py or on a line from the enabler to the payoff (cases/run.py line_of). Every wrong gone or new group is a new cause: steps 5-8 once more, at
    most twice in all; what is still wrong then goes to "Open work". Must-not cases that `cases/run.py` lists as stale are
-   rewritten as strict.
+   rewritten as strict. Cases that still fail and guide cases Kaptain rejects are deleted, no note (rule 8).
 9. **The last checks** (Part 2 step 4): `realworld.py <game>` again; `design_questions.py` read by one agent (thin or odd
    answers of the new game, as causes in the reader format, then steps 5-8 for them).
 10. **Done** (Part 2 step 5): "State" and "Open work" updated, pushed; Kaptain checks the deck page (network_page.py).
