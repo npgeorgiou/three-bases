@@ -478,3 +478,6 @@ n482	marvel_snap	Shadowlands Daredevil, King Eitri	Shadowlands Daredevil	King Ei
 n483	marvel_snap	The Hunger, Zombie Giant-Man	The Hunger	Zombie Giant-Man	line	more power	Claude 5 Nov 2026, line check C17: Giant-Man reads the power of Zombie Horde, Hunger gives it power
 n484	marvel_snap	Zombie Scarlet Witch, Zombie Giant-Man	Zombie Scarlet Witch	Zombie Giant-Man	line	more power	Claude 5 Nov 2026, line check C17: gives power to the Zombie Horde card Giant-Man reads
 n485	marvel_snap	The Hunger, Zombie Mister Fantastic	The Hunger	Zombie Mister Fantastic	none		Claude 5 Nov 2026, line check C17: Mister Fantastic reads no power
+n486	marvel_snap	SP//dr, Peni Parker	SP//dr	Peni Parker	line	merges onto it	Claude 5 Nov 2026, line check C18: SP//dr merges, Peni waits for a merge
+n487	marvel_snap	SP//dr, Man-Spider	SP//dr	Man-Spider	line	merges onto it	Claude 5 Nov 2026, line check C18: SP//dr merges, Man-Spider waits for a merge
+n488	marvel_snap	Peni Parker, Man-Spider	Peni Parker	Man-Spider	none		Claude 5 Nov 2026, line check C18: Peni creates a card, no merge

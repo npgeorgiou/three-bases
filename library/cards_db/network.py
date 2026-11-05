@@ -308,14 +308,14 @@ ACT = {'dies': 'makes {who} units die', 'killed': 'kills {who} units', 'damaged'
        'spell_resolves': 'casts spells', 'keyword_used': 'uses {kw}', 'sacrificed': 'has {who} units sacrificed', 'fights': 'makes {who} units fight',
        'harvests': 'makes your units harvest {who} wells', 'terrain_changed': 'changes the land', 'mana_refilled@secondary_resource': RESOURCE_WORD['secondary_resource'],
        'mana_refilled@gem': RESOURCE_WORD['gem'], 'mana_refilled@lane_resource': RESOURCE_WORD['lane_resource'],
-       'trap_activated': 'plants traps that go off later', 'countdown_done': 'finishes countdowns', 'exhausted': 'exhausts cards'}  # the opponent sets traps off
+       'trap_activated': 'plants traps that go off later', 'countdown_done': 'finishes countdowns', 'exhausted': 'exhausts cards', 'merged': 'merges cards'}  # the opponent sets traps off
 # the same, when the second card waits for it to happen to itself ("Last Words", "when this is damaged")
 ACT_SELF = {'dies': 'kills it for its death effect', 'killed': 'kills it for its death effect', 'sacrificed': 'sacrifices it for its effect',
             'damaged': 'damages it for its effect', 'survives_damage': 'damages it without killing it, for its effect',
             'given_keyword': 'gives it {kw} for its effect', 'stat_changed': 'changes its stats for its effect', 'healed': 'heals it for its effect',
             'moves': 'moves it for its effect', 'moves_onto': 'moves it for its effect', 'attacks': 'makes it attack for its effect',
             'strikes': 'makes it strike for its effect', 'fights': 'makes it fight for its effect', 'recalled': 'returns it to hand for its effect',
-            'revived': 'brings it back', 'transformed': 'transforms it for its effect', 'targeted': 'targets it for its effect'}
+            'revived': 'brings it back', 'transformed': 'transforms it for its effect', 'targeted': 'targets it for its effect', 'merged': 'merges onto it for its effect'}
 
 
 def act_say(c, h, side, kw, self_=False):
@@ -583,7 +583,7 @@ def lines_of(c, game):
                 # the Cunning Kitten that waits to be created (L20)
                 if tpick == 'self' and mkind == 'player' and h in ('moves', 'moves_onto') and cards[t]['cat'] != 'leader': continue  # done to my General or player, never to
                 # this card (L7: Mist Walking moves the General, not Gore Horn)
-                if mpick == 'self' and tpick == 'self': continue  # each card about itself ("when I level up"): no link between two cards
+                if mpick == 'self' and tpick == 'self' and h != 'merged': continue  # (a merge also sets off the card it merges onto: SP//dr -> Peni Parker) each card about itself ("when I level up"): no link between two cards
                 if not names_fit(c, game, cards, tw, mw, mref): continue
                 if not terrain_fit(tw, mw): continue
                 if tpick == 'self' and mpick != 'self':  # done to one of my units that must be this card ("give the Demon Wing Flying",
@@ -1096,7 +1096,7 @@ HELP_MAKES = {'stat_change': ('stat_changed',), 'grow': ('stat_changed',), 'give
               'heal': ('healed',), 'return_to_hand': ('recalled',), 'strike': ('strikes',), 'start_attack': ('attacks', 'strikes'),
               'transform': ('transformed',), 'cost_change': ('cost_changed',), 'cost_set': ('cost_changed',), 'ready': ('attacks',),
               'countdown_advance': ('counts_down', 'countdown_done'), 'move': ('moves',), 'swap': ('moves',),
-              'attach': ('equipped',)}
+              'attach': ('equipped',), 'merge': ('merged',)}  # a merge sets off "when merged" (SP//dr -> Peni Parker)
 
 
 TRIGGER_KW = ('on_attack', 'on_kill', 'on_damaged', 'death_trigger', 'on_play', 'on_fight', 'on_targeted', 'on_discard', 'on_sacrifice',
