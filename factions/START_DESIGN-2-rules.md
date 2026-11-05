@@ -69,9 +69,10 @@ More text: `factions/5-card-design-method.txt`, `factions/6-faction-entry-format
 - 2-3 keywords of its own. A keyword serves a mechanic: Barrage serves "guns in the back rows bombard the rear".
 - 5 champions (`champion: true`). Each is the strongest reason to play one way, and is also used by a second way.
   Example: a champion that grows when allies die is the centre of the death way and also pays off the sacrifice way.
-- The four things every faction can do alone: hold dots (units with enough defence for the front row), remove enemies
-  (its own way, step 2.2), get supply (plain Supply 1 units are fine), and draw (at least 1 draw card).
-- Draw: a plain "draw 1", or a condition from the faction's mechanics ("Place: if an ally died this round, draw 1").
+- The two things every faction can do alone: hold dots (units with enough defence for the front row) and remove enemies
+  (its own way, step 2.2). Extra supply and extra draw are strengths a faction may have or lack (Kaptain, 5 Nov 2026):
+  placed units already give supply and every player draws 2 cards a round.
+- Draw, when a faction has it: a plain "draw 1", or a condition from the faction's mechanics ("Place: if an ally died this round, draw 1").
   Never a condition the player can't arrange (an enemy's death). Only on effects that happen once per card (a spell,
   Place, its own death) or once per round; never "whenever an ally dies, draw".
 - At least 1 card that acts between lanes: moves a unit to another lane, throws something there, or uses one lane's

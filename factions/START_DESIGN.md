@@ -52,8 +52,8 @@ read 5-10 card texts behind every count, and write the sources (game: card) next
       one row back".
    5. Blind spot: the one tool it never gets, on any card. Example: a swarm faction never restores shields.
 3. **Monopolies and blind spots.** 2-3 mechanics only this faction has; no other faction uses them. A list of tools it
-   never has; its cards never make up for them, it plays around them. A blind spot is never one of the four things every
-   faction needs (hold dots, remove enemies, get supply, draw), only one way of doing them: "no kill spells" is a blind
+   never has; its cards never make up for them, it plays around them. A blind spot is never one of the two things every
+   faction needs (hold dots, remove enemies), only one way of doing them: "no kill spells" is a blind
    spot, "no removal" is not.
 4. **How it differs from each other faction.** Kaptain's example: a swarm that fills the front rows with many cheap weak
    units, against a fortress that never has more than 3 units and moves defence between them. Write one sentence per

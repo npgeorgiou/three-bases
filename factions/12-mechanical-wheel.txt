@@ -35,6 +35,10 @@ game; the first six explain about half of how real factions differ, all twelve a
     this board's own, not measured).
 13. Speed (Kaptain, 5 Nov 2026): how quickly the faction carries out its plan; seen in the cost curve (Faeria Yellow
     averages cost 3.1 against Red 4.8; Runeterra Shurima 2.9 against Freljord 4.1).
+14. Strength or defence: its units lean to killing or to holding dots (defence holds a base); seen in the stats
+    (Duelyst Lyonar puts 36% of its unit stats in strength, Abyssian 51%).
+15. Sets the pace or answers: forces the enemy to react to its plan, or waits and punishes what the enemy does.
+16. How hard it is to play: few clear decisions, or many fine ones.
 How the axes were missed: axes 1-12 were measured only from what cards do (concept shares), so identity that lives in
 the cost curve, the stats and how a faction feels to play was invisible; look there too.
 Which ends go together is judged by play: one end makes what the other needs, or undoes it (library fed/feeds/both).
