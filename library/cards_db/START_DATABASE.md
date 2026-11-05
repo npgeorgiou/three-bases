@@ -23,8 +23,8 @@ first and wait. Never invent rules or mechanics; mark suggestions as yours.
 2. **Every fix gets test cases** (31 Oct 2026): one `cases/network.tsv` row per point Kaptain made and per similar error found,
    `line` or `none`, only for lines checked against both cards. A fix without cases comes back broken.
 3. **Dump all lines before and after** (`dump_lines.py`) and read EVERY gone and new reason group in every game.
-4. **One rebuild per round**: `check_all.py <game>` loads all games once (about 25 minutes); after a change to network.py only,
-   `check_all.py --no-load` (about 3 minutes). Never `run.py` once per game, never a rebuild between single edits.
+4. **One rebuild per round**: `check_all.py <game>` loads all games once (about 7 minutes); after a change to network.py only,
+   `check_all.py --no-load` (about 2 minutes). Never `run.py` once per game, never a rebuild between single edits.
 5. **Read cards like a player**: what does it need, who gives it that, what does it make, what does that card do.
 6. **A check is done only when all its output was read.** Never sample less, skip a game or hand over because the output is
    long: cut it into pieces ("Token economy", Part 2). Say plainly what was not checked; a passing count is not a check.
@@ -106,26 +106,23 @@ game's own rulebook, and players' combos and decks that test the lines. Complete
    16 keywords from the game's sources; BRIEF "Game words: Marvel Snap"; sourced rules and deck rule in
    library/games/marvel_snap.md; read/marvel_snap/game_rules.jsonl; 18 vocab rows of 5 Nov 2026; patterns T99-T110;
    DECK_RULES marvel_snap); 27 full guide decks in decks.tsv; step 1 (all batches, keywords, second_001; 103 unsure cards
-   re-read, 39 still unsure with needs only one card has); step 2.1 (`run.py marvel_snap` passes, 13 of 13 cases;
-   `check_all.py --no-load` passes for every game); step 2.3 (0 word flags: patterns T111-T115, labels with colon only, 19 verdicts); step 2.4 (names.tsv, fixes/marvel_snap/v65.py: sets of cards as card lists; Muramasa Shard added; Overdrive left out as a mode (Kaptain); When Discarded is a trigger label like End of Turn (Kaptain);
-   "not revealed until the game ends" is cant played, as Dark Dimension; normalize N25: a new card shuffled in is create zone deck; 0 stubs). Next, in order:
-   - 2.5 done (5 Nov 2026): normalize N26-N34, fixes/marvel_snap/v66.py; cards made by a set of names or inside an ability a
-     card gives now count as made (network made(), refs build_made); a type reason is said once ("is" before "makes"); cases n403-n410.
-   - 2.7 and 2.8 done (5 Nov 2026): 0 text words without rows (fixes/faeria/v36.py for every game: a named card for the
-     opponent keeps side enemy, normalize N35; fixes/marvel_snap/v67.py: a location's "this turn"; flat.py: cant played is
-     play_restriction, not cant_attack). Link audit, explained: game_end, snapped, mana_spent and keyword_used Moveable are
-     made by the game and the player (every game ends; Snap and spending Energy are the player's choices); On Reveal, Ongoing,
-     Quickdraw and When Discarded are trigger labels like End of Turn (their events are in the rows). Check 10 leads: read
-     play_restriction and generate_cards (rows copy or summon); the other tags (symmetric_effect, lane_rule, turn_number,
-     cost_condition, cross_lane, tribal, control_reward, stat_condition, lane_closure) were not read.
-   - 2.9 deck networks (lines to check first: Power Shot -> Vampire Deacon Frost "changes your units' stats", "+3 Power" is
-     no stolen Power; Grapple Arrow -> Galactus, Galactus wants to be alone; Mind Shot -> Dragon of the Moon "fills your hand";
-     Hawkeye Kate Bishop -> Basic Arrow "makes more cards to play" (L1)): read 10 of the 27 decks card by card into deck_read_marvel_snap.md; cases/decks.tsv and network.tsv
-     have no Marvel Snap rows yet; combos in library/games/marvel_snap.md "Combos" go to cases/combos.tsv.
-   - Part 3 line check: `links_audit.py marvel_snap` and `deck_audit.py marvel_snap`, all output read (pieces, agents).
-   - Step 4: the 20-card check (deck_read_marvel_snap.md "Check of 20 cards"), `realworld.py marvel_snap` (every miss read),
-     `design_questions.py` (every answer for Marvel Snap read); then step 5 "Done when" item by item; then Kaptain checks
-     the deck page (network_page.py).
+   re-read, 39 still unsure with needs only one card has); decisions: Overdrive left out as a mode (Kaptain); When Discarded is a trigger label like
+   End of Turn (Kaptain); "not revealed until the game ends" is cant played, as Dark Dimension; a set of cards ("2 Arrows")
+   is a card list (fixes/marvel_snap/v65.py); Muramasa Shard added.
+   Chat 1 (the rows) is done: second reading, word check, names, text audit (0 left) and link audit (explained below) fixed,
+   cases n403-n412, ms04. Link audit explained: game_end, snapped, mana_spent and keyword_used Moveable are made by the game
+   and the player (every game ends; Snap and spending Energy are the player's choices); On Reveal, Ongoing, Quickdraw and When
+   Discarded are trigger labels like End of Turn (their events are in the rows). Check 10 leads read: play_restriction,
+   generate_cards; not read: symmetric_effect, lane_rule, turn_number, cost_condition, cross_lane, tribal, control_reward,
+   stat_condition, lane_closure.
+   Next, chat 2 (the lines), in order:
+   - 2.5 decks: the 27 full decks are in decks.tsv; write their cases/decks.tsv and network.tsv rows (none yet) and the
+     combos of library/games/marvel_snap.md "Combos" into cases/combos.tsv.
+   - Part 3 line check (`links_audit.py marvel_snap`, `deck_audit.py marvel_snap`). Lines already seen as doubtful: Power
+     Shot -> Vampire Deacon Frost "changes your units' stats" ("+3 Power" is no stolen Power); Grapple Arrow -> Galactus
+     (Galactus wants to be alone); Mind Shot -> Dragon of the Moon "fills your hand"; Hawkeye Kate Bishop -> Basic Arrow
+     "makes more cards to play" (L1).
+   - Step 4 (`realworld.py marvel_snap`: 10 misses; `design_questions.py`), step 5, then Kaptain checks the deck page.
    Not written: supplement/marvel_snap_links.jsonl (cards a card creates are linked by the names in its rows).
 
 ## When you finish
@@ -239,6 +236,17 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
   keep both sides of code, `run.py <your game>`, `cases/run.py` for every game, compare your lines with your last dump.
 - Never force-push. Readers never share a scratch folder (/tmp/reader_<game>_<batch>/).
 
+## An import takes two chats
+Each chat ends with everything pushed and "Open work" saying where the next one starts.
+- **Chat 1: the rows.** Step 0 (research, data, the game's words and rules), step 1 (the three readers in parallel), step 2.1-2.4
+  (one fix round for every rows-against-text finding, one rebuild).
+- **Chat 2: the lines.** Step 2.5 (decks and their cases), the line check (Part 3: agents in parallel, fixes by cause, a rebuild
+  only after code changes: `check_all.py --no-load`, about 2 minutes, or `check_all.py <game>` after record changes), step 4,
+  step 5.
+What keeps it to two: findings are collected before any fix and fixed together; one rebuild per round; long output goes to
+agents in the background, all at once, while the main chat fixes what is already found; the main chat reads only their
+findings, the diffs and the cards a finding names.
+
 ## Steps
 ### 0. Before reading (in this order)
 1. **Research the game**: its wiki rules and full glossary, every faction page, two or more strategy guides; note each
@@ -281,7 +289,7 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
    vocab row now.
 7. **Numbers per card level** ("1/2/3/4/5"): `{"x": "per_level", "items": [...]}` in level order.
 8. `python3 build_input.py <game> 20000`; a 10% sample for the second reading in `input/<game>/second_001.jsonl`.
-9. Add the game's trigger labels and verbs to `patterns/patterns.tsv` (judged as step 2.3 says).
+9. Add the game's trigger labels and verbs to `patterns/patterns.tsv` (judged as the word check in step 2.2 says).
 10. **The game's rules** (`read/<game>/game_rules.jsonl`), before readers run, because they decide most lines: how units
    fight, move and reach the enemy player; on a board, where cards may enter and how the board grows (who may build or claim
    spaces, next to what: Faeria's were missing and caused most of its errors). From the game's tutorial, rulebook, help pages or
@@ -317,39 +325,37 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
 - Check every keyword record by eye: all cards with a keyword inherit it. A trigger keyword that acts by itself (Monster
   Train Eaten: the unit is eaten after combat) has that act in its record.
 
-### 2. After the readings (each item once, in this order)
-1. `python3 run.py <game>` (check A in Part 1).
-2. Proposals: tally `*.proposals.jsonl`. A need that repeats gets a value; then fix the unsure cards by a rule script (Monster
-   Train: "15x the number of" -> x product for every card at once). What is left is unique to one card and stays unsure.
-3. Word check (`pattern_check.py <game>`): judge each pattern once by its hits; narrow a regex that catches other meanings
-   ("damage shield" is no damage), with the reason in the file. Each flag left is decided against the text in verdicts.tsv.
-4. Names: every stub is a card, keyword or token from the game's data (add it to the supplement), a family (name_has), a type,
-   or a misreading (`names.tsv`). Never guess.
-5. Second reading: `compare.py` lists differences; judge each against the text. A wrong kept reading is fixed; each "same
-   meaning, different form" becomes a normalize rule for all games.
-6. Rebuild once; check every other game read-only (`cases/run.py <game>`); all cases pass.
-7. **Text audit** (`audit_text.py <game> [--list <rule>]`): read each listed card; fix the family by a rule script, or add the
-   card to audit_text_explained.tsv with why the rows are right. A new kind of reading error becomes a rule in audit_text.py.
-8. **Link audit** (`audit_links.py <game>`): each line is a link that cannot exist; fix it at its cause (a missing `causes`, a
-   keyword with no concept or record, a level-up form the source lacks, a misread name) or explain it in START_DATABASE.md
-   "State". A game is not done while one is unexplained.
-9. **Deck networks** (`network_page.py`; `ask.py <game> network "<deck>"`). Find at least 20 decks (Kaptain, 30 Oct 2026),
-   spread over its factions and mechanics (Duelyst: every General's faction; Runeterra: every region); a list Kaptain gives is
-   used whole, and a name cut short by a page is matched to the real card. Full decks first (guides, deck sites, deck codes;
-   not a guide's core cards; a roguelike's guide builds are core cards and the source column says so; a later edition's deck
-   codes, Duelyst II, decode to ids the game lacks: left out). The source column
-   starts with the URL. A full deck has every copy: counts add up to the game's deck size (Inscryption Act II: 20), the source
-   column says counts and size, decks.tsv lists each card once. A roguelike's starter deck (Inscryption Act I) is kept, marked
-   as a starter, and does not count toward 10 full decks; fewer than 10 full decks: say so in "State".
-   Read at least 10 decks card by card as a player ("Fixing errors" 1), first writing every wrong or missing line into
-   `deck_read_<game>.md` (deck, from, to, what is wrong), then group them into families and fix each once (Kaptain found 15 gaps
-   in 9 decks that 500 passing cases had not shown).
-   `deck_read_<game>.md` is the import's working record: each family a "## F<n> <name>" with "Root cause:", "Same error
-   elsewhere:" (counts per game) and "Fix:" lines (`run.py` fails without them: review_check.py). Once Kaptain approves the
-   game, move its open items to LINKS_PLAN.md "Open" or "State" and delete the file.
-   Then the line check (Part 3), never skipped: `links_audit.py <game>` checks every reason of the WHOLE game
-   (is its rule right?), `deck_audit.py <game>` checks the lines inside EVERY deck (cards with no or few partners). Both are
-   run and their whole output read (cut into pieces). Not the same as `audit_links.py` (step 2.8, links that cannot exist).
+### 2. After the readings: one fix round for the rows
+1. `python3 run.py <game>` (check A in Part 1). It prints the word check, the text audit and the link audit.
+2. Collect every finding before fixing any (they are all "rows against text"):
+   - proposals: tally `*.proposals.jsonl`; a need that repeats gets a value (Monster Train: "15x the number of" -> x product);
+   - word check (`pattern_check.py <game>`): judge each pattern once by its hits; narrow a regex that catches other meanings
+     ("damage shield" is no damage), with the reason in the file; each flag left is decided in verdicts.tsv;
+   - names: every stub is a card, keyword or token from the game's data (add it to the supplement), a family (name_has), a
+     type, or a misreading (`names.tsv`); never guess;
+   - second reading: `compare.py <first> <second> <input>` on both readings normalized; judge each difference against the
+     text; a wrong kept reading is fixed; each "same meaning, different form" becomes a normalize rule for all games;
+   - text audit (`audit_text.py <game> [--list <rule>]`): read each listed card; a wrong row is a family; a right one goes to
+     audit_text_explained.tsv with why; a flag the rule should not raise in any game (a lane's neighbours are lane_left and
+     lane_right) widens the rule;
+   - link audit (`audit_links.py <game>`): each line is a link that cannot exist; fix its cause (a missing `causes`, a keyword
+     with no concept or record, a level-up form the source lacks, a misread name, a wrong concept) or explain it in "State".
+     Check 10 (old library tags) are leads: read the ones whose tag names a mechanic the game's texts show.
+3. Group the findings into families by cause (Part 2 "Fixing errors" 4), across all the lists above. Fix each once: a rule
+   script (`fixes/<game>/vNN.py`, or a script for every game when the cause is shared), a normalize rule, or shared code.
+4. One rebuild: `check_all.py <game>` (about 7 minutes). Before it `dump_lines.py`, after it `--diff`: read every gone and new
+   reason group. Then all cases of every game pass, and the three audits print nothing unexplained. A new family found here
+   is fixed in the same way and rebuilt once more; never a rebuild per family.
+5. **Decks.** Find at least 20 decks (Kaptain, 30 Oct 2026), spread over its factions and mechanics (Duelyst: every
+   General's faction; Runeterra: every region); a list Kaptain gives is used whole, and a name cut short by a page is matched
+   to the real card. Full decks first (guides, deck sites, deck codes; not a guide's core cards; a roguelike's guide builds are
+   core cards and the source column says so; a later edition's deck codes, Duelyst II, decode to ids the game lacks: left
+   out). The source column starts with the URL. A full deck has every copy: counts add up to the game's deck size
+   (Inscryption Act II: 20), the source column says counts and size, decks.tsv lists each card once. A roguelike's starter
+   deck (Inscryption Act I) is kept, marked as a starter, and does not count toward 10 full decks; fewer than 10 full decks:
+   say so in "State". The decks feed cases/decks.tsv and network.tsv (step 3), and the guide's combos cases/combos.tsv.
+   Their lines are checked by the line check (Part 3), which reads every deck.
+6. **The line check** (Part 3), never skipped. Not the same as the link audit (links that cannot exist).
 
 ### 3. Case tests (`cases/`)
 - mechanics.tsv: a question, the expected cards from the texts (regex, or a Keywords-field keyword) and the query; passes at
@@ -365,24 +371,24 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
 - A failing case is fixed at its cause (the query, checked against the texts first; the pattern; the value; shared code; the
   records). A case built on wrong old tags is dropped with its reason in DROPPED.md.
 
-### 4. Claude's and Kaptain's checks
-1. Claude checks 20 random cards against their texts and the step 0.10 sources (`ask.py <game> card <name>`), writes every
-   error family into deck_read_<game>.md ("Check of 20 cards"), fixes each once, adds a case per family.
-2. The line check: Part 3 (`links_audit.py` for the whole game, `deck_audit.py` for every deck).
-3. Real-world cases: `realworld.py <game>`; read every miss and decide whether the data, the question or the case is wrong
+### 4. The last checks
+1. Real-world cases: `realworld.py <game>`; read every miss and decide whether the data, the question or the case is wrong
    (cases are mostly right; a wrong case is shown to Kaptain with the texts, never changed quietly).
-4. Design questions: `design_questions.py`; read every answer for the new game's factions like a designer; a concept that finds
-   no card, or a thin or odd answer, is traced to its cause and fixed for all games.
-5. Kaptain checks the deck networks page (network_page.py) in plain words: does a line make sense to a player. No check files
-   are written for him. Every point is fixed as "Fixing errors" says.
+2. Design questions: `design_questions.py`; read the new game's answers that find no card or look thin or odd, and trace each
+   to its cause, fixed for all games.
+3. Kaptain checks the deck networks page (network_page.py) in plain words: does a line make sense to a player. No check files
+   are written for him. Every point he raises goes into `deck_read_<game>.md` as a family ("## F<n> <name>" with "Root
+   cause:", "Same error elsewhere:" (counts per game) and "Fix:" lines; `run.py` fails without them: review_check.py) and is
+   fixed as "Fixing errors" says. Once he approves the game, its open items move to LINKS_PLAN.md "Open" or "State" and the
+   file is deleted.
 
 ### 5. Done when
 `run.py <game>` passes and every other game still passes; game_rules.jsonl written; audit_text.py and audit_links.py print
 nothing unexplained; the keyword -> concept list checked twice and shown to Kaptain; 0 open word flags; no proposal need shared
 by cards with different texts; stubs only names nothing defines; `ask.py all compare <its main concepts>` shows its cards next to
-the other games'; every guide deck explained; the 20-card check written; 20 decks found, 10 full decks read card by card, the
-line check done (`links_audit.py` and `deck_audit.py`, all output read) and its errors fixed; "State" says it; everything pushed. After Kaptain's approval, add a few approved records to
-BRIEF.md "Game words: <game>" as worked examples.
+the other games'; every guide deck explained; 20 decks found; the line check done (`links_audit.py` and `deck_audit.py`, all
+output read) and its causes fixed; realworld misses and odd design answers traced; "State" says it; everything pushed. After
+Kaptain's approval, add a few approved records to BRIEF.md "Game words: <game>" as worked examples.
 
 ## Fixing errors: by cause, never by example (read before touching any point Kaptain raises)
 Kaptain reviews a few decks, a sliver of the cards; each point is a sample of a rule wrong everywhere it fires. Twice Claude fixed
@@ -444,12 +450,12 @@ fixed by its cause, for every game, in the main chat; agents only read ("Token e
 2. `realworld.py <game>`: every combo a guide names that has no line is a missed line found for free.
 3. Print the two checks: `links_audit.py <game>` (Check 1: each reason of the game, is its rule right?) and `deck_audit.py <game>`
    (Check 2: every deck: cards with no or few partners, the special cards). Cut each output with `audit_pieces.py split`.
-4. Line readers: one agent per piece, model sonnet, prompt = `checks/LINE_READER_JOB.md` + the piece path + the findings path
-   (`/tmp/lr_<game>_<n>.md`). They report causes (not single lines) in the one-line format causes.py reads.
+4. Line readers: one agent per piece, model sonnet, all started at once in the background, prompt = `checks/LINE_READER_JOB.md`
+   + the piece path + the findings path (`/tmp/lr_<game>_<n>.md`); meanwhile the main chat does step 2's misses (realworld). They report causes (not single lines) in the one-line format causes.py reads.
 5. `causes.py /tmp/lr_<game>_*.md --out /tmp/vp_<game>.md`: adds to every example its line as it is now, the network.py lines
    that made it, the cases with both cards (CONFLICT = a case says the opposite) and both cards' rows. Cut it with
    `audit_pieces.py split`.
-6. Verifiers: one agent per piece, prompt = `checks/LINE_VERIFIER_JOB.md` + the piece path + the verdict path
+6. Verifiers: one agent per piece, all at once in the background, prompt = `checks/LINE_VERIFIER_JOB.md` + the piece path + the verdict path
    (`/tmp/vv_<game>_<n>.md`).
 7. `causes.py /tmp/vv_<game>_*.md` writes `causes_sheet.md`, biggest first: each REAL or PARTLY cause with all a fixer needs and
    how many table lines come from the same reason and network.py line. Fix from the top; skip CONFLICT causes (Kaptain's case

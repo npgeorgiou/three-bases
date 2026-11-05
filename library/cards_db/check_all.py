@@ -6,7 +6,7 @@ reloads all eight games (load.py always loads every game), so eight runs reload 
                                and link audit for every game"""
 import concurrent.futures, os, subprocess, sys, time
 HERE = os.path.dirname(os.path.abspath(__file__))
-GAMES = ['runeterra', 'stormbound', 'monster_train', 'duelyst', 'faeria', 'inscryption', 'into_the_breach', 'sts1']
+GAMES = ['runeterra', 'stormbound', 'monster_train', 'duelyst', 'faeria', 'inscryption', 'into_the_breach', 'sts1', 'marvel_snap']
 
 
 def out(cmd):

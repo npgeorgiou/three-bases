@@ -155,9 +155,9 @@ class Loader:
 
 
 def main():
-    path = os.path.join(HERE, 'cards.sqlite')
-    if os.path.exists(path): os.remove(path)
-    out = sqlite3.connect(path); out.executescript(SCHEMA); L = Loader(out)
+    path = os.path.join(HERE, 'cards.sqlite'); tmp = path + '.new'  # built aside, swapped in when complete
+    if os.path.exists(tmp): os.remove(tmp)
+    out = sqlite3.connect(tmp); out.executescript(SCHEMA); L = Loader(out)
     for r in csv.DictReader(open(os.path.join(HERE, 'vocab.tsv')), delimiter='\t'):
         L.ins('vocab', **{k: r[k] for k in ('field', 'value', 'meaning', 'tree', 'causes', 'added')})
         if r['field'] == 'act':
@@ -195,7 +195,7 @@ def main():
     out.execute("""update card set cost_x=1 where id in (select b.card from ability b join event v on v.id=b.event join effect e on e.ability=b.id
                    join param p on p.effect=e.id join amount a on a.id=p.amount where v.event='played' and e.act='spend_mana' and a.x='full')""")
     import flat; flat.build(out); flat.derive(out); import refs; refs.build(out)  # the query layer: general rows with keywords expanded and concepts
-    out.commit()
+    out.commit(); out.close(); os.replace(tmp, path)
 
 
 if __name__ == '__main__':
