@@ -453,3 +453,8 @@ n457	marvel_snap	Ant Man, Mystique	Ant Man	Mystique	line	a unit with Ongoing	Cla
 n458	marvel_snap	Patriot, Mystique	Patriot	Mystique	line	a unit with Ongoing	Claude 5 Nov 2026, line check: Mystique needs an Ongoing unit last played
 n459	marvel_snap	Wong, Mystique	Wong	Mystique	line	a unit with Ongoing	Claude 5 Nov 2026, line check: Mystique needs an Ongoing unit last played
 n460	marvel_snap	Onslaught, Blue Marvel	Onslaught	Blue Marvel	line	repeats its effects	Claude 5 Nov 2026, line check: right example stays
+n461	marvel_snap	Okoye, Black Panther	Okoye	Black Panther	line	gives it more power	Claude 5 Nov 2026, line check: Black Panther doubles his power
+n462	marvel_snap	Nakia, Black Panther	Nakia	Black Panther	line	gives it more power	Claude 5 Nov 2026, line check: Black Panther doubles his power
+n463	marvel_snap	Wong, Black Panther	Wong	Black Panther	line	plays it again	Claude 5 Nov 2026, line check: right example stays
+n464	marvel_snap	Odin, Black Panther	Odin	Black Panther	line	repeats its effects	Claude 5 Nov 2026, line check: right example stays
+n465	marvel_snap	Okoye, Zabu	Okoye	Zabu	none	more power to any card	Claude 5 Nov 2026, line check: no line to a card that does not read its power

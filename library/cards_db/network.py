@@ -1000,7 +1000,9 @@ def aimed_rows(c, game):
         if (side == 'any' and not rule and not helps_it(c, act, kw, ps)) or \
                 (kind not in KIND_CAT and not (kind in ('card', 'any', 'anything') and (narrowed or named)) and not
                  (kind in ('any', 'anything') and zone in (None, 'board') and pick in ('chosen', 'random')
-                  and any(x['cat'] == 'leader' for x in cards.values()))): continue  # "restore 2 Health to anything": a unit or my General
+                  and any(x['cat'] == 'leader' for x in cards.values()))) and not (
+                kind == 'card' and act == 'stat_change' and 'power=' in (ps or '') and zone in ('hand', 'deck') and power_doublers(c) & set(cards)):
+            continue  # "restore 2 Health to anything": a unit or my General; power to cards in hand or deck feeds a card that doubles its power (Okoye -> Black Panther)
         rows.append((a, act, kind, w, kw, rule, narrowed or named or kind == 'player', ps, kv))  # "your General": one card, the leader
     makers = collections.defaultdict(set)
     for a, act, kind, w, kw, rule, *_ in rows: makers[(act, kind, kw, rule if rule in (True, False, 'boost') else True)].add(a)
@@ -1199,6 +1201,7 @@ def use_of(c, game, b, act, kw, ps, w=None):
     if act == 'give_keyword' and tree in ('evasion', 'excess_damage') and ('big_strike' in u['flags'] or u['needs'] & {'strikes_nexus', 'nexus_damaged'}):
         return f'gives it {kwn}: its strike gets through in full'  # Sumpworks Map -> Vi: "struck for 10+ damage in one strike"
     up = lambda *ks: act in ('stat_change', 'grow') and any(k in p and raises(p[k]) for k in ks)
+    if up('power') and b in power_doublers(c): return 'more power: it doubles its power'  # Okoye -> Black Panther
     if up('power') and b in own_power_readers(c): return 'more power: its text reads its power'  # Poppy: "allies with less power than me" (L18)
     if up('power', 'strength') or (act == 'give_keyword' and tree in ('attack_gain', 'temporary_buff')):
         if u['trees'] & set(POWER_USE) or u['flags'] & {'big_strike', 'fights', 'level_hit'} or ('play_fights' in u['flags'] and 'hand' in (w or '')) or (b in gains_back(c, game) and not fixed_hit(c, b)):
@@ -1285,6 +1288,14 @@ def own_power_readers(c):
         CACHE['pread'] = {b for b, w_ in c.execute("select card, on_with from flat_do where origin='own' and on_with like '%power %'")
                           if any(re.match(r'power (le|lt|ge|gt|eq) (\d+)$', q) and q.split(' ')[2] in ids_ for q in (w_ or '').split(';'))}
     return CACHE['pread']
+
+
+def power_doublers(c):
+    """cards that set their own power from their power ("double my power", Black Panther): more power in hand or deck feeds it (L18)"""
+    if 'pdbl' not in CACHE:
+        CACHE['pdbl'] = {b for (b,) in c.execute("""select d.card from flat_do d join flat_if f on f.card=d.card and f.ability=d.ability and f.test='amount_stat'
+                         and f.attr='power' and f.of_pick='self' where d.origin='own' and d.act='stat_change' and d.on_pick='self' and d.params like '%power=stat%'""")}
+    return CACHE['pdbl']
 
 
 def all_raisers(c):

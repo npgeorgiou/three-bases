@@ -1,36 +1,56 @@
-# Case tests: sts1
+# Case tests: marvel_snap
 
-Made by `cases/run.py sts1`.
-**54 of 55 cases pass.**
-
-**Cases whose reason no line says any more (rewrite them): nst36**
+Made by `cases/run.py marvel_snap`.
+**88 of 106 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
 
 | case | question | expected | found | recall | extra | pass |
 |---|---|---|---|---|---|---|
-| mx01 | a trigger on another unit dying is other_death_trigger | 2 | 2 | 100% | 1 | yes |
-| mx02 | moving enemy units is forced_movement | 0 | 0 | 100% | 59 | yes |
-| mx03 | a plain draw is one form: zone deck_top, no pick top | 65 | 65 | 100% | 5 | yes |
-| mx10 | damage to the enemy player is Nexus damage (kinds kept, v30) | 0 | 0 | 100% | 86 | yes |
-| mx11 | moving or pushing units makes units move (positions change, v30) | 0 | 0 | 100% | 59 | yes |
-| mx12 | a unit that moves (onto a space) is the event's object, never its actor (N16, Sentry, v36, v38) | 0 | 0 | 100% | 0 | yes |
+| mx01 | a trigger on another unit dying is other_death_trigger | 0 | 0 | 100% | 10 | yes |
+| mx02 | moving enemy units is forced_movement | 1 | 1 | 100% | 49 | yes |
+| mx03 | a plain draw is one form: zone deck_top, no pick top | 16 | 16 | 100% | 15 | yes |
+| mx10 | damage to the enemy player is Nexus damage (kinds kept, v30) | 0 | 0 | 100% | 0 | yes |
+| mx11 | moving or pushing units makes units move (positions change, v30) | 1 | 1 | 100% | 57 | yes |
+| mx12 | a unit that moves (onto a space) is the event's object, never its actor (N16, Sentry, v36, v38) | 0 | 0 | 100% | 19 | yes |
 | mx13 | can't be targeted by spells: the cant is on the spells, the protected unit is "to" (N19, v37) | 0 | 0 | 100% | 0 | yes |
-| mx14 | a dead unit put into play is revive, never summon from the discard (N20, v37) | 0 | 0 | 100% | 0 | yes |
-| mx15 | a trigger that holds only "this turn" is an ability given to the player for this turn (v37, Duelyst) | 4 | 4 | 100% | 8 | yes |
-| mx13 | an effect on the creature opposing it is about lanes (concept lanes from same_lane, v38) | 0 | 0 | 100% | 0 | yes |
+| mx14 | a dead unit put into play is revive, never summon from the discard (N20, v37) | 0 | 0 | 100% | 16 | yes |
+| mx15 | a trigger that holds only "this turn" is an ability given to the player for this turn (v37, Duelyst) | 0 | 0 | 100% | 4 | yes |
+| mx13 | an effect on the creature opposing it is about lanes (concept lanes from same_lane, v38) | 0 | 0 | 100% | 398 | yes |
 | mx14 | a strike on the spaces beside the opposing one reaches other lanes (cross_lane, v38) | 0 | 0 | 100% | 0 | yes |
 | mx15 | within a circuit is a formation (link_formation, v38) | 0 | 0 | 100% | 0 | yes |
-| mx16 | more or faster base resource (base_resource_gain, v38) | 0 | 0 | 100% | 71 | yes |
-| ms01 | puts in an Orb that deals damage (Lightning, Dark): the card deals that damage | 15 | 15 | 100% | 212 | yes |
-| ms02 | puts in Frost: the card gives Block through it | 8 | 8 | 100% | 99 | yes |
-| ms03 | puts in Plasma: the card gains energy through it | 3 | 3 | 100% | 68 | yes |
+| mx16 | more or faster base resource (base_resource_gain, v38) | 0 | 0 | 100% | 35 | yes |
+| ms04 | limits what can be played at a location (play_restriction) | 15 | 15 | 100% | 23 | yes |
 
 ## Combos (the enabler must set off the payoff)
 
 | case | enabler | payoff | why | found as | pass |
 |---|---|---|---|---|---|
+| cms01 | M.O.D.O.K. | Hela | M.O.D.O.K. discards the hand, Hela brings the discarded cards back | state: discarded | yes |
+| cms02 | Swarm | Morbius | Morbius grows per discard; Swarm returns after it is discarded | - | NO |
+| cms03 | Apocalypse | Morbius | Morbius grows per discard; Apocalypse returns after it is discarded | - | NO |
+| cms04 | Wong | Odin | Wong doubles Odin's On Reveal | - | NO |
+| cms05 | Odin | Ironheart | Odin repeats her power boost | trigger keyword: On Reveal | yes |
+| cms06 | Odin | Black Panther | Odin repeats his power boost | trigger keyword: On Reveal | yes |
+| cms07 | Storm | White Tiger | White Tiger still places a card in the flooded location | - | NO |
+| cms08 | Storm | Doctor Doom | Doctor Doom still places cards in the flooded location | - | NO |
+| cms09 | Brood | Wolfsbane | Brood fills a location, Wolfsbane gains power as the fourth card | count: unit | yes |
+| cms10 | Moon Girl | Devil Dinosaur | the doubled hand boosts Devil Dinosaur | - | NO |
+| cms11 | Shuri | Typhoid Mary | Shuri doubles the next card's power | - | NO |
+| cms12 | Shuri | Red Skull | Shuri doubles the next card's power | - | NO |
+| cms13 | Zero | Titania | Zero removes her drawback | is: playing Zero is a played the payoff waits for | yes |
+| cms14 | Zero | Ebony Maw | Zero removes his drawback | - | NO |
+| cms15 | Sauron | Titania | Sauron removes her drawback | is: playing Sauron is a played the payoff waits for | yes |
+| cms16 | Sauron | Ebony Maw | Sauron removes his drawback | - | NO |
+| cms17 | Taskmaster | Red Skull | Taskmaster copies the last card's power | - | NO |
+| cms18 | Taskmaster | Typhoid Mary | Taskmaster copies the last card's power | - | NO |
+| cms19 | Cable | Mantis | both take cards from the opponent's deck | - | NO |
+| cms20 | Carnage | Nova | Carnage destroys Nova, whose death buffs your cards | event: kill -> dies | yes |
+| cms21 | Ant Man | Angela | points in the third location | is: playing Ant Man is a played the payoff waits for | yes |
+| cms22 | Doctor Octopus | Mojo | +6 when the spot is empty | state: moves | yes |
+| cms23 | Wave | Death | the deck is built around the two | - | NO |
+| cms24 | The Collector | Moon Girl | Collector buffs cards, Moon Girl copies them | - | NO |
 
 ## Region identity (signature, splash, archetype)
 
@@ -41,47 +61,76 @@ Made by `cases/run.py sts1`.
 
 | case | deck | must say | missing | pass |
 |---|---|---|---|---|
+| dms01 | Self-destruction Deadpool | your units die: made by carnage, deathlok, killmonger, venom;get value when they die: bucky barnes, deadpool | - | yes |
+| dms02 | Sera Mystique summons | pays for big cards (more mana, cheaper cards): sera | - | yes |
+| dms03 | The Wong Spectrum | wong makes these cards' effects happen again | wong makes these cards' effects happen again | NO |
+| dms04 | Deathpool self-destruction | your units die: made by carnage, deadpool, deathlok, killmonger, venom;use it: death, knull | - | yes |
+| dms05 | Sera Zero summons | pays for big cards (more mana, cheaper cards): sera;use it: taskmaster | - | yes |
+| dms06 | Patriots, drones and clones | onslaught makes these cards' effects happen again: blue marvel, ka-zar, patriot;puts extra units into play: debrii, mister sinister, squirrel girl, ultron | - | yes |
+| dms07 | Wakanda Forever | odin makes these cards' effects happen again: black panther | - | yes |
+| dms08 | Knull Galactus | your units die: made by destroyer, galactus;use it: death, knull | - | yes |
+| dms09 | High Evo Lockjaw | your units get on reveal: made by high evolutionary, lockjaw | - | yes |
+| dms10 | Surfin' Sebastian | use it: sebastian shaw | - | yes |
+| dms11 | Hidden Hela discard | use it: hela | - | yes |
+| dms12 | Hand Size Heroes | cards are created: made by agent coulson, hawkeye kate bishop, iron patriot, maria hill, snowguard | - | yes |
 
 ## Deck networks (a line must be there, or must not)
 
 | case | deck | from | to | expect | found | pass |
 |---|---|---|---|---|---|---|
-| nst01 | Ironclad Pain (gamersdecide) | Reaper | Flex | none  | - | yes |
-| nst02 | Ironclad Pain (gamersdecide) | Flex | Reaper | line gets back | stronger: its damage is bigger, and so is what it gets back from it | yes |
-| nst03 | Silent Shiv (gamersdecide) | Shiv | Accuracy | none  | - | yes |
-| nst04 | Silent Poison (gamersdecide) | Burst | Catalyst | line doubling doubles | stronger: plays it again: its doubling doubles again | yes |
-| nst05 | Silent Poison (gamersdecide) | Catalyst | Burst | none  | - | yes |
-| nst06 | Ironclad Body Slam (highgroundgaming) | Shrug It Off | Ghostly Armor | none  | - | yes |
-| nst07 | Silent Discard (gamersdecide) | Reflex | Gambling Chip | none  | - | yes |
-| nst08 | Defect Claw (fantasywarden) | Machine Learning | Void | none  | - | yes |
-| nst09 | Defect Claw (fantasywarden) | Hologram | FTL | none  | - | yes |
-| nst10 | Ironclad Pain (gamersdecide) | Flame Barrier | Rupture | none  | - | yes |
-| nst11 | Watcher Stance Change (highgroundgaming) | Bottled Flame | Kunai | none  | - | yes |
-| nst12 | Watcher Conjure Blade (slaythespire.info) | Chemical X | Miracle | none  | - | yes |
-| nst13 | Watcher Conjure Blade (slaythespire.info) | Chemical X | Conjure Blade | line bigger | stronger: makes its effect bigger | yes |
-| nst14 | Defect Claw (fantasywarden) | All for One | Reinforced Body | none  | - | yes |
-| nst15 | Ironclad Strength (gamersdecide) | Heavy Blade | Flex | none  | - | yes |
-| nst16 | Ironclad Exhaust (gamersdecide) | Barricade | Body Slam | line keeps your Block | stronger: keeps your Block: it counts more of it | yes |
-| nst17 | Defect Orb (gamersdecide) | Electrodynamics | Tempest | line Lightning | stronger: makes the Lightning it gives stronger | yes |
-| nst18 | Watcher Stance Change (highgroundgaming) | Crescendo | Mental Fortress | line Wrath | waits: gives you Wrath | yes |
-| nst19 | Silent Shiv (highgroundgaming) | Footwork | After Image | none playing sets off | - | yes |
-| nst20 | Silent Poison (highgroundgaming) | Strike (Silent) | Corpse Explosion | none  | - | yes |
-| nst21 | Ironclad Barricade (Steam, Jeff) | Shrug It Off | Barricade | none  | - | yes |
-| nst22 | Ironclad Barricade (Steam, Jeff) | Barricade | Shrug It Off | line keeps the Block | stronger: keeps the Block it gives | yes |
-| nst23 | Ironclad Strength (gamersdecide) | Bag of Marbles | Reaper | line Vulnerable | stronger: gives Vulnerable: its damage is bigger | yes |
-| nst24 | Silent Discard (gamersdecide) | Gambling Chip | Eviscerate | line cheaper: | cheaper: makes you discard cards | yes |
-| nst25 | Ironclad Strength (gamersdecide) | Flex | Heavy Blade | line gives you Strength | type: gives you Strength | yes |
-| nst26 | Silent Shiv (highgroundgaming) | Blade Dance | A Thousand Cuts | line more cards to play | - | NO |
-| nst27 | Ironclad Pain (gamersdecide) | Reaper | Rage | line Attack | waits: is an Attack whose playing sets off its effect | yes |
-| nst28 | Defect Snecko Eye (gamersdecide) | Snecko Eye | Meteor Strike | line pays for it | cheaper: pays for it: more mana or a lower cost | yes |
-| nst29 | Defect Claw (gamersdecide) | Scrape | Claw | line keeps it | puts: draws it and keeps it | yes |
-| nst30 | Watcher Divinity (gamersdecide) | Devotion | Smite | none  | - | yes |
-| nst31 | Ironclad Body Slam (highgroundgaming) | Pure Water | Miracle | none  | - | yes |
-| nst32 | Watcher Stance Change (highgroundgaming) | Flurry of Blows | Bottled Flame | none  | - | yes |
-| nst33 | Defect Lightning (highgroundgaming) | Capacitor | Electrodynamics | line more slots | stronger: more slots: it keeps more of what it puts in | yes |
-| nst34 | Defect Reprogram (highgroundgaming) | Melter | Claw | line gets through | stronger: removes their Block: its damage gets through | yes |
-| nst35 | Defect Claw (gamersdecide) | All for One | Claw | line brings it back | puts: brings it back to your hand | yes |
-| nst36 | Defect Claw (gamersdecide) | All for One | Claw | none can bring it back | puts: brings it back to your hand | yes |
-| nst37 | Defect Lightning (highgroundgaming) | Zap | Thunder Strike | line uses Lightning | type: uses Lightning | yes |
-| n289 | Defect Lightning (highgroundgaming) | Defragment | Loop | line sets off stronger | stronger: makes the Lightning it sets off stronger | yes |
-| n381 | Beta, After Image+ | Beta | After Image+ | none  | - | yes |
+| n396 | Hawkeye Kate Bishop, Acid Arrow | Hawkeye Kate Bishop | Acid Arrow | line creates | puts: creates | yes |
+| n397 | Hawkeye Kate Bishop, Marrow | Hawkeye Kate Bishop | Marrow | none  | - | yes |
+| n399 | Daken, Muramasa Shard | Daken | Muramasa Shard | line creates | puts: creates; also enables: is the Daken it names | yes |
+| n400 | Agamotto, Bolts of Balthakk | Agamotto | Bolts of Balthakk | line creates | puts: creates | yes |
+| n401 | Zombie Black Cat, Wolverine | Zombie Black Cat | Wolverine | line discard | waits: makes you discard cards | yes |
+| n402 | Korg, Rock | Korg | Rock | none  | - | yes |
+| n403 | Vampire Thanos | Thanos Fractured Frontier | Power Shot | line creates | puts: creates | yes |
+| n404 | Symbiote Galactus | Hawkeye Kate Bishop | Grapple Arrow | line creates | puts: creates | yes |
+| n409 | Majestic Wingbeat, Zombie Galacti | Majestic Wingbeat | Zombie Galacti | none  | - | yes |
+| n411 | Black Widow, Widow's Bite | Black Widow | Widow's Bite | none  | - | yes |
+| n413 | M.O.D.O.K., Hela | M.O.D.O.K. | Hela | line  | type: makes you discard cards | yes |
+| n414 | Killmonger, Hela | Killmonger | Hela | none  | - | yes |
+| n415 | Lady Sif, Ghost Rider | Lady Sif | Ghost Rider | line  | type: makes you discard cards | yes |
+| n416 | Carnage, Phoenix Force | Carnage | Phoenix Force | line  | type: makes your units die: Phoenix Force brings them back | yes |
+| n417 | Jane Foster Fractured Frontier, Fin Fang Foom | Jane Foster Fractured Frontier | Fin Fang Foom | none  | - | yes |
+| n418 | The Grand Design, Zombie Giant-Man | The Grand Design | Zombie Giant-Man | none  | - | yes |
+| n419 | Venus, Zombie Giant-Man | Venus | Zombie Giant-Man | none  | - | yes |
+| n420 | Zombie Mister Fantastic, Zombie Giant-Man | Zombie Mister Fantastic | Zombie Giant-Man | line  | stronger: more power | yes |
+| n421 | Excalibur, Iron Man | Excalibur | Iron Man | line  | stronger: more power | yes |
+| n422 | Astral Projection, Acid Arrow | Astral Projection | Acid Arrow | none  | - | yes |
+| n423 | Toxin, Acid Arrow | Toxin | Acid Arrow | none  | - | yes |
+| n424 | Beast, Absorbing Man | Beast | Absorbing Man | line  | type: is a unit with On Reveal it counts or asks for | yes |
+| n425 | Ultron Mind Stone, Absorbing Man | Ultron Mind Stone | Absorbing Man | line  | stronger: plays it again | yes |
+| n426 | Onslaught, J. Jonah Jameson | Onslaught | J. Jonah Jameson | none  | - | yes |
+| n427 | Caiera, Broodling | Caiera | Broodling | none  | - | yes |
+| n428 | Joaquin Torres Falcon II, Electro | Joaquin Torres Falcon II | Electro | line  | repeats: repeats its On Reveal effects | yes |
+| n431 | Agent 13, King Eitri | Agent 13 | King Eitri | none  | - | yes |
+| n432 | Agent 13, Devil Dinosaur | Agent 13 | Devil Dinosaur | line  | waits: fills your hand | yes |
+| n433 | Araña, Magus | Araña | Magus | none  | waits: makes this happen: activated | NO |
+| n434 | Araña, Lancelot | Araña | Lancelot | line  | type: changes your units' stats; also makes stronger: does what it waits for or  | yes |
+| n435 | Kid Omega, Bucky Barnes | Kid Omega | Bucky Barnes | line  | waits: kills it for its death effect | yes |
+| n436 | Kid Omega, Elixir | Kid Omega | Elixir | line  | type: makes your units die: Elixir brings them back | yes |
+| n437 | Jocasta, Awesome Andy | Jocasta | Awesome Andy | line  | waits: makes this happen: activated | yes |
+| n438 | Attuma, Death Fractured Frontier | Attuma | Death Fractured Frontier | line  | type: makes your units die: Death Fractured Frontier brings them back | yes |
+| n439 | Doctor Strange, Danger | Doctor Strange | Danger | none  | - | yes |
+| n440 | Ghost-Spider, Drax | Ghost-Spider | Drax | none  | - | yes |
+| n441 | Blink, Moonstone | Blink | Moonstone | none  | - | yes |
+| n442 | Doctor Octopus, Pizza Slice | Doctor Octopus | Pizza Slice | none  | - | yes |
+| n443 | Angel, Hydra Stomper | Angel | Hydra Stomper | line  | type: makes your units move | yes |
+| n444 | Herbie Program 01, Wiccan | Herbie Program 01 | Wiccan | none  | type: lets you gain mana | NO |
+| n445 | Ghost-Spider, Galactus | Ghost-Spider | Galactus | none  | - | yes |
+| n446 | Djinn, Jim Hammond Human Torch | Djinn | Jim Hammond Human Torch | line  | type: lets you gain mana | yes |
+| n447 | Beta Ray Bill, Gorgon | Beta Ray Bill | Gorgon | none  | - | yes |
+| n448 | Doctor Octopus, Dagger | Doctor Octopus | Dagger | none  | - | yes |
+| n449 | Aero, Armor | Aero | Armor | none  | - | yes |
+| n450 | Moira X, Quinjet | Moira X | Quinjet | line  | type: creates cards | yes |
+| n451 | Agent Venom, Wolverine Horseman of War | Agent Venom | Wolverine Horseman of War | none  | - | yes |
+| n452 | Agent Venom, Elder Dragon of the Moon | Agent Venom | Elder Dragon of the Moon | none  | - | yes |
+| n453 | Agent Venom, Gilgamesh | Agent Venom | Gilgamesh | none  | - | yes |
+| n454 | America Chavez, Ares | America Chavez | Ares | line more power | stronger: more power | yes |
+| n455 | Sera, Mystique | Sera | Mystique | line a unit with Ongoing | type: is a unit with Ongoing it counts or asks for | yes |
+| n456 | Mojo, Mystique | Mojo | Mystique | line a unit with Ongoing | type: is a unit with Ongoing it counts or asks for | yes |
+| n457 | Ant Man, Mystique | Ant Man | Mystique | line a unit with Ongoing | type: is a unit with Ongoing it counts or asks for | yes |
+| n458 | Patriot, Mystique | Patriot | Mystique | line a unit with Ongoing | type: is a unit with Ongoing it counts or asks for | yes |
+| n459 | Wong, Mystique | Wong | Mystique | line a unit with Ongoing | type: is a unit with Ongoing it counts or asks for; also makes stronger: plays i | yes |
+| n460 | Onslaught, Blue Marvel | Onslaught | Blue Marvel | line repeats its effects | repeats: repeats its effects | yes |
