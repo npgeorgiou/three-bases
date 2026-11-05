@@ -509,3 +509,4 @@ n513	marvel_snap	Ebony Maw, Doctor Doom	Ebony Maw	Doctor Doom	none		Claude 5 Nov
 n514	marvel_snap	Wave, Death	Wave	Death	line	makes it cheaper	Claude 5 Nov 2026, line check C28: a cost cap of 4 cuts the cost of Death (cost 8)
 n515	marvel_snap	Wave, Hulk	Wave	Hulk	line	makes it cheaper	Claude 5 Nov 2026, line check C28: a cap of 4 cuts a cost 6 card
 n516	marvel_snap	Wave, Ant Man	Wave	Ant Man	none		Claude 5 Nov 2026, line check C28: a cap of 4 cuts nothing for a cost 1 card
+n517	marvel_snap	Moon Girl, The Collector	Moon Girl	The Collector	line	creates cards	Claude 5 Nov 2026, line check C29: Moon Girl copies are created cards the Collector reacts to
