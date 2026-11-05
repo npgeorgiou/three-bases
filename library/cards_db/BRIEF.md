@@ -663,5 +663,12 @@ a turn is shared, so it is a round. Sources: library/games/marvel_snap.md "The g
   copy. "Switch sides" = donate (my card) or steal (an enemy card). Return to hand = return_to_hand. Shuffle into deck =
   shuffle_into_deck. Draw = draw. "Can't be destroyed" = cant, params event dies. "Can't be played here" = cant, params
   event played, "to" the lane.
-- Conditions. "If you're winning here" and other location totals: COND on the lane (propose the value you need). "If you
+- Values added for Marvel Snap (5 Nov 2026). Front-row / back-row cards = position front_row / back_row; "the middle
+  location" = middle_lane; "the leftmost / rightmost location" = edge_lane; "the location it moved from" = previous_lane;
+  "a full location" = state full on the lane; "moved this turn" = state moved_this_round; "cards with no abilities" =
+  state no_abilities; "copy / steal / replace its text", "has the Ongoing effects of" = copy_text, "on" the card that gets
+  it, "to" the card it comes from; "when a card merges" = merged; "when you Snap" = snapped, object the player.
+- Conditions. "If you're winning / losing here" = COND have of the lane `{"kind": "position", "with": [same_lane, state
+  winning_lane]}`; "Power here" / "your Power at this location" = AMOUNT `{"x": "lane_power", "of": {"kind": "position",
+  "side": "mine", "with": [same_lane]}}`. "If you
   played a card here last turn" = event_count span last_round. "The last card you played" = test last_card.

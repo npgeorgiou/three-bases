@@ -877,6 +877,20 @@ state	weapon	damage dealt by a weapon or an attack itself, not by a push, a bump
 state	bump	damage from being pushed into a unit or an obstacle (Into the Breach Bump)			30 Oct 2026, v48 (Into the Breach)
 state	blocking_emerging	damage for standing on a space an enemy emerges from (Into the Breach blocking emerging Vek)			30 Oct 2026, v48 (Into the Breach)
 event	game_end	the game ends, at the final count (Marvel Snap "At the end of the game", after the last turn)	game_end_trigger		5 Nov 2026, Marvel Snap import (Claude): no event said it
-act	merge	the "on" card merges into the "to" card: one card with both Powers added, the merged one goes under (Marvel Snap Merge; snap.fan Man-Spider preview)	merge_attach		5 Nov 2026, Marvel Snap import (Claude)
+act	merge	the "on" card merges into the "to" card: one card with both Powers added, the merged one goes under (Marvel Snap Merge; snap.fan Man-Spider preview)	merge_attach	merged	5 Nov 2026, Marvel Snap import (Claude)
 position	lane_left	the lane or location to the left of of (Marvel Snap "the location to the left")			5 Nov 2026, Marvel Snap import (Claude)
 position	lane_right	the lane or location to the right of of (Marvel Snap "the location to the right")			5 Nov 2026, Marvel Snap import (Claude)
+event	snapped	a player raises the stakes of the game (Marvel Snap Snap; object: the player)			5 Nov 2026, Marvel Snap import: 10 proposals (snaps)
+event	merged	a card merges into another (object: the merging card; actor: the card it merges into; Marvel Snap Merge)	merge_attach		5 Nov 2026, Marvel Snap import: 2 proposals
+act	copy_text	the "on" card gets the text (abilities) of the "to" card: copy, steal or replace it (Marvel Snap "copy its text", "steal its text", "has the Ongoing effects of")	copy		5 Nov 2026, Marvel Snap import: 10 proposals
+state	no_abilities	a card with no ability text (Marvel Snap "cards with no abilities")			5 Nov 2026, Marvel Snap import: 4 proposals
+state	moved_this_round	moved this round (Marvel Snap "moved this turn")		moves	5 Nov 2026, Marvel Snap import
+state	winning_lane	a lane or location where the card's side has more Power than the other (Marvel Snap "if you're winning here")			5 Nov 2026, Marvel Snap import: 3 proposals
+state	losing_lane	a lane or location where the card's side has less Power than the other			5 Nov 2026, Marvel Snap import
+state	full	a lane or location that holds as many of a side's cards as it can (Marvel Snap 4 per side)			5 Nov 2026, Marvel Snap import: 2 proposals
+x	lane_power	the total Power of the cards of one side at a lane or location (of: the lane, side from it; Marvel Snap "Power at this location")			5 Nov 2026, Marvel Snap import: 7 proposals
+position	front_row	the front row of a side's cards in a lane or location (Marvel Snap front-row cards: the first two played there)			5 Nov 2026, Marvel Snap import: 6 proposals
+position	back_row	the back row of a side's cards in a lane or location			5 Nov 2026, Marvel Snap import
+position	previous_lane	the lane or location of moved from (Marvel Snap "the location it moved from")			5 Nov 2026, Marvel Snap import: 3 proposals
+position	edge_lane	the leftmost or rightmost lane or location			5 Nov 2026, Marvel Snap import: 2 proposals
+position	middle_lane	the middle lane or location (Marvel Snap "the middle location")			5 Nov 2026, Marvel Snap import
