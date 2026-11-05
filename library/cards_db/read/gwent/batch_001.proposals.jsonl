@@ -1,0 +1,19 @@
+{"id":756232,"field":"attr","need":"boost (the amount a unit is boosted)"}
+{"id":756234,"field":"filter","need":"exclude only my own units of a type (Dragons you control)"}
+{"id":756260,"field":"pick","need":"the other of two looked-at cards"}
+{"id":756267,"field":"filter","need":"a group of N adjacent units chosen by the player"}
+{"id":756282,"field":"attr","need":"boost (the amount a unit is boosted)"}
+{"id":756286,"field":"x","need":"the amount of boost a unit lost"}
+{"id":756292,"field":"filter","need":"unique (different names) among the picked cards"}
+{"id":756305,"field":"act","need":"counts as a full Crew for Crew abilities (one-man Crew)"}
+{"id":756320,"field":"x","need":"remaining Charges of a leader ability"}
+{"id":756305,"field":"act","need":"counts as a full Crew for Crew abilities (one-man Crew)"}
+{"id":756320,"field":"x","need":"remaining Charges of a leader ability"}
+{"id":756345,"field":"filter","need":"a group of N adjacent units chosen by the player"}
+{"id":756356,"field":"x","need":"duration of row effects"}
+{"id":756361,"field":"test","need":"during my turn"}
+{"id":756382,"field":"attr","need":"boost (the amount a unit is boosted)"}
+{"id":756385,"field":"x","need":"Armor amount of a unit"}
+{"id":756388,"field":"position","need":"the unit at each end of a row"}
+{"id":756396,"field":"attr","need":"boost (the amount a unit is boosted)"}
+{"id":756403,"field":"link","need":"only if the damaged unit survived"}
