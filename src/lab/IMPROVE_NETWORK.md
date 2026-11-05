@@ -1,0 +1,71 @@
+# Improving the lab's network (handover, 5 Nov 2026)
+
+For the chat that improves the AI lab's learning network. Kaptain's goal: a network that plays well with **any new or
+changed card**, ideally also with new keywords and abilities, because cards change all the time during testing and the
+network is used to test them. Everything below marked "suggestion" is Claude's, not agreed; agree the plan with Kaptain
+before coding (CLAUDE.md), and keep every speed or AI check to about a minute.
+
+## Where it stands
+- Files: `src/lab/js/engine/network-encode.js` (inputs, layout, saving and loading), `network-play.js` (choosing moves),
+  `src/lab/js/ui/worker.js` (playing and learning in workers), `training-schedule.js`, `running.js`. Built into
+  `three-bases-ai-lab.html` by `tools/build.py`; summary/16-ai-lab.txt describes the lab as it is.
+- Inputs (format 3, version 7): no card has weights of its own. A card is only its printed values (`cardFeatures`): its
+  numbers and keyword flags, and its effects in parts from the card data (`fx`, `aura`, `cast`): when + what
+  ("roundEnd:strike"), what + on whom ("strike>nearest"), the whole part ("roundEnd:strike>nearest"), with amounts. About
+  640 values on the cards of 5 Nov 2026. Saved networks are moved to a new value list by name (new values start at zero).
+- Per board cell (54): the unit anchored there (current strength, defence, damage, build-ups, moved, attacked, orientation,
+  and its printed values) or "covered by a unit anchored at ...". Each cell goes through one shared cell layer (16 numbers),
+  then the 54 results go side by side into the first main layer (128, then 64, then the output: chance to win), with
+  separate weights for every cell. Hand: 10 slots of printed values. Piles (deck, the opponent's unseen cards, dealt hand,
+  redrawn cards): card count plus totals of printed values. Lanes, supply, carry-over, round, passes.
+- The arithmetic (forward and learning, Adam) is a compiled WebAssembly block (`NET3_WASM`, base64) with **no source in the
+  repo**; it takes the sizes as parameters (cards, values per card, cell values, cell layer size, cells, hand slots, other
+  inputs, hidden sizes). Learning runs in several workers that share gradients; lessons are also learned mirrored (lanes 1
+  and 3 swapped, `F3_MIRROR`); the size check trains bigger copies alongside (`net3Grow`).
+- Speed: about 9-12 ms per move playing alone (scoring every legal move once), 0.1-0.2 ms per position.
+- Result so far (Kaptain, 5 Nov 2026): stuck at about 50% against the Benchmark (depth 1). The earlier lab reached 70% after
+  100,000 games, but on 2 factions with one deck each, a card dictionary, and the earlier, weaker Benchmark: not the same
+  test. Units and hand cards were all checked visible to the network (no unknown card keys).
+
+## Why it may be stuck (suggestion, not proven)
+1. **No idea of neighbours.** The 54 cell results get separate weights per cell, so "a unit facing a 1-defence enemy" or
+   "a unit beside an ally with an aura" must be learned again for every cell pair. With 7 factions and 14 decks that needs
+   far more games. Board-game networks normally use a layer that reads each cell with its neighbours (convolution, as in
+   AlphaZero) or lets every unit look at every other unit (attention; Kaptain prefers attention, todo.md item 8).
+2. **Some keywords are words, not effects.** `kwFx` (`src/game/js/cards/new-00-helpers.js`) writes many keywords out as
+   effects (Salvage, Wound, Vigil, Roots, Barrage ...), so the network reads them as effect parts. Others are only flags
+   whose rule lives in game code (Ranged, Guard/Bodyguard, Charge, Armoured, Riposte, Flurry ...): the network sees just a
+   name. A new keyword of that kind is a new, unknown input.
+3. **A new kind of effect is a new word.** A new op or trigger in `fx.js` / `fx-more.js` gets a fresh input that starts at
+   zero, so the network knows nothing about it until it has learned it.
+4. It may simply need many more games for 14 decks; only training shows.
+
+## What would make it play any new or changed card (suggestions, in the order Claude would try them)
+1. **A neighbour-aware layer** (the main step). After the shared cell layer, add a layer that reads each cell together
+   with the cells around it in its camp and the facing camp (same lane), then sums or pools over the board, so a relation
+   is learned once for every position. Alternative: attention over units (each unit's summary looks at every other unit's,
+   with their positions), which also handles units of any size. This means new arithmetic: write its source into the repo
+   this time (plain JavaScript first, or a small WebAssembly written from source kept next to it), so it can be changed
+   later. Keep the outer interface (`net3Instance`: `forward`, gradients, `recs`) so workers, mirroring, saving and the
+   size check keep working, or change them in the same step.
+2. **Every keyword as effect parts.** For each keyword that is only a flag, describe what its rule does in the same parts
+   the effects use (e.g. Ranged: "can strike the back rows"; Guard: "takes hits for neighbours"), either in `kwFx` or in a
+   lab-side table next to `cardFeatures`. Then a new keyword built from known parts is understood from the start.
+3. **Effects as outcome words as well as names.** Next to the op name, give each op its outcome group from
+   `library/concept_tree.txt` (damage, removal, debuff, buff, heal, summon, draw, movement ...), kept in a small table in
+   the lab; a new op only needs its line in that table to be understood as "a kind of damage" before it is learned.
+4. **Train for generality.** Self-play plus the Benchmark (depth 1) as opponents; keep a few earlier versions of the
+   network as opponents (a league), so it doesn't learn to beat only itself.
+
+## How to check that it really plays new and changed cards (suggestion)
+- **Held-out cards:** train with a set of cards left out of every deck, then test on decks that hold them.
+- **Changed cards:** take a trained network, change a few cards' stats or effects (in the lab only), and compare its play
+  against the Benchmark before and after a short retraining: it should stay close.
+- **Learning check for new arithmetic:** compare its learning steps, number by number, with a slow plain calculation
+  (gradient check) on a few positions; a small task with a known answer must be learned; a few minutes of training must
+  improve "Predicts the winner".
+- Speed: measure on 40 fixed positions (about a minute); playing alone should stay well under 20 ms per move.
+
+## When done
+Update summary/16-ai-lab.txt (the network section), todo.md item 8, and the map in CLAUDE.md if parts were added; give
+Kaptain the rebuilt `three-bases-ai-lab.html`. Commit; push only when Kaptain asks.
