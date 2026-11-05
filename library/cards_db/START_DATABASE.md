@@ -25,6 +25,9 @@ first and wait. Never invent rules or mechanics; mark suggestions as yours.
 3. **Dump all lines before and after** (`dump_lines.py`) and read EVERY gone and new reason group in every game.
 4. **One rebuild per round**: `check_all.py <game>` loads all games once (about 7 minutes); after a change to network.py only,
    `check_all.py --no-load` (about 2 minutes). Never `run.py` once per game, never a rebuild between single edits.
+   Start it only with the Bash tool's background mode (run_in_background), never with `&` or nohup (the shell stops those a
+   few minutes after a reply ends); never stop a running build; wait for its notice and work on findings meanwhile, never
+   idle (Marvel Snap, 5 Nov 2026: a stopped build left cards.sqlite.new and its journal, and the next build failed).
 5. **Read cards like a player**: what does it need, who gives it that, what does it make, what does that card do.
 6. **A check is done only when all its output was read.** Never sample less, skip a game or hand over because the output is
    long: cut it into pieces ("Token economy", Part 2). Say plainly what was not checked; a passing count is not a check.
@@ -120,8 +123,8 @@ game's own rulebook, and players' combos and decks that test the lines. Complete
    reach); the line check's readers and verifiers: findings in checks/marvel_snap/ (lr_* readers, vv_* verdicts,
    causes_sheet.md: 21 verified causes, biggest first); v68: discarded and destroyed cards lie apart (zones discarded,
    discarded_or_dead; refs.py: a discarded card of any kind was discarded), cases n413-n416.
-   Next, in order:
-   - Fix causes_sheet.md from the top (one `none` and one `line` case each; after about 5 fixes `check_all.py --no-load`).
+   Next, in order (Part 2 "Chat 2 in order"):
+   - Fix causes_sheet.md from the top; add the failing combos and the Wong Spectrum deck case to it first (one `none` and one `line` case each; after about 5 fixes `check_all.py --no-load`).
      Kaptain's answer needed first: On Reveal is on 306 of 660 cards; are repeats of On Reveal (Odin, Wong, Absorbing Man)
      a deck choice or generic (L21)? Odin and Wong have lines now; the verdict said Absorbing Man's are not.
    - The 16 failing combos and the deck cases that fail (cases/REPORT.md); realworld.py marvel_snap (10 misses at the start).
@@ -250,6 +253,13 @@ Each chat ends with everything pushed and "Open work" saying where the next one 
 - **Chat 2: the lines.** Step 2.5 (decks and their cases), the line check (Part 3: agents in parallel, fixes by cause, a rebuild
   only after code changes: `check_all.py --no-load`, about 2 minutes, or `check_all.py <game>` after record changes), step 4,
   step 5.
+  Chat 2 in order, and nothing else (Marvel Snap, 5 Nov 2026: a chat spent on reading by hand fixed one cause of 21):
+  1. Start the line readers first (Part 3 steps 1-4), in the background. While they read, write the deck cases by script
+     (step 2.5) and run realworld.py; read nothing else.
+  2. The moment causes_sheet.md exists, fix it from the top. Before it exists the main chat traces no line, reads no deck
+     explanation (ask.py analyze) and no network.py; a combo or deck case that fails is a line to add to the sheet, not a
+     task of its own.
+  3. Collect every fix, then one rebuild at the end of the round; never a rebuild for one cause.
 What keeps it to two: findings are collected before any fix and fixed together; one rebuild per round; long output goes to
 agents in the background, all at once, while the main chat fixes what is already found; the main chat reads only their
 findings, the diffs and the cards a finding names.
@@ -362,6 +372,10 @@ findings, the diffs and the cards a finding names.
    deck (Inscryption Act I) is kept, marked as a starter, and does not count toward 10 full decks; fewer than 10 full decks:
    say so in "State". The decks feed cases/decks.tsv and network.tsv (step 3), and the guide's combos cases/combos.tsv.
    Their lines are checked by the line check (Part 3), which reads every deck.
+   **Deck cases are written by script, never by reading** (Marvel Snap, 5 Nov 2026): in step 0, when a guide's deck is saved,
+   its explanation's card pairs go into `library/games/<game>.md` "Deck pairs" as `deck | A | B | the guide's words`
+   (A does it for B). A script turns each into a `line` row of cases/network.tsv; the main chat does not read `ask.py
+   analyze` output to write `must` phrases. A guide the workspace cannot fetch is said in "State", not worked around.
 6. **The line check** (Part 3), never skipped. Not the same as the link audit (links that cannot exist).
 
 ### 3. Case tests (`cases/`)
