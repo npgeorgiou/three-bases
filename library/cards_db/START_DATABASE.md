@@ -101,16 +101,24 @@ game's own rulebook, and players' combos and decks that test the lines. Complete
 
 ## Open work, in Kaptain's order
 1. A newly imported game gets the line check of Part 3; its fixes are made in the main chat, never by an agent.
-2. **Marvel Snap import, in progress (handover, 5 Nov 2026).** Done: step 0 (supplement_marvel_snap.py: 749 cards from
-   snap-dossier a23b31f, 91 mode variants left out by exclude.tsv for Kaptain's check, 9 texts filled from snap.fan; 16
-   keywords from the game's sources; BRIEF "Game words: Marvel Snap"; sourced rules in library/games/marvel_snap.md;
-   read/marvel_snap/game_rules.jsonl; 18 vocab rows of 5 Nov 2026; patterns T99-T110); 27 full guide decks in decks.tsv;
-   readings batch_001-003, keywords, second_001 (check.py 0 problems); proposals tallied, repeated needs got values; the
-   103 unsure cards are in input/marvel_snap/fix_001.jsonl (a reader re-reads them; then `reread.py merge marvel_snap`).
-   Next, in order: Part 2 step 2 from item 1 (`run.py marvel_snap`), items 3-9 (word check, names, `compare.py` on
-   second_001, audits, deck networks read card by card into deck_read_marvel_snap.md), cases (cases/decks.tsv and
-   network.tsv have no Marvel Snap rows yet), Part 3 line check (`links_audit.py` and `deck_audit.py`, all output read).
+2. **Marvel Snap import, in progress (handover, 5 Nov 2026).** Done: Part 2 step 0 (supplement_marvel_snap.py: 749 cards
+   from snap-dossier a23b31f, 91 mode variants left out by exclude.tsv for Kaptain's check, 9 texts filled from snap.fan;
+   16 keywords from the game's sources; BRIEF "Game words: Marvel Snap"; sourced rules and deck rule in
+   library/games/marvel_snap.md; read/marvel_snap/game_rules.jsonl; 18 vocab rows of 5 Nov 2026; patterns T99-T110;
+   DECK_RULES marvel_snap); 27 full guide decks in decks.tsv; step 1 (all batches, keywords, second_001; 103 unsure cards
+   re-read, 39 still unsure with needs only one card has); step 2.1 (`run.py marvel_snap` passes, 13 of 13 cases;
+   `check_all.py --no-load` passes for every game). Next, in order:
+   - 2.3 word check: 179 flags on 169 cards (patterns/marvel_snap_flags.tsv), judge each pattern once, verdicts.tsv.
+   - 2.4 names: 19 stub names (check.py lists them; Ancient Arcana, Muramasa Shard, Infinity Shot, Void ...).
+   - 2.5 second reading: second/marvel_snap/compare_verdict.md has 11 families (families 2-5 are "same meaning,
+     different form": write normalize rules; family 9 and 11 are wrong first readings to fix; family 1 was mostly fixed by
+     the re-read, 10 cards with no rows are cards with no game effect).
+   - 2.7 text audit: 37 text words without rows. 2.8 link audit: 10 cards tagged play_restriction lack a row (Brooklyn Bridge).
+   - 2.9 deck networks: read 10 of the 27 decks card by card into deck_read_marvel_snap.md; cases/decks.tsv and network.tsv
+     have no Marvel Snap rows yet; combos in library/games/marvel_snap.md "Combos" go to cases/combos.tsv.
+   - Part 3 line check: `links_audit.py marvel_snap` and `deck_audit.py marvel_snap`, all output read (pieces, agents).
    Not written: supplement/marvel_snap_links.jsonl (cards a card creates are linked by the names in its rows).
+   `check_all.py --no-load` also lists must-not case n378 (Runeterra) as reworded: look at it.
 
 ## When you finish
 Commit and push every finished step. Update "State" and "Open work" above (short, no history: git log has it).
