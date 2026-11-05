@@ -5,6 +5,8 @@ calls in all; count them. At call 25 stop changing things and finish: undo a hal
    offset/limit): its sentence, its examples with the lines as they are now, the
    network.py lines that made them, the cases, and both cards' rows. That is all you need; look nothing else up except the
    code lines the sheet names (Read with offset/limit, under 80 lines at a time).
+   Earlier fixers of this round have changed network.py since the sheet was made: run pair.py on the examples first; an
+   example already right is left alone.
 3. Find the cause in one sentence: is the data wrong (rows that disagree with the card's words) or the rule (rows right, line
    wrong)? Fix it once, for every card and every game it touches:
    - data: a script fixes/<game>/vNN.py (next free number, safe to run twice, by a rule over the texts, never card by card;
