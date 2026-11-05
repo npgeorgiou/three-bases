@@ -107,10 +107,10 @@ const usable = (data, n) => {                                   // a network of 
  */
 const SIZE_VARIANTS = n => {
   const h = F3.hidden, rec = state.training[n.id];
-  // the lessons check: same-size copies that learn partly from their own value of the next position (share)
+  // the lessons check: same-size copies whose lessons take another share from their own value of the next position
   if (rec && rec.size && rec.size.kind === 'lessons') return [
-    { key: 'next30', label: 'Next move 30%', hidden: h.slice(), next: 0.3, cls: 'c2' },
-    { key: 'next60', label: 'Next move 60%', hidden: h.slice(), next: 0.6, cls: 'c3' },
+    { key: 'next15', label: 'Next move 15%', hidden: h.slice(), next: 0.15, cls: 'c2' },
+    { key: 'next45', label: 'Next move 45%', hidden: h.slice(), next: 0.45, cls: 'c3' },
   ];
   return [
     { key: 'big', label: 'More nodes', hidden: h.map(x => 2 * x), cls: 'c2' },
@@ -119,8 +119,11 @@ const SIZE_VARIANTS = n => {
 };
 const sizeOn = id => !!(state.training[id].size && state.training[id].size.on);
 const lessonsOn = id => sizeOn(id) && state.training[id].size.kind === 'lessons';
-/** With the lessons check on: per trained network, its game-worker name and its share learned from the next position. */
-const nextShares = id => (lessonsOn(id) ? [{ net: 'train', share: 0 }, ...SIZE_VARIANTS(NETS.find(n => n.id === id)).map(v => ({ net: 'train~' + v.key, share: v.next }))] : null);
+/** Every AI's lessons are 30% its own win chance one move later (the lessons check of 5 Nov 2026 found it best). */
+const NEXT_SHARE = 0.3;
+/** Per trained network, its game-worker name and its share learned from the next position (the size check's learn the AI's). */
+const nextShares = id => [{ net: 'train', share: NEXT_SHARE },
+  ...(lessonsOn(id) ? SIZE_VARIANTS(NETS.find(n => n.id === id)).map(v => ({ net: 'train~' + v.key, share: v.next })) : [])];
 const copyId = (id, key) => id + '~' + key;
 /** The networks a training run learns: the AI's own, then the size check's (if on). */
 const trainNets = id => [netData[id], ...(sizeOn(id) ? SIZE_VARIANTS(NETS.find(n => n.id === id)).map(v => netData[copyId(id, v.key)]) : [])];

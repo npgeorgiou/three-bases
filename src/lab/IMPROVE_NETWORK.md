@@ -61,6 +61,11 @@ before coding (CLAUDE.md), and keep every speed or AI check to about a minute.
 - Built for the real test: the training page's "Lessons check" (in place of the size check while on) trains two
   copies on the same games, whose lessons are partly their own win chance one move later (30% and 60%).
 
+- Kaptain's run of 11,107 games from nothing with the Lessons check (tests of 100 games against the Benchmark every
+  1,000 games, the last five): end result only 33 25 31 33 35, next move 30% 43 44 46 37 42, next move 60% 37 30 36
+  33 40. 30% was ahead in every test from 1,000 games on. Since then every AI learns 30% from the next position, and
+  the inputs (version 8) also show what changed on a unit in play and this round's deaths and spells per side.
+
 ## Why it may be stuck (suggestion, not proven)
 1. **No idea of where units stand relative to each other.** The 54 cell results get separate weights per cell, so any
    relation between two units ("this unit can hit that one", "that aura reaches this unit") must be learned again for

@@ -142,7 +142,7 @@ function cardConfig(n) {
     row('Size check', `<label class="inline"><input type="checkbox" data-a="size" data-id="${n.id}" ${sizeOn(n.id) && !lessonsOn(n.id) ? 'checked' : ''}> on</label>`,
       'More nodes and Extra layer learn the same lessons alongside it, starting as copies of its network as it is when switched on.'),
     row('Lessons check', `<label class="inline"><input type="checkbox" data-a="lessons" data-id="${n.id}" ${lessonsOn(n.id) ? 'checked' : ''}> on</label>`,
-      'Two copies of its network as it is when switched on learn from the same games, but each lesson is partly the copy\'s own win chance one move later (30% and 60%) instead of only how the game ended. Replaces the size check while on.'),
+      'Two copies of its network as it is when switched on learn from the same games, but each lesson is 15% and 45% the copy\'s own win chance one move later, instead of the AI\'s 30%. Replaces the size check while on.'),
   ].join('');
 }
 /** The action buttons, in one row at the top of the right half. */

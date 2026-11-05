@@ -4785,11 +4785,17 @@ const NET_PROPERTIES = [...new Set(NET_FEATURES.flatMap(m => [...m.keys()]))].so
    distinctly, and nothing is capped. Values with a firm rule limit are divided by that limit. All values are
    stored as decimals. */
 const sq = v => Math.sqrt(Math.max(0, v || 0)) / 10;
+/** A unit's state that changed in play and its printed values don't show: each keyword as it is now minus as
+ *  printed (gained or moved away), keywords for this round, Armoured used, moves and attacks made, deployed this
+ *  round, charged, blighted. Cell numbers 20 on. */
+const F3_UNIT_NOW = [...KW_FLAGS.map(f => (u, s) => kw(u, f) - (cardOf(u)[f] || 0)),
+  u => (u.tInc ? 1 : 0), u => (u.tArm || u.ent ? 1 : 0), u => (u.reck ? 1 : 0), u => (u.armUsed ? 1 : 0),
+  u => sq(u.mv), u => sq(u.atk), (u, s) => (u.born === s.round ? 1 : 0), u => (u.chg ? 1 : 0), u => (u.blight ? 1 : 0)];
 const F3 = (() => {
   const cards = NET_CARD_KEYS.slice(), props = NET_PROPERTIES;
-  const NCELL = 2 * LANES.length * ROWS * COLS, HS = HAND_LIMIT, CS = 20;
-  const LANEN = 17, PILES = 4, FIXED = LANES.length * LANEN + 8 + 8, NREST = FIXED + PILES * (1 + props.length);
-  return { version: 7, PILES, cards, props, DE: 0, CO: 16, CS, NCELL, HS, LANEN, FIXED, NREST, RECN: NCELL * CS + NREST, NK: NCELL + HS, hidden: [128, 64] };
+  const NCELL = 2 * LANES.length * ROWS * COLS, HS = HAND_LIMIT, CS = 20 + F3_UNIT_NOW.length;
+  const LANEN = 17, PILES = 4, FIXED = LANES.length * LANEN + 8 + 8 + 4, NREST = FIXED + PILES * (1 + props.length);
+  return { version: 8, PILES, cards, props, DE: 0, CO: 16, CS, NCELL, HS, LANEN, FIXED, NREST, RECN: NCELL * CS + NREST, NK: NCELL + HS, hidden: [128, 64] };
 })();
 /** A card's printed values: abilities and effect parts as numbers on the square-root scale (true counts 1). */
 const F3_PRINTED = NET_FEATURES.map(m => F3.props.map(pk => sq(m.get(pk) || 0)));
@@ -4815,6 +4821,7 @@ function encode3(s, me, into) {
         nums[o + 4] = sq(u.bs); nums[o + 5] = sq(u.bd); nums[o + 6] = sq(u.ts);
         nums[o + 7] = u.moved ? 1 : 0; nums[o + 8] = u.attacked ? 1 : 0; nums[o + 9] = u.o === 'v' ? 1 : 0;
         cards[k] = NET_CARD_INDEX[u.card] + 1;
+        for (let t = 0; t < F3_UNIT_NOW.length; t++) nums[o + 20 + t] = F3_UNIT_NOW[t](u, s);
       } else {
         nums[o + 10] = 1;
         const anchorFromFront = side === 0 ? u.r : ROWS - 1 - u.r;
@@ -4839,6 +4846,10 @@ function encode3(s, me, into) {
   put(sq(s.round)); put(s.starter === me ? 1 : 0); put(s.cur === me ? 1 : 0); put(s.passed === me ? 1 : 0); put(s.passed === opp ? 1 : 0);
   put((s.quietRounds || 0) / 3); put(sq(s.acts));
   put(s.redrawDone ? (s.players[opp].redrawn || []).length / MAX_REDRAW : 0);
+  for (const side of [me, opp]) {                              // this round's counts that some effects use
+    const P = s.players[side];
+    put(sq(P.deathsR === s.round ? P.deaths : 0)); put(sq(P.spR === s.round ? P.spN : 0));
+  }
   // the four piles, each as its size and its cards' printed-value totals
   const pile = counts => {                                     // counts: [card number, copies] pairs
     F3_PILE.fill(0);
@@ -5336,10 +5347,10 @@ const usable = (data, n) => {                                   // a network of 
  */
 const SIZE_VARIANTS = n => {
   const h = F3.hidden, rec = state.training[n.id];
-  // the lessons check: same-size copies that learn partly from their own value of the next position (share)
+  // the lessons check: same-size copies whose lessons take another share from their own value of the next position
   if (rec && rec.size && rec.size.kind === 'lessons') return [
-    { key: 'next30', label: 'Next move 30%', hidden: h.slice(), next: 0.3, cls: 'c2' },
-    { key: 'next60', label: 'Next move 60%', hidden: h.slice(), next: 0.6, cls: 'c3' },
+    { key: 'next15', label: 'Next move 15%', hidden: h.slice(), next: 0.15, cls: 'c2' },
+    { key: 'next45', label: 'Next move 45%', hidden: h.slice(), next: 0.45, cls: 'c3' },
   ];
   return [
     { key: 'big', label: 'More nodes', hidden: h.map(x => 2 * x), cls: 'c2' },
@@ -5348,8 +5359,11 @@ const SIZE_VARIANTS = n => {
 };
 const sizeOn = id => !!(state.training[id].size && state.training[id].size.on);
 const lessonsOn = id => sizeOn(id) && state.training[id].size.kind === 'lessons';
-/** With the lessons check on: per trained network, its game-worker name and its share learned from the next position. */
-const nextShares = id => (lessonsOn(id) ? [{ net: 'train', share: 0 }, ...SIZE_VARIANTS(NETS.find(n => n.id === id)).map(v => ({ net: 'train~' + v.key, share: v.next }))] : null);
+/** Every AI's lessons are 30% its own win chance one move later (the lessons check of 5 Nov 2026 found it best). */
+const NEXT_SHARE = 0.3;
+/** Per trained network, its game-worker name and its share learned from the next position (the size check's learn the AI's). */
+const nextShares = id => [{ net: 'train', share: NEXT_SHARE },
+  ...(lessonsOn(id) ? SIZE_VARIANTS(NETS.find(n => n.id === id)).map(v => ({ net: 'train~' + v.key, share: v.next })) : [])];
 const copyId = (id, key) => id + '~' + key;
 /** The networks a training run learns: the AI's own, then the size check's (if on). */
 const trainNets = id => [netData[id], ...(sizeOn(id) ? SIZE_VARIANTS(NETS.find(n => n.id === id)).map(v => netData[copyId(id, v.key)]) : [])];
@@ -6900,7 +6914,7 @@ function cardConfig(n) {
     row('Size check', `<label class="inline"><input type="checkbox" data-a="size" data-id="${n.id}" ${sizeOn(n.id) && !lessonsOn(n.id) ? 'checked' : ''}> on</label>`,
       'More nodes and Extra layer learn the same lessons alongside it, starting as copies of its network as it is when switched on.'),
     row('Lessons check', `<label class="inline"><input type="checkbox" data-a="lessons" data-id="${n.id}" ${lessonsOn(n.id) ? 'checked' : ''}> on</label>`,
-      'Two copies of its network as it is when switched on learn from the same games, but each lesson is partly the copy\'s own win chance one move later (30% and 60%) instead of only how the game ended. Replaces the size check while on.'),
+      'Two copies of its network as it is when switched on learn from the same games, but each lesson is 15% and 45% the copy\'s own win chance one move later, instead of the AI\'s 30%. Replaces the size check while on.'),
   ].join('');
 }
 /** The action buttons, in one row at the top of the right half. */

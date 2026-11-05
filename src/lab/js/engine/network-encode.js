@@ -74,11 +74,17 @@ const NET_PROPERTIES = [...new Set(NET_FEATURES.flatMap(m => [...m.keys()]))].so
    distinctly, and nothing is capped. Values with a firm rule limit are divided by that limit. All values are
    stored as decimals. */
 const sq = v => Math.sqrt(Math.max(0, v || 0)) / 10;
+/** A unit's state that changed in play and its printed values don't show: each keyword as it is now minus as
+ *  printed (gained or moved away), keywords for this round, Armoured used, moves and attacks made, deployed this
+ *  round, charged, blighted. Cell numbers 20 on. */
+const F3_UNIT_NOW = [...KW_FLAGS.map(f => (u, s) => kw(u, f) - (cardOf(u)[f] || 0)),
+  u => (u.tInc ? 1 : 0), u => (u.tArm || u.ent ? 1 : 0), u => (u.reck ? 1 : 0), u => (u.armUsed ? 1 : 0),
+  u => sq(u.mv), u => sq(u.atk), (u, s) => (u.born === s.round ? 1 : 0), u => (u.chg ? 1 : 0), u => (u.blight ? 1 : 0)];
 const F3 = (() => {
   const cards = NET_CARD_KEYS.slice(), props = NET_PROPERTIES;
-  const NCELL = 2 * LANES.length * ROWS * COLS, HS = HAND_LIMIT, CS = 20;
-  const LANEN = 17, PILES = 4, FIXED = LANES.length * LANEN + 8 + 8, NREST = FIXED + PILES * (1 + props.length);
-  return { version: 7, PILES, cards, props, DE: 0, CO: 16, CS, NCELL, HS, LANEN, FIXED, NREST, RECN: NCELL * CS + NREST, NK: NCELL + HS, hidden: [128, 64] };
+  const NCELL = 2 * LANES.length * ROWS * COLS, HS = HAND_LIMIT, CS = 20 + F3_UNIT_NOW.length;
+  const LANEN = 17, PILES = 4, FIXED = LANES.length * LANEN + 8 + 8 + 4, NREST = FIXED + PILES * (1 + props.length);
+  return { version: 8, PILES, cards, props, DE: 0, CO: 16, CS, NCELL, HS, LANEN, FIXED, NREST, RECN: NCELL * CS + NREST, NK: NCELL + HS, hidden: [128, 64] };
 })();
 /** A card's printed values: abilities and effect parts as numbers on the square-root scale (true counts 1). */
 const F3_PRINTED = NET_FEATURES.map(m => F3.props.map(pk => sq(m.get(pk) || 0)));
@@ -104,6 +110,7 @@ function encode3(s, me, into) {
         nums[o + 4] = sq(u.bs); nums[o + 5] = sq(u.bd); nums[o + 6] = sq(u.ts);
         nums[o + 7] = u.moved ? 1 : 0; nums[o + 8] = u.attacked ? 1 : 0; nums[o + 9] = u.o === 'v' ? 1 : 0;
         cards[k] = NET_CARD_INDEX[u.card] + 1;
+        for (let t = 0; t < F3_UNIT_NOW.length; t++) nums[o + 20 + t] = F3_UNIT_NOW[t](u, s);
       } else {
         nums[o + 10] = 1;
         const anchorFromFront = side === 0 ? u.r : ROWS - 1 - u.r;
@@ -128,6 +135,10 @@ function encode3(s, me, into) {
   put(sq(s.round)); put(s.starter === me ? 1 : 0); put(s.cur === me ? 1 : 0); put(s.passed === me ? 1 : 0); put(s.passed === opp ? 1 : 0);
   put((s.quietRounds || 0) / 3); put(sq(s.acts));
   put(s.redrawDone ? (s.players[opp].redrawn || []).length / MAX_REDRAW : 0);
+  for (const side of [me, opp]) {                              // this round's counts that some effects use
+    const P = s.players[side];
+    put(sq(P.deathsR === s.round ? P.deaths : 0)); put(sq(P.spR === s.round ? P.spN : 0));
+  }
   // the four piles, each as its size and its cards' printed-value totals
   const pile = counts => {                                     // counts: [card number, copies] pairs
     F3_PILE.fill(0);
