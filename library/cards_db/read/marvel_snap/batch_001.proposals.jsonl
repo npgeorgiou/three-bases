@@ -1,0 +1,9 @@
+{"id":796166,"field":"event","need":"snaps"}
+{"id":796169,"field":"act","need":"win_location"}
+{"id":796170,"field":"on","need":"power_at_location"}
+{"id":796176,"field":"on","need":"power_at_location"}
+{"id":796186,"field":"on","need":"power_at_location"}
+{"id":796192,"field":"on","need":"power_at_location"}
+{"id":796203,"field":"act","need":"plays_for_player"}
+{"id":796220,"field":"to","need":"the_web"}
+{"id":796220,"field":"on","need":"random_player"}
