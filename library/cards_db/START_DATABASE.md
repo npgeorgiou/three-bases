@@ -107,8 +107,7 @@ game's own rulebook, and players' combos and decks that test the lines. Complete
    library/games/marvel_snap.md; read/marvel_snap/game_rules.jsonl; 18 vocab rows of 5 Nov 2026; patterns T99-T110;
    DECK_RULES marvel_snap); 27 full guide decks in decks.tsv; step 1 (all batches, keywords, second_001; 103 unsure cards
    re-read, 39 still unsure with needs only one card has); step 2.1 (`run.py marvel_snap` passes, 13 of 13 cases;
-   `check_all.py --no-load` passes for every game). Next, in order:
-   - 2.3 word check: 179 flags on 169 cards (patterns/marvel_snap_flags.tsv), judge each pattern once, verdicts.tsv.
+   `check_all.py --no-load` passes for every game); step 2.3 (0 word flags: patterns T111-T115, labels with colon only, 19 verdicts). Next, in order:
    - 2.4 names: 19 stub names (check.py lists them; Ancient Arcana, Muramasa Shard, Infinity Shot, Void ...).
    - 2.5 second reading: second/marvel_snap/compare_verdict.md has 11 families (families 2-5 are "same meaning,
      different form": write normalize rules; family 9 and 11 are wrong first readings to fix; family 1 was mostly fixed by

@@ -209,3 +209,22 @@ into_the_breach	6000160	TB06	record_right	Claude: Smoke is named as a state the 
 into_the_breach	6000176	KW:name:fire	record_right	Claude: the word is not the keyword here: "fire-and-forget" is a pilot ability name, "a massive blob/sword" and "a slow-moving spawner" are plain words, or wiki prose about other things (Goo landing tiles, Shield, Bouncer Leader spawns, Tumblebug boulders); "immune to Fire" is the keyword Fire Immunity in the rows	30 Oct 2026
 into_the_breach	6000183	KW:name:fire	record_right	Claude: the word is not the keyword here: "fire-and-forget" is a pilot ability name, "a massive blob/sword" and "a slow-moving spawner" are plain words, or wiki prose about other things (Goo landing tiles, Shield, Bouncer Leader spawns, Tumblebug boulders); "immune to Fire" is the keyword Fire Immunity in the rows	30 Oct 2026
 into_the_breach	6000186	V05	record_right	Claude: the damage belongs to another card (the Blob, the Spore), is said another way (Boost, kill, stat_set power, heal 1 damage), is "no damage", or is wiki prose (Sand Tile turning to Smoke)	30 Oct 2026
+marvel_snap	796213	V20	record_right	Claude: Boosters are a reward outside play; no game effect	5 Nov 2026
+marvel_snap	796243	V20	record_right	Claude: a turn 7 is the extra turn; this game is the whole game, no span needed	5 Nov 2026
+marvel_snap	8000039	T109	record_right	Claude: "used a Moveable ability" names the keyword (ref Moveable), not a move it gives	5 Nov 2026
+marvel_snap	8000135	V04	record_right	Claude: Summoning is part of the name Summoning Ritual, which the record creates	5 Nov 2026
+marvel_snap	8000159	V20	record_right	Claude: volts are a reward outside play; no game effect	5 Nov 2026
+marvel_snap	8000250	T100	record_right	Claude: "tap this" is the player's choice at any time, the event activated	5 Nov 2026
+marvel_snap	8000268	T100	record_right	Claude: the Ongoing hiding is said as Hidden given to each card played here	5 Nov 2026
+marvel_snap	8000279	T100	record_right	Claude: emotes have no game effect	5 Nov 2026
+marvel_snap	8000341	T100	record_right	Claude: "each turn" of the Ongoing is round_start, lasts this round	5 Nov 2026
+marvel_snap	8000346	KW	record_right	Claude: "without using its On Reveal" says the copy does not act at once; nothing to link	5 Nov 2026
+marvel_snap	8000364	V20	record_right	Claude: winnings are cubes outside play; card is marked unsure	5 Nov 2026
+marvel_snap	8000450	T112	record_right	Claude: "moving is the only way" forbids playing, adding and destroying here; it makes no move	5 Nov 2026
+marvel_snap	8000539	V02	record_right	Claude: the first 6 characters drawn are marked as the deck's top 6 at game start	5 Nov 2026
+marvel_snap	8000581	T99	record_right	Claude: "On Reveal: Next turn" is the delayed form, round_start with limit next_time (BRIEF rule 14)	5 Nov 2026
+marvel_snap	8000593	T109	record_right	Claude: "Moveable card you've played" names the keyword (ref Moveable), not a move it gives	5 Nov 2026
+marvel_snap	8000598	T112	record_right	Claude: Stardust forbids adding cards except by playing or moving; it makes no move	5 Nov 2026
+marvel_snap	8000675	T100	record_right	Claude: "Ongoing: your On Reveal abilities here repeat" is each On Reveal card played here repeating	5 Nov 2026
+marvel_snap	8000709	T99	record_right	Claude: "On Reveal: Next turn" is the delayed form, round_start with limit next_time (BRIEF rule 14)	5 Nov 2026
+marvel_snap	8000727	T100	record_right	Claude: "Ongoing: your On Reveal abilities here repeat" is each On Reveal card played here repeating	5 Nov 2026

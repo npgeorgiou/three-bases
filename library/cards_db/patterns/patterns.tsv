@@ -24,7 +24,7 @@ runeterra	T17	\bsupport:	event:supports	yes	Support: is the event supports (one 
 *	T23	\bwhen i level up\b	event:levels_up	yes	trigger phrase
 *	V01	\bstun	value:stun|stunned|given_keyword	yes	verb
 *	V02	\bdraws?\b(?! pile)	value:draw|drawn	yes	verb (the word draw only, not drawn-as-adjective)
-*	V03	\bcreate	value:create|copy|created|set_terrain|terrain_changed	yes	verb; Faeria "create forest" makes a land (set_terrain)
+*	V03	\bcreate	value:create|copy|created|set_terrain|terrain_changed|summon	yes	verb; Faeria "create forest" makes a land (set_terrain); Marvel Snap "create a card at a location" puts it on the board: summon (BRIEF Game words: Marvel Snap), 5 Nov 2026
 *	V04	\bsummon(?!:)	value:summon|copy|summoned|revive|summoned_this_round	yes	"verb; ""summoned this round"" is a state"
 *	V05	\bdeal \d|\bdamage\b(?! shield)	value:damage|damaged|survives_damage|nexus_damaged|excess_damage|negate_damage|damage_reduction|strike_with|increase_effect	yes	"verb; ""1 extra damage"" is increase_effect"
 *	V06	\bheals?\b	value:heal|healed	yes	verb
@@ -42,7 +42,7 @@ runeterra	V17	\b(?:get|gain)s? (?:an? |\d+ )?(?:empty )?mana gems?\b	value:max_m
 runeterra	V18	\brefill\b[^.]{0,20}\bmana\b	value:mana_gain|max_mana_change|mana_refilled	yes	"refill wording; ""when you refill mana"" is the event mana_refilled"
 *	V19	\bthis round\b	value:this_round|dead_this_round|summoned_this_round|targeted_this_round|attacked_this_round|struck_this_round	yes	duration or span word; died/summoned/targeted this round are states
 *	V20	(?<!died )(?<!destroyed )\bthis game\b	value:this_game|recalled_this_game|once_per_game	yes	"span word (""died this game"" is checked by T24); ""the first time ... this game"" is the limit once_per_game"
-*	V21	\bcop(?:y|ies)\b	value:copy|copy_keywords|create|summon|transform|copy_of_it|revive	yes	"copy wording; ""transform into an exact copy"" is transform; ""copies of it"" is the state copy_of_it; ""revive an Ephemeral copy"" is revive"
+*	V21	\bcop(?:y|ies)\b	value:copy|copy_keywords|create|summon|transform|copy_of_it|revive|copy_text|repeat	yes	"copy wording; ""transform into an exact copy"" is transform; ""copies of it"" is the state copy_of_it; ""revive an Ephemeral copy"" is revive"; Marvel Snap "copy its text" is copy_text or repeat (BRIEF Game words: Marvel Snap), 5 Nov 2026
 *	V22	\bstrikes?\b(?! ?:)	value:strike|strikes|strike_with|damage|strikes_nexus|survives_damage	yes	"strike wording (not the Strike: label); ""survived strikes"" is survives_damage"
 runeterra	V23	\brally\b	value:gain_attack_token|rally	yes	Rally gives the attack token
 *	D01	\bwhen\b		no	too general: when appears inside granted text and conditions
@@ -192,15 +192,20 @@ into_the_breach	S-TB1	\(but water will prevent attacking or repairing\)		strip	t
 into_the_breach	S-TB2	all other damage \(push, blocking, fire, etc\.\) is unaffected\.?		strip	says what the keyword does not change (A.C.I.D., Natural Armor): no effect
 into_the_breach	S-TB3	\bfires? (?=(?:a|an|two|the|rockets|a second)\b)		strip	"fire a projectile" is shooting, not the status Fire
 into_the_breach	S-TB4	\b(?:weapon|passive): .*$		strip	a mech's starting weapon and passive in its text: they are cards of their own in the deck, with their own rows (v52)
-marvel_snap	T99	\bon reveal\b	event:played	yes	trigger label (help center faq 48: On Reveal)
-marvel_snap	T100	\bongoing\b	event:always	yes	trigger label (help center faq 99: Ongoing)
+marvel_snap	T99	\bon reveal:	event:played	yes	trigger label (help center faq 48: On Reveal); the label with its colon only: "Ongoing cards" names a kind of card, checked as a keyword (KW), 5 Nov 2026
+marvel_snap	T100	\bongoing:	event:always	yes	trigger label (help center faq 99: Ongoing); the label with its colon only: "Ongoing cards" names a kind of card, checked as a keyword (KW), 5 Nov 2026
 marvel_snap	T101	\bactivate:	event:activated	yes	trigger label (Activate, marvel.com Sep 2024)
-marvel_snap	T102	\bend of turn\b|\bat the end of (?:each|every|the) turn\b	event:round_end	yes	trigger label (End of Turn; a turn is shared, BRIEF Game words)
-marvel_snap	T103	\bstart of turn\b|\bat the start of (?:each|every|the|your) turn\b	event:round_start	yes	trigger label (Start of Turn)
+marvel_snap	T102	\bend of turn:|\bat the end of (?:each|every|the) turn\b	event:round_end	yes	trigger label (End of Turn; a turn is shared, BRIEF Game words); the label with its colon only: "Ongoing cards" names a kind of card, checked as a keyword (KW), 5 Nov 2026
+marvel_snap	T103	\bstart of turn:|\bat the start of (?:each|every|the|your) turn\b	event:round_start	yes	trigger label (Start of Turn); the label with its colon only: "Ongoing cards" names a kind of card, checked as a keyword (KW), 5 Nov 2026
 marvel_snap	T104	\bgame start\b	event:game_start	yes	trigger label (Game Start, developer answer 13 Dec 2024)
 marvel_snap	T105	\bat the end of the game\b	event:game_end	yes	trigger phrase
 marvel_snap	T106	\bwhen (?:this is|this card is) destroyed\b	event:dies	yes	trigger phrase
 marvel_snap	T107	\bwhen (?:this is|this card is) discarded\b	event:discarded	yes	trigger phrase
 marvel_snap	T108	\bafter you play\b	event:played	yes	trigger phrase
 marvel_snap	T109	\bmoveable\b	value:can|moves	yes	keyword word (help center faq 604)
-marvel_snap	T110	\bmerges?\b	value:merge	yes	keyword word (snap.fan Man-Spider preview)
+marvel_snap	T110	\bmerges?\b	value:merge|merged	yes	keyword word (snap.fan Man-Spider preview); "when this merges" is the event merged
+marvel_snap	T111	\bdestroy(?:s|ed)?\b	value:kill|dies|killed|leaves_play|discard	yes	verb and event (BRIEF Game words: destroy = kill; Destroy keyword, help center); "destroyed cards" as a pile are zone discard (BRIEF rule 17)
+marvel_snap	T112	\bmov(?:e|es|ed|ing)\b	value:move|moves|moved_this_round|previous_lane|moves_onto	yes	verb and event (BRIEF Game words: Move keyword, help center); "moves here" is the event moves_onto
+marvel_snap	T113	\bafflict(?:ed)?\b	value:stat_change|stat_set|negative	yes	verb (BRIEF Game words: Afflict = stat_change power minus on the enemy card); "afflicted with negative Power" is the state negative
+marvel_snap	T114	\bhorde\b	name:zombie horde	yes	keyword word (BRIEF Game words: Horde +N = stat_change on card Zombie Horde)
+marvel_snap	T115	\bempowered\b	value:buffed|stat_changed	yes	keyword word (BRIEF Game words: Empowered = state buffed); "when this is Empowered" is the event stat_changed on itself
