@@ -139,8 +139,10 @@ function cardConfig(n) {
       lrOf(r).mode === 'boost' ? 'Boosted: halves at each test until it reaches the floor (about 0.00003); then the usual rule resumes after 9 tests.'
         : lrOf(r).mode === 'cycle' ? (!lrOf(r).aligned ? 'Cycle on: starts at 0.00025 at the next test.' : 'Cycle on: halves at each test down to about 0.00003, then doubles up to 0.00025 (6 tests per cycle). Click to stop; the step stays, and the usual rule resumes after 9 tests.')
         : `Halves by itself when test wins stop rising: the 9-test average has not been more than 1 point above the 18-test average for 3 tests in a row; never below about 0.00003${lrOf(r).wait ? `. Judging again in ${lrOf(r).wait} tests` : ''}.`),
-    row('Size check', `<label class="inline"><input type="checkbox" data-a="size" data-id="${n.id}" ${sizeOn(n.id) ? 'checked' : ''}> on</label>`,
+    row('Size check', `<label class="inline"><input type="checkbox" data-a="size" data-id="${n.id}" ${sizeOn(n.id) && !lessonsOn(n.id) ? 'checked' : ''}> on</label>`,
       'More nodes and Extra layer learn the same lessons alongside it, starting as copies of its network as it is when switched on.'),
+    row('Lessons check', `<label class="inline"><input type="checkbox" data-a="lessons" data-id="${n.id}" ${lessonsOn(n.id) ? 'checked' : ''}> on</label>`,
+      'Two copies of its network as it is when switched on learn from the same games, but each lesson is partly the copy\'s own win chance one move later (30% and 60%) instead of only how the game ended. Replaces the size check while on.'),
   ].join('');
 }
 /** The action buttons, in one row at the top of the right half. */
@@ -220,9 +222,7 @@ function renderTraining() {
     });
   }
 
-  for (const inp of $('#netCards').querySelectorAll('input[data-a="size"]')) {
-    inp.addEventListener('change', () => setSizeCheck(inp.dataset.id, inp.checked));
-  }
+  wireSizeChecks($('#netCards'));
 
 
   for (const sel of $('#netCards').querySelectorAll('select[data-a="wvs"]')) {

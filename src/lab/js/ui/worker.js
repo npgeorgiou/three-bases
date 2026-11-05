@@ -67,8 +67,20 @@ function labWorker() {
       // targets: the real result; with "search in training", positions where the trained network chose its move by
       // search learn partly that search's value: (1 - share) × result + share × value. One target serves every network
       // being trained (the size check's learn the same ones).
-      const share = msg.search || 0, nY = 1, Y = new Float32Array(n);
-      for (let i = 0; i < n; i++) Y[i] = share > 0 && sv[i] !== null ? (1 - share) * result(i) + share * sv[i] : result(i);
+      // With the lessons check, one target per network: from the last position back, target = (1 - next) × the next
+      // position's target + next × that network's own win chance there, both as seen by the side to act here.
+      const share = msg.search || 0, lessons = msg.next || [{ net: null, share: 0 }], nY = lessons.length, Y = new Float32Array(n * nY);
+      lessons.forEach((L, j) => {
+        const net = L.share > 0 ? nets[L.net] : null;
+        const v = net ? xs.map(x => 1 / (1 + Math.exp(-net.value(x)))) : null;
+        let later = null;
+        for (let i = n - 1; i >= 0; i--) {
+          let y = result(i);
+          if (net && i < n - 1) { const flip = q => (sides[i + 1] === sides[i] ? q : 1 - q); y = (1 - L.share) * flip(later) + L.share * flip(v[i + 1]); }
+          later = y;
+          Y[i * nY + j] = share > 0 && sv[i] !== null ? (1 - share) * y + share * sv[i] : y;
+        }
+      });
       // the exam: in a game one side won, up to 24 positions are marked (E = 1 + stage: 0 early, 1 middle, 2 late,
       // by thirds of the game); the learner grades the network on them, and the Benchmark's own guess is graded
       // here (it guesses a win when its score of the position, as the round would end, is above zero)

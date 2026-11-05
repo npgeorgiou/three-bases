@@ -58,6 +58,9 @@ before coding (CLAUDE.md), and keep every speed or AI check to about a minute.
   the noise of so few games; look-ahead does not clearly lift it.
 - The Benchmark at depth 1 also scores each move's position once, like the network: the comparison is fair.
 
+- Built for the real test: the training page's "Lessons check" (in place of the size check while on) trains two
+  copies on the same games, whose lessons are partly their own win chance one move later (30% and 60%).
+
 ## Why it may be stuck (suggestion, not proven)
 1. **No idea of where units stand relative to each other.** The 54 cell results get separate weights per cell, so any
    relation between two units ("this unit can hit that one", "that aura reaches this unit") must be learned again for

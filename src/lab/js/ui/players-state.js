@@ -106,13 +106,21 @@ const usable = (data, n) => {                                   // a network of 
  * fairly. Each has its own step size and halving schedule, judged on its own test results.
  */
 const SIZE_VARIANTS = n => {
-  const h = F3.hidden;
+  const h = F3.hidden, rec = state.training[n.id];
+  // the lessons check: same-size copies that learn partly from their own value of the next position (share)
+  if (rec && rec.size && rec.size.kind === 'lessons') return [
+    { key: 'next30', label: 'Next move 30%', hidden: h.slice(), next: 0.3, cls: 'c2' },
+    { key: 'next60', label: 'Next move 60%', hidden: h.slice(), next: 0.6, cls: 'c3' },
+  ];
   return [
     { key: 'big', label: 'More nodes', hidden: h.map(x => 2 * x), cls: 'c2' },
     { key: 'deep', label: 'Extra layer', hidden: [...h, Math.max(4, h[h.length - 1] / 2)], cls: 'c3' },
   ];
 };
 const sizeOn = id => !!(state.training[id].size && state.training[id].size.on);
+const lessonsOn = id => sizeOn(id) && state.training[id].size.kind === 'lessons';
+/** With the lessons check on: per trained network, its game-worker name and its share learned from the next position. */
+const nextShares = id => (lessonsOn(id) ? [{ net: 'train', share: 0 }, ...SIZE_VARIANTS(NETS.find(n => n.id === id)).map(v => ({ net: 'train~' + v.key, share: v.next }))] : null);
 const copyId = (id, key) => id + '~' + key;
 /** The networks a training run learns: the AI's own, then the size check's (if on). */
 const trainNets = id => [netData[id], ...(sizeOn(id) ? SIZE_VARIANTS(NETS.find(n => n.id === id)).map(v => netData[copyId(id, v.key)]) : [])];

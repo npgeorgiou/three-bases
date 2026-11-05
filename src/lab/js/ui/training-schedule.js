@@ -163,7 +163,7 @@ function startTraining(id) {
       rec.libSession = null; logPeriod(id); save(); setTimeout(renderTraining, 0);   // over: back to its usual training
     }
     const self = { kind: 'net', net: 'train', play: { replies: searchOf(id) > 0, width: TRAIN_SEARCH_WIDTH, explore: t.cfg.explore } };   // itself, or the chosen opponent
-    return { key: 'self' + id + k++, kind: 'self', specs: versus(self), decks: randomDecks(), record: true, search: searchOf(id) };
+    return { key: 'self' + id + k++, kind: 'self', specs: versus(self), decks: randomDecks(), record: true, search: searchOf(id), next: nextShares(id) };
   };
 
   { const pick = t.nextJob;                                                  // count the training games being played

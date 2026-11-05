@@ -5335,13 +5335,21 @@ const usable = (data, n) => {                                   // a network of 
  * fairly. Each has its own step size and halving schedule, judged on its own test results.
  */
 const SIZE_VARIANTS = n => {
-  const h = F3.hidden;
+  const h = F3.hidden, rec = state.training[n.id];
+  // the lessons check: same-size copies that learn partly from their own value of the next position (share)
+  if (rec && rec.size && rec.size.kind === 'lessons') return [
+    { key: 'next30', label: 'Next move 30%', hidden: h.slice(), next: 0.3, cls: 'c2' },
+    { key: 'next60', label: 'Next move 60%', hidden: h.slice(), next: 0.6, cls: 'c3' },
+  ];
   return [
     { key: 'big', label: 'More nodes', hidden: h.map(x => 2 * x), cls: 'c2' },
     { key: 'deep', label: 'Extra layer', hidden: [...h, Math.max(4, h[h.length - 1] / 2)], cls: 'c3' },
   ];
 };
 const sizeOn = id => !!(state.training[id].size && state.training[id].size.on);
+const lessonsOn = id => sizeOn(id) && state.training[id].size.kind === 'lessons';
+/** With the lessons check on: per trained network, its game-worker name and its share learned from the next position. */
+const nextShares = id => (lessonsOn(id) ? [{ net: 'train', share: 0 }, ...SIZE_VARIANTS(NETS.find(n => n.id === id)).map(v => ({ net: 'train~' + v.key, share: v.next }))] : null);
 const copyId = (id, key) => id + '~' + key;
 /** The networks a training run learns: the AI's own, then the size check's (if on). */
 const trainNets = id => [netData[id], ...(sizeOn(id) ? SIZE_VARIANTS(NETS.find(n => n.id === id)).map(v => netData[copyId(id, v.key)]) : [])];
@@ -5574,8 +5582,20 @@ function labWorker() {
       // targets: the real result; with "search in training", positions where the trained network chose its move by
       // search learn partly that search's value: (1 - share) × result + share × value. One target serves every network
       // being trained (the size check's learn the same ones).
-      const share = msg.search || 0, nY = 1, Y = new Float32Array(n);
-      for (let i = 0; i < n; i++) Y[i] = share > 0 && sv[i] !== null ? (1 - share) * result(i) + share * sv[i] : result(i);
+      // With the lessons check, one target per network: from the last position back, target = (1 - next) × the next
+      // position's target + next × that network's own win chance there, both as seen by the side to act here.
+      const share = msg.search || 0, lessons = msg.next || [{ net: null, share: 0 }], nY = lessons.length, Y = new Float32Array(n * nY);
+      lessons.forEach((L, j) => {
+        const net = L.share > 0 ? nets[L.net] : null;
+        const v = net ? xs.map(x => 1 / (1 + Math.exp(-net.value(x)))) : null;
+        let later = null;
+        for (let i = n - 1; i >= 0; i--) {
+          let y = result(i);
+          if (net && i < n - 1) { const flip = q => (sides[i + 1] === sides[i] ? q : 1 - q); y = (1 - L.share) * flip(later) + L.share * flip(v[i + 1]); }
+          later = y;
+          Y[i * nY + j] = share > 0 && sv[i] !== null ? (1 - share) * y + share * sv[i] : y;
+        }
+      });
       // the exam: in a game one side won, up to 24 positions are marked (E = 1 + stage: 0 early, 1 middle, 2 late,
       // by thirds of the game); the learner grades the network on them, and the Benchmark's own guess is graded
       // here (it guesses a win when its score of the position, as the round would end, is above zero)
@@ -5935,7 +5955,7 @@ class Pool {
       if (!job) continue;
       w.job = job;
       w.postMessage({ type: 'game', key: job.key, specs: job.specs, decks: job.decks, record: !!job.record,
-        roundCap: ROUND_CAP, actionCap: ACTION_CAP, search: job.search || 0,
+        roundCap: ROUND_CAP, actionCap: ACTION_CAP, search: job.search || 0, next: job.next || null,
         replay: job.replay, seed: job.seed, lists: job.lists, agree: !!job.agree });
     }
   }
@@ -6411,7 +6431,7 @@ function startTraining(id) {
       rec.libSession = null; logPeriod(id); save(); setTimeout(renderTraining, 0);   // over: back to its usual training
     }
     const self = { kind: 'net', net: 'train', play: { replies: searchOf(id) > 0, width: TRAIN_SEARCH_WIDTH, explore: t.cfg.explore } };   // itself, or the chosen opponent
-    return { key: 'self' + id + k++, kind: 'self', specs: versus(self), decks: randomDecks(), record: true, search: searchOf(id) };
+    return { key: 'self' + id + k++, kind: 'self', specs: versus(self), decks: randomDecks(), record: true, search: searchOf(id), next: nextShares(id) };
   };
 
   { const pick = t.nextJob;                                                  // count the training games being played
@@ -6704,25 +6724,38 @@ function renderTrainingSoon() {
 
 /** Size check on (at any time): its two networks start as grown copies of the AI's network as it is now, at its
  *  current step size. Off: they and their results are removed. A running training restarts around the change. */
-async function setSizeCheck(id, on) {
-  const n = NETS.find(x => x.id === id), rec = state.training[id];
-  if (!on && !(await askYes('Turn the size check off?', 'Its two networks and their results are removed.', 'Turn off'))) { renderTraining(); return; }
+async function setSizeCheck(id, on, kind = 'size') {
+  const n = NETS.find(x => x.id === id), rec = state.training[id], what = lessonsOn(id) ? 'lessons' : 'size';
+  if (!on && !(await askYes(`Turn the ${what} check off?`, 'Its two networks and their results are removed.', 'Turn off'))) { renderTraining(); return false; }
   const was = !!trainings[id];
   if (was) await stopTraining(id);                                               // the learners hold the networks: stop, change, go on
   if (on) {
+    rec.size = { on: false, kind };                                              // the kind decides which two networks
     for (const v of SIZE_VARIANTS(n)) { netData[copyId(id, v.key)] = net3Grow(netData[id], v.hidden); saveNet(copyId(id, v.key)); }
     const lr = JSON.parse(JSON.stringify(lrOf(rec)));
-    rec.size = { on: true, from: rec.games + rec.teacherGames, nets: Object.fromEntries(SIZE_VARIANTS(n).map(v => [v.key, { acc: null, fit: null, lr: { ...lr } }])) };
+    rec.size = { on: true, kind, from: rec.games + rec.teacherGames, nets: Object.fromEntries(SIZE_VARIANTS(n).map(v => [v.key, { acc: null, fit: null, lr: { ...lr } }])) };
   } else {
-    rec.size = { on: false };
+    rec.size = { on: false, kind: rec.size.kind };                               // kept so its networks are found and removed
     rec.tests = rec.tests.filter(t => !t.net);
     for (const e of rec.predLog || []) for (const v of SIZE_VARIANTS(n)) delete e[v.key];
     for (const v of SIZE_VARIANTS(n)) { delete netData[copyId(id, v.key)]; deleteNet(copyId(id, v.key)); }
   }
   save();
   if (was) startTraining(id); else renderTraining();
+  return true;
 }
 
+/** The size check and the lessons check share the two extra networks: turning one on turns the other off first. */
+function wireSizeChecks(root) {
+  for (const inp of root.querySelectorAll('input[data-a="size"], input[data-a="lessons"]')) {
+    inp.addEventListener('change', async () => {
+      const id = inp.dataset.id, kind = inp.dataset.a, other = kind === 'size' ? lessonsOn(id) : sizeOn(id) && !lessonsOn(id);
+      if (!inp.checked) { await setSizeCheck(id, false); return; }
+      if (other && !(await setSizeCheck(id, false))) return;
+      await setSizeCheck(id, true, kind);
+    });
+  }
+}
 /**
  * The AI boards. Each has a header, then two clearly separate halves: settings on the left (fixed width, so
  * nothing moves when a value needs more room), the action buttons in one row above progress and statistics on the
@@ -6864,8 +6897,10 @@ function cardConfig(n) {
       lrOf(r).mode === 'boost' ? 'Boosted: halves at each test until it reaches the floor (about 0.00003); then the usual rule resumes after 9 tests.'
         : lrOf(r).mode === 'cycle' ? (!lrOf(r).aligned ? 'Cycle on: starts at 0.00025 at the next test.' : 'Cycle on: halves at each test down to about 0.00003, then doubles up to 0.00025 (6 tests per cycle). Click to stop; the step stays, and the usual rule resumes after 9 tests.')
         : `Halves by itself when test wins stop rising: the 9-test average has not been more than 1 point above the 18-test average for 3 tests in a row; never below about 0.00003${lrOf(r).wait ? `. Judging again in ${lrOf(r).wait} tests` : ''}.`),
-    row('Size check', `<label class="inline"><input type="checkbox" data-a="size" data-id="${n.id}" ${sizeOn(n.id) ? 'checked' : ''}> on</label>`,
+    row('Size check', `<label class="inline"><input type="checkbox" data-a="size" data-id="${n.id}" ${sizeOn(n.id) && !lessonsOn(n.id) ? 'checked' : ''}> on</label>`,
       'More nodes and Extra layer learn the same lessons alongside it, starting as copies of its network as it is when switched on.'),
+    row('Lessons check', `<label class="inline"><input type="checkbox" data-a="lessons" data-id="${n.id}" ${lessonsOn(n.id) ? 'checked' : ''}> on</label>`,
+      'Two copies of its network as it is when switched on learn from the same games, but each lesson is partly the copy\'s own win chance one move later (30% and 60%) instead of only how the game ended. Replaces the size check while on.'),
   ].join('');
 }
 /** The action buttons, in one row at the top of the right half. */
@@ -6945,9 +6980,7 @@ function renderTraining() {
     });
   }
 
-  for (const inp of $('#netCards').querySelectorAll('input[data-a="size"]')) {
-    inp.addEventListener('change', () => setSizeCheck(inp.dataset.id, inp.checked));
-  }
+  wireSizeChecks($('#netCards'));
 
 
   for (const sel of $('#netCards').querySelectorAll('select[data-a="wvs"]')) {

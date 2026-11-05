@@ -53,7 +53,7 @@ class Pool {
       if (!job) continue;
       w.job = job;
       w.postMessage({ type: 'game', key: job.key, specs: job.specs, decks: job.decks, record: !!job.record,
-        roundCap: ROUND_CAP, actionCap: ACTION_CAP, search: job.search || 0,
+        roundCap: ROUND_CAP, actionCap: ACTION_CAP, search: job.search || 0, next: job.next || null,
         replay: job.replay, seed: job.seed, lists: job.lists, agree: !!job.agree });
     }
   }

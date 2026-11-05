@@ -189,22 +189,35 @@ function renderTrainingSoon() {
 
 /** Size check on (at any time): its two networks start as grown copies of the AI's network as it is now, at its
  *  current step size. Off: they and their results are removed. A running training restarts around the change. */
-async function setSizeCheck(id, on) {
-  const n = NETS.find(x => x.id === id), rec = state.training[id];
-  if (!on && !(await askYes('Turn the size check off?', 'Its two networks and their results are removed.', 'Turn off'))) { renderTraining(); return; }
+async function setSizeCheck(id, on, kind = 'size') {
+  const n = NETS.find(x => x.id === id), rec = state.training[id], what = lessonsOn(id) ? 'lessons' : 'size';
+  if (!on && !(await askYes(`Turn the ${what} check off?`, 'Its two networks and their results are removed.', 'Turn off'))) { renderTraining(); return false; }
   const was = !!trainings[id];
   if (was) await stopTraining(id);                                               // the learners hold the networks: stop, change, go on
   if (on) {
+    rec.size = { on: false, kind };                                              // the kind decides which two networks
     for (const v of SIZE_VARIANTS(n)) { netData[copyId(id, v.key)] = net3Grow(netData[id], v.hidden); saveNet(copyId(id, v.key)); }
     const lr = JSON.parse(JSON.stringify(lrOf(rec)));
-    rec.size = { on: true, from: rec.games + rec.teacherGames, nets: Object.fromEntries(SIZE_VARIANTS(n).map(v => [v.key, { acc: null, fit: null, lr: { ...lr } }])) };
+    rec.size = { on: true, kind, from: rec.games + rec.teacherGames, nets: Object.fromEntries(SIZE_VARIANTS(n).map(v => [v.key, { acc: null, fit: null, lr: { ...lr } }])) };
   } else {
-    rec.size = { on: false };
+    rec.size = { on: false, kind: rec.size.kind };                               // kept so its networks are found and removed
     rec.tests = rec.tests.filter(t => !t.net);
     for (const e of rec.predLog || []) for (const v of SIZE_VARIANTS(n)) delete e[v.key];
     for (const v of SIZE_VARIANTS(n)) { delete netData[copyId(id, v.key)]; deleteNet(copyId(id, v.key)); }
   }
   save();
   if (was) startTraining(id); else renderTraining();
+  return true;
 }
 
+/** The size check and the lessons check share the two extra networks: turning one on turns the other off first. */
+function wireSizeChecks(root) {
+  for (const inp of root.querySelectorAll('input[data-a="size"], input[data-a="lessons"]')) {
+    inp.addEventListener('change', async () => {
+      const id = inp.dataset.id, kind = inp.dataset.a, other = kind === 'size' ? lessonsOn(id) : sizeOn(id) && !lessonsOn(id);
+      if (!inp.checked) { await setSizeCheck(id, false); return; }
+      if (other && !(await setSizeCheck(id, false))) return;
+      await setSizeCheck(id, true, kind);
+    });
+  }
+}
