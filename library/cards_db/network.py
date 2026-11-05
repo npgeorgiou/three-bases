@@ -754,6 +754,11 @@ def lines_of(c, game):
         for p in (w or '').split(';'):
             b = p.split(' ')
             if len(b) == 3 and b[0] == 'keyword' and b[1] == 'is' and b[2].isdigit() and int(b[2]) in trig: rep[trig[int(b[2])]].add((card, int(b[2])))
+    # a repeat of the card played just before ("if the last card played has On Reveal", Absorbing Man) names its keyword in the IF: the same repeat
+    for card, w in c.execute("select f.card, f.of_with from flat_if f join flat_do d on d.card=f.card and d.ability=f.ability and d.act='repeat' where f.test='last_card'"):
+        for p in (w or '').split(';'):
+            b = p.split(' ')
+            if card in cards and len(b) == 3 and b[0] == 'keyword' and b[1] == 'is' and b[2].isdigit() and int(b[2]) in trig: rep[trig[int(b[2])]].add((card, int(b[2])))
     for ev, ms in rep.items():
         users = {t for (t,) in c.execute("select card from flat_when where event=? and origin='own' and (actor_pick='self' or obj_pick='self')", (ev,))
                  if t in cards}
