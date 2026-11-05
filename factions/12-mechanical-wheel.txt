@@ -33,5 +33,13 @@ game; the first six explain about half of how real factions differ, all twelve a
 11. What its cards react to: being placed, attacking, being hit, or dying.
 12. Rows and areas: works from the front row or the back rows; hits one cell or a whole row or column (the row part is
     this board's own, not measured).
+13. Speed (Kaptain, 5 Nov 2026): how quickly the faction carries out its plan; seen in the cost curve (Faeria Yellow
+    averages cost 3.1 against Red 4.8; Runeterra Shurima 2.9 against Freljord 4.1).
+How the axes were missed: axes 1-12 were measured only from what cards do (concept shares), so identity that lives in
+the cost curve, the stats and how a faction feels to play was invisible; look there too.
+Which ends go together is judged by play: one end makes what the other needs, or undoes it (library fed/feeds/both).
+A correlation across real factions only shows what those games happened to do, never that two ends can't work
+(damaging or killing your own units to set off effects, locking enemies while moving, keeping a big unit alive by
+repairing it: all sound plays).
 Not axes: timing (players act now; round end is built FOR, not waited for), staying in one lane (every faction must
 win 2 of 3 lanes), random effects (not allowed), lasting or this-round effects (this-round effects are worth little).
