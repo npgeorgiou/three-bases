@@ -1,0 +1,39 @@
+{"id":8000181,"field":"act","need":"max_mana_set (Set Max Energy equal to a number)"}
+{"id":8000204,"field":"x","need":"total_cost_limit (up to N total Cost of cards)"}
+{"id":8000217,"field":"position","need":"left_edge (the leftmost location)"}
+{"id":8000242,"field":"act","need":"swap_ability (replace the Activate ability with a new one until used)"}
+{"id":8000245,"field":"attr","need":"state no_abilities (a card with no abilities)"}
+{"id":8000255,"field":"act","need":"copy_text (copy the text of a card)"}
+{"id":8000259,"field":"test","need":"snapped (a player Snapped this turn)"}
+{"id":8000269,"field":"param","need":"max_per_turn (only N cards per turn)"}
+{"id":8000269,"field":"x","need":"locations_with_highest_cost_card"}
+{"id":8000273,"field":"act","need":"copy_text (copy the text of a card)"}
+{"id":8000282,"field":"act","need":"judge (pick random characters; yours +1, enemies -1)"}
+{"id":8000283,"field":"act","need":"must_play_first_card_here"}
+{"id":8000289,"field":"x","need":"bonus_energy (the Energy above the turn's normal amount)"}
+{"id":8000300,"field":"act","need":"copy_text (copy the text of a card)"}
+{"id":8000331,"field":"x","need":"even_split (total divided equally among the locations)"}
+{"id":8000346,"field":"act","need":"copy_text (copy the text of a card)"}
+{"id":8000348,"field":"attr","need":"type Guardians crew (cards of a named crew)"}
+{"id":8000351,"field":"event","need":"merges (a card merges into this)"}
+{"id":8000357,"field":"position","need":"where_you_lose (a location that makes you lose the game)"}
+{"id":8000359,"field":"attr","need":"state moved_this_round"}
+{"id":8000364,"field":"act","need":"double_winnings (double the cubes won)"}
+{"id":8000378,"field":"param","need":"direction_of_cost_change (increase only / reduction only)"}
+{"id":8000381,"field":"attr","need":"state in_opening_hand (the opening hand)"}
+{"id":8000390,"field":"act","need":"copy_text (have the Ongoing effects of other cards)"}
+{"id":8000402,"field":"x","need":"no_repeated_costs (all cards there have different Costs)"}
+{"id":8000404,"field":"position","need":"old_location (the location it moved from)"}
+{"id":8000409,"field":"act","need":"copy_text (copy the text of a card)"}
+{"id":8000420,"field":"state","need":"discarded_last_round (discarded or destroyed last turn)"}
+{"id":8000423,"field":"act","need":"copy_text (replace a card's text with another card's text)"}
+{"id":8000438,"field":"attr","need":"state no_abilities (a card with no abilities)"}
+{"id":8000439,"field":"event","need":"merges (this card merges)"}
+{"id":8000449,"field":"act","need":"copy_text (copy the text of a card)"}
+{"id":8000450,"field":"act","need":"only_by_moving (cards enter and leave only by moving)"}
+{"id":8000468,"field":"attr","need":"released_before (cards released before a given card)"}
+{"id":8000481,"field":"position","need":"old_location (the location it moved from)"}
+{"id":8000492,"field":"act","need":"copy_text (steal the text of a card)"}
+{"id":8000493,"field":"act","need":"copy_text (steal the text of a card)"}
+{"id":8000517,"field":"attr","need":"state no_abilities (a card with no abilities)"}
+{"id":8000520,"field":"position","need":"right_edge (the rightmost location)"}
