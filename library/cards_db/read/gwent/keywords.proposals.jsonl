@@ -1,0 +1,5 @@
+{"id": 756145, "field": "params", "need": "ignore_armor"}
+{"id": 756169, "field": "params", "need": "ignore_armor"}
+{"id": 756193, "field": "act", "need": "set_state_hidden"}
+{"id": 756216, "field": "params", "need": "ignore_armor"}
+{"id": 756222, "field": "test", "need": "sum_of_event_amounts"}
