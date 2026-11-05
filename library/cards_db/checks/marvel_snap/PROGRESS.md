@@ -11,5 +11,5 @@
 7. Fixers: results: C1 FIXED; C2 FIXED; C3 FIXED; C4 FIXED (its lane-play part undone: Kaptain's nst26); C5 FIXED; C6 FIXED; C7 FIXED; C8 FIXED; C9 FIXED; C10 FIXED; C11 FIXED; C12 FIXED; C13 FIXED; C14 FIXED; C15 FIXED; C16 FIXED; C17 FIXED; C18 FIXED; C19 FIXED; C20 FIXED; C21 FIXED; C22 FIXED; C23 FIXED; C24 FIXED; C25 FIXED (by C24); C26 FIXED; C27 FIXED (by C26); C28 FIXED; C29 FIXED; C30 FIXED;
 8. Rebuild: done (v70 lacked a link: fixed, rebuilt). All other games pass; Marvel Snap 157 of 165 (5 CASE WRONG for
    Kaptain, cms24, dms03). Diffs: diff_decks.txt, diff_table.txt (old tables from the old code). Diff readers lr_d1..4: 9 causes,
-   vv_d_1.md: 7 REAL (causes_sheet_2.md, round 2 of 2). Fixers round 2 (fix2_C<k>.md): C1 FIXED; C2 FIXED; C3 FIXED;
+   vv_d_1.md: 7 REAL (causes_sheet_2.md, round 2 of 2). Fixers round 2 (fix2_C<k>.md): C1 FIXED; C2 FIXED; C3 FIXED; C4 FIXED;
 9-10: not started.

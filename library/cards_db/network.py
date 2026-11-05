@@ -1401,6 +1401,10 @@ def aimed(c, game, nodes, broad):
                 and not (kv and kv in cards[b]['kws'])]  # a keyword's effect on cards with the same keyword is the keyword's rule, no combo
         # (Pyke's Lurk grants Lurkers +1|+0: every Lurker does that for every other; Kaptain 2 Nov 2026)  # help on a
         # card that is never played and does nothing (Deadweight) helps nothing; letting it be played does (Blue Candle)
+        if 'state is created' in (w or '') and act in ('stat_change', 'grow'):  # a boost for created units reaches only a card some card of the deck makes (Zombie Mister Fantastic -> Deadpool: no line)
+            made_ = {r for m_, r in c.execute("select card, card_ref from flat_do where origin='own' and card_ref is not null and act in ('create','summon','copy','choose_card','transform','random_one')") if m_ in nodes}
+            descr_ = [(k_, w_) for m_, k_, w_ in made_cards(c) if m_ in nodes]
+            hits = [b for b in hits if b in made_ or any(matches(c, game, cards[b], k_ if k_ != 'any' else 'unit', w_) for k_, w_ in descr_)]
         if 'in_circuit' in (w or ''):  # "other creatures within a circuit": the Conduit cards that close it are its ends, not in it
             hits = [b for b in hits if b not in circuit_ends(c, game)]
         if (a, act) in CACHE.get(('handrows', game), ()):  # a card in hand or a cost: Wraithlings summoned onto the board are never there
@@ -2009,14 +2013,15 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
             and coalesce(on_pick,'') not in ('self') and act in ('stat_change','give_keyword','heal','grow','copy_keywords','negate_damage')
             and card in ({marks})""", L):
         ident[a].append(';'.join(q_ for q_ in (w_ or '').split(';') if q_.split(' ')[:2] in (['card', 'is'], ['type', 'is'], ['type', 'in'],
-                        ['name_has', 'is'], ['keyword', 'is'], ['region', 'is'], ['card', 'not'])))
+                        ['name_has', 'is'], ['keyword', 'is'], ['region', 'is'], ['card', 'not']) or q_ == 'state is created'))  # created units: only a card the deck makes
     for a, w_ in c.execute(f"""select d.card, w.obj_with from flat_do d join flat_when w on w.ability=d.ability where d.on_pick='it' and
             d.origin='own' and d.act in ('stat_change','give_keyword','heal','grow') and w.obj_with like 'state is %' and d.card in ({marks})""", L):
         # "when an Ephemeral ally is summoned, give it +1|+1" (Soul Shepherd): it lands only on Ephemeral units ()
         ks = state_filter(c, game, w_)
         if ks: ident[a] = [w0 for w0 in ident[a] if w0] + [ks]
+    made_ok = {r for m_, r in c.execute("select card, card_ref from flat_do where origin='own' and card_ref is not null and act in ('create','summon','copy','choose_card','transform','random_one')") if m_ in nodes} | {b for m_, k_, w_ in made_cards(c) if m_ in nodes for b in cards if matches(c, game, cards[b], k_ if k_ != 'any' else 'unit', w_)}
     def lands_on(a, t):
-        return not ident.get(a) or any(not who or matches(c, game, cards[t], 'any', who) for who in ident[a])
+        return not ident.get(a) or any(not who or (matches(c, game, cards[t], 'any', who) and ('state is created' not in who or t in made_ok)) for who in ident[a])
     # help a card gives only through a keyword it has, to cards with the same keyword, is that keyword's rule (Lurk: every Lurker
     # grants Lurkers +1|+0), no combo (Kaptain 2 Nov 2026), unless the card's own text uses it (Xerxa'Reth: "If I have 8+ Power")
     kw_only = collections.defaultdict(set); other_help = set()
