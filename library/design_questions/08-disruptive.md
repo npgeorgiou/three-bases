@@ -14,7 +14,7 @@ Vanar Kindred (124 cards): disruption 1, suppress 17
   Avalanche: Deal 4 damage to everything on your starting side of the battlefield and Stun them.
   Bonechill Barrier: Summon three joined 0/2 Vespyr Walls. Minions that attack these walls are Stunned.
   Bonechill Barrier (token): Keywords: Wall. Minions next to this minion that attack it are Stunned.
-  works with: on_lifegain (e.g. Saurian Finality -> Sunriser); heal (e.g. Malicious Wisp -> Saurian Finality); attack_gain (e.g. Malicious Wisp -> Saurian Finality)
+  works with: on_lifegain (e.g. Saurian Finality -> Sunriser); heal (e.g. Malicious Wisp -> Saurian Finality); on_play (e.g. Malicious Wisp -> Saurian Finality)
 ## faeria
 Green (72 cards): disruption 0, suppress 12
   Emerald Yak: Gift - Summon a 1/1 Baby Yak with Taunt and Can't harvest faeria on a prairie you control.
@@ -25,7 +25,7 @@ Red (72 cards): disruption 0, suppress 3
   Devouring Plant: Taunt Production - Deal 2 damage to all adjacent enemy creatures.
   Grim Guard: Taunt Combat - Deal 2 damage to your opponent.
   Ogre Battler: Taunt
-  works with: on_damaged (e.g. Imperial Drain -> Unlikely Hero); damage_reduction (e.g. Imperial Drain -> Safeguard); death_trigger (e.g. Imperial Drain -> Celeste, Crystal Dragon)
+  works with: on_damaged (e.g. Imperial Drain -> Unlikely Hero); damage_reduction (e.g. Imperial Drain -> Ulani, Defender of Oversky); death_trigger (e.g. Imperial Drain -> Celeste, Crystal Dragon)
 ## inscryption
 Beast (122 cards): disruption 2, suppress 0
   Cuckoo: Keywords: Airborne, Brood Parasite.
@@ -38,6 +38,13 @@ Ranged (29 cards): disruption 0, suppress 4
   Rocket Artillery: Fires a pushing artillery and creates Smoke behind the shooter. Damage: 2. Power: Free....
   Smoke Mortar: Artillery shot that applies Smoke and pushes two adjacent tiles. Power: Free.
   Smoldering Shells: Damage and apply Fire to a tile while adding Smoke to adjacent tiles (vertical). Damage:...
+## marvel_snap
+(all cards) (872 cards): disruption 38, suppress 16
+  Alioth: On Reveal: Remove the text from all unrevealed enemy characters here.
+  Asgard Besieged: After turn 3, add The Destroyer to the winning side.
+  Baron Zemo: On Reveal: Recruit a card that costs the least from your opponent's deck to your side of...
+  Black Bolt: On Reveal: Discard the card that costs the least from your opponent's hand.
+  works with: card_presence_condition (e.g. Entropic Havok -> Thaddeus Ross); turn_end (e.g. Entropic Havok -> Thaddeus Ross); count_payoff (e.g. Entropic Havok -> Warlock)
 ## monster_train
 Stygian Guard (41 cards): disruption 0, suppress 3
   Frenzied Swarm: Apply Dazed 1 to enemy units. / Discard your hand.

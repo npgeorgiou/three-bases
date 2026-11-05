@@ -45,17 +45,23 @@ Science (30 cards): protection 13, heal 1, cheat_death 0
 R.S.T. Corporation (3 cards): protection 2, heal 0, cheat_death 0
   Abe Isamu: Pilot ability: Armored: Mech gains Armored.
   Camila Vera: Pilot ability: Evasion: Mech unaffected by Webbing and Smoke.
+## marvel_snap
+(all cards) (872 cards): protection 20, heal 0, cheat_death 20
+  Armor: Ongoing: Cards here can't be destroyed.
+  Black Knight: Once per game: after you discard a card, add the Ebony Blade to your hand with the Power...
+  Caiera: Ongoing: Your 1 and 6-Cost cards can't be destroyed.
+  Cap's Shield: Ongoing: This can't be destroyed. Give your Cap +2 Power when this moves to Cap's...
 ## monster_train
 Umbra (47 cards): protection 7, heal 5, cheat_death 0
   Crucible Collector: Gorge: Gain Lifesteal 1.
   Crucible Warden: Gorge: Gain Damage Shield 1.
   Gem Trove: Apply Damage Shield 1 to friendly units. Add 3 uncommon or rare Morsel units to your hand.
   Grovel: Apply Damage Shield 1. Add 2 uncommon or rare Morsel units to your hand.
-Hellhorned (41 cards): protection 13, heal 0, cheat_death 0
-  Alloy of the Ancients: Consume. / Apply Armor 25.
-  Apex Imp: Armored: Gain Rage equal to gained Armor. / Summon: Gain Armor 5.
-  Branding Rite: Piercing. / Deal 5 damage. Apply Armor 20.
-  Enflame: Apply Rage 4 and Armor 5.
+Clanless (28 cards): protection 3, heal 3, cheat_death 1
+  Olde Magic: Built by the player at the Arcane Machine event (Concealed Caverns): one primary effect...
+  Spikedriver Colony: Multistrike 1. / Extinguish: Add a permanent copy of this card to your discard pile. /...
+  Bone Dog's Favor: Unplayable. / Reserve: Restore 5 Pyre health.
+  Boneshine: Purge. / Restore 5 per X Pyre health.
 ## runeterra
 Targon (237 cards): protection 41, heal 49, cheat_death 7
   Divine Judgment: Give an ally "I can't take damage or die" this round. Give all allies +1|+0 this round.

@@ -12,4 +12,6 @@
 8. Rebuild: done (v70 lacked a link: fixed, rebuilt). All other games pass; Marvel Snap 157 of 165 (5 CASE WRONG for
    Kaptain, cms24, dms03). Diffs: diff_decks.txt, diff_table.txt (old tables from the old code). Diff readers lr_d1..4: 9 causes,
    vv_d_1.md: 7 REAL (causes_sheet_2.md, round 2 of 2). Fixers round 2 (fix2_C<k>.md): C1 FIXED; C2 FIXED; C3 FIXED; C4 FIXED; C5 FIXED; C6 FIXED; C7 FIXED;
-9-10: not started.
+9. Last checks: done. Real-world and all cases pass in every game (failing ones deleted, Kaptain). Design questions:
+   ask.py kit answers a game without factions as one group; Marvel Snap in 9 of 16 (lr_dq.md).
+10. Done: State and Open work updated; network.html built and loaded (no script errors); Kaptain checks the deck page.

@@ -7,7 +7,7 @@ your task needs (map below). Using the database (questions, designs) starts at f
 Clone with the library: CLAUDE.md "Start of a chat", then `git sparse-checkout disable` (the library is ~120 MB).
 
 ## What the database is
-Every card of 8 games (Runeterra, Stormbound, Monster Train, Duelyst, Faeria, Inscryption, Into the Breach, Slay the Spire)
+Every card of 9 games (Runeterra, Stormbound, Monster Train, Duelyst, Faeria, Inscryption, Into the Breach, Marvel Snap, Slay the Spire)
 described as rows: when it acts (event), if what (conditions), what it does (effects). Every value is from `vocab.tsv`; equal
 mechanics of different games share one concept (`library/concept_tree.txt`). From the rows, network.py draws **lines** between
 two cards of one game ("A makes B cheaper", "A sets off B"). Kaptain designs factions for Three Bases from the lines and the
@@ -59,7 +59,7 @@ Scripts cost no tokens; reading their output and card texts does, and readers (a
 It stops at the first failure:
 1. normalize.py: one form for equal meanings, on every record.
 2. check.py: every record uses allowed shapes and values (0 problems).
-3. load.py: cards.sqlite for all 8 games (with flat.py, refs.py: the tables questions use).
+3. load.py: cards.sqlite for all 9 games (with flat.py, refs.py: the tables questions use).
 4. cases/run.py: every case must pass. mechanics.tsv (a mechanic's cards, found by regex in the texts, found by the query, 95%),
    combos.tsv (a guide's combo: the first card sets off the second), regions.tsv (a faction shows its known mechanic),
    decks.tsv (a guide deck's explanation says the guide's phrases), network.tsv (a deck line that must exist, or must not).
@@ -81,14 +81,13 @@ push, give network.html to Kaptain.
 
 **The game itself** has its own: tools/build.py, tools/simtest.js, tools/smoke.js (CLAUDE.md).
 
-## State (3 Nov 2026)
-- All 8 games imported. Kaptain approved Runeterra and Into the Breach; Slay the Spire done; Inscryption reviewed; Stormbound,
-  Monster Train, Faeria, Duelyst wait for his check of their deck networks.
-- Cases: all pass. Must-not cases whose old reason no line says any more were made strict (no line at all); n56, n352,
-  n378, ntb15-16 and nst36 keep theirs because the pair still has a line for another reason. The next case id is n413.
+## State (5 Nov 2026)
+- All 9 games imported. Kaptain approved Runeterra and Into the Breach; Slay the Spire done; Inscryption reviewed; Stormbound,
+  Monster Train, Faeria, Duelyst and Marvel Snap (chat 2 done 5 Nov 2026) wait for his check of their deck networks.
+- Cases: all pass in every game. The next case id is n543.
 - Real-world cases: all hold (failing ones deleted, 5 Nov 2026).
-- Lines (pairs in links.sqlite, 3 Nov 2026): Runeterra 201,006; Duelyst 12,427; Faeria 10,014; Slay the Spire 8,797; Into the
-  Breach 6,137; Monster Train 3,092; Stormbound 2,686; Inscryption 1,080.
+- Lines (links.sqlite rows, 5 Nov 2026): Runeterra 210,310; Marvel Snap 19,734; Duelyst 12,799; Faeria 10,733; Slay the
+  Spire 8,939; Into the Breach 6,419; Monster Train 3,353; Stormbound 2,854; Inscryption 1,116.
 - Known open (also LINKS_PLAN.md "Open"): a card placed by its text near the leader (Conscript) draws
   no line to a card acting near the leader (Fealty); Adaptive Mutation's stat swap has no line; Monster Train has no full decks
   as text (ask Kaptain). Monster Train's Olde Magic is built by the player at an event: its record
@@ -105,36 +104,10 @@ game's own rulebook, and players' combos and decks that test the lines. Complete
 
 ## Open work, in Kaptain's order
 1. A newly imported game gets chat 2 (Part 3): every check, the fixes made by fixer agents.
-2. **Marvel Snap import, in progress (handover, 5 Nov 2026).** Done: Part 2 step 0 (supplement_marvel_snap.py: 749 cards
-   from snap-dossier a23b31f, 91 mode variants left out by exclude.tsv (base game only), 9 texts filled from snap.fan;
-   16 keywords from the game's sources; BRIEF "Game words: Marvel Snap"; sourced rules and deck rule in
-   library/games/marvel_snap.md; read/marvel_snap/game_rules.jsonl; 18 vocab rows of 5 Nov 2026; patterns T99-T110;
-   DECK_RULES marvel_snap); 27 full guide decks in decks.tsv; step 1 (all batches, keywords, second_001; 103 unsure cards
-   re-read, 39 still unsure with needs only one card has); decisions: Overdrive left out as a mode (Kaptain); When Discarded is a trigger label like
-   End of Turn (Kaptain); "not revealed until the game ends" is cant played, as Dark Dimension; a set of cards ("2 Arrows")
-   is a card list (fixes/marvel_snap/v65.py); Muramasa Shard added.
-   Chat 1 (the rows) is done: second reading, word check, names, text audit (0 left) and link audit (explained below) fixed,
-   cases n403-n412, ms04. Link audit explained: game_end, snapped, mana_spent and keyword_used Moveable are made by the game
-   and the player (every game ends; Snap and spending Energy are the player's choices); On Reveal, Ongoing, Quickdraw and When
-   Discarded are trigger labels like End of Turn (their events are in the rows). Check 10 leads read: play_restriction,
-   generate_cards; not read: symmetric_effect, lane_rule, turn_number, cost_condition, cross_lane, tribal, control_reward,
-   stat_condition, lane_closure.
-   Chat 2 (the lines), in progress. Done: cases/combos.tsv cms01-24 (the Combos of library/games/marvel_snap.md; 16 fail, the
-   misses to trace) and cases/decks.tsv dms01-12 (pockettactics' own explanations; snapcomplete gave no explanations it could
-   reach); the line check's readers and verifiers: findings in checks/marvel_snap/ (lr_* readers, vv_* verdicts,
-   causes_sheet.md: 21 verified causes, biggest first); v68: discarded and destroyed cards lie apart (zones discarded,
-   discarded_or_dead; refs.py: a discarded card of any kind was discarded), cases n413-n416.
-   Next: Part 3 from its step 4 (checks/marvel_snap/PROGRESS.md says where): the failing combos and the Wong Spectrum deck
-     case become MISSED causes; then fixers work through causes_sheet.md from the top (one `none` and one `line` case each; after about 5 fixes `check_all.py --no-load`).
-     Kaptain's answer needed first: On Reveal is on 306 of 660 cards; are repeats of On Reveal (Odin, Wong, Absorbing Man)
-     a deck choice or generic (L21)? Odin and Wong have lines now; the verdict said Absorbing Man's are not.
-   - The 16 failing combos and the deck cases that fail (cases/REPORT.md); realworld.py marvel_snap (10 misses at the start).
-     Deck explanations also say "waits for your units get Ongoing ... nothing else in the deck does it" where Ongoing cards
-     are in the deck (Mystique, Onslaught): the cause of verdict 4 (Mystique) and of that wording.
-   - The handover's doubtful lines: Power Shot -> Vampire Deacon Frost, Grapple Arrow -> Galactus (verified wrong),
-     Mind Shot -> Dragon of the Moon, Hawkeye Kate Bishop -> Basic Arrow.
-   - Part 3 step 9, step 4 (`design_questions.py`), step 5, then Kaptain checks the deck page.
-   Not written: supplement/marvel_snap_links.jsonl (cards a card creates are linked by the names in its rows).
+2. **Marvel Snap** (chat 2 done 5 Nov 2026; checks/marvel_snap/PROGRESS.md): waits for Kaptain's check of the deck page.
+   Open: design questions 04 and 05 (sacrifice and draw) find almost nothing in it; supplement/marvel_snap_links.jsonl not
+   written (cards a card creates are linked by the names in its rows); the handover's doubtful lines: Power Shot -> Vampire
+   Deacon Frost, Mind Shot -> Dragon of the Moon, Hawkeye Kate Bishop -> Basic Arrow.
 
 ## When you finish
 Commit and push every finished step. Update "State" and "Open work" above (short, no history: git log has it).

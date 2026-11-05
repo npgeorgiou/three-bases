@@ -18,7 +18,7 @@ calls in all; count them. At call 25 stop changing things and finish: undo a hal
 4. Check with `python3 pair.py <game> "A" "B" ...` (all the examples in one call): the wrong examples must change, the right
    ones must stay. pair.py shows a network.py change at once; a change to records, refs.py or flat.py shows only after the
    main chat's rebuild, so check those with one short python over the changed records instead, and say so in the report.
-5. Add cases to cases/network.tsv (append; the next free id is one above the last nNNN): one `none` (or `line` for a missed
+5. Add cases to cases/network.tsv (a `line` case's reason column holds words of the line exactly as pair.py prints it) (append; the next free id is one above the last nNNN): one `none` (or `line` for a missed
    cause) per wrong example you checked, one `line` per right example, game, deck as "A, B", source "Claude <date>, line
    check: <why in a few words>".
 Before changing a rule, Grep cases/network.tsv for its reason words ("more cards to play"): a case of Kaptain's ("Kaptain" in

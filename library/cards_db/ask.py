@@ -167,9 +167,11 @@ def main():
         got = {x: set(ids_of(games, 'select card from flat_concept where under(concept, ?)', (x,))) for x in args}
         for g in games:
             per = {}
+            has_factions = c.execute("select 1 from card where game=? and is_keyword=0 and coalesce(regions,'')!='' limit 1", (g,)).fetchone()
             for i, regs in c.execute("select id, regions from card where game=? and is_keyword=0 and is_stub=0 and coalesce(category,'') not in "
                                      "('game_rule','boss','monster','event','modifier') and not (category='ability' and id in (select made from flat_made))", (g,)):
                 k = sum(i in got[x] for x in args)  # an Into the Breach weapon is a card; a skill a card makes is not
+                if not has_factions: regs = '(all cards)'  # a game without factions (Marvel Snap) is one group
                 for r in [x for x in (regs or '').split(';') if x and not x.lower().startswith(NOT_FACTION) and x != 'Runeterra']:
                     per.setdefault(r, [[0] * len(args), 0, []])
                     per[r][1] += 1
@@ -190,6 +192,7 @@ def main():
         got = set(ids_of(games, 'select card from flat_concept where under(concept, ?)', (args[0],)))
         for g in games:
             per = {}
+            has_factions = c.execute("select 1 from card where game=? and is_keyword=0 and coalesce(regions,'')!='' limit 1", (g,)).fetchone()
             for i, regs in c.execute("select id, regions from card where game=? and is_keyword=0 and is_stub=0 and coalesce(category,'') not in "
                                      f"('game_rule','ability'{'' if WITH_ENEMIES else ',' + ','.join(repr(x) for x in ENEMY)})", (g,)):
                 for r in (regs or '').split(';') or ['']:

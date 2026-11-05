@@ -10,6 +10,8 @@ faeria: 2 cards:
   Feed the Forest: Destroy a friendly creature to gain faeria equal to its Life and draw a card.
 inscryption: 1 cards:
   Master Bleene: Keywords: True Scholar.
+marvel_snap: 1 cards:
+  Nico Minoru Spell 02: On Reveal: After you play your next card, destroy it to draw two cards.
 monster_train: 1 cards:
   Imp-portant Work: Sacrifice Imp. / Gain 1 Ember. Draw 1.
 runeterra: 6 cards:
@@ -39,12 +41,13 @@ into_the_breach: 3 cards:
   Force Swap: Force a nearby unit to swap places with any other unit. Damage: 0. Power: 1 Reactor...
   Grid Charger: Killing an enemy will charge the Power Grid 1 point. Single-use. Damage: 1. Power: 1...
   Heat Engines: Standing on Fire removes Fire and gives the mech "Boost". Power: Free.
-monster_train: 9 cards:
+monster_train: 10 cards:
   Crucible Collector: Gorge: Gain Lifesteal 1.
   Glimmer: Restore 2 health to all friendly units and deal 2 damage to all enemy units.
   Glugsider: Extract 4. / Inspire: Restore 5 health. / Revenge: Apply Reap 5 to the attacking unit.
   Immortal Trade: Apply Lifesteal 3 and Emberdrain 2 to a friendly unit.
   Morsel Excavator: Eaten: Eater gains +3 Attack and Lifesteal 1.
+  Olde Magic: Built by the player at the Arcane Machine event (Concealed Caverns): one primary effect...
   Penumbra: Architect path: Upgrade I: +5 Attack Summon: +2 Capacity on this floor. Upgrade II: +30...
   Restoration Detonation: Restore 10 health to a friendly unit. Deal damage to the front enemy unit equal to 5x...
   Shadoweater: Gorge: Restore 10 health. Deal 10 damage to enemy units.

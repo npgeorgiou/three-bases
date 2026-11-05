@@ -14,7 +14,7 @@ Magmar Aspects (115 cards): sacrifice 3, revive 11
   Cascading Rebirth (follow-up): Destroy a friendly minion to summon a random Magmar minion that costs 1 more.
   Dreadnought: Keywords: Rebirth. Egg minions you summon gain +2/+2.
   Erratic Raptyr: Keywords: Rebirth. After this minion attacks or counterattacks, turn it into an Egg.
-  works with: revive (e.g. Arid Unmaking -> The Releaser); death_trigger (e.g. Simulacra Obelysk -> Khanuum-ka); leave_trigger (e.g. Arid Unmaking -> The Releaser)
+  works with: revive (e.g. Malice (Bloodbound Spell) -> The Releaser); death_trigger (e.g. Fireblaze Obelysk -> Khanuum-ka); leave_trigger (e.g. Malice (Bloodbound Spell) -> The Releaser)
 ## faeria
 Yellow (72 cards): sacrifice 6, revive 0
   Death Walker: Deathtouch You must sacrifice another creature to summon this creature.
@@ -24,19 +24,26 @@ Yellow (72 cards): sacrifice 6, revive 0
 Pandora (40 cards): sacrifice 2, revive 0
   Ancient Gargoyle: Charge 3, Flying Gift - Destroy all Treasure Maps in your deck and gain +1/+1 for each...
   Void Guardian: Gift - Destroy your deck.
-  works with: death_trigger (e.g. Rakoan Cannoneer -> Rakoan Shield Mates); cheat_death (e.g. Voice of Hunger -> Aryana, Soul of Gagana); random_target (e.g. Voice of Hunger -> Soulbound Sagami)
+  works with: death_trigger (e.g. Rakoan Cannoneer -> Rakoan Shield Mates); cheat_death (e.g. Rakoan Cannoneer -> Annoying Gnat); friendly_fire (e.g. Rakoan Cannoneer -> Plague Bearer)
 ## inscryption
 Undead (24 cards): sacrifice 2, revive 1
   Necromancer: Keywords: Double Death.
   Pharaoh's Pets: Keywords: Worthy Sacrifice, Many Lives.
 Magick (25 cards): sacrifice 1, revive 0
   Master Bleene: Keywords: True Scholar.
-  works with: on_sacrifice (e.g. Master Bleene -> Cat); cost_reduction (e.g. Master Bleene -> Pharaoh's Pets); cheat_death (e.g. Master Bleene -> Cat)
+  works with: on_sacrifice (e.g. Master Bleene -> Red Hart); cost_reduction (e.g. Master Bleene -> M3atB0t); cheat_death (e.g. Master Bleene -> Cat)
 ## into_the_breach
 Ranged (29 cards): sacrifice 2, revive 0
   Arachnoid Injector: Damage target, creating a friendly robot spider on kill. Damage: 1. Power: Free....
   Arachnoid Mech: Health 3, move 3. Weapon: Arachnoid Injector: Damage target, creating a friendly robot...
-  works with: summon (e.g. Arachnoid Injector -> Marked tile); on_kill (e.g. Arachnoid Injector -> Cascading Resonator); death_trigger (e.g. Arachnoid Injector -> Ice Tile)
+  works with: summon (e.g. Arachnoid Mech -> Marked tile); on_kill (e.g. Arachnoid Injector -> Cascading Resonator); death_trigger (e.g. Arachnoid Mech -> Marked tile)
+## marvel_snap
+(all cards) (872 cards): sacrifice 25, revive 16
+  Valley of the Baby Hand: Destroy your next play here. Snap to revive a card here.
+  Adamantium Infusion: On Reveal: Banish this to revive your highest-Power destroyed card here with its Power...
+  Altar of Death: After you play a card here, destroy it to get +2 Energy next turn.
+  Annihilus: On Reveal: Your cards with Power below 0 switch sides. Destroy those that can't.
+  works with: death_trigger (e.g. Annihilus -> Nova); other_death_trigger (e.g. Zombie Captain Marvel -> Fantomex); revive (e.g. Annihilus -> Archangel Horseman of Death)
 ## monster_train
 Umbra (47 cards): sacrifice 12, revive 0
   Antumbra Morsel: Eaten: Eater gains +6 Health.
@@ -67,10 +74,10 @@ Ironclad (34 cards): sacrifice 1, revive 1
   Temple of Space: When played with a friendly copy on the board, teleport 2/3/4/6/8 surrounding units from...
 Shadowfen (34 cards): sacrifice 1, revive 0
   Toxic Sacrifice: Destroy a target friendly unit. Deal 2/3/4/5/6 damage to surrounding units and poison them
-  works with: death_trigger (e.g. Toxic Sacrifice -> Green Prototypes); revive (e.g. Pricey Freedom -> Siro the Resurrector); cheat_death (e.g. Pricey Freedom -> Project PH03-NIX)
+  works with: death_trigger (e.g. Yowling Weavers -> Dreadful Keepers); revive (e.g. Temple of Space -> Project PH03-NIX); cheat_death (e.g. Temple of Space -> Project PH03-NIX)
 ## sts1
 Watcher (90 cards): sacrifice 2, revive 0
   Blasphemy: Keywords: Exhaust. Enter Divinity. Die next turn.
   Blasphemy+: Keywords: Retain, Exhaust. Enter Divinity. Die next turn.
-  works with: stances (e.g. Blasphemy -> Ambrosia); resource_gain (e.g. Blasphemy -> Bloody Idol); retain (e.g. Blasphemy+ -> Sands of Time)
+  works with: stances (e.g. Blasphemy -> Ambrosia); resource_gain (e.g. Blasphemy+ -> Bloody Idol); retain (e.g. Blasphemy+ -> Perseverance)
 ```

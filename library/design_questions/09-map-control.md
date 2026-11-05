@@ -4,17 +4,17 @@
 
 ```
 ## duelyst
+Songhai Empire (117 cards): zone_control 2, movement 16
+  Blink: Keywords: Bloodbound Spell. Teleport a friendly minion up to 2 spaces.
+  Dusk Rigger: Backstab: (2). Whenever this backstabs, put a MECHAZ0R Progression into your action bar.
+  Flicker: Teleport your General to a space behind an enemy.
+  Juxtaposition: Switch positions between ANY two minions.
 Vetruvian Imperium (114 cards): zone_control 7, movement 10
   Arid Unmaking: Destroy a friendly minion to turn its space into Exhuming Sand.
   Astral Phasing: Give a friendly minion +5 Health and Flying.
   Cataclysmic Fault: Turn the entire center column into Exhuming Sand.
   Circle of Fabrication: Summon one of each Obelysk from your deck on random spaces.
-Songhai Empire (117 cards): zone_control 2, movement 14
-  Blink: Keywords: Bloodbound Spell. Teleport a friendly minion up to 2 spaces.
-  Dusk Rigger: Backstab: (2). Whenever this backstabs, put a MECHAZ0R Progression into your action bar.
-  Flicker: Teleport your General to a space behind an enemy.
-  Juxtaposition: Switch positions between ANY two minions.
-  works with: terrain (e.g. Sandswirl Reader -> Nocturne); flanking (e.g. Peacekeeper -> Scroll Bandit); lifesteal (e.g. Endure the Beastlands -> Munch)
+  works with: activated (e.g. Oakenheart -> MECHAZ0R Progression); quests (e.g. Oakenheart -> MECHAZ0R Progression); terrain (e.g. Sunrise Cleric -> Nocturne)
 ## faeria
 Pandora (40 cards): zone_control 7, movement 12
   Jeweled Magpie: Flying, Haste Whenever this attacks a god, add a random Treasure to your hand.
@@ -26,7 +26,7 @@ Yellow (72 cards): zone_control 11, movement 42
   Demonic Salmon: Haste, Flying, Charge 2 Can't harvest faeria. Whenever this attacks a god, it gains +1/+1.
   Flash Salmon: Divine, Flying, Haste, Charge 2 Can't harvest faeria. At the end of your turn, destroy...
   Khalim's Skyguard: Flying Can be summoned adjacent to friendly creatures.
-  works with: high_cost (e.g. Key of the Giants -> Gemshell Tortoise); in_hand_buff (e.g. Key of the Giants -> Gemshell Tortoise); cost_reduction (e.g. Key of the Giants -> Gemshell Tortoise)
+  works with: high_cost (e.g. Time of Legends -> Gemshell Tortoise); in_hand_buff (e.g. Time of Legends -> Gemshell Tortoise); cost_reduction (e.g. Time of Legends -> Gemshell Tortoise)
 ## inscryption
 Beast (122 cards): zone_control 0, movement 18
   Bloodhound: Keywords: Guardian.
@@ -49,15 +49,22 @@ Prime (30 cards): zone_control 0, movement 15
   Hydraulic Legs: Leap to a tile, damaging self and adjacent tiles (with push). Damage: 1 (1 to self)....
   Hydraulic Lifter: Throw an adjacent unit and damage it. (Starts with 2-tile range.) Damage: 1. Power:...
   works with: friendly_fire (e.g. Grid Repulse -> Fire); aoe_damage (e.g. Grid Repulse -> Fire); ping (e.g. Grid Repulse -> Fire)
+## marvel_snap
+(all cards) (872 cards): zone_control 5, movement 64
+  Strange Academy: After turn 5, move all cards here to other random locations.
+  Aero: On Reveal: The last card your opponent played moves to this location.
+  Agamotto: Game Start: Shuffle 4 Ancient Arcana into your deck.
+  Angel: When one of your cards is destroyed, this flies out of your hand or deck to replace it.
+  works with: positional (e.g. Strange Academy -> Kingpin); lanes (e.g. Strange Academy -> Kingpin); combo_sequence (e.g. Doctor Doom 2099 -> Josie's Bar)
 ## monster_train
+Clanless (28 cards): zone_control 0, movement 3
+  Olde Magic: Built by the player at the Arcane Machine event (Concealed Caverns): one primary effect...
+  Steel Pulleyclaw: Consume. / Ascend an enemy unit to the Pyre room. Apply Dazed 3.
+  Trap Chute: Consume. / Descend a unit to the bottom floor. Apply Dazed 2.
 Hellhorned (41 cards): zone_control 0, movement 3
   Hidden Passage: Ascend a unit.
   March of Shields: Move a unit to the front and apply Armor 10.
   Tiresome Climb: Ascend a unit and apply Dazed 2.
-Awoken (41 cards): zone_control 0, movement 3
-  Adaptive Mutation: Consume. / Restore a friendly unit to full health and then swap Attack and Health.
-  Restoring Retreat: Descend a unit and restore 10 health.
-  Vine Grasp: Deal 3 damage. Move that unit to the front.
 ## runeterra
 Ionia (236 cards): zone_control 0, movement 14
   Ahri: Keywords: Quick Attack. Attack: The first time I attack strike, swap me with the ally to...

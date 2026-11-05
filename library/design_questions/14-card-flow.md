@@ -35,6 +35,12 @@ Undead (24 cards): card_advantage 2, cost_reduction 1
   Dead Hand: Keywords: Handy.
   Pharaoh's Pets: Keywords: Worthy Sacrifice, Many Lives.
   Tomb Robber: Keywords: Disentomb.
+## marvel_snap
+(all cards) (872 cards): card_advantage 99, cost_reduction 54
+  Iron Patriot: On Reveal: Add a random 4-Cost or more card to your hand. If you're winning here after...
+  Merlin of Avalon: On Reveal: Add The Grand Design to your hand.
+  Thanos Fractured Frontier: Game Start: Your cards have "Quickdraw: Thanos loads an Infinity Shot." On Reveal: Fire...
+  Time Stone: On Reveal: Draw a card. Give Thanos -1 Cost.
 ## monster_train
 Awoken (41 cards): card_advantage 14, cost_reduction 2
   Awoken's Rail Spike: Consume. / Draw X and apply -1 Ember to those cards.

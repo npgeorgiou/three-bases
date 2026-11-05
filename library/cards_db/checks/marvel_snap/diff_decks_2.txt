@@ -1,0 +1,18 @@
+duelyst: lines 459 -> 460, pairs 459 -> 460 (0 gone, 1 new)
+faeria: lines 703 -> 703, pairs 703 -> 703 (0 gone, 0 new)
+inscryption: lines 131 -> 131, pairs 131 -> 131 (0 gone, 0 new)
+into_the_breach: lines 463 -> 463, pairs 463 -> 463 (0 gone, 0 new)
+marvel_snap: lines 454 -> 452, pairs 454 -> 452 (2 gone, 0 new)
+monster_train: lines 94 -> 94, pairs 94 -> 94 (0 gone, 0 new)
+runeterra: lines 2154 -> 2154, pairs 2154 -> 2154 (0 gone, 0 new)
+stormbound: lines 278 -> 278, pairs 278 -> 278 (0 gone, 0 new)
+sts1: lines 401 -> 401, pairs 401 -> 401 (0 gone, 0 new)
+
+GONE
+    1 duelyst | keyword | can give it Forcefield; also can give it Frenzy | Grandmaster Kraigon -> Starhorn the Seeker (Starhorn Combined Growth)
+    1 marvel_snap | stronger | more power | Victoria Hand -> Iron Patriot (Hand Size Heroes)
+    1 marvel_snap | stronger | can give it more power | Ironheart -> Black Panther (Wakanda Forever)
+
+NEW
+    1 duelyst | keyword | can give it Forcefield; also can give it Frenzy; also can give it Grow | Grandmaster Kraigon -> Starhorn the Seeker (Starhorn Combined Growth)
+    1 duelyst | type | gives keyword: gives it Grow; also makes your units get Grow; also triggers: more health or protection: survives damage | Godhammer -> Oropsisaur (Starhorn Combined Growth)

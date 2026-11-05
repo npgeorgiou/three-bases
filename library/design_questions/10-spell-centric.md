@@ -13,7 +13,7 @@ Vetruvian Imperium (114 cards): spells_played_condition 0, spell_power 3
   Grandmaster Nosh-Rak: Keywords: Blast, Flying. The enemy General takes double damage.
   Psionic Strike: Keywords: Bloodbound Spell. Your General deals double damage to minions this turn.
   Scioness Sajj: Bloodbound Spell: Psionic Strike.
-  works with: on_spell (e.g. Ghost Seraphim -> Owlbeast Sage); on_lifegain (e.g. Firestorm Mantra -> Sunriser); tribal (e.g. Ghost Seraphim -> Nightshroud)
+  works with: on_spell (e.g. Ghost Seraphim -> Owlbeast Sage); on_lifegain (e.g. Firestorm Mantra -> Sunriser); direct_damage (e.g. Ghost Seraphim -> Nightshroud)
 ## faeria
 Blue (72 cards): spells_played_condition 1, spell_power 0
   Dark Stalker: If you've played an event this turn, this costs 2 faeria less.
@@ -25,6 +25,12 @@ Science (30 cards): spells_played_condition 0, spell_power 7
   Shield Array: Apply a Shield on nearby tiles. Single-use. Power: Free. Upgrades: +1 Size (1 Reactor...
 Cyborg (6 cards): spells_played_condition 0, spell_power 1
   Explosive Goo: Artillery attack that damages a tile and pushes adjacent tiles away. Damage: 1. Power:...
+## marvel_snap
+(all cards) (872 cards): spells_played_condition 0, spell_power 6
+  Askani'son: Activate: Create a 1-Cost card at another location. Increase the Cost each time you're...
+  Mephisto: If you win this game, double your winnings.
+  Onslaught's Citadel: Ongoing effects here apply an additional time.
+  Scorpion Brand New Day: Ongoing: Double the Power reductions on all enemy cards.
 ## monster_train
 Stygian Guard (41 cards): spells_played_condition 0, spell_power 6
   Crypt Builder: Offering. Attuned. / Deal 60 damage to the front enemy unit and push it to the back.
@@ -45,7 +51,7 @@ Ionia (236 cards): spells_played_condition 14, spell_power 0
   Deep Meditation: Keywords: Flow. Flow: I cost 2 less. Draw 2 other spells.
   Dragoncaller: Keywords: Attune, Flow. Round Start: Flow: Summon The Empyrean and grant it Ephemeral.
   Eye of the Dragon: Keywords: Attune, Flow. Round Start: Flow: Summon a Dragonling.
-  works with: recycle (e.g. The Spirit of Wuju -> Janna); on_discard (e.g. Lee Sin (level 2) -> Rumble); turn_start (e.g. The Spirit of Wuju -> Janna)
+  works with: recycle (e.g. Deep Meditation -> Janna); on_discard (e.g. Lee Sin (level 2) -> Rumble); turn_start (e.g. Deep Meditation -> Janna)
 ## sts1
 Defect (89 cards): spells_played_condition 1, spell_power 18
   Beam Cell: Deal 3 damage. Apply 1 Vulnerable.
@@ -57,5 +63,5 @@ Watcher (90 cards): spells_played_condition 0, spell_power 23
   Blasphemy+: Keywords: Retain, Exhaust. Enter Divinity. Die next turn.
   Crescendo: Keywords: Retain, Exhaust. Enter Wrath.
   Crush Joints: Deal 8 damage. If the last card played this combat was a Skill, apply 1 Vulnerable.
-  works with: permanent_growth (e.g. Mind Bloom -> Du-Vu Doll); passive (e.g. Velvet Choker -> Void); attack_gain (e.g. Mind Bloom -> Du-Vu Doll)
+  works with: permanent_growth (e.g. Mind Bloom -> Du-Vu Doll); passive (e.g. Art of War -> Void); attack_gain (e.g. Mind Bloom -> Du-Vu Doll)
 ```
