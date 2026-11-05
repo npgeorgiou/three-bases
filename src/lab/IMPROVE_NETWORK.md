@@ -41,6 +41,11 @@ before coding (CLAUDE.md), and keep every speed or AI check to about a minute.
   layers 256/128 79.4, 64/32 79.7, each card its own 8 weights as well 76.3, no hand at all 80.2, hand as totals 80.3.
   All within the check's noise (about 60 unseen games): this check cannot tell shapes apart, and the hand slots give
   it nothing today. Play strength must be tested on a trained network from the lab.
+- Kaptain's trained network "Tabula rasa 52%" (369,389 steps), 116 of its positions in games against the Benchmark
+  (depth 1), each move compared with the Benchmark at depth 3 (the closest to a referee we have): the network plays
+  the same move 29% of the time, the Benchmark at depth 1 67%. Where depth 3 acts, the network passes 24 of 94 times
+  (depth 1: never); where depth 3 passes, the network acts 10 of 22 times. Where depth 3 deploys (47), the network
+  picks the same card 23 times but mostly another place. Too few games (33) to measure its win rate here.
 - The Benchmark at depth 1 also scores each move's position once, like the network: the comparison is fair.
 
 ## Why it may be stuck (suggestion, not proven)
