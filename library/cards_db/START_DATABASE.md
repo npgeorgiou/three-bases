@@ -116,6 +116,9 @@ game's own rulebook, and players' combos and decks that test the lines. Complete
    - 2.9 deck networks: read 10 of the 27 decks card by card into deck_read_marvel_snap.md; cases/decks.tsv and network.tsv
      have no Marvel Snap rows yet; combos in library/games/marvel_snap.md "Combos" go to cases/combos.tsv.
    - Part 3 line check: `links_audit.py marvel_snap` and `deck_audit.py marvel_snap`, all output read (pieces, agents).
+   - Step 4: the 20-card check (deck_read_marvel_snap.md "Check of 20 cards"), `realworld.py marvel_snap` (every miss read),
+     `design_questions.py` (every answer for Marvel Snap read); then step 5 "Done when" item by item; then Kaptain checks
+     the deck page (network_page.py).
    Not written: supplement/marvel_snap_links.jsonl (cards a card creates are linked by the names in its rows).
 
 ## When you finish
