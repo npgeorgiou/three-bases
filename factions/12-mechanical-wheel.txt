@@ -1,0 +1,37 @@
+==================================================================
+12. THE MECHANICAL WHEEL: designing 20 factions together (AGREED with Kaptain, 5 Nov 2026)
+==================================================================
+Why: designing factions one by one from a theme lost what makes each faction unique and how its mechanics connect.
+Mechanics, identity and Kaptain's five questions come first for all 20 factions at once; the theme comes last, per
+faction, as inspiration. The wheel is made by calculation, research and intuition; it starts empty (the seven factions
+in the game are not placed on it; their themes may be reused later).
+
+Method (Claude's proposal, agreed in outline):
+1. A pool of mechanics from the library, before any faction: each written "I do X -> I gain from X" on this game's
+   basic things, each able to carry 30+ cards on this board.
+2. The 20 factions as nodes on a circle. Each mechanic has one owner (its monopoly); up to its two neighbours may use it
+   on a few cards; the far side of the wheel never has it (its blind spots).
+3. The factions are spread along the axes below, so neighbours differ and opposites differ most.
+4. A table: the 20 factions by their answers to the five questions; every faction differs from every other in each.
+5. A graph check: mechanics are nodes, a line where one makes what another needs (library fed/feeds); each faction's
+   mechanics form one connected group, with lines to each neighbour.
+6. The wheel lives in one table file with a check script; the picture is drawn from the table.
+7. Then each faction is designed in its own chat (factions/START_DESIGN.md), its theme chosen to fit.
+
+The twelve axes (measured on 39 real factions of the 8 library games, each card's share per concept centred within its
+game; the first six explain about half of how real factions differ, all twelve about three quarters):
+1.  Own units: spends them (deaths, sacrifice, trading a unit for value) or keeps them (protect, heal, grow).
+2.  Enemy contact: locks and weakens enemies (can't attack, stuck, weakened, pushed) or ignores and outmoves them.
+3.  Where the damage comes from: units' own strikes and growth, or spells and fixed damage.
+4.  Supply and cards: income, carry-over, draws, cheaper cards; or units on the board now.
+5.  Formation: units that gain from the allies beside or behind them, or units that work alone.
+6.  How many targets: many at once and counting the board, or one precise target.
+7.  Unit size: few big costly units, or many cheap ones.
+8.  Moving: moves its own units and pushes enemies around, or stays put.
+9.  Repair or prevent: restores lost shields and defence after a hit, or stops the hit beforehand.
+10. Hand and discard pile: picks, copies and brings back its own cards, or plays what it draws.
+11. What its cards react to: being placed, attacking, being hit, or dying.
+12. Rows and areas: works from the front row or the back rows; hits one cell or a whole row or column (the row part is
+    this board's own, not measured).
+Not axes: timing (players act now; round end is built FOR, not waited for), staying in one lane (every faction must
+win 2 of 3 lanes), random effects (not allowed), lasting or this-round effects (this-round effects are worth little).
