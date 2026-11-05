@@ -41,9 +41,9 @@ def rows(i):
             ['do ' + x for x in q("select ability, origin, act, on_kind, on_side, on_pick, on_zone, on_with, params from flat_do where card=?")])
 
 
-def pair(a, b, wrong, ex):
+def pair(a, b, wrong, ex, home=None):
     (an, A), (bn, B) = ids(a), ids(b)
-    ps = [(x, y, g) for x, g in A for y, g2 in B if g == g2]
+    ps = sorted([(x, y, g) for x, g in A for y, g2 in B if g == g2], key=lambda t: t[2] != home)  # the check's own game first
     if not ps: return None
     x, y, g = ps[0]
     network.SITE.clear()
@@ -60,14 +60,15 @@ sheet = []
 for f in args:
     for line in open(f, encoding='utf-8'):
         m = re.match(r'(\d+)\. ((?:MISSED )?(?:REAL|PARTLY|CAUSE))\b:? ?(.*?)(?: Wrong examples: (.*?)\.(?= Right examples:| \[|$))?'
-                     r'(?: Right examples: (.*?)\.?(?: \[[^\]]*\])?)?$', line.strip())  # "Dr. Mundo": a full stop ends a list only before the next part
+                     r'(?: Right examples: (.*?)\.?)?(?: \[[^\]]*\])?$', line.strip())  # "Dr. Mundo": a full stop ends a list only before the next part
         if not m: continue
         n, verdict, why, w, r = m.groups()
+        home = os.path.basename(os.path.dirname(os.path.abspath(f)))  # checks/<game>/
         missed = verdict.startswith('MISSED')  # its wrong examples are lines that should exist
         ps = []
         for txt, wrong in ((w or '', True), (r or '', False)):
             for p in re.split(r', (?=[^,]*->)', txt):
-                if '->' in p: ps.append(pair(*[s.strip() for s in p.split('->', 1)], wrong != missed, 'W' if wrong else 'R'))
+                if '->' in p: ps.append(pair(*[s.strip() for s in p.split('->', 1)], wrong != missed, 'W' if wrong else 'R', home))
         ps = [p for p in ps if p]
         worth = sum(site_n[(p['game'], s, part)] for p in ps if p['ex'] == 'W' and p['open'] for s in p['sites']
                     for part in set(re.split(r'; also [^:]*: |; ', p['why'])))  # the same reason from the same code line

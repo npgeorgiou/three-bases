@@ -106,7 +106,7 @@ game's own rulebook, and players' combos and decks that test the lines. Complete
 ## Open work, in Kaptain's order
 1. A newly imported game gets chat 2 (Part 3): every check, the fixes made by fixer agents.
 2. **Marvel Snap import, in progress (handover, 5 Nov 2026).** Done: Part 2 step 0 (supplement_marvel_snap.py: 749 cards
-   from snap-dossier a23b31f, 91 mode variants left out by exclude.tsv for Kaptain's check, 9 texts filled from snap.fan;
+   from snap-dossier a23b31f, 91 mode variants left out by exclude.tsv (base game only), 9 texts filled from snap.fan;
    16 keywords from the game's sources; BRIEF "Game words: Marvel Snap"; sourced rules and deck rule in
    library/games/marvel_snap.md; read/marvel_snap/game_rules.jsonl; 18 vocab rows of 5 Nov 2026; patterns T99-T110;
    DECK_RULES marvel_snap); 27 full guide decks in decks.tsv; step 1 (all batches, keywords, second_001; 103 unsure cards
@@ -159,7 +159,8 @@ players' guides (step 0, `library/games/<game>.md`), never from memory. A reader
 misses the play.
 
 ## How an import runs (Kaptain, 5 Nov 2026; read before doing anything)
-**Two chats, never more.** Chat 1 is the whole import: Part 2 steps 0-2.4 (research, data, the game's words and rules, the
+**Two chats, never more, and each runs to its end without asking.** Never stop between steps to ask whether to go on;
+Kaptain's start message is the go for the whole chat. Chat 1 is the whole import: Part 2 steps 0-2.4 (research, data, the game's words and rules, the
 readers, one fix round for the rows, one rebuild). Chat 2 is every check after it and every fix: Part 3. A chat stopped by
 the token limit is not a new chat: the next one continues from the progress file where it stopped.
 
@@ -277,7 +278,8 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
    mechanic with its page. Search now for players' guides with real decks (Steam guides, build guides, tier lists with card
    lists): they become the deck tests. Check each source is about this game (Monster Train 1 and 2 guides look alike; a page
    with card names the game lacks is no source).
-2. **Left out** (`exclude.tsv`): only other modes or products, and only what Kaptain names. Tokens are never left out.
+2. **Left out** (`exclude.tsv`): only the base game of every game is imported (Kaptain, said many times): every other mode,
+   expansion mode or product is left out without asking him. Nothing else is left out; tokens never are.
 3. **The game's data is already in the repo; look there before fetching** (Kaptain does not know where each file is):
    - `library/sources/conv_<game>.py`: its first lines name the source, date and format. Raw files next to them:
      `monster_train_cards.psv` (282 cards, wiki Module:Cards/Data); Inscryption `inscryption_wiki_cards.jsonl` +
