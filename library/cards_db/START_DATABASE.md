@@ -1,7 +1,8 @@
 # Start here: every chat that changes the card database (importing a game, fixing lines). Part 1: the database
 
-The one start file for changing the database. Part 1: what it is, the rules, every check, the state. Part 2: importing a
-game, step by step, and fixing errors. Part 3: the line check after an import. Read all three parts whole, then only what
+The one start file for changing the database. Part 1: what it is, the rules, every check, the state. Part 2: how an import
+runs (two chats, agents, nothing lost) and chat 1, the import, step by step. Part 3: chat 2, every check after the import,
+and the fixes. Read all three parts whole, then only what
 your task needs (map below). Using the database (questions, designs) starts at factions/START_DESIGN.md instead. Commands run from `library/cards_db/`.
 Clone with the library: CLAUDE.md "Start of a chat", then `git sparse-checkout disable` (the library is ~120 MB).
 
@@ -30,7 +31,7 @@ first and wait. Never invent rules or mechanics; mark suggestions as yours.
    idle (Marvel Snap, 5 Nov 2026: a stopped build left cards.sqlite.new and its journal, and the next build failed).
 5. **Read cards like a player**: what does it need, who gives it that, what does it make, what does that card do.
 6. **A check is done only when all its output was read.** Never sample less, skip a game or hand over because the output is
-   long: cut it into pieces ("Token economy", Part 2). Say plainly what was not checked; a passing count is not a check.
+   long: cut it into pieces and give them to agents (Part 2 "How an import runs"). Say plainly what was not checked; a passing count is not a check.
 
 The rules for lines (L1-L24) are in LINE_RULES.md: read it before judging a line or changing network.py.
 
@@ -42,7 +43,7 @@ The rules for lines (L1-L24) are in LINE_RULES.md: read it before judging a line
 | Rules for lines | LINE_RULES.md |
 | How network.py makes lines; the planned line table | LINKS_PLAN.md |
 | What card readers follow | READER_PROMPT.md (the job), BRIEF.md (shapes, reading rules, game words), SYNTAX.md (rows as printed) |
-| Line check agents (imports only) | checks/LINE_READER_JOB.md, checks/LINE_VERIFIER_JOB.md, causes.py |
+| Chat 2 agents and their files | checks/LINE_READER_JOB.md, LINE_VERIFIER_JOB.md, LINE_FIXER_JOB.md, causes.py; work files and PROGRESS.md in checks/<game>/ |
 | Values and concepts | vocab.tsv, library/concept_tree.txt |
 | Build: rows -> cards.sqlite | run.py (one game), check_all.py (all games), load.py, flat.py, refs.py |
 | Lines between cards | network.py; why one line exists: pair.py; all lines: links.py -> links.sqlite (not in git) |
@@ -68,7 +69,7 @@ It stops at the first failure:
 8. status.py (reading progress), examples.py (QUERIES.md), review_check.py (families in deck_read_<game>.md, during an import).
 Read: any FAILED line and the audit lists. `check_all.py --no-load` runs only steps 4 and 7.
 
-**B. Importing a game:** Part 2 steps 0-5, then the line check (Part 3). The line check is two scripts,
+**B. Importing a game:** chat 1 = Part 2 steps 0-2.4; chat 2 = Part 3 (steps 2.5-5 and the line check). The line check is two scripts,
 both required, all output read: `links_audit.py <game>` (every reason of the whole game: is its rule right?) and
 `deck_audit.py <game>` (the lines inside every deck). `audit_links.py` (A7) is a different check and does not replace them.
 
@@ -103,7 +104,7 @@ values, the cards it creates or names), card wording written to a fixed template
 game's own rulebook, and players' combos and decks that test the lines. Completeness alone is not enough.
 
 ## Open work, in Kaptain's order
-1. A newly imported game gets the line check of Part 3; its fixes are made in the main chat, never by an agent.
+1. A newly imported game gets chat 2 (Part 3): every check, the fixes made by fixer agents.
 2. **Marvel Snap import, in progress (handover, 5 Nov 2026).** Done: Part 2 step 0 (supplement_marvel_snap.py: 749 cards
    from snap-dossier a23b31f, 91 mode variants left out by exclude.tsv for Kaptain's check, 9 texts filled from snap.fan;
    16 keywords from the game's sources; BRIEF "Game words: Marvel Snap"; sourced rules and deck rule in
@@ -123,8 +124,8 @@ game's own rulebook, and players' combos and decks that test the lines. Complete
    reach); the line check's readers and verifiers: findings in checks/marvel_snap/ (lr_* readers, vv_* verdicts,
    causes_sheet.md: 21 verified causes, biggest first); v68: discarded and destroyed cards lie apart (zones discarded,
    discarded_or_dead; refs.py: a discarded card of any kind was discarded), cases n413-n416.
-   Next, in order (Part 2 "Chat 2 in order"):
-   - Fix causes_sheet.md from the top; add the failing combos and the Wong Spectrum deck case to it first (one `none` and one `line` case each; after about 5 fixes `check_all.py --no-load`).
+   Next: Part 3 from its step 4 (checks/marvel_snap/PROGRESS.md says where): the failing combos and the Wong Spectrum deck
+     case become MISSED causes; then fixers work through causes_sheet.md from the top (one `none` and one `line` case each; after about 5 fixes `check_all.py --no-load`).
      Kaptain's answer needed first: On Reveal is on 306 of 660 cards; are repeats of On Reveal (Odin, Wong, Absorbing Man)
      a deck choice or generic (L21)? Odin and Wong have lines now; the verdict said Absorbing Man's are not.
    - The 16 failing combos and the deck cases that fail (cases/REPORT.md); realworld.py marvel_snap (10 misses at the start).
@@ -157,36 +158,60 @@ really do, which cards are deck choices and which do what every card does. Take 
 players' guides (step 0, `library/games/<game>.md`), never from memory. A reader who does not know the game reads the words and
 misses the play.
 
-## Token economy (Kaptain, 2 Nov 2026: one check round used up his 5-hour limit)
-- Scripts are free; reading costs. Every check script prints the size of its output (stderr): look before anyone reads it.
-- The main chat reads no long output itself: every tool call of a long chat sends the whole conversation again. It cuts the
-  output into pieces (`audit_pieces.py split <file>`: at most about 15,000 tokens each, every card's rows shown once per
-  piece), hands each piece to a fresh agent and reads only the short findings.
-- An agent reads its whole piece in ONE call, with the fixed number of tool calls its job text gives, from one file that
-  holds everything it needs (no lookups). Agents only read; fixes are made in the main chat.
-- Agents are Sonnet; their findings are checked against the rows before any fix (verifiers, then the main chat). They are
-  often wrong ("The Dreadway -> Decimate is a combo that works"): never fix from findings directly.
-- Judge each rule once with a few varied examples, not many random samples. Judge lines by the rows (one meaning), not by card
-  texts (read differently each time). At most 100 cards per list.
-- One game at a time; never many agents on many games at once. Save every finding to the repo as soon as it arrives.
-- Card readers cost about 110-125k tokens each, whatever the batch size: one for the cards, one for the keywords, one for the
-  second reading. A handful of cards (tokens, fixes) Claude writes directly.
-- When tokens run out: read no new output; fix what was found and say what was not checked.
+## How an import runs (Kaptain, 5 Nov 2026; read before doing anything)
+**Two chats, never more.** Chat 1 is the whole import: Part 2 steps 0-2.4 (research, data, the game's words and rules, the
+readers, one fix round for the rows, one rebuild). Chat 2 is every check after it and every fix: Part 3. A chat stopped by
+the token limit is not a new chat: the next one continues from the progress file where it stopped.
 
-## How to work (imports went round in circles: refetching data, fixing one card at a time, rebuilding after every edit)
-1. Follow the steps below in order, once: make the task list from them at the start and tick them off.
-2. Look before you make: the game's data (step 0.3), an existing value (vocab.tsv, by meaning), an existing rule (normalize.py
+**The main chat leads; agents do the reading and the fixing.** Every tool call of the main chat sends the whole chat again,
+so what the main chat reads is the cost; what an agent reads stays inside the agent, and only its short reply comes back.
+- The main chat runs scripts, starts agents, and reads only: their one-line replies, the progress file, counts, and diffs
+  short enough to read (longer ones go to an agent). It never reads card texts, check output, deck explanations (ask.py
+  analyze) or network.py, and never traces a line by hand (Marvel Snap, 5 Nov 2026: a chat spent that way fixed one cause
+  of 21).
+- Agents are Sonnet, started with the Agent tool in the background, each from its job file: card readers READER_PROMPT.md,
+  line readers checks/LINE_READER_JOB.md, verifiers checks/LINE_VERIFIER_JOB.md, fixers checks/LINE_FIXER_JOB.md. Readers
+  and verifiers only read; fixers change only what their one cause needs. Their findings are often wrong ("The Dreadway ->
+  Decimate is a combo that works"), so a finding is verified before a fixer gets it, and every fix is checked by a rebuild
+  and its diff.
+- One game at a time. At most three agents run at once; fixers run one at a time (they change shared files).
+
+**Agents must not run wild** (agents that looked things up, re-read, retried failing checks or rebuilt used up Kaptain's
+tokens). Every job file says, and the main chat never asks otherwise:
+- a fixed number of tool calls (line reader and verifier 4; fixer at most 25; card reader one part of about 25 cards at a
+  time), and one file that holds everything the agent needs, so it looks nothing up;
+- never a rebuild (run.py, check_all.py, links.py), never git, never a file outside its job;
+- two tries at most: an agent whose change does not do what it wants writes "STUCK:" and what it saw, and stops;
+- its result file is written before it replies.
+An agent that writes nothing for 30 minutes is stopped (TaskStop) and started again on the same files.
+
+**Nothing is lost at a token reset.**
+- Every work file lives in the repo under `checks/<game>/` (pieces, findings, verdicts, causes_sheet.md, fixer reports, the
+  line tables before and after), never in /tmp: /tmp is gone in the next chat.
+- `checks/<game>/PROGRESS.md` holds one line per step of the chat: done, running (which agent on which file) or next. The
+  main chat writes it when a step starts and when it ends, and commits and pushes it with that step's files at once. Card
+  readers commit each finished batch (step 1).
+- A chat after a reset reads PROGRESS.md, `git log -5` and `status.py <game>`, and continues at the first step not done. An
+  agent marked running whose result file is missing or partial is started again on the same file; parts already written
+  are kept.
+- Every finished step is pushed; a chat ends with Part 1 "State" and "Open work" updated.
+
+**Rules of work.**
+1. Look before you make: the game's data (step 0.3), an existing value (vocab.tsv, by meaning), an existing rule (normalize.py
    N-rules, BRIEF.md), an earlier decision (vocab.tsv added column, `patterns/verdicts.tsv`, `git log -S <word>`).
-3. A decision is written once and kept. If it was decided (by Kaptain or an earlier chat), do not turn it back; if it truly
+2. A decision is written once and kept. If it was decided (by Kaptain or an earlier chat), do not turn it back; if it truly
    looks wrong, ask Kaptain with the card that shows it (Runeterra's Stun went disable -> attack_lock -> disable in two chats).
-4. Batch: collect all problems of one kind (proposals, flags, failing cases, wrong lines), decide them together, fix them with
-   one rule or script, rebuild once (Faeria, 29 Oct 2026: a rebuild of six games after each deck fix cost over an hour).
-5. Fix by rule, for every card: a regex over the texts or a script over the records (`fixes/<game>/vNN.py`, safe to run twice).
+3. Batch: collect all problems of one kind before fixing any, fix them with one rule or script, one rebuild per round
+   (Faeria, 29 Oct 2026: a rebuild of six games after each deck fix cost over an hour).
+4. Fix by rule, for every card: a regex over the texts or a script over the records (`fixes/<game>/vNN.py`, safe to run twice).
    A re-read is the last resort, for cards no rule can fix.
-6. Read the answers, not only the counts: before calling a step done, run `ask.py <game> partners <card>` and `analyze` on a
-   guide deck and read them. A passing case count says nothing about a link that should not exist.
-7. Shared code (connections.py, refs.py, flat.py, deck_analysis.py, normalize.py, load.py, network.py) serves every game: a
-   change there gets a case with game `*`, and every game's cases must pass before it is pushed (`check_all.py <your game>`).
+5. Shared code (connections.py, refs.py, flat.py, deck_analysis.py, normalize.py, load.py, network.py) serves every game: a
+   change there gets a case, and every game's cases must pass before it is pushed (`check_all.py <your game>`).
+6. Scripts are free; reading costs. Every check script prints the size of its output (stderr); long output is cut with
+   `audit_pieces.py split <file>` (pieces of about 15,000 tokens, each card's rows once per piece) and goes to agents.
+   Judge each rule once with a few varied examples; judge lines by the rows, not by card texts; at most 100 cards per list.
+7. Card readers cost about 110-125k tokens each, whatever the batch size. A handful of cards (tokens, fixes) a fixer or the
+   import chat writes directly.
 
 ## Rules that are never broken
 1. **A card is everything it makes** (summons, creates, shuffles in, transforms into, levels into).
@@ -234,7 +259,7 @@ misses the play.
 8. Card names are stored without trailing spaces (load.py); look names up the same way.
 9. Links between cards are made only inside one game; questions over several games add up, by concept, what each game shows.
 
-## Two chats on two games at the same time
+## Two games at the same time (two chats, one per game)
 Each chat writes only its own game's files (read/, input/, second/, fixes/<game>/, supplement/<game>*, supplement_<game>.py).
 - Id block: first write your game's line in source.py (the next free block) and push it. Refused: pull, take the next block.
 - Shared files (vocab.tsv, BRIEF.md, patterns/patterns.tsv, normalize.py, flat.py, refs.py, connections.py, deck_analysis.py,
@@ -246,25 +271,7 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
   keep both sides of code, `run.py <your game>`, `cases/run.py` for every game, compare your lines with your last dump.
 - Never force-push. Readers never share a scratch folder (/tmp/reader_<game>_<batch>/).
 
-## An import takes two chats
-Each chat ends with everything pushed and "Open work" saying where the next one starts.
-- **Chat 1: the rows.** Step 0 (research, data, the game's words and rules), step 1 (the three readers in parallel), step 2.1-2.4
-  (one fix round for every rows-against-text finding, one rebuild).
-- **Chat 2: the lines.** Step 2.5 (decks and their cases), the line check (Part 3: agents in parallel, fixes by cause, a rebuild
-  only after code changes: `check_all.py --no-load`, about 2 minutes, or `check_all.py <game>` after record changes), step 4,
-  step 5.
-  Chat 2 in order, and nothing else (Marvel Snap, 5 Nov 2026: a chat spent on reading by hand fixed one cause of 21):
-  1. Start the line readers first (Part 3 steps 1-4), in the background. While they read, write the deck cases by script
-     (step 2.5) and run realworld.py; read nothing else.
-  2. The moment causes_sheet.md exists, fix it from the top. Before it exists the main chat traces no line, reads no deck
-     explanation (ask.py analyze) and no network.py; a combo or deck case that fails is a line to add to the sheet, not a
-     task of its own.
-  3. Collect every fix, then one rebuild at the end of the round; never a rebuild for one cause.
-What keeps it to two: findings are collected before any fix and fixed together; one rebuild per round; long output goes to
-agents in the background, all at once, while the main chat fixes what is already found; the main chat reads only their
-findings, the diffs and the cards a finding names.
-
-## Steps
+## Chat 1, the import: the steps
 ### 0. Before reading (in this order)
 1. **Research the game**: its wiki rules and full glossary, every faction page, two or more strategy guides; note each
    mechanic with its page. Search now for players' guides with real decks (Steam guides, build guides, tier lists with card
@@ -376,7 +383,7 @@ findings, the diffs and the cards a finding names.
    its explanation's card pairs go into `library/games/<game>.md` "Deck pairs" as `deck | A | B | the guide's words`
    (A does it for B). A script turns each into a `line` row of cases/network.tsv; the main chat does not read `ask.py
    analyze` output to write `must` phrases. A guide the workspace cannot fetch is said in "State", not worked around.
-6. **The line check** (Part 3), never skipped. Not the same as the link audit (links that cannot exist).
+6. **The line check** (Part 3, chat 2), never skipped. Not the same as the link audit (links that cannot exist).
 
 ### 3. Case tests (`cases/`)
 - mechanics.tsv: a question, the expected cards from the texts (regex, or a Keywords-field keyword) and the query; passes at
@@ -423,7 +430,7 @@ Do all points in one pass, in this order:
    its level-up form are one card in play (copies level together); "I / me / my / itself" is the card; damage to a player is not
    damage to a unit; keywords do what the glossary says and nothing more (Overwhelm sends leftover damage to the Nexus and adds
    none; Frostbite sets Power to 0, a frostbitten unit still blocks); skills are no spells unless the text says "spells or Skills".
-2. `dump_lines.py /tmp/before.tsv` (every line of every deck of every game).
+2. `dump_lines.py checks/<game>/before.tsv` (every line of every deck of every game).
 3. For each point find the rule that drew the line (file, function, condition; `pair.py <game> "A" "B"`) and the reading behind
    it (`flat_ref` needs and makes, `flat_do` acts and filters, of both cards). Most wrong lines were one rule firing for every
    card (game rules, a dropped filter, either side). Data or script: rows that disagree with the text are fixed by a text rule
@@ -433,14 +440,14 @@ Do all points in one pass, in this order:
 4. Name the cause in one sentence, not the card ("Start a free attack with 2 Dragonlings" read as using Dragonlings in play).
    Search by meaning, not wording: the same thinking in other words ("Nagakabouros starts a free attack with 4 Tentacles"), other
    games, other scripts (lines, deck plans, combos, questions); the rows' shape of the error (`audit_links.py` 9: a card acting on
-   N cards it names but never makes); `dump_lines.py --find /tmp/before.tsv <reason>` counts the reason in every game: read 10
+   N cards it names but never makes); `dump_lines.py --find checks/<game>/before.tsv <reason>` counts the reason in every game: read 10
    per game. Ask which nearby rules share the cause, and what it breaks outside the decks (they show a tiny part of each game).
 5. Fix each cause once, in the shared rule, keeping the exceptions for level-ups and Kaptain's cases. Wording causes ("one fact
    said twice") are fixed once in one_link(). A rule of your own beyond the point is a new cause: dump and read what it does
    everywhere first. A rule with a number (top tenth of costs, a third of the cost) is said with the cases it was checked on; a
    threshold tuned to pass one case is a new error. Never add a line every card of a kind gets from one helper (L14). A rule
    that holds for every game goes into LINE_RULES.md.
-6. One rebuild. `dump_lines.py /tmp/after.tsv` and `--diff /tmp/before.tsv /tmp/after.tsv`: read EVERY gone and new reason
+6. One rebuild. `dump_lines.py checks/<game>/after.tsv` and `--diff checks/<game>/before.tsv checks/<game>/after.tsv`: read EVERY gone and new reason
    group, in every game, as a player (a too wide rule broke Surgeforger's "give them both"). A wrong one is another family: back
    to 3. Then read every line of the game's decks once more: three more errors of one family were found that way.
 7. Cases (Part 1, rule 2 of "The six rules"). A changed reason wording can make must-not cases pass whatever the network says:
@@ -459,29 +466,34 @@ screenshot first, then answer in plain words about what is drawn, not about weig
 The ask.py commands are in factions/START_DESIGN-4-asking.md, example questions with real answers in QUERIES.md. "Which cards care about X"
 uses flat_ref (`ask.py <games> cares`): the same thing is stored as a trigger, a condition, a count or a target filter.
 
-## Surviving session limits
-- `python3 status.py <game>` says from the files which batches are done, partial or todo.
-- Readers write in parts (`<batch>.partN.jsonl`); a stopped reader is resumed from its parts.
-- Every finished step is pushed at once; chats end with Part 1 "State" and "Open work" updated.
-
-# Part 3: the line check after importing a game (both checks required)
-Done once for a new game, right after its import. Cards are shown by their rows (SYNTAX.md), never by their text. Every error is
-fixed by its cause, for every game, in the main chat; agents only read ("Token economy" above).
-1. `links.py`, then save the table: `dump_lines.py --table /tmp/tb0.tsv`.
-2. `realworld.py <game>`: every combo a guide names that has no line is a missed line found for free.
-3. Print the two checks: `links_audit.py <game>` (Check 1: each reason of the game, is its rule right?) and `deck_audit.py <game>`
-   (Check 2: every deck: cards with no or few partners, the special cards). Cut each output with `audit_pieces.py split`.
-4. Line readers: one agent per piece, model sonnet, all started at once in the background, prompt = `checks/LINE_READER_JOB.md`
-   + the piece path + the findings path (`/tmp/lr_<game>_<n>.md`); meanwhile the main chat does step 2's misses (realworld). They report causes (not single lines) in the one-line format causes.py reads.
-5. `causes.py /tmp/lr_<game>_*.md --out /tmp/vp_<game>.md`: adds to every example its line as it is now, the network.py lines
-   that made it, the cases with both cards (CONFLICT = a case says the opposite) and both cards' rows. Cut it with
-   `audit_pieces.py split`.
-6. Verifiers: one agent per piece, all at once in the background, prompt = `checks/LINE_VERIFIER_JOB.md` + the piece path + the verdict path
-   (`/tmp/vv_<game>_<n>.md`).
-7. `causes.py /tmp/vv_<game>_*.md` writes `causes_sheet.md`, biggest first: each REAL or PARTLY cause with all a fixer needs and
-   how many table lines come from the same reason and network.py line. Fix from the top; skip CONFLICT causes (Kaptain's case
-   wins) and gone ones. No other lookups; `pair.py` only to check a fix.
-8. Per fix: one `none` and one `line` case in cases/network.tsv. After about 5 fixes: `check_all.py --no-load`.
-9. At the end: `links.py`, `dump_lines.py --table /tmp/tb1.tsv`, `--diff /tmp/tb0.tsv /tmp/tb1.tsv`, `realworld.py`,
-   `check_all.py --no-load` (rewrite the must-not cases it lists), commit, push, report the lines gone and added per game.
-   The import is not done while a verified cause is unfixed.
+# Part 3: chat 2, every check after the import, and the fixes
+Steps 2.5-5 of Part 2 and the line check, in this order and nothing else. Cards are shown by their rows (SYNTAX.md), never by
+their text. D = `checks/<game>/`. After each step: write PROGRESS.md, commit and push the step's files.
+1. **Start.** Write PROGRESS.md with these ten steps. `links.py <game>`; `dump_lines.py --table D/tb0.tsv` and
+   `dump_lines.py D/before.tsv` (every line of every deck of every game).
+2. **The two checks, printed and cut.** `links_audit.py <game> > D/la.txt` (each reason of the game: is its rule right?) and
+   `deck_audit.py <game> > D/da.txt` (every deck: cards with no or few partners, the special cards);
+   `audit_pieces.py split` on each (pieces D/la_<n>.txt, D/da_<n>.txt).
+3. **Line readers.** One agent per piece, all started at once in the background: checks/LINE_READER_JOB.md + the piece path
+   + the findings path D/lr_<n>.md.
+4. **Meanwhile, by script only.** Deck cases from "Deck pairs" (step 2.5: `line` rows of cases/network.tsv); the "Combos" of
+   library/games/<game>.md into cases/combos.tsv; `realworld.py <game>`; `cases/run.py <game>`. Every miss (a failing combo,
+   deck or real-world case) is written by script into D/lr_misses.md as "N. MISSED CAUSE: <the case's why>. Wrong examples:
+   A -> B. Right examples: none." No one traces them now.
+5. **Verifiers.** `causes.py D/lr_*.md --out D/vp.md`; `audit_pieces.py split D/vp.md` (cut at causes); one verifier per piece,
+   all at once: checks/LINE_VERIFIER_JOB.md + the piece path + the verdict path D/vv_<n>.md.
+6. **The sheet.** `causes.py D/vv_*.md --out D/causes_sheet.md`: every REAL, PARTLY and MISSED REAL cause, biggest first, with
+   all a fixer needs. CONFLICT causes (a case says the opposite; Kaptain's case wins) and gone ones are skipped.
+7. **Fixers, one at a time, from the top.** checks/LINE_FIXER_JOB.md + the sheet path + the cause's heading + the report path
+   D/fix_<n>.md. The main chat reads only the report's first line (FIXED, STUCK or CONFLICT), notes it in PROGRESS.md,
+   commits and starts the next fixer. A STUCK cause goes to "Open work" with the fixer's words.
+8. **One rebuild** when all causes are done: `check_all.py <game>` if records changed, `check_all.py --no-load` if only code,
+   in the Bash tool's background mode. Then `links.py`, `dump_lines.py D/after.tsv`, `--diff D/before.tsv D/after.tsv` and
+   `--diff` of the tables (tb0 -> tb1). A diff of up to about 60 lines the main chat reads; a longer one is split and read by
+   line readers (step 3's job, the diff as the piece). Every wrong gone or new group is a new cause: steps 5-8 once more, at
+   most twice in all; what is still wrong then goes to "Open work". Must-not cases that `cases/run.py` lists as stale are
+   rewritten as strict.
+9. **The last checks** (Part 2 step 4): `realworld.py <game>` again; `design_questions.py` read by one agent (thin or odd
+   answers of the new game, as causes in the reader format, then steps 5-8 for them).
+10. **Done** (Part 2 step 5): "State" and "Open work" updated, pushed; Kaptain checks the deck page (network_page.py).
+The game is not done while a verified cause is open and not in "Open work".
