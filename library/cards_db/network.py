@@ -819,10 +819,12 @@ def lines_of(c, game):
         if tn and EVERY_DECK_TYPE.get(game) == tn[0]: continue  # every squad is Mechs: Psionic Receiver asks for none (L1)
         bt = broad_part(c, game, f'type is {t}')  # a fifth or more of the cards are Skills: "put a Skill into your hand" (Secret
         # Technique) can pick any of them (L14); a count of them ("every 3 Attacks", Kunai, Rage) is a deck choice (Kaptain 30 Oct 2026)
-        for m, how in has.get(t, ()):
+        for m in sorted({m for m, _ in has.get(t, ())}):
             for x in ts - {m}:
                 if bt and x not in cnt[t]: continue
-                if how == 'is' and not need_all.get((x, t), set()) <= set(cards[m]['types']): continue  # a Yordle that is no Mecha
+                is_ = (m, 'is') in has[t] and need_all.get((x, t), set()) <= set(cards[m]['types'])  # a Yordle that is no Mecha is none
+                if not is_ and (m, 'makes') not in has[t]: continue
+                how = 'is' if is_ else 'makes'  # it is one itself and makes one too: said once, as "is" (Rek'Sai is a Lurker)
                 what = f'{"is" if how == "is" else "makes"} {"an" if tn and tn[0][:1] in "AEIOU" else "a"} {tn[0] if tn else "card of the type"}'
                 if x in cnt[t]: out[(m, x)].append(('waits', 1.0 / len(ts), f'{what} it counts when {cnt[t][x]}'))
                 else: out[(m, x)].append(('type', 1.0 / len(ts), what + ' it asks for'))
@@ -2423,7 +2425,10 @@ def made(c, game, ids):
         # unit's skill; a leader's own spell (Duelyst General: its Bloodbound Spell)
         add |= {b for (b,) in c.execute(f"select card_ref from flat_do where act in ({','.join('?' * len(PUTS))}) and card in ({marks})",
                                          list(PUTS) + q)}
-        new |= {b for b in add if b in cards} - got
+        for (w,) in c.execute(f"select on_with from flat_do where act in ('create','summon','keyword_action') and card_ref is null and card in ({marks}) "
+                              "and (on_with like '%card in %' or on_with like '%card is %')", q):  # a new card, one of a set by name
+            add |= {int(x) for x in re.findall(r'card (?:in|is) (\d+)', w)}  # (Thanos's Infinity Shots, Kate Bishop's Arrows)
+        new |={b for b in add if b in cards} - got
     return new
 
 

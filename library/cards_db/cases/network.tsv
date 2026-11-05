@@ -397,3 +397,11 @@ n399	marvel_snap	Daken, Muramasa Shard	Daken	Muramasa Shard	line	creates	Claude 
 n400	marvel_snap	Agamotto, Bolts of Balthakk	Agamotto	Bolts of Balthakk	line	creates	Claude 5 Nov 2026: Agamotto shuffles the four Ancient Arcana into the deck (N25: a new card shuffled in is created)
 n401	marvel_snap	Zombie Black Cat, Wolverine	Zombie Black Cat	Wolverine	line	discard	Claude 5 Nov 2026: "Discard another When Discarded card": Wolverine's When Discarded or Destroyed is one
 n402	marvel_snap	Korg, Rock	Korg	Rock	none		Claude 5 Nov 2026: Korg shuffles the Rock into the opponent's deck, not mine
+n403	marvel_snap	Vampire Thanos	Thanos Fractured Frontier	Power Shot	line	creates	Claude 5 Nov 2026: its Quickdraw, given to your cards, loads Infinity Shots (made inside an ability it gives)
+n404	marvel_snap	Symbiote Galactus	Hawkeye Kate Bishop	Grapple Arrow	line	creates	Claude 5 Nov 2026: "Add 2 Arrows": one of a set by name is a made card of the deck
+n405	duelyst	Shidai Artifacts	Petal Flurry	Kotetsu	line	creates	Claude 5 Nov 2026: "Put a Spellsword into your action bar": one of a set by name
+n406	faeria	Captain Revisited	Banon, Captain of the Radiance	Radiance, Imperial Airship	line	creates	Claude 5 Nov 2026: Banon shuffles Radiance into your deck (normalize N25)
+n407	faeria	Curious Biomancer, Flight of the Mantas	Curious Biomancer	Flight of the Mantas	none		Claude 5 Nov 2026: Biomancer draws creatures only; Flight of the Mantas is no creature (normalize N29)
+n408	faeria	Drakkar Skycaptain, Faeria Tree	Drakkar Skycaptain	Faeria Tree	none		Claude 5 Nov 2026: Skycaptain buffs drawn Flying creatures; Faeria Tree is a structure
+n409	marvel_snap	Majestic Wingbeat, Zombie Galacti	Majestic Wingbeat	Zombie Galacti	none		Claude 5 Nov 2026: the -1 Cost is on the leftmost card it gives +3 Power, not any 5-Cost card (v66)
+n410	runeterra	Lurkers	Rek'Sai (level 2)	Frenzied Feast	line	is a Lurker	Claude 5 Nov 2026: Rek'Sai is a Lurker herself; she makes none

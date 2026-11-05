@@ -1,7 +1,7 @@
 # Case tests: marvel_snap
 
 Made by `cases/run.py marvel_snap`.
-**19 of 19 cases pass.**
+**22 of 22 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -47,3 +47,6 @@ Made by `cases/run.py marvel_snap`.
 | n400 | Agamotto, Bolts of Balthakk | Agamotto | Bolts of Balthakk | line creates | puts: creates | yes |
 | n401 | Zombie Black Cat, Wolverine | Zombie Black Cat | Wolverine | line discard | waits: makes you discard cards | yes |
 | n402 | Korg, Rock | Korg | Rock | none  | - | yes |
+| n403 | Vampire Thanos | Thanos Fractured Frontier | Power Shot | line creates | puts: creates | yes |
+| n404 | Symbiote Galactus | Hawkeye Kate Bishop | Grapple Arrow | line creates | puts: creates | yes |
+| n409 | Majestic Wingbeat, Zombie Galacti | Majestic Wingbeat | Zombie Galacti | none  | - | yes |

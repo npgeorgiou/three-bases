@@ -81,7 +81,7 @@ push, give network.html to Kaptain.
 - All 8 games imported. Kaptain approved Runeterra and Into the Breach; Slay the Spire done; Inscryption reviewed; Stormbound,
   Monster Train, Faeria, Duelyst wait for his check of their deck networks.
 - Cases: all pass. Must-not cases whose old reason no line says any more were made strict (no line at all); n56, n352,
-  n378, ntb15-16 and nst36 keep theirs because the pair still has a line for another reason. The next case id is n403.
+  n378, ntb15-16 and nst36 keep theirs because the pair still has a line for another reason. The next case id is n411.
 - Real-world cases: 237 of 261 hold (Zealous Crusader -> Khalim's Prayer is gone by a rule of Kaptain's of 3 Nov 2026, before L24; the other 23 are faction-label checks).
 - Lines (pairs in links.sqlite, 3 Nov 2026): Runeterra 201,006; Duelyst 12,427; Faeria 10,014; Slay the Spire 8,797; Into the
   Breach 6,137; Monster Train 3,092; Stormbound 2,686; Inscryption 1,080.
@@ -109,11 +109,12 @@ game's own rulebook, and players' combos and decks that test the lines. Complete
    re-read, 39 still unsure with needs only one card has); step 2.1 (`run.py marvel_snap` passes, 13 of 13 cases;
    `check_all.py --no-load` passes for every game); step 2.3 (0 word flags: patterns T111-T115, labels with colon only, 19 verdicts); step 2.4 (names.tsv, fixes/marvel_snap/v65.py: sets of cards as card lists; Muramasa Shard added; Overdrive left out as a mode (Kaptain); When Discarded is a trigger label like End of Turn (Kaptain);
    "not revealed until the game ends" is cant played, as Dark Dimension; normalize N25: a new card shuffled in is create zone deck; 0 stubs). Next, in order:
-   - 2.5 second reading: second/marvel_snap/compare_verdict.md has 11 families (families 2-5 are "same meaning,
-     different form": write normalize rules; Thanos Fractured Frontier's Shots, made inside a given ability, draw no line; family 9 and 11 are wrong first readings to fix; family 1 was mostly fixed by
-     the re-read, 10 cards with no rows are cards with no game effect).
-   - 2.7 text audit: 37 text words without rows. 2.8 link audit: 10 cards tagged play_restriction lack a row (Brooklyn Bridge).
-   - 2.9 deck networks: read 10 of the 27 decks card by card into deck_read_marvel_snap.md; cases/decks.tsv and network.tsv
+   - 2.5 done (5 Nov 2026): normalize N26-N34, fixes/marvel_snap/v66.py; cards made by a set of names or inside an ability a
+     card gives now count as made (network made(), refs build_made); a type reason is said once ("is" before "makes"); cases n403-n410.
+   - 2.7 text audit: 36 text words without rows. 2.8 link audit: 9 cards tagged generate_cards lack a row (Astral Plane).
+   - 2.9 deck networks (lines to check first: Power Shot -> Vampire Deacon Frost "changes your units' stats", "+3 Power" is
+     no stolen Power; Grapple Arrow -> Galactus, Galactus wants to be alone; Mind Shot -> Dragon of the Moon "fills your hand";
+     Hawkeye Kate Bishop -> Basic Arrow "makes more cards to play" (L1)): read 10 of the 27 decks card by card into deck_read_marvel_snap.md; cases/decks.tsv and network.tsv
      have no Marvel Snap rows yet; combos in library/games/marvel_snap.md "Combos" go to cases/combos.tsv.
    - Part 3 line check: `links_audit.py marvel_snap` and `deck_audit.py marvel_snap`, all output read (pieces, agents).
    - Step 4: the 20-card check (deck_read_marvel_snap.md "Check of 20 cards"), `realworld.py marvel_snap` (every miss read),
