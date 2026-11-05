@@ -469,3 +469,5 @@ n473	marvel_snap	Sera, Mystique	Sera	Mystique	line	is a unit with Ongoing it cou
 n474	marvel_snap	Basic Arrow, Mystique	Basic Arrow	Mystique	line	makes your units get Ongoing	Claude 5 Nov 2026, line check: right example stays
 n475	marvel_snap	Fantomex, Zombie Captain Marvel	Fantomex	Zombie Captain Marvel	none		Claude 5 Nov 2026, line check C14: a shared Activate keyword is no line (v69 data fix, shows after rebuild)
 n476	marvel_snap	Fantomex, Zombie Captain Marvel	Zombie Captain Marvel	Fantomex	line	makes your units die	Claude 5 Nov 2026, line check C14: right example stays (kills feed the count)
+n477	marvel_snap	Grapple Arrow, Galactus	Grapple Arrow	Galactus	none		Claude 5 Nov 2026, line check C15: Galactus needs exactly one unit in his lane; moving units in is no help
+n478	marvel_snap	Grapple Arrow, PymParticle Arrow	Grapple Arrow	PymParticle Arrow	line	moves your units	Claude 5 Nov 2026, line check C15: PymParticle needs a full lane; moved units fill it
