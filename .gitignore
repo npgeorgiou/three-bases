@@ -5,3 +5,4 @@ library/cards_db/links.sqlite
 library/cards_db/cases/REPORT_*.md
 library/cards_db/cards.sqlite.new
 library/cards_db/cards.sqlite-journal
+library/cards_db/cards.sqlite.new-journal

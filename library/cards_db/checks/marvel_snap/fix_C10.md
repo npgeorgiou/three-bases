@@ -1,4 +1,0 @@
-FIXED: need_lines ignored the test last_card ("if the last card played was an Ongoing unit"), so Ongoing cards got no line to Mystique; added last_card to the tests it reads. Files: network.py (line 1788), cases/network.tsv. Cases: n455-n460.
-pair.py: Sera, Mojo, Ant Man, Patriot -> Mystique now "is a unit with Ongoing it counts or asks for"; Wong -> Mystique keeps plays it again and gains this reason; Onslaught -> Blue Marvel unchanged.
-Other last_card cards (11 in all, other kinds): kind unit without keyword stays no line (generic); spell with a type is skipped by the type-line rule. Marvel Snap cards 8000002 (keyword 8000750) gets the same kind of line.
-Case reasons written as "a unit with Ongoing" / "repeats its effects"; check them against pair.py wording if the case runner is strict.

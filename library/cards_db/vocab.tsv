@@ -896,3 +896,4 @@ position	back_row	the back row of a side's cards in a lane or location			5 Nov 2
 position	previous_lane	the lane or location of moved from (Marvel Snap "the location it moved from")			5 Nov 2026, Marvel Snap import: 3 proposals
 position	edge_lane	the leftmost or rightmost lane or location			5 Nov 2026, Marvel Snap import: 2 proposals
 position	middle_lane	the middle lane or location (Marvel Snap "the middle location")			5 Nov 2026, Marvel Snap import
+state	stolen_power	has taken Power from another card (Marvel Snap "have stolen Power", Vampire Deacon Frost)		stat_changed	5 Nov 2026, v71

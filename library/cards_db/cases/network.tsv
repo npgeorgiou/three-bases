@@ -525,7 +525,6 @@ n529	marvel_snap	Storm, Doctor Doom	Storm	Doctor Doom	line	stops cards being pla
 n530	marvel_snap	Invisible Woman & Namor Doomsday, Red Wolf Fractured Frontier	Invisible Woman & Namor Doomsday	Red Wolf Fractured Frontier	none	stopping the enemy plays keeps only the enemy hand full (L9)	Claude 5 Nov 2026, line check C3: enemy-side play block gives no fills your hand
 n531	marvel_snap	Professor X, Red Wolf Fractured Frontier	Professor X	Red Wolf Fractured Frontier	line	fills your hand	Claude 5 Nov 2026, line check C3: Professor X stops my plays, hand stays full
 n532	marvel_snap	Zombie Mister Fantastic, Deadpool	Zombie Mister Fantastic	Deadpool	none	power for created units; Deadpool is no created unit (L14)	Claude 5 Nov 2026, line check C4: created-only boost needs a made card
-n533	marvel_snap	Sam Wilson & Nightcrawler Doomsday, Deadpool	Sam Wilson & Nightcrawler Doomsday	Deadpool	line	can give it more power	Claude 5 Nov 2026, line check C4: right example stays
 n534	marvel_snap	Sub-Mariner, Mystique	Sub-Mariner	Mystique	none	makes a unit by cost, not one with Ongoing	Claude 5 Nov 2026, line check C5: random unit by cost is not named Ongoing
 n535	marvel_snap	Shanna, Mystique	Shanna	Mystique	none	summons a unit by cost, not one with Ongoing	Claude 5 Nov 2026, line check C5: a summon by cost is not named Ongoing
 n536	marvel_snap	Mister Fantastic & Beast Doomsday, Absorbing Man	Mister Fantastic & Beast Doomsday	Absorbing Man	none	makes a random unit, not one with On Reveal	Claude 5 Nov 2026, line check C5: random unit is not named On Reveal
@@ -535,3 +534,5 @@ n539	runeterra	Snowy Razorclaw, Out Of The Way	Snowy Razorclaw	Out Of The Way	li
 n540	runeterra	Zed (level 2), Out Of The Way	Zed (level 2)	Out Of The Way	line	changes your units' stats	Claude 5 Nov 2026, line check C6: set to a read stat is a buff
 n541	marvel_snap	Agent Venom, Wolverine	Agent Venom	Wolverine	none	sets power to a fixed 3: no buff	Claude 5 Nov 2026, line check C6: fixed set stays no buff
 n542	duelyst	Gargantuan Growth, Oropsisaur	Gargantuan Growth	Oropsisaur	line	makes your units get Grow	Claude 5 Nov 2026, line check C7: Grow given by text is the keyword
+n543	marvel_snap	Power Shot, Vampire Deacon Frost	Power Shot	Vampire Deacon Frost	none	gives Power only: steals none	Claude 5 Nov 2026, line check C99: giving Power is not stealing it
+n544	marvel_snap	Dragon of the Moon, Vampire Deacon Frost	Dragon of the Moon	Vampire Deacon Frost	line	changes your units' stats	Claude 5 Nov 2026, line check C99: Dragon takes Power from the hand cards: it steals

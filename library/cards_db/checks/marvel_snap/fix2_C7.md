@@ -1,5 +1,0 @@
-FIXED: Duelyst texts that give "Grow: +N/+N" (Gargantuan Growth, Godhammer, Grandmaster Kraigon's General part) were read as an unnamed given ability, so Oropsisaur, who waits for Grow, got no line; they are now give_keyword Grow. Files: fixes/duelyst/v42.py, read/duelyst/batch_002.jsonl, read/duelyst/batch_003.jsonl, cases/network.tsv. Cases: n542.
-- Data cause (rows disagreed with the card's words); a records change shows in pair.py only after the main chat's rebuild (pair.py still said NONE before it). check.py: 0 problems on both files (2 stub names in batch_002 were there before).
-- Other games: only Duelyst records changed (3 cards); the script matches by rule (given turn_start stat_change on self whose N equals "Grow: +N/+N" in the text), safe to run twice.
-- Cards that wait for Grow (Oropsisaur and any other) may get new lines from Gargantuan Growth, Godhammer, Kraigon after the rebuild.
-- Untested after rebuild: Godhammer's "your minions have Grow" is now give_keyword on mine units; L14 may drop or keep it.

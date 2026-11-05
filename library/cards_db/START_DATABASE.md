@@ -84,7 +84,7 @@ push, give network.html to Kaptain.
 ## State (5 Nov 2026)
 - All 9 games imported. Kaptain approved Runeterra and Into the Breach; Slay the Spire done; Inscryption reviewed; Stormbound,
   Monster Train, Faeria, Duelyst and Marvel Snap (chat 2 done 5 Nov 2026) wait for his check of their deck networks.
-- Cases: all pass in every game. The next case id is n543.
+- Cases: all pass in every game. The next case id is n545.
 - Real-world cases: all hold (failing ones deleted, 5 Nov 2026).
 - Lines (links.sqlite rows, 5 Nov 2026): Runeterra 210,310; Marvel Snap 19,734; Duelyst 12,799; Faeria 10,733; Slay the
   Spire 8,939; Into the Breach 6,419; Monster Train 3,353; Stormbound 2,854; Inscryption 1,116.
@@ -104,10 +104,8 @@ game's own rulebook, and players' combos and decks that test the lines. Complete
 
 ## Open work, in Kaptain's order
 1. A newly imported game gets chat 2 (Part 3): every check, the fixes made by fixer agents.
-2. **Marvel Snap** (chat 2 done 5 Nov 2026; checks/marvel_snap/PROGRESS.md): waits for Kaptain's check of the deck page.
-   Open: design questions 04 and 05 (sacrifice and draw) find almost nothing in it; supplement/marvel_snap_links.jsonl not
-   written (cards a card creates are linked by the names in its rows); the handover's doubtful lines: Power Shot -> Vampire
-   Deacon Frost, Mind Shot -> Dragon of the Moon, Hawkeye Kate Bishop -> Basic Arrow.
+2. **Marvel Snap** (chat 2 done 5 Nov 2026): waits for Kaptain's check of the deck page. Open: design questions 04 and
+   05 (sacrifice and draw) find almost nothing in it.
 
 ## When you finish
 Commit and push every finished step. Update "State" and "Open work" above (short, no history: git log has it).

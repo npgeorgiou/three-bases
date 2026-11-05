@@ -1,2 +1,0 @@
-FIXED: Already fixed by an earlier fixer: pair.py now shows "is a unit with Ongoing it counts or asks for" for Victoria Hand, Devil Dinosaur, PymParticle Arrow and Sera -> Mystique, and Basic Arrow still "makes your units get Ongoing". Files: cases/network.tsv (no code change by me). Cases: n470-n474.
-Other games with a "last card played is a <keyword> unit" test may get the same line; I did not check.

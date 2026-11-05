@@ -676,3 +676,4 @@ a turn is shared, so it is a round. Sources: library/games/marvel_snap.md "The g
   winning_lane]}`; "Power here" / "your Power at this location" = AMOUNT `{"x": "lane_power", "of": {"kind": "position",
   "side": "mine", "with": [same_lane]}}`. "If you
   played a card here last turn" = event_count span last_round. "The last card you played" = test last_card.
+- State stolen_power (5 Nov 2026): "have stolen Power" = cards that took Power from another card; not a plain buff.
