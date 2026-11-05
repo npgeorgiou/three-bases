@@ -100,6 +100,7 @@ def main():
     rows = []
     for x in sorted(d, key=lambda x: x['carddefid']):
         text = strip(x['ability']).lstrip('!').strip()
+        if text.lower() == 'none': text = ''  # the export's placeholder for no ability (Bug, Foggy Nelson ...)
         st = kind(x, ids)
         if not text and x['carddefid'] in TEXT_GAPS:
             text = TEXT_GAPS[x['carddefid']]; st += '; text from snap.fan, Claude\'s words'

@@ -34,6 +34,10 @@ explained (8 Nov 2022). Keyword sources: supplement_marvel_snap.py KEYWORDS.
 Written as game_rules.jsonl: the 4-card limit (it links cards that fill a location and cards that need room). The rest is
 what every card does and draws no line between cards.
 
+## Deck rule (what a deck is)
+A deck is 12 cards, one copy of each [R1]; any characters can share a deck (no factions). Locations are not in decks: the
+game puts them on the board (three random ones each game) [R1]. Cards a card adds (tokens) are not deck cards.
+
 ## Sources and notes
 
 Sources:

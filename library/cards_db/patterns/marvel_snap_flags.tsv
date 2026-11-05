@@ -1,0 +1,180 @@
+card	name	pattern	requires	text
+796158	Altar of Death	KW	name:destroy	after you play a card here, destroy it to get +2 energy next turn
+796161	Asteroid M	KW	name:move	 you play a 3 or 4-cost card, move it here.
+796188	Collapsed Mine	KW	name:destroy	on with rocks. skip a turn to destroy your rocks.
+796197	Death's Domain	KW	name:destroy	after you play a card here, destroy it.
+796206	EssexsLab	KW	name:destroy	after turn 4, destroy a card. your others here spli
+796210	Fisk Tower	KW	name:afflict	when a card moves here, afflict it with -4 power.
+796213	Fogwell's Gym	V20	value:this_game|recalled_this_game|once_per_game	h players get double boosters this game.
+796220	Great Web	KW	name:move	end of turn: move one card to the web for a  # 
+796221	Hala	KW	name:destroy	after turn 4, destroy all cards on the losing side 
+796226	Island Prison	KW	name:move	cards here can't move.
+796227	Isle of Shhhhh	KW	name:move	after each snap, move a card away from here.
+796235	Knowhere	T99	event:played	on reveal effects do not happen at this
+796243	Limbo	V20	value:this_game|recalled_this_game|once_per_game	there is a turn 7 this game.
+796265	Murderworld	KW	name:destroy	after turn 3, destroy all cards here.
+796287	Pool's School	KW	name:move	p, your highest-power card(s) move to here.
+796296	Rickety Bridge	KW	name:destroy	e is more than one card here, destroy them.
+796314	Spider Island	KW	name:move	after you play a card here, move it.
+796320	Strange Academy	KW	name:move	after turn 5, move all cards here to other  #  l
+796322	Survivor's Camp	KW	name:horde	 you're winning here. if not, horde +2.
+796328	The Bifrost	KW	name:move	after turn 4, move all cards one location to the
+796330	The Deadlands	KW	name:horde	end of turn: horde +1.
+796355	Undead Metropolis	KW	name:horde	after you play a card here, horde +1.
+796357	Valhalla	T99	event:played	rn 4, cards here repeat their on reveal abilities.
+796358	Valley of the Baby Hand	KW	name:destroy	destroy your next play here. snap to 
+796364	Warrior Falls	KW	name:destroy	nd of turn: cards here fight! destroy the weakest one(s).
+796367	Weapon XI Facility	KW	name:destroy	snap to destroy your lowest-cost card. it's r
+796373	Worldship	KW	name:destroy	destroy the other locations.
+796377	Yashida Base	KW	name:destroy	at the end of the game, destroy the last card to get here.
+8000002	Absorbing Man	V21	value:copy|copy_keywords|create|summon|transform|copy_of_it|revive	 you played has an on reveal, copy its text. (if able)
+8000020	Annihilus	KW	name:destroy	h power below 0 switch sides. destroy those that can't.
+8000029	Araña	KW	name:move	xt card, give it +1 power and move it to the right.
+8000034	Arnim Zola	KW	name:destroy	on reveal: destroy one of your other cards here 
+8000036	Askani'son	V03	value:create|copy|created|set_terrain|terrain_changed	activate: create a 1-cost card at another loca
+8000037	Astral Projection	V21	value:copy|copy_keywords|create|summon|transform|copy_of_it|revive	on reveal: copy the text of an on reveal card
+8000038	Attuma	KW	name:destroy	end of turn: destroy one of your cards here with l
+8000039	Aunt May	T109	value:can|moves	end of turn: if you used a moveable ability, give a moveable card
+8000040	Aurora	T100	event:always	location +2 power. repeat for ongoing, activate, and end of turn.
+8000040	Aurora	T102	event:round_end	at for ongoing, activate, and end of turn.
+8000071	Bullseye	KW	name:afflict	ost 1 or less from your hand. afflict that many different enemy car
+8000074	Caliban Horseman of Pestilence	KW	name:afflict	at are 4-cost or more in play afflict the highest-cost enemy card w
+8000075	Cannonball	KW	name:destroy	card here away. if you can't, destroy it with a  # .
+8000075	Cannonball	KW	name:move	on reveal: move the highest-power enemy card 
+8000082	Captain Marvel	KW	name:move	at the end of the game, move to a location that wins you t
+8000083	Carnage	KW	name:destroy	on reveal: destroy your other cards here. +2 pow
+8000089	Chameleon	V21	value:copy|copy_keywords|create|summon|transform|copy_of_it|revive	on reveal: copy the text of another card here
+8000091	Clea	KW	name:empowered	when this is empowered, add  #  to your hand. (if in
+8000093	Cobra	KW	name:destroy	activate: destroy an enemy created card here.
+8000097	Copycat	V21	value:copy|copy_keywords|create|summon|transform|copy_of_it|revive	when you draw this, copy the text from the bottom card
+8000100	Cosmo	T99	event:played	ongoing: on reveal abilities won't happen here.
+8000110	Danger	KW	name:destroy	activate: destroy an enemy card here with less 
+8000118	Deathlok	KW	name:destroy	on reveal: destroy your other cards here.
+8000121	Destroyer	KW	name:destroy	on reveal: destroy your cards at other locations
+8000127	Doctor Strange	KW	name:move	on reveal: move your highest-power card(s) to
+8000135	Dormammu	V04	value:summon|copy|summoned|revive|summoned_this_round	game start: begin a summoning ritual. (add step 1 to han
+8000140	Dragon Breath	KW	name:afflict	racter in your hand +3 power. afflict an enemy card at each locatio
+8000145	Drax, Avatar Of Life	KW	name:move	with greater power this turn. move to that card if you'd be winn
+8000150	Echo	T100	event:always	after your opponent plays an ongoing card here, remove its abiliti
+8000153	Overdrive Reactor Effect03	KW	name:move	move  #  cards to the left 4 times
+8000155	Overdrive Reactor Effect05	KW	name:destroy	destroy each player's 1 lowest-power 
+8000158	Overdrive Reactor Effect08	KW	name:destroy	destroy the 2 locations with the lowe
+8000159	Overdrive Reactor Effect09	V20	value:this_game|recalled_this_game|once_per_game	the winner of this game gets twice as many volts.
+8000163	Elektra	KW	name:destroy	on reveal: destroy an enemy 1-cost card here.
+8000167	Enchantress	T100	event:always	remove the abilities from all ongoing cards here.
+8000172	Evolved Cyclops	KW	name:afflict	: if you have unspent energy, afflict 2 enemy cards here with -1 po
+8000176	Evolved The Thing	KW	name:afflict	on reveal: afflict 3 enemy cards here with -1 po
+8000177	Evolved Wasp	KW	name:afflict	on reveal: afflict an enemy card here with -1 po
+8000179	Ezekiel Sims	KW	name:move	 here, give this +2 power and move this to another location.
+8000182	Fan Fei	KW	name:move	other cards here +1 power and move them to the right.
+8000183	Fantasticar	T102	event:round_end	activate: give your end of turn cards +2 power.
+8000184	Fantomex	KW	name:afflict	ards discarded and destroyed, afflict front-row enemy cards at each
+8000185	Fastball Special	KW	name:afflict	ur highest-power card here to afflict an enemy card here with that 
+8000185	Fastball Special	KW	name:destroy	on reveal: destroy your highest-power card here 
+8000188	Firehair	T99	event:played	troyed, this uses that card's on reveal.
+8000191	Flames of the Faltine	KW	name:afflict	on reveal: afflict an enemy card here with -3 po
+8000193	Flight Harness	KW	name:move	-power card here +1 power and move it to the right.
+8000197	Friendly Neighborhood Carnage	KW	name:move	on reveal: move your other cards here to the 
+8000200	Galactus	KW	name:destroy	 this is your only card here, destroy all other locations.
+8000202	Gambit	KW	name:destroy	card a card from your hand to destroy a  #  enemy card.
+8000204	Gambit Horseman of Death	KW	name:destroy	ost of created cards randomly destroy up to 3 total cost of enemy c
+8000208	Ghost	T102	event:round_end	remove the abilities from all end of turn cards here.
+8000219	Gladiator	KW	name:destroy	cation. if it has less power, destroy it.
+8000224	Gorr the God Butcher	T99	event:played	ongoing: +2 power for each on reveal card in play.
+8000225	Grand Master	KW	name:move	on reveal: move one of your other on reveal c
+8000226	Grapple Arrow	KW	name:move	fter you play your next card, move it to this location.
+8000234	Hazmat	KW	name:afflict	on reveal: afflict all other cards with -1 power
+8000236	Heimdall	KW	name:move	on reveal: move your other cards one location
+8000240	Hellcow Fractured Frontier	KW	name:afflict	end of turn: afflict all other cards here with -1 
+8000240	Hellcow Fractured Frontier	KW	name:destroy	ards here with -1 power. then destroy your other cards here with 0 
+8000244	Hercules	KW	name:move	ime another one of your cards moves here each turn, move it to a
+8000250	Howard the Duck	T100	event:always	ongoing: tap this to see the top card
+8000255	Emperor Hulkling	V21	value:copy|copy_keywords|create|summon|transform|copy_of_it|revive	game start: copy the text of a  #  6-cost card
+8000262	Ice Cube	KW	name:destroy	tart of turn: +1 energy. then destroy this if your side is full her
+8000268	Invisible Woman	T100	event:always	ongoing: cards you play here are not 
+8000271	Invisible Woman First Steps	T102	event:round_end	activate: this turn, your end of turn abilities repeat.
+8000272	Iron Fist	KW	name:move	fter you play your next card, move it one location to the left.
+8000273	Iron Lad	V21	value:copy|copy_keywords|create|summon|transform|copy_of_it|revive	on reveal: copy the text of your deck's top c
+8000279	J. Jonah Jameson	T100	event:always	ongoing: your text emotes are ruder.
+8000290	Joaquin Torres Falcon II	T99	event:played	ongoing: the on reveal abilities of your 1-cost card
+8000296	Juggernaut	KW	name:move	on reveal: move away all enemy cards played h
+8000302	Omega Sentinel	KW	name:afflict	activate: afflict the highest-power enemy card 
+8000307	Kid Omega	KW	name:destroy	activate: destroy the next card you play this t
+8000308	Killmonger	KW	name:destroy	on reveal: destroy all 1-cost cards.
+8000310	Kingpin	KW	name:afflict	hen an enemy card moves here, afflict it with -2 power.
+8000319	Lady Bullseye	KW	name:afflict	on reveal: afflict an enemy card with -2 power. 
+8000320	Lady Deathstrike	KW	name:destroy	on reveal: destroy each card here with 3 or less
+8000324	Lasher	KW	name:afflict	activate: afflict an enemy card here with negat
+8000333	Lockheed	KW	name:afflict	ayed a 1-cost card this turn, afflict an enemy card here with -2 po
+8000341	Madame Web	T100	event:always	ongoing: each turn, one of your other
+8000343	Magneto	KW	name:move	on reveal: move all enemy 3 and 4-cost cards 
+8000346	Magus	T99	event:played	nt energy. (without using its on reveal)
+8000346	Magus	V21	value:copy|copy_keywords|create|summon|transform|copy_of_it|revive	activate: copy the text of a character in yo
+8000364	Mephisto	V20	value:this_game|recalled_this_game|once_per_game	if you win this game, double your winnings.
+8000365	Mercury	KW	name:move	moveable once. ongoing: enemy card
+8000373	Misery	KW	name:destroy	f your other cards here, then destroy them.
+8000409	Mystique	T100	event:always	e last card you played has an ongoing, copy its text. (if able)
+8000409	Mystique	V21	value:copy|copy_keywords|create|summon|transform|copy_of_it|revive	rd you played has an ongoing, copy its text. (if able)
+8000416	Negasonic Teenage Warhead	KW	name:destroy	emy character is played here, destroy it.
+8000434	Optic Blast	KW	name:afflict	on reveal: afflict an enemy here with -8 power.
+8000439	Peni Parker	T110	value:merge	d  #  to your hand. when this merges, you get +1 energy next turn.
+8000444	Polaris	KW	name:move	on reveal: move an enemy 1 or 2-cost card to 
+8000449	Prodigy	V21	value:copy|copy_keywords|create|summon|transform|copy_of_it|revive	: if this is in the back row, copy the text of the card in front
+8000455	Herbie Program 03	V03	value:create|copy|created|set_terrain|terrain_changed	activate: create a  #  here. set its power to 
+8000474	Red Guardian	KW	name:afflict	on reveal: afflict the lowest-power enemy card h
+8000482	Remote Mines	KW	name:afflict	on reveal: afflict the 2 highest-power enemy car
+8000492	Rogue	T100	event:always	 steal the text from an enemy ongoing card here.
+8000499	Sam Wilson & Nightcrawler Doomsday	KW	name:move	frontline | moveable backline | end of turn: g
+8000503	Sauron	T100	event:always	remove the abilities from all ongoing cards in your deck.
+8000511	Scorpion	KW	name:afflict	on reveal: afflict cards in your opponent's hand
+8000514	Sebastian Shaw	KW	name:empowered	when this is empowered, gain an additional +2 power.
+8000515	Selene	KW	name:afflict	on reveal: afflict the lowest-power card in each
+8000526	Shang-Chi	KW	name:destroy	on reveal: destroy an enemy card here that has 1
+8000533	Silk	KW	name:move	fter any card is played here, move this to another location.
+8000537	Silver Surfer First Steps	T99	event:played	winning this location with an on reveal card, copy its text.
+8000537	Silver Surfer First Steps	V21	value:copy|copy_keywords|create|summon|transform|copy_of_it|revive	ation with an on reveal card, copy its text.
+8000539	Sinister Six	V02	value:draw|drawn	t: the first 6 characters you draw are evil! after you play them
+8000568	Soul Shot	KW	name:destroy	destroy the weakest enemy card here.
+8000572	Sparky	KW	name:move	ate: give your card that last moved +2 power and move it back to
+8000573	Spectrum	T100	event:always	on reveal: give your ongoing cards +2 power.
+8000575	Winds of Watoomb	KW	name:afflict	on reveal: afflict an enemy card here with -5 po
+8000575	Winds of Watoomb	KW	name:move	y card here with -5 power and move it right.
+8000578	Nico Minoru Spell 02	KW	name:destroy	fter you play your next card, destroy it to draw two cards.
+8000580	Nico Minoru Spell 03	KW	name:move	fter you play your next card, move it one location to the right.
+8000581	Bolts of Balthakk	T99	event:played	on reveal: next turn, you get +4 energy
+8000587	Spider-Man	KW	name:move	on reveal: move to another location and pull 
+8000588	Spider-Man 2099	KW	name:afflict	hen this moves to a location, afflict an enemy card there with -3 p
+8000593	Spider Sense	T109	value:can|moves	 power. costs 1 less for each moveable card you've played.
+8000594	Spider-Woman	KW	name:afflict	on reveal: afflict all enemy cards here with -1 
+8000604	Stegron	KW	name:move	on reveal: move an enemy card here one locati
+8000614	Sub-Mariner	KW	name:empowered	when this is empowered, add a  #  1-cost character t
+8000617	Summoning Ritual 3	KW	name:destroy	on reveal: destroy 2 of your characters here to 
+8000630	Symbiote Spider-Man	V21	value:copy|copy_keywords|create|summon|transform|copy_of_it|revive	est-cost card here into this. copy its text like it just reveale
+8000632	Tao Mandala	T100	event:always	 copy the text of one of your ongoing cards here onto your other ch
+8000648	The Hunger	KW	name:horde	on reveal: horde +3.
+8000652	The Thing First Steps	KW	name:destroy	e, if your side here is full, destroy an enemy card here with less 
+8000664	Toad	KW	name:move	on reveal: move the last card you played to t
+8000665	Tombstone	KW	name:destroy	on reveal: destroy your lowest-power card at eac
+8000666	Topaz	KW	name:move	after you play a card here, move it to the middle location.
+8000675	Ultron Mind Stone	T100	event:always	ongoing: your on reveal abilities her
+8000679	Ultron Space Stone	KW	name:move	on reveal: move the lowest-power enemy card h
+8000690	Venom	KW	name:destroy	on reveal: destroy your other cards here. add th
+8000691	Venus	KW	name:empowered	when your cards in play are empowered, give those cards an addition
+8000698	Viv Vision	KW	name:move	u're winning here. otherwise, move this to another location.
+8000709	Web Sling	T99	event:played	on reveal: next turn, one of your cards
+8000710	Werewolf By Night	KW	name:move	after you play a card, move there to gain +2 power if it 
+8000717	Widow's Kiss	KW	name:destroy	destroy this when your side of this l
+8000727	Wong	T100	event:always	ongoing: your on reveal abilities her
+8000729	Xorn	KW	name:move	r 4-cost card is played here, move it to another location.
+8000732	Yellowjacket	KW	name:afflict	on reveal: afflict your other cards here with -1
+8000733	Yo-Yo	KW	name:move	when this card moves, move it back with +1 power.
+8000738	Zombie Blade	KW	name:horde	ter in your opponent's hand. (horde first if necessary)
+8000739	Zombie Captain Marvel	KW	name:destroy	activate: destroy your other cards here to get 
+8000739	Zombie Captain Marvel	KW	name:move	ere to get +3 power for each. move to a location you're losing.
+8000741	Zombie Giant-Man	KW	name:horde	on reveal: horde +2, then this gains power equ
+8000743	Zombie Mister Fantastic	KW	name:horde	on reveal: horde +2. activate: give 4 of your 
+8000744	Zombie Nova	KW	name:horde	on reveal and when destroyed: horde +3.
+8000746	Zombie Scarlet Witch	KW	name:horde	after you play a card here, horde +2.
+8000747	Zombie Sentry	KW	name:horde	on reveal: horde +1 for each of your cards at 
+8000748	Zombie Venom	KW	name:destroy	on reveal: destroy your first other card here. a
+8000748	Zombie Venom	KW	name:horde	our other cards is destroyed, horde +3.

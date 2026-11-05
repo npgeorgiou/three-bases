@@ -18,6 +18,7 @@ DECK_RULES = {  # the games' own deck-building rules (not card data; sources in 
     'inscryption': {'factions': None, 'neutral': (), 'acts': ('Act I', 'Act II', 'Act III', 'Finale Grimora', 'Finale Magnificus'),
                     'same_act': {"Kaycee's Mod": 'Act I'}},
     'into_the_breach': {'factions': None, 'neutral': (), 'never_category': ('terrain',)},
+    'marvel_snap': {'size': 12, 'copies': 1, 'factions': None, 'neutral': (), 'never_category': ('terrain',)},
 }
 _ACTS = {}
 _CARD = {}  # game -> id -> (regions, category)
