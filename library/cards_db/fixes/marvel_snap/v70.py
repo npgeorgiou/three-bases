@@ -22,9 +22,12 @@ def main():
                 do = a.get('do') or []
                 for i, e in enumerate(do):
                     if e.get('act') == 'kill' and (e.get('on') or {}).get('kind') == 'position' and e['on'].get('pick') == 'all':
-                        if any(d.get('act') == 'kill' and (d.get('on') or {}).get('kind') == 'unit' for d in do): continue
+                        old = [d for d in do if d.get('act') == 'kill' and (d.get('on') or {}).get('kind') == 'unit']
+                        if old:  # added before the link was written: give it one
+                            if 'link' not in old[0]: old[0]['link'] = 'and'; n += 1
+                            break
                         on = {'kind': 'unit', 'side': 'any', 'pick': 'all', 'zone': 'board', 'with': e['on'].get('with', [])}
-                        do.insert(i + 1, {'act': 'kill', 'on': on}); n += 1; break
+                        do.insert(i + 1, {'act': 'kill', 'on': on, 'link': 'and'}); n += 1; break  # the same act: "and"
         if n: open(path, 'w').write(''.join(json.dumps(r, separators=(',', ':')) + '\n' for r in L))
         print(os.path.basename(path), n, 'changed')
 

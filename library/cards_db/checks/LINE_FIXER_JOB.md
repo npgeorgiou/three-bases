@@ -10,7 +10,8 @@ calls in all; count them. At call 25 stop changing things and finish: undo a hal
 3. Find the cause in one sentence: is the data wrong (rows that disagree with the card's words) or the rule (rows right, line
    wrong)? Fix it once, for every card and every game it touches:
    - data: a script fixes/<game>/vNN.py (next free number, safe to run twice, by a rule over the texts, never card by card;
-     copy the form of the newest one there), run it once;
+     copy the form of the newest one there), run it once, then `python3 check.py <game> read/<game>/<file>.jsonl` on each
+     changed file (0 problems; a second effect needs its "link"; 5 Nov 2026 a missing one stopped the rebuild);
    - rule: the smallest change in the code line the sheet names (network.py, refs.py, flat.py), with a one-line comment
      saying what it is for.
    A new vocab value: a vocab.tsv row (date and reason) and a BRIEF.md line.
