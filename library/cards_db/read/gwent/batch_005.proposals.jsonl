@@ -4,3 +4,7 @@
 {"id":757179,"field":"pick","need":"rightmost (the unit furthest right on a row)"}
 {"id":757183,"field":"to","need":"leftmost position on a row"}
 {"id":757199,"field":"x","need":"amount of boost on a unit"}
+{"id":757233,"field":"limit","need":"first_each_turn"}
+{"id":757242,"field":"event","need":"moved_to_deck_top"}
+{"id":757243,"field":"x","need":"duration of a status on a row, as an amount"}
+{"id":757244,"field":"x","need":"total duration of named row statuses on a side"}
