@@ -1237,7 +1237,8 @@ def use_of(c, game, b, act, kw, ps, w=None):
     if act == 'give_keyword' and tree in ('evasion', 'excess_damage') and ('big_strike' in u['flags'] or u['needs'] & {'strikes_nexus', 'nexus_damaged'}):
         return f'gives it {kwn}: its strike gets through in full'  # Sumpworks Map -> Vi: "struck for 10+ damage in one strike"
     up = lambda *ks: act in ('stat_change', 'grow') and any(k in p and raises(p[k]) for k in ks)
-    if up('power') and b in power_doublers(c): return 'more power: it doubles its power'  # Okoye -> Black Panther
+    if up('power') and b in power_doublers(c) and not (b in play_doublers(c) and not re.search(r'zone (hand|deck)', w or '')):
+        return 'more power: it doubles its power'  # Okoye -> Black Panther; a doubling on play comes before a buff on a unit in play (Eye Of The Storm -> Dashing Dandy: no line)
     if up('power') and b in own_power_readers(c): return 'more power: its text reads its power'  # Poppy: "allies with less power than me" (L18)
     if up('power', 'strength') or (act == 'give_keyword' and tree in ('attack_gain', 'temporary_buff')):
         if u['trees'] & set(POWER_USE) or u['flags'] & {'big_strike', 'fights', 'level_hit'} or ('play_fights' in u['flags'] and 'hand' in (w or '')) or (b in gains_back(c, game) and not fixed_hit(c, b)):
@@ -1275,6 +1276,13 @@ def to_hand(c):
     if 'to_hand' not in CACHE:
         CACHE['to_hand'] = {a for (a,) in c.execute("select card from flat_do where origin='own' and act in ('stat_change','grow') and on_zone='hand'")}
     return CACHE['to_hand']
+
+
+def to_deck(c):
+    """cards that give stats to my cards in the deck (they reach a card before it is played)"""
+    if 'to_deck' not in CACHE:
+        CACHE['to_deck'] = {a for (a,) in c.execute("select card from flat_do where origin='own' and act in ('stat_change','grow') and on_zone='deck'")}
+    return CACHE['to_deck']
 
 
 def on_play(c, ab):
@@ -1333,6 +1341,14 @@ def power_doublers(c):
         CACHE['pdbl'] = {b for (b,) in c.execute("""select d.card from flat_do d join flat_if f on f.card=d.card and f.ability=d.ability and f.test='amount_stat'
                          and f.attr='power' and f.of_pick='self' where d.origin='own' and d.act='stat_change' and d.on_pick='self' and d.params like '%power=stat%'""")}
     return CACHE['pdbl']
+
+
+def play_doublers(c):
+    """power doublers whose every doubling goes off only when played: a buff must reach them in hand or deck first"""
+    if 'pdbl_play' not in CACHE:
+        CACHE['pdbl_play'] = {b for b in power_doublers(c) if all(on_play(c, ab) for (ab,) in c.execute(
+            "select distinct d.ability from flat_do d where d.card=? and d.origin='own' and d.act='stat_change' and d.on_pick='self' and d.params like '%power=stat%'", (b,)))}
+    return CACHE['pdbl_play']
 
 
 def all_raisers(c):
@@ -1412,7 +1428,7 @@ def aimed(c, game, nodes, broad):
         if not sharp and (kind != 'player' or act in ('heal', 'stat_change', 'grow')) and act != 'return_card' and act not in HARM_GAIN:
             # heal or stats for the General go only to a General whose text uses them (Aer Pridebeak -> Argeon Highmayne)  # help to any card of a kind: only
             # cards that use it (Kaptain 1 Nov 2026); "your General" is one card; harm on my card is kept only for its own effect below
-            wh = (w or '') + (';zone hand' if a in to_hand(c) else '')  # help to cards in hand reaches a card before it is played (Oakling, nfa01)
+            wh = (w or '') + (';zone hand' if a in to_hand(c) else '') + (';zone deck' if a in to_deck(c) else '')  # help to cards in hand reaches a card before it is played (Oakling, nfa01)
             hits = [b for b in hits if uses_help(c, game, b, act, kw, ps, wh)]
             if act in ('stat_change', 'grow') and a in all_raisers(c):  # all my units raised alike: no ally passes a filter by my own
                 # power that it failed before (For Demacia! -> Poppy)
