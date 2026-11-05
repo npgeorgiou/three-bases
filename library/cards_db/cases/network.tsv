@@ -534,3 +534,4 @@ n538	marvel_snap	Viper, Absorbing Man	Viper	Absorbing Man	line	is a unit with On
 n539	runeterra	Snowy Razorclaw, Out Of The Way	Snowy Razorclaw	Out Of The Way	line	sets its stats to another unit's stat: a buff Out Of The Way waits for	Claude 5 Nov 2026, line check C6: set to a read stat is a buff
 n540	runeterra	Zed (level 2), Out Of The Way	Zed (level 2)	Out Of The Way	line	copies stats onto the summon: a buff	Claude 5 Nov 2026, line check C6: set to a read stat is a buff
 n541	marvel_snap	Agent Venom, Wolverine	Agent Venom	Wolverine	none	sets power to a fixed 3: no buff	Claude 5 Nov 2026, line check C6: fixed set stays no buff
+n542	duelyst	Gargantuan Growth, Oropsisaur	Gargantuan Growth	Oropsisaur	line	gives a minion "Grow: +8/+8": the Grow keyword Oropsisaur waits for	Claude 5 Nov 2026, line check C7: Grow given by text is the keyword
