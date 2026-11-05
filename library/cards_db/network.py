@@ -413,6 +413,10 @@ def lines_of(c, game):
     self_kw = {(a_, k_) for a_, k_ in c.execute("""select g.card, g.keyword_ref from flat_do g where g.origin='own' and g.act='give_keyword'
                and (g.on_pick='self' or (g.on_pick='it' and exists (select 1 from flat_do d where d.ability=g.ability and d.seq<g.seq
                and d.act in ('copy','create','summon') and d.on_pick='self')))""")}
+    # a card that puts itself back in hand when discarded (Swarm, Apocalypse) can be discarded again: it feeds a discard count (L10 enables)
+    for card, in c.execute("""select distinct w.card from flat_when w join flat_do d on d.ability=w.ability where w.event='discarded' and w.obj_pick='self'
+            and d.origin='own' and d.on_pick='self' and d.act in ('return_card','copy')"""):
+        if card in cards: makes['discarded'].add((card, 'mine', None, 'card', 'self', None, card, False)); own_makes[card].add('discarded'); made_by[(card, 'discarded')].add('own')
     for card, origin, ab, role, h, side, kw, pick, kind, w, ref, ak, aw, via in c.execute(
             'select card, origin, ability, role, happening, side, keyword, pick, kind, obj_with, ref, actor_kind, actor_with, via from flat_ref'):
         if card not in cards: continue
@@ -629,6 +633,7 @@ def lines_of(c, game):
                 say = act_say(c, h, ts_, tk, self_=tpick == 'self')
                 if role == 'state' and h in ('moves', 'moves_onto') and 'position is same_lane' in (tw or '') and game == 'marvel_snap' and t not in lane_fill(c): continue  # a lane is a location, not a range: a unit moved in is no help to a card that acts in its lane (Doctor Strange -> Danger), unless it needs the lane filled (PymParticle Arrow)
                 if role == 'state' and h in ('moves', 'moves_onto') and place_of(tw): say = moves_said(tw, ts_, tpick == 'self')
+                if mpick == 'self' and h == 'discarded' and mref == m: say = 'comes back after it is discarded, to be discarded again'  # Swarm
                 if mpick == 'self' and h == 'dies': say = 'dies, comes back and dies again' if mref == m else 'dies by its own effect'
                 if mpick == 'self' and h == 'given_keyword' and mk: say = f'has {mechanics.name(c, mk)}'  # Manta Rider has Flying
                 if mpick == 'self' and h == 'trap_activated': say = 'is a trap that goes off'  # the Puffcap itself

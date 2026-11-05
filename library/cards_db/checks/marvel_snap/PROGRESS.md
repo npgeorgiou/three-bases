@@ -8,5 +8,5 @@
    cases CASE WRONG by L18/L1/L9 for Kaptain: Shuri -> Typhoid Mary, Shuri -> Red Skull, Taskmaster -> Red Skull,
    Taskmaster -> Typhoid Mary, Cable -> Mantis).
 6. Sheet: done: causes_sheet.md (30 open causes C1-C30; before.tsv, tb0.tsv made 5 Nov 2026). Hela's discard cause is fixed (v68, cases n413-n416).
-7. Fixers: results: C1 FIXED; C2 FIXED; C3 FIXED; C4 FIXED (its lane-play part undone: Kaptain's nst26); C5 FIXED; C6 FIXED; C7 FIXED; C8 FIXED; C9 FIXED; C10 FIXED; C11 FIXED; C12 FIXED; C13 FIXED; C14 FIXED; C15 FIXED; C16 FIXED; C17 FIXED; C18 FIXED; C19 FIXED; C20 FIXED; C21 FIXED; C22 FIXED; C23 FIXED;
+7. Fixers: results: C1 FIXED; C2 FIXED; C3 FIXED; C4 FIXED (its lane-play part undone: Kaptain's nst26); C5 FIXED; C6 FIXED; C7 FIXED; C8 FIXED; C9 FIXED; C10 FIXED; C11 FIXED; C12 FIXED; C13 FIXED; C14 FIXED; C15 FIXED; C16 FIXED; C17 FIXED; C18 FIXED; C19 FIXED; C20 FIXED; C21 FIXED; C22 FIXED; C23 FIXED; C24 FIXED;
 8-10: not started.
