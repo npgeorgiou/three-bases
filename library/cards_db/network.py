@@ -480,7 +480,7 @@ def lines_of(c, game):
                       (ak, aw, actor_side.get((card, ab)) if role == 'trigger' else None), cost, ab in cheap_abs,
                       state_use.get((card, ab), '') if role == 'state' else ''))
     deck_created_draw = {x for (x,) in c.execute("select distinct card from flat_do where act='draw' and origin='own' and on_zone='deck' and on_with like '%state is created%'")}
-    deck_makers = {x for (x,) in c.execute("select distinct card from flat_do where act in ('create','copy','shuffle_into_deck') and origin='own' and (on_zone like 'deck%')")}
+    deck_makers = {x for (x,) in c.execute("select distinct card from flat_do where act in ('create','copy','shuffle_into_deck') and origin='own' and (on_zone like 'deck%' or eff_zone like 'deck%')")}  # a made card put into the deck is written in eff_zone (Shadowlands Daredevil)
     state_ev = collections.defaultdict(set)  # a state and the happenings that put things in it (damaged <- damaged)
     for v, cs in c.execute("select value, causes from vocab where field='state' and coalesce(causes,'')!=''"):
         state_ev[v] |= {x.split(':')[0] for x in cs.split(';')}

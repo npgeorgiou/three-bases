@@ -471,3 +471,7 @@ n475	marvel_snap	Fantomex, Zombie Captain Marvel	Fantomex	Zombie Captain Marvel	
 n476	marvel_snap	Fantomex, Zombie Captain Marvel	Zombie Captain Marvel	Fantomex	line	makes your units die	Claude 5 Nov 2026, line check C14: right example stays (kills feed the count)
 n477	marvel_snap	Grapple Arrow, Galactus	Grapple Arrow	Galactus	none		Claude 5 Nov 2026, line check C15: Galactus needs exactly one unit in his lane; moving units in is no help
 n478	marvel_snap	Grapple Arrow, PymParticle Arrow	Grapple Arrow	PymParticle Arrow	line	moves your units	Claude 5 Nov 2026, line check C15: PymParticle needs a full lane; moved units fill it
+n479	marvel_snap	Iron Patriot, King Eitri	Iron Patriot	King Eitri	none		Claude 5 Nov 2026, line check C16: creates into the hand, Eitri draws created cards from the deck
+n480	marvel_snap	Scarlet Witch Queen of Chaos, King Eitri	Scarlet Witch Queen of Chaos	King Eitri	none		Claude 5 Nov 2026, line check C16: creates into the hand, Eitri draws created cards from the deck
+n481	marvel_snap	Valentina, King Eitri	Valentina	King Eitri	none		Claude 5 Nov 2026, line check C16: creates into the hand, Eitri draws created cards from the deck
+n482	marvel_snap	Shadowlands Daredevil, King Eitri	Shadowlands Daredevil	King Eitri	line	creates cards	Claude 5 Nov 2026, line check C16: creates into the deck, so Eitri can draw it
