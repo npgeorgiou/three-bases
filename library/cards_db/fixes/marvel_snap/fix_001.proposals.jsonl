@@ -1,0 +1,39 @@
+{"id":796169,"field":"act","need":"win_location"}
+{"id":796176,"field":"act","need":"not_counted_for_win"}
+{"id":796244,"field":"act","need":"ruin"}
+{"id":796261,"field":"event","need":"retreats"}
+{"id":796271,"field":"with","need":"series_1 filter"}
+{"id":796306,"field":"act","need":"end_game"}
+{"id":796338,"field":"with","need":"opening hand"}
+{"id":796377,"field":"pick","need":"last_arrived"}
+{"id":796378,"field":"pick","need":"one_other_location"}
+{"id":8000008,"field":"test","need":"even_turn"}
+{"id":8000082,"field":"with","need":"wins_you_the_game"}
+{"id":8000111,"field":"zone","need":"plays_before_reveal"}
+{"id":8000143,"field":"with","need":"even_cost"}
+{"id":8000181,"field":"act","need":"max_mana_set"}
+{"id":8000204,"field":"param","need":"total_cost_limit"}
+{"id":8000217,"field":"position","need":"left_lane"}
+{"id":8000242,"field":"ability","need":"swap_activate"}
+{"id":8000245,"field":"ability","need":"unlock_potential"}
+{"id":8000269,"field":"pick","need":"highest_cost_at_each_location"}
+{"id":8000282,"field":"on","need":"judge"}
+{"id":8000289,"field":"with","need":"bonus_energy"}
+{"id":8000331,"field":"x","need":"divide_evenly"}
+{"id":8000357,"field":"with","need":"makes_you_lose_the_game"}
+{"id":8000364,"field":"act","need":"double_winnings"}
+{"id":8000378,"field":"event","need":"cost_increased"}
+{"id":8000381,"field":"with","need":"opening hand"}
+{"id":8000420,"field":"with","need":"died_last_round"}
+{"id":8000468,"field":"with","need":"released_before"}
+{"id":8000520,"field":"position","need":"right_lane"}
+{"id":8000531,"field":"x","need":"turns_with_2_plays"}
+{"id":8000574,"field":"x","need":"turns_all_energy_spent"}
+{"id":8000602,"field":"x","need":"turns_ended_unspent"}
+{"id":8000607,"field":"lasts","need":"after_next_turn"}
+{"id":8000608,"field":"test","need":"turns_in_a_row"}
+{"id":8000621,"field":"event","need":"reveals"}
+{"id":8000640,"field":"with","need":"losing_player"}
+{"id":8000686,"field":"with","need":"stolen_power"}
+{"id":8000707,"field":"test","need":"every_third_time"}
+{"id":8000715,"field":"test","need":"all_previous_turns"}
