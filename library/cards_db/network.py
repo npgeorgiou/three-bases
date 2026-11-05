@@ -479,6 +479,8 @@ def lines_of(c, game):
         takes[h].add((card, 'mine' if pick == 'self' else side, kw, kind, pick, w, ab in lvl, role,
                       (ak, aw, actor_side.get((card, ab)) if role == 'trigger' else None), cost, ab in cheap_abs,
                       state_use.get((card, ab), '') if role == 'state' else ''))
+    deck_created_draw = {x for (x,) in c.execute("select distinct card from flat_do where act='draw' and origin='own' and on_zone='deck' and on_with like '%state is created%'")}
+    deck_makers = {x for (x,) in c.execute("select distinct card from flat_do where act in ('create','copy','shuffle_into_deck') and origin='own' and (on_zone like 'deck%')")}
     state_ev = collections.defaultdict(set)  # a state and the happenings that put things in it (damaged <- damaged)
     for v, cs in c.execute("select value, causes from vocab where field='state' and coalesce(causes,'')!=''"):
         state_ev[v] |= {x.split(':')[0] for x in cs.split(';')}
@@ -614,6 +616,8 @@ def lines_of(c, game):
                 bc = by_combat.get((m, h))  # made only by a fight keyword (Quick Attack, Fearsome, Overwhelm): only the needs that keyword
                 if bc is not None and not (('nexus' in bc and (h in ('nexus_damaged', 'strikes_nexus') or tkind == 'player')) or h in bc): continue
                 # really serves: Overwhelm and evasion reach the Nexus, deathtouch kills; Quick Attack adds no strike (Blade of the Exile)  # "non-combat damage": fighting is combat  # "allied Pykes have dealt damage": the damage of a spell or another unit is not it
+                if h == 'created' and t in deck_created_draw and m not in deck_makers: continue  # King Eitri draws created cards from the deck:
+                # only a card that puts cards into the deck feeds it, not one that creates into the hand (Agent 13)
                 need = {e for p in (tw or '').split(';') if p.startswith('state is ') for e in state_ev.get(p[9:], ())} - {h}
                 if need and h in ('played', 'summoned', 'drawn', 'created') and not need & own_makes[m]: continue  # "8 cost reduced cards
                 # played": playing a card no one made cheaper is not it (a unit healed is damaged by the enemy too: no such need)
@@ -1710,7 +1714,8 @@ def played_lines(c, game, nodes, broad):
                       # one more card is no more plays (Beta -> After Image+, Annie -> Breakneck Husk)
                       if k in ('card', 'any', 'anything', None) or k in every_card_kinds(c, game) or ok == k or (ref in cards and cards[ref]['cat'] in KIND_CAT.get(k, {k}))} - {t}
                 # "whenever you play a spell": only what makes spells (Vinemother's Stings) sets it off more
-                for a in mk:
+                for a in (mk if not (k in every_card_kinds(c, game) and kind not in (None, 'card', 'any', 'anything')) else ()):  # a unit played in a
+                    # lane (Angela, Agony) is no "play a card": more cards made is no more lane plays (L19, L1b)
                     if ('waits', 0.5 / len(mk), 'makes more cards to play') not in out[(a, t)]: out[(a, t)].append(('waits', 0.5 / len(mk), 'makes more cards to play'))
             continue
         n = kind_count(c, game, 'any' if k == 'card' else k, w)

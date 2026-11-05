@@ -423,3 +423,7 @@ n425	marvel_snap	Ultron Mind Stone, Absorbing Man	Ultron Mind Stone	Absorbing Ma
 n426	marvel_snap	Onslaught, J. Jonah Jameson	Onslaught	J. Jonah Jameson	none		Claude 5 Nov 2026, line check: its Ongoing has no effect to repeat (L14)
 n427	marvel_snap	Caiera, Broodling	Caiera	Broodling	none		Claude 5 Nov 2026, line check: protecting cost 1 units is help aimed at a kind; Broodling has no text that uses it (L14)
 n428	marvel_snap	Joaquin Torres Falcon II, Electro	Joaquin Torres Falcon II	Electro	line		Claude 5 Nov 2026, line check: Electro has a real On Reveal to repeat
+n429	marvel_snap	Arishem, Angela	Arishem	Angela	none		Claude 5 Nov 2026, line check: creating cards is no unit played in a lane (L19, L1b)
+n430	marvel_snap	Agamotto, Agony	Agamotto	Agony	none		Claude 5 Nov 2026, line check: creating cards is no unit played in a lane (L19, L1b)
+n431	marvel_snap	Agent 13, King Eitri	Agent 13	King Eitri	none		Claude 5 Nov 2026, line check: Agent 13 creates into hand, Eitri draws created cards from the deck
+n432	marvel_snap	Agent 13, Devil Dinosaur	Agent 13	Devil Dinosaur	line		Claude 5 Nov 2026, line check: fills your hand: right
