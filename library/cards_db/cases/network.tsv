@@ -510,3 +510,5 @@ n514	marvel_snap	Wave, Death	Wave	Death	line	makes it cheaper	Claude 5 Nov 2026,
 n515	marvel_snap	Wave, Hulk	Wave	Hulk	line	makes it cheaper	Claude 5 Nov 2026, line check C28: a cap of 4 cuts a cost 6 card
 n516	marvel_snap	Wave, Ant Man	Wave	Ant Man	none		Claude 5 Nov 2026, line check C28: a cap of 4 cuts nothing for a cost 1 card
 n517	marvel_snap	Moon Girl, The Collector	Moon Girl	The Collector	line	creates cards	Claude 5 Nov 2026, line check C29: Moon Girl copies are created cards the Collector reacts to
+n518	marvel_snap	Professor X, Devil Dinosaur	Professor X	Devil Dinosaur	line	fills your hand	Claude 5 Nov 2026, line check C30: Professor X stops plays so the hand stays full for Devil Dinosaur
+n519	marvel_snap	Agent 13, Devil Dinosaur	Agent 13	Devil Dinosaur	line		Claude 5 Nov 2026, line check C30: fills your hand stays right

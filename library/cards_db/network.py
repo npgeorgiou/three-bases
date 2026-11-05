@@ -2090,6 +2090,9 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
         refill = {a for (a,) in c.execute("""select d.card from flat_do d join flat_do x on x.card=d.card and x.ability=d.ability where
                   d.act='discard' and x.act in ('draw','create')""")}  # Rummage discards 2 and draws 2: the hand is never empty (L4)
         helpers = (hand(('discard',), 0) - refill) if few else hand(('create', 'copy', 'return_to_hand'), 0, 'has_keyword') | hand(('draw',), 1)  # a draw goes to hand
+        if not few and not any(p_.startswith('cost ') for p_ in (ow_ or '').split(';')):  # a card that stops cards being played from hand (Professor X) keeps the hand full
+            helpers = helpers | {a for (a,) in c.execute(f"""select card from flat_do where origin='own' and act='cant' and param_event='played' and on_pick='all'
+                      and on_zone='hand' and on_kind='card' and card in ({marks})""", L)}
         named = [p_ for p_ in (ow_ or '').split(';') if p_.split(' ')[:2] in (['type', 'is'], ['card', 'is'], ['name_has', 'is']) or p_.startswith('cost ')]
         # "cards that cost 8+ in hand" (Trundle level 2): a draw of the top card brings none (L1b)
         if named and not few:  # "for each Pirate in your hand" (Lucky Charmers): only what brings such cards fills it
