@@ -484,3 +484,5 @@ n488	marvel_snap	Peni Parker, Man-Spider	Peni Parker	Man-Spider	none		Claude 5 N
 n489	marvel_snap	Super-Skrull, Astral Projection	Super-Skrull	Astral Projection	none	copies keywords, gives no On Reveal	Claude 5 Nov 2026, line check C19: a keyword copy is no named keyword
 n490	marvel_snap	High Evolutionary, Cosmo	High Evolutionary	Cosmo	none	gives unnamed abilities, no On Reveal	Claude 5 Nov 2026, line check C19: unnamed ability is no named keyword
 n491	marvel_snap	Basic Arrow, Mystique	Basic Arrow	Mystique	line	makes your units get Ongoing	Claude 5 Nov 2026, line check C19: right example stays
+n492	marvel_snap	Grand Master, Invisible Woman	Grand Master	Invisible Woman	none	moves your units; her rows read no move	Claude 5 Nov 2026, line check: moving units is no help for a card that only acts on its lane
+n493	marvel_snap	Wong, Shuri	Wong	Shuri	line	plays it again	Claude 5 Nov 2026, line check: right example stays
