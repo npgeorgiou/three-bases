@@ -73,6 +73,8 @@ not taste. A case in cases/network.tsv written by Kaptain ("Kaptain <date>" in i
   text feed no "whenever damage is dealt" trigger (Envenom, The Boot), unless it levels up or the doer is the enemy (Vek
   Hormones). Read wants right: "draw until you have 6" (Expertise) wants an empty hand; "if you have no Block" (Auto-Shields)
   wants none; "repeat Summon effects" (Transcendimp) is for cards with Summon.
+  Kept (Kaptain, 5 Nov 2026): a repeat of a trigger keyword links to every card with it, however common (Marvel Snap's On
+  Reveal is on 306 of 660 cards: Odin, Wong and Absorbing Man get lines to On Reveal cards).
 - L22 (2 Nov 2026) What pays a card's cost is a line: a land changed to the colour a card needs pays its land cost (Ring of
   Dominion: "turns a land into the colour it needs: helps pay its land cost, and can take that land from the enemy").
 - L23 (3 Nov 2026) A unit that moves itself gives no line to cards that depend on positions (Faeria, Duelyst).

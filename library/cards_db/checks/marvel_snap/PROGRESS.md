@@ -7,6 +7,7 @@
    and the realworld misses; then steps 5-6 for that file only.
 5. Verifiers: done for the readers' causes: vv_marvel_snap_1..2.md.
 6. Sheet: done: causes_sheet.md (21 causes). Hela's discard cause is fixed (v68, cases n413-n416).
-7. Fixers: next, from the top of causes_sheet.md. Kaptain's answer needed first: is repeating On Reveal (306 of 660 cards:
-   Odin, Wong, Absorbing Man) a deck choice or generic (L21)?
+7. Fixers: next, from the top of causes_sheet.md. Kaptain 5 Nov 2026 (L21 "Kept"): repeats of On Reveal get lines, so the
+   Absorbing Man causes (lr_marvel_snap_3.md 5, lr_marvel_snap_4.md 3; verifier said NOT REAL) are REAL: run them through
+   steps 5-6 again with lr_misses.md, then fix.
 8-10: not started.

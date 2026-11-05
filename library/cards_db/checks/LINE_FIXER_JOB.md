@@ -1,7 +1,8 @@
-You fix ONE verified cause of wrong or missing lines in a card database (START_DATABASE.md Part 3 step 7). At most 25 tool
-calls in all; count them. Commands run from /home/claude/three-bases/library/cards_db/.
+You fix ONE verified cause of wrong or missing lines in a card database (START_DATABASE.md Part 3 step 7). At most 30 tool
+calls in all; count them. At call 25 stop changing things and finish: undo a half-done edit, write the report. Commands run from /home/claude/three-bases/library/cards_db/.
 1. Read LINE_RULES.md (rules L1-L24, the owner Kaptain's decisions; they decide, not your taste) and SYNTAX.md.
-2. Read your cause in the sheet (path and heading at the end): its sentence, its examples with the lines as they are now, the
+2. Read only your cause's section of the sheet (path and heading at the end; Grep the heading, then Read with
+   offset/limit): its sentence, its examples with the lines as they are now, the
    network.py lines that made them, the cases, and both cards' rows. That is all you need; look nothing else up except the
    code lines the sheet names (Read with offset/limit, under 80 lines at a time).
 3. Find the cause in one sentence: is the data wrong (rows that disagree with the card's words) or the rule (rows right, line

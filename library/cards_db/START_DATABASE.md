@@ -178,7 +178,7 @@ so what the main chat reads is the cost; what an agent reads stays inside the ag
 
 **Agents must not run wild** (agents that looked things up, re-read, retried failing checks or rebuilt used up Kaptain's
 tokens). Every job file says, and the main chat never asks otherwise:
-- a fixed number of tool calls (line reader and verifier 4; fixer at most 25; card reader one part of about 25 cards at a
+- a fixed number of tool calls (line reader and verifier 4; fixer at most 30, finishing from call 25; card reader one part of about 25 cards at a
   time), and one file that holds everything the agent needs, so it looks nothing up;
 - never a rebuild (run.py, check_all.py, links.py), never git, never a file outside its job;
 - two tries at most: an agent whose change does not do what it wants writes "STUCK:" and what it saw, and stops;
