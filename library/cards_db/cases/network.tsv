@@ -475,3 +475,6 @@ n479	marvel_snap	Iron Patriot, King Eitri	Iron Patriot	King Eitri	none		Claude 5
 n480	marvel_snap	Scarlet Witch Queen of Chaos, King Eitri	Scarlet Witch Queen of Chaos	King Eitri	none		Claude 5 Nov 2026, line check C16: creates into the hand, Eitri draws created cards from the deck
 n481	marvel_snap	Valentina, King Eitri	Valentina	King Eitri	none		Claude 5 Nov 2026, line check C16: creates into the hand, Eitri draws created cards from the deck
 n482	marvel_snap	Shadowlands Daredevil, King Eitri	Shadowlands Daredevil	King Eitri	line	creates cards	Claude 5 Nov 2026, line check C16: creates into the deck, so Eitri can draw it
+n483	marvel_snap	The Hunger, Zombie Giant-Man	The Hunger	Zombie Giant-Man	line	more power	Claude 5 Nov 2026, line check C17: Giant-Man reads the power of Zombie Horde, Hunger gives it power
+n484	marvel_snap	Zombie Scarlet Witch, Zombie Giant-Man	Zombie Scarlet Witch	Zombie Giant-Man	line	more power	Claude 5 Nov 2026, line check C17: gives power to the Zombie Horde card Giant-Man reads
+n485	marvel_snap	The Hunger, Zombie Mister Fantastic	The Hunger	Zombie Mister Fantastic	none		Claude 5 Nov 2026, line check C17: Mister Fantastic reads no power

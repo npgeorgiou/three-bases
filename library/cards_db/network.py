@@ -2078,7 +2078,8 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
         for a in power - {t}:
             # it reads the power of one named card (Zombie Giant-Man: Zombie Hulk): only a power gain aimed at that card feeds it
             if named_ and not all(c.execute("select 1 from flat_do where card=? and act='stat_change' and on_with like ?", (a, '%' + p_ + '%')).fetchone() for p_ in named_): continue
-            if aim_fits(a, t) and (fp != 'self' or reaches(a, t)) and (a, t) not in stat_help: out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.5 / count(('attack_gain',)), 'more power' + (' (levels it up)' if ab in lvl else '')))
+            # a named card's power: the help already aims at that card, so it need not land on t (Hunger -> Zombie Giant-Man)
+            if aim_fits(a, t, given=not named_) and (fp != 'self' or reaches(a, t)) and (a, t) not in stat_help: out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.5 / count(('attack_gain',)), 'more power' + (' (levels it up)' if ab in lvl else '')))
     # a stat it tests high or uses as an amount ("a creature with 5+ Life", "faeria equal to its Life"): more of that stat
     health = having(('defence_gain',), False)
     for t, ab, fp, ok in c.execute(f"""select card, ability, of_pick, of_kind from flat_if where attr in ('health', 'total_stats') and (test='amount_stat' or
