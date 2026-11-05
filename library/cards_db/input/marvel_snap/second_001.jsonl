@@ -34,8 +34,6 @@
 {"id": 8000116, "name": "Death", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Costs 1 less for each card destroyed this game.", "names_in_text": []}
 {"id": 8000129, "name": "Domino", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "You always draw this card on turn 2, and not before.", "names_in_text": []}
 {"id": 8000132, "name": "DoomBot 2099", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Ongoing: Your other DoomBots and Doom have +1 Power.", "names_in_text": ["Ongoing"]}
-{"id": 8000153, "name": "Overdrive Reactor Effect03", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Move random cards to the left 4 times.", "names_in_text": ["Move", "Random"]}
-{"id": 8000154, "name": "Overdrive Reactor Effect04", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Transform charged cards in play into ones that cost 1 more.", "names_in_text": []}
 {"id": 8000177, "name": "Evolved Wasp", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "On Reveal: Afflict an enemy card here with -1 Power.", "names_in_text": ["Afflict", "On Reveal"]}
 {"id": 8000182, "name": "Fan Fei", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Activate: Give your other cards here +1 Power and move them to the right.", "names_in_text": ["Activate", "Move"]}
 {"id": 8000189, "name": "Firelord", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "On Reveal: Revive one of your discarded or destroyed 3-Cost cards here.", "names_in_text": ["On Reveal"]}

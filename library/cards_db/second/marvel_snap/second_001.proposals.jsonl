@@ -5,7 +5,6 @@
 {"id": 796242, "field": "act", "need": "no_card_revealed_this_turn"}
 {"id": 796261, "field": "event", "need": "retreat"}
 {"id": 8000036, "field": "test", "need": "winning_here"}
-{"id": 8000154, "field": "with", "need": "charged"}
 {"id": 8000217, "field": "with", "need": "leftmost_location"}
 {"id": 8000289, "field": "x", "need": "bonus_energy_count"}
 {"id": 8000347, "field": "pick", "need": "leftmost_in_hand"}

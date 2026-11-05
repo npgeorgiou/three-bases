@@ -3,7 +3,9 @@
   of the cards the game's sources list for it: the card filter in refs (create or shuffle: on kind card with that filter).
   Sets from snap.fan's Tokens lists (read 5 Nov 2026) and the cards' previews: Agamotto, Merlin, Prowler; Kate Bishop's
   four Arrows (snap.fan card preview Kate Bishop); Thanos Fractured Frontier's six Shots (marvelsnapzone.com guide).
-- "Not revealed until the game ends" has no value (names.tsv drops Hidden): Invisible Woman and Malekith are unsure (act)."""
+- "Not revealed until the game ends" is one form for every card: cant, params event played (On Reveal is the event played,
+  BRIEF Game words), as Dark Dimension, Lemuria, Goblin Queen and Supergiant were read. Invisible Woman: on my units here,
+  lasts while; Malekith: on the card it adds, permanent. The readers' made-up keyword Hidden is gone."""
 import glob, json, os
 HERE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 G = 'marvel_snap'
@@ -12,7 +14,8 @@ SETS = {'Ancient Arcana': ['Winds of Watoomb', 'Temporal Manipulation', 'Images 
         'Incantation': ['Omniversal Presence', 'Once And Future', 'Polymorph'],
         "Thief's Tools": ['Remote Mines', 'Vibro-Shock Gauntlets', 'Flight Harness'],
         'Infinity Shot': ['Mind Shot', 'Power Shot', 'Reality Shot', 'Soul Shot', 'Space Shot', 'Time Shot']}
-UNSURE = {8000268, 8000350}
+NOT_REVEALED = {8000268: {'when': {'event': 'always'}, 'do': [{'act': 'cant', 'on': {'kind': 'unit', 'side': 'mine', 'pick': 'all',
+                  'zone': 'board', 'with': [{'attr': 'position', 'op': 'is', 'val': 'same_lane'}]}, 'params': {'event': 'played'}, 'lasts': 'while'}]}}
 
 
 def walk(x):
@@ -38,6 +41,16 @@ for p in sorted(glob.glob(os.path.join(HERE, 'read', G, '*.jsonl'))):
     n = 0
     for r in recs:
         n += walk(r.get('abilities', []))
-        if r.get('id') in UNSURE and 'act' not in r.get('unsure', []): r['unsure'] = r.get('unsure', []) + ['act']; n += 1
+        i = r.get('id')
+        for ab in r.get('abilities', []):
+            ab['do'] = [e for e in ab.get('do', []) if e.get('keyword') != 'Hidden']
+        r['abilities'] = [ab for ab in r.get('abilities', []) if ab['do']]
+        if i in (8000268, 8000350) and 'act' in r.get('unsure', []):
+            r['unsure'].remove('act')
+            if not r['unsure']: r.pop('unsure')
+            n += 1
+        if i in NOT_REVEALED and not r['abilities']: r['abilities'] = [NOT_REVEALED[i]]; n += 1
+        if i == 8000350 and len(r['abilities'][0]['do']) == 1:
+            r['abilities'][0]['do'].append({'act': 'cant', 'on': {'pick': 'it'}, 'params': {'event': 'played'}, 'lasts': 'permanent', 'link': 'and'}); n += 1
     open(p, 'w').write(''.join(json.dumps(r, separators=(',', ':')) + '\n' for r in recs))
     if n: print(os.path.relpath(p, HERE), n, 'changed')

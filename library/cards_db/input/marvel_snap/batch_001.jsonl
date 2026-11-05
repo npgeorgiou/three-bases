@@ -335,16 +335,6 @@
 {"id": 8000148, "name": "Dum Dum Dugan", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Ongoing: Your front-row cards here have +1 Power. (can't add to itself)", "names_in_text": ["Ongoing"]}
 {"id": 8000149, "name": "Ebony Maw", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "You can't play this after turn 3. Ongoing: You can't play cards here.", "names_in_text": ["Ongoing"]}
 {"id": 8000150, "name": "Echo", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "After your opponent plays an Ongoing card here, remove its abilities.", "names_in_text": ["Ongoing"]}
-{"id": 8000151, "name": "Overdrive Reactor Effect01", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Give charged cards +1 Power. (wherever they are)", "names_in_text": []}
-{"id": 8000152, "name": "Overdrive Reactor Effect02", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Each player adds 1 Chimichanga(s) to each location.", "names_in_text": ["Chimichanga"]}
-{"id": 8000153, "name": "Overdrive Reactor Effect03", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Move random cards to the left 4 times.", "names_in_text": ["Move", "Random"]}
-{"id": 8000154, "name": "Overdrive Reactor Effect04", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Transform charged cards in play into ones that cost 1 more.", "names_in_text": []}
-{"id": 8000155, "name": "Overdrive Reactor Effect05", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Destroy each player's 1 lowest-Power cards.", "names_in_text": ["Destroy"]}
-{"id": 8000156, "name": "Overdrive Reactor Effect06", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Each player repeats 1 of their On Reveal abilities.", "names_in_text": ["On Reveal"]}
-{"id": 8000157, "name": "Overdrive Reactor Effect07", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Draw 2 cards. Set their Costs to 3.", "names_in_text": []}
-{"id": 8000158, "name": "Overdrive Reactor Effect08", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Destroy the 2 locations with the lowest total Power. (break ties randomly)", "names_in_text": ["Destroy"]}
-{"id": 8000159, "name": "Overdrive Reactor Effect09", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "The winner of this game gets twice as many volts.", "names_in_text": []}
-{"id": 8000160, "name": "Overdrive Reactor Effect10", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Each player adds Blob to a random location.", "names_in_text": ["Blob", "Random"]}
 {"id": 8000161, "name": "Elder Dragon of the Moon", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "Costs 1 less for each of your cards in play with increased Power.", "names_in_text": []}
 {"id": 8000162, "name": "Electro", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "On Reveal: +1 Max Energy. Ongoing: You can only play 1 card a turn.", "names_in_text": ["On Reveal", "Ongoing"]}
 {"id": 8000163, "name": "Elektra", "category": "unit", "speed": "", "types": [], "keywords": [], "text": "On Reveal: Destroy an enemy 1-Cost card here.", "names_in_text": ["Destroy", "On Reveal"]}

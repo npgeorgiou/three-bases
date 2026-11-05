@@ -54,4 +54,3 @@ marvel_snap	card	Illusion	card	Illusion!	Mysterio's Illusion is the card Illusio
 marvel_snap	card	Void	card	The Void	Sentry's Void is the card The Void (export TheVoid)
 marvel_snap	card	Tiger	card	Tiger Spirit	White Tiger's Tiger is the card Tiger Spirit (export TigerSpirit)
 marvel_snap	card	Infinity Stones	type	Infinity Stones	Thanos's six Infinity Stones are the library type Infinity Stones
-marvel_snap	keyword	Hidden	drop		"not revealed until the game ends" (Invisible Woman, Malekith): no source defines it and Marvel Snap has no Hidden keyword (reader used another word); the cards are unsure (fixes/marvel_snap/v65.py)
