@@ -4462,7 +4462,16 @@ const ifelseConfig = cfg => ({ ...cfg });
 
 function ifelseWorth(u, c) {
   const k = cardOf(u);
-  return k.sup * c.uSup + strengthOf(u) * c.uStr + defenceOf(u) * c.uDef + (k.sup + (k.bonus || 0)) * c.uSupBonus + fxWorth(u.card, c);
+  return k.sup * c.uSup + strengthOf(u) * c.uStr + defenceOf(u) * c.uDef + (k.sup + (k.bonus || 0)) * c.uSupBonus + fxWorth(u.card, c) + kwWorth(u, c);
+}
+/** The worth of a unit's rule keywords as they are now (gained ones count, moved-away ones don't): per keyword
+ *  kw_<flag> x its value; only the keywords with a value set are looked at, so none set costs nothing. */
+function kwWorth(u, c) {
+  let fs = c._kww;                                                    // kept on the values object, hidden from copies and exports
+  if (!fs) { fs = KW_FLAGS.filter(f => c['kw_' + f]); Object.defineProperty(c, '_kww', { value: fs }); }
+  let n = 0;
+  for (const f of fs) n += c['kw_' + f] * kw(u, f);
+  return n;
 }
 /** A unit card's effects in parts [when, what, amount], e.g. Ticking Soldier: ['roundEnd', 'strike', 1]; auras are ['aura', 's' or 'd', amount]. */
 const FX_NOT_WHAT = new Set(['to', 'if', 'n', 'per', 'at', 'first', 'max', 'lanes', 'again', 'raise']);

@@ -45,13 +45,16 @@ const IFELSE_BASE_FIELDS = [
   ['freeCheck', 'Skip free moves that don\'t make the round better (1 = yes)', 'switch', 1],
 ];
 /** Effect values: what each kind of unit effect is worth per point (op_<what>, starts at 0) and how much its timing
- *  counts (on_<when>, a multiplier, starts at 1), over the effect parts of the game's unit cards (fxParts). */
+ *  counts (on_<when>, a multiplier, starts at 1), over the effect parts of the game's unit cards (fxParts); and what
+ *  each rule keyword on a unit card is worth (kw_<flag>, starts at 0). All made from the cards, none named here. */
 const IFELSE_FX_FIELDS = (() => {
   const whats = new Set(), whens = new Set();
   for (const key of Object.keys(CARDS)) if (CARDS[key].sup) for (const [when, what] of fxParts(key)) { whens.add(when); whats.add(what); }
   const say = { s: 'strength an aura gives', d: 'defence an aura gives' };
+  const flags = KW_FLAGS.filter(f => Object.keys(CARDS).some(key => CARDS[key].sup && CARDS[key][f]));
   return [...[...whats].sort().map(w => ['op_' + w, `Effect worth per point: ${say[w] || w}`, 'num', 0, 1]),
-    ...[...whens].sort().map(w => ['on_' + w, `Effect timing multiplier: ${w}`, 'num', 1])];
+    ...[...whens].sort().map(w => ['on_' + w, `Effect timing multiplier: ${w}`, 'num', 1]),
+    ...flags.map(f => ['kw_' + f, `Keyword worth per point: ${KW_NAME[f] || f}`, 'num', 0, 1])];
 })();
 const IFELSE_FIELDS = [...IFELSE_BASE_FIELDS, ...IFELSE_FX_FIELDS].map(([k, text, type, def, extra]) => [k, text, type, BENCH_VALUES[k] ?? def, extra]);
 const IFELSE_DEFAULTS = Object.fromEntries(IFELSE_FIELDS.map(f => [f[0], f[3]]));

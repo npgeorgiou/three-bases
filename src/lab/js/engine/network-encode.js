@@ -77,9 +77,12 @@ const sq = v => Math.sqrt(Math.max(0, v || 0)) / 10;
 /** A unit's state that changed in play and its printed values don't show: each keyword as it is now minus as
  *  printed (gained or moved away), keywords for this round, Armoured used, moves and attacks made, deployed this
  *  round, charged, blighted. Cell numbers 20 on. */
-const F3_UNIT_NOW = [...KW_FLAGS.map(f => (u, s) => kw(u, f) - (cardOf(u)[f] || 0)),
-  u => (u.tInc ? 1 : 0), u => (u.tArm || u.ent ? 1 : 0), u => (u.reck ? 1 : 0), u => (u.armUsed ? 1 : 0),
-  u => sq(u.mv), u => sq(u.atk), (u, s) => (u.born === s.round ? 1 : 0), u => (u.chg ? 1 : 0), u => (u.blight ? 1 : 0)];
+const F3_UNIT_NOW = [...KW_FLAGS.map(f => ['kw:' + f, u => kw(u, f) - (cardOf(u)[f] || 0)]),
+  ['incorpRound', u => (u.tInc ? 1 : 0)], ['armouredRound', u => (u.tArm || u.ent ? 1 : 0)], ['reckless', u => (u.reck ? 1 : 0)],
+  ['armouredUsed', u => (u.armUsed ? 1 : 0)], ['moves', u => sq(u.mv)], ['attacks', u => sq(u.atk)],
+  ['deployedNow', (u, s) => (u.born === s.round ? 1 : 0)], ['charged', u => (u.chg ? 1 : 0)], ['blighted', u => (u.blight ? 1 : 0)]];
+/** Their names: saved with a network, so a keyword added to or removed from the rules later keeps what it learned. */
+const F3_UNIT_NAMES = F3_UNIT_NOW.map(x => x[0]);
 const F3 = (() => {
   const cards = NET_CARD_KEYS.slice(), props = NET_PROPERTIES;
   const NCELL = 2 * LANES.length * ROWS * COLS, HS = HAND_LIMIT, CS = 20 + F3_UNIT_NOW.length;
@@ -110,7 +113,7 @@ function encode3(s, me, into) {
         nums[o + 4] = sq(u.bs); nums[o + 5] = sq(u.bd); nums[o + 6] = sq(u.ts);
         nums[o + 7] = u.moved ? 1 : 0; nums[o + 8] = u.attacked ? 1 : 0; nums[o + 9] = u.o === 'v' ? 1 : 0;
         cards[k] = NET_CARD_INDEX[u.card] + 1;
-        for (let t = 0; t < F3_UNIT_NOW.length; t++) nums[o + 20 + t] = F3_UNIT_NOW[t](u, s);
+        for (let t = 0; t < F3_UNIT_NOW.length; t++) nums[o + 20 + t] = F3_UNIT_NOW[t][1](u, s);
       } else {
         nums[o + 10] = 1;
         const anchorFromFront = side === 0 ? u.r : ROWS - 1 - u.r;
@@ -252,15 +255,15 @@ function net3Valid(data, hidden) {
   try {
     if (!data || data.enc !== 3 || !data.arch || data.arch.version !== F3.version || !Array.isArray(data.arch.hidden)) return false;
     if (hidden && data.arch.hidden.join() !== hidden.join()) return false;
-    const L = net3Layout(data.arch.props.length, data.arch.hidden);
+    const L = net3Layout(data.arch.props.length, data.arch.hidden, 20 + (data.arch.unitNow || F3_UNIT_NAMES).length);
     const w = data.weights, pad = w.endsWith('==') ? 2 : w.endsWith('=') ? 1 : 0;
     return (w.length * 3 / 4 - pad) / 4 === L.total;
   } catch (e) { return false; }
 }
 
 /** Weight layout of a format-3 network, as named blocks (for moving weights between printed-value lists or sizes). */
-function net3Layout(np, hidden) {
-  const CIN = F3.CS + np + 7, MIN = F3.NCELL * F3.CO + F3.HS * np + F3.FIXED + F3.PILES * (1 + np);
+function net3Layout(np, hidden, CS = F3.CS) {
+  const CIN = CS + np + 7, MIN = F3.NCELL * F3.CO + F3.HS * np + F3.FIXED + F3.PILES * (1 + np);
   const sizes = [MIN, ...hidden, 1], blocks = [];
   let o = 0;
   const add = (name, n) => { blocks.push({ name, o, n }); o += n; };
@@ -314,7 +317,7 @@ function net3Grow(data, hidden) {
   return net3ToData(net);
 }
 function net3ToData(net, withMomentum = false) {
-  return { enc: 3, arch: { version: F3.version, props: F3.props, hidden: net.hidden }, weights: b64OfFloats(net.w),
+  return { enc: 3, arch: { version: F3.version, props: F3.props, unitNow: F3_UNIT_NAMES, hidden: net.hidden }, weights: b64OfFloats(net.w),
     ...(withMomentum && net.train ? { m: b64OfFloats(net.m), v: b64OfFloats(net.v), step: net.step } : {}) };
 }
 /**
@@ -324,23 +327,25 @@ function net3ToData(net, withMomentum = false) {
  */
 function net3FromData(data, train = false) {
   if (!data.arch || data.arch.version !== F3.version) throw new Error('This network was made for an older version of the lab and cannot be used.');
-  const a = data.arch, net = net3Instance(a.hidden, train), old = floatsOfB64(data.weights);
-  if (a.props.join() === F3.props.join()) {
+  const a = data.arch, net = net3Instance(a.hidden, train), old = floatsOfB64(data.weights), un = a.unitNow || F3_UNIT_NAMES;
+  if (a.props.join() === F3.props.join() && un.join() === F3_UNIT_NAMES.join()) {
     if (old.length !== net.P) throw new Error('This network does not fit this version of the lab.');
     net.w.set(old);
     if (train && data.m && data.v) { net.m.set(floatsOfB64(data.m)); net.v.set(floatsOfB64(data.v)); net.step = data.step || 0; }
     return net;
   }
-  const Lo = net3Layout(a.props.length, a.hidden), Ln = net3Layout(F3.props.length, a.hidden);
+  const csO = 20 + un.length, Lo = net3Layout(a.props.length, a.hidden, csO), Ln = net3Layout(F3.props.length, a.hidden);
   if (old.length !== Lo.total) throw new Error('This network does not fit this version of the lab.');
   const w = net.w, propOld = new Map(a.props.map((k, i) => [k, i]));
   w.fill(0);
   const copyRow = (bo, bn, rowOld, rowNew, width) => w.set(old.subarray(bo.o + rowOld * width, bo.o + (rowOld + 1) * width), bn.o + rowNew * width);
   const byName = (bo, bn, offOld, offNew, width) => F3.props.forEach((k, i) => { if (propOld.has(k)) copyRow(bo, bn, offOld + propOld.get(k), offNew + i, width); });
-  // cell layer rows: recorded values, printed values by name, position
-  for (let j = 0; j < F3.CS; j++) copyRow(Lo.blocks.WC, Ln.blocks.WC, j, j, F3.CO);
-  byName(Lo.blocks.WC, Ln.blocks.WC, F3.CS, F3.CS, F3.CO);
-  for (let j = 0; j < 7; j++) copyRow(Lo.blocks.WC, Ln.blocks.WC, F3.CS + a.props.length + j, F3.CS + F3.props.length + j, F3.CO);
+  // cell layer rows: recorded values, unit state by name, printed values by name, position
+  const unOld = new Map(un.map((k, i) => [k, i]));
+  for (let j = 0; j < 20; j++) copyRow(Lo.blocks.WC, Ln.blocks.WC, j, j, F3.CO);
+  F3_UNIT_NAMES.forEach((k, i) => { if (unOld.has(k)) copyRow(Lo.blocks.WC, Ln.blocks.WC, 20 + unOld.get(k), 20 + i, F3.CO); });
+  byName(Lo.blocks.WC, Ln.blocks.WC, csO, F3.CS, F3.CO);
+  for (let j = 0; j < 7; j++) copyRow(Lo.blocks.WC, Ln.blocks.WC, csO + a.props.length + j, F3.CS + F3.props.length + j, F3.CO);
   w.set(old.subarray(Lo.blocks.BC.o, Lo.blocks.BC.o + F3.CO), Ln.blocks.BC.o);
   // first main layer rows: cell summaries, hand slots (printed values by name), the fixed values, piles (size, totals by name)
   const H = a.hidden[0], cellRows = F3.NCELL * F3.CO, npO = a.props.length, npN = F3.props.length;
