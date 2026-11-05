@@ -546,6 +546,7 @@ def lines_of(c, game):
     for m, ps in c.execute("select card, params from flat_do where act in ('stat_change','stat_set','grow','swap_stats')"):
         stat_made[m] |= {x.split('=')[0] for x in (ps or '').split(';') if x.split('=')[0] in ('power', 'health', 'strength')
                          and x.split('=', 1)[1].lstrip('-').replace('.', '', 1).strip('0') != ''} or {'power', 'health'}  # "+1|+0" changes no Health
+    set_only = {m for m in stat_made if not c.execute("select 1 from flat_do where card=? and act in ('stat_change','grow','swap_stats') limit 1", (m,)).fetchone()}  # a card that only SETS stats (Agent Venom: power 3)
     # what a quarter or more of the game's cards do to enemies (damage them, kill them) is what any deck does: a card that waits
     # for it ("whenever an Attack deals unblocked damage", Envenom) gets no line from each (L1b; Kaptain 2 Nov 2026), unless it
     # levels up from it
@@ -604,6 +605,7 @@ def lines_of(c, game):
                 if h == 'dies' and tpick == 'self' and m in hits and m not in killers and weak(m, t): continue  # 1 damage kills no 4-health unit
                 if h == 'stat_changed' and role == 'condition' and stat_need.get(t) and stat_made.get(m) and \
                         not (stat_need[t] & stat_made[m]) and 'strength' not in stat_made[m]: continue
+                if h == 'stat_changed' and m in set_only and ms != 'enemy' and role in ('condition', 'state'): continue  # a set is no buff and reaches no power threshold above it (Agent Venom -> Wolverine Horseman of War; L4, L18)
                 if not doer_fits(m, actor, h): continue
                 # my units are hurt or die in fights by the rules: every unit would feed "when a friendly unit dies" (Soul Eater,
                 # Shaytan Monstrosity); only cards that hurt or kill my units do (Kaptain 30 Oct 2026); a cost the rules pay stays

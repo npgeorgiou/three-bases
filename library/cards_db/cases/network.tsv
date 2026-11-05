@@ -443,3 +443,7 @@ n447	marvel_snap	Beta Ray Bill, Gorgon	Beta Ray Bill	Gorgon	none		Claude 5 Nov 2
 n448	marvel_snap	Doctor Octopus, Dagger	Doctor Octopus	Dagger	none		Claude 5 Nov 2026, line check: moving enemy units does not feed a card acting in its lane
 n449	marvel_snap	Aero, Armor	Aero	Armor	none		Claude 5 Nov 2026, line check: moving units does not feed a card acting in its lane
 n450	marvel_snap	Moira X, Quinjet	Moira X	Quinjet	line		Claude 5 Nov 2026, line check: creating cards feeds Quinjet
+n451	marvel_snap	Agent Venom, Wolverine Horseman of War	Agent Venom	Wolverine Horseman of War	none		Claude 5 Nov 2026, line check: setting power to 3 reaches no 6 power
+n452	marvel_snap	Agent Venom, Elder Dragon of the Moon	Agent Venom	Elder Dragon of the Moon	none		Claude 5 Nov 2026, line check: a set is no buff
+n453	marvel_snap	Agent Venom, Gilgamesh	Agent Venom	Gilgamesh	none		Claude 5 Nov 2026, line check: a set is no buff
+n454	marvel_snap	America Chavez, Ares	America Chavez	Ares	line	more power	Claude 5 Nov 2026, line check: more power stays
