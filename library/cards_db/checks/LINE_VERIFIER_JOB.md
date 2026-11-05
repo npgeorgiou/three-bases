@@ -13,6 +13,9 @@ the wrong examples that are still open. The readers were often wrong. Decide eac
 - NOT REAL: the lines are right (a real combo), the reader misread a rule;
 - PARTLY: some examples wrong, some right (move the right ones to Right examples);
 - GONE: every wrong example already says "NONE" (a wrong-line cause already fixed).
+A cause from a failing case ("(combo case cms..)", "(deck case ..)", "real-world combo") is the game's players' truth
+(START_DATABASE.md rule 9): it is MISSED REAL unless a rule of LINE_RULES.md forbids that line in its own words; then write
+"MISSED CASE WRONG: rule L<n> says <its words>" so the main chat shows the case to Kaptain. Never NOT REAL for a case.
 A missed-line cause keeps "MISSED " before its verdict ("MISSED REAL"). Kaptain's own word, a known truth: "The Dreadway ->
 Decimate is a combo that works." Think like a player: would a good player build these two cards together for this reason?
 Verdict file: each cause ONE line, in exactly this format (causes.py reads it; it skips NOT REAL and GONE):

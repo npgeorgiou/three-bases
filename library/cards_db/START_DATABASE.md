@@ -483,10 +483,12 @@ their text. D = `checks/<game>/`. After each step: write PROGRESS.md, commit and
    deck or real-world case) is written by script into D/lr_misses.md as "N. MISSED CAUSE: <the case's why>. Wrong examples:
    A -> B. Right examples: none." No one traces them now.
 5. **Verifiers.** `causes.py D/lr_*.md --out D/vp.md`; `audit_pieces.py split D/vp.md` (cut at causes); one verifier per piece,
-   all at once: checks/LINE_VERIFIER_JOB.md + the piece path + the verdict path D/vv_<n>.md.
+   all at once: checks/LINE_VERIFIER_JOB.md + the piece path + the verdict path D/vv_<n>.md. A verifier never overrules a
+   failing guide case (Marvel Snap, 5 Nov 2026: 12 of 15 combos called not real): MISSED REAL, or MISSED CASE WRONG with the
+   rule's words, which goes to Kaptain with both cards in one question at the end of the chat.
 6. **The sheet.** `causes.py D/vv_*.md --out D/causes_sheet.md`: every REAL, PARTLY and MISSED REAL cause, biggest first, with
    all a fixer needs. CONFLICT causes (a case says the opposite; Kaptain's case wins) and gone ones are skipped.
-7. **Fixers, one at a time, from the top.** checks/LINE_FIXER_JOB.md + the sheet path + the cause's heading + the report path
+7. **Fixers, one at a time, from the top.** checks/LINE_FIXER_JOB.md + the sheet path + the cause's number (C<k>, its heading's first word) + the report path
    D/fix_<n>.md. The main chat reads only the report's first line (FIXED, STUCK or CONFLICT), notes it in PROGRESS.md,
    commits and starts the next fixer. A STUCK cause goes to "Open work" with the fixer's words.
 8. **One rebuild** when all causes are done: `check_all.py <game>` if records changed, `check_all.py --no-load` if only code,

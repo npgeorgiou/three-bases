@@ -78,8 +78,8 @@ for f in args:
 
 sheet.sort(key=lambda s: (s[6] != 'open', -s[0]))
 with open(out_path, 'w', encoding='utf-8') as o:
-    for worth, f, n, verdict, why, ps, state in sheet:
-        o.write(f'## {os.path.basename(f)} {n} ({verdict}, {state}, {worth} table lines from the same code)\n{why}\n')
+    for k, (worth, f, n, verdict, why, ps, state) in enumerate(sheet, 1):  # C<k>: a heading no other cause shares
+        o.write(f'## C{k} {os.path.basename(f)} {n} ({verdict}, {state}, {worth} table lines from the same code)\n{why}\n')
         for p in ps:
             o.write(f"- {p['ex']} {p['game']}: {p['a']} -> {p['b']}: {p['why'][:160]} | network.py {p['sites']}"
                     + (f" | cases {', '.join(r['id'] + ' ' + r['expect'] for r in p['cases'])}" if p['cases'] else '') + '\n')
@@ -91,6 +91,6 @@ with open(out_path, 'w', encoding='utf-8') as o:
                 seen.add(i)
                 o.write(f'  {name}:\n' + ''.join(f'    {r_[:200]}\n' for r_ in rows(i)))
         o.write('\n')
-for worth, f, n, verdict, why, ps, state in sheet:
-    print(f"{os.path.basename(f).split('.')[0]} {n}: {worth} {state} {','.join(sorted({p['game'][:4] for p in ps}))}")
+for k, (worth, f, n, verdict, why, ps, state) in enumerate(sheet, 1):
+    print(f"C{k} {os.path.basename(f).split('.')[0]} {n}: {worth} {state} {','.join(sorted({p['game'][:4] for p in ps}))}")
 print(out_path)
