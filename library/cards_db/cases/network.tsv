@@ -436,3 +436,6 @@ n440	marvel_snap	Ghost-Spider, Drax	Ghost-Spider	Drax	none		Claude 5 Nov 2026, l
 n441	marvel_snap	Blink, Moonstone	Blink	Moonstone	none		Claude 5 Nov 2026, line check: Moonstone copies text, no need of moving
 n442	marvel_snap	Doctor Octopus, Pizza Slice	Doctor Octopus	Pizza Slice	none		Claude 5 Nov 2026, line check: Pizza Slice merges, no need of moving
 n443	marvel_snap	Angel, Hydra Stomper	Angel	Hydra Stomper	line		Claude 5 Nov 2026, line check: makes your units move
+n444	marvel_snap	Herbie Program 01, Wiccan	Herbie Program 01	Wiccan	none		Claude 5 Nov 2026, line check: Wiccan wants no unspent mana, gaining mana is the opposite
+n445	marvel_snap	Ghost-Spider, Galactus	Ghost-Spider	Galactus	none		Claude 5 Nov 2026, line check: Galactus wants to be alone in its lane, moving units does not help
+n446	marvel_snap	Djinn, Jim Hammond Human Torch	Djinn	Jim Hammond Human Torch	line		Claude 5 Nov 2026, line check: Torch counts mana, gaining it helps
