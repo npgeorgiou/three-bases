@@ -53,6 +53,9 @@ before coding (CLAUDE.md), and keep every speed or AI check to about a minute.
   it predicts no better with the hand than without (71.6% against 71.8%): it reacts to the hand without using it well.
 - Same wires for a cell in every lane (camp, row and column shared), from scratch, 25 s, 2,437 positions: copying
   the Benchmark's score 89.1% against 87.8% per cell; predicting the winner 76.9% both. No clear gain.
+- Look-ahead (same network against the Benchmark depth 1, about 6 minutes): alone 29 of 72 games (40%, 20 ms per
+  move here); checking the replies to its 4 best moves 15.5 of 33 (47%, 130 ms per move). The difference is inside
+  the noise of so few games; look-ahead does not clearly lift it.
 - The Benchmark at depth 1 also scores each move's position once, like the network: the comparison is fair.
 
 ## Why it may be stuck (suggestion, not proven)
