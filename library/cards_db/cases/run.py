@@ -13,6 +13,18 @@ HERE = os.path.dirname(os.path.abspath(__file__)); DBDIR = os.path.dirname(HERE)
 sys.path.insert(0, DBDIR)
 from build_input import KWFIELD
 import connections
+
+
+def line_of(c, game, a, b):
+    """A combo is also found when network.py draws a line from the enabler to the payoff (A does something for B)."""
+    import network
+    ids = lambda n: [i for (i,) in c.execute('select id from card where name=? and game=? and is_keyword=0', (n, game))]
+    for x in ids(a):
+        for y in ids(b):
+            _, ls = network.network(c, game, [x, y])
+            why = '; '.join(z for _, _, z in ls.get((x, y), []))
+            if why: return 'line: ' + why[:60]
+    return ''
 sys.path.insert(0, DBDIR); import source
 
 def main():
@@ -49,7 +61,7 @@ def main():
         out += ['', '## Combos (the enabler must set off the payoff)', '', '| case | enabler | payoff | why | found as | pass |', '|---|---|---|---|---|---|']
         for r in csv.DictReader(open(path), delimiter='\t'):
             if r['game'] != game: continue
-            how = connections.explain(c, r['enabler'], r['payoff'])
+            how = connections.explain(c, r['enabler'], r['payoff']) or line_of(c, game, r['enabler'], r['payoff'])
             total += 1; passed += bool(how)
             out.append(f"| {r['id']} | {r['enabler']} | {r['payoff']} | {r['why']} | {how or '-'} | {'yes' if how else 'NO'} |")
     # regions

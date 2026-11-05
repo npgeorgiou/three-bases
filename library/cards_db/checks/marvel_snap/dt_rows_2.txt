@@ -1,0 +1,843 @@
+Each group: GONE = lines the fixes removed (wrong if the line was right: a MISSED CAUSE), NEW = lines the fixes added
+(a CAUSE if wrong). Rows of the first example pairs follow each group.
+
+duelyst: lines 12828 -> 12783, pairs 12437 -> 12392 (45 gone, 0 new)
+faeria: lines 10736 -> 10732, pairs 9980 -> 9976 (4 gone, 0 new)
+inscryption: lines 1118 -> 1118, pairs 1080 -> 1080 (0 gone, 0 new)
+into_the_breach: lines 6425 -> 6419, pairs 6137 -> 6132 (5 gone, 0 new)
+marvel_snap: lines 21531 -> 19908, pairs 19276 -> 17822 (2704 gone, 1250 new)
+monster_train: lines 3353 -> 3353, pairs 3092 -> 3092 (0 gone, 0 new)
+runeterra: lines 213536 -> 210387, pairs 201029 -> 198011 (3336 gone, 318 new)
+stormbound: lines 2862 -> 2854, pairs 2682 -> 2674 (8 gone, 0 new)
+sts1: lines 8951 -> 8939, pairs 8797 -> 8786 (11 gone, 0 new)
+
+GONE
+  938 marvel_snap | stronger | more power | Omega Red -> Ultron Power Stone (-); Zombie Mister Fantastic -> Deadpool (-); Tarantula -> Stormbreaker (-)
+  Omega Red:
+    when 3119 always
+    if 3119 amount gt stat
+    if 3119 amount_stat power position enemy position is same_lane
+    if 3119 amount_stat power position mine position is same_lane
+    do 3119 own stat_change position mine all position not same_lane power=3.0
+  Ultron Power Stone:
+    when 3338 played self
+    if 3338 amount_stat power unit card is 8000267
+    do 3338 own stat_change unit card is 8000267 power=stat
+  Zombie Mister Fantastic:
+    when 3402 played self
+    when 3403 activated self
+    do 3402 own stat_change card mine card is 8000742 power=2.0
+    do 3403 own stat_change unit mine chosen state is created power=1.0
+  Deadpool:
+    when 2829 dies self
+    if 2829 amount_stat power self
+    do 2829 own return_to_hand self
+    do 2829 own stat_change self power=stat
+  559 marvel_snap | type | {A} moves your units, and {B} acts on units in its lane | Lockjaw -> Silver Surfer First Steps (-); Blink -> Chamber (-); Topaz -> Silver Surfer First Steps (-)
+  Lockjaw:
+    when 3029 activated self
+    when 3030 played unit mine
+    do 3029 own give_ability self
+    do 3030 gives swap unit mine it
+  Silver Surfer First Steps:
+    when 3222 round_end
+    if 3222 amount gt sum
+    if 3222 amount_sum
+    if 3222 amount_stat power unit enemy all board position is same_lane
+    if 3222 amount_sum
+    if 3222 amount_stat power unit mine all board position is same_lane
+    do 3222 own repeat unit mine chosen board position is same_lane;keyword is 8000750
+  Blink:
+    when 2783 played self
+    if 2783 last_card unit mine
+    do 2783 own swap unit mine it board
+  Chamber:
+    when 2806 activated self
+    if 2806 amount_product
+    if 2806 amount_sum
+    if 2806 amount_count unit mine all board position is same_lane;cost ge 2988
+    if 2806 amount_count card mine all hand cost ge 2990
+    do 2806 own stat_change self power=product
+  418 marvel_snap | type | {A} moves {B}, and {B} acts on units in its lane | Friendly Neighborhood Carnage -> Mantis (-); Iron Fist -> Mercury (-); Blink -> Lockheed (-)
+  Friendly Neighborhood Carnage:
+    when 2898 played self
+    if 2898 amount_count unit mine all board position is same_lane;card not 8000197
+    if 2898 amount_product
+    do 2898 own move unit mine all board position is same_lane;card not 8000197
+    do 2898 own stat_change self power=product
+  Mantis:
+    when 3049 played self
+    if 3049 event_count ge 1.0
+    do 3049 own copy unit enemy chosen board position is same_lane;state is summoned_this_round
+  Iron Fist:
+    when 2963 played unit mine
+    do 2963 own move unit mine it
+  Mercury:
+    when 3062 always
+    when 3063 always
+    do 3062 own can self event=moves;times=1.0
+    do 3063 own cant unit enemy all board position is same_lane event=moves
+  317 marvel_snap | type | {A} moves units, and {B} acts on units in its lane | Araña -> Hulkbuster (-); Magneto -> Hellcow Fractured Frontier (-); Magneto -> Moonstone (-)
+  Araña:
+    when 2750 activated self
+    when 2751 played unit mine
+    do 2750 own give_ability self
+    do 2751 gives stat_change unit mine it power=1.0
+    do 2751 gives move unit mine it
+  Hulkbuster:
+    when 2944 played self
+    do 2944 own merge self
+  Magneto:
+    when 3040 played self
+    do 3040 own move unit enemy all board cost in 3;cost in 4
+  Hellcow Fractured Frontier:
+    when 2934 round_end
+    do 2934 own stat_change unit all board position is same_lane;card not 8000240 power=-1.0
+    do 2934 own kill unit mine all board position is same_lane;card not 8000240;power le 3136
+  237 marvel_snap | rules | keeps it from dying | Caiera -> Bolts of Balthakk (-); Caiera -> Ka-Zar (-); Caiera -> Mother Askani (-)
+  Caiera:
+    when 2794 always
+    do 2794 own cant unit mine all board cost in 1;cost in 6 event=dies
+  Bolts of Balthakk:
+    when 3247 round_start
+    do 3247 own mana_gain mana mine amount=4.0
+  Ka-Zar:
+    when 2989 always
+    do 2989 own stat_change unit mine all board cost eq 3194 power=1.0
+  210 marvel_snap | type | {A} moves enemy units, and {B} acts on units in its lane | Stegron -> Dagger (-); Spider-Man -> Lasher (-); Ultron Space Stone -> Spider-Man 2099 (-)
+  Stegron:
+    when 3273 played self
+    do 3273 own move unit enemy chosen board position is same_lane
+  Dagger:
+    when 2823 moves self
+    if 2823 amount_product
+    if 2823 amount_count unit enemy all board position is same_lane
+    do 2823 own stat_change self power=product
+  Spider-Man:
+    when 3253 played self
+    do 3253 own move self
+    do 3253 own move unit enemy chosen board position is same_lane
+  Lasher:
+    when 3020 activated self
+    if 3020 amount_stat power self
+    if 3020 amount_minus
+    do 3020 own stat_change unit enemy chosen board position is same_lane power=minus
+  193 marvel_snap | type | {A} moves {B} and units, and {B} acts on units in its lane | Grapple Arrow -> Summoning Ritual 2 (-); Doctor Strange -> Man-Thing (-); Blink -> Hellcow Fractured Frontier (-)
+  Grapple Arrow:
+    when 2922 played unit mine
+    do 2922 own move unit mine it
+  Summoning Ritual 2:
+    when 3285 played self
+    if 3285 amount_count unit all board position is same_lane
+    do 3285 own stat_change unit all board position is same_lane power=-1.0
+    do 3285 own stat_change unit card is 8000135 power=count
+  Doctor Strange:
+    when 2841 played self
+    do 2841 own move unit mine highest board
+  Man-Thing:
+    when 3048 always
+    do 3048 own stat_change unit all board position is same_lane;cost le 3262 power=-2.0
+   90 marvel_snap | type | changes your units' stats | Bast -> Vampire Deacon Frost (-); Khonshu Waxing -> Vampire Deacon Frost (-); Herbie Program 03 -> Superior Spider-Man (-)
+  Bast:
+    when 2770 played self
+    do 2770 own stat_set card mine all hand power=3.0
+  Vampire Deacon Frost:
+    when 3347 round_end
+    if 3347 count ge 3.0 unit mine all board state is buffed
+    do 3347 own transform self
+  Khonshu Waxing:
+    when 2998 discarded self
+    when 2999 played self
+    do 2998 own transform self
+    do 2998 own return_card self
+    do 2999 own revive unit mine chosen discarded
+    do 2999 own stat_set unit mine it power=8.0
+   70 marvel_snap | type | creates cards | Scarlet Witch Queen of Chaos -> King Eitri (-); Merlin -> King Eitri (-); Sandstorm -> Gorgon (-)
+  Scarlet Witch Queen of Chaos:
+    when 3195 round_start
+    do 3195 own create spell mine random
+    do 3195 own cost_set spell mine it cost=0.0
+  King Eitri:
+    when 3003 activated self
+    do 3003 own draw card mine chosen deck state is created
+  Merlin:
+    when 3064 round_start
+    do 3064 own create card card in 8000431;card in 8000432;card in 8000446
+   56 marvel_snap | type | changes units' stats | Spider-Man Noir -> Venus (-); Khonshu -> Venus (-); Khonshu Full -> Polaris Horseman of Pestilence (-)
+  Spider-Man Noir:
+    when 3258 played self
+    when 3259 played self
+    if 3259 amount eq 8.0
+    if 3259 amount_stat cost unit mine all board card not 8000591
+    if 3259 amount_sum
+    do 3258 own stat_set card mine deck_top power=8.0
+    do 3259 own summon card mine deck_top
+  Venus:
+    when 3352 stat_changed unit mine
+    if 3352 it_matches state is buffed
+    do 3352 own stat_change unit mine it power=1.0
+  Khonshu:
+    when 2995 discarded self
+    when 2996 played self
+    do 2995 own transform self
+    do 2995 own return_card self
+    do 2996 own revive unit mine chosen discarded
+    do 2996 own stat_set unit mine it power=5.0
+   36 marvel_snap | type | makes your units get On Reveal | High Evolutionary -> Misery (-); Super-Skrull -> Grand Master (-); High Evolutionary -> Stryfe (-)
+  High Evolutionary:
+    when 2938 game_start
+    do 2938 own give_ability card mine all everywhere state is no_abilities
+  Misery:
+    when 3071 played self
+    do 3071 own repeat unit mine all board position is same_lane;keyword is 8000750;card not 8000373
+    do 3071 own kill unit mine all board position is same_lane;card not 8000373
+  Super-Skrull:
+    when 3289 always
+    do 3289 own copy_keywords self
+  Grand Master:
+    when 2921 played self
+    do 2921 own move unit mine chosen board position is same_lane;keyword is 8000750;card not 8000225
+    do 2921 own repeat unit mine it card not 8000225
+   28 marvel_snap | repeats | repeats its On Reveal effects | Astral Projection -> Green Goblin (-); Astral Projection -> Hobgoblin (-); Joaquin Torres Falcon II -> Hobgoblin (-)
+  Astral Projection:
+    when 2761 played self
+    do 2761 own repeat card mine chosen hand keyword is 8000750
+  Green Goblin:
+    when 2923 played self
+    do 2923 own donate self
+  Hobgoblin:
+    when 2940 played self
+    do 2940 own donate self
+   28 marvel_snap | cheaper | changes your units' stats | Random -> Elder Dragon of the Moon (-); Khonshu Full -> Elder Dragon of the Moon (-); Herbie Program 03 -> Elder Dragon of the Moon (-)
+  Random:
+    when 3158 played self
+    if 3158 amount_stat power card mine random deck
+    do 3158 own stat_set self power=stat
+  Elder Dragon of the Moon:
+    when 2862 always
+    if 2862 amount_count unit mine all board state is buffed
+    if 2862 amount_minus
+    do 2862 own cost_change self cost=minus
+  Khonshu Full:
+    when 2997 played self
+    do 2997 own revive unit mine chosen discarded
+    do 2997 own stat_set unit mine it power=12.0
+   26 marvel_snap | repeats | repeats its effects | Silver Surfer First Steps -> Hobgoblin (-); Rama-Tut -> Acid Arrow (-); Rama-Tut -> Green Goblin (-)
+  Silver Surfer First Steps:
+    when 3222 round_end
+    if 3222 amount gt sum
+    if 3222 amount_sum
+    if 3222 amount_stat power unit enemy all board position is same_lane
+    if 3222 amount_sum
+    if 3222 amount_stat power unit mine all board position is same_lane
+    do 3222 own repeat unit mine chosen board position is same_lane;keyword is 8000750
+  Hobgoblin:
+    when 2940 played self
+    do 2940 own donate self
+  Rama-Tut:
+    when 3157 played self
+    do 3157 own repeat unit keyword is 8000750
+  Acid Arrow:
+    when 2726 played self
+    do 2726 own donate self
+   25 marvel_snap | type | creates cards: {B} kills them | Sub-Mariner -> Cobra (-); Sentinel -> Cobra (-); Thanos Fractured Frontier -> Cobra (-)
+  Sub-Mariner:
+    when 3283 stat_changed self
+    if 3283 it_matches state is buffed
+    if 3283 amount_event_amount
+    do 3283 own create unit random cost eq 3521
+    do 3283 own stat_change unit it power=event_amount
+  Cobra:
+    when 2811 activated self
+    do 2811 own kill unit enemy chosen board position is same_lane;state is created
+  Sentinel:
+    when 3203 played self
+    do 3203 own create
+   21 marvel_snap | type | {A} moves {B} and enemy units, and {B} acts on units in its lane | Xorn -> Spider-Punk (-); Xorn -> Mantis (-); Xorn -> Groot (-)
+  Xorn:
+    when 3389 played unit position is same_lane;cost in 3;cost in 4
+    do 3389 own move unit it
+  Spider-Punk:
+    when 3260 always
+    when 3261 moves self
+    do 3260 own can self event=moves;times=1.0
+    do 3261 own stat_change unit enemy highest board position is same_lane of self power=-2.0
+    do 3261 own stat_change self power=2.0
+  Mantis:
+    when 3049 played self
+    if 3049 event_count ge 1.0
+    do 3049 own copy unit enemy chosen board position is same_lane;state is summoned_this_round
+   19 marvel_snap | type | {A} moves {B} and your units, and {B} acts on units in its lane | Blink -> Spider-Man Brand New Day (-); Iron Fist -> Spider-Man Brand New Day (-); Heimdall -> Spider-Man Brand New Day (-)
+  Blink:
+    when 2783 played self
+    if 2783 last_card unit mine
+    do 2783 own swap unit mine it board
+  Spider-Man Brand New Day:
+    when 3256 always
+    when 3257 moves self
+    do 3256 own can self event=moves;times=2.0
+    do 3257 own stat_change unit mine chosen board position is same_lane of self;card not 8000590 power=1.0
+  Iron Fist:
+    when 2963 played unit mine
+    do 2963 own move unit mine it
+   16 marvel_snap | type | makes units get On Reveal | Thanos Fractured Frontier -> Cosmo (-); High Evolutionary -> Rama-Tut (-); Super-Skrull -> Rama-Tut (-)
+  Thanos Fractured Frontier:
+    when 3310 game_start
+    when 3311 played self
+    when 3312 played self
+    if 3311 keyword_condition
+    do 3310 own give_ability card mine all everywhere
+    do 3311 gives create card card in 8000370;card in 8000447;card in 8000472;card in 8000568;card in 8000570;card in 8000661
+    do 3312 own repeat card mine all card in 8000370;card in 8000447;card in 8000472;card in 8000568;card in 8000570;card in 8000661
+  Cosmo:
+    when 2818 always
+    do 2818 own silence unit all board position is same_lane;keyword is 8000750
+  High Evolutionary:
+    when 2938 game_start
+    do 2938 own give_ability card mine all everywhere state is no_abilities
+  Rama-Tut:
+    when 3157 played self
+    do 3157 own repeat unit keyword is 8000750
+   12 marvel_snap | type | makes your units get Ongoing | High Evolutionary -> Goliath (-); High Evolutionary -> Onslaught (-); Thanos Fractured Frontier -> Onslaught (-)
+  High Evolutionary:
+    when 2938 game_start
+    do 2938 own give_ability card mine all everywhere state is no_abilities
+  Goliath:
+    when 2917 always
+    if 2917 amount_count unit mine all board keyword is 8000751;card not 8000221
+    do 2917 own stat_change self power=count
+  Onslaught:
+    when 3122 always
+    do 3122 own repeat unit mine all board position is same_lane;keyword is 8000751;card not 8000433
+   12 marvel_snap | type | changes its stats for its effect | Shadow King -> Wolverine Horseman of War (-); Anti-Venom -> Wolverine Horseman of War (-); Khonshu -> Wolverine Horseman of War (-)
+  Shadow King:
+    when 3208 played self
+    if 3208 amount_stat base_power it
+    do 3208 own stat_set unit all board position is same_lane power=stat
+  Wolverine Horseman of War:
+    when 3385 round_end
+    if 3385 stat power ge 6.0 self
+    do 3385 own stat_change unit mine chosen board power=4.0
+  Anti-Venom:
+    when 2747 played self
+    do 2747 own cost_set card mine deck_top cost=0.0
+    do 2747 own stat_set card mine deck_top power=0.0
+   11 marvel_snap | waits | makes this happen: merged | Strange Supreme -> Man-Spider (-); Strange Supreme -> Peni Parker (-); Summoning Ritual 1 -> Man-Spider (-)
+  Strange Supreme:
+    when 3280 round_end
+    do 3280 own merge unit mine chosen board state is created
+    do 3280 own stat_change self power=2.0
+  Man-Spider:
+    when 3046 played self
+    when 3047 merged
+    if 3046 last_card unit mine
+    if 3047 amount_stat power self
+    do 3046 own merge unit mine it
+    do 3047 own stat_change self power=stat
+  Peni Parker:
+    when 3127 played self
+    when 3128 merged
+    do 3127 own create
+    do 3128 own mana_gain mana mine amount=1.0
+   10 marvel_snap | waits | returns it to hand: its Play or summon effect goes off again (when in its lane) | Toxin -> Viper (-); Beast -> Absorbing Man (-); Toxin -> Hobgoblin (-)
+  Toxin:
+    when 3331 played self
+    if 3331 amount_count it
+    if 3331 amount_product
+    do 3331 own return_to_hand unit mine all board position is same_lane;card not 8000669
+    do 3331 own stat_change self power=product
+  Viper:
+    when 3356 played self
+    do 3356 own donate unit mine lowest board position is same_lane;card not 8000695
+  Beast:
+    when 2773 played self
+    do 2773 own return_to_hand unit mine all board position is same_lane;card not 8000048
+    do 2773 own cost_change unit mine it card not 8000048 cost=-1.0
+  Absorbing Man:
+    when 2725 played self
+    if 2725 last_card unit mine keyword is 8000750
+    do 2725 own repeat unit mine it board
+    4 marvel_snap | type | makes your units get When Discarded | Super-Skrull -> Zombie Black Cat (-); High Evolutionary -> Zombie Black Cat (-); Thanos Fractured Frontier -> Zombie Black Cat (-)
+  Super-Skrull:
+    when 3289 always
+    do 3289 own copy_keywords self
+  Zombie Black Cat:
+    when 3396 discarded self
+    do 3396 own discard card mine chosen hand keyword is 8000767
+    do 3396 own move self
+  High Evolutionary:
+    when 2938 game_start
+    do 2938 own give_ability card mine all everywhere state is no_abilities
+    4 marvel_snap | type | makes units get Ongoing | Super-Skrull -> Enchantress (-); High Evolutionary -> Enchantress (-); Thanos Fractured Frontier -> Enchantress (-)
+  Super-Skrull:
+    when 3289 always
+    do 3289 own copy_keywords self
+  Enchantress:
+    when 2869 played self
+    do 2869 own silence unit all board position is same_lane;keyword is 8000751
+  High Evolutionary:
+    when 2938 game_start
+    do 2938 own give_ability card mine all everywhere state is no_abilities
+    4 marvel_snap | type | makes units get End of Turn | Tao Mandala -> Ghost (-); Super-Skrull -> Ghost (-); Thanos Fractured Frontier -> Ghost (-)
+  Tao Mandala:
+    when 3300 played self
+    do 3300 own copy_keywords unit mine all board position is same_lane;card not 8000632
+  Ghost:
+    when 2909 played self
+    do 2909 own silence unit all board position is same_lane;keyword is 8000753
+  Super-Skrull:
+    when 3289 always
+    do 3289 own copy_keywords self
+    4 marvel_snap | cheaper | makes your units get Moveable | High Evolutionary -> Spider Sense (-); Super-Skrull -> Spider Sense (-); Thanos Fractured Frontier -> Spider Sense (-)
+  High Evolutionary:
+    when 2938 game_start
+    do 2938 own give_ability card mine all everywhere state is no_abilities
+  Spider Sense:
+    when 3262 played self
+    when 3263 always
+    if 3263 amount_count unit mine all board keyword is 8000757
+    if 3263 amount_minus
+    do 3262 own stat_change unit mine all board position is same_lane power=3.0
+    do 3263 own cost_change self cost=minus
+  Super-Skrull:
+    when 3289 always
+    do 3289 own copy_keywords self
+    4 marvel_snap | waits | does what it waits for or counts (moves) | Toad -> Sword of Fu Xi (-); Apocalypse, Celestials' Chosen -> Sword of Fu Xi (-); Heimdall -> Sword of Fu Xi (-)
+  Toad:
+    when 3327 played self
+    do 3327 own move unit mine top board state is summoned_this_round
+  Sword of Fu Xi:
+    when 3298 always
+    if 3298 have is unit mine board card is 8000329;position is same_lane
+    do 3298 own stat_change unit mine board card is 8000329;position is same_lane power=8.0
+  Apocalypse, Celestials' Chosen:
+    when 2749 played self
+    do 2749 own swap unit mine lowest board position is front_row
+    4 marvel_snap | type | makes your units get End of Turn | Thanos Fractured Frontier -> Invisible Woman First Steps (-); High Evolutionary -> Invisible Woman First Steps (-); Super-Skrull -> Invisible Woman First Steps (-)
+  Thanos Fractured Frontier:
+    when 3310 game_start
+    when 3311 played self
+    when 3312 played self
+    if 3311 keyword_condition
+    do 3310 own give_ability card mine all everywhere
+    do 3311 gives create card card in 8000370;card in 8000447;card in 8000472;card in 8000568;card in 8000570;card in 8000661
+    do 3312 own repeat card mine all card in 8000370;card in 8000447;card in 8000472;card in 8000568;card in 8000570;card in 8000661
+  Invisible Woman First Steps:
+    when 2962 activated self
+    do 2962 own repeat unit mine all board keyword is 8000753
+  High Evolutionary:
+    when 2938 game_start
+    do 2938 own give_ability card mine all everywhere state is no_abilities
+    4 marvel_snap | type | makes units get Moveable | Super-Skrull -> Aunt May (-); Tao Mandala -> Aunt May (-); High Evolutionary -> Aunt May (-)
+  Super-Skrull:
+    when 3289 always
+    do 3289 own copy_keywords self
+  Aunt May:
+    when 2763 round_end
+    if 2763 event_count ge 1.0
+    do 2763 own cost_change card mine chosen hand keyword is 8000757 cost=-1.0
+    do 2763 own stat_change card mine it power=2.0
+  Tao Mandala:
+    when 3300 played self
+    do 3300 own copy_keywords unit mine all board position is same_lane;card not 8000632
+    3 marvel_snap | waits | does what it waits for or counts (moves) (when in its lane) | Flight Harness -> Sword of Fu Xi (-); Fan Fei -> Sword of Fu Xi (-); Friendly Neighborhood Carnage -> Sword of Fu Xi (-)
+  Flight Harness:
+    when 2895 played self
+    do 2895 own stat_change unit mine highest board position is same_lane power=1.0
+    do 2895 own move unit mine highest board position is same_lane
+  Sword of Fu Xi:
+    when 3298 always
+    if 3298 have is unit mine board card is 8000329;position is same_lane
+    do 3298 own stat_change unit mine board card is 8000329;position is same_lane power=8.0
+  Fan Fei:
+    when 2884 activated self
+    do 2884 own stat_change unit mine all board position is same_lane;card not 8000182 power=1.0
+    do 2884 own move unit mine all board position is same_lane;card not 8000182
+    1 marvel_snap | stronger | gives it more power (when in its lane) | Storm Horseman of Famine -> Elder Dragon of the Moon (-)
+  Storm Horseman of Famine:
+    when 3278 round_end
+    if 3278 have is mana mine state not spent
+    do 3278 own stat_change unit mine all board position is same_lane;card not 8000608 power=2.0
+    do 3278 own stat_change card mine all hand power=2.0
+  Elder Dragon of the Moon:
+    when 2862 always
+    if 2862 amount_count unit mine all board state is buffed
+    if 2862 amount_minus
+    do 2862 own cost_change self cost=minus
+    1 marvel_snap | waits | does what it waits for or counts (moves) (when in front of it) | Sam Wilson & Nightcrawler Doomsday -> Sword of Fu Xi (-)
+  Sam Wilson & Nightcrawler Doomsday:
+    when 3187 always
+    when 3188 round_end
+    if 3187 it_matches self position is front_of_lane
+    if 3188 it_matches self position is back_of_lane
+    do 3187 own can self event=moves
+    do 3188 own stat_change unit mine board position is in_front of self power=1.0
+    do 3188 own move unit mine board position is in_front of self
+  Sword of Fu Xi:
+    when 3298 always
+    if 3298 have is unit mine board card is 8000329;position is same_lane
+    do 3298 own stat_change unit mine board card is 8000329;position is same_lane power=8.0
+    1 marvel_snap | waits | returns it to hand: its Play or summon effect goes off again | Falcon -> Acid Arrow (-)
+  Falcon:
+    when 2882 played self
+    do 2882 own return_to_hand unit mine all board cost eq 3076
+  Acid Arrow:
+    when 2726 played self
+    do 2726 own donate self
+NEW
+  305 marvel_snap | type | is a unit with On Reveal it counts or asks for | Deafening Chord -> Absorbing Man (-); Viper -> Absorbing Man (-); Crimson Behemoth -> Absorbing Man (-)
+  Deafening Chord:
+    when 2830 played self
+    do 2830 own silence unit enemy chosen board position is same_lane;cost le 3013
+  Absorbing Man:
+    when 2725 played self
+    if 2725 last_card unit mine keyword is 8000750
+    do 2725 own repeat unit mine it board
+  Viper:
+    when 3356 played self
+    do 3356 own donate unit mine lowest board position is same_lane;card not 8000695
+  282 marvel_snap | repeats | repeats its On Reveal effects | Absorbing Man -> Moon Girl (-); Absorbing Man -> Once And Future (-); Absorbing Man -> Gilgamesh (-)
+  Absorbing Man:
+    when 2725 played self
+    if 2725 last_card unit mine keyword is 8000750
+    do 2725 own repeat unit mine it board
+  Moon Girl:
+    when 3080 played self
+    do 3080 own copy card mine all hand
+  Once And Future:
+    when 3121 played self
+    do 3121 own shuffle_into_deck unit mine lowest board position is same_lane
+    do 3121 own mana_gain mana mine amount=2.0
+  234 marvel_snap | type | stops cards being played, but a summon is not played: it still fills the place | Goose -> Anti-Polar Magneto (-); Jean Grey -> Ultron (-); Invisible Woman & Namor Doomsday -> Uncle Ben (-)
+  Goose:
+    when 2918 always
+    do 2918 own cant card all hand cost ge 3117 event=played
+  Anti-Polar Magneto:
+    when 2746 played self
+    do 2746 own summon card mine chosen hand cost in 3;cost in 4
+  Jean Grey:
+    when 2974 always
+    if 2974 event_count eq 0.0
+    do 2974 own cant card all hand event=played
+  Ultron:
+    when 3336 played self
+    do 3336 own summon power=2.0;amount=4.0
+  201 marvel_snap | stronger | can give it more power | Wolverine Horseman of War -> Human Torch (-); Zombie Mister Fantastic -> Deadpool (-); Awesome Andy -> Human Torch (-)
+  Wolverine Horseman of War:
+    when 3385 round_end
+    if 3385 stat power ge 6.0 self
+    do 3385 own stat_change unit mine chosen board power=4.0
+  Human Torch:
+    when 2946 moves self
+    if 2946 amount_stat power self
+    do 2946 own stat_change self power=stat
+  Zombie Mister Fantastic:
+    when 3402 played self
+    when 3403 activated self
+    do 3402 own stat_change card mine card is 8000742 power=2.0
+    do 3403 own stat_change unit mine chosen state is created power=1.0
+  Deadpool:
+    when 2829 dies self
+    if 2829 amount_stat power self
+    do 2829 own return_to_hand self
+    do 2829 own stat_change self power=stat
+  177 marvel_snap | stronger | gives it more power | Okoye -> Nova Frankie Raye (-); Viv Vision -> Deadpool (-); Starhawk -> Black Panther (-)
+  Okoye:
+    when 3118 played self
+    do 3118 own stat_change card mine all deck power=1.0
+  Nova Frankie Raye:
+    when 2897 played unit mine cost eq 3092
+    if 2897 amount_stat power self
+    do 2897 own stat_change self power=stat
+  Viv Vision:
+    when 3358 round_start
+    when 3359 round_start
+    if 3358 amount gt sum
+    if 3358 amount_sum
+    if 3358 amount_stat power unit enemy all board position is same_lane
+    if 3358 amount_sum
+    if 3358 amount_stat power unit mine all board position is same_lane
+    if 3359 amount le sum
+    if 3359 amount_sum
+    if 3359 amount_stat power unit enemy all board position is same_lane
+    if 3359 amount_sum
+    if 3359 amount_stat power unit mine all board position is same_lane
+    do 3358 own stat_change card mine all hand power=1.0
+    do 3359 own move self
+  Deadpool:
+    when 2829 dies self
+    if 2829 amount_stat power self
+    do 2829 own return_to_hand self
+    do 2829 own stat_change self power=stat
+  109 marvel_snap | cheaper | makes it cheaper | Wave -> Evolved Abomination (-); Wave -> Nimrod (-); Wave -> Dragon Lord (-)
+  Wave:
+    when 3365 played self
+    do 3365 own cost_change card all max=4.0
+  Evolved Abomination:
+    when 2873 always
+    if 2873 amount_count unit enemy all board state is negative
+    if 2873 amount_minus
+    do 2873 own cost_change self cost=minus
+  Nimrod:
+    when 3113 dies self
+    do 3113 own copy self
+   93 marvel_snap | type | is a unit with Ongoing it counts or asks for | Ravonna Renslayer -> Mystique (-); Mister Fantastic -> Mystique (-); Cosmo -> Mystique (-)
+  Ravonna Renslayer:
+    when 3159 always
+    do 3159 own cost_change card mine all hand power le 3381 cost=-1.0;min=1.0
+  Mystique:
+    when 3100 played self
+    if 3100 last_card unit mine keyword is 8000751
+    do 3100 own copy_text self
+  Mister Fantastic:
+    when 3089 always
+    do 3089 own stat_change position all position is bordering power=3.0
+   70 marvel_snap | type | comes back after it is discarded, to be discarded again | Swarm -> Khonshu Full (-); Scorn -> Fantomex (-); Khonshu Waxing -> Morbius (-)
+  Swarm:
+    when 3296 discarded self
+    do 3296 own copy self amount=2.0
+    do 3296 own cost_set it cost=0.0
+  Khonshu Full:
+    when 2997 played self
+    do 2997 own revive unit mine chosen discarded
+    do 2997 own stat_set unit mine it power=12.0
+  Scorn:
+    when 3196 discarded self
+    do 3196 own return_card self
+    do 3196 own stat_change self power=2.0
+    do 3196 own stat_change unit mine chosen board power=2.0
+  Fantomex:
+    when 2886 activated self
+    if 2886 event_count ge 1.0
+    if 2886 event_count ge 1.0
+    do 2886 own stat_change unit enemy all board position is front_of_lane power=-2.0
+   63 marvel_snap | stronger | gives it more power (when in its lane) | Jack Flag -> Human Torch (-); Spider Sense -> Black Panther (-); The Ten Rings Upgraded -> Herbie Program 04 (-)
+  Jack Flag:
+    when 2970 always
+    do 2970 own stat_change unit mine all board position is same_lane;state is buffed power=2.0
+  Human Torch:
+    when 2946 moves self
+    if 2946 amount_stat power self
+    do 2946 own stat_change self power=stat
+  Spider Sense:
+    when 3262 played self
+    when 3263 always
+    if 3263 amount_count unit mine all board keyword is 8000757
+    if 3263 amount_minus
+    do 3262 own stat_change unit mine all board position is same_lane power=3.0
+    do 3263 own cost_change self cost=minus
+  Black Panther:
+    when 2779 played self
+    if 2779 amount_stat power self
+    do 2779 own stat_change self power=stat
+   45 marvel_snap | stronger | can give it more power (when in its lane) | Brand of Shou-Lao -> Human Torch (-); The Ten Rings -> Deadpool (-); Spider-Man Brand New Day -> Human Torch First Steps (-)
+  Brand of Shou-Lao:
+    when 2788 played self
+    do 2788 own stat_change unit enemy highest_cost hand power=-2.0
+    do 2788 own stat_change unit mine chosen board position is same_lane;card not 8000064 power=2.0
+  Human Torch:
+    when 2946 moves self
+    if 2946 amount_stat power self
+    do 2946 own stat_change self power=stat
+  The Ten Rings:
+    when 3305 played self
+    do 3305 own stat_change unit mine chosen board position is same_lane;card not 8000638 power=1.0
+  Deadpool:
+    when 2829 dies self
+    if 2829 amount_stat power self
+    do 2829 own return_to_hand self
+    do 2829 own stat_change self power=stat
+   40 marvel_snap | waits | fills your hand | Invisible Woman & Namor Doomsday -> Red Wolf Fractured Frontier (-); Goose -> Mad Thinker (-); Ebony Maw -> Dragon of the Moon (-)
+  Invisible Woman & Namor Doomsday:
+    when 2960 always
+    when 2961 always
+    if 2960 have is self position is front_row
+    if 2960 event_count ge 2.0
+    if 2961 have is self position is back_row
+    if 2961 amount_count position mine position is same_lane of unit mine highest_cost board;of:kind is unit
+    if 2961 amount_product
+    do 2960 own cant card enemy all hand event=played
+    do 2961 own stat_change self power=product
+  Red Wolf Fractured Frontier:
+    when 3169 played self
+    when 3170 played self
+    if 3169 amount_count card mine all hand
+    if 3170 keyword_condition
+    if event_count ge 1.0
+    if 3170 event_count ge 1.0
+    do 3169 own stat_change self power=count
+    do 3170 own stat_change card mine all hand power=1.0
+  Goose:
+    when 2918 always
+    do 2918 own cant card all hand cost ge 3117 event=played
+  Mad Thinker:
+    when 3037 round_start
+    if 3037 count ge 7.0 card mine all hand
+    do 3037 own stat_change self power=2.0
+   29 marvel_snap | stronger | more power: it doubles its power when it comes | Maverick -> Nova Frankie Raye (-); Araña -> Black Panther (-); Araña -> Nico Minoru Spell 07 (-)
+  Maverick:
+    when 3057 activated self
+    when 3058 played unit mine
+    if 3058 amount_stat power self
+    do 3057 own give_ability self
+    do 3058 gives stat_change unit mine it power=stat
+  Nova Frankie Raye:
+    when 2897 played unit mine cost eq 3092
+    if 2897 amount_stat power self
+    do 2897 own stat_change self power=stat
+  Araña:
+    when 2750 activated self
+    when 2751 played unit mine
+    do 2750 own give_ability self
+    do 2751 gives stat_change unit mine it power=1.0
+    do 2751 gives move unit mine it
+  Black Panther:
+    when 2779 played self
+    if 2779 amount_stat power self
+    do 2779 own stat_change self power=stat
+   23 marvel_snap | waits | merges onto it for its effect | Blob -> Man-Spider (-); Summoning Ritual 1 -> Peni Parker (-); Phoenix Force -> Peni Parker (-)
+  Blob:
+    when 2784 played self
+    do 2784 own merge card mine deck power=13.0
+  Man-Spider:
+    when 3046 played self
+    when 3047 merged
+    if 3046 last_card unit mine
+    if 3047 amount_stat power self
+    do 3046 own merge unit mine it
+    do 3047 own stat_change self power=stat
+  Summoning Ritual 1:
+    when 3284 played self
+    do 3284 own merge unit mine highest discard
+  Peni Parker:
+    when 3127 played self
+    when 3128 merged
+    do 3127 own create
+    do 3128 own mana_gain mana mine amount=1.0
+   18 marvel_snap | waits | changes your units' stats | Shadow King -> Venus (-); Herbie Program 03 -> Venus (-); Khonshu -> Venus (-)
+  Shadow King:
+    when 3208 played self
+    if 3208 amount_stat base_power it
+    do 3208 own stat_set unit all board position is same_lane power=stat
+  Venus:
+    when 3352 stat_changed unit mine
+    if 3352 it_matches state is buffed
+    do 3352 own stat_change unit mine it power=1.0
+  Herbie Program 03:
+    when 3141 activated self
+    do 3141 own summon
+    do 3141 own stat_set unit mine it card is 8000486 power=4.0
+   13 marvel_snap | waits | changes its stats for its effect | Valkyrie -> Sub-Mariner (-); The Inversion -> Sub-Mariner (-); Bastion -> Sub-Mariner (-)
+  Valkyrie:
+    when 3345 played self
+    do 3345 own stat_set unit all board position is same_lane power=3.0
+  Sub-Mariner:
+    when 3283 stat_changed self
+    if 3283 it_matches state is buffed
+    if 3283 amount_event_amount
+    do 3283 own create unit random cost eq 3521
+    do 3283 own stat_change unit it power=event_amount
+  The Inversion:
+    when 3318 played self
+    if 3318 amount_stat power it
+    if 3318 amount_minus
+    do 3318 own stat_set unit lowest board position is same_lane power=minus
+   12 marvel_snap | waits | comes back after it is discarded, to be discarded again | Khonshu -> Black Knight (-); Swarm -> Miek (-); Scorn -> Miek (-)
+  Khonshu:
+    when 2995 discarded self
+    when 2996 played self
+    do 2995 own transform self
+    do 2995 own return_card self
+    do 2996 own revive unit mine chosen discarded
+    do 2996 own stat_set unit mine it power=5.0
+  Black Knight:
+    when 2778 discarded card mine
+    if 2778 amount_stat power it
+    do 2778 own create power=stat
+  Swarm:
+    when 3296 discarded self
+    do 3296 own copy self amount=2.0
+    do 3296 own cost_set it cost=0.0
+  Miek:
+    when 3066 discarded card mine
+    do 3066 own stat_change self power=1.0
+    do 3066 own can self event=moves
+    9 marvel_snap | stronger | can give it more power (when in front of it) | Sam Wilson & Nightcrawler Doomsday -> Deadpool (-); Sam Wilson & Nightcrawler Doomsday -> Man-Spider (-); Sam Wilson & Nightcrawler Doomsday -> Black Panther (-)
+  Sam Wilson & Nightcrawler Doomsday:
+    when 3187 always
+    when 3188 round_end
+    if 3187 it_matches self position is front_of_lane
+    if 3188 it_matches self position is back_of_lane
+    do 3187 own can self event=moves
+    do 3188 own stat_change unit mine board position is in_front of self power=1.0
+    do 3188 own move unit mine board position is in_front of self
+  Deadpool:
+    when 2829 dies self
+    if 2829 amount_stat power self
+    do 2829 own return_to_hand self
+    do 2829 own stat_change self power=stat
+  Man-Spider:
+    when 3046 played self
+    when 3047 merged
+    if 3046 last_card unit mine
+    if 3047 amount_stat power self
+    do 3046 own merge unit mine it
+    do 3047 own stat_change self power=stat
+    7 marvel_snap | waits | silences it: its drawback is gone | Zero -> Giganto (-); Zero -> Cull Obsidian (-); Zero -> Ebony Maw (-)
+  Zero:
+    when 3395 played unit mine
+    do 3395 own silence unit mine it
+  Giganto:
+    when 2913 always
+    do 2913 own cant self event=played
+  Cull Obsidian:
+    when 2822 always
+    do 2822 own cant self event=played
+    7 marvel_snap | stronger | more power | Zombie Venom -> Zombie Giant-Man (-); Zombie Scarlet Witch -> Zombie Giant-Man (-); Ultron Power Stone -> Ultron Reality Stone (-)
+  Zombie Venom:
+    when 3409 played self
+    when 3410 dies unit mine card not 8000748
+    do 3409 own kill unit mine top board position is same_lane;card not 8000748
+    do 3410 own stat_change card mine card is 8000742 power=3.0
+  Zombie Giant-Man:
+    when 3401 played self
+    if 3401 amount_stat power card mine card is 8000742
+    do 3401 own stat_change card mine card is 8000742 power=2.0
+    do 3401 own stat_change self power=stat
+  Zombie Scarlet Witch:
+    when 3407 played unit mine position is same_lane
+    do 3407 own stat_change card mine card is 8000742 power=2.0
+    4 marvel_snap | type | makes a unit with Ongoing it counts or asks for | Sub-Mariner -> Mystique (-); Shanna -> Mystique (-); Mister Fantastic & Beast Doomsday -> Mystique (-)
+  Sub-Mariner:
+    when 3283 stat_changed self
+    if 3283 it_matches state is buffed
+    if 3283 amount_event_amount
+    do 3283 own create unit random cost eq 3521
+    do 3283 own stat_change unit it power=event_amount
+  Mystique:
+    when 3100 played self
+    if 3100 last_card unit mine keyword is 8000751
+    do 3100 own copy_text self
+  Shanna:
+    when 3214 played self
+    do 3214 own summon unit random cost eq 3440
+    2 marvel_snap | type | makes a unit with On Reveal it counts or asks for | Mister Fantastic & Beast Doomsday -> Absorbing Man (-); Sub-Mariner -> Absorbing Man (-)
+  Mister Fantastic & Beast Doomsday:
+    when 3090 played self
+    when 3091 always
+    if 3090 it_matches self position is front_of_lane
+    if 3091 it_matches self position is back_of_lane
+    if 3091 amount_count unit mine all board state is created
+    do 3090 own create unit mine random
+    do 3090 own stat_change unit mine it power=3.0
+    do 3091 own stat_change self power=count
+  Absorbing Man:
+    when 2725 played self
+    if 2725 last_card unit mine keyword is 8000750
+    do 2725 own repeat unit mine it board
+  Sub-Mariner:
+    when 3283 stat_changed self
+    if 3283 it_matches state is buffed
+    if 3283 amount_event_amount
+    do 3283 own create unit random cost eq 3521
+    do 3283 own stat_change unit it power=event_amount

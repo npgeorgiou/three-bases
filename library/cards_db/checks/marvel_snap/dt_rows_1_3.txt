@@ -1,0 +1,94 @@
+  Rumble:
+    when 5037 played self
+    when 5038 played self
+    when 7128 strikes
+    when 5039 played self
+    when 7119 attacks
+    when 5040 played self
+    when 7124 targeted self
+    when 5041 always
+    if 5038 event_count ge 1.0
+    if 5039 event_count ge 2.0
+    if 5040 event_count ge 3.0
+    if 5041 event_count damage ge 12.0
+    do 5037 own discard card mine chosen hand amount=3.0
+    do 5038 own give_keyword card mine all everywhere card is 751341
+    do 7128 uses_keyword damage player enemy amount=1.0
+    do 5039 own give_keyword card mine all everywhere card is 751341
+    do 7119 uses_keyword first_strike card mine all everywhere card is 751341
+    do 5040 own give_keyword card mine all everywhere card is 751341
+    do 7124 uses_keyword counter effect it
+    do 5041 own level_up self
+    3 runeterra | stronger | doubles its damage | The Dreadway -> Swole Squirrel (-); The Dreadway -> Dashing Dandy (-); The Dreadway -> Earthshaker (-)
+  The Dreadway:
+    when 4390 summoned self
+    when 4391 damaged
+    when 4392 damaged
+    when 7137 always
+    if 4391 amount_event_amount
+    if 4392 amount_event_amount
+    do 4390 own draw card mine deck card is 750838 amount=1.0
+    do 4391 own damage it amount=event_amount
+    do 4392 own damage it amount=event_amount
+    do 7137 has_keyword cant unit enemy all power lt 7905 event=blocks
+  Swole Squirrel:
+    when 4686 strikes
+    if 4686 amount_stat power self
+    do 4686 own stat_change self power=stat
+  Dashing Dandy:
+    when 5687 played self
+    when 7086 strikes
+    if 5687 keyword_condition
+    if 5687 amount_stat power self
+    if event_count ge 1.0
+    if 5687 event_count ge 1.0
+    do 5687 own stat_change self power=stat
+    do 7086 has_keyword excess_damage player enemy
+    2 runeterra | waits | comes back after it is discarded, to be discarded again | Reborn Grenadier -> The Lady of Blood (-); Reborn Grenadier -> Fix-Em-Uppers (-)
+  Reborn Grenadier:
+    when 5200 played self
+    when 5201 discarded self
+    when 7130 strikes
+    when 7131 round_end
+    do 5200 own discard card mine chosen hand amount=1.0
+    do 5201 own copy self
+    do 7130 has_keyword kill self
+    do 7131 has_keyword kill self
+  The Lady of Blood:
+    when 5215 discarded unit mine state not fleeting
+    when 7093 round_end
+    do 5215 own copy unit mine it
+    do 5215 own give_keyword unit mine it
+    do 7093 uses_keyword discard unit mine it
+  Fix-Em-Uppers:
+    when 5088 discarded
+    when 5089 nexus_damaged player enemy
+    do 5088 own stat_change self power=2.0;health=1.0
+    do 5089 own stat_change self power=2.0;health=1.0
+    1 runeterra | levels | comes back after it is discarded, to be discarded again (levels it up) | Reborn Grenadier -> Sion (-)
+  Reborn Grenadier:
+    when 5200 played self
+    when 5201 discarded self
+    when 7130 strikes
+    when 7131 round_end
+    do 5200 own discard card mine chosen hand amount=1.0
+    do 5201 own copy self
+    do 7130 has_keyword kill self
+    do 7131 has_keyword kill self
+  Sion:
+    when 5203 discarded self
+    when 7086 strikes
+    when 5204 always
+    when 5205 always
+    when 7086 strikes
+    if 5204 amount_event_count
+    if 5205 amount ge 35.0
+    if 5205 amount_sum
+    if 5205 amount_event_count power
+    if 5205 amount_event_count power
+    do 5203 own give_keyword unit mine highest board
+    do 7086 uses_keyword excess_damage player enemy
+    do 5203 own move self
+    do 5204 own stat_change self power=event_count;max=7.0
+    do 5205 own level_up self
+    do 7086 has_keyword excess_damage player enemy

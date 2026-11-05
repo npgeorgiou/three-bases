@@ -471,7 +471,7 @@ uses flat_ref (`ask.py <games> cares`): the same thing is stored as a trigger, a
 # Part 3: chat 2, every check after the import, and the fixes
 Steps 2.5-5 of Part 2 and the line check, in this order and nothing else. Cards are shown by their rows (SYNTAX.md), never by
 their text. D = `checks/<game>/`. After each step: write PROGRESS.md, commit and push the step's files.
-1. **Start.** Write PROGRESS.md with these ten steps. `links.py <game>`; `dump_lines.py --table D/tb0.tsv` and
+1. **Start.** Write PROGRESS.md with these ten steps. `links.py` (all games: the fixes are shared); `dump_lines.py --table D/tb0.tsv` and
    `dump_lines.py D/before.tsv` (every line of every deck of every game).
 2. **The two checks, printed and cut.** `links_audit.py <game> > D/la.txt` (each reason of the game: is its rule right?) and
    `deck_audit.py <game> > D/da.txt` (every deck: cards with no or few partners, the special cards);
@@ -493,8 +493,11 @@ their text. D = `checks/<game>/`. After each step: write PROGRESS.md, commit and
    commits and starts the next fixer. A STUCK cause goes to "Open work" with the fixer's words.
 8. **One rebuild** when all causes are done: `check_all.py <game>` if records changed, `check_all.py --no-load` if only code,
    in the Bash tool's background mode. Then `links.py`, `dump_lines.py D/after.tsv`, `--diff D/before.tsv D/after.tsv` and
-   `--diff` of the tables (tb0 -> tb1). A diff of up to about 60 lines the main chat reads; a longer one is split and read by
-   line readers (step 3's job, the diff as the piece). Every wrong gone or new group is a new cause: steps 5-8 once more, at
+   `--diff` of the tables (tb0 -> tb1). tb0 must hold every game: build it with `links.py` (no game) in step 1; if it holds
+   only this game, build the old tables from a copy of cards_db with the old network.py (the library's other folders linked
+   next to it). A diff of up to about 60 lines the main chat reads; a longer one gets its pairs' rows (`diff_rows.py <diff>
+   <out>`), is split (`audit_pieces.py split`) and read by line readers (step 3's job, the diff as the piece). Combo cases
+   pass on connections.py or on a line from the enabler to the payoff (cases/run.py line_of). Every wrong gone or new group is a new cause: steps 5-8 once more, at
    most twice in all; what is still wrong then goes to "Open work". Must-not cases that `cases/run.py` lists as stale are
    rewritten as strict.
 9. **The last checks** (Part 2 step 4): `realworld.py <game>` again; `design_questions.py` read by one agent (thin or odd

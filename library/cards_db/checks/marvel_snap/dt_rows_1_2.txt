@@ -1,0 +1,1286 @@
+    do 7115 has_keyword cant self event=attacks
+    do 7115 has_keyword cant self event=blocks
+    do 7124 has_keyword counter effect it
+  Deathless Knight:
+    when 5671 given_keyword self keyword is 750426
+    when 7137 always
+    do 5671 own stat_change self power=1.0;health=1.0
+    do 7137 has_keyword cant unit enemy all power lt 7905 event=blocks
+  Chronoshift:
+    when 4856 played self
+    when 4857 dies self
+    if 4857 amount_full
+    do 4856 own give_ability unit mine chosen board category is champion
+    do 4857 gives heal self amount=full
+    do 4857 gives stat_change self power=3.0;health=3.0
+   28 runeterra | type | gives it Fleeting for its effect | Chronoshift -> The Tidedancer (-); Adaptatron 3000 -> The Tidedancer (-); Concurrent Timelines -> The Tidedancer (-)
+  Chronoshift:
+    when 4856 played self
+    when 4857 dies self
+    if 4857 amount_full
+    do 4856 own give_ability unit mine chosen board category is champion
+    do 4857 gives heal self amount=full
+    do 4857 gives stat_change self power=3.0;health=3.0
+  The Tidedancer:
+    when 5843 summoned self
+    when 5844 played card
+    when 7135 always
+    when 5845 given_keyword self keyword is 750378
+    if 5844 event_count eq 3.0
+    do 5843 own draw card mine random deck card is 751965 amount=1.0
+    do 5844 own stat_change unit mine all board card not 751968 power=2.0
+    do 5844 own give_keyword unit mine all board card not 751968
+    do 7135 uses_keyword cant unit enemy all health lt 7904 event=blocks
+    do 5845 own reveal self
+  Adaptatron 3000:
+    when 6469 summoned unit mine all type is 88
+    do 6469 own copy_keywords self
+    do 6469 own copy_keywords it
+   28 runeterra | type | gives it Lurk for its effect | Curse of the Tomb -> Pyke (-); Thrashing Husk -> Pyke (-); Scattered Husk -> Pyke (-)
+  Curse of the Tomb:
+    when 5612 played self
+    when 7166 activated
+    when 5613 damaged self
+    when 5614 dies self
+    if 5613 amount_event_amount
+    do 5612 own keyword_action player mine
+    do 7166 uses_keyword choose_card card mine deck options=3.0
+    do 7166 uses_keyword put_on_top player mine
+    do 5612 own give_ability unit chosen board
+    do 5613 gives damage self amount=event_amount
+    do 5612 own give_ability unit it
+    do 5614 gives obliterate self
+  Pyke:
+    when 4741 keyword_used self keyword is 750427
+    when 4742 always
+    when 7132 attacks
+    when 7119 attacks
+    if 4742 event_count damage ge 15.0
+    if 7132 have is self deck_top
+    do 4741 own transform self
+    do 4742 own level_up self
+    do 7132 has_keyword stat_change unit mine all everywhere type is 73 power=1.0;health=0.0
+    do 7119 has_keyword first_strike self
+  Thrashing Husk:
+    when 6691 played unit mine all
+    when 7115 always
+    when 7086 strikes
+    if 6691 amount_stat power self
+    if 6691 amount_stat health self
+    do 6691 own kill self
+    do 6691 own stat_change it power=stat;health=stat
+    do 6691 own copy_keywords it
+    do 7115 has_keyword cant self event=attacks
+    do 7115 has_keyword cant self event=blocks
+    do 7086 has_keyword excess_damage player enemy
+   27 runeterra | levels | changes its stats for its effect (levels it up) | Blimp-Pack Poacher -> Kayle (-); Nidalee -> Kayle (-); All-Terrain Trooper -> Kayle (-)
+  Blimp-Pack Poacher:
+    when 5781 always
+    when 7163 played self
+    when 7164 activated
+    when 5782 transformed self
+    when 5783 blocks
+    when 5784 blocks self
+    if 7163 have not unit mine state is hidden
+    do 5781 own keyword_action amount=3.0
+    do 7163 uses_keyword stat_set power=2.0;health=2.0;cost=2.0
+    do 7164 uses_keyword transform
+    do 5782 own give_ability self
+    do 5783 gives capture it
+    do 5782 own give_ability self
+    do 5784 gives capture actor
+  Kayle:
+    when 5469 always
+    when 5470 summoned self
+    when 5471 always
+    when 7119 attacks
+    when 5472 round_start
+    if 5469 amount_event_count
+    if 5471 keyword_condition 6.0
+    if 5472 stat power ge 11.0 self
+    if stat power ge listed self
+    if 5471 stat power ge listed self
+    do 5469 own stat_change self power=event_count
+    do 5470 own stat_change unit mine all board power=1.0
+    do 5471 own give_keyword self
+    do 7119 uses_keyword first_strike self
+    do 5472 own level_up self
+  Nidalee:
+    when 5772 always
+    when 7163 played self
+    when 7164 activated
+    when 5773 always
+    when 7119 attacks
+    if 7163 have not unit mine state is hidden
+    if 5773 amount ge 4.0
+    if 5773 amount_sum
+    if 5773 amount_event_count
+    if 5773 amount_event_count
+    do 5772 own keyword_action amount=2.0
+    do 7163 uses_keyword stat_set power=2.0;health=2.0;cost=2.0
+    do 7164 uses_keyword transform
+    do 5773 own level_up self
+    do 7119 has_keyword first_strike self
+   24 runeterra | type | makes enemy units get Stun: {B} damages them | Spirit Fire -> Stiffened Sinews (-); Luminosprite -> Deadly Flourish (-); Rainbowfish (created) -> Stiffened Sinews (-)
+  Spirit Fire:
+    when 4891 played self
+    when 4892 round_end
+    do 4891 own stat_change unit enemy all board power=-2.0
+    do 4891 own give_ability unit enemy all board
+    do 4892 gives damage self amount=2.0
+  Stiffened Sinews:
+    when 6685 played self
+    do 6685 own stun unit enemy chosen board state not stunned
+    do 6685 own damage unit enemy it board state is stunned amount=2.0
+  Luminosprite:
+    when 5981 supports
+    do 5981 own copy_keywords it
+  Deadly Flourish:
+    when 6951 played self
+    do 6951 own damage unit enemy all board state is stunned amount=2.0
+   19 runeterra | type | changes your units' stats | Lord Mallat -> Xolaani the Bloodweaver (-); Nagakabouros' Tentacle -> Xolaani the Bloodweaver (-); Seal In Steel -> Xolaani the Bloodweaver (-)
+  Lord Mallat:
+    when 7134 dies self
+    do 7134 has_keyword remove_keyword self
+    do 7134 has_keyword revive self
+    do 7134 has_keyword stun self
+    do 7134 has_keyword stat_set self health=1.0
+  Xolaani the Bloodweaver:
+    when 5458 always
+    when 5459 always
+    when 7086 strikes
+    if 5458 amount_double
+    if 5458 amount_event_count
+    if 5458 amount_double
+    if 5458 amount_event_count
+    if 5459 keyword_condition 16.0
+    if stat power ge listed self
+    if 5459 stat power ge listed self
+    do 5458 own stat_change self power=double;health=double
+    do 5459 own transform self
+    do 7086 has_keyword excess_damage player enemy
+  Nagakabouros' Tentacle:
+    when 6706 summoned self
+    when 7130 strikes
+    when 7131 round_end
+    if 6706 amount_stat power unit mine highest board name_has is 32
+    if 6706 amount_stat health unit mine highest board name_has is 32
+    do 6706 own stat_set self power=stat;health=stat
+    do 6706 own copy_keywords self
+    do 7130 has_keyword kill self
+    do 7131 has_keyword kill self
+   17 runeterra | type | makes enemy units get Curse | Spirit Fire -> Sinner's Vise (-); Papercraft Dragon (created) -> Sinner's Vise (-); Rainbowfish (created) -> Sinner's Vise (-)
+  Spirit Fire:
+    when 4891 played self
+    when 4892 round_end
+    do 4891 own stat_change unit enemy all board power=-2.0
+    do 4891 own give_ability unit enemy all board
+    do 4892 gives damage self amount=2.0
+  Sinner's Vise:
+    when 5919 played self
+    when 7110 always
+    do 5919 own give_keyword unit enemy chosen board
+    do 7110 uses_keyword cant unit enemy chosen board event=targeted
+    do 5919 own cost_change card enemy all everywhere keyword is 750406 cost=1.0
+  Papercraft Dragon:
+    when 7106 attacks
+    when 7090 activated
+    when 7091 leaves_play attached_to
+    do 7106 has_keyword double_strike self
+    do 7090 has_keyword attach self
+    do 7091 has_keyword return_to_hand self
+   13 duelyst | type | makes units get Rush | Ancient Grove -> Night Watcher (-); Bonechill Barrier -> Night Watcher (-); Auroraboros -> Night Watcher (-)
+  Ancient Grove:
+    when 251 played self
+    when 252 dies self
+    when 1101 always
+    when 1101 always
+    do 251 own give_ability unit mine all board
+    do 252 gives summon power=1.0;health=1.0
+    do 1101 uses_keyword cant any enemy all board position is surrounding of self event=moves
+    do 1101 uses_keyword cant any enemy all board position is surrounding of self event=attacks
+    do 1101 has_keyword cant any enemy all board position is surrounding of self event=moves
+    do 1101 has_keyword cant any enemy all board position is surrounding of self event=attacks
+  Night Watcher:
+    when 751 summoned unit keyword is 741555
+    when 1077 damaged self
+    if 1077 amount_event_amount
+    do 751 own exhaust unit it
+    do 1077 has_keyword negate_damage self amount=event_amount
+  Bonechill Barrier:
+    when 261 played self
+    when 262 attacks self
+    when 1089 always
+    do 261 own summon amount=3.0;power=0.0;health=2.0
+    do 261 own give_ability unit mine it card is 5000288
+    do 262 gives give_keyword actor
+    do 1089 uses_keyword cant actor event=moves
+    do 1089 uses_keyword cant actor event=attacks
+   11 duelyst | type | makes your units get Provoke | Lionheart Blessing -> Golden Justicar (-); Bonechill Barrier -> Golden Justicar (-); Godhammer -> Golden Justicar (-)
+  Lionheart Blessing:
+    when 67 played self
+    when 68 damaged
+    if 68 keyword_condition
+    do 67 own give_ability unit mine chosen board
+    do 68 gives draw card mine deck_top amount=1.0
+  Golden Justicar:
+    when 781 always
+    when 1101 always
+    do 781 own stat_change unit mine all board keyword is 741557;card not 5000820 movement=2.0
+    do 1101 has_keyword cant any enemy all board position is surrounding of self event=moves
+    do 1101 has_keyword cant any enemy all board position is surrounding of self event=attacks
+  Bonechill Barrier:
+    when 261 played self
+    when 262 attacks self
+    when 1089 always
+    do 261 own summon amount=3.0;power=0.0;health=2.0
+    do 261 own give_ability unit mine it card is 5000288
+    do 262 gives give_keyword actor
+    do 1089 uses_keyword cant actor event=moves
+    do 1089 uses_keyword cant actor event=attacks
+    9 runeterra | type | makes enemy units get Trap | Rainbowfish (created) -> Ava Achiever (-); Cracking Ice -> Ava Achiever (-); Hive Herald -> Ava Achiever (-)
+  Rainbowfish:
+    when 7108 always
+    when 7090 activated
+    when 7091 leaves_play attached_to
+    do 7108 has_keyword cant unit enemy all keyword not 750404 event=blocks
+    do 7090 has_keyword attach self
+    do 7091 has_keyword return_to_hand self
+  Ava Achiever:
+    when 5101 summoned self
+    when 7169 activated
+    when 5102 round_end
+    when 7169 activated
+    when 5103 always
+    if 7169 amount_event_amount
+    if 7169 amount_event_amount
+    if 5103 amount_event_amount
+    if 5103 amount_double
+    do 5101 own keyword_action player enemy amount=3.0
+    do 7169 uses_keyword create player enemy amount=event_amount
+    do 5102 own keyword_action player enemy amount=3.0
+    do 7169 uses_keyword create player enemy amount=event_amount
+    do 5103 own increase_effect card enemy all everywhere keyword is 750386 amount=double
+  Cracking Ice:
+    when 5346 played self
+    when 5347 round_start
+    when 7118 activated
+    do 5346 own give_ability unit enemy chosen board
+    do 5347 gives keyword_action self
+    do 7118 uses_keyword stat_set self power=0.0
+    9 runeterra | levels | changes enemy units' stats (levels it up) | Towering Pairofant -> Ashe (-); Blimp-Pack Poacher -> Ashe (-); Condense -> Ashe (-)
+  Towering Pairofant:
+    when 5788 always
+    when 7163 played self
+    when 7164 activated
+    when 7086 strikes
+    if 7163 have not unit mine state is hidden
+    do 5788 own keyword_action amount=5.0
+    do 7163 uses_keyword stat_set power=2.0;health=2.0;cost=2.0
+    do 7164 uses_keyword transform
+    do 7086 has_keyword excess_damage player enemy
+  Ashe:
+    when 4262 attacks
+    when 7118 activated
+    when 4263 always
+    when 4264 levels_up self
+    if 4263 event_count ge 5.0
+    do 4262 own keyword_action unit enemy highest board
+    do 7118 uses_keyword stat_set unit enemy highest board power=0.0
+    do 4263 own level_up self
+    do 4264 own create card mine
+  Blimp-Pack Poacher:
+    when 5781 always
+    when 7163 played self
+    when 7164 activated
+    when 5782 transformed self
+    when 5783 blocks
+    when 5784 blocks self
+    if 7163 have not unit mine state is hidden
+    do 5781 own keyword_action amount=3.0
+    do 7163 uses_keyword stat_set power=2.0;health=2.0;cost=2.0
+    do 7164 uses_keyword transform
+    do 5782 own give_ability self
+    do 5783 gives capture it
+    do 5782 own give_ability self
+    do 5784 gives capture actor
+    8 duelyst | type | changes your units' stats | Freeblade -> Crystalline Reinforcement (-); Drake Dowager -> Crystalline Reinforcement (-); Draugar Eyolith -> Crystalline Reinforcement (-)
+  Freeblade:
+    when 569 summoned unit
+    when 570 always
+    when 1086 played self
+    when 1086 played self
+    do 569 own transform self
+    do 569 own swap self
+    do 570 own give_keyword self
+    do 1086 uses_keyword stat_set self power=3.0;health=3.0
+    do 1086 has_keyword stat_set self power=3.0;health=3.0
+  Crystalline Reinforcement:
+    when 1047 played self
+    if 1047 amount_double
+    do 1047 own increase_effect unit mine all board state is buffed amount=double
+  Drake Dowager:
+    when 571 attacks
+    when 572 attacks
+    when 1070 always
+    when 573 always
+    when 1086 played self
+    when 1084 always
+    when 1086 played self
+    do 571 own transform self
+    do 572 own summon power=4.0;health=4.0
+    do 1070 uses_keyword can unit mine it card is 5000284 event=moves
+    do 573 own give_keyword self
+    do 1086 uses_keyword stat_set self power=3.0;health=3.0
+    do 1084 has_keyword can self event=attacks
+    do 1086 has_keyword stat_set self power=3.0;health=3.0
+    8 runeterra | type | makes enemy units get Frostbite | Hive Herald -> Rimefang Pack (-); Rainbowfish (created) -> Rimefang Pack (-); Luminosprite -> Rimefang Pack (-)
+  Hive Herald:
+    when 5407 played self
+    when 7117 always
+    if 7117 count ge 6.0 keyword mine state is positive
+    do 5407 own copy_keywords self
+    do 5407 own copy_keywords it
+    do 7117 has_keyword stat_change self power=2.0;health=2.0
+  Rimefang Pack:
+    when 6558 always
+    when 7086 strikes
+    if 6558 amount_event_count
+    do 6558 own stat_change self power=event_count
+    do 7086 has_keyword excess_damage player enemy
+  Rainbowfish:
+    when 7108 always
+    when 7090 activated
+    when 7091 leaves_play attached_to
+    do 7108 has_keyword cant unit enemy all keyword not 750404 event=blocks
+    do 7090 has_keyword attach self
+    do 7091 has_keyword return_to_hand self
+    8 runeterra | type | makes enemy units get Vulnerable | Papercraft Dragon (created) -> Ye Been Warned (-); Curse of the Tomb -> Ye Been Warned (-); Quick Quill (created) -> Ye Been Warned (-)
+  Papercraft Dragon:
+    when 7106 attacks
+    when 7090 activated
+    when 7091 leaves_play attached_to
+    do 7106 has_keyword double_strike self
+    do 7090 has_keyword attach self
+    do 7091 has_keyword return_to_hand self
+  Ye Been Warned:
+    when 4439 played self
+    when 7107 always
+    when 4440 dies unit enemy keyword is 750403;state is targeted_this_round
+    do 4439 own give_keyword unit enemy chosen board
+    do 7107 uses_keyword can player enemy event=challenges
+    do 4440 own draw card mine deck_top amount=1.0
+  Curse of the Tomb:
+    when 5612 played self
+    when 7166 activated
+    when 5613 damaged self
+    when 5614 dies self
+    if 5613 amount_event_amount
+    do 5612 own keyword_action player mine
+    do 7166 uses_keyword choose_card card mine deck options=3.0
+    do 7166 uses_keyword put_on_top player mine
+    do 5612 own give_ability unit chosen board
+    do 5613 gives damage self amount=event_amount
+    do 5612 own give_ability unit it
+    do 5614 gives obliterate self
+    8 runeterra | type | makes enemy units get {B} | Spirit Fire -> Mark of the Storm (-); Curse of the Tomb -> Mark of the Storm (-); Papercraft Dragon (created) -> Mark of the Storm (-)
+  Spirit Fire:
+    when 4891 played self
+    when 4892 round_end
+    do 4891 own stat_change unit enemy all board power=-2.0
+    do 4891 own give_ability unit enemy all board
+    do 4892 gives damage self amount=2.0
+  Mark of the Storm:
+    when 6919 played self
+    when 7093 round_end
+    do 6919 own give_keyword unit enemy chosen board keyword not 990003
+    do 6919 own remove_keyword unit enemy it keyword is 990003
+    do 6919 own stun unit enemy it
+    do 6919 own damage unit enemy it amount=2.0
+    do 7093 has_keyword discard self hand
+  Curse of the Tomb:
+    when 5612 played self
+    when 7166 activated
+    when 5613 damaged self
+    when 5614 dies self
+    if 5613 amount_event_amount
+    do 5612 own keyword_action player mine
+    do 7166 uses_keyword choose_card card mine deck options=3.0
+    do 7166 uses_keyword put_on_top player mine
+    do 5612 own give_ability unit chosen board
+    do 5613 gives damage self amount=event_amount
+    do 5612 own give_ability unit it
+    do 5614 gives obliterate self
+    4 runeterra | levels | through Flashbomb Trap: damages units or players (levels it up) | Eclectic Collection -> Sivir (-); Eclectic Collection -> Volibear (-); Eclectic Collection -> LeBlanc (-)
+  Eclectic Collection:
+    when 5529 played self
+    when 7169 activated
+    when 7169 activated
+    when 7169 activated
+    when 7169 activated
+    if 5529 amount_count unit mine board
+    if 5529 amount_count unit mine board
+    if 5529 amount_count unit mine board
+    if 5529 amount_count unit mine board
+    if 7169 amount_event_amount
+    if 7169 amount_event_amount
+    if 7169 amount_event_amount
+    if 7169 amount_event_amount
+    do 5529 own keyword_action card mine top deck amount=1.0;times=count
+    do 7169 uses_keyword create card mine top deck amount=event_amount
+    do 5529 own keyword_action card mine top deck amount=3.0;times=count
+    do 7169 uses_keyword create card mine top deck amount=event_amount
+    do 5529 own keyword_action card enemy random deck amount=1.0;times=count
+    do 7169 uses_keyword create card enemy random deck amount=event_amount
+    do 5529 own keyword_action card enemy random deck amount=3.0;times=count
+    do 7169 uses_keyword create card enemy random deck amount=event_amount
+  Sivir:
+    when 4835 always
+    when 7119 attacks
+    when 7124 targeted self
+    if 4835 event_count damage ge 30.0
+    do 4835 own level_up self
+    do 7119 has_keyword first_strike self
+    do 7124 has_keyword counter effect it
+  Volibear:
+    when 5884 played self
+    when 5885 round_end
+    if 5885 event_count damage ge 50.0
+    do 5884 own play_card unit enemy random board times=3.0
+    do 5884 own play_card player enemy
+    do 5885 own level_up self
+    4 faeria | type | changes its stats for its effect | Aurora, Myth Maker -> Seedling (-); Humbling Vision -> Seedling (-); Aurora's Teapot -> Seedling (-)
+  Aurora, Myth Maker:
+    when 1213 played self
+    do 1213 own stat_set unit mine chosen board card not 741167 power=6.0;health=6.0
+  Seedling:
+    when 1267 turn_start
+    if 1267 stat health lt 5.0 self
+    do 1267 own stat_change self power=1.0;health=1.0
+  Humbling Vision:
+    when 1209 played self
+    if 1209 amount_half
+    if 1209 amount_stat base_health it
+    if 1209 amount_half
+    if 1209 amount_stat base_power it
+    do 1209 own stat_set unit chosen board power=half;health=half
+    3 duelyst | type | makes units get Zeal | S.I.L.V.E.R. -> Afterblaze (-); Lionheart Blessing -> Afterblaze (-); Dauntless Advance -> Afterblaze (-)
+  S.I.L.V.E.R.:
+    when 1067 summoned unit mine type is 5
+    do 1067 own copy_keywords unit mine all board type is 5
+  Afterblaze:
+    when 805 played self
+    when 806 played self
+    if 806 have is it keyword is 741551
+    do 805 own stat_change unit mine chosen board power=2.0;health=4.0
+    do 806 own draw card mine deck_top amount=1.0
+  Lionheart Blessing:
+    when 67 played self
+    when 68 damaged
+    if 68 keyword_condition
+    do 67 own give_ability unit mine chosen board
+    do 68 gives draw card mine deck_top amount=1.0
+    3 sts1 | type | makes units get Scry | Talk to the Hand -> Golden Eye (-); Talk to the Hand -> Nirvana (-); Talk to the Hand -> Weave (-)
+  Talk to the Hand:
+    when 7801 played self
+    when 7802 damaged self
+    when 8302 damaged self
+    when 8303 turn_start
+    when 8319 activated
+    if 8302 amount_count keyword self keyword is 7000002
+    if 8302 amount_event_amount
+    do 7801 own damage unit enemy chosen board amount=5.0
+    do 7801 own give_ability unit enemy it
+    do 7802 gives give_keyword player enemy amount=2.0
+    do 8302 uses_keyword negate_damage player enemy amount=count
+    do 8302 uses_keyword remove_keyword player enemy amount=event_amount
+    do 8303 uses_keyword remove_keyword player enemy
+    do 8319 has_keyword exhaust it
+  Golden Eye:
+    when 7918 keyword_used keyword keyword is 7000030
+    when 8333 activated
+    if 8333 amount_event_amount
+    do 7918 own keyword_action amount=2.0
+    do 8333 uses_keyword look card mine deck_top
+    do 8333 uses_keyword discard card mine chosen deck_top
+  Nirvana:
+    when 7700 keyword_used keyword keyword is 7000030
+    when 8302 damaged self
+    when 8303 turn_start
+    if 8302 amount_count keyword self keyword is 7000002
+    if 8302 amount_event_amount
+    do 7700 own give_keyword player mine amount=3.0
+    do 8302 uses_keyword negate_damage player mine amount=count
+    do 8302 uses_keyword remove_keyword player mine amount=event_amount
+    do 8303 uses_keyword remove_keyword player mine
+    3 duelyst | type | makes enemy units get Ranged | Gargantuan Growth -> Crossbones (-); Superior Mirage -> Crossbones (-); Grasp of Agony -> Crossbones (-)
+  Gargantuan Growth:
+    when 435 played self
+    when 436 turn_start
+    do 435 own give_ability unit chosen board
+    do 436 gives stat_change self power=8.0;health=8.0
+  Crossbones:
+    when 318 played self
+    do 318 own kill unit enemy chosen board keyword is 741541
+  Superior Mirage:
+    when 524 played self
+    when 525 attacks self
+    do 524 own copy unit enemy chosen board amount=3.0
+    do 524 own give_ability unit enemy all board state is copy_of_it
+    do 525 gives obliterate self
+    3 duelyst | type | makes your units get Grow | Gargantuan Growth -> Oropsisaur (-); S.I.L.V.E.R. -> Oropsisaur (-); Godhammer -> Oropsisaur (-)
+  Gargantuan Growth:
+    when 435 played self
+    when 436 turn_start
+    do 435 own give_ability unit chosen board
+    do 436 gives stat_change self power=8.0;health=8.0
+  Oropsisaur:
+    when 431 turn_start
+    when 432 survives_damage unit mine keyword is 741534;card not 5000479
+    do 431 own stat_change self power=1.0;health=1.0
+    do 432 own grow unit mine it card not 5000479
+  S.I.L.V.E.R.:
+    when 1067 summoned unit mine type is 5
+    do 1067 own copy_keywords unit mine all board type is 5
+    2 into_the_breach | type | makes your units get Smoke | Psionic Receiver -> Nanofilter Mending (-); A.C.I.D. Tank -> Nanofilter Mending (-)
+  Psionic Receiver:
+    when 2414 always
+    do 2414 own copy_keywords unit mine all type is 26
+  Nanofilter Mending:
+    when 2417 turn_start
+    if 2417 amount_unstated
+    do 2417 own heal unit mine all type is 26;keyword is 760842 amount=unstated
+    do 2417 own remove_keyword unit mine all type is 26;keyword is 760842
+  A.C.I.D. Tank:
+    when 2382 attacks
+    when 2383 attacks
+    when 2384 attacks
+    when 2385 attacks
+    if 2383 upgraded 1.0
+    if 2384 upgraded 2.0
+    do 2382 own summon
+    do 2383 own stat_change unit mine all card is 6000188 health=2.0
+    do 2384 own give_ability unit mine all card is 6000188
+    do 2385 gives move it
+    2 sts1 | type | makes units get Dark | Talk to the Hand -> Essence Of Darkness (-); Talk to the Hand -> Symbiotic Virus (-)
+  Talk to the Hand:
+    when 7801 played self
+    when 7802 damaged self
+    when 8302 damaged self
+    when 8303 turn_start
+    when 8319 activated
+    if 8302 amount_count keyword self keyword is 7000002
+    if 8302 amount_event_amount
+    do 7801 own damage unit enemy chosen board amount=5.0
+    do 7801 own give_ability unit enemy it
+    do 7802 gives give_keyword player enemy amount=2.0
+    do 8302 uses_keyword negate_damage player enemy amount=count
+    do 8302 uses_keyword remove_keyword player enemy amount=event_amount
+    do 8303 uses_keyword remove_keyword player enemy
+    do 8319 has_keyword exhaust it
+  Essence Of Darkness:
+    when 8064 played self
+    when 8307 activated
+    when 8308 activated
+    when 8318 activated
+    when 8310 turn_end
+    when 8311 keyword_used keyword keyword is 7000013
+    if 8064 amount_count slot mine
+    if 8307 have is slot mine state is empty
+    if 8308 have not slot mine state is empty
+    if 8310 amount_unstated
+    if 8311 amount_unstated
+    do 8064 own keyword_action keyword keyword is 7000008 amount=count
+    do 8307 uses_keyword move keyword keyword is 7000008
+    do 8308 uses_keyword keyword_action keyword top
+    do 8318 uses_keyword remove_keyword keyword top
+    do 8318 uses_keyword repeat keyword top
+    do 8308 uses_keyword move keyword keyword is 7000008
+    do 8310 uses_keyword increase_effect self amount=unstated
+    do 8311 uses_keyword damage unit enemy lowest board amount=unstated
+  Symbiotic Virus:
+    when 8018 combat_start
+    when 8307 activated
+    when 8308 activated
+    when 8318 activated
+    when 8310 turn_end
+    when 8311 keyword_used keyword keyword is 7000013
+    if 8307 have is slot mine state is empty
+    if 8308 have not slot mine state is empty
+    if 8310 amount_unstated
+    if 8311 amount_unstated
+    do 8018 own keyword_action keyword keyword is 7000008 amount=1.0
+    do 8307 uses_keyword move keyword keyword is 7000008
+    do 8308 uses_keyword keyword_action keyword top
+    do 8318 uses_keyword remove_keyword keyword top
+    do 8318 uses_keyword repeat keyword top
+    do 8308 uses_keyword move keyword keyword is 7000008
+    do 8310 uses_keyword increase_effect self amount=unstated
+    do 8311 uses_keyword damage unit enemy lowest board amount=unstated
+    2 stormbound | type | makes units get Poison | Timber Alchemists -> Brood Sages (-); Timber Alchemists -> Soap Cleanse (-)
+  Timber Alchemists:
+    when 7326 moves self
+    if 7326 amount_per_level
+    if 7326 amount_distinct keyword unit mine all board
+    do 7326 own copy_keywords self
+    do 7326 own remove_keywords unit mine all board
+    do 7326 own stat_change self strength=1.0;times=distinct
+  Brood Sages:
+    when 7173 played self
+    when 7174 played self
+    if 7173 level le 2.0
+    if 7173 amount_count unit all board position is surrounding of self;state is poisoned
+    if 7174 level ge 3.0
+    if 7174 amount_count unit all board position is surrounding of self;state is poisoned
+    do 7173 own summon strength=1.0;times=count
+    do 7174 own summon strength=1.0;times=count
+  Soap Cleanse:
+    when 7201 played self
+    when 7428 turn_start
+    when 7429 given_keyword self keyword is 1000043
+    if 7201 amount_per_level
+    do 7201 own stat_change unit all board state is poisoned strength=1.0
+    do 7201 own give_keyword unit it
+    do 7428 uses_keyword stat_change unit it strength=1.0
+    do 7429 uses_keyword remove_keyword unit it
+    2 into_the_breach | type | makes units get Fire | A.C.I.D. Tank -> Flame Thrower (-); Psionic Receiver -> Flame Thrower (-)
+  A.C.I.D. Tank:
+    when 2382 attacks
+    when 2383 attacks
+    when 2384 attacks
+    when 2385 attacks
+    if 2383 upgraded 1.0
+    if 2384 upgraded 2.0
+    do 2382 own summon
+    do 2383 own stat_change unit mine all card is 6000188 health=2.0
+    do 2384 own give_ability unit mine all card is 6000188
+    do 2385 gives move it
+  Flame Thrower:
+    when 2129 attacks
+    when 2467 turn_start
+    when 2468 healed
+    when 2469 moves_onto self position is same_space of position;of:kind is position;of:terrain is ocean;keyword not 760829
+    when 2470 moves_onto self position is same_space of position;of:kind is position;of:keyword is 760842
+    when 2130 attacks
+    when 2131 attacks
+    if 2130 upgraded 1.0
+    if 2131 upgraded 2.0
+    do 2129 own damage unit_or_structure all position is straight_line of self;distance le 2062 of self;keyword is 760836 amount=2.0
+    do 2129 own move unit_or_structure chosen position is straight_line of self;distance le 2064 of self
+    do 2129 own give_keyword position all position is straight_line of self;distance le 2066 of self
+    do 2467 uses_keyword damage position all position is straight_line of self;distance le 2066 of self amount=1.0
+    do 2468 uses_keyword remove_keyword position all position is straight_line of self;distance le 2066 of self
+    do 2469 uses_keyword remove_keyword position all position is straight_line of self;distance le 2066 of self
+    do 2470 uses_keyword remove_keyword position all position is straight_line of self;distance le 2066 of self
+    do 2130 own can self event=attacks
+    do 2131 own can self event=attacks
+  Psionic Receiver:
+    when 2414 always
+    do 2414 own copy_keywords unit mine all type is 26
+    2 into_the_breach | type | makes your units get Fire | A.C.I.D. Tank -> Heat Engines (-); Psionic Receiver -> Heat Engines (-)
+  A.C.I.D. Tank:
+    when 2382 attacks
+    when 2383 attacks
+    when 2384 attacks
+    when 2385 attacks
+    if 2383 upgraded 1.0
+    if 2384 upgraded 2.0
+    do 2382 own summon
+    do 2383 own stat_change unit mine all card is 6000188 health=2.0
+    do 2384 own give_ability unit mine all card is 6000188
+    do 2385 gives move it
+  Heat Engines:
+    when 2418 turn_start
+    when 2463 attacks
+    when 2464 healed
+    when 2465 attack_done
+    when 2466 healed
+    do 2418 own give_keyword unit mine all type is 26;keyword is 760836
+    do 2463 uses_keyword increase_effect unit mine all type is 26;keyword is 760836 amount=1.0
+    do 2464 uses_keyword heal unit mine all type is 26;keyword is 760836 amount=2.0
+    do 2465 uses_keyword remove_keyword unit mine all type is 26;keyword is 760836
+    do 2466 uses_keyword remove_keyword unit mine all type is 26;keyword is 760836
+    do 2418 own remove_keyword unit mine all type is 26;keyword is 760836
+  Psionic Receiver:
+    when 2414 always
+    do 2414 own copy_keywords unit mine all type is 26
+    2 duelyst | type | makes your units get Ranged | Deathstrike Seal -> Xenkai Cannoneer (-); S.I.L.V.E.R. -> Xenkai Cannoneer (-)
+  Deathstrike Seal:
+    when 115 played self
+    when 116 damaged unit
+    do 115 own give_ability unit mine chosen board
+    do 116 gives kill unit it
+  Xenkai Cannoneer:
+    when 381 summoned unit mine keyword is 741541
+    when 1099 played self
+    when 1084 always
+    do 381 own give_keyword unit mine it
+    do 1099 uses_keyword can unit mine it event=moves
+    do 1099 uses_keyword can unit mine it event=attacks
+    do 1084 has_keyword can self event=attacks
+  S.I.L.V.E.R.:
+    when 1067 summoned unit mine type is 5
+    do 1067 own copy_keywords unit mine all board type is 5
+    2 stormbound | type | makes units get Confuse: {B} kills them | Timber Alchemists -> Temple of the Mind (-); Mechanical Workers -> Temple of the Mind (-)
+  Timber Alchemists:
+    when 7326 moves self
+    if 7326 amount_per_level
+    if 7326 amount_distinct keyword unit mine all board
+    do 7326 own copy_keywords self
+    do 7326 own remove_keywords unit mine all board
+    do 7326 own stat_change self strength=1.0;times=distinct
+  Temple of the Mind:
+    when 7315 turn_start
+    when 7434 activated
+    do 7315 own keyword_action unit mine chosen hand
+    do 7434 uses_keyword move unit mine chosen hand
+    do 7315 own kill unit lowest board state is confused
+  Mechanical Workers:
+    when 7229 played self
+    when 7230 turn_start
+    if 7229 amount_per_level
+    if 7230 amount_per_level
+    do 7229 own summon strength=5.0
+    do 7229 own give_ability unit mine it card is 1000102
+    do 7230 gives summon strength=2.0
+    2 stormbound | type | makes units get Confuse | Mechanical Workers -> Melodious Sisters (-); Timber Alchemists -> Melodious Sisters (-)
+  Mechanical Workers:
+    when 7229 played self
+    when 7230 turn_start
+    if 7229 amount_per_level
+    if 7230 amount_per_level
+    do 7229 own summon strength=5.0
+    do 7229 own give_ability unit mine it card is 1000102
+    do 7230 gives summon strength=2.0
+  Melodious Sisters:
+    when 7295 attacks unit state is confused
+    if 7295 amount_per_level
+    do 7295 own damage anything enemy all board position is surrounding of it amount=4.0
+  Timber Alchemists:
+    when 7326 moves self
+    if 7326 amount_per_level
+    if 7326 amount_distinct keyword unit mine all board
+    do 7326 own copy_keywords self
+    do 7326 own remove_keywords unit mine all board
+    do 7326 own stat_change self strength=1.0;times=distinct
+    2 duelyst | type | makes units get Backstab | S.I.L.V.E.R. -> Killing Edge (-); Deathstrike Seal -> Killing Edge (-)
+  S.I.L.V.E.R.:
+    when 1067 summoned unit mine type is 5
+    do 1067 own copy_keywords unit mine all board type is 5
+  Killing Edge:
+    when 122 played self
+    when 123 turn_end
+    if 123 it_matches keyword is 741552
+    do 122 own stat_change unit mine chosen board power=4.0;health=2.0
+    do 123 own draw card mine deck_top amount=1.0
+  Deathstrike Seal:
+    when 115 played self
+    when 116 damaged unit
+    do 115 own give_ability unit mine chosen board
+    do 116 gives kill unit it
+    2 sts1 | type | makes units get Vulnerable | Talk to the Hand -> Odd Mushroom (-); Talk to the Hand -> Paper Phrog (-)
+  Talk to the Hand:
+    when 7801 played self
+    when 7802 damaged self
+    when 8302 damaged self
+    when 8303 turn_start
+    when 8319 activated
+    if 8302 amount_count keyword self keyword is 7000002
+    if 8302 amount_event_amount
+    do 7801 own damage unit enemy chosen board amount=5.0
+    do 7801 own give_ability unit enemy it
+    do 7802 gives give_keyword player enemy amount=2.0
+    do 8302 uses_keyword negate_damage player enemy amount=count
+    do 8302 uses_keyword remove_keyword player enemy amount=event_amount
+    do 8303 uses_keyword remove_keyword player enemy
+    do 8319 has_keyword exhaust it
+  Odd Mushroom:
+    when 7965 always
+    do 7965 own increase_effect keyword keyword is 7000041 percent=-25.0
+  Paper Phrog:
+    when 7975 always
+    do 7975 own increase_effect keyword keyword is 7000041 percent=25.0
+    1 sts1 | type | makes enemy units get Vulnerable | Talk to the Hand -> Champion Belt (-)
+  Talk to the Hand:
+    when 7801 played self
+    when 7802 damaged self
+    when 8302 damaged self
+    when 8303 turn_start
+    when 8319 activated
+    if 8302 amount_count keyword self keyword is 7000002
+    if 8302 amount_event_amount
+    do 7801 own damage unit enemy chosen board amount=5.0
+    do 7801 own give_ability unit enemy it
+    do 7802 gives give_keyword player enemy amount=2.0
+    do 8302 uses_keyword negate_damage player enemy amount=count
+    do 8302 uses_keyword remove_keyword player enemy amount=event_amount
+    do 8303 uses_keyword remove_keyword player enemy
+    do 8319 has_keyword exhaust it
+  Champion Belt:
+    when 7883 given_keyword unit enemy keyword is 7000041
+    when 8344 damaged
+    if 8344 it_matches origin is combat
+    do 7883 own give_keyword unit enemy it amount=1.0
+    do 8344 uses_keyword increase_effect it percent=-25.0
+    1 stormbound | type | makes units get Freeze: {B} damages them | Timber Alchemists -> Spellbinder Zhevana (-)
+  Timber Alchemists:
+    when 7326 moves self
+    if 7326 amount_per_level
+    if 7326 amount_distinct keyword unit mine all board
+    do 7326 own copy_keywords self
+    do 7326 own remove_keywords unit mine all board
+    do 7326 own stat_change self strength=1.0;times=distinct
+  Spellbinder Zhevana:
+    when 7401 played self
+    if 7401 amount_per_level
+    if 7401 amount_event_count
+    do 7401 own damage unit all board state is frozen;position is ahead amount=4.0
+    do 7401 own mana_gain mana mine amount=4.0;times=event_count
+    1 sts1 | type | makes units get Weak | Talk to the Hand -> Paper Krane (-)
+  Talk to the Hand:
+    when 7801 played self
+    when 7802 damaged self
+    when 8302 damaged self
+    when 8303 turn_start
+    when 8319 activated
+    if 8302 amount_count keyword self keyword is 7000002
+    if 8302 amount_event_amount
+    do 7801 own damage unit enemy chosen board amount=5.0
+    do 7801 own give_ability unit enemy it
+    do 7802 gives give_keyword player enemy amount=2.0
+    do 8302 uses_keyword negate_damage player enemy amount=count
+    do 8302 uses_keyword remove_keyword player enemy amount=event_amount
+    do 8303 uses_keyword remove_keyword player enemy
+    do 8319 has_keyword exhaust it
+  Paper Krane:
+    when 7974 always
+    do 7974 own increase_effect keyword keyword is 7000042 percent=15.0
+    1 sts1 | type | makes units get Mark | Talk to the Hand -> Pressure Points (-)
+  Talk to the Hand:
+    when 7801 played self
+    when 7802 damaged self
+    when 8302 damaged self
+    when 8303 turn_start
+    when 8319 activated
+    if 8302 amount_count keyword self keyword is 7000002
+    if 8302 amount_event_amount
+    do 7801 own damage unit enemy chosen board amount=5.0
+    do 7801 own give_ability unit enemy it
+    do 7802 gives give_keyword player enemy amount=2.0
+    do 8302 uses_keyword negate_damage player enemy amount=count
+    do 8302 uses_keyword remove_keyword player enemy amount=event_amount
+    do 8303 uses_keyword remove_keyword player enemy
+    do 8319 has_keyword exhaust it
+  Pressure Points:
+    when 8266 played self
+    when 8349 played card mine card is 7000907
+    if 8266 amount_count it keyword is 7000713
+    if 8349 amount_count keyword self keyword is 7000713
+    do 8266 own give_keyword unit enemy chosen board amount=8.0
+    do 8349 uses_keyword damage unit enemy chosen board amount=count
+    do 8266 own damage unit enemy all board amount=count
+    1 sts1 | type | makes units get Poison | Talk to the Hand -> The Specimen (-)
+  Talk to the Hand:
+    when 7801 played self
+    when 7802 damaged self
+    when 8302 damaged self
+    when 8303 turn_start
+    when 8319 activated
+    if 8302 amount_count keyword self keyword is 7000002
+    if 8302 amount_event_amount
+    do 7801 own damage unit enemy chosen board amount=5.0
+    do 7801 own give_ability unit enemy it
+    do 7802 gives give_keyword player enemy amount=2.0
+    do 8302 uses_keyword negate_damage player enemy amount=count
+    do 8302 uses_keyword remove_keyword player enemy amount=event_amount
+    do 8303 uses_keyword remove_keyword player enemy
+    do 8319 has_keyword exhaust it
+  The Specimen:
+    when 8022 dies unit enemy
+    when 8328 turn_start
+    if 8022 amount_count keyword keyword is 7000025
+    if 8328 amount_count keyword self keyword is 7000025
+    do 8022 own give_keyword unit enemy random board amount=count
+    do 8328 uses_keyword damage unit enemy random board amount=count
+    do 8328 uses_keyword remove_keyword unit enemy random board amount=1.0
+    1 stormbound | type | makes units get Poison: {B} damages them | Timber Alchemists -> Amberhides (-)
+  Timber Alchemists:
+    when 7326 moves self
+    if 7326 amount_per_level
+    if 7326 amount_distinct keyword unit mine all board
+    do 7326 own copy_keywords self
+    do 7326 own remove_keywords unit mine all board
+    do 7326 own stat_change self strength=1.0;times=distinct
+  Amberhides:
+    when 7187 played self
+    if 7187 amount_per_level
+    if 7187 amount_event_amount
+    do 7187 own damage unit highest board position is surrounding;state is poisoned amount=4.0
+    do 7187 own stat_change self strength=event_amount
+    1 sts1 | type | makes units get Plasma | Talk to the Hand -> Nuclear Battery (-)
+  Talk to the Hand:
+    when 7801 played self
+    when 7802 damaged self
+    when 8302 damaged self
+    when 8303 turn_start
+    when 8319 activated
+    if 8302 amount_count keyword self keyword is 7000002
+    if 8302 amount_event_amount
+    do 7801 own damage unit enemy chosen board amount=5.0
+    do 7801 own give_ability unit enemy it
+    do 7802 gives give_keyword player enemy amount=2.0
+    do 8302 uses_keyword negate_damage player enemy amount=count
+    do 8302 uses_keyword remove_keyword player enemy amount=event_amount
+    do 8303 uses_keyword remove_keyword player enemy
+    do 8319 has_keyword exhaust it
+  Nuclear Battery:
+    when 7962 combat_start
+    when 8307 activated
+    when 8308 activated
+    when 8318 activated
+    when 8327 turn_end
+    if 8307 have is slot mine state is empty
+    if 8308 have not slot mine state is empty
+    if 8327 amount_unstated
+    do 7962 own keyword_action keyword keyword is 7000024 amount=1.0
+    do 8307 uses_keyword move keyword keyword is 7000024
+    do 8308 uses_keyword keyword_action keyword top
+    do 8318 uses_keyword remove_keyword keyword top
+    do 8318 uses_keyword repeat keyword top
+    do 8308 uses_keyword move keyword keyword is 7000024
+    do 8327 uses_keyword mana_gain mana mine amount=unstated
+
+NEW
+  246 runeterra | stronger | can give it more power and health | Yordles in Arms -> Dashing Dandy (-); Sharesies -> Swole Squirrel (-); Navori Longtail -> Dashing Dandy (-)
+  Yordles in Arms:
+    when 5130 played self
+    when 5131 played self
+    if 5130 amount lt 4.0
+    if 5130 amount_distinct region
+    if 5131 amount ge 4.0
+    if 5131 amount_distinct region
+    do 5130 own stat_change unit mine all board power=2.0;health=2.0
+    do 5131 own stat_change unit mine all board power=3.0;health=3.0
+  Dashing Dandy:
+    when 5687 played self
+    when 7086 strikes
+    if 5687 keyword_condition
+    if 5687 amount_stat power self
+    if event_count ge 1.0
+    if 5687 event_count ge 1.0
+    do 5687 own stat_change self power=stat
+    do 7086 has_keyword excess_damage player enemy
+  Sharesies:
+    when 5515 played self
+    if 5515 amount_stat health equipment it attached
+    if 5515 amount_stat power equipment it attached
+    do 5515 own stat_change unit mine chosen board state is equipped;card not 751726 power=stat;health=stat
+    do 5515 own copy_keywords unit mine it card not 751726
+    do 5515 own move equipment mine it attached card not 751726
+  Swole Squirrel:
+    when 4686 strikes
+    if 4686 amount_stat power self
+    do 4686 own stat_change self power=stat
+  166 runeterra | type | makes enemy units block: {B} damages them | Savage Reckoner -> Molten Shield (-); Lee Sin (level 2) -> Molten Shield (-); Thresh (level 2) -> Molten Shield (-)
+  Savage Reckoner:
+    when 7086 strikes
+    when 7136 attacks
+    do 7086 has_keyword excess_damage player enemy
+    do 7136 has_keyword challenge unit enemy chosen board
+  Molten Shield:
+    when 6677 played self
+    do 6677 own damage unit enemy chosen board state is blocking amount=2.0
+    do 6677 own damage player enemy amount=2.0
+  Lee Sin (level 2):
+    when 6106 played spell
+    when 7136 attacks
+    when 6107 played spell
+    when 7114 damaged self
+    when 6108 challenges
+    if 6107 event_count ge 2.0
+    do 6106 own give_keyword self
+    do 7136 uses_keyword challenge unit enemy chosen board
+    do 6107 own give_keyword self
+    do 7114 uses_keyword negate_damage self
+    do 6108 own play_card unit enemy it board
+  141 runeterra | stronger | can give it more power | Eye Of The Storm -> Dashing Dandy (-); Arena Mechacaster -> Dashing Dandy (-); Rush -> Earthshaker (-)
+  Eye Of The Storm:
+    when 5861 played self
+    do 5861 own stat_change unit mine chosen board power=2.0
+    do 5861 own draw card mine deck_top amount=2.0
+  Dashing Dandy:
+    when 5687 played self
+    when 7086 strikes
+    if 5687 keyword_condition
+    if 5687 amount_stat power self
+    if event_count ge 1.0
+    if 5687 event_count ge 1.0
+    do 5687 own stat_change self power=stat
+    do 7086 has_keyword excess_damage player enemy
+  Arena Mechacaster:
+    when 5043 attacks
+    do 5043 own stat_change unit mine all board state is attacking;card not 751343 power=2.0
+   72 runeterra | stronger | gives it more power and health | Avarosan Hearthguard -> Earthshaker (-); Ingvar the Younger (created) -> Swole Squirrel (-); Gift of the Hearthblood -> Dashing Dandy (-)
+  Avarosan Hearthguard:
+    when 4273 summoned self
+    do 4273 own stat_change unit mine all deck power=1.0;health=1.0
+  Earthshaker:
+    when 6585 attacks
+    when 7128 strikes
+    if 6585 amount_stat power self
+    if 6585 amount_listed
+    if 6585 amount_double
+    do 6585 own stat_change self power=stat
+    do 6585 own increase_effect self amount=double
+    do 7128 has_keyword damage player enemy amount=1.0
+  Ingvar the Younger:
+    when 5794 played self
+    when 7162 activated
+    do 5794 own choose_one player mine
+    do 5794 own stat_change unit mine all board state is shares_subtype_with_it;card not 751934 power=1.0;health=1.0
+    do 5794 own keyword_action card mine category is follower;state is shares_subtype_with_it
+    do 7162 uses_keyword choose_card card random options=3.0
+    do 7162 uses_keyword create card mine category is follower;state is shares_subtype_with_it
+  Swole Squirrel:
+    when 4686 strikes
+    if 4686 amount_stat power self
+    do 4686 own stat_change self power=stat
+   24 runeterra | stronger | gives it more power | Relic of Power -> Swole Squirrel (-); Relic of Power (created) -> Swole Squirrel (-); Voice of the Risen -> Swole Squirrel (-)
+  Relic of Power:
+    when 6518 played self
+    when 7166 activated
+    when 7093 round_end
+    do 6518 own choose_one
+    do 6518 own keyword_action
+    do 7166 uses_keyword choose_card card mine deck options=3.0
+    do 7166 uses_keyword put_on_top
+    do 6518 own draw card mine deck_top amount=1.0
+    do 6518 own summon
+    do 6518 own stat_change unit mine all board power=1.0
+    do 7093 has_keyword discard self hand
+  Swole Squirrel:
+    when 4686 strikes
+    if 4686 amount_stat power self
+    do 4686 own stat_change self power=stat
+   20 runeterra | stronger | more power: it doubles its power when it comes | Stubborn Husk -> Dashing Dandy (-); Scattered Husk -> Dashing Dandy (-); Sunsoaked Fervor -> Earthshaker (-)
+  Stubborn Husk:
+    when 6696 played unit mine all
+    when 7115 always
+    when 7122 round_end
+    if 6696 amount_stat power self
+    if 6696 amount_stat health self
+    if 7122 amount_full
+    do 6696 own kill self
+    do 6696 own stat_change it power=stat;health=stat
+    do 6696 own copy_keywords it
+    do 7115 has_keyword cant self event=attacks
+    do 7115 has_keyword cant self event=blocks
+    do 7122 has_keyword heal self amount=full
+  Dashing Dandy:
+    when 5687 played self
+    when 7086 strikes
+    if 5687 keyword_condition
+    if 5687 amount_stat power self
+    if event_count ge 1.0
+    if 5687 event_count ge 1.0
+    do 5687 own stat_change self power=stat
+    do 7086 has_keyword excess_damage player enemy
+  Scattered Husk:
+    when 6692 played unit mine all
+    when 7115 always
+    when 7128 strikes
+    if 6692 amount_stat power self
+    if 6692 amount_stat health self
+    do 6692 own kill self
+    do 6692 own stat_change it power=stat;health=stat
+    do 6692 own copy_keywords it
+    do 7115 has_keyword cant self event=attacks
+    do 7115 has_keyword cant self event=blocks
+    do 7128 has_keyword damage player enemy amount=1.0
+   12 runeterra | stronger | more power | Eye of Nagakabouros -> Illaoi (level 2) (-); Watchful Idol -> Illaoi (level 2) (-); Tidal Invocation -> Illaoi (level 2) (-)
+  Eye of Nagakabouros:
+    when 5386 played self
+    when 7144 activated
+    when 7145 activated
+    if 7144 have not unit mine card is 900043
+    if 7144 amount_listed
+    if 7145 have is unit mine card is 900043
+    if 7145 amount_listed
+    do 5386 own keyword_action amount=2.0
+    do 7144 uses_keyword summon player mine times=listed
+    do 7145 uses_keyword stat_change unit mine strongest board card is 900043 power=1.0;health=1.0;times=listed
+    do 5386 own draw card mine deck_top amount=2.0
+  Illaoi:
+    when 5382 attacks
+    when 7144 activated
+    when 7145 activated
+    when 5383 always
+    when 7086 strikes
+    if 5382 amount_stat power unit mine highest board name_has is 32
+    if 7144 have not unit mine card is 900043
+    if 7144 amount_listed
+    if 7145 have is unit mine card is 900043
+    if 7145 amount_listed
+    if 5383 amount ge 15.0
+    if 5383 amount_sum
+    if 5383 amount_event_count damage
+    if 5383 amount_event_count damage
+    do 5382 own keyword_action amount=1.0
+    do 7144 uses_keyword summon player mine times=listed
+    do 7145 uses_keyword stat_change unit mine strongest board card is 900043 power=1.0;health=1.0;times=listed
+    do 5382 own stat_change self power=stat
+    do 5383 own level_up self
+    do 7086 has_keyword excess_damage player enemy
+  Watchful Idol:
+    when 5396 round_start
+    when 7144 activated
+    when 7145 activated
+    when 7115 always
+    if 7144 have not unit mine card is 900043
+    if 7144 amount_listed
+    if 7145 have is unit mine card is 900043
+    if 7145 amount_listed
+    do 5396 own damage self amount=2.0
+    do 5396 own keyword_action amount=1.0
+    do 7144 uses_keyword summon player mine times=listed
+    do 7145 uses_keyword stat_change unit mine strongest board card is 900043 power=1.0;health=1.0;times=listed
+    do 7115 has_keyword cant self event=attacks
+    do 7115 has_keyword cant self event=blocks
+    7 runeterra | type | changes your units' stats | Aberrant Mageseeker -> Xolaani the Bloodweaver (-); Tristana -> Xolaani the Bloodweaver (-); Lillia (level 2) -> Xolaani the Bloodweaver (-)
+  Aberrant Mageseeker:
+    when 5979 summoned self
+    when 7120 always
+    when 7136 attacks
+    when 7120 always
+    do 5979 own give_keyword unit mine all board card not 752074
+    do 7120 uses_keyword stat_change unit mine all board card not 752074 power=1.0;health=1.0
+    do 7136 has_keyword challenge unit enemy chosen board
+    do 7120 has_keyword stat_change self power=1.0;health=1.0
+  Xolaani the Bloodweaver:
+    when 5458 always
+    when 5459 always
+    when 7086 strikes
+    if 5458 amount_double
+    if 5458 amount_event_count
+    if 5458 amount_double
+    if 5458 amount_event_count
+    if 5459 keyword_condition 16.0
+    if stat power ge listed self
+    if 5459 stat power ge listed self
+    do 5458 own stat_change self power=double;health=double
+    do 5459 own transform self
+    do 7086 has_keyword excess_damage player enemy
+  Tristana:
+    when 5013 always
+    when 5014 summoned unit mine state is multi_region
+    when 5015 always
+    when 7119 attacks
+    when 7128 strikes
+    if 5013 amount_event_count
+    if 5015 event_count ge 5.0
+    do 5013 own stat_change self power=event_count
+    do 5014 own stat_change unit mine it power=1.0
+    do 5015 own level_up self
+    do 7119 has_keyword first_strike self
+    do 7128 has_keyword damage player enemy amount=1.0
+    5 runeterra | type | changes its stats for its effect | Flamecaller Caprine -> Xolaani the Bloodweaver (-); Yuumi -> Xolaani the Bloodweaver (-); Fuzzy Caretaker -> Xolaani the Bloodweaver (-)
+  Flamecaller Caprine:
+    when 5888 played spell type is 82;category in spell;category in skill
+    when 7157 activated
+    when 5889 played spell category is skill
+    when 7157 activated
+    when 7121 always
+    do 5888 own keyword_action self
+    do 7157 uses_keyword stat_change unit mine chosen board state not equipped power=1.0;health=1.0
+    do 7157 uses_keyword stat_change self power=1.0;health=1.0
+    do 5889 own keyword_action self
+    do 7157 uses_keyword stat_change unit mine chosen board state not equipped power=1.0;health=1.0
+    do 7157 uses_keyword stat_change self power=1.0;health=1.0
+    do 7121 has_keyword damage_reduction self amount=1.0
+  Xolaani the Bloodweaver:
+    when 5458 always
+    when 5459 always
+    when 7086 strikes
+    if 5458 amount_double
+    if 5458 amount_event_count
+    if 5458 amount_double
+    if 5458 amount_event_count
+    if 5459 keyword_condition 16.0
+    if stat power ge listed self
+    if 5459 stat power ge listed self
+    do 5458 own stat_change self power=double;health=double
+    do 5459 own transform self
+    do 7086 has_keyword excess_damage player enemy
+  Yuumi:
+    when 5017 round_start
+    when 5018 round_start
+    when 5019 always
+    when 5020 always
+    when 7090 activated
+    when 7091 leaves_play attached_to
+    if 5017 have is unit attached_to
+    if 5018 have not unit attached_to
+    if 5019 event_count ge 3.0
+    if 5020 event_count ge 3.0
+    do 5017 own stat_change attached_to power=1.0;health=1.0
+    do 5018 own stat_change self power=1.0;health=1.0
+    do 5019 own level_up self
+    do 5020 own level_up self
+    do 7090 has_keyword attach self
+    do 7091 has_keyword return_to_hand self
+    4 runeterra | levels | through Poison Puffcap: damages units or players (levels it up) | Eclectic Collection -> Swain (-); Eclectic Collection -> Sivir (-); Eclectic Collection -> Volibear (-)
+  Eclectic Collection:
+    when 5529 played self
+    when 7169 activated
+    when 7169 activated
+    when 7169 activated
+    when 7169 activated
+    if 5529 amount_count unit mine board
+    if 5529 amount_count unit mine board
+    if 5529 amount_count unit mine board
+    if 5529 amount_count unit mine board
+    if 7169 amount_event_amount
+    if 7169 amount_event_amount
+    if 7169 amount_event_amount
+    if 7169 amount_event_amount
+    do 5529 own keyword_action card mine top deck amount=1.0;times=count
+    do 7169 uses_keyword create card mine top deck amount=event_amount
+    do 5529 own keyword_action card mine top deck amount=3.0;times=count
+    do 7169 uses_keyword create card mine top deck amount=event_amount
+    do 5529 own keyword_action card enemy random deck amount=1.0;times=count
+    do 7169 uses_keyword create card enemy random deck amount=event_amount
+    do 5529 own keyword_action card enemy random deck amount=3.0;times=count
+    do 7169 uses_keyword create card enemy random deck amount=event_amount
+  Swain:
+    when 4459 strikes_nexus
+    when 4460 always
+    when 7137 always
+    if 4460 event_count damage ge 14.0
+    do 4459 own damage player enemy amount=3.0
+    do 4460 own level_up self
+    do 7137 has_keyword cant unit enemy all power lt 7905 event=blocks
+  Sivir:
+    when 4835 always
+    when 7119 attacks
+    when 7124 targeted self
+    if 4835 event_count damage ge 30.0
+    do 4835 own level_up self
+    do 7119 has_keyword first_strike self
+    do 7124 has_keyword counter effect it
+    4 runeterra | type | comes back after it is discarded, to be discarded again | Reborn Grenadier -> Parts Made Whole (-); Reborn Grenadier -> Rumble (-); Reborn Grenadier -> Noble Rebel (-)
+  Reborn Grenadier:
+    when 5200 played self
+    when 5201 discarded self
+    when 7130 strikes
+    when 7131 round_end
+    do 5200 own discard card mine chosen hand amount=1.0
+    do 5201 own copy self
+    do 7130 has_keyword kill self
+    do 7131 has_keyword kill self
+  Parts Made Whole:
+    when 5592 played self
+    when 5593 played self
+    if 5593 event_count ge 1.0
+    do 5592 own discard card mine chosen hand amount=1.0
+    do 5592 own draw card mine deck_top amount=2.0
+    do 5593 own summon

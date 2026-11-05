@@ -1,7 +1,9 @@
 # Case tests: marvel_snap
 
 Made by `cases/run.py marvel_snap`.
-**88 of 106 cases pass.**
+**157 of 165 cases pass.**
+
+**Cases whose reason no line says any more (rewrite them): n465, n489, n490, n492**
 
 
 ## Mechanics (expected cards from the texts)
@@ -28,28 +30,28 @@ Made by `cases/run.py marvel_snap`.
 | case | enabler | payoff | why | found as | pass |
 |---|---|---|---|---|---|
 | cms01 | M.O.D.O.K. | Hela | M.O.D.O.K. discards the hand, Hela brings the discarded cards back | state: discarded | yes |
-| cms02 | Swarm | Morbius | Morbius grows per discard; Swarm returns after it is discarded | - | NO |
-| cms03 | Apocalypse | Morbius | Morbius grows per discard; Apocalypse returns after it is discarded | - | NO |
-| cms04 | Wong | Odin | Wong doubles Odin's On Reveal | - | NO |
+| cms02 | Swarm | Morbius | Morbius grows per discard; Swarm returns after it is discarded | line: comes back after it is discarded, to be discarded again | yes |
+| cms03 | Apocalypse | Morbius | Morbius grows per discard; Apocalypse returns after it is discarded | line: comes back after it is discarded, to be discarded again | yes |
+| cms04 | Wong | Odin | Wong doubles Odin's On Reveal | line: plays it again | yes |
 | cms05 | Odin | Ironheart | Odin repeats her power boost | trigger keyword: On Reveal | yes |
 | cms06 | Odin | Black Panther | Odin repeats his power boost | trigger keyword: On Reveal | yes |
-| cms07 | Storm | White Tiger | White Tiger still places a card in the flooded location | - | NO |
-| cms08 | Storm | Doctor Doom | Doctor Doom still places cards in the flooded location | - | NO |
+| cms07 | Storm | White Tiger | White Tiger still places a card in the flooded location | line: stops cards being played, but a summon is not played: it sti | yes |
+| cms08 | Storm | Doctor Doom | Doctor Doom still places cards in the flooded location | line: stops cards being played, but a summon is not played: it sti | yes |
 | cms09 | Brood | Wolfsbane | Brood fills a location, Wolfsbane gains power as the fourth card | count: unit | yes |
-| cms10 | Moon Girl | Devil Dinosaur | the doubled hand boosts Devil Dinosaur | - | NO |
+| cms10 | Moon Girl | Devil Dinosaur | the doubled hand boosts Devil Dinosaur | line: fills your hand | yes |
 | cms11 | Shuri | Typhoid Mary | Shuri doubles the next card's power | - | NO |
 | cms12 | Shuri | Red Skull | Shuri doubles the next card's power | - | NO |
 | cms13 | Zero | Titania | Zero removes her drawback | is: playing Zero is a played the payoff waits for | yes |
-| cms14 | Zero | Ebony Maw | Zero removes his drawback | - | NO |
+| cms14 | Zero | Ebony Maw | Zero removes his drawback | line: silences it: its drawback is gone | yes |
 | cms15 | Sauron | Titania | Sauron removes her drawback | is: playing Sauron is a played the payoff waits for | yes |
-| cms16 | Sauron | Ebony Maw | Sauron removes his drawback | - | NO |
+| cms16 | Sauron | Ebony Maw | Sauron removes his drawback | line: silence | yes |
 | cms17 | Taskmaster | Red Skull | Taskmaster copies the last card's power | - | NO |
 | cms18 | Taskmaster | Typhoid Mary | Taskmaster copies the last card's power | - | NO |
 | cms19 | Cable | Mantis | both take cards from the opponent's deck | - | NO |
 | cms20 | Carnage | Nova | Carnage destroys Nova, whose death buffs your cards | event: kill -> dies | yes |
 | cms21 | Ant Man | Angela | points in the third location | is: playing Ant Man is a played the payoff waits for | yes |
 | cms22 | Doctor Octopus | Mojo | +6 when the spot is empty | state: moves | yes |
-| cms23 | Wave | Death | the deck is built around the two | - | NO |
+| cms23 | Wave | Death | the deck is built around the two | line: makes it cheaper | yes |
 | cms24 | The Collector | Moon Girl | Collector buffs cards, Moon Girl copies them | - | NO |
 
 ## Region identity (signature, splash, archetype)
@@ -106,7 +108,7 @@ Made by `cases/run.py marvel_snap`.
 | n428 | Joaquin Torres Falcon II, Electro | Joaquin Torres Falcon II | Electro | line  | repeats: repeats its On Reveal effects | yes |
 | n431 | Agent 13, King Eitri | Agent 13 | King Eitri | none  | - | yes |
 | n432 | Agent 13, Devil Dinosaur | Agent 13 | Devil Dinosaur | line  | waits: fills your hand | yes |
-| n433 | Araña, Magus | Araña | Magus | none  | waits: makes this happen: activated | NO |
+| n433 | Araña, Magus | Araña | Magus | none  | - | yes |
 | n434 | Araña, Lancelot | Araña | Lancelot | line  | type: changes your units' stats; also makes stronger: does what it waits for or  | yes |
 | n435 | Kid Omega, Bucky Barnes | Kid Omega | Bucky Barnes | line  | waits: kills it for its death effect | yes |
 | n436 | Kid Omega, Elixir | Kid Omega | Elixir | line  | type: makes your units die: Elixir brings them back | yes |
@@ -117,7 +119,7 @@ Made by `cases/run.py marvel_snap`.
 | n441 | Blink, Moonstone | Blink | Moonstone | none  | - | yes |
 | n442 | Doctor Octopus, Pizza Slice | Doctor Octopus | Pizza Slice | none  | - | yes |
 | n443 | Angel, Hydra Stomper | Angel | Hydra Stomper | line  | type: makes your units move | yes |
-| n444 | Herbie Program 01, Wiccan | Herbie Program 01 | Wiccan | none  | type: lets you gain mana | NO |
+| n444 | Herbie Program 01, Wiccan | Herbie Program 01 | Wiccan | none  | - | yes |
 | n445 | Ghost-Spider, Galactus | Ghost-Spider | Galactus | none  | - | yes |
 | n446 | Djinn, Jim Hammond Human Torch | Djinn | Jim Hammond Human Torch | line  | type: lets you gain mana | yes |
 | n447 | Beta Ray Bill, Gorgon | Beta Ray Bill | Gorgon | none  | - | yes |
@@ -134,3 +136,62 @@ Made by `cases/run.py marvel_snap`.
 | n458 | Patriot, Mystique | Patriot | Mystique | line a unit with Ongoing | type: is a unit with Ongoing it counts or asks for | yes |
 | n459 | Wong, Mystique | Wong | Mystique | line a unit with Ongoing | type: is a unit with Ongoing it counts or asks for; also makes stronger: plays i | yes |
 | n460 | Onslaught, Blue Marvel | Onslaught | Blue Marvel | line repeats its effects | repeats: repeats its effects | yes |
+| n461 | Okoye, Black Panther | Okoye | Black Panther | line gives it more power | stronger: gives it more power | yes |
+| n462 | Nakia, Black Panther | Nakia | Black Panther | line gives it more power | stronger: gives it more power | yes |
+| n463 | Wong, Black Panther | Wong | Black Panther | line plays it again | stronger: plays it again | yes |
+| n464 | Odin, Black Panther | Odin | Black Panther | line repeats its effects | repeats: repeats its effects; also repeats its On Reveal effects | yes |
+| n465 | Okoye, Zabu | Okoye | Zabu | none more power to any card | - | yes |
+| n466 | Galactus, Knull | Galactus | Knull | line makes units die | type: makes units die | yes |
+| n467 | Galactus, Death | Galactus | Death | line makes units die | cheaper: makes units die | yes |
+| n468 | Destroyer, Knull | Destroyer | Knull | line makes units die | type: makes units die | yes |
+| n469 | Destroyer, Death | Destroyer | Death | line makes units die | cheaper: makes units die | yes |
+| n470 | Victoria Hand, Mystique | Victoria Hand | Mystique | line is a unit with Ongoing it counts or asks for | type: is a unit with Ongoing it counts or asks for | yes |
+| n471 | Devil Dinosaur, Mystique | Devil Dinosaur | Mystique | line is a unit with Ongoing it counts or asks for | type: is a unit with Ongoing it counts or asks for | yes |
+| n472 | PymParticle Arrow, Mystique | PymParticle Arrow | Mystique | line is a unit with Ongoing it counts or asks for | type: is a unit with Ongoing it counts or asks for | yes |
+| n473 | Sera, Mystique | Sera | Mystique | line is a unit with Ongoing it counts or asks for | type: is a unit with Ongoing it counts or asks for | yes |
+| n474 | Basic Arrow, Mystique | Basic Arrow | Mystique | line makes your units get Ongoing | type: makes your units get Ongoing | yes |
+| n475 | Fantomex, Zombie Captain Marvel | Fantomex | Zombie Captain Marvel | none  | - | yes |
+| n476 | Fantomex, Zombie Captain Marvel | Zombie Captain Marvel | Fantomex | line makes your units die | type: makes your units die | yes |
+| n477 | Grapple Arrow, Galactus | Grapple Arrow | Galactus | none  | - | yes |
+| n478 | Grapple Arrow, PymParticle Arrow | Grapple Arrow | PymParticle Arrow | line moves your units | type: Grapple Arrow moves your units, and PymParticle Arrow acts on units in its | yes |
+| n479 | Iron Patriot, King Eitri | Iron Patriot | King Eitri | none  | - | yes |
+| n480 | Scarlet Witch Queen of Chaos, King Eitri | Scarlet Witch Queen of Chaos | King Eitri | none  | - | yes |
+| n481 | Valentina, King Eitri | Valentina | King Eitri | none  | - | yes |
+| n482 | Shadowlands Daredevil, King Eitri | Shadowlands Daredevil | King Eitri | line creates cards | type: creates cards | yes |
+| n483 | The Hunger, Zombie Giant-Man | The Hunger | Zombie Giant-Man | line more power | stronger: more power | yes |
+| n484 | Zombie Scarlet Witch, Zombie Giant-Man | Zombie Scarlet Witch | Zombie Giant-Man | line more power | stronger: more power | yes |
+| n485 | The Hunger, Zombie Mister Fantastic | The Hunger | Zombie Mister Fantastic | none  | - | yes |
+| n486 | SP//dr, Peni Parker | SP//dr | Peni Parker | line merges onto it | waits: merges onto it for its effect | yes |
+| n487 | SP//dr, Man-Spider | SP//dr | Man-Spider | line merges onto it | waits: merges onto it for its effect | yes |
+| n488 | Peni Parker, Man-Spider | Peni Parker | Man-Spider | none  | - | yes |
+| n489 | Super-Skrull, Astral Projection | Super-Skrull | Astral Projection | none copies keywords, gives no On Reveal | - | yes |
+| n490 | High Evolutionary, Cosmo | High Evolutionary | Cosmo | none gives unnamed abilities, no On Reveal | - | yes |
+| n491 | Basic Arrow, Mystique | Basic Arrow | Mystique | line makes your units get Ongoing | type: makes your units get Ongoing | yes |
+| n492 | Grand Master, Invisible Woman | Grand Master | Invisible Woman | none moves your units; her rows read no move | - | yes |
+| n493 | Wong, Shuri | Wong | Shuri | line plays it again | stronger: plays it again | yes |
+| n494 | Zero, Ebony Maw | Zero | Ebony Maw | line silences it: its drawback is gone | waits: silences it: its drawback is gone | yes |
+| n495 | Sauron, Ebony Maw | Sauron | Ebony Maw | line silence | rules: silence | yes |
+| n496 | Zero, Hazmat | Zero | Hazmat | none  | - | yes |
+| n497 | Brood, Absorbing Man | Brood | Absorbing Man | line On Reveal | type: is a unit with On Reveal it counts or asks for | yes |
+| n498 | Silver Surfer, Absorbing Man | Silver Surfer | Absorbing Man | line On Reveal | type: is a unit with On Reveal it counts or asks for | yes |
+| n499 | Hazmat, Absorbing Man | Hazmat | Absorbing Man | line On Reveal | type: is a unit with On Reveal it counts or asks for | yes |
+| n500 | Magik, Absorbing Man | Magik | Absorbing Man | line On Reveal | type: is a unit with On Reveal it counts or asks for | yes |
+| n501 | Wong, Absorbing Man | Wong | Absorbing Man | line On Reveal | stronger: plays it again | NO |
+| n502 | Absorbing Man, Black Panther | Absorbing Man | Black Panther | line On Reveal | repeats: repeats its On Reveal effects | yes |
+| n503 | Absorbing Man, Luna Snow | Absorbing Man | Luna Snow | line On Reveal | repeats: repeats its On Reveal effects | yes |
+| n504 | Absorbing Man, Arnim Zola | Absorbing Man | Arnim Zola | line On Reveal | repeats: repeats its On Reveal effects | yes |
+| n505 | Absorbing Man, Peni Parker | Absorbing Man | Peni Parker | line On Reveal | repeats: repeats its On Reveal effects | yes |
+| n506 | Swarm, Morbius | Swarm | Morbius | line discard | type: comes back after it is discarded, to be discarded again | yes |
+| n507 | Apocalypse, Morbius | Apocalypse | Morbius | line discard | type: comes back after it is discarded, to be discarded again | yes |
+| n508 | Blade, Morbius | Blade | Morbius | line discard | type: makes you discard cards | yes |
+| n509 | Swarm, Dracula | Swarm | Dracula | none  | - | yes |
+| n510 | Storm, White Tiger | Storm | White Tiger | line  | type: stops cards being played, but a summon is not played: it still fills the p | yes |
+| n511 | Storm, Doctor Doom | Storm | Doctor Doom | line  | type: stops cards being played, but a summon is not played: it still fills the p | yes |
+| n512 | Storm, Odin | Storm | Odin | none  | - | yes |
+| n513 | Ebony Maw, Doctor Doom | Ebony Maw | Doctor Doom | none  | - | yes |
+| n514 | Wave, Death | Wave | Death | line makes it cheaper | cheaper: makes it cheaper | yes |
+| n515 | Wave, Hulk | Wave | Hulk | line makes it cheaper | cheaper: makes it cheaper | yes |
+| n516 | Wave, Ant Man | Wave | Ant Man | none  | - | yes |
+| n517 | Moon Girl, The Collector | Moon Girl | The Collector | line creates cards | waits: creates cards | yes |
+| n518 | Professor X, Devil Dinosaur | Professor X | Devil Dinosaur | line fills your hand | waits: fills your hand | yes |
+| n519 | Agent 13, Devil Dinosaur | Agent 13 | Devil Dinosaur | line  | waits: fills your hand | yes |
