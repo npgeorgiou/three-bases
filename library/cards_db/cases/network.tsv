@@ -458,3 +458,7 @@ n462	marvel_snap	Nakia, Black Panther	Nakia	Black Panther	line	gives it more pow
 n463	marvel_snap	Wong, Black Panther	Wong	Black Panther	line	plays it again	Claude 5 Nov 2026, line check: right example stays
 n464	marvel_snap	Odin, Black Panther	Odin	Black Panther	line	repeats its effects	Claude 5 Nov 2026, line check: right example stays
 n465	marvel_snap	Okoye, Zabu	Okoye	Zabu	none	more power to any card	Claude 5 Nov 2026, line check: no line to a card that does not read its power
+n466	marvel_snap	Galactus, Knull	Galactus	Knull	line	makes units die	Claude 5 Nov 2026, line check: Galactus destroys the other locations and the cards there
+n467	marvel_snap	Galactus, Death	Galactus	Death	line	makes units die	Claude 5 Nov 2026, line check: Galactus destroys the other locations and the cards there
+n468	marvel_snap	Destroyer, Knull	Destroyer	Knull	line	makes units die	Claude 5 Nov 2026, line check: right example stays
+n469	marvel_snap	Destroyer, Death	Destroyer	Death	line	makes units die	Claude 5 Nov 2026, line check: right example stays
