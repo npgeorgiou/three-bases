@@ -1,0 +1,4 @@
+FIXED: Magus (and Sparky, Zombie Captain Marvel) wait for their own Activate but their "when activated" had no "object self", so Araña's own Activate looked like a maker of it. Files: fixes/marvel_snap/v69.py (run once: read/marvel_snap/batch_002.jsonl 1, batch_003.jsonl 2), cases/network.tsv. Cases: n433-n438.
+- Data fix: shows only after the main chat's rebuild; checked with a short python over the records (all three now have object pick self, like Awesome Andy). pair.py before the fix showed Araña -> Magus wrong and the five right examples unchanged.
+- Sparky and Zombie Captain Marvel may lose lines from other Activate cards (Araña, Awesome Andy...); Jocasta, who activates other cards, keeps hers.
+- Other games with "Activate"-like own triggers were not touched (only marvel_snap input texts starting "Activate:").

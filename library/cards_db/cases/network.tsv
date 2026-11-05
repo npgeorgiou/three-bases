@@ -427,3 +427,9 @@ n429	marvel_snap	Arishem, Angela	Arishem	Angela	none		Claude 5 Nov 2026, line ch
 n430	marvel_snap	Agamotto, Agony	Agamotto	Agony	none		Claude 5 Nov 2026, line check: creating cards is no unit played in a lane (L19, L1b)
 n431	marvel_snap	Agent 13, King Eitri	Agent 13	King Eitri	none		Claude 5 Nov 2026, line check: Agent 13 creates into hand, Eitri draws created cards from the deck
 n432	marvel_snap	Agent 13, Devil Dinosaur	Agent 13	Devil Dinosaur	line		Claude 5 Nov 2026, line check: fills your hand: right
+n433	marvel_snap	Araña, Magus	Araña	Magus	none		Claude 5 Nov 2026, line check: Magus waits to be activated itself (own Activate), Araña activates only itself
+n434	marvel_snap	Araña, Lancelot	Araña	Lancelot	line		Claude 5 Nov 2026, line check: Araña changes your units stats
+n435	marvel_snap	Kid Omega, Bucky Barnes	Kid Omega	Bucky Barnes	line		Claude 5 Nov 2026, line check: kills it for its death effect
+n436	marvel_snap	Kid Omega, Elixir	Kid Omega	Elixir	line		Claude 5 Nov 2026, line check: makes your units die, Elixir brings them back
+n437	marvel_snap	Jocasta, Awesome Andy	Jocasta	Awesome Andy	line		Claude 5 Nov 2026, line check: Jocasta activates your other cards
+n438	marvel_snap	Attuma, Death Fractured Frontier	Attuma	Death Fractured Frontier	line		Claude 5 Nov 2026, line check: makes your units die, it brings them back
