@@ -481,3 +481,6 @@ n485	marvel_snap	The Hunger, Zombie Mister Fantastic	The Hunger	Zombie Mister Fa
 n486	marvel_snap	SP//dr, Peni Parker	SP//dr	Peni Parker	line	merges onto it	Claude 5 Nov 2026, line check C18: SP//dr merges, Peni waits for a merge
 n487	marvel_snap	SP//dr, Man-Spider	SP//dr	Man-Spider	line	merges onto it	Claude 5 Nov 2026, line check C18: SP//dr merges, Man-Spider waits for a merge
 n488	marvel_snap	Peni Parker, Man-Spider	Peni Parker	Man-Spider	none		Claude 5 Nov 2026, line check C18: Peni creates a card, no merge
+n489	marvel_snap	Super-Skrull, Astral Projection	Super-Skrull	Astral Projection	none	copies keywords, gives no On Reveal	Claude 5 Nov 2026, line check C19: a keyword copy is no named keyword
+n490	marvel_snap	High Evolutionary, Cosmo	High Evolutionary	Cosmo	none	gives unnamed abilities, no On Reveal	Claude 5 Nov 2026, line check C19: unnamed ability is no named keyword
+n491	marvel_snap	Basic Arrow, Mystique	Basic Arrow	Mystique	line	makes your units get Ongoing	Claude 5 Nov 2026, line check C19: right example stays

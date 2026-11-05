@@ -564,6 +564,7 @@ def lines_of(c, game):
         for m, ms, mk, mkind, mpick, mw, mref, rule in makes.get(h, ()):
             for t, ts_, tk, tkind, tpick, tw, lv, role, actor, cost, cheap, use in ts:
                 if m == t or not mechanics.FIT(ms, ts_) or not (mk is None or tk is None or mk == tk): continue
+                if h == 'given_keyword' and mk is None and tk is not None and m in vague_gift(c): continue  # a copy of keywords or an unnamed ability is not the one keyword a need waits for (Super-Skrull -> Astral Projection, High Evolutionary -> Cosmo)
                 if not rule and not lv and made_by.get((m, h)) == {'fight_kw'} and (h in ('nexus_damaged', 'strikes_nexus', 'strikes', 'fights', 'attacks')
                         or (h in OWN_LOSS and ts_ != 'enemy')):  # Frenzy's hits feed no "whenever a unit dies" (Piercing Mantis -> Gate)
                     continue  # made only by its own fight keyword: an attack any unit makes (L2, L20: Alpha Wildclaw -> Snowy Razorclaw)
@@ -889,6 +890,14 @@ NOT_AIMED = PUTS + ('repeat', 'increase_effect', 'level_up', 'draw', 'discard', 
 BOOST = {'repeat': ('repeats', 2.0, 'repeats its effects'), 'increase_effect': ('boosts', 1.0, 'makes its effect bigger'),
          'copy': ('puts', 1.0, 'copies it')}  # effects on a group of cards picked by kind or filter (Doctor Mia, Ava Achiever, Teemo 2)
 NAMES_ONE = ('card is', 'keyword is', 'type is', 'name_has is')
+
+
+def vague_gift(c):
+    """Cards whose only gift is a copy of keywords or an ability with no keyword named: they give no particular keyword."""
+    if 'vague' not in CACHE:
+        CACHE['vague'] = {a for (a,) in c.execute("select distinct card from flat_do where origin='own' and (act='copy_keywords' or (act='give_ability' and coalesce(on_pick,'')!='self'))")} - \
+                         {a for (a,) in c.execute("select distinct card from flat_do where origin='own' and act='give_keyword'")}
+    return CACHE['vague']
 
 
 HELP_ACTS = ('can', 'ready', 'countdown_advance', 'give_ability', 'heal', 'negate_damage', 'cost_set', 'move', 'swap')
