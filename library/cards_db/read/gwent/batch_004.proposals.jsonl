@@ -1,0 +1,12 @@
+{"id": 756938, "field": "attr", "need": "armor"}
+{"id": 756940, "field": "attr", "need": "armor"}
+{"id": 756986, "field": "attr", "need": "armor"}
+{"id": 756947, "field": "param", "need": "ignore_armor"}
+{"id": 756960, "field": "param", "need": "ignore_armor"}
+{"id": 756913, "field": "x", "need": "excess_amount"}
+{"id": 756975, "field": "x", "need": "excess_damage_amount"}
+{"id": 757015, "field": "x", "need": "divided_by"}
+{"id": 756985, "field": "pick", "need": "last_played"}
+{"id": 757063, "field": "attr", "need": "status_count"}
+{"id": 757085, "field": "pick", "need": "leftmost_rightmost"}
+{"id": 756914, "field": "with", "need": "units_on_row_count"}
