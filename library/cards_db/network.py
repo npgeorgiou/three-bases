@@ -2547,7 +2547,9 @@ def flood_lines(c, game, nodes):
     played card, so it still fills the location (guide: Storm -> White Tiger, Doctor Doom; L17)"""
     out = Lines(); marks = ','.join('?' * len(nodes)); L = list(nodes)
     blockers = [a for (a,) in c.execute(f"""select distinct card from flat_do where origin='own' and act='cant' and param_event='played' and on_pick='all'
-            and on_zone='hand' and on_kind='card' and coalesce(on_side,'any')!='mine' and card in ({marks})""", L)]
+            and on_zone='hand' and on_kind='card' and on_side is null and on_with is null and to_with='position is same_lane'
+            and not exists (select 1 from flat_if i where i.card=flat_do.card and i.ability=flat_do.ability)
+            and card in ({marks})""", L)]  # only a total, unconditional flood of the place (no cost filter, one side, other lanes or IF)
     summoners = [b for (b,) in c.execute(f"""select distinct card from flat_do where origin='own' and act='summon' and coalesce(on_side,'mine')='mine'
             and card in ({marks})""", L)]
     for a in blockers:

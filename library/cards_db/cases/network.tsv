@@ -517,3 +517,8 @@ n521	runeterra	Arena Mechacaster, Dashing Dandy	Arena Mechacaster	Dashing Dandy	
 n522	runeterra	Yordles in Arms, Dashing Dandy	Yordles in Arms	Dashing Dandy	none	more power and health	Claude 5 Nov 2026, line check C1: Dandy doubles on play, a buff on a unit in play comes after
 n523	runeterra	Avarosan Hearthguard, Earthshaker	Avarosan Hearthguard	Earthshaker	line	gives it more power and health	Claude 5 Nov 2026, line check C1: Earthshaker reads power in play, stays right
 n524	runeterra	Arena Mechacaster, Earthshaker	Arena Mechacaster	Earthshaker	line	can give it more power	Claude 5 Nov 2026, line check C1: Earthshaker reads power in play, stays right
+n525	marvel_snap	Goose, Anti-Polar Magneto	Goose	Anti-Polar Magneto	none		Claude 5 Nov 2026, line check C2: Goose stops only cards costing 3+, no total flood
+n526	marvel_snap	Jean Grey, Ultron	Jean Grey	Ultron	none		Claude 5 Nov 2026, line check C2: Jean Grey blocks only other lanes under a condition
+n527	marvel_snap	Invisible Woman & Namor Doomsday, Uncle Ben	Invisible Woman & Namor Doomsday	Uncle Ben	none		Claude 5 Nov 2026, line check C2: blocks only enemy cards under conditions
+n528	marvel_snap	Storm, White Tiger	Storm	White Tiger	line	stops cards being played, but a summon is not played: it still fills the place	Claude 5 Nov 2026, line check C2: total flood stays (guide cms07)
+n529	marvel_snap	Storm, Doctor Doom	Storm	Doctor Doom	line	stops cards being played, but a summon is not played: it still fills the place	Claude 5 Nov 2026, line check C2: total flood stays (guide cms08)
