@@ -1,0 +1,4 @@
+- unsure: all three groups are lines gone after the fixes; each removal looks right, so no cause is reported.
+- unsure: The Dreadway -> Swole Squirrel, Dashing Dandy, Earthshaker "doubles its damage": these cards only strike or have Overwhelm and do not read damage, so it is generic more damage (L18); gone is right.
+- unsure: Reborn Grenadier -> The Lady of Blood, Fix-Em-Uppers: the old reason is odd; a line "discards a card" from Grenadier's Play to discard-trigger cards may be missing, but it is not clear from this diff.
+- unsure: Reborn Grenadier -> Sion "levels it up": Sion levels from a power count, not from being discarded again; gone is right.
