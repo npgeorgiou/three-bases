@@ -25,6 +25,25 @@ the faction-evolution article of July 2018, PC Gamer's Nilfgaard article with Le
 describe cards whose texts were rewritten in Homecoming; they are not used..
 Neutral is not a faction.
 
+## The game's rules (from sources)
+Sources: [R1] https://gwent.fandom.com/wiki/Rules (fetched 5 Nov 2026; patch notes up to 19 Dec 2017); [R2]
+https://gamepretty.com/cdpr-witcher-card-game-gwent-homecoming-revealed-returning-to-witcher-3-style/ (Homecoming, the
+rules the 14.8 cards are written for); [K] the keyword entries of the gwent.one 14.8 export (in the library).
+- A match is won by winning two rounds (battles) [R1]. On a turn a player plays a card, uses the leader ability, or passes;
+  a player who passed plays no more cards that round; when both have passed the round ends and the higher total power
+  wins it [R1]. A tie: both lose the round [R1].
+- The board: each player has two rows, melee and ranged [R1][R2], of at most 9 units each [R2]. A unit's power adds to its
+  side's total (the score) [R1]; damage lowers power and a unit at 0 power goes to the graveyard [R1]. Armor takes damage
+  first and does not count toward the score [K].
+- At the end of a round every unit on the battlefield goes to the graveyard [R1], except units with Resilience [K].
+- Cards: 10 at the start, 3 more at the start of rounds 2 and 3; at most 10 in hand, cards drawn beyond it are discarded
+  [R1]. Mulligans before the match and at the start of later rounds [R1][R2].
+- Deck: at least 25 cards within the provision limit, which the leader ability sets; cards of the leader's faction or
+  Neutral; bronze cards two copies, gold cards one [R1]. The leader ability is not a card on the board; it is used as a turn
+  [R1][R2]. The winner of a round starts the next one [R1].
+- Order abilities cannot be used the turn the card is placed (Zeal allows it) [K]. Coins: at most 9, halved (rounded down)
+  between rounds [K].
+
 ## Factions
 
 ### Northern Realms

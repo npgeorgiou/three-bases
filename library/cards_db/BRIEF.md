@@ -677,3 +677,63 @@ a turn is shared, so it is a round. Sources: library/games/marvel_snap.md "The g
   "side": "mine", "with": [same_lane]}}`. "If you
   played a card here last turn" = event_count span last_round. "The last card you played" = test last_card.
 - State stolen_power (5 Nov 2026): "have stolen Power" = cards that took Power from another card; not a plain buff.
+
+## Game words: Gwent
+Gwent has no Keywords field: describe everything the text says. A keyword alone in the text ("Zeal.", "Doomed.", "Veil.",
+"Thrive.", "Harmony.", "Formation.", "Shield.", "Cooldown: 2", "Charge: 3") = give_keyword on self, permanent, with params
+amount for its number: the card gets the keyword and inherits its record. Units are kind unit; specials (spells,
+stratagems) kind spell; artifacts kind landmark (they stand in a row); a leader ability is kind leader_ability (its Order is
+the player's, used as a turn; "This ability adds 15 provisions..." is a deckbuilding remark: no effect). Sources:
+library/games/gwent.md "The game's rules (from sources)"; the keyword entries (input keywords.jsonl). Mapping by Claude (5 Nov 2026).
+- Power is the one stat: attr / param strength (score and health at once). "Boost by 3" = stat_change params strength 3,
+  permanent; "damage by 3" = damage params amount 3; "set its power to 5" = stat_set strength 5; "base power" = attr
+  base_power; "increase / decrease its base power by 3" = base_change params strength ±3. "Heal", "Reset", "Purify",
+  "Drain", "Consume", "Duel", "Clash", "Seize", "Banish", "Discard", "Reveal", "Create" = keyword_action with the keyword (on
+  = the target, to = the second unit for Duel / Clash). Destroy = kill. "Armor": "gain 3 Armor" = give_keyword Armor params
+  amount 3; "a unit with Armor" = filter keyword Armor. "Highest / lowest-power unit" = pick highest / lowest, by strength.
+- Statuses are keywords: "give it Poison / Lock / Veil / Doomed / Resilience / Immunity / Shield / Spying / Bounty /
+  Defender", "Vitality (4)", "Bleeding (2)", "Rupture" = give_keyword (amount for the number); "Poison it", "Lock it" =
+  give_keyword too. "A Spying / Poisoned / Locked unit" = filter keyword Spying / Poison / Lock. "Remove its statuses",
+  "Purify" = keyword_action Purify. Infuse X with "..." = give_ability (the ability in quotes), keyword Infused.
+- Rows. A row is `{"kind": "position", "side": ...}`: "an enemy row" = position side enemy (pick chosen), "a random allied
+  row" = pick random, "each row" = pick all. "This row" = position same_row of the card; "units on a row" = unit filter
+  `{"attr": "position", "op": "is", "val": "same_row", "of": <the row>}`. The melee row = position front_row, the ranged row
+  = back_row (of the side's rows); "the opposite row" = opposite_row of the card; "the other row" = my row with same_row op
+  not; "adjacent units" = position sides of the unit. "Move it to the other row" = move, "to" the row. "Deploy (Melee):",
+  "Order (Ranged):", "(Initiative)", "(Devotion)", "(Adrenaline 3)", "(Bonded)" = the ability with COND keyword_condition ref
+  that keyword (its number, "Adrenaline 3", in the COND's "n"). "A row with 25 or more power" =
+  COND test amount, value `{"x": "lane_power", "of": <the row>}`.
+- Row effects (Frost, Fog, Rain, Storm, Cataclysm, Dragon's Dream, Blood Moon, Golden Froth, Clear Skies...): "Spawn Frost on an
+  enemy row for 2 turns" = give_keyword Frost on the row, lasts n_turns params turns 2; "clear hazards from a row" = remove_keyword
+  of each named one (on the row). Clear Skies or another named special = the card itself (summon / create / play_card, card).
+- Turns and rounds: a turn is one player's move; a round is one battle of the best of three. "At the start / end of your turn" =
+  turn_start / turn_end, actor `{"kind": "player", "side": "mine"}`; "at the start / end of the round" = round_start /
+  round_end; "for 2 turns" = lasts n_turns params turns 2; "this round" = this_round; "this game" = this_game. "When your
+  opponent passes" = event passed, actor the enemy player; "if your opponent has passed" = COND have of `{"kind": "player",
+  "side": "enemy", "with": [state passed]}`. "When you win / lose a round" = event round_won, actor my / the enemy player.
+  "If you are losing / winning", "more points than your opponent" = COND test score op lt / gt.
+- Triggers. "Deploy:" = played, object self. "Order:" = activated, object self; "Charges: 3" = limit n_times params times 3.
+  "Deathwish:" = dies, object self. "Deathblow:" = killed, actor self. "Whenever you play a card / unit" = played, object
+  `{"kind": "card"|"unit", "side": "mine"}`. "Ambush:" = the card is played hidden (state hidden) and its ability fires on
+  the named event; "Spring:" = activated. "Timer 3:" = give_keyword Timer params amount 3, then the ability on event
+  countdown_done object self. "Counter: 6" likewise. "Berserk 4:" = stat_changed object self with COND stat strength le 4.
+  "Bloodthirst 2:", "Adrenaline 3:", "Hoard 5:", "Dominance:", "Inspired:", "Barricade:", "Sabbath:", "Might:", "Devotion:",
+  "Bonded:", "Conspiracy:", "Grace 10:" = the ability with COND keyword_condition ref the keyword and n. "Fee 2:" = activated,
+  first effect spend_mana amount 2 on `{"kind": "secondary_resource", "side": "mine"}`, then the rest (link then);
+  "Tribute 3:" = played object self, the same payment first; "Vice 4:" = event mana_spent with COND. "Exposed:" =
+  keyword_removed object self, keyword Armor. "Prologue:" = played object self; "Scenario: Progress whenever X" = an ability on X;
+  "Chapter 1/2:" = the chapter's effects on X with COND test stage n 1 / 2.
+- Coins = kind secondary_resource: "Profit 3", "gain 3 Coins" = mana_gain on `{"kind": "secondary_resource", "side":
+  "mine"}`; "spend 3 Coins" = spend_mana; "if you have 5 Coins" = keyword_condition Hoard or COND count of it.
+- Cards and zones: graveyard = zone discard; "Banish" = keyword_action Banish (obliterate); "starting deck" = filter state
+  started_in_deck. "Play a card from your deck / hand / graveyard" = play_card on it (zone the source; "Resurrect" from the
+  graveyard = revive). "Summon X from your deck" = summon, card X, on a card zone deck (not played: no Deploy). "Spawn X on a
+  row" = summon, card X, "to" the row; "Spawn X in your hand" = create zone hand; "Spawn and play X" = create then play_card
+  (link then). "Create a bronze Elf" = keyword_action Create, then the card it makes. "Transform into X", "evolve" (into the
+  next form) = transform, card the form. "Return to hand" = return_to_hand. "Shuffle into your deck" = shuffle_into_deck.
+  "Put on top of the deck" = put_on_top. "Copy" = copy; "a base copy" = copy with filter state created.
+- Card kinds: "gold / bronze card" = filter state gold / bronze; "special card" = kind spell; "artifact" = kind landmark;
+  types (Witcher, Soldier, Spell, Warfare, Crime, Alchemy, Item, Organic, Tactics, Trap, Cursed...) = filter type ref; a
+  faction = filter region ("non-Neutral" = region op not Neutral); "your leader ability" = kind leader_ability, side mine:
+  "gain a Charge of your leader ability" = give_keyword Charge amount 1 on it; "reset its Cooldown", "reset your leader
+  ability" = refresh. "Provision cost" = attr cost.

@@ -8,7 +8,7 @@ import csv, os, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 G = {'runeterra': 'runeterra', 'slay the spire': 'sts1', 'sts1': 'sts1', 'faeria': 'faeria', 'duelyst': 'duelyst',
      'stormbound': 'stormbound', 'monster train': 'monster_train', 'inscryption': 'inscryption', 'into the breach': 'into_the_breach',
-     'marvel snap': 'marvel_snap', 'marvel_snap': 'marvel_snap'}
+     'marvel snap': 'marvel_snap', 'marvel_snap': 'marvel_snap', 'gwent': 'gwent'}
 
 
 def split(f, cap=55000):

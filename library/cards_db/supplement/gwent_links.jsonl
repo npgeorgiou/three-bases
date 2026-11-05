@@ -1,0 +1,91 @@
+{"src": 756336, "rel": "generates", "dst": 813582, "evidence": "card text: makes Drone"}
+{"src": 756376, "rel": "generates", "dst": 813582, "evidence": "card text: makes Drone"}
+{"src": 756398, "rel": "generates", "dst": 813606, "evidence": "card text: makes Elven Deadeye"}
+{"src": 756523, "rel": "generates", "dst": 813590, "evidence": "card text: makes Harald's Pal"}
+{"src": 756579, "rel": "generates", "dst": 756406, "evidence": "card text: makes Waylay"}
+{"src": 756606, "rel": "generates", "dst": 813591, "evidence": "card text: makes Cow"}
+{"src": 756619, "rel": "generates", "dst": 757379, "evidence": "card text: makes Buhurt"}
+{"src": 756652, "rel": "transforms_into", "dst": 813595, "evidence": "card text: evolves or transforms into another form of Shupe"}
+{"src": 756652, "rel": "transforms_into", "dst": 813596, "evidence": "card text: evolves or transforms into another form of Shupe"}
+{"src": 756652, "rel": "transforms_into", "dst": 813597, "evidence": "card text: evolves or transforms into another form of Shupe"}
+{"src": 756652, "rel": "transforms_into", "dst": 813599, "evidence": "card text: evolves or transforms into another form of Shupe"}
+{"src": 756739, "rel": "generates", "dst": 813583, "evidence": "card text: makes Ekimmara"}
+{"src": 756812, "rel": "generates", "dst": 756822, "evidence": "card text: makes Dryad Fledgling"}
+{"src": 756914, "rel": "generates", "dst": 813610, "evidence": "card text: makes Firesworn Zealot"}
+{"src": 756977, "rel": "generates", "dst": 813582, "evidence": "card text: makes Drone"}
+{"src": 757033, "rel": "generates", "dst": 813618, "evidence": "card text: makes Crow"}
+{"src": 757035, "rel": "generates", "dst": 813618, "evidence": "card text: makes Crow"}
+{"src": 757040, "rel": "generates", "dst": 813618, "evidence": "card text: makes Crow"}
+{"src": 757043, "rel": "generates", "dst": 813617, "evidence": "card text: makes Rat"}
+{"src": 757049, "rel": "generates", "dst": 813617, "evidence": "card text: makes Rat"}
+{"src": 757050, "rel": "generates", "dst": 813617, "evidence": "card text: makes Rat"}
+{"src": 757055, "rel": "generates", "dst": 756406, "evidence": "card text: makes Waylay"}
+{"src": 757055, "rel": "generates", "dst": 813606, "evidence": "card text: makes Elven Deadeye"}
+{"src": 757096, "rel": "transforms_into", "dst": 813620, "evidence": "card text: evolves or transforms into another form of Auberon"}
+{"src": 757096, "rel": "transforms_into", "dst": 813621, "evidence": "card text: evolves or transforms into another form of Auberon"}
+{"src": 757101, "rel": "transforms_into", "dst": 813641, "evidence": "card text: evolves or transforms into another form of Red Riders"}
+{"src": 757101, "rel": "transforms_into", "dst": 813642, "evidence": "card text: evolves or transforms into another form of Red Riders"}
+{"src": 757101, "rel": "transforms_into", "dst": 813659, "evidence": "card text: evolves or transforms into another form of Red Riders"}
+{"src": 757106, "rel": "transforms_into", "dst": 813622, "evidence": "card text: evolves"}
+{"src": 757106, "rel": "transforms_into", "dst": 813623, "evidence": "card text: evolves"}
+{"src": 757116, "rel": "generates", "dst": 813610, "evidence": "card text: makes Firesworn Zealot"}
+{"src": 757116, "rel": "transforms_into", "dst": 813624, "evidence": "card text: evolves"}
+{"src": 757116, "rel": "transforms_into", "dst": 813625, "evidence": "card text: evolves or transforms into another form of Jacques"}
+{"src": 757126, "rel": "transforms_into", "dst": 813627, "evidence": "card text: evolves or transforms into another form of Viraxas"}
+{"src": 757126, "rel": "transforms_into", "dst": 813628, "evidence": "card text: evolves or transforms into another form of Viraxas"}
+{"src": 757131, "rel": "generates", "dst": 813629, "evidence": "card text: makes Volunteer"}
+{"src": 757136, "rel": "transforms_into", "dst": 813630, "evidence": "card text: evolves or transforms into another form of Usurper"}
+{"src": 757136, "rel": "transforms_into", "dst": 813631, "evidence": "card text: evolves or transforms into another form of Usurper"}
+{"src": 757140, "rel": "generates", "dst": 813632, "evidence": "card text: makes Duny"}
+{"src": 757146, "rel": "transforms_into", "dst": 813634, "evidence": "card text: evolves or transforms into another form of Eithn\u00e9"}
+{"src": 757146, "rel": "transforms_into", "dst": 813635, "evidence": "card text: evolves or transforms into another form of Eithn\u00e9"}
+{"src": 757148, "rel": "transforms_into", "dst": 813638, "evidence": "card text: evolves or transforms into another form of Shaping Nature"}
+{"src": 757148, "rel": "transforms_into", "dst": 813639, "evidence": "card text: evolves or transforms into another form of Shaping Nature"}
+{"src": 757148, "rel": "transforms_into", "dst": 813640, "evidence": "card text: evolves or transforms into another form of Shaping Nature"}
+{"src": 757195, "rel": "generates", "dst": 813646, "evidence": "card text: makes Witcher Student"}
+{"src": 757214, "rel": "generates", "dst": 756358, "evidence": "card text: makes Nekker"}
+{"src": 757224, "rel": "generates", "dst": 813647, "evidence": "card text: Choose a mutagen: Red, Blue, Green"}
+{"src": 757224, "rel": "generates", "dst": 813648, "evidence": "card text: Choose a mutagen: Red, Blue, Green"}
+{"src": 757224, "rel": "generates", "dst": 813649, "evidence": "card text: Choose a mutagen: Red, Blue, Green"}
+{"src": 757259, "rel": "generates", "dst": 813651, "evidence": "card text: makes Syndicate Crown"}
+{"src": 757342, "rel": "generates", "dst": 756753, "evidence": "card text: Create a curse ... Create a blessing"}
+{"src": 757342, "rel": "generates", "dst": 813666, "evidence": "card text: Create a curse ... Create a blessing"}
+{"src": 757342, "rel": "generates", "dst": 813667, "evidence": "card text: Create a curse ... Create a blessing"}
+{"src": 757342, "rel": "generates", "dst": 813668, "evidence": "card text: Create a curse ... Create a blessing"}
+{"src": 757342, "rel": "generates", "dst": 813669, "evidence": "card text: Create a curse ... Create a blessing"}
+{"src": 757342, "rel": "generates", "dst": 813670, "evidence": "card text: Create a curse ... Create a blessing"}
+{"src": 757342, "rel": "generates", "dst": 813671, "evidence": "card text: Create a curse ... Create a blessing"}
+{"src": 757342, "rel": "generates", "dst": 813672, "evidence": "card text: Create a curse ... Create a blessing"}
+{"src": 757342, "rel": "generates", "dst": 813673, "evidence": "card text: Create a curse ... Create a blessing"}
+{"src": 757342, "rel": "generates", "dst": 813674, "evidence": "card text: Create a curse ... Create a blessing"}
+{"src": 757342, "rel": "generates", "dst": 813675, "evidence": "card text: Create a curse ... Create a blessing"}
+{"src": 757342, "rel": "generates", "dst": 813676, "evidence": "card text: Create a curse ... Create a blessing"}
+{"src": 757342, "rel": "generates", "dst": 813677, "evidence": "card text: Create a curse ... Create a blessing"}
+{"src": 757342, "rel": "generates", "dst": 813678, "evidence": "card text: Create a curse ... Create a blessing"}
+{"src": 757342, "rel": "generates", "dst": 813679, "evidence": "card text: Create a curse ... Create a blessing"}
+{"src": 757358, "rel": "generates", "dst": 813658, "evidence": "card text: transform ... into Thing From the Box"}
+{"src": 757359, "rel": "transforms_into", "dst": 813657, "evidence": "card text: evolves or transforms into another form of Vial of Forbidden Knowledge"}
+{"src": 757386, "rel": "generates", "dst": 813662, "evidence": "card text: makes Frog"}
+{"src": 757405, "rel": "transforms_into", "dst": 813683, "evidence": "card text: evolves or transforms into another form of Torres var Emreis"}
+{"src": 757407, "rel": "transforms_into", "dst": 813684, "evidence": "card text: evolves or transforms into another form of Tyr"}
+{"src": 757408, "rel": "transforms_into", "dst": 813685, "evidence": "card text: evolves or transforms into another form of Dana M\u00e9adbh"}
+{"src": 757411, "rel": "transforms_into", "dst": 813686, "evidence": "card text: evolves or transforms into another form of Temple of Melitele"}
+{"src": 757412, "rel": "transforms_into", "dst": 813687, "evidence": "card text: evolves or transforms into another form of Dagon"}
+{"src": 757414, "rel": "transforms_into", "dst": 813688, "evidence": "card text: evolves or transforms into another form of Saint Gregory"}
+{"src": 757425, "rel": "generates", "dst": 813690, "evidence": "card text: makes Cargo"}
+{"src": 757454, "rel": "generates", "dst": 813606, "evidence": "card text: makes Elven Deadeye"}
+{"src": 813579, "rel": "generates", "dst": 756323, "evidence": "card text: makes Botchling"}
+{"src": 813580, "rel": "transforms_into", "dst": 813600, "evidence": "card text: evolves or transforms into another form of Frightener"}
+{"src": 813601, "rel": "generates", "dst": 756618, "evidence": "card text: makes Phoenix"}
+{"src": 813620, "rel": "transforms_into", "dst": 757096, "evidence": "card text: evolves or transforms into another form of Auberon"}
+{"src": 813620, "rel": "transforms_into", "dst": 813621, "evidence": "card text: evolves or transforms into another form of Auberon"}
+{"src": 813627, "rel": "transforms_into", "dst": 757126, "evidence": "card text: evolves or transforms into another form of Viraxas"}
+{"src": 813627, "rel": "transforms_into", "dst": 813628, "evidence": "card text: evolves or transforms into another form of Viraxas"}
+{"src": 813630, "rel": "transforms_into", "dst": 757136, "evidence": "card text: evolves or transforms into another form of Usurper"}
+{"src": 813630, "rel": "transforms_into", "dst": 813631, "evidence": "card text: evolves or transforms into another form of Usurper"}
+{"src": 813634, "rel": "transforms_into", "dst": 757146, "evidence": "card text: evolves or transforms into another form of Eithn\u00e9"}
+{"src": 813634, "rel": "transforms_into", "dst": 813635, "evidence": "card text: evolves or transforms into another form of Eithn\u00e9"}
+{"src": 813634, "rel": "generates", "dst": 813636, "evidence": "card text: makes Young Dryad"}
+{"src": 813650, "rel": "generates", "dst": 757177, "evidence": "card text: makes Saber-Tooth Tiger"}
+{"src": 813654, "rel": "generates", "dst": 757282, "evidence": "card text: makes Bloody Mistress"}
+{"src": 813689, "rel": "generates", "dst": 757412, "evidence": "card text: makes Dagon: Promised"}

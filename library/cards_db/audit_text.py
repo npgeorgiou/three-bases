@@ -8,9 +8,9 @@ import collections, glob, json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE); import source
 
-PLAYER = {'marvel_snap': r"\bopponent\b(?!'s)", 'runeterra': r'Nexus', 'stormbound': r'\bbase\b', 'monster_train': r'\bPyre\b', 'faeria': r"\b(?:gods?|opponent)\b(?!'s)", 'inscryption': r"\b(?:opponent|scale)\b(?!'s)", 'duelyst': r'\bGenerals?\b', 'into_the_breach': r'\b(?:Power Grid|Grid Power)\b', 'sts1': r'\b(?:Max HP|HP)\b'}
+PLAYER = {'marvel_snap': r"\bopponent\b(?!'s)", 'gwent': r"\bopponent\b(?!'s)", 'runeterra': r'Nexus', 'stormbound': r'\bbase\b', 'monster_train': r'\bPyre\b', 'faeria': r"\b(?:gods?|opponent)\b(?!'s)", 'inscryption': r"\b(?:opponent|scale)\b(?!'s)", 'duelyst': r'\bGenerals?\b', 'into_the_breach': r'\b(?:Power Grid|Grid Power)\b', 'sts1': r'\b(?:Max HP|HP)\b'}
 
-NO_PLAYER_TARGET = {'marvel_snap'}  # a player with no life: "your opponent" is the enemy side of cards, lanes and Energy
+NO_PLAYER_TARGET = {'marvel_snap', 'gwent'}  # a player with no life: "your opponent" is the enemy side of cards, lanes and Energy
 
 
 def parts(rec):

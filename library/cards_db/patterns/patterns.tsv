@@ -209,3 +209,20 @@ marvel_snap	T112	\bmov(?:e|es|ed|ing)\b	value:move|moves|moved_this_round|previo
 marvel_snap	T113	\bafflict(?:ed)?\b	value:stat_change|stat_set|negative	yes	verb (BRIEF Game words: Afflict = stat_change power minus on the enemy card); "afflicted with negative Power" is the state negative
 marvel_snap	T114	\bhorde\b	name:zombie horde	yes	keyword word (BRIEF Game words: Horde +N = stat_change on card Zombie Horde)
 marvel_snap	T115	\bempowered\b	value:buffed|stat_changed	yes	keyword word (BRIEF Game words: Empowered = state buffed); "when this is Empowered" is the event stat_changed on itself
+gwent	T116	\bdeploy\b(?: \([^)]*\))?:	event:played	yes	trigger label (keyword Deploy, gwent.one 14.8 glossary: triggers when played), 5 Nov 2026
+gwent	T117	\bdeathwish\b(?: \([^)]*\))?:	event:dies	yes	trigger label (keyword Deathwish: when destroyed and moved to the graveyard), 5 Nov 2026
+gwent	T118	\bdeathblow\b(?: \([^)]*\))?:	event:killed	yes	trigger label (keyword Deathblow: if this card destroys a unit), 5 Nov 2026
+gwent	T119	\border\b(?: \([^)]*\))?:	event:activated	yes	trigger label (keyword Order: triggered manually by the player), 5 Nov 2026
+gwent	T120	\bat the (?:start|beginning) of your turn\b	event:turn_start	yes	trigger phrase (BRIEF Game words: a turn is one player's, a round is the battle), 5 Nov 2026
+gwent	T121	\bat the end of your turn\b|\bbefore the end of your turn\b	event:turn_end	yes	trigger phrase (BRIEF Game words), 5 Nov 2026
+gwent	T122	\bat the (?:start|beginning) of (?:the|each) round\b	event:round_start	yes	trigger phrase (BRIEF Game words), 5 Nov 2026
+gwent	T123	\bat the end of (?:the|each) round\b	event:round_end	yes	trigger phrase (BRIEF Game words), 5 Nov 2026
+gwent	T124	\b(?:passes|has passed|have passed)\b	value:passed	yes	trigger and state word (BRIEF Game words: pass = event passed, state passed), 5 Nov 2026
+gwent	T125	\b(?:win|lose|wins|loses|won|lost) (?:a|the) round\b	event:round_won	yes	trigger phrase (BRIEF Game words: round_won, actor the winner), 5 Nov 2026
+gwent	T126	\bboost(?:s|ed)?\b	value:stat_change|stat_set|stat_changed|buffed	yes	verb (BRIEF Game words: boost = stat_change strength), 5 Nov 2026
+gwent	T127	\bdestroy(?:s|ed)?\b	value:kill|dies|killed|keyword_action	yes	verb (BRIEF Game words: destroy = kill; Consume and Poison destroy through their keywords), 5 Nov 2026
+gwent	T128	\bbanish(?:es|ed)?\b	value:obliterate|obliterated|keyword_action|give_keyword	yes	verb (keyword Banish: removed from the game; Doomed banishes), 5 Nov 2026
+gwent	T129	\bspawn(?:s|ed)?\b	value:summon|create|summoned|created|give_keyword	yes	verb (keyword Spawn: add a card to the game; a row effect is give_keyword on the row), 5 Nov 2026
+gwent	T130	\bmov(?:e|es|ed)\b	value:move|moves|return_to_hand|put_on_top|keyword_action	yes	verb (BRIEF Game words: move to a row = move; to hand = return_to_hand), 5 Nov 2026
+gwent	T131	\bgain(?:s)? \d+ coins?\b|\bprofit \d	value:mana_gain	yes	verb (BRIEF Game words: Coins = kind secondary_resource, gain = mana_gain), 5 Nov 2026
+gwent	T132	\bplay (?:a|an|the|\d+|it|them|one)\b[^.]{0,60}\bfrom (?:your|the|their|its) (?:deck|graveyard|hand)\b	value:play_card|revive	yes	verb (BRIEF Game words: playing a card from a zone = play_card; from the graveyard = revive or play_card), 5 Nov 2026
