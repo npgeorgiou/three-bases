@@ -416,3 +416,7 @@ n418	marvel_snap	The Grand Design, Zombie Giant-Man	The Grand Design	Zombie Gian
 n419	marvel_snap	Venus, Zombie Giant-Man	Venus	Zombie Giant-Man	none		Claude 5 Nov 2026, line check: Giant-Man reads Zombie Hulk's power; Venus buffs units on the board
 n420	marvel_snap	Zombie Mister Fantastic, Zombie Giant-Man	Zombie Mister Fantastic	Zombie Giant-Man	line		Claude 5 Nov 2026, line check: Mister Fantastic gives power to the very card Giant-Man reads
 n421	marvel_snap	Excalibur, Iron Man	Excalibur	Iron Man	line		Claude 5 Nov 2026, line check: Excalibur gives my units power, Iron Man reads the power in its lane
+n422	marvel_snap	Astral Projection, Acid Arrow	Astral Projection	Acid Arrow	none		Claude 5 Nov 2026, line check: Acid Arrow only gives itself away; repeating it is a drawback (L5)
+n423	marvel_snap	Toxin, Acid Arrow	Toxin	Acid Arrow	none		Claude 5 Nov 2026, line check: Acid Arrow only gives itself away; replaying it is a drawback (L5)
+n424	marvel_snap	Beast, Absorbing Man	Beast	Absorbing Man	line		Claude 5 Nov 2026, line check: Absorbing Man's On Reveal is a real effect, replaying it helps
+n425	marvel_snap	Ultron Mind Stone, Absorbing Man	Ultron Mind Stone	Absorbing Man	line		Claude 5 Nov 2026, line check: Absorbing Man's On Reveal is a real effect, playing it again helps

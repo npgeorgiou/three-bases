@@ -751,7 +751,7 @@ def lines_of(c, game):
         for m, k in ms:
             has = {t for t in users if k in cards[t]['kws']}  # the cards with that keyword: "repeat all Summon effects" helps the
             # Summon units, not every spell played (Transcendimp -> Imp-pressive)
-            for t in (has or users) - {m}:
+            for t in (has or users) - {m} - drawback_cards(c):  # a card that only gives itself away: repeating it is no help (L5)
                 out[(m, t)].append(('repeats', 2.0 / len(ms), f'repeats its {mechanics.name(c, k)} effects'))
     # types: a card that asks for a type is fed by cards of that type and cards that make them
     asks, named, need_all = collections.defaultdict(set), collections.defaultdict(set), collections.defaultdict(set)  # named: a card it names ("if a Chime is attacked")
@@ -1094,6 +1094,11 @@ TRIGGER_KW = ('on_attack', 'on_kill', 'on_damaged', 'death_trigger', 'on_play', 
               'repeat_trigger', 'combat_start', 'turn_start', 'turn_end')  # keyword concepts that are reactions
 
 
+def drawback_cards(c):
+    """cards whose own effects only give the card itself away (Acid Arrow): repeating or replaying them helps nothing (L5)"""
+    return {i for (i,) in c.execute("select card from flat_do where origin='own' group by card having sum(act!='donate')=0")}
+
+
 def generic_use(c, game):
     """per card: its keyword concepts, its own triggers, what it waits for, the keywords it gives itself or my side, and whether it
     strikes by its own effect or has an effect at all"""
@@ -1105,6 +1110,7 @@ def generic_use(c, game):
     for i, e, origin, via in c.execute("""select card, event, origin, via from flat_when where origin in ('own','has_keyword')
             and (obj_pick in ('self','actor_self') or (origin='has_keyword' and obj_pick is null))"""):
         if origin == 'own' or kw_tree(c, via) in TRIGGER_KW: d[i]['self_when'].add(e)  # "Strike:", "Slay:" as keywords (Monster Train)
+    for i in drawback_cards(c): d[i]['self_when'] -= {'played', 'summoned'}  # its Play effect is a drawback: replaying it is no help (L5)
     kw_stat = {t for (t,) in c.execute("select w.card from cond k join flat_when w on w.ability=k.ability where k.test='keyword_condition' and k.ref_keyword is not null and w.event='stat_changed'")}
     for i, h, origin, via, k in c.execute("""select card, happening, origin, via, keyword from flat_ref where role!='makes' and origin in ('own','has_keyword')
             and coalesce(side,'') in ('','mine','any')"""):
@@ -1353,6 +1359,7 @@ def aimed(c, game, nodes, broad):
                 # power that it failed before (For Demacia! -> Poppy)
                 hits = [b for b in hits if use_of(c, game, b, act, kw, ps, w) != 'more power: its text reads its power']
         n = len(makers[(act, kind, kw, rule if rule in (True, False, 'boost') else True)])
+        if rule == 'boost' and act == 'repeat': hits = [b for b in hits if b not in drawback_cards(c)]  # no line to a card whose effect is a drawback (L5: Acid Arrow)
         if rule == 'boost':
             kind_, x, why = BOOST.get(act, ('boosts', 1.0, 'lets it do more'))
             for b in hits:
