@@ -278,7 +278,11 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
    artefacts go to NOT_KEYWORDS in build_input.py with the proof.
    **Take every form of a card by its code, not its name**: a level-up form, a transformed side or a token often shares the
    base card's name (Bard 06RU001 and 06RU001T4; taking by name lost 11 Runeterra level-up forms). Write the links between new
-   cards too (`supplement/<game>_links.jsonl`: transforms_into, generates).
+   cards too (`supplement/<game>_links.jsonl`: transforms_into, generates). When the source has no field for them, take
+   them from the texts by script: `supplement_marvel_snap_links.py` is the model (a card named after add, create, summon,
+   shuffle, transform into...; longest name first; the name as written, so "a random card" is not the card Random).
+   **Modes by code, all at once**: before loading, list every code ending in a mode or event name (Marvel Snap: Doomsday,
+   Champion, OverloadedReactor) and leave them all out in the same pass; finding them one by one later costs a rebuild each.
 5. **Keyword definitions** from the game's own glossary, with the source in source_type; Kaptain is asked only for a keyword
    no source defines. Glossary terms no card uses are left out.
 6. **The game's words** (readers can only use values that exist). A board game maps its words to BRIEF "The board" first,
@@ -459,12 +463,21 @@ their text. D = `checks/<game>/`. After each step: write PROGRESS.md, commit and
 5. **Verifiers.** `causes.py D/lr_*.md --out D/vp.md`; `audit_pieces.py split D/vp.md` (cut at causes); one verifier per piece,
    all at once: checks/LINE_VERIFIER_JOB.md + the piece path + the verdict path D/vv_<n>.md. A verifier never overrules a
    failing guide case (Marvel Snap, 5 Nov 2026: 12 of 15 combos called not real): MISSED REAL, or MISSED CASE WRONG with the
-   rule's words, which goes to Kaptain with both cards in one question at the end of the chat.
+   rule's words, which goes to Kaptain with both cards in one question at the end of the chat (his answer so far: his
+   rules win, the case is deleted).
 6. **The sheet.** `causes.py D/vv_*.md --out D/causes_sheet.md`: every REAL, PARTLY and MISSED REAL cause, biggest first, with
    all a fixer needs. CONFLICT causes (a case says the opposite; Kaptain's case wins) and gone ones are skipped.
 7. **Fixers, one at a time, from the top.** checks/LINE_FIXER_JOB.md + the sheet path + the cause's number (C<k>, its heading's first word) + the report path
    D/fix_<n>.md. The main chat reads only the report's first line (FIXED, STUCK or CONFLICT), notes it in PROGRESS.md,
    commits and starts the next fixer. A STUCK cause goes to "Open work" with the fixer's words.
+   **Cheaper** (Marvel Snap, 5 Nov 2026: 7 of 37 fixer agents found their cause already fixed):
+   - Before each fixer the main chat runs `pair.py` on the cause's wrong examples (one call); already right: noted FIXED
+     (by an earlier fix), no agent. Causes with the same card pair or the same reason go to one fixer.
+   - Every agent (readers, verifiers, fixers) runs on the cheaper model (`model: sonnet`): fixers in the foreground one at
+     a time (no waiting calls in between), readers and verifiers in the background all at once.
+   - After every fifth fixer `check_all.py --no-load` (about 1 minute): a fix that breaks another game's case is found
+     while its cause is still known (5 Nov 2026: one fix broke Slay the Spire's nst26).
+   - Commit each fix with one command: `fixdone.sh <game> fix_C<k>` (notes it in PROGRESS.md, commits, pushes).
 8. **One rebuild** when all causes are done: `check_all.py <game>` if records changed, `check_all.py --no-load` if only code,
    in the Bash tool's background mode. Then `links.py`, `dump_lines.py D/after.tsv`, `--diff D/before.tsv D/after.tsv` and
    `--diff` of the tables (tb0 -> tb1). tb0 must hold every game: build it with `links.py` (no game) in step 1; if it holds
@@ -476,5 +489,6 @@ their text. D = `checks/<game>/`. After each step: write PROGRESS.md, commit and
    rewritten as strict. Cases that still fail and guide cases Kaptain rejects are deleted, no note (rule 8).
 9. **The last checks** (Part 2 step 4): `realworld.py <game>` again; `design_questions.py` read by one agent (thin or odd
    answers of the new game, as causes in the reader format, then steps 5-8 for them).
-10. **Done** (Part 2 step 5): "State" and "Open work" updated, pushed; Kaptain checks the deck page (network_page.py).
+10. **Done** (Part 2 step 5): "State" and "Open work" updated; `git rm -r D` (the work files stay in git history only);
+   pushed; Kaptain checks the deck page (network_page.py).
 The game is not done while a verified cause is open and not in "Open work".

@@ -95,7 +95,7 @@ strip = lambda s: re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', s or '')).strip()
 def kind(x, ids):
     k = x['carddefid']
     if k.startswith('Skill01') or any(k.endswith(t) and k[:-len(t)] in ids for t in MODE_TAGS) \
-            or any(k.endswith(t) for t in ('FirstStepsChampion', 'RiderChampion', 'SpiderChampion')) or 'OverloadedReactor' in k:
+            or any(k.endswith(t) for t in ('FirstStepsChampion', 'RiderChampion', 'SpiderChampion', 'Doomsday')) or 'OverloadedReactor' in k:
         return MODE_TYPE
     if x['source'] not in (None, 'None', ''): return f"card ({SRC}; collectible)"
     if x['status'] == 'unreleased': return f"card ({SRC}; unreleased or created card)"
