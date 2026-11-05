@@ -67,7 +67,8 @@ Example answers: QUERIES.md. Kaptain's standing questions with their current ans
   builders: summon, link_formation, terrain, placement_rules). For each concept run `compare`, `factions`, `fed`, `feeds`,
   `together`, `chains`, and `both` with every other part; read texts from every game that has it, not just top counts.
 - Deep: for each faction that does the thing, run `network` / `analyze` on its real decks in decks.tsv, to see working
-  decks, not single cards.
+  decks, not single cards. Decks are a small sample of a faction: never the
+  only check that mechanics fit together.
 - Curious: at least three unexpected concepts that could serve the same outcome; one game where the mechanic is rare or
   done oddly; the older 21-game library (`../three-bases-library.sqlite`) as leads; archetypes and known combos in
   `../realworld/`.

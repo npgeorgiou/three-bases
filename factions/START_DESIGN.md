@@ -35,6 +35,9 @@ read 5-10 card texts behind every count, and write the sources (game: card) next
   mechanic; `analyze` the closest real faction to count how many of its cards make and use the mechanic (30+ wanted).
 - Step 6: `ways "<faction>"` of the closest factions, and `network` / `analyze` on their real decks in `decks.tsv`, to see
   which cards actually combo in played decks; each way to play names the real ways and combos it comes from.
+  A deck is a small part of what a faction is (decks.tsv: about 80-100 top decks each for Runeterra, Duelyst, Faeria,
+  Marvel Snap; fewer for the others): decks show which cards are played together, never prove alone that two
+  mechanics fit; the card-by-card queries of steps 2-5 come first.
 1. **Name, icon, theme.** A real theme (World War I artillery, the Zulu regiments, Babylonian astrologers), with 10+ facts
    about how they fight, live, trade, believe, what they fear and what they lack. Each fact is a source of cards later.
 2. **Kaptain's five questions**, answered before any card:
