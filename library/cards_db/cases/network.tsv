@@ -534,5 +534,5 @@ n539	runeterra	Snowy Razorclaw, Out Of The Way	Snowy Razorclaw	Out Of The Way	li
 n540	runeterra	Zed (level 2), Out Of The Way	Zed (level 2)	Out Of The Way	line	changes your units' stats	Claude 5 Nov 2026, line check C6: set to a read stat is a buff
 n541	marvel_snap	Agent Venom, Wolverine	Agent Venom	Wolverine	none	sets power to a fixed 3: no buff	Claude 5 Nov 2026, line check C6: fixed set stays no buff
 n542	duelyst	Gargantuan Growth, Oropsisaur	Gargantuan Growth	Oropsisaur	line	makes your units get Grow	Claude 5 Nov 2026, line check C7: Grow given by text is the keyword
-n543	marvel_snap	Power Shot, Vampire Deacon Frost	Power Shot	Vampire Deacon Frost	none	gives Power only: steals none	Claude 5 Nov 2026, line check C99: giving Power is not stealing it
+n543	marvel_snap	Power Shot, Vampire Deacon Frost	Power Shot	Vampire Deacon Frost	none	changes your units' stats	Claude 5 Nov 2026, line check C99: giving Power is not stealing it
 n544	marvel_snap	Dragon of the Moon, Vampire Deacon Frost	Dragon of the Moon	Vampire Deacon Frost	line	changes your units' stats	Claude 5 Nov 2026, line check C99: Dragon takes Power from the hand cards: it steals

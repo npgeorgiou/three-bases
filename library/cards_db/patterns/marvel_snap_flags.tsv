@@ -1,1 +1,9 @@
 card	name	pattern	requires	text
+8000186	Fenris Wolf	T111	value:kill|dies|killed|leaves_play|discard	's highest-power discarded or destroyed card on your side of this loc
+8000186	Fenris Wolf	V09	value:discard|discarded	your opponent's highest-power discarded or destroyed card on your s
+8000189	Firelord	T111	value:kill|dies|killed|leaves_play|discard	vive one of your discarded or destroyed 3-cost cards here.
+8000189	Firelord	V09	value:discard|discarded	on reveal: revive one of your discarded or destroyed 3-cost cards h
+8000393	Morgan le Fay	T111	value:kill|dies|killed|leaves_play|discard	return all your discarded and destroyed cards to hand with +3 power.
+8000393	Morgan le Fay	V09	value:discard|discarded	on reveal: return all your discarded and destroyed cards to hand
+8000420	Night Nurse	T111	value:kill|dies|killed|leaves_play|discard	dd all cards you discarded or destroyed last turn to your hand.
+8000420	Night Nurse	V09	value:discard|discarded	on reveal: add all cards you discarded or destroyed last turn to y
