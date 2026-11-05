@@ -23,3 +23,5 @@
   cards only.
 
 - ni17 (network, Inscryption, Bell Tentacle -> Daus none 'by fighting'): no line says "by fighting" or "attack" any more, so it could not fail; replaced by mechanics case mi25 (an enemy attacking my Chime or Bell Tentacle is the enemy's attack: refs.py DONE_BY). 30 Oct 2026, v41.
+
+- n429 Arishem -> Angela, n430 Agamotto -> Agony (none), Claude 5 Nov 2026: dropped; Kaptain's nst26 says cards that make more cards to play set off "whenever you play a card" (Blade Dance -> A Thousand Cuts), the same rule.

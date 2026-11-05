@@ -1714,8 +1714,7 @@ def played_lines(c, game, nodes, broad):
                       # one more card is no more plays (Beta -> After Image+, Annie -> Breakneck Husk)
                       if k in ('card', 'any', 'anything', None) or k in every_card_kinds(c, game) or ok == k or (ref in cards and cards[ref]['cat'] in KIND_CAT.get(k, {k}))} - {t}
                 # "whenever you play a spell": only what makes spells (Vinemother's Stings) sets it off more
-                for a in (mk if not (k in every_card_kinds(c, game) and kind not in (None, 'card', 'any', 'anything')) else ()):  # a unit played in a
-                    # lane (Angela, Agony) is no "play a card": more cards made is no more lane plays (L19, L1b)
+                for a in mk:
                     if ('waits', 0.5 / len(mk), 'makes more cards to play') not in out[(a, t)]: out[(a, t)].append(('waits', 0.5 / len(mk), 'makes more cards to play'))
             continue
         n = kind_count(c, game, 'any' if k == 'card' else k, w)

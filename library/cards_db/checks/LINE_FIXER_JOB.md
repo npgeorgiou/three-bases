@@ -20,6 +20,8 @@ calls in all; count them. At call 25 stop changing things and finish: undo a hal
 5. Add cases to cases/network.tsv (append; the next free id is one above the last nNNN): one `none` (or `line` for a missed
    cause) per wrong example you checked, one `line` per right example, game, deck as "A, B", source "Claude <date>, line
    check: <why in a few words>".
+Before changing a rule, Grep cases/network.tsv for its reason words ("more cards to play"): a case of Kaptain's ("Kaptain" in
+its source) that the change would break wins, so write CONFLICT instead (5 Nov 2026: a fix broke nst26).
 Never: run.py, check_all.py, links.py or any rebuild; git; edits to files your fix does not need; a fix for one card only;
 more than two tries. If after two tries the examples do not change as they should, undo your edits and stop.
 Write your report (path at the end) before you reply. Its first line is exactly one of
