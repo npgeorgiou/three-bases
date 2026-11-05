@@ -4728,7 +4728,8 @@ const NET_CARD_INDEX = Object.fromEntries(NET_CARD_KEYS.map((k, i) => [k, i]));
 
 /**
  * What a card is and does, by name, with no card names: its numbers and keywords (cost, size, strength, defence,
- * Geared ...), and its effects in parts: when + what ("roundEnd:strike"), what + on whom ("strike>nearest"), with
+ * Geared ...), and its effects in parts: when + what ("roundEnd:strike"), what + on whom ("strike>nearest"), the whole
+ * part ("roundEnd:strike>nearest"), with
  * amounts; auras ("aura:s", "aura>adj") and spells ("cast:dmg"). A reworked card is a new mix of known parts;
  * only a word no card had before is new to the network.
  */
@@ -4750,13 +4751,14 @@ function cardFeatures(c) {
         else if (v && typeof v === 'object' && !('count' in v)) for (const [sk, sv] of Object.entries(v)) add(when + ':' + k + '.' + sk, val(sv));
         else add(when + ':' + k, val(v));
         add(k + '>' + to, 1);
+        if (k !== 'kw') add(when + ':' + k + '>' + to, val(v) || 1);   // the whole part: when, what, on whom, how much
       }
       if (op.if) add(when + ':if', 1);
     }
   };
   for (const e of c.fx || []) { ops(e.on, e.do); if (e.lim) add(e.on + ':once', 1); if (e.if || e.of) add(e.on + ':if', 1); }
   if (c.cast) { ops('cast', c.cast.do); if (c.cast.need) add('cast:need', 1); }
-  for (const a of c.aura || []) { add('aura:s', val(a.s)); add('aura:d', val(a.d)); add('aura>' + (a.to || 'self'), 1); if (a.if) add('aura:if', 1); }
+  for (const a of c.aura || []) { const to = a.to || 'self'; add('aura:s', val(a.s)); add('aura:d', val(a.d)); add('aura>' + to, 1); add('aura:s>' + to, val(a.s)); add('aura:d>' + to, val(a.d)); if (a.if) add('aura:if', 1); }
   return f;
 }
 const NET_FEATURES = NET_CARD_KEYS.map(k => cardFeatures(CARDS[k]));
