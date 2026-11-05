@@ -1,0 +1,29 @@
+{"id": 756688, "field": "filter", "need": "a group of N adjacent units chosen by the player"}
+{"id": 756690, "field": "test", "need": "power is a multiple of N"}
+{"id": 756700, "field": "filter", "need": "same border color (bronze or gold) as the destroyed units"}
+{"id": 756703, "field": "when", "need": "works while in hand, deck or on the battlefield"}
+{"id": 756705, "field": "test", "need": "the unit changed sides by the move"}
+{"id": 756707, "field": "side", "need": "the side with the most units"}
+{"id": 756711, "field": "pick", "need": "the other of two looked-at cards"}
+{"id": 756718, "field": "test", "need": "the boosted unit triggered an ally's Grace ability"}
+{"id": 756720, "field": "x", "need": "one more for every N matching cards (integer division)"}
+{"id": 756740, "field": "x", "need": "the statuses a unit has"}
+{"id": 756754, "field": "filter", "need": "the units at both ends of a row"}
+{"id": 756755, "field": "pick", "need": "the unit to the right of the destroyed unit"}
+{"id": 756771, "field": "x", "need": "the amount of a status on a unit"}
+{"id": 756784, "field": "x", "need": "the amount of the last boost given to an enemy unit this round"}
+{"id": 756810, "field": "filter", "need": "the cards to the left / to the right of self"}
+{"id": 756811, "field": "attr", "need": "primary category of a card"}
+{"id": 756821, "field": "position", "need": "the rightmost position of a row"}
+{"id": 756828, "field": "test", "need": "the chosen unit was an enemy / an allied unit"}
+{"id": 756828, "field": "test", "need": "damage that does not come from a status"}
+{"id": 756828, "field": "x", "need": "the duration of Bleeding on a unit"}
+{"id": 756841, "field": "filter", "need": "a Gang category of a card"}
+{"id": 756842, "field": "x", "need": "the position of a card counted from the top of a deck"}
+{"id": 756845, "field": "x", "need": "excess damage dealt"}
+{"id": 756845, "field": "param", "need": "the damage of an ability"}
+{"id": 756859, "field": "when", "need": "works while in hand or deck"}
+{"id": 756863, "field": "filter", "need": "the next Tribute played"}
+{"id": 756871, "field": "x", "need": "excess damage dealt"}
+{"id": 756874, "field": "x", "need": "a random number from 1 to 9 different from the current one"}
+{"id": 756886, "field": "test", "need": "the poisoned unit was allied"}
