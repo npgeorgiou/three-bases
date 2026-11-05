@@ -550,7 +550,7 @@ def lines_of(c, game):
     for m, ps in c.execute("select card, params from flat_do where act in ('stat_change','stat_set','grow','swap_stats')"):
         stat_made[m] |= {x.split('=')[0] for x in (ps or '').split(';') if x.split('=')[0] in ('power', 'health', 'strength')
                          and x.split('=', 1)[1].lstrip('-').replace('.', '', 1).strip('0') != ''} or {'power', 'health'}  # "+1|+0" changes no Health
-    set_only = {m for m in stat_made if not c.execute("select 1 from flat_do where card=? and act in ('stat_change','grow','swap_stats') limit 1", (m,)).fetchone()}  # a card that only SETS stats (Agent Venom: power 3)
+    set_only = {m for m in stat_made if not c.execute("select 1 from flat_do where card=? and (act in ('stat_change','grow','swap_stats') or (act='stat_set' and params like '%=stat%')) limit 1", (m,)).fetchone()}  # a card that only SETS stats to a fixed number (Agent Venom: power 3); a set to another's stat (Snowy Razorclaw, Zed) is a buff
     # what a quarter or more of the game's cards do to enemies (damage them, kill them) is what any deck does: a card that waits
     # for it ("whenever an Attack deals unblocked damage", Envenom) gets no line from each (L1b; Kaptain 2 Nov 2026), unless it
     # levels up from it

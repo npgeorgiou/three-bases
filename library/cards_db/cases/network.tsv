@@ -531,3 +531,6 @@ n535	marvel_snap	Shanna, Mystique	Shanna	Mystique	none	summons a unit by cost, n
 n536	marvel_snap	Mister Fantastic & Beast Doomsday, Absorbing Man	Mister Fantastic & Beast Doomsday	Absorbing Man	none	makes a random unit, not one with On Reveal	Claude 5 Nov 2026, line check C5: random unit is not named On Reveal
 n537	marvel_snap	Sub-Mariner, Absorbing Man	Sub-Mariner	Absorbing Man	none	makes a unit by cost, not one with On Reveal	Claude 5 Nov 2026, line check C5: random unit by cost is not named On Reveal
 n538	marvel_snap	Viper, Absorbing Man	Viper	Absorbing Man	line	is a unit with On Reveal	Claude 5 Nov 2026, line check C5: right example stays
+n539	runeterra	Snowy Razorclaw, Out Of The Way	Snowy Razorclaw	Out Of The Way	line	sets its stats to another unit's stat: a buff Out Of The Way waits for	Claude 5 Nov 2026, line check C6: set to a read stat is a buff
+n540	runeterra	Zed (level 2), Out Of The Way	Zed (level 2)	Out Of The Way	line	copies stats onto the summon: a buff	Claude 5 Nov 2026, line check C6: set to a read stat is a buff
+n541	marvel_snap	Agent Venom, Wolverine	Agent Venom	Wolverine	none	sets power to a fixed 3: no buff	Claude 5 Nov 2026, line check C6: fixed set stays no buff
