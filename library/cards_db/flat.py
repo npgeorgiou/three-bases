@@ -135,7 +135,9 @@ def build(c):
             pe = (c.execute("select value from param where effect=? and param='event'", (eid,)).fetchone() or [None])[0]
             ps = ';'.join(f'{pn}={num(a) if a else v}' for pn, a, v in c.execute('select param, amount, value from param where effect=?', (eid,))) or None
             concept = (tree.get(('keyword', kwname.get(kref, ''))) if kref else None) or tree.get(('act', act))
-            if s == 'enemy': concept = ON_ENEMY.get(concept, concept)  # the same keyword used on an enemy (Ascend an enemy unit)
+            if act == 'cant' and not kref and pe in ('played', 'summoned'):
+                concept = 'play_restriction'  # "can't be played here", "only one card here" limit plays, no attack (Crimson Cosmos)
+            elif s == 'enemy': concept = ON_ENEMY.get(concept, concept)  # the same keyword used on an enemy (Ascend an enemy unit)
             elif act == 'counter' and k == 'effect' and p == 'it':
                 concept = 'shield'  # cancels the next spell aimed at it (SpellShield): it guards one unit, it doesn't counter plays
             elif act == 'cant' and pe == 'given_keyword' and concept in HURTS:

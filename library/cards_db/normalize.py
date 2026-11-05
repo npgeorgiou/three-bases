@@ -55,6 +55,8 @@ and second readings). Safe to run any number of times. Each rule is described wh
   N33 can / cant on a target whose only filter names the card itself is on the card itself, pick self (Domino).
   N34 "+N Energy next turn" written as a second ability (round_start, limit next_time, only mana_gain) beside an On Reveal is
      the mana_gain in the On Reveal ability, lasts next_round (Vibro-Shock Gauntlets, Bolts of Balthakk).
+  N35 a named card made for the opponent ("your opponent gets a Chimichanga", "add 2 Sentinels to your opponent's hand"): the
+     player dropped by N1 keeps its side as "on" kind card, side enemy (Korg's form); it was lost before (5 Nov 2026).
   N10 "strongest" / "weakest" are pick highest / lowest by the attack stat: power, or strength in games whose units have
      one stat (Stormbound). One form in every game.
 Usage: normalize.py <game> <file.jsonl> [...]   rewrites the files in place, prints how many records changed."""
@@ -73,6 +75,7 @@ def keyword_kinds(game):
     return kinds
 
 SELF_TARGET = set()  # N9
+ENEMY_PILE = {'kind': 'card', 'side': 'enemy'}  # N35: a named card the opponent gets (Korg's Rock)
 
 def clean(x):
     if isinstance(x, dict): return {k: clean(v) for k, v in x.items() if v is not None and (k == 'abilities' or (v != [] and v != {}))}
@@ -104,12 +107,13 @@ def fix_effect(e, kinds):
     act0 = e.get('act')
     if act0 == 'shuffle_into_deck' and (e.get('card') or (isinstance(on, dict) and on.get('kind') == 'card' and not on.get('zone') and on.get('with')
             and all(f.get('attr') in ('card', 'name_has') for f in on['with']))):
-        e['act'] = 'create'; e['zone'] = 'deck'  # N25
-        if e.get('card') and isinstance(on, dict) and on.get('kind') == 'player': e.pop('on')
+        e['act'] = 'create'; e['zone'] = 'deck'  # N25 (a player "on" is handled with N1 below)
     if e.get('card') and e.get('act') in ('summon', 'create', 'copy', 'play_card') and isinstance(e.get('on'), dict) and set(e['on']) <= {'kind'}:
         e.pop('on')  # N11
     act = e.get('act')
-    if act in ('create', 'summon') and e.get('card') and (e.get('on') or {}).get('kind') == 'player': e.pop('on')
+    if act in ('create', 'summon') and e.get('card') and (e.get('on') or {}).get('kind') == 'player':
+        if e['on'].get('side') == 'enemy': e['on'] = dict(ENEMY_PILE)  # N35
+        else: e.pop('on')
     kw = (e.get('keyword') or '').lower()
     if act in ('keyword_action', 'give_keyword') and kw in kinds:
         e['act'] = 'keyword_action' if kinds[kw] == 'action' else 'give_keyword'

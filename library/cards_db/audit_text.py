@@ -10,6 +10,8 @@ sys.path.insert(0, HERE); import source
 
 PLAYER = {'marvel_snap': r"\bopponent\b(?!'s)", 'runeterra': r'Nexus', 'stormbound': r'\bbase\b', 'monster_train': r'\bPyre\b', 'faeria': r"\b(?:gods?|opponent)\b(?!'s)", 'inscryption': r"\b(?:opponent|scale)\b(?!'s)", 'duelyst': r'\bGenerals?\b', 'into_the_breach': r'\b(?:Power Grid|Grid Power)\b', 'sts1': r'\b(?:Max HP|HP)\b'}
 
+NO_PLAYER_TARGET = {'marvel_snap'}  # a player with no life: "your opponent" is the enemy side of cards, lanes and Energy
+
 
 def parts(rec):
     """every target, effect and event of a record, flattened: (kind of object, the object)"""
@@ -34,7 +36,8 @@ def rules(game):
     pl = PLAYER[game]
     return [
         # a player named as what an effect or condition is about: some row is about a player
-        ('player named', rf'(?:\b(?:enemy|your|both|the|a|opponent\'s)\s+(?:\w+\s+)?){pl}', lambda r: 'player' in kinds(r) or has(r, 'kind', 'any') or has(r, 'kind', 'anything') or has(r, 'event', 'strikes_nexus') or has(r, 'event', 'nexus_damaged') or has(r, 'val', 'struck_player_this_round')),
+        ('player named', rf'(?:\b(?:enemy|your|both|the|a|opponent\'s)\s+(?:\w+\s+)?){pl}', lambda r: 'player' in kinds(r) or has(r, 'kind', 'any') or has(r, 'kind', 'anything') or has(r, 'event', 'strikes_nexus') or has(r, 'event', 'nexus_damaged') or has(r, 'val', 'struck_player_this_round')
+            or (game in NO_PLAYER_TARGET and has(r, 'side', 'enemy'))),
         ('deal damage', r'\b(?:deal|deals|dealt)\s+(?:\d|X\b|that much|damage|\w+ damage)', lambda r: acts(r) & {'damage', 'strike', 'keyword_action', 'excess_damage', 'negate_damage'} or 'damage' in words(r)),
         ('draw', r'\bdraw\s+(?!pile)(?:\d|a\b|an?\b|that|it|them|cards?|X|\w+\b(?! at))', lambda r: acts(r) & {'draw', 'keyword_action', 'put_on_top', 'steal'} or '"draw' in words(r)),
         ('create', r'\bcreate\b', lambda r: acts(r) & {'create', 'copy', 'keyword_action', 'choose_card', 'random_one', 'set_terrain'} or has(r, 'event', 'terrain_changed')),
@@ -53,13 +56,14 @@ def rules(game):
         # board words (Faeria lands, wells, adjacency); a game without them never matches
         ('this turn', r'\bthis turn\b', lambda r: 'this_round' in words(r) or 'this_turn' in words(r)),
         ('land act', r'\b(?:create|transform|destroy|move)\b[^.]{0,30}\b(?:lands?|forests?|lakes?|mountains?|deserts?|prairies?)\b', lambda r: acts(r) & {'set_terrain', 'move', 'steal'} or '"terrain"' in words(r)),
-        ('adjacent', r'\badjacent\b', lambda r: '"bordering"' in words(r) or '"sides"' in words(r)),  # a hex board's neighbours, or a row's (Inscryption)
+        ('adjacent', r'\badjacent\b', lambda r: '"bordering"' in words(r) or '"sides"' in words(r) or '"lane_left"' in words(r)),  # a hex
+        # board's neighbours, a row's (Inscryption), a lane's (Marvel Snap: lane_left and lane_right)
         ('harvest', r'(?<!can )(?<!can\'t )\bharvest(?:s|ed|ing)? (?:faeria|from|over)\b', lambda r: 'harvest' in words(r)),  # collecting from the board; Monster Train's "Harvest:" is a death trigger
         # grid words (Duelyst: "nearby" is the 8 spaces around); a game without them never matches
         ('nearby', r'\bnearby\b|\baround (?:it|this|your|the|an?)\b', lambda r: re.search(r'"(?:surrounding|area_3x3|bordering|diagonal)"', words(r))),
         ('stun', r'\bstun(?:s|ned)?\b', lambda r: 'Stun' in words(r) or 'stun' in acts(r) or '"stunned"' in words(r)),
         ('dispel', r'\bdispel', lambda r: 'silence' in acts(r) or 'Dispel' in words(r)),
-        ('double', r'\bdouble\b(?! attack)', lambda r: re.search(r'event_amount|double|"x": ?"stat"|times|"x": ?"count"', words(r)) or acts(r) & {'repeat', 'copy'}),
+        ('double', r'\bdouble\b(?! attack)', lambda r: re.search(r'event_amount|double|"x": ?"stat"|times|"x": ?"count"|"percent": ?100\b', words(r)) or acts(r) & {'repeat', 'copy'}),
     ] + ([('Rally', r'\bRally\b', lambda r: acts(r) & {'gain_attack_token', 'keyword_action'})] if game == 'runeterra' else [])  # Monster Train's Rally is a trigger
 
 
