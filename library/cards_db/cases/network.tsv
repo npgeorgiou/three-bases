@@ -522,3 +522,5 @@ n526	marvel_snap	Jean Grey, Ultron	Jean Grey	Ultron	none		Claude 5 Nov 2026, lin
 n527	marvel_snap	Invisible Woman & Namor Doomsday, Uncle Ben	Invisible Woman & Namor Doomsday	Uncle Ben	none		Claude 5 Nov 2026, line check C2: blocks only enemy cards under conditions
 n528	marvel_snap	Storm, White Tiger	Storm	White Tiger	line	stops cards being played, but a summon is not played: it still fills the place	Claude 5 Nov 2026, line check C2: total flood stays (guide cms07)
 n529	marvel_snap	Storm, Doctor Doom	Storm	Doctor Doom	line	stops cards being played, but a summon is not played: it still fills the place	Claude 5 Nov 2026, line check C2: total flood stays (guide cms08)
+n530	marvel_snap	Invisible Woman & Namor Doomsday, Red Wolf Fractured Frontier	Invisible Woman & Namor Doomsday	Red Wolf Fractured Frontier	none	stopping the enemy plays keeps only the enemy hand full (L9)	Claude 5 Nov 2026, line check C3: enemy-side play block gives no fills your hand
+n531	marvel_snap	Professor X, Red Wolf Fractured Frontier	Professor X	Red Wolf Fractured Frontier	line	fills your hand	Claude 5 Nov 2026, line check C3: Professor X stops my plays, hand stays full
