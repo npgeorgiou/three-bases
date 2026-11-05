@@ -192,3 +192,15 @@ into_the_breach	S-TB1	\(but water will prevent attacking or repairing\)		strip	t
 into_the_breach	S-TB2	all other damage \(push, blocking, fire, etc\.\) is unaffected\.?		strip	says what the keyword does not change (A.C.I.D., Natural Armor): no effect
 into_the_breach	S-TB3	\bfires? (?=(?:a|an|two|the|rockets|a second)\b)		strip	"fire a projectile" is shooting, not the status Fire
 into_the_breach	S-TB4	\b(?:weapon|passive): .*$		strip	a mech's starting weapon and passive in its text: they are cards of their own in the deck, with their own rows (v52)
+marvel_snap	T99	\bon reveal\b	event:played	yes	trigger label (help center faq 48: On Reveal)
+marvel_snap	T100	\bongoing\b	event:always	yes	trigger label (help center faq 99: Ongoing)
+marvel_snap	T101	\bactivate:	event:activated	yes	trigger label (Activate, marvel.com Sep 2024)
+marvel_snap	T102	\bend of turn\b|\bat the end of (?:each|every|the) turn\b	event:round_end	yes	trigger label (End of Turn; a turn is shared, BRIEF Game words)
+marvel_snap	T103	\bstart of turn\b|\bat the start of (?:each|every|the|your) turn\b	event:round_start	yes	trigger label (Start of Turn)
+marvel_snap	T104	\bgame start\b	event:game_start	yes	trigger label (Game Start, developer answer 13 Dec 2024)
+marvel_snap	T105	\bat the end of the game\b	event:game_end	yes	trigger phrase
+marvel_snap	T106	\bwhen (?:this is|this card is) destroyed\b	event:dies	yes	trigger phrase
+marvel_snap	T107	\bwhen (?:this is|this card is) discarded\b	event:discarded	yes	trigger phrase
+marvel_snap	T108	\bafter you play\b	event:played	yes	trigger phrase
+marvel_snap	T109	\bmoveable\b	value:can|moves	yes	keyword word (help center faq 604)
+marvel_snap	T110	\bmerges?\b	value:merge	yes	keyword word (snap.fan Man-Spider preview)
