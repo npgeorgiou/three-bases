@@ -156,3 +156,5 @@ marvel_snap	The Space Throne	for each	"for each player": one cant on each side
 marvel_snap	Fogwell's Gym	double	Boosters are rewards outside the game: no game effect
 marvel_snap	Mephisto	double	winnings are rewards outside the game: no game effect
 marvel_snap	Move	player named	the keyword rule names who can move a card (its player, the opponent, a location); the rows of each card that moves say it
+marvel_snap	Astral Plane	this turn	"After this turn" is the end of the turn it is revealed: round_end, limit next_time
+marvel_snap	Sakaar	this turn	"After this turn" is the end of the turn it is revealed: round_end, limit next_time

@@ -405,3 +405,5 @@ n407	faeria	Curious Biomancer, Flight of the Mantas	Curious Biomancer	Flight of 
 n408	faeria	Drakkar Skycaptain, Faeria Tree	Drakkar Skycaptain	Faeria Tree	none		Claude 5 Nov 2026: Skycaptain buffs drawn Flying creatures; Faeria Tree is a structure
 n409	marvel_snap	Majestic Wingbeat, Zombie Galacti	Majestic Wingbeat	Zombie Galacti	none		Claude 5 Nov 2026: the -1 Cost is on the leftmost card it gives +3 Power, not any 5-Cost card (v66)
 n410	runeterra	Lurkers	Rek'Sai (level 2)	Frenzied Feast	line	is a Lurker	Claude 5 Nov 2026: Rek'Sai is a Lurker herself; she makes none
+n411	marvel_snap	Black Widow, Widow's Bite	Black Widow	Widow's Bite	none		Claude 5 Nov 2026: Black Widow adds Widow's Bite to the opponent's hand (normalize N35, fixes/faeria/v36.py)
+n412	faeria	Rapala, the Dopefish, Ruby Fish	Rapala, the Dopefish	Ruby Fish	none		Claude 5 Nov 2026: Rapala fills the opponent's hand with Ruby Fish, not mine

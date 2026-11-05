@@ -81,7 +81,7 @@ push, give network.html to Kaptain.
 - All 8 games imported. Kaptain approved Runeterra and Into the Breach; Slay the Spire done; Inscryption reviewed; Stormbound,
   Monster Train, Faeria, Duelyst wait for his check of their deck networks.
 - Cases: all pass. Must-not cases whose old reason no line says any more were made strict (no line at all); n56, n352,
-  n378, ntb15-16 and nst36 keep theirs because the pair still has a line for another reason. The next case id is n411.
+  n378, ntb15-16 and nst36 keep theirs because the pair still has a line for another reason. The next case id is n413.
 - Real-world cases: 237 of 261 hold (Zealous Crusader -> Khalim's Prayer is gone by a rule of Kaptain's of 3 Nov 2026, before L24; the other 23 are faction-label checks).
 - Lines (pairs in links.sqlite, 3 Nov 2026): Runeterra 201,006; Duelyst 12,427; Faeria 10,014; Slay the Spire 8,797; Into the
   Breach 6,137; Monster Train 3,092; Stormbound 2,686; Inscryption 1,080.
@@ -111,7 +111,13 @@ game's own rulebook, and players' combos and decks that test the lines. Complete
    "not revealed until the game ends" is cant played, as Dark Dimension; normalize N25: a new card shuffled in is create zone deck; 0 stubs). Next, in order:
    - 2.5 done (5 Nov 2026): normalize N26-N34, fixes/marvel_snap/v66.py; cards made by a set of names or inside an ability a
      card gives now count as made (network made(), refs build_made); a type reason is said once ("is" before "makes"); cases n403-n410.
-   - 2.7 text audit: 36 text words without rows. 2.8 link audit: 9 cards tagged generate_cards lack a row (Astral Plane).
+   - 2.7 and 2.8 done (5 Nov 2026): 0 text words without rows (fixes/faeria/v36.py for every game: a named card for the
+     opponent keeps side enemy, normalize N35; fixes/marvel_snap/v67.py: a location's "this turn"; flat.py: cant played is
+     play_restriction, not cant_attack). Link audit, explained: game_end, snapped, mana_spent and keyword_used Moveable are
+     made by the game and the player (every game ends; Snap and spending Energy are the player's choices); On Reveal, Ongoing,
+     Quickdraw and When Discarded are trigger labels like End of Turn (their events are in the rows). Check 10 leads: read
+     play_restriction and generate_cards (rows copy or summon); the other tags (symmetric_effect, lane_rule, turn_number,
+     cost_condition, cross_lane, tribal, control_reward, stat_condition, lane_closure) were not read.
    - 2.9 deck networks (lines to check first: Power Shot -> Vampire Deacon Frost "changes your units' stats", "+3 Power" is
      no stolen Power; Grapple Arrow -> Galactus, Galactus wants to be alone; Mind Shot -> Dragon of the Moon "fills your hand";
      Hawkeye Kate Bishop -> Basic Arrow "makes more cards to play" (L1)): read 10 of the 27 decks card by card into deck_read_marvel_snap.md; cases/decks.tsv and network.tsv
