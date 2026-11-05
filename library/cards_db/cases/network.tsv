@@ -506,3 +506,6 @@ n510	marvel_snap	Storm, White Tiger	Storm	White Tiger	line		Claude 5 Nov 2026, l
 n511	marvel_snap	Storm, Doctor Doom	Storm	Doctor Doom	line		Claude 5 Nov 2026, line check C27: Doctor Doom summons, not played, so it fills the flooded place (guide cms08; L17)
 n512	marvel_snap	Storm, Odin	Storm	Odin	none		Claude 5 Nov 2026, line check C26: Odin summons nothing, Storm only stops plays
 n513	marvel_snap	Ebony Maw, Doctor Doom	Ebony Maw	Doctor Doom	none		Claude 5 Nov 2026, line check C26: Ebony Maw stops only my own hand, no flood
+n514	marvel_snap	Wave, Death	Wave	Death	line	makes it cheaper	Claude 5 Nov 2026, line check C28: a cost cap of 4 cuts the cost of Death (cost 8)
+n515	marvel_snap	Wave, Hulk	Wave	Hulk	line	makes it cheaper	Claude 5 Nov 2026, line check C28: a cap of 4 cuts a cost 6 card
+n516	marvel_snap	Wave, Ant Man	Wave	Ant Man	none		Claude 5 Nov 2026, line check C28: a cap of 4 cuts nothing for a cost 1 card

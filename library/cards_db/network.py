@@ -921,7 +921,7 @@ def helps_it(c, act, kw, ps):
     p = dict(x.split('=', 1) for x in (ps or '').split(';') if '=' in x)
     if act in ('stat_change', 'grow'): return any(k in p and raises(p[k]) for k in ('power', 'health', 'strength'))
     if act == 'give_keyword': return bool(kw) and (buff_keyword(c, kw) or kw_tree(c, kw) == 'movement')
-    if act == 'cost_change': return p.get('cost', '').startswith('-')
+    if act == 'cost_change': return p.get('cost', '').startswith('-') or p.get('max', '').replace('.', '', 1).isdigit()  # a cap (Wave: cost at most 4) cuts dear cards
     return act in ('cost_set', 'heal', 'negate_damage', 'give_ability', 'damage_reduction', 'countdown_advance', 'ready')
 
 
@@ -1013,6 +1013,10 @@ def aimed_rows(c, game):
         elif rule and act == 'copy_keywords': rule = 'help gives it keywords'
         narrowed = any(p.split(' ')[0] not in PLAY_STATE + ('card',) and p.split(' ')[1:2] != ['not'] for p in (w or '').split(';') if p and not p.startswith('of:'))
         cut = dict(x.split('=', 1) for x in (ps or '').split(';') if '=' in x).get('cost', '')
+        capv = dict(x.split('=', 1) for x in (ps or '').split(';') if '=' in x).get('max', '')
+        if act == 'cost_change' and not narrowed and kind in ('card', 'any') and capv.replace('.', '', 1).isdigit() and cut == '':
+            w = ';'.join(x for x in (w, f'cost gt {capv}') if x); narrowed = True  # "all cards cost a maximum of 4" cheapens cards costing more (Wave)
+            if not rule: rule = 'help makes it cheaper'
         if act == 'cost_change' and not narrowed and kind in ('card', 'any') and cut.startswith('-') and cut[1:].replace('.', '').isdigit() \
                 and float(cut[1:]) >= 2:  # "a random card in your hand costs 7 less": a cut that big is used in full by the cards
             w = ';'.join(x for x in (w, f'cost ge {cut[1:]}') if x); narrowed = True  # costing at least that much (Bargain decks)
