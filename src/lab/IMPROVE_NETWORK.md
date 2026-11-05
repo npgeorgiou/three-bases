@@ -27,6 +27,18 @@ before coding (CLAUDE.md), and keep every speed or AI check to about a minute.
   100,000 games, but on 2 factions with one deck each, a card dictionary, and the earlier, weaker Benchmark: not the same
   test. Units and hand cards were all checked visible to the network (no unknown card keys).
 
+## Checks (5 Nov 2026, headless, about a minute each)
+- Learning arithmetic: correct (40 of 40 weights match a slow plain calculation).
+- Copying the Benchmark's score: after 25 s of learning, the network agrees with the Benchmark's score (who is ahead)
+  on 90% of positions it never saw. So it can see the board well enough; the inputs are not the main problem.
+- Predicting the winner (random games, 12,400 positions): network 79% on unseen games after 25 s, the Benchmark's
+  score 77%. On learned positions 97%: it learns positions by heart (too many weights: each of the 10 hand slots has
+  its own 640 x 128 weights, 820,000 of its 1.3 million).
+- Playing: a network trained 35 s to copy the Benchmark's score won 16 of 44 games against the Benchmark (depth 1),
+  both looking one move ahead. Knowing who is ahead is not enough; choosing a move needs exact differences between
+  the positions each move leads to, which learning from game results alone gives only slowly.
+- The Benchmark at depth 1 also scores each move's position once, like the network: the comparison is fair.
+
 ## Why it may be stuck (suggestion, not proven)
 1. **No idea of where units stand relative to each other.** The 54 cell results get separate weights per cell, so any
    relation between two units ("this unit can hit that one", "that aura reaches this unit") must be learned again for
