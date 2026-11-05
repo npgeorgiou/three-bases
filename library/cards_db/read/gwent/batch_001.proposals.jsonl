@@ -7,8 +7,6 @@
 {"id":756292,"field":"filter","need":"unique (different names) among the picked cards"}
 {"id":756305,"field":"act","need":"counts as a full Crew for Crew abilities (one-man Crew)"}
 {"id":756320,"field":"x","need":"remaining Charges of a leader ability"}
-{"id":756305,"field":"act","need":"counts as a full Crew for Crew abilities (one-man Crew)"}
-{"id":756320,"field":"x","need":"remaining Charges of a leader ability"}
 {"id":756345,"field":"filter","need":"a group of N adjacent units chosen by the player"}
 {"id":756356,"field":"x","need":"duration of row effects"}
 {"id":756361,"field":"test","need":"during my turn"}
@@ -17,3 +15,10 @@
 {"id":756388,"field":"position","need":"the unit at each end of a row"}
 {"id":756396,"field":"attr","need":"boost (the amount a unit is boosted)"}
 {"id":756403,"field":"link","need":"only if the damaged unit survived"}
+{"id":756412,"field":"x","need":"number of rows between two units"}
+{"id":756421,"field":"pick","need":"the rightmost card in hand"}
+{"id":756437,"field":"pick","need":"the last unit that went to the graveyard"}
+{"id":756455,"field":"x","need":"half of the Armor of the highest-Armor unit in hand"}
+{"id":756458,"field":"pick","need":"the one of two random cards that was not chosen"}
+{"id":756466,"field":"test","need":"during my turn"}
+{"id":756468,"field":"x","need":"a third of a count (for each 3)"}
