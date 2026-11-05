@@ -8,7 +8,7 @@
    cases CASE WRONG by L18/L1/L9 for Kaptain: Shuri -> Typhoid Mary, Shuri -> Red Skull, Taskmaster -> Red Skull,
    Taskmaster -> Typhoid Mary, Cable -> Mantis).
 6. Sheet: done: causes_sheet.md (30 open causes C1-C30; before.tsv, tb0.tsv made 5 Nov 2026). Hela's discard cause is fixed (v68, cases n413-n416).
-7. Fixers: running C1 (fix_C1.md); results: Kaptain 5 Nov 2026 (L21 "Kept"): repeats of On Reveal get lines, so the
+7. Fixers: results: C1 FIXED; Kaptain 5 Nov 2026 (L21 "Kept"): repeats of On Reveal get lines, so the
    Absorbing Man causes (lr_marvel_snap_3.md 5, lr_marvel_snap_4.md 3; verifier said NOT REAL) are REAL: run them through
    steps 5-6 again with lr_misses.md, then fix.
 8-10: not started.

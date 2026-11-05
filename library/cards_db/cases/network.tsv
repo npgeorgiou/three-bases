@@ -411,3 +411,8 @@ n413	marvel_snap	M.O.D.O.K., Hela	M.O.D.O.K.	Hela	line		Claude 5 Nov 2026, line 
 n414	marvel_snap	Killmonger, Hela	Killmonger	Hela	none		Claude 5 Nov 2026, line check: Killmonger destroys cards, Hela brings back only discarded ones (v68: discarded and destroyed cards lie apart)
 n415	marvel_snap	Lady Sif, Ghost Rider	Lady Sif	Ghost Rider	line		Claude 5 Nov 2026, line check: Lady Sif discards, Ghost Rider brings back a discarded card (v68)
 n416	marvel_snap	Carnage, Phoenix Force	Carnage	Phoenix Force	line		Claude 5 Nov 2026, line check: Carnage destroys my cards, Phoenix Force revives a destroyed card (v68)
+n417	marvel_snap	Jane Foster Fractured Frontier, Fin Fang Foom	Jane Foster Fractured Frontier	Fin Fang Foom	none		Claude 5 Nov 2026, line check: Fin Fang Foom reads an enemy's power; Jane only lowers enemy power
+n418	marvel_snap	The Grand Design, Zombie Giant-Man	The Grand Design	Zombie Giant-Man	none		Claude 5 Nov 2026, line check: Giant-Man reads Zombie Hulk's power; Grand Design buffs units on the board
+n419	marvel_snap	Venus, Zombie Giant-Man	Venus	Zombie Giant-Man	none		Claude 5 Nov 2026, line check: Giant-Man reads Zombie Hulk's power; Venus buffs units on the board
+n420	marvel_snap	Zombie Mister Fantastic, Zombie Giant-Man	Zombie Mister Fantastic	Zombie Giant-Man	line		Claude 5 Nov 2026, line check: Mister Fantastic gives power to the very card Giant-Man reads
+n421	marvel_snap	Excalibur, Iron Man	Excalibur	Iron Man	line		Claude 5 Nov 2026, line check: Excalibur gives my units power, Iron Man reads the power in its lane

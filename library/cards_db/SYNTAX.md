@@ -24,6 +24,7 @@ Values below: field, value, meaning (vocab.tsv). Only values the database uses.
 - `choose_one`: the player chooses one of the following effects (they carry link=or)
 - `copy`: make a copy of the target in a zone
 - `copy_keywords`: the "on" target gets the keywords of the "to" target (filter which: state positive / negative)
+- `copy_text`: the "on" card gets the text (abilities) of the "to" card: copy, steal or replace it (Marvel Snap "copy its tex
 - `copy_upgrades`: the "on" units get the upgrades, enhancements and stat changes of the "to" card (Monster Train Legion of Wax: 
 - `cost_change`: change the cost of the target (signed param cost)
 - `cost_set`: set the target's cost to params cost
@@ -60,6 +61,7 @@ Values below: field, value, meaning (vocab.tsv). Only values the database uses.
 - `mana_gain`: refill or gain mana / spell mana (param amount, kind via target)
 - `mark`: mark the target for a later effect
 - `max_mana_change`: gain or lose mana gems (params amount, signed; empty gem = not refilled)
+- `merge`: the "on" card merges into the "to" card: one card with both Powers added, the merged one goes under (Marvel Sn
 - `move`: move the target to another position or zone
 - `negate_damage`: prevent damage to the target
 - `obliterate`: remove from the game; no death effects
@@ -119,6 +121,7 @@ Values below: field, value, meaning (vocab.tsv). Only values the database uses.
 - `equipped`: an item or equipment is attached to a unit
 - `exhausted`: a card is removed for the rest of the battle after use (Monster Train Consume, Etch)
 - `fights`: a unit exchanges attacks with a unit, structure or player, attacking or attacked, not hit from range (Faeria C
+- `game_end`: the game ends, at the final count (Marvel Snap "At the end of the game", after the last turn)
 - `game_start`: the game starts
 - `given_keyword`: a unit is given a keyword (Stun, Barrier, ...)
 - `harvests`: a unit collects a resource from a board space next to it: actor the unit, object the space (like strikes: Faer
@@ -130,6 +133,7 @@ Values below: field, value, meaning (vocab.tsv). Only values the database uses.
 - `levels_up`: a champion levels up
 - `mana_refilled`: mana or spell mana is refilled
 - `mana_spent`: mana is spent (object: what it was spent on)
+- `merged`: a card merges into another (object: the merging card; actor: the card it merges into; Marvel Snap Merge)
 - `moves`: a unit is about to move ("Before moving": on play if it moves, then each turn)
 - `moves_onto`: a unit has moved onto a board space: object the moving unit (as for moves), the space as its position filter s
 - `nexus_damaged`: a player is damaged (any source)
@@ -144,6 +148,7 @@ Values below: field, value, meaning (vocab.tsv). Only values the database uses.
 - `run_event`: something happens on the run between fights: resting, entering a room, a shop or a rest site, opening a chest,
 - `sacrificed`: a unit is given up by its owner to pay a cost (object the sacrificed unit, actor the card it pays for; Inscryp
 - `shuffled`: a card is shuffled into a deck
+- `snapped`: a player raises the stakes of the game (Marvel Snap Snap; object: the player)
 - `spell_resolves`: a spell or skill finishes (Imbue)
 - `stat_changed`: a unit gets a stat change (buff or debuff)
 - `strikes`: a unit strikes (deals damage with its Power)
@@ -230,6 +235,8 @@ Values below: field, value, meaning (vocab.tsv). Only values the database uses.
 - `deck_bottom`: bottom of deck
 - `deck_top`: top of deck
 - `discard`: discard pile / dead
+- `discarded`: cards discarded from hand, in a pile apart from destroyed cards (Marvel Snap: "a card you discarded")
+- `discarded_or_dead`: the discarded and the destroyed cards together (Marvel Snap: "discarded or destroyed")
 - `everywhere`: play, hand, deck and later created (Everywhere)
 - `exhausted`: cards removed for the rest of the battle after use (Monster Train Consume pile)
 - `hand`: hand
@@ -252,6 +259,7 @@ Values below: field, value, meaning (vocab.tsv). Only values the database uses.
 - `card`: is the linked card
 - `category`: is of a category (value from category)
 - `cost`: cost
+- `count`: number of matching things (for conditions)
 - `countdown`: a Countdown value
 - `damage`: the damage dealt (for event_count and stat sums)
 - `distance`: how many spaces away from of, counted in steps on the board's grid ("moves up to 2 spaces", "within 3 spaces";

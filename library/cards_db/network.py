@@ -2033,11 +2033,15 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
     power = having(('attack_gain',), False)
     unreached = lambda ab, ok: ok == 'player' or c.execute("select 1 from flat_do where ability=? and on_zone='deck' and act!='draw'", (ab,)).fetchone()
     # the General's stat (Drogon) or the stats of units still in the deck (The Tuskraider) are not raised by help to my units ()
-    for t, ab, fp, ok in c.execute(f"""select card, ability, of_pick, of_kind from flat_if where test in ('stat','amount_stat') and attr='power' and card in ({marks}) and not exists (select 1 from flat_do d where d.ability=flat_if.ability and flat_if.of_pick='it' and d.on_pick in ('chosen','random')
+    for t, ab, fp, ok, os_, ow_ in c.execute(f"""select card, ability, of_pick, of_kind, of_side, of_with from flat_if where test in ('stat','amount_stat') and attr='power' and card in ({marks}) and not exists (select 1 from flat_do d where d.ability=flat_if.ability and flat_if.of_pick='it' and d.on_pick in ('chosen','random')
             and coalesce(d.on_side,'any')!='mine' and d.act in ('kill','damage','obliterate','sacrifice','return_to_hand','transform','silence'))""", L).fetchall():
         if unreached(ab, ok) or (fp == 'self' and on_play(c, ab)): continue  # its power when it is played: a boost on the board comes
         # too late (Rising Spell Force -> Banana Blaster)
+        if os_ == 'enemy': continue  # the power of an enemy it reads (Fin Fang Foom): help to my own units never raises it (L9)
+        named_ = [p_ for p_ in (ow_ or '').split(';') if p_.startswith('card is ')]
         for a in power - {t}:
+            # it reads the power of one named card (Zombie Giant-Man: Zombie Hulk): only a power gain aimed at that card feeds it
+            if named_ and not all(c.execute("select 1 from flat_do where card=? and act='stat_change' and on_with like ?", (a, '%' + p_ + '%')).fetchone() for p_ in named_): continue
             if aim_fits(a, t) and (fp != 'self' or reaches(a, t)) and (a, t) not in stat_help: out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.5 / count(('attack_gain',)), 'more power' + (' (levels it up)' if ab in lvl else '')))
     # a stat it tests high or uses as an amount ("a creature with 5+ Life", "faeria equal to its Life"): more of that stat
     health = having(('defence_gain',), False)
