@@ -967,7 +967,7 @@ def aimed_rows(c, game):
     mine_status = {(a, k) for a, k, ps in c.execute("""select card, keyword_ref, params from flat_do where act='give_keyword' and origin='own'
                    and coalesce(on_side,'mine')='mine' and keyword_ref is not null""") if '=-' not in (ps or '')}
     for a, act, kind, side, pick, w, lasts, kw, cref, zone, ps, origin, via, ez in c.execute("""select card, act, on_kind, on_side, on_pick, on_with, lasts,
-            keyword_ref, card_ref, on_zone, params, origin, via, eff_zone from flat_do where origin in ('own','has_keyword','uses_keyword') and coalesce(on_pick,'') not in ('self','it','owner','actor')
+            keyword_ref, card_ref, on_zone, params, origin, via, eff_zone from flat_do where origin in ('own','has_keyword','uses_keyword') and (coalesce(on_pick,'') not in ('self','it','owner','actor') or (act='silence' and on_pick='it' and on_kind='unit'))  -- Zero silences the unit I play: it ends a drawback
             and not (act = 'can' and on_kind = 'player' and param_event in ('shuffled','drawn','discarded','played','summoned'))
             and not (act = 'give_ability' and on_kind = 'player')  -- a delayed effect the player gets ("if it dies this turn") is no help to the leader card"""):
         # "you may replace an additional card": the player handles more cards, its leader card gets nothing
@@ -1195,6 +1195,14 @@ def raises(v):
     return bool(v) and not v.startswith('-') and v.replace('.', '', 1).strip('0') != ''
 
 
+def self_drawbacks(c):
+    """cards whose own text stops themselves or my hand from doing something (Ebony Maw): a silence removes it"""
+    if 'self_drawbacks' not in CACHE:
+        CACHE['self_drawbacks'] = {a for (a,) in c.execute("select card from flat_do where origin='own' and act='cant' and on_pick='self' and coalesce(param_event,'') in ('played','attacks','moves','blocks')")} | \
+            {a for (a,) in c.execute("select card from flat_do where origin='own' and act='cant' and on_side='mine' and on_pick='all' and on_zone='hand' and param_event='played'")}
+    return CACHE['self_drawbacks']
+
+
 def use_of(c, game, b, act, kw, ps, w=None):
     """what card b's own text or keywords do with help of this kind, in a player's words, or None when nothing uses it (rule L14)"""
     u = generic_use(c, game)[b]; cards = cards_of(c, game); p = dict(x.split('=', 1) for x in (ps or '').split(';') if '=' in x)
@@ -1230,6 +1238,7 @@ def use_of(c, game, b, act, kw, ps, w=None):
     # with an effect can be its target (Kaptain 2 Nov 2026); a named keyword or kind keeps it (Strength -> Attacks, Focus -> Orbs)
     if (act in ('remove_keyword', 'remove_keywords') or (act == 'cant' and pev == 'given_keyword')) and kw and kw in u['gives_kw']:
         return f'keeps the {kwn} it gives itself off it'  # it puts that status on my side
+    if act == 'silence' and b in self_drawbacks(c): return 'silences it: its drawback is gone'  # Zero -> Ebony Maw ("can't play cards" on itself)
     if act == 'countdown_advance' and 'countdown' in u['trees']: return 'speeds up its countdown'
     if act == 'refresh' and cards[b]['cat'] not in KIND_CAT['unit'] and 'acts' in u['flags']: return 'lets you use it again'  # a General's
     # spell refreshed (Cryptographer -> Malice): its effect again

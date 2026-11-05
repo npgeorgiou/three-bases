@@ -486,3 +486,6 @@ n490	marvel_snap	High Evolutionary, Cosmo	High Evolutionary	Cosmo	none	gives unn
 n491	marvel_snap	Basic Arrow, Mystique	Basic Arrow	Mystique	line	makes your units get Ongoing	Claude 5 Nov 2026, line check C19: right example stays
 n492	marvel_snap	Grand Master, Invisible Woman	Grand Master	Invisible Woman	none	moves your units; her rows read no move	Claude 5 Nov 2026, line check: moving units is no help for a card that only acts on its lane
 n493	marvel_snap	Wong, Shuri	Wong	Shuri	line	plays it again	Claude 5 Nov 2026, line check: right example stays
+n494	marvel_snap	Zero, Ebony Maw	Zero	Ebony Maw	line	silences it: its drawback is gone	Claude 5 Nov 2026, line check C21: silence removes a drawback
+n495	marvel_snap	Sauron, Ebony Maw	Sauron	Ebony Maw	line	silence	Claude 5 Nov 2026, line check C21: right example stays
+n496	marvel_snap	Zero, Hazmat	Zero	Hazmat	none		Claude 5 Nov 2026, line check C21: silence helps only a card with a drawback
