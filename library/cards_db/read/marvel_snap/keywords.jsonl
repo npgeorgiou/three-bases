@@ -14,3 +14,4 @@
 {"id":8000763,"abilities":[{"when":{"event":"activated"},"do":[{"act":"kill","on":{"kind":"unit","pick":"it","zone":"board"}}]}]}
 {"id":8000764,"abilities":[{"when":{"event":"activated"},"do":[{"act":"discard","on":{"kind":"card","side":"mine","pick":"it","zone":"hand"}}]}]}
 {"id":8000765,"abilities":[{"when":{"event":"activated"},"do":[{"act":"move","on":{"kind":"unit","pick":"it","zone":"board"},"to":{"kind":"position","pick":"chosen"}}]}]}
+{"id":8000767,"abilities":[],"trigger":{"event":"discarded","object":{"pick":"self"}}}

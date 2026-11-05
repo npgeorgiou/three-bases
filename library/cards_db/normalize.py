@@ -39,6 +39,10 @@ and second readings). Safe to run any number of times. Each rule is described wh
      (Lava Lance was read both ways).
   N24 "summoned from your action bar / hand" is played (one form; Duelyst Opening Gambit is played): an event summoned whose
      object has state from_hand is the event played without that filter (Kujata, Hideatsu, Araki Headhunter).
+  N25 a new card shuffled into a deck ("shuffle 3 Rocks into your deck", "shuffle 4 Ancient Arcana"): shuffle_into_deck that
+     names the card (card, or on kind card with only card / name_has filters) is create, zone deck (BRIEF: "Shuffle a Wound
+     into your draw pile" = create in zone deck); shuffle_into_deck stays a card already there going back (Marvel Snap
+     readers wrote both ways, 5 Nov 2026).
   N10 "strongest" / "weakest" are pick highest / lowest by the attack stat: power, or strength in games whose units have
      one stat (Stormbound). One form in every game.
 Usage: normalize.py <game> <file.jsonl> [...]   rewrites the files in place, prints how many records changed."""
@@ -85,6 +89,11 @@ def fix_effect(e, kinds):
         on.pop('pick'); on['zone'] = 'deck_top'  # N14
     if e.get('act') == 'draw' and isinstance(on, dict) and on.get('with') and on.get('zone') == 'deck_top' and not on.get('pick'):
         on['zone'] = 'deck'  # N23
+    act0 = e.get('act')
+    if act0 == 'shuffle_into_deck' and (e.get('card') or (isinstance(on, dict) and on.get('kind') == 'card' and not on.get('zone') and on.get('with')
+            and all(f.get('attr') in ('card', 'name_has') for f in on['with']))):
+        e['act'] = 'create'; e['zone'] = 'deck'  # N25
+        if e.get('card') and isinstance(on, dict) and on.get('kind') == 'player': e.pop('on')
     if e.get('card') and e.get('act') in ('summon', 'create', 'copy', 'play_card') and isinstance(e.get('on'), dict) and set(e['on']) <= {'kind'}:
         e.pop('on')  # N11
     act = e.get('act')

@@ -14,3 +14,4 @@
 {"id": 8000763, "name": "Destroy", "category": "keyword", "text": "Remove a card from the board; destroyed cards are gone, there is no graveyard."}
 {"id": 8000764, "name": "Discard", "category": "keyword", "text": "Remove a card from your hand."}
 {"id": 8000765, "name": "Move", "category": "keyword", "text": "A card on the board goes to another location; not past the left or right location and not into a full one; its player, the opponent or a location can move it."}
+{"id": 8000767, "name": "When Discarded", "category": "keyword", "text": "Acts when the card is discarded from its player's hand."}

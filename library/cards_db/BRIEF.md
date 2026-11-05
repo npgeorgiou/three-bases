@@ -660,8 +660,8 @@ a turn is shared, so it is a round. Sources: library/games/marvel_snap.md "The g
 - Acts. destroy = kill. discard = discard (from hand: kind card, zone hand). "Add a card to your hand" = create, zone hand;
   "add it to a location" / "put" = summon (not played: no On Reveal); "play it" = play_card. Merge = merge ("on" the card
   that merges, "to" the one it merges into). "Copy its text / On Reveal" = repeat on that card's ability; a copy of a card =
-  copy. "Switch sides" = donate (my card) or steal (an enemy card). Return to hand = return_to_hand. Shuffle into deck =
-  shuffle_into_deck. Draw = draw. "Can't be destroyed" = cant, params event dies. "Can't be played here" = cant, params
+  copy. "Switch sides" = donate (my card) or steal (an enemy card). Return to hand = return_to_hand. Shuffle a card back into the deck =
+  shuffle_into_deck; shuffle a new card in ("shuffle 3 Rocks into your deck") = create, zone deck (normalize N25). Draw = draw. "Can't be destroyed" = cant, params event dies. "Can't be played here" = cant, params
   event played, "to" the lane.
 - Values added for Marvel Snap (5 Nov 2026). Front-row / back-row cards = position front_row / back_row; "the middle
   location" = middle_lane; "the leftmost / rightmost location" = edge_lane; "the location it moved from" = previous_lane;

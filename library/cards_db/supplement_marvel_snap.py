@@ -10,7 +10,8 @@ What a card is (Claude's, from the export's fields):
 - collectible: the export names its source (Series 1-5, Starter Card, Collection Level, Recruit Season).
 - mode variant (left out, exclude.tsv): the carddefid is another card's carddefid plus a mode or team tag (Champion,
   Doomsday, Avengers, XMen, WebSlingers, GuardiansOfTheGalaxy, Thunderbolts, BrotherhoodOfMutants) or a Skill01 card;
-  these are the cards of other modes (Team Clash, Grand Arena, Champions), following Kaptain's rule "base game only, no
+  these are the cards of other modes (Team Clash, Grand Arena, Champions; Overdrive's OverloadedReactor cards, Kaptain
+  5 Nov 2026), following Kaptain's rule "base game only, no
   modes" (Runeterra, Stormbound 28 Oct 2026).
 - everything else (no source): created cards and forms (tokens, never left out: Rock, Squirrel, Mjolnir, Herbie programs,
   Nico Minoru's spells) and cards the export marks unreleased; source_type says which.
@@ -50,6 +51,9 @@ LATE_TOKENS = [('MuramasaShard', 'Muramasa Shard', "When this is discarded or de
                 'marvelsnap.com Character Spotlight: Daken (read 5 Nov 2026); snap.fan lists it as Daken\'s token')]
 
 H = 'marvelsnap.helpshift.com'
+# trigger labels found later, written last so earlier ids stay (Kaptain, 5 Nov 2026: handled like End of Turn)
+LATE_KEYWORDS = [('When Discarded', 'Acts when the card is discarded from its player\'s hand.',
+                  'a trigger label of the card texts (Apocalypse, Swarm, Zombie Black Cat "another When Discarded card")')]
 KEYWORDS = [
     ('On Reveal', 'Acts once, when the card is turned face up on the board: after it is played, and also when a location or '
      'card puts it there, unless something stops On Reveal (Cosmo).',
@@ -91,7 +95,7 @@ strip = lambda s: re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', s or '')).strip()
 def kind(x, ids):
     k = x['carddefid']
     if k.startswith('Skill01') or any(k.endswith(t) and k[:-len(t)] in ids for t in MODE_TAGS) \
-            or any(k.endswith(t) for t in ('FirstStepsChampion', 'RiderChampion', 'SpiderChampion')):
+            or any(k.endswith(t) for t in ('FirstStepsChampion', 'RiderChampion', 'SpiderChampion')) or 'OverloadedReactor' in k:
         return MODE_TYPE
     if x['source'] not in (None, 'None', ''): return f"card ({SRC}; collectible)"
     if x['status'] == 'unreleased': return f"card ({SRC}; unreleased or created card)"
@@ -125,6 +129,9 @@ def main():
             rows.append({'game': 'marvel_snap', 'ext_id': k, 'name': n, 'category': 'unit',
                          'source_type': f'card (created by {by}; {src})', 'edition': None, 'cost': None, 'cost_num': None,
                          'stats': None, 'text': t, 'extra': None})
+    for n, t, src in LATE_KEYWORDS:
+        rows.append({'game': 'marvel_snap', 'ext_id': 'kw:' + n, 'name': n, 'category': 'keyword',
+                     'source_type': f'keyword ({src}; Claude\'s words)', 'text': t})
     for i, r in enumerate(rows): r['id'] = 8000001 + i
     with open(OUT, 'w') as f:
         for r in rows: f.write(json.dumps(r) + '\n')
