@@ -67,29 +67,29 @@ before coding (CLAUDE.md), and keep every speed or AI check to about a minute.
   the inputs (version 8) also show what changed on a unit in play and this round's deaths and spells per side.
 
 ## Next steps (Claude's suggestions of 5 Nov 2026, evening; not agreed yet)
+**How to work on them (Kaptain, 5 Nov 2026):** take them one at a time. Before any work on a step, describe it to
+Kaptain in detail, in plain words with a card example (what changes, why, what it costs, how it is tested), and
+wait until he agrees. Step 1 is Kaptain's (he runs those tests in the lab).
 State: with 30% next-move lessons and the unit-state inputs (version 8) it wins 65-70% against the Benchmark.
 Every step must keep the network general: cards seen only by printed values and state, by name; nothing per card
 or per keyword. Each step is compared with the Lessons check or the size check (same games, same steps).
 1. **Re-test what is cheap now that it is stronger.** Look-ahead when playing (its 4 best against every reply) gave
    no clear gain at 40%; it may at 65%. The Lessons check result (15% / 30% / 45%) decides the share. "Search in
    training" was never tested with next-move lessons.
-2. **A test that it plays redesigned cards.** Train with some cards held out of every deck, then test on decks
-   that use them; and test a trained network after changing cards (new values, a keyword moved). This measures the
-   main goal; today nothing measures it.
-3. **One card layer for every card.** Today a unit on the board goes through the cell layer, but each of the 10
-   hand slots has its own weights and the piles are plain totals. Instead: one shared layer reads any card's
-   printed values (board, hand, piles), the hand is the sum of its cards' outputs (order no longer matters), and the
-   board cell layer gets that card output as input. A card is learned once, wherever it is. Small speed cost.
-4. **Attention over the units.** Each unit (and each hand card, each lane's base) is one entry: its card layer
-   output, its state, its place. Every entry looks at every other entry; for each pair it also gets their relative
+2. **A test that it plays redesigned cards.** Train with one whole faction kept out of every deck (Kaptain's
+   choice), then test on that faction's decks; and test a trained network after changing cards (new values, a
+   keyword moved). This measures the main goal; today nothing measures it.
+3. **Attention over the units.** Each unit (and each hand card, each lane's base) is one entry: its
+   printed values (abilities in parts included), its state, its place. Hand cards stay separate entries (Kaptain:
+   no summing the hand into one mush). Every entry looks at every other entry; for each pair it also gets their relative
    place (same lane or not, rows apart, same camp or not), so "this unit can hit that one" is learned once for the
    whole board. Only occupied cells are entries (about 10-25), so it stays fast enough. Needs new arithmetic: write
    it as readable JavaScript in the repo, check it against slow plain arithmetic, then speed it up; keep the outer
    interface (forward, gradients, recs) so workers, mirroring, saving and the size check keep working.
-5. **Move ratings.** A second output that rates every legal move at once, learned from the moves its look-ahead
+4. **Move ratings.** A second output that rates every legal move at once, learned from the moves its look-ahead
    picked in training. Faster play (one pass instead of one per move) and sharper choices between close moves.
-   Biggest change; only after 4.
-6. **Earlier versions of itself as training opponents.** Keep a few saved versions and play them part of the time,
+   Biggest change; only after 3.
+5. **Earlier versions of itself as training opponents.** Keep a few saved versions and play them part of the time,
    so it does not only learn to beat its current self.
 
 ## How to check that it really plays new and changed cards (suggestion)
