@@ -569,6 +569,7 @@ def lines_of(c, game):
                 if (h, ms or '') in common and tpick != 'self' and not lv and not (actor and actor[2] == 'enemy'): continue  # an enemy
                 # that hits other enemies (Vek Hormones) waits for what few cards do: turning the enemy's attack (Spartan Shield)
                 if not kinds_fit(mkind, tkind): continue
+                if h == 'created' and not ms and ts_ == 'enemy': continue  # cards I create are mine, never the enemy's created cards a need counts (L9: Beta Ray Bill -> Gorgon)
                 if from_kw.get((t, h)) and not any(k in cards.get(m, {}).get('kws', ()) or m in kw_givers(k) for k in from_kw[(t, h)]): continue
                 if m in home_m and h in ('moves', 'moves_onto') and 'position enemy' in (tw or ''): continue
                 if tpick == 'self' and mkind in KIND_CAT and mkind != 'player' and cards[t]['cat'] not in KIND_CAT[mkind]: continue  # Noxian Fervor hits units:

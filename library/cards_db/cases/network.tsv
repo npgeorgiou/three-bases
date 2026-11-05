@@ -439,3 +439,7 @@ n443	marvel_snap	Angel, Hydra Stomper	Angel	Hydra Stomper	line		Claude 5 Nov 202
 n444	marvel_snap	Herbie Program 01, Wiccan	Herbie Program 01	Wiccan	none		Claude 5 Nov 2026, line check: Wiccan wants no unspent mana, gaining mana is the opposite
 n445	marvel_snap	Ghost-Spider, Galactus	Ghost-Spider	Galactus	none		Claude 5 Nov 2026, line check: Galactus wants to be alone in its lane, moving units does not help
 n446	marvel_snap	Djinn, Jim Hammond Human Torch	Djinn	Jim Hammond Human Torch	line		Claude 5 Nov 2026, line check: Torch counts mana, gaining it helps
+n447	marvel_snap	Beta Ray Bill, Gorgon	Beta Ray Bill	Gorgon	none		Claude 5 Nov 2026, line check: my created cards are not the enemy cards Gorgon changes
+n448	marvel_snap	Doctor Octopus, Dagger	Doctor Octopus	Dagger	none		Claude 5 Nov 2026, line check: moving enemy units does not feed a card acting in its lane
+n449	marvel_snap	Aero, Armor	Aero	Armor	none		Claude 5 Nov 2026, line check: moving units does not feed a card acting in its lane
+n450	marvel_snap	Moira X, Quinjet	Moira X	Quinjet	line		Claude 5 Nov 2026, line check: creating cards feeds Quinjet
