@@ -502,3 +502,7 @@ n506	marvel_snap	Swarm, Morbius	Swarm	Morbius	line	discard	Claude 5 Nov 2026, li
 n507	marvel_snap	Apocalypse, Morbius	Apocalypse	Morbius	line	discard	Claude 5 Nov 2026, line check C24: Apocalypse returns to hand when discarded, so it is discarded again for Morbius's count (L10 enables)
 n508	marvel_snap	Blade, Morbius	Blade	Morbius	line	discard	Claude 5 Nov 2026, line check C24: Blade makes you discard, stays right
 n509	marvel_snap	Swarm, Dracula	Swarm	Dracula	none		Claude 5 Nov 2026, line check C24: Dracula needs no discarded card back, Swarm feeds only discard counts
+n510	marvel_snap	Storm, White Tiger	Storm	White Tiger	line		Claude 5 Nov 2026, line check C26: a summon is not a played card, so it fills the place Storm floods (guide cms07; L17)
+n511	marvel_snap	Storm, Doctor Doom	Storm	Doctor Doom	line		Claude 5 Nov 2026, line check C27: Doctor Doom summons, not played, so it fills the flooded place (guide cms08; L17)
+n512	marvel_snap	Storm, Odin	Storm	Odin	none		Claude 5 Nov 2026, line check C26: Odin summons nothing, Storm only stops plays
+n513	marvel_snap	Ebony Maw, Doctor Doom	Ebony Maw	Doctor Doom	none		Claude 5 Nov 2026, line check C26: Ebony Maw stops only my own hand, no flood

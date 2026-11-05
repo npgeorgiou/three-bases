@@ -2519,6 +2519,20 @@ def families(c, nodes):
     return {n: fam(n) for n in nodes}
 
 
+def flood_lines(c, game, nodes):
+    """a card that stops all cards being played (Storm floods a location) -> a card whose own text summons units: a summon is not a
+    played card, so it still fills the location (guide: Storm -> White Tiger, Doctor Doom; L17)"""
+    out = Lines(); marks = ','.join('?' * len(nodes)); L = list(nodes)
+    blockers = [a for (a,) in c.execute(f"""select distinct card from flat_do where origin='own' and act='cant' and param_event='played' and on_pick='all'
+            and on_zone='hand' and on_kind='card' and coalesce(on_side,'any')!='mine' and card in ({marks})""", L)]
+    summoners = [b for (b,) in c.execute(f"""select distinct card from flat_do where origin='own' and act='summon' and coalesce(on_side,'mine')='mine'
+            and card in ({marks})""", L)]
+    for a in blockers:
+        for b in summoners:
+            if a != b: out[(a, b)].append(('type', 0.5, 'stops cards being played, but a summon is not played: it still fills the place'))
+    return out
+
+
 def spent_lines(c, game, nodes):
     """a count of mana spent on a kind of card ("I've seen you play 6+ mana of spells", Lux): a card of that kind that alone pays
     that much (cost 6 or more) or whose cost is variable (Thermogenic Beam spends all your mana) levels it or feeds it; cheaper
@@ -2625,7 +2639,7 @@ def network(c, game, ids, broad=True):
     for f in (am, played_lines(c, game, nodes, broad), need_lines(c, game, nodes, broad),
               boost_lines(c, game, nodes, stat_help, {p for p, ls in am.items() if any('cheaper' in y or 'cost' in y for _, _, y in ls)}), gives_lines(c, game, nodes), object_help_lines(c, game, nodes, broad),
               actor_help_lines(c, game, nodes), doer_help_lines(c, game, nodes), self_harm_lines(c, game, nodes),
-              state_giver_lines(c, game, nodes), stat_reader_lines(c, game, nodes), spent_lines(c, game, nodes)):
+              state_giver_lines(c, game, nodes), stat_reader_lines(c, game, nodes), spent_lines(c, game, nodes), flood_lines(c, game, nodes)):
         for k, ls in f.items(): lines[k] += ls
     # a need the maker shares with the card it makes is the made card's (The Iron Conquest's stage III is its skill Undying
     # Revenge: Soul Cleave's dead ally feeds the skill, not the landmark too)
