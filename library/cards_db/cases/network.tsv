@@ -420,3 +420,6 @@ n422	marvel_snap	Astral Projection, Acid Arrow	Astral Projection	Acid Arrow	none
 n423	marvel_snap	Toxin, Acid Arrow	Toxin	Acid Arrow	none		Claude 5 Nov 2026, line check: Acid Arrow only gives itself away; replaying it is a drawback (L5)
 n424	marvel_snap	Beast, Absorbing Man	Beast	Absorbing Man	line		Claude 5 Nov 2026, line check: Absorbing Man's On Reveal is a real effect, replaying it helps
 n425	marvel_snap	Ultron Mind Stone, Absorbing Man	Ultron Mind Stone	Absorbing Man	line		Claude 5 Nov 2026, line check: Absorbing Man's On Reveal is a real effect, playing it again helps
+n426	marvel_snap	Onslaught, J. Jonah Jameson	Onslaught	J. Jonah Jameson	none		Claude 5 Nov 2026, line check: its Ongoing has no effect to repeat (L14)
+n427	marvel_snap	Caiera, Broodling	Caiera	Broodling	none		Claude 5 Nov 2026, line check: protecting cost 1 units is help aimed at a kind; Broodling has no text that uses it (L14)
+n428	marvel_snap	Joaquin Torres Falcon II, Electro	Joaquin Torres Falcon II	Electro	line		Claude 5 Nov 2026, line check: Electro has a real On Reveal to repeat

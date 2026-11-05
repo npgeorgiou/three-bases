@@ -1346,6 +1346,8 @@ def aimed(c, game, nodes, broad):
             sharp = False  # stats to units with a keyword or a stat go only to a unit whose text uses them (L14, L18: Rek'Sai's Lurkers ->
             # Sharkling: no line); a tribe stays a deck choice (Kaptain's ndu34: Oakenheart helps the Mechs)
         if act == 'increase_effect' and kind == 'spell' and 'keyword i' not in (w or ''): sharp = False  # more spell damage ()
+        if act == 'cant' and any(x.startswith('cost ') for x in (w or '').split(';')):
+            sharp = False  # a cost is a stat, no narrower than a deck: protection by cost goes only to a card whose text uses it (L14: Caiera -> Broodling)
         if act == 'give_keyword' and kw and kw_tree(c, kw) == 'spell_speed': sharp = False  # a spell's speed is help to a whole kind
         # (Senna makes damage spells Fast): only a card whose text uses it (L14)
         if act == 'increase_effect' and 'keyword i' not in (w or ''):
@@ -1358,6 +1360,8 @@ def aimed(c, game, nodes, broad):
             if act in ('stat_change', 'grow') and a in all_raisers(c):  # all my units raised alike: no ally passes a filter by my own
                 # power that it failed before (For Demacia! -> Poppy)
                 hits = [b for b in hits if use_of(c, game, b, act, kw, ps, w) != 'more power: its text reads its power']
+        if act == 'repeat' and 'keyword i' in (w or ''):  # a card with the keyword but no effect of its own has nothing to repeat (Onslaught -> J. Jonah Jameson)
+            hits = [b for b in hits if c.execute("select 1 from flat_do where card=? and origin='own' limit 1", (b,)).fetchone()]
         n = len(makers[(act, kind, kw, rule if rule in (True, False, 'boost') else True)])
         if rule == 'boost' and act == 'repeat': hits = [b for b in hits if b not in drawback_cards(c)]  # no line to a card whose effect is a drawback (L5: Acid Arrow)
         if rule == 'boost':
