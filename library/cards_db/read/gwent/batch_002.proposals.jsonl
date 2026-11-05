@@ -1,0 +1,11 @@
+{"id": 756471, "field": "when", "need": "put_on_top"}
+{"id": 756488, "field": "if", "need": "my_turn"}
+{"id": 756510, "field": "x", "need": "duration"}
+{"id": 756522, "field": "attr", "need": "armor"}
+{"id": 756568, "field": "params", "need": "ignore_armor"}
+{"id": 756593, "field": "state", "need": "primary category not in starting deck"}
+{"id": 756611, "field": "if", "need": "my_turn"}
+{"id": 756619, "field": "if", "need": "my_turn"}
+{"id": 756639, "field": "if", "need": "my_turn"}
+{"id": 756652, "field": "do", "need": "adventure"}
+{"id": 756655, "field": "state", "need": "same_primary_category_as_it"}
