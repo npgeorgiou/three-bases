@@ -1,0 +1,14 @@
+{"id": 796169, "field": "act", "need": "least_power_wins_location"}
+{"id": 796176, "field": "act", "need": "location_power_not_counted"}
+{"id": 796227, "field": "event", "need": "snap"}
+{"id": 796228, "field": "with", "need": "ongoing_ability_only"}
+{"id": 796242, "field": "act", "need": "no_card_revealed_this_turn"}
+{"id": 796261, "field": "event", "need": "retreat"}
+{"id": 8000036, "field": "test", "need": "winning_here"}
+{"id": 8000154, "field": "with", "need": "charged"}
+{"id": 8000217, "field": "with", "need": "leftmost_location"}
+{"id": 8000289, "field": "x", "need": "bonus_energy_count"}
+{"id": 8000347, "field": "pick", "need": "leftmost_in_hand"}
+{"id": 8000481, "field": "to", "need": "old_location"}
+{"id": 8000574, "field": "event", "need": "spent_all_energy_in_turn"}
+{"id": 8000748, "field": "pick", "need": "first_played_card"}
