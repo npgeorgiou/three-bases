@@ -37,6 +37,10 @@ before coding (CLAUDE.md), and keep every speed or AI check to about a minute.
 - Playing: a network trained 35 s to copy the Benchmark's score won 16 of 44 games against the Benchmark (depth 1),
   both looking one move ahead. Knowing who is ahead is not enough; choosing a move needs exact differences between
   the positions each move leads to, which learning from game results alone gives only slowly.
+- Shapes (same check, 25 s each, % right on unseen games): as now 78.7, cell layer 32 numbers 77.8, 8 numbers 78.5,
+  layers 256/128 79.4, 64/32 79.7, each card its own 8 weights as well 76.3, no hand at all 80.2, hand as totals 80.3.
+  All within the check's noise (about 60 unseen games): this check cannot tell shapes apart, and the hand slots give
+  it nothing today. Play strength must be tested on a trained network from the lab.
 - The Benchmark at depth 1 also scores each move's position once, like the network: the comparison is fair.
 
 ## Why it may be stuck (suggestion, not proven)
