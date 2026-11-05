@@ -489,3 +489,8 @@ n493	marvel_snap	Wong, Shuri	Wong	Shuri	line	plays it again	Claude 5 Nov 2026, l
 n494	marvel_snap	Zero, Ebony Maw	Zero	Ebony Maw	line	silences it: its drawback is gone	Claude 5 Nov 2026, line check C21: silence removes a drawback
 n495	marvel_snap	Sauron, Ebony Maw	Sauron	Ebony Maw	line	silence	Claude 5 Nov 2026, line check C21: right example stays
 n496	marvel_snap	Zero, Hazmat	Zero	Hazmat	none		Claude 5 Nov 2026, line check C21: silence helps only a card with a drawback
+n497	marvel_snap	Brood, Absorbing Man	Brood	Absorbing Man	line	On Reveal	Claude 5 Nov 2026, line check C22: Absorbing Man needs an On Reveal unit before it (L21 Kept)
+n498	marvel_snap	Silver Surfer, Absorbing Man	Silver Surfer	Absorbing Man	line	On Reveal	Claude 5 Nov 2026, line check C22: Absorbing Man needs an On Reveal unit before it (L21 Kept)
+n499	marvel_snap	Hazmat, Absorbing Man	Hazmat	Absorbing Man	line	On Reveal	Claude 5 Nov 2026, line check C22: Absorbing Man needs an On Reveal unit before it (L21 Kept)
+n500	marvel_snap	Magik, Absorbing Man	Magik	Absorbing Man	line	On Reveal	Claude 5 Nov 2026, line check C22: Absorbing Man needs an On Reveal unit before it (L21 Kept)
+n501	marvel_snap	Wong, Absorbing Man	Wong	Absorbing Man	line	On Reveal	Claude 5 Nov 2026, line check C22: Absorbing Man needs an On Reveal unit before it (L21 Kept)
