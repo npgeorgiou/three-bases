@@ -462,3 +462,8 @@ n466	marvel_snap	Galactus, Knull	Galactus	Knull	line	makes units die	Claude 5 No
 n467	marvel_snap	Galactus, Death	Galactus	Death	line	makes units die	Claude 5 Nov 2026, line check: Galactus destroys the other locations and the cards there
 n468	marvel_snap	Destroyer, Knull	Destroyer	Knull	line	makes units die	Claude 5 Nov 2026, line check: right example stays
 n469	marvel_snap	Destroyer, Death	Destroyer	Death	line	makes units die	Claude 5 Nov 2026, line check: right example stays
+n470	marvel_snap	Victoria Hand, Mystique	Victoria Hand	Mystique	line	is a unit with Ongoing it counts or asks for	Claude 5 Nov 2026, line check: Mystique needs last card an Ongoing unit
+n471	marvel_snap	Devil Dinosaur, Mystique	Devil Dinosaur	Mystique	line	is a unit with Ongoing it counts or asks for	Claude 5 Nov 2026, line check: Mystique needs last card an Ongoing unit
+n472	marvel_snap	PymParticle Arrow, Mystique	PymParticle Arrow	Mystique	line	is a unit with Ongoing it counts or asks for	Claude 5 Nov 2026, line check: Mystique needs last card an Ongoing unit
+n473	marvel_snap	Sera, Mystique	Sera	Mystique	line	is a unit with Ongoing it counts or asks for	Claude 5 Nov 2026, line check: Mystique needs last card an Ongoing unit
+n474	marvel_snap	Basic Arrow, Mystique	Basic Arrow	Mystique	line	makes your units get Ongoing	Claude 5 Nov 2026, line check: right example stays
