@@ -623,6 +623,7 @@ def lines_of(c, game):
                 # played": playing a card no one made cheaper is not it (a unit healed is damaged by the enemy too: no such need)
                 w = 1.0 / len(carers[tk] | (carers[None] if tk else set()))
                 say = act_say(c, h, ts_, tk, self_=tpick == 'self')
+                if role == 'state' and h in ('moves', 'moves_onto') and 'position is same_lane' in (tw or '') and game == 'marvel_snap': continue  # a lane is a location, not a range: a unit moved in is no help to a card that acts in its lane (Doctor Strange -> Danger)
                 if role == 'state' and h in ('moves', 'moves_onto') and place_of(tw): say = moves_said(tw, ts_, tpick == 'self')
                 if mpick == 'self' and h == 'dies': say = 'dies, comes back and dies again' if mref == m else 'dies by its own effect'
                 if mpick == 'self' and h == 'given_keyword' and mk: say = f'has {mechanics.name(c, mk)}'  # Manta Rider has Flying
@@ -1116,8 +1117,9 @@ def generic_use(c, game):
         if origin == 'own' or kw_tree(c, via) in TRIGGER_KW: d[i]['self_when'].add(e)  # "Strike:", "Slay:" as keywords (Monster Train)
     for i in drawback_cards(c): d[i]['self_when'] -= {'played', 'summoned'}  # its Play effect is a drawback: replaying it is no help (L5)
     kw_stat = {t for (t,) in c.execute("select w.card from cond k join flat_when w on w.ability=k.ability where k.test='keyword_condition' and k.ref_keyword is not null and w.event='stat_changed'")}
-    for i, h, origin, via, k in c.execute("""select card, happening, origin, via, keyword from flat_ref where role!='makes' and origin in ('own','has_keyword')
+    for i, h, origin, via, k, rl, ow in c.execute("""select card, happening, origin, via, keyword, role, obj_with from flat_ref where role!='makes' and origin in ('own','has_keyword')
             and coalesce(side,'') in ('','mine','any')"""):
+        if game == 'marvel_snap' and rl == 'state' and h == 'moves' and 'position is same_lane' in (ow or ''): continue  # a lane is a location: a card that acts in its lane needs no move (Doctor Strange -> Danger)
         if origin != 'own' and kw_tree(c, via) not in TRIGGER_KW: continue  # a keyword's inner working (Barrier pops when damaged,
         # Challenger picks when attacking) is no need of the card; a keyword that is a reaction is (Revenge: when damaged)
         if h in ('given_keyword', 'keyword_used', 'keyword_removed'): d[i]['kw_needs'].add((h, k))  # which keyword it waits for

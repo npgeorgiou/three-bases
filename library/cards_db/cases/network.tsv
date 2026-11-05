@@ -431,3 +431,8 @@ n435	marvel_snap	Kid Omega, Bucky Barnes	Kid Omega	Bucky Barnes	line		Claude 5 N
 n436	marvel_snap	Kid Omega, Elixir	Kid Omega	Elixir	line		Claude 5 Nov 2026, line check: makes your units die, Elixir brings them back
 n437	marvel_snap	Jocasta, Awesome Andy	Jocasta	Awesome Andy	line		Claude 5 Nov 2026, line check: Jocasta activates your other cards
 n438	marvel_snap	Attuma, Death Fractured Frontier	Attuma	Death Fractured Frontier	line		Claude 5 Nov 2026, line check: makes your units die, it brings them back
+n439	marvel_snap	Doctor Strange, Danger	Doctor Strange	Danger	none		Claude 5 Nov 2026, line check: a lane is a location, moving a unit helps no card that acts in its lane
+n440	marvel_snap	Ghost-Spider, Drax	Ghost-Spider	Drax	none		Claude 5 Nov 2026, line check: Drax needs no move, moving is no help
+n441	marvel_snap	Blink, Moonstone	Blink	Moonstone	none		Claude 5 Nov 2026, line check: Moonstone copies text, no need of moving
+n442	marvel_snap	Doctor Octopus, Pizza Slice	Doctor Octopus	Pizza Slice	none		Claude 5 Nov 2026, line check: Pizza Slice merges, no need of moving
+n443	marvel_snap	Angel, Hydra Stomper	Angel	Hydra Stomper	line		Claude 5 Nov 2026, line check: makes your units move
