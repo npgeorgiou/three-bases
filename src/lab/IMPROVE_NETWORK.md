@@ -46,6 +46,13 @@ before coding (CLAUDE.md), and keep every speed or AI check to about a minute.
   the same move 29% of the time, the Benchmark at depth 1 67%. Where depth 3 acts, the network passes 24 of 94 times
   (depth 1: never); where depth 3 passes, the network acts 10 of 22 times. Where depth 3 deploys (47), the network
   picks the same card 23 times but mostly another place. Too few games (33) to measure its win rate here.
+- Passing (same network, 32 games, 1,934 of its turns): it does not rate round-ending passes too high (it says 56%,
+  those games were won 64%). Its win chances match reality well: said under 30% → won 17-18%, said over 70% → won
+  94-96%. So its extra passes are not explained by wrong values.
+- Hand (same network): hiding the hand moves its win chance by 6 points on Benchmark games (14 on random games), but
+  it predicts no better with the hand than without (71.6% against 71.8%): it reacts to the hand without using it well.
+- Same wires for a cell in every lane (camp, row and column shared), from scratch, 25 s, 2,437 positions: copying
+  the Benchmark's score 89.1% against 87.8% per cell; predicting the winner 76.9% both. No clear gain.
 - The Benchmark at depth 1 also scores each move's position once, like the network: the comparison is fair.
 
 ## Why it may be stuck (suggestion, not proven)
