@@ -526,3 +526,8 @@ n530	marvel_snap	Invisible Woman & Namor Doomsday, Red Wolf Fractured Frontier	I
 n531	marvel_snap	Professor X, Red Wolf Fractured Frontier	Professor X	Red Wolf Fractured Frontier	line	fills your hand	Claude 5 Nov 2026, line check C3: Professor X stops my plays, hand stays full
 n532	marvel_snap	Zombie Mister Fantastic, Deadpool	Zombie Mister Fantastic	Deadpool	none	power for created units; Deadpool is no created unit (L14)	Claude 5 Nov 2026, line check C4: created-only boost needs a made card
 n533	marvel_snap	Sam Wilson & Nightcrawler Doomsday, Deadpool	Sam Wilson & Nightcrawler Doomsday	Deadpool	line	power for a card in front of it, Deadpool reads its power	Claude 5 Nov 2026, line check C4: right example stays
+n534	marvel_snap	Sub-Mariner, Mystique	Sub-Mariner	Mystique	none	makes a unit by cost, not one with Ongoing	Claude 5 Nov 2026, line check C5: random unit by cost is not named Ongoing
+n535	marvel_snap	Shanna, Mystique	Shanna	Mystique	none	summons a unit by cost, not one with Ongoing	Claude 5 Nov 2026, line check C5: a summon by cost is not named Ongoing
+n536	marvel_snap	Mister Fantastic & Beast Doomsday, Absorbing Man	Mister Fantastic & Beast Doomsday	Absorbing Man	none	makes a random unit, not one with On Reveal	Claude 5 Nov 2026, line check C5: random unit is not named On Reveal
+n537	marvel_snap	Sub-Mariner, Absorbing Man	Sub-Mariner	Absorbing Man	none	makes a unit by cost, not one with On Reveal	Claude 5 Nov 2026, line check C5: random unit by cost is not named On Reveal
+n538	marvel_snap	Viper, Absorbing Man	Viper	Absorbing Man	line	is a unit with On Reveal	Claude 5 Nov 2026, line check C5: right example stays

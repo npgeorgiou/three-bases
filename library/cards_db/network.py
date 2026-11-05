@@ -1873,9 +1873,9 @@ def need_lines(c, game, nodes, broad):
             and on_kind is null and origin='own' and card in ({marks})""", list(nodes)).fetchall():
         if any(k in cards[a]['kws'] for a in nodes if a in cards and a != t): needs.append((t, 'any', f'keyword is {k}'))
     # cards that make a card of a kind by description ("create a random landmark that costs 2 or less", Bomber Twins)
-    described = collections.defaultdict(set)
-    for a, k, _ in made_cards(c):  # "create a random landmark", "Manifest a 6+ cost spell" (a kind written as a filter too)
-        if a in nodes: described[k].add(a)
+    described = collections.defaultdict(set); described_w = collections.defaultdict(list)
+    for a, k, mw_ in made_cards(c):  # "create a random landmark", "Manifest a 6+ cost spell" (a kind written as a filter too)
+        if a in nodes: described[k].add(a); described_w[(a, k)].append(mw_ or '')
     for t, kind, w in needs:
         counted = (w or '').endswith(';counted'); w = (w or '').removesuffix(';counted')  # "each event you've played": it counts what
         # happens: "enables" (a count, no reaction)
@@ -1898,7 +1898,9 @@ def need_lines(c, game, nodes, broad):
                     out[(a, t)].append(('type', 0.5 / cnt, f'makes a {"landmark or structure" if kind == "landmark" else kind} it counts'))
                 continue
             if matches(c, game, cards[a], kind, w): out[(a, t)].append(('type', 1.0 / cnt, 'is ' + what))
-            elif a in described.get(kind, ()) and not any(p.split(' ')[0] in ('card', 'name_has', 'type') for p in (w or '').split(';')):
+            elif a in described.get(kind, ()) and not any(p.split(' ')[0] in ('card', 'name_has', 'type') for p in (w or '').split(';')) \
+                    and any(all(p in mw_.split(';') for p in (w or '').split(';') if p.startswith('keyword is ')) for mw_ in described_w[(a, kind)]):
+                # a unit made at random or by cost is no unit with the needed keyword (Sub-Mariner -> Mystique): the making must name it
                 out[(a, t)].append(('type', 0.5 / cnt, 'makes ' + what))
     return out
 
