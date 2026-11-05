@@ -81,7 +81,7 @@ push, give network.html to Kaptain.
 - All 8 games imported. Kaptain approved Runeterra and Into the Breach; Slay the Spire done; Inscryption reviewed; Stormbound,
   Monster Train, Faeria, Duelyst wait for his check of their deck networks.
 - Cases: all pass. Must-not cases whose old reason no line says any more were made strict (no line at all); n56, n352,
-  ntb15-16 and nst36 keep theirs because the pair still has a line for another reason. The next case id is n396.
+  n378, ntb15-16 and nst36 keep theirs because the pair still has a line for another reason. The next case id is n400.
 - Real-world cases: 237 of 261 hold (Zealous Crusader -> Khalim's Prayer is gone by a rule of Kaptain's of 3 Nov 2026, before L24; the other 23 are faction-label checks).
 - Lines (pairs in links.sqlite, 3 Nov 2026): Runeterra 201,006; Duelyst 12,427; Faeria 10,014; Slay the Spire 8,797; Into the
   Breach 6,137; Monster Train 3,092; Stormbound 2,686; Inscryption 1,080.
@@ -107,17 +107,19 @@ game's own rulebook, and players' combos and decks that test the lines. Complete
    library/games/marvel_snap.md; read/marvel_snap/game_rules.jsonl; 18 vocab rows of 5 Nov 2026; patterns T99-T110;
    DECK_RULES marvel_snap); 27 full guide decks in decks.tsv; step 1 (all batches, keywords, second_001; 103 unsure cards
    re-read, 39 still unsure with needs only one card has); step 2.1 (`run.py marvel_snap` passes, 13 of 13 cases;
-   `check_all.py --no-load` passes for every game); step 2.3 (0 word flags: patterns T111-T115, labels with colon only, 19 verdicts). Next, in order:
-   - 2.4 names: 19 stub names (check.py lists them; Ancient Arcana, Muramasa Shard, Infinity Shot, Void ...).
+   `check_all.py --no-load` passes for every game); step 2.3 (0 word flags: patterns T111-T115, labels with colon only, 19 verdicts); step 2.4 (names.tsv, fixes/marvel_snap/v65.py: sets of cards as card lists; Muramasa Shard added; Hidden dropped, 2 cards unsure). Next, in order:
+   - 2.4 left: stub "When Discarded" (Zombie Black Cat's "another When Discarded card"; ask Kaptain whether it becomes a
+     keyword like On Reveal) and "Charged" (two unreleased Overdrive Reactor effects; nothing defines it).
    - 2.5 second reading: second/marvel_snap/compare_verdict.md has 11 families (families 2-5 are "same meaning,
-     different form": write normalize rules; family 9 and 11 are wrong first readings to fix; family 1 was mostly fixed by
+     different form": write normalize rules; also "shuffle a named card into the deck" is shuffle_into_deck here but create
+     zone deck elsewhere, so Agamotto and Korg draw no line to the cards they shuffle in; Thanos Fractured Frontier's Shots,
+     made inside a given ability, draw none; family 9 and 11 are wrong first readings to fix; family 1 was mostly fixed by
      the re-read, 10 cards with no rows are cards with no game effect).
    - 2.7 text audit: 37 text words without rows. 2.8 link audit: 10 cards tagged play_restriction lack a row (Brooklyn Bridge).
    - 2.9 deck networks: read 10 of the 27 decks card by card into deck_read_marvel_snap.md; cases/decks.tsv and network.tsv
      have no Marvel Snap rows yet; combos in library/games/marvel_snap.md "Combos" go to cases/combos.tsv.
    - Part 3 line check: `links_audit.py marvel_snap` and `deck_audit.py marvel_snap`, all output read (pieces, agents).
    Not written: supplement/marvel_snap_links.jsonl (cards a card creates are linked by the names in its rows).
-   `check_all.py --no-load` also lists must-not case n378 (Runeterra) as reworded: look at it.
 
 ## When you finish
 Commit and push every finished step. Update "State" and "Open work" above (short, no history: git log has it).

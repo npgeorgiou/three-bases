@@ -45,6 +45,9 @@ TEXT_GAPS = {
 }
 # tokens the export lacks, named by a card's text (snap.fan card list, read 5 Nov 2026)
 TOKENS = [('EbonyBlade', 'Ebony Blade', 'Ongoing: This can not be destroyed.', 'Black Knight')]
+# tokens found later, written after the keywords so earlier ids stay (source, text in the source's words)
+LATE_TOKENS = [('MuramasaShard', 'Muramasa Shard', "When this is discarded or destroyed, double Daken's Power.", 'Daken',
+                'marvelsnap.com Character Spotlight: Daken (read 5 Nov 2026); snap.fan lists it as Daken\'s token')]
 
 H = 'marvelsnap.helpshift.com'
 KEYWORDS = [
@@ -117,6 +120,11 @@ def main():
     for n, t, s in KEYWORDS:
         rows.append({'game': 'marvel_snap', 'ext_id': 'kw:' + n, 'name': n, 'category': 'keyword',
                      'source_type': f'keyword ({s}; Claude\'s words)', 'text': t})
+    for k, n, t, by, src in LATE_TOKENS:
+        if k not in ids:
+            rows.append({'game': 'marvel_snap', 'ext_id': k, 'name': n, 'category': 'unit',
+                         'source_type': f'card (created by {by}; {src})', 'edition': None, 'cost': None, 'cost_num': None,
+                         'stats': None, 'text': t, 'extra': None})
     for i, r in enumerate(rows): r['id'] = 8000001 + i
     with open(OUT, 'w') as f:
         for r in rows: f.write(json.dumps(r) + '\n')

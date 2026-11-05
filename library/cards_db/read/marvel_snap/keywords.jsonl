@@ -1,16 +1,16 @@
-{"id": 8000750, "abilities": [], "trigger": {"event": "played", "object": {"pick": "self"}}}
-{"id": 8000751, "abilities": [], "trigger": {"event": "always"}}
-{"id": 8000752, "abilities": [], "trigger": {"event": "activated", "object": {"pick": "self"}}}
-{"id": 8000753, "abilities": [], "trigger": {"event": "round_end"}}
-{"id": 8000754, "abilities": [], "trigger": {"event": "round_start"}}
-{"id": 8000755, "abilities": [], "trigger": {"event": "game_start"}}
-{"id": 8000756, "abilities": [], "trigger": {"event": "round_end"}}
-{"id": 8000757, "abilities": [{"when": {"event": "always"}, "do": [{"act": "can", "on": {"pick": "self"}, "params": {"event": "moves"}, "lasts": "while"}]}]}
-{"id": 8000758, "abilities": [], "condition": [{"test": "have", "op": "is", "of": {"pick": "self", "with": [{"attr": "state", "op": "is", "val": "buffed"}]}}]}
-{"id": 8000759, "abilities": [], "condition": [{"test": "event_count", "event": {"event": "drawn", "object": {"pick": "self"}}, "op": "ge", "n": 1, "span": "this_round"}]}
-{"id": 8000760, "abilities": [{"when": {"event": "played", "object": {"pick": "self"}}, "if": [{"test": "have", "op": "not", "of": {"kind": "unit", "side": "mine", "with": [{"attr": "card", "op": "is", "ref": "Zombie Horde"}]}}], "do": [{"act": "summon", "card": "Zombie Horde", "on": {"kind": "unit", "side": "mine"}, "to": {"kind": "position", "pick": "random"}, "params": {"power": 0}}]}, {"when": {"event": "played", "object": {"pick": "self"}}, "do": [{"act": "stat_change", "on": {"kind": "unit", "side": "mine", "with": [{"attr": "card", "op": "is", "ref": "Zombie Horde"}]}, "params": {"power": {"x": "event_amount"}}, "lasts": "permanent"}]}]}
-{"id": 8000761, "abilities": [{"when": {"event": "activated"}, "do": [{"act": "merge", "on": {"kind": "unit", "pick": "it", "zone": "board"}, "to": {"kind": "unit", "side": "mine", "pick": "chosen", "zone": "board"}}]}]}
-{"id": 8000762, "abilities": [{"when": {"event": "activated"}, "do": [{"act": "stat_change", "on": {"kind": "unit", "side": "enemy", "pick": "it", "zone": "board"}, "params": {"power": {"x": "minus", "inner": {"x": "event_amount"}}}, "lasts": "permanent"}]}]}
-{"id": 8000763, "abilities": [{"when": {"event": "activated"}, "do": [{"act": "kill", "on": {"kind": "unit", "pick": "it", "zone": "board"}}]}]}
-{"id": 8000764, "abilities": [{"when": {"event": "activated"}, "do": [{"act": "discard", "on": {"kind": "card", "side": "mine", "pick": "it", "zone": "hand"}}]}]}
-{"id": 8000765, "abilities": [{"when": {"event": "activated"}, "do": [{"act": "move", "on": {"kind": "unit", "pick": "it", "zone": "board"}, "to": {"kind": "position", "pick": "chosen"}}]}]}
+{"id":8000750,"abilities":[],"trigger":{"event":"played","object":{"pick":"self"}}}
+{"id":8000751,"abilities":[],"trigger":{"event":"always"}}
+{"id":8000752,"abilities":[],"trigger":{"event":"activated","object":{"pick":"self"}}}
+{"id":8000753,"abilities":[],"trigger":{"event":"round_end"}}
+{"id":8000754,"abilities":[],"trigger":{"event":"round_start"}}
+{"id":8000755,"abilities":[],"trigger":{"event":"game_start"}}
+{"id":8000756,"abilities":[],"trigger":{"event":"round_end"}}
+{"id":8000757,"abilities":[{"when":{"event":"always"},"do":[{"act":"can","on":{"pick":"self"},"params":{"event":"moves"},"lasts":"while"}]}]}
+{"id":8000758,"abilities":[],"condition":[{"test":"have","op":"is","of":{"pick":"self","with":[{"attr":"state","op":"is","val":"buffed"}]}}]}
+{"id":8000759,"abilities":[],"condition":[{"test":"event_count","event":{"event":"drawn","object":{"pick":"self"}},"op":"ge","n":1,"span":"this_round"}]}
+{"id":8000760,"abilities":[{"when":{"event":"played","object":{"pick":"self"}},"if":[{"test":"have","op":"not","of":{"kind":"unit","side":"mine","with":[{"attr":"card","op":"is","ref":"Zombie Horde"}]}}],"do":[{"act":"summon","card":"Zombie Horde","on":{"kind":"unit","side":"mine"},"to":{"kind":"position","pick":"random"},"params":{"power":0}}]},{"when":{"event":"played","object":{"pick":"self"}},"do":[{"act":"stat_change","on":{"kind":"unit","side":"mine","with":[{"attr":"card","op":"is","ref":"Zombie Horde"}]},"params":{"power":{"x":"event_amount"}},"lasts":"permanent"}]}]}
+{"id":8000761,"abilities":[{"when":{"event":"activated"},"do":[{"act":"merge","on":{"kind":"unit","pick":"it","zone":"board"},"to":{"kind":"unit","side":"mine","pick":"chosen","zone":"board"}}]}]}
+{"id":8000762,"abilities":[{"when":{"event":"activated"},"do":[{"act":"stat_change","on":{"kind":"unit","side":"enemy","pick":"it","zone":"board"},"params":{"power":{"x":"minus","inner":{"x":"event_amount"}}},"lasts":"permanent"}]}]}
+{"id":8000763,"abilities":[{"when":{"event":"activated"},"do":[{"act":"kill","on":{"kind":"unit","pick":"it","zone":"board"}}]}]}
+{"id":8000764,"abilities":[{"when":{"event":"activated"},"do":[{"act":"discard","on":{"kind":"card","side":"mine","pick":"it","zone":"hand"}}]}]}
+{"id":8000765,"abilities":[{"when":{"event":"activated"},"do":[{"act":"move","on":{"kind":"unit","pick":"it","zone":"board"},"to":{"kind":"position","pick":"chosen"}}]}]}

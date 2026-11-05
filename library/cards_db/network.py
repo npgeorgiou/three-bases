@@ -678,9 +678,10 @@ def lines_of(c, game):
             # is not the base card's (Gangplank's rows summon Powder Keg; Powderful Explosion is Gangplank level 2's)
     put += [(m, ref, 'own_spell') for m, ref in c.execute("select l.src, l.dst from card_link l join card s on s.id=l.src where l.rel='generates' "
                                                            "and s.category='leader'") if m in cards and ref in cards]  # a General's spell
-    # a card made by its name, not its id ("you draw a Pelt card": Skinning Knife; "create a Poro"): the cards whose name fits
+    # a card made by its name, not its id ("you draw a Pelt card": Skinning Knife; "create a Poro"; one of a set:
+    # Kate Bishop's "add 2 Arrows"): the cards whose name fits
     for m, act, k, w in c.execute("""select card, act, on_kind, on_with from flat_do where act in ('create','summon') and card_ref is null
-            and origin='own' and (on_with like '%name_has is%' or on_with like '%card is%')""").fetchall():
+            and origin='own' and (on_with like '%name_has is%' or on_with like '%card is%' or on_with like '%card in%')""").fetchall():
         if m in cards: put += [(m, t, act) for t, x in cards.items() if t != m and matches(c, game, x, k if k in KIND_CAT else 'any', w)]
     putters = collections.Counter(ref for _, ref in {(m, ref) for m, ref, _ in put})
     for m, ref, act in put:

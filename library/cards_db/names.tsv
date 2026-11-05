@@ -49,3 +49,9 @@ into_the_breach	keyword	Teleport	drop		teleporting is the act move on self; Tele
 into_the_breach	keyword	Jump	drop		jumping is the act move; no Into the Breach keyword (Leaper's jump is written as can move, v48.py)
 into_the_breach	keyword	Flip	drop		"flip target" (Seismic Capacitor) is no keyword; the card stays unsure
 into_the_breach	keyword	Reset Turn	drop		Reset Turn undoes a player's turn, no card keyword and no value for it; Isaac Jones stays unsure
+marvel_snap	card	Summoning Ritual	card	Summoning Ritual 1	Dormammu "Add step 1 to hand": the first of the three Summoning Ritual cards (export SummoningRitual01Dormammu)
+marvel_snap	card	Illusion	card	Illusion!	Mysterio's Illusion is the card Illusion! (export MysterioIllusion)
+marvel_snap	card	Void	card	The Void	Sentry's Void is the card The Void (export TheVoid)
+marvel_snap	card	Tiger	card	Tiger Spirit	White Tiger's Tiger is the card Tiger Spirit (export TigerSpirit)
+marvel_snap	card	Infinity Stones	type	Infinity Stones	Thanos's six Infinity Stones are the library type Infinity Stones
+marvel_snap	keyword	Hidden	drop		"not revealed until the game ends" (Invisible Woman, Malekith): no source defines it and Marvel Snap has no Hidden keyword (reader used another word); the cards are unsure (fixes/marvel_snap/v65.py)

@@ -152,7 +152,7 @@ select distinct card from flat_do where params glob '*=[a-z]*'
 - faeria: 254 cards: Air Elemental, Airbot, Amai Merchant, Ancient Boar, Ancient Gargoyle, Animated Banquet, Annoying Gnat, Apex Predator ...
 - inscryption: 84 cards: !CORRUPTED, Ancient Fir, Ant Queen, Ants, Aquasquirrel, Armored, Bell Ringer, Bell Tentacle ...
 - into_the_breach: 158 cards: A.C.I.D., A.C.I.D. Firefly, A.C.I.D. Hornet, A.C.I.D. Pool, A.C.I.D. Projector, A.C.I.D. Scorpion, A.C.I.D. Tank (unit), A.C.I.D. Tile ...
-- marvel_snap: 196 cards: Adamantium Infusion, Afflict, Ajax, Armor, Aunt Mayhem, Avengers Compound, Black Knight, Black Panther ...
+- marvel_snap: 197 cards: Adamantium Infusion, Afflict, Ajax, Armor, Aunt Mayhem, Avengers Compound, Black Knight, Black Panther ...
 - monster_train: 167 cards: A Fatal Melting, Adaptive Mutation, Alloy of the Ancients, Alloyed Construct, Ambient Charge, Ancient Resonance, Ancient Synergy, Apex Imp ...
 - runeterra: 698 cards: Absorb Soul, Abyssal Eye, Abyssal Guard, Acolyte's Reliquary, Acorn, the Hextechnician, Adnere's Aviarists, Advance, Advanced Intel ...
 - stormbound: 56 cards: Agile Warriors, Amberhides, Awakening of the Will, Beards of Crowglyph, Bigthrust Tigers, Blizzard Bombs, Booming Professors, Brood Sages ...
@@ -171,12 +171,12 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: duelyst 3172 pairs, e.g. Accumulonimbus -> Khanuum-ka; faeria 1015 pairs, e.g. Feed the Forest -> Long-horned Yak; inscryption 466 pairs, e.g. Skel-e-latcher -> Pack Mule; into_the_breach 10 pairs, e.g. Walking Bomb -> Ice Tile; marvel_snap 591 pairs, e.g. Gambit -> X-23; monster_train 348 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 22558 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 264 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- self_destruct: duelyst 1189 pairs, e.g. Accumulonimbus -> Khanuum-ka; faeria 653 pairs, e.g. Krog's Dinner -> Long-horned Yak; inscryption 431 pairs, e.g. Skel-e-latcher -> Pack Mule; into_the_breach 8 pairs, e.g. Walking Bomb -> Ice Tile; marvel_snap 56 pairs, e.g. Widow's Kiss -> Air-Walker; monster_train 296 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 19820 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
-- sacrifice: duelyst 1521 pairs, e.g. Windstorm Obelysk -> Khanuum-ka; faeria 387 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Fishbot; into_the_breach 6 pairs, e.g. Arachnoid Mech -> Ice Tile; marvel_snap 364 pairs, e.g. Vormir -> Air-Walker; monster_train 305 pairs, e.g. Primordium -> Devourer of Death; runeterra 8133 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
-- friendly_fire: duelyst 1153 pairs, e.g. Necrotic Sphere -> Rage Reactor; faeria 160 pairs, e.g. Doomsday -> Ruunin, the Relentless; inscryption 186 pairs, e.g. Bomb Latcher -> Pack Mule; into_the_breach 58 pairs, e.g. Walking Bomb -> Ice Tile; marvel_snap 56 pairs, e.g. Murderworld -> Air-Walker; monster_train 34 pairs, e.g. Shardtail Queen -> Little Fade; runeterra 7878 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 238 pairs, e.g. Broken Earth Drakes -> Dreadful Keepers
-- board_wipe: duelyst 330 pairs, e.g. Necrotic Sphere -> Rage Reactor; faeria 97 pairs, e.g. Doomsday -> Ruunin, the Relentless; marvel_snap 70 pairs, e.g. Murderworld -> Air-Walker; monster_train 16 pairs, e.g. Shardtail Queen -> Little Fade; runeterra 1370 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 22 pairs, e.g. Wetland Deceivers -> Shady Ghoul
-- turn_end: duelyst 1814 pairs, e.g. Accumulonimbus -> Khanuum-ka; faeria 473 pairs, e.g. Flash Salmon -> Long-horned Yak; into_the_breach 6 pairs, e.g. Walking Bomb -> Ice Tile; marvel_snap 146 pairs, e.g. Zombie Power Man -> X-23; monster_train 290 pairs, e.g. Primordium -> Devourer of Death; runeterra 19731 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant
+- destroy: duelyst 3172 pairs, e.g. Gust -> Khanuum-ka; faeria 1015 pairs, e.g. Feed the Forest -> Long-horned Yak; inscryption 466 pairs, e.g. Skel-e-latcher -> Pack Mule; into_the_breach 10 pairs, e.g. Walking Bomb -> Ice Tile; marvel_snap 634 pairs, e.g. Gambit -> Muramasa Shard; monster_train 348 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 22558 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 264 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- self_destruct: duelyst 1189 pairs, e.g. Gust -> Khanuum-ka; faeria 653 pairs, e.g. Flash Salmon -> Long-horned Yak; inscryption 431 pairs, e.g. Skel-e-latcher -> Pack Mule; into_the_breach 8 pairs, e.g. Walking Bomb -> Ice Tile; marvel_snap 60 pairs, e.g. Ice Cube -> Nova; monster_train 296 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 19820 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Finite Loopers
+- sacrifice: duelyst 1521 pairs, e.g. Simulacra Obelysk -> Khanuum-ka; faeria 387 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; inscryption 54 pairs, e.g. Necromancer -> Leaping Trap; into_the_breach 6 pairs, e.g. Arachnoid Mech -> Ice Tile; marvel_snap 390 pairs, e.g. Valley of the Baby Hand -> Nova; monster_train 305 pairs, e.g. Primordium -> Devourer of Death; runeterra 8133 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- friendly_fire: duelyst 1153 pairs, e.g. Necrotic Sphere -> Rage Reactor; faeria 160 pairs, e.g. Doomsday -> Ruunin, the Relentless; inscryption 186 pairs, e.g. Hammer -> Pack Mule; into_the_breach 58 pairs, e.g. Thermal Discharger -> Ice Tile; marvel_snap 60 pairs, e.g. Murderworld -> Nova; monster_train 34 pairs, e.g. Shardtail Queen -> Little Fade; runeterra 7878 pairs, e.g. Kalista -> Bladepierced Revenant; stormbound 238 pairs, e.g. Broken Earth Drakes -> Dreadful Keepers
+- board_wipe: duelyst 330 pairs, e.g. Necrotic Sphere -> Rage Reactor; faeria 97 pairs, e.g. Doomsday -> Ruunin, the Relentless; marvel_snap 75 pairs, e.g. Murderworld -> Nova; monster_train 16 pairs, e.g. Shardtail Queen -> Little Fade; runeterra 1370 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 22 pairs, e.g. Wetland Deceivers -> Finite Loopers
+- turn_end: duelyst 1814 pairs, e.g. Gust -> Khanuum-ka; faeria 473 pairs, e.g. Flash Salmon -> Long-horned Yak; into_the_breach 6 pairs, e.g. Walking Bomb -> Ice Tile; marvel_snap 158 pairs, e.g. Black Cat -> Muramasa Shard; monster_train 290 pairs, e.g. Primordium -> Devourer of Death; runeterra 19731 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -184,8 +184,8 @@ Families of three mechanics that feed each other, starting from "summon" (`ask.p
 - summon -> banish -> attack_now (seen in duelyst, runeterra)
 - summon -> banish -> removal (seen in duelyst, marvel_snap, runeterra)
 - summon -> start_of_game -> countdown (seen in runeterra)
+- summon -> death_trigger -> stat_gain (seen in duelyst)
 - summon -> death_trigger -> on_ally_play (seen in duelyst, monster_train)
-- summon -> tribal -> on_ally_play (seen in duelyst, monster_train)
 
 ## A deck explained (`ask.py runeterra analyze "..."`), a Lucian/Senna deck from a deck guide
 
@@ -201,7 +201,7 @@ Supports your units (stats, protection, combat keywords): Lucian, Piercing Darkn
 Card flow (draw, create, choose): Glimpse Beyond, Lonely Chimeslime, Senna, Spirit Leech.
 Puts extra units into play: Cursed Keeper, Hapless Aristocrat, The Undying.
 Units that support cards can target: 9 (Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, Lucian, Ravenous Butcher, Senna, Senna, Sentinel of Light, Spirit Leech, The Undying).
-Key cards (in most of the plan): Senna, Spirit Leech, The Ruination, Crumble, Ravenous Butcher.
+Key cards (in most of the plan): Senna, The Ruination, Spirit Leech, Crumble, Ravenous Butcher.
 Weak spots: none found.
 ```
 
