@@ -53,6 +53,9 @@ If summary/ and the code disagree, the code wins: tell Kaptain.
 - What does NOT exist here, so never copy it from other games: hitting the enemy player or hero, instant-speed answers
   on the opponent's turn, mana that grows each turn, unit types/tribes (no "Elf", "Knight"; use card names or keywords),
   graveyards other than the discard pile, attacking another lane.
+- High-level plans (axes, archetypes, ways to play) follow the board too (Kaptain, 5 Nov 2026): players act now; round
+  end is something they build FOR, never a style of waiting for it. Every faction must win 2 of 3 lanes, so "stays in one
+  lane / spreads over lanes" is no style. Read section 1a before suggesting any axis.
 - A rule not written in summary/ and not in the code does not exist. A card that needs one is marked NEW RULE.
 
 ## 2. The design rules (agreed with Kaptain)
