@@ -1,0 +1,686 @@
+## C22 lr_da_1.md 2 (MISSED CAUSE, open, 0 table lines from the same code)
+Cards that give Vitality should link to Naiad Fledgling, whose own text removes Vitality (L14: anything a card waits for or counts).
+- W gwent: Frog -> Naiad Fledgling: NONE | network.py []
+- W gwent: Cat Witcher Adept -> Naiad Fledgling: NONE | network.py []
+- W gwent: Dryad's Caress -> Naiad Fledgling: NONE | network.py []
+- W gwent: Frog Mating Season -> Naiad Fledgling: NONE | network.py []
+- R gwent: Nature's Gift -> Naiad Fledgling: has Symbiosis | network.py []
+  Frog:
+    when 4437 always
+    when 4517 leaves_play self
+    when 4438 turn_end
+    when 4534 turn_end
+    when 4439 activated self
+    when 4517 leaves_play self
+    when 4504 played self
+    do 4437 own give_keyword self
+    do 4517 uses_keyword obliterate self
+    do 4438 own give_keyword unit all board position is sides of self
+    do 4534 uses_keyword stat_change unit all board position is sides of self strength=1.0
+    do 4439 own move self
+    do 4517 has_keyword obliterate self
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Naiad Fledgling:
+    when 4036 keyword_used keyword is 756204
+    when 4534 turn_end
+    when 4037 activated self
+    when 4504 played self
+    if 4037 amount_event_amount
+    do 4036 own give_keyword unit left_of_self amount=2.0
+    do 4534 uses_keyword stat_change unit left_of_self strength=1.0
+    do 4037 own remove_keyword unit mine chosen board
+    do 4037 own stat_change self strength=event_amount
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Cat Witcher Adept:
+    when 3524 played self
+    when 4526 turn_end
+    when 3525 played self
+    when 4534 turn_end
+    if 3524 keyword_condition
+    if 3524 amount_count unit all board position is same_row of it
+    if 3525 keyword_condition
+    if 3525 amount_count unit all board position is same_row of it
+    if 3524 have is self position is front_row
+    if 3525 have is self position is back_row
+    do 3524 own give_keyword unit enemy chosen board amount=count
+    do 4526 uses_keyword damage unit enemy chosen board amount=1.0
+    do 3525 own give_keyword unit mine chosen board amount=count
+    do 4534 uses_keyword stat_change unit mine chosen board strength=1.0
+  Dryad's Caress:
+    when 2786 played self
+    when 4536 activated
+    when 2787 played self
+    when 4534 turn_end
+    if 2787 have unit mine board type is 58
+    do 2786 own keyword_action unit mine chosen board
+    do 4536 uses_keyword remove_keywords unit mine chosen board
+    do 2786 own stat_change unit mine it strength=3.0
+    do 2787 own give_keyword it amount=3.0
+    do 4534 uses_keyword stat_change it strength=1.0
+  Frog Mating Season:
+    when 4033 played self
+    when 4534 turn_end
+    do 4033 own give_keyword unit mine chosen board amount=4.0
+    do 4534 uses_keyword stat_change unit mine chosen board strength=1.0
+    do 4033 own summon
+
+## C23 lr_da_1.md 4 (CAUSE, open, 0 table lines from the same code)
+A card that plays or creates a given kind (a bronze spell, an Elf) is linked to units of another kind, though its rows name the kind (L17, L20).
+- W gwent: Simlas Finn aep Dabairr -> Fauve: plays it: its effect goes off | network.py []
+- W gwent: Simlas Finn aep Dabairr -> Filavandrel aén Fidháil: plays it: its effect goes off | network.py []
+- W gwent: Simlas Finn aep Dabairr -> Cat Witcher Adept: plays it: its effect goes off | network.py []
+- W gwent: Bountiful Harvest -> Cat Witcher Adept: plays it: its effect goes off | network.py []
+- R gwent: Isengrim's Council -> Fauve: puts it into play from the deck; also triggers: plays it: its effect goes off | network.py []
+- R gwent: Call of the Forest -> Cat Witcher Adept: plays it: its effect goes off | network.py []
+  Simlas Finn aep Dabairr:
+    when 3737 played self
+    do 3737 own play_card card mine chosen deck state is bronze;category is spell
+    do 3737 own play_card card mine all deck state is copy_of_it
+  Fauve:
+    when 2773 played self
+    do 2773 own play_card card mine chosen deck type is 26
+  Filavandrel aén Fidháil:
+    when 3791 played self
+    when 3792 played self
+    if 3791 keyword_condition
+    if 3792 keyword_condition
+    if 3791 have is self position is front_row
+    if 3792 have is self position is back_row
+    do 3791 own create card mine random region is Scoiatael;cost eq 3560;category is spell
+    do 3791 own play_card card mine it category is spell
+    do 3792 own create card mine random region is Scoiatael;cost le 3561;category is spell
+    do 3792 own play_card card mine it category is spell
+  Cat Witcher Adept:
+    when 3524 played self
+    when 4526 turn_end
+    when 3525 played self
+    when 4534 turn_end
+    if 3524 keyword_condition
+    if 3524 amount_count unit all board position is same_row of it
+    if 3525 keyword_condition
+    if 3525 amount_count unit all board position is same_row of it
+    if 3524 have is self position is front_row
+    if 3525 have is self position is back_row
+    do 3524 own give_keyword unit enemy chosen board amount=count
+    do 4526 uses_keyword damage unit enemy chosen board amount=1.0
+    do 3525 own give_keyword unit mine chosen board amount=count
+    do 4534 uses_keyword stat_change unit mine chosen board strength=1.0
+  Bountiful Harvest:
+    when 3795 played self
+    when 3796 played self
+    when 3797 played self
+    if 3795 it_matches position is first_in_front
+    if 3796 it_matches position is middle_lane
+    if 3797 it_matches position is behind_all
+    do 3795 own create card mine chosen hand state is bronze;region is Scoiatael;type is 40
+    do 3795 own play_card card mine chosen hand state is created
+    do 3795 own stat_change card mine leftmost hand strength=2.0
+    do 3796 own create card mine chosen hand state is bronze;region is Scoiatael;type is 40
+    do 3796 own play_card card mine chosen hand state is created
+    do 3796 own stat_change card mine random hand strength=2.0
+    do 3797 own create card mine chosen hand state is bronze;region is Scoiatael;type is 40
+    do 3797 own play_card card mine chosen hand state is created
+    do 3797 own stat_change card mine rightmost hand strength=2.0
+
+## C24 lr_da_1.md 5 (MISSED CAUSE, open, 0 table lines from the same code)
+Simlas Finn aep Dabairr plays a bronze spell from the deck, so it puts spells into play like Fauve does, but no such lines exist (L17).
+- W gwent: Simlas Finn aep Dabairr -> Circle of Life: NONE | network.py []
+- W gwent: Simlas Finn aep Dabairr -> Tempering: NONE | network.py []
+- W gwent: Simlas Finn aep Dabairr -> Frog Mating Season: NONE | network.py []
+- R gwent: Fauve -> Tempering: puts it into play from the deck | network.py []
+  Simlas Finn aep Dabairr:
+    when 3737 played self
+    do 3737 own play_card card mine chosen deck state is bronze;category is spell
+    do 3737 own play_card card mine all deck state is copy_of_it
+  Circle of Life:
+    when 3462 played self
+    when 3463 killed
+    do 3462 own damage unit enemy chosen board amount=3.0
+    do 3462 own stat_change unit mine random hand region not Neutral strength=2.0
+    do 3463 own stat_change unit mine chosen hand region not Neutral strength=2.0
+  Tempering:
+    when 3133 played self
+    when 4532 damaged self
+    when 4698 played self
+    when 4532 damaged self
+    if 4532 amount_listed
+    if 4532 amount_listed
+    do 3133 own stat_change unit mine chosen board strength=5.0
+    do 3133 own give_keyword unit mine it board type is 39 amount=2.0
+    do 4532 uses_keyword negate_damage unit mine it board type is 39 amount=listed
+    do 4698 own stat_change unit mine chosen board strength=5.0
+    do 4698 own give_keyword unit mine it board type is 39 amount=2.0
+    do 4532 uses_keyword negate_damage unit mine it board type is 39 amount=listed
+  Frog Mating Season:
+    when 4033 played self
+    when 4534 turn_end
+    do 4033 own give_keyword unit mine chosen board amount=4.0
+    do 4534 uses_keyword stat_change unit mine chosen board strength=1.0
+    do 4033 own summon
+
+## C25 lr_da_1.md 6 (CAUSE, open, 0 table lines from the same code)
+Mahakam Pass creates cards in hand, which is not the deck Isengrim's Council plays from, and Bountiful Harvest only boosts any card in hand (L19, L14).
+- W gwent: Mahakam Pass -> Isengrim's Council: makes a Dwarf it asks for | network.py []
+- W gwent: Mahakam Pass -> Bountiful Harvest: creates cards | network.py []
+- R gwent: Mahakam Pass -> Tempering: creates | network.py []
+  Mahakam Pass:
+    when 4277 always
+    when 4541 round_end
+    when 4278 played self
+    when 4532 damaged self
+    when 4279 activated self
+    when 4541 round_end
+    when 4504 played self
+    if 4532 amount_listed
+    do 4277 own give_keyword self
+    do 4541 uses_keyword cant self event=leaves_play
+    do 4541 uses_keyword remove_keyword self
+    do 4278 own create card mine random region is Scoiatael;type is 39
+    do 4278 own give_keyword card mine it type is 39 amount=4.0
+    do 4532 uses_keyword negate_damage card mine it type is 39 amount=listed
+    do 4279 own create
+    do 4279 own play_card card mine it card is 757004
+    do 4541 has_keyword cant self event=leaves_play
+    do 4541 has_keyword remove_keyword self
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Isengrim's Council:
+    when 2472 played self
+    do 2472 own look card mine random deck type is 39
+    do 2472 own look card mine random deck type is 58
+    do 2472 own look card mine random deck type is 40
+    do 2472 own play_card card mine chosen deck type in 39;type in 58;type in 40
+    do 2472 own stat_change card mine it type in 39;type in 58;type in 40 strength=2.0
+  Bountiful Harvest:
+    when 3795 played self
+    when 3796 played self
+    when 3797 played self
+    if 3795 it_matches position is first_in_front
+    if 3796 it_matches position is middle_lane
+    if 3797 it_matches position is behind_all
+    do 3795 own create card mine chosen hand state is bronze;region is Scoiatael;type is 40
+    do 3795 own play_card card mine chosen hand state is created
+    do 3795 own stat_change card mine leftmost hand strength=2.0
+    do 3796 own create card mine chosen hand state is bronze;region is Scoiatael;type is 40
+    do 3796 own play_card card mine chosen hand state is created
+    do 3796 own stat_change card mine random hand strength=2.0
+    do 3797 own create card mine chosen hand state is bronze;region is Scoiatael;type is 40
+    do 3797 own play_card card mine chosen hand state is created
+    do 3797 own stat_change card mine rightmost hand strength=2.0
+
+## C26 lr_da_1.md 7 (MISSED CAUSE, open, 0 table lines from the same code)
+Call of the Forest plays a non-Neutral unit from the deck and sets off its play effect, but some units with a play effect have no line (L17).
+- W gwent: Call of the Forest -> Naiad Pondkeeper: plays it: its effect goes off | network.py []
+- W gwent: Call of the Forest -> Mahakam Pass: NONE | network.py []
+- R gwent: Call of the Forest -> Fauve: plays it: its effect goes off | network.py []
+  Call of the Forest:
+    when 2570 played self
+    do 2570 own play_card unit mine chosen deck region not Neutral
+    do 2570 own stat_change unit mine it strength=1.0
+  Mahakam Pass:
+    when 4277 always
+    when 4541 round_end
+    when 4278 played self
+    when 4532 damaged self
+    when 4279 activated self
+    when 4541 round_end
+    when 4504 played self
+    if 4532 amount_listed
+    do 4277 own give_keyword self
+    do 4541 uses_keyword cant self event=leaves_play
+    do 4541 uses_keyword remove_keyword self
+    do 4278 own create card mine random region is Scoiatael;type is 39
+    do 4278 own give_keyword card mine it type is 39 amount=4.0
+    do 4532 uses_keyword negate_damage card mine it type is 39 amount=listed
+    do 4279 own create
+    do 4279 own play_card card mine it card is 757004
+    do 4541 has_keyword cant self event=leaves_play
+    do 4541 has_keyword remove_keyword self
+    do 4504 has_keyword cant self event=activated;turns=1.0
+
+## C27 lr_da_1.md 8 (CAUSE, open, 0 table lines from the same code)
+A plain hit on one target feeds no "when an enemy dies" (L11); only hits on all and kill effects do.
+- W gwent: Dancing Star -> Saesenthessis: Blaze: makes enemy units die | network.py []
+- W gwent: Dimeritium Bomb -> Saesenthessis: Blaze: makes enemy units die | network.py []
+- W gwent: Waylay -> Saesenthessis: Blaze: makes enemy units die | network.py []
+- W gwent: Guerilla Tactics -> Saesenthessis: Blaze: makes enemy units die | network.py []
+- R gwent: Ocvist -> Saesenthessis: Blaze: is a Dragon it asks for; also triggers: makes enemy units die | network.py []
+- R gwent: Madoc -> Saesenthessis: Blaze: makes enemy units die | network.py []
+  Dancing Star:
+    when 2676 played self
+    when 2677 killed
+    do 2676 own damage unit enemy chosen board amount=3.0
+    do 2677 own damage unit enemy right_of_self board amount=2.0
+  Saesenthessis: Blaze:
+    when 2469 always
+    when 4507 game_start
+    when 2470 dies unit enemy
+    when 2471 obliterated unit enemy
+    when 4507 game_start
+    if 4507 amount_count card mine type is 38;state is started_in_deck
+    if 2470 my_turn
+    if 2471 my_turn
+    if 4507 amount_count card mine type is 38;state is started_in_deck
+    do 2469 own give_keyword self
+    do 4507 uses_keyword stat_change self strength=count
+    do 2470 own stat_change self strength=1.0
+    do 2471 own stat_change self strength=1.0
+    do 4507 has_keyword stat_change self strength=count
+  Dimeritium Bomb:
+    when 1837 played self
+    when 4519 always
+    when 4572 played self
+    when 4519 always
+    do 1837 own damage unit chosen board amount=4.0
+    do 1837 own give_keyword unit it
+    do 4519 uses_keyword cant unit it event=given_keyword
+    do 4572 own damage unit chosen board amount=4.0
+    do 4572 own give_keyword unit it
+    do 4519 uses_keyword cant unit it event=given_keyword
+  Waylay:
+    when 2076 played self
+    do 2076 own damage unit enemy chosen board amount=3.0
+    do 2076 own summon
+  Guerilla Tactics:
+    when 2369 activated self
+    when 2370 always
+    when 4513 always
+    when 4513 always
+    when 4504 played self
+    if 4513 amount_listed
+    if 4513 amount_listed
+    do 2369 own move unit chosen board
+    do 2369 own damage unit enemy it amount=1.0
+    do 2369 own stat_change unit mine it strength=3.0
+    do 2370 own give_keyword self amount=3.0
+    do 4513 uses_keyword can self event=activated;times=listed
+    do 4513 has_keyword can self event=activated;times=listed
+    do 4504 has_keyword cant self event=activated;turns=1.0
+
+## C28 lr_da_1.md 9 (CAUSE, open, 0 table lines from the same code)
+Myrgtabrakke only moves a card from hand to the deck bottom, not a unit on the board, so it gives no help to cards that act on board positions (L23, L7).
+- W gwent: Myrgtabrakke -> Filavandrel aén Fidháil: Myrgtabrakke moves Filavandrel aén Fidháil, and Filavandrel aén Fidháil acts on units back row it or front row it | network.py []
+- R gwent: Guerilla Tactics -> Filavandrel aén Fidháil: Guerilla Tactics moves Filavandrel aén Fidháil, and Filavandrel aén Fidháil acts on units back row it or front row it | network.py []
+- R gwent: Samum -> Filavandrel aén Fidháil: Samum moves Filavandrel aén Fidháil, and Filavandrel aén Fidháil acts on units back row it or front row it | network.py []
+  Myrgtabrakke:
+    when 1801 always
+    when 4507 game_start
+    when 1802 played self
+    when 1803 activated self
+    when 1804 always
+    when 4513 always
+    when 1805 game_start
+    when 4513 always
+    when 4507 game_start
+    when 4513 always
+    when 4504 played self
+    if 4507 amount_count card mine type is 38;state is started_in_deck
+    if 4513 amount_listed
+    if 1805 amount_count card mine all deck type is 38;state is started_in_deck
+    if 4513 amount_listed
+    if 4507 amount_count card mine type is 38;state is started_in_deck
+    if 4513 amount_listed
+    do 1801 own give_keyword self
+    do 4507 uses_keyword stat_change self strength=count
+    do 1802 own draw card mine deck type is 38 amount=1.0
+    do 1802 own move card mine chosen hand
+    do 1803 own damage unit enemy chosen board amount=1.0
+    do 1804 own give_keyword self amount=0.0
+    do 4513 uses_keyword can self event=activated;times=listed
+    do 1805 own give_keyword self amount=count
+    do 4513 uses_keyword can self event=activated;times=listed
+    do 4507 has_keyword stat_change self strength=count
+    do 4513 has_keyword can self event=activated;times=listed
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Filavandrel aén Fidháil:
+    when 3791 played self
+    when 3792 played self
+    if 3791 keyword_condition
+    if 3792 keyword_condition
+    if 3791 have is self position is front_row
+    if 3792 have is self position is back_row
+    do 3791 own create card mine random region is Scoiatael;cost eq 3560;category is spell
+    do 3791 own play_card card mine it category is spell
+    do 3792 own create card mine random region is Scoiatael;cost le 3561;category is spell
+    do 3792 own play_card card mine it category is spell
+
+## C29 lr_da_1.md 10 (MISSED CAUSE, open, 0 table lines from the same code)
+Making a Bomb moves an enemy unit like Guerilla Tactics and Samum do, so it feeds the cards that react to enemy moves or act on positions, but it has no line at all.
+- W gwent: Making a Bomb -> Milva: Sharpshooter: makes enemy units move | network.py []
+- W gwent: Making a Bomb -> Filavandrel aén Fidháil: NONE | network.py []
+- W gwent: Making a Bomb -> Red Haze: Making a Bomb moves enemy units, and Red Haze acts on units next to a card it picks | network.py []
+- W gwent: Making a Bomb -> Samum: Making a Bomb moves units, and Samum acts on units next to its target | network.py []
+- R gwent: Guerilla Tactics -> Milva: Sharpshooter: makes enemy units move | network.py []
+- R gwent: Guerilla Tactics -> Red Haze: Guerilla Tactics moves enemy units, and Red Haze acts on units next to a card it picks | network.py []
+  Making a Bomb:
+    when 3526 played self
+    when 4526 turn_end
+    do 3526 own move unit enemy chosen board
+    do 3526 own give_keyword unit enemy it amount=4.0
+    do 4526 uses_keyword damage unit enemy it amount=1.0
+    do 3526 own damage unit enemy it count eq 3315 of unit all board;of:kind is unit;of:position is same_row of it amount=4.0
+  Filavandrel aén Fidháil:
+    when 3791 played self
+    when 3792 played self
+    if 3791 keyword_condition
+    if 3792 keyword_condition
+    if 3791 have is self position is front_row
+    if 3792 have is self position is back_row
+    do 3791 own create card mine random region is Scoiatael;cost eq 3560;category is spell
+    do 3791 own play_card card mine it category is spell
+    do 3792 own create card mine random region is Scoiatael;cost le 3561;category is spell
+    do 3792 own play_card card mine it category is spell
+
+## C30 lr_da_1.md 11 (CAUSE, open, 0 table lines from the same code)
+Armor is only given by Dwarven Skirmisher to itself and never read, so Tempering's Armor is no help to it (L6, L14).
+- W gwent: Tempering -> Dwarven Skirmisher: gives it Armor for its effect | network.py []
+- R gwent: Pyrotechnician -> Mahakam Volunteers: is a Dwarf it asks for | network.py []
+  Tempering:
+    when 3133 played self
+    when 4532 damaged self
+    when 4698 played self
+    when 4532 damaged self
+    if 4532 amount_listed
+    if 4532 amount_listed
+    do 3133 own stat_change unit mine chosen board strength=5.0
+    do 3133 own give_keyword unit mine it board type is 39 amount=2.0
+    do 4532 uses_keyword negate_damage unit mine it board type is 39 amount=listed
+    do 4698 own stat_change unit mine chosen board strength=5.0
+    do 4698 own give_keyword unit mine it board type is 39 amount=2.0
+    do 4532 uses_keyword negate_damage unit mine it board type is 39 amount=listed
+  Dwarven Skirmisher:
+    when 2071 played self
+    when 4532 damaged self
+    when 2072 activated self
+    if 2071 keyword_condition
+    if 4532 amount_listed
+    if 2072 keyword_condition
+    if 2071 have is self position is front_row
+    if 2072 have is self keyword is 756174
+    do 2071 own damage unit enemy chosen board amount=3.0
+    do 2071 own give_keyword self amount=1.0
+    do 4532 uses_keyword negate_damage self amount=listed
+    do 2072 own damage unit enemy chosen board amount=3.0
+
+## C31 lr_da_10.md 3 (CAUSE, open, 0 table lines from the same code)
+Cursed Scroll moves cards from hand to the deck bottom, but is read as moving units on the board, so every card that acts on units in a row gets a line (L1, L16).
+- W gwent: Cursed Scroll -> Arachas Behemoth: Cursed Scroll moves Arachas Behemoth and your units, and Arachas Behemoth acts on units in its row | network.py []
+- W gwent: Cursed Scroll -> Kikimore Queen: Cursed Scroll moves Kikimore Queen and your units, and Kikimore Queen acts on units in its row | network.py []
+- W gwent: Cursed Scroll -> Orchard Mantrap: Cursed Scroll moves Orchard Mantrap, and Orchard Mantrap acts on units back row it or front row it | network.py []
+- W gwent: Cursed Scroll -> Whispess: Tribute: Cursed Scroll moves Whispess: Tribute, and Whispess: Tribute acts on units back row it | network.py []
+  Cursed Scroll:
+    when 3156 activated self
+    when 4504 played self
+    do 3156 own draw card mine chosen deck amount=1.0
+    do 3156 own move card mine chosen hand
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Arachas Behemoth:
+    when 1960 played self
+    do 1960 own summon amount=2.0
+    do 1960 own stat_change unit mine all board type is 53;position is same_row of self strength=1.0
+  Kikimore Queen:
+    when 3058 always
+    when 4540 played unit mine strength gt 4192
+    when 3059 keyword_used
+    when 3060 played card mine type is 28
+    when 4540 played unit mine strength gt 4192
+    if 4540 amount_listed
+    if 3059 keyword_condition
+    if 4540 amount_listed
+    if 3059 keyword_condition
+    do 3058 own give_keyword self
+    do 4540 uses_keyword stat_change self strength=listed
+    do 3059 own stat_change unit mine all board type is 53;position is same_row of self strength=1.0
+    do 3060 own repeat self
+    do 4540 has_keyword stat_change self strength=listed
+  Orchard Mantrap:
+    when 3899 played self
+    when 4538 activated
+    when 4516 activated
+    when 3900 always
+    when 3901 played self
+    when 4540 played unit mine strength gt 4192
+    if 3899 keyword_condition
+    if 4538 amount_stat strength it
+    if 3901 keyword_condition
+    if 4540 amount_listed
+    if 3899 have is self position is front_row
+    if 3901 have is self position is back_row
+    do 3899 own keyword_action unit mine chosen board
+    do 4538 uses_keyword kill unit mine chosen board
+    do 4538 uses_keyword stat_change unit mine chosen board strength=stat
+    do 4538 uses_keyword keyword_action unit mine chosen board
+    do 4516 uses_keyword obliterate unit mine chosen board
+    do 3900 own increase_effect self amount=1.0
+    do 3901 own give_keyword unit mine chosen board
+    do 4540 uses_keyword stat_change unit mine chosen board strength=listed
+  Whispess: Tribute:
+    when 2383 played self
+    when 4643 played self
+    if 2383 keyword_condition
+    if 4643 keyword_condition
+    if 2383 have is self position is back_row
+    if 4643 have is self position is back_row
+    do 2383 own play_card card mine chosen deck type is 28
+    do 4643 own play_card card mine chosen deck type is 28
+
+## C32 lr_da_10.md 4 (CAUSE, open, 0 table lines from the same code)
+a card is linked to Lyrian Arbalest as an Order card (it waits for a played card with Order) though the card has no Order (L10, L7).
+- W gwent: Siege -> Lyrian Arbalest: is played | network.py []
+- R gwent: Pincer Maneuver -> Lyrian Arbalest: is a card whose playing sets off its effect | network.py [1823]
+- R gwent: Reinforced Ballista -> Lyrian Arbalest: is a card whose playing sets off its effect | network.py [1823]
+  Siege:
+    when 3163 always
+    when 4517 leaves_play self
+    when 3164 played self
+    when 3165 played unit mine type is 51
+    when 3166 played unit mine type is 51
+    when 4517 leaves_play self
+    if 3165 stage 1.0
+    if 3166 stage 2.0
+    do 3163 own give_keyword self
+    do 4517 uses_keyword obliterate self
+    do 3164 own summon
+    do 3165 own summon
+    do 3166 own create card mine
+    do 3166 own play_card card mine it card is 756310
+    do 4517 has_keyword obliterate self
+  Lyrian Arbalest:
+    when 2632 activated self
+    when 2633 always
+    when 4513 always
+    when 2634 played card mine keyword is 756143
+    when 4513 always
+    when 4513 always
+    when 4504 played self
+    if 4513 amount_listed
+    if 4513 amount_listed
+    if 4513 amount_listed
+    do 2632 own damage unit chosen board amount=1.0
+    do 2633 own give_keyword self amount=1.0
+    do 4513 uses_keyword can self event=activated;times=listed
+    do 2634 own give_keyword self amount=1.0
+    do 4513 uses_keyword can self event=activated;times=listed
+    do 4513 has_keyword can self event=activated;times=listed
+    do 4504 has_keyword cant self event=activated;turns=1.0
+
+## C33 lr_da_10.md 5 (CAUSE, open, 0 table lines from the same code)
+using Consume is read as using Thrive, though Kikimore Queen waits only for Thrive being used (L15, L10).
+- W gwent: Arachas Queen -> Kikimore Queen: uses a keyword or status | network.py []
+- R gwent: Orchard Mantrap -> Kikimore Queen: uses a keyword or status; also makes stronger: does what it waits for or counts (keyword used) | network.py [1500]
+- R gwent: Sir Scratch-a-Lot -> Kikimore Queen: lets it do more (keyword_used) | network.py [1499]
+  Arachas Queen:
+    when 3927 played self
+    when 4538 activated
+    when 4516 activated
+    when 3928 activated self
+    when 3929 dies self
+    when 4504 played self
+    if 4538 amount_stat strength it
+    do 3927 own keyword_action unit mine chosen board
+    do 4538 uses_keyword kill unit mine chosen board
+    do 4538 uses_keyword stat_change unit mine chosen board strength=stat
+    do 4538 uses_keyword keyword_action unit mine chosen board
+    do 4516 uses_keyword obliterate unit mine chosen board
+    do 3928 own create
+    do 3928 own play_card card mine chosen hand card is 756376
+    do 3929 own copy it state is created
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Kikimore Queen:
+    when 3058 always
+    when 4540 played unit mine strength gt 4192
+    when 3059 keyword_used
+    when 3060 played card mine type is 28
+    when 4540 played unit mine strength gt 4192
+    if 4540 amount_listed
+    if 3059 keyword_condition
+    if 4540 amount_listed
+    if 3059 keyword_condition
+    do 3058 own give_keyword self
+    do 4540 uses_keyword stat_change self strength=listed
+    do 3059 own stat_change unit mine all board type is 53;position is same_row of self strength=1.0
+    do 3060 own repeat self
+    do 4540 has_keyword stat_change self strength=listed
+
+## C34 lr_da_10.md 6 (MISSED CAUSE, open, 0 table lines from the same code)
+Onager waits for any Order being used, but the Order cards of its deck give it no line (L10, L21 kept: a keyword trigger links to every card with it).
+- W gwent: Pincer Maneuver -> Onager: NONE | network.py []
+- W gwent: Kerack City Guard -> Onager: NONE | network.py []
+- W gwent: Prince Anséis -> Onager: NONE | network.py []
+- W gwent: Reinforced Ballista -> Onager: NONE | network.py []
+- R gwent: Onager -> Siege Master: is a Siege Engine whose playing sets off its effect | network.py [1823]
+  Pincer Maneuver:
+    when 2643 activated self
+    when 2644 always
+    when 4513 always
+    when 4513 always
+    when 4504 played self
+    if 4513 amount_listed
+    if 4513 amount_listed
+    do 2643 own draw card mine chosen deck region not Neutral amount=1.0
+    do 2643 own shuffle_into_deck card mine chosen hand
+    do 2643 own summon
+    do 2644 own give_keyword self amount=2.0
+    do 4513 uses_keyword can self event=activated;times=listed
+    do 4513 has_keyword can self event=activated;times=listed
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Onager:
+    when 4244 keyword_used keyword is 756143
+    do 4244 own damage unit enemy random board amount=1.0
+  Kerack City Guard:
+    when 3410 always
+    when 4519 always
+    when 3411 activated self
+    when 3412 turn_end
+    when 4519 always
+    when 4504 played self
+    if 3412 event_count eq 0.0
+    do 3410 own give_keyword self
+    do 4519 uses_keyword cant self event=given_keyword
+    do 3411 own move unit enemy chosen board
+    do 3412 own stat_change self strength=1.0
+    do 4519 has_keyword cant self event=given_keyword
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Prince Anséis:
+    when 2746 always
+    when 4524 played self
+    when 4510 played self
+    when 4525 played self
+    when 2747 activated self
+    when 2748 activated self
+    when 4552 activated
+    when 4524 played self
+    when 4510 played self
+    when 4525 played self
+    when 4504 played self
+    if 4524 have is self position is front_row
+    if 4525 have is self position is back_row
+    if 2747 keyword_condition not
+    if 2748 keyword_condition
+    if 4552 amount_stat strength self
+    if 4552 amount_stat strength it
+    if 4524 have is self position is front_row
+    if 4525 have is self position is back_row
+    if stat strength gt stat self
+    if 2747 stat strength gt stat self
+    if 2748 stat strength gt stat self
+    do 2746 own give_keyword self
+    do 4524 uses_keyword give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 4525 uses_keyword stat_change self strength=1.0
+    do 2747 own damage unit enemy chosen board amount=4.0
+    do 2748 own keyword_action unit enemy chosen board
+    do 4552 uses_keyword damage unit enemy chosen board amount=stat
+    do 4552 uses_keyword damage unit enemy chosen board amount=stat
+    do 4552 uses_keyword repeat unit enemy chosen board
+    do 4524 has_keyword give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 4525 has_keyword stat_change self strength=1.0
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Reinforced Ballista:
+    when 1911 always
+    when 4524 played self
+    when 4510 played self
+    when 4525 played self
+    when 1912 always
+    when 4533 played card mine type is 18
+    when 1913 activated self
+    when 1914 always
+    when 4511 activated self
+    when 4524 played self
+    when 4510 played self
+    when 4525 played self
+    when 4533 played card mine type is 18
+    when 4504 played self
+    if 4524 have is self position is front_row
+    if 4525 have is self position is back_row
+    if 4511 amount_listed
+    if 4524 have is self position is front_row
+    if 4525 have is self position is back_row
+    do 1911 own give_keyword self
+    do 4524 uses_keyword give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 4525 uses_keyword stat_change self strength=1.0
+    do 1912 own give_keyword self
+    do 4533 uses_keyword countdown_advance self amount=1.0
+    do 1913 own damage unit chosen board amount=1.0
+    do 1914 own keyword_action amount=1.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+    do 4524 has_keyword give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 4525 has_keyword stat_change self strength=1.0
+    do 4533 has_keyword countdown_advance self amount=1.0
+    do 4504 has_keyword cant self event=activated;turns=1.0
+
+## C35 lr_da_11.md 1 (CAUSE, open, 0 table lines from the same code)
+A card that only reorders cards inside the deck is read as moving a unit on the board, so it is said to help cards that need a front or back row (L4: a help must do the very thing needed).
+- W gwent: Maxii van Dekkar -> Heymaey Skald: Maxii van Dekkar moves Heymaey Skald, and Heymaey Skald acts on units back row it | network.py []
+- W gwent: Maxii van Dekkar -> Sove: Maxii van Dekkar moves Sove, and Sove acts on units front row it | network.py []
+- R gwent: Magic Compass -> Sove: plays it: its effect goes off | network.py []
+  Maxii van Dekkar:
+    when 3487 played self
+    do 3487 own look card mine all deck
+    do 3487 own shuffle_into_deck card mine all deck
+    do 3487 own move card mine chosen deck
+  Heymaey Skald:
+    when 2144 played self
+    when 4543 activated
+    if 2144 keyword_condition
+    if 2144 have is self position is back_row
+    do 2144 own draw card mine deck_top amount=1.0
+    do 2144 own keyword_action card mine chosen hand
+    do 4543 uses_keyword discard card mine chosen hand
+  Sove:
+    when 4023 played self
+    when 4024 dies self
+    when 4537 always
+    if 4023 keyword_condition
+    if 4023 amount_count unit enemy all board state is damaged
+    if 4024 amount_product
+    if 4024 amount_stat base_power self
+    if 4023 have is self position is front_row
+    do 4023 own summon card mine chosen deck type is 43
+    do 4023 own give_ability card mine it type is 43
+    do 4024 gives stat_change unit enemy board card is 757381 strength=product
+    do 4023 own damage card mine it type is 43 amount=count
+    do 4023 own give_keyword self
+    do 4537 uses_keyword cant player all event=targeted

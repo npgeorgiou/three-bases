@@ -1,0 +1,754 @@
+## C11 lr_da_8.md 3 (CAUSE, open, 369 table lines from the same code)
+"Gives it more strength" to any Ship or Pirate is made a line to cards that do not read strength (L18, L14).
+- W gwent: Holger Blackhand -> Tidecloak Hideaway: is a Pirate it asks for; also makes stronger: gives it more strength when it comes | network.py [2429]
+- W gwent: Holger Blackhand -> An Craite Longship: gives it more strength when it comes | network.py [2429]
+- W gwent: Holger Blackhand -> Bjorn's Drakkar: gives it more strength when it comes | network.py [2429]
+  Holger Blackhand:
+    when 2118 played self
+    when 2119 played card mine type is 59
+    when 2120 played card mine type is 60
+    do 2118 own damage unit chosen board amount=2.0
+    do 2119 own stat_change card mine it type is 59 strength=1.0
+    do 2120 own damage unit enemy random board amount=1.0
+  Tidecloak Hideaway:
+    when 2893 played self
+    if 2893 keyword_condition
+    if 2893 amount_count card mine all hand type is 60
+    if 2893 have is self position is back_row
+    do 2893 own stat_change unit mine chosen board strength=count
+  An Craite Longship:
+    when 2154 played unit enemy
+    if 2154 keyword_condition
+    if have is self position is front_row
+    if 2154 have is self position is front_row
+    do 2154 own damage unit enemy it amount=1.0
+  Bjorn's Drakkar:
+    when 4432 always
+    when 4517 leaves_play self
+    when 4433 activated self
+    when 4434 damaged self
+    when 4435 always
+    when 4513 always
+    when 4517 leaves_play self
+    when 4513 always
+    when 4504 played self
+    if 4434 amount_event_amount
+    if 4513 amount_listed
+    if 4513 amount_listed
+    do 4432 own give_keyword self
+    do 4517 uses_keyword obliterate self
+    do 4433 own damage unit enemy chosen board amount=1.0
+    do 4433 own give_ability unit enemy it
+    do 4434 gives damage self amount=event_amount
+    do 4435 own give_keyword self amount=1.0
+    do 4513 uses_keyword can self event=activated;times=listed
+    do 4517 has_keyword obliterate self
+    do 4513 has_keyword can self event=activated;times=listed
+    do 4504 has_keyword cant self event=activated;turns=1.0
+
+## C12 lr_da_8.md 4 (CAUSE, open, 302 table lines from the same code)
+Giving Armor to any Pirate or Ship is made a line to cards whose text never uses Armor (L14, L4).
+- W gwent: Onslaught -> Tidecloak Hideaway: gives it Armor | network.py [1499]
+- W gwent: Onslaught -> An Craite Longship: gives it Armor | network.py [1499]
+- W gwent: Crach an Craite -> Dimun Pirate: can give it Armor | network.py [1500]
+- W gwent: Crach an Craite -> Deranged Corsair: can give it Armor | network.py [1500]
+  Onslaught:
+    when 2353 activated self
+    when 2354 always
+    when 4513 always
+    when 2355 damaged unit enemy
+    when 4532 damaged self
+    when 4639 activated self
+    when 4640 always
+    when 4513 always
+    when 4641 damaged unit enemy
+    when 4532 damaged self
+    when 4513 always
+    when 4504 played self
+    if 4513 amount_listed
+    if 4532 amount_listed
+    if 4513 amount_listed
+    if 4532 amount_listed
+    if 4513 amount_listed
+    do 2353 own damage unit enemy chosen board amount=3.0
+    do 2354 own give_keyword self amount=2.0
+    do 4513 uses_keyword can self event=activated;times=listed
+    do 2355 own give_keyword unit mine all hand type in 60;type in 59 amount=1.0
+    do 4532 uses_keyword negate_damage unit mine all hand type in 60;type in 59 amount=listed
+    do 4639 own damage unit enemy chosen board amount=3.0
+    do 4640 own give_keyword self amount=2.0
+    do 4513 uses_keyword can self event=activated;times=listed
+    do 4641 own give_keyword card mine all hand type in 60;type in 59 amount=1.0
+    do 4532 uses_keyword negate_damage card mine all hand type in 60;type in 59 amount=listed
+    do 4513 has_keyword can self event=activated;times=listed
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Tidecloak Hideaway:
+    when 2893 played self
+    if 2893 keyword_condition
+    if 2893 amount_count card mine all hand type is 60
+    if 2893 have is self position is back_row
+    do 2893 own stat_change unit mine chosen board strength=count
+  An Craite Longship:
+    when 2154 played unit enemy
+    if 2154 keyword_condition
+    if have is self position is front_row
+    if 2154 have is self position is front_row
+    do 2154 own damage unit enemy it amount=1.0
+  Crach an Craite:
+    when 3631 played self
+    when 4532 damaged self
+    when 3632 activated self
+    when 3633 always
+    when 4511 activated self
+    when 3634 played unit mine type in 60;type in 59;position is sides of self
+    when 4567 activated
+    when 4504 played self
+    if 4532 amount_listed
+    if 4511 amount_listed
+    if 4567 amount_stat strength self
+    if 4567 amount_stat strength it
+    do 3631 own give_keyword card mine chosen hand type in 60;type in 59 amount=2.0
+    do 4532 uses_keyword negate_damage card mine chosen hand type in 60;type in 59 amount=listed
+    do 3632 own damage unit chosen board amount=1.0
+    do 3633 own keyword_action amount=2.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+    do 3634 own keyword_action unit mine it type in 60;type in 59
+    do 4567 uses_keyword damage unit mine it type in 60;type in 59 amount=stat
+    do 4567 uses_keyword damage unit mine it type in 60;type in 59 amount=stat
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Dimun Pirate:
+    when 2139 played self
+    if 2139 have not unit mine all board type is 59
+    do 2139 own move card mine top deck
+  Deranged Corsair:
+    when 3858 played self
+    when 3859 dies self
+    when 4514 turn_start
+    when 4514 turn_start
+    do 3858 own give_ability unit enemy chosen board
+    do 3859 gives give_keyword position position is same_row of self turns=2.0
+    do 4514 uses_keyword damage unit random board position is same_row of self amount=3.0;spread=1.0
+    do 3858 own give_keyword position enemy position is same_row of it turns=1.0
+    do 4514 uses_keyword damage unit random board position is same_row of self amount=3.0;spread=1.0
+
+## C13 lr_da_4.md 3 (CAUSE, open, 207 table lines from the same code)
+Removing a Shield from an enemy is called "makes stronger" for any card that deals damage, but any damage card gains from that, so it is generic (L18, L4).
+- W gwent: Tourney Joust -> Impera Enforcers: removes their Block: its damage gets through | network.py [2318]
+- W gwent: Tourney Joust -> Ace up the Sleeve: removes their Block: its damage gets through | network.py [2318]
+- W gwent: Tourney Joust -> Coup de Grâce: removes their Block: its damage gets through | network.py [2318]
+  Tourney Joust:
+    when 2733 played self
+    when 4535 damaged self
+    if 4535 amount_event_amount
+    do 2733 own choose_one
+    do 2733 own remove_keyword unit enemy chosen board
+    do 2733 own damage unit enemy it amount=4.0
+    do 2733 own give_keyword unit mine chosen board
+    do 4535 uses_keyword negate_damage unit mine chosen board amount=event_amount
+    do 4535 uses_keyword remove_keyword unit mine chosen board
+    do 2733 own stat_change unit mine it strength=4.0
+  Impera Enforcers:
+    when 2218 always
+    when 4510 played self
+    when 2219 activated self
+    when 2220 always
+    when 4513 always
+    when 2221 killed
+    when 4532 damaged self
+    when 2222 given_keyword unit enemy keyword is 9000001
+    when 4513 always
+    when 4510 played self
+    when 4513 always
+    when 4504 played self
+    if 4513 amount_listed
+    if 4532 amount_listed
+    if 4513 amount_listed
+    if 4513 amount_listed
+    do 2218 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 2219 own damage unit enemy chosen board amount=1.0
+    do 2220 own give_keyword self amount=1.0
+    do 4513 uses_keyword can self event=activated;times=listed
+    do 2221 own give_keyword self amount=1.0
+    do 4532 uses_keyword negate_damage self amount=listed
+    do 2222 own give_keyword self amount=1.0
+    do 4513 uses_keyword can self event=activated;times=listed
+    do 4510 has_keyword can self event=activated
+    do 4513 has_keyword can self event=activated;times=listed
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Ace up the Sleeve:
+    when 4465 always
+    when 4517 leaves_play self
+    when 4466 played self
+    when 4517 leaves_play self
+    do 4465 own give_keyword self
+    do 4517 uses_keyword obliterate self
+    do 4466 own damage unit enemy chosen board amount=2.0
+    do 4517 has_keyword obliterate self
+  Coup de Grâce:
+    when 3425 always
+    when 4545 round_start
+    when 4517 leaves_play self
+    when 3426 played self
+    when 3427 killed
+    when 3428 played self
+    when 4545 round_start
+    when 4517 leaves_play self
+    if 3428 keyword_condition
+    if it_matches keyword is 9000001
+    if 3428 it_matches keyword is 9000001
+    do 3425 own give_keyword self
+    do 4545 uses_keyword put_on_top self
+    do 4545 uses_keyword give_keyword self
+    do 4517 uses_keyword obliterate self
+    do 3426 own damage unit enemy chosen board amount=3.0
+    do 3427 own copy it
+    do 3427 own play_card it
+    do 3428 own copy it
+    do 3428 own play_card it
+    do 4545 has_keyword put_on_top self discard
+    do 4545 has_keyword give_keyword self
+    do 4517 uses_keyword obliterate self
+
+## C14 lr_da_5.md 4 (CAUSE, open, 138 table lines from the same code)
+Tourney Joust removing an enemy Shield is a generic help for any damage, but it gets "its damage gets through" lines to cards that only deal damage as one part of their text (L2, L4, L18).
+- W gwent: Tourney Joust -> Ard Feainn Heavy Cavalry: removes their Block: its damage gets through | network.py [2318]
+- W gwent: Tourney Joust -> Ivar Evil-Eye: removes their Block: its damage gets through | network.py [2318]
+  Tourney Joust:
+    when 2733 played self
+    when 4535 damaged self
+    if 4535 amount_event_amount
+    do 2733 own choose_one
+    do 2733 own remove_keyword unit enemy chosen board
+    do 2733 own damage unit enemy it amount=4.0
+    do 2733 own give_keyword unit mine chosen board
+    do 4535 uses_keyword negate_damage unit mine chosen board amount=event_amount
+    do 4535 uses_keyword remove_keyword unit mine chosen board
+    do 2733 own stat_change unit mine it strength=4.0
+  Ard Feainn Heavy Cavalry:
+    when 3093 always
+    when 4546 turn_end
+    when 4547 turn_end
+    when 4532 damaged self
+    when 3094 turn_end
+    when 4532 damaged self
+    when 3095 stat_changed self
+    when 3096 played unit enemy
+    when 4523 always
+    when 4546 turn_end
+    when 4547 turn_end
+    when 4532 damaged self
+    if 4546 count eq 1.0 unit mine board position is sides of self
+    if 4546 have is self position is front_row
+    if 4547 count eq 1.0 unit mine board position is sides of self
+    if 4547 have is self position is back_row
+    if 4532 amount_listed
+    if 4532 amount_listed
+    if 3095 keyword_condition
+    if 3095 stat armor ge 5.0 self
+    if 3096 keyword_condition
+    if 3096 keyword_condition
+    if 3096 amount_stat armor self
+    if 4546 count eq 1.0 unit mine board position is sides of self
+    if 4546 have is self position is front_row
+    if 4547 count eq 1.0 unit mine board position is sides of self
+    if 4547 have is self position is back_row
+    if 4532 amount_listed
+    if have is self position is back_row
+    if 3095 have is self position is back_row
+    if 3096 have is self keyword is 756174
+    if 3096 have is self position is front_row
+    do 3093 own give_keyword self
+    do 4546 uses_keyword repeat self
+    do 4547 uses_keyword give_keyword self amount=1.0
+    do 4532 uses_keyword negate_damage self amount=listed
+    do 3094 own give_keyword self amount=1.0
+    do 4532 uses_keyword negate_damage self amount=listed
+    do 3095 own move self
+    do 3096 own damage unit enemy it amount=stat
+    do 3096 own remove_keyword self
+    do 3096 own give_keyword self
+    do 4523 uses_keyword silence self
+    do 4546 has_keyword repeat self
+    do 4547 has_keyword give_keyword self amount=1.0
+    do 4532 uses_keyword negate_damage self amount=listed
+  Ivar Evil-Eye:
+    when 3488 played self
+    when 3489 played self
+    if 3488 keyword_condition not
+    if 3489 keyword_condition 2.0
+    if count le listed card mine hand
+    if 3488 count le listed card mine hand
+    if 3489 count le listed card mine hand
+    do 3488 own swap_stats self
+    do 3489 own damage unit enemy chosen board amount=4.0
+
+## C15 lr_la_3.md 3 (CAUSE, open, 120 table lines from the same code)
+A card that makes a duel or other act is linked to a card that waits for a Soldier summoned or banishes only its own kills, so the other card's own effect does not fire, L16/L3.
+- W gwent: Bernard Loredo -> Boholt: is a Soldier whose summoning sets off its effect | network.py [1823]
+- W gwent: Bernard Loredo -> Northern Wind: dies by its own effect: Northern Wind Banishes them | network.py []
+- R gwent: Berengar -> Hjalmar an Craite: dies by its own effect: Hjalmar an Craite Banishes them | network.py []
+  Bernard Loredo:
+    when 4239 activated self
+    when 4552 activated
+    when 4504 played self
+    if 4552 amount_stat strength self
+    if 4552 amount_stat strength it
+    do 4239 own keyword_action self
+    do 4552 uses_keyword damage self amount=stat
+    do 4552 uses_keyword damage self amount=stat
+    do 4552 uses_keyword repeat self
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Boholt:
+    when 4038 always
+    when 4524 played self
+    when 4510 played self
+    when 4525 played self
+    when 4039 activated self
+    when 4040 summoned unit mine type is 46
+    when 4524 played self
+    when 4510 played self
+    when 4525 played self
+    when 4504 played self
+    if 4524 have is self position is front_row
+    if 4525 have is self position is back_row
+    if 4524 have is self position is front_row
+    if 4525 have is self position is back_row
+    do 4038 own give_keyword self
+    do 4524 uses_keyword give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 4525 uses_keyword stat_change self strength=1.0
+    do 4039 own copy unit mine chosen board state is bronze;type is 46
+    do 4040 own stat_change self strength=2.0
+    do 4524 has_keyword give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 4525 has_keyword stat_change self strength=1.0
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Northern Wind:
+    when 2680 played self
+    when 2681 killed
+    when 4516 activated
+    do 2680 own damage unit chosen board amount=4.0
+    do 2681 own keyword_action unit it discard
+    do 4516 uses_keyword obliterate unit it discard
+
+## C16 lr_la_3.md 2 (CAUSE, open, 118 table lines from the same code)
+A help is linked to a card whose own text does not use it (a plain keyword or a bare need), L14/L6.
+- W gwent: Inspirational Ballad -> Berengar: can give it Vitality | network.py [1500]
+- W gwent: Forbidden Magic -> Odrin: NONE | network.py []
+- R gwent: Witch Hunter -> Vigilantes: makes enemy units get Bounty | network.py []
+  Inspirational Ballad:
+    when 2686 played self
+    when 4534 turn_end
+    when 4534 turn_end
+    when 4534 turn_end
+    when 4534 turn_end
+    do 2686 own give_keyword unit mine random board type is 34 amount=6.0
+    do 4534 uses_keyword stat_change unit mine random board type is 34 strength=1.0
+    do 2686 own give_keyword unit mine random board type is 39 amount=6.0
+    do 4534 uses_keyword stat_change unit mine random board type is 39 strength=1.0
+    do 2686 own give_keyword unit mine random board type is 36 amount=6.0
+    do 4534 uses_keyword stat_change unit mine random board type is 36 strength=1.0
+    do 2686 own give_keyword unit mine random board type is 35 amount=6.0
+    do 4534 uses_keyword stat_change unit mine random board type is 35 strength=1.0
+  Berengar:
+    when 3485 turn_start
+    if 3485 have not unit mine all board type is 34;position is same_row of self;card not 757163
+    do 3485 own kill self
+
+## C17 lr_la_2.md 6 (CAUSE, open, 93 table lines from the same code)
+A card that creates a unit in hand is linked to a card that counts a different kind (Firesworn tokens), and an Armor giver is linked to a card with no Armor text; the receiving card does not use the help (L20, L14).
+- W gwent: Eventide Plunder -> Procession of Penance: creates cards | network.py []
+- W gwent: Barclay Els -> Mahakam Defender: gives it Armor for its effect; also gives keyword: gives it Armor | network.py [1499]
+- R gwent: Wagenburg -> Ard Feainn Tortoise: gives it Armor for its effect; also makes stronger: does what it waits for or counts (given keyword) (when next to it) | network.py [1500]
+  Eventide Plunder:
+    when 2903 played self
+    do 2903 own create unit mine random cost eq 2758;keyword is 756213
+  Procession of Penance:
+    when 2930 played self
+    if 2930 amount_sum
+    if 2930 amount_product
+    if 2930 amount_count unit mine all board type is 20;state is token
+    if 2930 amount_minus
+    do 2930 own damage self amount=sum
+  Barclay Els:
+    when 2049 played self
+    when 4532 damaged self
+    if 4532 amount_listed
+    do 2049 own give_keyword unit mine all board type is 39;keyword not 756174 amount=1.0
+    do 4532 uses_keyword negate_damage unit mine all board type is 39;keyword not 756174 amount=listed
+    do 2049 own stat_change unit mine all board type is 39;keyword is 756174 strength=1.0
+  Mahakam Defender:
+    when 2073 turn_end
+    if 2073 keyword_condition
+    if have is self keyword is 756174
+    if 2073 have is self keyword is 756174
+    do 2073 own stat_change self strength=1.0
+
+## C18 lr_da_1.md 1 (CAUSE, open, 27 table lines from the same code)
+Naiad Fledgling removes Vitality for its own strength, so the cards that make Vitality feed it, not the other way round; its own gift of Vitality to the unit on its left is no need of Frog, Cat Witcher Adept or Nature's Gift (L6, L14).
+- W gwent: Naiad Fledgling -> Frog: keeps the Vitality it gives itself off it | network.py [1508]
+- W gwent: Naiad Fledgling -> Cat Witcher Adept: keeps the Vitality it gives itself off it | network.py [1508]
+- W gwent: Naiad Fledgling -> Nature's Gift: keeps the Vitality it gives itself off it | network.py [1508]
+- R gwent: Nature's Gift -> Freixenet: gives it Vitality for its effect; also makes stronger: does what it waits for or counts (given keyword) | network.py [1500]
+  Naiad Fledgling:
+    when 4036 keyword_used keyword is 756204
+    when 4534 turn_end
+    when 4037 activated self
+    when 4504 played self
+    if 4037 amount_event_amount
+    do 4036 own give_keyword unit left_of_self amount=2.0
+    do 4534 uses_keyword stat_change unit left_of_self strength=1.0
+    do 4037 own remove_keyword unit mine chosen board
+    do 4037 own stat_change self strength=event_amount
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Frog:
+    when 4437 always
+    when 4517 leaves_play self
+    when 4438 turn_end
+    when 4534 turn_end
+    when 4439 activated self
+    when 4517 leaves_play self
+    when 4504 played self
+    do 4437 own give_keyword self
+    do 4517 uses_keyword obliterate self
+    do 4438 own give_keyword unit all board position is sides of self
+    do 4534 uses_keyword stat_change unit all board position is sides of self strength=1.0
+    do 4439 own move self
+    do 4517 has_keyword obliterate self
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Cat Witcher Adept:
+    when 3524 played self
+    when 4526 turn_end
+    when 3525 played self
+    when 4534 turn_end
+    if 3524 keyword_condition
+    if 3524 amount_count unit all board position is same_row of it
+    if 3525 keyword_condition
+    if 3525 amount_count unit all board position is same_row of it
+    if 3524 have is self position is front_row
+    if 3525 have is self position is back_row
+    do 3524 own give_keyword unit enemy chosen board amount=count
+    do 4526 uses_keyword damage unit enemy chosen board amount=1.0
+    do 3525 own give_keyword unit mine chosen board amount=count
+    do 4534 uses_keyword stat_change unit mine chosen board strength=1.0
+  Nature's Gift:
+    when 2363 always
+    when 4551 played card mine type is 26
+    when 2364 activated self
+    when 4534 turn_end
+    when 2365 always
+    when 4513 always
+    when 4551 played card mine type is 26
+    when 4513 always
+    when 4504 played self
+    if 4551 amount_count unit mine board keyword is 756204
+    if 4513 amount_listed
+    if 4551 amount_count unit mine board keyword is 756204
+    if 4513 amount_listed
+    do 2363 own give_keyword self
+    do 4551 uses_keyword summon unit mine
+    do 4551 uses_keyword stat_set unit mine it card is 813637 strength=count
+    do 2364 own give_keyword unit mine chosen board amount=2.0
+    do 4534 uses_keyword stat_change unit mine chosen board strength=1.0
+    do 2365 own give_keyword self amount=3.0
+    do 4513 uses_keyword can self event=activated;times=listed
+    do 4551 has_keyword summon unit mine
+    do 4551 has_keyword stat_set unit mine it card is 813637 strength=count
+    do 4513 has_keyword can self event=activated;times=listed
+    do 4504 has_keyword cant self event=activated;turns=1.0
+
+## C19 lr_da_9.md 5 (CAUSE, open, 23 table lines from the same code)
+Dwimveandra refreshes only a Location landmark and advances a Scenario landmark, so it gives "lets you use it again" only to landmarks, but Flotsam is a unit (L8, L14).
+- W gwent: Dwimveandra -> Flotsam: lets you use it again | network.py [1508]
+  Dwimveandra:
+    when 3775 played self
+    when 3776 played self
+    if 3775 keyword_condition
+    if 3775 amount_full
+    if 3776 keyword_condition
+    if 3775 have is self position is front_row
+    if 3776 have is self position is back_row
+    do 3775 own stage_advance landmark mine chosen board type is 14 amount=full
+    do 3776 own refresh landmark mine chosen board type is 17
+  Flotsam:
+    when 4240 always
+    when 4541 round_end
+    when 4241 played self
+    when 4242 activated self
+    when 4510 played self
+    when 4811 always
+    when 4541 round_end
+    when 4812 played self
+    when 4813 activated self
+    when 4510 played self
+    when 4541 round_end
+    when 4504 played self
+    do 4240 own give_keyword self
+    do 4541 uses_keyword cant self event=leaves_play
+    do 4541 uses_keyword remove_keyword self
+    do 4241 own create unit mine random state is bronze;region is Northern Realms;keyword is 756143
+    do 4242 own refresh unit mine chosen board state is bronze
+    do 4242 own give_keyword unit mine it
+    do 4510 uses_keyword can unit mine it event=activated
+    do 4811 own give_keyword self
+    do 4541 uses_keyword cant self event=leaves_play
+    do 4541 uses_keyword remove_keyword self
+    do 4812 own create unit mine random state is bronze;region is Northern Realms;keyword is 756143
+    do 4813 own refresh unit mine chosen board state is bronze
+    do 4813 own give_keyword unit mine it
+    do 4510 uses_keyword can unit mine it event=activated
+    do 4541 has_keyword cant self event=leaves_play
+    do 4541 has_keyword remove_keyword self
+    do 4504 has_keyword cant self event=activated;turns=1.0
+
+## C20 lr_da_3.md 1 (CAUSE, open, 19 table lines from the same code)
+A count of, or trigger on, the deck's own main type ("is a Vampire", "is a Wild Hunt", "when you play a Wild Hunt unit") links every card of that type, but a type half the deck has is no deck choice (L21, L14, L1b).
+- W gwent: Ekimmara -> Orianna: is a Vampire it asks for | network.py []
+- W gwent: Katakan -> Dettlaff van der Eretein: is a Vampire it asks for | network.py []
+- W gwent: Regis: Reborn -> Nekurat: is a Vampire whose playing sets off its effect | network.py [1823]
+- W gwent: Ard Gaeth -> Tir ná Lia: is a Wild Hunt it asks for | network.py []
+- W gwent: Auberon: King -> White Frost: is played | network.py []
+- R gwent: Alp -> Katakan: makes enemy units get Bleeding | network.py []
+- R gwent: Tir ná Lia -> Red Riders: creates | network.py []
+  Ekimmara:
+    when 4309 always
+    when 4517 leaves_play self
+    when 4517 leaves_play self
+    do 4309 own give_keyword self
+    do 4517 uses_keyword obliterate self
+    do 4517 has_keyword obliterate self
+  Orianna:
+    when 2699 played self
+    when 4526 turn_end
+    when 2700 turn_end
+    if 2699 amount_count unit mine all board type is 35
+    if 2700 keyword_condition
+    if 2700 amount_count unit enemy all board keyword is 756169
+    if have is self position is back_row
+    if 2700 have is self position is back_row
+    do 2699 own give_keyword unit enemy chosen board amount=count
+    do 4526 uses_keyword damage unit enemy chosen board amount=1.0
+    do 2700 own stat_change self strength=count
+  Katakan:
+    when 1992 always
+    when 4510 played self
+    when 1993 activated self
+    when 1994 always
+    when 4511 activated self
+    when 1995 given_keyword unit enemy keyword is 756169
+    when 4510 played self
+    when 4504 played self
+    if 4511 amount_listed
+    do 1992 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 1993 own summon
+    do 1994 own keyword_action amount=4.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+    do 1995 own countdown_advance self amount=1.0
+    do 4510 has_keyword can self event=activated
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Dettlaff van der Eretein:
+    when 3651 played self
+    when 4556 turn_start
+    when 4526 turn_end
+    when 3652 activated self
+    when 3653 killed
+    when 3654 always
+    when 4511 activated self
+    when 4504 played self
+    if 3651 amount_sum
+    if 3651 amount_count unit all board position is sides of self;type is 35
+    if 4511 amount_listed
+    do 3651 own give_keyword position enemy chosen amount=sum
+    do 4556 uses_keyword give_keyword unit random board position is same_row of self;keyword not 756169 amount=2.0
+    do 4526 uses_keyword damage unit random board position is same_row of self;keyword not 756169 amount=1.0
+    do 4556 uses_keyword damage unit random board position is same_row of self;keyword is 756169 amount=2.0
+    do 3652 own damage unit enemy chosen board keyword is 756169 amount=1.0
+    do 3653 own summon
+    do 3654 own keyword_action amount=1.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Regis: Reborn:
+    when 3945 played self
+    when 4505 activated
+    when 3946 turn_end
+    if 4505 amount_event_amount
+    if 4505 amount_event_amount
+    if 3946 have unit enemy board keyword is 756169
+    do 3945 own keyword_action unit enemy chosen board amount=3.0
+    do 4505 uses_keyword damage unit enemy chosen board amount=event_amount
+    do 4505 uses_keyword stat_change unit enemy chosen board strength=event_amount
+    do 3946 own base_change self strength=1.0
+  Nekurat:
+    when 2715 always
+    when 4510 played self
+    when 2716 activated self
+    when 4526 turn_end
+    when 2717 always
+    when 4511 activated self
+    when 2718 played unit mine type is 35
+    when 4511 activated self
+    when 4510 played self
+    if 2716 keyword_condition
+    if 4511 amount_listed
+    if 4511 amount_listed
+    if 2716 have is self position is front_row
+    do 2715 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 2716 own give_keyword unit enemy chosen board amount=2.0
+    do 4526 uses_keyword damage unit enemy chosen board amount=1.0
+    do 2717 own keyword_action amount=2.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+    do 2718 own keyword_action amount=-1.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+    do 4510 has_keyword can self event=activated
+  Ard Gaeth:
+    when 3319 always
+    when 4545 round_start
+    when 4517 leaves_play self
+    when 3320 played self
+    when 4520 turn_start
+    when 4545 round_start
+    when 4517 leaves_play self
+    do 3319 own give_keyword self
+    do 4545 uses_keyword put_on_top self
+    do 4545 uses_keyword give_keyword self
+    do 4517 uses_keyword obliterate self
+    do 3320 own give_keyword position enemy all turns=3.0
+    do 4520 uses_keyword damage unit highest board position is same_row of self amount=2.0
+    do 4545 has_keyword put_on_top self discard
+    do 4545 has_keyword give_keyword self
+    do 4517 uses_keyword obliterate self
+  Tir ná Lia:
+    when 4047 always
+    when 4541 round_end
+    when 4048 played self
+    when 4049 activated self
+    when 4050 activated self
+    when 4520 turn_start
+    when 4520 turn_start
+    when 4789 always
+    when 4541 round_end
+    when 4790 played self
+    when 4791 activated self
+    when 4792 activated self
+    when 4520 turn_start
+    when 4520 turn_start
+    when 4541 round_end
+    when 4504 played self
+    if 4048 amount_sum
+    if 4048 amount_listed
+    if 4048 amount_distinct card card mine all deck state is bronze;type is 23;state is started_in_deck
+    if 4049 keyword_condition not
+    if 4050 keyword_condition
+    if 4050 amount_listed
+    if 4050 amount_listed
+    if 4790 amount_sum
+    if 4790 amount_listed
+    if 4790 amount_distinct card card mine all deck state is bronze;type is 23;state is started_in_deck
+    if 4791 keyword_condition not
+    if 4792 keyword_condition
+    if 4792 amount_listed
+    if 4792 amount_listed
+    if have not card mine state is started_in_deck;region is Neutral
+    if 4049 have not card mine state is started_in_deck;region is Neutral
+    if 4050 have not card mine state is started_in_deck;region is Neutral
+    if 4791 have not card mine state is started_in_deck;region is Neutral
+    if 4792 have not card mine state is started_in_deck;region is Neutral
+    do 4047 own give_keyword self
+    do 4541 uses_keyword cant self event=leaves_play
+    do 4541 uses_keyword remove_keyword self
+    do 4048 own stat_change unit mine chosen board strength=sum
+    do 4049 own create
+    do 4049 own play_card card mine it card is 757101
+    do 4050 own create
+    do 4050 own play_card card mine it card is 757101
+    do 4050 own give_keyword position enemy position is front_row amount=listed
+    do 4520 uses_keyword damage unit highest board position is same_row of self amount=2.0
+    do 4050 own give_keyword position enemy position is back_row amount=listed
+    do 4520 uses_keyword damage unit highest board position is same_row of self amount=2.0
+    do 4789 own give_keyword self
+    do 4541 uses_keyword cant self event=leaves_play
+    do 4541 uses_keyword remove_keyword self
+    do 4790 own stat_change unit mine chosen board strength=sum
+    do 4791 own create
+    do 4791 own play_card card mine it card is 757101
+    do 4792 own create
+    do 4792 own play_card card mine it card is 757101
+    do 4792 own give_keyword position enemy position is front_row amount=listed
+    do 4520 uses_keyword damage unit highest board position is same_row of self amount=2.0
+    do 4792 own give_keyword position enemy position is back_row amount=listed
+    do 4520 uses_keyword damage unit highest board position is same_row of self amount=2.0
+    do 4541 has_keyword cant self event=leaves_play
+    do 4541 has_keyword remove_keyword self
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Auberon: King:
+    when 3314 played self
+    when 3315 round_start
+    when 3316 round_start
+    if 3315 have is self hand
+    if 3316 have is self deck
+    do 3314 own create unit mine random state is bronze;type is 23
+    do 3314 own play_card card mine it type is 23
+    do 3315 own transform self
+    do 3316 own transform self
+  White Frost:
+    when 2293 activated self
+    when 4520 turn_start
+    when 2294 always
+    when 4513 always
+    when 2295 played unit mine type is 23
+    when 4513 always
+    when 4504 played self
+    if 4513 amount_listed
+    if 2295 have is position keyword is 756162;position is opposite_row of it
+    if 4513 amount_listed
+    do 2293 own move unit enemy chosen board
+    do 2293 own give_keyword position enemy position is same_row of it turns=2.0
+    do 4520 uses_keyword damage unit highest board position is same_row of self amount=2.0
+    do 2294 own give_keyword self amount=2.0
+    do 4513 uses_keyword can self event=activated;times=listed
+    do 2295 own stat_change unit mine it type is 23 strength=1.0
+    do 4513 has_keyword can self event=activated;times=listed
+    do 4504 has_keyword cant self event=activated;turns=1.0
+
+## C21 lr_da_2.md 2 (CAUSE, open, 7 table lines from the same code)
+A card that makes a Scoiatael unit is linked to a card that asks for a Neutral unit, but a made card must be the kind the need asks (L20).
+- W gwent: Loc Feainn: Convergence -> Pavko Gale: makes a unit it asks for | network.py [1919]
+- R gwent: Pavko Gale -> Mysteries of Loc Feainn: is a unit whose playing sets off its effect | network.py [1823]
+  Loc Feainn: Convergence:
+    when 4442 always
+    when 4517 leaves_play self
+    when 4443 played self
+    when 4517 leaves_play self
+    do 4442 own give_keyword self
+    do 4517 uses_keyword obliterate self
+    do 4443 own create unit mine chosen board state is bronze;region is Scoiatael;state is primary_category_not_controlled
+    do 4517 has_keyword obliterate self
+  Pavko Gale:
+    when 2537 always
+    when 4553 played unit mine region not Neutral
+    when 2538 activated self
+    when 2539 activated self
+    when 2540 always
+    when 4511 activated self
+    when 4553 played unit mine region not Neutral
+    if 4553 have not unit mine board state is shares_subtype_with_it
+    if 4553 amount_listed
+    if 2538 keyword_condition
+    if 2538 have is unit mine board region is Neutral
+    if 2539 keyword_condition
+    if 2539 have not unit mine board region is Neutral
+    if 4511 amount_listed
+    if 4553 have not unit mine board state is shares_subtype_with_it
+    if 4553 amount_listed
+    if 2538 have is self position is back_row
+    if 2539 have is self position is back_row
+    do 2537 own give_keyword self
+    do 4553 uses_keyword stat_change self strength=listed
+    do 2538 own damage unit chosen board amount=1.0
+    do 2539 own damage unit chosen board amount=2.0
+    do 2540 own keyword_action amount=1.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+    do 4553 has_keyword stat_change self strength=listed
