@@ -1365,7 +1365,11 @@ def sharers(c):
 def strength_readers(c):
     """cards whose text tests the strength of itself or of a card it acts on (Arachas Queen's eaten ally, False Ciri's "strength ge")"""
     if 'sread' not in CACHE:
-        CACHE['sread'] = {b for (b,) in c.execute("select card from flat_if where test in ('amount_stat','stat') and attr='strength' and of_pick in ('self','it')")}
+        # a boost on my board units changes nothing for a card that reads the strength of enemies, the deck or the discard pile (L18, L9)
+        off = {b for (b,) in c.execute("select card from flat_do where origin='own' and on_zone in ('discard','deck')")} - \
+            {b for (b,) in c.execute("select card from flat_do where origin='own' and coalesce(on_zone,'board')='board' and on_pick in ('chosen','all','it','random','highest','lowest') and on_kind='unit'")}
+        CACHE['sread'] = {b for (b,) in c.execute("select card from flat_if where test in ('amount_stat','stat') and attr='strength' and of_pick in ('self','it') "
+                          "and (of_pick='self' or (coalesce(of_side,'')!='enemy' and coalesce(of_zone,'board')='board'))")} - off
     return CACHE['sread']
 
 
