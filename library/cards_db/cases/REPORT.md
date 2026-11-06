@@ -1,7 +1,7 @@
 # Case tests: gwent
 
 Made by `cases/run.py gwent`.
-**147 of 174 cases pass.**
+**153 of 174 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -16,7 +16,7 @@ Made by `cases/run.py gwent`.
 | mx12 | a unit that moves (onto a space) is the event's object, never its actor (N16, Sentry, v36, v38) | 0 | 0 | 100% | 6 | yes |
 | mx13 | can't be targeted by spells: the cant is on the spells, the protected unit is "to" (N19, v37) | 0 | 0 | 100% | 0 | yes |
 | mx14 | a dead unit put into play is revive, never summon from the discard (N20, v37) | 0 | 0 | 100% | 15 | yes |
-| mx15 | a trigger that holds only "this turn" is an ability given to the player for this turn (v37, Duelyst) | 0 | 0 | 100% | 0 | yes |
+| mx15 | a trigger that holds only "this turn" is an ability given to the player for this turn (v37, Duelyst) | 0 | 0 | 100% | 1 | yes |
 | mx13 | an effect on the creature opposing it is about lanes (concept lanes from same_lane, v38) | 0 | 0 | 100% | 0 | yes |
 | mx14 | a strike on the spaces beside the opposing one reaches other lanes (cross_lane, v38) | 0 | 0 | 100% | 0 | yes |
 | mx15 | within a circuit is a formation (link_formation, v38) | 0 | 0 | 100% | 0 | yes |
@@ -34,7 +34,7 @@ Made by `cases/run.py gwent`.
 | gw11 | cards that use, give or care about Zeal | 106 | 106 | 100% | 15 | yes |
 | gw12 | cards that use, give or care about Cooldown | 77 | 74 | 96% | 0 | yes |
 | gw13 | cards that use, give or care about Adrenaline | 31 | 30 | 97% | 0 | yes |
-| gw14 | cards that use, give or care about Summon | 72 | 72 | 100% | 153 | yes |
+| gw14 | cards that use, give or care about Summon | 72 | 72 | 100% | 156 | yes |
 | gw15 | cards that use, give or care about Charge | 26 | 25 | 96% | 36 | yes |
 | gw16 | cards that use, give or care about Cataclysm | 5 | 5 | 100% | 1 | yes |
 | gw17 | cards that use, give or care about Heal | 21 | 20 | 95% | 0 | yes |
@@ -42,7 +42,7 @@ Made by `cases/run.py gwent`.
 | gw19 | cards that use, give or care about Doomed | 113 | 112 | 99% | 11 | yes |
 | gw20 | cards that use, give or care about Storm | 11 | 11 | 100% | 1 | yes |
 | gw21 | cards that use, give or care about Veil | 38 | 37 | 97% | 0 | yes |
-| gw22 | cards that use, give or care about Frost | 19 | 18 | 95% | 1 | NO |
+| gw22 | cards that use, give or care about Frost | 19 | 19 | 100% | 1 | yes |
 | gw23 | cards that use, give or care about Fog | 2 | 2 | 100% | 1 | yes |
 | gw24 | cards that use, give or care about Rain | 14 | 14 | 100% | 1 | yes |
 | gw25 | cards that use, give or care about Bloodthirst | 17 | 17 | 100% | 0 | yes |
@@ -50,7 +50,7 @@ Made by `cases/run.py gwent`.
 | gw27 | cards that use, give or care about Formation | 17 | 17 | 100% | 0 | yes |
 | gw28 | cards that use, give or care about Inspired | 11 | 11 | 100% | 0 | yes |
 | gw29 | cards that use, give or care about Bleeding | 48 | 48 | 100% | 1 | yes |
-| gw30 | cards that use, give or care about Disloyal | 19 | 18 | 95% | 0 | NO |
+| gw30 | cards that use, give or care about Disloyal | 19 | 19 | 100% | 0 | yes |
 | gw31 | cards that use, give or care about Coin | 21 | 21 | 100% | 114 | yes |
 | gw32 | cards that use, give or care about Patience | 10 | 10 | 100% | 14 | yes |
 | gw33 | cards that use, give or care about Deathwish | 43 | 43 | 100% | 13 | yes |
@@ -75,16 +75,16 @@ Made by `cases/run.py gwent`.
 | gw52 | cards that use, give or care about Deathblow | 41 | 41 | 100% | 0 | yes |
 | gw53 | cards that use, give or care about Ambush | 8 | 8 | 100% | 1 | yes |
 | gw54 | cards that use, give or care about Spring | 8 | 8 | 100% | 1 | yes |
-| gw55 | cards that use, give or care about Discard | 10 | 8 | 80% | 0 | NO |
+| gw55 | cards that use, give or care about Discard | 10 | 10 | 100% | 0 | yes |
 | gw56 | cards that use, give or care about Veteran | 11 | 11 | 100% | 0 | yes |
 | gw57 | cards that use, give or care about Berserk | 13 | 13 | 100% | 0 | yes |
 | gw58 | cards that use, give or care about Echo | 14 | 14 | 100% | 0 | yes |
 | gw59 | cards that use, give or care about Conspiracy | 5 | 5 | 100% | 0 | yes |
 | gw60 | cards that use, give or care about Flanking | 9 | 9 | 100% | 0 | yes |
-| gw61 | cards that use, give or care about Create | 44 | 43 | 98% | 69 | yes |
+| gw61 | cards that use, give or care about Create | 44 | 44 | 100% | 69 | yes |
 | gw62 | cards that use, give or care about Poison | 31 | 31 | 100% | 3 | yes |
-| gw63 | cards that use, give or care about Predator | 4 | 0 | 0% | 0 | NO |
-| gw64 | cards that use, give or care about Symbiosis | 9 | 8 | 89% | 0 | NO |
+| gw63 | cards that use, give or care about Predator | 4 | 4 | 100% | 0 | yes |
+| gw64 | cards that use, give or care about Symbiosis | 9 | 9 | 100% | 0 | yes |
 | gw65 | cards that use, give or care about Might | 5 | 5 | 100% | 0 | yes |
 | gw66 | cards that use, give or care about Duel | 4 | 4 | 100% | 0 | yes |
 | gw67 | cards that use, give or care about Harmony | 15 | 15 | 100% | 0 | yes |
@@ -107,14 +107,6 @@ Made by `cases/run.py gwent`.
 | gw84 | cards that use, give or care about Reset | 13 | 13 | 100% | 21 | yes |
 | gw85 | cards that use, give or care about Spying | 23 | 22 | 96% | 28 | yes |
 
-Missed cards (first 8 per failing case):
-
-- gw22 cards that use, give or care about Frost: Caranthir: Golden Child
-- gw30 cards that use, give or care about Disloyal: Braathens
-- gw55 cards that use, give or care about Discard: Bjorn Stormursson, Eist Tuirseach
-- gw63 cards that use, give or care about Predator: Adda: Striga, Cockatrice, Kikimore Stalker, Werewolf
-- gw64 cards that use, give or care about Symbiosis: Aucwenn
-
 ## Combos (the enabler must set off the payoff)
 
 | case | enabler | payoff | why | found as | pass |
@@ -129,7 +121,7 @@ Missed cards (first 8 per failing case):
 |---|---|---|---|---|---|---|
 | rgw01 | Northern Realms | signature (library) | boosting friendly units | 5 | 96 | yes |
 | rgw02 | Northern Realms | signature (library) | Zeal | 5 | 48 | yes |
-| rgw03 | Northern Realms | signature (library) | Order abilities | 5 | 110 | yes |
+| rgw03 | Northern Realms | signature (library) | Order abilities | 5 | 108 | yes |
 | rgw04 | Nilfgaard | signature (library) | locking units | 5 | 12 | yes |
 | rgw05 | Nilfgaard | signature (library) | spying on enemy hands | 5 | 12 | yes |
 | rgw06 | Nilfgaard | signature (library) | stealing enemy units | 5 | 9 | yes |
@@ -190,7 +182,7 @@ Missed cards (first 8 per failing case):
 | n565 | Shieldwall: Roegner Ale Damsel | Ale of the Ancestors | Knight-Errant | line  | - | NO |
 | n566 | Shieldwall: Roegner Ale Damsel | Ale of the Ancestors | Prince Anséis | line  | type: changes its stats for its effect | yes |
 | n567 | Pincer Maneuver: Kimbolt's Temple Siege | Temple of Melitele: Congregation | Prince Anséis | line  | type: changes its stats for its effect | yes |
-| n568 | White Frost: White Frost-EZ pro rank | Eredin Bréacc Glas | Caranthir: Golden Child | line  | - | NO |
+| n568 | White Frost: White Frost-EZ pro rank | Eredin Bréacc Glas | Caranthir: Golden Child | line  | type: makes units get Frost; also damages units or players | yes |
 | n569 | Arachas Swarm: Tatterwing - 1 prov left for good luck | Ge'els | Lara Dorren | line  | puts: puts it into play from the deck; also triggers: plays it: its effect goes  | yes |
 | n570 | Enslave: Damage Enslave With Enforcers (+10 -1) | Battle Stations! | Impera Enforcers | line  | - | NO |
 | n571 | Enslave: Damage Enslave With Enforcers (+10 -1) | Fercart | Impera Enforcers | line  | type: makes enemy units get Spying | yes |
