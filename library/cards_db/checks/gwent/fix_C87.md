@@ -1,0 +1,4 @@
+FIXED: C87/C90 a card that shuffles my card into my deck now links to a card that acts when moved to the deck top (Strays of Spalla -> Albrich), and C88 a summon of a chosen unit from the deck links to Gwent units with Deploy (Summoning Circle -> Imperial Golem; in Gwent a summoned unit is deployed). Files: network.py. Cases: n577, n578 (already `line`, now pass; no new case needed).
+- pair.py: both examples now print a line; Hammond -> Ragh Nar Roog (C89, another fixer) untouched.
+- Summoning Circle now also links (weakly, 0.5 split) to every Gwent unit with a Deploy in the deck, and any game's "choose a card from deck, then summon it" now counts as summon-by-kind.
+- Any shuffle_into_deck of my card (not self) now links to deck_top "moves self" cards in any game (59 'moves self' triggers exist; only those with a deck_top condition count).

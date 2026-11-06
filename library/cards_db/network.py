@@ -730,16 +730,23 @@ def lines_of(c, game):
     for i, e in c.execute("select card, event from flat_when where origin='own' and obj_pick='self' and event in ('summoned','played')"): entry[i].add(e)
     for (i,) in c.execute("select card from flat_do where origin='has_keyword' and act='can' and on_pick='self' and param_event='activated'"): entry[i].add('summoned')  # Zeal: a unit put into play acts at once (Drakenborg -> Vincent Meis)
     for m, act, k, w, zone in c.execute("""select card, act, on_kind, on_with, on_zone from flat_do where origin='own' and card_ref is null
-            and coalesce(on_side,'mine') in ('mine','any') and coalesce(on_pick,'') not in ('self','it') and ((act='revive') or
+            and coalesce(on_side,'mine') in ('mine','any') and (coalesce(on_pick,'') not in ('self','it') or (act='summon' and on_pick='it' and exists
+            (select 1 from flat_do x where x.card=flat_do.card and x.act='choose_card' and x.on_zone='deck'))) and ((act='revive') or
             (act in ('summon','play_card') and on_zone in ('deck','deck_top','hand','discard','everywhere')) or
             (act='copy' and on_zone='board' and coalesce(eff_zone,'board')='board'))""").fetchall():  # Feel The Rush summons champions
             # from anywhere; Mirror Image copies a unit into play: its summon effect goes off (L17, L19)
         if m not in cards: continue
-        want = {'played', 'summoned'} if act == 'play_card' else {'summoned'}
+        want = {'played', 'summoned'} if act == 'play_card' or (game == 'gwent' and act == 'summon') else {'summoned'}  # Gwent: a summoned unit is deployed
         if act == 'copy': act = 'summon'
         hits = [t for t, x in cards.items() if t != m and entry.get(t, set()) & want and matches(c, game, x, k if k in KIND_CAT else 'unit', w)]
         for t in hits: out[(m, t)].append(('waits', 0.5 / len(hits), {'revive': 'brings it back: its summon effect goes off',
                                            'summon': 'puts it into play: its summon effect goes off', 'play_card': 'plays it: its effect goes off'}[act]))
+    # my card shuffled into my deck is the move a card waits for that acts when it is moved to the deck top (Strays of Spalla -> Albrich)
+    tops = {t for (t,) in c.execute("""select w.card from flat_when w join flat_if i on i.card=w.card and i.ability=w.ability where w.origin='own'
+             and w.event='moves' and w.obj_pick='self' and i.test='have' and i.of_pick='self' and i.of_zone='deck_top'""") if t in cards}
+    for m in {m for (m,) in c.execute("""select card from flat_do where origin='own' and act='shuffle_into_deck' and coalesce(on_side,'mine')='mine'
+                                       and coalesce(on_pick,'')!='self'""") if m in cards}:
+        for t in tops - {m}: out[(m, t)].append(('waits', 0.5 / len(tops), 'shuffles a card into the deck: its move effect goes off'))
     # a draw that names what it takes from the deck ("draw the top legend", "draw a Beast") finds those cards
     # (and a summon from the hand or deck by what it is: "summon a minion with Dying Wish from your action bar", Unseven); "a copy
     # of it" is a card the earlier effect can pick (Lifestream heals a minion, then draws a copy of it: minions only)
