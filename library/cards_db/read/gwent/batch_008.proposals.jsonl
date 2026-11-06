@@ -1,0 +1,13 @@
+{"id":813645,"field":"x","need":"draw up to N cards (a number up to a limit) and then the same number as drawn"}
+{"id":813650,"field":"state","need":"alone_in_row (the only unit on its row)"}
+{"id":813656,"field":"origin","need":"other (a boost from other abilities, not from this unit's own ability)"}
+{"id":813664,"field":"state","need":"primary_category_not_controlled (a primary category the player has no unit of)"}
+{"id":813668,"field":"type","need":"Stratagem (a card type)"}
+{"id":813677,"field":"limit","need":"first_each_turn"}
+{"id":813677,"field":"state","need":"odd_power / even_power (parity of a unit's power)"}
+{"id":813683,"field":"region","need":"opponent_faction (the faction of the opponent's leader)"}
+{"id":813684,"field":"limit","need":"first_each_turn"}
+{"id":813685,"field":"pick","need":"the lowest-power allied unit of each unique primary category"}
+{"id":813685,"field":"state","need":"primary_category_not_controlled (a primary category the player has no unit of)"}
+{"id":813689,"field":"event","need":"worshipped (Dagon worshipped)"}
+{"id":813690,"field":"state","need":"played_this_turn"}
