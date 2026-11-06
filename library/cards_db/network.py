@@ -2715,6 +2715,12 @@ def kill_food_lines(c, game, nodes):
                 and ((act='damage' and on_pick in ('all','random','chosen') and coalesce(on_side,'') in ('','enemy','any','mine')
                 and params not like '%amount=1.0%') or (act in ('summon','play_card') and coalesce(on_side,'mine')='mine'))""", L + [k]):
             out[(a, k)].append(('waits', 0.5, 'leaves weak units for its kill' if act == 'damage' else 'gives it units to kill'))
+    # a 1-damage ping (Kaedweni Revenant, Redanian Archer) kills an enemy another card sets to strength 1 (Vincent Meis; C81, C82; L2: a strike now)
+    pings = [i for (i,) in c.execute(f"select distinct card from flat_do where origin='own' and act='damage' and on_pick='chosen' and coalesce(on_side,'') in ('','enemy','any') and params like '%amount=1.0%' and card in ({marks})", L)]
+    setters = [i for (i,) in c.execute(f"select distinct card from flat_do where origin='own' and act='stat_set' and on_pick='chosen' and on_side='enemy' and params like '%strength=1.0%' and card in ({marks})", L)]
+    for k in pings:
+        for a in setters:
+            if a != k: out[(k, a)].append(('waits', 0.5, 'its 1 damage kills what it sets to strength 1'))
     return out
 
 

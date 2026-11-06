@@ -642,3 +642,5 @@ n647	gwent	Mobilization: NR Devotion Undead Army	Sabrina Glevissig	Kaedweni Reve
 n648	gwent	Mobilization: NR Devotion Undead Army	Philippa: Blind Fury	Kaedweni Revenant	line	leaves weak units for its kill	Claude 2026-11-06, line check: weak units feed a 1-damage kill ping
 n649	gwent	Mobilization: NR Devotion Undead Army	Vernon Roche	Kaedweni Revenant	line	gives it units to kill	Claude 2026-11-06, line check: weak units feed a 1-damage kill ping
 n650	gwent	Mobilization: NR Devotion Undead Army	Drakenborg	Vincent Meis	line	puts it into play: its summon effect goes off	Claude 2026-11-06, line check: Zeal unit put into play from the deck acts at once
+n651	gwent	Mobilization: NR Devotion Undead Army	Kaedweni Revenant	Vincent Meis	line	its 1 damage kills what it sets to strength 1	Claude 2026-11-06, line check: a 1-damage ping kills a unit set to strength 1
+n652	gwent	Mobilization: NR Devotion Undead Army	Redanian Archer	Vincent Meis	line	its 1 damage kills what it sets to strength 1	Claude 2026-11-06, line check: a 1-damage ping kills a unit set to strength 1
