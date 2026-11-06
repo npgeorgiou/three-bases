@@ -158,3 +158,15 @@ marvel_snap	Mephisto	double	winnings are rewards outside the game: no game effec
 marvel_snap	Move	player named	the keyword rule names who can move a card (its player, the opponent, a location); the rows of each card that moves say it
 marvel_snap	Astral Plane	this turn	"After this turn" is the end of the turn it is revealed: round_end, limit next_time
 marvel_snap	Sakaar	this turn	"After this turn" is the end of the turn it is revealed: round_end, limit next_time
+gwent	Insanity	kill or destroy	a keyword entry; the text is the glossary text and has no rows by design
+gwent	Sigi Reuven: Mastermind	cost less	Tribute's cost is the spend_mana amount (9 minus 2 times the count); the rows say "2 less for each"
+gwent	Glustyworp	for each	the per-unit boost is link for_each with 2
+gwent	King Roegner	for each	the per-unit boost is link for_each with 3
+gwent	Zoltan: Warrior	for each	the per-unit summon is link for_each
+gwent	Seagull	for each	the per-target create is link for_each
+gwent	Boris	random	"random cost between 1 and 9" is x range
+gwent	Wheel of Fortune	random	"random number between 1 and 10" is x range
+gwent	Aglaïs	this turn	"at the end of this turn" is turn_end with limit next_time
+gwent	Arena Ghoul	this turn	"at the end of this turn" is turn_end with limit next_time
+gwent	Kraken	this turn	"at the end of this turn" is turn_end with limit next_time inside its Deathwish
+gwent	757397	V16	record_right	Claude: Tribute cost is spend_mana with the amount 9 minus 2 per Gang; no cost_change needed	6 Nov 2026

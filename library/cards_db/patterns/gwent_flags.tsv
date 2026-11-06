@@ -1,4 +1,1 @@
 card	name	pattern	requires	text
-756877	Eventide Plunder	KW	name:fee	 4-provision cost unit with a fee.
-757137	Braathens	KW	name:disloyal	loy: create and play a bronze disloyal unit from your starting deck.
-757397	Sigi Reuven: Mastermind	V16	value:cost_change|cost_set	te 9: play 2 instead. tribute costs 2 less for each unique gang category

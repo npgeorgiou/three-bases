@@ -326,7 +326,7 @@ keyword	Fleeting	concept of using or giving this keyword (Kaptain, 28 Oct 2026: 
 keyword	Augment	concept of having, using or giving this keyword	permanent_growth		28 Oct 2026, v3
 keyword	Hallowed	concept of having, using or giving this keyword	death_trigger		28 Oct 2026, v3
 keyword	Support	concept of having, using or giving this keyword	assists_support		28 Oct 2026, v3
-keyword	Ambush	concept of having, using or giving this keyword	stealth		28 Oct 2026, v3
+keyword	Ambush	concept of having, using or giving this keyword (Gwent: played face down, then flips over when the ability's condition is met)	stealth		28 Oct 2026, v3
 keyword	Disguise	concept of having, using or giving this keyword	stealth		28 Oct 2026, v3
 keyword	Lurk	concept of having, using or giving this keyword	tribal		28 Oct 2026, v3
 keyword	Scout	concept of having, using or giving this keyword	multi_attack		28 Oct 2026, v3
@@ -395,7 +395,7 @@ state	single_use	a card removed after it is played once (single-use copies)			28
 attr	level	a card's level, in games where cards have levels			28 Oct 2026, v13 (Stormbound)
 position	first_empty_in_front	the first empty tile going forward in the same column			28 Oct 2026, v13 (Stormbound)
 position	first_empty_behind	the first empty tile going back in the same column			28 Oct 2026, v13 (Stormbound)
-keyword	Poison	concept of using this keyword (Stormbound: takes 1 damage every turn; concept is Claude's)	damage_over_time		28 Oct 2026, v14 (Stormbound)
+keyword	Poison	concept of using this keyword (Stormbound: takes 1 damage every turn; Gwent: status, if a unit receives two instances of Poison it is destroyed; concept is Claude's)	damage_over_time		28 Oct 2026, v14 (Stormbound)
 keyword	Vitalize	concept of using this keyword (Stormbound: gains 1 strength every turn; concept is Claude's)	permanent_growth		28 Oct 2026, v14 (Stormbound)
 keyword	Freeze	concept of using this keyword (Stormbound: no move and no ability for a turn; concept is Claude's)	disable		28 Oct 2026, v14 (Stormbound)
 keyword	Confuse	concept of using this keyword (Stormbound: moves sideways at random for a turn; concept is Claude's)	forced_movement		28 Oct 2026, v14 (Stormbound)
@@ -573,7 +573,7 @@ keyword	Combat	concept of having, using or giving this keyword (Faeria: whenever
 keyword	Corrupt	concept of having, using or giving this keyword (Faeria: the first time it moves onto enemy land on a turn after it was played)	territory_trigger	moves_onto	29 Oct 2026, v35
 keyword	Activate	concept of having, using or giving this keyword (Faeria: a structure's ability used once per turn)	activated	activated	29 Oct 2026, v35
 keyword	Flying	concept of having, using or giving this keyword (Faeria: moves over ocean and land; Faeria has no blocking, so it is movement, Kaptain 26 Oct 2026)	movement	moves;moves_onto	29 Oct 2026, v35
-keyword	Charge	concept of having, using or giving this keyword (Faeria Charge N: moves up to N spaces in a straight line)	movement	moves;moves_onto	29 Oct 2026, v35
+keyword	Charge	concept of having, using or giving this keyword (Faeria Charge N: moves up to N spaces in a straight line; Gwent: the number of times an Order ability can be used, only cards with Charge: X can gain Charges)	movement	moves;moves_onto	29 Oct 2026, v35
 keyword	Jump	concept of having, using or giving this keyword (Faeria: moves up to 2 spaces, over creatures and ocean)	movement	moves;moves_onto	29 Oct 2026, v35
 keyword	Dash	concept of having, using or giving this keyword (Faeria Dash N: when summoned, moves up to N spaces in a straight line)	movement	moves;moves_onto	29 Oct 2026, v35
 keyword	Aquatic	concept of having, using or giving this keyword (Faeria: moves only over ocean and lakes, drowns at end of turn on other land; movement, Kaptain 26 Oct 2026)	movement	moves;moves_onto	29 Oct 2026, v35
@@ -959,7 +959,7 @@ keyword	Purify	concept of having, using or giving this keyword (Gwent: remove al
 keyword	Rain	concept of having, using or giving this keyword (Gwent: row effect: at the start of the owner's turn 2 random units in the row take 1 damage; concept is Claude's)	row_effects		5 Nov 2026, v72 (Gwent)
 keyword	gwent:Ranged	concept of having, using or giving this keyword (Gwent: the ability works only on the ranged row; concept is Claude's)	rows		5 Nov 2026, v72 (Gwent)
 keyword	gwent:Reset	concept of having, using or giving this keyword (Gwent: restore a unit to its base power; concept is Claude's)	stat_loss		5 Nov 2026, v72 (Gwent)
-keyword	Resilience	concept of having, using or giving this keyword (Gwent: status: the unit stays on the battlefield at the end of the round; concept is Claude's)	round_carryover		5 Nov 2026, v72 (Gwent)
+keyword	Resilience	concept of having, using or giving this keyword (Gwent: status: the unit stays on the battlefield at the end of the round, then the status is removed; Boost and Armor are not carried over; concept is Claude's)	round_carryover		5 Nov 2026, v72 (Gwent)
 keyword	Resupply	concept of having, using or giving this keyword (Gwent: whenever you play a Warfare card, its Cooldown goes down by 1; concept is Claude's)	cooldowns		5 Nov 2026, v72 (Gwent)
 keyword	gwent:Reveal	concept of having, using or giving this keyword (Gwent: show a card to both players, then hide it again; concept is Claude's)	information		5 Nov 2026, v72 (Gwent)
 keyword	Rupture	concept of having, using or giving this keyword (Gwent: status: at the end of the owner's turn the unit takes damage equal to its base power; concept is Claude's)	delayed		5 Nov 2026, v72 (Gwent)

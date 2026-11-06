@@ -240,3 +240,4 @@ gwent	757306	KW	record_right	Claude: Patience is read as keyword_amount of the S
 gwent	757312	T127	record_right	Claude: "enemy unit with a Bounty you destroyed this game" is the graveyard filter	6 Nov 2026
 gwent	757394	KW	record_right	Claude: "damage dealt by Frost in the last 5 enemy turns" has no value; the amount is unstated (unsure)	6 Nov 2026
 gwent	757394	V05	record_right	Claude: the same: a past amount of Frost damage, unstated	6 Nov 2026
+gwent	757397	V16	record_right	Claude: Tribute cost is spend_mana with the amount 9 minus 2 per Gang; no cost_change needed	6 Nov 2026
