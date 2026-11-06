@@ -1,0 +1,14 @@
+runeterra: must-not cases whose reason no deck of the game says (reworded, or every such line is gone): n56, n352, n378 | 428 of 429 cases pass | runeterra: 57 link findings (137 s)
+stormbound: 149 of 149 cases pass | stormbound: 0 link findings (96 s)
+monster_train: 155 of 155 cases pass | monster_train: 0 link findings (97 s)
+duelyst: 114 of 114 cases pass | duelyst: 3 link findings (109 s)
+faeria: 141 of 141 cases pass | faeria: 26 link findings (107 s)
+inscryption: 80 of 80 cases pass | inscryption: 10 link findings (101 s)
+into_the_breach: must-not cases whose reason no deck of the game says (reworded, or every such line is gone): ntb15, ntb16 | 36 of 36 cases pass | into_the_breach: 21 link findings (101 s)
+sts1: must-not cases whose reason no deck of the game says (reworded, or every such line is gone): nst36 | 55 of 55 cases pass | sts1: 3 link findings (106 s)
+marvel_snap: must-not cases whose reason no deck of the game says (reworded, or every such line is gone): n465, n489, n490, n492, n530, n532, n534, n535, n536, n537, n541 | 174 of 174 cases pass | marvel_snap: 19 link findings (116 s)
+gwent: must-not cases whose reason no deck of the game says (reworded, or every such line is gone): n605, n606, n607, n608, n609, n610, n611, n623, n624, n625 | 195 of 225 cases pass | gwent: 12 link findings (159 s)
+
+real	2m39.203s
+user	4m36.414s
+sys	0m18.842s
