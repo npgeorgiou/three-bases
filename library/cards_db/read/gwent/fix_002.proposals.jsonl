@@ -1,3 +1,6 @@
 {"id": 757242, "field": "event", "need": "moved_to_deck_top"}
 {"id": 757296, "field": "x", "need": "unused_provisions"}
 {"id": 757302, "field": "position", "need": "leftmost, middle, rightmost (the place of a unit in its row)"}
+{"id": 757393, "field": "x", "need": "power_lost_at_last_round_end"}
+{"id": 757394, "field": "x", "need": "damage_by_frost_in_last_5_enemy_turns"}
+{"id": 757405, "field": "x", "need": "provisions_below_limit"}

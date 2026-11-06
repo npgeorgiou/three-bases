@@ -1,3 +1,16 @@
 {"id":756234,"field":"filter","need":"type filter limited to one side (excluding only my own Dragons)"}
 {"id":756305,"field":"act","need":"counts as a full Crew for Crew abilities (one-man Crew)"}
 {"id":756412,"field":"x","need":"number of rows between two units"}
+{"id":756652,"field":"test","need":"starting deck has no duplicates"}
+{"id":756652,"field":"act","need":"send a card on an adventure"}
+{"id":756690,"field":"with","need":"power is a multiple of 3 (state)"}
+{"id":756700,"field":"with","need":"same border color (rarity) as the destroyed units"}
+{"id":756707,"field":"side","need":"the side with the most units"}
+{"id":756718,"field":"event","need":"an ability triggers an ally's Grace"}
+{"id":756690,"field":"with","need":"power is a multiple of 3 (state)"}
+{"id":756700,"field":"with","need":"same border color (rarity) as the destroyed units"}
+{"id":756707,"field":"side","need":"the side with the most units"}
+{"id":756718,"field":"event","need":"an ability triggers an ally's Grace"}
+{"id":756828,"field":"with","need":"damage origin: status (from Bleeding, Poison...) versus other abilities"}
+{"id":756841,"field":"x","need":"number of unique Gang categories in the starting deck"}
+{"id":756842,"field":"x","need":"a card's distance from the top of the deck"}
