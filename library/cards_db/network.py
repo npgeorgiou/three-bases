@@ -653,6 +653,8 @@ def lines_of(c, game):
                 w = 1.0 / len(carers[tk] | (carers[None] if tk else set()))
                 say = act_say(c, h, ts_, tk, self_=tpick == 'self')
                 if role == 'state' and h in ('moves', 'moves_onto') and 'position is same_lane' in (tw or '') and game == 'marvel_snap' and t not in lane_fill(c): continue  # a lane is a location, not a range: a unit moved in is no help to a card that acts in its lane (Doctor Strange -> Danger), unless it needs the lane filled (PymParticle Arrow)
+                if role == 'state' and h in ('moves', 'moves_onto') and place_of(tw) == 'next to it' and tpick != 'self': continue  # a hit on
+                # whatever stands next to the card waits for no move (Seismic Capacitor); a line or a target's side does (Artemis Artillery)
                 if role == 'state' and h in ('moves', 'moves_onto') and place_of(tw): say = moves_said(tw, ts_, tpick == 'self')
                 if mpick == 'self' and h == 'discarded' and mref == m: say = 'comes back after it is discarded, to be discarded again'  # Swarm
                 if mpick == 'self' and h == 'dies': say = 'dies, comes back and dies again' if mref == m else 'dies by its own effect'
