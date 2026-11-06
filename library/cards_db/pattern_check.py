@@ -20,8 +20,8 @@ KW_EQUIV = {'landmark': 'landmark', 'equipment': 'equipment|attach|attached_to|e
             'shadow creep': 'damage_space|set_terrain', 'hallowed ground': 'heal_space|set_terrain', 'exhuming sand': 'summon_space|set_terrain',
             # Gwent: Coins are the secondary resource; rows are front_row / back_row; Cooldown and Charges are refreshed (BRIEF Game words: Gwent)
             'profit': 'mana_gain', 'coin': 'mana_gain|spend_mana|secondary_resource', 'spend': 'spend_mana', 'fee': 'spend_mana',
-            'tribute': 'spend_mana', 'melee': 'front_row', 'ranged': 'back_row', 'cooldown': 'refresh', 'charge': 'refresh',
-            'reset': 'refresh|stat_set', 'swap': 'swap|stat_set|move', 'armor': 'armor|ignore_armor|block_armor',
+            'tribute': 'spend_mana', 'melee': 'front_row', 'ranged': 'back_row', 'cooldown': 'refresh|counts_down|countdown_advance', 'charge': 'refresh',
+            'reset': 'refresh|stat_set', 'swap': 'swap|swap_stats|stat_set|move', 'armor': 'armor|ignore_armor|block_armor',
             'primal flourish': 'growth_space|set_terrain', 'mana spring': 'bonus_mana_space|set_terrain'}
 
 def patterns(game):

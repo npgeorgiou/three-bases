@@ -227,3 +227,16 @@ marvel_snap	8000598	T112	record_right	Claude: Stardust forbids adding cards exce
 marvel_snap	8000675	T100	record_right	Claude: "Ongoing: your On Reveal abilities here repeat" is each On Reveal card played here repeating	5 Nov 2026
 marvel_snap	8000709	T99	record_right	Claude: "On Reveal: Next turn" is the delayed form, round_start with limit next_time (BRIEF rule 14)	5 Nov 2026
 marvel_snap	8000727	T100	record_right	Claude: "Ongoing: your On Reveal abilities here repeat" is each On Reveal card played here repeating	5 Nov 2026
+gwent	756396	T126	record_right	Claude: attr boost read, no boost given (reader rejection agreed)	6 Nov 2026
+gwent	756646	T126	record_right	Claude: attr boost read, no boost given (reader rejection agreed)	6 Nov 2026
+gwent	756568	KW	record_right	Claude: ignoring Armor = param ignore_armor (reader rejection agreed)	6 Nov 2026
+gwent	756752	V21	record_right	Claude: plays the named cards from the deck; no copy made (reader rejection agreed)	6 Nov 2026
+gwent	756817	V22	record_right	Claude: "Treant Mantis: Strike" is a card name (reader rejection agreed)	6 Nov 2026
+gwent	756669	T127	record_right	Claude: "if any were destroyed" is the repeat condition; the card destroys nothing itself (reader rejection agreed)	6 Nov 2026
+gwent	757085	T132	record_right	Claude: "whenever you play the rightmost card" is the event played (reader rejection agreed)	6 Nov 2026
+gwent	757478	V21	record_right	Claude: plays the cards in the graveyard; no copy made (reader rejection agreed)	6 Nov 2026
+gwent	756863	V19	record_right	Claude: "your next Tribute this round costs 0" is lasts next_card on the next Tribute	6 Nov 2026
+gwent	757306	KW	record_right	Claude: Patience is read as keyword_amount of the Students (the highest reached this game)	6 Nov 2026
+gwent	757312	T127	record_right	Claude: "enemy unit with a Bounty you destroyed this game" is the graveyard filter	6 Nov 2026
+gwent	757394	KW	record_right	Claude: "damage dealt by Frost in the last 5 enemy turns" has no value; the amount is unstated (unsure)	6 Nov 2026
+gwent	757394	V05	record_right	Claude: the same: a past amount of Frost damage, unstated	6 Nov 2026
