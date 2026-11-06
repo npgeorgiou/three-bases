@@ -1,7 +1,7 @@
 # Case tests: gwent
 
 Made by `cases/run.py gwent`.
-**153 of 174 cases pass.**
+**155 of 186 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -154,6 +154,18 @@ Made by `cases/run.py gwent`.
 
 | case | deck | must say | missing | pass |
 |---|---|---|---|---|
+| dgw01 | Nature's Gift: Devotion Symbiosis Good Version | mahakam pass. use it: naiad fledgling;mahakam pass. use it: naiad pondkeeper | mahakam pass. use it: naiad fledgling, mahakam pass. use it: naiad pondkeeper | NO |
+| dgw02 | Mobilization: NR Devotion Undead Army | any units are killed: made by bloody baron, botchling, forbidden magic;sabrina glevissig. use it: forbidden magic, kaedweni revenant;your units enter play: made by drakenborg, forbidden magic, poor fucking infantry, redanian secret service;redanian secret service. use it: drakenborg;your units get a keyword or status: made by amphibious assault, bloody baron, crystal skull, drakenborg, griffin witcher, kerack marine, margarita laux-antille, poor fucking infantry, princess adda;voymir. use it: redanian secret service;any units have their stats changed: made by amphibious assault, botchling, crystal skull, drakenborg;voymir. use it: bloody baron;any units are killed: made by bloody baron, botchling, forbidden magic, griffin witcher, kaedweni revenant, philippa: blind fury, redanian archer, sabrina glevissig;any units are killed: made by bloody baron, botchling, forbidden magic, griffin witcher, kaedweni revenant, philippa: blind fury;cursed cards: are or make them: botchling;vincent meis. care about them: princess adda;kerack marine. use it: kaedweni revenant;poor fucking infantry. use it: kaedweni revenant;redanian secret service. use it: kaedweni revenant;drakenborg. use it: vincent meis;drakenborg. use it: margarita laux-antille;drakenborg. use it: botchling;kaedweni revenant. use it: vincent meis;redanian archer. use it: vincent meis;voymir. use it: kaedweni revenant;voymir. use it: redanian archer;vernon roche. use it: kaedweni revenant | kerack marine. use it: kaedweni revenant, poor fucking infantry. use it: kaedweni revenant, redanian secret service. use it: kaedweni revenant, drakenborg. use it: vincent meis, drakenborg. use it: margarita laux-antille, drakenborg. use it: botchling, kaedweni revenant. use it: vincent meis, redanian archer. use it: vincent meis, voymir. use it: kaedweni revenant, voymir. use it: redanian archer, vernon roche. use it: kaedweni revenant | NO |
+| dgw03 | Shieldwall: Roegner Ale Damsel | your units have their stats changed: made by ale of the ancestors;target practice. use it: knight-errant;ale of the ancestors. use it: prince anséis | ale of the ancestors. use it: prince anséis | NO |
+| dgw04 | Pincer Maneuver: Kimbolt's Temple Siege | temple of melitele: congregation. use it: prince anséis | temple of melitele: congregation. use it: prince anséis | NO |
+| dgw05 | White Frost: White Frost-EZ pro rank | eredin bréacc glas. use it: caranthir: golden child | eredin bréacc glas. use it: caranthir: golden child | NO |
+| dgw06 | Arachas Swarm: Tatterwing - 1 prov left for good luck | wild hunt cards: are or make them: ge'els;red riders. care about them: lara dorren | - | yes |
+| dgw07 | Enslave: Damage Enslave With Enforcers (+10 -1) | enemy units get spying: made by amnesty, emhyr var emreis, enslave, fercart;treason. use it: emhyr var emreis, impera enforcers;any units are killed: made by coup de grâce, fire scorpion, hefty helge, impera enforcers, stefan skellen;treason. use it: coup de grâce, impera enforcers;spells you play: amnesty, battle preparation, battle stations!, buhurt;treason. set off: fercart;battle stations!. use it: impera enforcers;joachim de wett. use it: coup de grâce | battle stations!. use it: impera enforcers, joachim de wett. use it: coup de grâce | NO |
+| dgw08 | Tactical Decision: OP GN HyperThin | your units move: made by blightmaker, cursed scroll, doadrick leumaerts;maxii van dekkar. use it: albrich;your units move: made by blightmaker, cursed scroll, doadrick leumaerts, fisher king, maxii van dekkar;you draw cards: made by cursed scroll, doadrick leumaerts;vicovaro novice. use it: snowdrop;strays of spalla. use it: albrich;summoning circle. use it: imperial golem | strays of spalla. use it: albrich, summoning circle. use it: imperial golem | NO |
+| dgw09 | Blood Money: Classical Bounty with Tamara, Drill | you gain the second resource (bones): made by blood money, caleb menge, confession extractor, conjurer's candle, scapegoat, slander, the brute, tunnel drill, vivaldi bank;witch hunter executioner. use it: caleb menge, conjurer's candle;royal decree. use it: tamara strenger | royal decree. use it: tamara strenger | NO |
+| dgw10 | Onslaught: Pirates attack - Endless Voyage | vabjorn. use it: raiding fleet;vabjorn. use it: abordage | vabjorn. use it: raiding fleet, vabjorn. use it: abordage | NO |
+| dgw11 | Rage of the Sea: Fulmar rain ft. Otkell and Melusine | enemy units or players take damage: made by fulmar, little havfrue, melusine;torrential rain. use it: messenger of the sea;enemy units or players take damage: made by fulmar, little havfrue, melusine, melusine cultist, rage of the sea, rioghan the undying, svalblod priest, tempest, torrential rain | - | yes |
+| dgw12 | Patricidal Fury: RnR Seagulls Sove Compass | seagull. use it: ragh nar roog;hammond. use it: ragh nar roog | seagull. use it: ragh nar roog, hammond. use it: ragh nar roog | NO |
 
 ## Deck networks (a line must be there, or must not)
 

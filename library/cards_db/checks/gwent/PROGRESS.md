@@ -7,13 +7,13 @@
 - Runeterra n34 already failed before this import (see START_DATABASE "State").
 
 ## Next
-- Step 2 fix round (Kaptain, 6 Nov 2026: the import chat fixes every open item itself, no stopping to ask).
-  Done: baseline (step2/baseline/), families (step2/families.md), keyword definitions check (step2/keyword_defs.md),
-  fix_1 (v78-v81: Create, Discard, ignoring Armor), fix_2 (keyword case queries, 80 of 85).
-  Running: fix_3 (new values for families 3, 4, 6, all games; Kaptain agreed the adjacent-group value).
-  Next, one fixer at a time: fix_4 Frost/Disloyal rows, Gwent meanings for shared keyword names, the 3 backed definitions,
-  RIGHT lines, word flags; fix_5 text-audit and link-audit RULE items 7-11, 15-19 and the Predator/Symbiosis code item;
-  fix_6 link audit 10 (old tags) leads; then one rebuild (check_all.py), diff, every case passes.
+- Step 2 fix round DONE 6 Nov 2026 (reports checks/gwent/step2/: families, fix_1-fix_9, verify-verify3, deck_cases).
+  Three rebuilds (check_all.py gwent) plus links/cases rerun after fix_9. Every other game's cases and lines unchanged
+  (Runeterra 428 of 429 was already so in the baseline). Word check 0, text audit 0, link audit all explained.
+  8 values added to vocab.tsv (Claude's, adjacent group agreed by Kaptain); 22+4 Gwent keyword meanings added.
+- Chat 2 (Part 3) starts here. Gwent cases fail only where the explainer misses a guide pair: 21 network.tsv deck pairs
+  (n545-n587) and 10 cases/decks.tsv rows dgw01-12 (25 gaps, step2/deck_cases.md). Real-world: 26 of 33 hold
+  (misses: Nilfgaard cast_from_zone, control; Scoiatael ranged, ping, tutor; Monster swarm; Skellige aggro_tempo).
 
 ## Before step 2 (chat 2 continues from START_DATABASE.md Part 3 after it)
 - Done 6 Nov 2026: Deck pairs (43, games/gwent.md, from the guide texts; 13 guides name none) -> network.tsv n545-n587
