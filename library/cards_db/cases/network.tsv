@@ -618,3 +618,5 @@ n623	gwent	Crach an Craite, Dimun Pirate	Crach an Craite	Dimun Pirate	none	can g
 n624	gwent	Crach an Craite, Deranged Corsair	Crach an Craite	Deranged Corsair	none	can give it Armor	Claude 2026-11-06, line check: Armor/Vitality is health-like help and the card's text never uses it (L14, L18)
 n625	gwent	Inspirational Ballad, Berengar	Inspirational Ballad	Berengar	none	can give it Vitality	Claude 2026-11-06, line check: Armor/Vitality is health-like help and the card's text never uses it (L14, L18)
 n626	gwent	Witch Hunter, Vigilantes	Witch Hunter	Vigilantes	line	makes enemy units get Bounty	Claude 2026-11-06, line check: right example stays
+n627	gwent	Bernard Loredo, Northern Wind	Bernard Loredo	Northern Wind	none	dies by its own effect: Northern Wind Banishes them	Claude 2026-11-06, line check: Northern Wind banishes only its own kills (L16, L3)
+n628	gwent	Berengar, Hjalmar an Craite	Berengar	Hjalmar an Craite	line	dies by its own effect: Hjalmar an Craite Banishes them	Claude 2026-11-06, line check: right example stays
