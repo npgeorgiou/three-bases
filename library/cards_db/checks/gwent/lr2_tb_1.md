@@ -1,0 +1,11 @@
+1. MISSED CAUSE: A card whose own text makes enemy units block (challenge) feeds a card that damages blocking enemy units; the fix removed this line although challenge does the very thing the need asks for (L2, L10, L4). Wrong examples: Royal Decree (created) -> Short Fuse, The List -> Short Fuse, The Warrior -> Short Fuse. Right examples: none.
+- unsure: runeterra "changes its stats for its effect" (Arena Mechacaster -> Xolaani the Bloodweaver, Mentor of the Stones -> Xolaani the Bloodweaver): Xolaani transforms when its power reaches a number, so power help is "helps it level up" (L24); the gone line is right only if the same pairs came back under that reason in NEW (I could not see a NEW list).
+- unsure: gwent "makes enemy units die: copys them" (Ocvist -> Rosa and Edna var Attre): Ocvist's spread hit and all-enemies hit can kill, which feeds Rosa's kill trigger (L11); Tainted Ale and Slave Hunter are plain single hits, so their gone lines are right.
+- unsure: gwent "makes your units die: Banishes them" (Madoc -> Mammuna): Madoc kills itself and Mammuna banishes units from my discard; may be a real line.
+- unsure: gwent "fills your hand" (One-Eyed Betsy -> Carlo Varese, Coral -> Eskel): both gone lines are right (net zero draw, or the target wants a small hand); faeria Iona's Smile -> Gagana, Treasure Seeker and Dream Keeper -> Radiance, Imperial Airship feed a hand count and may be doubtful.
+- unsure: the piece I received ended at line 1241 inside the GONE list; no NEW lines were visible, so no NEW cause could be judged.
+- right: Torrential Rain -> Harpy Egg gone (random 1 damage, plain hit, L11)
+- right: Dragon's Dream -> Witches' Sabbath gone (hits enemy units, feeds no need about my units, L9)
+- right: Vreemde -> Nauzicaa Sergeant gone (stat help to a card whose text does not use it, L14)
+- right: Inspirational Ballad -> Vereena gone (Vitality help to a card that does not use it, L14)
+- right: Vrygheff -> Slave Hunter gone (Vrygheff repeats only turn-end effects, Slave Hunter has a play effect)
