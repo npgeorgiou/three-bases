@@ -2811,6 +2811,13 @@ def network(c, game, ids, broad=True):
                                            for (a, b), ls in lines.items()})
     lines = collections.defaultdict(list, {(a, b): [l for l in ls if not (nodes.get(b) and l[2] == 'draws it from the deck')]
                                            for (a, b), ls in lines.items()})  # a card the deck only makes is in no deck to draw from
+    # a card that waits only for a given keyword (Impera Enforcers, Redanian Secret Service; no summon or play effect of its own) is fed by
+    # the keyword giver once: no "puts it into play", "plays it" or "does what it waits for" on top (C5, C6; L10, L17, L18)
+    only_kw = {b for (b,) in c.execute("select distinct card from flat_when where origin='own' and event='given_keyword'")} - \
+              {b for (b,) in c.execute("select distinct card from flat_when where origin='own' and event in ('summoned','played') and obj_pick='self'")}
+    def kw_extra(y): return y.startswith(('puts it into play', 'plays it:', 'does what it waits for'))
+    lines = collections.defaultdict(list, {(a, b): [l for l in ls if not (kw_extra(l[2]) and b in only_kw and any(' units get ' in x[2] for x in ls))]
+                                           for (a, b), ls in lines.items()})
     # a form a card grows or levels into is never played from hand: its cost is never paid (Tadpole -> Bullfrog, Curious Egg ->
     # Hydra; a champion's level-up form)
     grown = {b for (a, b), ls in lines.items() if nodes.get(b) and any(k == 'levelsinto' for k, _, _ in ls)} - \

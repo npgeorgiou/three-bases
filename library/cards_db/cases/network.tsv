@@ -666,3 +666,9 @@ n671	gwent	Magic Compass, Gregoire de Gorgon	Magic Compass	Gregoire de Gorgon	no
 n672	into_the_breach	Bomb Dispenser, Fissure Fist	Bomb Dispenser	Fissure Fist	none	gives it units to kill	Claude 2026-11-06, line check: summoning feeds only an activated 1-damage ping
 n673	gwent	Redanian Secret Service, Kaedweni Revenant	Redanian Secret Service	Kaedweni Revenant	line	gives it units to kill	Claude 2026-11-06, line check: an activated 1-damage ping eats my summoned units
 n674	gwent	Geralt: Professional, Wolfsbane	Geralt: Professional	Wolfsbane	line	its 1 damage kills what it sets to strength 1	Claude 2026-11-06, line check: a 1-damage ping kills a unit set to strength 1
+n675	gwent	Drakenborg, Redanian Secret Service	Drakenborg	Redanian Secret Service	none	puts it into play: its summon effect goes off	Claude 2026-11-06, line check: a card waiting only for a given keyword is fed by the giver once
+n676	gwent	Drakenborg, Redanian Secret Service	Drakenborg	Redanian Secret Service	none	does what it waits for or counts	Claude 2026-11-06, line check: one reason said once
+n677	gwent	Emhyr var Emreis, Impera Enforcers	Emhyr var Emreis	Impera Enforcers	none	plays it: its effect goes off	Claude 2026-11-06, line check: Enforcers wait only for Spying given
+n678	gwent	Emhyr var Emreis, Impera Enforcers	Emhyr var Emreis	Impera Enforcers	none	puts it into play from the hand	Claude 2026-11-06, line check: Enforcers wait only for Spying given
+n679	gwent	Fercart, Impera Enforcers	Fercart	Impera Enforcers	line	makes enemy units get Spying	Claude 2026-11-06, line check: the keyword giver stays
+n680	gwent	Treason, Impera Enforcers	Treason	Impera Enforcers	line	makes enemy units get Spying	Claude 2026-11-06, line check: the keyword giver stays
