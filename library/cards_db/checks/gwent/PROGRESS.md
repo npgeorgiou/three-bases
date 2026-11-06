@@ -7,7 +7,10 @@
 - Runeterra n34 already failed before this import (see START_DATABASE "State").
 
 ## Next (a new chat continues here; read START_DATABASE.md whole first)
-1. Baseline: running (`check_all.py --no-load` -> checks/gwent/baseline_cases.txt, line table baseline_tb.tsv), 6 Nov 2026.
+1. Baseline: done 6 Nov 2026 (checks/gwent/baseline_cases.txt: all pass but Runeterra n34; `links.py`: cases/links.tsv lk96
+   Vinemother -> Wyldenten already failed; line table baseline_tb.tsv, 31 MB, not in git).
+3a. Decks: no source gives win rates per Gwent deck (leriohub, Dec 2025: no deck trackers); asked Kaptain whether to use
+   decks top players climbed the Pro Ladder or won tournaments with. Full lists are on playgwent.com (needs a browser).
 2. Growing numbers: done 6 Nov 2026 (v77, BRIEF line). The 167 was wrong: only 7 amounts were {"x": "unstated"}, 2 of
    them growing numbers (Keira Metz, Colossal Ifrit); the other 48 growing-number cards were already read. Left: 5 amounts
    no value says yet (Dol Blathanna Bowman rows between, Vivaldi Bank distance from top, Fucusya unused provisions,
