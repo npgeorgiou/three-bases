@@ -595,7 +595,7 @@ def lines_of(c, game):
                 # counts created units (L20)
                 named_ids = [int(x) for p_ in (mw or '').split(';') if p_.startswith(('card is ', 'card in ')) for x in p_.split(' ')[2:] if x.isdigit()]
                 if h == 'played' and tkind in KIND_CAT and tkind != 'player' and named_ids and all(x in cards for x in named_ids) and \
-                        not any(cards[x]['cat'] in (KIND_CAT[tkind] | {tkind}) for x in named_ids): continue  # Kaer Seren plays a named unit: no "when you play a spell" (Keldar) waits for it
+                        not any(matches(c, game, cards[x], tkind, tw) for x in named_ids): continue  # Kaer Seren plays a named unit: no "when you play a spell" (Keldar) waits for it
                 if tpick == 'self' and h in ('created', 'summoned', 'drawn') and mref and mref != t: continue  # Angel creates Coins, never
                 # the Cunning Kitten that waits to be created (L20)
                 if tpick == 'self' and mkind == 'player' and h in ('moves', 'moves_onto') and cards[t]['cat'] != 'leader': continue  # done to my General or player, never to
