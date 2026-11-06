@@ -2114,10 +2114,13 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
     hand = lambda acts, zone, kw='': {a for (a,) in c.execute(f"""select card from flat_do where act in ({','.join('?' * len(acts))}) and origin in
             ('own','uses_keyword',?) and coalesce(on_side,'mine')='mine' and (coalesce(on_zone,'')='hand' or coalesce(eff_zone,'')='hand' or ?)
             and card in ({marks})""", list(acts) + [kw, zone] + L)}  # kw: a keyword it has that adds to the hand (Fecundity's copy)
+    nodraw = {a for (a,) in c.execute("""select d.card from flat_do d where d.act='draw' and d.origin='own' and (d.on_with is not null or exists (select 1 from flat_do x
+              where x.card=d.card and x.ability=d.ability and x.act='shuffle_into_deck' and x.on_zone='hand'))""")}  # a draw by kind only or one that shuffles a card back (net zero) fills no hand (L1b)
     for t, ab, op, n_, ok_, ow_ in c.execute(f"""select card, ability, op, n, of_kind, of_with from flat_if where of_zone='hand' and coalesce(of_side,'mine')='mine'
             and test in ('count','amount_count','have') and coalesce(of_pick,'') not in ('self','chosen') and card in ({marks})""", L).fetchall():
         # not the card itself in hand (Ethereal: "if this is still in your hand"), nor what it picks there itself (Gambling Chip)
         if op == 'not' and 'card is ' in (ow_ or ''): continue  # "if you don't have Pokey Stick": one missing card, not an empty hand ()
+        if op in ('le', 'lt') and n_ == 'listed': continue  # a hand-size limit the card's keyword lists (Geralt: Quen) is no need for a fuller hand (L5)
         few = (op in ('eq', 'le', 'lt') and isinstance(n_ or 0, (int, float)) and (n_ or 0) <= 1) or op == 'not' or ok_ == 'position'  # "no cards in hand" (have not, N22);
         # "for each empty card space in your hand" (Clap of Thunder): it wants an empty hand
         dos = c.execute("select act, params, coalesce(on_side,'mine') from flat_do where card=? and ability=? and origin='own'", (t, ab)).fetchall()
@@ -2128,7 +2131,7 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
         refill = {a for (a,) in c.execute("""select d.card from flat_do d join flat_do x on x.card=d.card and x.ability=d.ability where
                   d.act='discard' and x.act in ('draw','create')""")}  # Rummage discards 2 and draws 2: the hand is never empty (L4)
         instant = {a for (a,) in c.execute("select d.card from flat_do d join flat_do x on x.card=d.card and x.ability=d.ability where d.act='create' and x.act='play_card' and x.on_pick='it'")}  # "Create and play a card" (Imperial Diplomacy): the card never stays in the hand
-        helpers = (hand(('discard',), 0) - refill) if few else (hand(('create', 'copy', 'return_to_hand'), 0, 'has_keyword') - instant) | hand(('draw',), 1)  # a draw goes to hand
+        helpers = (hand(('discard',), 0) - refill) if few else (hand(('create', 'copy', 'return_to_hand'), 0, 'has_keyword') - instant) | (hand(('draw',), 1) - nodraw)  # a draw goes to hand
         if not few and not any(p_.startswith('cost ') for p_ in (ow_ or '').split(';')):  # a card that stops cards being played from hand (Professor X) keeps the hand full
             helpers = helpers | {a for (a,) in c.execute(f"""select card from flat_do where origin='own' and act='cant' and param_event='played' and on_pick='all'
                       and on_zone='hand' and on_kind='card' and coalesce(on_side,'mine')!='enemy' and card in ({marks})""", L)}  # stopping the ENEMY's plays keeps only its hand full (L9)
