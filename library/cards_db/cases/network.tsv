@@ -612,3 +612,9 @@ n617	gwent	Imposter, Torres var Emreis: Founder	Imposter	Torres var Emreis: Foun
 n618	gwent	Vrygheff, Alba Armored Cavalry	Vrygheff	Alba Armored Cavalry	none	repeats its effects	Claude 2026-11-06, line check: Vrygheff repeats turn_end effects; the card has only a play effect (L21)
 n619	gwent	Syanna, Alba Spearman	Syanna	Alba Spearman	line	repeats its Deploy effects	Claude 2026-11-06, line check: right example stays
 n620	gwent	Syanna, Aglaïs	Syanna	Aglaïs	line	repeats its Deploy effects	Claude 2026-11-06, line check: right example stays
+n621	gwent	Onslaught, Tidecloak Hideaway	Onslaught	Tidecloak Hideaway	none	gives it Armor	Claude 2026-11-06, line check: Armor/Vitality is health-like help and the card's text never uses it (L14, L18)
+n622	gwent	Onslaught, An Craite Longship	Onslaught	An Craite Longship	none	gives it Armor	Claude 2026-11-06, line check: Armor/Vitality is health-like help and the card's text never uses it (L14, L18)
+n623	gwent	Crach an Craite, Dimun Pirate	Crach an Craite	Dimun Pirate	none	can give it Armor	Claude 2026-11-06, line check: Armor/Vitality is health-like help and the card's text never uses it (L14, L18)
+n624	gwent	Crach an Craite, Deranged Corsair	Crach an Craite	Deranged Corsair	none	can give it Armor	Claude 2026-11-06, line check: Armor/Vitality is health-like help and the card's text never uses it (L14, L18)
+n625	gwent	Inspirational Ballad, Berengar	Inspirational Ballad	Berengar	none	can give it Vitality	Claude 2026-11-06, line check: Armor/Vitality is health-like help and the card's text never uses it (L14, L18)
+n626	gwent	Witch Hunter, Vigilantes	Witch Hunter	Vigilantes	line	makes enemy units get Bounty	Claude 2026-11-06, line check: right example stays

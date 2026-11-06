@@ -1445,6 +1445,7 @@ def aimed(c, game, nodes, broad):
         if act in ('stat_change', 'grow') and kind != 'player' and (not any(p.startswith(('type is', 'type in')) for p in (w or '').split(';')) or 'strength=' in (ps or '')):
             sharp = False  # stats to units with a keyword or a stat go only to a unit whose text uses them (L14, L18: Rek'Sai's Lurkers ->
             # Sharkling: no line); a tribe stays a deck choice (Kaptain's ndu34: Oakenheart helps the Mechs)
+        if act == 'give_keyword' and kw and kw_tree(c, kw) in DEFENCE_KW: sharp = False  # health-like help (Armor, Vitality) to a tribe or kind goes only to a card whose text uses it (L14, L18)
         if act == 'increase_effect' and kind == 'spell' and 'keyword i' not in (w or ''): sharp = False  # more spell damage ()
         if act == 'cant' and any(x.startswith('cost ') for x in (w or '').split(';')):
             sharp = False  # a cost is a stat, no narrower than a deck: protection by cost goes only to a card whose text uses it (L14: Caiera -> Broodling)
