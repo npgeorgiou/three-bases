@@ -1018,3 +1018,8 @@ state	primary_category_not_controlled	a card whose primary category no unit you 
 state	alone_in_row	a unit with no other unit on its row (Gwent "alone on their row")			6 Nov 2026, v73 (Gwent proposals)
 state	own	with attr origin: the event came from the holder's own ability (Gwent "a boost from other abilities" = origin not own)			6 Nov 2026, v73 (Gwent proposals)
 state	stratagem	a stratagem card: the card placed on a row at the start of the game (Gwent card kind)			6 Nov 2026, v73 (Gwent proposals)
+act	stage_advance	move a staged card to its next stage (Gwent Scenario "Progress": the next Chapter); test stage reads it		stage_changed	6 Nov 2026, v74 (Gwent re-read)
+act	reorder_deck	change the order of cards in a deck (Gwent "Sort the cards in your deck by provision cost"); params attr = the order key			6 Nov 2026, v74 (Gwent re-read)
+act	worship	worship a named card (Gwent "worship Dagon"; card = the worshipped card, whose text counts it)		worshipped	6 Nov 2026, v74 (Gwent re-read)
+event	worshipped	a named card was worshipped (Gwent Dagon)			6 Nov 2026, v74 (Gwent re-read)
+event	stage_changed	a staged card moved to its next stage (Gwent Scenario chapter)			6 Nov 2026, v74 (Gwent re-read)

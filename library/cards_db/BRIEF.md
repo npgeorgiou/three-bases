@@ -746,3 +746,5 @@ library/games/gwent.md "The game's rules (from sources)"; the keyword entries (i
   divided (inner, n 3); "from your opponent's faction" = state opponent_faction; states even_power, odd_power,
   played_this_turn, alone_in_row, primary_category_not_controlled, stratagem; "a boost from other abilities" = filter attr
   origin op not val own.
+- Added 6 Nov 2026: Scenario "Progress" = act stage_advance (on the Scenario); "Sort your deck by provision cost" = act
+  reorder_deck, params attr cost; "worship Dagon" = act worship, card the worshipped card.
