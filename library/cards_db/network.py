@@ -2108,7 +2108,7 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
             and test in ('count','amount_count','have') and coalesce(of_pick,'') not in ('self','chosen') and card in ({marks})""", L).fetchall():
         # not the card itself in hand (Ethereal: "if this is still in your hand"), nor what it picks there itself (Gambling Chip)
         if op == 'not' and 'card is ' in (ow_ or ''): continue  # "if you don't have Pokey Stick": one missing card, not an empty hand ()
-        few = (op in ('eq', 'le', 'lt') and (n_ or 0) <= 1) or op == 'not' or ok_ == 'position'  # "no cards in hand" (have not, N22);
+        few = (op in ('eq', 'le', 'lt') and isinstance(n_ or 0, (int, float)) and (n_ or 0) <= 1) or op == 'not' or ok_ == 'position'  # "no cards in hand" (have not, N22);
         # "for each empty card space in your hand" (Clap of Thunder): it wants an empty hand
         dos = c.execute("select act, params, coalesce(on_side,'mine') from flat_do where card=? and ability=? and origin='own'", (t, ab)).fetchall()
         if any(a_ == 'draw' and 'amount=sum' in (p_ or '') for a_, p_, _ in dos): few = True  # "draw until you have 6" (Expertise,

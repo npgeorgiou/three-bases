@@ -18,6 +18,10 @@ KW_EQUIV = {'landmark': 'landmark', 'equipment': 'equipment|attach|attached_to|e
             'consume': 'exhausted|exhaust',
             # Duelyst tiles are terrain values (BRIEF Game words: Duelyst)
             'shadow creep': 'damage_space|set_terrain', 'hallowed ground': 'heal_space|set_terrain', 'exhuming sand': 'summon_space|set_terrain',
+            # Gwent: Coins are the secondary resource; rows are front_row / back_row; Cooldown and Charges are refreshed (BRIEF Game words: Gwent)
+            'profit': 'mana_gain', 'coin': 'mana_gain|spend_mana|secondary_resource', 'spend': 'spend_mana', 'fee': 'spend_mana',
+            'tribute': 'spend_mana', 'melee': 'front_row', 'ranged': 'back_row', 'cooldown': 'refresh', 'charge': 'refresh',
+            'reset': 'refresh|stat_set', 'swap': 'swap|stat_set|move', 'armor': 'armor|ignore_armor|block_armor',
             'primal flourish': 'growth_space|set_terrain', 'mana spring': 'bonus_mana_space|set_terrain'}
 
 def patterns(game):
@@ -36,6 +40,7 @@ def walk(x, out):
     if isinstance(x, dict):
         for v in x.values():
             if isinstance(v, str): out['value'].add(v.lower())
+        if isinstance(x.get('params'), dict): out['value'] |= {k.lower() for k in x['params']}  # ignore_armor, turns
         for v in x.get('vals', []): out['value'].add(str(v).lower())
         if 'event' in x and isinstance(x['event'], str): out['event'].add(x['event'])
         if 'act' in x: out['act'].add(x['act'])

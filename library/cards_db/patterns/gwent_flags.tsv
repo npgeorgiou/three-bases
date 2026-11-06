@@ -1,0 +1,62 @@
+card	name	pattern	requires	text
+756305	Odrin	KW	name:crew	 #  is a one man crew.
+756313	Siege Support	KW	name:cooldown	deploy (melee): reduce the cooldown of an allied unit by 1. deplo
+756320	Temerian Infantry	KW	name:charge	 unit by 2 for each remaining charge of your  #  ability.
+756322	Siege Master	KW	name:cooldown	rder: reduce an allied unit's cooldown by 1. when you play a  # , su
+756382	Aglaïs	T116	event:played	deploy: at the end of this turn, doub
+756385	Dennis Cranmer	KW	name:armor	s by an amount equal to their armor.
+756396	Sheldon Skaggs	T126	value:stat_change|stat_set|stat_changed|buffed|boost	unit by the amount sheldon is boosted.
+756455	An Craite Armorsmith	KW	name:armor	 allied unit by 1 for every 2 armor on the highest-armor unit in 
+756499	Alchemist	KW	name:swap	deploy (ranged): swap the power of 2 allied units.
+756508	Summoning Circle	KW	name:order	 at the units in your deck in order from top to bottom, then choo
+756547	Hym	KW	name:swap	deploy: swap this unit's power with a dama
+756568	Reckless Flurry	KW	name:armor	l enemy units, ignoring their armor. charges: 2 this ability adds
+756646	Mad Kiyan	T126	value:stat_change|stat_set|stat_changed|buffed|boost	emy unit by the amount  #  is boosted. deathblow: reset own power.
+756665	Crushing Trap	KW	name:ambush	ambush (timer 2): damage all units o
+756666	Derran	T130	value:move|moves|return_to_hand|put_on_top|keyword_action|give_keyword|remove_keyword|shuffle_into_deck|shuffled|moved_to_deck	nged): damage self by 3, then move a card from your deck to your
+756669	Sabrina's Inferno	T127	value:kill|dies|killed|keyword_action	on- #  unit by 1. if any were destroyed, repeat this ability once.
+756673	Winch	KW	name:cooldown	lied unit by 5 and reduce its cooldown by 3.
+756703	Gascon	V20	value:this_game|recalled_this_game|once_per_game	 second copy of a bonded unit this game, boost self by 3.
+756718	Royal Inspiration	KW	name:grace	it triggered an allied unit's grace ability, refresh the order an
+756752	Tempest	V21	value:copy|copy_keywords|create|summon|transform|copy_of_it|revive|copy_text|repeat	play all copies of  # ,  # , or  #  from your
+756784	Milton de Peyrac-Peyran	V19	value:this_round|dead_this_round|summoned_this_round|targeted_this_round|attacked_this_round|struck_this_round	ost you gave to an enemy unit this round.
+756817	Treant Mantis: Stalk	V22	value:strike|strikes|strike_with|damage|strikes_nexus|survives_damage	ansform self into  #  mantis: strike. spring: transform into  #  m
+756823	Knut the Callous	KW	name:berserk	nemy unit by the same amount. berserk 5: at the end of your turn, r
+756877	Eventide Plunder	KW	name:fee	 4-provision cost unit with a fee.
+756938	Vlodimir von Everec	KW	name:swap	deploy: swap a unit's power with armor.
+757085	Master Mirror	T132	value:play_card|revive	eat this ability whenever you play the rightmost card from your hand.
+757137	Braathens	KW	name:disloyal	loy: create and play a bronze disloyal unit from your starting deck.
+757149	Freixenet	KW	name:vitality	e cooldown by the duration of vitality on self.
+757165	Maxii van Dekkar	KW	name:order	deploy: look at your deck in order from top to bottom. you may s
+757166	Ivar Evil-Eye	KW	name:swap	deploy: swap this unit's power with an ene
+757211	Succubus	T117	event:dies	deathwish: at the end of your turn, if t
+757244	Bride of the Sea	KW	name:rain	cost by the total duration of rain and storm on your opponent's 
+757244	Bride of the Sea	KW	name:storm	he total duration of rain and storm on your opponent's side.
+757253	Casting Contest	KW	name:order	 5. if it's bronze, reset its order ability and give it zeal.
+757265	Artaud Terranova	KW	name:spying	ny non-disloyal unit you gave spying to during this game, excludin
+757265	Artaud Terranova	V20	value:this_game|recalled_this_game|once_per_game	nit you gave spying to during this game, excluding self.
+757273	Hermit	KW	name:berserk	deploy: damage self by 4. berserk 6: at the end of your turn, d
+757274	Simlas Finn aep Dabairr	V21	value:copy|copy_keywords|create|summon|transform|copy_of_it|revive|copy_text|repeat	deploy: play all copies of a bronze special card from
+757278	Tissaia de Vries	KW	name:order	e end of this turn, reset the order of all allied mages that used
+757278	Tissaia de Vries	T116	event:played	deploy: at the end of this turn, rese
+757291	Dwimveandra	KW	name:order	 deploy (ranged): refresh the order of an allied  # .
+757298	Messenger of the Sea	KW	name:rain	whenever rain or storm damages enemy units,
+757298	Messenger of the Sea	KW	name:storm	whenever rain or storm damages enemy units, boost se
+757306	Alumni	KW	name:patience	ues correspond to the highest patience achieved by your  #  or  #  t
+757306	Alumni	V20	value:this_game|recalled_this_game|once_per_game	e achieved by your  #  or  #  this game, respectively.
+757312	The Brute	T127	value:kill|dies|killed|keyword_action	 enemy unit with a bounty you destroyed this game. whenever you place
+757316	The Mushy Truffle	KW	name:bonded	nce. deploy: spawn and play a bonded unit from your starting deck.
+757333	Squire	T119	event:activated	order: boost the next unit you play 
+757352	King Henselt	KW	name:cooldown	. whenever an adjacent unit's cooldown decreases, boost self by the 
+757378	Guillaume de Launfal	T130	value:move|moves|return_to_hand|put_on_top|keyword_action|give_keyword|remove_keyword|shuffle_into_deck|shuffled|moved_to_deck	its' power. order (grace 14): move all statuses from an enemy un
+757382	Ulula	KW	name:armor	 damage it by 1, ignoring its armor.
+757394	Caranthir: Golden Child	KW	name:frost	t self by the damage dealt by frost in the last 5 enemy turns (0,
+757394	Caranthir: Golden Child	V05	value:damage|damaged|survives_damage|nexus_damaged|excess_damage|negate_damage|damage_reduction|strike_with|increase_effect	n power and boost self by the damage dealt by frost in the last 5 
+757396	Aen Elle Slave Trader	KW	name:frost	qual to the total duration of frost on your opponent's side of th
+757421	Kelpie	KW	name:storm	nit takes damage from rain or storm, boost a random unboosted all
+757422	Sea Serpent	KW	name:rain	r each opponent turn in which rain or storm triggered this round
+757422	Sea Serpent	KW	name:storm	pponent turn in which rain or storm triggered this round.
+757422	Sea Serpent	V19	value:this_round|dead_this_round|summoned_this_round|targeted_this_round|attacked_this_round|struck_this_round	which rain or storm triggered this round.
+757454	Deception	KW	name:ambush	ambush (timer 3): spawn 3  #  on thi
+757478	Otkell	V21	value:copy|copy_keywords|create|summon|transform|copy_of_it|revive|copy_text|repeat	self down to 1, then play all copies of  #  from your graveyard, a
+757484	Lara Dorren	KW	name:frost	self by the total duration of frost on enemy rows. deathwish: boo

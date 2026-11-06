@@ -737,3 +737,12 @@ library/games/gwent.md "The game's rules (from sources)"; the keyword entries (i
   faction = filter region ("non-Neutral" = region op not Neutral); "your leader ability" = kind leader_ability, side mine:
   "gain a Charge of your leader ability" = give_keyword Charge amount 1 on it; "reset its Cooldown", "reset your leader
   ability" = refresh. "Provision cost" = attr cost.
+- Values added 6 Nov 2026 (from readers' proposals): "ignoring Armor" = params ignore_armor 1 (with damage); "once per turn" =
+  limit once_per_turn, "the first time each turn" = limit first_each_turn; "excess damage" = x excess; a unit's Armor = attr
+  armor; "the amount of boost on it", "keeping its boost" = attr boost; the number on a status, Charges, or a row effect's
+  remaining turns = attr keyword_amount with ref the keyword (sum over a side = x sum); "primary category" = attr
+  primary_type; "during your turn" = COND test my_turn; "rightmost / leftmost unit or card in hand" = pick rightmost /
+  leftmost; "the last unit your opponent played" = pick last_played; "set its base power to 5" = base_set; "for every 3" = x
+  divided (inner, n 3); "from your opponent's faction" = state opponent_faction; states even_power, odd_power,
+  played_this_turn, alone_in_row, primary_category_not_controlled, stratagem; "a boost from other abilities" = filter attr
+  origin op not val own.
