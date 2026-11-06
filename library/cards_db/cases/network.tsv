@@ -654,3 +654,9 @@ n659	gwent	Tactical Advantage, Toad Prince	Tactical Advantage	Toad Prince	none	g
 n660	gwent	Bone Talisman, Kikimore Stalker	Bone Talisman	Kikimore Stalker	none	gives it more strength	Claude 2026-11-06, line check: generic keyword rows are no reading of strength in the card text
 n661	gwent	Target Practice, Knight-Errant	Target Practice	Knight-Errant	line	can give it more strength	Claude 2026-11-06, line check: own strength test stays
 n662	gwent	Squire, Knight-Errant	Squire	Knight-Errant	line	its text reads its strength when it comes	Claude 2026-11-06, line check: own strength test stays
+n663	runeterra	Noxian Fervor, Parrrley	Noxian Fervor	Parrrley	none	leaves weak units for its kill	Claude 2026-11-06, line check: one chosen hit leaves no weak units for a kill trigger
+n664	gwent	Coup de Grâce, Impera Enforcers	Coup de Grâce	Impera Enforcers	none	leaves weak units for its kill	Claude 2026-11-06, line check: one chosen hit leaves no weak units for a kill trigger
+n665	gwent	Waylay, Milva: Sharpshooter	Waylay	Milva: Sharpshooter	none	leaves weak units for its kill	Claude 2026-11-06, line check: one chosen hit leaves no weak units for a kill trigger
+n666	into_the_breach	Hydraulic Lifter, Seismic Capacitor	Hydraulic Lifter	Seismic Capacitor	none	leaves weak units for its kill	Claude 2026-11-06, line check: one chosen hit leaves no weak units for a kill trigger
+n667	runeterra	Swain (level 2), Parrrley	Swain (level 2)	Parrrley	line	leaves weak units for its kill	Claude 2026-11-06, line check: one chosen hit leaves no weak units for a kill trigger
+n668	gwent	Sabrina Glevissig, Kaedweni Revenant	Sabrina Glevissig	Kaedweni Revenant	line	leaves weak units for its kill	Claude 2026-11-06, line check: one chosen hit leaves no weak units for a kill trigger

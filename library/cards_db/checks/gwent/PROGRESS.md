@@ -44,7 +44,7 @@ lr_misses.md · 5 verifiers · 6 the sheet · 7 fixers · 8 one rebuild · 9 las
 - Step 5 DONE: vv_1-9.md. Step 6 DONE: causes_sheet.md (94 causes; CONFLICT ones go to Kaptain at the end).
 - Step 7: fixers by group (fix_groups.txt, 46 groups; report fix_C<first cause>.md; each fixer runs pair.py first; check_all.py --no-load after every fifth; fixdone.sh gwent fix_C<k>). MISSED CASE WRONG (vv_7 2, vv_8 6) and CONFLICT C92-C94 go to Kaptain at the end.
 - Step 7 cut (Kaptain 6 Nov: only the most influential): left to fix G26 G27 G39-G46 (causes naming failing guide cases); G1-G9 done; G10-G25, G28-G38 unfixed, to "Open work" at step 10.
-- 7. Fixers: C1 FIXED; C3 STUCK; C4 FIXED; C8 FIXED; C11 FIXED; C13 CONFLICT; C15 FIXED; C17 FIXED; C18 STUCK; C40 FIXED; C41 STUCK; C77 CONFLICT; C78 CONFLICT; C79 FIXED; mt FIXED; C80 FIXED; C81 FIXED; C86 FIXED (by an earlier fix); C87 FIXED; C89 STUCK; fix2_C1 FIXED; fix2_C2 FIXED;
+- 7. Fixers: C1 FIXED; C3 STUCK; C4 FIXED; C8 FIXED; C11 FIXED; C13 CONFLICT; C15 FIXED; C17 FIXED; C18 STUCK; C40 FIXED; C41 STUCK; C77 CONFLICT; C78 CONFLICT; C79 FIXED; mt FIXED; C80 FIXED; C81 FIXED; C86 FIXED (by an earlier fix); C87 FIXED; C89 STUCK; fix2_C1 FIXED; fix2_C2 FIXED; fix2_C3 FIXED;
 - check_all --no-load after 5 fixers: every other game unchanged (Runeterra 428/429 as baseline); Gwent 195 of 225. Stale must-not cases listed in ca5.txt (step 8 rewrites them strict).
 - check_all --no-load after C79: Monster Train 154 of 155 (one fix broke a case; an agent finds it, report fix_mt.md); every other game unchanged; Gwent 225 of 248.
 - Step 7 DONE (cut). Step 8: check_all --no-load (only code changed), then links.py, after.tsv, diffs.
