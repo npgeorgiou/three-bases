@@ -495,7 +495,10 @@ their text. D = `checks/<game>/`. After each step: write PROGRESS.md, commit and
    rules win, the case is deleted).
 6. **The sheet.** `causes.py D/vv_*.md --out D/causes_sheet.md`: every REAL, PARTLY and MISSED REAL cause, biggest first, with
    all a fixer needs. CONFLICT causes (a case says the opposite; Kaptain's case wins) and gone ones are skipped.
-7. **Fixers, one at a time, from the top.** checks/LINE_FIXER_JOB.md + the sheet path + the cause's number (C<k>, its heading's first word) + the report path
+7. **Fixers, one at a time, only the most influential causes** (Kaptain, 6 Nov 2026; never every cause on the sheet): the
+   causes with 100 or more table lines from the same code, and every cause that names a failing guide case (deck pair,
+   decks.tsv row, combo). All other causes go to "Open work" in one line each, unfixed. (The 100-line cut is Claude's.)
+   checks/LINE_FIXER_JOB.md + the sheet path + the cause's number (C<k>, its heading's first word) + the report path
    D/fix_<n>.md. The main chat reads only the report's first line (FIXED, STUCK or CONFLICT), notes it in PROGRESS.md,
    commits and starts the next fixer. A STUCK cause goes to "Open work" with the fixer's words.
    **Cheaper** (Marvel Snap, 5 Nov 2026: 7 of 37 fixer agents found their cause already fixed):
