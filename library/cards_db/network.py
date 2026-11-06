@@ -729,8 +729,11 @@ def lines_of(c, game):
     # my units put into play by kind, from the discard, deck or hand ("revive the 6 strongest allies", "summon a unit from your
     # deck"): its own "when I'm summoned" goes off again (The Harrowing -> Captain Farron); a Play effect does not
     entry = collections.defaultdict(set)
-    for i, e in c.execute("select card, event from flat_when where origin='own' and obj_pick='self' and event in ('summoned','played')"): entry[i].add(e)
-    for (i,) in c.execute("select card from flat_do where origin='has_keyword' and act='can' and on_pick='self' and param_event='activated'"): entry[i].add('summoned')  # Zeal: a unit put into play acts at once (Drakenborg -> Vincent Meis)
+    # (an entry whose ability only does a keyword's inner work, Gwent's "can't be activated this turn" on every card, is no summon effect)
+    for i, e in c.execute("""select w.card, w.event from flat_when w where w.origin='own' and w.obj_pick='self' and w.event in ('summoned','played')
+            and not (exists (select 1 from flat_do d where d.card=w.card and d.ability=w.ability and d.origin in ('has_keyword','uses_keyword'))
+            and not exists (select 1 from flat_do d where d.card=w.card and d.ability=w.ability and d.origin not in ('has_keyword','uses_keyword')))"""): entry[i].add(e)
+    for (i,) in c.execute("select card from flat_do where origin='has_keyword' and act='can' and on_pick='self' and param_event='activated' and coalesce(params,'') not like '%times=%'"): entry[i].add('summoned')  # Zeal: a unit put into play acts at once (Drakenborg -> Vincent Meis)
     for m, act, k, w, zone in c.execute("""select card, act, on_kind, on_with, on_zone from flat_do where origin='own' and card_ref is null
             and coalesce(on_side,'mine') in ('mine','any') and (coalesce(on_pick,'') not in ('self','it') or (act='summon' and on_pick='it' and exists
             (select 1 from flat_do x where x.card=flat_do.card and x.act='choose_card' and x.on_zone='deck'))) and ((act='revive') or
