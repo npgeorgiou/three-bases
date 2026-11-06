@@ -337,6 +337,21 @@ def snap_forms(x):
         for v in x: snap_forms(v)
 
 
+def made_card_form(x):
+    """N35 a summoned, created or transformed-into card is the field card, never a filter on "on" ("Summon Old Speartip": card
+    Old Speartip, on what is summoned: the same act written two ways in Gwent's second reading, 6 Nov 2026)"""
+    if isinstance(x, dict):
+        on = x.get('on')
+        if x.get('act') in ('summon', 'create', 'transform') and 'card' not in x and isinstance(on, dict) and on.get('pick') != 'self':
+            cf = [f for f in on.get('with', []) if isinstance(f, dict) and f.get('attr') == 'card' and f.get('op') == 'is' and f.get('ref')]
+            if len(cf) == 1 and x['act'] != 'transform':
+                x['card'] = cf[0]['ref']; on['with'] = [f for f in on['with'] if f is not cf[0]]
+                if not on['with']: on.pop('with')
+        for v in list(x.values()): made_card_form(v)
+    elif isinstance(x, list):
+        for v in x: made_card_form(v)
+
+
 def own_card_forms(r, inputs):
     """N26, N33, N34"""
     me = inputs.get(r.get('id')) or {}
@@ -373,7 +388,7 @@ def main():
             strength_picks(r2, 'strength' if game in STRENGTH_GAMES else 'power')
             keyword_trigger_form(r2, STATUS)
             trap_events(r2); moves_object(r2); sacrifice_form(r2, inputs); second_forms(r2)
-            snap_forms(r2); own_card_forms(r2, inputs)
+            snap_forms(r2); own_card_forms(r2, inputs); made_card_form(r2)
             n += r2 != r; out.append(r2)
         open(path, 'w').write(''.join(json.dumps(r, separators=(',', ':')) + '\n' for r in out))
         print(f'{os.path.basename(path)}: {n} of {len(L)} records changed')

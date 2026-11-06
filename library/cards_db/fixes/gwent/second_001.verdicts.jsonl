@@ -1,0 +1,60 @@
+{"id": 756320, "verdict": "neither", "why": "Second counts Charges with attr count instead of the Charges number of the leader ability; first wrote nothing."}
+{"id": 756322, "verdict": "second", "why": "First summons a unit chosen from hand instead of self; second summons self."}
+{"id": 756338, "verdict": "second", "why": "Second repeats an ally's Deathwish; first uses keyword_action Deathwish which is no keyword action."}
+{"id": 756370, "verdict": "same", "why": "Same effects both ways.", "form": "redundant pick all / chosen and 'of chosen' vs 'of it' for the other row"}
+{"id": 756388, "verdict": "neither", "why": "First wrote nothing; second uses position row_ends, not in vocab (ends are leftmost and rightmost units)."}
+{"id": 756434, "verdict": "same", "why": "Both summon self to the melee row and give it Doomed.", "form": "give_keyword on self vs it, link then vs and"}
+{"id": 756455, "verdict": "neither", "why": "Second halves a count of Armor units; text halves the Armor of the highest-Armor unit in hand; first wrote nothing."}
+{"id": 756522, "verdict": "neither", "why": "Second counts Armor units instead of reading an ally's Armor; first wrote nothing."}
+{"id": 756525, "verdict": "first", "why": "Berserk is a stat_changed with COND stat strength le 3 (brief); second uses keyword_condition."}
+{"id": 756543, "verdict": "second", "why": "Second limits the Counter to while in deck and summons from the deck zone; first misses both."}
+{"id": 756567, "verdict": "same", "why": "Same Armor to Pirates and Ships in hand.", "form": "kind unit vs kind card for cards in hand"}
+{"id": 756611, "verdict": "neither", "why": "Second drops 'during your turn' (my_turn); first wrote nothing."}
+{"id": 756705, "verdict": "neither", "why": "Second picks the highest unit by power; Gwent stat is strength; first wrote nothing."}
+{"id": 756728, "verdict": "same", "why": "Same boost to the right / adjacent units.", "form": "of self explicit vs omitted, side mine added"}
+{"id": 756735, "verdict": "same", "why": "Both Create then play_card; neither names the opponent's hand as source.", "form": "play_card on kind card pick it vs pick it"}
+{"id": 756737, "verdict": "same", "why": "Both create Dana Meadbh then play it.", "form": "zone hand vs omitted; play_card on kind card pick it vs pick it"}
+{"id": 756758, "verdict": "same", "why": "Both purify then damage by 4.", "form": "side any vs omitted, link then vs and, kind unit on damage target"}
+{"id": 756775, "verdict": "same", "why": "Both purify, damage 3 and give Bleeding 3 with a Vampire.", "form": "additive second ability vs two full conditional abilities"}
+{"id": 756784, "verdict": "second", "why": "First wrote nothing; second has both Deploy and Order."}
+{"id": 756801, "verdict": "same", "why": "Both Create, play, Shield.", "form": "link then vs and"}
+{"id": 756836, "verdict": "same", "why": "Both look at top 3 and put one on top.", "form": "look on deck_top with extra choose_card vs deck with pick top"}
+{"id": 756841, "verdict": "second", "why": "First wrote nothing; second has Intimidate and Profit 4 plus unique Gang types."}
+{"id": 756896, "verdict": "same", "why": "Both stop damage to the unit on the left.", "form": "act cant damaged vs negate_damage"}
+{"id": 756906, "verdict": "second", "why": "First writes Profit as give_keyword; Profit is mana_gain on Coins."}
+{"id": 756937, "verdict": "first", "why": "Second shuffles back a fixed 2 cards; text says the same number as drawn (event_amount)."}
+{"id": 756947, "verdict": "neither", "why": "Second drops 'ignoring Armor' (params ignore_armor 1); first wrote nothing."}
+{"id": 757011, "verdict": "same", "why": "Both spawn Desert Treasure on this row if Runewright is controlled.", "form": "summon card field vs on unit filter of the card; pick all vs omitted"}
+{"id": 757045, "verdict": "neither", "why": "First checks the opposite (self is the highest); second uses attr power instead of strength."}
+{"id": 757080, "verdict": "first", "why": "First makes a base copy (state created) and counts statuses; second drops the base-copy and status filters."}
+{"id": 757121, "verdict": "second", "why": "First writes Profit as give_keyword; Profit 3 is mana_gain on Coins."}
+{"id": 757123, "verdict": "first", "why": "Spawn is a summon; second uses event created."}
+{"id": 757131, "verdict": "same", "why": "Both spawn 2 Volunteers and boost them if a boosted unit exists.", "form": "summon card field vs on unit filter; boost it vs filter summoned_this_round"}
+{"id": 757150, "verdict": "same", "why": "Same Dunca record.", "form": "kind unit vs kind card for the random card in hand"}
+{"id": 757169, "verdict": "second", "why": "First wrote nothing; second boosts by the deck-size difference."}
+{"id": 757189, "verdict": "same", "why": "Both spawn a Siren on the opposite row and damage per Adrenaline.", "form": "summon card field vs on unit filter; of self omitted"}
+{"id": 757194, "verdict": "second", "why": "Heal is keyword_action Heal (brief); first uses act heal."}
+{"id": 757198, "verdict": "same", "why": "Both choose one of four Griffin Witchers, create and play it.", "form": "create zone hand and filtered play_card vs create then play it"}
+{"id": 757216, "verdict": "second", "why": "First writes Profit as give_keyword; Profit is mana_gain (base 1 plus Salamandra count)."}
+{"id": 757232, "verdict": "same", "why": "Both transform traps, and other artifacts with Devotion.", "form": "additive ability vs split conditional abilities"}
+{"id": 757247, "verdict": "same", "why": "Both advance the Counter on specials and copy-play the last special.", "form": "kind card with category spell vs kind spell"}
+{"id": 757259, "verdict": "first", "why": "Second picks the highest by power; Gwent stat is strength."}
+{"id": 757266, "verdict": "second", "why": "First wrote nothing; second has both abilities."}
+{"id": 757281, "verdict": "first", "why": "Patience (Ranged) is gated by Ranged in first; second drops that."}
+{"id": 757295, "verdict": "neither", "why": "First revives the original; second copies but drops the base-copy (state created) filter."}
+{"id": 757298, "verdict": "neither", "why": "Second boosts on any damage; text needs damage from Rain or Storm; first wrote nothing."}
+{"id": 757332, "verdict": "same", "why": "Same boosts, damage and Grace 9 Infuse.", "form": "of self explicit vs omitted, side mine added"}
+{"id": 757338, "verdict": "neither", "why": "Neither advances the Scenario on a Tidecloak (stage_advance); first fires Chapter 2 damage on playing a Tidecloak, second uses countdown_advance and Order."}
+{"id": 757357, "verdict": "second", "why": "First moves self unconditionally; second splits move or destroy by free opposite row and uses spells."}
+{"id": 757384, "verdict": "first", "why": "First repeats the Deploy keyword; second repeat has no target ability."}
+{"id": 757393, "verdict": "second", "why": "First wrote nothing; second has Deploy, Order and Devotion."}
+{"id": 757397, "verdict": "second", "why": "First wrote nothing; second has Deploy and Tribute 9."}
+{"id": 757416, "verdict": "second", "why": "First wrote nothing; second plays the enemy unit and boosts by provisions below the limit."}
+{"id": 757429, "verdict": "neither", "why": "Second uses power minus base power for 'amount of boost'; should be attr boost; first wrote nothing."}
+{"id": 757455, "verdict": "neither", "why": "First lacks the Ambush keyword; second uses attr power instead of strength."}
+{"id": 757461, "verdict": "first", "why": "First keeps bronze, Northern Realms and Order filters on the created unit; second drops them."}
+{"id": 757469, "verdict": "neither", "why": "Second uses base_change; 'set base power to 10' is base_set; first wrote nothing."}
+{"id": 757476, "verdict": "second", "why": "First wrote nothing; second has the Create and move steps."}
+{"id": 813625, "verdict": "second", "why": "First adds a Tribute condition and kind unit for 'Firesworn card'; second pays Tribute and counts any card."}
+{"id": 813631, "verdict": "same", "why": "Same Veil, Zeal, Operatives, Seize, Spying boost.", "form": "Veil and Zeal in one ability vs separate; summon card vs on unit filter"}
+{"id": 813683, "verdict": "second", "why": "First wrote nothing; second has both branches."}

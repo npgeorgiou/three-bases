@@ -748,3 +748,5 @@ library/games/gwent.md "The game's rules (from sources)"; the keyword entries (i
   origin op not val own.
 - Added 6 Nov 2026: Scenario "Progress" = act stage_advance (on the Scenario); "Sort your deck by provision cost" = act
   reorder_deck, params attr cost; "worship Dagon" = act worship, card the worshipped card.
+- One form (normalize N35, 6 Nov 2026, all games): the card a summon or create makes is the field "card", never a card
+  filter on "on" ("Summon Old Speartip" = act summon, card Old Speartip).
