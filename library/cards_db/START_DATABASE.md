@@ -347,6 +347,11 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
      Check 10 (old library tags) are leads: read the ones whose tag names a mechanic the game's texts show.
 3. Group the findings into families by cause (Part 2 "Fixing errors" 4), across all the lists above. Fix each once: a rule
    script (`fixes/<game>/vNN.py`, or a script for every game when the cause is shared), a normalize rule, or shared code.
+   **Baseline first** (Gwent, 6 Nov 2026: a Runeterra case that already failed cost three reruns and an old-code worktree
+   to clear): at the start of the chat, before any change, run `check_all.py --no-load` and save its output (and
+   `dump_lines.py --table`) in the scratchpad. A case failing after the rebuild is this chat's only if it passed in that
+   baseline; never trust "State" alone (the REPORT_<game>.md files are not in git, and the clone is shallow). Then fix it or
+   write it in "State" as already failing.
 4. One rebuild: `check_all.py <game>` (about 7 minutes). Before it `dump_lines.py`, after it `--diff`: read every gone and new
    reason group. Then all cases of every game pass, and the three audits print nothing unexplained. A new family found here
    is fixed in the same way and rebuilt once more; never a rebuild per family.
