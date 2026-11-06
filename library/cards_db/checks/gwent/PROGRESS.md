@@ -9,8 +9,13 @@
 ## Next (a new chat continues here; read START_DATABASE.md whole first)
 1. Baseline: done 6 Nov 2026 (checks/gwent/baseline_cases.txt: all pass but Runeterra n34; `links.py`: cases/links.tsv lk96
    Vinemother -> Wyldenten already failed; line table baseline_tb.tsv, 31 MB, not in git).
-3a. Decks: no source gives win rates per Gwent deck (leriohub, Dec 2025: no deck trackers); asked Kaptain whether to use
-   decks top players climbed the Pro Ladder or won tournaments with. Full lists are on playgwent.com (needs a browser).
+3a. Decks: done 6 Nov 2026. 30 full decks in decks.tsv, 5 per faction, from playgwent.com deck guides (English, June 2024
+   on, most votes per faction; several name the fMMR reached). No source gives win rates per deck (leriohub, Dec 2025).
+   Read in the built-in browser: www.playgwent.com/en/decks/api/guides/offset/<n>/limit/500 (list, votes) and
+   /en/decks/api/guides/<id> (deck: srcCardTemplates = every copy; content = the guide text). Decks with cards the data
+   lacks (Germain, Knickers, Ballista, Ice Giant, Cyclops Warrior) were swapped for the next ones; playgwent's other names
+   matched to ours (Crystall Skull -> Crystal Skull, Sappers -> Sapper ...). Left for step 4: "Deck pairs" from the guide
+   texts (content field) into games/gwent.md, then cases/decks.tsv and network.tsv by script.
 2. Growing numbers: done 6 Nov 2026 (v77, BRIEF line). The 167 was wrong: only 7 amounts were {"x": "unstated"}, 2 of
    them growing numbers (Keira Metz, Colossal Ifrit); the other 48 growing-number cards were already read. Left: 5 amounts
    no value says yet (Dol Blathanna Bowman rows between, Vivaldi Bank distance from top, Fucusya unused provisions,
