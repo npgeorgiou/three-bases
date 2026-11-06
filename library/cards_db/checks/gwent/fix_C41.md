@@ -1,0 +1,4 @@
+STUCK: the cause is wrong, nothing changed. The game's own text for Seize (input/gwent/keywords.jsonl id 756186) is "Move an enemy unit to the opposite row and give it Spying. If it already had Spying, remove Spying instead", and the record says the same, so Enslave and Amnesty (Seize) do give Spying and the lines to Impera Enforcers ("Whenever an enemy unit gains Spying") are right; pair.py still shows them.
+Only Emhyr var Emreis and Coup de Grace look doubtful on their own: Emhyr's text gives Spying itself and Seizes a unit with Spying (Seize on a unit that already has Spying removes it), Coup de Grace has no Spying in its text (its Spying line is a separate question).
+No edits, no cases added. Kaptain should decide whether Seize really gives Spying in the game; if not, the keyword record 756186 is the data to fix.
+Fercart case n571 (line to Impera Enforcers) is untouched.
