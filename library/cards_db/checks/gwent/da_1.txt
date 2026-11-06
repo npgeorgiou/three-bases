@@ -1,0 +1,444 @@
+
+=== gwent / Nature's Gift: Devotion Symbiosis Good Version: 26 cards, 122 lines
+-- a) 1 cards with no partner in the deck, each beside 10 deck cards: is a line missed?
+Tactical Advantage: KW: Order | WHEN activated of self DO stat_change chosen mine unit in board (strength=5) for permanent
+    ? Nature's Gift: KW: Symbiosis, Charge, Order | WHEN always DO give_keyword self <Symbiosis> for permanent | WHEN activated of self DO give_keyword chosen mine unit in board <Vitality> (amount=2) for permanent | WHEN always DO give_keyword self <Charge> (amount=3) for permanent
+    ? Duén Canell Guardian: KW: Veil, Symbiosis, Order | WHEN always DO give_keyword self <Veil> for permanent | WHEN always DO give_keyword self <Symbiosis> for permanent | WHEN activated of self DO damage chosen enemy unit in board (amount=2)
+    ? Naiad Fledgling: KW: Order | WHEN keyword_used by mine player of [keyword is Symbiosis] DO give_keyword left_of_self unit <Vitality> (amount=2) for permanent | WHEN activated of self DO remove_keyword chosen mine unit in board <Vitality> THEN stat_change self (strength=event_amount) for permanent
+    ? Mahakam Pass: KW: Resilience, Order, Deploy | WHEN always DO give_keyword self <Resilience> for permanent | WHEN played of self DO create random mine card [region is Scoiatael] [type is Dwarf] in hand THEN give_keyword it <Armor> (amount=4) for permanent | WHEN activated of self DO create in hand <Tempering> THEN play_card it
+    ? Frog: KW: Doomed, Order | WHEN always DO give_keyword self <Doomed> for permanent | WHEN turn_end by mine player DO give_keyword all unit in board [position is sides] <Vitality> for unstated | WHEN activated of self DO move self to mine position [position not same_row]
+    ? Nature's Rebuke: WHEN played of self DO damage chosen enemy unit in board (amount=5) | WHEN played of self DO damage chosen enemy unit in board (amount=5) | WHEN killed by self DO stat_change random mine unit in board [type is Treant] (strength=2) for permanent | WHEN killed by self DO stat_change random mine unit in board [type is Treant] (strength=2) for permanent
+    ? Freixenet: KW: Zeal | WHEN always DO give_keyword self <Zeal> for permanent | WHEN activated of self IF keyword_condition Ranged DO summon to mine position [position is same_row] <Young Dryad> | WHEN always DO keyword_action <Cooldown> (amount=4) | WHEN turn_end by mine player IF keyword_condition Devotion DO keyword_action <Cooldown> (amount=minus (stat keyword_amount of (self [keyword is Vitality])))
+    ? Eithné: Young Queen: KW: Deploy | WHEN played of self DO summon to chosen mine position [position is same_row] <Young Dryad> | WHEN round_start IF have self in hand DO transform self | WHEN round_start IF have self in deck DO transform self
+    ? Aucwenn: WHEN played of self IF keyword_condition Symbiosis DO give_type all mine unit in everywhere [type is Naiad] | WHEN summoned of mine unit [card is Wandering Treant] DO give_keyword it <Vitality> (amount=count of (all mine unit in board [type is Dryad])) for permanent
+    ? Call of the Forest: WHEN played of self DO play_card chosen mine unit in deck [region not Neutral] THEN stat_change it (strength=1) for permanent
+-- b) the 10 cards with the fewest partners, all their lines: is a line missed?
+Circle of Life (1 partners): WHEN played of self DO damage chosen enemy unit in board (amount=3) THEN stat_change random mine unit in hand [region not Neutral] (strength=2) for permanent | WHEN killed by self DO stat_change chosen mine unit in hand [region not Neutral] (strength=2) for permanent
+  Fauve -> Circle of Life: puts it into play: puts it into play from the deck
+     Fauve: KW: Deploy | WHEN played of self DO play_card chosen mine card in deck [type is Nature]
+     Circle of Life: (rows above)
+Nature's Rebuke (2 partners): (rows above)
+  Fauve -> Nature's Rebuke: puts it into play: puts it into play from the deck
+     Fauve: (rows above)
+     Nature's Rebuke: (rows above)
+  Nature's Rebuke -> Wandering Treant: makes stronger: can give it more strength
+     Nature's Rebuke: (rows above)
+     Wandering Treant: KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent
+Tempering (2 partners): WHEN played of self DO stat_change chosen mine unit in board (strength=5) for permanent THEN give_keyword it mine unit in board [type is Dwarf] <Armor> (amount=2) for permanent | WHEN played of self DO stat_change chosen mine unit in board (strength=5) for permanent THEN give_keyword it mine unit in board [type is Dwarf] <Armor> (amount=2) for permanent
+  Mahakam Pass -> Tempering: puts it into play: creates
+     Mahakam Pass: (rows above)
+     Tempering: (rows above)
+  Fauve -> Tempering: puts it into play: puts it into play from the deck
+     Fauve: (rows above)
+     Tempering: (rows above)
+Frog (3 partners): (rows above)
+  Frog -> Freixenet: enables: gives it Vitality for its effect; also makes stronger: does what it waits for or counts (given keyword) (when next to it)
+     Frog: (rows above)
+     Freixenet: (rows above)
+  Frog Mating Season -> Frog: puts it into play: summons
+     Frog Mating Season: WHEN played of self DO give_keyword 2 chosen mine unit in board <Vitality> (amount=4) for permanent THEN summon to position [position is sides] <Frog>
+     Frog: (rows above)
+  Naiad Fledgling -> Frog: triggers: keeps the Vitality it gives itself off it
+     Naiad Fledgling: (rows above)
+     Frog: (rows above)
+Frog Mating Season (3 partners): (rows above)
+  Frog Mating Season -> Freixenet: enables: gives it Vitality for its effect; also makes stronger: does what it waits for or counts (given keyword)
+     Frog Mating Season: (rows above)
+     Freixenet: (rows above)
+  Fauve -> Frog Mating Season: puts it into play: puts it into play from the deck
+     Fauve: (rows above)
+     Frog Mating Season: (rows above)
+Mahakam Pass (3 partners): (rows above)
+  Mahakam Pass -> Bountiful Harvest: enables: creates cards
+     Mahakam Pass: (rows above)
+     Bountiful Harvest: WHEN played of self IF it_matches [position is first_in_front] DO create chosen mine card in hand [state is bronze] [region is Scoiatael] [type is Elf] in hand THEN play_card chosen mine card in hand [state is created] in hand THEN stat_change leftmost mine card in hand (strength=2) for permanent | WHEN played of self IF it_matches [position is middle_lane] DO create chosen mine card in hand [state is bronze] [region is Scoiatael] [type is Elf] in hand THEN play_card chosen mine card in hand [state is created] in hand THEN stat_change random mine card in hand (strength=2) for permanent | WHEN played of self IF it_matches [position is behind_all] DO create chosen mine card in hand [state is bronze] [region is Scoiatael] [type is Elf] in hand THEN play_card chosen mine card in hand [state is created] in hand THEN stat_change rightmost mine card in hand (strength=2) for permanent
+  Mahakam Pass -> Isengrim's Council: enables: makes a Dwarf it asks for
+     Mahakam Pass: (rows above)
+     Isengrim's Council: WHEN played of self DO look random mine card in deck [type is Dwarf] THEN look random mine card in deck [type is Dryad] THEN look random mine card in deck [type is Elf] THEN play_card chosen mine card in deck [type in Dwarf] [type in Dryad] [type in Elf] THEN stat_change it (strength=2) for permanent
+Filavandrel aén Fidháil (4 partners): WHEN played of self IF keyword_condition Melee DO create random mine card [region is Scoiatael] [cost eq stat strength of (self)] [category is spell] in hand THEN play_card it | WHEN played of self IF keyword_condition Ranged DO create random mine card [region is Scoiatael] [cost le stat strength of (self)] [category is spell] in hand THEN play_card it
+  Filavandrel aén Fidháil -> Bountiful Harvest: enables: creates cards
+     Filavandrel aén Fidháil: (rows above)
+     Bountiful Harvest: (rows above)
+  Isengrim's Council -> Filavandrel aén Fidháil: puts it into play: puts it into play from the deck; also triggers: plays it: its effect goes off
+     Isengrim's Council: (rows above)
+     Filavandrel aén Fidháil: (rows above)
+  Call of the Forest -> Filavandrel aén Fidháil: triggers: plays it: its effect goes off
+     Call of the Forest: (rows above)
+     Filavandrel aén Fidháil: (rows above)
+  Simlas Finn aep Dabairr -> Filavandrel aén Fidháil: triggers: plays it: its effect goes off
+     Simlas Finn aep Dabairr: KW: Deploy | WHEN played of self DO play_card chosen mine card in deck [state is bronze] [category is spell] in deck THEN play_card all mine card in deck [state is copy_of_it] in deck
+     Filavandrel aén Fidháil: (rows above)
+  Bountiful Harvest -> Filavandrel aén Fidháil: triggers: plays it: its effect goes off
+     Bountiful Harvest: (rows above)
+     Filavandrel aén Fidháil: (rows above)
+  Filavandrel aén Fidháil -> Isengrim's Council: enables: is an Elf it asks for
+     Filavandrel aén Fidháil: (rows above)
+     Isengrim's Council: (rows above)
+Cat Witcher Adept (5 partners): WHEN played of self IF keyword_condition Melee DO give_keyword chosen enemy unit in board <Bleeding> (amount=count of (all unit in board [position is same_row])) for permanent | WHEN played of self IF keyword_condition Ranged DO give_keyword chosen mine unit in board <Vitality> (amount=count of (all unit in board [position is same_row])) for permanent
+  Cat Witcher Adept -> Freixenet: enables: gives it Vitality for its effect; also makes stronger: does what it waits for or counts (given keyword)
+     Cat Witcher Adept: (rows above)
+     Freixenet: (rows above)
+  Call of the Forest -> Cat Witcher Adept: triggers: plays it: its effect goes off
+     Call of the Forest: (rows above)
+     Cat Witcher Adept: (rows above)
+  Simlas Finn aep Dabairr -> Cat Witcher Adept: triggers: plays it: its effect goes off
+     Simlas Finn aep Dabairr: (rows above)
+     Cat Witcher Adept: (rows above)
+  Bountiful Harvest -> Cat Witcher Adept: triggers: plays it: its effect goes off
+     Bountiful Harvest: (rows above)
+     Cat Witcher Adept: (rows above)
+  Naiad Fledgling -> Cat Witcher Adept: triggers: keeps the Vitality it gives itself off it
+     Naiad Fledgling: (rows above)
+     Cat Witcher Adept: (rows above)
+Freixenet (7 partners): (rows above)
+  Nature's Gift -> Freixenet: enables: gives it Vitality for its effect; also makes stronger: does what it waits for or counts (given keyword)
+     Nature's Gift: (rows above)
+     Freixenet: (rows above)
+  Naiad Fledgling -> Freixenet: enables: gives it Vitality for its effect; also makes stronger: does what it waits for or counts (given keyword)
+     Naiad Fledgling: (rows above)
+     Freixenet: (rows above)
+  Dryad's Caress -> Freixenet: enables: gives it Vitality for its effect
+     Dryad's Caress: WHEN played of self DO keyword_action chosen mine unit in board <Purify> for unstated THEN stat_change it (strength=3) for permanent | WHEN played of self IF have mine unit in board [type is Dryad] DO give_keyword it <Vitality> (amount=3) for permanent
+     Freixenet: (rows above)
+  Freixenet -> Young Dryad: puts it into play: summons
+     Freixenet: (rows above)
+     Young Dryad: KW: Doomed, Symbiosis | WHEN always DO give_keyword self <Doomed> for permanent | WHEN always DO give_keyword self <Symbiosis> for permanent
+Wandering Treant (7 partners): (rows above)
+  Nature's Gift -> Wandering Treant: puts it into play: summons
+     Nature's Gift: (rows above)
+     Wandering Treant: (rows above)
+  Duén Canell Guardian -> Wandering Treant: puts it into play: summons
+     Duén Canell Guardian: (rows above)
+     Wandering Treant: (rows above)
+  Naiad Pondkeeper -> Wandering Treant: puts it into play: summons
+     Naiad Pondkeeper: WHEN played of self IF keyword_condition Melee DO damage chosen enemy unit in board (amount=stat strength of (chosen mine unit in board [card is Wandering Treant])) THEN keyword_action chosen mine unit in board [card is Wandering Treant] <Reset> for unstated | WHEN played of self IF keyword_condition Ranged DO give_keyword chosen mine unit in board [keyword not Symbiosis] <Symbiosis> for permanent
+     Wandering Treant: (rows above)
+  Eithné: Wrath of Brokilon -> Wandering Treant: puts it into play: summons
+     Eithné: Wrath of Brokilon: KW: Immunity, Symbiosis | WHEN always DO give_keyword self <Immunity> for permanent | WHEN always DO give_keyword self <Symbiosis> (amount=3) for permanent
+     Wandering Treant: (rows above)
+  Young Dryad -> Wandering Treant: puts it into play: summons
+     Young Dryad: (rows above)
+     Wandering Treant: (rows above)
+  Wandering Treant -> Naiad Pondkeeper: enables: is the Wandering Treant it names
+     Wandering Treant: (rows above)
+     Naiad Pondkeeper: (rows above)
+  Aucwenn -> Wandering Treant: gives keyword: gives it Vitality when it comes
+     Aucwenn: (rows above)
+     Wandering Treant: (rows above)
+-- c) special cards, one line per reason: is something wrong or missing?
+Aucwenn (15 partners): (rows above)
+  Duén Canell Guardian -> Aucwenn: enables: is a Dryad it asks for; also triggers: puts your units into play
+     Duén Canell Guardian: (rows above)
+     Aucwenn: (rows above)
+  Nature's Gift -> Aucwenn: triggers: puts your units into play
+     Nature's Gift: (rows above)
+     Aucwenn: (rows above)
+  Naiad Pondkeeper -> Aucwenn: enables: is a Naiad it asks for; also triggers: puts your units into play
+     Naiad Pondkeeper: (rows above)
+     Aucwenn: (rows above)
+  Isengrim's Council -> Aucwenn: puts it into play: puts it into play from the deck; also triggers: plays it: its effect goes off
+     Isengrim's Council: (rows above)
+     Aucwenn: (rows above)
+  Call of the Forest -> Aucwenn: triggers: plays it: its effect goes off
+     Call of the Forest: (rows above)
+     Aucwenn: (rows above)
+  Fauve -> Aucwenn: enables: is a Dryad it asks for
+     Fauve: (rows above)
+     Aucwenn: (rows above)
+  Aucwenn -> Isengrim's Council: enables: is a Dryad it asks for
+     Aucwenn: (rows above)
+     Isengrim's Council: (rows above)
+  Naiad Fledgling -> Aucwenn: enables: is a Naiad it asks for
+     Naiad Fledgling: (rows above)
+     Aucwenn: (rows above)
+  Aucwenn -> Naiad Pondkeeper: changes how it works: gives it a type
+     Aucwenn: (rows above)
+     Naiad Pondkeeper: (rows above)
+Call of the Forest (8 partners): (rows above)
+  Call of the Forest -> Fauve: triggers: plays it: its effect goes off
+     Call of the Forest: (rows above)
+     Fauve: (rows above)
+  Fauve -> Call of the Forest: puts it into play: puts it into play from the deck
+     Fauve: (rows above)
+     Call of the Forest: (rows above)
+Eithné: Mother (9 partners): KW: Deploy, Devotion | WHEN played of self DO summon to mine position [position is same_row] <Young Dryad> (amount=2) | WHEN round_start IF keyword_condition Devotion; have self in hand is DO transform self | WHEN round_start IF keyword_condition Devotion; have self in deck is DO transform self
+  Eithné: Mother -> Young Dryad: puts it into play: summons
+     Eithné: Mother: (rows above)
+     Young Dryad: (rows above)
+  Isengrim's Council -> Eithné: Mother: puts it into play: puts it into play from the deck; also triggers: plays it: its effect goes off
+     Isengrim's Council: (rows above)
+     Eithné: Mother: (rows above)
+  Call of the Forest -> Eithné: Mother: triggers: plays it: its effect goes off
+     Call of the Forest: (rows above)
+     Eithné: Mother: (rows above)
+  Eithné: Young Queen -> Eithné: Mother: levels into: levels into
+     Eithné: Young Queen: (rows above)
+     Eithné: Mother: (rows above)
+  Eithné: Mother -> Eithné: Young Queen: levels into: levels into
+     Eithné: Mother: (rows above)
+     Eithné: Young Queen: (rows above)
+  Eithné: Mother -> Isengrim's Council: enables: is a Dryad it asks for
+     Eithné: Mother: (rows above)
+     Isengrim's Council: (rows above)
+Eithné: Wrath of Brokilon (11 partners): (rows above)
+  Eithné: Wrath of Brokilon -> Naiad Fledgling: enables: has Symbiosis
+     Eithné: Wrath of Brokilon: (rows above)
+     Naiad Fledgling: (rows above)
+  Eithné: Wrath of Brokilon -> Aucwenn: enables: is a Dryad it asks for; also triggers: puts your units into play
+     Eithné: Wrath of Brokilon: (rows above)
+     Aucwenn: (rows above)
+  Isengrim's Council -> Eithné: Wrath of Brokilon: puts it into play: puts it into play from the deck
+     Isengrim's Council: (rows above)
+     Eithné: Wrath of Brokilon: (rows above)
+  Eithné: Young Queen -> Eithné: Wrath of Brokilon: levels into: levels into
+     Eithné: Young Queen: (rows above)
+     Eithné: Wrath of Brokilon: (rows above)
+  Eithné: Wrath of Brokilon -> Isengrim's Council: enables: is a Dryad it asks for
+     Eithné: Wrath of Brokilon: (rows above)
+     Isengrim's Council: (rows above)
+  Eithné: Wrath of Brokilon -> Naiad Pondkeeper: enables: is a unit with Symbiosis it counts or asks for
+     Eithné: Wrath of Brokilon: (rows above)
+     Naiad Pondkeeper: (rows above)
+  Nature's Gift -> Eithné: Wrath of Brokilon: enables: is a unit with Symbiosis it counts or asks for
+     Nature's Gift: (rows above)
+     Eithné: Wrath of Brokilon: (rows above)
+Eithné: Young Queen (9 partners): (rows above)
+  Eithné: Young Queen -> Young Dryad: puts it into play: summons
+     Eithné: Young Queen: (rows above)
+     Young Dryad: (rows above)
+  Isengrim's Council -> Eithné: Young Queen: puts it into play: puts it into play from the deck; also triggers: plays it: its effect goes off
+     Isengrim's Council: (rows above)
+     Eithné: Young Queen: (rows above)
+  Call of the Forest -> Eithné: Young Queen: triggers: plays it: its effect goes off
+     Call of the Forest: (rows above)
+     Eithné: Young Queen: (rows above)
+  Eithné: Young Queen -> Isengrim's Council: enables: is a Dryad it asks for
+     Eithné: Young Queen: (rows above)
+     Isengrim's Council: (rows above)
+Fauve (10 partners): (rows above)
+  Isengrim's Council -> Fauve: puts it into play: puts it into play from the deck; also triggers: plays it: its effect goes off
+     Isengrim's Council: (rows above)
+     Fauve: (rows above)
+  Fauve -> Isengrim's Council: puts it into play: puts it into play from the deck; also enables: is a Dryad it asks for
+     Fauve: (rows above)
+     Isengrim's Council: (rows above)
+Filavandrel aén Fidháil (4 partners): (rows above)
+Isengrim's Council (13 partners): (rows above)
+  Isengrim's Council -> Duén Canell Guardian: puts it into play: puts it into play from the deck
+     Isengrim's Council: (rows above)
+     Duén Canell Guardian: (rows above)
+  Simlas Finn aep Dabairr -> Isengrim's Council: enables: is an Elf it asks for
+     Simlas Finn aep Dabairr: (rows above)
+     Isengrim's Council: (rows above)
+  Bountiful Harvest -> Isengrim's Council: enables: makes an Elf it asks for
+     Bountiful Harvest: (rows above)
+     Isengrim's Council: (rows above)
+Mahakam Pass (3 partners): (rows above)
+Nature's Gift (8 partners): (rows above)
+  Nature's Gift -> Naiad Fledgling: enables: has Symbiosis
+     Nature's Gift: (rows above)
+     Naiad Fledgling: (rows above)
+  Nature's Gift -> Naiad Pondkeeper: enables: is a unit with Symbiosis it counts or asks for
+     Nature's Gift: (rows above)
+     Naiad Pondkeeper: (rows above)
+  Naiad Fledgling -> Nature's Gift: triggers: keeps the Vitality it gives itself off it
+     Naiad Fledgling: (rows above)
+     Nature's Gift: (rows above)
+  Duén Canell Guardian -> Nature's Gift: enables: is a unit with Symbiosis it counts or asks for
+     Duén Canell Guardian: (rows above)
+     Nature's Gift: (rows above)
+Simlas Finn aep Dabairr (10 partners): (rows above)
+  Isengrim's Council -> Simlas Finn aep Dabairr: puts it into play: puts it into play from the deck; also triggers: plays it: its effect goes off
+     Isengrim's Council: (rows above)
+     Simlas Finn aep Dabairr: (rows above)
+  Call of the Forest -> Simlas Finn aep Dabairr: triggers: plays it: its effect goes off
+     Call of the Forest: (rows above)
+     Simlas Finn aep Dabairr: (rows above)
+  Simlas Finn aep Dabairr -> Fauve: triggers: plays it: its effect goes off
+     Simlas Finn aep Dabairr: (rows above)
+     Fauve: (rows above)
+Tactical Advantage (0 partners): (rows above)
+
+=== gwent / Guerilla Tactics: Dragons Milva Madoc 11P Scholars: 27 cards, 80 lines
+-- a) 1 cards with no partner in the deck, each beside 10 deck cards: is a line missed?
+Tactical Advantage: (rows above)
+    ? Guerilla Tactics: KW: Charge, Order | WHEN activated of self DO move chosen unit in board to position [position not same_row] THEN damage it enemy unit (amount=1) THEN stat_change it mine unit (strength=3) for permanent | WHEN always DO give_keyword self <Charge> (amount=3) for permanent
+    ? Myrgtabrakke: KW: Lineage, Charge, Order, Deploy | WHEN always DO give_keyword self <Lineage> for permanent | WHEN played of self DO draw mine card in deck [type is Dragon] (amount=1) THEN move chosen mine card in hand to mine card in deck_bottom | WHEN activated of self [n_times] DO damage chosen enemy unit in board (amount=1) | WHEN always DO give_keyword self <Charge> (amount=0) for permanent | WHEN game_start DO give_keyword self <Charge> (amount=count of (all mine card in deck [type is Dragon] [state is started_in_deck])) for permanent
+    ? Pyrotechnician: KW: Order | WHEN activated of self DO damage random enemy unit in board (amount=4) THEN damage self (amount=4)
+    ? Saskia: KW: Order, Deploy | WHEN played of self DO choose_one OR summon to mine position [position is same_row] <Elven Deadeye> THEN give_ability self OR summon to mine position [position is same_row] <Rowdy Dwarf> THEN give_ability self OR summon to mine position [position is same_row] <Young Dryad> THEN give_ability self
+    ? Madoc: KW: Order | WHEN played of mine spell [type is Bomb] DO summon self to random mine position | WHEN activated of self DO give_keyword chosen enemy position [position is opposite_row] <Cataclysm> (turns=1) for n_turns THEN kill self
+    ? Milva: Sharpshooter: KW: Zeal, Order | WHEN always DO give_keyword self <Zeal> for permanent | WHEN activated of self DO damage chosen enemy unit in board (amount=1) | WHEN killed by self DO shuffle_into_deck self | WHEN moves of enemy unit in board IF my_turn DO summon self to chosen mine position [position is opposite_row] in board <Milva: Sharpshooter> THEN damage it (amount=1)
+    ? Elven Deadeye: KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent
+    ? Ocvist: KW: Lineage, Timer, Deploy | WHEN always DO give_keyword self <Lineage> for permanent | WHEN played of self DO give_keyword enemy position [position is opposite_row] <Cataclysm> (turns=2) for n_turns | WHEN always DO give_keyword self <Timer> (amount=3) for permanent | WHEN countdown_done of self DO damage all enemy unit in board (amount=1)
+    ? Filavandrel aén Fidháil: (rows above)
+    ? Making a Bomb: WHEN played of self DO move chosen enemy unit in board to chosen enemy position [position not same_row] THEN give_keyword it <Bleeding> (amount=4) for permanent THEN damage it [count eq 1] (amount=4)
+-- b) the 10 cards with the fewest partners, all their lines: is a line missed?
+Wandering Treant (1 partners): (rows above)
+Dryad's Caress (2 partners): (rows above)
+  Saskia -> Dryad's Caress: puts it into play: creates
+     Saskia: (rows above)
+     Dryad's Caress: (rows above)
+  Young Dryad -> Dryad's Caress: enables: is a Dryad it asks for
+     Young Dryad: (rows above)
+     Dryad's Caress: (rows above)
+Elven Deadeye (2 partners): (rows above)
+  Waylay -> Elven Deadeye: puts it into play: summons
+     Waylay: WHEN played of self DO damage chosen enemy unit in board (amount=3) THEN summon to random mine position <Elven Deadeye>
+     Elven Deadeye: (rows above)
+  Saskia -> Elven Deadeye: puts it into play: summons
+     Saskia: (rows above)
+     Elven Deadeye: (rows above)
+Pyrotechnician (2 partners): (rows above)
+  Pyrotechnician -> Saesenthessis: Blaze: triggers: makes enemy units die
+     Pyrotechnician: (rows above)
+     Saesenthessis: Blaze: KW: Lineage | WHEN always DO give_keyword self <Lineage> for permanent | WHEN dies of enemy unit in board IF my_turn DO stat_change self (strength=1) for permanent | WHEN obliterated of enemy unit in board IF my_turn DO stat_change self (strength=1) for permanent
+  Pyrotechnician -> Mahakam Volunteers: enables: is a Dwarf it asks for
+     Pyrotechnician: (rows above)
+     Mahakam Volunteers: KW: Deploy | WHEN played of self IF have mine unit in board [type is Dwarf] is DO summon all mine card in deck to mine position [position is same_row] <Mahakam Volunteers>
+Rowdy Dwarf (2 partners): KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent
+  Saskia -> Rowdy Dwarf: puts it into play: summons
+     Saskia: (rows above)
+     Rowdy Dwarf: (rows above)
+  Rowdy Dwarf -> Mahakam Volunteers: enables: is a Dwarf it asks for
+     Rowdy Dwarf: (rows above)
+     Mahakam Volunteers: (rows above)
+Tempering (2 partners): (rows above)
+  Tempering -> Dwarven Skirmisher: enables: gives it Armor for its effect
+     Tempering: (rows above)
+     Dwarven Skirmisher: WHEN played of self IF keyword_condition Melee DO damage chosen enemy unit in board (amount=3) THEN give_keyword self <Armor> (amount=1) for permanent | WHEN activated of self IF keyword_condition Barricade DO damage chosen enemy unit in board (amount=3)
+  Saskia -> Tempering: puts it into play: creates
+     Saskia: (rows above)
+     Tempering: (rows above)
+Dancing Star (3 partners): WHEN played of self DO damage chosen enemy unit in board (amount=3) | WHEN killed by self DO damage right_of_self enemy unit in board (amount=2)
+  Dancing Star -> Saesenthessis: Blaze: triggers: makes enemy units die
+     Dancing Star: (rows above)
+     Saesenthessis: Blaze: (rows above)
+  Sapper -> Dancing Star: puts it into play: puts it into play from the hand
+     Sapper: KW: Deploy, Barricade | WHEN played of self DO play_card chosen mine card in hand [type is Bomb] THEN draw mine card in deck_top (amount=1) | WHEN played of mine card [type is Bomb] IF keyword_condition Barricade DO damage random enemy unit in board (amount=1)
+     Dancing Star: (rows above)
+  Dancing Star -> Sapper: triggers: is a Bomb whose playing sets off its effect
+     Dancing Star: (rows above)
+     Sapper: (rows above)
+  Dancing Star -> Madoc: triggers: is a Bomb whose playing sets off its effect
+     Dancing Star: (rows above)
+     Madoc: (rows above)
+Dimeritium Bomb (3 partners): WHEN played of self DO damage chosen unit in board (amount=4) THEN give_keyword it <Veil> for permanent | WHEN played of self DO damage chosen unit in board (amount=4) THEN give_keyword it <Veil> for permanent
+  Dimeritium Bomb -> Saesenthessis: Blaze: triggers: makes enemy units die
+     Dimeritium Bomb: (rows above)
+     Saesenthessis: Blaze: (rows above)
+  Sapper -> Dimeritium Bomb: puts it into play: puts it into play from the hand
+     Sapper: (rows above)
+     Dimeritium Bomb: (rows above)
+  Dimeritium Bomb -> Sapper: triggers: is a Bomb whose playing sets off its effect
+     Dimeritium Bomb: (rows above)
+     Sapper: (rows above)
+  Dimeritium Bomb -> Madoc: triggers: is a Bomb whose playing sets off its effect
+     Dimeritium Bomb: (rows above)
+     Madoc: (rows above)
+Mahakam Volunteers (3 partners): (rows above)
+  Dwarven Skirmisher -> Mahakam Volunteers: enables: is a Dwarf it asks for
+     Dwarven Skirmisher: (rows above)
+     Mahakam Volunteers: (rows above)
+Waylay (3 partners): (rows above)
+  Waylay -> Saesenthessis: Blaze: triggers: makes enemy units die
+     Waylay: (rows above)
+     Saesenthessis: Blaze: (rows above)
+  Saskia -> Waylay: puts it into play: creates
+     Saskia: (rows above)
+     Waylay: (rows above)
+-- c) special cards, one line per reason: is something wrong or missing?
+Filavandrel aén Fidháil (6 partners): (rows above)
+  Filavandrel aén Fidháil -> Madoc: triggers: is played
+     Filavandrel aén Fidháil: (rows above)
+     Madoc: (rows above)
+  Samum -> Filavandrel aén Fidháil: enables: Samum moves Filavandrel aén Fidháil, and Filavandrel aén Fidháil acts on units back row it or front row it
+     Samum: WHEN played of self DO damage chosen unit in board (amount=3) | WHEN killed by self DO move all unit in board [position is sides] to position [position not same_row]
+     Filavandrel aén Fidháil: (rows above)
+  Guerilla Tactics -> Filavandrel aén Fidháil: enables: Guerilla Tactics moves Filavandrel aén Fidháil, and Filavandrel aén Fidháil acts on units back row it or front row it
+     Guerilla Tactics: (rows above)
+     Filavandrel aén Fidháil: (rows above)
+  Myrgtabrakke -> Filavandrel aén Fidháil: enables: Myrgtabrakke moves Filavandrel aén Fidháil, and Filavandrel aén Fidháil acts on units back row it or front row it
+     Myrgtabrakke: (rows above)
+     Filavandrel aén Fidháil: (rows above)
+  Filavandrel aén Fidháil -> Oxenfurt Scholar: enables: is a card it asks for
+     Filavandrel aén Fidháil: (rows above)
+     Oxenfurt Scholar: KW: Deploy | WHEN played of self DO stat_change self (strength=count of (mine card [state is started_in_deck] [cost ge 11])) for permanent
+Guerilla Tactics (7 partners): (rows above)
+  Guerilla Tactics -> Saesenthessis: Blaze: triggers: makes enemy units die
+     Guerilla Tactics: (rows above)
+     Saesenthessis: Blaze: (rows above)
+  Guerilla Tactics -> Red Haze: enables: Guerilla Tactics moves enemy units, and Red Haze acts on units next to a card it picks
+     Guerilla Tactics: (rows above)
+     Red Haze: WHEN played of self DO damage chosen enemy unit in board [position is sides] (amount=stat strength of (chosen enemy unit in board))
+  Guerilla Tactics -> Samum: enables: Guerilla Tactics moves units, and Samum acts on units next to its target
+     Guerilla Tactics: (rows above)
+     Samum: (rows above)
+  Guerilla Tactics -> Milva: Sharpshooter: triggers: makes enemy units move
+     Guerilla Tactics: (rows above)
+     Milva: Sharpshooter: (rows above)
+  Guerilla Tactics -> Dwarven Skirmisher: enables: Guerilla Tactics moves Dwarven Skirmisher, and Dwarven Skirmisher acts on units front row it
+     Guerilla Tactics: (rows above)
+     Dwarven Skirmisher: (rows above)
+  Guerilla Tactics -> Oxenfurt Scholar: enables: is a card it asks for
+     Guerilla Tactics: (rows above)
+     Oxenfurt Scholar: (rows above)
+Madoc (9 partners): (rows above)
+  Sapper -> Madoc: triggers: is played
+     Sapper: (rows above)
+     Madoc: (rows above)
+  Madoc -> Saesenthessis: Blaze: triggers: makes enemy units die
+     Madoc: (rows above)
+     Saesenthessis: Blaze: (rows above)
+  Madoc -> Oxenfurt Scholar: enables: is a card it asks for
+     Madoc: (rows above)
+     Oxenfurt Scholar: (rows above)
+Milva: Sharpshooter (4 partners): (rows above)
+  Samum -> Milva: Sharpshooter: triggers: makes enemy units move
+     Samum: (rows above)
+     Milva: Sharpshooter: (rows above)
+  Milva: Sharpshooter -> Oxenfurt Scholar: enables: is a card it asks for
+     Milva: Sharpshooter: (rows above)
+     Oxenfurt Scholar: (rows above)
+Saesenthessis: Blaze (13 partners): (rows above)
+  Ocvist -> Saesenthessis: Blaze: enables: is a Dragon it asks for; also triggers: makes enemy units die
+     Ocvist: (rows above)
+     Saesenthessis: Blaze: (rows above)
+  Myrgtabrakke -> Saesenthessis: Blaze: puts it into play: draws it from the deck; also enables: is a Dragon it asks for
+     Myrgtabrakke: (rows above)
+     Saesenthessis: Blaze: (rows above)
+  Saskia -> Saesenthessis: Blaze: enables: is a Dragon it asks for
+     Saskia: (rows above)
+     Saesenthessis: Blaze: (rows above)
+  Saesenthessis: Blaze -> Villentretenmerth: enables: is a Dragon it asks for
+     Saesenthessis: Blaze: (rows above)
+     Villentretenmerth: KW: Lineage, Timer | WHEN always DO give_keyword self <Lineage> for permanent | WHEN always DO give_keyword self <Timer> (amount=3) for permanent | WHEN countdown_done of self DO kill highest unit by strength in board [type not Dragon]
+  Saesenthessis: Blaze -> Oxenfurt Scholar: enables: is a card it asks for
+     Saesenthessis: Blaze: (rows above)
+     Oxenfurt Scholar: (rows above)
+Saskia (11 partners): (rows above)
+  Myrgtabrakke -> Saskia: puts it into play: draws it from the deck
+     Myrgtabrakke: (rows above)
+     Saskia: (rows above)
+  Saskia -> Villentretenmerth: enables: is a Dragon it asks for
+     Saskia: (rows above)
+     Villentretenmerth: (rows above)
+  Saskia -> Oxenfurt Scholar: enables: is a card it asks for
+     Saskia: (rows above)
+     Oxenfurt Scholar: (rows above)
+Tactical Advantage (0 partners): (rows above)
+Villentretenmerth (5 partners): (rows above)
+  Villentretenmerth -> Saesenthessis: Blaze: enables: is a Dragon it asks for; also triggers: makes enemy units die
+     Villentretenmerth: (rows above)
+     Saesenthessis: Blaze: (rows above)
+  Myrgtabrakke -> Villentretenmerth: puts it into play: draws it from the deck; also enables: is a Dragon it asks for
+     Myrgtabrakke: (rows above)
+     Villentretenmerth: (rows above)
+  Villentretenmerth -> Myrgtabrakke: enables: is a Dragon it asks for
+     Villentretenmerth: (rows above)
+     Myrgtabrakke: (rows above)
+  Ocvist -> Villentretenmerth: enables: is a Dragon it asks for
+     Ocvist: (rows above)
+     Villentretenmerth: (rows above)
+  Villentretenmerth -> Oxenfurt Scholar: enables: is a card it asks for
+     Villentretenmerth: (rows above)
+     Oxenfurt Scholar: (rows above)

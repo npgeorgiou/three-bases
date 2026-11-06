@@ -1,0 +1,614 @@
+=== gwent / Arachas Swarm: Tatterwing - 1 prov left for good luck: 26 cards, 51 lines
+-- a) 4 cards with no partner in the deck, each beside 10 deck cards: is a line missed?
+Korathi Heatwave: WHEN played of self DO keyword_action chosen unit in board <Banish> for unstated OR keyword_action chosen landmark in board <Banish> for unstated
+    ? Arachas Swarm: KW: Charge, Order | WHEN activated of self DO summon to chosen mine position <Drone> | WHEN always DO give_keyword self <Charge> (amount=5) for permanent | WHEN played of mine card [type is Organic] DO summon to random mine position <Drone>
+    ? Red Riders: (rows above)
+    ? Red Riders: Precision: (rows above)
+    ? Royal Decree: WHEN played of self DO play_card chosen mine unit in deck
+    ? Whispess: Tribute: WHEN played of self IF keyword_condition Ranged DO play_card chosen mine card in deck [type is Organic] | WHEN played of self IF keyword_condition Ranged DO play_card chosen mine card in deck [type is Organic]
+    ? Drone: KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent
+    ? Nightwraith: KW: Deploy, Deathwish | WHEN played of self DO summon to mine position [position is same_row] <Rat> (amount=2) | WHEN dies of self DO summon to mine position [position is same_row] <Rat> (amount=2)
+    ? Lara Dorren: KW: Disloyal, Deploy, Deathwish | WHEN always DO give_keyword self <Disloyal> for permanent | WHEN played of self DO damage self (amount=sum keyword_amount of (all enemy position [keyword is Frost])) | WHEN dies of self DO stat_change all enemy unit in board (strength=2) for permanent | WHEN played by enemy player of enemy unit [state is gold] [type is Wild Hunt] IF have self in discard DO play_card self in discard THEN give_keyword it <Doomed> for permanent
+    ? Nekker: KW: Thrive, Deploy | WHEN always DO give_keyword self <Thrive> for permanent | WHEN played of self DO copy self to chosen mine position [position is same_row] in board
+    ? Ge'els: KW: Deploy, Devotion | WHEN played of self IF keyword_condition Devotion not DO play_card chosen mine spell in deck [type is Wild Hunt] | WHEN played of self IF keyword_condition Devotion DO play_card chosen mine card in deck [type is Wild Hunt]
+Morvudd: WHEN turn_end by mine player IF have self in board not DO base_change self (strength=1)
+    ? Whispess: Tribute: (rows above)
+    ? Spores: (rows above)
+    ? Red Riders: (rows above)
+    ? Nekker: (rows above)
+    ? Natural Selection: WHEN played of self DO damage chosen enemy unit in board (amount=4) THEN summon to random mine position <Drone> (amount=excess of (it))
+    ? Hive Mind: WHEN played of self DO choose_card 4 chosen mine card in deck [state is bronze] [name_has is Kikimore] | WHEN summoned of mine unit in board [card is Drone] [first_each_turn] IF my_turn; have self in discard DO transform it to chosen mine card in deck [state is marked]
+    ? Drowner: KW: Thrive, Deploy | WHEN always DO give_keyword self <Thrive> for permanent | WHEN played of self DO move chosen enemy unit in board to enemy position [position not same_row] THEN damage it (amount=2)
+    ? Ge'els: (rows above)
+    ? Red Riders: Spread: WHEN played of self DO give_keyword all enemy position <Frost> (turns=2) for n_turns | WHEN played of self DO give_keyword all enemy position <Frost> (turns=2) for n_turns
+    ? Rat: KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent
+Tactical Advantage: (rows above)
+    ? Arachas Swarm: (rows above)
+    ? Spores: (rows above)
+    ? Naglfar Crew: KW: Deploy | WHEN played of self DO give_keyword chosen enemy position <Frost> (turns=2) for n_turns | WHEN turn_end by mine player IF have all enemy position [position is opposite_row] [keyword is Frost] DO stat_change self (strength=1) for permanent
+    ? Nekker: (rows above)
+    ? Royal Decree: (rows above)
+    ? Red Riders: Spread: (rows above)
+    ? Red Riders: (rows above)
+    ? Whispess: Tribute: (rows above)
+    ? Drowner: (rows above)
+    ? Wolf Pack: KW: Deploy | WHEN played of self DO stat_change self (strength=count of (all mine unit in board [position is same_row])) for permanent
+Tatterwing: KW: Immunity | WHEN always DO give_keyword self <Immunity> for permanent | WHEN game_start DO stat_set all mine unit in deck [card not Tatterwing] (strength=1) THEN stat_set self (strength=25)
+    ? Wolf Pack: (rows above)
+    ? Saer Qu'an: KW: Deploy | WHEN played of self DO damage chosen enemy unit in board (amount=count of (all mine unit in board))
+    ? Rat: (rows above)
+    ? Spores: (rows above)
+    ? Drone: (rows above)
+    ? Tactical Advantage: (rows above)
+    ? Whispess: Tribute: (rows above)
+    ? Hive Mind: (rows above)
+    ? Red Riders: Spread: (rows above)
+    ? Spontaneous Evolution: WHEN played of self DO stat_change chosen mine unit in board (strength=5) for permanent THEN summon to chosen mine position [position is same_row] <Drone> (amount=3) THEN stat_change it [type is Beast] (strength=9) for permanent THEN summon to chosen mine position [position is same_row] <Nekker>
+-- b) the 10 cards with the fewest partners, all their lines: is a line missed?
+Drowner (1 partners): (rows above)
+  Royal Decree -> Drowner: triggers: plays it: its effect goes off
+     Royal Decree: (rows above)
+     Drowner: (rows above)
+Rat (1 partners): (rows above)
+Saer Qu'an (1 partners): (rows above)
+  Royal Decree -> Saer Qu'an: triggers: plays it: its effect goes off
+     Royal Decree: (rows above)
+     Saer Qu'an: (rows above)
+Wolf Pack (1 partners): (rows above)
+  Royal Decree -> Wolf Pack: triggers: plays it: its effect goes off
+     Royal Decree: (rows above)
+     Wolf Pack: (rows above)
+Nekker (2 partners): (rows above)
+  Spontaneous Evolution -> Nekker: puts it into play: summons
+     Spontaneous Evolution: (rows above)
+     Nekker: (rows above)
+  Royal Decree -> Nekker: triggers: plays it: its effect goes off
+     Royal Decree: (rows above)
+     Nekker: (rows above)
+Spores (2 partners): (rows above)
+  Whispess: Tribute -> Spores: puts it into play: puts it into play from the deck
+     Whispess: Tribute: (rows above)
+     Spores: (rows above)
+  Spores -> Arachas Swarm: triggers: is an Organic whose playing sets off its effect
+     Spores: (rows above)
+     Arachas Swarm: (rows above)
+Arachas Nest (4 partners): WHEN played of self DO summon to chosen mine position <Drone> (amount=4)
+  Arachas Nest -> Hive Mind: triggers: puts your units into play
+     Arachas Nest: (rows above)
+     Hive Mind: (rows above)
+  Arachas Nest -> Drone: puts it into play: summons
+     Arachas Nest: (rows above)
+     Drone: (rows above)
+  Whispess: Tribute -> Arachas Nest: puts it into play: puts it into play from the deck
+     Whispess: Tribute: (rows above)
+     Arachas Nest: (rows above)
+  Arachas Nest -> Arachas Swarm: triggers: is an Organic whose playing sets off its effect
+     Arachas Nest: (rows above)
+     Arachas Swarm: (rows above)
+Naglfar Crew (4 partners): (rows above)
+  Naglfar Crew -> Lara Dorren: triggers: kills it for its death effect
+     Naglfar Crew: (rows above)
+     Lara Dorren: (rows above)
+  Naglfar Crew -> Nightwraith: triggers: kills it for its death effect
+     Naglfar Crew: (rows above)
+     Nightwraith: (rows above)
+  Ge'els -> Naglfar Crew: puts it into play: puts it into play from the deck; also triggers: plays it: its effect goes off
+     Ge'els: (rows above)
+     Naglfar Crew: (rows above)
+  Royal Decree -> Naglfar Crew: triggers: plays it: its effect goes off
+     Royal Decree: (rows above)
+     Naglfar Crew: (rows above)
+Natural Selection (4 partners): (rows above)
+  Natural Selection -> Hive Mind: triggers: puts your units into play
+     Natural Selection: (rows above)
+     Hive Mind: (rows above)
+  Natural Selection -> Drone: puts it into play: summons
+     Natural Selection: (rows above)
+     Drone: (rows above)
+  Whispess: Tribute -> Natural Selection: puts it into play: puts it into play from the deck
+     Whispess: Tribute: (rows above)
+     Natural Selection: (rows above)
+  Natural Selection -> Arachas Swarm: triggers: is an Organic whose playing sets off its effect
+     Natural Selection: (rows above)
+     Arachas Swarm: (rows above)
+Red Riders: Charge (4 partners): WHEN played of self DO give_keyword chosen enemy position <Frost> (turns=2) for n_turns THEN play_card chosen mine unit in board [state is bronze] [type is Wild Hunt]
+  Red Riders: Charge -> Lara Dorren: triggers: kills it for its death effect
+     Red Riders: Charge: (rows above)
+     Lara Dorren: (rows above)
+  Red Riders: Charge -> Nightwraith: triggers: kills it for its death effect
+     Red Riders: Charge: (rows above)
+     Nightwraith: (rows above)
+  Ge'els -> Red Riders: Charge: puts it into play: puts it into play from the deck; also triggers: plays it: its effect goes off
+     Ge'els: (rows above)
+     Red Riders: Charge: (rows above)
+  Red Riders -> Red Riders: Charge: levels into: levels into
+     Red Riders: (rows above)
+     Red Riders: Charge: (rows above)
+-- c) special cards, one line per reason: is something wrong or missing?
+Arachas Swarm (8 partners): (rows above)
+  Royal Decree -> Arachas Swarm: triggers: is played
+     Royal Decree: (rows above)
+     Arachas Swarm: (rows above)
+  Arachas Swarm -> Hive Mind: triggers: puts your units into play
+     Arachas Swarm: (rows above)
+     Hive Mind: (rows above)
+  Arachas Swarm -> Drone: puts it into play: summons
+     Arachas Swarm: (rows above)
+     Drone: (rows above)
+Ge'els (7 partners): (rows above)
+  Ge'els -> Red Riders: puts it into play: puts it into play from the deck; also triggers: plays it: its effect goes off
+     Ge'els: (rows above)
+     Red Riders: (rows above)
+  Royal Decree -> Ge'els: triggers: plays it: its effect goes off
+     Royal Decree: (rows above)
+     Ge'els: (rows above)
+Hive Mind (6 partners): (rows above)
+  Whispess: Tribute -> Hive Mind: puts it into play: puts it into play from the deck
+     Whispess: Tribute: (rows above)
+     Hive Mind: (rows above)
+  Hive Mind -> Arachas Swarm: triggers: is an Organic whose playing sets off its effect
+     Hive Mind: (rows above)
+     Arachas Swarm: (rows above)
+  Drone -> Hive Mind: triggers: is a unit whose summoning sets off its effect
+     Drone: (rows above)
+     Hive Mind: (rows above)
+Korathi Heatwave (0 partners): (rows above)
+Lara Dorren (7 partners): (rows above)
+  Ge'els -> Lara Dorren: puts it into play: puts it into play from the deck; also triggers: plays it: its effect goes off
+     Ge'els: (rows above)
+     Lara Dorren: (rows above)
+  Royal Decree -> Lara Dorren: triggers: plays it: its effect goes off
+     Royal Decree: (rows above)
+     Lara Dorren: (rows above)
+Royal Decree (10 partners): (rows above)
+Tactical Advantage (0 partners): (rows above)
+Tatterwing (0 partners): (rows above)
+Whispess: Tribute (7 partners): (rows above)
+  Whispess: Tribute -> Arachas Swarm: triggers: is played
+     Whispess: Tribute: (rows above)
+     Arachas Swarm: (rows above)
+  Royal Decree -> Whispess: Tribute: triggers: plays it: its effect goes off
+     Royal Decree: (rows above)
+     Whispess: Tribute: (rows above)
+
+=== gwent / Enslave: Damage Enslave With Enforcers (+10 -1): 22 cards, 137 lines
+-- a) 0 cards with no partner in the deck, each beside 10 deck cards: is a line missed?
+-- b) the 10 cards with the fewest partners, all their lines: is a line missed?
+Tactical Advantage (1 partners): (rows above)
+  Tactical Advantage -> Fercart: triggers: is a spell whose playing sets off its effect
+     Tactical Advantage: (rows above)
+     Fercart: KW: Deploy | WHEN played of self DO play_card chosen mine card in hand [category is spell] THEN draw mine card in deck_top (amount=1) | WHEN played of mine spell DO give_keyword random enemy unit in board [keyword not Spying] <Spying> for permanent
+Enslave (5 partners): KW: Order | WHEN activated of self DO keyword_action chosen enemy unit in board [strength le sum (3 + divided (count of (all mine card [type is Tactic] [state is started_in_deck])) (4))] <Seize> for unstated
+  Enslave -> Impera Enforcers: enables: makes enemy units get Spying
+     Enslave: (rows above)
+     Impera Enforcers: KW: Zeal, Charge, Order | WHEN always DO give_keyword self <Zeal> for permanent | WHEN activated of self DO damage chosen enemy unit in board (amount=1) | WHEN always DO give_keyword self <Charge> (amount=1) for permanent | WHEN killed by self DO give_keyword self <Armor> (amount=1) for permanent | WHEN given_keyword of enemy unit [keyword is Spying] DO give_keyword self <Charge> (amount=1) for permanent
+  Enslave -> Coup de Grâce: enables: makes units get Spying
+     Enslave: (rows above)
+     Coup de Grâce: KW: Echo, Conspiracy | WHEN always DO give_keyword self <Echo> for permanent | WHEN played of self DO damage chosen enemy unit in board (amount=3) | WHEN killed by self DO copy it in board THEN play_card it | WHEN played of self IF keyword_condition Conspiracy DO copy it in board THEN play_card it
+  Enslave -> Emhyr var Emreis: enables: makes enemy units get Spying
+     Enslave: (rows above)
+     Emhyr var Emreis: KW: Order, Deploy, Devotion | WHEN played of self DO play_card chosen mine card in hand [state is bronze] [type in Soldier] [type in Aristocrat] in hand THEN draw mine card in deck_top (amount=1) | WHEN played of enemy unit in board DO give_keyword it <Spying> for permanent | WHEN activated of self DO keyword_action chosen enemy unit in board [strength eq 1] [keyword is Spying] <Seize> for unstated | WHEN turn_end by mine player IF keyword_condition Devotion DO refresh self <Order>
+  Enslave -> Amnesty: enables: makes units get Spying
+     Enslave: (rows above)
+     Amnesty: KW: Devotion, Conspiracy | WHEN played of self DO keyword_action chosen enemy unit in board [strength le 3] <Seize> for unstated | WHEN played of self IF keyword_condition Conspiracy DO stat_change it (strength=2) for permanent | WHEN played of self IF keyword_condition Devotion DO stat_change it (strength=2) for permanent
+  Enslave -> Treason: enables: Enslave moves units, and Treason acts on units next to its target
+     Enslave: (rows above)
+     Treason: WHEN played of self DO give_keyword chosen enemy unit in board <Spying> for permanent THEN damage all unit in board [position is sides] (amount=stat strength of (it))
+Impera Enforcers (6 partners): (rows above)
+  Emhyr var Emreis -> Impera Enforcers: puts it into play: puts it into play from the hand; also enables: makes enemy units get Spying
+     Emhyr var Emreis: (rows above)
+     Impera Enforcers: (rows above)
+  Treason -> Impera Enforcers: enables: makes enemy units get Spying
+     Treason: (rows above)
+     Impera Enforcers: (rows above)
+  Fercart -> Impera Enforcers: enables: makes enemy units get Spying
+     Fercart: (rows above)
+     Impera Enforcers: (rows above)
+  Amnesty -> Impera Enforcers: enables: makes enemy units get Spying
+     Amnesty: (rows above)
+     Impera Enforcers: (rows above)
+  Tourney Joust -> Impera Enforcers: makes stronger: removes their Block: its damage gets through
+     Tourney Joust: WHEN played of self DO choose_one OR remove_keyword chosen enemy unit in board <Shield> THEN damage it (amount=4) OR give_keyword chosen mine unit in board <Shield> for permanent THEN stat_change it (strength=4) for permanent
+     Impera Enforcers: (rows above)
+Buhurt (7 partners): WHEN played of self DO stat_change chosen enemy unit in board (strength=3) for permanent THEN stat_change chosen mine unit in board (strength=9) for permanent
+  Menno Coehoorn -> Buhurt: puts it into play: puts it into play from the deck
+     Menno Coehoorn: WHEN played of self IF keyword_condition Ranged DO play_card chosen mine card in deck [type is Tactic]
+     Buhurt: (rows above)
+  Magne Division -> Buhurt: puts it into play: puts it into play from the hand
+     Magne Division: KW: Deploy | WHEN played of self DO play_card chosen mine card in hand [type is Tactic] THEN draw mine card in deck_top (amount=1)
+     Buhurt: (rows above)
+  Buhurt -> False Ciri: enables: is a Tactic it asks for
+     Buhurt: (rows above)
+     False Ciri: KW: Disloyal, Deploy, Grace | WHEN always DO give_keyword self <Disloyal> for permanent | WHEN played of self DO play_card chosen mine card in discard [state is bronze] [type is Tactic] THEN give_keyword it <Doomed> for permanent | WHEN turn_end by mine player DO stat_change self (strength=1) for permanent | WHEN stat_changed of self IF keyword_condition Grace 8 DO move self to mine position [position is opposite_row] THEN keyword_action self <Purify> for unstated
+  Buhurt -> Stefan Skellen: enables: is a Tactic it asks for
+     Buhurt: (rows above)
+     Stefan Skellen: KW: Deploy | WHEN played of self DO create in hand <Ace up the Sleeve> (amount=divided (count of (all mine card [type is Tactic] [state is started_in_deck])) (3)) THEN play_card it
+  Buhurt -> Fire Scorpion: triggers: is a Tactic whose playing sets off its effect
+     Buhurt: (rows above)
+     Fire Scorpion: KW: Charge, Order | WHEN activated of self DO damage chosen unit in board (amount=1) | WHEN always DO give_keyword self <Charge> (amount=1) for permanent | WHEN played of mine card [type is Tactic] DO give_keyword self <Charge> (amount=1) for permanent
+  Buhurt -> Hefty Helge: triggers: is a Tactic whose playing sets off its effect
+     Buhurt: (rows above)
+     Hefty Helge: KW: Shield, Charge, Order | WHEN always DO give_keyword self <Shield> for permanent | WHEN activated of self DO damage chosen unit in board (amount=2) | WHEN always DO give_keyword self <Charge> (amount=1) for permanent | WHEN played of mine card [type is Tactic] DO give_keyword self <Charge> (amount=1) for permanent
+  Buhurt -> Fercart: triggers: is a spell whose playing sets off its effect
+     Buhurt: (rows above)
+     Fercart: (rows above)
+Imperial Diplomacy (7 partners): WHEN played of self DO create random mine card [state is opponent_faction] [state is bronze] in hand THEN play_card it card
+  Imperial Diplomacy -> Hefty Helge: triggers: is a Tactic whose playing sets off its effect; also is played
+     Imperial Diplomacy: (rows above)
+     Hefty Helge: (rows above)
+  Imperial Diplomacy -> Fercart: triggers: is played; also is a spell whose playing sets off its effect
+     Imperial Diplomacy: (rows above)
+     Fercart: (rows above)
+  Imperial Diplomacy -> Fire Scorpion: triggers: is a Tactic whose playing sets off its effect; also is played
+     Imperial Diplomacy: (rows above)
+     Fire Scorpion: (rows above)
+  Menno Coehoorn -> Imperial Diplomacy: puts it into play: puts it into play from the deck
+     Menno Coehoorn: (rows above)
+     Imperial Diplomacy: (rows above)
+  Magne Division -> Imperial Diplomacy: puts it into play: puts it into play from the hand
+     Magne Division: (rows above)
+     Imperial Diplomacy: (rows above)
+  Imperial Diplomacy -> False Ciri: enables: is a Tactic it asks for
+     Imperial Diplomacy: (rows above)
+     False Ciri: (rows above)
+  Imperial Diplomacy -> Stefan Skellen: enables: is a Tactic it asks for
+     Imperial Diplomacy: (rows above)
+     Stefan Skellen: (rows above)
+Ace up the Sleeve (8 partners): KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent | WHEN played of self DO damage chosen enemy unit in board (amount=2)
+  Stefan Skellen -> Ace up the Sleeve: puts it into play: creates
+     Stefan Skellen: (rows above)
+     Ace up the Sleeve: (rows above)
+  Menno Coehoorn -> Ace up the Sleeve: puts it into play: puts it into play from the deck
+     Menno Coehoorn: (rows above)
+     Ace up the Sleeve: (rows above)
+  Magne Division -> Ace up the Sleeve: puts it into play: puts it into play from the hand
+     Magne Division: (rows above)
+     Ace up the Sleeve: (rows above)
+  Ace up the Sleeve -> False Ciri: enables: is a Tactic it asks for
+     Ace up the Sleeve: (rows above)
+     False Ciri: (rows above)
+  Ace up the Sleeve -> Stefan Skellen: enables: is a Tactic it asks for
+     Ace up the Sleeve: (rows above)
+     Stefan Skellen: (rows above)
+  Ace up the Sleeve -> Fire Scorpion: triggers: is a Tactic whose playing sets off its effect
+     Ace up the Sleeve: (rows above)
+     Fire Scorpion: (rows above)
+  Ace up the Sleeve -> Hefty Helge: triggers: is a Tactic whose playing sets off its effect
+     Ace up the Sleeve: (rows above)
+     Hefty Helge: (rows above)
+  Ace up the Sleeve -> Fercart: triggers: is a spell whose playing sets off its effect
+     Ace up the Sleeve: (rows above)
+     Fercart: (rows above)
+  Tourney Joust -> Ace up the Sleeve: makes stronger: removes their Block: its damage gets through
+     Tourney Joust: (rows above)
+     Ace up the Sleeve: (rows above)
+Battle Preparation (8 partners): WHEN played of self DO stat_change chosen mine unit in board [type not Soldier] (strength=4) for permanent THEN give_keyword chosen mine unit in board [type not Soldier] <Armor> (amount=2) for permanent THEN stat_change it mine unit in board [type is Soldier] (strength=6) for permanent THEN give_keyword it mine unit in board [type is Soldier] <Armor> (amount=2) for permanent
+  War Council -> Battle Preparation: puts it into play: creates
+     War Council: KW: Resilience, Order, Deploy | WHEN always DO give_keyword self <Resilience> for permanent | WHEN played of self DO look 3 mine card in deck_top THEN play_card 3 chosen mine card in deck_top | WHEN activated of self DO create mine card in hand <Battle Preparation> THEN play_card it card
+     Battle Preparation: (rows above)
+  Menno Coehoorn -> Battle Preparation: puts it into play: puts it into play from the deck
+     Menno Coehoorn: (rows above)
+     Battle Preparation: (rows above)
+  Magne Division -> Battle Preparation: puts it into play: puts it into play from the hand
+     Magne Division: (rows above)
+     Battle Preparation: (rows above)
+  Battle Preparation -> False Ciri: enables: is a Tactic it asks for
+     Battle Preparation: (rows above)
+     False Ciri: (rows above)
+  Battle Preparation -> Stefan Skellen: enables: is a Tactic it asks for
+     Battle Preparation: (rows above)
+     Stefan Skellen: (rows above)
+  Battle Preparation -> Fire Scorpion: triggers: is a Tactic whose playing sets off its effect
+     Battle Preparation: (rows above)
+     Fire Scorpion: (rows above)
+  Battle Preparation -> Hefty Helge: triggers: is a Tactic whose playing sets off its effect
+     Battle Preparation: (rows above)
+     Hefty Helge: (rows above)
+  Battle Preparation -> Fercart: triggers: is a spell whose playing sets off its effect
+     Battle Preparation: (rows above)
+     Fercart: (rows above)
+Battle Stations! (9 partners): WHEN played of self DO play_card 2 chosen mine card in hand [state is bronze] THEN draw mine card in deck_top (amount=event_amount)
+  Battle Stations! -> Hefty Helge: triggers: is a Tactic whose playing sets off its effect; also is played
+     Battle Stations!: (rows above)
+     Hefty Helge: (rows above)
+  Battle Stations! -> Fercart: triggers: is played; also is a spell whose playing sets off its effect; also plays it: its effect goes off
+     Battle Stations!: (rows above)
+     Fercart: (rows above)
+  Battle Stations! -> Fire Scorpion: triggers: is a Tactic whose playing sets off its effect; also is played
+     Battle Stations!: (rows above)
+     Fire Scorpion: (rows above)
+  Battle Stations! -> Menno Coehoorn: triggers: plays it: its effect goes off
+     Battle Stations!: (rows above)
+     Menno Coehoorn: (rows above)
+  Battle Stations! -> Stefan Skellen: enables: is a Tactic it asks for; also triggers: plays it: its effect goes off
+     Battle Stations!: (rows above)
+     Stefan Skellen: (rows above)
+  Battle Stations! -> Joachim de Wett: triggers: plays it: its effect goes off
+     Battle Stations!: (rows above)
+     Joachim de Wett: KW: Disloyal, Deploy | WHEN always DO give_keyword self <Disloyal> for permanent | WHEN played of self DO play_card mine unit in deck_top [keyword not Disloyal] THEN stat_change it (strength=8) for permanent
+  Battle Stations! -> False Ciri: enables: is a Tactic it asks for; also triggers: plays it: its effect goes off
+     Battle Stations!: (rows above)
+     False Ciri: (rows above)
+  Battle Stations! -> Magne Division: triggers: plays it: its effect goes off
+     Battle Stations!: (rows above)
+     Magne Division: (rows above)
+  Battle Stations! -> Emhyr var Emreis: triggers: plays it: its effect goes off
+     Battle Stations!: (rows above)
+     Emhyr var Emreis: (rows above)
+  Menno Coehoorn -> Battle Stations!: puts it into play: puts it into play from the deck
+     Menno Coehoorn: (rows above)
+     Battle Stations!: (rows above)
+  Magne Division -> Battle Stations!: puts it into play: puts it into play from the hand
+     Magne Division: (rows above)
+     Battle Stations!: (rows above)
+Tourney Joust (10 partners): (rows above)
+  Menno Coehoorn -> Tourney Joust: puts it into play: puts it into play from the deck
+     Menno Coehoorn: (rows above)
+     Tourney Joust: (rows above)
+  Magne Division -> Tourney Joust: puts it into play: puts it into play from the hand
+     Magne Division: (rows above)
+     Tourney Joust: (rows above)
+  Tourney Joust -> False Ciri: enables: is a Tactic it asks for
+     Tourney Joust: (rows above)
+     False Ciri: (rows above)
+  Tourney Joust -> Stefan Skellen: enables: is a Tactic it asks for
+     Tourney Joust: (rows above)
+     Stefan Skellen: (rows above)
+  Tourney Joust -> Fire Scorpion: triggers: is a Tactic whose playing sets off its effect
+     Tourney Joust: (rows above)
+     Fire Scorpion: (rows above)
+  Tourney Joust -> Hefty Helge: triggers: is a Tactic whose playing sets off its effect
+     Tourney Joust: (rows above)
+     Hefty Helge: (rows above)
+  Tourney Joust -> Fercart: triggers: is a spell whose playing sets off its effect
+     Tourney Joust: (rows above)
+     Fercart: (rows above)
+  Tourney Joust -> Coup de Grâce: makes stronger: removes their Block: its damage gets through
+     Tourney Joust: (rows above)
+     Coup de Grâce: (rows above)
+War Council (10 partners): (rows above)
+  War Council -> Hefty Helge: triggers: is a Tactic whose playing sets off its effect; also is played
+     War Council: (rows above)
+     Hefty Helge: (rows above)
+  War Council -> Fercart: triggers: is played; also plays it: its effect goes off
+     War Council: (rows above)
+     Fercart: (rows above)
+  War Council -> Fire Scorpion: triggers: is a Tactic whose playing sets off its effect; also is played
+     War Council: (rows above)
+     Fire Scorpion: (rows above)
+  War Council -> Menno Coehoorn: triggers: plays it: its effect goes off
+     War Council: (rows above)
+     Menno Coehoorn: (rows above)
+  War Council -> Stefan Skellen: enables: is a Tactic it asks for; also triggers: plays it: its effect goes off
+     War Council: (rows above)
+     Stefan Skellen: (rows above)
+  War Council -> Joachim de Wett: triggers: plays it: its effect goes off
+     War Council: (rows above)
+     Joachim de Wett: (rows above)
+  War Council -> False Ciri: enables: is a Tactic it asks for; also triggers: plays it: its effect goes off
+     War Council: (rows above)
+     False Ciri: (rows above)
+  War Council -> Magne Division: triggers: plays it: its effect goes off
+     War Council: (rows above)
+     Magne Division: (rows above)
+  War Council -> Emhyr var Emreis: triggers: plays it: its effect goes off
+     War Council: (rows above)
+     Emhyr var Emreis: (rows above)
+  Menno Coehoorn -> War Council: puts it into play: puts it into play from the deck
+     Menno Coehoorn: (rows above)
+     War Council: (rows above)
+  Magne Division -> War Council: puts it into play: puts it into play from the hand
+     Magne Division: (rows above)
+     War Council: (rows above)
+-- c) special cards, one line per reason: is something wrong or missing?
+Ace up the Sleeve (8 partners): (rows above)
+Coup de Grâce (13 partners): (rows above)
+  Coup de Grâce -> Hefty Helge: triggers: is a Tactic whose playing sets off its effect; also is played
+     Coup de Grâce: (rows above)
+     Hefty Helge: (rows above)
+  Coup de Grâce -> Fercart: triggers: is played; also is a spell whose playing sets off its effect
+     Coup de Grâce: (rows above)
+     Fercart: (rows above)
+  Coup de Grâce -> Emhyr var Emreis: triggers: is played
+     Coup de Grâce: (rows above)
+     Emhyr var Emreis: (rows above)
+  Emhyr var Emreis -> Coup de Grâce: enables: makes units get Spying
+     Emhyr var Emreis: (rows above)
+     Coup de Grâce: (rows above)
+  Joachim de Wett -> Coup de Grâce: enables: has Spying
+     Joachim de Wett: (rows above)
+     Coup de Grâce: (rows above)
+  Menno Coehoorn -> Coup de Grâce: puts it into play: puts it into play from the deck
+     Menno Coehoorn: (rows above)
+     Coup de Grâce: (rows above)
+  Magne Division -> Coup de Grâce: puts it into play: puts it into play from the hand
+     Magne Division: (rows above)
+     Coup de Grâce: (rows above)
+  Coup de Grâce -> False Ciri: enables: is a Tactic it asks for
+     Coup de Grâce: (rows above)
+     False Ciri: (rows above)
+Emhyr var Emreis (14 partners): (rows above)
+  Emhyr var Emreis -> Hefty Helge: triggers: is played
+     Emhyr var Emreis: (rows above)
+     Hefty Helge: (rows above)
+  Emhyr var Emreis -> Treason: enables: Emhyr var Emreis moves units, and Treason acts on units next to its target
+     Emhyr var Emreis: (rows above)
+     Treason: (rows above)
+  Joachim de Wett -> Emhyr var Emreis: triggers: plays it: its effect goes off
+     Joachim de Wett: (rows above)
+     Emhyr var Emreis: (rows above)
+  Emhyr var Emreis -> Menno Coehoorn: puts it into play: puts it into play from the hand; also triggers: plays it: its effect goes off
+     Emhyr var Emreis: (rows above)
+     Menno Coehoorn: (rows above)
+Enslave (5 partners): (rows above)
+Menno Coehoorn (15 partners): (rows above)
+  Menno Coehoorn -> Hefty Helge: triggers: is played
+     Menno Coehoorn: (rows above)
+     Hefty Helge: (rows above)
+  Joachim de Wett -> Menno Coehoorn: triggers: plays it: its effect goes off
+     Joachim de Wett: (rows above)
+     Menno Coehoorn: (rows above)
+Stefan Skellen (13 partners): (rows above)
+  Stefan Skellen -> Fercart: triggers: is played
+     Stefan Skellen: (rows above)
+     Fercart: (rows above)
+  Joachim de Wett -> Stefan Skellen: triggers: plays it: its effect goes off
+     Joachim de Wett: (rows above)
+     Stefan Skellen: (rows above)
+  False Ciri -> Stefan Skellen: enables: makes a Tactic it asks for
+     False Ciri: (rows above)
+     Stefan Skellen: (rows above)
+Tactical Advantage (1 partners): (rows above)
+
+=== gwent / Doulbe Cross: Ivo Microassimilate 2500+: 21 cards, 92 lines
+-- a) 0 cards with no partner in the deck, each beside 10 deck cards: is a line missed?
+-- b) the 10 cards with the fewest partners, all their lines: is a line missed?
+Magic Lamp (1 partners): KW: Order | WHEN activated of self DO transform self <Lamp Djinn>
+  Magic Lamp -> Fercart: triggers: is a spell whose playing sets off its effect
+     Magic Lamp: (rows above)
+     Fercart: (rows above)
+Yennefer's Invocation (1 partners): WHEN played of self DO put_on_top chosen enemy unit in board to mine player
+  Yennefer's Invocation -> Fercart: triggers: is a spell whose playing sets off its effect
+     Yennefer's Invocation: (rows above)
+     Fercart: (rows above)
+Alba Armored Cavalry (3 partners): WHEN played of self IF keyword_condition Melee DO give_keyword chosen enemy unit in board <Lock> for permanent
+  Joachim de Wett -> Alba Armored Cavalry: triggers: plays it: its effect goes off
+     Joachim de Wett: (rows above)
+     Alba Armored Cavalry: (rows above)
+  Artaud Terranova -> Alba Armored Cavalry: triggers: plays it: its effect goes off
+     Artaud Terranova: KW: Assimilate, Deploy | WHEN always DO give_keyword self <Assimilate> for permanent | WHEN played of self IF event_count given_keyword by mine player of unit in board [keyword is Spying] ge 1 this_game DO copy chosen unit in board [keyword not Disloyal] [card not Artaud Terranova] [state is created] to mine player in hand THEN play_card chosen mine card in hand [state is created] in hand
+     Alba Armored Cavalry: (rows above)
+  Battle Stations! -> Alba Armored Cavalry: triggers: plays it: its effect goes off
+     Battle Stations!: (rows above)
+     Alba Armored Cavalry: (rows above)
+Assassination (3 partners): WHEN played of self DO damage chosen unit in board (amount=sum (6 + minus (count of (all unit in board [position is sides] [keyword not Spying])))) | WHEN played of self DO damage chosen unit in board (amount=sum (6 + minus (count of (all unit in board [position is sides] [keyword not Spying]))))
+  Magne Division -> Assassination: puts it into play: puts it into play from the hand
+     Magne Division: (rows above)
+     Assassination: (rows above)
+  Assassination -> False Ciri: enables: is a Tactic it asks for
+     Assassination: (rows above)
+     False Ciri: (rows above)
+  Assassination -> Fercart: triggers: is a spell whose playing sets off its effect
+     Assassination: (rows above)
+     Fercart: (rows above)
+Buhurt (3 partners): (rows above)
+Battle Preparation (4 partners): (rows above)
+  Nauzicaa Sergeant -> Battle Preparation: puts it into play: creates
+     Nauzicaa Sergeant: KW: Deploy | WHEN played of self IF event_count round_won by enemy player ge 1 this_game DO create in hand <Battle Preparation> THEN play_card it card
+     Battle Preparation: (rows above)
+Double Cross (4 partners): KW: Order | WHEN activated of self DO create random enemy card in hand in hand THEN play_card it card | WHEN activated of self DO create random enemy card in hand in hand THEN play_card it
+  Double Cross -> Fercart: triggers: is played
+     Double Cross: (rows above)
+     Fercart: (rows above)
+  Double Cross -> Ivo of Belhaven: enables: is played
+     Double Cross: (rows above)
+     Ivo of Belhaven: KW: Deploy | WHEN played of self DO stat_change self (strength=event_count of (played of mine card) this_round) for permanent
+  Double Cross -> Artaud Terranova: enables: creates cards: Artaud Terranova copys them
+     Double Cross: (rows above)
+     Artaud Terranova: (rows above)
+  Runemage -> Double Cross: makes stronger: makes the Create it gives stronger
+     Runemage: KW: Deploy | WHEN played of self DO increase_effect mine effect [keyword is Create] (options=5) THEN create mine card [name_has is Runestone] in hand THEN play_card it
+     Double Cross: (rows above)
+Mage Torturer (4 partners): KW: Veil, Assimilate, Deploy | WHEN always DO give_keyword self <Veil> for permanent | WHEN always DO give_keyword self <Assimilate> for permanent | WHEN played of self DO give_keyword chosen enemy unit in board <Spying> for permanent
+  Mage Torturer -> Artaud Terranova: enables: makes units get Spying: Artaud Terranova copys them; also makes units get Spying
+     Mage Torturer: (rows above)
+     Artaud Terranova: (rows above)
+  Mage Torturer -> Coup de Grâce: enables: makes units get Spying
+     Mage Torturer: (rows above)
+     Coup de Grâce: (rows above)
+  Joachim de Wett -> Mage Torturer: triggers: plays it: its effect goes off
+     Joachim de Wett: (rows above)
+     Mage Torturer: (rows above)
+  Artaud Terranova -> Mage Torturer: triggers: plays it: its effect goes off
+     Artaud Terranova: (rows above)
+     Mage Torturer: (rows above)
+  Battle Stations! -> Mage Torturer: triggers: plays it: its effect goes off
+     Battle Stations!: (rows above)
+     Mage Torturer: (rows above)
+Artorius Vigo (7 partners): KW: Assimilate, Deploy | WHEN always DO give_keyword self <Assimilate> for permanent | WHEN played of self DO create random mine unit [state is started_in_deck] [state is bronze] in hand THEN stat_set it card (strength=1) THEN play_card it card
+  Artorius Vigo -> Fercart: triggers: is played
+     Artorius Vigo: (rows above)
+     Fercart: (rows above)
+  Artorius Vigo -> Ivo of Belhaven: enables: is played
+     Artorius Vigo: (rows above)
+     Ivo of Belhaven: (rows above)
+  Artorius Vigo -> Slave Driver: enables: creates cards: Slave Driver damages them
+     Artorius Vigo: (rows above)
+     Slave Driver: KW: Deploy | WHEN played of self DO damage chosen mine unit in board [state is bronze] (amount=1) THEN copy it to mine position [position is same_row] in board THEN stat_set it mine unit [state is created] (strength=1) THEN play_card it mine unit [state is created] [type is Soldier]
+  Artorius Vigo -> Artaud Terranova: enables: creates cards: Artaud Terranova copys them
+     Artorius Vigo: (rows above)
+     Artaud Terranova: (rows above)
+  Joachim de Wett -> Artorius Vigo: triggers: plays it: its effect goes off
+     Joachim de Wett: (rows above)
+     Artorius Vigo: (rows above)
+  Artaud Terranova -> Artorius Vigo: triggers: plays it: its effect goes off
+     Artaud Terranova: (rows above)
+     Artorius Vigo: (rows above)
+  Battle Stations! -> Artorius Vigo: triggers: plays it: its effect goes off
+     Battle Stations!: (rows above)
+     Artorius Vigo: (rows above)
+  Runemage -> Artorius Vigo: makes stronger: makes the Create it gives stronger
+     Runemage: (rows above)
+     Artorius Vigo: (rows above)
+Imperial Diplomacy (7 partners): (rows above)
+  Imperial Diplomacy -> Ivo of Belhaven: enables: is played
+     Imperial Diplomacy: (rows above)
+     Ivo of Belhaven: (rows above)
+  Imperial Diplomacy -> Slave Driver: enables: creates cards: Slave Driver damages them
+     Imperial Diplomacy: (rows above)
+     Slave Driver: (rows above)
+  Imperial Diplomacy -> Artaud Terranova: enables: creates cards: Artaud Terranova copys them
+     Imperial Diplomacy: (rows above)
+     Artaud Terranova: (rows above)
+  Runemage -> Imperial Diplomacy: makes stronger: makes the Create it gives stronger
+     Runemage: (rows above)
+     Imperial Diplomacy: (rows above)
+-- c) special cards, one line per reason: is something wrong or missing?
+Artaud Terranova (15 partners): (rows above)
+  Artaud Terranova -> Fercart: triggers: is played; also plays it: its effect goes off
+     Artaud Terranova: (rows above)
+     Fercart: (rows above)
+  Artaud Terranova -> Ivo of Belhaven: enables: is played; also triggers: plays it: its effect goes off
+     Artaud Terranova: (rows above)
+     Ivo of Belhaven: (rows above)
+  Joachim de Wett -> Artaud Terranova: enables: has Spying: Artaud Terranova copys them; also triggers: plays it: its effect goes off
+     Joachim de Wett: (rows above)
+     Artaud Terranova: (rows above)
+  False Ciri -> Artaud Terranova: enables: has Spying: Artaud Terranova copys them
+     False Ciri: (rows above)
+     Artaud Terranova: (rows above)
+  Artaud Terranova -> Slave Driver: enables: creates cards: Slave Driver damages them
+     Artaud Terranova: (rows above)
+     Slave Driver: (rows above)
+  Artaud Terranova -> Joachim de Wett: triggers: plays it: its effect goes off
+     Artaud Terranova: (rows above)
+     Joachim de Wett: (rows above)
+  Battle Stations! -> Artaud Terranova: triggers: plays it: its effect goes off
+     Battle Stations!: (rows above)
+     Artaud Terranova: (rows above)
+Coup de Grâce (8 partners): (rows above)
+  Coup de Grâce -> Ivo of Belhaven: enables: is played
+     Coup de Grâce: (rows above)
+     Ivo of Belhaven: (rows above)
+  Coup de Grâce -> Slave Driver: enables: creates cards: Slave Driver damages them
+     Coup de Grâce: (rows above)
+     Slave Driver: (rows above)
+  Coup de Grâce -> Artaud Terranova: enables: creates cards: Artaud Terranova copys them
+     Coup de Grâce: (rows above)
+     Artaud Terranova: (rows above)
+Double Cross (4 partners): (rows above)
+Magic Lamp (1 partners): (rows above)
+Runemage (10 partners): (rows above)
+  Runemage -> Fercart: triggers: is played
+     Runemage: (rows above)
+     Fercart: (rows above)
+  Runemage -> Slave Driver: enables: creates cards: Slave Driver damages them
+     Runemage: (rows above)
+     Slave Driver: (rows above)
+  Runemage -> Artaud Terranova: enables: creates cards: Artaud Terranova copys them
+     Runemage: (rows above)
+     Artaud Terranova: (rows above)
+  Joachim de Wett -> Runemage: triggers: plays it: its effect goes off
+     Joachim de Wett: (rows above)
+     Runemage: (rows above)
+Yennefer's Invocation (1 partners): (rows above)

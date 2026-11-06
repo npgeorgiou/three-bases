@@ -38,3 +38,4 @@
 Steps (START_DATABASE.md Part 3): 1 start · 2 the two checks, cut · 3 line readers · 4 cases by script, misses into
 lr_misses.md · 5 verifiers · 6 the sheet · 7 fixers · 8 one rebuild · 9 last checks · 10 done.
 - Step 1 DONE: links.py (all games), tb0.tsv (every game), before.tsv.
+- Step 2 DONE: la.txt -> la_1-3, da.txt -> da_1-11.

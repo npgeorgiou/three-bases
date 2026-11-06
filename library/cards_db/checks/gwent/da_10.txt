@@ -1,0 +1,487 @@
+=== gwent / Uprising: It's a great time to play Northern Realms Witchers: 27 cards, 110 lines
+-- a) 0 cards with no partner in the deck, each beside 10 deck cards: is a line missed?
+-- b) the 10 cards with the fewest partners, all their lines: is a line missed?
+Korathi Heatwave (1 partners): (rows above)
+  Korathi Heatwave -> Keldar: triggers: is a spell whose playing sets off its effect
+     Korathi Heatwave: (rows above)
+     Keldar: KW: Adrenaline | WHEN played of mine spell DO summon to chosen mine position [position is same_row] <Witcher Student> | WHEN turn_end by mine player IF keyword_condition Adrenaline 4 DO summon to chosen mine position [position is same_row] <Witcher Student>
+Pellar (1 partners): (rows above)
+Trial of the Grasses (1 partners): WHEN played of self DO give_type chosen unit in board [type not Witcher] THEN stat_set it (strength=13) THEN damage it unit [type not Witcher] (amount=6)
+  Trial of the Grasses -> Keldar: triggers: is a spell whose playing sets off its effect
+     Trial of the Grasses: (rows above)
+     Keldar: (rows above)
+Fortune Teller (2 partners): WHEN played of self IF keyword_condition Melee DO give_keyword chosen unit in board <Doomed> for permanent | WHEN played of self IF keyword_condition Melee DO give_keyword chosen unit in board <Doomed> for permanent | WHEN played of self IF keyword_condition Ranged DO give_keyword chosen unit in board <Veil> for permanent | WHEN played of self IF keyword_condition Ranged DO give_keyword chosen unit in board <Veil> for permanent
+  Fortune Teller -> Redanian Secret Service: triggers: makes your units get a keyword or status
+     Fortune Teller: (rows above)
+     Redanian Secret Service: KW: Zeal, Order | WHEN always DO give_keyword self <Zeal> for permanent | WHEN activated of self DO keyword_action chosen mine unit in board <Purify> for unstated | WHEN given_keyword of mine unit in board IF have mine unit in board [card is Redanian Secret Service] not DO summon self to chosen mine position [position is same_row] in board <Redanian Secret Service>
+  Oneiromancy -> Fortune Teller: triggers: plays it: its effect goes off
+     Oneiromancy: KW: Echo | WHEN always DO give_keyword self <Echo> for permanent | WHEN played of self DO play_card chosen mine card in deck
+     Fortune Teller: (rows above)
+Uprising (2 partners): KW: Charge, Order | WHEN activated of self DO stat_change chosen mine unit in board (strength=1) for permanent | WHEN always DO give_keyword self <Charge> (amount=3) for permanent | WHEN always [once_per_game] IF have mine leader_ability [keyword is Charge] not DO create mine card in hand <Lyrian Scytheman> THEN play_card it card
+  Uprising -> Redanian Secret Service: triggers: has Charge
+     Uprising: (rows above)
+     Redanian Secret Service: (rows above)
+  Uprising -> Lyrian Scytheman: puts it into play: creates; also enables: changes units' stats
+     Uprising: (rows above)
+     Lyrian Scytheman: KW: Deploy | WHEN played of self DO stat_change self (strength=count of (all unit in board [state is buffed] [position is same_row])) for permanent
+Allgod (3 partners): KW: Deploy | WHEN played of self DO stat_change sum (3 + count of (all mine card in deck [card is Offering] [state is started_in_deck])) chosen mine unit in deck (strength=2) for permanent
+  Allgod -> Lyrian Scytheman: enables: changes units' stats
+     Allgod: (rows above)
+     Lyrian Scytheman: (rows above)
+  Oneiromancy -> Allgod: triggers: plays it: its effect goes off
+     Oneiromancy: (rows above)
+     Allgod: (rows above)
+  Offering -> Allgod: enables: is the Offering it names
+     Offering: WHEN played of self DO kill chosen unit in board [strength le 4] THEN stat_change chosen mine unit in deck (strength=2) for permanent
+     Allgod: (rows above)
+Crystal Skull (3 partners): (rows above)
+  Crystal Skull -> Lyrian Scytheman: enables: changes units' stats
+     Crystal Skull: (rows above)
+     Lyrian Scytheman: (rows above)
+  Crystal Skull -> Keldar: triggers: is a spell whose playing sets off its effect
+     Crystal Skull: (rows above)
+     Keldar: (rows above)
+Offering (3 partners): (rows above)
+  Offering -> Lyrian Scytheman: enables: changes units' stats
+     Offering: (rows above)
+     Lyrian Scytheman: (rows above)
+  Offering -> Keldar: triggers: is a spell whose playing sets off its effect
+     Offering: (rows above)
+     Keldar: (rows above)
+Geralt of Rivia (5 partners): KW: Deploy | WHEN played of self DO kill chosen enemy unit in board [strength ge 9]
+  Oneiromancy -> Geralt of Rivia: triggers: plays it: its effect goes off
+     Oneiromancy: (rows above)
+     Geralt of Rivia: (rows above)
+  Geralt: Quen -> Geralt of Rivia: puts it into play: puts it into play from the deck; also triggers: plays it: its effect goes off
+     Geralt: Quen: KW: Shield, Deploy, Adrenaline | WHEN always DO give_keyword self <Shield> for permanent | WHEN played of self IF keyword_condition Adrenaline not 4 DO play_card chosen mine card in deck [type is Witcher] | WHEN played of self IF keyword_condition Adrenaline 4 DO play_card chosen mine card in deck [type is Witcher] THEN give_keyword it <Shield> for permanent
+     Geralt of Rivia: (rows above)
+  Geralt of Rivia -> Berengar: enables: is a Witcher it asks for
+     Geralt of Rivia: (rows above)
+     Berengar: WHEN turn_start by mine player IF have all mine unit in board [type is Witcher] [position is same_row] [card not Berengar] not DO kill self
+  Geralt of Rivia -> Target Practice: enables: is a Witcher it asks for
+     Geralt of Rivia: (rows above)
+     Target Practice: WHEN played of self IF have all mine unit in board [type is Witcher] [position is same_row] not DO stat_change chosen mine unit in board (strength=4) for permanent | WHEN played of self IF have all mine unit in board [type is Witcher] [position is same_row] DO stat_change chosen mine unit in board (strength=4) for permanent THEN summon to chosen mine position [position is same_row] <Witcher Student>
+  Vesemir: Mentor -> Geralt of Rivia: makes stronger: gives it more strength
+     Vesemir: Mentor: KW: Deploy, Adrenaline | WHEN played of self DO stat_change all mine unit in board [type is Witcher] (strength=1) for permanent | WHEN played of self IF keyword_condition Adrenaline 4 DO stat_change all mine unit in hand [type is Witcher] (strength=1) for permanent THEN stat_change all mine unit in deck [type is Witcher] (strength=1) for permanent
+     Geralt of Rivia: (rows above)
+Kaer Seren (5 partners): KW: Resilience, Order, Deploy | WHEN always DO give_keyword self <Resilience> for permanent | WHEN always DO give_keyword self <Resilience> for permanent | WHEN played of self DO choose_one OR create in hand <Griffin Witcher Adept> OR create in hand <Griffin Witcher> OR create in hand <Griffin Witcher Mentor> OR create in hand <Griffin Witcher Ranger> THEN play_card chosen mine card in hand [card in Griffin Witcher Adept] [card in Griffin Witcher] [card in Griffin Witcher Mentor] [card in Griffin Witcher Ranger] | WHEN played of self DO choose_one self OR create <Griffin Witcher Adept> OR create <Griffin Witcher> OR create <Griffin Witcher Mentor> OR create <Griffin Witcher Ranger> THEN play_card it | WHEN activated of self DO stat_change chosen mine unit in deck (strength=3) for permanent | WHEN activated of self DO stat_change chosen mine unit in deck (strength=3) for permanent
+  Kaer Seren -> Lyrian Scytheman: enables: changes units' stats
+     Kaer Seren: (rows above)
+     Lyrian Scytheman: (rows above)
+  Kaer Seren -> Griffin Witcher Adept: puts it into play: creates; also puts it into play from the hand
+     Kaer Seren: (rows above)
+     Griffin Witcher Adept: (rows above)
+  Kaer Seren -> Griffin Witcher: puts it into play: creates; also puts it into play from the hand
+     Kaer Seren: (rows above)
+     Griffin Witcher: (rows above)
+  Kaer Seren -> Griffin Witcher Mentor: puts it into play: creates; also puts it into play from the hand
+     Kaer Seren: (rows above)
+     Griffin Witcher Mentor: KW: Deploy, Adrenaline | WHEN played of self IF keyword_condition Adrenaline not 4 DO draw mine unit in deck_top THEN stat_change it (strength=1) for permanent THEN shuffle_into_deck chosen mine card in hand | WHEN played of self IF keyword_condition Adrenaline 4 DO draw 2 mine unit in deck_top THEN stat_change it (strength=1) for permanent THEN shuffle_into_deck 2 chosen mine card in hand
+  Kaer Seren -> Griffin Witcher Ranger: puts it into play: creates; also puts it into play from the hand
+     Kaer Seren: (rows above)
+     Griffin Witcher Ranger: KW: Formation, Order, Deploy | WHEN always DO give_keyword self <Formation> for permanent | WHEN played of self DO stat_change self (strength=count of (all enemy unit in board [position is same_row])) for permanent | WHEN activated of self DO stat_change self (strength=minus (stat boost of (self))) for permanent THEN stat_change chosen mine unit in board [card not Griffin Witcher Ranger] (strength=event_amount) for permanent
+-- c) special cards, one line per reason: is something wrong or missing?
+Allgod (3 partners): (rows above)
+Crystal Skull (3 partners): (rows above)
+Geralt of Rivia (5 partners): (rows above)
+Geralt: Quen (16 partners): (rows above)
+  Geralt: Quen -> Keldar: puts it into play: puts it into play from the deck; also triggers: is played
+     Geralt: Quen: (rows above)
+     Keldar: (rows above)
+  Geralt: Quen -> Redanian Secret Service: triggers: makes your units get a keyword or status; also has Shield
+     Geralt: Quen: (rows above)
+     Redanian Secret Service: (rows above)
+  Oneiromancy -> Geralt: Quen: triggers: plays it: its effect goes off
+     Oneiromancy: (rows above)
+     Geralt: Quen: (rows above)
+  Selective Mutation -> Geralt: Quen: puts it into play: draws it from the deck; also triggers: fills your hand
+     Selective Mutation: WHEN played of self DO draw chosen mine card in deck [keyword is Adrenaline] THEN shuffle_into_deck chosen mine card in hand THEN summon to all mine position <Witcher Student>
+     Geralt: Quen: (rows above)
+  Geralt: Quen -> Berengar: puts it into play: puts it into play from the deck; also enables: is a Witcher it asks for
+     Geralt: Quen: (rows above)
+     Berengar: (rows above)
+  Geralt: Quen -> Griffin Witcher: puts it into play: puts it into play from the deck
+     Geralt: Quen: (rows above)
+     Griffin Witcher: (rows above)
+  Geralt: Quen -> Target Practice: enables: is a Witcher it asks for
+     Geralt: Quen: (rows above)
+     Target Practice: (rows above)
+  Vesemir: Mentor -> Geralt: Quen: makes stronger: gives it more strength
+     Vesemir: Mentor: (rows above)
+     Geralt: Quen: (rows above)
+  Griffin Witcher Mentor -> Geralt: Quen: triggers: fills your hand
+     Griffin Witcher Mentor: (rows above)
+     Geralt: Quen: (rows above)
+Kaer Seren (5 partners): (rows above)
+Korathi Heatwave (1 partners): (rows above)
+Oneiromancy (13 partners): (rows above)
+Trial of the Grasses (1 partners): (rows above)
+Uprising (2 partners): (rows above)
+Vesemir: Mentor (15 partners): (rows above)
+  Vesemir: Mentor -> Lyrian Scytheman: enables: changes units' stats
+     Vesemir: Mentor: (rows above)
+     Lyrian Scytheman: (rows above)
+  Oneiromancy -> Vesemir: Mentor: triggers: plays it: its effect goes off
+     Oneiromancy: (rows above)
+     Vesemir: Mentor: (rows above)
+  Geralt: Quen -> Vesemir: Mentor: puts it into play: puts it into play from the deck; also triggers: plays it: its effect goes off
+     Geralt: Quen: (rows above)
+     Vesemir: Mentor: (rows above)
+  Selective Mutation -> Vesemir: Mentor: puts it into play: draws it from the deck; also triggers: fills your hand
+     Selective Mutation: (rows above)
+     Vesemir: Mentor: (rows above)
+  Vesemir: Mentor -> Berengar: enables: is a Witcher it asks for; also makes stronger: gives it more strength
+     Vesemir: Mentor: (rows above)
+     Berengar: (rows above)
+  Vesemir: Mentor -> Target Practice: enables: is a Witcher it asks for
+     Vesemir: Mentor: (rows above)
+     Target Practice: (rows above)
+  Griffin Witcher Mentor -> Vesemir: Mentor: triggers: fills your hand
+     Griffin Witcher Mentor: (rows above)
+     Vesemir: Mentor: (rows above)
+
+=== gwent / Pincer Maneuver: Kimbolt's Temple Siege: 22 cards, 66 lines
+-- a) 1 cards with no partner in the deck, each beside 10 deck cards: is a line missed?
+Musicians of Blaviken: (rows above)
+    ? Siege: KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent | WHEN played of self DO summon to mine position [position is back_row] <Reinforced Trebuchet> | WHEN played of mine unit [type is Siege Engine] IF stage 1 DO summon to mine position [position is back_row] <Battering Ram> | WHEN played of mine unit [type is Siege Engine] IF stage 2 DO create mine card in hand <Bombardment> THEN play_card it card
+    ? Prince Anséis: KW: Formation, Order, Inspired | WHEN always DO give_keyword self <Formation> for permanent | WHEN activated of self IF keyword_condition Inspired not DO damage chosen enemy unit in board (amount=4) | WHEN activated of self IF keyword_condition Inspired DO keyword_action chosen enemy unit in board to self <Duel> for unstated
+    ? Ravanen Kimbolt: KW: Deploy | WHEN played of self DO stat_change 3 chosen mine unit in deck [state is bronze] (strength=1) for permanent | WHEN activated of mine unit in board [first_each_turn] DO summon random mine unit in deck [strength eq stat strength of (it)] to mine position [position is same_row]
+    ? Volunteer: KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent
+    ? Siege Master: KW: Order | WHEN activated of self DO countdown_advance chosen mine unit in board (amount=1) | WHEN activated of self DO countdown_advance chosen mine unit in board (amount=1) | WHEN played of mine unit [type is Siege Engine] DO summon self in hand to mine position [position is sides] THEN draw mine card in deck_top (amount=1) | WHEN played of mine unit [type is Siege Engine] DO summon self in hand to mine position [position is sides] THEN draw mine card in deck_top (amount=1)
+    ? Redanian Archer: (rows above)
+    ? Temple of Melitele: Pilgrimage: KW: Doomed, Immunity, Resilience, Order, Deploy | WHEN always DO give_keyword self <Doomed> for permanent | WHEN always DO give_keyword self <Immunity> for permanent | WHEN always DO give_keyword self <Resilience> for permanent | WHEN played of self DO shuffle_into_deck chosen mine unit in board THEN shuffle_into_deck chosen enemy unit in board [strength le stat strength of (it)] | WHEN activated of self DO play_card it mine unit in deck
+    ? Pincer Maneuver: KW: Charge, Order | WHEN activated of self [n_times] DO draw chosen mine card in deck [region not Neutral] (amount=1) THEN shuffle_into_deck chosen mine card in hand THEN summon to mine position [position is front_row] <Volunteer> | WHEN always DO give_keyword self <Charge> (amount=2) for permanent
+    ? Carroballista: KW: Resupply | WHEN always DO give_keyword self <Resupply> for permanent | WHEN activated of self IF keyword_condition Ranged DO damage chosen enemy unit in board (amount=2) | WHEN always DO keyword_action <Cooldown> (amount=3) | WHEN turn_end by mine player IF keyword_condition Crew DO give_keyword self <Armor> (amount=1) for permanent
+    ? Reinforced Ballista: KW: Formation, Resupply, Order | WHEN always DO give_keyword self <Formation> for permanent | WHEN always DO give_keyword self <Resupply> for permanent | WHEN activated of self DO damage chosen unit in board (amount=1) | WHEN always DO keyword_action <Cooldown> (amount=1)
+-- b) the 10 cards with the fewest partners, all their lines: is a line missed?
+Crystal Skull (3 partners): (rows above)
+  Crystal Skull -> Prince Anséis: enables: changes its stats for its effect
+     Crystal Skull: (rows above)
+     Prince Anséis: (rows above)
+  Crystal Skull -> Lyrian Landsknecht: enables: changes its stats for its effect
+     Crystal Skull: (rows above)
+     Lyrian Landsknecht: (rows above)
+  Crystal Skull -> Lyrian Arbalest: triggers: is a card whose playing sets off its effect
+     Crystal Skull: (rows above)
+     Lyrian Arbalest: KW: Charge, Order | WHEN activated of self DO damage chosen unit in board (amount=1) | WHEN always DO give_keyword self <Charge> (amount=1) for permanent | WHEN played of mine card [keyword is Order] DO give_keyword self <Charge> (amount=1) for permanent
+Mutagenerator (3 partners): (rows above)
+  Temple of Melitele: Pilgrimage -> Mutagenerator: triggers: is played
+     Temple of Melitele: Pilgrimage: (rows above)
+     Mutagenerator: (rows above)
+  Mutagenerator -> Prince Anséis: enables: changes its stats for its effect
+     Mutagenerator: (rows above)
+     Prince Anséis: (rows above)
+Onager (3 partners): WHEN keyword_used by mine player of [keyword is Order] DO damage random enemy unit in board (amount=1)
+  Onager -> Bombardment: enables: is a Siege Engine it asks for
+     Onager: (rows above)
+     Bombardment: WHEN played of self DO damage all enemy unit in board (amount=sum (4 + count of (all mine unit in board [type is Siege Engine])), spread=1)
+  Onager -> Siege Master: triggers: is a Siege Engine whose playing sets off its effect
+     Onager: (rows above)
+     Siege Master: (rows above)
+  Onager -> Siege: triggers: is a Siege Engine whose playing sets off its effect
+     Onager: (rows above)
+     Siege: (rows above)
+Pincer Maneuver (3 partners): (rows above)
+  Pincer Maneuver -> Volunteer: puts it into play: summons
+     Pincer Maneuver: (rows above)
+     Volunteer: (rows above)
+  Pincer Maneuver -> Lyrian Arbalest: triggers: is a card whose playing sets off its effect
+     Pincer Maneuver: (rows above)
+     Lyrian Arbalest: (rows above)
+  Pincer Maneuver -> Temple of Melitele: Congregation: triggers: fills your hand
+     Pincer Maneuver: (rows above)
+     Temple of Melitele: Congregation: KW: Doomed, Immunity, Resilience, Order, Deploy | WHEN always DO give_keyword self <Doomed> for permanent | WHEN always DO give_keyword self <Immunity> for permanent | WHEN always DO give_keyword self <Resilience> for permanent | WHEN played of self DO create 3 random mine unit [state is gold] [region is own_regions] [state not started_in_deck] in deck | WHEN activated of self DO draw chosen mine unit in deck (amount=1) THEN stat_change it (strength=count of (all mine card in hand)) for permanent THEN shuffle_into_deck chosen mine card in hand | WHEN round_won by mine player IF have self in hand is DO transform self | WHEN round_won by mine player IF have self in deck is DO transform self
+Redanian Archer (3 partners): (rows above)
+  Redanian Archer -> Reinforced Trebuchet: enables: is a Soldier it asks for
+     Redanian Archer: (rows above)
+     Reinforced Trebuchet: KW: Ranged, Crew | WHEN turn_end by mine player IF keyword_condition Ranged; keyword_condition Crew not DO damage random enemy unit in board [position is back_row] (amount=1) | WHEN turn_end by mine player IF keyword_condition Ranged; keyword_condition Crew DO damage random enemy unit in board (amount=1)
+  Redanian Archer -> Carroballista: enables: is a Soldier it asks for
+     Redanian Archer: (rows above)
+     Carroballista: (rows above)
+  Redanian Archer -> Battering Ram: enables: is a Soldier it asks for
+     Redanian Archer: (rows above)
+     Battering Ram: KW: Resupply, Crew | WHEN always DO give_keyword self <Resupply> for permanent | WHEN activated of self IF keyword_condition Melee DO move self to mine position [position is back_row] | WHEN activated of self IF keyword_condition Ranged; keyword_condition Crew not DO move self to mine position [position is front_row] THEN damage highest enemy unit by strength in board (amount=3) | WHEN activated of self IF keyword_condition Ranged; keyword_condition Crew DO move self to mine position [position is front_row] THEN damage chosen enemy unit in board (amount=3) | WHEN always DO keyword_action <Cooldown> (amount=2)
+Avallac'h: Sage (4 partners): (rows above)
+  Avallac'h: Sage -> Siege: triggers: plays it: its effect goes off
+     Avallac'h: Sage: (rows above)
+     Siege: (rows above)
+  Avallac'h: Sage -> Temple of Melitele: Congregation: triggers: plays it: its effect goes off
+     Avallac'h: Sage: (rows above)
+     Temple of Melitele: Congregation: (rows above)
+  Avallac'h: Sage -> Temple of Melitele: Pilgrimage: triggers: plays it: its effect goes off
+     Avallac'h: Sage: (rows above)
+     Temple of Melitele: Pilgrimage: (rows above)
+Kerack City Guard (4 partners): KW: Veil, Order | WHEN always DO give_keyword self <Veil> for permanent | WHEN activated of self DO move chosen enemy unit in board to chosen enemy position [position not same_row] | WHEN turn_end by mine player IF event_count activated of self eq 0 this_turn DO stat_change self (strength=1) for permanent
+  Kerack City Guard -> Reinforced Trebuchet: enables: is a Soldier it asks for; also Kerack City Guard moves enemy units, and Reinforced Trebuchet acts on units back row it
+     Kerack City Guard: (rows above)
+     Reinforced Trebuchet: (rows above)
+  Kerack City Guard -> Carroballista: enables: is a Soldier it asks for
+     Kerack City Guard: (rows above)
+     Carroballista: (rows above)
+  Kerack City Guard -> Battering Ram: enables: is a Soldier it asks for
+     Kerack City Guard: (rows above)
+     Battering Ram: (rows above)
+  Kerack City Guard -> Lyrian Arbalest: triggers: is a card whose playing sets off its effect
+     Kerack City Guard: (rows above)
+     Lyrian Arbalest: (rows above)
+Reinforced Ballista (4 partners): (rows above)
+  Reinforced Ballista -> Bombardment: enables: is a Siege Engine it asks for
+     Reinforced Ballista: (rows above)
+     Bombardment: (rows above)
+  Reinforced Ballista -> Siege Master: triggers: is a Siege Engine whose playing sets off its effect
+     Reinforced Ballista: (rows above)
+     Siege Master: (rows above)
+  Reinforced Ballista -> Lyrian Arbalest: triggers: is a card whose playing sets off its effect
+     Reinforced Ballista: (rows above)
+     Lyrian Arbalest: (rows above)
+  Reinforced Ballista -> Siege: triggers: is a Siege Engine whose playing sets off its effect
+     Reinforced Ballista: (rows above)
+     Siege: (rows above)
+Volunteer (4 partners): (rows above)
+  Volunteer -> Reinforced Trebuchet: enables: is a Soldier it asks for
+     Volunteer: (rows above)
+     Reinforced Trebuchet: (rows above)
+  Volunteer -> Carroballista: enables: is a Soldier it asks for
+     Volunteer: (rows above)
+     Carroballista: (rows above)
+  Volunteer -> Battering Ram: enables: is a Soldier it asks for
+     Volunteer: (rows above)
+     Battering Ram: (rows above)
+Prince Anséis (5 partners): (rows above)
+  Temple of Melitele: Congregation -> Prince Anséis: enables: changes its stats for its effect
+     Temple of Melitele: Congregation: (rows above)
+     Prince Anséis: (rows above)
+  Ravanen Kimbolt -> Prince Anséis: enables: changes its stats for its effect
+     Ravanen Kimbolt: (rows above)
+     Prince Anséis: (rows above)
+  Prince Anséis -> Lyrian Arbalest: triggers: is a card whose playing sets off its effect
+     Prince Anséis: (rows above)
+     Lyrian Arbalest: (rows above)
+-- c) special cards, one line per reason: is something wrong or missing?
+Avallac'h: Sage (4 partners): (rows above)
+Crystal Skull (3 partners): (rows above)
+Pincer Maneuver (3 partners): (rows above)
+Prince Anséis (5 partners): (rows above)
+Ravanen Kimbolt (5 partners): (rows above)
+  Ravanen Kimbolt -> Reinforced Trebuchet: enables: is a Soldier it asks for
+     Ravanen Kimbolt: (rows above)
+     Reinforced Trebuchet: (rows above)
+Siege (9 partners): (rows above)
+  Siege -> Lyrian Arbalest: triggers: is played
+     Siege: (rows above)
+     Lyrian Arbalest: (rows above)
+  Temple of Melitele: Pilgrimage -> Siege: triggers: is played
+     Temple of Melitele: Pilgrimage: (rows above)
+     Siege: (rows above)
+  Siege -> Bombardment: puts it into play: creates
+     Siege: (rows above)
+     Bombardment: (rows above)
+  Siege -> Reinforced Trebuchet: puts it into play: summons
+     Siege: (rows above)
+     Reinforced Trebuchet: (rows above)
+Temple of Melitele: Congregation (7 partners): (rows above)
+  Temple of Melitele: Congregation -> Temple of Melitele: Pilgrimage: levels into: levels into
+     Temple of Melitele: Congregation: (rows above)
+     Temple of Melitele: Pilgrimage: (rows above)
+  Temple of Melitele: Congregation -> Lyrian Arbalest: triggers: is a card whose playing sets off its effect
+     Temple of Melitele: Congregation: (rows above)
+     Lyrian Arbalest: (rows above)
+Temple of Melitele: Pilgrimage (6 partners): (rows above)
+
+=== gwent / Arachas Swarm: Kikimores and Arachas: 25 cards, 106 lines
+-- a) 0 cards with no partner in the deck, each beside 10 deck cards: is a line missed?
+-- b) the 10 cards with the fewest partners, all their lines: is a line missed?
+Bone Talisman (3 partners): WHEN played of self DO stat_change all mine unit in board (strength=1) for permanent
+  Whispess: Tribute -> Bone Talisman: puts it into play: puts it into play from the deck
+     Whispess: Tribute: (rows above)
+     Bone Talisman: (rows above)
+  Bone Talisman -> Arachas Swarm: triggers: is an Organic whose playing sets off its effect
+     Bone Talisman: (rows above)
+     Arachas Swarm: (rows above)
+  Bone Talisman -> Kikimore Queen: triggers: is an Organic whose playing sets off its effect
+     Bone Talisman: (rows above)
+     Kikimore Queen: KW: Thrive | WHEN always DO give_keyword self <Thrive> for permanent | WHEN keyword_used by self IF keyword_condition Thrive DO stat_change all mine unit in board [type is Insectoid] [position is same_row] (strength=1) for permanent | WHEN played of mine card [type is Organic] DO repeat self <Thrive>
+Pellar (3 partners): (rows above)
+  Pellar -> Kikimore Queen: triggers: uses a keyword or status
+     Pellar: (rows above)
+     Kikimore Queen: (rows above)
+  Renew -> Pellar: triggers: plays it: its effect goes off
+     Renew: WHEN played of self DO play_card chosen mine unit in discard [cost le 9] THEN give_keyword it <Doomed> for permanent | WHEN played of self DO play_card chosen mine unit in discard [cost le 9] THEN give_keyword it <Doomed> for permanent
+     Pellar: (rows above)
+Spores (3 partners): (rows above)
+  Spores -> Kikimore Queen: triggers: uses a keyword or status; also is an Organic whose playing sets off its effect
+     Spores: (rows above)
+     Kikimore Queen: (rows above)
+Cursed Scroll (4 partners): (rows above)
+  Cursed Scroll -> Arachas Behemoth: enables: Cursed Scroll moves Arachas Behemoth and your units, and Arachas Behemoth acts on units in its row
+     Cursed Scroll: KW: Order | WHEN activated of self DO draw chosen mine card in deck (amount=1) THEN move chosen mine card in hand in deck_bottom
+     Arachas Behemoth: KW: Deploy | WHEN played of self DO summon to chosen mine position [position is same_row] <Drone> (amount=2) THEN stat_change all mine unit in board [type is Insectoid] [position is same_row] (strength=1) for permanent
+  Cursed Scroll -> Kikimore Queen: enables: Cursed Scroll moves Kikimore Queen and your units, and Kikimore Queen acts on units in its row
+     Cursed Scroll: (rows above)
+     Kikimore Queen: (rows above)
+  Cursed Scroll -> Orchard Mantrap: enables: Cursed Scroll moves Orchard Mantrap, and Orchard Mantrap acts on units back row it or front row it
+     Cursed Scroll: (rows above)
+     Orchard Mantrap: WHEN played of self IF keyword_condition Melee DO keyword_action chosen mine unit in board <Consume> for unstated | WHEN always DO increase_effect self <Thrive> (amount=1) | WHEN played of self IF keyword_condition Ranged DO give_keyword 2 chosen mine unit in board <Thrive> for permanent
+  Cursed Scroll -> Whispess: Tribute: enables: Cursed Scroll moves Whispess: Tribute, and Whispess: Tribute acts on units back row it
+     Cursed Scroll: (rows above)
+     Whispess: Tribute: (rows above)
+Parasite (4 partners): WHEN played of self DO choose_one OR damage chosen enemy unit in board (amount=6) OR stat_change chosen mine unit in board (strength=6) for permanent
+  Parasite -> Witches' Sabbath: enables: makes enemy units die: Witches' Sabbath brings them back
+     Parasite: (rows above)
+     Witches' Sabbath: WHEN played of self DO revive 3 highest enemy unit by strength in discard to chosen enemy position THEN revive count of (it) highest mine unit by strength in discard [region not Neutral] to mine position [position is opposite_row] THEN give_keyword it <Doomed> for permanent
+  Whispess: Tribute -> Parasite: puts it into play: puts it into play from the deck
+     Whispess: Tribute: (rows above)
+     Parasite: (rows above)
+  Parasite -> Arachas Swarm: triggers: is an Organic whose playing sets off its effect
+     Parasite: (rows above)
+     Arachas Swarm: (rows above)
+  Parasite -> Kikimore Queen: triggers: is an Organic whose playing sets off its effect
+     Parasite: (rows above)
+     Kikimore Queen: (rows above)
+Sir Scratch-a-Lot (4 partners): KW: Order, Deploy | WHEN game_start DO give_keyword self <Immunity> for permanent | WHEN played of self DO stat_change self (strength=0) for permanent | WHEN activated of self DO increase_effect self (amount=2) THEN play_card self in board | WHEN always DO can all mine unit in board [keyword is Thrive] to all enemy position <Thrive> (event=keyword_used) for permanent
+  Renew -> Sir Scratch-a-Lot: triggers: plays it: its effect goes off
+     Renew: (rows above)
+     Sir Scratch-a-Lot: (rows above)
+  Oneiromancy -> Sir Scratch-a-Lot: triggers: plays it: its effect goes off
+     Oneiromancy: (rows above)
+     Sir Scratch-a-Lot: (rows above)
+  Sir Scratch-a-Lot -> Kikimore Queen: changes how it works: lets it do more (keyword_used)
+     Sir Scratch-a-Lot: (rows above)
+     Kikimore Queen: (rows above)
+  Sir Scratch-a-Lot -> Nekker: changes how it works: lets it do more (keyword_used)
+     Sir Scratch-a-Lot: (rows above)
+     Nekker: (rows above)
+Caranthir Ar-Feiniel (5 partners): KW: Deploy | WHEN played of self DO copy chosen mine card in hand [region not Neutral] [cost le 10] [state is created] to chosen mine position [position is same_row] in board THEN stat_set it (strength=1)
+  Idarran of Ulivo -> Caranthir Ar-Feiniel: enables: creates cards: Caranthir Ar-Feiniel copys them
+     Idarran of Ulivo: WHEN summoned of mine unit in board [first_each_turn] DO copy it to mine position [position is same_row] in board THEN stat_set it (strength=1) THEN give_keyword it <Doomed> for permanent
+     Caranthir Ar-Feiniel: (rows above)
+  Nekker -> Caranthir Ar-Feiniel: enables: creates cards: Caranthir Ar-Feiniel copys them
+     Nekker: (rows above)
+     Caranthir Ar-Feiniel: (rows above)
+  Arachas Queen -> Caranthir Ar-Feiniel: enables: creates cards: Caranthir Ar-Feiniel copys them
+     Arachas Queen: KW: Order, Deploy, Deathwish | WHEN played of self DO keyword_action chosen mine unit in board <Consume> for unstated | WHEN activated of self DO create in hand <Arachas Nest> THEN play_card chosen mine card in hand [card is Arachas Nest] in hand | WHEN dies of self DO copy it [state is created] to chosen mine position [position is same_row] in board
+     Caranthir Ar-Feiniel: (rows above)
+  Caranthir Ar-Feiniel -> Arachas Queen: enables: creates cards: Arachas Queen copys them
+     Caranthir Ar-Feiniel: (rows above)
+     Arachas Queen: (rows above)
+  Renew -> Caranthir Ar-Feiniel: triggers: plays it: its effect goes off
+     Renew: (rows above)
+     Caranthir Ar-Feiniel: (rows above)
+  Oneiromancy -> Caranthir Ar-Feiniel: triggers: plays it: its effect goes off
+     Oneiromancy: (rows above)
+     Caranthir Ar-Feiniel: (rows above)
+Lacerate (6 partners): WHEN played of self DO damage all unit in board [position is same_row] (amount=2)
+  Lacerate -> Renew: enables: makes your units die
+     Lacerate: (rows above)
+     Renew: (rows above)
+  Lacerate -> Witches' Sabbath: enables: makes your units die: Witches' Sabbath brings them back; also makes enemy units die: Witches' Sabbath brings them back
+     Lacerate: (rows above)
+     Witches' Sabbath: (rows above)
+  Lacerate -> Arachas Queen: triggers: kills it for its death effect
+     Lacerate: (rows above)
+     Arachas Queen: (rows above)
+  Whispess: Tribute -> Lacerate: puts it into play: puts it into play from the deck
+     Whispess: Tribute: (rows above)
+     Lacerate: (rows above)
+  Lacerate -> Arachas Swarm: triggers: is an Organic whose playing sets off its effect
+     Lacerate: (rows above)
+     Arachas Swarm: (rows above)
+  Lacerate -> Kikimore Queen: triggers: is an Organic whose playing sets off its effect
+     Lacerate: (rows above)
+     Kikimore Queen: (rows above)
+Nekker (6 partners): (rows above)
+  Nekker -> Arachas Queen: enables: creates cards: Arachas Queen copys them
+     Nekker: (rows above)
+     Arachas Queen: (rows above)
+  Renew -> Nekker: triggers: plays it: its effect goes off
+     Renew: (rows above)
+     Nekker: (rows above)
+  Oneiromancy -> Nekker: triggers: plays it: its effect goes off
+     Oneiromancy: (rows above)
+     Nekker: (rows above)
+Orchard Mantrap (6 partners): (rows above)
+  Orchard Mantrap -> Renew: enables: makes your units die
+     Orchard Mantrap: (rows above)
+     Renew: (rows above)
+  Orchard Mantrap -> Witches' Sabbath: enables: makes your units die: Witches' Sabbath brings them back
+     Orchard Mantrap: (rows above)
+     Witches' Sabbath: (rows above)
+  Orchard Mantrap -> Arachas Queen: triggers: kills it for its death effect
+     Orchard Mantrap: (rows above)
+     Arachas Queen: (rows above)
+  Orchard Mantrap -> Kikimore Queen: triggers: uses a keyword or status; also makes stronger: does what it waits for or counts (keyword used)
+     Orchard Mantrap: (rows above)
+     Kikimore Queen: (rows above)
+  Renew -> Orchard Mantrap: triggers: plays it: its effect goes off
+     Renew: (rows above)
+     Orchard Mantrap: (rows above)
+  Oneiromancy -> Orchard Mantrap: triggers: plays it: its effect goes off
+     Oneiromancy: (rows above)
+     Orchard Mantrap: (rows above)
+-- c) special cards, one line per reason: is something wrong or missing?
+Arachas Queen (13 partners): (rows above)
+  Arachas Queen -> Renew: enables: makes your units die
+     Arachas Queen: (rows above)
+     Renew: (rows above)
+  Arachas Queen -> Witches' Sabbath: enables: makes your units die: Witches' Sabbath brings them back
+     Arachas Queen: (rows above)
+     Witches' Sabbath: (rows above)
+  Arachas Queen -> Kikimore Queen: triggers: uses a keyword or status
+     Arachas Queen: (rows above)
+     Kikimore Queen: (rows above)
+  Idarran of Ulivo -> Arachas Queen: enables: creates cards: Arachas Queen copys them
+     Idarran of Ulivo: (rows above)
+     Arachas Queen: (rows above)
+  Arachas Queen -> Arachas Nest: puts it into play: creates; also puts it into play from the hand
+     Arachas Queen: (rows above)
+     Arachas Nest: (rows above)
+  Oneiromancy -> Arachas Queen: triggers: plays it: its effect goes off
+     Oneiromancy: (rows above)
+     Arachas Queen: (rows above)
+  Arachas Behemoth -> Arachas Queen: makes stronger: gives it more strength (when in its row)
+     Arachas Behemoth: (rows above)
+     Arachas Queen: (rows above)
+  Arachas Queen -> Kikimore Stalker: triggers: is an Insectoid whose summoning sets off its effect
+     Arachas Queen: (rows above)
+     Kikimore Stalker: KW: Veil, Zeal, Charge | WHEN always DO give_keyword self <Veil> for permanent THEN give_keyword self <Zeal> for permanent THEN give_keyword self <Charge> (amount=1) for permanent | WHEN activated of self IF keyword_condition Predator DO choose_one OR damage chosen enemy unit in board (amount=1) OR keyword_action chosen mine unit in board [card is Drone] <Consume> for unstated | WHEN summoned by mine player of mine unit in board [type is Insectoid] DO give_keyword self <Charge> (amount=1) for permanent
+Arachas Swarm (14 partners): (rows above)
+  Renew -> Arachas Swarm: triggers: is played
+     Renew: (rows above)
+     Arachas Swarm: (rows above)
+  Arachas Swarm -> Kikimore Stalker: triggers: puts your units into play
+     Arachas Swarm: (rows above)
+     Kikimore Stalker: (rows above)
+Caranthir Ar-Feiniel (5 partners): (rows above)
+Cursed Scroll (4 partners): (rows above)
+Idarran of Ulivo (9 partners): (rows above)
+  Arachas Nest -> Idarran of Ulivo: triggers: puts your units into play
+     Arachas Nest: (rows above)
+     Idarran of Ulivo: (rows above)
+Kikimore Queen (20 partners): (rows above)
+  Renew -> Kikimore Queen: triggers: is played
+     Renew: (rows above)
+     Kikimore Queen: (rows above)
+  Arachas Behemoth -> Kikimore Queen: makes stronger: gives it more strength (when in its row)
+     Arachas Behemoth: (rows above)
+     Kikimore Queen: (rows above)
+  Kikimore Queen -> Arachas Behemoth: makes stronger: gives it more strength (when in its row)
+     Kikimore Queen: (rows above)
+     Arachas Behemoth: (rows above)
+  Kikimore Queen -> Kikimore Stalker: triggers: is an Insectoid whose summoning sets off its effect; also makes stronger: gives it more strength (when in its row)
+     Kikimore Queen: (rows above)
+     Kikimore Stalker: (rows above)
+  Arachas Nest -> Kikimore Queen: triggers: is an Organic whose playing sets off its effect
+     Arachas Nest: (rows above)
+     Kikimore Queen: (rows above)
+Oneiromancy (10 partners): (rows above)
+  Oneiromancy -> Kikimore Queen: triggers: is played
+     Oneiromancy: (rows above)
+     Kikimore Queen: (rows above)
+Renew (13 partners): (rows above)
+Whispess: Tribute (13 partners): (rows above)
+  Whispess: Tribute -> Kikimore Queen: triggers: is played
+     Whispess: Tribute: (rows above)
+     Kikimore Queen: (rows above)
+  Renew -> Whispess: Tribute: triggers: plays it: its effect goes off
+     Renew: (rows above)
+     Whispess: Tribute: (rows above)

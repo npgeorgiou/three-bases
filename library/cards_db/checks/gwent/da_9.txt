@@ -1,0 +1,521 @@
+=== gwent / Rage of the Sea: Fulmar rain ft. Otkell and Melusine: 24 cards, 67 lines
+-- a) 1 cards with no partner in the deck, each beside 10 deck cards: is a line missed?
+Anglerfish: WHEN turn_end by mine player IF have self in deck is; count all enemy position [keyword in Rain] [keyword in Storm] ge 2 DO summon self to mine position [position is back_row] | WHEN turn_end by mine player IF have all enemy position [keyword in Rain] [keyword in Storm] not DO move self in deck_bottom
+    ? Operator: KW: Deploy | WHEN played of self DO copy chosen mine unit in hand [state is bronze] [state is created] to chosen mine position [position is same_row] in board THEN copy chosen mine unit in hand [state is bronze] [state is created] to enemy position [position is opposite_row] in board
+    ? Melusine: KW: Order, Deploy | WHEN played of self DO give_keyword self <Veil> for permanent | WHEN activated of self DO give_keyword chosen enemy position <Rain> (turns=2) for n_turns THEN damage self (amount=2) | WHEN turn_end by mine player DO damage all unit in board [position is sides] (amount=1) THEN base_change self (strength=count of (all unit in board [position is sides])) | WHEN turn_end by mine player IF have all unit in board [position is sides] [type is Cultist] DO refresh self
+    ? Messenger of the Sea: WHEN damaged by effect [keyword in Rain] [keyword in Storm] of enemy unit DO stat_change self (strength=event_amount) for permanent | WHEN damaged of enemy unit DO stat_change self (strength=event_amount) for permanent
+    ? Little Havfrue: KW: Order | WHEN played of self IF keyword_condition Bonded DO base_change self (strength=2) | WHEN activated of self DO damage self (amount=4) THEN give_keyword chosen enemy position <Rain> (turns=2) for n_turns
+    ? Crow: (rows above)
+    ? Deafening Siren: (rows above)
+    ? Tempest: WHEN played of self DO play_card all mine card in deck [card in Biting Frost] [card in Impenetrable Fog] [card in Torrential Rain]
+    ? Sigrdrifa's Rite: WHEN played of self DO revive chosen mine unit in discard [region not Neutral] to chosen mine position THEN give_keyword it <Doomed> for permanent
+    ? Melusine Cultist: KW: Order | WHEN activated of self DO give_keyword chosen enemy position <Rain> (turns=2) for n_turns | WHEN turn_end by mine player IF have all enemy position [position is opposite_row] [keyword is Rain]; have all enemy position [position is opposite_row] [keyword is Storm] not DO stat_change right_of_self unit in board (strength=1) for permanent | WHEN turn_end by mine player IF have all enemy position [position is opposite_row] [keyword is Storm] DO stat_change all unit in board [position is sides] (strength=1) for permanent
+    ? Otkell: WHEN played of self IF keyword_condition Ranged DO damage self (amount=sum (stat strength of (self) + -1)) THEN play_card all mine card in discard [card is Freya's Blessing] THEN give_keyword it <Doomed> for permanent | WHEN game_start DO base_change self (strength=count of (all mine card in deck [type is Alchemy]))
+-- b) the 10 cards with the fewest partners, all their lines: is a line missed?
+Crow (1 partners): (rows above)
+Mask of Uroboros (1 partners): (rows above)
+Operator (1 partners): (rows above)
+  Oneiromancy -> Operator: triggers: plays it: its effect goes off
+     Oneiromancy: KW: Echo | WHEN always DO give_keyword self <Echo> for permanent | WHEN played of self DO play_card chosen mine card in deck
+     Operator: (rows above)
+Tempest (1 partners): (rows above)
+  Tempest -> Torrential Rain: puts it into play: puts it into play from the deck
+     Tempest: (rows above)
+     Torrential Rain: WHEN played of self DO give_keyword chosen enemy position <Rain> (turns=3) for n_turns
+Triss: Telekinesis (1 partners): WHEN played of self IF keyword_condition Ranged DO create random mine card [state is started_in_deck] [state is bronze] [category is spell] in hand THEN play_card it card
+  Oneiromancy -> Triss: Telekinesis: triggers: plays it: its effect goes off
+     Oneiromancy: (rows above)
+     Triss: Telekinesis: (rows above)
+Deafening Siren (2 partners): (rows above)
+  Rage of the Sea -> Deafening Siren: puts it into play: summons
+     Rage of the Sea: KW: Charge, Order | WHEN activated of self DO give_keyword chosen enemy position <Rain> (turns=2) for n_turns THEN summon to mine position [position is opposite_row] <Deafening Siren> | WHEN always DO give_keyword self <Charge> (amount=2) for permanent
+     Deafening Siren: (rows above)
+  Tears of Siren -> Deafening Siren: puts it into play: summons
+     Tears of Siren: WHEN played of self DO give_keyword chosen enemy position <Rain> (turns=2) for n_turns THEN summon to chosen mine position [position is opposite_row] <Deafening Siren>
+     Deafening Siren: (rows above)
+Petri's Philter (3 partners): KW: Order, Deploy | WHEN played of self DO stat_change chosen mine unit in board (strength=3) for permanent | WHEN activated of self DO give_keyword chosen mine unit in board <Zeal> for permanent
+  Ermion -> Petri's Philter: puts it into play: puts it into play from the deck
+     Ermion: WHEN played of self IF keyword_condition Ranged DO play_card chosen mine card in deck [type is Alchemy]
+     Petri's Philter: (rows above)
+  Petri's Philter -> Bride of the Sea: enables: is an Alchemy it asks for
+     Petri's Philter: (rows above)
+     Bride of the Sea: KW: Deploy | WHEN played of self DO play_card chosen mine card in discard [type is Alchemy] [cost le 4] in discard THEN cost_change it (cost=sum keyword_amount of (all enemy position [keyword in Rain] [keyword in Storm])) for permanent
+  Petri's Philter -> Otkell: enables: is an Alchemy it asks for
+     Petri's Philter: (rows above)
+     Otkell: (rows above)
+Little Havfrue (4 partners): (rows above)
+  Little Havfrue -> Freya's Blessing: enables: makes your units die; also dies by its own effect
+     Little Havfrue: (rows above)
+     Freya's Blessing: WHEN played of self DO play_card chosen mine unit in discard [state is bronze] [region not Neutral] THEN give_keyword it <Doomed> for permanent
+  Little Havfrue -> Sigrdrifa's Rite: enables: makes your units die: Sigrdrifa's Rite brings them back; also dies by its own effect: Sigrdrifa's Rite brings them back
+     Little Havfrue: (rows above)
+     Sigrdrifa's Rite: (rows above)
+  Little Havfrue -> Messenger of the Sea: triggers: damages enemy units or players
+     Little Havfrue: (rows above)
+     Messenger of the Sea: (rows above)
+  Freya's Blessing -> Little Havfrue: triggers: plays it: its effect goes off
+     Freya's Blessing: (rows above)
+     Little Havfrue: (rows above)
+  Oneiromancy -> Little Havfrue: triggers: plays it: its effect goes off
+     Oneiromancy: (rows above)
+     Little Havfrue: (rows above)
+Melusine Cultist (4 partners): (rows above)
+  Melusine Cultist -> Freya's Blessing: enables: makes your units die
+     Melusine Cultist: (rows above)
+     Freya's Blessing: (rows above)
+  Melusine Cultist -> Sigrdrifa's Rite: enables: makes your units die: Sigrdrifa's Rite brings them back
+     Melusine Cultist: (rows above)
+     Sigrdrifa's Rite: (rows above)
+  Melusine Cultist -> Messenger of the Sea: triggers: damages enemy units or players
+     Melusine Cultist: (rows above)
+     Messenger of the Sea: (rows above)
+  Melusine Cultist -> Melusine: enables: is a Cultist it asks for
+     Melusine Cultist: (rows above)
+     Melusine: (rows above)
+Rage of the Sea (4 partners): (rows above)
+  Rage of the Sea -> Freya's Blessing: enables: makes your units die
+     Rage of the Sea: (rows above)
+     Freya's Blessing: (rows above)
+  Rage of the Sea -> Sigrdrifa's Rite: enables: makes your units die: Sigrdrifa's Rite brings them back
+     Rage of the Sea: (rows above)
+     Sigrdrifa's Rite: (rows above)
+  Rage of the Sea -> Messenger of the Sea: triggers: damages enemy units or players
+     Rage of the Sea: (rows above)
+     Messenger of the Sea: (rows above)
+-- c) special cards, one line per reason: is something wrong or missing?
+Ermion (5 partners): (rows above)
+  Freya's Blessing -> Ermion: triggers: plays it: its effect goes off
+     Freya's Blessing: (rows above)
+     Ermion: (rows above)
+  Ermion -> Sigrdrifa's Rite: puts it into play: puts it into play from the deck
+     Ermion: (rows above)
+     Sigrdrifa's Rite: (rows above)
+Fulmar (6 partners): KW: Order, Deploy | WHEN played of self DO create in hand <Tears of Siren> THEN play_card chosen mine card in hand [card is Tears of Siren] in hand | WHEN activated of self DO remove_keyword chosen enemy position [keyword is Rain] <Rain> THEN give_keyword it <Storm> (turns=stat keyword_amount of (it)) for n_turns
+  Fulmar -> Freya's Blessing: enables: makes your units die
+     Fulmar: (rows above)
+     Freya's Blessing: (rows above)
+  Fulmar -> Sigrdrifa's Rite: enables: makes your units die: Sigrdrifa's Rite brings them back
+     Fulmar: (rows above)
+     Sigrdrifa's Rite: (rows above)
+  Fulmar -> Messenger of the Sea: triggers: damages enemy units or players
+     Fulmar: (rows above)
+     Messenger of the Sea: (rows above)
+  Fulmar -> Tears of Siren: puts it into play: creates; also puts it into play from the hand
+     Fulmar: (rows above)
+     Tears of Siren: (rows above)
+  Freya's Blessing -> Fulmar: triggers: plays it: its effect goes off
+     Freya's Blessing: (rows above)
+     Fulmar: (rows above)
+  Fulmar -> Melusine: enables: is a Cultist it asks for
+     Fulmar: (rows above)
+     Melusine: (rows above)
+Mask of Uroboros (1 partners): (rows above)
+Melusine (9 partners): (rows above)
+  Melusine -> Freya's Blessing: enables: makes your units die; also dies by its own effect
+     Melusine: (rows above)
+     Freya's Blessing: (rows above)
+  Melusine -> Sigrdrifa's Rite: enables: makes your units die: Sigrdrifa's Rite brings them back; also dies by its own effect: Sigrdrifa's Rite brings them back
+     Melusine: (rows above)
+     Sigrdrifa's Rite: (rows above)
+  Melusine -> Messenger of the Sea: triggers: damages enemy units or players
+     Melusine: (rows above)
+     Messenger of the Sea: (rows above)
+  Freya's Blessing -> Melusine: triggers: plays it: its effect goes off
+     Freya's Blessing: (rows above)
+     Melusine: (rows above)
+  Svalblod Priest -> Melusine: enables: is a Cultist it asks for
+     Svalblod Priest: WHEN turn_end by mine player DO damage right_of_self unit in board (amount=1) THEN stat_change self (strength=2) for permanent
+     Melusine: (rows above)
+Oneiromancy (9 partners): (rows above)
+Otkell (6 partners): (rows above)
+  Otkell -> Freya's Blessing: enables: dies by its own effect
+     Otkell: (rows above)
+     Freya's Blessing: (rows above)
+  Otkell -> Sigrdrifa's Rite: enables: dies by its own effect: Sigrdrifa's Rite brings them back
+     Otkell: (rows above)
+     Sigrdrifa's Rite: (rows above)
+  Freya's Blessing -> Otkell: enables: is the Freya's Blessing it names; also triggers: plays it: its effect goes off
+     Freya's Blessing: (rows above)
+     Otkell: (rows above)
+  Oneiromancy -> Otkell: triggers: plays it: its effect goes off
+     Oneiromancy: (rows above)
+     Otkell: (rows above)
+  Sigrdrifa's Rite -> Otkell: enables: is an Alchemy it asks for
+     Sigrdrifa's Rite: (rows above)
+     Otkell: (rows above)
+  Bride of the Sea -> Otkell: enables: makes an Alchemy it asks for
+     Bride of the Sea: (rows above)
+     Otkell: (rows above)
+Rage of the Sea (4 partners): (rows above)
+Triss: Telekinesis (1 partners): (rows above)
+
+=== gwent / Battle Trance: Alchemy doesn't need any more buffs: 23 cards, 111 lines
+-- a) 1 cards with no partner in the deck, each beside 10 deck cards: is a line missed?
+Korathi Heatwave: (rows above)
+    ? Crow Clan Druid: KW: Zeal, Order | WHEN always DO give_keyword self <Zeal> for permanent | WHEN always DO give_keyword self <Zeal> for permanent | WHEN activated of self DO keyword_action chosen mine unit in board [card is Crow] <Banish> for unstated THEN play_card chosen mine card in discard [type is Alchemy] [cost eq 4] THEN give_keyword it <Doomed> for permanent | WHEN activated of self DO keyword_action chosen mine unit in board [name_has is Crow] <Banish> for unstated THEN play_card chosen mine card in discard [cost eq 4] [type is Alchemy] THEN give_keyword it <Doomed> for permanent
+    ? Crow's-eye Rhizome: WHEN played of self DO summon to chosen mine position [count eq 0] <Crow> (amount=2) | WHEN played of self IF have all mine unit in board [type is Druid] is DO summon to chosen mine position <Crow> (amount=3)
+    ? Golden Froth: WHEN played of self DO stat_change 3 chosen unit in board [position is adjacent_group] (strength=2) for permanent
+    ? Mardroeme: WHEN played of self DO damage chosen unit in board (amount=3) THEN stat_change it (strength=9) for permanent
+    ? Ale of the Ancestors: KW: Resilience, Zeal, Order | WHEN always DO give_keyword self <Resilience> for permanent | WHEN always DO give_keyword self <Zeal> for permanent | WHEN activated of self DO stat_change chosen unit in board (strength=3) for permanent THEN give_ability it <Infused> THEN give_ability it <Infused> | WHEN always DO keyword_action <Cooldown> (amount=2)
+    ? Little Havfrue: (rows above)
+    ? Mask of Uroboros: (rows above)
+    ? In Gedyneith's Shadow: KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent | WHEN played of self DO summon to mine position [position is same_row] <Crow Clan Preacher> | WHEN played of mine unit [type is Druid] IF stage 1 DO create mine card in hand <Crow's-eye Rhizome> THEN play_card it card | WHEN played of mine unit [type is Druid] IF stage 2 DO create mine card in hand <Mardroeme> THEN play_card it card
+    ? Freya's Blessing: (rows above)
+    ? Ermion: (rows above)
+-- b) the 10 cards with the fewest partners, all their lines: is a line missed?
+Mask of Uroboros (1 partners): (rows above)
+Portal (3 partners): KW: Timer, Deploy | WHEN played of self DO summon random mine unit in deck [cost eq 4] to left_of_self mine position | WHEN played of self DO summon random mine unit in deck [cost eq 4] to left_of_self mine position | WHEN always DO give_keyword self <Timer> (amount=3) for permanent | WHEN always DO give_keyword self <Timer> (amount=3) for permanent | WHEN countdown_done of self DO summon random mine unit in deck [cost eq 4] to right_of_self mine position | WHEN countdown_done of self DO summon random mine unit in deck [cost eq 4] to right_of_self mine position
+  Avallac'h: Sage -> Portal: triggers: plays it: its effect goes off
+     Avallac'h: Sage: (rows above)
+     Portal: (rows above)
+  Portal -> Crow Clan Druid: puts it into play: puts it into play from the deck
+     Portal: (rows above)
+     Crow Clan Druid: (rows above)
+  Portal -> Little Havfrue: puts it into play: puts it into play from the deck
+     Portal: (rows above)
+     Little Havfrue: (rows above)
+Crow (4 partners): (rows above)
+  Crowmother -> Crow: puts it into play: summons
+     Crowmother: KW: Deploy | WHEN played of self DO summon to mine position [position is same_row] <Crow> (amount=2) | WHEN played of mine card [type is Alchemy] DO revive self in discard to random mine position
+     Crow: KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent
+  Crow's-eye Rhizome -> Crow: puts it into play: summons
+     Crow's-eye Rhizome: (rows above)
+     Crow: (rows above)
+  Crow -> Crow Clan Druid: enables: is the Crow it names
+     Crow: (rows above)
+     Crow Clan Druid: (rows above)
+Little Havfrue (4 partners): (rows above)
+  The Mushy Truffle -> Little Havfrue: triggers: plays it: its effect goes off
+     The Mushy Truffle: (rows above)
+     Little Havfrue: (rows above)
+Ale of the Ancestors (7 partners): (rows above)
+  Ermion -> Ale of the Ancestors: puts it into play: puts it into play from the deck
+     Ermion: (rows above)
+     Ale of the Ancestors: (rows above)
+  Ale of the Ancestors -> Crow Clan Druid: enables: is an Alchemy it asks for
+     Ale of the Ancestors: (rows above)
+     Crow Clan Druid: (rows above)
+  Ale of the Ancestors -> Crow Messenger: enables: is an Alchemy it asks for
+     Ale of the Ancestors: (rows above)
+     Crow Messenger: KW: Deploy | WHEN played of self DO revive all mine unit in discard [card is Crow Messenger] to mine position [position is same_row] | WHEN played of self IF have mine card in hand [type is Alchemy] is DO summon all mine card in deck to mine position [position is same_row] <Crow Messenger>
+  Ale of the Ancestors -> Gremist: triggers: is an Alchemy whose playing sets off its effect
+     Ale of the Ancestors: (rows above)
+     Gremist: KW: Zeal | WHEN always DO give_keyword self <Zeal> for permanent | WHEN activated of self IF keyword_condition Ranged DO keyword_action chosen unit in board <Purify> for unstated | WHEN played of mine card [type is Alchemy] DO refresh self
+  Ale of the Ancestors -> Battle Trance: triggers: is an Alchemy whose playing sets off its effect
+     Ale of the Ancestors: (rows above)
+     Battle Trance: KW: Order | WHEN activated of self DO create in hand <Mardroeme> THEN play_card it | WHEN played of mine card [type is Alchemy] DO keyword_action random mine unit in board <Heal> (amount=1) for unstated
+  Ale of the Ancestors -> Crowmother: triggers: is an Alchemy whose playing sets off its effect
+     Ale of the Ancestors: (rows above)
+     Crowmother: (rows above)
+  Ale of the Ancestors -> Crow Clan Preacher: triggers: is an Alchemy whose playing sets off its effect
+     Ale of the Ancestors: (rows above)
+     Crow Clan Preacher: KW: Bonded | WHEN played of mine card [type is Alchemy] IF keyword_condition Bonded not DO stat_change self (strength=1) for permanent | WHEN played of mine card [type is Alchemy] IF keyword_condition Bonded DO stat_change self (strength=2) for permanent
+Axel Three-Eyes (7 partners): WHEN played of self IF keyword_condition Melee DO create mine card in hand <Crow's-eye Rhizome> THEN play_card it card | WHEN played of self IF keyword_condition Ranged DO transform all unit in board [position is sides] [card is Crow] <Crow Messenger>
+  Axel Three-Eyes -> The Mushy Truffle: enables: creates cards
+     Axel Three-Eyes: (rows above)
+     The Mushy Truffle: (rows above)
+  Axel Three-Eyes -> Crow's-eye Rhizome: puts it into play: creates; also enables: is a Druid it asks for
+     Axel Three-Eyes: (rows above)
+     Crow's-eye Rhizome: (rows above)
+  Freya's Blessing -> Axel Three-Eyes: triggers: plays it: its effect goes off
+     Freya's Blessing: (rows above)
+     Axel Three-Eyes: (rows above)
+  Oneiromancy -> Axel Three-Eyes: triggers: plays it: its effect goes off
+     Oneiromancy: (rows above)
+     Axel Three-Eyes: (rows above)
+  The Mushy Truffle -> Axel Three-Eyes: triggers: plays it: its effect goes off
+     The Mushy Truffle: (rows above)
+     Axel Three-Eyes: (rows above)
+  Axel Three-Eyes -> Crow Clan Druid: enables: makes an Alchemy it asks for
+     Axel Three-Eyes: (rows above)
+     Crow Clan Druid: (rows above)
+  Axel Three-Eyes -> Crow Messenger: enables: makes an Alchemy it asks for
+     Axel Three-Eyes: (rows above)
+     Crow Messenger: (rows above)
+  Axel Three-Eyes -> In Gedyneith's Shadow: triggers: is a Druid whose playing sets off its effect
+     Axel Three-Eyes: (rows above)
+     In Gedyneith's Shadow: (rows above)
+Mahakam Ale (7 partners): (rows above)
+  Ermion -> Mahakam Ale: puts it into play: puts it into play from the deck
+     Ermion: (rows above)
+     Mahakam Ale: (rows above)
+  Mahakam Ale -> Crow Clan Druid: enables: is an Alchemy it asks for
+     Mahakam Ale: (rows above)
+     Crow Clan Druid: (rows above)
+  Mahakam Ale -> Crow Messenger: enables: is an Alchemy it asks for
+     Mahakam Ale: (rows above)
+     Crow Messenger: (rows above)
+  Mahakam Ale -> Gremist: triggers: is an Alchemy whose playing sets off its effect
+     Mahakam Ale: (rows above)
+     Gremist: (rows above)
+  Mahakam Ale -> Battle Trance: triggers: is an Alchemy whose playing sets off its effect
+     Mahakam Ale: (rows above)
+     Battle Trance: (rows above)
+  Mahakam Ale -> Crowmother: triggers: is an Alchemy whose playing sets off its effect
+     Mahakam Ale: (rows above)
+     Crowmother: (rows above)
+  Mahakam Ale -> Crow Clan Preacher: triggers: is an Alchemy whose playing sets off its effect
+     Mahakam Ale: (rows above)
+     Crow Clan Preacher: (rows above)
+Avallac'h: Sage (8 partners): (rows above)
+  Avallac'h: Sage -> Crowmother: triggers: is played
+     Avallac'h: Sage: (rows above)
+     Crowmother: (rows above)
+  Avallac'h: Sage -> Battle Trance: triggers: is played
+     Avallac'h: Sage: (rows above)
+     Battle Trance: (rows above)
+  Avallac'h: Sage -> Crow Clan Preacher: triggers: is played
+     Avallac'h: Sage: (rows above)
+     Crow Clan Preacher: (rows above)
+  Avallac'h: Sage -> Gremist: triggers: is played
+     Avallac'h: Sage: (rows above)
+     Gremist: (rows above)
+  Avallac'h: Sage -> In Gedyneith's Shadow: triggers: plays it: its effect goes off
+     Avallac'h: Sage: (rows above)
+     In Gedyneith's Shadow: (rows above)
+  Oneiromancy -> Avallac'h: Sage: triggers: plays it: its effect goes off
+     Oneiromancy: (rows above)
+     Avallac'h: Sage: (rows above)
+Golden Froth (8 partners): (rows above)
+  Ermion -> Golden Froth: puts it into play: puts it into play from the deck
+     Ermion: (rows above)
+     Golden Froth: (rows above)
+  Golden Froth -> Crow Clan Druid: enables: is an Alchemy it asks for
+     Golden Froth: (rows above)
+     Crow Clan Druid: (rows above)
+  Golden Froth -> Crow Messenger: enables: is an Alchemy it asks for
+     Golden Froth: (rows above)
+     Crow Messenger: (rows above)
+  Golden Froth -> Gremist: triggers: is an Alchemy whose playing sets off its effect
+     Golden Froth: (rows above)
+     Gremist: (rows above)
+  Golden Froth -> Battle Trance: triggers: is an Alchemy whose playing sets off its effect
+     Golden Froth: (rows above)
+     Battle Trance: (rows above)
+  Golden Froth -> Crowmother: triggers: is an Alchemy whose playing sets off its effect
+     Golden Froth: (rows above)
+     Crowmother: (rows above)
+  Golden Froth -> Crow Clan Preacher: triggers: is an Alchemy whose playing sets off its effect
+     Golden Froth: (rows above)
+     Crow Clan Preacher: (rows above)
+Mardroeme (8 partners): (rows above)
+  Battle Trance -> Mardroeme: puts it into play: creates
+     Battle Trance: (rows above)
+     Mardroeme: (rows above)
+  In Gedyneith's Shadow -> Mardroeme: puts it into play: creates
+     In Gedyneith's Shadow: (rows above)
+     Mardroeme: (rows above)
+  Ermion -> Mardroeme: puts it into play: puts it into play from the deck
+     Ermion: (rows above)
+     Mardroeme: (rows above)
+  Mardroeme -> Crow Clan Druid: enables: is an Alchemy it asks for
+     Mardroeme: (rows above)
+     Crow Clan Druid: (rows above)
+  Mardroeme -> Crow Messenger: enables: is an Alchemy it asks for
+     Mardroeme: (rows above)
+     Crow Messenger: (rows above)
+  Mardroeme -> Gremist: triggers: is an Alchemy whose playing sets off its effect
+     Mardroeme: (rows above)
+     Gremist: (rows above)
+  Mardroeme -> Battle Trance: triggers: is an Alchemy whose playing sets off its effect
+     Mardroeme: (rows above)
+     Battle Trance: (rows above)
+  Mardroeme -> Crowmother: triggers: is an Alchemy whose playing sets off its effect
+     Mardroeme: (rows above)
+     Crowmother: (rows above)
+  Mardroeme -> Crow Clan Preacher: triggers: is an Alchemy whose playing sets off its effect
+     Mardroeme: (rows above)
+     Crow Clan Preacher: (rows above)
+-- c) special cards, one line per reason: is something wrong or missing?
+Ale of the Ancestors (7 partners): (rows above)
+Avallac'h: Sage (8 partners): (rows above)
+Battle Trance (11 partners): (rows above)
+  Freya's Blessing -> Battle Trance: triggers: is an Alchemy whose playing sets off its effect; also is played
+     Freya's Blessing: (rows above)
+     Battle Trance: (rows above)
+  Crow Clan Druid -> Battle Trance: triggers: is played
+     Crow Clan Druid: (rows above)
+     Battle Trance: (rows above)
+  Battle Trance -> The Mushy Truffle: enables: creates cards
+     Battle Trance: (rows above)
+     The Mushy Truffle: (rows above)
+Crowmother (13 partners): (rows above)
+  Freya's Blessing -> Crowmother: triggers: is an Alchemy whose playing sets off its effect; also is played; also plays it: its effect goes off
+     Freya's Blessing: (rows above)
+     Crowmother: (rows above)
+  Crow Clan Druid -> Crowmother: triggers: is played
+     Crow Clan Druid: (rows above)
+     Crowmother: (rows above)
+  The Mushy Truffle -> Crowmother: triggers: is played; also plays it: its effect goes off
+     The Mushy Truffle: (rows above)
+     Crowmother: (rows above)
+  Crowmother -> Crow's-eye Rhizome: enables: is a Druid it asks for
+     Crowmother: (rows above)
+     Crow's-eye Rhizome: (rows above)
+  Crowmother -> In Gedyneith's Shadow: triggers: is a Druid whose playing sets off its effect
+     Crowmother: (rows above)
+     In Gedyneith's Shadow: (rows above)
+Ermion (13 partners): (rows above)
+  Ermion -> Crowmother: triggers: is played
+     Ermion: (rows above)
+     Crowmother: (rows above)
+  Ermion -> Crow's-eye Rhizome: puts it into play: puts it into play from the deck; also enables: is a Druid it asks for
+     Ermion: (rows above)
+     Crow's-eye Rhizome: (rows above)
+  Ermion -> In Gedyneith's Shadow: triggers: is a Druid whose playing sets off its effect
+     Ermion: (rows above)
+     In Gedyneith's Shadow: (rows above)
+In Gedyneith's Shadow (12 partners): (rows above)
+  Freya's Blessing -> In Gedyneith's Shadow: triggers: is played
+     Freya's Blessing: (rows above)
+     In Gedyneith's Shadow: (rows above)
+  In Gedyneith's Shadow -> The Mushy Truffle: enables: creates cards
+     In Gedyneith's Shadow: (rows above)
+     The Mushy Truffle: (rows above)
+  In Gedyneith's Shadow -> Crow's-eye Rhizome: puts it into play: creates; also enables: makes a Druid it asks for
+     In Gedyneith's Shadow: (rows above)
+     Crow's-eye Rhizome: (rows above)
+  In Gedyneith's Shadow -> Crow Clan Preacher: puts it into play: summons
+     In Gedyneith's Shadow: (rows above)
+     Crow Clan Preacher: (rows above)
+Korathi Heatwave (0 partners): (rows above)
+Mask of Uroboros (1 partners): (rows above)
+Oneiromancy (10 partners): (rows above)
+  Oneiromancy -> Crowmother: triggers: is played; also plays it: its effect goes off
+     Oneiromancy: (rows above)
+     Crowmother: (rows above)
+  Oneiromancy -> In Gedyneith's Shadow: triggers: is played
+     Oneiromancy: (rows above)
+     In Gedyneith's Shadow: (rows above)
+The Mushy Truffle (12 partners): (rows above)
+  The Mushy Truffle -> In Gedyneith's Shadow: triggers: is played
+     The Mushy Truffle: (rows above)
+     In Gedyneith's Shadow: (rows above)
+  The Mushy Truffle -> Crow Messenger: enables: makes an Alchemy it asks for; also triggers: plays it: its effect goes off
+     The Mushy Truffle: (rows above)
+     Crow Messenger: (rows above)
+  The Mushy Truffle -> Crow Clan Druid: enables: makes an Alchemy it asks for
+     The Mushy Truffle: (rows above)
+     Crow Clan Druid: (rows above)
+
+=== gwent / Mobilization: 50 point Witchers (Myamon): 20 cards, 53 lines
+-- a) 1 cards with no partner in the deck, each beside 10 deck cards: is a line missed?
+Musicians of Blaviken: (rows above)
+    ? Lyrian Landsknecht: KW: Formation, Order, Inspired | WHEN always DO give_keyword self <Formation> for permanent | WHEN activated of self IF keyword_condition Inspired not DO damage chosen unit in board (amount=1) | WHEN activated of self IF keyword_condition Inspired DO damage chosen unit in board (amount=3)
+    ? Amphibious Assault: (rows above)
+    ? Vesemir: WHEN played of self IF keyword_condition Adrenaline 4 DO summon mine card in deck [card is Eskel] <Eskel> THEN summon mine card in deck [card is Lambert] <Lambert>
+    ? Reaver Scout: KW: Order | WHEN activated of self DO copy chosen mine unit in board [state is bronze] [type is Soldier] [card not Reaver Scout] in hand THEN play_card it
+    ? Avallac'h: Sage: (rows above)
+    ? Royal Decree: WHEN played of self DO play_card chosen mine unit in deck
+    ? Mutagenerator: WHEN played of mine unit in board [position is front_row] DO stat_change 5 random mine unit in board [cost eq stat cost of (it)] (strength=1) for permanent | WHEN played of mine unit in board [position is back_row] DO stat_change 5 random mine card in deck [cost eq stat cost of (it)] (strength=1) for permanent
+    ? Redanian Archer: (rows above)
+    ? Mobilization: (rows above)
+    ? Margarita Laux-Antille: (rows above)
+-- b) the 10 cards with the fewest partners, all their lines: is a line missed?
+Casting Contest (1 partners): WHEN played of self DO stat_change chosen mine unit in board (strength=5) for permanent THEN refresh it [state is bronze] <Order> THEN give_keyword it [state is bronze] <Zeal> for permanent
+  Casting Contest -> Lyrian Landsknecht: enables: changes its stats for its effect
+     Casting Contest: (rows above)
+     Lyrian Landsknecht: (rows above)
+Margarita Laux-Antille (1 partners): (rows above)
+  Margarita Laux-Antille -> Lyrian Arbalest: triggers: is a card whose playing sets off its effect
+     Margarita Laux-Antille: (rows above)
+     Lyrian Arbalest: KW: Charge, Order | WHEN activated of self DO damage chosen unit in board (amount=1) | WHEN always DO give_keyword self <Charge> (amount=1) for permanent | WHEN played of mine card [keyword is Order] DO give_keyword self <Charge> (amount=1) for permanent
+Redanian Archer (1 partners): (rows above)
+  Cursed Scroll -> Redanian Archer: enables: Cursed Scroll moves Redanian Archer, and Redanian Archer acts on units back row it
+     Cursed Scroll: KW: Order | WHEN activated of self DO draw chosen mine card in deck (amount=1) THEN move chosen mine card in hand in deck_bottom
+     Redanian Archer: (rows above)
+Ship Ballista (2 partners): KW: Order | WHEN activated of self DO damage chosen enemy unit in board (amount=sum (2 + event_count of (activated by mine player) this_turn)) THEN stat_change random mine unit in deck [boost eq 0] (strength=excess) for permanent
+  Ship Ballista -> Lyrian Landsknecht: enables: changes its stats for its effect
+     Ship Ballista: (rows above)
+     Lyrian Landsknecht: (rows above)
+  Ship Ballista -> Lyrian Arbalest: triggers: is a card whose playing sets off its effect
+     Ship Ballista: (rows above)
+     Lyrian Arbalest: (rows above)
+Amphibious Assault (3 partners): (rows above)
+  Amphibious Assault -> Mutagenerator: triggers: is played
+     Amphibious Assault: KW: Echo | WHEN always DO give_keyword self <Echo> for permanent | WHEN played of self DO play_card chosen mine unit in deck [region not Neutral] [cost le 9] THEN stat_change it (strength=sum (9 + minus (stat cost of (it)))) for permanent
+     Mutagenerator: (rows above)
+  Amphibious Assault -> Lyrian Arbalest: triggers: is played
+     Amphibious Assault: (rows above)
+     Lyrian Arbalest: (rows above)
+  Amphibious Assault -> Lyrian Landsknecht: enables: changes its stats for its effect
+     Amphibious Assault: (rows above)
+     Lyrian Landsknecht: (rows above)
+Dwimveandra (4 partners): WHEN played of self IF keyword_condition Melee DO stage_advance chosen mine landmark in board [type is Scenario] (amount=full) | WHEN played of self IF keyword_condition Ranged DO refresh chosen mine landmark in board [type is Location] <Order>
+  Cursed Scroll -> Dwimveandra: enables: Cursed Scroll moves Dwimveandra, and Dwimveandra acts on units back row it or front row it
+     Cursed Scroll: (rows above)
+     Dwimveandra: (rows above)
+  Royal Decree -> Dwimveandra: triggers: plays it: its effect goes off
+     Royal Decree: (rows above)
+     Dwimveandra: (rows above)
+  Oneiromancy -> Dwimveandra: triggers: plays it: its effect goes off
+     Oneiromancy: (rows above)
+     Dwimveandra: (rows above)
+  Dwimveandra -> Flotsam: triggers: lets you use it again
+     Dwimveandra: (rows above)
+     Flotsam: KW: Resilience, Order, Deploy | WHEN always DO give_keyword self <Resilience> for permanent | WHEN always DO give_keyword self <Resilience> for permanent | WHEN played of self DO create random mine unit [state is bronze] [region is Northern Realms] [keyword is Order] in hand | WHEN played of self DO create random mine unit [state is bronze] [region is Northern Realms] [keyword is Order] in hand | WHEN activated of self DO refresh chosen mine unit in board [state is bronze] THEN give_keyword it <Zeal> for permanent | WHEN activated of self DO refresh chosen mine unit in board [state is bronze] THEN give_keyword it <Zeal> for permanent
+Mobilization (4 partners): (rows above)
+  Mobilization -> Lyrian Landsknecht: enables: changes its stats for its effect
+     Mobilization: (rows above)
+     Lyrian Landsknecht: (rows above)
+  Flotsam -> Mobilization: enables: creates cards: Mobilization copys them
+     Flotsam: (rows above)
+     Mobilization: (rows above)
+  Reaver Scout -> Mobilization: enables: creates cards: Mobilization copys them
+     Reaver Scout: (rows above)
+     Mobilization: (rows above)
+  Mobilization -> Lyrian Arbalest: triggers: is a card whose playing sets off its effect
+     Mobilization: (rows above)
+     Lyrian Arbalest: (rows above)
+Avallac'h: Sage (5 partners): (rows above)
+  Avallac'h: Sage -> Lyrian Arbalest: triggers: is played
+     Avallac'h: Sage: (rows above)
+     Lyrian Arbalest: (rows above)
+  Cursed Scroll -> Avallac'h: Sage: enables: Cursed Scroll moves Avallac'h: Sage, and Avallac'h: Sage acts on units back row it
+     Cursed Scroll: (rows above)
+     Avallac'h: Sage: (rows above)
+  Avallac'h: Sage -> Flotsam: triggers: plays it: its effect goes off
+     Avallac'h: Sage: (rows above)
+     Flotsam: (rows above)
+Mutagenerator (5 partners): (rows above)
+  Reaver Scout -> Mutagenerator: triggers: is played
+     Reaver Scout: (rows above)
+     Mutagenerator: (rows above)
+  Royal Decree -> Mutagenerator: triggers: is played
+     Royal Decree: (rows above)
+     Mutagenerator: (rows above)
+  Oneiromancy -> Mutagenerator: triggers: is played
+     Oneiromancy: (rows above)
+     Mutagenerator: (rows above)
+  Mutagenerator -> Lyrian Landsknecht: enables: changes its stats for its effect
+     Mutagenerator: (rows above)
+     Lyrian Landsknecht: (rows above)
+Reaver Scout (6 partners): (rows above)
+  Reaver Scout -> Lyrian Arbalest: triggers: is played; also is a card whose playing sets off its effect
+     Reaver Scout: (rows above)
+     Lyrian Arbalest: (rows above)
+  Reaver Scout -> Eskel: triggers: fills your hand
+     Reaver Scout: (rows above)
+     Eskel: WHEN played of self IF keyword_condition Adrenaline 4 DO summon mine card in deck [card is Vesemir] <Vesemir> THEN summon mine card in deck [card is Lambert] <Lambert>
+  Reaver Scout -> Vesemir: triggers: fills your hand
+     Reaver Scout: (rows above)
+     Vesemir: (rows above)
+  Reaver Scout -> Lambert: triggers: fills your hand
+     Reaver Scout: (rows above)
+     Lambert: WHEN played of self IF keyword_condition Adrenaline 4 DO summon mine card in deck [card is Eskel] <Eskel> THEN summon mine card in deck [card is Vesemir] <Vesemir>
+-- c) special cards, one line per reason: is something wrong or missing?
+Amphibious Assault (3 partners): (rows above)
+Avallac'h: Sage (5 partners): (rows above)
+Cursed Scroll (8 partners): (rows above)
+  Cursed Scroll -> Lyrian Landsknecht: enables: Cursed Scroll moves Lyrian Landsknecht, and Lyrian Landsknecht acts on units back row it or front row it
+     Cursed Scroll: (rows above)
+     Lyrian Landsknecht: (rows above)
+  Cursed Scroll -> Lyrian Arbalest: triggers: is a card whose playing sets off its effect
+     Cursed Scroll: (rows above)
+     Lyrian Arbalest: (rows above)
+  Cursed Scroll -> Eskel: triggers: fills your hand
+     Cursed Scroll: (rows above)
+     Eskel: (rows above)
+Mobilization (4 partners): (rows above)
+Oneiromancy (7 partners): (rows above)
+Royal Decree (7 partners): (rows above)

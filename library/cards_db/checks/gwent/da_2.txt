@@ -1,0 +1,555 @@
+=== gwent / Nature's Gift: Devotion Gift 2590 fMMR: 30 cards, 135 lines
+-- a) 1 cards with no partner in the deck, each beside 10 deck cards: is a line missed?
+Tactical Advantage: (rows above)
+    ? Nature's Gift: KW: Symbiosis, Charge, Order | WHEN always DO give_keyword self <Symbiosis> for permanent | WHEN activated of self DO give_keyword chosen mine unit in board <Vitality> (amount=2) for permanent | WHEN always DO give_keyword self <Charge> (amount=3) for permanent
+    ? Duén Canell Guardian: KW: Veil, Symbiosis, Order | WHEN always DO give_keyword self <Veil> for permanent | WHEN always DO give_keyword self <Symbiosis> for permanent | WHEN activated of self DO damage chosen enemy unit in board (amount=2)
+    ? Naiad Fledgling: KW: Order | WHEN keyword_used by mine player of [keyword is Symbiosis] DO give_keyword left_of_self unit <Vitality> (amount=2) for permanent | WHEN activated of self DO remove_keyword chosen mine unit in board <Vitality> THEN stat_change self (strength=event_amount) for permanent
+    ? Mahakam Pass: KW: Resilience, Order, Deploy | WHEN always DO give_keyword self <Resilience> for permanent | WHEN played of self DO create random mine card [region is Scoiatael] [type is Dwarf] in hand THEN give_keyword it <Armor> (amount=4) for permanent | WHEN activated of self DO create in hand <Tempering> THEN play_card it
+    ? Frog: KW: Doomed, Order | WHEN always DO give_keyword self <Doomed> for permanent | WHEN turn_end by mine player DO give_keyword all unit in board [position is sides] <Vitality> for unstated | WHEN activated of self DO move self to mine position [position not same_row]
+    ? Shaping Nature: Vitality: WHEN played of self DO stat_change chosen mine unit in board (strength=6) for permanent THEN give_keyword it <Vitality> (amount=6) for permanent
+    ? Simlas Finn aep Dabairr: (rows above)
+    ? Isengrim's Council: (rows above)
+    ? Frog Mating Season: (rows above)
+    ? Shaping Nature: KW: Echo | WHEN always DO give_keyword self <Echo> for permanent | WHEN played of self DO choose_one OR stat_change chosen mine unit in board (strength=7) for permanent THEN give_keyword it <Veil> for permanent OR stat_change chosen mine unit in board (strength=9) for permanent OR stat_change chosen mine unit in board (strength=6) for permanent THEN give_keyword it <Vitality> (amount=6) for permanent
+-- b) the 10 cards with the fewest partners, all their lines: is a line missed?
+Circle of Life (1 partners): (rows above)
+Nature's Rebuke (2 partners): (rows above)
+Shaping Nature: Boost (2 partners): WHEN played of self DO stat_change chosen mine unit in board (strength=9) for permanent
+  Fauve -> Shaping Nature: Boost: puts it into play: puts it into play from the deck
+     Fauve: KW: Deploy | WHEN played of self DO play_card chosen mine card in deck [type is Nature]
+     Shaping Nature: Boost: (rows above)
+  Shaping Nature -> Shaping Nature: Boost: levels into: levels into
+     Shaping Nature: (rows above)
+     Shaping Nature: Boost: (rows above)
+Shaping Nature: Veil (2 partners): WHEN played of self DO stat_change chosen mine unit in board (strength=7) for permanent THEN give_keyword it <Veil> for permanent | WHEN played of self DO stat_change chosen mine unit in board (strength=7) for permanent THEN give_keyword it <Veil> for permanent
+  Fauve -> Shaping Nature: Veil: puts it into play: puts it into play from the deck
+     Fauve: (rows above)
+     Shaping Nature: Veil: (rows above)
+  Shaping Nature -> Shaping Nature: Veil: levels into: levels into
+     Shaping Nature: (rows above)
+     Shaping Nature: Veil: (rows above)
+Tempering (2 partners): (rows above)
+Frog Mating Season (3 partners): (rows above)
+Mahakam Pass (3 partners): (rows above)
+Shaping Nature: Vitality (3 partners): (rows above)
+  Shaping Nature: Vitality -> Freixenet: enables: gives it Vitality for its effect
+     Shaping Nature: Vitality: (rows above)
+     Freixenet: (rows above)
+  Fauve -> Shaping Nature: Vitality: puts it into play: puts it into play from the deck
+     Fauve: (rows above)
+     Shaping Nature: Vitality: (rows above)
+  Shaping Nature -> Shaping Nature: Vitality: levels into: levels into
+     Shaping Nature: (rows above)
+     Shaping Nature: Vitality: (rows above)
+Frog (4 partners): (rows above)
+  Ciaran aep Easnillen -> Frog: enables: Ciaran aep Easnillen moves Frog and units, and Frog acts on units next to it
+     Ciaran aep Easnillen: KW: Deploy | WHEN played of self DO give_keyword chosen unit in board <Lock> for permanent THEN move it to position [position not same_row]
+     Frog: (rows above)
+Shaping Nature (5 partners): (rows above)
+  Shaping Nature -> Freixenet: enables: gives it Vitality for its effect
+     Shaping Nature: (rows above)
+     Freixenet: (rows above)
+  Fauve -> Shaping Nature: puts it into play: puts it into play from the deck
+     Fauve: (rows above)
+     Shaping Nature: (rows above)
+-- c) special cards, one line per reason: is something wrong or missing?
+Aucwenn (15 partners): (rows above)
+Call of the Forest (8 partners): (rows above)
+  Call of the Forest -> Ciaran aep Easnillen: triggers: plays it: its effect goes off
+     Call of the Forest: (rows above)
+     Ciaran aep Easnillen: (rows above)
+Eithné: Mother (9 partners): (rows above)
+Eithné: Wrath of Brokilon (11 partners): (rows above)
+Eithné: Young Queen (9 partners): (rows above)
+Fauve (14 partners): (rows above)
+Isengrim's Council (13 partners): (rows above)
+  Isengrim's Council -> Ciaran aep Easnillen: puts it into play: puts it into play from the deck; also triggers: plays it: its effect goes off
+     Isengrim's Council: WHEN played of self DO look random mine card in deck [type is Dwarf] THEN look random mine card in deck [type is Dryad] THEN look random mine card in deck [type is Elf] THEN play_card chosen mine card in deck [type in Dwarf] [type in Dryad] [type in Elf] THEN stat_change it (strength=2) for permanent
+     Ciaran aep Easnillen: (rows above)
+  Ciaran aep Easnillen -> Isengrim's Council: enables: is an Elf it asks for
+     Ciaran aep Easnillen: (rows above)
+     Isengrim's Council: (rows above)
+Mahakam Pass (3 partners): (rows above)
+Nature's Gift (8 partners): (rows above)
+Shaping Nature (5 partners): (rows above)
+Shaping Nature: Boost (2 partners): (rows above)
+Shaping Nature: Veil (2 partners): (rows above)
+Shaping Nature: Vitality (3 partners): (rows above)
+Simlas Finn aep Dabairr (10 partners): (rows above)
+  Simlas Finn aep Dabairr -> Ciaran aep Easnillen: triggers: plays it: its effect goes off
+     Simlas Finn aep Dabairr: KW: Deploy | WHEN played of self DO play_card chosen mine card in deck [state is bronze] [category is spell] in deck THEN play_card all mine card in deck [state is copy_of_it] in deck
+     Ciaran aep Easnillen: (rows above)
+Tactical Advantage (0 partners): (rows above)
+
+=== gwent / Precision Strike: dragons 052025: 27 cards, 80 lines
+-- a) 1 cards with no partner in the deck, each beside 10 deck cards: is a line missed?
+Crystal Skull: KW: Order | WHEN activated of self DO stat_change chosen mine unit in board (strength=4) for permanent THEN give_keyword it mine unit in board <Veil> for permanent
+    ? Precision Strike: KW: Charge, Order | WHEN activated of self DO damage chosen unit in board (amount=1) | WHEN always DO give_keyword self <Charge> (amount=3) for permanent | WHEN activated of self IF keyword_condition Charge 0 DO create in hand <Brokilon Sentinel> THEN play_card it card
+    ? Myrgtabrakke: KW: Lineage, Charge, Order, Deploy | WHEN always DO give_keyword self <Lineage> for permanent | WHEN played of self DO draw mine card in deck [type is Dragon] (amount=1) THEN move chosen mine card in hand to mine card in deck_bottom | WHEN activated of self [n_times] DO damage chosen enemy unit in board (amount=1) | WHEN always DO give_keyword self <Charge> (amount=0) for permanent | WHEN game_start DO give_keyword self <Charge> (amount=count of (all mine card in deck [type is Dragon] [state is started_in_deck])) for permanent
+    ? Dimeritium Bomb: (rows above)
+    ? Saskia: KW: Order, Deploy | WHEN played of self DO choose_one OR summon to mine position [position is same_row] <Elven Deadeye> THEN give_ability self OR summon to mine position [position is same_row] <Rowdy Dwarf> THEN give_ability self OR summon to mine position [position is same_row] <Young Dryad> THEN give_ability self
+    ? Eyck of Denesle: KW: Order, Deploy | WHEN played of self IF have mine card in hand [type is Dragon] is DO give_keyword self <Zeal> for permanent | WHEN activated of self DO kill chosen enemy unit in board [strength ge 9]
+    ? Madoc: KW: Order | WHEN played of mine spell [type is Bomb] DO summon self to random mine position | WHEN activated of self DO give_keyword chosen enemy position [position is opposite_row] <Cataclysm> (turns=1) for n_turns THEN kill self
+    ? Ocvist: KW: Lineage, Timer, Deploy | WHEN always DO give_keyword self <Lineage> for permanent | WHEN played of self DO give_keyword enemy position [position is opposite_row] <Cataclysm> (turns=2) for n_turns | WHEN always DO give_keyword self <Timer> (amount=3) for permanent | WHEN countdown_done of self DO damage all enemy unit in board (amount=1)
+    ? Oxenfurt Scholar: (rows above)
+    ? Rowdy Dwarf: (rows above)
+    ? Sapper: (rows above)
+-- b) the 10 cards with the fewest partners, all their lines: is a line missed?
+Ciaran aep Easnillen (1 partners): (rows above)
+  Ciaran aep Easnillen -> Red Haze: enables: Ciaran aep Easnillen moves enemy units, and Red Haze acts on units next to a card it picks
+     Ciaran aep Easnillen: (rows above)
+     Red Haze: WHEN played of self DO damage chosen enemy unit in board [position is sides] (amount=stat strength of (chosen enemy unit in board))
+Cyprian Wiley (1 partners): KW: Deploy | WHEN played of self DO keyword_action chosen unit in board [strength le 4] <Banish> for unstated
+  Cyprian Wiley -> Saesenthessis: Blaze: triggers: removes cards from the game
+     Cyprian Wiley: (rows above)
+     Saesenthessis: Blaze: (rows above)
+Rowdy Dwarf (1 partners): (rows above)
+Tempering (1 partners): (rows above)
+Wandering Treant (1 partners): (rows above)
+Brokilon Sentinel (2 partners): KW: Deploy | WHEN played of self DO damage chosen enemy unit in board (amount=2) | WHEN killed by self DO summon all mine card in deck to mine position [position is same_row] <Brokilon Sentinel>
+  Precision Strike -> Brokilon Sentinel: puts it into play: creates
+     Precision Strike: (rows above)
+     Brokilon Sentinel: (rows above)
+  Brokilon Sentinel -> Dryad's Caress: enables: is a Dryad it asks for
+     Brokilon Sentinel: (rows above)
+     Dryad's Caress: WHEN played of self DO keyword_action chosen mine unit in board <Purify> for unstated THEN stat_change it (strength=3) for permanent | WHEN played of self IF have mine unit in board [type is Dryad] DO give_keyword it <Vitality> (amount=3) for permanent
+Elven Deadeye (2 partners): (rows above)
+Precision Strike (3 partners): (rows above)
+  Precision Strike -> Dryad's Caress: enables: makes a Dryad it asks for
+     Precision Strike: (rows above)
+     Dryad's Caress: (rows above)
+  Precision Strike -> Oxenfurt Scholar: enables: is a card it asks for
+     Precision Strike: (rows above)
+     Oxenfurt Scholar: KW: Deploy | WHEN played of self DO stat_change self (strength=count of (mine card [state is started_in_deck] [cost ge 11])) for permanent
+Young Dryad (3 partners): (rows above)
+  Saskia -> Young Dryad: puts it into play: summons
+     Saskia: (rows above)
+     Young Dryad: KW: Doomed, Symbiosis | WHEN always DO give_keyword self <Doomed> for permanent | WHEN always DO give_keyword self <Symbiosis> for permanent
+Dancing Star (4 partners): (rows above)
+  Dancing Star -> Northern Wind: enables: makes units die: Northern Wind Banishes them
+     Dancing Star: (rows above)
+     Northern Wind: WHEN played of self DO damage chosen unit in board (amount=4) | WHEN killed by self DO keyword_action it unit in discard <Banish> for unstated
+-- c) special cards, one line per reason: is something wrong or missing?
+Crystal Skull (0 partners): (rows above)
+Eyck of Denesle (6 partners): (rows above)
+  Eyck of Denesle -> Saesenthessis: Blaze: triggers: makes enemy units die
+     Eyck of Denesle: (rows above)
+     Saesenthessis: Blaze: (rows above)
+  Eyck of Denesle -> Northern Wind: enables: makes units die: Northern Wind Banishes them
+     Eyck of Denesle: (rows above)
+     Northern Wind: (rows above)
+  Villentretenmerth -> Eyck of Denesle: enables: is a Dragon it asks for
+     Villentretenmerth: KW: Lineage, Timer | WHEN always DO give_keyword self <Lineage> for permanent | WHEN always DO give_keyword self <Timer> (amount=3) for permanent | WHEN countdown_done of self DO kill highest unit by strength in board [type not Dragon]
+     Eyck of Denesle: (rows above)
+  Myrgtabrakke -> Eyck of Denesle: enables: is a Dragon it asks for; also triggers: fills your hand
+     Myrgtabrakke: (rows above)
+     Eyck of Denesle: (rows above)
+Madoc (9 partners): (rows above)
+  Madoc -> Northern Wind: enables: makes units die: Northern Wind Banishes them; also dies by its own effect: Northern Wind Banishes them
+     Madoc: (rows above)
+     Northern Wind: (rows above)
+Precision Strike (3 partners): (rows above)
+Saesenthessis: Blaze (14 partners): (rows above)
+  Northern Wind -> Saesenthessis: Blaze: triggers: removes cards from the game
+     Northern Wind: (rows above)
+     Saesenthessis: Blaze: (rows above)
+Saskia (12 partners): (rows above)
+Villentretenmerth (7 partners): (rows above)
+  Villentretenmerth -> Northern Wind: enables: makes units die: Northern Wind Banishes them
+     Villentretenmerth: (rows above)
+     Northern Wind: (rows above)
+
+=== gwent / Call of Harmony: Scoia'tael Harmony is overtuned in June: 25 cards, 46 lines
+-- a) 1 cards with no partner in the deck, each beside 10 deck cards: is a line missed?
+Crystal Skull: (rows above)
+    ? Call of Harmony: KW: Order | WHEN activated of self DO create in hand <Dana Méadbh> THEN play_card it card | WHEN activated of self DO create <Dana Méadbh> THEN play_card it
+    ? Malena: KW: Zeal, Order | WHEN always DO give_keyword self <Zeal> for permanent | WHEN activated of self DO move chosen unit in board to position [position not same_row] | WHEN always DO keyword_action <Cooldown> (amount=1)
+    ? Antherion: KW: Harmony, Order | WHEN always DO give_keyword self <Harmony> for permanent | WHEN activated of self DO give_ability chosen mine unit in board <Infused>
+    ? Chameleon: KW: Order, Deploy | WHEN played of self DO give_type self to random mine card in everywhere [region is Scoiatael] [state is primary_category_not_controlled] | WHEN activated of self DO play_card self in board THEN base_change self (strength=-1)
+    ? Dryad Ranger: KW: Harmony | WHEN always DO give_keyword self <Harmony> for permanent | WHEN always DO give_keyword self <Harmony> for permanent | WHEN played of self IF keyword_condition Melee DO damage chosen enemy unit in board (amount=2) | WHEN played of self IF keyword_condition Melee DO damage chosen enemy unit in board (amount=2) | WHEN played of self IF keyword_condition Ranged DO give_keyword chosen enemy unit in board <Poison> for permanent | WHEN played of self IF keyword_condition Ranged DO give_keyword chosen enemy unit in board <Poison> for permanent
+    ? Dana Méadbh: KW: Doomed, Harmony | WHEN always DO give_keyword self <Doomed> for permanent | WHEN always DO give_keyword self <Harmony> for permanent
+    ? Loc Feainn: Convergence: KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent | WHEN played of self DO create chosen mine unit in board [state is bronze] [region is Scoiatael] [state is primary_category_not_controlled] in hand
+    ? Weeping Willow: KW: Harmony | WHEN always DO give_keyword self <Harmony> for permanent | WHEN activated of self IF keyword_condition Melee DO stat_change self (strength=distinct primary_type of (all mine unit in board)) for permanent | WHEN played of self IF keyword_condition Ranged DO give_keyword chosen enemy unit in board <Poison> for permanent
+    ? Mysteries of Loc Feainn: KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent | WHEN played of mine unit in board [keyword is Harmony] DO stage_advance self | WHEN played of self DO summon to chosen mine position [position is same_row] in board <Lake Guardian: Dawn Aspect> THEN stat_set it (strength=distinct primary_type of (all mine unit in everywhere [region not Neutral] [state is started_in_deck])) | WHEN played of mine unit in board [region not Neutral] IF stage 1 DO stat_change it (strength=distinct primary_type of (it)) for permanent | WHEN played of mine unit in board [keyword is Harmony] IF stage 2 DO create in hand <Loc Feainn: Convergence> THEN play_card chosen mine card in hand [card is Loc Feainn: Convergence] in hand
+    ? Backup Plan: WHEN played of self DO damage last_played enemy unit in board (amount=2) THEN create chosen mine card in hand [state is bronze] [region is Scoiatael] [type is Elf] [keyword is Deploy] [state not started_in_deck] in hand
+-- b) the 10 cards with the fewest partners, all their lines: is a line missed?
+Antherion (1 partners): (rows above)
+  Antherion -> Mysteries of Loc Feainn: triggers: is a unit whose playing sets off its effect
+     Antherion: (rows above)
+     Mysteries of Loc Feainn: (rows above)
+Backup Plan (1 partners): (rows above)
+  Backup Plan -> Cat Witcher: triggers: fills your hand
+     Backup Plan: (rows above)
+     Cat Witcher: KW: Adrenaline | WHEN turn_end by mine player IF keyword_condition Adrenaline not 3 DO move self to chosen mine position [position not same_row] THEN damage random enemy unit in board [position is opposite_row] (amount=1) | WHEN turn_end by mine player IF keyword_condition Adrenaline 3 DO move self to chosen mine position [position not same_row] THEN damage random enemy unit in board [position is opposite_row] (amount=2)
+Lake Guardian: Dawn Aspect (1 partners): KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent
+  Mysteries of Loc Feainn -> Lake Guardian: Dawn Aspect: puts it into play: summons
+     Mysteries of Loc Feainn: (rows above)
+     Lake Guardian: Dawn Aspect: (rows above)
+Lake Guardian: Dusk Aspect (1 partners): KW: Harmony | WHEN always DO give_keyword self <Harmony> for permanent | WHEN always DO can self in hand <Harmony> (event=keyword_used) for permanent THEN can self in deck <Harmony> (event=keyword_used) for permanent
+  Lake Guardian: Dusk Aspect -> Mysteries of Loc Feainn: triggers: is a unit whose playing sets off its effect
+     Lake Guardian: Dusk Aspect: (rows above)
+     Mysteries of Loc Feainn: (rows above)
+Percival Schuttenbach (1 partners): KW: Harmony | WHEN always DO give_keyword self <Harmony> (amount=2) for permanent
+  Percival Schuttenbach -> Mysteries of Loc Feainn: triggers: is a unit whose playing sets off its effect
+     Percival Schuttenbach: (rows above)
+     Mysteries of Loc Feainn: (rows above)
+Water of Brokilon (1 partners): WHEN played of self DO summon to chosen mine position <Dryad Fledgling> (amount=2)
+  Water of Brokilon -> Dryad Fledgling: puts it into play: summons
+     Water of Brokilon: (rows above)
+     Dryad Fledgling: KW: Harmony | WHEN always DO give_keyword self <Harmony> for permanent
+Dana Méadbh (2 partners): (rows above)
+  Call of Harmony -> Dana Méadbh: puts it into play: creates
+     Call of Harmony: (rows above)
+     Dana Méadbh: (rows above)
+  Dana Méadbh -> Mysteries of Loc Feainn: triggers: is a unit whose playing sets off its effect
+     Dana Méadbh: (rows above)
+     Mysteries of Loc Feainn: (rows above)
+Dana Méadbh: Provider (2 partners): KW: Doomed, Harmony | WHEN always DO give_keyword self <Doomed> for permanent | WHEN always DO give_keyword self <Harmony> for permanent | WHEN turn_end by mine player DO stat_change all mine card in hand [region not Neutral] [state is primary_category_not_controlled] (strength=1) for permanent | WHEN round_won by mine player DO transform self
+  Dana Méadbh: Provider -> Dana Méadbh: Caretaker: levels into: levels into
+     Dana Méadbh: Provider: (rows above)
+     Dana Méadbh: Caretaker: KW: Doomed, Harmony, Deploy | WHEN always DO give_keyword self <Doomed> for permanent THEN give_keyword self <Harmony> for permanent | WHEN played of self DO stat_change distinct of (all mine unit in board [region not Neutral]) lowest mine unit by strength in board [region not Neutral] (strength=2) for permanent | WHEN played by mine player of mine unit [region not Neutral] [state is primary_category_not_controlled] DO stat_change it (strength=2) for permanent
+  Dana Méadbh: Provider -> Mysteries of Loc Feainn: triggers: is a unit whose playing sets off its effect
+     Dana Méadbh: Provider: (rows above)
+     Mysteries of Loc Feainn: (rows above)
+Dryad Fledgling (2 partners): (rows above)
+  Dryad Fledgling -> Treant Boar: enables: is a Dryad it asks for
+     Dryad Fledgling: (rows above)
+     Treant Boar: KW: Deploy | WHEN played of self IF have mine unit in board [type is Dryad] DO give_keyword self <Zeal> for permanent | WHEN activated of self IF keyword_condition Melee DO move self to mine position [position is back_row] THEN keyword_action self <Heal> for unstated | WHEN activated of self IF keyword_condition Ranged DO move self to mine position [position is front_row] THEN damage chosen enemy unit in board (amount=2) | WHEN always DO keyword_action <Cooldown> (amount=1)
+Nature's Rebuke (2 partners): (rows above)
+  Nature's Rebuke -> Weeping Willow: makes stronger: can give it more strength
+     Nature's Rebuke: (rows above)
+     Weeping Willow: (rows above)
+  Nature's Rebuke -> Treant Boar: makes stronger: can give it more strength
+     Nature's Rebuke: (rows above)
+     Treant Boar: (rows above)
+-- c) special cards, one line per reason: is something wrong or missing?
+Call of Harmony (3 partners): (rows above)
+  Call of Harmony -> Dana Méadbh: Caretaker: triggers: is played
+     Call of Harmony: (rows above)
+     Dana Méadbh: Caretaker: (rows above)
+Call of the Forest (8 partners): (rows above)
+  Call of the Forest -> Dana Méadbh: Caretaker: triggers: is played; also plays it: its effect goes off
+     Call of the Forest: (rows above)
+     Dana Méadbh: Caretaker: (rows above)
+  Call of the Forest -> Mysteries of Loc Feainn: triggers: is played
+     Call of the Forest: (rows above)
+     Mysteries of Loc Feainn: (rows above)
+  Call of the Forest -> Dwarven Skirmisher: triggers: plays it: its effect goes off
+     Call of the Forest: (rows above)
+     Dwarven Skirmisher: WHEN played of self IF keyword_condition Melee DO damage chosen enemy unit in board (amount=3) THEN give_keyword self <Armor> (amount=1) for permanent | WHEN activated of self IF keyword_condition Barricade DO damage chosen enemy unit in board (amount=3)
+Crystal Skull (0 partners): (rows above)
+Dana Méadbh (2 partners): (rows above)
+Dana Méadbh: Caretaker (5 partners): (rows above)
+  Simlas Finn aep Dabairr -> Dana Méadbh: Caretaker: triggers: is played; also plays it: its effect goes off
+     Simlas Finn aep Dabairr: (rows above)
+     Dana Méadbh: Caretaker: (rows above)
+Dana Méadbh: Provider (2 partners): (rows above)
+Lake Guardian: Dawn Aspect (1 partners): (rows above)
+Loc Feainn: Convergence (3 partners): (rows above)
+  Mysteries of Loc Feainn -> Loc Feainn: Convergence: puts it into play: puts it into play from the hand; also creates
+     Mysteries of Loc Feainn: (rows above)
+     Loc Feainn: Convergence: (rows above)
+  Loc Feainn: Convergence -> Pavko Gale: enables: makes a unit it asks for
+     Loc Feainn: Convergence: (rows above)
+     Pavko Gale: KW: Harmony | WHEN always DO give_keyword self <Harmony> for permanent | WHEN activated of self IF keyword_condition Ranged; have mine unit in board [region is Neutral] is DO damage chosen unit in board (amount=1) | WHEN activated of self IF keyword_condition Ranged; have mine unit in board [region is Neutral] not DO damage chosen unit in board (amount=2) | WHEN always DO keyword_action <Cooldown> (amount=1)
+  Loc Feainn: Convergence -> Cat Witcher: triggers: fills your hand
+     Loc Feainn: Convergence: (rows above)
+     Cat Witcher: (rows above)
+Mysteries of Loc Feainn (15 partners): (rows above)
+  Call of Harmony -> Mysteries of Loc Feainn: triggers: is played
+     Call of Harmony: (rows above)
+     Mysteries of Loc Feainn: (rows above)
+  Pavko Gale -> Mysteries of Loc Feainn: triggers: is a unit whose playing sets off its effect
+     Pavko Gale: (rows above)
+     Mysteries of Loc Feainn: (rows above)
+  Mysteries of Loc Feainn -> Cat Witcher: triggers: fills your hand
+     Mysteries of Loc Feainn: (rows above)
+     Cat Witcher: (rows above)
+Simlas Finn aep Dabairr (8 partners): (rows above)
+  Simlas Finn aep Dabairr -> Mysteries of Loc Feainn: triggers: is played
+     Simlas Finn aep Dabairr: (rows above)
+     Mysteries of Loc Feainn: (rows above)
+  Simlas Finn aep Dabairr -> Dwarven Skirmisher: triggers: plays it: its effect goes off
+     Simlas Finn aep Dabairr: (rows above)
+     Dwarven Skirmisher: (rows above)
+Water of Brokilon (1 partners): (rows above)
+
+=== gwent / Mobilization: NR Devotion Undead Army: 23 cards, 51 lines
+-- a) 0 cards with no partner in the deck, each beside 10 deck cards: is a line missed?
+-- b) the 10 cards with the fewest partners, all their lines: is a line missed?
+Botchling (1 partners): KW: Order | WHEN turn_end by mine player DO damage highest enemy unit by strength in board (amount=1) | WHEN activated of self DO transform self <Lubberkin>
+  Botchling -> Princess Adda: triggers: is a Cursed whose summoning sets off its effect
+     Botchling: (rows above)
+     Princess Adda: WHEN played of self IF keyword_condition Devotion DO give_keyword self <Immunity> for permanent | WHEN summoned of unit [type is Cursed] [first_each_turn] IF my_turn DO stat_change self (strength=stat base_power of (it)) for permanent
+Margarita Laux-Antille (1 partners): KW: Zeal, Order | WHEN always DO give_keyword self <Zeal> for permanent | WHEN activated of self DO give_keyword chosen enemy unit in board <Lock> for permanent
+  Margarita Laux-Antille -> Redanian Secret Service: triggers: has Zeal
+     Margarita Laux-Antille: (rows above)
+     Redanian Secret Service: KW: Zeal, Order | WHEN always DO give_keyword self <Zeal> for permanent | WHEN activated of self DO keyword_action chosen mine unit in board <Purify> for unstated | WHEN given_keyword of mine unit in board IF have mine unit in board [card is Redanian Secret Service] not DO summon self to chosen mine position [position is same_row] in board <Redanian Secret Service>
+Crystal Skull (2 partners): (rows above)
+  Crystal Skull -> Redanian Secret Service: triggers: makes your units get a keyword or status
+     Crystal Skull: (rows above)
+     Redanian Secret Service: (rows above)
+  Crystal Skull -> Bloody Baron: enables: changes units' stats: Bloody Baron gives them Bleeding
+     Crystal Skull: (rows above)
+     Bloody Baron: KW: Formation, Order, Inspired | WHEN always DO give_keyword self <Formation> for permanent | WHEN activated of self DO keyword_action chosen unit in board <Reset> for unstated | WHEN activated of self IF keyword_condition Inspired DO give_keyword it unit in board [state is buffed] <Bleeding> (amount=stat boost of (it)) for permanent
+Griffin Witcher (2 partners): WHEN activated of self IF keyword_condition Melee DO damage chosen enemy unit in board (amount=1) | WHEN always DO keyword_action <Cooldown> (amount=1) | WHEN turn_end by mine player IF keyword_condition Adrenaline 3 DO damage random enemy unit in board (amount=3) THEN give_keyword self <Lock> for permanent
+  Griffin Witcher -> Redanian Secret Service: triggers: has Lock
+     Griffin Witcher: (rows above)
+     Redanian Secret Service: (rows above)
+  Queen Adalia -> Griffin Witcher: triggers: fills your hand
+     Queen Adalia: KW: Deploy | WHEN played of self DO copy mine unit in hand [state is bronze] [region not Neutral] [state is created] in hand THEN play_card it card THEN give_keyword it <Shield> for permanent
+     Griffin Witcher: (rows above)
+Kerack Marine (2 partners): KW: Zeal, Order, Devotion | WHEN always DO give_keyword self <Zeal> for permanent | WHEN activated of self IF keyword_condition Devotion not DO stat_change chosen mine unit in board (strength=2) for permanent | WHEN activated of self IF keyword_condition Devotion DO stat_change chosen mine unit in board (strength=4) for permanent
+  Kerack Marine -> Redanian Secret Service: triggers: has Zeal
+     Kerack Marine: (rows above)
+     Redanian Secret Service: (rows above)
+  Kerack Marine -> Bloody Baron: enables: changes units' stats: Bloody Baron gives them Bleeding
+     Kerack Marine: (rows above)
+     Bloody Baron: (rows above)
+Left Fucking Flank (2 partners): KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent
+  Left Fucking Flank -> Redanian Secret Service: triggers: has Doomed
+     Left Fucking Flank: (rows above)
+     Redanian Secret Service: (rows above)
+  Poor Fucking Infantry -> Left Fucking Flank: puts it into play: summons
+     Poor Fucking Infantry: KW: Deploy, Bonded | WHEN played of self DO summon to mine position [position is sides] <Left Fucking Flank> THEN summon to mine position [position is sides] <Right Fucking Flank> | WHEN played of self IF keyword_condition Bonded DO stat_change self (strength=3) for permanent
+     Left Fucking Flank: (rows above)
+Philippa: Blind Fury (2 partners): KW: Deploy | WHEN played of self DO damage chosen enemy unit in board (amount=4) THEN damage random enemy unit in board (amount=3) THEN damage random enemy unit in board (amount=2) THEN damage random enemy unit in board (amount=1)
+  Vernon Roche -> Philippa: Blind Fury: triggers: plays it: its effect goes off
+     Vernon Roche: KW: Disloyal, Deploy | WHEN always DO give_keyword self <Disloyal> for permanent | WHEN played of self DO play_card 2 top mine card in deck
+     Philippa: Blind Fury: (rows above)
+  Amphibious Assault -> Philippa: Blind Fury: triggers: plays it: its effect goes off
+     Amphibious Assault: KW: Echo | WHEN always DO give_keyword self <Echo> for permanent | WHEN played of self DO play_card chosen mine unit in deck [region not Neutral] [cost le 9] THEN stat_change it (strength=sum (9 + minus (stat cost of (it)))) for permanent
+     Philippa: Blind Fury: (rows above)
+Redanian Archer (2 partners): KW: Zeal, Charge | WHEN always DO give_keyword self <Zeal> for permanent | WHEN activated of self IF keyword_condition Ranged DO damage chosen enemy unit in board (amount=1) | WHEN always DO give_keyword self <Charge> (amount=1) for permanent | WHEN turn_end by mine player IF keyword_condition Barricade DO give_keyword self <Charge> (amount=1) for permanent
+  Redanian Archer -> Redanian Secret Service: triggers: has Zeal; also has Charge
+     Redanian Archer: (rows above)
+     Redanian Secret Service: (rows above)
+  Voymir -> Redanian Archer: enables: gives it Armor for its effect
+     Voymir: KW: Deploy | WHEN played of self DO stat_change chosen mine unit in board (strength=1) for permanent THEN stat_change all mine unit in board [state is copy_of_it] (strength=1) for permanent THEN give_keyword it mine unit in board <Armor> (amount=1) for permanent THEN give_keyword all mine unit in board [state is copy_of_it] <Armor> (amount=1) for permanent
+     Redanian Archer: (rows above)
+Right Fucking Flank (2 partners): KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent
+  Right Fucking Flank -> Redanian Secret Service: triggers: has Doomed
+     Right Fucking Flank: (rows above)
+     Redanian Secret Service: (rows above)
+  Poor Fucking Infantry -> Right Fucking Flank: puts it into play: summons
+     Poor Fucking Infantry: (rows above)
+     Right Fucking Flank: (rows above)
+Sabrina Glevissig (2 partners): KW: Disloyal, Deathwish | WHEN always DO give_keyword self <Disloyal> for permanent | WHEN always DO give_keyword self <Disloyal> for permanent | WHEN dies of self DO damage all unit in board [position is same_row] (amount=3) | WHEN dies of self DO damage all unit in board [position is same_row] (amount=3)
+  Bloody Baron -> Sabrina Glevissig: triggers: kills it for its death effect
+     Bloody Baron: (rows above)
+     Sabrina Glevissig: (rows above)
+  Sabrina Glevissig -> Redanian Secret Service: triggers: has Disloyal; also has Spying
+     Sabrina Glevissig: (rows above)
+     Redanian Secret Service: (rows above)
+-- c) special cards, one line per reason: is something wrong or missing?
+Amphibious Assault (5 partners): (rows above)
+  Amphibious Assault -> Bloody Baron: enables: changes units' stats: Bloody Baron gives them Bleeding
+     Amphibious Assault: (rows above)
+     Bloody Baron: (rows above)
+  Amphibious Assault -> Vernon Roche: triggers: plays it: its effect goes off
+     Amphibious Assault: (rows above)
+     Vernon Roche: (rows above)
+Bloody Baron (11 partners): (rows above)
+  Bloody Baron -> Redanian Secret Service: triggers: has Formation; also has Zeal; also makes your units get a keyword or status
+     Bloody Baron: (rows above)
+     Redanian Secret Service: (rows above)
+Crystal Skull (2 partners): (rows above)
+Mobilization (3 partners): KW: Order | WHEN activated of self DO copy chosen mine unit in board [state is bronze] [type is Soldier] to mine position [position is same_row] in board THEN stat_change it (strength=3) for permanent THEN stat_change it mine unit [state is created] (strength=3) for permanent
+  Mobilization -> Bloody Baron: enables: changes units' stats: Bloody Baron gives them Bleeding
+     Mobilization: (rows above)
+     Bloody Baron: (rows above)
+  Queen Adalia -> Mobilization: enables: creates cards: Mobilization copys them
+     Queen Adalia: (rows above)
+     Mobilization: (rows above)
+  Mobilization -> Queen Adalia: enables: creates cards: Queen Adalia copys them
+     Mobilization: (rows above)
+     Queen Adalia: (rows above)
+Philippa: Blind Fury (2 partners): (rows above)
+Princess Adda (8 partners): (rows above)
+  Princess Adda -> Redanian Secret Service: triggers: has Immunity
+     Princess Adda: (rows above)
+     Redanian Secret Service: (rows above)
+  Princess Adda -> Bloody Baron: enables: changes units' stats: Bloody Baron gives them Bleeding
+     Princess Adda: (rows above)
+     Bloody Baron: (rows above)
+  Drakenborg -> Princess Adda: triggers: puts units into play
+     Drakenborg: KW: Resilience, Order, Deploy | WHEN always DO give_keyword self <Resilience> for permanent | WHEN always DO give_keyword self <Resilience> for permanent | WHEN played of self DO summon chosen mine unit in deck to mine position [position is same_row] THEN give_keyword it <Lock> for permanent | WHEN played of self DO summon chosen mine unit in deck to mine position [position is same_row] THEN give_keyword it <Lock> for permanent | WHEN activated of self DO give_keyword chosen mine unit in board <Vitality> (amount=sum (listed + stat boost of (mine unit in board [state is summoned_this_round]))) for permanent | WHEN activated of self DO give_keyword chosen mine unit in board <Vitality> (amount=sum (0 + stat strength of (mine unit in board [state is summoned_this_round]) + minus (stat base_power of (mine unit in board [state is summoned_this_round])))) for permanent
+     Princess Adda: (rows above)
+  Vernon Roche -> Princess Adda: triggers: plays it: its effect goes off
+     Vernon Roche: (rows above)
+     Princess Adda: (rows above)
+Queen Adalia (5 partners): (rows above)
+  Queen Adalia -> Redanian Secret Service: triggers: makes your units get a keyword or status
+     Queen Adalia: (rows above)
+     Redanian Secret Service: (rows above)
+  Vernon Roche -> Queen Adalia: triggers: plays it: its effect goes off
+     Vernon Roche: (rows above)
+     Queen Adalia: (rows above)
+Vernon Roche (7 partners): (rows above)
+  Vernon Roche -> Redanian Secret Service: triggers: has Disloyal; also has Spying
+     Vernon Roche: (rows above)
+     Redanian Secret Service: (rows above)
+  Vernon Roche -> Poor Fucking Infantry: triggers: plays it: its effect goes off
+     Vernon Roche: (rows above)
+     Poor Fucking Infantry: (rows above)
+
+=== gwent / Shieldwall: Roegner Ale Damsel: 23 cards, 61 lines
+-- a) 1 cards with no partner in the deck, each beside 10 deck cards: is a line missed?
+Margarita Laux-Antille: (rows above)
+    ? Shieldwall: KW: Charge, Order | WHEN activated of self DO stat_change chosen mine unit in board (strength=2) for permanent THEN give_keyword it <Shield> for permanent | WHEN always DO give_keyword self <Charge> (amount=3) for permanent
+    ? Tactical Advantage: (rows above)
+    ? Redanian Knight: KW: Grace | WHEN turn_end by mine player IF keyword_condition Barricade; keyword_condition Ranged DO stat_change self (strength=1) for permanent | WHEN keyword_removed of self [keyword is Armor] DO move self to mine position [position is front_row] THEN damage highest enemy unit by strength in board (amount=2) | WHEN stat_changed of self IF keyword_condition Grace 8 DO stat_change all unit in board [position is sides] (strength=1) for permanent
+    ? Mahakam Ale: WHEN played of self DO stat_change chosen unit in board (strength=5) for permanent THEN remove_keyword it <Lock>
+    ? Ale of the Ancestors: KW: Resilience, Zeal, Order | WHEN always DO give_keyword self <Resilience> for permanent | WHEN always DO give_keyword self <Zeal> for permanent | WHEN activated of self DO stat_change chosen unit in board (strength=3) for permanent THEN give_ability it <Infused> THEN give_ability it <Infused> | WHEN always DO keyword_action <Cooldown> (amount=2)
+    ? Damned Sorceress: KW: Zeal, Order | WHEN always DO give_keyword self <Zeal> for permanent | WHEN activated of self DO remove_keyword chosen unit in board <Shield> THEN stat_change self (strength=2) for permanent | WHEN always DO keyword_action <Cooldown> (amount=1)
+    ? King Roegner: WHEN played of self IF keyword_condition Melee DO remove_keyword all unit in board <Shield> THEN stat_change self (strength=3) for permanent
+    ? Prince Anséis: KW: Formation, Order, Inspired | WHEN always DO give_keyword self <Formation> for permanent | WHEN activated of self IF keyword_condition Inspired not DO damage chosen enemy unit in board (amount=4) | WHEN activated of self IF keyword_condition Inspired DO keyword_action chosen enemy unit in board to self <Duel> for unstated
+    ? Cintrian Knight: KW: Deploy, Grace | WHEN played of self DO damage chosen enemy unit in board (amount=2) | WHEN killed by self DO give_keyword self <Vitality> (amount=2) for permanent | WHEN always IF keyword_condition Grace 6 DO stat_change self (strength=2) for permanent
+    ? Immortals: KW: Shield, Melee | WHEN always DO give_keyword self <Shield> for permanent | WHEN keyword_removed of self [keyword is Shield] IF keyword_condition Melee DO stat_change self (strength=2) for permanent | WHEN turn_end by mine player DO give_keyword self <Shield> for permanent
+-- b) the 10 cards with the fewest partners, all their lines: is a line missed?
+Damned Sorceress (1 partners): (rows above)
+  Damned Sorceress -> Immortals: triggers: makes this happen: keyword removed
+     Damned Sorceress: (rows above)
+     Immortals: (rows above)
+Griffin Witcher Adept (1 partners): KW: Shield, Order | WHEN always DO give_keyword self <Shield> for permanent | WHEN activated of self DO transform chosen mine unit in board [type is Witcher] <Griffin Witcher Adept>
+  Griffin Witcher Adept -> Target Practice: enables: is a Witcher it asks for
+     Griffin Witcher Adept: (rows above)
+     Target Practice: WHEN played of self IF have all mine unit in board [type is Witcher] [position is same_row] not DO stat_change chosen mine unit in board (strength=4) for permanent | WHEN played of self IF have all mine unit in board [type is Witcher] [position is same_row] DO stat_change chosen mine unit in board (strength=4) for permanent THEN summon to chosen mine position [position is same_row] <Witcher Student>
+Ale of the Ancestors (2 partners): (rows above)
+  Ale of the Ancestors -> Prince Anséis: enables: changes its stats for its effect
+     Ale of the Ancestors: (rows above)
+     Prince Anséis: (rows above)
+  Ale of the Ancestors -> Cintrian Knight: enables: changes its stats for its effect
+     Ale of the Ancestors: (rows above)
+     Cintrian Knight: (rows above)
+Immortal Cavalry (2 partners): KW: Shield, Deploy | WHEN always DO give_keyword self <Shield> for permanent | WHEN played of self DO copy self [state is created] to mine position [position is same_row] in board
+  Oneiromancy -> Immortal Cavalry: triggers: plays it: its effect goes off
+     Oneiromancy: KW: Echo | WHEN always DO give_keyword self <Echo> for permanent | WHEN played of self DO play_card chosen mine card in deck
+     Immortal Cavalry: (rows above)
+  Amphibious Assault -> Immortal Cavalry: triggers: plays it: its effect goes off
+     Amphibious Assault: (rows above)
+     Immortal Cavalry: (rows above)
+Witcher Student (2 partners): KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent
+  Keldar -> Witcher Student: puts it into play: summons
+     Keldar: KW: Adrenaline | WHEN played of mine spell DO summon to chosen mine position [position is same_row] <Witcher Student> | WHEN turn_end by mine player IF keyword_condition Adrenaline 4 DO summon to chosen mine position [position is same_row] <Witcher Student>
+     Witcher Student: (rows above)
+  Target Practice -> Witcher Student: puts it into play: summons
+     Target Practice: (rows above)
+     Witcher Student: (rows above)
+  Witcher Student -> Target Practice: enables: is a Witcher it asks for
+     Witcher Student: (rows above)
+     Target Practice: (rows above)
+King Roegner (3 partners): (rows above)
+  King Roegner -> Immortals: triggers: makes this happen: keyword removed
+     King Roegner: (rows above)
+     Immortals: (rows above)
+  Oneiromancy -> King Roegner: triggers: plays it: its effect goes off
+     Oneiromancy: (rows above)
+     King Roegner: (rows above)
+  Amphibious Assault -> King Roegner: triggers: plays it: its effect goes off
+     Amphibious Assault: (rows above)
+     King Roegner: (rows above)
+Mahakam Ale (3 partners): (rows above)
+  Mahakam Ale -> Prince Anséis: enables: changes its stats for its effect
+     Mahakam Ale: (rows above)
+     Prince Anséis: (rows above)
+  Mahakam Ale -> Cintrian Knight: enables: changes its stats for its effect
+     Mahakam Ale: (rows above)
+     Cintrian Knight: (rows above)
+  Mahakam Ale -> Keldar: triggers: is a spell whose playing sets off its effect
+     Mahakam Ale: (rows above)
+     Keldar: (rows above)
+Shieldwall (3 partners): (rows above)
+  Shieldwall -> Immortals: enables: gives it Shield for its effect; also triggers: makes this happen: keyword removed
+     Shieldwall: (rows above)
+     Immortals: (rows above)
+  Shieldwall -> Prince Anséis: enables: changes its stats for its effect
+     Shieldwall: (rows above)
+     Prince Anséis: (rows above)
+  Shieldwall -> Cintrian Knight: enables: changes its stats for its effect
+     Shieldwall: (rows above)
+     Cintrian Knight: (rows above)
+Squire (3 partners): KW: Order | WHEN activated of self DO give_ability self for permanent
+  Squire -> Damsel in Distress: enables: makes your units get Grace; also triggers: is a Knight whose playing sets off its effect
+     Squire: (rows above)
+     Damsel in Distress: KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent | WHEN played of mine unit in board [type is Knight] DO stage_advance self | WHEN played of self DO summon chosen mine card in deck [state is bronze] [type is Knight] to chosen mine position [position is same_row] in board | WHEN keyword_used of mine unit in board [keyword is Grace] IF stage 1 DO stat_change all mine unit in board [position is sides] (strength=2) for permanent | WHEN played of mine unit in board [type is Knight] IF stage 2 DO create in hand <Mad Charge> THEN play_card chosen mine card in hand [card is Mad Charge] in hand
+  Squire -> Prince Anséis: enables: changes its stats for its effect
+     Squire: (rows above)
+     Prince Anséis: (rows above)
+  Squire -> Cintrian Knight: enables: changes its stats for its effect
+     Squire: (rows above)
+     Cintrian Knight: (rows above)
+  Damsel in Distress -> Squire: puts it into play: puts it into play from the deck
+     Damsel in Distress: (rows above)
+     Squire: (rows above)
+Tactical Advantage (3 partners): (rows above)
+  Tactical Advantage -> Prince Anséis: enables: changes its stats for its effect
+     Tactical Advantage: (rows above)
+     Prince Anséis: (rows above)
+  Tactical Advantage -> Cintrian Knight: enables: changes its stats for its effect
+     Tactical Advantage: (rows above)
+     Cintrian Knight: (rows above)
+  Tactical Advantage -> Keldar: triggers: is a spell whose playing sets off its effect
+     Tactical Advantage: (rows above)
+     Keldar: (rows above)
+-- c) special cards, one line per reason: is something wrong or missing?
+Ale of the Ancestors (2 partners): (rows above)
+Amphibious Assault (7 partners): (rows above)
+  Amphibious Assault -> Damsel in Distress: triggers: is played
+     Amphibious Assault: (rows above)
+     Damsel in Distress: (rows above)
+  Amphibious Assault -> Prince Anséis: enables: changes its stats for its effect
+     Amphibious Assault: (rows above)
+     Prince Anséis: (rows above)
+  Amphibious Assault -> Cintrian Knight: enables: changes its stats for its effect; also triggers: plays it: its effect goes off
+     Amphibious Assault: (rows above)
+     Cintrian Knight: (rows above)
+  Lady of the Lake -> Amphibious Assault: puts it into play: puts it into play from the deck
+     Lady of the Lake: KW: Deploy | WHEN played of self DO play_card chosen mine card in deck [keyword is Echo]
+     Amphibious Assault: (rows above)
+  Amphibious Assault -> Keldar: triggers: is a spell whose playing sets off its effect
+     Amphibious Assault: (rows above)
+     Keldar: (rows above)
+Damsel in Distress (10 partners): (rows above)
+  Damsel in Distress -> Keldar: triggers: fills your hand; also is played
+     Damsel in Distress: (rows above)
+     Keldar: (rows above)
+  Damsel in Distress -> Prince Anséis: puts it into play: puts it into play from the deck; also enables: changes its stats for its effect
+     Damsel in Distress: (rows above)
+     Prince Anséis: (rows above)
+  Knight-Errant -> Damsel in Distress: triggers: uses Grace; also is a Knight whose playing sets off its effect
+     Knight-Errant: KW: Grace | WHEN turn_end by mine player DO stat_change self (strength=count of (all unit in board [position is sides] [state is buffed])) for permanent THEN damage self (amount=count of (all unit in board [position is sides] [state is damaged])) | WHEN turn_end by mine player DO stat_change self (strength=count of (all mine unit in board [position is sides] [state is buffed])) for permanent THEN damage self (amount=count of (all mine unit in board [position is sides] [state is damaged])) | WHEN stat_changed of self IF keyword_condition Grace 9 DO give_keyword all unit in board [position is sides] <Shield> for permanent THEN give_ability all unit in board [position is sides] <Infused> | WHEN stat_changed of self IF keyword_condition Grace 9 DO give_keyword all mine unit in board [position is sides] <Shield> for permanent THEN give_ability all mine unit in board [position is sides] <Infused>
+     Damsel in Distress: (rows above)
+  Damsel in Distress -> Mad Charge: puts it into play: creates; also puts it into play from the hand
+     Damsel in Distress: (rows above)
+     Mad Charge: WHEN played of self DO stat_change chosen mine unit in board (strength=5) for permanent THEN give_keyword it mine unit in board <Armor> (amount=2) for permanent THEN give_keyword it mine unit in board [type is Knight] <Vitality> (amount=2) for permanent
+  Damsel in Distress -> Redanian Knight: puts it into play: puts it into play from the deck
+     Damsel in Distress: (rows above)
+     Redanian Knight: (rows above)
+  Prince Anséis -> Damsel in Distress: triggers: is a Knight whose playing sets off its effect
+     Prince Anséis: (rows above)
+     Damsel in Distress: (rows above)
+King Roegner (3 partners): (rows above)
+Lady of the Lake (4 partners): (rows above)
+  Lady of the Lake -> Damsel in Distress: triggers: is played
+     Lady of the Lake: (rows above)
+     Damsel in Distress: (rows above)
+  Oneiromancy -> Lady of the Lake: triggers: plays it: its effect goes off
+     Oneiromancy: (rows above)
+     Lady of the Lake: (rows above)
+  Lady of the Lake -> Oneiromancy: puts it into play: puts it into play from the deck
+     Lady of the Lake: (rows above)
+     Oneiromancy: (rows above)
+Oneiromancy (6 partners): (rows above)
+  Oneiromancy -> Damsel in Distress: triggers: is played
+     Oneiromancy: (rows above)
+     Damsel in Distress: (rows above)
+  Oneiromancy -> Keldar: triggers: is played; also is a spell whose playing sets off its effect
+     Oneiromancy: (rows above)
+     Keldar: (rows above)
+Prince Anséis (11 partners): (rows above)
+  Prince Anséis -> Knight-Errant: enables: damages units or players
+     Prince Anséis: (rows above)
+     Knight-Errant: (rows above)
+Shieldwall (3 partners): (rows above)
+Tactical Advantage (3 partners): (rows above)

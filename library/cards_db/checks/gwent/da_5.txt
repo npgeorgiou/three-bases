@@ -1,0 +1,541 @@
+=== gwent / Tactical Decision: OP GN HyperThin: 26 cards, 121 lines
+-- a) 0 cards with no partner in the deck, each beside 10 deck cards: is a line missed?
+-- b) the 10 cards with the fewest partners, all their lines: is a line missed?
+The Guardian (1 partners): KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent
+  Blightmaker -> The Guardian: puts it into play: summons
+     Blightmaker: KW: Deploy | WHEN played of self DO move chosen mine card in deck in deck_top THEN summon it [type is Mage] to chosen mine position [position is same_row] <The Guardian> THEN create in hand <Cow Carcass> THEN play_card chosen mine card in hand [card is Cow Carcass]
+     The Guardian: (rows above)
+Ciri: Nova (3 partners): KW: Deploy | WHEN played of self IF have mine card in deck [state is started_in_deck] [cost ge 10] [card not Ciri: Nova] [card not Golden Nekker] not DO give_keyword self <Resilience> for permanent THEN give_keyword self <Shield> for permanent THEN give_keyword self <Veil> for permanent
+  Royal Decree -> Ciri: Nova: triggers: plays it: its effect goes off
+     Royal Decree: (rows above)
+     Ciri: Nova: (rows above)
+  Lydia van Bredevoort -> Ciri: Nova: triggers: plays it: its effect goes off
+     Lydia van Bredevoort: WHEN played of self IF keyword_condition Melee DO create chosen mine card in hand [state is bronze] [category is spell] [state is opponent_faction] in hand THEN play_card chosen mine card in hand [state is created] in hand | WHEN played of self IF keyword_condition Ranged DO play_card chosen enemy card in discard [state is bronze] [category is spell] in discard
+     Ciri: Nova: (rows above)
+  Golden Nekker -> Ciri: Nova: triggers: plays it: its effect goes off
+     Golden Nekker: KW: Deploy | WHEN played of self IF have mine card [state is started_in_deck] [cost ge 10] [card not Ciri: Nova] [card not Golden Nekker] not DO play_card top mine unit in deck THEN play_card top mine card in deck [category is spell] THEN play_card top mine card in deck [category is landmark]
+     Ciri: Nova: (rows above)
+Imperial Golem (3 partners): KW: Deploy | WHEN played of self DO keyword_action top enemy unit in deck <Reveal> for unstated THEN damage self (amount=stat strength of (it enemy unit in deck)) THEN shuffle_into_deck it enemy unit in deck
+  Royal Decree -> Imperial Golem: triggers: plays it: its effect goes off
+     Royal Decree: (rows above)
+     Imperial Golem: (rows above)
+  Lydia van Bredevoort -> Imperial Golem: triggers: plays it: its effect goes off
+     Lydia van Bredevoort: (rows above)
+     Imperial Golem: (rows above)
+  Golden Nekker -> Imperial Golem: triggers: plays it: its effect goes off
+     Golden Nekker: (rows above)
+     Imperial Golem: (rows above)
+Tactical Decision (3 partners): KW: Order | WHEN activated of self DO create in hand <Morvran Voorhis> THEN play_card it card
+  Tactical Decision -> Roach: triggers: is played
+     Tactical Decision: (rows above)
+     Roach: WHEN played of mine card [state is gold] DO summon self to random mine position
+  Tactical Decision -> Lydia van Bredevoort: enables: creates cards
+     Tactical Decision: (rows above)
+     Lydia van Bredevoort: (rows above)
+  Tactical Decision -> Morvran Voorhis: puts it into play: creates
+     Tactical Decision: (rows above)
+     Morvran Voorhis: KW: Doomed, Deploy | WHEN always DO give_keyword self <Doomed> for permanent | WHEN played of self DO draw mine card in deck_top (amount=3, max=3) THEN put_on_top event_amount chosen mine card in hand
+Strays of Spalla (4 partners): KW: Deploy, Bonded | WHEN played of self IF keyword_condition Bonded not DO shuffle_into_deck chosen mine card in hand [state is gold] THEN draw mine card in deck [state is bronze] (amount=1) THEN stat_change self (strength=4) for permanent | WHEN played of self IF keyword_condition Bonded DO shuffle_into_deck chosen mine card in hand [state is gold] THEN stat_change self (strength=4) for permanent
+  Strays of Spalla -> Snowdrop: triggers: makes you draw cards
+     Strays of Spalla: (rows above)
+     Snowdrop: KW: Zeal, Order | WHEN always DO give_keyword self <Zeal> for permanent | WHEN activated of self DO draw chosen mine card in deck_top (amount=2, max=2) THEN shuffle_into_deck 2 chosen mine card in hand | WHEN drawn by mine player DO stat_change self (strength=2) for permanent
+  Royal Decree -> Strays of Spalla: triggers: plays it: its effect goes off
+     Royal Decree: (rows above)
+     Strays of Spalla: (rows above)
+  Lydia van Bredevoort -> Strays of Spalla: triggers: plays it: its effect goes off
+     Lydia van Bredevoort: (rows above)
+     Strays of Spalla: (rows above)
+  Golden Nekker -> Strays of Spalla: triggers: plays it: its effect goes off
+     Golden Nekker: (rows above)
+     Strays of Spalla: (rows above)
+Xarthisius (4 partners): KW: Deploy | WHEN played of self DO keyword_action random mine card in deck <Reveal> for unstated THEN stat_change self (strength=stat strength of (it mine unit in deck)) for permanent THEN shuffle_into_deck it mine unit in deck THEN play_card it mine card in deck [category in spell] [category in landmark]
+  Xarthisius -> Roach: triggers: is played
+     Xarthisius: (rows above)
+     Roach: (rows above)
+  Royal Decree -> Xarthisius: triggers: plays it: its effect goes off
+     Royal Decree: (rows above)
+     Xarthisius: (rows above)
+  Lydia van Bredevoort -> Xarthisius: triggers: plays it: its effect goes off
+     Lydia van Bredevoort: (rows above)
+     Xarthisius: (rows above)
+  Golden Nekker -> Xarthisius: triggers: plays it: its effect goes off
+     Golden Nekker: (rows above)
+     Xarthisius: (rows above)
+Albrich (5 partners): WHEN moves of self IF have self in deck_top DO stat_change random mine unit in board (strength=2) for permanent THEN stat_change self (strength=2) for permanent
+  Blightmaker -> Albrich: triggers: moves it for its effect
+     Blightmaker: (rows above)
+     Albrich: (rows above)
+  Cursed Scroll -> Albrich: triggers: moves it for its effect
+     Cursed Scroll: KW: Order | WHEN activated of self DO draw chosen mine card in deck (amount=1) THEN move chosen mine card in hand in deck_bottom
+     Albrich: (rows above)
+  Fisher King -> Albrich: triggers: moves it for its effect
+     Fisher King: WHEN played of self IF keyword_condition Ranged DO move chosen mine card in deck in deck_top
+     Albrich: (rows above)
+  Doadrick Leumaerts -> Albrich: triggers: moves it for its effect
+     Doadrick Leumaerts: KW: Deploy | WHEN played of self IF have all mine unit in board [type is Agent] is DO give_keyword self <Zeal> for permanent | WHEN activated of self IF keyword_condition Ranged DO draw mine card in deck_top (amount=1) THEN move chosen mine card in hand in deck_bottom | WHEN always DO keyword_action <Cooldown> (amount=1)
+     Albrich: (rows above)
+  Maxii van Dekkar -> Albrich: triggers: moves it for its effect
+     Maxii van Dekkar: KW: Deploy | WHEN played of self DO look all mine card in deck THEN shuffle_into_deck all mine card in deck THEN move chosen mine card in deck in deck_bottom
+     Albrich: (rows above)
+Cow Carcass (5 partners): KW: Doomed, Disloyal | WHEN always DO give_keyword self <Doomed> for permanent | WHEN always DO give_keyword self <Disloyal> for permanent | WHEN turn_end by mine player DO give_keyword all mine unit in board [position is sides] <Poison> for permanent THEN kill self
+  Blightmaker -> Cow Carcass: puts it into play: puts it into play from the hand; also creates; also enables: Blightmaker moves Cow Carcass and your units, and Cow Carcass acts on units next to it
+     Blightmaker: (rows above)
+     Cow Carcass: (rows above)
+  Cursed Scroll -> Cow Carcass: enables: Cursed Scroll moves Cow Carcass and your units, and Cow Carcass acts on units next to it
+     Cursed Scroll: (rows above)
+     Cow Carcass: (rows above)
+  Fisher King -> Cow Carcass: enables: Fisher King moves Cow Carcass and your units, and Cow Carcass acts on units next to it
+     Fisher King: (rows above)
+     Cow Carcass: (rows above)
+  Doadrick Leumaerts -> Cow Carcass: enables: Doadrick Leumaerts moves Cow Carcass and your units, and Cow Carcass acts on units next to it
+     Doadrick Leumaerts: (rows above)
+     Cow Carcass: (rows above)
+  Maxii van Dekkar -> Cow Carcass: enables: Maxii van Dekkar moves Cow Carcass and your units, and Cow Carcass acts on units next to it
+     Maxii van Dekkar: (rows above)
+     Cow Carcass: (rows above)
+Morvran Voorhis (5 partners): (rows above)
+  Morvran Voorhis -> Snowdrop: triggers: makes you draw cards
+     Morvran Voorhis: (rows above)
+     Snowdrop: (rows above)
+  Royal Decree -> Morvran Voorhis: triggers: plays it: its effect goes off
+     Royal Decree: (rows above)
+     Morvran Voorhis: (rows above)
+  Lydia van Bredevoort -> Morvran Voorhis: triggers: plays it: its effect goes off
+     Lydia van Bredevoort: (rows above)
+     Morvran Voorhis: (rows above)
+  Golden Nekker -> Morvran Voorhis: triggers: plays it: its effect goes off
+     Golden Nekker: (rows above)
+     Morvran Voorhis: (rows above)
+Snowdrop (5 partners): (rows above)
+  Doadrick Leumaerts -> Snowdrop: triggers: makes you draw cards
+     Doadrick Leumaerts: (rows above)
+     Snowdrop: (rows above)
+  Vicovaro Novice -> Snowdrop: triggers: makes you draw cards
+     Vicovaro Novice: WHEN played of self IF keyword_condition Ranged DO draw mine card in deck_top (amount=1) THEN put_on_top chosen mine card in hand | WHEN played of self IF keyword_condition Ranged DO draw mine card in deck_top (amount=1) THEN put_on_top chosen mine card in hand
+     Snowdrop: (rows above)
+  Cursed Scroll -> Snowdrop: triggers: makes you draw cards
+     Cursed Scroll: (rows above)
+     Snowdrop: (rows above)
+-- c) special cards, one line per reason: is something wrong or missing?
+Ciri: Nova (3 partners): (rows above)
+Cursed Scroll (13 partners): (rows above)
+  Cursed Scroll -> Doadrick Leumaerts: enables: Cursed Scroll moves Doadrick Leumaerts, and Doadrick Leumaerts acts on units back row it
+     Cursed Scroll: (rows above)
+     Doadrick Leumaerts: (rows above)
+  Cursed Scroll -> Alba Armored Cavalry: enables: Cursed Scroll moves Alba Armored Cavalry, and Alba Armored Cavalry acts on units front row it
+     Cursed Scroll: (rows above)
+     Alba Armored Cavalry: (rows above)
+  Cursed Scroll -> Courier: enables: Cursed Scroll moves Courier, and Courier acts on units back row it or front row it
+     Cursed Scroll: (rows above)
+     Courier: WHEN played of self IF keyword_condition Melee DO look 3 enemy card in deck_top THEN choose_card chosen enemy card in deck_top THEN put_on_top it card | WHEN played of self IF keyword_condition Melee DO look 3 top enemy card in deck THEN put_on_top chosen enemy card in deck | WHEN played of self IF keyword_condition Ranged DO look 3 mine card in deck_top THEN choose_card chosen mine card in deck_top THEN put_on_top it card | WHEN played of self IF keyword_condition Ranged DO look 3 top mine card in deck THEN put_on_top chosen mine card in deck
+  Cursed Scroll -> Mage Assassin: triggers: moves it for its effect
+     Cursed Scroll: (rows above)
+     Mage Assassin: KW: Deploy | WHEN played of self DO damage chosen enemy unit in board (amount=2) | WHEN moves of self IF my_turn DO summon self to random mine position in board <Mage Assassin> THEN damage random enemy unit in board (amount=2)
+  Cursed Scroll -> Summoning Circle: enables: Cursed Scroll moves Summoning Circle and your units, and Summoning Circle acts on units next to it
+     Cursed Scroll: (rows above)
+     Summoning Circle: KW: Resilience, Deploy | WHEN always DO give_keyword self <Resilience> for permanent | WHEN played of self DO look all mine unit in deck THEN choose_card chosen mine unit in deck THEN give_keyword self <Counter> (amount=stat cost of (it mine unit in deck)) for permanent | WHEN turn_end by mine player DO give_keyword self <Counter> (amount=minus (count of (all mine unit in board [position is sides]))) for permanent | WHEN countdown_done of self DO summon it mine unit in deck to mine position [position is same_row] THEN kill self
+  Cursed Scroll -> Fisher King: enables: Cursed Scroll moves Fisher King, and Fisher King acts on units back row it
+     Cursed Scroll: (rows above)
+     Fisher King: (rows above)
+  Cursed Scroll -> Lydia van Bredevoort: enables: Cursed Scroll moves Lydia van Bredevoort, and Lydia van Bredevoort acts on units back row it or front row it
+     Cursed Scroll: (rows above)
+     Lydia van Bredevoort: (rows above)
+  Cursed Scroll -> Vicovaro Novice: enables: Cursed Scroll moves Vicovaro Novice, and Vicovaro Novice acts on units back row it
+     Cursed Scroll: (rows above)
+     Vicovaro Novice: (rows above)
+  Cursed Scroll -> Vilgefortz: enables: Cursed Scroll moves Vilgefortz, and Vilgefortz acts on units back row it or front row it
+     Cursed Scroll: (rows above)
+     Vilgefortz: WHEN played of self IF keyword_condition Melee DO kill chosen enemy unit in board THEN summon top enemy unit in deck [state is bronze] to random enemy position | WHEN played of self IF keyword_condition Ranged DO kill chosen mine unit in board THEN summon top mine unit in deck to random mine position
+  Cursed Scroll -> Yennefer: Divination: enables: Cursed Scroll moves Yennefer: Divination, and Yennefer: Divination acts on units back row it
+     Cursed Scroll: (rows above)
+     Yennefer: Divination: WHEN played of self IF keyword_condition Ranged DO keyword_action random mine unit in deck <Reveal> for unstated THEN stat_change chosen mine unit in board (strength=stat strength of (it mine unit in deck)) for permanent
+Doadrick Leumaerts (17 partners): (rows above)
+  Blightmaker -> Doadrick Leumaerts: enables: is an Agent it asks for; also Blightmaker moves Doadrick Leumaerts, and Doadrick Leumaerts acts on units back row it
+     Blightmaker: (rows above)
+     Doadrick Leumaerts: (rows above)
+  Fisher King -> Doadrick Leumaerts: enables: Fisher King moves Doadrick Leumaerts, and Doadrick Leumaerts acts on units back row it
+     Fisher King: (rows above)
+     Doadrick Leumaerts: (rows above)
+  Doadrick Leumaerts -> Alba Armored Cavalry: enables: Doadrick Leumaerts moves Alba Armored Cavalry, and Alba Armored Cavalry acts on units front row it
+     Doadrick Leumaerts: (rows above)
+     Alba Armored Cavalry: (rows above)
+  Doadrick Leumaerts -> Courier: enables: Doadrick Leumaerts moves Courier, and Courier acts on units back row it or front row it
+     Doadrick Leumaerts: (rows above)
+     Courier: (rows above)
+  Doadrick Leumaerts -> Mage Assassin: triggers: moves it for its effect
+     Doadrick Leumaerts: (rows above)
+     Mage Assassin: (rows above)
+  Doadrick Leumaerts -> Summoning Circle: enables: Doadrick Leumaerts moves Summoning Circle and your units, and Summoning Circle acts on units next to it
+     Doadrick Leumaerts: (rows above)
+     Summoning Circle: (rows above)
+  Doadrick Leumaerts -> Fisher King: enables: Doadrick Leumaerts moves Fisher King, and Fisher King acts on units back row it
+     Doadrick Leumaerts: (rows above)
+     Fisher King: (rows above)
+  Doadrick Leumaerts -> Lydia van Bredevoort: enables: Doadrick Leumaerts moves Lydia van Bredevoort, and Lydia van Bredevoort acts on units back row it or front row it
+     Doadrick Leumaerts: (rows above)
+     Lydia van Bredevoort: (rows above)
+  Doadrick Leumaerts -> Vicovaro Novice: enables: Doadrick Leumaerts moves Vicovaro Novice, and Vicovaro Novice acts on units back row it
+     Doadrick Leumaerts: (rows above)
+     Vicovaro Novice: (rows above)
+  Doadrick Leumaerts -> Vilgefortz: enables: Doadrick Leumaerts moves Vilgefortz, and Vilgefortz acts on units back row it or front row it
+     Doadrick Leumaerts: (rows above)
+     Vilgefortz: (rows above)
+  Doadrick Leumaerts -> Yennefer: Divination: enables: Doadrick Leumaerts moves Yennefer: Divination, and Yennefer: Divination acts on units back row it
+     Doadrick Leumaerts: (rows above)
+     Yennefer: Divination: (rows above)
+  Maxii van Dekkar -> Doadrick Leumaerts: enables: Maxii van Dekkar moves Doadrick Leumaerts, and Doadrick Leumaerts acts on units back row it
+     Maxii van Dekkar: (rows above)
+     Doadrick Leumaerts: (rows above)
+  Royal Decree -> Doadrick Leumaerts: triggers: plays it: its effect goes off
+     Royal Decree: (rows above)
+     Doadrick Leumaerts: (rows above)
+  Courier -> Doadrick Leumaerts: enables: is an Agent it asks for
+     Courier: (rows above)
+     Doadrick Leumaerts: (rows above)
+Golden Nekker (17 partners): (rows above)
+  Golden Nekker -> Roach: triggers: is played
+     Golden Nekker: (rows above)
+     Roach: (rows above)
+  Golden Nekker -> Vicovaro Novice: triggers: plays it: its effect goes off
+     Golden Nekker: (rows above)
+     Vicovaro Novice: (rows above)
+Morvran Voorhis (5 partners): (rows above)
+Royal Decree (17 partners): (rows above)
+  Royal Decree -> Roach: triggers: is played
+     Royal Decree: (rows above)
+     Roach: (rows above)
+  Royal Decree -> Vicovaro Novice: triggers: plays it: its effect goes off
+     Royal Decree: (rows above)
+     Vicovaro Novice: (rows above)
+Snowdrop (5 partners): (rows above)
+Tactical Decision (3 partners): (rows above)
+Vilgefortz (8 partners): (rows above)
+  Blightmaker -> Vilgefortz: enables: Blightmaker moves Vilgefortz, and Vilgefortz acts on units back row it or front row it
+     Blightmaker: (rows above)
+     Vilgefortz: (rows above)
+  Fisher King -> Vilgefortz: enables: Fisher King moves Vilgefortz, and Vilgefortz acts on units back row it or front row it
+     Fisher King: (rows above)
+     Vilgefortz: (rows above)
+  Maxii van Dekkar -> Vilgefortz: enables: Maxii van Dekkar moves Vilgefortz, and Vilgefortz acts on units back row it or front row it
+     Maxii van Dekkar: (rows above)
+     Vilgefortz: (rows above)
+  Royal Decree -> Vilgefortz: triggers: plays it: its effect goes off
+     Royal Decree: (rows above)
+     Vilgefortz: (rows above)
+Xarthisius (4 partners): (rows above)
+Yennefer: Divination (8 partners): (rows above)
+  Blightmaker -> Yennefer: Divination: enables: Blightmaker moves Yennefer: Divination, and Yennefer: Divination acts on units back row it
+     Blightmaker: (rows above)
+     Yennefer: Divination: (rows above)
+  Fisher King -> Yennefer: Divination: enables: Fisher King moves Yennefer: Divination, and Yennefer: Divination acts on units back row it
+     Fisher King: (rows above)
+     Yennefer: Divination: (rows above)
+  Maxii van Dekkar -> Yennefer: Divination: enables: Maxii van Dekkar moves Yennefer: Divination, and Yennefer: Divination acts on units back row it
+     Maxii van Dekkar: (rows above)
+     Yennefer: Divination: (rows above)
+  Royal Decree -> Yennefer: Divination: triggers: plays it: its effect goes off
+     Royal Decree: (rows above)
+     Yennefer: Divination: (rows above)
+
+=== gwent / Imposter: Spicy Recruits Assimilate (by Lerio): 25 cards, 104 lines
+-- a) 1 cards with no partner in the deck, each beside 10 deck cards: is a line missed?
+Crystal Skull: (rows above)
+    ? Imposter: KW: Order | WHEN activated of self DO give_keyword chosen enemy unit in board <Lock> for permanent THEN copy it enemy unit in board [state is created] to mine position [position is opposite_row] in board THEN stat_change it (strength=count of (all enemy unit in board [state in positive] [state in negative] [position is same_row])) for permanent | WHEN activated of self DO give_keyword chosen enemy unit in board <Lock> for permanent THEN copy it to position [position is opposite_row] THEN stat_change it (strength=count of (all enemy unit in board [position is same_row])) for permanent | WHEN played of mine unit [type is Aristocrat] IF amount distinct keyword of (all enemy unit in board [state in positive] [state in negative]) ge 4 DO stat_change it (strength=1) for permanent | WHEN played of mine unit [type is Aristocrat] IF amount distinct keyword of (all enemy unit in board) ge 4 DO stat_change it (strength=1) for permanent
+    ? Recruit: KW: Order | WHEN activated of self DO play_card chosen mine card in deck [state is bronze] [type is Soldier] THEN shuffle_into_deck self
+    ? Mage Torturer: (rows above)
+    ? Torres var Emreis: Founder: KW: Doomed, Order, Deploy | WHEN always DO give_keyword self <Doomed> for permanent | WHEN played of self DO give_keyword 3 chosen enemy unit in deck [cost le 10] <Spying> for permanent THEN copy it [state is created] to mine player in deck THEN stat_change self (strength=stat provisions_below_limit of (3 chosen enemy unit in deck)) for permanent | WHEN activated of self DO keyword_action 3 chosen mine card in deck [state is started_in_deck] <Banish> for unstated | WHEN round_won by mine player DO transform self
+    ? Buhurt: (rows above)
+    ? Operator: KW: Deploy | WHEN played of self DO copy chosen mine unit in hand [state is bronze] [state is created] to chosen mine position [position is same_row] in board THEN copy chosen mine unit in hand [state is bronze] [state is created] to enemy position [position is opposite_row] in board
+    ? Duchess' Informant: KW: Disloyal, Deploy | WHEN always DO give_keyword self <Disloyal> for permanent | WHEN played of self DO copy enemy unit [state is bronze] [keyword not Disloyal] [state is created] in hand THEN play_card it card
+    ? Torres var Emreis: Highest Priest: KW: Doomed, Assimilate, Deploy | WHEN always DO give_keyword self <Doomed> for permanent | WHEN always DO give_keyword self <Doomed> for permanent | WHEN always DO give_keyword self <Assimilate> for permanent | WHEN always DO give_keyword self <Assimilate> for permanent | WHEN played of self IF have mine unit in board [keyword not Doomed] [state not started_in_deck] [card not Torres var Emreis: Highest Priest] is DO return_to_hand chosen mine unit in board [keyword not Doomed] [state not started_in_deck] [card not Torres var Emreis: Highest Priest] THEN stat_change it (strength=2) for permanent THEN give_keyword it <Doomed> for permanent THEN play_card chosen mine card in hand | WHEN played of self IF have mine unit in board [keyword not Doomed] [state not started_in_deck] [card not Torres var Emreis: Highest Priest] is DO return_to_hand chosen mine unit in board [keyword not Doomed] [state not started_in_deck] [card not Torres var Emreis: Highest Priest] THEN stat_change it (strength=2) for permanent THEN give_keyword it <Doomed> for permanent THEN play_card chosen mine card in hand | WHEN played of self IF have mine unit in board [keyword not Doomed] [state not started_in_deck] [card not Torres var Emreis: Highest Priest] not DO create random mine unit [state is opponent_faction] [state is bronze] in hand THEN play_card it THEN stat_change it (strength=2) for permanent | WHEN played of self IF have mine unit in board [keyword not Doomed] [state not started_in_deck] [card not Torres var Emreis: Highest Priest] not DO create random mine unit [state is opponent_faction] [state is bronze] in hand THEN play_card it THEN stat_change it (strength=2) for permanent
+    ? Nauzicaa Sergeant: (rows above)
+    ? Battle Preparation: (rows above)
+-- b) the 10 cards with the fewest partners, all their lines: is a line missed?
+Glynnis aep Loernach (1 partners): KW: Assimilate | WHEN always DO give_keyword self <Assimilate> (amount=2) for permanent
+  Recruit -> Glynnis aep Loernach: puts it into play: puts it into play from the deck
+     Recruit: (rows above)
+     Glynnis aep Loernach: (rows above)
+Ard Feainn Heavy Cavalry (2 partners): KW: Flanking, Ranged | WHEN always DO give_keyword self <Flanking> for permanent | WHEN turn_end by mine player DO give_keyword self <Armor> (amount=1) for permanent | WHEN stat_changed of self IF keyword_condition Ranged; stat self armor ge 5 DO move self to mine position [position is front_row] | WHEN played by enemy player of enemy unit in board IF keyword_condition Barricade; keyword_condition Melee DO damage it (amount=stat armor of (self)) THEN remove_keyword self <Armor> THEN give_keyword self <Lock> for permanent
+  Battle Preparation -> Ard Feainn Heavy Cavalry: enables: gives it Armor for its effect
+     Battle Preparation: (rows above)
+     Ard Feainn Heavy Cavalry: (rows above)
+  Recruit -> Ard Feainn Heavy Cavalry: puts it into play: puts it into play from the deck
+     Recruit: (rows above)
+     Ard Feainn Heavy Cavalry: (rows above)
+Assassination (2 partners): (rows above)
+Buhurt (2 partners): (rows above)
+Mage Torturer (3 partners): (rows above)
+  Torres var Emreis: Highest Priest -> Mage Torturer: triggers: plays it: its effect goes off
+     Torres var Emreis: Highest Priest: (rows above)
+     Mage Torturer: (rows above)
+Alba Armored Cavalry (4 partners): (rows above)
+  Recruit -> Alba Armored Cavalry: puts it into play: puts it into play from the deck; also triggers: plays it: its effect goes off
+     Recruit: (rows above)
+     Alba Armored Cavalry: (rows above)
+  Torres var Emreis: Highest Priest -> Alba Armored Cavalry: triggers: plays it: its effect goes off
+     Torres var Emreis: Highest Priest: (rows above)
+     Alba Armored Cavalry: (rows above)
+Battle Preparation (4 partners): (rows above)
+Duchess' Informant (5 partners): (rows above)
+  Duchess' Informant -> Artaud Terranova: enables: has Spying: Artaud Terranova copys them; also creates cards: Artaud Terranova copys them
+     Duchess' Informant: (rows above)
+     Artaud Terranova: KW: Assimilate, Deploy | WHEN always DO give_keyword self <Assimilate> for permanent | WHEN played of self IF event_count given_keyword by mine player of unit in board [keyword is Spying] ge 1 this_game DO copy chosen unit in board [keyword not Disloyal] [card not Artaud Terranova] [state is created] to mine player in hand THEN play_card chosen mine card in hand [state is created] in hand
+  Duchess' Informant -> Torres var Emreis: Founder: enables: creates cards: Torres var Emreis: Founder copys them
+     Duchess' Informant: (rows above)
+     Torres var Emreis: Founder: (rows above)
+  Duchess' Informant -> Imposter: enables: creates cards: Imposter copys them
+     Duchess' Informant: (rows above)
+     Imposter: (rows above)
+  Imposter -> Duchess' Informant: enables: creates cards: Duchess' Informant copys them
+     Imposter: (rows above)
+     Duchess' Informant: (rows above)
+  Torres var Emreis: Founder -> Duchess' Informant: enables: creates cards: Duchess' Informant copys them
+     Torres var Emreis: Founder: (rows above)
+     Duchess' Informant: (rows above)
+  Artaud Terranova -> Duchess' Informant: triggers: plays it: its effect goes off
+     Artaud Terranova: (rows above)
+     Duchess' Informant: (rows above)
+  Battle Stations! -> Duchess' Informant: triggers: plays it: its effect goes off
+     Battle Stations!: (rows above)
+     Duchess' Informant: (rows above)
+  Torres var Emreis: Highest Priest -> Duchess' Informant: triggers: plays it: its effect goes off
+     Torres var Emreis: Highest Priest: (rows above)
+     Duchess' Informant: (rows above)
+Roderick of Dun Tynne (5 partners): KW: Disloyal, Deploy | WHEN always DO give_keyword self <Disloyal> for permanent | WHEN played of self DO look 2 random mine card in deck [state is gold] THEN choose_card chosen mine card in deck THEN play_card it card
+  Roderick of Dun Tynne -> Imposter: triggers: is played
+     Roderick of Dun Tynne: (rows above)
+     Imposter: (rows above)
+  Roderick of Dun Tynne -> Ivo of Belhaven: enables: is played
+     Roderick of Dun Tynne: (rows above)
+     Ivo of Belhaven: KW: Deploy | WHEN played of self DO stat_change self (strength=event_count of (played of mine card) this_round) for permanent
+  Roderick of Dun Tynne -> Artaud Terranova: enables: has Spying: Artaud Terranova copys them
+     Roderick of Dun Tynne: (rows above)
+     Artaud Terranova: (rows above)
+  Artaud Terranova -> Roderick of Dun Tynne: triggers: plays it: its effect goes off
+     Artaud Terranova: (rows above)
+     Roderick of Dun Tynne: (rows above)
+  Battle Stations! -> Roderick of Dun Tynne: triggers: plays it: its effect goes off
+     Battle Stations!: (rows above)
+     Roderick of Dun Tynne: (rows above)
+  Torres var Emreis: Highest Priest -> Roderick of Dun Tynne: triggers: plays it: its effect goes off
+     Torres var Emreis: Highest Priest: (rows above)
+     Roderick of Dun Tynne: (rows above)
+  Imposter -> Roderick of Dun Tynne: makes stronger: gives it more strength when it comes
+     Imposter: (rows above)
+     Roderick of Dun Tynne: (rows above)
+Torres var Emreis: Founder (5 partners): (rows above)
+  Torres var Emreis: Founder -> Artaud Terranova: enables: makes units get Spying: Artaud Terranova copys them; also creates cards: Artaud Terranova copys them; also makes units get Spying
+     Torres var Emreis: Founder: (rows above)
+     Artaud Terranova: (rows above)
+  Imposter -> Torres var Emreis: Founder: enables: creates cards: Torres var Emreis: Founder copys them; also makes stronger: gives it more strength when it comes
+     Imposter: (rows above)
+     Torres var Emreis: Founder: (rows above)
+  Torres var Emreis: Founder -> Imposter: enables: creates cards: Imposter copys them
+     Torres var Emreis: Founder: (rows above)
+     Imposter: (rows above)
+  Artaud Terranova -> Torres var Emreis: Founder: triggers: plays it: its effect goes off
+     Artaud Terranova: (rows above)
+     Torres var Emreis: Founder: (rows above)
+  Battle Stations! -> Torres var Emreis: Founder: triggers: plays it: its effect goes off
+     Battle Stations!: (rows above)
+     Torres var Emreis: Founder: (rows above)
+  Torres var Emreis: Founder -> Torres var Emreis: Highest Priest: levels into: levels into
+     Torres var Emreis: Founder: (rows above)
+     Torres var Emreis: Highest Priest: (rows above)
+-- c) special cards, one line per reason: is something wrong or missing?
+Artaud Terranova (17 partners): (rows above)
+  Artaud Terranova -> Imposter: triggers: is played
+     Artaud Terranova: (rows above)
+     Imposter: (rows above)
+  Artaud Terranova -> Operator: enables: creates cards: Operator copys them
+     Artaud Terranova: (rows above)
+     Operator: (rows above)
+  Artaud Terranova -> False Ciri: triggers: plays it: its effect goes off
+     Artaud Terranova: (rows above)
+     False Ciri: KW: Disloyal, Deploy, Grace | WHEN always DO give_keyword self <Disloyal> for permanent | WHEN played of self DO play_card chosen mine card in discard [state is bronze] [type is Tactic] THEN give_keyword it <Doomed> for permanent | WHEN turn_end by mine player DO stat_change self (strength=1) for permanent | WHEN stat_changed of self IF keyword_condition Grace 8 DO move self to mine position [position is opposite_row] THEN keyword_action self <Purify> for unstated
+Braathens (7 partners): KW: Assimilate, Deploy | WHEN always DO give_keyword self <Assimilate> for permanent | WHEN played of self DO create random mine unit [state is started_in_deck] [state is bronze] [keyword is Disloyal] in hand THEN play_card it
+  Braathens -> Imposter: triggers: is played
+     Braathens: (rows above)
+     Imposter: (rows above)
+  Braathens -> Slave Driver: enables: creates cards: Slave Driver damages them
+     Braathens: (rows above)
+     Slave Driver: KW: Deploy | WHEN played of self DO damage chosen mine unit in board [state is bronze] (amount=1) THEN copy it to mine position [position is same_row] in board THEN stat_set it mine unit [state is created] (strength=1) THEN play_card it mine unit [state is created] [type is Soldier]
+  Braathens -> Artaud Terranova: enables: creates cards: Artaud Terranova copys them
+     Braathens: (rows above)
+     Artaud Terranova: (rows above)
+  Braathens -> Operator: enables: creates cards: Operator copys them
+     Braathens: (rows above)
+     Operator: (rows above)
+  Artaud Terranova -> Braathens: triggers: plays it: its effect goes off
+     Artaud Terranova: (rows above)
+     Braathens: (rows above)
+Crystal Skull (0 partners): (rows above)
+Imposter (10 partners): (rows above)
+  Imposter -> Artaud Terranova: enables: creates cards: Artaud Terranova copys them
+     Imposter: (rows above)
+     Artaud Terranova: (rows above)
+  Imposter -> False Ciri: makes stronger: gives it more strength when it comes
+     Imposter: (rows above)
+     False Ciri: (rows above)
+Torres var Emreis: Founder (5 partners): (rows above)
+Torres var Emreis: Highest Priest (16 partners): (rows above)
+  Torres var Emreis: Highest Priest -> Imposter: triggers: is played
+     Torres var Emreis: Highest Priest: (rows above)
+     Imposter: (rows above)
+  Torres var Emreis: Highest Priest -> Ivo of Belhaven: enables: is played; also triggers: plays it: its effect goes off
+     Torres var Emreis: Highest Priest: (rows above)
+     Ivo of Belhaven: (rows above)
+  Torres var Emreis: Highest Priest -> Slave Driver: enables: creates cards: Slave Driver damages them
+     Torres var Emreis: Highest Priest: (rows above)
+     Slave Driver: (rows above)
+  Torres var Emreis: Highest Priest -> Artaud Terranova: enables: creates cards: Artaud Terranova copys them
+     Torres var Emreis: Highest Priest: (rows above)
+     Artaud Terranova: (rows above)
+  Torres var Emreis: Highest Priest -> Operator: enables: creates cards: Operator copys them
+     Torres var Emreis: Highest Priest: (rows above)
+     Operator: (rows above)
+  Artaud Terranova -> Torres var Emreis: Highest Priest: triggers: plays it: its effect goes off
+     Artaud Terranova: (rows above)
+     Torres var Emreis: Highest Priest: (rows above)
+  Torres var Emreis: Highest Priest -> False Ciri: triggers: plays it: its effect goes off
+     Torres var Emreis: Highest Priest: (rows above)
+     False Ciri: (rows above)
+  Imposter -> Torres var Emreis: Highest Priest: makes stronger: gives it more strength when it comes
+     Imposter: (rows above)
+     Torres var Emreis: Highest Priest: (rows above)
+
+=== gwent / Toussaintois Hospitality: Rainfarn Boostgaard: 22 cards, 61 lines
+-- a) 1 cards with no partner in the deck, each beside 10 deck cards: is a line missed?
+Korathi Heatwave: (rows above)
+    ? Palmerin de Launfal: KW: Deploy | WHEN played of self IF have all mine unit in board [card is Milton de Peyrac-Peyran] not DO play_card top mine card in deck_top THEN stat_change chosen enemy unit in board [state not buffed] (strength=stat cost of (it card)) for permanent | WHEN played of self IF have all mine unit in board [card is Milton de Peyrac-Peyran] is DO look 3 mine card in deck_top THEN choose_card chosen mine card in deck_top THEN play_card it card THEN stat_change chosen enemy unit in board [state not buffed] (strength=stat cost of (it card)) for permanent
+    ? Ivar Evil-Eye: KW: Deploy, Adrenaline | WHEN played of self IF keyword_condition Adrenaline not DO swap_stats self to chosen enemy unit in board | WHEN played of self IF keyword_condition Adrenaline 2 DO damage chosen enemy unit in board (amount=4)
+    ? Toussaintois Hospitality: KW: Order | WHEN activated of self DO create in hand <Buhurt> THEN play_card it | WHEN stat_changed of enemy unit in board IF my_turn DO stat_change random mine unit in board (strength=1) for permanent
+    ? Coup de Grâce: (rows above)
+    ? Sangreal: WHEN played of self DO keyword_action chosen unit in board <Purify> for unstated THEN stat_change it (strength=12) for permanent THEN give_ability it <Infused> for permanent
+    ? Rainfarn of Attre: KW: Disloyal, Deploy | WHEN always DO give_keyword self <Disloyal> for permanent | WHEN played of self DO stat_change chosen mine unit in board (strength=sum strength of (all unit in board [position is sides])) for permanent
+    ? Jan Calveit: KW: Deploy | WHEN played of self DO reorder_deck all mine card in deck (attr=cost) | WHEN game_start DO move self to top mine card in deck (amount=count of (all mine card in deck [type is Tactic] [state is started_in_deck]))
+    ? Nilfgaardian Knight: KW: Deploy | WHEN played of self DO stat_change chosen enemy unit in board (strength=2) for permanent
+    ? Thanedd Turncoat: KW: Deploy | WHEN played of self DO give_keyword chosen enemy unit in board <Spying> for permanent | WHEN played of self DO give_keyword chosen enemy unit in board <Spying> for permanent | WHEN activated of self IF keyword_condition Conspiracy DO damage chosen enemy unit in board (amount=1) | WHEN activated of self IF keyword_condition Conspiracy DO damage chosen enemy unit in board (amount=1) | WHEN given_keyword of enemy unit in board [keyword is Spying] DO countdown_advance self (amount=1) | WHEN given_keyword of enemy unit [keyword is Spying] DO countdown_advance self (amount=1) | WHEN always DO keyword_action <Cooldown> (amount=2) | WHEN always DO keyword_action <Cooldown> (amount=2)
+    ? Beauclair: KW: Resilience, Order, Deploy | WHEN always DO give_keyword self <Resilience> for permanent | WHEN played of self DO stat_set chosen mine unit in board (strength=stat strength of (highest enemy unit by strength in board)) | WHEN activated of self DO keyword_action chosen unit in board <Reset> for unstated
+-- b) the 10 cards with the fewest partners, all their lines: is a line missed?
+Crystal Skull (1 partners): (rows above)
+  Crystal Skull -> Guillaume de Launfal: enables: changes its stats for its effect
+     Crystal Skull: (rows above)
+     Guillaume de Launfal: KW: Deploy | WHEN played of self DO stat_change self (strength=count of (all mine unit in board [type is Knight] [position is same_row])) for permanent THEN stat_change self (strength=half (sum (stat strength of (self) + stat strength of (chosen enemy unit in board)))) for permanent THEN stat_change chosen enemy unit in board (strength=half (sum (stat strength of (self) + stat strength of (chosen enemy unit in board)))) for permanent | WHEN activated of self IF keyword_condition Grace 14 DO copy_keywords self to chosen enemy unit in board THEN remove_keywords chosen enemy unit in board
+Ard Feainn Heavy Cavalry (2 partners): (rows above)
+  Ard Feainn Heavy Cavalry -> Nauzicaa Brigade: triggers: is a Soldier whose playing sets off its effect
+     Ard Feainn Heavy Cavalry: (rows above)
+     Nauzicaa Brigade: WHEN played of mine unit [type is Soldier] IF event_count round_won by enemy player ge 1 this_game DO summon self to random mine position | WHEN played of mine unit [type is Soldier] IF event_count round_won by enemy player ge 1 this_game DO summon self in deck to random mine position
+  Tourney Joust -> Ard Feainn Heavy Cavalry: makes stronger: removes their Block: its damage gets through
+     Tourney Joust: WHEN played of self DO choose_one OR remove_keyword chosen enemy unit in board <Shield> THEN damage it (amount=4) OR give_keyword chosen mine unit in board <Shield> for permanent THEN stat_change it (strength=4) for permanent
+     Ard Feainn Heavy Cavalry: (rows above)
+Cahir Dyffryn (2 partners): KW: Melee | WHEN stat_changed of enemy unit in board IF keyword_condition Melee; my_turn DO stat_change self (strength=event_amount) for permanent
+  Cahir Dyffryn -> Guillaume de Launfal: enables: is a Knight it asks for
+     Cahir Dyffryn: (rows above)
+     Guillaume de Launfal: (rows above)
+  Cahir Dyffryn -> Nauzicaa Brigade: triggers: is a Soldier whose playing sets off its effect
+     Cahir Dyffryn: (rows above)
+     Nauzicaa Brigade: (rows above)
+Ivar Evil-Eye (2 partners): (rows above)
+  Palmerin de Launfal -> Ivar Evil-Eye: triggers: plays it: its effect goes off
+     Palmerin de Launfal: (rows above)
+     Ivar Evil-Eye: (rows above)
+  Tourney Joust -> Ivar Evil-Eye: makes stronger: removes their Block: its damage gets through
+     Tourney Joust: (rows above)
+     Ivar Evil-Eye: (rows above)
+Ard Feainn Tortoise (3 partners): WHEN keyword_removed of self [keyword is Armor] DO stat_change highest enemy unit by strength in board (strength=3) for permanent
+  Ard Feainn Tortoise -> Milton de Peyrac-Peyran: enables: changes enemy units' stats
+     Ard Feainn Tortoise: (rows above)
+     Milton de Peyrac-Peyran: KW: Order, Deploy | WHEN played of self DO stat_change chosen enemy unit in board (strength=3) for permanent THEN stat_change self (strength=3) for permanent | WHEN played of self DO stat_change chosen enemy unit in board (strength=3) for permanent THEN stat_change self (strength=3) for permanent | WHEN activated of self DO stat_change self (strength=event_amount of (stat_changed by mine player of enemy unit) this_round) for permanent | WHEN activated of self DO stat_change self (strength=event_amount of (stat_changed by mine player of enemy unit) this_round) for permanent
+  Ard Feainn Tortoise -> Toussaintois Hospitality: triggers: changes enemy units' stats
+     Ard Feainn Tortoise: (rows above)
+     Toussaintois Hospitality: (rows above)
+  Ard Feainn Tortoise -> Nauzicaa Brigade: triggers: is a Soldier whose playing sets off its effect
+     Ard Feainn Tortoise: (rows above)
+     Nauzicaa Brigade: (rows above)
+Beauclair (3 partners): (rows above)
+  Beauclair -> Guillaume de Launfal: enables: changes its stats for its effect
+     Beauclair: (rows above)
+     Guillaume de Launfal: (rows above)
+  Beauclair -> Milton de Peyrac-Peyran: enables: changes enemy units' stats
+     Beauclair: (rows above)
+     Milton de Peyrac-Peyran: (rows above)
+  Beauclair -> Toussaintois Hospitality: triggers: changes enemy units' stats
+     Beauclair: (rows above)
+     Toussaintois Hospitality: (rows above)
+Imperial Diplomacy (3 partners): (rows above)
+  Imperial Diplomacy -> Nauzicaa Brigade: triggers: is played
+     Imperial Diplomacy: (rows above)
+     Nauzicaa Brigade: (rows above)
+  Imperial Diplomacy -> Jan Calveit: enables: is a Tactic it asks for
+     Imperial Diplomacy: (rows above)
+     Jan Calveit: (rows above)
+Sangreal (3 partners): (rows above)
+  Sangreal -> Milton de Peyrac-Peyran: enables: changes enemy units' stats
+     Sangreal: (rows above)
+     Milton de Peyrac-Peyran: (rows above)
+  Sangreal -> Toussaintois Hospitality: triggers: changes enemy units' stats
+     Sangreal: (rows above)
+     Toussaintois Hospitality: (rows above)
+  Sangreal -> Guillaume de Launfal: enables: changes its stats for its effect
+     Sangreal: (rows above)
+     Guillaume de Launfal: (rows above)
+Rainfarn of Attre (4 partners): (rows above)
+  Rainfarn of Attre -> Thanedd Turncoat: enables: has Spying
+     Rainfarn of Attre: (rows above)
+     Thanedd Turncoat: (rows above)
+  Rainfarn of Attre -> Coup de Grâce: enables: has Spying
+     Rainfarn of Attre: (rows above)
+     Coup de Grâce: KW: Echo, Conspiracy | WHEN always DO give_keyword self <Echo> for permanent | WHEN played of self DO damage chosen enemy unit in board (amount=3) | WHEN killed by self DO copy it in board THEN play_card it | WHEN played of self IF keyword_condition Conspiracy DO copy it in board THEN play_card it
+  Rainfarn of Attre -> Guillaume de Launfal: enables: is a Knight it asks for; also changes its stats for its effect
+     Rainfarn of Attre: (rows above)
+     Guillaume de Launfal: (rows above)
+  Palmerin de Launfal -> Rainfarn of Attre: triggers: plays it: its effect goes off
+     Palmerin de Launfal: (rows above)
+     Rainfarn of Attre: (rows above)
+Buhurt (5 partners): (rows above)
+  Buhurt -> Milton de Peyrac-Peyran: enables: changes enemy units' stats
+     Buhurt: (rows above)
+     Milton de Peyrac-Peyran: (rows above)
+  Buhurt -> Toussaintois Hospitality: triggers: changes enemy units' stats
+     Buhurt: (rows above)
+     Toussaintois Hospitality: (rows above)
+  Buhurt -> Guillaume de Launfal: enables: changes its stats for its effect
+     Buhurt: (rows above)
+     Guillaume de Launfal: (rows above)
+  Toussaintois Hospitality -> Buhurt: puts it into play: creates
+     Toussaintois Hospitality: (rows above)
+     Buhurt: (rows above)
+  Buhurt -> Jan Calveit: enables: is a Tactic it asks for
+     Buhurt: (rows above)
+     Jan Calveit: (rows above)
+-- c) special cards, one line per reason: is something wrong or missing?
+Beauclair (3 partners): (rows above)
+Cahir Dyffryn (2 partners): (rows above)
+Coup de Grâce (6 partners): (rows above)
+  Coup de Grâce -> Nauzicaa Brigade: triggers: is played
+     Coup de Grâce: (rows above)
+     Nauzicaa Brigade: (rows above)
+  Thanedd Turncoat -> Coup de Grâce: enables: makes units get Spying
+     Thanedd Turncoat: (rows above)
+     Coup de Grâce: (rows above)
+Crystal Skull (1 partners): (rows above)
+Ivar Evil-Eye (2 partners): (rows above)
+Jan Calveit (7 partners): (rows above)
+  Palmerin de Launfal -> Jan Calveit: triggers: plays it: its effect goes off
+     Palmerin de Launfal: (rows above)
+     Jan Calveit: (rows above)
+  False Ciri -> Jan Calveit: enables: makes a Tactic it asks for
+     False Ciri: (rows above)
+     Jan Calveit: (rows above)
+Korathi Heatwave (0 partners): (rows above)
+Toussaintois Hospitality (10 partners): (rows above)
+  Milton de Peyrac-Peyran -> Toussaintois Hospitality: triggers: changes enemy units' stats
+     Milton de Peyrac-Peyran: (rows above)
+     Toussaintois Hospitality: (rows above)
+  Toussaintois Hospitality -> Guillaume de Launfal: enables: changes its stats for its effect
+     Toussaintois Hospitality: (rows above)
+     Guillaume de Launfal: (rows above)
+  Toussaintois Hospitality -> False Ciri: enables: makes a Tactic it asks for
+     Toussaintois Hospitality: (rows above)
+     False Ciri: (rows above)

@@ -1,0 +1,338 @@
+=== gwent: 78995 lines, 432 reasons; the 92 biggest hold 90% of the lines
+
+## waits: plays it: its effect goes off (15313 lines; rule at network.py line 732)
+  Alzur's Double-Cross -> Aglaïs
+     Alzur's Double-Cross: WHEN played of self DO play_card highest mine unit by strength in deck
+     Aglaïs: KW: Deploy | WHEN played of self DO give_ability self for permanent
+  Avallac'h: Sage -> Petri's Philter
+     Avallac'h: Sage: WHEN played of self IF keyword_condition Ranged DO play_card chosen mine landmark in deck
+     Petri's Philter: KW: Order, Deploy | WHEN played of self DO stat_change chosen mine unit in board (strength=3) for permanent | WHEN activated of self DO give_keyword chosen mine unit in board <Zeal> for permanent
+  Battle Stations! -> Alba Armored Cavalry
+     Battle Stations!: WHEN played of self DO play_card 2 chosen mine card in hand [state is bronze] THEN draw mine card in deck_top (amount=event_amount)
+     Alba Armored Cavalry: WHEN played of self IF keyword_condition Melee DO give_keyword chosen enemy unit in board <Lock> for permanent
+  Blessing of Charity -> Acherontia Deckhand
+     Blessing of Charity: WHEN activated of mine leader_ability DO play_card lowest mine unit by cost in deck
+     Acherontia Deckhand: KW: Vice | WHEN played of self DO mana_gain mine secondary_resource (amount=1) | WHEN mana_spent by mine player IF keyword_condition Vice 3 DO stat_change self (strength=1) for permanent
+  Call of the Forest -> Blue Mountain Elite
+     Call of the Forest: WHEN played of self DO play_card chosen mine unit in deck [region not Neutral] THEN stat_change it (strength=1) for permanent
+     Blue Mountain Elite: WHEN played of self IF keyword_condition Ranged; count all unit in board [position is same_row] eq 1 DO damage chosen enemy unit in board (amount=3)
+
+## type: lets you gain the second resource (Bones) (7779 lines; rule at network.py line 688)
+  Arena Endrega -> Eveline Gallo
+     Arena Endrega: KW: Deploy | WHEN played of self DO mana_gain mine secondary_resource (amount=stat damage of (chosen mine unit in board))
+     Eveline Gallo: WHEN turn_end by mine player IF have mine secondary_resource not DO mana_gain mine secondary_resource (amount=3)
+  Acherontia Deckhand -> Passiflora Peaches
+     Acherontia Deckhand: (rows above)
+     Passiflora Peaches: KW: Hoard | WHEN turn_end by mine player IF keyword_condition Hoard 4 DO stat_change self (strength=1) for permanent
+  Bart -> Gudrun Bjornsdottir
+     Bart: WHEN played of mine unit in board [primary_type is Gang] [state is primary_category_not_controlled] DO mana_gain mine secondary_resource (amount=distinct primary_type of (all mine unit in board [primary_type is Gang]))
+     Gudrun Bjornsdottir: WHEN activated of self IF keyword_condition Hoard 9 DO spend_mana mine secondary_resource (amount=3) THEN give_ability chosen enemy unit in board <Infused>
+  Pickpocket -> Hvitr and Aelydia
+     Pickpocket: WHEN played of self DO mana_gain mine secondary_resource (amount=8)
+     Hvitr and Aelydia: KW: Hoard | WHEN turn_end by mine player IF keyword_condition Hoard 6 DO damage random enemy unit in board (amount=2) | WHEN killed by self DO mana_gain mine secondary_resource (amount=2)
+  Roland Bleinheim -> Payroll Specialist
+     Roland Bleinheim: WHEN given_keyword of unit in board [keyword is Poison] DO mana_gain mine secondary_resource (amount=2)
+     Payroll Specialist: WHEN played of self DO spend_mana mine secondary_resource (amount=1) THEN move chosen unit in board to position [position not same_row]
+
+## waits: is played (5678 lines; rule at network.py line 688)
+  Alzur's Double-Cross -> Ban Ard Tutor
+     Alzur's Double-Cross: (rows above)
+     Ban Ard Tutor: WHEN played of mine card [category is spell] [state is gold] DO stat_change self (strength=2) for permanent
+  Aen Seidhe Saber -> Gimpy Gerwin
+     Aen Seidhe Saber: KW: Order | WHEN activated of self DO create mine card in hand <Scoia'tael Neophyte> THEN play_card it card
+     Gimpy Gerwin: WHEN played of mine unit in board [card not Gimpy Gerwin] DO damage all enemy unit in board [cost eq stat cost of (it)] (amount=1)
+  Artis -> Peasant Militia
+     Artis: KW: Deploy, Ranged | WHEN played of self DO play_card chosen mine card in deck [type is Cultist] [cost eq 4] | WHEN played of unit in board IF keyword_condition Ranged DO damage it (amount=half (stat strength of (it)))
+     Peasant Militia: WHEN played of mine unit in board [keyword is Deploy] DO stat_change self (strength=1) for permanent
+  Battle Stations! -> Roach
+     Battle Stations!: (rows above)
+     Roach: WHEN played of mine card [state is gold] DO summon self to random mine position
+  Blessing of Charity -> Highwaymen
+     Blessing of Charity: (rows above)
+     Highwaymen: WHEN played of mine unit [keyword is Bonded] IF have all mine unit in board [state is copy_of_it] is DO summon self in deck to mine position [position is front_row] | WHEN keyword_removed of self [keyword is Armor] DO put_on_top self in deck_top
+
+## type: damages enemy units or players (3548 lines; rule at network.py line 688)
+  Alzur's Thunder -> An Craite Warcrier
+     Alzur's Thunder: WHEN played of self DO damage chosen unit in board (amount=5)
+     An Craite Warcrier: KW: Bloodthirst | WHEN turn_end by mine player IF keyword_condition Bloodthirst 1 DO stat_change self (strength=1) for permanent
+  An Craite Longship -> Brokvar Archer
+     An Craite Longship: KW: Melee | WHEN played by enemy player of enemy unit IF keyword_condition Melee DO damage it (amount=1)
+     Brokvar Archer: WHEN played of self IF keyword_condition Ranged DO damage chosen enemy unit in board (amount=count of (all enemy unit in board [state is damaged]))
+  Biting Frost -> Djenge Frett
+     Biting Frost: WHEN played of self DO give_keyword chosen enemy position <Frost> (turns=3) for n_turns
+     Djenge Frett: WHEN played of self IF keyword_condition Bloodthirst 1 DO give_keyword chosen enemy unit in board <Lock> for permanent
+  Regis: Higher Vampire -> Madman Lugos
+     Regis: Higher Vampire: WHEN activated of self IF keyword_condition Melee DO keyword_action chosen enemy unit in board <Drain> (amount=stat boost of (it)) for unstated
+     Madman Lugos: WHEN played of self IF keyword_condition Melee DO damage chosen enemy unit in board (amount=double (count of (all enemy unit in board [state is damaged])))
+  An Craite Marauder -> Disgraced Brawler
+     An Craite Marauder: WHEN played of self IF keyword_condition Melee DO damage all enemy unit in board (amount=3, spread=1)
+     Disgraced Brawler: KW: Berserk | WHEN played of self IF keyword_condition Bloodthirst 1 DO give_keyword self <Lock> for permanent | WHEN stat_changed of self IF stat self strength le 3 DO kill self
+
+## type: changes its stats for its effect (2348 lines; rule at network.py line 688)
+  Adrenaline Rush -> Drummond Queensguard
+     Adrenaline Rush: WHEN played of self IF count all mine unit in board [position is same_row] eq 1 DO stat_change chosen mine unit in board [card not Adrenaline Rush] (strength=8) for permanent
+     Drummond Queensguard: WHEN activated of self IF keyword_condition Berserk 3 DO copy self to chosen mine position [position is same_row] in board
+  Allgod -> Dun Banner
+     Allgod: KW: Deploy | WHEN played of self DO stat_change sum (3 + count of (all mine card in deck [card is Offering] [state is started_in_deck])) chosen mine unit in deck (strength=2) for permanent
+     Dun Banner: WHEN stat_changed of self [state is buffed] DO summon all mine card in deck to chosen mine position [position is same_row] <Dun Banner>
+  Mandrake -> Svalblod Fanatic
+     Mandrake: WHEN played of self DO keyword_action chosen unit in board <Reset> for unstated
+     Svalblod Fanatic: KW: Berserk | WHEN stat_changed of self IF stat self strength le 2 DO transform self <Bear Abomination>
+  Spores -> Udalryk an Brokvar
+     Spores: WHEN played of self DO keyword_action chosen unit in board <Reset> for unstated
+     Udalryk an Brokvar: WHEN activated of self IF keyword_condition Berserk 7 DO stat_set chosen enemy unit in board (strength=stat strength of (self))
+  Vlodimir von Everec -> Vildkaarl
+     Vlodimir von Everec: KW: Deploy | WHEN played of self DO swap_stats chosen unit in board (attr=armor)
+     Vildkaarl: KW: Berserk | WHEN stat_changed of self IF stat self strength le 2 DO transform self <Champion of Svalblod>
+
+## waits: kills it for its death effect (1933 lines; rule at network.py line 688)
+  Biting Frost -> Archespore
+     Biting Frost: (rows above)
+     Archespore: KW: Deathwish | WHEN dies of self DO summon all mine card in deck to mine position [position is same_row] <Archespore>
+  Curse of Corruption -> Brewess: Ritual
+     Curse of Corruption: WHEN played of self DO kill highest unit by strength in board
+     Brewess: Ritual: KW: Deathwish | WHEN dies of self DO summon 2 random mine unit in deck [state is bronze] [keyword is Deathwish] to mine position [position is same_row]
+  Forktail -> Bridge Troll
+     Forktail: KW: Deploy | WHEN played of self DO damage all unit in board [card not Forktail] (amount=1)
+     Bridge Troll: KW: Deathwish | WHEN dies of self DO stat_change lowest mine unit by strength in board (strength=4) for permanent
+  Ghoul -> Dettlaff: Higher Vampire
+     Ghoul: WHEN played of self IF keyword_condition Melee DO keyword_action chosen mine unit in discard [state is bronze] <Consume> for unstated
+     Dettlaff: Higher Vampire: KW: Deathwish | WHEN dies of self [n_times] DO revive self mine unit in discard to mine position [position is same_row]
+  Aen Elle Aristocrat -> Endrega Eggs
+     Aen Elle Aristocrat: WHEN activated of self IF keyword_condition Dominance DO move chosen enemy unit in board to chosen enemy position [position not same_row] | WHEN turn_end by mine player DO give_keyword all enemy position [keyword is Frost] [state is applied_this_turn] <Frost> (turns=1) for n_turns
+     Endrega Eggs: KW: Deathwish | WHEN dies of self DO summon to mine position [position is same_row] <Drone> (amount=3)
+
+## waits: fills your hand (1808 lines; rule at network.py line 2141)
+  Eventide Plunder -> Carlo Varese
+     Eventide Plunder: WHEN played of self DO create random mine unit [cost eq 4] [keyword is Fee] in hand
+     Carlo Varese: WHEN played of self IF keyword_condition Melee DO damage chosen enemy unit in board (amount=count of (all mine card in hand))
+  Backup Plan -> Farseer
+     Backup Plan: WHEN played of self DO damage last_played enemy unit in board (amount=2) THEN create chosen mine card in hand [state is bronze] [region is Scoiatael] [type is Elf] [keyword is Deploy] [state not started_in_deck] in hand
+     Farseer: KW: Deploy | WHEN played of self DO stat_change chosen mine unit in hand [state not buffed] (strength=count of (all mine unit in hand [state is buffed])) for permanent
+  Ardal aep Dahy -> Eskel
+     Ardal aep Dahy: WHEN played of self IF keyword_condition Ranged; have mine player [state is passed] not; have enemy player [state is passed] not; count enemy card in hand lt 10 DO return_to_hand chosen enemy unit in board [keyword not Doomed] [strength le sum (2 + count of (mine card [state is started_in_deck] [type is Tactic]))] THEN draw mine card in deck_top (amount=1)
+     Eskel: WHEN played of self IF keyword_condition Adrenaline 4 DO summon mine card in deck [card is Vesemir] <Vesemir> THEN summon mine card in deck [card is Lambert] <Lambert>
+  Battle Stations! -> Geralt: Yrden
+     Battle Stations!: (rows above)
+     Geralt: Yrden: KW: Adrenaline | WHEN played of self IF keyword_condition Melee; keyword_condition Adrenaline not DO keyword_action all unit in board [position is same_row] <Reset> for unstated | WHEN played of self IF keyword_condition Melee; keyword_condition Adrenaline 2 DO keyword_action all mine unit in board [position is same_row] <Reset> for unstated
+  Birna Bran -> Arnaghad
+     Birna Bran: KW: Deploy | WHEN played of self DO draw mine card in deck_top (max=2) THEN keyword_action chosen mine card in hand <Discard> (amount=event_amount) for unstated
+     Arnaghad: KW: Deploy, Adrenaline | WHEN played of self DO give_keyword self <Armor> (amount=count of (all unit in board [state is damaged])) for permanent | WHEN played of chosen enemy unit in board IF keyword_condition Adrenaline 4 DO keyword_action it to self <Clash> for unstated
+
+## type: is a card it asks for (1632 lines; rule at network.py line 1915)
+  Elder Bear -> Eskel: Pathfinder
+     Elder Bear: (no rows)
+     Eskel: Pathfinder: KW: Deploy | WHEN played of self DO kill chosen enemy unit in board [primary_type not ]
+  Allgod -> Oxenfurt Scholar
+     Allgod: (rows above)
+     Oxenfurt Scholar: KW: Deploy | WHEN played of self DO stat_change self (strength=count of (mine card [state is started_in_deck] [cost ge 11])) for permanent
+  Donimir of Troy -> Windhalm of Attre
+     Donimir of Troy: KW: Defender, Shield | WHEN always DO give_keyword self <Defender> for permanent | WHEN always DO give_keyword self <Shield> for permanent
+     Windhalm of Attre: KW: Shield | WHEN always DO give_keyword self <Shield> for permanent | WHEN turn_end by mine player IF have self [keyword is Shield] is DO stat_change self (strength=2) for permanent | WHEN activated of self IF keyword_condition Grace 10 DO give_keyword self <Shield> for permanent
+  Duda: Companion -> Telianyn aep Collen
+     Duda: Companion: KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent | WHEN played of self DO stat_change all unit in board [position is same_row] (strength=1) for permanent
+     Telianyn aep Collen: KW: Order, Deploy | WHEN played of self DO shuffle_into_deck chosen mine unit in board [cost le 9] THEN play_card top mine card in deck [type is Elf] [keyword is Deploy] | WHEN activated of self IF have self [keyword is Doomed] not DO create in hand <Backup Plan> THEN play_card it | WHEN activated of self IF have self [keyword is Doomed] is DO damage chosen enemy unit in board (amount=count of (all mine unit in board [keyword is Doomed]))
+  Bear Abomination -> Delirium
+     Bear Abomination: KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent
+     Delirium: KW: Echo | WHEN always DO give_keyword self <Echo> for permanent | WHEN played of self IF have self [keyword is Doomed] not DO choose_one OR create random mine card [state is bronze] [region is Skellige] [type is Beast] [state not started_in_deck] in hand OR create random mine card [state is bronze] [region is Skellige] [type is Human] [state not started_in_deck] in hand THEN play_card it THEN create it mine card [state not started_in_deck] in discard | WHEN played of self IF have self [keyword is Doomed] DO choose_one OR create random mine card [state is gold] [region is Skellige] [type is Beast] [state not started_in_deck] in hand OR create random mine card [state is gold] [region is Skellige] [type is Human] [state not started_in_deck] in hand THEN play_card it THEN create it mine card [state not started_in_deck] in discard
+
+## type: changes your units' stats (1531 lines; rule at network.py line 688)
+  Adrenaline Rush -> Farseer
+     Adrenaline Rush: (rows above)
+     Farseer: (rows above)
+  Aglaïs -> Hawker Support
+     Aglaïs: (rows above)
+     Hawker Support: KW: Deploy | WHEN played of self DO stat_change chosen mine unit in hand [state not buffed] (strength=1) for permanent THEN stat_change it mine unit in hand [state is buffed] (strength=3) for permanent
+  Allgod -> Reynard Odo
+     Allgod: (rows above)
+     Reynard Odo: WHEN played of mine unit in board DO stat_change it (strength=1) for permanent | WHEN activated of self IF keyword_condition Grace 12 DO stat_change all mine unit in board [state is buffed] (strength=1) for permanent
+  Aretuza Adept -> Sigismund Dijkstra
+     Aretuza Adept: WHEN keyword_used of mine unit [keyword is Patience] DO stat_change self (strength=1) for permanent
+     Sigismund Dijkstra: KW: Order | WHEN activated of self DO play_card chosen mine unit in deck [state is buffed] | WHEN stat_changed of self IF have self in deck is DO stat_change self (strength=event_amount) for permanent
+  Alchemist -> Ornate Censer
+     Alchemist: WHEN played of self IF keyword_condition Ranged DO swap_stats 2 chosen mine unit in board
+     Ornate Censer: WHEN played of self DO choose_one OR stat_change chosen mine unit in board (strength=event_count damage of (damaged of enemy unit in board) this_turn) for permanent OR damage chosen enemy unit in board (amount=event_count boost of (stat_changed of mine unit in board) this_turn)
+
+## waits: is a spell whose playing sets off its effect (1420 lines; rule at network.py line 1823)
+  Adrenaline Rush -> Sarah
+     Adrenaline Rush: (rows above)
+     Sarah: WHEN played of mine spell DO stat_change random mine unit in board (strength=2) for permanent
+  Alzur's Double-Cross -> Alzur
+     Alzur's Double-Cross: (rows above)
+     Alzur: KW: Counter | WHEN played of mine spell DO summon random mine unit in deck [cost eq stat cost of (it)] to chosen mine position [position is same_row] | WHEN always DO give_keyword self <Counter> (amount=3) for permanent
+  Alzur's Thunder -> Johnny
+     Alzur's Thunder: (rows above)
+     Johnny: WHEN played of mine spell DO damage random enemy unit in board (amount=2) | WHEN played of mine spell DO damage random enemy unit in board (amount=2)
+  Basilisk Venom -> Keldar
+     Basilisk Venom: KW: Order | WHEN activated of self DO give_keyword chosen unit in board <Poison> for permanent
+     Keldar: KW: Adrenaline | WHEN played of mine spell DO summon to chosen mine position [position is same_row] <Witcher Student> | WHEN turn_end by mine player IF keyword_condition Adrenaline 4 DO summon to chosen mine position [position is same_row] <Witcher Student>
+  Biting Frost -> Fercart
+     Biting Frost: (rows above)
+     Fercart: KW: Deploy | WHEN played of self DO play_card chosen mine card in hand [category is spell] THEN draw mine card in deck_top (amount=1) | WHEN played of mine spell DO give_keyword random enemy unit in board [keyword not Spying] <Spying> for permanent
+
+## type: {A} moves {B}, and {B} acts on units back row it or front row it (1383 lines; rule at network.py line 0)
+  Dimun Pirate -> Aguara
+     Dimun Pirate: KW: Deploy | WHEN played of self IF have all mine unit in board [type is Ship] not DO move top mine card in deck to mine card in discard
+     Aguara: WHEN played of self IF keyword_condition Melee DO give_keyword chosen unit in board <Lock> for permanent | WHEN played of self IF keyword_condition Ranged DO remove_keyword chosen unit in board <Lock>
+  Fisher King -> Cintrian Artificer
+     Fisher King: WHEN played of self IF keyword_condition Ranged DO move chosen mine card in deck in deck_top
+     Cintrian Artificer: KW: Formation, Order | WHEN always DO give_keyword self <Formation> for permanent | WHEN activated of self DO give_keyword chosen mine unit in board <Shield> for permanent
+  Geralt: Axii -> Alpha Werewolf
+     Geralt: Axii: KW: Deploy | WHEN played of self DO keyword_action chosen unit in board [strength le count of (all mine unit in board [type is Witcher] [position is same_row])] <Seize> for unstated
+     Alpha Werewolf: WHEN played of self IF keyword_condition Melee DO stat_change chosen mine unit in hand [type is Beast] (strength=count of (all mine card in hand)) for permanent | WHEN played of self IF keyword_condition Ranged DO stat_change all mine unit in board [type is Beast] (strength=1) for permanent
+  Lippy Gudmund -> Cerys an Craite
+     Lippy Gudmund: WHEN played of self IF keyword_condition Ranged DO swap mine card in discard to mine card in deck
+     Cerys an Craite: WHEN played of self IF keyword_condition Melee DO summon to mine position [position is same_row] <Drummond Shieldmaiden> | WHEN played of self IF keyword_condition Ranged DO summon to mine position [position is same_row] <Drummond Queensguard>
+  Nivellen -> Dol Blathanna Sentry
+     Nivellen: KW: Deploy | WHEN played of self DO move all unit in board [position is same_row] to enemy position [position not same_row]
+     Dol Blathanna Sentry: KW: Melee, Ranged | WHEN moves of enemy unit IF keyword_condition Melee DO damage it (amount=1) | WHEN moves of mine unit IF keyword_condition Ranged DO stat_change it (strength=1) for permanent
+
+## type: {A} moves {B}, and {B} acts on units front row it (1038 lines; rule at network.py line 0)
+  Dimun Pirate -> An Craite Longship
+     Dimun Pirate: (rows above)
+     An Craite Longship: (rows above)
+  Fisher King -> Cahir Dyffryn
+     Fisher King: (rows above)
+     Cahir Dyffryn: KW: Melee | WHEN stat_changed of enemy unit in board IF keyword_condition Melee; my_turn DO stat_change self (strength=event_amount) for permanent
+  Geralt: Axii -> Alba Armored Cavalry
+     Geralt: Axii: (rows above)
+     Alba Armored Cavalry: (rows above)
+  Lippy Gudmund -> An Craite Marauder
+     Lippy Gudmund: (rows above)
+     An Craite Marauder: (rows above)
+  Nivellen -> Dagur Two Blades
+     Nivellen: (rows above)
+     Dagur Two Blades: KW: Melee | WHEN damaged of chosen enemy unit in board IF keyword_condition Melee DO stat_change self (strength=1) for permanent
+
+## puts: puts it into play from the deck (1025 lines; rule at network.py line 764)
+  Brewess: Ritual -> Archespore
+     Brewess: Ritual: (rows above)
+     Archespore: (rows above)
+  Ermion -> Gigascorpion Decoction: Condense
+     Ermion: WHEN played of self IF keyword_condition Ranged DO play_card chosen mine card in deck [type is Alchemy]
+     Gigascorpion Decoction: Condense: WHEN played of self DO damage chosen unit in board (amount=1, times=6)
+  Whispering Hillock -> Bridge Troll
+     Whispering Hillock: WHEN played of self DO play_card chosen mine unit in deck [keyword is Deathwish]
+     Bridge Troll: (rows above)
+  Artis -> Svalblod Fanatic
+     Artis: (rows above)
+     Svalblod Fanatic: (rows above)
+  Fauve -> Loc Feainn: Convergence
+     Fauve: KW: Deploy | WHEN played of self DO play_card chosen mine card in deck [type is Nature]
+     Loc Feainn: Convergence: KW: Doomed | WHEN always DO give_keyword self <Doomed> for permanent | WHEN played of self DO create chosen mine unit in board [state is bronze] [region is Scoiatael] [state is primary_category_not_controlled] in hand
+
+## type: creates cards: {B} copys them (1005 lines; rule at network.py line 688)
+  Cynthia -> Curse of Lust
+     Cynthia: WHEN played of self IF keyword_condition Melee DO create enemy card in deck_top <The Guardian>
+     Curse of Lust: KW: Order | WHEN activated of self DO copy chosen enemy unit in board [state is created] to mine position [position is opposite_row] in board
+  Anna Henrietta -> Imperial Practitioner
+     Anna Henrietta: WHEN played of self IF keyword_condition Ranged DO copy enemy leader_ability to mine leader_ability
+     Imperial Practitioner: KW: Assimilate, Order | WHEN always DO give_keyword self <Assimilate> for permanent | WHEN activated of self DO copy top enemy card in discard [state is created] to mine player in deck_top
+  Drummond Queensguard -> Operator
+     Drummond Queensguard: (rows above)
+     Operator: KW: Deploy | WHEN played of self DO copy chosen mine unit in hand [state is bronze] [state is created] to chosen mine position [position is same_row] in board THEN copy chosen mine unit in hand [state is bronze] [state is created] to enemy position [position is opposite_row] in board
+  Aguara: True Form -> Caranthir Ar-Feiniel
+     Aguara: True Form: WHEN played of self IF keyword_condition Ranged DO create random mine card [category is spell] in hand THEN play_card it card
+     Caranthir Ar-Feiniel: KW: Deploy | WHEN played of self DO copy chosen mine card in hand [region not Neutral] [cost le 10] [state is created] to chosen mine position [position is same_row] in board THEN stat_set it (strength=1)
+  Alissa Henson -> Blue Stripes Scout
+     Alissa Henson: KW: Deploy | WHEN played of self DO shuffle_into_deck chosen mine card in discard [category is spell] THEN copy it mine card [state is bronze] in deck
+     Blue Stripes Scout: WHEN played of self IF keyword_condition Melee DO copy chosen mine unit in board [state is bronze] [region not Neutral] [state is created] in deck_bottom | WHEN played of self IF keyword_condition Melee DO copy chosen mine unit in board [state is bronze] [region not Neutral] in deck_bottom
+
+## type: damages units or players (1000 lines; rule at network.py line 688)
+  Alzur's Thunder -> Arnaghad
+     Alzur's Thunder: (rows above)
+     Arnaghad: (rows above)
+  Biting Frost -> Bear Witcher Mentor
+     Biting Frost: (rows above)
+     Bear Witcher Mentor: KW: Deploy, Adrenaline | WHEN played of self IF keyword_condition Adrenaline not 3 DO stat_change self (strength=count of (all mine unit in board [state is damaged])) for permanent | WHEN played of self IF keyword_condition Adrenaline 3 DO stat_change self (strength=count of (all unit in board [state is damaged])) for permanent
+  Red Riders: Precision -> Caranthir: Golden Child
+     Red Riders: Precision: WHEN played of self DO give_keyword chosen enemy position <Frost> (turns=4) for n_turns
+     Caranthir: Golden Child: WHEN turn_start by mine player DO keyword_action self <Reset> for unstated THEN stat_change self (strength=event_total of (damaged by effect [keyword is Frost] of unit) last_5_enemy_turns) for permanent
+  An Craite Longship -> Svalblod
+     An Craite Longship: (rows above)
+     Svalblod: KW: Deploy | WHEN played of self DO damage all unit in board (amount=1) | WHEN summoned of mine unit in board [card is Bear Abomination] DO repeat self | WHEN damaged by mine player of unit in board [first_each_turn] IF event_count damaged by mine player of unit in board damage ge 8 this_turn DO summon to chosen mine position [position is same_row] in board <Svalblod Fanatic>
+  An Craite Marauder -> Naval Supremacy
+     An Craite Marauder: (rows above)
+     Naval Supremacy: WHEN played of self DO create chosen mine unit in board [state is bronze] [region is Skellige] [type is Ship] in hand THEN play_card it card | WHEN played of unit IF have self in discard DO damage it (amount=1) | WHEN always IF event_count damaged damage ge 13 this_game DO keyword_action self <Banish> for unstated
+
+## type: is a Soldier it asks for (893 lines; rule at network.py line 862)
+  Bernard Loredo -> Odrin
+     Bernard Loredo: KW: Order | WHEN activated of self DO keyword_action self to random enemy unit in board <Duel> for unstated
+     Odrin: KW: Crew | WHEN always DO give_keyword self <Crew> for permanent
+  Alba Armored Cavalry -> Daerlan Soldier
+     Alba Armored Cavalry: (rows above)
+     Daerlan Soldier: KW: Deploy | WHEN played of self IF have mine unit in board [type is Soldier] is DO summon all mine card in deck to mine position [position is same_row] <Daerlan Soldier> | WHEN game_start DO copy self in deck
+  Blue Stripes Commando -> Bloody Flail
+     Blue Stripes Commando: KW: Order | WHEN activated of self DO summon all mine card in deck to chosen mine position [position is same_row] <Blue Stripes Commando>
+     Bloody Flail: WHEN played of self DO give_keyword chosen enemy unit in board <Bleeding> (amount=sum (8 + minus (count of (all mine unit in board [type is Soldier])))) for permanent THEN damage it (amount=count of (all mine unit in board [type is Soldier]))
+  Cintrian Royal Guard -> Reinforced Trebuchet
+     Cintrian Royal Guard: KW: Deploy | WHEN played of self DO stat_change self (strength=product (3 + count of (all mine unit in board [card is Cintrian Royal Guard]))) for permanent
+     Reinforced Trebuchet: KW: Ranged, Crew | WHEN turn_end by mine player IF keyword_condition Ranged; keyword_condition Crew not DO damage random enemy unit in board [position is back_row] (amount=1) | WHEN turn_end by mine player IF keyword_condition Ranged; keyword_condition Crew DO damage random enemy unit in board (amount=1)
+  Dennis Cranmer -> Cargo
+     Dennis Cranmer: KW: Deploy | WHEN played of self DO stat_change all mine unit in board [position is sides] [keyword is Armor] (strength=stat armor of (it)) for permanent
+     Cargo: KW: Doomed, Order | WHEN always DO give_keyword self <Doomed> for permanent | WHEN activated of self DO play_card chosen mine unit in board [region not Neutral] [type in Agent] [type in Bandit] [type in Soldier] [state not played_this_turn] THEN give_keyword it <Doomed> for permanent
+
+## type: {A} moves {B}, and {B} acts on units back row it (884 lines; rule at network.py line 0)
+  Dimun Pirate -> Avallac'h: Sage
+     Dimun Pirate: (rows above)
+     Avallac'h: Sage: (rows above)
+  Fisher King -> Bincy Blumerholdt
+     Fisher King: (rows above)
+     Bincy Blumerholdt: KW: Ranged | WHEN resource_gained by mine player of mine secondary_resource IF keyword_condition Ranged DO stat_change self (strength=event_amount) for permanent
+  Geralt: Axii -> Alchemist
+     Geralt: Axii: (rows above)
+     Alchemist: (rows above)
+  Lippy Gudmund -> Brokvar Archer
+     Lippy Gudmund: (rows above)
+     Brokvar Archer: (rows above)
+  Nivellen -> Tax Collector
+     Nivellen: (rows above)
+     Tax Collector: KW: Ranged | WHEN turn_end by mine player IF keyword_condition Ranged DO mana_gain mine secondary_resource (amount=1)
+
+## waits: damages enemy units or players (759 lines; rule at network.py line 688)
+  Alzur's Thunder -> Dagur Two Blades
+     Alzur's Thunder: (rows above)
+     Dagur Two Blades: (rows above)
+  Biting Frost -> Messenger of the Sea
+     Biting Frost: (rows above)
+     Messenger of the Sea: WHEN damaged by effect [keyword in Rain] [keyword in Storm] of enemy unit DO stat_change self (strength=event_amount) for permanent | WHEN damaged of enemy unit DO stat_change self (strength=event_amount) for permanent
+  An Craite Longship -> An Craite Greatsword
+     An Craite Longship: (rows above)
+     An Craite Greatsword: KW: Veteran, Deploy | WHEN always DO give_keyword self <Veteran> for permanent | WHEN played of self DO damage self (amount=6) | WHEN damaged of enemy unit in board DO keyword_action self <Heal> (amount=1) for unstated
+  An Craite Marauder -> King Bran
+     An Craite Marauder: (rows above)
+     King Bran: KW: Veteran, Deploy | WHEN always DO give_keyword self <Veteran> for permanent | WHEN played of self DO stat_change self (strength=0) for permanent | WHEN damaged of enemy unit in board IF amount excess gt 0 DO increase_effect self (amount=1) | WHEN game_start DO repeat all mine unit in board [keyword is Veteran] <Veteran>
+  Blessing of Diligence -> Onslaught
+     Blessing of Diligence: WHEN activated of mine leader_ability DO damage all enemy unit in board (amount=6, spread=1)
+     Onslaught: KW: Charge, Order | WHEN activated of self DO damage chosen enemy unit in board (amount=3) | WHEN activated of self DO damage chosen enemy unit in board (amount=3) | WHEN always DO give_keyword self <Charge> (amount=2) for permanent | WHEN always DO give_keyword self <Charge> (amount=2) for permanent | WHEN damaged of enemy unit DO give_keyword all mine unit in hand [type in Pirate] [type in Ship] <Armor> (amount=1) for permanent | WHEN damaged of enemy unit DO give_keyword all mine card in hand [type in Pirate] [type in Ship] <Armor> (amount=1) for permanent
+
+## type: is played (735 lines; rule at network.py line 688)
+  Alzur's Double-Cross -> Enraged Ifrit
+     Alzur's Double-Cross: (rows above)
+     Enraged Ifrit: KW: Deploy | WHEN played of self DO damage chosen enemy unit in board (amount=sum (5 + event_count of (played of mine unit [type is Construct]) this_game))
+  Aen Seidhe Saber -> Ivo of Belhaven
+     Aen Seidhe Saber: (rows above)
+     Ivo of Belhaven: KW: Deploy | WHEN played of self DO stat_change self (strength=event_count of (played of mine card) this_round) for permanent
+  Artis -> Gascon
+     Artis: (rows above)
+     Gascon: WHEN played of mine unit [keyword is Bonded] IF event_count played of mine unit [keyword is Bonded] [state is copy_of_it] ge 1 this_game DO stat_change self (strength=3) for permanent
+  Blessing of Charity -> Primordial D'ao
+     Blessing of Charity: (rows above)
+     Primordial D'ao: KW: Shield, Deploy | WHEN always DO give_keyword self <Shield> for permanent | WHEN played of self DO stat_change self (strength=event_count of (played of mine unit [type is Construct]) this_game) for permanent
+  Dandelion: Poet -> Harald Gord
+     Dandelion: Poet: KW: Deploy | WHEN played of self DO draw mine card in deck_top (amount=1) THEN play_card chosen mine card in hand
+     Harald Gord: KW: Deploy | WHEN played of self DO stat_change self (strength=event_count of (played of mine spell) this_game, max=12) for permanent
+
+## type: damages it for its effect (723 lines; rule at network.py line 688)
+  Biting Frost -> Drummond Queensguard
+     Biting Frost: (rows above)
+     Drummond Queensguard: (rows above)
+  Dragon's Dream -> Skjall
+     Dragon's Dream: WHEN played of self DO give_keyword chosen enemy position <Dragon's Dream> (turns=3) for n_turns
+     Skjall: KW: Berserk | WHEN stat_changed of self IF keyword_condition Berserk 5 DO kill self
+  Hemdall -> Svalblod Fanatic
+     Hemdall: KW: Deploy | WHEN played of self DO damage all unit in board [position is same_row] (amount=count of (all unit in board [position is same_row]), spread=1)
+     Svalblod Fanatic: (rows above)
+  Lacerate -> Udalryk an Brokvar
+     Lacerate: WHEN played of self DO damage all unit in board [position is same_row] (amount=2)
+     Udalryk an Brokvar: (rows above)
