@@ -1,6 +1,9 @@
 """Reader input for one game: every card that has text beyond its Keywords field, with its keywords, types and the names of
 other entries its text mentions; cut into batches by amount of text. Keyword-only cards get an empty record directly.
 Usage: build_input.py <game> <chars per batch> [--only id,id,...]   writes input/<game>/batch_NNN.jsonl, read/<game>/auto.jsonl
+       build_input.py <game> --pilot [n]   input/<game>/pilot.jsonl: about n (60) cards that together hold every keyword and
+                                           every sentence shape (templates.py) used by 3+ cards, read before the full batches
+Cards are sorted by mechanic (their first keyword or trigger label) before cutting, so one reader sees one wording.
        build_input.py <game> --add id,id,...   cards new to the source (supplement): the next batch_NNN and read/<game>/auto_NNN.jsonl"""
 import glob, json, os, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -70,7 +73,34 @@ def add(game, ids):
     print(f'batch_{k:03d}: {len(new) - len(auto)} cards to read, {len(auto)} keyword-only')
 
 
+def mechanic(x):
+    """sort key: the card's first keyword, else its first trigger label ("Deploy:", "Order:"), else its first word"""
+    m = re.match(r'\s*([A-Z][\w\' ]{1,25}?)(?:\s*\([^)]*\))?\s*[:.]', x['text'])
+    return ((x.get('keywords') or [''])[0] or (m.group(1) if m else x['text'][:12])).lower(), x['id']
+
+
+def pilot(game, n):
+    """the fewest cards (greedy) that cover every keyword and every shape used by 3 or more cards, topped up to n"""
+    import templates
+    c = source.lib(); allc = [x for x in cards(c, game) if re.sub(r'[\W_]', '', x['_rest'])]
+    kws = {k for (k,) in c.execute("select lower(name) from entities where game=? and category='keyword'", (game,))}
+    sh = templates.shapes(allc); common = {k for k, v in sh.items() if len(v) >= 3}
+    feats = {x['id']: {k for k in kws if re.search(r'\b' + re.escape(k) + r'\b', x['text'].lower())}
+             | {s for s in templates.card_shapes(x) if s in common} for x in allc}
+    left, pick = set().union(*feats.values()), []
+    while left and len(pick) < 3 * n:
+        best = max(allc, key=lambda x: (len(feats[x['id']] & left), -len(x['text'])))
+        if not feats[best['id']] & left: break
+        pick.append(best); left -= feats[best['id']]
+    rest = sorted((x for x in allc if x not in pick), key=lambda x: -len(x['text']))
+    pick += rest[:max(0, n - len(pick))]
+    with open(os.path.join(HERE, 'input', game, 'pilot.jsonl'), 'w') as f:
+        for x in sorted(pick, key=mechanic): f.write(json.dumps({k2: v for k2, v in x.items() if not k2.startswith('_')}) + '\n')
+    print(f'pilot: {len(pick)} cards; {len(left)} keywords or shapes not covered')
+
+
 def main():
+    if sys.argv[2] == '--pilot': return pilot(sys.argv[1], int(sys.argv[3]) if len(sys.argv) > 3 else 60)
     if sys.argv[2] == '--add': return add(sys.argv[1], {int(x) for x in sys.argv[3].split(',')})
     game, budget = sys.argv[1], int(sys.argv[2])
     only = set(int(x) for x in sys.argv[sys.argv.index('--only') + 1].split(',')) if '--only' in sys.argv else None
@@ -80,7 +110,7 @@ def main():
     auto = [x for x in allc if not re.sub(r'[\W_]', '', x['_rest'])]
     with open(os.path.join(HERE, 'read', game, 'auto.jsonl'), 'w') as f:
         for x in auto: f.write(json.dumps({'id': x['id'], 'abilities': []}) + '\n')
-    todo = [x for x in allc if x not in auto and (only is None or x['id'] in only)]
+    todo = sorted([x for x in allc if x not in auto and (only is None or x['id'] in only)], key=mechanic)
     batches, cur, size = [], [], 0
     for x in todo:
         if cur and size + len(x['text']) > budget: batches.append(cur); cur, size = [], 0
