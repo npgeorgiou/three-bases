@@ -6,7 +6,12 @@
   rebuild done (Gwent lines 50,360 -> 80,425). Five text-less tokens added from gwent.one (supplement_gwent.py).
 - Runeterra n34 already failed before this import (see START_DATABASE "State").
 
-## Next (chat 2 continues here: START_DATABASE.md Part 3)
+## Next
+- Step 2 fix round (Kaptain, 6 Nov 2026: the import chat fixes every open item itself). Running: baseline (check_all.py
+  --no-load, scratchpad), agent grouping checks/gwent/step2/findings.md into step2/families.md, agent checking 16
+  suggested keyword definitions into step2/keyword_defs.md. Then fixers one family at a time, one rebuild.
+
+## Before step 2 (chat 2 continues from START_DATABASE.md Part 3 after it)
 - Done 6 Nov 2026: Deck pairs (43, games/gwent.md, from the guide texts; 13 guides name none) -> network.tsv n545-n587
   (deck_pairs.py); combos.tsv cgw01-03; regions.tsv rgw01-30 (all pass); mechanics.tsv gw01-gw85, one per keyword
   (checks/gwent/mech_cases.md); run.py gwent and every step after its cases; realworld.py gwent (26 of 33 hold);
