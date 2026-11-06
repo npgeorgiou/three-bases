@@ -1,0 +1,54 @@
+{"id": 757382, "field": "params", "need": "ignore_armor"}
+{"id": 757393, "field": "x", "need": "power lost by each row at the last round transition"}
+{"id": 757394, "field": "x", "need": "damage dealt by Frost over the last 5 enemy turns"}
+{"id": 757395, "field": "filter", "need": "a row on which Frost was applied this turn"}
+{"id": 757396, "field": "x", "need": "duration of row effects"}
+{"id": 757397, "field": "x", "need": "number of unique Gang categories (a group of categories)"}
+{"id": 757398, "field": "x", "need": "number of unique Gang categories (a group of categories)"}
+{"id": 757398, "field": "filter", "need": "a unit whose Gang category you do not control"}
+{"id": 757399, "field": "type", "need": "a Gang category of a unit in your deck (which category)"}
+{"id": 757399, "field": "x", "need": "number of unique Gang categories (a group of categories)"}
+{"id": 757400, "field": "x", "need": "number of unique Gang categories (a group of categories)"}
+{"id": 757401, "field": "limit", "need": "first time each turn"}
+{"id": 757405, "field": "x", "need": "provisions below the limit"}
+{"id": 757406, "field": "limit", "need": "first time each turn"}
+{"id": 757408, "field": "filter", "need": "primary category that you do not control"}
+{"id": 757410, "field": "filter", "need": "a row where you control a unit"}
+{"id": 757412, "field": "act", "need": "worship Dagon"}
+{"id": 757415, "field": "x", "need": "excess Coins (beyond the Coin limit)"}
+{"id": 757416, "field": "x", "need": "provisions below the limit"}
+{"id": 757417, "field": "x", "need": "difference between the number of cards in the two decks"}
+{"id": 757421, "field": "x", "need": "a third of a count (for each 3)"}
+{"id": 757421, "field": "when", "need": "damage taken from Rain or Storm"}
+{"id": 757422, "field": "x", "need": "number of opponent turns in which Rain or Storm triggered this round"}
+{"id": 757426, "field": "pick", "need": "the last unit played by the opponent"}
+{"id": 757427, "field": "pick", "need": "the last unit played by the opponent"}
+{"id": 757429, "field": "x", "need": "the amount of boost a unit had"}
+{"id": 757432, "field": "filter", "need": "unique (different names) among the picked cards"}
+{"id": 757432, "field": "limit", "need": "first time each turn"}
+{"id": 757432, "field": "card", "need": "the next chosen Kikimore unit"}
+{"id": 757433, "field": "ability", "need": "give this same ability (self-reference)"}
+{"id": 757436, "field": "limit", "need": "once per turn"}
+{"id": 757441, "field": "x", "need": "highest number of statuses on a unit"}
+{"id": 757444, "field": "filter", "need": "an active Flanking unit"}
+{"id": 757445, "field": "act", "need": "move a card up one position in the deck"}
+{"id": 757445, "field": "state", "need": "the card chosen by Order"}
+{"id": 757446, "field": "x", "need": "Armor amount of a unit"}
+{"id": 757448, "field": "params", "need": "split damage randomly between several units"}
+{"id": 757449, "field": "test", "need": "damage dealt by this card"}
+{"id": 757451, "field": "test", "need": "during my turn"}
+{"id": 757458, "field": "limit", "need": "first time each turn"}
+{"id": 757462, "field": "x", "need": "excess damage dealt"}
+{"id": 757464, "field": "act", "need": "set base power to a value"}
+{"id": 757469, "field": "act", "need": "set base power to a value"}
+{"id": 757471, "field": "x", "need": "Coins spent this turn"}
+{"id": 757476, "field": "filter", "need": "from the opponent's faction"}
+{"id": 757476, "field": "pick", "need": "the rest of the created cards"}
+{"id": 757477, "field": "filter", "need": "from the opponent's faction"}
+{"id": 757482, "field": "limit", "need": "first time each turn"}
+{"id": 757483, "field": "x", "need": "remaining Charges of a leader ability"}
+{"id": 757484, "field": "x", "need": "duration of row effects"}
+{"id": 757486, "field": "filter", "need": "a unit with a Gang category"}
+{"id": 813593, "field": "params", "need": "split damage randomly between several units"}
+{"id": 813595, "field": "pick", "need": "the rightmost card in hand"}
+{"id": 813595, "field": "card", "need": "a random special card"}
