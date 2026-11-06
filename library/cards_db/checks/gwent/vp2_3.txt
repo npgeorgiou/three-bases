@@ -1,0 +1,25 @@
+## C27 lr2_tb_2.md 3 (CAUSE, gone, 0 table lines from the same code)
+More strength is read as "keeps it alive" for cards that do not wait to survive damage (Cave Troll only cannot be targeted; Donimir's damage rows are the shield keyword's own working, L15), so the help is generic (L18).
+- W gwent: Blessing of Kindness -> Cave Troll: NONE | network.py []
+- W gwent: Reynard Odo -> Donimir of Troy: NONE | network.py []
+- W gwent: Vandergrift's Blade -> Donimir of Troy: NONE | network.py []
+
+## C28 lr2_tb_2.md 4 (CAUSE, gone, 0 table lines from the same code)
+Consuming a unit from the graveyard is read as "makes units die", but the unit is already dead; no death happens, so cards that wait for deaths or revive from the graveyard get no line (L15, L2).
+- W gwent: Ghoul -> Vran Warrior: NONE | network.py []
+- W gwent: Ozzrel -> Vran Warrior: NONE | network.py []
+- W gwent: Ozzrel -> Incubus: NONE | network.py []
+- W gwent: Ozzrel -> Witches' Sabbath: NONE | network.py []
+
+## C29 lr2_tb_2.md 5 (CAUSE, gone, 0 table lines from the same code)
+Reinforce adding Armor to units that have Armor is linked to cards whose own text never reads Armor (their Armor rows are the keyword's inner working), so it is generic health help (L15, L18).
+- W monster_train: Reinforce -> Railbeater: NONE | network.py []
+- W monster_train: Reinforce -> Kinhost Pupa: NONE | network.py []
+
+## C30 lr2_tb_4.md 1 (MISSED CAUSE, gone, 0 table lines from the same code)
+Snowdrifts deals damage equal to its own strength after it attacks (its text reads the stat), so every card that gives it more strength helps it and keeps its line (L18: reads its power; L24 spirit).
+- W stormbound: Big Sisters of Growth -> Snowdrifts: gives it more strength | network.py [1531]
+- W stormbound: Fortification Tonic -> Snowdrifts: gives it more strength | network.py [1531]
+- W stormbound: Original Blueprints -> Snowdrifts: can give it more strength (when around it) | network.py [1532]
+- W stormbound: Emerald Towers -> Snowdrifts: gives it more strength (when ahead of it) | network.py [1531]
+

@@ -49,3 +49,4 @@ lr_misses.md · 5 verifiers · 6 the sheet · 7 fixers · 8 one rebuild · 9 las
 - check_all --no-load after C79: Monster Train 154 of 155 (one fix broke a case; an agent finds it, report fix_mt.md); every other game unchanged; Gwent 225 of 248.
 - Step 7 DONE (cut). Step 8: check_all --no-load (only code changed), then links.py, after.tsv, diffs.
 - Step 8: check_all: every game as before, Gwent 236 of 252. diff_lines 165, diff_tb 116 lines -> dr_lines/dr_tb pieces, line readers.
+- Step 8, round 2: 9 diff readers (lr2_*.md, 30 findings) -> vp2.md.
