@@ -2,4 +2,5 @@
 - step 0 (research, data, words, rules, batches): done 5 Nov 2026
 - step 1 readers: all done (keywords, batch_001..008, second_001), 6 Nov 2026
 - step 2.1-2.3: done 6 Nov 2026 (re-read of 354 cards merged; v75; second reading judged: 32 corrected, 20 same meaning -> normalize N35; word check 0 open)
-- step 2.4 rebuild check_all.py gwent, dump and diff: next
+- step 2.4 rebuild check_all.py gwent, dump and diff: done 6 Nov 2026 (Gwent 13 of 13 cases; lines 50,360 -> 80,425, every gone and new reason group read)
+- next: step 2.5 decks (20 full decks), step 3 case tests, step 4 last checks, keyword -> concept list for Kaptain; then chat 2 (line check)

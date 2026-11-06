@@ -84,7 +84,9 @@ push, give network.html to Kaptain.
 ## State (5 Nov 2026)
 - All 9 games imported. Kaptain approved Runeterra and Into the Breach; Slay the Spire done; Inscryption reviewed; Stormbound,
   Monster Train, Faeria, Duelyst and Marvel Snap (chat 2 done 5 Nov 2026) wait for his check of their deck networks.
-- Cases: all pass in every game. The next case id is n545.
+- Cases: all pass in every game except Runeterra n34 (Darius Gnar: Brothers' Bond -> Darius), which already failed before the
+  Gwent import (checked on the code of 5 Nov, 6 Nov 2026). The next case id is n545.
+- Gwent import (chat 1) under way: steps 0-2.4 done 6 Nov 2026, progress in checks/gwent/PROGRESS.md.
 - Real-world cases: all hold (failing ones deleted, 5 Nov 2026).
 - Lines (links.sqlite rows, 5 Nov 2026): Runeterra 210,310; Marvel Snap 19,734; Duelyst 12,799; Faeria 10,733; Slay the
   Spire 8,939; Into the Breach 6,419; Monster Train 3,353; Stormbound 2,854; Inscryption 1,116.

@@ -123,7 +123,8 @@ SAY = {  # what happens, in plain words; {who} = your / enemy / any
 RESOURCE_KINDS = ('secondary_resource', 'gem', 'lane_resource')
 EVERY_GAME = {'played', 'summoned', 'attacks', 'blocks', 'strikes', 'damaged', 'survives_damage', 'round_start', 'round_end',
               'turn_start', 'turn_end', 'drawn', 'mana_refilled', 'strikes_nexus', 'nexus_damaged', 'always', 'activated', 'moves',
-              'attack_done', 'targeted', 'spell_resolves', 'game_start', 'supports', 'combat_start', 'combat_end', 'kept_in_hand'}  # happen in play without a card making them
+              'attack_done', 'targeted', 'spell_resolves', 'game_start', 'supports', 'combat_start', 'combat_end', 'kept_in_hand',
+              'passed', 'round_won'}  # happen in play without a card making them
 CONTROL = ('damage', 'ping', 'aoe_damage', 'removal', 'destroy', 'board_wipe', 'banish', 'bounce_enemy', 'disable', 'attack_zero', 'stat_loss', 'silence',
            'attack_lock', 'cant_block', 'immobilize', 'forced_movement', 'steal', 'polymorph', 'damage_over_time')
 SUPPORT = ('stat_gain', 'attack_gain', 'defence_gain', 'shield', 'immunity', 'evasion', 'first_strike', 'multi_attack', 'heal',
