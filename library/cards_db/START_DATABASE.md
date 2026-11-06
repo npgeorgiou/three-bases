@@ -23,7 +23,7 @@ first and wait. Never invent rules or mechanics; mark suggestions as yours.
    errors", Part 2).
 2. **Every fix gets test cases** (31 Oct 2026): one `cases/network.tsv` row per point Kaptain made and per similar error found,
    `line` or `none`, only for lines checked against both cards. A fix without cases comes back broken.
-3. **Dump all lines before and after** (`dump_lines.py`) and read EVERY gone and new reason group in every game.
+3. **Dump all lines before and after** (`dump_lines.py`; the before dump is made from the code as it is just before the change, never an older dump file) and read EVERY gone and new reason group in every game.
 4. **One rebuild per round**: `check_all.py <game>` loads all games once (about 7 minutes); after a change to network.py only,
    `check_all.py --no-load` (about 2 minutes). Never `run.py` once per game, never a rebuild between single edits.
    Start it only with the Bash tool's background mode (run_in_background), never with `&` or nohup (the shell stops those a
@@ -115,7 +115,8 @@ game's own rulebook, and players' combos and decks that test the lines. Complete
    position rule for every game (mover/placer -> card that acts by where units stand; Snap-only lane skips removed), Snap v86 ("each
    side of this location", "at each location"). Lines before -> after (checks/pos/diff.txt): Duelyst 2846 -> 3420, Snap 1027 -> 1164,
    Stormbound 252 -> 290, Gwent 3443 -> 3371, Into the Breach 464 -> 412 (losses there look wrong: Kaptain said its position lines
-   were right). Failing cases: Gwent 19 (dgw01-05, 07-10, 12, n546, n547 must become none, n551, n564, n578, n586, n612-614), Snap 8
+   were right; but checks/pos/before.tsv is the dump of 6 Nov 21:19, older than fixes C7, C8, C9 and sb of that evening, so these
+   counts mix both rounds: the Into the Breach loss is fix C8's, "a move is no help to a card that hits units next to it"). Failing cases: Gwent 19 (dgw01-05, 07-10, 12, n546, n547 must become none, n551, n564, n578, n586, n612-614), Snap 8
    (n439-442, n445, n448, n449, n477), Runeterra 1, Duelyst 1; must-not cases with a reason no deck says any more (cases/run.py).
    Not read yet: the diff groups (checks/pos/grp_*.txt). Still to fix: Muse, Basic Arrow, Captain Marvel misreadings; Seagull's
    "3 units" count; Runeterra Attune (goes off when summoned by its glossary, not counted). Ask Kaptain before any reading.
