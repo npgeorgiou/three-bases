@@ -1254,12 +1254,13 @@ def use_of(c, game, b, act, kw, ps, w=None):
     up = lambda *ks: act in ('stat_change', 'grow') and any(k in p and raises(p[k]) for k in ks)
     if up('power') and b in power_doublers(c) and not (b in play_doublers(c) and not re.search(r'zone (hand|deck)', w or '')):
         return 'more power: it doubles its power'  # Okoye -> Black Panther; a doubling on play comes before a buff on a unit in play (Eye Of The Storm -> Dashing Dandy: no line)
+    if up('strength') and b in strength_readers(c): return 'more strength: its text reads its strength'  # Arachas Queen passes on what it eats, False Ciri levels at a strength (L18, L24)
     if up('power') and b in own_power_readers(c): return 'more power: its text reads its power'  # Poppy: "allies with less power than me" (L18)
     if up('power', 'strength') or (act == 'give_keyword' and tree in ('attack_gain', 'temporary_buff')):
         if u['trees'] & set(POWER_USE) or u['flags'] & {'big_strike', 'fights', 'level_hit'} or ('play_fights' in u['flags'] and 'hand' in (w or '')) or (b in gains_back(c, game) and not fixed_hit(c, b)):
             return 'more power: its text uses the damage it deals'  # a fixed amount is not its power (Path to Paradise -> Enslaved Priest)
     # a heal is no more health (L18): it does not keep a fighting unit alive (Lux Ignis -> Fireblazer)
-    if up('health', 'strength') or act in ('negate_damage', 'damage_reduction') or (act == 'give_keyword' and tree in DEFENCE_KW) \
+    if up('health') or act in ('negate_damage', 'damage_reduction') or (act == 'give_keyword' and tree in DEFENCE_KW) \
             or (act == 'cant' and pev in ('dies', 'targeted')):  # "can't drop below 1 health" (Survival Skills)
         if u['trees'] & set(GUARD_USE): return 'keeps it alive in the fights it takes on'
     if act == 'repeat' and b in doublers(c, game): return 'plays it again: its doubling doubles again'  # Burst -> Catalyst
@@ -1339,6 +1340,13 @@ def sharers(c):
     if 'sharers' not in CACHE:
         CACHE['sharers'] = {b for (b,) in c.execute("select card from flat_do where origin='own' and act='copy_keywords' and (on_pick='self' or to_pick='self')")}
     return CACHE['sharers']
+
+
+def strength_readers(c):
+    """cards whose text tests the strength of itself or of a card it acts on (Arachas Queen's eaten ally, False Ciri's "strength ge")"""
+    if 'sread' not in CACHE:
+        CACHE['sread'] = {b for (b,) in c.execute("select card from flat_if where test in ('amount_stat','stat') and attr='strength' and of_pick in ('self','it')")}
+    return CACHE['sread']
 
 
 def own_power_readers(c):
@@ -1434,7 +1442,7 @@ def aimed(c, game, nodes, broad):
                 kind_count(c, game, kind, None) < 0.5 * kind_count(c, game, 'any', None): sharp = True  # a smaller kind of card
         # (Doctor Mia triggers structures; Kaptain's check n17) is a deck choice (L1b); more spell damage is not: only a spell whose
         # text uses its damage (Powder Keg -> Advanced Intel, Crescent Spear -> Phoenix Fire: no line) not when most cards are spells (Slay the Spire)
-        if act in ('stat_change', 'grow') and kind != 'player' and not any(p.startswith(('type is', 'type in')) for p in (w or '').split(';')):
+        if act in ('stat_change', 'grow') and kind != 'player' and (not any(p.startswith(('type is', 'type in')) for p in (w or '').split(';')) or 'strength=' in (ps or '')):
             sharp = False  # stats to units with a keyword or a stat go only to a unit whose text uses them (L14, L18: Rek'Sai's Lurkers ->
             # Sharkling: no line); a tribe stays a deck choice (Kaptain's ndu34: Oakenheart helps the Mechs)
         if act == 'increase_effect' and kind == 'spell' and 'keyword i' not in (w or ''): sharp = False  # more spell damage ()
@@ -2423,9 +2431,9 @@ def object_help_lines(c, game, nodes, broad):
         k = 'any' if kind in (None, 'card', 'any', 'anything') else kind
         hits = [b for b in L if b != a and b in cards and matches(c, game, cards[b], k, w) and all(x in cards[b]['kws'] for x in arrive_kws)]
         for b in hits:
-            loose = lambda act: sharp and (act not in ('stat_change', 'grow') or 'type ' in (w or ''))  # stats to "an Elite" or "a Flying unit" go only to a unit
+            loose = lambda act, ps: sharp and (act not in ('stat_change', 'grow') or ('type ' in (w or '') and 'strength=' not in (ps or '')))  # strength (Gwent, Stormbound) for a tribe is generic more power (L18)  # stats to "an Elite" or "a Flying unit" go only to a unit
             # whose own text uses them (L14, L18: Drakkar Skycaptain's Flying units -> Airbot: no line); a tribe is a deck choice (ndu34)
-            ws = [y if loose(act) else use_of(c, game, b, act, kw, ps) for y, act, kw, ps in whys if loose(act) or uses_help(c, game, b, act, kw, ps)]  # "when
+            ws = [y if loose(act, ps) else use_of(c, game, b, act, kw, ps) for y, act, kw, ps in whys if loose(act, ps) or uses_help(c, game, b, act, kw, ps)]  # "when
             # you summon an ally, grant it +1|+1": only the units that use it (Kaptain 1 Nov 2026)
             if not ws: continue
             when = '' if all(y.startswith(('plays it again', 'makes its effect bigger', 'hits several', 'its damage is bigger')) for y in ws) else ' when it comes'  # it is played: it comes
