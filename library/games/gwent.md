@@ -87,6 +87,57 @@ Archetypes: economy, hoarding for one big play or steady spending [1].
 - Iris von Everec + Iris' Companions: thinning for a strong Round 3 hand [4]
 - Sove + Tyr, Prince Anseis + Radovid: Judgment, Mutagenerator + Temple of Melitele + Inspired Zeal: names do not match one library card; no case [4]
 
+## Deck pairs
+Card pairs the deck guides (playgwent.com, `content` field of each deck in ../cards_db/decks.tsv) name, as
+`deck | A | B | the guide's words` (A does it for B). `cards_db/deck_pairs.py gwent` turns each into a `line` row of
+cases/network.tsv. Guides with no named pair (video links only) give none.
+
+```pairs
+Nature's Gift: Devotion Symbiosis Good Version | Mahakam Pass | Naiad Fledgling | buff can protect vulnerable engines (Naiad Fledglings)
+Nature's Gift: Devotion Symbiosis Good Version | Mahakam Pass | Naiad Pondkeeper | set up a treant for Naiad Pondkeeper
+Mobilization: NR Devotion Undead Army | Kerack Marine | Kaedweni Revenant | they can also protect your Revenant
+Mobilization: NR Devotion Undead Army | Poor Fucking Infantry | Kaedweni Revenant | PFIs are good Revenant food
+Mobilization: NR Devotion Undead Army | Forbidden Magic | Kaedweni Revenant | Forbidden Magic is to get more Revenant
+Mobilization: NR Devotion Undead Army | Redanian Secret Service | Drakenborg | amazing synergy with Drakenborg
+Mobilization: NR Devotion Undead Army | Redanian Secret Service | Kaedweni Revenant | good Revenant food
+Mobilization: NR Devotion Undead Army | Princess Adda | Redanian Secret Service | Adda gains Immunity on Deploy, so she will summon a Secret Service
+Mobilization: NR Devotion Undead Army | Drakenborg | Vincent Meis | Drakenborg targets
+Mobilization: NR Devotion Undead Army | Drakenborg | Margarita Laux-Antille | Drakenborg targets
+Mobilization: NR Devotion Undead Army | Drakenborg | Botchling | Drakenborg targets
+Mobilization: NR Devotion Undead Army | Drakenborg | Bloody Baron | Drakenborg targets
+Mobilization: NR Devotion Undead Army | Kaedweni Revenant | Vincent Meis | with Revenant on board Vincent kills any unboosted unit
+Mobilization: NR Devotion Undead Army | Redanian Archer | Vincent Meis | with Archer on board Vincent kills any unboosted unit
+Mobilization: NR Devotion Undead Army | Voymir | Kaedweni Revenant | boost all Revenants on board
+Mobilization: NR Devotion Undead Army | Voymir | Redanian Archer | reactivate the Redanian Archer engines
+Mobilization: NR Devotion Undead Army | Sabrina Glevissig | Kaedweni Revenant | another Revenant food
+Mobilization: NR Devotion Undead Army | Philippa: Blind Fury | Kaedweni Revenant | a Revenant food
+Mobilization: NR Devotion Undead Army | Botchling | Princess Adda | every time Botchling transforms, it boosts Adda by 5
+Mobilization: NR Devotion Undead Army | Vernon Roche | Kaedweni Revenant | also a Revenant food
+Shieldwall: Roegner Ale Damsel | Ale of the Ancestors | Knight-Errant | speed up Knight Errant grace
+Shieldwall: Roegner Ale Damsel | Ale of the Ancestors | Prince Anséis | enhance Prince Anseis removal
+Pincer Maneuver: Kimbolt's Temple Siege | Temple of Melitele: Congregation | Prince Anséis | play Temple and buff Anseis
+White Frost: White Frost-EZ pro rank | Eredin Bréacc Glas | Caranthir: Golden Child | Eredin into constant frost brings Golden Child to 32 power
+Arachas Swarm: Tatterwing - 1 prov left for good luck | Ge'els | Lara Dorren | with Ge'els you can replay Lara
+Enslave: Damage Enslave With Enforcers (+10 -1) | Battle Stations! | Impera Enforcers | play Enforcers with Battle Preparation in one turn
+Enslave: Damage Enslave With Enforcers (+10 -1) | Fercart | Impera Enforcers | Stefan Skellen played with Fercart on board procs Enforcers 4 times
+Enslave: Damage Enslave With Enforcers (+10 -1) | Stefan Skellen | Impera Enforcers | Stefan Skellen with Fercart procs Enforcers 4 times
+Enslave: Damage Enslave With Enforcers (+10 -1) | Buhurt | Fercart | Fercart can protect self with Buhurt
+Enslave: Damage Enslave With Enforcers (+10 -1) | Joachim de Wett | Coup de Grâce | Joachim + Coup combo
+Tactical Decision: OP GN HyperThin | Doadrick Leumaerts | Albrich | Doadrick will cycle Albrich in round 3
+Tactical Decision: OP GN HyperThin | Maxii van Dekkar | Albrich | Maxii will also proc Albrich
+Tactical Decision: OP GN HyperThin | Strays of Spalla | Albrich | Strays can be used to proc Albrich
+Tactical Decision: OP GN HyperThin | Summoning Circle | Imperial Golem | select golem with summoning circle
+Tactical Decision: OP GN HyperThin | Doadrick Leumaerts | Snowdrop | use Doadrick to get value off Snowdrop
+Blood Money: Classical Bounty with Tamara, Drill | Vivaldi Bank | Conjurer's Candle | Vivaldi's Bank is essential for Conjurer's Candle
+Blood Money: Classical Bounty with Tamara, Drill | Royal Decree | Tamara Strenger | Royal Decree can be used to find Tamara Strenger
+Onslaught: Pirates attack - Endless Voyage | Vabjorn | Raiding Fleet | use Vabjorn to play Raiding Fleet
+Onslaught: Pirates attack - Endless Voyage | Vabjorn | Abordage | use Vabjorn to play Abordage
+Rage of the Sea: Fulmar rain ft. Otkell and Melusine | Melusine | Messenger of the Sea | go Melusine round 1, with Messenger of the Sea
+Rage of the Sea: Fulmar rain ft. Otkell and Melusine | Torrential Rain | Messenger of the Sea | play rain and messenger as required
+Patricidal Fury: RnR Seagulls Sove Compass | Seagull | Ragh Nar Roog | for Clear Skies some swarm; Seagulls come handy
+Patricidal Fury: RnR Seagulls Sove Compass | Hammond | Ragh Nar Roog | max value from Cataclysm: Hammond moves an enemy unit
+```
+
 ## Mechanics
 The mechanics the guides name, one per line as `name|concept|regex`, and the rules and terms as `# term:` lines. Read by `coverage.py --mechanics` and `key/key.py`.
 

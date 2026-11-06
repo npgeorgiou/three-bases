@@ -20,7 +20,9 @@
    them growing numbers (Keira Metz, Colossal Ifrit); the other 48 growing-number cards were already read. Left: 5 amounts
    no value says yet (Dol Blathanna Bowman rows between, Vivaldi Bank distance from top, Fucusya unused provisions,
    Caranthir: Golden Child Frost damage, Torres var Emreis: Founder provisions below the limit). Then `run.py gwent`.
-3. Step 2.5 decks: 20 full decks (25+ cards, every faction), cases/decks.tsv, network.tsv, "Deck pairs" in games/gwent.md.
+3. Step 2.5 decks: Deck pairs written 6 Nov 2026 (43 pairs from 17 guides; 13 guides name no pair), network.tsv
+   n545-n587 by deck_pairs.py; combos.tsv cgw01-03 and regions.tsv rgw01-30 by script. Next: mechanics.tsv, run.py gwent.
+   Old plan: 20 full decks (25+ cards, every faction), cases/decks.tsv, network.tsv, "Deck pairs" in games/gwent.md.
 4. Step 3 cases: mechanics.tsv one row per keyword and trigger word (85 keywords), regions.tsv rows for the six factions,
    combos.tsv from guides. Gwent has only the 13 shared cases now.
 5. Step 4 last checks (realworld.py gwent, design_questions.py), keyword -> concept list shown to Kaptain, one
