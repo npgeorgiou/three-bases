@@ -417,7 +417,7 @@ def lines_of(c, game):
     for card, in c.execute("""select distinct w.card from flat_when w join flat_do d on d.ability=w.ability where w.event='discarded' and w.obj_pick='self'
             and d.origin='own' and d.on_pick='self' and d.act in ('return_card','copy')"""):
         if card in cards: makes['discarded'].add((card, 'mine', None, 'card', 'self', None, card, False)); own_makes[card].add('discarded'); made_by[(card, 'discarded')].add('own')
-    grave_kill = {a_ for (a_,) in c.execute("select ability from flat_do where act in ('kill','obliterate') and on_zone='discard'")}
+    grave_kill = {(k_, a_) for k_, a_ in c.execute("select card, ability from flat_do where act in ('kill','obliterate') and on_zone='discard'")}
     enemy_kw = {(a_, k_) for a_, k_ in c.execute("select card, keyword_ref from flat_do where origin='own' and act='give_keyword' and on_side='enemy'")} - \
         {(a_, k_) for a_, k_ in c.execute("select card, keyword_ref from flat_do where origin='own' and act='give_keyword' and coalesce(on_side,'')!='enemy'")}  # keywords only given to enemies
     own_killers = {x for (x,) in c.execute("select card from flat_ref where origin='own' and role='trigger' and happening='killed' and pick='actor_self'")}  # Northern Wind
@@ -429,7 +429,7 @@ def lines_of(c, game):
             if ab in kw_adds: continue
             if pick == 'it' and not side and origin == 'own' and ab in it_side: side = it_side[ab]  # "when you Stun an enemy, I strike
             # it" (Yasuo): it is that enemy
-            if role == 'makes' and h in ('dies', 'killed') and ab in grave_kill: continue  # Consume eats a card in the discard pile: no unit dies (L9, C63)
+            if role == 'makes' and h in ('dies', 'killed') and (card, ab) in grave_kill: continue  # Consume eats a card in the discard pile: no unit dies (L9, C63)
             if origin == 'uses_keyword' and not side and h in ('dies', 'killed') and (card, via) in enemy_kw: side = 'enemy'  # a keyword it
             # puts only on enemy rows (Naglfar Crew's Frost) hurts enemies: no kill of my unit's death effect (L9, C40)
             if origin == 'uses_keyword' and pick == 'it' and not side and (card, via) in self_kw: pick = 'self'  # a keyword it gives its own
