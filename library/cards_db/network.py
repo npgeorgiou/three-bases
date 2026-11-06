@@ -1369,7 +1369,8 @@ def strength_readers(c):
         off = {b for (b,) in c.execute("select card from flat_do where origin='own' and on_zone in ('discard','deck')")} - \
             {b for (b,) in c.execute("select card from flat_do where origin='own' and coalesce(on_zone,'board')='board' and on_pick in ('chosen','all','it','random','highest','lowest') and on_kind='unit'")}
         CACHE['sread'] = {b for (b,) in c.execute("select card from flat_if where test in ('amount_stat','stat') and attr='strength' and of_pick in ('self','it') "
-                          "and (of_pick='self' or (coalesce(of_side,'')!='enemy' and coalesce(of_zone,'board')='board'))")} - off
+                          "and (of_pick='self' or (coalesce(of_side,'')!='enemy' and coalesce(of_zone,'board')='board')) "
+                          "and not (test='amount_stat' and origin in ('uses_keyword','has_keyword'))")} - off  # the generic keyword rows (kill, stat_change: 'amount of its strength') are no reading of the card's own text (Toad Prince, Kikimore Stalker)
     return CACHE['sread']
 
 

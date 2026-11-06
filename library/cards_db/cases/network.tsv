@@ -650,3 +650,7 @@ n655	gwent	Field Medic, Yennefer: Divination	Shaping Nature: Vitality	Yennefer: 
 n656	gwent	Chimera, Ozzrel	Chimera	Ozzrel	none	gives it more strength	Claude 2026-11-06, line check: a boost on my board units feeds no card that reads enemy, deck or discard strength
 n657	gwent	Squire, Redanian Knight	Squire	Redanian Knight	line	more strength: its text reads its strength when it comes	Claude 2026-11-06, line check: a boost on my board units feeds no card that reads enemy, deck or discard strength
 n658	gwent	Anna Strenger, Redanian Knight	Anna Strenger	Redanian Knight	line	can give it more strength	Claude 2026-11-06, line check: a boost on my board units feeds no card that reads enemy, deck or discard strength
+n659	gwent	Tactical Advantage, Toad Prince	Tactical Advantage	Toad Prince	none	give it more strength	Claude 2026-11-06, line check: generic keyword rows are no reading of strength in the card text
+n660	gwent	Bone Talisman, Kikimore Stalker	Bone Talisman	Kikimore Stalker	none	gives it more strength	Claude 2026-11-06, line check: generic keyword rows are no reading of strength in the card text
+n661	gwent	Target Practice, Knight-Errant	Target Practice	Knight-Errant	line	can give it more strength	Claude 2026-11-06, line check: own strength test stays
+n662	gwent	Squire, Knight-Errant	Squire	Knight-Errant	line	its text reads its strength when it comes	Claude 2026-11-06, line check: own strength test stays
