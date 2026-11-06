@@ -768,6 +768,7 @@ def lines_of(c, game):
                              (m, ab, sq)).fetchone()
             if prev: k, w = prev[0], ';'.join(x for x in (prev[1] or '').split(';') if x.split(' ')[0] in ('card', 'type', 'category', 'keyword', 'name_has'))
         hit = [t for t, x in cards.items() if t != m and matches(c, game, x, k if k in KIND_CAT else 'any', w)]
+        if act in ('summon', 'play_card'): hit = [t for t in hit if entry.get(t, set()) & {'played', 'summoned'}]  # L17: a card put into play by kind links only to cards whose summon/play effect goes off
         if len(hit) >= 0.5 * kind_count(c, game, k if k in KIND_CAT else 'any', None): continue  # "a cheaper card from your deck"
         kw_ = ';'.join(p for p in (w or '').split(';') if p.split(' ')[0] in ('category', 'kind'))  # the share among its own kind
         if kw_ and len(hit) >= 0.5 * sum(1 for t, x in cards.items() if t != m and matches(c, game, x, k if k in KIND_CAT else 'any', kw_)): continue

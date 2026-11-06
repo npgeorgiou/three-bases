@@ -672,3 +672,5 @@ n677	gwent	Emhyr var Emreis, Impera Enforcers	Emhyr var Emreis	Impera Enforcers	
 n678	gwent	Emhyr var Emreis, Impera Enforcers	Emhyr var Emreis	Impera Enforcers	none	puts it into play from the hand	Claude 2026-11-06, line check: Enforcers wait only for Spying given
 n679	gwent	Fercart, Impera Enforcers	Fercart	Impera Enforcers	line	makes enemy units get Spying	Claude 2026-11-06, line check: the keyword giver stays
 n680	gwent	Treason, Impera Enforcers	Treason	Impera Enforcers	line	makes enemy units get Spying	Claude 2026-11-06, line check: the keyword giver stays
+n681	gwent	Damsel in Distress, Knight-Errant	Damsel in Distress	Knight-Errant	none	puts it into play from the deck	Claude 2026-11-06, line check: Knight-Errant has no summon effect (L17)
+n682	gwent	Damsel in Distress, Redanian Knight	Damsel in Distress	Redanian Knight	none	puts it into play from the deck	Claude 2026-11-06, line check: Redanian Knight has no summon effect (L17)
