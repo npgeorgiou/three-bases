@@ -46,3 +46,4 @@ lr_misses.md · 5 verifiers · 6 the sheet · 7 fixers · 8 one rebuild · 9 las
 - Step 7 cut (Kaptain 6 Nov: only the most influential): left to fix G26 G27 G39-G46 (causes naming failing guide cases); G1-G9 done; G10-G25, G28-G38 unfixed, to "Open work" at step 10.
 - 7. Fixers: C1 FIXED; C3 STUCK; C4 FIXED; C8 FIXED; C11 FIXED; C13 CONFLICT; C15 FIXED; C17 FIXED; C18 STUCK; C40 FIXED; C41 STUCK; C77 CONFLICT; C78 CONFLICT; C79 FIXED;
 - check_all --no-load after 5 fixers: every other game unchanged (Runeterra 428/429 as baseline); Gwent 195 of 225. Stale must-not cases listed in ca5.txt (step 8 rewrites them strict).
+- check_all --no-load after C79: Monster Train 154 of 155 (one fix broke a case; an agent finds it, report fix_mt.md); every other game unchanged; Gwent 225 of 248.
