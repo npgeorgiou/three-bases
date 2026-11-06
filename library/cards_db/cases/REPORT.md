@@ -1,7 +1,7 @@
 # Case tests: gwent
 
 Made by `cases/run.py gwent`.
-**153 of 174 cases pass.**
+**152 of 174 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -182,7 +182,7 @@ Made by `cases/run.py gwent`.
 | n565 | Shieldwall: Roegner Ale Damsel | Ale of the Ancestors | Knight-Errant | line  | - | NO |
 | n566 | Shieldwall: Roegner Ale Damsel | Ale of the Ancestors | Prince Anséis | line  | type: changes its stats for its effect | yes |
 | n567 | Pincer Maneuver: Kimbolt's Temple Siege | Temple of Melitele: Congregation | Prince Anséis | line  | type: changes its stats for its effect | yes |
-| n568 | White Frost: White Frost-EZ pro rank | Eredin Bréacc Glas | Caranthir: Golden Child | line  | type: makes units get Frost; also damages units or players | yes |
+| n568 | White Frost: White Frost-EZ pro rank | Eredin Bréacc Glas | Caranthir: Golden Child | line  | - | NO |
 | n569 | Arachas Swarm: Tatterwing - 1 prov left for good luck | Ge'els | Lara Dorren | line  | puts: puts it into play from the deck; also triggers: plays it: its effect goes  | yes |
 | n570 | Enslave: Damage Enslave With Enforcers (+10 -1) | Battle Stations! | Impera Enforcers | line  | - | NO |
 | n571 | Enslave: Damage Enslave With Enforcers (+10 -1) | Fercart | Impera Enforcers | line  | type: makes enemy units get Spying | yes |
