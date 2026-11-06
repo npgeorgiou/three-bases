@@ -1,0 +1,4 @@
+{"id":757444,"field":"state","need":"active (a keyword whose condition currently holds)"}
+{"id":757445,"field":"act","need":"move_up_deck (move a card up by N positions in its deck)"}
+{"id":757459,"field":"act","need":"remove_from_list (take a card out of a list the card keeps)"}
+{"id":813689,"field":"event","need":"worshipped (a unit worships a god named in a Deathwish text)"}

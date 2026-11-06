@@ -1,0 +1,3 @@
+{"id": 757242, "field": "event", "need": "moved_to_deck_top"}
+{"id": 757296, "field": "x", "need": "unused_provisions"}
+{"id": 757302, "field": "position", "need": "leftmost, middle, rightmost (the place of a unit in its row)"}
