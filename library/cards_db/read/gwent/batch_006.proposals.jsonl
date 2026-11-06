@@ -1,0 +1,41 @@
+{"id": 757265, "field": "filter", "need": "the unit I gave Spying to earlier this game"}
+{"id": 757266, "field": "pick", "need": "the leftmost position of the hand"}
+{"id": 757266, "field": "filter", "need": "the cards to the right of self in hand"}
+{"id": 757278, "field": "filter", "need": "used their Order this turn"}
+{"id": 757287, "field": "when", "need": "works while in hand, deck or on the battlefield"}
+{"id": 757291, "field": "act", "need": "set a Scenario to its final chapter"}
+{"id": 757293, "field": "val", "need": "the opponent's faction"}
+{"id": 757294, "field": "pick", "need": "the last card that went to the graveyard"}
+{"id": 757296, "field": "x", "need": "unused provisions"}
+{"id": 757297, "field": "when", "need": "played or Summoned from the graveyard"}
+{"id": 757298, "field": "when", "need": "damage dealt by Rain or Storm"}
+{"id": 757302, "field": "pick", "need": "the leftmost or rightmost card of the hand, by the played unit's position"}
+{"id": 757303, "field": "x", "need": "the amount of boost on a unit"}
+{"id": 757304, "field": "pick", "need": "the last unit I played"}
+{"id": 757305, "field": "act", "need": "Mages count toward Crew"}
+{"id": 757306, "field": "x", "need": "the highest Patience a card reached this game"}
+{"id": 757313, "field": "filter", "need": "Octavia's sons"}
+{"id": 757318, "field": "if", "need": "the increase happens only if the played Cultist was bronze"}
+{"id": 757326, "field": "x", "need": "the number of categories a card has"}
+{"id": 757326, "field": "attr", "need": "primary category of a card"}
+{"id": 757327, "field": "when", "need": "Harmony also works in hand and deck"}
+{"id": 757329, "field": "type", "need": "a random Scoia'tael category I do not control"}
+{"id": 757330, "field": "when", "need": "an allied unit triggers Grace"}
+{"id": 757335, "field": "act", "need": "units played on the enemy side trigger my Thrive"}
+{"id": 757337, "field": "act", "need": "triggers Thrive an additional time"}
+{"id": 757339, "field": "x", "need": "the amount of a status on a unit"}
+{"id": 757339, "field": "act", "need": "my Hoards need 1 less Coin"}
+{"id": 757342, "field": "ability", "need": "the blessing as an ability given to the leader ability"}
+{"id": 757344, "field": "filter", "need": "a primary category not on my side"}
+{"id": 757345, "field": "x", "need": "remaining Charges of a leader ability"}
+{"id": 757346, "field": "act", "need": "sort the cards of a deck by provision cost"}
+{"id": 757349, "field": "x", "need": "excess damage dealt"}
+{"id": 757351, "field": "if", "need": "during my turn"}
+{"id": 757353, "field": "when", "need": "works while in hand or deck"}
+{"id": 757354, "field": "when", "need": "a Tribute is paid"}
+{"id": 757356, "field": "x", "need": "excess damage dealt"}
+{"id": 757359, "field": "card", "need": "the card Vial transforms into"}
+{"id": 757361, "field": "x", "need": "the amount of boost given to allied units this turn"}
+{"id": 757366, "field": "pick", "need": "the other of the looked-at cards"}
+{"id": 757374, "field": "x", "need": "this card's Fee cost"}
+{"id": 757380, "field": "x", "need": "the amount of boost on a unit"}
