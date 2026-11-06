@@ -41,3 +41,4 @@ lr_misses.md · 5 verifiers · 6 the sheet · 7 fixers · 8 one rebuild · 9 las
 - Step 2 DONE: la.txt -> la_1-3, da.txt -> da_1-11.
 - Step 3 DONE: 14 line readers, lr_la_1-3.md, lr_da_1-11.md (86 findings).
 - Step 4 DONE: lr_misses.md (38: 21 deck pairs, 10 decks.tsv rows, 7 real-world), by misses.py.
+- Step 5 DONE: vv_1-9.md. Step 6 DONE: causes_sheet.md (94 causes; CONFLICT ones go to Kaptain at the end).
