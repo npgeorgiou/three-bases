@@ -52,3 +52,4 @@ lr_misses.md · 5 verifiers · 6 the sheet · 7 fixers · 8 one rebuild · 9 las
 - Step 8, round 2: 9 diff readers (lr2_*.md, 30 findings) -> vp2.md.
 - check_all after fix2_C3: all games as before; Gwent 245 of 264.
 - Round 2 done. Last checks: every game as before except Stormbound 148 of 149 (agent fixing, fix_sb.md); Gwent 259 of 278; real-world 7 misses of 33 (rw_end.txt). Step 9: design answers rerun, read by one agent (lr_dq.md).
+- Step 9: lr_dq.md 7 findings -> vp3.md: 6 gone (no such line now), 1 missed with 0 table lines (not influential, to Open work). No fixers.
