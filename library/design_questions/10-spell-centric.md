@@ -17,6 +17,17 @@ Vetruvian Imperium (114 cards): spells_played_condition 0, spell_power 3
 ## faeria
 Blue (72 cards): spells_played_condition 1, spell_power 0
   Dark Stalker: If you've played an event this turn, this costs 2 faeria less.
+## gwent
+Northern Realms (175 cards): spells_played_condition 0, spell_power 9
+  Aretuza Student: Patience (Ranged). Order (Ranged): Boost an allied unit by [0].
+  Ban Ard Student: Patience (Melee). Order (Melee): Damage an enemy unit by [0].
+  Gerhart of Aelle: Patience. Zeal. Order: Create and play a [4]-provision cost Spell.
+  Istredd: Patience. Zeal. Order: Draw up to [1] card(s), then shuffle the same number of cards...
+Monster (182 cards): spells_played_condition 0, spell_power 5
+  Eredin Bréacc Glas: Deploy: Spawn Frost on an enemy row for 2 turns. Dominance: Increase the damage dealt by...
+  Sir Scratch-a-Lot: At the start of the game, gain Immunity. Deploy: Boost self by 0. Order: Increase the...
+  Weavess: Deploy: Boost an allied unit by 2. Whenever you play a Crone, increase this boost by 2.
+  Whispess: Deploy: Damage an enemy unit by 2. Whenever you play a Crone, increase this damage by 2.
 ## into_the_breach
 Science (30 cards): spells_played_condition 0, spell_power 7
   Explosive Warp: Teleport to target and push nearby tiles away. Can also be used to push the user to the...
@@ -26,7 +37,7 @@ Science (30 cards): spells_played_condition 0, spell_power 7
 Cyborg (6 cards): spells_played_condition 0, spell_power 1
   Explosive Goo: Artillery attack that damages a tile and pushes adjacent tiles away. Damage: 1. Power:...
 ## marvel_snap
-(all cards) (872 cards): spells_played_condition 0, spell_power 6
+(all cards) (867 cards): spells_played_condition 0, spell_power 6
   Askani'son: Activate: Create a 1-Cost card at another location. Increase the Cost each time you're...
   Mephisto: If you win this game, double your winnings.
   Onslaught's Citadel: Ongoing effects here apply an additional time.
@@ -51,7 +62,7 @@ Ionia (236 cards): spells_played_condition 14, spell_power 0
   Deep Meditation: Keywords: Flow. Flow: I cost 2 less. Draw 2 other spells.
   Dragoncaller: Keywords: Attune, Flow. Round Start: Flow: Summon The Empyrean and grant it Ephemeral.
   Eye of the Dragon: Keywords: Attune, Flow. Round Start: Flow: Summon a Dragonling.
-  works with: recycle (e.g. Deep Meditation -> Janna); on_discard (e.g. Lee Sin (level 2) -> Rumble); turn_start (e.g. Deep Meditation -> Janna)
+  works with: recycle (e.g. Deep Meditation -> Janna); on_discard (e.g. Master Yi -> Rumble); turn_start (e.g. Deep Meditation -> Janna)
 ## sts1
 Defect (89 cards): spells_played_condition 1, spell_power 18
   Beam Cell: Deal 3 damage. Apply 1 Vulnerable.

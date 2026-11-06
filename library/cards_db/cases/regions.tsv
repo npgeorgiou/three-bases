@@ -187,26 +187,26 @@ rgw04	gwent	Nilfgaard	signature (library)	locking units	5	select card from flat_
 rgw05	gwent	Nilfgaard	signature (library)	spying on enemy hands	5	select card from flat_concept where concept='information'
 rgw06	gwent	Nilfgaard	signature (library)	stealing enemy units	5	select card from flat_concept where concept='steal'
 rgw07	gwent	Nilfgaard	signature (library)	Spies on the opponent's board	5	select card from flat_concept where concept='donate'
-rgw08	gwent	Nilfgaard	signature (library)	playing cards from the opponent's deck	5	select card from flat_concept where concept='cast_from_zone'
+rgw08	gwent	Nilfgaard	signature (library)	playing cards from the opponent's deck	5	select card from flat_do where act in ('play_card','summon','look','reveal') and on_side='enemy' and on_zone in ('deck','deck_top','discard')
 rgw09	gwent	Monster	signature (library)	Consume devours weaker units	5	select card from flat_concept where concept='sacrifice'
 rgw10	gwent	Monster	signature (library)	Deathwish	5	select card from flat_concept where concept='death_trigger'
 rgw11	gwent	Monster	signature (library)	highest value on board	5	select card from flat_concept where concept='stat_condition'
 rgw12	gwent	Monster	signature (library)	weather	5	select card from flat_concept where concept='row_effects'
 rgw13	gwent	Scoiatael	signature (library)	traps	5	select card from flat_concept where concept='trap_secret'
-rgw14	gwent	Scoiatael	signature (library)	ranged attacks	5	select card from flat_concept where concept='ranged'
+rgw14	gwent	Scoiatael	signature (library)	ranged attacks	5	select d.card from flat_do d join flat_if i on i.card=d.card and i.ability=d.ability where i.of_with like '%back_row%' and d.act in ('damage','kill')
 rgw15	gwent	Scoiatael	signature (library)	mobility	5	select card from flat_concept where concept='movement'
 rgw16	gwent	Scoiatael	signature (library)	many small damage instances	5	select card from flat_concept where concept='ping'
-rgw17	gwent	Scoiatael	signature (library)	playing cards straight from the deck	5	select card from flat_concept where concept='tutor'
+rgw17	gwent	Scoiatael	signature (library)	playing cards straight from the deck	5	select card from flat_do where act in ('play_card','summon') and on_zone in ('deck','deck_top') and (on_side='mine' or on_side is null)
 rgw18	gwent	Skellige	signature (library)	Berserk	5	select card from flat_concept where concept='condition_life'
 rgw19	gwent	Skellige	signature (library)	damaging itself or allies for bonuses	5	select card from flat_concept where concept='friendly_fire'
-rgw20	gwent	Skellige	signature (library)	reviving from the graveyard	5	select card from flat_concept where concept='revive'
+rgw20	gwent	Skellige	signature (library)	reviving from the graveyard	5	select card from flat_do where act='revive' or (act in ('play_card','summon') and on_zone='discard' and on_side='mine')
 rgw21	gwent	Skellige	signature (library)	damaging units many ways	5	select card from flat_concept where concept='damage'
 rgw22	gwent	Syndicate	signature (library)	coins spent on effects	5	select card from flat_concept where concept='coin_economy'
-rgw23	gwent	Nilfgaard	archetype (library)	control and counterplay	3	select card from flat_concept where concept='control'
-rgw24	gwent	Nilfgaard	archetype (library)	limiting the opponent's options	3	select card from flat_concept where concept='disruption'
-rgw25	gwent	Monster	archetype (library)	swarm and devour	3	select card from flat_concept where concept='swarm'
+rgw23	gwent	Nilfgaard	archetype (library)	control and counterplay	3	select card from flat_do where (act in ('silence','cant','move','transform') and on_side='enemy') or act='silence'
+rgw24	gwent	Nilfgaard	archetype (library)	limiting the opponent's options	3	select card from flat_do where (act='cant' and on_side='enemy') or act='silence'
+rgw25	gwent	Monster	archetype (library)	swarm and devour	3	select card from flat_do where act in ('create','summon','copy') union select card from flat_do where keyword_ref=(select id from card where game='gwent' and name='Consume' and is_keyword=1) or via=(select id from card where game='gwent' and name='Consume' and is_keyword=1)
 rgw26	gwent	Monster	archetype (library)	consume and Deathwish	3	select card from flat_concept where concept='sacrifice'
-rgw27	gwent	Scoiatael	archetype (library)	traps and ambush	3	select card from flat_concept where concept='trickery'
-rgw28	gwent	Skellige	archetype (library)	resurrection	3	select card from flat_concept where concept='graveyard'
-rgw29	gwent	Skellige	archetype (library)	aggression	3	select card from flat_concept where concept='aggro_tempo'
-rgw30	gwent	Syndicate	archetype (library)	coin economy	3	select card from flat_concept where concept='ramp'
+rgw27	gwent	Scoiatael	archetype (library)	traps and ambush	3	select card from flat_concept where concept='trap_secret' union select card from flat_when where event='trap_activated' union select card from flat_do where keyword_ref=(select id from card where game='gwent' and name='Ambush' and is_keyword=1) or via=(select id from card where game='gwent' and name='Ambush' and is_keyword=1) union select card from flat_ref where keyword=(select id from card where game='gwent' and name='Ambush' and is_keyword=1)
+rgw28	gwent	Skellige	archetype (library)	resurrection	3	select card from flat_do where act='revive' or (act in ('play_card','summon','return_card','return_to_hand') and on_zone='discard')
+rgw29	gwent	Skellige	archetype (library)	aggression	3	select card from flat_do where act in ('damage','kill') and on_side='enemy'
+rgw30	gwent	Syndicate	archetype (library)	coin economy	3	select card from flat_do where act in ('mana_gain','spend_mana') and on_kind='secondary_resource'

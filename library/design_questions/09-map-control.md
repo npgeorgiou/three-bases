@@ -14,7 +14,7 @@ Vetruvian Imperium (114 cards): zone_control 7, movement 10
   Astral Phasing: Give a friendly minion +5 Health and Flying.
   Cataclysmic Fault: Turn the entire center column into Exhuming Sand.
   Circle of Fabrication: Summon one of each Obelysk from your deck on random spaces.
-  works with: activated (e.g. Oakenheart -> MECHAZ0R Progression); quests (e.g. Oakenheart -> MECHAZ0R Progression); terrain (e.g. Sunrise Cleric -> Nocturne)
+  works with: quests (e.g. Oakenheart -> MECHAZ0R Progression); activated (e.g. Oakenheart -> MECHAZ0R Progression); terrain (e.g. Sunrise Cleric -> Nocturne)
 ## faeria
 Pandora (40 cards): zone_control 7, movement 12
   Jeweled Magpie: Flying, Haste Whenever this attacks a god, add a random Treasure to your hand.
@@ -26,7 +26,16 @@ Yellow (72 cards): zone_control 11, movement 42
   Demonic Salmon: Haste, Flying, Charge 2 Can't harvest faeria. Whenever this attacks a god, it gains +1/+1.
   Flash Salmon: Divine, Flying, Haste, Charge 2 Can't harvest faeria. At the end of your turn, destroy...
   Khalim's Skyguard: Flying Can be summoned adjacent to friendly creatures.
-  works with: high_cost (e.g. Time of Legends -> Gemshell Tortoise); in_hand_buff (e.g. Time of Legends -> Gemshell Tortoise); cost_reduction (e.g. Time of Legends -> Gemshell Tortoise)
+  works with: high_cost (e.g. Gagana, Rainbow Birdship -> Gemshell Tortoise); in_hand_buff (e.g. Gagana, Rainbow Birdship -> Gemshell Tortoise); cost_reduction (e.g. Gagana, Rainbow Birdship -> Gemshell Tortoise)
+## gwent
+Nilfgaard (177 cards): zone_control 20, movement 19
+  False Ciri: Disloyal. Deploy: Play a bronze Tactic from your graveyard and give it Doomed. At the...
+  Mage Infiltrator: Disloyal. Deploy: Damage adjacent units by 3. Deathblow: Move self to the opposite row...
+  Usurper: Emperor: Veil. Deploy: Spawn an Operative on each enemy row and give them Spying. Zeal. Order:...
+  Usurper: General: Deploy: Spawn an Operative on each enemy row and give them Spying. Zeal. Order: Seize...
+Syndicate / Skellige (3 cards): zone_control 0, movement 1
+  Hammond: Deploy: Move an enemy unit to the other row and give it Bleeding (2). Increase the...
+  works with: steal (e.g. Rosa and Edna var Attre -> Emhyr var Emreis); forced_movement (e.g. Usurper: Emperor -> Doadrick Leumaerts); movement (e.g. Rot Tosser -> Siege)
 ## inscryption
 Beast (122 cards): zone_control 0, movement 18
   Bloodhound: Keywords: Guardian.
@@ -50,12 +59,12 @@ Prime (30 cards): zone_control 0, movement 15
   Hydraulic Lifter: Throw an adjacent unit and damage it. (Starts with 2-tile range.) Damage: 1. Power:...
   works with: friendly_fire (e.g. Grid Repulse -> Fire); aoe_damage (e.g. Grid Repulse -> Fire); ping (e.g. Grid Repulse -> Fire)
 ## marvel_snap
-(all cards) (872 cards): zone_control 5, movement 64
+(all cards) (867 cards): zone_control 5, movement 63
   Strange Academy: After turn 5, move all cards here to other random locations.
   Aero: On Reveal: The last card your opponent played moves to this location.
   Agamotto: Game Start: Shuffle 4 Ancient Arcana into your deck.
   Angel: When one of your cards is destroyed, this flies out of your hand or deck to replace it.
-  works with: positional (e.g. Strange Academy -> Kingpin); lanes (e.g. Strange Academy -> Kingpin); combo_sequence (e.g. Doctor Doom 2099 -> Josie's Bar)
+  works with: positional (e.g. Strange Academy -> Kraven); lanes (e.g. Strange Academy -> Kraven); movement (e.g. Strange Academy -> Hercules)
 ## monster_train
 Clanless (28 cards): zone_control 0, movement 3
   Olde Magic: Built by the player at the Arcane Machine event (Concealed Caverns): one primary effect...
@@ -76,7 +85,7 @@ Bilgewater (220 cards): zone_control 0, movement 5
   Fizz: Keywords: Imbue. When you play a spell, stop all enemy spells and Skills targeting me...
   Fizz's Playful Trickster: Keywords: Fast. Remove an attacking ally from combat to Rally. Create a Fizz in your deck.
   Playful Trickster: Remove an attacking ally from combat to Rally.
-  works with: permanent_growth (e.g. Soothsayer -> Legion General); defence_gain (e.g. Soothsayer -> Legion General); attack_gain (e.g. Soothsayer -> Legion General)
+  works with: permanent_growth (e.g. Soothsayer -> Lux: Illuminated); defence_gain (e.g. Soothsayer -> Lux: Illuminated); attack_gain (e.g. Soothsayer -> Lux: Illuminated)
 ## stormbound
 Ironclad (34 cards): zone_control 0, movement 9
   Absorbing Varmints: Before moving, make friendly Ancients and Rodents pull enemy units from behind. Then...
@@ -88,7 +97,7 @@ Swarm (34 cards): zone_control 1, movement 5
   Head Start: Spawn a 5/6/7/8/9 strength Satyr on a random tile in your furthest row
   Herald’s Hymn: Give 2/3/4/5/6 strength to a target friendly unit. Command friendly units in its row...
   Lasting Remains: After attacking, move forward
-  works with: attack_now (e.g. Chateau de Cardboard -> Hair-Raising Cats); activated (e.g. Catnip’s Charm -> Temple of the Mind); removal (e.g. Catnip’s Charm -> Temple of the Mind)
+  works with: attack_now (e.g. Sweetcap Kittens -> Hair-Raising Cats); activated (e.g. Sparkly Kitties -> Temple of the Mind); removal (e.g. Sparkly Kitties -> Temple of the Mind)
 ## sts1
 Defect (89 cards): zone_control 0, movement 23
   Ball Lightning: Deal 7 damage. Channel 1 Lightning.

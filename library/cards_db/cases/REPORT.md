@@ -1,7 +1,7 @@
 # Case tests: gwent
 
 Made by `cases/run.py gwent`.
-**56 of 89 cases pass.**
+**135 of 174 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
@@ -21,6 +21,111 @@ Made by `cases/run.py gwent`.
 | mx14 | a strike on the spaces beside the opposing one reaches other lanes (cross_lane, v38) | 0 | 0 | 100% | 0 | yes |
 | mx15 | within a circuit is a formation (link_formation, v38) | 0 | 0 | 100% | 0 | yes |
 | mx16 | more or faster base resource (base_resource_gain, v38) | 0 | 0 | 100% | 0 | yes |
+| gw01 | cards that use, give or care about Deploy | 591 | 591 | 100% | 500 | yes |
+| gw02 | cards that use, give or care about Initiative | 5 | 5 | 100% | 0 | yes |
+| gw03 | cards that use, give or care about Order | 351 | 349 | 99% | 57 | yes |
+| gw04 | cards that use, give or care about Melee | 142 | 141 | 99% | 27 | yes |
+| gw05 | cards that use, give or care about Drain | 2 | 2 | 100% | 0 | yes |
+| gw06 | cards that use, give or care about Ranged | 128 | 126 | 98% | 28 | yes |
+| gw07 | cards that use, give or care about Reveal | 6 | 6 | 100% | 0 | yes |
+| gw08 | cards that use, give or care about Lineage | 4 | 4 | 100% | 0 | yes |
+| gw09 | cards that use, give or care about Timer | 16 | 16 | 100% | 0 | yes |
+| gw10 | cards that use, give or care about Spawn | 256 | 248 | 97% | 108 | yes |
+| gw11 | cards that use, give or care about Zeal | 106 | 106 | 100% | 15 | yes |
+| gw12 | cards that use, give or care about Cooldown | 77 | 74 | 96% | 0 | yes |
+| gw13 | cards that use, give or care about Adrenaline | 31 | 30 | 97% | 0 | yes |
+| gw14 | cards that use, give or care about Summon | 72 | 72 | 100% | 153 | yes |
+| gw15 | cards that use, give or care about Charge | 26 | 25 | 96% | 36 | yes |
+| gw16 | cards that use, give or care about Cataclysm | 5 | 5 | 100% | 1 | yes |
+| gw17 | cards that use, give or care about Heal | 21 | 20 | 95% | 0 | yes |
+| gw18 | cards that use, give or care about Banish | 33 | 33 | 100% | 25 | yes |
+| gw19 | cards that use, give or care about Doomed | 113 | 112 | 99% | 11 | yes |
+| gw20 | cards that use, give or care about Storm | 11 | 7 | 64% | 1 | NO |
+| gw21 | cards that use, give or care about Veil | 38 | 37 | 97% | 0 | yes |
+| gw22 | cards that use, give or care about Frost | 22 | 16 | 73% | 1 | NO |
+| gw23 | cards that use, give or care about Fog | 5 | 2 | 40% | 1 | NO |
+| gw24 | cards that use, give or care about Rain | 17 | 11 | 65% | 1 | NO |
+| gw25 | cards that use, give or care about Bloodthirst | 17 | 17 | 100% | 0 | yes |
+| gw26 | cards that use, give or care about Lock | 29 | 29 | 100% | 4 | yes |
+| gw27 | cards that use, give or care about Formation | 17 | 17 | 100% | 0 | yes |
+| gw28 | cards that use, give or care about Inspired | 11 | 11 | 100% | 0 | yes |
+| gw29 | cards that use, give or care about Bleeding | 48 | 48 | 100% | 1 | yes |
+| gw30 | cards that use, give or care about Disloyal | 19 | 16 | 84% | 0 | NO |
+| gw31 | cards that use, give or care about Coin | 21 | 21 | 100% | 114 | yes |
+| gw32 | cards that use, give or care about Patience | 10 | 9 | 90% | 0 | NO |
+| gw33 | cards that use, give or care about Deathwish | 43 | 38 | 88% | 0 | NO |
+| gw34 | cards that use, give or care about Armor | 65 | 57 | 88% | 17 | NO |
+| gw35 | cards that use, give or care about Crew | 12 | 11 | 92% | 0 | NO |
+| gw36 | cards that use, give or care about Resupply | 6 | 6 | 100% | 0 | yes |
+| gw37 | cards that use, give or care about Vitality | 35 | 35 | 100% | 0 | yes |
+| gw38 | cards that use, give or care about Barricade | 21 | 21 | 100% | 0 | yes |
+| gw39 | cards that use, give or care about Exposed | 9 | 9 | 100% | 1 | yes |
+| gw40 | cards that use, give or care about Grace | 13 | 13 | 100% | 0 | yes |
+| gw41 | cards that use, give or care about Shield | 28 | 28 | 100% | 0 | yes |
+| gw42 | cards that use, give or care about Devotion | 28 | 28 | 100% | 0 | yes |
+| gw43 | cards that use, give or care about Purify | 28 | 28 | 100% | 0 | yes |
+| gw44 | cards that use, give or care about Immunity | 21 | 21 | 100% | 0 | yes |
+| gw45 | cards that use, give or care about Consume | 25 | 25 | 100% | 0 | yes |
+| gw46 | cards that use, give or care about Seize | 15 | 15 | 100% | 0 | yes |
+| gw47 | cards that use, give or care about Thrive | 17 | 17 | 100% | 0 | yes |
+| gw48 | cards that use, give or care about Infused | 2 | 1 | 50% | 26 | NO |
+| gw49 | cards that use, give or care about Dominance | 9 | 9 | 100% | 0 | yes |
+| gw50 | cards that use, give or care about Bonded | 28 | 24 | 86% | 0 | NO |
+| gw51 | cards that use, give or care about Resilience | 40 | 40 | 100% | 0 | yes |
+| gw52 | cards that use, give or care about Deathblow | 41 | 41 | 100% | 0 | yes |
+| gw53 | cards that use, give or care about Ambush | 8 | 8 | 100% | 1 | yes |
+| gw54 | cards that use, give or care about Spring | 9 | 8 | 89% | 1 | NO |
+| gw55 | cards that use, give or care about Discard | 10 | 8 | 80% | 0 | NO |
+| gw56 | cards that use, give or care about Veteran | 11 | 11 | 100% | 0 | yes |
+| gw57 | cards that use, give or care about Berserk | 13 | 13 | 100% | 0 | yes |
+| gw58 | cards that use, give or care about Echo | 14 | 13 | 93% | 0 | NO |
+| gw59 | cards that use, give or care about Conspiracy | 5 | 5 | 100% | 0 | yes |
+| gw60 | cards that use, give or care about Flanking | 9 | 9 | 100% | 0 | yes |
+| gw61 | cards that use, give or care about Create | 44 | 43 | 98% | 69 | yes |
+| gw62 | cards that use, give or care about Poison | 31 | 31 | 100% | 3 | yes |
+| gw63 | cards that use, give or care about Predator | 4 | 0 | 0% | 0 | NO |
+| gw64 | cards that use, give or care about Symbiosis | 9 | 8 | 89% | 0 | NO |
+| gw65 | cards that use, give or care about Might | 5 | 5 | 100% | 0 | yes |
+| gw66 | cards that use, give or care about Duel | 4 | 4 | 100% | 0 | yes |
+| gw67 | cards that use, give or care about Harmony | 15 | 15 | 100% | 0 | yes |
+| gw68 | cards that use, give or care about Dragon's Dream | 1 | 1 | 100% | 1 | yes |
+| gw69 | cards that use, give or care about Blood Moon | 2 | 2 | 100% | 1 | yes |
+| gw70 | cards that use, give or care about Assimilate | 9 | 9 | 100% | 0 | yes |
+| gw71 | cards that use, give or care about Tribute | 32 | 32 | 100% | 46 | yes |
+| gw72 | cards that use, give or care about Profit | 52 | 52 | 100% | 46 | yes |
+| gw73 | cards that use, give or care about Fee | 48 | 47 | 98% | 31 | yes |
+| gw74 | cards that use, give or care about Bounty | 19 | 19 | 100% | 0 | yes |
+| gw75 | cards that use, give or care about Intimidate | 11 | 11 | 100% | 0 | yes |
+| gw76 | cards that use, give or care about Insanity | 6 | 6 | 100% | 0 | yes |
+| gw77 | cards that use, give or care about Hoard | 11 | 11 | 100% | 1 | yes |
+| gw78 | cards that use, give or care about Defender | 6 | 6 | 100% | 0 | yes |
+| gw79 | cards that use, give or care about Rupture | 2 | 2 | 100% | 0 | yes |
+| gw80 | cards that use, give or care about Clash | 3 | 3 | 100% | 3 | yes |
+| gw81 | cards that use, give or care about Sabbath | 7 | 7 | 100% | 0 | yes |
+| gw82 | cards that use, give or care about Vice | 3 | 3 | 100% | 0 | yes |
+| gw83 | cards that use, give or care about Counter | 20 | 20 | 100% | 0 | yes |
+| gw84 | cards that use, give or care about Reset | 13 | 11 | 85% | 3 | NO |
+| gw85 | cards that use, give or care about Spying | 23 | 22 | 96% | 28 | yes |
+
+Missed cards (first 8 per failing case):
+
+- gw20 cards that use, give or care about Storm: Anglerfish, Bride of the Sea, Kelpie, Messenger of the Sea
+- gw22 cards that use, give or care about Frost: Avallac'h, Caranthir: Golden Child, Imlerith's Wrath, Scepter of Storms, Tempest, Wild Hunt Bruiser
+- gw23 cards that use, give or care about Fog: Avallac'h, Scepter of Storms, Tempest
+- gw24 cards that use, give or care about Rain: Anglerfish, Avallac'h, Bride of the Sea, Messenger of the Sea, Scepter of Storms, Tempest
+- gw30 cards that use, give or care about Disloyal: Artaud Terranova, Braathens, The Eternal Eclipse
+- gw32 cards that use, give or care about Patience: Alumni
+- gw33 cards that use, give or care about Deathwish: Deranged Corsair, Endless Voyage, Plague Maiden, Sove, Whispering Hillock
+- gw34 cards that use, give or care about Armor: Affan Hillergrand, Dennis Cranmer, Living Armor, Piercing Missile, Professor, Reckless Flurry, Ulula, Vlodimir von Everec
+- gw35 cards that use, give or care about Crew: King Henselt
+- gw48 cards that use, give or care about Infused: Van Moorlehem Servant
+- gw50 cards that use, give or care about Bonded: Free Company, Iron Falcon Troubadour, One-Eyed Betsy, The Mushy Truffle
+- gw54 cards that use, give or care about Spring: Spring Equinox
+- gw55 cards that use, give or care about Discard: Bjorn Stormursson, Eist Tuirseach
+- gw58 cards that use, give or care about Echo: Lady of the Lake
+- gw63 cards that use, give or care about Predator: Adda: Striga, Cockatrice, Kikimore Stalker, Werewolf
+- gw64 cards that use, give or care about Symbiosis: Aucwenn
+- gw84 cards that use, give or care about Reset: Damien de la Tour, Viraxas: Prince
 
 ## Combos (the enabler must set off the payoff)
 
@@ -41,29 +146,29 @@ Made by `cases/run.py gwent`.
 | rgw05 | Nilfgaard | signature (library) | spying on enemy hands | 5 | 12 | yes |
 | rgw06 | Nilfgaard | signature (library) | stealing enemy units | 5 | 9 | yes |
 | rgw07 | Nilfgaard | signature (library) | Spies on the opponent's board | 5 | 28 | yes |
-| rgw08 | Nilfgaard | signature (library) | playing cards from the opponent's deck | 5 | 0 | NO |
+| rgw08 | Nilfgaard | signature (library) | playing cards from the opponent's deck | 5 | 10 | yes |
 | rgw09 | Monster | signature (library) | Consume devours weaker units | 5 | 29 | yes |
 | rgw10 | Monster | signature (library) | Deathwish | 5 | 27 | yes |
 | rgw11 | Monster | signature (library) | highest value on board | 5 | 22 | yes |
 | rgw12 | Monster | signature (library) | weather | 5 | 15 | yes |
 | rgw13 | Scoiatael | signature (library) | traps | 5 | 9 | yes |
-| rgw14 | Scoiatael | signature (library) | ranged attacks | 5 | 0 | NO |
+| rgw14 | Scoiatael | signature (library) | ranged attacks | 5 | 7 | yes |
 | rgw15 | Scoiatael | signature (library) | mobility | 5 | 18 | yes |
 | rgw16 | Scoiatael | signature (library) | many small damage instances | 5 | 26 | yes |
-| rgw17 | Scoiatael | signature (library) | playing cards straight from the deck | 5 | 2 | NO |
+| rgw17 | Scoiatael | signature (library) | playing cards straight from the deck | 5 | 10 | yes |
 | rgw18 | Skellige | signature (library) | Berserk | 5 | 38 | yes |
 | rgw19 | Skellige | signature (library) | damaging itself or allies for bonuses | 5 | 26 | yes |
-| rgw20 | Skellige | signature (library) | reviving from the graveyard | 5 | 4 | NO |
+| rgw20 | Skellige | signature (library) | reviving from the graveyard | 5 | 13 | yes |
 | rgw21 | Skellige | signature (library) | damaging units many ways | 5 | 107 | yes |
 | rgw22 | Syndicate | signature (library) | coins spent on effects | 5 | 21 | yes |
-| rgw23 | Nilfgaard | archetype (library) | control and counterplay | 3 | 0 | NO |
-| rgw24 | Nilfgaard | archetype (library) | limiting the opponent's options | 3 | 0 | NO |
-| rgw25 | Monster | archetype (library) | swarm and devour | 3 | 0 | NO |
+| rgw23 | Nilfgaard | archetype (library) | control and counterplay | 3 | 24 | yes |
+| rgw24 | Nilfgaard | archetype (library) | limiting the opponent's options | 3 | 14 | yes |
+| rgw25 | Monster | archetype (library) | swarm and devour | 3 | 71 | yes |
 | rgw26 | Monster | archetype (library) | consume and Deathwish | 3 | 29 | yes |
-| rgw27 | Scoiatael | archetype (library) | traps and ambush | 3 | 0 | NO |
-| rgw28 | Skellige | archetype (library) | resurrection | 3 | 0 | NO |
-| rgw29 | Skellige | archetype (library) | aggression | 3 | 0 | NO |
-| rgw30 | Syndicate | archetype (library) | coin economy | 3 | 0 | NO |
+| rgw27 | Scoiatael | archetype (library) | traps and ambush | 3 | 9 | yes |
+| rgw28 | Skellige | archetype (library) | resurrection | 3 | 14 | yes |
+| rgw29 | Skellige | archetype (library) | aggression | 3 | 53 | yes |
+| rgw30 | Syndicate | archetype (library) | coin economy | 3 | 132 | yes |
 
 ## Guide decks (the explanation must say what the guide says)
 

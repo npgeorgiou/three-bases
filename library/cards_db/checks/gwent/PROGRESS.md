@@ -6,24 +6,14 @@
   rebuild done (Gwent lines 50,360 -> 80,425). Five text-less tokens added from gwent.one (supplement_gwent.py).
 - Runeterra n34 already failed before this import (see START_DATABASE "State").
 
-## Next (a new chat continues here; read START_DATABASE.md whole first)
-1. Baseline: done 6 Nov 2026 (checks/gwent/baseline_cases.txt: all pass but Runeterra n34; `links.py`: cases/links.tsv lk96
-   Vinemother -> Wyldenten already failed; line table baseline_tb.tsv, 31 MB, not in git).
-3a. Decks: done 6 Nov 2026. 30 full decks in decks.tsv, 5 per faction, from playgwent.com deck guides (English, June 2024
-   on, most votes per faction; several name the fMMR reached). No source gives win rates per deck (leriohub, Dec 2025).
-   Read in the built-in browser: www.playgwent.com/en/decks/api/guides/offset/<n>/limit/500 (list, votes) and
-   /en/decks/api/guides/<id> (deck: srcCardTemplates = every copy; content = the guide text). Decks with cards the data
-   lacks (Germain, Knickers, Ballista, Ice Giant, Cyclops Warrior) were swapped for the next ones; playgwent's other names
-   matched to ours (Crystall Skull -> Crystal Skull, Sappers -> Sapper ...). Left for step 4: "Deck pairs" from the guide
-   texts (content field) into games/gwent.md, then cases/decks.tsv and network.tsv by script.
-2. Growing numbers: done 6 Nov 2026 (v77, BRIEF line). The 167 was wrong: only 7 amounts were {"x": "unstated"}, 2 of
-   them growing numbers (Keira Metz, Colossal Ifrit); the other 48 growing-number cards were already read. Left: 5 amounts
-   no value says yet (Dol Blathanna Bowman rows between, Vivaldi Bank distance from top, Fucusya unused provisions,
-   Caranthir: Golden Child Frost damage, Torres var Emreis: Founder provisions below the limit). Then `run.py gwent`.
-3. Step 2.5 decks: Deck pairs written 6 Nov 2026 (43 pairs from 17 guides; 13 guides name no pair), network.tsv
-   n545-n587 by deck_pairs.py; combos.tsv cgw01-03 and regions.tsv rgw01-30 by script. Next: mechanics.tsv, run.py gwent.
-   Old plan: 20 full decks (25+ cards, every faction), cases/decks.tsv, network.tsv, "Deck pairs" in games/gwent.md.
-4. Step 3 cases: mechanics.tsv one row per keyword and trigger word (85 keywords), regions.tsv rows for the six factions,
-   combos.tsv from guides. Gwent has only the 13 shared cases now.
-5. Step 4 last checks (realworld.py gwent, design_questions.py), keyword -> concept list shown to Kaptain, one
-   check_all.py gwent, State updated. Then chat 2 (Part 3, line check).
+## Next (chat 2 continues here: START_DATABASE.md Part 3)
+- Done 6 Nov 2026: Deck pairs (43, games/gwent.md, from the guide texts; 13 guides name none) -> network.tsv n545-n587
+  (deck_pairs.py); combos.tsv cgw01-03; regions.tsv rgw01-30 (all pass); mechanics.tsv gw01-gw85, one per keyword
+  (checks/gwent/mech_cases.md); run.py gwent and every step after its cases; realworld.py gwent (26 of 33 hold);
+  design_questions.py; keyword -> concept list shown to Kaptain.
+- Gwent cases: 135 of 174 pass. Failing: 22 deck pairs (n545-n587) and 17 keyword rows (gw: Storm, Frost, Fog, Rain,
+  Disloyal, Patience, Deathwish, Bonded, Discard, Echo, Symbiosis, Reset, Armor, Crew, Spring, Predator, Infused; the
+  records miss them, mech_cases.md). Real-world misses: Nilfgaard cast_from_zone, control; Scoiatael ranged, ping, tutor;
+  Monster swarm; Skellige aggro_tempo. All go to chat 2 step 4 (lr_misses.md) as MISSED causes.
+- Open from the rebuild: 3 word flags (patterns/gwent_flags.tsv), 16 text words without rows (audit_text.py), the
+  link audit list (audit_links.py): judge each in chat 2. cases/decks.tsv has no Gwent rows yet (needs must phrases).
