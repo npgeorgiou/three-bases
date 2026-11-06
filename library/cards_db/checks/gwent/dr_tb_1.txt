@@ -1,0 +1,1241 @@
+Each group: GONE = lines the fixes removed (wrong if the line was right: a MISSED CAUSE), NEW = lines the fixes added
+(a CAUSE if wrong). Rows of the first example pairs follow each group.
+
+duelyst: lines 12799 -> 12791, pairs 12401 -> 12393 (8 gone, 0 new)
+faeria: lines 10733 -> 10705, pairs 9977 -> 9951 (26 gone, 0 new)
+gwent: lines 78995 -> 87434, pairs 73538 -> 80997 (4172 gone, 11631 new)
+inscryption: lines 1116 -> 1109, pairs 1078 -> 1071 (7 gone, 0 new)
+into_the_breach: lines 6419 -> 6626, pairs 6132 -> 6245 (0 gone, 113 new)
+marvel_snap: lines 19100 -> 19065, pairs 17056 -> 17027 (29 gone, 0 new)
+monster_train: lines 3353 -> 3264, pairs 3092 -> 3022 (70 gone, 0 new)
+runeterra: lines 210261 -> 210561, pairs 197913 -> 198253 (95 gone, 435 new)
+stormbound: lines 2854 -> 2747, pairs 2674 -> 2583 (114 gone, 23 new)
+sts1: lines 8939 -> 8939, pairs 8786 -> 8786 (0 gone, 0 new)
+
+GONE
+ 1542 gwent | waits | fills your hand | One-Eyed Betsy -> Carlo Varese (-); Coral -> Eskel (-); Haern Caduch -> Vesemir: Mentor (-)
+  One-Eyed Betsy:
+    when 2998 played self
+    when 2999 activated self
+    when 4687 played self
+    when 4688 activated self
+    when 4504 played self
+    if 2998 amount_event_amount
+    do 2998 own draw unit mine chosen deck keyword is 756190
+    do 2998 own shuffle_into_deck card mine chosen hand
+    do 2999 own play_card unit mine chosen board keyword is 756190
+    do 4687 own draw card mine chosen deck keyword is 756190
+    do 4687 own shuffle_into_deck card mine chosen hand
+    do 4688 own play_card unit mine chosen board keyword is 756190
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Carlo Varese:
+    when 1910 played self
+    if 1910 keyword_condition
+    if 1910 amount_count card mine all hand
+    if 1910 have is self position is front_row
+    do 1910 own damage unit enemy chosen board amount=count
+  Coral:
+    when 2101 always
+    when 4510 played self
+    when 2102 activated self
+    when 4543 activated
+    when 2103 discarded
+    when 4510 played self
+    when 4504 played self
+    do 2101 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 2102 own draw card mine deck_top amount=1.0
+    do 2102 own keyword_action card mine chosen hand
+    do 4543 uses_keyword discard card mine chosen hand
+    do 2103 own damage unit enemy random board amount=2.0
+    do 4510 has_keyword can self event=activated
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Eskel:
+    when 1798 played self
+    if 1798 keyword_condition 4.0
+    if 1798 count le listed card mine hand
+    do 1798 own summon card mine deck card is 756243
+    do 1798 own summon card mine deck card is 756244
+  628 gwent | waits | kills it for its death effect | Torrential Rain -> Harpy Egg (-); Dragon's Dream -> Bridge Troll (-); Dragon's Dream -> Rotfiend (-)
+  Torrential Rain:
+    when 1857 played self
+    when 4522 turn_start
+    do 1857 own give_keyword position enemy chosen turns=3.0
+    do 4522 uses_keyword damage unit random board position is same_row of self amount=1.0
+  Harpy Egg:
+    when 2014 dies self
+    do 2014 own summon
+  Dragon's Dream:
+    when 2507 played self
+    when 4554 turn_start
+    when 4555 countdown_done self
+    do 2507 own give_keyword position enemy chosen turns=3.0
+    do 4554 uses_keyword countdown_advance position enemy chosen amount=1.0
+    do 4555 uses_keyword damage unit all board position is same_row of self amount=3.0
+  Bridge Troll:
+    when 2546 dies self
+    do 2546 own stat_change unit mine lowest board strength=4.0
+  582 gwent | stronger | can give it more strength | Vreemde -> Nauzicaa Sergeant (-); Garrison -> Daerlan Soldier (-); Ale of the Ancestors -> Cave Troll (-)
+  Vreemde:
+    when 2290 played self
+    when 4633 played self
+    do 2290 own stat_change unit mine chosen board type is 46 strength=2.0
+    do 2290 own stat_change unit mine all board state is copy_of_it strength=2.0
+    do 4633 own stat_change unit mine chosen board type is 46 strength=2.0
+    do 4633 own stat_change unit mine all board state is copy_of_it strength=2.0
+  Nauzicaa Sergeant:
+    when 2223 played self
+    if 2223 event_count ge 1.0
+    do 2223 own create
+    do 2223 own play_card card mine it card is 756987
+  Garrison:
+    when 2509 always
+    when 4541 round_end
+    when 2510 played self
+    when 2511 activated self
+    when 4532 damaged self
+    when 4541 round_end
+    when 4504 played self
+    if 4532 amount_listed
+    do 2509 own give_keyword self
+    do 4541 uses_keyword cant self event=leaves_play
+    do 4541 uses_keyword remove_keyword self
+    do 2510 own copy card mine chosen deck state is started_in_deck;state is bronze;type is 46
+    do 2510 own play_card card mine it type is 46
+    do 2511 own stat_change unit mine chosen board type is 46 strength=1.0
+    do 2511 own stat_change unit mine all board state is copy_of_it strength=1.0
+    do 2511 own give_keyword unit mine it amount=1.0
+    do 4532 uses_keyword negate_damage unit mine it amount=listed
+    do 4541 has_keyword cant self event=leaves_play
+    do 4541 has_keyword remove_keyword self
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Daerlan Soldier:
+    when 2205 played self
+    when 2206 game_start
+    if 2205 have is unit mine board type is 46
+    do 2205 own summon card mine all deck
+    do 2206 own copy self
+  358 gwent | type | makes units die: {B} Banishes them | Cat Witcher Saboteur -> Northern Wind (-); Drowner -> Northern Wind (-); Blood Money -> Northern Wind (-)
+  Cat Witcher Saboteur:
+    when 3523 played self
+    if 3523 amount_sum
+    if 3523 amount_count card enemy all board position is same_row of it;position is ahead of it
+    do 3523 own move unit enemy chosen board
+    do 3523 own damage unit enemy it amount=sum
+  Northern Wind:
+    when 2680 played self
+    when 2681 killed
+    when 4516 activated
+    do 2680 own damage unit chosen board amount=4.0
+    do 2681 own keyword_action unit it discard
+    do 4516 uses_keyword obliterate unit it discard
+  Drowner:
+    when 2012 always
+    when 4540 played unit mine strength gt 4192
+    when 2013 played self
+    when 4540 played unit mine strength gt 4192
+    if 4540 amount_listed
+    if 4540 amount_listed
+    do 2012 own give_keyword self
+    do 4540 uses_keyword stat_change self strength=listed
+    do 2013 own move unit enemy chosen board
+    do 2013 own damage unit enemy it amount=2.0
+    do 4540 has_keyword stat_change self strength=listed
+  306 gwent | type | makes enemy units die: {B} Banishes them | Impera Brigade -> Hen Gaidth Sword (-); Gezras of Leyda -> Hen Gaidth Sword (-); Ozzrel -> Hen Gaidth Sword (-)
+  Impera Brigade:
+    when 2217 played self
+    do 2217 own damage unit enemy all board keyword is 9000001;position is opposite_row of self amount=1.0
+  Hen Gaidth Sword:
+    when 2651 always
+    when 4545 round_start
+    when 4517 leaves_play self
+    when 2652 played self
+    when 4517 leaves_play self
+    when 2653 killed
+    when 4516 activated
+    when 4545 round_start
+    when 4517 leaves_play self
+    do 2651 own give_keyword self
+    do 4545 uses_keyword put_on_top self
+    do 4545 uses_keyword give_keyword self
+    do 4517 uses_keyword obliterate self
+    do 2652 own damage unit enemy chosen board amount=5.0
+    do 2652 own copy unit mine attached state is created
+    do 2652 own play_card unit mine it
+    do 2652 own give_keyword unit mine it
+    do 4517 uses_keyword obliterate unit mine it
+    do 2653 own keyword_action unit enemy it discard
+    do 4516 uses_keyword obliterate unit enemy it discard
+    do 2653 own move it
+    do 4545 has_keyword put_on_top self discard
+    do 4545 has_keyword give_keyword self
+    do 4517 uses_keyword obliterate self
+  Gezras of Leyda:
+    when 3507 turn_end
+    when 3508 turn_end
+    when 3509 turn_end
+    when 3510 turn_end
+    if 3507 keyword_condition
+    if 3507 keyword_condition not 3.0
+    if 3508 keyword_condition
+    if 3508 keyword_condition 3.0
+    if 3509 keyword_condition
+    if 3509 keyword_condition not 3.0
+    if 3510 keyword_condition
+    if 3510 keyword_condition 3.0
+    if have is self position is front_row
+    if have is self position is back_row
+    if count le listed card mine hand
+    if 3507 have is self position is front_row
+    if 3507 count le listed card mine hand
+    if 3508 have is self position is front_row
+    if 3508 count le listed card mine hand
+    if 3509 have is self position is back_row
+    if 3509 count le listed card mine hand
+    if 3510 have is self position is back_row
+    if 3510 count le listed card mine hand
+    do 3507 own move self
+    do 3507 own stat_change unit mine random board position is same_row of self;card not 757176 strength=1.0
+    do 3508 own move self
+    do 3508 own stat_change unit mine all board position is same_row of self;card not 757176 strength=1.0
+    do 3509 own move self
+    do 3509 own damage unit enemy random board position is opposite_row of self amount=1.0
+    do 3510 own move self
+    do 3510 own damage unit enemy all board position is opposite_row of self amount=1.0
+  292 gwent | stronger | gives it more strength | Dies Irae -> Eternal Fire Disciple (-); Isengrim Faoiltiarna -> Elven Deadeye (-); Saint Gregory: Martyr -> Procession of Penance (-)
+  Dies Irae:
+    when 3369 always
+    when 4545 round_start
+    when 4517 leaves_play self
+    when 3370 played self
+    when 3371 killed
+    when 4545 round_start
+    when 4517 leaves_play self
+    do 3369 own give_keyword self
+    do 4545 uses_keyword put_on_top self
+    do 4545 uses_keyword give_keyword self
+    do 4517 uses_keyword obliterate self
+    do 3370 own damage unit enemy chosen board amount=3.0
+    do 3370 own stat_change unit mine all board type is 20 strength=1.0
+    do 3371 own stat_change unit mine all board strength=1.0
+    do 4545 has_keyword put_on_top self discard
+    do 4545 has_keyword give_keyword self
+    do 4517 uses_keyword obliterate self
+  Eternal Fire Disciple:
+    when 2946 played self
+    when 2947 activated self
+    when 2948 always
+    when 4511 activated self
+    when 4682 played self
+    when 4683 activated self
+    when 4684 always
+    when 4511 activated self
+    if 4511 amount_listed
+    if 4511 amount_listed
+    do 2946 own mana_gain secondary_resource mine amount=2.0
+    do 2947 own spend_mana secondary_resource mine amount=1.0
+    do 2947 own summon unit mine
+    do 2948 own keyword_action amount=1.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+    do 4682 own mana_gain secondary_resource mine amount=2.0
+    do 4683 own spend_mana secondary_resource mine amount=1.0
+    do 4683 own summon unit mine
+    do 4684 own keyword_action amount=1.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+  Isengrim Faoiltiarna:
+    when 2028 played self
+    when 2029 played unit mine type is 40
+    do 2028 own stat_change unit mine all board type is 40 strength=1.0
+    do 2029 own stat_change self strength=1.0
+  Elven Deadeye:
+    when 4333 always
+    when 4517 leaves_play self
+    when 4517 leaves_play self
+    do 4333 own give_keyword self
+    do 4517 uses_keyword obliterate self
+    do 4517 has_keyword obliterate self
+  270 runeterra | type | changes its stats for its effect | Arena Mechacaster -> Xolaani the Bloodweaver (-); Mentor of the Stones -> Xolaani the Bloodweaver (-); Jagged Taskmaster -> Xolaani the Bloodweaver (-)
+  Arena Mechacaster:
+    when 8115 attacks
+    do 8115 own stat_change unit mine all board state is attacking;card not 751343 power=2.0
+  Xolaani the Bloodweaver:
+    when 8530 always
+    when 8531 always
+    when 10158 strikes
+    if 8530 amount_event_count
+    if 8530 amount_double
+    if 8530 amount_event_count
+    if 8530 amount_double
+    if 8531 keyword_condition 16.0
+    if stat power ge listed self
+    if 8531 stat power ge listed self
+    do 8530 own stat_change self power=double;health=double
+    do 8531 own transform self
+    do 10158 has_keyword excess_damage player enemy
+  Mentor of the Stones:
+    when 7682 supports
+    when 7683 dies self
+    do 7682 own stat_change right_of_self power=2.0;health=2.0
+    do 7683 own create amount=3.0
+  179 gwent | type | makes your units die | Wild Hunt Warrior -> Frightener: Dormant (-); Torrential Rain -> Svanrige Tuirseach (-); Fucusya -> Svanrige Tuirseach (-)
+  Wild Hunt Warrior:
+    when 2008 played self
+    when 2009 played self
+    when 4520 turn_start
+    if 2009 keyword_condition
+    if amount ge stat
+    if 2009 amount ge stat
+    do 2008 own damage unit enemy chosen board amount=2.0
+    do 2009 own give_keyword position enemy position is same_row of unit enemy chosen board;of:kind is unit turns=1.0
+    do 4520 uses_keyword damage unit highest board position is same_row of self amount=2.0
+  Frightener: Dormant:
+    when 4307 dies unit mine
+    if 4307 event_count ge 3.0
+    do 4307 own transform self
+  Torrential Rain:
+    when 1857 played self
+    when 4522 turn_start
+    do 1857 own give_keyword position enemy chosen turns=3.0
+    do 4522 uses_keyword damage unit random board position is same_row of self amount=1.0
+  Svanrige Tuirseach:
+    when 2128 played self
+    if 2128 amount_stat base_power unit mine top discard region not Neutral;state is dead_this_round
+    do 2128 own stat_change self strength=stat
+  133 gwent | type | makes your units die: {B} brings them back | Dragon's Dream -> Witches' Sabbath (-); Torrential Rain -> Sigrdrifa's Rite (-); Ocvist -> Witches' Sabbath (-)
+  Dragon's Dream:
+    when 2507 played self
+    when 4554 turn_start
+    when 4555 countdown_done self
+    do 2507 own give_keyword position enemy chosen turns=3.0
+    do 4554 uses_keyword countdown_advance position enemy chosen amount=1.0
+    do 4555 uses_keyword damage unit all board position is same_row of self amount=3.0
+  Witches' Sabbath:
+    when 3815 played self
+    when 4517 leaves_play self
+    if 3815 amount_count it
+    do 3815 own revive unit enemy highest discard
+    do 3815 own revive unit mine highest discard region not Neutral
+    do 3815 own give_keyword unit mine it
+    do 4517 uses_keyword obliterate unit mine it
+  Torrential Rain:
+    when 1857 played self
+    when 4522 turn_start
+    do 1857 own give_keyword position enemy chosen turns=3.0
+    do 4522 uses_keyword damage unit random board position is same_row of self amount=1.0
+  Sigrdrifa's Rite:
+    when 2127 played self
+    when 4517 leaves_play self
+    do 2127 own revive unit mine chosen discard region not Neutral
+    do 2127 own give_keyword unit mine it
+    do 4517 uses_keyword obliterate unit mine it
+  123 gwent | stronger | gives it more strength when it comes | Imposter -> Vivienne de Tabris (-); White Frost -> Naglfar Crew (-); Imposter -> Admiral Rompally (-)
+  Imposter:
+    when 3286 activated self
+    when 4523 always
+    when 3287 played unit mine type is 62
+    when 4714 activated self
+    when 4523 always
+    when 4715 played unit mine type is 62
+    when 4504 played self
+    if 3286 amount_count unit enemy all board state in positive;state in negative;position is same_row of unit it;of:kind is unit
+    if 3287 amount ge 4.0
+    if 3287 amount_distinct keyword unit enemy all board state in positive;state in negative
+    if 4714 amount_count unit enemy all board position is same_row of it
+    if 4715 amount ge 4.0
+    if 4715 amount_distinct keyword unit enemy all board
+    do 3286 own give_keyword unit enemy chosen board
+    do 4523 uses_keyword silence unit enemy chosen board
+    do 3286 own copy unit enemy it board state is created
+    do 3286 own stat_change unit enemy it strength=count
+    do 3287 own stat_change unit mine it type is 62 strength=1.0
+    do 4714 own give_keyword unit enemy chosen board
+    do 4523 uses_keyword silence unit enemy chosen board
+    do 4714 own copy unit enemy it
+    do 4714 own stat_change unit enemy it strength=count
+    do 4715 own stat_change unit mine it type is 62 strength=1.0
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Vivienne de Tabris:
+    when 2721 played self
+    if 2721 amount_stat cost it
+    do 2721 own stat_set unit chosen board strength=stat
+  White Frost:
+    when 2293 activated self
+    when 4520 turn_start
+    when 2294 always
+    when 4513 always
+    when 2295 played unit mine type is 23
+    when 4513 always
+    when 4504 played self
+    if 4513 amount_listed
+    if 2295 have is position keyword is 756162;position is opposite_row of it
+    if 4513 amount_listed
+    do 2293 own move unit enemy chosen board
+    do 2293 own give_keyword position enemy position is same_row of it turns=2.0
+    do 4520 uses_keyword damage unit highest board position is same_row of self amount=2.0
+    do 2294 own give_keyword self amount=2.0
+    do 4513 uses_keyword can self event=activated;times=listed
+    do 2295 own stat_change unit mine it type is 23 strength=1.0
+    do 4513 has_keyword can self event=activated;times=listed
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Naglfar Crew:
+    when 3329 played self
+    when 4520 turn_start
+    when 3330 turn_end
+    if 3330 have position enemy all position is opposite_row of self;keyword is 756162
+    do 3329 own give_keyword position enemy chosen turns=2.0
+    do 4520 uses_keyword damage unit highest board position is same_row of self amount=2.0
+    do 3330 own stat_change self strength=1.0
+  118 gwent | keyword | can give it Vitality | Inspirational Ballad -> Vereena (-); Inspirational Ballad -> Geralt: Quen (-); Inspirational Ballad -> Griffin Witcher (-)
+  Inspirational Ballad:
+    when 2686 played self
+    when 4534 turn_end
+    when 4534 turn_end
+    when 4534 turn_end
+    when 4534 turn_end
+    do 2686 own give_keyword unit mine random board type is 34 amount=6.0
+    do 4534 uses_keyword stat_change unit mine random board type is 34 strength=1.0
+    do 2686 own give_keyword unit mine random board type is 39 amount=6.0
+    do 4534 uses_keyword stat_change unit mine random board type is 39 strength=1.0
+    do 2686 own give_keyword unit mine random board type is 36 amount=6.0
+    do 4534 uses_keyword stat_change unit mine random board type is 36 strength=1.0
+    do 2686 own give_keyword unit mine random board type is 35 amount=6.0
+    do 4534 uses_keyword stat_change unit mine random board type is 35 strength=1.0
+  Vereena:
+    when 4290 played self
+    when 4526 turn_end
+    when 4291 always
+    do 4290 own give_keyword unit enemy chosen board amount=4.0
+    do 4526 uses_keyword damage unit enemy chosen board amount=1.0
+    do 4291 own cant unit enemy all board keyword is 756169 event=stat_changed
+  Geralt: Quen:
+    when 3480 always
+    when 4535 damaged self
+    when 3481 played self
+    when 3482 played self
+    when 4535 damaged self
+    when 4535 damaged self
+    if 4535 amount_event_amount
+    if 3481 keyword_condition not 4.0
+    if 3482 keyword_condition 4.0
+    if 4535 amount_event_amount
+    if 4535 amount_event_amount
+    if count le listed card mine hand
+    if 3481 count le listed card mine hand
+    if 3482 count le listed card mine hand
+    do 3480 own give_keyword self
+    do 4535 uses_keyword negate_damage self amount=event_amount
+    do 4535 uses_keyword remove_keyword self
+    do 3481 own play_card card mine chosen deck type is 34
+    do 3482 own play_card card mine chosen deck type is 34
+    do 3482 own give_keyword card mine it type is 34
+    do 4535 uses_keyword negate_damage card mine it type is 34 amount=event_amount
+    do 4535 uses_keyword remove_keyword card mine it type is 34
+    do 4535 has_keyword negate_damage self amount=event_amount
+    do 4535 has_keyword remove_keyword self
+   95 gwent | type | makes enemy units die: {B} copys them | Ocvist -> Rosa and Edna var Attre (-); Tainted Ale -> Rosa and Edna var Attre (-); Slave Hunter -> Rosa and Edna var Attre (-)
+  Ocvist:
+    when 1806 always
+    when 4507 game_start
+    when 1807 played self
+    when 4514 turn_start
+    when 1808 always
+    when 4508 turn_end
+    when 1809 countdown_done self
+    when 4507 game_start
+    when 4508 turn_end
+    if 4507 amount_count card mine type is 38;state is started_in_deck
+    if 4507 amount_count card mine type is 38;state is started_in_deck
+    do 1806 own give_keyword self
+    do 4507 uses_keyword stat_change self strength=count
+    do 1807 own give_keyword position enemy position is opposite_row of self turns=2.0
+    do 4514 uses_keyword damage unit random board position is same_row of self amount=3.0;spread=1.0
+    do 1808 own give_keyword self amount=3.0
+    do 4508 uses_keyword countdown_advance self amount=1.0
+    do 1809 own damage unit enemy all board amount=1.0
+    do 4507 has_keyword stat_change self strength=count
+    do 4508 has_keyword countdown_advance self amount=1.0
+  Rosa and Edna var Attre:
+    when 4270 played self
+    when 4569 always
+    when 4271 activated self
+    when 4272 killed
+    when 4517 leaves_play self
+    when 4504 played self
+    if 4271 amount_distinct unit mine all everywhere type is 62;state is started_in_deck
+    if 4271 amount_sum
+    do 4270 own create unit mine chosen board state is bronze;state is opponent_faction
+    do 4270 own summon unit mine it
+    do 4270 own give_keyword unit mine it
+    do 4569 uses_keyword can unit mine it event=summoned
+    do 4271 own damage unit enemy chosen board amount=sum
+    do 4272 own copy unit enemy it discard state is created
+    do 4272 own play_card it
+    do 4272 own give_keyword it
+    do 4517 uses_keyword obliterate it
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Tainted Ale:
+    when 2420 always
+    when 4510 played self
+    when 2421 activated self
+    when 2422 stat_changed self
+    when 4510 played self
+    when 4504 played self
+    do 2420 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 2421 own damage unit enemy chosen board amount=2.0
+    do 2421 own give_ability unit enemy it
+    do 2422 gives damage self amount=1.0
+    do 4510 has_keyword can self event=activated
+    do 4504 has_keyword cant self event=activated;turns=1.0
+   83 runeterra | type | makes enemy units block: {B} damages them | Royal Decree (created) -> Short Fuse (-); The List -> Short Fuse (-); The Warrior -> Short Fuse (-)
+  Royal Decree:
+    when 8501 played self
+    when 10208 attacks
+    do 8501 own choose_one player mine
+    do 8501 own stat_change unit mine chosen board power=2.0;health=2.0
+    do 8501 own give_keyword unit mine it
+    do 10208 uses_keyword challenge unit enemy chosen board
+    do 8501 own summon
+  Short Fuse:
+    when 9673 played self
+    do 9673 own damage unit enemy all board state is blocking amount=1.0
+    do 9673 own damage player enemy amount=1.0
+  The List:
+    when 7828 played self
+    when 10179 always
+    do 7828 own give_keyword unit enemy chosen board keyword not 750403
+    do 10179 uses_keyword can player enemy event=challenges
+    do 7828 own start_attack unit mine highest board
+    do 7828 own challenge unit enemy it
+   76 gwent | keyword | gives it Armor | Barclay Els -> Gabor Zigrin (-); Onslaught -> Morkvarg (-); Barclay Els -> Zoltan: Scoundrel (-)
+  Barclay Els:
+    when 2049 played self
+    when 4532 damaged self
+    if 4532 amount_listed
+    do 2049 own give_keyword unit mine all board type is 39;keyword not 756174 amount=1.0
+    do 4532 uses_keyword negate_damage unit mine all board type is 39;keyword not 756174 amount=listed
+    do 2049 own stat_change unit mine all board type is 39;keyword is 756174 strength=1.0
+  Gabor Zigrin:
+    when 2590 played self
+    when 4541 round_end
+    when 2591 played self
+    when 4537 always
+    when 2592 played unit mine type is 39
+    if 2590 keyword_condition
+    if 2591 keyword_condition
+    if 2590 have is self position is front_row
+    if 2591 have is self position is back_row
+    do 2590 own give_keyword self
+    do 4541 uses_keyword cant self event=leaves_play
+    do 4541 uses_keyword remove_keyword self
+    do 2591 own give_keyword self
+    do 4537 uses_keyword cant player all event=targeted
+    do 2592 own stat_change self strength=1.0
+  Onslaught:
+    when 2353 activated self
+    when 2354 always
+    when 4513 always
+    when 2355 damaged unit enemy
+    when 4532 damaged self
+    when 4639 activated self
+    when 4640 always
+    when 4513 always
+    when 4641 damaged unit enemy
+    when 4532 damaged self
+    when 4513 always
+    when 4504 played self
+    if 4513 amount_listed
+    if 4532 amount_listed
+    if 4513 amount_listed
+    if 4532 amount_listed
+    if 4513 amount_listed
+    do 2353 own damage unit enemy chosen board amount=3.0
+    do 2354 own give_keyword self amount=2.0
+    do 4513 uses_keyword can self event=activated;times=listed
+    do 2355 own give_keyword unit mine all hand type in 60;type in 59 amount=1.0
+    do 4532 uses_keyword negate_damage unit mine all hand type in 60;type in 59 amount=listed
+    do 4639 own damage unit enemy chosen board amount=3.0
+    do 4640 own give_keyword self amount=2.0
+    do 4513 uses_keyword can self event=activated;times=listed
+    do 4641 own give_keyword card mine all hand type in 60;type in 59 amount=1.0
+    do 4532 uses_keyword negate_damage card mine all hand type in 60;type in 59 amount=listed
+    do 4513 has_keyword can self event=activated;times=listed
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Morkvarg:
+    when 2122 dies self
+    when 4517 leaves_play self
+    when 4612 dies self
+    when 4517 leaves_play self
+    do 2122 own summon self
+    do 2122 own give_keyword self
+    do 4517 uses_keyword obliterate self
+    do 4612 own summon self
+    do 4612 own give_keyword self
+    do 4517 uses_keyword obliterate self
+   63 gwent | type | makes your units die: {B} Banishes them | Madoc -> Mammuna (-); Torrential Rain -> Hjalmar an Craite (-); Tir ná Lia -> Mammuna (-)
+  Madoc:
+    when 3624 played spell mine type is 27
+    when 3625 activated self
+    when 4514 turn_start
+    when 4504 played self
+    do 3624 own summon self
+    do 3625 own give_keyword position enemy chosen position is opposite_row of self turns=1.0
+    do 4514 uses_keyword damage unit random board position is same_row of self amount=3.0;spread=1.0
+    do 3625 own kill self
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Mammuna:
+    when 3755 always
+    when 4510 played self
+    when 3756 activated self
+    when 4516 activated
+    when 3757 activated self
+    when 4516 activated
+    when 4510 played self
+    when 4504 played self
+    if 3756 keyword_condition not
+    if 3756 amount_stat strength it
+    if 3757 keyword_condition
+    if 3757 amount_stat strength it
+    if amount ge 25.0
+    if 3756 amount ge 25.0
+    if 3757 amount ge 25.0
+    do 3755 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 3756 own keyword_action unit mine chosen discard state is bronze
+    do 4516 uses_keyword obliterate unit mine chosen discard state is bronze
+    do 3756 own stat_change self strength=stat
+    do 3756 own summon unit mine chosen deck state is copy_of_it
+    do 3757 own keyword_action unit mine chosen discard state is bronze
+    do 4516 uses_keyword obliterate unit mine chosen discard state is bronze
+    do 3757 own stat_change self strength=stat
+    do 3757 own play_card unit mine chosen deck state is copy_of_it
+    do 4510 has_keyword can self event=activated
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Torrential Rain:
+    when 1857 played self
+    when 4522 turn_start
+    do 1857 own give_keyword position enemy chosen turns=3.0
+    do 4522 uses_keyword damage unit random board position is same_row of self amount=1.0
+  Hjalmar an Craite:
+    when 2096 played self
+    when 4516 activated
+    if 2096 keyword_condition
+    if 2096 amount_stat strength unit mine it discard
+    if 2096 have is self position is front_row
+    do 2096 own keyword_action unit mine chosen discard
+    do 4516 uses_keyword obliterate unit mine chosen discard
+    do 2096 own damage unit enemy chosen board amount=stat
+   58 gwent | keyword | can give it Armor | Dwarven Agitator -> Sheldon Skaggs (-); Crach an Craite -> Terror of the Seas (-); Crach an Craite -> Tyrggvi Tuirseach (-)
+  Dwarven Agitator:
+    when 2402 played self
+    when 4532 damaged self
+    when 2403 played unit mine type is 39
+    when 4532 damaged self
+    if 4532 amount_listed
+    if 4532 amount_listed
+    do 2402 own give_keyword unit mine chosen hand type is 39 amount=1.0
+    do 4532 uses_keyword negate_damage unit mine chosen hand type is 39 amount=listed
+    do 2403 own give_keyword unit mine it type is 39 amount=1.0
+    do 4532 uses_keyword negate_damage unit mine it type is 39 amount=listed
+  Sheldon Skaggs:
+    when 2059 played self
+    if 2059 keyword_condition
+    if 2059 amount_stat boost self
+    if 2059 have is self position is front_row
+    do 2059 own damage unit enemy chosen board amount=stat
+  Crach an Craite:
+    when 3631 played self
+    when 4532 damaged self
+    when 3632 activated self
+    when 3633 always
+    when 4511 activated self
+    when 3634 played unit mine type in 60;type in 59;position is sides of self
+    when 4567 activated
+    when 4504 played self
+    if 4532 amount_listed
+    if 4511 amount_listed
+    if 4567 amount_stat strength self
+    if 4567 amount_stat strength it
+    do 3631 own give_keyword card mine chosen hand type in 60;type in 59 amount=2.0
+    do 4532 uses_keyword negate_damage card mine chosen hand type in 60;type in 59 amount=listed
+    do 3632 own damage unit chosen board amount=1.0
+    do 3633 own keyword_action amount=2.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+    do 3634 own keyword_action unit mine it type in 60;type in 59
+    do 4567 uses_keyword damage unit mine it type in 60;type in 59 amount=stat
+    do 4567 uses_keyword damage unit mine it type in 60;type in 59 amount=stat
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Terror of the Seas:
+    when 3104 always
+    when 4510 played self
+    when 3105 activated self
+    when 3106 played unit mine type is 60
+    when 4532 damaged self
+    when 4510 played self
+    when 4504 played self
+    if 3105 amount_event_amount
+    if 4532 amount_listed
+    do 3104 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 3105 own remove_keyword self
+    do 3105 own damage unit enemy chosen board amount=event_amount
+    do 3106 own give_keyword self amount=1.0
+    do 4532 uses_keyword negate_damage self amount=listed
+    do 4510 has_keyword can self event=activated
+    do 4504 has_keyword cant self event=activated;turns=1.0
+   56 gwent | type | dies by its own effect: {B} Banishes them | An Craite Greatsword -> Northern Wind (-); Dimun Warship -> Northern Wind (-); Greater Brothers -> Northern Wind (-)
+  An Craite Greatsword:
+    when 2269 always
+    when 4544 round_start
+    when 2270 played self
+    when 2271 damaged unit enemy
+    when 4515 activated
+    when 4544 round_start
+    if 4544 event_count ge 2.0
+    if 4515 amount_full
+    if 4515 amount_listed
+    if 4544 event_count ge 2.0
+    do 2269 own give_keyword self
+    do 4544 uses_keyword base_change self strength=1.0
+    do 2270 own damage self amount=6.0
+    do 2271 own keyword_action self amount=1.0
+    do 4515 uses_keyword heal self amount=full
+    do 4515 uses_keyword heal self amount=listed
+    do 4544 has_keyword base_change self strength=1.0
+  Northern Wind:
+    when 2680 played self
+    when 2681 killed
+    when 4516 activated
+    do 2680 own damage unit chosen board amount=4.0
+    do 2681 own keyword_action unit it discard
+    do 4516 uses_keyword obliterate unit it discard
+  Dimun Warship:
+    when 2323 played unit mine type is 60
+    when 2324 dies self
+    do 2323 own damage self amount=1.0
+    do 2323 own damage unit enemy random board amount=1.0
+    do 2324 own revive unit mine highest discard state is bronze;type is 60
+   54 runeterra | waits | fills your hand | Dragon Allegiant -> Chemtech Drake (-); Scattered Pod (created) -> Chemtech Drake (-); Gift of the Hearthblood -> Chemtech Drake (-)
+  Dragon Allegiant:
+    when 9014 summoned self
+    if 9014 keyword_condition
+    if 9014 have is card mine
+    do 9014 own draw card mine random deck type is 131 amount=1.0
+  Chemtech Drake:
+    when 8936 played spell
+    when 8937 drawn
+    if 8937 count ge 10.0 card mine hand
+    do 8936 own draw card mine deck_top amount=1.0
+    do 8937 own damage player enemy amount=1.0
+  Scattered Pod:
+    when 7833 played self
+    when 7834 always
+    when 10180 always
+    if 7834 keyword_condition
+    if max_mana ge 10.0
+    if 7834 max_mana ge 10.0
+    do 7833 own draw card mine deck category in slow_spell;category in fast_spell;category in burst_spell amount=1.0
+    do 7834 own give_keyword self
+    do 10180 uses_keyword cant unit enemy all keyword not 750404 event=blocks
+   45 stormbound | stronger | gives it more strength | Moonlit Aerie -> Lawless Herd (-); Plague Monarchs -> Erratic Neglects (-); Plague Monarchs -> Brood Sages (-)
+  Moonlit Aerie:
+    when 10436 turn_start
+    if 10436 amount_per_level
+    do 10436 own stat_change unit mine all board type is 162 strength=1.0
+  Lawless Herd:
+  Plague Monarchs:
+    when 10274 moves self
+    if 10274 amount_per_level
+    if 10274 amount_event_amount
+    do 10274 own damage unit enemy chosen board state is poisoned;position is surrounding of unit mine all board;of:kind is unit;of:type in 167;of:type in 163 amount=1.0
+    do 10274 own stat_change unit mine all board type in 167;type in 163 strength=event_amount
+  Erratic Neglects:
+    when 10391 moves self
+    do 10391 own give_random_keyword self amount=1.0
+   44 gwent | type | makes your units die: {B} Consumes them | Eredin Bréacc Glas -> Ozzrel (-); Red Riders -> Ghoul (-); Naglfar Crew -> Ghoul (-)
+  Eredin Bréacc Glas:
+    when 3317 played self
+    when 4520 turn_start
+    when 3318 played self
+    if 3318 keyword_condition
+    if amount ge stat
+    if 3318 amount ge stat
+    do 3317 own give_keyword position enemy chosen turns=2.0
+    do 4520 uses_keyword damage unit highest board position is same_row of self amount=2.0
+    do 3318 own increase_effect keyword keyword is 756162 amount=1.0
+  Ozzrel:
+    when 2544 played self
+    when 4538 activated
+    when 4516 activated
+    when 2545 played self
+    when 4538 activated
+    when 4516 activated
+    if 2544 keyword_condition
+    if 4538 amount_stat strength it
+    if 2545 keyword_condition
+    if 4538 amount_stat strength it
+    if 2544 have is self position is front_row
+    if 2545 have is self position is back_row
+    do 2544 own keyword_action unit enemy chosen discard
+    do 4538 uses_keyword kill unit enemy chosen discard
+    do 4538 uses_keyword stat_change unit enemy chosen discard strength=stat
+    do 4538 uses_keyword keyword_action unit enemy chosen discard
+    do 4516 uses_keyword obliterate unit enemy chosen discard
+    do 2545 own keyword_action unit mine chosen discard
+    do 4538 uses_keyword kill unit mine chosen discard
+    do 4538 uses_keyword stat_change unit mine chosen discard strength=stat
+    do 4538 uses_keyword keyword_action unit mine chosen discard
+    do 4516 uses_keyword obliterate unit mine chosen discard
+  Red Riders:
+    when 3327 played self
+    when 4520 turn_start
+    when 4520 turn_start
+    when 4520 turn_start
+    do 3327 own choose_one
+    do 3327 own give_keyword position enemy chosen turns=4.0
+    do 4520 uses_keyword damage unit highest board position is same_row of self amount=2.0
+    do 3327 own give_keyword position enemy chosen turns=2.0
+    do 4520 uses_keyword damage unit highest board position is same_row of self amount=2.0
+    do 3327 own play_card unit mine chosen board state is bronze;type is 23
+    do 3327 own give_keyword position enemy all turns=2.0
+    do 4520 uses_keyword damage unit highest board position is same_row of self amount=2.0
+  Ghoul:
+    when 2004 played self
+    when 4538 activated
+    when 4516 activated
+    if 2004 keyword_condition
+    if 4538 amount_stat strength it
+    if 2004 have is self position is front_row
+    do 2004 own keyword_action unit mine chosen discard state is bronze
+    do 4538 uses_keyword kill unit mine chosen discard state is bronze
+    do 4538 uses_keyword stat_change unit mine chosen discard state is bronze strength=stat
+    do 4538 uses_keyword keyword_action unit mine chosen discard state is bronze
+    do 4516 uses_keyword obliterate unit mine chosen discard state is bronze
+   41 monster_train | waits | kills it for its death effect | Primitive Mold -> Little Fade (-); Sacred Wicks -> Spikedriver Colony (-); Primitive Mold -> Devourer of Death (-)
+  Primitive Mold:
+    when 6850 played self
+    when 7095 activated
+    when 7059 turn_start
+    when 7060 countdown_done self
+    do 6850 own keyword_action unit mine random discard
+    do 7095 uses_keyword return_card unit mine chosen discard
+    do 7095 uses_keyword give_keyword unit mine random discard amount=1.0
+    do 7059 uses_keyword countdown_advance unit mine random discard amount=1.0
+    do 7060 uses_keyword kill unit mine random discard
+    do 7095 uses_keyword stat_change unit mine random discard power=5.0;health=5.0
+    do 7095 uses_keyword cost_set unit mine random discard cost=0.0
+  Little Fade:
+    when 6841 always
+    when 7081 attacks self
+    when 6842 killed
+    when 7081 attacks self
+    when 6843 dies self
+    when 7059 turn_start
+    when 7060 countdown_done self
+    when 6844 always
+    when 7069 attacks
+    when 6845 always
+    when 7062 dies self
+    when 6846 dies self
+    if 6841 upgrade_path 1.0
+    if 7081 amount_count keyword self keyword is 2000330
+    if 6842 upgrade_path 1.0
+    if 6842 amount_per_level
+    if 6842 amount_per_level
+    if 7081 amount_count keyword self keyword is 2000330
+    if 6843 upgrade_path 2.0
+    if 6843 amount_per_level
+    if 6844 upgrade_path 3.0
+    if 6845 upgrade_path 3.0
+    if 6846 upgrade_path 3.0
+    if 6846 amount_per_level
+    if 6846 amount_per_level
+    do 6841 own give_keyword self amount=1.0
+    do 7081 uses_keyword damage actor amount=count
+    do 6842 own stat_change self power=2.0
+    do 6842 own give_keyword self amount=2.0
+    do 7081 uses_keyword damage actor amount=count
+    do 6843 own stat_change unit mine all board power=5.0;health=5.0
+    do 6843 own give_keyword unit mine all board amount=2.0
+    do 7059 uses_keyword countdown_advance unit mine all board amount=1.0
+    do 7060 uses_keyword kill unit mine all board
+    do 6844 own give_keyword self
+    do 7069 uses_keyword first_strike self
+    do 6845 own give_keyword self
+    do 7062 uses_keyword put_on_top self
+    do 6846 own stat_change self power=15.0;health=1.0
+  Sacred Wicks:
+    when 6858 always
+    when 7099 played self
+    when 6859 played self
+    when 7095 activated
+    when 7059 turn_start
+    when 7060 countdown_done self
+    when 7099 played self
+    do 6858 own give_keyword self
+    do 7099 uses_keyword exhaust self
+    do 6859 own keyword_action unit mine random discard
+    do 7095 uses_keyword return_card unit mine chosen discard
+    do 7095 uses_keyword give_keyword unit mine random discard amount=1.0
+    do 7059 uses_keyword countdown_advance unit mine random discard amount=1.0
+    do 7060 uses_keyword kill unit mine random discard
+    do 7095 uses_keyword stat_change unit mine random discard power=5.0;health=5.0
+    do 7095 uses_keyword cost_set unit mine random discard cost=0.0
+    do 7099 has_keyword exhaust self
+  Spikedriver Colony:
+    when 7025 always
+    when 7067 attack_done
+    when 7026 dies self
+    when 7027 always
+    when 7067 attack_done
+    if 7026 level eq 1.0
+    if 7027 level eq 2.0
+    do 7025 own give_keyword self amount=1.0
+    do 7067 uses_keyword start_attack self
+    do 7026 own copy self
+    do 7027 own stat_change self power=20.0
+    do 7067 has_keyword start_attack self
+   36 gwent | repeats | repeats its effects | Vrygheff -> Slave Hunter (-); Vrygheff -> Usurper: Officer (-); Vrygheff -> Standard Bearer (-)
+  Vrygheff:
+    when 2535 always
+    when 4510 played self
+    when 2536 activated self
+    when 4510 played self
+    when 4504 played self
+    do 2535 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 2536 own repeat unit mine chosen board state is bronze;type is 46 event=turn_end
+    do 4510 has_keyword can self event=activated
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Slave Hunter:
+    when 2464 played self
+    when 4523 always
+    if 2464 amount_count unit all board position is sides of self;type is 46
+    if 2464 amount_sum
+    do 2464 own damage unit enemy chosen board amount=sum
+    do 2464 own copy unit enemy it strength eq 2362
+    do 2464 own stat_set unit enemy it state is created strength=1.0
+    do 2464 own give_keyword unit enemy it state is created
+    do 4523 uses_keyword silence unit enemy it state is created
+  Usurper: Officer:
+    when 3418 played self
+    when 4569 always
+    when 3419 always
+    when 4510 played self
+    when 3420 activated self
+    when 4539 activated
+    when 4569 always
+    when 3421 round_start
+    when 3422 round_start
+    when 4510 played self
+    when 4504 played self
+    if 3421 have self hand
+    if 3422 have self deck
+    do 3418 own summon
+    do 3418 own give_keyword unit mine it card is 813633
+    do 4569 uses_keyword can unit mine it card is 813633 event=summoned
+    do 3419 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 3420 own keyword_action unit all board keyword is 9000001;card is 813633
+    do 4539 uses_keyword move unit all board keyword is 9000001;card is 813633
+    do 4539 uses_keyword give_keyword unit all board keyword is 9000001;card is 813633
+    do 4569 uses_keyword can unit all board keyword is 9000001;card is 813633 event=summoned
+    do 4539 uses_keyword remove_keyword unit all board keyword is 9000001;card is 813633
+    do 3421 own transform self
+    do 3422 own transform self
+    do 4510 has_keyword can self event=activated
+    do 4504 has_keyword cant self event=activated;turns=1.0
+   35 stormbound | stronger | can give it more strength | Catnip’s Charm -> Fluffy Badboxers (-); Catnip’s Charm -> Hair-Raising Cats (-); Spare Dragonling -> Ludic Matriarchs (-)
+  Catnip’s Charm:
+    when 10406 played self
+    when 10503 moves self
+    if 10406 amount_per_level
+    do 10406 own give_keyword unit chosen board
+    do 10503 uses_keyword move unit chosen board
+    do 10406 own stat_change unit mine lowest board type is 156 strength=1.0
+  Fluffy Badboxers:
+    when 10363 attack_done
+    when 10503 moves self
+    do 10363 own give_keyword unit enemy all board strength le 11365
+    do 10503 uses_keyword move unit enemy all board strength le 11365
+  Hair-Raising Cats:
+    when 10364 played self
+    do 10364 own start_attack unit enemy random board position is surrounding;state is confused
+   35 marvel_snap | waits | fills your hand | Space Stone -> Dragon of the Moon (-); King Eitri -> Devil Dinosaur (-); Agatha Harkness -> Red Wolf Fractured Frontier (-)
+  Space Stone:
+    when 6307 played self
+    when 6308 always
+    do 6307 own draw card mine deck card is 8000642 amount=1.0
+    do 6308 own can card mine card is 8000642 event=played
+  Dragon of the Moon:
+    when 5926 played self
+    if 5926 amount_count card all hand
+    do 5926 own stat_change card all hand power=-1.0
+    do 5926 own stat_change self power=count
+  King Eitri:
+    when 6075 activated self
+    do 6075 own draw card mine chosen deck state is created
+  Devil Dinosaur:
+    when 5908 always
+    if 5908 amount_product
+    if 5908 amount_count card mine all hand
+    do 5908 own stat_change self power=product
+   32 gwent | stronger | can give it more strength (when next to it) | Hjalmar: Seawolf -> Terror of the Seas (-); Hjalmar: Seawolf -> Tyrggvi Tuirseach (-); Hjalmar: Seawolf -> Morkvarg: Heart of Terror (-)
+  Hjalmar: Seawolf:
+    when 4204 played self
+    when 4567 activated
+    when 4205 played spell mine type is 29
+    if 4204 keyword_condition
+    if 4567 amount_stat strength self
+    if 4567 amount_stat strength it
+    if 4205 amount_event_amount
+    if 4205 amount_event_amount
+    if 4204 have is self position is front_row
+    do 4204 own keyword_action self
+    do 4567 uses_keyword damage self amount=stat
+    do 4567 uses_keyword damage self amount=stat
+    do 4205 own remove_keyword unit all board position is sides of self;type in 60;type in 59
+    do 4205 own remove_keyword self
+    do 4205 own stat_change unit all board position is sides of self;type in 60;type in 59 strength=event_amount
+    do 4205 own stat_change self strength=event_amount
+  Terror of the Seas:
+    when 3104 always
+    when 4510 played self
+    when 3105 activated self
+    when 3106 played unit mine type is 60
+    when 4532 damaged self
+    when 4510 played self
+    when 4504 played self
+    if 3105 amount_event_amount
+    if 4532 amount_listed
+    do 3104 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 3105 own remove_keyword self
+    do 3105 own damage unit enemy chosen board amount=event_amount
+    do 3106 own give_keyword self amount=1.0
+    do 4532 uses_keyword negate_damage self amount=listed
+    do 4510 has_keyword can self event=activated
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Tyrggvi Tuirseach:
+    when 3338 always
+    when 4544 round_start
+    when 3339 played self
+    when 4566 turn_end
+    when 4544 round_start
+    if 4544 event_count ge 2.0
+    if 4566 amount_stat base_power self
+    if 4544 event_count ge 2.0
+    do 3338 own give_keyword self
+    do 4544 uses_keyword base_change self strength=1.0
+    do 3339 own give_keyword unit enemy chosen board
+    do 4566 uses_keyword damage unit enemy chosen board amount=stat
+    do 4566 uses_keyword remove_keyword unit enemy chosen board
+    do 4544 has_keyword base_change self strength=1.0
+   31 gwent | stronger | gives it more strength (when next to it) | Zoltan Chivay -> Dwarf Berserker (-); Zoltan Chivay -> Zoltan: Scoundrel (-); Zoltan Chivay -> Mahakam Volunteers (-)
+  Zoltan Chivay:
+    when 2033 always
+    when 4541 round_end
+    when 2034 played self
+    when 4600 always
+    when 4541 round_end
+    when 4601 played self
+    when 4541 round_end
+    do 2033 own give_keyword self
+    do 4541 uses_keyword cant self event=leaves_play
+    do 4541 uses_keyword remove_keyword self
+    do 2034 own stat_change unit mine all board type is 39;position is sides of self strength=2.0
+    do 4600 own give_keyword self
+    do 4541 uses_keyword cant self event=leaves_play
+    do 4541 uses_keyword remove_keyword self
+    do 4601 own stat_change unit mine all board type is 39;position is sides strength=2.0
+    do 4541 has_keyword cant self event=leaves_play
+    do 4541 has_keyword remove_keyword self
+  Dwarf Berserker:
+    when 3138 turn_end
+    if 3138 keyword_condition
+    if have is self keyword is 756174
+    if 3138 have is self keyword is 756174
+    do 3138 own damage self amount=1.0
+    do 3138 own damage unit enemy random board amount=1.0
+  Zoltan: Scoundrel:
+    when 1788 played self
+    when 1789 played self
+    if 1788 keyword_condition
+    if 1789 keyword_condition
+    if 1788 have is self position is front_row
+    if 1789 have is self position is back_row
+    do 1788 own create
+    do 1788 own play_card card mine chosen hand card is 813578
+    do 1789 own create
+    do 1789 own play_card card mine chosen hand card is 813577
+   28 faeria | waits | fills your hand | Dream Keeper -> Radiance, Imperial Airship (-); Iona's Smile -> Gagana, Treasure Seeker (-); Fugoro, Merchant of Wonders -> Gagana, Treasure Seeker (-)
+  Dream Keeper:
+    when 1523 always
+    when 1758 always
+    when 1524 played self
+    when 1758 always
+    if 1524 amount_count card mine all hand
+    do 1523 own give_keyword self
+    do 1758 uses_keyword cant unit enemy all board position is bordering of self event=moves
+    do 1758 uses_keyword cant unit enemy all board position is bordering of self event=attacks
+    do 1524 own cost_change card mine all hand cost=-1.0
+    do 1524 own shuffle_into_deck card mine all hand
+    do 1524 own draw card mine deck_top amount=count
+    do 1758 has_keyword cant unit enemy all board position is bordering of self event=moves
+    do 1758 has_keyword cant unit enemy all board position is bordering of self event=attacks
+  Radiance, Imperial Airship:
+    when 1411 always
+    when 1755 always
+    when 1759 played self
+    when 1412 always
+    when 1413 played self
+    when 1755 always
+    when 1759 played self
+    if 1759 amount_event_amount
+    if 1412 amount_stat health player mine
+    if 1413 amount_count card mine all hand
+    if 1759 amount_event_amount
+    do 1411 own give_keyword self
+    do 1755 uses_keyword can self event=moves
+    do 1411 own give_keyword self amount=3.0
+    do 1759 uses_keyword move self amount=event_amount
+    do 1412 own cost_set self cost=stat
+    do 1413 own heal player mine amount=count
+    do 1755 has_keyword can self event=moves
+    do 1759 has_keyword move self amount=event_amount
+  Iona's Smile:
+    when 1450 played self
+    do 1450 own draw unit mine deck keyword is 741063 amount=2.0
+  Gagana, Treasure Seeker:
+    when 1658 always
+    when 1755 always
+    when 1659 played self
+    when 1755 always
+    if 1659 amount_count card mine all hand
+    if 1659 amount_count card mine all hand
+    do 1658 own give_keyword self
+    do 1755 uses_keyword can self event=moves
+    do 1659 own create amount=count
+    do 1659 own shuffle_into_deck card mine all hand
+    do 1659 own draw card mine deck_top amount=count
+    do 1755 has_keyword can self event=moves
+   26 gwent | stronger | gives it more strength (when in its row) | Arachas Behemoth -> Kikimore Hatchling (-); Kikimore Queen -> Kikimore Hatchling (-); Arachas Behemoth -> Koshchey (-)
+  Arachas Behemoth:
+    when 1960 played self
+    do 1960 own summon amount=2.0
+    do 1960 own stat_change unit mine all board type is 53;position is same_row of self strength=1.0
+  Kikimore Hatchling:
+    when 4172 activated self
+    when 4173 always
+    when 4511 activated self
+    when 4174 played card mine type is 28
+    when 4504 played self
+    if 4511 amount_listed
+    do 4172 own stat_change self strength=-1.0
+    do 4172 own summon
+    do 4173 own keyword_action amount=1.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+    do 4174 own stat_change self strength=1.0
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Kikimore Queen:
+    when 3058 always
+    when 4540 played unit mine strength gt 4192
+    when 3059 keyword_used
+    when 3060 played card mine type is 28
+    when 4540 played unit mine strength gt 4192
+    if 4540 amount_listed
+    if 3059 keyword_condition
+    if 4540 amount_listed
+    if 3059 keyword_condition
+    do 3058 own give_keyword self
+    do 4540 uses_keyword stat_change self strength=listed
+    do 3059 own stat_change unit mine all board type is 53;position is same_row of self strength=1.0
+    do 3060 own repeat self
+    do 4540 has_keyword stat_change self strength=listed
+   25 stormbound | stronger | can give it more strength (when next to it) | Linked Golems -> Original Blueprints (-); Faun Companions -> Siegebreakers (-); Linked Golems -> Project PH03-NIX (-)
+  Linked Golems:
+    when 10286 played self
+    if 10286 have is unit mine board type is 153;position is bordering
+    if 10286 amount_per_level
+    if 10286 amount_per_level
+    do 10286 own stat_change self strength=1.0
+    do 10286 own stat_change unit mine board type is 153;position is bordering strength=1.0
+  Original Blueprints:
+    when 10311 moves self
+    if 10311 amount_per_level
+    do 10311 own stat_change unit mine random board position is surrounding strength=1.0
+  Faun Companions:
+    when 10432 played self
+    if 10432 amount_per_level
+    do 10432 own stat_change unit mine random board position is bordering;type is 162 strength=3.0
+  Siegebreakers:
+    when 10331 played self
+    if 10331 amount_per_level
+    do 10331 own damage landmark enemy all board position is surrounding amount=4.0
+   17 gwent | waits | makes your units die | Ragh Nar Roog -> Eist Tuirseach (-); Melusine Cultist -> Eist Tuirseach (-); Rage of the Sea -> Eist Tuirseach (-)
+  Ragh Nar Roog:
+    when 1827 always
+    when 4517 leaves_play self
+    when 1828 played unit mine chosen state is gold
+    when 1829 played self
+    when 4514 turn_start
+    when 1830 played unit mine chosen state is gold
+    when 1831 played unit mine chosen state is gold
+    when 4517 leaves_play self
+    if 1830 stage 1.0
+    if 1831 stage 2.0
+    do 1827 own give_keyword self
+    do 4517 uses_keyword obliterate self
+    do 1828 own stage_advance self
+    do 1829 own give_keyword position enemy all turns=2.0
+    do 4514 uses_keyword damage unit random board position is same_row of self amount=3.0;spread=1.0
+    do 1830 own damage unit enemy chosen board amount=5.0
+    do 1831 own create
+    do 1831 own play_card card mine chosen hand card is 756272
+    do 4517 has_keyword obliterate self
+  Eist Tuirseach:
+    when 3635 always
+    when 4544 round_start
+    when 3636 played self
+    when 4543 activated
+    when 3637 discarded unit mine region not Neutral
+    when 3638 always
+    when 3639 dies unit mine region not Neutral
+    when 4544 round_start
+    if 4544 event_count ge 2.0
+    if 3636 keyword_condition 3.0
+    if 3637 my_turn
+    if 3639 keyword_condition
+    if 3639 my_turn
+    if 4544 event_count ge 2.0
+    if 3636 count ge listed unit enemy board state is damaged
+    if 3639 have not card mine state is started_in_deck;region is Neutral
+    do 3635 own give_keyword self
+    do 4544 uses_keyword base_change self strength=1.0
+    do 3636 own draw card mine deck_top amount=1.0
+    do 3636 own keyword_action card mine chosen hand amount=1.0
+    do 4543 uses_keyword discard card mine chosen hand
+    do 3637 own summon unit mine it
+    do 3638 own give_keyword self amount=2.0
+    do 3639 own summon unit mine it
+    do 4544 has_keyword base_change self strength=1.0
+  Melusine Cultist:
+    when 3675 activated self
+    when 4522 turn_start
+    when 3676 turn_end
+    when 3677 turn_end
+    when 4504 played self
+    if 3676 have position enemy all position is opposite_row of self;keyword is 756164
+    if 3676 have not position enemy all position is opposite_row of self;keyword is 756160
+    if 3677 have position enemy all position is opposite_row of self;keyword is 756160
+    do 3675 own give_keyword position enemy chosen turns=2.0
+    do 4522 uses_keyword damage unit random board position is same_row of self amount=1.0
+    do 3676 own stat_change unit right_of_self board strength=1.0
+    do 3677 own stat_change unit all board position is sides of self strength=1.0
+    do 4504 has_keyword cant self event=activated;turns=1.0
+   17 gwent | type | makes your units die: {B} gives them Veteran | Fulmar -> Draig Bon-Dhu (-); Melusine Cultist -> Draig Bon-Dhu (-); Impenetrable Fog -> Draig Bon-Dhu (-)
+  Fulmar:
+    when 3672 played self
+    when 3673 activated self
+    when 4518 turn_start
+    when 4504 played self

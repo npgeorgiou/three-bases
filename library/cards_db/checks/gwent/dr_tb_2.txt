@@ -1,0 +1,1274 @@
+    if 3673 amount_stat keyword_amount it
+    do 3672 own create
+    do 3672 own play_card card mine chosen hand card is 757246
+    do 3673 own remove_keyword position enemy chosen keyword is 756164
+    do 3673 own give_keyword position enemy it turns=stat
+    do 4518 uses_keyword damage unit all board position is same_row of self amount=1.0
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Draig Bon-Dhu:
+    when 2111 played self
+    when 2112 always
+    when 4510 played self
+    when 2113 activated self
+    when 4544 round_start
+    when 2114 always
+    when 4511 activated self
+    when 4510 played self
+    when 4504 played self
+    if 4544 event_count ge 2.0
+    if 4511 amount_listed
+    do 2111 own move unit mine chosen deck state is bronze;type is 45
+    do 2112 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 2113 own give_keyword unit mine chosen discard
+    do 4544 uses_keyword base_change unit mine chosen discard strength=1.0
+    do 2114 own keyword_action amount=1.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+    do 4510 has_keyword can self event=activated
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Melusine Cultist:
+    when 3675 activated self
+    when 4522 turn_start
+    when 3676 turn_end
+    when 3677 turn_end
+    when 4504 played self
+    if 3676 have position enemy all position is opposite_row of self;keyword is 756164
+    if 3676 have not position enemy all position is opposite_row of self;keyword is 756160
+    if 3677 have position enemy all position is opposite_row of self;keyword is 756160
+    do 3675 own give_keyword position enemy chosen turns=2.0
+    do 4522 uses_keyword damage unit random board position is same_row of self amount=1.0
+    do 3676 own stat_change unit right_of_self board strength=1.0
+    do 3677 own stat_change unit all board position is sides of self strength=1.0
+    do 4504 has_keyword cant self event=activated;turns=1.0
+   17 gwent | type | makes your units die: {B} brings them back to hand | Dragon's Dream -> Tyr: Master of An Skellig (-); Ragh Nar Roog -> Tyr: Master of An Skellig (-); Rage of the Sea -> Tyr: Master of An Skellig (-)
+  Dragon's Dream:
+    when 2507 played self
+    when 4554 turn_start
+    when 4555 countdown_done self
+    do 2507 own give_keyword position enemy chosen turns=3.0
+    do 4554 uses_keyword countdown_advance position enemy chosen amount=1.0
+    do 4555 uses_keyword damage unit all board position is same_row of self amount=3.0
+  Tyr: Master of An Skellig:
+    when 4472 always
+    when 4517 leaves_play self
+    when 4473 played self
+    when 4543 activated
+    when 4474 leaves_play unit mine state is bronze
+    when 4517 leaves_play self
+    if 4474 my_turn
+    if 4474 amount_stat base_power it
+    do 4472 own give_keyword self
+    do 4517 uses_keyword obliterate self
+    do 4473 own return_card unit mine chosen discard state is bronze;region not Neutral
+    do 4473 own keyword_action card mine chosen hand
+    do 4543 uses_keyword discard card mine chosen hand
+    do 4474 own stat_change unit mine it strength=stat
+    do 4517 has_keyword obliterate self
+  Ragh Nar Roog:
+    when 1827 always
+    when 4517 leaves_play self
+    when 1828 played unit mine chosen state is gold
+    when 1829 played self
+    when 4514 turn_start
+    when 1830 played unit mine chosen state is gold
+    when 1831 played unit mine chosen state is gold
+    when 4517 leaves_play self
+    if 1830 stage 1.0
+    if 1831 stage 2.0
+    do 1827 own give_keyword self
+    do 4517 uses_keyword obliterate self
+    do 1828 own stage_advance self
+    do 1829 own give_keyword position enemy all turns=2.0
+    do 4514 uses_keyword damage unit random board position is same_row of self amount=3.0;spread=1.0
+    do 1830 own damage unit enemy chosen board amount=5.0
+    do 1831 own create
+    do 1831 own play_card card mine chosen hand card is 756272
+    do 4517 has_keyword obliterate self
+   14 stormbound | stronger | gives it more strength (when around it) | Upgrade Point -> Finite Loopers (-); Upgrade Point -> Frontline Engineers (-); Upgrade Point -> Function Wilds (-)
+  Upgrade Point:
+    when 10288 turn_start
+    if 10288 amount_per_level
+    do 10288 own stat_change unit mine all board position is surrounding;type is 153 strength=2.0
+  Finite Loopers:
+    when 10284 dies self
+    if 10284 amount_per_level
+    do 10284 own summon strength=1.0
+  Frontline Engineers:
+    when 10310 played self
+    if 10310 amount_per_level
+    if 10310 amount_count landmark mine board
+    do 10310 own stat_change self strength=2.0;times=count
+   14 monster_train | waits | makes units die | Sacred Wicks -> Wickless Baron (-); Rector Flicker -> Wickless Baron (-); Sacred Wicks -> Big Sludge (-)
+  Sacred Wicks:
+    when 6858 always
+    when 7099 played self
+    when 6859 played self
+    when 7095 activated
+    when 7059 turn_start
+    when 7060 countdown_done self
+    when 7099 played self
+    do 6858 own give_keyword self
+    do 7099 uses_keyword exhaust self
+    do 6859 own keyword_action unit mine random discard
+    do 7095 uses_keyword return_card unit mine chosen discard
+    do 7095 uses_keyword give_keyword unit mine random discard amount=1.0
+    do 7059 uses_keyword countdown_advance unit mine random discard amount=1.0
+    do 7060 uses_keyword kill unit mine random discard
+    do 7095 uses_keyword stat_change unit mine random discard power=5.0;health=5.0
+    do 7095 uses_keyword cost_set unit mine random discard cost=0.0
+    do 7099 has_keyword exhaust self
+  Wickless Baron:
+    when 6886 dies unit position is same_lane
+    do 6886 own stat_change self power=3.0;health=3.0
+  Rector Flicker:
+    when 6831 always
+    when 6832 always
+    when 7059 turn_start
+    when 7060 countdown_done self
+    when 6833 always
+    when 6834 dies unit position is same_lane
+    when 6835 always
+    when 6836 dies unit position is same_lane
+    when 6837 always
+    when 6838 dies unit position is same_lane
+    when 6839 always
+    when 6840 combat_end
+    when 7095 activated
+    when 7059 turn_start
+    when 7060 countdown_done self
+    if 6831 upgrade_path 1.0
+    if 6831 amount_per_level
+    if 6831 amount_per_level
+    if 6832 upgrade_path 1.0
+    if 6833 upgrade_path 2.0
+    if 6833 level eq 1.0
+    if 6834 upgrade_path 2.0
+    if 6834 level eq 1.0
+    if 6835 upgrade_path 2.0
+    if 6835 level eq 2.0
+    if 6836 upgrade_path 2.0
+    if 6836 level eq 2.0
+    if 6837 upgrade_path 2.0
+    if 6837 level eq 3.0
+    if 6838 upgrade_path 2.0
+    if 6838 level eq 3.0
+    if 6839 upgrade_path 3.0
+    if 6839 amount_per_level
+    if 6839 amount_per_level
+    if 6840 upgrade_path 3.0
+    if 6840 amount_per_level
+    do 6831 own stat_change self power=40.0;health=40.0
+    do 6832 own give_keyword self amount=3.0
+    do 7059 uses_keyword countdown_advance self amount=1.0
+    do 7060 uses_keyword kill self
+    do 6833 own stat_change self health=5.0
+    do 6834 own stat_change self power=1.0;health=5.0
+    do 6835 own stat_change self power=5.0;health=15.0
+    do 6836 own stat_change self power=2.0;health=10.0
+    do 6837 own stat_change self power=20.0;health=40.0
+    do 6838 own stat_change self power=4.0;health=20.0
+    do 6839 own stat_change self power=5.0;health=5.0
+    do 6840 own keyword_action unit mine random discard
+    do 7095 uses_keyword return_card unit mine chosen discard
+    do 7095 uses_keyword give_keyword unit mine random discard amount=1.0
+    do 7059 uses_keyword countdown_advance unit mine random discard amount=1.0
+    do 7060 uses_keyword kill unit mine random discard
+    do 7095 uses_keyword stat_change unit mine random discard power=5.0;health=5.0
+    do 7095 uses_keyword cost_set unit mine random discard cost=0.0
+    do 6840 own stat_change unit mine it power=5.0
+   13 gwent | stronger | keeps it alive in the fights it takes on when it comes | Reynard Odo -> Donimir of Troy (-); Blessing of Kindness -> Cave Troll (-); Vandergrift's Blade -> Donimir of Troy (-)
+  Reynard Odo:
+    when 2598 played unit mine
+    when 2599 activated self
+    if 2599 keyword_condition 12.0
+    if 2599 stat strength ge listed self
+    do 2598 own stat_change unit mine it strength=1.0
+    do 2599 own stat_change unit mine all board state is buffed strength=1.0
+  Donimir of Troy:
+    when 3029 always
+    when 4565 always
+    when 3030 always
+    when 4535 damaged self
+    when 4565 always
+    when 4535 damaged self
+    if 4535 amount_event_amount
+    if 4535 amount_event_amount
+    do 3029 own give_keyword self
+    do 4565 uses_keyword cant player enemy event=targeted
+    do 3030 own give_keyword self
+    do 4535 uses_keyword negate_damage self amount=event_amount
+    do 4535 uses_keyword remove_keyword self
+    do 4565 has_keyword cant player enemy event=targeted
+    do 4535 has_keyword negate_damage self amount=event_amount
+    do 4535 has_keyword remove_keyword self
+  Blessing of Kindness:
+    when 4458 played unit mine state is odd_power
+    when 4459 played unit mine state is even_power
+    if 4458 it_matches state is odd_power
+    if 4458 amount_count unit all board position is sides of it;state is even_power
+    if 4459 it_matches state is even_power
+    if 4459 amount_count unit all board position is sides of it;state is odd_power
+    do 4458 own stat_change unit mine it strength=count
+    do 4459 own stat_change unit mine it strength=count
+  Cave Troll:
+    when 3061 always
+    when 4565 always
+    when 4565 always
+    do 3061 own give_keyword self
+    do 4565 uses_keyword cant player enemy event=targeted
+    do 4565 has_keyword cant player enemy event=targeted
+   11 stormbound | stronger | can give it more strength (when around it) | Greengale Serpents -> Va’vel the Looper (-); Greengale Serpents -> Tegor the Vengeful (-); Greengale Serpents -> Conflicted Drakes (-)
+  Greengale Serpents:
+    when 10285 attacks unit
+    if 10285 amount_per_level
+    if 10285 amount_per_level
+    do 10285 own stat_change self strength=1.0
+    do 10285 own stat_change unit mine random board position is surrounding;type is 154 strength=1.0
+  Va’vel the Looper:
+    when 10404 moves self
+    if 10404 amount_per_level
+    do 10404 own move self
+    do 10404 own stat_change self strength=1.0
+  Tegor the Vengeful:
+    when 10350 dies self
+    if 10350 amount_per_level
+    if 10350 amount_per_level
+    if 10350 amount_per_level
+    do 10350 own random_one
+    do 10350 own stat_change unit random board strength=6.0
+    do 10350 own damage anything random board amount=5.0
+    do 10350 own summon unit board strength=4.0
+    9 monster_train | type | makes your units die | Rector Flicker -> A Fatal Melting (-); Sacred Wicks -> Memento Mori (-); Primitive Mold -> Memento Mori (-)
+  Rector Flicker:
+    when 6831 always
+    when 6832 always
+    when 7059 turn_start
+    when 7060 countdown_done self
+    when 6833 always
+    when 6834 dies unit position is same_lane
+    when 6835 always
+    when 6836 dies unit position is same_lane
+    when 6837 always
+    when 6838 dies unit position is same_lane
+    when 6839 always
+    when 6840 combat_end
+    when 7095 activated
+    when 7059 turn_start
+    when 7060 countdown_done self
+    if 6831 upgrade_path 1.0
+    if 6831 amount_per_level
+    if 6831 amount_per_level
+    if 6832 upgrade_path 1.0
+    if 6833 upgrade_path 2.0
+    if 6833 level eq 1.0
+    if 6834 upgrade_path 2.0
+    if 6834 level eq 1.0
+    if 6835 upgrade_path 2.0
+    if 6835 level eq 2.0
+    if 6836 upgrade_path 2.0
+    if 6836 level eq 2.0
+    if 6837 upgrade_path 2.0
+    if 6837 level eq 3.0
+    if 6838 upgrade_path 2.0
+    if 6838 level eq 3.0
+    if 6839 upgrade_path 3.0
+    if 6839 amount_per_level
+    if 6839 amount_per_level
+    if 6840 upgrade_path 3.0
+    if 6840 amount_per_level
+    do 6831 own stat_change self power=40.0;health=40.0
+    do 6832 own give_keyword self amount=3.0
+    do 7059 uses_keyword countdown_advance self amount=1.0
+    do 7060 uses_keyword kill self
+    do 6833 own stat_change self health=5.0
+    do 6834 own stat_change self power=1.0;health=5.0
+    do 6835 own stat_change self power=5.0;health=15.0
+    do 6836 own stat_change self power=2.0;health=10.0
+    do 6837 own stat_change self power=20.0;health=40.0
+    do 6838 own stat_change self power=4.0;health=20.0
+    do 6839 own stat_change self power=5.0;health=5.0
+    do 6840 own keyword_action unit mine random discard
+    do 7095 uses_keyword return_card unit mine chosen discard
+    do 7095 uses_keyword give_keyword unit mine random discard amount=1.0
+    do 7059 uses_keyword countdown_advance unit mine random discard amount=1.0
+    do 7060 uses_keyword kill unit mine random discard
+    do 7095 uses_keyword stat_change unit mine random discard power=5.0;health=5.0
+    do 7095 uses_keyword cost_set unit mine random discard cost=0.0
+    do 6840 own stat_change unit mine it power=5.0
+  A Fatal Melting:
+    when 6888 played self
+    if 6888 amount_product
+    if 6888 amount_event_count
+    do 6888 own damage unit enemy all board amount=product
+  Sacred Wicks:
+    when 6858 always
+    when 7099 played self
+    when 6859 played self
+    when 7095 activated
+    when 7059 turn_start
+    when 7060 countdown_done self
+    when 7099 played self
+    do 6858 own give_keyword self
+    do 7099 uses_keyword exhaust self
+    do 6859 own keyword_action unit mine random discard
+    do 7095 uses_keyword return_card unit mine chosen discard
+    do 7095 uses_keyword give_keyword unit mine random discard amount=1.0
+    do 7059 uses_keyword countdown_advance unit mine random discard amount=1.0
+    do 7060 uses_keyword kill unit mine random discard
+    do 7095 uses_keyword stat_change unit mine random discard power=5.0;health=5.0
+    do 7095 uses_keyword cost_set unit mine random discard cost=0.0
+    do 7099 has_keyword exhaust self
+  Memento Mori:
+    when 6897 played self
+    if 6897 amount_product
+    if 6897 amount_event_count
+    do 6897 own damage unit enemy all board position is front_of_lane amount=product
+    9 monster_train | type | makes your units die: {B} Reforms them | Primitive Mold -> Sacred Wicks (-); Primitive Mold -> Hallowed Halls (-); Rector Flicker -> Sacred Wicks (-)
+  Primitive Mold:
+    when 6850 played self
+    when 7095 activated
+    when 7059 turn_start
+    when 7060 countdown_done self
+    do 6850 own keyword_action unit mine random discard
+    do 7095 uses_keyword return_card unit mine chosen discard
+    do 7095 uses_keyword give_keyword unit mine random discard amount=1.0
+    do 7059 uses_keyword countdown_advance unit mine random discard amount=1.0
+    do 7060 uses_keyword kill unit mine random discard
+    do 7095 uses_keyword stat_change unit mine random discard power=5.0;health=5.0
+    do 7095 uses_keyword cost_set unit mine random discard cost=0.0
+  Sacred Wicks:
+    when 6858 always
+    when 7099 played self
+    when 6859 played self
+    when 7095 activated
+    when 7059 turn_start
+    when 7060 countdown_done self
+    when 7099 played self
+    do 6858 own give_keyword self
+    do 7099 uses_keyword exhaust self
+    do 6859 own keyword_action unit mine random discard
+    do 7095 uses_keyword return_card unit mine chosen discard
+    do 7095 uses_keyword give_keyword unit mine random discard amount=1.0
+    do 7059 uses_keyword countdown_advance unit mine random discard amount=1.0
+    do 7060 uses_keyword kill unit mine random discard
+    do 7095 uses_keyword stat_change unit mine random discard power=5.0;health=5.0
+    do 7095 uses_keyword cost_set unit mine random discard cost=0.0
+    do 7099 has_keyword exhaust self
+  Hallowed Halls:
+    when 6900 played self
+    when 7095 activated
+    when 7059 turn_start
+    when 7060 countdown_done self
+    do 6900 own kill unit mine all board
+    do 6900 own keyword_action unit mine random discard amount=1.0
+    do 7095 uses_keyword return_card unit mine chosen discard
+    do 7095 uses_keyword give_keyword unit mine random discard amount=1.0
+    do 7059 uses_keyword countdown_advance unit mine random discard amount=1.0
+    do 7060 uses_keyword kill unit mine random discard
+    do 7095 uses_keyword stat_change unit mine random discard power=5.0;health=5.0
+    do 7095 uses_keyword cost_set unit mine random discard cost=0.0
+    9 gwent | waits | keeps the Vitality it gives itself off it | Naiad Fledgling -> Mahakam Marauder (-); Naiad Fledgling -> Ida Emean aep Sivney (-); Naiad Fledgling -> Forest Whisperer (-)
+  Naiad Fledgling:
+    when 4036 keyword_used keyword is 756204
+    when 4534 turn_end
+    when 4037 activated self
+    when 4504 played self
+    if 4037 amount_event_amount
+    do 4036 own give_keyword unit left_of_self amount=2.0
+    do 4534 uses_keyword stat_change unit left_of_self strength=1.0
+    do 4037 own remove_keyword unit mine chosen board
+    do 4037 own stat_change self strength=event_amount
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Mahakam Marauder:
+    when 2276 played self
+    when 4534 turn_end
+    when 2277 played self
+    when 4629 played self
+    when 4534 turn_end
+    when 4630 played self
+    if 2276 keyword_condition not
+    if 2276 amount_stat armor unit mine chosen board
+    if 2277 keyword_condition
+    if 2277 amount_stat armor unit mine chosen board
+    if 4629 keyword_condition not
+    if 4629 amount_stat count unit mine chosen board keyword is 756174
+    if 4630 keyword_condition
+    if 4630 amount_stat count unit mine chosen board keyword is 756174
+    if have is self keyword is 756174
+    if 2276 have is self keyword is 756174
+    if 2277 have is self keyword is 756174
+    if 4629 have is self keyword is 756174
+    if 4630 have is self keyword is 756174
+    do 2276 own give_keyword self amount=stat
+    do 4534 uses_keyword stat_change self strength=1.0
+    do 2277 own stat_change self strength=stat
+    do 4629 own give_keyword self amount=stat
+    do 4534 uses_keyword stat_change self strength=1.0
+    do 4630 own stat_change self strength=stat
+  Ida Emean aep Sivney:
+    when 2041 played self
+    when 4536 activated
+    when 2042 played self
+    when 4534 turn_end
+    if 2041 keyword_condition
+    if 2042 keyword_condition
+    if 2041 have is self position is front_row
+    if 2042 have is self position is back_row
+    do 2041 own keyword_action unit chosen board
+    do 4536 uses_keyword remove_keywords unit chosen board
+    do 2042 own give_keyword unit mine chosen board amount=3.0
+    do 4534 uses_keyword stat_change unit mine chosen board strength=1.0
+    7 gwent | waits | keeps the Armor it gives itself off it | Dimun Corsair -> Boatbuilders (-); Dimun Corsair -> Wagenburg (-); Dimun Corsair -> Onslaught (-)
+  Dimun Corsair:
+    when 2341 always
+    when 4510 played self
+    when 2342 activated self
+    when 2343 always
+    when 4511 activated self
+    when 2344 played unit mine type is 59
+    when 4510 played self
+    when 4504 played self
+    if 2342 amount_event_amount
+    if 4511 amount_listed
+    do 2341 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 2342 own remove_keyword unit mine chosen board amount=2.0;max=2.0
+    do 2342 own stat_change self strength=event_amount
+    do 2343 own keyword_action amount=2.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+    do 2344 own countdown_advance self amount=1.0
+    do 4510 has_keyword can self event=activated
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Boatbuilders:
+    when 3112 played self
+    when 4532 damaged self
+    when 3113 played self
+    when 4510 played self
+    when 3114 activated self
+    when 4532 damaged self
+    when 3115 always
+    when 4511 activated self
+    when 4694 played self
+    when 4532 damaged self
+    when 4695 played self
+    when 4510 played self
+    when 4696 activated self
+    when 4532 damaged self
+    when 4697 always
+    when 4511 activated self
+    when 4504 played self
+    if 4532 amount_listed
+    if 3113 have is unit mine all board type is 59
+    if 4532 amount_listed
+    if 4511 amount_listed
+    if 4532 amount_listed
+    if 4695 have is unit mine board type is 59
+    if 4532 amount_listed
+    if 4511 amount_listed
+    do 3112 own give_keyword unit mine chosen board amount=2.0
+    do 4532 uses_keyword negate_damage unit mine chosen board amount=listed
+    do 3113 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 3114 own give_keyword unit mine chosen board amount=1.0
+    do 4532 uses_keyword negate_damage unit mine chosen board amount=listed
+    do 3115 own keyword_action amount=1.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+    do 4694 own give_keyword unit mine chosen board amount=2.0
+    do 4532 uses_keyword negate_damage unit mine chosen board amount=listed
+    do 4695 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 4696 own give_keyword unit mine chosen board amount=1.0
+    do 4532 uses_keyword negate_damage unit mine chosen board amount=listed
+    do 4697 own keyword_action amount=1.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Wagenburg:
+    when 3008 turn_end
+    when 4532 damaged self
+    if 3008 keyword_condition
+    if 4532 amount_listed
+    if have is self keyword is 756174
+    if 3008 have is self keyword is 756174
+    do 3008 own give_keyword unit all board position is sides of self amount=1.0
+    do 4532 uses_keyword negate_damage unit all board position is sides of self amount=listed
+    7 duelyst | waits | fills your hand | Replicant -> Theobule (-); Nekomata -> Theobule (-); Artifact Hunter -> Theobule (-)
+  Replicant:
+    when 1049 played self
+    do 1049 own draw card mine chosen deck card is 5001086 amount=1.0
+  Theobule:
+    when 589 played self
+    if 589 amount_count card mine all hand
+    do 589 own shuffle_into_deck card mine all hand
+    do 589 own draw card mine deck_top amount=count
+  Nekomata:
+    when 527 dies self
+    do 527 own draw unit mine deck keyword is 741529 amount=2.0
+    7 inscryption | keyword | gives it Armored | Gem Guardian -> Bleene's Vessel (-); Gem Guardian -> Ruby Vessel (-); Gem Guardian -> Orlu's Vessel (-)
+  Gem Guardian:
+    when 4945 played self
+    when 4909 damaged self
+    if 4909 amount_event_amount
+    do 4945 has_keyword give_keyword unit mine all board name_has is 25
+    do 4909 uses_keyword negate_damage unit mine all board name_has is 25 amount=event_amount
+  Bleene's Vessel:
+    when 5003 played self
+    when 5004 always
+    when 5007 played self
+    when 5008 always
+    do 5003 has_keyword mana_gain gem mine region is Green amount=1.0
+    do 5004 has_keyword stat_change unit mine all board keyword is 4000263 health=2.0
+    do 5007 has_keyword mana_gain gem mine region is Blue amount=1.0
+    do 5008 has_keyword cost_change card mine all keyword is 4000263 cost=-1.0
+  Ruby Vessel:
+    when 5005 played self
+    when 5006 always
+    do 5005 has_keyword mana_gain gem mine region is Orange amount=1.0
+    do 5006 has_keyword stat_change unit mine all board keyword is 4000263 power=1.0
+    5 gwent | type | dies, comes back and dies again: {B} Banishes them | Ruehin -> Northern Wind (-); Archespore -> Northern Wind (-); Dettlaff: Higher Vampire -> Northern Wind (-)
+  Ruehin:
+    when 2531 dies self
+    when 4538 activated
+    when 4516 activated
+    if 4538 amount_stat strength it
+    do 2531 own revive self discard
+    do 2531 own keyword_action unit mine lowest board card not 756674
+    do 4538 uses_keyword kill unit mine lowest board card not 756674
+    do 4538 uses_keyword stat_change unit mine lowest board card not 756674 strength=stat
+    do 4538 uses_keyword keyword_action unit mine lowest board card not 756674
+    do 4516 uses_keyword obliterate unit mine lowest board card not 756674
+  Northern Wind:
+    when 2680 played self
+    when 2681 killed
+    when 4516 activated
+    do 2680 own damage unit chosen board amount=4.0
+    do 2681 own keyword_action unit it discard
+    do 4516 uses_keyword obliterate unit it discard
+  Archespore:
+    when 2266 dies self
+    do 2266 own summon card mine all deck
+    4 monster_train | waits | dies by its own effect | Rector Flicker -> Wickless Baron (-); Rector Flicker -> Big Sludge (-); Rector Flicker -> Devourer of Death (-)
+  Rector Flicker:
+    when 6831 always
+    when 6832 always
+    when 7059 turn_start
+    when 7060 countdown_done self
+    when 6833 always
+    when 6834 dies unit position is same_lane
+    when 6835 always
+    when 6836 dies unit position is same_lane
+    when 6837 always
+    when 6838 dies unit position is same_lane
+    when 6839 always
+    when 6840 combat_end
+    when 7095 activated
+    when 7059 turn_start
+    when 7060 countdown_done self
+    if 6831 upgrade_path 1.0
+    if 6831 amount_per_level
+    if 6831 amount_per_level
+    if 6832 upgrade_path 1.0
+    if 6833 upgrade_path 2.0
+    if 6833 level eq 1.0
+    if 6834 upgrade_path 2.0
+    if 6834 level eq 1.0
+    if 6835 upgrade_path 2.0
+    if 6835 level eq 2.0
+    if 6836 upgrade_path 2.0
+    if 6836 level eq 2.0
+    if 6837 upgrade_path 2.0
+    if 6837 level eq 3.0
+    if 6838 upgrade_path 2.0
+    if 6838 level eq 3.0
+    if 6839 upgrade_path 3.0
+    if 6839 amount_per_level
+    if 6839 amount_per_level
+    if 6840 upgrade_path 3.0
+    if 6840 amount_per_level
+    do 6831 own stat_change self power=40.0;health=40.0
+    do 6832 own give_keyword self amount=3.0
+    do 7059 uses_keyword countdown_advance self amount=1.0
+    do 7060 uses_keyword kill self
+    do 6833 own stat_change self health=5.0
+    do 6834 own stat_change self power=1.0;health=5.0
+    do 6835 own stat_change self power=5.0;health=15.0
+    do 6836 own stat_change self power=2.0;health=10.0
+    do 6837 own stat_change self power=20.0;health=40.0
+    do 6838 own stat_change self power=4.0;health=20.0
+    do 6839 own stat_change self power=5.0;health=5.0
+    do 6840 own keyword_action unit mine random discard
+    do 7095 uses_keyword return_card unit mine chosen discard
+    do 7095 uses_keyword give_keyword unit mine random discard amount=1.0
+    do 7059 uses_keyword countdown_advance unit mine random discard amount=1.0
+    do 7060 uses_keyword kill unit mine random discard
+    do 7095 uses_keyword stat_change unit mine random discard power=5.0;health=5.0
+    do 7095 uses_keyword cost_set unit mine random discard cost=0.0
+    do 6840 own stat_change unit mine it power=5.0
+  Wickless Baron:
+    when 6886 dies unit position is same_lane
+    do 6886 own stat_change self power=3.0;health=3.0
+  Big Sludge:
+    when 6889 dies unit position is same_lane
+    when 7078 always
+    when 7079 turn_start
+    if 7078 amount_count keyword self keyword is 2000326
+    if 7078 amount_double
+    do 6889 own give_keyword self amount=5.0
+    do 7078 uses_keyword stat_change self power=double
+    do 7079 uses_keyword remove_keyword self amount=1.0
+    4 gwent | waits | makes units die | Ghoul -> Vran Warrior (-); Ozzrel -> Vran Warrior (-); Ozzrel -> She-Troll of Vergen (-)
+  Ghoul:
+    when 2004 played self
+    when 4538 activated
+    when 4516 activated
+    if 2004 keyword_condition
+    if 4538 amount_stat strength it
+    if 2004 have is self position is front_row
+    do 2004 own keyword_action unit mine chosen discard state is bronze
+    do 4538 uses_keyword kill unit mine chosen discard state is bronze
+    do 4538 uses_keyword stat_change unit mine chosen discard state is bronze strength=stat
+    do 4538 uses_keyword keyword_action unit mine chosen discard state is bronze
+    do 4516 uses_keyword obliterate unit mine chosen discard state is bronze
+  Vran Warrior:
+    when 2007 dies unit
+    if 2007 my_turn
+    do 2007 own stat_change self strength=1.0
+  Ozzrel:
+    when 2544 played self
+    when 4538 activated
+    when 4516 activated
+    when 2545 played self
+    when 4538 activated
+    when 4516 activated
+    if 2544 keyword_condition
+    if 4538 amount_stat strength it
+    if 2545 keyword_condition
+    if 4538 amount_stat strength it
+    if 2544 have is self position is front_row
+    if 2545 have is self position is back_row
+    do 2544 own keyword_action unit enemy chosen discard
+    do 4538 uses_keyword kill unit enemy chosen discard
+    do 4538 uses_keyword stat_change unit enemy chosen discard strength=stat
+    do 4538 uses_keyword keyword_action unit enemy chosen discard
+    do 4516 uses_keyword obliterate unit enemy chosen discard
+    do 2545 own keyword_action unit mine chosen discard
+    do 4538 uses_keyword kill unit mine chosen discard
+    do 4538 uses_keyword stat_change unit mine chosen discard strength=stat
+    do 4538 uses_keyword keyword_action unit mine chosen discard
+    do 4516 uses_keyword obliterate unit mine chosen discard
+    4 gwent | type | makes units die | Ghoul -> Hybrid (-); Ozzrel -> Regis (-); Ghoul -> Regis (-)
+  Ghoul:
+    when 2004 played self
+    when 4538 activated
+    when 4516 activated
+    if 2004 keyword_condition
+    if 4538 amount_stat strength it
+    if 2004 have is self position is front_row
+    do 2004 own keyword_action unit mine chosen discard state is bronze
+    do 4538 uses_keyword kill unit mine chosen discard state is bronze
+    do 4538 uses_keyword stat_change unit mine chosen discard state is bronze strength=stat
+    do 4538 uses_keyword keyword_action unit mine chosen discard state is bronze
+    do 4516 uses_keyword obliterate unit mine chosen discard state is bronze
+  Hybrid:
+    when 3622 played self
+    when 3623 played self
+    when 4538 activated
+    when 4516 activated
+    if 3622 keyword_condition
+    if 3622 event_count ge 1.0
+    if 3623 keyword_condition
+    if 4538 amount_stat strength it
+    if 3622 have is self position is front_row
+    if 3623 have is self position is back_row
+    do 3622 own stat_change self strength=5.0
+    do 3623 own keyword_action unit mine chosen board
+    do 4538 uses_keyword kill unit mine chosen board
+    do 4538 uses_keyword stat_change unit mine chosen board strength=stat
+    do 4538 uses_keyword keyword_action unit mine chosen board
+    do 4516 uses_keyword obliterate unit mine chosen board
+  Ozzrel:
+    when 2544 played self
+    when 4538 activated
+    when 4516 activated
+    when 2545 played self
+    when 4538 activated
+    when 4516 activated
+    if 2544 keyword_condition
+    if 4538 amount_stat strength it
+    if 2545 keyword_condition
+    if 4538 amount_stat strength it
+    if 2544 have is self position is front_row
+    if 2545 have is self position is back_row
+    do 2544 own keyword_action unit enemy chosen discard
+    do 4538 uses_keyword kill unit enemy chosen discard
+    do 4538 uses_keyword stat_change unit enemy chosen discard strength=stat
+    do 4538 uses_keyword keyword_action unit enemy chosen discard
+    do 4516 uses_keyword obliterate unit enemy chosen discard
+    do 2545 own keyword_action unit mine chosen discard
+    do 4538 uses_keyword kill unit mine chosen discard
+    do 4538 uses_keyword stat_change unit mine chosen discard strength=stat
+    do 4538 uses_keyword keyword_action unit mine chosen discard
+    do 4516 uses_keyword obliterate unit mine chosen discard
+  Regis:
+    when 1779 played self
+    when 1780 played self
+    if 1780 keyword_condition
+    if 1780 event_count ge 1.0
+    if event_count eq 0.0
+    if 1780 event_count eq 0.0
+    do 1779 own damage unit all board position is same_row of position enemy chosen;of:kind is position amount=1.0
+    do 1780 own repeat effect
+    3 monster_train | type | dies by its own effect: {B} Reforms them | Rector Flicker -> Sacred Wicks (-); Rector Flicker -> Hallowed Halls (-); Rector Flicker -> Primitive Mold (-)
+  Rector Flicker:
+    when 6831 always
+    when 6832 always
+    when 7059 turn_start
+    when 7060 countdown_done self
+    when 6833 always
+    when 6834 dies unit position is same_lane
+    when 6835 always
+    when 6836 dies unit position is same_lane
+    when 6837 always
+    when 6838 dies unit position is same_lane
+    when 6839 always
+    when 6840 combat_end
+    when 7095 activated
+    when 7059 turn_start
+    when 7060 countdown_done self
+    if 6831 upgrade_path 1.0
+    if 6831 amount_per_level
+    if 6831 amount_per_level
+    if 6832 upgrade_path 1.0
+    if 6833 upgrade_path 2.0
+    if 6833 level eq 1.0
+    if 6834 upgrade_path 2.0
+    if 6834 level eq 1.0
+    if 6835 upgrade_path 2.0
+    if 6835 level eq 2.0
+    if 6836 upgrade_path 2.0
+    if 6836 level eq 2.0
+    if 6837 upgrade_path 2.0
+    if 6837 level eq 3.0
+    if 6838 upgrade_path 2.0
+    if 6838 level eq 3.0
+    if 6839 upgrade_path 3.0
+    if 6839 amount_per_level
+    if 6839 amount_per_level
+    if 6840 upgrade_path 3.0
+    if 6840 amount_per_level
+    do 6831 own stat_change self power=40.0;health=40.0
+    do 6832 own give_keyword self amount=3.0
+    do 7059 uses_keyword countdown_advance self amount=1.0
+    do 7060 uses_keyword kill self
+    do 6833 own stat_change self health=5.0
+    do 6834 own stat_change self power=1.0;health=5.0
+    do 6835 own stat_change self power=5.0;health=15.0
+    do 6836 own stat_change self power=2.0;health=10.0
+    do 6837 own stat_change self power=20.0;health=40.0
+    do 6838 own stat_change self power=4.0;health=20.0
+    do 6839 own stat_change self power=5.0;health=5.0
+    do 6840 own keyword_action unit mine random discard
+    do 7095 uses_keyword return_card unit mine chosen discard
+    do 7095 uses_keyword give_keyword unit mine random discard amount=1.0
+    do 7059 uses_keyword countdown_advance unit mine random discard amount=1.0
+    do 7060 uses_keyword kill unit mine random discard
+    do 7095 uses_keyword stat_change unit mine random discard power=5.0;health=5.0
+    do 7095 uses_keyword cost_set unit mine random discard cost=0.0
+    do 6840 own stat_change unit mine it power=5.0
+  Sacred Wicks:
+    when 6858 always
+    when 7099 played self
+    when 6859 played self
+    when 7095 activated
+    when 7059 turn_start
+    when 7060 countdown_done self
+    when 7099 played self
+    do 6858 own give_keyword self
+    do 7099 uses_keyword exhaust self
+    do 6859 own keyword_action unit mine random discard
+    do 7095 uses_keyword return_card unit mine chosen discard
+    do 7095 uses_keyword give_keyword unit mine random discard amount=1.0
+    do 7059 uses_keyword countdown_advance unit mine random discard amount=1.0
+    do 7060 uses_keyword kill unit mine random discard
+    do 7095 uses_keyword stat_change unit mine random discard power=5.0;health=5.0
+    do 7095 uses_keyword cost_set unit mine random discard cost=0.0
+    do 7099 has_keyword exhaust self
+  Hallowed Halls:
+    when 6900 played self
+    when 7095 activated
+    when 7059 turn_start
+    when 7060 countdown_done self
+    do 6900 own kill unit mine all board
+    do 6900 own keyword_action unit mine random discard amount=1.0
+    do 7095 uses_keyword return_card unit mine chosen discard
+    do 7095 uses_keyword give_keyword unit mine random discard amount=1.0
+    do 7059 uses_keyword countdown_advance unit mine random discard amount=1.0
+    do 7060 uses_keyword kill unit mine random discard
+    do 7095 uses_keyword stat_change unit mine random discard power=5.0;health=5.0
+    do 7095 uses_keyword cost_set unit mine random discard cost=0.0
+    3 monster_train | type | dies by its own effect | Rector Flicker -> Memories of the Melted (-); Rector Flicker -> Memento Mori (-); Rector Flicker -> A Fatal Melting (-)
+  Rector Flicker:
+    when 6831 always
+    when 6832 always
+    when 7059 turn_start
+    when 7060 countdown_done self
+    when 6833 always
+    when 6834 dies unit position is same_lane
+    when 6835 always
+    when 6836 dies unit position is same_lane
+    when 6837 always
+    when 6838 dies unit position is same_lane
+    when 6839 always
+    when 6840 combat_end
+    when 7095 activated
+    when 7059 turn_start
+    when 7060 countdown_done self
+    if 6831 upgrade_path 1.0
+    if 6831 amount_per_level
+    if 6831 amount_per_level
+    if 6832 upgrade_path 1.0
+    if 6833 upgrade_path 2.0
+    if 6833 level eq 1.0
+    if 6834 upgrade_path 2.0
+    if 6834 level eq 1.0
+    if 6835 upgrade_path 2.0
+    if 6835 level eq 2.0
+    if 6836 upgrade_path 2.0
+    if 6836 level eq 2.0
+    if 6837 upgrade_path 2.0
+    if 6837 level eq 3.0
+    if 6838 upgrade_path 2.0
+    if 6838 level eq 3.0
+    if 6839 upgrade_path 3.0
+    if 6839 amount_per_level
+    if 6839 amount_per_level
+    if 6840 upgrade_path 3.0
+    if 6840 amount_per_level
+    do 6831 own stat_change self power=40.0;health=40.0
+    do 6832 own give_keyword self amount=3.0
+    do 7059 uses_keyword countdown_advance self amount=1.0
+    do 7060 uses_keyword kill self
+    do 6833 own stat_change self health=5.0
+    do 6834 own stat_change self power=1.0;health=5.0
+    do 6835 own stat_change self power=5.0;health=15.0
+    do 6836 own stat_change self power=2.0;health=10.0
+    do 6837 own stat_change self power=20.0;health=40.0
+    do 6838 own stat_change self power=4.0;health=20.0
+    do 6839 own stat_change self power=5.0;health=5.0
+    do 6840 own keyword_action unit mine random discard
+    do 7095 uses_keyword return_card unit mine chosen discard
+    do 7095 uses_keyword give_keyword unit mine random discard amount=1.0
+    do 7059 uses_keyword countdown_advance unit mine random discard amount=1.0
+    do 7060 uses_keyword kill unit mine random discard
+    do 7095 uses_keyword stat_change unit mine random discard power=5.0;health=5.0
+    do 7095 uses_keyword cost_set unit mine random discard cost=0.0
+    do 6840 own stat_change unit mine it power=5.0
+  Memories of the Melted:
+    when 6855 always
+    when 7099 played self
+    when 6856 played self
+    when 7099 played self
+    if 6856 amount_event_count
+    do 6855 own give_keyword self
+    do 7099 uses_keyword exhaust self
+    do 6856 own mana_gain mana mine amount=event_count
+    do 7099 has_keyword exhaust self
+  Memento Mori:
+    when 6897 played self
+    if 6897 amount_product
+    if 6897 amount_event_count
+    do 6897 own damage unit enemy all board position is front_of_lane amount=product
+    3 gwent | type | changes units' stats | Redanian Knight -> Knight-Errant (-); Cintrian Knight -> Knight-Errant (-); The Maiden's Shield -> Knight-Errant (-)
+  Redanian Knight:
+    when 1920 turn_end
+    when 1921 keyword_removed self keyword is 756174
+    when 1922 stat_changed self
+    if 1920 keyword_condition
+    if 1920 keyword_condition
+    if 1922 keyword_condition 8.0
+    if stat strength ge listed self
+    if 1920 have is self keyword is 756174
+    if 1920 have is self position is back_row
+    if 1922 stat strength ge listed self
+    do 1920 own stat_change self strength=1.0
+    do 1921 own move self
+    do 1921 own damage unit enemy highest board amount=2.0
+    do 1922 own stat_change unit all board position is sides of self strength=1.0
+  Knight-Errant:
+    when 3883 turn_end
+    when 3884 stat_changed self
+    when 4535 damaged self
+    when 3885 keyword_removed self keyword is 756181
+    when 4775 turn_end
+    when 4776 stat_changed self
+    when 4535 damaged self
+    when 4777 keyword_removed self keyword is 756181
+    if 3883 amount_count unit all board position is sides of self;state is buffed
+    if 3883 amount_count unit all board position is sides of self;state is damaged
+    if 3884 keyword_condition 9.0
+    if 4535 amount_event_amount
+    if 4775 amount_count unit mine all board position is sides;state is damaged
+    if 4775 amount_count unit mine all board position is sides;state is buffed
+    if 4776 keyword_condition 9.0
+    if 4535 amount_event_amount
+    if stat strength ge listed self
+    if 3884 stat strength ge listed self
+    if 4776 stat strength ge listed self
+    do 3883 own stat_change self strength=count
+    do 3883 own damage self amount=count
+    do 3884 own give_keyword unit all board position is sides of self
+    do 4535 uses_keyword negate_damage unit all board position is sides of self amount=event_amount
+    do 4535 uses_keyword remove_keyword unit all board position is sides of self
+    do 3884 own give_ability unit all board position is sides of self
+    do 3885 gives stat_change self strength=2.0
+    do 4775 own stat_change self strength=count
+    do 4775 own damage self amount=count
+    do 4776 own give_keyword unit mine all board position is sides
+    do 4535 uses_keyword negate_damage unit mine all board position is sides amount=event_amount
+    do 4535 uses_keyword remove_keyword unit mine all board position is sides
+    do 4776 own give_ability unit mine all board position is sides
+    do 4777 gives stat_change self strength=2.0
+  Cintrian Knight:
+    when 2765 played self
+    when 2766 killed
+    when 4534 turn_end
+    when 2767 always
+    if 2767 keyword_condition 6.0
+    if stat strength ge listed self
+    if 2767 stat strength ge listed self
+    do 2765 own damage unit enemy chosen board amount=2.0
+    do 2766 own give_keyword self amount=2.0
+    do 4534 uses_keyword stat_change self strength=1.0
+    do 2767 own stat_change self strength=2.0
+    3 gwent | waits | keeps the Poison it gives itself off it | Fallen Rayla -> Fisstech Trafficker (-); Fallen Rayla -> Back-Alley Chemist (-); Fallen Rayla -> Mutated Hounds (-)
+  Fallen Rayla:
+    when 3592 always
+    when 4519 always
+    when 3593 played self
+    when 3594 played self
+    when 3595 played unit enemy
+    when 4549 given_keyword self keyword is 756202
+    when 3596 activated self
+    when 3597 always
+    when 4519 always
+    if 4549 event_count ge 2.0
+    if 3596 stat countdown le 0.0 self
+    do 3592 own give_keyword self
+    do 4519 uses_keyword cant self event=given_keyword
+    do 3593 own mana_gain secondary_resource mine amount=3.0
+    do 3594 own spend_mana secondary_resource mine amount=3.0
+    do 3594 own remove_keyword unit mine chosen board
+    do 3594 own stat_change self strength=5.0
+    do 3595 own give_keyword unit enemy it
+    do 4549 uses_keyword kill unit enemy it
+    do 3595 own countdown_advance self amount=1.0
+    do 3596 own spend_mana secondary_resource mine amount=3.0
+    do 3596 own remove_keyword unit mine chosen board
+    do 3596 own stat_change self strength=5.0
+    do 3597 own give_keyword self amount=2.0
+    do 4519 has_keyword cant self event=given_keyword
+  Fisstech Trafficker:
+    when 2917 played self
+    when 4549 given_keyword self keyword is 756202
+    when 4549 given_keyword self keyword is 756202
+    if 4549 event_count ge 2.0
+    if 4549 event_count ge 2.0
+    do 2917 own give_keyword unit mine chosen board
+    do 4549 uses_keyword kill unit mine chosen board
+    do 2917 own mana_gain secondary_resource mine amount=3.0
+    do 2917 own give_keyword unit enemy chosen board
+    do 4549 uses_keyword kill unit enemy chosen board
+  Back-Alley Chemist:
+    when 2862 always
+    when 4510 played self
+    when 2863 activated self
+    when 4549 given_keyword self keyword is 756202
+    when 4510 played self
+    when 4504 played self
+    if 4549 event_count ge 2.0
+    do 2862 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 2863 own give_keyword unit mine chosen board
+    do 4549 uses_keyword kill unit mine chosen board
+    do 2863 own stat_change unit mine it strength=2.0
+    do 4510 has_keyword can self event=activated
+    do 4504 has_keyword cant self event=activated;turns=1.0
+    3 monster_train | type | makes your units die: {B} brings them back to hand | Rector Flicker -> Formless Child (-); Sacred Wicks -> Formless Child (-); Primitive Mold -> Formless Child (-)
+  Rector Flicker:
+    when 6831 always
+    when 6832 always
+    when 7059 turn_start
+    when 7060 countdown_done self
+    when 6833 always
+    when 6834 dies unit position is same_lane
+    when 6835 always
+    when 6836 dies unit position is same_lane
+    when 6837 always
+    when 6838 dies unit position is same_lane
+    when 6839 always
+    when 6840 combat_end
+    when 7095 activated
+    when 7059 turn_start
+    when 7060 countdown_done self
+    if 6831 upgrade_path 1.0
+    if 6831 amount_per_level
+    if 6831 amount_per_level
+    if 6832 upgrade_path 1.0
+    if 6833 upgrade_path 2.0
+    if 6833 level eq 1.0
+    if 6834 upgrade_path 2.0
+    if 6834 level eq 1.0
+    if 6835 upgrade_path 2.0
+    if 6835 level eq 2.0
+    if 6836 upgrade_path 2.0
+    if 6836 level eq 2.0
+    if 6837 upgrade_path 2.0
+    if 6837 level eq 3.0
+    if 6838 upgrade_path 2.0
+    if 6838 level eq 3.0
+    if 6839 upgrade_path 3.0
+    if 6839 amount_per_level
+    if 6839 amount_per_level
+    if 6840 upgrade_path 3.0
+    if 6840 amount_per_level
+    do 6831 own stat_change self power=40.0;health=40.0
+    do 6832 own give_keyword self amount=3.0
+    do 7059 uses_keyword countdown_advance self amount=1.0
+    do 7060 uses_keyword kill self
+    do 6833 own stat_change self health=5.0
+    do 6834 own stat_change self power=1.0;health=5.0
+    do 6835 own stat_change self power=5.0;health=15.0
+    do 6836 own stat_change self power=2.0;health=10.0
+    do 6837 own stat_change self power=20.0;health=40.0
+    do 6838 own stat_change self power=4.0;health=20.0
+    do 6839 own stat_change self power=5.0;health=5.0
+    do 6840 own keyword_action unit mine random discard
+    do 7095 uses_keyword return_card unit mine chosen discard
+    do 7095 uses_keyword give_keyword unit mine random discard amount=1.0
+    do 7059 uses_keyword countdown_advance unit mine random discard amount=1.0
+    do 7060 uses_keyword kill unit mine random discard
+    do 7095 uses_keyword stat_change unit mine random discard power=5.0;health=5.0
+    do 7095 uses_keyword cost_set unit mine random discard cost=0.0
+    do 6840 own stat_change unit mine it power=5.0
+  Formless Child:
+    when 6891 dies self
+    do 6891 own return_card unit mine random discard
+    do 6891 own stat_change unit mine it power=40.0
+  Sacred Wicks:
+    when 6858 always
+    when 7099 played self
+    when 6859 played self
+    when 7095 activated
+    when 7059 turn_start
+    when 7060 countdown_done self
+    when 7099 played self
+    do 6858 own give_keyword self
+    do 7099 uses_keyword exhaust self
+    do 6859 own keyword_action unit mine random discard
+    do 7095 uses_keyword return_card unit mine chosen discard
+    do 7095 uses_keyword give_keyword unit mine random discard amount=1.0
+    do 7059 uses_keyword countdown_advance unit mine random discard amount=1.0
+    do 7060 uses_keyword kill unit mine random discard
+    do 7095 uses_keyword stat_change unit mine random discard power=5.0;health=5.0
+    do 7095 uses_keyword cost_set unit mine random discard cost=0.0
+    do 7099 has_keyword exhaust self
+    2 stormbound | waits | fills your hand | Strict Quartermasters -> Lucky Charmers (-); Strict Quartermasters -> Rogue Sheep (-)
+  Strict Quartermasters:
+    when 10408 played self
+    do 10408 own draw card mine random deck type is 159 amount=1.0
+  Lucky Charmers:
+    when 10346 played self
+    if 10346 amount_per_level
+    if 10346 amount_count card mine all hand type is 159
+    do 10346 own stat_change self strength=3.0;times=count
+  Rogue Sheep:
+    when 10380 played self
+    when 10381 played self
+    if 10380 amount_per_level
+    if 10381 have is card mine hand type is 159
+    do 10380 own copy card enemy random hand type not 159;state is single_use
+    do 10381 own cost_change it cost=-1.0
+    2 monster_train | keyword | can give it Armor | Reinforce -> Railbeater (-); Reinforce -> Kinhost Pupa (-)
+  Reinforce:
+    when 6570 always
+    when 7099 played self
+    when 6571 played self
+    when 7057 damaged self
+    when 7099 played self
+    if 6571 amount_count keyword it keyword is 2000283
+    if 7057 amount_count keyword self keyword is 2000283
+    do 6570 own give_keyword self
+    do 7099 uses_keyword exhaust self
+    do 6571 own give_keyword unit mine chosen board keyword is 2000283 amount=count
+    do 7057 uses_keyword negate_damage unit mine chosen board keyword is 2000283 amount=count
+    do 7057 uses_keyword remove_keyword unit mine chosen board keyword is 2000283 amount=1.0
+    do 7099 has_keyword exhaust self
+  Railbeater:
+    when 6554 always
+    when 7057 damaged self
+    when 6555 strikes unit enemy
+    when 7087 damaged self
+    when 7057 damaged self
+    if 7057 amount_count keyword self keyword is 2000283
+    if 7087 amount_event_amount
+    if 7057 amount_count keyword self keyword is 2000283
+    do 6554 own give_keyword self amount=30.0
+    do 7057 uses_keyword negate_damage self amount=count
+    do 7057 uses_keyword remove_keyword self amount=1.0
+    do 6555 own give_keyword unit enemy it amount=1.0
+    do 7087 uses_keyword damage unit enemy it amount=event_amount
+    do 7087 uses_keyword remove_keyword unit enemy it amount=1.0
+    do 7057 has_keyword negate_damage self amount=count
+    do 7057 has_keyword remove_keyword self amount=1.0
+  Kinhost Pupa:
+    when 6954 always
+    when 7057 damaged self
+    when 6955 always
+    when 7067 attack_done
+    when 6956 strikes unit enemy
+    when 7088 combat_end
+    when 7057 damaged self
+    when 7067 attack_done
+    if 7057 amount_count keyword self keyword is 2000283
+    if 7088 amount_count lane_resource position is same_lane
+    if 7057 amount_count keyword self keyword is 2000283
+    do 6954 own give_keyword self amount=20.0
+    do 7057 uses_keyword negate_damage self amount=count
+    do 7057 uses_keyword remove_keyword self amount=1.0
+    do 6955 own give_keyword self amount=1.0
+    do 7067 uses_keyword start_attack self
+    do 6956 own give_keyword unit enemy all board amount=1.0
+    do 7088 uses_keyword damage unit enemy all board amount=count
+    do 7057 has_keyword negate_damage self amount=count
+    do 7057 has_keyword remove_keyword self amount=1.0
+    do 7067 has_keyword start_attack self
+    2 gwent | type | makes enemy units die: {B} brings them back | Ozzrel -> Incubus (-); Ozzrel -> Witches' Sabbath (-)
+  Ozzrel:
+    when 2544 played self
+    when 4538 activated
+    when 4516 activated
+    when 2545 played self
+    when 4538 activated
+    when 4516 activated
+    if 2544 keyword_condition
+    if 4538 amount_stat strength it
+    if 2545 keyword_condition
+    if 4538 amount_stat strength it
+    if 2544 have is self position is front_row
+    if 2545 have is self position is back_row
+    do 2544 own keyword_action unit enemy chosen discard
+    do 4538 uses_keyword kill unit enemy chosen discard
+    do 4538 uses_keyword stat_change unit enemy chosen discard strength=stat
+    do 4538 uses_keyword keyword_action unit enemy chosen discard
+    do 4516 uses_keyword obliterate unit enemy chosen discard
+    do 2545 own keyword_action unit mine chosen discard
+    do 4538 uses_keyword kill unit mine chosen discard
+    do 4538 uses_keyword stat_change unit mine chosen discard strength=stat
+    do 4538 uses_keyword keyword_action unit mine chosen discard
+    do 4516 uses_keyword obliterate unit mine chosen discard
+  Incubus:
+    when 3816 played self
+    do 3816 own revive unit enemy chosen discard state is bronze
+    do 3816 own revive unit mine chosen discard state is bronze;cost le 3583
+  Witches' Sabbath:
+    when 3815 played self
+    when 4517 leaves_play self
+    if 3815 amount_count it
+    do 3815 own revive unit enemy highest discard
+    do 3815 own revive unit mine highest discard region not Neutral
+    do 3815 own give_keyword unit mine it
+    do 4517 uses_keyword obliterate unit mine it
+    1 monster_train | type | dies by its own effect: {B} brings them back to hand | Rector Flicker -> Formless Child (-)
+  Rector Flicker:
+    when 6831 always
+    when 6832 always
+    when 7059 turn_start
+    when 7060 countdown_done self
+    when 6833 always
+    when 6834 dies unit position is same_lane
+    when 6835 always
+    when 6836 dies unit position is same_lane
+    when 6837 always
+    when 6838 dies unit position is same_lane
+    when 6839 always
+    when 6840 combat_end
+    when 7095 activated
+    when 7059 turn_start
+    when 7060 countdown_done self
+    if 6831 upgrade_path 1.0
+    if 6831 amount_per_level
+    if 6831 amount_per_level
+    if 6832 upgrade_path 1.0
+    if 6833 upgrade_path 2.0
+    if 6833 level eq 1.0
+    if 6834 upgrade_path 2.0
+    if 6834 level eq 1.0
+    if 6835 upgrade_path 2.0
+    if 6835 level eq 2.0
+    if 6836 upgrade_path 2.0
+    if 6836 level eq 2.0
+    if 6837 upgrade_path 2.0
+    if 6837 level eq 3.0
+    if 6838 upgrade_path 2.0
+    if 6838 level eq 3.0
+    if 6839 upgrade_path 3.0
+    if 6839 amount_per_level
+    if 6839 amount_per_level
+    if 6840 upgrade_path 3.0
+    if 6840 amount_per_level
+    do 6831 own stat_change self power=40.0;health=40.0
+    do 6832 own give_keyword self amount=3.0
+    do 7059 uses_keyword countdown_advance self amount=1.0
+    do 7060 uses_keyword kill self
+    do 6833 own stat_change self health=5.0
+    do 6834 own stat_change self power=1.0;health=5.0
+    do 6835 own stat_change self power=5.0;health=15.0
+    do 6836 own stat_change self power=2.0;health=10.0
+    do 6837 own stat_change self power=20.0;health=40.0
+    do 6838 own stat_change self power=4.0;health=20.0
+    do 6839 own stat_change self power=5.0;health=5.0
+    do 6840 own keyword_action unit mine random discard
+    do 7095 uses_keyword return_card unit mine chosen discard
+    do 7095 uses_keyword give_keyword unit mine random discard amount=1.0
+    do 7059 uses_keyword countdown_advance unit mine random discard amount=1.0
+    do 7060 uses_keyword kill unit mine random discard
+    do 7095 uses_keyword stat_change unit mine random discard power=5.0;health=5.0
+    do 7095 uses_keyword cost_set unit mine random discard cost=0.0
+    do 6840 own stat_change unit mine it power=5.0
+  Formless Child:
+    when 6891 dies self
+    do 6891 own return_card unit mine random discard
+    do 6891 own stat_change unit mine it power=40.0
+    1 gwent | waits | makes enemy units die | Ozzrel -> Saesenthessis: Blaze (-)
+  Ozzrel:
+    when 2544 played self
+    when 4538 activated
+    when 4516 activated
+    when 2545 played self
+    when 4538 activated
+    when 4516 activated
+    if 2544 keyword_condition
+    if 4538 amount_stat strength it
+    if 2545 keyword_condition
+    if 4538 amount_stat strength it
+    if 2544 have is self position is front_row
+    if 2545 have is self position is back_row
+    do 2544 own keyword_action unit enemy chosen discard
+    do 4538 uses_keyword kill unit enemy chosen discard
+    do 4538 uses_keyword stat_change unit enemy chosen discard strength=stat
+    do 4538 uses_keyword keyword_action unit enemy chosen discard
+    do 4516 uses_keyword obliterate unit enemy chosen discard
+    do 2545 own keyword_action unit mine chosen discard
+    do 4538 uses_keyword kill unit mine chosen discard
+    do 4538 uses_keyword stat_change unit mine chosen discard strength=stat
+    do 4538 uses_keyword keyword_action unit mine chosen discard
+    do 4516 uses_keyword obliterate unit mine chosen discard
+  Saesenthessis: Blaze:
+    when 2469 always
+    when 4507 game_start
+    when 2470 dies unit enemy
+    when 2471 obliterated unit enemy
+    when 4507 game_start
+    if 4507 amount_count card mine type is 38;state is started_in_deck
+    if 2470 my_turn
+    if 2471 my_turn
+    if 4507 amount_count card mine type is 38;state is started_in_deck
