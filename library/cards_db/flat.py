@@ -130,6 +130,7 @@ def build(c):
             if act in ('summon', 'create', 'copy', 'revive', 'play_card') and cref:  # "summon a Demon Wing ..., give it Flying": that card
                 last = ('unit' if act in ('summon', 'revive') else (k or 'card'), s or 'mine', f'card is {cref}')
             elif p != 'it': last = (k, s, w)
+            if act == 'create' and ez == 'hand' and not to and s == 'enemy': last = (last[0], 'mine', last[2])  # "Create and play a card from your opponent's hand": the card is made into my hand, I play it
             if applied_to and (p == 'self' or (p == 'it' and action) or (k, s, p) == (None, None, None)): k, s, p, z, w = applied_to
             s = fl(s)
             pe = (c.execute("select value from param where effect=? and param='event'", (eid,)).fetchone() or [None])[0]

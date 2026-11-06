@@ -1041,10 +1041,12 @@ def aimed_rows(c, game):
 def givers_of(c, game, k, nodes):
     """the nodes that give keyword or status k to my side or use it there (Fledgling Imp applies Rage to friendly units)"""
     marks = ','.join('?' * len(nodes))
-    return {a for (a,) in c.execute(f"""select distinct card from flat_do where (keyword_ref=? or (act='keyword_action' and (';' || coalesce(on_with,'') || ';')
+    return {a for (a,) in c.execute(f"""select distinct card from flat_do where ((keyword_ref=? or (act='keyword_action' and (';' || coalesce(on_with,'') || ';')
             like ? or (';' || coalesce(on_with,'') || ';') like ?)) and act in ('give_keyword','keyword_action')
-            and origin='own' and coalesce(on_side,'mine') in ('mine','any') and card in ({marks})""",  # "Channel 1 Lightning": puts Lightning
-            [k, f'%;keyword is {k};%', f'%;keyword in {k};%'] + list(nodes))}
+            and coalesce(on_side,'mine') in ('mine','any')
+            or (act='create' and ? in (select id from card where game=? and is_keyword=1 and name='Create')))  -- a Create effect (any source side) is the keyword Create at work
+            and origin='own' and card in ({marks})""",  # "Channel 1 Lightning": puts Lightning
+            [k, f'%;keyword is {k};%', f'%;keyword in {k};%', k, game] + list(nodes))}
 
 
 def repeaters_of(c, k, nodes):
@@ -2117,7 +2119,8 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
         # a full hand hurts it, it wants none
         refill = {a for (a,) in c.execute("""select d.card from flat_do d join flat_do x on x.card=d.card and x.ability=d.ability where
                   d.act='discard' and x.act in ('draw','create')""")}  # Rummage discards 2 and draws 2: the hand is never empty (L4)
-        helpers = (hand(('discard',), 0) - refill) if few else hand(('create', 'copy', 'return_to_hand'), 0, 'has_keyword') | hand(('draw',), 1)  # a draw goes to hand
+        instant = {a for (a,) in c.execute("select d.card from flat_do d join flat_do x on x.card=d.card and x.ability=d.ability where d.act='create' and x.act='play_card' and x.on_pick='it'")}  # "Create and play a card" (Imperial Diplomacy): the card never stays in the hand
+        helpers = (hand(('discard',), 0) - refill) if few else (hand(('create', 'copy', 'return_to_hand'), 0, 'has_keyword') - instant) | hand(('draw',), 1)  # a draw goes to hand
         if not few and not any(p_.startswith('cost ') for p_ in (ow_ or '').split(';')):  # a card that stops cards being played from hand (Professor X) keeps the hand full
             helpers = helpers | {a for (a,) in c.execute(f"""select card from flat_do where origin='own' and act='cant' and param_event='played' and on_pick='all'
                       and on_zone='hand' and on_kind='card' and coalesce(on_side,'mine')!='enemy' and card in ({marks})""", L)}  # stopping the ENEMY's plays keeps only its hand full (L9)

@@ -52,7 +52,7 @@ def fix(r, i):
         walk(r, lambda d: d['strength'].pop('n', None) if isinstance(d.get('strength'), dict) and d['strength'].get('attr') == 'provisions_below_limit' else None)
         walk(r, lambda d: d.update(strength={"x": "stat", "attr": "provisions_below_limit", "of": {"kind": "unit", "side": "enemy", "pick": "chosen", "n": 3, "zone": "deck"}}) if d.get('strength') == {"x": "unstated"} else None)
     elif i == 757394:
-        walk(r, lambda d: d.update(strength={"x": "event_total", "event": {"event": "damaged", "object": {"kind": "unit", "with": [{"attr": "keyword", "op": "is", "ref": "Frost"}]}}, "span": "last_5_enemy_turns"}) if d.get('strength') == {"x": "unstated"} else None)
+        walk(r, lambda d: d.update(strength={"x": "event_total", "event": {"event": "damaged", "object": {"kind": "unit"}, "actor": {"kind": "effect", "with": [{"attr": "keyword", "op": "is", "ref": "Frost"}]}}, "span": "last_5_enemy_turns"}) if d.get('strength') == {"x": "unstated"} else None)
         walk(r, lambda d: (d['strength'].pop('turns', None), d['strength'].update(span='last_5_enemy_turns')) if isinstance(d.get('strength'), dict) and d['strength'].get('span') == 'last_enemy_turns' else None)
         walk(r, lambda d: d['strength']['event'].update({'object': {'kind': 'unit', 'with': d['strength']['event'].pop('with')}}) if isinstance(d.get('strength'), dict) and 'with' in d['strength'].get('event', {}) else None)
     else: return False
