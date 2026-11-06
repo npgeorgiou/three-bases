@@ -579,3 +579,10 @@ n584	gwent	Rage of the Sea: Fulmar rain ft. Otkell and Melusine	Melusine	Messeng
 n585	gwent	Rage of the Sea: Fulmar rain ft. Otkell and Melusine	Torrential Rain	Messenger of the Sea	line		guide https://www.playgwent.com/en/decks/guides/406128 (games/gwent.md Deck pairs): play rain and messenger as required
 n586	gwent	Patricidal Fury: RnR Seagulls Sove Compass	Seagull	Ragh Nar Roog	line		guide https://www.playgwent.com/en/decks/guides/404050 (games/gwent.md Deck pairs): for Clear Skies some swarm; Seagulls come handy
 n587	gwent	Patricidal Fury: RnR Seagulls Sove Compass	Hammond	Ragh Nar Roog	line		guide https://www.playgwent.com/en/decks/guides/404050 (games/gwent.md Deck pairs): max value from Cataclysm: Hammond moves an enemy unit
+n588	gwent	Selective Mutation, Vesemir: Mentor	Selective Mutation	Vesemir: Mentor	none	fills your hand	Claude 2026-11-06, line check: a hand-size limit or a net-zero/by-kind draw fills no hand
+n589	gwent	Griffin Witcher Mentor, Geralt: Quen	Griffin Witcher Mentor	Geralt: Quen	none	fills your hand	Claude 2026-11-06, line check: a hand-size limit or a net-zero/by-kind draw fills no hand
+n590	gwent	Pincer Maneuver, Temple of Melitele: Congregation	Pincer Maneuver	Temple of Melitele: Congregation	none	fills your hand	Claude 2026-11-06, line check: a hand-size limit or a net-zero/by-kind draw fills no hand
+n591	gwent	Ardal aep Dahy, Eskel	Ardal aep Dahy	Eskel	none	fills your hand	Claude 2026-11-06, line check: a hand-size limit or a net-zero/by-kind draw fills no hand
+n592	gwent	Battle Stations!, Geralt: Yrden	Battle Stations!	Geralt: Yrden	none	fills your hand	Claude 2026-11-06, line check: a hand-size limit or a net-zero/by-kind draw fills no hand
+n593	gwent	Birna Bran, Arnaghad	Birna Bran	Arnaghad	none	fills your hand	Claude 2026-11-06, line check: a hand-size limit or a net-zero/by-kind draw fills no hand
+n594	gwent	Eventide Plunder, Carlo Varese	Eventide Plunder	Carlo Varese	line	fills your hand	Claude 2026-11-06, line check: a create fills a hand a card reads (stays)

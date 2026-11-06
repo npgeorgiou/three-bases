@@ -43,4 +43,4 @@ lr_misses.md · 5 verifiers · 6 the sheet · 7 fixers · 8 one rebuild · 9 las
 - Step 4 DONE: lr_misses.md (38: 21 deck pairs, 10 decks.tsv rows, 7 real-world), by misses.py.
 - Step 5 DONE: vv_1-9.md. Step 6 DONE: causes_sheet.md (94 causes; CONFLICT ones go to Kaptain at the end).
 - Step 7: fixers by group (fix_groups.txt, 46 groups; report fix_C<first cause>.md; each fixer runs pair.py first; check_all.py --no-load after every fifth; fixdone.sh gwent fix_C<k>). MISSED CASE WRONG (vv_7 2, vv_8 6) and CONFLICT C92-C94 go to Kaptain at the end.
-- 7. Fixers:
+- 7. Fixers: C1 FIXED;
