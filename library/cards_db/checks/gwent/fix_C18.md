@@ -1,2 +1,0 @@
-STUCK: the sheet says Flotsam is a unit, but the card (757461) is a Location (category building) with an Order, and Dwimveandra refreshes the Order of an allied Location, so the line "lets you use it again" is right; pair.py shows it and I changed no code. Files: cases/network.tsv. Cases: n636 (line).
-Other unit-only refresh lines of this cause (the 23 table lines) need checking card by card against whether the target is really a Location.

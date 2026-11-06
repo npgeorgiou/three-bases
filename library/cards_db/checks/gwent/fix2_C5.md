@@ -1,4 +1,0 @@
-FIXED: Cards waiting only for a given keyword (Impera Enforcers, Redanian Secret Service) got extra "puts it into play", "plays it" and "does what it waits for" lines on top of the keyword giver's line; network() now drops those extras when the pair already has a "units get <keyword>" line and the target has no summon/play effect of its own. Covers C5 and C6 (same examples). Files: network.py, cases/network.tsv. Cases: n675-n680.
-pair.py: Drakenborg -> RSS now "makes your units get a keyword or status"; Emhyr/Fercart/Treason -> Impera Enforcers now "makes enemy units get Spying; also triggers: ..." (right ones unchanged).
-C9 first example (Drakenborg -> RSS) is fixed by this too; the other C9 and all C7 examples are a different cause (generic summon rows) and not touched.
-Cards of other games with a given-keyword wait and no own play effect get the same cleanup.

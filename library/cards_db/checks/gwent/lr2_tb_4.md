@@ -1,8 +1,0 @@
-1. MISSED CAUSE: Snowdrifts deals damage equal to its own strength after it attacks (its text reads the stat), so every card that gives it more strength helps it and keeps its line (L18: reads its power; L24 spirit). Wrong examples: Big Sisters of Growth -> Snowdrifts, Fortification Tonic -> Snowdrifts, Original Blueprints -> Snowdrifts, Emerald Towers -> Snowdrifts. Right examples: none.
-- unsure: I read "(-)" as a gone line. Gone lines where a giver puts a keyword on a unit and a remover takes it off for its own strength (Watchman -> Damned Sorceress, Cintrian Artificer -> King Roegner, Wyvern Scale Shield -> King Roegner, Voymir -> Iris: Shade, Frog -> Naiad Fledgling, Back-Alley Chemist -> Fallen Rayla): the remover's own text uses the keyword (L14), but the rows do not name the keyword or the side of the target, so I cannot say if the removal is clearly right.
-- unsure: Crach an Craite -> Terror Crew Axe-wielder and Crach an Craite -> Armored Drakkar (gone): the target waits for its keyword to be removed (L14 "anything a card waits for"), but the rows do not show which keyword Crach gives or if the type filter fits.
-- unsure: Cintrian Knight -> Knight-Errant (gone): Knight-Errant counts buffed neighbours and Cintrian Knight buffs itself each turn, but the "type" reason was weak.
-- unsure: Salamandra Hideout -> Gellert Bleinheim (gone): the reason text reads oddly, removal looks fine.
-- right: Dwarven Agitator -> Figgis Merluzzo (gone, Figgis does not need Armor)
-- right: Inspirational Ballad -> Figgis Merluzzo (gone, same)
-- right: Crach an Craite -> Covenant of Steel (gone, no need for Armor in its rows)

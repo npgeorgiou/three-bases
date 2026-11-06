@@ -691,8 +691,7 @@ def lines_of(c, game):
                 # played": playing a card no one made cheaper is not it (a unit healed is damaged by the enemy too: no such need)
                 w = 1.0 / len(carers[tk] | (carers[None] if tk else set()))
                 say = act_say(c, h, ts_, tk, self_=tpick == 'self')
-                if role == 'state' and h in ('moves', 'moves_onto') and place_of(tw) == 'next to it' and tpick == 'chosen': continue  # a hit on a chosen target beside it, not on all that border it (Chaotic Pupil), on
-                # whatever stands next to the card waits for no move (Seismic Capacitor); a line or a target's side does (Artemis Artillery)
+                # a card that hits units next to it needs units there: a move puts them there (Kaptain 7 Nov 2026: Titan Fist, Chaotic Pupil)
                 if role == 'state' and h in ('moves', 'moves_onto') and place_of(tw): say = moves_said(tw, ts_ or ms, tpick == 'self')  # whose units: the need's side, else the mover's (Daemonic Lure: enemy units)
                 if mpick == 'placed' and place_of(tw): say = say.replace(' moves ', ' puts ', 1).replace(', and {B}', ' there, and {B}', 1)  # "{A} puts your units there"
                 if mpick == 'self' and h == 'discarded' and mref == m: say = 'comes back after it is discarded, to be discarded again'  # Swarm

@@ -86,19 +86,12 @@ push, give network.html to Kaptain.
 
 **The game itself** has its own: tools/build.py, tools/simtest.js, tools/smoke.js (CLAUDE.md).
 
-## State (5 Nov 2026)
-- All 9 games imported. Kaptain approved Runeterra and Into the Breach; Slay the Spire done; Inscryption reviewed; Stormbound,
-  Monster Train, Faeria, Duelyst and Marvel Snap (chat 2 done 5 Nov 2026) wait for his check of their deck networks.
-- Cases: all pass in every game except Runeterra n34 (Darius Gnar: Brothers' Bond -> Darius), which already failed before the
-  Gwent import (checked on the code of 5 Nov, 6 Nov 2026). The next case id is n700.
-- Gwent: chat 1 done 6 Nov 2026 (cases 135 of 174 pass; the misses wait for chat 2); progress in checks/gwent/PROGRESS.md.
-- Real-world cases: all hold (failing ones deleted, 5 Nov 2026).
-- Lines (links.sqlite rows, 5 Nov 2026): Runeterra 210,310; Marvel Snap 19,734; Duelyst 12,799; Faeria 10,733; Slay the
-  Spire 8,939; Into the Breach 6,419; Monster Train 3,353; Stormbound 2,854; Inscryption 1,116.
-- Known open (also LINKS_PLAN.md "Open"): Adaptive Mutation's stat swap has no line (Conscript -> Fealty is drawn since L29,
-  7 Nov 2026); Monster Train has no full decks
-  as text (ask Kaptain). Monster Train's Olde Magic is built by the player at an event: its record
-  (read/monster_train/event_cards.jsonl) lists the wiki's choices, with no numbers. Stormbound's Fort of Ebonrock has no ability.
+## State (7 Nov 2026)
+- All 10 games imported. Kaptain approved Runeterra and Into the Breach; Slay the Spire done; Inscryption reviewed; Stormbound,
+  Monster Train, Faeria, Duelyst, Marvel Snap and Gwent (chat 2 done 7 Nov 2026) wait for his check of their deck networks.
+- Lines: links.sqlite rows per game (counts change with every rebuild; `status.py`). The next case id is n700.
+- Known gaps with no fix planned: Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain);
+  Monster Train's Olde Magic record lists the wiki's choices with no numbers; Stormbound's Fort of Ebonrock has no ability.
 
 ## Choosing the next game (Kaptain, 3 Nov 2026)
 Judge only data quality, never how much the game looks like Three Bases (ideas come from any game). For each game: cards
@@ -110,19 +103,23 @@ values, the cards it creates or names), card wording written to a fixed template
 game's own rulebook, and players' combos and decks that test the lines. Completeness alone is not enough.
 
 ## Open work, in Kaptain's order
-0. **Round of 7 Nov 2026 (rebuilt, not yet checked).** In: keyword trigger chain (L25+), self-copy + "all its copies", Zeal no summon
-   effect, a summon is no play, Lock/Silence on a pulled unit sets off nothing (Drakenborg), "gives it units to kill" removed, the
-   position rule for every game (mover/placer -> card that acts by where units stand; Snap-only lane skips removed), Snap v86 ("each
-   side of this location", "at each location"). Lines before -> after (checks/pos/diff.txt): Duelyst 2846 -> 3420, Snap 1027 -> 1164,
-   Stormbound 252 -> 290, Gwent 3443 -> 3371, Into the Breach 464 -> 412 (losses there look wrong: Kaptain said its position lines
-   were right; but checks/pos/before.tsv is the dump of 6 Nov 21:19, older than fixes C7, C8, C9 and sb of that evening, so these
-   counts mix both rounds: the Into the Breach loss is fix C8's, "a move is no help to a card that hits units next to it"). Failing cases: Gwent 19 (dgw01-05, 07-10, 12, n546, n547 must become none, n551, n564, n578, n586, n612-614), Snap 8
-   (n439-442, n445, n448, n449, n477), Runeterra 1, Duelyst 1; must-not cases with a reason no deck says any more (cases/run.py).
-   Not read yet: the diff groups (checks/pos/grp_*.txt). Still to fix: Muse, Basic Arrow, Captain Marvel misreadings; Seagull's
-   "3 units" count; Runeterra Attune (goes off when summoned by its glossary, not counted). Ask Kaptain before any reading.
-1. A newly imported game gets chat 2 (Part 3): every check, the fixes made by fixer agents.
-2. **Marvel Snap** (chat 2 done 5 Nov 2026): waits for Kaptain's check of the deck page. Open: design questions 04 and
-   05 (sacrifice and draw) find almost nothing in it.
+1. **Broken by the fixes of 7 Nov 2026** (keyword chains, self-copies, position links): Marvel Snap cases n439, n440, n441, n442,
+   n445, n448, n449, n477; Gwent n612, n613, n614; Duelyst ndu23; Into the Breach n683 (Titan Fist -> Seismic Capacitor: pair.py
+   draws it, the deck does not). Find the cause in the code, without reading cards (rule 7).
+2. **Still failing from before:** Gwent guide pairs n551, n564, n578, n586 (Seagull -> Ragh Nar Roog: a whole-row boost and a card
+   that comes back into a row) and the ten guide-deck explanations dgw01-dgw05, dgw07-dgw10, dgw12; Runeterra n34 (Darius Gnar:
+   Brothers' Bond -> Darius).
+3. **Marvel Snap misreadings** left: Muse ("for each location where..." lost the location), Basic Arrow ("at this location" lost),
+   Captain Marvel ("a location that wins you the game" lost); Gwent Seagull's "3 units" may have lost its count. Runeterra Attune
+   goes off when summoned (glossary) but is not counted as a summon effect.
+4. **Gwent causes not fixed** (Kaptain 6 Nov: only the most influential were fixed): the causes sheet's groups G10-G25 and G28-G38
+   (checks/gwent/causes_sheet.md in git, commit 787d510); C3 (cards counting own Doomed units: one fix broke Duda: Companion ->
+   Telianyn aep Collen), C18 (refreshing an Order: right only when the target is a Location, 23 lines to check), C41 (Spying lines to
+   Impera Enforcers: right, except maybe Emhyr var Emreis and Coup de Grace); one design answer misses a line.
+5. **The lines changed on 7 Nov 2026 were not read** (Kaptain stopped the readers): Duelyst +574, Marvel Snap +143, Stormbound +38,
+   Gwent -72.
+6. A newly imported game gets chat 2 (Part 3).
+7. Marvel Snap: design questions 04 and 05 (sacrifice and draw) find almost nothing in it.
 
 ## When you finish
 Commit and push every finished step. Update "State" and "Open work" above (short, no history: git log has it).

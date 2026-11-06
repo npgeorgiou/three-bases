@@ -1,4 +1,0 @@
-FIXED: Naiad Fledgling takes Vitality off a unit for its own strength, so the Vitality givers now feed it ("gives it Vitality, which it takes off for its own strength") and it no longer gets a "keeps Vitality off it" line to them; Dryad's Caress -> Naiad Fledgling is still NONE (its Vitality goes to "it", a pick network.py skips at line 995). Files: network.py, cases/network.tsv. Cases: n629-n635.
-Frog, Cat Witcher Adept, Frog Mating Season, Nature's Gift -> Naiad Fledgling are now lines; the 3 wrong Naiad -> giver lines are gone; Nature's Gift -> Freixenet unchanged.
-Any card that removes a keyword and takes its amount into a stat of itself (own remove_keyword plus own stat_change on self in one ability) gets the same treatment in other games.
-Dryad's Caress needs a separate change: give_keyword to "it" after a chosen unit (network.py 995 excludes on_pick it).

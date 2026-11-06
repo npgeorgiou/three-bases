@@ -1,4 +1,0 @@
-FIXED: Northern Wind's "banish the unit it kills" need was fed by any card's death (Bernard Loredo's duel hurting itself); it now takes only its own kills. Files: network.py (own_killers skip before the takes are built), cases/network.tsv. Cases: n627, n628.
-Bernard Loredo -> Boholt left as is: Bernard Loredo has type Soldier (46), so playing him summons a Soldier and sets off Boholt's "when you summon a Soldier"; the sheet's reason (duel summons no Soldier) does not apply, the line is right by the card's type.
-Other cards touched: any card with a "killed by me" trigger plus a state on the unit that died (checked only gwent; other games may lose similar death-feeding lines).
-Checked with pair.py: Bernard -> Northern Wind now NONE; Berengar -> Hjalmar an Craite and Witch Hunter -> Vigilantes unchanged.
