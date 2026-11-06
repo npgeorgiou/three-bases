@@ -627,3 +627,4 @@ n632	gwent	Frog, Naiad Fledgling	Frog	Naiad Fledgling	line	gives it Vitality, wh
 n633	gwent	Cat Witcher Adept, Naiad Fledgling	Cat Witcher Adept	Naiad Fledgling	line	gives it Vitality, which it takes off for its own strength	Claude 2026-11-06, line check: Naiad waits on the Vitality the givers put on (L14)
 n634	gwent	Frog Mating Season, Naiad Fledgling	Frog Mating Season	Naiad Fledgling	line	gives it Vitality, which it takes off for its own strength	Claude 2026-11-06, line check: Naiad waits on the Vitality the givers put on (L14)
 n635	gwent	Nature's Gift, Freixenet	Nature's Gift	Freixenet	line	gives it Vitality for its effect	Claude 2026-11-06, line check: right example stays
+n636	gwent	Dwimveandra, Flotsam	Dwimveandra	Flotsam	line	lets you use it again	Claude 2026-11-06, line check: Flotsam is a Location (landmark), so the refresh is right
