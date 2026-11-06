@@ -1,0 +1,16 @@
+1. CAUSE: Biting Frost and Dragon's Dream put a status on an ENEMY position, so they hurt or kill enemy units, yet they are linked to cards that need MY units to die or be damaged (L9). Wrong examples: Biting Frost -> Frightener: Dormant, Biting Frost -> Hjalmar an Craite, Biting Frost -> Blueboy Lugos, Dragon's Dream -> Bear Witcher Mentor. Right examples: Curse of Corruption -> Svanrige Tuirseach, Curse of Corruption -> Mourntart, Biting Frost -> Wild Boar of the Sea.
+2. CAUSE: An Craite Longship deals a plain 1 damage to one unit, which feeds no "when an enemy dies" or "makes units die" line (L11). Wrong examples: An Craite Longship -> Saesenthessis: Blaze, An Craite Longship -> Regis, An Craite Longship -> Northern Wind, An Craite Longship -> Funeral Boat. Right examples: Basilisk Venom -> Vran Warrior, Basilisk Venom -> Hybrid.
+3. CAUSE: More power for a unit is linked to a card whose text only gives itself Defender (or has no rows), so nothing reads the stat (L18, L14). Wrong examples: Adrenaline Rush -> Cave Troll, Bone Talisman -> Cave Troll, Kelpie -> Elder Bear. Right examples: Adrenaline Rush -> Lyrian Scytheman, Adrenaline Rush -> Falibor.
+4. CAUSE: Vrygheff repeats turn_end effects, but Alba Armored Cavalry has only a play effect, so there is nothing to repeat (L21). Wrong examples: Vrygheff -> Alba Armored Cavalry. Right examples: Syanna -> Alba Spearman, Syanna -> Aglaïs.
+5. CAUSE: Dimun Pirate and Fisher King move a card in the deck or discard, not a unit on the board, so they set up nothing for cards that act on units next to a moved unit (L14, L2). Wrong examples: Dimun Pirate -> Arachas Venom, Dimun Pirate -> Berengar, Fisher King -> Heymaey Protector, Fisher King -> Dennis Cranmer. Right examples: none.
+6. CAUSE: A card that creates a unit in hand is linked to a card that counts a different kind (Firesworn tokens), and an Armor giver is linked to a card with no Armor text; the receiving card does not use the help (L20, L14). Wrong examples: Eventide Plunder -> Procession of Penance, Barclay Els -> Mahakam Defender. Right examples: Wagenburg -> Ard Feainn Tortoise.
+7. CAUSE: A keyword used or a card played by another card is linked to a card that waits only for its own keyword use or a narrower played card (L7, L15). Wrong examples: Allgod -> Call of the Depths, Cyprian Wiley -> Koshchey, Alzur's Double-Cross -> Cintrian Spellweaver. Right examples: Magne Division -> Experimental Remedy.
+8. CAUSE: A stat change is linked to a card that only transforms cards in hand; no stat is read (L16). Wrong examples: Adrenaline Rush -> Mysterious Puzzle Box. Right examples: Adrenaline Rush -> Bloody Baron.
+- unsure: Enslave -> Cosimo Malaspina, Enslave -> Blessing of Kindness and Miruna -> Wagenburg (Seize moves an enemy unit, but nothing says the new place matters).
+- unsure: Geralt: Axii -> Odrin, Geralt: Axii -> Ducal Guard, Geralt: Axii -> Vattier de Rideaux (Geralt: Axii rows are not printed in this piece).
+- unsure: Basilisk Venom -> Lyrian Arbalest (Venom is activated, Arbalest waits for an Order card played).
+- right: Aelirenn -> Yaevinn
+- right: Hemdall -> Drummond Shieldmaiden
+- right: Alzur's Thunder -> Junod of Belhaven
+- right: Blessing of Temperance -> Dun Banner
+- right: Elder Bear -> Corrupted Flaminica
