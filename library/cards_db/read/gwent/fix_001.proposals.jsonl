@@ -14,3 +14,4 @@
 {"id":756828,"field":"with","need":"damage origin: status (from Bleeding, Poison...) versus other abilities"}
 {"id":756841,"field":"x","need":"number of unique Gang categories in the starting deck"}
 {"id":756842,"field":"x","need":"a card's distance from the top of the deck"}
+{"id":756897,"field":"with","need":"condition on the type (Firesworn) of the banished target"}
