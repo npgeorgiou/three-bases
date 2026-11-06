@@ -420,6 +420,8 @@ def lines_of(c, game):
     grave_kill = {(k_, a_) for k_, a_ in c.execute("select card, ability from flat_do where act in ('kill','obliterate') and on_zone='discard'")}
     enemy_kw = {(a_, k_) for a_, k_ in c.execute("select card, keyword_ref from flat_do where origin='own' and act='give_keyword' and on_side='enemy'")} - \
         {(a_, k_) for a_, k_ in c.execute("select card, keyword_ref from flat_do where origin='own' and act='give_keyword' and coalesce(on_side,'')!='enemy'")}  # keywords only given to enemies
+    entry_rules = {a_ for (a_,) in c.execute("""select ability from flat_do group by ability having sum(case when act in ('cant','can')
+                   and param_event in ('played','summoned') then 0 else 1 end)=0""")}  # abilities that only rule playing or summoning
     own_killers = {x for (x,) in c.execute("select card from flat_ref where origin='own' and role='trigger' and happening='killed' and pick='actor_self'")}  # Northern Wind
     for card, origin, ab, role, h, side, kw, pick, kind, w, ref, ak, aw, via in c.execute(
             'select card, origin, ability, role, happening, side, keyword, pick, kind, obj_with, ref, actor_kind, actor_with, via from flat_ref'):
@@ -478,6 +480,8 @@ def lines_of(c, game):
         # trigger that helps the card that sets it off still waits for more of it from other cards: draws for Janna's discounts; the
         # card itself is no enabler of it: played_lines and the type lines skip it, Golem Metallurgist)
         if role == 'state' and ab in keepers: continue  # "Block is not removed" needs no Block: it helps the Block cards (boost_lines)
+        if role == 'state' and h == 'moves' and ab in entry_rules: continue  # "cards you play here are not revealed" (Invisible Woman):
+        # only playing there is ruled, a unit moved in was played already (n492)
         if role == 'state' and h == 'given_keyword' and kw and (ab, kw) in lacks: continue  # "if you have no Block, gain 11 Block"
         # (Auto-Shields, Orichalcum): it wants none of it
         if ab in lvl and role != 'state': lvl_needs[card].add(h)  # a state the counted cards must be in ("8 cost reduced cards
@@ -491,7 +495,41 @@ def lines_of(c, game):
         takes[h].add((card, 'mine' if pick == 'self' else side, kw, kind, pick, w, ab in lvl, role,
                       (ak, aw, actor_side.get((card, ab)) if role == 'trigger' else None), cost, ab in cheap_abs,
                       state_use.get((card, ab), '') if role == 'state' else ''))
-    deck_created_draw = {x for (x,) in c.execute("select distinct card from flat_do where act='draw' and origin='own' and on_zone='deck' and on_with like '%state is created%'")}
+    # Kaptain 6 Nov 2026: what changes where units stand links with what acts on units by where they stand, in every game.
+    # A card that puts units at a place by its text ("add a Rock here", "a DoomBot to each other location") changes who stands
+    # there as a move does: pick 'placed', read only by needs of role 'state' (never "when a unit moves"; L2: a card played is no place change)
+    placed = collections.defaultdict(set)  # placer -> the cards it puts there by name (None: by description, or a card picked)
+    for m_, a_, s_, ts_, tw_, r_ in c.execute("""select card, act, on_side, to_side, to_with, card_ref from flat_do where origin in ('own','gives')
+            and act in ('summon','create','copy','revive','play_card') and coalesce(eff_zone,'board')='board'
+            and (to_kind='position' or coalesce(to_with,'') like '%position %') and coalesce(on_pick,'') != 'self'
+            and coalesce(to_pick,'') != 'random'""").fetchall():  # itself (L23) or on a random space (Jaxi's corner): no unit put where it is wanted
+        if m_ in cards: makes['moves'].add((m_, ts_ or (s_ if a_ == 'summon' else None) or 'mine', None, 'unit', 'placed', tw_, None, False)); placed[m_].add(r_)
+    no_put = {a_ for (a_,) in c.execute("select card from flat_do where act='cant' and param_event in ('summoned','played') and to_kind='position'")}  # Professor X:
+    # "moving is the only way to add a character here": what is put there cannot come in
+    def put_fits(m_, t_, tw_):
+        """a card put there is what the need asks for: it is not the card itself (Frog Mating Season makes the Frog), and has the
+        keyword, type or name the need names (Odin repeats On Reveal: White Tiger's Tiger has none)"""
+        if t_ in placed[m_] or t_ in no_put: return False
+        named = ';'.join(p for p in (tw_ or '').split(';') if p.split(' ')[0] in ('keyword', 'type', 'card', 'name_has') and p.split(' ')[1:2] in (['is'], ['in']))
+        return not named or any(r in cards and matches(c, game, cards[r], 'any', named) for r in placed[m_])
+    # what an effect does to units picked by place, which the rows above leave without a move need: an entry effect on what stands
+    # near where the card enters (Primus Fist "a nearby friendly minion"; Marvel Snap "On Reveal: your other cards here"), an effect
+    # on the spaces themselves that reaches the units on them (Lightbender dispels the spaces around it; Iron Man doubles your Power
+    # here), and a number counted by how far apart they stand (Dol Blathanna Bowman: 1 damage per row between)
+    have_mv = {(a_, b_) for a_, b_ in c.execute("select card, ability from flat_ref where role='state' and happening='moves'")}
+    for t_, ab_, act_, k_, s_, p_, w_, ps_ in c.execute("""select card, ability, act, on_kind, on_side, on_pick, on_with, params from flat_do
+            where origin in ('own','gives') and coalesce(on_pick,'') not in ('self','it') and coalesce(on_with,'') like '%position %'
+            and act not in ('summon','create','copy','revive','play_card','move','swap','set_terrain','cant','can','capacity_change')""").fetchall():
+        if t_ not in cards or (t_, ab_) in have_mv or k_ not in ('unit', 'position', 'any', 'anything', 'unit_or_structure', None): continue
+        if k_ == 'position' and not (act_ in ('silence', 'damage', 'kill', 'give_keyword', 'heal', 'stun', 'remove_keyword') or
+                                     (act_ == 'stat_change' and ('=stat' in (ps_ or '') or 'count ' in w_))): continue  # a location's own
+        # Power (Klaw: "the location to the right has +6 Power") is the same whoever stands there
+        if re.search(r'(?<![a-z:])position \w+ \w+ of position(?: \w+)? chosen', w_): continue  # around a space the player picks
+        if not s_ and p_ == 'chosen' and act_ in ('damage', 'kill', 'obliterate', 'silence', 'stun'): s_ = 'enemy'  # a harm aimed by place is for enemies (L9)
+        takes['moves'].add((t_, s_ or '', None, 'unit', None if k_ == 'position' else p_, w_, ab_ in lvl, 'state', (None, None, None), False, False, ''))
+    for t_, ab_, k_, s_, p_ in c.execute("select card, ability, of_kind, of_side, of_pick from flat_if where test like 'amount_%' and attr in ('rows_between','distance')").fetchall():
+        if t_ in cards: takes['moves'].add((t_, s_ or '', None, k_ or 'unit', p_, 'position is apart', ab_ in lvl, 'state', (None, None, None), False, False, ''))
+    deck_created_draw ={x for (x,) in c.execute("select distinct card from flat_do where act='draw' and origin='own' and on_zone='deck' and on_with like '%state is created%'")}
     deck_makers = {x for (x,) in c.execute("select distinct card from flat_do where act in ('create','copy','shuffle_into_deck') and origin='own' and (on_zone like 'deck%' or eff_zone like 'deck%')")}  # a made card put into the deck is written in eff_zone (Shadowlands Daredevil)
     state_ev = collections.defaultdict(set)  # a state and the happenings that put things in it (damaged <- damaged)
     for v, cs in c.execute("select value, causes from vocab where field='state' and coalesce(causes,'')!=''"):
@@ -623,6 +661,7 @@ def lines_of(c, game):
                     if own and not matches(c, game, cards[m], 'any', own): continue
                 if mpick == 'self' and role == 'state' and h in ('moves', 'moves_onto'): continue  # a card moving itself puts no unit
                 # where another card acts: every unit moves (Kaptain 3 Nov 2026: Dragonlark -> Vigilator, Azurite Lion -> Roar: no line)
+                if mpick == 'placed' and (role != 'state' or tpick == 'self' or not place_of(tw) or not put_fits(m, t, tw)): continue  # a unit put there did not move, nor did this card
                 if role == 'state' and h in ('moves', 'moves_onto') and place_of(tw) == 'on the space it picks': continue  # any space
                 # it picks (Chromatic Cold): where units stand does not matter to it
                 # a card that only moves itself (Ice Mech's Flying) puts itself, not enemies, where another card hits
@@ -652,10 +691,10 @@ def lines_of(c, game):
                 # played": playing a card no one made cheaper is not it (a unit healed is damaged by the enemy too: no such need)
                 w = 1.0 / len(carers[tk] | (carers[None] if tk else set()))
                 say = act_say(c, h, ts_, tk, self_=tpick == 'self')
-                if role == 'state' and h in ('moves', 'moves_onto') and 'position is same_lane' in (tw or '') and game == 'marvel_snap' and t not in lane_fill(c): continue  # a lane is a location, not a range: a unit moved in is no help to a card that acts in its lane (Doctor Strange -> Danger), unless it needs the lane filled (PymParticle Arrow)
                 if role == 'state' and h in ('moves', 'moves_onto') and place_of(tw) == 'next to it' and tpick == 'chosen': continue  # a hit on a chosen target beside it, not on all that border it (Chaotic Pupil), on
                 # whatever stands next to the card waits for no move (Seismic Capacitor); a line or a target's side does (Artemis Artillery)
-                if role == 'state' and h in ('moves', 'moves_onto') and place_of(tw): say = moves_said(tw, ts_, tpick == 'self')
+                if role == 'state' and h in ('moves', 'moves_onto') and place_of(tw): say = moves_said(tw, ts_ or ms, tpick == 'self')  # whose units: the need's side, else the mover's (Daemonic Lure: enemy units)
+                if mpick == 'placed' and place_of(tw): say = say.replace(' moves ', ' puts ', 1).replace(', and {B}', ' there, and {B}', 1)  # "{A} puts your units there"
                 if mpick == 'self' and h == 'discarded' and mref == m: say = 'comes back after it is discarded, to be discarded again'  # Swarm
                 if mpick == 'self' and h == 'dies': say = 'dies, comes back and dies again' if mref == m else 'dies by its own effect'
                 if mpick == 'self' and h == 'given_keyword' and mk: say = f'has {mechanics.name(c, mk)}'  # Manta Rider has Flying
@@ -733,15 +772,18 @@ def lines_of(c, game):
     for i, e in c.execute("""select w.card, w.event from flat_when w where w.origin='own' and w.obj_pick='self' and w.event in ('summoned','played')
             and not (exists (select 1 from flat_do d where d.card=w.card and d.ability=w.ability and d.origin in ('has_keyword','uses_keyword'))
             and not exists (select 1 from flat_do d where d.card=w.card and d.ability=w.ability and d.origin not in ('has_keyword','uses_keyword')))"""): entry[i].add(e)
-    for (i,) in c.execute("select card from flat_do where origin='has_keyword' and act='can' and on_pick='self' and param_event='activated' and coalesce(params,'') not like '%times=%'"): entry[i].add('summoned')  # Zeal: a unit put into play acts at once (Drakenborg -> Vincent Meis)
-    for m, act, k, w, zone in c.execute("""select card, act, on_kind, on_with, on_zone from flat_do where origin='own' and card_ref is null
+    # a keyword is a summon effect only where the game's glossary says it goes off then: Gwent's Zeal only lets an Order be used
+    # the turn the unit is placed, so it adds none (Drakenborg -> Vincent Meis: no line)
+    for m, act, k, w, zone, ab in c.execute("""select card, act, on_kind, on_with, on_zone, ability from flat_do where origin='own' and card_ref is null
             and coalesce(on_side,'mine') in ('mine','any') and (coalesce(on_pick,'') not in ('self','it') or (act='summon' and on_pick='it' and exists
             (select 1 from flat_do x where x.card=flat_do.card and x.act='choose_card' and x.on_zone='deck'))) and ((act='revive') or
             (act in ('summon','play_card') and on_zone in ('deck','deck_top','hand','discard','everywhere')) or
             (act='copy' and on_zone='board' and coalesce(eff_zone,'board')='board'))""").fetchall():  # Feel The Rush summons champions
             # from anywhere; Mirror Image copies a unit into play: its summon effect goes off (L17, L19)
         if m not in cards: continue
-        want = {'played', 'summoned'} if act == 'play_card' or (game == 'gwent' and act == 'summon') else {'summoned'}  # Gwent: a summoned unit is deployed
+        if (m, ab) in silenced_puts(c): continue  # it Locks or Silences the unit it puts into play: nothing of it goes off (Drakenborg)
+        want = {'played', 'summoned'} if act == 'play_card' else {'summoned'}  # a summon is no play: Gwent's Summon is "not considered
+        # played" (glossary), so a Deploy does not go off (Kaptain 6 Nov 2026)
         if act == 'copy': act = 'summon'
         hits = [t for t, x in cards.items() if t != m and entry.get(t, set()) & want and matches(c, game, x, k if k in KIND_CAT else 'unit', w)]
         for t in hits: out[(m, t)].append(('waits', 0.5 / len(hits), {'revive': 'brings it back: its summon effect goes off',
@@ -768,6 +810,7 @@ def lines_of(c, game):
               where origin='own' and coalesce(on_side,'mine')='mine' and coalesce(on_with,'')!='' and (act='draw' or (act in
               ('summon','play_card') and on_zone in ('hand','deck') and card_ref is null) or (act='choose_card' and on_zone='deck'))""") if m in cards]
     for m, ab, sq, act, k, z, w in tutors:
+        if act in ('summon', 'play_card') and (m, ab) in silenced_puts(c): continue  # Drakenborg Locks what it pulls: no line to it
         if 'state is copy_of_it' in (w or ''):
             prev = c.execute("select on_kind, on_with from flat_do where card=? and ability=? and seq<? and origin='own' order by seq desc",
                              (m, ab, sq)).fetchone()
@@ -1097,21 +1140,27 @@ MOVE_PLACE = {'straight_line': 'in a line from {x}', 'bordering': 'next to {x}',
               'in_circuit': "in {xs} circuit", 'in_front': 'in front of {x}', 'behind': 'behind {x}', 'ahead': 'ahead of {x}',
               'behind_all': 'anywhere behind {x}', 'first_in_front': 'first in front of {x}', 'diagonal': 'diagonal to {x}',
               'front_of_lane': 'at the front of a lane', 'most_forward': 'furthest forward', 'area_2x2': 'in a 2x2 area',
-              'area_3x3': 'in a 3x3 area around {x}', 'starting_side': "on {xs} starting side"}
+              'area_3x3': 'in a 3x3 area around {x}', 'starting_side': "on {xs} starting side",
+              'apart': 'by how far they stand from {x}', 'each_lane': 'one in each lane',  # a number counted by rows or spaces between (Dol Blathanna Bowman)
+              'front_row': 'in the front row', 'back_row': 'in the back row', 'opposite_row': 'in the row facing {x}',
+              'lane_left': 'in the lane left of {x}', 'lane_right': 'in the lane right of {x}', 'previous_lane': 'in the lane {x} left',
+              'edge_lane': 'in an edge lane', 'middle_lane': 'in the middle lane', 'furthest_row': 'in the front line', 'corner': 'in a corner',
+              'adjacent_group': 'side by side', 'back_of_lane': 'at the back of a lane', 'center_column': 'in the middle column'}
 
 
 def place_of(w):
     """where a filter picks things, in plain words ("in a line from it", "next to its target"); None when no place"""
-    for p in (w or '').split(';'):
-        b = p.removeprefix('of:').split(' ')
-        if b[:2] != ['position', 'is'] or len(b) < 3: continue
-        of = b[4:] if b[3:4] == ['of'] else []
-        x = ('it' if not of or of[0] == 'self' else 'its target' if of[0] == 'it' else
-             'your leader or base' if of[:2] == ['player', 'mine'] else 'the enemy leader or base' if of[:2] == ['player', 'enemy'] else
-             'a space it picks' if of[0] == 'position' else 'a card it picks')
-        if b[2] == 'same_space' and x in ('a space it picks', 'its target'): return 'on the space it picks'
-        xs = {'it': 'its', 'its target': "its target's"}.get(x, x + "'s")
-        return MOVE_PLACE.get(b[2], b[2].replace('_', ' ') + ' {x}').format(x=x, xs=xs)
+    for op in ('is', 'not'):  # "not in its lane" only where no place is named ("destroy your cards at other locations")
+        for p in (w or '').split(';'):
+            b = p.removeprefix('of:').split(' ')
+            if b[:2] != ['position', op] or len(b) < 3: continue
+            of = b[4:] if b[3:4] == ['of'] else []
+            x = ('it' if not of or of[0] == 'self' else 'its target' if of[0] == 'it' else
+                 'your leader or base' if of[:2] == ['player', 'mine'] else 'the enemy leader or base' if of[:2] == ['player', 'enemy'] else
+                 'a leader or base' if of[:1] == ['player'] else 'a space it picks' if of[0] == 'position' else 'a card it picks')
+            if b[2] == 'same_space' and x in ('a space it picks', 'its target'): return 'on the space it picks'
+            xs = {'it': 'its', 'its target': "its target's"}.get(x, x + "'s")
+            return ('' if op == 'is' else 'not ') + MOVE_PLACE.get(b[2], b[2].replace('_', ' ') + ' {x}').format(x=x, xs=xs)
     return None
 
 
@@ -1164,9 +1213,18 @@ TRIGGER_KW = ('on_attack', 'on_kill', 'on_damaged', 'death_trigger', 'on_play', 
               'repeat_trigger', 'combat_start', 'turn_start', 'turn_end')  # keyword concepts that are reactions
 
 
-def lane_fill(c):
-    """cards that need many units in their lane ("count ... same_lane at least 4"): units moved in help them (PymParticle Arrow)"""
-    return {i for (i,) in c.execute("select card from flat_if where test='count' and op in ('ge','gt') and of_with like '%position is same_lane%'")}
+def silenced_puts(c):
+    """(card, ability) that puts a unit into play and then Locks or Silences it (Drakenborg: "Summon a unit from your deck to this
+    row and Lock it"): none of that unit's abilities go off, so the card does nothing for it (Kaptain 6 Nov 2026)"""
+    if 'silenced_puts' in CACHE: return CACHE['silenced_puts']
+    out = set()
+    for m, ab, sq in c.execute("""select card, ability, seq from flat_do where origin='own' and act in ('summon','play_card','revive','copy')
+            and coalesce(on_side,'mine') in ('mine','any')""").fetchall():
+        for act, kw in c.execute("""select act, keyword_ref from flat_do where card=? and ability=? and origin='own' and seq>? and on_pick='it'
+                and act in ('give_keyword','silence')""", (m, ab, sq)).fetchall():
+            if act == 'silence' or (kw and kw_tree(c, kw) == 'silence'): out.add((m, ab))
+    CACHE['silenced_puts'] = out
+    return out
 
 
 def drawback_cards(c):
@@ -1189,7 +1247,6 @@ def generic_use(c, game):
     kw_stat = {t for (t,) in c.execute("select w.card from cond k join flat_when w on w.ability=k.ability where k.test='keyword_condition' and k.ref_keyword is not null and w.event='stat_changed'")}
     for i, h, origin, via, k, rl, ow in c.execute("""select card, happening, origin, via, keyword, role, obj_with from flat_ref where role!='makes' and origin in ('own','has_keyword')
             and coalesce(side,'') in ('','mine','any')"""):
-        if game == 'marvel_snap' and rl == 'state' and h == 'moves' and 'position is same_lane' in (ow or '') and i not in lane_fill(c): continue  # a lane is a location: a card that acts in its lane needs no move (Doctor Strange -> Danger), unless it needs the lane filled
         if origin != 'own' and kw_tree(c, via) not in TRIGGER_KW: continue  # a keyword's inner working (Barrier pops when damaged,
         # Challenger picks when attacking) is no need of the card; a keyword that is a reaction is (Revenge: when damaged)
         if h in ('given_keyword', 'keyword_used', 'keyword_removed'): d[i]['kw_needs'].add((h, k))  # which keyword it waits for
@@ -1668,8 +1725,10 @@ def harm_abilities(c):
     if 'harm' in CACHE: return CACHE['harm']
     harm = collections.defaultdict(set)
     paid = {a for (a,) in c.execute("select ability from flat_when where event in ('played','activated')")}  # a cost to play or use
-    for ab_, act, p_, sd in c.execute("select ability, act, on_pick, coalesce(on_side,'') from flat_do where origin='own'"):
+    for ab_, act, p_, sd, ps_ in c.execute("select ability, act, on_pick, coalesce(on_side,''), params from flat_do where origin='own'"):
         harm[ab_].add((act in ('damage', 'kill', 'discard', 'sacrifice') and p_ == 'it' and sd != 'enemy') or
+                      (act == 'stat_change' and p_ == 'self' and bool(ps_) and all(x.split('=', 1)[1].startswith('-') for x in ps_.split(';') if '=' in x)) or  # "-4 Power
+                      # if your opponent has 4 cards here" (Lizard): a drawback, no want (L5)
                       (act == 'spend_mana' and sd in ('mine', '') and ab_ not in paid))  # Void: "when drawn, lose 1 Energy" wants no
         # draws and no mana; "Pay 2 Bones" to play or activate is a need
     CACHE['harm'] = {a for a, v in harm.items() if v == {True}}
@@ -2730,26 +2789,106 @@ def self_harm_lines(c, game, nodes):
 
 def kill_food_lines(c, game, nodes):
     """a unit with a 1-damage activated ping and its own "when I kill" effect (Kaedweni Revenant) needs weak units: a card that
-    damages units without killing them, or puts my units into play, gives it food (C79, C83-C85; L10)"""
+    damages units without killing them gives it food (C79, C83-C85; L10). Putting my own units into play gives it nothing to kill
+    (Kaptain 6 Nov 2026: Poor Fucking Infantry, Battle Stations! -> Kaedweni Revenant, Impera Enforcers: no combo)"""
     # a plain hit on one chosen unit leaves no weak units for a kill trigger (L11); only hits on all or random do
     out = Lines(); marks = ','.join('?' * len(nodes)); L = list(nodes)
     killers = [i for (i,) in c.execute(f"""select distinct r.card from flat_ref r join flat_do d on d.card=r.card and d.origin='own' and d.act='damage'
             and d.on_pick='chosen' and d.params like '%amount=1.0%' where r.origin='own' and r.role='trigger' and r.happening='killed'
             and r.pick='actor_self' and r.card in ({marks})""", L)]
-    # my own summoned units feed only a ping the player can fire on his turn at weak units (Kaedweni Revenant's activated ping), not a one-time hit on play or attack (Parrrley, Gregoire; C4, L9, L11)
-    pingers = {i for (i,) in c.execute(f"""select distinct d.card from flat_do d join flat_when w on w.card=d.card and w.ability=d.ability and w.origin=d.origin
-            where d.origin='own' and d.act='damage' and d.on_pick='chosen' and d.params like '%amount=1.0%' and w.event='activated' and d.card in ({marks})""", L)}
     for k in killers:
-        for a, act in c.execute(f"""select distinct card, act from flat_do where origin='own' and card in ({marks}) and card!=?
-                and ((act='damage' and on_pick in ('all','random') and coalesce(on_side,'') in ('','enemy','any','mine')
-                and params not like '%amount=1.0%') or (act in ('summon','play_card') and coalesce(on_side,'mine')='mine' and ?))""", L + [k, k in pingers]):
-            out[(a, k)].append(('waits', 0.5, 'leaves weak units for its kill' if act == 'damage' else 'gives it units to kill'))
+        for (a,) in c.execute(f"""select distinct card from flat_do where origin='own' and card in ({marks}) and card!=?
+                and act='damage' and on_pick in ('all','random') and coalesce(on_side,'') in ('','enemy','any','mine')
+                and params not like '%amount=1.0%'""", L + [k]):
+            out[(a, k)].append(('waits', 0.5, 'leaves weak units for its kill'))
     # a 1-damage ping (Kaedweni Revenant, Redanian Archer) kills an enemy another card sets to strength 1 (Vincent Meis; C81, C82; L2: a strike now)
     pings = [i for (i,) in c.execute(f"select distinct card from flat_do where origin='own' and act='damage' and on_pick='chosen' and coalesce(on_side,'') in ('','enemy','any') and params like '%amount=1.0%' and card in ({marks})", L)]
     setters = [i for (i,) in c.execute(f"select distinct card from flat_do where origin='own' and act='stat_set' and on_pick='chosen' and on_side='enemy' and params like '%strength=1.0%' and card in ({marks})", L)]
     for k in pings:
         for a in setters:
             if a != k: out[(k, a)].append(('waits', 0.5, 'its 1 damage kills what it sets to strength 1'))
+    return out
+
+
+VERB_RANK = {'creates': 0, 'puts into play': 1, 'plays': 2}
+CREATED_STATES = ('state is created', 'state not started_in_deck')  # "a created card" (Augment), "a card not from your starting deck" (Assimilate)
+
+
+def keyword_chain_lines(c, game, nodes):
+    """a keyword that reacts to a kind of card played or summoned (Gwent's Symbiosis: "when you play a Nature card"; Resupply: a
+    Warfare card; Runeterra's Augment: a created card): a card whose own text makes or plays such a card sets it off, so it links
+    to the cards holding the keyword and to the cards waiting for the keyword to go off (Mahakam Pass plays Tempering, a Nature
+    card -> Naiad Fledgling: "whenever your Symbiosis is triggered"). Only a narrow kind is a real trigger: "a unit with more
+    power" (Thrive) is any unit (L1, L21)"""
+    out = Lines(); cards = cards_of(c, game); L = list(nodes); marks = ','.join('?' * len(L)); best = {}; said = {}
+    for k, kname, h, kind, w in c.execute("""select r.card, k.name, r.happening, r.kind, coalesce(r.obj_with,'') from flat_ref r join card k on k.id=r.card
+            where k.game=? and k.category='keyword' and r.origin='own' and r.role='trigger' and r.happening in ('played','summoned')
+            and coalesce(r.pick,'') not in ('self','actor_self','attached_to','owner') and coalesce(r.side,'') in ('','mine','any')""", (game,)).fetchall():
+        parts = [p for p in w.split(';') if p]
+        made_only = any(p in CREATED_STATES for p in parts)
+        rest = ';'.join(p for p in parts if p not in CREATED_STATES)
+        kk = 'any' if kind in ('card', None) else kind
+        narrow = any(p.split(' ')[0] not in PLAY_STATE + ('category',) and p.split(' ')[1:2] != ['not'] for p in rest.split(';') if p) and \
+            kind_count(c, game, kk, rest) < 0.5 * kind_count(c, game, kk, None)
+        if not (narrow or made_only): continue
+        present = {i for (i,) in c.execute(f"""select distinct card from flat_ref where via=? and origin in ('has_keyword','uses_keyword')
+                   and card in ({marks})""", [k] + L)}  # a card with the keyword, or one that gives it (Naiad Pondkeeper)
+        if not present: continue
+        holders = {i for (i,) in c.execute(f"""select distinct card from flat_ref where via=? and origin='has_keyword' and role='trigger'
+                   and card in ({marks})""", [k] + L)}
+        waiters = {i for (i,) in c.execute(f"""select distinct card from flat_ref where origin='own' and role='trigger' and happening='keyword_used'
+                   and keyword=? and coalesce(side,'') in ('','mine','any') and card in ({marks})""", [k] + L)}
+        tn = next((c.execute('select name from type where id=?', (int(p.split(' ')[2]),)).fetchone() for p in rest.split(';')
+                   if p.split(' ')[:2] == ['type', 'is'] and p.split(' ')[2].isdigit()), None)
+        what = f"{'an' if tn and tn[0][:1] in 'AEIOU' else 'a'} {tn[0]} card" if tn else 'a card'
+        for a, ah, mk, mw, ref in c.execute(f"""select distinct r.card, r.happening, r.kind, coalesce(r.obj_with,''), r.ref from flat_ref r where r.origin='own'
+                and r.role='makes' and r.happening in ('played','created','summoned') and coalesce(r.side,'') in ('','mine','any') and r.card in ({marks})
+                and (r.happening!='created' or exists (select 1 from flat_do d where d.card=r.card and d.ability=r.ability and d.origin='own'
+                and d.act in ('create','copy') and coalesce(d.eff_zone, case when d.act='create' then 'hand' end) in ('hand','deck','deck_top','deck_bottom')
+                and 'enemy' not in (coalesce(d.on_side,''), coalesce(d.to_side,''))))""", L).fetchall():  # a card made into my hand or
+            # deck, to be played (a token made on the board is never played; a spell copied onto a unit, Bladebound Berserker, is cast at once)
+            if a not in cards: continue
+            if h == 'summoned' and ah != 'summoned': continue
+            if h == 'played' and ah not in ('played', 'created'): continue
+            if made_only and ah != 'created': continue  # only a card it creates is "created" (Augment)
+            ref = ref or next((int(p.split(' ')[2]) for p in mw.split(';') if p.split(' ')[:2] == ['card', 'is'] and p.split(' ')[2].isdigit()), None)
+            if ref is not None:
+                if ref not in cards or not matches(c, game, cards[ref], kk, rest): continue
+            elif not made_fits(c, kk, rest, 'unit' if mk in ('unit', 'follower') else mk, mw): continue
+            verb = 'plays' if ah == 'played' else 'creates' if ah == 'created' else 'puts into play'
+            for t in (holders | waiters) - {a, ref}:
+                if VERB_RANK[verb] > VERB_RANK.get(best.get((a, t, k)), -1): best[(a, t, k)] = verb  # "creates and plays": said once, as plays
+                said[(a, t, k)] = (what, kname, t in holders)
+    for (a, t, k), verb in best.items():
+        what, kname, held = said[(a, t, k)]
+        out[(a, t)].append(('waits', 0.5, f"{verb} {what}, which sets off its {kname}" if held else
+                            f"{verb} {what}, which sets off {kname}: {{B}} waits for {kname} to go off"))
+    return out
+
+
+def copies_lines(c, game, nodes):
+    """a card that helps a unit "and all its copies" (Voymir: boost and Armor; Iceborn Legacy: "all allied copies of it
+    everywhere") helps more a card that copies itself (Kaedweni Revenant: "Deathblow: Spawn a base copy of Kaedweni Revenant"):
+    every copy gets it. Only my own copies, made by the card's own text"""
+    out = Lines(); cards = cards_of(c, game); L = list(nodes); marks = ','.join('?' * len(L))
+    selfcopy = {i for (i,) in c.execute(f"""select distinct card from flat_do where origin='own' and coalesce(to_side,'mine') in ('mine','any')
+                and ((act='copy' and on_pick='self') or (act in ('summon','create') and card_ref=card)) and card in ({marks})""", L)}
+    if not selfcopy: return out
+    for a, act, k, w, ps, kw in c.execute(f"""select distinct card, act, on_kind, on_with, params, keyword_ref from flat_do where origin='own'
+            and act in ('stat_change','give_keyword') and coalesce(on_side,'mine') in ('mine','any') and on_with like '%state is copy_of_it%'
+            and card in ({marks})""", L).fetchall():
+        if act == 'stat_change' and not stats_said(ps).startswith('gives it more'): continue
+        if act == 'give_keyword' and (kw is None or buff_keyword(c, kw) is False): continue
+        rest = ';'.join(p for p in (w or '').split(';') if p and p != 'state is copy_of_it' and ' of it' not in p)
+        prev = c.execute("""select on_kind, on_with from flat_do where card=? and origin='own' and act=? and on_pick in ('chosen','it')
+                            and coalesce(on_with,'') not like '%copy_of_it%' limit 1""", (a, act)).fetchone()
+        if prev: k, rest = prev[0] or k, ';'.join(x for x in (prev[1] or '', rest) if x)  # "an allied Soldier and all copies of it" (Vreemde)
+        kname = c.execute('select name from card where id=?', (kw,)).fetchone()[0] if act == 'give_keyword' else None
+        say = stats_said(ps).replace('gives it ', '') if act == 'stat_change' else kname
+        for t in selfcopy - {a}:
+            if t not in cards or not matches(c, game, cards[t], k if k in KIND_CAT else 'unit', rest): continue
+            why = f"gives a unit's copies {say}, and {{B}} copies itself"
+            if not any(l[2] == why for l in out[(a, t)]): out[(a, t)].append(('stronger' if act == 'stat_change' else 'keyword', 0.5, why))
     return out
 
 
@@ -2766,7 +2905,7 @@ def network(c, game, ids, broad=True):
     for f in (am, played_lines(c, game, nodes, broad), need_lines(c, game, nodes, broad),
               boost_lines(c, game, nodes, stat_help, {p for p, ls in am.items() if any('cheaper' in y or 'cost' in y for _, _, y in ls)}), gives_lines(c, game, nodes), object_help_lines(c, game, nodes, broad),
               actor_help_lines(c, game, nodes), doer_help_lines(c, game, nodes), self_harm_lines(c, game, nodes),
-              state_giver_lines(c, game, nodes), stat_reader_lines(c, game, nodes), spent_lines(c, game, nodes), flood_lines(c, game, nodes), kill_food_lines(c, game, nodes)):
+              state_giver_lines(c, game, nodes), stat_reader_lines(c, game, nodes), spent_lines(c, game, nodes), flood_lines(c, game, nodes), kill_food_lines(c, game, nodes), keyword_chain_lines(c, game, nodes), copies_lines(c, game, nodes)):
         for k, ls in f.items(): lines[k] += ls
     # a need the maker shares with the card it makes is the made card's (The Iron Conquest's stage III is its skill Undying
     # Revenge: Soul Cleave's dead ally feeds the skill, not the landmark too)
@@ -2865,22 +3004,23 @@ KIND_WORD = {'carries': 'carries', 'waits': 'triggers', 'type': 'enables', 'chea
              'levelsinto': 'levels into', 'targets': 'can aim at it'}
 
 
-MOVE_RE = re.compile(r'\{A\} moves (it|units|enemy units|your units), and \{B\} acts on units (.*)$')
+MOVE_RE = re.compile(r'\{A\} (moves|puts) (it|units|enemy units|your units)(?: there)?, and \{B\} acts on units (.*)$')
 
 
 def merge_places(ls):
     """every move reason of a pair is one reason: who is moved, every place ("{A} moves {B} and units, and {B} acts on units
     next to it or around it")"""
     moved, places, w_, k_ = [], [], 0, None
-    rest = []
+    rest, verbs = [], set()
     for k, w, y in ls:
         m = MOVE_RE.match(y)
         if not m: rest.append((k, w, y)); continue
-        moved.append(m.group(1)); places += [p for p in m.group(2).split(' or ') if p not in places]; w_ = max(w_, w); k_ = k_ or k
+        verbs.add(m.group(1)); moved.append(m.group(2)); places += [p for p in m.group(3).split(' or ') if p not in places]; w_ = max(w_, w); k_ = k_ or k
     if not moved: return ls
     others = {x for x in moved if x != 'it'}
     who = ' and '.join((['{Bc}'] if 'it' in moved else []) + ([others.pop() if len(others) == 1 else 'units'] if others else []))
-    return [(k_, w_, f'{{A}} moves {who}, and {{B}} acts on units {" or ".join(sorted(places))}')] + rest
+    verb = 'moves' if 'moves' in verbs else 'puts'  # a card that only puts units there (Doctor Doom) "puts your units there"
+    return [(k_, w_, f'{{A}} {verb} {who}{" there" if verb == "puts" else ""}, and {{B}} acts on units {" or ".join(sorted(places))}')] + rest
 
 
 TOPICS = (('nexus', r'enemy player|the Nexus'), ('cost', r'cheaper|its cost|pays? '), ('countdown', r'countdown'),

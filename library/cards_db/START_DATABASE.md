@@ -29,11 +29,16 @@ first and wait. Never invent rules or mechanics; mark suggestions as yours.
    Start it only with the Bash tool's background mode (run_in_background), never with `&` or nohup (the shell stops those a
    few minutes after a reply ends); never stop a running build; wait for its notice and work on findings meanwhile, never
    idle (Marvel Snap, 5 Nov 2026: a stopped build left cards.sqlite.new and its journal, and the next build failed).
-5. **Read cards like a player**: what does it need, who gives it that, what does it make, what does that card do.
+5. **Read cards like a player**: what does it need, who gives it that, what does it make, what does that card do. A keyword
+   counts as a summon, play or trigger effect only if the game's glossary (vocab.tsv) says it goes off then (Gwent's Zeal: no; L27).
 6. **A check is done only when all its output was read.** Never sample less, skip a game or hand over because the output is
    long: cut it into pieces and give them to agents (Part 2 "How an import runs"). Say plainly what was not checked; a passing count is not a check.
+7. **Reading costs Kaptain's tokens** (7 Nov 2026): start no agent that reads card texts or line diffs unless he asked for that
+   reading; say what it would read and ask first. A linking fix works on the stored rows and never reads cards again; a misreading
+   family is fixed by a text rule over the stored texts (fixes/<game>/vNN.py), not by rereading. Give an agent one small job, never
+   a whole family plus readings. Rank problems by how many lines they touch, biggest first.
 
-The rules for lines (L1-L24) are in LINE_RULES.md: read it before judging a line or changing network.py.
+The rules for lines (L1-L28) are in LINE_RULES.md: read it before judging a line or changing network.py.
 
 ## Map: where things are
 | What | File |
@@ -85,13 +90,13 @@ push, give network.html to Kaptain.
 - All 9 games imported. Kaptain approved Runeterra and Into the Breach; Slay the Spire done; Inscryption reviewed; Stormbound,
   Monster Train, Faeria, Duelyst and Marvel Snap (chat 2 done 5 Nov 2026) wait for his check of their deck networks.
 - Cases: all pass in every game except Runeterra n34 (Darius Gnar: Brothers' Bond -> Darius), which already failed before the
-  Gwent import (checked on the code of 5 Nov, 6 Nov 2026). The next case id is n588.
+  Gwent import (checked on the code of 5 Nov, 6 Nov 2026). The next case id is n700.
 - Gwent: chat 1 done 6 Nov 2026 (cases 135 of 174 pass; the misses wait for chat 2); progress in checks/gwent/PROGRESS.md.
 - Real-world cases: all hold (failing ones deleted, 5 Nov 2026).
 - Lines (links.sqlite rows, 5 Nov 2026): Runeterra 210,310; Marvel Snap 19,734; Duelyst 12,799; Faeria 10,733; Slay the
   Spire 8,939; Into the Breach 6,419; Monster Train 3,353; Stormbound 2,854; Inscryption 1,116.
-- Known open (also LINKS_PLAN.md "Open"): a card placed by its text near the leader (Conscript) draws
-  no line to a card acting near the leader (Fealty); Adaptive Mutation's stat swap has no line; Monster Train has no full decks
+- Known open (also LINKS_PLAN.md "Open"): Adaptive Mutation's stat swap has no line (Conscript -> Fealty is drawn since L29,
+  7 Nov 2026); Monster Train has no full decks
   as text (ask Kaptain). Monster Train's Olde Magic is built by the player at an event: its record
   (read/monster_train/event_cards.jsonl) lists the wiki's choices, with no numbers. Stormbound's Fort of Ebonrock has no ability.
 
@@ -105,6 +110,15 @@ values, the cards it creates or names), card wording written to a fixed template
 game's own rulebook, and players' combos and decks that test the lines. Completeness alone is not enough.
 
 ## Open work, in Kaptain's order
+0. **Round of 7 Nov 2026 (rebuilt, not yet checked).** In: keyword trigger chain (L25+), self-copy + "all its copies", Zeal no summon
+   effect, a summon is no play, Lock/Silence on a pulled unit sets off nothing (Drakenborg), "gives it units to kill" removed, the
+   position rule for every game (mover/placer -> card that acts by where units stand; Snap-only lane skips removed), Snap v86 ("each
+   side of this location", "at each location"). Lines before -> after (checks/pos/diff.txt): Duelyst 2846 -> 3420, Snap 1027 -> 1164,
+   Stormbound 252 -> 290, Gwent 3443 -> 3371, Into the Breach 464 -> 412 (losses there look wrong: Kaptain said its position lines
+   were right). Failing cases: Gwent 19 (dgw01-05, 07-10, 12, n546, n547 must become none, n551, n564, n578, n586, n612-614), Snap 8
+   (n439-442, n445, n448, n449, n477), Runeterra 1, Duelyst 1; must-not cases with a reason no deck says any more (cases/run.py).
+   Not read yet: the diff groups (checks/pos/grp_*.txt). Still to fix: Muse, Basic Arrow, Captain Marvel misreadings; Seagull's
+   "3 units" count; Runeterra Attune (goes off when summoned by its glossary, not counted). Ask Kaptain before any reading.
 1. A newly imported game gets chat 2 (Part 3): every check, the fixes made by fixer agents.
 2. **Marvel Snap** (chat 2 done 5 Nov 2026): waits for Kaptain's check of the deck page. Open: design questions 04 and
    05 (sacrifice and draw) find almost nothing in it.

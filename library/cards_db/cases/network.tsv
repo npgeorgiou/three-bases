@@ -536,21 +536,21 @@ n541	marvel_snap	Agent Venom, Wolverine	Agent Venom	Wolverine	none	sets power to
 n542	duelyst	Gargantuan Growth, Oropsisaur	Gargantuan Growth	Oropsisaur	line	makes your units get Grow	Claude 5 Nov 2026, line check C7: Grow given by text is the keyword
 n543	marvel_snap	Power Shot, Vampire Deacon Frost	Power Shot	Vampire Deacon Frost	none	changes your units' stats	Claude 5 Nov 2026, line check C99: giving Power is not stealing it
 n544	marvel_snap	Dragon of the Moon, Vampire Deacon Frost	Dragon of the Moon	Vampire Deacon Frost	line	changes your units' stats	Claude 5 Nov 2026, line check C99: Dragon takes Power from the hand cards: it steals
-n545	gwent	Nature's Gift: Devotion Symbiosis Good Version	Mahakam Pass	Naiad Fledgling	line		guide https://www.playgwent.com/en/decks/guides/396134 (games/gwent.md Deck pairs): buff can protect vulnerable engines (Naiad Fledglings)
-n546	gwent	Nature's Gift: Devotion Symbiosis Good Version	Mahakam Pass	Naiad Pondkeeper	line		guide https://www.playgwent.com/en/decks/guides/396134 (games/gwent.md Deck pairs): set up a treant for Naiad Pondkeeper
-n547	gwent	Mobilization: NR Devotion Undead Army	Kerack Marine	Kaedweni Revenant	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): they can also protect your Revenant
-n548	gwent	Mobilization: NR Devotion Undead Army	Poor Fucking Infantry	Kaedweni Revenant	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): PFIs are good Revenant food
+n545	gwent	Nature's Gift: Devotion Symbiosis Good Version	Mahakam Pass	Naiad Fledgling	line	which sets off Symbiosis	Kaptain 6 Nov 2026: Mahakam Pass plays Tempering, a Nature card; Symbiosis goes off, which Naiad Fledgling waits for (keyword chain)
+n546	gwent	Nature's Gift: Devotion Symbiosis Good Version	Mahakam Pass	Naiad Pondkeeper	none		Kaptain 6 Nov 2026: no combo; Mahakam Pass makes no Treant (L3)
+n547	gwent	Mobilization: NR Devotion Undead Army	Kerack Marine	Kaedweni Revenant	none		Kaptain 6 Nov 2026: no combo; the Revenant uses no extra strength (L18)
+n548	gwent	Mobilization: NR Devotion Undead Army	Poor Fucking Infantry	Kaedweni Revenant	none		Kaptain 6 Nov 2026: putting my own units into play gives a pinger nothing to kill: no combo
 n549	gwent	Mobilization: NR Devotion Undead Army	Forbidden Magic	Kaedweni Revenant	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): Forbidden Magic is to get more Revenant
 n550	gwent	Mobilization: NR Devotion Undead Army	Redanian Secret Service	Drakenborg	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): amazing synergy with Drakenborg
 n551	gwent	Mobilization: NR Devotion Undead Army	Redanian Secret Service	Kaedweni Revenant	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): good Revenant food
 n552	gwent	Mobilization: NR Devotion Undead Army	Princess Adda	Redanian Secret Service	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): Adda gains Immunity on Deploy, so she will summon a Secret Service
-n553	gwent	Mobilization: NR Devotion Undead Army	Drakenborg	Vincent Meis	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): Drakenborg targets
-n554	gwent	Mobilization: NR Devotion Undead Army	Drakenborg	Margarita Laux-Antille	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): Drakenborg targets
-n555	gwent	Mobilization: NR Devotion Undead Army	Drakenborg	Botchling	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): Drakenborg targets
+n553	gwent	Mobilization: NR Devotion Undead Army	Drakenborg	Vincent Meis	none		Kaptain 6 Nov 2026: Zeal is no summon effect; Drakenborg Locks what it summons, nothing of it goes off
+n554	gwent	Mobilization: NR Devotion Undead Army	Drakenborg	Margarita Laux-Antille	none		Kaptain 6 Nov 2026: Zeal is no summon effect; Drakenborg Locks what it summons, nothing of it goes off
+n555	gwent	Mobilization: NR Devotion Undead Army	Drakenborg	Botchling	none		Kaptain 6 Nov 2026: Drakenborg Locks what it summons, nothing of it goes off
 n556	gwent	Mobilization: NR Devotion Undead Army	Drakenborg	Bloody Baron	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): Drakenborg targets
 n557	gwent	Mobilization: NR Devotion Undead Army	Kaedweni Revenant	Vincent Meis	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): with Revenant on board Vincent kills any unboosted unit
 n558	gwent	Mobilization: NR Devotion Undead Army	Redanian Archer	Vincent Meis	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): with Archer on board Vincent kills any unboosted unit
-n559	gwent	Mobilization: NR Devotion Undead Army	Voymir	Kaedweni Revenant	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): boost all Revenants on board
+n559	gwent	Mobilization: NR Devotion Undead Army	Voymir	Kaedweni Revenant	line	copies itself	Kaptain 6 Nov 2026: Voymir boosts a unit and all its copies; Kaedweni Revenant copies itself
 n560	gwent	Mobilization: NR Devotion Undead Army	Voymir	Redanian Archer	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): reactivate the Redanian Archer engines
 n561	gwent	Mobilization: NR Devotion Undead Army	Sabrina Glevissig	Kaedweni Revenant	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): another Revenant food
 n562	gwent	Mobilization: NR Devotion Undead Army	Philippa: Blind Fury	Kaedweni Revenant	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): a Revenant food
@@ -561,9 +561,9 @@ n566	gwent	Shieldwall: Roegner Ale Damsel	Ale of the Ancestors	Prince Anséis	li
 n567	gwent	Pincer Maneuver: Kimbolt's Temple Siege	Temple of Melitele: Congregation	Prince Anséis	line		guide https://www.playgwent.com/en/decks/guides/395334 (games/gwent.md Deck pairs): play Temple and buff Anseis
 n568	gwent	White Frost: White Frost-EZ pro rank	Eredin Bréacc Glas	Caranthir: Golden Child	line		guide https://www.playgwent.com/en/decks/guides/396185 (games/gwent.md Deck pairs): Eredin into constant frost brings Golden Child to 32 power
 n569	gwent	Arachas Swarm: Tatterwing - 1 prov left for good luck	Ge'els	Lara Dorren	line		guide https://www.playgwent.com/en/decks/guides/402390 (games/gwent.md Deck pairs): with Ge'els you can replay Lara
-n570	gwent	Enslave: Damage Enslave With Enforcers (+10 -1)	Battle Stations!	Impera Enforcers	line		guide https://www.playgwent.com/en/decks/guides/396553 (games/gwent.md Deck pairs): play Enforcers with Battle Preparation in one turn
+n570	gwent	Enslave: Damage Enslave With Enforcers (+10 -1)	Battle Stations!	Impera Enforcers	none		Kaptain 6 Nov 2026: no combo; Impera Enforcers has no play effect (Zeal is none) and my units are nothing for it to kill
 n571	gwent	Enslave: Damage Enslave With Enforcers (+10 -1)	Fercart	Impera Enforcers	line		guide https://www.playgwent.com/en/decks/guides/396553 (games/gwent.md Deck pairs): Stefan Skellen played with Fercart on board procs Enforcers 4 times
-n572	gwent	Enslave: Damage Enslave With Enforcers (+10 -1)	Stefan Skellen	Impera Enforcers	line		guide https://www.playgwent.com/en/decks/guides/396553 (games/gwent.md Deck pairs): Stefan Skellen with Fercart procs Enforcers 4 times
+n572	gwent	Enslave: Damage Enslave With Enforcers (+10 -1)	Stefan Skellen	Impera Enforcers	none		Kaptain 6 Nov 2026: no combo; Impera Enforcers has no play effect and my units are nothing for it to kill
 n573	gwent	Enslave: Damage Enslave With Enforcers (+10 -1)	Buhurt	Fercart	line		guide https://www.playgwent.com/en/decks/guides/396553 (games/gwent.md Deck pairs): Fercart can protect self with Buhurt
 n574	gwent	Enslave: Damage Enslave With Enforcers (+10 -1)	Joachim de Wett	Coup de Grâce	line		guide https://www.playgwent.com/en/decks/guides/396553 (games/gwent.md Deck pairs): Joachim + Coup combo
 n575	gwent	Tactical Decision: OP GN HyperThin	Doadrick Leumaerts	Albrich	line		guide https://www.playgwent.com/en/decks/guides/398507 (games/gwent.md Deck pairs): Doadrick will cycle Albrich in round 3
@@ -637,11 +637,11 @@ n642	gwent	Aen Elle Aristocrat, Endrega Eggs	Aen Elle Aristocrat	Endrega Eggs	no
 n643	gwent	Biting Frost, Archespore	Biting Frost	Archespore	none	kills it for its death effect	Claude 2026-11-06, line check: freezing kills no unit
 n644	gwent	Forktail, Bridge Troll	Forktail	Bridge Troll	line	kills it for its death effect	Claude 2026-11-06, line check: right example stays
 n645	gwent	Ge'els, Lara Dorren	Ge'els	Lara Dorren	line	puts it into play from the deck	Claude 2026-11-06, line check: right example stays
-n646	gwent	Mobilization: NR Devotion Undead Army	Redanian Secret Service	Kaedweni Revenant	line	gives it units to kill	Claude 2026-11-06, line check: weak units feed a 1-damage kill ping
+n646	gwent	Mobilization: NR Devotion Undead Army	Redanian Secret Service	Kaedweni Revenant	none		Kaptain 6 Nov 2026: putting my own units into play gives a pinger nothing to kill
 n647	gwent	Mobilization: NR Devotion Undead Army	Sabrina Glevissig	Kaedweni Revenant	line	leaves weak units for its kill	Claude 2026-11-06, line check: weak units feed a 1-damage kill ping
 n648	gwent	Mobilization: NR Devotion Undead Army	Philippa: Blind Fury	Kaedweni Revenant	line	leaves weak units for its kill	Claude 2026-11-06, line check: weak units feed a 1-damage kill ping
-n649	gwent	Mobilization: NR Devotion Undead Army	Vernon Roche	Kaedweni Revenant	line	gives it units to kill	Claude 2026-11-06, line check: weak units feed a 1-damage kill ping
-n650	gwent	Mobilization: NR Devotion Undead Army	Drakenborg	Vincent Meis	line	puts it into play: its summon effect goes off	Claude 2026-11-06, line check: Zeal unit put into play from the deck acts at once
+n649	gwent	Mobilization: NR Devotion Undead Army	Vernon Roche	Kaedweni Revenant	none		Kaptain 6 Nov 2026: putting my own units into play gives a pinger nothing to kill
+n650	gwent	Mobilization: NR Devotion Undead Army	Drakenborg	Vincent Meis	none		Kaptain 6 Nov 2026: Zeal is no summon effect; Drakenborg Locks what it summons
 n651	gwent	Mobilization: NR Devotion Undead Army	Kaedweni Revenant	Vincent Meis	line	its 1 damage kills what it sets to strength 1	Claude 2026-11-06, line check: a 1-damage ping kills a unit set to strength 1
 n652	gwent	Mobilization: NR Devotion Undead Army	Redanian Archer	Vincent Meis	line	its 1 damage kills what it sets to strength 1	Claude 2026-11-06, line check: a 1-damage ping kills a unit set to strength 1
 n653	gwent	Patricidal Fury: RnR Seagulls Sove Compass	Hammond	Ragh Nar Roog	line	moves an enemy unit into the row it hits	Claude 2026-11-06, line check: an enemy mover puts a target into the row a hazard hits
@@ -664,7 +664,7 @@ n669	runeterra	Shape of Fear, Parrrley	Shape of Fear	Parrrley	none	gives it unit
 n670	runeterra	Void Seeker, Parrrley	Void Seeker	Parrrley	none	leaves weak units for its kill	Claude 2026-11-06, line check: a hit on my own chosen unit leaves no weak units for a kill trigger
 n671	gwent	Magic Compass, Gregoire de Gorgon	Magic Compass	Gregoire de Gorgon	none	gives it units to kill	Claude 2026-11-06, line check: playing my cards feeds only an activated 1-damage ping
 n672	into_the_breach	Bomb Dispenser, Fissure Fist	Bomb Dispenser	Fissure Fist	none	gives it units to kill	Claude 2026-11-06, line check: summoning feeds only an activated 1-damage ping
-n673	gwent	Redanian Secret Service, Kaedweni Revenant	Redanian Secret Service	Kaedweni Revenant	line	gives it units to kill	Claude 2026-11-06, line check: an activated 1-damage ping eats my summoned units
+n673	gwent	Redanian Secret Service, Kaedweni Revenant	Redanian Secret Service	Kaedweni Revenant	none		Kaptain 6 Nov 2026: putting my own units into play gives a pinger nothing to kill
 n674	gwent	Geralt: Professional, Wolfsbane	Geralt: Professional	Wolfsbane	line	its 1 damage kills what it sets to strength 1	Claude 2026-11-06, line check: a 1-damage ping kills a unit set to strength 1
 n675	gwent	Drakenborg, Redanian Secret Service	Drakenborg	Redanian Secret Service	none	puts it into play: its summon effect goes off	Claude 2026-11-06, line check: a card waiting only for a given keyword is fed by the giver once
 n676	gwent	Drakenborg, Redanian Secret Service	Drakenborg	Redanian Secret Service	none	does what it waits for or counts	Claude 2026-11-06, line check: one reason said once
@@ -678,4 +678,16 @@ n683	into_the_breach	Run: Rift Walkers (Sevastromo, Unfair)	Titan Fist	Seismic C
 n684	into_the_breach	Run: Rift Walkers (Sevastromo, Unfair)	Titan Fist	Artemis Artillery	line	Titan Fist moves enemy units, and Artemis Artillery acts on units in a line from it	Claude 2026-11-06, line check: a line from the card waits for where units stand (Kaptain ntb10)
 n685	gwent	Rage of the Sea: Fulmar rain ft. Otkell and Melusine	Sigrdrifa's Rite	Rage of the Sea	none	brings it back: its summon effect goes off	Claude 2026-11-06, line check: Rage of the Sea has no summon effect, its "can act again" is no Zeal (L17, L19)
 n686	gwent	Mobilization: NR Devotion Undead Army	Mobilization	Lyrian Arbalest	none	puts it into play: its summon effect goes off	Claude 2026-11-06, line check: Lyrian Arbalest has no summon effect (L17, L19)
-n687	gwent	Mobilization: NR Devotion Undead Army	Drakenborg	Vincent Meis	line	puts it into play: its summon effect goes off	Claude 2026-11-06, line check: Zeal is a unit put into play acts at once
+n687	gwent	Mobilization: NR Devotion Undead Army	Drakenborg	Vincent Meis	none		Kaptain 6 Nov 2026: Zeal is no summon effect; Drakenborg Locks what it summons
+n688	gwent	Fauve, Hamadryad	Fauve	Hamadryad	line	sets off its Symbiosis	Claude 2026-11-06, both texts read: Fauve plays a Nature card from the deck, Hamadryad has Symbiosis (keyword chain)
+n689	gwent	John Natalis, Battering Ram	John Natalis	Battering Ram	line	sets off its Resupply	Claude 2026-11-06, both texts read: John Natalis plays a Warfare card, Battering Ram has Resupply
+n690	gwent	Ferko the Sculptor, Sir Skewertooth	Ferko the Sculptor	Sir Skewertooth	line	sets off its Intimidate	Claude 2026-11-06, both texts read: Ferko plays a Crime, Sir Skewertooth has Intimidate
+n691	gwent	Shady Vendor, Imperial Diviner	Shady Vendor	Imperial Diviner	line	sets off its Assimilate	Claude 2026-11-06, both texts read: Shady Vendor creates and plays a Crime (not from the starting deck), Imperial Diviner has Assimilate
+n692	runeterra	Benemone, Ballistic Bot	Benemone	Ballistic Bot	line	sets off its Augment	Claude 2026-11-06, both texts read: Benemone creates 2 Pranks in hand, Ballistic Bot has Augment ("when you play a created card")
+n693	gwent	Mahakam Pass, Naiad Fledgling	Mahakam Pass	Naiad Fledgling	none		Claude 2026-11-06, both texts read: no Symbiosis card in the deck, so playing Tempering sets off nothing Naiad Fledgling waits for
+n694	gwent	Fauve, Koshchey	Fauve	Koshchey	none		Claude 2026-11-06, both texts read: Thrive goes off for any unit with more power, no narrow kind: playing a Nature card is no Thrive trigger
+n695	runeterra	Bladebound Berserker, Ballistic Bot	Bladebound Berserker	Ballistic Bot	none		Claude 2026-11-06, both texts read: Bladebound Berserker copies a spell onto itself (cast at once), no created card to play for Augment
+n696	runeterra	Iceborn Legacy, Silverwing Vanguard	Iceborn Legacy	Silverwing Vanguard	line	copies itself	Claude 2026-11-06, both texts read: Iceborn Legacy grants all allied copies of it +2|+2; Silverwing Vanguard summons an exact copy of itself
+n697	gwent	Lambert: Swordmaster, Kaedweni Revenant	Lambert: Swordmaster	Kaedweni Revenant	none	copies itself	Claude 2026-11-06, both texts read: Lambert damages the enemy's copies, never mine
+n698	gwent	Vilgefortz, Poor Fucking Infantry	Vilgefortz	Poor Fucking Infantry	none		Claude 2026-11-06, both texts read: Gwent Summon is not a play (glossary): Poor Fucking Infantry's Deploy does not go off when Vilgefortz summons it
+n699	gwent	Drakenborg, Poor Fucking Infantry	Drakenborg	Poor Fucking Infantry	none		Claude 2026-11-06, both texts read: Drakenborg summons and Locks it: nothing of it goes off

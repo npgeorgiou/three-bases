@@ -81,3 +81,25 @@ not taste. A case in cases/network.tsv written by Kaptain ("Kaptain <date>" in i
 - L24 (Kaptain, 3 Nov 2026) Everything that helps a champion's level-up condition (and the same in other games: a card that
   grows, levels or transforms when a condition is met) is a link, said "helps it level up". Gwen levels from dealing 10+
   damage, so more power for Gwen (Tybaulk) helps her level. (Tybaulk -> Gwen, Master Yi: n269, n387.)
+- L25 (Kaptain, 6 Nov 2026) A keyword that reacts to a narrow kind of card played (Gwent's Symbiosis: a Nature card; Resupply:
+  Warfare; Intimidate: Crime; Assimilate and Runeterra's Augment: a created card) is set off by a card whose own text makes or
+  plays such a card: it links to the cards with that keyword and, when one is in the deck, to cards waiting for the keyword to
+  go off (Mahakam Pass plays Tempering -> Naiad Fledgling: n545). A kind most cards are ("a unit with more power", Thrive) is
+  no trigger (L21). network.py keyword_chain_lines().
+- L26 (Kaptain, 6 Nov 2026) Help on "a unit and all its copies" (Voymir, Iceborn Legacy) links to a card that copies itself by
+  its own text (Kaedweni Revenant: n559); copies on the enemy side are no help (Lambert: Swordmaster). network.py copies_lines().
+- L27 (Kaptain, 6 Nov 2026) A keyword counts as a summon, play or trigger effect only where the game's glossary says it goes off
+  then (vocab.tsv). Gwent's Zeal only lets an Order be used the turn the unit is placed: no summon effect (Drakenborg -> Vincent
+  Meis: n553). Gwent's Summon is "not considered played": a Deploy does not go off when a unit is summoned (n698).
+- L28 (Kaptain, 6 Nov 2026) A card that Locks or Silences the unit it puts into play makes nothing of that unit go off: no line
+  for putting it into play (Drakenborg: n553-n555). Putting my own units into play gives a pinger nothing to kill (n548, n570).
+- L29 (Kaptain, 6 Nov 2026) What changes where units stand links with what acts on units by where they stand, in every game.
+  Changes: moving, pushing, pulling, swapping, and a card's text putting units at a place ("add a Rock here", "a DoomBot to each
+  other location"; said "puts your units there"). Acts by place: whole-lane, row or area effects, "here", "adjacent", "in front",
+  counts per lane, "each location", entry effects on what stands near (Opening Gambit "a nearby minion", On Reveal "your cards
+  here"), effects on the spaces that reach the units on them (Lightbender), numbers by distance (Dol Blathanna Bowman). Never a
+  line for two cards that only stand in the same lane (L2): one must change a position, the other care. No line: a unit moving
+  itself (L23), a unit put on a random space (Jaxi's corner), the card a placer makes itself (Frog Mating Season's Frog), a card
+  put where the need forbids it (Professor X), a put card without the keyword or name the need asks (White Tiger's Tiger for
+  Odin), a drawback ("-4 Power if your opponent has 4 cards here", Lizard; L5), sides as L9 says (Daemonic Lure moves enemies:
+  no help to Primus Fist's "nearby friendly minion"). network.py lines_of (placers, position needs), merge_places.

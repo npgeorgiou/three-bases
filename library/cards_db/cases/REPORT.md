@@ -1,216 +1,206 @@
-# Case tests: gwent
+# Case tests: marvel_snap
 
-Made by `cases/run.py gwent`.
-**155 of 186 cases pass.**
+Made by `cases/run.py marvel_snap`.
+**166 of 174 cases pass.**
+
+**Cases whose reason no line says any more (rewrite them): n465, n489, n490, n492, n530, n532, n534, n535, n536, n537, n541**
 
 
 ## Mechanics (expected cards from the texts)
 
 | case | question | expected | found | recall | extra | pass |
 |---|---|---|---|---|---|---|
-| mx01 | a trigger on another unit dying is other_death_trigger | 4 | 4 | 100% | 6 | yes |
-| mx02 | moving enemy units is forced_movement | 0 | 0 | 100% | 89 | yes |
-| mx03 | a plain draw is one form: zone deck_top, no pick top | 28 | 28 | 100% | 17 | yes |
-| mx10 | damage to the enemy player is Nexus damage (kinds kept, v30) | 0 | 0 | 100% | 51 | yes |
-| mx11 | moving or pushing units makes units move (positions change, v30) | 0 | 0 | 100% | 94 | yes |
-| mx12 | a unit that moves (onto a space) is the event's object, never its actor (N16, Sentry, v36, v38) | 0 | 0 | 100% | 6 | yes |
+| mx01 | a trigger on another unit dying is other_death_trigger | 0 | 0 | 100% | 10 | yes |
+| mx02 | moving enemy units is forced_movement | 1 | 1 | 100% | 48 | yes |
+| mx03 | a plain draw is one form: zone deck_top, no pick top | 16 | 16 | 100% | 15 | yes |
+| mx10 | damage to the enemy player is Nexus damage (kinds kept, v30) | 0 | 0 | 100% | 0 | yes |
+| mx11 | moving or pushing units makes units move (positions change, v30) | 1 | 1 | 100% | 56 | yes |
+| mx12 | a unit that moves (onto a space) is the event's object, never its actor (N16, Sentry, v36, v38) | 0 | 0 | 100% | 19 | yes |
 | mx13 | can't be targeted by spells: the cant is on the spells, the protected unit is "to" (N19, v37) | 0 | 0 | 100% | 0 | yes |
-| mx14 | a dead unit put into play is revive, never summon from the discard (N20, v37) | 0 | 0 | 100% | 15 | yes |
-| mx15 | a trigger that holds only "this turn" is an ability given to the player for this turn (v37, Duelyst) | 0 | 0 | 100% | 1 | yes |
-| mx13 | an effect on the creature opposing it is about lanes (concept lanes from same_lane, v38) | 0 | 0 | 100% | 0 | yes |
+| mx14 | a dead unit put into play is revive, never summon from the discard (N20, v37) | 0 | 0 | 100% | 16 | yes |
+| mx15 | a trigger that holds only "this turn" is an ability given to the player for this turn (v37, Duelyst) | 0 | 0 | 100% | 4 | yes |
+| mx13 | an effect on the creature opposing it is about lanes (concept lanes from same_lane, v38) | 0 | 0 | 100% | 396 | yes |
 | mx14 | a strike on the spaces beside the opposing one reaches other lanes (cross_lane, v38) | 0 | 0 | 100% | 0 | yes |
 | mx15 | within a circuit is a formation (link_formation, v38) | 0 | 0 | 100% | 0 | yes |
-| mx16 | more or faster base resource (base_resource_gain, v38) | 0 | 0 | 100% | 0 | yes |
-| gw01 | cards that use, give or care about Deploy | 591 | 591 | 100% | 500 | yes |
-| gw02 | cards that use, give or care about Initiative | 5 | 5 | 100% | 0 | yes |
-| gw03 | cards that use, give or care about Order | 351 | 349 | 99% | 57 | yes |
-| gw04 | cards that use, give or care about Melee | 142 | 141 | 99% | 27 | yes |
-| gw05 | cards that use, give or care about Drain | 2 | 2 | 100% | 0 | yes |
-| gw06 | cards that use, give or care about Ranged | 128 | 126 | 98% | 28 | yes |
-| gw07 | cards that use, give or care about Reveal | 6 | 6 | 100% | 0 | yes |
-| gw08 | cards that use, give or care about Lineage | 4 | 4 | 100% | 0 | yes |
-| gw09 | cards that use, give or care about Timer | 16 | 16 | 100% | 0 | yes |
-| gw10 | cards that use, give or care about Spawn | 256 | 248 | 97% | 108 | yes |
-| gw11 | cards that use, give or care about Zeal | 106 | 106 | 100% | 15 | yes |
-| gw12 | cards that use, give or care about Cooldown | 77 | 74 | 96% | 0 | yes |
-| gw13 | cards that use, give or care about Adrenaline | 31 | 30 | 97% | 0 | yes |
-| gw14 | cards that use, give or care about Summon | 72 | 72 | 100% | 156 | yes |
-| gw15 | cards that use, give or care about Charge | 26 | 25 | 96% | 36 | yes |
-| gw16 | cards that use, give or care about Cataclysm | 5 | 5 | 100% | 1 | yes |
-| gw17 | cards that use, give or care about Heal | 21 | 20 | 95% | 0 | yes |
-| gw18 | cards that use, give or care about Banish | 33 | 33 | 100% | 25 | yes |
-| gw19 | cards that use, give or care about Doomed | 113 | 112 | 99% | 11 | yes |
-| gw20 | cards that use, give or care about Storm | 11 | 11 | 100% | 1 | yes |
-| gw21 | cards that use, give or care about Veil | 38 | 37 | 97% | 0 | yes |
-| gw22 | cards that use, give or care about Frost | 19 | 19 | 100% | 1 | yes |
-| gw23 | cards that use, give or care about Fog | 2 | 2 | 100% | 1 | yes |
-| gw24 | cards that use, give or care about Rain | 14 | 14 | 100% | 1 | yes |
-| gw25 | cards that use, give or care about Bloodthirst | 17 | 17 | 100% | 0 | yes |
-| gw26 | cards that use, give or care about Lock | 29 | 29 | 100% | 4 | yes |
-| gw27 | cards that use, give or care about Formation | 17 | 17 | 100% | 0 | yes |
-| gw28 | cards that use, give or care about Inspired | 11 | 11 | 100% | 0 | yes |
-| gw29 | cards that use, give or care about Bleeding | 48 | 48 | 100% | 1 | yes |
-| gw30 | cards that use, give or care about Disloyal | 19 | 19 | 100% | 0 | yes |
-| gw31 | cards that use, give or care about Coin | 21 | 21 | 100% | 114 | yes |
-| gw32 | cards that use, give or care about Patience | 10 | 10 | 100% | 14 | yes |
-| gw33 | cards that use, give or care about Deathwish | 43 | 43 | 100% | 13 | yes |
-| gw34 | cards that use, give or care about Armor | 65 | 65 | 100% | 17 | yes |
-| gw35 | cards that use, give or care about Crew | 12 | 12 | 100% | 0 | yes |
-| gw36 | cards that use, give or care about Resupply | 6 | 6 | 100% | 0 | yes |
-| gw37 | cards that use, give or care about Vitality | 35 | 35 | 100% | 0 | yes |
-| gw38 | cards that use, give or care about Barricade | 21 | 21 | 100% | 0 | yes |
-| gw39 | cards that use, give or care about Exposed | 9 | 9 | 100% | 1 | yes |
-| gw40 | cards that use, give or care about Grace | 13 | 13 | 100% | 0 | yes |
-| gw41 | cards that use, give or care about Shield | 28 | 28 | 100% | 0 | yes |
-| gw42 | cards that use, give or care about Devotion | 28 | 28 | 100% | 0 | yes |
-| gw43 | cards that use, give or care about Purify | 28 | 28 | 100% | 0 | yes |
-| gw44 | cards that use, give or care about Immunity | 21 | 21 | 100% | 0 | yes |
-| gw45 | cards that use, give or care about Consume | 25 | 25 | 100% | 0 | yes |
-| gw46 | cards that use, give or care about Seize | 15 | 15 | 100% | 0 | yes |
-| gw47 | cards that use, give or care about Thrive | 17 | 17 | 100% | 0 | yes |
-| gw48 | cards that use, give or care about Infused | 2 | 2 | 100% | 26 | yes |
-| gw49 | cards that use, give or care about Dominance | 9 | 9 | 100% | 0 | yes |
-| gw50 | cards that use, give or care about Bonded | 28 | 28 | 100% | 0 | yes |
-| gw51 | cards that use, give or care about Resilience | 40 | 40 | 100% | 0 | yes |
-| gw52 | cards that use, give or care about Deathblow | 41 | 41 | 100% | 0 | yes |
-| gw53 | cards that use, give or care about Ambush | 8 | 8 | 100% | 1 | yes |
-| gw54 | cards that use, give or care about Spring | 8 | 8 | 100% | 1 | yes |
-| gw55 | cards that use, give or care about Discard | 10 | 10 | 100% | 0 | yes |
-| gw56 | cards that use, give or care about Veteran | 11 | 11 | 100% | 0 | yes |
-| gw57 | cards that use, give or care about Berserk | 13 | 13 | 100% | 0 | yes |
-| gw58 | cards that use, give or care about Echo | 14 | 14 | 100% | 0 | yes |
-| gw59 | cards that use, give or care about Conspiracy | 5 | 5 | 100% | 0 | yes |
-| gw60 | cards that use, give or care about Flanking | 9 | 9 | 100% | 0 | yes |
-| gw61 | cards that use, give or care about Create | 44 | 44 | 100% | 69 | yes |
-| gw62 | cards that use, give or care about Poison | 31 | 31 | 100% | 3 | yes |
-| gw63 | cards that use, give or care about Predator | 4 | 4 | 100% | 0 | yes |
-| gw64 | cards that use, give or care about Symbiosis | 9 | 9 | 100% | 0 | yes |
-| gw65 | cards that use, give or care about Might | 5 | 5 | 100% | 0 | yes |
-| gw66 | cards that use, give or care about Duel | 4 | 4 | 100% | 0 | yes |
-| gw67 | cards that use, give or care about Harmony | 15 | 15 | 100% | 0 | yes |
-| gw68 | cards that use, give or care about Dragon's Dream | 1 | 1 | 100% | 1 | yes |
-| gw69 | cards that use, give or care about Blood Moon | 2 | 2 | 100% | 1 | yes |
-| gw70 | cards that use, give or care about Assimilate | 9 | 9 | 100% | 0 | yes |
-| gw71 | cards that use, give or care about Tribute | 32 | 32 | 100% | 46 | yes |
-| gw72 | cards that use, give or care about Profit | 52 | 52 | 100% | 46 | yes |
-| gw73 | cards that use, give or care about Fee | 48 | 47 | 98% | 31 | yes |
-| gw74 | cards that use, give or care about Bounty | 19 | 19 | 100% | 0 | yes |
-| gw75 | cards that use, give or care about Intimidate | 11 | 11 | 100% | 0 | yes |
-| gw76 | cards that use, give or care about Insanity | 6 | 6 | 100% | 0 | yes |
-| gw77 | cards that use, give or care about Hoard | 11 | 11 | 100% | 1 | yes |
-| gw78 | cards that use, give or care about Defender | 6 | 6 | 100% | 0 | yes |
-| gw79 | cards that use, give or care about Rupture | 2 | 2 | 100% | 0 | yes |
-| gw80 | cards that use, give or care about Clash | 3 | 3 | 100% | 3 | yes |
-| gw81 | cards that use, give or care about Sabbath | 7 | 7 | 100% | 0 | yes |
-| gw82 | cards that use, give or care about Vice | 3 | 3 | 100% | 0 | yes |
-| gw83 | cards that use, give or care about Counter | 20 | 20 | 100% | 0 | yes |
-| gw84 | cards that use, give or care about Reset | 13 | 13 | 100% | 21 | yes |
-| gw85 | cards that use, give or care about Spying | 23 | 22 | 96% | 28 | yes |
+| mx16 | more or faster base resource (base_resource_gain, v38) | 0 | 0 | 100% | 35 | yes |
+| ms04 | limits what can be played at a location (play_restriction) | 15 | 15 | 100% | 23 | yes |
 
 ## Combos (the enabler must set off the payoff)
 
 | case | enabler | payoff | why | found as | pass |
 |---|---|---|---|---|---|
-| cgw01 | Koshchey | Caranthir Ar-Feiniel | a large amount of points | state: created | yes |
-| cgw02 | Joachim de Wett | Coup de Grâce | strong plays always available | keyword: Spying | yes |
-| cgw03 | Iris von Everec | Iris' Companions | thinning for Round 3 | line: is the Iris von Everec it names | yes |
+| cms01 | M.O.D.O.K. | Hela | M.O.D.O.K. discards the hand, Hela brings the discarded cards back | state: discarded | yes |
+| cms02 | Swarm | Morbius | Morbius grows per discard; Swarm returns after it is discarded | line: comes back after it is discarded, to be discarded again | yes |
+| cms03 | Apocalypse | Morbius | Morbius grows per discard; Apocalypse returns after it is discarded | line: comes back after it is discarded, to be discarded again | yes |
+| cms04 | Wong | Odin | Wong doubles Odin's On Reveal | line: plays it again | yes |
+| cms05 | Odin | Ironheart | Odin repeats her power boost | trigger keyword: On Reveal | yes |
+| cms06 | Odin | Black Panther | Odin repeats his power boost | trigger keyword: On Reveal | yes |
+| cms07 | Storm | White Tiger | White Tiger still places a card in the flooded location | line: stops cards being played, but a summon is not played: it sti | yes |
+| cms08 | Storm | Doctor Doom | Doctor Doom still places cards in the flooded location | line: stops cards being played, but a summon is not played: it sti | yes |
+| cms09 | Brood | Wolfsbane | Brood fills a location, Wolfsbane gains power as the fourth card | count: unit | yes |
+| cms10 | Moon Girl | Devil Dinosaur | the doubled hand boosts Devil Dinosaur | line: fills your hand | yes |
+| cms13 | Zero | Titania | Zero removes her drawback | is: playing Zero is a played the payoff waits for | yes |
+| cms14 | Zero | Ebony Maw | Zero removes his drawback | line: silences it: its drawback is gone | yes |
+| cms15 | Sauron | Titania | Sauron removes her drawback | is: playing Sauron is a played the payoff waits for | yes |
+| cms16 | Sauron | Ebony Maw | Sauron removes his drawback | line: silence | yes |
+| cms20 | Carnage | Nova | Carnage destroys Nova, whose death buffs your cards | event: kill -> dies | yes |
+| cms21 | Ant Man | Angela | points in the third location | is: playing Ant Man is a played the payoff waits for | yes |
+| cms22 | Doctor Octopus | Mojo | +6 when the spot is empty | state: moves | yes |
+| cms23 | Wave | Death | the deck is built around the two | line: makes it cheaper | yes |
 
 ## Region identity (signature, splash, archetype)
 
 | case | region | kind | mechanic | need | found | pass |
 |---|---|---|---|---|---|---|
-| rgw01 | Northern Realms | signature (library) | boosting friendly units | 5 | 96 | yes |
-| rgw02 | Northern Realms | signature (library) | Zeal | 5 | 48 | yes |
-| rgw03 | Northern Realms | signature (library) | Order abilities | 5 | 108 | yes |
-| rgw04 | Nilfgaard | signature (library) | locking units | 5 | 12 | yes |
-| rgw05 | Nilfgaard | signature (library) | spying on enemy hands | 5 | 12 | yes |
-| rgw06 | Nilfgaard | signature (library) | stealing enemy units | 5 | 9 | yes |
-| rgw07 | Nilfgaard | signature (library) | Spies on the opponent's board | 5 | 28 | yes |
-| rgw08 | Nilfgaard | signature (library) | playing cards from the opponent's deck | 5 | 10 | yes |
-| rgw09 | Monster | signature (library) | Consume devours weaker units | 5 | 29 | yes |
-| rgw10 | Monster | signature (library) | Deathwish | 5 | 27 | yes |
-| rgw11 | Monster | signature (library) | highest value on board | 5 | 22 | yes |
-| rgw12 | Monster | signature (library) | weather | 5 | 15 | yes |
-| rgw13 | Scoiatael | signature (library) | traps | 5 | 9 | yes |
-| rgw14 | Scoiatael | signature (library) | ranged attacks | 5 | 7 | yes |
-| rgw15 | Scoiatael | signature (library) | mobility | 5 | 18 | yes |
-| rgw16 | Scoiatael | signature (library) | many small damage instances | 5 | 26 | yes |
-| rgw17 | Scoiatael | signature (library) | playing cards straight from the deck | 5 | 10 | yes |
-| rgw18 | Skellige | signature (library) | Berserk | 5 | 38 | yes |
-| rgw19 | Skellige | signature (library) | damaging itself or allies for bonuses | 5 | 26 | yes |
-| rgw20 | Skellige | signature (library) | reviving from the graveyard | 5 | 13 | yes |
-| rgw21 | Skellige | signature (library) | damaging units many ways | 5 | 107 | yes |
-| rgw22 | Syndicate | signature (library) | coins spent on effects | 5 | 21 | yes |
-| rgw23 | Nilfgaard | archetype (library) | control and counterplay | 3 | 24 | yes |
-| rgw24 | Nilfgaard | archetype (library) | limiting the opponent's options | 3 | 14 | yes |
-| rgw25 | Monster | archetype (library) | swarm and devour | 3 | 71 | yes |
-| rgw26 | Monster | archetype (library) | consume and Deathwish | 3 | 29 | yes |
-| rgw27 | Scoiatael | archetype (library) | traps and ambush | 3 | 9 | yes |
-| rgw28 | Skellige | archetype (library) | resurrection | 3 | 14 | yes |
-| rgw29 | Skellige | archetype (library) | aggression | 3 | 53 | yes |
-| rgw30 | Syndicate | archetype (library) | coin economy | 3 | 132 | yes |
 
 ## Guide decks (the explanation must say what the guide says)
 
 | case | deck | must say | missing | pass |
 |---|---|---|---|---|
-| dgw01 | Nature's Gift: Devotion Symbiosis Good Version | mahakam pass. use it: naiad fledgling;mahakam pass. use it: naiad pondkeeper | mahakam pass. use it: naiad fledgling, mahakam pass. use it: naiad pondkeeper | NO |
-| dgw02 | Mobilization: NR Devotion Undead Army | any units are killed: made by bloody baron, botchling, forbidden magic;sabrina glevissig. use it: forbidden magic, kaedweni revenant;your units enter play: made by drakenborg, forbidden magic, poor fucking infantry, redanian secret service;redanian secret service. use it: drakenborg;your units get a keyword or status: made by amphibious assault, bloody baron, crystal skull, drakenborg, griffin witcher, kerack marine, margarita laux-antille, poor fucking infantry, princess adda;voymir. use it: redanian secret service;any units have their stats changed: made by amphibious assault, botchling, crystal skull, drakenborg;voymir. use it: bloody baron;any units are killed: made by bloody baron, botchling, forbidden magic, griffin witcher, kaedweni revenant, philippa: blind fury, redanian archer, sabrina glevissig;any units are killed: made by bloody baron, botchling, forbidden magic, griffin witcher, kaedweni revenant, philippa: blind fury;cursed cards: are or make them: botchling;vincent meis. care about them: princess adda;kerack marine. use it: kaedweni revenant;poor fucking infantry. use it: kaedweni revenant;redanian secret service. use it: kaedweni revenant;drakenborg. use it: vincent meis;drakenborg. use it: margarita laux-antille;drakenborg. use it: botchling;kaedweni revenant. use it: vincent meis;redanian archer. use it: vincent meis;voymir. use it: kaedweni revenant;voymir. use it: redanian archer;vernon roche. use it: kaedweni revenant | kerack marine. use it: kaedweni revenant, poor fucking infantry. use it: kaedweni revenant, redanian secret service. use it: kaedweni revenant, drakenborg. use it: vincent meis, drakenborg. use it: margarita laux-antille, drakenborg. use it: botchling, kaedweni revenant. use it: vincent meis, redanian archer. use it: vincent meis, voymir. use it: kaedweni revenant, voymir. use it: redanian archer, vernon roche. use it: kaedweni revenant | NO |
-| dgw03 | Shieldwall: Roegner Ale Damsel | your units have their stats changed: made by ale of the ancestors;target practice. use it: knight-errant;ale of the ancestors. use it: prince anséis | ale of the ancestors. use it: prince anséis | NO |
-| dgw04 | Pincer Maneuver: Kimbolt's Temple Siege | temple of melitele: congregation. use it: prince anséis | temple of melitele: congregation. use it: prince anséis | NO |
-| dgw05 | White Frost: White Frost-EZ pro rank | eredin bréacc glas. use it: caranthir: golden child | eredin bréacc glas. use it: caranthir: golden child | NO |
-| dgw06 | Arachas Swarm: Tatterwing - 1 prov left for good luck | wild hunt cards: are or make them: ge'els;red riders. care about them: lara dorren | - | yes |
-| dgw07 | Enslave: Damage Enslave With Enforcers (+10 -1) | enemy units get spying: made by amnesty, emhyr var emreis, enslave, fercart;treason. use it: emhyr var emreis, impera enforcers;any units are killed: made by coup de grâce, fire scorpion, hefty helge, impera enforcers, stefan skellen;treason. use it: coup de grâce, impera enforcers;spells you play: amnesty, battle preparation, battle stations!, buhurt;treason. set off: fercart;battle stations!. use it: impera enforcers;joachim de wett. use it: coup de grâce | battle stations!. use it: impera enforcers, joachim de wett. use it: coup de grâce | NO |
-| dgw08 | Tactical Decision: OP GN HyperThin | your units move: made by blightmaker, cursed scroll, doadrick leumaerts;maxii van dekkar. use it: albrich;your units move: made by blightmaker, cursed scroll, doadrick leumaerts, fisher king, maxii van dekkar;you draw cards: made by cursed scroll, doadrick leumaerts;vicovaro novice. use it: snowdrop;strays of spalla. use it: albrich;summoning circle. use it: imperial golem | strays of spalla. use it: albrich, summoning circle. use it: imperial golem | NO |
-| dgw09 | Blood Money: Classical Bounty with Tamara, Drill | you gain the second resource (bones): made by blood money, caleb menge, confession extractor, conjurer's candle, scapegoat, slander, the brute, tunnel drill, vivaldi bank;witch hunter executioner. use it: caleb menge, conjurer's candle;royal decree. use it: tamara strenger | royal decree. use it: tamara strenger | NO |
-| dgw10 | Onslaught: Pirates attack - Endless Voyage | vabjorn. use it: raiding fleet;vabjorn. use it: abordage | vabjorn. use it: raiding fleet, vabjorn. use it: abordage | NO |
-| dgw11 | Rage of the Sea: Fulmar rain ft. Otkell and Melusine | enemy units or players take damage: made by fulmar, little havfrue, melusine;torrential rain. use it: messenger of the sea;enemy units or players take damage: made by fulmar, little havfrue, melusine, melusine cultist, rage of the sea, rioghan the undying, svalblod priest, tempest, torrential rain | - | yes |
-| dgw12 | Patricidal Fury: RnR Seagulls Sove Compass | seagull. use it: ragh nar roog;hammond. use it: ragh nar roog | seagull. use it: ragh nar roog, hammond. use it: ragh nar roog | NO |
+| dms01 | Self-destruction Deadpool | your units die: made by carnage, deathlok, killmonger, venom;get value when they die: bucky barnes, deadpool | - | yes |
+| dms02 | Sera Mystique summons | pays for big cards (more mana, cheaper cards): sera | - | yes |
+| dms04 | Deathpool self-destruction | your units die: made by carnage, deadpool, deathlok, killmonger, venom;use it: death, knull | - | yes |
+| dms05 | Sera Zero summons | pays for big cards (more mana, cheaper cards): sera;use it: taskmaster | - | yes |
+| dms06 | Patriots, drones and clones | onslaught makes these cards' effects happen again: blue marvel, ka-zar, patriot;puts extra units into play: debrii, mister sinister, squirrel girl, ultron | - | yes |
+| dms07 | Wakanda Forever | odin makes these cards' effects happen again: black panther | - | yes |
+| dms08 | Knull Galactus | your units die: made by destroyer, galactus;use it: death, knull | - | yes |
+| dms09 | High Evo Lockjaw | your units get on reveal: made by high evolutionary, lockjaw | - | yes |
+| dms10 | Surfin' Sebastian | use it: sebastian shaw | - | yes |
+| dms11 | Hidden Hela discard | use it: hela | - | yes |
+| dms12 | Hand Size Heroes | cards are created: made by agent coulson, hawkeye kate bishop, iron patriot, maria hill, snowguard | - | yes |
 
 ## Deck networks (a line must be there, or must not)
 
 | case | deck | from | to | expect | found | pass |
 |---|---|---|---|---|---|---|
-| n545 | Nature's Gift: Devotion Symbiosis Good Version | Mahakam Pass | Naiad Fledgling | line  | - | NO |
-| n546 | Nature's Gift: Devotion Symbiosis Good Version | Mahakam Pass | Naiad Pondkeeper | line  | - | NO |
-| n547 | Mobilization: NR Devotion Undead Army | Kerack Marine | Kaedweni Revenant | line  | - | NO |
-| n548 | Mobilization: NR Devotion Undead Army | Poor Fucking Infantry | Kaedweni Revenant | line  | - | NO |
-| n549 | Mobilization: NR Devotion Undead Army | Forbidden Magic | Kaedweni Revenant | line  | puts: summons | yes |
-| n550 | Mobilization: NR Devotion Undead Army | Redanian Secret Service | Drakenborg | line  | type: puts your units into play | yes |
-| n551 | Mobilization: NR Devotion Undead Army | Redanian Secret Service | Kaedweni Revenant | line  | - | NO |
-| n552 | Mobilization: NR Devotion Undead Army | Princess Adda | Redanian Secret Service | line  | waits: has Immunity | yes |
-| n553 | Mobilization: NR Devotion Undead Army | Drakenborg | Vincent Meis | line  | - | NO |
-| n554 | Mobilization: NR Devotion Undead Army | Drakenborg | Margarita Laux-Antille | line  | - | NO |
-| n555 | Mobilization: NR Devotion Undead Army | Drakenborg | Botchling | line  | - | NO |
-| n556 | Mobilization: NR Devotion Undead Army | Drakenborg | Bloody Baron | line  | type: changes units' stats: Bloody Baron gives them Bleeding | yes |
-| n557 | Mobilization: NR Devotion Undead Army | Kaedweni Revenant | Vincent Meis | line  | - | NO |
-| n558 | Mobilization: NR Devotion Undead Army | Redanian Archer | Vincent Meis | line  | - | NO |
-| n559 | Mobilization: NR Devotion Undead Army | Voymir | Kaedweni Revenant | line  | - | NO |
-| n560 | Mobilization: NR Devotion Undead Army | Voymir | Redanian Archer | line  | type: gives it Armor for its effect | yes |
-| n561 | Mobilization: NR Devotion Undead Army | Sabrina Glevissig | Kaedweni Revenant | line  | - | NO |
-| n562 | Mobilization: NR Devotion Undead Army | Philippa: Blind Fury | Kaedweni Revenant | line  | - | NO |
-| n563 | Mobilization: NR Devotion Undead Army | Botchling | Princess Adda | line  | waits: is a Cursed whose summoning sets off its effect | yes |
-| n564 | Mobilization: NR Devotion Undead Army | Vernon Roche | Kaedweni Revenant | line  | - | NO |
-| n565 | Shieldwall: Roegner Ale Damsel | Ale of the Ancestors | Knight-Errant | line  | - | NO |
-| n566 | Shieldwall: Roegner Ale Damsel | Ale of the Ancestors | Prince Anséis | line  | type: changes its stats for its effect | yes |
-| n567 | Pincer Maneuver: Kimbolt's Temple Siege | Temple of Melitele: Congregation | Prince Anséis | line  | type: changes its stats for its effect | yes |
-| n568 | White Frost: White Frost-EZ pro rank | Eredin Bréacc Glas | Caranthir: Golden Child | line  | type: damages units or players | yes |
-| n569 | Arachas Swarm: Tatterwing - 1 prov left for good luck | Ge'els | Lara Dorren | line  | puts: puts it into play from the deck; also triggers: plays it: its effect goes  | yes |
-| n570 | Enslave: Damage Enslave With Enforcers (+10 -1) | Battle Stations! | Impera Enforcers | line  | - | NO |
-| n571 | Enslave: Damage Enslave With Enforcers (+10 -1) | Fercart | Impera Enforcers | line  | type: makes enemy units get Spying | yes |
-| n572 | Enslave: Damage Enslave With Enforcers (+10 -1) | Stefan Skellen | Impera Enforcers | line  | - | NO |
-| n573 | Enslave: Damage Enslave With Enforcers (+10 -1) | Buhurt | Fercart | line  | waits: is a spell whose playing sets off its effect | yes |
-| n574 | Enslave: Damage Enslave With Enforcers (+10 -1) | Joachim de Wett | Coup de Grâce | line  | type: has Spying | yes |
-| n575 | Tactical Decision: OP GN HyperThin | Doadrick Leumaerts | Albrich | line  | waits: moves it for its effect | yes |
-| n576 | Tactical Decision: OP GN HyperThin | Maxii van Dekkar | Albrich | line  | waits: moves it for its effect | yes |
-| n577 | Tactical Decision: OP GN HyperThin | Strays of Spalla | Albrich | line  | - | NO |
-| n578 | Tactical Decision: OP GN HyperThin | Summoning Circle | Imperial Golem | line  | - | NO |
-| n579 | Tactical Decision: OP GN HyperThin | Doadrick Leumaerts | Snowdrop | line  | waits: makes you draw cards | yes |
-| n580 | Blood Money: Classical Bounty with Tamara, Drill | Vivaldi Bank | Conjurer's Candle | line  | type: lets you gain the second resource (Bones) | yes |
-| n581 | Blood Money: Classical Bounty with Tamara, Drill | Royal Decree | Tamara Strenger | line  | waits: plays it: its effect goes off | yes |
-| n582 | Onslaught: Pirates attack - Endless Voyage | Vabjorn | Raiding Fleet | line  | puts: puts it into play from the deck | yes |
-| n583 | Onslaught: Pirates attack - Endless Voyage | Vabjorn | Abordage | line  | puts: puts it into play from the deck | yes |
-| n584 | Rage of the Sea: Fulmar rain ft. Otkell and Melusine | Melusine | Messenger of the Sea | line  | waits: damages enemy units or players | yes |
-| n585 | Rage of the Sea: Fulmar rain ft. Otkell and Melusine | Torrential Rain | Messenger of the Sea | line  | waits: damages enemy units or players | yes |
-| n586 | Patricidal Fury: RnR Seagulls Sove Compass | Seagull | Ragh Nar Roog | line  | - | NO |
-| n587 | Patricidal Fury: RnR Seagulls Sove Compass | Hammond | Ragh Nar Roog | line  | - | NO |
+| n396 | Hawkeye Kate Bishop, Acid Arrow | Hawkeye Kate Bishop | Acid Arrow | line creates | puts: creates | yes |
+| n397 | Hawkeye Kate Bishop, Marrow | Hawkeye Kate Bishop | Marrow | none  | - | yes |
+| n399 | Daken, Muramasa Shard | Daken | Muramasa Shard | line creates | puts: creates; also enables: is the Daken it names | yes |
+| n400 | Agamotto, Bolts of Balthakk | Agamotto | Bolts of Balthakk | line creates | puts: creates | yes |
+| n401 | Zombie Black Cat, Wolverine | Zombie Black Cat | Wolverine | line discard | waits: makes you discard cards | yes |
+| n402 | Korg, Rock | Korg | Rock | none  | - | yes |
+| n403 | Vampire Thanos | Thanos Fractured Frontier | Power Shot | line creates | puts: creates | yes |
+| n404 | Symbiote Galactus | Hawkeye Kate Bishop | Grapple Arrow | line creates | puts: creates | yes |
+| n409 | Majestic Wingbeat, Zombie Galacti | Majestic Wingbeat | Zombie Galacti | none  | - | yes |
+| n411 | Black Widow, Widow's Bite | Black Widow | Widow's Bite | none  | - | yes |
+| n413 | M.O.D.O.K., Hela | M.O.D.O.K. | Hela | line  | type: makes you discard cards | yes |
+| n414 | Killmonger, Hela | Killmonger | Hela | none  | - | yes |
+| n415 | Lady Sif, Ghost Rider | Lady Sif | Ghost Rider | line  | type: makes you discard cards | yes |
+| n416 | Carnage, Phoenix Force | Carnage | Phoenix Force | line  | type: makes your units die: Phoenix Force brings them back | yes |
+| n417 | Jane Foster Fractured Frontier, Fin Fang Foom | Jane Foster Fractured Frontier | Fin Fang Foom | none  | - | yes |
+| n418 | The Grand Design, Zombie Giant-Man | The Grand Design | Zombie Giant-Man | none  | - | yes |
+| n419 | Venus, Zombie Giant-Man | Venus | Zombie Giant-Man | none  | - | yes |
+| n420 | Zombie Mister Fantastic, Zombie Giant-Man | Zombie Mister Fantastic | Zombie Giant-Man | line  | stronger: more power | yes |
+| n421 | Excalibur, Iron Man | Excalibur | Iron Man | line  | stronger: more power | yes |
+| n422 | Astral Projection, Acid Arrow | Astral Projection | Acid Arrow | none  | - | yes |
+| n423 | Toxin, Acid Arrow | Toxin | Acid Arrow | none  | - | yes |
+| n424 | Beast, Absorbing Man | Beast | Absorbing Man | line  | type: is a unit with On Reveal it counts or asks for | yes |
+| n425 | Ultron Mind Stone, Absorbing Man | Ultron Mind Stone | Absorbing Man | line  | stronger: plays it again | yes |
+| n426 | Onslaught, J. Jonah Jameson | Onslaught | J. Jonah Jameson | none  | - | yes |
+| n427 | Caiera, Broodling | Caiera | Broodling | none  | - | yes |
+| n428 | Joaquin Torres Falcon II, Electro | Joaquin Torres Falcon II | Electro | line  | repeats: repeats its On Reveal effects | yes |
+| n431 | Agent 13, King Eitri | Agent 13 | King Eitri | none  | - | yes |
+| n432 | Agent 13, Devil Dinosaur | Agent 13 | Devil Dinosaur | line  | waits: fills your hand | yes |
+| n433 | Araña, Magus | Araña | Magus | none  | - | yes |
+| n434 | Araña, Lancelot | Araña | Lancelot | line  | type: changes your units' stats; also makes stronger: does what it waits for or  | yes |
+| n435 | Kid Omega, Bucky Barnes | Kid Omega | Bucky Barnes | line  | waits: kills it for its death effect | yes |
+| n436 | Kid Omega, Elixir | Kid Omega | Elixir | line  | type: makes your units die: Elixir brings them back | yes |
+| n437 | Jocasta, Awesome Andy | Jocasta | Awesome Andy | line  | waits: makes this happen: activated | yes |
+| n438 | Attuma, Death Fractured Frontier | Attuma | Death Fractured Frontier | line  | type: makes your units die: Death Fractured Frontier brings them back | yes |
+| n439 | Doctor Strange, Danger | Doctor Strange | Danger | none  | type: Doctor Strange moves Danger, and Danger acts on units in its lane | NO |
+| n440 | Ghost-Spider, Drax | Ghost-Spider | Drax | none  | type: Ghost-Spider moves Drax, and Drax acts on units in its lane | NO |
+| n441 | Blink, Moonstone | Blink | Moonstone | none  | type: Blink moves your units, and Moonstone acts on units in its lane | NO |
+| n442 | Doctor Octopus, Pizza Slice | Doctor Octopus | Pizza Slice | none  | type: Doctor Octopus moves enemy units, and Pizza Slice acts on units in its lan | NO |
+| n443 | Angel, Hydra Stomper | Angel | Hydra Stomper | line  | type: makes your units move | yes |
+| n444 | Herbie Program 01, Wiccan | Herbie Program 01 | Wiccan | none  | - | yes |
+| n445 | Ghost-Spider, Galactus | Ghost-Spider | Galactus | none  | type: Ghost-Spider moves your units, and Galactus acts on units in its lane | NO |
+| n446 | Djinn, Jim Hammond Human Torch | Djinn | Jim Hammond Human Torch | line  | type: lets you gain mana | yes |
+| n447 | Beta Ray Bill, Gorgon | Beta Ray Bill | Gorgon | none  | - | yes |
+| n448 | Doctor Octopus, Dagger | Doctor Octopus | Dagger | none  | type: Doctor Octopus moves enemy units, and Dagger acts on units in its lane | NO |
+| n449 | Aero, Armor | Aero | Armor | none  | type: Aero moves enemy units, and Armor acts on units in its lane | NO |
+| n450 | Moira X, Quinjet | Moira X | Quinjet | line  | type: creates cards | yes |
+| n451 | Agent Venom, Wolverine Horseman of War | Agent Venom | Wolverine Horseman of War | none  | - | yes |
+| n452 | Agent Venom, Elder Dragon of the Moon | Agent Venom | Elder Dragon of the Moon | none  | - | yes |
+| n453 | Agent Venom, Gilgamesh | Agent Venom | Gilgamesh | none  | - | yes |
+| n454 | America Chavez, Ares | America Chavez | Ares | line more power | stronger: more power | yes |
+| n455 | Sera, Mystique | Sera | Mystique | line a unit with Ongoing | type: is a unit with Ongoing it counts or asks for | yes |
+| n456 | Mojo, Mystique | Mojo | Mystique | line a unit with Ongoing | type: is a unit with Ongoing it counts or asks for | yes |
+| n457 | Ant Man, Mystique | Ant Man | Mystique | line a unit with Ongoing | type: is a unit with Ongoing it counts or asks for | yes |
+| n458 | Patriot, Mystique | Patriot | Mystique | line a unit with Ongoing | type: is a unit with Ongoing it counts or asks for | yes |
+| n459 | Wong, Mystique | Wong | Mystique | line a unit with Ongoing | type: is a unit with Ongoing it counts or asks for; also makes stronger: plays i | yes |
+| n460 | Onslaught, Blue Marvel | Onslaught | Blue Marvel | line repeats its effects | repeats: repeats its effects | yes |
+| n461 | Okoye, Black Panther | Okoye | Black Panther | line gives it more power | stronger: gives it more power | yes |
+| n462 | Nakia, Black Panther | Nakia | Black Panther | line gives it more power | stronger: gives it more power | yes |
+| n463 | Wong, Black Panther | Wong | Black Panther | line plays it again | stronger: plays it again | yes |
+| n464 | Odin, Black Panther | Odin | Black Panther | line repeats its effects | repeats: repeats its effects; also repeats its On Reveal effects | yes |
+| n465 | Okoye, Zabu | Okoye | Zabu | none more power to any card | - | yes |
+| n466 | Galactus, Knull | Galactus | Knull | line makes units die | type: makes units die | yes |
+| n467 | Galactus, Death | Galactus | Death | line makes units die | cheaper: makes units die | yes |
+| n468 | Destroyer, Knull | Destroyer | Knull | line makes units die | type: makes units die | yes |
+| n469 | Destroyer, Death | Destroyer | Death | line makes units die | cheaper: makes units die | yes |
+| n470 | Victoria Hand, Mystique | Victoria Hand | Mystique | line is a unit with Ongoing it counts or asks for | type: is a unit with Ongoing it counts or asks for | yes |
+| n471 | Devil Dinosaur, Mystique | Devil Dinosaur | Mystique | line is a unit with Ongoing it counts or asks for | type: is a unit with Ongoing it counts or asks for | yes |
+| n472 | PymParticle Arrow, Mystique | PymParticle Arrow | Mystique | line is a unit with Ongoing it counts or asks for | type: is a unit with Ongoing it counts or asks for | yes |
+| n473 | Sera, Mystique | Sera | Mystique | line is a unit with Ongoing it counts or asks for | type: is a unit with Ongoing it counts or asks for | yes |
+| n474 | Basic Arrow, Mystique | Basic Arrow | Mystique | line makes your units get Ongoing | type: makes your units get Ongoing | yes |
+| n475 | Fantomex, Zombie Captain Marvel | Fantomex | Zombie Captain Marvel | none  | - | yes |
+| n476 | Fantomex, Zombie Captain Marvel | Zombie Captain Marvel | Fantomex | line makes your units die | type: makes your units die | yes |
+| n477 | Grapple Arrow, Galactus | Grapple Arrow | Galactus | none  | type: Grapple Arrow moves your units, and Galactus acts on units in its lane | NO |
+| n478 | Grapple Arrow, PymParticle Arrow | Grapple Arrow | PymParticle Arrow | line moves your units | type: Grapple Arrow moves your units, and PymParticle Arrow acts on units in its | yes |
+| n479 | Iron Patriot, King Eitri | Iron Patriot | King Eitri | none  | - | yes |
+| n480 | Scarlet Witch Queen of Chaos, King Eitri | Scarlet Witch Queen of Chaos | King Eitri | none  | - | yes |
+| n481 | Valentina, King Eitri | Valentina | King Eitri | none  | - | yes |
+| n482 | Shadowlands Daredevil, King Eitri | Shadowlands Daredevil | King Eitri | line creates cards | type: creates cards | yes |
+| n483 | The Hunger, Zombie Giant-Man | The Hunger | Zombie Giant-Man | line more power | stronger: more power | yes |
+| n484 | Zombie Scarlet Witch, Zombie Giant-Man | Zombie Scarlet Witch | Zombie Giant-Man | line more power | stronger: more power | yes |
+| n485 | The Hunger, Zombie Mister Fantastic | The Hunger | Zombie Mister Fantastic | none  | - | yes |
+| n486 | SP//dr, Peni Parker | SP//dr | Peni Parker | line merges onto it | waits: merges onto it for its effect | yes |
+| n487 | SP//dr, Man-Spider | SP//dr | Man-Spider | line merges onto it | waits: merges onto it for its effect | yes |
+| n488 | Peni Parker, Man-Spider | Peni Parker | Man-Spider | none  | - | yes |
+| n489 | Super-Skrull, Astral Projection | Super-Skrull | Astral Projection | none copies keywords, gives no On Reveal | - | yes |
+| n490 | High Evolutionary, Cosmo | High Evolutionary | Cosmo | none gives unnamed abilities, no On Reveal | - | yes |
+| n491 | Basic Arrow, Mystique | Basic Arrow | Mystique | line makes your units get Ongoing | type: makes your units get Ongoing | yes |
+| n492 | Grand Master, Invisible Woman | Grand Master | Invisible Woman | none moves your units; her rows read no move | - | yes |
+| n493 | Wong, Shuri | Wong | Shuri | line plays it again | stronger: plays it again | yes |
+| n494 | Zero, Ebony Maw | Zero | Ebony Maw | line silences it: its drawback is gone | waits: silences it: its drawback is gone | yes |
+| n495 | Sauron, Ebony Maw | Sauron | Ebony Maw | line silence | rules: silence | yes |
+| n496 | Zero, Hazmat | Zero | Hazmat | none  | - | yes |
+| n497 | Brood, Absorbing Man | Brood | Absorbing Man | line On Reveal | type: is a unit with On Reveal it counts or asks for | yes |
+| n498 | Silver Surfer, Absorbing Man | Silver Surfer | Absorbing Man | line On Reveal | type: is a unit with On Reveal it counts or asks for | yes |
+| n499 | Hazmat, Absorbing Man | Hazmat | Absorbing Man | line On Reveal | type: is a unit with On Reveal it counts or asks for | yes |
+| n500 | Magik, Absorbing Man | Magik | Absorbing Man | line On Reveal | type: is a unit with On Reveal it counts or asks for | yes |
+| n501 | Wong, Absorbing Man | Wong | Absorbing Man | line plays it again | stronger: plays it again | yes |
+| n502 | Absorbing Man, Black Panther | Absorbing Man | Black Panther | line On Reveal | repeats: repeats its On Reveal effects | yes |
+| n503 | Absorbing Man, Luna Snow | Absorbing Man | Luna Snow | line On Reveal | repeats: repeats its On Reveal effects | yes |
+| n504 | Absorbing Man, Arnim Zola | Absorbing Man | Arnim Zola | line On Reveal | repeats: repeats its On Reveal effects | yes |
+| n505 | Absorbing Man, Peni Parker | Absorbing Man | Peni Parker | line On Reveal | repeats: repeats its On Reveal effects | yes |
+| n506 | Swarm, Morbius | Swarm | Morbius | line discard | type: comes back after it is discarded, to be discarded again | yes |
+| n507 | Apocalypse, Morbius | Apocalypse | Morbius | line discard | type: comes back after it is discarded, to be discarded again | yes |
+| n508 | Blade, Morbius | Blade | Morbius | line discard | type: makes you discard cards | yes |
+| n509 | Swarm, Dracula | Swarm | Dracula | none  | - | yes |
+| n510 | Storm, White Tiger | Storm | White Tiger | line  | type: stops cards being played, but a summon is not played: it still fills the p | yes |
+| n511 | Storm, Doctor Doom | Storm | Doctor Doom | line  | type: stops cards being played, but a summon is not played: it still fills the p | yes |
+| n512 | Storm, Odin | Storm | Odin | none  | - | yes |
+| n513 | Ebony Maw, Doctor Doom | Ebony Maw | Doctor Doom | none  | - | yes |
+| n514 | Wave, Death | Wave | Death | line makes it cheaper | cheaper: makes it cheaper | yes |
+| n515 | Wave, Hulk | Wave | Hulk | line makes it cheaper | cheaper: makes it cheaper | yes |
+| n516 | Wave, Ant Man | Wave | Ant Man | none  | - | yes |
+| n517 | Moon Girl, The Collector | Moon Girl | The Collector | line creates cards | waits: creates cards | yes |
+| n518 | Professor X, Devil Dinosaur | Professor X | Devil Dinosaur | line fills your hand | waits: fills your hand | yes |
+| n519 | Agent 13, Devil Dinosaur | Agent 13 | Devil Dinosaur | line  | waits: fills your hand | yes |
+| n525 | Goose, Anti-Polar Magneto | Goose | Anti-Polar Magneto | none  | - | yes |
+| n526 | Jean Grey, Ultron | Jean Grey | Ultron | none  | - | yes |
+| n527 | Invisible Woman & Namor Doomsday, Uncle Ben | Invisible Woman & Namor Doomsday | Uncle Ben | none  | - | yes |
+| n528 | Storm, White Tiger | Storm | White Tiger | line stops cards being played, but a summon is not played: it still fills the place | type: stops cards being played, but a summon is not played: it still fills the p | yes |
+| n529 | Storm, Doctor Doom | Storm | Doctor Doom | line stops cards being played, but a summon is not played: it still fills the place | type: stops cards being played, but a summon is not played: it still fills the p | yes |
+| n530 | Invisible Woman & Namor Doomsday, Red Wolf Fractured Frontier | Invisible Woman & Namor Doomsday | Red Wolf Fractured Frontier | none stopping the enemy plays keeps only the enemy hand full (L9) | - | yes |
+| n531 | Professor X, Red Wolf Fractured Frontier | Professor X | Red Wolf Fractured Frontier | line fills your hand | waits: fills your hand | yes |
+| n532 | Zombie Mister Fantastic, Deadpool | Zombie Mister Fantastic | Deadpool | none power for created units; Deadpool is no created unit (L14) | - | yes |
+| n534 | Sub-Mariner, Mystique | Sub-Mariner | Mystique | none makes a unit by cost, not one with Ongoing | - | yes |
+| n535 | Shanna, Mystique | Shanna | Mystique | none summons a unit by cost, not one with Ongoing | - | yes |
+| n536 | Mister Fantastic & Beast Doomsday, Absorbing Man | Mister Fantastic & Beast Doomsday | Absorbing Man | none makes a random unit, not one with On Reveal | - | yes |
+| n537 | Sub-Mariner, Absorbing Man | Sub-Mariner | Absorbing Man | none makes a unit by cost, not one with On Reveal | - | yes |
+| n538 | Viper, Absorbing Man | Viper | Absorbing Man | line is a unit with On Reveal | type: is a unit with On Reveal it counts or asks for | yes |
+| n541 | Agent Venom, Wolverine | Agent Venom | Wolverine | none sets power to a fixed 3: no buff | - | yes |
+| n543 | Power Shot, Vampire Deacon Frost | Power Shot | Vampire Deacon Frost | none changes your units' stats | - | yes |
+| n544 | Dragon of the Moon, Vampire Deacon Frost | Dragon of the Moon | Vampire Deacon Frost | line changes your units' stats | type: changes your units' stats | yes |
