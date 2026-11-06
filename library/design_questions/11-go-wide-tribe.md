@@ -14,7 +14,7 @@ Vetruvian Imperium (114 cards): tribal 16, summon 30
   Circle of Fabrication: Summon one of each Obelysk from your deck on random spaces.
   Fireblaze Obelysk: Keywords: Summon Dervish. Your dervishes have +1 Attack.
   Khanuum-ka: Keywords: Flying, Rush. Dying Wish: A random friendly Dervish disappears, summoning a...
-  works with: aura (e.g. Golden Mantella -> Oak in the Nemeton); on_ally_play (e.g. Scion's Third Wish -> Hatefurnace); defence_gain (e.g. Golden Mantella -> Oak in the Nemeton)
+  works with: aura (e.g. Fighting Spirit -> Oak in the Nemeton); on_ally_play (e.g. Sparrowhawk -> Hatefurnace); defence_gain (e.g. Fighting Spirit -> Oak in the Nemeton)
 ## faeria
 Pandora (40 cards): tribal 3, summon 3
   Doom Scythe: Destroy a creature. Summon a 6/1 Slaughtering Shadow in its place.
@@ -26,7 +26,7 @@ Blue (72 cards): tribal 4, summon 5
   Bloated Toad: Jump This enters play with an enemy 2/2 Frog with Jump swallowed.
   Fugoro, Captain of the Gagana: Jump Whenever you discover a Treasure, Fugoro gains +3/+3.
   Gabrian Noble: Gift - Summon a 1/1 Ruby Fish (you may summon it on an ocean tile).
-  works with: board_presence (e.g. Fugoro, Captain of the Gagana -> Triton Tactician); temporary_buff (e.g. Mother of All Yaks -> Yak Shepherd); placement_rules (e.g. Fugoro, Captain of the Gagana -> Tide Lord)
+  works with: board_presence (e.g. Tide Lord -> Triton Tactician); temporary_buff (e.g. Mother of All Yaks -> Yak Shepherd); placement_rules (e.g. Triton Tactician -> Tide Lord)
 ## gwent
 Monster (182 cards): tribal 39, summon 43
   Arachas Behemoth: Deploy: Spawn 2 Drones and boost all allied Insectoids on this row by 1.
@@ -35,7 +35,7 @@ Monster (182 cards): tribal 39, summon 43
   Dagon: Promised: Doomed. Deploy: Infuse 5 units in your deck with "Deathwish: Boost the lowest-power...
 Syndicate / Scoiatael (3 cards): tribal 1, summon 1
   Novigradian Justice: Play a bronze Dwarf or Crownsplitter unit from your deck. If you already control a Dwarf...
-  works with: delayed (e.g. Treant Boar -> King Henselt); on_spell (e.g. War of Clans -> Hjalmar: Seawolf); combo_sequence (e.g. Raffard’s Vengeance -> Ivo of Belhaven)
+  works with: delayed (e.g. Draig Bon-Dhu -> King Henselt); on_spell (e.g. Abordage -> Hjalmar: Seawolf); combo_sequence (e.g. War Council -> Ivo of Belhaven)
 ## inscryption
 Magick (25 cards): tribal 7, summon 1
   Blue Mage: Keywords: Mental Gemnastics.
@@ -47,19 +47,19 @@ Technology (76 cards): tribal 9, summon 5
   Gems Conduit: Keywords: Gem Spawn Conduit.
   Buff Conduit: Keywords: Attack Conduit.
   Daus (Act III): Keywords: Bellist. Special behaviour: If a card with "bell" in its internal ID (Chime,...
-  works with: death_trigger (e.g. Energy Conduit -> Kind Cell); link_formation (e.g. Energy Conduit -> Splinter Cell); summon (e.g. Tough Cell -> The Limoncello)
+  works with: death_trigger (e.g. Energy Conduit -> Kind Cell); link_formation (e.g. Energy Conduit -> Splinter Cell); summon (e.g. Ant Spawner -> The Limoncello)
 ## into_the_breach
 Ranged (29 cards): tribal 0, summon 2
   Arachnoid Injector: Damage target, creating a friendly robot spider on kill. Damage: 1. Power: Free....
   Bomb Dispenser: Launch a Walking Bomb. Unused bombs dismantle after the enemy turn. Power: Free....
-  works with: stat_loss (e.g. Nanofilter Mending -> Kai Miller); on_lifegain (e.g. Heat Engines -> Fire); damage_over_time (e.g. Heat Engines -> Fire)
+  works with: stat_loss (e.g. Heat Engines -> Kai Miller); on_lifegain (e.g. Heat Engines -> Fire); damage_over_time (e.g. Heat Engines -> Fire)
 ## marvel_snap
 (all cards) (867 cards): tribal 9, summon 53
   Doctor Doom 2099: End of Turn: Add a DoomBot 2099 to a random location if you played (exactly) 1 card.
   Air-Walker: When Destroyed: Replace this with a 4-Cost card from your hand or deck.
   Anti-Polar Magneto: On Reveal: Add a 3 or 4-Cost card from your hand to each other location.
   Arthur Pendragon: On Reveal: Pull Excalibur free to here.
-  works with: draw (e.g. Milano -> King Eitri); cost_condition (e.g. Milano -> Gambit Horseman of Death); cost_reduction (e.g. Mind Stone -> Namorita)
+  works with: draw (e.g. Sanctuary II -> King Eitri); cost_condition (e.g. Sanctuary II -> Gambit Horseman of Death); cost_reduction (e.g. Mind Stone -> Namorita)
 ## monster_train
 Umbra (47 cards): tribal 18, summon 1
   Alloyed Construct: Inert. Multistrike 1. / Gorge: Gain Fuel 1.
@@ -71,7 +71,7 @@ Hellhorned (41 cards): tribal 6, summon 0
   Imp-in-a-Box: Consume. / Add 2 random Imp units to your hand.
   Imp-olate: Deal damage to the front enemy unit equal to 15x the number of Imp units in your deck.
   Imp-portant Work: Sacrifice Imp. / Gain 1 Ember. Draw 1.
-  works with: death_trigger (e.g. Echowright -> Kinhost Vessel); death_count (e.g. Imp-portant Work -> A Fatal Melting); defence_gain (e.g. For the Greater Good -> Morsel-Made)
+  works with: death_trigger (e.g. Echowright -> Bogdeep Cocoon); death_count (e.g. Imp-portant Work -> A Fatal Melting); defence_gain (e.g. For the Greater Good -> Morsel-Made)
 ## runeterra
 Bilgewater (220 cards): tribal 31, summon 54
   Death From Below: Keywords: Fast, Lurk. Summon Pyke striking an enemy.
@@ -107,5 +107,5 @@ Watcher (90 cards): tribal 11, summon 0
   Fasting: Gain 3 Strength. Gain 3 Dexterity. Gain 1 less at the start of each turn.
   Follow-Up: Deal 7 damage. If the last card played this combat was an Attack, gain 1 energy.
   Foreign Influence: Keywords: Exhaust. Choose 1 of 3 Attacks of any color to add into your hand.
-  works with: attack_gain (e.g. Augmenter -> Red Skull); permanent_growth (e.g. Necronomicon -> Du-Vu Doll); passive (e.g. Augmenter -> Red Skull)
+  works with: attack_gain (e.g. J.A.X. -> Red Skull); permanent_growth (e.g. Necronomicon -> Du-Vu Doll); passive (e.g. J.A.X. -> Red Skull)
 ```

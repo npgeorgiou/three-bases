@@ -14,19 +14,19 @@ Vetruvian Imperium (114 cards): zone_control 7, movement 10
   Astral Phasing: Give a friendly minion +5 Health and Flying.
   Cataclysmic Fault: Turn the entire center column into Exhuming Sand.
   Circle of Fabrication: Summon one of each Obelysk from your deck on random spaces.
-  works with: activated (e.g. Oakenheart -> MECHAZ0R Progression); quests (e.g. Oakenheart -> MECHAZ0R Progression); terrain (e.g. Omniseer -> Nocturne)
+  works with: quests (e.g. Oakenheart -> MECHAZ0R Progression); activated (e.g. Oakenheart -> MECHAZ0R Progression); terrain (e.g. Sunrise Cleric -> Nocturne)
 ## faeria
 Pandora (40 cards): zone_control 7, movement 12
   Jeweled Magpie: Flying, Haste Whenever this attacks a god, add a random Treasure to your hand.
   Magic Carpet: Flying, Dash 5 Gift - Fill your hand with Flash Winds. They become wild land.
   Spear of the Guardians: Divine,Flying,Dash 5 Must be summoned next to a friendly creature.
   Ancient Gargoyle: Charge 3, Flying Gift - Destroy all Treasure Maps in your deck and gain +1/+1 for each...
-Yellow (72 cards): zone_control 11, movement 42
+Yellow (72 cards): zone_control 12, movement 42
+  Amai Merchant: Flying Gift - Discover a card that costs 5 faeria or more. Add the 2 cards you didn't...
   Annoying Gnat: Flying Can't harvest faeria. Last Words - Deal 2 damage to yourself. Summon this in a...
   Demonic Salmon: Haste, Flying, Charge 2 Can't harvest faeria. Whenever this attacks a god, it gains +1/+1.
   Flash Salmon: Divine, Flying, Haste, Charge 2 Can't harvest faeria. At the end of your turn, destroy...
-  Khalim's Skyguard: Flying Can be summoned adjacent to friendly creatures.
-  works with: high_cost (e.g. Crystal Spice -> Gemshell Tortoise); in_hand_buff (e.g. Crystal Spice -> Gemshell Tortoise); cost_reduction (e.g. Crystal Spice -> Gemshell Tortoise)
+  works with: high_cost (e.g. Thyrian Expedition -> Gemshell Tortoise); in_hand_buff (e.g. Thyrian Expedition -> Gemshell Tortoise); cost_reduction (e.g. Thyrian Expedition -> Gemshell Tortoise)
 ## gwent
 Nilfgaard (177 cards): zone_control 20, movement 19
   False Ciri: Disloyal. Deploy: Play a bronze Tactic from your graveyard and give it Doomed. At the...
@@ -85,7 +85,7 @@ Bilgewater (220 cards): zone_control 0, movement 5
   Fizz: Keywords: Imbue. When you play a spell, stop all enemy spells and Skills targeting me...
   Fizz's Playful Trickster: Keywords: Fast. Remove an attacking ally from combat to Rally. Create a Fizz in your deck.
   Playful Trickster: Remove an attacking ally from combat to Rally.
-  works with: permanent_growth (e.g. Soothsayer -> Void Abomination); defence_gain (e.g. Soothsayer -> Void Abomination); attack_gain (e.g. Soothsayer -> Void Abomination)
+  works with: permanent_growth (e.g. Soothsayer -> Lux: Illuminated); defence_gain (e.g. Soothsayer -> Lux: Illuminated); attack_gain (e.g. Soothsayer -> Lux: Illuminated)
 ## stormbound
 Ironclad (34 cards): zone_control 0, movement 9
   Absorbing Varmints: Before moving, make friendly Ancients and Rodents pull enemy units from behind. Then...
@@ -97,7 +97,7 @@ Swarm (34 cards): zone_control 1, movement 5
   Head Start: Spawn a 5/6/7/8/9 strength Satyr on a random tile in your furthest row
   Herald’s Hymn: Give 2/3/4/5/6 strength to a target friendly unit. Command friendly units in its row...
   Lasting Remains: After attacking, move forward
-  works with: attack_now (e.g. Catnip’s Charm -> Hair-Raising Cats); activated (e.g. Slyboots -> Temple of the Mind); removal (e.g. Slyboots -> Temple of the Mind)
+  works with: attack_now (e.g. Angelic Tikas -> Hair-Raising Cats); activated (e.g. Slyboots -> Temple of the Mind); removal (e.g. Slyboots -> Temple of the Mind)
 ## sts1
 Defect (89 cards): zone_control 0, movement 23
   Ball Lightning: Deal 7 damage. Channel 1 Lightning.

@@ -25,7 +25,7 @@ Red (72 cards): disruption 0, suppress 3
   Devouring Plant: Taunt Production - Deal 2 damage to all adjacent enemy creatures.
   Grim Guard: Taunt Combat - Deal 2 damage to your opponent.
   Ogre Battler: Taunt
-  works with: on_damaged (e.g. Imperial Drain -> Unlikely Hero); damage_reduction (e.g. Imperial Drain -> Shaytan Assassin); death_trigger (e.g. Imperial Drain -> Celeste, Crystal Dragon)
+  works with: on_damaged (e.g. Imperial Drain -> Unlikely Hero); damage_reduction (e.g. Imperial Drain -> Queen's Favorite); death_trigger (e.g. Imperial Drain -> Celeste, Crystal Dragon)
 ## gwent
 Nilfgaard (177 cards): disruption 13, suppress 12
   Admiral Rompally: Zeal. Order: Choose 3 enemy units, then give them Lock, Poison and Spying, in that...
@@ -55,7 +55,7 @@ Ranged (29 cards): disruption 0, suppress 4
   Asgard Besieged: After turn 3, add The Destroyer to the winning side.
   Baron Zemo: On Reveal: Recruit a card that costs the least from your opponent's deck to your side of...
   Black Bolt: On Reveal: Discard the card that costs the least from your opponent's hand.
-  works with: card_presence_condition (e.g. Entropic Havok -> Thaddeus Ross); turn_end (e.g. Entropic Havok -> Thaddeus Ross); count_payoff (e.g. Entropic Havok -> Sunspot)
+  works with: card_presence_condition (e.g. Entropic Havok -> Bruce Banner); turn_end (e.g. Entropic Havok -> Vampire Killmonger); count_payoff (e.g. Entropic Havok -> Jim Hammond Human Torch)
 ## monster_train
 Stygian Guard (41 cards): disruption 0, suppress 3
   Frenzied Swarm: Apply Dazed 1 to enemy units. / Discard your hand.
