@@ -2702,6 +2702,21 @@ def self_harm_lines(c, game, nodes):
     return out
 
 
+def kill_food_lines(c, game, nodes):
+    """a unit with a 1-damage activated ping and its own "when I kill" effect (Kaedweni Revenant) needs weak units: a card that
+    damages units without killing them, or puts my units into play, gives it food (C79, C83-C85; L10)"""
+    out = Lines(); marks = ','.join('?' * len(nodes)); L = list(nodes)
+    killers = [i for (i,) in c.execute(f"""select distinct r.card from flat_ref r join flat_do d on d.card=r.card and d.origin='own' and d.act='damage'
+            and d.on_pick='chosen' and d.params like '%amount=1.0%' where r.origin='own' and r.role='trigger' and r.happening='killed'
+            and r.pick='actor_self' and r.card in ({marks})""", L)]
+    for k in killers:
+        for a, act in c.execute(f"""select distinct card, act from flat_do where origin='own' and card in ({marks}) and card!=?
+                and ((act='damage' and on_pick in ('all','random','chosen') and coalesce(on_side,'') in ('','enemy','any','mine')
+                and params not like '%amount=1.0%') or (act in ('summon','play_card') and coalesce(on_side,'mine')='mine'))""", L + [k]):
+            out[(a, k)].append(('waits', 0.5, 'leaves weak units for its kill' if act == 'damage' else 'gives it units to kill'))
+    return out
+
+
 def network(c, game, ids, broad=True):
     """nodes (id -> made by the deck?) and lines (a, b) -> [(kind, weight, why)] between them"""
     nodes = {i: False for i in ids}
@@ -2715,7 +2730,7 @@ def network(c, game, ids, broad=True):
     for f in (am, played_lines(c, game, nodes, broad), need_lines(c, game, nodes, broad),
               boost_lines(c, game, nodes, stat_help, {p for p, ls in am.items() if any('cheaper' in y or 'cost' in y for _, _, y in ls)}), gives_lines(c, game, nodes), object_help_lines(c, game, nodes, broad),
               actor_help_lines(c, game, nodes), doer_help_lines(c, game, nodes), self_harm_lines(c, game, nodes),
-              state_giver_lines(c, game, nodes), stat_reader_lines(c, game, nodes), spent_lines(c, game, nodes), flood_lines(c, game, nodes)):
+              state_giver_lines(c, game, nodes), stat_reader_lines(c, game, nodes), spent_lines(c, game, nodes), flood_lines(c, game, nodes), kill_food_lines(c, game, nodes)):
         for k, ls in f.items(): lines[k] += ls
     # a need the maker shares with the card it makes is the made card's (The Iron Conquest's stage III is its skill Undying
     # Revenge: Soul Cleave's dead ally feeds the skill, not the landmark too)

@@ -637,3 +637,7 @@ n642	gwent	Aen Elle Aristocrat, Endrega Eggs	Aen Elle Aristocrat	Endrega Eggs	no
 n643	gwent	Biting Frost, Archespore	Biting Frost	Archespore	none	kills it for its death effect	Claude 2026-11-06, line check: freezing kills no unit
 n644	gwent	Forktail, Bridge Troll	Forktail	Bridge Troll	line	kills it for its death effect	Claude 2026-11-06, line check: right example stays
 n645	gwent	Ge'els, Lara Dorren	Ge'els	Lara Dorren	line	puts it into play from the deck	Claude 2026-11-06, line check: right example stays
+n646	gwent	Mobilization: NR Devotion Undead Army	Redanian Secret Service	Kaedweni Revenant	line	gives it units to kill	Claude 2026-11-06, line check: weak units feed a 1-damage kill ping
+n647	gwent	Mobilization: NR Devotion Undead Army	Sabrina Glevissig	Kaedweni Revenant	line	leaves weak units for its kill	Claude 2026-11-06, line check: weak units feed a 1-damage kill ping
+n648	gwent	Mobilization: NR Devotion Undead Army	Philippa: Blind Fury	Kaedweni Revenant	line	leaves weak units for its kill	Claude 2026-11-06, line check: weak units feed a 1-damage kill ping
+n649	gwent	Mobilization: NR Devotion Undead Army	Vernon Roche	Kaedweni Revenant	line	gives it units to kill	Claude 2026-11-06, line check: weak units feed a 1-damage kill ping
