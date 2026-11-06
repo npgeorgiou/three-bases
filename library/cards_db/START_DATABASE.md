@@ -312,6 +312,18 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
    Breach's "a ground unit pushed into a Chasm is destroyed", "Frozen ends when hit", "bumps deal 1 damage" drew no line until
    Kaptain pointed at Flood Drill. A rule linking two kinds of card (makers of holes -> pushers) is a sourced rule in network.py
    (DEADLY_GROUND) with a case.
+13. **Fewer readers, fewer unsure cards** (Kaptain, 6 Nov 2026, after Gwent: 354 of 1,357 cards had to be read twice
+   because about 15 common words had no value yet). In this order, before the full batches:
+   a. **Templates.** Split every text into sentences; count the sentence shapes with the numbers and names masked ("Deploy:
+      Damage an enemy unit by N."). Every shape used by 5 or more cards gets a template in `templates/<game>.tsv` (regex ->
+      record fragment); `templates.py <game>` writes those sentences' rows. Print the share of sentences covered. A card
+      fully covered never goes to a reader; a partly covered one goes with the template rows shown as fixed ("prefilled").
+   b. **Pilot batch.** `build_input.py <game> --pilot`: about 60 cards that together hold every keyword and every common
+      shape the templates left. Readers read it; tally its proposals; add every needed value (vocab + BRIEF line) before
+      the full batches. Fix any brief line the pilot shows two readers reading two ways (Gwent: Profit as a keyword and as
+      gaining Coins).
+   c. **Batches by mechanic.** build_input.py groups cards by their first keyword or trigger, so one reader writes the same
+      wording the same way.
 
 ### 1. Reading
 - What reading is: a card reader is a helper agent (another Claude) that takes one batch file of cards made by step 0.8
@@ -345,6 +357,13 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
    - link audit (`audit_links.py <game>`): each line is a link that cannot exist; fix its cause (a missing `causes`, a keyword
      with no concept or record, a level-up form the source lacks, a misread name, a wrong concept) or explain it in "State".
      Check 10 (old library tags) are leads: read the ones whose tag names a mechanic the game's texts show.
+   - **Unsure cards are not re-read whole.** For each proposal that maps one to one to a value added now, a script swaps
+     the value in (the proposal file says the field and the card). Only cards still unsure after that go to a re-read, with
+     only the unsure sentence marked.
+   - **Second reading -> error kinds -> a script over all cards** (Gwent, 6 Nov 2026). The judge of the second reading
+     writes per card which part was wrong (`second_001.verdicts.jsonl`, field why). Group the whys into kinds (a stat
+     name, a keyword written two ways, an amount left "unstated", a dropped condition) and for each kind write a check
+     that finds it in every record of the game; fix all hits by rule (fixes/<game>/vNN.py), not only the sample's.
 3. Group the findings into families by cause (Part 2 "Fixing errors" 4), across all the lists above. Fix each once: a rule
    script (`fixes/<game>/vNN.py`, or a script for every game when the cause is shared), a normalize rule, or shared code.
    **Baseline first** (Gwent, 6 Nov 2026: a Runeterra case that already failed cost three reruns and an old-code worktree
@@ -380,7 +399,10 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
 - network.tsv: lines that must be there (`line`) or must not (`none`; why_not when only one reason is wrong). A `line` row with
   text in that column needs a line whose "kind: reason" holds it ("cheaper:", "kills it for its death effect"): every point
   Kaptain confirms checks the kind too.
-- regions.tsv: the library's signature, splash and archetype rows per faction.
+- regions.tsv: the library's signature, splash and archetype rows per faction. Every faction of the game gets rows
+  (Runeterra has 127; a game with factions and no rows is not done).
+- How many: at least one mechanics.tsv row per keyword the game's cards use and per trigger word; decks.tsv every guide
+  deck; network.tsv the decks' pairs (step 2.5). A game ends with well over 100 cases (Marvel Snap 174, Runeterra 429).
 - A failing case is fixed at its cause (the query, checked against the texts first; the pattern; the value; shared code; the
   records); one that still fails after the fix round is deleted, no note.
 
@@ -396,7 +418,8 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
    file is deleted.
 
 ### 5. Done when
-`run.py <game>` passes and every other game still passes; game_rules.jsonl written; audit_text.py and audit_links.py print
+`run.py <game>` passes and every other game still passes; cases as step 3 says (mechanics per keyword, regions per faction,
+decks, combos, network); game_rules.jsonl written; audit_text.py and audit_links.py print
 nothing unexplained; the keyword -> concept list checked twice and shown to Kaptain; 0 open word flags; no proposal need shared
 by cards with different texts; stubs only names nothing defines; `ask.py all compare <its main concepts>` shows its cards next to
 the other games'; every guide deck explained; 20 decks found; the line check done (`links_audit.py` and `deck_audit.py`, all

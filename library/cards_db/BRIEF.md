@@ -681,7 +681,7 @@ a turn is shared, so it is a round. Sources: library/games/marvel_snap.md "The g
 ## Game words: Gwent
 Gwent has no Keywords field: describe everything the text says. A keyword alone in the text ("Zeal.", "Doomed.", "Veil.",
 "Thrive.", "Harmony.", "Formation.", "Shield.", "Cooldown: 2", "Charge: 3") = give_keyword on self, permanent, with params
-amount for its number: the card gets the keyword and inherits its record. Units are kind unit; specials (spells,
+amount for its number: the card gets the keyword and inherits its record. Except "Profit 3": that is played, mana_gain 3 on the Coins (below). Units are kind unit; specials (spells,
 stratagems) kind spell; artifacts kind landmark (they stand in a row); a leader ability is kind leader_ability (its Order is
 the player's, used as a turn; "This ability adds 15 provisions..." is a deckbuilding remark: no effect). Sources:
 library/games/gwent.md "The game's rules (from sources)"; the keyword entries (input keywords.jsonl). Mapping by Claude (5 Nov 2026).
