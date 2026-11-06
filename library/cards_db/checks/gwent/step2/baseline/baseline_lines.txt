@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/claude/three-bases/library/cards_db/dump_lines.py", line 67, in <module>
+    elif a[:1] == ['--table']: table(a[1])
+                                     ~^^^
+IndexError: list index out of range
