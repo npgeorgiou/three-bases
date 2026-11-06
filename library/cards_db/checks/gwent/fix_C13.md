@@ -1,0 +1,3 @@
+CONFLICT: case nst34 (Kaptain 30 Oct 2026, Melter -> Claw, 'gets through': Melter removes Block, every damage card hits in full) says removing the enemy's Block links to every damage card, the opposite of C13/C14; network.py [2333] carries that decision in its comment. pair.py before any change: all 6 examples (Impera Enforcers, Ace up the Sleeve, Coup de Grace, Ard Feainn Heavy Cavalry, Ivar Evil-Eye) still show the line; nothing was changed.
+Same code line fires in every game with a Block-stripping card (Slay the Spire, Gwent); a fix would need Kaptain to restrict nst34 or decide per game.
+L18 (more damage is generic) and nst34 disagree on Block removal; Kaptain should rule.
