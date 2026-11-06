@@ -628,3 +628,12 @@ n633	gwent	Cat Witcher Adept, Naiad Fledgling	Cat Witcher Adept	Naiad Fledgling	
 n634	gwent	Frog Mating Season, Naiad Fledgling	Frog Mating Season	Naiad Fledgling	line	gives it Vitality, which it takes off for its own strength	Claude 2026-11-06, line check: Naiad waits on the Vitality the givers put on (L14)
 n635	gwent	Nature's Gift, Freixenet	Nature's Gift	Freixenet	line	gives it Vitality for its effect	Claude 2026-11-06, line check: right example stays
 n636	gwent	Dwimveandra, Flotsam	Dwimveandra	Flotsam	line	lets you use it again	Claude 2026-11-06, line check: Flotsam is a Location (landmark), so the refresh is right
+n637	gwent	Naglfar Crew, Lara Dorren	Naglfar Crew	Lara Dorren	none	kills it for its death effect	Claude 2026-11-06, line check: Frost only on enemy rows
+n638	gwent	Naglfar Crew, Nightwraith	Naglfar Crew	Nightwraith	none	kills it for its death effect	Claude 2026-11-06, line check: Frost only on enemy rows
+n639	gwent	Red Riders: Charge, Lara Dorren	Red Riders: Charge	Lara Dorren	none	kills it for its death effect	Claude 2026-11-06, line check: Frost only on enemy rows
+n640	gwent	Red Riders: Charge, Nightwraith	Red Riders: Charge	Nightwraith	none	kills it for its death effect	Claude 2026-11-06, line check: Frost only on enemy rows
+n641	gwent	Ghoul, Dettlaff: Higher Vampire	Ghoul	Dettlaff: Higher Vampire	none	kills it for its death effect	Claude 2026-11-06, line check: Consume eats a card in the discard pile
+n642	gwent	Aen Elle Aristocrat, Endrega Eggs	Aen Elle Aristocrat	Endrega Eggs	none	kills it for its death effect	Claude 2026-11-06, line check: moving an enemy kills no unit
+n643	gwent	Biting Frost, Archespore	Biting Frost	Archespore	none	kills it for its death effect	Claude 2026-11-06, line check: freezing kills no unit
+n644	gwent	Forktail, Bridge Troll	Forktail	Bridge Troll	line	kills it for its death effect	Claude 2026-11-06, line check: right example stays
+n645	gwent	Ge'els, Lara Dorren	Ge'els	Lara Dorren	line	puts it into play from the deck	Claude 2026-11-06, line check: right example stays
