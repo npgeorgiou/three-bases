@@ -1,3 +1,4 @@
+{"src": 756249, "rel": "generates", "dst": 9000002, "evidence": "card text: makes Chort"}
 {"src": 756336, "rel": "generates", "dst": 813582, "evidence": "card text: makes Drone"}
 {"src": 756376, "rel": "generates", "dst": 813582, "evidence": "card text: makes Drone"}
 {"src": 756398, "rel": "generates", "dst": 813606, "evidence": "card text: makes Elven Deadeye"}
@@ -43,6 +44,7 @@
 {"src": 757148, "rel": "transforms_into", "dst": 813639, "evidence": "card text: evolves or transforms into another form of Shaping Nature"}
 {"src": 757148, "rel": "transforms_into", "dst": 813640, "evidence": "card text: evolves or transforms into another form of Shaping Nature"}
 {"src": 757195, "rel": "generates", "dst": 813646, "evidence": "card text: makes Witcher Student"}
+{"src": 757207, "rel": "generates", "dst": 9000005, "evidence": "card text: makes Endrega Larva"}
 {"src": 757214, "rel": "generates", "dst": 756358, "evidence": "card text: makes Nekker"}
 {"src": 757224, "rel": "generates", "dst": 813647, "evidence": "card text: Choose a mutagen: Red, Blue, Green"}
 {"src": 757224, "rel": "generates", "dst": 813648, "evidence": "card text: Choose a mutagen: Red, Blue, Green"}
