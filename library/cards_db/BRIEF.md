@@ -685,6 +685,9 @@ amount for its number: the card gets the keyword and inherits its record. Except
 stratagems) kind spell; artifacts kind landmark (they stand in a row); a leader ability is kind leader_ability (its Order is
 the player's, used as a turn; "This ability adds 15 provisions..." is a deckbuilding remark: no effect). Sources:
 library/games/gwent.md "The game's rules (from sources)"; the keyword entries (input keywords.jsonl). Mapping by Claude (5 Nov 2026).
+- Growing numbers "[N]": on a Patience card it is the card's Patience value, `{"x": "stat", "attr": "keyword_amount", "of":
+  {"pick": "self"}}`; "[N]. Increase this value by M for each X" is N plus the count of X (event_count, times M), N left out
+  when 0 (fixes/gwent/v77.py, 6 Nov 2026).
 - Power is the one stat: attr / param strength (score and health at once). "Boost by 3" = stat_change params strength 3,
   permanent; "damage by 3" = damage params amount 3; "set its power to 5" = stat_set strength 5; "base power" = attr
   base_power; "increase / decrease its base power by 3" = base_change params strength ±3. "Heal", "Reset", "Purify",

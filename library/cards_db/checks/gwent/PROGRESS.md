@@ -7,11 +7,11 @@
 - Runeterra n34 already failed before this import (see START_DATABASE "State").
 
 ## Next (a new chat continues here; read START_DATABASE.md whole first)
-1. Baseline: `check_all.py --no-load` output saved before any change (step 2.4 "Baseline first").
-2. Open in the records: 167 amounts are {"x": "unstated"}, mostly Gwent's growing numbers ("Play [1] ...", "Boost by [0].
-   Increase this value by 1 ..."). Decide one form (start number + increase_effect on the card's own value; a value if none
-   fits), BRIEF line, then a script or a re-read of only those sentences (step 2.2 "Unsure cards are not re-read whole").
-   Then `run.py gwent`.
+1. Baseline: running (`check_all.py --no-load` -> checks/gwent/baseline_cases.txt, line table baseline_tb.tsv), 6 Nov 2026.
+2. Growing numbers: done 6 Nov 2026 (v77, BRIEF line). The 167 was wrong: only 7 amounts were {"x": "unstated"}, 2 of
+   them growing numbers (Keira Metz, Colossal Ifrit); the other 48 growing-number cards were already read. Left: 5 amounts
+   no value says yet (Dol Blathanna Bowman rows between, Vivaldi Bank distance from top, Fucusya unused provisions,
+   Caranthir: Golden Child Frost damage, Torres var Emreis: Founder provisions below the limit). Then `run.py gwent`.
 3. Step 2.5 decks: 20 full decks (25+ cards, every faction), cases/decks.tsv, network.tsv, "Deck pairs" in games/gwent.md.
 4. Step 3 cases: mechanics.tsv one row per keyword and trigger word (85 keywords), regions.tsv rows for the six factions,
    combos.tsv from guides. Gwent has only the 13 shared cases now.
