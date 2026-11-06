@@ -1462,6 +1462,9 @@ def aimed(c, game, nodes, broad):
                 hits = [b for b in hits if use_of(c, game, b, act, kw, ps, w) != 'more power: its text reads its power']
         if act == 'repeat' and 'keyword i' in (w or ''):  # a card with the keyword but no effect of its own has nothing to repeat (Onslaught -> J. Jonah Jameson)
             hits = [b for b in hits if c.execute("select 1 from flat_do where card=? and origin='own' limit 1", (b,)).fetchone()]
+        if act == 'repeat' and 'event=' in (ps or ''):  # a repeat of one event's effects (turn_end) has nothing to repeat on a card with no effect on it (Vrygheff -> Alba Armored Cavalry, L21)
+            ev_ = dict(x.split('=', 1) for x in ps.split(';') if '=' in x).get('event')
+            hits = [b for b in hits if c.execute("select 1 from flat_when where card=? and origin='own' and event=? limit 1", (b, ev_)).fetchone()]
         n = len(makers[(act, kind, kw, rule if rule in (True, False, 'boost') else True)])
         if rule == 'boost' and act == 'repeat': hits = [b for b in hits if b not in drawback_cards(c)]  # no line to a card whose effect is a drawback (L5: Acid Arrow)
         if rule == 'boost':

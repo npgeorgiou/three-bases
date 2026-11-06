@@ -609,3 +609,6 @@ n614	gwent	Imposter, False Ciri	Imposter	False Ciri	line	its text reads its stre
 n615	gwent	Vesemir: Mentor, Berengar	Vesemir: Mentor	Berengar	line	is a Witcher it asks for	Claude 2026-11-06, line check: strength for a tribe or a Defender is generic; only a text that reads strength keeps it
 n616	gwent	Holger Blackhand, Tidecloak Hideaway	Holger Blackhand	Tidecloak Hideaway	line	is a Pirate it asks for	Claude 2026-11-06, line check: strength for a tribe or a Defender is generic; only a text that reads strength keeps it
 n617	gwent	Imposter, Torres var Emreis: Founder	Imposter	Torres var Emreis: Founder	line	creates cards	Claude 2026-11-06, line check: strength for a tribe or a Defender is generic; only a text that reads strength keeps it
+n618	gwent	Vrygheff, Alba Armored Cavalry	Vrygheff	Alba Armored Cavalry	none	repeats its effects	Claude 2026-11-06, line check: Vrygheff repeats turn_end effects; the card has only a play effect (L21)
+n619	gwent	Syanna, Alba Spearman	Syanna	Alba Spearman	line	repeats its Deploy effects	Claude 2026-11-06, line check: right example stays
+n620	gwent	Syanna, Aglaïs	Syanna	Aglaïs	line	repeats its Deploy effects	Claude 2026-11-06, line check: right example stays
