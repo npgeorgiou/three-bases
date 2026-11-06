@@ -644,3 +644,4 @@ n649	gwent	Mobilization: NR Devotion Undead Army	Vernon Roche	Kaedweni Revenant	
 n650	gwent	Mobilization: NR Devotion Undead Army	Drakenborg	Vincent Meis	line	puts it into play: its summon effect goes off	Claude 2026-11-06, line check: Zeal unit put into play from the deck acts at once
 n651	gwent	Mobilization: NR Devotion Undead Army	Kaedweni Revenant	Vincent Meis	line	its 1 damage kills what it sets to strength 1	Claude 2026-11-06, line check: a 1-damage ping kills a unit set to strength 1
 n652	gwent	Mobilization: NR Devotion Undead Army	Redanian Archer	Vincent Meis	line	its 1 damage kills what it sets to strength 1	Claude 2026-11-06, line check: a 1-damage ping kills a unit set to strength 1
+n653	gwent	Patricidal Fury: RnR Seagulls Sove Compass	Hammond	Ragh Nar Roog	line	moves an enemy unit into the row it hits	Claude 2026-11-06, line check: an enemy mover puts a target into the row a hazard hits

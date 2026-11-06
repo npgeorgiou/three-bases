@@ -2226,6 +2226,13 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
     q = lambda sql, *a: {x for (x,) in c.execute(sql.format(marks=marks), list(a) + L * sql.count('{marks}'))}
     movers_mine = q("""select card from flat_do where origin='own' and act in ('move','swap') and coalesce(on_side,'mine') in ('mine','any')
             and coalesce(on_kind,'unit') in ('unit','any') and coalesce(on_pick,'') not in ('self') and card in ({marks})""")
+    # a hazard put on enemy rows that damages the units in its row (Gwent Cataclysm): what moves an enemy unit in gives it a hit (L2: a strike now)
+    row_hazard = q("""select distinct d.card from flat_do d join flat_do k on k.card=d.keyword_ref where d.origin='own' and d.act='give_keyword'
+            and d.on_kind='position' and d.on_side='enemy' and k.act='damage' and k.on_with like '%position is same_row%' and d.card in ({marks})""")
+    enemy_movers_in = q("""select card from flat_do where origin='own' and act='move' and on_side='enemy' and on_kind='unit'
+            and coalesce(on_pick,'') not in ('self') and card in ({marks})""")
+    for t in row_hazard:
+        for a in enemy_movers_in - {t}: out[(a, t)].append(('boosts', 0.5 / max(1, len(enemy_movers_in)), 'moves an enemy unit into the row it hits'))
     # paying for big cards: more mana, or a cost cut on my cards, helps the game's expensive cards (EXPENSIVE, set per game:
     # Faeria 7+) when it pays at least a third of the card's cost (Red Devil's 5 faeria for Krog's 12; 2 faeria in a fight
     # does not pay for anything), and only the cards the cut names ("Your Krog costs 7 less": Krog only)
