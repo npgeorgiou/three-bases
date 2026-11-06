@@ -530,6 +530,11 @@ def lines_of(c, game):
         player does most things through any card ("whenever you replace a card"), but fights only as its leader ("whenever your
         General attacks": the General card, Duelyst)"""
         ak, aw, aside = actor
+        if ak == 'effect' and re.search(r'keyword (?:is|in) \d', aw or ''):  # "the damage dealt by Frost" (Caranthir, Rain/Storm counts): done by the
+            # keyword's own effect, so by a card that has the keyword or puts it on (Aen Elle Aristocrat, White Frost), never by a card that deals damage itself
+            ids = {int(x) for x in re.findall(r'keyword (?:is|in) (\d+)', aw)}
+            return bool(ids & set(cards[m]['kws'])) or m in CACHE.setdefault(('effgive', game, tuple(sorted(ids))), {a for (a,) in c.execute(
+                f"select distinct card from flat_do where act='give_keyword' and origin='own' and keyword_ref in ({','.join('?' * len(ids))})", sorted(ids))})
         if aside == 'enemy': return m in enemy_doers  # "when an enemy damages another enemy" (Vek Hormones): my own damage is not it
         if ak == 'player' and not aw and h not in ('attacks', 'strikes', 'killed', 'strikes_nexus', 'fights') + (('damaged',) if leader_game else ()):
             return True  # "whenever your General deals damage" (Horn of the Forsaken): the General card, not any unit (Duelyst)
@@ -588,6 +593,9 @@ def lines_of(c, game):
                 mcats = {x for p_ in (mw or '').split(';') if p_.startswith(('category is ', 'category in ')) for x in p_.split(' ')[2:]}
                 if mcats and tkind in KIND_CAT and not {y for x in mcats for y in CAT.get(x, {x})} & (KIND_CAT[tkind] | {tkind}): continue  # Acoustician creates spells, Norra
                 # counts created units (L20)
+                named_ids = [int(x) for p_ in (mw or '').split(';') if p_.startswith(('card is ', 'card in ')) for x in p_.split(' ')[2:] if x.isdigit()]
+                if h == 'played' and tkind in KIND_CAT and tkind != 'player' and named_ids and all(x in cards for x in named_ids) and \
+                        not any(cards[x]['cat'] in (KIND_CAT[tkind] | {tkind}) for x in named_ids): continue  # Kaer Seren plays a named unit: no "when you play a spell" (Keldar) waits for it
                 if tpick == 'self' and h in ('created', 'summoned', 'drawn') and mref and mref != t: continue  # Angel creates Coins, never
                 # the Cunning Kitten that waits to be created (L20)
                 if tpick == 'self' and mkind == 'player' and h in ('moves', 'moves_onto') and cards[t]['cat'] != 'leader': continue  # done to my General or player, never to
