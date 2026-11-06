@@ -7,9 +7,13 @@
 - Runeterra n34 already failed before this import (see START_DATABASE "State").
 
 ## Next
-- Step 2 fix round (Kaptain, 6 Nov 2026: the import chat fixes every open item itself). Running: baseline (check_all.py
-  --no-load, scratchpad), agent grouping checks/gwent/step2/findings.md into step2/families.md, agent checking 16
-  suggested keyword definitions into step2/keyword_defs.md. Then fixers one family at a time, one rebuild.
+- Step 2 fix round (Kaptain, 6 Nov 2026: the import chat fixes every open item itself, no stopping to ask).
+  Done: baseline (step2/baseline/), families (step2/families.md), keyword definitions check (step2/keyword_defs.md),
+  fix_1 (v78-v81: Create, Discard, ignoring Armor), fix_2 (keyword case queries, 80 of 85).
+  Running: fix_3 (new values for families 3, 4, 6, all games; Kaptain agreed the adjacent-group value).
+  Next, one fixer at a time: fix_4 Frost/Disloyal rows, Gwent meanings for shared keyword names, the 3 backed definitions,
+  RIGHT lines, word flags; fix_5 text-audit and link-audit RULE items 7-11, 15-19 and the Predator/Symbiosis code item;
+  fix_6 link audit 10 (old tags) leads; then one rebuild (check_all.py), diff, every case passes.
 
 ## Before step 2 (chat 2 continues from START_DATABASE.md Part 3 after it)
 - Done 6 Nov 2026: Deck pairs (43, games/gwent.md, from the guide texts; 13 guides name none) -> network.tsv n545-n587
