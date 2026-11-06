@@ -728,6 +728,7 @@ def lines_of(c, game):
     # deck"): its own "when I'm summoned" goes off again (The Harrowing -> Captain Farron); a Play effect does not
     entry = collections.defaultdict(set)
     for i, e in c.execute("select card, event from flat_when where origin='own' and obj_pick='self' and event in ('summoned','played')"): entry[i].add(e)
+    for (i,) in c.execute("select card from flat_do where origin='has_keyword' and act='can' and on_pick='self' and param_event='activated'"): entry[i].add('summoned')  # Zeal: a unit put into play acts at once (Drakenborg -> Vincent Meis)
     for m, act, k, w, zone in c.execute("""select card, act, on_kind, on_with, on_zone from flat_do where origin='own' and card_ref is null
             and coalesce(on_side,'mine') in ('mine','any') and coalesce(on_pick,'') not in ('self','it') and ((act='revive') or
             (act in ('summon','play_card') and on_zone in ('deck','deck_top','hand','discard','everywhere')) or
