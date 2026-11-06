@@ -18,6 +18,7 @@ Kaptain's browser card game. Work on the clone and commit to `main`; push only w
   (library task: `git sparse-checkout disable`).
 - Any design work is a library task, even when no library file is named: factions, cards, mechanics, combos, decks, brainstorms. Clone with the library and read `factions/START_DESIGN.md` and its three parts (`START_DESIGN-2-rules.md`, `START_DESIGN-3-checks.md`, `START_DESIGN-4-asking.md`) whole before answering (it points to the rules and the rest).
 - A handoff or a task in the first message is Kaptain's go: clone what that task needs (the library too) and start it; never ask whether to begin.
+- Card database chats: the main chat never reads card texts, guide texts, records, reports or check output itself, not even "small" ones; an agent reads them and replies in one line (START_DATABASE.md, "The main chat leads"). The main chat runs scripts, starts agents, and reads counts and those lines only.
 - This file is the only file read at the start. Do not open the README, todo.md, summary/ or factions/ indexes, or any code until the task needs it, then use the map below to go straight to the right file.
 
 ## Map: where each thing lives
