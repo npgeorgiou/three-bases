@@ -16,7 +16,7 @@
   (misses: Nilfgaard cast_from_zone, control; Scoiatael ranged, ping, tutor; Monster swarm; Skellige aggro_tempo).
 
 ## Before step 2 (chat 2 continues from START_DATABASE.md Part 3 after it)
-- Done 6 Nov 2026: Deck pairs (43, games/gwent.md, from the guide texts; 13 guides name none) -> network.tsv n545-n587
+- Done 6 Nov 2026: Deck pairs (43, games/gwent.md, from 12 guide texts; 18 name none) -> network.tsv n545-n587
   (deck_pairs.py); combos.tsv cgw01-03; regions.tsv rgw01-30 (all pass); mechanics.tsv gw01-gw85, one per keyword
   (checks/gwent/mech_cases.md); run.py gwent and every step after its cases; realworld.py gwent (26 of 33 hold);
   design_questions.py; keyword -> concept list shown to Kaptain.
