@@ -2,3 +2,7 @@
 {"id": 756611, "field": "test", "need": "own_turn"}
 {"id": 756705, "field": "test", "need": "changed_sides"}
 {"id": 756947, "field": "param", "need": "ignores_armor"}
+{"id": 757080, "field": "with", "need": "has_status"}
+{"id": 757247, "field": "pick", "need": "last_played"}
+{"id": 757298, "field": "if", "need": "damage_source"}
+{"id": 757469, "field": "act", "need": "base_set"}
