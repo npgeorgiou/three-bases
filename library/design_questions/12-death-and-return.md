@@ -14,7 +14,7 @@ Magmar Aspects (115 cards): sacrifice 3, revive 11
   Cascading Rebirth (follow-up): Destroy a friendly minion to summon a random Magmar minion that costs 1 more.
   Dreadnought: Keywords: Rebirth. Egg minions you summon gain +2/+2.
   Erratic Raptyr: Keywords: Rebirth. After this minion attacks or counterattacks, turn it into an Egg.
-  works with: revive (e.g. Vellumscry -> The Releaser); death_trigger (e.g. Windstorm Obelysk -> Khanuum-ka); leave_trigger (e.g. Vellumscry -> The Releaser)
+  works with: revive (e.g. Aphotic Drain -> The Releaser); death_trigger (e.g. Ethereal Obelysk -> Khanuum-ka); leave_trigger (e.g. Aphotic Drain -> The Releaser)
 ## faeria
 Yellow (72 cards): sacrifice 6, revive 0
   Death Walker: Deathtouch You must sacrifice another creature to summon this creature.
@@ -24,7 +24,7 @@ Yellow (72 cards): sacrifice 6, revive 0
 Pandora (40 cards): sacrifice 2, revive 0
   Ancient Gargoyle: Charge 3, Flying Gift - Destroy all Treasure Maps in your deck and gain +1/+1 for each...
   Void Guardian: Gift - Destroy your deck.
-  works with: death_trigger (e.g. Rakoan Cannoneer -> Rakoan Shield Mates); cheat_death (e.g. Shaytan Assassin -> Aryana, Soul of Gagana); friendly_fire (e.g. Shaytan Assassin -> Plague Bearer)
+  works with: death_trigger (e.g. Rakoan Cannoneer -> Rakoan Shield Mates); cheat_death (e.g. Rakoan Cannoneer -> Annoying Gnat); friendly_fire (e.g. Rakoan Cannoneer -> Plague Bearer)
 ## gwent
 Monster (182 cards): sacrifice 32, revive 8
   Call of the Depths: After Dagon has been worshipped 4 times, Spawn Dagon: Promised on your Melee row and...
@@ -33,7 +33,7 @@ Monster (182 cards): sacrifice 32, revive 8
   Adda: Striga: Zeal. Order (Predator): Consume a Token. If it was allied, double the boost from it.
 Syndicate / Monster (3 cards): sacrifice 1, revive 0
   Kikimore Warrior: Order: Destroy an allied unit, then Spawn a Kikimore Warrior on this row.
-  works with: placement_rules (e.g. Eternal Fire Inquisitor -> Mysterious Puzzle Box); death_trigger (e.g. Moreelse -> Purge); leave_trigger (e.g. Vildkaarl -> Havfrue Singer)
+  works with: placement_rules (e.g. Celaeno Harpy -> Mysterious Puzzle Box); death_trigger (e.g. Moreelse -> Purge); leave_trigger (e.g. Vildkaarl -> Havfrue Singer)
 ## inscryption
 Undead (24 cards): sacrifice 2, revive 1
   Necromancer: Keywords: Double Death.
@@ -45,14 +45,14 @@ Magick (25 cards): sacrifice 1, revive 0
 Ranged (29 cards): sacrifice 2, revive 0
   Arachnoid Injector: Damage target, creating a friendly robot spider on kill. Damage: 1. Power: Free....
   Arachnoid Mech: Health 3, move 3. Weapon: Arachnoid Injector: Damage target, creating a friendly robot...
-  works with: summon (e.g. Arachnoid Mech -> Marked tile); on_kill (e.g. Arachnoid -> Cascading Resonator); death_trigger (e.g. Arachnoid Mech -> Ice Tile)
+  works with: summon (e.g. Arachnoid Mech -> Marked tile); on_kill (e.g. Arachnoid Injector -> Cascading Resonator); death_trigger (e.g. Arachnoid Mech -> Ice Tile)
 ## marvel_snap
 (all cards) (867 cards): sacrifice 25, revive 16
   Valley of the Baby Hand: Destroy your next play here. Snap to revive a card here.
   Adamantium Infusion: On Reveal: Banish this to revive your highest-Power destroyed card here with its Power...
   Altar of Death: After you play a card here, destroy it to get +2 Energy next turn.
   Annihilus: On Reveal: Your cards with Power below 0 switch sides. Destroy those that can't.
-  works with: death_trigger (e.g. Weapon XI Facility -> Deadpool); other_death_trigger (e.g. Zombie Captain Marvel -> Fantomex); revive (e.g. Weapon XI Facility -> Adamantium Infusion)
+  works with: death_trigger (e.g. Hala -> Nova); other_death_trigger (e.g. Zombie Captain Marvel -> Fantomex); revive (e.g. Hala -> Valley of the Baby Hand)
 ## monster_train
 Umbra (47 cards): sacrifice 12, revive 0
   Antumbra Morsel: Eaten: Eater gains +6 Health.
@@ -76,7 +76,7 @@ Shurima (264 cards): sacrifice 24, revive 2
   Construct of Desolation: Create a Ruinous Acolyte or an Obelisk of Power in hand.
   Dune Swallower: Keywords: SpellShield, Fearsome. To play me, kill an ally or one of your mana gems 3...
   Empire Reconstructor: Play: Grant an allied landmark, "When I'm destroyed, revive me."
-  works with: revive (e.g. Ekko (level 2) -> Bladepierced Revenant); death_trigger (e.g. Ekko (level 2) -> Bladepierced Revenant); other_leave_trigger (e.g. The Darkin Bloodletters -> The Shadow Reaper)
+  works with: revive (e.g. Mordekaiser -> Bladepierced Revenant); death_trigger (e.g. Mordekaiser -> Bladepierced Revenant); other_leave_trigger (e.g. The Darkin Bloodletters (created) -> The Shadow Reaper)
 ## stormbound
 Ironclad (34 cards): sacrifice 1, revive 1
   Project PH03-NIX: When dying not bordering any base, randomly respawn at your base with 5/6/7/8/10 strength
@@ -88,5 +88,5 @@ Shadowfen (34 cards): sacrifice 1, revive 0
 Watcher (90 cards): sacrifice 2, revive 0
   Blasphemy: Keywords: Exhaust. Enter Divinity. Die next turn.
   Blasphemy+: Keywords: Retain, Exhaust. Enter Divinity. Die next turn.
-  works with: stances (e.g. Blasphemy -> Damaru); resource_gain (e.g. Blasphemy+ -> Bloody Idol); retain (e.g. Blasphemy+ -> Sands of Time)
+  works with: stances (e.g. Blasphemy+ -> Worship); resource_gain (e.g. Blasphemy+ -> Bloody Idol); retain (e.g. Blasphemy+ -> Windmill Strike)
 ```

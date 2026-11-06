@@ -142,7 +142,7 @@ select distinct card from flat_ref where happening='given_keyword' and role!='ma
 ```
 - duelyst: 32 cards: Afterblaze, Bloodbound Mentor, Cannon of MECHAZ0R, Chassis of MECHAZ0R, Cloudcaller, Crossbones, Cryoblade, Cryptographer ...
 - faeria: 8 cards: Destructive Volley, Enslaved Priest, Fugoro, Captain of the Gagana, Herald of War, Imperial Engineer, Seek Shelter, Triton Trainer, Windborne Emissary
-- gwent: 163 cards: Abaya, Admiral Rompally, Aen Elle Aristocrat, Aen Elle Slave Trader, Affan Hillergrand, Amnesty, An Craite Armorsmith, Ancient Foglet ...
+- gwent: 165 cards: Abaya, Admiral Rompally, Aen Elle Aristocrat, Aen Elle Slave Trader, Affan Hillergrand, Amnesty, An Craite Armorsmith, Ancient Foglet ...
 - inscryption: 8 cards: Ant Queen, Ants, Emerald Power, Flying Ant, Green Mage, Master Bleene, True Scholar, Worker Ant
 - into_the_breach: 7 cards: Fire, Flame Thrower, Heat Engines, Nanofilter Mending, Sand Tile, Smoke Tile, Storm Generator
 - marvel_snap: 27 cards: Absorbing Man, Astral Projection, Aunt May, Cosmo, Enchantress, Ghost, Goliath, Gorr the God Butcher ...
@@ -180,12 +180,12 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: duelyst 3172 pairs, e.g. Star's Fury -> Khanuum-ka; faeria 1015 pairs, e.g. Doomgate, Door to Oblivion -> Long-horned Yak; gwent 4623 pairs, e.g. Moreelse -> Purge; inscryption 466 pairs, e.g. Skel-e-latcher -> Pack Mule; into_the_breach 10 pairs, e.g. Walking Bomb -> Marked tile; marvel_snap 604 pairs, e.g. Gambit -> Wolverine; monster_train 348 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 22558 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 264 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- sacrifice: duelyst 1521 pairs, e.g. Fireblaze Obelysk -> Khanuum-ka; faeria 387 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; gwent 2519 pairs, e.g. Moreelse -> Purge; inscryption 54 pairs, e.g. Necromancer -> Burrowing Trap; into_the_breach 6 pairs, e.g. Arachnoid Injector -> Marked tile; marvel_snap 375 pairs, e.g. Arnim Zola -> Wade Wilson; monster_train 305 pairs, e.g. Primordium -> Devourer of Death; runeterra 8133 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- self_destruct: duelyst 1189 pairs, e.g. Star's Fury -> Khanuum-ka; faeria 653 pairs, e.g. Doomgate, Door to Oblivion -> Long-horned Yak; gwent 1389 pairs, e.g. Casimir Bassi -> Call of the Depths; inscryption 431 pairs, e.g. Skel-e-latcher -> Pack Mule; into_the_breach 8 pairs, e.g. Walking Bomb -> Marked tile; marvel_snap 60 pairs, e.g. Ice Cube -> Wade Wilson; monster_train 296 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 19820 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
-- friendly_fire: duelyst 1153 pairs, e.g. Necrotic Sphere -> Rage Reactor; faeria 160 pairs, e.g. Doomsday -> Ruunin, the Relentless; gwent 3082 pairs, e.g. Ulfhedinn -> Call of the Depths; inscryption 186 pairs, e.g. Hammer -> Pack Mule; into_the_breach 58 pairs, e.g. Thermal Discharger -> Marked tile; marvel_snap 90 pairs, e.g. Murderworld -> Wade Wilson; monster_train 34 pairs, e.g. Shardtail Queen -> Little Fade; runeterra 7878 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 238 pairs, e.g. Broken Earth Drakes -> Spare Dragonling
-- board_wipe: duelyst 330 pairs, e.g. Wasteland Wraith -> Rage Reactor; faeria 97 pairs, e.g. Doomsday -> Ruunin, the Relentless; marvel_snap 105 pairs, e.g. Murderworld -> Wade Wilson; monster_train 16 pairs, e.g. Shardtail Queen -> Little Fade; runeterra 1370 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 22 pairs, e.g. Avian Stalkers -> Marked as Prey
-- cheat_death: duelyst 302 pairs, e.g. Gor -> Fog; faeria 64 pairs, e.g. Aryana, Soul of Gagana -> Kobold Smuggler; gwent 525 pairs, e.g. Dagon: Promised -> Call of the Depths; marvel_snap 70 pairs, e.g. Wolverine -> Wade Wilson; runeterra 1498 pairs, e.g. Amalgamation Of Vile Rites -> Shackled Ghasts; stormbound 38 pairs, e.g. Diehards -> Crimson Sentry
+- destroy: duelyst 3172 pairs, e.g. Accumulonimbus -> Khanuum-ka; faeria 1015 pairs, e.g. Feed the Forest -> Long-horned Yak; gwent 4622 pairs, e.g. Moreelse -> Purge; inscryption 466 pairs, e.g. Skel-e-latcher -> Pack Mule; into_the_breach 10 pairs, e.g. Walking Bomb -> Ice Tile; marvel_snap 604 pairs, e.g. Gambit -> Muramasa Shard; monster_train 348 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 22558 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 264 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- sacrifice: duelyst 1521 pairs, e.g. Windstorm Obelysk -> Khanuum-ka; faeria 387 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; gwent 2518 pairs, e.g. Moreelse -> Purge; inscryption 54 pairs, e.g. Necromancer -> Ouroboros; into_the_breach 6 pairs, e.g. Arachnoid Mech -> Ice Tile; marvel_snap 375 pairs, e.g. Hala -> Bucky Barnes; monster_train 305 pairs, e.g. Primordium -> Devourer of Death; runeterra 8133 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- self_destruct: duelyst 1189 pairs, e.g. Accumulonimbus -> Khanuum-ka; faeria 653 pairs, e.g. Krog's Dinner -> Long-horned Yak; gwent 1389 pairs, e.g. Salamandra Abomination -> Call of the Depths; inscryption 431 pairs, e.g. Skel-e-latcher -> Pack Mule; into_the_breach 8 pairs, e.g. Walking Bomb -> Ice Tile; marvel_snap 60 pairs, e.g. Ice Cube -> Bucky Barnes; monster_train 296 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 19820 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Finite Loopers
+- friendly_fire: duelyst 1153 pairs, e.g. Necrotic Sphere -> Rage Reactor; faeria 160 pairs, e.g. Doomsday -> Ruunin, the Relentless; gwent 3084 pairs, e.g. Gerd -> Call of the Depths; inscryption 186 pairs, e.g. Bomb Latcher -> Pack Mule; into_the_breach 58 pairs, e.g. Thermal Discharger -> Ice Tile; marvel_snap 90 pairs, e.g. Murderworld -> Bucky Barnes; monster_train 34 pairs, e.g. Shardtail Queen -> Little Fade; runeterra 7878 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 238 pairs, e.g. Broken Earth Drakes -> Dreadful Keepers
+- board_wipe: duelyst 330 pairs, e.g. Necrotic Sphere -> Rage Reactor; faeria 97 pairs, e.g. Doomsday -> Ruunin, the Relentless; marvel_snap 105 pairs, e.g. Murderworld -> Bucky Barnes; monster_train 16 pairs, e.g. Shardtail Queen -> Little Fade; runeterra 1370 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 22 pairs, e.g. Avian Stalkers -> Marked as Prey
+- cheat_death: duelyst 302 pairs, e.g. Gor -> Fog; faeria 64 pairs, e.g. Annoying Gnat -> Kobold Smuggler; gwent 525 pairs, e.g. Dagon: Promised -> Call of the Depths; marvel_snap 70 pairs, e.g. Deadpool -> Bucky Barnes; runeterra 1498 pairs, e.g. Eggnivia -> Bladepierced Revenant; stormbound 38 pairs, e.g. Project PH03-NIX -> Finite Loopers
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -194,7 +194,7 @@ Families of three mechanics that feed each other, starting from "summon" (`ask.p
 - summon -> banish -> removal (seen in duelyst, marvel_snap, runeterra)
 - summon -> start_of_game -> draw (seen in runeterra)
 - summon -> start_of_game -> delayed (seen in runeterra)
-- summon -> start_of_game -> on_draw (seen in runeterra)
+- summon -> start_of_game -> countdown (seen in runeterra)
 
 ## A deck explained (`ask.py runeterra analyze "..."`), a Lucian/Senna deck from a deck guide
 
@@ -263,9 +263,9 @@ select distinct card from flat_do where act='copy_keywords'
 - gwent Neutral: play_timing_condition (5), cost_condition (4), draw (20), board_wipe (4), removal (29)
 - gwent Monster: targeting_rules (4), sacrifice (29), cheat_death (4), death_trigger (27), row_effects (15)
 - gwent Skellige: on_discard (4), condition_count (17), condition_life (38), discard (9), heal (15)
-- gwent Northern Realms: shield (16), haste (48), spell_power (9), stat_condition (19), cooldowns (27)
+- gwent Northern Realms: shield (16), haste (48), buff (4), spell_power (9), stat_condition (19)
 - gwent Syndicate: coin_economy (21), life_payment (6), resource_banking (11), kicker (10), resource_gain (100)
-- gwent Nilfgaard: junk_cards (4), donate (28), steal (9), swap (5), silence (12)
+- gwent Nilfgaard: junk_cards (6), donate (28), steal (9), swap (5), silence (12)
 - gwent Scoiatael: trap_secret (9), variety_payoff (17), regeneration (17), reactions (4), in_hand_buff (14)
 - inscryption Beast: free_play (4), multi_attack (8), stealth (8), immunity (6), variable_stats (8)
 - inscryption Technology: stances (8), territory_trigger (4), high_cost (15), aoe_damage (4), link_formation (10)

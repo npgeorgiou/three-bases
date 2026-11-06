@@ -14,7 +14,7 @@ Vanar Kindred (124 cards): forced_movement 4, movement 13
   Mesmerize: Teleport an enemy one space.
   The Dredger: Whenever your General damages an enemy, randomly teleport them to your starting side of...
   Wanderlust: Intensify: Teleport 1 random enemy minion to a space on your starting side of the...
-  works with: board_wipe (e.g. Mist Dragon Seal -> Necrotic Sphere); polymorph (e.g. Mist Dragon Seal -> Eternity Painter); regeneration (e.g. Mist Dragon Seal -> Lux Ignis)
+  works with: board_wipe (e.g. Chaos Elemental -> Necrotic Sphere); polymorph (e.g. Chaos Elemental -> Eternity Painter); regeneration (e.g. Chaos Elemental -> Suntide Maiden)
 ## faeria
 Yellow (72 cards): forced_movement 8, movement 42
   Flash Wind: Move a friendly creature or pay 2 faeria and move an enemy creature.
@@ -26,7 +26,7 @@ Blue (72 cards): forced_movement 7, movement 38
   Coral Polliwog: This creature can harvest faeria the turn you play it. Gift - You may move this...
   Dream Reaver: Dash 3 Gift - Set a god's Life to 10.
   Prophet of Tides: Gift - Move this creature's land twice.
-  works with: territory_trigger (e.g. Rebel Glider -> Nekomata); terrain (e.g. Triton Adventurer -> Gabrian Commander); adjacency (e.g. Triton Adventurer -> Tide Lord)
+  works with: territory_trigger (e.g. Balloon Fish -> Vile Bloatfly); terrain (e.g. Shifting Tide -> Gabrian Commander); adjacency (e.g. Triton Adventurer -> Triton Tactician)
 ## gwent
 Syndicate / Skellige (3 cards): forced_movement 1, movement 1
   Hammond: Deploy: Move an enemy unit to the other row and give it Bleeding (2). Increase the...
@@ -35,7 +35,7 @@ Nilfgaard (177 cards): forced_movement 24, movement 19
   Ard Feainn Heavy Cavalry: Flanking. At the end of your turn, gain 1 Armor. Ranged: When this unit reaches 5 Armor,...
   Baccalà: Resilience. Deploy: Spawn Imperial Fleet to the left of self and Imperial Marine to the...
   Emhyr var Emreis: Deploy: Play a bronze Soldier or Aristocrat from your hand, then draw a card. Whenever...
-  works with: junk_cards (e.g. Ard Feainn Heavy Cavalry -> Viper Witcher Alchemist); bounce_enemy (e.g. Ard Feainn Heavy Cavalry -> Ardal aep Dahy); steal (e.g. Vattier de Rideaux -> Emhyr var Emreis)
+  works with: junk_cards (e.g. Gezras of Leyda -> Viper Witcher Alchemist); bounce_enemy (e.g. Gezras of Leyda -> Ardal aep Dahy); steal (e.g. Usurper: Emperor -> Emhyr var Emreis)
 ## inscryption
 Beast (122 cards): forced_movement 18, movement 18
   Bloodhound: Keywords: Guardian.
@@ -46,7 +46,7 @@ Undead (24 cards): forced_movement 3, movement 3
   Bonehound: Keywords: Guardian.
   Ghost Ship: Keywords: Waterborne, Skeleton Crew.
   Headless Horseman: Keywords: Airborne, Sprinter.
-  works with: enemy_benefit (e.g. Wild Bull -> Alarm Bot); link_formation (e.g. Pronghorn -> Tough Cell); base_resource_gain (e.g. Pronghorn -> Energy Conduit)
+  works with: enemy_benefit (e.g. Wild Bull -> Bad Fish); link_formation (e.g. Skink -> Splinter Cell); base_resource_gain (e.g. Skink -> Energy Conduit)
 ## into_the_breach
 Prime (30 cards): forced_movement 15, movement 15
   Explosive Vents: Blast (and push) all adjacent tiles. Damage: 1. Power: Free. Upgrades: +1 Damage (2...
@@ -58,14 +58,14 @@ Brute (31 cards): forced_movement 17, movement 19
   Aerial Bombs: Fly over a target, dropping an explosive smoke bomb. Damage: 1. Power: Free. Upgrades:...
   Astra Bombs: Leap over any distance dropping a bomb on each tile you pass. Single-use. Damage: 1....
   Def. Shrapnel: Fire a non-damaging projectile that pushes tiles around the target. Power: Free.
-  works with: movement (e.g. Thermal Discharger -> Flame Thrower); destroy (e.g. Thermal Discharger -> Water Tile); rule_change (e.g. Thermal Discharger -> Flame Thrower)
+  works with: movement (e.g. Thermal Discharger -> Flame Thrower); destroy (e.g. Thermal Discharger -> Chasm Tile); rule_change (e.g. Thermal Discharger -> Flame Thrower)
 ## marvel_snap
 (all cards) (867 cards): forced_movement 53, movement 63
   Aero: On Reveal: The last card your opponent played moves to this location.
   Agamotto: Game Start: Shuffle 4 Ancient Arcana into your deck.
   Angel: When one of your cards is destroyed, this flies out of your hand or deck to replace it.
   Araña: Activate: After you play your next card, give it +1 Power and move it to the right.
-  works with: board_wipe (e.g. Hawkeye Kate Bishop -> Mercworld); play_restriction (e.g. Hawkeye Kate Bishop -> Professor X); friendly_fire (e.g. Hawkeye Kate Bishop -> Murderworld)
+  works with: board_wipe (e.g. Hercules -> Galactus); play_restriction (e.g. Hercules -> Invisible Woman & Namor Doomsday); friendly_fire (e.g. Hercules -> Galactus)
 ## monster_train
 Clanless (28 cards): forced_movement 3, movement 3
   Olde Magic: Built by the player at the Arcane Machine event (Concealed Caverns): one primary effect...
@@ -87,7 +87,7 @@ Ionia (236 cards): forced_movement 0, movement 14
   Ahri (level 2): Keywords: Quick Attack, Elusive, . When you Recall an ally, reduce its cost by 1....
   Ahri's Charm: Keywords: Focus. Recall an ally to give an enemy Vulnerable this round. Create an Ahri...
   Bladesurge: Keywords: Burst, Fleeting. Swap Irelia with an ally.
-  works with: attack_token (e.g. Sion -> Riven (level 2)); on_discard (e.g. Fizz -> Rumble (level 2)); board_wipe (e.g. An Acquired Taste -> Tahm Kench)
+  works with: attack_token (e.g. Sion Returned -> Riven (level 2)); on_discard (e.g. Fizz -> Rumble (level 2)); board_wipe (e.g. An Acquired Taste -> Tahm Kench)
 ## stormbound
 Ironclad (34 cards): forced_movement 9, movement 9
   Absorbing Varmints: Before moving, make friendly Ancients and Rodents pull enemy units from behind. Then...
@@ -99,7 +99,7 @@ Swarm (34 cards): forced_movement 3, movement 5
   Xuri, Lord of Life: On play, fly to the first empty tile in front. Give 2/3/4/5/6 strength to all friendly...
   Forgotten Souls: On play, command a/a/// random/random///...
   Herald’s Hymn: Give 2/3/4/5/6 strength to a target friendly unit. Command friendly units in its row...
-  works with: variety_payoff (e.g. Eloth the Ignited -> Ubass the Hunter); attack_now (e.g. Sweetcap Kittens -> Hair-Raising Cats); generate_cards (e.g. Eloth the Ignited -> Guardi the Lightbringer)
+  works with: variety_payoff (e.g. Crystalshields -> Terrifying Behemoths); attack_now (e.g. Catnip’s Charm -> Hair-Raising Cats); generate_cards (e.g. Crystalshields -> Guardi the Lightbringer)
 ## sts1
 Defect (89 cards): forced_movement 29, movement 23
   Ball Lightning: Deal 7 damage. Channel 1 Lightning.
@@ -111,5 +111,5 @@ Silent (83 cards): forced_movement 6, movement 0
   After Image+: Keywords: Innate. Whenever you play a card, gain 1 Block.
   Backstab: Keywords: Innate, Exhaust. Deal 11 damage.
   Infinite Blades: Keywords: Innate. At the start of your turn, add a Shiv into your hand.
-  works with: slots_queue (e.g. Rainbow+ -> Chaos); movement (e.g. Rainbow+ -> Chaos); repeat_trigger (e.g. Rainbow+ -> Chaos)
+  works with: movement (e.g. Rainbow -> Chaos); slots_queue (e.g. Rainbow -> Chaos); repeat_trigger (e.g. Rainbow -> Chaos)
 ```

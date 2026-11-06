@@ -25,13 +25,13 @@ Red (72 cards): disruption 0, suppress 3
   Devouring Plant: Taunt Production - Deal 2 damage to all adjacent enemy creatures.
   Grim Guard: Taunt Combat - Deal 2 damage to your opponent.
   Ogre Battler: Taunt
-  works with: on_damaged (e.g. Imperial Drain -> Unlikely Hero); damage_reduction (e.g. Imperial Drain -> Divine Guardian); death_trigger (e.g. Imperial Drain -> Celeste, Crystal Dragon)
+  works with: on_damaged (e.g. Imperial Drain -> Unlikely Hero); damage_reduction (e.g. Imperial Drain -> Shaytan Assassin); death_trigger (e.g. Imperial Drain -> Celeste, Crystal Dragon)
 ## gwent
-Nilfgaard (177 cards): disruption 11, suppress 12
+Nilfgaard (177 cards): disruption 13, suppress 12
   Admiral Rompally: Zeal. Order: Choose 3 enemy units, then give them Lock, Poison and Spying, in that...
   Alba Armored Cavalry: Deploy (Melee): Lock an enemy unit.
   Auckes: Deploy: Lock an enemy unit. If Serrit is in your hand, Lock all copies of that unit on...
-  Collar: Order: Lock an enemy unit and damage it by 3.
+  Bribery: Create and play a unit from your opponent's starting deck.
 Skellige (181 cards): disruption 5, suppress 1
   Armor Up: Damage an enemy unit by 2. Spawn 3 Witcher Students on the opposite row, damage them by...
   Djenge Frett: Deploy (Bloodthirst 1): Lock an enemy unit.
@@ -55,7 +55,7 @@ Ranged (29 cards): disruption 0, suppress 4
   Asgard Besieged: After turn 3, add The Destroyer to the winning side.
   Baron Zemo: On Reveal: Recruit a card that costs the least from your opponent's deck to your side of...
   Black Bolt: On Reveal: Discard the card that costs the least from your opponent's hand.
-  works with: card_presence_condition (e.g. Entropic Havok -> Red Hulk); turn_end (e.g. Entropic Havok -> Red Hulk); count_payoff (e.g. Entropic Havok -> Jim Hammond Human Torch)
+  works with: card_presence_condition (e.g. Entropic Havok -> Thaddeus Ross); turn_end (e.g. Entropic Havok -> Thaddeus Ross); count_payoff (e.g. Entropic Havok -> Sunspot)
 ## monster_train
 Stygian Guard (41 cards): disruption 0, suppress 3
   Frenzied Swarm: Apply Dazed 1 to enemy units. / Discard your hand.

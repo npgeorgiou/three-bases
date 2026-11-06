@@ -3,17 +3,17 @@
 `ask.py all feeds damage_over_time`
 
 ```
-on_kill: gwent 1948 pairs, e.g. Oakcritters -> Nature's Rebuke; monster_train 308 pairs, e.g. Olde Magic -> Little Fade; stormbound 6 pairs, e.g. Copperskin Ranger -> Spellbinder Zhevana; sts1 78 pairs, e.g. Corpse Explosion -> Lesson Learned
-lifesteal: gwent 47 pairs, e.g. Nathaniel Pastodi -> Regis: Reborn; stormbound 16 pairs, e.g. Acid Greenhorns -> Plague Monarchs
-other_death_trigger: gwent 422 pairs, e.g. Stygga Castle -> Ignatius Hale; monster_train 125 pairs, e.g. Olde Magic -> Big Sludge; sts1 37 pairs, e.g. Bouncing Flask -> The Specimen
+on_kill: gwent 1948 pairs, e.g. Oakcritters -> Nature's Rebuke; monster_train 308 pairs, e.g. Olde Magic -> Little Fade; stormbound 6 pairs, e.g. Venomfall Spire -> Spellbinder Zhevana; sts1 78 pairs, e.g. Poison Potion -> Lesson Learned
+lifesteal: gwent 47 pairs, e.g. Dettlaff van der Eretein -> Regis: Reborn; stormbound 16 pairs, e.g. Acid Greenhorns -> Plague Monarchs
+other_death_trigger: gwent 422 pairs, e.g. Savage Bear -> Blood Money; monster_train 125 pairs, e.g. Olde Magic -> Big Sludge; sts1 37 pairs, e.g. Corpse Explosion -> The Specimen
 on_damaged: into_the_breach 384 pairs, e.g. Thermal Discharger -> Fire; stormbound 68 pairs, e.g. Toxic Sacrifice -> Prime Oracle Bragda
-shop_gold: monster_train 74 pairs, e.g. Spike of the Stygian -> Olde Magic; sts1 27 pairs, e.g. Corpse Explosion -> Hand of Greed
+shop_gold: monster_train 74 pairs, e.g. Spike of the Stygian -> Olde Magic; sts1 27 pairs, e.g. Poison Potion -> Hand of Greed
 immunity: into_the_breach 164 pairs, e.g. Forest Tile -> Critical Shields; monster_train 7 pairs, e.g. Titanstooth -> Solgard the Martyr
 death_trigger: into_the_breach 20 pairs, e.g. Forest Tile -> Ice Tile; stormbound 81 pairs, e.g. Acid Greenhorns -> Green Prototypes
-base_resource_gain: into_the_breach 10 pairs, e.g. Forest Tile -> Mafan; sts1 164 pairs, e.g. Corpse Explosion -> Gremlin Horn
-damage: gwent 5164 pairs, e.g. Oakcritters -> Nature's Rebuke; sts1 296 pairs, e.g. Bouncing Flask -> Sadistic Nature
+base_resource_gain: into_the_breach 10 pairs, e.g. Forest Tile -> Mafan; sts1 164 pairs, e.g. Poison Potion -> Gremlin Horn
+damage: gwent 5167 pairs, e.g. Savage Bear -> Blood Money; sts1 296 pairs, e.g. The Specimen -> Sadistic Nature
 area_templates: stormbound 4 pairs, e.g. Acid Greenhorns -> Temple of Life
-turn_start: gwent 995 pairs, e.g. Making a Bomb -> Madoc; stormbound 33 pairs, e.g. Acid Greenhorns -> Green Prototypes; sts1 259 pairs, e.g. Bouncing Flask -> The Specimen
+turn_start: gwent 1041 pairs, e.g. Making a Bomb -> Madoc; stormbound 33 pairs, e.g. Acid Greenhorns -> Big Sisters of Growth; sts1 259 pairs, e.g. Corpse Explosion -> The Specimen
 shield: into_the_breach 160 pairs, e.g. Forest Tile -> Critical Shields
 ```
 

@@ -62,7 +62,7 @@ Ionia (236 cards): spells_played_condition 14, spell_power 0
   Deep Meditation: Keywords: Flow. Flow: I cost 2 less. Draw 2 other spells.
   Dragoncaller: Keywords: Attune, Flow. Round Start: Flow: Summon The Empyrean and grant it Ephemeral.
   Eye of the Dragon: Keywords: Attune, Flow. Round Start: Flow: Summon a Dragonling.
-  works with: recycle (e.g. Deep Meditation -> Janna); on_discard (e.g. Master Yi -> Rumble); turn_start (e.g. Deep Meditation -> Janna)
+  works with: recycle (e.g. Deep Meditation -> Janna); on_discard (e.g. Lee Sin (level 2) -> Rumble); turn_start (e.g. Deep Meditation -> Janna)
 ## sts1
 Defect (89 cards): spells_played_condition 1, spell_power 18
   Beam Cell: Deal 3 damage. Apply 1 Vulnerable.
