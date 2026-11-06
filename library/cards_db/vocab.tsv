@@ -297,7 +297,7 @@ keyword	Capture	concept of using or giving this keyword	banish		28 Oct 2026, v3
 keyword	Blade Dance	concept of using or giving this keyword	attack_now		28 Oct 2026, v3
 keyword	Can't Block	concept of using or giving this keyword (Kaptain, 28 Oct 2026: my own unit cannot block: a drawback)	drawback		28 Oct 2026, v3
 keyword	Lifesteal	concept of having, using or giving this keyword	lifesteal		28 Oct 2026, v3
-keyword	Drain	concept of having, using or giving this keyword	lifesteal		28 Oct 2026, v3
+keyword	Drain	concept of having, using or giving this keyword (Gwent: damage ignoring the target's armor, then boost self by the damage dealt)	lifesteal		28 Oct 2026, v3
 keyword	Regeneration	concept of having, using or giving this keyword	regeneration		28 Oct 2026, v3
 keyword	Barrier	concept of having, using or giving this keyword	shield		28 Oct 2026, v3
 keyword	SpellShield	concept of having, using or giving this keyword (negates the next enemy spell or skill: absorbs one hit, 31 Oct 2026)	shield		28 Oct 2026, v3
@@ -408,10 +408,10 @@ keyword	Force attack	concept of using this keyword (Stormbound: made to attack a
 keyword	Pull	concept of using this keyword (Stormbound: moved toward a unit; concept is Claude's)	forced_movement		28 Oct 2026, v14 (Stormbound)
 keyword	Push	concept of using this keyword (Stormbound: moved away to the edge or a unit; concept is Claude's)	forced_movement		28 Oct 2026, v14 (Stormbound)
 keyword	Reduce strength	concept of using this keyword (Stormbound: strength set lower; not damage; concept is Claude's)	stat_loss		28 Oct 2026, v14 (Stormbound)
-keyword	Spawn	concept of using this keyword (Stormbound: creates a unit or structure on a tile; concept is Claude's)	summon		28 Oct 2026, v14 (Stormbound)
+keyword	Spawn	concept of using this keyword (Stormbound: creates a unit or structure on a tile; concept is Claude's; Gwent: add a card to the game)	summon		28 Oct 2026, v14 (Stormbound)
 act	donate	"give my own unit or card to the opponent (Stormbound ""convert itself""); taking an enemy's is steal"	donate		28 Oct 2026, v19
 act	random_one	one of the following effects happens at random (they carry link or); the player choosing is choose_one	random_effect		28 Oct 2026, v19
-keyword	Armor	concept of having, using or giving this keyword (Monster Train: damage goes to Armor first, one point blocks one point and is removed; concept is Claude's)	block_armor		28 Oct 2026, v22 (Monster Train)
+keyword	Armor	concept of having, using or giving this keyword (Monster Train: damage goes to Armor first, one point blocks one point and is removed; concept is Claude's; Gwent: protects the unit from damage; the value doesn't count towards the score or the unit's power)	block_armor		28 Oct 2026, v22 (Monster Train)
 keyword	Buffet	concept of having, using or giving this keyword (Monster Train: the unit can be eaten several times, so its Eaten ability happens again; concept is Claude's)	repeat_trigger		28 Oct 2026, v22 (Monster Train)
 keyword	Burnout	concept of having, using or giving this keyword (Monster Train: counts down each turn; the unit dies at 0; concept is Claude's)	self_destruct		28 Oct 2026, v22 (Monster Train)
 keyword	Enchant	concept of having, using or giving this keyword (Monster Train: other friendly units on the same floor gain a bonus; concept is Claude's)	aura		28 Oct 2026, v22 (Monster Train)
@@ -444,7 +444,7 @@ keyword	Resolve	concept of having, using or giving this keyword (Monster Train: 
 keyword	Revenge	concept of having, using or giving this keyword (Monster Train: triggers when damaged; concept is Claude's)	on_damaged		28 Oct 2026, v22 (Monster Train)
 keyword	Slay	concept of having, using or giving this keyword (Monster Train: triggers after dealing a killing blow; concept is Claude's)	on_kill		28 Oct 2026, v22 (Monster Train)
 keyword	Strike	concept of having, using or giving this keyword (Monster Train: triggers when attacking; concept is Claude's)	on_attack		28 Oct 2026, v22 (Monster Train)
-keyword	Summon	concept of having, using or giving this keyword (Monster Train: triggers when played; concept is Claude's)	on_play		28 Oct 2026, v22 (Monster Train)
+keyword	Summon	concept of having, using or giving this keyword (Monster Train: triggers when played; concept is Claude's; Gwent: move automatically to the battlefield (not considered played))	on_play		28 Oct 2026, v22 (Monster Train)
 keyword	Damage Shield	concept of having, using or giving this keyword (Monster Train: nullifies the next source of damage; concept is Claude's)	shield		28 Oct 2026, v22 (Monster Train)
 keyword	Rage	concept of having, using or giving this keyword (Monster Train: +2 Attack per stack; decreases every turn; concept is Claude's)	temporary_buff		28 Oct 2026, v22 (Monster Train)
 keyword	Regen	concept of having, using or giving this keyword (Monster Train: restores 1 health per stack at end of turn; decreases every turn; concept is Claude's)	regeneration		28 Oct 2026, v22 (Monster Train)
@@ -465,10 +465,10 @@ keyword	Reform	concept of having, using or giving this keyword (Monster Train: r
 keyword	Sacrifice	concept of having, using or giving this keyword (Monster Train: kill a friendly unit of the required type to play the card; concept is Claude's)	sacrifice		28 Oct 2026, v22 (Monster Train)
 keyword	Cultivate	concept of having, using or giving this keyword (Monster Train: the friendly unit with the lowest health gains that much attack and health; concept is Claude's)	stat_gain		28 Oct 2026, v22 (Monster Train)
 keyword	Attuned	concept of having, using or giving this keyword (Monster Train: Magic Power counts five times on this card; concept is Claude's)	spell_power		28 Oct 2026, v22 (Monster Train)
-keyword	Consume	concept of having, using or giving this keyword (Monster Train: can only be played once per battle; concept is Claude's)	exhaust		28 Oct 2026, v22 (Monster Train)
+keyword	Consume	concept of having, using or giving this keyword (Monster Train: can only be played once per battle; concept is Claude's; Gwent: destroy a unit and boost self by its power; a target in the graveyard is Banished instead)	exhaust		28 Oct 2026, v22 (Monster Train)
 keyword	Extract	concept of having, using or giving this keyword (Monster Train: playing the card costs that much Echo; without it the card cannot be played; concept is Claude's)	cost_type		28 Oct 2026, v22 (Monster Train)
 keyword	Frozen	concept of having, using or giving this keyword (Monster Train: the card is not discarded at end of turn; concept is Claude's)	retain	kept_in_hand	28 Oct 2026, v22 (Monster Train); causes kept_in_hand v64
-keyword	Infused	concept of having, using or giving this keyword (Monster Train: when played, the floor gains 1 Echo; concept is Claude's)	resource_gain		28 Oct 2026, v22 (Monster Train)
+keyword	Infused	concept of having, using or giving this keyword (Monster Train: when played, the floor gains 1 Echo; concept is Claude's; Gwent: status that adds effects or categories to a card; removing it removes them; Lock disables Infused abilities)	resource_gain		28 Oct 2026, v22 (Monster Train)
 keyword	Magic Power	concept of having, using or giving this keyword (Monster Train: spells deal more damage and restore more health; concept is Claude's)	spell_power		28 Oct 2026, v22 (Monster Train)
 keyword	Offering	concept of having, using or giving this keyword (Monster Train: if discarded before the end of the turn, the card is played instead; concept is Claude's)	on_discard		28 Oct 2026, v22 (Monster Train)
 keyword	Permafrost	concept of having, using or giving this keyword (Monster Train: the card gains Frozen when drawn; concept is Claude's)	retain		28 Oct 2026, v22 (Monster Train)
@@ -540,7 +540,7 @@ keyword	Empowered	concept of having, using or giving this keyword (Runeterra glo
 keyword	Reputation	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	combat_damage_threshold		29 Oct 2026, v30; v33 (Kaptain)
 keyword	Deep	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	deck_condition		29 Oct 2026, v30; v33 (Kaptain)
 keyword	Behold	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	card_presence_condition		29 Oct 2026, v30; v33 (Kaptain)
-keyword	Assimilate	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	transform	transformed;levels_up	29 Oct 2026, v30; v33 (Kaptain)
+keyword	Assimilate	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026; Gwent: boost self by 1 or the given amount whenever you play a card not from your starting deck)	transform	transformed;levels_up	29 Oct 2026, v30; v33 (Kaptain)
 keyword	Fated	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	on_targeted		29 Oct 2026, v30; v33 (Kaptain)
 keyword	Sharpsight	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	blocking		29 Oct 2026, v30; v33 (Kaptain)
 keyword	Mark of the Storm	concept of having, using or giving this keyword (Runeterra glossary; mapped with Kaptain's review, 29 Oct 2026)	mark_target		29 Oct 2026, v30; v33 (Kaptain)
@@ -727,7 +727,7 @@ keyword	Infiltrate	concept of having, using or giving this keyword (Duelyst: a b
 keyword	MECHAZ0R	concept of having, using or giving this keyword (Duelyst: cards progress the MECHAZ0R build; when it is complete, MECHAZ0R is deployed; concept is Claude's)	quests		29 Oct 2026, v37 (Duelyst)
 keyword	Opening Gambit	concept of having, using or giving this keyword (Duelyst: triggers when summoned from your action bar; concept is Claude's)	on_play		29 Oct 2026, v37 (Duelyst)
 keyword	Primal Flourish	concept of having, using or giving this keyword (Duelyst: a space whose friendly minions have Grow: +2/+2; concept is Claude's)	terrain		29 Oct 2026, v37 (Duelyst)
-keyword	Ranged	concept of having, using or giving this keyword (Duelyst: attacks from anywhere on the battlefield; concept is Claude's)	ranged		29 Oct 2026, v37 (Duelyst)
+keyword	Ranged	concept of having, using or giving this keyword (Duelyst: attacks from anywhere on the battlefield; concept is Claude's; Gwent: this ability can only be used while on the ranged row)	ranged		29 Oct 2026, v37 (Duelyst)
 keyword	Rebirth	concept of having, using or giving this keyword (Duelyst: when this dies it leaves a 0/1 Egg that hatches into the same minion before your next turn; concept is Claude's)	revive		29 Oct 2026, v37 (Duelyst)
 keyword	Sentinel	concept of having, using or giving this keyword (Duelyst: summoned as a 3/3 with no abilities; transforms into its true form when a hidden event happens on the opponent's turn; concept is Claude's)	trap_secret		29 Oct 2026, v37 (Duelyst)
 keyword	Shadow Creep	concept of having, using or giving this keyword (Duelyst: a space that damages enemy minions and Generals on it at the end of its owner's turn; concept is Claude's)	terrain		29 Oct 2026, v37 (Duelyst)
@@ -737,7 +737,7 @@ keyword	Summon Dervish	concept of having, using or giving this keyword (Duelyst:
 keyword	Battle Pet	concept of having, using or giving this keyword (Duelyst: activates at the start of your turn and moves to attack the nearest enemy; concept is Claude's)	autonomous_units		29 Oct 2026, v37 (Duelyst)
 keyword	Anti-Magic Field	concept of having, using or giving this keyword (Duelyst: cannot be targeted or damaged by spells; concept is Claude's)	immunity		29 Oct 2026, v37 (Duelyst)
 keyword	Wall	concept of having, using or giving this keyword (Duelyst: the minion cannot move, and is removed from the battlefield if dispelled; concept is Claude's)	cant_move		29 Oct 2026, v37 (Duelyst)
-keyword	Zeal	concept of having, using or giving this keyword (Duelyst: a bonus while nearby its General; concept is Claude's)	adjacency		29 Oct 2026, v37 (Duelyst)
+keyword	Zeal	concept of having, using or giving this keyword (Duelyst: a bonus while nearby its General; concept is Claude's; Gwent: an Order ability can be used on the same turn the card is placed on the battlefield)	adjacency		29 Oct 2026, v37 (Duelyst)
 keyword	Backstab	concept of having, using or giving this keyword (Duelyst: attacking from behind deals extra damage and cannot be counterattacked; concept is Claude's)	flanking		29 Oct 2026, v37 (Duelyst)
 keyword	Invulnerable	concept of having, using or giving this keyword (Duelyst: cannot die or be affected by anything; concept is Claude's)	immunity		29 Oct 2026, v37 (Duelyst)
 keyword	Build	concept of having, using or giving this keyword (Duelyst: summoned as a 0/10 Structure that transforms into its true form after a number of turns; concept is Claude's)	countdown		29 Oct 2026, v37 (Duelyst)
@@ -827,7 +827,7 @@ keyword	Exhaust	concept of having, using or giving this keyword (Slay the Spire:
 keyword	Fatal	concept of having, using or giving this keyword (Slay the Spire: when this card kills a non-minion enemy; concept is Claude's)	on_kill		30 Oct 2026, v49 (Slay the Spire)
 keyword	sts1:Focus	concept of having, using or giving this keyword (Slay the Spire: Orbs (but Plasma) get stronger; concept is Claude's)	spell_power		30 Oct 2026, v49 (Slay the Spire)
 keyword	Frail	concept of having, using or giving this keyword (Slay the Spire: less Block gained from cards; concept is Claude's)	debuff		30 Oct 2026, v49 (Slay the Spire)
-keyword	Frost	concept of having, using or giving this keyword (Slay the Spire: an Orb that gives Block; concept is Claude's)	block_armor		30 Oct 2026, v49 (Slay the Spire)
+keyword	Frost	concept of having, using or giving this keyword (Slay the Spire: an Orb that gives Block; concept is Claude's; Gwent: at the start of the owner's turn, damage the highest power unit in this row by 2)	block_armor		30 Oct 2026, v49 (Slay the Spire)
 keyword	Innate	concept of having, using or giving this keyword (Slay the Spire: starts each combat in hand; concept is Claude's)	card_quality		30 Oct 2026, v49 (Slay the Spire)
 keyword	Intangible	concept of having, using or giving this keyword (Slay the Spire: all damage and HP loss taken is reduced to 1; concept is Claude's)	damage_reduction		30 Oct 2026, v49 (Slay the Spire)
 keyword	Lightning	concept of having, using or giving this keyword (Slay the Spire: an Orb that damages random enemies; concept is Claude's)	damage		30 Oct 2026, v49 (Slay the Spire)
@@ -1031,3 +1031,15 @@ attr	distance_from_top	with x stat and of a card in a looked-at deck: how many p
 attr	rows_between	with x stat and of a unit: the number of rows that separate it from the card itself (Gwent "for each row that separates it from this unit"); value is Claude's, agreed by Kaptain 6 Nov 2026			6 Nov 2026, v82 (Gwent family 3, 4, 6)
 x	event_total	the sum of the amounts of an event over the span, as x event_count counts them (Gwent "the damage dealt by Frost in the last 5 enemy turns"); value is Claude's, agreed by Kaptain 6 Nov 2026			6 Nov 2026, v82 (Gwent family 3, 4, 6)
 span	last_5_enemy_turns	the last 5 enemy turns (Gwent "in the last 5 enemy turns"); value is Claude's, agreed by Kaptain 6 Nov 2026			6 Nov 2026, v82 (Gwent family 3, 4, 6)
+keyword	Counter	concept of having, using or giving this keyword (Gwent: reduced whenever the given condition is met; resets when the unit leaves the board)	countdown		6 Nov 2026 (Gwent keyword text)
+keyword	Create	concept of having, using or giving this keyword (Gwent: spawn one of three randomly selected cards from the given source)	generate_cards		6 Nov 2026 (Gwent keyword text)
+keyword	Defender	concept of having, using or giving this keyword (Gwent: status: the opponent cannot target other cards in this row)	taunt		6 Nov 2026 (Gwent keyword text)
+keyword	Discard	concept of having, using or giving this keyword (Gwent: move a card from your hand to the graveyard; related abilities don't trigger on a manual discard)	discard		6 Nov 2026 (Gwent keyword text)
+keyword	Heal	concept of having, using or giving this keyword (Gwent: restore a unit whose power is below base, to base power or by the given amount)	heal		6 Nov 2026 (Gwent keyword text)
+keyword	Immunity	concept of having, using or giving this keyword (Gwent: status: this card cannot be manually targeted)	immunity		6 Nov 2026 (Gwent keyword text)
+keyword	Lock	concept of having, using or giving this keyword (Gwent: status that disables a unit's abilities)	disable		6 Nov 2026 (Gwent keyword text)
+keyword	Melee	concept of having, using or giving this keyword (Gwent: this ability can only be used while on the melee row)	rows		6 Nov 2026 (Gwent keyword text)
+keyword	Reset	concept of having, using or giving this keyword (Gwent: restore a unit to its base power)	heal		6 Nov 2026 (Gwent keyword text)
+keyword	Reveal	concept of having, using or giving this keyword (Gwent: show a card to both players, then hide it again in the hand or deck)	information		6 Nov 2026 (Gwent keyword text)
+keyword	Shield	concept of having, using or giving this keyword (Gwent: status that blocks the next instance of damage dealt to the unit)	shield		6 Nov 2026 (Gwent keyword text)
+keyword	Timer	concept of having, using or giving this keyword (Gwent: lowered by 1 before the end of your turn; at 0 the ability triggers)	countdown		6 Nov 2026 (Gwent keyword text)

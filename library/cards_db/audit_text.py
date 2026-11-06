@@ -46,15 +46,15 @@ def rules(game):
         ('kill or destroy', r'(?<!you )(?<!or )\b(?:kill|destroy)\b(?!ed)', lambda r: acts(r) & {'kill', 'sacrifice', 'obliterate', 'keyword_action', 'strike', 'spend_mana', 'unequip', 'max_mana_change'} or '"killed"' in words(r) or '"dies"' in words(r)),
         ('discard', r'\bdiscard\b(?! pile)', lambda r: acts(r) & {'discard', 'keyword_action'} or 'discard' in words(r)),
         ('stat gift', r'\+\d+[|/]\+\d+|\bgive\s+[\d/]+\s+strength|\bgain\s+[\d/]+\s+strength|\+\d+ (?:Attack|Health)\b', lambda r: acts(r) & {'stat_change', 'grow', 'give_keyword', 'keyword_action', 'increase_effect'}),
-        ('cost less', r'\bcosts?\s+[\dX]+\s+less|\breduce\s+(?:its|their|the)\s+cost|\bcost\s+-\d', lambda r: acts(r) & {'cost_change', 'cost_set'}),
+        ('cost less', r'\bcosts?\s+[\dX]+\s+less|\breduce\s+(?:its|their|the)\s+cost|\bcost\s+-\d', lambda r: acts(r) & {'cost_change', 'cost_set', 'spend_mana'}),  # a Tribute/Fee cost is spend_mana
         ('this round', r'\bthis round\b', lambda r: 'this_round' in words(r)),
         ('everywhere', r'\beverywhere\b', lambda r: 'everywhere' in words(r)),
-        ('for each', r'\bfor each\b|\bper\b(?! turn| stack)', lambda r: re.search(r'"x": ?"(?!n")', words(r)) is not None or 'per_' in words(r) or 'times' in words(r)),
-        ('random', r'\brandom', lambda r: 'random' in words(r) or 'spread' in words(r)),
+        ('for each', r'\bfor each\b|\bper\b(?! turn| stack)', lambda r: re.search(r'"x": ?"(?!n")', words(r)) is not None or 'per_' in words(r) or 'times' in words(r) or '"link": "for_each"' in words(r)),
+        ('random', r'\brandom', lambda r: 'random' in words(r) or 'spread' in words(r) or '"x": "range"' in words(r)),
         ('spells and Skills', r'spells?,?\s+(?:and|or)\s+skills?', lambda r: '"skill"' in words(r)),
         ('level up', r'\bLevel up:', lambda r: 'level_up' in acts(r)),
         # board words (Faeria lands, wells, adjacency); a game without them never matches
-        ('this turn', r'\bthis turn\b', lambda r: 'this_round' in words(r) or 'this_turn' in words(r)),
+        ('this turn', r'\bthis turn\b', lambda r: 'this_round' in words(r) or 'this_turn' in words(r) or any(o.get('limit') == 'next_time' and isinstance(o.get('when'), dict) and o['when'].get('event') == 'turn_end' for k, o in parts(r))),
         ('land act', r'\b(?:create|transform|destroy|move)\b[^.]{0,30}\b(?:lands?|forests?|lakes?|mountains?|deserts?|prairies?)\b', lambda r: acts(r) & {'set_terrain', 'move', 'steal'} or '"terrain"' in words(r)),
         ('adjacent', r'\badjacent\b', lambda r: '"bordering"' in words(r) or '"sides"' in words(r) or '"lane_left"' in words(r)),  # a hex
         # board's neighbours, a row's (Inscryption), a lane's (Marvel Snap: lane_left and lane_right)
@@ -70,7 +70,7 @@ def rules(game):
 def main():
     game = sys.argv[1]; show = sys.argv[sys.argv.index('--list') + 1] if '--list' in sys.argv else None
     lib = source.lib()
-    text = {i: (n.strip(), ' '.join((t or '').split())) for i, n, t in lib.execute("select id, name, text from entities where game=?", (game,))}
+    text = {i: (n.strip(), ' '.join((t or '').split())) for i, n, t, c in lib.execute("select id, name, text, category from entities where game=?", (game,)) if c != 'keyword'}  # keyword entries are not cards
     # keyword entries too (v36: Inscryption's cards are only their sigils, so a misread sigil is every card's error); a keyword
     # whose entry has a rulebook line is checked on that line (wiki notes follow it)
     import pattern_check  # wording with no effect in play (patterns.tsv use strip) is not checked here either
@@ -89,7 +89,7 @@ def main():
             if 'id' not in r: continue
             recs.setdefault(r['id'], {'id': r['id'], 'abilities': []})['abilities'] += r.get('abilities', [])
             if r.get('trigger') or r.get('condition'): recs[r['id']]['says_by_form'] = True  # a trigger or condition keyword
-    explained = {(r[1], r[2]) for r in (l.rstrip('\n').split('\t') for l in open(os.path.join(HERE, 'audit_text_explained.tsv')))
+    explained = set() if '--raw' in sys.argv else {(r[1], r[2]) for r in (l.rstrip('\n').split('\t') for l in open(os.path.join(HERE, 'audit_text_explained.tsv')))
                  if len(r) >= 4 and r[0] == game}  # (card, rule) read and explained: the rows say it another way, or nothing to write
     bad = collections.defaultdict(list)
     for i, r in recs.items():
