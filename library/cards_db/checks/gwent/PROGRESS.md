@@ -26,3 +26,9 @@
   Monster swarm; Skellige aggro_tempo. All go to chat 2 step 4 (lr_misses.md) as MISSED causes.
 - Open from the rebuild: 3 word flags (patterns/gwent_flags.tsv), 16 text words without rows (audit_text.py), the
   link audit list (audit_links.py): judge each in chat 2. cases/decks.tsv has no Gwent rows yet (needs must phrases).
+
+## Link audit explained
+- Sandor de Baccalà, "nothing makes removed_from_deck (enemy)": drawing from a deck and shuffling into it is the game rule; no card makes it. Rows right.
+- Aucwenn / Wandering Treant (check 9): the rows react to "Whenever you Spawn a Wandering Treant" (`summoned` with `card is Wandering Treant`) and give Vitality; the card is not given. Rows right; the check reads a `card is` of the event object as a gift.
+- Elven Scout (trap_activated), Blood Money (exhausted), King Henselt (counts_down), Sea Serpent (keyword_used Rain/Storm), Cyrus Engelkind Hemmelfart, Eternal Fire Inquisitor, Procession of Penance, Adda: Striga, Lonely Champion (summon/create of tokens): fixed by `causes` in vocab.tsv (6 Nov 2026), see fix_6.md; to be confirmed by the next load.
+- Check 10, old tags, 3 cards each read against the rows: summon, generate_cards (Spawn = create/copy/summon rows), graveyard (revive and banish from discard), tutor (play_card or summon from the deck), ping (damage), coin_economy (resource_gained, spend_mana), condition_count (counts and "if you played X this turn"), on_ally_play (played events, Assimilate): the rows show the mechanic in another form. cooldowns (Aedirnian Mauler, Cursed Scroll, Cargo: "Order:" with no Cooldown in the text): old tag wrong, left.

@@ -170,3 +170,9 @@ gwent	Aglaïs	this turn	"at the end of this turn" is turn_end with limit next_ti
 gwent	Arena Ghoul	this turn	"at the end of this turn" is turn_end with limit next_time
 gwent	Kraken	this turn	"at the end of this turn" is turn_end with limit next_time inside its Deathwish
 gwent	757397	V16	record_right	Claude: Tribute cost is spend_mana with the amount 9 minus 2 per Gang; no cost_change needed	6 Nov 2026
+gwent	Colossal Ifrit	adjacent	Gwent writes adjacent as `position is adjacent_group` on the target (n 3); the rows have it
+gwent	Drummond Warmonger	adjacent	Gwent writes adjacent as `position is adjacent_group` on the target (n 3); the rows have it
+gwent	Golden Froth	adjacent	Gwent writes adjacent as `position is adjacent_group` on the target (n 3); the rows have it
+gwent	Temple Guard	adjacent	Gwent writes adjacent as `position is adjacent_group` on the target (n 3); the rows have it
+gwent	Armorer's Workshop	adjacent	Gwent writes adjacent as `position is adjacent_group` on the target (n 3); the rows have it
+gwent	Salamandra Mage	adjacent	Gwent writes adjacent as `position is adjacent_group` on the target (n 3); the rows have it

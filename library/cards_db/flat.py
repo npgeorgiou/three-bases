@@ -158,7 +158,11 @@ def build(c):
                 ability_rows(card, sub, 'gives', eid, seen=seen, flip=(s == 'enemy') != flip)
 
     def keyword_conds(card, kw, aid, origin):
-        for test, of, op, n, span, cev, at in c.execute('select test, of_target, op, n, span, event, attr from cond where keyword=?', (kw,)).fetchall():
+        own = c.execute('select test, of_target, op, n, span, event, attr from cond where keyword=?', (kw,)).fetchall()
+        if not own and origin == 'uses_keyword':  # a keyword that is only tested (Predator, Symbiosis) has no rows of its own: the card's test still shows it
+            c.execute('insert into flat_if values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+                      (card, origin, kw, aid, 'keyword_condition', None, tree.get(('test', 'keyword_condition')), *([None] * 17)))
+        for test, of, op, n, span, cev, at in own:
             k, s, p, z = tgt(of); e, ek, es, ep, ew, ea = event_info(cev)
             c.execute('insert into flat_if values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
                       (card, origin, kw, aid, test, e, (when_concept(e, ek, ew, None) if e else None) or tree.get(('test', test)),
