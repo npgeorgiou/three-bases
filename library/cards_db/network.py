@@ -2730,10 +2730,13 @@ def kill_food_lines(c, game, nodes):
     killers = [i for (i,) in c.execute(f"""select distinct r.card from flat_ref r join flat_do d on d.card=r.card and d.origin='own' and d.act='damage'
             and d.on_pick='chosen' and d.params like '%amount=1.0%' where r.origin='own' and r.role='trigger' and r.happening='killed'
             and r.pick='actor_self' and r.card in ({marks})""", L)]
+    # my own summoned units feed only a ping the player can fire on his turn at weak units (Kaedweni Revenant's activated ping), not a one-time hit on play or attack (Parrrley, Gregoire; C4, L9, L11)
+    pingers = {i for (i,) in c.execute(f"""select distinct d.card from flat_do d join flat_when w on w.card=d.card and w.ability=d.ability and w.origin=d.origin
+            where d.origin='own' and d.act='damage' and d.on_pick='chosen' and d.params like '%amount=1.0%' and w.event='activated' and d.card in ({marks})""", L)}
     for k in killers:
         for a, act in c.execute(f"""select distinct card, act from flat_do where origin='own' and card in ({marks}) and card!=?
                 and ((act='damage' and on_pick in ('all','random') and coalesce(on_side,'') in ('','enemy','any','mine')
-                and params not like '%amount=1.0%') or (act in ('summon','play_card') and coalesce(on_side,'mine')='mine'))""", L + [k]):
+                and params not like '%amount=1.0%') or (act in ('summon','play_card') and coalesce(on_side,'mine')='mine' and ?))""", L + [k, k in pingers]):
             out[(a, k)].append(('waits', 0.5, 'leaves weak units for its kill' if act == 'damage' else 'gives it units to kill'))
     # a 1-damage ping (Kaedweni Revenant, Redanian Archer) kills an enemy another card sets to strength 1 (Vincent Meis; C81, C82; L2: a strike now)
     pings = [i for (i,) in c.execute(f"select distinct card from flat_do where origin='own' and act='damage' and on_pick='chosen' and coalesce(on_side,'') in ('','enemy','any') and params like '%amount=1.0%' and card in ({marks})", L)]

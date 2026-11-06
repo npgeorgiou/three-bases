@@ -660,3 +660,9 @@ n665	gwent	Waylay, Milva: Sharpshooter	Waylay	Milva: Sharpshooter	none	leaves we
 n666	into_the_breach	Hydraulic Lifter, Seismic Capacitor	Hydraulic Lifter	Seismic Capacitor	none	leaves weak units for its kill	Claude 2026-11-06, line check: one chosen hit leaves no weak units for a kill trigger
 n667	runeterra	Swain (level 2), Parrrley	Swain (level 2)	Parrrley	line	leaves weak units for its kill	Claude 2026-11-06, line check: one chosen hit leaves no weak units for a kill trigger
 n668	gwent	Sabrina Glevissig, Kaedweni Revenant	Sabrina Glevissig	Kaedweni Revenant	line	leaves weak units for its kill	Claude 2026-11-06, line check: one chosen hit leaves no weak units for a kill trigger
+n669	runeterra	Shape of Fear, Parrrley	Shape of Fear	Parrrley	none	gives it units to kill	Claude 2026-11-06, line check: summoning my units feeds only an activated 1-damage ping
+n670	runeterra	Void Seeker, Parrrley	Void Seeker	Parrrley	none	leaves weak units for its kill	Claude 2026-11-06, line check: a hit on my own chosen unit leaves no weak units for a kill trigger
+n671	gwent	Magic Compass, Gregoire de Gorgon	Magic Compass	Gregoire de Gorgon	none	gives it units to kill	Claude 2026-11-06, line check: playing my cards feeds only an activated 1-damage ping
+n672	into_the_breach	Bomb Dispenser, Fissure Fist	Bomb Dispenser	Fissure Fist	none	gives it units to kill	Claude 2026-11-06, line check: summoning feeds only an activated 1-damage ping
+n673	gwent	Redanian Secret Service, Kaedweni Revenant	Redanian Secret Service	Kaedweni Revenant	line	gives it units to kill	Claude 2026-11-06, line check: an activated 1-damage ping eats my summoned units
+n674	gwent	Geralt: Professional, Wolfsbane	Geralt: Professional	Wolfsbane	line	its 1 damage kills what it sets to strength 1	Claude 2026-11-06, line check: a 1-damage ping kills a unit set to strength 1
