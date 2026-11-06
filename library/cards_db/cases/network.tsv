@@ -620,3 +620,10 @@ n625	gwent	Inspirational Ballad, Berengar	Inspirational Ballad	Berengar	none	can
 n626	gwent	Witch Hunter, Vigilantes	Witch Hunter	Vigilantes	line	makes enemy units get Bounty	Claude 2026-11-06, line check: right example stays
 n627	gwent	Bernard Loredo, Northern Wind	Bernard Loredo	Northern Wind	none	dies by its own effect: Northern Wind Banishes them	Claude 2026-11-06, line check: Northern Wind banishes only its own kills (L16, L3)
 n628	gwent	Berengar, Hjalmar an Craite	Berengar	Hjalmar an Craite	line	dies by its own effect: Hjalmar an Craite Banishes them	Claude 2026-11-06, line check: right example stays
+n629	gwent	Naiad Fledgling, Frog	Naiad Fledgling	Frog	none	keeps the Vitality it gives itself off it	Claude 2026-11-06, line check: Naiad takes Vitality for its own strength, no help to the givers (L6, L14)
+n630	gwent	Naiad Fledgling, Cat Witcher Adept	Naiad Fledgling	Cat Witcher Adept	none	keeps the Vitality it gives itself off it	Claude 2026-11-06, line check: Naiad takes Vitality for its own strength, no help to the givers (L6, L14)
+n631	gwent	Naiad Fledgling, Nature's Gift	Naiad Fledgling	Nature's Gift	none	keeps the Vitality it gives itself off it	Claude 2026-11-06, line check: Naiad takes Vitality for its own strength, no help to the givers (L6, L14)
+n632	gwent	Frog, Naiad Fledgling	Frog	Naiad Fledgling	line	gives it Vitality, which it takes off for its own strength	Claude 2026-11-06, line check: Naiad waits on the Vitality the givers put on (L14)
+n633	gwent	Cat Witcher Adept, Naiad Fledgling	Cat Witcher Adept	Naiad Fledgling	line	gives it Vitality, which it takes off for its own strength	Claude 2026-11-06, line check: Naiad waits on the Vitality the givers put on (L14)
+n634	gwent	Frog Mating Season, Naiad Fledgling	Frog Mating Season	Naiad Fledgling	line	gives it Vitality, which it takes off for its own strength	Claude 2026-11-06, line check: Naiad waits on the Vitality the givers put on (L14)
+n635	gwent	Nature's Gift, Freixenet	Nature's Gift	Freixenet	line	gives it Vitality for its effect	Claude 2026-11-06, line check: right example stays

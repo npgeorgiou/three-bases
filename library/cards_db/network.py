@@ -1176,6 +1176,9 @@ def generic_use(c, game):
         elif not (h == 'stat_changed' and i in kw_stat): d[i]['needs'].add(h)  # Power gained from Hallowed (Gwen) comes only from Hallowed ()
     for i, k in c.execute("""select card, keyword_ref from flat_do where origin='own' and act='give_keyword' and keyword_ref is not null
             and (coalesce(on_side,'mine') in ('mine','any') or on_pick in ('self','it'))"""): d[i]['gives_kw'].add(k)
+    for i, k in c.execute("""select r.card, r.keyword_ref from flat_do r join flat_do s on s.card=r.card and s.ability=r.ability
+            where r.origin='own' and r.act='remove_keyword' and r.keyword_ref is not null and s.origin='own' and s.act='stat_change' and s.on_pick='self'"""):
+        d[i]['takes_kw'].add(k)  # it removes a status from my units for its own stat (Naiad Fledgling): the givers feed it, it feeds no giver
     for i, w in c.execute("select card, of_with from flat_if where origin='own' and of_with like '%keyword is %'"):
         d[i]['counts_kw'] |= {int(x) for x in re.findall(r'keyword is (\d+)', w or '')}
     for i, ab in c.execute("select card, ability from flat_do where origin='own' and act in ('start_attack','strike') and on_pick='self'"):
@@ -1250,6 +1253,7 @@ def use_of(c, game, b, act, kw, ps, w=None):
     if 'position ' in (w or '') and ('of player' in w or 'of:kind is player' in w) and 'near_leader' in u['flags']:
         return 'helps it near your leader, where its own effect works'  # Roar -> Windblade Adept's Zeal
     if act == 'give_keyword' and kw and (kw in u['counts_kw'] or 'given_keyword' in u['self_when']): return f'gives it {kwn}, which it counts'
+    if act == 'give_keyword' and kw and kw in u['takes_kw']: return f'gives it {kwn}, which it takes off for its own strength'
     if act == 'give_keyword' and kw and b in sharers(c): return f'gives it {kwn}, which it passes to its allies'  # Sivir level 2 (L14)
     if act == 'give_keyword' and tree in ('evasion', 'excess_damage') and ('big_strike' in u['flags'] or u['needs'] & {'strikes_nexus', 'nexus_damaged'}):
         return f'gives it {kwn}: its strike gets through in full'  # Sumpworks Map -> Vi: "struck for 10+ damage in one strike"
@@ -1517,6 +1521,7 @@ def aimed(c, game, nodes, broad):
             elif act in ('remove_keyword', 'remove_keywords') and not kw: continue  # "steal all statuses from friendly units" (Timber Alchemists): every
             # unit can have one (L1); its partners are the cards that give statuses
             else:  # an act on my card that is no help (strike, return, copy, damage): only a card whose own text uses it (L14)
+                if act == 'remove_keyword' and kw and kw in generic_use(c, game)[a]['takes_kw']: continue  # it takes the status for itself: no help to the giver
                 use = {'damage': 'damages it: its own effect goes off', 'kill': 'kills it: its death effect goes off'}.get(act) \
                     if act in HARM_GAIN else use_of(c, game, b, act, kw, ps, w)  # harm: kept above only when the card gains from it
                 if use: out[(a, b)].append(('targets', 0.5 / n, use + at))  # said only when no other reason joins the pair
