@@ -1,0 +1,13 @@
+{"id": 756396, "pattern": "value:stat_change", "why": "the card reads the amount of boost on itself (attr boost) to size damage; no boost is given"}
+{"id": 756646, "pattern": "value:stat_change", "why": "the card reads the amount of boost on itself (attr boost) to size damage; no boost is given"}
+{"id": 756499, "pattern": "name:swap", "why": "swap is written as the act swap_stats; no keyword named Swap"}
+{"id": 756547, "pattern": "name:swap", "why": "swap is written as the act swap_stats; no keyword named Swap"}
+{"id": 756938, "pattern": "name:swap", "why": "swap is written as the act swap_stats; no keyword named Swap"}
+{"id": 757166, "pattern": "name:swap", "why": "swap is written as the act swap_stats; no keyword named Swap"}
+{"id": 756508, "pattern": "name:order", "why": "'in order from top to bottom' is a plain phrase, not the Order keyword"}
+{"id": 756568, "pattern": "name:armor", "why": "'ignoring their Armor' is written as the damage param ignore_armor"}
+{"id": 756752, "pattern": "value:copy", "why": "plays every card named in the list from the deck (play_card on all of them); no copy is made"}
+{"id": 756817, "pattern": "value:strike", "why": "'Treant Mantis: Strike' is a card name (transform target), not a strike"}
+{"id": 756669, "pattern": "value:kill", "why": "'if any were destroyed' is the condition of the repeat (link if_done); the card destroys nothing itself"}
+{"id": 757085, "pattern": "value:play_card", "why": "'whenever you play the rightmost card' is the event played, not an act play_card"}
+{"id": 757165, "pattern": "name:order", "why": "'in order from top to bottom' is a plain phrase, not the Order keyword"}
