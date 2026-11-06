@@ -10,7 +10,7 @@ rows = [dict(id=9000001, game='gwent', ext_id='kw:Spying', name='Spying', catego
 # cards named in other cards' texts that the export (v14.8) gives without text, so the library dropped them; no stats are
 # known here, so none are written (Endrega Larva was wrongly merged into Nekker by the first build)
 for n, (name, by) in enumerate([('Chort', 'Prize-Winning Cow'), ('Old Speartip', 'Old Speartip: Asleep'),
-                                ('Elder Bear', 'Bearification'), ('Endrega Larva', 'Koshchey')], start=9000002):
+                                ('Elder Bear', 'Bearification'), ('Endrega Larva', 'Koshchey'), ('Treant Mantis: Strike', 'Treant Mantis: Stalk')], start=9000002):
     rows.append(dict(id=n, game='gwent', ext_id='named:' + name, name=name, category='unit', source_type='Unit',
                      edition='non-collectible', text='', created=1,
                      extra=json.dumps({'note': 'named in the text of ' + by + '; a text-less card the gwent.one export lists without ability'})))

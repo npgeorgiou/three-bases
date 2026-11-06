@@ -12,6 +12,8 @@
 {"src": 756652, "rel": "transforms_into", "dst": 813599, "evidence": "card text: evolves or transforms into another form of Shupe"}
 {"src": 756739, "rel": "generates", "dst": 813583, "evidence": "card text: makes Ekimmara"}
 {"src": 756812, "rel": "generates", "dst": 756822, "evidence": "card text: makes Dryad Fledgling"}
+{"src": 756817, "rel": "generates", "dst": 9000006, "evidence": "card text: makes Treant Mantis: Strike"}
+{"src": 756817, "rel": "transforms_into", "dst": 9000006, "evidence": "card text: evolves or transforms into another form of Treant Mantis"}
 {"src": 756914, "rel": "generates", "dst": 813610, "evidence": "card text: makes Firesworn Zealot"}
 {"src": 756977, "rel": "generates", "dst": 813582, "evidence": "card text: makes Drone"}
 {"src": 757033, "rel": "generates", "dst": 813618, "evidence": "card text: makes Crow"}
