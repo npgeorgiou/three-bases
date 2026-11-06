@@ -33,3 +33,8 @@
 - Elven Scout (trap_activated), Blood Money (exhausted), King Henselt (counts_down), Sea Serpent (keyword_used Rain/Storm), Cyrus Engelkind Hemmelfart, Eternal Fire Inquisitor, Procession of Penance, Adda: Striga, Lonely Champion (summon/create of tokens): fixed by `causes` in vocab.tsv (6 Nov 2026), see fix_6.md; to be confirmed by the next load.
 - Check 10, old tags, 3 cards each read against the rows: summon, generate_cards (Spawn = create/copy/summon rows), graveyard (revive and banish from discard), tutor (play_card or summon from the deck), ping (damage), coin_economy (resource_gained, spend_mana), condition_count (counts and "if you played X this turn"), on_ally_play (played events, Assimilate): the rows show the mechanic in another form. cooldowns (Aedirnian Mauler, Cursed Scroll, Cargo: "Order:" with no Cooldown in the text): old tag wrong, left.
 - Check 10, stat_condition (Cyprian Wiley "power 4 or less", Vigo's Muzzle "6 or less power", Alzur's Double-Cross and Yennefer: Conjurer "highest-power"): the rows hold it as a target filter (`strength le`) or a `highest` pick, not as an if row. Rows right.
+
+## Chat 2 (Part 3), started 6 Nov 2026
+Steps (START_DATABASE.md Part 3): 1 start · 2 the two checks, cut · 3 line readers · 4 cases by script, misses into
+lr_misses.md · 5 verifiers · 6 the sheet · 7 fixers · 8 one rebuild · 9 last checks · 10 done.
+- Step 1 DONE: links.py (all games), tb0.tsv (every game), before.tsv.
