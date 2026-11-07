@@ -15,7 +15,8 @@ const deckStore = (() => {
   st.seenPre = st.seenPre || [];
   for (const d of PREMADE) if (!st.seenPre.includes(d.id)) { st.seenPre.push(d.id); if (!st.decks.some(x => x.id === d.id)) st.decks.push(copy(d)); }
   // new premade lists replace the stored copies of the premade decks (the player's own decks are kept)
-  if (st.preVer !== PREMADE_VERSION) { for (const d of PREMADE) { const i = st.decks.findIndex(x => x.id === d.id); if (i >= 0) st.decks[i] = copy(d); else st.decks.push(copy(d)); } st.preVer = PREMADE_VERSION; }
+  const savedStamp = (PREMADE_SAVED && PREMADE_SAVED.stamp) || '';   // decks saved from the AI lab, or the built-in lists again
+  if (st.preVer !== PREMADE_VERSION || (st.preSaved || '') !== savedStamp) { st.preSaved = savedStamp; for (const d of PREMADE) { const i = st.decks.findIndex(x => x.id === d.id); if (i >= 0) st.decks[i] = copy(d); else st.decks.push(copy(d)); } st.preVer = PREMADE_VERSION; }
   for (const d of st.decks) for (const k of Object.keys(d.cards)) if (!CARDS[k] || CARDS[k].token || !FAC_DECK[CARDS[k].fac]) delete d.cards[k];
   // premade decks of factions no longer in the game are dropped
   st.decks = st.decks.filter(d => !d.id.startsWith('p-') || PREMADE.some(x => x.id === d.id));

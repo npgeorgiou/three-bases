@@ -1,14 +1,16 @@
 /* =====================================================================
    Decks tab: AI-made decks (the deck search) and card statistics.
    The pool: 6 decks per faction (its 2 premades and 4 random decks of 10 cards x3). First every pool deck plays every
-   other one; then, faction by faction, a new deck is made from the faction's best unfinished deck by swapping one
-   card's copies (or changing a copy count), chosen from the card statistics, and plays every pool deck. If it looks at
-   least probably better than the faction's weakest deck, both play a fresh set of the same games (same opponents,
-   seats and deals; scores picked out as lowest or highest are partly luck, fresh games remove that). The new deck
-   replaces the weakest only if it is clearly better in those games. A deck is finished when 30 decks made from it in a
-   row failed; the search ends when every pool deck is finished. Every game records which cards each side played.
+   other one; then, faction by faction, a new deck is made from one of the faction's unfinished decks (each in turn: the
+   one with the fewest decks made from it) by swapping one card's copies (or changing a copy count), chosen from the card
+   statistics, and plays every pool deck. If it looks at least probably better than the deck it was made from, both play
+   a fresh set of the same games (same opponents, seats and deals; scores picked out as highest are partly luck, fresh
+   games remove that). The new deck replaces the deck it was made from only if it is clearly better in those games, so
+   the 6 decks of a faction stay 6 separate lines and never all become copies of the best one. A new deck that shares 70%
+   or more of its cards with another pool deck of its faction is not tried. A deck is finished when 30 decks made from it
+   in a row failed; the search ends when every pool deck is finished. Every game records which cards each side played.
    ===================================================================== */
-const DS_PER_FACTION = 6, DS_RANDOM = 4, DS_RANDOM_CARDS = 10, DS_DONE_AFTER = 30;
+const DS_PER_FACTION = 6, DS_RANDOM = 4, DS_RANDOM_CARDS = 10, DS_DONE_AFTER = 30, DS_TOO_ALIKE = 0.7;
 const ds = { pool: null };                                          // the running games (not saved)
 const freshDs = () => ({ v: 1, per: 10, pilots: [], decks: {}, pool: {}, h2h: {}, tasks: [], phase: null, cand: null, turn: 0, tries: 0,
   entered: 0, log: [], stats: {}, pairs: {}, tests: {}, yard: {} });
@@ -79,6 +81,11 @@ function pairLift(st, a, b) {
 }
 
 /* ---------- decks ---------- */
+/** The share of two decks' cards they have in common: copies held by both, over the smaller deck's size. */
+function alike(a, b) {
+  const nb = Object.fromEntries(b.list);
+  return a.list.reduce((n, [k, c]) => n + Math.min(c, nb[k] || 0), 0) / Math.max(1, Math.min(deckSize(a.list), deckSize(b.list)));
+}
 const deckOf = (st, id) => st.decks[id] || (DECKS[id] ? { id, name: DECKS[id].name, fac: DECKS[id].fac, list: DECKS[id].list } : null);
 function addDeck(st, d) { st.decks[d.id] = d; labDeck(d.id, d.name, d.fac, d.list); return d; }
 function randomDeck(st, fac, n) {
@@ -89,7 +96,7 @@ function randomDeck(st, fac, n) {
  *  statistics like a player would: out goes the card that adds least, in comes first a card of about the same cost,
  *  preferring cards often played with the deck's best cards; with no statistics yet, chosen at random. */
 function childOf(st, parent) {
-  const fac = parent.fac, have = new Set(parent.list.map(([k]) => k)), list = parent.list.map(([k, n]) => [k, n]), size = deckSize(list);
+  const fac = parent.fac, others = (st.pool[fac] || []).filter(id => id !== parent.id).map(id => deckOf(st, id)), have = new Set(parent.list.map(([k]) => k)), list = parent.list.map(([k, n]) => [k, n]), size = deckSize(list);
   const guided = st.phase === 'search', val = k => cardValue(st, k) ?? 0.5;
   const ranked = list.map(([k]) => k).sort((a, b) => (guided ? val(a) - val(b) : Math.random() - 0.5));
   let change = null;
@@ -103,7 +110,9 @@ function childOf(st, parent) {
     for (const out of ranked) {
       const options = factionCards(fac).filter(k => !have.has(k) && !parent.tried.includes(out + '>' + k));
       if (!options.length) continue;
-      const score = k => (cardValue(st, k) ?? 0.55) + 0.05 * best.reduce((n, b) => n + Math.min(3, pairLift(st, k, b)) - 1, 0);
+      // cards the faction's other pool decks hold count a little less, so the lines grow apart
+      const score = k => (cardValue(st, k) ?? 0.55) + 0.05 * best.reduce((n, b) => n + Math.min(3, pairLift(st, k, b)) - 1, 0)
+        - 0.02 * others.filter(d => d.list.some(([x]) => x === k)).length;
       const pick = guided ? options.sort((a, b) => (Math.abs(cost(a) - cost(out)) > 1) - (Math.abs(cost(b) - cost(out)) > 1) || score(b) - score(a))[0]
         : options[dsRand(options.length)];
       const n = list.find(x => x[0] === out)[1];
@@ -113,6 +122,8 @@ function childOf(st, parent) {
   }
   if (!change) return null;
   parent.tried.push(change.tag); change.apply();
+  const twin = others.find(d => alike({ list }, d) >= DS_TOO_ALIKE);
+  if (twin) return { twin, say: change.say };                         // too like another line: not tried, the next change is
   st.tries++;
   return addDeck(st, { id: `d-${st.tries}`, name: `${LAB_FACTION_NAME[fac]} deck ${st.tries}`, fac, list: list.filter(([, n]) => n > 0), from: parent.id, say: change.say, fails: 0, tried: [] });
 }
@@ -131,14 +142,16 @@ function startPool(st) {
 }
 function dsLog(st, text) { st.log.push(text); if (st.log.length > 200) st.log.splice(0, st.log.length - 200); }
 function testAgainstPool(st, id, tag) { for (const b of poolIds(st)) if (b !== id) st.tasks.push(task(id, b, tag)); }
-/** The next deck to try: factions in turn, from the faction's best unfinished deck. */
+/** The next deck to try: factions in turn; in a faction, each unfinished deck in turn (fewest decks made from it first). */
 function nextCandidate(st) {
   for (let k = 0; k < LAB_FACTIONS.length; k++) {
     const fac = LAB_FACTIONS[(st.turn + k) % LAB_FACTIONS.length];
     const open = st.pool[fac].map(id => deckOf(st, id)).filter(d => st.decks[d.id] ? st.decks[d.id].fails < DS_DONE_AFTER : true);
-    for (const d of open.sort((a, b) => rate(vsPool(st, b.id)) - rate(vsPool(st, a.id)))) {
+    const made = d => (st.decks[d.id] ? st.decks[d.id].tried.length : 0);
+    for (const d of open.sort((a, b) => made(a) - made(b) || rate(vsPool(st, b.id)) - rate(vsPool(st, a.id)))) {
       const parent = st.decks[d.id] || addDeck(st, { ...d, list: d.list.map(([x, n]) => [x, n]), from: null, fails: 0, tried: [] });
-      const child = childOf(st, parent);
+      let child = childOf(st, parent);
+      while (child && child.twin) child = childOf(st, parent);
       if (!child) { parent.fails = DS_DONE_AFTER; continue; }
       st.turn = (st.turn + k + 1) % LAB_FACTIONS.length;
       st.cand = { id: child.id, fac, parent: parent.id, round: 1 };
@@ -153,19 +166,18 @@ function stepDone(st) {
   if (st.phase === 'first') { st.phase = 'search'; dsLog(st, 'First round done; the search starts.'); }
   else if (st.phase === 'search' && st.cand) {
     const c = st.cand, facPool = st.pool[c.fac], d = st.decks[c.id], parent = st.decks[c.parent];
-    if (!c.weakest) c.weakest = facPool.slice().sort((a, b) => rate(vsPool(st, a)) - rate(vsPool(st, b)))[0];
-    const others = poolIds(st).filter(x => x !== c.weakest), mine = vsPool(st, c.id, others), wname = deckOf(st, c.weakest).name;
-    const z = c.replay ? zOf(c.fresh, c.replay) : zOf(mine, vsPool(st, c.weakest));
-    const shown = c.replay ? `${pc(rate(c.fresh))} in fresh games where ${wname} scored ${pc(rate(c.replay))}` : `${pc(rate(mine))} against the pool, ${wname} ${pc(rate(vsPool(st, c.weakest)))}`;
+    const others = poolIds(st).filter(x => x !== c.parent), mine = vsPool(st, c.id, others), wname = parent.name;
+    const z = c.replay ? zOf(c.fresh, c.replay) : zOf(mine, vsPool(st, c.parent));
+    const shown = c.replay ? `${pc(rate(c.fresh))} in fresh games where ${wname} scored ${pc(rate(c.replay))}` : `${pc(rate(mine))} against the pool, ${wname} ${pc(rate(vsPool(st, c.parent)))}`;
     if (!c.replay && z >= 1) {                                       // looks better: both play a fresh set of the same games
       c.replay = [0, 0, 0]; c.fresh = [0, 0, 0];
-      for (const b of others) { st.tasks.push(task(c.weakest, b, 'replay', 61000)); st.tasks.push(task(c.id, b, 'fresh', 61000)); }
+      for (const b of others) { st.tasks.push(task(c.parent, b, 'replay', 61000)); st.tasks.push(task(c.id, b, 'fresh', 61000)); }
       dsLog(st, `${d.name}: ${shown}: probably better; both play a fresh set of the same games.`);
       return;
     }
     if (c.replay && z >= 2) {
-      facPool[facPool.indexOf(c.weakest)] = c.id; st.entered++; parent.fails = 0;
-      dsLog(st, `${d.name} (${d.say}, from ${parent.name}): ${shown}: clearly better, it replaces ${wname}.`);
+      facPool[facPool.indexOf(c.parent)] = c.id; st.entered++;
+      dsLog(st, `${d.name} (${d.say}): ${shown}: clearly better, it replaces ${wname}.`);
     } else {
       parent.fails++;
       dsLog(st, `${d.name} (${d.say}): ${shown}: not clearly better; dropped (${parent.name}: ${parent.fails}/${DS_DONE_AFTER} in a row).`);

@@ -377,8 +377,8 @@ function labWorker() {
   };
 }
 
-/** The worker program: the game engine followed by the worker code above. */
-const workerSource = () => $('#engine').textContent + '\n(' + labWorker.toString() + ')();';
+/** The worker program: the decks saved for the game (workers have no browser store), the game engine, the worker code above. */
+const workerSource = () => 'self.PREMADE_SAVED_DATA = ' + JSON.stringify(PREMADE_SAVED) + ';\n' + $('#engine').textContent + '\n(' + labWorker.toString() + ')();';
 let workerUrl = null;
 function newWorker() {
   if (!workerUrl) workerUrl = URL.createObjectURL(new Blob([workerSource()], { type: 'text/javascript' }));

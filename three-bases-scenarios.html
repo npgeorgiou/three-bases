@@ -1623,6 +1623,23 @@ const PREMADE = [
   { id: 'p-l2', name: 'The Long Guns — Spot and Strike', cards: { l_observer: 3, l_spotter: 2, l_flare: 2, l_fieldgun: 3, l_sniper: 2, l_howitzer: 3, l_chiefobs: 1, l_major: 1, l_sergeant: 2, l_veteran: 2, l_infantry: 3, l_sandbag: 2, l_spotround: 3, l_overthetop: 2, l_longrange: 2, l_dig: 2, l_depot: 3 } },
 ];
 
+/** Decks saved from the AI lab ("Use in the game") take the place of premade lists in this browser: the game, the scenarios
+ *  and the lab read the same store. The lab's workers have no browser store and get the saved decks with their program. */
+const PREMADE_SAVED_STORE = 'threeBases.savedPremades';
+const PREMADE_SAVED = (() => {
+  try {
+    if (typeof localStorage !== 'undefined') return JSON.parse(localStorage.getItem(PREMADE_SAVED_STORE) || 'null');
+    return (typeof self !== 'undefined' && self.PREMADE_SAVED_DATA) || null;
+  } catch (e) { return null; }
+})();
+if (PREMADE_SAVED && PREMADE_SAVED.decks) for (const d of PREMADE) {
+  const s = PREMADE_SAVED.decks[d.id];
+  if (!s || !s.cards) continue;
+  const fac = CARDS[Object.keys(d.cards)[0]].fac;
+  const cards = Object.fromEntries(Object.entries(s.cards).filter(([k, n]) => CARDS[k] && !CARDS[k].token && CARDS[k].fac === fac && n > 0));
+  const n = Object.values(cards).reduce((a, b) => a + b, 0);
+  if (n >= 30 && n <= 40 && Object.values(cards).every(x => x <= 3)) { d.cards = cards; d.name = s.name || d.name; d.saved = true; }
+}
 const ART = {
  clockface:'M50 12A38 38 0 1 0 50.01 12Z M50 50V24 M50 50L68 60 M50 16V22 M84 50H78 M50 84V78 M16 50H22',
  sunskull:'M50 30C36 30 30 40 30 50C30 58 34 62 38 64V72H62V64C66 62 70 58 70 50C70 40 64 30 50 30Z M38 48H46M54 48H62 M46 72V66 M54 72V66 M50 8V20 M50 80V92 M8 50H20 M80 50H92 M20 20L28 28 M80 20L72 28 M20 80L28 72 M80 80L72 72',
@@ -6602,7 +6619,8 @@ const deckStore = (() => {
   st.seenPre = st.seenPre || [];
   for (const d of PREMADE) if (!st.seenPre.includes(d.id)) { st.seenPre.push(d.id); if (!st.decks.some(x => x.id === d.id)) st.decks.push(copy(d)); }
   // new premade lists replace the stored copies of the premade decks (the player's own decks are kept)
-  if (st.preVer !== PREMADE_VERSION) { for (const d of PREMADE) { const i = st.decks.findIndex(x => x.id === d.id); if (i >= 0) st.decks[i] = copy(d); else st.decks.push(copy(d)); } st.preVer = PREMADE_VERSION; }
+  const savedStamp = (PREMADE_SAVED && PREMADE_SAVED.stamp) || '';   // decks saved from the AI lab, or the built-in lists again
+  if (st.preVer !== PREMADE_VERSION || (st.preSaved || '') !== savedStamp) { st.preSaved = savedStamp; for (const d of PREMADE) { const i = st.decks.findIndex(x => x.id === d.id); if (i >= 0) st.decks[i] = copy(d); else st.decks.push(copy(d)); } st.preVer = PREMADE_VERSION; }
   for (const d of st.decks) for (const k of Object.keys(d.cards)) if (!CARDS[k] || CARDS[k].token || !FAC_DECK[CARDS[k].fac]) delete d.cards[k];
   // premade decks of factions no longer in the game are dropped
   st.decks = st.decks.filter(d => !d.id.startsWith('p-') || PREMADE.some(x => x.id === d.id));

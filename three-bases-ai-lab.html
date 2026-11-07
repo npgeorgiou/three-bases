@@ -102,6 +102,7 @@ nav.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: 
 .tuchart .xlab.end { text-anchor: end; }
 .tuchart .empty { fill: var(--muted); font-size: 15px; text-anchor: middle; }
 .tuchart .tubest { fill: none; stroke: var(--gold); stroke-width: 2.5; stroke-linejoin: round; }
+.tuchart .tuavg { fill: none; stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 5 4; stroke-linejoin: round; }
 .tuchart .tucand { fill: var(--muted); opacity: .55; }
 .tuchart .tucand.acc { fill: var(--gold); stroke: var(--ink); stroke-width: 1; opacity: 1; }
 .tuchart .tumark { stroke: var(--ink); stroke-dasharray: 3 3; opacity: .5; }
@@ -109,12 +110,15 @@ nav.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: 
 .tulegend { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; color: var(--muted); font-size: 13px; padding: 4px 4px 0; }
 .tulegend .lg { display: inline-block; width: 18px; height: 0; border-top: 2.5px solid var(--gold); margin-right: -10px; }
 .tulegend .lg.cand { width: 7px; height: 7px; border: 0; border-radius: 50%; background: var(--muted); opacity: .55; }
+.tulegend .lg.avg { border-top: 1.5px dashed var(--muted); }
 .tulegend .lg.acc { width: 9px; height: 9px; border: 1px solid var(--ink); border-radius: 50%; background: var(--gold); }
 .tuh { font: 400 18px/1.2 var(--disp); margin: 0 0 8px; }
 .tutable { border-collapse: collapse; font-size: 15px; width: 100%; max-width: 760px; }
 .tutable th, .tutable td { padding: 5px 14px 5px 0; border-bottom: 1px solid var(--line); text-align: right; }
 .tutable th:first-child, .tutable td:first-child { text-align: left; }
 #dsPool .tutable, #dsCards .tutable { max-width: none; }
+.tutable td.dsuse { white-space: nowrap; }
+.tutable td.dsuse button { padding: 2px 8px; font-size: 12px; margin: 0 2px; }
 .tutable td.dsl, #dsPool .tutable th:last-child { text-align: left; white-space: normal; font-size: 13px; color: var(--muted); min-width: 320px; }
 .dslog { font-size: 14px; color: var(--muted); max-height: 220px; overflow: auto; padding-left: 18px; }
 .tutable th { color: var(--muted); font-weight: 400; font-size: 13px; }
@@ -289,7 +293,7 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
 
 <div class="page" id="tunePage" hidden>
   <h2>ifelse AI</h2>
-  <p class="note tunote">An AI that sees both hands and searches the real position, with no rules of thumb: every judgement is a weighted term. All its values (weights, how far and how wide it looks, switches) are tuned at once with CMA-ES against the opponents you tick, starting from the Benchmark's values. Each generation, several candidates around a centre (every value changed by a different amount) play the same set of games; the centre moves toward the better half and the method learns which values, and which combinations, pay off. It restarts by itself with more candidates when it stops improving. Draws count half.</p>
+  <p class="note tunote">An AI that sees both hands and searches the real position, with no rules of thumb: every judgement is a weighted term. All its values (weights, how far and how wide it looks, switches) are tuned at once with CMA-ES against the opponents you tick, starting from the Benchmark's values. Each generation, several candidates around a centre (every value changed by a different amount, in pairs: one up, its twin down by the same amount) play the same set of games; the centre moves toward the better half and the method learns how far to change each value. The centre itself, the ifelse AI as it is now, plays the same games too: the gold line is its win rate, the dashed line the candidates' average (lower, since most changes are tries that fail). It restarts with more candidates once its steps have become tiny. Draws count half.</p>
   <div class="setup">
     <label>Games per candidate <input type="number" id="tuGames" min="20" max="2000" step="2" value="300"></label>
     <label>Games at once <input type="number" id="tuThreads" min="1" max="32"></label>
@@ -310,7 +314,7 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
 
 <div class="page" id="decksPage" hidden>
   <h2>Decks</h2>
-  <p class="note tunote">The lab builds its own decks. A pool of 6 decks per faction (its 2 premades and 4 random decks of 10 cards ×3) first plays every deck against every other one. Then, faction by faction, it makes a new deck from the faction's best unfinished deck by swapping one card's copies (or one copy more or less), chosen from the card statistics: out goes the card that adds least, in comes first a card of about the same cost, preferring cards often played with the deck's best cards. The new deck plays every pool deck and replaces the faction's weakest deck only if it scores clearly higher. A deck is finished when 30 decks made from it in a row failed. Each game is played by the same AI on both sides, the two AIs taking turns, so decks are compared, not AIs; every game records which cards were played.</p>
+  <p class="note tunote">The lab builds its own decks. A pool of 6 decks per faction (its 2 premades and 4 random decks of 10 cards ×3) first plays every deck against every other one. Then, faction by faction, it makes a new deck from one of the faction's unfinished decks (each in turn) by swapping one card's copies (or one copy more or less), chosen from the card statistics: out goes the card that adds least, in comes first a card of about the same cost, preferring cards often played with the deck's best cards. The new deck plays every pool deck and replaces the deck it was made from only if it scores clearly higher, so each faction keeps 6 separate lines of decks; a new deck that shares 70% or more of its cards with another pool deck of its faction is not tried. A deck is finished when 30 decks made from it in a row failed. Each game is played by the same AI on both sides, the two AIs taking turns, so decks are compared, not AIs; every game records which cards were played.</p>
   <div class="setup">
     <label>AI 1 <select id="dsP1" aria-label="First AI that plays the decks"></select></label>
     <label>AI 2 <select id="dsP2" aria-label="Second AI that plays the decks"></select></label>
@@ -319,6 +323,11 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
     <button class="go" id="dsStart">Start</button><button id="dsPause" disabled>Pause</button><button id="dsReset">Start over</button>
     <button id="dsYardBtn" title="Each premade plays every pool deck, to see how much better the decks found are">Measure the premades</button>
     <button id="dsExport">Export</button>
+  </div>
+  <div class="setup">
+    <button id="dsUseBest" title="Per faction, the two pool decks with the best results become its premade decks">Use the best two of each faction in the game</button>
+    <button id="dsBuiltIn">Use the built-in premades again</button>
+    <span class="note" id="dsSaved"></span>
   </div>
   <p class="sub" id="dsStatus"></p>
   <ul class="dslog" id="dsLog"></ul>
@@ -1404,6 +1413,23 @@ const PREMADE = [
   { id: 'p-l2', name: 'The Long Guns — Spot and Strike', cards: { l_observer: 3, l_spotter: 2, l_flare: 2, l_fieldgun: 3, l_sniper: 2, l_howitzer: 3, l_chiefobs: 1, l_major: 1, l_sergeant: 2, l_veteran: 2, l_infantry: 3, l_sandbag: 2, l_spotround: 3, l_overthetop: 2, l_longrange: 2, l_dig: 2, l_depot: 3 } },
 ];
 
+/** Decks saved from the AI lab ("Use in the game") take the place of premade lists in this browser: the game, the scenarios
+ *  and the lab read the same store. The lab's workers have no browser store and get the saved decks with their program. */
+const PREMADE_SAVED_STORE = 'threeBases.savedPremades';
+const PREMADE_SAVED = (() => {
+  try {
+    if (typeof localStorage !== 'undefined') return JSON.parse(localStorage.getItem(PREMADE_SAVED_STORE) || 'null');
+    return (typeof self !== 'undefined' && self.PREMADE_SAVED_DATA) || null;
+  } catch (e) { return null; }
+})();
+if (PREMADE_SAVED && PREMADE_SAVED.decks) for (const d of PREMADE) {
+  const s = PREMADE_SAVED.decks[d.id];
+  if (!s || !s.cards) continue;
+  const fac = CARDS[Object.keys(d.cards)[0]].fac;
+  const cards = Object.fromEntries(Object.entries(s.cards).filter(([k, n]) => CARDS[k] && !CARDS[k].token && CARDS[k].fac === fac && n > 0));
+  const n = Object.values(cards).reduce((a, b) => a + b, 0);
+  if (n >= 30 && n <= 40 && Object.values(cards).every(x => x <= 3)) { d.cards = cards; d.name = s.name || d.name; d.saved = true; }
+}
 const ART = {
  clockface:'M50 12A38 38 0 1 0 50.01 12Z M50 50V24 M50 50L68 60 M50 16V22 M84 50H78 M50 84V78 M16 50H22',
  sunskull:'M50 30C36 30 30 40 30 50C30 58 34 62 38 64V72H62V64C66 62 70 58 70 50C70 40 64 30 50 30Z M38 48H46M54 48H62 M46 72V66 M54 72V66 M50 8V20 M50 80V92 M8 50H20 M80 50H92 M20 20L28 28 M80 20L72 28 M20 80L28 72 M80 80L72 72',
@@ -5923,8 +5949,8 @@ function labWorker() {
   };
 }
 
-/** The worker program: the game engine followed by the worker code above. */
-const workerSource = () => $('#engine').textContent + '\n(' + labWorker.toString() + ')();';
+/** The worker program: the decks saved for the game (workers have no browser store), the game engine, the worker code above. */
+const workerSource = () => 'self.PREMADE_SAVED_DATA = ' + JSON.stringify(PREMADE_SAVED) + ';\n' + $('#engine').textContent + '\n(' + labWorker.toString() + ')();';
 let workerUrl = null;
 function newWorker() {
   if (!workerUrl) workerUrl = URL.createObjectURL(new Blob([workerSource()], { type: 'text/javascript' }));
@@ -7336,70 +7362,60 @@ function tuneDecode(x, depth = BENCH_VALUES.depth) {
   return out;
 }
 const SIGMA0 = 0.3, LAMBDA0 = Math.max(10, 4 + Math.floor(3 * Math.log(TUNE_N)));   // candidates per generation: CMA-ES's usual number for this many values
-/** CMA-ES state for n values: centre, step size, covariance, evolution paths. */
+/*
+ * The search keeps one step size per value (the diagonal form of CMA-ES, "sep-CMA-ES"): with about a hundred values the
+ * full form learns which values matter roughly n/3 times slower, far too slow for a few hundred generations. Candidates
+ * come in mirrored pairs (centre + step and centre − step) playing the same deals, so luck cancels out between them.
+ */
 function cmaFresh(mean, lambda) {
-  const n = TUNE_N, I = Array.from({ length: n }, (_, i) => Array.from({ length: n }, (_, j) => (i === j ? 1 : 0)));
-  return { mean: mean.slice(), sigma: SIGMA0, lambda, C: I.map(r => r.slice()), B: I.map(r => r.slice()), D: Array(n).fill(1),
-    pc: Array(n).fill(0), ps: Array(n).fill(0), g: 0 };
+  return { mean: mean.slice(), sigma: SIGMA0, lambda: lambda + (lambda % 2), D: Array(TUNE_N).fill(1), pc: Array(TUNE_N).fill(0), ps: Array(TUNE_N).fill(0), g: 0 };
 }
 function cmaConsts(n, lambda) {
   const mu = Math.floor(lambda / 2), raw = Array.from({ length: mu }, (_, i) => Math.log(mu + 0.5) - Math.log(i + 1));
   const sw = raw.reduce((a, b) => a + b, 0), w = raw.map(x => x / sw), mueff = 1 / w.reduce((a, b) => a + b * b, 0);
-  const cc = (4 + mueff / n) / (n + 4 + 2 * mueff / n), cs = (mueff + 2) / (n + mueff + 5);
-  const c1 = 2 / ((n + 1.3) ** 2 + mueff), cmu = Math.min(1 - c1, 2 * (mueff - 2 + 1 / mueff) / ((n + 2) ** 2 + mueff));
+  const cc = (4 + mueff / n) / (n + 4 + 2 * mueff / n), cs = (mueff + 2) / (n + mueff + 5), sep = (n + 2) / 3;
+  const c1 = Math.min(1, sep * 2 / ((n + 1.3) ** 2 + mueff)), cmu = Math.min(1 - c1, sep * 2 * (mueff - 2 + 1 / mueff) / ((n + 2) ** 2 + mueff));
   const damps = 1 + 2 * Math.max(0, Math.sqrt((mueff - 1) / (n + 1)) - 1) + cs, chiN = Math.sqrt(n) * (1 - 1 / (4 * n) + 1 / (21 * n * n));
   return { mu, w, mueff, cc, cs, c1, cmu, damps, chiN };
 }
-/** Eigen-decomposition of a symmetric matrix (Jacobi rotations): C = B·diag(d)·Bᵀ. */
-function eigSym(C) {
-  const n = C.length, A = C.map(r => r.slice()), V = Array.from({ length: n }, (_, i) => Array.from({ length: n }, (_, j) => (i === j ? 1 : 0)));
-  for (let sweep = 0; sweep < 60; sweep++) {
-    let off = 0;
-    for (let p = 0; p < n; p++) for (let q = p + 1; q < n; q++) off += A[p][q] * A[p][q];
-    if (off < 1e-18) break;
-    for (let p = 0; p < n; p++) for (let q = p + 1; q < n; q++) {
-      if (Math.abs(A[p][q]) < 1e-15) continue;
-      const th = (A[q][q] - A[p][p]) / (2 * A[p][q]), t = Math.sign(th || 1) / (Math.abs(th) + Math.sqrt(th * th + 1));
-      const c = 1 / Math.sqrt(t * t + 1), s = t * c;
-      for (let k = 0; k < n; k++) { const a = A[k][p], b = A[k][q]; A[k][p] = c * a - s * b; A[k][q] = s * a + c * b; }
-      for (let k = 0; k < n; k++) { const a = A[p][k], b = A[q][k]; A[p][k] = c * a - s * b; A[q][k] = s * a + c * b; }
-      for (let k = 0; k < n; k++) { const a = V[k][p], b = V[k][q]; V[k][p] = c * a - s * b; V[k][q] = s * a + c * b; }
-    }
-  }
-  return { B: V, d: A.map((r, i) => Math.max(1e-20, r[i])) };
-}
 const gauss = () => Math.sqrt(-2 * Math.log(1 - Math.random())) * Math.cos(2 * Math.PI * Math.random());
-function cmaSample(cma) {
-  const n = TUNE_N, z = Array.from({ length: n }, gauss);
-  return cma.mean.map((m, i) => m + cma.sigma * cma.B[i].reduce((s, b, j) => s + b * cma.D[j] * z[j], 0));
+/** A generation's candidates: mirrored pairs around the centre. */
+function cmaSamples(cma) {
+  const xs = [];
+  for (let k = 0; k < cma.lambda / 2; k++) {
+    const z = Array.from({ length: TUNE_N }, gauss);
+    xs.push(cma.mean.map((m, i) => m + cma.sigma * cma.D[i] * z[i]), cma.mean.map((m, i) => m - cma.sigma * cma.D[i] * z[i]));
+  }
+  return xs;
 }
-/** One CMA-ES step from the generation's candidates and their win rates (higher is better). */
+/** One step from the generation's candidates and their win rates (higher is better). */
 function cmaUpdate(cma, xs, rates) {
   const n = TUNE_N, K = cmaConsts(n, cma.lambda), order = rates.map((r, i) => i).sort((a, b) => rates[b] - rates[a]);
   const old = cma.mean.slice(), sel = order.slice(0, K.mu).map(i => xs[i]);
   cma.mean = old.map((_, j) => sel.reduce((s, x, i) => s + K.w[i] * x[j], 0));
   const yw = cma.mean.map((m, j) => (m - old[j]) / cma.sigma);
-  const BtY = cma.B[0].map((_, k) => yw.reduce((s, y, j) => s + cma.B[j][k] * y, 0));                // Bᵀ·yw
-  const invSqrtY = cma.B.map(row => row.reduce((s, b, k) => s + b * BtY[k] / cma.D[k], 0));         // C^-1/2·yw
-  cma.ps = cma.ps.map((p, j) => (1 - K.cs) * p + Math.sqrt(K.cs * (2 - K.cs) * K.mueff) * invSqrtY[j]);
+  cma.ps = cma.ps.map((p, j) => (1 - K.cs) * p + Math.sqrt(K.cs * (2 - K.cs) * K.mueff) * yw[j] / cma.D[j]);
   cma.g++;
   const psn = Math.hypot(...cma.ps), hsig = psn / Math.sqrt(1 - (1 - K.cs) ** (2 * cma.g)) / K.chiN < 1.4 + 2 / (n + 1) ? 1 : 0;
   cma.pc = cma.pc.map((p, j) => (1 - K.cc) * p + hsig * Math.sqrt(K.cc * (2 - K.cc) * K.mueff) * yw[j]);
   const ys = sel.map(x => x.map((v, j) => (v - old[j]) / cma.sigma));
-  for (let i = 0; i < n; i++) for (let j = 0; j <= i; j++) {
-    let v = (1 - K.c1 - K.cmu) * cma.C[i][j] + K.c1 * (cma.pc[i] * cma.pc[j] + (1 - hsig) * K.cc * (2 - K.cc) * cma.C[i][j]);
-    for (let k = 0; k < ys.length; k++) v += K.cmu * K.w[k] * ys[k][i] * ys[k][j];
-    cma.C[i][j] = cma.C[j][i] = v;
-  }
+  cma.D = cma.D.map((d, i) => {
+    let v = (1 - K.c1 - K.cmu) * d * d + K.c1 * (cma.pc[i] * cma.pc[i] + (1 - hsig) * K.cc * (2 - K.cc) * d * d);
+    for (let k = 0; k < ys.length; k++) v += K.cmu * K.w[k] * ys[k][i] * ys[k][i];
+    return Math.sqrt(Math.max(1e-20, v));
+  });
   cma.sigma = Math.min(1, cma.sigma * Math.exp((K.cs / K.damps) * (psn / K.chiN - 1)));
-  const { B, d } = eigSym(cma.C);
-  cma.B = B; cma.D = d.map(Math.sqrt);
 }
 
-const freshTune = (opps = ['bench']) => ({ v: 4, depth: 1, opps, cma: cmaFresh(Array(TUNE_N).fill(0), LAMBDA0), best: { ...IFELSE_DEFAULTS },
-  gen: 0, restarts: 0, cand: null, hist: [], stall: 0, top: -1 });
+const freshTune = (opps = ['bench']) => ({ v: 5, depth: 1, opps, cma: cmaFresh(Array(TUNE_N).fill(0), LAMBDA0), best: { ...IFELSE_DEFAULTS },
+  gen: 0, restarts: 0, cand: null, hist: [] });
 function tuneState() {
-  if (!state.ifelse || state.ifelse.v !== 4) state.ifelse = freshTune(state.ifelse && state.ifelse.opps);   // earlier tunings are replaced
+  const old = state.ifelse;
+  if (old && old.v === 4 && old.cma && old.cma.mean && old.cma.mean.length === TUNE_N) {   // a tuning of the full form: its centre carries on
+    state.ifelse = { ...freshTune(old.opps), depth: old.depth, gen: old.gen, restarts: old.restarts, best: old.best, lastCheck: old.lastCheck,
+      cma: cmaFresh(old.cma.mean, LAMBDA0), hist: [...(old.hist || []), { gen: old.gen, mark: 'one step size per value' }] };
+  }
+  if (!state.ifelse || state.ifelse.v !== 5) state.ifelse = freshTune(state.ifelse && state.ifelse.opps);   // earlier tunings are replaced
   const st = state.ifelse;
   st.opps = (st.opps || []).filter(k => TUNE_OPPS().some(([x]) => x === k));
   if (!st.opps.length) st.opps = ['bench'];
@@ -7408,7 +7424,8 @@ function tuneState() {
 const tuneGames = () => Math.max(20, Math.round(Number($('#tuGames').value) / 2) * 2 || 300);
 function newGeneration() {
   const st = tuneState(), L = st.cma.lambda;
-  st.cand = { G: tuneGames(), xs: Array.from({ length: L }, () => cmaSample(st.cma)), w: Array(L).fill(0), n: Array(L).fill(0), started: Array(L).fill(0) };
+  // the candidates, then the centre itself (the values the ifelse AI has now): it plays the same games, only to be measured
+  st.cand = { G: tuneGames(), xs: [...cmaSamples(st.cma), st.cma.mean.slice()], w: Array(L + 1).fill(0), n: Array(L + 1).fill(0), started: Array(L + 1).fill(0) };
 }
 function tuneJob() {
   const st = tuneState(), c = st.cand;
@@ -7431,16 +7448,16 @@ function tuneResult(r, job) {
   if (c.n.every(x => x >= c.G)) finishGeneration(); else renderTuneStatus();
 }
 function finishGeneration() {
-  const st = tuneState(), c = st.cand, rates = c.w.map((w, i) => w / c.n[i]);
-  cmaUpdate(st.cma, c.xs, rates);
+  const st = tuneState(), c = st.cand, all = c.w.map((w, i) => w / c.n[i]), L = st.cma.lambda, rates = all.slice(0, L), centre = all[L];
+  cmaUpdate(st.cma, c.xs.slice(0, L), rates);
   st.best = tuneDecode(st.cma.mean, st.depth);
   const avg = rates.reduce((a, b) => a + b, 0) / rates.length, top = Math.max(...rates);
-  st.hist.push({ gen: st.gen, avg, top, lambda: st.cma.lambda, sigma: st.cma.sigma });
+  st.hist.push({ gen: st.gen, avg, top, centre, lambda: L, sigma: st.cma.sigma });
   if (st.hist.length > 2000) st.hist.splice(0, st.hist.length - 2000);
-  // stalled: no better generation average for 20 generations, or a tiny step size → restart around the centre with twice the candidates
-  if (avg > st.top + 0.01) { st.top = avg; st.stall = 0; } else st.stall++;
-  if (st.stall >= 20 || st.cma.sigma < 0.02) {
-    st.restarts++; st.stall = 0; st.top = -1;
+  // settled (a tiny step size) → restart around the centre with twice the candidates. A generation average that stops
+  // rising is not a reason: with a few hundred games per candidate it stalls by luck, and a restart throws away the step sizes learned.
+  if (st.cma.sigma < 0.02) {
+    st.restarts++;
     st.cma = cmaFresh(st.cma.mean, Math.min(40, st.cma.lambda * 2));
     st.hist.push({ gen: st.gen, mark: `restart ${st.restarts} · ${st.cma.lambda} candidates` });
   }
@@ -7486,7 +7503,7 @@ function setTuneDepth(d) {
   const st = tuneState(), was = tune.running;
   if (st.depth === d) return;
   if (was) pauseTune();
-  st.depth = d; st.cand = null; st.top = -1; st.stall = 0; st.best = tuneDecode(st.cma.mean, d);
+  st.depth = d; st.cand = null; st.best = tuneDecode(st.cma.mean, d);
   st.hist.push({ gen: st.gen, mark: 'depth ' + d });
   save();
   if (was) startTune(); else renderTune();
@@ -7553,7 +7570,7 @@ $('#tuReset').addEventListener('click', async () => {
 function setTuneOpps(opps) {
   const st = tuneState(), was = tune.running;
   if (was) pauseTune();
-  st.opps = opps; st.cand = null; st.top = -1; st.stall = 0;
+  st.opps = opps; st.cand = null;
   const last = st.hist[st.hist.length - 1], mark = { gen: st.gen, mark: 'vs ' + opps.map(tuneOppName).join(', ') };
   if (last && last.mark) st.hist[st.hist.length - 1] = mark; else st.hist.push(mark);
   save();
@@ -7566,7 +7583,7 @@ function renderTuneStatus() {
   const done = c ? c.n.reduce((a, b) => a + b, 0) : 0, total = c ? c.G * c.xs.length : 0;
   $('#tuStatus').textContent = (tune.running ? 'Tuning' : st.gen || c ? 'Paused' : 'Not started') +
     ` · generation ${st.gen + 1} · ${st.cma.lambda} candidates` + (c ? ` · ${done}/${total} games` : '') +
-    (last ? ` · last generation: average ${tpct(last.avg)}, best candidate ${tpct(last.top)}` : '') +
+    (last ? ` · last generation: the ifelse AI ${tpct(last.centre)}, candidates' average ${tpct(last.avg)}, best candidate ${tpct(last.top)}` : '') +
     ` · step size ${st.cma.sigma.toFixed(3)}` + (st.restarts ? ` · ${st.restarts} restart${st.restarts > 1 ? 's' : ''}` : '');
 }
 function renderTune() {
@@ -7598,12 +7615,14 @@ function renderTune() {
       const x = X(Math.max(0, i - 0.5)), right = x > W - r - 200;
       svg += `<line class="tumark" x1="${x}" x2="${x}" y1="${t}" y2="${t + ph}"></line><text class="tumarkt" x="${right ? x - 4 : x + 4}" y="${t + 14}" text-anchor="${right ? 'end' : 'start'}">${esc(e.mark)}</text>`;
     }
-    svg += `<polyline class="tubest" points="${gens.map((e, k) => `${X(k)},${Y(e.avg)}`).join(' ')}"></polyline>`;
-    svg += gens.map((e, k) => `<circle class="tucand acc" cx="${X(k)}" cy="${Y(e.top)}" r="3.5"><title>Generation ${e.gen + 1}: average ${tpct(e.avg)}, best candidate ${tpct(e.top)} (${e.lambda} candidates)</title></circle>`).join('');
+    svg += `<polyline class="tuavg" points="${gens.map((e, k) => `${X(k)},${Y(e.avg)}`).join(' ')}"></polyline>`;
+    const cen = gens.map((e, k) => (e.centre == null ? null : `${X(k)},${Y(e.centre)}`)).filter(Boolean);
+    if (cen.length) svg += `<polyline class="tubest" points="${cen.join(' ')}"></polyline>`;
+    svg += gens.map((e, k) => `<circle class="tucand acc" cx="${X(k)}" cy="${Y(e.top)}" r="3.5"><title>Generation ${e.gen + 1}: ifelse AI ${tpct(e.centre)}, candidates' average ${tpct(e.avg)}, best candidate ${tpct(e.top)} (${e.lambda} candidates)</title></circle>`).join('');
     svg += `<text class="xlab" x="${l}" y="${H - 10}">generation ${gens[0].gen + 1}</text><text class="xlab end" x="${W - r}" y="${H - 10}">generation ${gens[gens.length - 1].gen + 1}</text>`;
   }
   $('#tuChart').innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Win rates by generation">${svg}</svg>
-    <div class="tulegend"><span class="lg best"></span>candidates' average win rate <span class="lg acc"></span>best candidate</div>`;
+    <div class="tulegend"><span class="lg best"></span>the ifelse AI itself (the centre) <span class="lg avg"></span>candidates' average <span class="lg acc"></span>best candidate</div>`;
   const fmt = v => (Number.isInteger(v) ? String(v) : Math.abs(v) >= 10 ? v.toFixed(1) : v.toFixed(3));
   $('#tuTable').innerHTML = `<table class="tutable"><thead><tr><th>Value</th><th>Start</th><th>ifelse AI (centre)</th></tr></thead><tbody>${
     IFELSE_FIELDS.map(([k, text]) => { const d = IFELSE_DEFAULTS[k], v = st.best[k] ?? d, ch = Math.abs(v - d) > 1e-9;
@@ -7614,14 +7633,16 @@ function renderTune() {
 /* =====================================================================
    Decks tab: AI-made decks (the deck search) and card statistics.
    The pool: 6 decks per faction (its 2 premades and 4 random decks of 10 cards x3). First every pool deck plays every
-   other one; then, faction by faction, a new deck is made from the faction's best unfinished deck by swapping one
-   card's copies (or changing a copy count), chosen from the card statistics, and plays every pool deck. If it looks at
-   least probably better than the faction's weakest deck, both play a fresh set of the same games (same opponents,
-   seats and deals; scores picked out as lowest or highest are partly luck, fresh games remove that). The new deck
-   replaces the weakest only if it is clearly better in those games. A deck is finished when 30 decks made from it in a
-   row failed; the search ends when every pool deck is finished. Every game records which cards each side played.
+   other one; then, faction by faction, a new deck is made from one of the faction's unfinished decks (each in turn: the
+   one with the fewest decks made from it) by swapping one card's copies (or changing a copy count), chosen from the card
+   statistics, and plays every pool deck. If it looks at least probably better than the deck it was made from, both play
+   a fresh set of the same games (same opponents, seats and deals; scores picked out as highest are partly luck, fresh
+   games remove that). The new deck replaces the deck it was made from only if it is clearly better in those games, so
+   the 6 decks of a faction stay 6 separate lines and never all become copies of the best one. A new deck that shares 70%
+   or more of its cards with another pool deck of its faction is not tried. A deck is finished when 30 decks made from it
+   in a row failed; the search ends when every pool deck is finished. Every game records which cards each side played.
    ===================================================================== */
-const DS_PER_FACTION = 6, DS_RANDOM = 4, DS_RANDOM_CARDS = 10, DS_DONE_AFTER = 30;
+const DS_PER_FACTION = 6, DS_RANDOM = 4, DS_RANDOM_CARDS = 10, DS_DONE_AFTER = 30, DS_TOO_ALIKE = 0.7;
 const ds = { pool: null };                                          // the running games (not saved)
 const freshDs = () => ({ v: 1, per: 10, pilots: [], decks: {}, pool: {}, h2h: {}, tasks: [], phase: null, cand: null, turn: 0, tries: 0,
   entered: 0, log: [], stats: {}, pairs: {}, tests: {}, yard: {} });
@@ -7692,6 +7713,11 @@ function pairLift(st, a, b) {
 }
 
 /* ---------- decks ---------- */
+/** The share of two decks' cards they have in common: copies held by both, over the smaller deck's size. */
+function alike(a, b) {
+  const nb = Object.fromEntries(b.list);
+  return a.list.reduce((n, [k, c]) => n + Math.min(c, nb[k] || 0), 0) / Math.max(1, Math.min(deckSize(a.list), deckSize(b.list)));
+}
 const deckOf = (st, id) => st.decks[id] || (DECKS[id] ? { id, name: DECKS[id].name, fac: DECKS[id].fac, list: DECKS[id].list } : null);
 function addDeck(st, d) { st.decks[d.id] = d; labDeck(d.id, d.name, d.fac, d.list); return d; }
 function randomDeck(st, fac, n) {
@@ -7702,7 +7728,7 @@ function randomDeck(st, fac, n) {
  *  statistics like a player would: out goes the card that adds least, in comes first a card of about the same cost,
  *  preferring cards often played with the deck's best cards; with no statistics yet, chosen at random. */
 function childOf(st, parent) {
-  const fac = parent.fac, have = new Set(parent.list.map(([k]) => k)), list = parent.list.map(([k, n]) => [k, n]), size = deckSize(list);
+  const fac = parent.fac, others = (st.pool[fac] || []).filter(id => id !== parent.id).map(id => deckOf(st, id)), have = new Set(parent.list.map(([k]) => k)), list = parent.list.map(([k, n]) => [k, n]), size = deckSize(list);
   const guided = st.phase === 'search', val = k => cardValue(st, k) ?? 0.5;
   const ranked = list.map(([k]) => k).sort((a, b) => (guided ? val(a) - val(b) : Math.random() - 0.5));
   let change = null;
@@ -7716,7 +7742,9 @@ function childOf(st, parent) {
     for (const out of ranked) {
       const options = factionCards(fac).filter(k => !have.has(k) && !parent.tried.includes(out + '>' + k));
       if (!options.length) continue;
-      const score = k => (cardValue(st, k) ?? 0.55) + 0.05 * best.reduce((n, b) => n + Math.min(3, pairLift(st, k, b)) - 1, 0);
+      // cards the faction's other pool decks hold count a little less, so the lines grow apart
+      const score = k => (cardValue(st, k) ?? 0.55) + 0.05 * best.reduce((n, b) => n + Math.min(3, pairLift(st, k, b)) - 1, 0)
+        - 0.02 * others.filter(d => d.list.some(([x]) => x === k)).length;
       const pick = guided ? options.sort((a, b) => (Math.abs(cost(a) - cost(out)) > 1) - (Math.abs(cost(b) - cost(out)) > 1) || score(b) - score(a))[0]
         : options[dsRand(options.length)];
       const n = list.find(x => x[0] === out)[1];
@@ -7726,6 +7754,8 @@ function childOf(st, parent) {
   }
   if (!change) return null;
   parent.tried.push(change.tag); change.apply();
+  const twin = others.find(d => alike({ list }, d) >= DS_TOO_ALIKE);
+  if (twin) return { twin, say: change.say };                         // too like another line: not tried, the next change is
   st.tries++;
   return addDeck(st, { id: `d-${st.tries}`, name: `${LAB_FACTION_NAME[fac]} deck ${st.tries}`, fac, list: list.filter(([, n]) => n > 0), from: parent.id, say: change.say, fails: 0, tried: [] });
 }
@@ -7744,14 +7774,16 @@ function startPool(st) {
 }
 function dsLog(st, text) { st.log.push(text); if (st.log.length > 200) st.log.splice(0, st.log.length - 200); }
 function testAgainstPool(st, id, tag) { for (const b of poolIds(st)) if (b !== id) st.tasks.push(task(id, b, tag)); }
-/** The next deck to try: factions in turn, from the faction's best unfinished deck. */
+/** The next deck to try: factions in turn; in a faction, each unfinished deck in turn (fewest decks made from it first). */
 function nextCandidate(st) {
   for (let k = 0; k < LAB_FACTIONS.length; k++) {
     const fac = LAB_FACTIONS[(st.turn + k) % LAB_FACTIONS.length];
     const open = st.pool[fac].map(id => deckOf(st, id)).filter(d => st.decks[d.id] ? st.decks[d.id].fails < DS_DONE_AFTER : true);
-    for (const d of open.sort((a, b) => rate(vsPool(st, b.id)) - rate(vsPool(st, a.id)))) {
+    const made = d => (st.decks[d.id] ? st.decks[d.id].tried.length : 0);
+    for (const d of open.sort((a, b) => made(a) - made(b) || rate(vsPool(st, b.id)) - rate(vsPool(st, a.id)))) {
       const parent = st.decks[d.id] || addDeck(st, { ...d, list: d.list.map(([x, n]) => [x, n]), from: null, fails: 0, tried: [] });
-      const child = childOf(st, parent);
+      let child = childOf(st, parent);
+      while (child && child.twin) child = childOf(st, parent);
       if (!child) { parent.fails = DS_DONE_AFTER; continue; }
       st.turn = (st.turn + k + 1) % LAB_FACTIONS.length;
       st.cand = { id: child.id, fac, parent: parent.id, round: 1 };
@@ -7766,19 +7798,18 @@ function stepDone(st) {
   if (st.phase === 'first') { st.phase = 'search'; dsLog(st, 'First round done; the search starts.'); }
   else if (st.phase === 'search' && st.cand) {
     const c = st.cand, facPool = st.pool[c.fac], d = st.decks[c.id], parent = st.decks[c.parent];
-    if (!c.weakest) c.weakest = facPool.slice().sort((a, b) => rate(vsPool(st, a)) - rate(vsPool(st, b)))[0];
-    const others = poolIds(st).filter(x => x !== c.weakest), mine = vsPool(st, c.id, others), wname = deckOf(st, c.weakest).name;
-    const z = c.replay ? zOf(c.fresh, c.replay) : zOf(mine, vsPool(st, c.weakest));
-    const shown = c.replay ? `${pc(rate(c.fresh))} in fresh games where ${wname} scored ${pc(rate(c.replay))}` : `${pc(rate(mine))} against the pool, ${wname} ${pc(rate(vsPool(st, c.weakest)))}`;
+    const others = poolIds(st).filter(x => x !== c.parent), mine = vsPool(st, c.id, others), wname = parent.name;
+    const z = c.replay ? zOf(c.fresh, c.replay) : zOf(mine, vsPool(st, c.parent));
+    const shown = c.replay ? `${pc(rate(c.fresh))} in fresh games where ${wname} scored ${pc(rate(c.replay))}` : `${pc(rate(mine))} against the pool, ${wname} ${pc(rate(vsPool(st, c.parent)))}`;
     if (!c.replay && z >= 1) {                                       // looks better: both play a fresh set of the same games
       c.replay = [0, 0, 0]; c.fresh = [0, 0, 0];
-      for (const b of others) { st.tasks.push(task(c.weakest, b, 'replay', 61000)); st.tasks.push(task(c.id, b, 'fresh', 61000)); }
+      for (const b of others) { st.tasks.push(task(c.parent, b, 'replay', 61000)); st.tasks.push(task(c.id, b, 'fresh', 61000)); }
       dsLog(st, `${d.name}: ${shown}: probably better; both play a fresh set of the same games.`);
       return;
     }
     if (c.replay && z >= 2) {
-      facPool[facPool.indexOf(c.weakest)] = c.id; st.entered++; parent.fails = 0;
-      dsLog(st, `${d.name} (${d.say}, from ${parent.name}): ${shown}: clearly better, it replaces ${wname}.`);
+      facPool[facPool.indexOf(c.parent)] = c.id; st.entered++;
+      dsLog(st, `${d.name} (${d.say}): ${shown}: clearly better, it replaces ${wname}.`);
     } else {
       parent.fails++;
       dsLog(st, `${d.name} (${d.say}): ${shown}: not clearly better; dropped (${parent.name}: ${parent.fails}/${DS_DONE_AFTER} in a row).`);
@@ -7897,10 +7928,15 @@ function renderDs() {
     ({ first: 'first round: every pool deck against every other one', search: st.cand ? `trying ${st.decks[st.cand.id] ? st.decks[st.cand.id].name : ''} (${st.decks[st.cand.id] ? st.decks[st.cand.id].say : ''})` : 'search', done: 'the search is done' }[st.phase] || 'no pool yet')
     + (all.length ? ` · ${left} games left in this step` : '') + ` · ${st.tries} decks tried, ${st.entered} entered the pool`;
   // the pool, per faction, best first
-  $('#dsPool').innerHTML = st.phase ? LAB_FACTIONS.map(fac => `<h3 class="tuh">${esc(LAB_FACTION_NAME[fac])}</h3><table class="tutable"><thead><tr><th>Deck</th><th>Against the pool</th><th>Games</th><th>Tries from it</th><th>Cards</th></tr></thead><tbody>${
+  $('#dsPool').innerHTML = st.phase ? LAB_FACTIONS.map(fac => `<h3 class="tuh">${esc(LAB_FACTION_NAME[fac])}</h3><table class="tutable"><thead><tr><th>Deck</th><th>Against the pool</th><th>Games</th><th>Tries from it</th><th>In the game</th><th>Cards</th></tr></thead><tbody>${
     st.pool[fac].map(id => ({ id, t: vsPool(st, id) })).sort((a, b) => rate(b.t) - rate(a.t)).map(({ id, t }) => { const d = deckOf(st, id), x = st.decks[id];
-      return `<tr><td>${esc(d.name)}</td><td>${pc(rate(t))}</td><td>${games(t)}</td><td>${x ? x.fails : 0}/${DS_DONE_AFTER} failed in a row</td><td class="dsl">${d.list.map(([k, n]) => `${n}× ${esc(CARDS[k].name)}`).join(', ')}</td></tr>`; }).join('')
+      return `<tr><td>${esc(d.name)}</td><td>${pc(rate(t))}</td><td>${games(t)}</td><td>${x ? x.fails : 0}/${DS_DONE_AFTER} failed in a row</td><td class="dsuse">${LAB_DECKS.filter(p => facOfDeck(p) === fac).map((p, i) =>
+        `<button data-use="${esc(id)}" data-slot="${p}" title="This deck becomes the game's premade deck ${i + 1} of this faction (replacing ${esc(DECKS[p].name)})">Deck ${i + 1}</button>`).join('')}</td><td class="dsl">${d.list.map(([k, n]) => `${n}× ${esc(CARDS[k].name)}`).join(', ')}</td></tr>`; }).join('')
   }</tbody></table>`).join('') : '';
+  for (const b of $('#dsPool').querySelectorAll('button[data-use]')) b.addEventListener('click', () => useInGame({ [b.dataset.slot]: b.dataset.use }));
+  const saved = PREMADE.filter(p => p.saved).length;
+  $('#dsSaved').textContent = saved ? `The game and the lab use ${saved} of the ${PREMADE.length} premade decks from here.` : 'The game and the lab use their built-in premade decks.';
+  $('#dsBuiltIn').disabled = !saved; $('#dsUseBest').disabled = !st.phase;
   const yard = Object.entries(st.yard || {});
   $('#dsYard').innerHTML = yard.length ? '<h3 class="tuh">Premades against the pool (the yardstick)</h3>' + yard.map(([p, y]) => `${esc(DECKS[p].name)}: ${y.done ? pc(rate(vsPool(st, y.id))) : 'playing…'}`).join(' · ') : '';
   $('#dsLog').innerHTML = st.log.slice(-15).reverse().map(x => `<li>${esc(x)}</li>`).join('');
@@ -7918,6 +7954,41 @@ function renderCardStats() {
   }</tbody></table>` : '<p class="note">No games played with this faction yet.</p>';
   for (const b of $('#dsCards').querySelectorAll('button[data-test]')) b.addEventListener('click', () => testCard(b.dataset.test));
 }
+/* ---------- decks found here become the game's premade decks (and so the decks the lab trains and plays with) ---------- */
+/** slots: premade id -> pool deck id. Every pool deck keeps its own list first, so its results stay its own. */
+async function useInGame(slots) {
+  const st = dsState(), names = Object.entries(slots).map(([p, id]) => `${deckOf(st, id).name} → ${DECKS[p].name}`);
+  if (!(await askYes('Use these decks in the game?', names.join(' · ') + '. The game, its computer opponents and every AI in the lab then play with them. The lab reloads; whatever is running pauses.', 'Use them'))) return;
+  for (const id of poolIds(st)) if (!st.decks[id]) { const d = deckOf(st, id); addDeck(st, { ...d, list: d.list.map(([k, n]) => [k, n]), from: null, fails: 0, tried: [] }); }
+  let cur = null;
+  try { cur = JSON.parse(localStorage.getItem(PREMADE_SAVED_STORE) || 'null'); } catch (e) { cur = null; }
+  const decks = (cur && cur.decks) || {};
+  for (const [p, id] of Object.entries(slots)) { const d = deckOf(st, id); decks[p] = { name: d.name, cards: Object.fromEntries(d.list) }; }
+  writeSaved({ stamp: String(Date.now()), decks });
+}
+/** Per faction, the two pool decks with the best results against the pool become its premades. */
+function useBest() {
+  const st = dsState(), slots = {};
+  for (const fac of LAB_FACTIONS) {
+    const best = st.pool[fac].slice().sort((a, b) => rate(vsPool(st, b)) - rate(vsPool(st, a)));
+    LAB_DECKS.filter(p => facOfDeck(p) === fac).forEach((p, i) => { if (best[i]) slots[p] = best[i]; });
+  }
+  useInGame(slots);
+}
+async function useBuiltIn() {
+  if (!(await askYes('Go back to the built-in premade decks?', 'The game, its computer opponents and every AI in the lab play the premade decks written in the game again. The lab reloads; whatever is running pauses.', 'Go back'))) return;
+  const st = dsState();
+  for (const id of poolIds(st)) if (!st.decks[id]) { const d = deckOf(st, id); addDeck(st, { ...d, list: d.list.map(([k, n]) => [k, n]), from: null, fails: 0, tried: [] }); }
+  writeSaved(null);
+}
+async function writeSaved(data) {
+  stopDs(); if (Object.keys(trainings).length) await stopAllTraining();   // trained networks are stored before the reload
+  if (tour.running) pauseTournament(); if (tune.running) pauseTune();
+  save();
+  try { if (data) localStorage.setItem(PREMADE_SAVED_STORE, JSON.stringify(data)); else localStorage.removeItem(PREMADE_SAVED_STORE); }
+  catch (e) { reportError('This browser did not let the lab save the decks.'); return; }
+  location.reload();
+}
 function exportDs() {
   const st = dsState(), lines = ['Three Bases AI lab: deck search', ''];
   for (const fac of LAB_FACTIONS) {
@@ -7934,6 +8005,8 @@ $('#dsStart').addEventListener('click', startDs);
 $('#dsPause').addEventListener('click', stopDs);
 $('#dsYardBtn').addEventListener('click', measurePremades);
 $('#dsExport').addEventListener('click', exportDs);
+$('#dsUseBest').addEventListener('click', useBest);
+$('#dsBuiltIn').addEventListener('click', useBuiltIn);
 $('#dsFac').addEventListener('change', renderCardStats);
 $('#dsThreads').addEventListener('change', () => { if (ds.pool) ds.pool.resize(Math.max(1, Math.min(32, Number($('#dsThreads').value) || 1))); });
 $('#dsReset').addEventListener('click', async () => {

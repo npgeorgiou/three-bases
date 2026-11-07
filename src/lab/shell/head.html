@@ -102,6 +102,7 @@ nav.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: 
 .tuchart .xlab.end { text-anchor: end; }
 .tuchart .empty { fill: var(--muted); font-size: 15px; text-anchor: middle; }
 .tuchart .tubest { fill: none; stroke: var(--gold); stroke-width: 2.5; stroke-linejoin: round; }
+.tuchart .tuavg { fill: none; stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 5 4; stroke-linejoin: round; }
 .tuchart .tucand { fill: var(--muted); opacity: .55; }
 .tuchart .tucand.acc { fill: var(--gold); stroke: var(--ink); stroke-width: 1; opacity: 1; }
 .tuchart .tumark { stroke: var(--ink); stroke-dasharray: 3 3; opacity: .5; }
@@ -109,12 +110,15 @@ nav.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: 
 .tulegend { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; color: var(--muted); font-size: 13px; padding: 4px 4px 0; }
 .tulegend .lg { display: inline-block; width: 18px; height: 0; border-top: 2.5px solid var(--gold); margin-right: -10px; }
 .tulegend .lg.cand { width: 7px; height: 7px; border: 0; border-radius: 50%; background: var(--muted); opacity: .55; }
+.tulegend .lg.avg { border-top: 1.5px dashed var(--muted); }
 .tulegend .lg.acc { width: 9px; height: 9px; border: 1px solid var(--ink); border-radius: 50%; background: var(--gold); }
 .tuh { font: 400 18px/1.2 var(--disp); margin: 0 0 8px; }
 .tutable { border-collapse: collapse; font-size: 15px; width: 100%; max-width: 760px; }
 .tutable th, .tutable td { padding: 5px 14px 5px 0; border-bottom: 1px solid var(--line); text-align: right; }
 .tutable th:first-child, .tutable td:first-child { text-align: left; }
 #dsPool .tutable, #dsCards .tutable { max-width: none; }
+.tutable td.dsuse { white-space: nowrap; }
+.tutable td.dsuse button { padding: 2px 8px; font-size: 12px; margin: 0 2px; }
 .tutable td.dsl, #dsPool .tutable th:last-child { text-align: left; white-space: normal; font-size: 13px; color: var(--muted); min-width: 320px; }
 .dslog { font-size: 14px; color: var(--muted); max-height: 220px; overflow: auto; padding-left: 18px; }
 .tutable th { color: var(--muted); font-weight: 400; font-size: 13px; }
@@ -289,7 +293,7 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
 
 <div class="page" id="tunePage" hidden>
   <h2>ifelse AI</h2>
-  <p class="note tunote">An AI that sees both hands and searches the real position, with no rules of thumb: every judgement is a weighted term. All its values (weights, how far and how wide it looks, switches) are tuned at once with CMA-ES against the opponents you tick, starting from the Benchmark's values. Each generation, several candidates around a centre (every value changed by a different amount) play the same set of games; the centre moves toward the better half and the method learns which values, and which combinations, pay off. It restarts by itself with more candidates when it stops improving. Draws count half.</p>
+  <p class="note tunote">An AI that sees both hands and searches the real position, with no rules of thumb: every judgement is a weighted term. All its values (weights, how far and how wide it looks, switches) are tuned at once with CMA-ES against the opponents you tick, starting from the Benchmark's values. Each generation, several candidates around a centre (every value changed by a different amount, in pairs: one up, its twin down by the same amount) play the same set of games; the centre moves toward the better half and the method learns how far to change each value. The centre itself, the ifelse AI as it is now, plays the same games too: the gold line is its win rate, the dashed line the candidates' average (lower, since most changes are tries that fail). It restarts with more candidates once its steps have become tiny. Draws count half.</p>
   <div class="setup">
     <label>Games per candidate <input type="number" id="tuGames" min="20" max="2000" step="2" value="300"></label>
     <label>Games at once <input type="number" id="tuThreads" min="1" max="32"></label>
@@ -310,7 +314,7 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
 
 <div class="page" id="decksPage" hidden>
   <h2>Decks</h2>
-  <p class="note tunote">The lab builds its own decks. A pool of 6 decks per faction (its 2 premades and 4 random decks of 10 cards ×3) first plays every deck against every other one. Then, faction by faction, it makes a new deck from the faction's best unfinished deck by swapping one card's copies (or one copy more or less), chosen from the card statistics: out goes the card that adds least, in comes first a card of about the same cost, preferring cards often played with the deck's best cards. The new deck plays every pool deck and replaces the faction's weakest deck only if it scores clearly higher. A deck is finished when 30 decks made from it in a row failed. Each game is played by the same AI on both sides, the two AIs taking turns, so decks are compared, not AIs; every game records which cards were played.</p>
+  <p class="note tunote">The lab builds its own decks. A pool of 6 decks per faction (its 2 premades and 4 random decks of 10 cards ×3) first plays every deck against every other one. Then, faction by faction, it makes a new deck from one of the faction's unfinished decks (each in turn) by swapping one card's copies (or one copy more or less), chosen from the card statistics: out goes the card that adds least, in comes first a card of about the same cost, preferring cards often played with the deck's best cards. The new deck plays every pool deck and replaces the deck it was made from only if it scores clearly higher, so each faction keeps 6 separate lines of decks; a new deck that shares 70% or more of its cards with another pool deck of its faction is not tried. A deck is finished when 30 decks made from it in a row failed. Each game is played by the same AI on both sides, the two AIs taking turns, so decks are compared, not AIs; every game records which cards were played.</p>
   <div class="setup">
     <label>AI 1 <select id="dsP1" aria-label="First AI that plays the decks"></select></label>
     <label>AI 2 <select id="dsP2" aria-label="Second AI that plays the decks"></select></label>
@@ -319,6 +323,11 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
     <button class="go" id="dsStart">Start</button><button id="dsPause" disabled>Pause</button><button id="dsReset">Start over</button>
     <button id="dsYardBtn" title="Each premade plays every pool deck, to see how much better the decks found are">Measure the premades</button>
     <button id="dsExport">Export</button>
+  </div>
+  <div class="setup">
+    <button id="dsUseBest" title="Per faction, the two pool decks with the best results become its premade decks">Use the best two of each faction in the game</button>
+    <button id="dsBuiltIn">Use the built-in premades again</button>
+    <span class="note" id="dsSaved"></span>
   </div>
   <p class="sub" id="dsStatus"></p>
   <ul class="dslog" id="dsLog"></ul>

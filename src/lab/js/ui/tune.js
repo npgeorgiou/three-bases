@@ -27,70 +27,60 @@ function tuneDecode(x, depth = BENCH_VALUES.depth) {
   return out;
 }
 const SIGMA0 = 0.3, LAMBDA0 = Math.max(10, 4 + Math.floor(3 * Math.log(TUNE_N)));   // candidates per generation: CMA-ES's usual number for this many values
-/** CMA-ES state for n values: centre, step size, covariance, evolution paths. */
+/*
+ * The search keeps one step size per value (the diagonal form of CMA-ES, "sep-CMA-ES"): with about a hundred values the
+ * full form learns which values matter roughly n/3 times slower, far too slow for a few hundred generations. Candidates
+ * come in mirrored pairs (centre + step and centre − step) playing the same deals, so luck cancels out between them.
+ */
 function cmaFresh(mean, lambda) {
-  const n = TUNE_N, I = Array.from({ length: n }, (_, i) => Array.from({ length: n }, (_, j) => (i === j ? 1 : 0)));
-  return { mean: mean.slice(), sigma: SIGMA0, lambda, C: I.map(r => r.slice()), B: I.map(r => r.slice()), D: Array(n).fill(1),
-    pc: Array(n).fill(0), ps: Array(n).fill(0), g: 0 };
+  return { mean: mean.slice(), sigma: SIGMA0, lambda: lambda + (lambda % 2), D: Array(TUNE_N).fill(1), pc: Array(TUNE_N).fill(0), ps: Array(TUNE_N).fill(0), g: 0 };
 }
 function cmaConsts(n, lambda) {
   const mu = Math.floor(lambda / 2), raw = Array.from({ length: mu }, (_, i) => Math.log(mu + 0.5) - Math.log(i + 1));
   const sw = raw.reduce((a, b) => a + b, 0), w = raw.map(x => x / sw), mueff = 1 / w.reduce((a, b) => a + b * b, 0);
-  const cc = (4 + mueff / n) / (n + 4 + 2 * mueff / n), cs = (mueff + 2) / (n + mueff + 5);
-  const c1 = 2 / ((n + 1.3) ** 2 + mueff), cmu = Math.min(1 - c1, 2 * (mueff - 2 + 1 / mueff) / ((n + 2) ** 2 + mueff));
+  const cc = (4 + mueff / n) / (n + 4 + 2 * mueff / n), cs = (mueff + 2) / (n + mueff + 5), sep = (n + 2) / 3;
+  const c1 = Math.min(1, sep * 2 / ((n + 1.3) ** 2 + mueff)), cmu = Math.min(1 - c1, sep * 2 * (mueff - 2 + 1 / mueff) / ((n + 2) ** 2 + mueff));
   const damps = 1 + 2 * Math.max(0, Math.sqrt((mueff - 1) / (n + 1)) - 1) + cs, chiN = Math.sqrt(n) * (1 - 1 / (4 * n) + 1 / (21 * n * n));
   return { mu, w, mueff, cc, cs, c1, cmu, damps, chiN };
 }
-/** Eigen-decomposition of a symmetric matrix (Jacobi rotations): C = B·diag(d)·Bᵀ. */
-function eigSym(C) {
-  const n = C.length, A = C.map(r => r.slice()), V = Array.from({ length: n }, (_, i) => Array.from({ length: n }, (_, j) => (i === j ? 1 : 0)));
-  for (let sweep = 0; sweep < 60; sweep++) {
-    let off = 0;
-    for (let p = 0; p < n; p++) for (let q = p + 1; q < n; q++) off += A[p][q] * A[p][q];
-    if (off < 1e-18) break;
-    for (let p = 0; p < n; p++) for (let q = p + 1; q < n; q++) {
-      if (Math.abs(A[p][q]) < 1e-15) continue;
-      const th = (A[q][q] - A[p][p]) / (2 * A[p][q]), t = Math.sign(th || 1) / (Math.abs(th) + Math.sqrt(th * th + 1));
-      const c = 1 / Math.sqrt(t * t + 1), s = t * c;
-      for (let k = 0; k < n; k++) { const a = A[k][p], b = A[k][q]; A[k][p] = c * a - s * b; A[k][q] = s * a + c * b; }
-      for (let k = 0; k < n; k++) { const a = A[p][k], b = A[q][k]; A[p][k] = c * a - s * b; A[q][k] = s * a + c * b; }
-      for (let k = 0; k < n; k++) { const a = V[k][p], b = V[k][q]; V[k][p] = c * a - s * b; V[k][q] = s * a + c * b; }
-    }
-  }
-  return { B: V, d: A.map((r, i) => Math.max(1e-20, r[i])) };
-}
 const gauss = () => Math.sqrt(-2 * Math.log(1 - Math.random())) * Math.cos(2 * Math.PI * Math.random());
-function cmaSample(cma) {
-  const n = TUNE_N, z = Array.from({ length: n }, gauss);
-  return cma.mean.map((m, i) => m + cma.sigma * cma.B[i].reduce((s, b, j) => s + b * cma.D[j] * z[j], 0));
+/** A generation's candidates: mirrored pairs around the centre. */
+function cmaSamples(cma) {
+  const xs = [];
+  for (let k = 0; k < cma.lambda / 2; k++) {
+    const z = Array.from({ length: TUNE_N }, gauss);
+    xs.push(cma.mean.map((m, i) => m + cma.sigma * cma.D[i] * z[i]), cma.mean.map((m, i) => m - cma.sigma * cma.D[i] * z[i]));
+  }
+  return xs;
 }
-/** One CMA-ES step from the generation's candidates and their win rates (higher is better). */
+/** One step from the generation's candidates and their win rates (higher is better). */
 function cmaUpdate(cma, xs, rates) {
   const n = TUNE_N, K = cmaConsts(n, cma.lambda), order = rates.map((r, i) => i).sort((a, b) => rates[b] - rates[a]);
   const old = cma.mean.slice(), sel = order.slice(0, K.mu).map(i => xs[i]);
   cma.mean = old.map((_, j) => sel.reduce((s, x, i) => s + K.w[i] * x[j], 0));
   const yw = cma.mean.map((m, j) => (m - old[j]) / cma.sigma);
-  const BtY = cma.B[0].map((_, k) => yw.reduce((s, y, j) => s + cma.B[j][k] * y, 0));                // Bᵀ·yw
-  const invSqrtY = cma.B.map(row => row.reduce((s, b, k) => s + b * BtY[k] / cma.D[k], 0));         // C^-1/2·yw
-  cma.ps = cma.ps.map((p, j) => (1 - K.cs) * p + Math.sqrt(K.cs * (2 - K.cs) * K.mueff) * invSqrtY[j]);
+  cma.ps = cma.ps.map((p, j) => (1 - K.cs) * p + Math.sqrt(K.cs * (2 - K.cs) * K.mueff) * yw[j] / cma.D[j]);
   cma.g++;
   const psn = Math.hypot(...cma.ps), hsig = psn / Math.sqrt(1 - (1 - K.cs) ** (2 * cma.g)) / K.chiN < 1.4 + 2 / (n + 1) ? 1 : 0;
   cma.pc = cma.pc.map((p, j) => (1 - K.cc) * p + hsig * Math.sqrt(K.cc * (2 - K.cc) * K.mueff) * yw[j]);
   const ys = sel.map(x => x.map((v, j) => (v - old[j]) / cma.sigma));
-  for (let i = 0; i < n; i++) for (let j = 0; j <= i; j++) {
-    let v = (1 - K.c1 - K.cmu) * cma.C[i][j] + K.c1 * (cma.pc[i] * cma.pc[j] + (1 - hsig) * K.cc * (2 - K.cc) * cma.C[i][j]);
-    for (let k = 0; k < ys.length; k++) v += K.cmu * K.w[k] * ys[k][i] * ys[k][j];
-    cma.C[i][j] = cma.C[j][i] = v;
-  }
+  cma.D = cma.D.map((d, i) => {
+    let v = (1 - K.c1 - K.cmu) * d * d + K.c1 * (cma.pc[i] * cma.pc[i] + (1 - hsig) * K.cc * (2 - K.cc) * d * d);
+    for (let k = 0; k < ys.length; k++) v += K.cmu * K.w[k] * ys[k][i] * ys[k][i];
+    return Math.sqrt(Math.max(1e-20, v));
+  });
   cma.sigma = Math.min(1, cma.sigma * Math.exp((K.cs / K.damps) * (psn / K.chiN - 1)));
-  const { B, d } = eigSym(cma.C);
-  cma.B = B; cma.D = d.map(Math.sqrt);
 }
 
-const freshTune = (opps = ['bench']) => ({ v: 4, depth: 1, opps, cma: cmaFresh(Array(TUNE_N).fill(0), LAMBDA0), best: { ...IFELSE_DEFAULTS },
-  gen: 0, restarts: 0, cand: null, hist: [], stall: 0, top: -1 });
+const freshTune = (opps = ['bench']) => ({ v: 5, depth: 1, opps, cma: cmaFresh(Array(TUNE_N).fill(0), LAMBDA0), best: { ...IFELSE_DEFAULTS },
+  gen: 0, restarts: 0, cand: null, hist: [] });
 function tuneState() {
-  if (!state.ifelse || state.ifelse.v !== 4) state.ifelse = freshTune(state.ifelse && state.ifelse.opps);   // earlier tunings are replaced
+  const old = state.ifelse;
+  if (old && old.v === 4 && old.cma && old.cma.mean && old.cma.mean.length === TUNE_N) {   // a tuning of the full form: its centre carries on
+    state.ifelse = { ...freshTune(old.opps), depth: old.depth, gen: old.gen, restarts: old.restarts, best: old.best, lastCheck: old.lastCheck,
+      cma: cmaFresh(old.cma.mean, LAMBDA0), hist: [...(old.hist || []), { gen: old.gen, mark: 'one step size per value' }] };
+  }
+  if (!state.ifelse || state.ifelse.v !== 5) state.ifelse = freshTune(state.ifelse && state.ifelse.opps);   // earlier tunings are replaced
   const st = state.ifelse;
   st.opps = (st.opps || []).filter(k => TUNE_OPPS().some(([x]) => x === k));
   if (!st.opps.length) st.opps = ['bench'];
@@ -99,7 +89,8 @@ function tuneState() {
 const tuneGames = () => Math.max(20, Math.round(Number($('#tuGames').value) / 2) * 2 || 300);
 function newGeneration() {
   const st = tuneState(), L = st.cma.lambda;
-  st.cand = { G: tuneGames(), xs: Array.from({ length: L }, () => cmaSample(st.cma)), w: Array(L).fill(0), n: Array(L).fill(0), started: Array(L).fill(0) };
+  // the candidates, then the centre itself (the values the ifelse AI has now): it plays the same games, only to be measured
+  st.cand = { G: tuneGames(), xs: [...cmaSamples(st.cma), st.cma.mean.slice()], w: Array(L + 1).fill(0), n: Array(L + 1).fill(0), started: Array(L + 1).fill(0) };
 }
 function tuneJob() {
   const st = tuneState(), c = st.cand;
@@ -122,16 +113,16 @@ function tuneResult(r, job) {
   if (c.n.every(x => x >= c.G)) finishGeneration(); else renderTuneStatus();
 }
 function finishGeneration() {
-  const st = tuneState(), c = st.cand, rates = c.w.map((w, i) => w / c.n[i]);
-  cmaUpdate(st.cma, c.xs, rates);
+  const st = tuneState(), c = st.cand, all = c.w.map((w, i) => w / c.n[i]), L = st.cma.lambda, rates = all.slice(0, L), centre = all[L];
+  cmaUpdate(st.cma, c.xs.slice(0, L), rates);
   st.best = tuneDecode(st.cma.mean, st.depth);
   const avg = rates.reduce((a, b) => a + b, 0) / rates.length, top = Math.max(...rates);
-  st.hist.push({ gen: st.gen, avg, top, lambda: st.cma.lambda, sigma: st.cma.sigma });
+  st.hist.push({ gen: st.gen, avg, top, centre, lambda: L, sigma: st.cma.sigma });
   if (st.hist.length > 2000) st.hist.splice(0, st.hist.length - 2000);
-  // stalled: no better generation average for 20 generations, or a tiny step size → restart around the centre with twice the candidates
-  if (avg > st.top + 0.01) { st.top = avg; st.stall = 0; } else st.stall++;
-  if (st.stall >= 20 || st.cma.sigma < 0.02) {
-    st.restarts++; st.stall = 0; st.top = -1;
+  // settled (a tiny step size) → restart around the centre with twice the candidates. A generation average that stops
+  // rising is not a reason: with a few hundred games per candidate it stalls by luck, and a restart throws away the step sizes learned.
+  if (st.cma.sigma < 0.02) {
+    st.restarts++;
     st.cma = cmaFresh(st.cma.mean, Math.min(40, st.cma.lambda * 2));
     st.hist.push({ gen: st.gen, mark: `restart ${st.restarts} · ${st.cma.lambda} candidates` });
   }
@@ -177,7 +168,7 @@ function setTuneDepth(d) {
   const st = tuneState(), was = tune.running;
   if (st.depth === d) return;
   if (was) pauseTune();
-  st.depth = d; st.cand = null; st.top = -1; st.stall = 0; st.best = tuneDecode(st.cma.mean, d);
+  st.depth = d; st.cand = null; st.best = tuneDecode(st.cma.mean, d);
   st.hist.push({ gen: st.gen, mark: 'depth ' + d });
   save();
   if (was) startTune(); else renderTune();
@@ -244,7 +235,7 @@ $('#tuReset').addEventListener('click', async () => {
 function setTuneOpps(opps) {
   const st = tuneState(), was = tune.running;
   if (was) pauseTune();
-  st.opps = opps; st.cand = null; st.top = -1; st.stall = 0;
+  st.opps = opps; st.cand = null;
   const last = st.hist[st.hist.length - 1], mark = { gen: st.gen, mark: 'vs ' + opps.map(tuneOppName).join(', ') };
   if (last && last.mark) st.hist[st.hist.length - 1] = mark; else st.hist.push(mark);
   save();
@@ -257,7 +248,7 @@ function renderTuneStatus() {
   const done = c ? c.n.reduce((a, b) => a + b, 0) : 0, total = c ? c.G * c.xs.length : 0;
   $('#tuStatus').textContent = (tune.running ? 'Tuning' : st.gen || c ? 'Paused' : 'Not started') +
     ` · generation ${st.gen + 1} · ${st.cma.lambda} candidates` + (c ? ` · ${done}/${total} games` : '') +
-    (last ? ` · last generation: average ${tpct(last.avg)}, best candidate ${tpct(last.top)}` : '') +
+    (last ? ` · last generation: the ifelse AI ${tpct(last.centre)}, candidates' average ${tpct(last.avg)}, best candidate ${tpct(last.top)}` : '') +
     ` · step size ${st.cma.sigma.toFixed(3)}` + (st.restarts ? ` · ${st.restarts} restart${st.restarts > 1 ? 's' : ''}` : '');
 }
 function renderTune() {
@@ -289,12 +280,14 @@ function renderTune() {
       const x = X(Math.max(0, i - 0.5)), right = x > W - r - 200;
       svg += `<line class="tumark" x1="${x}" x2="${x}" y1="${t}" y2="${t + ph}"></line><text class="tumarkt" x="${right ? x - 4 : x + 4}" y="${t + 14}" text-anchor="${right ? 'end' : 'start'}">${esc(e.mark)}</text>`;
     }
-    svg += `<polyline class="tubest" points="${gens.map((e, k) => `${X(k)},${Y(e.avg)}`).join(' ')}"></polyline>`;
-    svg += gens.map((e, k) => `<circle class="tucand acc" cx="${X(k)}" cy="${Y(e.top)}" r="3.5"><title>Generation ${e.gen + 1}: average ${tpct(e.avg)}, best candidate ${tpct(e.top)} (${e.lambda} candidates)</title></circle>`).join('');
+    svg += `<polyline class="tuavg" points="${gens.map((e, k) => `${X(k)},${Y(e.avg)}`).join(' ')}"></polyline>`;
+    const cen = gens.map((e, k) => (e.centre == null ? null : `${X(k)},${Y(e.centre)}`)).filter(Boolean);
+    if (cen.length) svg += `<polyline class="tubest" points="${cen.join(' ')}"></polyline>`;
+    svg += gens.map((e, k) => `<circle class="tucand acc" cx="${X(k)}" cy="${Y(e.top)}" r="3.5"><title>Generation ${e.gen + 1}: ifelse AI ${tpct(e.centre)}, candidates' average ${tpct(e.avg)}, best candidate ${tpct(e.top)} (${e.lambda} candidates)</title></circle>`).join('');
     svg += `<text class="xlab" x="${l}" y="${H - 10}">generation ${gens[0].gen + 1}</text><text class="xlab end" x="${W - r}" y="${H - 10}">generation ${gens[gens.length - 1].gen + 1}</text>`;
   }
   $('#tuChart').innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Win rates by generation">${svg}</svg>
-    <div class="tulegend"><span class="lg best"></span>candidates' average win rate <span class="lg acc"></span>best candidate</div>`;
+    <div class="tulegend"><span class="lg best"></span>the ifelse AI itself (the centre) <span class="lg avg"></span>candidates' average <span class="lg acc"></span>best candidate</div>`;
   const fmt = v => (Number.isInteger(v) ? String(v) : Math.abs(v) >= 10 ? v.toFixed(1) : v.toFixed(3));
   $('#tuTable').innerHTML = `<table class="tutable"><thead><tr><th>Value</th><th>Start</th><th>ifelse AI (centre)</th></tr></thead><tbody>${
     IFELSE_FIELDS.map(([k, text]) => { const d = IFELSE_DEFAULTS[k], v = st.best[k] ?? d, ch = Math.abs(v - d) > 1e-9;
