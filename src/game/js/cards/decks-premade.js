@@ -26,8 +26,10 @@ const PREMADE = [
   { id: 'p-l2', name: 'The Long Guns — Spot and Strike', cards: { l_observer: 3, l_spotter: 2, l_flare: 2, l_fieldgun: 3, l_sniper: 2, l_howitzer: 3, l_chiefobs: 1, l_major: 1, l_sergeant: 2, l_veteran: 2, l_infantry: 3, l_sandbag: 2, l_spotround: 3, l_overthetop: 2, l_longrange: 2, l_dig: 2, l_depot: 3 } },
 ];
 
-/** Decks saved from the AI lab ("Use in the game") take the place of premade lists in this browser: the game, the scenarios
- *  and the lab read the same store. The lab's workers have no browser store and get the saved decks with their program. */
+/** Decks saved from the AI lab ("Use in the game"), up to 4 per faction (p-<faction>1 to p-<faction>4), take the place of
+ *  the premade lists in this browser, the 3rd and 4th as premades of their own: the game, the scenarios and the lab read
+ *  the same store. The lab's workers have no browser store and get the saved decks with their program. */
+const PREMADE_PER_FACTION = 4;
 const PREMADE_SAVED_STORE = 'threeBases.savedPremades';
 const PREMADE_SAVED = (() => {
   try {
@@ -35,11 +37,14 @@ const PREMADE_SAVED = (() => {
     return (typeof self !== 'undefined' && self.PREMADE_SAVED_DATA) || null;
   } catch (e) { return null; }
 })();
-if (PREMADE_SAVED && PREMADE_SAVED.decks) for (const d of PREMADE) {
-  const s = PREMADE_SAVED.decks[d.id];
+if (PREMADE_SAVED && PREMADE_SAVED.decks) for (const fac of Object.values(DECKS).map(d => d.fac)) for (let i = 1; i <= PREMADE_PER_FACTION; i++) {
+  const id = `p-${fac}${i}`, s = PREMADE_SAVED.decks[id];
   if (!s || !s.cards) continue;
-  const fac = CARDS[Object.keys(d.cards)[0]].fac;
   const cards = Object.fromEntries(Object.entries(s.cards).filter(([k, n]) => CARDS[k] && !CARDS[k].token && CARDS[k].fac === fac && n > 0));
   const n = Object.values(cards).reduce((a, b) => a + b, 0);
-  if (n >= 30 && n <= 40 && Object.values(cards).every(x => x <= 3)) { d.cards = cards; d.name = s.name || d.name; d.saved = true; }
+  if (n < 30 || n > 40 || Object.values(cards).some(x => x > 3)) continue;
+  const d = PREMADE.find(x => x.id === id);
+  if (d) { d.cards = cards; d.name = s.name || d.name; d.saved = true; continue; }
+  const after = PREMADE.map(x => x.id).filter(x => x.startsWith('p-' + fac)).pop();   // next to the faction's other premades
+  PREMADE.splice(after ? PREMADE.findIndex(x => x.id === after) + 1 : PREMADE.length, 0, { id, name: s.name || id, cards, saved: true });
 }

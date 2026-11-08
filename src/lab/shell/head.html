@@ -314,7 +314,7 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
 
 <div class="page" id="decksPage" hidden>
   <h2>Decks</h2>
-  <p class="note tunote">The lab builds its own decks. A pool of 6 decks per faction (its 2 premades and 4 random decks of 10 cards ×3) first plays every deck against every other one. Then, faction by faction, it makes a new deck from one of the faction's unfinished decks (each in turn) by swapping one card's copies (or one copy more or less), chosen from the card statistics: out goes the card that adds least, in comes first a card of about the same cost, preferring cards often played with the deck's best cards. The new deck plays every pool deck and replaces the deck it was made from only if it scores clearly higher, so each faction keeps 6 separate lines of decks; a new deck that shares 70% or more of its cards with another pool deck of its faction is not tried. A deck is finished when 30 decks made from it in a row failed. Each game is played by the same AI on both sides, the two AIs taking turns, so decks are compared, not AIs; every game records which cards were played.</p>
+  <p class="note tunote">The lab builds its own decks. A pool of 6 decks per faction (its premades, 2 to 4, and random decks of 10 cards ×3 for the rest, at least 2) first plays every deck against every other one. Then, faction by faction, it makes a new deck from one of the faction's unfinished decks (each in turn) by swapping one card's copies (or one copy more or less), chosen from the card statistics: out goes the card that adds least, in comes first a card of about the same cost, preferring cards often played with the deck's best cards. The new deck plays every pool deck and replaces the deck it was made from only if it scores clearly higher, so each faction keeps 6 separate lines of decks; a new deck that shares 70% or more of its cards with another pool deck of its faction is not tried. A deck is finished when 30 decks made from it in a row failed. Each game is played by the same AI on both sides, the two AIs taking turns, so decks are compared, not AIs; every game records which cards were played.</p>
   <div class="setup">
     <label>AI 1 <select id="dsP1" aria-label="First AI that plays the decks"></select></label>
     <label>AI 2 <select id="dsP2" aria-label="Second AI that plays the decks"></select></label>
@@ -325,7 +325,7 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
     <button id="dsExport">Export</button>
   </div>
   <div class="setup">
-    <button id="dsUseBest" title="Per faction, the two pool decks with the best results become its premade decks">Use the best two of each faction in the game</button>
+    <button id="dsUseBest" title="Per faction, the four pool decks with the best results become its premade decks">Use the best four of each faction in the game</button>
     <button id="dsBuiltIn">Use the built-in premades again</button>
     <span class="note" id="dsSaved"></span>
   </div>

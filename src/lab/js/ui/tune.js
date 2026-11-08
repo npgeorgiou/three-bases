@@ -103,7 +103,7 @@ function tuneJob() {
   const opp = tuneOppSpec(st.opps[Math.floor(gi / 12) % st.opps.length], st.depth);   // every candidate gets the same schedule
   return { key: 'tune' + st.gen + '-' + i + '-' + gi, i, seat, gen: st.gen, specs: seat === 0 ? [mine, opp] : [opp, mine],
     seed: st.gen * 100003 + gi,                                                // game gi deals the same cards for every candidate
-    decks: MATCHUPS[m].pairs[Math.floor(gi / 6) % MATCHUPS[m].pairs.length] };
+    decks: MATCHUPS[m].pairs[(st.gen * Math.ceil(c.G / 6) + Math.floor(gi / 6)) % MATCHUPS[m].pairs.length] };   // later generations go on through the pairs
 }
 function tuneResult(r, job) {
   const st = tuneState(), c = st.cand;

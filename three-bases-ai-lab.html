@@ -314,7 +314,7 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
 
 <div class="page" id="decksPage" hidden>
   <h2>Decks</h2>
-  <p class="note tunote">The lab builds its own decks. A pool of 6 decks per faction (its 2 premades and 4 random decks of 10 cards ×3) first plays every deck against every other one. Then, faction by faction, it makes a new deck from one of the faction's unfinished decks (each in turn) by swapping one card's copies (or one copy more or less), chosen from the card statistics: out goes the card that adds least, in comes first a card of about the same cost, preferring cards often played with the deck's best cards. The new deck plays every pool deck and replaces the deck it was made from only if it scores clearly higher, so each faction keeps 6 separate lines of decks; a new deck that shares 70% or more of its cards with another pool deck of its faction is not tried. A deck is finished when 30 decks made from it in a row failed. Each game is played by the same AI on both sides, the two AIs taking turns, so decks are compared, not AIs; every game records which cards were played.</p>
+  <p class="note tunote">The lab builds its own decks. A pool of 6 decks per faction (its premades, 2 to 4, and random decks of 10 cards ×3 for the rest, at least 2) first plays every deck against every other one. Then, faction by faction, it makes a new deck from one of the faction's unfinished decks (each in turn) by swapping one card's copies (or one copy more or less), chosen from the card statistics: out goes the card that adds least, in comes first a card of about the same cost, preferring cards often played with the deck's best cards. The new deck plays every pool deck and replaces the deck it was made from only if it scores clearly higher, so each faction keeps 6 separate lines of decks; a new deck that shares 70% or more of its cards with another pool deck of its faction is not tried. A deck is finished when 30 decks made from it in a row failed. Each game is played by the same AI on both sides, the two AIs taking turns, so decks are compared, not AIs; every game records which cards were played.</p>
   <div class="setup">
     <label>AI 1 <select id="dsP1" aria-label="First AI that plays the decks"></select></label>
     <label>AI 2 <select id="dsP2" aria-label="Second AI that plays the decks"></select></label>
@@ -325,7 +325,7 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
     <button id="dsExport">Export</button>
   </div>
   <div class="setup">
-    <button id="dsUseBest" title="Per faction, the two pool decks with the best results become its premade decks">Use the best two of each faction in the game</button>
+    <button id="dsUseBest" title="Per faction, the four pool decks with the best results become its premade decks">Use the best four of each faction in the game</button>
     <button id="dsBuiltIn">Use the built-in premades again</button>
     <span class="note" id="dsSaved"></span>
   </div>
@@ -1413,8 +1413,10 @@ const PREMADE = [
   { id: 'p-l2', name: 'The Long Guns — Spot and Strike', cards: { l_observer: 3, l_spotter: 2, l_flare: 2, l_fieldgun: 3, l_sniper: 2, l_howitzer: 3, l_chiefobs: 1, l_major: 1, l_sergeant: 2, l_veteran: 2, l_infantry: 3, l_sandbag: 2, l_spotround: 3, l_overthetop: 2, l_longrange: 2, l_dig: 2, l_depot: 3 } },
 ];
 
-/** Decks saved from the AI lab ("Use in the game") take the place of premade lists in this browser: the game, the scenarios
- *  and the lab read the same store. The lab's workers have no browser store and get the saved decks with their program. */
+/** Decks saved from the AI lab ("Use in the game"), up to 4 per faction (p-<faction>1 to p-<faction>4), take the place of
+ *  the premade lists in this browser, the 3rd and 4th as premades of their own: the game, the scenarios and the lab read
+ *  the same store. The lab's workers have no browser store and get the saved decks with their program. */
+const PREMADE_PER_FACTION = 4;
 const PREMADE_SAVED_STORE = 'threeBases.savedPremades';
 const PREMADE_SAVED = (() => {
   try {
@@ -1422,13 +1424,16 @@ const PREMADE_SAVED = (() => {
     return (typeof self !== 'undefined' && self.PREMADE_SAVED_DATA) || null;
   } catch (e) { return null; }
 })();
-if (PREMADE_SAVED && PREMADE_SAVED.decks) for (const d of PREMADE) {
-  const s = PREMADE_SAVED.decks[d.id];
+if (PREMADE_SAVED && PREMADE_SAVED.decks) for (const fac of Object.values(DECKS).map(d => d.fac)) for (let i = 1; i <= PREMADE_PER_FACTION; i++) {
+  const id = `p-${fac}${i}`, s = PREMADE_SAVED.decks[id];
   if (!s || !s.cards) continue;
-  const fac = CARDS[Object.keys(d.cards)[0]].fac;
   const cards = Object.fromEntries(Object.entries(s.cards).filter(([k, n]) => CARDS[k] && !CARDS[k].token && CARDS[k].fac === fac && n > 0));
   const n = Object.values(cards).reduce((a, b) => a + b, 0);
-  if (n >= 30 && n <= 40 && Object.values(cards).every(x => x <= 3)) { d.cards = cards; d.name = s.name || d.name; d.saved = true; }
+  if (n < 30 || n > 40 || Object.values(cards).some(x => x > 3)) continue;
+  const d = PREMADE.find(x => x.id === id);
+  if (d) { d.cards = cards; d.name = s.name || d.name; d.saved = true; continue; }
+  const after = PREMADE.map(x => x.id).filter(x => x.startsWith('p-' + fac)).pop();   // next to the faction's other premades
+  PREMADE.splice(after ? PREMADE.findIndex(x => x.id === after) + 1 : PREMADE.length, 0, { id, name: s.name || id, cards, saved: true });
 }
 const ART = {
  clockface:'M50 12A38 38 0 1 0 50.01 12Z M50 50V24 M50 50L68 60 M50 16V22 M84 50H78 M50 84V78 M16 50H22',
@@ -7438,7 +7443,7 @@ function tuneJob() {
   const opp = tuneOppSpec(st.opps[Math.floor(gi / 12) % st.opps.length], st.depth);   // every candidate gets the same schedule
   return { key: 'tune' + st.gen + '-' + i + '-' + gi, i, seat, gen: st.gen, specs: seat === 0 ? [mine, opp] : [opp, mine],
     seed: st.gen * 100003 + gi,                                                // game gi deals the same cards for every candidate
-    decks: MATCHUPS[m].pairs[Math.floor(gi / 6) % MATCHUPS[m].pairs.length] };
+    decks: MATCHUPS[m].pairs[(st.gen * Math.ceil(c.G / 6) + Math.floor(gi / 6)) % MATCHUPS[m].pairs.length] };   // later generations go on through the pairs
 }
 function tuneResult(r, job) {
   const st = tuneState(), c = st.cand;
@@ -7632,7 +7637,7 @@ function renderTune() {
 
 /* =====================================================================
    Decks tab: AI-made decks (the deck search) and card statistics.
-   The pool: 6 decks per faction (its 2 premades and 4 random decks of 10 cards x3). First every pool deck plays every
+   The pool: 6 decks per faction (its premades, 2 to 4, and random decks of 10 cards x3 for the rest, at least 2). First every pool deck plays every
    other one; then, faction by faction, a new deck is made from one of the faction's unfinished decks (each in turn: the
    one with the fewest decks made from it) by swapping one card's copies (or changing a copy count), chosen from the card
    statistics, and plays every pool deck. If it looks at least probably better than the deck it was made from, both play
@@ -7642,7 +7647,7 @@ function renderTune() {
    or more of its cards with another pool deck of its faction is not tried. A deck is finished when 30 decks made from it
    in a row failed; the search ends when every pool deck is finished. Every game records which cards each side played.
    ===================================================================== */
-const DS_PER_FACTION = 6, DS_RANDOM = 4, DS_RANDOM_CARDS = 10, DS_DONE_AFTER = 30, DS_TOO_ALIKE = 0.7;
+const DS_PER_FACTION = 6, DS_RANDOM_MIN = 2, DS_RANDOM_CARDS = 10, DS_DONE_AFTER = 30, DS_TOO_ALIKE = 0.7;
 const ds = { pool: null };                                          // the running games (not saved)
 const freshDs = () => ({ v: 1, per: 10, pilots: [], decks: {}, pool: {}, h2h: {}, tasks: [], phase: null, cand: null, turn: 0, tries: 0,
   entered: 0, log: [], stats: {}, pairs: {}, tests: {}, yard: {} });
@@ -7765,7 +7770,8 @@ const task = (a, b, tag, seed = 31000) => ({ a, b, tag, seed, started: 0, done: 
 function startPool(st) {
   for (const fac of LAB_FACTIONS) {
     st.pool[fac] = LAB_DECKS.filter(d => DECKS[d].fac === fac).map(d => d);
-    for (let i = 1; i <= DS_RANDOM; i++) st.pool[fac].push(randomDeck(st, fac, i).id);
+    const random = Math.max(DS_RANDOM_MIN, DS_PER_FACTION - st.pool[fac].length);   // 6 decks: the premades, the rest random
+    for (let i = 1; i <= random; i++) st.pool[fac].push(randomDeck(st, fac, i).id);
   }
   const ids = poolIds(st);
   for (let i = 0; i < ids.length; i++) for (let j = i + 1; j < ids.length; j++) st.tasks.push(task(ids[i], ids[j], 'first'));
@@ -7930,12 +7936,12 @@ function renderDs() {
   // the pool, per faction, best first
   $('#dsPool').innerHTML = st.phase ? LAB_FACTIONS.map(fac => `<h3 class="tuh">${esc(LAB_FACTION_NAME[fac])}</h3><table class="tutable"><thead><tr><th>Deck</th><th>Against the pool</th><th>Games</th><th>Tries from it</th><th>In the game</th><th>Cards</th></tr></thead><tbody>${
     st.pool[fac].map(id => ({ id, t: vsPool(st, id) })).sort((a, b) => rate(b.t) - rate(a.t)).map(({ id, t }) => { const d = deckOf(st, id), x = st.decks[id];
-      return `<tr><td>${esc(d.name)}</td><td>${pc(rate(t))}</td><td>${games(t)}</td><td>${x ? x.fails : 0}/${DS_DONE_AFTER} failed in a row</td><td class="dsuse">${LAB_DECKS.filter(p => facOfDeck(p) === fac).map((p, i) =>
-        `<button data-use="${esc(id)}" data-slot="${p}" title="This deck becomes the game's premade deck ${i + 1} of this faction (replacing ${esc(DECKS[p].name)})">Deck ${i + 1}</button>`).join('')}</td><td class="dsl">${d.list.map(([k, n]) => `${n}× ${esc(CARDS[k].name)}`).join(', ')}</td></tr>`; }).join('')
+      return `<tr><td>${esc(d.name)}</td><td>${pc(rate(t))}</td><td>${games(t)}</td><td>${x ? x.fails : 0}/${DS_DONE_AFTER} failed in a row</td><td class="dsuse">${gameSlots(fac).map((p, i) =>
+        `<button data-use="${esc(id)}" data-slot="${p}" title="This deck becomes the game's premade deck ${i + 1} of this faction${DECKS[p] ? ` (replacing ${esc(DECKS[p].name)})` : ''}">Deck ${i + 1}</button>`).join('')}</td><td class="dsl">${d.list.map(([k, n]) => `${n}× ${esc(CARDS[k].name)}`).join(', ')}</td></tr>`; }).join('')
   }</tbody></table>`).join('') : '';
   for (const b of $('#dsPool').querySelectorAll('button[data-use]')) b.addEventListener('click', () => useInGame({ [b.dataset.slot]: b.dataset.use }));
   const saved = PREMADE.filter(p => p.saved).length;
-  $('#dsSaved').textContent = saved ? `The game and the lab use ${saved} of the ${PREMADE.length} premade decks from here.` : 'The game and the lab use their built-in premade decks.';
+  $('#dsSaved').textContent = saved ? `The game and the lab use ${saved} decks from here (${PREMADE.length} premade decks in all).` : 'The game and the lab use their built-in premade decks.';
   $('#dsBuiltIn').disabled = !saved; $('#dsUseBest').disabled = !st.phase;
   const yard = Object.entries(st.yard || {});
   $('#dsYard').innerHTML = yard.length ? '<h3 class="tuh">Premades against the pool (the yardstick)</h3>' + yard.map(([p, y]) => `${esc(DECKS[p].name)}: ${y.done ? pc(rate(vsPool(st, y.id))) : 'playing…'}`).join(' · ') : '';
@@ -7955,9 +7961,11 @@ function renderCardStats() {
   for (const b of $('#dsCards').querySelectorAll('button[data-test]')) b.addEventListener('click', () => testCard(b.dataset.test));
 }
 /* ---------- decks found here become the game's premade decks (and so the decks the lab trains and plays with) ---------- */
+/** A faction's premade places in the game: p-<faction>1 to p-<faction>4. */
+const gameSlots = fac => Array.from({ length: PREMADE_PER_FACTION }, (_, i) => `p-${fac}${i + 1}`);
 /** slots: premade id -> pool deck id. Every pool deck keeps its own list first, so its results stay its own. */
 async function useInGame(slots) {
-  const st = dsState(), names = Object.entries(slots).map(([p, id]) => `${deckOf(st, id).name} → ${DECKS[p].name}`);
+  const st = dsState(), names = Object.entries(slots).map(([p, id]) => `${deckOf(st, id).name} → ${DECKS[p] ? DECKS[p].name : `${LAB_FACTION_NAME[deckOf(st, id).fac]} deck ${p.slice(-1)}`}`);
   if (!(await askYes('Use these decks in the game?', names.join(' · ') + '. The game, its computer opponents and every AI in the lab then play with them. The lab reloads; whatever is running pauses.', 'Use them'))) return;
   for (const id of poolIds(st)) if (!st.decks[id]) { const d = deckOf(st, id); addDeck(st, { ...d, list: d.list.map(([k, n]) => [k, n]), from: null, fails: 0, tried: [] }); }
   let cur = null;
@@ -7966,12 +7974,12 @@ async function useInGame(slots) {
   for (const [p, id] of Object.entries(slots)) { const d = deckOf(st, id); decks[p] = { name: d.name, cards: Object.fromEntries(d.list) }; }
   writeSaved({ stamp: String(Date.now()), decks });
 }
-/** Per faction, the two pool decks with the best results against the pool become its premades. */
+/** Per faction, the four pool decks with the best results against the pool become its premades. */
 function useBest() {
   const st = dsState(), slots = {};
   for (const fac of LAB_FACTIONS) {
     const best = st.pool[fac].slice().sort((a, b) => rate(vsPool(st, b)) - rate(vsPool(st, a)));
-    LAB_DECKS.filter(p => facOfDeck(p) === fac).forEach((p, i) => { if (best[i]) slots[p] = best[i]; });
+    gameSlots(fac).forEach((p, i) => { if (best[i]) slots[p] = best[i]; });
   }
   useInGame(slots);
 }

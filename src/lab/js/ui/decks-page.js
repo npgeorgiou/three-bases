@@ -107,12 +107,12 @@ function renderDs() {
   // the pool, per faction, best first
   $('#dsPool').innerHTML = st.phase ? LAB_FACTIONS.map(fac => `<h3 class="tuh">${esc(LAB_FACTION_NAME[fac])}</h3><table class="tutable"><thead><tr><th>Deck</th><th>Against the pool</th><th>Games</th><th>Tries from it</th><th>In the game</th><th>Cards</th></tr></thead><tbody>${
     st.pool[fac].map(id => ({ id, t: vsPool(st, id) })).sort((a, b) => rate(b.t) - rate(a.t)).map(({ id, t }) => { const d = deckOf(st, id), x = st.decks[id];
-      return `<tr><td>${esc(d.name)}</td><td>${pc(rate(t))}</td><td>${games(t)}</td><td>${x ? x.fails : 0}/${DS_DONE_AFTER} failed in a row</td><td class="dsuse">${LAB_DECKS.filter(p => facOfDeck(p) === fac).map((p, i) =>
-        `<button data-use="${esc(id)}" data-slot="${p}" title="This deck becomes the game's premade deck ${i + 1} of this faction (replacing ${esc(DECKS[p].name)})">Deck ${i + 1}</button>`).join('')}</td><td class="dsl">${d.list.map(([k, n]) => `${n}× ${esc(CARDS[k].name)}`).join(', ')}</td></tr>`; }).join('')
+      return `<tr><td>${esc(d.name)}</td><td>${pc(rate(t))}</td><td>${games(t)}</td><td>${x ? x.fails : 0}/${DS_DONE_AFTER} failed in a row</td><td class="dsuse">${gameSlots(fac).map((p, i) =>
+        `<button data-use="${esc(id)}" data-slot="${p}" title="This deck becomes the game's premade deck ${i + 1} of this faction${DECKS[p] ? ` (replacing ${esc(DECKS[p].name)})` : ''}">Deck ${i + 1}</button>`).join('')}</td><td class="dsl">${d.list.map(([k, n]) => `${n}× ${esc(CARDS[k].name)}`).join(', ')}</td></tr>`; }).join('')
   }</tbody></table>`).join('') : '';
   for (const b of $('#dsPool').querySelectorAll('button[data-use]')) b.addEventListener('click', () => useInGame({ [b.dataset.slot]: b.dataset.use }));
   const saved = PREMADE.filter(p => p.saved).length;
-  $('#dsSaved').textContent = saved ? `The game and the lab use ${saved} of the ${PREMADE.length} premade decks from here.` : 'The game and the lab use their built-in premade decks.';
+  $('#dsSaved').textContent = saved ? `The game and the lab use ${saved} decks from here (${PREMADE.length} premade decks in all).` : 'The game and the lab use their built-in premade decks.';
   $('#dsBuiltIn').disabled = !saved; $('#dsUseBest').disabled = !st.phase;
   const yard = Object.entries(st.yard || {});
   $('#dsYard').innerHTML = yard.length ? '<h3 class="tuh">Premades against the pool (the yardstick)</h3>' + yard.map(([p, y]) => `${esc(DECKS[p].name)}: ${y.done ? pc(rate(vsPool(st, y.id))) : 'playing…'}`).join(' · ') : '';
@@ -132,9 +132,11 @@ function renderCardStats() {
   for (const b of $('#dsCards').querySelectorAll('button[data-test]')) b.addEventListener('click', () => testCard(b.dataset.test));
 }
 /* ---------- decks found here become the game's premade decks (and so the decks the lab trains and plays with) ---------- */
+/** A faction's premade places in the game: p-<faction>1 to p-<faction>4. */
+const gameSlots = fac => Array.from({ length: PREMADE_PER_FACTION }, (_, i) => `p-${fac}${i + 1}`);
 /** slots: premade id -> pool deck id. Every pool deck keeps its own list first, so its results stay its own. */
 async function useInGame(slots) {
-  const st = dsState(), names = Object.entries(slots).map(([p, id]) => `${deckOf(st, id).name} → ${DECKS[p].name}`);
+  const st = dsState(), names = Object.entries(slots).map(([p, id]) => `${deckOf(st, id).name} → ${DECKS[p] ? DECKS[p].name : `${LAB_FACTION_NAME[deckOf(st, id).fac]} deck ${p.slice(-1)}`}`);
   if (!(await askYes('Use these decks in the game?', names.join(' · ') + '. The game, its computer opponents and every AI in the lab then play with them. The lab reloads; whatever is running pauses.', 'Use them'))) return;
   for (const id of poolIds(st)) if (!st.decks[id]) { const d = deckOf(st, id); addDeck(st, { ...d, list: d.list.map(([k, n]) => [k, n]), from: null, fails: 0, tried: [] }); }
   let cur = null;
@@ -143,12 +145,12 @@ async function useInGame(slots) {
   for (const [p, id] of Object.entries(slots)) { const d = deckOf(st, id); decks[p] = { name: d.name, cards: Object.fromEntries(d.list) }; }
   writeSaved({ stamp: String(Date.now()), decks });
 }
-/** Per faction, the two pool decks with the best results against the pool become its premades. */
+/** Per faction, the four pool decks with the best results against the pool become its premades. */
 function useBest() {
   const st = dsState(), slots = {};
   for (const fac of LAB_FACTIONS) {
     const best = st.pool[fac].slice().sort((a, b) => rate(vsPool(st, b)) - rate(vsPool(st, a)));
-    LAB_DECKS.filter(p => facOfDeck(p) === fac).forEach((p, i) => { if (best[i]) slots[p] = best[i]; });
+    gameSlots(fac).forEach((p, i) => { if (best[i]) slots[p] = best[i]; });
   }
   useInGame(slots);
 }

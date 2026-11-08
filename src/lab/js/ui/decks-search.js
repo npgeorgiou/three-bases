@@ -1,6 +1,6 @@
 /* =====================================================================
    Decks tab: AI-made decks (the deck search) and card statistics.
-   The pool: 6 decks per faction (its 2 premades and 4 random decks of 10 cards x3). First every pool deck plays every
+   The pool: 6 decks per faction (its premades, 2 to 4, and random decks of 10 cards x3 for the rest, at least 2). First every pool deck plays every
    other one; then, faction by faction, a new deck is made from one of the faction's unfinished decks (each in turn: the
    one with the fewest decks made from it) by swapping one card's copies (or changing a copy count), chosen from the card
    statistics, and plays every pool deck. If it looks at least probably better than the deck it was made from, both play
@@ -10,7 +10,7 @@
    or more of its cards with another pool deck of its faction is not tried. A deck is finished when 30 decks made from it
    in a row failed; the search ends when every pool deck is finished. Every game records which cards each side played.
    ===================================================================== */
-const DS_PER_FACTION = 6, DS_RANDOM = 4, DS_RANDOM_CARDS = 10, DS_DONE_AFTER = 30, DS_TOO_ALIKE = 0.7;
+const DS_PER_FACTION = 6, DS_RANDOM_MIN = 2, DS_RANDOM_CARDS = 10, DS_DONE_AFTER = 30, DS_TOO_ALIKE = 0.7;
 const ds = { pool: null };                                          // the running games (not saved)
 const freshDs = () => ({ v: 1, per: 10, pilots: [], decks: {}, pool: {}, h2h: {}, tasks: [], phase: null, cand: null, turn: 0, tries: 0,
   entered: 0, log: [], stats: {}, pairs: {}, tests: {}, yard: {} });
@@ -133,7 +133,8 @@ const task = (a, b, tag, seed = 31000) => ({ a, b, tag, seed, started: 0, done: 
 function startPool(st) {
   for (const fac of LAB_FACTIONS) {
     st.pool[fac] = LAB_DECKS.filter(d => DECKS[d].fac === fac).map(d => d);
-    for (let i = 1; i <= DS_RANDOM; i++) st.pool[fac].push(randomDeck(st, fac, i).id);
+    const random = Math.max(DS_RANDOM_MIN, DS_PER_FACTION - st.pool[fac].length);   // 6 decks: the premades, the rest random
+    for (let i = 1; i <= random; i++) st.pool[fac].push(randomDeck(st, fac, i).id);
   }
   const ids = poolIds(st);
   for (let i = 0; i < ids.length; i++) for (let j = i + 1; j < ids.length; j++) st.tasks.push(task(ids[i], ids[j], 'first'));
