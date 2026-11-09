@@ -17,6 +17,10 @@ How a value is made (all agreed with Kaptain, 9 Nov 2026):
   pushes). Damage to the enemy player never counts as killing units.
 - Growth (more strength, more defence on its own units) counts for "units' own strikes" and for "keeps them alive" in
   every game with units; in Gwent the one number grows, so its growth counts for both (the rule of axis 9).
+- "One chosen" is read from the card's rows in every game: an effect on one chosen unit on the board (chosen* in
+  axes.py). The library's mark for a chosen target exists almost only in Runeterra.
+- "Breaks their plan" also counts an enemy unit that can't attack or can't move (CANT in axes.py). Kaptain, 9 Nov 2026:
+  "can't block" does not count. "Can't strike" does not either: it is Inscryption's Waterborne, which protects the unit.
 - "Many at once" also counts a card whose amount is the number of units on the board (countboard* in axes.py).
 - Position in every game: a card's effect or condition on its OWN units beside, around or behind it (BESIDE in axes.py,
   read from the side written in the card's rows, so area hits and pushes on enemies stay out). Gwent, Runeterra and
@@ -38,8 +42,7 @@ How a value is made (all agreed with Kaptain, 9 Nov 2026):
   average shows as 2.8.
 - A game with under 10 cards for a spoke gives its factions no value there (a dashed dot on the rim with its reason).
   With 5, two cards of a small game gave one of the highest values of the wheel (Inscryption Beast, breaks their plan).
-  9 Nov 2026: "one chosen" everywhere but Runeterra; Inscryption: breaks their plan, picks and brings back, many at
-  once; Monster Train: many at once; Into the Breach: strength, supply and cards, picks and brings back, spends them,
+  9 Nov 2026: Inscryption: one chosen, picks and brings back, many at once; Monster Train: many at once; Into the Breach: strength, supply and cards, picks and brings back, spends them,
   both width spokes; Slay the Spire (no units): unit stats, both width spokes, spends them, keeps them alive.
 - Two counts: all cards; or each card weighted by how many decks of decks.tsv play it (only factions with 10+ cards in
   decks). Deck lists hold each card once, without copies.

@@ -31,10 +31,13 @@ BESIDE = [  # my own units by where they stand next to this card (any game): an 
     "select card from flat_do where on_side='mine' and (" + NEAR.replace('W', "(coalesce(on_with,'')||coalesce(to_with,''))") + ") and ",
     "select card from flat_if where of_side='mine' and (" + NEAR.replace('W', "(coalesce(of_with,'')||coalesce(ev_obj_with,''))") + ") and ",
     "select card from flat_when where obj_side='mine' and (" + NEAR.replace('W', "coalesce(obj_with,'')") + ") and "]
+CANT = ('attacks', 'moves')  # an enemy unit that can't do these: breaks their plan (Kaptain, 9 Nov 2026: "can't block" does not;
+# "can't strike" is Inscryption's Waterborne: the enemy can't strike this unit, which protects it)
 SUPPLIES = {'inscryption': ('blood', 'energy', 'bones', 'mox')}  # games whose cards are paid in different kinds of supply
 JUNK_GAMES = ('marvel_snap', 'stormbound', 'gwent')  # junk cards that go to the enemy; in Slay the Spire they hurt my own deck
 UNIT_CATS = ('unit', 'hero', 'leader')
-SHOWN = {'disrupt*': 'an effect on enemies: ' + ', '.join(DISRUPT_ON_ENEMY) + '; or any card with: ' + ', '.join(DISRUPT_ALWAYS),
+SHOWN = {'disrupt*': 'an effect on enemies: ' + ', '.join(DISRUPT_ON_ENEMY) + ', can\'t attack, can\'t move; or any card with: ' + ', '.join(DISRUPT_ALWAYS),
+         'chosen*': 'an effect on one chosen unit on the board',
          'kill*': 'an effect on enemies: ' + ', '.join(KILL_ON_ENEMY),
          'position*': 'position: an effect or condition on its own units beside, around or behind it; in Gwent, Runeterra, Marvel Snap also: ' + ', '.join(POSITION),
          'countboard*': 'counts the units on the board',
@@ -56,7 +59,8 @@ CHECKS = [  # Kaptain's points: (game, faction, spoke, lowest value it must have
 ]
 GAPS = [('inscryption', 'disrupts'), ('sts1', 'tall')]  # must have no value: 5 cards in the whole game; a game with no units
 HAS = [('monster_train', 'wide'), ('monster_train', 'tall'), ('gwent', 'strikes'), ('gwent', 'keeps'),  # must have a value:
-       ('duelyst', 'pos'), ('faeria', 'pos'), ('stormbound', 'pos')]  # width by unit cost; growth of Gwent's one number; position in the board games
+       ('duelyst', 'pos'), ('faeria', 'pos'), ('stormbound', 'pos'),  # width by unit cost; growth of Gwent's one number; position in the board games
+       ('duelyst', 'one'), ('faeria', 'one'), ('gwent', 'one'), ('stormbound', 'one')]  # a chosen target is read from the rows in every game
 MIN_DECK_CARDS = 10  # Faeria Pandora has 1 card in decks
 SPOKES = [  # (key, axis number, axis name, this end, concepts); "concept@game,game" counts only in those games (the check of 9 Nov 2026)  # in circle order: neighbours belong together
     ('strong', 9, 'Unit stats', 'strength', ['strength*']),
@@ -71,7 +75,7 @@ SPOKES = [  # (key, axis number, axis name, this end, concepts); "concept@game,g
     ('many', 6, 'Targets', 'many at once', ['aoe_damage@faeria,gwent,inscryption,into_the_breach,runeterra,stormbound,sts1',
         'board_wipe', 'multi_target_attack@into_the_breach,runeterra', 'rows@duelyst,into_the_breach', 'row_effects', 'area_templates', 'countboard*']),
     ('disrupts', 2, 'Enemy units', 'breaks their plan', ['disrupt*', 'disruption']),
-    ('one', 6, 'Targets', 'one chosen', ['target_choice', 'mark_target@duelyst,gwent,runeterra,sts1']),
+    ('one', 6, 'Targets', 'one chosen', ['chosen*', 'target_choice', 'mark_target@duelyst,gwent,runeterra,sts1']),
     ('hand', 8, 'Hand and discard pile', 'picks, brings back', ['recycle', 'copy', 'return_to_hand', 'tutor', 'revive',
         'retain', 'selection@faeria,gwent,runeterra,sts1']),
     ('economy', 4, 'Supply and cards', 'more supply, cards', ['resource_gain', 'base_resource_gain', 'resource_banking', 'draw',
@@ -127,6 +131,12 @@ def tag(c, x, games):
         if k in KILL_ON_ENEMY: con[card].add('kill*')
     for (card,) in c.execute("select card from flat_if where test='amount_count' and of_kind='unit' and of_zone='board' and " + faction_asks.ROW_ORIGIN):
         con[card].add('countboard*')
+    for (card,) in c.execute("select card from flat_do where on_side='enemy' and coalesce(on_kind,'')!='player' and act='cant' and param_event in "
+                             + repr(CANT) + " and " + faction_asks.ROW_ORIGIN):
+        con[card].add('disrupt*')
+    for (card,) in c.execute("select card from flat_do where on_pick='chosen' and on_kind in ('unit','unit_or_structure','hero','leader','any','anything') "
+                             "and coalesce(on_zone,'board')='board' and " + faction_asks.ROW_ORIGIN):
+        con[card].add('chosen*')
     for q in BESIDE:
         for (card,) in c.execute(q + faction_asks.ROW_ORIGIN): con[card].add('position*')
     pools = {g: x.pool(g) for g in games}
