@@ -47,3 +47,13 @@ A correlation across real factions only shows what those games happened to do, n
 repairing it: all sound plays).
 Not axes: timing (players act now; round end is built FOR, not waited for), staying in one lane (every faction must
 win 2 of 3 lanes), random effects (not allowed), lasting or this-round effects (this-round effects are worth little).
+
+The measurement (9 Nov 2026): `library/cards_db/axes.py` measures every axis on a scale for the 49 real factions of the
+library (10+ cards each) and writes `library/cards_db/axes.tsv` and `factions/wheel-axes.html` (circle of axes, map of
+factions, numbers, closest factions; template `tools/wheel_axes_template.html`). Which concepts measure each end is
+Claude's choice, written in axes.py and shown on hover in the page; change it there and rerun. Score = share of cards with
+the high end minus share with the low end (axes 7, 13, 14 from cost and stats), centred within the game, then in steps of
+spread over all factions. Two counts: all cards, or cards weighted by how many decks of decks.tsv play them (factions with
+fewer than 10 cards in decks get no deck count). Axis 11 is four spokes; the rows part of axis 12 is not measured.
+The numbers quoted above came from an earlier chat with no saved script; this script gives Faeria Yellow 3.1 and Red 4.8
+average cost as quoted, but Runeterra Shurima 3.0 / Freljord 4.3 and Duelyst Lyonar 31% / Abyssian 43% strength.
