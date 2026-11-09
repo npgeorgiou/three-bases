@@ -69,6 +69,8 @@ function lessonJob(st, c) {
   return { key: 'lesson' + st.gen + '-' + i + '-' + gi, lesson: 'grade', i, gi, gen: st.gen,
     msg: { type: 'lessonGrade', cfg: ifelseFull(tuneDecode(c.xs[i], 1)), from: gi * LESSON_BLOCK, to: (gi + 1) * LESSON_BLOCK } };
 }
+/** All lessons thrown away (Start over): new ones are made at the next start, with the starting values. */
+function clearLessons() { LESSONS.list = []; LESSONS.spare = []; LESSONS.need = 0; saveLessons(); renderTuneStatus(); }
 /** New lessons go in at the end; the oldest go when there are more than wanted. */
 function addLessons(ls) {
   if (!ls.length) return;

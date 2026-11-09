@@ -288,10 +288,12 @@ $('#tuCheck').addEventListener('click', () => {
   renderCheck();
 });
 $('#tuReset').addEventListener('click', async () => {
-  if (!(await askYes('Start the ifelse AI over?', 'Its values go back to the starting values and its history is cleared.', 'Start over'))) return;
+  if (!(await askYes('Start the ifelse AI over?', 'Its values go back to the starting values, its history is cleared and its lessons are thrown away (they were rated with the old values).', 'Start over'))) return;
   const was = tune.running;
   if (was) pauseTune();
-  state.ifelse = freshTune(tuneState().opps); save();
+  const n = tuneState().lessonN;
+  state.ifelse = freshTune(tuneState().opps); if (n) state.ifelse.lessonN = n; save();
+  clearLessons();
   if (was) startTune(); else renderTune();
 });
 /** A new opponent mix: the generation under way starts again; the search itself carries on. */
@@ -309,11 +311,12 @@ const tpct = v => (v == null || !Number.isFinite(v) ? '–' : Math.round(v * 100
 function renderTuneStatus() {
   const st = tuneState(), c = st.cand, last = [...st.hist].reverse().find(e => !e.mark);
   const done = c && c.res ? tuneDone(c) : 0, total = c && c.res ? c.G * c.res.length : 0;
-  const lessons = st.mode === 'lessons', making = lessons && LESSONS.need > 0;
+  const lessons = st.mode === 'lessons', making = lessons && LESSONS.need > 0, lastBench = [...st.hist].reverse().find(e => e.bench != null);
   $('#tuStatus').textContent = (tune.running ? (making ? 'Making lessons' : 'Tuning') : st.gen || c ? 'Paused' : 'Not started') +
     (lessons ? ` · ${LESSONS.list.length} lessons` + (LESSONS.need ? `, making ${LESSONS.need} new` : '') + (st.strength ? `, games against the opponents ${st.strength.res.filter(x => x !== null).length}/${STRENGTH_GAMES}` : '') : '') +
     ` · generation ${st.gen + 1} · ${st.cma.lambda} candidates` + (c ? ` · ${done}/${total} ${lessons ? 'blocks of lessons' : 'games'}` : '') +
-    (last ? ` · last generation: the ifelse AI ${tpct(last.centre)}, candidates' average ${tpct(last.avg)}, best candidate ${tpct(last.top)}` : '') +
+    (last ? ` · last generation${lessons ? ' (lesson grades, not games)' : ''}: the ifelse AI ${tpct(last.centre)}, candidates' average ${tpct(last.avg)}, best candidate ${tpct(last.top)}` : '') +
+    (lessons && lastBench ? ` · games won against the opponents (generation ${lastBench.gen + 1}): ${tpct(lastBench.bench)}` : '') +
     ` · step size ${st.cma.sigma.toFixed(3)}` + (st.restarts ? ` · ${st.restarts} restart${st.restarts > 1 ? 's' : ''}` : '');
 }
 function renderTune() {
@@ -363,7 +366,7 @@ function renderTune() {
     svg += `<text class="xlab" x="${l}" y="${H - 10}">generation ${gens[0].gen + 1}</text><text class="xlab end" x="${W - r}" y="${H - 10}">generation ${gens[gens.length - 1].gen + 1}</text>`;
   }
   $('#tuChart').innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Win rates by generation">${svg}</svg>
-    <div class="tulegend"><span class="lg best"></span>the ifelse AI itself (the centre) <span class="lg avg"></span>candidates' average <span class="lg acc"></span>best candidate${st.mode === 'lessons' ? ' <span class="lg bench"></span>games won against the opponents ticked (every 10th round, right scale)' : ''}</div>`;
+    <div class="tulegend">${st.mode === 'lessons' ? 'Lesson grades (not games): ' : 'Win rates: '}<span class="lg best"></span>the ifelse AI itself (the centre) <span class="lg avg"></span>candidates' average <span class="lg acc"></span>best candidate${st.mode === 'lessons' ? ' <span class="lg bench"></span>games won against the opponents ticked (every 10th round, right scale)' : ''}</div>`;
   const fmt = v => (Number.isInteger(v) ? String(v) : Math.abs(v) >= 10 ? v.toFixed(1) : v.toFixed(3));
   $('#tuTable').innerHTML = `<table class="tutable"><thead><tr><th>Value</th><th>Start</th><th>ifelse AI (centre)</th></tr></thead><tbody>${
     IFELSE_FIELDS.map(([k, text]) => { const d = IFELSE_DEFAULTS[k], v = st.best[k] ?? d, ch = Math.abs(v - d) > 1e-9;
