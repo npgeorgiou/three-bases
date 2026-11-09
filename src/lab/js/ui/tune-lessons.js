@@ -5,7 +5,7 @@
    quarter of the lessons, the oldest, are remade with the new centre; every 10th round the centre plays 100 games
    against the opponents ticked (looking 1 move ahead), shown on the chart. Lessons are kept in the browser's database.
    ===================================================================== */
-const LESSON_BLOCK = 50, LESSON_EVERY = 7, LESSON_PER_GAME = 12, LESSON_RENEW = 0.25, STRENGTH_EVERY = 10, STRENGTH_GAMES = 100;
+const LESSON_BLOCK = 50, LESSON_RENEW = 0.25, STRENGTH_EVERY = 10, STRENGTH_GAMES = 100;
 /** list: the lessons, oldest first; need: new ones still wanted before the next round; spare: new ones that came in
  *  after enough were made (they wait for the next round's renewal, so the lessons never change during a round). */
 const LESSONS = { list: [], cards: '', need: 0, spare: [], seed: 0 };
@@ -61,8 +61,7 @@ function lessonJob(st, c) {
   if (!lessonsReady()) {                                              // every free core plays a game to make lessons
     const seed = 7001 + LESSONS.seed++;
     const opp = tuneOppSpec(st.opps[seed % st.opps.length], 1), seat = Math.floor(seed / st.opps.length) % 2;   // the ticked opponents and seats in turn
-    return { key: 'lesson-make-' + seed, lesson: 'make', msg: { type: 'lessonMake', seed, opp, seat, cfg: ifelseFull(st.best), every: LESSON_EVERY,
-      most: LESSON_PER_GAME, actionCap: ACTION_CAP, roundCap: ROUND_CAP, decks: DECK_PAIRS[seed % DECK_PAIRS.length] } };
+    return { key: 'lesson-make-' + seed, lesson: 'make', msg: { type: 'lessonMake', seed, opp, seat, cfg: ifelseFull(st.best), actionCap: ACTION_CAP, roundCap: ROUND_CAP, decks: DECK_PAIRS[seed % DECK_PAIRS.length] } };
   }
   if (!c) { newGeneration(); c = st.cand; if (tune.pool) tune.pool.setInit([{ type: 'lessons', lessons: LESSONS.list }]); }
   const pick = tuneNextDeal(c);

@@ -23,8 +23,8 @@ function withSeed(seed, fn) {
   try { return fn(); } finally { Math.random = real; }
 }
 /** Lessons from one seeded game played to its end: the centre's numbers, looking 1 move ahead, play seat msg.seat
- *  against msg.opp (picked by `oppMove`); every `every` of the centre's own moves (from a start set by the seed) the
- *  position becomes a lesson, at most `most`; at the end each lesson gets the centre's result. */
+ *  against msg.opp (picked by `oppMove`); the position before every one of the centre's own moves becomes a lesson;
+ *  at the end each lesson gets the centre's result. */
 function lessonsFromGame(msg, oppMove) {
   return withSeed(msg.seed, () => {
     const s = newGame(msg.decks[0], msg.decks[1]);
@@ -32,10 +32,9 @@ function lessonsFromGame(msg, oppMove) {
     for (const p of [0, 1]) aiMulligan(s, p);
     s.redrawDone = true;
     const out = [], play = { ...msg.cfg, depth: 1 };
-    let mine = 0;
     for (let i = 0; i < msg.actionCap && s.winner === null && s.round <= msg.roundCap; i++) {
       if (s.cur !== msg.seat) { applyAction(s, oppMove(msg.opp, s)); continue; }
-      if ((mine++ + msg.seed) % msg.every === 0 && out.length < msg.most) out.push(makeLesson(s));
+      out.push(makeLesson(s));
       applyAction(s, chooseIfelseAction(s, play));
     }
     if (s.winner !== 0 && s.winner !== 1 && s.winner !== 'draw') return [];   // unfinished game: no winner to learn from
