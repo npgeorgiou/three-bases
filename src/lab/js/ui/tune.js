@@ -88,6 +88,7 @@ function tuneState() {
   return st;
 }
 const tuneGames = () => Math.max(20, Math.round(Number($('#tuGames').value) / 2) * 2 || 300);
+$('#tuGames').addEventListener('change', () => { $('#tuGames').value = tuneGames(); });   // the box shows the number played
 function newGeneration() {
   const st = tuneState(), L = st.cma.lambda;
   // the candidates, then the centre itself (the values the ifelse AI has now): it plays the same games, only to be measured
@@ -294,7 +295,7 @@ function renderTune() {
   const fmt = v => (Number.isInteger(v) ? String(v) : Math.abs(v) >= 10 ? v.toFixed(1) : v.toFixed(3));
   $('#tuTable').innerHTML = `<table class="tutable"><thead><tr><th>Value</th><th>Start</th><th>ifelse AI (centre)</th></tr></thead><tbody>${
     IFELSE_FIELDS.map(([k, text]) => { const d = IFELSE_DEFAULTS[k], v = st.best[k] ?? d, ch = Math.abs(v - d) > 1e-9;
-      return `<tr${ch ? ' class="ch"' : ''}><td>${esc(text)}</td><td>${fmt(d)}</td><td>${fmt(v)}${ch ? ` <span class="tud">${v > d ? '▲' : '▼'}</span>` : ''}</td></tr>`; }).join('')
+      return `<tr${ch ? ' class="ch"' : ''}><td>${esc(text)}</td><td>${fmt(d)}</td><td>${fmt(v)}${ch ? ` <span class="tud ${v > d ? 'up' : 'down'}">${v > d ? '▲' : '▼'}</span>` : ''}</td></tr>`; }).join('')
   }</tbody></table>`;
 }
 

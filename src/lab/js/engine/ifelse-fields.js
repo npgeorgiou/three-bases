@@ -47,7 +47,7 @@ const IFELSE_BASE_FIELDS = [
 ];
 /** Keyword values: one per line of KW_RULES (keyword-worth.js) whose keyword is in the game's cards (kw_<field>, starts at 0). */
 const IFELSE_KW_FIELDS = KW_RULES.filter(kwInGame)
-  .map(([f, name]) => ['kw_' + f, `Keyword worth: ${name} (per point, times how much it works now)`, 'num', 0, 1]);
+  .map(([f, name]) => ['kw_' + f, `Keyword worth: ${name}`, 'num', 0, 1]);
 /** Where the ifelse AI starts away from the Benchmark's values: 10 own moves and 10 replies, first moves picked with the round end played out. */
 const IFELSE_START = { w1: 10, w2: 10, rootRound: 1 };
 const IFELSE_FIELDS = [...IFELSE_BASE_FIELDS, ...IFELSE_KW_FIELDS].map(([k, text, type, def, extra]) => [k, text, type, IFELSE_START[k] ?? BENCH_VALUES[k] ?? def, extra]);

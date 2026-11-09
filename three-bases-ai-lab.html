@@ -124,6 +124,8 @@ nav.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: 
 .tutable th { color: var(--muted); font-weight: 400; font-size: 13px; }
 .tutable tr.ch td:last-child { color: var(--gold); font-weight: 600; }
 .tud { font-size: 11px; }
+.tud.up { color: var(--win); }
+.tud.down { color: var(--loss); }
 #nameDlg { background: var(--panel); color: var(--ink); border: 1px solid var(--gold); border-radius: 12px; padding: 20px 22px; width: min(440px, calc(100vw - 32px)); box-shadow: 0 18px 50px rgba(0,0,0,.45); }
 #nameDlg::backdrop { background: rgba(10, 12, 16, .55); }
 #nameDlg[open] { animation: ndIn .16s ease-out; }
@@ -4796,7 +4798,7 @@ const IFELSE_BASE_FIELDS = [
 ];
 /** Keyword values: one per line of KW_RULES (keyword-worth.js) whose keyword is in the game's cards (kw_<field>, starts at 0). */
 const IFELSE_KW_FIELDS = KW_RULES.filter(kwInGame)
-  .map(([f, name]) => ['kw_' + f, `Keyword worth: ${name} (per point, times how much it works now)`, 'num', 0, 1]);
+  .map(([f, name]) => ['kw_' + f, `Keyword worth: ${name}`, 'num', 0, 1]);
 /** Where the ifelse AI starts away from the Benchmark's values: 10 own moves and 10 replies, first moves picked with the round end played out. */
 const IFELSE_START = { w1: 10, w2: 10, rootRound: 1 };
 const IFELSE_FIELDS = [...IFELSE_BASE_FIELDS, ...IFELSE_KW_FIELDS].map(([k, text, type, def, extra]) => [k, text, type, IFELSE_START[k] ?? BENCH_VALUES[k] ?? def, extra]);
@@ -7480,6 +7482,7 @@ function tuneState() {
   return st;
 }
 const tuneGames = () => Math.max(20, Math.round(Number($('#tuGames').value) / 2) * 2 || 300);
+$('#tuGames').addEventListener('change', () => { $('#tuGames').value = tuneGames(); });   // the box shows the number played
 function newGeneration() {
   const st = tuneState(), L = st.cma.lambda;
   // the candidates, then the centre itself (the values the ifelse AI has now): it plays the same games, only to be measured
@@ -7686,7 +7689,7 @@ function renderTune() {
   const fmt = v => (Number.isInteger(v) ? String(v) : Math.abs(v) >= 10 ? v.toFixed(1) : v.toFixed(3));
   $('#tuTable').innerHTML = `<table class="tutable"><thead><tr><th>Value</th><th>Start</th><th>ifelse AI (centre)</th></tr></thead><tbody>${
     IFELSE_FIELDS.map(([k, text]) => { const d = IFELSE_DEFAULTS[k], v = st.best[k] ?? d, ch = Math.abs(v - d) > 1e-9;
-      return `<tr${ch ? ' class="ch"' : ''}><td>${esc(text)}</td><td>${fmt(d)}</td><td>${fmt(v)}${ch ? ` <span class="tud">${v > d ? '▲' : '▼'}</span>` : ''}</td></tr>`; }).join('')
+      return `<tr${ch ? ' class="ch"' : ''}><td>${esc(text)}</td><td>${fmt(d)}</td><td>${fmt(v)}${ch ? ` <span class="tud ${v > d ? 'up' : 'down'}">${v > d ? '▲' : '▼'}</span>` : ''}</td></tr>`; }).join('')
   }</tbody></table>`;
 }
 
