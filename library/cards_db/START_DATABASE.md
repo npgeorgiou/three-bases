@@ -107,6 +107,12 @@ and the repo's sources first, then the online sources, and say which parts were 
 Data quality means what helps the rows and the lines: fields that already say what a card does (its triggers, keywords with
 values, the cards it creates or names), card wording written to a fixed template, every keyword's exact rule from the
 game's own rulebook, and players' combos and decks that test the lines. Completeness alone is not enough.
+A candidate that is low on all three of interactive, positional and base holding is dropped (Kaptain, 9 Nov 2026). The
+grades and the dropped candidates are in the root README.md, "Library games". Fighting computer enemies counts as
+interactive. Checking a candidate means: search for its wiki (fandom, wiki.gg, miraheze) and fan databases, open them in
+the built-in browser, and count the cards on the page itself (tables, or the wiki's api.php). One search is not a check,
+and a fetch tool that stops reading early is not a short list (9 Nov 2026: StarVaders, HELLCARD, Across the Obelisk,
+Decktamer, Dawncaster and Eternal were wrongly dropped this way).
 
 ## Open work, in Kaptain's order
 1. A newly imported game gets chat 2 (Part 3). Only causes that change many lines get fixed; the rest are dropped, never listed
