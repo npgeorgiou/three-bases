@@ -680,3 +680,5 @@ n698	gwent	Vilgefortz, Poor Fucking Infantry	Vilgefortz	Poor Fucking Infantry	no
 n699	gwent	Drakenborg, Poor Fucking Infantry	Drakenborg	Poor Fucking Infantry	none		Claude 2026-11-06, both texts read: Drakenborg summons and Locks it: nothing of it goes off
 n700	gwent	Loc Feainn: Convergence, Pavko Gale	Loc Feainn: Convergence	Pavko Gale	none	makes a unit it asks for	Claude 2026-11-09, line check: Convergence makes a Scoiatael unit, Pavko Gale asks for a Neutral one (L20)
 n701	gwent	Pavko Gale, Mysteries of Loc Feainn	Pavko Gale	Mysteries of Loc Feainn	line	is a unit whose playing sets off its effect	Claude 2026-11-09, line check: right example stays
+n702	runeterra	Garen Kayle Jarvan	Kayle (level 2)	Xolaani the Bloodweaver	none	changes your units' stats	Claude 2026-11-09, line check: Xolaani transforms when its power reaches a number: more power is help to level up, not a stat change for its effect (L24)
+n703	runeterra	Garen Kayle Jarvan	Kayle (level 2)	Xolaani the Bloodweaver	line	helps it level up	Claude 2026-11-09, line check: Kayle's more power and health levels Xolaani (L24, L18)

@@ -110,22 +110,12 @@ values, the cards it creates or names), card wording written to a fixed template
 game's own rulebook, and players' combos and decks that test the lines. Completeness alone is not enough.
 
 ## Open work, in Kaptain's order
-1. **Gwent n612** (Kaptain 9 Nov 2026: Arachas Queen consumes, which sets off Arachas Behemoth): no line, and Behemoth's rows
-   have no consume trigger; no Gwent text says "when ... consumes". Needs Kaptain's OK to read the two cards.
-2. **Still failing from before:** Gwent guide pairs n551, n564, n578, n586 (Seagull -> Ragh Nar Roog: a whole-row boost and a card
-   that comes back into a row) and the ten guide-deck explanations dgw01-dgw05, dgw07-dgw10, dgw12; cases whose card is not in their deck (cases/run.py lists them:
-   n285, nst19, nst31 and some Gwent).
-3. **Marvel Snap misreadings** left: Muse ("for each location where..." lost the location), Basic Arrow ("at this location" lost),
-   Captain Marvel ("a location that wins you the game" lost); Gwent Seagull's "3 units" may have lost its count. Runeterra Attune
-   goes off when summoned (glossary) but is not counted as a summon effect.
-4. **Gwent causes not fixed** (Kaptain 6 Nov: only the most influential were fixed): the causes sheet's groups G10-G25 and G28-G38
-   (checks/gwent/causes_sheet.md in git, commit 787d510); C3 (cards counting own Doomed units: one fix broke Duda: Companion ->
-   Telianyn aep Collen), C18 (refreshing an Order: right only when the target is a Location, 23 lines to check), C41 (Spying lines to
-   Impera Enforcers: right, except maybe Emhyr var Emreis and Coup de Grace); one design answer misses a line.
-5. **The lines changed on 7 Nov 2026 were not read** (Kaptain stopped the readers): Duelyst +574, Marvel Snap +143, Stormbound +38,
-   Gwent -72.
-6. A newly imported game gets chat 2 (Part 3).
-7. Marvel Snap: design questions 04 and 05 (sacrifice and draw) find almost nothing in it.
+1. **The lines changed on 7 Nov 2026** (Duelyst +574, Marvel Snap +131, Into the Breach +83, Gwent +147 -120, others few): being read
+   (checks/nov7/, 9 Nov 2026); only causes that touch many lines get fixed.
+2. Runeterra Attune goes off when summoned (glossary) but is not counted as a summon effect: the fix changes its concept
+   (resource_gain), so it needs Kaptain's OK.
+3. Marvel Snap: design questions 04 and 05 (sacrifice and draw) find almost nothing in it.
+4. A newly imported game gets chat 2 (Part 3).
 
 ## When you finish
 Commit and push every finished step. Update "State" and "Open work" above (short, no history: git log has it).
@@ -515,10 +505,10 @@ their text. D = `checks/<game>/`. After each step: write PROGRESS.md, commit and
    all a fixer needs. CONFLICT causes (a case says the opposite; Kaptain's case wins) and gone ones are skipped.
 7. **Fixers, one at a time, only the most influential causes** (Kaptain, 6 Nov 2026; never every cause on the sheet): the
    causes with 100 or more table lines from the same code, and every cause that names a failing guide case (deck pair,
-   decks.tsv row, combo). All other causes go to "Open work" in one line each, unfixed. (The 100-line cut is Claude's.)
+   decks.tsv row, combo). All other causes are dropped: never listed in "Open work" or anywhere (Kaptain, 9 Nov 2026: no archaeology). (The 100-line cut is Claude's.)
    checks/LINE_FIXER_JOB.md + the sheet path + the cause's number (C<k>, its heading's first word) + the report path
    D/fix_<n>.md. The main chat reads only the report's first line (FIXED, STUCK or CONFLICT), notes it in PROGRESS.md,
-   commits and starts the next fixer. A STUCK cause goes to "Open work" with the fixer's words.
+   commits and starts the next fixer. A STUCK cause that touches many lines goes to "Open work" in one line; any other is dropped.
    **Cheaper** (Marvel Snap, 5 Nov 2026: 7 of 37 fixer agents found their cause already fixed):
    - Before each fixer the main chat runs `pair.py` on the cause's wrong examples (one call); already right: noted FIXED
      (by an earlier fix), no agent. Causes with the same card pair or the same reason go to one fixer.
@@ -534,7 +524,7 @@ their text. D = `checks/<game>/`. After each step: write PROGRESS.md, commit and
    next to it). A diff of up to about 60 lines the main chat reads; a longer one gets its pairs' rows (`diff_rows.py <diff>
    <out>`), is split (`audit_pieces.py split`) and read by line readers (step 3's job, the diff as the piece). Combo cases
    pass on connections.py or on a line from the enabler to the payoff (cases/run.py line_of). Every wrong gone or new group is a new cause: steps 5-8 once more, at
-   most twice in all; what is still wrong then goes to "Open work". Must-not cases that `cases/run.py` lists as stale are
+   most twice in all; what is still wrong and touches many lines then goes to "Open work", the rest is dropped. Must-not cases that `cases/run.py` lists as stale are
    rewritten as strict. Cases that still fail and guide cases Kaptain rejects are deleted, no note (rule 8).
 9. **The last checks** (Part 2 step 4): `realworld.py <game>` again; `design_questions.py` read by one agent (thin or odd
    answers of the new game, as causes in the reader format, then steps 5-8 for them).

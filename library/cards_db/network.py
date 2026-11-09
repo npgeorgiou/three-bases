@@ -364,7 +364,7 @@ def lines_of(c, game):
     if ('lines', game) in CACHE: return CACHE[('lines', game)]
     cards = cards_of(c, game)
     out = Lines()
-    lvl = {a for (a,) in c.execute("select ability from flat_do where act='level_up'")}
+    lvl = level_abilities(c)
     makes, takes = collections.defaultdict(set), collections.defaultdict(set)
     react_enemy = reacts_against(c, game)
     own_makes, lvl_needs, made_by = collections.defaultdict(set), collections.defaultdict(set), collections.defaultdict(set)
@@ -728,6 +728,7 @@ def lines_of(c, game):
                 if use and not rule and h not in ('moves', 'moves_onto') and not any(x in use for x in ('cheaper', 'cost')):
                     w = max(w, 0.25); say += f': {mechanics.name(c, t)} {use}'  # it acts on them itself: a direct combo (Soul Cleave kills
                 # an ally, Undying Revenge brings back the strongest dead ally), not one card among every card that cares about deaths
+                if lv and h == 'stat_changed' and ms != 'enemy' and 'level_stat' in generic_use(c, game)[t]['flags']: continue  # said once, by the help line: "gives it more power and health: helps it level up"
                 if lv: out[(m, t)].append(('levels', 2 * w, say + ' (levels it up)'))
                 elif role == 'trigger' and t in selffeed: out[(m, t)].append(('levels', w, say + ' (it levels up from what it then does)'))
                 # it reacts to a happening (a death effect, "when an ally dies"): "triggers"; it counts one or needs a thing to be
@@ -1279,6 +1280,9 @@ def generic_use(c, game):
         # ("Allied Master Yis have done 12+ damage", Kaptain 3 Nov 2026): more power makes that sooner
     for i, ab in c.execute("select card, ability from flat_if where test='event_count' and attr='damage' and ev_actor_pick in ('self','actor_self')"):
         if i in d and ab in lvl: d[i]['flags'].add('level_hit')  # it levels from the damage it deals (Gwen: "I've dealt 10+ damage"; L24)
+    for (i,) in c.execute("""select d.card from flat_do d join flat_if f on f.ability=d.ability where d.act='transform' and d.on_pick='self'
+            and f.test in ('stat','amount_stat') and f.attr in ('power','health','strength')"""):
+        if i in d: d[i]['flags'].add('level_stat')  # it transforms when its own stat reaches a number: more of that stat levels it (Xolaani; L24)
     CACHE[('use', game)] = d
     return d
 
@@ -1594,7 +1598,7 @@ def aimed(c, game, nodes, broad):
             if act in ('move', 'swap') and a in home_only(c)[0] and b in home_only(c)[1]: continue  # onto my land, it needs enemy land
             said_ = (use_of(c, game, b, act, kw, ps, w) if not sharp and act == 'give_keyword' and not rule else None)  # a keyword given
             # to any ally: say how its text uses it (L16: Lucky Find -> Sivir level 2)
-            if rule and act in ('stat_change', 'grow') and 'level_hit' in generic_use(c, game)[b]['flags'] and \
+            if rule and act in ('stat_change', 'grow') and generic_use(c, game)[b]['flags'] & {'level_hit', 'level_stat'} and \
                     any(raises(v) for k, v in (x.split('=', 1) for x in (ps or '').split(';') if '=' in x) if k in ('power', 'strength')):
                 out[(a, b)].append(('levels', 1.0 / n, what + ': helps it level up' + at))  # it levels from the damage it deals (L24)
             elif rule: out[(a, b)].append(('boosts' if isinstance(rule, str) else 'rules', 1.0 / n, what + at))  # stats given make it stronger; the rest change how it works
@@ -1631,7 +1635,10 @@ def kind_count(c, game, kind, w):
 
 
 def level_abilities(c):
-    if 'lvl' not in CACHE: CACHE['lvl'] = {a for (a,) in c.execute("select ability from flat_do where act='level_up'")}
+    if 'lvl' not in CACHE:  # a level-up, or a card that transforms itself when a stat or count it reads is reached (Xolaani: power; L24)
+        CACHE['lvl'] = {a for (a,) in c.execute("select ability from flat_do where act='level_up'")} | {a for (a,) in c.execute(
+            """select d.ability from flat_do d join flat_if i on i.ability=d.ability where d.act='transform' and d.on_pick='self'
+            and i.test in ('stat','amount_stat','event_count')""")}
     return CACHE['lvl']
 
 
