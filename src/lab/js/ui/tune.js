@@ -153,16 +153,16 @@ function finishGeneration() {
   const all = c.res.map(r => deals.reduce((a, d) => a + r[d], 0) / Math.max(1, deals.length)), rates = all.slice(0, L), centre = all[L], prev = all[L + 1];
   if (tuneRunning.size && tune.pool) tune.pool.cancel(job => job.gen === gen);   // the dropped games stop at once
   tuneRunning.clear();
-  // the last move made the centre worse (the centre before it scored more in the same games or lessons): back to it, smaller steps.
-  // Else the centre moves only when the better half of the candidates beat it; else it stays and the steps get smaller.
+  // the last move made the centre worse (the centre before it scored more in the same games or lessons): back to it, smaller
+  // steps. Else the centre moves to the weighted mean of the better half. That mean is not one of the tries: single tries
+  // change every value at random and mostly score below the centre, while their mean keeps what they share; so the new
+  // centre is judged by itself, in the next generation, against the centre before it.
   const back = prev != null && prev > centre;
-  const half = rates.slice().sort((a, b) => b - a).slice(0, Math.floor(L / 2)), better = !back && half.reduce((a, b) => a + b, 0) / half.length > centre;
   if (back) { st.cma.mean = c.xs[L + 1].slice(); st.cma.sigma *= 0.9; st.prevMean = null; }
-  else if (better) { st.prevMean = st.cma.mean.slice(); cmaUpdate(st.cma, c.xs.slice(0, L), rates); }
-  else { st.cma.sigma *= 0.9; st.prevMean = null; }
+  else { st.prevMean = st.cma.mean.slice(); cmaUpdate(st.cma, c.xs.slice(0, L), rates); }
   st.best = tuneDecode(st.cma.mean, st.depth);
   const avg = rates.reduce((a, b) => a + b, 0) / rates.length, top = Math.max(...rates);
-  st.hist.push({ gen: st.gen, avg, top, centre, prev, back, kept: !better && !back, lambda: L, sigma: st.cma.sigma, deals: deals.length });
+  st.hist.push({ gen: st.gen, avg, top, centre, prev, back, lambda: L, sigma: st.cma.sigma, deals: deals.length });
   if (st.hist.length > 2000) st.hist.splice(0, st.hist.length - 2000);
   // settled (a tiny step size) → restart around the centre with twice the candidates. A generation average that stops
   // rising is not a reason: with a few hundred games per candidate it stalls by luck, and a restart throws away the step sizes learned.
@@ -362,7 +362,7 @@ function renderTune() {
     const cen = gens.map((e, k) => (e.centre == null ? null : `${X(k)},${Y(e.centre)}`)).filter(Boolean);
     if (cen.length) svg += `<polyline class="tubest" points="${cen.join(' ')}"></polyline>`;
     svg += gens.map((e, k) => (e.bench == null ? '' : `<rect class="tubench" x="${X(k) - 5}" y="${YB(e.bench) - 5}" width="10" height="10"><title>Generation ${e.gen + 1}: the ifelse AI won ${tpct(e.bench)} of ${STRENGTH_GAMES} games against the opponents ticked (looking 1 move ahead)</title></rect>`)).join('');
-    svg += gens.map((e, k) => `<circle class="tucand acc" cx="${X(k)}" cy="${Y(e.top)}" r="3.5"><title>Generation ${e.gen + 1}: ifelse AI ${tpct(e.centre)}${e.back ? ` (the centre before scored ${tpct(e.prev)}: went back to it)` : e.kept ? ' (better half not better: centre kept)' : ''}, candidates' average ${tpct(e.avg)}, best candidate ${tpct(e.top)} (${e.lambda} candidates${e.deals ? `, ${e.deals} games each` : ''})</title></circle>`).join('');
+    svg += gens.map((e, k) => `<circle class="tucand acc" cx="${X(k)}" cy="${Y(e.top)}" r="3.5"><title>Generation ${e.gen + 1}: ifelse AI ${tpct(e.centre)}${e.back ? ` (the centre before scored ${tpct(e.prev)}: went back to it)` : e.prev != null ? ` (the centre before scored ${tpct(e.prev)}: kept the move)` : ''}, candidates' average ${tpct(e.avg)}, best candidate ${tpct(e.top)} (${e.lambda} candidates${e.deals ? `, ${e.deals} games each` : ''})</title></circle>`).join('');
     svg += `<text class="xlab" x="${l}" y="${H - 10}">generation ${gens[0].gen + 1}</text><text class="xlab end" x="${W - r}" y="${H - 10}">generation ${gens[gens.length - 1].gen + 1}</text>`;
   }
   $('#tuChart').innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Win rates by generation">${svg}</svg>
