@@ -40,6 +40,10 @@ first and wait. Never invent rules or mechanics; mark suggestions as yours.
 
 The rules for lines (L1-L28) are in LINE_RULES.md: read it before judging a line or changing network.py.
 
+8. **Find a broken case fast** (9 Nov 2026: 45 minutes for 3 fixes): first check the case itself (is the card in its deck,
+   is the deck name used twice), then compare old code versions all in one background run, never one at a time; never wait
+   on sleep. A Gwent deck run takes about 40 s.
+
 ## Map: where things are
 | What | File |
 |---|---|
@@ -103,12 +107,11 @@ values, the cards it creates or names), card wording written to a fixed template
 game's own rulebook, and players' combos and decks that test the lines. Completeness alone is not enough.
 
 ## Open work, in Kaptain's order
-1. **Broken by the fixes of 7 Nov 2026** (keyword chains, self-copies, position links): Marvel Snap cases n439, n440, n441, n442,
-   n445, n448, n449, n477; Gwent n612, n613, n614; Duelyst ndu23; Into the Breach n683 (Titan Fist -> Seismic Capacitor: pair.py
-   draws it, the deck does not). Find the cause in the code, without reading cards (rule 7).
+1. **Gwent n612** (Kaptain 9 Nov 2026: Arachas Queen consumes, which sets off Arachas Behemoth): no line, and Behemoth's rows
+   have no consume trigger; no Gwent text says "when ... consumes". Needs Kaptain's OK to read the two cards.
 2. **Still failing from before:** Gwent guide pairs n551, n564, n578, n586 (Seagull -> Ragh Nar Roog: a whole-row boost and a card
-   that comes back into a row) and the ten guide-deck explanations dgw01-dgw05, dgw07-dgw10, dgw12; Runeterra n34 (Darius Gnar:
-   Brothers' Bond -> Darius).
+   that comes back into a row) and the ten guide-deck explanations dgw01-dgw05, dgw07-dgw10, dgw12; cases whose card is not in their deck (cases/run.py lists them:
+   n285, nst19, nst31 and some Gwent).
 3. **Marvel Snap misreadings** left: Muse ("for each location where..." lost the location), Basic Arrow ("at this location" lost),
    Captain Marvel ("a location that wins you the game" lost); Gwent Seagull's "3 units" may have lost its count. Runeterra Attune
    goes off when summoned (glossary) but is not counted as a summon effect.

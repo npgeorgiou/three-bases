@@ -1430,9 +1430,11 @@ def strength_readers(c):
         # a boost on my board units changes nothing for a card that reads the strength of enemies, the deck or the discard pile (L18, L9)
         off = {b for (b,) in c.execute("select card from flat_do where origin='own' and on_zone in ('discard','deck')")} - \
             {b for (b,) in c.execute("select card from flat_do where origin='own' and coalesce(on_zone,'board')='board' and on_pick in ('chosen','all','it','random','highest','lowest') and on_kind='unit'")}
-        CACHE['sread'] = {b for (b,) in c.execute("select card from flat_if where test in ('amount_stat','stat') and attr='strength' and of_pick in ('self','it') "
+        rows = c.execute("select card, of_pick from flat_if where test in ('amount_stat','stat') and attr='strength' and of_pick in ('self','it') "
                           "and (of_pick='self' or (coalesce(of_side,'')!='enemy' and coalesce(of_zone,'board')='board')) "
-                          "and not (test='amount_stat' and origin in ('uses_keyword','has_keyword'))")} - off  # the generic keyword rows (kill, stat_change: 'amount of its strength') are no reading of the card's own text (Toad Prince, Kikimore Stalker)
+                          "and not (test='amount_stat' and origin in ('uses_keyword','has_keyword'))").fetchall()
+        CACHE['sread'] = {b for b, p in rows if p == 'self'} | ({b for b, p in rows if p == 'it'} - off)  # a card that reads its own
+        # strength still does when it also plays a card from the discard pile (False Ciri: n614); the generic keyword rows (kill, stat_change: 'amount of its strength') are no reading of the card's own text (Toad Prince, Kikimore Stalker)
     return CACHE['sread']
 
 

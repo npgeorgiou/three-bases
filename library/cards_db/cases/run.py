@@ -89,8 +89,14 @@ def main():
     path = os.path.join(HERE, 'network.tsv')
     if os.path.exists(path):
         import network, mechanics
-        decks = {r['deck']: r['cards'] for f in (os.path.join(DBDIR, 'decks.tsv'), os.path.join(HERE, 'decks.tsv')) if os.path.exists(f)
-                 for r in csv.DictReader(open(f, encoding='utf-8'), delimiter='\t') if r['game'] == game}
+        decks, seen = {}, {}
+        for f in (os.path.join(DBDIR, 'decks.tsv'), os.path.join(HERE, 'decks.tsv')):
+            for r in (csv.DictReader(open(f, encoding='utf-8'), delimiter='\t') if os.path.exists(f) else []):
+                if r['game'] != game: continue
+                same = lambda x: sorted(y.strip().lstrip('0123456789x ').strip() for y in x.split(','))
+                if r['deck'] in seen and same(seen[r['deck']]) != same(r['cards']): print(f"FAILED: two decks named {r['deck']!r} with other cards (a case would test the wrong one)")
+                seen[r['deck']] = decks[r['deck']] = r['cards']
+        not_in = []  # a case whose card is not in its deck tests nothing (n683 named a deck without Seismic Capacitor)
         out += ['', '## Deck networks (a line must be there, or must not)', '', '| case | deck | from | to | expect | found | pass |', '|---|---|---|---|---|---|---|']
         nets = {}; stale = []
         for r in csv.DictReader(open(path, encoding='utf-8'), delimiter='\t'):
@@ -101,6 +107,7 @@ def main():
                 nodes, lines = network.network(c, game, ids)
                 nets[r['deck']] = ({i: mechanics.name(c, i) for i in nodes}, lines)
             nm, lines = nets[r['deck']]
+            if any(n != '*' and n not in nm.values() for n in (r['from'], r['to'])): not_in.append(r['id'])
             hit = [f'{k}: {y}' for (a, b), ls in lines.items() if (r['from'] == '*' or nm[a] == r['from']) and nm[b] == r['to']
                    for k, w, y in ls if k != 'targets']  # the line's kind and why ("boosts: gives it +1|+1")
             if r['expect'] == 'line': ok = bool(hit) if not r['why_not'] else any(r['why_not'] in y for y in hit)  # a line saying
@@ -116,6 +123,7 @@ def main():
     if path_stale:
         out.insert(3, f"**Cases whose reason no line says any more (rewrite them): {', '.join(path_stale)}**\n")
         print('must-not cases whose reason no deck of the game says (reworded, or every such line is gone): ' + ', '.join(path_stale))
+    if locals().get('not_in'): print('cases whose card is not in their deck (they test nothing; give them a deck that has it): ' + ', '.join(not_in))
     out.insert(3, f'**{passed} of {total} cases pass.**\n')
     rep = sys.argv[sys.argv.index('--report') + 1] if '--report' in sys.argv else 'REPORT.md'  # parallel runs write their own file
     open(os.path.join(HERE, os.path.basename(rep)), 'w').write('\n'.join(out) + '\n'); print(f'{passed} of {total} cases pass')

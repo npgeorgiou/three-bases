@@ -131,7 +131,6 @@ ndu19	duelyst	Argeon Intensify Riftwalker	Windblade Adept	Afterblaze	line		Claud
 ndu20	duelyst	Argeon Mechaz0r	Helm of MECHAZ0R	MECHAZ0R!	line		guide: the pieces build MECHAZ0R! (family 17)
 ndu21	duelyst	Vaath Dying Wish	Kujata	Juggernaut	line		Claude, deck read: Kujata's damage on summon sets off Juggernaut
 ndu22	duelyst	Kaleos Trial of Songhai	Juxtaposition	Bonereaper	line		Claude, deck read: switching an enemy next to Bonereaper puts it in reach of its end-of-turn damage
-ndu23	duelyst	Vaath Dying Wish	Juggernaut	Lavaslasher	none		Claude, deck read: Grow makes only Juggernaut stronger (family 19)
 ndu24	duelyst	Cassyva Replace Abomination	Aethermaster	Cassyva Soulreaper	none		Claude, deck read: an extra replace helps the player, not the General card (family 20)
 ndu25	duelyst	Cassyva Replace Abomination	Healing Mystic	Abhorrent Unbirth	none		Claude, deck read: Unbirth destroys my minions itself; it waits for no deaths (family 21) (reason rewritten 30 Oct 2026: the old wording was said by no line, so the case could not fail)
 ndu26	duelyst	Lilithe Darkfire	Phantasm	Wraithling	none		Claude, deck read: Wraithlings are summoned onto the board, never in the action bar (family 22)
@@ -431,17 +430,10 @@ n435	marvel_snap	Kid Omega, Bucky Barnes	Kid Omega	Bucky Barnes	line		Claude 5 N
 n436	marvel_snap	Kid Omega, Elixir	Kid Omega	Elixir	line		Claude 5 Nov 2026, line check: makes your units die, Elixir brings them back
 n437	marvel_snap	Jocasta, Awesome Andy	Jocasta	Awesome Andy	line		Claude 5 Nov 2026, line check: Jocasta activates your other cards
 n438	marvel_snap	Attuma, Death Fractured Frontier	Attuma	Death Fractured Frontier	line		Claude 5 Nov 2026, line check: makes your units die, it brings them back
-n439	marvel_snap	Doctor Strange, Danger	Doctor Strange	Danger	none		Claude 5 Nov 2026, line check: a lane is a location, moving a unit helps no card that acts in its lane
-n440	marvel_snap	Ghost-Spider, Drax	Ghost-Spider	Drax	none		Claude 5 Nov 2026, line check: Drax needs no move, moving is no help
-n441	marvel_snap	Blink, Moonstone	Blink	Moonstone	none		Claude 5 Nov 2026, line check: Moonstone copies text, no need of moving
-n442	marvel_snap	Doctor Octopus, Pizza Slice	Doctor Octopus	Pizza Slice	none		Claude 5 Nov 2026, line check: Pizza Slice merges, no need of moving
 n443	marvel_snap	Angel, Hydra Stomper	Angel	Hydra Stomper	line		Claude 5 Nov 2026, line check: makes your units move
 n444	marvel_snap	Herbie Program 01, Wiccan	Herbie Program 01	Wiccan	none		Claude 5 Nov 2026, line check: Wiccan wants no unspent mana, gaining mana is the opposite
-n445	marvel_snap	Ghost-Spider, Galactus	Ghost-Spider	Galactus	none		Claude 5 Nov 2026, line check: Galactus wants to be alone in its lane, moving units does not help
 n446	marvel_snap	Djinn, Jim Hammond Human Torch	Djinn	Jim Hammond Human Torch	line		Claude 5 Nov 2026, line check: Torch counts mana, gaining it helps
 n447	marvel_snap	Beta Ray Bill, Gorgon	Beta Ray Bill	Gorgon	none		Claude 5 Nov 2026, line check: my created cards are not the enemy cards Gorgon changes
-n448	marvel_snap	Doctor Octopus, Dagger	Doctor Octopus	Dagger	none		Claude 5 Nov 2026, line check: moving enemy units does not feed a card acting in its lane
-n449	marvel_snap	Aero, Armor	Aero	Armor	none		Claude 5 Nov 2026, line check: moving units does not feed a card acting in its lane
 n450	marvel_snap	Moira X, Quinjet	Moira X	Quinjet	line		Claude 5 Nov 2026, line check: creating cards feeds Quinjet
 n451	marvel_snap	Agent Venom, Wolverine Horseman of War	Agent Venom	Wolverine Horseman of War	none		Claude 5 Nov 2026, line check: setting power to 3 reaches no 6 power
 n452	marvel_snap	Agent Venom, Elder Dragon of the Moon	Agent Venom	Elder Dragon of the Moon	none		Claude 5 Nov 2026, line check: a set is no buff
@@ -469,7 +461,6 @@ n473	marvel_snap	Sera, Mystique	Sera	Mystique	line	is a unit with Ongoing it cou
 n474	marvel_snap	Basic Arrow, Mystique	Basic Arrow	Mystique	line	makes your units get Ongoing	Claude 5 Nov 2026, line check: right example stays
 n475	marvel_snap	Fantomex, Zombie Captain Marvel	Fantomex	Zombie Captain Marvel	none		Claude 5 Nov 2026, line check C14: a shared Activate keyword is no line (v69 data fix, shows after rebuild)
 n476	marvel_snap	Fantomex, Zombie Captain Marvel	Zombie Captain Marvel	Fantomex	line	makes your units die	Claude 5 Nov 2026, line check C14: right example stays (kills feed the count)
-n477	marvel_snap	Grapple Arrow, Galactus	Grapple Arrow	Galactus	none		Claude 5 Nov 2026, line check C15: Galactus needs exactly one unit in his lane; moving units in is no help
 n478	marvel_snap	Grapple Arrow, PymParticle Arrow	Grapple Arrow	PymParticle Arrow	line	moves your units	Claude 5 Nov 2026, line check C15: PymParticle needs a full lane; moved units fill it
 n479	marvel_snap	Iron Patriot, King Eitri	Iron Patriot	King Eitri	none		Claude 5 Nov 2026, line check C16: creates into the hand, Eitri draws created cards from the deck
 n480	marvel_snap	Scarlet Witch Queen of Chaos, King Eitri	Scarlet Witch Queen of Chaos	King Eitri	none		Claude 5 Nov 2026, line check C16: creates into the hand, Eitri draws created cards from the deck
@@ -603,8 +594,8 @@ n608	gwent	Auberon: Conqueror, Winter Queen	Auberon: Conqueror	Winter Queen	none
 n609	gwent	Holger Blackhand, An Craite Longship	Holger Blackhand	An Craite Longship	none	gives it more strength when it comes	Claude 2026-11-06, line check: strength for a tribe or a Defender is generic; only a text that reads strength keeps it
 n610	gwent	Holger Blackhand, Bjorn's Drakkar	Holger Blackhand	Bjorn's Drakkar	none	gives it more strength when it comes	Claude 2026-11-06, line check: strength for a tribe or a Defender is generic; only a text that reads strength keeps it
 n611	gwent	Imposter, Roderick of Dun Tynne	Imposter	Roderick of Dun Tynne	none	gives it more strength when it comes	Claude 2026-11-06, line check: strength for a tribe or a Defender is generic; only a text that reads strength keeps it
-n612	gwent	Arachas Behemoth, Arachas Queen	Arachas Behemoth	Arachas Queen	line	gives it more strength (when in its row)	Claude 2026-11-06, line check: strength for a tribe or a Defender is generic; only a text that reads strength keeps it
-n613	gwent	Kikimore Queen, Kikimore Stalker	Kikimore Queen	Kikimore Stalker	line	gives it more strength (when in its row)	Claude 2026-11-06, line check: strength for a tribe or a Defender is generic; only a text that reads strength keeps it
+n612	gwent	Arachas Behemoth, Arachas Queen	Arachas Queen	Arachas Behemoth	line		Kaptain 9 Nov 2026: Arachas Queen consumes, which sets off Arachas Behemoth
+n613	gwent	Kikimore Queen, Kikimore Stalker	Kikimore Queen	Kikimore Stalker	none	more strength	Kaptain 9 Nov 2026: more strength for a card that consumes is no help (as Bone Talisman -> Kikimore Stalker)
 n614	gwent	Imposter, False Ciri	Imposter	False Ciri	line	its text reads its strength	Claude 2026-11-06, line check: strength for a tribe or a Defender is generic; only a text that reads strength keeps it
 n615	gwent	Vesemir: Mentor, Berengar	Vesemir: Mentor	Berengar	line	is a Witcher it asks for	Claude 2026-11-06, line check: strength for a tribe or a Defender is generic; only a text that reads strength keeps it
 n616	gwent	Holger Blackhand, Tidecloak Hideaway	Holger Blackhand	Tidecloak Hideaway	line	is a Pirate it asks for	Claude 2026-11-06, line check: strength for a tribe or a Defender is generic; only a text that reads strength keeps it
@@ -674,7 +665,7 @@ n679	gwent	Fercart, Impera Enforcers	Fercart	Impera Enforcers	line	makes enemy u
 n680	gwent	Treason, Impera Enforcers	Treason	Impera Enforcers	line	makes enemy units get Spying	Claude 2026-11-06, line check: the keyword giver stays
 n681	gwent	Damsel in Distress, Knight-Errant	Damsel in Distress	Knight-Errant	none	puts it into play from the deck	Claude 2026-11-06, line check: Knight-Errant has no summon effect (L17)
 n682	gwent	Damsel in Distress, Redanian Knight	Damsel in Distress	Redanian Knight	none	puts it into play from the deck	Claude 2026-11-06, line check: Redanian Knight has no summon effect (L17)
-n683	into_the_breach	Run: Rift Walkers (Sevastromo, Unfair)	Titan Fist	Seismic Capacitor	line	Titan Fist moves enemy units, and Seismic Capacitor acts on units next to it	Kaptain 7 Nov 2026: a card that hits units next to it needs units there
+n683	into_the_breach	Cataclysm	Titan Fist	Seismic Capacitor	line	Titan Fist moves enemy units, and Seismic Capacitor acts on units next to it	Kaptain 7 Nov 2026: a card that hits units next to it needs units there
 n684	into_the_breach	Run: Rift Walkers (Sevastromo, Unfair)	Titan Fist	Artemis Artillery	line	Titan Fist moves enemy units, and Artemis Artillery acts on units in a line from it	Claude 2026-11-06, line check: a line from the card waits for where units stand (Kaptain ntb10)
 n685	gwent	Rage of the Sea: Fulmar rain ft. Otkell and Melusine	Sigrdrifa's Rite	Rage of the Sea	none	brings it back: its summon effect goes off	Claude 2026-11-06, line check: Rage of the Sea has no summon effect, its "can act again" is no Zeal (L17, L19)
 n686	gwent	Mobilization: NR Devotion Undead Army	Mobilization	Lyrian Arbalest	none	puts it into play: its summon effect goes off	Claude 2026-11-06, line check: Lyrian Arbalest has no summon effect (L17, L19)

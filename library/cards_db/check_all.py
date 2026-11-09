@@ -24,7 +24,7 @@ def main():
         t = time.time()
         cases = [l for l in out(['cases/run.py', g, '--report', f'cases/REPORT_{g}.md']) if l]
         audit = next((l for l in out(['audit_links.py', g]) if 'link findings' in l), '')
-        return f'{g}: {" | ".join(cases[-2:])} | {audit.strip()} ({time.time() - t:.0f} s)'
+        return f'{g}: {" | ".join([l for l in cases[:-1] if l.startswith(('FAILED', 'must-not', 'cases whose'))] + cases[-1:])} | {audit.strip()} ({time.time() - t:.0f} s)'
     with concurrent.futures.ThreadPoolExecutor(max_workers=len(rest)) as ex:
         for line in ex.map(one, rest): print(line)
 
