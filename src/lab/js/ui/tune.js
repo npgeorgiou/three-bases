@@ -92,10 +92,12 @@ const tuneGames = () => Math.max(20, Math.round(Number($('#tuGames').value) / 2)
 $('#tuGames').addEventListener('change', () => { $('#tuGames').value = tuneGames(); });   // the box shows the number played
 function newGeneration() {
   const st = tuneState(), L = st.cma.lambda;
-  // the candidates, then the centre itself (the values the ifelse AI has now): it plays the same games, only to be measured
+  // the candidates, then the centre itself (the values the ifelse AI has now) and, after a move, the centre before it:
+  // they play the same games (or lessons), only to be measured
   // res[candidate][deal]: its score in that game (1 win, 0.5 draw, 0 loss), null until played
   const G = st.mode === 'lessons' ? lessonBlocks() : tuneGames();      // lessons: one score per block of lessons
-  st.cand = { G, xs: [...cmaSamples(st.cma), st.cma.mean.slice()], res: Array.from({ length: L + 1 }, () => Array(G).fill(null)) };
+  const xs = [...cmaSamples(st.cma), st.cma.mean.slice(), ...(st.prevMean && st.prevMean.length === TUNE_N ? [st.prevMean.slice()] : [])];
+  st.cand = { G, xs, res: xs.map(() => Array(G).fill(null)) };
   tuneRunning.clear();
 }
 /** The games being played now (candidate-deal), not saved: after a pause they are played again. */
@@ -148,15 +150,19 @@ function tuneScore(job, score) {
 function finishGeneration() {
   const st = tuneState(), c = st.cand, L = st.cma.lambda, gen = st.gen;
   const deals = c.res[0].map((_, d) => d).filter(d => c.res.every(r => r[d] !== null));   // the deals every candidate finished
-  const all = c.res.map(r => deals.reduce((a, d) => a + r[d], 0) / Math.max(1, deals.length)), rates = all.slice(0, L), centre = all[L];
+  const all = c.res.map(r => deals.reduce((a, d) => a + r[d], 0) / Math.max(1, deals.length)), rates = all.slice(0, L), centre = all[L], prev = all[L + 1];
   if (tuneRunning.size && tune.pool) tune.pool.cancel(job => job.gen === gen);   // the dropped games stop at once
   tuneRunning.clear();
-  // the centre moves only when the better half of the candidates beat it in the same games; else it stays and the steps get smaller
-  const half = rates.slice().sort((a, b) => b - a).slice(0, Math.floor(L / 2)), better = half.reduce((a, b) => a + b, 0) / half.length > centre;
-  if (better) cmaUpdate(st.cma, c.xs.slice(0, L), rates); else st.cma.sigma *= 0.9;
+  // the last move made the centre worse (the centre before it scored more in the same games or lessons): back to it, smaller steps.
+  // Else the centre moves only when the better half of the candidates beat it; else it stays and the steps get smaller.
+  const back = prev != null && prev > centre;
+  const half = rates.slice().sort((a, b) => b - a).slice(0, Math.floor(L / 2)), better = !back && half.reduce((a, b) => a + b, 0) / half.length > centre;
+  if (back) { st.cma.mean = c.xs[L + 1].slice(); st.cma.sigma *= 0.9; st.prevMean = null; }
+  else if (better) { st.prevMean = st.cma.mean.slice(); cmaUpdate(st.cma, c.xs.slice(0, L), rates); }
+  else { st.cma.sigma *= 0.9; st.prevMean = null; }
   st.best = tuneDecode(st.cma.mean, st.depth);
   const avg = rates.reduce((a, b) => a + b, 0) / rates.length, top = Math.max(...rates);
-  st.hist.push({ gen: st.gen, avg, top, centre, kept: !better, lambda: L, sigma: st.cma.sigma, deals: deals.length });
+  st.hist.push({ gen: st.gen, avg, top, centre, prev, back, kept: !better && !back, lambda: L, sigma: st.cma.sigma, deals: deals.length });
   if (st.hist.length > 2000) st.hist.splice(0, st.hist.length - 2000);
   // settled (a tiny step size) → restart around the centre with twice the candidates. A generation average that stops
   // rising is not a reason: with a few hundred games per candidate it stalls by luck, and a restart throws away the step sizes learned.
@@ -305,7 +311,7 @@ function renderTuneStatus() {
   const done = c && c.res ? tuneDone(c) : 0, total = c && c.res ? c.G * c.res.length : 0;
   const lessons = st.mode === 'lessons', making = lessons && LESSONS.need > 0;
   $('#tuStatus').textContent = (tune.running ? (making ? 'Making lessons' : 'Tuning') : st.gen || c ? 'Paused' : 'Not started') +
-    (lessons ? ` · ${LESSONS.list.length} lessons` + (LESSONS.need ? `, making ${LESSONS.need} new` : '') + (st.strength ? `, games against the Benchmark ${st.strength.res.filter(x => x !== null).length}/${STRENGTH_GAMES}` : '') : '') +
+    (lessons ? ` · ${LESSONS.list.length} lessons` + (LESSONS.need ? `, making ${LESSONS.need} new` : '') + (st.strength ? `, games against the opponents ${st.strength.res.filter(x => x !== null).length}/${STRENGTH_GAMES}` : '') : '') +
     ` · generation ${st.gen + 1} · ${st.cma.lambda} candidates` + (c ? ` · ${done}/${total} ${lessons ? 'blocks of lessons' : 'games'}` : '') +
     (last ? ` · last generation: the ifelse AI ${tpct(last.centre)}, candidates' average ${tpct(last.avg)}, best candidate ${tpct(last.top)}` : '') +
     ` · step size ${st.cma.sigma.toFixed(3)}` + (st.restarts ? ` · ${st.restarts} restart${st.restarts > 1 ? 's' : ''}` : '');
@@ -314,7 +320,7 @@ function renderTune() {
   const st = tuneState();
   $('#tuOpps').innerHTML = '<span class="tuoppl">Opponents</span>' + TUNE_OPPS().map(([k, name]) =>
     `<label class="tuopp"><input type="checkbox" value="${k}" ${st.opps.includes(k) ? 'checked' : ''}> ${esc(name)}</label>`).join('')
-    + '<span class="note">Games are shared equally among them; at least one.</span>';
+    + `<span class="note">${st.mode === 'lessons' ? 'They play the centre in the games that make lessons and in the games every 10th round, shared equally' : 'Games are shared equally among them'}; at least one.</span>`;
   for (const b of $('#tuOpps').querySelectorAll('input')) b.addEventListener('change', () => {
     const on = [...$('#tuOpps').querySelectorAll('input:checked')].map(x => x.value);
     if (!on.length) { b.checked = true; return; }
@@ -352,12 +358,12 @@ function renderTune() {
     svg += `<polyline class="tuavg" points="${gens.map((e, k) => `${X(k)},${Y(e.avg)}`).join(' ')}"></polyline>`;
     const cen = gens.map((e, k) => (e.centre == null ? null : `${X(k)},${Y(e.centre)}`)).filter(Boolean);
     if (cen.length) svg += `<polyline class="tubest" points="${cen.join(' ')}"></polyline>`;
-    svg += gens.map((e, k) => (e.bench == null ? '' : `<rect class="tubench" x="${X(k) - 5}" y="${YB(e.bench) - 5}" width="10" height="10"><title>Generation ${e.gen + 1}: the ifelse AI won ${tpct(e.bench)} of ${STRENGTH_GAMES} games against the Benchmark (both looking 1 move ahead)</title></rect>`)).join('');
-    svg += gens.map((e, k) => `<circle class="tucand acc" cx="${X(k)}" cy="${Y(e.top)}" r="3.5"><title>Generation ${e.gen + 1}: ifelse AI ${tpct(e.centre)}${e.kept ? ' (better half not better: centre kept)' : ''}, candidates' average ${tpct(e.avg)}, best candidate ${tpct(e.top)} (${e.lambda} candidates${e.deals ? `, ${e.deals} games each` : ''})</title></circle>`).join('');
+    svg += gens.map((e, k) => (e.bench == null ? '' : `<rect class="tubench" x="${X(k) - 5}" y="${YB(e.bench) - 5}" width="10" height="10"><title>Generation ${e.gen + 1}: the ifelse AI won ${tpct(e.bench)} of ${STRENGTH_GAMES} games against the opponents ticked (looking 1 move ahead)</title></rect>`)).join('');
+    svg += gens.map((e, k) => `<circle class="tucand acc" cx="${X(k)}" cy="${Y(e.top)}" r="3.5"><title>Generation ${e.gen + 1}: ifelse AI ${tpct(e.centre)}${e.back ? ` (the centre before scored ${tpct(e.prev)}: went back to it)` : e.kept ? ' (better half not better: centre kept)' : ''}, candidates' average ${tpct(e.avg)}, best candidate ${tpct(e.top)} (${e.lambda} candidates${e.deals ? `, ${e.deals} games each` : ''})</title></circle>`).join('');
     svg += `<text class="xlab" x="${l}" y="${H - 10}">generation ${gens[0].gen + 1}</text><text class="xlab end" x="${W - r}" y="${H - 10}">generation ${gens[gens.length - 1].gen + 1}</text>`;
   }
   $('#tuChart').innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Win rates by generation">${svg}</svg>
-    <div class="tulegend"><span class="lg best"></span>the ifelse AI itself (the centre) <span class="lg avg"></span>candidates' average <span class="lg acc"></span>best candidate${st.mode === 'lessons' ? ' <span class="lg bench"></span>games won against the Benchmark (every 10th round, right scale)' : ''}</div>`;
+    <div class="tulegend"><span class="lg best"></span>the ifelse AI itself (the centre) <span class="lg avg"></span>candidates' average <span class="lg acc"></span>best candidate${st.mode === 'lessons' ? ' <span class="lg bench"></span>games won against the opponents ticked (every 10th round, right scale)' : ''}</div>`;
   const fmt = v => (Number.isInteger(v) ? String(v) : Math.abs(v) >= 10 ? v.toFixed(1) : v.toFixed(3));
   $('#tuTable').innerHTML = `<table class="tutable"><thead><tr><th>Value</th><th>Start</th><th>ifelse AI (centre)</th></tr></thead><tbody>${
     IFELSE_FIELDS.map(([k, text]) => { const d = IFELSE_DEFAULTS[k], v = st.best[k] ?? d, ch = Math.abs(v - d) > 1e-9;

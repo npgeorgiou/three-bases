@@ -356,7 +356,7 @@ function labWorker() {
       playGame(msg);
     }
     else if (msg.type === 'lessons') lessonList = msg.lessons;                    // the foresight lessons, for grading
-    else if (msg.type === 'lessonMake') self.postMessage({ type: 'lessonMake', key: msg.key, lessons: lessonsFromGame(msg) });
+    else if (msg.type === 'lessonMake') self.postMessage({ type: 'lessonMake', key: msg.key, lessons: lessonsFromGame(msg, (spec, s) => choose(spec, s).a) });
     else if (msg.type === 'lessonGrade') self.postMessage({ type: 'lessonGrade', key: msg.key, ...gradeLessons(lessonList, msg.cfg, msg.from, msg.to) });
     else if (msg.type === 'trainStart') trainStart(msg);
     else if (msg.type === 'data') { addData(msg); if (T.retiredMode) handOver(); }

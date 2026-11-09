@@ -1,9 +1,9 @@
 /* =====================================================================
-   ifelse tuning by LESSONS (ifelse-lessons.js). A round: if lessons are wanted, games are played to make them (with the
-   centre's numbers); then every try (and the centre) is graded on every lesson, in blocks of LESSON_BLOCK lessons, one
+   ifelse tuning by LESSONS (ifelse-lessons.js). A round: if lessons are wanted, games are played to make them (the
+   centre's numbers against the opponents ticked, seats in turn; only the centre's own turns become lessons); then every try (and the centre) is graded on every lesson, in blocks of LESSON_BLOCK lessons, one
    block per job; its score is 1 minus its average loss; CMA-ES moves the centre as with games. After each round a
    quarter of the lessons, the oldest, are remade with the new centre; every 10th round the centre plays 100 games
-   against the Benchmark (both looking 1 move ahead), shown on the chart. Lessons are kept in the browser's database.
+   against the opponents ticked (looking 1 move ahead), shown on the chart. Lessons are kept in the browser's database.
    ===================================================================== */
 const LESSON_BLOCK = 50, LESSON_EVERY = 7, LESSON_PER_GAME = 12, LESSON_RENEW = 0.25, STRENGTH_EVERY = 10, STRENGTH_GAMES = 100;
 /** list: the lessons, oldest first; need: new ones still wanted before the next round; spare: new ones that came in
@@ -51,14 +51,15 @@ function lessonJob(st, c) {
     const k = g.res.findIndex((x, i) => x === null && !strengthRunning.has(i));
     if (k >= 0) {
       strengthRunning.add(k);
-      const seat = k % 2, mine = { kind: 'ifelse', cfg: { ...ifelseFull(g.values), depth: 1 } }, opp = tuneOppSpec('bench', 1);
+      const seat = k % 2, mine = { kind: 'ifelse', cfg: { ...ifelseFull(g.values), depth: 1 } }, opp = tuneOppSpec(st.opps[Math.floor(k / 2) % st.opps.length], 1);
       return { key: 'strength-' + g.gen + '-' + k, lesson: 'strength', k, seat, specs: seat === 0 ? [mine, opp] : [opp, mine],
         seed: 900001 + g.gen * 1000 + k, decks: DECK_PAIRS[(g.gen * 7 + Math.floor(k / 2)) % DECK_PAIRS.length] };
     }
   }
   if (!lessonsReady()) {                                              // every free core plays a game to make lessons
     const seed = 7001 + LESSONS.seed++;
-    return { key: 'lesson-make-' + seed, lesson: 'make', msg: { type: 'lessonMake', seed, teacher: lessonTeacher(ifelseFull(st.best)), every: LESSON_EVERY,
+    const opp = tuneOppSpec(st.opps[seed % st.opps.length], 1), seat = Math.floor(seed / st.opps.length) % 2;   // the ticked opponents and seats in turn
+    return { key: 'lesson-make-' + seed, lesson: 'make', msg: { type: 'lessonMake', seed, opp, seat, teacher: lessonTeacher(ifelseFull(st.best)), every: LESSON_EVERY,
       most: LESSON_PER_GAME, actionCap: ACTION_CAP, roundCap: ROUND_CAP, decks: DECK_PAIRS[seed % DECK_PAIRS.length] } };
   }
   if (!c) { newGeneration(); c = st.cand; if (tune.pool) tune.pool.setInit([{ type: 'lessons', lessons: LESSONS.list }]); }

@@ -41,18 +41,21 @@ function withSeed(seed, fn) {
   Math.random = () => { z = (z + 0x6D2B79F5) >>> 0; let t = Math.imul(z ^ (z >>> 15), z | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
   try { return fn(); } finally { Math.random = real; }
 }
-/** Lessons from one seeded game played to its end: the centre's numbers play both sides looking 1 move ahead; every
- *  `every` moves (from a start set by the seed) the position becomes a lesson, if it has two or more moves valued
- *  differently, at most `most`; at the end each lesson gets the result for its side to move. */
-function lessonsFromGame(msg) {
+/** Lessons from one seeded game played to its end: the centre's numbers, looking 1 move ahead, play seat msg.seat
+ *  against msg.opp (picked by `oppMove`); every `every` of the centre's own moves (from a start set by the seed) the
+ *  position becomes a lesson, if it has two or more moves valued differently, at most `most`; at the end each lesson
+ *  gets the centre's result. */
+function lessonsFromGame(msg, oppMove) {
   return withSeed(msg.seed, () => {
     const s = newGame(msg.decks[0], msg.decks[1]);
     s.noFx = true;
     for (const p of [0, 1]) aiMulligan(s, p);
     s.redrawDone = true;
     const out = [], play = { ...msg.teacher, depth: 1 };
+    let mine = 0;
     for (let i = 0; i < msg.actionCap && s.winner === null && s.round <= msg.roundCap; i++) {
-      if ((i + msg.seed) % msg.every === 0 && out.length < msg.most) {
+      if (s.cur !== msg.seat) { applyAction(s, oppMove(msg.opp, s)); continue; }
+      if ((mine++ + msg.seed) % msg.every === 0 && out.length < msg.most) {
         const l = makeLesson(s, msg.teacher), vs = l.moves.map(m => m[1]);
         if (vs.length > 1 && Math.max(...vs) > Math.min(...vs)) out.push(l);
       }
