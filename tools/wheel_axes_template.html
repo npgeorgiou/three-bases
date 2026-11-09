@@ -40,7 +40,7 @@ const GAMES=[...new Set(F.map(f=>f.game))];
 const PAL=['#e6194b','#3cb44b','#4363d8','#f58231','#911eb4','#42d4f4','#f032e6','#9a6324','#469990','#800000','#808000','#000075','#e6a800','#a9a9a9','#bfef45','#fabed4','#dcbeff','#aaffc3','#ffd8b1'];
 const GCOL={};GAMES.forEach((g,i)=>GCOL[g]=PAL[i%PAL.length]);
 F.forEach((f,i)=>{f.id=i;f.col=PAL[i%PAL.length]});
-let mode='cards',view='radar',sel=new Set(),axOn=new Set(A.filter(a=>!a.off).map(a=>a.key));
+let mode='cards',view='radar',sel=new Set(),axOn=new Set(A.map(a=>a.key));
 const tip=document.getElementById('tip');
 function showTip(e,h){tip.innerHTML=h;tip.style.display='block';tip.style.left=Math.min(e.clientX+12,innerWidth-350)+'px';tip.style.top=(e.clientY+12)+'px'}
 function hideTip(){tip.style.display='none'}

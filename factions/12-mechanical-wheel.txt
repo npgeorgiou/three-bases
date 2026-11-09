@@ -20,9 +20,10 @@ Method (Claude's proposal, agreed in outline):
 
 The axes (first measured on 39 real factions of the 8 library games in an earlier chat, with no saved script; now measured
 by axes.py below. Changed 9 Nov 2026 by Kaptain: "locks enemies or outmoves them", "what its cards react to" (placed,
-attacking, hit, dying: a list of four kinds, not a scale, and covered by axes 1, 3 and 11) and "how hard it is to play"
+attacking, hit, dying: a list of four kinds, not a scale, and covered by axes 1, 3 and 10) and "how hard it is to play"
 dropped; disruption added):
-1.  Own units: spends them (deaths, sacrifice, trading a unit for value) or keeps them (protect, heal, grow).
+1.  Own units: spends them (deaths, sacrifice, trading a unit for value) or keeps them alive: staying power (heal, more
+    defence, shields, protection, grow; Kaptain 9 Nov 2026: healing and preservation must be measured).
 2.  Disruption (Kaptain, 9 Nov 2026): breaks the enemy's plan (their hand, costs, abilities, attacks, positions, spells)
     or only kills their units.
 3.  Where the damage comes from: units' own strikes and growth, or spells and fixed damage.
@@ -33,21 +34,17 @@ dropped; disruption added):
 6.  How many targets: many at once and counting the board, or one precise target.
 7.  Width (agreed 9 Nov 2026): many cheap units and cards that make units, or a few big ones.
 8.  Hand and discard pile: picks, copies and brings back its own cards, or plays what it draws.
-9.  Early or late (Kaptain, 5 Nov 2026): when the faction is strongest. Not proven: the measure (cheap cards, units with
-    more strength than defence, acting at once; against dear cards, growth, carry-over, ramp, countdowns) orders deck
-    authors' words (aggro/rush/tempo before midrange before control/ramp) right in 75 of 90 Duelyst pairs but only 63 of
-    149 Faeria pairs, no better than plain average cost. The deck lists hold each card once, without copies. Off on the
-    page until proven.
-10. Strength or defence: its units lean to killing or to holding dots (defence holds a base); seen in the stats.
-11. Sets the pace or answers: forces the enemy to react (acts at once, cheap units with more strength than defence, grows
+9.  Strength or defence: its units lean to killing or to holding dots (defence holds a base); seen in the stats.
+10. Sets the pace or answers: forces the enemy to react (acts at once, cheap units with more strength than defence, grows
     every round unless killed, forced attacks), or waits and punishes (effects set off by the enemy, traps, counters,
     fast spells).
-Dropped 9 Nov 2026: moving (Kaptain: most library games have no moving); repair or prevent (Claude, after Kaptain's "get it
+Dropped 9 Nov 2026: early or late (Kaptain: Claude could not measure it; checked against deck authors' words it was
+right in only 63 of 149 Faeria deck pairs); moving (Kaptain: most library games have no moving); repair or prevent (Claude, after Kaptain's "get it
 done": only places factions that keep units, so it becomes a monopoly choice of those factions); rows and areas (Claude,
 same: "one cell or a row" repeats axis 6, "front or back rows" can't be measured from other games and stays a design
 question per faction).
 A game with almost no cards for an axis (under 5 for both ends) gives its factions no value on it, not 0: Into the Breach
-on axes 4, 8, 9 and 10; Slay the Spire on 7 and 10; Stormbound on 10 (no unit stats in the library).
+on axes 4, 8 and 9; Slay the Spire on 7 and 9; Stormbound on 9 (no unit stats in the library).
 How the axes were missed: the first measured axes came only from what cards do (concept shares), so identity that lives
 in the cost curve, the stats and how a faction feels to play was invisible; look there too.
 Which ends go together is judged by play: one end makes what the other needs, or undoes it (library fed/feeds/both).
