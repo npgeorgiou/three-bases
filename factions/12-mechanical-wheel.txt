@@ -11,7 +11,7 @@ Method (Claude's proposal, agreed in outline):
    basic things, each able to carry 30+ cards on this board.
 2. The 20 factions as nodes on a circle. Each mechanic has one owner (its monopoly); up to its two neighbours may use it
    on a few cards; the far side of the wheel never has it (its blind spots).
-3. The factions are spread over the spokes below: neighbours are alike on a few spokes, opposites differ most.
+3. The factions are spread over the radii below: neighbours are alike on a few radii, opposites differ most.
 4. A table: the 20 factions by their answers to the five questions; every faction differs from every other in each.
 5. A graph check: mechanics are nodes, a line where one makes what another needs (library fed/feeds); each faction's
    mechanics form one connected group, with lines to each neighbour.
@@ -19,7 +19,9 @@ Method (Claude's proposal, agreed in outline):
 7. Then each faction is designed in its own chat (factions/START_DESIGN.md), its theme chosen to fit.
 
 The axes (first measured on 39 real factions of the 8 library games in an earlier chat, with no saved script; now measured
-by axes.py below on 49 factions of 9 games (the tenth, Marvel Snap, has no factions). Changed 9 Nov 2026 by Kaptain: "locks enemies or outmoves them", "what its cards react to" (placed,
+by axes.py below on 43 factions of 8 games (Marvel Snap has no factions; Monster Train left out by Kaptain, 9 Nov
+2026: a different kind of game). On the page five of the ends below are split into parts, 22 radii in 7 areas
+(factions/13-wheel-measurement.txt). Changed 9 Nov 2026 by Kaptain: "locks enemies or outmoves them", "what its cards react to" (placed,
 attacking, hit, dying: a list of four kinds, not a scale, and covered by axes 1 and 3) and "how hard it is to play"
 dropped; disruption added):
 1.  Own units: spends them (deaths, sacrifice, trading a unit for value) or keeps them alive: staying power (heal, more
@@ -35,7 +37,7 @@ dropped; disruption added):
 6.  How many targets: many at once and counting the board, or one precise target.
 7.  Width (agreed 9 Nov 2026): many cheap units and cards that make units, or a few big ones.
 8.  Hand and discard pile: picks, copies and brings back its own cards, or plays what it draws.
-9.  Unit stats: strength and defence per supply, two spokes; a faction's lean is the difference between them (the
+9.  Unit stats: strength and defence per supply, two radii; a faction's lean is the difference between them (the
     strength value minus the defence value: the last column of the page's Numbers table). Kaptain,
     9 Nov 2026: games with one number for both (Stormbound) count it as both.
 Dropped 9 Nov 2026: sets the pace or answers (Kaptain: its Runeterra order was wrong; most library games have no
@@ -44,7 +46,7 @@ right in only 63 of 149 Faeria deck pairs); moving (Kaptain: most library games 
 done": only places factions that keep units, so it becomes a monopoly choice of those factions); rows and areas (Claude,
 same: "one cell or a row" repeats axis 6, "front or back rows" can't be measured from other games and stays a design
 question per faction).
-A game with under 10 cards for a spoke gives its factions no value on it, not 0 (list: factions/13-wheel-measurement.txt).
+A game with under 10 cards for a radius gives its factions no value on it, not 0 (list: factions/13-wheel-measurement.txt).
 How the axes were missed: the first measured axes came only from what cards do (concept shares), so identity that lives
 in the cost curve, the stats and how a faction feels to play was invisible; look there too.
 Which ends go together is judged by play: one end makes what the other needs, or undoes it (library fed/feeds/both).
@@ -57,11 +59,11 @@ win 2 of 3 lanes), random effects (not allowed), lasting or this-round effects (
 How it is measured, and how to redo it for new games or changed library cards and links: factions/13-wheel-measurement.txt.
 
 The design process from the wheel (AGREED with Kaptain, 9 Nov 2026; done in another chat):
-1. Spokes final; the library gaps in todo.md fixed first (database chat).
+1. Radii final; the library gaps in todo.md fixed first (database chat).
 2. Pool of mechanics: the mechanics this board supports, each from the library and able to carry 30+ cards, each placed
-   on the spokes it serves. `python3 library/cards_db/apart.py` lists mechanics real factions keep apart (opposite sides)
+   on the radii it serves. `python3 library/cards_db/apart.py` lists mechanics real factions keep apart (opposite sides)
    and together (neighbours); read card texts before trusting a pair.
-3. The 20 factions placed: each a shape strong on 2-4 neighbouring spokes and weak on the far side; on the map of
+3. The 20 factions placed: each a shape strong on 2-4 neighbouring radii and weak on the far side; on the map of
    factions no two sit on top of each other.
 4. Per faction 2-3 monopolies, 1-2 mechanics shared with each neighbour on a few cards, blind spots from the far side;
    the five-questions table filled for all 20 at once.
@@ -70,7 +72,7 @@ The design process from the wheel (AGREED with Kaptain, 9 Nov 2026; done in anot
    this way would be poor and unimaginative); what else goes into hooks is worked out in that chat.
    Shared cards (one card in two factions, as in Runeterra) are only one source of combos, never the only one.
 6. Themes, one per faction, fitting its mechanics.
-7. Each faction in its own chat (factions/START_DESIGN.md steps 6-10), then measured on the spokes: it must land where
+7. Each faction in its own chat (factions/START_DESIGN.md steps 6-10), then measured on the radii: it must land where
    the wheel put it; if it drifted, the faction is fixed, not the wheel.
    The measuring is axes.py, the same that put the library's factions on the wheel; it reads cards from the card
    database, so a new faction is measured once its cards are imported there (database chat; todo.md). The seven factions

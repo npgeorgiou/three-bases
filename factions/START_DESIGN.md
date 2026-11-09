@@ -23,7 +23,7 @@ take a base, hold it, or take it from the enemy?
 
 ## THE THINKING PROCESS (in this order; no step skipped)
 Step 0 (Kaptain, 9 Nov 2026): the faction's place on the mechanical wheel (`factions/12-mechanical-wheel.txt`) comes
-first. Its spokes, monopolies, blind spots, mechanics shared with its two neighbours and how it differs from every other
+first. Its radii, monopolies, blind spots, mechanics shared with its two neighbours and how it differs from every other
 faction are decided there, for all 20 factions together, not in the faction's chat. The theme comes last and fits the
 mechanics.
 Steps 1-6 come from the library, never from memory. Run the queries below on all 8 games (`ask.py all ...` from
@@ -93,7 +93,7 @@ read 5-10 card texts behind every count, and write the sources (game: card) next
    The failure this stops: 14 Horologers said "round end: I strike the nearest enemy", with different stats. The gate
    fails two cards whose WHEN + WHAT + ON WHOM are all the same, and one WHEN + WHAT on more than 3 cards.
 10. **Checks**: sections 2-5, then `python3 tools/design_gate.py <letter>` until it prints PASS. Then measure the faction on
-   the wheel's spokes: it must land where the wheel put it; if it drifted, fix the faction, not the wheel. (axes.py, after the faction's
+   the wheel's radii: it must land where the wheel put it; if it drifted, fix the faction, not the wheel. (axes.py, after the faction's
    cards are imported into the card database: todo.md.) Code only after Kaptain
    agreed steps 1-6.
 

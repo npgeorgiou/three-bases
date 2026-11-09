@@ -18,11 +18,12 @@ that links.sqlite links; run links.py first).
 import collections, json, math, os, sqlite3, sys
 import faction_asks, mechanics
 
-DISRUPT_ON_ENEMY = ['stat_loss', 'disable', 'forced_attack', 'forced_movement', 'debuff', 'steal',
-                    'attack_zero', 'silence', 'stat_multiply', 'bounce_enemy', 'polymorph', 'discard', 'immobilize', 'cant_move',
-                    'attack_lock', 'counter_spell', 'transform', 'return_to_hand']
-DISRUPT_ALWAYS = ['hand_disruption', 'mill', 'board_clog', 'cost_increase', 'play_restriction', 'counter_spell',
-                  'steal', 'immobilize', 'attack_lock', 'silence', 'disable', 'bounce_enemy']
+STOP_ON_ENEMY = ['disable', 'silence', 'immobilize', 'cant_move', 'attack_lock']  # stops enemy units; the other ways to break their plan follow
+STOP_ALWAYS = ['immobilize', 'attack_lock', 'silence', 'disable']
+DISRUPT_ON_ENEMY = ['stat_loss', 'forced_attack', 'forced_movement', 'debuff', 'steal', 'attack_zero', 'stat_multiply', 'bounce_enemy',
+                    'polymorph', 'discard', 'counter_spell', 'transform', 'return_to_hand']
+DISRUPT_ALWAYS = ['hand_disruption', 'mill', 'board_clog', 'cost_increase', 'play_restriction', 'counter_spell', 'steal', 'bounce_enemy']
+NOT_MEASURED = ('monster_train',)  # Kaptain, 9 Nov 2026: a different kind of game, not on the page (Marvel Snap has no factions)
 KILL_ON_ENEMY = ['damage', 'excess_damage', 'destroy', 'banish', 'damage_over_time', 'aoe_damage', 'ping', 'direct_damage', 'board_wipe']
 POSITION = ['adjacency', 'aura', 'link_formation', 'flanking', 'assists_support']
 POSITION_GAMES = ('gwent', 'runeterra', 'marvel_snap')  # elsewhere these concepts are area hits and pushes (check of 9 Nov 2026)
@@ -31,12 +32,13 @@ BESIDE = [  # my own units by where they stand next to this card (any game): an 
     "select card from flat_do where on_side='mine' and (" + NEAR.replace('W', "(coalesce(on_with,'')||coalesce(to_with,''))") + ") and ",
     "select card from flat_if where of_side='mine' and (" + NEAR.replace('W', "(coalesce(of_with,'')||coalesce(ev_obj_with,''))") + ") and ",
     "select card from flat_when where obj_side='mine' and (" + NEAR.replace('W', "coalesce(obj_with,'')") + ") and "]
-CANT = ('attacks', 'moves')  # an enemy unit that can't do these: breaks their plan (Kaptain, 9 Nov 2026: "can't block" does not;
+CANT = ('attacks', 'moves')  # an enemy unit that can't do these is stopped (Kaptain, 9 Nov 2026: "can't block" does not;
 # "can't strike" is Inscryption's Waterborne: the enemy can't strike this unit, which protects it)
 SUPPLIES = {'inscryption': ('blood', 'energy', 'bones', 'mox')}  # games whose cards are paid in different kinds of supply
 JUNK_GAMES = ('marvel_snap', 'stormbound', 'gwent')  # junk cards that go to the enemy; in Slay the Spire they hurt my own deck
 UNIT_CATS = ('unit', 'hero', 'leader')
-SHOWN = {'disrupt*': 'an effect on enemies: ' + ', '.join(DISRUPT_ON_ENEMY) + ', can\'t attack, can\'t move; or any card with: ' + ', '.join(DISRUPT_ALWAYS),
+SHOWN = {'stop*': 'an effect on enemies: ' + ', '.join(STOP_ON_ENEMY) + ', can\'t attack, can\'t move; or any card with: ' + ', '.join(STOP_ALWAYS),
+         'disrupt*': 'an effect on enemies: ' + ', '.join(DISRUPT_ON_ENEMY) + '; or any card with: ' + ', '.join(DISRUPT_ALWAYS),
          'chosen*': 'an effect on one chosen unit on the board',
          'kill*': 'an effect on enemies: ' + ', '.join(KILL_ON_ENEMY),
          'position*': 'position: an effect or condition on its own units beside, around or behind it; in Gwent, Runeterra, Marvel Snap also: ' + ', '.join(POSITION),
@@ -51,50 +53,53 @@ SHRINK = 5  # smoothing: every faction counts as if it had 5 more cards at its g
 POWER = 0.75  # smoothing: values are raised to this power (4 times the average shows as 2.8, a quarter as 0.35)
 NO_VALUE = {('into_the_breach', 'strong'): 'its units\' damage comes from weapons, not in the library',
             ('into_the_breach', 'wide'): 'its units have no cost', ('into_the_breach', 'tall'): 'its units have no cost',
-            **{('sts1', k): 'the player has no units' for k in ('strong', 'tough', 'wide', 'tall', 'spends', 'keeps')}}
+            **{('sts1', k): 'the player has no units' for k in ('strong', 'tough', 'wide', 'tall', 'spends', 'heals', 'growsdef', 'protects')}}
 CHECKS = [  # Kaptain's points: (game, faction, spoke, lowest value it must have)
     ('faeria', 'Red', 'fixed', 1.5),  # 9 Nov 2026: Red is Faeria's fixed-damage faction
     ('faeria', 'Red', 'strikes', 1.0),  # and its units strike too; one number used to hide that
     ('inscryption', 'Undead', 'strong', 0.9),  # 0.75 when 4 Bones counted as 4 Blood (SUPPLIES)
 ]
 GAPS = [('inscryption', 'disrupts'), ('sts1', 'tall')]  # must have no value: 5 cards in the whole game; a game with no units
-HAS = [('monster_train', 'wide'), ('monster_train', 'tall'), ('gwent', 'strikes'), ('gwent', 'keeps'),  # must have a value:
-       ('duelyst', 'pos'), ('faeria', 'pos'), ('stormbound', 'pos'),  # width by unit cost; growth of Gwent's one number; position in the board games
+HAS = [('gwent', 'grows'), ('gwent', 'growsdef'),  # must have a value: growth of Gwent's one number counts as both
+       ('duelyst', 'pos'), ('faeria', 'pos'), ('stormbound', 'pos'),  # position in the board games
        ('duelyst', 'one'), ('faeria', 'one'), ('gwent', 'one'), ('stormbound', 'one')]  # a chosen target is read from the rows in every game
 MIN_DECK_CARDS = 10  # Faeria Pandora has 1 card in decks
-SPOKES = [  # (key, axis number, axis name, this end, concepts); "concept@game,game" counts only in those games (the check of 9 Nov 2026)  # in circle order: neighbours belong together
-    ('strong', 9, 'Unit stats', 'strength', ['strength*']),
-    ('strikes', 3, 'Damage', 'units\' own strikes', ['attack_gain@duelyst,faeria,gwent,inscryption,monster_train,runeterra,stormbound,sts1',
-        'on_attack@duelyst,faeria,into_the_breach,monster_train,runeterra,stormbound,sts1', 'multi_attack', 'first_strike',
-        'attack_now', 'excess_damage', 'counterattack', 'on_fight', 'piercing']),
-    ('kills', 2, 'Enemy units', 'kills them', ['kill*', 'removal', 'deathtouch']),
+SPOKES = [  # (key, axis number, axis name, this radius, concepts, area of the circle); "concept@game,game" counts only in those games (the check of 9 Nov 2026)
+    # in circle order: neighbours belong together, and the radii of one area sit side by side
+    ('strong', 9, 'Unit stats', 'strength', ['strength*'], 'Fighting'),
+    ('grows', 3, 'Damage', 'grows strength', ['attack_gain@duelyst,faeria,gwent,inscryption,monster_train,runeterra,stormbound,sts1'], 'Fighting'),
+    ('strikes', 3, 'Damage', 'strikes more or first', ['on_attack@duelyst,faeria,into_the_breach,monster_train,runeterra,stormbound,sts1',
+        'multi_attack', 'first_strike', 'attack_now', 'excess_damage', 'counterattack', 'on_fight', 'piercing'], 'Fighting'),
+    ('kills', 2, 'Enemy units', 'kills them', ['kill*', 'removal', 'deathtouch'], 'Damage'),
     ('fixed', 3, 'Damage', 'fixed damage', ['direct_damage@duelyst,faeria,stormbound',
         'ping@duelyst,faeria,gwent,inscryption,monster_train,runeterra,stormbound',
         'aoe_damage@faeria,gwent,inscryption,into_the_breach,runeterra,stormbound,sts1', 'damage_over_time',
-        'spell_power@duelyst,monster_train,runeterra,sts1', 'board_wipe@duelyst,faeria,gwent,into_the_breach,runeterra,stormbound']),
+        'spell_power@duelyst,monster_train,runeterra,sts1', 'board_wipe@duelyst,faeria,gwent,into_the_breach,runeterra,stormbound'], 'Damage'),
     ('many', 6, 'Targets', 'many at once', ['aoe_damage@faeria,gwent,inscryption,into_the_breach,runeterra,stormbound,sts1',
-        'board_wipe', 'multi_target_attack@into_the_breach,runeterra', 'rows@duelyst,into_the_breach', 'row_effects', 'area_templates', 'countboard*']),
-    ('disrupts', 2, 'Enemy units', 'breaks their plan', ['disrupt*', 'disruption']),
-    ('one', 6, 'Targets', 'one chosen', ['chosen*', 'target_choice', 'mark_target@duelyst,gwent,runeterra,sts1']),
-    ('hand', 8, 'Hand and discard pile', 'picks, brings back', ['recycle', 'copy', 'return_to_hand', 'tutor', 'revive',
-        'retain', 'selection@faeria,gwent,runeterra,sts1']),
-    ('economy', 4, 'Supply and cards', 'more supply, cards', ['resource_gain', 'base_resource_gain', 'resource_banking', 'draw',
-        'cost_reduction@duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1', 'generate_cards',
-        'free_play@gwent,inscryption,monster_train,runeterra,stormbound,sts1', 'coin_economy', 'cost_set', 'in_hand_buff']),
-    ('wide', 7, 'Width', 'many cheap units', ['cheapunit*', 'summon@duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound']),
+        'board_wipe', 'multi_target_attack@into_the_breach,runeterra', 'rows@duelyst,into_the_breach', 'row_effects', 'area_templates', 'countboard*'], 'Damage'),
+    ('stops', 2, 'Enemy units', 'stops them', ['stop*'], 'Control'),
+    ('disrupts', 2, 'Enemy units', 'breaks their plan in other ways', ['disrupt*', 'disruption'], 'Control'),
+    ('one', 6, 'Targets', 'one chosen', ['chosen*', 'target_choice', 'mark_target@duelyst,gwent,runeterra,sts1'], 'Control'),
+    ('supply', 4, 'Supply and cards', 'more supply', ['resource_gain', 'base_resource_gain', 'resource_banking', 'coin_economy'], 'Cards and supply'),
+    ('cheaper', 4, 'Supply and cards', 'cheaper or stronger cards in hand', ['cost_reduction@duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1',
+        'free_play@gwent,inscryption,monster_train,runeterra,stormbound,sts1', 'cost_set', 'in_hand_buff'], 'Cards and supply'),
+    ('cards', 4, 'Supply and cards', 'more cards', ['draw', 'generate_cards'], 'Cards and supply'),
+    ('picks', 8, 'Hand and discard pile', 'picks and copies', ['copy', 'tutor', 'retain', 'selection@faeria,gwent,runeterra,sts1'], 'Cards and supply'),
+    ('back', 8, 'Hand and discard pile', 'brings back', ['recycle', 'return_to_hand', 'revive'], 'Cards and supply'),
+    ('wide', 7, 'Width', 'many cheap units', ['cheapunit*', 'summon@duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound'], 'Many units and dying'),
     ('spends', 1, 'Own units', 'spends them', ['sacrifice@duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound', 'self_destruct@gwent,into_the_breach,stormbound',
         'death_trigger@duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound',
         'other_death_trigger@duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra', 'on_sacrifice',
-        'death_count@faeria,gwent,marvel_snap,monster_train,runeterra', 'friendly_fire@inscryption,runeterra,stormbound']),
-    ('together', 5, 'Works with others', 'position and combos', ['position*', 'combo*']),
-    ('keeps', 1, 'Own units', 'keeps them alive', ['heal@duelyst,gwent,into_the_breach,monster_train,runeterra,stormbound',
-        'regeneration@duelyst,gwent,into_the_breach,monster_train,runeterra,stormbound',
-        'defence_gain@duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound',
-        'shield@duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra', 'protection',
+        'death_count@faeria,gwent,marvel_snap,monster_train,runeterra', 'friendly_fire@inscryption,runeterra,stormbound'], 'Many units and dying'),
+    ('together', 5, 'Works with others', 'position and combos', ['position*', 'combo*'], 'Together'),
+    ('heals', 1, 'Own units', 'heals them', ['heal@duelyst,gwent,into_the_breach,monster_train,runeterra,stormbound',
+        'regeneration@duelyst,gwent,into_the_breach,monster_train,runeterra,stormbound'], 'Staying alive'),
+    ('growsdef', 1, 'Own units', 'grows defence', ['defence_gain@duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound'], 'Staying alive'),
+    ('protects', 1, 'Own units', 'protects them', ['shield@duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra', 'protection',
         'immunity@duelyst,faeria,gwent,inscryption,into_the_breach', 'cheat_death',
-        'damage_reduction@duelyst,faeria,gwent,inscryption,monster_train,runeterra', 'block_armor@gwent,monster_train', 'tank']),
-    ('tough', 9, 'Unit stats', 'defence', ['defence*']),
-    ('tall', 7, 'Width', 'a few big units', ['dearunit*']),
+        'damage_reduction@duelyst,faeria,gwent,inscryption,monster_train,runeterra', 'block_armor@gwent,monster_train', 'tank'], 'Staying alive'),
+    ('tough', 9, 'Unit stats', 'defence', ['defence*'], 'Staying alive'),
+    ('tall', 7, 'Width', 'a few big units', ['dearunit*'], 'Staying alive'),
 ]
 
 
@@ -127,13 +132,14 @@ def tag(c, x, games):
         con[card].add(k)
     for card, k in c.execute("select card, concept from flat_do where on_side='enemy' and coalesce(on_kind,'')!='player' and "
                              + faction_asks.ROW_ORIGIN):
+        if k in STOP_ON_ENEMY: con[card].add('stop*')
         if k in DISRUPT_ON_ENEMY: con[card].add('disrupt*')
         if k in KILL_ON_ENEMY: con[card].add('kill*')
     for (card,) in c.execute("select card from flat_if where test='amount_count' and of_kind='unit' and of_zone='board' and " + faction_asks.ROW_ORIGIN):
         con[card].add('countboard*')
     for (card,) in c.execute("select card from flat_do where on_side='enemy' and coalesce(on_kind,'')!='player' and act='cant' and param_event in "
                              + repr(CANT) + " and " + faction_asks.ROW_ORIGIN):
-        con[card].add('disrupt*')
+        con[card].add('stop*')
     for (card,) in c.execute("select card from flat_do where on_pick='chosen' and on_kind in ('unit','unit_or_structure','hero','leader','any','anything') "
                              "and coalesce(on_zone,'board')='board' and " + faction_asks.ROW_ORIGIN):
         con[card].add('chosen*')
@@ -155,9 +161,10 @@ def tag(c, x, games):
         costs = sorted(stats[i][1] for i in pool if stats[i][0] in UNIT_CATS and stats[i][1] is not None)
         third = lambda n: min(sorted(set(costs)), key=lambda t: abs(n(t) - len(costs) / 3), default=None)
         lo = third(lambda t: sum(1 for v in costs if v <= t))  # the cost up to which the units are nearest to a third of the game's units
-        hi = third(lambda t: sum(1 for v in costs if v >= t))  # (most Monster Train units cost 1: cheap is 0, dear is 2 and more)
+        hi = third(lambda t: sum(1 for v in costs if v >= t))  # (when most units share one cost, cheap is under it and dear is over it)
         for i in pool:
             ks, v = con[i], stats[i][1]
+            if ks & set(STOP_ALWAYS): ks.add('stop*')
             if ks & set(DISRUPT_ALWAYS) or ('junk_cards' in ks and g in JUNK_GAMES): ks.add('disrupt*')
             if ks & set(POSITION) and g in POSITION_GAMES: ks.add('position*')
             if stats[i][0] not in UNIT_CATS or v is None or lo is None or lo >= hi: continue
@@ -191,7 +198,7 @@ def main():
     rows = []
     for g in games:
         pool = pools[g]
-        for fac in x.factions(g):
+        for fac in () if g in NOT_MEASURED else x.factions(g):
             ids = [i for i, v in pool.items() if fac in v[3]]
             w_decks = {i: deck_n[(g, pool[i][0].lower())] for i in ids if deck_n[(g, pool[i][0].lower())]}
             rec = {'game': g, 'faction': fac, 'n_cards': len(ids), 'deck_cards': len(w_decks),
@@ -226,7 +233,7 @@ def main():
                 if r[mode]:
                     f.write(f"{r['game']}\t{r['faction']}\t{r['n_cards']}\t{r['deck_cards']}\t{mode}\t" +
                             '\t'.join(f"{fmt(r[mode][s[0]])}\t{fmt(r[mode][s[0] + '_v'])}" for s in SPOKES) + '\t' + fmt(r[mode]['lean_v']) + '\n')
-    data = {'spokes': [{'key': s[0], 'n': s[1], 'axis': s[2], 'end': s[3], 'concepts': [shown(k) for k in s[4]]} for s in SPOKES],
+    data = {'radii': [{'key': s[0], 'n': s[1], 'axis': s[2], 'end': s[3], 'area': s[5], 'concepts': [shown(k) for k in s[4]]} for s in SPOKES],
             'factions': [{'game': r['game'], 'faction': r['faction'], 'cards': r['n_cards'], 'deckCards': r['deck_cards'],
                           'cardsV': per_spoke(r['cards'], '_v'), 'decksV': per_spoke(r['decks'], '_v'),
                           'cardsS': per_spoke(r['cards'], ''), 'decksS': per_spoke(r['decks'], ''),
@@ -290,7 +297,7 @@ TEXTS = []
 def dump(c, x, games, con, pools, path, per=4):
     """for the check: per spoke and concept, per game the number of cards it catches and up to `per` of them with text"""
     with open(path, 'w', encoding='utf-8') as f:
-        for key, n, axis, end, cons in SPOKES:
+        for key, n, axis, end, cons, _ in SPOKES:
             for k in cons:
                 if k == 'combo*': continue
                 f.write(f'\n## spoke {n} {axis}: {end} | concept {shown(k)}\n')

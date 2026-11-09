@@ -45,8 +45,8 @@ LESSONS.md                         17  lessons for future factions from building
 8-rejected-and-cut.txt               6  8. REJECTED AND CUT (don't reintroduce without asking)
 10-outside-design-guides.txt        79  10. What outside design guides teach (Hearthstone, Rosewater, Slay the Spire...) and what they mean here
 11-seven-factions.txt               61  11. The seven factions of 4 Nov 2026 (clockwork, death, aggro, defence, spells, all-Immobile, WWI artillery): overview, new rules, checks
-12-mechanical-wheel.txt             77  12. The mechanical wheel: designing 20 factions together; its spokes and the agreed design process
-13-wheel-measurement.txt            73  13. How the wheel's spokes are measured (axes.py, wheel-axes.html) and how to redo it
+12-mechanical-wheel.txt             79  12. The mechanical wheel: designing 20 factions together; its radii and the agreed design process
+13-wheel-measurement.txt            83  13. How the wheel's radii are measured (axes.py, wheel-axes.html) and how to redo it
 designs/00-five-identities.txt      52  The five new factions from zero: overview, contrast, signatures, new rules needed
 designs/ironfront.txt               90  Ironfront (World War I) stage 1: theme, mechanics, web, ways to play
 designs/lodestones.txt              88  Lodestones (megaliths, all Immobile) stage 1
