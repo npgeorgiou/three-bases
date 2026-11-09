@@ -1003,6 +1003,20 @@ def helps_it(c, act, kw, ps):
     return act in ('cost_set', 'heal', 'negate_damage', 'give_ability', 'damage_reduction', 'countdown_advance', 'ready')
 
 
+NOT_SUMMON_FX = ('haste', 'movement', 'stealth', 'activated', 'adjacency', 'rows', 'trap_secret', 'exhaust', 'banish', None)
+
+
+def kw_reacts(c, kw):
+    """a keyword that is a reaction: its concept is one, or it goes off when its card is played or summoned and does something
+    (Attune, Inscryption's "When played" sigils; Kaptain, 9 Nov 2026), not a permission (Haste, Zeal, Order, Ambush)"""
+    if ('react', kw) not in CACHE:
+        t = kw_tree(c, kw)
+        ws = c.execute("select event, obj_pick from flat_when where card=?", (kw,)).fetchall()
+        CACHE[('react', kw)] = t in TRIGGER_KW or (bool(ws) and all(e in ('played', 'summoned') and p == 'self' for e, p in ws)
+                                                   and t not in NOT_SUMMON_FX and not c.execute("select 1 from card where id=? and name like 'Game rule%'", (kw,)).fetchone())
+    return CACHE[('react', kw)]
+
+
 def kw_tree(c, kw):
     """a keyword's concept; the game's own entry first ("into_the_breach:Boost" is a buff, another game's Boost is not)"""
     r = c.execute("""select v.tree from card k join vocab v on v.field='keyword' and v.value in (k.name, k.game || ':' || k.name)
@@ -1242,12 +1256,12 @@ def generic_use(c, game):
         if i in d: d[i]['trees'].add(kw_tree(c, k))  # a keyword it gives itself is its own (Hornbreaker Prince's Multistrike upgrade)
     for i, e, origin, via in c.execute("""select card, event, origin, via from flat_when where origin in ('own','has_keyword')
             and (obj_pick in ('self','actor_self') or (origin='has_keyword' and obj_pick is null))"""):
-        if origin == 'own' or kw_tree(c, via) in TRIGGER_KW: d[i]['self_when'].add(e)  # "Strike:", "Slay:" as keywords (Monster Train)
+        if origin == 'own' or kw_reacts(c, via): d[i]['self_when'].add(e)  # "Strike:", "Slay:" as keywords (Monster Train)
     for i in drawback_cards(c): d[i]['self_when'] -= {'played', 'summoned'}  # its Play effect is a drawback: replaying it is no help (L5)
     kw_stat = {t for (t,) in c.execute("select w.card from cond k join flat_when w on w.ability=k.ability where k.test='keyword_condition' and k.ref_keyword is not null and w.event='stat_changed'")}
     for i, h, origin, via, k, rl, ow in c.execute("""select card, happening, origin, via, keyword, role, obj_with from flat_ref where role!='makes' and origin in ('own','has_keyword')
             and coalesce(side,'') in ('','mine','any')"""):
-        if origin != 'own' and kw_tree(c, via) not in TRIGGER_KW: continue  # a keyword's inner working (Barrier pops when damaged,
+        if origin != 'own' and not kw_reacts(c, via): continue  # a keyword's inner working (Barrier pops when damaged,
         # Challenger picks when attacking) is no need of the card; a keyword that is a reaction is (Revenge: when damaged)
         if h in ('given_keyword', 'keyword_used', 'keyword_removed'): d[i]['kw_needs'].add((h, k))  # which keyword it waits for
         elif not (h == 'stat_changed' and i in kw_stat): d[i]['needs'].add(h)  # Power gained from Hallowed (Gwen) comes only from Hallowed ()
