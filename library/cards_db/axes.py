@@ -6,9 +6,9 @@ written below so it can be checked and changed). A card counts for an end if it 
   score = share of the faction's cards with the high end - share with the low end   (numeric axes: the number itself)
   then centred within its game (minus the mean of that game's factions), then scaled over all factions (z-score).
 Two counts: "cards" = every card of the faction once; "decks" = each faction card weighted by how many of the
-library's top decks (decks.tsv) play it. Axis 10's rows part is not measured.
-Axis 5 (works with others) = the average of two scales: the share of position cards and the share of the faction's card
-pairs that links.sqlite links (run links.py first). speed_test() checks axis 11 against deck names.
+library's top decks (decks.tsv) play it. Axis 5 (works with others) = the average of two scales: the share of position cards and the share of the faction's card
+pairs that links.sqlite links (run links.py first). speed_test() checks axis 9 against deck names; it is not proven, so the page starts with it off.
+A game with fewer than MIN_GAME_CARDS cards for both ends of an axis gives its factions no value on it (a gap).
 Disruption (axis 2): a card breaks the enemy's plan if one of its effects lands on the enemy (side 'enemy') with a concept of
 DISRUPT_ON_ENEMY, or it has a concept of DISRUPT_ALWAYS; it only kills if an effect on the enemy is in KILL_ON_ENEMY.
 """
@@ -30,6 +30,10 @@ SHOWN.update({'position*': 'position: ' + ', '.join(POSITION),
               'cheap*': 'any card in the cheapest third of its game', 'dear*': 'any card in the dearest third of its game',
               'cheapunit*': 'a unit in the cheapest third of its game', 'dearunit*': 'a unit in the dearest third of its game'})
 UNIT_CATS = ('unit', 'hero', 'leader')
+SHOWN.update({'threat*': 'a unit in the cheapest third of its game with more strength than defence',
+              'grows*': 'grows for good at the start or end of every round (must be answered)',
+              'enemy_sets_off*': 'its effect is set off by something the enemy does'})
+MIN_GAME_CARDS = 5  # a game with fewer cards than this for both ends of an axis gives its factions no value on it
 MIN_DECK_CARDS = 10  # fewer of a faction's cards in decks.tsv than this: no deck measure (Faeria Pandora has 1)
 AXES = [  # (key, label, high end, low end, high concepts, low concepts, axis number in factions/12)
     ('spend', 'Spends own units / keeps them', 'spends', 'keeps',
@@ -47,17 +51,14 @@ AXES = [  # (key, label, high end, low end, high concepts, low concepts, axis nu
      ['aoe_damage', 'board_wipe', 'count_payoff', 'multi_target_attack', 'rows', 'row_effects', 'area_templates', 'symmetric_effect'],
      ['target_choice', 'mark_target'], 6),
     ('size', 'Many cheap units / few big', 'many cheap', 'few big', ['cheapunit*', 'summon'], ['dearunit*'], 7),
-    ('repair', 'Repair / prevent', 'repairs', 'prevents',
-     ['heal', 'regeneration'], ['shield', 'damage_reduction', 'immunity', 'block_armor', 'protection', 'taunt', 'cheat_death'], 8),
     ('hand', 'Picks and brings back cards / plays what it draws', 'picks, brings back', 'plays its draws',
-     ['recycle', 'copy', 'return_to_hand', 'tutor', 'revive', 'retain', 'selection', 'in_hand_buff'], [], 9),
-    ('area', 'Hits a row or area / one cell', 'row, area', 'one cell', ['rows', 'row_effects', 'area_templates'], [], 10),
-    ('speed', 'Strongest early / late (fails the named-deck check in Faeria)', 'early', 'late', ['cheap*', 'haste', 'attack_now'],
-     ['dear*'] + GROWS_LATE, 11),
-    ('power', 'Strength / defence (unit stats in strength)', 'strength', 'defence', None, None, 12),
+     ['recycle', 'copy', 'return_to_hand', 'tutor', 'revive', 'retain', 'selection', 'in_hand_buff'], [], 8),
+    ('speed', 'Strongest early / late (not proven)', 'early', 'late', ['cheap*', 'haste', 'attack_now', 'threat*'],
+     ['dear*'] + GROWS_LATE, 9),
+    ('power', 'Strength / defence (unit stats in strength)', 'strength', 'defence', None, None, 10),
     ('pace', 'Sets the pace / answers', 'sets pace', 'answers',
-     ['haste', 'attack_now', 'forced_attack', 'nexus_damage_condition'],
-     ['reactions', 'counter_spell', 'trap_secret', 'on_targeted', 'counterattack'], 13),
+     ['haste', 'attack_now', 'forced_attack', 'threat*', 'grows*'],
+     ['reactions', 'counter_spell', 'trap_secret', 'on_targeted', 'counterattack', 'spell_speed', 'enemy_sets_off*'], 11),
 ]
 
 
@@ -86,6 +87,12 @@ def main():
             if v[2] >= hi: con[i].add('dear*'); unit and con[i].add('dearunit*')
     for i, ks in con.items():
         if ks & set(POSITION): ks.add('position*')
+        if 'permanent_growth' in ks and ks & {'turn_start', 'turn_end'}: ks.add('grows*')
+        if 'cheapunit*' in ks and (stats[i][2] or 0) > (stats[i][3] or 0): ks.add('threat*')
+    for (i,) in c.execute("select distinct card from flat_when where actor_side='enemy'"):
+        con[i].add('enemy_sets_off*')
+    lacks = {(g, a[0]) for g in games for a in AXES if a[4] is not None and a[0] != 'together'
+             and sum(1 for i in pools[g] if con[i] & set(a[4] + a[5])) < MIN_GAME_CARDS}
     pairs = set()
     L = sqlite3.connect('links.sqlite')
     for a, b in L.execute('select a, b from link'):
@@ -108,6 +115,9 @@ def main():
             rec = {'game': g, 'faction': fac, 'n_cards': len(ids), 'deck_cards': len(w_decks)}
             rec['cards'] = measure(w_cards, con, stats, pairs)
             rec['decks'] = measure(w_decks, con, stats, pairs) if len(w_decks) >= MIN_DECK_CARDS else None
+            for m in ('cards', 'decks'):
+                for g2, k in lacks:
+                    if g2 == g and rec[m]: rec[m][k] = None
             rows.append(rec)
     for mode in ('cards', 'decks'):
         ms = [r[mode] for r in rows if r[mode]]
@@ -139,7 +149,7 @@ def main():
                 if not r[mode]: continue
                 f.write(f"{r['game']}\t{r['faction']}\t{r['n_cards']}\t{r['deck_cards']}\t{mode}\t" +
                         '\t'.join(f"{fmt(r[mode][a[0]])}\t{fmt(r[mode].get(a[0] + '_z'))}" for a in AXES) + '\n')
-    data = {'axes': [{'key': a[0], 'label': a[1], 'hi': a[2], 'lo': a[3], 'hiC': a[4] and [SHOWN.get(k, k) for k in a[4]], 'loC': a[5] and [SHOWN.get(k, k) for k in a[5]], 'n': a[6]} for a in AXES],
+    data = {'axes': [{'key': a[0], 'label': a[1], 'hi': a[2], 'lo': a[3], 'hiC': a[4] and [SHOWN.get(k, k) for k in a[4]], 'loC': a[5] and [SHOWN.get(k, k) for k in a[5]], 'n': a[6], 'off': a[0] == 'speed'} for a in AXES],
             'factions': [{'game': r['game'], 'faction': r['faction'], 'cards': r['n_cards'], 'deckCards': r['deck_cards'],
                           'cardsZ': zz(r['cards']), 'decksZ': zz(r['decks']),
                           'cardsRaw': raw(r['cards']), 'decksRaw': raw(r['decks'])} for r in rows]}

@@ -40,7 +40,7 @@ const GAMES=[...new Set(F.map(f=>f.game))];
 const PAL=['#e6194b','#3cb44b','#4363d8','#f58231','#911eb4','#42d4f4','#f032e6','#9a6324','#469990','#800000','#808000','#000075','#e6a800','#a9a9a9','#bfef45','#fabed4','#dcbeff','#aaffc3','#ffd8b1'];
 const GCOL={};GAMES.forEach((g,i)=>GCOL[g]=PAL[i%PAL.length]);
 F.forEach((f,i)=>{f.id=i;f.col=PAL[i%PAL.length]});
-let mode='cards',view='radar',sel=new Set(),axOn=new Set(A.map(a=>a.key));
+let mode='cards',view='radar',sel=new Set(),axOn=new Set(A.filter(a=>!a.off).map(a=>a.key));
 const tip=document.getElementById('tip');
 function showTip(e,h){tip.innerHTML=h;tip.style.display='block';tip.style.left=Math.min(e.clientX+12,innerWidth-350)+'px';tip.style.top=(e.clientY+12)+'px'}
 function hideTip(){tip.style.display='none'}
@@ -79,8 +79,8 @@ function radar(){const box=document.getElementById('radarBox');box.innerHTML='';
   const pts=ax.map((a,i)=>{const v=z[a.key]==null?0:z[a.key];return[C+Math.cos(ang(i))*rad(v),C+Math.sin(ang(i))*rad(v)]});
   const pg=el('polygon',{points:pts.map(p=>p.join(',')).join(' '),fill:f.col,'fill-opacity':.08,stroke:f.col,'stroke-width':2},svg);
   pg.onmousemove=e=>showTip(e,`<b>${f.faction}</b> (${f.game})`);pg.onmouseleave=hideTip;
-  ax.forEach((a,i)=>{const c=el('circle',{cx:pts[i][0],cy:pts[i][1],r:4,fill:f.col},svg);
-   c.onmousemove=e=>showTip(e,`<b>${f.faction}</b> (${f.game})<br>${a.n}. ${a.label}<br>Scale: ${z[a.key]==null?'–':(z[a.key]>=0?'+':'')+z[a.key].toFixed(2)} (0 = average of its game)<br>${fmtRaw(a,r[a.key])}`);c.onmouseleave=hideTip})}
+  ax.forEach((a,i)=>{const none=z[a.key]==null;const c=el('circle',{cx:pts[i][0],cy:pts[i][1],r:4,fill:none?'#fff':f.col,stroke:f.col},svg);
+   c.onmousemove=e=>showTip(e,`<b>${f.faction}</b> (${f.game})<br>${a.n}. ${a.label}<br>${none?'No value: its game has almost no cards for this axis':''}<br>Scale: ${z[a.key]==null?'–':(z[a.key]>=0?'+':'')+z[a.key].toFixed(2)} (0 = average of its game)<br>${fmtRaw(a,r[a.key])}`);c.onmouseleave=hideTip})}
  document.getElementById('explain').innerHTML='Each spoke is one axis. The dashed ring is the average faction of its own game (0). Each ring outward or inward is one step of spread (1 standard deviation over all factions). Outward = the end written at the spoke tip; inward = the end written near the centre. Hover a spoke name to see which library concepts measure it (my choice of concepts), hover a dot for the numbers.'}
 
 function vec(f){return A.filter(a=>axOn.has(a.key)).map(a=>{const v=Z(f)[a.key];return v==null?0:v})}
@@ -113,7 +113,8 @@ function table(){const box=document.getElementById('tableBox');const ax=A.filter
  document.getElementById('explain').innerHTML='Scale per axis: 0 = average faction of its own game, +1 = one step of spread toward the end in the header. Selected factions only (all when none is selected). Click a header to sort, hover a cell for the raw number.'}
 
 function near(){const s=document.getElementById('nearSel');const f=F[s.value];const ol=document.getElementById('nearList');if(!f||!has(f)){ol.innerHTML='';return}
- const v=vec(f);const d=F.filter(g=>has(g)&&g.id!==f.id).map(g=>[g,Math.sqrt(vec(g).reduce((a,x,i)=>a+(x-v[i])**2,0))]).sort((a,b)=>a[1]-b[1]).slice(0,8);
+ const ks=A.filter(a=>axOn.has(a.key)).map(a=>a.key);const dist=g=>{const both=ks.filter(k=>Z(f)[k]!=null&&Z(g)[k]!=null);return both.length?Math.sqrt(both.reduce((a,k)=>a+(Z(g)[k]-Z(f)[k])**2,0)*ks.length/both.length):99};
+ const d=F.filter(g=>has(g)&&g.id!==f.id).map(g=>[g,dist(g)]).sort((a,b)=>a[1]-b[1]).slice(0,8);
  ol.innerHTML=d.map(([g,x])=>`<li>${g.faction} <span class="note">(${g.game.replace(/_/g,' ')}, ${x.toFixed(1)})</span></li>`).join('')}
 document.getElementById('nearSel').onchange=near;
 function draw(){document.getElementById('radarBox').style.display=view==='radar'?'':'none';document.getElementById('mapBox').style.display=view==='map'?'':'none';document.getElementById('tableBox').style.display=view==='table'?'':'none';
