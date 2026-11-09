@@ -92,36 +92,58 @@ $('#tuGames').addEventListener('change', () => { $('#tuGames').value = tuneGames
 function newGeneration() {
   const st = tuneState(), L = st.cma.lambda;
   // the candidates, then the centre itself (the values the ifelse AI has now): it plays the same games, only to be measured
-  st.cand = { G: tuneGames(), xs: [...cmaSamples(st.cma), st.cma.mean.slice()], w: Array(L + 1).fill(0), n: Array(L + 1).fill(0), started: Array(L + 1).fill(0) };
+  // res[candidate][deal]: its score in that game (1 win, 0.5 draw, 0 loss), null until played
+  const G = tuneGames();
+  st.cand = { G, xs: [...cmaSamples(st.cma), st.cma.mean.slice()], res: Array.from({ length: L + 1 }, () => Array(G).fill(null)) };
+  tuneRunning.clear();
 }
+/** The games being played now (candidate-deal), not saved: after a pause they are played again. */
+const tuneRunning = new Set();
+const tuneDone = c => c.res.reduce((n, r) => n + r.filter(x => x !== null).length, 0);
 function tuneJob() {
   const st = tuneState(), c = st.cand;
   if (!c) return null;
-  let i = -1;
-  c.started.forEach((s, j) => { if (s < c.G && (i < 0 || s < c.started[i])) i = j; });   // the candidate with fewest games started
+  let i = -1, gi = -1, fewest = Infinity;                               // the candidate with fewest games done or running, its first deal left
+  c.res.forEach((r, j) => {
+    const free = r.findIndex((x, d) => x === null && !tuneRunning.has(j + '-' + d));
+    if (free < 0) return;
+    const busy = r.filter((x, d) => x !== null || tuneRunning.has(j + '-' + d)).length;
+    if (busy < fewest) { fewest = busy; i = j; gi = free; }
+  });
   if (i < 0) return null;
-  const gi = c.started[i]++, m = gi % 3 === 2 ? 'S' : 'X', seat = Math.floor(gi / 3) % 2;
+  tuneRunning.add(i + '-' + gi);
+  const m = gi % 3 === 2 ? 'S' : 'X', seat = Math.floor(gi / 3) % 2;
   const mine = { kind: 'ifelse', cfg: { ...ifelseFull(tuneDecode(c.xs[i], st.depth)), depth: st.depth } };
   const opp = tuneOppSpec(st.opps[Math.floor(gi / 12) % st.opps.length], st.depth);   // every candidate gets the same schedule
-  return { key: 'tune' + st.gen + '-' + i + '-' + gi, i, seat, gen: st.gen, specs: seat === 0 ? [mine, opp] : [opp, mine],
+  return { key: 'tune' + st.gen + '-' + i + '-' + gi, i, gi, seat, gen: st.gen, specs: seat === 0 ? [mine, opp] : [opp, mine],
     seed: st.gen * 100003 + gi,                                                // game gi deals the same cards for every candidate
     decks: MATCHUPS[m].pairs[(st.gen * Math.ceil(c.G / 6) + Math.floor(gi / 6)) % MATCHUPS[m].pairs.length] };   // later generations go on through the pairs
 }
 function tuneResult(r, job) {
   const st = tuneState(), c = st.cand;
   if (!c || job.gen !== st.gen) return;
-  c.w[job.i] += r.winner === job.seat ? 1 : r.winner === 'draw' ? 0.5 : 0;
-  c.n[job.i]++;
-  if (c.n.every(x => x >= c.G)) finishGeneration(); else renderTuneStatus();
+  tuneRunning.delete(job.i + '-' + job.gi);
+  c.res[job.i][job.gi] = r.winner === job.seat ? 1 : r.winner === 'draw' ? 0.5 : 0;
+  // every game started, half the cores or more idle, and the unfinished games in at most 5% of the deals: the generation
+  // ends without those deals (dropped for every candidate alike, so all still played the same deals) instead of the
+  // cores waiting for a few long games
+  const left = c.G * c.res.length - tuneDone(c), cores = tune.pool ? tune.pool.size : 1;
+  const open = c.res[0].filter((_, d) => c.res.some(r => r[d] === null)).length;
+  if (left === 0 || (left === tuneRunning.size && left <= Math.max(1, Math.floor(cores / 2)) && open <= Math.max(1, Math.floor(c.G * 0.05)))) finishGeneration();
+  else renderTuneStatus();
 }
 function finishGeneration() {
-  const st = tuneState(), c = st.cand, all = c.w.map((w, i) => w / c.n[i]), L = st.cma.lambda, rates = all.slice(0, L), centre = all[L];
+  const st = tuneState(), c = st.cand, L = st.cma.lambda, gen = st.gen;
+  const deals = c.res[0].map((_, d) => d).filter(d => c.res.every(r => r[d] !== null));   // the deals every candidate finished
+  const all = c.res.map(r => deals.reduce((a, d) => a + r[d], 0) / Math.max(1, deals.length)), rates = all.slice(0, L), centre = all[L];
+  if (tuneRunning.size && tune.pool) tune.pool.cancel(job => job.gen === gen);   // the dropped games stop at once
+  tuneRunning.clear();
   // the centre moves only when the better half of the candidates beat it in the same games; else it stays and the steps get smaller
   const half = rates.slice().sort((a, b) => b - a).slice(0, Math.floor(L / 2)), better = half.reduce((a, b) => a + b, 0) / half.length > centre;
   if (better) cmaUpdate(st.cma, c.xs.slice(0, L), rates); else st.cma.sigma *= 0.9;
   st.best = tuneDecode(st.cma.mean, st.depth);
   const avg = rates.reduce((a, b) => a + b, 0) / rates.length, top = Math.max(...rates);
-  st.hist.push({ gen: st.gen, avg, top, centre, kept: !better, lambda: L, sigma: st.cma.sigma });
+  st.hist.push({ gen: st.gen, avg, top, centre, kept: !better, lambda: L, sigma: st.cma.sigma, deals: deals.length });
   if (st.hist.length > 2000) st.hist.splice(0, st.hist.length - 2000);
   // settled (a tiny step size) → restart around the centre with twice the candidates. A generation average that stops
   // rising is not a reason: with a few hundred games per candidate it stalls by luck, and a restart throws away the step sizes learned.
@@ -139,10 +161,10 @@ function startTune() {
   if (Object.keys(trainings).length) stopAllTraining();
   if (tour.running) pauseTournament();
   const st = tuneState();
-  if (st.cand) st.cand.started = st.cand.n.slice();                           // games cut off by a pause are played again
-  else newGeneration();
+  tuneRunning.clear();                                                        // games cut off by a pause are played again
+  if (!st.cand || !st.cand.res) newGeneration();
   tune.running = true;
-  const onFail = (job, msg) => { const c = tuneState().cand; if (c && job && job.gen === tuneState().gen) c.started[job.i]--; reportError('A tuning game failed: ' + msg); };
+  const onFail = (job, msg) => { if (job && job.gen === tuneState().gen) tuneRunning.delete(job.i + '-' + job.gi); reportError('A tuning game failed: ' + msg); };
   tune.pool = new Pool(Math.max(1, Math.min(32, Number($('#tuThreads').value) || 1)), Object.fromEntries(NETS.map(n => [n.id, playable(netData[n.id])])), tuneJob, tuneResult, onFail);
   renderTune();
 }
@@ -249,7 +271,7 @@ $('#tuThreads').addEventListener('change', () => { if (tune.pool) tune.pool.resi
 const tpct = v => (v == null || !Number.isFinite(v) ? '–' : Math.round(v * 100) + '%');
 function renderTuneStatus() {
   const st = tuneState(), c = st.cand, last = [...st.hist].reverse().find(e => !e.mark);
-  const done = c ? c.n.reduce((a, b) => a + b, 0) : 0, total = c ? c.G * c.xs.length : 0;
+  const done = c && c.res ? tuneDone(c) : 0, total = c && c.res ? c.G * c.res.length : 0;
   $('#tuStatus').textContent = (tune.running ? 'Tuning' : st.gen || c ? 'Paused' : 'Not started') +
     ` · generation ${st.gen + 1} · ${st.cma.lambda} candidates` + (c ? ` · ${done}/${total} games` : '') +
     (last ? ` · last generation: the ifelse AI ${tpct(last.centre)}, candidates' average ${tpct(last.avg)}, best candidate ${tpct(last.top)}` : '') +
@@ -287,7 +309,7 @@ function renderTune() {
     svg += `<polyline class="tuavg" points="${gens.map((e, k) => `${X(k)},${Y(e.avg)}`).join(' ')}"></polyline>`;
     const cen = gens.map((e, k) => (e.centre == null ? null : `${X(k)},${Y(e.centre)}`)).filter(Boolean);
     if (cen.length) svg += `<polyline class="tubest" points="${cen.join(' ')}"></polyline>`;
-    svg += gens.map((e, k) => `<circle class="tucand acc" cx="${X(k)}" cy="${Y(e.top)}" r="3.5"><title>Generation ${e.gen + 1}: ifelse AI ${tpct(e.centre)}${e.kept ? ' (better half not better: centre kept)' : ''}, candidates' average ${tpct(e.avg)}, best candidate ${tpct(e.top)} (${e.lambda} candidates)</title></circle>`).join('');
+    svg += gens.map((e, k) => `<circle class="tucand acc" cx="${X(k)}" cy="${Y(e.top)}" r="3.5"><title>Generation ${e.gen + 1}: ifelse AI ${tpct(e.centre)}${e.kept ? ' (better half not better: centre kept)' : ''}, candidates' average ${tpct(e.avg)}, best candidate ${tpct(e.top)} (${e.lambda} candidates${e.deals ? `, ${e.deals} games each` : ''})</title></circle>`).join('');
     svg += `<text class="xlab" x="${l}" y="${H - 10}">generation ${gens[0].gen + 1}</text><text class="xlab end" x="${W - r}" y="${H - 10}">generation ${gens[gens.length - 1].gen + 1}</text>`;
   }
   $('#tuChart').innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Win rates by generation">${svg}</svg>

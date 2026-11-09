@@ -58,6 +58,11 @@ class Pool {
     }
   }
   busy() { return this.workers.some(w => w.job); }
+  /** Stop the games whose job matches: their workers are replaced by fresh ones, which take new games. */
+  cancel(match) {
+    for (const w of this.workers.filter(x => x.job && match(x.job))) { w.job = null; this.drop(w); if (!w.retiring) this.addWorker(); }
+    this.feed();
+  }
   setNets(nets) { this.nets = nets; for (const w of this.workers) w.postMessage({ type: 'nets', nets }); }
   stop() { this.stopped = true; for (const w of this.workers) w.terminate(); this.workers = []; }
 }
