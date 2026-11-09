@@ -6,8 +6,9 @@
    against the Benchmark (both looking 1 move ahead), shown on the chart. Lessons are kept in the browser's database.
    ===================================================================== */
 const LESSON_BLOCK = 50, LESSON_EVERY = 7, LESSON_PER_GAME = 12, LESSON_RENEW = 0.25, STRENGTH_EVERY = 10, STRENGTH_GAMES = 100;
-/** list: the lessons, oldest first; need: new ones still wanted before the next round; asked: lessons expected from games being played. */
-const LESSONS = { list: [], cards: '', need: 0, asked: 0, seed: 0 };
+/** list: the lessons, oldest first; need: new ones still wanted before the next round; spare: new ones that came in
+ *  after enough were made (they wait for the next round's renewal, so the lessons never change during a round). */
+const LESSONS = { list: [], cards: '', need: 0, spare: [], seed: 0 };
 /** The cards' stamp: lessons made with other cards (stats, texts) are thrown away. */
 const lessonCards = () => { let h = 2166136261; const t = JSON.stringify(Object.entries(CARDS).map(([k, c]) => [k, c.sup, c.str, c.def, c.text])); for (let i = 0; i < t.length; i++) { h ^= t.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; } return h.toString(36); };
 const lessonDb = new Promise(resolve => {
@@ -21,15 +22,15 @@ const lessonDb = new Promise(resolve => {
 lessonDb.then(db => {
   if (!db) return;
   const req = db.transaction('lessons', 'readonly').objectStore('lessons').get('set');
-  req.onsuccess = () => { const v = req.result; if (v && v.cards === lessonCards() && v.list.every(l => l.result != null)) Object.assign(LESSONS, { list: v.list, cards: v.cards, need: v.need || 0, seed: v.seed || 0 }); renderTuneStatus(); };
+  req.onsuccess = () => { const v = req.result; if (v && v.cards === lessonCards() && v.list.every(l => l.result != null)) Object.assign(LESSONS, { list: v.list, cards: v.cards, need: v.need || 0, spare: v.spare || [], seed: v.seed || 0 }); renderTuneStatus(); };
 });
 function saveLessons() {
-  lessonDb.then(db => { if (db) db.transaction('lessons', 'readwrite').objectStore('lessons').put({ list: LESSONS.list, cards: LESSONS.cards, need: LESSONS.need, seed: LESSONS.seed }, 'set'); });
+  lessonDb.then(db => { if (db) db.transaction('lessons', 'readwrite').objectStore('lessons').put({ list: LESSONS.list, cards: LESSONS.cards, need: LESSONS.need, spare: LESSONS.spare, seed: LESSONS.seed }, 'set'); });
 }
 const lessonTarget = () => tuneState().lessonN || 1000;               // how many lessons each try is graded on (kept with the tuning)
 /** Lessons are ready when there are enough, all made with these cards, and none are still wanted for this round. */
 function lessonsReady() {
-  if (LESSONS.cards !== lessonCards()) { LESSONS.list = []; LESSONS.cards = lessonCards(); }
+  if (LESSONS.cards !== lessonCards()) { LESSONS.list = []; LESSONS.spare = []; LESSONS.cards = lessonCards(); }
   if (LESSONS.list.length < lessonTarget() && LESSONS.need < lessonTarget() - LESSONS.list.length) LESSONS.need = lessonTarget() - LESSONS.list.length;
   return LESSONS.need === 0;
 }
@@ -37,6 +38,7 @@ const lessonBlocks = () => Math.ceil(lessonTarget() / LESSON_BLOCK);
 /** After a round: a quarter of the lessons are remade with the new centre; every 10th round the centre plays the Benchmark. */
 function lessonsAfterRound(st) {
   LESSONS.need = Math.max(LESSONS.need, Math.ceil(lessonTarget() * LESSON_RENEW));
+  addLessons(LESSONS.spare.splice(0, LESSONS.need));                  // the spare ones from the last making count first
   if (st.gen % STRENGTH_EVERY === 0) st.strength = { gen: st.gen - 1, values: { ...st.best }, res: Array(STRENGTH_GAMES).fill(null) };
   saveLessons();
 }
@@ -54,9 +56,7 @@ function lessonJob(st, c) {
         seed: 900001 + g.gen * 1000 + k, decks: DECK_PAIRS[(g.gen * 7 + Math.floor(k / 2)) % DECK_PAIRS.length] };
     }
   }
-  if (!lessonsReady()) {
-    if (LESSONS.asked >= LESSONS.need) return null;                   // enough games running to make the lessons wanted
-    LESSONS.asked += LESSON_PER_GAME;
+  if (!lessonsReady()) {                                              // every free core plays a game to make lessons
     const seed = 7001 + LESSONS.seed++;
     return { key: 'lesson-make-' + seed, lesson: 'make', msg: { type: 'lessonMake', seed, teacher: lessonTeacher(ifelseFull(st.best)), every: LESSON_EVERY,
       most: LESSON_PER_GAME, actionCap: ACTION_CAP, roundCap: ROUND_CAP, decks: DECK_PAIRS[seed % DECK_PAIRS.length] } };
@@ -67,6 +67,13 @@ function lessonJob(st, c) {
   const [i, gi] = pick;
   return { key: 'lesson' + st.gen + '-' + i + '-' + gi, lesson: 'grade', i, gi, gen: st.gen,
     msg: { type: 'lessonGrade', cfg: ifelseFull(tuneDecode(c.xs[i], 1)), from: gi * LESSON_BLOCK, to: (gi + 1) * LESSON_BLOCK } };
+}
+/** New lessons go in at the end; the oldest go when there are more than wanted. */
+function addLessons(ls) {
+  if (!ls.length) return;
+  LESSONS.list.push(...ls);
+  if (LESSONS.list.length > lessonTarget()) LESSONS.list.splice(0, LESSONS.list.length - lessonTarget());
+  LESSONS.need = Math.max(0, LESSONS.need - ls.length);
 }
 function lessonResult(r, job) {
   const st = tuneState();
@@ -83,12 +90,10 @@ function lessonResult(r, job) {
     return;
   }
   if (job.lesson === 'make') {
-    LESSONS.asked = Math.max(0, LESSONS.asked - LESSON_PER_GAME);
     const take = r.lessons.slice(0, LESSONS.need);
-    if (!take.length) return;
-    LESSONS.list.push(...take);
-    if (LESSONS.list.length > lessonTarget()) LESSONS.list.splice(0, LESSONS.list.length - lessonTarget());   // the oldest go
-    LESSONS.need -= take.length;
+    LESSONS.spare.push(...r.lessons.slice(take.length));
+    if (LESSONS.spare.length > lessonTarget()) LESSONS.spare.splice(0, LESSONS.spare.length - lessonTarget());
+    addLessons(take);
     if (LESSONS.need === 0) saveLessons();
     renderTuneStatus();
     return;

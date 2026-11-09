@@ -8,10 +8,28 @@ const MAX_PENDING = 12000;   // positions waiting to be learned from; above this
  * A pool of game workers. Each takes one job at a time from `nextJob` and hands the result to `onResult`;
  * a game that crashes is handed to `onFail` (never silently dropped), so callers can replace it.
  */
+/** While games run, the browser must not slow the page down when its tab is hidden: a held Web Lock keeps the tab from
+ *  being frozen, and a near-silent sound keeps it counted as playing audio, which browsers run at full speed (the tab
+ *  shows a speaker icon). The sound needs a click to start, so it starts with the Start buttons. */
+const awake = { n: 0, ctx: null, release: null };
+function keepAwake(on) {
+  awake.n = Math.max(0, awake.n + (on ? 1 : -1));
+  if (awake.n === 1 && on) {
+    try { if (navigator.locks) { const held = new Promise(r => { awake.release = r; }); navigator.locks.request('threeBases.lab.running', () => held); } } catch (e) { /* no Web Locks */ }
+    try {
+      const A = window.AudioContext || window.webkitAudioContext;
+      if (A) { awake.ctx = new A(); const o = awake.ctx.createOscillator(), g = awake.ctx.createGain(); g.gain.value = 0.0001; o.connect(g).connect(awake.ctx.destination); o.start(); }
+    } catch (e) { awake.ctx = null; }
+  } else if (awake.n === 0 && !on) {
+    if (awake.release) { awake.release(); awake.release = null; }
+    if (awake.ctx) { awake.ctx.close(); awake.ctx = null; }
+  }
+}
 class Pool {
   constructor(size, nets, nextJob, onResult, onFail) {
     this.nextJob = nextJob; this.onResult = onResult; this.onFail = onFail; this.workers = []; this.stopped = false;
     this.nets = nets; this.size = 0; this.init = [];                  // init: messages every worker gets first (e.g. the lessons)
+    this.awake = false;                                               // whether this pool keeps the tab awake (it has games running)
     this.resize(size);
   }
   addWorker() {
@@ -58,6 +76,7 @@ class Pool {
         roundCap: ROUND_CAP, actionCap: ACTION_CAP, search: job.search || 0, next: job.next || null,
         replay: job.replay, seed: job.seed, lists: job.lists, agree: !!job.agree });
     }
+    this.wake(!this.stopped && this.busy());
   }
   busy() { return this.workers.some(w => w.job); }
   /** A message every worker gets now and every new worker first. */
@@ -68,7 +87,9 @@ class Pool {
     this.feed();
   }
   setNets(nets) { this.nets = nets; for (const w of this.workers) w.postMessage({ type: 'nets', nets }); }
-  stop() { this.stopped = true; for (const w of this.workers) w.terminate(); this.workers = []; }
+  /** Keep the tab awake exactly while this pool has games running. */
+  wake(on) { if (on !== this.awake) { this.awake = on; keepAwake(on); } }
+  stop() { this.wake(false); this.stopped = true; for (const w of this.workers) w.terminate(); this.workers = []; }
 }
 
 /** The last message for the person, kept so it survives redraws of the cards. */

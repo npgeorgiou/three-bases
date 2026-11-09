@@ -175,12 +175,11 @@ function startTune() {
   if (Object.keys(trainings).length) stopAllTraining();
   if (tour.running) pauseTournament();
   const st = tuneState();
-  tuneRunning.clear(); strengthRunning.clear(); LESSONS.asked = 0;          // games cut off by a pause are played again
+  tuneRunning.clear(); strengthRunning.clear();                             // games cut off by a pause are played again
   if ((!st.cand || !st.cand.res) && st.mode !== 'lessons') newGeneration();   // lessons: the first job starts the round
   tune.running = true;
   const onFail = (job, msg) => {
-    if (job && job.lesson === 'make') LESSONS.asked = Math.max(0, LESSONS.asked - LESSON_PER_GAME);
-    else if (job && job.lesson === 'strength') strengthRunning.delete(job.k);
+    if (job && job.lesson === 'strength') strengthRunning.delete(job.k);
     else if (job && job.gen === tuneState().gen) tuneRunning.delete(job.i + '-' + job.gi);
     reportError('A tuning game failed: ' + msg);
   };
