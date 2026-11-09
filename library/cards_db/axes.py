@@ -1,98 +1,123 @@
-"""The wheel axes (factions/12-mechanical-wheel.txt) measured on a scale for every real faction of the library.
+"""The wheel axes (factions/12-mechanical-wheel.txt) measured for every real faction of the library, one spoke per end.
 
-Run from library/cards_db: python3 axes.py  ->  writes axes.tsv and ../../factions/wheel-axes.html
-Each axis has a "high" end and, for most, a "low" end, each a list of library concepts (Claude's choice of concepts,
-written below so it can be checked and changed). A card counts for an end if it has any of its concepts.
-  score = share of the faction's cards with the high end - share with the low end   (numeric axes: the number itself)
-  then centred within its game (minus the mean of that game's factions), then scaled over all factions (z-score).
-Two counts: "cards" = every card of the faction once; "decks" = each faction card weighted by how many of the
-library's top decks (decks.tsv) play it. Axis 5 (works with others) = the average of two scales: the share of position cards and the share of the faction's card
-pairs that links.sqlite links (run links.py first).
-A game with fewer than MIN_GAME_CARDS cards for both ends of an axis gives its factions no value on it (a gap).
-Disruption (axis 2): a card breaks the enemy's plan if one of its effects lands on the enemy (side 'enemy') with a concept of
-DISRUPT_ON_ENEMY, or it has a concept of DISRUPT_ALWAYS; it only kills if an effect on the enemy is in KILL_ON_ENEMY.
+Run from library/cards_db: python3 axes.py  ->  axes.tsv and ../../factions/wheel-axes.html
+        python3 axes.py --cards <file>  ->  per spoke, concept and game, the cards that concept catches (for the check)
+Each spoke is one end of an axis: a list of library concepts (Claude's choice, checked against the cards they catch).
+A card counts for a spoke if it has any of its concepts. A faction's value on a spoke = the share of its cards that count,
+divided by the average share of the factions of its game: 0 = none, 1 = its game's average, 2 = twice the average.
+A game with fewer than MIN_GAME_CARDS cards for a spoke gives its factions no value on it (a gap, not 0).
+Two counts: "cards" = every card of the faction once; "decks" = each card weighted by how many of the library's top
+decks (decks.tsv) play it; factions with fewer than MIN_DECK_CARDS cards in decks get no deck count.
+"With others" = the average of two values: position cards (POSITION) and combos (the share of the faction's card pairs
+that links.sqlite links; run links.py first).
 """
-import collections, json, math, os, sqlite3
+import collections, json, os, sqlite3, sys
 import faction_asks, mechanics
 
-DISRUPT_ON_ENEMY = ['cant_attack', 'stat_gain', 'stat_loss', 'disable', 'forced_attack', 'forced_movement', 'debuff', 'steal',
+DISRUPT_ON_ENEMY = ['stat_loss', 'disable', 'forced_attack', 'forced_movement', 'debuff', 'steal',
                     'attack_zero', 'silence', 'stat_multiply', 'bounce_enemy', 'polymorph', 'discard', 'immobilize', 'cant_move',
                     'attack_lock', 'counter_spell', 'transform', 'return_to_hand']
-DISRUPT_ALWAYS = ['hand_disruption', 'mill', 'junk_cards', 'board_clog', 'cost_increase', 'play_restriction', 'counter_spell',
+DISRUPT_ALWAYS = ['hand_disruption', 'mill', 'board_clog', 'cost_increase', 'play_restriction', 'counter_spell',
                   'steal', 'immobilize', 'attack_lock', 'silence', 'disable', 'bounce_enemy']
 KILL_ON_ENEMY = ['damage', 'excess_damage', 'destroy', 'banish', 'damage_over_time', 'aoe_damage', 'ping', 'direct_damage', 'board_wipe']
-SHOWN = {'disrupt*': 'on enemies: ' + ', '.join(DISRUPT_ON_ENEMY) + '; any card with: ' + ', '.join(DISRUPT_ALWAYS),
-         'kill*': 'on enemies: ' + ', '.join(KILL_ON_ENEMY)}
 POSITION = ['adjacency', 'aura', 'link_formation', 'flanking', 'assists_support']
-SHOWN.update({'position*': 'position: ' + ', '.join(POSITION),
-              'combo*': 'combos: how many pairs of the faction\'s cards the library links (links.sqlite), out of all pairs',
-              'cheapunit*': 'a unit in the cheapest third of its game', 'dearunit*': 'a unit in the dearest third of its game'})
+POSITION_GAMES = ('gwent', 'runeterra', 'marvel_snap')  # elsewhere these concepts are area hits and pushes (check of 9 Nov 2026)
+JUNK_GAMES = ('marvel_snap', 'stormbound', 'gwent')  # junk cards that go to the enemy; in Slay the Spire they hurt my own deck
 UNIT_CATS = ('unit', 'hero', 'leader')
-SHOWN.update({'threat*': 'a unit in the cheapest third of its game with more strength than defence',
-              'grows*': 'grows for good at the start or end of every round (must be answered)',
-              'enemy_sets_off*': 'its effect is set off by something the enemy does'})
-MIN_GAME_CARDS = 5  # a game with fewer cards than this for both ends of an axis gives its factions no value on it
-MIN_DECK_CARDS = 10  # fewer of a faction's cards in decks.tsv than this: no deck measure (Faeria Pandora has 1)
-AXES = [  # (key, label, high end, low end, high concepts, low concepts, axis number in factions/12)
-    ('spend', 'Spends own units / keeps them alive (heal, defence, shields, protection)', 'spends', 'keeps alive',
-     ['sacrifice', 'self_destruct', 'death_trigger', 'other_death_trigger', 'on_sacrifice', 'death_count', 'friendly_fire'],
-     ['heal', 'regeneration', 'defence_gain', 'shield', 'protection', 'immunity', 'cheat_death', 'damage_reduction', 'block_armor',
-      'permanent_growth'], 1),
-    ('disrupt', 'Breaks the enemy\'s plan / only kills its units', 'breaks plan', 'only kills', ['disrupt*'], ['kill*'], 2),
-    ('strikes', 'Damage from strikes / from spells', 'unit strikes', 'spells, fixed damage',
-     ['attack_gain', 'on_attack', 'multi_attack', 'first_strike', 'attack_now', 'excess_damage'],
-     ['direct_damage', 'ping', 'aoe_damage', 'damage_over_time', 'spell_power', 'board_wipe'], 3),
-    ('economy', 'Supply and cards / board now', 'supply, cards', 'board now',
-     ['resource_gain', 'base_resource_gain', 'round_carryover', 'resource_banking', 'draw', 'cost_reduction',
-      'generate_cards', 'tutor', 'free_play', 'coin_economy', 'shop_gold'], [], 4),
-    ('together', 'Works with other cards (position and combos) / alone', 'with others', 'alone', ['position*', 'combo*'], [], 5),
-    ('many', 'Many targets / one target', 'many', 'one',
-     ['aoe_damage', 'board_wipe', 'count_payoff', 'multi_target_attack', 'rows', 'row_effects', 'area_templates', 'symmetric_effect'],
-     ['target_choice', 'mark_target'], 6),
-    ('size', 'Many cheap units / few big', 'many cheap', 'few big', ['cheapunit*', 'summon'], ['dearunit*'], 7),
-    ('hand', 'Picks and brings back cards / plays what it draws', 'picks, brings back', 'plays its draws',
-     ['recycle', 'copy', 'return_to_hand', 'tutor', 'revive', 'retain', 'selection', 'in_hand_buff'], [], 8),
-    ('power', 'Strength / defence (unit stats in strength)', 'strength', 'defence', None, None, 9),
-    ('pace', 'Sets the pace / answers', 'sets pace', 'answers',
-     ['haste', 'attack_now', 'forced_attack', 'threat*', 'grows*'],
-     ['reactions', 'counter_spell', 'trap_secret', 'on_targeted', 'counterattack', 'spell_speed', 'enemy_sets_off*'], 10),
+SHOWN = {'disrupt*': 'an effect on enemies: ' + ', '.join(DISRUPT_ON_ENEMY) + '; or any card with: ' + ', '.join(DISRUPT_ALWAYS),
+         'kill*': 'an effect on enemies: ' + ', '.join(KILL_ON_ENEMY),
+         'position*': 'position (Gwent, Runeterra, Marvel Snap only): ' + ', '.join(POSITION),
+         'combo*': 'combos: the share of the faction\'s card pairs the library links',
+         'cheapunit*': 'a unit in the cheapest third of its game', 'dearunit*': 'a unit in the dearest third of its game',
+         'strong*': 'a unit with more strength than defence', 'tough*': 'a unit with more defence than strength'}
+MIN_GAME_CARDS = 5
+CHECKS = [  # Kaptain's points: (game, faction, spoke, lowest value it must have)
+    ('faeria', 'Red', 'fixed', 1.5),  # 9 Nov 2026: Red is Faeria's fixed-damage faction
+    ('faeria', 'Red', 'strikes', 1.0),  # and its units strike too; one number used to hide that
 ]
+MIN_DECK_CARDS = 10  # Faeria Pandora has 1 card in decks
+SPOKES = [  # (key, axis number, axis name, this end, concepts); "concept@game,game" counts only in those games (the check of 9 Nov 2026)
+    ('spends', 1, 'Own units', 'spends them', ['sacrifice@duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound', 'self_destruct@gwent,into_the_breach,stormbound',
+        'death_trigger@duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound',
+        'other_death_trigger@duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra', 'on_sacrifice',
+        'death_count@faeria,gwent,marvel_snap,monster_train,runeterra', 'friendly_fire@inscryption,runeterra,stormbound']),
+    ('keeps', 1, 'Own units', 'keeps them alive', ['heal@duelyst,gwent,into_the_breach,monster_train,runeterra,stormbound',
+        'regeneration@duelyst,gwent,into_the_breach,monster_train,runeterra,stormbound',
+        'defence_gain@duelyst,faeria,into_the_breach,monster_train,runeterra,stormbound',
+        'shield@duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra', 'protection',
+        'immunity@duelyst,faeria,gwent,inscryption,into_the_breach', 'cheat_death',
+        'damage_reduction@duelyst,faeria,gwent,inscryption,monster_train,runeterra', 'block_armor@gwent,monster_train', 'tank']),
+    ('disrupts', 2, 'Enemy units', 'breaks their plan', ['disrupt*', 'disruption']),
+    ('kills', 2, 'Enemy units', 'kills them', ['kill*', 'removal', 'deathtouch']),
+    ('strikes', 3, 'Damage', 'units\' own strikes', ['attack_gain@duelyst,faeria,monster_train,runeterra,stormbound,sts1',
+        'on_attack@duelyst,faeria,into_the_breach,monster_train,runeterra,stormbound,sts1', 'multi_attack', 'first_strike',
+        'attack_now', 'excess_damage', 'counterattack', 'on_fight', 'piercing']),
+    ('fixed', 3, 'Damage', 'fixed damage', ['direct_damage@duelyst,faeria,stormbound',
+        'ping@duelyst,faeria,gwent,inscryption,monster_train,runeterra,stormbound',
+        'aoe_damage@faeria,gwent,inscryption,into_the_breach,runeterra,stormbound,sts1', 'damage_over_time',
+        'spell_power@duelyst,monster_train,runeterra,sts1', 'board_wipe@duelyst,faeria,gwent,into_the_breach,runeterra,stormbound']),
+    ('economy', 4, 'Supply and cards', 'more supply, cards', ['resource_gain', 'base_resource_gain', 'resource_banking', 'draw',
+        'cost_reduction@duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1', 'generate_cards',
+        'free_play@gwent,inscryption,monster_train,runeterra,stormbound,sts1', 'coin_economy', 'cost_set', 'in_hand_buff']),
+    ('together', 5, 'Works with others', 'position and combos', ['position*', 'combo*']),
+    ('many', 6, 'Targets', 'many at once', ['aoe_damage@faeria,gwent,inscryption,into_the_breach,runeterra,stormbound,sts1',
+        'board_wipe', 'multi_target_attack@into_the_breach,runeterra', 'rows@duelyst,into_the_breach', 'row_effects', 'area_templates']),
+    ('one', 6, 'Targets', 'one chosen', ['target_choice', 'mark_target@duelyst,gwent,runeterra,sts1']),
+    ('wide', 7, 'Width', 'many cheap units', ['cheapunit*', 'summon@duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound']),
+    ('tall', 7, 'Width', 'a few big units', ['dearunit*', 'high_cost']),
+    ('hand', 8, 'Hand and discard pile', 'picks, brings back', ['recycle', 'copy', 'return_to_hand', 'tutor', 'revive',
+        'retain', 'selection@faeria,gwent,runeterra,sts1']),
+    ('strong', 9, 'Unit stats', 'strength', ['strong*']),
+    ('tough', 9, 'Unit stats', 'defence', ['tough*']),
+]
+
+
+def counts(ks, game, concepts):
+    """does a card with concepts ks, of this game, count for a spoke"""
+    for k in concepts:
+        name, _, only = k.partition('@')
+        if name in ks and (not only or game in only.split(',')): return True
+    return False
+
+
+def tag(c, x, games):
+    """card -> its concepts, plus the starred ones this file adds"""
+    con = collections.defaultdict(set)
+    for card, k in c.execute('select card, concept from flat_concept'):
+        con[card].add(k)
+    for card, k in c.execute("select card, concept from flat_do where on_side='enemy' and coalesce(on_kind,'')!='player' and "
+                             + faction_asks.ROW_ORIGIN):
+        if k in DISRUPT_ON_ENEMY: con[card].add('disrupt*')
+        if k in KILL_ON_ENEMY: con[card].add('kill*')
+    stats = {i: (cat, cost, p, h) for i, cat, cost, p, h in c.execute('select id, category, cost, power, health from card')}
+    pools = {g: x.pool(g) for g in games}
+    for g, pool in pools.items():
+        costs = sorted(v[2] for v in pool.values() if v[2] is not None)
+        lo, hi = (costs[len(costs) // 3], costs[2 * len(costs) // 3]) if costs else (None, None)
+        for i, v in pool.items():
+            ks = con[i]
+            if ks & set(DISRUPT_ALWAYS) or ('junk_cards' in ks and g in JUNK_GAMES): ks.add('disrupt*')
+            if ks & set(POSITION) and g in POSITION_GAMES: ks.add('position*')
+            if stats[i][0] not in UNIT_CATS: continue
+            p, h = stats[i][2], stats[i][3]
+            if p is not None and h is not None and p != h: ks.add('strong*' if p > h else 'tough*')
+            if v[2] is not None and lo != hi:
+                if v[2] <= lo: ks.add('cheapunit*')
+                if v[2] >= hi: ks.add('dearunit*')
+    return con, pools
 
 
 def main():
     c = sqlite3.connect('cards.sqlite')
     games = sorted({g for (g,) in c.execute('select distinct game from card')})
     x = faction_asks.Ctx(c, games, None, {})
-    con = collections.defaultdict(set)
-    for card, k in c.execute('select card, concept from flat_concept'):
-        con[card].add(k)
-    for card, k in c.execute("select card, concept from flat_do where on_side='enemy' and " + faction_asks.ROW_ORIGIN):
-        if k in DISRUPT_ON_ENEMY: con[card].add('disrupt*')
-        if k in KILL_ON_ENEMY: con[card].add('kill*')
-    for card, ks in list(con.items()):
-        if ks & set(DISRUPT_ALWAYS): ks.add('disrupt*')
-    stats = {i: (cat, cost, p, h) for i, cat, cost, p, h in c.execute('select id, category, cost, power, health from card')}
-    pools = {g: x.pool(g) for g in games}
-    for g, pool in pools.items():
-        costs = sorted(v[2] for v in pool.values() if v[2] is not None)
-        if not costs: continue
-        lo, hi = costs[len(costs) // 3], costs[2 * len(costs) // 3]
-        for i, v in pool.items():
-            if v[2] is None or lo == hi: continue
-            unit = stats[i][0] in UNIT_CATS
-            if v[2] <= lo and unit: con[i].add('cheapunit*')
-            if v[2] >= hi and unit: con[i].add('dearunit*')
-    for i, ks in con.items():
-        if ks & set(POSITION): ks.add('position*')
-        if 'permanent_growth' in ks and ks & {'turn_start', 'turn_end'}: ks.add('grows*')
-        if 'cheapunit*' in ks and (stats[i][2] or 0) > (stats[i][3] or 0): ks.add('threat*')
-    for (i,) in c.execute("select distinct card from flat_when where actor_side='enemy'"):
-        con[i].add('enemy_sets_off*')
-    lacks = {(g, a[0]) for g in games for a in AXES if a[4] is not None and a[0] != 'together'
-             and sum(1 for i in pools[g] if con[i] & set(a[4] + a[5])) < MIN_GAME_CARDS}
+    con, pools = tag(c, x, games)
+    if '--cards' in sys.argv:
+        return dump(c, x, games, con, pools, sys.argv[sys.argv.index('--cards') + 1])
+    lacks = {(g, s[0]) for g in games for s in SPOKES if s[0] != 'together'
+             and sum(1 for i in pools[g] if counts(con[i], g, s[4])) < MIN_GAME_CARDS}
     pairs = set()
-    L = sqlite3.connect('links.sqlite')
-    for a, b in L.execute('select a, b from link'):
+    for a, b in sqlite3.connect('links.sqlite').execute('select a, b from link'):
         if a != b: pairs.add((min(a, b), max(a, b)))
     deck_n = collections.Counter()  # (game, card name) -> decks that play it
     with open('decks.tsv', encoding='utf-8') as f:
@@ -107,78 +132,82 @@ def main():
         pool = pools[g]
         for fac in x.factions(g):
             ids = [i for i, v in pool.items() if fac in v[3]]
-            w_cards = {i: 1 for i in ids}
             w_decks = {i: deck_n[(g, pool[i][0].lower())] for i in ids if deck_n[(g, pool[i][0].lower())]}
-            rec = {'game': g, 'faction': fac, 'n_cards': len(ids), 'deck_cards': len(w_decks)}
-            rec['cards'] = measure(w_cards, con, stats, pairs)
-            rec['decks'] = measure(w_decks, con, stats, pairs) if len(w_decks) >= MIN_DECK_CARDS else None
+            rec = {'game': g, 'faction': fac, 'n_cards': len(ids), 'deck_cards': len(w_decks),
+                   'cards': shares({i: 1 for i in ids}, con, pairs, g),
+                   'decks': shares(w_decks, con, pairs, g) if len(w_decks) >= MIN_DECK_CARDS else None}
             for m in ('cards', 'decks'):
                 for g2, k in lacks:
                     if g2 == g and rec[m]: rec[m][k] = None
             rows.append(rec)
     for mode in ('cards', 'decks'):
-        ms = [r[mode] for r in rows if r[mode]]
-        for part in ('pos', 'combo'):  # "works with others": the two parts on one footing, then averaged
-            for g in games:
-                gm = [r[mode] for r in rows if r['game'] == g and r[mode]]
-                m = sum(q[part] for q in gm) / len(gm) if gm else 0
-                for q in gm: q[part + '_c'] = q[part] - m
-            sd = math.sqrt(sum(q[part + '_c'] ** 2 for q in ms) / len(ms)) or 1
-            for q in ms: q[part + '_z'] = q[part + '_c'] / sd
-        for q in ms: q['together'] = (q['pos_z'] + q['combo_z']) / 2
-        for a in AXES:
-            k = a[0]
-            for g in games:
-                vals = [r[mode][k] for r in rows if r['game'] == g and r[mode] and r[mode][k] is not None]
-                m = sum(vals) / len(vals) if vals else 0
-                for r in rows:
-                    if r['game'] == g and r[mode] and r[mode][k] is not None:
-                        r[mode][k + '_c'] = r[mode][k] - m
-            cs = [r[mode][k + '_c'] for r in rows if r[mode] and k + '_c' in r[mode]]
-            sd = math.sqrt(sum(v * v for v in cs) / len(cs)) or 1
-            for r in rows:
-                if r[mode] and k + '_c' in r[mode]:
-                    r[mode][k + '_z'] = round(r[mode][k + '_c'] / sd, 3)
+        for g in games:
+            ms = [r[mode] for r in rows if r['game'] == g and r[mode]]
+            for k in [s[0] for s in SPOKES if s[0] != 'together'] + ['pos', 'combo']:
+                vals = [q[k] for q in ms if q[k] is not None]
+                avg = sum(vals) / len(vals) if vals else 0
+                for q in ms:
+                    q[k + '_v'] = None if q[k] is None or not avg else round(q[k] / avg, 3)
+            for q in ms:
+                both = [q[k] for k in ('pos_v', 'combo_v') if q[k] is not None]
+                q['together_v'] = round(sum(both) / len(both), 3) if both else None
+                q['together'] = None
     with open('axes.tsv', 'w', encoding='utf-8') as f:
-        f.write('game\tfaction\tcards\tdeck_cards\tmode\t' + '\t'.join(f'{a[0]}_raw\t{a[0]}_scale' for a in AXES) + '\n')
+        f.write('game\tfaction\tcards\tdeck_cards\tmode\t' + '\t'.join(f'{s[0]}_share\t{s[0]}_value' for s in SPOKES) + '\n')
         for r in rows:
             for mode in ('cards', 'decks'):
-                if not r[mode]: continue
-                f.write(f"{r['game']}\t{r['faction']}\t{r['n_cards']}\t{r['deck_cards']}\t{mode}\t" +
-                        '\t'.join(f"{fmt(r[mode][a[0]])}\t{fmt(r[mode].get(a[0] + '_z'))}" for a in AXES) + '\n')
-    data = {'axes': [{'key': a[0], 'label': a[1], 'hi': a[2], 'lo': a[3], 'hiC': a[4] and [SHOWN.get(k, k) for k in a[4]], 'loC': a[5] and [SHOWN.get(k, k) for k in a[5]], 'n': a[6]} for a in AXES],
+                if r[mode]:
+                    f.write(f"{r['game']}\t{r['faction']}\t{r['n_cards']}\t{r['deck_cards']}\t{mode}\t" +
+                            '\t'.join(f"{fmt(r[mode][s[0]])}\t{fmt(r[mode][s[0] + '_v'])}" for s in SPOKES) + '\n')
+    data = {'spokes': [{'key': s[0], 'n': s[1], 'axis': s[2], 'end': s[3], 'concepts': [shown(k) for k in s[4]]} for s in SPOKES],
             'factions': [{'game': r['game'], 'faction': r['faction'], 'cards': r['n_cards'], 'deckCards': r['deck_cards'],
-                          'cardsZ': zz(r['cards']), 'decksZ': zz(r['decks']),
-                          'cardsRaw': raw(r['cards']), 'decksRaw': raw(r['decks'])} for r in rows]}
-    tpl = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'tools', 'wheel_axes_template.html'), encoding='utf-8').read()
-    out = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'factions', 'wheel-axes.html')
-    open(out, 'w', encoding='utf-8').write(tpl.replace('/*DATA*/null', json.dumps(data, ensure_ascii=False)))
+                          'cardsV': per_spoke(r['cards'], '_v'), 'decksV': per_spoke(r['decks'], '_v'),
+                          'cardsS': per_spoke(r['cards'], ''), 'decksS': per_spoke(r['decks'], '')} for r in rows]}
+    here = os.path.dirname(os.path.abspath(__file__))
+    tpl = open(os.path.join(here, '..', '..', 'tools', 'wheel_axes_template.html'), encoding='utf-8').read()
+    with open(os.path.join(here, '..', '..', 'factions', 'wheel-axes.html'), 'w', encoding='utf-8') as f:
+        f.write(tpl.replace('/*DATA*/null', json.dumps(data, ensure_ascii=False)))
+    for g, fac, key, low in CHECKS:
+        v = next((r['cards'][key + '_v'] for r in rows if r['game'] == g and r['faction'] == fac), None)
+        if v is None or v < low: print(f'CHECK FAILED: {g} {fac} {key} is {v}, should be at least {low}')
     print(len(rows), 'factions;', sum(1 for r in rows if r['decks']), 'with decks')
 
 
+def shown(k):
+    name, _, only = k.partition('@')
+    return SHOWN.get(name, name) + (' (only ' + ', '.join(only.split(',')) + ')' if only else '')
+
+
 def fmt(v): return '' if v is None else f'{v:.4f}'
-def zz(m): return None if not m else {a[0]: m.get(a[0] + '_z') for a in AXES}
-def raw(m): return None if not m else {a[0]: (None if m[a[0]] is None else round(m[a[0]], 4)) for a in AXES}
+def per_spoke(m, suf): return None if not m else {s[0]: m.get(s[0] + suf) for s in SPOKES}
 
 
-def measure(w, con, stats, pairs):
+def shares(w, con, pairs, game):
+    """per spoke, the share of the faction's cards (weighted) that count for it"""
     tot = sum(w.values())
-    out = {}
-    for key, _, _, _, hi, lo, _ in AXES:
-        if hi is None or key == 'together': continue
-        sh = sum(n for i, n in w.items() if con[i] & set(hi)) / tot
-        sl = sum(n for i, n in w.items() if con[i] & set(lo)) / tot if lo else 0
-        out[key] = sh - sl
+    out = {s[0]: sum(n for i, n in w.items() if counts(con[i], game, s[4])) / tot for s in SPOKES if s[0] != 'together'}
     out['pos'] = sum(n for i, n in w.items() if 'position*' in con[i]) / tot
     ids = sorted(w)
     linked = sum(w[a] * w[b] for k, a in enumerate(ids) for b in ids[k + 1:] if (a, b) in pairs)
     allp = (tot * tot - sum(n * n for n in w.values())) / 2
     out['combo'] = linked / allp if allp else 0
-    out['together'] = None
-    units = [(i, n) for i, n in w.items() if stats[i][0] in UNIT_CATS and stats[i][1] is not None]
-    ps = [(stats[i][2] or 0, stats[i][3] or 0, n) for i, n in units if (stats[i][2] or 0) + (stats[i][3] or 0) > 0]
-    out['power'] = sum(p * n for p, h, n in ps) / sum((p + h) * n for p, h, n in ps) if ps else None
     return out
+
+
+def dump(c, x, games, con, pools, path, per=4):
+    """for the check: per spoke and concept, per game the number of cards it catches and up to `per` of them with text"""
+    import ask
+    with open(path, 'w', encoding='utf-8') as f:
+        for key, n, axis, end, cons in SPOKES:
+            for k in cons:
+                if k == 'combo*': continue
+                f.write(f'\n## spoke {n} {axis}: {end} | concept {shown(k)}\n')
+                for g in games:
+                    ids = sorted(i for i in pools[g] if counts(con[i], g, [k]))
+                    if not ids: continue
+                    f.write(f'{g}: {len(ids)} cards\n')
+                    for i in ids[:: max(1, len(ids) // per)][:per]:
+                        f.write(f'  {mechanics.name(c, i)} | {ask.short_text(i, 160)}\n')
 
 
 if __name__ == '__main__':

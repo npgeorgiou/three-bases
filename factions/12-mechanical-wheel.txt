@@ -20,7 +20,7 @@ Method (Claude's proposal, agreed in outline):
 
 The axes (first measured on 39 real factions of the 8 library games in an earlier chat, with no saved script; now measured
 by axes.py below. Changed 9 Nov 2026 by Kaptain: "locks enemies or outmoves them", "what its cards react to" (placed,
-attacking, hit, dying: a list of four kinds, not a scale, and covered by axes 1, 3 and 10) and "how hard it is to play"
+attacking, hit, dying: a list of four kinds, not a scale, and covered by axes 1 and 3) and "how hard it is to play"
 dropped; disruption added):
 1.  Own units: spends them (deaths, sacrifice, trading a unit for value) or keeps them alive: staying power (heal, more
     defence, shields, protection, grow; Kaptain 9 Nov 2026: healing and preservation must be measured).
@@ -35,16 +35,16 @@ dropped; disruption added):
 7.  Width (agreed 9 Nov 2026): many cheap units and cards that make units, or a few big ones.
 8.  Hand and discard pile: picks, copies and brings back its own cards, or plays what it draws.
 9.  Strength or defence: its units lean to killing or to holding dots (defence holds a base); seen in the stats.
-10. Sets the pace or answers: forces the enemy to react (acts at once, cheap units with more strength than defence, grows
-    every round unless killed, forced attacks), or waits and punishes (effects set off by the enemy, traps, counters,
-    fast spells).
-Dropped 9 Nov 2026: early or late (Kaptain: Claude could not measure it; checked against deck authors' words it was
+Dropped 9 Nov 2026: sets the pace or answers (Kaptain: its Runeterra order was wrong; most library games have no
+answering on the enemy's turn, so there it only repeats removal); early or late (Kaptain: Claude could not measure it; checked against deck authors' words it was
 right in only 63 of 149 Faeria deck pairs); moving (Kaptain: most library games have no moving); repair or prevent (Claude, after Kaptain's "get it
 done": only places factions that keep units, so it becomes a monopoly choice of those factions); rows and areas (Claude,
 same: "one cell or a row" repeats axis 6, "front or back rows" can't be measured from other games and stays a design
 question per faction).
-A game with almost no cards for an axis (under 5 for both ends) gives its factions no value on it, not 0: Into the Breach
-on axes 4, 8 and 9; Slay the Spire on 7 and 9; Stormbound on 9 (no unit stats in the library).
+A game with under 5 cards for a spoke gives its factions no value on it, not 0. Gaps (9 Nov 2026): "one chosen" in every
+game but Runeterra and Marvel Snap (the library rarely marks a chosen target); unit stats in Gwent, Stormbound, Into the
+Breach and Slay the Spire; Into the Breach and Slay the Spire also on several others; "many at once" in Inscryption and
+Monster Train; "units' own strikes" in Gwent.
 How the axes were missed: the first measured axes came only from what cards do (concept shares), so identity that lives
 in the cost curve, the stats and how a faction feels to play was invisible; look there too.
 Which ends go together is judged by play: one end makes what the other needs, or undoes it (library fed/feeds/both).
@@ -54,13 +54,16 @@ repairing it: all sound plays).
 Not axes: timing (players act now; round end is built FOR, not waited for), staying in one lane (every faction must
 win 2 of 3 lanes), random effects (not allowed), lasting or this-round effects (this-round effects are worth little).
 
-The measurement (9 Nov 2026): `library/cards_db/axes.py` measures every axis on a scale for the 49 real factions of the
-library (10+ cards each) and writes `library/cards_db/axes.tsv` and `factions/wheel-axes.html` (circle of axes, map of
-factions, numbers, closest factions; template `tools/wheel_axes_template.html`). Which concepts measure each end is
-Claude's choice, written in axes.py and shown on hover in the page; change it there and rerun. Score = share of cards with
-the high end minus share with the low end (axes 7, 13, 14 from cost and stats), centred within the game, then in steps of
-spread over all factions. Two counts: all cards, or cards weighted by how many decks of decks.tsv play them (factions with
-fewer than 10 cards in decks get no deck count). The rows part of axis 11 is not measured.
+The measurement (9 Nov 2026): `library/cards_db/axes.py` measures the 49 real factions of the library (10+ cards each)
+and writes `library/cards_db/axes.tsv` and `factions/wheel-axes.html` (circle, map of factions, numbers, closest factions;
+template `tools/wheel_axes_template.html`). Each end of an axis is its own spoke (Kaptain, 9 Nov 2026: one number per axis,
+one end minus the other, hid factions strong at both ends, e.g. Faeria Red has the most fixed damage and also strikes).
+A faction's value on a spoke = the share of its cards that count for it, divided by its game's average: 0 = none,
+1 = average. Which card effects count for each spoke is listed in axes.py and on hover in the page; each was checked
+against the cards it catches, game by game, and some count only in some games (e.g. heal is the player's life in Faeria
+and Slay the Spire, so it counts there not at all). Two counts: all cards, or cards weighted by how many decks of
+decks.tsv play them (factions with fewer than 10 cards in decks get no deck count). Kaptain's points are checks in
+axes.py (CHECKS); a failed one prints at every run.
 The numbers quoted above came from an earlier chat with no saved script; this script gives Faeria Yellow 3.1 and Red 4.8
 average cost as quoted, but Runeterra Shurima 3.0 / Freljord 4.3 (quoted 2.9 / 4.1) and Duelyst Lyonar 31% / Abyssian 43% strength (quoted 36% / 51%).
 Lesson (9 Nov 2026, Kaptain found Faeria Red and Runeterra's pace wrong): Claude chose each axis end's concepts by their
