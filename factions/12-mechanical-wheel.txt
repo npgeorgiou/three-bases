@@ -70,3 +70,5 @@ The design process from the wheel (AGREED with Kaptain, 9 Nov 2026; done in anot
 6. Themes, one per faction, fitting its mechanics.
 7. Each faction in its own chat (factions/START_DESIGN.md steps 6-10), then measured on the spokes: it must land where
    the wheel put it; if it drifted, the faction is fixed, not the wheel.
+   No tool measures our own factions yet: their cards are in the game's code, not in the library, so axes.py can't read
+   them (todo.md). The seven factions in the game are not on the wheel.

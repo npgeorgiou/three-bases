@@ -93,7 +93,8 @@ read 5-10 card texts behind every count, and write the sources (game: card) next
    The failure this stops: 14 Horologers said "round end: I strike the nearest enemy", with different stats. The gate
    fails two cards whose WHEN + WHAT + ON WHOM are all the same, and one WHEN + WHAT on more than 3 cards.
 10. **Checks**: sections 2-5, then `python3 tools/design_gate.py <letter>` until it prints PASS. Then measure the faction on
-   the wheel's spokes: it must land where the wheel put it; if it drifted, fix the faction, not the wheel. Code only after Kaptain
+   the wheel's spokes: it must land where the wheel put it; if it drifted, fix the faction, not the wheel. (No tool for this yet:
+   todo.md.) Code only after Kaptain
    agreed steps 1-6.
 
 Absolute limits (Kaptain): no rarities (Common, Rare, Legendary...); every card is balanced by its cost alone. No
