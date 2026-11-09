@@ -104,17 +104,17 @@ nav.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: 
 .tuchart .tubest { fill: none; stroke: var(--gold); stroke-width: 2.5; stroke-linejoin: round; }
 .tuchart .ylab.benchlab { text-anchor: start; fill: var(--win); }
 .tuchart .tubench { fill: var(--win); stroke: var(--bg); stroke-width: 1.5; }
-.tuchart .tuavg { fill: none; stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 5 4; stroke-linejoin: round; }
-.tuchart .tucand { fill: var(--muted); opacity: .55; }
-.tuchart .tucand.acc { fill: var(--gold); stroke: var(--ink); stroke-width: 1; opacity: 1; }
+.tuchart .tubenchl { fill: none; stroke: var(--win); stroke-width: 2; stroke-linejoin: round; }
+.tuchart .tuhit { fill: transparent; }
+.tuchart .ylab.gl { fill: var(--gold); }
+.tuchart .ytitle { font-size: 13px; text-anchor: middle; }
+.tuchart .ytitle.gl { fill: var(--gold); }
+.tuchart .ytitle.benchlab { fill: var(--win); }
 .tuchart .tumark { stroke: var(--ink); stroke-dasharray: 3 3; opacity: .5; }
 .tuchart .tumarkt { fill: var(--muted); font-size: 12px; }
 .tulegend { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; color: var(--muted); font-size: 13px; padding: 4px 4px 0; }
 .tulegend .lg { display: inline-block; width: 18px; height: 0; border-top: 2.5px solid var(--gold); margin-right: -10px; }
-.tulegend .lg.cand { width: 7px; height: 7px; border: 0; border-radius: 50%; background: var(--muted); opacity: .55; }
 .tulegend .lg.bench { width: 10px; height: 10px; background: var(--win); border: 0; vertical-align: -1px; }
-.tulegend .lg.avg { border-top: 1.5px dashed var(--muted); }
-.tulegend .lg.acc { width: 9px; height: 9px; border: 1px solid var(--ink); border-radius: 50%; background: var(--gold); }
 .tuh { font: 400 18px/1.2 var(--disp); margin: 0 0 8px; }
 .tutable { border-collapse: collapse; font-size: 15px; width: 100%; max-width: 760px; }
 .tutable th, .tutable td { padding: 5px 14px 5px 0; border-bottom: 1px solid var(--line); text-align: right; }
@@ -7821,19 +7821,24 @@ function renderTune() {
   renderCheck();
   $('#tuStart').textContent = st.gen || st.cand ? 'Resume' : 'Start';
   renderTuneStatus();
-  // the chart: per generation, the candidates' average win rate (line) and the best candidate's (dot)
-  const h = st.hist, W = 1200, H = 300, l = 60, r = 44, t = 14, b = 34, pw = W - l - r, ph = H - t - b;
+  // the chart: per generation, the ifelse AI's own grade (gold line, left scale); in lessons mode also the games it won
+  // against the opponents (green, right scale); the candidates' average and best are in the hover text
+  const h = st.hist, W = 1200, H = 300, l = 76, r = 76, t = 14, b = 34, pw = W - l - r, ph = H - t - b;
   const gens = h.filter(e => !e.mark), n = Math.max(1, gens.length - 1);
   // lessons: grades differ by fractions of a point, so the left scale zooms to them; games won against the Benchmark
   // use their own 0-100% scale on the right
-  const lessonsMode = st.mode === 'lessons', vals = gens.flatMap(e => [e.avg, e.top, e.centre]).filter(Number.isFinite);
+  const lessonsMode = st.mode === 'lessons', vals = gens.map(e => e.centre).filter(Number.isFinite);
   let lo = 0, hi = 1;
   if (lessonsMode && vals.length) { const a = Math.min(...vals), b = Math.max(...vals), pad = Math.max(0.002, (b - a) * 0.15); lo = Math.max(0, a - pad); hi = Math.min(1, b + pad); }
   const X = i => l + pw * (gens.length < 2 ? 0.5 : i / n), Y = v => t + ph * (1 - (v - lo) / (hi - lo)), YB = v => t + ph * (1 - v);
   let svg = `<rect class="plot" x="${l}" y="${t}" width="${pw}" height="${ph}"></rect>`;
   const dec = hi - lo < 0.02 ? 2 : hi - lo < 0.2 ? 1 : 0;
-  for (let k = 0; k <= 4; k++) { const v = lo + (hi - lo) * k / 4; svg += `<line class="grid${!lessonsMode && k === 2 ? ' mid' : ''}" x1="${l}" x2="${W - r}" y1="${Y(v)}" y2="${Y(v)}"></line><text class="ylab" x="${l - 8}" y="${Y(v) + 5}">${(v * 100).toFixed(dec)}%</text>`; }
-  if (lessonsMode && gens.some(e => e.bench != null)) for (const v of [0, 0.5, 1]) svg += `<text class="ylab benchlab" x="${W - r + 4}" y="${YB(v) + 5}">${v * 100}%</text>`;
+  for (let k = 0; k <= 4; k++) { const v = lo + (hi - lo) * k / 4; svg += `<line class="grid${!lessonsMode && k === 2 ? ' mid' : ''}" x1="${l}" x2="${W - r}" y1="${Y(v)}" y2="${Y(v)}"></line><text class="ylab gl" x="${l - 8}" y="${Y(v) + 5}">${(v * 100).toFixed(dec)}%</text>`; }
+  svg += `<text class="ytitle gl" transform="translate(16 ${t + ph / 2}) rotate(-90)">${lessonsMode ? 'guesses who wins' : 'games won'}</text>`;
+  if (lessonsMode) {
+    for (const v of [0, 0.5, 1]) svg += `<text class="ylab benchlab" x="${W - r + 8}" y="${YB(v) + 5}">${v * 100}%</text>`;
+    svg += `<text class="ytitle benchlab" transform="translate(${W - 16} ${t + ph / 2}) rotate(90)">games won</text>`;
+  }
   if (!gens.length) svg += `<text class="empty" x="${l + pw / 2}" y="${t + ph / 2}">No generations yet.</text>`;
   else {
     let i = 0;
@@ -7842,15 +7847,16 @@ function renderTune() {
       const x = X(Math.max(0, i - 0.5)), right = x > W - r - 200;
       svg += `<line class="tumark" x1="${x}" x2="${x}" y1="${t}" y2="${t + ph}"></line><text class="tumarkt" x="${right ? x - 4 : x + 4}" y="${t + 14}" text-anchor="${right ? 'end' : 'start'}">${esc(e.mark)}</text>`;
     }
-    svg += `<polyline class="tuavg" points="${gens.map((e, k) => `${X(k)},${Y(e.avg)}`).join(' ')}"></polyline>`;
     const cen = gens.map((e, k) => (e.centre == null ? null : `${X(k)},${Y(e.centre)}`)).filter(Boolean);
     if (cen.length) svg += `<polyline class="tubest" points="${cen.join(' ')}"></polyline>`;
+    const bp = gens.map((e, k) => (e.bench == null ? null : `${X(k)},${YB(e.bench)}`)).filter(Boolean);
+    if (bp.length > 1) svg += `<polyline class="tubenchl" points="${bp.join(' ')}"></polyline>`;
     svg += gens.map((e, k) => (e.bench == null ? '' : `<rect class="tubench" x="${X(k) - 5}" y="${YB(e.bench) - 5}" width="10" height="10"><title>Generation ${e.gen + 1}: the ifelse AI won ${tpct(e.bench)} of ${STRENGTH_GAMES} games against the opponents ticked (looking 1 move ahead)</title></rect>`)).join('');
-    svg += gens.map((e, k) => `<circle class="tucand acc" cx="${X(k)}" cy="${Y(e.top)}" r="3.5"><title>Generation ${e.gen + 1}: ifelse AI ${tpct(e.centre)}${e.back ? ` (the centre before scored ${tpct(e.prev)}: went back to it)` : e.prev != null ? ` (the centre before scored ${tpct(e.prev)}: kept the move)` : ''}, candidates' average ${tpct(e.avg)}, best candidate ${tpct(e.top)} (${e.lambda} candidates${e.deals ? `, ${e.deals} games each` : ''})</title></circle>`).join('');
+    svg += gens.map((e, k) => (e.centre == null ? '' : `<circle class="tuhit" cx="${X(k)}" cy="${Y(e.centre)}" r="8"><title>Generation ${e.gen + 1}: ifelse AI ${tpct(e.centre)}${e.back ? ` (the centre before scored ${tpct(e.prev)}: went back to it)` : e.prev != null ? ` (the centre before scored ${tpct(e.prev)}: kept the move)` : ''}, candidates' average ${tpct(e.avg)}, best candidate ${tpct(e.top)} (${e.lambda} candidates${e.deals ? `, ${e.deals} games each` : ''})</title></circle>`)).join('');
     svg += `<text class="xlab" x="${l}" y="${H - 10}">generation ${gens[0].gen + 1}</text><text class="xlab end" x="${W - r}" y="${H - 10}">generation ${gens[gens.length - 1].gen + 1}</text>`;
   }
   $('#tuChart').innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Win rates by generation">${svg}</svg>
-    <div class="tulegend">${st.mode === 'lessons' ? 'Lesson grades (not games): ' : 'Win rates: '}<span class="lg best"></span>the ifelse AI itself (the centre) <span class="lg avg"></span>candidates' average <span class="lg acc"></span>best candidate${st.mode === 'lessons' ? ' <span class="lg bench"></span>games won against the opponents ticked (every 5th round, right scale)' : ''}</div>`;
+    <div class="tulegend">${lessonsMode ? '<span class="lg best"></span>how well the ifelse AI guesses who wins from a board (left scale) <span class="lg bench"></span>games it won against the opponents ticked, every 5th round (right scale)' : '<span class="lg best"></span>games the ifelse AI won in the tuning games'}</div>`;
   const fmt = v => (Number.isInteger(v) ? String(v) : Math.abs(v) >= 10 ? v.toFixed(1) : v.toFixed(3));
   $('#tuTable').innerHTML = `<table class="tutable"><thead><tr><th>Value</th><th>Start</th><th>ifelse AI (centre)</th></tr></thead><tbody>${
     IFELSE_FIELDS.map(([k, text]) => { const d = IFELSE_DEFAULTS[k], v = st.best[k] ?? d, ch = Math.abs(v - d) > 1e-9;
