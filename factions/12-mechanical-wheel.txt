@@ -63,7 +63,12 @@ A faction's value on a spoke = the share of its cards that count for it, divided
 against the cards it catches, game by game, and some count only in some games (e.g. heal is the player's life in Faeria
 and Slay the Spire, so it counts there not at all). Two counts: all cards, or cards weighted by how many decks of
 decks.tsv play them (factions with fewer than 10 cards in decks get no deck count). Kaptain's points are checks in
-axes.py (CHECKS); a failed one prints at every run.
+axes.py (CHECKS); a failed one prints at every run. Smoothing (Kaptain, 9 Nov 2026: shapes looked like hedgehogs): each
+faction counts as if it had 10 more cards at its game's average, then the square root is taken. Spoke order on the circle
+(Claude's, so neighbours belong together): strength, units' own strikes, kills, fixed damage, many at once, breaks their
+plan, one chosen, picks and brings back, more supply and cards, many cheap units, spends them, position and combos, keeps
+them alive, defence, a few big units. A missing value shows as a dashed dot on the rim with its reason (Stormbound's units
+have one number for both strength and defence).
 The numbers quoted above came from an earlier chat with no saved script; this script gives Faeria Yellow 3.1 and Red 4.8
 average cost as quoted, but Runeterra Shurima 3.0 / Freljord 4.3 (quoted 2.9 / 4.1) and Duelyst Lyonar 31% / Abyssian 43% strength (quoted 36% / 51%).
 Lesson (9 Nov 2026, Kaptain found Faeria Red and Runeterra's pace wrong): Claude chose each axis end's concepts by their
