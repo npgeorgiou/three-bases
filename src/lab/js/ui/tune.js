@@ -329,11 +329,18 @@ function renderTune() {
   $('#tuStart').textContent = st.gen || st.cand ? 'Resume' : 'Start';
   renderTuneStatus();
   // the chart: per generation, the candidates' average win rate (line) and the best candidate's (dot)
-  const h = st.hist, W = 1200, H = 300, l = 52, r = 16, t = 14, b = 34, pw = W - l - r, ph = H - t - b;
+  const h = st.hist, W = 1200, H = 300, l = 60, r = 44, t = 14, b = 34, pw = W - l - r, ph = H - t - b;
   const gens = h.filter(e => !e.mark), n = Math.max(1, gens.length - 1);
-  const X = i => l + pw * (gens.length < 2 ? 0.5 : i / n), Y = v => t + ph * (1 - v);
+  // lessons: grades differ by fractions of a point, so the left scale zooms to them; games won against the Benchmark
+  // use their own 0-100% scale on the right
+  const lessonsMode = st.mode === 'lessons', vals = gens.flatMap(e => [e.avg, e.top, e.centre]).filter(Number.isFinite);
+  let lo = 0, hi = 1;
+  if (lessonsMode && vals.length) { const a = Math.min(...vals), b = Math.max(...vals), pad = Math.max(0.002, (b - a) * 0.15); lo = Math.max(0, a - pad); hi = Math.min(1, b + pad); }
+  const X = i => l + pw * (gens.length < 2 ? 0.5 : i / n), Y = v => t + ph * (1 - (v - lo) / (hi - lo)), YB = v => t + ph * (1 - v);
   let svg = `<rect class="plot" x="${l}" y="${t}" width="${pw}" height="${ph}"></rect>`;
-  for (const v of [0, 0.25, 0.5, 0.75, 1]) svg += `<line class="grid${v === 0.5 ? ' mid' : ''}" x1="${l}" x2="${W - r}" y1="${Y(v)}" y2="${Y(v)}"></line><text class="ylab" x="${l - 8}" y="${Y(v) + 5}">${v * 100}%</text>`;
+  const dec = hi - lo < 0.02 ? 2 : hi - lo < 0.2 ? 1 : 0;
+  for (let k = 0; k <= 4; k++) { const v = lo + (hi - lo) * k / 4; svg += `<line class="grid${!lessonsMode && k === 2 ? ' mid' : ''}" x1="${l}" x2="${W - r}" y1="${Y(v)}" y2="${Y(v)}"></line><text class="ylab" x="${l - 8}" y="${Y(v) + 5}">${(v * 100).toFixed(dec)}%</text>`; }
+  if (lessonsMode && gens.some(e => e.bench != null)) for (const v of [0, 0.5, 1]) svg += `<text class="ylab benchlab" x="${W - r + 4}" y="${YB(v) + 5}">${v * 100}%</text>`;
   if (!gens.length) svg += `<text class="empty" x="${l + pw / 2}" y="${t + ph / 2}">No generations yet.</text>`;
   else {
     let i = 0;
@@ -345,12 +352,12 @@ function renderTune() {
     svg += `<polyline class="tuavg" points="${gens.map((e, k) => `${X(k)},${Y(e.avg)}`).join(' ')}"></polyline>`;
     const cen = gens.map((e, k) => (e.centre == null ? null : `${X(k)},${Y(e.centre)}`)).filter(Boolean);
     if (cen.length) svg += `<polyline class="tubest" points="${cen.join(' ')}"></polyline>`;
-    svg += gens.map((e, k) => (e.bench == null ? '' : `<rect class="tubench" x="${X(k) - 5}" y="${Y(e.bench) - 5}" width="10" height="10"><title>Generation ${e.gen + 1}: the ifelse AI won ${tpct(e.bench)} of ${STRENGTH_GAMES} games against the Benchmark (both looking 1 move ahead)</title></rect>`)).join('');
+    svg += gens.map((e, k) => (e.bench == null ? '' : `<rect class="tubench" x="${X(k) - 5}" y="${YB(e.bench) - 5}" width="10" height="10"><title>Generation ${e.gen + 1}: the ifelse AI won ${tpct(e.bench)} of ${STRENGTH_GAMES} games against the Benchmark (both looking 1 move ahead)</title></rect>`)).join('');
     svg += gens.map((e, k) => `<circle class="tucand acc" cx="${X(k)}" cy="${Y(e.top)}" r="3.5"><title>Generation ${e.gen + 1}: ifelse AI ${tpct(e.centre)}${e.kept ? ' (better half not better: centre kept)' : ''}, candidates' average ${tpct(e.avg)}, best candidate ${tpct(e.top)} (${e.lambda} candidates${e.deals ? `, ${e.deals} games each` : ''})</title></circle>`).join('');
     svg += `<text class="xlab" x="${l}" y="${H - 10}">generation ${gens[0].gen + 1}</text><text class="xlab end" x="${W - r}" y="${H - 10}">generation ${gens[gens.length - 1].gen + 1}</text>`;
   }
   $('#tuChart').innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Win rates by generation">${svg}</svg>
-    <div class="tulegend"><span class="lg best"></span>the ifelse AI itself (the centre) <span class="lg avg"></span>candidates' average <span class="lg acc"></span>best candidate${st.mode === 'lessons' ? ' <span class="lg bench"></span>games won against the Benchmark (every 10th round)' : ''}</div>`;
+    <div class="tulegend"><span class="lg best"></span>the ifelse AI itself (the centre) <span class="lg avg"></span>candidates' average <span class="lg acc"></span>best candidate${st.mode === 'lessons' ? ' <span class="lg bench"></span>games won against the Benchmark (every 10th round, right scale)' : ''}</div>`;
   const fmt = v => (Number.isInteger(v) ? String(v) : Math.abs(v) >= 10 ? v.toFixed(1) : v.toFixed(3));
   $('#tuTable').innerHTML = `<table class="tutable"><thead><tr><th>Value</th><th>Start</th><th>ifelse AI (centre)</th></tr></thead><tbody>${
     IFELSE_FIELDS.map(([k, text]) => { const d = IFELSE_DEFAULTS[k], v = st.best[k] ?? d, ch = Math.abs(v - d) > 1e-9;
