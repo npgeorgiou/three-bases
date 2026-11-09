@@ -1,0 +1,1153 @@
+    do 5302 own damage unit_or_structure nearest position is straight_line of self amount=1.0
+  Titan Fist:
+    when 5189 attacks
+    when 5190 attacks
+    when 5191 attacks
+    if 5190 upgraded 1.0
+    if 5191 upgraded 2.0
+    do 5189 own damage unit_or_structure chosen position is bordering of self amount=2.0
+    do 5189 own move unit_or_structure it
+    do 5190 own move self
+    do 5191 own damage unit_or_structure chosen position is bordering of self amount=2.0
+    1 duelyst | type | Conscript puts your units there, and Dauntless Advance acts on units around your leader or base | Conscript -> Dauntless Advance (Wanderer Brome (4LW))
+  Conscript:
+    when 58 played self
+    do 58 own summon power=1.0;health=2.0
+  Dauntless Advance:
+    when 959 played self
+    when 960 always
+    when 961 always
+    do 959 own give_ability player mine
+    do 960 gives negate_damage self
+    do 959 own give_ability unit mine all board position is surrounding of player mine;of:kind is player
+    do 961 gives negate_damage self
+    1 duelyst | type | Superior Mirage puts your units there, and Sunset Paragon acts on units around it | Superior Mirage -> Sunset Paragon (Wanderer Zirix (Icicle, variant 2))
+  Superior Mirage:
+    when 523 played self
+    when 524 attacks self
+    do 523 own copy unit enemy chosen board amount=3.0
+    do 523 own give_ability unit enemy all board state is copy_of_it
+    do 524 gives obliterate self
+  Sunset Paragon:
+    when 777 played self
+    if 777 amount_stat power it
+    do 777 own damage unit all board position is surrounding amount=stat
+    1 faeria | type | Frog-Tosser moves your units, and Bone Collector acts on units next to it; also triggers: makes units die (by fighting) | Frog-Tosser -> Bone Collector (RGY based 3W)
+  Frog-Tosser:
+    when 1517 played self
+    when 1757 always
+    do 1517 own start_attack self
+    do 1517 own summon power=2.0;health=2.0
+    do 1517 own give_keyword unit mine it card is -2003
+    do 1757 uses_keyword can unit mine it card is -2003 event=moves
+  Bone Collector:
+    when 1218 dies unit all position is bordering
+    do 1218 own stat_change self power=1.0;health=1.0
+    1 marvel_snap | type | Adamantium Infusion puts your units there, and Fastball Special acts on units in its lane | Adamantium Infusion -> Fastball Special (Merge Man-Spider)
+  Adamantium Infusion:
+    when 5801 played self
+    if 5801 amount_stat power it
+    do 5801 own obliterate self
+    do 5801 own revive unit mine highest discard position is same_lane
+    do 5801 own stat_change unit mine it power=stat
+  Fastball Special:
+    when 5959 played self
+    if 5959 amount_event_amount
+    if 5959 amount_minus
+    do 5959 own kill unit mine highest board position is same_lane
+    do 5959 own stat_change unit enemy chosen board position is same_lane power=minus
+    1 gwent | type | Maxii van Dekkar moves Sove, and Sove acts on units in the front row | Maxii van Dekkar -> Sove (Patricidal Fury: RnR Seagulls Sove Compass)
+  Maxii van Dekkar:
+    when 3487 played self
+    do 3487 own look card mine all deck
+    do 3487 own shuffle_into_deck card mine all deck
+    do 3487 own move card mine chosen deck
+  Sove:
+    when 4023 played self
+    when 4024 dies self
+    when 4537 always
+    if 4023 keyword_condition
+    if 4023 amount_count unit enemy all board state is damaged
+    if 4024 amount_product
+    if 4024 amount_stat base_power self
+    if 4023 have is self position is front_row
+    do 4023 own summon card mine chosen deck type is 43
+    do 4023 own give_ability card mine it type is 43
+    do 4024 gives stat_change unit enemy board card is 757381 strength=product
+    do 4023 own damage card mine it type is 43 amount=count
+    do 4023 own give_keyword self
+    do 4537 uses_keyword cant player all event=targeted
+    1 marvel_snap | type | Shanna puts your units there, and Ant Man acts on units in its lane | Shanna -> Ant Man (Zoo Mockingbird)
+  Shanna:
+    when 6286 played self
+    do 6286 own summon unit random cost eq 6127
+  Ant Man:
+    when 5817 always
+    if 5817 count ge 4.0 unit mine board position is same_lane
+    do 5817 own stat_change self power=4.0
+    1 duelyst | type | Juxtaposition moves enemy units, and Ephemeral Shroud acts on units around it | Juxtaposition -> Ephemeral Shroud (Wanderer Reva (StephDawnheart))
+  Juxtaposition:
+    when 118 played self
+    do 118 own swap unit chosen board
+  Ephemeral Shroud:
+    when 282 played self
+    do 282 own silence position chosen position is surrounding amount=1.0
+    1 marvel_snap | type | Grapple Arrow moves your units, and Galactus acts on units in its lane | Grapple Arrow -> Galactus (Symbiote Galactus)
+  Grapple Arrow:
+    when 5994 played unit mine
+    do 5994 own move unit mine it
+  Galactus:
+    when 5973 played self
+    if 5973 amount gt stat
+    if 5973 count eq 1.0 unit mine board position is same_lane
+    if 5973 amount_stat power position enemy position is same_lane
+    if 5973 amount_stat power position mine position is same_lane
+    do 5973 own kill position all position not same_lane
+    do 5973 own kill unit all board position not same_lane
+    1 duelyst | type | Assassination Protocol moves your units, and Frostbone Naga acts on units around it | Assassination Protocol -> Frostbone Naga (Wanderer Reva (DracoMoriarty))
+  Assassination Protocol:
+    when 974 played self
+    do 974 own ready unit mine chosen board
+    do 974 own cant unit mine it event=attacks
+  Frostbone Naga:
+    when 307 played self
+    do 307 own damage any all board position is surrounding amount=2.0
+    1 duelyst | type | Hearth-Sister moves enemy units, and Crystallize acts on units around it | Hearth-Sister -> Crystallize (Ilena MKII)
+  Hearth-Sister:
+    when 249 played self
+    do 249 own swap self
+  Crystallize:
+    when 259 played self
+    when 1086 always
+    do 259 own give_keyword unit enemy chosen board position is surrounding
+    do 1086 uses_keyword cant unit enemy chosen board position is surrounding event=moves
+    do 1086 uses_keyword cant unit enemy chosen board position is surrounding event=attacks
+    1 duelyst | type | Superior Mirage puts your units there, and Frostbone Naga acts on units around it | Superior Mirage -> Frostbone Naga (Wanderer Zirix (Icicle, variant 2))
+  Superior Mirage:
+    when 523 played self
+    when 524 attacks self
+    do 523 own copy unit enemy chosen board amount=3.0
+    do 523 own give_ability unit enemy all board state is copy_of_it
+    do 524 gives obliterate self
+  Frostbone Naga:
+    when 307 played self
+    do 307 own damage any all board position is surrounding amount=2.0
+    1 into_the_breach | type | Grappling Hook moves enemy units, and Electric Whip acts on units next to it or next to its target | Grappling Hook -> Electric Whip (Blitzkrieg)
+  Grappling Hook:
+    when 5263 attacks
+    when 5264 attacks
+    when 5525 damaged self
+    when 5526 always
+    when 5527 damaged self
+    if 5264 upgraded 1.0
+    if 5525 amount_event_amount
+    do 5263 own move unit_or_structure nearest position is straight_line of self;keyword not 760857
+    do 5263 own move self
+    do 5264 own give_keyword unit mine nearest position is straight_line of self
+    do 5525 uses_keyword negate_damage unit mine nearest position is straight_line of self amount=event_amount
+    do 5526 uses_keyword cant unit mine nearest position is straight_line of self event=given_keyword
+    do 5527 uses_keyword remove_keyword unit mine nearest position is straight_line of self
+  Electric Whip:
+    when 5195 attacks
+    when 5196 attacks
+    when 5197 attacks
+    if 5196 upgraded 1.0
+    if 5197 upgraded 2.0
+    do 5195 own damage unit_or_structure chosen position is bordering of self amount=2.0
+    do 5195 own damage unit_or_structure all position is bordering of it amount=2.0
+    do 5196 own cant self event=strikes
+    do 5196 own can self event=attacks
+    do 5197 own damage unit_or_structure chosen position is bordering of self amount=1.0
+    do 5197 own damage unit_or_structure all position is bordering of it amount=1.0
+    1 marvel_snap | type | Lockjaw moves your units, and Odin acts on units in its lane; also makes your units get On Reveal | Lockjaw -> Odin (High Evo Lockjaw)
+  Lockjaw:
+    when 6101 activated self
+    when 6102 played unit mine
+    do 6101 own give_ability self
+    do 6102 gives swap unit mine it
+  Odin:
+    when 6189 played self
+    do 6189 own repeat unit mine all board position is same_lane;keyword is 8000750;card not 8000428
+    1 into_the_breach | type | Ramming Engines moves enemy units, and Vice Fist acts on units next to it | Ramming Engines -> Vice Fist (Custom: Combat Boulder Charge)
+  Ramming Engines:
+    when 5260 attacks
+    when 5261 attacks
+    when 5262 attacks
+    if 5261 upgraded 1.0
+    if 5262 upgraded 2.0
+    do 5260 own move self
+    do 5260 own damage unit_or_structure nearest position is straight_line of self amount=2.0
+    do 5260 own move unit_or_structure it
+    do 5260 own damage self amount=1.0
+    do 5261 own damage unit_or_structure nearest position is straight_line of self amount=1.0
+    do 5261 own damage self amount=1.0
+    do 5262 own damage unit_or_structure nearest position is straight_line of self amount=1.0
+  Vice Fist:
+    when 5198 attacks
+    when 5199 attacks
+    when 5200 attacks
+    if 5199 upgraded 1.0
+    if 5200 upgraded 2.0
+    do 5198 own move unit chosen position is bordering of self
+    do 5198 own damage unit it amount=1.0
+    do 5199 own cant self event=strikes
+    do 5200 own damage unit chosen position is bordering of self amount=2.0
+    1 faeria | type | Rakoan Shield Mates puts your units there, and Bone Collector acts on units next to it | Rakoan Shield Mates -> Bone Collector (Sac (Seasonal Cup Seifer 2019))
+  Rakoan Shield Mates:
+    when 1591 dies self
+    do 1591 own summon unit type is 13 power=1.0;health=1.0
+  Bone Collector:
+    when 1218 dies unit all position is bordering
+    do 1218 own stat_change self power=1.0;health=1.0
+    1 into_the_breach | type | Attraction Pulse moves enemy units, and Aerial Bombs acts on units ahead of it or next to it | Attraction Pulse -> Aerial Bombs (Rusting Hulks)
+  Attraction Pulse:
+    when 5368 attacks
+    do 5368 own move unit_or_structure nearest position is straight_line of self
+  Aerial Bombs:
+    when 5257 attacks
+    when 5547 always
+    when 5258 attacks
+    when 5259 attacks
+    if 5258 upgraded 1.0
+    if 5259 upgraded 2.0
+    do 5257 own move self
+    do 5257 own damage unit_or_structure chosen position is bordering of self amount=1.0
+    do 5257 own give_keyword position position is same_space of unit_or_structure chosen;of:kind is unit_or_structure;of:position is bordering of self
+    do 5547 uses_keyword cant position position is same_space of unit_or_structure chosen;of:kind is unit_or_structure;of:position is bordering of self event=attacks
+    do 5547 uses_keyword cant position position is same_space of unit_or_structure chosen;of:kind is unit_or_structure;of:position is bordering of self event=healed
+    do 5258 own damage unit_or_structure chosen position is bordering of self amount=1.0
+    do 5259 own damage unit_or_structure chosen position is ahead of self;distance le 4877 of self amount=1.0
+    1 into_the_breach | type | Tri-Rocket moves enemy units, and Titan Fist acts on units next to it | Tri-Rocket -> Titan Fist (Cataclysm)
+  Tri-Rocket:
+    when 5354 attacks
+    when 5355 attacks
+    when 5356 attacks
+    if 5355 upgraded 1.0
+    if 5356 upgraded 2.0
+    do 5354 own damage unit_or_structure nearest position is straight_line of self amount=1.0
+    do 5354 own move unit_or_structure nearest position is straight_line of self
+    do 5355 own damage unit_or_structure nearest position is straight_line of self amount=1.0
+    do 5356 own cant self event=strikes
+  Titan Fist:
+    when 5189 attacks
+    when 5190 attacks
+    when 5191 attacks
+    if 5190 upgraded 1.0
+    if 5191 upgraded 2.0
+    do 5189 own damage unit_or_structure chosen position is bordering of self amount=2.0
+    do 5189 own move unit_or_structure it
+    do 5190 own move self
+    do 5191 own damage unit_or_structure chosen position is bordering of self amount=2.0
+    1 duelyst | type | Superior Mirage puts your units there, and Orbrider acts on units around it | Superior Mirage -> Orbrider (Obelysks (F8))
+  Superior Mirage:
+    when 523 played self
+    when 524 attacks self
+    do 523 own copy unit enemy chosen board amount=3.0
+    do 523 own give_ability unit enemy all board state is copy_of_it
+    do 524 gives obliterate self
+  Orbrider:
+    when 394 played self
+    do 394 own return_to_hand unit mine chosen board position is surrounding
+    1 gwent | type | Arachas Nest puts your units there, and Kikimore Queen acts on units in its row; also triggers: is an Organic whose playing sets off its effect | Arachas Nest -> Kikimore Queen (Arachas Swarm: Kikimores and Arachas)
+  Arachas Nest:
+    when 2025 played self
+    do 2025 own summon amount=4.0
+  Kikimore Queen:
+    when 3058 always
+    when 4540 played unit mine strength gt 4192
+    when 3059 keyword_used
+    when 3060 played card mine type is 28
+    when 4540 played unit mine strength gt 4192
+    if 4540 amount_listed
+    if 3059 keyword_condition
+    if 4540 amount_listed
+    if 3059 keyword_condition
+    do 3058 own give_keyword self
+    do 4540 uses_keyword stat_change self strength=listed
+    do 3059 own stat_change unit mine all board type is 53;position is same_row of self strength=1.0
+    do 3060 own repeat self
+    do 4540 has_keyword stat_change self strength=listed
+    1 duelyst | type | Conscript puts your units there, and Azure Horn Shaman acts on units around it | Conscript -> Azure Horn Shaman (Wanderer Brome (Bleys27))
+  Conscript:
+    when 58 played self
+    do 58 own summon power=1.0;health=2.0
+  Azure Horn Shaman:
+    when 314 dies self
+    do 314 own stat_change unit mine all board position is surrounding health=4.0
+    1 gwent | keyword | gives a unit's copies Armor, and Kaedweni Revenant copies itself; also makes stronger: gives a unit's copies more strength, and Kaedweni Revenant copies itself | Voymir -> Kaedweni Revenant (Mobilization: NR Devotion Undead Army)
+  Voymir:
+    when 3031 played self
+    when 4532 damaged self
+    when 4532 damaged self
+    if 4532 amount_listed
+    if 4532 amount_listed
+    do 3031 own stat_change unit mine chosen board strength=1.0
+    do 3031 own stat_change unit mine all board state is copy_of_it strength=1.0
+    do 3031 own give_keyword unit mine it board amount=1.0
+    do 4532 uses_keyword negate_damage unit mine it board amount=listed
+    do 3031 own give_keyword unit mine all board state is copy_of_it amount=1.0
+    do 4532 uses_keyword negate_damage unit mine all board state is copy_of_it amount=listed
+  Kaedweni Revenant:
+    when 2487 activated self
+    when 2488 killed
+    when 4504 played self
+    do 2487 own damage unit chosen board amount=1.0
+    do 2488 own copy self
+    do 4504 has_keyword cant self event=activated;turns=1.0
+    1 duelyst | type | Rage Reactor puts your units there, and Primus Fist acts on units around it | Rage Reactor -> Primus Fist (Aggro Ragnora (AlphaCentury))
+  Rage Reactor:
+    when 1026 always
+    when 1027 killed unit enemy
+    do 1026 own stat_change player mine power=1.0
+    do 1027 own summon
+  Primus Fist:
+    when 304 played self
+    do 304 own stat_change unit mine chosen board position is surrounding power=2.0
+    1 gwent | type | Saskia puts your units there, and Samum acts on units next to its target | Saskia -> Samum (Guerilla Tactics: Dragons Milva Madoc 11P Scholars)
+  Saskia:
+    when 2377 played self
+    when 2378 activated self
+    when 2379 activated self
+    when 2380 activated self
+    when 4504 played self
+    do 2377 own choose_one
+    do 2377 own summon
+    do 2377 own give_ability self
+    do 2378 gives create
+    do 2378 gives play_card card mine it card is 756406
+    do 2377 own summon
+    do 2377 own give_ability self
+    do 2379 gives create
+    do 2379 gives play_card card mine it card is 757004
+    do 2377 own summon
+    do 2377 own give_ability self
+    do 2380 gives create
+    do 2380 gives play_card card mine it card is 756815
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Samum:
+    when 2683 played self
+    when 2684 killed
+    do 2683 own damage unit chosen board amount=3.0
+    do 2684 own move unit all board position is sides of it
+    1 gwent | type | Fisher King moves Vicovaro Novice, and Vicovaro Novice acts on units in the back row | Fisher King -> Vicovaro Novice (Tactical Decision: OP GN HyperThin)
+  Fisher King:
+    when 2663 played self
+    if 2663 keyword_condition
+    if 2663 have is self position is back_row
+    do 2663 own move card mine chosen deck
+  Vicovaro Novice:
+    when 1942 played self
+    when 4584 played self
+    if 1942 keyword_condition
+    if 4584 keyword_condition
+    if 1942 have is self position is back_row
+    if 4584 have is self position is back_row
+    do 1942 own draw card mine deck_top amount=1.0
+    do 1942 own put_on_top card mine chosen hand
+    do 4584 own draw card mine deck_top amount=1.0
+    do 4584 own put_on_top card mine chosen hand
+    1 marvel_snap | type | Ghost-Spider moves your units, and Arnim Zola acts on units in its lane | Ghost-Spider -> Arnim Zola (Phoenix Force Nimrod)
+  Ghost-Spider:
+    when 5983 played self
+    if 5983 last_card unit mine board
+    do 5983 own move unit mine it board
+  Arnim Zola:
+    when 5829 played self
+    do 5829 own kill unit mine chosen board position is same_lane;card not 8000034
+    do 5829 own copy unit mine it card not 8000034
+    1 gwent | type | Spontaneous Evolution puts your units there, and Kikimore Queen acts on units in its row; also triggers: is an Organic whose playing sets off its effect | Spontaneous Evolution -> Kikimore Queen (Arachas Swarm: Kikimores and Arachas)
+  Spontaneous Evolution:
+    when 3591 played self
+    do 3591 own stat_change unit mine chosen board strength=5.0
+    do 3591 own summon amount=3.0
+    do 3591 own stat_change unit mine it type is 43 strength=9.0
+    do 3591 own summon
+  Kikimore Queen:
+    when 3058 always
+    when 4540 played unit mine strength gt 4192
+    when 3059 keyword_used
+    when 3060 played card mine type is 28
+    when 4540 played unit mine strength gt 4192
+    if 4540 amount_listed
+    if 3059 keyword_condition
+    if 4540 amount_listed
+    if 3059 keyword_condition
+    do 3058 own give_keyword self
+    do 4540 uses_keyword stat_change self strength=listed
+    do 3059 own stat_change unit mine all board type is 53;position is same_row of self strength=1.0
+    do 3060 own repeat self
+    do 4540 has_keyword stat_change self strength=listed
+    1 stormbound | type | Sweetcap Kittens moves enemy units, and Wild Saberpaws acts on units around it or next to it | Sweetcap Kittens -> Wild Saberpaws (Cat Butcher)
+  Sweetcap Kittens:
+    when 10365 played self
+    when 10503 moves self
+    do 10365 own give_keyword unit enemy all board position is ahead
+    do 10503 uses_keyword move unit enemy all board position is ahead
+  Wild Saberpaws:
+    when 10371 played self
+    when 10372 played self
+    if 10371 have not unit all board position is surrounding
+    if 10372 have is unit all board position is surrounding
+    if 10372 have not unit all board position is bordering
+    do 10371 own stat_change self movement=2.0
+    do 10372 own stat_change self movement=1.0
+    1 faeria | type | Celestial Tower moves enemy units, and Rakoakopter acts on units next to it; also moves into place: moves my units or land forward: it can enter where it needs to be | Celestial Tower -> Rakoakopter (zzaarroocc's RY Flyers)
+  Celestial Tower:
+    when 1367 activated
+    when 1756 always
+    do 1367 own give_keyword unit chosen board amount=3.0
+    do 1756 uses_keyword can unit chosen board event=moves
+    do 1367 own damage self amount=1.0
+  Rakoakopter:
+    when 1580 always
+    when 1755 always
+    when 1759 played self
+    when 1581 played self
+    when 1755 always
+    when 1759 played self
+    if 1759 amount_event_amount
+    if 1759 amount_event_amount
+    do 1580 own give_keyword self
+    do 1755 uses_keyword can self event=moves
+    do 1580 own give_keyword self amount=1.0
+    do 1759 uses_keyword move self amount=event_amount
+    do 1581 own damage unit enemy all board position is bordering amount=2.0
+    do 1755 has_keyword can self event=moves
+    do 1759 has_keyword move self amount=event_amount
+    1 gwent | type | White Frost moves enemy units, and Imlerith's Wrath acts on units in a space it picks's row or not in a space it picks's row | White Frost -> Imlerith's Wrath (White Frost: White Frost-EZ pro rank)
+  White Frost:
+    when 2293 activated self
+    when 4520 turn_start
+    when 2294 always
+    when 4513 always
+    when 2295 played unit mine type is 23
+    when 4513 always
+    when 4504 played self
+    if 4513 amount_listed
+    if 2295 have is position keyword is 756162;position is opposite_row of it
+    if 4513 amount_listed
+    do 2293 own move unit enemy chosen board
+    do 2293 own give_keyword position enemy position is same_row of it turns=2.0
+    do 4520 uses_keyword damage unit highest board position is same_row of self amount=2.0
+    do 2294 own give_keyword self amount=2.0
+    do 4513 uses_keyword can self event=activated;times=listed
+    do 2295 own stat_change unit mine it type is 23 strength=1.0
+    do 4513 has_keyword can self event=activated;times=listed
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Imlerith's Wrath:
+    when 1950 played self
+    if 1950 amount_stat strength unit mine highest board
+    do 1950 own damage unit enemy chosen board position not same_row of position all;of:kind is position;of:keyword is 756162 amount=stat
+    do 1950 own kill unit enemy it board position is same_row of position all;of:kind is position;of:keyword is 756162
+    1 marvel_snap | type | Arthur Pendragon puts your units there, and Luke Cage acts on units at the front of a lane | Arthur Pendragon -> Luke Cage (Doom 2099 Iron Man)
+  Arthur Pendragon:
+    when 5830 played self
+    do 5830 own summon card mine
+  Luke Cage:
+    when 6104 always
+    do 6104 own cant unit mine all board position is front_of_lane event=stat_changed
+    1 marvel_snap | type | Arnim Zola puts your units there, and Fastball Special acts on units in its lane | Arnim Zola -> Fastball Special (Merge Man-Spider)
+  Arnim Zola:
+    when 5829 played self
+    do 5829 own kill unit mine chosen board position is same_lane;card not 8000034
+    do 5829 own copy unit mine it card not 8000034
+  Fastball Special:
+    when 5959 played self
+    if 5959 amount_event_amount
+    if 5959 amount_minus
+    do 5959 own kill unit mine highest board position is same_lane
+    do 5959 own stat_change unit enemy chosen board position is same_lane power=minus
+    1 duelyst | type | Star's Fury puts your units there, and Orbrider acts on units around it | Star's Fury -> Orbrider (Obelysks (F8))
+  Star's Fury:
+    when 155 played self
+    when 1096 played self
+    do 155 own summon
+    do 1096 uses_keyword can unit mine it card is 5000146 event=moves
+    do 1096 uses_keyword can unit mine it card is 5000146 event=attacks
+  Orbrider:
+    when 394 played self
+    do 394 own return_to_hand unit mine chosen board position is surrounding
+    1 gwent | type | Cursed Scroll moves Fisher King, and Fisher King acts on units in the back row | Cursed Scroll -> Fisher King (Tactical Decision: OP GN HyperThin)
+  Cursed Scroll:
+    when 3156 activated self
+    when 4504 played self
+    do 3156 own draw card mine chosen deck amount=1.0
+    do 3156 own move card mine chosen hand
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Fisher King:
+    when 2663 played self
+    if 2663 keyword_condition
+    if 2663 have is self position is back_row
+    do 2663 own move card mine chosen deck
+    1 marvel_snap | type | Polaris moves enemy units, and Alioth acts on units in its lane | Polaris -> Alioth (Cerebro 5 Alioth)
+  Polaris:
+    when 6204 played self
+    do 6204 own move unit enemy chosen board cost in 1;cost in 2
+  Alioth:
+    when 5812 played self
+    do 5812 own silence unit enemy all board position is same_lane;state is hidden
+    1 marvel_snap | type | Bucky Barnes puts your units there, and Zombie Captain Marvel acts on units in its lane | Bucky Barnes -> Zombie Captain Marvel (Most played: Shadow King Mobius)
+  Bucky Barnes:
+    when 5863 dies self
+    do 5863 own summon
+  Zombie Captain Marvel:
+    when 6470 activated self
+    if 6470 amount_product
+    if 6470 amount_count unit mine all board position is same_lane;card not 8000739
+    do 6470 own kill unit mine all board position is same_lane;card not 8000739
+    do 6470 own stat_change self power=product
+    do 6470 own move self
+    1 marvel_snap | type | Adamantium Infusion puts your units there, and Symbiote Spider-Man acts on units in its lane | Adamantium Infusion -> Symbiote Spider-Man (Merge Man-Spider)
+  Adamantium Infusion:
+    when 5801 played self
+    if 5801 amount_stat power it
+    do 5801 own obliterate self
+    do 5801 own revive unit mine highest discard position is same_lane
+    do 5801 own stat_change unit mine it power=stat
+  Symbiote Spider-Man:
+    when 6371 activated self
+    do 6371 own merge unit mine lowest board position is same_lane
+    do 6371 own repeat unit mine it
+    1 duelyst | type | Rasha's Curse puts your units there, and Frostbone Naga acts on units around it | Rasha's Curse -> Frostbone Naga (Wanderer Zirix (Icicle, variant 2))
+  Rasha's Curse:
+    when 153 played self
+    when 1096 played self
+    do 153 own kill equipment enemy random attached
+    do 153 own summon
+    do 1096 uses_keyword can unit mine it card is 5000146 event=moves
+    do 1096 uses_keyword can unit mine it card is 5000146 event=attacks
+  Frostbone Naga:
+    when 307 played self
+    do 307 own damage any all board position is surrounding amount=2.0
+    1 marvel_snap | type | Doctor Strange moves your units, and Hulkbuster acts on units in its lane | Doctor Strange -> Hulkbuster (Phoenix Move)
+  Doctor Strange:
+    when 5913 played self
+    do 5913 own move unit mine highest board
+  Hulkbuster:
+    when 6016 played self
+    do 6016 own merge self
+    1 marvel_snap | type | White Tiger puts your units there, and Wolfsbane acts on units in its lane | White Tiger -> Wolfsbane (Tiger Wong)
+  White Tiger:
+    when 6445 played self
+    do 6445 own summon power=10.0
+  Wolfsbane:
+    when 6454 played self
+    if 6454 amount_count unit mine all board position is same_lane;card not 8000723
+    if 6454 amount_product
+    do 6454 own stat_change self power=product
+    1 duelyst | type | Dioltas puts your units there, and Frostbone Naga acts on units around it | Dioltas -> Frostbone Naga (Wanderer Reva (DracoMoriarty))
+  Dioltas:
+    when 331 dies self
+    when 1098 always
+    do 331 own summon power=0.0;health=8.0
+    do 1098 uses_keyword cant any enemy all board position is surrounding of self event=moves
+    do 1098 uses_keyword cant any enemy all board position is surrounding of self event=attacks
+  Frostbone Naga:
+    when 307 played self
+    do 307 own damage any all board position is surrounding amount=2.0
+    1 marvel_snap | type | Arnim Zola puts your units there, and Armor acts on units in its lane | Arnim Zola -> Armor (Pixie Hope)
+  Arnim Zola:
+    when 5829 played self
+    do 5829 own kill unit mine chosen board position is same_lane;card not 8000034
+    do 5829 own copy unit mine it card not 8000034
+  Armor:
+    when 5828 always
+    do 5828 own cant unit all board position is same_lane event=dies
+    1 marvel_snap | type | Grand Master moves your units, and Shadow King acts on units in its lane | Grand Master -> Shadow King (Shadow King Drax)
+  Grand Master:
+    when 5993 played self
+    do 5993 own move unit mine chosen board position is same_lane;keyword is 8000750;card not 8000225
+    do 5993 own repeat unit mine it card not 8000225
+  Shadow King:
+    when 6280 played self
+    if 6280 amount_stat base_power it
+    do 6280 own stat_set unit all board position is same_lane power=stat
+    1 duelyst | type | Hearth-Sister moves units, and Lightbender acts on units around it | Hearth-Sister -> Lightbender (Faie Blood Taura)
+  Hearth-Sister:
+    when 249 played self
+    do 249 own swap self
+  Lightbender:
+    when 288 played self
+    do 288 own silence position all position is surrounding
+    1 into_the_breach | type | Artemis Artillery moves units, and Fire Beam acts on units in a line from it | Artemis Artillery -> Fire Beam (Flame Behemoths)
+  Artemis Artillery:
+    when 5313 attacks
+    when 5314 attacks
+    if 5314 upgraded 1.0
+    do 5313 own damage unit_or_structure chosen position is straight_line of self amount=1.0
+    do 5313 own move unit_or_structure all position is bordering of it
+    do 5314 own cant self event=strikes
+  Fire Beam:
+    when 5379 attacks
+    when 5539 turn_start
+    when 5540 healed
+    when 5541 moves_onto self position is same_space of position;of:kind is position;of:terrain is ocean;keyword not 760829
+    when 5542 moves_onto self position is same_space of position;of:kind is position;of:keyword is 760842
+    when 5380 attacks
+    if 5380 upgraded 1.0
+    do 5379 own give_keyword position all position is straight_line of self
+    do 5539 uses_keyword damage position all position is straight_line of self amount=1.0
+    do 5540 uses_keyword remove_keyword position all position is straight_line of self
+    do 5541 uses_keyword remove_keyword position all position is straight_line of self
+    do 5542 uses_keyword remove_keyword position all position is straight_line of self
+    do 5380 own increase_effect self times=1.0
+    1 gwent | type | Malena moves Dwarven Skirmisher, and Dwarven Skirmisher acts on units in the front row | Malena -> Dwarven Skirmisher (Call of Harmony: Scoia'tael Harmony is overtuned in June)
+  Malena:
+    when 2055 always
+    when 4510 played self
+    when 2056 activated self
+    when 2057 always
+    when 4511 activated self
+    when 4510 played self
+    when 4504 played self
+    if 4511 amount_listed
+    do 2055 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 2056 own move unit chosen board
+    do 2057 own keyword_action amount=1.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+    do 4510 has_keyword can self event=activated
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Dwarven Skirmisher:
+    when 2071 played self
+    when 4532 damaged self
+    when 2072 activated self
+    if 2071 keyword_condition
+    if 4532 amount_listed
+    if 2072 keyword_condition
+    if 2071 have is self position is front_row
+    if 2072 have is self keyword is 756174
+    do 2071 own damage unit enemy chosen board amount=3.0
+    do 2071 own give_keyword self amount=1.0
+    do 4532 uses_keyword negate_damage self amount=listed
+    do 2072 own damage unit enemy chosen board amount=3.0
+    1 gwent | type | Summoning Circle puts your units there, and Cow Carcass acts on units next to it | Summoning Circle -> Cow Carcass (Tactical Decision: OP GN HyperThin)
+  Summoning Circle:
+    when 2247 always
+    when 4541 round_end
+    when 2248 played self
+    when 2249 turn_end
+    when 2250 countdown_done self
+    when 4541 round_end
+    if 2248 amount_stat cost unit mine it deck
+    if 2249 amount_count unit mine all board position is sides of self
+    if 2249 amount_minus
+    do 2247 own give_keyword self
+    do 4541 uses_keyword cant self event=leaves_play
+    do 4541 uses_keyword remove_keyword self
+    do 2248 own look unit mine all deck
+    do 2248 own choose_card unit mine chosen deck
+    do 2248 own give_keyword self amount=stat
+    do 2249 own give_keyword self amount=minus
+    do 2250 own summon unit mine it deck
+    do 2250 own kill self
+    do 4541 has_keyword cant self event=leaves_play
+    do 4541 has_keyword remove_keyword self
+  Cow Carcass:
+    when 4312 always
+    when 4517 leaves_play self
+    when 4313 always
+    when 4527 always
+    when 4528 played self
+    when 4569 always
+    when 4314 turn_end
+    when 4549 given_keyword self keyword is 756202
+    when 4517 leaves_play self
+    when 4527 always
+    when 4528 played self
+    when 4569 always
+    if 4549 event_count ge 2.0
+    do 4312 own give_keyword self
+    do 4517 uses_keyword obliterate self
+    do 4313 own give_keyword self
+    do 4527 uses_keyword can self event=summoned
+    do 4528 uses_keyword give_keyword self
+    do 4569 uses_keyword can self event=summoned
+    do 4314 own give_keyword unit mine all board position is sides of self
+    do 4549 uses_keyword kill unit mine all board position is sides of self
+    do 4314 own kill self
+    do 4517 has_keyword obliterate self
+    do 4527 has_keyword can self event=summoned
+    do 4528 has_keyword give_keyword self
+    do 4569 uses_keyword can self event=summoned
+    1 marvel_snap | type | Gladiator puts enemy units there, and Shadow King acts on units in its lane | Gladiator -> Shadow King (Sera Control Maximus)
+  Gladiator:
+    when 5987 played self
+    do 5987 own summon card enemy random deck
+    do 5987 own kill unit enemy it board power lt 5802
+  Shadow King:
+    when 6280 played self
+    if 6280 amount_stat base_power it
+    do 6280 own stat_set unit all board position is same_lane power=stat
+    1 stormbound | type | Qordia’s Nest puts your units there, and Toxic Sacrifice acts on units around its target | Qordia’s Nest -> Toxic Sacrifice (Shadowfen)
+  Qordia’s Nest:
+    when 10244 turn_start
+    if 10244 amount_per_level
+    do 10244 own summon strength=1.0
+  Toxic Sacrifice:
+    when 10249 played self
+    when 10498 turn_start
+    when 10499 given_keyword self keyword is 1000044
+    if 10249 amount_per_level
+    do 10249 own kill unit mine chosen board
+    do 10249 own damage unit all board position is surrounding of it amount=2.0
+    do 10249 own give_keyword unit it
+    do 10498 uses_keyword damage unit it amount=1.0
+    do 10499 uses_keyword remove_keyword unit it
+    1 gwent | type | Nightwraith puts your units there, and Wolf Pack acts on units in its row | Nightwraith -> Wolf Pack (Arachas Swarm: Tatterwing - 1 prov left for good luck)
+  Nightwraith:
+    when 3221 played self
+    when 3222 dies self
+    do 3221 own summon amount=2.0
+    do 3222 own summon amount=2.0
+  Wolf Pack:
+    when 2016 played self
+    if 2016 amount_count unit mine all board position is same_row of self
+    do 2016 own stat_change self strength=count
+    1 marvel_snap | type | Heimdall moves your units, and Carnage acts on units in its lane | Heimdall -> Carnage (Phoenix Move)
+  Heimdall:
+    when 6002 played self
+    do 6002 own move unit mine all board card not 8000236
+  Carnage:
+    when 5875 played self
+    if 5875 amount_product
+    if 5875 amount_event_amount
+    do 5875 own kill unit mine all board position is same_lane;card not 8000083
+    do 5875 own stat_change self power=product
+    1 marvel_snap | type | Sentry puts your units there, and Luke Cage acts on units at the front of a lane | Sentry -> Luke Cage (Annihilus Junk)
+  Sentry:
+    when 6276 always
+    when 6277 played self
+    do 6276 own cant self event=played
+    do 6277 own summon
+  Luke Cage:
+    when 6104 always
+    do 6104 own cant unit mine all board position is front_of_lane event=stat_changed
+    1 gwent | type | Arachas Swarm puts your units there, and Wolf Pack acts on units in its row | Arachas Swarm -> Wolf Pack (Arachas Swarm: Tatterwing - 1 prov left for good luck)
+  Arachas Swarm:
+    when 2550 activated self
+    when 2551 always
+    when 4513 always
+    when 2552 played card mine type is 28
+    when 4513 always
+    when 4504 played self
+    if 4513 amount_listed
+    if 4513 amount_listed
+    do 2550 own summon
+    do 2551 own give_keyword self amount=5.0
+    do 4513 uses_keyword can self event=activated;times=listed
+    do 2552 own summon
+    do 4513 has_keyword can self event=activated;times=listed
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Wolf Pack:
+    when 2016 played self
+    if 2016 amount_count unit mine all board position is same_row of self
+    do 2016 own stat_change self strength=count
+    1 faeria | type | Majinata, Spirit of Everlife moves units, and Emerald Salamander acts on units next to it | Majinata, Spirit of Everlife -> Emerald Salamander (Crackles Combo)
+  Majinata, Spirit of Everlife:
+    when 1578 always
+    when 1761 damaged self
+    when 1764 always
+    when 1579 played self
+    when 1755 always
+    when 1756 always
+    when 1761 damaged self
+    when 1764 always
+    if 1761 amount_event_amount
+    if 1761 amount_event_amount
+    do 1578 own give_keyword self
+    do 1761 uses_keyword negate_damage self amount=event_amount
+    do 1761 uses_keyword remove_keyword self
+    do 1578 own give_keyword self
+    do 1764 uses_keyword cant self event=targeted
+    do 1579 own capture self
+    do 1579 own stat_change it power=5.0;health=5.0
+    do 1579 own give_keyword it
+    do 1755 uses_keyword can it event=moves
+    do 1579 own give_keyword it amount=2.0
+    do 1756 uses_keyword can it event=moves
+    do 1761 has_keyword negate_damage self amount=event_amount
+    do 1761 has_keyword remove_keyword self
+    do 1764 has_keyword cant self event=targeted
+  Emerald Salamander:
+    when 1518 played self
+    do 1518 own damage unit enemy all board position is bordering amount=2.0
+    do 1518 own stat_change unit mine all board position is bordering power=2.0;health=2.0
+    1 gwent | type | Doadrick Leumaerts moves Lydia van Bredevoort, and Lydia van Bredevoort acts on units in the back row or in the front row | Doadrick Leumaerts -> Lydia van Bredevoort (Tactical Decision: OP GN HyperThin)
+  Doadrick Leumaerts:
+    when 2883 played self
+    when 4510 played self
+    when 2884 activated self
+    when 2885 always
+    when 4511 activated self
+    if 2883 have is unit mine all board type is 47
+    if 2884 keyword_condition
+    if 4511 amount_listed
+    if 2884 have is self position is back_row
+    do 2883 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 2884 own draw card mine deck_top amount=1.0
+    do 2884 own move card mine chosen hand
+    do 2885 own keyword_action amount=1.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+  Lydia van Bredevoort:
+    when 3778 played self
+    when 3779 played self
+    if 3778 keyword_condition
+    if 3779 keyword_condition
+    if 3778 have is self position is front_row
+    if 3779 have is self position is back_row
+    do 3778 own create card mine chosen hand state is bronze;category is spell;state is opponent_faction
+    do 3778 own play_card card mine chosen hand state is created
+    do 3779 own play_card card enemy chosen discard state is bronze;category is spell
+    1 gwent | type | White Frost moves enemy units, and Tir ná Lia acts on units in the back row or in the front row; also moves into place: moves an enemy unit into the row it hits | White Frost -> Tir ná Lia (White Frost: White Frost-EZ pro rank)
+  White Frost:
+    when 2293 activated self
+    when 4520 turn_start
+    when 2294 always
+    when 4513 always
+    when 2295 played unit mine type is 23
+    when 4513 always
+    when 4504 played self
+    if 4513 amount_listed
+    if 2295 have is position keyword is 756162;position is opposite_row of it
+    if 4513 amount_listed
+    do 2293 own move unit enemy chosen board
+    do 2293 own give_keyword position enemy position is same_row of it turns=2.0
+    do 4520 uses_keyword damage unit highest board position is same_row of self amount=2.0
+    do 2294 own give_keyword self amount=2.0
+    do 4513 uses_keyword can self event=activated;times=listed
+    do 2295 own stat_change unit mine it type is 23 strength=1.0
+    do 4513 has_keyword can self event=activated;times=listed
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Tir ná Lia:
+    when 4047 always
+    when 4541 round_end
+    when 4048 played self
+    when 4049 activated self
+    when 4050 activated self
+    when 4520 turn_start
+    when 4520 turn_start
+    when 4789 always
+    when 4541 round_end
+    when 4790 played self
+    when 4791 activated self
+    when 4792 activated self
+    when 4520 turn_start
+    when 4520 turn_start
+    when 4541 round_end
+    when 4504 played self
+    if 4048 amount_sum
+    if 4048 amount_listed
+    if 4048 amount_distinct card card mine all deck state is bronze;type is 23;state is started_in_deck
+    if 4049 keyword_condition not
+    if 4050 keyword_condition
+    if 4050 amount_listed
+    if 4050 amount_listed
+    if 4790 amount_sum
+    if 4790 amount_listed
+    if 4790 amount_distinct card card mine all deck state is bronze;type is 23;state is started_in_deck
+    if 4791 keyword_condition not
+    if 4792 keyword_condition
+    if 4792 amount_listed
+    if 4792 amount_listed
+    if have not card mine state is started_in_deck;region is Neutral
+    if 4049 have not card mine state is started_in_deck;region is Neutral
+    if 4050 have not card mine state is started_in_deck;region is Neutral
+    if 4791 have not card mine state is started_in_deck;region is Neutral
+    if 4792 have not card mine state is started_in_deck;region is Neutral
+    do 4047 own give_keyword self
+    do 4541 uses_keyword cant self event=leaves_play
+    do 4541 uses_keyword remove_keyword self
+    do 4048 own stat_change unit mine chosen board strength=sum
+    do 4049 own create
+    do 4049 own play_card card mine it card is 757101
+    do 4050 own create
+    do 4050 own play_card card mine it card is 757101
+    do 4050 own give_keyword position enemy position is front_row amount=listed
+    do 4520 uses_keyword damage unit highest board position is same_row of self amount=2.0
+    do 4050 own give_keyword position enemy position is back_row amount=listed
+    do 4520 uses_keyword damage unit highest board position is same_row of self amount=2.0
+    do 4789 own give_keyword self
+    do 4541 uses_keyword cant self event=leaves_play
+    do 4541 uses_keyword remove_keyword self
+    do 4790 own stat_change unit mine chosen board strength=sum
+    do 4791 own create
+    do 4791 own play_card card mine it card is 757101
+    do 4792 own create
+    do 4792 own play_card card mine it card is 757101
+    do 4792 own give_keyword position enemy position is front_row amount=listed
+    do 4520 uses_keyword damage unit highest board position is same_row of self amount=2.0
+    do 4792 own give_keyword position enemy position is back_row amount=listed
+    do 4520 uses_keyword damage unit highest board position is same_row of self amount=2.0
+    do 4541 has_keyword cant self event=leaves_play
+    do 4541 has_keyword remove_keyword self
+    do 4504 has_keyword cant self event=activated;turns=1.0
+    1 gwent | type | Blightmaker moves Doadrick Leumaerts, and Doadrick Leumaerts acts on units in the back row; also is an Agent it asks for | Blightmaker -> Doadrick Leumaerts (Tactical Decision: OP GN HyperThin)
+  Blightmaker:
+    when 3669 played self
+    do 3669 own move card mine chosen deck
+    do 3669 own summon card mine it type is 37
+    do 3669 own create
+    do 3669 own play_card card mine chosen hand card is 813588
+  Doadrick Leumaerts:
+    when 2883 played self
+    when 4510 played self
+    when 2884 activated self
+    when 2885 always
+    when 4511 activated self
+    if 2883 have is unit mine all board type is 47
+    if 2884 keyword_condition
+    if 4511 amount_listed
+    if 2884 have is self position is back_row
+    do 2883 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 2884 own draw card mine deck_top amount=1.0
+    do 2884 own move card mine chosen hand
+    do 2885 own keyword_action amount=1.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+    1 duelyst | type | Pandora puts your units there, and Sandswirl Reader acts on units around it | Pandora -> Sandswirl Reader (Wanderer Zirix (Icicle))
+  Pandora:
+    when 326 turn_end
+    do 326 own summon power=3.0;health=3.0
+    do 326 own give_random_keyword unit mine it card is -1001
+  Sandswirl Reader:
+    when 518 played self
+    do 518 own return_to_hand unit chosen board position is surrounding
+    do 518 own set_terrain position position is same_space of it
+    1 gwent | type | One Night at the Passiflora puts your units there, and Golden Froth acts on units side by side | One Night at the Passiflora -> Golden Froth (Hidden Cache: The best Passiflora deck in the game)
+  One Night at the Passiflora:
+    when 3265 always
+    when 4517 leaves_play self
+    when 3266 played self
+    when 3267 played unit mine type is 30
+    when 3268 played unit mine type is 30
+    when 4517 leaves_play self
+    if 3267 stage 1.0
+    if 3268 stage 2.0
+    do 3265 own give_keyword self
+    do 4517 uses_keyword obliterate self
+    do 3266 own summon
+    do 3267 own summon
+    do 3268 own mana_gain secondary_resource mine amount=6.0
+    do 4517 has_keyword obliterate self
+  Golden Froth:
+    when 2559 played self
+    do 2559 own stat_change unit chosen board position is adjacent_group strength=2.0
+    1 gwent | type | Cursed Scroll moves Vicovaro Novice, and Vicovaro Novice acts on units in the back row | Cursed Scroll -> Vicovaro Novice (Tactical Decision: OP GN HyperThin)
+  Cursed Scroll:
+    when 3156 activated self
+    when 4504 played self
+    do 3156 own draw card mine chosen deck amount=1.0
+    do 3156 own move card mine chosen hand
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Vicovaro Novice:
+    when 1942 played self
+    when 4584 played self
+    if 1942 keyword_condition
+    if 4584 keyword_condition
+    if 1942 have is self position is back_row
+    if 4584 have is self position is back_row
+    do 1942 own draw card mine deck_top amount=1.0
+    do 1942 own put_on_top card mine chosen hand
+    do 4584 own draw card mine deck_top amount=1.0
+    do 4584 own put_on_top card mine chosen hand
+    1 into_the_breach | type | Teleporter moves units, and Fire Beam acts on units in a line from it | Teleporter -> Fire Beam (Flame Behemoths)
+  Teleporter:
+    when 5373 attacks
+    when 5374 attacks
+    when 5375 attacks
+    when 5376 attacks
+    when 5546 always
+    if 5374 upgraded 1.0
+    if 5375 upgraded 2.0
+    if 5376 have is self keyword is 760839
+    do 5373 own swap self
+    do 5374 own can self event=attacks
+    do 5375 own can self event=attacks
+    do 5376 own give_keyword it
+    do 5546 uses_keyword cant it event=moves
+  Fire Beam:
+    when 5379 attacks
+    when 5539 turn_start
+    when 5540 healed
+    when 5541 moves_onto self position is same_space of position;of:kind is position;of:terrain is ocean;keyword not 760829
+    when 5542 moves_onto self position is same_space of position;of:kind is position;of:keyword is 760842
+    when 5380 attacks
+    if 5380 upgraded 1.0
+    do 5379 own give_keyword position all position is straight_line of self
+    do 5539 uses_keyword damage position all position is straight_line of self amount=1.0
+    do 5540 uses_keyword remove_keyword position all position is straight_line of self
+    do 5541 uses_keyword remove_keyword position all position is straight_line of self
+    do 5542 uses_keyword remove_keyword position all position is straight_line of self
+    do 5380 own increase_effect self times=1.0
+    1 gwent | type | Ciaran aep Easnillen moves enemy units, and Ocvist acts on units in the row facing it | Ciaran aep Easnillen -> Ocvist (Precision Strike: dragons 052025)
+  Ciaran aep Easnillen:
+    when 2048 played self
+    when 4523 always
+    do 2048 own give_keyword unit chosen board
+    do 4523 uses_keyword silence unit chosen board
+    do 2048 own move unit it
+  Ocvist:
+    when 1806 always
+    when 4507 game_start
+    when 1807 played self
+    when 4514 turn_start
+    when 1808 always
+    when 4508 turn_end
+    when 1809 countdown_done self
+    when 4507 game_start
+    when 4508 turn_end
+    if 4507 amount_count card mine type is 38;state is started_in_deck
+    if 4507 amount_count card mine type is 38;state is started_in_deck
+    do 1806 own give_keyword self
+    do 4507 uses_keyword stat_change self strength=count
+    do 1807 own give_keyword position enemy position is opposite_row of self turns=2.0
+    do 4514 uses_keyword damage unit random board position is same_row of self amount=3.0;spread=1.0
+    do 1808 own give_keyword self amount=3.0
+    do 4508 uses_keyword countdown_advance self amount=1.0
+    do 1809 own damage unit enemy all board amount=1.0
+    do 4507 has_keyword stat_change self strength=count
+    do 4508 has_keyword countdown_advance self amount=1.0
+    1 duelyst | type | Repulsor Beast moves enemy units, and Sun Bloom acts on units in a 2x2 area | Repulsor Beast -> Sun Bloom (Wanderer Brome (Bleys27))
+  Repulsor Beast:
+    when 301 played self
+    do 301 own move unit enemy chosen board position is surrounding
+  Sun Bloom:
+    when 69 played self
+    do 69 own silence position chosen position is area_2x2
+    1 gwent | type | Fisher King moves Yennefer: Divination, and Yennefer: Divination acts on units in the back row | Fisher King -> Yennefer: Divination (Tactical Decision: OP GN HyperThin)
+  Fisher King:
+    when 2663 played self
+    if 2663 keyword_condition
+    if 2663 have is self position is back_row
+    do 2663 own move card mine chosen deck
+  Yennefer: Divination:
+    when 2571 played self
+    when 4506 activated
+    if 2571 keyword_condition
+    if 2571 amount_stat strength unit mine it deck
+    if 2571 have is self position is back_row
+    do 2571 own keyword_action unit mine random deck
+    do 4506 uses_keyword reveal unit mine random deck
+    do 2571 own stat_change unit mine chosen board strength=stat
+    1 gwent | type | Drakenborg puts your units there, and Sabrina Glevissig acts on units in its row | Drakenborg -> Sabrina Glevissig (Mobilization: NR Devotion Undead Army)
+  Drakenborg:
+    when 4155 always
+    when 4541 round_end
+    when 4156 played self
+    when 4523 always
+    when 4157 activated self
+    when 4534 turn_end
+    when 4802 always
+    when 4541 round_end
+    when 4803 played self
+    when 4523 always
+    when 4804 activated self
+    when 4534 turn_end
+    when 4541 round_end
+    when 4504 played self
+    if 4157 amount_sum
+    if 4157 amount_listed
+    if 4157 amount_stat boost unit mine board state is summoned_this_round
+    if 4804 amount_sum
+    if 4804 amount_stat strength unit mine board state is summoned_this_round
+    if 4804 amount_stat base_power unit mine board state is summoned_this_round
+    if 4804 amount_minus
+    do 4155 own give_keyword self
+    do 4541 uses_keyword cant self event=leaves_play
+    do 4541 uses_keyword remove_keyword self
+    do 4156 own summon unit mine chosen deck
+    do 4156 own give_keyword unit mine it
+    do 4523 uses_keyword silence unit mine it
+    do 4157 own give_keyword unit mine chosen board amount=sum
+    do 4534 uses_keyword stat_change unit mine chosen board strength=1.0
+    do 4802 own give_keyword self
+    do 4541 uses_keyword cant self event=leaves_play
+    do 4541 uses_keyword remove_keyword self
+    do 4803 own summon unit mine chosen deck
+    do 4803 own give_keyword unit mine it
+    do 4523 uses_keyword silence unit mine it
+    do 4804 own give_keyword unit mine chosen board amount=sum
+    do 4534 uses_keyword stat_change unit mine chosen board strength=1.0
+    do 4541 has_keyword cant self event=leaves_play
+    do 4541 has_keyword remove_keyword self
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Sabrina Glevissig:
+    when 1891 always
+    when 4527 always
+    when 4528 played self
+    when 4569 always
+    when 1892 dies self
+    when 4577 always
+    when 4527 always
+    when 4528 played self
+    when 4569 always
+    when 4578 dies self
+    when 4527 always
+    when 4528 played self
+    when 4569 always
+    do 1891 own give_keyword self
+    do 4527 uses_keyword can self event=summoned
+    do 4528 uses_keyword give_keyword self
+    do 4569 uses_keyword can self event=summoned
+    do 1892 own damage unit all board position is same_row of self amount=3.0
+    do 4577 own give_keyword self
+    do 4527 uses_keyword can self event=summoned
+    do 4528 uses_keyword give_keyword self
+    do 4569 uses_keyword can self event=summoned
+    do 4578 own damage unit all board position is same_row amount=3.0
+    do 4527 has_keyword can self event=summoned
+    do 4528 has_keyword give_keyword self
+    do 4569 uses_keyword can self event=summoned
+    1 into_the_breach | type | Rocket Artillery moves enemy units, and Titan Fist acts on units next to it | Rocket Artillery -> Titan Fist (Custom: Combat Rocket Boulder)
+  Rocket Artillery:
+    when 5315 attacks
+    when 5547 always
+    when 5316 attacks
+    when 5317 attacks
+    if 5316 upgraded 1.0
+    if 5317 upgraded 2.0
+    do 5315 own damage unit_or_structure chosen position is straight_line of self amount=2.0
+    do 5315 own move unit_or_structure it
+    do 5315 own give_keyword position position is behind of self
+    do 5547 uses_keyword cant position position is behind of self event=attacks
+    do 5547 uses_keyword cant position position is behind of self event=healed
+    do 5316 own damage unit_or_structure chosen position is straight_line of self amount=1.0
+    do 5317 own damage unit_or_structure chosen position is straight_line of self amount=1.0
+  Titan Fist:
+    when 5189 attacks
+    when 5190 attacks
+    when 5191 attacks
+    if 5190 upgraded 1.0
+    if 5191 upgraded 2.0
+    do 5189 own damage unit_or_structure chosen position is bordering of self amount=2.0
+    do 5189 own move unit_or_structure it
+    do 5190 own move self
+    do 5191 own damage unit_or_structure chosen position is bordering of self amount=2.0
+    1 marvel_snap | type | Jubilee puts your units there, and En Sabah Nur acts on units in the front row | Jubilee -> En Sabah Nur (Horsemen Fin Fang Foom)
+  Jubilee:
+    when 6057 played self
+    do 6057 own summon card mine top deck_top
+  En Sabah Nur:
+    when 5940 round_end
+    if 5940 count ge 6.0 unit mine all board position is front_row
+    do 5940 own transform self
+    1 duelyst | type | Rasha's Curse puts your units there, and Orbrider acts on units around it | Rasha's Curse -> Orbrider (Obelysks (F8))
+  Rasha's Curse:
+    when 153 played self
+    when 1096 played self
+    do 153 own kill equipment enemy random attached
+    do 153 own summon
+    do 1096 uses_keyword can unit mine it card is 5000146 event=moves
+    do 1096 uses_keyword can unit mine it card is 5000146 event=attacks
+  Orbrider:
+    when 394 played self
+    do 394 own return_to_hand unit mine chosen board position is surrounding
+    1 gwent | type | Sigrdrifa's Rite puts your units there, and Melusine acts on units next to it | Sigrdrifa's Rite -> Melusine (Rage of the Sea: Fulmar rain ft. Otkell and Melusine)
+  Sigrdrifa's Rite:
+    when 2127 played self
+    when 4517 leaves_play self
+    do 2127 own revive unit mine chosen discard region not Neutral
+    do 2127 own give_keyword unit mine it
+    do 4517 uses_keyword obliterate unit mine it

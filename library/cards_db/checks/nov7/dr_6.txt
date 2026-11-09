@@ -1,0 +1,927 @@
+    do 112 own ready unit mine chosen board power le 111
+  Lightbender:
+    when 288 played self
+    do 288 own silence position all position is surrounding
+    4 duelyst | type | Rasha's Curse puts your units there, and Primus Fist acts on units around it | Rasha's Curse -> Primus Fist (Wanderer Zirix (Icicle)); Rasha's Curse -> Primus Fist (Wanderer Zirix (Icicle, variant 2)); Rasha's Curse -> Primus Fist (Wanderer Zirix (Niklaren))
+  Rasha's Curse:
+    when 153 played self
+    when 1096 played self
+    do 153 own kill equipment enemy random attached
+    do 153 own summon
+    do 1096 uses_keyword can unit mine it card is 5000146 event=moves
+    do 1096 uses_keyword can unit mine it card is 5000146 event=attacks
+  Primus Fist:
+    when 304 played self
+    do 304 own stat_change unit mine chosen board position is surrounding power=2.0
+    4 duelyst | type | Swarmking Scarab puts your units there, and Primus Fist acts on units around it | Swarmking Scarab -> Primus Fist (Wanderer Zirix (Icicle, variant 2)); Swarmking Scarab -> Primus Fist (Wanderer Zirix (RHacker)); Swarmking Scarab -> Primus Fist (Wanderer Zirix (Niklaren))
+  Swarmking Scarab:
+    when 407 strikes
+    when 1067 always
+    when 1096 played self
+    when 1068 attacks
+    if 407 keyword_condition
+    if 407 keyword_condition
+    do 407 own summon power=1.0;health=1.0
+    do 1067 uses_keyword can unit mine it card is 5000458 event=moves
+    do 1096 uses_keyword can unit mine it card is 5000458 event=moves
+    do 1096 uses_keyword can unit mine it card is 5000458 event=attacks
+    do 1068 has_keyword strike self
+  Primus Fist:
+    when 304 played self
+    do 304 own stat_change unit mine chosen board position is surrounding power=2.0
+    4 duelyst | type | Swarmking Scarab puts your units there, and Sandswirl Reader acts on units around it | Swarmking Scarab -> Sandswirl Reader (Wanderer Zirix (Icicle)); Swarmking Scarab -> Sandswirl Reader (Wanderer Zirix (RHacker)); Swarmking Scarab -> Sandswirl Reader (Wanderer Zirix (Niklaren))
+  Swarmking Scarab:
+    when 407 strikes
+    when 1067 always
+    when 1096 played self
+    when 1068 attacks
+    if 407 keyword_condition
+    if 407 keyword_condition
+    do 407 own summon power=1.0;health=1.0
+    do 1067 uses_keyword can unit mine it card is 5000458 event=moves
+    do 1096 uses_keyword can unit mine it card is 5000458 event=moves
+    do 1096 uses_keyword can unit mine it card is 5000458 event=attacks
+    do 1068 has_keyword strike self
+  Sandswirl Reader:
+    when 518 played self
+    do 518 own return_to_hand unit chosen board position is surrounding
+    do 518 own set_terrain position position is same_space of it
+    4 duelyst | type | Daemonic Lure moves enemy units, and Sunset Paragon acts on units around it | Daemonic Lure -> Sunset Paragon (Wanderer Lilithe (Sibon)); Daemonic Lure -> Sunset Paragon (Wanderer Lilithe (Rocken)); Daemonic Lure -> Sunset Paragon (Wanderer Lilithe (Niklaren))
+  Daemonic Lure:
+    when 182 played self
+    do 182 own damage unit enemy chosen board amount=1.0
+    do 182 own move unit enemy it
+  Sunset Paragon:
+    when 777 played self
+    if 777 amount_stat power it
+    do 777 own damage unit all board position is surrounding amount=stat
+    4 duelyst | type | Daemonic Lure moves enemy units, and Maw acts on units around it | Daemonic Lure -> Maw (Wanderer Lilithe (Niklaren)); Daemonic Lure -> Maw (Wanderer Lilithe (Sibon)); Daemonic Lure -> Maw (Wanderer Lilithe (Rocken))
+  Daemonic Lure:
+    when 182 played self
+    do 182 own damage unit enemy chosen board amount=1.0
+    do 182 own move unit enemy it
+  Maw:
+    when 332 played self
+    do 332 own damage unit enemy chosen board position is surrounding amount=2.0
+    4 duelyst | type | Conscript puts your units there, and Arclyte Sentinel acts on units around it | Conscript -> Arclyte Sentinel (Brome Swarm); Conscript -> Arclyte Sentinel (Wanderer Brome (Bleys27)); Conscript -> Arclyte Sentinel (Wanderer Brome (Niklaren))
+  Conscript:
+    when 58 played self
+    do 58 own summon power=1.0;health=2.0
+  Arclyte Sentinel:
+    when 48 played self
+    do 48 own stat_change unit chosen board position is surrounding power=2.0;health=-2.0
+    4 duelyst | type | Jax Truesight puts your units there, and Sunset Paragon acts on units around it | Jax Truesight -> Sunset Paragon (Strategos (PonchoMango)); Jax Truesight -> Sunset Paragon (Wanderer Ragnora (SonOfMakuta)); Jax Truesight -> Sunset Paragon (Wanderer Zirix (RHacker))
+  Jax Truesight:
+    when 300 played self
+    when 1081 always
+    do 300 own summon power=1.0;health=1.0
+    do 1081 has_keyword can self event=attacks
+  Sunset Paragon:
+    when 777 played self
+    if 777 amount_stat power it
+    do 777 own damage unit all board position is surrounding amount=stat
+    4 duelyst | type | Propagate Rage puts your units there, and Lavaslasher acts on units around it | Propagate Rage -> Lavaslasher (Eggs (Niklaren)); Propagate Rage -> Lavaslasher (Wanderer Ragnora (FrostArrow)); Propagate Rage -> Lavaslasher (Wanderer Ragnora (SonOfMakuta))
+  Propagate Rage:
+    when 219 played self
+    do 219 own summon
+  Lavaslasher:
+    when 919 played self
+    do 919 own start_attack self
+    4 duelyst | type | Juxtaposition moves units, and Sunset Paragon acts on units around it | Juxtaposition -> Sunset Paragon (Wanderer Reva (Niklaren)); Juxtaposition -> Sunset Paragon (Wanderer Reva (DracoMoriarty)); Juxtaposition -> Sunset Paragon (Ebon Ox (PonchoMango))
+  Juxtaposition:
+    when 118 played self
+    do 118 own swap unit chosen board
+  Sunset Paragon:
+    when 777 played self
+    if 777 amount_stat power it
+    do 777 own damage unit all board position is surrounding amount=stat
+    4 duelyst | type | Juxtaposition moves enemy units, and Maw acts on units around it | Juxtaposition -> Maw (Wanderer Reva (Niklaren)); Juxtaposition -> Maw (Wanderer Reva (StephDawnheart)); Juxtaposition -> Maw (Wanderer Reva (DracoMoriarty))
+  Juxtaposition:
+    when 118 played self
+    do 118 own swap unit chosen board
+  Maw:
+    when 332 played self
+    do 332 own damage unit enemy chosen board position is surrounding amount=2.0
+    4 duelyst | type | Repulsor Beast moves enemy units, and Lightbender acts on units around it | Repulsor Beast -> Lightbender (Wanderer Brome (Bleys27)); Repulsor Beast -> Lightbender (Wanderer Reva (DracoMoriarty)); Repulsor Beast -> Lightbender (Wanderer Reva (StephDawnheart))
+  Repulsor Beast:
+    when 301 played self
+    do 301 own move unit enemy chosen board position is surrounding
+  Lightbender:
+    when 288 played self
+    do 288 own silence position all position is surrounding
+    4 duelyst | type | Khanuum-ka puts your units there, and Sunset Paragon acts on units around it | Khanuum-ka -> Sunset Paragon (Wanderer Zirix (RHacker)); Khanuum-ka -> Sunset Paragon (Wanderer Zirix (Icicle)); Khanuum-ka -> Sunset Paragon (Wanderer Zirix (Niklaren))
+  Khanuum-ka:
+    when 406 dies self
+    when 1067 always
+    when 1096 played self
+    do 406 own obliterate unit mine random board type is 3
+    do 406 own summon
+    do 1067 has_keyword can self event=moves
+    do 1096 has_keyword can self event=moves
+    do 1096 has_keyword can self event=attacks
+  Sunset Paragon:
+    when 777 played self
+    if 777 amount_stat power it
+    do 777 own damage unit all board position is surrounding amount=stat
+    4 duelyst | type | Gust puts your units there, and Sandswirl Reader acts on units around it | Gust -> Sandswirl Reader (Aggro Vetruvian (Ge0)); Gust -> Sandswirl Reader (Aggro Vetruvian (PonchoMango)); Gust -> Sandswirl Reader (Wanderer Zirix (RHacker))
+  Gust:
+    when 982 played spell mine keyword is 5001113
+    do 982 own summon amount=2.0
+  Sandswirl Reader:
+    when 518 played self
+    do 518 own return_to_hand unit chosen board position is surrounding
+    do 518 own set_terrain position position is same_space of it
+    4 into_the_breach | type | Titan Fist moves enemy units, and Burst Beam acts on units in a line from it | Titan Fist -> Burst Beam (Custom: Laser Boulder Swap); Titan Fist -> Burst Beam (Zenith Guard); Titan Fist -> Burst Beam (Custom: Combat Laser Boulder)
+  Titan Fist:
+    when 5189 attacks
+    when 5190 attacks
+    when 5191 attacks
+    if 5190 upgraded 1.0
+    if 5191 upgraded 2.0
+    do 5189 own damage unit_or_structure chosen position is bordering of self amount=2.0
+    do 5189 own move unit_or_structure it
+    do 5190 own move self
+    do 5191 own damage unit_or_structure chosen position is bordering of self amount=2.0
+  Burst Beam:
+    when 5192 attacks
+    when 5193 attacks
+    when 5194 attacks
+    if 5192 amount_range
+    if 5193 upgraded 1.0
+    if 5194 upgraded 2.0
+    do 5192 own damage unit_or_structure all position is straight_line of self amount=1.0
+    do 5193 own cant self event=strikes
+    do 5194 own damage unit_or_structure all position is straight_line of self amount=1.0
+    4 marvel_snap | type | Bucky Barnes puts your units there, and Deathlok acts on units in its lane | Bucky Barnes -> Deathlok (Deathpool self-destruction); Bucky Barnes -> Deathlok (Classic Death Knull); Bucky Barnes -> Deathlok (Knull Death Bucky)
+  Bucky Barnes:
+    when 5863 dies self
+    do 5863 own summon
+  Deathlok:
+    when 5905 played self
+    do 5905 own kill unit mine all board position is same_lane;card not 8000118
+    4 duelyst | type | Star's Fury puts your units there, and Sunset Paragon acts on units around it | Star's Fury -> Sunset Paragon (Wanderer Zirix (RHacker)); Star's Fury -> Sunset Paragon (Wanderer Zirix (Niklaren)); Star's Fury -> Sunset Paragon (Wanderer Zirix (Icicle))
+  Star's Fury:
+    when 155 played self
+    when 1096 played self
+    do 155 own summon
+    do 1096 uses_keyword can unit mine it card is 5000146 event=moves
+    do 1096 uses_keyword can unit mine it card is 5000146 event=attacks
+  Sunset Paragon:
+    when 777 played self
+    if 777 amount_stat power it
+    do 777 own damage unit all board position is surrounding amount=stat
+    4 gwent | waits | plays a Nature card, which sets off Symbiosis: Naiad Fledgling waits for Symbiosis to go off | Mahakam Pass -> Naiad Fledgling (Nature's Gift: Devotion Gift 2590 fMMR); Fauve -> Naiad Fledgling (Nature's Gift: Devotion Symbiosis Good Version); Fauve -> Naiad Fledgling (Nature's Gift: Devotion Gift 2590 fMMR)
+  Mahakam Pass:
+    when 4277 always
+    when 4541 round_end
+    when 4278 played self
+    when 4532 damaged self
+    when 4279 activated self
+    when 4541 round_end
+    when 4504 played self
+    if 4532 amount_listed
+    do 4277 own give_keyword self
+    do 4541 uses_keyword cant self event=leaves_play
+    do 4541 uses_keyword remove_keyword self
+    do 4278 own create card mine random region is Scoiatael;type is 39
+    do 4278 own give_keyword card mine it type is 39 amount=4.0
+    do 4532 uses_keyword negate_damage card mine it type is 39 amount=listed
+    do 4279 own create
+    do 4279 own play_card card mine it card is 757004
+    do 4541 has_keyword cant self event=leaves_play
+    do 4541 has_keyword remove_keyword self
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Naiad Fledgling:
+    when 4036 keyword_used keyword is 756204
+    when 4534 turn_end
+    when 4037 activated self
+    when 4504 played self
+    if 4037 amount_event_amount
+    do 4036 own give_keyword unit left_of_self amount=2.0
+    do 4534 uses_keyword stat_change unit left_of_self strength=1.0
+    do 4037 own remove_keyword unit mine chosen board
+    do 4037 own stat_change self strength=event_amount
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Fauve:
+    when 2773 played self
+    do 2773 own play_card card mine chosen deck type is 26
+    4 duelyst | type | Star's Fury puts your units there, and Primus Fist acts on units around it | Star's Fury -> Primus Fist (Wanderer Zirix (Icicle)); Star's Fury -> Primus Fist (Wanderer Zirix (RHacker)); Star's Fury -> Primus Fist (Wanderer Zirix (Icicle, variant 2))
+  Star's Fury:
+    when 155 played self
+    when 1096 played self
+    do 155 own summon
+    do 1096 uses_keyword can unit mine it card is 5000146 event=moves
+    do 1096 uses_keyword can unit mine it card is 5000146 event=attacks
+  Primus Fist:
+    when 304 played self
+    do 304 own stat_change unit mine chosen board position is surrounding power=2.0
+    4 stormbound | type | Qordia’s Nest puts your units there, and Witches of the Wild acts on units next to it | Qordia’s Nest -> Witches of the Wild (Untitled Shadowfen deck B); Qordia’s Nest -> Witches of the Wild (Shadowfen); Qordia’s Nest -> Witches of the Wild (Chronobreak)
+  Qordia’s Nest:
+    when 10244 turn_start
+    if 10244 amount_per_level
+    do 10244 own summon strength=1.0
+  Witches of the Wild:
+    when 10258 played self
+    if 10258 amount_per_level
+    if 10258 amount_event_amount
+    do 10258 own damage unit all board position is bordering amount=1.0
+    do 10258 own stat_change self strength=event_amount
+    4 duelyst | type | Conscript puts your units there, and Sunset Paragon acts on units around it | Conscript -> Sunset Paragon (Wanderer Brome (4LW)); Conscript -> Sunset Paragon (Wanderer Brome (Niklaren)); Conscript -> Sunset Paragon (Wanderer Brome (Bleys27))
+  Conscript:
+    when 58 played self
+    do 58 own summon power=1.0;health=2.0
+  Sunset Paragon:
+    when 777 played self
+    if 777 amount_stat power it
+    do 777 own damage unit all board position is surrounding amount=stat
+    4 duelyst | type | Jax Truesight puts your units there, and Holy Immolation acts on units around its target | Jax Truesight -> Holy Immolation (Strategos (4LW)); Jax Truesight -> Holy Immolation (Brome We the People); Jax Truesight -> Holy Immolation (Strategos (ImprobableBlob))
+  Jax Truesight:
+    when 300 played self
+    when 1081 always
+    do 300 own summon power=1.0;health=1.0
+    do 1081 has_keyword can self event=attacks
+  Holy Immolation:
+    when 73 played self
+    do 73 own heal unit mine chosen board amount=4.0
+    do 73 own damage any enemy all board position is surrounding of it amount=4.0
+    4 duelyst | type | Khanuum-ka puts your units there, and Primus Fist acts on units around it | Khanuum-ka -> Primus Fist (Wanderer Zirix (RHacker)); Khanuum-ka -> Primus Fist (Wanderer Zirix (Icicle, variant 2)); Khanuum-ka -> Primus Fist (Wanderer Zirix (Niklaren))
+  Khanuum-ka:
+    when 406 dies self
+    when 1067 always
+    when 1096 played self
+    do 406 own obliterate unit mine random board type is 3
+    do 406 own summon
+    do 1067 has_keyword can self event=moves
+    do 1096 has_keyword can self event=moves
+    do 1096 has_keyword can self event=attacks
+  Primus Fist:
+    when 304 played self
+    do 304 own stat_change unit mine chosen board position is surrounding power=2.0
+    4 duelyst | type | Inquisitor Kron puts your units there, and Shiro Puppydragon acts on units around it | Inquisitor Kron -> Shiro Puppydragon (Wanderer Lilithe (Niklaren)); Inquisitor Kron -> Shiro Puppydragon (Wanderer Reva (DracoMoriarty)); Inquisitor Kron -> Shiro Puppydragon (Wanderer Reva (Niklaren))
+  Inquisitor Kron:
+    when 896 shuffled card mine
+    when 1098 always
+    do 896 own summon power=2.0;health=2.0
+    do 896 own give_random_keyword unit mine it card is 5000940
+    do 1098 has_keyword cant any enemy all board position is surrounding of self event=moves
+    do 1098 has_keyword cant any enemy all board position is surrounding of self event=attacks
+  Shiro Puppydragon:
+    when 785 turn_end
+    do 785 own stat_change unit mine all board position is surrounding power=1.0
+    4 duelyst | type | Dagona puts your units there, and Sunset Paragon acts on units around it | Dagona -> Sunset Paragon (Wanderer Zirix (Icicle)); Dagona -> Sunset Paragon (Ebon Ox (Cocainelolis)); Dagona -> Sunset Paragon (Ebon Ox (PonchoMango))
+  Dagona:
+    when 595 played self
+    when 596 dies self
+    do 595 own capture unit chosen everywhere
+    do 596 own summon it
+  Sunset Paragon:
+    when 777 played self
+    if 777 amount_stat power it
+    do 777 own damage unit all board position is surrounding amount=stat
+    4 stormbound | type | Forgotten Souls moves Wild Saberpaws and your units, and Wild Saberpaws acts on units around it or next to it | Forgotten Souls -> Wild Saberpaws (Reckless Rush); Forgotten Souls -> Wild Saberpaws (Relic Song); Forgotten Souls -> Wild Saberpaws (Reckless Rush (FM Variant))
+  Forgotten Souls:
+    when 10433 played self
+    when 10434 played self
+    when 10435 played self
+    if 10433 level le 2.0
+    if 10434 level ge 3.0
+    if 10434 level le 4.0
+    if 10435 level eq 5.0
+    do 10433 own move unit mine random board position is bordering
+    do 10434 own move unit mine all board position is bordering
+    do 10435 own move unit mine all board position is surrounding
+  Wild Saberpaws:
+    when 10371 played self
+    when 10372 played self
+    if 10371 have not unit all board position is surrounding
+    if 10372 have is unit all board position is surrounding
+    if 10372 have not unit all board position is bordering
+    do 10371 own stat_change self movement=2.0
+    do 10372 own stat_change self movement=1.0
+    4 duelyst | type | Repulsor Beast moves enemy units, and Sunset Paragon acts on units around it | Repulsor Beast -> Sunset Paragon (Wanderer Lilithe (Rocken)); Repulsor Beast -> Sunset Paragon (Wanderer Lilithe (Sibon)); Repulsor Beast -> Sunset Paragon (Wanderer Reva (DracoMoriarty))
+  Repulsor Beast:
+    when 301 played self
+    do 301 own move unit enemy chosen board position is surrounding
+  Sunset Paragon:
+    when 777 played self
+    if 777 amount_stat power it
+    do 777 own damage unit all board position is surrounding amount=stat
+    4 duelyst | type | Shadowspawn (Bloodbound Spell) puts your units there, and Primus Fist acts on units around it | Shadowspawn (Bloodbound Spell) -> Primus Fist (Wanderer Lilithe (Rocken)); Shadowspawn (Bloodbound Spell) -> Primus Fist (Aggro Abyssian (SmashTheHamster)); Shadowspawn (Bloodbound Spell) -> Primus Fist (Wanderer Lilithe (Niklaren))
+  Primus Fist:
+    when 304 played self
+    do 304 own stat_change unit mine chosen board position is surrounding power=2.0
+    4 duelyst | type | Arcane Heart puts your units there, and Lightbender acts on units around it | Arcane Heart -> Lightbender (Wanderer Reva (Niklaren)); Arcane Heart -> Lightbender (Wanderer Reva (StephDawnheart)); Arcane Heart -> Lightbender (Wanderer Reva (DracoMoriarty))
+  Arcane Heart:
+    when 97 played self
+    do 97 own summon
+  Lightbender:
+    when 288 played self
+    do 288 own silence position all position is surrounding
+    4 marvel_snap | type | Bucky Barnes puts your units there, and Venom acts on units in its lane | Bucky Barnes -> Venom (Classic Death Knull); Bucky Barnes -> Venom (Self-destruction Deadpool); Bucky Barnes -> Venom (Knull Death Bucky)
+  Bucky Barnes:
+    when 5863 dies self
+    do 5863 own summon
+  Venom:
+    when 6423 played self
+    if 6423 amount_stat power it
+    do 6423 own kill unit mine all board position is same_lane;card not 8000690
+    do 6423 own stat_change self power=stat
+    4 duelyst | type | Assassination Protocol moves your units, and Lightbender acts on units around it | Assassination Protocol -> Lightbender (Arcanyst Shidai (Niklaren)); Assassination Protocol -> Lightbender (Wanderer Reva (Niklaren)); Assassination Protocol -> Lightbender (Wanderer Reva (DracoMoriarty))
+  Assassination Protocol:
+    when 974 played self
+    do 974 own ready unit mine chosen board
+    do 974 own cant unit mine it event=attacks
+  Lightbender:
+    when 288 played self
+    do 288 own silence position all position is surrounding
+    4 marvel_snap | type | Doctor Doom puts your units there, and Ms. Marvel acts on units in its lane | Doctor Doom -> Ms. Marvel (Cerebro 5 Wave); Doctor Doom -> Ms. Marvel (Supergiant Lockdown); Doctor Doom -> Ms. Marvel (Professor Alioth)
+  Doctor Doom:
+    when 5921 played self
+    do 5921 own summon power=5.0
+  Ms. Marvel:
+    when 6167 always
+    do 6167 own stat_change position mine position in lane_left;position in lane_right;count ge 6002 of unit mine all board;of:kind is unit;of:position is same_lane;count eq 6003 of unit mine all board;of
+    4 marvel_snap | type | Doctor Doom puts your units there, and Luke Cage acts on units at the front of a lane | Doctor Doom -> Luke Cage (Cerebro 5 Alioth); Doctor Doom -> Luke Cage (Cerebro 5 Wave); Doctor Doom -> Luke Cage (Doom 2099 Iron Man)
+  Doctor Doom:
+    when 5921 played self
+    do 5921 own summon power=5.0
+  Luke Cage:
+    when 6104 always
+    do 6104 own cant unit mine all board position is front_of_lane event=stat_changed
+    3 duelyst | type | Daemonic Lure moves enemy units, and Necrotic Sphere acts on units around your leader or base | Daemonic Lure -> Necrotic Sphere (Wanderer Lilithe (Sibon)); Daemonic Lure -> Necrotic Sphere (Wanderer Lilithe (Rocken)); Daemonic Lure -> Necrotic Sphere (Wanderer Lilithe (Niklaren))
+  Daemonic Lure:
+    when 182 played self
+    do 182 own damage unit enemy chosen board amount=1.0
+    do 182 own move unit enemy it
+  Necrotic Sphere:
+    when 27 played self
+    do 27 own kill unit all board position is surrounding of player mine;of:kind is player
+    do 27 own summon
+    3 marvel_snap | type | Arnim Zola puts your units there, and Deathlok acts on units in its lane | Arnim Zola -> Deathlok (Destroy Arnim Zola); Arnim Zola -> Deathlok (Phoenix Force Nimrod); Arnim Zola -> Deathlok (Knull Death Bucky)
+  Arnim Zola:
+    when 5829 played self
+    do 5829 own kill unit mine chosen board position is same_lane;card not 8000034
+    do 5829 own copy unit mine it card not 8000034
+  Deathlok:
+    when 5905 played self
+    do 5905 own kill unit mine all board position is same_lane;card not 8000118
+    3 duelyst | type | Superior Mirage puts your units there, and Sandswirl Reader acts on units around it | Superior Mirage -> Sandswirl Reader (Wanderer Zirix (Icicle, variant 2)); Superior Mirage -> Sandswirl Reader (Fault (F8)); Superior Mirage -> Sandswirl Reader (Obelysks (F8))
+  Superior Mirage:
+    when 523 played self
+    when 524 attacks self
+    do 523 own copy unit enemy chosen board amount=3.0
+    do 523 own give_ability unit enemy all board state is copy_of_it
+    do 524 gives obliterate self
+  Sandswirl Reader:
+    when 518 played self
+    do 518 own return_to_hand unit chosen board position is surrounding
+    do 518 own set_terrain position position is same_space of it
+    3 into_the_breach | type | Cluster Artillery moves units, and Vice Fist acts on units next to it | Cluster Artillery -> Vice Fist (Custom: Combat Boulder Charge); Cluster Artillery -> Vice Fist (Steel Judoka); Cluster Artillery -> Vice Fist (Custom: Combat Rocket Boulder)
+  Cluster Artillery:
+    when 5320 attacks
+    when 5321 attacks
+    when 5322 attacks
+    if 5321 upgraded 1.0
+    if 5322 upgraded 2.0
+    do 5320 own damage unit_or_structure all position is bordering of position chosen;of:kind is position;of:position is straight_line of self amount=1.0
+    do 5320 own move unit_or_structure all position is bordering of position chosen;of:kind is position;of:position is straight_line of self
+    do 5321 own cant self event=strikes
+    do 5322 own damage unit_or_structure all position is bordering of position chosen;of:kind is position;of:position is straight_line of self amount=1.0
+  Vice Fist:
+    when 5198 attacks
+    when 5199 attacks
+    when 5200 attacks
+    if 5199 upgraded 1.0
+    if 5200 upgraded 2.0
+    do 5198 own move unit chosen position is bordering of self
+    do 5198 own damage unit it amount=1.0
+    do 5199 own cant self event=strikes
+    do 5200 own damage unit chosen position is bordering of self amount=2.0
+    3 into_the_breach | type | Rock Accelerator moves units, and Vice Fist acts on units next to it | Rock Accelerator -> Vice Fist (Custom: Combat Boulder Charge); Rock Accelerator -> Vice Fist (Custom: Combat Rocket Boulder); Rock Accelerator -> Vice Fist (Custom: Combat Laser Boulder)
+  Rock Accelerator:
+    when 5318 attacks
+    when 5319 attacks
+    if 5319 upgraded 1.0
+    do 5318 own damage unit_or_structure chosen position is straight_line of self amount=2.0
+    do 5318 own move unit_or_structure all position is sides of it
+    do 5319 own damage unit_or_structure chosen position is straight_line of self amount=1.0
+  Vice Fist:
+    when 5198 attacks
+    when 5199 attacks
+    when 5200 attacks
+    if 5199 upgraded 1.0
+    if 5200 upgraded 2.0
+    do 5198 own move unit chosen position is bordering of self
+    do 5198 own damage unit it amount=1.0
+    do 5199 own cant self event=strikes
+    do 5200 own damage unit chosen position is bordering of self amount=2.0
+    3 duelyst | type | Dioltas puts your units there, and Arclyte Sentinel acts on units around it | Dioltas -> Arclyte Sentinel (Wanderer Brome (Niklaren)); Dioltas -> Arclyte Sentinel (Titan (Squee9)); Dioltas -> Arclyte Sentinel (Titan (StoicRooster))
+  Dioltas:
+    when 331 dies self
+    when 1098 always
+    do 331 own summon power=0.0;health=8.0
+    do 1098 uses_keyword cant any enemy all board position is surrounding of self event=moves
+    do 1098 uses_keyword cant any enemy all board position is surrounding of self event=attacks
+  Arclyte Sentinel:
+    when 48 played self
+    do 48 own stat_change unit chosen board position is surrounding power=2.0;health=-2.0
+    3 duelyst | type | Gust puts your units there, and Primus Fist acts on units around it | Gust -> Primus Fist (Wanderer Zirix (RHacker)); Gust -> Primus Fist (Wanderer Zirix (Icicle, variant 2)); Gust -> Primus Fist (Aggro Vetruvian (Ge0))
+  Gust:
+    when 982 played spell mine keyword is 5001113
+    do 982 own summon amount=2.0
+  Primus Fist:
+    when 304 played self
+    do 304 own stat_change unit mine chosen board position is surrounding power=2.0
+    3 duelyst | type | Repulsor Beast moves enemy units, and Ephemeral Shroud acts on units around it | Repulsor Beast -> Ephemeral Shroud (Wanderer Lilithe (Sibon)); Repulsor Beast -> Ephemeral Shroud (Wanderer Reva (StephDawnheart)); Repulsor Beast -> Ephemeral Shroud (Buildmar (TM25MD))
+  Repulsor Beast:
+    when 301 played self
+    do 301 own move unit enemy chosen board position is surrounding
+  Ephemeral Shroud:
+    when 282 played self
+    do 282 own silence position chosen position is surrounding amount=1.0
+    3 duelyst | type | Inquisitor Kron puts your units there, and Azure Horn Shaman acts on units around it | Inquisitor Kron -> Azure Horn Shaman (Wanderer Reva (DracoMoriarty)); Inquisitor Kron -> Azure Horn Shaman (Wanderer Lilithe (Niklaren)); Inquisitor Kron -> Azure Horn Shaman (Maehv Wanderer)
+  Inquisitor Kron:
+    when 896 shuffled card mine
+    when 1098 always
+    do 896 own summon power=2.0;health=2.0
+    do 896 own give_random_keyword unit mine it card is 5000940
+    do 1098 has_keyword cant any enemy all board position is surrounding of self event=moves
+    do 1098 has_keyword cant any enemy all board position is surrounding of self event=attacks
+  Azure Horn Shaman:
+    when 314 dies self
+    do 314 own stat_change unit mine all board position is surrounding health=4.0
+    3 duelyst | type | Rasha's Curse puts your units there, and Lightbender acts on units around it | Rasha's Curse -> Lightbender (Wanderer Zirix (Icicle)); Rasha's Curse -> Lightbender (Wanderer Zirix (Icicle, variant 2)); Rasha's Curse -> Lightbender (Obelysks (F8))
+  Rasha's Curse:
+    when 153 played self
+    when 1096 played self
+    do 153 own kill equipment enemy random attached
+    do 153 own summon
+    do 1096 uses_keyword can unit mine it card is 5000146 event=moves
+    do 1096 uses_keyword can unit mine it card is 5000146 event=attacks
+  Lightbender:
+    when 288 played self
+    do 288 own silence position all position is surrounding
+    3 duelyst | type | Nimbus puts your units there, and Sandswirl Reader acts on units around it | Nimbus -> Sandswirl Reader (Wanderer Zirix (RHacker)); Nimbus -> Sandswirl Reader (Wanderer Zirix (Niklaren)); Nimbus -> Sandswirl Reader (Obelysks (F8))
+  Nimbus:
+    when 830 damaged self
+    do 830 own summon power=0.0;health=4.0
+  Sandswirl Reader:
+    when 518 played self
+    do 518 own return_to_hand unit chosen board position is surrounding
+    do 518 own set_terrain position position is same_space of it
+    3 duelyst | type | Prominence puts your units there, and Arclyte Sentinel acts on units around it | Prominence -> Arclyte Sentinel (Titan (StoicRooster)); Prominence -> Arclyte Sentinel (Wanderer Brome (Bleys27)); Prominence -> Arclyte Sentinel (Wanderer Brome (Niklaren))
+  Prominence:
+    when 946 played spell mine keyword is 5001113
+    do 946 own summon
+  Arclyte Sentinel:
+    when 48 played self
+    do 48 own stat_change unit chosen board position is surrounding power=2.0;health=-2.0
+    3 duelyst | type | Assassination Protocol moves your units, and Primus Fist acts on units around it | Assassination Protocol -> Primus Fist (Wanderer Reva (StephDawnheart)); Assassination Protocol -> Primus Fist (Wanderer Reva (Niklaren)); Assassination Protocol -> Primus Fist (Wanderer Reva (DracoMoriarty))
+  Assassination Protocol:
+    when 974 played self
+    do 974 own ready unit mine chosen board
+    do 974 own cant unit mine it event=attacks
+  Primus Fist:
+    when 304 played self
+    do 304 own stat_change unit mine chosen board position is surrounding power=2.0
+    3 duelyst | type | Shadowspawn (Bloodbound Spell) puts your units there, and Sunset Paragon acts on units around it | Shadowspawn (Bloodbound Spell) -> Sunset Paragon (Wanderer Lilithe (Niklaren)); Shadowspawn (Bloodbound Spell) -> Sunset Paragon (Wanderer Lilithe (Sibon)); Shadowspawn (Bloodbound Spell) -> Sunset Paragon (Wanderer Lilithe (Rocken))
+  Sunset Paragon:
+    when 777 played self
+    if 777 amount_stat power it
+    do 777 own damage unit all board position is surrounding amount=stat
+    3 duelyst | type | Shadowspawn (Bloodbound Spell) puts your units there, and Necrotic Sphere acts on units around your leader or base | Shadowspawn (Bloodbound Spell) -> Necrotic Sphere (Wanderer Lilithe (Rocken)); Shadowspawn (Bloodbound Spell) -> Necrotic Sphere (Wanderer Lilithe (Sibon)); Shadowspawn (Bloodbound Spell) -> Necrotic Sphere (Wanderer Lilithe (Niklaren))
+  Necrotic Sphere:
+    when 27 played self
+    do 27 own kill unit all board position is surrounding of player mine;of:kind is player
+    do 27 own summon
+    3 duelyst | type | Jax Truesight puts your units there, and Primus Fist acts on units around it | Jax Truesight -> Primus Fist (Wanderer Zirix (RHacker)); Jax Truesight -> Primus Fist (Wanderer Ragnora (SonOfMakuta)); Jax Truesight -> Primus Fist (Wanderer Brome (Niklaren))
+  Jax Truesight:
+    when 300 played self
+    when 1081 always
+    do 300 own summon power=1.0;health=1.0
+    do 1081 has_keyword can self event=attacks
+  Primus Fist:
+    when 304 played self
+    do 304 own stat_change unit mine chosen board position is surrounding power=2.0
+    3 marvel_snap | type | Arnim Zola puts your units there, and Venom acts on units in its lane | Arnim Zola -> Venom (Phoenix Force Nimrod); Arnim Zola -> Venom (Knull Death Bucky); Arnim Zola -> Venom (Destroy Arnim Zola)
+  Arnim Zola:
+    when 5829 played self
+    do 5829 own kill unit mine chosen board position is same_lane;card not 8000034
+    do 5829 own copy unit mine it card not 8000034
+  Venom:
+    when 6423 played self
+    if 6423 amount_stat power it
+    do 6423 own kill unit mine all board position is same_lane;card not 8000690
+    do 6423 own stat_change self power=stat
+    3 duelyst | type | Pax puts your units there, and Lightbender acts on units around it | Pax -> Lightbender (Wanderer Zirix (Icicle)); Pax -> Lightbender (Wanderer Zirix (Icicle, variant 2)); Pax -> Lightbender (Obelysks (F8))
+  Pax:
+    when 826 dies self
+    do 826 own summon power=2.0;health=2.0;amount=2.0
+  Lightbender:
+    when 288 played self
+    do 288 own silence position all position is surrounding
+    3 duelyst | type | Necrotic Sphere puts your units there, and Sunset Paragon acts on units around it | Necrotic Sphere -> Sunset Paragon (Wanderer Lilithe (Rocken)); Necrotic Sphere -> Sunset Paragon (Wanderer Lilithe (Sibon)); Necrotic Sphere -> Sunset Paragon (Wanderer Lilithe (Niklaren))
+  Necrotic Sphere:
+    when 27 played self
+    do 27 own kill unit all board position is surrounding of player mine;of:kind is player
+    do 27 own summon
+  Sunset Paragon:
+    when 777 played self
+    if 777 amount_stat power it
+    do 777 own damage unit all board position is surrounding amount=stat
+    3 duelyst | type | Swarmking Scarab puts your units there, and Lightbender acts on units around it | Swarmking Scarab -> Lightbender (Wanderer Zirix (Icicle)); Swarmking Scarab -> Lightbender (Wanderer Zirix (Icicle, variant 2)); Swarmking Scarab -> Lightbender (Wanderer Zirix (RHacker))
+  Swarmking Scarab:
+    when 407 strikes
+    when 1067 always
+    when 1096 played self
+    when 1068 attacks
+    if 407 keyword_condition
+    if 407 keyword_condition
+    do 407 own summon power=1.0;health=1.0
+    do 1067 uses_keyword can unit mine it card is 5000458 event=moves
+    do 1096 uses_keyword can unit mine it card is 5000458 event=moves
+    do 1096 uses_keyword can unit mine it card is 5000458 event=attacks
+    do 1068 has_keyword strike self
+  Lightbender:
+    when 288 played self
+    do 288 own silence position all position is surrounding
+    3 duelyst | type | Conscript puts your units there, and Lightbender acts on units around it | Conscript -> Lightbender (Wanderer Brome (4LW)); Conscript -> Lightbender (Wanderer Brome (Niklaren)); Conscript -> Lightbender (Wanderer Brome (Bleys27))
+  Conscript:
+    when 58 played self
+    do 58 own summon power=1.0;health=2.0
+  Lightbender:
+    when 288 played self
+    do 288 own silence position all position is surrounding
+    3 duelyst | type | Inquisitor Kron puts your units there, and Necrotic Sphere acts on units around your leader or base | Inquisitor Kron -> Necrotic Sphere (Wanderer Lilithe (Sibon)); Inquisitor Kron -> Necrotic Sphere (Wanderer Lilithe (Rocken)); Inquisitor Kron -> Necrotic Sphere (Wanderer Lilithe (Niklaren))
+  Inquisitor Kron:
+    when 896 shuffled card mine
+    when 1098 always
+    do 896 own summon power=2.0;health=2.0
+    do 896 own give_random_keyword unit mine it card is 5000940
+    do 1098 has_keyword cant any enemy all board position is surrounding of self event=moves
+    do 1098 has_keyword cant any enemy all board position is surrounding of self event=attacks
+  Necrotic Sphere:
+    when 27 played self
+    do 27 own kill unit all board position is surrounding of player mine;of:kind is player
+    do 27 own summon
+    3 duelyst | type | Jax Truesight puts your units there, and Lightbender acts on units around it | Jax Truesight -> Lightbender (Wanderer Ragnora (SonOfMakuta)); Jax Truesight -> Lightbender (Wanderer Brome (Niklaren)); Jax Truesight -> Lightbender (Wanderer Zirix (RHacker))
+  Jax Truesight:
+    when 300 played self
+    when 1081 always
+    do 300 own summon power=1.0;health=1.0
+    do 1081 has_keyword can self event=attacks
+  Lightbender:
+    when 288 played self
+    do 288 own silence position all position is surrounding
+    3 marvel_snap | type | Arnim Zola puts your units there, and Carnage acts on units in its lane | Arnim Zola -> Carnage (Knull Death Bucky); Arnim Zola -> Carnage (Phoenix Force Nimrod); Arnim Zola -> Carnage (Destroy Arnim Zola)
+  Arnim Zola:
+    when 5829 played self
+    do 5829 own kill unit mine chosen board position is same_lane;card not 8000034
+    do 5829 own copy unit mine it card not 8000034
+  Carnage:
+    when 5875 played self
+    if 5875 amount_product
+    if 5875 amount_event_amount
+    do 5875 own kill unit mine all board position is same_lane;card not 8000083
+    do 5875 own stat_change self power=product
+    3 duelyst | type | Inner Focus moves your units, and Sunset Paragon acts on units around it | Inner Focus -> Sunset Paragon (Wanderer Reva (Niklaren)); Inner Focus -> Sunset Paragon (Wanderer Reva (Prostobot)); Inner Focus -> Sunset Paragon (Wanderer Reva (DracoMoriarty))
+  Inner Focus:
+    when 112 played self
+    do 112 own ready unit mine chosen board power le 111
+  Sunset Paragon:
+    when 777 played self
+    if 777 amount_stat power it
+    do 777 own damage unit all board position is surrounding amount=stat
+    3 duelyst | type | Khanuum-ka puts your units there, and Lightbender acts on units around it | Khanuum-ka -> Lightbender (Wanderer Zirix (RHacker)); Khanuum-ka -> Lightbender (Wanderer Zirix (Icicle, variant 2)); Khanuum-ka -> Lightbender (Wanderer Zirix (Icicle))
+  Khanuum-ka:
+    when 406 dies self
+    when 1067 always
+    when 1096 played self
+    do 406 own obliterate unit mine random board type is 3
+    do 406 own summon
+    do 1067 has_keyword can self event=moves
+    do 1096 has_keyword can self event=moves
+    do 1096 has_keyword can self event=attacks
+  Lightbender:
+    when 288 played self
+    do 288 own silence position all position is surrounding
+    3 duelyst | type | Propagate Rage puts your units there, and Primus Fist acts on units around it | Propagate Rage -> Primus Fist (Wanderer Ragnora (FrostArrow)); Propagate Rage -> Primus Fist (Wanderer Ragnora (SonOfMakuta)); Propagate Rage -> Primus Fist (Aggro Ragnora (AlphaCentury))
+  Propagate Rage:
+    when 219 played self
+    do 219 own summon
+  Primus Fist:
+    when 304 played self
+    do 304 own stat_change unit mine chosen board position is surrounding power=2.0
+    3 duelyst | type | Prominence puts your units there, and Lightbender acts on units around it | Prominence -> Lightbender (Wanderer Brome (Niklaren)); Prominence -> Lightbender (Wanderer Brome (Bleys27)); Prominence -> Lightbender (Titan (StoicRooster))
+  Prominence:
+    when 946 played spell mine keyword is 5001113
+    do 946 own summon
+  Lightbender:
+    when 288 played self
+    do 288 own silence position all position is surrounding
+    3 duelyst | type | Inquisitor Kron puts your units there, and Arclyte Sentinel acts on units around it | Inquisitor Kron -> Arclyte Sentinel (Wanderer Brome (Niklaren)); Inquisitor Kron -> Arclyte Sentinel (Titan (Squee9)); Inquisitor Kron -> Arclyte Sentinel (Wanderer Brome (4LW))
+  Inquisitor Kron:
+    when 896 shuffled card mine
+    when 1098 always
+    do 896 own summon power=2.0;health=2.0
+    do 896 own give_random_keyword unit mine it card is 5000940
+    do 1098 has_keyword cant any enemy all board position is surrounding of self event=moves
+    do 1098 has_keyword cant any enemy all board position is surrounding of self event=attacks
+  Arclyte Sentinel:
+    when 48 played self
+    do 48 own stat_change unit chosen board position is surrounding power=2.0;health=-2.0
+    3 duelyst | type | Arcane Heart puts your units there, and Sunset Paragon acts on units around it | Arcane Heart -> Sunset Paragon (Wanderer Reva (Niklaren)); Arcane Heart -> Sunset Paragon (Wanderer Reva (DracoMoriarty)); Arcane Heart -> Sunset Paragon (Wanderer Reva (Prostobot))
+  Arcane Heart:
+    when 97 played self
+    do 97 own summon
+  Sunset Paragon:
+    when 777 played self
+    if 777 amount_stat power it
+    do 777 own damage unit all board position is surrounding amount=stat
+    3 duelyst | type | Allomancer puts your units there, and Sandswirl Reader acts on units around it | Allomancer -> Sandswirl Reader (Obelysks (F8)); Allomancer -> Sandswirl Reader (Wanderer Zirix (RHacker)); Allomancer -> Sandswirl Reader (Wanderer Zirix (Niklaren))
+  Allomancer:
+    when 829 dies self
+    do 829 own summon unit random board name_has is 1
+  Sandswirl Reader:
+    when 518 played self
+    do 518 own return_to_hand unit chosen board position is surrounding
+    do 518 own set_terrain position position is same_space of it
+    3 duelyst | type | Daemonic Lure moves enemy units, and Lightbender acts on units around it | Daemonic Lure -> Lightbender (Wanderer Lilithe (Sibon)); Daemonic Lure -> Lightbender (Wanderer Lilithe (Niklaren)); Daemonic Lure -> Lightbender (Maehv Wanderer)
+  Daemonic Lure:
+    when 182 played self
+    do 182 own damage unit enemy chosen board amount=1.0
+    do 182 own move unit enemy it
+  Lightbender:
+    when 288 played self
+    do 288 own silence position all position is surrounding
+    3 duelyst | type | Prominence puts your units there, and Primus Fist acts on units around it | Prominence -> Primus Fist (Wanderer Brome (Bleys27)); Prominence -> Primus Fist (Titan (StoicRooster)); Prominence -> Primus Fist (Wanderer Brome (Niklaren))
+  Prominence:
+    when 946 played spell mine keyword is 5001113
+    do 946 own summon
+  Primus Fist:
+    when 304 played self
+    do 304 own stat_change unit mine chosen board position is surrounding power=2.0
+    3 duelyst | type | Conscript puts your units there, and Aperion's Claim acts on units in a 3x3 area around it | Conscript -> Aperion's Claim (Wanderer Brome (Niklaren)); Conscript -> Aperion's Claim (Wanderer Brome (4LW)); Conscript -> Aperion's Claim (Wanderer Brome (Bleys27))
+  Conscript:
+    when 58 played self
+    do 58 own summon power=1.0;health=2.0
+  Aperion's Claim:
+    when 488 played self
+    do 488 own kill unit all board position is area_3x3
+    do 488 own set_terrain position all position is area_3x3
+    3 duelyst | type | Dioltas puts your units there, and Shiro Puppydragon acts on units around it | Dioltas -> Shiro Puppydragon (Wanderer Reva (DracoMoriarty)); Dioltas -> Shiro Puppydragon (Wanderer Lilithe (Niklaren)); Dioltas -> Shiro Puppydragon (Wanderer Reva (Niklaren))
+  Dioltas:
+    when 331 dies self
+    when 1098 always
+    do 331 own summon power=0.0;health=8.0
+    do 1098 uses_keyword cant any enemy all board position is surrounding of self event=moves
+    do 1098 uses_keyword cant any enemy all board position is surrounding of self event=attacks
+  Shiro Puppydragon:
+    when 785 turn_end
+    do 785 own stat_change unit mine all board position is surrounding power=1.0
+    3 duelyst | type | Prominence puts your units there, and Sunset Paragon acts on units around it | Prominence -> Sunset Paragon (Wanderer Brome (Bleys27)); Prominence -> Sunset Paragon (Titan (StoicRooster)); Prominence -> Sunset Paragon (Wanderer Brome (Niklaren))
+  Prominence:
+    when 946 played spell mine keyword is 5001113
+    do 946 own summon
+  Sunset Paragon:
+    when 777 played self
+    if 777 amount_stat power it
+    do 777 own damage unit all board position is surrounding amount=stat
+    3 duelyst | type | Conscript puts your units there, and Primus Fist acts on units around it | Conscript -> Primus Fist (Wanderer Brome (Niklaren)); Conscript -> Primus Fist (Wanderer Brome (4LW)); Conscript -> Primus Fist (Wanderer Brome (Bleys27))
+  Conscript:
+    when 58 played self
+    do 58 own summon power=1.0;health=2.0
+  Primus Fist:
+    when 304 played self
+    do 304 own stat_change unit mine chosen board position is surrounding power=2.0
+    3 gwent | waits | is played | The Naglfar -> Nekurat (Blood Scent: Unseen Devotion Vampires (Lerio, August 2024)); The Mushy Truffle -> Gremist (Battle Trance: Alchemy doesn't need any more buffs); Oneiromancy -> Gremist (Battle Trance: Alchemy doesn't need any more buffs)
+  The Naglfar:
+    when 2409 played self
+    do 2409 own look card mine random deck state is gold
+    do 2409 own play_card card mine chosen deck state is gold
+    do 2409 own put_on_top card mine chosen deck state is gold
+  Nekurat:
+    when 2715 always
+    when 4510 played self
+    when 2716 activated self
+    when 4526 turn_end
+    when 2717 always
+    when 4511 activated self
+    when 2718 played unit mine type is 35
+    when 4511 activated self
+    when 4510 played self
+    if 2716 keyword_condition
+    if 4511 amount_listed
+    if 4511 amount_listed
+    if 2716 have is self position is front_row
+    do 2715 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 2716 own give_keyword unit enemy chosen board amount=2.0
+    do 4526 uses_keyword damage unit enemy chosen board amount=1.0
+    do 2717 own keyword_action amount=2.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+    do 2718 own keyword_action amount=-1.0
+    do 4511 uses_keyword cant event=activated;turns=listed
+    do 4510 has_keyword can self event=activated
+  The Mushy Truffle:
+    when 3830 always
+    when 4541 round_end
+    when 3831 played self
+    when 3832 activated self
+    when 4541 round_end
+    when 4504 played self
+    do 3830 own give_keyword self
+    do 4541 uses_keyword cant self event=leaves_play
+    do 4541 uses_keyword remove_keyword self
+    do 3831 own create card mine chosen hand keyword is 756190;state is started_in_deck
+    do 3831 own play_card card mine chosen hand state is created
+    do 3832 own create
+    do 3832 own play_card card mine chosen hand card is 756688
+    do 4541 has_keyword cant self event=leaves_play
+    do 4541 has_keyword remove_keyword self
+    do 4504 has_keyword cant self event=activated;turns=1.0
+  Gremist:
+    when 2115 always
+    when 4510 played self
+    when 2116 activated self
+    when 4536 activated
+    when 2117 played card mine type is 15
+    when 4510 played self
+    if 2116 keyword_condition
+    if 2116 have is self position is back_row
+    do 2115 own give_keyword self
+    do 4510 uses_keyword can self event=activated
+    do 2116 own keyword_action unit chosen board
+    do 4536 uses_keyword remove_keywords unit chosen board
+    do 2117 own refresh self
+    do 4510 has_keyword can self event=activated
+    3 duelyst | type | Necrotic Sphere puts your units there, and Primus Fist acts on units around it | Necrotic Sphere -> Primus Fist (Wanderer Lilithe (Rocken)); Necrotic Sphere -> Primus Fist (Wanderer Lilithe (Sibon)); Necrotic Sphere -> Primus Fist (Wanderer Lilithe (Niklaren))
+  Necrotic Sphere:
+    when 27 played self
+    do 27 own kill unit all board position is surrounding of player mine;of:kind is player
+    do 27 own summon
+  Primus Fist:
+    when 304 played self
+    do 304 own stat_change unit mine chosen board position is surrounding power=2.0
+    3 duelyst | type | Dagona puts your units there, and Lightbender acts on units around it | Dagona -> Lightbender (Ebon Ox (Moggin)); Dagona -> Lightbender (Kaleos Trial of Songhai); Dagona -> Lightbender (Wanderer Zirix (Icicle))
+  Dagona:
+    when 595 played self
+    when 596 dies self
+    do 595 own capture unit chosen everywhere
+    do 596 own summon it
+  Lightbender:
+    when 288 played self
+    do 288 own silence position all position is surrounding
+    3 duelyst | type | Rasha's Curse puts your units there, and Sunset Paragon acts on units around it | Rasha's Curse -> Sunset Paragon (Wanderer Zirix (Icicle)); Rasha's Curse -> Sunset Paragon (Wanderer Zirix (Icicle, variant 2)); Rasha's Curse -> Sunset Paragon (Wanderer Zirix (Niklaren))
+  Rasha's Curse:
+    when 153 played self
+    when 1096 played self
+    do 153 own kill equipment enemy random attached
+    do 153 own summon
+    do 1096 uses_keyword can unit mine it card is 5000146 event=moves
+    do 1096 uses_keyword can unit mine it card is 5000146 event=attacks
+  Sunset Paragon:
+    when 777 played self
+    if 777 amount_stat power it
+    do 777 own damage unit all board position is surrounding amount=stat
+    3 duelyst | type | Mist Dragon Seal moves your units, and Sunset Paragon acts on units around it; also makes stronger: more power | Mist Dragon Seal -> Sunset Paragon (Wanderer Reva (Prostobot)); Mist Dragon Seal -> Sunset Paragon (Wanderer Reva (DracoMoriarty)); Mist Dragon Seal -> Sunset Paragon (Wanderer Reva (Niklaren))
+  Mist Dragon Seal:
+    when 104 played self
+    do 104 own stat_change unit mine chosen board power=1.0;health=1.0
+    do 104 own move unit mine it
+  Sunset Paragon:
+    when 777 played self
+    if 777 amount_stat power it
+    do 777 own damage unit all board position is surrounding amount=stat
+    3 duelyst | type | Arcane Heart puts your units there, and Shiro Puppydragon acts on units around it | Arcane Heart -> Shiro Puppydragon (Wanderer Reva (Niklaren)); Arcane Heart -> Shiro Puppydragon (Wanderer Reva (StephDawnheart)); Arcane Heart -> Shiro Puppydragon (Wanderer Reva (DracoMoriarty))
+  Arcane Heart:
+    when 97 played self
+    do 97 own summon
+  Shiro Puppydragon:
+    when 785 turn_end
+    do 785 own stat_change unit mine all board position is surrounding power=1.0
+    3 stormbound | type | Qordia’s Nest puts your units there, and Wild Saberpaws acts on units around it or next to it | Qordia’s Nest -> Wild Saberpaws (Elder Dragon); Qordia’s Nest -> Wild Saberpaws (Chronobreak); Qordia’s Nest -> Wild Saberpaws (Untitled Shadowfen deck B)
+  Qordia’s Nest:
+    when 10244 turn_start
+    if 10244 amount_per_level
+    do 10244 own summon strength=1.0
+  Wild Saberpaws:
+    when 10371 played self
+    when 10372 played self
+    if 10371 have not unit all board position is surrounding
+    if 10372 have is unit all board position is surrounding
+    if 10372 have not unit all board position is bordering
+    do 10371 own stat_change self movement=2.0
+    do 10372 own stat_change self movement=1.0
+    3 duelyst | type | Blink moves your units, and Sunset Paragon acts on units around it | Blink -> Sunset Paragon (Ebon Ox (PonchoMango)); Blink -> Sunset Paragon (Ebon Ox (Cocainelolis)); Blink -> Sunset Paragon (Ebon Ox (PonchoMango, variant 2))
+  Blink:
+    when 96 played self
+    do 96 own move unit mine chosen board max=2.0
+  Sunset Paragon:
+    when 777 played self
+    if 777 amount_stat power it
+    do 777 own damage unit all board position is surrounding amount=stat
+    2 marvel_snap | type | Spider-Man moves enemy units, and Enchantress acts on units in its lane | Spider-Man -> Enchantress (Cerebro 5 Alioth); Spider-Man -> Enchantress (Cerebro 5 Wave)
+  Spider-Man:
+    when 6325 played self
+    do 6325 own move self
+    do 6325 own move unit enemy chosen board position is same_lane
+  Enchantress:
+    when 5941 played self
+    do 5941 own silence unit all board position is same_lane;keyword is 8000751
+    2 runeterra | type | changes your units' stats | Kayle (level 2) -> Xolaani the Bloodweaver (Garen Kayle Jarvan); Kayle (level 2) -> Xolaani the Bloodweaver (Bandle Kayle Teemo)
+  Kayle (level 2):
+    when 9312 always
+    when 9313 summoned self
+    when 9314 levels_up self
+    when 9315 always
+    when 10178 attacks
+    when 10191 attacks
+    when 10158 strikes
+    if 9312 amount_event_count
+    if 9315 keyword_condition 16.0
+    if stat power ge listed self
+    if 9315 stat power ge listed self
+    do 9312 own stat_change self power=event_count
+    do 9313 own stat_change unit mine all board power=1.0;health=1.0
+    do 9314 own stat_change unit mine all board power=1.0;health=1.0
+    do 9315 own give_keyword self
+    do 10178 uses_keyword double_strike self
+    do 10191 has_keyword first_strike self
+    do 10158 has_keyword excess_damage player enemy
+  Xolaani the Bloodweaver:
+    when 8530 always
+    when 8531 always
+    when 10158 strikes
+    if 8530 amount_event_count
+    if 8530 amount_double
+    if 8530 amount_event_count
+    if 8530 amount_double
+    if 8531 keyword_condition 16.0
+    if stat power ge listed self
+    if 8531 stat power ge listed self
+    do 8530 own stat_change self power=double;health=double
+    do 8531 own transform self
+    do 10158 has_keyword excess_damage player enemy
+    2 duelyst | type | Superior Mirage puts your units there, and Lightbender acts on units around it | Superior Mirage -> Lightbender (Obelysks (F8)); Superior Mirage -> Lightbender (Wanderer Zirix (Icicle, variant 2))
+  Superior Mirage:
+    when 523 played self
+    when 524 attacks self
+    do 523 own copy unit enemy chosen board amount=3.0
+    do 523 own give_ability unit enemy all board state is copy_of_it
+    do 524 gives obliterate self
+  Lightbender:
+    when 288 played self
+    do 288 own silence position all position is surrounding
+    2 duelyst | type | Gust puts your units there, and Lightbender acts on units around it | Gust -> Lightbender (Wanderer Zirix (RHacker)); Gust -> Lightbender (Wanderer Zirix (Icicle, variant 2))
+  Gust:
+    when 982 played spell mine keyword is 5001113
+    do 982 own summon amount=2.0
+  Lightbender:
+    when 288 played self
+    do 288 own silence position all position is surrounding
+    2 gwent | type | Keldar puts your units there, and Target Practice acts on units in a card it picks's row; also is a Witcher it asks for | Keldar -> Target Practice (Shieldwall: Roegner Ale Damsel); Keldar -> Target Practice (Uprising: It's a great time to play Northern Realms Witchers)
+  Keldar:
+    when 3557 played spell mine
+    when 3558 turn_end
+    if 3558 keyword_condition 4.0
+    if count le listed card mine hand
+    if 3558 count le listed card mine hand
+    do 3557 own summon
+    do 3558 own summon
+  Target Practice:
+    when 3569 played self
+    when 3570 played self
+    if 3569 have not unit mine all board type is 34;position is same_row of unit mine chosen board;of:kind is unit
+    if 3570 have unit mine all board type is 34;position is same_row of unit mine chosen board;of:kind is unit
+    do 3569 own stat_change unit mine chosen board strength=4.0
+    do 3570 own stat_change unit mine chosen board strength=4.0
+    do 3570 own summon
+    2 duelyst | type | Dark Transformation puts your units there, and Primus Fist acts on units around it | Dark Transformation -> Primus Fist (Maehv Wanderer); Dark Transformation -> Primus Fist (Wanderer Lilithe (Niklaren))
+  Dark Transformation:
+    when 192 played self
+    do 192 own kill unit enemy chosen board
+    do 192 own summon power=1.0;health=1.0
+  Primus Fist:
+    when 304 played self
+    do 304 own stat_change unit mine chosen board position is surrounding power=2.0
+    2 duelyst | type | Dark Transformation puts your units there, and Azure Horn Shaman acts on units around it | Dark Transformation -> Azure Horn Shaman (Wanderer Lilithe (Niklaren)); Dark Transformation -> Azure Horn Shaman (Maehv Wanderer)
+  Dark Transformation:
+    when 192 played self
+    do 192 own kill unit enemy chosen board
+    do 192 own summon power=1.0;health=1.0
+  Azure Horn Shaman:
+    when 314 dies self
+    do 314 own stat_change unit mine all board position is surrounding health=4.0
+    2 duelyst | type | Necrotic Sphere puts your units there, and Lightbender acts on units around it | Necrotic Sphere -> Lightbender (Wanderer Lilithe (Niklaren)); Necrotic Sphere -> Lightbender (Wanderer Lilithe (Sibon))
+  Necrotic Sphere:
+    when 27 played self
+    do 27 own kill unit all board position is surrounding of player mine;of:kind is player
+    do 27 own summon
+  Lightbender:
+    when 288 played self
+    do 288 own silence position all position is surrounding
+    2 into_the_breach | type | Prime Spear moves units, and Vice Fist acts on units next to it | Prime Spear -> Vice Fist (Custom: Combat Laser Boulder); Prime Spear -> Vice Fist (Custom: Laser Combat Judo)
+  Prime Spear:
+    when 5216 attacks
+    when 5217 attacks

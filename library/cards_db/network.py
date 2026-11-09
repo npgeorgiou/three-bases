@@ -1854,6 +1854,12 @@ def made_cards(c):
     return out
 
 
+def made_clash(w, mw):
+    """a made card says "attr is X" where the need asks "attr is Y": it is not the kind the need asks for (L20)"""
+    have = {p.split(' ')[0]: p for p in (mw or '').split(';') if p.split(' ')[1:2] == ['is']}
+    return any(p.split(' ')[1:2] == ['is'] and p.split(' ')[0] in have and have[p.split(' ')[0]] != p for p in (w or '').split(';') if p)
+
+
 def made_fits(c, kind, w, mk, mw):
     """a card made as (mk, mw) is always one that a need for (kind, w) counts: same kind, and each part of the need is said by the
     making too ("a 6+ cost spell" made fits "6+ cost spells played"; a cost of 7+ fits 6+)"""
@@ -2018,7 +2024,8 @@ def need_lines(c, game, nodes, broad):
                 continue
             if matches(c, game, cards[a], kind, w): out[(a, t)].append(('type', 1.0 / cnt, 'is ' + what))
             elif a in described.get(kind, ()) and not any(p.split(' ')[0] in ('card', 'name_has', 'type') for p in (w or '').split(';')) \
-                    and any(all(p in mw_.split(';') for p in (w or '').split(';') if p.startswith('keyword is ')) for mw_ in described_w[(a, kind)]):
+                    and any(all(p in mw_.split(';') for p in (w or '').split(';') if p.startswith('keyword is ')) and not made_clash(w, mw_)
+                            for mw_ in described_w[(a, kind)]):  # a made Scoiatael unit is no Neutral unit (L20; Loc Feainn -> Pavko Gale)
                 # a unit made at random or by cost is no unit with the needed keyword (Sub-Mariner -> Mystique): the making must name it
                 out[(a, t)].append(('type', 0.5 / cnt, 'makes ' + what))
     return out

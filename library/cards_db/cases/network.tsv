@@ -678,3 +678,5 @@ n696	runeterra	Iceborn Legacy, Silverwing Vanguard	Iceborn Legacy	Silverwing Van
 n697	gwent	Lambert: Swordmaster, Kaedweni Revenant	Lambert: Swordmaster	Kaedweni Revenant	none	copies itself	Claude 2026-11-06, both texts read: Lambert damages the enemy's copies, never mine
 n698	gwent	Vilgefortz, Poor Fucking Infantry	Vilgefortz	Poor Fucking Infantry	none		Claude 2026-11-06, both texts read: Gwent Summon is not a play (glossary): Poor Fucking Infantry's Deploy does not go off when Vilgefortz summons it
 n699	gwent	Drakenborg, Poor Fucking Infantry	Drakenborg	Poor Fucking Infantry	none		Claude 2026-11-06, both texts read: Drakenborg summons and Locks it: nothing of it goes off
+n700	gwent	Loc Feainn: Convergence, Pavko Gale	Loc Feainn: Convergence	Pavko Gale	none	makes a unit it asks for	Claude 2026-11-09, line check: Convergence makes a Scoiatael unit, Pavko Gale asks for a Neutral one (L20)
+n701	gwent	Pavko Gale, Mysteries of Loc Feainn	Pavko Gale	Mysteries of Loc Feainn	line	is a unit whose playing sets off its effect	Claude 2026-11-09, line check: right example stays
