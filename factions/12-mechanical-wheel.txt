@@ -63,3 +63,6 @@ spread over all factions. Two counts: all cards, or cards weighted by how many d
 fewer than 10 cards in decks get no deck count). The rows part of axis 11 is not measured.
 The numbers quoted above came from an earlier chat with no saved script; this script gives Faeria Yellow 3.1 and Red 4.8
 average cost as quoted, but Runeterra Shurima 3.0 / Freljord 4.3 (quoted 2.9 / 4.1) and Duelyst Lyonar 31% / Abyssian 43% strength (quoted 36% / 51%).
+Lesson (9 Nov 2026, Kaptain found Faeria Red and Runeterra's pace wrong): Claude chose each axis end's concepts by their
+names, without looking at which cards they catch in each game. Before an axis is used, an agent lists per game the cards
+each of its concepts catches, and a concept stays only if those cards mean that end.
