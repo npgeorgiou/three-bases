@@ -102,6 +102,7 @@ nav.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: 
 .tuchart .xlab.end { text-anchor: end; }
 .tuchart .empty { fill: var(--muted); font-size: 15px; text-anchor: middle; }
 .tuchart .tubest { fill: none; stroke: var(--gold); stroke-width: 2.5; stroke-linejoin: round; }
+.tuchart .tubench { fill: var(--win); stroke: var(--bg); stroke-width: 1.5; }
 .tuchart .tuavg { fill: none; stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 5 4; stroke-linejoin: round; }
 .tuchart .tucand { fill: var(--muted); opacity: .55; }
 .tuchart .tucand.acc { fill: var(--gold); stroke: var(--ink); stroke-width: 1; opacity: 1; }
@@ -110,6 +111,7 @@ nav.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: 
 .tulegend { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; color: var(--muted); font-size: 13px; padding: 4px 4px 0; }
 .tulegend .lg { display: inline-block; width: 18px; height: 0; border-top: 2.5px solid var(--gold); margin-right: -10px; }
 .tulegend .lg.cand { width: 7px; height: 7px; border: 0; border-radius: 50%; background: var(--muted); opacity: .55; }
+.tulegend .lg.bench { width: 10px; height: 10px; background: var(--win); border: 0; vertical-align: -1px; }
 .tulegend .lg.avg { border-top: 1.5px dashed var(--muted); }
 .tulegend .lg.acc { width: 9px; height: 9px; border: 1px solid var(--ink); border-radius: 50%; background: var(--gold); }
 .tuh { font: 400 18px/1.2 var(--disp); margin: 0 0 8px; }
@@ -299,7 +301,6 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
   <div class="setup">
     <label title="Lessons: positions from games where the depth-3 search (the teacher) values every move; the ifelse AI at depth 1 is tuned to pick the moves the teacher values most. Games: whole games against the opponents ticked.">Tune by <select id="tuMode"><option value="lessons">Lessons from depth 3 (foresight at depth 1)</option><option value="games">Games against the opponents</option></select></label>
     <label class="tulessons" title="How many lessons each candidate is graded on">Lessons <input type="number" id="tuLessons" min="100" max="20000" step="50" value="1000"></label>
-    <button class="tulessons" id="tuNewLessons" title="Throw the lessons away and make new ones, with the ifelse AI as it is now as the teacher">Make new lessons</button>
     <label class="tugames">Games per candidate <input type="number" id="tuGames" min="20" max="2000" step="2" value="300"></label>
     <label>Games at once <input type="number" id="tuThreads" min="1" max="32"></label>
     <label class="tugames" title="How far the ifelse AI and the Benchmark look ahead in tuning games; lower is much faster">Search depth while tuning <select id="tuDepth"><option value="1">1</option><option value="2">2</option><option value="3">3 (the Benchmark's)</option></select></label>

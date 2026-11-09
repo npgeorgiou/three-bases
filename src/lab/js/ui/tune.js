@@ -166,7 +166,8 @@ function finishGeneration() {
     st.hist.push({ gen: st.gen, mark: `restart ${st.restarts} · ${st.cma.lambda} candidates` });
   }
   st.gen++; st.cand = null;
-  if (tune.running) newGeneration();
+  if (st.mode === 'lessons') lessonsAfterRound(st);
+  else if (tune.running) newGeneration();
   save(); renderTune();
 }
 function startTune() {
@@ -174,12 +175,17 @@ function startTune() {
   if (Object.keys(trainings).length) stopAllTraining();
   if (tour.running) pauseTournament();
   const st = tuneState();
-  tuneRunning.clear();                                                        // games cut off by a pause are played again
-  if ((!st.cand || !st.cand.res) && (st.mode !== 'lessons' || lessonsReady())) newGeneration();
+  tuneRunning.clear(); strengthRunning.clear(); LESSONS.asked = 0;          // games cut off by a pause are played again
+  if ((!st.cand || !st.cand.res) && st.mode !== 'lessons') newGeneration();   // lessons: the first job starts the round
   tune.running = true;
-  const onFail = (job, msg) => { if (job && job.gen === tuneState().gen) tuneRunning.delete(job.i + '-' + job.gi); reportError('A tuning game failed: ' + msg); };
+  const onFail = (job, msg) => {
+    if (job && job.lesson === 'make') LESSONS.asked = Math.max(0, LESSONS.asked - LESSON_PER_GAME);
+    else if (job && job.lesson === 'strength') strengthRunning.delete(job.k);
+    else if (job && job.gen === tuneState().gen) tuneRunning.delete(job.i + '-' + job.gi);
+    reportError('A tuning game failed: ' + msg);
+  };
   tune.pool = new Pool(Math.max(1, Math.min(32, Number($('#tuThreads').value) || 1)), Object.fromEntries(NETS.map(n => [n.id, playable(netData[n.id])])), tuneJob, tuneResult, onFail);
-  if (st.mode === 'lessons' && lessonsReady()) tune.pool.setInit([{ type: 'lessons', lessons: LESSONS.list }]);
+  if (st.mode === 'lessons' && st.cand) tune.pool.setInit([{ type: 'lessons', lessons: LESSONS.list }]);
   renderTune();
 }
 function pauseTune() {
@@ -214,12 +220,7 @@ $('#tuLessons').addEventListener('change', () => {
   if (tune.running) pauseTune();
   st.lessonN = Math.max(100, Math.round(Number($('#tuLessons').value) || 1000)); st.cand = null; save(); renderTune();
 });
-$('#tuNewLessons').addEventListener('click', async () => {
-  if (!(await askYes('Make new lessons?', 'The lessons are thrown away; new ones are made from new games, with the ifelse AI as it is now as the teacher at depth 3.', 'Make new'))) return;
-  const st = tuneState();
-  if (tune.running) pauseTune();
-  newLessons(); st.cand = null; save(); renderTune();
-});
+
 /** A new tuning depth: the generation under way starts again; the search itself carries on. */
 function setTuneDepth(d) {
   const st = tuneState(), was = tune.running;
@@ -303,9 +304,9 @@ const tpct = v => (v == null || !Number.isFinite(v) ? '–' : Math.round(v * 100
 function renderTuneStatus() {
   const st = tuneState(), c = st.cand, last = [...st.hist].reverse().find(e => !e.mark);
   const done = c && c.res ? tuneDone(c) : 0, total = c && c.res ? c.G * c.res.length : 0;
-  const lessons = st.mode === 'lessons', making = lessons && !lessonsReady();
+  const lessons = st.mode === 'lessons', making = lessons && LESSONS.need > 0;
   $('#tuStatus').textContent = (tune.running ? (making ? 'Making lessons' : 'Tuning') : st.gen || c ? 'Paused' : 'Not started') +
-    (lessons ? ` · lessons ${Math.min(LESSONS.list.length, lessonTarget())}/${lessonTarget()}` : '') +
+    (lessons ? ` · ${LESSONS.list.length} lessons` + (LESSONS.need ? `, making ${LESSONS.need} new` : '') + (st.strength ? `, games against the Benchmark ${st.strength.res.filter(x => x !== null).length}/${STRENGTH_GAMES}` : '') : '') +
     ` · generation ${st.gen + 1} · ${st.cma.lambda} candidates` + (c ? ` · ${done}/${total} ${lessons ? 'blocks of lessons' : 'games'}` : '') +
     (last ? ` · last generation: the ifelse AI ${tpct(last.centre)}, candidates' average ${tpct(last.avg)}, best candidate ${tpct(last.top)}` : '') +
     ` · step size ${st.cma.sigma.toFixed(3)}` + (st.restarts ? ` · ${st.restarts} restart${st.restarts > 1 ? 's' : ''}` : '');
@@ -345,11 +346,12 @@ function renderTune() {
     svg += `<polyline class="tuavg" points="${gens.map((e, k) => `${X(k)},${Y(e.avg)}`).join(' ')}"></polyline>`;
     const cen = gens.map((e, k) => (e.centre == null ? null : `${X(k)},${Y(e.centre)}`)).filter(Boolean);
     if (cen.length) svg += `<polyline class="tubest" points="${cen.join(' ')}"></polyline>`;
+    svg += gens.map((e, k) => (e.bench == null ? '' : `<rect class="tubench" x="${X(k) - 5}" y="${Y(e.bench) - 5}" width="10" height="10"><title>Generation ${e.gen + 1}: the ifelse AI won ${tpct(e.bench)} of ${STRENGTH_GAMES} games against the Benchmark (both looking 1 move ahead)</title></rect>`)).join('');
     svg += gens.map((e, k) => `<circle class="tucand acc" cx="${X(k)}" cy="${Y(e.top)}" r="3.5"><title>Generation ${e.gen + 1}: ifelse AI ${tpct(e.centre)}${e.kept ? ' (better half not better: centre kept)' : ''}, candidates' average ${tpct(e.avg)}, best candidate ${tpct(e.top)} (${e.lambda} candidates${e.deals ? `, ${e.deals} games each` : ''})</title></circle>`).join('');
     svg += `<text class="xlab" x="${l}" y="${H - 10}">generation ${gens[0].gen + 1}</text><text class="xlab end" x="${W - r}" y="${H - 10}">generation ${gens[gens.length - 1].gen + 1}</text>`;
   }
   $('#tuChart').innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Win rates by generation">${svg}</svg>
-    <div class="tulegend"><span class="lg best"></span>the ifelse AI itself (the centre) <span class="lg avg"></span>candidates' average <span class="lg acc"></span>best candidate</div>`;
+    <div class="tulegend"><span class="lg best"></span>the ifelse AI itself (the centre) <span class="lg avg"></span>candidates' average <span class="lg acc"></span>best candidate${st.mode === 'lessons' ? ' <span class="lg bench"></span>games won against the Benchmark (every 10th round)' : ''}</div>`;
   const fmt = v => (Number.isInteger(v) ? String(v) : Math.abs(v) >= 10 ? v.toFixed(1) : v.toFixed(3));
   $('#tuTable').innerHTML = `<table class="tutable"><thead><tr><th>Value</th><th>Start</th><th>ifelse AI (centre)</th></tr></thead><tbody>${
     IFELSE_FIELDS.map(([k, text]) => { const d = IFELSE_DEFAULTS[k], v = st.best[k] ?? d, ch = Math.abs(v - d) > 1e-9;
