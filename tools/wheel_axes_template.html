@@ -68,7 +68,7 @@ function buildAxes(){document.getElementById('axList').innerHTML='';for(const a 
 
 function radar(){const box=document.getElementById('radarBox');box.innerHTML='';const W=760,C=W/2,RR=250;
  const svg=el('svg',{viewBox:`0 0 ${W} ${W}`,width:'100%'},box);const ax=A.filter(a=>axOn.has(a.key));const n=ax.length;if(n<3){box.innerHTML='<p>Tick at least 3 axes.</p>';return}
- const ang=i=>-Math.PI/2+i*2*Math.PI/n, rad=v=>Math.max(.02,Math.min(1,v/2.5))*RR;
+ const ang=i=>-Math.PI/2+i*2*Math.PI/n, rad=v=>Math.max(.02,Math.min(1,v/2.2))*RR;
  for(const v of[1,2]){el('circle',{cx:C,cy:C,r:rad(v),fill:'none',stroke:v===1?'#999':'#e4e0d6','stroke-dasharray':v===1?'4 3':''},svg)}
  ax.forEach((a,i)=>{const x=C+Math.cos(ang(i))*RR,y=C+Math.sin(ang(i))*RR;el('line',{x1:C,y1:C,x2:x,y2:y,stroke:'#e4e0d6'},svg);
   const lx=C+Math.cos(ang(i))*(RR+14),ly=C+Math.sin(ang(i))*(RR+14);const t=el('text',{x:lx,y:ly,'text-anchor':Math.abs(Math.cos(ang(i)))<.2?'middle':(Math.cos(ang(i))>0?'start':'end'),'dominant-baseline':'middle',class:'spoke-label'},svg);

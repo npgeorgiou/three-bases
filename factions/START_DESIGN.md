@@ -22,10 +22,15 @@ take a base, hold it, or take it from the enemy?
   line by line.
 
 ## THE THINKING PROCESS (in this order; no step skipped)
+Step 0 (Kaptain, 9 Nov 2026): the faction's place on the mechanical wheel (`factions/12-mechanical-wheel.txt`) comes
+first. Its spokes, monopolies, blind spots, mechanics shared with its two neighbours and how it differs from every other
+faction are decided there, for all 20 factions together, not in the faction's chat. The theme comes last and fits the
+mechanics.
 Steps 1-6 come from the library, never from memory. Run the queries below on all 8 games (`ask.py all ...` from
 `library/cards_db/`; a faction name used by two games, such as Ironclad, needs the game: `ask.py sts1 lacks Ironclad`),
 read 5-10 card texts behind every count, and write the sources (game: card) next to each answer of steps 2, 3, 5 and 6.
-- Step 1: list the factions of every game (section 3) and pick the 6-10 closest to the theme, at least one per board game
+- Step 1: list the factions of every game (section 3) and pick the 6-10 closest to the faction's place on the wheel (the
+  closest factions in `factions/wheel-axes.html`, not the theme), at least one per board game
   (Duelyst, Faeria, Stormbound, Into the Breach, Inscryption); run `curve` on each to see what its cards do.
 - Step 2: `removal <game>` and `protect <game>` for all 8 games, `palette place` and `palette death`: which ways to remove and
   hold exist, and which the six other factions already use (`factions/11-seven-factions.txt`, `summary/11-faction-*.txt`).
@@ -38,7 +43,7 @@ read 5-10 card texts behind every count, and write the sources (game: card) next
   A deck is a small part of what a faction is (decks.tsv: about 80-100 top decks each for Runeterra, Duelyst, Faeria,
   Marvel Snap; fewer for the others): decks show which cards are played together, never prove alone that two
   mechanics fit; the card-by-card queries of steps 2-5 come first.
-1. **Name, icon, theme.** A real theme (World War I artillery, the Zulu regiments, Babylonian astrologers), with 10+ facts
+1. **Name, icon, theme** (chosen after the wheel gave the mechanics). A real theme (World War I artillery, the Zulu regiments, Babylonian astrologers), with 10+ facts
    about how they fight, live, trade, believe, what they fear and what they lack. Each fact is a source of cards later.
 2. **Kaptain's five questions**, answered before any card:
    1. Identity: one sentence saying how the faction wins. Good: "units die, and every death feeds the others". Bad: "a
@@ -51,11 +56,11 @@ read 5-10 card texts behind every count, and write the sources (game: card) next
    4. The play that feels good: what its units do the moment they are placed. Example: "Place: push the enemy facing me
       one row back".
    5. Blind spot: the one tool it never gets, on any card. Example: a swarm faction never restores shields.
-3. **Monopolies and blind spots.** 2-3 mechanics only this faction has; no other faction uses them. A list of tools it
+3. **Monopolies and blind spots** (taken from the wheel). 2-3 mechanics only this faction has; no other faction uses them. A list of tools it
    never has; its cards never make up for them, it plays around them. A blind spot is never one of the two things every
    faction needs (hold dots, remove enemies), only one way of doing them: "no kill spells" is a blind
    spot, "no removal" is not.
-4. **How it differs from each other faction.** Kaptain's example: a swarm that fills the front rows with many cheap weak
+4. **How it differs from each other faction** (from the wheel; check it with the closest factions on the page). Kaptain's example: a swarm that fills the front rows with many cheap weak
    units, against a fortress that never has more than 3 units and moves defence between them. Write one sentence per
    other faction saying why a game between the two feels different.
 5. **Mechanics (4-6)**, each written "I do X -> I gain from X" ("my units die -> my other units grow"). A mechanic is
@@ -87,7 +92,8 @@ read 5-10 card texts behind every count, and write the sources (game: card) next
    the new one only changes numbers, stats, cost or ON WHOM, it is the same card: drop it and use another library line.
    The failure this stops: 14 Horologers said "round end: I strike the nearest enemy", with different stats. The gate
    fails two cards whose WHEN + WHAT + ON WHOM are all the same, and one WHEN + WHAT on more than 3 cards.
-10. **Checks**: sections 2-5, then `python3 tools/design_gate.py <letter>` until it prints PASS. Code only after Kaptain
+10. **Checks**: sections 2-5, then `python3 tools/design_gate.py <letter>` until it prints PASS. Then measure the faction on
+   the wheel's spokes: it must land where the wheel put it; if it drifted, fix the faction, not the wheel. Code only after Kaptain
    agreed steps 1-6.
 
 Absolute limits (Kaptain): no rarities (Common, Rare, Legendary...); every card is balanced by its cost alone. No

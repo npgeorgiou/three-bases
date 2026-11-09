@@ -49,6 +49,8 @@ sources.
 | Concepts only one faction of a game has (its monopolies) | `ask.py all only <game>` |
 | Concepts a faction never has while at least half its game's other factions do (its blind spots) | `ask.py all lacks "<faction>"` |
 | The values you can ask for | `ask.py all list concepts`, `ask.py all list happenings` |
+| Mechanics real factions keep apart (opposite sides of the wheel) and together (neighbours) | `python3 apart.py [top]` |
+| Every real faction on the wheel's spokes, closest factions, map | `python3 axes.py` -> `factions/wheel-axes.html` (factions/13) |
 Example answers: QUERIES.md. Kaptain's standing questions with their current answers: library/design_questions/
 (made by design_questions.py). The full list of questions the database must answer: QUESTION_BANK.md.
 

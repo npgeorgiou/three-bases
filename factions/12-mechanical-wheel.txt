@@ -11,7 +11,7 @@ Method (Claude's proposal, agreed in outline):
    basic things, each able to carry 30+ cards on this board.
 2. The 20 factions as nodes on a circle. Each mechanic has one owner (its monopoly); up to its two neighbours may use it
    on a few cards; the far side of the wheel never has it (its blind spots).
-3. The factions are spread along the axes below, so neighbours differ and opposites differ most.
+3. The factions are spread over the spokes below: neighbours are alike on a few spokes, opposites differ most.
 4. A table: the 20 factions by their answers to the five questions; every faction differs from every other in each.
 5. A graph check: mechanics are nodes, a line where one makes what another needs (library fed/feeds); each faction's
    mechanics form one connected group, with lines to each neighbour.
@@ -34,17 +34,15 @@ dropped; disruption added):
 6.  How many targets: many at once and counting the board, or one precise target.
 7.  Width (agreed 9 Nov 2026): many cheap units and cards that make units, or a few big ones.
 8.  Hand and discard pile: picks, copies and brings back its own cards, or plays what it draws.
-9.  Strength or defence: its units lean to killing or to holding dots (defence holds a base); seen in the stats.
+9.  Unit stats: strength and defence per supply, two spokes; a faction's lean is the difference between them. Kaptain,
+    9 Nov 2026: games with one number for both (Stormbound) count it as both.
 Dropped 9 Nov 2026: sets the pace or answers (Kaptain: its Runeterra order was wrong; most library games have no
 answering on the enemy's turn, so there it only repeats removal); early or late (Kaptain: Claude could not measure it; checked against deck authors' words it was
 right in only 63 of 149 Faeria deck pairs); moving (Kaptain: most library games have no moving); repair or prevent (Claude, after Kaptain's "get it
 done": only places factions that keep units, so it becomes a monopoly choice of those factions); rows and areas (Claude,
 same: "one cell or a row" repeats axis 6, "front or back rows" can't be measured from other games and stays a design
 question per faction).
-A game with under 5 cards for a spoke gives its factions no value on it, not 0. Gaps (9 Nov 2026): "one chosen" in every
-game but Runeterra and Marvel Snap (the library rarely marks a chosen target); unit stats in Gwent, Stormbound, Into the
-Breach and Slay the Spire; Into the Breach and Slay the Spire also on several others; "many at once" in Inscryption and
-Monster Train; "units' own strikes" in Gwent.
+A game with under 5 cards for a spoke gives its factions no value on it, not 0 (list: factions/13-wheel-measurement.txt).
 How the axes were missed: the first measured axes came only from what cards do (concept shares), so identity that lives
 in the cost curve, the stats and how a faction feels to play was invisible; look there too.
 Which ends go together is judged by play: one end makes what the other needs, or undoes it (library fed/feeds/both).
@@ -54,23 +52,21 @@ repairing it: all sound plays).
 Not axes: timing (players act now; round end is built FOR, not waited for), staying in one lane (every faction must
 win 2 of 3 lanes), random effects (not allowed), lasting or this-round effects (this-round effects are worth little).
 
-The measurement (9 Nov 2026): `library/cards_db/axes.py` measures the 49 real factions of the library (10+ cards each)
-and writes `library/cards_db/axes.tsv` and `factions/wheel-axes.html` (circle, map of factions, numbers, closest factions;
-template `tools/wheel_axes_template.html`). Each end of an axis is its own spoke (Kaptain, 9 Nov 2026: one number per axis,
-one end minus the other, hid factions strong at both ends, e.g. Faeria Red has the most fixed damage and also strikes).
-A faction's value on a spoke = the share of its cards that count for it, divided by its game's average: 0 = none,
-1 = average. Which card effects count for each spoke is listed in axes.py and on hover in the page; each was checked
-against the cards it catches, game by game, and some count only in some games (e.g. heal is the player's life in Faeria
-and Slay the Spire, so it counts there not at all). Two counts: all cards, or cards weighted by how many decks of
-decks.tsv play them (factions with fewer than 10 cards in decks get no deck count). Kaptain's points are checks in
-axes.py (CHECKS); a failed one prints at every run. Smoothing (Kaptain, 9 Nov 2026: shapes looked like hedgehogs): each
-faction counts as if it had 10 more cards at its game's average, then the square root is taken. Spoke order on the circle
-(Claude's, so neighbours belong together): strength, units' own strikes, kills, fixed damage, many at once, breaks their
-plan, one chosen, picks and brings back, more supply and cards, many cheap units, spends them, position and combos, keeps
-them alive, defence, a few big units. A missing value shows as a dashed dot on the rim with its reason (Stormbound's units
-have one number for both strength and defence).
-The numbers quoted above came from an earlier chat with no saved script; this script gives Faeria Yellow 3.1 and Red 4.8
-average cost as quoted, but Runeterra Shurima 3.0 / Freljord 4.3 (quoted 2.9 / 4.1) and Duelyst Lyonar 31% / Abyssian 43% strength (quoted 36% / 51%).
-Lesson (9 Nov 2026, Kaptain found Faeria Red and Runeterra's pace wrong): Claude chose each axis end's concepts by their
-names, without looking at which cards they catch in each game. Before an axis is used, an agent lists per game the cards
-each of its concepts catches, and a concept stays only if those cards mean that end.
+How it is measured, and how to redo it for new games or changed library cards and links: factions/13-wheel-measurement.txt.
+
+The design process from the wheel (AGREED with Kaptain, 9 Nov 2026; done in another chat):
+1. Spokes final; the library gaps in todo.md fixed first (database chat).
+2. Pool of mechanics: the mechanics this board supports, each from the library and able to carry 30+ cards, each placed
+   on the spokes it serves. `python3 library/cards_db/apart.py` lists mechanics real factions keep apart (opposite sides)
+   and together (neighbours); read card texts before trusting a pair.
+3. The 20 factions placed: each a shape strong on 2-4 neighbouring spokes and weak on the far side; on the map of
+   factions no two sit on top of each other.
+4. Per faction 2-3 monopolies, 1-2 mechanics shared with each neighbour on a few cards, blind spots from the far side;
+   the five-questions table filled for all 20 at once.
+5. Overlaps for two-faction decks: per pair of neighbours, the combo they make, as a played sequence (which card of one
+   sets off which card of the other). Hooks are more than these planned overlaps (Kaptain, 9 Nov 2026: hooks made only
+   this way would be poor and unimaginative); what else goes into hooks is worked out in that chat.
+   Shared cards (one card in two factions, as in Runeterra) are only one source of combos, never the only one.
+6. Themes, one per faction, fitting its mechanics.
+7. Each faction in its own chat (factions/START_DESIGN.md steps 6-10), then measured on the spokes: it must land where
+   the wheel put it; if it drifted, the faction is fixed, not the wheel.

@@ -5,7 +5,8 @@ Run from library/cards_db: python3 axes.py  ->  axes.tsv and ../../factions/whee
 Each spoke is one end of an axis: a list of library concepts (Claude's choice, checked against the cards they catch).
 A card counts for a spoke if it has any of its concepts. A faction's value on a spoke = the share of its cards that count,
 divided by the average share of the factions of its game (0 = none, 1 = average), then smoothed: each faction counts as if
-it had SHRINK more cards at the average, and the square root is taken, so very high and very low values are pulled in.
+it had SHRINK more cards at the average, and the value is raised to POWER, so very high and very low values are pulled in.
+Unit stats (spokes in NUMERIC) are strength and defence per supply; unit_stats() reads each game's own stat fields.
 A game with fewer than MIN_GAME_CARDS cards for a spoke gives its factions no value on it (a gap, not 0).
 Two counts: "cards" = every card of the faction once; "decks" = each card weighted by how many of the library's top
 decks (decks.tsv) play it; factions with fewer than MIN_DECK_CARDS cards in decks get no deck count.
@@ -30,13 +31,13 @@ SHOWN = {'disrupt*': 'an effect on enemies: ' + ', '.join(DISRUPT_ON_ENEMY) + ';
          'position*': 'position (Gwent, Runeterra, Marvel Snap only): ' + ', '.join(POSITION),
          'combo*': 'combos: the share of the faction\'s card pairs the library links',
          'cheapunit*': 'a unit in the cheapest third of its game', 'dearunit*': 'a unit in the dearest third of its game',
-         'strong*': 'a unit with more strength than defence', 'tough*': 'a unit with more defence than strength'}
+         'strength*': 'its units\' strength per supply (Stormbound: the one number; Gwent: power)',
+         'defence*': 'its units\' defence per supply (Stormbound: the one number; Gwent: power + armour)'}
+NUMERIC = {'strong': 0, 'tough': 1}  # spokes measured from unit stats per supply, not from card effects
 MIN_GAME_CARDS = 5
-SHRINK = 10  # smoothing: every faction counts as if it had 10 more cards at its game's average (small factions swing less)
-NO_VALUE = {('stormbound', 'strong'): 'its units have one number for both strength and defence',
-            ('stormbound', 'tough'): 'its units have one number for both strength and defence',
-            ('gwent', 'strong'): 'its units have one number (power) for both', ('gwent', 'tough'): 'its units have one number (power) for both',
-            ('into_the_breach', 'strong'): 'its units\' stats are not in the library', ('into_the_breach', 'tough'): 'its units\' stats are not in the library',
+SHRINK = 5  # smoothing: every faction counts as if it had 5 more cards at its game's average (small factions swing less)
+POWER = 0.75  # smoothing: values are raised to this power (4 times the average shows as 2.8, a quarter as 0.35)
+NO_VALUE = {('into_the_breach', 'strong'): 'its units\' damage comes from weapons, not in the library',
             ('sts1', 'strong'): 'the player has no units', ('sts1', 'tough'): 'the player has no units'}
 CHECKS = [  # Kaptain's points: (game, faction, spoke, lowest value it must have)
     ('faeria', 'Red', 'fixed', 1.5),  # 9 Nov 2026: Red is Faeria's fixed-damage faction
@@ -44,7 +45,7 @@ CHECKS = [  # Kaptain's points: (game, faction, spoke, lowest value it must have
 ]
 MIN_DECK_CARDS = 10  # Faeria Pandora has 1 card in decks
 SPOKES = [  # (key, axis number, axis name, this end, concepts); "concept@game,game" counts only in those games (the check of 9 Nov 2026)  # in circle order: neighbours belong together
-    ('strong', 9, 'Unit stats', 'strength', ['strong*']),
+    ('strong', 9, 'Unit stats', 'strength', ['strength*']),
     ('strikes', 3, 'Damage', 'units\' own strikes', ['attack_gain@duelyst,faeria,monster_train,runeterra,stormbound,sts1',
         'on_attack@duelyst,faeria,into_the_breach,monster_train,runeterra,stormbound,sts1', 'multi_attack', 'first_strike',
         'attack_now', 'excess_damage', 'counterattack', 'on_fight', 'piercing']),
@@ -74,9 +75,23 @@ SPOKES = [  # (key, axis number, axis name, this end, concepts); "concept@game,g
         'shield@duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra', 'protection',
         'immunity@duelyst,faeria,gwent,inscryption,into_the_breach', 'cheat_death',
         'damage_reduction@duelyst,faeria,gwent,inscryption,monster_train,runeterra', 'block_armor@gwent,monster_train', 'tank']),
-    ('tough', 9, 'Unit stats', 'defence', ['tough*']),
+    ('tough', 9, 'Unit stats', 'defence', ['defence*']),
     ('tall', 7, 'Width', 'a few big units', ['dearunit*', 'high_cost']),
 ]
+
+
+def unit_stats(game, power, health, st):
+    """(strength, defence) of a card: Stormbound has one number for both, Gwent power (defence adds armour), Into the
+    Breach only health; other games power and health"""
+    try: d = json.loads(st) if st else {}
+    except ValueError: d = {}
+    num = lambda v: float(str(v).split('/')[0]) if v not in (None, '') and str(v).split('/')[0].replace('.', '').isdigit() else None
+    if game == 'stormbound':
+        v = num(d.get('strength')); return v, v
+    if game == 'gwent':
+        p = num(d.get('power')) if power is None else power
+        return p, None if p is None else p + (num(d.get('armor')) or 0)
+    return power, health
 
 
 def counts(ks, game, concepts):
@@ -96,7 +111,8 @@ def tag(c, x, games):
                              + faction_asks.ROW_ORIGIN):
         if k in DISRUPT_ON_ENEMY: con[card].add('disrupt*')
         if k in KILL_ON_ENEMY: con[card].add('kill*')
-    stats = {i: (cat, cost, p, h) for i, cat, cost, p, h in c.execute('select id, category, cost, power, health from card')}
+    stats = {i: (cat, cost) + unit_stats(g, p, h, st) for i, g, cat, cost, p, h, st in
+             c.execute('select id, game, category, cost, power, health, stats from card')}
     pools = {g: x.pool(g) for g in games}
     for g, pool in pools.items():
         costs = sorted(v[2] for v in pool.values() if v[2] is not None)
@@ -106,23 +122,22 @@ def tag(c, x, games):
             if ks & set(DISRUPT_ALWAYS) or ('junk_cards' in ks and g in JUNK_GAMES): ks.add('disrupt*')
             if ks & set(POSITION) and g in POSITION_GAMES: ks.add('position*')
             if stats[i][0] not in UNIT_CATS: continue
-            p, h = stats[i][2], stats[i][3]
-            if p is not None and h is not None and p != h: ks.add('strong*' if p > h else 'tough*')
             if v[2] is not None and lo != hi:
                 if v[2] <= lo: ks.add('cheapunit*')
                 if v[2] >= hi: ks.add('dearunit*')
-    return con, pools
+    return con, pools, stats
 
 
 def main():
     c = sqlite3.connect('cards.sqlite')
     games = sorted({g for (g,) in c.execute('select distinct game from card')})
     x = faction_asks.Ctx(c, games, None, {})
-    con, pools = tag(c, x, games)
+    con, pools, stats = tag(c, x, games)
     if '--cards' in sys.argv:
         return dump(c, x, games, con, pools, sys.argv[sys.argv.index('--cards') + 1])
-    lacks = {(g, s[0]) for g in games for s in SPOKES if s[0] != 'together'
-             and sum(1 for i in pools[g] if counts(con[i], g, s[4])) < MIN_GAME_CARDS}
+    lacks = {(g, s[0]) for g in games for s in SPOKES if s[0] != 'together' and (
+             sum(1 for i in pools[g] if stats[i][2 + NUMERIC[s[0]]] is not None and stats[i][0] in UNIT_CATS) if s[0] in NUMERIC
+             else sum(1 for i in pools[g] if counts(con[i], g, s[4]))) < MIN_GAME_CARDS}
     pairs = set()
     for a, b in sqlite3.connect('links.sqlite').execute('select a, b from link'):
         if a != b: pairs.add((min(a, b), max(a, b)))
@@ -141,8 +156,8 @@ def main():
             ids = [i for i, v in pool.items() if fac in v[3]]
             w_decks = {i: deck_n[(g, pool[i][0].lower())] for i in ids if deck_n[(g, pool[i][0].lower())]}
             rec = {'game': g, 'faction': fac, 'n_cards': len(ids), 'deck_cards': len(w_decks),
-                   'cards': shares({i: 1 for i in ids}, con, pairs, g),
-                   'decks': shares(w_decks, con, pairs, g) if len(w_decks) >= MIN_DECK_CARDS else None}
+                   'cards': shares({i: 1 for i in ids}, con, pairs, g, stats),
+                   'decks': shares(w_decks, con, pairs, g, stats) if len(w_decks) >= MIN_DECK_CARDS else None}
             for m in ('cards', 'decks'):
                 for g2, k in lacks:
                     if g2 == g and rec[m]: rec[m][k] = None
@@ -155,15 +170,15 @@ def main():
                 avg = sum(vals) / len(vals) if vals else 0
                 for q in ms:
                     if q[k] is None or not avg: q[k + '_v'] = None; continue
-                    share = q[k] if k == 'combo' else (q[k] * q['_n'] + SHRINK * avg) / (q['_n'] + SHRINK)
+                    share = q[k] if k in ('combo',) + tuple(NUMERIC) else (q[k] * q['_n'] + SHRINK * avg) / (q['_n'] + SHRINK)
                     q[k + '_v'] = share / avg
             for q in ms:
                 both = [q[k] for k in ('pos_v', 'combo_v') if q[k] is not None]
                 q['together_v'] = sum(both) / len(both) if both else None
                 q['together'] = None
-                for sk in SPOKES:  # the final smoothing: square root, so 4 times the average shows as 2 and 0.25 as 0.5
+                for sk in SPOKES:  # the final smoothing (POWER)
                     v = q[sk[0] + '_v']
-                    q[sk[0] + '_v'] = None if v is None else round(math.sqrt(v), 3)
+                    q[sk[0] + '_v'] = None if v is None else round(v ** POWER, 3)
     with open('axes.tsv', 'w', encoding='utf-8') as f:
         f.write('game\tfaction\tcards\tdeck_cards\tmode\t' + '\t'.join(f'{s[0]}_share\t{s[0]}_value' for s in SPOKES) + '\n')
         for r in rows:
@@ -195,11 +210,19 @@ def fmt(v): return '' if v is None else f'{v:.4f}'
 def per_spoke(m, suf): return None if not m else {s[0]: m.get(s[0] + suf) for s in SPOKES}
 
 
-def shares(w, con, pairs, game):
-    """per spoke, the share of the faction's cards (weighted) that count for it"""
+def shares(w, con, pairs, game, stats):
+    """per spoke, the share of the faction's cards (weighted) that count for it; unit stats per supply for NUMERIC"""
     tot = sum(w.values())
     out = {'_n': len(w)}
-    out.update({s[0]: sum(n for i, n in w.items() if counts(con[i], game, s[4])) / tot for s in SPOKES if s[0] != 'together'})
+    out.update({s[0]: sum(n for i, n in w.items() if counts(con[i], game, s[4])) / tot for s in SPOKES
+                if s[0] != 'together' and s[0] not in NUMERIC})
+    for key, j in NUMERIC.items():
+        us = [(stats[i][2 + j], stats[i][1], n) for i, n in w.items() if stats[i][0] in UNIT_CATS and stats[i][2 + j] is not None]
+        paid = [(v, cost, n) for v, cost, n in us if cost]
+        if len(paid) >= len(us) / 2 and paid:  # per supply; a game whose units mostly have no cost (Inscryption): per unit
+            out[key] = sum(v * n for v, _, n in paid) / sum(cost * n for _, cost, n in paid)
+        else:
+            out[key] = sum(v * n for v, _, n in us) / sum(n for *_, n in us) if us else None
     out['pos'] = sum(n for i, n in w.items() if 'position*' in con[i]) / tot
     ids = sorted(w)
     linked = sum(w[a] * w[b] for k, a in enumerate(ids) for b in ids[k + 1:] if (a, b) in pairs)
