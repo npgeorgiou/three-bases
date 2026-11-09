@@ -6,19 +6,27 @@ written below so it can be checked and changed). A card counts for an end if it 
   score = share of the faction's cards with the high end - share with the low end   (numeric axes: the number itself)
   then centred within its game (minus the mean of that game's factions), then scaled over all factions (z-score).
 Two counts: "cards" = every card of the faction once; "decks" = each faction card weighted by how many of the
-library's top decks (decks.tsv) play it. Axis 11 has four ends and is four spokes; axis 12's rows part is not measured.
+library's top decks (decks.tsv) play it. Axis 11's rows part is not measured.
+Disruption (axis 2): a card breaks the enemy's plan if one of its effects lands on the enemy (side 'enemy') with a concept of
+DISRUPT_ON_ENEMY, or it has a concept of DISRUPT_ALWAYS; it only kills if an effect on the enemy is in KILL_ON_ENEMY.
 """
 import collections, json, math, os, sqlite3, sys
 import faction_asks, mechanics
 
+DISRUPT_ON_ENEMY = ['cant_attack', 'stat_gain', 'stat_loss', 'disable', 'forced_attack', 'forced_movement', 'debuff', 'steal',
+                    'attack_zero', 'silence', 'stat_multiply', 'bounce_enemy', 'polymorph', 'discard', 'immobilize', 'cant_move',
+                    'attack_lock', 'counter_spell', 'transform', 'return_to_hand']
+DISRUPT_ALWAYS = ['hand_disruption', 'mill', 'junk_cards', 'board_clog', 'cost_increase', 'play_restriction', 'counter_spell',
+                  'steal', 'immobilize', 'attack_lock', 'silence', 'disable', 'bounce_enemy']
+KILL_ON_ENEMY = ['damage', 'excess_damage', 'destroy', 'banish', 'damage_over_time', 'aoe_damage', 'ping', 'direct_damage', 'board_wipe']
+SHOWN = {'disrupt*': 'on enemies: ' + ', '.join(DISRUPT_ON_ENEMY) + '; any card with: ' + ', '.join(DISRUPT_ALWAYS),
+         'kill*': 'on enemies: ' + ', '.join(KILL_ON_ENEMY)}
 MIN_DECK_CARDS = 10  # fewer of a faction's cards in decks.tsv than this: no deck measure (Faeria Pandora has 1)
 AXES = [  # (key, label, high end, low end, high concepts, low concepts, axis number in factions/12)
     ('spend', 'Spends own units / keeps them', 'spends', 'keeps',
      ['sacrifice', 'self_destruct', 'death_trigger', 'other_death_trigger', 'on_sacrifice', 'death_count', 'friendly_fire'],
      ['heal', 'regeneration', 'shield', 'protection', 'immunity', 'cheat_death', 'damage_reduction', 'block_armor', 'permanent_growth'], 1),
-    ('lock', 'Locks enemies / outmoves them', 'locks', 'outmoves',
-     ['cant_attack', 'immobilize', 'disable', 'silence', 'stat_loss', 'debuff', 'attack_lock', 'cant_move', 'exhaust', 'attack_zero'],
-     ['evasion', 'stealth', 'movement', 'haste', 'ranged', 'cross_lane', 'piercing'], 2),
+    ('disrupt', 'Breaks the enemy\'s plan / only kills its units', 'breaks plan', 'only kills', ['disrupt*'], ['kill*'], 2),
     ('strikes', 'Damage from strikes / from spells', 'unit strikes', 'spells, fixed damage',
      ['attack_gain', 'on_attack', 'multi_attack', 'first_strike', 'attack_now', 'excess_damage'],
      ['direct_damage', 'ping', 'aoe_damage', 'damage_over_time', 'spell_power', 'board_wipe'], 3),
@@ -36,18 +44,12 @@ AXES = [  # (key, label, high end, low end, high concepts, low concepts, axis nu
      ['heal', 'regeneration'], ['shield', 'damage_reduction', 'immunity', 'block_armor', 'protection', 'taunt', 'cheat_death'], 9),
     ('hand', 'Picks and brings back cards / plays what it draws', 'picks, brings back', 'plays its draws',
      ['recycle', 'copy', 'return_to_hand', 'tutor', 'revive', 'retain', 'selection', 'in_hand_buff'], [], 10),
-    ('r_place', 'Reacts to: being placed', 'placed', '', ['on_play', 'on_ally_play'], [], 11),
-    ('r_attack', 'Reacts to: attacking', 'attacking', '', ['on_attack', 'on_kill', 'on_fight', 'combat_start'], [], 11),
-    ('r_hit', 'Reacts to: being hit', 'hit', '', ['on_damaged', 'on_targeted', 'counterattack', 'on_block'], [], 11),
-    ('r_death', 'Reacts to: dying', 'dying', '', ['death_trigger', 'other_death_trigger', 'leave_trigger', 'other_leave_trigger'], [], 11),
-    ('area', 'Hits a row or area / one cell', 'row, area', 'one cell', ['rows', 'row_effects', 'area_templates'], [], 12),
-    ('speed', 'Speed (average card cost, low = fast)', 'fast', 'slow', None, None, 13),
-    ('power', 'Strength / defence (unit stats in strength)', 'strength', 'defence', None, None, 14),
+    ('area', 'Hits a row or area / one cell', 'row, area', 'one cell', ['rows', 'row_effects', 'area_templates'], [], 11),
+    ('speed', 'Speed (average card cost, low = fast)', 'fast', 'slow', None, None, 12),
+    ('power', 'Strength / defence (unit stats in strength)', 'strength', 'defence', None, None, 13),
     ('pace', 'Sets the pace / answers', 'sets pace', 'answers',
      ['haste', 'attack_now', 'forced_attack', 'nexus_damage_condition'],
-     ['reactions', 'counter_spell', 'trap_secret', 'on_targeted', 'counterattack'], 15),
-    ('hard', 'Hard to play (choices on cards)', 'many choices', 'few', ['modal_choice', 'target_choice', 'activated', 'combo_sequence',
-                                                                        'selection', 'kicker', 'stances'], [], 16),
+     ['reactions', 'counter_spell', 'trap_secret', 'on_targeted', 'counterattack'], 14),
 ]
 
 
@@ -58,6 +60,11 @@ def main():
     con = collections.defaultdict(set)
     for card, k in c.execute('select card, concept from flat_concept'):
         con[card].add(k)
+    for card, k in c.execute("select card, concept from flat_do where on_side='enemy' and " + faction_asks.ROW_ORIGIN):
+        if k in DISRUPT_ON_ENEMY: con[card].add('disrupt*')
+        if k in KILL_ON_ENEMY: con[card].add('kill*')
+    for card, ks in list(con.items()):
+        if ks & set(DISRUPT_ALWAYS): ks.add('disrupt*')
     stats = {i: (cat, cost, p, h) for i, cat, cost, p, h in c.execute('select id, category, cost, power, health from card')}
     deck_n = collections.Counter()  # (game, card name) -> decks that play it
     with open('decks.tsv', encoding='utf-8') as f:
@@ -99,7 +106,7 @@ def main():
                 if not r[mode]: continue
                 f.write(f"{r['game']}\t{r['faction']}\t{r['n_cards']}\t{r['deck_cards']}\t{mode}\t" +
                         '\t'.join(f"{fmt(r[mode][a[0]])}\t{fmt(r[mode].get(a[0] + '_z'))}" for a in AXES) + '\n')
-    data = {'axes': [{'key': a[0], 'label': a[1], 'hi': a[2], 'lo': a[3], 'hiC': a[4], 'loC': a[5], 'n': a[6]} for a in AXES],
+    data = {'axes': [{'key': a[0], 'label': a[1], 'hi': a[2], 'lo': a[3], 'hiC': a[4] and [SHOWN.get(k, k) for k in a[4]], 'loC': a[5] and [SHOWN.get(k, k) for k in a[5]], 'n': a[6]} for a in AXES],
             'factions': [{'game': r['game'], 'faction': r['faction'], 'cards': r['n_cards'], 'deckCards': r['deck_cards'],
                           'cardsZ': zz(r['cards']), 'decksZ': zz(r['decks']),
                           'cardsRaw': raw(r['cards']), 'decksRaw': raw(r['decks'])} for r in rows]}
