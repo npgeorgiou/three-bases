@@ -312,9 +312,9 @@ const tpct = v => (v == null || !Number.isFinite(v) ? '–' : Math.round(v * 100
 function renderTuneStatus() {
   const st = tuneState(), c = st.cand, last = [...st.hist].reverse().find(e => !e.mark);
   const done = c && c.res ? tuneDone(c) : 0, total = c && c.res ? c.G * c.res.length : 0;
-  const lessons = st.mode === 'lessons', making = lessons && LESSONS.need > 0, lastBench = [...st.hist].reverse().find(e => e.bench != null);
+  const lessons = st.mode === 'lessons', making = lessons && lessonNeed() > 0, lastBench = [...st.hist].reverse().find(e => e.bench != null);
   $('#tuStatus').textContent = (tune.running ? (making ? 'Making lessons' : 'Tuning') : st.gen || c ? 'Paused' : 'Not started') +
-    (lessons ? ` · ${LESSONS.list.length} lessons from ${LESSONS.games.length} games` + (LESSONS.need ? `, playing ${LESSONS.need} new games` : '') + (st.strength ? `, games against the opponents ${st.strength.res.filter(x => x !== null).length}/${STRENGTH_GAMES}` : '') : '') +
+    (lessons ? ` · ${LESSONS.list.length} lessons from ${LESSONS.games.length} games` + (lessonNeed() ? `, playing ${lessonNeed()} new games` : '') + (st.strength ? `, games against the opponents ${st.strength.res.filter(x => x !== null).length}/${STRENGTH_GAMES}` : '') : '') +
     ` · generation ${st.gen + 1} · ${st.cma.lambda} candidates` + (c ? ` · ${done}/${total} ${lessons ? 'blocks of lessons' : 'games'}` : '') +
     (last ? ` · last generation${lessons ? ' (lesson grades, not games)' : ''}: the ifelse AI ${tpct(last.centre)}, candidates' average ${tpct(last.avg)}, best candidate ${tpct(last.top)}` : '') +
     (lessons && lastBench ? ` · games won against the opponents (generation ${lastBench.gen + 1}): ${tpct(lastBench.bench)}` : '') +
