@@ -4,14 +4,15 @@ Run from library/cards_db: python3 axes.py  ->  axes.tsv and ../../factions/whee
         python3 axes.py --cards <file>  ->  per spoke, concept and game, the cards that concept catches (for the check)
 Each spoke is one end of an axis: a list of library concepts (Claude's choice, checked against the cards they catch).
 A card counts for a spoke if it has any of its concepts. A faction's value on a spoke = the share of its cards that count,
-divided by the average share of the factions of its game: 0 = none, 1 = its game's average, 2 = twice the average.
+divided by the average share of the factions of its game (0 = none, 1 = average), then smoothed: each faction counts as if
+it had SHRINK more cards at the average, and the square root is taken, so very high and very low values are pulled in.
 A game with fewer than MIN_GAME_CARDS cards for a spoke gives its factions no value on it (a gap, not 0).
 Two counts: "cards" = every card of the faction once; "decks" = each card weighted by how many of the library's top
 decks (decks.tsv) play it; factions with fewer than MIN_DECK_CARDS cards in decks get no deck count.
 "With others" = the average of two values: position cards (POSITION) and combos (the share of the faction's card pairs
 that links.sqlite links; run links.py first).
 """
-import collections, json, os, sqlite3, sys
+import collections, json, math, os, sqlite3, sys
 import faction_asks, mechanics
 
 DISRUPT_ON_ENEMY = ['stat_loss', 'disable', 'forced_attack', 'forced_movement', 'debuff', 'steal',
@@ -31,44 +32,50 @@ SHOWN = {'disrupt*': 'an effect on enemies: ' + ', '.join(DISRUPT_ON_ENEMY) + ';
          'cheapunit*': 'a unit in the cheapest third of its game', 'dearunit*': 'a unit in the dearest third of its game',
          'strong*': 'a unit with more strength than defence', 'tough*': 'a unit with more defence than strength'}
 MIN_GAME_CARDS = 5
+SHRINK = 10  # smoothing: every faction counts as if it had 10 more cards at its game's average (small factions swing less)
+NO_VALUE = {('stormbound', 'strong'): 'its units have one number for both strength and defence',
+            ('stormbound', 'tough'): 'its units have one number for both strength and defence',
+            ('gwent', 'strong'): 'its units have one number (power) for both', ('gwent', 'tough'): 'its units have one number (power) for both',
+            ('into_the_breach', 'strong'): 'its units\' stats are not in the library', ('into_the_breach', 'tough'): 'its units\' stats are not in the library',
+            ('sts1', 'strong'): 'the player has no units', ('sts1', 'tough'): 'the player has no units'}
 CHECKS = [  # Kaptain's points: (game, faction, spoke, lowest value it must have)
     ('faeria', 'Red', 'fixed', 1.5),  # 9 Nov 2026: Red is Faeria's fixed-damage faction
     ('faeria', 'Red', 'strikes', 1.0),  # and its units strike too; one number used to hide that
 ]
 MIN_DECK_CARDS = 10  # Faeria Pandora has 1 card in decks
-SPOKES = [  # (key, axis number, axis name, this end, concepts); "concept@game,game" counts only in those games (the check of 9 Nov 2026)
+SPOKES = [  # (key, axis number, axis name, this end, concepts); "concept@game,game" counts only in those games (the check of 9 Nov 2026)  # in circle order: neighbours belong together
+    ('strong', 9, 'Unit stats', 'strength', ['strong*']),
+    ('strikes', 3, 'Damage', 'units\' own strikes', ['attack_gain@duelyst,faeria,monster_train,runeterra,stormbound,sts1',
+        'on_attack@duelyst,faeria,into_the_breach,monster_train,runeterra,stormbound,sts1', 'multi_attack', 'first_strike',
+        'attack_now', 'excess_damage', 'counterattack', 'on_fight', 'piercing']),
+    ('kills', 2, 'Enemy units', 'kills them', ['kill*', 'removal', 'deathtouch']),
+    ('fixed', 3, 'Damage', 'fixed damage', ['direct_damage@duelyst,faeria,stormbound',
+        'ping@duelyst,faeria,gwent,inscryption,monster_train,runeterra,stormbound',
+        'aoe_damage@faeria,gwent,inscryption,into_the_breach,runeterra,stormbound,sts1', 'damage_over_time',
+        'spell_power@duelyst,monster_train,runeterra,sts1', 'board_wipe@duelyst,faeria,gwent,into_the_breach,runeterra,stormbound']),
+    ('many', 6, 'Targets', 'many at once', ['aoe_damage@faeria,gwent,inscryption,into_the_breach,runeterra,stormbound,sts1',
+        'board_wipe', 'multi_target_attack@into_the_breach,runeterra', 'rows@duelyst,into_the_breach', 'row_effects', 'area_templates']),
+    ('disrupts', 2, 'Enemy units', 'breaks their plan', ['disrupt*', 'disruption']),
+    ('one', 6, 'Targets', 'one chosen', ['target_choice', 'mark_target@duelyst,gwent,runeterra,sts1']),
+    ('hand', 8, 'Hand and discard pile', 'picks, brings back', ['recycle', 'copy', 'return_to_hand', 'tutor', 'revive',
+        'retain', 'selection@faeria,gwent,runeterra,sts1']),
+    ('economy', 4, 'Supply and cards', 'more supply, cards', ['resource_gain', 'base_resource_gain', 'resource_banking', 'draw',
+        'cost_reduction@duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1', 'generate_cards',
+        'free_play@gwent,inscryption,monster_train,runeterra,stormbound,sts1', 'coin_economy', 'cost_set', 'in_hand_buff']),
+    ('wide', 7, 'Width', 'many cheap units', ['cheapunit*', 'summon@duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound']),
     ('spends', 1, 'Own units', 'spends them', ['sacrifice@duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound', 'self_destruct@gwent,into_the_breach,stormbound',
         'death_trigger@duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound',
         'other_death_trigger@duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra', 'on_sacrifice',
         'death_count@faeria,gwent,marvel_snap,monster_train,runeterra', 'friendly_fire@inscryption,runeterra,stormbound']),
+    ('together', 5, 'Works with others', 'position and combos', ['position*', 'combo*']),
     ('keeps', 1, 'Own units', 'keeps them alive', ['heal@duelyst,gwent,into_the_breach,monster_train,runeterra,stormbound',
         'regeneration@duelyst,gwent,into_the_breach,monster_train,runeterra,stormbound',
         'defence_gain@duelyst,faeria,into_the_breach,monster_train,runeterra,stormbound',
         'shield@duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra', 'protection',
         'immunity@duelyst,faeria,gwent,inscryption,into_the_breach', 'cheat_death',
         'damage_reduction@duelyst,faeria,gwent,inscryption,monster_train,runeterra', 'block_armor@gwent,monster_train', 'tank']),
-    ('disrupts', 2, 'Enemy units', 'breaks their plan', ['disrupt*', 'disruption']),
-    ('kills', 2, 'Enemy units', 'kills them', ['kill*', 'removal', 'deathtouch']),
-    ('strikes', 3, 'Damage', 'units\' own strikes', ['attack_gain@duelyst,faeria,monster_train,runeterra,stormbound,sts1',
-        'on_attack@duelyst,faeria,into_the_breach,monster_train,runeterra,stormbound,sts1', 'multi_attack', 'first_strike',
-        'attack_now', 'excess_damage', 'counterattack', 'on_fight', 'piercing']),
-    ('fixed', 3, 'Damage', 'fixed damage', ['direct_damage@duelyst,faeria,stormbound',
-        'ping@duelyst,faeria,gwent,inscryption,monster_train,runeterra,stormbound',
-        'aoe_damage@faeria,gwent,inscryption,into_the_breach,runeterra,stormbound,sts1', 'damage_over_time',
-        'spell_power@duelyst,monster_train,runeterra,sts1', 'board_wipe@duelyst,faeria,gwent,into_the_breach,runeterra,stormbound']),
-    ('economy', 4, 'Supply and cards', 'more supply, cards', ['resource_gain', 'base_resource_gain', 'resource_banking', 'draw',
-        'cost_reduction@duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1', 'generate_cards',
-        'free_play@gwent,inscryption,monster_train,runeterra,stormbound,sts1', 'coin_economy', 'cost_set', 'in_hand_buff']),
-    ('together', 5, 'Works with others', 'position and combos', ['position*', 'combo*']),
-    ('many', 6, 'Targets', 'many at once', ['aoe_damage@faeria,gwent,inscryption,into_the_breach,runeterra,stormbound,sts1',
-        'board_wipe', 'multi_target_attack@into_the_breach,runeterra', 'rows@duelyst,into_the_breach', 'row_effects', 'area_templates']),
-    ('one', 6, 'Targets', 'one chosen', ['target_choice', 'mark_target@duelyst,gwent,runeterra,sts1']),
-    ('wide', 7, 'Width', 'many cheap units', ['cheapunit*', 'summon@duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound']),
-    ('tall', 7, 'Width', 'a few big units', ['dearunit*', 'high_cost']),
-    ('hand', 8, 'Hand and discard pile', 'picks, brings back', ['recycle', 'copy', 'return_to_hand', 'tutor', 'revive',
-        'retain', 'selection@faeria,gwent,runeterra,sts1']),
-    ('strong', 9, 'Unit stats', 'strength', ['strong*']),
     ('tough', 9, 'Unit stats', 'defence', ['tough*']),
+    ('tall', 7, 'Width', 'a few big units', ['dearunit*', 'high_cost']),
 ]
 
 
@@ -147,11 +154,16 @@ def main():
                 vals = [q[k] for q in ms if q[k] is not None]
                 avg = sum(vals) / len(vals) if vals else 0
                 for q in ms:
-                    q[k + '_v'] = None if q[k] is None or not avg else round(q[k] / avg, 3)
+                    if q[k] is None or not avg: q[k + '_v'] = None; continue
+                    share = q[k] if k == 'combo' else (q[k] * q['_n'] + SHRINK * avg) / (q['_n'] + SHRINK)
+                    q[k + '_v'] = share / avg
             for q in ms:
                 both = [q[k] for k in ('pos_v', 'combo_v') if q[k] is not None]
-                q['together_v'] = round(sum(both) / len(both), 3) if both else None
+                q['together_v'] = sum(both) / len(both) if both else None
                 q['together'] = None
+                for sk in SPOKES:  # the final smoothing: square root, so 4 times the average shows as 2 and 0.25 as 0.5
+                    v = q[sk[0] + '_v']
+                    q[sk[0] + '_v'] = None if v is None else round(math.sqrt(v), 3)
     with open('axes.tsv', 'w', encoding='utf-8') as f:
         f.write('game\tfaction\tcards\tdeck_cards\tmode\t' + '\t'.join(f'{s[0]}_share\t{s[0]}_value' for s in SPOKES) + '\n')
         for r in rows:
@@ -162,7 +174,8 @@ def main():
     data = {'spokes': [{'key': s[0], 'n': s[1], 'axis': s[2], 'end': s[3], 'concepts': [shown(k) for k in s[4]]} for s in SPOKES],
             'factions': [{'game': r['game'], 'faction': r['faction'], 'cards': r['n_cards'], 'deckCards': r['deck_cards'],
                           'cardsV': per_spoke(r['cards'], '_v'), 'decksV': per_spoke(r['decks'], '_v'),
-                          'cardsS': per_spoke(r['cards'], ''), 'decksS': per_spoke(r['decks'], '')} for r in rows]}
+                          'cardsS': per_spoke(r['cards'], ''), 'decksS': per_spoke(r['decks'], ''),
+                          'why': {s[0]: NO_VALUE.get((r['game'], s[0]), 'its game has almost no cards for this') for s in SPOKES}} for r in rows]}
     here = os.path.dirname(os.path.abspath(__file__))
     tpl = open(os.path.join(here, '..', '..', 'tools', 'wheel_axes_template.html'), encoding='utf-8').read()
     with open(os.path.join(here, '..', '..', 'factions', 'wheel-axes.html'), 'w', encoding='utf-8') as f:
@@ -185,7 +198,8 @@ def per_spoke(m, suf): return None if not m else {s[0]: m.get(s[0] + suf) for s 
 def shares(w, con, pairs, game):
     """per spoke, the share of the faction's cards (weighted) that count for it"""
     tot = sum(w.values())
-    out = {s[0]: sum(n for i, n in w.items() if counts(con[i], game, s[4])) / tot for s in SPOKES if s[0] != 'together'}
+    out = {'_n': len(w)}
+    out.update({s[0]: sum(n for i, n in w.items() if counts(con[i], game, s[4])) / tot for s in SPOKES if s[0] != 'together'})
     out['pos'] = sum(n for i, n in w.items() if 'position*' in con[i]) / tot
     ids = sorted(w)
     linked = sum(w[a] * w[b] for k, a in enumerate(ids) for b in ids[k + 1:] if (a, b) in pairs)
@@ -194,9 +208,20 @@ def shares(w, con, pairs, game):
     return out
 
 
+def text(i, n=170):
+    """a card's own text, short"""
+    import source
+    if not TEXTS: TEXTS.append(source.lib())
+    r = TEXTS[0].execute('select text from entities where id=?', (i,)).fetchone()
+    t = ' '.join(((r[0] if r else '') or '').split())
+    return t if len(t) <= n else t[:n - 3] + '...'
+
+
+TEXTS = []
+
+
 def dump(c, x, games, con, pools, path, per=4):
     """for the check: per spoke and concept, per game the number of cards it catches and up to `per` of them with text"""
-    import ask
     with open(path, 'w', encoding='utf-8') as f:
         for key, n, axis, end, cons in SPOKES:
             for k in cons:
@@ -207,7 +232,7 @@ def dump(c, x, games, con, pools, path, per=4):
                     if not ids: continue
                     f.write(f'{g}: {len(ids)} cards\n')
                     for i in ids[:: max(1, len(ids) // per)][:per]:
-                        f.write(f'  {mechanics.name(c, i)} | {ask.short_text(i, 160)}\n')
+                        f.write(f'  {mechanics.name(c, i)} | {text(i)}\n')
 
 
 if __name__ == '__main__':

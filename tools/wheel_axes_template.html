@@ -50,7 +50,7 @@ const ns='http://www.w3.org/2000/svg';
 function el(t,a,p){const e=document.createElementNS(ns,t);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
 function fmtRaw(a,v){if(a.key==='together')return'average of its position value and its combos value';return v==null?'–':Math.round(v*100)+'% of its cards'}
 function conc(a){return `<b>${a.n}. ${a.axis}: ${a.end}</b><br>Counts cards with: ${a.concepts.join('; ')}`}
-const valTxt=v=>v==null?'no value: its game has almost no cards for this':'×'+v.toFixed(2)+' its game\'s average (0 = none)';
+const valTxt=(v,f,a)=>v==null?'No value: '+f.why[a.key]:'Value '+v.toFixed(2)+' (0 = none, 1 = its game\'s average, after smoothing)';
 
 function buildFacs(){const box=document.getElementById('facs');box.innerHTML='';
  for(const g of GAMES){const d=document.createElement('div');d.className='game';
@@ -68,18 +68,18 @@ function buildAxes(){document.getElementById('axList').innerHTML='';for(const a 
 
 function radar(){const box=document.getElementById('radarBox');box.innerHTML='';const W=760,C=W/2,RR=250;
  const svg=el('svg',{viewBox:`0 0 ${W} ${W}`,width:'100%'},box);const ax=A.filter(a=>axOn.has(a.key));const n=ax.length;if(n<3){box.innerHTML='<p>Tick at least 3 axes.</p>';return}
- const ang=i=>-Math.PI/2+i*2*Math.PI/n, rad=v=>Math.max(.02,Math.min(1,v/3))*RR;
- for(const v of[1,2,3]){el('circle',{cx:C,cy:C,r:rad(v),fill:'none',stroke:v===1?'#999':'#e4e0d6','stroke-dasharray':v===1?'4 3':''},svg)}
+ const ang=i=>-Math.PI/2+i*2*Math.PI/n, rad=v=>Math.max(.02,Math.min(1,v/2.5))*RR;
+ for(const v of[1,2]){el('circle',{cx:C,cy:C,r:rad(v),fill:'none',stroke:v===1?'#999':'#e4e0d6','stroke-dasharray':v===1?'4 3':''},svg)}
  ax.forEach((a,i)=>{const x=C+Math.cos(ang(i))*RR,y=C+Math.sin(ang(i))*RR;el('line',{x1:C,y1:C,x2:x,y2:y,stroke:'#e4e0d6'},svg);
   const lx=C+Math.cos(ang(i))*(RR+14),ly=C+Math.sin(ang(i))*(RR+14);const t=el('text',{x:lx,y:ly,'text-anchor':Math.abs(Math.cos(ang(i)))<.2?'middle':(Math.cos(ang(i))>0?'start':'end'),'dominant-baseline':'middle',class:'spoke-label'},svg);
-  t.textContent=`${a.n}. ${a.end}`;t.onmousemove=e=>showTip(e,conc(a));t.onmouseleave=hideTip});
+  t.textContent=a.end;t.onmousemove=e=>showTip(e,conc(a));t.onmouseleave=hideTip});
  for(const id of sel){const f=F[id];if(!has(f))continue;const z=Z(f),r=R(f);
   const pts=ax.map((a,i)=>{const v=z[a.key]==null?0:z[a.key];return[C+Math.cos(ang(i))*rad(v),C+Math.sin(ang(i))*rad(v)]});
-  const pg=el('polygon',{points:pts.map(p=>p.join(',')).join(' '),fill:f.col,'fill-opacity':.08,stroke:f.col,'stroke-width':2},svg);
+  const pg=el('polygon',{points:pts.filter((p,i)=>z[ax[i].key]!=null).map(p=>p.join(',')).join(' '),fill:f.col,'fill-opacity':.08,stroke:f.col,'stroke-width':2},svg);
   pg.onmousemove=e=>showTip(e,`<b>${f.faction}</b> (${f.game})`);pg.onmouseleave=hideTip;
-  ax.forEach((a,i)=>{const none=z[a.key]==null;const c=el('circle',{cx:pts[i][0],cy:pts[i][1],r:4,fill:none?'#fff':f.col,stroke:f.col},svg);
-   c.onmousemove=e=>showTip(e,`<b>${f.faction}</b> (${f.game})<br>${a.n}. ${a.axis}: ${a.end}<br>${valTxt(z[a.key])}<br>${fmtRaw(a,r[a.key])}`);c.onmouseleave=hideTip})}
- document.getElementById('explain').innerHTML='Each spoke is one end of an axis; the two ends of an axis sit side by side. The centre is none. The dashed ring is the average faction of its own game; the next rings are twice and three times that average. Hover a spoke name to see which card effects it counts, hover a dot for the numbers.'}
+  ax.forEach((a,i)=>{const none=z[a.key]==null;const c=el('circle',{cx:none?C+Math.cos(ang(i))*RR:pts[i][0],cy:none?C+Math.sin(ang(i))*RR:pts[i][1],r:4,fill:'#fff',stroke:none?'#bbb':f.col,'stroke-dasharray':none?'2 2':''},svg);if(!none)c.setAttribute('fill',f.col);
+   c.onmousemove=e=>showTip(e,`<b>${f.faction}</b> (${f.game})<br>${a.n}. ${a.axis}: ${a.end}<br>${valTxt(z[a.key],f,a)}<br>${fmtRaw(a,r[a.key])}`);c.onmouseleave=hideTip})}
+ document.getElementById('explain').innerHTML='Each spoke is one end of an axis. Spokes next to each other belong together, so a faction\'s shape shows its style. The centre is none, the dashed ring is the average faction of its own game. Values are smoothed so a few cards don\'t make spikes. Hover a spoke name to see which card effects it counts, hover a dot for the numbers.'}
 
 function vec(f){return A.filter(a=>axOn.has(a.key)).map(a=>{const v=Z(f)[a.key];return v==null?0:v})}
 function pca(X){const n=X.length,d=X[0].length,m=Array(d).fill(0);X.forEach(r=>r.forEach((v,j)=>m[j]+=v/n));const Y=X.map(r=>r.map((v,j)=>v-m[j]));
