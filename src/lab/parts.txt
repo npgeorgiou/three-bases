@@ -4,6 +4,7 @@ js/engine/decks.js
 js/engine/benchmark-v1.js
 js/engine/known.js
 js/engine/ifelse-fields.js
+js/engine/ifelse-lessons.js
 js/engine/network-encode.js
 js/engine/network-play.js
 shell/mid.html
@@ -15,6 +16,7 @@ js/ui/test-chart.js
 js/ui/training-page.js
 js/ui/tournament.js
 js/ui/tune.js
+js/ui/tune-lessons.js
 js/ui/decks-search.js
 js/ui/decks-page.js
 js/ui/results-watch.js

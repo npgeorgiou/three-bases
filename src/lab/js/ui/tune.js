@@ -18,7 +18,7 @@ const logit = v => Math.log(v / (1 - v)), sigm = z => 1 / (1 + Math.exp(-z));
 function tuneDecode(x, depth = BENCH_VALUES.depth) {
   const out = {};
   IFELSE_FIELDS.forEach(([k, , type, def, extra], i) => {
-    const z = /^w\d$/.test(k) && Number(k.slice(1)) > depth ? 0 : x[i];
+    const z = /^w\d$/.test(k) ? 0 : x[i];                              // how wide it looks is set, not tuned (wider is always slower)
     if (type === 'int') { const [lo, hi] = extra; out[k] = Math.max(lo, Math.min(hi, Math.round(def + z * (hi - lo)))); }
     else if (type === 'switch') out[k] = def - 0.5 + 2 * z > 0 ? 1 : 0;
     else if (type === 'share') out[k] = Math.max(0.01, Math.min(1, sigm(logit(Math.min(0.99, Math.max(0.01, def))) + 2 * z)));
@@ -73,7 +73,7 @@ function cmaUpdate(cma, xs, rates) {
 }
 
 const TUNE_NAMES = IFELSE_FIELDS.map(f => f[0]);
-const freshTune = (opps = ['bench']) => ({ v: 6, depth: 1, opps, fields: TUNE_NAMES, cma: cmaFresh(Array(TUNE_N).fill(0), LAMBDA0), best: { ...IFELSE_DEFAULTS },
+const freshTune = (opps = ['bench']) => ({ v: 6, mode: 'lessons', depth: 1, opps, fields: TUNE_NAMES, cma: cmaFresh(Array(TUNE_N).fill(0), LAMBDA0), best: { ...IFELSE_DEFAULTS },
   gen: 0, restarts: 0, cand: null, hist: [] });
 function tuneState() {
   if (!state.ifelse || state.ifelse.v !== 6) state.ifelse = freshTune(state.ifelse && state.ifelse.opps);   // earlier tunings are replaced
@@ -83,6 +83,7 @@ function tuneState() {
     st.cma = cmaFresh(TUNE_NAMES.map(k => was[k] ?? 0), st.cma.lambda); st.fields = TUNE_NAMES; st.cand = null;
     st.best = tuneDecode(st.cma.mean, st.depth); st.hist.push({ gen: st.gen, mark: 'values changed' });
   }
+  if (!st.mode) st.mode = 'lessons';
   st.opps = (st.opps || []).filter(k => TUNE_OPPS().some(([x]) => x === k));
   if (!st.opps.length) st.opps = ['bench'];
   return st;
@@ -93,17 +94,16 @@ function newGeneration() {
   const st = tuneState(), L = st.cma.lambda;
   // the candidates, then the centre itself (the values the ifelse AI has now): it plays the same games, only to be measured
   // res[candidate][deal]: its score in that game (1 win, 0.5 draw, 0 loss), null until played
-  const G = tuneGames();
+  const G = st.mode === 'lessons' ? lessonBlocks() : tuneGames();      // lessons: one score per block of lessons
   st.cand = { G, xs: [...cmaSamples(st.cma), st.cma.mean.slice()], res: Array.from({ length: L + 1 }, () => Array(G).fill(null)) };
   tuneRunning.clear();
 }
 /** The games being played now (candidate-deal), not saved: after a pause they are played again. */
 const tuneRunning = new Set();
 const tuneDone = c => c.res.reduce((n, r) => n + r.filter(x => x !== null).length, 0);
-function tuneJob() {
-  const st = tuneState(), c = st.cand;
-  if (!c) return null;
-  let i = -1, gi = -1, fewest = Infinity;                               // the candidate with fewest games done or running, its first deal left
+/** The candidate with fewest games done or running and its first deal left, marked as running; null when none is left. */
+function tuneNextDeal(c) {
+  let i = -1, gi = -1, fewest = Infinity;
   c.res.forEach((r, j) => {
     const free = r.findIndex((x, d) => x === null && !tuneRunning.has(j + '-' + d));
     if (free < 0) return;
@@ -112,7 +112,15 @@ function tuneJob() {
   });
   if (i < 0) return null;
   tuneRunning.add(i + '-' + gi);
-  const m = gi % 3 === 2 ? 'S' : 'X', seat = Math.floor(gi / 3) % 2;
+  return [i, gi];
+}
+function tuneJob() {
+  const st = tuneState(), c = st.cand;
+  if (st.mode === 'lessons') return lessonJob(st, c);
+  if (!c) return null;
+  const pick = tuneNextDeal(c);
+  if (!pick) return null;
+  const [i, gi] = pick, m = gi % 3 === 2 ? 'S' : 'X', seat = Math.floor(gi / 3) % 2;
   const mine = { kind: 'ifelse', cfg: { ...ifelseFull(tuneDecode(c.xs[i], st.depth)), depth: st.depth } };
   const opp = tuneOppSpec(st.opps[Math.floor(gi / 12) % st.opps.length], st.depth);   // every candidate gets the same schedule
   return { key: 'tune' + st.gen + '-' + i + '-' + gi, i, gi, seat, gen: st.gen, specs: seat === 0 ? [mine, opp] : [opp, mine],
@@ -120,16 +128,21 @@ function tuneJob() {
     decks: MATCHUPS[m].pairs[(st.gen * Math.ceil(c.G / 6) + Math.floor(gi / 6)) % MATCHUPS[m].pairs.length] };   // later generations go on through the pairs
 }
 function tuneResult(r, job) {
+  if (job.lesson) return lessonResult(r, job);
+  tuneScore(job, r.winner === job.seat ? 1 : r.winner === 'draw' ? 0.5 : 0);
+}
+/** A candidate's score for one deal (a game, or a block of lessons); the generation ends when the scores are in. */
+function tuneScore(job, score) {
   const st = tuneState(), c = st.cand;
   if (!c || job.gen !== st.gen) return;
   tuneRunning.delete(job.i + '-' + job.gi);
-  c.res[job.i][job.gi] = r.winner === job.seat ? 1 : r.winner === 'draw' ? 0.5 : 0;
+  c.res[job.i][job.gi] = score;
   // every game started, half the cores or more idle, and the unfinished games in at most 5% of the deals: the generation
   // ends without those deals (dropped for every candidate alike, so all still played the same deals) instead of the
-  // cores waiting for a few long games
+  // cores waiting for a few long games (games only: blocks of lessons are short)
   const left = c.G * c.res.length - tuneDone(c), cores = tune.pool ? tune.pool.size : 1;
   const open = c.res[0].filter((_, d) => c.res.some(r => r[d] === null)).length;
-  if (left === 0 || (left === tuneRunning.size && left <= Math.max(1, Math.floor(cores / 2)) && open <= Math.max(1, Math.floor(c.G * 0.05)))) finishGeneration();
+  if (left === 0 || (st.mode !== 'lessons' && left === tuneRunning.size && left <= Math.max(1, Math.floor(cores / 2)) && open <= Math.max(1, Math.floor(c.G * 0.05)))) finishGeneration();
   else renderTuneStatus();
 }
 function finishGeneration() {
@@ -162,10 +175,11 @@ function startTune() {
   if (tour.running) pauseTournament();
   const st = tuneState();
   tuneRunning.clear();                                                        // games cut off by a pause are played again
-  if (!st.cand || !st.cand.res) newGeneration();
+  if ((!st.cand || !st.cand.res) && (st.mode !== 'lessons' || lessonsReady())) newGeneration();
   tune.running = true;
   const onFail = (job, msg) => { if (job && job.gen === tuneState().gen) tuneRunning.delete(job.i + '-' + job.gi); reportError('A tuning game failed: ' + msg); };
   tune.pool = new Pool(Math.max(1, Math.min(32, Number($('#tuThreads').value) || 1)), Object.fromEntries(NETS.map(n => [n.id, playable(netData[n.id])])), tuneJob, tuneResult, onFail);
+  if (st.mode === 'lessons' && lessonsReady()) tune.pool.setInit([{ type: 'lessons', lessons: LESSONS.list }]);
   renderTune();
 }
 function pauseTune() {
@@ -189,6 +203,23 @@ $('#tuExport').addEventListener('click', () => {
 });
 $('#tuPause').addEventListener('click', pauseTune);
 $('#tuDepth').addEventListener('change', () => setTuneDepth(Number($('#tuDepth').value)));
+$('#tuMode').addEventListener('change', () => {
+  const st = tuneState();
+  if (tune.running) pauseTune();
+  st.mode = $('#tuMode').value; st.cand = null; tuneRunning.clear(); st.hist.push({ gen: st.gen, mark: st.mode === 'lessons' ? 'lessons' : 'games' });
+  save(); renderTune();
+});
+$('#tuLessons').addEventListener('change', () => {
+  const st = tuneState();
+  if (tune.running) pauseTune();
+  st.lessonN = Math.max(100, Math.round(Number($('#tuLessons').value) || 1000)); st.cand = null; save(); renderTune();
+});
+$('#tuNewLessons').addEventListener('click', async () => {
+  if (!(await askYes('Make new lessons?', 'The lessons are thrown away; new ones are made from new games, with the ifelse AI as it is now as the teacher at depth 3.', 'Make new'))) return;
+  const st = tuneState();
+  if (tune.running) pauseTune();
+  newLessons(); st.cand = null; save(); renderTune();
+});
 /** A new tuning depth: the generation under way starts again; the search itself carries on. */
 function setTuneDepth(d) {
   const st = tuneState(), was = tune.running;
@@ -272,8 +303,10 @@ const tpct = v => (v == null || !Number.isFinite(v) ? '–' : Math.round(v * 100
 function renderTuneStatus() {
   const st = tuneState(), c = st.cand, last = [...st.hist].reverse().find(e => !e.mark);
   const done = c && c.res ? tuneDone(c) : 0, total = c && c.res ? c.G * c.res.length : 0;
-  $('#tuStatus').textContent = (tune.running ? 'Tuning' : st.gen || c ? 'Paused' : 'Not started') +
-    ` · generation ${st.gen + 1} · ${st.cma.lambda} candidates` + (c ? ` · ${done}/${total} games` : '') +
+  const lessons = st.mode === 'lessons', making = lessons && !lessonsReady();
+  $('#tuStatus').textContent = (tune.running ? (making ? 'Making lessons' : 'Tuning') : st.gen || c ? 'Paused' : 'Not started') +
+    (lessons ? ` · lessons ${Math.min(LESSONS.list.length, lessonTarget())}/${lessonTarget()}` : '') +
+    ` · generation ${st.gen + 1} · ${st.cma.lambda} candidates` + (c ? ` · ${done}/${total} ${lessons ? 'blocks of lessons' : 'games'}` : '') +
     (last ? ` · last generation: the ifelse AI ${tpct(last.centre)}, candidates' average ${tpct(last.avg)}, best candidate ${tpct(last.top)}` : '') +
     ` · step size ${st.cma.sigma.toFixed(3)}` + (st.restarts ? ` · ${st.restarts} restart${st.restarts > 1 ? 's' : ''}` : '');
 }
@@ -289,6 +322,9 @@ function renderTune() {
   });
   $('#tuStart').disabled = tune.running; $('#tuPause').disabled = !tune.running;
   $('#tuDepth').value = String(st.depth);
+  $('#tuMode').value = st.mode; $('#tuLessons').value = lessonTarget();
+  for (const el of document.querySelectorAll('.tugames')) el.hidden = st.mode === 'lessons';
+  for (const el of document.querySelectorAll('.tulessons')) el.hidden = st.mode !== 'lessons';
   renderCheck();
   $('#tuStart').textContent = st.gen || st.cand ? 'Resume' : 'Start';
   renderTuneStatus();
