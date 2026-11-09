@@ -4409,17 +4409,19 @@ function ifelseEval(s, p, goal, c) {
   };
   return v + danger(q) - danger(p);
 }
-/** The side to move's best `width` options by a quick score, always including passing. */
+/** The side to move's best `width` options by a quick score, always including passing. `keep` (the skip test) is asked
+ *  best first and only until `width` options are kept: the same options as asking it of every move, with less work. */
 function ifelseOptions(t, goals, c, width, keep) {
   const side = t.cur, scored = [];
   for (const a of listActions(t)) {
     const n = cloneState(t);
     applyAction(n, a);
-    if (keep && !keep(a, n)) continue;
     scored.push({ a, t: n, v: ifelseEval(n, side, goals ? goals[side] : null, c) });
   }
   scored.sort((x, y) => y.v - x.v);
-  const picked = scored.slice(0, width), pass = scored.find(x => x.a.t === 'pass');
+  const picked = [];
+  for (const x of scored) { if (picked.length >= width) break; if (!keep || keep(x.a, x.t)) picked.push(x); }
+  const pass = scored.find(x => x.a.t === 'pass' && (!keep || keep(x.a, x.t)));
   if (pass && !picked.includes(pass)) picked.push(pass);
   return picked;
 }
