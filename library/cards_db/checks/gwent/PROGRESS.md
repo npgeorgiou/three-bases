@@ -1,0 +1,1 @@
+- Chat 3 (9 Nov 2026): open work. 7. Fixers:

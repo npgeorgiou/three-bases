@@ -43,6 +43,9 @@ The rules for lines (L1-L28) are in LINE_RULES.md: read it before judging a line
 8. **Find a broken case fast** (9 Nov 2026: 45 minutes for 3 fixes): first check the case itself (is the card in its deck,
    is the deck name used twice), then compare old code versions all in one background run, never one at a time; never wait
    on sleep. A Gwent deck run takes about 40 s.
+9. **When Kaptain names a combo the stored text cannot make, the stored text is the suspect** (9 Nov 2026: Arachas
+   Behemoth's gwent.one v14.8 text has no Consume trigger, the wiki's has). Compare it with the game's wiki first; never
+   propose a new line rule to fit it.
 
 ## Map: where things are
 | What | File |

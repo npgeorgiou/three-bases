@@ -205,7 +205,7 @@ nst15	sts1	Ironclad Strength (gamersdecide)	Heavy Blade	Flex	none		Claude (v50 d
 nst16	sts1	Ironclad Exhaust (gamersdecide)	Barricade	Body Slam	line	keeps your Block	Claude (v50 deck read): Block kept is Block Body Slam counts
 nst17	sts1	Defect Orb (gamersdecide)	Electrodynamics	Tempest	line	Lightning	Claude (v50 deck read): Lightning hits all enemies; Tempest channels Lightning
 nst18	sts1	Watcher Stance Change (highgroundgaming)	Crescendo	Mental Fortress	line	Wrath	Claude (v50 deck read): entering Wrath is changing Stance
-nst19	sts1	Silent Shiv (highgroundgaming)	Footwork	After Image	none	playing sets off	Kaptain 30 Oct 2026: links come from card texts, not from playing any card (rewritten: makers of more cards to play do set it off, point h)
+nst19	sts1	Footwork, After Image	Footwork	After Image	none	playing sets off	Kaptain 30 Oct 2026: links come from card texts, not from playing any card (rewritten: makers of more cards to play do set it off, point h)
 nst20	sts1	Silent Poison (highgroundgaming)	Strike (Silent)	Corpse Explosion	none		Kaptain 30 Oct 2026: the normal attack feeds no death reaction
 nst21	sts1	Ironclad Barricade (Steam, Jeff)	Shrug It Off	Barricade	none		Kaptain 30 Oct 2026: Barricade helps the Block cards, it does not need them
 nst22	sts1	Ironclad Barricade (Steam, Jeff)	Barricade	Shrug It Off	line	keeps the Block	Kaptain 30 Oct 2026: Barricade keeps the Block they give
@@ -229,7 +229,7 @@ nst27	sts1	Ironclad Pain (gamersdecide)	Reaper	Rage	line	Attack	Kaptain 30 Oct 2
 nst28	sts1	Defect Snecko Eye (gamersdecide)	Snecko Eye	Meteor Strike	line	pays for it	Kaptain 30 Oct 2026 (f): random costs pay for big cards
 nst29	sts1	Defect Claw (gamersdecide)	Scrape	Claw	line	keeps it	Claude (audit): Scrape keeps the 0-cost cards it draws
 nst30	sts1	Watcher Divinity (gamersdecide)	Devotion	Smite	none		Claude (audit): 10 Mantra is Divinity, triple damage; Kaptain 2 Nov 2026: more damage for any damage card is generic, Smite is one plain hit
-nst31	sts1	Ironclad Body Slam (highgroundgaming)	Pure Water	Miracle	none		Kaptain 30 Oct 2026 (i): a deck gets only its own character's starting relic
+nst31	sts1	Pure Water, Miracle	Pure Water	Miracle	none		Kaptain 30 Oct 2026 (i): a deck gets only its own character's starting relic
 nst32	sts1	Watcher Stance Change (highgroundgaming)	Flurry of Blows	Bottled Flame	none		Claude (audit): Bottled Flame picks an Attack, it asks for none
 nst33	sts1	Defect Lightning (highgroundgaming)	Capacitor	Electrodynamics	line	more slots	Claude (audit): more Orb slots keep more Lightning
 nst34	sts1	Defect Reprogram (highgroundgaming)	Melter	Claw	line	gets through	Kaptain 30 Oct 2026: Melter removes Block, every damage card hits in full
@@ -281,7 +281,7 @@ n281	runeterra	Swain Ziggs	Captain Farron	Swain	none	(levels it up)	Claude 31 Oc
 n282	runeterra	Elu Thresh	Hecarim	Thresh	none	(levels it up)	Claude 31 Oct 2026: Overwhelm kills no more units; the Spectral Riders' deaths are theirs
 n283	runeterra	Akshan Riven	Blade of the Exile	Akshan	none	strike	Claude 31 Oct 2026: Quick Attack adds no strike
 n284	runeterra	Hecarim Zed	Zed	Hecarim	line	(levels it up)	Kaptain n250 thinking: a unit summoned attacking is an Ephemeral attacker for Hecarim
-n285	runeterra	Draven Viktor	Chump Whump	Get Excited!	none		Kaptain 31 Oct 2026: any card can be discarded; making cards is no fuel
+n285	runeterra	Chump Whump, Get Excited!	Chump Whump	Get Excited!	none		Kaptain 31 Oct 2026: any card can be discarded; making cards is no fuel
 n286	faeria	Fast Rakoans	Demon Wrangler	Imperial Trooper	none	moves	Claude 31 Oct 2026: Flying is the Demon Wing's own keyword; Demon Wrangler moves nothing
 n287	faeria	Tarum Combo	Tarum, the Forest World	Oak Father	line		Claude 31 Oct 2026: Tarum makes forests; Oak Father grows for each forest
 n288	duelyst	Lilithe Swarm	Bloodtear Alchemist	Horn of the Forsaken	none	damages	Claude 31 Oct 2026: Horn waits for the General's damage, not any card's
@@ -533,7 +533,6 @@ n547	gwent	Mobilization: NR Devotion Undead Army	Kerack Marine	Kaedweni Revenant
 n548	gwent	Mobilization: NR Devotion Undead Army	Poor Fucking Infantry	Kaedweni Revenant	none		Kaptain 6 Nov 2026: putting my own units into play gives a pinger nothing to kill: no combo
 n549	gwent	Mobilization: NR Devotion Undead Army	Forbidden Magic	Kaedweni Revenant	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): Forbidden Magic is to get more Revenant
 n550	gwent	Mobilization: NR Devotion Undead Army	Redanian Secret Service	Drakenborg	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): amazing synergy with Drakenborg
-n551	gwent	Mobilization: NR Devotion Undead Army	Redanian Secret Service	Kaedweni Revenant	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): good Revenant food
 n552	gwent	Mobilization: NR Devotion Undead Army	Princess Adda	Redanian Secret Service	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): Adda gains Immunity on Deploy, so she will summon a Secret Service
 n553	gwent	Mobilization: NR Devotion Undead Army	Drakenborg	Vincent Meis	none		Kaptain 6 Nov 2026: Zeal is no summon effect; Drakenborg Locks what it summons, nothing of it goes off
 n554	gwent	Mobilization: NR Devotion Undead Army	Drakenborg	Margarita Laux-Antille	none		Kaptain 6 Nov 2026: Zeal is no summon effect; Drakenborg Locks what it summons, nothing of it goes off
@@ -546,7 +545,6 @@ n560	gwent	Mobilization: NR Devotion Undead Army	Voymir	Redanian Archer	line		gu
 n561	gwent	Mobilization: NR Devotion Undead Army	Sabrina Glevissig	Kaedweni Revenant	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): another Revenant food
 n562	gwent	Mobilization: NR Devotion Undead Army	Philippa: Blind Fury	Kaedweni Revenant	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): a Revenant food
 n563	gwent	Mobilization: NR Devotion Undead Army	Botchling	Princess Adda	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): every time Botchling transforms, it boosts Adda by 5
-n564	gwent	Mobilization: NR Devotion Undead Army	Vernon Roche	Kaedweni Revenant	line		guide https://www.playgwent.com/en/decks/guides/399064 (games/gwent.md Deck pairs): also a Revenant food
 n565	gwent	Shieldwall: Roegner Ale Damsel	Ale of the Ancestors	Knight-Errant	line		guide https://www.playgwent.com/en/decks/guides/398556 (games/gwent.md Deck pairs): speed up Knight Errant grace
 n566	gwent	Shieldwall: Roegner Ale Damsel	Ale of the Ancestors	Prince Anséis	line		guide https://www.playgwent.com/en/decks/guides/398556 (games/gwent.md Deck pairs): enhance Prince Anseis removal
 n567	gwent	Pincer Maneuver: Kimbolt's Temple Siege	Temple of Melitele: Congregation	Prince Anséis	line		guide https://www.playgwent.com/en/decks/guides/395334 (games/gwent.md Deck pairs): play Temple and buff Anseis
@@ -560,7 +558,6 @@ n574	gwent	Enslave: Damage Enslave With Enforcers (+10 -1)	Joachim de Wett	Coup 
 n575	gwent	Tactical Decision: OP GN HyperThin	Doadrick Leumaerts	Albrich	line		guide https://www.playgwent.com/en/decks/guides/398507 (games/gwent.md Deck pairs): Doadrick will cycle Albrich in round 3
 n576	gwent	Tactical Decision: OP GN HyperThin	Maxii van Dekkar	Albrich	line		guide https://www.playgwent.com/en/decks/guides/398507 (games/gwent.md Deck pairs): Maxii will also proc Albrich
 n577	gwent	Tactical Decision: OP GN HyperThin	Strays of Spalla	Albrich	line		guide https://www.playgwent.com/en/decks/guides/398507 (games/gwent.md Deck pairs): Strays can be used to proc Albrich
-n578	gwent	Tactical Decision: OP GN HyperThin	Summoning Circle	Imperial Golem	line		guide https://www.playgwent.com/en/decks/guides/398507 (games/gwent.md Deck pairs): select golem with summoning circle
 n579	gwent	Tactical Decision: OP GN HyperThin	Doadrick Leumaerts	Snowdrop	line		guide https://www.playgwent.com/en/decks/guides/398507 (games/gwent.md Deck pairs): use Doadrick to get value off Snowdrop
 n580	gwent	Blood Money: Classical Bounty with Tamara, Drill	Vivaldi Bank	Conjurer's Candle	line		guide https://www.playgwent.com/en/decks/guides/398714 (games/gwent.md Deck pairs): Vivaldi's Bank is essential for Conjurer's Candle
 n581	gwent	Blood Money: Classical Bounty with Tamara, Drill	Royal Decree	Tamara Strenger	line		guide https://www.playgwent.com/en/decks/guides/398714 (games/gwent.md Deck pairs): Royal Decree can be used to find Tamara Strenger
@@ -568,7 +565,6 @@ n582	gwent	Onslaught: Pirates attack - Endless Voyage	Vabjorn	Raiding Fleet	line
 n583	gwent	Onslaught: Pirates attack - Endless Voyage	Vabjorn	Abordage	line		guide https://www.playgwent.com/en/decks/guides/394113 (games/gwent.md Deck pairs): use Vabjorn to play Abordage
 n584	gwent	Rage of the Sea: Fulmar rain ft. Otkell and Melusine	Melusine	Messenger of the Sea	line		guide https://www.playgwent.com/en/decks/guides/406128 (games/gwent.md Deck pairs): go Melusine round 1, with Messenger of the Sea
 n585	gwent	Rage of the Sea: Fulmar rain ft. Otkell and Melusine	Torrential Rain	Messenger of the Sea	line		guide https://www.playgwent.com/en/decks/guides/406128 (games/gwent.md Deck pairs): play rain and messenger as required
-n586	gwent	Patricidal Fury: RnR Seagulls Sove Compass	Seagull	Ragh Nar Roog	line		guide https://www.playgwent.com/en/decks/guides/404050 (games/gwent.md Deck pairs): for Clear Skies some swarm; Seagulls come handy
 n587	gwent	Patricidal Fury: RnR Seagulls Sove Compass	Hammond	Ragh Nar Roog	line		guide https://www.playgwent.com/en/decks/guides/404050 (games/gwent.md Deck pairs): max value from Cataclysm: Hammond moves an enemy unit
 n588	gwent	Selective Mutation, Vesemir: Mentor	Selective Mutation	Vesemir: Mentor	none	fills your hand	Claude 2026-11-06, line check: a hand-size limit or a net-zero/by-kind draw fills no hand
 n589	gwent	Griffin Witcher Mentor, Geralt: Quen	Griffin Witcher Mentor	Geralt: Quen	none	fills your hand	Claude 2026-11-06, line check: a hand-size limit or a net-zero/by-kind draw fills no hand
@@ -594,7 +590,7 @@ n608	gwent	Auberon: Conqueror, Winter Queen	Auberon: Conqueror	Winter Queen	none
 n609	gwent	Holger Blackhand, An Craite Longship	Holger Blackhand	An Craite Longship	none	gives it more strength when it comes	Claude 2026-11-06, line check: strength for a tribe or a Defender is generic; only a text that reads strength keeps it
 n610	gwent	Holger Blackhand, Bjorn's Drakkar	Holger Blackhand	Bjorn's Drakkar	none	gives it more strength when it comes	Claude 2026-11-06, line check: strength for a tribe or a Defender is generic; only a text that reads strength keeps it
 n611	gwent	Imposter, Roderick of Dun Tynne	Imposter	Roderick of Dun Tynne	none	gives it more strength when it comes	Claude 2026-11-06, line check: strength for a tribe or a Defender is generic; only a text that reads strength keeps it
-n612	gwent	Arachas Behemoth, Arachas Queen	Arachas Queen	Arachas Behemoth	line		Kaptain 9 Nov 2026: Arachas Queen consumes, which sets off Arachas Behemoth
+n612	gwent	Arachas Behemoth, Arachas Queen	Arachas Behemoth	Arachas Queen	none		Kaptain 9 Nov 2026: no line (a +1 boost to a card that consumes is no help; no rule for units made to be eaten)
 n613	gwent	Kikimore Queen, Kikimore Stalker	Kikimore Queen	Kikimore Stalker	none	more strength	Kaptain 9 Nov 2026: more strength for a card that consumes is no help (as Bone Talisman -> Kikimore Stalker)
 n614	gwent	Imposter, False Ciri	Imposter	False Ciri	line	its text reads its strength	Claude 2026-11-06, line check: strength for a tribe or a Defender is generic; only a text that reads strength keeps it
 n615	gwent	Vesemir: Mentor, Berengar	Vesemir: Mentor	Berengar	line	is a Witcher it asks for	Claude 2026-11-06, line check: strength for a tribe or a Defender is generic; only a text that reads strength keeps it
@@ -637,7 +633,7 @@ n651	gwent	Mobilization: NR Devotion Undead Army	Kaedweni Revenant	Vincent Meis	
 n652	gwent	Mobilization: NR Devotion Undead Army	Redanian Archer	Vincent Meis	line	its 1 damage kills what it sets to strength 1	Claude 2026-11-06, line check: a 1-damage ping kills a unit set to strength 1
 n653	gwent	Patricidal Fury: RnR Seagulls Sove Compass	Hammond	Ragh Nar Roog	line	moves an enemy unit into the row it hits	Claude 2026-11-06, line check: an enemy mover puts a target into the row a hazard hits
 n654	gwent	Field Medic, Caravan Guard	Field Medic	Caravan Guard	none	can give it more strength	Claude 2026-11-06, line check: a boost on my board units feeds no card that reads enemy, deck or discard strength
-n655	gwent	Field Medic, Yennefer: Divination	Shaping Nature: Vitality	Yennefer: Divination	none	can give it more strength	Claude 2026-11-06, line check: a boost on my board units feeds no card that reads enemy, deck or discard strength
+n655	gwent	Shaping Nature: Vitality, Yennefer: Divination	Shaping Nature: Vitality	Yennefer: Divination	none	can give it more strength	Claude 2026-11-06, line check: a boost on my board units feeds no card that reads enemy, deck or discard strength
 n656	gwent	Chimera, Ozzrel	Chimera	Ozzrel	none	gives it more strength	Claude 2026-11-06, line check: a boost on my board units feeds no card that reads enemy, deck or discard strength
 n657	gwent	Squire, Redanian Knight	Squire	Redanian Knight	line	more strength: its text reads its strength when it comes	Claude 2026-11-06, line check: a boost on my board units feeds no card that reads enemy, deck or discard strength
 n658	gwent	Anna Strenger, Redanian Knight	Anna Strenger	Redanian Knight	line	can give it more strength	Claude 2026-11-06, line check: a boost on my board units feeds no card that reads enemy, deck or discard strength
@@ -668,7 +664,7 @@ n682	gwent	Damsel in Distress, Redanian Knight	Damsel in Distress	Redanian Knigh
 n683	into_the_breach	Cataclysm	Titan Fist	Seismic Capacitor	line	Titan Fist moves enemy units, and Seismic Capacitor acts on units next to it	Kaptain 7 Nov 2026: a card that hits units next to it needs units there
 n684	into_the_breach	Run: Rift Walkers (Sevastromo, Unfair)	Titan Fist	Artemis Artillery	line	Titan Fist moves enemy units, and Artemis Artillery acts on units in a line from it	Claude 2026-11-06, line check: a line from the card waits for where units stand (Kaptain ntb10)
 n685	gwent	Rage of the Sea: Fulmar rain ft. Otkell and Melusine	Sigrdrifa's Rite	Rage of the Sea	none	brings it back: its summon effect goes off	Claude 2026-11-06, line check: Rage of the Sea has no summon effect, its "can act again" is no Zeal (L17, L19)
-n686	gwent	Mobilization: NR Devotion Undead Army	Mobilization	Lyrian Arbalest	none	puts it into play: its summon effect goes off	Claude 2026-11-06, line check: Lyrian Arbalest has no summon effect (L17, L19)
+n686	gwent	Mobilization, Lyrian Arbalest	Mobilization	Lyrian Arbalest	none	puts it into play: its summon effect goes off	Claude 2026-11-06, line check: Lyrian Arbalest has no summon effect (L17, L19)
 n687	gwent	Mobilization: NR Devotion Undead Army	Drakenborg	Vincent Meis	none		Kaptain 6 Nov 2026: Zeal is no summon effect; Drakenborg Locks what it summons
 n688	gwent	Fauve, Hamadryad	Fauve	Hamadryad	line	sets off its Symbiosis	Claude 2026-11-06, both texts read: Fauve plays a Nature card from the deck, Hamadryad has Symbiosis (keyword chain)
 n689	gwent	John Natalis, Battering Ram	John Natalis	Battering Ram	line	sets off its Resupply	Claude 2026-11-06, both texts read: John Natalis plays a Warfare card, Battering Ram has Resupply
