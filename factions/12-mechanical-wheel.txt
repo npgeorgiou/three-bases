@@ -19,7 +19,7 @@ Method (Claude's proposal, agreed in outline):
 7. Then each faction is designed in its own chat (factions/START_DESIGN.md), its theme chosen to fit.
 
 The axes (first measured on 39 real factions of the 8 library games in an earlier chat, with no saved script; now measured
-by axes.py below. Changed 9 Nov 2026 by Kaptain: "locks enemies or outmoves them", "what its cards react to" (placed,
+by axes.py below on 49 factions of 9 games (the tenth, Marvel Snap, has no factions). Changed 9 Nov 2026 by Kaptain: "locks enemies or outmoves them", "what its cards react to" (placed,
 attacking, hit, dying: a list of four kinds, not a scale, and covered by axes 1 and 3) and "how hard it is to play"
 dropped; disruption added):
 1.  Own units: spends them (deaths, sacrifice, trading a unit for value) or keeps them alive: staying power (heal, more
@@ -28,13 +28,15 @@ dropped; disruption added):
     or only kills their units.
 3.  Where the damage comes from: units' own strikes and growth, or spells and fixed damage.
 4.  Supply and cards: income, carry-over, draws, cheaper cards; or units on the board now.
+    Axes 4, 5 and 8 are measured at their first end only: a low value there is the second end.
 5.  Works with other cards (Kaptain, 9 Nov 2026: a positional combo is a kind of combo, so one axis): units that gain
     from the allies beside or behind them, and cards that make what other cards of the faction need; or cards that work
     alone.
 6.  How many targets: many at once and counting the board, or one precise target.
 7.  Width (agreed 9 Nov 2026): many cheap units and cards that make units, or a few big ones.
 8.  Hand and discard pile: picks, copies and brings back its own cards, or plays what it draws.
-9.  Unit stats: strength and defence per supply, two spokes; a faction's lean is the difference between them. Kaptain,
+9.  Unit stats: strength and defence per supply, two spokes; a faction's lean is the difference between them (the
+    strength value minus the defence value: the last column of the page's Numbers table). Kaptain,
     9 Nov 2026: games with one number for both (Stormbound) count it as both.
 Dropped 9 Nov 2026: sets the pace or answers (Kaptain: its Runeterra order was wrong; most library games have no
 answering on the enemy's turn, so there it only repeats removal); early or late (Kaptain: Claude could not measure it; checked against deck authors' words it was
@@ -42,7 +44,7 @@ right in only 63 of 149 Faeria deck pairs); moving (Kaptain: most library games 
 done": only places factions that keep units, so it becomes a monopoly choice of those factions); rows and areas (Claude,
 same: "one cell or a row" repeats axis 6, "front or back rows" can't be measured from other games and stays a design
 question per faction).
-A game with under 5 cards for a spoke gives its factions no value on it, not 0 (list: factions/13-wheel-measurement.txt).
+A game with under 10 cards for a spoke gives its factions no value on it, not 0 (list: factions/13-wheel-measurement.txt).
 How the axes were missed: the first measured axes came only from what cards do (concept shares), so identity that lives
 in the cost curve, the stats and how a faction feels to play was invisible; look there too.
 Which ends go together is judged by play: one end makes what the other needs, or undoes it (library fed/feeds/both).

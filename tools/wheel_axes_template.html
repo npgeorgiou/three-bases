@@ -105,8 +105,8 @@ function map(){const box=document.getElementById('mapBox');box.innerHTML='';cons
 let sortK='faction',sortD=1;
 function table(){const box=document.getElementById('tableBox');const ax=A.filter(a=>axOn.has(a.key));const fs=F.filter(has).filter(f=>!sel.size||sel.has(f.id));
  const val=(f,k)=>k==='faction'?f.faction:k==='game'?f.game:(Z(f)[k]??-99);fs.sort((p,q)=>{const a=val(p,sortK),b=val(q,sortK);return(a>b?1:a<b?-1:0)*sortD});
- box.innerHTML=`<div id="tablewrap"><table><tr><th data-k="faction">Faction</th><th data-k="game">Game</th>${ax.map(a=>`<th data-k="${a.key}" title="${a.axis}: ${a.end}">${a.n}. ${a.end}</th>`).join('')}</tr>`+
-  fs.map(f=>`<tr><td>${f.faction}</td><td>${f.game.replace(/_/g,' ')}</td>${ax.map(a=>{const v=Z(f)[a.key];const c=v==null?'':v>1?`rgba(220,90,40,${Math.min(.6,(v-1)/2)})`:`rgba(40,110,220,${Math.min(.6,1-v)})`;return`<td style="background:${c}" title="${fmtRaw(a,R(f)[a.key])}">${v==null?'–':v.toFixed(1)}</td>`}).join('')}</tr>`).join('')+'</table></div>';
+ box.innerHTML=`<div id="tablewrap"><table><tr><th data-k="faction">Faction</th><th data-k="game">Game</th>${ax.map(a=>`<th data-k="${a.key}" title="${a.axis}: ${a.end}">${a.n}. ${a.end}</th>`).join('')}<th data-k="lean" title="Unit stats: the strength value minus the defence value (above 0 leans to strength, below 0 to defence)">9. lean</th></tr>`+
+  fs.map(f=>`<tr><td>${f.faction}</td><td>${f.game.replace(/_/g,' ')}</td>${ax.map(a=>{const v=Z(f)[a.key];const c=v==null?'':v>1?`rgba(220,90,40,${Math.min(.6,(v-1)/2)})`:`rgba(40,110,220,${Math.min(.6,1-v)})`;return`<td style="background:${c}" title="${fmtRaw(a,R(f)[a.key])}">${v==null?'–':v.toFixed(1)}</td>`}).join('')}<td>${Z(f).lean==null?'–':(Z(f).lean>0?'+':'')+Z(f).lean.toFixed(2)}</td></tr>`).join('')+'</table></div>';
  box.querySelectorAll('th').forEach(th=>th.onclick=()=>{const k=th.dataset.k;sortD=sortK===k?-sortD:(k==='faction'||k==='game'?1:-1);sortK=k;table()});
  document.getElementById('explain').innerHTML='Each number: how many times its game\'s average (0 = none, 1 = average). Selected factions only (all when none is selected). Click a header to sort, hover a cell for the raw number.'}
 

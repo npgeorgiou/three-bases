@@ -9,24 +9,38 @@ and a switch between all cards and cards in top decks.
 
 How a value is made (all agreed with Kaptain, 9 Nov 2026):
 - Each end of an axis is its own spoke: one number per axis (one end minus the other) hid factions strong at both ends
-  (Faeria Red has the most fixed damage and also strikes).
+  (Faeria Red has the most fixed damage and also strikes). Axes 4, 5 and 8 have a spoke for their first end only: the
+  other end (units on the board now, works alone, plays what it draws) is a low value on that spoke.
 - A card counts for a spoke if it has one of the spoke's concepts (SPOKES in axes.py; shown on hover in the page).
   "concept@game,game" counts only in those games, because a concept means something else elsewhere (heal is the
   player's life in Faeria and Slay the Spire; "position" outside Gwent, Runeterra and Marvel Snap is area hits and
   pushes). Damage to the enemy player never counts as killing units.
+- Growth (more strength, more defence on its own units) counts for "units' own strikes" and for "keeps them alive" in
+  every game with units; in Gwent the one number grows, so its growth counts for both (the rule of axis 9).
+- "Many at once" also counts a card whose amount is the number of units on the board (countboard* in axes.py).
+- Position in every game: a card's effect or condition on its OWN units beside, around or behind it (BESIDE in axes.py,
+  read from the side written in the card's rows, so area hits and pushes on enemies stay out). Gwent, Runeterra and
+  Marvel Snap also count the POSITION concepts. A game with under 10 such cards measures combos only.
 - A faction's value = its share of cards that count, divided by its game's average share (0 = none, 1 = average), so
   games that mark more concepts per card don't stand out.
 - Unit stats are numbers, not concepts: strength and defence per supply (per unit where a game's units mostly have no
   cost). unit_stats() reads each game's own fields: Stormbound's one number counts as both; Gwent's power is strength and
-  power + armour is defence; Into the Breach has only defence (its damage is in weapons).
+  power + armour is defence; Into the Breach has only defence (its damage is in weapons). A game paid in several kinds of
+  supply (SUPPLIES: Inscryption's Blood, Energy, Bones, Mox) has each unit's cost divided by the average cost of its
+  kind, so 4 Bones is not counted as 4 Blood.
+- Width: a cheap unit and a big unit are a unit up to, or from, the cost that cuts nearest to a third of its game's
+  units (most Monster Train units cost 1: cheap is 0, big is 2 and more). Spells never count as big units.
+- Lean = the strength value minus the defence value (axes.tsv, and the last column of the Numbers table).
 - "Position and combos" = the average of the position value and the combos value (the share of the faction's card pairs
   that links.sqlite links).
 - Smoothing (Kaptain: shapes looked like hedgehogs, then too flat): each faction counts as if it had SHRINK (5) more
-  cards at its game's average, then values are raised to POWER (0.75): 4 times the average shows as 2.8.
-- A game with under 5 cards for a spoke gives its factions no value there (a dashed dot on the rim with its reason).
-  9 Nov 2026: "one chosen" everywhere but Runeterra and Marvel Snap; strength in Into the Breach; unit stats in Slay the
-  Spire; several spokes in Into the Breach and Slay the Spire; "many at once" in Inscryption and Monster Train;
-  "units' own strikes" in Gwent.
+  cards at its game's average (not for unit stats and combos), then values are raised to POWER (0.75): 4 times the
+  average shows as 2.8.
+- A game with under 10 cards for a spoke gives its factions no value there (a dashed dot on the rim with its reason).
+  With 5, two cards of a small game gave one of the highest values of the wheel (Inscryption Beast, breaks their plan).
+  9 Nov 2026: "one chosen" everywhere but Runeterra; Inscryption: breaks their plan, picks and brings back, many at
+  once; Monster Train: many at once; Into the Breach: strength, supply and cards, picks and brings back, spends them,
+  both width spokes; Slay the Spire (no units): unit stats, both width spokes, spends them, keeps them alive.
 - Two counts: all cards; or each card weighted by how many decks of decks.tsv play it (only factions with 10+ cards in
   decks). Deck lists hold each card once, without copies.
 - Spoke order (so neighbours belong together and a faction's shape shows its style): strength, units' own strikes,
@@ -35,8 +49,8 @@ How a value is made (all agreed with Kaptain, 9 Nov 2026):
 
 Redo it (after a new game, changed library cards, changed concepts or links). From library/cards_db:
 1. `python3 links.py` (rebuilds links.sqlite, not committed; about 2 minutes, Runeterra alone 9).
-2. `python3 axes.py`. It prints "CHECK FAILED" if one of Kaptain's points breaks (CHECKS in axes.py; add one for every
-   point he raises, e.g. Faeria Red high on fixed damage and on strikes).
+2. `python3 axes.py`. It prints "CHECK FAILED" if one of Kaptain's points breaks (CHECKS, GAPS and HAS in axes.py; add
+   one for every point he raises, e.g. Faeria Red high on fixed damage and on strikes).
 3. Check what each concept catches: `python3 axes.py --cards <file>` writes, per spoke, concept and game, how many cards
    it catches and 4 of them with their text. An agent reads the file (the main chat never reads card texts) and answers
    per concept: keep, drop, or count only in some games; plus concepts that are missing. Change SPOKES and rerun.
