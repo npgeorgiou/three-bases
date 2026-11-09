@@ -22,8 +22,10 @@ const lessonDb = new Promise(resolve => {
 lessonDb.then(db => {
   if (!db) return;
   const req = db.transaction('lessons', 'readonly').objectStore('lessons').get('set');
-  req.onsuccess = () => { const v = req.result; if (v && v.cards === lessonCards() && v.list.every(l => l.result != null)) Object.assign(LESSONS, { list: v.list, cards: v.cards, need: v.need || 0, spare: v.spare || [], seed: v.seed || 0 }); renderTuneStatus(); };
+  req.onsuccess = () => { const v = req.result; if (v && v.cards === lessonCards() && v.list.every(l => l.result != null)) Object.assign(LESSONS, { list: v.list.map(lessonOnly), cards: v.cards, need: v.need || 0, spare: (v.spare || []).map(lessonOnly), seed: v.seed || 0 }); renderTuneStatus(); };
 });
+/** A lesson as kept: the position, the side to move and the result (anything else saved with it is dropped). */
+const lessonOnly = l => ({ s: l.s, side: l.side, result: l.result });
 function saveLessons() {
   lessonDb.then(db => { if (db) db.transaction('lessons', 'readwrite').objectStore('lessons').put({ list: LESSONS.list, cards: LESSONS.cards, need: LESSONS.need, spare: LESSONS.spare, seed: LESSONS.seed }, 'set'); });
 }
@@ -59,7 +61,7 @@ function lessonJob(st, c) {
   if (!lessonsReady()) {                                              // every free core plays a game to make lessons
     const seed = 7001 + LESSONS.seed++;
     const opp = tuneOppSpec(st.opps[seed % st.opps.length], 1), seat = Math.floor(seed / st.opps.length) % 2;   // the ticked opponents and seats in turn
-    return { key: 'lesson-make-' + seed, lesson: 'make', msg: { type: 'lessonMake', seed, opp, seat, teacher: lessonTeacher(ifelseFull(st.best)), every: LESSON_EVERY,
+    return { key: 'lesson-make-' + seed, lesson: 'make', msg: { type: 'lessonMake', seed, opp, seat, cfg: ifelseFull(st.best), every: LESSON_EVERY,
       most: LESSON_PER_GAME, actionCap: ACTION_CAP, roundCap: ROUND_CAP, decks: DECK_PAIRS[seed % DECK_PAIRS.length] } };
   }
   if (!c) { newGeneration(); c = st.cand; if (tune.pool) tune.pool.setInit([{ type: 'lessons', lessons: LESSONS.list }]); }

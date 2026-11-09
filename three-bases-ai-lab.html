@@ -300,7 +300,7 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
   <h2>ifelse AI</h2>
   <p class="note tunote">An AI that sees both hands and searches the real position, with no rules of thumb: every judgement is a weighted term. All its values (weights, how far and how wide it looks, switches) are tuned at once with CMA-ES against the opponents you tick, starting from the Benchmark's values. Each generation, several candidates around a centre (every value changed by a different amount, in pairs: one up, its twin down by the same amount) play the same set of games; the centre moves toward the better half, and the method learns how far to change each value. The next generation also plays the centre from before the move: if that one scores more, the centre goes back to it and the steps get smaller. The centre itself, the ifelse AI as it is now, plays the same games too: the gold line is its win rate, the dashed line the candidates' average (lower, since most changes are tries that fail). It restarts with more candidates once its steps have become tiny. Draws count half.</p>
   <div class="setup">
-    <label title="Lessons: positions from games where the depth-3 search (the teacher) values every move; the ifelse AI at depth 1 is tuned to pick the moves the teacher values most. Games: whole games against the opponents ticked.">Tune by <select id="tuMode"><option value="lessons">Lessons from depth 3 (foresight at depth 1)</option><option value="games">Games against the opponents</option></select></label>
+    <label title="Lessons: positions from games and who went on to win; the ifelse AI at depth 1 is tuned so its score of each position predicts the winner. Games: whole games against the opponents ticked.">Tune by <select id="tuMode"><option value="lessons">Lessons: predict who won (foresight at depth 1)</option><option value="games">Games against the opponents</option></select></label>
     <label class="tulessons" title="How many lessons each candidate is graded on">Lessons <input type="number" id="tuLessons" min="100" max="20000" step="50" value="1000"></label>
     <label class="tugames">Games per candidate <input type="number" id="tuGames" min="20" max="2000" step="2" value="300"></label>
     <label>Games at once <input type="number" id="tuThreads" min="1" max="32"></label>
@@ -4812,40 +4812,21 @@ const IFELSE_DEFAULTS = Object.fromEntries(IFELSE_FIELDS.map(f => [f[0], f[3]]))
 const ifelseFull = cfg => ({ depth: BENCH_VALUES.depth, ...IFELSE_DEFAULTS, ...(cfg || {}) });
 
 /* =====================================================================
-   LESSONS: positions from real games, each with every legal move valued by the ifelse AI looking 3 moves ahead (with
-   the centre's numbers when the lesson was made) and who went on to win. A try is graded in each lesson on two things,
-   half each: its move looking 1 move ahead (0 for the 3-ahead best move, up to 1 for a move LESSON_CAP points worse or
-   more), and how well its score of the position predicts the winner (its chance that the side to move wins, from the
-   score after the round end is played out, against the real result: squared error).
+   LESSONS: positions from real games and who went on to win. A try is graded in each lesson only on how well its
+   score of the position predicts the winner (Texel tuning): its chance that the side to move wins, from the score
+   after the round end is played out, against the real result (squared error).
    ===================================================================== */
-const LESSON_CAP = 200, LESSON_SCALE = 200;                           // about 3 dots: a move this much worse counts as fully wrong; score → chance scale
-/** The teacher: the values it was made from at depth 3, 10 own moves and 10 replies, then the 3 best next moves. */
-const lessonTeacher = values => ({ ...values, depth: 3, w2: 10, w3: 3, rootRound: 1 });
-/** One lesson from a position: every legal move with its teacher value (the full search below each, no move cut). */
-function makeLesson(s, teacherCfg) {
-  const c = ifelseConfig(teacherCfg), me = s.cur, root = cloneState(s);
-  root.noFx = true; root.stopAtRoundEnd = true;
-  let goals = null;
-  if (c.goals) { goals = []; goals[me] = ifelseGoalsFor(root, me, null, c); goals[other(me)] = ifelseGoalsFor(root, other(me), null, c); }
-  const moves = [];
-  for (const a of listActions(root)) {
-    const t = cloneState(root);
-    applyAction(t, a);
-    const o = { a, t };
-    moves.push([JSON.stringify(a), ifelseSearch(t, me, 2, 2, goals, c) + rootPref(root, o, me, c)]);
-  }
+const LESSON_SCALE = 200;                                            // score → chance scale
+/** One lesson from a position: the position and the side to move; the result is added when the game ends. */
+function makeLesson(s) {
   const s0 = cloneState(s); s0.noFx = true;
-  return { s: s0, moves, side: me, result: null };
+  return { s: s0, side: s.cur, result: null };
 }
-/** A try's loss in a lesson (0 best, 1 worst): half its move looking 1 ahead, half how well it predicts the winner. */
+/** A try's loss in a lesson (0 best, 1 worst): how far its chance for the side to move is from the real result. */
 function lessonLoss(lesson, studentCfg) {
-  const cfg = { ...studentCfg, depth: 1 }, s = cloneState(lesson.s), key = JSON.stringify(chooseIfelseAction(s, cfg));
-  let best = -Infinity, mine = null;
-  for (const [k, v] of lesson.moves) { if (v > best) best = v; if (k === key) mine = v; }
-  const move = mine === null ? 1 : Math.min(LESSON_CAP, best - mine) / LESSON_CAP;   // mine null: a move not listed (should not happen)
   const t = cloneState(lesson.s); t.noFx = true; t.stopAtRoundEnd = true;
-  const chance = 1 / (1 + Math.exp(-ifelseEnd(t, lesson.side, null, ifelseConfig(cfg)) / LESSON_SCALE));
-  return (move + (chance - lesson.result) ** 2) / 2;
+  const chance = 1 / (1 + Math.exp(-ifelseEnd(t, lesson.side, null, ifelseConfig({ ...studentCfg, depth: 1 })) / LESSON_SCALE));
+  return (chance - lesson.result) ** 2;
 }
 /** Runs fn with the dice fixed by seed (the same deals and chances every time). */
 function withSeed(seed, fn) {
@@ -4856,22 +4837,18 @@ function withSeed(seed, fn) {
 }
 /** Lessons from one seeded game played to its end: the centre's numbers, looking 1 move ahead, play seat msg.seat
  *  against msg.opp (picked by `oppMove`); every `every` of the centre's own moves (from a start set by the seed) the
- *  position becomes a lesson, if it has two or more moves valued differently, at most `most`; at the end each lesson
- *  gets the centre's result. */
+ *  position becomes a lesson, at most `most`; at the end each lesson gets the centre's result. */
 function lessonsFromGame(msg, oppMove) {
   return withSeed(msg.seed, () => {
     const s = newGame(msg.decks[0], msg.decks[1]);
     s.noFx = true;
     for (const p of [0, 1]) aiMulligan(s, p);
     s.redrawDone = true;
-    const out = [], play = { ...msg.teacher, depth: 1 };
+    const out = [], play = { ...msg.cfg, depth: 1 };
     let mine = 0;
     for (let i = 0; i < msg.actionCap && s.winner === null && s.round <= msg.roundCap; i++) {
       if (s.cur !== msg.seat) { applyAction(s, oppMove(msg.opp, s)); continue; }
-      if ((mine++ + msg.seed) % msg.every === 0 && out.length < msg.most) {
-        const l = makeLesson(s, msg.teacher), vs = l.moves.map(m => m[1]);
-        if (vs.length > 1 && Math.max(...vs) > Math.min(...vs)) out.push(l);
-      }
+      if ((mine++ + msg.seed) % msg.every === 0 && out.length < msg.most) out.push(makeLesson(s));
       applyAction(s, chooseIfelseAction(s, play));
     }
     if (s.winner !== 0 && s.winner !== 1 && s.winner !== 'draw') return [];   // unfinished game: no winner to learn from
@@ -7905,8 +7882,10 @@ const lessonDb = new Promise(resolve => {
 lessonDb.then(db => {
   if (!db) return;
   const req = db.transaction('lessons', 'readonly').objectStore('lessons').get('set');
-  req.onsuccess = () => { const v = req.result; if (v && v.cards === lessonCards() && v.list.every(l => l.result != null)) Object.assign(LESSONS, { list: v.list, cards: v.cards, need: v.need || 0, spare: v.spare || [], seed: v.seed || 0 }); renderTuneStatus(); };
+  req.onsuccess = () => { const v = req.result; if (v && v.cards === lessonCards() && v.list.every(l => l.result != null)) Object.assign(LESSONS, { list: v.list.map(lessonOnly), cards: v.cards, need: v.need || 0, spare: (v.spare || []).map(lessonOnly), seed: v.seed || 0 }); renderTuneStatus(); };
 });
+/** A lesson as kept: the position, the side to move and the result (anything else saved with it is dropped). */
+const lessonOnly = l => ({ s: l.s, side: l.side, result: l.result });
 function saveLessons() {
   lessonDb.then(db => { if (db) db.transaction('lessons', 'readwrite').objectStore('lessons').put({ list: LESSONS.list, cards: LESSONS.cards, need: LESSONS.need, spare: LESSONS.spare, seed: LESSONS.seed }, 'set'); });
 }
@@ -7942,7 +7921,7 @@ function lessonJob(st, c) {
   if (!lessonsReady()) {                                              // every free core plays a game to make lessons
     const seed = 7001 + LESSONS.seed++;
     const opp = tuneOppSpec(st.opps[seed % st.opps.length], 1), seat = Math.floor(seed / st.opps.length) % 2;   // the ticked opponents and seats in turn
-    return { key: 'lesson-make-' + seed, lesson: 'make', msg: { type: 'lessonMake', seed, opp, seat, teacher: lessonTeacher(ifelseFull(st.best)), every: LESSON_EVERY,
+    return { key: 'lesson-make-' + seed, lesson: 'make', msg: { type: 'lessonMake', seed, opp, seat, cfg: ifelseFull(st.best), every: LESSON_EVERY,
       most: LESSON_PER_GAME, actionCap: ACTION_CAP, roundCap: ROUND_CAP, decks: DECK_PAIRS[seed % DECK_PAIRS.length] } };
   }
   if (!c) { newGeneration(); c = st.cand; if (tune.pool) tune.pool.setInit([{ type: 'lessons', lessons: LESSONS.list }]); }

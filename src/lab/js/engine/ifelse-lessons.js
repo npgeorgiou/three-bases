@@ -1,38 +1,19 @@
 /* =====================================================================
-   LESSONS: positions from real games, each with every legal move valued by the ifelse AI looking 3 moves ahead (with
-   the centre's numbers when the lesson was made) and who went on to win. A try is graded in each lesson on two things,
-   half each: its move looking 1 move ahead (0 for the 3-ahead best move, up to 1 for a move LESSON_CAP points worse or
-   more), and how well its score of the position predicts the winner (its chance that the side to move wins, from the
-   score after the round end is played out, against the real result: squared error).
+   LESSONS: positions from real games and who went on to win. A try is graded in each lesson only on how well its
+   score of the position predicts the winner (Texel tuning): its chance that the side to move wins, from the score
+   after the round end is played out, against the real result (squared error).
    ===================================================================== */
-const LESSON_CAP = 200, LESSON_SCALE = 200;                           // about 3 dots: a move this much worse counts as fully wrong; score → chance scale
-/** The teacher: the values it was made from at depth 3, 10 own moves and 10 replies, then the 3 best next moves. */
-const lessonTeacher = values => ({ ...values, depth: 3, w2: 10, w3: 3, rootRound: 1 });
-/** One lesson from a position: every legal move with its teacher value (the full search below each, no move cut). */
-function makeLesson(s, teacherCfg) {
-  const c = ifelseConfig(teacherCfg), me = s.cur, root = cloneState(s);
-  root.noFx = true; root.stopAtRoundEnd = true;
-  let goals = null;
-  if (c.goals) { goals = []; goals[me] = ifelseGoalsFor(root, me, null, c); goals[other(me)] = ifelseGoalsFor(root, other(me), null, c); }
-  const moves = [];
-  for (const a of listActions(root)) {
-    const t = cloneState(root);
-    applyAction(t, a);
-    const o = { a, t };
-    moves.push([JSON.stringify(a), ifelseSearch(t, me, 2, 2, goals, c) + rootPref(root, o, me, c)]);
-  }
+const LESSON_SCALE = 200;                                            // score → chance scale
+/** One lesson from a position: the position and the side to move; the result is added when the game ends. */
+function makeLesson(s) {
   const s0 = cloneState(s); s0.noFx = true;
-  return { s: s0, moves, side: me, result: null };
+  return { s: s0, side: s.cur, result: null };
 }
-/** A try's loss in a lesson (0 best, 1 worst): half its move looking 1 ahead, half how well it predicts the winner. */
+/** A try's loss in a lesson (0 best, 1 worst): how far its chance for the side to move is from the real result. */
 function lessonLoss(lesson, studentCfg) {
-  const cfg = { ...studentCfg, depth: 1 }, s = cloneState(lesson.s), key = JSON.stringify(chooseIfelseAction(s, cfg));
-  let best = -Infinity, mine = null;
-  for (const [k, v] of lesson.moves) { if (v > best) best = v; if (k === key) mine = v; }
-  const move = mine === null ? 1 : Math.min(LESSON_CAP, best - mine) / LESSON_CAP;   // mine null: a move not listed (should not happen)
   const t = cloneState(lesson.s); t.noFx = true; t.stopAtRoundEnd = true;
-  const chance = 1 / (1 + Math.exp(-ifelseEnd(t, lesson.side, null, ifelseConfig(cfg)) / LESSON_SCALE));
-  return (move + (chance - lesson.result) ** 2) / 2;
+  const chance = 1 / (1 + Math.exp(-ifelseEnd(t, lesson.side, null, ifelseConfig({ ...studentCfg, depth: 1 })) / LESSON_SCALE));
+  return (chance - lesson.result) ** 2;
 }
 /** Runs fn with the dice fixed by seed (the same deals and chances every time). */
 function withSeed(seed, fn) {
@@ -43,22 +24,18 @@ function withSeed(seed, fn) {
 }
 /** Lessons from one seeded game played to its end: the centre's numbers, looking 1 move ahead, play seat msg.seat
  *  against msg.opp (picked by `oppMove`); every `every` of the centre's own moves (from a start set by the seed) the
- *  position becomes a lesson, if it has two or more moves valued differently, at most `most`; at the end each lesson
- *  gets the centre's result. */
+ *  position becomes a lesson, at most `most`; at the end each lesson gets the centre's result. */
 function lessonsFromGame(msg, oppMove) {
   return withSeed(msg.seed, () => {
     const s = newGame(msg.decks[0], msg.decks[1]);
     s.noFx = true;
     for (const p of [0, 1]) aiMulligan(s, p);
     s.redrawDone = true;
-    const out = [], play = { ...msg.teacher, depth: 1 };
+    const out = [], play = { ...msg.cfg, depth: 1 };
     let mine = 0;
     for (let i = 0; i < msg.actionCap && s.winner === null && s.round <= msg.roundCap; i++) {
       if (s.cur !== msg.seat) { applyAction(s, oppMove(msg.opp, s)); continue; }
-      if ((mine++ + msg.seed) % msg.every === 0 && out.length < msg.most) {
-        const l = makeLesson(s, msg.teacher), vs = l.moves.map(m => m[1]);
-        if (vs.length > 1 && Math.max(...vs) > Math.min(...vs)) out.push(l);
-      }
+      if ((mine++ + msg.seed) % msg.every === 0 && out.length < msg.most) out.push(makeLesson(s));
       applyAction(s, chooseIfelseAction(s, play));
     }
     if (s.winner !== 0 && s.winner !== 1 && s.winner !== 'draw') return [];   // unfinished game: no winner to learn from
