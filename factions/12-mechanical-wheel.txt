@@ -20,28 +20,31 @@ Method (Claude's proposal, agreed in outline):
 
 The axes (first measured on 39 real factions of the 8 library games in an earlier chat, with no saved script; now measured
 by axes.py below. Changed 9 Nov 2026 by Kaptain: "locks enemies or outmoves them", "what its cards react to" (placed,
-attacking, hit, dying: a list of four kinds, not a scale, and covered by axes 1, 3 and 14) and "how hard it is to play"
+attacking, hit, dying: a list of four kinds, not a scale, and covered by axes 1, 3 and 13) and "how hard it is to play"
 dropped; disruption added):
 1.  Own units: spends them (deaths, sacrifice, trading a unit for value) or keeps them (protect, heal, grow).
 2.  Disruption (Kaptain, 9 Nov 2026): breaks the enemy's plan (their hand, costs, abilities, attacks, positions, spells)
     or only kills their units.
 3.  Where the damage comes from: units' own strikes and growth, or spells and fixed damage.
 4.  Supply and cards: income, carry-over, draws, cheaper cards; or units on the board now.
-5.  Formation: units that gain from the allies beside or behind them, or units that work alone.
+5.  Works with other cards (Kaptain, 9 Nov 2026: a positional combo is a kind of combo, so one axis): units that gain
+    from the allies beside or behind them, and cards that make what other cards of the faction need; or cards that work
+    alone.
 6.  How many targets: many at once and counting the board, or one precise target.
-7.  Unit size: few big costly units, or many cheap ones.
-8.  Moving: moves its own units and pushes enemies around, or stays put.
-9.  Repair or prevent: restores lost shields and defence after a hit, or stops the hit beforehand.
-10. Hand and discard pile: picks, copies and brings back its own cards, or plays what it draws.
-11. Rows and areas: works from the front row or the back rows; hits one cell or a whole row or column (the row part is
+7.  Width (agreed 9 Nov 2026): many cheap units and cards that make units, or a few big ones.
+8.  Repair or prevent: restores lost shields and defence after a hit, or stops the hit beforehand.
+9.  Hand and discard pile: picks, copies and brings back its own cards, or plays what it draws.
+10. Rows and areas: works from the front row or the back rows; hits one cell or a whole row or column (the row part is
     this board's own, not measured).
-12. Speed (Kaptain, 5 Nov 2026): how quickly the faction carries out its plan; seen in the cost curve (Faeria Yellow
-    averages cost 3.1 against Red 4.8).
-13. Strength or defence: its units lean to killing or to holding dots (defence holds a base); seen in the stats.
-14. Sets the pace or answers: forces the enemy to react to its plan, or waits and punishes what the enemy does.
-Open (Claude's suggestions, 9 Nov 2026, not decided): axes 7 and 12 both come from cost; axis 9 only places factions that
-keep units; axis 11's "one cell or a row" repeats axis 6; combos (cards that need each other) as their own axis or inside
-axis 5; factions of games without moving get no value on axis 8; how to measure axis 14.
+11. Early or late (Kaptain, 5 Nov 2026): when the faction is strongest. Kaptain doubts Claude can judge it; the measure
+    (cheapest third of the game's costs and acting at once, against the dearest third and growth, carry-over, ramp,
+    countdowns) was checked against deck authors' words (aggro/rush/tempo before midrange before control/ramp): right
+    in 75 of 90 Duelyst pairs, in only 63 of 149 Faeria pairs, no better than plain average cost (58% both). Not proven.
+12. Strength or defence: its units lean to killing or to holding dots (defence holds a base); seen in the stats.
+13. Sets the pace or answers: forces the enemy to react to its plan, or waits and punishes what the enemy does.
+Dropped 9 Nov 2026 (Kaptain): moving (most library games have no moving, so most factions got no real value).
+Open (Claude's suggestions, 9 Nov 2026, not decided): axis 8 only places factions that keep units; axis 10's "one cell
+or a row" repeats axis 6; a faction whose game has no cards for an axis should get no value on it; how to measure axis 13.
 How the axes were missed: the first measured axes came only from what cards do (concept shares), so identity that lives
 in the cost curve, the stats and how a faction feels to play was invisible; look there too.
 Which ends go together is judged by play: one end makes what the other needs, or undoes it (library fed/feeds/both).

@@ -48,8 +48,7 @@ const Z=f=>mode==='cards'?f.cardsZ:f.decksZ, R=f=>mode==='cards'?f.cardsRaw:f.de
 const has=f=>!!Z(f);
 const ns='http://www.w3.org/2000/svg';
 function el(t,a,p){const e=document.createElementNS(ns,t);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
-function fmtRaw(a,v){if(v==null)return'–';if(a.key==='size')return v.toFixed(2)+' avg unit cost';if(a.key==='speed')return(-v).toFixed(2)+' avg card cost';
- if(a.key==='power')return Math.round(v*100)+'% of unit stats in strength';return(v>=0?'+':'')+Math.round(v*100)+' points (share high end − share low end)'}
+function fmtRaw(a,v){if(v==null)return'–';if(a.key==='together')return'average of the position and combo scales';if(a.key==='power')return Math.round(v*100)+'% of unit stats in strength';return(v>=0?'+':'')+Math.round(v*100)+' points (share high end − share low end)'}
 function conc(a){return `<b>${a.label}</b> (axis ${a.n})<br>Outer = ${a.hi}`+(a.lo?`, centre = ${a.lo}`:'')+
  (a.hiC?`<br>High: ${a.hiC.join(', ')}`:'<br>Measured from card numbers')+(a.loC&&a.loC.length?`<br>Low: ${a.loC.join(', ')}`:'')}
 
