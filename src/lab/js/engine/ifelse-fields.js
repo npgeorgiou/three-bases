@@ -4,13 +4,14 @@
    Starting values: the game's Benchmark's (goal lanes start off).
    ===================================================================== */
 /** [key, label, type, start, extra]: type int [lo, hi] | switch | share (0.01–1) | num (scale used when at 0). The start is the
- *  game's Benchmark value where it has one (listed here: the earlier Benchmark's), so tuning improves on the Benchmark.
+ *  game's Benchmark value where it has one (listed here: the earlier Benchmark's), so tuning improves on the Benchmark, except IFELSE_START.
  *  How far it looks is not tuned: tuning games use the tuning depth, and the check match the Benchmark's own depth. */
 const IFELSE_BASE_FIELDS = [
   ['w1', 'Own moves examined (1st move)', 'int', 8, [1, 16]], ['w2', 'Replies examined (2nd move)', 'int', 6, [1, 16]],
   ['w3', 'Moves examined (3rd move)', 'int', 4, [1, 16]], ['w4', 'Moves examined (4th move)', 'int', 4, [1, 12]],
   ['w5', 'Moves examined (5th move)', 'int', 4, [1, 12]],
   ['skipPointless', 'Skip moves that change nothing (1 = yes)', 'switch', 1],
+  ['rootRound', 'Pick the own moves examined by their worth after the round end is played out (1 = yes)', 'switch', 0],
   ['base', 'Worth of holding a base', 'num', 220], ['dot', 'Worth of a dot', 'num', 45],
   ['secondBase', 'Holding one base: per own dot in the other lanes', 'num', 30],
   ['twoBases', 'Holding two bases', 'num', 300], ['twoBasesOpp', 'Opponent holding two bases (counted against)', 'num', 450],
@@ -44,19 +45,12 @@ const IFELSE_BASE_FIELDS = [
   ['passPen', 'First move: passing right after the opponent passed counts less by', 'num', 40],
   ['freeCheck', 'Skip free moves that don\'t make the round better (1 = yes)', 'switch', 1],
 ];
-/** Effect values: what each kind of unit effect is worth per point (op_<what>, starts at 0) and how much its timing
- *  counts (on_<when>, a multiplier, starts at 1), over the effect parts of the game's unit cards (fxParts); and what
- *  each rule keyword on a unit card is worth (kw_<flag>, starts at 0). All made from the cards, none named here. */
-const IFELSE_FX_FIELDS = (() => {
-  const whats = new Set(), whens = new Set();
-  for (const key of Object.keys(CARDS)) if (CARDS[key].sup) for (const [when, what] of fxParts(key)) { whens.add(when); whats.add(what); }
-  const say = { s: 'strength an aura gives', d: 'defence an aura gives' };
-  const flags = KW_FLAGS.filter(f => Object.keys(CARDS).some(key => CARDS[key].sup && CARDS[key][f]));
-  return [...[...whats].sort().map(w => ['op_' + w, `Effect worth per point: ${say[w] || w}`, 'num', 0, 1]),
-    ...[...whens].sort().map(w => ['on_' + w, `Effect timing multiplier: ${w}`, 'num', 1]),
-    ...flags.map(f => ['kw_' + f, `Keyword worth per point: ${KW_NAME[f] || f}`, 'num', 0, 1])];
-})();
-const IFELSE_FIELDS = [...IFELSE_BASE_FIELDS, ...IFELSE_FX_FIELDS].map(([k, text, type, def, extra]) => [k, text, type, BENCH_VALUES[k] ?? def, extra]);
+/** Keyword values: one per line of KW_RULES (keyword-worth.js) whose keyword is in the game's cards (kw_<field>, starts at 0). */
+const IFELSE_KW_FIELDS = KW_RULES.filter(kwInGame)
+  .map(([f, name]) => ['kw_' + f, `Keyword worth: ${name} (per point, times how much it works now)`, 'num', 0, 1]);
+/** Where the ifelse AI starts away from the Benchmark's values: 10 own moves and 10 replies, first moves picked with the round end played out. */
+const IFELSE_START = { w1: 10, w2: 10, rootRound: 1 };
+const IFELSE_FIELDS = [...IFELSE_BASE_FIELDS, ...IFELSE_KW_FIELDS].map(([k, text, type, def, extra]) => [k, text, type, IFELSE_START[k] ?? BENCH_VALUES[k] ?? def, extra]);
 const IFELSE_DEFAULTS = Object.fromEntries(IFELSE_FIELDS.map(f => [f[0], f[3]]));
 /** The ifelse AI's values: its starting values with the given ones on top, looking as far ahead as the Benchmark. */
 const ifelseFull = cfg => ({ depth: BENCH_VALUES.depth, ...IFELSE_DEFAULTS, ...(cfg || {}) });

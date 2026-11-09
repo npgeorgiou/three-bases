@@ -4,40 +4,14 @@
 const BENCH_VALUES = {"depth": 3, "w1": 16, "w2": 16, "w3": 1, "w4": 1, "w5": 1, "skipPointless": 1, "base": 52.24794805722803, "dot": 68.51388494977554, "secondBase": 102.66407646583588, "twoBases": 177.25361791861496, "twoBasesOpp": 199.7574182161945, "income": 31.656078857105964, "incomeCap": 2, "safeIncome": 0.05504762091184498, "pool": 2.741304155326895, "carry": 30, "hand": 4.633833562934903, "handCost": 2.8042200628587772, "uSup": 12.07189493456142, "uStr": 1.5479816366387755, "uDef": 1.8437067986291322, "uSupBonus": 6.622116494092802, "front": 28.969241514744198, "safeHolders": 1, "safeExtra": 0.04993113138665096, "armyStep": 0.8376563975571105, "armyFloor": 0.0812832334017826, "threat": 5.16860316310796, "kill": 0.45887300525839325, "damage": 0.8280634749424957, "thMineOpp": 1.6299806213311494, "thTheirsOpp": 0.5824609790085519, "thTheirsMe": 0.9561631170420163, "thMineMe": 0.2500662829114908, "tOnce": 1, "tGuards": 1, "tActed": 1, "danger0": 1451.988204947475, "danger1": 165.23566872600335, "danger2": 25.633149570136343, "draw": -985.4667485840048, "goals": 0, "offGoal": 0.3452749916684562, "stick": 2.0893563598964398, "needDots": 1.774190115518511, "needEnemyDots": 0.8208140494071128, "needEnemyPower": 0.27442838218710763, "needOwnPower": 0.04135135057152874, "needSupply": 0.06097458844391373, "killPref": 1, "passPen": 40, "freeCheck": 1};
 const ifelseConfig = cfg => ({ ...cfg });
 
-function ifelseWorth(u, c) {
+/** A unit's worth: its supply, stats and keywords (keyword-worth.js), each times its value. */
+function ifelseWorth(s, u, c) {
   const k = cardOf(u);
-  return k.sup * c.uSup + strengthOf(u) * c.uStr + defenceOf(u) * c.uDef + (k.sup + (k.bonus || 0)) * c.uSupBonus + fxWorth(u.card, c) + kwWorth(u, c);
-}
-/** The worth of a unit's rule keywords as they are now (gained ones count, moved-away ones don't): per keyword
- *  kw_<flag> x its value; only the keywords with a value set are looked at, so none set costs nothing. */
-function kwWorth(u, c) {
-  let fs = c._kww;                                                    // kept on the values object, hidden from copies and exports
-  if (!fs) { fs = KW_FLAGS.filter(f => c['kw_' + f]); Object.defineProperty(c, '_kww', { value: fs }); }
-  let n = 0;
-  for (const f of fs) n += c['kw_' + f] * kw(u, f);
-  return n;
-}
-/** A unit card's effects in parts [when, what, amount], e.g. Ticking Soldier: ['roundEnd', 'strike', 1]; auras are ['aura', 's' or 'd', amount]. */
-const FX_NOT_WHAT = new Set(['to', 'if', 'n', 'per', 'at', 'first', 'max', 'lanes', 'again', 'raise']);
-const fxPartsCache = {};
-function fxParts(key) {
-  if (fxPartsCache[key]) return fxPartsCache[key];
-  const k = CARDS[key], out = [], amt = v => (typeof v === 'number' ? Math.abs(v) : v ? 1 : 0);
-  for (const e of k.fx || []) for (const op of e.do || []) for (const [w, v] of Object.entries(op)) if (!FX_NOT_WHAT.has(w) && amt(v)) out.push([e.on, w, amt(v)]);
-  for (const a of k.aura || []) { if (a.s) out.push(['aura', 's', Math.abs(a.s)]); if (a.d) out.push(['aura', 'd', Math.abs(a.d)]); }
-  return (fxPartsCache[key] = out);
-}
-/** The worth of a unit's effects: per part, (timing multiplier on_<when>, 1 if unset) x (worth op_<what>) x amount; 0 while no op_ value is set. */
-function fxWorth(key, c) {
-  let m = c._fxw;                                                     // kept on the values object, hidden from copies and exports
-  if (!m) { m = { on: Object.keys(c).some(x => x.startsWith('op_') && c[x]), v: {} }; Object.defineProperty(c, '_fxw', { value: m }); }
-  if (!m.on) return 0;
-  if (m.v[key] === undefined) m.v[key] = fxParts(key).reduce((n, [when, what, a]) => n + (c['on_' + when] ?? 1) * (c['op_' + what] || 0) * a, 0);
-  return m.v[key];
+  return k.sup * c.uSup + strengthOf(u) * c.uStr + defenceOf(u) * c.uDef + (k.sup + (k.bonus || 0)) * c.uSupBonus + kwWorth(s, u, c);
 }
 function ifelseArmy(s, side, lane, c, safe = isSafeLane(s, side, lane)) {
   const units = unitsIn(s, side, lane).map(u => ({ front: inFront(u),
-    worth: ifelseWorth(u, c) + (inFront(u) && (strengthOf(u) > 0 || cardOf(u).def > 1) ? c.front : 0) }));
+    worth: ifelseWorth(s, u, c) + (inFront(u) && (strengthOf(u) > 0 || cardOf(u).def > 1) ? c.front : 0) }));
   let total = 0;
   if (safe) {
     units.sort((a, b) => (b.front - a.front) || (b.worth - a.worth));
@@ -60,13 +34,13 @@ function ifelseThreat(s, victim, c) {
     for (const u of targets) {
       let best = 0;
       for (const a of attackers) if (a.lane === u.lane && s.pool[att][u.lane] + reserve >= cardOf(a).sup && canHit(a, u)) best = Math.max(best, strengthOf(a));
-      loss += best >= defenceOf(u) ? ifelseWorth(u, c) * c.kill : best * c.damage;
+      loss += best >= defenceOf(u) ? ifelseWorth(s, u, c) * c.kill : best * c.damage;
     }
     return loss;
   }
   const pool = LANES.map(l => s.pool[att][l]);
   let reserve = s.players[att].reserve, loss = 0;
-  const T = targets.map(u => ({ u, hp: defenceOf(u), dealt: 0, counted: 0, dead: false, worth: ifelseWorth(u, c) })), used = new Set();
+  const T = targets.map(u => ({ u, hp: defenceOf(u), dealt: 0, counted: 0, dead: false, worth: ifelseWorth(s, u, c) })), used = new Set();
   for (;;) {
     let best = null;
     for (const a of attackers) {
@@ -128,14 +102,15 @@ function ifelseEval(s, p, goal, c) {
   };
   return v + danger(q) - danger(p);
 }
-/** The side to move's best `width` options by a quick score, always including passing. `keep` (the skip test) is asked
- *  best first and only until `width` options are kept: the same options as asking it of every move, with less work. */
-function ifelseOptions(t, goals, c, width, keep) {
+/** The side to move's best `width` options by a score (the quick score: the position right after the move; or `score`),
+ *  always including passing. `keep` (the skip test) is asked best first and only until `width` options are kept: the same
+ *  options as asking it of every move, with less work. */
+function ifelseOptions(t, goals, c, width, keep, score) {
   const side = t.cur, scored = [];
   for (const a of listActions(t)) {
     const n = cloneState(t);
     applyAction(n, a);
-    scored.push({ a, t: n, v: ifelseEval(n, side, goals ? goals[side] : null, c) });
+    scored.push({ a, t: n, v: score ? score(n) : ifelseEval(n, side, goals ? goals[side] : null, c) });
   }
   scored.sort((x, y) => y.v - x.v);
   const picked = [];
@@ -144,9 +119,10 @@ function ifelseOptions(t, goals, c, width, keep) {
   if (pass && !picked.includes(pass)) picked.push(pass);
   return picked;
 }
+/** A position's value at the end of the search: won or lost as it is, else scored as the next round starts (the round end played out). */
+const ifelseEnd = (t, me, goals, c) => (t.winner !== null ? ifelseEval(t, me, null, c) : ifelseEval(nextRoundView(t), me, goals ? goals[me] : null, c));
 function ifelseSearch(t, me, left, level, goals, c, alpha = -Infinity, beta = Infinity) {
-  if (t.winner !== null) return ifelseEval(t, me, null, c);
-  if (left === 0 || t.roundOver) { const view = nextRoundView(t); return ifelseEval(view, me, goals ? goals[me] : null, c); }
+  if (t.winner !== null || left === 0 || t.roundOver) return ifelseEnd(t, me, goals, c);
   const mine = t.cur === me;
   let best = mine ? -Infinity : Infinity;
   for (const o of ifelseOptions(t, goals, c, c['w' + level])) {
@@ -165,7 +141,7 @@ function ifelseSearch(t, me, left, level, goals, c, alpha = -Infinity, beta = In
 /** Root-only preferences: killing enemy units (by their worth), and not passing just because the opponent passed. */
 function rootPref(s, o, me, c) {
   let v = 0;
-  if (c.killPref) for (const u of s.units) if (ctl(u) !== me && !byId(o.t, u.id)) v += c.killPref * ifelseWorth(u, c);
+  if (c.killPref) for (const u of s.units) if (ctl(u) !== me && !byId(o.t, u.id)) v += c.killPref * ifelseWorth(s, u, c);
   if (c.passPen && o.a.t === 'pass' && s.passed === other(me)) v -= c.passPen;
   return v;
 }
@@ -182,8 +158,11 @@ function chooseIfelseAction(s, cfg) {
   const now = c.skipPointless ? outcomeOf(root, me) : null;
   const prefMax = (c.killPref || 0) * 1000;
   let best = null;
-  for (const o of ifelseOptions(root, goals, c, c.w1, c.skipPointless ? (a, t) => !isPointless(root, a, t, now, c) : null)) {
-    let value = ifelseSearch(o.t, me, Math.max(0, Math.round(c.depth) - 1), 2, goals, c, best ? best.value - 2e-6 - prefMax : -Infinity), cost = actionCost(root, o.a);
+  // rootRound: the first moves are picked by their value after the round end is played out, so a move that pays off
+  // only at round end (a round-end strike) is not dropped before the search looks at it
+  const left = Math.max(0, Math.round(c.depth) - 1), endScore = c.rootRound ? n => ifelseEnd(n, me, goals, c) : null;
+  for (const o of ifelseOptions(root, goals, c, c.w1, c.skipPointless ? (a, t) => !isPointless(root, a, t, now, c) : null, endScore)) {
+    let value = endScore && left === 0 ? o.v : ifelseSearch(o.t, me, left, 2, goals, c, best ? best.value - 2e-6 - prefMax : -Infinity), cost = actionCost(root, o.a);
     value += rootPref(root, o, me, c);
     if (!best || value > best.value + 1e-6 || (Math.abs(value - best.value) <= 1e-6 && cost < best.cost)) best = { a: o.a, value, cost };
   }

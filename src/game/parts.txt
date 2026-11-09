@@ -32,6 +32,7 @@ js/rules/fx-more.js
 js/rules/ogre-thrower.js
 js/rules/actions.js
 js/ai/opponent.js
+js/ai/keyword-worth.js
 js/ai/benchmark.js
 js/sound.js
 js/view/helpers-icons-cards.js

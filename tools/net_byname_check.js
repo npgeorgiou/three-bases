@@ -25,5 +25,5 @@ const od={...d,arch:{...d.arch,unitNow:oldNames},weights:b64(old)};
 console.log('valid',G.net3Valid(od,F3.hidden));const m=G.net3FromData(od);m.views&&m.views();
 let same=true;oldNames.forEach(k=>{const a=row(m.w,WC,20+names.indexOf(k)),b=row(w,WC,20+names.indexOf(k));for(let i=0;i<CO;i++)if(a[i]!==b[i])same=false;});
 const r0=row(m.w,WC,20+names.indexOf('kw:ranged'));console.log('kept by name',same,'new one starts at zero',r0.every(x=>x===0),'rest same',m.w.subarray(L.blocks.W0.o).every((x,i)=>x===w[L.blocks.W0.o+i]));
-const kf=G.IFELSE_FIELDS.find(x=>x[0].startsWith('kw_'))[0],card=Object.keys(G.CARDS).find(k=>G.CARDS[k].sup&&G.CARDS[k][kf.slice(3)]);
-console.log('keyword worth works',G.kwWorth({card},{})===0&&G.kwWorth({card},{[kf]:5})===5);
+const card=Object.keys(G.CARDS).find(k=>G.CARDS[k].sup&&Number(G.CARDS[k].ranged)===1);
+console.log('keyword worth works',G.kwWorth(null,{card},{})===0&&G.kwWorth(null,{card},{kw_ranged:5})===5);

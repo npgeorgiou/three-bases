@@ -72,16 +72,17 @@ function cmaUpdate(cma, xs, rates) {
   cma.sigma = Math.min(1, cma.sigma * Math.exp((K.cs / K.damps) * (psn / K.chiN - 1)));
 }
 
-const freshTune = (opps = ['bench']) => ({ v: 5, depth: 1, opps, cma: cmaFresh(Array(TUNE_N).fill(0), LAMBDA0), best: { ...IFELSE_DEFAULTS },
+const TUNE_NAMES = IFELSE_FIELDS.map(f => f[0]);
+const freshTune = (opps = ['bench']) => ({ v: 6, depth: 1, opps, fields: TUNE_NAMES, cma: cmaFresh(Array(TUNE_N).fill(0), LAMBDA0), best: { ...IFELSE_DEFAULTS },
   gen: 0, restarts: 0, cand: null, hist: [] });
 function tuneState() {
-  const old = state.ifelse;
-  if (old && old.v === 4 && old.cma && old.cma.mean && old.cma.mean.length === TUNE_N) {   // a tuning of the full form: its centre carries on
-    state.ifelse = { ...freshTune(old.opps), depth: old.depth, gen: old.gen, restarts: old.restarts, best: old.best, lastCheck: old.lastCheck,
-      cma: cmaFresh(old.cma.mean, LAMBDA0), hist: [...(old.hist || []), { gen: old.gen, mark: 'one step size per value' }] };
-  }
-  if (!state.ifelse || state.ifelse.v !== 5) state.ifelse = freshTune(state.ifelse && state.ifelse.opps);   // earlier tunings are replaced
+  if (!state.ifelse || state.ifelse.v !== 6) state.ifelse = freshTune(state.ifelse && state.ifelse.opps);   // earlier tunings are replaced
   const st = state.ifelse;
+  if (st.fields.join() !== TUNE_NAMES.join()) {                        // values added or removed (cards changed): the rest carry on by name
+    const was = Object.fromEntries(st.fields.map((k, i) => [k, st.cma.mean[i]]));
+    st.cma = cmaFresh(TUNE_NAMES.map(k => was[k] ?? 0), st.cma.lambda); st.fields = TUNE_NAMES; st.cand = null;
+    st.best = tuneDecode(st.cma.mean, st.depth); st.hist.push({ gen: st.gen, mark: 'values changed' });
+  }
   st.opps = (st.opps || []).filter(k => TUNE_OPPS().some(([x]) => x === k));
   if (!st.opps.length) st.opps = ['bench'];
   return st;
@@ -114,10 +115,12 @@ function tuneResult(r, job) {
 }
 function finishGeneration() {
   const st = tuneState(), c = st.cand, all = c.w.map((w, i) => w / c.n[i]), L = st.cma.lambda, rates = all.slice(0, L), centre = all[L];
-  cmaUpdate(st.cma, c.xs.slice(0, L), rates);
+  // the centre moves only when the better half of the candidates beat it in the same games; else it stays and the steps get smaller
+  const half = rates.slice().sort((a, b) => b - a).slice(0, Math.floor(L / 2)), better = half.reduce((a, b) => a + b, 0) / half.length > centre;
+  if (better) cmaUpdate(st.cma, c.xs.slice(0, L), rates); else st.cma.sigma *= 0.9;
   st.best = tuneDecode(st.cma.mean, st.depth);
   const avg = rates.reduce((a, b) => a + b, 0) / rates.length, top = Math.max(...rates);
-  st.hist.push({ gen: st.gen, avg, top, centre, lambda: L, sigma: st.cma.sigma });
+  st.hist.push({ gen: st.gen, avg, top, centre, kept: !better, lambda: L, sigma: st.cma.sigma });
   if (st.hist.length > 2000) st.hist.splice(0, st.hist.length - 2000);
   // settled (a tiny step size) → restart around the centre with twice the candidates. A generation average that stops
   // rising is not a reason: with a few hundred games per candidate it stalls by luck, and a restart throws away the step sizes learned.
@@ -283,7 +286,7 @@ function renderTune() {
     svg += `<polyline class="tuavg" points="${gens.map((e, k) => `${X(k)},${Y(e.avg)}`).join(' ')}"></polyline>`;
     const cen = gens.map((e, k) => (e.centre == null ? null : `${X(k)},${Y(e.centre)}`)).filter(Boolean);
     if (cen.length) svg += `<polyline class="tubest" points="${cen.join(' ')}"></polyline>`;
-    svg += gens.map((e, k) => `<circle class="tucand acc" cx="${X(k)}" cy="${Y(e.top)}" r="3.5"><title>Generation ${e.gen + 1}: ifelse AI ${tpct(e.centre)}, candidates' average ${tpct(e.avg)}, best candidate ${tpct(e.top)} (${e.lambda} candidates)</title></circle>`).join('');
+    svg += gens.map((e, k) => `<circle class="tucand acc" cx="${X(k)}" cy="${Y(e.top)}" r="3.5"><title>Generation ${e.gen + 1}: ifelse AI ${tpct(e.centre)}${e.kept ? ' (better half not better: centre kept)' : ''}, candidates' average ${tpct(e.avg)}, best candidate ${tpct(e.top)} (${e.lambda} candidates)</title></circle>`).join('');
     svg += `<text class="xlab" x="${l}" y="${H - 10}">generation ${gens[0].gen + 1}</text><text class="xlab end" x="${W - r}" y="${H - 10}">generation ${gens[gens.length - 1].gen + 1}</text>`;
   }
   $('#tuChart').innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Win rates by generation">${svg}</svg>
