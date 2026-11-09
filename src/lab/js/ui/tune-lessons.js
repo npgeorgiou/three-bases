@@ -1,14 +1,17 @@
 /* =====================================================================
    ifelse tuning by LESSONS (ifelse-lessons.js). A round: if lessons are wanted, games are played to make them (the
-   centre's numbers against the opponents ticked, seats in turn; only the centre's own turns become lessons); then every try (and the centre) is graded on every lesson, in blocks of LESSON_BLOCK lessons, one
+   centre's numbers against the opponents ticked, seats in turn; every one of the centre's own turns becomes a lesson);
+   then every try (and the centre) is graded on every lesson of the kept games, in blocks of LESSON_BLOCK lessons, one
    block per job; its score is 1 minus its average loss; CMA-ES moves the centre as with games. After each round a
-   quarter of the lessons, the oldest, are remade with the new centre; every 10th round the centre plays 100 games
-   against the opponents ticked (looking 1 move ahead), shown on the chart. Lessons are kept in the browser's database.
+   quarter of the games, the oldest, are replaced by new ones played with the new centre; every 5th round the centre
+   plays 100 games against the opponents ticked (looking 1 move ahead), shown on the chart. Lessons are kept in the
+   browser's database.
    ===================================================================== */
-const LESSON_BLOCK = 50, LESSON_RENEW = 0.25, STRENGTH_EVERY = 10, STRENGTH_GAMES = 100;
-/** list: the lessons, oldest first; need: new ones still wanted before the next round; spare: new ones that came in
- *  after enough were made (they wait for the next round's renewal, so the lessons never change during a round). */
-const LESSONS = { list: [], cards: '', need: 0, spare: [], seed: 0 };
+const LESSON_BLOCK = 50, LESSON_RENEW = 0.25, STRENGTH_EVERY = 5, STRENGTH_GAMES = 100;
+/** games: each kept game's lessons, oldest game first; list: all their lessons in one list (what the workers grade);
+ *  need: new games still wanted before the next round; spare: new games that came in after enough were played (they
+ *  wait for the next round's renewal, so the lessons never change during a round). */
+const LESSONS = { games: [], list: [], cards: '', need: 0, spare: [], seed: 0 };
 /** The cards' stamp: lessons made with other cards (stats, texts) are thrown away. */
 const lessonCards = () => { let h = 2166136261; const t = JSON.stringify(Object.entries(CARDS).map(([k, c]) => [k, c.sup, c.str, c.def, c.text])); for (let i = 0; i < t.length; i++) { h ^= t.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; } return h.toString(36); };
 const lessonDb = new Promise(resolve => {
@@ -21,26 +24,25 @@ const lessonDb = new Promise(resolve => {
 });
 lessonDb.then(db => {
   if (!db) return;
-  const req = db.transaction('lessons', 'readonly').objectStore('lessons').get('set');
-  req.onsuccess = () => { const v = req.result; if (v && v.cards === lessonCards() && v.list.every(l => l.result != null)) Object.assign(LESSONS, { list: v.list.map(lessonOnly), cards: v.cards, need: v.need || 0, spare: (v.spare || []).map(lessonOnly), seed: v.seed || 0 }); renderTuneStatus(); };
+  const store = db.transaction('lessons', 'readwrite').objectStore('lessons'), req = store.get('games');
+  store.delete('set');                                                // lessons kept without their games can't be counted by game
+  req.onsuccess = () => { const v = req.result; if (v && v.cards === lessonCards()) { Object.assign(LESSONS, { games: v.games, cards: v.cards, need: v.need || 0, spare: v.spare || [], seed: v.seed || 0 }); LESSONS.list = LESSONS.games.flat(); } renderTuneStatus(); };
 });
-/** A lesson as kept: the position, the side to move and the result (anything else saved with it is dropped). */
-const lessonOnly = l => ({ s: l.s, side: l.side, result: l.result });
 function saveLessons() {
-  lessonDb.then(db => { if (db) db.transaction('lessons', 'readwrite').objectStore('lessons').put({ list: LESSONS.list, cards: LESSONS.cards, need: LESSONS.need, spare: LESSONS.spare, seed: LESSONS.seed }, 'set'); });
+  lessonDb.then(db => { if (db) db.transaction('lessons', 'readwrite').objectStore('lessons').put({ games: LESSONS.games, cards: LESSONS.cards, need: LESSONS.need, spare: LESSONS.spare, seed: LESSONS.seed }, 'games'); });
 }
-const lessonTarget = () => tuneState().lessonN || 1000;               // how many lessons each try is graded on (kept with the tuning)
-/** Lessons are ready when there are enough, all made with these cards, and none are still wanted for this round. */
+const lessonTarget = () => tuneState().lessonGames || 200;            // how many games' lessons each try is graded on (kept with the tuning)
+/** Lessons are ready when enough games are kept, all played with these cards, and none are still wanted for this round. */
 function lessonsReady() {
-  if (LESSONS.cards !== lessonCards()) { LESSONS.list = []; LESSONS.spare = []; LESSONS.cards = lessonCards(); }
-  if (LESSONS.list.length < lessonTarget() && LESSONS.need < lessonTarget() - LESSONS.list.length) LESSONS.need = lessonTarget() - LESSONS.list.length;
+  if (LESSONS.cards !== lessonCards()) { LESSONS.games = []; LESSONS.list = []; LESSONS.spare = []; LESSONS.cards = lessonCards(); }
+  if (LESSONS.games.length < lessonTarget() && LESSONS.need < lessonTarget() - LESSONS.games.length) LESSONS.need = lessonTarget() - LESSONS.games.length;
   return LESSONS.need === 0;
 }
-const lessonBlocks = () => Math.ceil(lessonTarget() / LESSON_BLOCK);
-/** After a round: a quarter of the lessons are remade with the new centre; every 10th round the centre plays the Benchmark. */
+const lessonBlocks = () => Math.max(1, Math.ceil(LESSONS.list.length / LESSON_BLOCK));
+/** After a round: a quarter of the games are replaced by new ones with the new centre; every 5th round the centre plays the opponents. */
 function lessonsAfterRound(st) {
   LESSONS.need = Math.max(LESSONS.need, Math.ceil(lessonTarget() * LESSON_RENEW));
-  addLessons(LESSONS.spare.splice(0, LESSONS.need));                  // the spare ones from the last making count first
+  addGames(LESSONS.spare.splice(0, LESSONS.need));                    // the spare games from the last making count first
   if (st.gen % STRENGTH_EVERY === 0) st.strength = { gen: st.gen - 1, values: { ...st.best }, res: Array(STRENGTH_GAMES).fill(null) };
   saveLessons();
 }
@@ -71,13 +73,14 @@ function lessonJob(st, c) {
     msg: { type: 'lessonGrade', cfg: ifelseFull(tuneDecode(c.xs[i], 1)), from: gi * LESSON_BLOCK, to: (gi + 1) * LESSON_BLOCK } };
 }
 /** All lessons thrown away (Start over): new ones are made at the next start, with the starting values. */
-function clearLessons() { LESSONS.list = []; LESSONS.spare = []; LESSONS.need = 0; saveLessons(); renderTuneStatus(); }
-/** New lessons go in at the end; the oldest go when there are more than wanted. */
-function addLessons(ls) {
-  if (!ls.length) return;
-  LESSONS.list.push(...ls);
-  if (LESSONS.list.length > lessonTarget()) LESSONS.list.splice(0, LESSONS.list.length - lessonTarget());
-  LESSONS.need = Math.max(0, LESSONS.need - ls.length);
+function clearLessons() { LESSONS.games = []; LESSONS.list = []; LESSONS.spare = []; LESSONS.need = 0; saveLessons(); renderTuneStatus(); }
+/** New games go in at the end; the oldest go when there are more than wanted. */
+function addGames(gs) {
+  if (!gs.length) return;
+  LESSONS.games.push(...gs);
+  if (LESSONS.games.length > lessonTarget()) LESSONS.games.splice(0, LESSONS.games.length - lessonTarget());
+  LESSONS.list = LESSONS.games.flat();
+  LESSONS.need = Math.max(0, LESSONS.need - gs.length);
 }
 function lessonResult(r, job) {
   const st = tuneState();
@@ -94,10 +97,9 @@ function lessonResult(r, job) {
     return;
   }
   if (job.lesson === 'make') {
-    const take = r.lessons.slice(0, LESSONS.need);
-    LESSONS.spare.push(...r.lessons.slice(take.length));
-    if (LESSONS.spare.length > lessonTarget()) LESSONS.spare.splice(0, LESSONS.spare.length - lessonTarget());
-    addLessons(take);
+    if (!r.lessons.length) return;                                    // unfinished game: no winner, it doesn't count
+    if (LESSONS.need > 0) addGames([r.lessons]);
+    else { LESSONS.spare.push(r.lessons); if (LESSONS.spare.length > lessonTarget()) LESSONS.spare.splice(0, LESSONS.spare.length - lessonTarget()); }
     if (LESSONS.need === 0) saveLessons();
     renderTuneStatus();
     return;

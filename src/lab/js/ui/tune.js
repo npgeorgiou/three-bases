@@ -84,6 +84,7 @@ function tuneState() {
     st.best = tuneDecode(st.cma.mean, st.depth); st.hist.push({ gen: st.gen, mark: 'values changed' });
   }
   if (!st.mode) st.mode = 'lessons';
+  if ('lessonN' in st) { delete st.lessonN; st.cand = null; }        // lessons are counted by games now: the round starts again
   st.opps = (st.opps || []).filter(k => TUNE_OPPS().some(([x]) => x === k));
   if (!st.opps.length) st.opps = ['bench'];
   return st;
@@ -223,7 +224,7 @@ $('#tuMode').addEventListener('change', () => {
 $('#tuLessons').addEventListener('change', () => {
   const st = tuneState();
   if (tune.running) pauseTune();
-  st.lessonN = Math.max(100, Math.round(Number($('#tuLessons').value) || 1000)); st.cand = null; save(); renderTune();
+  st.lessonGames = Math.max(100, Math.round(Number($('#tuLessons').value) || 200)); st.cand = null; save(); renderTune();
 });
 
 /** A new tuning depth: the generation under way starts again; the search itself carries on. */
@@ -291,8 +292,8 @@ $('#tuReset').addEventListener('click', async () => {
   if (!(await askYes('Start the ifelse AI over?', 'Its values go back to the starting values, its history is cleared and its lessons are thrown away (they were rated with the old values).', 'Start over'))) return;
   const was = tune.running;
   if (was) pauseTune();
-  const n = tuneState().lessonN;
-  state.ifelse = freshTune(tuneState().opps); if (n) state.ifelse.lessonN = n; save();
+  const n = tuneState().lessonGames;
+  state.ifelse = freshTune(tuneState().opps); if (n) state.ifelse.lessonGames = n; save();
   clearLessons();
   if (was) startTune(); else renderTune();
 });
@@ -313,7 +314,7 @@ function renderTuneStatus() {
   const done = c && c.res ? tuneDone(c) : 0, total = c && c.res ? c.G * c.res.length : 0;
   const lessons = st.mode === 'lessons', making = lessons && LESSONS.need > 0, lastBench = [...st.hist].reverse().find(e => e.bench != null);
   $('#tuStatus').textContent = (tune.running ? (making ? 'Making lessons' : 'Tuning') : st.gen || c ? 'Paused' : 'Not started') +
-    (lessons ? ` · ${LESSONS.list.length} lessons` + (LESSONS.need ? `, making ${LESSONS.need} new` : '') + (st.strength ? `, games against the opponents ${st.strength.res.filter(x => x !== null).length}/${STRENGTH_GAMES}` : '') : '') +
+    (lessons ? ` · ${LESSONS.list.length} lessons from ${LESSONS.games.length} games` + (LESSONS.need ? `, playing ${LESSONS.need} new games` : '') + (st.strength ? `, games against the opponents ${st.strength.res.filter(x => x !== null).length}/${STRENGTH_GAMES}` : '') : '') +
     ` · generation ${st.gen + 1} · ${st.cma.lambda} candidates` + (c ? ` · ${done}/${total} ${lessons ? 'blocks of lessons' : 'games'}` : '') +
     (last ? ` · last generation${lessons ? ' (lesson grades, not games)' : ''}: the ifelse AI ${tpct(last.centre)}, candidates' average ${tpct(last.avg)}, best candidate ${tpct(last.top)}` : '') +
     (lessons && lastBench ? ` · games won against the opponents (generation ${lastBench.gen + 1}): ${tpct(lastBench.bench)}` : '') +
@@ -323,7 +324,7 @@ function renderTune() {
   const st = tuneState();
   $('#tuOpps').innerHTML = '<span class="tuoppl">Opponents</span>' + TUNE_OPPS().map(([k, name]) =>
     `<label class="tuopp"><input type="checkbox" value="${k}" ${st.opps.includes(k) ? 'checked' : ''}> ${esc(name)}</label>`).join('')
-    + `<span class="note">${st.mode === 'lessons' ? 'They play the centre in the games that make lessons and in the games every 10th round, shared equally' : 'Games are shared equally among them'}; at least one.</span>`;
+    + `<span class="note">${st.mode === 'lessons' ? 'They play the centre in the games that make lessons and in the games every 5th round, shared equally' : 'Games are shared equally among them'}; at least one.</span>`;
   for (const b of $('#tuOpps').querySelectorAll('input')) b.addEventListener('change', () => {
     const on = [...$('#tuOpps').querySelectorAll('input:checked')].map(x => x.value);
     if (!on.length) { b.checked = true; return; }
@@ -366,7 +367,7 @@ function renderTune() {
     svg += `<text class="xlab" x="${l}" y="${H - 10}">generation ${gens[0].gen + 1}</text><text class="xlab end" x="${W - r}" y="${H - 10}">generation ${gens[gens.length - 1].gen + 1}</text>`;
   }
   $('#tuChart').innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Win rates by generation">${svg}</svg>
-    <div class="tulegend">${st.mode === 'lessons' ? 'Lesson grades (not games): ' : 'Win rates: '}<span class="lg best"></span>the ifelse AI itself (the centre) <span class="lg avg"></span>candidates' average <span class="lg acc"></span>best candidate${st.mode === 'lessons' ? ' <span class="lg bench"></span>games won against the opponents ticked (every 10th round, right scale)' : ''}</div>`;
+    <div class="tulegend">${st.mode === 'lessons' ? 'Lesson grades (not games): ' : 'Win rates: '}<span class="lg best"></span>the ifelse AI itself (the centre) <span class="lg avg"></span>candidates' average <span class="lg acc"></span>best candidate${st.mode === 'lessons' ? ' <span class="lg bench"></span>games won against the opponents ticked (every 5th round, right scale)' : ''}</div>`;
   const fmt = v => (Number.isInteger(v) ? String(v) : Math.abs(v) >= 10 ? v.toFixed(1) : v.toFixed(3));
   $('#tuTable').innerHTML = `<table class="tutable"><thead><tr><th>Value</th><th>Start</th><th>ifelse AI (centre)</th></tr></thead><tbody>${
     IFELSE_FIELDS.map(([k, text]) => { const d = IFELSE_DEFAULTS[k], v = st.best[k] ?? d, ch = Math.abs(v - d) > 1e-9;

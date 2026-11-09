@@ -301,7 +301,7 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
   <p class="note tunote">An AI that sees both hands and searches the real position, with no rules of thumb: every judgement is a weighted term. All its values (weights, how far and how wide it looks, switches) are tuned at once with CMA-ES against the opponents you tick, starting from the Benchmark's values. Each generation, several candidates around a centre (every value changed by a different amount, in pairs: one up, its twin down by the same amount) play the same set of games; the centre moves toward the better half, and the method learns how far to change each value. The next generation also plays the centre from before the move: if that one scores more, the centre goes back to it and the steps get smaller. The centre itself, the ifelse AI as it is now, plays the same games too: the gold line is its win rate, the dashed line the candidates' average (lower, since most changes are tries that fail). It restarts with more candidates once its steps have become tiny. Draws count half.</p>
   <div class="setup">
     <label title="Lessons: positions from games and who went on to win; the ifelse AI at depth 1 is tuned so its score of each position predicts the winner. Games: whole games against the opponents ticked.">Tune by <select id="tuMode"><option value="lessons">Lessons: predict who won (foresight at depth 1)</option><option value="games">Games against the opponents</option></select></label>
-    <label class="tulessons" title="How many lessons each candidate is graded on">Lessons <input type="number" id="tuLessons" min="100" max="20000" step="50" value="1000"></label>
+    <label class="tulessons" title="How many games the lessons come from: each candidate is graded on every board of these games">Games <input type="number" id="tuLessons" min="100" max="5000" step="100" value="200"></label>
     <label class="tugames">Games per candidate <input type="number" id="tuGames" min="20" max="2000" step="2" value="300"></label>
     <label>Games at once <input type="number" id="tuThreads" min="1" max="32"></label>
     <label class="tugames" title="How far the ifelse AI and the Benchmark look ahead in tuning games; lower is much faster">Search depth while tuning <select id="tuDepth"><option value="1">1</option><option value="2">2</option><option value="3">3 (the Benchmark's)</option></select></label>
@@ -7567,6 +7567,7 @@ function tuneState() {
     st.best = tuneDecode(st.cma.mean, st.depth); st.hist.push({ gen: st.gen, mark: 'values changed' });
   }
   if (!st.mode) st.mode = 'lessons';
+  if ('lessonN' in st) { delete st.lessonN; st.cand = null; }        // lessons are counted by games now: the round starts again
   st.opps = (st.opps || []).filter(k => TUNE_OPPS().some(([x]) => x === k));
   if (!st.opps.length) st.opps = ['bench'];
   return st;
@@ -7706,7 +7707,7 @@ $('#tuMode').addEventListener('change', () => {
 $('#tuLessons').addEventListener('change', () => {
   const st = tuneState();
   if (tune.running) pauseTune();
-  st.lessonN = Math.max(100, Math.round(Number($('#tuLessons').value) || 1000)); st.cand = null; save(); renderTune();
+  st.lessonGames = Math.max(100, Math.round(Number($('#tuLessons').value) || 200)); st.cand = null; save(); renderTune();
 });
 
 /** A new tuning depth: the generation under way starts again; the search itself carries on. */
@@ -7774,8 +7775,8 @@ $('#tuReset').addEventListener('click', async () => {
   if (!(await askYes('Start the ifelse AI over?', 'Its values go back to the starting values, its history is cleared and its lessons are thrown away (they were rated with the old values).', 'Start over'))) return;
   const was = tune.running;
   if (was) pauseTune();
-  const n = tuneState().lessonN;
-  state.ifelse = freshTune(tuneState().opps); if (n) state.ifelse.lessonN = n; save();
+  const n = tuneState().lessonGames;
+  state.ifelse = freshTune(tuneState().opps); if (n) state.ifelse.lessonGames = n; save();
   clearLessons();
   if (was) startTune(); else renderTune();
 });
@@ -7796,7 +7797,7 @@ function renderTuneStatus() {
   const done = c && c.res ? tuneDone(c) : 0, total = c && c.res ? c.G * c.res.length : 0;
   const lessons = st.mode === 'lessons', making = lessons && LESSONS.need > 0, lastBench = [...st.hist].reverse().find(e => e.bench != null);
   $('#tuStatus').textContent = (tune.running ? (making ? 'Making lessons' : 'Tuning') : st.gen || c ? 'Paused' : 'Not started') +
-    (lessons ? ` · ${LESSONS.list.length} lessons` + (LESSONS.need ? `, making ${LESSONS.need} new` : '') + (st.strength ? `, games against the opponents ${st.strength.res.filter(x => x !== null).length}/${STRENGTH_GAMES}` : '') : '') +
+    (lessons ? ` · ${LESSONS.list.length} lessons from ${LESSONS.games.length} games` + (LESSONS.need ? `, playing ${LESSONS.need} new games` : '') + (st.strength ? `, games against the opponents ${st.strength.res.filter(x => x !== null).length}/${STRENGTH_GAMES}` : '') : '') +
     ` · generation ${st.gen + 1} · ${st.cma.lambda} candidates` + (c ? ` · ${done}/${total} ${lessons ? 'blocks of lessons' : 'games'}` : '') +
     (last ? ` · last generation${lessons ? ' (lesson grades, not games)' : ''}: the ifelse AI ${tpct(last.centre)}, candidates' average ${tpct(last.avg)}, best candidate ${tpct(last.top)}` : '') +
     (lessons && lastBench ? ` · games won against the opponents (generation ${lastBench.gen + 1}): ${tpct(lastBench.bench)}` : '') +
@@ -7806,7 +7807,7 @@ function renderTune() {
   const st = tuneState();
   $('#tuOpps').innerHTML = '<span class="tuoppl">Opponents</span>' + TUNE_OPPS().map(([k, name]) =>
     `<label class="tuopp"><input type="checkbox" value="${k}" ${st.opps.includes(k) ? 'checked' : ''}> ${esc(name)}</label>`).join('')
-    + `<span class="note">${st.mode === 'lessons' ? 'They play the centre in the games that make lessons and in the games every 10th round, shared equally' : 'Games are shared equally among them'}; at least one.</span>`;
+    + `<span class="note">${st.mode === 'lessons' ? 'They play the centre in the games that make lessons and in the games every 5th round, shared equally' : 'Games are shared equally among them'}; at least one.</span>`;
   for (const b of $('#tuOpps').querySelectorAll('input')) b.addEventListener('change', () => {
     const on = [...$('#tuOpps').querySelectorAll('input:checked')].map(x => x.value);
     if (!on.length) { b.checked = true; return; }
@@ -7849,7 +7850,7 @@ function renderTune() {
     svg += `<text class="xlab" x="${l}" y="${H - 10}">generation ${gens[0].gen + 1}</text><text class="xlab end" x="${W - r}" y="${H - 10}">generation ${gens[gens.length - 1].gen + 1}</text>`;
   }
   $('#tuChart').innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Win rates by generation">${svg}</svg>
-    <div class="tulegend">${st.mode === 'lessons' ? 'Lesson grades (not games): ' : 'Win rates: '}<span class="lg best"></span>the ifelse AI itself (the centre) <span class="lg avg"></span>candidates' average <span class="lg acc"></span>best candidate${st.mode === 'lessons' ? ' <span class="lg bench"></span>games won against the opponents ticked (every 10th round, right scale)' : ''}</div>`;
+    <div class="tulegend">${st.mode === 'lessons' ? 'Lesson grades (not games): ' : 'Win rates: '}<span class="lg best"></span>the ifelse AI itself (the centre) <span class="lg avg"></span>candidates' average <span class="lg acc"></span>best candidate${st.mode === 'lessons' ? ' <span class="lg bench"></span>games won against the opponents ticked (every 5th round, right scale)' : ''}</div>`;
   const fmt = v => (Number.isInteger(v) ? String(v) : Math.abs(v) >= 10 ? v.toFixed(1) : v.toFixed(3));
   $('#tuTable').innerHTML = `<table class="tutable"><thead><tr><th>Value</th><th>Start</th><th>ifelse AI (centre)</th></tr></thead><tbody>${
     IFELSE_FIELDS.map(([k, text]) => { const d = IFELSE_DEFAULTS[k], v = st.best[k] ?? d, ch = Math.abs(v - d) > 1e-9;
@@ -7859,15 +7860,18 @@ function renderTune() {
 
 /* =====================================================================
    ifelse tuning by LESSONS (ifelse-lessons.js). A round: if lessons are wanted, games are played to make them (the
-   centre's numbers against the opponents ticked, seats in turn; only the centre's own turns become lessons); then every try (and the centre) is graded on every lesson, in blocks of LESSON_BLOCK lessons, one
+   centre's numbers against the opponents ticked, seats in turn; every one of the centre's own turns becomes a lesson);
+   then every try (and the centre) is graded on every lesson of the kept games, in blocks of LESSON_BLOCK lessons, one
    block per job; its score is 1 minus its average loss; CMA-ES moves the centre as with games. After each round a
-   quarter of the lessons, the oldest, are remade with the new centre; every 10th round the centre plays 100 games
-   against the opponents ticked (looking 1 move ahead), shown on the chart. Lessons are kept in the browser's database.
+   quarter of the games, the oldest, are replaced by new ones played with the new centre; every 5th round the centre
+   plays 100 games against the opponents ticked (looking 1 move ahead), shown on the chart. Lessons are kept in the
+   browser's database.
    ===================================================================== */
-const LESSON_BLOCK = 50, LESSON_RENEW = 0.25, STRENGTH_EVERY = 10, STRENGTH_GAMES = 100;
-/** list: the lessons, oldest first; need: new ones still wanted before the next round; spare: new ones that came in
- *  after enough were made (they wait for the next round's renewal, so the lessons never change during a round). */
-const LESSONS = { list: [], cards: '', need: 0, spare: [], seed: 0 };
+const LESSON_BLOCK = 50, LESSON_RENEW = 0.25, STRENGTH_EVERY = 5, STRENGTH_GAMES = 100;
+/** games: each kept game's lessons, oldest game first; list: all their lessons in one list (what the workers grade);
+ *  need: new games still wanted before the next round; spare: new games that came in after enough were played (they
+ *  wait for the next round's renewal, so the lessons never change during a round). */
+const LESSONS = { games: [], list: [], cards: '', need: 0, spare: [], seed: 0 };
 /** The cards' stamp: lessons made with other cards (stats, texts) are thrown away. */
 const lessonCards = () => { let h = 2166136261; const t = JSON.stringify(Object.entries(CARDS).map(([k, c]) => [k, c.sup, c.str, c.def, c.text])); for (let i = 0; i < t.length; i++) { h ^= t.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; } return h.toString(36); };
 const lessonDb = new Promise(resolve => {
@@ -7880,26 +7884,25 @@ const lessonDb = new Promise(resolve => {
 });
 lessonDb.then(db => {
   if (!db) return;
-  const req = db.transaction('lessons', 'readonly').objectStore('lessons').get('set');
-  req.onsuccess = () => { const v = req.result; if (v && v.cards === lessonCards() && v.list.every(l => l.result != null)) Object.assign(LESSONS, { list: v.list.map(lessonOnly), cards: v.cards, need: v.need || 0, spare: (v.spare || []).map(lessonOnly), seed: v.seed || 0 }); renderTuneStatus(); };
+  const store = db.transaction('lessons', 'readwrite').objectStore('lessons'), req = store.get('games');
+  store.delete('set');                                                // lessons kept without their games can't be counted by game
+  req.onsuccess = () => { const v = req.result; if (v && v.cards === lessonCards()) { Object.assign(LESSONS, { games: v.games, cards: v.cards, need: v.need || 0, spare: v.spare || [], seed: v.seed || 0 }); LESSONS.list = LESSONS.games.flat(); } renderTuneStatus(); };
 });
-/** A lesson as kept: the position, the side to move and the result (anything else saved with it is dropped). */
-const lessonOnly = l => ({ s: l.s, side: l.side, result: l.result });
 function saveLessons() {
-  lessonDb.then(db => { if (db) db.transaction('lessons', 'readwrite').objectStore('lessons').put({ list: LESSONS.list, cards: LESSONS.cards, need: LESSONS.need, spare: LESSONS.spare, seed: LESSONS.seed }, 'set'); });
+  lessonDb.then(db => { if (db) db.transaction('lessons', 'readwrite').objectStore('lessons').put({ games: LESSONS.games, cards: LESSONS.cards, need: LESSONS.need, spare: LESSONS.spare, seed: LESSONS.seed }, 'games'); });
 }
-const lessonTarget = () => tuneState().lessonN || 1000;               // how many lessons each try is graded on (kept with the tuning)
-/** Lessons are ready when there are enough, all made with these cards, and none are still wanted for this round. */
+const lessonTarget = () => tuneState().lessonGames || 200;            // how many games' lessons each try is graded on (kept with the tuning)
+/** Lessons are ready when enough games are kept, all played with these cards, and none are still wanted for this round. */
 function lessonsReady() {
-  if (LESSONS.cards !== lessonCards()) { LESSONS.list = []; LESSONS.spare = []; LESSONS.cards = lessonCards(); }
-  if (LESSONS.list.length < lessonTarget() && LESSONS.need < lessonTarget() - LESSONS.list.length) LESSONS.need = lessonTarget() - LESSONS.list.length;
+  if (LESSONS.cards !== lessonCards()) { LESSONS.games = []; LESSONS.list = []; LESSONS.spare = []; LESSONS.cards = lessonCards(); }
+  if (LESSONS.games.length < lessonTarget() && LESSONS.need < lessonTarget() - LESSONS.games.length) LESSONS.need = lessonTarget() - LESSONS.games.length;
   return LESSONS.need === 0;
 }
-const lessonBlocks = () => Math.ceil(lessonTarget() / LESSON_BLOCK);
-/** After a round: a quarter of the lessons are remade with the new centre; every 10th round the centre plays the Benchmark. */
+const lessonBlocks = () => Math.max(1, Math.ceil(LESSONS.list.length / LESSON_BLOCK));
+/** After a round: a quarter of the games are replaced by new ones with the new centre; every 5th round the centre plays the opponents. */
 function lessonsAfterRound(st) {
   LESSONS.need = Math.max(LESSONS.need, Math.ceil(lessonTarget() * LESSON_RENEW));
-  addLessons(LESSONS.spare.splice(0, LESSONS.need));                  // the spare ones from the last making count first
+  addGames(LESSONS.spare.splice(0, LESSONS.need));                    // the spare games from the last making count first
   if (st.gen % STRENGTH_EVERY === 0) st.strength = { gen: st.gen - 1, values: { ...st.best }, res: Array(STRENGTH_GAMES).fill(null) };
   saveLessons();
 }
@@ -7930,13 +7933,14 @@ function lessonJob(st, c) {
     msg: { type: 'lessonGrade', cfg: ifelseFull(tuneDecode(c.xs[i], 1)), from: gi * LESSON_BLOCK, to: (gi + 1) * LESSON_BLOCK } };
 }
 /** All lessons thrown away (Start over): new ones are made at the next start, with the starting values. */
-function clearLessons() { LESSONS.list = []; LESSONS.spare = []; LESSONS.need = 0; saveLessons(); renderTuneStatus(); }
-/** New lessons go in at the end; the oldest go when there are more than wanted. */
-function addLessons(ls) {
-  if (!ls.length) return;
-  LESSONS.list.push(...ls);
-  if (LESSONS.list.length > lessonTarget()) LESSONS.list.splice(0, LESSONS.list.length - lessonTarget());
-  LESSONS.need = Math.max(0, LESSONS.need - ls.length);
+function clearLessons() { LESSONS.games = []; LESSONS.list = []; LESSONS.spare = []; LESSONS.need = 0; saveLessons(); renderTuneStatus(); }
+/** New games go in at the end; the oldest go when there are more than wanted. */
+function addGames(gs) {
+  if (!gs.length) return;
+  LESSONS.games.push(...gs);
+  if (LESSONS.games.length > lessonTarget()) LESSONS.games.splice(0, LESSONS.games.length - lessonTarget());
+  LESSONS.list = LESSONS.games.flat();
+  LESSONS.need = Math.max(0, LESSONS.need - gs.length);
 }
 function lessonResult(r, job) {
   const st = tuneState();
@@ -7953,10 +7957,9 @@ function lessonResult(r, job) {
     return;
   }
   if (job.lesson === 'make') {
-    const take = r.lessons.slice(0, LESSONS.need);
-    LESSONS.spare.push(...r.lessons.slice(take.length));
-    if (LESSONS.spare.length > lessonTarget()) LESSONS.spare.splice(0, LESSONS.spare.length - lessonTarget());
-    addLessons(take);
+    if (!r.lessons.length) return;                                    // unfinished game: no winner, it doesn't count
+    if (LESSONS.need > 0) addGames([r.lessons]);
+    else { LESSONS.spare.push(r.lessons); if (LESSONS.spare.length > lessonTarget()) LESSONS.spare.splice(0, LESSONS.spare.length - lessonTarget()); }
     if (LESSONS.need === 0) saveLessons();
     renderTuneStatus();
     return;
