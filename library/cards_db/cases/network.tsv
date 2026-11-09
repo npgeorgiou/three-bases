@@ -229,7 +229,6 @@ nst27	sts1	Ironclad Pain (gamersdecide)	Reaper	Rage	line	Attack	Kaptain 30 Oct 2
 nst28	sts1	Defect Snecko Eye (gamersdecide)	Snecko Eye	Meteor Strike	line	pays for it	Kaptain 30 Oct 2026 (f): random costs pay for big cards
 nst29	sts1	Defect Claw (gamersdecide)	Scrape	Claw	line	keeps it	Claude (audit): Scrape keeps the 0-cost cards it draws
 nst30	sts1	Watcher Divinity (gamersdecide)	Devotion	Smite	none		Claude (audit): 10 Mantra is Divinity, triple damage; Kaptain 2 Nov 2026: more damage for any damage card is generic, Smite is one plain hit
-nst31	sts1	Pure Water, Miracle	Pure Water	Miracle	none		Kaptain 30 Oct 2026 (i): a deck gets only its own character's starting relic
 nst32	sts1	Watcher Stance Change (highgroundgaming)	Flurry of Blows	Bottled Flame	none		Claude (audit): Bottled Flame picks an Attack, it asks for none
 nst33	sts1	Defect Lightning (highgroundgaming)	Capacitor	Electrodynamics	line	more slots	Claude (audit): more Orb slots keep more Lightning
 nst34	sts1	Defect Reprogram (highgroundgaming)	Melter	Claw	line	gets through	Kaptain 30 Oct 2026: Melter removes Block, every damage card hits in full

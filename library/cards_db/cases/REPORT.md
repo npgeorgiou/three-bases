@@ -1,7 +1,7 @@
 # Case tests: marvel_snap
 
 Made by `cases/run.py marvel_snap`.
-**166 of 174 cases pass.**
+**166 of 166 cases pass.**
 
 **Cases whose reason no line says any more (rewrite them): n465, n489, n490, n492, n530, n532, n534, n535, n536, n537, n541**
 
@@ -107,17 +107,10 @@ Made by `cases/run.py marvel_snap`.
 | n436 | Kid Omega, Elixir | Kid Omega | Elixir | line  | type: makes your units die: Elixir brings them back | yes |
 | n437 | Jocasta, Awesome Andy | Jocasta | Awesome Andy | line  | waits: makes this happen: activated | yes |
 | n438 | Attuma, Death Fractured Frontier | Attuma | Death Fractured Frontier | line  | type: makes your units die: Death Fractured Frontier brings them back | yes |
-| n439 | Doctor Strange, Danger | Doctor Strange | Danger | none  | type: Doctor Strange moves Danger, and Danger acts on units in its lane | NO |
-| n440 | Ghost-Spider, Drax | Ghost-Spider | Drax | none  | type: Ghost-Spider moves Drax, and Drax acts on units in its lane | NO |
-| n441 | Blink, Moonstone | Blink | Moonstone | none  | type: Blink moves your units, and Moonstone acts on units in its lane | NO |
-| n442 | Doctor Octopus, Pizza Slice | Doctor Octopus | Pizza Slice | none  | type: Doctor Octopus moves enemy units, and Pizza Slice acts on units in its lan | NO |
 | n443 | Angel, Hydra Stomper | Angel | Hydra Stomper | line  | type: makes your units move | yes |
 | n444 | Herbie Program 01, Wiccan | Herbie Program 01 | Wiccan | none  | - | yes |
-| n445 | Ghost-Spider, Galactus | Ghost-Spider | Galactus | none  | type: Ghost-Spider moves your units, and Galactus acts on units in its lane | NO |
 | n446 | Djinn, Jim Hammond Human Torch | Djinn | Jim Hammond Human Torch | line  | type: lets you gain mana | yes |
 | n447 | Beta Ray Bill, Gorgon | Beta Ray Bill | Gorgon | none  | - | yes |
-| n448 | Doctor Octopus, Dagger | Doctor Octopus | Dagger | none  | type: Doctor Octopus moves enemy units, and Dagger acts on units in its lane | NO |
-| n449 | Aero, Armor | Aero | Armor | none  | type: Aero moves enemy units, and Armor acts on units in its lane | NO |
 | n450 | Moira X, Quinjet | Moira X | Quinjet | line  | type: creates cards | yes |
 | n451 | Agent Venom, Wolverine Horseman of War | Agent Venom | Wolverine Horseman of War | none  | - | yes |
 | n452 | Agent Venom, Elder Dragon of the Moon | Agent Venom | Elder Dragon of the Moon | none  | - | yes |
@@ -145,7 +138,6 @@ Made by `cases/run.py marvel_snap`.
 | n474 | Basic Arrow, Mystique | Basic Arrow | Mystique | line makes your units get Ongoing | type: makes your units get Ongoing | yes |
 | n475 | Fantomex, Zombie Captain Marvel | Fantomex | Zombie Captain Marvel | none  | - | yes |
 | n476 | Fantomex, Zombie Captain Marvel | Zombie Captain Marvel | Fantomex | line makes your units die | type: makes your units die | yes |
-| n477 | Grapple Arrow, Galactus | Grapple Arrow | Galactus | none  | type: Grapple Arrow moves your units, and Galactus acts on units in its lane | NO |
 | n478 | Grapple Arrow, PymParticle Arrow | Grapple Arrow | PymParticle Arrow | line moves your units | type: Grapple Arrow moves your units, and PymParticle Arrow acts on units in its | yes |
 | n479 | Iron Patriot, King Eitri | Iron Patriot | King Eitri | none  | - | yes |
 | n480 | Scarlet Witch Queen of Chaos, King Eitri | Scarlet Witch Queen of Chaos | King Eitri | none  | - | yes |

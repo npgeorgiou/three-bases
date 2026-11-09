@@ -1,2 +1,0 @@
-FIXED: network.py made-by-description needs now skip a made card whose "attr is X" differs from the need's "attr is Y" (Convergence makes Scoiatael, Pavko Gale needs Neutral). Files: network.py (made_clash, line ~2023), cases/network.tsv. Cases: n700, n701.
-Other games: any need with an "attr is value" filter and a card made by description with another value of that attr loses its "makes ..." line; other 6 table lines of C19 were not listed in the sheet, not checked.

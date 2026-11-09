@@ -94,8 +94,7 @@ push, give network.html to Kaptain.
 **The game itself** has its own: tools/build.py, tools/simtest.js, tools/smoke.js (CLAUDE.md).
 
 ## State (7 Nov 2026)
-- All 10 games imported. Kaptain approved Runeterra and Into the Breach; Slay the Spire done; Inscryption reviewed; Stormbound,
-  Monster Train, Faeria, Duelyst, Marvel Snap and Gwent (chat 2 done 7 Nov 2026) wait for his check of their deck networks.
+- All 10 games imported and checked; Kaptain counts them DONE (9 Nov 2026). He does not check deck pages.
 - Lines: links.sqlite rows per game (counts change with every rebuild; `status.py`). The next case id is n700.
 - Known gaps with no fix planned: Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain);
   Monster Train's Olde Magic record lists the wiki's choices with no numbers; Stormbound's Fort of Ebonrock has no ability.
@@ -110,12 +109,8 @@ values, the cards it creates or names), card wording written to a fixed template
 game's own rulebook, and players' combos and decks that test the lines. Completeness alone is not enough.
 
 ## Open work, in Kaptain's order
-1. **The lines changed on 7 Nov 2026** (Duelyst +574, Marvel Snap +131, Into the Breach +83, Gwent +147 -120, others few): being read
-   (checks/nov7/, 9 Nov 2026); only causes that touch many lines get fixed.
-2. Runeterra Attune goes off when summoned (glossary) but is not counted as a summon effect: the fix changes its concept
-   (resource_gain), so it needs Kaptain's OK.
-3. Marvel Snap: design questions 04 and 05 (sacrifice and draw) find almost nothing in it.
-4. A newly imported game gets chat 2 (Part 3).
+1. A newly imported game gets chat 2 (Part 3). Only causes that change many lines get fixed; the rest are dropped, never listed
+   (Kaptain, 9 Nov 2026).
 
 ## When you finish
 Commit and push every finished step. Update "State" and "Open work" above (short, no history: git log has it).
