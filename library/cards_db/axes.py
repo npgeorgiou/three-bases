@@ -16,6 +16,7 @@ decks (decks.tsv) play it; factions with fewer than MIN_DECK_CARDS cards in deck
 that links.sqlite links; run links.py first).
 """
 import collections, json, math, os, sqlite3, sys
+import deck_analysis
 import faction_asks, mechanics
 
 STOP_ON_ENEMY = ['disable', 'silence', 'immobilize', 'cant_move', 'attack_lock']  # stops enemy units; the other ways to break their plan follow
@@ -195,20 +196,25 @@ def main():
     pairs = set()
     for a, b in sqlite3.connect('links.sqlite').execute('select a, b from link'):
         if a != b: pairs.add((min(a, b), max(a, b)))
-    deck_n = collections.Counter()  # (game, card name) -> decks that play it
+    deck_n = collections.Counter()  # card -> decks that play it
+    deck_lists = collections.defaultdict(list)  # game -> every deck of decks.tsv, as its set of cards
+    unknown = collections.Counter()
     with open('decks.tsv', encoding='utf-8') as f:
         next(f)
         for line in f:
             p = line.rstrip('\n').split('\t')
-            if len(p) >= 4:
-                for nm in {n.strip().lower() for n in p[3].split(',') if n.strip()}:
-                    deck_n[(p[0], nm)] += 1
+            if len(p) >= 4 and p[0] in pools:  # parse_deck knows names that hold a comma ("Seifer, Blood Tyrant"); splitting on commas lost them
+                ids, bad = deck_analysis.parse_deck(c, p[0], p[3])
+                unknown[p[0]] += len(bad)
+                deck_lists[p[0]].append({i for i in ids if i in pools[p[0]]})
+                for i in deck_lists[p[0]][-1]: deck_n[i] += 1
+    if any(unknown.values()): print('deck card names the library does not know:', dict(unknown))
     rows = []
     for g in games:
         pool = pools[g]
         for fac in () if g in NOT_MEASURED else x.factions(g):
             ids = [i for i, v in pool.items() if fac in v[3]]
-            w_decks = {i: deck_n[(g, pool[i][0].lower())] for i in ids if deck_n[(g, pool[i][0].lower())]}
+            w_decks = {i: deck_n[i] for i in ids if deck_n[i]}
             rec = {'game': g, 'faction': fac, 'n_cards': len(ids), 'deck_cards': len(w_decks),
                    'cards': shares({i: 1 for i in ids}, con, pairs, g, stats),
                    'decks': shares(w_decks, con, pairs, g, stats) if len(w_decks) >= MIN_DECK_CARDS else None}
@@ -241,7 +247,9 @@ def main():
                 if r[mode]:
                     f.write(f"{r['game']}\t{r['faction']}\t{r['n_cards']}\t{r['deck_cards']}\t{mode}\t" +
                             '\t'.join(f"{fmt(r[mode][s[0]])}\t{fmt(r[mode][s[0] + '_v'])}" for s in SPOKES) + '\t' + fmt(r[mode]['lean_v']) + '\n')
-    data = {'links': radius_links(games, pools, con, pairs), 'radii': [{'key': s[0], 'n': s[1], 'axis': s[2], 'end': s[3], 'area': s[5], 'concepts': [shown(k) for k in s[4]]} for s in SPOKES],
+    measured = sorted({r['game'] for r in rows})  # the games on the page
+    data = {'links': {'cards': radius_links(measured, pools, con, pairs), 'decks': radius_links(measured, pools, con, pairs, deck_lists)},
+            'deckCount': sum(len(deck_lists[g]) for g in measured), 'radii': [{'key': s[0], 'n': s[1], 'axis': s[2], 'end': s[3], 'area': s[5], 'concepts': [shown(k) for k in s[4]]} for s in SPOKES],
             'factions': [{'game': r['game'], 'faction': r['faction'], 'cards': r['n_cards'], 'deckCards': r['deck_cards'],
                           'cardsV': per_spoke(r['cards'], '_v'), 'decksV': per_spoke(r['decks'], '_v'),
                           'cardsS': per_spoke(r['cards'], ''), 'decksS': per_spoke(r['decks'], ''),
@@ -260,24 +268,29 @@ def main():
     print(len(rows), 'factions;', sum(1 for r in rows if r['decks']), 'with decks')
 
 
-def radius_links(games, pools, con, pairs):
+def radius_links(games, pools, con, pairs, deck_lists=None):
     """How much more often than chance the library links a card of one radius with a card of another (1 = chance).
-    Per game: the linked pairs between the two radii's cards, against all pairs between them times the game's share of linked pairs."""
+    Chance = the share of all card pairs of the game that the library links. All cards: every pair of the game's cards.
+    Decks (deck_lists given): only pairs of cards played in the same deck, every deck of decks.tsv counted once."""
     keys = [s for s in SPOKES if s[0] != 'together' and s[0] not in NUMERIC]
-    obs, exp = collections.Counter(), collections.Counter()
+    obs, exp, used = collections.Counter(), collections.Counter(), collections.Counter()
     for g in games:
         ids = list(pools[g])
-        if g in NOT_MEASURED or len(ids) < 2: continue
         of = {i: [s[0] for s in keys if counts(con[i], g, s[4])] for i in ids}
-        linked = [(a, b) for a, b in pairs if a in of and b in of]
-        dens = len(linked) / (len(ids) * (len(ids) - 1) / 2)
-        n = collections.Counter(k for i in ids for k in of[i])
-        both = collections.Counter((ka, kb) for i in ids for ka in of[i] for kb in of[i])
-        for a, b in linked:
-            for ka in of[a]:
-                for kb in of[b]: obs[(ka, kb)] += 1; obs[(kb, ka)] += 1
-        for sa in keys:
-            for sb in keys: exp[(sa[0], sb[0])] += (n[sa[0]] * n[sb[0]] - both[(sa[0], sb[0])]) * dens
+        dens = sum(1 for a, b in pairs if a in of and b in of) / (len(ids) * (len(ids) - 1) / 2)
+        groups = [ids] if deck_lists is None else [sorted(d) for d in deck_lists[g]]
+        for grp in groups:
+            used[g] += 1
+            n = collections.Counter(k for i in grp for k in of[i])
+            both = collections.Counter((ka, kb) for i in grp for ka in of[i] for kb in of[i])
+            linked = [(a, b) for a, b in pairs if a in of and b in of] if deck_lists is None else \
+                     [(a, b) for k, a in enumerate(grp) for b in grp[k + 1:] if (min(a, b), max(a, b)) in pairs]
+            for a, b in linked:
+                for ka in of[a]:
+                    for kb in of[b]: obs[(ka, kb)] += 1; obs[(kb, ka)] += 1
+            for sa in keys:
+                for sb in keys: exp[(sa[0], sb[0])] += (n[sa[0]] * n[sb[0]] - both[(sa[0], sb[0])]) * dens
+    if deck_lists is not None: print('decks used for radii that work together:', dict(used))
     return {a[0]: {b[0]: round(obs[(a[0], b[0])] / exp[(a[0], b[0])], 2) if exp[(a[0], b[0])] >= MIN_LINKS else None for b in keys} for a in keys}
 
 
