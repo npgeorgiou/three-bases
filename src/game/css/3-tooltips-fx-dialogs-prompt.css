@@ -47,6 +47,7 @@ body.dragging, body.dragging * { cursor: grabbing !important; }
 @media (max-width: 800px) { .homecols { grid-template-columns: 1fr; } }
 .choice select { background: var(--cell); border: 2px solid var(--cellb); border-radius: 10px; padding: 9px 12px; color: var(--ink); font: inherit; max-width: 100%; }
 .choice button:disabled { opacity: .45; cursor: default; }
+.aimsg { font-size: 14px; margin-top: 6px; }
 .go.big { width: 100%; padding: 14px 22px; font-size: 18px; }
 .go:disabled { opacity: .4; cursor: default; }
 button.danger { background: transparent; border: 2px solid #B4483C; color: #E07A6C; border-radius: 10px; padding: 9px 16px; }

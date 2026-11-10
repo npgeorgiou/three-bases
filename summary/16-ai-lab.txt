@@ -6,7 +6,7 @@ A separate page for training learning AIs, pitting AIs against each other, and w
 
 Players in the lab (the Strategist was removed, 4 Nov 2026):
 - The Benchmark: the game's Benchmark (section 15), the same code and values. The earlier Benchmark's score and look-ahead are still used by the learning AIs' "Benchmark search" (its move, the opponent's best replies, its own best answers to those).
-- The ifelse AI: sees both hands and searches the real position (alpha-beta, scored as the round would end), with no rules of thumb; every judgement is a weighted term and every value is tunable (see the ifelse AI tab). Exported with "Export ifelse AI" as a named file for the game. Redraws like the Benchmark.
+- The ifelse AI: sees both hands and searches the real position (alpha-beta, scored as the round would end), with no rules of thumb; every judgement is a weighted term and every value is tunable (see the ifelse AI tab). Everywhere in the lab outside its own tuning games (as an AI's opponent, in tournaments, when watched) it plays as tuned: the tuning's current values and the tuning's search depth (10 Nov 2026; before, a stale version check made it play its starting values at the Benchmark's depth). "Export ifelse AI" writes a named file with those values and how far it looks (depth and own moves examined); the game loads the file and plays it exactly so. Redraws like the Benchmark.
 - The Random player.
 - Learning AIs (section below), playing alone or inside the Benchmark's search.
 - Dropped: a "Planner" and a "Commander" were tried; both played worse than the Benchmark.

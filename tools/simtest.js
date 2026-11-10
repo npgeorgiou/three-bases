@@ -34,6 +34,13 @@ const harness = `
   };
   for (let g = 0; g < nRandom; g++) play(false, g);
   for (let g = 0; g < 2; g++) play(true, g);
+  // an exported ifelse AI plays as its file says (values with their own look-ahead): 20 moves, each a legal one
+  { const s = newGame(decks[0], decks[1]), cfg = { ...BENCH_VALUES, depth: 2, w1: 3 };
+    for (let n = 0; n < 20 && s.winner === null; n++) {
+      const a = chooseIfelseAction(s, cfg);
+      if (!listActions(s).some(x => JSON.stringify(x) === JSON.stringify(a))) throw new Error('exported ifelse AI: not a legal move ' + JSON.stringify(a));
+      applyAction(s, a);
+    } }
   return 'games ' + (nRandom + 2) + ', wins ' + JSON.stringify(wins) + ', hash ' + h.toString(16);
 };`;
 

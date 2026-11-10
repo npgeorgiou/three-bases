@@ -61,7 +61,9 @@
         <div class="choice"><select id="aiKind" aria-label="Computer player">
           <option value="bench">The Benchmark (looks ahead, sees your hand)</option>
           <option value="random">The Random player</option>
-        </select></div>
+          <option value="ifelse">An ifelse AI from the AI lab (choose its file)</option>
+        </select><button id="aiFileBtn" hidden>Other file</button><input type="file" id="aiFile" accept=".json,application/json" hidden></div>
+        <div id="aiFileMsg" class="aimsg" hidden>That file is not an ifelse AI that says how far it looks. Export it again from the AI lab.</div>
       </div>
       <b id="oppDeckLbl">Opponent's deck</b>
       <div class="choice"><select id="oppDeck" aria-labelledby="oppDeckLbl"></select></div>

@@ -297,7 +297,7 @@ function opponentSpec(id, self) {
   if (o === 'mix') { const pool = mixOf(id); o = pool[Math.floor(Math.random() * pool.length)]; }
   if (o === 'self' || o === 'net:' + id) return null;
   if (o === 'bench') return { kind: 'bench', depth: benchDepth() };
-  if (o === 'ifelse') return { kind: 'ifelse', cfg: ifelseFull(state.ifelse && state.ifelse.v === 4 ? state.ifelse.best : {}) };   // its current tuned values
+  if (o === 'ifelse') return { kind: 'ifelse', cfg: ifelseAsTuned() };
   if (o.startsWith('net:')) return { kind: 'net', net: 'opp:' + o.slice(4), play: { replies: false, explore: 0 } };
   return null;
 }

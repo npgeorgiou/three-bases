@@ -96,6 +96,8 @@ function tuneState() {
   if (!st.opps.length) st.opps = ['bench'];
   return st;
 }
+/** The ifelse AI as it plays everywhere outside its tuning games, and as exported: its values and how far it looks, as tuned. */
+const ifelseAsTuned = () => { const st = tuneState(); return { ...ifelseFull(st.best), ...tuneLook(st.depth) }; };
 const tuneGames = () => Math.max(20, Math.round(Number($('#tuGames').value) / 2) * 2 || 300);
 $('#tuGames').addEventListener('change', () => { $('#tuGames').value = tuneGames(); });   // the box shows the number played
 function newGeneration() {
@@ -208,8 +210,8 @@ function pauseTune() {
 }
 $('#tuStart').addEventListener('click', startTune);
 $('#tuExport').addEventListener('click', () => {
-  const st = tuneState(), values = { ...st.best };
-  askName({ title: 'Export ifelse AI', note: 'Its current values, as a file the game can load. The game can also read them straight from this browser\'s lab.',
+  const st = tuneState(), values = ifelseAsTuned();
+  askName({ title: 'Export ifelse AI', note: 'Its current values and how far it looks, as a file. The game loads it under Computer player and plays it as it was tuned.',
     value: `ifelse AI gen ${st.gen}`, ok: 'Export',
     check: v => /[\\/:*?"<>|]/.test(v) ? 'A name can\'t contain \\ / : * ? " < > |' : '' }).then(name => {
     if (!name) return;

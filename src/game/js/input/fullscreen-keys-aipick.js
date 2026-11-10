@@ -40,7 +40,29 @@ function pressToggle(attr, value) {
 function setupAiPick() {
   $('#testGames').addEventListener('change', () => { setTestGames($('#testGames').checked); renderHome(); });
   $('#testIdle').addEventListener('change', () => setTestIdle($('#testIdle').checked));
-  $('#aiKind').value = aiChoice.kind;
-  $('#aiKind').addEventListener('change', () => { aiChoice.kind = $('#aiKind').value; saveAiChoice(); });
+  // an ifelse AI comes from a file exported by the AI lab; without a file the choice goes back to what it was
+  const show = () => {
+    $('#aiKind').value = aiChoice.kind;
+    $('#aiKind').querySelector('[value="ifelse"]').textContent = aiChoice.ifelse ? `ifelse AI: ${aiChoice.ifelse.name}` : 'An ifelse AI from the AI lab (choose its file)';
+    $('#aiFileBtn').hidden = aiChoice.kind !== 'ifelse';
+  };
+  show();
+  $('#aiKind').addEventListener('change', () => {
+    const k = $('#aiKind').value;
+    if (k === 'ifelse' && !aiChoice.ifelse) { show(); $('#aiFile').click(); return; }
+    aiChoice.kind = k; saveAiChoice(); show();
+  });
+  $('#aiFileBtn').addEventListener('click', () => $('#aiFile').click());
+  $('#aiFile').addEventListener('change', async () => {
+    const file = $('#aiFile').files[0];
+    $('#aiFile').value = '';
+    if (!file) return;
+    let f = null;
+    try { f = JSON.parse(await file.text()); } catch (e) { f = null; }
+    $('#aiFileMsg').hidden = ifelseFileOk(f);
+    if (!ifelseFileOk(f)) return;
+    aiChoice.ifelse = { kind: 'ifelse', name: String(f.name || file.name.replace(/\.json$/i, '')), values: f.values };
+    aiChoice.kind = 'ifelse'; saveAiChoice(); show();
+  });
 }
 

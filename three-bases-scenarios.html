@@ -416,6 +416,7 @@ body.dragging, body.dragging * { cursor: grabbing !important; }
 @media (max-width: 800px) { .homecols { grid-template-columns: 1fr; } }
 .choice select { background: var(--cell); border: 2px solid var(--cellb); border-radius: 10px; padding: 9px 12px; color: var(--ink); font: inherit; max-width: 100%; }
 .choice button:disabled { opacity: .45; cursor: default; }
+.aimsg { font-size: 14px; margin-top: 6px; }
 .go.big { width: 100%; padding: 14px 22px; font-size: 18px; }
 .go:disabled { opacity: .4; cursor: default; }
 button.danger { background: transparent; border: 2px solid #B4483C; color: #E07A6C; border-radius: 10px; padding: 9px 16px; }
@@ -612,7 +613,9 @@ button.dlit:hover { filter: brightness(1.15); }
         <div class="choice"><select id="aiKind" aria-label="Computer player">
           <option value="bench">The Benchmark (looks ahead, sees your hand)</option>
           <option value="random">The Random player</option>
-        </select></div>
+          <option value="ifelse">An ifelse AI from the AI lab (choose its file)</option>
+        </select><button id="aiFileBtn" hidden>Other file</button><input type="file" id="aiFile" accept=".json,application/json" hidden></div>
+        <div id="aiFileMsg" class="aimsg" hidden>That file is not an ifelse AI that says how far it looks. Export it again from the AI lab.</div>
       </div>
       <b id="oppDeckLbl">Opponent's deck</b>
       <div class="choice"><select id="oppDeck" aria-labelledby="oppDeckLbl"></select></div>
@@ -4969,15 +4972,17 @@ function cardHtml(k, u) {
    APP STATE
    ===================================================================== */
 const settings = { mode: 'ai' };  // mode: 'ai' or 'hot' (same screen)
-/** Which computer player the game uses: 'bench' (the Benchmark) or 'random'. Remembered in this browser. */
+/** Which computer player the game uses: 'bench' (the Benchmark), 'random', or 'ifelse' (an ifelse AI exported by the AI lab:
+ *  aiChoice.ifelse = its name and values, which include how far it looks). Remembered in this browser. */
 const AI_STORE = 'threeBases.v2.ai';
 const aiChoice = (() => { try { return JSON.parse(localStorage.getItem(AI_STORE) || 'null') || {}; } catch (e) { return {}; } })();
-if (!['bench', 'random'].includes(aiChoice.kind)) aiChoice.kind = 'bench';
+const ifelseFileOk = f => !!f && f.kind === 'ifelse' && !!f.values && typeof f.values === 'object' && Number.isFinite(f.values.depth);
+if (!['bench', 'random'].includes(aiChoice.kind) && !(aiChoice.kind === 'ifelse' && ifelseFileOk(aiChoice.ifelse))) aiChoice.kind = 'bench';
 function saveAiChoice() { try { localStorage.setItem(AI_STORE, JSON.stringify(aiChoice)); } catch (e) { /* not remembered */ } }
 function computerRedraw(s, p) { if (aiChoice.kind === 'random') randomRedraw(s, p); else aiMulligan(s, p); }
 function chooseComputerMove(s) {
   if (aiChoice.kind === 'random') return randomMove(listActions(s).map(a => ({ a }))).a;
-  return chooseIfelseAction(s, BENCH_VALUES);
+  return chooseIfelseAction(s, aiChoice.kind === 'ifelse' ? aiChoice.ifelse.values : BENCH_VALUES);
 }
 let game = null;            // current game state
 let ui = {};                // current selection / interaction mode
@@ -7529,8 +7534,30 @@ function pressToggle(attr, value) {
 function setupAiPick() {
   $('#testGames').addEventListener('change', () => { setTestGames($('#testGames').checked); renderHome(); });
   $('#testIdle').addEventListener('change', () => setTestIdle($('#testIdle').checked));
-  $('#aiKind').value = aiChoice.kind;
-  $('#aiKind').addEventListener('change', () => { aiChoice.kind = $('#aiKind').value; saveAiChoice(); });
+  // an ifelse AI comes from a file exported by the AI lab; without a file the choice goes back to what it was
+  const show = () => {
+    $('#aiKind').value = aiChoice.kind;
+    $('#aiKind').querySelector('[value="ifelse"]').textContent = aiChoice.ifelse ? `ifelse AI: ${aiChoice.ifelse.name}` : 'An ifelse AI from the AI lab (choose its file)';
+    $('#aiFileBtn').hidden = aiChoice.kind !== 'ifelse';
+  };
+  show();
+  $('#aiKind').addEventListener('change', () => {
+    const k = $('#aiKind').value;
+    if (k === 'ifelse' && !aiChoice.ifelse) { show(); $('#aiFile').click(); return; }
+    aiChoice.kind = k; saveAiChoice(); show();
+  });
+  $('#aiFileBtn').addEventListener('click', () => $('#aiFile').click());
+  $('#aiFile').addEventListener('change', async () => {
+    const file = $('#aiFile').files[0];
+    $('#aiFile').value = '';
+    if (!file) return;
+    let f = null;
+    try { f = JSON.parse(await file.text()); } catch (e) { f = null; }
+    $('#aiFileMsg').hidden = ifelseFileOk(f);
+    if (!ifelseFileOk(f)) return;
+    aiChoice.ifelse = { kind: 'ifelse', name: String(f.name || file.name.replace(/\.json$/i, '')), values: f.values };
+    aiChoice.kind = 'ifelse'; saveAiChoice(); show();
+  });
 }
 
 /* =====================================================================

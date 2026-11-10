@@ -2,15 +2,17 @@
    APP STATE
    ===================================================================== */
 const settings = { mode: 'ai' };  // mode: 'ai' or 'hot' (same screen)
-/** Which computer player the game uses: 'bench' (the Benchmark) or 'random'. Remembered in this browser. */
+/** Which computer player the game uses: 'bench' (the Benchmark), 'random', or 'ifelse' (an ifelse AI exported by the AI lab:
+ *  aiChoice.ifelse = its name and values, which include how far it looks). Remembered in this browser. */
 const AI_STORE = 'threeBases.v2.ai';
 const aiChoice = (() => { try { return JSON.parse(localStorage.getItem(AI_STORE) || 'null') || {}; } catch (e) { return {}; } })();
-if (!['bench', 'random'].includes(aiChoice.kind)) aiChoice.kind = 'bench';
+const ifelseFileOk = f => !!f && f.kind === 'ifelse' && !!f.values && typeof f.values === 'object' && Number.isFinite(f.values.depth);
+if (!['bench', 'random'].includes(aiChoice.kind) && !(aiChoice.kind === 'ifelse' && ifelseFileOk(aiChoice.ifelse))) aiChoice.kind = 'bench';
 function saveAiChoice() { try { localStorage.setItem(AI_STORE, JSON.stringify(aiChoice)); } catch (e) { /* not remembered */ } }
 function computerRedraw(s, p) { if (aiChoice.kind === 'random') randomRedraw(s, p); else aiMulligan(s, p); }
 function chooseComputerMove(s) {
   if (aiChoice.kind === 'random') return randomMove(listActions(s).map(a => ({ a }))).a;
-  return chooseIfelseAction(s, BENCH_VALUES);
+  return chooseIfelseAction(s, aiChoice.kind === 'ifelse' ? aiChoice.ifelse.values : BENCH_VALUES);
 }
 let game = null;            // current game state
 let ui = {};                // current selection / interaction mode

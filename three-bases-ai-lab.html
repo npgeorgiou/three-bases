@@ -5375,7 +5375,7 @@ const PRESETS = [
   { id: 'bench', name: 'Benchmark', kind: 'bench', desc: 'The game\'s AI. Sees the opponent\'s hand.' },
   { id: 'random', name: 'Random player', kind: 'random', desc: 'A baseline. Picks a kind of move at random (deploy, move, attack, spell or pass), then a move of that kind.' },
   { id: 'ifelse', name: 'ifelse AI', kind: 'ifelse', desc: 'Sees both hands and searches the real position; every judgement is a weighted term, with the values found by its tuning (the starting values until it finds better).',
-    get cfg() { return (state.ifelse && state.ifelse.v === 4 && state.ifelse.best) || {}; } },
+    get cfg() { return ifelseAsTuned(); } },
   ...NETS.flatMap(netPresets),
 ];
 
@@ -6313,7 +6313,7 @@ function opponentSpec(id, self) {
   if (o === 'mix') { const pool = mixOf(id); o = pool[Math.floor(Math.random() * pool.length)]; }
   if (o === 'self' || o === 'net:' + id) return null;
   if (o === 'bench') return { kind: 'bench', depth: benchDepth() };
-  if (o === 'ifelse') return { kind: 'ifelse', cfg: ifelseFull(state.ifelse && state.ifelse.v === 4 ? state.ifelse.best : {}) };   // its current tuned values
+  if (o === 'ifelse') return { kind: 'ifelse', cfg: ifelseAsTuned() };
   if (o.startsWith('net:')) return { kind: 'net', net: 'opp:' + o.slice(4), play: { replies: false, explore: 0 } };
   return null;
 }
@@ -7515,6 +7515,8 @@ function tuneState() {
   if (!st.opps.length) st.opps = ['bench'];
   return st;
 }
+/** The ifelse AI as it plays everywhere outside its tuning games, and as exported: its values and how far it looks, as tuned. */
+const ifelseAsTuned = () => { const st = tuneState(); return { ...ifelseFull(st.best), ...tuneLook(st.depth) }; };
 const tuneGames = () => Math.max(20, Math.round(Number($('#tuGames').value) / 2) * 2 || 300);
 $('#tuGames').addEventListener('change', () => { $('#tuGames').value = tuneGames(); });   // the box shows the number played
 function newGeneration() {
@@ -7627,8 +7629,8 @@ function pauseTune() {
 }
 $('#tuStart').addEventListener('click', startTune);
 $('#tuExport').addEventListener('click', () => {
-  const st = tuneState(), values = { ...st.best };
-  askName({ title: 'Export ifelse AI', note: 'Its current values, as a file the game can load. The game can also read them straight from this browser\'s lab.',
+  const st = tuneState(), values = ifelseAsTuned();
+  askName({ title: 'Export ifelse AI', note: 'Its current values and how far it looks, as a file. The game loads it under Computer player and plays it as it was tuned.',
     value: `ifelse AI gen ${st.gen}`, ok: 'Export',
     check: v => /[\\/:*?"<>|]/.test(v) ? 'A name can\'t contain \\ / : * ? " < > |' : '' }).then(name => {
     if (!name) return;
