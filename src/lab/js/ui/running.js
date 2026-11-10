@@ -28,14 +28,13 @@ function keepAwake(on) {
 class Pool {
   constructor(size, nets, nextJob, onResult, onFail) {
     this.nextJob = nextJob; this.onResult = onResult; this.onFail = onFail; this.workers = []; this.stopped = false;
-    this.nets = nets; this.size = 0; this.init = [];                  // init: messages every worker gets first (e.g. the lessons)
+    this.nets = nets; this.size = 0;
     this.awake = false;                                               // whether this pool keeps the tab awake (it has games running)
     this.resize(size);
   }
   addWorker() {
     const w = newWorker();
     w.postMessage({ type: 'nets', nets: this.nets });
-    for (const m of this.init) w.postMessage(m);
     const after = () => { if (w.retiring) this.drop(w); if (!this.stopped) this.feed(); };
     w.onmessage = e => {
       const job = w.job;
@@ -71,7 +70,6 @@ class Pool {
       const job = this.nextJob();
       if (!job) continue;
       w.job = job;
-      if (job.msg) { w.postMessage({ ...job.msg, key: job.key }); continue; }   // a job that is not a game (lessons)
       w.postMessage({ type: 'game', key: job.key, specs: job.specs, decks: job.decks, record: !!job.record,
         roundCap: ROUND_CAP, actionCap: ACTION_CAP, search: job.search || 0, next: job.next || null,
         replay: job.replay, seed: job.seed, lists: job.lists, agree: !!job.agree });
@@ -80,7 +78,6 @@ class Pool {
   }
   busy() { return this.workers.some(w => w.job); }
   /** A message every worker gets now and every new worker first. */
-  setInit(msgs) { this.init = msgs; for (const w of this.workers) for (const m of msgs) w.postMessage(m); }
   /** Stop the games whose job matches: their workers are replaced by fresh ones, which take new games. */
   cancel(match) {
     for (const w of this.workers.filter(x => x.job && match(x.job))) { w.job = null; this.drop(w); if (!w.retiring) this.addWorker(); }

@@ -18,7 +18,6 @@ function labWorker() {
    * learned from. D marks the games one side won, used to measure how well the winner is predicted.
    */
   /** A game with a seed deals the same shuffles (and the same chance events) every time it is played. */
-  let lessonList = [];
   function playGame(msg) {
     if (msg.seed == null) return playGameAs(msg);
     const real = Math.random;
@@ -355,9 +354,6 @@ function labWorker() {
       for (const sp of msg.specs) if (sp.kind === 'net') if (!nets[sp.net]) throw new Error('network ' + sp.net + ' missing' + (netsError ? ': ' + netsError : ''));
       playGame(msg);
     }
-    else if (msg.type === 'lessons') lessonList = msg.lessons;                    // the foresight lessons, for grading
-    else if (msg.type === 'lessonMake') self.postMessage({ type: 'lessonMake', key: msg.key, lessons: lessonsFromGame(msg, (spec, s) => choose(spec, s).a) });
-    else if (msg.type === 'lessonGrade') self.postMessage({ type: 'lessonGrade', key: msg.key, ...gradeLessons(lessonList, msg.cfg, msg.from, msg.to) });
     else if (msg.type === 'trainStart') trainStart(msg);
     else if (msg.type === 'data') { addData(msg); if (T.retiredMode) handOver(); }
     else if (msg.type === 'handover') { addHandover(msg); if (T.retiredMode) handOver(); }
