@@ -101,7 +101,7 @@ push, give network.html to Kaptain.
   lacked were added for the decks (supplement_gwent.py; read in read/gwent/batch_009; Knickers' "raid the battlefield" is
   Kaptain's definition, supplement/gwent_kaptain.jsonl). Not imported, because the library lacks a card: 13 Runeterra decks
   (04PZ002, 06BC019, 01FR048, 04PZ015) and 12 Duelyst II decks. The fetch files and checks/decks300/build.py are in git
-  history (commit "Decks: ... with the five Gwent cards"). The deck sites are reached only in the built-in browser; data is
+  history (commit "Decks redone with the five Gwent cards ..."). The deck sites are reached only in the built-in browser; data is
   moved to the workspace in compact form and checked with a checksum against the page before use. Questions over the real
   decks: ask.py played / deckmates / deckconcepts (deck_asks.py; factions/START_DESIGN-4-asking.md).
 - Already failing before the deck import (10 Nov 2026): cases/links.tsv lk96 (Monster Train, Vinemother -> Wyldenten).
