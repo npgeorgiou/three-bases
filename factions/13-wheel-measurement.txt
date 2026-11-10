@@ -77,10 +77,14 @@ How a value is made (all agreed with Kaptain, 9 Nov 2026):
   "Rewards playing spells" is high with nearly everything, because such a card links to every spell. Strength,
   defence and "position and combos" are numbers, not cards, and are not in the table: they shape a faction but are
   not mechanics two factions can share.
-  In "cards in top decks" the same table counts only pairs of cards played in the same deck, over every deck of
-  decks.tsv of the 8 games (402 on 10 Nov 2026). Two cards of one deck are linked about 3 times as often as two cards
-  of the game (middle value 3.4 against 1.2), whatever their radii, so the page colours each table against its own
-  middle value. Highest in decks: rewards playing spells with one chosen 7.6, brings back with spends them 7.6.
+  "Cards in top decks" (Kaptain, 10 Nov 2026: how often radii appear in the same real decks, linked or not; the
+  earlier version counted library links inside decks and every value came out above 1): per deck, the share of its
+  cards in each radius; for radii A and B, the average of (A share x B share) over a game's decks divided by (average
+  A share x average B share), then the average over games (each game counts the same; a game counts only when 5 of its
+  decks hold both). 1 = usual, 2 = decks heavy in one hold twice as much of the other; usual comes from the real decks,
+  so a radius every deck plays does not look combined with everything. All 1,410 decks of 9 games (Marvel Snap
+  included; Monster Train is not on the page). On 10 Nov 2026: middle value 0.97, 0.42 to 1.99; highest cheaper with
+  picks 1.99, stops with supply 1.66; lowest spellpay with spends 0.42.
 - Decks are read with `deck_analysis.parse_deck` (Kaptain, 10 Nov 2026: every deck and card must count). Splitting
   the card list on commas lost every card with a comma in its name ("Seifer, Blood Tyrant"): 294 of Faeria's 1177
   deck cards, 60 of Runeterra's.

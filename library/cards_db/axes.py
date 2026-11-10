@@ -69,6 +69,7 @@ HAS = [('gwent', 'grows'), ('gwent', 'growsdef'),  # must have a value: growth o
        ('duelyst', 'pos'), ('faeria', 'pos'), ('stormbound', 'pos'),  # position in the board games
        ('duelyst', 'one'), ('faeria', 'one'), ('gwent', 'one'), ('stormbound', 'one')]  # a chosen target is read from the rows in every game
 MIN_DECK_CARDS = 10
+MIN_DECKS_BOTH = 5  # a game gives a decks value for two radii only when at least 5 of its decks hold both
 MIN_LINKS = 20  # two radii get a "work together" number only when chance alone would give 20 linked pairs  # Faeria Pandora has 1 card in decks
 SPOKES = [  # (key, axis number, axis name, this radius, concepts, area of the circle); "concept@game,game" counts only in those games (the check of 9 Nov 2026)
     # in circle order: neighbours belong together, and the radii of one area sit side by side
@@ -248,8 +249,8 @@ def main():
                     f.write(f"{r['game']}\t{r['faction']}\t{r['n_cards']}\t{r['deck_cards']}\t{mode}\t" +
                             '\t'.join(f"{fmt(r[mode][s[0]])}\t{fmt(r[mode][s[0] + '_v'])}" for s in SPOKES) + '\t' + fmt(r[mode]['lean_v']) + '\n')
     measured = sorted({r['game'] for r in rows})  # the games on the page
-    data = {'links': {'cards': radius_links(measured, pools, con, pairs), 'decks': radius_links(measured, pools, con, pairs, deck_lists)},
-            'deckCount': sum(len(deck_lists[g]) for g in measured), 'radii': [{'key': s[0], 'n': s[1], 'axis': s[2], 'end': s[3], 'area': s[5], 'concepts': [shown(k) for k in s[4]]} for s in SPOKES],
+    data = {'links': {'cards': radius_links(measured, pools, con, pairs), 'decks': radius_links(measured, pools, con, pairs, {g: v for g, v in deck_lists.items() if g not in NOT_MEASURED})},
+            'deckCount': sum(len(v) for g, v in deck_lists.items() if g not in NOT_MEASURED), 'radii': [{'key': s[0], 'n': s[1], 'axis': s[2], 'end': s[3], 'area': s[5], 'concepts': [shown(k) for k in s[4]]} for s in SPOKES],
             'factions': [{'game': r['game'], 'faction': r['faction'], 'cards': r['n_cards'], 'deckCards': r['deck_cards'],
                           'cardsV': per_spoke(r['cards'], '_v'), 'decksV': per_spoke(r['decks'], '_v'),
                           'cardsS': per_spoke(r['cards'], ''), 'decksS': per_spoke(r['decks'], ''),
@@ -269,28 +270,44 @@ def main():
 
 
 def radius_links(games, pools, con, pairs, deck_lists=None):
-    """How much more often than chance the library links a card of one radius with a card of another (1 = chance).
-    Chance = the share of all card pairs of the game that the library links. All cards: every pair of the game's cards.
-    Decks (deck_lists given): only pairs of cards played in the same deck, every deck of decks.tsv counted once."""
+    """All cards (no deck_lists): how much more often than chance the library links a card of one radius with a card of the
+    other (1 = chance = the share of all card pairs of the game that the library links).
+    Decks (deck_lists given; Kaptain, 10 Nov 2026: how often radii appear in the same real decks, linked or not): per deck,
+    the share of its cards that count for each radius; for two radii A and B, the average of (A share x B share) over the
+    game's decks divided by (average A share x average B share). 1 = decks heavy in A hold as much B as usual; 2 = twice as
+    much; below 1 = players keep them apart. "Usual" comes from the real decks, so a radius every deck plays does not look
+    combined with everything. Each game counts the same: the value is the average over the games where at least
+    MIN_DECKS_BOTH decks hold both radii."""
     keys = [s for s in SPOKES if s[0] != 'together' and s[0] not in NUMERIC]
-    obs, exp, used = collections.Counter(), collections.Counter(), collections.Counter()
+    if deck_lists is not None:
+        per = collections.defaultdict(list); used = {}
+        for g in sorted(deck_lists):
+            ds = [d for d in deck_lists[g] if d]
+            if not ds: continue
+            used[g] = len(ds)
+            sh = [{k[0]: sum(1 for i in d if counts(con[i], g, k[4])) / len(d) for k in keys} for d in ds]
+            mean = {k[0]: sum(x[k[0]] for x in sh) / len(ds) for k in keys}
+            for a in keys:
+                for b in keys:
+                    both = sum(1 for x in sh if x[a[0]] and x[b[0]])
+                    if both >= MIN_DECKS_BOTH and mean[a[0]] and mean[b[0]]:
+                        per[(a[0], b[0])].append(sum(x[a[0]] * x[b[0]] for x in sh) / len(ds) / (mean[a[0]] * mean[b[0]]))
+        print('decks used for radii that work together:', used)
+        return {a[0]: {b[0]: round(sum(per[(a[0], b[0])]) / len(per[(a[0], b[0])]), 2) if per[(a[0], b[0])] else None for b in keys}
+                for a in keys}
+    obs, exp = collections.Counter(), collections.Counter()
     for g in games:
         ids = list(pools[g])
         of = {i: [s[0] for s in keys if counts(con[i], g, s[4])] for i in ids}
         dens = sum(1 for a, b in pairs if a in of and b in of) / (len(ids) * (len(ids) - 1) / 2)
-        groups = [ids] if deck_lists is None else [sorted(d) for d in deck_lists[g]]
-        for grp in groups:
-            used[g] += 1
-            n = collections.Counter(k for i in grp for k in of[i])
-            both = collections.Counter((ka, kb) for i in grp for ka in of[i] for kb in of[i])
-            linked = [(a, b) for a, b in pairs if a in of and b in of] if deck_lists is None else \
-                     [(a, b) for k, a in enumerate(grp) for b in grp[k + 1:] if (min(a, b), max(a, b)) in pairs]
-            for a, b in linked:
+        n = collections.Counter(k for i in ids for k in of[i])
+        both = collections.Counter((ka, kb) for i in ids for ka in of[i] for kb in of[i])
+        for a, b in pairs:
+            if a in of and b in of:
                 for ka in of[a]:
                     for kb in of[b]: obs[(ka, kb)] += 1; obs[(kb, ka)] += 1
-            for sa in keys:
-                for sb in keys: exp[(sa[0], sb[0])] += (n[sa[0]] * n[sb[0]] - both[(sa[0], sb[0])]) * dens
-    if deck_lists is not None: print('decks used for radii that work together:', dict(used))
+        for sa in keys:
+            for sb in keys: exp[(sa[0], sb[0])] += (n[sa[0]] * n[sb[0]] - both[(sa[0], sb[0])]) * dens
     return {a[0]: {b[0]: round(obs[(a[0], b[0])] / exp[(a[0], b[0])], 2) if exp[(a[0], b[0])] >= MIN_LINKS else None for b in keys} for a in keys}
 
 
