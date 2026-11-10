@@ -4,23 +4,31 @@
 const TUNE_OPPS = () => [['bench', 'Benchmark'], ...NETS.map(n => ['net:' + n.id, n.name])];
 const tuneOppName = k => (TUNE_OPPS().find(([x]) => x === k) || [k, k])[1];
 function tuneOppSpec(k, depth) {
-  if (k === 'bench') return { kind: 'bench', depth };
+  if (k === 'bench') return { kind: 'bench', depth: Math.round(depth) };
   return { kind: 'net', net: k.slice(4), play: { replies: false, explore: 0 } };
 }
 /*
  * Every value lives on one common scale x (0 = its starting value), so one step size suits them all:
  * weights move by a factor (×e^x), a weight starting at 0 moves by 5·x on its own scale, shares move on the
- * logit scale (×2), whole numbers move by x times their range (rounded), a switch flips when x crosses ±0.25.
+ * logit scale (×2), whole numbers move by x times their range (rounded).
  */
-const TUNE_N = IFELSE_FIELDS.length;
+/** Not tuned (they keep their start): how wide the search looks, the switches (a flip is a jump, not a step), and the
+ *  goal-lane values while goal lanes start off (they change nothing then). */
+const GOAL_KEYS = ['offGoal', 'stick', 'needDots', 'needEnemyDots', 'needEnemyPower', 'needOwnPower', 'needSupply'];
+const tuneFrozen = ([k, , type]) => /^w\d$/.test(k) || type === 'switch' || (!IFELSE_DEFAULTS.goals && GOAL_KEYS.includes(k));
+const TUNE_FIELDS = IFELSE_FIELDS.filter(f => !tuneFrozen(f));
+const TUNE_N = TUNE_FIELDS.length;
+/** Tuning depth "1 and a second look": every own move is valued 1 move ahead, then only the best 3 are checked against
+ *  the opponent's best reply. */
+const SECOND_LOOK = 1.5;
+const tuneLook = d => (d === SECOND_LOOK ? { depth: 2, w1: 3 } : { depth: d });
 const logit = v => Math.log(v / (1 - v)), sigm = z => 1 / (1 + Math.exp(-z));
-/** Values from the search's numbers. Widths of moves deeper than the tuning depth are never used in tuning games, so they keep their start. */
-function tuneDecode(x, depth = BENCH_VALUES.depth) {
-  const out = {};
-  IFELSE_FIELDS.forEach(([k, , type, def, extra], i) => {
-    const z = /^w\d$/.test(k) ? 0 : x[i];                              // how wide it looks is set, not tuned (wider is always slower)
+/** Values from the search's numbers. */
+function tuneDecode(x) {
+  const out = { ...IFELSE_DEFAULTS };
+  TUNE_FIELDS.forEach(([k, , type, def, extra], i) => {
+    const z = x[i];
     if (type === 'int') { const [lo, hi] = extra; out[k] = Math.max(lo, Math.min(hi, Math.round(def + z * (hi - lo)))); }
-    else if (type === 'switch') out[k] = def - 0.5 + 2 * z > 0 ? 1 : 0;
     else if (type === 'share') out[k] = Math.max(0.01, Math.min(1, sigm(logit(Math.min(0.99, Math.max(0.01, def))) + 2 * z)));
     else out[k] = def === 0 ? 5 * (extra || 1) * z : def * Math.exp(z);
   });
@@ -72,17 +80,17 @@ function cmaUpdate(cma, xs, rates) {
   cma.sigma = Math.min(1, cma.sigma * Math.exp((K.cs / K.damps) * (psn / K.chiN - 1)));
 }
 
-const TUNE_NAMES = IFELSE_FIELDS.map(f => f[0]);
-const freshTune = (opps = ['bench']) => ({ v: 7, depth: 1, opps, fields: TUNE_NAMES, cma: cmaFresh(Array(TUNE_N).fill(0), LAMBDA0), best: { ...IFELSE_DEFAULTS },
+const TUNE_NAMES = TUNE_FIELDS.map(f => f[0]);
+const freshTune = (opps = ['bench']) => ({ v: 8, depth: SECOND_LOOK, opps, fields: TUNE_NAMES, cma: cmaFresh(Array(TUNE_N).fill(0), LAMBDA0), best: { ...IFELSE_DEFAULTS },
   gen: 0, restarts: 0, cand: null, hist: [] });
 try { indexedDB.deleteDatabase('threeBases.lab.lessons'); } catch (e) {}   // the store of the removed lessons tuning
 function tuneState() {
-  if (!state.ifelse || state.ifelse.v !== 7) state.ifelse = freshTune(state.ifelse && state.ifelse.opps);   // earlier tunings are replaced
+  if (!state.ifelse || state.ifelse.v !== 8) state.ifelse = freshTune(state.ifelse && state.ifelse.opps);   // earlier tunings are replaced
   const st = state.ifelse;
   if (st.fields.join() !== TUNE_NAMES.join()) {                        // values added or removed (cards changed): the rest carry on by name
     const was = Object.fromEntries(st.fields.map((k, i) => [k, st.cma.mean[i]]));
     st.cma = cmaFresh(TUNE_NAMES.map(k => was[k] ?? 0), st.cma.lambda); st.fields = TUNE_NAMES; st.cand = null;
-    st.best = tuneDecode(st.cma.mean, st.depth); st.hist.push({ gen: st.gen, mark: 'values changed' });
+    st.best = tuneDecode(st.cma.mean); st.hist.push({ gen: st.gen, mark: 'values changed' });
   }
   st.opps = (st.opps || []).filter(k => TUNE_OPPS().some(([x]) => x === k));
   if (!st.opps.length) st.opps = ['bench'];
@@ -122,7 +130,7 @@ function tuneJob() {
   const pick = tuneNextDeal(c);
   if (!pick) return null;
   const [i, gi] = pick, m = gi % 3 === 2 ? 'S' : 'X', seat = Math.floor(gi / 3) % 2;
-  const mine = { kind: 'ifelse', cfg: { ...ifelseFull(tuneDecode(c.xs[i], st.depth)), depth: st.depth } };
+  const mine = { kind: 'ifelse', cfg: { ...ifelseFull(tuneDecode(c.xs[i])), ...tuneLook(st.depth) } };
   const opp = tuneOppSpec(st.opps[Math.floor(gi / 12) % st.opps.length], st.depth);   // every candidate gets the same schedule
   return { key: 'tune' + st.gen + '-' + i + '-' + gi, i, gi, seat, gen: st.gen, specs: seat === 0 ? [mine, opp] : [opp, mine],
     seed: st.gen * 100003 + gi,                                                // game gi deals the same cards for every candidate
@@ -151,14 +159,18 @@ function finishGeneration() {
   const all = c.res.map(r => deals.reduce((a, d) => a + r[d], 0) / Math.max(1, deals.length)), rates = all.slice(0, L), centre = all[L], prev = all[L + 1];
   if (tuneRunning.size && tune.pool) tune.pool.cancel(job => job.gen === gen);   // the dropped games stop at once
   tuneRunning.clear();
-  // the last move made the centre worse (the centre before it scored more in the same games): back to it, smaller
-  // steps. Else the centre moves to the weighted mean of the better half. That mean is not one of the tries: single tries
+  // the last move made the centre clearly worse (game by game, the centre before it scored more by over twice the
+  // luck in that difference): back to it, smaller steps. A smaller difference is luck and changes nothing. Else the centre moves to the weighted mean of the better half. That mean is not one of the tries: single tries
   // change every value at random and mostly score below the centre, while their mean keeps what they share; so the new
   // centre is judged by itself, in the next generation, against the centre before it.
-  const back = prev != null && prev > centre;
+  let back = false;
+  if (prev != null && deals.length > 1) {
+    const d = deals.map(g => c.res[L + 1][g] - c.res[L][g]), m = prev - centre;
+    back = m > 2 * Math.sqrt(d.reduce((a, x) => a + (x - m) ** 2, 0) / (d.length - 1) / d.length);
+  }
   if (back) { st.cma.mean = c.xs[L + 1].slice(); st.cma.sigma *= 0.9; st.prevMean = null; }
   else { st.prevMean = st.cma.mean.slice(); cmaUpdate(st.cma, c.xs.slice(0, L), rates); }
-  st.best = tuneDecode(st.cma.mean, st.depth);
+  st.best = tuneDecode(st.cma.mean);
   const avg = rates.reduce((a, b) => a + b, 0) / rates.length, top = Math.max(...rates);
   st.hist.push({ gen: st.gen, avg, top, centre, prev, back, lambda: L, sigma: st.cma.sigma, deals: deals.length });
   if (st.hist.length > 2000) st.hist.splice(0, st.hist.length - 2000);
@@ -215,8 +227,8 @@ function setTuneDepth(d) {
   const st = tuneState(), was = tune.running;
   if (st.depth === d) return;
   if (was) pauseTune();
-  st.depth = d; st.cand = null; st.best = tuneDecode(st.cma.mean, d);
-  st.hist.push({ gen: st.gen, mark: 'depth ' + d });
+  st.depth = d; st.cand = null; st.best = tuneDecode(st.cma.mean);
+  st.hist.push({ gen: st.gen, mark: d === SECOND_LOOK ? 'second look' : 'depth ' + d });
   save();
   if (was) startTune(); else renderTune();
 }
@@ -236,7 +248,7 @@ function renderCheck() {
 function checkJob() {
   const r = check.run;
   if (!r || r.started >= r.N) return null;
-  const j = r.started++, seat = j % 2, mine = { kind: 'ifelse', cfg: { ...r.values, depth: r.depth } }, opp = { kind: 'bench', depth: r.depth };
+  const j = r.started++, seat = j % 2, mine = { kind: 'ifelse', cfg: { ...r.values, ...tuneLook(r.depth) } }, opp = { kind: 'bench', depth: Math.round(r.depth) };
   return { key: 'check' + j, j, seat, specs: seat === 0 ? [mine, opp] : [opp, mine], decks: scheduledDecks(j), seed: 7000003 + Math.floor(j / 2) };
 }
 function checkResult(res, job) {
@@ -339,7 +351,7 @@ function renderTune() {
   const fmt = v => (Number.isInteger(v) ? String(v) : Math.abs(v) >= 10 ? v.toFixed(1) : v.toFixed(3));
   $('#tuTable').innerHTML = `<table class="tutable"><thead><tr><th>Value</th><th>Start</th><th>ifelse AI (centre)</th></tr></thead><tbody>${
     IFELSE_FIELDS.map(([k, text]) => { const d = IFELSE_DEFAULTS[k], v = st.best[k] ?? d, ch = Math.abs(v - d) > 1e-9;
-      return `<tr${ch ? ' class="ch"' : ''}><td>${esc(text)}</td><td>${fmt(d)}</td><td>${fmt(v)}${ch ? ` <span class="tud ${v > d ? 'up' : 'down'}">${v > d ? '▲' : '▼'}</span>` : ''}</td></tr>`; }).join('')
+      return `<tr${ch ? ' class="ch"' : ''}><td>${esc(text)}${TUNE_NAMES.includes(k) ? '' : ' <span class="note">(not tuned)</span>'}</td><td>${fmt(d)}</td><td>${fmt(v)}${ch ? ` <span class="tud ${v > d ? 'up' : 'down'}">${v > d ? '▲' : '▼'}</span>` : ''}</td></tr>`; }).join('')
   }</tbody></table>`;
 }
 
