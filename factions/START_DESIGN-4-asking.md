@@ -48,6 +48,9 @@ sources.
 | A faction's ways to play: groups of tightly linked cards, key cards, what ties each | `ask.py all ways "<faction>"` |
 | Concepts only one faction of a game has (its monopolies) | `ask.py all only <game>` |
 | Concepts a faction never has while at least half its game's other factions do (its blind spots) | `ask.py all lacks "<faction>"` |
+| How players build a faction in real decks (decks.tsv): how many decks play it, the factions it is paired with, its cards by share of those decks, its cards in no deck | `ask.py <game> played "<faction>"` |
+| Cards players put in the same real decks as a card, with how much more often than chance (xN) | `ask.py <game> deckmates "<card>"` |
+| A faction's mechanics by how much players pick them in real decks (share of deck plays / share of its cards; above 1 = picked more than the pool offers) | `ask.py <game> deckconcepts "<faction>"` |
 | The values you can ask for | `ask.py all list concepts`, `ask.py all list happenings` |
 | Mechanics real factions keep apart (opposite sides of the wheel) and together (neighbours) | `python3 apart.py [top]` |
 | Every real faction on the wheel's radii, closest factions, map | `python3 axes.py` -> `factions/wheel-axes.html` (factions/13) |

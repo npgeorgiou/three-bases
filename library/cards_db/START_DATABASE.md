@@ -97,11 +97,13 @@ push, give network.html to Kaptain.
 - All 10 games imported and checked; Kaptain counts them DONE (9 Nov 2026). He does not check deck pages.
 - Decks (10 Nov 2026): Gwent, Faeria and Runeterra have 300 each; Stormbound 190 and Duelyst 178 are all the good decks
   online (Stormbound-Kitty is Stormbound's only deck source; duelspot's other Duelyst decks are pictures, reddit is blocked
-  in the browser). Kept apart: no two decks of a game share more than 80% of their cards. Not imported, because the library
-  lacks a card: 47 Gwent guides (Knickers, Ice Giant, Ballista, Bekker's Rockslide, Manticore Venom), 13 Runeterra decks
-  (04PZ002, 06BC019, 01FR048, 04PZ015), 12 Duelyst II decks. The fetch files and checks/decks300/build.py are in git history
-  (commit "Decks: Gwent, Faeria, Runeterra to 300"). The deck sites are reached only in the built-in browser; data is moved to the workspace in
-  compact form and checked with a checksum against the page before use.
+  in the browser). Kept apart: no two decks of a game share more than 80% of their cards. Five Gwent cards the v14.8 export
+  lacked were added for the decks (supplement_gwent.py; read in read/gwent/batch_009; Knickers' "raid the battlefield" is
+  Kaptain's definition, supplement/gwent_kaptain.jsonl). Not imported, because the library lacks a card: 13 Runeterra decks
+  (04PZ002, 06BC019, 01FR048, 04PZ015) and 12 Duelyst II decks. The fetch files and checks/decks300/build.py are in git
+  history (commit "Decks: ... with the five Gwent cards"). The deck sites are reached only in the built-in browser; data is
+  moved to the workspace in compact form and checked with a checksum against the page before use. Questions over the real
+  decks: ask.py played / deckmates / deckconcepts (deck_asks.py; factions/START_DESIGN-4-asking.md).
 - Already failing before the deck import (10 Nov 2026): cases/links.tsv lk96 (Monster Train, Vinemother -> Wyldenten).
 - Lines: links.sqlite rows per game (counts change with every rebuild; `status.py`). The next case id is n700.
 - Known gaps with no fix planned: Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain);

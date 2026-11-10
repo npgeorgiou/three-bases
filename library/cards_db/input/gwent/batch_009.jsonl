@@ -1,0 +1,4 @@
+{"id": 9000007, "name": "Knickers", "category": "unit", "speed": "", "types": ["Beast", "Bandit"], "keywords": [], "text": "This unit may raid the battlefield to aid you in battle.", "names_in_text": ["Raid"]}
+{"id": 9000009, "name": "Ballista", "category": "unit", "speed": "", "types": ["Machine", "Siege Engine"], "keywords": [], "text": "Deploy: Damage an enemy unit by 1. Order: Damage an enemy unit by 2.", "names_in_text": ["Deploy", "Order"]}
+{"id": 9000010, "name": "Bekker's Rockslide", "category": "spell", "speed": "", "types": ["Spell"], "keywords": [], "text": "Damage a unit by 8.", "names_in_text": []}
+{"id": 9000011, "name": "Manticore Venom", "category": "spell", "speed": "", "types": ["Organic"], "keywords": [], "text": "Damage 3 enemy units by 3.", "names_in_text": []}

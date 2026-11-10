@@ -14,7 +14,7 @@ Vetruvian Imperium (114 cards): tribal 16, summon 30
   Circle of Fabrication: Summon one of each Obelysk from your deck on random spaces.
   Fireblaze Obelysk: Keywords: Summon Dervish. Your dervishes have +1 Attack.
   Khanuum-ka: Keywords: Flying, Rush. Dying Wish: A random friendly Dervish disappears, summoning a...
-  works with: aura (e.g. Fighting Spirit -> Oak in the Nemeton); on_ally_play (e.g. Sparrowhawk -> Hatefurnace); defence_gain (e.g. Fighting Spirit -> Oak in the Nemeton)
+  works with: aura (e.g. Razor Skin -> Oak in the Nemeton); on_ally_play (e.g. Sparrowhawk -> Hatefurnace); defence_gain (e.g. Razor Skin -> Oak in the Nemeton)
 ## faeria
 Pandora (40 cards): tribal 3, summon 3
   Doom Scythe: Destroy a creature. Summon a 6/1 Slaughtering Shadow in its place.
@@ -28,14 +28,14 @@ Blue (72 cards): tribal 4, summon 5
   Gabrian Noble: Gift - Summon a 1/1 Ruby Fish (you may summon it on an ocean tile).
   works with: board_presence (e.g. Tide Lord -> Triton Tactician); temporary_buff (e.g. Mother of All Yaks -> Yak Shepherd); placement_rules (e.g. Triton Tactician -> Tide Lord)
 ## gwent
-Monster (182 cards): tribal 39, summon 43
+Monster (183 cards): tribal 39, summon 43
   Arachas Behemoth: Deploy: Spawn 2 Drones and boost all allied Insectoids on this row by 1.
   Arachas Swarm: Order: Spawn a Drone on an allied row. Charges: 5 Whenever you play an Organic card,...
   Call of the Depths: After Dagon has been worshipped 4 times, Spawn Dagon: Promised on your Melee row and...
   Dagon: Promised: Doomed. Deploy: Infuse 5 units in your deck with "Deathwish: Boost the lowest-power...
 Syndicate / Scoiatael (3 cards): tribal 1, summon 1
   Novigradian Justice: Play a bronze Dwarf or Crownsplitter unit from your deck. If you already control a Dwarf...
-  works with: delayed (e.g. Draig Bon-Dhu -> King Henselt); on_spell (e.g. Abordage -> Hjalmar: Seawolf); combo_sequence (e.g. War Council -> Ivo of Belhaven)
+  works with: delayed (e.g. Draig Bon-Dhu -> King Henselt); on_spell (e.g. War of Clans -> Hjalmar: Seawolf); combo_sequence (e.g. Ffion var Gaernel -> Ivo of Belhaven)
 ## inscryption
 Magick (25 cards): tribal 7, summon 1
   Blue Mage: Keywords: Mental Gemnastics.
@@ -59,7 +59,7 @@ Ranged (29 cards): tribal 0, summon 2
   Air-Walker: When Destroyed: Replace this with a 4-Cost card from your hand or deck.
   Anti-Polar Magneto: On Reveal: Add a 3 or 4-Cost card from your hand to each other location.
   Arthur Pendragon: On Reveal: Pull Excalibur free to here.
-  works with: draw (e.g. Sanctuary II -> King Eitri); cost_condition (e.g. Sanctuary II -> Gambit Horseman of Death); cost_reduction (e.g. Mind Stone -> Namorita)
+  works with: draw (e.g. The Grub -> King Eitri); cost_condition (e.g. The Grub -> Gambit Horseman of Death); cost_reduction (e.g. Mind Stone -> Psylocke Fractured Frontier)
 ## monster_train
 Umbra (47 cards): tribal 18, summon 1
   Alloyed Construct: Inert. Multistrike 1. / Gorge: Gain Fuel 1.
@@ -71,7 +71,7 @@ Hellhorned (41 cards): tribal 6, summon 0
   Imp-in-a-Box: Consume. / Add 2 random Imp units to your hand.
   Imp-olate: Deal damage to the front enemy unit equal to 15x the number of Imp units in your deck.
   Imp-portant Work: Sacrifice Imp. / Gain 1 Ember. Draw 1.
-  works with: death_trigger (e.g. Echowright -> Bogdeep Cocoon); death_count (e.g. Imp-portant Work -> A Fatal Melting); defence_gain (e.g. For the Greater Good -> Morsel-Made)
+  works with: death_trigger (e.g. Echowright -> Kinhost Vessel); death_count (e.g. Imp-portant Work -> Memories of the Melted); defence_gain (e.g. For the Greater Good -> Morsel-Made)
 ## runeterra
 Bilgewater (220 cards): tribal 31, summon 54
   Death From Below: Keywords: Fast, Lurk. Summon Pyke striking an enemy.
@@ -83,7 +83,7 @@ Shurima (264 cards): tribal 36, summon 73
   Azir: When allies attack, summon an attacking Sand Soldier. Level up: You've summoned 12+...
   Azir (level 2): When I level up, replace your deck with the Emperor's Deck, then draw 1. When allies...
   Azir (other form): When allies attack, summon an attacking Sand Soldier. When you summon another ally, give...
-  works with: stances (e.g. Crescendum -> Severum); tutor (e.g. Ripper's Bay -> Pyke); recycle (e.g. Udyr (level 2) -> Janna)
+  works with: stances (e.g. Calibrum -> Severum); tutor (e.g. Ripper's Bay -> Rek'Sai (level 2)); recycle (e.g. Udyr (level 2) -> Janna)
 ## stormbound
 Swarm (34 cards): tribal 6, summon 8
   Dreadful Keepers: On death, randomly spawn a 3/4/6/7/8 strength Dragon on a tile bordering a friendly Dragon

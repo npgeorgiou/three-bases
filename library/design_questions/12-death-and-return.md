@@ -14,7 +14,7 @@ Magmar Aspects (115 cards): sacrifice 3, revive 11
   Cascading Rebirth (follow-up): Destroy a friendly minion to summon a random Magmar minion that costs 1 more.
   Dreadnought: Keywords: Rebirth. Egg minions you summon gain +2/+2.
   Erratic Raptyr: Keywords: Rebirth. After this minion attacks or counterattacks, turn it into an Egg.
-  works with: revive (e.g. Pupabomb -> The Releaser); death_trigger (e.g. Soulburn Obelysk -> Khanuum-ka); leave_trigger (e.g. Pupabomb -> The Releaser)
+  works with: revive (e.g. Corporeal Cadence -> The Releaser); death_trigger (e.g. Ethereal Obelysk -> Khanuum-ka); leave_trigger (e.g. Corporeal Cadence -> The Releaser)
 ## faeria
 Yellow (72 cards): sacrifice 6, revive 0
   Death Walker: Deathtouch You must sacrifice another creature to summon this creature.
@@ -24,35 +24,35 @@ Yellow (72 cards): sacrifice 6, revive 0
 Pandora (40 cards): sacrifice 2, revive 0
   Ancient Gargoyle: Charge 3, Flying Gift - Destroy all Treasure Maps in your deck and gain +1/+1 for each...
   Void Guardian: Gift - Destroy your deck.
-  works with: death_trigger (e.g. Rakoan Cannoneer -> Rakoan Shield Mates); cheat_death (e.g. Voice of Hunger -> Aryana, Soul of Gagana); friendly_fire (e.g. Voice of Hunger -> Plague Bearer)
+  works with: death_trigger (e.g. Rakoan Cannoneer -> Rakoan Shield Mates); cheat_death (e.g. Demon Wrangler -> Aryana, Soul of Gagana); friendly_fire (e.g. Demon Wrangler -> Plague Bearer)
 ## gwent
-Monster (182 cards): sacrifice 32, revive 8
+Monster (183 cards): sacrifice 32, revive 8
   Call of the Depths: After Dagon has been worshipped 4 times, Spawn Dagon: Promised on your Melee row and...
   Dagon: Promised: Doomed. Deploy: Infuse 5 units in your deck with "Deathwish: Boost the lowest-power...
   Ruehin: Deathwish: Summon self from your graveyard to your Melee row and Consume your...
   Adda: Striga: Zeal. Order (Predator): Consume a Token. If it was allied, double the boost from it.
 Syndicate / Monster (3 cards): sacrifice 1, revive 0
   Kikimore Warrior: Order: Destroy an allied unit, then Spawn a Kikimore Warrior on this row.
-  works with: placement_rules (e.g. Weavess: Incantation -> Mysterious Puzzle Box); death_trigger (e.g. Moreelse -> Purge); leave_trigger (e.g. Vildkaarl -> Havfrue Singer)
+  works with: placement_rules (e.g. Mutants Maker -> Mysterious Puzzle Box); death_trigger (e.g. Moreelse -> Purge); leave_trigger (e.g. Vildkaarl -> Havfrue Singer)
 ## inscryption
 Undead (24 cards): sacrifice 2, revive 1
   Necromancer: Keywords: Double Death.
   Pharaoh's Pets: Keywords: Worthy Sacrifice, Many Lives.
 Magick (25 cards): sacrifice 1, revive 0
   Master Bleene: Keywords: True Scholar.
-  works with: on_sacrifice (e.g. Master Bleene -> Cat); cost_reduction (e.g. Master Bleene -> M3atB0t); cheat_death (e.g. Master Bleene -> Cat)
+  works with: on_sacrifice (e.g. Master Bleene -> Child 13 (Awakened)); cost_reduction (e.g. Master Bleene -> Black Goat); cheat_death (e.g. Master Bleene -> Child 13 (Awakened))
 ## into_the_breach
 Ranged (29 cards): sacrifice 2, revive 0
   Arachnoid Injector: Damage target, creating a friendly robot spider on kill. Damage: 1. Power: Free....
   Arachnoid Mech: Health 3, move 3. Weapon: Arachnoid Injector: Damage target, creating a friendly robot...
-  works with: summon (e.g. Arachnoid Mech -> Marked tile); on_kill (e.g. Arachnoid Injector -> Cascading Resonator); death_trigger (e.g. Arachnoid Mech -> Ice Tile)
+  works with: summon (e.g. Arachnoid Injector -> Marked tile); on_kill (e.g. Arachnoid Injector -> Cascading Resonator); death_trigger (e.g. Arachnoid Injector -> Ice Tile)
 ## marvel_snap
 (all cards) (867 cards): sacrifice 25, revive 16
   Valley of the Baby Hand: Destroy your next play here. Snap to revive a card here.
   Adamantium Infusion: On Reveal: Banish this to revive your highest-Power destroyed card here with its Power...
   Altar of Death: After you play a card here, destroy it to get +2 Energy next turn.
   Annihilus: On Reveal: Your cards with Power below 0 switch sides. Destroy those that can't.
-  works with: death_trigger (e.g. Kid Omega -> Uncle Ben); other_death_trigger (e.g. Zombie Captain Marvel -> Fantomex); revive (e.g. Kid Omega -> X-23)
+  works with: death_trigger (e.g. Misery -> Uncle Ben); other_death_trigger (e.g. Zombie Captain Marvel -> Fantomex); revive (e.g. Misery -> Adamantium Infusion)
 ## monster_train
 Umbra (47 cards): sacrifice 12, revive 0
   Antumbra Morsel: Eaten: Eater gains +6 Health.
@@ -76,17 +76,17 @@ Shurima (264 cards): sacrifice 24, revive 2
   Construct of Desolation: Create a Ruinous Acolyte or an Obelisk of Power in hand.
   Dune Swallower: Keywords: SpellShield, Fearsome. To play me, kill an ally or one of your mana gems 3...
   Empire Reconstructor: Play: Grant an allied landmark, "When I'm destroyed, revive me."
-  works with: revive (e.g. Kalista's Black Spear -> Bladepierced Revenant); death_trigger (e.g. Kalista's Black Spear -> Bladepierced Revenant); other_leave_trigger (e.g. The Darkin Bloodletters (created) -> The Shadow Reaper)
+  works with: revive (e.g. Mordekaiser -> Bladepierced Revenant); death_trigger (e.g. Mordekaiser -> Bladepierced Revenant); other_leave_trigger (e.g. The Darkin Bloodletters (created) -> The Shadow Reaper)
 ## stormbound
 Ironclad (34 cards): sacrifice 1, revive 1
   Project PH03-NIX: When dying not bordering any base, randomly respawn at your base with 5/6/7/8/10 strength
   Temple of Space: When played with a friendly copy on the board, teleport 2/3/4/6/8 surrounding units from...
 Shadowfen (34 cards): sacrifice 1, revive 0
   Toxic Sacrifice: Destroy a target friendly unit. Deal 2/3/4/5/6 damage to surrounding units and poison them
-  works with: death_trigger (e.g. Yowling Weavers -> Dreadful Keepers); revive (e.g. Pricey Freedom -> Project PH03-NIX); cheat_death (e.g. Pricey Freedom -> Project PH03-NIX)
+  works with: death_trigger (e.g. Yowling Weavers -> Dreadful Keepers); revive (e.g. Pricey Freedom -> Siro the Resurrector); cheat_death (e.g. Pricey Freedom -> Project PH03-NIX)
 ## sts1
 Watcher (90 cards): sacrifice 2, revive 0
   Blasphemy: Keywords: Exhaust. Enter Divinity. Die next turn.
   Blasphemy+: Keywords: Retain, Exhaust. Enter Divinity. Die next turn.
-  works with: stances (e.g. Blasphemy+ -> Ambrosia); resource_gain (e.g. Blasphemy -> Bloody Idol); retain (e.g. Blasphemy+ -> Windmill Strike)
+  works with: stances (e.g. Blasphemy+ -> Worship); resource_gain (e.g. Blasphemy+ -> Bloody Idol); retain (e.g. Blasphemy+ -> Sands of Time)
 ```

@@ -32,6 +32,12 @@ Faction design (faction_asks.py; a faction is found by name in the chosen games)
   ask.py <games> ways <faction>                   its groups of tightly linked cards (network.py), key cards, what ties each
   ask.py <games> only <game>                      concepts only one faction of the game has
   ask.py <games> lacks <faction>                  concepts the faction never has while at least half its game's others do
+Real decks (deck_asks.py; the decks of decks.tsv, each deck once):
+  ask.py <games> played <faction>                 decks that play it, factions it is paired with, its cards by share of
+                                                  those decks, its cards in no deck
+  ask.py <games> deckmates <card>                 cards most often in the same decks, with how much more than chance (xN)
+  ask.py <games> deckconcepts <faction>           its mechanics by how much players pick them (share of deck plays /
+                                                  share of its cards)
   --texts: every card found with its short text (a game with 10 or fewer cards always shows them)
 Cards that make a card with it count too, named "Zed (via Living Shadow)". The game's enemies, bosses and run events are
 left out unless --enemies is given. An unknown concept says so and names the nearest ones.
@@ -40,7 +46,7 @@ one concept: Stun and Freeze are disable, round_start and turn_start are turn_st
 import os, sqlite3, subprocess, sys
 NOT_FACTION = ('neutral', 'boss', 'any', 'colorless', 'curse', 'status', 'token', 'event', 'shared', 'universal', '(none)')  # no faction of its own
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
-import connections, mechanics, deck_analysis, network, faction_asks
+import connections, mechanics, deck_analysis, network, faction_asks, deck_asks
 c = sqlite3.connect(os.path.join(HERE, 'cards.sqlite'))
 
 
@@ -211,6 +217,9 @@ def main():
     elif q in faction_asks.ASKS:
         if not args: print(__doc__); return
         faction_asks.ASKS[q](faction_asks.Ctx(c, games, short_text, SUB), args)
+    elif q in deck_asks.ASKS:
+        if not args: print(__doc__); return
+        deck_asks.ASKS[q](faction_asks.Ctx(c, games, short_text, SUB), args)
     elif q == 'card': subprocess.run([sys.executable, os.path.join(HERE, 'rows.py')] + args)
     elif q == 'list':
         sql = "select value from vocab where field='event'" if args[0] == 'happenings' else 'select distinct concept from flat_concept'

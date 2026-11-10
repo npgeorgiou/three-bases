@@ -24,6 +24,10 @@ The library holds the current card texts (v14.8). Guides from the 2017-18 beta (
 the faction-evolution article of July 2018, PC Gamer's Nilfgaard article with Letho + Fake Ciri and Vattier + Mangonel)
 describe cards whose texts were rewritten in Homecoming; they are not used..
 Neutral is not a faction.
+Five collectible cards the v14.8 export lacks are in supplement/gwent.jsonl (Knickers, Ice Giant, Ballista, Bekker's
+Rockslide, Manticore Venom; gwent.one card pages, game version 14.10.0, 10 Nov 2026), because playgwent deck guides use them.
+Knickers' text "This unit may raid the battlefield" means (Kaptain, 10 Nov 2026): it comes out of your deck at random onto
+your side of the board (supplement/gwent_kaptain.jsonl, keyword "raid the battlefield").
 
 ## The game's rules (from sources)
 Sources: [R1] https://gwent.fandom.com/wiki/Rules (fetched 5 Nov 2026; patch notes up to 19 Dec 2017); [R2]

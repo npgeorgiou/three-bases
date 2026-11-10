@@ -1,0 +1,1 @@
+{"id":9900001,"abilities":[{"when":{"event":"activated"},"do":[{"act":"summon","on":{"pick":"self","zone":"deck"},"zone":"board"}]}]}
