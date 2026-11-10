@@ -103,6 +103,15 @@ nav.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: 
 .tuchart .empty { fill: var(--muted); font-size: 15px; text-anchor: middle; }
 .tuchart .tubest { fill: none; stroke: var(--gold); stroke-width: 2.5; stroke-linejoin: round; }
 .tuchart .tuhit { fill: transparent; }
+.tuchart .tubest.thin { stroke-width: 1; opacity: .45; }
+.tuchart .tudot { fill: var(--gold); opacity: .7; }
+.tuchart .tudot.back { fill: var(--bg); stroke: var(--gold); stroke-width: 1.5; opacity: 1; }
+.tuchart .tustart { stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 6 5; }
+.tuchart .tunow { fill: var(--gold); font-size: 15px; font-weight: 700; }
+.tuchart .tustartt { fill: var(--muted); font-size: 13px; }
+.tuchart .xlab.mid { text-anchor: middle; }
+.tufacts { display: flex; flex-wrap: wrap; gap: 4px 26px; padding: 2px 4px 8px; color: var(--muted); font-size: 14px; }
+.tufacts b { color: var(--ink); font-size: 17px; margin-right: 3px; }
 .tuchart .ylab.gl { fill: var(--gold); }
 .tuchart .ytitle { font-size: 13px; text-anchor: middle; }
 .tuchart .ytitle.gl { fill: var(--gold); }
@@ -110,6 +119,9 @@ nav.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: 
 .tuchart .tumarkt { fill: var(--muted); font-size: 12px; }
 .tulegend { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; color: var(--muted); font-size: 13px; padding: 4px 4px 0; }
 .tulegend .lg { display: inline-block; width: 18px; height: 0; border-top: 2.5px solid var(--gold); margin-right: -10px; }
+.tulegend .lg.thin { border-top-width: 1px; opacity: .6; }
+.tulegend .lg.start { border-top: 1.5px dashed var(--muted); }
+.tulegend .lg.dot { width: 8px; height: 8px; border: 1.5px solid var(--gold); border-radius: 50%; background: var(--bg); }
 .tuh { font: 400 18px/1.2 var(--disp); margin: 0 0 8px; }
 .tutable { border-collapse: collapse; font-size: 15px; width: 100%; max-width: 760px; }
 .tutable th, .tutable td { padding: 5px 14px 5px 0; border-bottom: 1px solid var(--line); text-align: right; }
@@ -297,7 +309,7 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
   <div class="setup">
     <label>Games per candidate <input type="number" id="tuGames" min="20" max="2000" step="2" value="300"></label>
     <label>Games at once <input type="number" id="tuThreads" min="1" max="32"></label>
-    <label title="How far the ifelse AI and the Benchmark look ahead in tuning games; lower is much faster">Search depth while tuning <select id="tuDepth"><option value="1">1</option><option value="1.5">1, and the best 3 checked against the reply</option><option value="2">2</option><option value="3">3 (the Benchmark's)</option></select></label>
+    <label title="How far the ifelse AI and the Benchmark look ahead in tuning games; lower is much faster">Search depth while tuning <select id="tuDepth"><option value="1">1</option><option value="narrow3">3, narrow: the best 3 moves, 3 replies each, 1 follow-up</option><option value="2">2</option><option value="3">3 (the Benchmark's)</option></select></label>
     <button class="go" id="tuStart">Start</button><button id="tuPause" disabled>Pause</button><button id="tuReset">Start over</button><button id="tuExport" title="The ifelse AI's current values (the centre), for the game">Export ifelse AI</button>
   </div>
   <div class="setup">

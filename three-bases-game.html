@@ -4662,10 +4662,11 @@ function ifelseEval(s, p, goal, c) {
 }
 /** The side to move's best `width` options by a score (the quick score: the position right after the move; or `score`),
  *  always including passing. `keep` (the skip test) is asked best first and only until `width` options are kept: the same
- *  options as asking it of every move, with less work. */
-function ifelseOptions(t, goals, c, width, keep, score) {
-  const side = t.cur, scored = [];
-  for (const a of listActions(t)) {
+ *  options as asking it of every move, with less work. `noMoves`: plain moves of a unit are left out (deploys, spells,
+ *  attacks and passing stay), unless a choice is pending or nothing else is left. */
+function ifelseOptions(t, goals, c, width, keep, score, noMoves) {
+  const side = t.cur, scored = [], all = listActions(t), rest = noMoves && !t.pending ? all.filter(a => a.t !== 'move') : all;
+  for (const a of rest.length ? rest : all) {
     const n = cloneState(t);
     applyAction(n, a);
     scored.push({ a, t: n, v: score ? score(n) : ifelseEval(n, side, goals ? goals[side] : null, c) });
@@ -4683,7 +4684,8 @@ function ifelseSearch(t, me, left, level, goals, c, alpha = -Infinity, beta = In
   if (t.winner !== null || left === 0 || t.roundOver) return ifelseEnd(t, me, goals, c);
   const mine = t.cur === me;
   let best = mine ? -Infinity : Infinity;
-  for (const o of ifelseOptions(t, goals, c, c['w' + level])) {
+  // c.skipMoves: from the 2nd move on (the reply, the follow-up) plain moves of a unit are not looked at
+  for (const o of ifelseOptions(t, goals, c, c['w' + level], null, null, c.skipMoves)) {
     if (mine) {
       const v = ifelseSearch(o.t, me, left - 1, level + 1, goals, c, Math.max(alpha, best), beta);
       if (v > best) best = v;

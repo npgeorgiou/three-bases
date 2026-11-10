@@ -103,6 +103,15 @@ nav.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: 
 .tuchart .empty { fill: var(--muted); font-size: 15px; text-anchor: middle; }
 .tuchart .tubest { fill: none; stroke: var(--gold); stroke-width: 2.5; stroke-linejoin: round; }
 .tuchart .tuhit { fill: transparent; }
+.tuchart .tubest.thin { stroke-width: 1; opacity: .45; }
+.tuchart .tudot { fill: var(--gold); opacity: .7; }
+.tuchart .tudot.back { fill: var(--bg); stroke: var(--gold); stroke-width: 1.5; opacity: 1; }
+.tuchart .tustart { stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 6 5; }
+.tuchart .tunow { fill: var(--gold); font-size: 15px; font-weight: 700; }
+.tuchart .tustartt { fill: var(--muted); font-size: 13px; }
+.tuchart .xlab.mid { text-anchor: middle; }
+.tufacts { display: flex; flex-wrap: wrap; gap: 4px 26px; padding: 2px 4px 8px; color: var(--muted); font-size: 14px; }
+.tufacts b { color: var(--ink); font-size: 17px; margin-right: 3px; }
 .tuchart .ylab.gl { fill: var(--gold); }
 .tuchart .ytitle { font-size: 13px; text-anchor: middle; }
 .tuchart .ytitle.gl { fill: var(--gold); }
@@ -110,6 +119,9 @@ nav.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: 
 .tuchart .tumarkt { fill: var(--muted); font-size: 12px; }
 .tulegend { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; color: var(--muted); font-size: 13px; padding: 4px 4px 0; }
 .tulegend .lg { display: inline-block; width: 18px; height: 0; border-top: 2.5px solid var(--gold); margin-right: -10px; }
+.tulegend .lg.thin { border-top-width: 1px; opacity: .6; }
+.tulegend .lg.start { border-top: 1.5px dashed var(--muted); }
+.tulegend .lg.dot { width: 8px; height: 8px; border: 1.5px solid var(--gold); border-radius: 50%; background: var(--bg); }
 .tuh { font: 400 18px/1.2 var(--disp); margin: 0 0 8px; }
 .tutable { border-collapse: collapse; font-size: 15px; width: 100%; max-width: 760px; }
 .tutable th, .tutable td { padding: 5px 14px 5px 0; border-bottom: 1px solid var(--line); text-align: right; }
@@ -297,7 +309,7 @@ svg.chart .ttl { fill: var(--ink); font: 17px var(--disp); }
   <div class="setup">
     <label>Games per candidate <input type="number" id="tuGames" min="20" max="2000" step="2" value="300"></label>
     <label>Games at once <input type="number" id="tuThreads" min="1" max="32"></label>
-    <label title="How far the ifelse AI and the Benchmark look ahead in tuning games; lower is much faster">Search depth while tuning <select id="tuDepth"><option value="1">1</option><option value="1.5">1, and the best 3 checked against the reply</option><option value="2">2</option><option value="3">3 (the Benchmark's)</option></select></label>
+    <label title="How far the ifelse AI and the Benchmark look ahead in tuning games; lower is much faster">Search depth while tuning <select id="tuDepth"><option value="1">1</option><option value="narrow3">3, narrow: the best 3 moves, 3 replies each, 1 follow-up</option><option value="2">2</option><option value="3">3 (the Benchmark's)</option></select></label>
     <button class="go" id="tuStart">Start</button><button id="tuPause" disabled>Pause</button><button id="tuReset">Start over</button><button id="tuExport" title="The ifelse AI's current values (the centre), for the game">Export ifelse AI</button>
   </div>
   <div class="setup">
@@ -4462,10 +4474,11 @@ function ifelseEval(s, p, goal, c) {
 }
 /** The side to move's best `width` options by a score (the quick score: the position right after the move; or `score`),
  *  always including passing. `keep` (the skip test) is asked best first and only until `width` options are kept: the same
- *  options as asking it of every move, with less work. */
-function ifelseOptions(t, goals, c, width, keep, score) {
-  const side = t.cur, scored = [];
-  for (const a of listActions(t)) {
+ *  options as asking it of every move, with less work. `noMoves`: plain moves of a unit are left out (deploys, spells,
+ *  attacks and passing stay), unless a choice is pending or nothing else is left. */
+function ifelseOptions(t, goals, c, width, keep, score, noMoves) {
+  const side = t.cur, scored = [], all = listActions(t), rest = noMoves && !t.pending ? all.filter(a => a.t !== 'move') : all;
+  for (const a of rest.length ? rest : all) {
     const n = cloneState(t);
     applyAction(n, a);
     scored.push({ a, t: n, v: score ? score(n) : ifelseEval(n, side, goals ? goals[side] : null, c) });
@@ -4483,7 +4496,8 @@ function ifelseSearch(t, me, left, level, goals, c, alpha = -Infinity, beta = In
   if (t.winner !== null || left === 0 || t.roundOver) return ifelseEnd(t, me, goals, c);
   const mine = t.cur === me;
   let best = mine ? -Infinity : Infinity;
-  for (const o of ifelseOptions(t, goals, c, c['w' + level])) {
+  // c.skipMoves: from the 2nd move on (the reply, the follow-up) plain moves of a unit are not looked at
+  for (const o of ifelseOptions(t, goals, c, c['w' + level], null, null, c.skipMoves)) {
     if (mine) {
       const v = ifelseSearch(o.t, me, left - 1, level + 1, goals, c, Math.max(alpha, best), beta);
       if (v > best) best = v;
@@ -7423,7 +7437,7 @@ function record(r, job) {
 const TUNE_OPPS = () => [['bench', 'Benchmark'], ...NETS.map(n => ['net:' + n.id, n.name])];
 const tuneOppName = k => (TUNE_OPPS().find(([x]) => x === k) || [k, k])[1];
 function tuneOppSpec(k, depth) {
-  if (k === 'bench') return { kind: 'bench', depth: Math.round(depth) };
+  if (k === 'bench') return { kind: 'ifelse', cfg: { ...BENCH_VALUES, ...tuneLook(depth) } };   // the Benchmark's values, looking as far as the AI being tuned
   return { kind: 'net', net: k.slice(4), play: { replies: false, explore: 0 } };
 }
 /*
@@ -7437,10 +7451,10 @@ const GOAL_KEYS = ['offGoal', 'stick', 'needDots', 'needEnemyDots', 'needEnemyPo
 const tuneFrozen = ([k, , type]) => /^w\d$/.test(k) || type === 'switch' || (!IFELSE_DEFAULTS.goals && GOAL_KEYS.includes(k));
 const TUNE_FIELDS = IFELSE_FIELDS.filter(f => !tuneFrozen(f));
 const TUNE_N = TUNE_FIELDS.length;
-/** Tuning depth "1 and a second look": every own move is valued 1 move ahead, then only the best 3 are checked against
- *  the opponent's best reply. */
-const SECOND_LOOK = 1.5;
-const tuneLook = d => (d === SECOND_LOOK ? { depth: 2, w1: 3 } : { depth: d });
+/** Tuning depth "narrow 3 ahead": every own move is valued 1 move ahead; for the best 3, the opponent's 3 best replies;
+ *  after each, the single best follow-up. Replies and follow-ups leave out plain moves of a unit. */
+const NARROW_3 = 'narrow3';
+const tuneLook = d => (d === NARROW_3 ? { depth: 3, w1: 3, w2: 3, w3: 1, skipMoves: 1 } : { depth: d });
 const logit = v => Math.log(v / (1 - v)), sigm = z => 1 / (1 + Math.exp(-z));
 /** Values from the search's numbers. */
 function tuneDecode(x) {
@@ -7500,11 +7514,11 @@ function cmaUpdate(cma, xs, rates) {
 }
 
 const TUNE_NAMES = TUNE_FIELDS.map(f => f[0]);
-const freshTune = (opps = ['bench']) => ({ v: 8, depth: SECOND_LOOK, opps, fields: TUNE_NAMES, cma: cmaFresh(Array(TUNE_N).fill(0), LAMBDA0), best: { ...IFELSE_DEFAULTS },
+const freshTune = (opps = ['bench']) => ({ v: 9, depth: NARROW_3, opps, fields: TUNE_NAMES, cma: cmaFresh(Array(TUNE_N).fill(0), LAMBDA0), best: { ...IFELSE_DEFAULTS },
   gen: 0, restarts: 0, cand: null, hist: [] });
 try { indexedDB.deleteDatabase('threeBases.lab.lessons'); } catch (e) {}   // the store of the removed lessons tuning
 function tuneState() {
-  if (!state.ifelse || state.ifelse.v !== 8) state.ifelse = freshTune(state.ifelse && state.ifelse.opps);   // earlier tunings are replaced
+  if (!state.ifelse || state.ifelse.v !== 9) state.ifelse = freshTune(state.ifelse && state.ifelse.opps);   // earlier tunings are replaced
   const st = state.ifelse;
   if (st.fields.join() !== TUNE_NAMES.join()) {                        // values added or removed (cards changed): the rest carry on by name
     const was = Object.fromEntries(st.fields.map((k, i) => [k, st.cma.mean[i]]));
@@ -7641,7 +7655,7 @@ $('#tuExport').addEventListener('click', () => {
   });
 });
 $('#tuPause').addEventListener('click', pauseTune);
-$('#tuDepth').addEventListener('change', () => setTuneDepth(Number($('#tuDepth').value)));
+$('#tuDepth').addEventListener('change', () => setTuneDepth($('#tuDepth').value === NARROW_3 ? NARROW_3 : Number($('#tuDepth').value)));
 
 /** A new tuning depth: the generation under way starts again; the search itself carries on. */
 function setTuneDepth(d) {
@@ -7649,7 +7663,7 @@ function setTuneDepth(d) {
   if (st.depth === d) return;
   if (was) pauseTune();
   st.depth = d; st.cand = null; st.best = tuneDecode(st.cma.mean);
-  st.hist.push({ gen: st.gen, mark: d === SECOND_LOOK ? 'second look' : 'depth ' + d });
+  st.hist.push({ gen: st.gen, mark: d === NARROW_3 ? 'narrow 3 ahead' : 'depth ' + d });
   save();
   if (was) startTune(); else renderTune();
 }
@@ -7669,7 +7683,7 @@ function renderCheck() {
 function checkJob() {
   const r = check.run;
   if (!r || r.started >= r.N) return null;
-  const j = r.started++, seat = j % 2, mine = { kind: 'ifelse', cfg: { ...r.values, ...tuneLook(r.depth) } }, opp = { kind: 'bench', depth: Math.round(r.depth) };
+  const j = r.started++, seat = j % 2, mine = { kind: 'ifelse', cfg: { ...r.values, ...tuneLook(r.depth) } }, opp = tuneOppSpec('bench', r.depth);
   return { key: 'check' + j, j, seat, specs: seat === 0 ? [mine, opp] : [opp, mine], decks: scheduledDecks(j), seed: 7000003 + Math.floor(j / 2) };
 }
 function checkResult(res, job) {
@@ -7746,29 +7760,49 @@ function renderTune() {
   renderCheck();
   $('#tuStart').textContent = st.gen || st.cand ? 'Resume' : 'Start';
   renderTuneStatus();
-  // the chart: per generation, the games the ifelse AI itself won (gold line); the candidates' average and best are in the hover text
-  const h = st.hist, W = 1200, H = 300, l = 76, r = 24, t = 14, b = 34, pw = W - l - r, ph = H - t - b;
-  const gens = h.filter(e => !e.mark), n = Math.max(1, gens.length - 1);
-  const lo = 0, hi = 1;
+  // the chart: per generation the games the ifelse AI itself won (thin line and dots; hollow = that move was taken back),
+  // their average over the last TREND generations (thick line), and the level it started at (dashed)
+  const TREND = 10;
+  const h = st.hist, W = 1200, H = 340, l = 76, r = 150, t = 14, b = 40, pw = W - l - r, ph = H - t - b;
+  const gens = h.filter(e => !e.mark && e.centre != null), n = Math.max(1, gens.length - 1);
+  const trend = gens.map((e, k) => { const w = gens.slice(Math.max(0, k - TREND + 1), k + 1); return w.reduce((a, x) => a + x.centre, 0) / w.length; });
+  const start = gens.length ? gens.slice(0, Math.min(3, gens.length)).reduce((a, x) => a + x.centre, 0) / Math.min(3, gens.length) : 0;
+  // the scale zooms to the results, in steps of 10 points, at least 30 points high
+  let lo = 0, hi = 1;
+  if (gens.length) {
+    lo = Math.floor(Math.min(...gens.map(e => e.centre)) * 10) / 10; hi = Math.ceil(Math.max(...gens.map(e => e.centre)) * 10) / 10;
+    while (hi - lo < 0.295) { if (lo > 0) lo = Math.round(lo * 10 - 1) / 10; if (hi - lo < 0.295 && hi < 1) hi = Math.round(hi * 10 + 1) / 10; }
+  }
   const X = i => l + pw * (gens.length < 2 ? 0.5 : i / n), Y = v => t + ph * (1 - (v - lo) / (hi - lo));
   let svg = `<rect class="plot" x="${l}" y="${t}" width="${pw}" height="${ph}"></rect>`;
-  for (let k = 0; k <= 4; k++) { const v = lo + (hi - lo) * k / 4; svg += `<line class="grid${k === 2 ? ' mid' : ''}" x1="${l}" x2="${W - r}" y1="${Y(v)}" y2="${Y(v)}"></line><text class="ylab gl" x="${l - 8}" y="${Y(v) + 5}">${v * 100}%</text>`; }
+  for (let v = lo; v < hi + 0.001; v += 0.1) svg += `<line class="grid${Math.abs(v - 0.5) < 0.001 ? ' mid' : ''}" x1="${l}" x2="${l + pw}" y1="${Y(v)}" y2="${Y(v)}"></line><text class="ylab gl" x="${l - 8}" y="${Y(v) + 5}">${Math.round(v * 100)}%</text>`;
   svg += `<text class="ytitle gl" transform="translate(16 ${t + ph / 2}) rotate(-90)">games won</text>`;
+  let facts = '';
   if (!gens.length) svg += `<text class="empty" x="${l + pw / 2}" y="${t + ph / 2}">No generations yet.</text>`;
   else {
     let i = 0;
     for (const e of h) {
-      if (!e.mark) { i++; continue; }
-      const x = X(Math.max(0, i - 0.5)), right = x > W - r - 200;
+      if (e.centre != null && !e.mark) { i++; continue; }
+      if (!e.mark) continue;
+      const x = X(Math.max(0, i - 0.5)), right = x > l + pw - 200;
       svg += `<line class="tumark" x1="${x}" x2="${x}" y1="${t}" y2="${t + ph}"></line><text class="tumarkt" x="${right ? x - 4 : x + 4}" y="${t + 14}" text-anchor="${right ? 'end' : 'start'}">${esc(e.mark)}</text>`;
     }
-    const cen = gens.map((e, k) => (e.centre == null ? null : `${X(k)},${Y(e.centre)}`)).filter(Boolean);
-    if (cen.length) svg += `<polyline class="tubest" points="${cen.join(' ')}"></polyline>`;
-    svg += gens.map((e, k) => (e.centre == null ? '' : `<circle class="tuhit" cx="${X(k)}" cy="${Y(e.centre)}" r="8"><title>Generation ${e.gen + 1}: ifelse AI ${tpct(e.centre)}${e.back ? ` (the centre before scored ${tpct(e.prev)}: went back to it)` : e.prev != null ? ` (the centre before scored ${tpct(e.prev)}: kept the move)` : ''}, candidates' average ${tpct(e.avg)}, best candidate ${tpct(e.top)} (${e.lambda} candidates${e.deals ? `, ${e.deals} games each` : ''})</title></circle>`)).join('');
-    svg += `<text class="xlab" x="${l}" y="${H - 10}">generation ${gens[0].gen + 1}</text><text class="xlab end" x="${W - r}" y="${H - 10}">generation ${gens[gens.length - 1].gen + 1}</text>`;
+    const now = trend[trend.length - 1], bestK = trend.indexOf(Math.max(...trend));
+    svg += `<line class="tustart" x1="${l}" x2="${l + pw}" y1="${Y(start)}" y2="${Y(start)}"></line>`;
+    svg += `<polyline class="tubest thin" points="${gens.map((e, k) => `${X(k)},${Y(e.centre)}`).join(' ')}"></polyline>`;
+    if (gens.length > 1) svg += `<polyline class="tubest" points="${trend.map((v, k) => `${X(k)},${Y(v)}`).join(' ')}"></polyline>`;
+    svg += gens.map((e, k) => `<circle class="tudot${e.back ? ' back' : ''}" cx="${X(k)}" cy="${Y(e.centre)}" r="${gens.length > 150 ? 2 : 3.5}"></circle><circle class="tuhit" cx="${X(k)}" cy="${Y(e.centre)}" r="8"><title>Generation ${e.gen + 1}: the ifelse AI won ${tpct(e.centre)}${e.back ? ` (the one before won ${tpct(e.prev)}, clearly more: went back to it)` : e.prev != null ? ` (the one before won ${tpct(e.prev)}: kept the move)` : ''}; average of the last ${Math.min(TREND, k + 1)} generations ${tpct(trend[k])}; candidates' average ${tpct(e.avg)}, best candidate ${tpct(e.top)} (${e.lambda} candidates${e.deals ? `, ${e.deals} games each` : ''}); step size ${e.sigma.toFixed(3)}</title></circle>`).join('');
+    // labels at the right edge: now and start (kept apart when close)
+    const yn = Y(now), ys = Math.abs(Y(start) - yn) < 18 ? yn + (Y(start) >= yn ? 18 : -18) : Y(start);
+    svg += `<text class="tunow" x="${l + pw + 8}" y="${yn + 5}">now ${tpct(now)}</text><text class="tustartt" x="${l + pw + 8}" y="${ys + 5}">start ${tpct(start)}</text>`;
+    const ticks = Math.min(6, gens.length - 1);
+    for (let k = 0; k <= ticks; k++) { const j = ticks ? Math.round(n * k / ticks) : 0; svg += `<text class="xlab mid" x="${X(j)}" y="${H - 22}">${gens[j].gen + 1}</text>`; }
+    svg += `<text class="xlab mid" x="${l + pw / 2}" y="${H - 4}">generation</text>`;
+    const games = gens.reduce((a, e) => a + (e.deals || 0) * (e.lambda + (e.prev != null ? 2 : 1)), 0), diff = Math.round((now - start) * 100);
+    facts = `<div class="tufacts"><span><b>${tpct(now)}</b> now (average of the last ${Math.min(TREND, gens.length)} generations)</span><span><b>${tpct(start)}</b> at the start</span><span><b>${diff > 0 ? '+' : ''}${diff}</b> points since the start</span><span><b>${tpct(trend[bestK])}</b> best, at generation ${gens[bestK].gen + 1}</span><span><b>${st.cma.sigma.toFixed(3)}</b> step size</span><span><b>${games.toLocaleString('en')}</b> games played</span></div>`;
   }
-  $('#tuChart').innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Win rates by generation">${svg}</svg>
-    <div class="tulegend"><span class="lg best"></span>games the ifelse AI won in the tuning games</div>`;
+  $('#tuChart').innerHTML = `${facts}<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Games won by generation">${svg}</svg>
+    <div class="tulegend"><span class="lg thin"></span>games the ifelse AI won in one generation <span class="lg best"></span>average of the last ${TREND} generations <span class="lg start"></span>where it started <span class="lg dot"></span>a move that was taken back</div>`;
   const fmt = v => (Number.isInteger(v) ? String(v) : Math.abs(v) >= 10 ? v.toFixed(1) : v.toFixed(3));
   $('#tuTable').innerHTML = `<table class="tutable"><thead><tr><th>Value</th><th>Start</th><th>ifelse AI (centre)</th></tr></thead><tbody>${
     TUNE_FIELDS.map(([k, text]) => { const d = IFELSE_DEFAULTS[k], v = st.best[k] ?? d, ch = Math.abs(v - d) > 1e-9;
