@@ -20,7 +20,7 @@ Method (Claude's proposal, agreed in outline):
 
 The axes (first measured on 39 real factions of the 8 library games in an earlier chat, with no saved script; now measured
 by axes.py below on 43 factions of 8 games (Marvel Snap has no factions; Monster Train left out by Kaptain, 9 Nov
-2026: a different kind of game). On the page five of the ends below are split into parts, 22 radii in 7 areas
+2026: a different kind of game). On the page the ends below are split into parts, 24 radii in 8 areas
 (factions/13-wheel-measurement.txt). Changed 9 Nov 2026 by Kaptain: "locks enemies or outmoves them", "what its cards react to" (placed,
 attacking, hit, dying: a list of four kinds, not a scale, and covered by axes 1 and 3) and "how hard it is to play"
 dropped; disruption added):
@@ -59,11 +59,13 @@ win 2 of 3 lanes), random effects (not allowed), lasting or this-round effects (
 How it is measured, and how to redo it for new games or changed library cards and links: factions/13-wheel-measurement.txt.
 
 The design process from the wheel (AGREED with Kaptain, 9 Nov 2026; done in another chat):
-1. Radii final; the library gaps in todo.md fixed first (database chat).
+1. Radii: the 24 of 10 Nov 2026 (factions/13-wheel-measurement.txt). Open and not blocking the wheel chat: the library
+   gaps of todo.md (database chat) and how values compare across games (factions/13).
 2. Pool of mechanics: the mechanics this board supports, each from the library and able to carry 30+ cards, each placed
    on the radii it serves. `python3 library/cards_db/apart.py` lists mechanics real factions keep apart (opposite sides)
    and together (neighbours); read card texts before trusting a pair.
-3. The 20 factions placed: each a shape strong on 2-4 neighbouring radii and weak on the far side; on the map of
+3. The 20 factions placed: each a shape strong in 1-2 neighbouring areas of the circle (3-6 radii; Claude's wording of
+   10 Nov 2026 for 24 radii in 8 areas, Kaptain confirms it in the wheel chat) and weak on the far side; on the map of
    factions no two sit on top of each other.
 4. Per faction 2-3 monopolies, 1-2 mechanics shared with each neighbour on a few cards, blind spots from the far side;
    the five-questions table filled for all 20 at once.

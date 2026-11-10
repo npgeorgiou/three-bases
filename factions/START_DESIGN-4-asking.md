@@ -20,8 +20,8 @@ librarian's report"). Never invent rules or mechanics. Describe the way, not the
 sources.
 
 ## What the database holds
-- 8 games: Runeterra (regions), Stormbound, Monster Train (clans), Duelyst, Faeria (colours), Inscryption, Into the
-  Breach (squads), Slay the Spire (characters). Factions are the `regions` of each card.
+- 10 games: Runeterra (regions), Stormbound, Monster Train (clans), Duelyst, Faeria (colours), Inscryption, Into the
+  Breach (squads), Slay the Spire (characters), Gwent, Marvel Snap (no factions). Factions are the `regions` of each card.
 - Each card as rows: event, conditions, effects. Each row has a concept from `library/concept_tree.txt` (concepts are by
   outcome: "suppress" holds disable, silence, can't block ...; a question on a concept also finds the ones under it).
 - Lines between cards of one game, drawn by network.py for any list of cards (decks in decks.tsv).

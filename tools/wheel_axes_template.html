@@ -23,11 +23,11 @@ th{cursor:pointer;position:sticky;top:0;background:#fff}td:first-child,th:first-
 </style></head><body>
 <header><h1>The wheel axes, measured on the library</h1>
 <div class="seg" id="mode"><button data-m="cards" class="on">All cards</button><button data-m="decks">Cards in top decks</button></div>
-<div class="seg" id="view"><button data-v="radar" class="on">Circle of axes</button><button data-v="map">Map of factions</button><button data-v="table">Numbers</button></div>
+<div class="seg" id="view"><button data-v="radar" class="on">Circle of axes</button><button data-v="map">Map of factions</button><button data-v="table">Numbers</button><button data-v="links">Radii that work together</button></div>
 <span class="note" id="count"></span></header>
 <main>
 <div class="panel"><h2>Factions</h2><div style="margin-bottom:6px"><a href="#" id="allOn">all</a> · <a href="#" id="allOff">none</a></div><div id="facs"></div></div>
-<div class="panel" id="centre"><div id="radarBox"></div><div id="mapBox" style="display:none"></div><div id="tableBox" style="display:none"></div>
+<div class="panel" id="centre"><div id="radarBox"></div><div id="mapBox" style="display:none"></div><div id="tableBox" style="display:none"></div><div id="linksBox" style="display:none"></div>
 <p class="note" id="explain"></p></div>
 <div><div class="panel" id="near"><h2>Closest factions</h2><select id="nearSel"></select><ol id="nearList"></ol>
 <p class="note">Distance over the axes ticked below, in the mode above.</p></div>
@@ -36,7 +36,7 @@ th{cursor:pointer;position:sticky;top:0;background:#fff}td:first-child,th:first-
 <script>
 const DATA=/*DATA*/null;
 const A=DATA.radii,F=DATA.factions;
-const AREA={'Fighting':'#c0392b','Damage':'#d35400','Control':'#8e44ad','Cards and supply':'#2471a3','Many units and dying':'#5d6d7e','Together':'#a57f00','Staying alive':'#1e8449'};
+const AREA={'Fighting':'#c0392b','Damage':'#d35400','Spells':'#b8327a','Control':'#5b4bb5','Cards and supply':'#2471a3','Many units and dying':'#5d6d7e','Together':'#a57f00','Staying alive':'#1e8449'};
 const GAMES=[...new Set(F.map(f=>f.game))];
 const PAL=['#e6194b','#3cb44b','#4363d8','#f58231','#911eb4','#42d4f4','#f032e6','#9a6324','#469990','#800000','#808000','#000075','#e6a800','#a9a9a9','#bfef45','#fabed4','#dcbeff','#aaffc3','#ffd8b1'];
 const GCOL={};GAMES.forEach((g,i)=>GCOL[g]=PAL[i%PAL.length]);
@@ -112,6 +112,11 @@ function map(){const box=document.getElementById('mapBox');box.innerHTML='';cons
  document.getElementById('explain').innerHTML=`Every faction as one point, placed by the two directions in which the factions differ most (a principal component analysis of the ticked axes). Faded colours = game; selected factions are bold and named. Click a point to select it. These two directions hold ${Math.round(cum[1]*100)}% of all the differences between factions; the first six hold ${Math.round((cum[5]||cum[cum.length-1])*100)}%. The rest is lost on a flat picture, which is why factions close here can still differ on axes not shown.`}
 
 let sortK='faction',sortD=1;
+function links(){const L=DATA.links,ks=A.filter(a=>L[a.key]),nm=a=>`${ks.indexOf(a)+1}. ${a.end}`;
+ document.getElementById('linksBox').innerHTML=`<div id="tablewrap"><table><tr><th>Radius</th>${ks.map((a,i)=>`<th title="${nm(a)}">${i+1}</th>`).join('')}</tr>`+
+  ks.map(a=>`<tr><td style="border-left:4px solid ${AREA[a.area]||'#888'};padding-left:6px">${nm(a)}</td>${ks.map(b=>{const v=L[a.key][b.key];const c=v==null?'':v>1?`rgba(30,132,73,${Math.min(.7,(v-1)/2)})`:`rgba(192,57,43,${Math.min(.5,(1-v)*.8)})`;
+   return`<td style="background:${c}" title="${nm(a)} with ${nm(b)}">${v==null?'':v.toFixed(1)}</td>`}).join('')}</tr>`).join('')+
+  '</table></div><p class="note">How often the library says a card of one radius sets off, or is set off by, a card of the other, in the same game. 1 is chance. Green, above 1: the two work together in real games, so they suit one faction or two neighbours. Red, below 1: real games rarely join them. Empty: too few cards to tell. Strength, defence and "position and combos" are measured from numbers, not cards, so they are not here.</p>'}
 function table(){const box=document.getElementById('tableBox');const ax=A.filter(a=>axOn.has(a.key));const fs=F.filter(has).filter(f=>!sel.size||sel.has(f.id));
  const val=(f,k)=>k==='faction'?f.faction:k==='game'?f.game:(Z(f)[k]??-99);fs.sort((p,q)=>{const a=val(p,sortK),b=val(q,sortK);return(a>b?1:a<b?-1:0)*sortD});
  box.innerHTML=`<div id="tablewrap"><table><tr><th data-k="faction">Faction</th><th data-k="game">Game</th>${ax.map(a=>`<th data-k="${a.key}" title="${a.axis}: ${a.end}">${a.n}. ${a.end}</th>`).join('')}<th data-k="lean" title="Unit stats: the strength value minus the defence value (above 0 leans to strength, below 0 to defence)">9. lean</th></tr>`+
@@ -124,8 +129,8 @@ function near(){const s=document.getElementById('nearSel');const f=F[s.value];co
  const d=F.filter(g=>has(g)&&g.id!==f.id).map(g=>[g,dist(g)]).sort((a,b)=>a[1]-b[1]).slice(0,8);
  ol.innerHTML=d.map(([g,x])=>`<li>${g.faction} <span class="note">(${g.game.replace(/_/g,' ')}, ${x.toFixed(1)})</span></li>`).join('')}
 document.getElementById('nearSel').onchange=near;
-function draw(){document.getElementById('radarBox').style.display=view==='radar'?'':'none';document.getElementById('mapBox').style.display=view==='map'?'':'none';document.getElementById('tableBox').style.display=view==='table'?'':'none';
- view==='radar'?radar():view==='map'?map():table()}
+function draw(){document.getElementById('radarBox').style.display=view==='radar'?'':'none';document.getElementById('mapBox').style.display=view==='map'?'':'none';document.getElementById('tableBox').style.display=view==='table'?'':'none';document.getElementById('linksBox').style.display=view==='links'?'':'none';
+ view==='radar'?radar():view==='map'?map():view==='links'?links():table()}
 document.querySelectorAll('#mode button').forEach(b=>b.onclick=()=>{mode=b.dataset.m;document.querySelectorAll('#mode button').forEach(x=>x.classList.toggle('on',x===b));for(const id of[...sel])if(!has(F[id]))sel.delete(id);buildFacs();draw()});
 document.querySelectorAll('#view button').forEach(b=>b.onclick=()=>{view=b.dataset.v;document.querySelectorAll('#view button').forEach(x=>x.classList.toggle('on',x===b));draw()});
 document.getElementById('allOn').onclick=e=>{e.preventDefault();F.filter(has).forEach(f=>sel.add(f.id));buildFacs();draw()};

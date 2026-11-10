@@ -6,10 +6,11 @@ Work plan (AGREED): step 1, faction candidates from the inspiration library (par
 
 Files (lines, then contents). Read only the file a task needs; find lines across files with: python3 tools/find.py doc <text>
 
-START_DESIGN.md                   127  START HERE for every chat that uses the library (faction and card design, every question to the library): the thinking process, NEVER DO
-START_DESIGN-2-rules.md           108  its part 2: setup, this game's rules for design, the design rules
+START_DESIGN.md                   141  START HERE for every chat that uses the library (faction and card design, every question to the library): the thinking process, NEVER DO
+START_DESIGN-1-wheel.md            27  its part 1: the wheel chat, the first step: a high-level design of 20 factions based on the wheel
+START_DESIGN-2-rules.md           114  its part 2: setup, this game's rules for design, the design rules
 START_DESIGN-3-checks.md           71  its part 3: Kaptain's checks, self-critique, library search, before sending
-START_DESIGN-4-asking.md          102  its part 4: how to ask the library, the shape of an answer, searching wide, thinking like a player
+START_DESIGN-4-asking.md          105  its part 4: how to ask the library, the shape of an answer, searching wide, thinking like a player
 LESSONS.md                         17  lessons for future factions from building, playtesting and AI-testing (one entry per lesson)
 3-candidates/00-notes.txt             9  3. Candidates: review notes, how the list was built, terms
 3-candidates/E1-tagma.txt            18  E1. TAGMA — the Byzantine army (all-round)
@@ -45,8 +46,8 @@ LESSONS.md                         17  lessons for future factions from building
 8-rejected-and-cut.txt               6  8. REJECTED AND CUT (don't reintroduce without asking)
 10-outside-design-guides.txt        79  10. What outside design guides teach (Hearthstone, Rosewater, Slay the Spire...) and what they mean here
 11-seven-factions.txt               61  11. The seven factions of 4 Nov 2026 (clockwork, death, aggro, defence, spells, all-Immobile, WWI artillery): overview, new rules, checks
-12-mechanical-wheel.txt             79  12. The mechanical wheel: designing 20 factions together; its radii and the agreed design process
-13-wheel-measurement.txt            83  13. How the wheel's radii are measured (axes.py, wheel-axes.html) and how to redo it
+12-mechanical-wheel.txt             81  12. The mechanical wheel: designing 20 factions together; its radii and the agreed design process
+13-wheel-measurement.txt            106  13. How the wheel's radii are measured (axes.py, wheel-axes.html) and how to redo it
 designs/00-five-identities.txt      52  The five new factions from zero: overview, contrast, signatures, new rules needed
 designs/ironfront.txt               90  Ironfront (World War I) stage 1: theme, mechanics, web, ways to play
 designs/lodestones.txt              88  Lodestones (megaliths, all Immobile) stage 1

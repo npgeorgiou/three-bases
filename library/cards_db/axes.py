@@ -24,7 +24,8 @@ DISRUPT_ON_ENEMY = ['stat_loss', 'forced_attack', 'forced_movement', 'debuff', '
                     'polymorph', 'discard', 'counter_spell', 'transform', 'return_to_hand']
 DISRUPT_ALWAYS = ['hand_disruption', 'mill', 'board_clog', 'cost_increase', 'play_restriction', 'counter_spell', 'steal', 'bounce_enemy']
 NOT_MEASURED = ('monster_train',)  # Kaptain, 9 Nov 2026: a different kind of game, not on the page (Marvel Snap has no factions)
-KILL_ON_ENEMY = ['damage', 'excess_damage', 'destroy', 'banish', 'damage_over_time', 'aoe_damage', 'ping', 'direct_damage', 'board_wipe']
+KILL_ON_ENEMY = ['destroy', 'banish']  # kills outright; damage is its own two radii
+DAMAGE_ON_ENEMY = ('damage', 'damage_over_time')  # the card's own text deals damage to an enemy unit or player (a unit's strike is no row)
 POSITION = ['adjacency', 'aura', 'link_formation', 'flanking', 'assists_support']
 POSITION_GAMES = ('gwent', 'runeterra', 'marvel_snap')  # elsewhere these concepts are area hits and pushes (check of 9 Nov 2026)
 NEAR = ' or '.join("W like '%position " + w + "%'" for w in ('% bordering', '% surrounding', '% sides', '% diagonal', 'is behind', '% in_circuit'))
@@ -41,6 +42,8 @@ SHOWN = {'stop*': 'an effect on enemies: ' + ', '.join(STOP_ON_ENEMY) + ', can\'
          'disrupt*': 'an effect on enemies: ' + ', '.join(DISRUPT_ON_ENEMY) + '; or any card with: ' + ', '.join(DISRUPT_ALWAYS),
          'chosen*': 'an effect on one chosen unit on the board',
          'kill*': 'an effect on enemies: ' + ', '.join(KILL_ON_ENEMY),
+         'spelldmg*': 'a spell whose text deals damage to an enemy',
+         'textdmg*': 'a unit (or building, item, weapon) whose text deals damage to an enemy',
          'position*': 'position: an effect or condition on its own units beside, around or behind it; in Gwent, Runeterra, Marvel Snap also: ' + ', '.join(POSITION),
          'countboard*': 'counts the units on the board',
          'combo*': 'combos: the share of the faction\'s card pairs the library links',
@@ -53,9 +56,10 @@ SHRINK = 5  # smoothing: every faction counts as if it had 5 more cards at its g
 POWER = 0.75  # smoothing: values are raised to this power (4 times the average shows as 2.8, a quarter as 0.35)
 NO_VALUE = {('into_the_breach', 'strong'): 'its units\' damage comes from weapons, not in the library',
             ('into_the_breach', 'wide'): 'its units have no cost', ('into_the_breach', 'tall'): 'its units have no cost',
-            **{('sts1', k): 'the player has no units' for k in ('strong', 'tough', 'wide', 'tall', 'spends', 'heals', 'growsdef', 'protects')}}
+            **{(g, k): 'the game has no spells' for g in ('inscryption', 'into_the_breach') for k in ('spelldmg', 'spellpay')},
+            **{('sts1', k): 'the player has no units' for k in ('strong', 'tough', 'wide', 'tall', 'spends', 'heals', 'growsdef', 'protects', 'textdmg')}}
 CHECKS = [  # Kaptain's points: (game, faction, spoke, lowest value it must have)
-    ('faeria', 'Red', 'fixed', 1.5),  # 9 Nov 2026: Red is Faeria's fixed-damage faction
+    ('faeria', 'Red', 'textdmg', 1.5),  # 9 Nov 2026: Red is Faeria's fixed-damage faction (its units' text deals it)
     ('faeria', 'Red', 'strikes', 1.0),  # and its units strike too; one number used to hide that
     ('inscryption', 'Undead', 'strong', 0.9),  # 0.75 when 4 Bones counted as 4 Blood (SUPPLIES)
 ]
@@ -63,25 +67,25 @@ GAPS = [('inscryption', 'disrupts'), ('sts1', 'tall')]  # must have no value: 5 
 HAS = [('gwent', 'grows'), ('gwent', 'growsdef'),  # must have a value: growth of Gwent's one number counts as both
        ('duelyst', 'pos'), ('faeria', 'pos'), ('stormbound', 'pos'),  # position in the board games
        ('duelyst', 'one'), ('faeria', 'one'), ('gwent', 'one'), ('stormbound', 'one')]  # a chosen target is read from the rows in every game
-MIN_DECK_CARDS = 10  # Faeria Pandora has 1 card in decks
+MIN_DECK_CARDS = 10
+MIN_LINKS = 20  # two radii get a "work together" number only when chance alone would give 20 linked pairs  # Faeria Pandora has 1 card in decks
 SPOKES = [  # (key, axis number, axis name, this radius, concepts, area of the circle); "concept@game,game" counts only in those games (the check of 9 Nov 2026)
     # in circle order: neighbours belong together, and the radii of one area sit side by side
     ('strong', 9, 'Unit stats', 'strength', ['strength*'], 'Fighting'),
     ('grows', 3, 'Damage', 'grows strength', ['attack_gain@duelyst,faeria,gwent,inscryption,monster_train,runeterra,stormbound,sts1'], 'Fighting'),
     ('strikes', 3, 'Damage', 'strikes more or first', ['on_attack@duelyst,faeria,into_the_breach,monster_train,runeterra,stormbound,sts1',
         'multi_attack', 'first_strike', 'attack_now', 'excess_damage', 'counterattack', 'on_fight', 'piercing'], 'Fighting'),
-    ('kills', 2, 'Enemy units', 'kills them', ['kill*', 'removal', 'deathtouch'], 'Damage'),
-    ('fixed', 3, 'Damage', 'fixed damage', ['direct_damage@duelyst,faeria,stormbound',
-        'ping@duelyst,faeria,gwent,inscryption,monster_train,runeterra,stormbound',
-        'aoe_damage@faeria,gwent,inscryption,into_the_breach,runeterra,stormbound,sts1', 'damage_over_time',
-        'spell_power@duelyst,monster_train,runeterra,sts1', 'board_wipe@duelyst,faeria,gwent,into_the_breach,runeterra,stormbound'], 'Damage'),
+    ('textdmg', 3, 'Damage', 'damage from units\' text', ['textdmg*'], 'Damage'),
+    ('kills', 2, 'Enemy units', 'kills outright', ['kill*', 'removal', 'deathtouch'], 'Damage'),
     ('many', 6, 'Targets', 'many at once', ['aoe_damage@faeria,gwent,inscryption,into_the_breach,runeterra,stormbound,sts1',
         'board_wipe', 'multi_target_attack@into_the_breach,runeterra', 'rows@duelyst,into_the_breach', 'row_effects', 'area_templates', 'countboard*'], 'Damage'),
+    ('spelldmg', 3, 'Damage', 'damage from spells', ['spelldmg*'], 'Spells'),
+    ('spellpay', 3, 'Damage', 'rewards playing spells', ['on_spell', 'spells_played_condition', 'spell_power@duelyst,runeterra'], 'Spells'),
     ('stops', 2, 'Enemy units', 'stops them', ['stop*'], 'Control'),
     ('disrupts', 2, 'Enemy units', 'breaks their plan in other ways', ['disrupt*', 'disruption'], 'Control'),
     ('one', 6, 'Targets', 'one chosen', ['chosen*', 'target_choice', 'mark_target@duelyst,gwent,runeterra,sts1'], 'Control'),
     ('supply', 4, 'Supply and cards', 'more supply', ['resource_gain', 'base_resource_gain', 'resource_banking', 'coin_economy'], 'Cards and supply'),
-    ('cheaper', 4, 'Supply and cards', 'cheaper or stronger cards in hand', ['cost_reduction@duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1',
+    ('cheaper', 4, 'Supply and cards', 'cheaper or stronger hand', ['cost_reduction@duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1',
         'free_play@gwent,inscryption,monster_train,runeterra,stormbound,sts1', 'cost_set', 'in_hand_buff'], 'Cards and supply'),
     ('cards', 4, 'Supply and cards', 'more cards', ['draw', 'generate_cards'], 'Cards and supply'),
     ('picks', 8, 'Hand and discard pile', 'picks and copies', ['copy', 'tutor', 'retain', 'selection@faeria,gwent,runeterra,sts1'], 'Cards and supply'),
@@ -145,6 +149,9 @@ def tag(c, x, games):
         con[card].add('chosen*')
     for q in BESIDE:
         for (card,) in c.execute(q + faction_asks.ROW_ORIGIN): con[card].add('position*')
+    dmg = {card for (card,) in c.execute("select card from flat_do where on_side='enemy' and concept in " + repr(DAMAGE_ON_ENEMY) + " and " + faction_asks.ROW_ORIGIN)}
+    for i, cat in c.execute('select id, category from card'):
+        if i in dmg: con[i].add('spelldmg*' if cat == 'spell' else 'textdmg*')
     pools = {g: x.pool(g) for g in games}
     raw = {i: (g, cat, cost, unit_stats(g, p, h, st), (ct or '').lower()) for i, g, cat, cost, p, h, st, ct in
            c.execute('select id, game, category, cost, power, health, stats, cost_text from card')}
@@ -174,6 +181,7 @@ def tag(c, x, games):
 
 
 def main():
+    if '--near' in sys.argv: return near(sys.argv[sys.argv.index('--near') + 1])
     c = sqlite3.connect('cards.sqlite')
     games = sorted({g for (g,) in c.execute('select distinct game from card')})
     x = faction_asks.Ctx(c, games, None, {})
@@ -233,7 +241,7 @@ def main():
                 if r[mode]:
                     f.write(f"{r['game']}\t{r['faction']}\t{r['n_cards']}\t{r['deck_cards']}\t{mode}\t" +
                             '\t'.join(f"{fmt(r[mode][s[0]])}\t{fmt(r[mode][s[0] + '_v'])}" for s in SPOKES) + '\t' + fmt(r[mode]['lean_v']) + '\n')
-    data = {'radii': [{'key': s[0], 'n': s[1], 'axis': s[2], 'end': s[3], 'area': s[5], 'concepts': [shown(k) for k in s[4]]} for s in SPOKES],
+    data = {'links': radius_links(games, pools, con, pairs), 'radii': [{'key': s[0], 'n': s[1], 'axis': s[2], 'end': s[3], 'area': s[5], 'concepts': [shown(k) for k in s[4]]} for s in SPOKES],
             'factions': [{'game': r['game'], 'faction': r['faction'], 'cards': r['n_cards'], 'deckCards': r['deck_cards'],
                           'cardsV': per_spoke(r['cards'], '_v'), 'decksV': per_spoke(r['decks'], '_v'),
                           'cardsS': per_spoke(r['cards'], ''), 'decksS': per_spoke(r['decks'], ''),
@@ -250,6 +258,45 @@ def main():
             if any((r['cards'][key + '_v'] is not None) != want for r in rows if r['game'] == g):
                 print(f'CHECK FAILED: {g} {key} should have ' + ('a value' if want else 'no value'))
     print(len(rows), 'factions;', sum(1 for r in rows if r['decks']), 'with decks')
+
+
+def radius_links(games, pools, con, pairs):
+    """How much more often than chance the library links a card of one radius with a card of another (1 = chance).
+    Per game: the linked pairs between the two radii's cards, against all pairs between them times the game's share of linked pairs."""
+    keys = [s for s in SPOKES if s[0] != 'together' and s[0] not in NUMERIC]
+    obs, exp = collections.Counter(), collections.Counter()
+    for g in games:
+        ids = list(pools[g])
+        if g in NOT_MEASURED or len(ids) < 2: continue
+        of = {i: [s[0] for s in keys if counts(con[i], g, s[4])] for i in ids}
+        linked = [(a, b) for a, b in pairs if a in of and b in of]
+        dens = len(linked) / (len(ids) * (len(ids) - 1) / 2)
+        n = collections.Counter(k for i in ids for k in of[i])
+        both = collections.Counter((ka, kb) for i in ids for ka in of[i] for kb in of[i])
+        for a, b in linked:
+            for ka in of[a]:
+                for kb in of[b]: obs[(ka, kb)] += 1; obs[(kb, ka)] += 1
+        for sa in keys:
+            for sb in keys: exp[(sa[0], sb[0])] += (n[sa[0]] * n[sb[0]] - both[(sa[0], sb[0])]) * dens
+    return {a[0]: {b[0]: round(obs[(a[0], b[0])] / exp[(a[0], b[0])], 2) if exp[(a[0], b[0])] >= MIN_LINKS else None for b in keys} for a in keys}
+
+
+def near(arg):
+    """python3 axes.py --near "heals=1.6,stops=0.3": the real factions closest to a planned shape, over the radii named."""
+    want = {k.strip(): float(v) for k, v in (p.split('=') for p in arg.split(','))}
+    bad = set(want) - {s[0] for s in SPOKES}
+    if bad: sys.exit('no such radius: ' + ', '.join(sorted(bad)) + '; the radii are: ' + ', '.join(s[0] for s in SPOKES))
+    out = []
+    with open('axes.tsv', encoding='utf-8') as f:
+        head = next(f).rstrip('\n').split('\t')
+        for line in f:
+            r = dict(zip(head, line.rstrip('\n').split('\t')))
+            have = [k for k in want if r[k + '_value']]
+            if r['mode'] == 'cards' and len(have) == len(want):
+                out.append((sum((float(r[k + '_value']) - want[k]) ** 2 for k in want) ** .5, r))
+    for d, r in sorted(out, key=lambda t: t[0])[:10]:
+        print(f"{d:.2f}  {r['game']}: {r['faction']}  " + ', '.join(f"{k} {float(r[k + '_value']):.1f}" for k in want))
+    print('(factions of games with no value on one of these radii are left out)')
 
 
 def shown(k):

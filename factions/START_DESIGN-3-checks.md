@@ -40,7 +40,7 @@ Part of `factions/START_DESIGN.md` (read that first, whole; then parts 2, 3 and 
 - Network tags are specific ("ally-dies-this-round", not "death"); a vague tag makes everything look connected.
 - Before sending, go through every line of the four files and know which part of the design passes it.
 
-## 3. Search the library (all 8 games, card by card)
+## 3. Search the library (all games, card by card)
 How to ask: part 4, `START_DESIGN-4-asking.md`. Run from `library/cards_db/`.
 - For a faction: `ask.py all ways "<faction>"` (its groups of linked cards), `curve` (its cards by cost, each as
   when -> what -> on whom), `spells` (its spells by what they do), `removal` and `protect` (how it removes enemies and

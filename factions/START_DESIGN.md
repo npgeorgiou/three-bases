@@ -15,7 +15,9 @@ the end of a round, through the dots of the front rows (summary/04). Judge every
 take a base, hold it, or take it from the enemy?
 
 ## How the work is split
-- One faction per chat.
+- First the wheel chat: all 20 factions together at high level (archetype and mechanics, no cards). It follows
+  `START_DESIGN-1-wheel.md` and skips the steps of building a faction below.
+- Then one faction per chat.
 - Kaptain sees two things: the faction's answers to steps 1-6, then the finished faction (exactly 100 cards, the gate
   passed). He does not check cards in batches.
 - Before the finished faction is sent, a separate agent that has not seen the work checks it against these four files,
@@ -26,15 +28,17 @@ Step 0 (Kaptain, 9 Nov 2026): the faction's place on the mechanical wheel (`fact
 first. Its radii, monopolies, blind spots, mechanics shared with its two neighbours and how it differs from every other
 faction are decided there, for all 20 factions together, not in the faction's chat. The theme comes last and fits the
 mechanics.
-Steps 1-6 come from the library, never from memory. Run the queries below on all 8 games (`ask.py all ...` from
+Steps 1-6 come from the library, never from memory. Run the queries below on all games (`ask.py all ...` from
 `library/cards_db/`; a faction name used by two games, such as Ironclad, needs the game: `ask.py sts1 lacks Ironclad`),
 read 5-10 card texts behind every count, and write the sources (game: card) next to each answer of steps 2, 3, 5 and 6.
 - Step 1: list the factions of every game (section 3) and pick the 6-10 closest to the faction's place on the wheel (the
-  closest factions in `factions/wheel-axes.html`, not the theme), at least one per board game
+  closest factions in `factions/wheel-axes.html`; for the planned shape itself `python3 axes.py --near`, see
+  `START_DESIGN-1-wheel.md`; not the theme), at least one per board game
   (Duelyst, Faeria, Stormbound, Into the Breach, Inscryption); run `curve` on each to see what its cards do.
-- Step 2: `removal <game>` and `protect <game>` for all 8 games, `palette place` and `palette death`: which ways to remove and
-  hold exist, and which the six other factions already use (`factions/11-seven-factions.txt`, `summary/11-faction-*.txt`).
-- Step 3: `only <game>` for all 8 games (monopolies real factions have) and `lacks "<faction>"` for the closest factions
+- Step 2: `removal <game>` and `protect <game>` for all games, `palette place` and `palette death`: which ways to remove and
+  hold exist, and which the other factions of the wheel already use (the wheel's table; the seven factions in the game
+  are not on the wheel: `factions/11-seven-factions.txt`, `summary/11-faction-*.txt`).
+- Step 3: `only <game>` for all games (monopolies real factions have) and `lacks "<faction>"` for the closest factions
   (their blind spots).
 - Step 5: for each mechanic `compare`, `factions`, `fed`, `feeds`, `together`, `chains`, and `both` with each other
   mechanic; `analyze` the closest real faction to count how many of its cards make and use the mechanic (30+ wanted).
@@ -75,7 +79,7 @@ read 5-10 card texts behind every count, and write the sources (game: card) next
 6. **Five ways to play.** Each builds a different board and asks for different decisions. For each, write which rows and
    cells it fills, its cost 1-4 opening, its 4-6 middle, its 6+ finish, and its champion. Test: two ways that put the same
    kind of units in the same cells and win the same way are one way.
-7. **The library, card by card.** For each way to play, read 30-50 real cards from the closest factions of ALL 8 games
+7. **The library, card by card.** For each way to play, read 30-50 real cards from the closest factions of ALL games
    (`ask.py all ways`, `palette`, `curve`, `spells`, `removal`, `protect`: section 3). For each card write one line: the
    decision the player makes when playing it. Save the lines in `factions/designs/<faction>-library.txt` (the gate reads
    it: "WAY <name>" lines, then "<game> | <card> | <the decision>").
