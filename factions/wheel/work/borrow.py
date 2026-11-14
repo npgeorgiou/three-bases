@@ -22,14 +22,14 @@ ARG|={(b,a) for a,b in ARG}
 linked=lambda a,b: ok(LK.get((a,b),(0,0))) or (a,b) in ARG
 # the mechanic each faction's removal uses (table.tsv, Claude's draft): always kept
 RK=dict(A='lastwords',T='fight',I='supply',L='weaken',M='change',E='spelldmg',D='create',J='pick',H='discard',Q='push',G='strikes',F='heal',R='attach',N='guard',P='overkill',C='area',S='countboard',B='sacrifice',K='kill',O='adjacency')
-MIN,MAX=25,4
+MIN,MAX,CAP=25,4,3  # CAP: an extra in at most 3 factions (Kaptain, 15 Nov 2026); factions with the fewest choices pick first
 # partners second: a tie on radii is broken by how many factions a read combo (KEEP/WEAK, strong number) joins it to
 V=set()
 for l in open(F+'work/mechanic_pair_verdicts.tsv'):
     p=l.rstrip('\n').split('\t'); a,b=p[0].split('+')
     if p[2] in ('KEEP','WEAK') and ok(LK.get((a,b),(0,0))): V|={(a,b),(b,a)}
 def partners(k,m): return len({j for j in OWN if j!=k and any((m,o) in V for o in OWN[j])})
-out=[]
+CANDS={}
 for k in OWN:
     c=[]
     for m in M:
@@ -37,15 +37,23 @@ for k in OWN:
         r=max([(M[m].get(x,0),x) for x in SHAPE[k]])
         lk=[o for o in OWN[k] if linked(m,o)]
         if r[0]>=MIN and lk: c.append((r[0],partners(k,m),m,r[1],lk))
-    c.sort(reverse=True); c=[(r,m,x,lk) for r,_,m,x,lk in c]
-    pick=[t for t in c if t[1]==RK[k]]+[t for t in c if t[1]!=RK[k]]; pick=pick[:MAX]
+    c.sort(reverse=True); CANDS[k]=[(r,m,x,lk) for r,_,m,x,lk in c]
+used={}; PICK={}
+for k in sorted(OWN,key=lambda k:len(CANDS[k])):
+    c=CANDS[k]; full=lambda t: used.get(t[1],0)>=CAP and t[1]!=RK[k]
+    pick=[t for t in c if t[1]==RK[k]]+[t for t in c if t[1]!=RK[k] and not full(t)]; pick=pick[:MAX]
     # every signature mechanic joined to the other or to an extra; else the last extra gives way to one linked to it
     for o in OWN[k]:
         other=[x for x in OWN[k] if x!=o][0]
         if not linked(o,other) and not any(o in t[3] for t in pick):
-            alt=[t for t in c if o in t[3] and t not in pick]
+            alt=[t for t in c if o in t[3] and t not in pick and not full(t)]
             if alt: pick=pick[:-1]+alt[:1]
+    for t in pick: used[t[1]]=used.get(t[1],0)+1
+    PICK[k]=pick
+out=[]
+for k in OWN:
+    pick=PICK[k]
     out.append(f"{k}\t{','.join(OWN[k])}\t{','.join(p[1] for p in pick)}")
     if '-v' in sys.argv:
-        print(k,'owns',','.join(OWN[k]),'| borrows',' '.join(f"{m}({x} {r}%, with {'/'.join(lk)})" for r,m,x,lk in pick),'| was',','.join(SH0[k]))
+        print(k,'owns',','.join(OWN[k]),'| borrows',' '.join(f"{m}({x} {r}%, with {'/'.join(lk)})" for r,m,x,lk in pick))
 if '--write' in sys.argv: open(F+'work/assign.tsv','w').write('\n'.join(out)+'\n')

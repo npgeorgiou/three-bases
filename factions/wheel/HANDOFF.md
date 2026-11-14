@@ -8,7 +8,7 @@ Files: `table.tsv`, `partners.tsv`, `apart.tsv`, `arguments.tsv` (README.txt); `
   library number: A18 T16 I15 L10 M12 E14 D13 J10 H12 Q13 G14 F10 R14 N10 P13 C16 S17 B18 K16 O17.
 - Step 7: the five answers are Claude's draft (`work/make_table.py`), not judged by Kaptain yet.
 - Kaptain, 15 Nov 2026: factions have no neighbours; signature mechanics, not monopolies. Extras redone by fit
-  (`work/borrow.py --write`; the earlier ones in `work/assign_before_fit.tsv`). The check passes; partners 13-19.
+  (`work/borrow.py --write`; the earlier ones in `work/assign_before_fit.tsv`). Each extra in at most 3 factions (40 different extras). The check passes; partners 11-19.
   L's blind spot is now kill outright (it borrows revive).
 - Inside one faction, kept apart by real factions: S countboard + offering, R and N hide + attach (apart.tsv).
 
