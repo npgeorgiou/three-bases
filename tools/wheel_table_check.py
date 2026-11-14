@@ -23,9 +23,8 @@ OWN={k:T[k][5].split(',') for k in CIRC}
 SH={k:[m for c in (6,7,8) for m in T[k][c].split(',') if m!='-'] for k in CIRC}
 A={k:OWN[k]+SH[k] for k in CIRC}
 SHAPE={k:dict((v.split('=')[0],float(v.split('=')[1])) for v in T[k][4].split(',')) for k in CIRC}
-# 1. shapes: 3-6 radii, each joined to another of them by a strong number or an argument; no two the same; neighbours as in the circle
+# 1. shapes: 3-6 radii, each joined to another of them by a strong number or an argument; no two the same
 for i,k in enumerate(CIRC):
-    if T[k][1]!=CIRC[i-1] or T[k][2]!=CIRC[(i+1)%20]: fail(f'{k}: neighbours not the circle order')
     r=[x for x in SHAPE[k] if x not in NUM]
     if not 3<=len(SHAPE[k])<=6: fail(f'{k}: {len(SHAPE[k])} radii')
     for a in r:
@@ -42,9 +41,6 @@ for k in CIRC:
 for m in SIZE:
     if SIZE[m]!='SMALL' and m not in owner: info.append(f'{m}: not SMALL and no owner')
 for k in CIRC:
-    l,r=T[k][1],T[k][2]
-    if any(owner.get(m)!=l for m in T[k][6].split(',') if m!='-'): fail(f'{k}: left share not owned by {l}')
-    if any(owner.get(m)!=r for m in T[k][7].split(',') if m!='-'): fail(f'{k}: right share not owned by {r}')
     if any(m in owner or SIZE.get(m)!='SMALL' for m in T[k][8].split(',') if m!='-'): fail(f'{k}: small share is owned or not SMALL')
     if not 4<=len(A[k])<=6: fail(f'{k}: {len(A[k])} mechanics, 4-6 wanted')
 # 3. each faction's mechanics one connected group (strong number, deck number 1.5+, or an argument)

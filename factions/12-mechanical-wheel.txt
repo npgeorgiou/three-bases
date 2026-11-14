@@ -8,12 +8,11 @@ faction, as inspiration. The wheel is made by calculation, research and intuitio
 Method (Claude's proposal, agreed in outline):
 1. The wheel first: the radii below and the radii that work together, then the 20 factions as shapes on them, then
    the mechanics inside each faction's radii, each written "I do X -> I gain from X" on this game's basic things.
-2. The 20 factions as nodes on a circle. Each mechanic has one owner (its monopoly); up to its two neighbours may use it
-   on a few cards; the far side of the wheel never has it (its blind spots).
-3. The factions are spread over the radii below: neighbours are alike on a few radii, opposites differ most.
+2. Factions have no neighbours (Kaptain, 15 Nov 2026): the wheel places factions on the circle of radii and finds the radii that work together, as a start for exploring.
+3. The factions are spread over the radii below; no two sit on the same place.
 4. A table: the 20 factions by their answers to the five questions; every faction differs from every other in each.
 5. A graph check: mechanics are nodes, a line where one makes what another needs (library fed/feeds); each faction's
-   mechanics form one connected group (lines to each neighbour not needed: Kaptain, 14 Nov 2026).
+   mechanics form one connected group.
 6. The wheel lives in one table file with a check script; the picture is drawn from the table.
 7. Then each faction is designed in its own chat (factions/START_DESIGN.md), its theme chosen to fit.
 
@@ -73,10 +72,10 @@ factions/START_DESIGN-1-wheel.md (14 Nov 2026); this list keeps why each part wa
    5 stay inside 1-2 neighbouring areas; the usual faction is strong in 3 areas spread over the circle (Shadow Isles:
    kills outright, brings back, spends them, position and combos, heals them); opposite radii are not kept apart
    (correlation 0.01). On the map of factions no two sit on top of each other.
-4. Per faction 2 monopolies (Kaptain, 14 Nov 2026), 1-2 mechanics shared with each neighbour on a few cards, blind spots among the radii
+4. Per faction 2 monopolies (Kaptain, 14 Nov 2026), blind spots among the radii
    outside its set (not "the far side": step 3);
    the five-questions table filled for all 20 at once.
-5. Overlaps for two-faction decks: per pair of neighbours, the combo they make, as a played sequence (which card of one
+5. Overlaps for two-faction decks: per pair of factions, the combo they make, as a played sequence (which card of one
    sets off which card of the other). Hooks are more than these planned overlaps (Kaptain, 9 Nov 2026: hooks made only
    this way would be poor and unimaginative); what else goes into hooks is worked out in that chat. Think of hooks as
    trigger -> payoff (Kaptain, 14 Nov 2026): a card of one faction makes the thing a card of another faction gains from.

@@ -6,7 +6,7 @@ step here and the reasons). Start with `python3 links.py` in `library/cards_db` 
 git). The chat writes no cards, no stats, no code for the game, and picks no themes.
 
 Three Bases is a game of combos: decks will mix 2 factions. Every faction must combine reasonably well with at least
-10 others (Kaptain, 14 Nov 2026), not only its two neighbours. Every radius, mechanic, faction and combo here comes
+10 others (Kaptain, 14 Nov 2026). Factions have no neighbours (Kaptain, 15 Nov 2026): the wheel places factions on the circle of radii and finds the radii that work together, as a start for exploring. Every radius, mechanic, faction and combo here comes
 from the library, measured and read; what has no library source is marked as Claude's.
 
 ## The whole process and its stops
@@ -14,7 +14,7 @@ from the library, measured and read; what has no library source is marked as Cla
 - One chat per faction (two can run at the same time): theme, then steps 1-6 of START_DESIGN.md (ways to play).
   **Stop 2: Kaptain agrees them.** Then cards, the gate, `wheel_check.js`, the separate agent's review.
   **Stop 3: Kaptain gets the finished faction.**
-- Pilot: the first two factions are a neighbouring pair. Their premades play each other (`cardstats.js`), and one
+- Pilot: the first two factions are a pair with a strong combo. Their premades play each other (`cardstats.js`), and one
   mixed deck shows whether their combo fires. **Stop 4: Kaptain decides whether the rest is built.**
 
 ## Steps 1-8, in this order
@@ -34,9 +34,7 @@ only what the steps before it made.
    uses them), with a strong number in step 2. A join with a low number stays only when this game's rules argue for
    it. The values are uneven, as real factions are, and each shape is checked against them:
    `python3 axes.py --near "heals=1.6,growsdef=1.4,stops=0.3"` (from library/cards_db). No two shapes are the same.
-4. **The circle.** Neighbours are the two factions whose strong radii work together the most across the pair (step
-   2); never two that merely share a radius. Neighbours don't have to combo (Kaptain, 14 Nov 2026): what counts
-   is 10+ partners anywhere on the circle.
+4. (Dropped: no circle order of factions, no neighbours. Kaptain, 15 Nov 2026.)
 
 **B. The mechanics and the combos**
 5. **The mechanics inside each faction's radii.** For each strong radius, start from its library concepts (SPOKES in
@@ -49,7 +47,7 @@ only what the steps before it made.
      carry-over, hand, discard pile), with its sources (game: card). Each mechanic keeps its own line; a small one is
      kept and marked small. An effect the game can't do yet is marked NEW RULE.
    Each faction gets 4-6 mechanics of its radii that feed each other. It owns 2 of them (its monopolies); the others
-   it shares with its two neighbours, on a few cards. Two factions strong on the same radius own different mechanics
+   it shares with other factions. Two factions strong on the same radius own different mechanics
    in it ("brings back": one owns "my dead units come back", another "my unit goes back to hand").
 6. **Links between mechanics, and the hooks.** Only after step 5's concepts are fixed: `mechanics_wheel.py links`
    gives, for every two mechanics, the library's number in all cards and in real decks. Then `fed`, `feeds`, `both`,
@@ -67,7 +65,7 @@ only what the steps before it made.
    the graph of factions/12 method 5 (each faction's mechanics linked to each other).
 
 ## What Kaptain sees at Stop 1
-The table of the 20 factions (place, archetype, strong radii, monopolies, shared with each neighbour, blind spots, the
+The table of the 20 factions (place, archetype, strong radii, monopolies, shared, blind spots, the
 five answers), per faction its partners with the combo for each, and the pairs that work against each other. Files in
 factions/ (each under 150 lines; split them) and the check script in tools/; the CLAUDE.md map names them.
 
@@ -85,8 +83,7 @@ Agents used about 9 of every 10 tokens: 23 agents at 100-160k each. What to do i
   so a stop loses nothing. Before a big batch, count the sections and say how many agents it needs.
 - Concept fixes: give the agent the counts per game in its file (`ask.py all compare` output for each concept), so it
   does not run 30 queries itself.
-- Owners and shares: write the rules down before the first try (2 owned on the faction's radii, shares only from the
-  two neighbours or SMALL unowned ones, every mechanic that is not SMALL owned), then check each try with
+- Owners and shares: write the rules down before the first try (2 owned on the faction's radii, what each faction shares), then check each try with
   `work/check_assign.py`. Three tries by hand and two runs of an unchecked search were wasted.
 - Skip numbers that can't decide anything: partner counts from link numbers alone came out 15-19 for every faction.
 
@@ -94,8 +91,7 @@ Agents used about 9 of every 10 tokens: 23 agents at 100-160k each. What to do i
 1. The radii and "the radii that work together" left out as the base: a pool of mechanics built first, from concepts.
    Stops it: steps 1-4 come before any mechanic.
 2. Mechanics placed on radii and given owners by judgment, no card text read. Stops it: step 5, read and then measured.
-3. One guessed combo per pair of neighbours, no library query behind it. Stops it: step 6.
-4. Neighbours chosen because they share one radius. Stops it: step 4, by the radii that work together.
+3. One guessed combo per pair of factions, no library query behind it. Stops it: step 6.
 5. Every strong radius set to 1.8 and blind spots picked so the check passes. Stops it: uneven shapes from real
    factions (step 3).
 6. A check script that checked only columns and counts, so it passed by construction. Stops it: step 8.

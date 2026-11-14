@@ -25,7 +25,7 @@ take a base, hold it, or take it from the enemy?
 
 ## THE THINKING PROCESS (in this order; no step skipped)
 Step 0 (Kaptain, 9 Nov 2026): the faction's place on the mechanical wheel (`factions/12-mechanical-wheel.txt`) comes
-first. Its radii, monopolies, blind spots, mechanics shared with its two neighbours and how it differs from every other
+first. Its radii, monopolies, blind spots, mechanics shared with other factions and how it differs from every other
 faction are decided there, for all 20 factions together, not in the faction's chat. The theme comes last and fits the
 mechanics.
 Steps 1-6 come from the library, never from memory. Run the queries below on all games (`ask.py all ...` from

@@ -81,7 +81,7 @@ More text: `summary/09-card-design-rules.txt`
 - Lane control: some cards check "while you hold this lane's base", some "while you don't", some do one thing in each
   case. Never a bonus from one specific base (bases are random each game). These cards get a golden border.
 - Almost every card has a keyword or text; almost none is only stats.
-- Hooks for two-faction decks (decks will mix 2 factions later): the combos planned on the wheel with each neighbour,
+- Hooks for two-faction decks (decks will mix 2 factions later): the combos planned on the wheel with other factions,
   and more (Kaptain, 9 Nov 2026: hooks made only from planned overlaps are poor; what else goes in is worked out in the
   wheel chat); also a few effects that work with any faction's units.
   Example: a Spare Part winds any unit that has a round-end effect, not only Horologers.

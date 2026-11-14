@@ -1,7 +1,7 @@
 THE WHEEL CHAT'S FILES (START_DESIGN-1-wheel.md), 14 Nov 2026. Made by library/cards_db/mechanics_wheel.py.
 HANDOFF.md      for the next wheel chat: what the first try found, why the guide changed, what to reuse
 mechanics.tsv   48 mechanics, one line each, "I do X -> I gain from X", the library concepts that catch its cards, SMALL marks
-table.tsv       Stop 1: the 20 factions (neighbours, archetype, radii, owned, shared per neighbour, blind spot, the five answers;
+table.tsv       Stop 1: the 20 factions (archetype, radii, owned, shared, blind spot, the five answers;
                 answers and archetypes are Claude's draft); made by work/make_table.py
 partners.tsv    Stop 1: per pair of factions the best read combo (KEEP/WEAK, a strong library number), played sequence, source
 apart.tsv       Stop 1: mechanic pairs real factions keep apart (apart.py), per faction pair and inside one faction
