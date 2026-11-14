@@ -7,7 +7,7 @@ Work plan (Kaptain, 14 Nov 2026): the wheel chat designs 20 factions together, t
 Files (lines, then contents). Read only the file a task needs; find lines across files with: python3 tools/find.py doc <text>
 
 START_DESIGN.md                   141  START HERE for every chat that uses the library (faction and card design, every question to the library): the thinking process, NEVER DO
-START_DESIGN-1-wheel.md            67  its part 1: the wheel chat (20 factions and their combos together) and the stops of the whole process
+START_DESIGN-1-wheel.md            87  its part 1: the wheel chat (20 factions and their combos together) and the stops of the whole process
 START_DESIGN-2-rules.md           114  its part 2: setup, this game's rules for design, the design rules
 START_DESIGN-3-checks.md           71  its part 3: Kaptain's checks, self-critique, library search, before sending
 START_DESIGN-4-asking.md          105  its part 4: how to ask the library, the shape of an answer, searching wide, thinking like a player
