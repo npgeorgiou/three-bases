@@ -1,5 +1,43 @@
 # Handoff for the next wheel chat (14 Nov 2026, evening)
 
+## Second try, stopped in step 6 (14 Nov 2026, 23:00; the session hit its usage limit). Continue from here.
+Done (files in `factions/wheel/work/`, scripts run from the repo root):
+- Step 2: `library/cards_db/wheel/radius_links.tsv` (`mechanics_wheel.py links --radii`). Agents read 12 card pairs
+  for 44 strong radius pairs: `work/radius_verdicts.tsv` (5 KEEP, 27 WEAK, 12 DROP: the radius numbers are noisy).
+- Steps 3-4: `work/shapes.tsv`, 20 shapes A-T, each checked with `axes.py --near` (closest real faction 0.24-0.81).
+  Circle by `work/circle.py` (DROP pairs count as chance): A T I L M E D J H Q G F R N P C S B K O.
+  Joins with no library number, argued from the rules (Claude's): L stops (stops+supply only in decks 1.66), M
+  disrupts, Q and T "one chosen". L and M have the weakest partners: say so at Stop 1.
+- Step 5: `mechanics.tsv` back to one line per mechanic (48, offering added: the library's usual sacrifice, a unit
+  dies for a gain); two agent rounds fixed the concepts (`work/concept_fixes_round*.tsv`); column 6 marks 13 SMALL;
+  `wheel/measured.tsv` remeasured. Owners and shares per faction: `work/assign.tsv` (owns, then shares; shares only
+  from the two neighbours or SMALL unowned ones); `work/check_assign.py` checks it (3 groups joined only by deck
+  numbers: L, F, N; T's sacrifice and J's pick-copy joined by argument). cells (NEW RULE) has no owner.
+- Step 6: `wheel/links.tsv` remade. Agents judged 167 mechanic pairs (8 card pairs each):
+  `work/mechanic_pair_verdicts.tsv` (17 KEEP, 44 WEAK, 106 DROP, each with a played sequence and a source).
+  Partners with a KEEP/WEAK combo: A15 T14 I11 L7 M8 E12 D9 J9 H7 Q11 G11 F6 R12 N8 P13 C15 S13 B17 K16 O16.
+Next:
+1. Read the 178 pairs in `work/pairs_to_read.txt` (unread pairs for L M D J H F N): `PER=8 python3
+   library/cards_db/mechanics_wheel.py pairs "$(cat factions/wheel/work/pairs_to_read.txt)" /tmp/mq.txt` (from
+   library/cards_db, drop sections under 3 linked pairs), 7 agents with `work/agent_prompt.txt`, append the lines to
+   `work/mechanic_pair_verdicts.tsv`. Then `python3 factions/wheel/work/partners.py` style count (KEEP/WEAK only).
+2. Any faction still under 10 partners: steps 3-6 again for it (change its shape or shares).
+3. Pairs that work against each other: `apart.py 25` concept pairs mapped to mechanics (selfhurt/hide, hide/ping,
+   countboard/lastwords, onkill/spellpay, countboard/offering, selfhurt/shield, area/shield, discard/onkill,
+   inhand/offering, cheaper/lastwords, silence/tokens, hide/attach), listed per faction pair.
+4. Step 7: the five answers. Claude's draft (not checked yet), one removal per faction: A Death effect hits the
+   enemy facing me; T my unit strikes a chosen enemy; I damage from supply left in the lane; L strength and text away
+   for good; M turn it into a weak unit; E damage spells; D spells it creates; J picks its removal from the deck;
+   H a discarded card deals damage; Q push it out of the front row; G strikes first; F a healed unit grows and
+   strikes; R a carrier strikes with its riders' strength (NEW RULE); N a shielded guard strikes back; P the rest of
+   the hit goes into the unit behind; C hit the whole front row; S damage = my units in the lane; B my unit dies and
+   takes the enemy facing it; K destroy outright, back to hand, again; O damage per ally beside. Blind spots, all
+   different: A shields, T area hits, I tokens, L revive, M +strength, E heal, D strike twice/first, J silence,
+   H guard, Q return to hand, G damage spells, F offering, R ping, N movement, P cheaper cards, C one chosen,
+   S pick/copy, B draw, K defence growth, O units of cost 6+.
+5. Step 8: `tools/wheel_table_check.py` reading these files (factions/12 method 5, numbers of every join and combo,
+   10+ partners, 2 owned, one owner); then the Stop 1 table (files under 150 lines, CLAUDE.md map).
+
 Follow `factions/START_DESIGN-1-wheel.md` steps 1-8 and stop at Stop 1. This file says what the first try found, why
 the guide changed, and what can be reused. Kaptain didn't follow every explanation: when he asks "why", answer from
 here, with a card example, in plain words.

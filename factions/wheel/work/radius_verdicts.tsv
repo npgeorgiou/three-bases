@@ -1,0 +1,44 @@
+grows+strikes	true 5 of 12	WEAK	A small unit sacrificed or eaten makes an attacker that strikes twice bigger; most other pairs are generic "both buff" or hit the player, and Curse of Wrath (damage) and Immortal Trade (heal) are not really grows.
+grows+back	true 6 of 12	WEAK	A unit that dies comes back from the discard pile to hand and grows each time; the rest only share a set or a generic play/move link.
+grows+heals	true 7 of 12	KEEP	Healing a damaged unit makes another unit grow (Lightchaser, Vitality/Armor builders); heals tag is correct here.
+grows+growsdef	true 4 of 12	WEAK	A unit eats or feeds on a small friendly unit and gains its strength and defence; most links are generic "more health".
+strikes+textdmg	true 5 of 12	WEAK	Pull enemy units into neighbouring cells so a damage card splashes or a forced attack hits the neighbour; several pairs only damage the player (no player health).
+strikes+back	true 6 of 12	WEAK	A unit destroys your own units when it attacks and another brings them back from the discard pile; the rest are set-only links.
+strikes+spends	true 5 of 12	WEAK	Sacrificing a unit pays for an attacker while a unit nearby grows or summons when a unit dies; positional and player-damage pairs fail.
+strikes+growsdef	true 4 of 12	DROP	The few true pairs are sacrifice or damage combos, not extra defence; links are mostly "both buff" or hit the player, tags fit poorly.
+strikes+tall	true 5 of 12	DROP	True pairs are sacrifice-for-death-effect or lifesteal-heal combos that have nothing to do with few big units; tags wrong for the pairing.
+textdmg+many	true 2 of 12	DROP	Only pulling enemies together before a hit-all-around works; the rest hit the player or are tribal or set-only links.
+textdmg+cheaper	true 0 of 12	DROP	No pair cuts the cost of a damage unit; links are generic "is played", "makes units die" or player damage.
+textdmg+back	true 4 of 12	WEAK	Returning a unit to hand so its on-play damage goes off again when replayed; player-damage and exhaust pairs fail.
+kills+supply	true 5 of 12	WEAK	Destroying your own unit whose death effect, or an enemy death, gives extra supply; many pairs are set-only or a generic "pays for it".
+kills+back	true 5 of 12	WEAK	Destroy a unit, then bring it back from the discard pile (or onto your side); the rest share only a set.
+kills+spends	true 7 of 12	KEEP	Destroying your own units outright sets off their on-death effects or feeds a unit that counts deaths.
+many+supply	true 6 of 12	WEAK	A second resource (coins) pays for another card's fee, or units gaining strength earn extra supply; most "many" tags here are wrong (Shivers, Boris, Spirit of the Wild are not area effects) and "pays for it" links are generic.
+many+back	true 2 of 12	DROP	Area damage rarely feeds return effects: it hits enemy units while back cards revive your own; only a unit that returns stronger after dying (Ouroboros) works.
+many+spends	true 7 of 12	KEEP	Area damage on your own lane kills your units with death effects (summon on death, draw on death, kill an enemy on death).
+spelldmg+supply	true 3 of 12	DROP	Mostly generic "more supply pays for a damage spell"; real cases are extra supply raising an X-cost spell or enemy deaths granting supply, and Collusion/Dark Crystal tags look wrong (player life, not unit damage).
+spelldmg+cheaper	true 5 of 12	WEAK	A cost cut on spells in a lane, or moving enemies together before an area spell; several spelldmg tags mean hitting the player (Corporeal Cadence, Choke), which has no Three Bases meaning.
+spellpay+supply	true 7 of 12	KEEP	A spell that refunds its own supply (or refills supply and draws) sets off spell-cast rewards for free.
+spellpay+cheaper	true 4 of 12	WEAK	Casting spells makes a unit cheaper, or a free spell sets off a cast reward; most other links are just "it is a spell", and Three Wishes is tagged spellpay but is a cost cut.
+spellpay+cards	true 6 of 12	WEAK	Cards that create spells in hand feed cast rewards (one cast reward per created spell); the rest is the generic "it is a spell".
+spellpay+picks	true 3 of 12	DROP	Copy/tutor effects rarely feed cast rewards beyond being a spell; only a spell that returns a copy of itself to hand or discard repeats the reward.
+supply+cheaper	true 6 of 12	WEAK	Extra supply raises an X cost, or a second resource and its cost cut work together; many links are just "more supply pays for it".
+supply+back	true 4 of 12	WEAK	Returning a unit that steals supply on play replays it, or a unit that comes back after dying lets a "gain supply if it dies" effect repeat.
+supply+spends	true 9 of 12	KEEP	Sacrificing your own unit for supply also sets off that unit's death effect (buff, summon on death, more resource).
+cheaper+cards	true 4 of 12	WEAK	A death effect that draws units of the same kind that another card already made cheaper, or a sacrifice that cuts a unit's cost; most links share only a set.
+cheaper+picks	true 1 of 12	DROP	Cost cuts and copy/tutor effects almost never interact; the links are set-mates or anti-synergy (Loki and Gorgon).
+cheaper+back	true 4 of 12	WEAK	Returning a unit to hand replays its on-play cost cut, or a card kept in hand at round end gets cheaper.
+cheaper+tall	true 7 of 12	WEAK	A spell or card that plays a unit sets off a unit that triggers on spells or on being played; few pairs are about cost cuts or big units, so both tags look wrong for most cards.
+cards+back	true 5 of 12	WEAK	Return your own unit to hand so its on-play effect goes off again; the draw-from-deck pairs are generic.
+picks+back	true 4 of 12	WEAK	Return a unit to hand to replay its on-play copy effect, or keep a card in hand that grows while kept; most "fills your hand" links are generic.
+back+wide	true 5 of 12	WEAK	A unit that dies returns to hand or discards cheaper, or a card kills your own units for their death effects; the hit-enemy and player-life pairs fail.
+back+spends	true 4 of 12	WEAK	Sacrifice your own unit, then bring it back from the discard pile; many pairs damage enemies, not your own units, so the bring-back never fires.
+back+heals	true 4 of 12	DROP	Return a healer to hand to replay its heal; most heals tags mean player or hero life or artifact repair, which Three Bases has no use for.
+back+growsdef	true 6 of 12	WEAK	A defence boost lets a unit survive damage and return to hand, or a unit with a death buff is killed on purpose; the deck-play pairs are generic.
+back+protects	true 2 of 12	DROP	Only a unit that comes back when destroyed by a card's text pairs with a bring-back; the rest share a set or rely on player life.
+back+tall	true 3 of 12	DROP	A spell that returns to your deck keeps feeding a unit that grows on each spell cast; most tall tags and links are generic.
+wide+spends	true 5 of 12	WEAK	A cheap short-lived unit dies or is sacrificed and feeds a card that pays out or costs less per own unit death; many links are just "kills it".
+spends+heals	true 3 of 12	DROP	A heal that also burns out a unit kills it for a death or death-count effect; most pairs are placement-only and the heals tag often means player life.
+spends+protects	true 4 of 12	WEAK	Damage or destroy your own unit that comes back when destroyed by text; guard and shield cards rarely care about sacrifices.
+spends+tall	true 6 of 12	WEAK	Sacrifice cheap fodder to summon or grow a big unit, or a big unit eats its neighbours for strength; the placement links fail.
+heals+growsdef	true 4 of 12	WEAK	A heal or vitality on your unit sets off a unit that gains strength or defence whenever it is healed; the move and placement pairs fail.

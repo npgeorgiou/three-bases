@@ -5,7 +5,9 @@ Usage (from library/cards_db):
                                          faction's count (30+ wanted), radii it serves (share of its cards per radius)
   mechanics_wheel.py links            -> library/cards_db/wheel/links.tsv: per pair, linked x chance in all cards, and in real decks
   mechanics_wheel.py cards <file>     -> per mechanic 8 cards with text (for an agent to read)
-  mechanics_wheel.py pairs A B <file> -> linked card pairs of A with B, their link reasons and texts (for an agent)"""
+  mechanics_wheel.py pairs A+B,C+D <file> -> linked card pairs of A with B, their link reasons and texts (for an agent)
+  --radii after the command: the wheel's radii (axes.SPOKES, not the numbers) in place of the mechanics; links writes
+                                         library/cards_db/wheel/radius_links.tsv (step 2)"""
 import collections, os, sqlite3, sys
 import axes, faction_asks, mechanics, deck_analysis
 
@@ -92,7 +94,7 @@ def links(mechs, c, games, x, con, pools):
     decks = axes.radius_links(games, pools, con, pairs, deck_lists)
     axes.SPOKES = saved
     keys = [m[0] for m in mechs]
-    with open(os.path.join(OUT, 'links.tsv'), 'w', encoding='utf-8') as f:
+    with open(os.path.join(OUT, 'radius_links.tsv' if keys == [r[0] for r in radii()] else 'links.tsv'), 'w', encoding='utf-8') as f:
         f.write('a\tb\tcards\tdecks\n')
         for n, a in enumerate(keys):
             for b in keys[n:]:
@@ -110,7 +112,7 @@ def cards(mechs, c, games, x, con, pools, path, per=8):
                 f.write(f"  {g} | {', '.join(pools[g][i][3]) or '-'} | {mechanics.name(c, i)} | {axes.text(i, 220)}\n")
 
 
-def pairs(mechs, c, games, x, con, pools, a, b, path, per=12):
+def pairs(mechs, c, games, x, con, pools, a, b, path, per=int(os.environ.get("PER", 12))):
     mem = members(mechs, con, pools)
     A = {i for g in games for i in mem[a][g]}
     B = {i for g in games for i in mem[b][g]}
@@ -134,8 +136,15 @@ def pairs(mechs, c, games, x, con, pools, a, b, path, per=12):
             f.write(f"  {g} | A {na}: {axes.text(s, 160)}\n      B {nb}: {axes.text(t, 160)}\n      link: {ph.replace('{A}', na).replace('{B}', nb)}\n")
 
 
+def radii():
+    """the radii of axes.SPOKES that are cards, not numbers, in the shape of load()"""
+    return [(s[0], s[3], s[4], '', []) for s in axes.SPOKES if s[0] not in axes.NUMERIC and s[0] != 'together']
+
+
 if __name__ == '__main__':
-    m = load()
+    RADII = '--radii' in sys.argv
+    if RADII: sys.argv.remove('--radii')
+    m = radii() if RADII else load()
     ctx = setup()
     cmd = sys.argv[1]
     if cmd == 'measure': measure(m, *ctx[:4], ctx[4])

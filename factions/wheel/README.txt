@@ -16,3 +16,4 @@ Step 1, how the pool was cut (an agent read 8 cards per mechanic; its verdicts a
   from Place or Death, never round-end seeding (Rootkin Seeds); ping never at round end (Long Guns Barrage).
 - Dropped as against this board: hidden reactions (traps are instant answers on the enemy's turn).
 - Concepts narrowed where the agent found wrong catches (adjacency 1 of 8 right before, guard 1, discard 1, weaken 1).
+work/           the second try's files (step 2 verdicts, shapes, owners, combo verdicts, scripts); HANDOFF.md top says where it stopped

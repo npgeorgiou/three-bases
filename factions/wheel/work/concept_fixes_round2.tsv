@@ -1,0 +1,33 @@
+deathfeed	right 7 of 8	SAME	OK	only Eternal Dancers is a revive, not a death payoff
+sacrifice	right 4 of 4	SAME	SMALL	all 4 are trades; no library concept catches only the trade (sacrifice elsewhere is kill-an-ally-to-gain), so the list stays small
+selfhurt	right 2 of 8	SAME	SMALL	friendly_fire is mostly board-wide damage (Avalanche, Shadow Flare); no concept for "damage my own unit to gain"; only Wise Fry, Iron Legionary fit
+revive	right 8 of 8	SAME	OK	all bring dead units back
+recycle	right 4 of 8	recycle@gwent,marvel_snap,sts1	SMALL	monster_train recycle is mostly Reform (revive) and spikes; gwent Echo and graveyard-shuffle cards fit; Snap hand-shuffles still mixed
+returnhand	right 8 of 8	SAME	SMALL	all return to hand; runeterra excluded, rest is small
+tokens	right 6 of 8	SAME	OK	Tuirseach Skirmisher (self from graveyard) and Call of the Depths (one big unit) miss
+countboard	right 4 of 8	SAME	OK	computed (*), left; Punisher and Against the Odds count enemy units
+allyplay	right 6 of 8	SAME	OK	Failed Experiment and Jeff are not reactions to my placements
+adjacency	right 5 of 8	adjacency@runeterra,link_formation,position*	OK	gwent adjacency is mostly damage to adjacent enemies; runeterra adjacency is Support; inscryption conduits add linked units; size rests on position*
+movement	right 8 of 8	SAME	OK	all move my own units
+push	right 5 of 8	forced_movement@duelyst,into_the_breach,monster_train,stormbound,bounce_enemy	OK	gwent forced_movement catches deck and graveyard moves (Isbel, Gorthur, Henry)
+lanes	right 6 of 6	SAME	SMALL	all Bifurcated/Trifurcated Strike; cross_lane has 7 cards, inscryption only
+cells	right 6 of 8	SAME	OK	Astral Weapon and Baldurion do not claim cells
+onattack	right 5 of 8	on_attack@duelyst,faeria,monster_train,stormbound,on_fight	OK	into_the_breach on_attack is every weapon; sts1 on_attack is "when you are attacked" (wrong side)
+hurt	right 1 of 8	on_damaged@stormbound,counterattack	SMALL	duelyst/faeria on_damaged is mostly Forcefield/Protection; stormbound "After surviving damage" and Spikes/Sharp Quills/Thorns fit
+silence	right 7 of 8	SAME	SMALL	Minah Swiftfoot recalls, not silence
+weaken	right 4 of 8	stat_loss@duelyst,faeria,inscryption,marvel_snap,monster_train,stormbound	OK	gwent stat_loss is mostly power resets of any unit (Viraxas, Beauclair, Caranthir); Snap afflict carries it
+change	right 5 of 8	polymorph,steal@duelyst,faeria,gwent,into_the_breach,stormbound	SMALL	runeterra steal is mostly Nab and Viego; Snap/inscryption steal is card stealing; Scroll Bandit and Joseki stay (duelyst card steals)
+hand	right 5 of 8	hand_disruption@marvel_snap,runeterra,cost_increase	SMALL	gwent hand_disruption is symmetric (Stregobor, Kambi); Nab cards in runeterra still slip in
+junk	right 6 of 8	SAME	SMALL	Crimson Curse and Armor Up are unclear
+supply	right 4 of 8	resource_gain@duelyst,faeria,inscryption,marvel_snap,stormbound,sts1,base_resource_gain@duelyst,faeria,inscryption,marvel_snap,monster_train,stormbound,sts1	OK	base_resource_gain had no game limit and let in runeterra (coins, Irelia) and sts1 relics; monster_train resource_gain is Extract/Echo
+cheaper	right 8 of 8	SAME	OK	all reduce costs
+inhand	right 8 of 8	SAME	SMALL	all buff hand or deck; gwent only, 30 cards over factions
+draw	right 7 of 8	SAME	OK	Keelbreaker is not extra draw
+pick	right 6 of 8	SAME	OK	Preserve and Protect are retain, not picking from deck
+discard	right 8 of 8	SAME	OK	all discard my own cards or pay off from it
+heal	right 3 of 8	heal@gwent,monster_train,regeneration@monster_train,runeterra	OK	runeterra heal is mostly Nexus heals and Lifesteal; into_the_breach heal is boosts and Grid Charger; runeterra Regeneration heals units
+guard	right 8 of 8	SAME	OK	all Taunt/Provoke
+hide	right 7 of 8	SAME	OK	Dimeritium Bomb gives Veil to a damaged enemy
+roundstart	right 7 of 8	SAME	OK	Acid Greenhorns is On play
+leave	right 4 of 8	SAME	SMALL	no concept for my unit leaving; other_leave_trigger is runeterra transforms; Releaser, Yasuo, Bladetwirler, Legion General react to enemy stun/recall or artifacts
+bigstrength	right 8 of 8	SAME	SMALL	all Reputation/Empowered; runeterra only, about 31 cards
