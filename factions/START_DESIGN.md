@@ -25,7 +25,7 @@ take a base, hold it, or take it from the enemy?
 
 ## THE THINKING PROCESS (in this order; no step skipped)
 Step 0 (Kaptain, 9 Nov 2026): the faction's place on the mechanical wheel (`factions/12-mechanical-wheel.txt`) comes
-first. Its radii, monopolies, blind spots, mechanics shared with other factions and how it differs from every other
+first. Its radii, signature mechanics, blind spots, mechanics shared with other factions and how it differs from every other
 faction are decided there, for all 20 factions together, not in the faction's chat. The theme comes last and fits the
 mechanics.
 Steps 1-6 come from the library, never from memory. Run the queries below on all games (`ask.py all ...` from
@@ -59,7 +59,7 @@ read 5-10 card texts behind every count, and write the sources (game: card) next
    4. The play that feels good: what its units do the moment they are placed. Example: "Place: push the enemy facing me
       one row back".
    5. Blind spot: the one tool it never gets, on any card. Example: a swarm faction never restores shields.
-3. **Monopolies and blind spots** (taken from the wheel). 2-3 mechanics only this faction has; no other faction uses them. A list of tools it
+3. **Signature mechanics and blind spots** (taken from the wheel). 2 signature mechanics (Kaptain, 15 Nov 2026: not a monopoly; the faction builds on them, other factions may use them on a few cards as extra mechanics). A list of tools it
    never has; its cards never make up for them, it plays around them. A blind spot is never one of the two things every
    faction needs (hold dots, remove enemies), only one way of doing them: "no kill spells" is a blind
    spot, "no removal" is not.

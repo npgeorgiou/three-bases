@@ -90,7 +90,7 @@ More text: `summary/09-card-design-rules.txt`
 - Every card says what it makes happen and what it needs (its `net` line), and each "needs" has a card in the faction
   that makes it. Example: Toll Warrior needs units to die this round; Willing Victim (dies when offered) makes it.
 - Cards that cash something in have 3+ cards that set it up; cards that set something up feed 2+ cards that cash it in.
-- Monopolies (step 3) belong to this faction alone. Other strong mechanics (copying, deck search, draw, card creation,
+- Signature mechanics (step 3): the faction builds on them; other factions have them only on a few cards. Other strong mechanics (copying, deck search, draw, card creation,
   forced movement, resurrection, stealing) belong to 1, at most 2 factions; elsewhere on very few cards.
 - How much it touches the enemy: a disruptive faction has many cards that act on enemy units (push, mark, punish); a
   straightforward one has fewer.
