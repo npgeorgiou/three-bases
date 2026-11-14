@@ -1,4 +1,6 @@
 THE WHEEL CHAT'S FILES (START_DESIGN-1-wheel.md), 14 Nov 2026. Made by library/cards_db/mechanics_wheel.py.
+PIPELINE.md     steps 1-5.1: how each result was made, what was script and what judgment, how to redo it
+RESULTS-1-5.md  the results of steps 1-5.1: radius pairs, the 20 shapes, the order, the 48 mechanics
 HANDOFF.md      for the next wheel chat: what the first try found, why the guide changed, what to reuse
 mechanics.tsv   48 mechanics, one line each, "I do X -> I gain from X", the library concepts that catch its cards, SMALL marks
 table.tsv       Stop 1: the 20 factions (archetype, radii, owned, shared, blind spot, the five answers;
