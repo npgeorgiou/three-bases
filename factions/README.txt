@@ -48,6 +48,10 @@ LESSONS.md                         17  lessons for future factions from building
 11-seven-factions.txt               61  11. The seven factions of 4 Nov 2026 (clockwork, death, aggro, defence, spells, all-Immobile, WWI artillery): overview, new rules, checks
 12-mechanical-wheel.txt             81  12. The mechanical wheel: designing 20 factions together; its radii and the agreed design process
 13-wheel-measurement.txt            113  13. How the wheel's radii are measured (axes.py, wheel-axes.html) and how to redo it
+14-wheel-pool.tsv                   48  the wheel's pool of mechanics: "I do X -> I gain from X", radii, owner, library sources
+15-wheel-factions.tsv               21  the 20 factions of the wheel: place, archetype, strong radii, monopolies, shared, blind spots, five questions
+16-wheel-joins.tsv                  83  per faction, trigger -> payoff for every two of its mechanic radii
+17-wheel-overlaps.tsv               21  per pair of neighbours, the combo they make as a played sequence
 designs/00-five-identities.txt      52  The five new factions from zero: overview, contrast, signatures, new rules needed
 designs/ironfront.txt               90  Ironfront (World War I) stage 1: theme, mechanics, web, ways to play
 designs/lodestones.txt              88  Lodestones (megaliths, all Immobile) stage 1

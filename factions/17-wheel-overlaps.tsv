@@ -1,0 +1,21 @@
+pair	shared mechanics	played sequence (trigger -> payoff: which card of one sets off which card of the other)
+A-B	duel, attack	A's unit stands in the front row; B's duel spell: "my unit strikes the chosen enemy in its reach" -> A's unit strikes, and its attack text gives it lasting +1 strength
+B-C	mark	C's unit: "Place: mark the enemy facing me" -> B's champion duels that Marked enemy and its strike deals double
+C-I	push	I's Push unit strikes a front enemy that survives; it moves to row 2, Bloodied -> C's ping unit deals 1 to every Bloodied enemy outside the front row
+I-G	lock	G's unit: "Place: the enemy facing me can't attack or move" -> I pushes that enemy to row 2; it can't walk back, my dot holds
+G-H	weaken	H's spell takes the enemy's strength to 0 (units with 0 strength can't attack) -> G's card "kill an enemy that can't attack" kills it
+H-D	blast	H transforms a big enemy into a 1-defence unit -> D's row blast at the next round start kills it with the rest of the row
+D-E	spellpower	E's back-row unit: "your spells deal +1" -> D's delayed spell deals +1 to every enemy of the row at the next round start
+E-F	spellcast	F's unit: "when you cast a spell, your next spell costs 1 less" -> E's damage spell costs 1 less, so two of them fit into the lane's supply this round
+F-J	copy	J's unit: "when you cast a spell, copy it into your hand" -> F's spell is cast twice; F's units react to both
+J-L	inhand	J copies the enemy facing it into hand -> L's card "cards in your hand get +1|+1 at round end" grows the copy before it is placed
+L-K	supply	K's unit gives +2 supply in its lane -> L's tutor picks a cost 6+ card from the deck, played there next round
+K-M	discard	K's spell: "discard a card: gain its cost as carry-over" -> M's card "when I am discarded, deal 2 to the enemy nearest the base in this lane" fires
+M-N	swarm	M's create puts two "place a 1-cell 1|1" spells into hand -> N's count unit deals 1 for each ally in the lane
+N-P	offer	N fills the row with cheap units -> P's unit: "Place: the allies beside me die; deal 1 per one to the enemy facing me"
+P-O	rise	P offers its Death-damage unit (it deals its damage) -> O's spell brings it back; it can be offered again
+O-U	replay	U's spell returns O's unit "Place: bring back the last ally that died in this lane" to hand -> placed again, another ally comes back
+U-Q	beside	Q's units stand in a row with one cell free -> U's Lightfooted unit moves into the gap; the row is full and Q's "full row: +1|+1" fires
+Q-R	guard	Q fills the front row; R's Bodyguard unit stands in the middle cell -> enemy damage goes to the guard, the row stays full and keeps its defence
+R-S	mend	R's guard takes the hits for its allies -> S's unit: "Round end: restore 2 defence to the most damaged ally" puts the guard back to full
+S-A	hurtself	A's spell: "deal 1 to an ally; it gains +2 strength" on S's harden unit -> it also gains +1 defence; S's mending restores it at round end

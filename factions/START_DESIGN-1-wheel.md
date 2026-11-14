@@ -26,4 +26,4 @@ Into the Breach, Stormbound, Slay the Spire and Inscryption have no value on 10 
 the two width radii give a faction its shape; they are not mechanics two factions can share.
 What Kaptain sees: one table of the 20 factions (place on the circle, archetype, strong radii, monopolies, shared with
 the left and the right neighbour, blind spots) and the list of overlaps. The table is saved as one file in factions/
-with a check script (factions/12, method 6). He agrees it before any faction chat starts.
+with a check script (factions/12, method 6): `factions/14-17-wheel-*.tsv`, `python3 tools/wheel_table_check.py`. He agrees it before any faction chat starts.
