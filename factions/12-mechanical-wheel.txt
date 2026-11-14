@@ -81,6 +81,7 @@ The design process from the wheel (AGREED with Kaptain, 9 Nov 2026; done in anot
    this way would be poor and unimaginative); what else goes into hooks is worked out in that chat. Think of hooks as
    trigger -> payoff (Kaptain, 14 Nov 2026): a card of one faction makes the thing a card of another faction gains from.
    Shared cards (one card in two factions, as in Runeterra) are only one source of combos, never the only one.
+   Each faction combines reasonably well with at least 10 others (Kaptain, 14 Nov 2026).
 6. Themes, one per faction, fitting its mechanics.
 7. Each faction in its own chat (factions/START_DESIGN.md steps 6-10), then measured on the radii: it must land where
    the wheel put it; if it drifted, the faction is fixed, not the wheel.

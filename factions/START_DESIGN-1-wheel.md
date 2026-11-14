@@ -20,6 +20,9 @@ wheel" in factions/12, in this order:
    together" (`factions/wheel-axes.html`) shows which radii real games join. A low number there is no ban (factions/12:
    real games only show what they happened to do); it means the combo must be argued from this game's rules.
    Every overlap and hook is written trigger -> payoff: which card makes the thing, which card gains from it.
+5. The hooks (Kaptain, 14 Nov 2026): each faction must combine reasonably well with at least 10 others, not only its two
+   neighbours. Per faction: what its cards make that other factions gain from, and what it gains from that others make,
+   each written trigger -> payoff; the check script counts each faction's partners (10+ wanted).
 How to read the wheel: 24 radii in 8 areas, measured on 43 real factions of 8 games (no Monster Train, no Marvel Snap).
 A value compares a faction with the average faction of its own game, so compare factions of different games loosely.
 Into the Breach, Stormbound, Slay the Spire and Inscryption have no value on 10 or more radii. Strength, defence and
