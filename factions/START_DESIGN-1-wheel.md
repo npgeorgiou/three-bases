@@ -76,6 +76,19 @@ faction with the average faction of its own game, so compare factions of differe
 Stormbound, Slay the Spire and Inscryption have no value on 10 or more radii. Strength, defence and the two width radii
 give a faction its shape; they are not mechanics two factions can share.
 
+## Token budget (second try, 14 Nov 2026: it ran out in step 6)
+Agents used about 9 of every 10 tokens: 23 agents at 100-160k each. What to do instead:
+- Combo reads: first 4 card pairs per mechanic pair, and 8 only for pairs that come back KEEP or WEAK (106 of 167
+  read pairs were DROP after 8 pairs each). Read only pairs that can still add a partner the faction lacks.
+- Batches: at most 4 agents at once, each with about 20 sections; write each agent's lines to its file as it goes,
+  so a stop loses nothing. Before a big batch, count the sections and say how many agents it needs.
+- Concept fixes: give the agent the counts per game in its file (`ask.py all compare` output for each concept), so it
+  does not run 30 queries itself.
+- Owners and shares: write the rules down before the first try (2 owned on the faction's radii, shares only from the
+  two neighbours or SMALL unowned ones, every mechanic that is not SMALL owned), then check each try with
+  `work/check_assign.py`. Three tries by hand and two runs of an unchecked search were wasted.
+- Skip numbers that can't decide anything: partner counts from link numbers alone came out 15-19 for every faction.
+
 ## NEVER DO (the rejected tries of 14 Nov 2026)
 1. The radii and "the radii that work together" left out as the base: a pool of mechanics built first, from concepts.
    Stops it: steps 1-4 come before any mechanic.
