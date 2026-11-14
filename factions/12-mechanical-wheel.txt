@@ -3,12 +3,11 @@
 ==================================================================
 Why: designing factions one by one from a theme lost what makes each faction unique and how its mechanics connect.
 Mechanics, identity and Kaptain's five questions come first for all 20 factions at once; the theme comes last, per
-faction, as inspiration. The wheel is made by calculation, research and intuition; it starts empty (the seven factions
-in the game are not placed on it; their themes may be reused later).
+faction, as inspiration. The wheel is made by calculation, research and intuition.
 
 Method (Claude's proposal, agreed in outline):
-1. A pool of mechanics from the library, before any faction: each written "I do X -> I gain from X" on this game's
-   basic things, each able to carry 30+ cards on this board.
+1. The wheel first: the radii below and the radii that work together, then the 20 factions as shapes on them, then
+   the mechanics inside each faction's radii, each written "I do X -> I gain from X" on this game's basic things.
 2. The 20 factions as nodes on a circle. Each mechanic has one owner (its monopoly); up to its two neighbours may use it
    on a few cards; the far side of the wheel never has it (its blind spots).
 3. The factions are spread over the radii below: neighbours are alike on a few radii, opposites differ most.
@@ -62,8 +61,8 @@ The design process from the wheel (AGREED with Kaptain, 9 Nov 2026). The steps a
 factions/START_DESIGN-1-wheel.md (14 Nov 2026); this list keeps why each part was agreed.
 1. Radii: the 24 of 10 Nov 2026 (factions/13-wheel-measurement.txt). Open and not blocking the wheel chat: the library
    gaps of todo.md (database chat) and how values compare across games (factions/13).
-2. Pool of mechanics: the mechanics this board supports, each from the library and able to carry 30+ cards, each placed
-   on the radii it serves. `python3 library/cards_db/apart.py` lists mechanics real factions keep apart (opposite sides)
+2. Pool of mechanics (after the factions' shapes: START_DESIGN-1-wheel.md step 5): the mechanics this board supports,
+   each from the library, each placed on the radii it serves. `python3 library/cards_db/apart.py` lists mechanics real factions keep apart (opposite sides)
    and together (neighbours); read card texts before trusting a pair.
 3. The 20 factions placed (Kaptain agreed, 14 Nov 2026; the rule is Claude's suggestion): a faction is a set of 3-6
    strong radii joined by trigger -> payoff (one radius makes what another needs: "spends them" makes deaths, "brings
@@ -74,7 +73,7 @@ factions/START_DESIGN-1-wheel.md (14 Nov 2026); this list keeps why each part wa
    5 stay inside 1-2 neighbouring areas; the usual faction is strong in 3 areas spread over the circle (Shadow Isles:
    kills outright, brings back, spends them, position and combos, heals them); opposite radii are not kept apart
    (correlation 0.01). On the map of factions no two sit on top of each other.
-4. Per faction 2-3 monopolies, 1-2 mechanics shared with each neighbour on a few cards, blind spots among the radii
+4. Per faction 2 monopolies (Kaptain, 14 Nov 2026), 1-2 mechanics shared with each neighbour on a few cards, blind spots among the radii
    outside its set (not "the far side": step 3);
    the five-questions table filled for all 20 at once.
 5. Overlaps for two-faction decks: per pair of neighbours, the combo they make, as a played sequence (which card of one
@@ -88,5 +87,4 @@ factions/START_DESIGN-1-wheel.md (14 Nov 2026); this list keeps why each part wa
    the wheel put it; if it drifted, the faction is fixed, not the wheel.
    The measuring is `node tools/wheel_check.js <letter> "<planned values>"` (14 Nov 2026): it reads the faction's cards
    from the game, counts them on the radii by their effect words, triggers and keywords, and compares with the average
-   real faction of axes.tsv. It does not measure combos (the library's lines between cards). The seven factions in the
-   game are not on the wheel.
+   real faction of axes.tsv. It does not measure combos (the library's lines between cards).

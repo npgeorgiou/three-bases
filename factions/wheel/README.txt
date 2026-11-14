@@ -1,8 +1,9 @@
 THE WHEEL CHAT'S FILES (START_DESIGN-1-wheel.md), 14 Nov 2026. Made by library/cards_db/mechanics_wheel.py.
-mechanics.tsv   step 1: the pool, 23 mechanics, each "I do X -> I gain from X" and the library concepts that catch its cards
-measured.tsv    step 1: per mechanic its cards in the library, games with 10+, the biggest real faction's count (with the cards
+HANDOFF.md      for the next wheel chat: what the first try found, why the guide changed, what to reuse
+mechanics.tsv   the first try's pool, 23 mechanics (merged and cut; HANDOFF.md says how to undo that), each "I do X -> I gain from X" and the library concepts that catch its cards
+library/cards_db/wheel/measured.tsv:  per mechanic its cards in the library, games with 10+, the biggest real faction's count (with the cards
                 that make it happen; 30+ wanted), the real factions with the highest share, the radii it serves
-links.tsv       step 2: per pair of mechanics, how much more often than chance the library links their cards (cards) and how
+library/cards_db/wheel/links.tsv:  per pair of mechanics, how much more often than chance the library links their cards (cards) and how
                 much more decks heavy in one hold the other (decks); 1 = chance
 
 Step 1, how the pool was cut (an agent read 8 cards per mechanic; its verdicts are kept in each line's concepts):

@@ -1,7 +1,8 @@
 ==================================================================
 11. FACTIONS
 ==================================================================
-The game has seven factions (4 Nov 2026), one file each: identity, keywords with values, champions, units, spells, tokens.
+The game has no factions (14 Nov 2026: Kaptain deleted the seven factions; 20 new ones are designed by the wheel chat,
+factions/START_DESIGN-1-wheel.md). Their keyword rules are still in the engine.
 Ideas for new factions and redesigns are in factions/; the removed factions (Tagma, Ashfang Horde, Exanimati) are in
 factions/removed/.
 
@@ -27,12 +28,4 @@ Immobile       | -2          | Can't move.
 Fading         | -2          | Dies at the end of the round in which it was placed.
 Reckless       | -2          | Dies right after it attacks.
 
-Factions (letter, file):
-- Horologers (c): 11-faction-horologers.txt. Clockwork: machines act at round end, winding makes them act now, broken ones become Spare Parts.
-- Sunfeeders (d): 11-faction-sunfeeders.txt. Death: every death of the round feeds them (Toll, Obsidian, Offering).
-- Impi (a): 11-faction-impi.txt. Aggro: waves of cheap attackers, horns in the side columns, reserves fill fallen cells.
-- Hospice Knights (b): 11-faction-hospice.txt. Defence: few tough knights that harden, strike back and are restored.
-- Star Priests (s): 11-faction-starpriests.txt. Spells: units react to spells, Omens, back-row priests add spell damage.
-- Rootkin (o): 11-faction-rootkin.txt. Every unit Immobile: trees grow each round end, seed Saplings, strike through roots.
-- The Long Guns (l): 11-faction-longguns.txt. Artillery: guns in the back rows bombard at round end, observers mark targets.
 Units whose text checks "you hold this lane's base" have a golden border in the game.

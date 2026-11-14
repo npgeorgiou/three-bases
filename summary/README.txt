@@ -14,14 +14,7 @@ Files (lines, then contents). Read only the file a task needs; find lines across
 08-rulings.txt                   22  8. RULINGS
 09-card-design-rules.txt         18  9. CARD DESIGN RULES
 10-keywords.txt                  48  10. KEYWORDS
-11-factions.txt                  38  11. Factions: notation, general keyword values, the seven factions and their files
-11-faction-horologers.txt       131  11. HOROLOGERS: identity, keywords, champions, units, spells, tokens
-11-faction-sunfeeders.txt       124  11. SUNFEEDERS: identity, keywords, champions, units, spells, tokens
-11-faction-impi.txt             125  11. IMPI: identity, keywords, champions, units, spells, tokens
-11-faction-hospice.txt          122  11. HOSPICE KNIGHTS: identity, keywords, champions, units, spells, tokens
-11-faction-starpriests.txt      126  11. STAR PRIESTS: identity, keywords, champions, units, spells, tokens
-11-faction-rootkin.txt          120  11. ROOTKIN: identity, keywords, champions, units, spells, tokens
-11-faction-longguns.txt         122  11. THE LONG GUNS: identity, keywords, champions, units, spells, tokens
+11-factions.txt                  38  11. Factions: notation, general keyword values, no factions now
 12-decks-start-page.txt          25  12. DECKS AND START PAGE
 13-ui.txt                        52  13. UI
 14-animations-sound.txt          22  14. ANIMATIONS AND SOUND

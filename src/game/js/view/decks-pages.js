@@ -8,7 +8,7 @@ const deckStore = (() => {
   let st = null;
   try { st = JSON.parse(localStorage.getItem(DECK_STORE) || 'null'); } catch (e) { st = null; }
   const copy = d => ({ id: d.id, name: d.name, cards: { ...d.cards } });
-  if (!st || !Array.isArray(st.decks)) st = { decks: PREMADE.map(copy), pick: PREMADE[0].id, opp: PREMADE[1].id, seenPre: PREMADE.map(d => d.id) };
+  if (!st || !Array.isArray(st.decks)) st = { decks: PREMADE.map(copy), pick: (PREMADE[0] || {}).id || null, opp: (PREMADE[1] || PREMADE[0] || {}).id || null, seenPre: PREMADE.map(d => d.id) };
   // the earlier placeholder premade decks are dropped; premade decks this browser hasn't seen yet join the list once
   st.decks = st.decks.filter(d => !['pre-tagma', 'pre-horde', 'pre-exanimati'].includes(d.id));
   delete st.seen;
@@ -20,8 +20,8 @@ const deckStore = (() => {
   for (const d of st.decks) for (const k of Object.keys(d.cards)) if (!CARDS[k] || CARDS[k].token || !FAC_DECK[CARDS[k].fac]) delete d.cards[k];
   // premade decks of factions no longer in the game are dropped
   st.decks = st.decks.filter(d => !d.id.startsWith('p-') || PREMADE.some(x => x.id === d.id));
-  if (!st.decks.some(d => d.id === st.pick)) st.pick = PREMADE[0].id;
-  if (st.opp !== 'random' && !st.decks.some(d => d.id === st.opp)) st.opp = PREMADE[1].id;
+  if (!st.decks.some(d => d.id === st.pick)) st.pick = (PREMADE[0] || {}).id || null;
+  if (st.opp !== 'random' && !st.decks.some(d => d.id === st.opp)) st.opp = (PREMADE[1] || PREMADE[0] || {}).id || null;
   return st;
 })();
 function saveDecks() { try { localStorage.setItem(DECK_STORE, JSON.stringify(deckStore)); } catch (e) { /* kept for this visit only */ } }

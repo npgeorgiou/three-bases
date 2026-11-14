@@ -2,21 +2,7 @@
 12. DECKS AND START PAGE
 ==================================================================
 - Decks hold 30–40 cards of one faction, at most 3 copies of a card. Unfinished decks can be saved but not picked for play. Decks are kept in this browser; cards no longer in the game are dropped from saved decks.
-- Premade decks (editable and deletable like any deck): two per faction, each with one game plan (Claude's lists, 4 Nov 2026; lists in src/game/js/cards/decks-premade.js, PREMADE_VERSION 7).
-  - Horologers — The Gear Train (35): Geared machines touching each other, wound together; the Clock Tower and the Orrery wind whole lanes.
-  - Horologers — The Scrap Yard (39): machines that break give Spare Parts, which wind the next machine; Mistress of Salvage and Brass Colossus use the broken ones.
-  - Sunfeeders — The Cutting Rain (34): cheap cutters wound enemies, Obsidian finishes the wounded, Toll units grow with the deaths of the round.
-  - Sunfeeders — The Temple Steps (39): Willing Victims behind priests: Offerings kill them for carry-over and the priests' "if offered" effects.
-  - Impi — The Wave (38): cheap warriors attack from round 1; Onrush units grow with every attack of the lane.
-  - Impi — Horns and Loins (37): Flankers hit from the side columns, Reserves wait behind and run in when a front warrior falls.
-  - Hospice Knights — The Bastion (39): tough knights that Harden when they survive, restored by the hospital (Vigil, nurses).
-  - Hospice Knights — The Thorn Hedge (38): Retaliate knights punish every blow, sorties hit enemies arriving in the lane.
-  - Star Priests — Fire from the Ziggurat (36): back-row priests add spell damage (Augur); tablets and fire spells clear the lane.
-  - Star Priests — The Omen Guards (40): Omen units gain each time your spells target them; guards hold the front.
-  - Rootkin — The Thicket (35): small plants seed Saplings when they die and fill the lane.
-  - Rootkin — The Old Grove (37): big trees grow every round end (Perennial) and strike through their Roots.
-  - The Long Guns — The Grand Battery (36): guns in the back rows Barrage the enemy's rear at round end; depots feed them.
-  - The Long Guns — Spot and Strike (38): observers Mark targets, guns and snipers strike them for double damage; Entrenched infantry holds the front.
+- Premade decks: none (14 Nov 2026, the factions were deleted; PREMADE_VERSION 8). The start page works with no decks.
 - Start page: your picked deck (shown as a deck list in a grid of at most 2 columns; card names wrap onto two lines), Pick a deck, Edit deck (opens the picked deck in the deck builder; greyed out with no deck picked) and Create a deck under the deck box; opponent (Computer or second player on the same screen), computer player, the opponent's deck; Start battle. A battle can't start without a picked ready deck and an opponent deck. The opponent's deck list starts with "Random deck" (AGREED, October 2026: each battle, including Play again, picks a faction at random, then one of its ready decks), then offers every ready deck, the same faction included (a mirror battle). The computer-player choice is remembered. Test game option: any deck size and copies, unlimited supply; under it "In test games the opponent doesn't act" (on by default, greyed out unless test games are on): the computer opponent only passes.
 - Decks page: faction buttons (the deck builder's) filter the tiles; every saved deck with its faction and card count (a deck that isn't ready shows just its card count in red; a ready one adds "Ready"); each tile has a thick faction-coloured ribbon on top; click a tile to pick it (ready decks, or any non-empty deck in test games); Edit, Delete, Create a deck.
 - Deck builder: all cards on the right, grouped by faction, with keyword panels (and the cards they name) on hover; click a card to add a copy. Picking a card of one faction greys out the other factions' cards. Token cards (Shade, Abomination, Gorvan) exist as cards (shown beside a card that names them) but aren't listed in the deck builder, nor are hand cards carrying changes.

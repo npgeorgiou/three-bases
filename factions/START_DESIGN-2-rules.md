@@ -22,7 +22,6 @@ the built HTML; when a rule is unclear, look it up in `src/game/js/rules/` (map 
 - `summary/08-rulings.txt`: how the existing keywords and cards resolve.
 - `summary/09-card-design-rules.txt`: costing, the supply-to-stats budget, card text rules.
 - `summary/10-keywords.txt` and `summary/11-factions.txt`: every keyword, its value, and which faction has it.
-- `summary/11-faction-<name>.txt`: the seven factions in the game (their identities are taken; don't copy them).
 If summary/ and the code disagree, the code wins: tell Kaptain.
 
 **1b. What the rules mean for card design** (check every card and deck against this list):

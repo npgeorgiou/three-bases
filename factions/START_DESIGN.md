@@ -36,8 +36,7 @@ read 5-10 card texts behind every count, and write the sources (game: card) next
   `START_DESIGN-1-wheel.md`; not the theme), at least one per board game
   (Duelyst, Faeria, Stormbound, Into the Breach, Inscryption); run `curve` on each to see what its cards do.
 - Step 2: `removal <game>` and `protect <game>` for all games, `palette place` and `palette death`: which ways to remove and
-  hold exist, and which the other factions of the wheel already use (the wheel's table; the seven factions in the game
-  are not on the wheel: `factions/11-seven-factions.txt`, `summary/11-faction-*.txt`).
+  hold exist, and which the other factions of the wheel already use (the wheel's table).
 - Step 3: `only <game>` for all games (monopolies real factions have) and `lacks "<faction>"` for the closest factions
   (their blind spots).
 - Step 5: for each mechanic `compare`, `factions`, `fed`, `feeds`, `together`, `chains`, and `both` with each other

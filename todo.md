@@ -40,12 +40,3 @@ Work not done yet. Kaptain's requests in his own words where he gave them. Remov
    - Arcanists: why Arcane Missiles hits the enemy with the least defence; more imaginative spells and spell/unit play; Dean of Battle Magic (melee buffs) does not fit.
    - Remove all flavour text. The 5 special units per faction get a special symbol, maybe a gold border.
 10. **Old factions' rules code.** Tagma, the Horde, the Exanimati and the five factions of 3 Nov 2026 were removed from the game (4 Nov 2026, Kaptain: "remove old factions"); the rules code written only for their cards (per-card abilities in abilities.js, TACTICS in tactics.js, Exanimati death rules, Ogre Thrower, Link, Revenant, Plague...) is still in src/game/js/rules/ and no card uses it. Remove it in one refactor, keeping what fx.js uses (spawn, kill, auras, strikes).
-11. **summary/ for the seven factions.** summary/ still describes the removed factions; the seven factions, their keywords and the new rules (factions/11-seven-factions.txt) go into summary/ when Kaptain asks to save the summary.
-12. **Kaptain's review of the seven factions (4 Nov 2026, evening). Do these in this order, one faction at a time per chat.**
-   - Each faction is finished only when `python3 tools/design_gate.py <letter>` prints PASS (all seven fail now: no library files, no src/tv fields, 101-111 cards, same cards, spell shares).
-   - "The cost->stats budget is correct, and should be followed": undo the +1 / -1 defence changes of 4 Nov (commits "Balance from Benchmark", "Rootkin -1"); balance with other fixes.
-   - Spells/units: inside each faction, at cost 1-5 the split of spells and units is about the faction's own share at every cost level (Horologers: all over the place); high cost may be mostly units.
-   - No invented words on cards: "break" (= dies) goes.
-   - Round-end damage everywhere is too strong; and too many cards do the same thing ("strike the nearest enemy", "+strength", "kill"): rebuild each faction from the library's card texts (read 30-50 cards of the closest real factions, write their play patterns), give each faction 5 really different ways to play, and add an effect-level twin check (same trigger + effect + target on more than 2-3 cards is a problem).
-   - Every library search covers all 8 games, never only Runeterra.
-   - Each faction has exactly 100 cards (the seven have 100-111: cut to 100).

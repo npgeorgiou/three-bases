@@ -1,9 +1,9 @@
 """The wheel chat's mechanics (factions/START_DESIGN-1-wheel.md steps 1-2), measured on the library.
 Reads factions/wheel/mechanics.tsv (key, sentence, concepts as in axes.py SPOKES, new rule). Needs links.sqlite (links.py).
 Usage (from library/cards_db):
-  mechanics_wheel.py measure          -> factions/wheel/measured.tsv: cards, games with 10+, top factions, biggest real
+  mechanics_wheel.py measure          -> library/cards_db/wheel/measured.tsv: cards, games with 10+, top factions, biggest real
                                          faction's count (30+ wanted), radii it serves (share of its cards per radius)
-  mechanics_wheel.py links            -> factions/wheel/links.tsv: per pair, linked x chance in all cards, and in real decks
+  mechanics_wheel.py links            -> library/cards_db/wheel/links.tsv: per pair, linked x chance in all cards, and in real decks
   mechanics_wheel.py cards <file>     -> per mechanic 8 cards with text (for an agent to read)
   mechanics_wheel.py pairs A B <file> -> linked card pairs of A with B, their link reasons and texts (for an agent)"""
 import collections, os, sqlite3, sys
@@ -11,6 +11,7 @@ import axes, faction_asks, mechanics, deck_analysis
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 WHEEL = os.path.join(HERE, '..', '..', 'factions', 'wheel')
+OUT = os.path.join(HERE, 'wheel')
 GAMES = ('duelyst', 'faeria', 'gwent', 'inscryption', 'into_the_breach', 'marvel_snap', 'monster_train', 'runeterra', 'stormbound', 'sts1')
 
 
@@ -58,7 +59,7 @@ def link_pairs():
 def measure(mechs, c, games, x, con, pools):
     mem = members(mechs, con, pools)
     spokes = [s for s in axes.SPOKES if s[0] not in axes.NUMERIC and s[0] != 'together']
-    with open(os.path.join(WHEEL, 'measured.tsv'), 'w', encoding='utf-8') as f:
+    with open(os.path.join(OUT, 'measured.tsv'), 'w', encoding='utf-8') as f:
         f.write('key\tcards\tgames_10plus\tbiggest_faction\twith_makers\ttop_factions\tradii (share of its cards)\n')
         for k, _, _, _, mk in mechs:
             ids = [(g, i) for g in games for i in mem[k][g]]
@@ -91,7 +92,7 @@ def links(mechs, c, games, x, con, pools):
     decks = axes.radius_links(games, pools, con, pairs, deck_lists)
     axes.SPOKES = saved
     keys = [m[0] for m in mechs]
-    with open(os.path.join(WHEEL, 'links.tsv'), 'w', encoding='utf-8') as f:
+    with open(os.path.join(OUT, 'links.tsv'), 'w', encoding='utf-8') as f:
         f.write('a\tb\tcards\tdecks\n')
         for n, a in enumerate(keys):
             for b in keys[n:]:
