@@ -1,0 +1,24 @@
+key	cards	games_10plus	biggest_faction	with_makers	top_factions	radii (share of its cards)
+lastwords	297	8	runeterra: Shadow Isles 28	70	monster_train: Melting Remnant 11 (26%); inscryption: Technology 12 (16%); monster_train: Umbra 7 (15%); gwent: Monster 27 (15%)	spends 99%, wide 56%, tall 25%, protects 22%
+sacrifice	251	7	runeterra: Shadow Isles 44	44	monster_train: Umbra 16 (34%); gwent: Syndicate / Monster 1 (33%); monster_train: Melting Remnant 11 (26%); runeterra: Shadow Isles 44 (20%)	spends 99%, one 55%, wide 35%, grows 25%
+revive	260	7	runeterra: Shadow Isles 24	78	monster_train: Melting Remnant 10 (23%); monster_train: Wurmkin 5 (12%); runeterra: Shadow Isles 24 (11%); inscryption: Undead 2 (8%)	back 83%, spends 33%, protects 33%, wide 25%
+returnhand	143	2	runeterra: Ionia 38	38	runeterra: Ionia 38 (16%); runeterra: Bandle City 22 (9%); runeterra: Noxus 7 (3%); stormbound: Swarm 1 (3%)	back 100%, one 34%, strikes 29%
+tokens	728	7	runeterra: Shadow Isles 45	45	gwent: Syndicate / Monster 1 (33%); gwent: Syndicate / Scoiatael 1 (33%); stormbound: Swarm 8 (24%); gwent: Monster 39 (21%)	wide 100%, tall 26%
+countboard	166	4	gwent: Skellige 27	54	gwent: Syndicate / Skellige 1 (33%); gwent: Skellige 27 (15%); gwent: Scoiatael 16 (9%); gwent: Nilfgaard 12 (7%)	many 91%, grows 39%, wide 37%, growsdef 36%
+allyplay	705	5	runeterra: Bandle City 53	62	gwent: Syndicate / Nilfgaard 1 (33%); gwent: Syndicate / Northern Realms 1 (33%); runeterra: Bilgewater 47 (21%); runeterra: Bandle City 53 (21%)	wide 37%, grows 32%, tall 28%, cards 26%
+adjacency	717	8	duelyst: Lyonar Kingdoms 41	41	gwent: Syndicate / Skellige 2 (67%); into_the_breach: Archive, Inc. 2 (67%); into_the_breach: Prime 18 (60%); into_the_breach: Cyborg 3 (50%)	wide 37%, tall 24%, strikes 23%, grows 21%
+movement	626	10	faeria: Yellow 40	40	into_the_breach: Cyborg 4 (67%); into_the_breach: Archive, Inc. 2 (67%); into_the_breach: Brute 19 (61%); into_the_breach: Science 18 (60%)	one 28%, wide 22%, tall 21%
+onattack	978	8	runeterra: Noxus 89	89	into_the_breach: Prime 21 (70%); into_the_breach: Brute 21 (68%); into_the_breach: Science 20 (67%); into_the_breach: Ranged 19 (66%)	strikes 100%, tall 26%, one 26%, wide 25%
+overkill	238	2	runeterra: Noxus 46	46	runeterra: Noxus 46 (22%); runeterra: Freljord 36 (17%); runeterra: Targon 33 (14%); gwent: Monster 22 (12%)	strikes 73%, grows 43%, tall 41%, growsdef 32%
+fight	153	1	runeterra: Demacia 51	102	runeterra: Demacia 51 (25%); runeterra: Noxus 24 (11%); runeterra: Bilgewater 12 (5%); runeterra: Ionia 11 (5%)	strikes 99%, one 87%, disrupts 42%, tall 29%
+ping	813	10	runeterra: Bandle City 71	71	into_the_breach: Ranged 19 (66%); into_the_breach: Brute 19 (61%); into_the_breach: Prime 17 (57%); into_the_breach: Cyborg 3 (50%)	many 53%, textdmg 44%, one 35%, strikes 26%
+spelldmg	404	6	sts1: Silent 36	36	sts1: Silent 36 (43%); sts1: Ironclad 35 (42%); sts1: Watcher 28 (31%); sts1: Defect 24 (27%)	spelldmg 100%, one 67%, many 21%
+weaken	496	7	runeterra: Shurima 41	41	stormbound: Winter 8 (24%); runeterra: Freljord 35 (16%); runeterra: Shurima 41 (16%); monster_train: Stygian Guard 6 (15%)	one 38%, tall 23%
+supply	430	7	gwent: Syndicate 109	109	gwent: Syndicate 109 (62%); monster_train: Wurmkin 23 (53%); inscryption: Magick 7 (28%); monster_train: Umbra 10 (21%)	supply 92%, wide 23%, one 23%
+cheaper	723	7	runeterra: Piltover & Zaun 45	45	gwent: Syndicate / Scoiatael 1 (33%); gwent: Nilfgaard 40 (23%); gwent: Scoiatael 40 (22%); monster_train: Stygian Guard 8 (20%)	cheaper 100%, cards 36%, tall 27%
+draw	551	8	runeterra: Piltover & Zaun 60	60	gwent: Syndicate / Nilfgaard 1 (33%); monster_train: Awoken 11 (27%); runeterra: Piltover & Zaun 60 (25%); faeria: Blue 17 (24%)	cards 90%
+create	836	8	runeterra: Bandle City 79	79	runeterra: Bandle City 79 (31%); runeterra: Piltover & Zaun 69 (29%); runeterra: Targon 60 (25%); runeterra: Bilgewater 52 (24%)	cards 100%, cheaper 23%
+pick	458	7	runeterra: Shurima 39	39	gwent: Syndicate / Nilfgaard 1 (33%); sts1: Watcher 17 (19%); gwent: Nilfgaard 33 (19%); runeterra: Shurima 39 (15%)	picks 100%, one 24%, cards 24%, wide 21%
+discard	259	4	runeterra: Piltover & Zaun 33	33	monster_train: Stygian Guard 9 (22%); sts1: Silent 16 (19%); runeterra: Piltover & Zaun 33 (14%); runeterra: Bilgewater 28 (13%)	cards 45%, one 23%
+shield	320	6	runeterra: Demacia 41	41	gwent: Syndicate / Northern Realms 1 (33%); gwent: Syndicate / Skellige 1 (33%); gwent: Syndicate / Scoiatael 1 (33%); into_the_breach: Pinnacle Robotics 1 (33%)	protects 100%, one 34%, grows 30%, tall 28%
+guard	510	7	inscryption: Beast 30	30	into_the_breach: Science 13 (43%); into_the_breach: Brute 11 (35%); faeria: Green 24 (33%); gwent: Syndicate / Monster 1 (33%)	protects 85%, tall 53%, grows 21%

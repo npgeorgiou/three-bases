@@ -19,6 +19,7 @@ LESSONS.md                         17  lessons for future factions from building
 11-seven-factions.txt               61  11. The seven factions of 4 Nov 2026 (clockwork, death, aggro, defence, spells, all-Immobile, WWI artillery): overview, new rules, checks
 12-mechanical-wheel.txt             81  12. The mechanical wheel: designing 20 factions together; its radii and the agreed design process
 13-wheel-measurement.txt            113  13. How the wheel's radii are measured (axes.py, wheel-axes.html) and how to redo it
+wheel/README.txt                    20  the wheel chat's files: mechanic pool, its measures, links between mechanics
 designs/horologers.txt             118  Horologers (clockwork) stage 1: theme, identity, mechanics, groups, champions
 designs/horologers-cards.txt       111  its card lines (made from the game by tools/design_cards.js)
 designs/sunfeeders.txt             113  Sunfeeders (death, Mexica) stage 1

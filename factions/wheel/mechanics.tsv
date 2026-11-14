@@ -1,0 +1,24 @@
+key	mechanic (I do X -> I gain from X, on this game's things)	concepts (concept@game,game counts only in those games; * = added by axes.py)	new rule	made by (concepts of the cards that make it happen, counted with it for 30+)
+lastwords	I die -> my Death effect acts (a unit worth more dead than alive)	death_trigger		sacrifice,self_destruct@gwent,into_the_breach,stormbound
+sacrifice	I let my own unit die -> an enemy unit dies or is hit (a trade of units, never a gain of supply or strength: that is the Offering)	sacrifice,on_sacrifice,self_destruct@gwent,into_the_breach,stormbound		
+revive	my dead units and spent cards come back from the discard pile -> their Place acts again	revive,cheat_death,recycle		sacrifice,death_trigger,discard
+returnhand	I take my unit back to hand -> I place it again and its Place acts again	return_to_hand		
+tokens	my Place or Death effect puts extra small units on the grid -> they fill cells and front cells cheaply (never round-end seeding: Rootkin)	summon@duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound		
+countboard	I fill my camp with units -> cards that count my units grow	countboard*,condition_count		summon
+allyplay	I place allies -> my units already on the grid react to each placement	on_ally_play		summon
+adjacency	my units stand beside, behind or around each other -> they give each other more	adjacency,position*		
+movement	I move units inside the camps, mine or the enemy's -> enemies leave the cells facing my dots, mine reach the cells they need	forced_movement,bounce_enemy,swap,movement@duelyst,faeria,into_the_breach,stormbound,inscryption		
+onattack	my units attack twice, first, or with an effect on each attack -> every attack (paid in supply) does more	on_attack@duelyst,faeria,into_the_breach,monster_train,runeterra,stormbound,sts1,on_fight,multi_attack,first_strike		
+overkill	my units have high strength -> the strike beyond the enemy's defence hits the unit behind, and cards that need strength 5+ fire	excess_damage,piercing,stat_condition,combat_damage_threshold		
+fight	I make my unit strike a chosen enemy, or make enemies strike -> removal by my unit's strength	fight_enemy,forced_attack		attack_gain
+ping	my units' text and spells (never round end: Barrage) deal fixed damage to many enemies or many times -> wounded and small enemies are finished, rows are cleared	ping,damage_over_time,aoe_damage@faeria,gwent,inscryption,into_the_breach,runeterra,stormbound,sts1,rows@duelyst,into_the_breach,row_effects,area_templates,board_wipe,multi_target_attack@into_the_breach,runeterra		
+spelldmg	my spells deal damage -> removal from the hand, no unit needed	spelldmg*		
+weaken	I take an enemy's strength or text away for good, or turn it into a harmless unit -> it stays in its cell but does nothing	stat_loss,attack_zero,silence,transform,polymorph		
+supply	I gain extra supply or carry-over -> big units come early	resource_gain,base_resource_gain,coin_economy,resource_banking,round_carryover		
+cheaper	my cards get cheaper, free or stronger in hand -> two cards in one turn's supply, or a bigger card for the same supply	cost_reduction@duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1,free_play@gwent,inscryption,monster_train,runeterra,stormbound,sts1,cost_set,in_hand_buff		
+draw	I draw extra cards -> more choices each round	draw,on_draw		
+create	I create cards that were not in my deck -> more cards and answers	generate_cards		
+pick	I pick or copy cards of my deck -> the card I need comes when I need it, a strong one twice	tutor,selection@faeria,gwent,runeterra,sts1,retain,copy		
+discard	I discard my own cards -> the discarded card acts, or my units grow	discard,on_discard		
+shield	I give shields or armour -> the next hit does less or nothing	shield@duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,damage_reduction@duelyst,faeria,gwent,inscryption,monster_train,runeterra,block_armor@gwent,monster_train		
+guard	my unit guards my others or can't be targeted -> enemy attacks and spells must go where I choose	taunt,tank,protection,stealth,immunity@duelyst,faeria,gwent,inscryption,into_the_breach		
