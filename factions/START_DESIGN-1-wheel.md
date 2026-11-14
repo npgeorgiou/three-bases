@@ -23,6 +23,11 @@ wheel" in factions/12, in this order:
 5. The hooks (Kaptain, 14 Nov 2026): each faction must combine reasonably well with at least 10 others, not only its two
    neighbours. Per faction: what its cards make that other factions gain from, and what it gains from that others make,
    each written trigger -> payoff; the check script counts each faction's partners (10+ wanted).
+   Three Bases is a game of combos: the hooks come from the library, never from one guess per pair. For every two
+   mechanics of the pool: how often the library links real cards of one with cards of the other (all games), `fed`,
+   `feeds`, `both`, `chains` and real decks (`deckmates`); an agent reads card pairs behind each high number and keeps
+   only true combos (one card changes what the other does). If a faction can't reach 10 partners, its mechanics or
+   place are changed and the earlier steps redone.
 How to read the wheel: 24 radii in 8 areas, measured on 43 real factions of 8 games (no Monster Train, no Marvel Snap).
 A value compares a faction with the average faction of its own game, so compare factions of different games loosely.
 Into the Breach, Stormbound, Slay the Spire and Inscryption have no value on 10 or more radii. Strength, defence and
