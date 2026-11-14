@@ -17,16 +17,34 @@ LK={}
 for x in csv.DictReader(open(W+'links.tsv'),delimiter='\t'):
     n=(float(x['cards'] or 0),float(x['decks'] or 0)); LK[(x['a'],x['b'])]=LK[(x['b'],x['a'])]=n
 ok=lambda n:n[0]>=1.5 or (n[0]>=1.2 and n[1]>=1.2) or n[1]>=1.5
+ARG={(l.split('\t')[1],l.split('\t')[2]) for l in list(open(F+'arguments.tsv'))[1:] if l.startswith('mechanic')}
+ARG|={(b,a) for a,b in ARG}
+linked=lambda a,b: ok(LK.get((a,b),(0,0))) or (a,b) in ARG
+# the mechanic each faction's removal uses (table.tsv, Claude's draft): always kept
+RK=dict(A='lastwords',T='fight',I='supply',L='weaken',M='change',E='spelldmg',D='create',J='pick',H='discard',Q='push',G='strikes',F='heal',R='attach',N='guard',P='overkill',C='area',S='countboard',B='sacrifice',K='kill',O='adjacency')
 MIN,MAX=25,4
+# partners second: a tie on radii is broken by how many factions a read combo (KEEP/WEAK, strong number) joins it to
+V=set()
+for l in open(F+'work/mechanic_pair_verdicts.tsv'):
+    p=l.rstrip('\n').split('\t'); a,b=p[0].split('+')
+    if p[2] in ('KEEP','WEAK') and ok(LK.get((a,b),(0,0))): V|={(a,b),(b,a)}
+def partners(k,m): return len({j for j in OWN if j!=k and any((m,o) in V for o in OWN[j])})
 out=[]
 for k in OWN:
     c=[]
     for m in M:
         if m in OWN[k]: continue
         r=max([(M[m].get(x,0),x) for x in SHAPE[k]])
-        lk=[o for o in OWN[k] if ok(LK.get((m,o),(0,0)))]
-        if r[0]>=MIN and lk: c.append((r[0],m,r[1],lk))
-    c.sort(reverse=True); pick=c[:MAX]
+        lk=[o for o in OWN[k] if linked(m,o)]
+        if r[0]>=MIN and lk: c.append((r[0],partners(k,m),m,r[1],lk))
+    c.sort(reverse=True); c=[(r,m,x,lk) for r,_,m,x,lk in c]
+    pick=[t for t in c if t[1]==RK[k]]+[t for t in c if t[1]!=RK[k]]; pick=pick[:MAX]
+    # every signature mechanic joined to the other or to an extra; else the last extra gives way to one linked to it
+    for o in OWN[k]:
+        other=[x for x in OWN[k] if x!=o][0]
+        if not linked(o,other) and not any(o in t[3] for t in pick):
+            alt=[t for t in c if o in t[3] and t not in pick]
+            if alt: pick=pick[:-1]+alt[:1]
     out.append(f"{k}\t{','.join(OWN[k])}\t{','.join(p[1] for p in pick)}")
     if '-v' in sys.argv:
         print(k,'owns',','.join(OWN[k]),'| borrows',' '.join(f"{m}({x} {r}%, with {'/'.join(lk)})" for r,m,x,lk in pick),'| was',','.join(SH0[k]))

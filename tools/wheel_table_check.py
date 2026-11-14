@@ -20,7 +20,7 @@ NUM={'strong','tough','together'}
 T={p[0]:p for p in tsv(R+'table.tsv')}; CIRC=[p[0] for p in tsv(R+'table.tsv')]
 if len(CIRC)!=20: fail(f'{len(CIRC)} factions, 20 wanted')
 OWN={k:T[k][5].split(',') for k in CIRC}
-SH={k:[m for c in (6,7,8) for m in T[k][c].split(',') if m!='-'] for k in CIRC}
+SH={k:[m.split('(')[0] for m in T[k][6].split(',')] for k in CIRC}
 A={k:OWN[k]+SH[k] for k in CIRC}
 SHAPE={k:dict((v.split('=')[0],float(v.split('=')[1])) for v in T[k][4].split(',')) for k in CIRC}
 # 1. shapes: 3-6 radii, each joined to another of them by a strong number or an argument; no two the same
@@ -41,7 +41,6 @@ for k in CIRC:
 for m in SIZE:
     if SIZE[m]!='SMALL' and m not in owner: info.append(f'{m}: not SMALL and no owner')
 for k in CIRC:
-    if any(m in owner or SIZE.get(m)!='SMALL' for m in T[k][8].split(',') if m!='-'): fail(f'{k}: small share is owned or not SMALL')
     if not 4<=len(A[k])<=6: fail(f'{k}: {len(A[k])} mechanics, 4-6 wanted')
 # 3. each faction's mechanics one connected group (strong number, deck number 1.5+, or an argument)
 for k in CIRC:
@@ -68,13 +67,13 @@ for x,y,c,v,*_ in tsv(R+'partners.tsv'):
 for k in CIRC:
     if P[k]<10: fail(f'{k}: {P[k]} partners')
 # 5. the five answers: all different; removal by one of its own mechanics; blind spot outside what the faction owns, uses and its radii; all blind spots different
-for c,name in ((3,'archetype'),(11,'identity'),(12,'removal'),(14,'holding'),(15,'play'),(10,'blind spot')):
+for c,name in ((3,'archetype'),(9,'identity'),(10,'removal'),(12,'holding'),(13,'play'),(8,'blind spot')):
     d=collections.Counter(T[k][c] for k in CIRC)
     for v,n in d.items():
         if n>1: fail(f'{name} on {n} factions: {v}')
 for k in CIRC:
-    if T[k][13] not in A[k]: fail(f'{k}: removal uses {T[k][13]}, not one of its mechanics')
-    for b in T[k][10].split(','):
+    if T[k][11] not in A[k]: fail(f'{k}: removal uses {T[k][11]}, not one of its mechanics')
+    for b in T[k][8].split(','):
         if b.startswith('radius:'):
             if b[7:] in SHAPE[k]: fail(f'{k}: blind spot radius {b[7:]} is in its shape')
         elif b in A[k]: fail(f'{k}: blind spot {b} is one of its mechanics')

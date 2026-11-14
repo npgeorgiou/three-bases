@@ -47,7 +47,9 @@ only what the steps before it made.
      carry-over, hand, discard pile), with its sources (game: card). Each mechanic keeps its own line; a small one is
      kept and marked small. An effect the game can't do yet is marked NEW RULE.
    Each faction gets 4-6 mechanics of its radii that feed each other. It owns 2 of them, its 2 signature mechanics (Kaptain, 15 Nov 2026: not a monopoly; the faction builds on them, other factions may use them on a few cards as extra mechanics); the others
-   it shares with other factions. Two factions strong on the same radius own different mechanics
+   are extras (2-4, on a few cards; any faction's mechanic, many factions may have the same one), chosen by fit
+   first, partners second (Kaptain, 15 Nov 2026): `factions/wheel/work/borrow.py` (on the faction's radii, linked with its
+   signature mechanics, ties broken by partners; the mechanic its removal uses is kept). Two factions strong on the same radius own different mechanics
    in it ("brings back": one owns "my dead units come back", another "my unit goes back to hand").
 6. **Links between mechanics, and the hooks.** Only after step 5's concepts are fixed: `mechanics_wheel.py links`
    gives, for every two mechanics, the library's number in all cards and in real decks. Then `fed`, `feeds`, `both`,

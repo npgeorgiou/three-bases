@@ -7,8 +7,9 @@ Files: `table.tsv`, `partners.tsv`, `apart.tsv`, `arguments.tsv` (README.txt); `
   Sacrifice moved from T to B (B's removal is the sacrifice; T's was unjoined). Partners, only combos with a strong
   library number: A18 T16 I15 L10 M12 E14 D13 J10 H12 Q13 G14 F10 R14 N10 P13 C16 S17 B18 K16 O17.
 - Step 7: the five answers are Claude's draft (`work/make_table.py`), not judged by Kaptain yet.
-- Kaptain, 15 Nov 2026: factions have no neighbours. The circle order (step 4) and "shares only from the two
-  neighbours" are dropped; the table and shares still come from them and must be redone. Open: does every mechanic need an owner?
+- Kaptain, 15 Nov 2026: factions have no neighbours; signature mechanics, not monopolies. Extras redone by fit
+  (`work/borrow.py --write`; the earlier ones in `work/assign_before_fit.tsv`). The check passes; partners 13-19.
+  L's blind spot is now kill outright (it borrows revive).
 - Inside one faction, kept apart by real factions: S countboard + offering, R and N hide + attach (apart.tsv).
 
 Follow `factions/START_DESIGN-1-wheel.md` steps 1-8 and stop at Stop 1. This file says what the first try found, why

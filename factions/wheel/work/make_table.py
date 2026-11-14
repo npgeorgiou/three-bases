@@ -7,7 +7,7 @@ ANS={
 'A':("my units die in the front cells and come back, and every death acts","a Death effect hits the enemy facing me","a front unit that dies comes back into its cell from the discard pile, so the dot is cancelled again at once","Place: an ally from my discard pile comes back into the cell behind me","shields","shield","death and return"),
 'T':("my units pick their fights and grow from each kill","my unit strikes a chosen enemy","a unit that kills grows and stays in the front cell","Place: I strike the enemy facing me; if it dies I gain strength","area hits","area","duels"),
 'I':("extra supply lands big units a round early","damage equal to the supply left in the lane","big units arrive before the enemy can cancel my dots and hold them by defence","Place: I add 1 to your carry-over","tokens","tokens","big units early"),
-'L':("enemy units stay but lose their text and strength for good","strength and text taken away for good","the enemy facing my dot is weakened, so it can't kill my front unit","Place: the enemy facing me loses its text","revive","revive","weaken and silence"),
+'L':("enemy units stay but lose their text and strength for good","strength and text taken away for good","the enemy facing my dot is weakened, so it can't kill my front unit","Place: the enemy facing me loses its text","kill outright","kill","weaken and silence"),
 'M':("I turn the enemy's units and cards into useless ones","turn it into a weak unit","the enemy's next cards cost more or are useless, so his answer comes too late","Place: a useless card goes into the enemy's hand","+strength","radius:grows","change and junk"),
 'E':("spells clear the lane and each spell makes my units stronger","damage spells","my units in the lane grow with each spell cast there","Place: I gain strength for each spell you cast this round","heal","heal","damage spells"),
 'D':("I make more cards than my deck holds and spells pay for them","spells it creates","answers are created each round, so a lost front unit is always replaced","Place: a spell is created in your hand","strike twice or first","strikes","created cards"),
@@ -27,11 +27,11 @@ ANS={
 }
 RK=dict(A='lastwords',T='fight',I='supply',L='weaken',M='change',E='spelldmg',D='create',J='pick',H='discard',Q='push',G='strikes',F='heal',R='attach',N='guard',P='overkill',C='area',S='countboard',B='sacrifice',K='kill',O='adjacency')  # the mechanic each removal uses
 def who(m): return owner.get(m,'SMALL')
-rows=['faction\tleft\tright\tarchetype\tstrong radii\towns\tshared with left\tshared with right\tshared, small unowned\tblind spot\tblind key\tidentity\tremoval\tremoval mechanic\tholding\tthe play that feels good']
+rows=['faction\tbeside on the circle\t-\tarchetype\tstrong radii\tsignature mechanics\textra mechanics (owner)\tblind spot\tblind key\tidentity\tremoval\tremoval mechanic\tholding\tthe play that feels good']
 for k in CIRC:
     l,r=NB[k]; i,rem,hold,play,bw,bk,arch=ANS[k]
-    sl=','.join(m for m in SH[k] if who(m)==l); sr=','.join(m for m in SH[k] if who(m)==r); ss=','.join(m for m in SH[k] if who(m)=='SMALL')
-    rows.append('\t'.join([k,l,r,arch,SHAPE[k],','.join(OWN[k]),sl or '-',sr or '-',ss or '-',bw,bk,i,rem,RK[k],hold,play]))
+    ex=','.join(f'{m}({who(m)})' for m in SH[k])
+    rows.append('\t'.join([k,l,r,arch,SHAPE[k],','.join(OWN[k]),ex,bw,bk,i,rem,RK[k],hold,play]))
 open('factions/wheel/table.tsv','w').write('\n'.join(rows)+'\n')
 V={}
 for ln in open('factions/wheel/work/mechanic_pair_verdicts.tsv'):
