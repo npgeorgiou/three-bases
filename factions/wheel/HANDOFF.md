@@ -7,9 +7,7 @@ Files: `table.tsv`, `partners.tsv`, `apart.tsv`, `arguments.tsv` (README.txt); `
   Sacrifice moved from T to B (B's removal is the sacrifice; T's was unjoined). Partners, only combos with a strong
   library number: A18 T16 I15 L10 M12 E14 D13 J10 H12 Q13 G14 F10 R14 N10 P13 C16 S17 B18 K16 O17.
 - Step 7: the five answers are Claude's draft (`work/make_table.py`), not judged by Kaptain yet.
-- The check fails on one thing only: four neighbour pairs have no combo in the library (I-L, L-M, M-E, H-Q; every
-  strong mechanic pair between them was read and dropped). Kaptain decides: keep the circle (combos by argument) or
-  redo the circle by read combos (step 4, then shares and steps 5-7 again).
+- Kaptain: neighbours don't have to combo (4 pairs have none: I-L, L-M, M-E, H-Q). The check passes.
 - Inside one faction, kept apart by real factions: S countboard + offering, R and N hide + attach (apart.tsv).
 
 Follow `factions/START_DESIGN-1-wheel.md` steps 1-8 and stop at Stop 1. This file says what the first try found, why

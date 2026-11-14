@@ -69,11 +69,8 @@ for x,y,c,v,*_ in tsv(R+'partners.tsv'):
     n=ML.get((a,b),(0,0))
     if not (strong(n) or n[1]>=1.5): fail(f'{x}{y}: {c} library number {n} too low and no argument')
     P[x]+=1; P[y]+=1
-PAIRS={frozenset(p[:2]) for p in tsv(R+'partners.tsv')}
 for k in CIRC:
     if P[k]<10: fail(f'{k}: {P[k]} partners')
-    for n in T[k][1:3]:
-        if frozenset((k,n)) not in PAIRS: fail(f'{k}: no combo with neighbour {n}')
 # 5. the five answers: all different; removal by one of its own mechanics; blind spot outside what the faction owns, uses and its radii; all blind spots different
 for c,name in ((3,'archetype'),(11,'identity'),(12,'removal'),(14,'holding'),(15,'play'),(10,'blind spot')):
     d=collections.Counter(T[k][c] for k in CIRC)

@@ -13,7 +13,7 @@ Method (Claude's proposal, agreed in outline):
 3. The factions are spread over the radii below: neighbours are alike on a few radii, opposites differ most.
 4. A table: the 20 factions by their answers to the five questions; every faction differs from every other in each.
 5. A graph check: mechanics are nodes, a line where one makes what another needs (library fed/feeds); each faction's
-   mechanics form one connected group, with lines to each neighbour.
+   mechanics form one connected group (lines to each neighbour not needed: Kaptain, 14 Nov 2026).
 6. The wheel lives in one table file with a check script; the picture is drawn from the table.
 7. Then each faction is designed in its own chat (factions/START_DESIGN.md), its theme chosen to fit.
 

@@ -35,7 +35,8 @@ only what the steps before it made.
    it. The values are uneven, as real factions are, and each shape is checked against them:
    `python3 axes.py --near "heals=1.6,growsdef=1.4,stops=0.3"` (from library/cards_db). No two shapes are the same.
 4. **The circle.** Neighbours are the two factions whose strong radii work together the most across the pair (step
-   2), so combos run between them; never two that merely share a radius.
+   2); never two that merely share a radius. Neighbours don't have to combo (Kaptain, 14 Nov 2026): what counts
+   is 10+ partners anywhere on the circle.
 
 **B. The mechanics and the combos**
 5. **The mechanics inside each faction's radii.** For each strong radius, start from its library concepts (SPOKES in
