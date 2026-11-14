@@ -22,6 +22,10 @@ How a value is made (all agreed with Kaptain, 9 Nov 2026):
   building, item or weapon whose own text deals damage to an enemy), "damage from spells" (a spell that does), both
   read from the card's rows (DAMAGE_ON_ENEMY in axes.py; a unit's strike is no row), and "kills outright" (destroy,
   banish, removal, deathtouch: no damage).
+- Fights and tiles (14 Nov 2026). A card that makes my unit strike or fight a chosen enemy (concept fight_enemy: Faeria
+  Hunt Down, Runeterra Single Combat) counts as damage: from units' text on a unit, from spells on a spell. Into the
+  Breach weapons hit a tile, friend or enemy, and their records name no side: their damage counts as damage on enemies
+  (DAMAGE_NO_SIDE_GAMES in axes.py). One unit striking all enemies is "many at once" (Runeterra Judgment).
 - "Rewards playing spells": cards that react when a spell is played, count the spells played, or make spells
   stronger (the last only in Duelyst and Runeterra; in Slay the Spire that mark is on 131 cards and was not checked).
   A plain share of spells is no radius: inside a game the factions have nearly the same share (Duelyst 40-46%,

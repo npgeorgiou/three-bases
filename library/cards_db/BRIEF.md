@@ -136,6 +136,7 @@ AMOUNT   a number, or `{"x": x, "of": TARGET, "attr": attr, "event": EVENT, "spa
 29. Amounts are what the text says: "double the damage" = amount event_amount (as much again), never 1 (The Dreadway);
    "everywhere" = zone everywhere on that target (Rek'Sai (level 2) lost it).
 30. "A strikes B": act strike, on = the striker, to = what it hits; the damage is on "to", never on the striker.
+   When "to" is an enemy unit the card gets fight_enemy (flat.py RULES), which axes.py counts as damage to an enemy; "to" must say the enemy side ("fights an enemy creature").
 31. One happening is written one way in every card: "strike the enemy Nexus" is strikes_nexus by the striking unit (actor),
    never with the player as its object. Before writing a happening, look at how the worked examples and vocab.tsv write it.
 32. Do not write what the game's rules do for every card (a unit attacks, an unblocked attacker hits the enemy Nexus): that is

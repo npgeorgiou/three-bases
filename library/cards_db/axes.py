@@ -27,6 +27,8 @@ DISRUPT_ALWAYS = ['hand_disruption', 'mill', 'board_clog', 'cost_increase', 'pla
 NOT_MEASURED = ('monster_train',)  # Kaptain, 9 Nov 2026: a different kind of game, not on the page (Marvel Snap has no factions)
 KILL_ON_ENEMY = ['destroy', 'banish']  # kills outright; damage is its own two radii
 DAMAGE_ON_ENEMY = ('damage', 'damage_over_time')  # the card's own text deals damage to an enemy unit or player (a unit's strike is no row)
+DAMAGE_NO_SIDE_GAMES = ('into_the_breach',)  # weapon cards (category ability) deal damage to a tile, friend or enemy (Artemis Artillery); the records keep the text and name no side
+DAMAGE_BY_CONCEPT = ('fight_enemy',)  # damage to an enemy that no damage row carries: my unit is made to fight / strike a chosen enemy (Faeria Hunt Down, Runeterra Single Combat)
 POSITION = ['adjacency', 'aura', 'link_formation', 'flanking', 'assists_support']
 POSITION_GAMES = ('gwent', 'runeterra', 'marvel_snap')  # elsewhere these concepts are area hits and pushes (check of 9 Nov 2026)
 NEAR = ' or '.join("W like '%position " + w + "%'" for w in ('% bordering', '% surrounding', '% sides', '% diagonal', 'is behind', '% in_circuit'))
@@ -62,10 +64,14 @@ NO_VALUE = {('into_the_breach', 'strong'): 'its units\' damage comes from weapon
 CHECKS = [  # Kaptain's points: (game, faction, spoke, lowest value it must have)
     ('faeria', 'Red', 'textdmg', 1.5),  # 9 Nov 2026: Red is Faeria's fixed-damage faction (its units' text deals it)
     ('faeria', 'Red', 'strikes', 1.0),  # and its units strike too; one number used to hide that
+    ('faeria', 'Green', 'textdmg', 0.3),  # 14 Nov 2026: Green kills by making its unit fight a chosen enemy (Deepwood Stalker, Frog-Tosser; fight_enemy), 0.13 without
+    ('into_the_breach', 'Ranged', 'textdmg', 0.5),  # 14 Nov 2026: weapon damage hits enemies (Artemis Artillery); the radius had no value before
+    ('runeterra', 'Demacia', 'many', 0.1),  # 14 Nov 2026: Judgment, one ally strikes all battling enemies (aoe_damage); 0.06 without
     ('inscryption', 'Undead', 'strong', 0.9),  # 0.75 when 4 Bones counted as 4 Blood (SUPPLIES)
 ]
 GAPS = [('inscryption', 'disrupts'), ('sts1', 'tall')]  # must have no value: 5 cards in the whole game; a game with no units
-HAS = [('gwent', 'grows'), ('gwent', 'growsdef'),  # must have a value: growth of Gwent's one number counts as both
+HAS = [('into_the_breach', 'textdmg'),  # weapons' damage on a tile counts as damage on enemies (DAMAGE_NO_SIDE_GAMES, 14 Nov 2026)
+       ('gwent', 'grows'), ('gwent', 'growsdef'),  # must have a value: growth of Gwent's one number counts as both
        ('duelyst', 'pos'), ('faeria', 'pos'), ('stormbound', 'pos'),  # position in the board games
        ('duelyst', 'one'), ('faeria', 'one'), ('gwent', 'one'), ('stormbound', 'one')]  # a chosen target is read from the rows in every game
 MIN_DECK_CARDS = 10
@@ -152,6 +158,10 @@ def tag(c, x, games):
     for q in BESIDE:
         for (card,) in c.execute(q + faction_asks.ROW_ORIGIN): con[card].add('position*')
     dmg = {card for (card,) in c.execute("select card from flat_do where on_side='enemy' and concept in " + repr(DAMAGE_ON_ENEMY) + " and " + faction_asks.ROW_ORIGIN)}
+    # a game whose weapons hit the tile aimed at, whoever stands there: its damage rows name no side and count too
+    dmg |= {card for (card,) in c.execute("select f.card from flat_do f join card k on k.id=f.card where f.on_side is null and k.game in (" + ','.join(repr(g) for g in DAMAGE_NO_SIDE_GAMES)
+                                          + ") and k.category='ability' and f.concept in " + repr(DAMAGE_ON_ENEMY))}
+    dmg |= {card for (card,) in c.execute("select card from flat_concept where concept in (" + ','.join(repr(k) for k in DAMAGE_BY_CONCEPT) + ")")}
     for i, cat in c.execute('select id, category from card'):
         if i in dmg: con[i].add('spelldmg*' if cat == 'spell' else 'textdmg*')
     pools = {g: x.pool(g) for g in games}
