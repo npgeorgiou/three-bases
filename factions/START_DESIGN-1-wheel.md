@@ -8,16 +8,18 @@ wheel" in factions/12, in this order:
    supply, carry-over, cards), comes from the library with its sources (game: card), can carry 30+ cards on this board,
    and is placed on the radii it serves. `python3 library/cards_db/apart.py` lists mechanics real factions keep apart
    and together; read the card texts before trusting a pair.
-2. The 20 factions placed: OPEN, see factions/12 step 3 (real factions are not strong on radii side by side; their
-   strong radii are joined by trigger -> payoff). Check each planned shape against real factions:
-   `python3 axes.py --near "heals=1.6,growsdef=1.4,stops=0.3"` (from library/cards_db/) lists the 10 closest.
+2. The 20 factions placed. Each is a set of 3-6 strong radii joined by trigger -> payoff, wherever they sit on the
+   circle (factions/12, step 3; never "radii side by side": real factions are not built so). Check each planned shape
+   against real factions: `python3 axes.py --near "heals=1.6,growsdef=1.4,stops=0.3"` (from library/cards_db/) lists
+   the 10 closest.
 3. Per faction: its archetype (one sentence saying how it wins: Kaptain's first question), 2-3 monopolies, the 1-2
-   mechanics it shares with each neighbour on a few cards, its blind spots from the far side, and the other four of
+   mechanics it shares with each neighbour on a few cards, its blind spots among the radii outside its set, and the other four of
    Kaptain's five questions (step 2 of the thinking process in START_DESIGN.md).
 4. The overlaps: per pair of neighbours, the combo the two make, as a played sequence (which card of one sets off which
    card of the other). Choose what neighbours share from radii that work together: the page's view "Radii that work
    together" (`factions/wheel-axes.html`) shows which radii real games join. A low number there is no ban (factions/12:
    real games only show what they happened to do); it means the combo must be argued from this game's rules.
+   Every overlap and hook is written trigger -> payoff: which card makes the thing, which card gains from it.
 How to read the wheel: 24 radii in 8 areas, measured on 43 real factions of 8 games (no Monster Train, no Marvel Snap).
 A value compares a faction with the average faction of its own game, so compare factions of different games loosely.
 Into the Breach, Stormbound, Slay the Spire and Inscryption have no value on 10 or more radii. Strength, defence and

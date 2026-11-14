@@ -64,22 +64,27 @@ The design process from the wheel (AGREED with Kaptain, 9 Nov 2026; done in anot
 2. Pool of mechanics: the mechanics this board supports, each from the library and able to carry 30+ cards, each placed
    on the radii it serves. `python3 library/cards_db/apart.py` lists mechanics real factions keep apart (opposite sides)
    and together (neighbours); read card texts before trusting a pair.
-3. The 20 factions placed. OPEN (Kaptain, 14 Nov 2026): Claude's wording "strong in 1-2 neighbouring areas (3-6 radii),
-   weak on the far side" is wrong and is not used. Measured on the 27 real factions with a value on 20+ radii (axes.tsv,
-   strong = 1.3 or more): 19 are strong on 3-6 radii, but only 3 have them side by side and only 5 stay inside 1-2
-   neighbouring areas; the usual faction is strong in 3 areas spread over the circle (Shadow Isles: kills outright,
-   brings back, spends them, position and combos, heals them), and radii on opposite sides are not kept apart
-   (correlation 0.01). A faction's strong radii are joined by trigger -> payoff (one makes what the other needs), not
-   by their place on the circle. How the 20 are placed is agreed with Kaptain before the wheel chat.
-4. Per faction 2-3 monopolies, 1-2 mechanics shared with each neighbour on a few cards, blind spots from the far side;
+3. The 20 factions placed (Kaptain agreed, 14 Nov 2026; the rule is Claude's suggestion): a faction is a set of 3-6
+   strong radii joined by trigger -> payoff (one radius makes what another needs: "spends them" makes deaths, "brings
+   back" and cards that count deaths use them), wherever they sit on the circle. For every two radii of a faction say
+   the trigger and the payoff, with the library's number for the pair (the page's "Radii that work together").
+   Not used, measured wrong: "strong in 1-2 neighbouring areas, weak on the far side". Of the 27 real factions with a
+   value on 20+ radii (axes.tsv, strong = 1.3 or more) 19 are strong on 3-6 radii, only 3 have them side by side, only
+   5 stay inside 1-2 neighbouring areas; the usual faction is strong in 3 areas spread over the circle (Shadow Isles:
+   kills outright, brings back, spends them, position and combos, heals them); opposite radii are not kept apart
+   (correlation 0.01). On the map of factions no two sit on top of each other.
+4. Per faction 2-3 monopolies, 1-2 mechanics shared with each neighbour on a few cards, blind spots among the radii
+   outside its set (not "the far side": step 3);
    the five-questions table filled for all 20 at once.
 5. Overlaps for two-faction decks: per pair of neighbours, the combo they make, as a played sequence (which card of one
    sets off which card of the other). Hooks are more than these planned overlaps (Kaptain, 9 Nov 2026: hooks made only
-   this way would be poor and unimaginative); what else goes into hooks is worked out in that chat.
+   this way would be poor and unimaginative); what else goes into hooks is worked out in that chat. Think of hooks as
+   trigger -> payoff (Kaptain, 14 Nov 2026): a card of one faction makes the thing a card of another faction gains from.
    Shared cards (one card in two factions, as in Runeterra) are only one source of combos, never the only one.
 6. Themes, one per faction, fitting its mechanics.
 7. Each faction in its own chat (factions/START_DESIGN.md steps 6-10), then measured on the radii: it must land where
    the wheel put it; if it drifted, the faction is fixed, not the wheel.
-   The measuring is axes.py, the same that put the library's factions on the wheel; it reads cards from the card
-   database, so a new faction is measured once its cards are imported there (database chat; todo.md). The seven factions
-   in the game are not on the wheel.
+   The measuring is `node tools/wheel_check.js <letter> "<planned values>"` (14 Nov 2026): it reads the faction's cards
+   from the game, counts them on the radii by their effect words, triggers and keywords, and compares with the average
+   real faction of axes.tsv. It does not measure combos (the library's lines between cards). The seven factions in the
+   game are not on the wheel.
