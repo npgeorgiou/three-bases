@@ -3,6 +3,7 @@ PIPELINE.md     steps 1-5.1: how each result was made, what was script and what 
 RESULTS-1-5.md  the results of steps 1-5.1: radius pairs, the 20 shapes, the order, the 48 mechanics
 HANDOFF.md      for the next wheel chat: what the first try found, why the guide changed, what to reuse
 mechanics.tsv   48 mechanics, one line each, "I do X -> I gain from X", the library concepts that catch its cards, SMALL marks
+STOP1.md        Stop 1 in plain words (made by work/make_stop1.py)
 table.tsv       Stop 1: the 20 factions (archetype, radii, owned, shared, blind spot, the five answers;
                 answers and archetypes are Claude's draft); made by work/make_table.py
 partners.tsv    Stop 1: per pair of factions the best read combo (KEEP/WEAK, a strong library number), played sequence, source

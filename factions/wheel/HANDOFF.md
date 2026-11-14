@@ -1,7 +1,7 @@
 # Handoff for the next wheel chat (14 Nov 2026, evening)
 
 ## Second try, at Stop 1 (14 Nov 2026, night). Waiting for Kaptain.
-Files: `table.tsv`, `partners.tsv`, `apart.tsv`, `arguments.tsv` (README.txt); `python3 tools/wheel_table_check.py`.
+Read first: `STOP1.md` (the 20 factions in plain words). Files: `table.tsv`, `partners.tsv`, `apart.tsv`, `arguments.tsv` (README.txt); `python3 tools/wheel_table_check.py`.
 - Step 6 finished: 178 more pairs read (4 card pairs each, 8 for the 47 that came back KEEP/WEAK), all in
   `work/mechanic_pair_verdicts.tsv` (345 pairs: 25 KEEP, 69 WEAK). F was at 9: it now shares attach (R's).
   Sacrifice moved from T to B (B's removal is the sacrifice; T's was unjoined). Partners, only combos with a strong
