@@ -15,9 +15,9 @@ the end of a round, through the dots of the front rows (summary/04). Judge every
 take a base, hold it, or take it from the enemy?
 
 ## How the work is split
-- First the wheel chat: all 20 factions together at high level (archetype and mechanics, no cards). It follows
-  `START_DESIGN-1-wheel.md` and skips the steps of building a faction below.
-- Then one faction per chat.
+- First the wheel chat: all 20 factions together, with every faction's combos with 10+ others (no cards). It follows
+  `START_DESIGN-1-wheel.md`, which also lists the stops of the whole process, and skips the steps below.
+- Then one faction per chat (two can run at the same time), the steps below.
 - Kaptain sees two things: the faction's answers to steps 1-6, then the finished faction (exactly 100 cards, the gate
   passed). He does not check cards in batches.
 - Before the finished faction is sent, a separate agent that has not seen the work checks it against these four files,
@@ -115,7 +115,7 @@ randomness: no coin flips, random targets or random cards.
 3. **700 cards in one chat.** Why: Claude tries to deliver everything asked; when it is too much, it lowers the quality
    silently instead of saying so, and rules read early (the budget) fade in a long chat. Stops it: one faction per chat;
    say before starting when a request is too big to do well.
-4. **The library not read card by card** (although `factions/5` step 1 said so). Why: reading is slow and shows no
+4. **The library not read card by card** (although the old card design method said so). Why: reading is slow and shows no
    output, so Claude skipped it and took only mechanic names, almost only from Runeterra, the game it knows best.
    Stops it: step 7 and the library file the gate checks.
 5. **One mechanic carried a faction** (the clockwork faction was only wind and gears). Why: Claude took the first idea

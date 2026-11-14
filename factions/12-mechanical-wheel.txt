@@ -58,7 +58,8 @@ win 2 of 3 lanes), random effects (not allowed), lasting or this-round effects (
 
 How it is measured, and how to redo it for new games or changed library cards and links: factions/13-wheel-measurement.txt.
 
-The design process from the wheel (AGREED with Kaptain, 9 Nov 2026; done in another chat):
+The design process from the wheel (AGREED with Kaptain, 9 Nov 2026). The steps as they are done now, with their stops:
+factions/START_DESIGN-1-wheel.md (14 Nov 2026); this list keeps why each part was agreed.
 1. Radii: the 24 of 10 Nov 2026 (factions/13-wheel-measurement.txt). Open and not blocking the wheel chat: the library
    gaps of todo.md (database chat) and how values compare across games (factions/13).
 2. Pool of mechanics: the mechanics this board supports, each from the library and able to carry 30+ cards, each placed

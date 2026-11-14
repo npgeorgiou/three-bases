@@ -59,7 +59,7 @@ If summary/ and the code disagree, the code wins: tell Kaptain.
 - A rule not written in summary/ and not in the code does not exist. A card that needs one is marked NEW RULE.
 
 ## 2. The design rules (agreed with Kaptain)
-More text: `factions/5-card-design-method.txt`, `factions/6-faction-entry-format.txt`, `summary/09-card-design-rules.txt`
+More text: `summary/09-card-design-rules.txt`
 (costing). Ideas to use: `factions/4-kaptains-ideas.txt`, `factions/7-ideas-kept-for-later.txt`. Never reintroduce:
 `factions/8-rejected-and-cut.txt`. Old drafts in `factions/designs/` are never reused.
 
