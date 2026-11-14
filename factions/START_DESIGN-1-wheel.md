@@ -8,8 +8,8 @@ wheel" in factions/12, in this order:
    supply, carry-over, cards), comes from the library with its sources (game: card), can carry 30+ cards on this board,
    and is placed on the radii it serves. `python3 library/cards_db/apart.py` lists mechanics real factions keep apart
    and together; read the card texts before trusting a pair.
-2. The 20 factions placed on the circle. Each is strong in 1-2 neighbouring areas (3-6 radii) and weak on the far side
-   (factions/12, step 3). Check each planned shape against real factions:
+2. The 20 factions placed: OPEN, see factions/12 step 3 (real factions are not strong on radii side by side; their
+   strong radii are joined by trigger -> payoff). Check each planned shape against real factions:
    `python3 axes.py --near "heals=1.6,growsdef=1.4,stops=0.3"` (from library/cards_db/) lists the 10 closest.
 3. Per faction: its archetype (one sentence saying how it wins: Kaptain's first question), 2-3 monopolies, the 1-2
    mechanics it shares with each neighbour on a few cards, its blind spots from the far side, and the other four of
