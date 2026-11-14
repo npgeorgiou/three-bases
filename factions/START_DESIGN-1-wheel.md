@@ -59,7 +59,7 @@ only what the steps before it made.
    the other), with the library number. 10+ partners per faction; also the pairs that work against each other. A
    faction under 10 partners is changed: steps 3-6 again for it.
 7. **The five questions** (START_DESIGN.md step 2) for all 20 in one table. Every answer differs from every other
-   faction's; each removal is a way no other faction has. Blind spots never touch a mechanic the faction owns or uses.
+   faction's; each removal is a way no other faction has and uses a mechanic the faction owns or shares (B's "my unit dies and takes the enemy facing it" is the sacrifice: B needs it). Blind spots never touch a mechanic the faction owns or uses.
 8. **Check script.** It reads the files of steps 1-7 and checks real things, not only columns: the radius numbers of
    every shape's joins (step 3), the library number of every combo (step 6); a low number must carry its argument from
    this game's rules. Also: 10+ partners per faction, 2 owned mechanics per faction and one owner per mechanic, and

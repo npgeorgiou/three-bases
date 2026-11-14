@@ -1,6 +1,12 @@
 THE WHEEL CHAT'S FILES (START_DESIGN-1-wheel.md), 14 Nov 2026. Made by library/cards_db/mechanics_wheel.py.
 HANDOFF.md      for the next wheel chat: what the first try found, why the guide changed, what to reuse
-mechanics.tsv   the first try's pool, 23 mechanics (merged and cut; HANDOFF.md says how to undo that), each "I do X -> I gain from X" and the library concepts that catch its cards
+mechanics.tsv   48 mechanics, one line each, "I do X -> I gain from X", the library concepts that catch its cards, SMALL marks
+table.tsv       Stop 1: the 20 factions (neighbours, archetype, radii, owned, shared per neighbour, blind spot, the five answers;
+                answers and archetypes are Claude's draft); made by work/make_table.py
+partners.tsv    Stop 1: per pair of factions the best read combo (KEEP/WEAK, a strong library number), played sequence, source
+apart.tsv       Stop 1: mechanic pairs real factions keep apart (apart.py), per faction pair and inside one faction
+arguments.tsv   joins with no strong library number, argued from this game's rules (Claude's)
+tools/wheel_table_check.py checks all of these (step 8)
 library/cards_db/wheel/measured.tsv:  per mechanic its cards in the library, games with 10+, the biggest real faction's count (with the cards
                 that make it happen; 30+ wanted), the real factions with the highest share, the radii it serves
 library/cards_db/wheel/links.tsv:  per pair of mechanics, how much more often than chance the library links their cards (cards) and how

@@ -1,0 +1,18 @@
+overkill+strikes	true 0 of 4	DROP	Links are generic death-effect or stat links; no pair shows a double or first strike carrying overflow to the row behind.	monster_train: Inferno + Little Fade
+draw+spellpay	true 1 of 4	WEAK	I cast a drawing spell; the spell-paid unit on my board grows, and the drawn card gives the next spell to cast. Both only add to each other.	duelyst: Cryogenesis + The Scientist
+guard+strikes	true 0 of 4	DROP	Links are only a buff to a guard; no guard changes where a striker hits.	duelyst: Scarzig, Feather Knight + War Exorcist
+onkill+spellpay	true 0 of 4	DROP	Spell kills do not count as my unit killing; links are generic spell-cast triggers or stun.	duelyst: Hydrogarm + Resonance Scythe
+kill+silence	true 0 of 4	DROP	Links are generic death-effect or movement links; killing and silencing do not set each other off.	duelyst: Ritual Banishing + Ironclad
+draw+movement	true 1 of 4	WEAK	My unit moves within camp and its move replaces a costly hand card with a cheaper one; the enemy cannot stop it. A move doubles as card selection, not a loop.	stormbound: Catnip's Charm + Treasurous Bosuns
+movement+supply	true 0 of 4	DROP	Links are unrelated resource or kill links; moving gives no supply.	stormbound: Sparkly Kitties + Spellbinder Zhevana
+heal+ping	true 1 of 4	WEAK	My ping hits my own unit that gains power when wounded; my heal restores its defence so it holds the front cell again.	gwent: Gerd + Tuirseach Veteran
+bigstrength+offering	true 0 of 4	DROP	All links are the same landmark and cost-reduction cards; no sacrifice feeds big strength.	runeterra: The Black Flame + Bloody Business
+hide+supply	true 0 of 4	DROP	Links are generic death-effect or resource gains; hiding has no tie to supply.	faeria: Kaios, Demented Overmind + Deathwish Ghoul
+heal+roundstart	true 0 of 4	DROP	Links are about the player's Nexus or champion levelling; no unit-level heal at round start pairing.	runeterra: Master Yi + Devoted Council
+lastwords+ping	true 1 of 4	WEAK	My ping hits all units each round, killing my own death-effect unit in the front row; its Death effect re-places it. The enemy can only trade into it.	duelyst: Catalyst Quillbeast + Sarlac the Eternal
+adjacency+strikes	true 0 of 4	DROP	Links are movement or conduit links; no neighbour effect changes strikes.	duelyst: Lionize + Suntide Maiden
+junk+pick	true 0 of 4	DROP	Links are generic spell-cast triggers; picking cards does not interact with junk.	gwent: Oneiromancy + Rosa and Edna var Attre
+onkill+weaken	true 1 of 4	WEAK	My weaken drops an enemy front unit to 0 strength; my onkill unit then kills it cheaply and gains. Enemy can answer with other units only.	faeria: Emperor Kaios + Earthfire Shaker
+fight+hide	true 0 of 4	DROP	Links are generic transforms or tribe links; no pair shows hiding changing a fight.	duelyst: Bloodsworn Gambler + Gate to the Undervault
+attach+deathfeed	true 1 of 4	WEAK	I attach by killing my own ally; the death makes my deathfeed unit grow, and the attached carrier keeps the gain.	runeterra: The Darkin Halberd + Tortured Prodigy
+adjacency+copy	true 0 of 4	DROP	Links are placement or stat links; a copy gains nothing from adjacency beyond a buff.	marvel_snap: Mother Askani + Lancelot

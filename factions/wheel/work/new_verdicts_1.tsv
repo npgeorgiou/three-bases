@@ -1,0 +1,20 @@
+bigstrength+countboard	true 1 of 4	WEAK	Mihira stands in lane 1 and grows all my units at round end; the enemy can only kill them. Assessor placed next, with many 5+ units on the grid, draws one card per such unit.	runeterra: Mihira, Aspect of Justice + Trifarian Assessor
+revive+silence	true 0 of 4	DROP	Links are generic (silence acts on neighbours, revive just returns units); no card changes what the other does.	duelyst: Vale Ascension + Lightbender
+junk+offering	true 1 of 4	WEAK	Cuckoo stands in my camp; I let it die as an Offering for supply and its Death effect drops a junk unit into an enemy front cell, so the death pays twice.	inscryption: Child 13 (Awakened) + Cuckoo
+copy+pick	true 0 of 4	DROP	Links only say "creates cards" or "is played"; the card that finds and the card that copies do not change each other.	runeterra: Keeper's Verdict + Jayce (level 2)
+copy+hand	true 1 of 4	WEAK	Zevi stands in my camp; at round start I draw a card, and Zevi puts a copy of it in hand, so each round-start draw is two cards.	runeterra: Charlatan Fishmonger + Chief Mechanist Zevi
+hand+roundstart	true 0 of 4	DROP	Draw and discard cards sit side by side with round-start cards; none sets off or changes the other.	runeterra: Aloof Travelers + Janna (level 2)
+revive+shield	true 1 of 4	WEAK	Kikimore's own effect destroys it in my camp; Incubus placed after revives it from the discard pile and its Place effect fires again, shielded or not.	gwent: Kikimore Worker + Incubus
+kill+weaken	true 1 of 4	WEAK	Flames of the Faltine hits the enemy unit in the facing front cell for -3 strength; Gladiator then destroys it because its strength is now lower.	marvel_snap: Gladiator + Flames of the Faltine
+silence+supply	true 0 of 4	DROP	Freeze-based pairs need a status the game lacks; the rest only share a kill that gives supply, no cause between them.	stormbound: Midwinter Chaos + Spellbinder Zhevana
+cheaper+hand	true 0 of 4	DROP	Cost cuts and enemy cost taxes just pull opposite ways; neither card needs the other.	duelyst: Arcane Devourer + Archon Spellbinder
+junk+lastwords	true 0 of 4	DROP	Links are "kills it for its death effect" with nothing of mine doing the killing; area hits land on the enemy row, not my units.	gwent: Gerd + Skellige Wolves
+area+recycle	true 0 of 4	DROP	Replaying a card from the deck or discard is generic; the area card gains nothing special from being replayed.	gwent: Oneiromancy + Hemdall
+hide+shield	true 0 of 4	DROP	Both only protect units; they stack defence without changing what each other does.	gwent: Egmund + Windhalm of Attre
+recycle+revive	true 1 of 4	WEAK	Khonshu is discarded and returns later; Ghost Rider placed then brings a discarded card back to the grid, so the discard pile feeds both and Place effects repeat.	marvel_snap: Khonshu + Ghost Rider
+heal+junk	true 1 of 4	WEAK	Greatsword stands in my front row and heals whenever an enemy unit takes damage; Armor Up damages enemy units and spawns small units, so each hit heals Greatsword.	gwent: Armor Up + An Craite Greatsword
+copy+junk	true 0 of 4	DROP	Creating or copying cards is a generic link; neither card changes the other's effect.	gwent: Illusionist + Rosa and Edna var Attre
+discard+spellpay	true 0 of 4	DROP	Discarding and casting spells share no cause; the links are generic or only tribe names.	runeterra: Stress Testing + Abyssal Guard
+attach+junk	true 0 of 4	DROP	Equipping and planting junk only both fire on spells; neither card needs the other.	runeterra: The Unforgiving Cold + Flashbomb Peddler
+area+discard	true 1 of 4	WEAK	Eist Tuirseach: I discard Ulfhedinn from hand and it returns to the grid, so its Place area damage hits an enemy and its neighbours a second time.	gwent: Eist Tuirseach + Ulfhedinn
+movement+strikes	true 1 of 4	WEAK	Katarina strikes then returns to hand; Ahri's rule makes the returned ally cost 1 less, so I place Katarina again cheaply and her Place effect fires again.	runeterra: Katarina (level 2) + Ahri (level 2)

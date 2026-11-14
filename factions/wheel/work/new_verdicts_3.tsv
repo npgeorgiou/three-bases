@@ -1,0 +1,20 @@
+cheaper+ping	true 1 of 4	DROP	Cheap spell (cost 1 less) placed beside a unit that pings on each spell; enemy can answer by killing the unit; two spells in one supply each ping once. Link is only 'a spell is played'.	duelyst: Twilight Reiki + Four Winds Magi
+draw+offering	true 2 of 4	WEAK	Sacrifice a unit in my camp for supply; a unit on the grid draws a card whenever my unit dies; the enemy can kill the drawer first. Draw rides on any death.	duelyst: Arid Unmaking + Hydrax
+cheaper+roundstart	true 1 of 4	DROP	Return a unit to hand cheaply, place it again so its Place effect fires; round-start part is not needed. Other links just make something cheaper.	runeterra: Unworthy Soul + Nagakabouros
+hide+kill	true 0 of 4	DROP	Links only say both make units die; no card makes the other work.	gwent: Kerack City Guard + Eskel
+bigstrength+lastwords	true 0 of 4	DROP	Both sides only change stats; a death effect and a stat card sit in one faction without changing each other.	runeterra: Conductor Of The Mists + Bout Security
+heal+overkill	true 0 of 4	DROP	Links are generic (damages enemies, has Overwhelm, exhausts); healing never changes how excess damage passes behind.	gwent: Curse of Wrath + An Craite Greatsword
+draw+junk	true 0 of 4	DROP	Links only say it fills a hand or damages; drawing does not change junk placed on the enemy side.	gwent: Armor Up + Abordage
+copy+overkill	true 0 of 4	DROP	Copy and excess-damage cards sit together but neither changes the other.	runeterra: Soul Cleave + Fallen Sands General
+allyplay+roundstart	true 0 of 4	DROP	Placing allies and round-start effects only share generic 'puts units into play' links.	duelyst: Bound Tormentor + Architect-T2K5
+fight+shield	true 1 of 4	DROP	Give my unit +2 strength and a no-damage shield, then it attacks a front unit and survives the trade; the rest are plain buffs.	duelyst: Boundless Courage + Bloodsworn Gambler
+deathfeed+silence	true 2 of 4	WEAK	My unit with a death effect that silences the nearest enemy dies; a unit on the grid draws a card for that death. Enemy can kill the drawer first.	duelyst: Rae + Hydrax
+junk+onkill	true 0 of 4	DROP	Links are only 'puts units into play' or 'makes units die'; junk does not feed a kill trigger.	runeterra: Advanced Intel + Mordekaiser
+heal+push	true 2 of 4	WEAK	Push an enemy into a front cell facing my unit; a heal spell on my unit then deals damage to that front enemy equal to the healing. Enemy can retreat it next turn.	monster_train: Dripfall + Restoration Detonation
+hurt+offering	true 1 of 4	DROP	Sacrifice a many-lives unit that survives its own sacrifice, repeating supply gain; the other links are generic.	inscryption: Child 13 (Awakened) + Porcupine
+change+offering	true 1 of 4	DROP	Convert an enemy Ancient, then destroy it to swap into a higher-cost unit; links are mostly movement or colour fixing.	stormbound: Anointed Saviors + Stream of Consciousness
+create+hand	true 0 of 4	DROP	Links only say discard or damage; created cards and hand attacks do not change each other.	marvel_snap: Moon Knight + Black Knight
+deathfeed+shield	true 1 of 4	DROP	A shield is destroyed in place of a unit dying, and an adjacent death grows a neighbour; the other links are generic.	faeria: Divine Guardian + Flying Piranha
+bigstrength+discard	true 1 of 4	DROP	Discard a card to give my strongest unit +2 strength; both cards are buffs, so no new effect.	runeterra: Ancient Warmonger + Mihira, Aspect of Justice
+lastwords+supply	true 2 of 4	WEAK	Sacrifice a unit whose death effect gains supply, or whose death buffs units so another card pays supply; enemy can kill the payer first.	marvel_snap: Nova + Superior Spider-Man
+hurt+lastwords	true 0 of 4	DROP	Links only say it dies for its death effect or survives damage; being hit does not set off a death effect.	monster_train: Little Fade + Entombed Explosive
