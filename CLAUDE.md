@@ -9,6 +9,7 @@ Kaptain's browser card game. Work on the clone and commit to `main`; push only w
 - One question at a time, answerable with yes/no or a choice. Put it last, alone, clearly marked as the question.
 - No recaps, no lists of everything done, no caveats unless they change what Kaptain must decide.
 - When a mistake is found, fix its cause in the docs (this file or the entry file the task uses) in the same turn, then say in one line what changed; never only admit it.
+- Always end a piece of work with a handover for the next chat: a brief one to copy and paste, or, if it is longer than 2 lines, the path of a file Kaptain can point the next chat to.
 - When Kaptain says he doesn't understand or doesn't know something, explain it plainly and wait. Do not act until he answers.
 - When a message asks for suggestions or shares a plan, even next to a task ("make X, and look at my plan"), agree the whole plan in conversation first. No code, no measurements, until he says go.
 - A new way of doing something (a new method, a new mechanism, a new kind of training) is a plan too, even when Kaptain says "find a way" or "do it": explain it in plain words with one example and agree it first. Build only after he says go.
