@@ -59,7 +59,7 @@ faction's radii.
    - Two factions strong on the same radius have different signatures in it ("brings back": one has "my dead units
      come back", another "my unit goes back to hand").
 6. **Links between mechanics.** For every two mechanics, the library's numbers (`mechanics_wheel.py links`); agents
-   read the real card pairs behind the high numbers (4 pairs first, 8 for those that come back KEEP or WEAK) and keep
+   read the real card pairs behind the high numbers (4 pairs first, 8 for those that come back KEEP; WEAK never counts) and keep
    only true combos (one card changes what the other does), written as a played sequence. `apart.py` gives the pairs
    real factions keep apart; a faction that holds both ends of such a pair is shown to Kaptain.
 7. **Board versions.** Each faction's mechanics turned into this game's own things, from scratch: dots and front
@@ -103,7 +103,7 @@ they are not mechanics.
 Agents use about 9 of every 10 tokens. So:
 - At most 4 agents at once, each with about 20 sections; each writes its lines to its file as it goes, so a stop loses
   nothing. Before a big batch, count the sections and say how many agents it needs.
-- Card-pair reads: 4 pairs first, 8 only for pairs that come back KEEP or WEAK.
+- Card-pair reads: 4 pairs first, 8 only for pairs that come back KEEP.
 - Concept fixes: give the agent the counts per game in its file, so it doesn't run queries itself.
 - Write the rules of a step down before doing it, and let a script check each try.
 

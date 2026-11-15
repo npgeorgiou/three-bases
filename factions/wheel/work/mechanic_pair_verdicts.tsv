@@ -343,3 +343,130 @@ onkill+weaken	true 2 of 8	DROP	Weaken shrinks an enemy so a smaller unit can kil
 fight+hide	true 0 of 4	DROP	Links are generic transforms or tribe links; no pair shows hiding changing a fight.	duelyst: Bloodsworn Gambler + Gate to the Undervault
 attach+deathfeed	true 2 of 8	DROP	Attaching by sacrificing an ally feeds a death trigger once, but the rest of the pairs are merge or latch effects that do not touch deaths.	runeterra: The Darkin Halberd + Tortured Prodigy
 adjacency+copy	true 0 of 4	DROP	Links are placement or stat links; a copy gains nothing from adjacency beyond a buff.	marvel_snap: Mother Askani + Lancelot
+adjacency+countboard	true 2 of 4	WEAK	I fill the middle of my camp with a unit that boosts units around it; counting cards in the same lane then grow with each neighbour added, so one placement boosts and counts.	duelyst: A Whisper of the Sands + Mirkblood Devourer
+adjacency+enemyside	true 1 of 4	DROP	I place a unit in his camp beside another of mine; they boost each other, but he removes or cancels them easily, and most links are generic.	marvel_snap: Sentry + Typhoid Mary
+adjacency+extraact	true 2 of 4	WEAK	My unit stands behind a ready-again unit; it boosts the one in front, which acts twice from the boosted cell and draws a card for each neighbour.	duelyst: Lionize + Fealty
+adjacency+fight	true 2 of 4	WEAK	My boosting unit stands beside my fighter; the neighbour's boost raises its strength, so it strikes a chosen enemy front unit and wins the fight.	faeria: Frog-Tosser + Rakoan Chieftain
+adjacency+leave	true 1 of 4	DROP	A unit of mine leaves its cell and a neighbour reacts; the links are generic placement or keyword gains.	duelyst: The Releaser + Songweaver
+adjacency+onattack	true 2 of 4	WEAK	My unit attacks and places a unit behind it; a neighbour boost then raises the new unit beside it, so each attack builds a boosted line.	stormbound: Lich Summoners + Fortification Tonic
+adjacency+overkill	true 1 of 5	DROP	A boost to a neighbour raises its strength, so more is left over to hit the unit behind; most links are only damage.	gwent: Curse of Wrath + Ulfhedinn
+adjacency+returnhand	true 1 of 4	DROP	I return a neighbour to hand and place it again so its Place boost fires beside the units around it; most links are generic.	duelyst: Orbrider + Keeper of the Vale
+adjacency+revive	true 2 of 4	WEAK	I revive a unit into a cell beside a unit that heals or boosts neighbours; the returned unit gets its Place and the neighbour boost at once.	duelyst: Vale Ascension + Lux Ignis
+adjacency+selfhurt	true 1 of 5	DROP	I hit my own unit beside others; the links are only placement or damage, no shared loop.	stormbound: Temple Guardians + Minion Launchers
+adjacency+steal	true 1 of 4	DROP	I take an enemy unit into a cell beside my boosters; the links are generic movement.	gwent: Geralt + Siege Tower
+adjacency+tokens	true 3 of 8	WEAK	Token unit lands in a front cell beside my buffer unit; the buffer gives each neighbour more, so cheap tokens in side cells grow. The enemy can still clear a token cell.	duelyst: Shadowstalk + Azure Horn Shaman
+area+extraact	true 1 of 4	DROP	A unit that hits a row acts again; the links are mostly generic attack or movement.	runeterra: Trifarian Training Pits + Morgana
+area+lastwords	true 2 of 4	WEAK	My row hit kills my own units with death effects, so each death acts; but it also kills his, and the enemy can do the same.	faeria: Doomsday + Imperial Guard
+area+onattack	true 1 of 4	DROP	A row hit clears the facing front cells so my attacker's effect lands; the links are generic.	faeria: Dark Crystal + Volcanic Colossus
+area+onkill	true 2 of 4	WEAK	My area card kills several enemy units in a row; my unit that grows or acts on each kill then gains a lot from one card.	faeria: Astral Weapon + Earthfire Shaker
+area+returnhand	true 1 of 4	DROP	My area card kills my own unit that returns to hand to be placed again; most links are generic kills.	marvel_snap: Killmonger + Sabretooth
+area+revive	true 3 of 8	WEAK	My area spell hits a whole row, killing my own cheap units along with the enemy's; a revive unit then places a dead unit back and its Place effect fires again.	runeterra: Wings of the Cryophoenix + Mist's Call
+area+sacrifice	true 1 of 4	WEAK	I sacrifice a unit whose death hits every unit next to it; this is one card, and the other links are pushes that do not exist here.	into_the_breach: Tri-Rocket + Self-Destruct
+area+selfhurt	true 2 of 4	WEAK	My area card hits all units, mine included; my units that act when hit or heal then profit, and enemy units take the same damage.	runeterra: Wings of the Cryophoenix + Soraka
+area+steal	true 0 of 4	DROP	Links are generic movement or land colour, with no shared loop.	gwent: Geralt + Melusine
+attach+extraact	true 1 of 4	DROP	A unit carrying an attached card acts again; the links are only stat gains or damage to a player.	runeterra: Wrought Colossus + Kayle
+attach+steal	true 1 of 4	WEAK	I take an enemy unit in my lane; the enemy can retake or kill it. I attach my gear card to it: it carries the gear's stats and text, so a stolen body becomes a bigger threat.	duelyst: Droplift + Atom Klinger
+bigstrength+extraact	true 1 of 4	DROP	Ranged-style buff cards only add strength; readying a unit does not need or feed strength 5. No loop, only separate boosts.	runeterra: Yordle Ranger + Bloody Business
+bigstrength+selfhurt	true 1 of 4	WEAK	I hurt my own unit in the front row with a spell; the enemy hits it next. All my units get +2 strength this round, lifting them to 5 and firing the big-strength cards.	runeterra: Reveler's Feast + Pouty Poro
+cheaper+extraact	true 0 of 4	DROP	Cost cuts and readying both just give more actions; nothing changes what the other does. Links are generic.	duelyst: Bombard + Kensho Vortex
+copy+enemyside	true 0 of 4	DROP	Copying a card and placing in the enemy camp never change each other; the pairs link only through a copied enemy unit.	duelyst: Unleash the Evil + Riftwalker
+copy+extraact	true 0 of 4	DROP	Copying a card and readying a unit do not set each other off; links are generic.	duelyst: Bombard + Alcuin Fugitive
+copy+leave	true 2 of 4	WEAK	My unit returns to hand; a copy of it is placed too, so its Place fires twice. Or my unit dies and its Death effect makes a copy of the dead card in hand. The enemy can kill both.	runeterra: Tail-Cloak Matriarch + Formal Invitation
+countboard+enemyside	true 1 of 4	WEAK	I place a unit in the enemy camp beside his units; it still counts as mine, so my count card grows. The enemy can attack it where it stands.	faeria: Wind Gate + Sharra's Inspiration
+countboard+extraact	true 0 of 4	DROP	Readying a unit does not add units to my camp; links are only generic buffs.	runeterra: Trifarian Training Pits + Iron Harbinger
+countboard+fight	true 1 of 4	DROP	A unit strikes a chosen enemy and a token fills a cell next to it; count then grows. Most pairs link only through tribes or damage.	faeria: Frog-Tosser + Sharra's Inspiration
+countboard+onkill	true 2 of 4	WEAK	My unit kills an enemy front unit and puts another unit on the grid from my deck. My camp is fuller, so the count card in hand deploys bigger. The enemy can remove the new body.	duelyst: DECEPTIB0T + Deepfire Devourer
+countboard+overkill	true 1 of 4	DROP	Overkill passes extra damage to the unit behind; it does not add units to my camp. Links are only generic damage.	gwent: Curse of Wrath + Brokvar Archer
+countboard+selfhurt	true 0 of 4	DROP	Hurting my own units does not fill my camp; the pairs share only damage or confusion.	runeterra: Drop the Bomb + Vladimir
+countboard+steal	true 2 of 4	WEAK	I take an enemy unit into my camp: his count drops and mine rises. Then my count card in hand deploys bigger; the enemy can kill the stolen unit.	gwent: Geralt: Axii + Keeper of the Flame
+countboard+tokens	true 2 of 4	WEAK	A unit with a Place effect puts small tokens in my front cells; they cancel enemy dots. Then my count card deploys bigger for the full camp. The enemy can kill tokens.	gwent: Roderick de Wett + Keeper of the Flame
+deathfeed+enemyside	true 2 of 4	WEAK	I place a unit in the enemy camp; its Place effect hits units around it. Each death grows my other units. The enemy can kill my unit first.	duelyst: Riftwalker + Soul Grimwar
+deathfeed+extraact	true 1 of 4	DROP	A kill effect gives a reward when a unit dies; readying a unit is separate. Most links just say units die.	duelyst: Scarzig, Feather Knight + Mana Deathgrip
+deathfeed+haste	true 2 of 4	WEAK	I place hasty token units; they attack at once and die at round end, feeding my death cards. The enemy can answer only by blocking cells.	faeria: Monstrous Hydra + Flying Piranha
+deathfeed+leave	true 1 of 4	DROP	Returning a unit is not death; the B cards react only to deaths, so the link is generic.	runeterra: Tail-Cloak Matriarch + Scuttlegeist
+deathfeed+overkill	true 2 of 4	WEAK	A sweep with Piercing-style damage kills my units and his; each dead unit of mine grows the next damage card in hand, which then hits the front unit hard.	monster_train: Inferno + A Fatal Melting
+deathfeed+returnhand	true 3 of 8	WEAK	A unit that returns to hand when it dies is replaced for its supply; each death makes my other units grow, so the enemy kills it again and again for my gain.	duelyst: Desolator + Shadowdancer
+enemyside+kill	true 2 of 8	DROP	Unit placed in the enemy camp kills a nearby enemy; the link is mostly about position, not one card changing the other.	duelyst: Paddo + Nightsorrow Assassin
+enemyside+onkill	true 2 of 4	WEAK	My unit kills an enemy front unit and a Death-spawn token appears in that emptied enemy cell; the enemy must kill the token to clear his dot, and my killer gains from the kill.	duelyst: Rage Reactor + Riftwalker
+enemyside+pick	true 0 of 4	DROP	Links are just "plays it, its effect goes off"; no loop between picking cards and standing in his camp.	gwent: Excommunication + Prince Villem
+enemyside+recycle	true 0 of 4	DROP	Generic "play it" links; a card in his camp and a card back from discard do not change each other.	gwent: Prince Villem + Alissa Henson
+enemyside+returnhand	true 1 of 4	DROP	Orbrider-style: I return my unit from his camp to hand and place it again, its Place effect firing again; but returning is just returnhand alone.	duelyst: Orbrider + Riftwalker
+enemyside+shield	true 0 of 4	DROP	Links are generic placement or movement; armour on a unit in his camp is ordinary shield.	duelyst: Lodestar + Halo Bulwark
+enemyside+silence	true 1 of 4	DROP	My unit stands in his back row and silences the enemy next to it, but the damage-for-dispel pairs are loose; no loop.	duelyst: Riftwalker + Tethermancer
+enemyside+tokens	true 0 of 4	DROP	Links are generic; tokens placed in his camp is just enemyside.	duelyst: Riftwalker + Unseven
+extraact+fight	true 5 of 8	KEEP	Fight unit stands in my front row; an extra-act card readies it after it strikes a chosen enemy, so it strikes a second enemy for more supply; the enemy loses two units before answering.	duelyst: Bombard + Bloodsworn Gambler
+extraact+guard	true 0 of 4	DROP	Buff links only; readying and guarding do not change each other.	duelyst: Scarzig, Feather Knight + Spriggin
+extraact+hand	true 0 of 4	DROP	Links are about hitting the enemy player; no player health here.	runeterra: Blood in the Water + Loaded Dice
+extraact+heal	true 1 of 4	DROP	Extra attack feeds a lifesteal unit more heal; mostly buff links, so the loop is thin.	monster_train: Spine Chief + Crucible Collector
+extraact+hide	true 1 of 4	DROP	Extra attack kills a unit, making its death effect fire; hide plays no part.	monster_train: Onehorn's Tome + Molten Encasement
+extraact+kill	true 2 of 4	WEAK	A unit readied twice in a lane: first attack lets a Death-effect enemy die, second finishes another; or a kill spell clears the front cell, then the readied unit hits behind.	duelyst: Mindlathe + Cacophynos
+extraact+lastwords	true 0 of 4	DROP	Buff or resource links; readying and Death effects do not change each other.	duelyst: Scarzig, Feather Knight + Klaxon
+extraact+leave	true 1 of 4	DROP	Buff or attack-again links; leaving the grid is barely used.	runeterra: Champions' Strength + Ahri
+extraact+offering	true 1 of 4	WEAK	I sacrifice a unit to gain supply, then a readied unit attacks again with that supply; the other links are plain buffs.	inscryption: Child 13 (Awakened) + Pelt Lice
+extraact+onattack	true 3 of 8	WEAK	Unit whose attack buffs my other units attacks, is readied, and attacks again, so the buff fires twice; costs supply each time.	duelyst: Scarzig, Feather Knight + Impervious Giago
+extraact+onkill	true 2 of 4	WEAK	A readied unit kills the front unit and gains from the kill, then attacks again with its new strength into the next cell.	monster_train: Little Fade + Spikedriver Colony
+extraact+overkill	true 2 of 4	WEAK	A readied unit hits a front unit hard, the overkill spills to the unit behind, then it attacks again to clear more.	monster_train: Inferno + Hornbreaker Prince
+extraact+ping	true 2 of 4	WEAK	A readied unit attacks twice and each attack triggers a small hit effect, finishing wounded units across the lane.	runeterra: Trifarian Training Pits + Miss Fortune
+extraact+push	true 1 of 4	DROP	Push moves a unit so a readied unit gets a new target; most links are generic movement.	duelyst: Teleport + Frosthorn Rhyno
+extraact+revive	true 1 of 4	DROP	Revived unit comes back and its Place fires; readying is not needed for that.	runeterra: Harrowing Return + Incisive Tactician
+extraact+roundstart	true 1 of 4	DROP	Unit buffs allies when it attacks; a round-start card readies it again. Mostly both just buff; no loop forms.	runeterra: Blood in the Water + Irelia (level 2)
+extraact+selfhurt	true 2 of 4	WEAK	Ping my own unit with a small hit; the unit reacts to being hit and acts again. Enemy sees one extra action; costs a unit's defence.	runeterra: Drop the Bomb + Galio (level 2)
+extraact+shield	true 1 of 4	DROP	Give a unit a shield; shielded units act twice. Other pairs are generic extra-turn or exhaust links.	runeterra: Kinkou Student + Sacred Protector
+extraact+silence	true 0 of 4	DROP	Links are only about moving units or hitting the enemy player; nothing changes what the other does.	duelyst: Mindlathe + Lightbender
+extraact+spellpay	true 0 of 4	DROP	Extra turn or attack buffs next to spell-gain units; each only buffs, no loop (no extra turns here).	faeria: Ocarina + Snowstorm Lancer
+extraact+steal	true 2 of 4	WEAK	Take a small enemy unit, ready it at once, and it strikes its old camp in the same turn; it returns later.	duelyst: Psychic Conduit + Grapnel Paradigm
+extraact+supply	true 0 of 4	DROP	Links are generic: kills or extra supply pay for an extra turn. No conversion between them.	faeria: Red Devil + Ocarina
+extraact+tokens	true 1 of 4	DROP	A free attack with two small tokens; tokens are just bodies that act, the rest is buff or random.	runeterra: Dragon Ambush + Island Navigator
+fight+lastwords	true 1 of 4	WEAK	Make my own unit with a Death effect strike an enemy it cannot survive; it dies and its Death effect fires.	runeterra: Fish Fight + Powder Monkey
+fight+offering	true 2 of 4	WEAK	Sacrifice a small unit to strike an enemy with its strength; a spawned token feeds the next sacrifice. Costs my unit.	runeterra: Thread the Needle + Arrel the Tracker
+fight+onkill	true 2 of 4	WEAK	A fight spell kills a front-row enemy; my unit that grows or summons on kills fires from it, no attack needed.	runeterra: Tentacle Smash + Mistkeepers
+fight+push	true 1 of 4	DROP	Move an enemy next to my fighter, then it strikes; fight already picks any enemy, so the move adds little.	duelyst: Teleport + Lavaslasher
+fight+steal	true 2 of 4	WEAK	Take an enemy unit and make it strike its former allies; its strength becomes my removal for a turn.	duelyst: Mindlathe + Bloodsworn Gambler
+haste+onattack	true 2 of 4	WEAK	A unit puts a Rush token or copy; it attacks the turn it lands and its attack effect fires before the enemy answers.	duelyst: Swarmking Scarab + Scarabyte
+haste+pick	true 2 of 4	WEAK	Pick a haste unit from my deck and place it free; it attacks at once, so the needed card acts in the same turn.	gwent: Oneiromancy + Iron Falcon Knife Juggler
+haste+returnhand	true 4 of 8	WEAK	Haste unit placed, strikes at once, then returns to hand; I place it again next supply and it strikes again, its Place effect firing each time.	gwent: An Craite Raiders + Bjorn Stormursson
+hide+junk	true 0 of 4	DROP	Links are about planting cards in decks and Elusive; a hidden unit and junk cards do not change each other.	runeterra: Blimp-Pack Poacher + Teemo
+hurt+roundstart	true 0 of 4	DROP	A round-start buff plus a unit that grows when hurt; both only buff, nothing sets the other off.	stormbound: Emerald Towers + Scrapped Planners
+inhand+onkill	true 1 of 4	DROP	Grow a unit in hand so it hits harder; when placed its strength fuels kills. Generic stat boost.	gwent: Enchanted Armor + Mad Kiyan
+inhand+returnhand	true 4 of 8	WEAK	Unit returns to hand, an in-hand buff makes it bigger there, I place it again stronger, Place effect firing again.	gwent: Masterful Sihil + Dwarven Agitator
+inhand+spellpay	true 0 of 4	DROP	Boost a card in the deck next to a spell-triggered unit; the spell sets off the unit, the boost does nothing for it.	gwent: Offering + Keldar
+kill+lastwords	true 2 of 4	WEAK	Destroy my own unit with a Death effect to also destroy an enemy: the kill spell removes one and sets off the other's Death effect.	duelyst: Ritual Banishing + Horror Burster
+kill+offering	true 0 of 4	DROP	Both only share 'a unit dies'; a kill card and a sacrifice card each work alone and nothing feeds the other.	gwent: Back-Alley Chemist + Eskel: Pathfinder
+kill+revive	true 0 of 4	DROP	Kill removes an enemy; revive returns my own dead unit. No card changes the other's result.	gwent: Devil's Puffball + Incubus
+kill+steal	true 0 of 4	DROP	Kill destroys an enemy, steal takes one; links are generic or about the other card's own text.	runeterra: Roar of the Slayer + Viego (level 2)
+lastwords+leave	true 2 of 4	WEAK	Place a unit with a Death effect in a front cell. Enemy kills it, Death effect fires. My returning card brings it back and it dies again. Works only with a revive card.	duelyst: Gor + The Releaser
+lastwords+onkill	true 0 of 4	DROP	Death effect and kill-gain are just two cards in one faction; no loop or conversion.	duelyst: White Asp + Azure Horn Shaman
+lastwords+returnhand	true 1 of 4	DROP	Taking a unit back to hand is not a death, so its Death effect does not fire; only its Place fires again.	duelyst: Sandswirl Reader + Dagona
+lastwords+spelldmg	true 1 of 4	WEAK	Place a unit with a Death effect. Cast my damage spell on it: it dies, its Death effect fires. The spell becomes a trigger; needs my own unit in play.	faeria: Bottled Lightning + Seifer's Fodder
+lastwords+tokens	true 2 of 4	WEAK	Place a unit whose Death effect puts tokens. A sacrifice card kills it for supply; tokens fill the front cells it left, so the enemy faces new blockers.	faeria: Death Walker + Rakoan Shield Mates
+leave+offering	true 3 of 8	WEAK	I let my own unit die for supply or strength; the leave trigger fires on the exit and may bring it back changed.	duelyst: Consuming Rebirth + The Releaser
+leave+push	true 6 of 8	KEEP	Enemy unit in the facing front cell is returned to its hand, so my dot is free; the return triggers my unit to strike or grow, and the enemy pays supply to place it again.	runeterra: The Old Timer + Yasuo
+leave+revive	true 2 of 8	DROP	Revive puts a dead unit back so its Place effect fires; the link is only the generic revive, the leave card does not change it.	runeterra: Harrowing Return + Liminal Guardian
+leave+silence	true 2 of 4	WEAK	My card sends the enemy's front unit back to hand; my unit that reacts to leaving hits or grows. Silence adds nothing here.	runeterra: The Maker + Yasuo (level 2)
+offering+onkill	true 1 of 4	DROP	Sacrificing own units and gaining from kills do not feed each other; only the revive pair works, and that is another mechanic.	duelyst: Corporeal Cadence + Underlord Xor'Xuul
+offering+push	true 1 of 4	DROP	Moving enemy units and sacrificing own ones are unrelated; the one real pair is a returnhand loop.	runeterra: Go Get It + The Old Timer
+offering+selfhurt	true 2 of 4	WEAK	Place a unit with Place text. Sacrifice it for supply. A revive-on-attack unit brings the dead one back, its Place fires again, and I sacrifice it once more.	runeterra: Astral Fox + Kalista (level 2)
+offering+steal	true 1 of 4	DROP	Mostly generic links; only the repeat-Place card gives a real chain, and steal is not needed.	marvel_snap: Misery + Baron Zemo
+offering+tokens	true 2 of 4	WEAK	Place a unit whose Death effect puts tokens. Sacrifice it for supply: I get supply and tokens fill the cells it left, so the enemy front is still blocked.	faeria: Death Walker + Rakoan Shield Mates
+onattack+push	true 0 of 4	DROP	Attack effects and moving enemies are independent; links are generic.	stormbound: Fluffy Badboxers + Sweetcap Kittens
+onkill+ping	true 1 of 4	DROP	Small hits finish wounded enemies for kill-gain, but the pairs are generic.	faeria: Earthfire Shaker + Blood Obelisk
+onkill+revive	true 1 of 4	DROP	Kill-gain and revive do not feed each other; the real pair is offering plus revive.	duelyst: Blood Echoes + Underlord Xor'Xuul
+onkill+spelldmg	true 1 of 4	DROP	A damage spell can finish an enemy, but pairs are generic and the kill-gain unit is not set off by the spell.	gwent: Payday + Tidecloak Ransackers
+onkill+steal	true 0 of 4	DROP	Links are other cards' own texts; nothing feeds between a kill-gain and a steal.	gwent: Usurper + Mage Infiltrator
+overkill+push	true 0 of 4	DROP	-	runeterra: Tag Out! + Crystal Ibex
+overkill+revive	true 0 of 4	DROP	-	gwent: Incubus + Curse of Wrath
+overkill+steal	true 0 of 4	DROP	-	gwent: Amnesty + Curse of Wrath
+pick+steal	true 0 of 4	DROP	-	gwent: Oneiromancy + Geralt
+ping+selfhurt	true 1 of 4	WEAK	My ping spell hits my own unit with a Death effect in my front row; it dies and its Death effect hits the enemy facing it. The enemy can only answer next turn.	runeterra: Drop the Bomb + Phantom Prankster
+ping+steal	true 0 of 4	DROP	-	duelyst: Mindlathe + Deathmark
+push+steal	true 1 of 4	WEAK	My push moves an enemy unit next to my stealer; the stealer is placed and takes the weak enemy beside it. The enemy cannot answer in between.	duelyst: Teleport Enemy To Me + Synaptic Arbitrage
+returnhand+spelldmg	true 0 of 4	DROP	-	gwent: Bjorn Stormursson + Piercing Missile
+returnhand+steal	true 4 of 8	WEAK	Unit that takes an enemy unit on Place stands beside my other unit; a return card takes it back to hand, and I place it again to steal a second enemy.	duelyst: Orbrider + Grapnel Paradigm
+returnhand+tokens	true 2 of 4	WEAK	My unit that makes tokens when placed is returned to hand and placed again; its Place puts new tokens in the front cells again.	stormbound: Temple Guardians + Counselor Ahmi
+revive+spelldmg	true 2 of 4	WEAK	My damage spell kills my own unit with a strong Place effect; a revive card brings it back from the discard pile and its Place acts again.	duelyst: Corporeal Cadence + The Releaser
+revive+tokens	true 3 of 8	WEAK	My unit dies and leaves a token on its cell; a revive card puts it back later and its Place effect puts tokens down again.	duelyst: Gibbet + Nether Summoning
+selfhurt+steal	true 0 of 4	DROP	-	stormbound: Anointed Saviors + Toxic Sacrifice
+selfhurt+tokens	true 2 of 4	WEAK	I place a token; Bloodletter hurts it and grows, so each token placed adds strength to the unit in my front row.	runeterra: Dragon Roost + Crimson Bloodletter
+silence+steal	true 0 of 4	DROP	-	stormbound: Anointed Saviors + Stoic Protectors
+spelldmg+steal	true 0 of 4	DROP	-	gwent: Usurper + Red Haze
+spellpay+steal	true 2 of 4	WEAK	My steal spell counts as a spell: my unit on the grid grows from it while the spell takes a weak enemy unit from his front row.	duelyst: Psychic Conduit + Alcuin Fugitive
