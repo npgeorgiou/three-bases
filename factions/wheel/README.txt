@@ -9,7 +9,7 @@ table.tsv       Stop 1: the 20 factions (archetype, radii, owned, shared, blind 
 partners.tsv    Stop 1: per pair of factions the best read combo (KEEP/WEAK, a strong library number), played sequence, source
 apart.tsv       Stop 1: mechanic pairs real factions keep apart (apart.py), per faction pair and inside one faction
 arguments.tsv   joins with no strong library number, argued from this game's rules (Claude's)
-tools/wheel_table_check.py checks all of these (step 8)
+tools/wheel_table_check.py checks all of these (step 9)
 library/cards_db/wheel/measured.tsv:  per mechanic its cards in the library, games with 10+, the biggest real faction's count (with the cards
                 that make it happen; 30+ wanted), the real factions with the highest share, the radii it serves
 library/cards_db/wheel/links.tsv:  per pair of mechanics, how much more often than chance the library links their cards (cards) and how

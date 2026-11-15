@@ -10,14 +10,14 @@ Three Bases is a game of combos: decks will mix 2 factions. Every faction must c
 from the library, measured and read; what has no library source is marked as Claude's.
 
 ## The whole process and its stops
-- Wheel chat (this file): steps 1-8. **Stop 1: Kaptain agrees the table and the hooks.**
+- Wheel chat (this file): steps 1-9. **Stop 1: Kaptain agrees the table and the hooks.**
 - One chat per faction (two can run at the same time): theme, then steps 1-6 of START_DESIGN.md (ways to play).
   **Stop 2: Kaptain agrees them.** Then cards, the gate, `wheel_check.js`, the separate agent's review.
   **Stop 3: Kaptain gets the finished faction.**
 - Pilot: the first two factions are a pair with a strong combo. Their premades play each other (`cardstats.js`), and one
   mixed deck shows whether their combo fires. **Stop 4: Kaptain decides whether the rest is built.**
 
-## Steps 1-8, in this order
+## Steps 1-9, in this order
 The wheel comes first (steps 1-4): it gives every faction its shape and its place on the circle. The mechanics come
 after (steps 5-6), found inside each faction's radii, and the combos between factions come from them. A step uses
 only what the steps before it made.
@@ -56,16 +56,28 @@ only what the steps before it made.
    gives, for every two mechanics, the library's number in all cards and in real decks. Then `fed`, `feeds`, `both`,
    `chains` and `deckmates` on the strong pairs, and `apart.py` for the pairs real factions keep apart. An agent reads
    the real card pairs behind each high number (`mechanics_wheel.py pairs`) and keeps only true combos (one card
-   changes what the other does; part 4), each written in this board's rules as a played sequence. Then each faction's
+   changes what the other does; part 4), each written in this board's rules as a played sequence. A combo counts for
+   partners only if the agent judged it KEEP (WEAK never counts) and at least one side uses a signature mechanic of its
+   faction (Kaptain, 15 Nov 2026: many weak combos looked like many partners). Then each faction's
    partners: for every other faction, the combos between their mechanics (which card of one sets off which card of
    the other), with the library number. 10+ partners per faction; also the pairs that work against each other. A
    faction under 10 partners is changed: steps 3-6 again for it.
-7. **The five questions** (START_DESIGN.md step 2) for all 20 in one table. Every answer differs from every other
-   faction's; each removal is a way no other faction has and uses a mechanic the faction owns or shares (B's "my unit dies and takes the enemy facing it" is the sacrifice: B needs it). Blind spots never touch a mechanic the faction owns or uses.
-8. **Check script.** It reads the files of steps 1-7 and checks real things, not only columns: the radius numbers of
+7. **Board versions (Kaptain, 15 Nov 2026).** The wheel is general; this step turns each faction's mechanics into this
+   game's own things, from scratch: dots and front cells, rows, columns, lanes, the 3x3 camp, shapes and size, supply
+   per lane, carry-over, round start and round end, one action per turn, moving and turning, reach (melee, Pike,
+   Ranged), strikes and fixed damage, the hand and the discard pile, Immobile. For each mechanic, go through the list:
+   how does it work on this thing? Example: N's "my unit guards the others" on dots: "the dot in my column can't be
+   cancelled". Sources: the library's board games first (Duelyst, Faeria, Stormbound, Into the Breach, Inscryption);
+   no source = Claude's or Kaptain's; a rule the game lacks = NEW RULE. Each faction gets 1-3 board versions; no two
+   factions share one. The old candidates (commit d4a3de0^, `factions/3-candidates/`) are read only at the end, as a
+   check that an idea Kaptain liked isn't missing. A whole faction may be built on one board thing (all Immobile).
+8. **The five questions** (START_DESIGN.md step 2) for all 20 in one table. Every answer differs from every other
+   faction's, made from the board versions (step 7); each removal is a way no other faction has and uses a mechanic the faction owns or shares (B's "my unit dies and takes the enemy facing it" is the sacrifice: B needs it). Blind spots never touch a mechanic the faction owns or uses.
+9. **Check script.** It reads the files of steps 1-8 and checks real things, not only columns: the radius numbers of
    every shape's joins (step 3), the library number of every combo (step 6); a low number must carry its argument from
    this game's rules. Also: 10+ partners per faction, 2 owned mechanics per faction and one owner per mechanic, and
-   the graph of factions/12 method 5 (each faction's mechanics linked to each other).
+   the graph of factions/12 method 5 (each faction's mechanics linked to each other), and 1-3 board versions per
+   faction, none shared.
 
 ## What Kaptain sees at Stop 1
 The table of the 20 factions (place, archetype, strong radii, signature mechanics, shared, blind spots, the
@@ -97,4 +109,4 @@ Agents used about 9 of every 10 tokens: 23 agents at 100-160k each. What to do i
 3. One guessed combo per pair of factions, no library query behind it. Stops it: step 6.
 5. Every strong radius set to 1.8 and blind spots picked so the check passes. Stops it: uneven shapes from real
    factions (step 3).
-6. A check script that checked only columns and counts, so it passed by construction. Stops it: step 8.
+6. A check script that checked only columns and counts, so it passed by construction. Stops it: step 9.

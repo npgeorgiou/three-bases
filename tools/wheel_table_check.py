@@ -52,14 +52,15 @@ for k in CIRC:
     while st:
         for y in g[st.pop()]-seen: seen.add(y); st.append(y)
     if len(seen)<len(A[k]): fail(f'{k}: mechanics not joined: {sorted(set(A[k])-seen)}')
-# 4. combos: read verdict KEEP/WEAK, mechanics belong to the two factions, one of them owned, a library number; 10+ partners
+# 4. combos: read verdict KEEP only, mechanics belong to the two factions, one of them owned, a library number; 10+ partners
 V={}
 for p in [l.rstrip('\n').split('\t') for l in open(R+'work/mechanic_pair_verdicts.tsv')]:
     a,b=p[0].split('+'); V[(a,b)]=V[(b,a)]=p[2]
 P=collections.Counter()
 for x,y,c,v,*_ in tsv(R+'partners.tsv'):
     a,b=c.split('+')
-    if V.get((a,b))!=v or v not in ('KEEP','WEAK'): fail(f'{x}{y}: {c} verdict {v} not in the read verdicts')
+    if V.get((a,b))!=v: fail(f'{x}{y}: {c} verdict {v} not in the read verdicts')
+    if v!='KEEP': fail(f'{x}{y}: {c} is {v}; only KEEP counts')
     if a not in A[x] or b not in A[y] or not (a in OWN[x] or b in OWN[y]): fail(f'{x}{y}: {c} not their mechanics')
     n=ML.get((a,b),(0,0))
     if not (strong(n) or n[1]>=1.5): fail(f'{x}{y}: {c} library number {n} too low and no argument')

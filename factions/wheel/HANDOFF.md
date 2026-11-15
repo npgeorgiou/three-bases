@@ -1,5 +1,14 @@
 # Handoff for the next wheel chat (14 Nov 2026, evening)
 
+## Third pass (15 Nov 2026): waiting for Kaptain's choice
+- Kaptain: the wheel's mechanics must be turned into this game's own things: new step 7, board versions (guide), from
+  scratch; old candidates only as a check at the end. An all-Immobile faction is allowed now.
+- Combos: only KEEP counts, with a signature mechanic on at least one side (guide step 6; the check fails on WEAK).
+  Recount over all KEEP pairs of each two factions' mechanics (`/tmp`-free: rerun the loop in step 6 by hand):
+  A12 T10 I6 L5 M7 E7 D9 J7 H4 Q9 G7 F6 R13 N7 P11 C10 S5 B12 K13 O6 (83 faction pairs). 14 factions under 10.
+- STOP1.md is to be rewritten after steps 7-8: one line each for strong in, builds on, board version, wins, removes,
+  holds, feels good, never has; then one line per partner saying HOW the combo plays. Juicier, easy to read.
+
 ## Second try, at Stop 1 (14 Nov 2026, night). Waiting for Kaptain.
 Read first: `STOP1.md` (the 20 factions in plain words). Files: `table.tsv`, `partners.tsv`, `apart.tsv`, `arguments.tsv` (README.txt); `python3 tools/wheel_table_check.py`.
 - Step 6 finished: 178 more pairs read (4 card pairs each, 8 for the 47 that came back KEEP/WEAK), all in
@@ -12,7 +21,7 @@ Read first: `STOP1.md` (the 20 factions in plain words). Files: `table.tsv`, `pa
   L's blind spot is now kill outright (it borrows revive).
 - Inside one faction, kept apart by real factions: S countboard + offering, R and N hide + attach (apart.tsv).
 
-Follow `factions/START_DESIGN-1-wheel.md` steps 1-8 and stop at Stop 1. This file says what the first try found, why
+Follow `factions/START_DESIGN-1-wheel.md` steps 1-9 and stop at Stop 1. This file says what the first try found, why
 the guide changed, and what can be reused. Kaptain didn't follow every explanation: when he asks "why", answer from
 here, with a card example, in plain words.
 
