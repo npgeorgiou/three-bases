@@ -4,7 +4,7 @@
 - Kaptain: the wheel's mechanics must be turned into this game's own things: new step 7, board versions (guide), from
   scratch; old candidates only as a check at the end. An all-Immobile faction is allowed now.
 - Combos: only KEEP counts, with a signature mechanic on at least one side (guide step 6; the check fails on WEAK).
-  Recount over all KEEP pairs of each two factions' mechanics (`/tmp`-free: rerun the loop in step 6 by hand):
+  Recount over all KEEP pairs of each two factions' mechanics (`python3 factions/wheel/work/keep_partners.py`):
   A12 T10 I6 L5 M7 E7 D9 J7 H4 Q9 G7 F6 R13 N7 P11 C10 S5 B12 K13 O6 (83 faction pairs). 14 factions under 10.
 - STOP1.md is to be rewritten after steps 7-8: one line each for strong in, builds on, board version, wins, removes,
   holds, feels good, never has; then one line per partner saying HOW the combo plays. Juicier, easy to read.
