@@ -1,49 +1,54 @@
 key	mechanic (I do X -> I gain from X, on this game's things)	concepts (concept@game,game counts only in those games; * = added by axes.py)	new rule	made by (concepts of the cards that make it happen, counted with it for 30+)	size (an agent read 8 cards; SMALL = under 30 right cards in every real faction)
 deathfeed	my units die -> my other units or cards grow from each death	other_death_trigger@duelyst,faeria,inscryption,marvel_snap,monster_train,runeterra,stormbound,death_count@faeria,marvel_snap,monster_train,runeterra,stormbound		sacrifice,death_trigger	OK
-lastwords	I die -> my Death effect acts (a unit worth more dead than alive)	death_trigger		sacrifice,self_destruct@gwent,into_the_breach,stormbound	OK
+lastwords	I die -> my Death effect acts (a unit worth more dead than alive)	death_trigger		sacrifice,self_destruct@gwent,into_the_breach,stormbound	SMALL
 sacrifice	I let my own unit die -> an enemy unit dies or is hit (a trade of units, never a gain of supply or strength: that is the Offering)	sacrifice@into_the_breach,self_destruct@into_the_breach,stormbound			SMALL
 selfhurt	I damage my own units -> they act when hit, or something else gains	friendly_fire@runeterra,stormbound			SMALL
-revive	my dead units come back from the discard pile -> their Place acts again	revive@duelyst,gwent,marvel_snap,runeterra,stormbound		sacrifice,death_trigger	OK
+revive	my dead units come back from the discard pile -> their Place acts again	revive@duelyst,gwent,marvel_snap,runeterra,stormbound		sacrifice,death_trigger	SMALL
 recycle	my spent cards go from the discard pile back to deck or hand -> I play them again	recycle@gwent,marvel_snap,sts1		discard	SMALL
 returnhand	I take my unit back to hand -> I place it again and its Place acts again	return_to_hand@duelyst,gwent,inscryption,marvel_snap,stormbound			SMALL
 tokens	my Place or Death effect puts extra small units on the grid -> they fill cells and front cells cheaply (never round-end seeding: Rootkin)	summon@duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound			OK
-countboard	I fill my camp with units -> cards that count my units grow	countboard*		summon	OK
-allyplay	I place allies -> my units already on the grid react to each placement	on_ally_play@duelyst,faeria,marvel_snap,monster_train		summon	OK
-adjacency	my units stand beside, behind or around each other -> they give each other more	adjacency@runeterra,link_formation,position*			OK
-movement	I move my own units inside my camp -> they reach the cells they need (front cells, beside an ally)	movement@inscryption,stormbound,swap@runeterra,into_the_breach			OK
-push	I move enemy units -> they leave the cells facing my dots, or stand where my cards hit them	forced_movement@duelyst,into_the_breach,monster_train,stormbound,bounce_enemy			OK
+countboard	I fill my camp with units -> cards that count my units grow	countboard*		summon	SMALL
+allyplay	I place allies -> my units already on the grid react to each placement	on_ally_play@duelyst,faeria,marvel_snap,monster_train		summon	SMALL
+adjacency	my units stand beside, behind or around each other -> they give each other more	adjacency@runeterra,link_formation,position*			SMALL
+movement	I move my own units inside my camp -> they reach the cells they need (front cells, beside an ally)	movement@inscryption,stormbound,swap@runeterra,into_the_breach			SMALL
+push	I move enemy units -> they leave the cells facing my dots, or stand where my cards hit them	forced_movement@duelyst,into_the_breach,monster_train,stormbound,bounce_enemy			SMALL
 lanes	my cards act in another lane -> one lane's strength or supply helps another	cross_lane			SMALL
-cells	I claim cells -> my units on claimed cells gain, enemies there lose	terrain@duelyst,faeria,territory_trigger@duelyst,faeria	NEW RULE		OK
-onattack	my unit attacks -> its attack has an effect besides the hit	on_attack@duelyst,faeria,monster_train,stormbound,on_fight			OK
-strikes	my unit strikes twice or first -> every paid attack does more, it survives the trade	multi_attack,first_strike			OK
+cells	I claim cells -> my units on claimed cells gain, enemies there lose	terrain@duelyst,faeria,territory_trigger@duelyst,faeria	NEW RULE		SMALL
+onattack	my unit attacks -> its attack has an effect besides the hit	on_attack@duelyst,faeria,monster_train,stormbound,on_fight			SMALL
 overkill	my unit hits for more than the enemy's defence -> the rest hits the unit behind	excess_damage,piercing			OK
-onkill	my unit kills an enemy -> it gains or acts again	on_kill			OK
+onkill	my unit kills an enemy -> it gains or acts again	on_kill			SMALL
 fight	I make my unit strike a chosen enemy, or make enemies strike -> removal by my unit's strength	fight_enemy,forced_attack		attack_gain	OK
-ping	my units' text and spells deal small fixed damage, often or many times (never round end: Barrage) -> wounded and small enemies are finished	ping,damage_over_time			OK
-area	my cards hit every enemy in a row, column or area -> many enemies are hit by one card	aoe_damage@faeria,gwent,inscryption,into_the_breach,runeterra,stormbound,sts1,rows@duelyst,into_the_breach,row_effects,area_templates,board_wipe,multi_target_attack@into_the_breach,runeterra			OK
-kill	I destroy an enemy outright, no damage -> its defence does not matter	kill*,deathtouch			OK
+ping	small hits: my units' text and spells deal small fixed damage, often or many times (never round end) -> wounded and small enemies are finished	ping,damage_over_time			OK
+area	my cards hit every enemy in a row, column or area -> many enemies are hit by one card	aoe_damage@faeria,gwent,inscryption,into_the_breach,runeterra,stormbound,sts1,rows@duelyst,into_the_breach,row_effects,area_templates,board_wipe,multi_target_attack@into_the_breach,runeterra			SMALL
+kill	I destroy an enemy outright, no damage -> its defence does not matter	kill*,deathtouch			SMALL
 spelldmg	my spells deal damage -> removal from the hand, no unit needed	spelldmg*			OK
 spellpay	I cast spells -> my units and later spells gain from each spell	on_spell,spells_played_condition,spell_power@duelyst,runeterra			OK
-hurt	my unit is hit and survives -> it acts	on_damaged@stormbound,counterattack			SMALL
+hurt	my unit is hit and survives -> it grows or acts; the more it is hurt, the stronger it gets	on_damaged@stormbound,counterattack			SMALL
 silence	I take an enemy's text away -> its keywords and abilities stop for good	silence			SMALL
-weaken	I take an enemy's strength away for good -> it stays in its cell but hits for little	stat_loss@duelyst,faeria,inscryption,marvel_snap,monster_train,stormbound			OK
-change	I turn an enemy into another unit or take it -> its card is gone without dying	polymorph,steal@duelyst,faeria,gwent,into_the_breach,stormbound			SMALL
+weaken	I take an enemy's strength away for good -> it stays in its cell but hits for little	stat_loss@duelyst,faeria,inscryption,marvel_snap,monster_train,stormbound			SMALL
+change	I turn an enemy into another unit -> its card is gone without dying	polymorph,faeria,gwent,into_the_breach,stormbound			SMALL
 hand	I act on the enemy's hand and costs -> his next cards cost more or are gone	hand_disruption@marvel_snap,runeterra,cost_increase			SMALL
-junk	I put useless cards or units on the enemy's side -> his cells and hand fill with nothing	junk_cards@faeria,marvel_snap,runeterra,stormbound,board_clog@gwent,inscryption,stormbound			SMALL
-supply	I gain extra supply or carry-over -> big units come early	resource_gain@duelyst,faeria,inscryption,marvel_snap,stormbound,sts1,base_resource_gain@duelyst,faeria,inscryption,marvel_snap,monster_train,stormbound,sts1			OK
+junk	I give the enemy useless cards -> his hand and draws fill with nothing	junk_cards@faeria,marvel_snap,runeterra,stormbound			SMALL
+supply	I gain extra supply or carry-over -> big units come early	resource_gain@duelyst,faeria,inscryption,marvel_snap,stormbound,sts1,base_resource_gain@duelyst,faeria,inscryption,marvel_snap,monster_train,stormbound,sts1			SMALL
 cheaper	my cards get cheaper or free -> two cards in one turn's supply	cost_reduction@duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1,free_play@inscryption,monster_train,runeterra,stormbound,sts1,cost_set@duelyst,faeria,gwent,marvel_snap,runeterra,stormbound,sts1			OK
 inhand	my cards grow in hand -> a bigger card for the same supply	in_hand_buff@gwent			SMALL
 draw	I draw extra cards -> more choices each round	draw			OK
 create	I create cards that were not in my deck -> more cards and answers	generate_cards			OK
-copy	I copy my own cards -> a strong card twice	copy			OK
-pick	I pick cards of my deck -> the card I need comes when I need it	tutor,selection@gwent,sts1,retain			OK
-discard	I discard my own cards -> the discarded card acts, or my units grow	discard@duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,stormbound,sts1,on_discard			OK
-heal	I restore my units' defence -> wounded units hold the front cells longer	heal@gwent,monster_train,regeneration@monster_train,runeterra			OK
+copy	I copy my own cards -> a strong card twice	copy			SMALL
+pick	I pick cards of my deck -> the card I need comes when I need it	tutor,selection@gwent,sts1,retain			SMALL
+discard	I discard my own cards -> the discarded card acts, or my units grow	discard@duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,stormbound,sts1,on_discard			SMALL
+heal	I restore my units' defence -> wounded units hold the front cells longer	heal@gwent,monster_train,regeneration@monster_train,runeterra			SMALL
 shield	I give shields or armour -> the next hit does less or nothing	shield@duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,damage_reduction@duelyst,faeria,gwent,inscryption,monster_train,runeterra,block_armor@gwent,monster_train			OK
-guard	my unit guards my others -> enemy attacks must go where I choose	taunt			OK
-hide	my unit can't be targeted or hit -> enemy attacks and spells can't reach it	stealth,immunity@duelyst,faeria,gwent			OK
-attach	I attach a unit or item to another unit -> the carrier gets its stats and text	merge_attach	NEW RULE		OK
-roundstart	at round start my cards act -> a plan set up last round pays at once	turn_start@duelyst,faeria,runeterra,stormbound			OK
+guard	my unit guards my others -> enemy attacks must go where I choose	taunt			SMALL
+hide	my unit can't be targeted or hit -> enemy attacks and spells can't reach it	stealth,immunity@duelyst,faeria,gwent			SMALL
+attach	I attach a unit or item to another unit -> the carrier gets its stats and text	merge_attach	NEW RULE		SMALL
+roundstart	at round start my cards act -> a plan set up last round pays at once	turn_start@duelyst,faeria,runeterra,stormbound			SMALL
 leave	my unit leaves the grid (dies, returns, moves) -> my other cards react	leave_trigger@duelyst,runeterra			SMALL
 bigstrength	my units have strength 5 or more -> cards that need big strength fire	stat_condition@runeterra,combat_damage_threshold			SMALL
 offering	I let my own unit die -> I gain supply, carry-over, a card or strength (the library's usual sacrifice)	sacrifice@duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,on_sacrifice			OK
+steal	I take an enemy unit or card for myself -> his strength becomes mine	steal	NEW RULE		SMALL
+enemyside	I place my units in the enemy camp -> they hit his back row or block his cells from his side	placement_rules	NEW RULE		SMALL
+haste	my unit attacks the turn it is placed -> it removes an enemy before he can answer	haste			OK
+extraact	my unit is readied or acts again -> one unit does two units' work	untap,extra_turn,multi_attack			SMALL
+mark	I mark an enemy or a cell -> my later hits on it do more	mark_target			SMALL
+reach	my units hit from afar (Ranged, long reach, over the front) -> enemies in the back rows are hit	ranged			SMALL

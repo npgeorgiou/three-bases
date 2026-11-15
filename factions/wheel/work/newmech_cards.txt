@@ -1,0 +1,121 @@
+
+## strikes: my unit attacks or strikes more than once a round -> one unit removes two enemies
+  duelyst | Lyonar Kingdoms | Excelsious | Keywords: Provoke, Celerity. This minion gains +1/+1 for each time you healed anything this game.
+  inscryption | Beast | The Limoncello | Keywords: Mighty Leap, Omni Strike, Made Of Stone, Uncuttable. Traits: Giant. Special behaviour: When a card is spawned on the board, it replaces all spaces on opponent's side of the board with itself. When a card per...
+  runeterra | Noxus | Legion Drummer | Keywords: Support. Support: Give my supported ally Quick Attack this round.
+  runeterra | Demacia | Stalking Broodmother | Keywords: Fury, Scout.
+  runeterra | Bandle City | Yordle Smith | Attack: Give allies with equal or less power than me Quick Attack this round.
+  runeterra | Piltover & Zaun | Windborne Mariner | Keywords: Quick Attack. If you've drawn 3+ cards this round, I cost 2 less.
+  runeterra | Ionia | Ahri (level 2) | Keywords: Quick Attack, Elusive, Missing Translation. When you Recall an ally, reduce its cost by 1. Attack: Each time I attack strike, swap me with the ally to my right, then Recall it.
+  runeterra | Piltover & Zaun | Mk5: Rocket Blaster | Keywords: Quick Attack.
+
+## hurt: my unit is hit and survives -> it grows or acts; the more it is hurt, the stronger it gets
+  duelyst | Abyssian Host | Punish | Destroy a damaged minion.
+  gwent | Skellige | Dimun Pirate Captain | Deploy (Bloodthirst 2): Gain Zeal. Order: Damage a unit by 1. Charges: 3
+  gwent | Skellige | Svalblod Fanatic | Berserk 2: Transform into a Bear Abomination.
+  gwent | Skellige | Bear Witcher Adept | Deploy: Damage self by 4. At the end of your turn, Heal self by 1. While not damaged, gain 1 Armor instead.
+  inscryption | Technology | QU177 (Beast Form) | Keywords: Sharp Quills, Transformer.
+  runeterra | Noxus | Noxian Guillotine | Kill a damaged unit to create a Fleeting Noxian Guillotine in hand.
+  runeterra | Bilgewater | Joy Unending | Give allies +1|+0 this round and heal damaged allies 2.
+  stormbound | - | Trekking Aldermen | After surviving damage, deal as much damage as taken spread randomly among enemy units
+
+## ping: small hits: my units' text and spells deal small fixed damage, often or many times (never round end) -> wounded and small enemies are finished
+  duelyst | Songhai Empire | Jade Monk | Whenever this minion takes damage, deal 1 damage to a random enemy minion.
+  gwent | Scoiatael | Elven Wardancer | Deploy: Damage an enemy unit by 1. If Elven Wardancer is already boosted, damage by 3 instead.
+  gwent | Syndicate | Renegade Mage | Deploy: Damage an enemy unit by 1. Tribute 1: Damage by 3 instead.
+  gwent | Nilfgaard | Toxicologist | Deploy: Infuse an enemy unit with "Whenever a card enters or leaves your deck, damage self by 1", then, if it wasn't a Token, Spawn its base copy at the bottom of your opponent's deck.
+  into_the_breach | Ranged | Rock Accelerator | Launch a rock at a tile, pushing tiles to the left and right. Damage: 2. Power: Free. Upgrades: +1 Damage (2 Reactor Cores): Increases damage by 1.
+  runeterra | Piltover & Zaun | Statikk Shock | Deal 1 to an enemy or the enemy Nexus, and 1 to another. Draw 1.
+  runeterra | Piltover & Zaun | Caustic Riff | Keywords: Flow. Flow: I cost 2 less. Deal 1 to all enemies.
+  runeterra | Noxus | Tybaulk | Keywords: Overwhelm. When I'm summoned, grant allies everywhere +1|+0 and for the rest of the game, all of your spells and Skills deal 1 extra damage.
+
+## change: I turn an enemy into another unit -> its card is gone without dying
+  duelyst | Songhai Empire | Onyx Bear Seal | Transform an enemy minion into a 0/2 Panddo that cannot be attacked.
+  duelyst | Magmar Aspects | Metamorphosis | Transform all enemy minions into 1/1 Magma with no abilities until the end of your opponent's turn.
+  duelyst | Songhai Empire | Eternity Painter | At the end of your turn, transform all nearby enemy minions into 0/2 Panddos that cannot be attacked.
+  duelyst | Vetruvian Imperium | Blood of Air | Transform an enemy minion into a friendly Wind Dervish.
+  duelyst | Songhai Empire | Bamboozle | Transform a nearby enemy minion into a 0/2 Panddo. If it is already a Panddo, instead destroy it and draw to fill your action bar.
+  faeria | Blue | Looking Glass Phantasm | Gift - Transform an enemy creature into a 5/3 msatnahP ssalG gnikooL.
+  gwent | Scoiatael | Hostage Taker | Deploy: Seize an enemy unit with 0 or less power, then transform the Seized unit into an Elven Deadeye without changing its power. The maximum power is increased by 1 for each Trap you played this round.
+  runeterra | Bandle City | Megatee | Keywords: Impact. Round Start: Transform the strongest enemy into a 3|3 Mini-Minitee and Silence it. It can't block.
+
+## junk: I give the enemy useless cards -> his hand and draws fill with nothing
+  faeria | Blue | Rapala, the Dopefish | Aquatic Gift - Fill your opponent's hand with Ruby Fish. What an idiot.
+  gwent | Monster | Crimson Curse | Spawn Blood Moon on an enemy row for 5 turns, then Spawn 2 Ekimmaras on the opposite row.
+  gwent | Skellige | Armor Up | Damage an enemy unit by 2. Spawn 3 Witcher Students on the opposite row, damage them by 1, then give them 1 Armor.
+  gwent | Nilfgaard | Usurper: Emperor | Veil. Deploy: Spawn an Operative on each enemy row and give them Spying. Zeal. Order: Seize all Spying Operatives. Whenever an enemy unit gains Spying, boost self by 1.
+  marvel_snap | - | The Grub | Add a random Food Fight variant to each player's hand.
+  marvel_snap | - | Master Mold | On Reveal: Add 2 Sentinel to your opponent's hand.
+  runeterra | Bandle City | Poison Dart | Deal 1 to anything and plant 3 Poison Puffcaps in the enemy deck.
+  runeterra | Piltover & Zaun | Corina, Mastermind | Play: Plant 5 Flashbomb Traps in the top 5 cards of the enemy deck or activate the effects of all traps in the top 5 cards of the enemy deck.
+
+## steal: I take an enemy unit or card for myself -> his strength becomes mine
+  duelyst | Vetruvian Imperium | Dominate Will | Take control of an enemy minion nearby your General.
+  duelyst | Abyssian Host | Mindlathe | After your General damages a minion, reactivate and take control of it until the end of your turn.
+  faeria | Blue | Aurora's Trick | Gain control of a creature with 2 Attack or less.
+  gwent | Nilfgaard | Vattier de Rideaux | Order: Lock an enemy unit. Conspiracy: Seize it instead.
+  gwent | Nilfgaard | Usurper: Officer | Deploy: Spawn an Operative on an enemy row and give it Spying. Zeal. Order: Seize all Spying Operatives. At the start of the round, while in hand or deck, evolve.
+  gwent | Nilfgaard | Usurper: General | Deploy: Spawn an Operative on each enemy row and give them Spying. Zeal. Order: Seize all Spying Operatives. Devotion: At the start of the round, while in hand or deck, evolve.
+  marvel_snap | - | Baron Zemo | On Reveal: Recruit a card that costs the least from your opponent's deck to your side of this location.
+  runeterra | Bilgewater | Mercenary Manners | Steal an enemy follower with 3 or less Health this round. (Can't play if you have 6 allies or landmarks already.)
+
+## enemyside: I place my units in the enemy camp -> they hit his back row or block his cells from his side
+  duelyst | Lyonar Kingdoms | Ironcliffe Guardian | Keywords: Airdrop, Provoke.
+  duelyst | - | Lodestar | Keywords: Airdrop, Forcefield. At the end of BOTH players' turns, pull some things to this minion.
+  faeria | Blue | Tide Lord | Jump Can be summoned adjacent to friendly tritons. If it is, this gets +1/+1.
+  gwent | Nilfgaard | Emissary | Disloyal. Deploy: Boost an allied unit by 7.
+  gwent | Skellige | Kraken | Disloyal. Deploy: Move 3 enemy units to this row, damage them by 2 and Spawn Storm for 3 turns on this row. Deathwish: At the end of this turn, Summon self to the opposite row and boost self by the number of unique al...
+  marvel_snap | - | Hellfire Club | Cards that cost 1 can't be played here.
+  marvel_snap | - | The Big House | Cards that cost 4 or more can't be played here.
+  marvel_snap | - | Ikari | You can only play this where an enemy is afflicted with negative Power.
+
+## haste: my unit attacks the turn it is placed -> it removes an enemy before he can answer
+  duelyst | Vetruvian Imperium | Zephyr | Blood Surge: Your General gains Frenzy this turn.
+  duelyst | - | Broken Captive | Keywords: Rush.
+  gwent | Northern Realms | Margarita Laux-Antille | Zeal. Order: Lock an enemy unit.
+  gwent | Northern Realms | Cintrian Artificer | Formation. Order: Give an allied unit a Shield.
+  gwent | - | Arcane Tome | Zeal. Order: Play a special card from your deck, then move self to the opposite row. If there is no space on the opposite row, destroy self. Cooldown: 1 At the end of your turn, if not on Cooldown, destroy self.
+  inscryption | Beast | Raven | Keywords: Airborne.
+  runeterra | Bilgewater | Jaull-fish | Keywords: Lurk. Play: Each Lurker ally strikes a random enemy.
+  runeterra | Demacia | Taloned Strike | Grant allied Birds everywhere +1|+1. An allied Bird strikes an enemy.
+
+## extraact: my unit is readied or acts again -> one unit does two units' work
+  duelyst | Vanar Kindred | Sleet Dasher | Whenever this minion destroys an enemy, reactivate it.
+  duelyst | Vetruvian Imperium | Psychic Conduit | Reactivate and take control of an enemy minion with 2 or less Attack until end of turn.
+  runeterra | Demacia | Relentless Pursuit | Rally.
+  runeterra | Demacia | Greenfang Warden | Keywords: Barrier, Scout.
+  runeterra | Noxus | Incisive Tactician | Reputation: I cost 2 less. When I'm summoned, Rally.
+  runeterra | Bilgewater | Blood in the Water | Keywords: Lurk. Deal 1 to anything, then Rally.
+  runeterra | Demacia | Garen (level 2) | Keywords: Regeneration. When I'm summoned, give other allies +1|+1 this round. Round Start: Rally.
+  runeterra | Bilgewater | Fizz's Playful Trickster | Keywords: Fast. Remove an attacking ally from combat to Rally. Create a Fizz in your deck.
+
+## lock: I lock an enemy for good (can't move, attack or act) -> it stands in its cell doing nothing
+  duelyst | Lyonar Kingdoms | Excelsious | Keywords: Provoke, Celerity. This minion gains +1/+1 for each time you healed anything this game.
+  duelyst | - | Fireblazer | Keywords: Provoke.
+  duelyst | - | Tethermancer | Keywords: Provoke. Dispel any minion that deals damage to this one.
+  faeria | Green | Vine Wall | Taunt Last Words - Create forest at random.
+  into_the_breach | - | Smoke Tile | Most units cannot attack in Smoke. Units in Smoke cannot attack or repair. A Sand Tile that is hit by weapon damage will turn into a Smoke Tile. Some weapons and enemy attacks are capable of creating their own Smoke T...
+  monster_train | Wurmkin | Soulcrushing Guilt | Extract 3. / Apply Dazed 3 to a unit and move it to the back.
+  runeterra | Bandle City | Hexplosive Minefield | Keywords: Landmark. When I’m summoned or you destroy me, Stun the strongest enemy.
+  runeterra | Targon | Crescent Strike | Keywords: Slow. Stun 2 enemies.
+
+## mark: I mark an enemy or a cell -> my later hits on it do more
+  duelyst | Vetruvian Imperium | Wither | An enemy minion disappears at the start of your next turn.
+  gwent | Scoiatael | Giantslayer | Deploy: Choose an enemy unit. If its base power is higher than self's, gain 3 Armor. Barricade: At the end of your turn, damage chosen unit by 1. Deathblow: Gain Resilience.
+  marvel_snap | - | Sinister Six | Game Start: The first 6 characters you draw are EVIL! After you play them all, merge them into this and add this to the last one's location. (0/6)
+  monster_train | Stygian Guard | Tethys Titansbane | Chillwind path (upgrades I/II/III): +10/25/55 Attack +1/2/3 Health Strike: Apply Frostbite 10/20/40 to the attacked unit. / Conduit path (upgrades I/II/III): +5/15/35 Attack +2/4/6 Health Damage spells cast on this fl...
+  monster_train | Stygian Guard | Icy Cilophyte | Sweep. / Strike: Apply Spell Weakness 1 to the attacked unit.
+  runeterra | Shadow Isles | Kindred | Keywords: Quick Attack. Each round, the first time you slay a unit, I mark the weakest enemy. Round End: Kill units with my mark. Level up: I've seen you slay 2+ units with my mark.
+  runeterra | Freljord | Ram Stance | Keywords: Slow. Pick an ally. Deal 1 to EVERYTHING else.
+  stormbound | Shadowfen | Temple of Time | At the end of your turn, remember the state of surrounding friendly units and structures. At the start of your turn, restore 1/2/2/3/3 of them
+
+## reach: my units hit from afar (Ranged, long reach, over the front) -> enemies in the back rows are hit
+  duelyst | Songhai Empire | Heartseeker | Keywords: Ranged.
+  faeria | Yellow | Oradrim Sagittarius | Ranged Attack Whenever a friendly creature attacks a god, gain 1 faeria.
+  runeterra | Ionia | The Empyrean | Keywords: Elusive.
+  runeterra | Noxus | Swain | Keywords: Fearsome. Nexus Strike: Deal 3 to the enemy Nexus. Level up: You've dealt 14+ non-combat damage.
+  runeterra | Shadow Isles | Viego | Keywords: Fearsome. Each round, the first time another ally dies, summon an Encroaching Mist. Level up: I've seen allies with 20+ total power die.
+  runeterra | Targon | Mihira, Aspect of Justice | Round End: Grant allies in play and in hand +1|+1. Empowered 5: Elusive, Lifesteal, and Overwhelm.
+  runeterra | Bilgewater, Piltover & Zaun | Octo Adventurer | Keywords: Elusive. Play: Pick an Explorer spell to create in hand.
+  runeterra | Shadow Isles | Vilemaw | Keywords: Fearsome, Missing Translation. Other Fearsome allies have +1|+0.
+
