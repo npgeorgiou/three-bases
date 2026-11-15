@@ -1,5 +1,5 @@
 # The wheel pipeline, steps 1-5.1: how each result was made and how to redo it
-Results: `factions/wheel/RESULTS-1-5.md`. Commands run from `library/cards_db/` unless they start with `factions/`.
+Commands run from `library/cards_db/` unless they start with `factions/`.
 Before anything: `python3 links.py` (about 4 minutes; makes links.sqlite, not in git; every number below needs it).
 Each step says what a script did and what was judgment (by Claude or by agents), so a redo knows what to repeat.
 
