@@ -1,112 +1,121 @@
-# The wheel chat: 20 factions designed together, with their combos (Kaptain, 14 Nov 2026)
+# The wheel chat: 20 factions designed together, with their combos
 
-Read `factions/START_DESIGN.md` and its parts 2-4 whole first, then `factions/12-mechanical-wheel.txt`,
-`factions/13-wheel-measurement.txt` and `factions/wheel/HANDOFF.md` whole (the handoff holds the numbers behind every
-step here and the reasons). Start with `python3 links.py` in `library/cards_db` (about 4 minutes; the file is not in
-git). The chat writes no cards, no stats, no code for the game, and picks no themes.
+Read `factions/START_DESIGN.md` and its parts 2-4 whole first, then `factions/12-mechanical-wheel.txt` (why the wheel
+and its radii) and `factions/wheel/PIPELINE.md` (the commands of every step). Start with `python3 links.py` in
+`library/cards_db` (about 4 minutes; the file is not in git). The chat writes no cards, no stats, no code for the game,
+and picks no themes.
 
-Three Bases is a game of combos: decks will mix 2 factions. Every faction must combine reasonably well with at least
-10 others (Kaptain, 14 Nov 2026). Factions have no neighbours (Kaptain, 15 Nov 2026): the wheel places factions on the circle of radii and finds the radii that work together, as a start for exploring. Every radius, mechanic, faction and combo here comes
-from the library, measured and read; what has no library source is marked as Claude's.
+Three Bases is a game of combos: decks mix 2 factions. Every faction combines well with at least 10 others. Every
+radius, mechanic and combo comes from the library, measured and read; what has no library source is marked as Claude's.
+Faction text uses plain words Kaptain uses (no library names like "ping" or "overkill": say "small hits", "the rest of
+the hit goes into the unit behind").
 
 ## The whole process and its stops
-- Wheel chat (this file): steps 1-9. **Stop 1: Kaptain agrees the table and the hooks.**
+- Wheel chat (this file): steps 1-9. **Stop A: Kaptain agrees the mechanics list (step 4).** **Stop 1: Kaptain agrees
+  the 20 factions (step 9).**
 - One chat per faction (two can run at the same time): theme, then steps 1-6 of START_DESIGN.md (ways to play).
   **Stop 2: Kaptain agrees them.** Then cards, the gate, `wheel_check.js`, the separate agent's review.
   **Stop 3: Kaptain gets the finished faction.**
-- Pilot: the first two factions are a pair with a strong combo. Their premades play each other (`cardstats.js`), and one
-  mixed deck shows whether their combo fires. **Stop 4: Kaptain decides whether the rest is built.**
+- Pilot: the first two factions are a pair with a STRONG combo. Their premades play each other (`cardstats.js`), and
+  one mixed deck shows whether their combo fires. **Stop 4: Kaptain decides whether the rest is built.**
 
 ## Steps 1-9, in this order
-The wheel comes first (steps 1-4): it gives every faction its shape and its place on the circle. The mechanics come
-after (steps 5-6), found inside each faction's radii, and the combos between factions come from them. A step uses
-only what the steps before it made.
+A step uses only what the steps before it made. Steps 1-3 are the wheel; the mechanics come after, found inside each
+faction's radii.
 
-**A. The wheel**
-1. **The radii.** The 24 radii of `factions/13-wheel-measurement.txt`, measured on the real factions (axes.tsv; the
-   page factions/wheel-axes.html).
-2. **The radii that work together.** For every two radii, the library's number in all cards and in real decks
-   (`radius_links` in axes.py; the page's fourth view): how much more often than chance a card of one is linked with a
-   card of the other. An agent reads the real card pairs behind the strong numbers before they are used. "Rewards
-   playing spells" is trusted only by its deck number, because such a card links to every spell.
-3. **The 20 factions as shapes.** Each faction is 3-6 strong radii. Each of its radii is joined to at least one other
-   of them by trigger -> payoff: one radius makes what the other needs ("spends them" makes deaths, "brings back"
-   uses them), with a strong number in step 2. A join with a low number stays only when this game's rules argue for
-   it. The values are uneven, as real factions are, and each shape is checked against them:
-   `python3 axes.py --near "heals=1.6,growsdef=1.4,stops=0.3"` (from library/cards_db). No two shapes are the same.
-4. (Dropped: no circle order of factions, no neighbours. Kaptain, 15 Nov 2026.)
+1. **The radii.** The 24 radii of `factions/13-wheel-measurement.txt`, measured on 43 real factions (`axes.py`).
+2. **The radii that work together.** For every two radii, the library's number in all cards and in real decks: how much
+   more often than chance a card of one is linked with a card of the other (1 = chance). Agents read the real card
+   pairs behind the strong numbers; a pair they drop counts as chance afterwards. "Rewards playing spells" is judged by
+   its deck number only, because such a card links to every spell.
+3. **The 20 factions as shapes.** Each faction is 3-6 strong radii with uneven values, as real factions have. Each
+   radius is joined to another of the same faction by a strong number of step 2 (one makes what the other needs:
+   "spends them" makes deaths, "brings back" uses them), or by an argument from this game's rules, written in
+   `arguments.tsv`. Each shape is checked against the real factions (`axes.py --near`). No two shapes are the same.
+   A radius that only exists by another game's rules is never a faction's base (see step 4's rule check).
+4. **The mechanics list.** Each mechanic is written "I do X -> I gain from X" on this game's things (units, rows,
+   columns, front cells, dots, supply per lane, carry-over, hand, discard pile), with the library concepts that catch
+   its cards. For each mechanic, in this order:
+   - an agent reads 8 of its real cards and fixes the concept list until it catches the right cards;
+   - it is measured: the real factions built on it, the radii its cards sit on;
+   - **the rule check**: it must work by this game's rules (`summary/03` to `07`). An attacked unit doesn't hit back
+     (only Riposte does), so "strike first" means nothing here and is not a mechanic; who acts first is random in
+     round 1 and then alternates; units are placed only in my own camp. A mechanic that needs a rule the game lacks is
+     kept and marked NEW RULE.
+   - **the archetype check**: the list covers every kind of play the library's concept list has, including the small
+     ones: steal (take the enemy's unit or card), units that grow when they are hit and survive, my units placed in
+     the enemy camp, kill spells, bringing back. A mechanic small in the library (under 30 right cards in every real
+     faction, marked SMALL) can still be a faction's base; SMALL only says there are few real cards to learn from.
+   Each mechanic keeps its own line; two are never merged. **Stop A: Kaptain agrees the list.**
+5. **Each faction's mechanics.**
+   - 2 signature mechanics: the faction builds on them. Each is a signature of one faction only. Both sit on the
+     faction's radii and are joined to each other or through an extra (step 2 numbers or an argument).
+   - 2-4 extras: other mechanics on several cards, chosen by fit first and partners second (`work/borrow.py`): at
+     least a quarter of its cards sit on one of the faction's radii, and the library links it with a signature
+     mechanic; ties go to the one with more partners. Any mechanic may be an extra, a signature of another faction
+     too, but each extra is in at most 3 factions. The mechanic the faction's removal needs is kept.
+   - One-offs: any card may carry a one-off from any mechanic (a faction far from bringing back may have one unit that
+     comes back). One-offs are not planned here; they keep cards from being unimaginative.
+   - Two factions strong on the same radius have different signatures in it ("brings back": one has "my dead units
+     come back", another "my unit goes back to hand").
+6. **Links between mechanics.** For every two mechanics, the library's numbers (`mechanics_wheel.py links`); agents
+   read the real card pairs behind the high numbers (4 pairs first, 8 for those that come back KEEP or WEAK) and keep
+   only true combos (one card changes what the other does), written as a played sequence. `apart.py` gives the pairs
+   real factions keep apart; a faction that holds both ends of such a pair is shown to Kaptain.
+7. **Board versions.** Each faction's mechanics turned into this game's own things, from scratch: dots and front
+   cells, the back row, rows, columns, lanes, the 3x3 camp, unit size, supply per lane, carry-over, round start and
+   round end, one action per turn, moving, reach (melee, Pike, Ranged), strikes and fixed damage, the hand, the
+   discard pile, Immobile. Sources: the library's board games first (Duelyst, Faeria, Stormbound, Into the Breach,
+   Inscryption); no source = Claude's; a rule the game lacks = NEW RULE. Each faction gets 1-3 board versions and one
+   faction idea. **No two factions have the same thing on the board, compared by what the card does and looks like,
+   not by mechanic name**: one Egg in the whole wheel. A whole faction may be built on one board thing (all Immobile).
+   The old candidates (commit d4a3de0^, `factions/3-candidates/`) are read last, only to see that no idea Kaptain
+   liked is missing.
+8. **Combos on this board.** Agents rate every pair of factions (190) from their board versions and mechanics, with
+   step 6's KEEP combos as sources: STRONG (both halves on many cards, helps take or hold a base, the enemy's one action
+   between can't easily stop it), OK (real but breakable), WEAK, NONE, AGAINST. Partners = STRONG or OK; every faction
+   has 10+. A faction under 10 goes back to step 5 (other extras), then step 3. `combos.tsv` has a test column that
+   playtests fill; what doesn't work in play is dropped.
+9. **The seven answers** (START_DESIGN.md step 2) for all 20, made from the board versions: how it wins, how it
+   removes a front unit, how it mainly removes back-row units, how it mainly acts between lanes, how it holds a base,
+   its best Place effect, its blind spot. Every answer differs from every other faction's; each removal uses one of the
+   faction's mechanics; a blind spot never touches a mechanic the faction has. Then the check script
+   (`tools/wheel_table_check.py`) and the Stop 1 pages.
 
-**B. The mechanics and the combos**
-5. **The mechanics inside each faction's radii.** For each strong radius, start from its library concepts (SPOKES in
-   axes.py); `factions/wheel/mechanics.tsv` is a start, not a result. For each mechanic, in this order:
-   - an agent reads 8 of its cards and fixes the concept list until it catches the right cards
-     (`mechanics_wheel.py cards`);
-   - then it is measured (`mechanics_wheel.py measure`): the real factions built on it, the radii it serves, its count
-     in the closest real faction;
-   - it is written "I do X -> I gain from X" on this game's things (units, rows, columns, front cells, dots, supply,
-     carry-over, hand, discard pile), with its sources (game: card). Each mechanic keeps its own line; a small one is
-     kept and marked small. An effect the game can't do yet is marked NEW RULE.
-   Each faction gets 4-6 mechanics of its radii that feed each other. It owns 2 of them, its 2 signature mechanics (Kaptain, 15 Nov 2026: not a monopoly; the faction builds on them, other factions may use them on a few cards as extra mechanics); the others
-   are extras (2-4, on a few cards; any faction's mechanic, many factions may have the same one), chosen by fit
-   first, partners second (Kaptain, 15 Nov 2026): `factions/wheel/work/borrow.py` (on the faction's radii, linked with its
-   signature mechanics, ties broken by partners; the mechanic its removal uses is kept; each extra in at most 3 factions).
-   A faction's mechanics (2 signature, 2-4 extras) are what it builds on, each on several cards. Any card may also carry a one-off from any mechanic of the game (Kaptain, 15 Nov 2026: a faction far from bringing back may have ONE unit that comes back); one-offs are not tracked on the wheel and keep cards from being unimaginative. Two factions strong on the same radius own different mechanics
-   in it ("brings back": one owns "my dead units come back", another "my unit goes back to hand").
-6. **Links between mechanics, and the hooks.** Only after step 5's concepts are fixed: `mechanics_wheel.py links`
-   gives, for every two mechanics, the library's number in all cards and in real decks. Then `fed`, `feeds`, `both`,
-   `chains` and `deckmates` on the strong pairs, and `apart.py` for the pairs real factions keep apart. An agent reads
-   the real card pairs behind each high number (`mechanics_wheel.py pairs`) and keeps only true combos (one card
-   changes what the other does; part 4), each written in this board's rules as a played sequence. A combo counts for
-   partners only if the agent judged it KEEP (WEAK never counts) and at least one side uses a signature mechanic of its
-   faction (Kaptain, 15 Nov 2026: many weak combos looked like many partners). Then each faction's
-   partners: for every other faction, the combos between their mechanics (which card of one sets off which card of
-   the other), with the library number. 10+ partners per faction; also the pairs that work against each other. A
-   faction under 10 partners is changed: steps 3-6 again for it.
-7. **Board versions (Kaptain, 15 Nov 2026).** The wheel is general; this step turns each faction's mechanics into this
-   game's own things, from scratch: dots and front cells, rows, columns, lanes, the 3x3 camp, shapes and size, supply
-   per lane, carry-over, round start and round end, one action per turn, moving and turning, reach (melee, Pike,
-   Ranged), strikes and fixed damage, the hand and the discard pile, Immobile. For each mechanic, go through the list:
-   how does it work on this thing? Example: N's "my unit guards the others" on dots: "the dot in my column can't be
-   cancelled". Sources: the library's board games first (Duelyst, Faeria, Stormbound, Into the Breach, Inscryption);
-   no source = Claude's or Kaptain's; a rule the game lacks = NEW RULE. Each faction gets 1-3 board versions; no two
-   factions share one. The old candidates (commit d4a3de0^, `factions/3-candidates/`) are read only at the end, as a
-   check that an idea Kaptain liked isn't missing. A whole faction may be built on one board thing (all Immobile).
-8. **The five questions** (START_DESIGN.md step 2) for all 20 in one table. Every answer differs from every other
-   faction's, made from the board versions (step 7); each removal is a way no other faction has and uses a mechanic the faction owns or shares (B's "my unit dies and takes the enemy facing it" is the sacrifice: B needs it). Blind spots never touch a mechanic the faction owns or uses.
-9. **Check script.** It reads the files of steps 1-8 and checks real things, not only columns: the radius numbers of
-   every shape's joins (step 3), the library number of every combo (step 6); a low number must carry its argument from
-   this game's rules. Also: 10+ partners per faction, 2 owned mechanics per faction and one owner per mechanic, and
-   the graph of factions/12 method 5 (each faction's mechanics linked to each other), and 1-3 board versions per
-   faction, none shared.
+## The check script
+It reads the files of steps 2-9 and checks real numbers, not only columns: every shape's joins (step 3); 2 signatures
+per faction, each a signature once; extras 2-4, each in at most 3 factions; each faction's mechanics joined; 10+
+partners; 1-3 board versions per faction, none the same; all seven answers present and different; removals by the
+faction's own mechanics; blind spots outside its mechanics. It fails loudly; a failure is fixed, never argued away.
 
 ## What Kaptain sees at Stop 1
-The table of the 20 factions (place, archetype, strong radii, signature mechanics, shared, blind spots, the
-five answers), per faction its partners with the combo for each, and the pairs that work against each other. Files in
-factions/ (each under 150 lines; split them) and the check script in tools/; the CLAUDE.md map names them.
+`factions/wheel/STOP1.md` and its parts: per faction, in plain words, its strong radii, its signatures and extras, its
+board versions and faction idea, the seven answers, and its partners with the combo for each. Files in factions/ stay
+under 150 lines (split them); the CLAUDE.md map names them.
 
 ## How to read the wheel
-24 radii in 8 areas, measured on 43 real factions of 8 games (no Monster Train, no Marvel Snap). A value compares a
-faction with the average faction of its own game, so compare factions of different games loosely. Into the Breach,
-Stormbound, Slay the Spire and Inscryption have no value on 10 or more radii. Strength, defence and the two width radii
-give a faction its shape; they are not mechanics two factions can share.
+24 radii in 8 areas, measured on 43 real factions of 8 games. A value compares a faction with the average faction of
+its own game (1 = average), so compare factions of different games loosely. Into the Breach, Stormbound, Slay the Spire
+and Inscryption have no value on 10 or more radii. Strength, defence and the two width radii give a faction its shape;
+they are not mechanics.
 
-## Token budget (second try, 14 Nov 2026: it ran out in step 6)
-Agents used about 9 of every 10 tokens: 23 agents at 100-160k each. What to do instead:
-- Combo reads: first 4 card pairs per mechanic pair, and 8 only for pairs that come back KEEP or WEAK (106 of 167
-  read pairs were DROP after 8 pairs each). Read only pairs that can still add a partner the faction lacks.
-- Batches: at most 4 agents at once, each with about 20 sections; write each agent's lines to its file as it goes,
-  so a stop loses nothing. Before a big batch, count the sections and say how many agents it needs.
-- Concept fixes: give the agent the counts per game in its file (`ask.py all compare` output for each concept), so it
-  does not run 30 queries itself.
-- Owners and shares: write the rules down before the first try (2 owned on the faction's radii, what each faction shares), then check each try with
-  `work/check_assign.py`. Three tries by hand and two runs of an unchecked search were wasted.
-- Skip numbers that can't decide anything: partner counts from link numbers alone came out 15-19 for every faction.
+## Token budget
+Agents use about 9 of every 10 tokens. So:
+- At most 4 agents at once, each with about 20 sections; each writes its lines to its file as it goes, so a stop loses
+  nothing. Before a big batch, count the sections and say how many agents it needs.
+- Card-pair reads: 4 pairs first, 8 only for pairs that come back KEEP or WEAK.
+- Concept fixes: give the agent the counts per game in its file, so it doesn't run queries itself.
+- Write the rules of a step down before doing it, and let a script check each try.
 
-## NEVER DO (the rejected tries of 14 Nov 2026)
-1. The radii and "the radii that work together" left out as the base: a pool of mechanics built first, from concepts.
-   Stops it: steps 1-4 come before any mechanic.
-2. Mechanics placed on radii and given owners by judgment, no card text read. Stops it: step 5, read and then measured.
-3. One guessed combo per pair of factions, no library query behind it. Stops it: step 6.
-5. Every strong radius set to 1.8 and blind spots picked so the check passes. Stops it: uneven shapes from real
-   factions (step 3).
-6. A check script that checked only columns and counts, so it passed by construction. Stops it: step 9.
+## Wrong ways, and what stops them
+1. Mechanics built first from concepts, the radii left out. Stops it: steps 1-3 come before any mechanic.
+2. Mechanics given to factions by judgment, no card text read. Stops it: steps 4-5, read and measured.
+3. A combo guessed per pair of factions, no library behind it. Stops it: steps 6 and 8.
+4. Every strong radius set to the same value, blind spots picked so the check passes. Stops it: step 3.
+5. A check that checks only columns, so it passes by construction. Stops it: the check script reads numbers.
+6. A mechanic copied from another game that doesn't work here ("strike first"). Stops it: step 4's rule check.
+7. A basic archetype missing because it is small in the library (units that grow when hit). Stops it: step 4's
+   archetype check.
+8. Two factions with the same thing under different mechanic names (two Eggs). Stops it: step 7, compared by what
+   the card does.
+9. Answers that look only at the front cells. Stops it: step 9's back-row and between-lanes answers.

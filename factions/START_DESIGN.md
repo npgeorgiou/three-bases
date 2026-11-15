@@ -48,21 +48,25 @@ read 5-10 card texts behind every count, and write the sources (game: card) next
   mechanics fit; the card-by-card queries of steps 2-5 come first.
 1. **Name, icon, theme** (chosen after the wheel gave the mechanics). A real theme (World War I artillery, the Zulu regiments, Babylonian astrologers), with 10+ facts
    about how they fight, live, trade, believe, what they fear and what they lack. Each fact is a source of cards later.
-2. **Kaptain's five questions**, answered before any card:
+2. **Kaptain's seven questions**, answered before any card:
    1. Identity: one sentence saying how the faction wins. Good: "units die, and every death feeds the others". Bad: "a
       flexible faction with many tools" (it could be any faction).
-   2. Removal: how it gets rid of an enemy unit that holds a base, in a way no other faction does. Examples: push it out of
-      the front row, so it stops cancelling your dot; take its strength away for good; kill it only by letting an ally
-      die. "Can't attack this round" is not removal: the enemy just waits a round.
-   3. Holding: how it keeps a base once it has it. Example: an Immobile unit that says "allies in my lane can't be moved
+   2. Front removal: how it gets rid of an enemy unit that holds a base, in a way no other faction does. Examples: push
+      it out of the front row, so it stops cancelling your dot; take its strength away for good; kill it only by letting
+      an ally die. "Can't attack this round" is not removal: the enemy just waits a round.
+   3. Back-row removal: how it mainly gets rid of enemy units in the back rows, out of most units' reach. Example:
+      the rest of a hit goes into the unit behind.
+   4. Between lanes: how it mainly acts across lanes. Examples: throw a unit into another lane; spend one lane's supply
+      in another.
+   5. Holding: how it keeps a base once it has it. Example: an Immobile unit that says "allies in my lane can't be moved
       or hit by enemy spells".
-   4. The play that feels good: what its units do the moment they are placed. Example: "Place: push the enemy facing me
+   6. The play that feels good: what its units do the moment they are placed. Example: "Place: push the enemy facing me
       one row back".
-   5. Blind spot: the one tool it never gets, on any card. Example: a swarm faction never restores shields.
-3. **Signature mechanics and blind spots** (taken from the wheel). 2 signature mechanics (Kaptain, 15 Nov 2026: not a monopoly; the faction builds on them, other factions may use them on a few cards as extra mechanics). A list of tools it
-   never has; its cards never make up for them, it plays around them. A blind spot is never one of the two things every
-   faction needs (hold dots, remove enemies), only one way of doing them: "no kill spells" is a blind
-   spot, "no removal" is not.
+   7. Blind spot: the one tool it never gets, on any card. Example: a swarm faction never restores shields.
+3. **Signature mechanics and blind spots** (taken from the wheel). 2 signature mechanics: the faction builds on them;
+   other factions may have them as extras or one-offs. A list of tools it never has; its cards never make up for them,
+   it plays around them. A blind spot is never one of the two things every faction needs (hold dots, remove enemies),
+   only one way of doing them: "no kill spells" is a blind spot, "no removal" is not.
 4. **How it differs from each other faction** (from the wheel; check it with the closest factions on the page). Kaptain's example: a swarm that fills the front rows with many cheap weak
    units, against a fortress that never has more than 3 units and moves defence between them. Write one sentence per
    other faction saying why a game between the two feels different.
