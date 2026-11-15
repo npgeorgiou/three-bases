@@ -15,6 +15,8 @@ they are short):
   Shapes: 1 cell, line of 2, line of 3, 2x2. Melee reaches the cells around it, across the base; Pike from the middle
   row; Ranged the whole lane. Strikes use strength; fixed damage is not a strike. No hits between lanes; changing lane
   only by special moves (Outrider). Immobile units can't move.
+- An attacked unit does not hit back (only Riposte does), so "strike first" means nothing. Units are placed only in
+  my own camp (placing in the enemy camp is a NEW RULE).
 - No player health, no answers on the enemy's turn, no abilities you press, no counters ("at 3 counters"), no unit
   types, no randomness. Place, Death, round-end and position effects are wanted.
 
@@ -36,8 +38,11 @@ FOR EACH FACTION in your input:
    VERSION <letter> | <mechanic key> | <own thing> | <the version, "I do X -> I gain Y", in plain words with a short
    example like "Place: ..."> | <source: game: card, or CLAUDE> | <NEW RULE if the game can't do it yet, else ->
    | <why it matters for taking or holding a base, one short sentence>
-3. One line: IDEA <letter> | <a faction idea built on one board thing, if one fits it, e.g. "every unit Immobile",
+3. Two lines: BACKROW <letter> | <how the faction mainly removes enemy units in the back rows, from its mechanics> |
+   <source or CLAUDE> and LANES <letter> | <how the faction mainly acts between lanes (moves or throws a unit to another
+   lane, uses one lane's supply in another...)> | <source or CLAUDE>.
+4. One line: IDEA <letter> | <a faction idea built on one board thing, if one fits it, e.g. "every unit Immobile",
    "holds dots from the middle row"> | <source or CLAUDE>. Bold ideas are welcome; mark them CLAUDE.
-Rules: never invent rules silently (mark NEW RULE); no randomness; no player damage; use plain words; no flavour.
+Rules: plain words only, never library names (say "small hits", not "ping"); never invent rules silently (mark NEW RULE); no randomness; no player damage; use plain words; no flavour.
 Write all lines to the output file named in your task as you go (append after each faction), so nothing is lost.
 Reply at the end with one line only: "done, N versions".

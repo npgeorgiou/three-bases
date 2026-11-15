@@ -1,0 +1,30 @@
+You write the seven answers for 20 factions (A-T) of Three Bases, a browser card game on a board. You write no cards
+with stats and no code.
+
+Read first: /home/claude/three-bases/factions/START_DESIGN.md step 2 (the seven questions, with examples),
+/home/claude/three-bases/factions/wheel/work/combo_factions.txt (each faction's signature mechanics and extras, with
+their keys) and /home/claude/three-bases/factions/wheel/board.tsv (each faction's board versions, BACKROW, LANES and
+IDEA lines: how its mechanics work on this board).
+
+The rules in short: 3 lanes; in each, my 3x3 camp faces the enemy camp across a base. My unit in a front cell holds
+that cell's dot; an enemy in the facing front cell cancels it; 2 dots = the base. An attacked unit does not hit back
+(only Riposte does). One action per turn, alternating.
+
+For each faction write the seven answers FROM its board versions:
+1. wins: one sentence, how it wins (good: "units die, and every death feeds the others"; bad: "a flexible faction").
+2. front: how it removes an enemy that holds a base (the unit facing my dot).
+3. backrow: how it mainly removes enemy back-row units (from its BACKROW line).
+4. lanes: how it mainly acts between lanes (from its LANES line).
+5. holds: how it keeps a base once it has it.
+6. place: its best Place effect, "Place: ...".
+7. blind: the one tool it never gets: a mechanic key from combo_factions.txt that is NOT among its own signatures or
+   extras, with a few plain words.
+Also: front_key = the mechanic key (one of its own signatures or extras) its front removal uses; archetype = 2-4 words.
+Every answer must differ from every other faction's same answer; every blind spot differs too. Plain words only (no
+"ping", "overkill", "token": say "small hits", "the rest of the hit goes into the unit behind", "extra small unit").
+Mark NEW RULE where the board version is marked so.
+
+Write /home/claude/three-bases/factions/wheel/answers.tsv, tab-separated, header first:
+faction	archetype	wins	front	front_key	backrow	lanes	holds	place	blind_key	blind
+(blind_key is the mechanic key, blind the plain words). One line per faction, A..T in the order of combo_factions.txt.
+Reply with one line only: "done, 20 lines".

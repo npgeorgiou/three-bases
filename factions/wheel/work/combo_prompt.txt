@@ -29,5 +29,5 @@ you go:
 x <TAB> y <TAB> rating (STRONG/OK/WEAK/AGAINST) <TAB> combo in a few words ("x's push + y's Place strike") <TAB>
 how it plays, one or two plain sentences with cells and the enemy's answer <TAB> source (LIBRARY KEEP a+b, or
 BOARD: the board versions used, or CLAUDE)
-If a pair has nothing real, write one line with rating NONE. Plain words, no flavour. Be strict: most pairs of
+If a pair has nothing real, write one line with rating NONE. Plain words only, never library names ("small hits", not "ping"); no flavour. Be strict: most pairs of
 factions should NOT get STRONG. Reply at the end with one line only: "done, N lines".

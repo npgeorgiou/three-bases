@@ -5,3 +5,5 @@ signature fits its faction 0.8+, the two linked, 3+ extras possible; G = grows w
 Kaptain) then `work/borrow.py --write` (extras by fit, each in at most 3 factions). G's shape redone (`work/shapes.tsv`).
 Next: step 6 (134 unread strong mechanic pairs: `mechanic_pairs_to_read.txt`), step 7 (board versions), step 8 (combos
 on this board), step 9 (the seven answers, check script, Stop 1 pages), then `PIPELINE.md` for steps 1-9.
+
+Read `PARALLEL-CHAT.md` first: a parallel chat redid steps 4-9 (board.tsv, combos.tsv, answers.tsv are its output).
