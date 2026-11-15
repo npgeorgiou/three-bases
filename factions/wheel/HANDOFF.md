@@ -1,13 +1,18 @@
 # Handoff for the next wheel chat (14 Nov 2026, evening)
 
-## Third pass (15 Nov 2026): waiting for Kaptain's choice
-- Kaptain: the wheel's mechanics must be turned into this game's own things: new step 7, board versions (guide), from
-  scratch; old candidates only as a check at the end. An all-Immobile faction is allowed now.
-- Combos: only KEEP counts, with a signature mechanic on at least one side (guide step 6; the check fails on WEAK).
-  Recount over all KEEP pairs of each two factions' mechanics (`python3 factions/wheel/work/keep_partners.py`):
-  A12 T10 I6 L5 M7 E7 D9 J7 H4 Q9 G7 F6 R13 N7 P11 C10 S5 B12 K13 O6 (83 faction pairs). 14 factions under 10.
-- STOP1.md is to be rewritten after steps 7-8: one line each for strong in, builds on, board version, wins, removes,
-  holds, feels good, never has; then one line per partner saying HOW the combo plays. Juicier, easy to read.
+## Third pass (15 Nov 2026): at Stop 1 again, waiting for Kaptain
+Read first: `STOP1.md` and `STOP1-1..5.md`. Files: `table.tsv` (five answers: `work/make_answers.py`, Claude's draft),
+`board.tsv` (step 7, `work/make_board.py`), `combos.tsv`; `python3 tools/wheel_table_check.py` (fails only on G: 8 partners).
+- Kaptain: the wheel's mechanics are turned into this game's own things (step 7, from scratch; 4 agents read the
+  library's board games: `work/board_out_1..4.txt`). Duplicates merged: A keeps the Egg (J lost it), M the junk Egg
+  (D lost it), L the guard that steps into an empty front cell (N lost it: N never moves). All-Immobile went to N.
+- Combos: 4 agents judged all 190 pairs on this board (`work/combo_prompt.txt`, outputs `work/combo_out_*.tsv`):
+  15 STRONG, 178 OK, 83 WEAK, 11 NONE, 7 AGAINST. Of the library's KEEP combos only 4 came out STRONG on this board.
+  Partners (STRONG or OK): A18 T18 I14 L16 M15 E14 D14 J16 H14 Q16 G8 F11 R17 N13 P14 C17 S15 B18 K17 O15.
+  The old library-only partner list is `work/partners_library.tsv`.
+- Kaptain: keep the combo ratings; playtests fill combos.tsv's test column, and what doesn't work is dropped.
+- Open: G under 10 (steps 3-6 again for G, or Kaptain's call); round-end effects in board versions (K's marked cell,
+  S's growth) to check against the round-end damage lesson.
 
 ## Second try, at Stop 1 (14 Nov 2026, night). Waiting for Kaptain.
 Read first: `STOP1.md` (the 20 factions in plain words). Files: `table.tsv`, `partners.tsv`, `apart.tsv`, `arguments.tsv` (README.txt); `python3 tools/wheel_table_check.py`.

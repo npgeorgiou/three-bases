@@ -1,0 +1,34 @@
+## C: row hits | strong radii: many=1.8,spends=1.4,kills=1.2 | blind spot now: one chosen
+  SIGNATURE area: my cards hit every enemy in a row, column or area -> many enemies are hit by one card | concepts: aoe_damage@faeria,gwent,inscryption,into_the_breach,runeterra,stormbound,sts1,rows@duelyst,into_the_breach,row_effects,area_templates,board_wipe,multi_target_attack@into_the_breach,runeterra
+  SIGNATURE deathfeed: my units die -> my other units or cards grow from each death | concepts: other_death_trigger@duelyst,faeria,inscryption,marvel_snap,monster_train,runeterra,stormbound,death_count@faeria,marvel_snap,monster_train,runeterra,stormbound
+  extra offering: I let my own unit die -> I gain supply, carry-over, a card or strength (the library's usual sacrifice)
+  extra kill: I destroy an enemy outright, no damage -> its defence does not matter
+  extra selfhurt: I damage my own units -> they act when hit, or something else gains
+  extra sacrifice: I let my own unit die -> an enemy unit dies or is hit (a trade of units, never a gain of supply or strength: that is the Offering)
+## S: full camp | strong radii: many=1.6,supply=1.4,kills=1.4 | blind spot now: pick and copy
+  SIGNATURE countboard: I fill my camp with units -> cards that count my units grow | concepts: countboard*
+  SIGNATURE allyplay: I place allies -> my units already on the grid react to each placement | concepts: on_ally_play@duelyst,faeria,marvel_snap,monster_train
+  extra supply: I gain extra supply or carry-over -> big units come early
+  extra selfhurt: I damage my own units -> they act when hit, or something else gains
+  extra push: I move enemy units -> they leave the cells facing my dots, or stand where my cards hit them
+## B: offerings | strong radii: spends=1.7,supply=1.5,tall=1.4 | blind spot now: draw
+  SIGNATURE offering: I let my own unit die -> I gain supply, carry-over, a card or strength (the library's usual sacrifice) | concepts: sacrifice@duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,on_sacrifice
+  SIGNATURE movement: I move my own units inside my camp -> they reach the cells they need (front cells, beside an ally) | concepts: movement@inscryption,stormbound,swap@runeterra,into_the_breach
+  extra sacrifice: I let my own unit die -> an enemy unit dies or is hit (a trade of units, never a gain of supply or strength: that is the Offering)
+  extra supply: I gain extra supply or carry-over -> big units come early
+  extra hurt: my unit is hit and survives -> it acts
+  extra onkill: my unit kills an enemy -> it gains or acts again
+## K: destroy and return | strong radii: kills=1.6,back=1.4,cheaper=1.2 | blind spot now: defence growth
+  SIGNATURE kill: I destroy an enemy outright, no damage -> its defence does not matter | concepts: kill*,deathtouch
+  SIGNATURE returnhand: I take my unit back to hand -> I place it again and its Place acts again | concepts: return_to_hand@duelyst,gwent,inscryption,marvel_snap,stormbound
+  extra revive: my dead units come back from the discard pile -> their Place acts again
+  extra recycle: my spent cards go from the discard pile back to deck or hand -> I play them again
+  extra cheaper: my cards get cheaper or free -> two cards in one turn's supply
+  extra inhand: my cards grow in hand -> a bigger card for the same supply
+## O: small units together | strong radii: wide=1.9,together=1.5,spends=1.2 | blind spot now: units of cost 6+
+  SIGNATURE tokens: my Place or Death effect puts extra small units on the grid -> they fill cells and front cells cheaply (never round-end seeding: Rootkin) | concepts: summon@duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound
+  SIGNATURE adjacency: my units stand beside, behind or around each other -> they give each other more | concepts: adjacency@runeterra,link_formation,position*
+  extra offering: I let my own unit die -> I gain supply, carry-over, a card or strength (the library's usual sacrifice)
+  extra selfhurt: I damage my own units -> they act when hit, or something else gains
+  extra lastwords: I die -> my Death effect acts (a unit worth more dead than alive)
+  extra leave: my unit leaves the grid (dies, returns, moves) -> my other cards react

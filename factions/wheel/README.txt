@@ -3,10 +3,12 @@ PIPELINE.md     steps 1-5.1: how each result was made, what was script and what 
 RESULTS-1-5.md  the results of steps 1-5.1: radius pairs, the 20 shapes, the order, the 48 mechanics
 HANDOFF.md      for the next wheel chat: what the first try found, why the guide changed, what to reuse
 mechanics.tsv   48 mechanics, one line each, "I do X -> I gain from X", the library concepts that catch its cards, SMALL marks
-STOP1.md        Stop 1 in plain words (made by work/make_stop1.py)
+STOP1.md        Stop 1 in plain words, index of STOP1-1..5.md (made by work/make_stop1.py)
+board.tsv       step 7: each faction's board versions and its faction idea (work/make_board.py)
 table.tsv       Stop 1: the 20 factions (archetype, radii, owned, shared, blind spot, the five answers;
                 answers and archetypes are Claude's draft); made by work/make_table.py
-partners.tsv    Stop 1: per pair of factions the best read combo (KEEP/WEAK, a strong library number), played sequence, source
+combos.tsv      every pair of factions judged on this board: rating STRONG/OK/WEAK/NONE/AGAINST, how it plays, source,
+                test result (filled by playtests; what doesn't work is dropped). Partners = STRONG or OK
 apart.tsv       Stop 1: mechanic pairs real factions keep apart (apart.py), per faction pair and inside one faction
 arguments.tsv   joins with no strong library number, argued from this game's rules (Claude's)
 tools/wheel_table_check.py checks all of these (step 9)

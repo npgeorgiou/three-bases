@@ -1,0 +1,73 @@
+PAIR A L
+PAIR A J
+  LIBRARY KEEP lastwords+revive: My lastwords unit holds a front cell; the enemy kills it in melee and its Death effect acts; my revive card returns it from the discard pile to that cell, Place acts, and it can die for its Death effect again.
+PAIR A F
+PAIR A C
+  LIBRARY KEEP lastwords+offering: My lastwords unit holds a front cell; on my turn my offering card lets it die for supply or a card; its Death effect acts at once, and the enemy cannot stop it, since there are no instant answers.
+PAIR A O
+  LIBRARY KEEP revive+lastwords: My lastwords unit holds a front cell; the enemy kills it in melee and its Death effect acts; my revive card returns it from the discard pile to that cell, Place acts, and it can die for its Death effect again.
+  LIBRARY KEEP lastwords+offering: My lastwords unit holds a front cell; on my turn my offering card lets it die for supply or a card; its Death effect acts at once, and the enemy cannot stop it, since there are no instant answers.
+PAIR T E
+PAIR T Q
+  LIBRARY KEEP fight+strikes: Place a first-striking unit in the front row; a fight card makes it strike a chosen enemy, even a deeper one, and it kills before the enemy hits back. Enemy can only block by filling the front.
+  LIBRARY KEEP spelldmg+push: My push card moves an enemy Ranged unit from his back row into the front cell my spell hits; he can only move it back on his own action; my damage spell hits it there.
+PAIR T N
+  LIBRARY KEEP onkill+deathfeed: My onkill unit in a front cell kills the facing enemy and grows; the enemy kills it back; my deathfeed unit grows extra because a grown unit died, so each trade feeds both.
+PAIR T B
+  LIBRARY KEEP lastwords+offering: My lastwords unit holds a front cell; on my turn my offering card lets it die for supply or a card; its Death effect acts at once, and the enemy cannot stop it, since there are no instant answers.
+PAIR I M
+PAIR I H
+PAIR I R
+  LIBRARY KEEP supply+attach: Place Peni Parker in a lane; attach SP//dr to her; she now gives extra carry-over supply next round, which pays for a big unit deployed early. Without the attach she gives nothing.
+PAIR I S
+PAIR L M
+PAIR L H
+PAIR L R
+  LIBRARY KEEP silence+returnhand: I place a unit whose Place silences the facing enemy unit; the enemy places a new unit; my returnhand unit takes the silencer back to hand; I place it again and silence the new unit.
+  LIBRARY KEEP weaken+returnhand: Place a unit whose Place effect takes strength from an enemy front unit; take it back to hand and place it again: the Place fires again, shrinking the enemy for good. Redeploy costs supply.
+  LIBRARY KEEP supply+attach: Place Peni Parker in a lane; attach SP//dr to her; she now gives extra carry-over supply next round, which pays for a big unit deployed early. Without the attach she gives nothing.
+PAIR L S
+PAIR M E
+PAIR M Q
+PAIR M N
+  LIBRARY KEEP change+returnhand: A returner takes my unit with a Place that takes control of a weak enemy back to hand; the enemy cannot answer on my turn; I place it again and its Place seizes another enemy unit.
+PAIR M B
+  LIBRARY KEEP create+offering: My unit with a death effect that creates a card stands in the lane; enemy may kill it anyway; my offering card sacrifices it for supply, and its death adds a new card to my hand.
+PAIR E J
+PAIR E F
+PAIR E C
+  LIBRARY KEEP bigstrength+deathfeed: Unit whose Death gives my units strength stands in a front cell; enemy kills it; my other unit reaches 5 strength and its big-strength text fires
+PAIR E O
+PAIR D G
+PAIR D P
+PAIR D K
+  LIBRARY KEEP draw+returnhand: My unit with a Place that draws cards stands in the lane; enemy can kill it first; my returnhand card takes it back, I deploy it again for its supply, and its Place draws again.
+  LIBRARY KEEP create+returnhand: Create unit whose Place adds a new card to my hand stands in my lane; enemy can kill it before I act; returnhand unit's Place returns it to hand; I place it again and create another card.
+PAIR J G
+PAIR J P
+PAIR J K
+  LIBRARY KEEP returnhand+kill: Unit whose Place destroys an enemy kills his front unit; return-to-hand card takes it back; I place it again and its Place destroys another enemy
+  LIBRARY KEEP create+returnhand: Create unit whose Place adds a new card to my hand stands in my lane; enemy can kill it before I act; returnhand unit's Place returns it to hand; I place it again and create another card.
+PAIR H F
+  LIBRARY KEEP discard+roundstart: Roundstart unit in my camp adds at round start a copy of a card I played last round to my hand; enemy can kill it; I discard that free copy to a discard card; its discard effect acts.
+PAIR H C
+PAIR H O
+PAIR Q N
+  LIBRARY KEEP ping+returnhand: Ping unit with Place "deal 1 to each enemy unit in this lane" stands in my camp; enemy heals or kills it; returnhand unit's Place takes it back; I place it again and finish the wounded.
+PAIR Q B
+  LIBRARY KEEP push+sacrifice: My bomb unit stands in a front cell; I pull an enemy unit into the cell facing it; enemy cannot move it back before my turn; I let the bomb die and it hits the unit facing it.
+PAIR G R
+  LIBRARY KEEP strikes+attach: Attach an item to my front-row unit, which unlocks that unit's second strike; the enemy can hit or kill the carrier first; it attacks the facing front cell twice and the item's attack effect acts on both strikes.
+PAIR G S
+PAIR F R
+PAIR F S
+PAIR R N
+PAIR R B
+  LIBRARY KEEP attach+supply: Place Peni Parker in a lane; attach SP//dr to her; she now gives extra carry-over supply next round, which pays for a big unit deployed early. Without the attach she gives nothing.
+PAIR N C
+PAIR N O
+PAIR P K
+PAIR C K
+  LIBRARY KEEP kill+returnhand: Unit whose Place destroys an enemy kills his front unit; return-to-hand card takes it back; I place it again and its Place destroys another enemy
+PAIR S O
+  LIBRARY KEEP allyplay+tokens: Allyplay unit in a back cell; token maker placed, its Place puts small units in my front cells; each token placed sets off the allyplay unit again

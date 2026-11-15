@@ -1,0 +1,138 @@
+## A: death and return | strong radii: wide=1.4,spends=1.9,back=1.6 | blind spot now: shields
+  SIGNATURE revive: my dead units come back from the discard pile -> their Place acts again | concepts: revive@duelyst,gwent,marvel_snap,runeterra,stormbound
+  SIGNATURE lastwords: I die -> my Death effect acts (a unit worth more dead than alive) | concepts: death_trigger
+  extra recycle: my spent cards go from the discard pile back to deck or hand -> I play them again
+  extra tokens: my Place or Death effect puts extra small units on the grid -> they fill cells and front cells cheaply (never round-end seeding: Rootkin)
+  extra attach: I attach a unit or item to another unit -> the carrier gets its stats and text
+  extra leave: my unit leaves the grid (dies, returns, moves) -> my other cards react
+## T: duels | strong radii: one=1.6,kills=1.5,spends=1.3 | blind spot now: area hits
+  SIGNATURE fight: I make my unit strike a chosen enemy, or make enemies strike -> removal by my unit's strength | concepts: fight_enemy,forced_attack
+  SIGNATURE onkill: my unit kills an enemy -> it gains or acts again | concepts: on_kill
+  extra offering: I let my own unit die -> I gain supply, carry-over, a card or strength (the library's usual sacrifice)
+  extra deathfeed: my units die -> my other units or cards grow from each death
+  extra lastwords: I die -> my Death effect acts (a unit worth more dead than alive)
+  extra spelldmg: my spells deal damage -> removal from the hand, no unit needed
+## I: big units early | strong radii: supply=1.6,cheaper=1.4,tall=1.8 | blind spot now: tokens
+  SIGNATURE supply: I gain extra supply or carry-over -> big units come early | concepts: resource_gain@duelyst,faeria,inscryption,marvel_snap,stormbound,sts1,base_resource_gain@duelyst,faeria,inscryption,marvel_snap,monster_train,stormbound,sts1
+  SIGNATURE cheaper: my cards get cheaper or free -> two cards in one turn's supply | concepts: cost_reduction@duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1,free_play@inscryption,monster_train,runeterra,stormbound,sts1,cost_set@duelyst,faeria,gwent,marvel_snap,runeterra,stormbound,sts1
+  extra bigstrength: my units have strength 5 or more -> cards that need big strength fire
+  extra hand: I act on the enemy's hand and costs -> his next cards cost more or are gone
+  extra hurt: my unit is hit and survives -> it acts
+  extra onkill: my unit kills an enemy -> it gains or acts again
+## L: weaken and silence | strong radii: stops=2.2,supply=1.2,tall=1.3,tough=1.2 | blind spot now: kill outright
+  SIGNATURE silence: I take an enemy's text away -> its keywords and abilities stop for good | concepts: silence
+  SIGNATURE weaken: I take an enemy's strength away for good -> it stays in its cell but hits for little | concepts: stat_loss@duelyst,faeria,inscryption,marvel_snap,monster_train,stormbound
+  extra supply: I gain extra supply or carry-over -> big units come early
+  extra guard: my unit guards my others -> enemy attacks must go where I choose
+  extra overkill: my unit hits for more than the enemy's defence -> the rest hits the unit behind
+  extra change: I turn an enemy into another unit or take it -> its card is gone without dying
+## M: change and junk | strong radii: disrupts=1.9,cheaper=1.3,cards=1.4 | blind spot now: +strength
+  SIGNATURE change: I turn an enemy into another unit or take it -> its card is gone without dying | concepts: polymorph,steal@duelyst,faeria,gwent,into_the_breach,stormbound
+  SIGNATURE junk: I put useless cards or units on the enemy's side -> his cells and hand fill with nothing | concepts: junk_cards@faeria,marvel_snap,runeterra,stormbound,board_clog@gwent,inscryption,stormbound
+  extra create: I create cards that were not in my deck -> more cards and answers
+  extra discard: I discard my own cards -> the discarded card acts, or my units grow
+  extra pick: I pick cards of my deck -> the card I need comes when I need it
+  extra roundstart: at round start my cards act -> a plan set up last round pays at once
+## E: damage spells | strong radii: spelldmg=1.9,cheaper=1.4,spellpay=1.3 | blind spot now: heal
+  SIGNATURE spelldmg: my spells deal damage -> removal from the hand, no unit needed | concepts: spelldmg*
+  SIGNATURE spellpay: I cast spells -> my units and later spells gain from each spell | concepts: on_spell,spells_played_condition,spell_power@duelyst,runeterra
+  extra cheaper: my cards get cheaper or free -> two cards in one turn's supply
+  extra inhand: my cards grow in hand -> a bigger card for the same supply
+  extra bigstrength: my units have strength 5 or more -> cards that need big strength fire
+  extra hand: I act on the enemy's hand and costs -> his next cards cost more or are gone
+## D: created cards | strong radii: spellpay=2.0,cards=1.5,supply=1.3 | blind spot now: strike twice or first
+  SIGNATURE draw: I draw extra cards -> more choices each round | concepts: draw
+  SIGNATURE create: I create cards that were not in my deck -> more cards and answers | concepts: generate_cards
+  extra spellpay: I cast spells -> my units and later spells gain from each spell
+  extra junk: I put useless cards or units on the enemy's side -> his cells and hand fill with nothing
+  extra cheaper: my cards get cheaper or free -> two cards in one turn's supply
+  extra discard: I discard my own cards -> the discarded card acts, or my units grow
+## J: pick and copy | strong radii: picks=1.9,back=1.4,cards=1.2 | blind spot now: silence
+  SIGNATURE pick: I pick cards of my deck -> the card I need comes when I need it | concepts: tutor,selection@gwent,sts1,retain
+  SIGNATURE copy: I copy my own cards -> a strong card twice | concepts: copy
+  extra revive: my dead units come back from the discard pile -> their Place acts again
+  extra returnhand: I take my unit back to hand -> I place it again and its Place acts again
+  extra recycle: my spent cards go from the discard pile back to deck or hand -> I play them again
+  extra create: I create cards that were not in my deck -> more cards and answers
+## H: discard and return | strong radii: back=1.7,textdmg=1.5,cards=1.2 | blind spot now: guard
+  SIGNATURE discard: I discard my own cards -> the discarded card acts, or my units grow | concepts: discard@duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,stormbound,sts1,on_discard
+  SIGNATURE recycle: my spent cards go from the discard pile back to deck or hand -> I play them again | concepts: recycle@gwent,marvel_snap,sts1
+  extra draw: I draw extra cards -> more choices each round
+  extra junk: I put useless cards or units on the enemy's side -> his cells and hand fill with nothing
+  extra ping: my units' text and spells deal small fixed damage, often or many times (never round end: Barrage) -> wounded and small enemies are finished
+  extra area: my cards hit every enemy in a row, column or area -> many enemies are hit by one card
+## Q: push and ping | strong radii: textdmg=1.8,strikes=1.3,one=1.5 | blind spot now: return to hand
+  SIGNATURE ping: my units' text and spells deal small fixed damage, often or many times (never round end: Barrage) -> wounded and small enemies are finished | concepts: ping,damage_over_time
+  SIGNATURE push: I move enemy units -> they leave the cells facing my dots, or stand where my cards hit them | concepts: forced_movement@duelyst,into_the_breach,monster_train,stormbound,bounce_enemy
+  extra strikes: my unit strikes twice or first -> every paid attack does more, it survives the trade
+  extra onattack: my unit attacks -> its attack has an effect besides the hit
+  extra fight: I make my unit strike a chosen enemy, or make enemies strike -> removal by my unit's strength
+  extra spelldmg: my spells deal damage -> removal from the hand, no unit needed
+## G: first strike | strong radii: strikes=1.8,grows=1.5,strong=1.4 | blind spot now: damage spells
+  SIGNATURE strikes: my unit strikes twice or first -> every paid attack does more, it survives the trade | concepts: multi_attack,first_strike
+  SIGNATURE onattack: my unit attacks -> its attack has an effect besides the hit | concepts: on_attack@duelyst,faeria,monster_train,stormbound,on_fight
+  extra lanes: my cards act in another lane -> one lane's strength or supply helps another
+  extra fight: I make my unit strike a chosen enemy, or make enemies strike -> removal by my unit's strength
+  extra bigstrength: my units have strength 5 or more -> cards that need big strength fire
+  extra push: I move enemy units -> they leave the cells facing my dots, or stand where my cards hit them
+## F: heal and grow | strong radii: heals=1.8,grows=1.3,growsdef=1.5,tough=1.3 | blind spot now: offering
+  SIGNATURE heal: I restore my units' defence -> wounded units hold the front cells longer | concepts: heal@gwent,monster_train,regeneration@monster_train,runeterra
+  SIGNATURE roundstart: at round start my cards act -> a plan set up last round pays at once | concepts: turn_start@duelyst,faeria,runeterra,stormbound
+  extra overkill: my unit hits for more than the enemy's defence -> the rest hits the unit behind
+  extra adjacency: my units stand beside, behind or around each other -> they give each other more
+  extra deathfeed: my units die -> my other units or cards grow from each death
+  extra hurt: my unit is hit and survives -> it acts
+## R: riders | strong radii: back=1.5,grows=1.6,growsdef=1.4 | blind spot now: ping
+  SIGNATURE hide: my unit can't be targeted or hit -> enemy attacks and spells can't reach it | concepts: stealth,immunity@duelyst,faeria,gwent
+  SIGNATURE attach: I attach a unit or item to another unit -> the carrier gets its stats and text | concepts: merge_attach
+  extra returnhand: I take my unit back to hand -> I place it again and its Place acts again
+  extra revive: my dead units come back from the discard pile -> their Place acts again
+  extra countboard: I fill my camp with units -> cards that count my units grow
+  extra overkill: my unit hits for more than the enemy's defence -> the rest hits the unit behind
+## N: guard and shield | strong radii: protects=1.8,spends=1.2,tough=1.5 | blind spot now: movement
+  SIGNATURE shield: I give shields or armour -> the next hit does less or nothing | concepts: shield@duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,damage_reduction@duelyst,faeria,gwent,inscryption,monster_train,runeterra,block_armor@gwent,monster_train
+  SIGNATURE guard: my unit guards my others -> enemy attacks must go where I choose | concepts: taunt
+  extra deathfeed: my units die -> my other units or cards grow from each death
+  extra hide: my unit can't be targeted or hit -> enemy attacks and spells can't reach it
+  extra returnhand: I take my unit back to hand -> I place it again and its Place acts again
+## P: huge units | strong radii: tall=1.7,spends=1.4,strikes=1.3,strong=1.4 | blind spot now: cheaper cards
+  SIGNATURE overkill: my unit hits for more than the enemy's defence -> the rest hits the unit behind | concepts: excess_damage,piercing
+  SIGNATURE bigstrength: my units have strength 5 or more -> cards that need big strength fire | concepts: stat_condition@runeterra,combat_damage_threshold
+  extra strikes: my unit strikes twice or first -> every paid attack does more, it survives the trade
+  extra lastwords: I die -> my Death effect acts (a unit worth more dead than alive)
+  extra fight: I make my unit strike a chosen enemy, or make enemies strike -> removal by my unit's strength
+  extra push: I move enemy units -> they leave the cells facing my dots, or stand where my cards hit them
+## C: row hits | strong radii: many=1.8,spends=1.4,kills=1.2 | blind spot now: one chosen
+  SIGNATURE area: my cards hit every enemy in a row, column or area -> many enemies are hit by one card | concepts: aoe_damage@faeria,gwent,inscryption,into_the_breach,runeterra,stormbound,sts1,rows@duelyst,into_the_breach,row_effects,area_templates,board_wipe,multi_target_attack@into_the_breach,runeterra
+  SIGNATURE deathfeed: my units die -> my other units or cards grow from each death | concepts: other_death_trigger@duelyst,faeria,inscryption,marvel_snap,monster_train,runeterra,stormbound,death_count@faeria,marvel_snap,monster_train,runeterra,stormbound
+  extra offering: I let my own unit die -> I gain supply, carry-over, a card or strength (the library's usual sacrifice)
+  extra kill: I destroy an enemy outright, no damage -> its defence does not matter
+  extra selfhurt: I damage my own units -> they act when hit, or something else gains
+  extra sacrifice: I let my own unit die -> an enemy unit dies or is hit (a trade of units, never a gain of supply or strength: that is the Offering)
+## S: full camp | strong radii: many=1.6,supply=1.4,kills=1.4 | blind spot now: pick and copy
+  SIGNATURE countboard: I fill my camp with units -> cards that count my units grow | concepts: countboard*
+  SIGNATURE allyplay: I place allies -> my units already on the grid react to each placement | concepts: on_ally_play@duelyst,faeria,marvel_snap,monster_train
+  extra supply: I gain extra supply or carry-over -> big units come early
+  extra selfhurt: I damage my own units -> they act when hit, or something else gains
+  extra push: I move enemy units -> they leave the cells facing my dots, or stand where my cards hit them
+## B: offerings | strong radii: spends=1.7,supply=1.5,tall=1.4 | blind spot now: draw
+  SIGNATURE offering: I let my own unit die -> I gain supply, carry-over, a card or strength (the library's usual sacrifice) | concepts: sacrifice@duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,on_sacrifice
+  SIGNATURE movement: I move my own units inside my camp -> they reach the cells they need (front cells, beside an ally) | concepts: movement@inscryption,stormbound,swap@runeterra,into_the_breach
+  extra sacrifice: I let my own unit die -> an enemy unit dies or is hit (a trade of units, never a gain of supply or strength: that is the Offering)
+  extra supply: I gain extra supply or carry-over -> big units come early
+  extra hurt: my unit is hit and survives -> it acts
+  extra onkill: my unit kills an enemy -> it gains or acts again
+## K: destroy and return | strong radii: kills=1.6,back=1.4,cheaper=1.2 | blind spot now: defence growth
+  SIGNATURE kill: I destroy an enemy outright, no damage -> its defence does not matter | concepts: kill*,deathtouch
+  SIGNATURE returnhand: I take my unit back to hand -> I place it again and its Place acts again | concepts: return_to_hand@duelyst,gwent,inscryption,marvel_snap,stormbound
+  extra revive: my dead units come back from the discard pile -> their Place acts again
+  extra recycle: my spent cards go from the discard pile back to deck or hand -> I play them again
+  extra cheaper: my cards get cheaper or free -> two cards in one turn's supply
+  extra inhand: my cards grow in hand -> a bigger card for the same supply
+## O: small units together | strong radii: wide=1.9,together=1.5,spends=1.2 | blind spot now: units of cost 6+
+  SIGNATURE tokens: my Place or Death effect puts extra small units on the grid -> they fill cells and front cells cheaply (never round-end seeding: Rootkin) | concepts: summon@duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound
+  SIGNATURE adjacency: my units stand beside, behind or around each other -> they give each other more | concepts: adjacency@runeterra,link_formation,position*
+  extra offering: I let my own unit die -> I gain supply, carry-over, a card or strength (the library's usual sacrifice)
+  extra selfhurt: I damage my own units -> they act when hit, or something else gains
+  extra lastwords: I die -> my Death effect acts (a unit worth more dead than alive)
+  extra leave: my unit leaves the grid (dies, returns, moves) -> my other cards react

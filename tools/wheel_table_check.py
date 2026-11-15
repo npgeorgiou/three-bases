@@ -52,21 +52,34 @@ for k in CIRC:
     while st:
         for y in g[st.pop()]-seen: seen.add(y); st.append(y)
     if len(seen)<len(A[k]): fail(f'{k}: mechanics not joined: {sorted(set(A[k])-seen)}')
-# 4. combos: read verdict KEEP only, mechanics belong to the two factions, one of them owned, a library number; 10+ partners
+# 4. combos (combos.tsv): every pair of factions judged once on this board; a library combo names a KEEP verdict;
+#    partners = STRONG or OK combos (WEAK, NONE, AGAINST don't count); 10+ partners
 V={}
 for p in [l.rstrip('\n').split('\t') for l in open(R+'work/mechanic_pair_verdicts.tsv')]:
     a,b=p[0].split('+'); V[(a,b)]=V[(b,a)]=p[2]
-P=collections.Counter()
-for x,y,c,v,*_ in tsv(R+'partners.tsv'):
-    a,b=c.split('+')
-    if V.get((a,b))!=v: fail(f'{x}{y}: {c} verdict {v} not in the read verdicts')
-    if v!='KEEP': fail(f'{x}{y}: {c} is {v}; only KEEP counts')
-    if a not in A[x] or b not in A[y] or not (a in OWN[x] or b in OWN[y]): fail(f'{x}{y}: {c} not their mechanics')
-    n=ML.get((a,b),(0,0))
-    if not (strong(n) or n[1]>=1.5): fail(f'{x}{y}: {c} library number {n} too low and no argument')
-    P[x]+=1; P[y]+=1
+P=collections.defaultdict(set); seen=set()
+for x,y,r,c,how,src,*_ in tsv(R+'combos.tsv'):
+    seen.add(frozenset((x,y)))
+    if r not in ('STRONG','OK','WEAK','NONE','AGAINST'): fail(f'{x}{y}: rating {r}')
+    if r!='NONE' and not how.strip(): fail(f'{x}{y}: no played sequence')
+    if 'LIBRARY KEEP' in src:
+        ab=src.split('LIBRARY KEEP')[1].split()[0].strip(',;')
+        if '+' in ab and V.get(tuple(ab.split('+')[:2]))!='KEEP': fail(f'{x}{y}: {ab} is not a KEEP verdict')
+    if r in ('STRONG','OK'): P[x].add(y); P[y].add(x)
+for x in CIRC:
+    for y in CIRC:
+        if x<y and frozenset((x,y)) not in seen: fail(f'{x}{y}: pair not judged')
 for k in CIRC:
-    if P[k]<10: fail(f'{k}: {P[k]} partners')
+    if len(P[k])<10: fail(f'{k}: {len(P[k])} partners (STRONG or OK)')
+# 4b. board versions (board.tsv, step 7): 1-3 per faction, each on one of its mechanics, none shared, one idea each
+B=collections.defaultdict(list); texts=set()
+for k,m,thing,ver,src,nr in tsv(R+'board.tsv'):
+    if m=='IDEA': continue
+    if m not in A[k]: fail(f'{k}: board version on {m}, not its mechanic')
+    if ver in texts: fail(f'{k}: board version shared: {ver[:40]}')
+    texts.add(ver); B[k].append(m)
+for k in CIRC:
+    if not 1<=len(B[k])<=3: fail(f'{k}: {len(B[k])} board versions')
 # 5. the five answers: all different; removal by one of its own mechanics; blind spot outside what the faction owns, uses and its radii; all blind spots different
 for c,name in ((3,'archetype'),(9,'identity'),(10,'removal'),(12,'holding'),(13,'play'),(8,'blind spot')):
     d=collections.Counter(T[k][c] for k in CIRC)
@@ -81,5 +94,5 @@ for k in CIRC:
         elif b not in SIZE: fail(f'{k}: blind spot {b} is no mechanic')
 for s in info: print('note:',s)
 for s in fails: print('FAIL',s)
-print('partners:',' '.join(f'{k}{P[k]}' for k in CIRC))
+print('partners:',' '.join(f'{k}{len(P[k])}' for k in CIRC))
 print('PASS' if not fails else f'FAILED ({len(fails)})')
