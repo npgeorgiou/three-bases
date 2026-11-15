@@ -13,7 +13,7 @@ Part of `factions/START_DESIGN.md` (read that first, whole; then parts 2, 3 and 
 - Before any card, count how many cards each mechanic can give: 100 must fit without filler.
 - Never turn each fact of the theme into its own small rule. "Bombs" and "gears" are a few cards inside a mechanic.
 - No unit types or card kinds that split the deck (no "crew", no Yin/Yang).
-- Kaptain's own ideas (Projectiles, an Immobile faction, Mark, back-in-time) are a few cards or one mechanic, never a
+- Kaptain's own ideas (Projectiles, Mark, back-in-time) are a few cards or one mechanic, never a
   whole faction.
 - A mechanic that limits the player (an order to follow, a card kind, a position) must pay back a lot, or nobody plays it.
 - Strong at / a little / weak at, written in the entry. No card gives the faction what its weak list says (a spell faction
