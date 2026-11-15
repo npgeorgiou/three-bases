@@ -58,6 +58,7 @@ uses changes, and then only for the parts that changed. Each step says what a sc
   3 factions) -> `work/assign.tsv`. Checked by `work/check_assign.py`.
 
 ## Step 6. Combos between mechanics (15 Nov 2026)
+- From 15 Nov 2026 on, step 6 is numbers only (Kaptain): the reads below were done before that and are not redone.
 - Numbers: `links.tsv` (step 4). Agents read 4 real card pairs per strong mechanic pair (8 if the first 4 say KEEP):
   is it a real combo? -> `work/mechanic_pair_verdicts.tsv`. Each pair is read once: only pairs the new assignment
   needed and nobody had read were read (127).
