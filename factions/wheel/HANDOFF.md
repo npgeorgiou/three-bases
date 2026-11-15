@@ -1,9 +1,101 @@
-# Where the wheel stands
-Steps 1-9 done. Stop 1 is ready for Kaptain: `STOP1.md` and `STOP1-1..5.md` (made by `work/make_stop1.py` from
-`answers.tsv`, `board.tsv`, `combos.tsv`); `python3 tools/wheel_table_check.py` passes. How each step was made:
-`PIPELINE.md`. `PARALLEL-CHAT.md` says how a parallel chat redid steps 4-9 on 15 Nov.
-Open for Stop 1: some "removes" answers don't remove (A: an Egg, L: silence only, H: deck order); round-end damage in
-C's and I's front removal (LESSONS: round-end damage on many cards is too strong). Kaptain decides.
-Next: Kaptain's Stop 1, then one chat per faction (START_DESIGN.md).
+# Handover: fix the links, then design the 20 factions again (written 15 Nov 2026)
+One file for the next chat. Read it whole first, then CLAUDE.md's rules. Do Part 1, then Part 2, in order. Part 3 is
+what Kaptain decided and what was learned: never undo it. Clone with the library (`git sparse-checkout disable`).
 
-Read `PARALLEL-CHAT.md` first: a parallel chat redid steps 4-9 (board.tsv, combos.tsv, answers.tsv are its output).
+## Rules for this work (Kaptain)
+- **No card reading. Ever.** No agent and no chat reads card texts to judge them. The database already holds what every
+  card does; scripts query it. The only judgment by agents left is in Part 2 step 7 and 8 (board versions, combos on
+  this board), and it reads no cards.
+- Before any agent runs: say how many, the cost (about 110k tokens each) and wait for Kaptain's OK.
+- Plan first, in plain words with one example; build only after "go". One question at a time.
+- Docs are written cleanly, as if things had always been this way: no history, no "formerly", no archaeology.
+
+## Part 1. Fix the links (library/cards_db)
+Read first: `library/cards_db/START_DATABASE.md` Part 1 (rules for changing the database), `LINE_RULES.md` only if a line
+itself must change (it must not here).
+
+### The problem, with real cards
+A link joins two cards of one game when a rule in `network.py` matches an effect of card A with an effect of card B.
+The link is stored as (game, a, b, phrase, weight, site); it does NOT store which effect of each card made it. The wheel
+(`mechanics_wheel.py links` and `--radii`) then takes all cards of mechanic A and all cards of mechanic B (by their
+concepts) and counts every link between them. A card has many effects, so links made by OTHER effects are counted:
+- Marvel Snap: Ghost Rider ("Bring back one of your discarded cards to this location") x Vibro-Shock Gauntlets ("+2 Power
+  to your highest card here. +1 Energy next turn"). Link: "puts your units there, and Gauntlets act on units in its
+  lane". It was made by the +2 Power, but it was counted as "comes back + extra supply", because the Gauntlets also
+  give Energy.
+- Slay the Spire: Ritual Dagger ("Deal 15 damage; if it kills, grows") x Nunchaku ("every 10 Attacks, gain 1 energy").
+  Link: "is an Attack it needs played for its count". Counted as "gains when it kills + supply"; it has nothing to do
+  with killing.
+- Monster Train: Mine Collapse x Kindle: "more energy: a bigger X". Counted as "kill + supply".
+So the database is right; the count gives links to the wrong mechanics. Earlier chats then had agents read card pairs to
+throw such pairs out (that reading is now forbidden), and the readers looked as if they disagreed with the database: they
+answered "is this a strong combo?", the database answers "can A set off B?". Both were right, to different questions.
+Tested: the link's kind does not tell real from false (`factions/wheel/work/kind_test.py`: KEEP and DROP pairs both
+~95% "combo" kinds; correlation with the readers' rate 0.09). Only storing the effect fixes it.
+
+### The fix
+1. Every link also stores the ability of A and the ability of B that made it (`ability.id`; each ability's rows in
+   `flat_do` / `flat_if` carry `concept`, so the wheel can tell which mechanic made the link). Where a rule uses no
+   ability (a printed keyword, a type, a stat, a game rule), store that instead (keyword id, 'type', 'rule'), never NULL
+   without a reason.
+2. Where: links are drawn by 68 rules in `network.py` (3,284 lines); `Out.append` already notes each rule's code line in
+   `SITE`. Each rule must pass its two effects on. The 6 biggest rules make about 70% of the links; do them first and
+   show Kaptain (sites by link count, 15 Nov 2026: line 737 = 128k links ("A makes it happen, B reacts or needs it",
+   with 732 and 736 next to it), 1954 = 41k, 789 = 23k, 1628 = 20k, 1619 = 14k, 2243 = 12k; site 0 = 32k links with no
+   site: find why). Line numbers move when the file changes: find them by `SITE`.
+3. `links.py` writes the new columns into links.sqlite (table link: add `a_ab`, `b_ab`; same rows as now).
+4. Proof nothing else changed: dump every link before and after (`dump_lines.py`; the "before" from the code just
+   before the change) and compare by script: the same pairs, phrases and weights. Only the new columns may differ.
+5. Many test cases (Kaptain: "important, add many"), in `cases/links.tsv` with new columns for the expected ability or
+   concept on each side: Ghost Rider x Gauntlets (A: revive, B: the +2 Power, never energy); Ritual Dagger x Nunchaku
+   (A: is an Attack, never kill); Mine Collapse x Kindle (never kill); at least one case per rule changed (about 70),
+   one per game, and one per similar error found. `links.py` runs the cases at the end.
+6. Known before this work: lk96 (Monster Train, Vinemother -> Wyldenten) already fails; leave it.
+Costs: `links.py` about 4 minutes; `check_all.py` 7 (start in background mode, START_DATABASE rule 4).
+
+### Then the wheel's count
+`library/cards_db/mechanics_wheel.py` (`links`, `links --radii`, `measure`): a link counts for mechanic X only when its
+A-side (or B-side) ability has one of X's concepts (`mechanics.tsv` column 3; radii: `axes.SPOKES`). A test case for each
+example above (the pair must not count). Then the docs (Part 2 step 0).
+
+## Part 2. Design the 20 factions again
+Steps of `factions/START_DESIGN-1-wheel.md`. What stays and what is redone:
+0. Docs first, cleanly: `START_DESIGN-1-wheel.md` (step 6 = numbers only; no reading anywhere), `PIPELINE.md`,
+   `START_DESIGN-4-asking.md`, `library/README.md`, START_DATABASE's links part (the new columns). Remove the reading
+   files no step uses any more (`work/radius_verdicts.tsv`, `work/mechanic_pair_verdicts.tsv`, the reading prompts) and
+   the check script's use of them.
+1. Radii: STAY (shares of cards, no links).
+2. Radii that work together: REDO, numbers only (`mechanics_wheel.py links --radii`).
+3. The 20 shapes: re-check every join with the new numbers (`tools/wheel_table_check.py`); change only shapes whose
+   join falls away (`axes.py --near` for the check against real factions).
+4. Mechanics list: STAYS (Kaptain agreed it at Stop A: `STOPA.md`, `mechanics.tsv`, 53 mechanics).
+5. Each faction's mechanics: REDO by script (`work/signatures.py --write`, `work/borrow.py --write`, `check_assign.py`).
+6. Links between mechanics: numbers only (`mechanics_wheel.py links`).
+7. Board versions: only for factions whose mechanics changed. Sources from a script query (board-game cards with the
+   mechanic's concept and a board concept), never read.
+8. Combos on this board: only the pairs that decide something (a faction near 10 partners). Agents, Kaptain's OK first.
+9. Seven answers, check script, Stop 1 pages (`work/make_stop1.py`). Then Stop 1 with Kaptain.
+If many factions change, Kaptain may say redo 7-9 for all: ask.
+
+## Part 3. What Kaptain decided and what was learned (never lose)
+- The game's own things (agreed): dots and front cells, rows (front/middle/back), columns, 3 lanes, the 3x3 camp,
+  shapes and size, supply per lane, carry-over, round start and round end, one action per turn, moving and turning,
+  reach (melee, Pike, Ranged), strikes and fixed damage, the hand and the discard pile, Immobile. Not in the game:
+  player health, answers on the enemy's turn, supply that grows by itself, unit types, who acts first (random in round
+  1, then alternating), attacked units hitting back (only Riposte), placing at round end.
+- The wheel is general; step 7 turns each faction's mechanics into these own things, from scratch. The old candidates
+  (commit d4a3de0^, `factions/3-candidates/`, e.g. C17 Dot Brokers, C12 Monoliths) are read last, only to check no idea
+  Kaptain liked is missing.
+- An all-Immobile faction is allowed (the old rule against it is deleted).
+- Each faction answers seven questions, one line each: how it wins, how it removes the front unit, how it MAINLY removes
+  back-row units, how it MAINLY acts between lanes, how it holds a base, its best Place effect, its blind spot.
+- Stop 1 pages: juicy and easy to read; one line per answer; one line per partner faction saying HOW the combo plays.
+- Combos: judged once, on this board (step 8): STRONG / OK / WEAK / NONE / AGAINST. Partners = STRONG or OK; 10+ each.
+  `combos.tsv` has a test column; playtests fill it and what doesn't work is dropped.
+- Things that were missing and must stay in: G = grows when hurt + I damage my own units; steal; kill spells; placing
+  units in the enemy camp; bringing back without an Egg. Only one Egg in the whole wheel: look-alikes are compared by
+  what the card does, not by mechanic name. "Strike first" is not a mechanic. "Ping" is a library word: say "small hits".
+- The check script fails on words that break the game's rules ("move first", "strikes first", "placed at round end").
+- Earlier chats wasted tokens on readers and on running everything in one long chat: keep chats short, scripts first.
+- Where the work stood: steps 1-9 were done once on the old counts (STOP1.md and STOP1-1..5.md exist, check passes);
+  they will be replaced by Part 2.

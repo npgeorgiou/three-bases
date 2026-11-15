@@ -7,8 +7,7 @@ answers.tsv     step 9: the seven answers per faction
 mechanics.tsv   the 53 mechanics: "I do X -> I gain from X", the library concepts that catch their cards, NEW RULE, size
 arguments.tsv   joins with no strong library number, argued from this game's rules (Claude's)
 PIPELINE.md     how every step was made (a record, not a to-do)
-HANDOFF.md      where the work stands, for the next chat
-PARALLEL-CHAT.md what a parallel chat redid (steps 4-9), for the wheel chat to take over
+HANDOFF.md      the next chat's whole job: fix the links, then design the factions again; all decisions
 work/           inputs and scripts: shapes.tsv (the 20 shapes), radius_verdicts.tsv, mechanic_pair_verdicts.tsv
                 (agents' reads of real card pairs), concept_fixes_*.tsv, newmech_verdicts*.tsv, assign.tsv, borrow.py,
                 check_assign.py, the agents' prompts
