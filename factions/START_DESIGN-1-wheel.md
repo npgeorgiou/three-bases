@@ -102,7 +102,8 @@ they are not mechanics.
 ## Token budget
 Agents use about 9 of every 10 tokens. So:
 - At most 4 agents at once, each with about 20 sections; each writes its lines to its file as it goes, so a stop loses
-  nothing. Before a big batch, count the sections and say how many agents it needs.
+  nothing. Before a big batch, count the sections and tell Kaptain how many agents it needs and their cost (about
+  110k tokens each), and wait for his OK.
 - Card-pair reads: 4 pairs first, 8 only for pairs that come back KEEP.
 - Concept fixes: give the agent the counts per game in its file, so it doesn't run queries itself.
 - Write the rules of a step down before doing it, and let a script check each try.
