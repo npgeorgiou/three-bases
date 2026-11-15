@@ -7,3 +7,4 @@ mechanic	sacrifice	offering	B	both are "my unit dies"; the Offering gains supply
 mechanic	pick	copy	J	the card I pick from my deck is the one I copy, so the strong card comes twice; joined by argument, decks under 1.5
 mechanic	create	copy	J	a created card is copied like any card in hand; joined by argument, decks under 1.5
 radius	supply	tall	L	cards 1.4: extra supply and carry-over are what a 6-supply unit needs to land in round 2 (start carry-over 4, at most 5)
+mechanic	selfhurt	hurt	G	I damage my own units, so they are hit and survive: the hits "grows when hurt" needs come from my own cards, not only from the enemy

@@ -20,8 +20,6 @@ ok=lambda n:n[0]>=1.5 or (n[0]>=1.2 and n[1]>=1.2) or n[1]>=1.5
 ARG={(l.split('\t')[1],l.split('\t')[2]) for l in list(open(F+'arguments.tsv'))[1:] if l.startswith('mechanic')}
 ARG|={(b,a) for a,b in ARG}
 linked=lambda a,b: ok(LK.get((a,b),(0,0))) or (a,b) in ARG
-# the mechanic each faction's removal uses (table.tsv, Claude's draft): always kept
-RK=dict(A='lastwords',T='fight',I='supply',L='weaken',M='change',E='spelldmg',D='create',J='pick',H='discard',Q='push',G='strikes',F='heal',R='attach',N='guard',P='overkill',C='area',S='countboard',B='sacrifice',K='kill',O='adjacency')
 MIN,MAX,CAP=25,4,3  # CAP: an extra in at most 3 factions (Kaptain, 15 Nov 2026); factions with the fewest choices pick first
 # partners second: a tie on radii is broken by how many factions a read combo (KEEP/WEAK, strong number) joins it to
 V=set()
@@ -36,12 +34,13 @@ for k in OWN:
         if m in OWN[k]: continue
         r=max([(M[m].get(x,0),x) for x in SHAPE[k]])
         lk=[o for o in OWN[k] if linked(m,o)]
-        if r[0]>=MIN and lk: c.append((r[0],partners(k,m),m,r[1],lk))
+        if r[0]>=15 and lk: c.append((r[0],partners(k,m),m,r[1],lk))
     c.sort(reverse=True); CANDS[k]=[(r,m,x,lk) for r,_,m,x,lk in c]
 used={}; PICK={}
 for k in sorted(OWN,key=lambda k:len(CANDS[k])):
-    c=CANDS[k]; full=lambda t: used.get(t[1],0)>=CAP and t[1]!=RK[k]
-    pick=[t for t in c if t[1]==RK[k]]+[t for t in c if t[1]!=RK[k] and not full(t)]; pick=pick[:MAX]
+    c=CANDS[k]; full=lambda t: used.get(t[1],0)>=CAP
+    pick=[t for t in c if t[0]>=MIN and not full(t)][:MAX]
+    if len(pick)<2: pick+=[t for t in c if t[0]<MIN and not full(t)][:2-len(pick)]  # fallback: 15%+ on its radii
     # every signature mechanic joined to the other or to an extra; else the last extra gives way to one linked to it
     for o in OWN[k]:
         other=[x for x in OWN[k] if x!=o][0]
