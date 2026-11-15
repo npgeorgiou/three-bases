@@ -1,7 +1,8 @@
-# The wheel pipeline, steps 1-5.1: how each result was made and how to redo it
+# The wheel pipeline, steps 1-9: how each result was made
 Commands run from `library/cards_db/` unless they start with `factions/`.
 Before anything: `python3 links.py` (about 4 minutes; makes links.sqlite, not in git; every number below needs it).
-Each step says what a script did and what was judgment (by Claude or by agents), so a redo knows what to repeat.
+This is a record of what was done, not a to-do: nothing here is read again. A step is redone only when what it
+uses changes, and then only for the parts that changed. Each step says what a script did and what was judgment.
 
 ## Step 1. The radii (made 9-10 Nov 2026, before the wheel chats)
 - What: 24 radii (`SPOKES` in axes.py: key, name, the library concepts that count a card for it). A faction's value
@@ -29,13 +30,7 @@ Each step says what a script did and what was judgment (by Claude or by agents),
 - Output: `factions/wheel/work/shapes.tsv` (letter A-T, radius=value list). Why each shape was chosen is not saved.
 - Checked by: `python3 tools/wheel_table_check.py` (from the repo root; 3-6 radii, each joined, no two shapes the same).
 
-## Step 4. The order on the circle (second try; strict neighbours dropped by Kaptain, 15 Nov 2026)
-- Script: `cd factions/wheel/work && python3 circle.py`. Score of two factions = the average step-2 number over
-  every radius of one with every radius of the other (strength, defence, position: skipped; DROP pairs = 1). It tries
-  400 random orders, improves each by reversing pieces, keeps the order with the highest sum of side-by-side scores.
-- Output (printed, written by hand into the files): A T I L M E D J H Q G F R N P C S B K O.
-
-## Step 5.1. The mechanics list (second try)
+## Step 4. The mechanics list (second try; checked again 15 Nov 2026)
 - Start: the first try's 44 mechanics (`HANDOFF.md`, "What can be reused"), plus offering, roundstart, leave, hide,
   bigstrength: 48 mechanics, one line each, never two merged (Kaptain).
 - File: `factions/wheel/mechanics.tsv`, columns: key; sentence "I do X -> I gain from X"; concepts (the library
@@ -52,11 +47,43 @@ Each step says what a script did and what was judgment (by Claude or by agents),
   `python3 mechanics_wheel.py links` -> `wheel/links.tsv` (per pair of mechanics, the same two numbers as step 2).
 - Not saved: the agents' prompt of this step.
 
+- Rule and archetype check (15 Nov 2026): each mechanic checked against this game's rules (summary/03-07); dropped:
+  strike twice or first, lock for good, who acts first; added: steal, place units in the enemy camp, attack the turn
+  it is placed, my unit acts again, mark an enemy, hit from afar. Agents read 8 real cards of each new or changed
+  mechanic only (`work/newmech_verdicts*.tsv`). 53 mechanics; Kaptain agreed them at Stop A (`STOPA.md`).
+
+## Step 5. Each faction's mechanics (15 Nov 2026)
+- Scripts, no reading: `cd factions/wheel/work && python3 signatures.py --write` (2 signatures per faction, best fit,
+  each fits its faction 0.8+, the two linked) then `python3 borrow.py --write` (2-4 extras by fit, each in at most
+  3 factions) -> `work/assign.tsv`. Checked by `work/check_assign.py`.
+
+## Step 6. Combos between mechanics (15 Nov 2026)
+- Numbers: `links.tsv` (step 4). Agents read 4 real card pairs per strong mechanic pair (8 if the first 4 say KEEP):
+  is it a real combo? -> `work/mechanic_pair_verdicts.tsv`. Each pair is read once: only pairs the new assignment
+  needed and nobody had read were read (127).
+
+## Step 7. Board versions (15 Nov 2026)
+- Agents (`work/board_prompt.txt`), library board games first -> `board.tsv` (2-3 versions, a back-row line, a
+  between-lanes line and one idea per faction; look-alikes removed by what the card does).
+
+## Step 8. Combos on this board (15 Nov 2026)
+- Agents (`work/combo_prompt.txt`) rate all 190 pairs of factions -> `combos.tsv` (STRONG/OK/WEAK/NONE/AGAINST, how it
+  plays, source, a test column for playtests). Partners = STRONG or OK.
+
+## Step 9. The seven answers and Stop 1 (15 Nov 2026)
+- An agent (`work/answers_prompt.txt`) -> `answers.tsv`; Claude fixed three answers that broke the rules.
+  `python3 tools/wheel_table_check.py` (repo root) checks steps 2-9, including words that break this game's rules.
+  `python3 factions/wheel/work/make_stop1.py` writes `STOP1.md` and `STOP1-1..5.md`.
+
 ## Files, in order
 | step | input | script | output |
 |---|---|---|---|
 | 1 | cards.sqlite, links.sqlite | axes.py | axes.tsv, factions/wheel-axes.html |
 | 2 | links.sqlite | mechanics_wheel.py links --radii / pairs --radii, agents | wheel/radius_links.tsv, work/radius_verdicts.tsv |
 | 3 | step 2 | by hand, axes.py --near | work/shapes.tsv, arguments.tsv |
-| 4 | steps 2-3 | work/circle.py | the order (in work/assign.tsv's letters, check_assign.py) |
-| 5.1 | mechanics.tsv | mechanics_wheel.py cards, agents, measure, links | mechanics.tsv, work/concept_fixes_*.tsv, wheel/measured.tsv, wheel/links.tsv |
+| 4 | mechanics.tsv | mechanics_wheel.py cards, agents, measure, links | mechanics.tsv, work/concept_fixes_*.tsv, wheel/measured.tsv, wheel/links.tsv |
+| 5 | steps 3-4 | work/signatures.py, work/borrow.py | work/assign.tsv |
+| 6 | links.tsv | mechanics_wheel.py pairs, agents | work/mechanic_pair_verdicts.tsv |
+| 7 | steps 5-6 | agents | board.tsv |
+| 8 | steps 6-7 | agents | combos.tsv |
+| 9 | steps 7-8 | agent, wheel_table_check.py, make_stop1.py | answers.tsv, STOP1*.md |

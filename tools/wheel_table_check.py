@@ -96,6 +96,16 @@ for i,c in enumerate(cols):
     if c=='front_key': continue
     for v,n in collections.Counter(ANS[k][i+1].lower() for k in ANS).items():
         if n>1: fail(f'{c} on {n} factions: {v[:60]}')
+# 10. rule check of the words: things this game doesn't have (summary/05-06: who starts alternates, an attacked unit
+#     doesn't hit back, nothing is placed at round end)
+import re
+BAD=r"(move|moves|play|plays|act|acts|go|goes) first|strikes? (him |it |them )?first|first strike|placed at round end|place[sd]? .{0,20}at round end"
+for t in ('so I move first next round','my hidden unit strikes him first','a unit placed at round end has struck'):
+    assert re.search(BAD,t,re.I), t  # the three errors Kaptain's Stop 1 had (15 Nov 2026)
+for f in ('answers.tsv','board.tsv'):
+    for row in tsv(R+f):
+        for cell in row:
+            if re.search(BAD,cell,re.I): fail(f'{f} {row[0]}: breaks a rule of this game: {cell[:70]}')
 for s in fails: print('FAIL',s)
 print('partners:',' '.join(f'{k}{P[k]}' for k in CIRC))
 print('PASS' if not fails else f'FAILED ({len(fails)})')
