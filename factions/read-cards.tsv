@@ -1,0 +1,99 @@
+game	card	read for	way it showed
+runeterra	Heimerdinger	D	spells make free units
+runeterra	Fatal Encore (made)	D	spells make free units
+runeterra	Ferros Financier	D	spells make free units
+runeterra	Unlicensed Innovation	D	spells make free units
+runeterra	Illegal Contraption	D	spells make free units
+runeterra	Bandle Painter	D	made cards grow my units (Augment)
+runeterra	Armed Gearhead	D	made cards grow my units (Augment)
+runeterra	Nyandroid	D	made cards grow my units (Augment)
+runeterra	Mechanized Mimic	D	made cards grow my units (Augment)
+runeterra	Calculated Creations	D	made cards grow my units (Augment)
+runeterra	Iterative Improvement	D	made cards grow my units (Augment)
+runeterra	Viktor	D	made cards grow my units (Augment)
+runeterra	Hex Core Upgrade	D	made cards grow my units (Augment)
+runeterra	Glorious Evolution	D	made cards grow my units (Augment)
+runeterra	Janna	D	drawn cards cost less
+runeterra	Augmented Clockling	D	drawn cards cost less
+runeterra	Astute Academic	D	drawn cards cost less
+runeterra	Master Yi	D	drawn cards cost less
+runeterra	Lillia	D	drawn cards cost less
+runeterra	Dream-Laden Bough	D	drawn cards cost less
+runeterra	Funsmith	D	spells hit harder, a finisher counts spells
+runeterra	Gatalyst v1.0	D	spells hit harder, a finisher counts spells
+runeterra	The Zaun Diva	D	spells hit harder, a finisher counts spells
+runeterra	Rising Spell Force	D	spells hit harder, a finisher counts spells
+runeterra	Jayce	D	spells hit harder, a finisher counts spells
+runeterra	Acceleration Gate	D	spells hit harder, a finisher counts spells
+runeterra	Hexbliterator	D	spells hit harder, a finisher counts spells
+runeterra	Lee Sin	D	spells hit harder, a finisher counts spells
+runeterra	Chemtech Drake	D	draw and fill the hand
+runeterra	Rummage	D	draw and fill the hand
+runeterra	Insider Knowledge	D	draw and fill the hand
+runeterra	The University of Piltover	D	draw and fill the hand
+runeterra	Ekko	D	draw and fill the hand
+runeterra	Chronobreak	D	draw and fill the hand
+runeterra	Jinx	D	empty hand pays
+runeterra	Jinx (level 2)	D	empty hand pays
+runeterra	Super Mega Death Rocket!	D	empty hand pays
+runeterra	Caustic Cask	D	no fit (enemy player, enemy deck, random)
+runeterra	Stinky Whump	D	no fit (enemy player, enemy deck, random)
+runeterra	Prototype Porobot	D	no fit (enemy player, enemy deck, random)
+runeterra	Ezreal	D	no fit (enemy player, enemy deck, random)
+runeterra	Ezreal's Mystic Shot	D	no fit (enemy player, enemy deck, random)
+runeterra	Teemo	D	no fit (enemy player, enemy deck, random)
+runeterra	Caitlyn	D	no fit (enemy player, enemy deck, random)
+runeterra	Unworthy Soul	D	return to hand, Place again (not D)
+runeterra	Bout Security	D	return to hand, Place again (not D)
+runeterra	Ionian Hookmaster	D	return to hand, Place again (not D)
+runeterra	Ahri	D	return to hand, Place again (not D)
+runeterra	Dancing Droplet	D	return to hand, Place again (not D)
+runeterra	Recall	D	return to hand, Place again (not D)
+runeterra	Homecoming	D	return to hand, Place again (not D)
+runeterra	Go Get It	D	return to hand, Place again (not D)
+runeterra	Keeper of Masks	D	return to hand, Place again (not D)
+runeterra	Yasuo	D	other Ionia ways (not D)
+runeterra	Windswept Hillock	D	other Ionia ways (not D)
+runeterra	Steel Tempest	D	other Ionia ways (not D)
+runeterra	Storm of Blades	D	other Ionia ways (not D)
+runeterra	Zinneia, Steel Crescendo	D	other Ionia ways (not D)
+runeterra	Blade	D	other Ionia ways (not D)
+runeterra	Mushroom Ring	D	other Ionia ways (not D)
+runeterra	Shadow Apprentice	D	other Ionia ways (not D)
+runeterra	Death Mark	D	other Ionia ways (not D)
+runeterra	Sacred Protector	D	other Ionia ways (not D)
+runeterra	Shen	D	other Ionia ways (not D)
+sts1	Fusion	D	things placed in slots act each turn (orbs)
+sts1	Claw	D	things placed in slots act each turn (orbs)
+sts1	Blizzard	D	things placed in slots act each turn (orbs)
+sts1	Loop	D	things placed in slots act each turn (orbs)
+sts1	Chill	D	things placed in slots act each turn (orbs)
+sts1	Capacitor	D	things placed in slots act each turn (orbs)
+sts1	Electrodynamics	D	things placed in slots act each turn (orbs)
+sts1	Thunder Strike	D	things placed in slots act each turn (orbs)
+sts1	Storm+	D	things placed in slots act each turn (orbs)
+sts1	Barrage	D	things placed in slots act each turn (orbs)
+sts1	Darkness	D	things placed in slots act each turn (orbs)
+sts1	Defragment	D	things placed in slots act each turn (orbs)
+sts1	Consume	D	things placed in slots act each turn (orbs)
+sts1	Glacier	D	things placed in slots act each turn (orbs)
+sts1	Tempest	D	things placed in slots act each turn (orbs)
+sts1	Static Discharge	D	things placed in slots act each turn (orbs)
+sts1	Rainbow	D	things placed in slots act each turn (orbs)
+sts1	Biased Cognition	D	things placed in slots act each turn (orbs)
+sts1	Double Energy	D	play twice, more energy
+sts1	Sunder	D	play twice, more energy
+sts1	Echo Form	D	play twice, more energy
+sts1	Amplify	D	play twice, more energy
+sts1	Heatsinks	D	play twice, more energy
+sts1	Machine Learning	D	play twice, more energy
+sts1	Creative AI	D	play twice, more energy
+sts1	Recycle	D	play twice, more energy
+sts1	Aggregate	D	play twice, more energy
+sts1	All for One	D	play twice, more energy
+sts1	Melter	D	no fit (player health, block)
+sts1	Hologram	D	no fit (player health, block)
+sts1	Seek	D	no fit (player health, block)
+sts1	Reboot	D	no fit (player health, block)
+sts1	Buffer	D	no fit (player health, block)
+sts1	Self Repair	D	no fit (player health, block)

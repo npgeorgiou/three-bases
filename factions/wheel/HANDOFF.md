@@ -3,9 +3,9 @@ One file for the next chat. Read it whole first, then CLAUDE.md's rules. Do Part
 what Kaptain decided and what was learned: never undo it. Clone with the library (`git sparse-checkout disable`).
 
 ## Rules for this work (Kaptain)
-- **No card reading. Ever.** No agent and no chat reads card texts to judge them. The database already holds what every
-  card does; scripts query it. The only judgment by agents left is in Part 2 step 7 and 8 (board versions, combos on
-  this board), and it reads no cards.
+- **No card reading to judge links or combos.** The database already holds what every card does; scripts query it.
+  Reading is only for a faction's ways to play (START_DESIGN step 6): at most 100 cards per faction, the key cards of
+  the closest real factions' ways, logged in `factions/read-cards.tsv` (never read a card listed there again).
 - Before any agent runs: say how many, the cost (about 110k tokens each) and wait for Kaptain's OK.
 - Plan first, in plain words with one example; build only after "go". One question at a time.
 - Docs are written cleanly, as if things had always been this way: no history, no "formerly", no archaeology.

@@ -12,6 +12,7 @@ START_DESIGN-2-rules.md           114  its part 2: setup, this game's rules for 
 START_DESIGN-3-checks.md           71  its part 3: Kaptain's checks, self-critique, library search, before sending
 START_DESIGN-4-asking.md          105  its part 4: how to ask the library, the shape of an answer, searching wide, thinking like a player
 LESSONS.md                         17  lessons for future factions from building, playtesting and AI-testing (one entry per lesson)
+read-cards.tsv                     99  every library card read for a design, with the way it showed (never read one twice)
 4-kaptains-ideas.txt                64  4. KAPTAIN'S IDEAS (11 Oct 2026, written while reading Runeterra's Noxus and Faeria's red 
 7-ideas-kept-for-later.txt          18  7. IDEAS KEPT FOR LATER (moved from summary/, 12 Oct 2026)
 8-rejected-and-cut.txt               6  8. REJECTED AND CUT (don't reintroduce without asking)
