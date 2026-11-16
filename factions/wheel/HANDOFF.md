@@ -67,9 +67,11 @@ Costs: `links.py` about 4 minutes; `check_all.py` 7 (start in background mode, S
 - Next: the wheel's count below.
 
 ### Then the wheel's count
-`library/cards_db/mechanics_wheel.py` (`links`, `links --radii`, `measure`): a link counts for mechanic X only when its
-A-side (or B-side) ability has one of X's concepts (`mechanics.tsv` column 3; radii: `axes.SPOKES`). A test case for each
-example above (the pair must not count). Then the docs (Part 2 step 0).
+Done (16 Nov 2026): a link counts for mechanic X only through what of the card made it (`axes.side_concepts`: each card's
+concepts know the ability, effect row or keyword that gives them, `axes.SOURCES`). Cases `cases/wheel.tsv` (the three
+examples, on mechanics and radii) run at the end of `mechanics_wheel.py links`; all pass. Real-deck numbers are unchanged.
+Open: "chance" still counts every linked pair, so the card numbers fell (average 1.43 -> 0.40; radii 1.35 -> 0.30) and
+1 no longer means chance. Kaptain decides how chance is counted before Part 2 step 2.
 
 ## Part 2. Design the 20 factions again
 Steps of `factions/START_DESIGN-1-wheel.md`. What stays and what is redone:

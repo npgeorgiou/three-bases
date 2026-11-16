@@ -3,12 +3,14 @@ Reads factions/wheel/mechanics.tsv (key, sentence, concepts as in axes.py SPOKES
 Usage (from library/cards_db):
   mechanics_wheel.py measure          -> library/cards_db/wheel/measured.tsv: cards, games with 10+, top factions, biggest real
                                          faction's count (30+ wanted), radii it serves (share of its cards per radius)
-  mechanics_wheel.py links            -> library/cards_db/wheel/links.tsv: per pair, linked x chance in all cards, and in real decks
+  mechanics_wheel.py links            -> library/cards_db/wheel/links.tsv: per pair, linked x chance in all cards (a link counts
+                                         for a mechanic only through what of each card made it: links.sqlite a_ab, b_ab), and in real
+                                         decks; runs cases/wheel.tsv
   mechanics_wheel.py cards <file>     -> per mechanic 8 cards with text (for an agent to read)
   mechanics_wheel.py pairs A+B,C+D <file> -> linked card pairs of A with B, their link reasons and texts (for an agent)
   --radii after the command: the wheel's radii (axes.SPOKES, not the numbers) in place of the mechanics; links writes
                                          library/cards_db/wheel/radius_links.tsv (step 2)"""
-import collections, os, sqlite3, sys
+import collections, csv, os, sqlite3, sys
 import axes, faction_asks, mechanics, deck_analysis
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -52,10 +54,32 @@ def members(mechs, con, pools):
 
 
 def link_pairs():
-    pairs = set()
-    for a, b in sqlite3.connect(os.path.join(HERE, 'links.sqlite')).execute('select a, b from link'):
-        if a != b: pairs.add((min(a, b), max(a, b)))
+    """linked card pair (lower id first) -> {(what of the first card made a link, what of the second)}"""
+    pairs = collections.defaultdict(set)
+    for a, b, sa, sb in sqlite3.connect(os.path.join(HERE, 'links.sqlite')).execute('select a, b, a_ab, b_ab from link'):
+        if a != b: pairs[(min(a, b), max(a, b))].add((sa, sb) if a < b else (sb, sa))
     return pairs
+
+
+def case_failures(c, con, keys, pairs):
+    """cases/wheel.tsv: a linked pair that must (count) or must not (none) count for mechanic a on card from and b on card to
+    ('*': any); only the cases whose keys are in this run (the mechanics or the radii)"""
+    names = [k[0] for k in keys]
+    bad = []
+    with open(os.path.join(HERE, 'cases', 'wheel.tsv'), encoding='utf-8') as f:
+        for r in csv.DictReader(f, delimiter='\t'):
+            if any(k != '*' and k not in names for k in (r['a'], r['b'])): continue
+            ids = lambda n: [i for (i,) in c.execute('select id from card where game=? and name=?', (r['game'], n))]
+            got = set()
+            for i in ids(r['from']):
+                for j in ids(r['to']):
+                    for sa, sb in pairs.get((min(i, j), max(i, j)), ()):
+                        si, sj = (sa, sb) if i < j else (sb, sa)
+                        got |= {(ka, kb) for ka in axes.side_keys(i, si, r['game'], keys, con) for kb in axes.side_keys(j, sj, r['game'], keys, con)}
+            hit = any(r['a'] in ('*', ka) and r['b'] in ('*', kb) for ka, kb in got)
+            if hit != (r['expect'] == 'count'):
+                bad.append(f"{r['id']} {r['from']} x {r['to']} {r['a']}+{r['b']} {r['expect']}: counts for {', '.join(sorted(f'{a}+{b}' for a, b in got)) or 'nothing'}")
+    return bad
 
 
 def measure(mechs, c, games, x, con, pools):
@@ -92,6 +116,7 @@ def links(mechs, c, games, x, con, pools):
                 deck_lists[p[0]].append({i for i in ids if i in pools[p[0]]})
     cards = axes.radius_links(games, pools, con, pairs)
     decks = axes.radius_links(games, pools, con, pairs, deck_lists)
+    bad = case_failures(c, con, axes.SPOKES, pairs)
     axes.SPOKES = saved
     keys = [m[0] for m in mechs]
     with open(os.path.join(OUT, 'radius_links.tsv' if keys == [r[0] for r in radii()] else 'links.tsv'), 'w', encoding='utf-8') as f:
@@ -99,6 +124,7 @@ def links(mechs, c, games, x, con, pools):
         for n, a in enumerate(keys):
             for b in keys[n:]:
                 f.write(f"{a}\t{b}\t{'' if cards[a][b] is None else cards[a][b]}\t{'' if decks[a][b] is None else decks[a][b]}\n")
+    print('cases/wheel.tsv: ' + ('all pass' if not bad else f'{len(bad)} fail\n' + '\n'.join(bad)))
 
 
 def cards(mechs, c, games, x, con, pools, path, per=8):
@@ -117,8 +143,11 @@ def pairs(mechs, c, games, x, con, pools, a, b, path, per=int(os.environ.get("PE
     A = {i for g in games for i in mem[a][g]}
     B = {i for g in games for i in mem[b][g]}
     L = sqlite3.connect(os.path.join(HERE, 'links.sqlite'))
-    rows = L.execute('select l.game, l.a, l.b, p.text from link l join phrase p on p.id=l.phrase').fetchall()
-    hit = [(g, s, t, ph) for g, s, t, ph in rows if s != t and ((s in A and t in B) or (s in B and t in A))]
+    rows = L.execute('select l.game, l.a, l.b, p.text, l.a_ab, l.b_ab from link l join phrase p on p.id=l.phrase').fetchall()
+    keys = [(k, 0, '', k, cons, '') for k, _, cons, *_ in mechs if k in (a, b)]
+    on = lambda i, src, g, m: m in axes.side_keys(i, src, g, keys, con)  # the link counts for m through what of the card made it
+    hit = [(g, s, t, ph) for g, s, t, ph, sa, sb in rows if s != t and ((s in A and t in B and on(s, sa, g, a) and on(t, sb, g, b))
+                                                                       or (s in B and t in A and on(s, sa, g, b) and on(t, sb, g, a)))]
     seen, out = set(), []
     for g, s, t, ph in sorted(hit, key=lambda r: (r[0], r[1])):
         if (s, t) in seen: continue

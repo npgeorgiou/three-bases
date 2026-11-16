@@ -137,33 +137,86 @@ def counts(ks, game, concepts):
     return False
 
 
+SOURCES = collections.defaultdict(lambda: collections.defaultdict(set))  # card -> concept -> what of the card gives it (tag): an effect
+# row 'ability.seq', an ability 'ability' (its conditions and triggers), 'kw<id>' (a keyword it has); none: the card by what it is
+DO_SRC = "ability || '.' || seq, 'kw' || via"  # flat_do columns naming a row's source
+IF_SRC = "ability, 'kw' || via"  # flat_if / flat_when: an ability's conditions and triggers (a keyword's when no ability)
+
+
+def note_src(card, k, *srcs):
+    for x in srcs:
+        if x is not None: SOURCES[card][k].add(str(x))
+
+
+def row_sources(c):
+    """SOURCES of the concepts flat.py's derive writes into flat_concept from rows, keywords and its RULES"""
+    import flat
+    for t, cols in (('flat_do', DO_SRC), ('flat_if', IF_SRC), ('flat_when', IF_SRC)):
+        for card, k, *src in c.execute(f"select card, concept, {cols} from {t} where coalesce(concept,'')!=''"): note_src(card, k, *src)
+    for card, k, kw in c.execute("select distinct ck.card, v.tree, ck.keyword from card_keyword ck join card k on k.id=ck.keyword join vocab v on "
+                                 "v.field='keyword' and v.value=coalesce((select s.value from vocab s where s.field='keyword' and s.value=k.game || ':' || k.name), k.name) where v.tree!=''"):
+        note_src(card, k, f'kw{kw}')
+    for card, k, ab in c.execute("select distinct a.card, v.tree, a.id from cond cd join ability a on a.id=cd.ability join card k on k.id=cd.ref_keyword join vocab v on "
+                                 "v.field='keyword' and v.value=coalesce((select s.value from vocab s where s.field='keyword' and s.value=k.game || ':' || k.name), k.name) "
+                                 "where cd.test='keyword_condition' and v.tree!=''"):
+        note_src(card, k, ab)
+    for k, t, cond in flat.RULES:
+        for card, *src in c.execute(f"select card, {DO_SRC if t == 'flat_do' else IF_SRC} from {t} where {cond}"): note_src(card, k, *src)
+
+
+def side_concepts(card, src, con):
+    """the concepts of a card that a link's side (links.sqlite a_ab / b_ab: 'ability.seq', ability, 'kw<id>', 'c:<concept>', 'type',
+    'rule'; several joined by ';') comes from: a link counts for a mechanic only through what of the card made it"""
+    out = set()
+    for s in (src or '').split(';'):
+        if not s or s == 'rule': continue
+        if s.startswith('c:'): out |= {s[2:]} & con[card]; continue
+        for k in con[card]:
+            got = SOURCES[card].get(k)
+            if s == 'type': hit = not got
+            elif not got: hit = False
+            elif s[0].isdigit() and '.' in s: hit = s in got or s.split('.')[0] in got
+            elif s[0].isdigit(): hit = s in got or any(t.startswith(s + '.') for t in got)
+            else: hit = s in got
+            if hit: out.add(k)
+    return out
+
+
 def tag(c, x, games):
-    """card -> its concepts, plus the starred ones this file adds"""
+    """card -> its concepts, plus the starred ones this file adds; SOURCES: what of each card gives each concept"""
     con = collections.defaultdict(set)
+    SOURCES.clear()
+    row_sources(c)
     for card, k in c.execute('select card, concept from flat_concept'):
         con[card].add(k)
-    for card, k in c.execute("select card, concept from flat_do where on_side='enemy' and coalesce(on_kind,'')!='player' and "
-                             + faction_asks.ROW_ORIGIN):
-        if k in STOP_ON_ENEMY: con[card].add('stop*')
-        if k in DISRUPT_ON_ENEMY: con[card].add('disrupt*')
-        if k in KILL_ON_ENEMY: con[card].add('kill*')
-    for (card,) in c.execute("select card from flat_if where test='amount_count' and of_kind='unit' and of_zone='board' and " + faction_asks.ROW_ORIGIN):
-        con[card].add('countboard*')
-    for (card,) in c.execute("select card from flat_do where on_side='enemy' and coalesce(on_kind,'')!='player' and act='cant' and param_event in "
-                             + repr(CANT) + " and " + faction_asks.ROW_ORIGIN):
-        con[card].add('stop*')
-    for (card,) in c.execute("select card from flat_do where on_pick='chosen' and on_kind in ('unit','unit_or_structure','hero','leader','any','anything') "
-                             "and coalesce(on_zone,'board')='board' and " + faction_asks.ROW_ORIGIN):
-        con[card].add('chosen*')
-    for q in BESIDE:
-        for (card,) in c.execute(q + faction_asks.ROW_ORIGIN): con[card].add('position*')
-    dmg = {card for (card,) in c.execute("select card from flat_do where on_side='enemy' and concept in " + repr(DAMAGE_ON_ENEMY) + " and " + faction_asks.ROW_ORIGIN)}
+    for card, k, *src in c.execute(f"select card, concept, {DO_SRC} from flat_do where on_side='enemy' and coalesce(on_kind,'')!='player' and "
+                                   + faction_asks.ROW_ORIGIN):
+        for star, ks in (('stop*', STOP_ON_ENEMY), ('disrupt*', DISRUPT_ON_ENEMY), ('kill*', KILL_ON_ENEMY)):
+            if k in ks: con[card].add(star); note_src(card, star, *src)
+    for card, *src in c.execute(f"select card, {IF_SRC} from flat_if where test='amount_count' and of_kind='unit' and of_zone='board' and " + faction_asks.ROW_ORIGIN):
+        con[card].add('countboard*'); note_src(card, 'countboard*', *src)
+    for card, *src in c.execute(f"select card, {DO_SRC} from flat_do where on_side='enemy' and coalesce(on_kind,'')!='player' and act='cant' and param_event in "
+                                + repr(CANT) + " and " + faction_asks.ROW_ORIGIN):
+        con[card].add('stop*'); note_src(card, 'stop*', *src)
+    for card, *src in c.execute(f"select card, {DO_SRC} from flat_do where on_pick='chosen' and on_kind in ('unit','unit_or_structure','hero','leader','any','anything') "
+                                "and coalesce(on_zone,'board')='board' and " + faction_asks.ROW_ORIGIN):
+        con[card].add('chosen*'); note_src(card, 'chosen*', *src)
+    for q, cols in zip(BESIDE, (DO_SRC, IF_SRC, IF_SRC)):
+        for card, *src in c.execute(q.replace('select card from', f'select card, {cols} from', 1) + faction_asks.ROW_ORIGIN):
+            con[card].add('position*'); note_src(card, 'position*', *src)
+    dmg = collections.defaultdict(set)
+    for card, *src in c.execute(f"select card, {DO_SRC} from flat_do where on_side='enemy' and concept in " + repr(DAMAGE_ON_ENEMY) + " and " + faction_asks.ROW_ORIGIN):
+        dmg[card] |= {str(v) for v in src if v is not None}
     # a game whose weapons hit the tile aimed at, whoever stands there: its damage rows name no side and count too
-    dmg |= {card for (card,) in c.execute("select f.card from flat_do f join card k on k.id=f.card where f.on_side is null and k.game in (" + ','.join(repr(g) for g in DAMAGE_NO_SIDE_GAMES)
-                                          + ") and k.category='ability' and f.concept in " + repr(DAMAGE_ON_ENEMY))}
-    dmg |= {card for (card,) in c.execute("select card from flat_concept where concept in (" + ','.join(repr(k) for k in DAMAGE_BY_CONCEPT) + ")")}
+    for card, *src in c.execute(f"select f.card, f.ability || '.' || f.seq, 'kw' || f.via from flat_do f join card k on k.id=f.card where f.on_side is null and k.game in ("
+                                + ','.join(repr(g) for g in DAMAGE_NO_SIDE_GAMES) + ") and k.category='ability' and f.concept in " + repr(DAMAGE_ON_ENEMY)):
+        dmg[card] |= {str(v) for v in src if v is not None}
+    for (card,) in c.execute("select card from flat_concept where concept in (" + ','.join(repr(k) for k in DAMAGE_BY_CONCEPT) + ")"):
+        dmg[card] |= {t for k in DAMAGE_BY_CONCEPT for t in SOURCES[card].get(k, ())}
     for i, cat in c.execute('select id, category from card'):
-        if i in dmg: con[i].add('spelldmg*' if cat == 'spell' else 'textdmg*')
+        if i in dmg:
+            star = 'spelldmg*' if cat == 'spell' else 'textdmg*'
+            con[i].add(star); note_src(i, star, *dmg[i])
     pools = {g: x.pool(g) for g in games}
     raw = {i: (g, cat, cost, unit_stats(g, p, h, st), (ct or '').lower()) for i, g, cat, cost, p, h, st, ct in
            c.execute('select id, game, category, cost, power, health, stats, cost_text from card')}
@@ -183,9 +236,10 @@ def tag(c, x, games):
         hi = third(lambda t: sum(1 for v in costs if v >= t))  # (when most units share one cost, cheap is under it and dear is over it)
         for i in pool:
             ks, v = con[i], stats[i][1]
-            if ks & set(STOP_ALWAYS): ks.add('stop*')
-            if ks & set(DISRUPT_ALWAYS) or ('junk_cards' in ks and g in JUNK_GAMES): ks.add('disrupt*')
-            if ks & set(POSITION) and g in POSITION_GAMES: ks.add('position*')
+            from_ = lambda star, ks_: (ks.add(star), note_src(i, star, *{t for k in ks_ for t in SOURCES[i].get(k, ())}))  # a star from other concepts: their sources
+            if ks & set(STOP_ALWAYS): from_('stop*', ks & set(STOP_ALWAYS))
+            if ks & set(DISRUPT_ALWAYS) or ('junk_cards' in ks and g in JUNK_GAMES): from_('disrupt*', ks & set(DISRUPT_ALWAYS + ['junk_cards']))
+            if ks & set(POSITION) and g in POSITION_GAMES: from_('position*', ks & set(POSITION))
             if stats[i][0] not in UNIT_CATS or v is None or lo is None or lo >= hi: continue
             if v <= lo: ks.add('cheapunit*')
             if v >= hi: ks.add('dearunit*')
@@ -279,9 +333,19 @@ def main():
     print(len(rows), 'factions;', sum(1 for r in rows if r['decks']), 'with decks')
 
 
+def side_keys(card, src, game, keys, con, cache={}):
+    """the radii (or mechanics) a link's side of this card counts for (side_concepts)"""
+    key = (card, src, tuple(k[0] for k in keys))
+    if key not in cache:
+        ks = side_concepts(card, src, con)
+        cache[key] = [k[0] for k in keys if counts(ks, game, k[4])]
+    return cache[key]
+
+
 def radius_links(games, pools, con, pairs, deck_lists=None):
     """All cards (no deck_lists): how much more often than chance the library links a card of one radius with a card of the
-    other (1 = chance = the share of all card pairs of the game that the library links).
+    other (1 = chance = the share of all card pairs of the game that the library links). pairs as a dict (card pair -> the
+    sides of its links): a link counts for two radii only through what of each card made it (side_concepts).
     Decks (deck_lists given; Kaptain, 10 Nov 2026: how often radii appear in the same real decks, linked or not): per deck,
     the share of its cards that count for each radius; for two radii A and B, the average of (A share x B share) over the
     game's decks divided by (average A share x average B share). 1 = decks heavy in A hold as much B as usual; 2 = twice as
@@ -314,8 +378,9 @@ def radius_links(games, pools, con, pairs, deck_lists=None):
         both = collections.Counter((ka, kb) for i in ids for ka in of[i] for kb in of[i])
         for a, b in pairs:
             if a in of and b in of:
-                for ka in of[a]:
-                    for kb in of[b]: obs[(ka, kb)] += 1; obs[(kb, ka)] += 1
+                both_ = {(ka, kb) for ka in of[a] for kb in of[b]} if not isinstance(pairs, dict) else \
+                    {(ka, kb) for sa, sb in pairs[(a, b)] for ka in side_keys(a, sa, g, keys, con) for kb in side_keys(b, sb, g, keys, con)}
+                for ka, kb in both_: obs[(ka, kb)] += 1; obs[(kb, ka)] += 1
         for sa in keys:
             for sb in keys: exp[(sa[0], sb[0])] += (n[sa[0]] * n[sb[0]] - both[(sa[0], sb[0])]) * dens
     return {a[0]: {b[0]: round(obs[(a[0], b[0])] / exp[(a[0], b[0])], 2) if exp[(a[0], b[0])] >= MIN_LINKS else None for b in keys} for a in keys}

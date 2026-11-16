@@ -1,0 +1,7 @@
+id	game	from	to	a	b	expect	source
+w01	marvel_snap	Ghost Rider	Vibro-Shock Gauntlets	revive	supply	none	Kaptain 15 Nov 2026: the link is made by the +2 Power, never by the Energy
+w02	marvel_snap	Ghost Rider	Vibro-Shock Gauntlets	back	supply	none	the same on the radii
+w03	sts1	Ritual Dagger	Nunchaku	onkill	*	none	Kaptain 15 Nov 2026: Ritual Dagger counts as an Attack, never as "gains when it kills"
+w04	sts1	Ritual Dagger	Nunchaku	kills	*	none	the same on the radii
+w05	monster_train	Mine Collapse	Kindle	kill	*	none	Kaptain 15 Nov 2026: the energy links them, not the kill
+w06	monster_train	Mine Collapse	Kindle	kills	*	none	the same on the radii
