@@ -54,7 +54,9 @@ How to ask: part 4, `START_DESIGN-4-asking.md`. Run from `library/cards_db/`.
   a count.
 - Reading cards: at most 100 per faction, the key cards of the closest real factions' ways (`ask.py all ways`). First
   look up `factions/read-cards.tsv`: a card listed there is never read again, its line says which way it showed. Every
-  card read gets a line there (game, card, faction it was read for, the way it showed).
+  card read gets a line there (game, card, faction it was read for, the way it showed). When a card's text shows
+  something its database rows or links get wrong or leave out, the database or the link script is fixed in the same
+  chat, with a test case for that card and every card with the same error (`library/cards_db/START_DATABASE.md`).
 - Factions per game: `select game, regions, count(*) from card group by 1,2` in cards.sqlite. Board games first
   (Duelyst, Faeria, Stormbound, Into the Breach, Inscryption), then Runeterra, Monster Train, Slay the Spire.
 - Translate every card into Three Bases (section 1b) and say what changed. Example: Runeterra's "Strike the enemy

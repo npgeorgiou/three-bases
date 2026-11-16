@@ -5,7 +5,8 @@ what Kaptain decided and what was learned: never undo it. Clone with the library
 ## Rules for this work (Kaptain)
 - **No card reading to judge links or combos.** The database already holds what every card does; scripts query it.
   Reading is only for a faction's ways to play (START_DESIGN step 6): at most 100 cards per faction, the key cards of
-  the closest real factions' ways, logged in `factions/read-cards.tsv` (never read a card listed there again).
+  the closest real factions' ways, logged in `factions/read-cards.tsv` (never read a card listed there again). A text that shows the database or the
+  links wrong gets them fixed, with test cases (START_DESIGN-3).
 - Before any agent runs: say how many, the cost (about 110k tokens each) and wait for Kaptain's OK.
 - Plan first, in plain words with one example; build only after "go". One question at a time.
 - Docs are written cleanly, as if things had always been this way: no history, no "formerly", no archaeology.

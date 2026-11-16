@@ -79,7 +79,7 @@ read 5-10 card texts behind every count, and write the sources (game: card) next
      carry-over, a card in hand, defence, a cell. "Place: the ally behind me dies; its supply goes to your carry-over."
    - Turning point: once a condition is met, the board works differently. "While you have twice as many units in my lane
      as the enemy, my allies here strike twice."
-6. **Five ways to play.** Each builds a different board and asks for different decisions. For each, write which rows and
+6. **Three to five ways to play**, as many as the closest real factions show (never filler). Each builds a different board and asks for different decisions. For each, write which rows and
    cells it fills, its cost 1-4 opening, its 4-6 middle, its 6+ finish, and its leader. Test: two ways that put the same
    kind of units in the same cells and win the same way are one way.
 7. **The library, card by card.** For each way to play, read 30-50 real cards from the closest factions of ALL games
