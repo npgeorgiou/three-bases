@@ -6,6 +6,7 @@ Kaptain's browser card game. Work on the clone and commit to `main`; push only w
 - Short sentences. Plain everyday words. Say what happened and what you need, nothing else.
 - Talk no more than necessary: the fewest lines the answer needs. No explanations, options or background Kaptain didn't ask for.
 - Never use words Kaptain hasn't used or agreed to (no "happening", "payoff", "generic layer", "flat_ref", etc.); explain with a card example instead.
+- A problem is explained from the big picture down: which step, what that step is for, what went wrong, then the numbers.
 - One question at a time, answerable with yes/no or a choice. Put it last, alone, clearly marked as the question.
 - No recaps, no lists of everything done, no caveats unless they change what Kaptain must decide.
 - When a mistake is found, fix its cause in the docs (this file or the entry file the task uses) in the same turn, then say in one line what changed; never only admit it.
