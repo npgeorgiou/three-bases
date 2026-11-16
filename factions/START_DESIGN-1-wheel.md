@@ -62,21 +62,33 @@ faction's radii.
    only. Nobody reads card pairs here (Kaptain, 15 Nov 2026): the database already holds what each card does, and
    whether two factions really combo on this board is judged once, in step 8. `apart.py` gives the pairs
    real factions keep apart; a faction that holds both ends of such a pair is shown to Kaptain.
-7. **Board versions.** Each faction's mechanics turned into this game's own things, from scratch: dots and front
-   cells, the back row, rows, columns, lanes, the 3x3 camp, unit size, supply per lane, carry-over, round start and
-   round end, one action per turn, moving, reach (melee, Pike, Ranged), strikes and fixed damage, the hand, the
-   discard pile, Immobile. Sources: the library's board games first (Duelyst, Faeria, Stormbound, Into the Breach,
-   Inscryption); no source = Claude's; a rule the game lacks = NEW RULE. Each faction gets 1-3 board versions and one
-   faction idea. **No two factions have the same thing on the board, compared by what the card does and looks like,
-   not by mechanic name**: one Egg in the whole wheel. A whole faction may be built on one board thing (all Immobile).
+7. **Tools.** Each faction gets 2-4 tools: a tool is a new kind of thing or rule that makes the faction's plan happen
+   on this game's own things (dots and front cells, the back row, rows, columns, lanes, the 3x3 camp, unit size,
+   supply per lane, carry-over, round start and round end, one action per turn, moving, reach, strikes and fixed
+   damage, the hand, the discard pile, Immobile), carried by many of its cards. Examples (Claude's): eggs (my dead unit
+   leaves an egg in its cell that turns back into it at round end), trophies (killing a marked enemy gives me a card),
+   edicts (a lasting rule on a lane), graves, debts, banners, oaths, tunnels, hostages, echoes. Each tool:
+   - names the mechanic it grows from; each signature has a tool; an extra joins a tool or sits only on cards;
+   - feeds at least one other tool (one makes what the other uses): faction A's eggs keep the front cell after a
+     death, and its departures make the touching allies strike when a unit leaves; take one away and the other loses
+     part of its point;
+   - is played out cell by cell before it is written: which cell, what happens there, what the enemy does with its
+     one action in between; two tools that need the same cell clash.
+   The tools together are the faction idea, and the seven answers (step 9) are built from them, not from how it wins
+   alone. A faction holds together because its tools feed each other, never because one idea is on every card (Mark,
+   Projectiles, back-in-time are one tool at most). Sources: the library's board games first (Duelyst, Faeria,
+   Stormbound, Into the Breach, Inscryption) and real things that act on their own (Slay the Spire's orbs: placed in
+   slots, each acts every turn); no source = Claude's; a rule the game lacks = NEW RULE. **No two factions have the
+   same tool doing the same job, compared by what the card does and looks like, not by mechanic name**: one Egg in
+   the whole wheel. A whole faction may stand on one board thing (all Immobile).
    The old candidates (commit d4a3de0^, `factions/3-candidates/`) are read last, only to see that no idea Kaptain
    liked is missing.
-8. **Combos on this board.** Agents rate every pair of factions (190) from their board versions and mechanics, with
+8. **Combos on this board.** Agents rate every pair of factions (190) from their tools and mechanics, with
    step 6's KEEP combos as sources: STRONG (both halves on many cards, helps take or hold a base, the enemy's one action
    between can't easily stop it), OK (real but breakable), WEAK, NONE, AGAINST. Partners = STRONG or OK; every faction
    has 10+. A faction under 10 goes back to step 5 (other extras), then step 3. `combos.tsv` has a test column that
    playtests fill; what doesn't work in play is dropped.
-9. **The seven answers** (START_DESIGN.md step 2) for all 20, made from the board versions: how it wins, how it
+9. **The seven answers** (START_DESIGN.md step 2) for all 20, made from the tools: how it wins, how it
    removes a front unit, how it mainly removes back-row units, how it mainly acts between lanes, how it holds a base,
    its best Place effect, its blind spot. Every answer differs from every other faction's; each removal uses one of the
    faction's mechanics; a blind spot never touches a mechanic the faction has. Then the check script
@@ -85,12 +97,13 @@ faction's radii.
 ## The check script
 It reads the files of steps 2-9 and checks real numbers, not only columns: every shape's joins (step 3); 2 signatures
 per faction, each a signature once; extras 2-4, each in at most 3 factions; each faction's mechanics joined; 10+
-partners; 1-3 board versions per faction, none the same; all seven answers present and different; removals by the
+partners; 2-4 tools per faction, each naming its mechanic and feeding another, every signature with a tool, none
+the same; all seven answers present and different; removals by the
 faction's own mechanics; blind spots outside its mechanics. It fails loudly; a failure is fixed, never argued away.
 
 ## What Kaptain sees at Stop 1
 `factions/wheel/STOP1.md` and its parts: per faction, in plain words, its strong radii, its signatures and extras, its
-board versions and faction idea, the seven answers, and its partners with the combo for each. Files in factions/ stay
+tools and how they feed each other, the seven answers, and its partners with the combo for each. Files in factions/ stay
 under 150 lines (split them); the CLAUDE.md map names them.
 
 ## How to read the wheel

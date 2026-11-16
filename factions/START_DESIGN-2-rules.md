@@ -105,6 +105,8 @@ More text: `summary/09-card-design-rules.txt`
 - Every card says what it makes happen and what it needs (its `net` line), and each "needs" has a card in the faction
   that makes it. Example: Toll Warrior needs units to die this round; Willing Victim (dies when offered) makes it.
 - Cards that cash something in have 3+ cards that set it up; cards that set something up feed 2+ cards that cash it in.
+- Tools (the wheel's step 7): 2-4 new kinds of things or rules, each from one mechanic, feeding each other; many cards
+  carry them, the rest of the faction's cards build the ways to play around them.
 - Signature mechanics (step 3): the faction builds on them; other factions have them only on a few cards.
 - A faction's mechanics (2 signature, 2-4 extras) are what it builds on, each on several cards. Any card may also carry a one-off from any mechanic of the game (Kaptain, 15 Nov 2026: a faction far from bringing back may have ONE unit that comes back); one-offs are not tracked on the wheel and keep cards from being unimaginative. Other strong mechanics (copying, deck search, draw, card creation,
   forced movement, resurrection, stealing) belong to 1, at most 2 factions; elsewhere on very few cards.

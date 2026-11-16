@@ -45,7 +45,7 @@ sources.
 | A faction's spells grouped by what they do | `ask.py all spells "<faction>"` |
 | How a faction deals with enemy units (kill, damage, push away, take strength, silence, stop, transform, steal, sacrifice to kill), share of each; a game name gives every faction of it | `ask.py all removal "<faction>"`, `ask.py all removal <game>` |
 | How a faction protects its own (armour, shield, immunity, survive death, guard, hide, heal), share of each; a game name gives every faction | `ask.py all protect "<faction>"`, `ask.py all protect <game>` |
-| A faction's ways to play: groups of tightly linked cards, key cards, what ties each | `ask.py all ways "<faction>"` |
+| A faction's ways to play: groups of tightly linked cards, key cards and what each does, what ties each | `ask.py all ways "<faction>"` |
 | Concepts only one faction of a game has (its monopolies) | `ask.py all only <game>` |
 | Concepts a faction never has while at least half its game's other factions do (its blind spots) | `ask.py all lacks "<faction>"` |
 | How players build a faction in real decks (decks.tsv): how many decks play it, the factions it is paired with, its cards by share of those decks, its cards in no deck | `ask.py <game> played "<faction>"` |

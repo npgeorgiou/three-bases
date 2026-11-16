@@ -124,6 +124,14 @@ def curve(x, args):
             print(f'  {pool[i][0]} ({pool[i][1]}): ' + ('; '.join(abl) if abl else 'no effect rows'))
 
 
+def what_it_does(x, i):
+    """one card's rows in short, as curve shows them: when -> what -> on whom"""
+    trig = x.triggers([i]); lines = collections.defaultdict(list)
+    for card, ab, seq, act, con, kind, side, pick, link in x.rows([i]):
+        if con: lines[ab].append(f'{con} -> {target(kind, side, pick) or "-"}')
+    return '; '.join(f'{trig.get((i, ab), "always")} -> ' + ', '.join(dict.fromkeys(v)) for ab, v in lines.items()) or 'no effect rows'
+
+
 def spells(x, args):
     """ask.py <games> spells <faction>: the faction's spells grouped by what they do"""
     f = x.find(' '.join(args))
@@ -215,6 +223,7 @@ def ways(x, args):
         ns = sorted(nm(i) for i in grp)
         print(f'## {len(grp)} cards: ' + ', '.join(ns[:20]) + (f' and {len(ns) - 20} more' if len(ns) > 20 else ''))
         print('  key cards: ' + ', '.join(nm(i) for i, _ in w.most_common(3)))
+        for i, _ in w.most_common(3): print(f'    {nm(i)}: {what_it_does(x, i)}')
         print('  tied by: ' + '; '.join(f'{y} ({n} lines)' for y, n in ties.most_common(3)))
         if best: print(f'  strongest line: {nm(best[1])} -> {best[2]} -> {nm(best[3])}')
 
