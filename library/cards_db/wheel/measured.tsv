@@ -2,31 +2,31 @@ key	cards	games_10plus	biggest_faction	with_makers	top_factions	radii (share of 
 deathfeed	104	4	runeterra: Shadow Isles 34	90	monster_train: Melting Remnant 8 (19%); runeterra: Shadow Isles 34 (15%); duelyst: Abyssian Host 11 (9%); faeria: Red 3 (4%)	spends 100%, grows 33%, wide 29%, tall 28%
 lastwords	297	8	runeterra: Shadow Isles 28	70	monster_train: Melting Remnant 11 (26%); inscryption: Technology 12 (16%); monster_train: Umbra 7 (15%); gwent: Monster 27 (15%)	spends 99%, wide 56%, tall 25%, protects 22%
 sacrifice	4	0	:  0	0		spends 100%, many 75%, strikes 50%, kills 25%
-selfhurt	68	2	runeterra: Freljord 19	19	stormbound: Shadowfen 4 (12%); runeterra: Freljord 19 (9%); runeterra: Noxus 17 (8%); stormbound: Swarm 2 (6%)	spends 100%, many 66%, one 46%
+selfhurt	68	2	runeterra: Freljord 19	19	stormbound: Shadowfen 4 (12%); runeterra: Freljord 19 (9%); runeterra: Noxus 17 (8%); stormbound: Swarm 2 (6%)	spends 100%, many 66%
 revive	83	4	runeterra: Shadow Isles 20	76	runeterra: Shadow Isles 20 (9%); duelyst: Magmar Aspects 8 (7%); duelyst: Abyssian Host 6 (5%); gwent: Monster 6 (3%)	back 100%, spends 52%, tall 40%, protects 33%
-recycle	69	3	gwent: Northern Realms 9	9	sts1: Watcher 5 (6%); gwent: Northern Realms 9 (5%); gwent: Nilfgaard 8 (5%); sts1: Defect 4 (4%)	back 100%, cards 28%, picks 28%, one 26%
-returnhand	29	1	duelyst: Vetruvian Imperium 3	3	stormbound: Swarm 1 (3%); duelyst: Vetruvian Imperium 3 (3%); inscryption: Beast 2 (2%); duelyst: Vanar Kindred 2 (2%)	back 100%, one 31%, wide 28%, spends 28%
+recycle	69	3	gwent: Northern Realms 9	9	sts1: Watcher 5 (6%); gwent: Northern Realms 9 (5%); gwent: Nilfgaard 8 (5%); sts1: Defect 4 (4%)	back 100%, cards 28%, picks 28%, cheaper 26%
+returnhand	29	1	duelyst: Vetruvian Imperium 3	3	stormbound: Swarm 1 (3%); duelyst: Vetruvian Imperium 3 (3%); inscryption: Beast 2 (2%); duelyst: Vanar Kindred 2 (2%)	back 100%, wide 28%, spends 28%, protects 28%
 tokens	711	6	runeterra: Shadow Isles 45	45	gwent: Syndicate / Monster 1 (33%); gwent: Syndicate / Scoiatael 1 (33%); stormbound: Swarm 8 (24%); gwent: Monster 39 (21%)	wide 100%, tall 26%
 countboard	149	4	gwent: Scoiatael 16	43	gwent: Syndicate / Skellige 1 (33%); gwent: Scoiatael 16 (9%); gwent: Nilfgaard 12 (7%); gwent: Syndicate 11 (6%)	many 100%, grows 42%, growsdef 39%, wide 35%
 allyplay	166	3	duelyst: Magmar Aspects 7	26	faeria: Red 5 (7%); duelyst: Magmar Aspects 7 (6%); duelyst: Vanar Kindred 6 (5%); duelyst: Lyonar Kingdoms 5 (5%)	wide 23%
-adjacency	295	7	gwent: Northern Realms 25	25	gwent: Syndicate / Skellige 2 (67%); gwent: Syndicate / Northern Realms 1 (33%); stormbound: Ironclad 9 (26%); duelyst: Lyonar Kingdoms 23 (21%)	grows 40%, wide 34%, growsdef 32%, one 21%
+adjacency	295	7	gwent: Northern Realms 25	25	gwent: Syndicate / Skellige 2 (67%); gwent: Syndicate / Northern Realms 1 (33%); stormbound: Ironclad 9 (26%); duelyst: Lyonar Kingdoms 23 (21%)	grows 40%, wide 34%, growsdef 32%, tall 21%
 movement	71	3	inscryption: Beast 18	18	stormbound: Ironclad 9 (26%); inscryption: Beast 18 (15%); stormbound: Swarm 5 (15%); inscryption: Undead 3 (12%)	tall 27%, wide 24%
-push	153	4	into_the_breach: Brute 17	17	into_the_breach: Archive, Inc. 2 (67%); into_the_breach: Brute 17 (55%); into_the_breach: Prime 15 (50%); into_the_breach: Cyborg 3 (50%)	strikes 49%, one 46%, textdmg 35%, many 29%
+push	153	4	into_the_breach: Brute 17	17	into_the_breach: Archive, Inc. 2 (67%); into_the_breach: Brute 17 (55%); into_the_breach: Prime 15 (50%); into_the_breach: Cyborg 3 (50%)	strikes 49%, textdmg 35%, many 29%, disrupts 28%
 lanes	6	0	inscryption: Beast 4	4	inscryption: Beast 4 (3%); inscryption: Technology 2 (3%)	strikes 100%, tall 50%, wide 50%
 cells	101	2	faeria: Blue 19	19	faeria: Blue 19 (26%); faeria: Green 16 (22%); duelyst: Abyssian Host 14 (12%); faeria: Red 8 (11%)	wide 27%, grows 26%, tall 23%, growsdef 21%
 onattack	183	4	duelyst: Songhai Empire 15	15	monster_train: Awoken 12 (29%); faeria: Red 15 (21%); faeria: Yellow 14 (19%); monster_train: Umbra 7 (15%)	strikes 100%, wide 32%, tall 29%, grows 25%
-overkill	159	1	runeterra: Noxus 37	37	runeterra: Noxus 37 (17%); runeterra: Freljord 35 (16%); runeterra: Targon 30 (13%); runeterra: Shurima 22 (8%)	strikes 100%, tall 47%, grows 40%, one 25%
-onkill	158	4	runeterra: Shurima 15	15	monster_train: Umbra 4 (9%); monster_train: Melting Remnant 3 (7%); into_the_breach: Ranged 2 (7%); runeterra: Demacia 13 (6%)	one 47%, grows 40%, growsdef 32%, tall 30%
-fight	153	1	runeterra: Demacia 51	102	runeterra: Demacia 51 (25%); runeterra: Noxus 24 (11%); runeterra: Bilgewater 12 (5%); runeterra: Ionia 11 (5%)	strikes 99%, one 87%, disrupts 42%, tall 29%
-ping	547	8	runeterra: Bandle City 69	69	into_the_breach: Ranged 16 (55%); into_the_breach: Prime 16 (53%); into_the_breach: Brute 16 (52%); into_the_breach: Cyborg 3 (50%)	textdmg 53%, one 44%, many 30%, strikes 29%
+overkill	159	1	runeterra: Noxus 37	37	runeterra: Noxus 37 (17%); runeterra: Freljord 35 (16%); runeterra: Targon 30 (13%); runeterra: Shurima 22 (8%)	strikes 100%, tall 47%, grows 40%, protects 25%
+onkill	158	4	runeterra: Shurima 15	15	monster_train: Umbra 4 (9%); monster_train: Melting Remnant 3 (7%); into_the_breach: Ranged 2 (7%); runeterra: Demacia 13 (6%)	grows 40%, growsdef 32%, tall 30%, strikes 25%
+fight	153	1	runeterra: Demacia 51	102	runeterra: Demacia 51 (25%); runeterra: Noxus 24 (11%); runeterra: Bilgewater 12 (5%); runeterra: Ionia 11 (5%)	strikes 99%, disrupts 42%, tall 29%, spelldmg 29%
+ping	547	8	runeterra: Bandle City 69	69	into_the_breach: Ranged 16 (55%); into_the_breach: Prime 16 (53%); into_the_breach: Brute 16 (52%); into_the_breach: Cyborg 3 (50%)	textdmg 53%, many 30%, strikes 29%, wide 28%
 area	421	8	gwent: Skellige 25	25	into_the_breach: Ranged 18 (62%); into_the_breach: Brute 18 (58%); into_the_breach: Cyborg 3 (50%); into_the_breach: Prime 11 (37%)	many 100%, textdmg 36%, strikes 28%, tall 21%
-kill	129	5	gwent: Nilfgaard 12	12	gwent: Nilfgaard 12 (7%); duelyst: Abyssian Host 6 (5%); inscryption: Beast 6 (5%); duelyst: Vetruvian Imperium 5 (4%)	kills 100%, one 50%, wide 29%, tall 29%
-spelldmg	404	6	sts1: Silent 36	36	sts1: Silent 36 (43%); sts1: Ironclad 35 (42%); sts1: Watcher 28 (31%); sts1: Defect 24 (27%)	spelldmg 100%, one 67%, many 21%
+kill	129	5	gwent: Nilfgaard 12	12	gwent: Nilfgaard 12 (7%); duelyst: Abyssian Host 6 (5%); inscryption: Beast 6 (5%); duelyst: Vetruvian Imperium 5 (4%)	kills 100%, wide 29%, tall 29%
+spelldmg	404	6	sts1: Silent 36	36	sts1: Silent 36 (43%); sts1: Ironclad 35 (42%); sts1: Watcher 28 (31%); sts1: Defect 24 (27%)	spelldmg 100%, many 21%
 spellpay	223	5	runeterra: Piltover & Zaun 30	30	gwent: Syndicate / Scoiatael 1 (33%); monster_train: Stygian Guard 9 (22%); duelyst: Songhai Empire 15 (13%); runeterra: Piltover & Zaun 30 (13%)	spellpay 100%, grows 23%, tall 22%, wide 22%
 hurt	32	1	monster_train: Awoken 7	7	monster_train: Awoken 7 (17%); stormbound: Shadowfen 2 (6%); stormbound: Ironclad 2 (6%); stormbound: Swarm 2 (6%)	strikes 50%, tall 38%, grows 31%, growsdef 31%
-silence	82	4	runeterra: Ionia 13	13	stormbound: Winter 7 (21%); gwent: Nilfgaard 12 (7%); runeterra: Ionia 13 (6%); monster_train: Stygian Guard 1 (2%)	stops 100%, one 57%
-weaken	80	2	monster_train: Stygian Guard 5	5	monster_train: Stygian Guard 5 (12%); duelyst: Abyssian Host 4 (3%); inscryption: Beast 4 (3%); stormbound: Winter 1 (3%)	one 32%, tall 20%
-change	8	0	duelyst: Songhai Empire 3	3	duelyst: Songhai Empire 3 (3%); faeria: Blue 1 (1%); duelyst: Vetruvian Imperium 1 (1%); duelyst: Magmar Aspects 1 (1%)	disrupts 100%, one 62%, tall 38%, many 25%
+silence	82	4	runeterra: Ionia 13	13	stormbound: Winter 7 (21%); gwent: Nilfgaard 12 (7%); runeterra: Ionia 13 (6%); monster_train: Stygian Guard 1 (2%)	stops 100%
+weaken	80	2	monster_train: Stygian Guard 5	5	monster_train: Stygian Guard 5 (12%); duelyst: Abyssian Host 4 (3%); inscryption: Beast 4 (3%); stormbound: Winter 1 (3%)	tall 20%
+change	8	0	duelyst: Songhai Empire 3	3	duelyst: Songhai Empire 3 (3%); faeria: Blue 1 (1%); duelyst: Vetruvian Imperium 1 (1%); duelyst: Magmar Aspects 1 (1%)	disrupts 100%, tall 38%, many 25%
 hand	30	2	runeterra: Bilgewater 5	5	runeterra: Bilgewater 5 (2%); faeria: Yellow 1 (1%); runeterra: Bandle City 3 (1%); runeterra: Shadow Isles 2 (1%)	disrupts 100%, cheaper 40%, cards 27%, tall 20%
 junk	36	2	runeterra: Piltover & Zaun 13	13	runeterra: Piltover & Zaun 13 (5%); runeterra: Bandle City 9 (4%); faeria: Yellow 2 (3%); faeria: Blue 1 (1%)	cards 97%, disrupts 33%
 supply	195	5	sts1: Watcher 18	18	inscryption: Magick 7 (28%); monster_train: Umbra 10 (21%); inscryption: Undead 5 (21%); stormbound: Winter 7 (21%)	supply 100%
@@ -34,22 +34,21 @@ cheaper	408	6	runeterra: Piltover & Zaun 40	40	runeterra: Piltover & Zaun 40 (17
 inhand	30	1	gwent: Scoiatael 14	14	gwent: Scoiatael 14 (8%); gwent: Northern Realms 7 (4%); gwent: Skellige 2 (1%); gwent: Monster 1 (1%)	cheaper 100%, grows 87%, growsdef 87%, tall 40%
 draw	487	7	runeterra: Piltover & Zaun 46	46	gwent: Syndicate / Nilfgaard 1 (33%); monster_train: Awoken 11 (27%); sts1: Silent 18 (22%); runeterra: Piltover & Zaun 46 (19%)	cards 100%
 create	836	8	runeterra: Bandle City 79	79	runeterra: Bandle City 79 (31%); runeterra: Piltover & Zaun 69 (29%); runeterra: Targon 60 (25%); runeterra: Bilgewater 52 (24%)	cards 100%, cheaper 23%
-copy	261	5	gwent: Nilfgaard 20	20	gwent: Nilfgaard 20 (11%); runeterra: Shadow Isles 17 (8%); runeterra: Ionia 18 (8%); faeria: Pandora 3 (8%)	picks 100%, one 29%, tall 23%, wide 21%
-pick	120	3	runeterra: Shurima 18	18	gwent: Syndicate / Nilfgaard 1 (33%); sts1: Watcher 17 (19%); monster_train: Stygian Guard 4 (10%); gwent: Nilfgaard 14 (8%)	picks 100%, cheaper 28%, cards 27%, one 22%
+copy	261	5	gwent: Nilfgaard 20	20	gwent: Nilfgaard 20 (11%); runeterra: Shadow Isles 17 (8%); runeterra: Ionia 18 (8%); faeria: Pandora 3 (8%)	picks 100%, tall 23%, wide 21%
+pick	120	3	runeterra: Shurima 18	18	gwent: Syndicate / Nilfgaard 1 (33%); sts1: Watcher 17 (19%); monster_train: Stygian Guard 4 (10%); gwent: Nilfgaard 14 (8%)	picks 100%, cheaper 28%, cards 27%
 discard	118	4	sts1: Silent 16	16	monster_train: Stygian Guard 9 (22%); sts1: Silent 16 (19%); gwent: Skellige 11 (6%); runeterra: Noxus 11 (5%)	cards 28%
-heal	66	3	runeterra: Freljord 16	16	monster_train: Awoken 11 (27%); monster_train: Umbra 5 (11%); gwent: Skellige 15 (8%); runeterra: Freljord 16 (7%)	heals 100%, one 45%, wide 27%, strikes 26%
-shield	320	6	runeterra: Demacia 41	41	gwent: Syndicate / Northern Realms 1 (33%); gwent: Syndicate / Skellige 1 (33%); gwent: Syndicate / Scoiatael 1 (33%); into_the_breach: Pinnacle Robotics 1 (33%)	protects 100%, one 34%, grows 30%, tall 28%
+heal	66	3	runeterra: Freljord 16	16	monster_train: Awoken 11 (27%); monster_train: Umbra 5 (11%); gwent: Skellige 15 (8%); runeterra: Freljord 16 (7%)	heals 100%, wide 27%, strikes 26%, tall 21%
+shield	320	6	runeterra: Demacia 41	41	gwent: Syndicate / Northern Realms 1 (33%); gwent: Syndicate / Skellige 1 (33%); gwent: Syndicate / Scoiatael 1 (33%); into_the_breach: Pinnacle Robotics 1 (33%)	protects 100%, grows 30%, tall 28%, growsdef 25%
 guard	78	2	faeria: Green 12	12	faeria: Green 12 (17%); duelyst: Lyonar Kingdoms 11 (10%); faeria: Red 3 (4%); faeria: Pandora 1 (2%)	stops 92%, tall 45%, protects 31%, wide 31%
 hide	91	2	gwent: Scoiatael 11	11	gwent: Syndicate / Monster 1 (33%); inscryption: Undead 2 (8%); monster_train: Melting Remnant 3 (7%); inscryption: Beast 8 (7%)	protects 77%, grows 42%, growsdef 41%, wide 36%
 attach	147	2	runeterra: Bandle City 20	20	runeterra: Bandle City 20 (8%); runeterra: Demacia 13 (6%); runeterra: Freljord 12 (6%); duelyst: Vetruvian Imperium 6 (5%)	back 47%, strikes 33%, grows 22%
 roundstart	217	4	runeterra: Bilgewater 18	18	stormbound: Shadowfen 9 (26%); stormbound: Ironclad 6 (18%); stormbound: Swarm 5 (15%); stormbound: Winter 5 (15%)	wide 29%, grows 29%, cards 27%, growsdef 26%
 leave	12	1	runeterra: Ionia 10	10	runeterra: Ionia 10 (4%); duelyst: Abyssian Host 1 (1%); runeterra: Noxus 1 (0%)	strikes 50%, wide 42%, back 25%, tall 25%
 bigstrength	24	1	runeterra: Noxus 9	9	runeterra: Noxus 9 (4%); runeterra: Targon 7 (3%); runeterra: Shurima 4 (2%); runeterra: Freljord 3 (1%)	strikes 92%, cheaper 54%, tall 33%, grows 29%
-offering	226	7	runeterra: Shadow Isles 44	44	monster_train: Umbra 16 (34%); gwent: Syndicate / Monster 1 (33%); monster_train: Melting Remnant 11 (26%); runeterra: Shadow Isles 44 (20%)	spends 100%, one 58%, wide 35%, grows 27%
-steal	48	2	gwent: Nilfgaard 9	9	stormbound: Shadowfen 4 (12%); duelyst: Vetruvian Imperium 6 (5%); gwent: Nilfgaard 9 (5%); faeria: Pandora 2 (5%)	disrupts 100%, one 48%, tall 29%
+offering	226	7	runeterra: Shadow Isles 44	44	monster_train: Umbra 16 (34%); gwent: Syndicate / Monster 1 (33%); monster_train: Melting Remnant 11 (26%); runeterra: Shadow Isles 44 (20%)	spends 100%, wide 35%, grows 27%, growsdef 25%
+steal	48	2	gwent: Nilfgaard 9	9	stormbound: Shadowfen 4 (12%); duelyst: Vetruvian Imperium 6 (5%); gwent: Nilfgaard 9 (5%); faeria: Pandora 2 (5%)	disrupts 100%, tall 29%
 enemyside	65	3	gwent: Nilfgaard 9	9	gwent: Nilfgaard 9 (5%); monster_train: Stygian Guard 2 (5%); faeria: Yellow 3 (4%); duelyst: Lyonar Kingdoms 3 (3%)	disrupts 46%, tall 29%, wide 23%
-haste	153	3	gwent: Northern Realms 48	48	gwent: Syndicate / Nilfgaard 1 (33%); gwent: Northern Realms 48 (27%); gwent: Skellige 17 (9%); faeria: Yellow 6 (8%)	one 54%, wide 43%, grows 39%, growsdef 38%
-extraact	126	5	runeterra: Demacia 26	26	into_the_breach: R.S.T. Corporation 1 (33%); runeterra: Demacia 26 (13%); sts1: Silent 7 (8%); monster_train: Hellhorned 3 (7%)	strikes 83%, tall 33%, one 28%
-lock	181	4	runeterra: Targon 23	23	stormbound: Winter 7 (21%); faeria: Green 12 (17%); duelyst: Vanar Kindred 15 (12%); duelyst: Lyonar Kingdoms 12 (11%)	stops 100%, one 40%, tall 24%, wide 22%
-mark	24	0	monster_train: Stygian Guard 4	4	monster_train: Stygian Guard 4 (10%); stormbound: Shadowfen 1 (3%); monster_train: Hellhorned 1 (2%); monster_train: Wurmkin 1 (2%)	one 67%, many 25%, strikes 21%
+haste	153	3	gwent: Northern Realms 48	48	gwent: Syndicate / Nilfgaard 1 (33%); gwent: Northern Realms 48 (27%); gwent: Skellige 17 (9%); faeria: Yellow 6 (8%)	wide 43%, grows 39%, growsdef 38%, tall 28%
+extraact	126	5	runeterra: Demacia 26	26	into_the_breach: R.S.T. Corporation 1 (33%); runeterra: Demacia 26 (13%); sts1: Silent 7 (8%); monster_train: Hellhorned 3 (7%)	strikes 83%, tall 33%
+mark	24	0	monster_train: Stygian Guard 4	4	monster_train: Stygian Guard 4 (10%); stormbound: Shadowfen 1 (3%); monster_train: Hellhorned 1 (2%); monster_train: Wurmkin 1 (2%)	many 25%, strikes 21%
 reach	37	2	duelyst: Songhai Empire 6	6	faeria: Red 5 (7%); duelyst: Songhai Empire 6 (5%); faeria: Yellow 2 (3%); duelyst: Lyonar Kingdoms 1 (1%)	wide 41%, strikes 41%, tall 24%

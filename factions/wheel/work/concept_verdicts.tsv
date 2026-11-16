@@ -81,3 +81,4 @@ control_reward	catch by chance; one of the game's own things (bases per lane)
 targeting_rules	catch by chance; one of the game's own things (reach)
 on_harvest	one of the game's own things (Faeria's wells are like cells); cells catches it
 start_of_game	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+target_choice	catch by chance; choosing the target is how every card of this game works, not a mechanic

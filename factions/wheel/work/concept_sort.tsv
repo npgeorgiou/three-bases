@@ -36,7 +36,7 @@ buff	171	6	0.78	allyplay 0.18	0.81	grows 0.29	none	spread: a general "stronger" 
 upgrade	153	2	0.68	create 0.34	0.70	cards 0.35	none	ADD to mechanic inhand: a card in hand made better (goes with point 4)
 zone_control	152	6	0.96	tokens 0.29	0.78	wide 0.29	none	one of the game's own things (bases per lane)
 countdown	133	4	0.84	roundstart 0.24	0.89	grows 0.25	none	ruled out by Kaptain (countdowns very sparingly, on cards)
-target_choice	132	1	0.88	fight 0.70	0.92	strikes 0.75	caught by mechanic fight	
+target_choice	132	1	0.88	fight 0.70	0.92	strikes 0.75	caught by mechanic fight	catch by chance; choosing the target is how every card of this game works, not a mechanic
 delayed	130	4	0.84	tokens 0.25	0.87	wide 0.25	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
 cant_block_self	128	1	0.83	tokens 0.19	0.94	cards 0.28	none	not in this game (blocking)
 modal_choice	126	4	0.72	create 0.24	0.89	cards 0.33	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
