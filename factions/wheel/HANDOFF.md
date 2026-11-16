@@ -60,7 +60,7 @@ Costs: `links.py` about 4 minutes; `check_all.py` 7 (start in background mode, S
   only by what it is), `rule`. Rules that append after a cleanup rebuilt the pair's list use `note()`; a reason joined from
   two lines takes the sources of both (links.py `src_by`).
 - Cases lk145-lk390 (`a_side`, `b_side`: a concept that must be there, `!concept` that must not): the three examples and
-  one per rule and game. All pass; lk96 fails as before.
+  one per rule and game. All pass; lk96 fixed too (a free made card counts as more cards to play; cases lk391-lk394).
 - Proof: build before and after with the same `PYTHONHASHSEED=0`, then `python3 factions/wheel/work/links_same.py before after`.
   Without a fixed seed two builds of the same code differ in ~460 links (which reason a pair keeps follows Python's set order).
 - Site 0 (32k links): the rule notes the sentence before the card names are filled in and before move reasons are joined;

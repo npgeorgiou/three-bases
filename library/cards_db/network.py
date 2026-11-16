@@ -2042,8 +2042,9 @@ def played_lines(c, game, nodes, broad):
                 mk_src = collections.defaultdict(set)  # the rows that make the cards (SRC)
                 for a, ref, ok, r_ in c.execute(f"""select distinct card, card_ref, on_kind, ability || '.' || seq from flat_do where origin='own' and act in ('create','copy')
                       and coalesce(on_side,'mine')='mine' and coalesce(on_zone,'hand') in ('hand') and (params like '%amount=x%' or cast(substr(params,
-                      instr(params,'amount=')+7) as real) >= 2) and card in ({marks})""", list(nodes)):  # several cards (Blade Dance's 3 Shivs);
-                      # one more card is no more plays (Beta -> After Image+, Annie -> Breakneck Husk)
+                      instr(params,'amount=')+7) as real) >= 2 or card_ref in (select id from card where cost=0)) and card in ({marks})""", list(nodes)):
+                      # several cards (Blade Dance's 3 Shivs), or a free one (Vinemother's 0-cost Sting); one more card that costs
+                      # energy is no more plays (Beta -> After Image+, Annie -> Breakneck Husk)
                     if fits_(ref, ok): mk_src[a].add(r_)
                 mk = {t_ for t_ in mk_src} - {t}
                 # "whenever you play a spell": only what makes spells (Vinemother's Stings) sets it off more

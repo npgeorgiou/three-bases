@@ -104,7 +104,7 @@ push, give network.html to Kaptain.
   history (commit "Decks redone with the five Gwent cards ..."). The deck sites are reached only in the built-in browser; data is
   moved to the workspace in compact form and checked with a checksum against the page before use. Questions over the real
   decks: ask.py played / deckmates / deckconcepts (deck_asks.py; factions/START_DESIGN-4-asking.md).
-- Already failing before the deck import (10 Nov 2026): cases/links.tsv lk96 (Monster Train, Vinemother -> Wyldenten).
+- lk96 (Monster Train, Vinemother -> Wyldenten) fixed 16 Nov 2026: a single made card that costs 0 counts as more cards to play.
 - Lines: links.sqlite rows per game (counts change with every rebuild; `status.py`). The next case id is n700.
 - Known gaps with no fix planned: Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain);
   Monster Train's Olde Magic record lists the wiki's choices with no numbers; Stormbound's Fort of Ebonrock has no ability.

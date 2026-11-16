@@ -93,7 +93,7 @@ lk92	monster_train	Titanstooth	Guardian Stone	none	playing sets off	Kaptain 1 No
 lk93	monster_train	Gifts for a Guard	Ice and Pyre	none	draws it	Claude 1 Nov 2026: "draw 3 spells" can draw any spell (same error)
 lk94	monster_train	Total Recall	Ancient Synergy	none	asks for	Claude 1 Nov 2026: Ancient Synergy counts every spell in the deck; being a spell is no interaction
 lk95	monster_train	Queen's Impling	Shardtail Queen	line	Imp	Claude 1 Nov 2026: Shardtail Queen asks for Imps; a named type stays
-lk96	monster_train	Vinemother	Wyldenten	line	more cards to play	Claude 1 Nov 2026: Vinemother makes Sting spells; Wyldenten's Incant fires on spells played
+lk96	monster_train	Vinemother	Wyldenten	line	more cards to play	Claude 1 Nov 2026: Vinemother makes Sting spells; Wyldenten's Incant fires on spells played; fixed 16 Nov 2026: a free made card counts	generate_cards	
 lk97	monster_train	Returned Soul	Ice and Pyre	none	brings it back	Claude 1 Nov 2026: "return a spell from the discard pile" can return any spell (same error as draws)
 lk98	runeterra	Wuju Style	Patched Porobot	none	+2|+0	Kaptain 1 Nov 2026 (L14): +power does nothing for its text
 lk99	runeterra	Ophelis Gardener	Eye of the Dragon	none	heal	Kaptain 1 Nov 2026 (L14): it never needs health; it summons a Dragonling
@@ -388,3 +388,7 @@ lk387	gwent	Ciri	Vincent Meis	line	its 1 damage kills what it sets to strength 1
 lk388	gwent	Ragh Nar Roog	Artorius Vigo	line	creates a card, which sets off its Assimilate	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 3088)	generate_cards !banish	kw !free_play
 lk389	runeterra	Karma	Ballistic Bot	line	creates a card, which sets off its Augment	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 3088)	generate_cards !passive	kw !generate_cards
 lk390	runeterra	Piltover Peacemaker	Braum	line	through Flashbomb Trap: damages it without killing it, for its effect (levels it up)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 3174)	trap_secret !activated	on_damaged !forced_attack
+lk391	runeterra	Draven	Vi	line	makes more cards to play	lk96 fix 16 Nov 2026: a single made card that costs 0 is one more play	generate_cards	on_play
+lk392	marvel_snap	Beta Ray Bill	Agony	line	makes more cards to play	lk96 fix 16 Nov 2026: a single made card that costs 0 is one more play	generate_cards	merge_attach
+lk393	sts1	Cloak and Dagger	After Image	line	makes more cards to play	lk96 fix 16 Nov 2026: a single made card that costs 0 is one more play	generate_cards	block_armor
+lk394	monster_train	Vinemother	Solgard the Martyr	line	makes more cards to play	lk96 fix 16 Nov 2026: a single made card that costs 0 is one more play	generate_cards	on_spell
