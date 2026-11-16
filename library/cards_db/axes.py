@@ -76,6 +76,7 @@ HAS = [('into_the_breach', 'textdmg'),  # weapons' damage on a tile counts as da
        ('duelyst', 'one'), ('faeria', 'one'), ('gwent', 'one'), ('stormbound', 'one')]  # a chosen target is read from the rows in every game
 MIN_DECK_CARDS = 10
 MIN_DECKS_BOTH = 5  # a game gives a decks value for two radii only when at least 5 of its decks hold both
+MIN_LINKS_GAME = 5  # a game counts for two radii only when chance alone would give it 5 linked pairs
 MIN_LINKS = 20  # two radii get a "work together" number only when chance alone would give 20 linked pairs  # Faeria Pandora has 1 card in decks
 SPOKES = [  # (key, axis number, axis name, this radius, concepts, area of the circle); "concept@game,game" counts only in those games (the check of 9 Nov 2026)
     # in circle order: neighbours belong together, and the radii of one area sit side by side
@@ -366,6 +367,7 @@ def radius_links(games, pools, con, pairs, deck_lists=None, plain=None):
     """All cards (no deck_lists): how much more often than chance the library links a card of one radius with a card of the
     other, counted through what of each card made the link (link_pairs, side_concepts). 1 = chance: the share of the game's
     card pairs the library links x the share of A's cards' link ends that A's own part makes x the same share for B.
+    Worked out per game, then averaged over the games where chance gives MIN_LINKS_GAME+ pairs: each game counts the same.
     plain (a Counter): filled with the linked card pairs of each two radii (sorted keys), each pair once.
     Decks (deck_lists given; Kaptain, 10 Nov 2026: how often radii appear in the same real decks, linked or not): per deck,
     the share of its cards that count for each radius; for two radii A and B, the average of (A share x B share) over the
@@ -390,8 +392,9 @@ def radius_links(games, pools, con, pairs, deck_lists=None, plain=None):
         print('decks used for radii that work together:', used)
         return {a[0]: {b[0]: round(sum(per[(a[0], b[0])]) / len(per[(a[0], b[0])]), 2) if per[(a[0], b[0])] else None for b in keys}
                 for a in keys}
-    obs, exp = collections.Counter(), collections.Counter()
+    per = collections.defaultdict(list); total = collections.Counter()
     for g in games:
+        obs, exp = collections.Counter(), collections.Counter()
         ids = list(pools[g])
         of = {i: [s[0] for s in keys if counts(con[i], g, s[4])] for i in ids}
         dens = sum(1 for a, b in pairs if a in of and b in of) / (len(ids) * (len(ids) - 1) / 2)
@@ -412,7 +415,11 @@ def radius_links(games, pools, con, pairs, deck_lists=None, plain=None):
         share = {k: made[k] / ends[k] if ends[k] else 0 for k in ends}
         for sa in keys:
             for sb in keys: exp[(sa[0], sb[0])] += (n[sa[0]] * n[sb[0]] - both[(sa[0], sb[0])]) * dens * share.get(sa[0], 0) * share.get(sb[0], 0)
-    return {a[0]: {b[0]: round(obs[(a[0], b[0])] / exp[(a[0], b[0])], 2) if exp[(a[0], b[0])] >= MIN_LINKS else None for b in keys} for a in keys}
+        for k, e in exp.items():
+            total[k] += e
+            if e >= MIN_LINKS_GAME: per[k].append(obs[k] / e)
+    return {a[0]: {b[0]: round(sum(per[(a[0], b[0])]) / len(per[(a[0], b[0])]), 2)
+                   if total[(a[0], b[0])] >= MIN_LINKS and per[(a[0], b[0])] else None for b in keys} for a in keys}
 
 
 def near(arg):
