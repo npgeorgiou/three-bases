@@ -65,6 +65,7 @@ faction's radii.
      too, but each extra is in at most 3 factions. The mechanic the faction's removal needs is kept.
    - One-offs: any card may carry a one-off from any mechanic (a faction far from bringing back may have one unit that
      comes back). One-offs are not planned here; they keep cards from being unimaginative.
+   - Every mechanic of the list is a signature or an extra of at least one faction (Kaptain, 16 Nov 2026).
    - Two factions strong on the same radius have different signatures in it ("brings back": one has "my dead units
      come back", another "my unit goes back to hand").
 6. **Links between mechanics.** For every two mechanics, the library's numbers (`mechanics_wheel.py links`), by script
