@@ -77,7 +77,7 @@ Example answers: QUERIES.md. Kaptain's standing questions with their current ans
 - Curious: at least three unexpected concepts that could serve the same outcome; one game where the mechanic is rare or
   done oddly; the older 21-game library (`../three-bases-library.sqlite`) as leads; archetypes and known combos in
   `../realworld/`.
-- Translate: turn each way into Three Bases rules (lanes, dots, round end, no active abilities, no counters) and say what
+- Translate: turn each way into Three Bases rules (lanes, dots, round end, no active abilities, counters very sparingly) and say what
   had to change.
 - Board and rules check (Kaptain, 3 Nov 2026), before any card is suggested: read summary/ sections 03-08 and 10
   (board, winning, rounds, units, areas, rulings, keywords); a rule not written there is looked up quickly in the game code

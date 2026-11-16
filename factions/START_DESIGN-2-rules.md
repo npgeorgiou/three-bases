@@ -46,7 +46,7 @@ If summary/ and the code disagree, the code wins: tell Kaptain.
 - Hand: start 5, redraw up to 3, 2 draws per round (none in round 1), hand limit 10. Decks 30-40 cards, at most 3
   copies. A card is rarely in hand exactly when wanted; a combo of two named cards is rare.
 - Units have no active abilities you press (summary/06). An action that replaces the unit's attack and costs what an
-  attack costs is allowed (the throw of the removed Ogre Thrower). No counters or timers ("at 3 counters..."). Round-end abilities,
+  attack costs is allowed (the throw of the removed Ogre Thrower). Counters and timers ("at 3 counters...") very sparingly. Round-end abilities,
   Place effects, Death effects, reactions and position bonuses are wanted.
 - Place fires every time a unit enters the grid: from hand, defecting, resurrected, returning, a token.
 - What does NOT exist here, so never copy it from other games: hitting the enemy player or hero, instant-speed answers
