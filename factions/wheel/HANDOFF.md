@@ -70,8 +70,9 @@ Costs: `links.py` about 4 minutes; `check_all.py` 7 (start in background mode, S
 Done (16 Nov 2026): a link counts for mechanic X only through what of the card made it (`axes.side_concepts`: each card's
 concepts know the ability, effect row or keyword that gives them, `axes.SOURCES`). Cases `cases/wheel.tsv` (the three
 examples, on mechanics and radii) run at the end of `mechanics_wheel.py links`; all pass. Real-deck numbers are unchanged.
-Open: "chance" still counts every linked pair, so the card numbers fell (average 1.43 -> 0.40; radii 1.35 -> 0.30) and
-1 no longer means chance. Kaptain decides how chance is counted before Part 2 step 2.
+Chance is counted the same way (Kaptain, 16 Nov 2026): the old chance x the share of A's cards' links made by their A part x
+the same for B, so 1 still means chance. With MIN_LINKS (20 linked pairs by chance), 342 of the 1,045 mechanic pairs now get
+no number (radii: none lost). Open: Kaptain decides whether that rule stays.
 
 ## Part 2. Design the 20 factions again
 Steps of `factions/START_DESIGN-1-wheel.md`. What stays and what is redone:

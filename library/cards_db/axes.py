@@ -345,7 +345,8 @@ def side_keys(card, src, game, keys, con, cache={}):
 def radius_links(games, pools, con, pairs, deck_lists=None):
     """All cards (no deck_lists): how much more often than chance the library links a card of one radius with a card of the
     other (1 = chance = the share of all card pairs of the game that the library links). pairs as a dict (card pair -> the
-    sides of its links): a link counts for two radii only through what of each card made it (side_concepts).
+    sides of its links): a link counts for two radii only through what of each card made it (side_concepts), and chance
+    likewise: the old chance x the share of A's cards' links that A makes x the same share for B.
     Decks (deck_lists given; Kaptain, 10 Nov 2026: how often radii appear in the same real decks, linked or not): per deck,
     the share of its cards that count for each radius; for two radii A and B, the average of (A share x B share) over the
     game's decks divided by (average A share x average B share). 1 = decks heavy in A hold as much B as usual; 2 = twice as
@@ -376,13 +377,22 @@ def radius_links(games, pools, con, pairs, deck_lists=None):
         dens = sum(1 for a, b in pairs if a in of and b in of) / (len(ids) * (len(ids) - 1) / 2)
         n = collections.Counter(k for i in ids for k in of[i])
         both = collections.Counter((ka, kb) for i in ids for ka in of[i] for kb in of[i])
+        ends, through = collections.Counter(), collections.Counter()  # per radius: link ends on its cards, and those made by it
         for a, b in pairs:
             if a in of and b in of:
-                both_ = {(ka, kb) for ka in of[a] for kb in of[b]} if not isinstance(pairs, dict) else \
-                    {(ka, kb) for sa, sb in pairs[(a, b)] for ka in side_keys(a, sa, g, keys, con) for kb in side_keys(b, sb, g, keys, con)}
+                if not isinstance(pairs, dict):
+                    both_ = {(ka, kb) for ka in of[a] for kb in of[b]}
+                else:
+                    on_a = {k for sa, _ in pairs[(a, b)] for k in side_keys(a, sa, g, keys, con)}
+                    on_b = {k for _, sb in pairs[(a, b)] for k in side_keys(b, sb, g, keys, con)}
+                    both_ = {(ka, kb) for sa, sb in pairs[(a, b)] for ka in side_keys(a, sa, g, keys, con) for kb in side_keys(b, sb, g, keys, con)}
+                    for i, on in ((a, on_a), (b, on_b)):
+                        for k in of[i]: ends[k] += 1; through[k] += k in on
                 for ka, kb in both_: obs[(ka, kb)] += 1; obs[(kb, ka)] += 1
+        # chance through the sides: a link of a card of A is made by its A part in share(A) of its links (1 without sides)
+        share = lambda k: through[k] / ends[k] if isinstance(pairs, dict) and ends[k] else 0 if isinstance(pairs, dict) else 1
         for sa in keys:
-            for sb in keys: exp[(sa[0], sb[0])] += (n[sa[0]] * n[sb[0]] - both[(sa[0], sb[0])]) * dens
+            for sb in keys: exp[(sa[0], sb[0])] += (n[sa[0]] * n[sb[0]] - both[(sa[0], sb[0])]) * dens * share(sa[0]) * share(sb[0])
     return {a[0]: {b[0]: round(obs[(a[0], b[0])] / exp[(a[0], b[0])], 2) if exp[(a[0], b[0])] >= MIN_LINKS else None for b in keys} for a in keys}
 
 
