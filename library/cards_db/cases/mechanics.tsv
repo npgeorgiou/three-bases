@@ -45,7 +45,7 @@ m43	mechanic	Strike triggers	text:(?<!nexus )\bstrike:|\bor strike:	select card 
 m44	mechanic	gives Challenger	text:\b(?:give|grant)s? (?:\w+ ){0,5}challenger\b	select card from flat_do where keyword_ref=(select id from card where name='Challenger' and is_keyword=1) or concept='target_choice'	runeterra
 m45	mechanic	gives Elusive	text:\b(?:give|grant)s? (?:\w+ ){0,5}elusive\b	select card from flat_do where keyword_ref=(select id from card where name='Elusive' and is_keyword=1)	runeterra
 m46	mechanic	gives Vulnerable	text:\bvulnerable\b	select card from flat_do where keyword_ref=(select id from card where name='Vulnerable' and is_keyword=1) union select card from flat_when where obj_with like '%keyword is '||(select id from card where name='Vulnerable' and is_keyword=1)||'%' union select card from card_keyword where keyword=(select id from card where name='Vulnerable' and is_keyword=1)	runeterra
-m47	mechanic	Lifesteal units heal their Nexus	kw:Lifesteal	select card from flat_concept where concept='lifesteal'	runeterra
+m47	mechanic	Lifesteal units heal their Nexus	kw:Lifesteal	select card from flat_concept where concept='player_lifesteal'	runeterra
 m48	mechanic	Regeneration units heal fully	kw:Regeneration	select card from flat_concept where concept='regeneration'	runeterra
 m49	mechanic	Tough units take less damage	kw:Tough	select card from flat_do where act='damage_reduction'	runeterra
 m50	mechanic	Fearsome units evade weak blockers	kw:Fearsome	select card from flat_concept where concept='evasion'	runeterra
@@ -444,3 +444,7 @@ wc14	mechanic	moving my own card is not forced movement (wheel step 1, Kaptain 1
 wc15	mechanic	doubling my own card's power grows its strength (attack_gain) (wheel step 1, Kaptain 16 Nov 2026)	text:^(?!.*enem).*\bdouble (?:its|this card.s|a card.s|the) power	select card from flat_concept where concept='attack_gain'	marvel_snap
 wc16	mechanic	an orb channelled into a slot is no unit moving (wheel step 1, Kaptain 16 Nov 2026)	text:\bchannel\b	select id from card where id not in (select card from flat_concept where concept in ('movement','forced_movement'))	sts1
 wc17	mechanic	a card put into my hand is no unit moving (wheel step 1, Kaptain 16 Nov 2026)	text:\binto your hand\b	select id from card where id not in (select card from flat_concept where concept in ('movement','forced_movement'))	sts1
+wc18	mechanic	Lifesteal heals the Nexus: player_lifesteal (wheel step 1, Kaptain 16 Nov 2026)	kw:lifesteal	select card from flat_concept where concept='player_lifesteal'	runeterra
+wc19	mechanic	Lifesteal to the Nexus is no drain to a unit (wheel step 1, Kaptain 16 Nov 2026)	kw:lifesteal	select id from card where id not in (select card from flat_concept where concept='lifesteal')	runeterra
+wc20	mechanic	Gwent's Drain grows the unit that dealt the damage: lifesteal (wheel step 1, Kaptain 16 Nov 2026)	text:\bdrain\b	select card from flat_concept where concept='lifesteal'	gwent
+wc21	mechanic	Stormbound's drain grows the unit: lifesteal (wheel step 1, Kaptain 16 Nov 2026)	text:\bdrains?\b	select card from flat_concept where concept='lifesteal'	stormbound

@@ -31,7 +31,8 @@ first and wait. Never invent rules or mechanics; mark suggestions as yours.
    idle (Marvel Snap, 5 Nov 2026: a stopped build left cards.sqlite.new and its journal, and the next build failed).
    Never edit a script a running build uses (flat.py, network.py ...): the build may already have loaded the old one.
    Try a change on a copy of cards.sqlite first (drop the flat_ tables, then flat.build, flat.derive, refs.build, about
-   2 minutes) and start the build only when every case passes there.
+   2 minutes), put the copy in place of cards.sqlite and run `check_all.py --no-load` (every case of every game, not
+   only the new ones), and start the build only when all pass.
 5. **Read cards like a player**: what does it need, who gives it that, what does it make, what does that card do. A keyword
    counts as a summon, play or trigger effect only if the game's glossary (vocab.tsv) says it goes off then (Gwent's Zeal: no; L27).
 6. **A check is done only when all its output was read.** Never sample less, skip a game or hand over because the output is
@@ -116,7 +117,8 @@ pair that must or must not count for two mechanics or radii.
 - Concepts by whom a row acts on (16 Nov 2026, Kaptain; flat.py derive, cases wc01-wc17): a heal, block, shield, immunity,
   strength or defence on the player is player_<concept>, the player hurt is player_damaged (a game whose rules give the
   leader the units' rules, Duelyst, keeps both); my own unit moved is movement, an enemy moved forced_movement; a card or
-  orb moved between piles or slots is neither; a unit levelling up on the board is level_up, not upgrade.
+  orb moved between piles or slots is neither; a unit levelling up on the board is level_up, not upgrade; drain whose
+  life goes to the player is player_lifesteal, to the unit that dealt the damage lifesteal.
 - Lines: links.sqlite rows per game (counts change with every rebuild; `status.py`). The next case id is n700.
 - Known gaps with no fix planned: Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain);
   Monster Train's Olde Magic record lists the wiki's choices with no numbers; Stormbound's Fort of Ebonrock has no ability.

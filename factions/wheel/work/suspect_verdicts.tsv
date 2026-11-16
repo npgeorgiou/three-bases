@@ -46,3 +46,4 @@ terrain	same		a space changed, in every game
 territory_trigger	same		moves onto an enemy space
 turn_start	same		start of my turn, in every game
 note	Duelyst	the General is a unit on the board	its player rows get both concepts (heal and player_heal): its game rules give the leader the units' rules (Kaptain, 16 Nov 2026)
+lifesteal	split	life to the player / to the unit that dealt the damage	Kaptain 16 Nov 2026 (keep drain): player Runeterra 54, Faeria 5, Duelyst 3 (both); unit Stormbound 7, Monster Train 4, Gwent 2, Duelyst 3

@@ -43,7 +43,7 @@ textdmg	kills	1.38	0.97	569	3
 textdmg	many	1.43	1.32	3797	3
 textdmg	spelldmg	2.07	1.11	932	3
 textdmg	spellpay	0.26	0.74	220	3
-textdmg	stops	0.61	0.88	272	3
+textdmg	stops	0.62	0.88	272	3
 textdmg	disrupts	2.79	0.93	1175	3
 textdmg	supply	0.58	0.77	369	3
 textdmg	cheaper	1.06	0.88	5308	3
@@ -153,7 +153,7 @@ supply	spends	0.73	1.44	586	3
 supply	heals	0.28	0.94	34	2.53
 supply	growsdef	0.3	0.84	261	3
 supply	protects	2.01	1.11	592	3
-supply	tall	8.9	1.06	1364	3
+supply	tall	8.91	1.06	1364	3
 cheaper	cheaper	0.75	3.56	3355	3
 cheaper	cards	1.41	1.19	7159	3
 cheaper	picks	1.24	2.0	2230	3

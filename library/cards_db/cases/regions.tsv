@@ -120,7 +120,7 @@ r122	runeterra	Piltover & Zaun	archetype (library)	ramp	18	select card from flat
 r123	runeterra	Piltover & Zaun	archetype (library)	spellslinger	14	select card from flat_concept where concept in ('on_spell','combo_sequence','copy','repeat_trigger','spell_power')
 r124	runeterra	Shadow Isles	archetype (library)	sacrifice	47	select card from flat_concept where concept in ('sacrifice','death_trigger','death_count','self_destruct')
 r125	runeterra	Shadow Isles	archetype (library)	graveyard	14	select card from flat_concept where concept in ('graveyard','revive','mill','self_mill','discard','hand_disruption')
-r126	runeterra	Shadow Isles	archetype (library)	sustain	17	select card from flat_concept where concept in ('heal','lifesteal','regeneration','cheat_death')
+r126	runeterra	Shadow Isles	archetype (library)	sustain	17	select card from flat_concept where concept in ('heal','lifesteal','regeneration','cheat_death','player_heal','player_lifesteal')
 r127	runeterra	Shadow Isles	archetype (library)	swarm	36	select card from flat_concept where concept in ('summon','board_presence','fodder','aura','on_ally_play')
 r128	runeterra	Shurima	archetype (library)	trickery	5	select card from flat_concept where concept in ('stealth','trap_secret','information','telegraphed_threats')
 r129	runeterra	Shurima	archetype (library)	swarm	30	select card from flat_concept where concept in ('summon','board_presence','fodder','aura','on_ally_play')

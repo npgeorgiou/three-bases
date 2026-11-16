@@ -356,6 +356,12 @@ def derive(c):
               "s.field='keyword' and s.value=k.game || ':' || k.name), k.name) where cd.test='keyword_condition' and v.tree!=''")
     for concept, table, cond in RULES:
         c.execute(f"insert into flat_concept select distinct card, ?, ? from {table} where {cond}", (concept, 'rule ' + concept))
+    # drain whose life goes to the player (Runeterra's Nexus) is player_lifesteal; to my unit it stays lifesteal; a game whose
+    # player is a unit on the board keeps both
+    to_player = ("select card from flat_do where on_kind='player' and coalesce(on_side,'mine')!='enemy' and act in ('heal','stat_change','grow')")
+    c.execute(f"insert into flat_concept select distinct card, 'player_lifesteal', rule from flat_concept where concept='lifesteal' and card in ({to_player})")
+    c.execute(f"delete from flat_concept where concept='lifesteal' and card in ({to_player}) and not {BODY}")
+    c.execute(f"update flat_do set concept='player_lifesteal' where concept='lifesteal' and card in ({to_player}) and not {BODY}")
     # a tank: a unit with the top 10% of its game's unit health (concept tree tank: high defence that holds the line)
     for (g,) in c.execute("select distinct game from card where health is not null").fetchall():
         hp = sorted(x for (x,) in c.execute("select health from card where game=? and is_keyword=0 and category='unit' and health is not null", (g,)))
