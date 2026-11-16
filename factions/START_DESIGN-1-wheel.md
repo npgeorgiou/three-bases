@@ -49,9 +49,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    (`library/cards_db/START_DATABASE.md`); if it is the same, the limit goes. A game whose player is a unit on the
    board (Duelyst's General; a rule in its `game_rules.jsonl`) gives its player rows both concepts. Rows that can't
    tell: read, within the 500. Then the radius lists lose their game limits, and so does every game list in `axes.py`
-   that decides whether a concept counts (`POSITION_GAMES`, `JUNK_GAMES`): each concept in one is a suspect too.
-   `links.py` is rebuilt (about 7
-   minutes, Kaptain's OK first). Decided by Kaptain and done here: "doubles a stat" on my own unit joins the radius
+   that decides whether a concept counts (each concept in one is a suspect too); cases: `CARD_CASES` in `axes.py`.
+   `links.py` is rebuilt (about 7 minutes, Kaptain's OK first). Decided by Kaptain and done here: "doubles a stat" on my own unit joins the radius
    "grows strength"; "can't act" and "can't attack" stay two concepts ("can't act" is the wider one).
 2. **The radii and how they work together.** `axes.py` measures the 43 real factions on the 23 radii (1 = the average
    faction of its game). For every two radii (`mechanics_wheel.py links --radii`): `cards` = how much more often than

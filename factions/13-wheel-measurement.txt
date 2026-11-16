@@ -14,8 +14,7 @@ How a value is made (all agreed with Kaptain, 9 Nov 2026):
   other end (units on the board now, works alone, plays what it draws) is a low value on that radius.
 - A card counts for a radius if it has one of the radius's concepts (SPOKES in axes.py; shown on hover in the page).
   A concept counts the same in every game; one that meant two things was split in the library (heal on the player is
-  player_heal, Slay the Spire's Block is player_block_armor). "Position" outside Gwent, Runeterra and Marvel Snap is
-  area hits and pushes (POSITION_GAMES). "More supply" counts supply that pays for cards (base_resource_gain: mana,
+  player_heal, Slay the Spire's Block is player_block_armor). "More supply" counts supply that pays for cards (base_resource_gain: mana,
   spell mana, faeria, and Inscryption's Bones and Mox gems), not a resource spent by effects (Gwent's coins, Monster
   Train's Echo); "grows strength" also counts my own unit's stat doubled.
   A game with fewer than 10 spells (Into the Breach, Inscryption, Marvel Snap) has no value on the two spell radii
@@ -40,8 +39,9 @@ How a value is made (all agreed with Kaptain, 9 Nov 2026):
   "can't block" does not count. "Can't strike" does not either: it is Inscryption's Waterborne, which protects the unit.
 - "Many at once" also counts a card whose amount is the number of units on the board (countboard* in axes.py).
 - Position in every game: a card's effect or condition on its OWN units beside, around or behind it (BESIDE in axes.py,
-  read from the side written in the card's rows, so area hits and pushes on enemies stay out). Gwent, Runeterra and
-  Marvel Snap also count the POSITION concepts. A game with under 10 such cards measures combos only.
+  read from the side written in the card's rows, so area hits and pushes on enemies stay out), or on its neighbour to
+  the right or left in its own row (Runeterra's Support). A game with under 10 such cards measures combos only.
+  Junk cards given to the enemy count for "breaks their plan in other ways" in every game. Cases: CARD_CASES in axes.py.
 - A faction's value = its share of cards that count, divided by its game's average share (0 = none, 1 = average), so
   games that mark more concepts per card don't stand out.
 - Unit stats are numbers, not concepts: strength and defence per supply (per unit where a game's units mostly have no

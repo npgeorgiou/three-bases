@@ -8,7 +8,7 @@ One chat does one step; at its end, mark the step done here.
 |---|---|---|
 | 1. Fix the library's concepts | done 16 Nov 2026 | concepts split by whom a row acts on (player, my unit, cards between piles), radii without game limits; `work/suspect_verdicts.tsv` |
 | 2. The radii and how they work together | done 16 Nov 2026 | `axes.tsv`, `wheel/radius_links.tsv` |
-| 3. The 20 shapes | NEXT; `shapes.py` checks every rule now; waits for step 1's last two game lists (`POSITION_GAMES`, `JUNK_GAMES` in `axes.py`), then Kaptain agrees the shapes | `work/shapes.tsv` |
+| 3. The 20 shapes | made 16 Nov 2026, every rule met; waits for Kaptain to agree them | `work/shapes.tsv` |
 | 4. The usable concepts | to do; `work/concept_catch.py` to write | |
 | 5. The links between concepts | to do; `mechanics_wheel.py` gets a concept mode | |
 | 6. The 20 groups | to do; `work/groups.py` to write, `tools/wheel_table_check.py` to rewrite | |

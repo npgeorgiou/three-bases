@@ -12,7 +12,7 @@ A game with several kinds of supply (SUPPLIES) has each unit's cost divided by t
 Axes 4, 5 and 8 have one spoke each: their other end (units now, works alone, plays what it draws) is a low value.
 Two counts: "cards" = every card of the faction once; "decks" = each card weighted by how many of the library's top
 decks (decks.tsv) play it; factions with fewer than MIN_DECK_CARDS cards in decks get no deck count.
-"With others" = the average of two values: position cards (POSITION, and BESIDE in every game) and combos (the share of the faction's card pairs
+"With others" = the average of two values: position cards (BESIDE, the same in every game) and combos (the share of the faction's card pairs
 that links.sqlite links; run links.py first).
 """
 import collections, json, math, os, sqlite3, sys
@@ -23,23 +23,21 @@ STOP_ON_ENEMY = ['disable', 'silence', 'immobilize', 'cant_move', 'attack_lock']
 STOP_ALWAYS = ['immobilize', 'attack_lock', 'silence', 'disable']
 DISRUPT_ON_ENEMY = ['stat_loss', 'forced_attack', 'forced_movement', 'debuff', 'steal', 'attack_zero', 'stat_multiply', 'bounce_enemy',
                     'polymorph', 'discard', 'counter_spell', 'transform', 'return_to_hand']
-DISRUPT_ALWAYS = ['hand_disruption', 'mill', 'board_clog', 'cost_increase', 'play_restriction', 'counter_spell', 'steal', 'bounce_enemy']
+DISRUPT_ALWAYS = ['hand_disruption', 'mill', 'board_clog', 'cost_increase', 'play_restriction', 'counter_spell', 'steal', 'bounce_enemy', 'junk_cards']
 NOT_MEASURED = ('monster_train',)  # Kaptain, 9 Nov 2026: a different kind of game, not on the page (Marvel Snap has no factions)
 KILL_ON_ENEMY = ['destroy', 'banish']  # kills outright; damage is its own two radii
 DAMAGE_ON_ENEMY = ('damage', 'damage_over_time')  # the card's own text deals damage to an enemy unit or player (a unit's strike is no row)
 DAMAGE_NO_SIDE_GAMES = ('into_the_breach',)  # weapon cards (category ability) deal damage to a tile, friend or enemy (Artemis Artillery); the records keep the text and name no side
 DAMAGE_BY_CONCEPT = ('fight_enemy',)  # damage to an enemy that no damage row carries: my unit is made to fight / strike a chosen enemy (Faeria Hunt Down, Runeterra Single Combat)
-POSITION = ['adjacency', 'aura', 'link_formation', 'flanking', 'assists_support']
-POSITION_GAMES = ('gwent', 'runeterra', 'marvel_snap')  # elsewhere these concepts are area hits and pushes (check of 9 Nov 2026)
 NEAR = ' or '.join("W like '%position " + w + "%'" for w in ('% bordering', '% surrounding', '% sides', '% diagonal', 'is behind', '% in_circuit'))
 BESIDE = [  # my own units by where they stand next to this card (any game): an effect on them, a condition on them, an event of theirs
     "select card from flat_do where on_side='mine' and (" + NEAR.replace('W', "(coalesce(on_with,'')||coalesce(to_with,''))") + ") and ",
     "select card from flat_if where of_side='mine' and (" + NEAR.replace('W', "(coalesce(of_with,'')||coalesce(ev_obj_with,''))") + ") and ",
-    "select card from flat_when where obj_side='mine' and (" + NEAR.replace('W', "coalesce(obj_with,'')") + ") and "]
+    "select card from flat_when where obj_side='mine' and (" + NEAR.replace('W', "coalesce(obj_with,'')") + ") and ",
+    "select card from flat_do where coalesce(on_side,'mine')='mine' and on_pick in ('right_of_self','left_of_self') and "]  # its neighbour in its own row
 CANT = ('attacks', 'moves')  # an enemy unit that can't do these is stopped (Kaptain, 9 Nov 2026: "can't block" does not;
 # "can't strike" is Inscryption's Waterborne: the enemy can't strike this unit, which protects it)
 SUPPLIES = {'inscryption': ('blood', 'energy', 'bones', 'mox')}  # games whose cards are paid in different kinds of supply
-JUNK_GAMES = ('marvel_snap', 'stormbound', 'gwent')  # junk cards that go to the enemy; in Slay the Spire they hurt my own deck
 UNIT_CATS = ('unit', 'hero', 'leader')
 SHOWN = {'multiply_own*': 'a stat of my own unit doubled or multiplied', 'stop*': 'an effect on enemies: ' + ', '.join(STOP_ON_ENEMY) + ', can\'t attack, can\'t move; or any card with: ' + ', '.join(STOP_ALWAYS),
          'disrupt*': 'an effect on enemies: ' + ', '.join(DISRUPT_ON_ENEMY) + '; or any card with: ' + ', '.join(DISRUPT_ALWAYS),
@@ -47,7 +45,7 @@ SHOWN = {'multiply_own*': 'a stat of my own unit doubled or multiplied', 'stop*'
          'weaken*': 'an enemy unit made weaker (debuff on an enemy)',
          'spelldmg*': 'a spell whose text deals damage to an enemy',
          'textdmg*': 'a unit (or building, item, weapon) whose text deals damage to an enemy',
-         'position*': 'position: an effect or condition on its own units beside, around or behind it; in Gwent, Runeterra, Marvel Snap also: ' + ', '.join(POSITION),
+         'position*': 'position: an effect or condition on its own units beside, around or behind it, or on the unit to its right or left',
          'countboard*': 'counts the units on the board',
          'combo*': 'combos: the share of the faction\'s card pairs the library links',
          'cheapunit*': 'a unit in the cheapest third of its game\'s units', 'dearunit*': 'a unit in the dearest third of its game\'s units',
@@ -70,6 +68,11 @@ CHECKS = [  # Kaptain's points: (game, faction, spoke, lowest value it must have
     ('runeterra', 'Demacia', 'many', 0.1),  # 14 Nov 2026: Judgment, one ally strikes all battling enemies (aoe_damage); 0.06 without
     ('inscryption', 'Undead', 'strong', 0.9),  # 0.75 when 4 Bones counted as 4 Blood (SUPPLIES)
 ]
+CARD_CASES = [  # (game, card, starred concept, whether it must have it): every game counts the same (16 Nov 2026)
+    ('duelyst', 'Roar', 'position*', True), ('stormbound', 'Doctor Mia', 'position*', True),  # an effect on my own units beside it
+    ('duelyst', 'Excelsious', 'position*', False), ('stormbound', 'Dubious Hags', 'position*', False),  # only enemies beside it: an area hit
+    ('runeterra', 'Legion Drummer', 'position*', True),  # its neighbour to the right in its own row
+    ('runeterra', 'Puffcap Peddler', 'disrupt*', True), ('faeria', None, 'disrupt*', True)]  # junk cards given to the enemy, in every game
 GAPS = [('inscryption', 'disrupts'), ('sts1', 'tall'), ('into_the_breach', 'spellpay'), ('inscryption', 'spellpay')]  # must have no value: 5 cards in the whole game; a game with no units; games with no spells
 HAS = [('into_the_breach', 'textdmg'),  # weapons' damage on a tile counts as damage on enemies (DAMAGE_NO_SIDE_GAMES, 14 Nov 2026)
        ('gwent', 'grows'), ('gwent', 'growsdef'),  # must have a value: growth of Gwent's one number counts as both
@@ -216,7 +219,7 @@ def tag(c, x, games):
     for card, *src in c.execute(f"select card, {DO_SRC} from flat_do where on_side='enemy' and coalesce(on_kind,'')!='player' and act='cant' and param_event in "
                                 + repr(CANT) + " and " + faction_asks.ROW_ORIGIN):
         con[card].add('stop*'); note_src(card, 'stop*', *src)
-    for q, cols in zip(BESIDE, (DO_SRC, IF_SRC, IF_SRC)):
+    for q, cols in zip(BESIDE, (DO_SRC, IF_SRC, IF_SRC, DO_SRC)):
         for card, *src in c.execute(q.replace('select card from', f'select card, {cols} from', 1) + faction_asks.ROW_ORIGIN):
             con[card].add('position*'); note_src(card, 'position*', *src)
     dmg = collections.defaultdict(set)
@@ -252,8 +255,7 @@ def tag(c, x, games):
         for i in pool:
             ks, v = con[i], stats[i][1]
             if ks & set(STOP_ALWAYS): star_of(i, ks, 'stop*', STOP_ALWAYS)
-            if ks & set(DISRUPT_ALWAYS) or ('junk_cards' in ks and g in JUNK_GAMES): star_of(i, ks, 'disrupt*', DISRUPT_ALWAYS + ['junk_cards'])
-            if ks & set(POSITION) and g in POSITION_GAMES: star_of(i, ks, 'position*', POSITION)
+            if ks & set(DISRUPT_ALWAYS): star_of(i, ks, 'disrupt*', DISRUPT_ALWAYS)
             if stats[i][0] not in UNIT_CATS or v is None or lo is None or lo >= hi: continue
             if v <= lo: ks.add('cheapunit*')
             if v >= hi: ks.add('dearunit*')
@@ -339,6 +341,10 @@ def main():
     for g, fac, key, low in CHECKS:
         v = next((r['cards'][key + '_v'] for r in rows if r['game'] == g and r['faction'] == fac), None)
         if v is None or v < low: print(f'CHECK FAILED: {g} {fac} {key} is {v}, should be at least {low}')
+    names = {(g, n): i for i, g, n in c.execute('select id, game, name from card')}
+    for g, n, k, want in CARD_CASES:
+        ids = [names[(g, n)]] if n else [i for i in pools[g] if 'junk_cards' in con[i]]
+        if not ids or any((k in con[i]) != want for i in ids): print(f'CHECK FAILED: {g} {n or "junk cards"} should {"" if want else "not "}have {k}')
     for want, pairs_ in ((False, GAPS), (True, HAS)):
         for g, key in pairs_:
             if any((r['cards'][key + '_v'] is not None) != want for r in rows if r['game'] == g):
