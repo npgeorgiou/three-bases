@@ -26,7 +26,7 @@ changed. Each step says what a script does and what is judgment.
 - What: each faction = 3-6 radii with uneven values, like real factions. Each radius joined to at least one other of
   the same faction by a strong number (step 2), or by an argument from this game's rules
   (`factions/wheel/arguments.tsv`: L, M, Q, T).
-- How: chosen by hand (Claude), no script. Each shape checked against the real factions:
+- How: `python3 ../../factions/wheel/work/shapes.py [--write]` from library/cards_db (its header says how it picks). Each shape checked against the real factions:
   `python3 axes.py --near "wide=1.4,spends=1.9,back=1.6"` (closest real faction 0.24-0.81 away).
 - Output: `factions/wheel/work/shapes.tsv` (letter A-T, radius=value list). Why each shape was chosen is not saved.
 - Checked by: `python3 tools/wheel_table_check.py` (from the repo root; 3-6 radii, each joined, no two shapes the same).

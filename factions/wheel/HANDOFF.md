@@ -16,6 +16,8 @@ Part 2 is the work, in order; Part 3 is what Kaptain decided and what was learne
 - `links.sqlite` is in git zipped: unzip it first in every new chat, `gunzip -kf links.sqlite.gz`. Rebuild it only after
   `network.py` or `cards.sqlite` changed: `PYTHONHASHSEED=0 python3 links.py` (about 7 minutes: tell Kaptain and wait for
   his OK); it ends with cases/links.tsv and the sides check (START_DATABASE.md, check D) and writes links.sqlite.gz.
+- Radius keys are not plain words: look up each one's name before talking about it (`python3 -c "import axes; [print(s[0], s[3]) for s in axes.SPOKES]"`).
+  `many` is "many at once", `wide` is "many cheap units", `back` is "brings back".
 - A link joins two cards of one game when a rule in `network.py` matches an effect of card A with an effect of card B. It
   keeps what of each card made it (`a_ab`, `b_ab`): an effect row, an ability, a keyword, a concept read from the whole
   card, the card by what it is, or the game's rules.
