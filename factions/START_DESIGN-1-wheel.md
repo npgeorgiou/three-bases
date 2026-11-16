@@ -29,12 +29,12 @@ faction's radii.
    more often than chance a card of one is linked with a card of the other (1 = chance), counted only where the
    link's own effects belong to the two radii (the links store which effect of each card made them); and `links`, the
    linked card pairs made by the two, with `level` = that count growing slowly (0 links = 0, 1 = 1, 10 = 2, 100+ = 3;
-   Kaptain, 16 Nov 2026: a pairing rare in the ten games can be splendid on this board, so any link joins). Numbers only,
+   Kaptain, 16 Nov 2026: a pairing rare in the ten games can be splendid on this board, so for mechanics any link joins). Numbers only,
    nobody reads card pairs. "Rewards playing spells" is judged by its deck number only, because such a card links to
    every spell.
 3. **The 20 factions as shapes.** Each faction is 3-6 strong radii with uneven values, as real factions have. Each
-   radius is joined to another of the same faction by step 2: the library links them at all (`level` 1+), or
-   `decks` 1.5+ (one makes what the other needs:
+   radius is joined to another of the same faction by step 2: `cards` 1.2+ (radii have links enough for the chance
+   number; Kaptain, 16 Nov 2026), or `decks` 1.5+ (one makes what the other needs:
    "spends them" makes deaths, "brings back" uses them), or by an argument from this game's rules, written in
    `arguments.tsv`. Each shape is checked against the real factions (`axes.py --near`). No two shapes are the same.
    A radius that only exists by another game's rules is never a faction's base (see step 4's rule check).

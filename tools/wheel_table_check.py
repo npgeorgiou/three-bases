@@ -5,10 +5,11 @@ R='factions/wheel/'; W='library/cards_db/wheel/'
 fails=[]
 def fail(s): fails.append(s)
 def tsv(p): return [l.rstrip('\n').split('\t') for l in open(p)][1:]
-strong=lambda n:n[0]>=1 or n[1]>=1.5  # joined: the library links them at all (level 1+, any link made by the two) or real decks 1.5+
+strong=lambda n:n[0]>=1 or n[1]>=1.5  # mechanics joined: the library links them at all (level 1+) or real decks 1.5+
+rjoin=lambda n:n[0]>=1.2 or n[1]>=1.5  # radii joined: chance number 1.2+ (radii have links enough for it) or real decks 1.5+
 RL={}
 for x in csv.DictReader(open(W+'radius_links.tsv'),delimiter='\t'):
-    c=float(x['level'] or 0); d=float(x['decks'] or 0); RL[(x['a'],x['b'])]=RL[(x['b'],x['a'])]=((d>=1.2)*1 if 'spellpay' in (x['a'],x['b']) else c,d)
+    c=float(x['cards'] or 0); d=float(x['decks'] or 0); RL[(x['a'],x['b'])]=RL[(x['b'],x['a'])]=(d if 'spellpay' in (x['a'],x['b']) else c,d)
 ML={}
 for x in csv.DictReader(open(W+'links.tsv'),delimiter='\t'):
     ML[(x['a'],x['b'])]=ML[(x['b'],x['a'])]=(float(x['level'] or 0),float(x['decks'] or 0))
@@ -30,7 +31,7 @@ for k in CIRC:
     r=[x for x in SHAPE[k] if x not in NUM]
     if not 3<=len(SHAPE[k])<=6: fail(f'{k}: {len(SHAPE[k])} radii')
     for a in r:
-        if not any(strong(RL.get((a,b),(0,0))) or ('radius',k,a,b) in ARG for b in r if b!=a): fail(f'{k}: radius {a} joined to nothing')
+        if not any(rjoin(RL.get((a,b),(0,0))) or ('radius',k,a,b) in ARG for b in r if b!=a): fail(f'{k}: radius {a} joined to nothing')
 for x,y in itertools.combinations(CIRC,2):
     if SHAPE[x]==SHAPE[y]: fail(f'{x}={y}: same shape')
 # signatures and extras

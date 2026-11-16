@@ -72,8 +72,9 @@ concepts know the ability, effect row or keyword that gives them, `axes.SOURCES`
 examples, on mechanics and radii) run at the end of `mechanics_wheel.py links`; all pass. Real-deck numbers are unchanged.
 Chance is counted the same way: the old chance x the share of A's cards' links made by their A part x the same for B,
 so 1 still means chance. Joins use `level` (Kaptain, 16 Nov 2026: a pairing rare in the ten games can be splendid here):
-`links` = the linked card pairs made by the two, `level` 0 / 1 link = 1 / 10 = 2 / 100+ = 3; joined = level 1+ or decks
-1.5+ (`wheel_table_check.py`, `work/borrow.py`, `signatures.py`, `check_assign.py`). Mechanic pairs with level 0: 420 of
+`links` = the linked card pairs made by the two, `level` 0 / 1 link = 1 / 10 = 2 / 100+ = 3; mechanics joined = level 1+ or
+decks 1.5+ (`work/borrow.py`, `signatures.py`, `check_assign.py`, `wheel_table_check.py`); radii joined = cards 1.2+ or decks
+1.5+ (step 3; Kaptain, 16 Nov 2026). Mechanic pairs with level 0: 420 of
 1,378; every radii pair has 10+ links.
 Checked by script (no reading), the biggest drops (shield+haste 762 -> 0, area+pick, pick+haste) and every mechanic's share
 of links made by its own part: the lost links were made by other effects of the card (about 90%) or name a card only by

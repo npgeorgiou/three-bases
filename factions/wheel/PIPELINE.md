@@ -16,7 +16,8 @@ changed. Each step says what a script does and what is judgment.
   much more often than chance the library links a card of one with a card of the other (same game); `decks` = how much
   more decks heavy in one hold the other. 1 = chance. `links` = the linked card pairs made by the two; `level` = that
   count growing slowly (0, 1 link = 1, 10 = 2, 100+ = 3). "Rewards playing spells" is judged by `decks` only.
-- Joined = `level` 1 or more (the library links them at all), or `decks` 1.5 or more.
+- Radii joined = `cards` 1.2 or more, or `decks` 1.5 or more. Mechanics joined (steps 5-6) = `level` 1 or more (the library
+  links them at all), or `decks` 1.5 or more.
 - A link counts for a radius only when the effect that made it, on that card's side, belongs to the radius (the links'
   `a_ab`/`b_ab` columns), for chance too (the share of a radius' cards' links its own effects make). Numbers only: nobody reads card pairs.
 
