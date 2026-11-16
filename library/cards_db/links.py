@@ -214,9 +214,9 @@ def main():
     for g in games: build(c, L, g); L.commit()
     L.execute('delete from phrase where id not in (select phrase from link)'); L.commit(); L.execute('vacuum')
     print(f'links.sqlite: {os.path.getsize(os.path.join(HERE, "links.sqlite")) / 1e6:.1f} MB')
-    L.close(); bad = case_failures(c, games)
+    bad = case_failures(c, games)
     print('cases/links.tsv: ' + ('all pass' if not bad else 'FAILED\n  ' + '\n  '.join(bad)))
-    n = foreign_sides(c, L)
+    n = foreign_sides(c, L); L.close()
     print('link sides naming another card\'s effect: ' + ('none' if not n else f'{n} FAILED'))
 
 
