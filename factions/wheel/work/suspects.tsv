@@ -1,0 +1,47 @@
+concept	counted only in	left out	limited in
+adjacency	runeterra	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,stormbound,sts1	mechanic adjacency
+aoe_damage	faeria,gwent,inscryption,into_the_breach,runeterra,stormbound,sts1	duelyst,marvel_snap,monster_train	radius many, mechanic area
+attack_gain	duelyst,faeria,gwent,inscryption,monster_train,runeterra,stormbound,sts1	into_the_breach,marvel_snap	radius grows
+base_resource_gain	duelyst,faeria,inscryption,marvel_snap,monster_train,stormbound,sts1	gwent,into_the_breach,runeterra	mechanic supply
+block_armor	gwent,monster_train	duelyst,faeria,inscryption,into_the_breach,marvel_snap,runeterra,stormbound,sts1	radius protects, mechanic shield
+cost_reduction	duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1	inscryption,into_the_breach	radius cheaper, mechanic cheaper
+cost_set	duelyst,faeria,gwent,marvel_snap,runeterra,stormbound,sts1	inscryption,into_the_breach,monster_train	mechanic cheaper
+damage_reduction	duelyst,faeria,gwent,inscryption,monster_train,runeterra	into_the_breach,marvel_snap,stormbound,sts1	radius protects, mechanic shield
+death_count	faeria,gwent,marvel_snap,monster_train,runeterra,stormbound	duelyst,inscryption,into_the_breach,sts1	radius spends, mechanic deathfeed
+death_trigger	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound	into_the_breach,sts1	radius spends
+defence_gain	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound	marvel_snap,sts1	radius growsdef
+discard	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,stormbound,sts1	runeterra	mechanic discard
+forced_movement	duelyst,into_the_breach,monster_train,stormbound	faeria,gwent,inscryption,marvel_snap,runeterra,sts1	mechanic push
+free_play	gwent,inscryption,monster_train,runeterra,stormbound,sts1	duelyst,faeria,into_the_breach,marvel_snap	radius cheaper, mechanic cheaper
+friendly_fire	inscryption,runeterra,stormbound	duelyst,faeria,gwent,into_the_breach,marvel_snap,monster_train,sts1	radius spends, mechanic selfhurt
+hand_disruption	marvel_snap,runeterra	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,stormbound,sts1	mechanic hand
+heal	duelyst,gwent,into_the_breach,monster_train,runeterra,stormbound	faeria,inscryption,marvel_snap,sts1	radius heals, mechanic heal
+immunity	duelyst,faeria,gwent,inscryption,into_the_breach	marvel_snap,monster_train,runeterra,stormbound,sts1	radius protects, mechanic hide
+in_hand_buff	gwent	duelyst,faeria,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	mechanic inhand
+junk_cards	faeria,marvel_snap,runeterra,stormbound	duelyst,gwent,inscryption,into_the_breach,monster_train,sts1	mechanic junk
+leave_trigger	duelyst,runeterra	faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,stormbound,sts1	mechanic leave
+movement	inscryption,stormbound	duelyst,faeria,gwent,into_the_breach,marvel_snap,monster_train,runeterra,sts1	mechanic movement
+multi_target_attack	into_the_breach,runeterra	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,stormbound,sts1	radius many, mechanic area
+on_ally_play	duelyst,faeria,marvel_snap,monster_train	gwent,inscryption,into_the_breach,runeterra,stormbound,sts1	mechanic allyplay
+on_attack	duelyst,faeria,into_the_breach,monster_train,runeterra,stormbound,sts1	gwent,inscryption,marvel_snap	radius strikes, mechanic onattack
+on_damaged	stormbound	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,sts1	mechanic hurt
+other_death_trigger	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound	into_the_breach,sts1	radius spends, mechanic deathfeed
+recycle	gwent,marvel_snap,sts1	duelyst,faeria,inscryption,into_the_breach,monster_train,runeterra,stormbound	mechanic recycle
+regeneration	duelyst,gwent,into_the_breach,monster_train,runeterra,stormbound	faeria,inscryption,marvel_snap,sts1	radius heals, mechanic heal
+resource_gain	duelyst,faeria,inscryption,marvel_snap,stormbound,sts1	gwent,into_the_breach,monster_train,runeterra	mechanic supply
+return_to_hand	duelyst,gwent,inscryption,marvel_snap,stormbound	faeria,into_the_breach,monster_train,runeterra,sts1	mechanic returnhand
+revive	duelyst,gwent,marvel_snap,runeterra,stormbound	faeria,inscryption,into_the_breach,monster_train,sts1	mechanic revive
+rows	duelyst,into_the_breach	faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	radius many, mechanic area
+sacrifice	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	sts1	radius spends, mechanic sacrifice, mechanic offering
+selection	faeria,gwent,runeterra,sts1	duelyst,inscryption,into_the_breach,marvel_snap,monster_train,stormbound	radius picks, mechanic pick
+self_destruct	gwent,into_the_breach,stormbound	duelyst,faeria,inscryption,marvel_snap,monster_train,runeterra,sts1	radius spends, mechanic sacrifice
+shield	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra	marvel_snap,stormbound,sts1	radius protects, mechanic shield
+spell_power	duelyst,runeterra	faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,stormbound,sts1	radius spellpay, mechanic spellpay
+stat_condition	runeterra	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,stormbound,sts1	mechanic bigstrength
+stat_loss	duelyst,faeria,inscryption,marvel_snap,monster_train,stormbound	gwent,into_the_breach,runeterra,sts1	mechanic weaken
+summon	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound	into_the_breach,sts1	radius wide, mechanic tokens
+swap	into_the_breach,runeterra	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,stormbound,sts1	mechanic movement
+terrain	duelyst,faeria	gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	mechanic cells
+territory_trigger	duelyst,faeria	gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	mechanic cells
+turn_start	duelyst,faeria,runeterra,stormbound	gwent,inscryption,into_the_breach,marvel_snap,monster_train,sts1	mechanic roundstart
+upgrade	monster_train,sts1	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,runeterra,stormbound	mechanic inhand

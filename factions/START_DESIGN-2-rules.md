@@ -107,15 +107,14 @@ More text: `summary/09-card-design-rules.txt`
 - Every card says what it makes happen and what it needs (its `net` line), and each "needs" has a card in the faction
   that makes it. Example: Toll Warrior needs units to die this round; Willing Victim (dies when offered) makes it.
 - Cards that cash something in have 3+ cards that set it up; cards that set something up feed 2+ cards that cash it in.
-- Tools (the wheel's step 7): 2-4 new kinds of things or rules, each from one mechanic, feeding each other; many cards
-  carry them, the rest of the faction's cards build the ways to play around them.
-- Signature mechanics (step 3): the faction builds on them; another faction may hold one as an extra (several cards,
-  at most 3 factions) or a one-off.
-- A faction's mechanics (2 signature, 2-4 extras) are what it builds on, each on several cards. Any card may also carry
-  a one-off from any mechanic of the game: a faction far from bringing back may have ONE unit that comes back. One-offs
-  are not tracked on the wheel and keep cards from being unimaginative.
-- Strong mechanics (copying, deck search, draw, card creation, forced movement, bringing back, stealing) follow the
-  wheel's rule like every mechanic: a signature of 1 faction, an extra in at most 3, elsewhere one-offs only.
+- Tools (the wheel's step 7): 2-4 new kinds of things or rules, each from one mechanic of the group, feeding each
+  other; many cards carry them, the rest of the faction's cards build the ways to play around them.
+- The group (the wheel's step 6): 2 pillars only this faction builds on, and 2-4 other concepts, each in at most 3
+  factions; its mechanics are the links between them, each on several cards. Any card may also carry a one-off from
+  any concept of the library: a faction far from bringing back may have ONE unit that comes back. One-offs are not
+  tracked on the wheel and keep cards from being unimaginative.
+- Strong concepts (copying, deck search, draw, card creation, forced movement, bringing back, stealing) follow the
+  same rule: a pillar of 1 faction, in the group of at most 3, elsewhere one-offs only.
 - How much it touches the enemy: a disruptive faction has many cards that act on enemy units (push, mark, punish); a
   straightforward one has fewer.
 

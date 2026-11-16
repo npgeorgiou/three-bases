@@ -1,5 +1,0 @@
-kind	a	b	faction	argument from this game's rules (Claude's; for mechanics with no library link, step 5)
-mechanic	sacrifice	offering	-	both are "my unit dies"; the Offering gains supply or a card, the sacrifice takes an enemy with it; real factions keep destroy and sacrifice together (apart.py +0.83)
-mechanic	pick	copy	-	the card I pick from my deck is the one I copy, so the strong card comes twice; joined by argument, decks under 1.5
-mechanic	create	copy	-	a created card is copied like any card in hand; joined by argument, decks under 1.5
-mechanic	selfhurt	hurt	-	I damage my own units, so they are hit and survive: the hits "grows when hurt" needs come from my own cards, not only from the enemy

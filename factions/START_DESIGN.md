@@ -25,7 +25,7 @@ take a base, hold it, or take it from the enemy?
 
 ## THE THINKING PROCESS (in this order; no step skipped)
 Step 0 (Kaptain, 9 Nov 2026): the faction's place on the mechanical wheel (`factions/12-mechanical-wheel.txt`) comes
-first. Its radii, signature mechanics, blind spots, mechanics shared with other factions and how it differs from every other
+first. Its radii, its group of concepts and their mechanics, blind spots, concepts shared with other factions and how it differs from every other
 faction are decided there, for all 20 factions together, not in the faction's chat, and so are its theme (picked
 after the mechanics) and its tools.
 Steps 1-6 come from the library, never from memory. Run the queries below on all games (`ask.py all ...` from
@@ -66,16 +66,16 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    6. The play that feels good: what its units do the moment they are placed. Example: "Place: push the enemy facing me
       one row back".
    7. Blind spot: the one thing it never gets, on any card. Example: a swarm faction never restores shields.
-3. **Signature mechanics and blind spots** (taken from the wheel). 2 signature mechanics: the faction builds on them;
-   other factions may have them as extras or one-offs. Its blind spot (step 2.7) plus any other things the wheel says it never has; its cards never make up for them,
+3. **Its group and blind spots** (taken from the wheel). Its group of concepts: 2 pillars (no other faction builds on
+   them) and 2-4 others (in at most 3 factions); any faction may use any concept as a one-off. Its blind spot (step 2.7) plus any other things the wheel says it never has; its cards never make up for them,
    it plays around them. A blind spot is never one of the two things every faction needs (hold dots, remove enemies),
    only one way of doing them: "no kill spells" is a blind spot, "no removal" is not.
 4. **How it differs from each other faction** (from the wheel; check it with the closest factions on the page). Kaptain's example: a swarm that fills the front rows with many cheap weak
    units, against a fortress that never has more than 3 units and moves defence between them. Write one sentence per
    other faction saying why a game between the two feels different.
-5. **Mechanics and tools, taken from the wheel** (2 signatures, 2-4 extras, 2-4 tools; never new ones here), each
-   mechanic written "I do X -> I gain from X" ("my units die -> my other units grow"). A mechanic is
-   broad: 30+ cards can make it happen or use it. One card's effect ("a gun fires") is not a mechanic. Each mechanic
+5. **Mechanics and tools, from the wheel** (never new ones here). A mechanic is a link real cards show between two
+   concepts of the group; write each from its link texts as "I do X -> I gain from X" ("my units die -> my other units
+   grow"). A mechanic is broad: 30+ of the faction's cards can make it happen or use it. One card's effect ("a gun fires") is not a mechanic. Each mechanic
    grows in at least one of three ways:
    - Chain: an effect gets bigger when something else happened first. "Deal 1 damage. If you cast another spell this
      round, deal it again."

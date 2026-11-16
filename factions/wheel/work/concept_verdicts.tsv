@@ -1,28 +1,28 @@
-concept	decision (Claude's)
-on_play	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-passive	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-activated	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-turn_end	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-count_payoff	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-card_presence_condition	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-cooldowns	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-once_per_game	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-on_draw	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-variety_payoff	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-combat_start	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-condition_life	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-play_timing_condition	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-cost_condition	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-on_enemy_enter	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-condition_count	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-deck_position	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-game_end_trigger	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-hand_size	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-delayed	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-modal_choice	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-aura	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do (ongoing; where it touches neighbours, adjacency catches 0.46)
-symmetric_effect	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do (both players alike)
-on_lifegain	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+concept	reason it is left out (Claude's; step 4)
+on_play	trigger or condition: when or if a card acts
+passive	trigger or condition: when or if a card acts
+activated	trigger or condition: when or if a card acts
+turn_end	trigger or condition: when or if a card acts
+count_payoff	trigger or condition: when or if a card acts
+card_presence_condition	trigger or condition: when or if a card acts
+cooldowns	trigger or condition: when or if a card acts
+once_per_game	trigger or condition: when or if a card acts
+on_draw	trigger or condition: when or if a card acts
+variety_payoff	trigger or condition: when or if a card acts
+combat_start	trigger or condition: when or if a card acts
+condition_life	trigger or condition: when or if a card acts
+play_timing_condition	trigger or condition: when or if a card acts
+cost_condition	trigger or condition: when or if a card acts
+on_enemy_enter	trigger or condition: when or if a card acts
+condition_count	trigger or condition: when or if a card acts
+deck_position	trigger or condition: when or if a card acts
+game_end_trigger	trigger or condition: when or if a card acts
+hand_size	trigger or condition: when or if a card acts
+delayed	trigger or condition: when or if a card acts
+modal_choice	trigger or condition: when or if a card acts
+aura	trigger or condition: when or if a card acts
+symmetric_effect	trigger or condition: when or if a card acts
+on_lifegain	trigger or condition: when or if a card acts
 spell_speed	not in this game (answers on the enemy's turn)
 trap_secret	not in this game (answers on the enemy's turn)
 cant_block_self	not in this game (blocking)
@@ -38,47 +38,32 @@ run_structure	not in this game (a run of fights)
 shop_gold	not in this game (shops)
 deck_modification	not in this game (a deck changed between battles)
 permanent_loss	not in this game (losses beyond the battle)
-enemy_benefit	a possibility for cards (a drawback that helps the enemy), not a mechanic
+enemy_benefit	a possibility for cards (a drawback that helps the enemy)
 random_effect	ruled out by Kaptain (no randomness)
 random_target	ruled out by Kaptain (no randomness)
 random_ability	ruled out by Kaptain (no randomness)
 transform	ruled out by Kaptain (my units changing form is for cards)
 countdown	ruled out by Kaptain (countdowns very sparingly, on cards)
-positional	one of the game's own things (cells, rows, columns); its cards spread over the position mechanics (any mechanic 0.86)
-lanes	one of the game's own things (3 lanes); acting between lanes is mechanic lanes
+positional	one of the game's own things (cells, rows, columns)
+lanes	one of the game's own things (3 lanes)
 zone_control	one of the game's own things (bases per lane)
 board_limit	one of the game's own things (the 3x3 camp)
 round_carryover	one of the game's own things (carry-over)
-high_cost	one of the game's own things (unit cost); the tall radius measures it by cost
-cant_attack	a possibility for cards (my own unit can't attack: a wall, paid by its budget); on enemies the stops radius counts it
-drawback	a possibility for cards (a drawback gives a negative tv), not a mechanic
-exhaust	a possibility for cards (a card gone for good after one use), not a mechanic
-slots_queue	a source for a tool in step 7 (Slay the Spire's orbs), not a mechanic
-damage	spread: ping 0.39, area, spelldmg, overkill and the damage radii catch its cards (any mechanic 0.87); no mechanic of its own
-destroy	spread: on enemies it is kill (kill*), on my own units offering and sacrifice (any mechanic 0.82)
-banish	spread: on enemy units it is kill (kill*, 0.27); on cards a possibility for cards (gone for good)
-buff	spread: a general "stronger" row; its cards' rows are in grows and growsdef (any mechanic 0.78)
-card_quality	spread: a general "better cards" row; its cards sit in pick, create, copy (any mechanic 0.93)
-stat_multiply	ADD to the grows radius where it is on my own units (Kaptain agreed); waits: it changes the 20 shapes (todo, Wheel point 4)
-debuff	in mechanic weaken where it is on an enemy (weaken*, Kaptain agreed); on my own units a possibility for cards
-upgrade	in mechanic inhand in Slay the Spire and Monster Train (Kaptain agreed); in Runeterra it is a champion levelling up on the board: my units changing form, ruled out by Kaptain
-self_mill	in mechanic discard (Kaptain agreed)
-rule_change	candidate mechanic: judged at point 4
-repeat_trigger	candidate mechanic: judged at point 4
-donate	candidate mechanic: judged at point 4 (steal catches 0.38)
-stances	candidate mechanic: judged at point 4
-information	candidate mechanic, judged at point 4 (Kaptain: a new one)
-deck_condition	catch by chance (its cards also grow defence); trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-round_passing	catch by chance; not in this game (passing a round)
-max_mana_condition	catch by chance; trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-evasion	catch by chance (on_attack beside it); not in this game (blocking: can't be blocked)
-spell_or_skill	catch by chance; not in this game (answers on the enemy's turn)
-on_block	catch by chance; not in this game (blocking)
-low_life	catch by chance; not in this game (player health)
-mill	catch by chance (1 game, 6 cards); the enemy's deck to discard: candidate mechanic, judged at point 4
-win_condition	catch by chance; one of the game's own things (bases)
-control_reward	catch by chance; one of the game's own things (bases per lane)
-targeting_rules	catch by chance; one of the game's own things (reach)
-on_harvest	one of the game's own things (Faeria's wells are like cells); cells catches it
-start_of_game	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-target_choice	catch by chance; choosing the target is how every card of this game works, not a mechanic
+high_cost	one of the game's own things (unit cost)
+cant_attack	a possibility for cards (my own unit can't attack: a wall, paid by its budget)
+drawback	a possibility for cards (a drawback gives a negative tv)
+exhaust	a possibility for cards (a card gone for good after one use)
+slots_queue	a source for a tool in step 7 (Slay the Spire's orbs)
+deck_condition	trigger or condition: when or if a card acts
+round_passing	not in this game (passing a round)
+max_mana_condition	trigger or condition: when or if a card acts
+evasion	not in this game (blocking: can't be blocked)
+spell_or_skill	not in this game (answers on the enemy's turn)
+on_block	not in this game (blocking)
+low_life	not in this game (player health)
+win_condition	one of the game's own things (bases)
+control_reward	one of the game's own things (bases per lane)
+targeting_rules	one of the game's own things (reach)
+on_harvest	one of the game's own things (Faeria's wells are like cells)
+start_of_game	trigger or condition: when or if a card acts
+target_choice	every card does it (choosing the target)
