@@ -20,7 +20,7 @@ enemyside='place my units in the enemy camp (NEW RULE)',haste='attack the turn i
 mark='mark an enemy for later hits',reach='hit from afar into the back rows')
 RAD=dict(strong='strength',grows='grows strength',strikes='strikes more',textdmg="damage from units' text",kills='kills outright',
 many='many at once',spelldmg='damage from spells',spellpay='rewards playing spells',stops='stops them',disrupts='breaks their plan',
-one='one chosen',supply='more supply',cheaper='cheaper hand',cards='more cards',picks='picks and copies',back='brings back',
+supply='more supply',cheaper='cheaper hand',cards='more cards',picks='picks and copies',back='brings back',
 wide='many cheap units',spends='spends them',together='position and combos',heals='heals them',growsdef='grows defence',
 protects='protects them',tough='defence',tall='a few big units')
 F='factions/wheel/'

@@ -2,7 +2,7 @@
 See `STOP1.md` for what the ratings mean.
 
 ## Q: Enemy mover
-- Strong in: damage from units' text 1.8, strikes more 1.3, one chosen 1.5.
+- Strong in: damage from units' text 1.8, strikes more 1.3.
 - Builds on: I push enemy units; small hits. Extras: the rest of a hit goes into the unit behind; my attacks do something extra; my unit strikes a chosen enemy; damage spells.
 - On the board: Place: the enemy unit in the front cell facing my unit moves back one row, or aside -> his cancelling unit leaves and my dot counts. Why: I take a dot without killing, so my small unit holds it. (NEW RULE)
 - On the board: Place: an enemy from the middle or back row is moved to a free front cell, where my units reach it -> a protected unit stands where my melee hits it. Why: back units that held income or Ranged are dragged into my strikes. (NEW RULE)
@@ -109,7 +109,7 @@ Combos with 19 factions (2 strong):
 - T OK: S's extra carry-over pays for a big unit in the first round and T's haste lets it strike at once, before the enemy can answer.
 
 ## T: Place striker
-- Strong in: one chosen 1.6, kills outright 1.5, spends them 1.3.
+- Strong in: kills outright 1.5, spends them 1.3.
 - Builds on: my unit strikes a chosen enemy; attack the turn it is placed. Extras: my unit dies for supply, a card or strength; Death effects; take an enemy unit or card (NEW RULE); my unit gains when it kills.
 - On the board: Place: this unit strikes any enemy in the lane, even out of reach -> the blocker that cancels my dot dies by my unit's strength and no attack is spent. Why: I take a dot on the same action that places the unit. (NEW RULE)
 - On the board: Place: two chosen enemies strike each other (strength against defence) -> one action removes two units. Why: I remove his best unit by his own strength, so my small units can take the dot. (NEW RULE)

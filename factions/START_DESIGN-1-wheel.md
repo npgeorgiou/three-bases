@@ -25,7 +25,7 @@ the hit goes into the unit behind").
 A step uses only what the steps before it made. Steps 1-3 are the wheel; the mechanics come after, found inside each
 faction's radii.
 
-1. **The radii.** The 24 radii of `factions/13-wheel-measurement.txt`, measured on 43 real factions (`axes.py`).
+1. **The radii.** The 23 radii of `factions/13-wheel-measurement.txt`, measured on 43 real factions (`axes.py`).
 2. **The radii that work together.** For every two radii, the library's numbers (`mechanics_wheel.py links --radii`):
    - `cards`: how much more often than chance a card of one is linked with a card of the other (1 = chance). A link
      counts only where the effects that made it belong to the two radii (the links store which effect of each card
@@ -49,7 +49,6 @@ faction's radii.
      is among its two highest values. Each shape carries at most 2 archetypes and each archetype is carried by 2-3
      shapes, so every kind of play has factions and none is crowded;
    - within these rules, the shapes are as different from each other as possible;
-   - "One chosen" is in no shape: choosing the target is the default for every faction.
    Output: `work/shapes.tsv`. **Kaptain agrees the 20 shapes.**
 4. **The mechanics list** (`mechanics.tsv`, 53 mechanics). Each mechanic is written "I do X -> I gain from X" on this game's things (units, rows,
    columns, front cells, dots, supply per lane, carry-over, hand, discard pile), with the library concepts that catch
@@ -143,7 +142,7 @@ theme, its tools and how they feed each other, the seven answers, and its partne
 under 150 lines (split them); the CLAUDE.md map names them.
 
 ## How to read the wheel
-24 radii in 8 areas, measured on 43 real factions of 8 games (Duelyst, Faeria, Gwent, Inscryption, Into the Breach,
+23 radii in 8 areas, measured on 43 real factions of 8 games (Duelyst, Faeria, Gwent, Inscryption, Into the Breach,
 Runeterra, Stormbound, Slay the Spire; Marvel Snap has no factions, Monster Train is left out). A value compares a faction with the average faction of
 its own game (1 = average), so compare factions of different games loosely. Into the Breach, Stormbound, Slay the Spire
 and Inscryption have no value on 10 or more radii. Strength, defence and the two width radii give a faction its shape;

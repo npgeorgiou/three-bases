@@ -50,7 +50,7 @@ debuff	102	5	0.43	area 0.13	0.83	disrupts 0.40	none	ADD to mechanic weaken: a la
 immobilize	101	3	0.94	guard 0.54	1.00	stops 1.00	caught by mechanic guard	
 disable	98	5	0.80	area 0.23	1.00	stops 1.00	caught by radius stops	
 aura	94	6	0.75	adjacency 0.46	0.99	together 0.46	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do (ongoing; where it touches neighbours, adjacency catches 0.46)
-cooldowns	92	1	0.89	haste 0.43	0.89	growsdef 0.28	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do (caught by "one" only, which catches nothing)
+cooldowns	92	1	0.89	haste 0.43	0.89	growsdef 0.28	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
 stacking_keyword	84	1	0.85	ping 0.65	0.98	strikes 0.73	caught by mechanic ping	
 hand_size	80	6	0.69	draw 0.31	0.84	cards 0.36	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
 play_restriction	79	4	0.47	enemyside 0.21	1.00	disrupts 1.00	caught by radius disrupts	

@@ -2,12 +2,10 @@
 A candidate is 3-6 of one real faction's strong radii (value 1.2+), every radius joined to another of them (radius_links.tsv:
 cards 1.2+ or decks 1.5+; spellpay by decks); its values are that faction's. The 20 are picked from the candidates, at most one
 per real faction: every radius a strength of 2-5 shapes, each shape carries at most 2 archetypes of factions/wheel/archetypes.tsv
-through its main strengths (the highest and second value), each archetype carried by 2-3 shapes, then as different from each other as possible. "One chosen" is left out: choosing
-the target is the default (Kaptain, 16 Nov 2026).
+through its main strengths (the highest and second value), each archetype carried by 2-3 shapes, then as different from each other as possible.
 python3 ../../factions/wheel/work/shapes.py [--write]: prints the 20; --write writes factions/wheel/work/shapes.tsv."""
 import csv, itertools, random, sys
 NUM = {'strong', 'tough', 'together'}  # shape-only radii: give a faction its shape, joined to nothing
-OUT = {'one'}
 AROWS = list(csv.DictReader(open('../../factions/wheel/archetypes.tsv'), delimiter='\t'))
 ARCH = [r['radii (main strength of 1+ shape)'].split(',') for r in AROWS]
 def carry(pick, caps):
@@ -37,11 +35,11 @@ def holds(s):
 cands, facs = [], []
 for r in csv.DictReader(open('axes.tsv'), delimiter='\t'):
     if r['mode'] != 'cards': continue
-    v = {k[:-6]: float(x) for k, x in r.items() if k.endswith('_value') and x and float(x) >= STRONG and k[:-6] not in OUT}
+    v = {k[:-6]: float(x) for k, x in r.items() if k.endswith('_value') and x and float(x) >= STRONG}
     for n in range(3, min(6, len(v)) + 1):
         for s in itertools.combinations(sorted(v), n):
             if holds(s): cands.append((f"{r['game']}: {r['faction']}", {k: v[k] for k in s}))
-RADII = sorted(({a for a, b in RL} | NUM) - OUT)
+RADII = sorted({a for a, b in RL} | NUM)
 main = [set(sorted(sh, key=lambda a: -sh[a])[:2]) for f, sh in cands]
 def score(pick):
     cnt = {a: 0 for a in RADII}

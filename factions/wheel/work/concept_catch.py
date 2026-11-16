@@ -3,7 +3,7 @@ For each such concept, per game: the share of its cards that a radius (axes.SPOK
 counts; the shares are averaged over the games with 3+ of its cards, so each game counts the same.
 Writes factions/wheel/work/concept_sort.tsv: concept, cards, games, caught by any mechanic, the top mechanic,
 caught by any radius, the top radius, caught (script), decision. A concept is caught when half its cards are in one mechanic or radius
-(script; the radii of stats and "one chosen" catch nothing: Claude's rule); the decisions come from work/concept_verdicts.tsv (concept, decision; Claude's): one for every concept caught
+(script; the radii of stats catch nothing: Claude's rule); the decisions come from work/concept_verdicts.tsv (concept, decision; Claude's): one for every concept caught
 nowhere, and for a catch by chance (the concept's cards share another effect, not this one).
 Usage (from library/cards_db): python3 ../../factions/wheel/work/concept_catch.py"""
 import collections, os, sys
@@ -13,7 +13,7 @@ import axes, mechanics_wheel
 HERE = os.path.dirname(os.path.abspath(__file__))
 MIN_GAME = 3      # a game counts for a concept when it has 3+ of its cards (a rarer concept: every game that has it)
 CAUGHT = 0.5      # half the concept's cards in one mechanic or radius: caught there
-NO_CATCH = ('strong', 'tough', 'one')        # radii of stats and of the default target say nothing of what a card does
+NO_CATCH = ('strong', 'tough')              # radii of stats say nothing of what a card does
 BY_STATS = ('cheapunit*', 'dearunit*')       # wide and tall catch by what cards do (summon), not by their cost
 
 

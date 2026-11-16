@@ -25,7 +25,7 @@ Principles
 7. Each faction, once built, is measured on the radii (`node tools/wheel_check.js <letter> "<planned values>"`): it
    must land where the wheel put it; if it drifted, the faction is fixed, not the wheel.
 
-The axes. On the page the ends below are split into 24 radii in 8 areas (factions/13-wheel-measurement.txt), measured
+The axes. On the page the ends below are split into 23 radii in 8 areas (factions/13-wheel-measurement.txt), measured
 by axes.py on 43 factions of 8 games (Marvel Snap has no factions; Monster Train is a different kind of game).
 1.  Own units: spends them (deaths, sacrifice, trading a unit for value) or keeps them alive (heal, more defence,
     shields, protection, grow).

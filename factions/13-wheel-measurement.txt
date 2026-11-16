@@ -32,8 +32,6 @@ How a value is made (all agreed with Kaptain, 9 Nov 2026):
   Runeterra 34-44%, Gwent 10-18%).
 - Growth (more strength, more defence on its own units) counts for "units' own strikes" and for "keeps them alive" in
   every game with units; in Gwent the one number grows, so its growth counts for both (the rule of axis 9).
-- "One chosen" is read from the card's rows in every game: an effect on one chosen unit on the board (chosen* in
-  axes.py). The library's mark for a chosen target exists almost only in Runeterra.
 - "Breaks their plan" also counts an enemy unit that can't attack or can't move (CANT in axes.py). Kaptain, 9 Nov 2026:
   "can't block" does not count. "Can't strike" does not either: it is Inscryption's Waterborne, which protects the unit.
 - "Many at once" also counts a card whose amount is the number of units on the board (countboard* in axes.py).
@@ -61,12 +59,12 @@ How a value is made (all agreed with Kaptain, 9 Nov 2026):
   has no units), Into the Breach 16. Read the small games' shapes with care. The page shows each gap with its reason.
 - Two counts: all cards; or each card weighted by how many decks of decks.tsv play it (only factions with 10+ cards in
   decks). Deck lists hold each card once, without copies.
-- 24 radii in 8 areas (Kaptain, 9 Nov 2026: broad radii hid how factions differ, e.g. Freljord sets enemy strength to 0
+- 23 radii in 8 areas (Kaptain, 9 Nov 2026: broad radii hid how factions differ, e.g. Freljord sets enemy strength to 0
   and Noxus switches enemies off, both were "breaks their plan"; so five radii are split where most games have 10+
   cards per part, and neighbours form areas drawn as coloured arcs; the area names are Claude's). In circle order:
   Fighting: strength, grows strength, strikes more or first. Damage: damage from units' text, kills outright, many at
   once. Spells: damage from spells, rewards playing spells.
-  Control: stops them (switch off, silence, can't attack, can't move), breaks their plan in other ways, one chosen.
+  Control: stops them (switch off, silence, can't attack, can't move), breaks their plan in other ways.
   Cards and supply: more supply, cheaper or stronger hand, more cards, picks and copies, brings back.
   Many units and dying: many cheap units, spends them. Together: position and combos.
   Staying alive: heals them, grows defence, protects them, defence, a few big units.

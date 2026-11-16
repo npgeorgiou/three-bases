@@ -7,7 +7,7 @@ links.sqlite.gz too). A step is redone only when what it uses changes, and then 
 changed. Each step says what a script does and what is judgment.
 
 ## Step 1. The radii
-- What: 24 radii (`SPOKES` in axes.py: key, name, the library concepts that count a card for it). A faction's value
+- What: 23 radii (`SPOKES` in axes.py: key, name, the library concepts that count a card for it). A faction's value
   on a radius = its share of such cards / its game's average share (1 = average). 43 real factions of 8 games.
 - Script: `python3 axes.py` -> `axes.tsv`, `factions/wheel-axes.html`. How the values are made: `factions/13`.
 - Judgment: which concepts belong to each radius (checked by agents reading cards, `axes.py --cards <file>`).
@@ -30,7 +30,7 @@ changed. Each step says what a script does and what is judgment.
   (letter A-T, radius=value list). Without `--write` it only prints the 20, their real factions and the archetypes
   each carries.
 - Candidates: every 3-6 of a real faction's radii valued 1.2+ ("cards" values in axes.tsv) whose radii are all joined
-  (step 2), with that faction's values. "One chosen" is left out.
+  (step 2), with that faction's values.
 - Picking: a search over 20 candidates, at most one per real faction; misses of the rules count 100 each (every
   radius in 2-5 shapes; every archetype of `factions/wheel/archetypes.tsv` carried by 2+ shapes, a shape carrying at
   most 2 through its two highest values), and sameness (shared radii between two shapes, squared) decides the rest.
@@ -45,7 +45,7 @@ changed. Each step says what a script does and what is judgment.
 - Where the list comes from: every library concept with real cards and in no mechanic is sorted in
   `work/concept_sort.tsv`, written by `work/concept_catch.py` (run from library/cards_db): per concept, the share of its
   cards (averaged per game) in any mechanic, the top mechanic, any radius, the top radius; "caught" when half its cards
-  are in one (the stat radii and "one chosen" catch nothing); the decision for the rest is Claude's, from
+  are in one (the stat radii catch nothing); the decision for the rest is Claude's, from
   `work/concept_verdicts.tsv`. A candidate mechanic is read like the others and joins the list or gets its reason.
 - Reading: `python3 mechanics_wheel.py cards <file>` writes 8 cards per mechanic from cards.sqlite (game, the card's
   concepts, name, the first 220 letters of its text). Agents read them and say how many of the 8 are really this

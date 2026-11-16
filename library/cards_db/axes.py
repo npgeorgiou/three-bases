@@ -43,7 +43,6 @@ JUNK_GAMES = ('marvel_snap', 'stormbound', 'gwent')  # junk cards that go to the
 UNIT_CATS = ('unit', 'hero', 'leader')
 SHOWN = {'stop*': 'an effect on enemies: ' + ', '.join(STOP_ON_ENEMY) + ', can\'t attack, can\'t move; or any card with: ' + ', '.join(STOP_ALWAYS),
          'disrupt*': 'an effect on enemies: ' + ', '.join(DISRUPT_ON_ENEMY) + '; or any card with: ' + ', '.join(DISRUPT_ALWAYS),
-         'chosen*': 'an effect on one chosen unit on the board',
          'kill*': 'an effect on enemies: ' + ', '.join(KILL_ON_ENEMY),
          'spelldmg*': 'a spell whose text deals damage to an enemy',
          'textdmg*': 'a unit (or building, item, weapon) whose text deals damage to an enemy',
@@ -72,8 +71,7 @@ CHECKS = [  # Kaptain's points: (game, faction, spoke, lowest value it must have
 GAPS = [('inscryption', 'disrupts'), ('sts1', 'tall')]  # must have no value: 5 cards in the whole game; a game with no units
 HAS = [('into_the_breach', 'textdmg'),  # weapons' damage on a tile counts as damage on enemies (DAMAGE_NO_SIDE_GAMES, 14 Nov 2026)
        ('gwent', 'grows'), ('gwent', 'growsdef'),  # must have a value: growth of Gwent's one number counts as both
-       ('duelyst', 'pos'), ('faeria', 'pos'), ('stormbound', 'pos'),  # position in the board games
-       ('duelyst', 'one'), ('faeria', 'one'), ('gwent', 'one'), ('stormbound', 'one')]  # a chosen target is read from the rows in every game
+       ('duelyst', 'pos'), ('faeria', 'pos'), ('stormbound', 'pos')]  # position in the board games
 MIN_DECK_CARDS = 10
 MIN_DECKS_BOTH = 5  # a game gives a decks value for two radii only when at least 5 of its decks hold both
 MIN_LINKS_GAME = 5  # a game counts for two radii only when chance alone would give it 5 linked pairs
@@ -92,7 +90,6 @@ SPOKES = [  # (key, axis number, axis name, this radius, concepts, area of the c
     ('spellpay', 3, 'Damage', 'rewards playing spells', ['on_spell', 'spells_played_condition', 'spell_power@duelyst,runeterra'], 'Spells'),
     ('stops', 2, 'Enemy units', 'stops them', ['stop*'], 'Control'),
     ('disrupts', 2, 'Enemy units', 'breaks their plan in other ways', ['disrupt*', 'disruption'], 'Control'),
-    ('one', 6, 'Targets', 'one chosen', ['chosen*', 'target_choice', 'mark_target@duelyst,gwent,runeterra,sts1'], 'Control'),
     ('supply', 4, 'Supply and cards', 'more supply', ['resource_gain', 'base_resource_gain', 'resource_banking', 'coin_economy'], 'Cards and supply'),
     ('cheaper', 4, 'Supply and cards', 'cheaper or stronger hand', ['cost_reduction@duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1',
         'free_play@gwent,inscryption,monster_train,runeterra,stormbound,sts1', 'cost_set', 'in_hand_buff'], 'Cards and supply'),
@@ -214,9 +211,6 @@ def tag(c, x, games):
     for card, *src in c.execute(f"select card, {DO_SRC} from flat_do where on_side='enemy' and coalesce(on_kind,'')!='player' and act='cant' and param_event in "
                                 + repr(CANT) + " and " + faction_asks.ROW_ORIGIN):
         con[card].add('stop*'); note_src(card, 'stop*', *src)
-    for card, *src in c.execute(f"select card, {DO_SRC} from flat_do where on_pick='chosen' and on_kind in ('unit','unit_or_structure','hero','leader','any','anything') "
-                                "and coalesce(on_zone,'board')='board' and " + faction_asks.ROW_ORIGIN):
-        con[card].add('chosen*'); note_src(card, 'chosen*', *src)
     for q, cols in zip(BESIDE, (DO_SRC, IF_SRC, IF_SRC)):
         for card, *src in c.execute(q.replace('select card from', f'select card, {cols} from', 1) + faction_asks.ROW_ORIGIN):
             con[card].add('position*'); note_src(card, 'position*', *src)

@@ -16,7 +16,7 @@ const ROOT = path.join(__dirname, '..'), SRC = path.join(ROOT, 'src', 'game');
 const DRIFT = 0.4, SHRINK = 5, POWER = 0.75;  // DRIFT is Claude's number; the other two are axes.py's
 const RADII = [['strong', 'strength'], ['grows', 'grows strength'], ['strikes', 'strikes more or first'], ['textdmg', 'damage from units\' text'],
   ['kills', 'kills outright'], ['many', 'many at once'], ['spelldmg', 'damage from spells'], ['spellpay', 'rewards playing spells'],
-  ['stops', 'stops them'], ['disrupts', 'breaks their plan in other ways'], ['one', 'one chosen'], ['supply', 'more supply'],
+  ['stops', 'stops them'], ['disrupts', 'breaks their plan in other ways'], ['supply', 'more supply'],
   ['cheaper', 'cheaper or stronger hand'], ['cards', 'more cards'], ['picks', 'picks and copies'], ['back', 'brings back'],
   ['wide', 'many cheap units'], ['spends', 'spends them'], ['together', 'position and combos'], ['heals', 'heals them'],
   ['growsdef', 'grows defence'], ['protects', 'protects them'], ['tough', 'defence'], ['tall', 'a few big units']];
@@ -77,7 +77,6 @@ function effect(o, ctx, card, R) {
   const on = t => side(t, null, ctx, card), hit = (t, op) => side(t === null ? 'it' : t, op, ctx, card);
   const several = to !== null && SEVERAL.includes(base(to));
   if (to !== null && BESIDE.includes(base(to)) && on(to) === 'own') R.add('pos');
-  if (to !== null && IT.includes(base(to)) && (spell || ctx.on === 'place')) R.add('one');  // a unit the player chooses
   for (const [k, v] of Object.entries(o)) {
     amountWords(v, R, card);
     if (MOD.includes(k)) { if (k === 'per') amountWords(v, R, card); continue; }
@@ -111,8 +110,7 @@ function effect(o, ctx, card, R) {
   }
   if (o.kw) {  // a keyword given to a unit counts as that keyword on the side it lands on
     const who = on(to === null ? 'self' : to);
-    if (o.kw === 'marked') { R.add('one'); }
-    else if (who === 'own') { if (FLAG[o.kw]) FLAG[o.kw].forEach(r => R.add(r)); else if (!NONE.includes(o.kw)) miss('keyword given', o.kw, card); }
+    if (o.kw !== 'marked' && who === 'own') { if (FLAG[o.kw]) FLAG[o.kw].forEach(r => R.add(r)); else if (!NONE.includes(o.kw)) miss('keyword given', o.kw, card); }
   }
 }
 function conds(c, R, card) {

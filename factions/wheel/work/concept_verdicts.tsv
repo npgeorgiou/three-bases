@@ -5,7 +5,7 @@ activated	trigger or condition: when or if a card acts; its cards sit in the mec
 turn_end	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
 count_payoff	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
 card_presence_condition	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
-cooldowns	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do (caught by "one" only, which catches nothing)
+cooldowns	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
 once_per_game	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
 on_draw	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
 variety_payoff	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
