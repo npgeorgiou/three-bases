@@ -38,6 +38,8 @@ Steps of `factions/START_DESIGN-1-wheel.md`. Done: 0 (docs), 1 (radii: they stay
 `wheel/radius_links.tsv`), and the numbers of step 6 (`wheel/links.tsv`). Next:
 3. The 20 shapes: re-check every join (`tools/wheel_table_check.py`); change only shapes whose join falls away
    (`axes.py --near` for the check against real factions). Now: B "spends them", P "tall" and S "supply" have no join.
+   When Kaptain agrees the 20 shapes: remind him to ask for the process to be saved in the docs (the new step 3: shapes.py,
+   archetypes.tsv, "one chosen" left out), written as the process is, with no history.
 4. Mechanics list: STAYS (Kaptain agreed it at Stop A: `STOPA.md`, `mechanics.tsv`, 53 mechanics).
 5. Each faction's mechanics: REDO by script (`work/signatures.py --write`, `work/borrow.py --write`, `check_assign.py`).
 6. Links between mechanics: `wheel/links.tsv`; `apart.py` for the pairs real factions keep apart.
