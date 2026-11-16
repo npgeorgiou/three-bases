@@ -1,0 +1,48 @@
+concept	verdict	by what the rows say	evidence (concept_games.tsv, flat.RULES rows; cards per game)
+heal	split	on the player / on a unit	player 82-100% in Faeria, Slay the Spire; also Duelyst 49%, Runeterra 55%; unit in Gwent, Into the Breach, Monster Train
+damage_reduction	split	on the player / on a unit	Slay the Spire 85% player (117); Duelyst 21% player
+block_armor	split	on the player / on a unit	Slay the Spire 84% player (117); unit in Gwent, Monster Train
+immunity	split	on the player / on a unit	Slay the Spire 100% player (7)
+shield	split	on the player / on a unit	Duelyst 29% player; Slay the Spire 4 cards
+defence_gain	split	on the player / on a unit	Slay the Spire 12 rows all player
+attack_gain	split	on the player / on a unit	Slay the Spire 79% player (Strength); Duelyst 36 rows player
+on_damaged	split	the player is hurt / a unit is hurt	when player 12% Duelyst, 10% Faeria, 16% Slay the Spire
+sacrifice	split	the player / a unit	Slay the Spire 2 rows on the player; every other game a unit
+resource_gain	split	the main supply / a side resource	Gwent secondary_resource 84%, Runeterra spell_mana 65%, Monster Train lane_resource 43%, Inscryption gem 47%; others mana
+base_resource_gain	split	the main supply / a side resource	Runeterra spell_mana 46 of 67
+upgrade	split	a unit levels up on the board / a card is upgraded in the deck	Runeterra level_up 125; Slay the Spire keyword_action on cards 22
+self_destruct	split	a card in hand goes at round end / a unit dies by itself	Runeterra give_keyword Fleeting on cards in hand; others act kill on self
+forced_movement	fix	my own unit moved is movement	side mine: Marvel Snap 19, Gwent 20, Slay the Spire 12, Duelyst 7, Runeterra 7, Stormbound 5, Faeria 3, Monster Train 1
+movement	rows can't tell	Slay the Spire	no board; 26 movement and 59 forced_movement cards say a board move with no target: about 85 to read
+adjacency	same		one rule (bordering) in every game
+aoe_damage	same		rows on any unit; Duelyst's player rows are its General (see the note)
+cost_reduction	same		cost -1/-2 in Inscryption as elsewhere
+cost_set	same		cost 0 in Monster Train as elsewhere
+death_count	same		one rule (dies counted) in every game
+death_trigger	same		when it dies, in every game
+discard	same		a card in my hand, in every game
+free_play	same		a card played free, in every game
+friendly_fire	same		one rule (hits all, both sides)
+hand_disruption	same		enemy hand or deck, in every game
+in_hand_buff	same		a card in my hand, in every game
+junk_cards	same		cards made for the enemy, in every game
+leave_trigger	same		leaves play, in every game
+multi_target_attack	same		strikes several enemies, in every game
+on_ally_play	same		when my unit is played, in every game
+on_attack	same		when it attacks, in every game
+other_death_trigger	same		when another unit dies, in every game
+recycle	same		a card back to hand or deck, in every game
+regeneration	same		on a unit, in every game
+return_to_hand	same		unit back to hand, Runeterra as elsewhere
+revive	same		unit from the discard pile, in every game
+rows	same		one rule (same row) in every game
+selection	same		pick among cards, in every game
+spell_power	same		increase_effect in every game
+stat_condition	same		a stat condition keyword
+stat_loss	same		enemy stat down, in every game
+summon	same		a unit made on the board, Into the Breach as elsewhere
+swap	same		two units trade places
+terrain	same		a space changed, in every game
+territory_trigger	same		moves onto an enemy space
+turn_start	same		start of my turn, in every game
+note	Duelyst	the General is a unit on the board	its "player" rows (heal 49%, aoe, attack) act on a unit there; rows alone can't tell this from a player with no body
