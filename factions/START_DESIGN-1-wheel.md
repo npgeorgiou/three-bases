@@ -55,9 +55,9 @@ faction's radii.
    columns, front cells, dots, supply per lane, carry-over, hand, discard pile), with the library concepts that catch
    its cards. The list starts from all the library's concepts, not from the archetypes: every concept with real cards is
    a mechanic, part of one, or listed with the reason it is not (`work/concept_sort.tsv`: trigger or condition, a radius,
-   one of the game's own things, not in this game, ruled out by Kaptain). "A radius" and "part of mechanic X" are
-   set by script only, when the concept is in that radius's or mechanic's concept list; every other verdict is Claude's
-   and marked so. For each mechanic, in this order:
+   one of the game's own things, not in this game, ruled out by Kaptain). Where a concept's cards land is set by script
+   only (`work/concept_catch.py`: caught when half its cards are in one mechanic or radius); every other verdict is
+   Claude's and marked so. For each mechanic, in this order:
    - an agent reads 8 of its real cards, each with the meaning of its keywords (`library/cards_db/vocab.tsv`: Provoke also
      stops nearby enemies moving), and fixes the concept list until it catches the right cards;
    - it is measured: the real factions built on it, the radii its cards sit on;

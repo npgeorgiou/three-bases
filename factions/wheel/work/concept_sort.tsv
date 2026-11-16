@@ -1,125 +1,126 @@
-concept	cards	verdict
-on_play	4274	trigger or condition: says when or if a card acts, not what a faction does
-passive	2277	trigger or condition: says when or if a card acts, not what a faction does
-positional	2027	one of the game's own things (position: mechanics adjacency, movement, push, cells)
-stat_gain	1950	a radius already measures it (grows)
-damage	1422	a radius already measures it (damage from text, from spells)
-defence_gain	1201	a radius already measures it (grows defence)
-activated	1134	trigger or condition: says when or if a card acts, not what a faction does
-high_cost	1053	a radius already measures it (a few big units)
-cant_attack	1033	a radius already measures it (defence: walls)
-turn_end	798	trigger or condition: says when or if a card acts, not what a faction does
-permanent_growth	790	a radius already measures it (grows)
-tribal	786	not in this game (unit types)
-random_effect	643	trigger or condition: says when or if a card acts, not what a faction does
-count_payoff	627	trigger or condition: says when or if a card acts, not what a faction does
-rule_change	583	CANDIDATE: a real "I do X -> I gain" in no mechanic
-card_presence_condition	573	trigger or condition: says when or if a card acts, not what a faction does
-lanes	560	one of the game's own things (3 lanes; mechanic lanes)
-destroy	517	part of mechanic kill
-direct_damage	464	not in this game (player health)
-spell_speed	344	not in this game (answers on the enemy's turn)
-variable_stats	307	trigger or condition: says when or if a card acts, not what a faction does
-exhaust	306	trigger or condition: says when or if a card acts, not what a faction does
-tank	303	a radius already measures it (protects them; defence)
-banish	279	part of mechanic kill
-evasion	249	part of mechanic reach
-transform	245	Kaptain ruled it out (my units changing form is for cards)
-removal	243	part of mechanic kill
-attack_now	222	part of mechanic fight
-stat_multiply	216	a radius already measures it (grows)
-temporary_buff	191	a radius already measures it (grows)
-random_target	172	trigger or condition: says when or if a card acts, not what a faction does
-board_presence	172	part of mechanic countboard
-buff	171	a radius already measures it (grows)
-upgrade	153	part of mechanic inhand
-zone_control	152	one of the game's own things (bases per lane)
-countdown	133	Kaptain ruled it out (countdowns very sparingly, on cards)
-target_choice	132	Kaptain ruled it out (one chosen is the default)
-delayed	130	trigger or condition: says when or if a card acts, not what a faction does
-cant_block_self	128	not in this game (blocking)
-modal_choice	126	trigger or condition: says when or if a card acts, not what a faction does
-combo_sequence	119	CANDIDATE: a real "I do X -> I gain" in no mechanic
-board_limit	116	one of the game's own things (the 3x3 camp)
-first_strike	114	Kaptain ruled it out (strike first is not a mechanic)
-repeat_trigger	113	CANDIDATE: a real "I do X -> I gain" in no mechanic
-spell_or_skill	111	not in this game (answers on the enemy's turn)
-once_per_game	111	trigger or condition: says when or if a card acts, not what a faction does
-debuff	102	part of mechanic weaken
-immobilize	101	CANDIDATE: a real "I do X -> I gain" in no mechanic
-disable	98	CANDIDATE: a real "I do X -> I gain" in no mechanic
-aura	94	trigger or condition: says when or if a card acts, not what a faction does
-cooldowns	92	trigger or condition: says when or if a card acts, not what a faction does
-stacking_keyword	84	trigger or condition: says when or if a card acts, not what a faction does
-hand_size	80	trigger or condition: says when or if a card acts, not what a faction does
-play_restriction	79	CANDIDATE: a real "I do X -> I gain" in no mechanic
-other_leave_trigger	77	part of mechanic leave
-cheat_death	77	CANDIDATE: a real "I do X -> I gain" in no mechanic
-on_draw	76	trigger or condition: says when or if a card acts, not what a faction does
-on_targeted	72	trigger or condition: says when or if a card acts, not what a faction does
-lifesteal	71	part of mechanic heal
-variety_payoff	70	trigger or condition: says when or if a card acts, not what a faction does
-trap_secret	70	not in this game (answers on the enemy's turn)
-combat_start	67	trigger or condition: says when or if a card acts, not what a faction does
-protection	66	part of mechanic shield, hide
-condition_life	66	trigger or condition: says when or if a card acts, not what a faction does
-reactions	61	not in this game (answers on the enemy's turn)
-donate	54	CANDIDATE: a real "I do X -> I gain" in no mechanic
-play_timing_condition	52	trigger or condition: says when or if a card acts, not what a faction does
-on_life_loss	52	not in this game (player health)
-type_grant	50	not in this game (unit types)
-life_payment	49	not in this game (player health)
-nexus_damage_condition	48	not in this game (player health)
-hero_power	47	not in this game (a hero with its own power)
-drawback	45	trigger or condition: says when or if a card acts, not what a faction does
-on_lifegain	43	trigger or condition: says when or if a card acts, not what a faction does
-deck_condition	43	trigger or condition: says when or if a card acts, not what a faction does
-information	42	CANDIDATE: a real "I do X -> I gain" in no mechanic
-round_carryover	40	one of the game's own things (carry-over; mechanic supply)
-start_of_game	38	trigger or condition: says when or if a card acts, not what a faction does
-stances	38	CANDIDATE: a real "I do X -> I gain" in no mechanic
-symmetric_effect	36	trigger or condition: says when or if a card acts, not what a faction does
-run_structure	36	not in this game (a run of fights)
-assists_support	35	part of mechanic adjacency
-board_clog	33	CANDIDATE: a real "I do X -> I gain" in no mechanic
-cost_condition	32	trigger or condition: says when or if a card acts, not what a faction does
-slots_queue	29	trigger or condition: says when or if a card acts, not what a faction does
-card_quality	29	part of mechanic pick
-random_ability	26	trigger or condition: says when or if a card acts, not what a faction does
-attack_lock	26	CANDIDATE: a real "I do X -> I gain" in no mechanic
-cost_type	25	trigger or condition: says when or if a card acts, not what a faction does
-on_enemy_enter	24	trigger or condition: says when or if a card acts, not what a faction does
-blocking	22	not in this game (blocking)
-attack_zero	22	part of mechanic weaken
-coin_economy	21	a radius already measures it (more supply)
-condition_count	17	trigger or condition: says when or if a card acts, not what a faction does
-round_passing	16	not in this game (passing a round)
-max_mana_condition	16	trigger or condition: says when or if a card acts, not what a faction does
-shop_gold	15	not in this game (shops)
-flanking	15	part of mechanic adjacency, movement
-deck_modification	15	not in this game (a deck changed between battles)
-counter_spell	15	not in this game (answers on the enemy's turn)
-cant_move	15	one of the game's own things (Immobile)
-self_mill	13	part of mechanic discard
-resource_banking	11	a radius already measures it (more supply; carry-over)
-on_harvest	10	not in this game (harvesting wells)
-kicker	10	trigger or condition: says when or if a card acts, not what a faction does
-deck_position	10	part of mechanic pick
-quests	8	trigger or condition: says when or if a card acts, not what a faction does
-game_end_trigger	7	trigger or condition: says when or if a card acts, not what a faction does
-mill	6	CANDIDATE: a real "I do X -> I gain" in no mechanic
-disruption	6	a radius already measures it (breaks their plan)
-win_condition	5	one of the game's own things (bases)
-overload_debt	5	trigger or condition: says when or if a card acts, not what a faction does
-on_block	5	not in this game (blocking)
-control_reward	5	one of the game's own things (bases per lane)
-targeting_rules	4	one of the game's own things (reach)
-enemy_benefit	3	part of mechanic donate, if it joins
-attack_token	3	not in this game (attack rights)
-low_life	2	not in this game (player health)
-upkeep	1	trigger or condition: says when or if a card acts, not what a faction does
-resource_conversion	1	trigger or condition: says when or if a card acts, not what a faction does
-permanent_loss	1	not in this game (losses beyond the battle)
-items_consumables	1	not in this game (items outside the deck)
-hand_deck_swap	1	part of mechanic hand
-autonomous_units	1	trigger or condition: says when or if a card acts, not what a faction does
+concept	cards	games	any mechanic	top mechanic	any radius	top radius	caught (script)	decision (Claude's)
+on_play	4274	9	0.76	create 0.10	0.86	grows 0.18	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+passive	2277	10	0.70	silence 0.10	0.81	grows 0.20	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+positional	2027	8	0.86	tokens 0.14	0.85	strikes 0.19	none	one of the game's own things (cells, rows, columns); its cards spread over the position mechanics (any mechanic 0.86)
+stat_gain	1950	10	0.63	adjacency 0.09	0.84	grows 0.61	caught by radius grows	
+attack_gain	1775	9	0.63	adjacency 0.10	0.94	grows 0.89	caught by radius grows	
+damage	1422	9	0.87	ping 0.39	0.90	textdmg 0.43	none	spread: ping 0.39, area, spelldmg, overkill and the damage radii catch its cards (any mechanic 0.87); no mechanic of its own
+defence_gain	1201	9	0.63	offering 0.07	0.94	growsdef 0.89	caught by radius growsdef	
+activated	1134	9	0.78	tokens 0.16	0.82	growsdef 0.20	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+high_cost	1053	9	0.74	cheaper 0.11	0.83	protects 0.20	none	one of the game's own things (unit cost); the tall radius measures it by cost
+cant_attack	1033	10	0.75	area 0.10	0.84	stops 0.33	none	a possibility for cards (my own unit can't attack: a wall, paid by its budget); on enemies the stops radius counts it
+turn_end	798	8	0.79	ping 0.12	0.78	grows 0.17	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+permanent_growth	790	9	0.64	onattack 0.08	0.91	grows 0.85	caught by radius grows	
+tribal	786	10	0.76	create 0.24	0.91	cards 0.29	none	not in this game (unit types)
+random_effect	643	9	0.86	create 0.37	0.90	cards 0.41	none	ruled out by Kaptain (no randomness)
+count_payoff	627	9	0.80	countboard 0.30	0.89	grows 0.33	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+rule_change	583	8	0.64	haste 0.11	0.67	strikes 0.17	none	candidate mechanic: judged at point 4
+card_presence_condition	573	8	0.66	draw 0.10	0.76	grows 0.27	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+lanes	560	6	0.89	area 0.24	0.83	strikes 0.33	none	one of the game's own things (3 lanes); acting between lanes is mechanic lanes
+destroy	517	10	0.82	offering 0.29	0.90	spends 0.43	none	spread: on enemies it is kill (kill*), on my own units offering and sacrifice (any mechanic 0.82)
+direct_damage	464	6	0.72	ping 0.31	0.76	textdmg 0.31	none	not in this game (player health)
+spell_speed	344	1	0.75	create 0.41	0.91	cards 0.48	none	not in this game (answers on the enemy's turn)
+variable_stats	307	8	0.68	countboard 0.23	0.90	grows 0.72	caught by radius grows	
+exhaust	306	3	0.71	create 0.13	0.82	cards 0.23	none	a possibility for cards (a card gone for good after one use), not a mechanic
+tank	303	6	0.56	cheaper 0.07	1.00	protects 1.00	caught by radius protects	
+banish	279	6	0.72	tokens 0.14	0.83	kills 0.27	none	spread: on enemy units it is kill (kill*, 0.27); on cards a possibility for cards (gone for good)
+evasion	249	2	0.47	draw 0.11	0.92	strikes 0.67	caught by radius strikes	catch by chance (on_attack beside it); not in this game (blocking: can't be blocked)
+transform	245	7	0.42	tokens 0.05	0.46	protects 0.09	none	ruled out by Kaptain (my units changing form is for cards)
+removal	243	8	0.76	kill 0.44	1.00	kills 1.00	caught by radius kills	
+attack_now	222	6	0.78	onattack 0.46	1.00	strikes 1.00	caught by radius strikes	
+stat_multiply	216	7	0.66	copy 0.10	0.71	protects 0.19	none	ADD to the grows radius: doubling my unit's strength is growing; no attack_gain row catches it (goes with point 4)
+temporary_buff	191	5	0.64	onattack 0.15	0.94	grows 0.76	caught by radius grows	
+random_target	172	8	0.82	spelldmg 0.20	0.89	grows 0.30	none	ruled out by Kaptain (no randomness)
+board_presence	172	7	0.92	countboard 0.64	0.95	many 0.65	caught by mechanic countboard	
+buff	171	6	0.78	allyplay 0.18	0.81	grows 0.29	none	spread: a general "stronger" row; its cards' rows are in grows and growsdef (any mechanic 0.78)
+upgrade	153	2	0.68	create 0.34	0.70	cards 0.35	none	ADD to mechanic inhand: a card in hand made better (goes with point 4)
+zone_control	152	6	0.96	tokens 0.29	0.78	wide 0.29	none	one of the game's own things (bases per lane)
+countdown	133	4	0.84	roundstart 0.24	0.89	grows 0.25	none	ruled out by Kaptain (countdowns very sparingly, on cards)
+target_choice	132	1	0.88	fight 0.70	0.92	strikes 0.75	caught by mechanic fight	
+delayed	130	4	0.84	tokens 0.25	0.87	wide 0.25	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+cant_block_self	128	1	0.83	tokens 0.19	0.94	cards 0.28	none	not in this game (blocking)
+modal_choice	126	4	0.72	create 0.24	0.89	cards 0.33	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+combo_sequence	119	4	0.90	spellpay 0.51	0.84	spellpay 0.51	caught by mechanic spellpay	
+board_limit	116	3	0.49	onattack 0.12	0.57	strikes 0.18	none	one of the game's own things (the 3x3 camp)
+first_strike	114	2	0.91	onattack 0.50	1.00	strikes 1.00	caught by mechanic onattack	
+repeat_trigger	113	6	0.56	adjacency 0.12	0.66	growsdef 0.16	none	candidate mechanic: judged at point 4
+once_per_game	111	6	0.85	shield 0.18	0.85	protects 0.24	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+spell_or_skill	111	2	0.61	ping 0.44	1.00	textdmg 0.55	caught by radius textdmg	catch by chance; not in this game (answers on the enemy's turn)
+debuff	102	5	0.43	area 0.13	0.83	disrupts 0.40	none	ADD to mechanic weaken: a lasting combat penalty on an enemy (the disrupts radius sees it on enemies; goes with point 4)
+immobilize	101	3	0.94	guard 0.54	1.00	stops 1.00	caught by mechanic guard	
+disable	98	5	0.80	area 0.23	1.00	stops 1.00	caught by radius stops	
+aura	94	6	0.75	adjacency 0.46	0.99	together 0.46	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do (ongoing; where it touches neighbours, adjacency catches 0.46)
+cooldowns	92	1	0.89	haste 0.43	0.89	growsdef 0.28	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do (caught by "one" only, which catches nothing)
+stacking_keyword	84	1	0.85	ping 0.65	0.98	strikes 0.73	caught by mechanic ping	
+hand_size	80	6	0.69	draw 0.31	0.84	cards 0.36	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+play_restriction	79	4	0.47	enemyside 0.21	1.00	disrupts 1.00	caught by radius disrupts	
+cheat_death	77	5	0.86	lastwords 0.65	1.00	protects 1.00	caught by mechanic lastwords	
+other_leave_trigger	77	1	0.89	attach 0.87	0.89	back 0.87	caught by mechanic attach	
+on_draw	76	7	0.60	pick 0.14	0.77	picks 0.23	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+on_targeted	72	3	0.99	shield 0.61	1.00	protects 0.62	caught by mechanic shield	
+lifesteal	71	5	0.79	onattack 0.23	0.96	heals 0.60	caught by radius heals	
+variety_payoff	70	5	0.55	cheaper 0.17	0.80	grows 0.41	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+trap_secret	70	3	0.84	create 0.30	0.85	cards 0.31	none	not in this game (answers on the enemy's turn)
+combat_start	67	1	0.68	create 0.22	0.80	cards 0.34	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+condition_life	66	3	0.51	guard 0.12	0.89	grows 0.25	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+protection	66	1	0.77	hide 0.58	1.00	protects 1.00	caught by mechanic hide	
+reactions	61	2	0.88	shield 0.55	0.94	protects 0.55	caught by mechanic shield	
+donate	54	3	0.82	steal 0.38	0.73	disrupts 0.41	none	candidate mechanic: judged at point 4 (steal catches 0.38)
+on_life_loss	52	1	0.76	overkill 0.20	0.92	strikes 0.31	none	not in this game (player health)
+play_timing_condition	52	2	0.84	area 0.30	0.97	many 0.30	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+type_grant	50	3	0.80	roundstart 0.33	0.92	grows 0.41	none	not in this game (unit types)
+life_payment	49	7	0.80	ping 0.31	0.68	spends 0.22	none	not in this game (player health)
+nexus_damage_condition	48	1	0.74	cheaper 0.19	0.89	strikes 0.30	none	not in this game (player health)
+hero_power	47	1	0.45	tokens 0.21	0.51	wide 0.21	none	not in this game (a hero with its own power)
+drawback	45	3	0.59	lastwords 0.12	0.86	disrupts 0.47	none	a possibility for cards (a drawback gives a negative tv), not a mechanic
+on_lifegain	43	4	0.58	area 0.14	0.90	grows 0.34	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+deck_condition	43	2	0.74	tokens 0.15	0.95	growsdef 0.61	caught by radius growsdef	catch by chance (its cards also grow defence); trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+information	42	4	0.72	pick 0.44	0.75	picks 0.59	caught by radius picks	caught by radius picks: decided at point 3
+round_carryover	40	1	0.82	create 0.40	0.90	cheaper 0.42	none	one of the game's own things (carry-over)
+start_of_game	38	3	0.83	create 0.29	0.89	cards 0.37	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+stances	38	3	0.55	supply 0.23	0.86	picks 0.41	none	candidate mechanic: judged at point 4
+symmetric_effect	36	5	0.83	lastwords 0.29	0.93	spends 0.30	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do (both players alike)
+run_structure	36	1	0.25	supply 0.19	0.25	supply 0.19	none	not in this game (a run of fights)
+assists_support	35	1	1.00	adjacency 1.00	1.00	together 1.00	caught by mechanic adjacency	
+board_clog	33	2	1.00	tokens 1.00	1.00	wide 1.00	caught by mechanic tokens	
+cost_condition	32	3	0.70	spellpay 0.15	0.85	grows 0.23	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+card_quality	29	1	0.93	create 0.28	0.97	cards 0.41	none	spread: a general "better cards" row; its cards sit in pick, create, copy (any mechanic 0.93)
+slots_queue	29	1	0.45	supply 0.17	0.45	supply 0.17	none	a source for a tool in step 7 (Slay the Spire's orbs), not a mechanic
+attack_lock	26	3	0.75	push 0.40	1.00	stops 1.00	caught by radius stops	
+random_ability	26	2	0.39	tokens 0.26	0.57	wide 0.26	none	ruled out by Kaptain (no randomness)
+cost_type	25	2	0.90	copy 0.33	1.00	supply 0.50	caught by radius supply	
+on_enemy_enter	24	4	0.75	allyplay 0.25	0.77	textdmg 0.32	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+blocking	22	1	0.67	movement 0.43	0.57	protects 0.33	none	not in this game (blocking)
+attack_zero	22	1	0.64	overkill 0.14	0.95	disrupts 0.95	caught by radius disrupts	
+coin_economy	21	1	0.86	lastwords 0.57	1.00	supply 1.00	caught by mechanic lastwords	
+condition_count	17	1	0.71	ping 0.24	0.82	textdmg 0.24	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+round_passing	16	1	0.81	create 0.19	0.94	growsdef 0.69	caught by radius growsdef	catch by chance; not in this game (passing a round)
+max_mana_condition	16	1	0.87	draw 0.33	0.93	cards 0.53	caught by radius cards	catch by chance; trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+flanking	15	1	1.00	onattack 0.87	0.93	strikes 0.87	caught by mechanic onattack	
+cant_move	15	2	0.80	cells 0.50	0.45	stops 0.20	caught by mechanic cells	
+deck_modification	15	3	0.72	tokens 0.18	0.92	grows 0.38	none	not in this game (a deck changed between battles)
+counter_spell	15	1	0.62	spellpay 0.15	1.00	disrupts 1.00	caught by radius disrupts	
+shop_gold	15	2	0.60	onkill 0.30	0.50	spelldmg 0.25	none	not in this game (shops)
+self_mill	13	1	0.62	tokens 0.15	0.77	heals 0.38	none	ADD to mechanic discard: I fill my own discard pile (goes with point 4)
+resource_banking	11	1	0.64	tokens 0.27	1.00	supply 1.00	caught by radius supply	
+on_harvest	10	1	0.90	cells 0.60	0.90	growsdef 0.50	caught by mechanic cells	one of the game's own things (Faeria's wells are like cells); cells catches it
+kicker	10	1	0.70	tokens 0.40	1.00	supply 0.70	caught by radius supply	
+deck_position	10	1	0.90	tokens 0.30	1.00	growsdef 0.40	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+quests	8	1	1.00	tokens 1.00	1.00	wide 1.00	caught by mechanic tokens	
+game_end_trigger	7	1	0.14	discard 0.14	0.00	wide 0.00	none	trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
+disruption	6	1	0.33	supply 0.33	1.00	disrupts 1.00	caught by radius disrupts	
+mill	6	1	1.00	kill 1.00	1.00	kills 1.00	caught by mechanic kill	catch by chance (1 game, 6 cards); the enemy's deck to discard: candidate mechanic, judged at point 4
+on_block	5	1	0.75	overkill 0.25	0.75	strikes 0.50	caught by radius strikes	catch by chance; not in this game (blocking)
+control_reward	5	1	1.00	cells 1.00	1.00	growsdef 0.40	caught by mechanic cells	catch by chance; one of the game's own things (bases per lane)
+win_condition	5	1	1.00	roundstart 0.50	1.00	strikes 0.50	caught by mechanic roundstart	catch by chance; one of the game's own things (bases)
+overload_debt	5	1	1.00	supply 1.00	1.00	supply 1.00	caught by mechanic supply	
+targeting_rules	4	1	0.75	offering 0.50	1.00	growsdef 1.00	caught by mechanic offering	catch by chance; one of the game's own things (reach)
+enemy_benefit	3	1	0.00	weaken 0.00	0.00	wide 0.00	none	a possibility for cards (a drawback that helps the enemy), not a mechanic
+attack_token	3	1	1.00	create 0.67	1.00	cards 1.00	caught by mechanic create	
+low_life	2	1	0.00	weaken 0.00	0.50	grows 0.50	caught by radius grows	catch by chance; not in this game (player health)
+autonomous_units	1	1	1.00	roundstart 1.00	1.00	strikes 1.00	caught by mechanic roundstart	
+resource_conversion	1	1	1.00	supply 1.00	1.00	supply 1.00	caught by mechanic supply	
+permanent_loss	1	1	0.00	weaken 0.00	0.00	wide 0.00	none	not in this game (losses beyond the battle)
+hand_deck_swap	1	1	1.00	draw 1.00	1.00	cards 1.00	caught by mechanic draw	
+items_consumables	1	1	1.00	create 1.00	1.00	cards 1.00	caught by mechanic create	
+upkeep	1	1	1.00	onattack 1.00	1.00	strikes 1.00	caught by mechanic onattack	
