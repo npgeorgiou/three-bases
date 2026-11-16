@@ -53,7 +53,9 @@ faction's radii.
    Output: `work/shapes.tsv`. **Kaptain agrees the 20 shapes.**
 4. **The mechanics list** (`mechanics.tsv`, 53 mechanics). Each mechanic is written "I do X -> I gain from X" on this game's things (units, rows,
    columns, front cells, dots, supply per lane, carry-over, hand, discard pile), with the library concepts that catch
-   its cards. For each mechanic, in this order:
+   its cards. The list starts from all the library's concepts, not from the archetypes: every concept with real cards is
+   a mechanic, part of one, or listed with the reason it is not (`work/concept_sort.tsv`: trigger or condition, a radius,
+   one of the game's own things, not in this game, ruled out by Kaptain). For each mechanic, in this order:
    - an agent reads 8 of its real cards and fixes the concept list until it catches the right cards;
    - it is measured: the real factions built on it, the radii its cards sit on;
    - **the rule check**: it must work by this game's rules (`summary/03` to `07`). An attacked unit doesn't hit back

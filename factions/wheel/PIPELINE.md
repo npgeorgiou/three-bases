@@ -42,6 +42,8 @@ changed. Each step says what a script does and what is judgment.
   X"; concepts (the library concepts that count a card as this mechanic; `concept@game,game` counts only in those
   games); NEW RULE mark; "made by" concepts (cards that make it happen, counted with it); size (SMALL = under 30 right
   cards in every real faction).
+- Where the list comes from: every library concept with real cards and in no mechanic is sorted in
+  `work/concept_sort.tsv` (concept, cards, verdict); a CANDIDATE is read like the others and joins the list or gets its reason.
 - Reading: `python3 mechanics_wheel.py cards <file>` writes 8 cards per mechanic from cards.sqlite (game, the card's
   concepts, name, the first 220 letters of its text). Agents read them and say how many of the 8 are really this
   mechanic and which concepts to add, drop or limit to some games (`work/concept_fixes_*.tsv`,

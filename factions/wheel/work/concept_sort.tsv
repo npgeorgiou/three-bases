@@ -1,0 +1,125 @@
+concept	cards	verdict
+on_play	4274	trigger or condition: says when or if a card acts, not what a faction does
+passive	2277	trigger or condition: says when or if a card acts, not what a faction does
+positional	2027	one of the game's own things (position: mechanics adjacency, movement, push, cells)
+stat_gain	1950	a radius already measures it (grows)
+damage	1422	a radius already measures it (damage from text, from spells)
+defence_gain	1201	a radius already measures it (grows defence)
+activated	1134	trigger or condition: says when or if a card acts, not what a faction does
+high_cost	1053	a radius already measures it (a few big units)
+cant_attack	1033	a radius already measures it (defence: walls)
+turn_end	798	trigger or condition: says when or if a card acts, not what a faction does
+permanent_growth	790	a radius already measures it (grows)
+tribal	786	not in this game (unit types)
+random_effect	643	trigger or condition: says when or if a card acts, not what a faction does
+count_payoff	627	trigger or condition: says when or if a card acts, not what a faction does
+rule_change	583	CANDIDATE: a real "I do X -> I gain" in no mechanic
+card_presence_condition	573	trigger or condition: says when or if a card acts, not what a faction does
+lanes	560	one of the game's own things (3 lanes; mechanic lanes)
+destroy	517	part of mechanic kill
+direct_damage	464	not in this game (player health)
+spell_speed	344	not in this game (answers on the enemy's turn)
+variable_stats	307	trigger or condition: says when or if a card acts, not what a faction does
+exhaust	306	trigger or condition: says when or if a card acts, not what a faction does
+tank	303	a radius already measures it (protects them; defence)
+banish	279	part of mechanic kill
+evasion	249	part of mechanic reach
+transform	245	Kaptain ruled it out (my units changing form is for cards)
+removal	243	part of mechanic kill
+attack_now	222	part of mechanic fight
+stat_multiply	216	a radius already measures it (grows)
+temporary_buff	191	a radius already measures it (grows)
+random_target	172	trigger or condition: says when or if a card acts, not what a faction does
+board_presence	172	part of mechanic countboard
+buff	171	a radius already measures it (grows)
+upgrade	153	part of mechanic inhand
+zone_control	152	one of the game's own things (bases per lane)
+countdown	133	Kaptain ruled it out (countdowns very sparingly, on cards)
+target_choice	132	Kaptain ruled it out (one chosen is the default)
+delayed	130	trigger or condition: says when or if a card acts, not what a faction does
+cant_block_self	128	not in this game (blocking)
+modal_choice	126	trigger or condition: says when or if a card acts, not what a faction does
+combo_sequence	119	CANDIDATE: a real "I do X -> I gain" in no mechanic
+board_limit	116	one of the game's own things (the 3x3 camp)
+first_strike	114	Kaptain ruled it out (strike first is not a mechanic)
+repeat_trigger	113	CANDIDATE: a real "I do X -> I gain" in no mechanic
+spell_or_skill	111	not in this game (answers on the enemy's turn)
+once_per_game	111	trigger or condition: says when or if a card acts, not what a faction does
+debuff	102	part of mechanic weaken
+immobilize	101	CANDIDATE: a real "I do X -> I gain" in no mechanic
+disable	98	CANDIDATE: a real "I do X -> I gain" in no mechanic
+aura	94	trigger or condition: says when or if a card acts, not what a faction does
+cooldowns	92	trigger or condition: says when or if a card acts, not what a faction does
+stacking_keyword	84	trigger or condition: says when or if a card acts, not what a faction does
+hand_size	80	trigger or condition: says when or if a card acts, not what a faction does
+play_restriction	79	CANDIDATE: a real "I do X -> I gain" in no mechanic
+other_leave_trigger	77	part of mechanic leave
+cheat_death	77	CANDIDATE: a real "I do X -> I gain" in no mechanic
+on_draw	76	trigger or condition: says when or if a card acts, not what a faction does
+on_targeted	72	trigger or condition: says when or if a card acts, not what a faction does
+lifesteal	71	part of mechanic heal
+variety_payoff	70	trigger or condition: says when or if a card acts, not what a faction does
+trap_secret	70	not in this game (answers on the enemy's turn)
+combat_start	67	trigger or condition: says when or if a card acts, not what a faction does
+protection	66	part of mechanic shield, hide
+condition_life	66	trigger or condition: says when or if a card acts, not what a faction does
+reactions	61	not in this game (answers on the enemy's turn)
+donate	54	CANDIDATE: a real "I do X -> I gain" in no mechanic
+play_timing_condition	52	trigger or condition: says when or if a card acts, not what a faction does
+on_life_loss	52	not in this game (player health)
+type_grant	50	not in this game (unit types)
+life_payment	49	not in this game (player health)
+nexus_damage_condition	48	not in this game (player health)
+hero_power	47	not in this game (a hero with its own power)
+drawback	45	trigger or condition: says when or if a card acts, not what a faction does
+on_lifegain	43	trigger or condition: says when or if a card acts, not what a faction does
+deck_condition	43	trigger or condition: says when or if a card acts, not what a faction does
+information	42	CANDIDATE: a real "I do X -> I gain" in no mechanic
+round_carryover	40	one of the game's own things (carry-over; mechanic supply)
+start_of_game	38	trigger or condition: says when or if a card acts, not what a faction does
+stances	38	CANDIDATE: a real "I do X -> I gain" in no mechanic
+symmetric_effect	36	trigger or condition: says when or if a card acts, not what a faction does
+run_structure	36	not in this game (a run of fights)
+assists_support	35	part of mechanic adjacency
+board_clog	33	CANDIDATE: a real "I do X -> I gain" in no mechanic
+cost_condition	32	trigger or condition: says when or if a card acts, not what a faction does
+slots_queue	29	trigger or condition: says when or if a card acts, not what a faction does
+card_quality	29	part of mechanic pick
+random_ability	26	trigger or condition: says when or if a card acts, not what a faction does
+attack_lock	26	CANDIDATE: a real "I do X -> I gain" in no mechanic
+cost_type	25	trigger or condition: says when or if a card acts, not what a faction does
+on_enemy_enter	24	trigger or condition: says when or if a card acts, not what a faction does
+blocking	22	not in this game (blocking)
+attack_zero	22	part of mechanic weaken
+coin_economy	21	a radius already measures it (more supply)
+condition_count	17	trigger or condition: says when or if a card acts, not what a faction does
+round_passing	16	not in this game (passing a round)
+max_mana_condition	16	trigger or condition: says when or if a card acts, not what a faction does
+shop_gold	15	not in this game (shops)
+flanking	15	part of mechanic adjacency, movement
+deck_modification	15	not in this game (a deck changed between battles)
+counter_spell	15	not in this game (answers on the enemy's turn)
+cant_move	15	one of the game's own things (Immobile)
+self_mill	13	part of mechanic discard
+resource_banking	11	a radius already measures it (more supply; carry-over)
+on_harvest	10	not in this game (harvesting wells)
+kicker	10	trigger or condition: says when or if a card acts, not what a faction does
+deck_position	10	part of mechanic pick
+quests	8	trigger or condition: says when or if a card acts, not what a faction does
+game_end_trigger	7	trigger or condition: says when or if a card acts, not what a faction does
+mill	6	CANDIDATE: a real "I do X -> I gain" in no mechanic
+disruption	6	a radius already measures it (breaks their plan)
+win_condition	5	one of the game's own things (bases)
+overload_debt	5	trigger or condition: says when or if a card acts, not what a faction does
+on_block	5	not in this game (blocking)
+control_reward	5	one of the game's own things (bases per lane)
+targeting_rules	4	one of the game's own things (reach)
+enemy_benefit	3	part of mechanic donate, if it joins
+attack_token	3	not in this game (attack rights)
+low_life	2	not in this game (player health)
+upkeep	1	trigger or condition: says when or if a card acts, not what a faction does
+resource_conversion	1	trigger or condition: says when or if a card acts, not what a faction does
+permanent_loss	1	not in this game (losses beyond the battle)
+items_consumables	1	not in this game (items outside the deck)
+hand_deck_swap	1	part of mechanic hand
+autonomous_units	1	trigger or condition: says when or if a card acts, not what a faction does
