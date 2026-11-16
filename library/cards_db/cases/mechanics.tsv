@@ -448,3 +448,6 @@ wc18	mechanic	Lifesteal heals the Nexus: player_lifesteal (wheel step 1, Kaptain
 wc19	mechanic	Lifesteal to the Nexus is no drain to a unit (wheel step 1, Kaptain 16 Nov 2026)	kw:lifesteal	select id from card where id not in (select card from flat_concept where concept='lifesteal')	runeterra
 wc20	mechanic	Gwent's Drain grows the unit that dealt the damage: lifesteal (wheel step 1, Kaptain 16 Nov 2026)	text:\bdrain\b	select card from flat_concept where concept='lifesteal'	gwent
 wc21	mechanic	Stormbound's drain grows the unit: lifesteal (wheel step 1, Kaptain 16 Nov 2026)	text:\bdrains?\b	select card from flat_concept where concept='lifesteal'	stormbound
+wc22	mechanic	Inscryption: a Mox gives a gem that pays for cards: base_resource_gain (wheel step 2, Kaptain 16 Nov 2026)	kw:green mox	select card from flat_concept where concept='base_resource_gain'	inscryption
+wc24	mechanic	Inscryption: Bone King gives Bones that pay for cards: base_resource_gain (wheel step 2, Kaptain 16 Nov 2026)	kw:bone king	select card from flat_concept where concept='base_resource_gain'	inscryption
+wc23	mechanic	Gwent: coins are spent by effects, no main supply (wheel step 2, Kaptain 16 Nov 2026)	text:\bcoins?\b	select id from card where id not in (select card from flat_concept where concept='base_resource_gain')	gwent

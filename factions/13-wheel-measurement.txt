@@ -15,8 +15,9 @@ How a value is made (all agreed with Kaptain, 9 Nov 2026):
 - A card counts for a radius if it has one of the radius's concepts (SPOKES in axes.py; shown on hover in the page).
   A concept counts the same in every game; one that meant two things was split in the library (heal on the player is
   player_heal, Slay the Spire's Block is player_block_armor). "Position" outside Gwent, Runeterra and Marvel Snap is
-  area hits and pushes (POSITION_GAMES). "More supply" counts the main supply only (base_resource_gain), not a side
-  resource (Bones, gems); "grows strength" also counts my own unit's stat doubled.
+  area hits and pushes (POSITION_GAMES). "More supply" counts supply that pays for cards (base_resource_gain: mana,
+  spell mana, faeria, and Inscryption's Bones and Mox gems), not a resource spent by effects (Gwent's coins, Monster
+  Train's Echo); "grows strength" also counts my own unit's stat doubled.
   A game with fewer than 10 spells (Into the Breach, Inscryption, Marvel Snap) has no value on the two spell radii
   (SPELL_SPOKES): Into the Breach's boosted weapons are no spells.
 - Damage (Kaptain, 10 Nov 2026: "fixed damage" counted the wrong things and spells had no radius). The old radius went

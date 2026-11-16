@@ -9,14 +9,15 @@ One chat does one step; at its end, mark the step done here.
 | 1. Fix the library's concepts | done 16 Nov 2026 | concepts split by whom a row acts on (player, my unit, cards between piles), radii without game limits; `work/suspect_verdicts.tsv` |
 | 2. The radii and how they work together | done 16 Nov 2026 | `axes.tsv`, `wheel/radius_links.tsv` |
 | 3. The 20 shapes | NEXT; redo, Kaptain agrees them again | `work/shapes.tsv` |
-| 4. The usable concepts | to do; `work/concept_catch.py` is written for it | |
+| 4. The usable concepts | to do; `work/concept_catch.py` to write | |
 | 5. The links between concepts | to do; `mechanics_wheel.py` gets a concept mode | |
-| 6. The 20 groups | to do; `work/groups.py` and `tools/wheel_table_check.py` are written for it | |
+| 6. The 20 groups | to do; `work/groups.py` to write, `tools/wheel_table_check.py` to rewrite | |
 | 7. Theme, then tools | to do | |
 | 8. Combos on this board | to do | |
-| 9. The seven answers, Stop 1 | to do; `work/make_stop1.py` is rewritten for it | |
+| 9. The seven answers, Stop 1 | to do; `work/make_stop1.py` to rewrite | |
 
-Inputs ready: for step 4 `work/concept_verdicts.tsv` (68 concepts left out, each with its reason; Claude's).
+Inputs ready: for step 4 `work/concept_verdicts.tsv` (68 concepts left out, each with its reason; Claude's). The
+player_<concept> concepts of step 1 are left out there too (no player health); drain to my unit (lifesteal) stays in.
 
 ## The numbers (library/cards_db)
 - `links.sqlite` is rebuilt only after `network.py` or `cards.sqlite` changed: `PYTHONHASHSEED=0 python3 links.py`

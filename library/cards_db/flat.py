@@ -37,6 +37,10 @@ HURTS = STOPS + ('debuff', 'stat_loss', 'damage_over_time', 'cant_attack')
 ON_PLAYER = ('heal', 'damage_reduction', 'block_armor', 'shield', 'immunity', 'attack_gain', 'defence_gain')
 BODY = ("card in (select k.id from card k where k.game in (select e.game from game_rule r join card e on e.id=r.entry "
         "where r.category='leader'))")
+# a game whose cards are paid in several kinds of supply (Inscryption: Blood, Energy, Bones, Mox): a gem or second resource
+# that pays for cards there is main supply; elsewhere a second resource is spent by effects (Gwent's coins)
+SEVERAL_SUPPLIES = ("card in (select k.id from card k where k.game in (select game from card where is_keyword=0 and cost_text glob '[0-9]* *' "
+                    "and instr(cost_text, ',')=0 group by game having count(distinct lower(trim(substr(cost_text, instr(cost_text, ' ')+1))))>=2))")
 ON_ENEMY = {'movement': 'forced_movement', 'return_to_hand': 'bounce_enemy', 'transform': 'polymorph', 'mill': 'mill', 'self_mill': 'mill'}
 
 
@@ -230,7 +234,7 @@ RULES = [
     ('hand_disruption', 'flat_do', "act in ('discard','obliterate','steal','draw') and on_side='enemy' and coalesce(on_zone,'') in ('hand','deck','deck_bottom')"),
     # more or faster of the base resource (mana, spell mana, Ember, faeria, Energy), every game alike; a second resource
     # (Bones, gems, Echo) is not it (Kaptain, 29 Oct 2026)
-    ('base_resource_gain', 'flat_do', "(act in ('mana_gain','max_mana_change','harvest') and coalesce(on_kind,'mana') in ('mana','spell_mana','player') and coalesce(on_side,'mine') in ('mine','any')) or (act='cant' and param_event='mana_spent' and on_kind='mana' and coalesce(on_side,'mine')='mine')"),
+    ('base_resource_gain', 'flat_do', "(act in ('mana_gain','max_mana_change','harvest') and (coalesce(on_kind,'mana') in ('mana','spell_mana','player') or (on_kind in ('gem','secondary_resource') and " + SEVERAL_SUPPLIES + ")) and coalesce(on_side,'mine') in ('mine','any')) or (act='cant' and param_event='mana_spent' and on_kind='mana' and coalesce(on_side,'mine')='mine')"),
     ('cost_increase', 'flat_do', "act='cost_change' and params like 'cost=%' and params not like 'cost=-%' and on_side='enemy'"),
     # Claude's rules from the concept tree's definitions, 30 Oct 2026 (concepts no card had)
     ('disruption', 'flat_do', "on_side='enemy' and ((act in ('max_mana_change','mana_gain') and params like '%=-%') or act='spend_mana' or (act='cant' and on_kind='player' and param_event in ('played','drawn','mana_spent','harvests')))"),  # enemy mana or plays (Malicious Wisp, Fifth Canopic)

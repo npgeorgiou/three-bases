@@ -119,6 +119,8 @@ pair that must or must not count for two mechanics or radii.
   leader the units' rules, Duelyst, keeps both); my own unit moved is movement, an enemy moved forced_movement; a card or
   orb moved between piles or slots is neither; a unit levelling up on the board is level_up, not upgrade; drain whose
   life goes to the player is player_lifesteal, to the unit that dealt the damage lifesteal.
+  base_resource_gain is any resource that pays for cards: in a game whose cards are paid in several kinds of supply
+  (Inscryption) also its Bones and Mox gems (flat.py SEVERAL_SUPPLIES); Gwent's coins and Monster Train's Echo are not.
 - Lines: links.sqlite rows per game (counts change with every rebuild; `status.py`). The next case id is n700.
 - Known gaps with no fix planned: Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain);
   Monster Train's Olde Magic record lists the wiki's choices with no numbers; Stormbound's Fort of Ebonrock has no ability.

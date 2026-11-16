@@ -7,11 +7,14 @@ is written in that step's chat, from the rules of the step, and its line here is
 
 ## Step 1. Fix the library's concepts
 - Suspects: `factions/wheel/work/suspects.tsv` (concept, the games it is counted in, the games left out, where it
-  is limited), plus a script (to write) that finds concepts whose cards link to quite different concepts in one
-  game than in the others.
-- Fixes: split by the card's rows, as the database's fix scripts do (`START_DATABASE.md`), each with test cases; a
-  card read (within the wheel's 500, low-cost model, Kaptain's OK first) only where its rows can't tell. Then the game
-  limits go from the radius lists in `axes.py`, and `links.py` is rebuilt.
+  was limited). `python3 ../../factions/wheel/work/concept_games.py [--all]` -> `work/concept_games.tsv` (`--all`:
+  `concept_games_all.tsv`, every concept with 10+ cards): per concept and game, where its rows act (kind, side, zone),
+  the keywords that give it, its link partners and how alike they are to the other games' (too noisy to decide alone;
+  the rows decide). Verdicts: `work/suspect_verdicts.tsv`.
+- Fixes: split by the card's rows in `flat.py` derive (ON_PLAYER, BODY, SEVERAL_SUPPLIES; the database's rules in
+  `START_DATABASE.md`), each with cases (`cases/mechanics.tsv` wc01-wc24); tried on a copy of cards.sqlite with every
+  case first; a card read (within the wheel's 500, low-cost model, Kaptain's OK first) only where its rows can't
+  tell. Then the game limits went from the radius lists in `axes.py`, and `links.py` was rebuilt.
 
 ## Step 2. The radii and how they work together
 - What: 23 radii (`SPOKES` in axes.py: key, name, the library concepts that count a card for it). A faction's value

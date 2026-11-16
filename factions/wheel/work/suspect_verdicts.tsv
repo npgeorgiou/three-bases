@@ -8,7 +8,7 @@ defence_gain	split	on the player / on a unit	Slay the Spire 12 rows all player
 attack_gain	split	on the player / on a unit	Slay the Spire 79% player (Strength); Duelyst 36 rows player
 on_damaged	split	the player is hurt / a unit is hurt	when player 12% Duelyst, 10% Faeria, 16% Slay the Spire
 sacrifice	split	the player / a unit	Slay the Spire 2 rows on the player; every other game a unit
-resource_gain	same; the radius counts the main supply only	the main supply (base_resource_gain) / a side resource	the tree already splits them (base_resource_gain is the main supply, Kaptain 29 Oct 2026): "more supply" counts base_resource_gain only
+resource_gain	same; the radius counts supply that pays for cards	pays for cards (base_resource_gain) / spent by effects	"more supply" counts base_resource_gain only: mana, spell mana, faeria, and Inscryption's Bones and Mox gems (its cards are paid in several kinds of supply); Gwent's coins and Monster Train's Echo pay for no card
 base_resource_gain	same		Runeterra spell mana is the main supply by Kaptain's definition (29 Oct 2026)
 upgrade	split	a unit levels up on the board / a card is upgraded in the deck	Runeterra level_up 125; Slay the Spire keyword_action on cards 22
 self_destruct	same		Runeterra Fleeting: dies at the end of the turn (Kaptain, 28 Oct 2026)
