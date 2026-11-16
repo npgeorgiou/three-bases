@@ -59,15 +59,15 @@ destroy	spread: on enemies it is kill (kill*), on my own units offering and sacr
 banish	spread: on enemy units it is kill (kill*, 0.27); on cards a possibility for cards (gone for good)
 buff	spread: a general "stronger" row; its cards' rows are in grows and growsdef (any mechanic 0.78)
 card_quality	spread: a general "better cards" row; its cards sit in pick, create, copy (any mechanic 0.93)
-stat_multiply	ADD to the grows radius: doubling my unit's strength is growing; no attack_gain row catches it (goes with point 4)
-debuff	ADD to mechanic weaken: a lasting combat penalty on an enemy (the disrupts radius sees it on enemies; goes with point 4)
-upgrade	ADD to mechanic inhand: a card in hand made better (goes with point 4)
-self_mill	ADD to mechanic discard: I fill my own discard pile (goes with point 4)
+stat_multiply	ADD to the grows radius where it is on my own units (Kaptain agreed); waits: it changes the 20 shapes (todo, Wheel point 4)
+debuff	in mechanic weaken where it is on an enemy (weaken*, Kaptain agreed); on my own units a possibility for cards
+upgrade	in mechanic inhand in Slay the Spire and Monster Train (Kaptain agreed); in Runeterra it is a champion levelling up on the board: my units changing form, ruled out by Kaptain
+self_mill	in mechanic discard (Kaptain agreed)
 rule_change	candidate mechanic: judged at point 4
 repeat_trigger	candidate mechanic: judged at point 4
 donate	candidate mechanic: judged at point 4 (steal catches 0.38)
 stances	candidate mechanic: judged at point 4
-information	caught by radius picks: decided at point 3
+information	candidate mechanic, judged at point 4 (Kaptain: a new one)
 deck_condition	catch by chance (its cards also grow defence); trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do
 round_passing	catch by chance; not in this game (passing a round)
 max_mana_condition	catch by chance; trigger or condition: when or if a card acts; its cards sit in the mechanics of what they do

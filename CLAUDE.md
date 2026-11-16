@@ -84,5 +84,6 @@ When something changes state (an idea gets built, a to-do gets decided), move it
 - `tools/build.py` warns when a code part passes 400 lines, a summary/factions file passes 150, or any other new text file passes 600: split it at a section or function boundary (and update the map/index) before pushing.
 - New sections in summary/ or factions/ are new files, listed in that folder's README.txt with their line count and one-line contents. Don't recreate summary.txt or factions.txt.
 - Any new big file (doc, tool, page) gets the same treatment from the start: split into parts with an index, and a line in the map above.
+- Docs are clean instructions in the order they are done, correct as they stand. A "never" may stand next to a "do" when it sharpens it; it never contradicts or undoes it, and nothing tells how a rule came about.
 - Comments: one line saying what a block is for; no history ("formerly", "v2", "option B"), no change logs. Remove dead code and unused CSS when you touch an area.
 - If any rule here gets in the way of a task, say so to Kaptain instead of quietly working around it.

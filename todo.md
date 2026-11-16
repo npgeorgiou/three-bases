@@ -44,13 +44,15 @@ Work not done yet. Kaptain's requests in his own words where he gave them. Remov
 ## Wheel: open points (16 Nov 2026 chat; solve one by one)
 1. Kinds of play of the shapes: A's highest value (stops 3.1) gives it no kind of play; A and K both got disruption and
    steal, which join each other only through kill. Is this wrong?
-3. "See the enemy's hand" (information, 42 cards): how does it enter the game (join steal and hand, or other)?
-4. The 13 candidate mechanics (`work/newmech_verdicts3.tsv`): the agent judged without keyword meanings ("can't move"
-   was wrong: Provoke and Taunt do pin). Judge again; then add the real ones to mechanics.tsv, Stop A again.
-   With them, the four additions from the concept sort (`work/concept_sort.tsv`, "ADD"): stat_multiply to the grows
-   radius, debuff to weaken, upgrade to inhand, self_mill to discard; and mill as a candidate.
-   Also mechanic `change` in mechanics.tsv reads "polymorph,faeria,gwent,..." without the @: polymorph counts in every
-   game and the game names are read as concepts.
+3. "Double my unit's strength" (stat_multiply on my own units) joins the grows strength radius (Kaptain agreed). With
+   it, grows changes a little and no longer joins "a few big units", and the shape search then gives 20 different
+   shapes. Kaptain decides: add it and agree new shapes, or keep the agreed shapes without it.
+4. The 13 candidate mechanics (`work/newmech_verdicts3.tsv`; "see the enemy's hand" is one, Kaptain: judge it as a new
+   mechanic): the agent judged without keyword meanings ("can't move" was wrong: Provoke and Taunt do pin). Judge
+   again; then add the real ones to mechanics.tsv and show the list at Stop A again, with the concepts added in the
+   concept sort (debuff on an enemy to weaken, upgrade to inhand, self_mill to discard). Fix mechanic `change` in
+   mechanics.tsv: it reads "polymorph,faeria,gwent,..." without the @, so polymorph counts in every game and the game
+   names are read as concepts.
 5. "Can't act" and "can't attack" are close; the agent tied "can't attack" to cells.
 6. Library entries the readings call wrong: none fixed; only "can't move" checked (the library was right).
 7. Step 5 scripts: rules agreed in the docs (one algorithm for all 20, fit plus link strength, every mechanic used);

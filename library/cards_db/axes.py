@@ -44,6 +44,7 @@ UNIT_CATS = ('unit', 'hero', 'leader')
 SHOWN = {'stop*': 'an effect on enemies: ' + ', '.join(STOP_ON_ENEMY) + ', can\'t attack, can\'t move; or any card with: ' + ', '.join(STOP_ALWAYS),
          'disrupt*': 'an effect on enemies: ' + ', '.join(DISRUPT_ON_ENEMY) + '; or any card with: ' + ', '.join(DISRUPT_ALWAYS),
          'kill*': 'an effect on enemies: ' + ', '.join(KILL_ON_ENEMY),
+         'weaken*': 'an enemy unit made weaker (debuff on an enemy)',
          'spelldmg*': 'a spell whose text deals damage to an enemy',
          'textdmg*': 'a unit (or building, item, weapon) whose text deals damage to an enemy',
          'position*': 'position: an effect or condition on its own units beside, around or behind it; in Gwent, Runeterra, Marvel Snap also: ' + ', '.join(POSITION),
@@ -206,6 +207,9 @@ def tag(c, x, games):
                                    + faction_asks.ROW_ORIGIN):
         for star, ks in (('stop*', STOP_ON_ENEMY), ('disrupt*', DISRUPT_ON_ENEMY), ('kill*', KILL_ON_ENEMY)):
             if k in ks: con[card].add(star); note_src(card, star, *src)
+    for card, k, side, *src in c.execute(f"select card, concept, on_side, {DO_SRC} from flat_do where concept='debuff' and "
+                                         + faction_asks.ROW_ORIGIN):
+        if k == 'debuff' and side == 'enemy': con[card].add('weaken*'); note_src(card, 'weaken*', *src)
     for card, *src in c.execute(f"select card, {IF_SRC} from flat_if where test='amount_count' and of_kind='unit' and of_zone='board' and " + faction_asks.ROW_ORIGIN):
         con[card].add('countboard*'); note_src(card, 'countboard*', *src)
     for card, *src in c.execute(f"select card, {DO_SRC} from flat_do where on_side='enemy' and coalesce(on_kind,'')!='player' and act='cant' and param_event in "

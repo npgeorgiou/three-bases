@@ -64,6 +64,7 @@ Next: first the open points in `todo.md` ("Wheel: open points"), one by one, the
   count in every number and in the mechanics.
 - Archetypes (`archetypes.tsv`): each carried by 2-3 shapes, each shape carries at most 2, so factions are varied.
 - Every mechanic of the list is a signature or an extra of at least one faction.
+- Mark can only be an extra, of a faction strong in "many at once" (its cards sit on no other radius).
 - An all-Immobile faction is allowed (the old rule against it is deleted).
 - Each faction answers seven questions, one line each: how it wins, how it removes the front unit, how it MAINLY removes
   back-row units, how it MAINLY acts between lanes, how it holds a base, its best Place effect, its blind spot.

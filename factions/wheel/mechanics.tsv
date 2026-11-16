@@ -25,18 +25,18 @@ spelldmg	my spells deal damage -> removal from the hand, no unit needed	spelldmg
 spellpay	I cast spells -> my units and later spells gain from each spell	on_spell,spells_played_condition,spell_power@duelyst,runeterra			OK
 hurt	my unit is hit and survives -> it grows or acts; the more it is hurt, the stronger it gets	on_damaged@stormbound,counterattack			SMALL
 silence	I take an enemy's text away -> its keywords and abilities stop for good	silence			SMALL
-weaken	I take an enemy's strength away for good -> it stays in its cell but hits for little	stat_loss@duelyst,faeria,inscryption,marvel_snap,monster_train,stormbound			SMALL
+weaken	I take an enemy's strength away for good -> it stays in its cell but hits for little	stat_loss@duelyst,faeria,inscryption,marvel_snap,monster_train,stormbound,weaken*			SMALL
 change	I turn an enemy into another unit -> its card is gone without dying	polymorph,faeria,gwent,into_the_breach,stormbound			SMALL
 hand	I act on the enemy's hand and costs -> his next cards cost more or are gone	hand_disruption@marvel_snap,runeterra,cost_increase			SMALL
 junk	I give the enemy useless cards -> his hand and draws fill with nothing	junk_cards@faeria,marvel_snap,runeterra,stormbound			SMALL
 supply	I gain extra supply or carry-over -> big units come early	resource_gain@duelyst,faeria,inscryption,marvel_snap,stormbound,sts1,base_resource_gain@duelyst,faeria,inscryption,marvel_snap,monster_train,stormbound,sts1			SMALL
 cheaper	my cards get cheaper or free -> two cards in one turn's supply	cost_reduction@duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1,free_play@inscryption,monster_train,runeterra,stormbound,sts1,cost_set@duelyst,faeria,gwent,marvel_snap,runeterra,stormbound,sts1			OK
-inhand	my cards grow in hand -> a bigger card for the same supply	in_hand_buff@gwent			SMALL
+inhand	my cards grow in hand -> a bigger card for the same supply	in_hand_buff@gwent,upgrade@monster_train,sts1			SMALL
 draw	I draw extra cards -> more choices each round	draw			OK
 create	I create cards that were not in my deck -> more cards and answers	generate_cards			OK
 copy	I copy my own cards -> a strong card twice	copy			SMALL
 pick	I pick cards of my deck -> the card I need comes when I need it	tutor,selection@gwent,sts1,retain			SMALL
-discard	I discard my own cards -> the discarded card acts, or my units grow	discard@duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,stormbound,sts1,on_discard			SMALL
+discard	I discard my own cards -> the discarded card acts, or my units grow	discard@duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,stormbound,sts1,on_discard,self_mill			SMALL
 heal	I restore my units' defence -> wounded units hold the front cells longer	heal@gwent,monster_train,regeneration@monster_train,runeterra			SMALL
 shield	I give shields or armour -> the next hit does less or nothing	shield@duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,damage_reduction@duelyst,faeria,gwent,inscryption,monster_train,runeterra,block_armor@gwent,monster_train			OK
 guard	my unit guards my others -> enemy attacks must go where I choose	taunt			SMALL
