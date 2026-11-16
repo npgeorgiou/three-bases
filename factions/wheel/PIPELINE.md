@@ -1,9 +1,9 @@
-# The wheel pipeline, steps 1-9: how each result was made
-Commands run from `library/cards_db/` unless they start with `factions/`.
-Before anything: `python3 links.py` (about 4 minutes; makes links.sqlite, not in git; every number below needs it).
-A record of how each result of the first round was made, with its commands; the next round follows
-START_DESIGN-1-wheel.md (steps 2 and 6 by numbers only, step 7 = theme and tools). A step is redone only when what it
-uses changes, and then only for the parts that changed. Each step says what a script did and what was judgment.
+# The wheel pipeline, steps 1-9: the commands and what each step makes
+Commands run from `library/cards_db/` unless they start with `factions/`. The rules of each step are in
+`factions/START_DESIGN-1-wheel.md`; this file says how each result is made.
+Before anything: `python3 links.py` (about 4 minutes; makes links.sqlite, not in git; every number below needs it;
+tell Kaptain and wait for his OK). A step is redone only when what it uses changes, and then only for the parts that
+changed. Each step says what a script does and what is judgment.
 
 ## Step 1. The radii (made 9-10 Nov 2026, before the wheel chats)
 - What: 24 radii (`SPOKES` in axes.py: key, name, the library concepts that count a card for it). A faction's value
@@ -15,12 +15,9 @@ uses changes, and then only for the parts that changed. Each step says what a sc
 - Numbers: `python3 mechanics_wheel.py links --radii` -> `wheel/radius_links.tsv`. Per pair of radii: `cards` = how
   much more often than chance the library links a card of one with a card of the other (same game); `decks` = how much
   more decks heavy in one hold the other. 1 = chance. "Rewards playing spells" is judged by `decks` only.
-- Strong = `cards` 1.5 or more: 44 pairs.
-- Reading: `PER=12 python3 mechanics_wheel.py --radii pairs a+b,c+d <file>` writes up to 12 real linked card pairs per
-  radius pair, with the link's reason. Agents read them: is it a real combo (one card changes what the other does)?
-- Output: `factions/wheel/work/radius_verdicts.tsv` (pair, "true N of 12", KEEP/WEAK/DROP, why).
-  A DROP pair counts as chance (1) in every later step.
-- Not saved: the agents' prompt of this step.
+- Strong = `cards` 1.5 or more, or `cards` and `decks` both 1.2 or more.
+- A link counts for a radius only when the effect that made it, on that card's side, belongs to the radius (the links'
+  `a_ab`/`b_ab` columns; HANDOFF Part 1, "the wheel's count"). Numbers only: nobody reads card pairs.
 
 ## Step 3. The 20 factions as shapes (second try)
 - What: each faction = 3-6 radii with uneven values, like real factions. Each radius joined to at least one other of
@@ -58,34 +55,34 @@ uses changes, and then only for the parts that changed. Each step says what a sc
   each fits its faction 0.8+, the two linked) then `python3 borrow.py --write` (2-4 extras by fit, each in at most
   3 factions) -> `work/assign.tsv`. Checked by `work/check_assign.py`.
 
-## Step 6. Links between mechanics (15 Nov 2026)
-- From 15 Nov 2026 on, step 6 is numbers only (Kaptain): the reads below were done before that and are not redone.
-- Numbers: `links.tsv` (step 4). Agents read 4 real card pairs per strong mechanic pair (8 if the first 4 say KEEP):
-  is it a real combo? -> `work/mechanic_pair_verdicts.tsv`. Each pair is read once: only pairs the new assignment
-  needed and nobody had read were read (127).
+## Step 6. Links between mechanics
+- Numbers only: `python3 mechanics_wheel.py links` -> `wheel/links.tsv` (per pair of mechanics, the same two numbers as
+  step 2, counted by the links' own effects). `python3 apart.py` gives the pairs real factions keep apart.
 
-## Step 7. Board versions (15 Nov 2026)
-- Agents (`work/board_prompt.txt`), library board games first -> `board.tsv` (2-3 versions, a back-row line, a
-  between-lanes line and one idea per faction; look-alikes removed by what the card does).
+## Step 7. Theme, then tools
+- Claude picks one theme per faction -> `factions/wheel/themes.tsv` (faction, theme).
+- Claude writes 2-4 tools per faction -> `factions/wheel/tools.tsv` (faction, tool, mechanic, the tools it feeds, the
+  cell-by-cell line, source: a library card or CLAUDE, NEW RULE). Card texts read for it go into
+  `factions/read-cards.tsv` (within the faction's 100).
 
-## Step 8. Combos on this board (15 Nov 2026)
-- Agents (`work/combo_prompt.txt`) rate all 190 pairs of factions -> `combos.tsv` (STRONG/OK/WEAK/NONE/AGAINST, how it
-  plays, source, a test column for playtests). Partners = STRONG or OK.
+## Step 8. Combos on this board
+- Agents (`work/combo_prompt.txt`, Kaptain's OK first) rate all 190 pairs of factions from their tools and mechanics ->
+  `combos.tsv` (STRONG/OK/WEAK/NONE/AGAINST, how it plays, source, a test column for playtests). Partners = STRONG or OK.
 
-## Step 9. The seven answers and Stop 1 (15 Nov 2026)
-- An agent (`work/answers_prompt.txt`) -> `answers.tsv`; Claude fixed three answers that broke the rules.
-  `python3 tools/wheel_table_check.py` (repo root) checks steps 2-9, including words that break this game's rules.
-  `python3 factions/wheel/work/make_stop1.py` writes `STOP1.md` and `STOP1-1..5.md`.
+## Step 9. The seven answers and Stop 1
+- An agent (`work/answers_prompt.txt`) -> `answers.tsv`, from the tools. `python3 tools/wheel_table_check.py` (repo
+  root) checks steps 2-9, including words that break this game's rules. `python3 factions/wheel/work/make_stop1.py`
+  writes `STOP1.md` and `STOP1-1..5.md`.
 
 ## Files, in order
 | step | input | script | output |
 |---|---|---|---|
 | 1 | cards.sqlite, links.sqlite | axes.py | axes.tsv, factions/wheel-axes.html |
-| 2 | links.sqlite | mechanics_wheel.py links --radii / pairs --radii, agents | wheel/radius_links.tsv, work/radius_verdicts.tsv |
+| 2 | links.sqlite | mechanics_wheel.py links --radii | wheel/radius_links.tsv |
 | 3 | step 2 | by hand, axes.py --near | work/shapes.tsv, arguments.tsv |
 | 4 | mechanics.tsv | mechanics_wheel.py cards, agents, measure, links | mechanics.tsv, work/concept_fixes_*.tsv, wheel/measured.tsv, wheel/links.tsv |
 | 5 | steps 3-4 | work/signatures.py, work/borrow.py | work/assign.tsv |
-| 6 | links.tsv | mechanics_wheel.py pairs, agents | work/mechanic_pair_verdicts.tsv |
-| 7 | steps 5-6 | agents | board.tsv |
+| 6 | links.sqlite | mechanics_wheel.py links, apart.py | wheel/links.tsv |
+| 7 | steps 5-6 | Claude | themes.tsv, tools.tsv |
 | 8 | steps 6-7 | agents | combos.tsv |
 | 9 | steps 7-8 | agent, wheel_table_check.py, make_stop1.py | answers.tsv, STOP1*.md |

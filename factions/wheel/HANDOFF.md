@@ -29,11 +29,8 @@ concepts) and counts every link between them. A card has many effects, so links 
   Link: "is an Attack it needs played for its count". Counted as "gains when it kills + supply"; it has nothing to do
   with killing.
 - Monster Train: Mine Collapse x Kindle: "more energy: a bigger X". Counted as "kill + supply".
-So the database is right; the count gives links to the wrong mechanics. Earlier chats then had agents read card pairs to
-throw such pairs out (that reading is now forbidden), and the readers looked as if they disagreed with the database: they
-answered "is this a strong combo?", the database answers "can A set off B?". Both were right, to different questions.
-Tested: the link's kind does not tell real from false (`factions/wheel/work/kind_test.py`: KEEP and DROP pairs both
-~95% "combo" kinds; correlation with the readers' rate 0.09). Only storing the effect fixes it.
+So the database is right; the count gives links to the wrong mechanics. The link's kind does not tell a real link from
+a false one (both are about 95% "combo" kinds); only storing the effect fixes it.
 
 ### The fix
 1. Every link also stores the ability of A and the ability of B that made it (`ability.id`; each ability's rows in
@@ -76,10 +73,7 @@ example above (the pair must not count). Then the docs (Part 2 step 0).
 
 ## Part 2. Design the 20 factions again
 Steps of `factions/START_DESIGN-1-wheel.md`. What stays and what is redone:
-0. Docs first, cleanly (done 16 Nov 2026, except removing the files named below): `START_DESIGN-1-wheel.md` (steps 2 and 6 = numbers only), `PIPELINE.md`,
-   `START_DESIGN-4-asking.md`, `library/README.md`, START_DATABASE's links part (the new columns). Remove the reading
-   files no step uses any more (`work/radius_verdicts.tsv`, `work/mechanic_pair_verdicts.tsv`, the reading prompts, and `work/kind_test.py`, which
-   only tested them); the check script and `work/borrow.py` no longer use them.
+0. Docs: done (16 Nov 2026).
 1. Radii: STAY (shares of cards, no links).
 2. Radii that work together: REDO, numbers only (`mechanics_wheel.py links --radii`).
 3. The 20 shapes: re-check every join with the new numbers (`tools/wheel_table_check.py`); change only shapes whose
