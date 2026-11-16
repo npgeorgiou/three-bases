@@ -1,0 +1,19 @@
+key	archetype in this game	radii (main strength of 1+ shape)	mechanics (mechanics.tsv)	from
+swarm	many cheap units, cards that gain from numbers	wide	tokens,countboard,allyplay	realworld swarm
+sacrifice	my units die on purpose and the death pays	spends	deathfeed,lastwords,sacrifice,offering,leave	realworld sacrifice
+bringback	my dead or spent cards come back	back	revive,recycle,returnhand	realworld graveyard
+control	enemy units are removed or switched off for good	kills,stops	kill,silence,weaken,change,mark	realworld control
+damage	small hits and area damage remove enemies, also in the back rows (no player to hit)	textdmg,spelldmg,many	ping,area,overkill,reach,spelldmg	realworld burn
+aggro	act fast and hit hard: attack bonuses, units that act again	strikes,strong	onattack,onkill,fight,haste,extraact,bigstrength	realworld aggro_tempo
+scaling	units and cards grow over the rounds	grows	inhand,roundstart	realworld scaling
+hurt	units grow when hit and survive; I damage my own units	growsdef,grows	hurt,selfhurt	Kaptain (HANDOFF Part 3)
+fortress	front units that are hard to remove	protects,tough,growsdef	shield,guard,hide	realworld fortress
+sustain	wounded units are healed and hold longer	heals	heal	realworld sustain
+spells	spells chain and feed units	spellpay	spellpay	realworld spellslinger
+ramp	extra supply and cheaper cards bring big units early	supply,cheaper,tall	supply,cheaper	realworld ramp
+position	cells, rows and moves matter	together	adjacency,movement,push,cells,lanes	realworld positional
+invade	my units placed in the enemy camp	together	enemyside	Kaptain (HANDOFF Part 3)
+disruption	the enemy's hand and plan are broken	disrupts	hand,junk	realworld disruption
+steal	I take an enemy unit or card	disrupts	steal	Kaptain (HANDOFF Part 3)
+cards	more and better cards	cards,picks	draw,create,copy,pick,discard	realworld card_advantage
+equip	units carry other units or items	together	attach	realworld transformation (merge)

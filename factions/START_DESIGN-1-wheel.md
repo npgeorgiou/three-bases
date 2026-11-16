@@ -37,7 +37,10 @@ faction's radii.
    radius is joined to another of the same faction by step 2: `cards` 1.2+ (radii have links enough for the chance
    number; Kaptain, 16 Nov 2026), or `decks` 1.5+ (one makes what the other needs:
    "spends them" makes deaths, "brings back" uses them), or by an argument from this game's rules, written in
-   `arguments.tsv`. Each shape is checked against the real factions (`axes.py --near`). No two shapes are the same.
+   `arguments.tsv`. Each shape is checked against the real factions (`axes.py --near`). No two shapes are the same. Every archetype of
+   `factions/wheel/archetypes.tsv` (this game's kinds of play, each with its radii and mechanics) is a main strength
+   (highest or second value) of at least one shape. "One chosen" is in no shape: choosing the target is the default
+   (Kaptain, 16 Nov 2026). Picked by `work/shapes.py`.
    A radius that only exists by another game's rules is never a faction's base (see step 4's rule check).
 4. **The mechanics list** (agreed at Stop A, 53 mechanics in `mechanics.tsv`; kept, not redone). Each mechanic is written "I do X -> I gain from X" on this game's things (units, rows,
    columns, front cells, dots, supply per lane, carry-over, hand, discard pile), with the library concepts that catch
