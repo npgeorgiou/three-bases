@@ -102,7 +102,7 @@ How a value is made (all agreed with Kaptain, 9 Nov 2026):
   against all factions of all games; Kaptain thinks the answer may be a more accurate mapping of cards to axes.
 
 Redo it (after a new game, changed library cards, changed concepts or links). From library/cards_db:
-1. `PYTHONHASHSEED=0 python3 links.py` (rebuilds links.sqlite, not committed; about 4 minutes).
+1. `PYTHONHASHSEED=0 python3 links.py` (rebuilds links.sqlite and links.sqlite.gz; about 7 minutes).
 2. `python3 axes.py`. It prints "CHECK FAILED" if one of Kaptain's points breaks (CHECKS, GAPS and HAS in axes.py; add
    one for every point he raises, e.g. Faeria Red high on damage from units' text and on strikes).
 3. Check what each concept catches: `python3 axes.py --cards <file>` writes, per radius, concept and game, how many cards

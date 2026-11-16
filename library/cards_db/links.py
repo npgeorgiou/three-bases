@@ -1,9 +1,9 @@
-"""Every line network.py draws between two cards of one game that can share a deck, stored in links.sqlite (not in git; rebuilt
-from cards.sqlite). Tables: phrase(id, kind, text) with the two cards' names as {A} and {B}; link(game, a, b, phrase, weight, site, a_ab, b_ab): site = the
+"""Every line network.py draws between two cards of one game that can share a deck, stored in links.sqlite (rebuilt
+from cards.sqlite; kept in git zipped as links.sqlite.gz, written at the end of each build). Tables: phrase(id, kind, text) with the two cards' names as {A} and {B}; link(game, a, b, phrase, weight, site, a_ab, b_ab): site = the
 network.py line of the rule that made it (one sentence can come from several rules); a_ab, b_ab = what of each card made it
 (effect rows 'ability.seq', ability ids, 'kw<keyword id>', 'c:<concept>', 'type', 'rule'; several joined by ';').
 Usage: links.py [game ...]   (no game: all; a game's old rows are replaced; then the cases of cases/links.tsv)"""
-import collections, csv, os, random, sqlite3, sys, time
+import gzip, collections, csv, os, random, sqlite3, sys, time
 import network, deck_analysis
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -217,6 +217,7 @@ def main():
     bad = case_failures(c, games)
     print('cases/links.tsv: ' + ('all pass' if not bad else 'FAILED\n  ' + '\n  '.join(bad)))
     n = foreign_sides(c, L); L.close()
+    with open(os.path.join(HERE, 'links.sqlite'), 'rb') as f, gzip.GzipFile(os.path.join(HERE, 'links.sqlite.gz'), 'wb', mtime=0) as z: z.write(f.read())
     print('link sides naming another card\'s effect: ' + ('none' if not n else f'{n} FAILED'))
 
 

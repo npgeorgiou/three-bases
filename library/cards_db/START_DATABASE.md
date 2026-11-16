@@ -58,7 +58,7 @@ The rules for lines (L1-L28) are in LINE_RULES.md: read it before judging a line
 | Chat 2 agents and their files | checks/LINE_READER_JOB.md, LINE_VERIFIER_JOB.md, LINE_FIXER_JOB.md, causes.py; work files and PROGRESS.md in checks/<game>/ |
 | Values and concepts | vocab.tsv, library/concept_tree.txt |
 | Build: rows -> cards.sqlite | run.py (one game), check_all.py (all games), load.py, flat.py, refs.py |
-| Lines between cards | network.py; why one line exists: pair.py; all lines: links.py -> links.sqlite (not in git; each link keeps what of each card made it: a_ab, b_ab) |
+| Lines between cards | network.py; why one line exists: pair.py; all lines: links.py -> links.sqlite (in git as links.sqlite.gz: `gunzip -kf links.sqlite.gz`; each link keeps what of each card made it: a_ab, b_ab) |
 | Decks | decks.tsv, cases/decks.tsv; pages network.html (network_page.py) |
 | Questions | ask.py, mechanics.py, connections.py, deck_analysis.py; factions/START_DESIGN-4-asking.md, QUESTION_BANK.md |
 | Each game's rules, terms, sources, real-world cases | library/games/<game>.md |

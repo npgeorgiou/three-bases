@@ -1,8 +1,9 @@
 # The wheel pipeline, steps 1-9: the commands and what each step makes
 Commands run from `library/cards_db/` unless they start with `factions/`. The rules of each step are in
 `factions/START_DESIGN-1-wheel.md`; this file says how each result is made.
-Before anything: `python3 links.py` (about 4 minutes; makes links.sqlite, not in git; every number below needs it;
-tell Kaptain and wait for his OK). A step is redone only when what it uses changes, and then only for the parts that
+Before anything: `gunzip -kf links.sqlite.gz` (every number below needs links.sqlite). After a change to `network.py`
+or `cards.sqlite`: `PYTHONHASHSEED=0 python3 links.py` (about 7 minutes; tell Kaptain and wait for his OK; it writes
+links.sqlite.gz too). A step is redone only when what it uses changes, and then only for the parts that
 changed. Each step says what a script does and what is judgment.
 
 ## Step 1. The radii (made 9-10 Nov 2026, before the wheel chats)

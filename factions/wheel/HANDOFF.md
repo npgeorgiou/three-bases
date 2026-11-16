@@ -13,8 +13,9 @@ Part 2 is the work, in order; Part 3 is what Kaptain decided and what was learne
 - Docs are written cleanly, as if things had always been this way: no history, no "formerly", no archaeology.
 
 ## Part 1. The numbers the wheel uses (library/cards_db)
-- `links.sqlite` is not in git: build it first in every new chat, `PYTHONHASHSEED=0 python3 links.py` (about 4 minutes:
-  tell Kaptain and wait for his OK). It ends with cases/links.tsv and the sides check (START_DATABASE.md, check D).
+- `links.sqlite` is in git zipped: unzip it first in every new chat, `gunzip -kf links.sqlite.gz`. Rebuild it only after
+  `network.py` or `cards.sqlite` changed: `PYTHONHASHSEED=0 python3 links.py` (about 7 minutes: tell Kaptain and wait for
+  his OK); it ends with cases/links.tsv and the sides check (START_DATABASE.md, check D) and writes links.sqlite.gz.
 - A link joins two cards of one game when a rule in `network.py` matches an effect of card A with an effect of card B. It
   keeps what of each card made it (`a_ab`, `b_ab`): an effect row, an ability, a keyword, a concept read from the whole
   card, the card by what it is, or the game's rules.

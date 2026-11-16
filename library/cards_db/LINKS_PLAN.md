@@ -3,7 +3,7 @@
 Read START_DATABASE.md and LINE_RULES.md first. Work in `library/cards_db/`.
 
 `links.py` stores every line network.py draws between two cards that can share a deck (deck_analysis.can_share) in
-`links.sqlite` (not in git; `links.py <game>` rebuilds it in seconds, Runeterra about 9 minutes, all games about 2 minutes).
+`links.sqlite` (in git zipped as links.sqlite.gz; `links.py <game>` rebuilds it in seconds, Runeterra about 9 minutes, all games about 2 minutes).
 Kaptain's design questions ("a faction that attacks again and again") are answered from these lines, so they must be right.
 
 ## How lines are made (network.py; read before changing it)
@@ -95,6 +95,6 @@ Update START_DATABASE.md (State, Open work) and factions/START_DESIGN-4-asking.m
 finished steps here.
 
 ## Do not
-- Change line rules to make the table smaller (links.sqlite stays out of git), store text per line, or store lines between
+- Change line rules to make the table smaller, store text per line, or store lines between
   cards that cannot share a deck.
 - Change concepts or vocab without Kaptain's OK.

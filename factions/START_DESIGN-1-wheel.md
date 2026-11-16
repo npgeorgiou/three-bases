@@ -1,8 +1,9 @@
 # The wheel chat: 20 factions designed together, with their combos
 
 Read `factions/START_DESIGN.md` and its parts 2-4 whole first, then `factions/12-mechanical-wheel.txt` (why the wheel
-and its radii) and `factions/wheel/PIPELINE.md` (the commands of every step). Start with `python3 links.py` in
-`library/cards_db` (about 4 minutes; the file is not in git; tell Kaptain and wait for his OK, CLAUDE.md). The chat writes no cards, no stats and no code for the
+and its radii) and `factions/wheel/PIPELINE.md` (the commands of every step). Start with `gunzip -kf links.sqlite.gz` in
+`library/cards_db`; rebuild with `PYTHONHASHSEED=0 python3 links.py` only after `network.py` or `cards.sqlite` changed
+(about 7 minutes; tell Kaptain and wait for his OK, CLAUDE.md). The chat writes no cards, no stats and no code for the
 game; it picks the 20 themes (step 7).
 
 Three Bases is a game of combos: decks mix 2 factions. Every faction combines well with at least 10 others. Every
