@@ -45,10 +45,12 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    (`wheel/work/suspects.tsv`, with the games left out), and every concept whose cards link to quite different
    concepts in one game than in the others (by script). For each: if its cards in the games left out do something
    else, split the concept by what the rows already say (on a unit on the board or on a card in hand; on an enemy or
-   on my own unit), by a fix script with test cases (`library/cards_db/START_DATABASE.md`); if it is the same, the
-   limit goes. Rows that can't tell: read, within the 500. Then the radius lists lose their game limits, and
-   `links.py` is rebuilt (about 7 minutes, Kaptain's OK first). Decided by Kaptain and done here: "doubles a stat" on
-   my own unit joins the radius "grows strength". Open here: whether "can't act" and "can't attack" are one concept.
+   on my own unit; on the player or on a unit; the main supply or a side resource), by a fix script with test cases
+   (`library/cards_db/START_DATABASE.md`); if it is the same, the limit goes. A game whose player is a unit on the
+   board (Duelyst's General; a rule in its `game_rules.jsonl`) gives its player rows both concepts. Rows that can't
+   tell: read, within the 500. Then the radius lists lose their game limits, and `links.py` is rebuilt (about 7
+   minutes, Kaptain's OK first). Decided by Kaptain and done here: "doubles a stat" on my own unit joins the radius
+   "grows strength"; "can't act" and "can't attack" stay two concepts ("can't act" is the wider one).
 2. **The radii and how they work together.** `axes.py` measures the 43 real factions on the 23 radii (1 = the average
    faction of its game). For every two radii (`mechanics_wheel.py links --radii`): `cards` = how much more often than
    chance their cards are linked; `decks` = how much more often real decks heavy in one hold the other; `links` = the

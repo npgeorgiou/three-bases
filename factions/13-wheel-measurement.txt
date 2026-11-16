@@ -13,9 +13,10 @@ How a value is made (all agreed with Kaptain, 9 Nov 2026):
   (Faeria Red has the most damage from its units' text and also strikes). Axes 4, 5 and 8 have a radius for their first end only: the
   other end (units on the board now, works alone, plays what it draws) is a low value on that radius.
 - A card counts for a radius if it has one of the radius's concepts (SPOKES in axes.py; shown on hover in the page).
-  "concept@game,game" counts only in those games, because a concept means something else elsewhere (heal is the
-  player's life in Faeria and Slay the Spire; "position" outside Gwent, Runeterra and Marvel Snap is area hits and
-  pushes).
+  A concept counts the same in every game; one that meant two things was split in the library (heal on the player is
+  player_heal, Slay the Spire's Block is player_block_armor). "Position" outside Gwent, Runeterra and Marvel Snap is
+  area hits and pushes (POSITION_GAMES). "More supply" counts the main supply only (base_resource_gain), not a side
+  resource (Bones, gems); "grows strength" also counts my own unit's stat doubled.
 - Damage (Kaptain, 10 Nov 2026: "fixed damage" counted the wrong things and spells had no radius). The old radius went
   by marks that differ per game, missed 158 of Gwent's 259 damage cards, shared half its cards with "kills them" and
   counted cards that destroy everything. Now three radii that share no mark: "damage from units' text" (a unit,

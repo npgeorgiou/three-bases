@@ -6,7 +6,7 @@ One chat does one step; at its end, mark the step done here.
 ## The steps
 | step | state | what it made |
 |---|---|---|
-| 1. Fix the library's concepts | verdicts made, waiting for Kaptain's OK to change the concepts | `work/suspect_verdicts.tsv` |
+| 1. Fix the library's concepts | splits written, rebuild next (`library/cards_db/checks/wheel_step1/PROGRESS.md`) | `work/suspect_verdicts.tsv` |
 | 2. The radii and how they work together | to redo after step 1 | `axes.tsv`, `wheel/radius_links.tsv` |
 | 3. The 20 shapes | to redo after step 2; Kaptain agrees them again | `work/shapes.tsv` |
 | 4. The usable concepts | to do; `work/concept_catch.py` is written for it | |

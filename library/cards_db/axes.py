@@ -41,7 +41,7 @@ CANT = ('attacks', 'moves')  # an enemy unit that can't do these is stopped (Kap
 SUPPLIES = {'inscryption': ('blood', 'energy', 'bones', 'mox')}  # games whose cards are paid in different kinds of supply
 JUNK_GAMES = ('marvel_snap', 'stormbound', 'gwent')  # junk cards that go to the enemy; in Slay the Spire they hurt my own deck
 UNIT_CATS = ('unit', 'hero', 'leader')
-SHOWN = {'stop*': 'an effect on enemies: ' + ', '.join(STOP_ON_ENEMY) + ', can\'t attack, can\'t move; or any card with: ' + ', '.join(STOP_ALWAYS),
+SHOWN = {'multiply_own*': 'a stat of my own unit doubled or multiplied', 'stop*': 'an effect on enemies: ' + ', '.join(STOP_ON_ENEMY) + ', can\'t attack, can\'t move; or any card with: ' + ', '.join(STOP_ALWAYS),
          'disrupt*': 'an effect on enemies: ' + ', '.join(DISRUPT_ON_ENEMY) + '; or any card with: ' + ', '.join(DISRUPT_ALWAYS),
          'kill*': 'an effect on enemies: ' + ', '.join(KILL_ON_ENEMY),
          'weaken*': 'an enemy unit made weaker (debuff on an enemy)',
@@ -77,38 +77,38 @@ MIN_DECK_CARDS = 10
 MIN_DECKS_BOTH = 5  # a game gives a decks value for two radii only when at least 5 of its decks hold both
 MIN_LINKS_GAME = 5  # a game counts for two radii only when chance alone would give it 5 linked pairs
 MIN_LINKS = 20  # two radii get a "work together" number only when chance alone would give 20 linked pairs  # Faeria Pandora has 1 card in decks
-SPOKES = [  # (key, axis number, axis name, this radius, concepts, area of the circle); "concept@game,game" counts only in those games (the check of 9 Nov 2026)
+SPOKES = [  # (key, axis number, axis name, this radius, concepts, area of the circle); every concept counts in every game
     # in circle order: neighbours belong together, and the radii of one area sit side by side
     ('strong', 9, 'Unit stats', 'strength', ['strength*'], 'Fighting'),
-    ('grows', 3, 'Damage', 'grows strength', ['attack_gain@duelyst,faeria,gwent,inscryption,monster_train,runeterra,stormbound,sts1'], 'Fighting'),
-    ('strikes', 3, 'Damage', 'strikes more or first', ['on_attack@duelyst,faeria,into_the_breach,monster_train,runeterra,stormbound,sts1',
+    ('grows', 3, 'Damage', 'grows strength', ['attack_gain', 'multiply_own*'], 'Fighting'),
+    ('strikes', 3, 'Damage', 'strikes more or first', ['on_attack',
         'multi_attack', 'first_strike', 'attack_now', 'excess_damage', 'counterattack', 'on_fight', 'piercing'], 'Fighting'),
     ('textdmg', 3, 'Damage', 'damage from units\' text', ['textdmg*'], 'Damage'),
     ('kills', 2, 'Enemy units', 'kills outright', ['kill*', 'removal', 'deathtouch'], 'Damage'),
-    ('many', 6, 'Targets', 'many at once', ['aoe_damage@faeria,gwent,inscryption,into_the_breach,runeterra,stormbound,sts1',
-        'board_wipe', 'multi_target_attack@into_the_breach,runeterra', 'rows@duelyst,into_the_breach', 'row_effects', 'area_templates', 'countboard*'], 'Damage'),
+    ('many', 6, 'Targets', 'many at once', ['aoe_damage',
+        'board_wipe', 'multi_target_attack', 'rows', 'row_effects', 'area_templates', 'countboard*'], 'Damage'),
     ('spelldmg', 3, 'Damage', 'damage from spells', ['spelldmg*'], 'Spells'),
-    ('spellpay', 3, 'Damage', 'rewards playing spells', ['on_spell', 'spells_played_condition', 'spell_power@duelyst,runeterra'], 'Spells'),
+    ('spellpay', 3, 'Damage', 'rewards playing spells', ['on_spell', 'spells_played_condition', 'spell_power'], 'Spells'),
     ('stops', 2, 'Enemy units', 'stops them', ['stop*'], 'Control'),
     ('disrupts', 2, 'Enemy units', 'breaks their plan in other ways', ['disrupt*', 'disruption'], 'Control'),
-    ('supply', 4, 'Supply and cards', 'more supply', ['resource_gain', 'base_resource_gain', 'resource_banking', 'coin_economy'], 'Cards and supply'),
-    ('cheaper', 4, 'Supply and cards', 'cheaper or stronger hand', ['cost_reduction@duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1',
-        'free_play@gwent,inscryption,monster_train,runeterra,stormbound,sts1', 'cost_set', 'in_hand_buff'], 'Cards and supply'),
+    ('supply', 4, 'Supply and cards', 'more supply', ['base_resource_gain', 'resource_banking', 'coin_economy'], 'Cards and supply'),
+    ('cheaper', 4, 'Supply and cards', 'cheaper or stronger hand', ['cost_reduction',
+        'free_play', 'cost_set', 'in_hand_buff'], 'Cards and supply'),
     ('cards', 4, 'Supply and cards', 'more cards', ['draw', 'generate_cards'], 'Cards and supply'),
-    ('picks', 8, 'Hand and discard pile', 'picks and copies', ['copy', 'tutor', 'retain', 'selection@faeria,gwent,runeterra,sts1'], 'Cards and supply'),
+    ('picks', 8, 'Hand and discard pile', 'picks and copies', ['copy', 'tutor', 'retain', 'selection'], 'Cards and supply'),
     ('back', 8, 'Hand and discard pile', 'brings back', ['recycle', 'return_to_hand', 'revive'], 'Cards and supply'),
-    ('wide', 7, 'Width', 'many cheap units', ['cheapunit*', 'summon@duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound'], 'Many units and dying'),
-    ('spends', 1, 'Own units', 'spends them', ['sacrifice@duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound', 'self_destruct@gwent,into_the_breach,stormbound',
-        'death_trigger@duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound',
-        'other_death_trigger@duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra', 'on_sacrifice',
-        'death_count@faeria,gwent,marvel_snap,monster_train,runeterra', 'friendly_fire@inscryption,runeterra,stormbound'], 'Many units and dying'),
+    ('wide', 7, 'Width', 'many cheap units', ['cheapunit*', 'summon'], 'Many units and dying'),
+    ('spends', 1, 'Own units', 'spends them', ['sacrifice', 'self_destruct',
+        'death_trigger',
+        'other_death_trigger', 'on_sacrifice',
+        'death_count', 'friendly_fire'], 'Many units and dying'),
     ('together', 5, 'Works with others', 'position and combos', ['position*', 'combo*'], 'Together'),
-    ('heals', 1, 'Own units', 'heals them', ['heal@duelyst,gwent,into_the_breach,monster_train,runeterra,stormbound',
-        'regeneration@duelyst,gwent,into_the_breach,monster_train,runeterra,stormbound'], 'Staying alive'),
-    ('growsdef', 1, 'Own units', 'grows defence', ['defence_gain@duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound'], 'Staying alive'),
-    ('protects', 1, 'Own units', 'protects them', ['shield@duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra', 'protection',
-        'immunity@duelyst,faeria,gwent,inscryption,into_the_breach', 'cheat_death',
-        'damage_reduction@duelyst,faeria,gwent,inscryption,monster_train,runeterra', 'block_armor@gwent,monster_train', 'tank'], 'Staying alive'),
+    ('heals', 1, 'Own units', 'heals them', ['heal',
+        'regeneration'], 'Staying alive'),
+    ('growsdef', 1, 'Own units', 'grows defence', ['defence_gain'], 'Staying alive'),
+    ('protects', 1, 'Own units', 'protects them', ['shield', 'protection',
+        'immunity', 'cheat_death',
+        'damage_reduction', 'block_armor', 'tank'], 'Staying alive'),
     ('tough', 9, 'Unit stats', 'defence', ['defence*'], 'Staying alive'),
     ('tall', 7, 'Width', 'a few big units', ['dearunit*'], 'Staying alive'),
 ]
@@ -129,11 +129,8 @@ def unit_stats(game, power, health, st):
 
 
 def counts(ks, game, concepts):
-    """does a card with concepts ks, of this game, count for a spoke"""
-    for k in concepts:
-        name, _, only = k.partition('@')
-        if name in ks and (not only or game in only.split(',')): return True
-    return False
+    """does a card with concepts ks count for a spoke (the same in every game)"""
+    return any(k in ks for k in concepts)
 
 
 # What of a card makes a link (links.sqlite a_ab / b_ab, written by links.py): an effect row 'ability.seq', an ability, 'kw<id>'
@@ -207,6 +204,9 @@ def tag(c, x, games):
                                    + faction_asks.ROW_ORIGIN):
         for star, ks in (('stop*', STOP_ON_ENEMY), ('disrupt*', DISRUPT_ON_ENEMY), ('kill*', KILL_ON_ENEMY)):
             if k in ks: con[card].add(star); note_src(card, star, *src)
+    for card, *src in c.execute(f"select card, {DO_SRC} from flat_do where concept='stat_multiply' and coalesce(on_side,'mine')!='enemy' and "
+                                + faction_asks.ROW_ORIGIN):  # doubling my own unit's stat grows it (Kaptain)
+        con[card].add('multiply_own*'); note_src(card, 'multiply_own*', *src)
     for card, k, side, *src in c.execute(f"select card, concept, on_side, {DO_SRC} from flat_do where concept='debuff' and "
                                          + faction_asks.ROW_ORIGIN):
         if k == 'debuff' and side == 'enemy': con[card].add('weaken*'); note_src(card, 'weaken*', *src)
@@ -439,8 +439,7 @@ def near(arg):
 
 
 def shown(k):
-    name, _, only = k.partition('@')
-    return SHOWN.get(name, name) + (' (only ' + ', '.join(only.split(',')) + ')' if only else '')
+    return SHOWN.get(k, k)
 
 
 def fmt(v): return '' if v is None else f'{v:.4f}'

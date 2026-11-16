@@ -32,6 +32,11 @@ import re
 # stops on a unit (concept tree under suppress), and what hurts a unit, for "can't be given" (immunity)
 STOPS = ('suppress', 'no_damage_output', 'attack_lock', 'damage_prevention', 'cant_block', 'immobilize', 'silence', 'disable')
 HURTS = STOPS + ('debuff', 'stat_loss', 'damage_over_time', 'cant_attack')
+# A row on the player, not on a unit (Slay the Spire's Block, Faeria's life): its own concept, player_<concept>. A game whose
+# player is a unit on the board (its game rules give the leader the units' rules: Duelyst's General) keeps both concepts.
+ON_PLAYER = ('heal', 'damage_reduction', 'block_armor', 'shield', 'immunity', 'attack_gain', 'defence_gain')
+BODY = ("card in (select k.id from card k where k.game in (select e.game from game_rule r join card e on e.id=r.entry "
+        "where r.category='leader'))")
 ON_ENEMY = {'movement': 'forced_movement', 'return_to_hand': 'bounce_enemy', 'transform': 'polymorph', 'mill': 'mill', 'self_mill': 'mill'}
 
 
@@ -193,15 +198,17 @@ RULES = [
     ('multi_target_attack', 'flat_do', "act in ('strike','start_attack') and origin='own' and to_side='enemy' and to_kind in ('unit','unit_or_structure') and coalesce(to_pick,'')!='nearest' and coalesce(on_side,'mine')!='enemy' and card in (select id from card where is_keyword=0 and id>0) and to_pick in ('highest','lowest','chosen') and exists (select 1 from flat_do y where y.card=flat_do.card and y.ability=flat_do.ability and y.seq!=flat_do.seq and y.act in ('strike','start_attack') and y.origin='own' and y.to_side='enemy' and y.to_kind in ('unit','unit_or_structure') and y.to_pick in ('highest','lowest','chosen') and y.to_pick!=flat_do.to_pick and y.on_side is flat_do.on_side)"),  # Boomerang Blade: the strongest and the weakest enemy
     ('temporary_buff', 'flat_do', "act='stat_change' and lasts in ('this_round','next_round','n_rounds','next_own_turn') and coalesce(on_side,'mine')!='enemy' and params not like '%=-%'"),
     # stats by role, whatever a game calls them (Power / Health, or one strength stat that is both)
-    ('attack_gain', 'flat_do', "act in ('stat_change','grow') and (params glob '*power=[1-9a-z]*' or params glob '*strength=[1-9a-z]*') and coalesce(on_side,'mine')!='enemy'"),
-    ('defence_gain', 'flat_do', "act in ('stat_change','grow') and (params glob '*health=[1-9a-z]*' or params glob '*strength=[1-9a-z]*') and coalesce(on_side,'mine')!='enemy'"),
+    ('attack_gain', 'flat_do', "act in ('stat_change','grow') and (params glob '*power=[1-9a-z]*' or params glob '*strength=[1-9a-z]*') and coalesce(on_side,'mine')!='enemy' and (coalesce(on_kind,'')!='player' or " + BODY + ")"),
+    ('defence_gain', 'flat_do', "act in ('stat_change','grow') and (params glob '*health=[1-9a-z]*' or params glob '*strength=[1-9a-z]*') and coalesce(on_side,'mine')!='enemy' and (coalesce(on_kind,'')!='player' or " + BODY + ")"),
+    ('player_attack_gain', 'flat_do', "act in ('stat_change','grow') and (params glob '*power=[1-9a-z]*' or params glob '*strength=[1-9a-z]*') and coalesce(on_side,'mine')!='enemy' and on_kind='player'"),
+    ('player_defence_gain', 'flat_do', "act in ('stat_change','grow') and (params glob '*health=[1-9a-z]*' or params glob '*strength=[1-9a-z]*') and coalesce(on_side,'mine')!='enemy' and on_kind='player'"),
     ('stat_loss', 'flat_do', "(act='stat_change' and params like '%=-%') or (act='stat_set' and on_side='enemy')"),
     ('aoe_damage', 'flat_do', "act='damage' and on_pick='all'"),
     ('direct_damage', 'flat_do', "act in ('damage','excess_damage') and on_kind in ('player','any')"),
     ('ping', 'flat_do', "act='damage' and params like 'amount=1.0%'"),
     ('board_limit', 'flat_do', "act in ('stat_change','stat_set') and (params like 'size=%' or params like '%;size=%')"),  # the room a unit takes (Monster Train size, The Moon's whole side)
     ('self_destruct', 'flat_do', "act='kill' and on_pick='self'"),
-    ('sacrifice', 'flat_do', "act='kill' and on_side='mine' and coalesce(on_pick,'')!='self'"),
+    ('sacrifice', 'flat_do', "act='kill' and on_side='mine' and coalesce(on_pick,'')!='self' and coalesce(on_kind,'')!='player'"),
     ('evasion', 'flat_do', "act='cant' and param_event='blocks' and on_side='enemy'"),
     ('cant_block_self', 'flat_do', "act='cant' and param_event='blocks' and on_pick='self'"),  # my unit can't defend (Kaptain 30 Oct 2026)
     ('cant_attack', 'flat_do', "act='cant' and param_event='attacks' and coalesce(on_side,'')!='enemy'"),  # my own unit
@@ -271,7 +278,8 @@ RULES = [
     ('death_count', 'flat_if', "event='dies' and test in ('event_count','amount_event_count','amount_count')"),
     ('combo_sequence', 'flat_if', "test='first_card' or (event='played' and span in ('this_round','last_round'))"),
     ('adjacency', 'flat_do', "on_pick in ('right_of_self','left_of_self')"),
-    ('movement', 'flat_do', "act in ('swap','move') and coalesce(on_zone,eff_zone,'board')='board'"),
+    ('movement', 'flat_do', "act in ('swap','move') and coalesce(on_zone,eff_zone,'board')='board' and coalesce(on_side,'mine')!='enemy'"),
+    ('forced_movement', 'flat_do', "act in ('swap','move') and coalesce(on_zone,eff_zone,'board')='board' and on_side='enemy'"),
     ('board_presence', 'flat_if', "test in ('count','amount_count') and of_zone='board' and of_side='mine'"),
     ('count_payoff', 'flat_if', "test in ('amount_count','amount_event_count')"),
     # conditions and kinds of card that any game can have (29 Oct 2026, Kaptain's review of the Runeterra keyword concepts)
@@ -324,7 +332,16 @@ def derive(c):
     c.execute("""delete from flat_do where rowid in (select g.rowid from flat_do s join flat_do g on g.card=s.card and g.ability=s.ability
                  and g.origin=s.origin where s.act in ('summon','create') and s.card_ref is not null and g.act='give_keyword' and g.on_pick='it'
                  and g.seq>s.seq and exists (select 1 from card_keyword ck where ck.card=s.card_ref and ck.keyword=g.keyword_ref))""")
+    # who a row acts on decides its concept: the player is not a unit; my own unit moved is not forced; a unit levelling up on
+    # the board is not a card upgraded in the deck
+    ks = ','.join(repr(k) for k in ON_PLAYER)
+    c.execute(f"update flat_do set concept='player_' || concept where on_kind='player' and concept in ({ks}) and not {BODY}")
+    c.execute(f"update flat_when set concept='player_damaged' where concept='on_damaged' and obj_kind='player' and not {BODY}")
+    c.execute("update flat_do set concept='movement' where concept='forced_movement' and on_side='mine'")
+    c.execute("update flat_do set concept='level_up' where act='level_up'")
     c.execute("insert into flat_concept select distinct card, concept, 'row' from flat_do where concept is not null and concept!=''")
+    c.execute(f"insert into flat_concept select distinct card, 'player_' || concept, 'row' from flat_do where on_kind='player' and concept in ({ks}) and {BODY}")
+    c.execute(f"insert into flat_concept select distinct card, 'player_damaged', 'row' from flat_when where concept='on_damaged' and obj_kind='player' and {BODY}")
     c.execute("insert into flat_concept select distinct card, concept, 'row' from flat_when where concept is not null and concept!=''")
     c.execute("insert into flat_concept select distinct card, concept, 'row' from flat_if where concept is not null and concept!=''")
     c.execute("insert into flat_concept select distinct ck.card, v.tree, 'keyword' from card_keyword ck join card k on k.id=ck.keyword "
