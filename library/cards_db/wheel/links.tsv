@@ -3,7 +3,7 @@ deathfeed	deathfeed	0.33	9.06	17	2.23
 deathfeed	lastwords	2.17	2.71	369	3
 deathfeed	sacrifice			1	1.0
 deathfeed	selfhurt	17.65	0.53	1633	3
-deathfeed	revive	2.24	4.23	129	3
+deathfeed	revive	2.21	4.23	129	3
 deathfeed	recycle			6	1.78
 deathfeed	returnhand		2.3	42	2.62
 deathfeed	tokens	0.32	1.58	141	3
@@ -20,7 +20,7 @@ deathfeed	onkill	1.48	1.0	99	3.0
 deathfeed	fight	7.87	1.48	935	3
 deathfeed	ping	5.11	1.25	1326	3
 deathfeed	area	8.37	1.17	1535	3
-deathfeed	kill	7.81	1.96	266	3
+deathfeed	kill	8.45	1.96	293	3
 deathfeed	spelldmg	5.72	1.12	1082	3
 deathfeed	spellpay	0.24	0.93	52	2.72
 deathfeed	hurt			4	1.6
@@ -32,7 +32,7 @@ deathfeed	junk	1.23		52	2.72
 deathfeed	supply	0.49	2.04	17	2.23
 deathfeed	cheaper	0.33	0.81	95	2.98
 deathfeed	inhand			0	0
-deathfeed	draw	0.18	0.84	43	2.63
+deathfeed	draw	0.18	0.84	44	2.64
 deathfeed	create	0.16	0.64	93	2.97
 deathfeed	copy	0.54	0.91	77	2.89
 deathfeed	pick		0.56	1	1.0
@@ -49,20 +49,20 @@ deathfeed	offering	27.71	2.79	2687	3
 deathfeed	steal			7	1.85
 deathfeed	enemyside		3.16	0	0
 deathfeed	haste		1.64	1	1.0
-deathfeed	extraact	0.36	1.61	31	2.49
+deathfeed	extraact	0.42	1.61	37	2.57
 deathfeed	mark			4	1.6
-deathfeed	reach		0.66	0	0
+deathfeed	reach		0.66	40	2.6
 lastwords	lastwords	0.55	4.08	106	3
 lastwords	sacrifice		1.01	1	1.0
 lastwords	selfhurt	13.4	1.21	1881	3
-lastwords	revive	1.46	2.84	165	3
+lastwords	revive	1.42	2.84	165	3
 lastwords	recycle	0.29	0.78	6	1.78
-lastwords	returnhand	1.48	2.55	31	2.49
+lastwords	returnhand	1.47	2.55	31	2.49
 lastwords	tokens	0.54	1.27	522	3
 lastwords	countboard	1.63	1.12	342	3
 lastwords	allyplay	2.03	0.88	285	3
 lastwords	adjacency	1.85	0.93	728	3
-lastwords	movement	1.46	1.04	93	2.97
+lastwords	movement	1.45	1.04	93	2.97
 lastwords	push	1.89	0.89	173	3
 lastwords	lanes			0	0
 lastwords	cells	0.78	0.97	118	3
@@ -72,7 +72,7 @@ lastwords	onkill	0.65	0.92	96	2.98
 lastwords	fight	3.88	1.26	641	3
 lastwords	ping	3.04	0.91	1846	3
 lastwords	area	4.62	1.27	2085	3
-lastwords	kill	2.17	1.32	273	3
+lastwords	kill	2.14	1.32	273	3
 lastwords	spelldmg	2.19	0.83	745	3
 lastwords	spellpay	0.35	0.43	131	3
 lastwords	hurt	2.71	1.17	75	2.88
@@ -93,14 +93,14 @@ lastwords	heal	0.45	1.3	23	2.36
 lastwords	shield	0.5	0.83	121	3
 lastwords	guard	1.84	0.97	144	3
 lastwords	hide		1.09	6	1.78
-lastwords	attach	0.48	1.57	64	2.81
-lastwords	roundstart	0.78	0.98	193	3
+lastwords	attach	0.47	1.57	64	2.81
+lastwords	roundstart	0.77	0.98	193	3
 lastwords	leave	1.04		26	2.41
 lastwords	bigstrength	1.46	0.38	70	2.85
 lastwords	offering	20.82	2.68	4582	3
 lastwords	steal	0.56	1.0	19	2.28
 lastwords	enemyside		0.57	8	1.9
-lastwords	haste	0.23	0.85	11	2.04
+lastwords	haste	0.22	0.85	11	2.04
 lastwords	extraact	0.6	1.14	78	2.89
 lastwords	mark		1.38	7	1.85
 lastwords	reach		0.72	18	2.26
@@ -156,7 +156,7 @@ sacrifice	extraact			0	0
 sacrifice	mark			0	0
 sacrifice	reach			0	0
 selfhurt	selfhurt	0.89	3.3	47	2.67
-selfhurt	revive	12.31	0.8	639	3
+selfhurt	revive	12.28	0.8	639	3
 selfhurt	recycle			0	0
 selfhurt	returnhand			0	0
 selfhurt	tokens	2.56	1.04	1053	3
@@ -194,7 +194,7 @@ selfhurt	heal		3.34	40	2.6
 selfhurt	shield	1.97	0.53	186	3
 selfhurt	guard			0	0
 selfhurt	hide			1	1.0
-selfhurt	attach	0.67	0.17	63	2.8
+selfhurt	attach	0.66	0.17	63	2.8
 selfhurt	roundstart	0.64	1.18	101	3
 selfhurt	leave			0	0
 selfhurt	bigstrength	0.21	0.78	8	1.9
@@ -205,53 +205,53 @@ selfhurt	haste			0	0
 selfhurt	extraact	2.44	0.22	210	3
 selfhurt	mark		2.52	0	0
 selfhurt	reach			0	0
-revive	revive	4.44	7.04	104	3
+revive	revive	4.3	7.04	104	3
 revive	recycle		0.92	31	2.49
 revive	returnhand		1.05	54	2.73
-revive	tokens	1.57	1.23	588	3
-revive	countboard	2.99	0.87	250	3
-revive	allyplay	1.53	1.31	137	3
-revive	adjacency	2.62	1.21	378	3
+revive	tokens	1.55	1.23	588	3
+revive	countboard	2.98	0.87	250	3
+revive	allyplay	1.74	1.31	158	3
+revive	adjacency	2.63	1.21	385	3
 revive	movement			35	2.54
 revive	push		0.5	12	2.08
 revive	lanes			0	0
 revive	cells		0.72	5	1.7
-revive	onattack	0.93	1.24	19	2.28
+revive	onattack	0.84	1.24	19	2.28
 revive	overkill	0.83	0.26	51	2.71
-revive	onkill	1.54	0.88	82	2.91
-revive	fight	3.09	2.76	198	3
-revive	ping	2.51	0.76	541	3
-revive	area	4.61	1.1	699	3
-revive	kill	2.78	0.71	136	3
-revive	spelldmg	2.21	0.61	263	3
-revive	spellpay	0.15	0.69	20	2.3
+revive	onkill	1.52	0.88	82	2.91
+revive	fight	3.08	2.76	198	3
+revive	ping	2.51	0.76	545	3
+revive	area	4.58	1.1	703	3
+revive	kill	2.89	0.71	143	3
+revive	spelldmg	2.19	0.61	263	3
+revive	spellpay	0.15	0.69	21	2.32
 revive	hurt			3	1.48
-revive	silence	0.33	0.41	7	1.85
-revive	weaken	2.1		73	2.86
+revive	silence	0.32	0.41	7	1.85
+revive	weaken	2.08		73	2.86
 revive	change			0	0
 revive	hand			29	2.46
 revive	junk	0.51		14	2.15
-revive	supply	0.25	3.08	5	1.7
-revive	cheaper	1.52	1.46	257	3
+revive	supply	0.24	3.08	5	1.7
+revive	cheaper	1.51	1.46	257	3
 revive	inhand			0	0
-revive	draw	2.36	0.99	347	3
-revive	create	2.53	0.51	906	3
-revive	copy	1.02	1.35	128	3
+revive	draw	2.33	0.99	347	3
+revive	create	2.52	0.51	906	3
+revive	copy	1.01	1.35	128	3
 revive	pick		0.88	10	2.0
 revive	discard	4.45	2.96	212	3
 revive	heal		1.79	15	2.18
-revive	shield	1.52	0.85	133	3
+revive	shield	1.51	0.85	133	3
 revive	guard		0.49	10	2.0
 revive	hide		0.94	1	1.0
-revive	attach	1.76	1.99	103	3
-revive	roundstart	1.29	0.88	100	3
-revive	leave			10	2.0
+revive	attach	1.73	1.99	103	3
+revive	roundstart	1.32	0.88	104	3
+revive	leave			15	2.18
 revive	bigstrength			18	2.26
-revive	offering	18.35	3.18	1377	3
+revive	offering	18.33	3.18	1391	3
 revive	steal		1.17	1	1.0
 revive	enemyside		0.36	0	0
 revive	haste		1.48	2	1.3
-revive	extraact	3.08	0.84	150	3
+revive	extraact	3.02	0.84	150	3
 revive	mark		1.46	0	0
 revive	reach			0	0
 recycle	recycle		2.03	10	2.0
@@ -364,7 +364,7 @@ tokens	fight	0.89	1.23	447	3
 tokens	ping	0.96	0.97	1924	3
 tokens	area	1.91	0.99	2588	3
 tokens	kill	0.79	1.02	353	3
-tokens	spelldmg	0.81	0.75	823	3
+tokens	spelldmg	0.82	0.75	826	3
 tokens	spellpay	0.12	0.8	134	3
 tokens	hurt	1.44	0.98	60	2.78
 tokens	silence	0.67	0.76	113	3
@@ -374,24 +374,24 @@ tokens	hand	0.37	0.94	24	2.38
 tokens	junk	0.18	0.54	33	2.52
 tokens	supply	0.17	0.96	19	2.28
 tokens	cheaper	0.56	0.86	680	3
-tokens	inhand	0.41	0.92	83	2.92
+tokens	inhand	0.44	0.92	89	2.95
 tokens	draw	0.45	0.91	516	3
 tokens	create	0.57	0.84	1567	3
 tokens	copy	0.88	0.92	864	3
-tokens	pick	0.44	1.13	27	2.43
+tokens	pick	0.43	1.13	27	2.43
 tokens	discard	1.22	0.91	354	3
 tokens	heal	0.56	0.94	99	3.0
 tokens	shield	1.24	1.04	1031	3
 tokens	guard	0.79	0.9	90	2.95
 tokens	hide	0.24	1.11	14	2.15
-tokens	attach	0.6	0.92	249	3
+tokens	attach	0.59	0.92	249	3
 tokens	roundstart	0.73	1.17	462	3
 tokens	leave	0.16	0.85	12	2.08
 tokens	bigstrength	0.08	0.54	12	2.08
 tokens	offering	3.78	1.36	2372	3
 tokens	steal	0.36	1.11	39	2.59
-tokens	enemyside	1.89	1.23	77	2.89
-tokens	haste	0.69	1.06	118	3
+tokens	enemyside	1.71	1.23	80	2.9
+tokens	haste	0.73	1.06	135	3
 tokens	extraact	2.72	0.91	1028	3
 tokens	mark		1.29	18	2.26
 tokens	reach		1.18	0	0
@@ -408,7 +408,7 @@ countboard	onkill	1.9	1.33	235	3
 countboard	fight	0.56	1.66	20	2.3
 countboard	ping	1.13	1.23	601	3
 countboard	area	0.92	1.25	324	3
-countboard	kill	0.29	1.41	47	2.67
+countboard	kill	0.28	1.41	47	2.67
 countboard	spelldmg	1.43	0.98	246	3
 countboard	spellpay	0.47	0.83	62	2.79
 countboard	hurt			14	2.15
@@ -423,21 +423,21 @@ countboard	inhand	0.6	1.0	60	2.78
 countboard	draw	0.4	1.04	63	2.8
 countboard	create	0.7	1.0	283	3
 countboard	copy	1.26	1.11	316	3
-countboard	pick	0.42	0.99	10	2.0
+countboard	pick	0.41	0.99	10	2.0
 countboard	discard	0.8	0.81	71	2.85
 countboard	heal	0.62	0.88	36	2.56
 countboard	shield	0.44	1.1	105	3
 countboard	guard		0.96	47	2.67
 countboard	hide	0.54	1.59	13	2.11
-countboard	attach	1.25		54	2.73
+countboard	attach	1.24		54	2.73
 countboard	roundstart	0.9	1.24	57	2.76
 countboard	leave			3	1.48
 countboard	bigstrength			18	2.26
 countboard	offering	0.28	1.45	47	2.67
 countboard	steal	0.25	1.4	7	1.85
-countboard	enemyside		1.39	11	2.04
-countboard	haste	0.3	0.97	23	2.36
-countboard	extraact	3.51		91	2.96
+countboard	enemyside	0.97	1.39	21	2.32
+countboard	haste	0.69	0.97	57	2.76
+countboard	extraact	3.5		91	2.96
 countboard	mark		0.88	2	1.3
 countboard	reach		0.7	1	1.0
 allyplay	allyplay	0.54	2.94	161	3
@@ -452,7 +452,7 @@ allyplay	onkill		0.67	26	2.41
 allyplay	fight		1.87	7	1.85
 allyplay	ping	0.28	0.87	7	1.85
 allyplay	area	1.02	0.96	109	3
-allyplay	kill	0.98	0.52	68	2.83
+allyplay	kill	0.97	0.52	68	2.83
 allyplay	spelldmg	0.33	0.73	8	1.9
 allyplay	spellpay	1.06	0.65	57	2.76
 allyplay	hurt			0	0
@@ -485,7 +485,7 @@ allyplay	extraact		0.34	6	1.78
 allyplay	mark			1	1.0
 allyplay	reach		0.97	2	1.3
 adjacency	adjacency	1.98	4.35	671	3
-adjacency	movement	2.98	2.27	197	3
+adjacency	movement	2.97	2.27	197	3
 adjacency	push	4.6	1.36	724	3
 adjacency	lanes			0	0
 adjacency	cells	1.19	0.85	78	2.89
@@ -516,18 +516,18 @@ adjacency	heal	1.18	1.09	97	2.99
 adjacency	shield	0.81	1.33	296	3
 adjacency	guard	6.82	1.12	397	3
 adjacency	hide	0.55	1.26	18	2.26
-adjacency	attach	1.97	1.31	189	3
+adjacency	attach	1.94	1.31	189	3
 adjacency	roundstart	1.0	0.96	168	3
 adjacency	leave		3.16	70	2.85
 adjacency	bigstrength	5.81	1.96	166	3
 adjacency	offering	0.97	0.62	261	3
 adjacency	steal	0.41	0.94	20	2.3
-adjacency	enemyside	0.17	1.88	4	1.6
-adjacency	haste	0.53	1.46	57	2.76
-adjacency	extraact	1.93	1.14	160	3
+adjacency	enemyside	0.51	1.88	14	2.15
+adjacency	haste	0.49	1.46	57	2.76
+adjacency	extraact	1.92	1.14	160	3
 adjacency	mark		0.84	3	1.48
 adjacency	reach		1.6	7	1.85
-movement	movement	4.43	11.81	148	3
+movement	movement	4.42	11.81	148	3
 movement	push	4.9	5.29	312	3
 movement	lanes			1	1.0
 movement	cells			0	0
@@ -549,8 +549,8 @@ movement	junk			6	1.78
 movement	supply		0.57	11	2.04
 movement	cheaper	0.95	0.55	43	2.63
 movement	inhand			0	0
-movement	draw	5.45	0.62	216	3
-movement	create	0.74	0.79	66	2.82
+movement	draw	5.43	0.62	216	3
+movement	create	0.73	0.79	66	2.82
 movement	copy	1.84	1.64	40	2.6
 movement	pick			3	1.48
 movement	discard		0.81	2	1.3
@@ -566,7 +566,7 @@ movement	offering		0.99	29	2.46
 movement	steal		0.76	34	2.53
 movement	enemyside			0	0
 movement	haste			0	0
-movement	extraact			25	2.4
+movement	extraact			26	2.41
 movement	mark			4	1.6
 movement	reach			0	0
 push	push	4.31	5.66	2374	3
@@ -600,7 +600,7 @@ push	shield	2.46	0.66	375	3
 push	guard	1.21	0.6	29	2.46
 push	hide			0	0
 push	attach			0	0
-push	roundstart	2.22	0.9	133	3
+push	roundstart	2.2	0.9	133	3
 push	leave		11.55	64	2.81
 push	bigstrength			0	0
 push	offering	1.29	0.88	48	2.68
@@ -657,7 +657,7 @@ cells	onkill		1.41	2	1.3
 cells	fight		0.92	1	1.0
 cells	ping	0.66	0.8	48	2.68
 cells	area	0.96	1.16	105	3
-cells	kill	1.15	1.01	24	2.38
+cells	kill	0.98	1.01	24	2.38
 cells	spelldmg	0.92	1.25	34	2.53
 cells	spellpay	0.25	0.64	12	2.08
 cells	hurt			0	0
@@ -688,14 +688,14 @@ cells	enemyside		0.84	5	1.7
 cells	haste		0.68	10	2.0
 cells	extraact		0.7	10	2.0
 cells	mark			2	1.3
-cells	reach	0.38	0.7	12	2.08
+cells	reach	0.35	0.7	12	2.08
 onattack	onattack	0.81	2.1	60	2.78
 onattack	overkill			0	0
 onattack	onkill	1.29	1.18	27	2.43
 onattack	fight		0.97	15	2.18
 onattack	ping	1.51	0.95	140	3
 onattack	area	2.46	1.06	311	3
-onattack	kill	1.5	1.01	38	2.58
+onattack	kill	1.41	1.01	38	2.58
 onattack	spelldmg	2.06	0.79	104	3
 onattack	spellpay	0.34	1.09	24	2.38
 onattack	hurt	0.86	1.15	25	2.4
@@ -717,7 +717,7 @@ onattack	shield		1.01	3	1.48
 onattack	guard	0.99	0.93	72	2.86
 onattack	hide		1.08	0	0
 onattack	attach		0.86	0	0
-onattack	roundstart	0.65	1.16	52	2.72
+onattack	roundstart	0.64	1.16	52	2.72
 onattack	leave			1	1.0
 onattack	bigstrength			0	0
 onattack	offering	0.17	0.82	8	1.9
@@ -753,7 +753,7 @@ overkill	heal	0.18	1.27	4	1.6
 overkill	shield	0.36	1.04	42	2.62
 overkill	guard			0	0
 overkill	hide			25	2.4
-overkill	attach	1.26	1.54	144	3
+overkill	attach	1.24	1.54	144	3
 overkill	roundstart	0.61	0.8	101	3
 overkill	leave	1.56		36	2.56
 overkill	bigstrength	0.09	1.58	4	1.6
@@ -768,7 +768,7 @@ onkill	onkill	0.81	6.89	38	2.58
 onkill	fight	3.75	1.2	299	3
 onkill	ping	1.45	1.23	623	3
 onkill	area	2.43	1.22	744	3
-onkill	kill	1.52	1.12	109	3
+onkill	kill	1.58	1.12	114	3
 onkill	spelldmg	3.26	1.96	553	3
 onkill	spellpay	0.4	0.92	69	2.84
 onkill	hurt			9	1.95
@@ -796,14 +796,14 @@ onkill	bigstrength	1.22		29	2.46
 onkill	offering	3.11	1.13	318	3
 onkill	steal		2.94	27	2.43
 onkill	enemyside		1.85	0	0
-onkill	haste	1.99	0.98	60	2.78
+onkill	haste	1.84	0.98	60	2.78
 onkill	extraact	0.9	1.15	53	2.72
 onkill	mark		3.73	1	1.0
 onkill	reach		1.26	8	1.9
 fight	fight	1.09	8.24	87	2.94
 fight	ping	0.7	0.52	231	3
 fight	area	0.33	0.79	69	2.84
-fight	kill	1.52	1.11	47	2.67
+fight	kill	1.51	1.11	47	2.67
 fight	spelldmg	0.48	1.43	86	2.93
 fight	spellpay	0.48	0.63	130	3
 fight	hurt			6	1.78
@@ -824,7 +824,7 @@ fight	heal	0.84	1.44	18	2.26
 fight	shield	1.25	1.73	152	3
 fight	guard		1.47	1	1.0
 fight	hide		1.58	1	1.0
-fight	attach	1.78	1.74	213	3
+fight	attach	1.75	1.74	213	3
 fight	roundstart	0.3	0.7	54	2.73
 fight	leave	0.04		1	1.0
 fight	bigstrength	8.53	1.15	414	3
@@ -837,7 +837,7 @@ fight	mark			2	1.3
 fight	reach		1.07	0	0
 ping	ping	0.93	2.37	947	3
 ping	area	0.71	1.42	1028	3
-ping	kill	0.91	1.04	270	3
+ping	kill	0.94	1.04	280	3
 ping	spelldmg	1.31	1.35	880	3
 ping	spellpay	0.16	0.89	110	3
 ping	hurt	2.64	1.07	84	2.92
@@ -858,19 +858,19 @@ ping	heal	1.54	1.27	203	3
 ping	shield	0.81	0.8	563	3
 ping	guard	0.0	1.01	0	0
 ping	hide	1.43	1.01	65	2.81
-ping	attach	0.27	0.47	66	2.82
+ping	attach	0.28	0.47	70	2.85
 ping	roundstart	0.66	0.97	272	3
 ping	leave	0.06		3	1.48
 ping	bigstrength	0.08	0.6	8	1.9
 ping	offering	0.89	0.74	355	3
 ping	steal	4.55	1.25	337	3
-ping	enemyside		0.72	0	0
-ping	haste	1.03	0.89	127	3
+ping	enemyside		0.72	11	2.04
+ping	haste	1.07	0.89	143	3
 ping	extraact	1.97	0.86	454	3
 ping	mark		1.11	4	1.6
-ping	reach		0.93	79	2.9
+ping	reach		0.93	95	2.98
 area	area	0.62	2.67	382	3
-area	kill	0.99	1.46	195	3
+area	kill	1.01	1.46	200	3
 area	spelldmg	0.61	1.48	265	3
 area	spellpay	0.18	0.68	85	2.93
 area	hurt	3.21	1.15	105	3
@@ -891,18 +891,18 @@ area	heal	1.69	2.22	131	3
 area	shield	0.61	0.96	283	3
 area	guard	1.01	0.98	61	2.79
 area	hide	1.12	1.13	31	2.49
-area	attach	0.26	0.79	42	2.62
+area	attach	0.25	0.79	42	2.62
 area	roundstart	0.61	1.06	180	3
 area	leave	0.64		20	2.3
 area	bigstrength	0.52	0.48	32	2.51
 area	offering	0.88	1.11	240	3
 area	steal	2.61	1.03	142	3
 area	enemyside		0.74	1	1.0
-area	haste	0.82	0.68	66	2.82
-area	extraact	3.93	0.64	608	3
+area	haste	0.76	0.68	66	2.82
+area	extraact	3.92	0.64	608	3
 area	mark		1.82	3	1.48
 area	reach		1.15	237	3
-kill	kill	0.47	9.26	20	2.3
+kill	kill	0.58	9.26	25	2.4
 kill	spelldmg	1.36	0.95	150	3
 kill	spellpay	0.22	0.51	22	2.34
 kill	hurt		2.08	5	1.7
@@ -911,10 +911,10 @@ kill	weaken	0.0	1.65	0	0
 kill	change		1.81	0	0
 kill	hand		2.33	0	0
 kill	junk		1.2	4	1.6
-kill	supply	0.3	1.75	7	1.85
-kill	cheaper	0.26	1.13	26	2.41
+kill	supply	0.57	1.75	14	2.15
+kill	cheaper	0.25	1.13	26	2.41
 kill	inhand	0.1	0.79	5	1.7
-kill	draw	0.32	1.21	35	2.54
+kill	draw	0.31	1.21	35	2.54
 kill	create	0.36	1.01	94	2.97
 kill	copy	0.55	0.95	79	2.9
 kill	pick		1.08	2	1.3
@@ -924,16 +924,16 @@ kill	shield	0.05	1.17	7	1.85
 kill	guard		0.92	1	1.0
 kill	hide		1.34	1	1.0
 kill	attach	0.1	1.3	3	1.48
-kill	roundstart	0.79	1.51	34	2.53
+kill	roundstart	0.77	1.51	34	2.53
 kill	leave			2	1.3
 kill	bigstrength			0	0
-kill	offering	0.81	1.89	77	2.89
+kill	offering	0.8	1.89	77	2.89
 kill	steal		1.72	6	1.78
 kill	enemyside		1.2	0	0
 kill	haste	0.05	0.75	2	1.3
-kill	extraact	2.64	1.24	67	2.83
+kill	extraact	2.63	1.24	67	2.83
 kill	mark		1.06	7	1.85
-kill	reach		1.06	8	1.9
+kill	reach		1.06	16	2.2
 spelldmg	spelldmg	0.71	3.07	153	3
 spelldmg	spellpay	0.18	1.14	88	2.94
 spelldmg	hurt		0.43	10	2.0
@@ -954,14 +954,14 @@ spelldmg	heal	1.32	0.93	80	2.9
 spelldmg	shield	0.81	1.02	227	3
 spelldmg	guard	0.0	0.67	0	0
 spelldmg	hide		1.05	27	2.43
-spelldmg	attach	0.86	1.32	149	3
+spelldmg	attach	0.85	1.32	149	3
 spelldmg	roundstart	0.21	0.67	58	2.76
 spelldmg	leave	0.06		2	1.3
 spelldmg	bigstrength	5.2	0.82	361	3
 spelldmg	offering	0.45	0.85	94	2.97
 spelldmg	steal	3.04	0.95	97	2.99
 spelldmg	enemyside		1.08	0	0
-spelldmg	haste	1.46	0.53	51	2.71
+spelldmg	haste	1.81	0.53	68	2.83
 spelldmg	extraact	0.74	0.95	125	3
 spelldmg	mark		0.96	13	2.11
 spelldmg	reach		0.76	72	2.86
@@ -991,7 +991,7 @@ spellpay	bigstrength	0.58		47	2.67
 spellpay	offering	0.15	0.52	31	2.49
 spellpay	steal	0.55	0.91	19	2.28
 spellpay	enemyside		0.43	0	0
-spellpay	haste	0.15	0.78	4	1.6
+spellpay	haste	0.14	0.78	4	1.6
 spellpay	extraact	0.25	1.14	52	2.72
 spellpay	mark		1.13	5	1.7
 spellpay	reach		2.09	0	0
@@ -1047,7 +1047,7 @@ silence	leave		3.49	1	1.0
 silence	bigstrength			0	0
 silence	offering	0.43	0.79	16	2.2
 silence	steal		1.48	5	1.7
-silence	enemyside		1.63	0	0
+silence	enemyside		1.63	11	2.04
 silence	haste		0.94	2	1.3
 silence	extraact		0.6	12	2.08
 silence	mark			0	0
@@ -1143,7 +1143,7 @@ junk	heal			2	1.3
 junk	shield	0.25	1.24	10	2.0
 junk	guard		0.56	0	0
 junk	hide		1.67	0	0
-junk	attach	0.04	2.56	2	1.3
+junk	attach	0.09	2.56	4	1.6
 junk	roundstart	0.1	1.0	6	1.78
 junk	leave			0	0
 junk	bigstrength			0	0
@@ -1174,9 +1174,9 @@ supply	offering	1.12	1.75	74	2.87
 supply	steal		0.76	0	0
 supply	enemyside		0.53	0	0
 supply	haste		1.1	0	0
-supply	extraact			9	1.95
+supply	extraact			15	2.18
 supply	mark			0	0
-supply	reach		0.96	0	0
+supply	reach		0.96	8	1.9
 cheaper	cheaper	0.28	5.45	118	3
 cheaper	inhand			0	0
 cheaper	draw	2.44	1.1	1685	3
@@ -1186,9 +1186,9 @@ cheaper	pick		0.69	8	1.9
 cheaper	discard	0.83	0.71	148	3
 cheaper	heal	0.08	0.84	4	1.6
 cheaper	shield	0.19	0.74	51	2.71
-cheaper	guard	0.0	0.69	0	0
-cheaper	hide		0.92	5	1.7
-cheaper	attach	0.94	0.66	259	3
+cheaper	guard	0.02	0.69	1	1.0
+cheaper	hide		0.92	6	1.78
+cheaper	attach	0.98	0.66	275	3
 cheaper	roundstart	1.51	1.12	589	3
 cheaper	leave	0.52		26	2.41
 cheaper	bigstrength	0.0	1.65	0	0
@@ -1216,24 +1216,24 @@ inhand	bigstrength			0	0
 inhand	offering	0.38	0.15	16	2.2
 inhand	steal			14	2.15
 inhand	enemyside			0	0
-inhand	haste	0.45	1.19	12	2.08
+inhand	haste	0.41	1.19	12	2.08
 inhand	extraact			0	0
 inhand	mark			0	0
 inhand	reach			0	0
 draw	draw	0.53	3.45	163	3
 draw	create	0.61	1.14	852	3
 draw	copy	1.99	1.09	736	3
-draw	pick		0.99	35	2.54
+draw	pick	1.74	0.99	35	2.54
 draw	discard	0.56	2.32	70	2.85
 draw	heal	0.53	1.02	26	2.41
 draw	shield	0.2	0.89	55	2.74
-draw	guard	0.64	0.89	41	2.61
-draw	hide		1.14	1	1.0
-draw	attach	0.5	0.92	110	3
-draw	roundstart	1.14	1.04	389	3
+draw	guard	0.67	0.89	43	2.63
+draw	hide		1.14	3	1.48
+draw	attach	0.5	0.92	114	3
+draw	roundstart	1.18	1.04	402	3
 draw	leave	0.12	1.14	5	1.7
 draw	bigstrength	0.0	0.93	0	0
-draw	offering	1.75	1.11	407	3
+draw	offering	1.76	1.11	408	3
 draw	steal	0.05	1.02	2	1.3
 draw	enemyside		1.13	0	0
 draw	haste	0.0	1.15	0	0
@@ -1246,8 +1246,8 @@ create	pick	0.85	1.0	39	2.59
 create	discard	0.34	1.17	108	3
 create	heal	0.18	0.74	24	2.38
 create	shield	0.32	0.88	220	3
-create	guard	0.0	0.97	0	0
-create	hide	0.13	0.96	4	1.6
+create	guard	0.02	0.97	1	1.0
+create	hide	0.16	0.96	5	1.7
 create	attach	0.31	0.84	177	3
 create	roundstart	0.75	0.84	601	3
 create	leave	0.14	0.62	15	2.18
@@ -1255,32 +1255,32 @@ create	bigstrength	0.04	1.18	8	1.9
 create	offering	1.65	0.76	912	3
 create	steal	0.0	1.09	0	0
 create	enemyside	0.07	1.07	3	1.48
-create	haste	0.15	0.85	8	1.9
+create	haste	0.14	0.85	8	1.9
 create	extraact	1.42	0.88	711	3
 create	mark		0.52	12	2.08
 create	reach		1.09	0	0
 copy	copy	3.58	5.21	584	3
-copy	pick	1.24	1.13	25	2.4
+copy	pick	1.23	1.13	25	2.4
 copy	discard	0.54	0.99	67	2.83
 copy	heal	0.48	0.17	26	2.41
 copy	shield	0.71	1.01	180	3
 copy	guard	0.32	1.18	10	2.0
 copy	hide		1.08	2	1.3
-copy	attach	1.05	1.28	149	3
+copy	attach	1.09	1.28	157	3
 copy	roundstart	0.83	0.9	151	3
 copy	leave	0.59	3.42	14	2.15
 copy	bigstrength	0.41		19	2.28
 copy	offering	2.97	1.34	620	3
 copy	steal	0.09	1.18	3	1.48
-copy	enemyside	0.04	1.67	1	1.0
-copy	haste	0.04	0.87	2	1.3
+copy	enemyside	0.77	1.67	22	2.34
+copy	haste	0.05	0.87	3	1.48
 copy	extraact	0.65	0.55	75	2.88
 copy	mark		1.58	2	1.3
 copy	reach		0.97	0	0
 pick	pick		5.47	5	1.7
 pick	discard		1.11	2	1.3
 pick	heal		0.59	3	1.48
-pick	shield	1.06	0.84	25	2.4
+pick	shield	1.05	0.84	25	2.4
 pick	guard		1.15	0	0
 pick	hide		0.97	0	0
 pick	attach		1.17	0	0
@@ -1296,7 +1296,7 @@ pick	mark		1.25	0	0
 pick	reach			0	0
 discard	discard	12.52	11.47	568	3
 discard	heal		3.69	9	1.95
-discard	shield	0.49	0.72	28	2.45
+discard	shield	0.48	0.72	28	2.45
 discard	guard			0	0
 discard	hide		0.67	4	1.6
 discard	attach	0.34		19	2.28
@@ -1328,7 +1328,7 @@ heal	reach			0	0
 shield	shield	1.37	4.16	195	3
 shield	guard		1.37	151	3
 shield	hide	0.31	2.05	7	1.85
-shield	attach	2.24	1.44	203	3
+shield	attach	2.2	1.44	203	3
 shield	roundstart	0.71	0.94	97	2.99
 shield	leave			63	2.8
 shield	bigstrength	0.08	0.61	3	1.48
@@ -1339,10 +1339,10 @@ shield	haste	0.0	1.21	0	0
 shield	extraact	1.62	1.89	141	3
 shield	mark		1.44	1	1.0
 shield	reach		0.74	1	1.0
-guard	guard	1.55	4.73	35	2.54
+guard	guard	1.54	4.73	35	2.54
 guard	hide		1.13	0	0
 guard	attach		1.78	0	0
-guard	roundstart	3.54	0.98	85	2.93
+guard	roundstart	3.45	0.98	85	2.93
 guard	leave			1	1.0
 guard	bigstrength			0	0
 guard	offering	0.04	0.84	1	1.0
@@ -1364,21 +1364,21 @@ hide	haste		1.48	0	0
 hide	extraact			0	0
 hide	mark		0.93	0	0
 hide	reach		0.82	0	0
-attach	attach	10.31	11.06	504	3
-attach	roundstart	0.4	1.11	52	2.72
-attach	leave			6	1.78
-attach	bigstrength	0.47	3.61	17	2.23
-attach	offering	1.22	2.16	99	3.0
+attach	attach	9.97	11.06	504	3
+attach	roundstart	0.39	1.11	52	2.72
+attach	leave			62	2.79
+attach	bigstrength	0.46	3.61	17	2.23
+attach	offering	1.19	2.16	99	3.0
 attach	steal		1.86	0	0
 attach	enemyside			0	0
 attach	haste			0	0
-attach	extraact	0.42	1.53	35	2.54
+attach	extraact	0.41	1.53	35	2.54
 attach	mark			0	0
 attach	reach		1.22	0	0
 roundstart	roundstart	0.51	3.72	63	2.8
 roundstart	leave	1.4		37	2.57
 roundstart	bigstrength	1.12	0.85	59	2.77
-roundstart	offering	0.83	1.24	96	2.98
+roundstart	offering	0.82	1.24	96	2.98
 roundstart	steal		1.69	16	2.2
 roundstart	enemyside		0.97	0	0
 roundstart	haste		1.14	0	0
@@ -1406,11 +1406,11 @@ offering	offering	2.1	4.29	162	3
 offering	steal	1.07	1.51	23	2.36
 offering	enemyside		0.58	1	1.0
 offering	haste	0.0	0.75	0	0
-offering	extraact	1.86	0.67	129	3
+offering	extraact	1.85	0.67	129	3
 offering	mark		1.63	2	1.3
 offering	reach		0.38	0	0
 steal	steal		12.61	0	0
-steal	enemyside		2.44	0	0
+steal	enemyside		2.44	41	2.61
 steal	haste		0.63	1	1.0
 steal	extraact		1.87	61	2.79
 steal	mark			0	0
@@ -1420,11 +1420,11 @@ enemyside	haste		1.17	1	1.0
 enemyside	extraact			0	0
 enemyside	mark			0	0
 enemyside	reach		2.52	0	0
-haste	haste	0.09	3.28	1	1.0
+haste	haste	0.08	3.28	1	1.0
 haste	extraact		0.77	0	0
 haste	mark		1.36	1	1.0
 haste	reach		0.9	0	0
-extraact	extraact	13.5	4.29	541	3
+extraact	extraact	13.49	4.29	541	3
 extraact	mark			1	1.0
 extraact	reach		1.11	1	1.0
 mark	mark		25.27	0	0

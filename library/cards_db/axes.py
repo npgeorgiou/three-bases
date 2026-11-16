@@ -143,6 +143,9 @@ DO_SRC = "ability || '.' || seq, 'kw' || via"  # flat_do columns naming a row's 
 IF_SRC = "ability, 'kw' || via"  # flat_if / flat_when: an ability's conditions and triggers (a keyword's when no ability)
 
 
+KW_AB = collections.defaultdict(set)  # (card, ability) -> 'kw<id>' of the keywords it has whose own ability that is
+
+
 def note_src(card, k, *srcs):
     for x in srcs:
         if x is not None: SOURCES[card][k].add(str(x))
@@ -151,6 +154,10 @@ def note_src(card, k, *srcs):
 def row_sources(c):
     """SOURCES of the concepts flat.py's derive writes into flat_concept from rows, keywords and its RULES"""
     import flat
+    KW_AB.clear()
+    for t in ('flat_do', 'flat_if', 'flat_when'):
+        for card, ab, via in c.execute(f"select distinct card, ability, via from {t} where origin='has_keyword' and ability is not null and via is not null"):
+            KW_AB[(card, ab)].add(f'kw{via}')
     for t, cols in (('flat_do', DO_SRC), ('flat_if', IF_SRC), ('flat_when', IF_SRC)):
         for card, k, *src in c.execute(f"select card, concept, {cols} from {t} where coalesce(concept,'')!=''"): note_src(card, k, *src)
     for card, k, kw in c.execute("select distinct ck.card, v.tree, ck.keyword from card_keyword ck join card k on k.id=ck.keyword join vocab v on "
@@ -168,9 +175,11 @@ def side_concepts(card, src, con):
     """the concepts of a card that a link's side (links.sqlite a_ab / b_ab: 'ability.seq', ability, 'kw<id>', 'c:<concept>', 'type',
     'rule'; several joined by ';') comes from: a link counts for a mechanic only through what of the card made it"""
     out = set()
-    for s in (src or '').split(';'):
-        if not s or s == 'rule': continue
-        if s.startswith('c:'): out |= {s[2:]} & con[card]; continue
+    parts = [t for t in (src or '').split(';') if t]
+    parts += [k for t in parts if t[0].isdigit() for k in KW_AB.get((card, int(t.split('.')[0])), ())]  # a keyword's own effect: the keyword made it
+    for s in parts:
+        if s == 'rule': continue
+        if s.startswith('c:'): out.add(s[2:]); continue  # a concept the rule read from the whole card
         for k in con[card]:
             got = SOURCES[card].get(k)
             if s == 'type': hit = not got

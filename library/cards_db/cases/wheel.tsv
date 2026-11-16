@@ -5,3 +5,8 @@ w03	sts1	Ritual Dagger	Nunchaku	onkill	*	none	Kaptain 15 Nov 2026: Ritual Dagger
 w04	sts1	Ritual Dagger	Nunchaku	kills	*	none	the same on the radii
 w05	monster_train	Mine Collapse	Kindle	kill	*	none	Kaptain 15 Nov 2026: the energy links them, not the kill
 w06	monster_train	Mine Collapse	Kindle	kills	*	none	the same on the radii
+w07	duelyst	Erratic Raptyr	Grailmaster	revive	allyplay	count	the link is made by a keyword's own effect: the keyword counts
+w08	faeria	Boulder Thrower	Blood Obelisk	reach	deathfeed	count	the same family
+w09	gwent	Mage Infiltrator	Thanedd Turncoat	enemyside	ping	count	the same family
+w10	inscryption	Adder	Raccoon	kill	deathfeed	count	the same family
+w11	runeterra	Yuumi (level 2)	Legion General	attach	leave	count	the same family

@@ -117,6 +117,8 @@ def build(c, L, game):
     print(game, 'sample:', ', '.join(names[i] for i in random.Random(1).sample(ids, min(10, len(ids)))))
     only = only_made(c, game, mine)  # as in a deck: a card only other cards make is "made" (Wraithling, Chime, a level-up form)
     nodes, lines = network.network(c, game, [i for i in ids if i not in only])
+    rule_ab = {str(i) for (i,) in c.execute("select a.id from ability a join card k on k.id=a.card where k.category='game_rule'")}
+    as_src = lambda x: 'rule' if x.split('.')[0] in rule_ab else x  # an ability of a game rule (units fight, Blood is paid): the game's rules
     src_by = collections.defaultdict(list)  # (a, b) -> [(sentence, sources)]: for a reason joined from two lines
     for (a, b, z), v in network.SRC.items(): src_by[(a, b)].append((z, v))
     phr = {(k, x): i for i, k, x in L.execute('select id, kind, text from phrase')}
@@ -133,8 +135,8 @@ def build(c, L, game):
             src = network.SRC.get((a, b, part)) or network.SRC.get((a, b, why)) or \
                 {x for z, v in src_by.get((a, b), ()) if z in why or part in z for x in v}  # what of A and of B made it; a reason joined from
             # two (one_link: "brings it back" + "its summon effect goes off"): the lines it was joined from
-            a_ab = ';'.join(sorted({x for s_, _ in src for x in s_.split(';') if x})) or None
-            b_ab = ';'.join(sorted({x for _, s_ in src for x in s_.split(';') if x})) or None
+            a_ab = ';'.join(sorted({as_src(x) for s_, _ in src for x in s_.split(';') if x})) or None
+            b_ab = ';'.join(sorted({as_src(x) for _, s_ in src for x in s_.split(';') if x})) or None
             L.execute('insert into link values (?, ?, ?, ?, ?, ?, ?, ?)', (game, a, b, phr[key], weight, site, a_ab, b_ab)); rows += 1; got = True
         pairs += got
     used = L.execute('select count(distinct phrase) from link where game=?', (game,)).fetchone()[0]
@@ -166,6 +168,17 @@ def side_fails(c, want, src):
     got = side_says(c, src)
     bad = [w for w in want.split() if (w[1:] in got) if w.startswith('!')] + [w for w in want.split() if not w.startswith('!') and w not in got]
     return f"{', '.join(bad)} (has {', '.join(sorted(got))})" if bad else ''
+
+
+def foreign_sides(c, L):
+    """link sides naming an effect that is not on that card (its own rows, a keyword's rows it has, or its abilities): a rule
+    that took an ability from flat_ref without its origin (a game rule's ability is the game's rules)"""
+    on = collections.defaultdict(set)
+    for t in ('flat_do', 'flat_if', 'flat_when'):
+        for card, ab in c.execute(f'select distinct card, ability from {t} where ability is not null'): on[card].add(str(ab))
+    for i, card in c.execute('select id, card from ability'): on[card].add(str(i))
+    return sum(1 for a, b, sa, sb in L.execute('select a, b, a_ab, b_ab from link') for card, s in ((a, sa), (b, sb))
+               for t in (s or '').split(';') if t[:1].isdigit() and t.split('.')[0] not in on[card])
 
 
 def case_failures(c, games):
@@ -203,6 +216,8 @@ def main():
     print(f'links.sqlite: {os.path.getsize(os.path.join(HERE, "links.sqlite")) / 1e6:.1f} MB')
     L.close(); bad = case_failures(c, games)
     print('cases/links.tsv: ' + ('all pass' if not bad else 'FAILED\n  ' + '\n  '.join(bad)))
+    n = foreign_sides(c, L)
+    print('link sides naming another card\'s effect: ' + ('none' if not n else f'{n} FAILED'))
 
 
 if __name__ == '__main__': main()
