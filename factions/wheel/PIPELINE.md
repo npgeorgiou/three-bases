@@ -38,9 +38,11 @@ is written in that step's chat, from the rules of the step, and its line here is
 - The kinds of play: `factions/wheel/archetypes.tsv` (key, what it is, its radii, its concepts).
 
 ## Step 4. The usable concepts
-- `python3 ../../factions/wheel/work/concept_catch.py` (to write) -> `work/concepts.tsv`: every concept with 10+
-  real cards, its cards, the share of its cards on each radius; the concepts left out with their reasons from
-  `work/concept_verdicts.tsv`.
+- `python3 ../../factions/wheel/work/concept_catch.py` (a second) -> `work/concepts.tsv`: every concept with 10+
+  real cards, its cards, its games, the share of its cards on each radius (per game, averaged; strength and defence come
+  from unit stats, so no share); a parent in `library/concept_tree.txt` keeps only the cards none of its children carry.
+  Left out, with the reason in the same file: the concepts in `work/concept_verdicts.tsv`, player_<concept>, and a
+  parent left with under 10 cards. Usable concepts come first.
 
 ## Step 5. The links between concepts
 - `python3 mechanics_wheel.py links --concepts` (to write; the same count as `--radii`) -> `wheel/concept_links.tsv`:

@@ -9,15 +9,17 @@ One chat does one step; at its end, mark the step done here.
 | 1. Fix the library's concepts | done 16 Nov 2026 | concepts split by whom a row acts on (player, my unit, cards between piles), radii without game limits; `work/suspect_verdicts.tsv` |
 | 2. The radii and how they work together | done 16 Nov 2026 | `axes.tsv`, `wheel/radius_links.tsv` |
 | 3. The 20 shapes | done 17 Nov 2026, Kaptain agreed them | `work/shapes.tsv` |
-| 4. The usable concepts | NEXT; `work/concept_catch.py` to write | |
-| 5. The links between concepts | to do; `mechanics_wheel.py` gets a concept mode | |
+| 4. The usable concepts | done 17 Nov 2026 | `work/concepts.tsv` (123 usable, 72 left out) |
+| 5. The links between concepts | NEXT; `mechanics_wheel.py` gets a concept mode | |
 | 6. The 20 groups | to do; `work/groups.py` to write, `tools/wheel_table_check.py` to rewrite | |
 | 7. Theme, then tools | to do | |
 | 8. Combos on this board | to do | |
 | 9. The seven answers, Stop 1 | to do; `work/make_stop1.py` to rewrite | |
 
-Inputs ready: for step 4 `work/concept_verdicts.tsv` (68 concepts left out, each with its reason; Claude's). The
-player_<concept> concepts of step 1 are left out there too (no player health); drain to my unit (lifesteal) stays in.
+Inputs ready: for step 5 `work/concepts.tsv`. Kinds of play whose concepts are no library concept with 10+ cards
+(step 6 must handle them): the starred radius groups countboard*, kill*, weaken*, spelldmg*, position*, and polymorph,
+piercing, cross_lane (under 10 cards). Step 3's check: 26 kind-of-play concepts have under a quarter of their cards on
+that kind's radii (`shapes.py` prints them); Kaptain decides on them before step 6.
 
 ## The numbers (library/cards_db)
 - `links.sqlite` is rebuilt only after `network.py` or `cards.sqlite` changed: `PYTHONHASHSEED=0 python3 links.py`

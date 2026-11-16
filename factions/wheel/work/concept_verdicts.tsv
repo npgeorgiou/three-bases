@@ -67,3 +67,7 @@ targeting_rules	one of the game's own things (reach)
 on_harvest	one of the game's own things (Faeria's wells are like cells)
 start_of_game	trigger or condition: when or if a card acts
 target_choice	every card does it (choosing the target)
+reactions	not in this game (answers on the enemy's turn)
+on_targeted	trigger or condition: when or if a card acts
+resource_banking	one of the game's own things (carry-over)
+stances	ruled out by Kaptain (my units changing form is for cards)
