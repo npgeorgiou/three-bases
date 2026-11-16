@@ -53,6 +53,18 @@ Tested: the link's kind does not tell real from false (`factions/wheel/work/kind
 6. Known before this work: lk96 (Monster Train, Vinemother -> Wyldenten) already fails; leave it.
 Costs: `links.py` about 4 minutes; `check_all.py` 7 (start in background mode, START_DATABASE rule 4).
 
+### Where Part 1 stands (16 Nov 2026)
+- Done: the 6 biggest rules (lines_of's waits/type/levels, played_lines, the revive rule, aimed's boosts/targets/rules,
+  boost_lines' help) and the joined move reasons: 305k of 374k links have both sources. a_ab/b_ab hold an effect row
+  `ability.seq` where the rule knows it (Gauntlets' +2 Power and +1 Energy are one ability), else the ability, `kw<id>`,
+  `c:<concept>`, `type`, `rule`. Cases lk145-lk232 (`a_side`, `b_side`: a concept that must be there, `!concept` that must not).
+- Proof: build before and after with the same `PYTHONHASHSEED=0`, then `python3 factions/wheel/work/links_same.py before after`.
+  Without a fixed seed two builds of the same code differ in ~460 links (which reason a pair keeps follows Python's set order).
+- Site 0: the rule notes the sentence before the card names are filled in and before move reasons are joined (merge_places);
+  links.py looks up the final sentence. SRC is carried over in `network()`; site is not yet (Kaptain to decide).
+- Next: the other 62 rules (biggest first: `select site, count(*) from link where a_ab is null group by site order by 2 desc`),
+  then Mine Collapse x Kindle (site of "more energy: a bigger X").
+
 ### Then the wheel's count
 `library/cards_db/mechanics_wheel.py` (`links`, `links --radii`, `measure`): a link counts for mechanic X only when its
 A-side (or B-side) ability has one of X's concepts (`mechanics.tsv` column 3; radii: `axes.SPOKES`). A test case for each

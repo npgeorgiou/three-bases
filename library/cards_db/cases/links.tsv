@@ -1,4 +1,4 @@
-id	game	from	to	expect	reason	source
+id	game	from	to	expect	reason	source	a_side	b_side
 lk01	inscryption	Hammer	Wild Bull	none	can damage it	Kaptain 31 Oct 2026: my damage on my own card only when that card gains from it
 lk02	inscryption	Explode Bot	Adder	none	can damage it	Kaptain 31 Oct 2026: Adder gains nothing from being damaged
 lk03	inscryption	Hammer	Bomb Latcher	line	kills it for its death effect	Kaptain 31 Oct 2026: Bomb Latcher's death effect
@@ -142,3 +142,91 @@ lk141	monster_train	Transcendimp	Imp-pressive	none	Summon effects	Imp-pressive i
 lk142	monster_train	Gifts for a Guard	Channelsong	none	bigger	Kaptain 2 Nov 2026: most cards are spells; Magic Power on any spell is generic
 lk143	duelyst	Call to Arms	Prismatic Illusionist	none	+3|+3	Kaptain 2 Nov 2026: every minion summoned near the General gets it; generic
 lk144	faeria	Queen's Assassin	Shedim Pest	none	asks for	most creatures pass the filter: generic
+lk145	marvel_snap	Ghost Rider	Vibro-Shock Gauntlets	line	puts your units there	Kaptain 15 Nov 2026: the link is made by the revive and the +2 Power, never by the Energy	revive	stat_gain !resource_gain
+lk146	sts1	Ritual Dagger	Nunchaku	line	is an Attack it needs played for its count	Kaptain 15 Nov 2026: Ritual Dagger counts as an Attack, never as "gains when it kills"	type !on_kill	
+lk147	duelyst	Twilight Fox	Ephemeral Shroud	line	{A} moves enemy units, and {B} acts on units around it	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 0)	forced_movement !on_spell	silence !on_play
+lk148	faeria	Syland Horsemaster	Astral Weapon	line	{A} moves your units, and {B} acts on units next to it	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 0)	movement !passive	destroy !movement
+lk149	gwent	Geralt: Aard	Ocvist	line	{A} moves enemy units, and {B} acts on units in the row facing it	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 0)	forced_movement !damage	row_effects !countdown
+lk150	inscryption	Wiseclock	Buff Conduit	line	{A} moves {B}, and {B} acts on units in its circuit	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 0)	forced_movement !on_play	passive
+lk151	into_the_breach	Titan Fist	Flame Thrower	line	{A} moves enemy units, and {B} acts on units in a line from it	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 0)	forced_movement !damage	damage !on_lifegain
+lk152	marvel_snap	Adamantium Infusion	Arnim Zola	line	{A} puts your units there, and {B} acts on units in its lane	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 0)	revive !banish	destroy !copy
+lk153	monster_train	March of Shields	Queen's Impling	line	{A} moves enemy units, and {B} acts on units at the front of a lane	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 0)	forced_movement !block_armor	damage !on_play
+lk154	stormbound	Qordia’s Nest	Toxic Sacrifice	line	{A} puts your units there, and {B} acts on units around its target	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 0)	summon !turn_start	damage !turn_start
+lk155	gwent	Regis	Drummond Berserker	line	damages it for its effect (levels it up)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 765)	damage !on_play	transform !damage
+lk156	runeterra	Keeper of Masks	Aurelion Sol	line	changes your units' stats (levels it up)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 765)	stat_gain !on_ally_play	turn_end !activated
+lk157	runeterra	Zed	Maokai	line	puts your units into play (it levels up from what it then does)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 766)	summon !attack_now	on_ally_play !activated
+lk158	duelyst	Tempest (Bloodbound Spell)	Chakkram	line	damages your leader or players	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 769)	damage !on_play	cost_reduction
+lk159	faeria	Plague Bearer	Mother of All Yaks	line	makes your units die	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 769)	damage !death_trigger	cost_reduction !cant_attack
+lk160	marvel_snap	Agamotto	The Grand Design	line	creates cards	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 769)	generate_cards !start_of_game	cost_reduction !on_play
+lk161	runeterra	Herald of Spring	Arbiter of the Peak	line	uses Support	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 769)	assists_support !heal	cost_reduction !excess_damage
+lk162	sts1	Acrobatics	Eviscerate	line	makes you discard cards	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 769)	discard !draw	cost_reduction !damage
+lk163	duelyst	Scintilla	Excelsious	line	heals units	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	heal !on_spell	on_lifegain !cant_attack
+lk164	faeria	Hilltop Archer	Flying Piranha	line	makes units die	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	attack_now !cant_attack	deathtouch !destroy
+lk165	gwent	Ciri	Djenge Frett	line	damages enemy units or players	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	damage !on_play	on_play !passive
+lk166	inscryption	Hammer	Ouroboros	line	kills it for its death effect	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	damage !on_play	death_trigger !recycle
+lk167	into_the_breach	Titan Fist	Cascading Resonator	line	makes enemy units die	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	damage !forced_movement	damage !cant_attack
+lk168	marvel_snap	Adam Warlock	Punisher War Machine	line	makes you draw cards	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	draw !stat_gain	mark_target !resource_gain
+lk169	monster_train	Hornbreaker Prince	Last Stand	line	has Rage	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	temporary_buff !attack_now	on_play !exhaust
+lk170	runeterra	Yasuo	The Howling Abyss	line	makes champions level up	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	upgrade !damage	generate_cards !cant_attack
+lk171	stormbound	Copperskin Ranger	Soap Cleanse	line	makes units get Poison	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	damage_over_time !damage	on_play !turn_start
+lk172	sts1	Acrobatics	Endless Agony	line	makes you draw cards	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	draw !discard	copy !activated
+lk173	duelyst	Zurael, the Lifegiver	Meltwater Moose	line	brings it back: its summon effect goes off	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 822)	revive !on_play	on_ally_play !cant_attack
+lk174	gwent	Avallac'h: Sage	Ragh Nar Roog	line	plays it: its effect goes off	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 822)	free_play !on_play	on_play !banish
+lk175	marvel_snap	Agatha Harkness	Basic Arrow	line	plays it: its effect goes off	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 822)	free_play !draw	buff !on_ally_play
+lk176	runeterra	Dawn and Dusk	Shadow Assassin	line	puts it into play: its summon effect goes off	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 822)	copy !destroy	draw !cant_attack
+lk177	stormbound	Queen of Herds	Siegebreakers	line	plays it: its effect goes off	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 822)	free_play !on_play	damage
+lk178	duelyst	Eight Gates	Firestorm Mantra	line	its damage is bigger, and so is what it gets back from it	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1653)	spell_power !on_play	damage
+lk179	faeria	Imperial Engineer	Steam Forge	line	repeats its effects	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1653)	repeat_trigger !on_play	type !stat_gain
+lk180	gwent	Regis	Olaf	line	plays it again: its doubling doubles again	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1653)	repeat_trigger !damage	activated !cant_attack
+lk181	marvel_snap	Astral Projection	Absorbing Man	line	repeats its effects	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1653)	repeat_trigger !on_play	type !combo_sequence
+lk182	monster_train	Deranged Brute	Branded Warrior	line	makes its effect bigger	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1653)	temporary_buff !passive	type !on_kill
+lk183	runeterra	Promising Future	The Slaughter Docks	line	repeats its effects	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1653)	repeat_trigger !on_play	type !activated
+lk184	gwent	King Bran	Draig Bon-Dhu	line	makes the Veteran it gives stronger	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1659)	permanent_growth !on_damaged	activated !cant_attack
+lk185	monster_train	Deranged Brute	Hornbreaker Prince	line	makes the Rage it gives stronger	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1659)	temporary_buff !passive	on_damaged !attack_now
+lk186	runeterra	Ava Achiever	Corina, Mastermind	line	makes the Trap it gives stronger	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1659)	spell_power !activated	modal_choice !activated
+lk187	sts1	Biased Cognition	Ball Lightning	line	makes the Lightning it gives stronger	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1659)	spell_power !on_play	damage !activated
+lk188	runeterra	Ava Achiever	Volatile Bloom	line	makes the Trap it sets off stronger	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1662)	spell_power !activated	on_play
+lk189	sts1	Biased Cognition	Loop	line	makes the Lightning it sets off stronger	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1662)	spell_power !on_play	repeat_trigger
+lk190	faeria	Krog's Dinner	Krog, the Ogre King	line	brings it back to your hand	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1679)	recycle !cost_reduction	type !cost_reduction
+lk191	marvel_snap	Temporal Manipulation	Agamotto	line	brings it back to your hand	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1679)	recycle !on_play	type !generate_cards
+lk192	monster_train	Impish Scholar	Spike of the Hellhorned	line	brings it back to your hand	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1679)	recycle !on_play	type !block_armor
+lk193	sts1	All for One	Bandage Up	line	brings it back to your hand	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1679)	recycle !damage	type !activated
+lk194	gwent	Iris von Everec	Drummond Berserker	line	gives it more strength: helps it level up	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1687)	stat_gain !activated	transform !damage
+lk195	runeterra	Greenglade Elder	Renekton	line	gives it more power and health: helps it level up	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1687)	stat_gain !on_ally_play	excess_damage !on_damaged
+lk196	duelyst	Thraex	Hatefurnace	line	gives it more power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	stat_gain !on_spell	passive !aoe_damage
+lk197	faeria	Magda, Queen of Meroval	Magnus, King of Meroval	line	makes it cheaper	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	cost_reduction !cost_type	type !cost_set
+lk198	gwent	Iris von Everec	Redanian Knight	line	gives it more strength	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	stat_gain !activated	stat_gain !damage
+lk199	inscryption	Alpha	Daus	line	gives it more power (when next to it)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	stat_gain !passive	attack_now !on_play
+lk200	into_the_breach	Shield-Tank	Shield-Tank (unit)	line	lets it do more (attacks)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	rule_change !on_attack	type !damage_reduction
+lk201	marvel_snap	Black Swan	Acid Arrow	line	sets its cost	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	cost_set !activated	type !donate
+lk202	monster_train	Branded Warrior	Crucible Collector	line	gives it Rage	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	temporary_buff !on_kill	lifesteal !heal
+lk203	runeterra	Greenglade Elder	Kinkou Lifeblade	line	gives it more power and health	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	stat_gain !on_ally_play	kw !cant_attack
+lk204	stormbound	Fortification Tonic	Snowdrifts	line	gives it more strength	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	stat_gain !on_play	damage
+lk205	sts1	Blue Candle	Ascender's Bane	line	lets it be played in more places	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	rule_change !damage	type !cant_attack
+lk206	duelyst	Prism Barrier	Excelsious	line	keeps it alive in the fights it takes on	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1689)	shield !damage_reduction	kw !cant_attack
+lk207	faeria	Safeguard	Imperial Guard	line	keeps it alive in the fights it takes on	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1689)	shield !damage_reduction	kw !cant_attack
+lk208	gwent	Yennefer of Vengerberg	Redanian Knight	line	can give it more strength	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1689)	stat_gain !damage	stat_gain !damage
+lk209	marvel_snap	Aurora	Man-Spider	line	can give it more power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1689)	stat_gain !on_play	merge_attach !combo_sequence
+lk210	monster_train	Spike of the Hellhorned	Crucible Collector	line	more power: its text uses the damage it deals	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1689)	temporary_buff !block_armor	lifesteal !heal
+lk211	runeterra	Twin Disciplines	Kinkou Lifeblade	line	can give it more power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1689)	stat_gain !modal_choice	kw !cant_attack
+lk212	stormbound	Soap Cleanse	Snowdrifts	line	can give it more strength	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1689)	stat_gain !on_play	damage
+lk213	duelyst	Cryptographer	Abyssal Scar (Bloodbound Spell)	line	lets you use it again	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1698)	cooldowns !on_play	buff !other_death_trigger
+lk214	gwent	Salamandra Hideout	Back-Alley Chemist	line	keeps the Poison it gives itself off it	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1698)	destroy !activated	activated !cant_attack
+lk215	inscryption	Explode Bot	Broken Obol (Right)	line	damages it: its own effect goes off (when next to it)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1698)	damage !death_trigger	type !death_trigger
+lk216	marvel_snap	Beast	Basic Arrow	line	returns it to hand: its Play or summon effect goes off again (when in its lane)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1698)	return_to_hand !cost_reduction	buff !on_ally_play
+lk217	monster_train	Remnant Pact	Apex Imp	line	gives it Endless, which it counts	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1698)	recycle !death_trigger	temporary_buff !block_armor
+lk218	stormbound	Minion Launchers	Blizzard Bombs	line	damages it: its own effect goes off (when next to it)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1698)	damage !on_play	death_trigger !cant_attack
+lk219	duelyst	Trinity Oath	Firestarter	line	is a spell whose playing sets off its effect	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2025)	type !draw	on_spell !on_play
+lk220	faeria	Hold the Line!	Snowstorm Lancer	line	is a spell whose playing sets off its effect	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2025)	type !cant_attack	on_spell !movement
+lk221	gwent	Regis	Nekurat	line	is a Vampire whose playing sets off its effect	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2025)	type !damage	cooldowns !activated
+lk222	marvel_snap	Aero	Shadowlands Daredevil	line	is a card whose drawing sets off its effect	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2025)	type !combo_sequence	on_draw !generate_cards
+lk223	monster_train	Primordium	Morsel-Made	line	is a unit whose summoning sets off its effect	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2025)	type !buff	on_ally_play !on_sacrifice
+lk224	runeterra	Twin Disciplines	Lux	line	is a spell it needs played for its count (levels it up)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2025)	type !modal_choice	passive !damage_reduction
+lk225	sts1	Acrobatics	Escape Plan	line	is a Skill whose drawing sets off its effect	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2025)	type !discard	block_armor !damage_reduction
+lk226	duelyst	Primordial Gazer	Oropsisaur	line	more health or protection: survives damage	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2330)	stat_gain !on_play	on_damaged !turn_start
+lk227	faeria	Syland Horsemaster	Triton Sanctuary	line	moves it where it must be	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2330)	movement !on_play	on_harvest !activated
+lk228	inscryption	Wiseclock	Good Fish	line	moves it where it must be	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2330)	forced_movement !on_play	damage !attack_now
+lk229	into_the_breach	Vice Fist	Rosie Rivets	line	moves it where it must be	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2330)	forced_movement !cant_attack	heal
+lk230	marvel_snap	Blink	Hercules	line	moves it where it must be	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2330)	swap !combo_sequence	forced_movement
+lk231	runeterra	Twin Disciplines	Braum	line	more health or protection: survives damage (levels it up)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2330)	stat_gain !modal_choice	on_damaged !forced_attack
+lk232	stormbound	Temple of Time	Faithless Prophets	line	more health or protection: survives damage	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2330)	heal !mark_target	donate

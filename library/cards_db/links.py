@@ -1,6 +1,7 @@
 """Every line network.py draws between two cards of one game that can share a deck, stored in links.sqlite (not in git; rebuilt
-from cards.sqlite). Tables: phrase(id, kind, text) with the two cards' names as {A} and {B}; link(game, a, b, phrase, weight, site): site = the
-network.py line of the rule that made it (one sentence can come from several rules).
+from cards.sqlite). Tables: phrase(id, kind, text) with the two cards' names as {A} and {B}; link(game, a, b, phrase, weight, site, a_ab, b_ab): site = the
+network.py line of the rule that made it (one sentence can come from several rules); a_ab, b_ab = what of each card made it
+(effect rows 'ability.seq', ability ids, 'kw<keyword id>', 'c:<concept>', 'type', 'rule'; several joined by ';').
 Usage: links.py [game ...]   (no game: all; a game's old rows are replaced; then the cases of cases/links.tsv)"""
 import collections, csv, os, random, sqlite3, sys, time
 import network, deck_analysis
@@ -127,23 +128,57 @@ def build(c, L, game):
             if key not in phr:
                 phr[key] = L.execute('insert into phrase(kind, text) values (?, ?)', key).lastrowid
             site = min(network.SITE.get((a, b, part)) or network.SITE.get((a, b, why)) or {0})
-            L.execute('insert into link values (?, ?, ?, ?, ?, ?)', (game, a, b, phr[key], weight, site)); rows += 1; got = True
+            src = network.SRC.get((a, b, part)) or network.SRC.get((a, b, why)) or set()  # what of A and of B made it
+            a_ab = ';'.join(sorted({x for s_, _ in src for x in s_.split(';') if x})) or None
+            b_ab = ';'.join(sorted({x for _, s_ in src for x in s_.split(';') if x})) or None
+            L.execute('insert into link values (?, ?, ?, ?, ?, ?, ?, ?)', (game, a, b, phr[key], weight, site, a_ab, b_ab)); rows += 1; got = True
         pairs += got
     used = L.execute('select count(distinct phrase) from link where game=?', (game,)).fetchone()[0]
     print(f'{game}: {len(ids)} cards, {pairs} pairs, {rows} rows, {used} phrases, {time.time() - t:.0f} s')
 
 
+def side_says(c, src):
+    """what a link's a_ab or b_ab holds, as words a case can test: each concept of its rows ('ability.seq': that effect row only;
+    an ability: all its rows), and 'type', 'rule' or 'kw' for a source with no ability"""
+    out = set()
+    for x in (src or '').split(';'):
+        if not x: continue
+        if x.startswith('kw'): out |= {'kw'} | {v for (v,) in c.execute("""select v.tree from card k join vocab v on v.field='keyword' and
+                                          v.value in (k.name, k.game || ':' || k.name) where k.id=?""", (int(x[2:]),)) if v} if x[2:].isdigit() else {'kw'}
+        elif x.startswith('c:'): out.add(x[2:])
+        elif not x[0].isdigit(): out.add(x)
+        else:
+            ab, _, sq = x.partition('.')
+            q = 'select concept from flat_do where ability=? and seq=?' if sq else \
+                'select concept from flat_do where ability=? union select concept from flat_if where ability=? union select concept from flat_when where ability=?'
+            out |= {v for (v,) in c.execute(q, (int(ab), int(sq)) if sq else (int(ab),) * 3) if v}
+    return out
+
+
+def side_fails(c, want, src):
+    """a case's a_side / b_side: words that must be there, '!word' that must not; an empty source fails any test"""
+    if not (want or '').strip(): return ''
+    if not src: return 'no source'
+    got = side_says(c, src)
+    bad = [w for w in want.split() if (w[1:] in got) if w.startswith('!')] + [w for w in want.split() if not w.startswith('!') and w not in got]
+    return f"{', '.join(bad)} (has {', '.join(sorted(got))})" if bad else ''
+
+
 def case_failures(c, games):
-    """cases/links.tsv: a line of the table that must be there (with the reason's words, when given) or must not; returns the rows that fail"""
+    """cases/links.tsv: a line of the table that must be there (with the reason's words, when given) or must not; a_side and b_side:
+    what of each card must have made it (side_fails); returns the rows that fail"""
     c.execute(f"attach database '{os.path.join(HERE, 'links.sqlite')}' as L") if 'L' not in [d[1] for d in c.execute('pragma database_list')] else None
     bad = []
     for r in csv.DictReader(open(os.path.join(HERE, 'cases', 'links.tsv'), encoding='utf-8'), delimiter='\t'):
         if r['game'] not in games: continue
-        q = """select p.kind || ': ' || p.text from L.link l join L.phrase p on p.id=l.phrase join card a on a.id=l.a join card b on b.id=l.b
+        q = """select p.kind || ': ' || p.text, l.a_ab, l.b_ab from L.link l join L.phrase p on p.id=l.phrase join card a on a.id=l.a join card b on b.id=l.b
                where l.game=? and b.name=?""" + ('' if r['from'] == '*' else ' and a.name=?')
-        got = [x for (x,) in c.execute(q, (r['game'], r['to']) + (() if r['from'] == '*' else (r['from'],)))]
-        hit = [x for x in got if r['reason'] in x]
-        if bool(hit) != (r['expect'] == 'line'): bad.append(f"{r['id']} {r['from']} -> {r['to']} {r['expect']} {r['reason']}: {'; '.join(got)[:200] or '-'}")
+        got = c.execute(q, (r['game'], r['to']) + (() if r['from'] == '*' else (r['from'],))).fetchall()
+        hit = [x for x in got if r['reason'] in x[0]]
+        if bool(hit) != (r['expect'] == 'line'): bad.append(f"{r['id']} {r['from']} -> {r['to']} {r['expect']} {r['reason']}: {'; '.join(x[0] for x in got)[:200] or '-'}"); continue
+        for side, col in (('a_side', 1), ('b_side', 2)):
+            why = [side_fails(c, r.get(side), x[col]) for x in hit]
+            if hit and all(why): bad.append(f"{r['id']} {r['from']} -> {r['to']} {side} {r[side]}: {why[0]}")
     return bad
 
 
@@ -154,9 +189,11 @@ def main():
     games = sys.argv[1:] or [g for (g,) in c.execute('select distinct game from card order by game')]
     L = sqlite3.connect(os.path.join(HERE, 'links.sqlite'))
     L.executescript("""create table if not exists phrase(id integer primary key, kind text, text text);
-        create table if not exists link(game text, a integer, b integer, phrase integer, weight real, site integer);
+        create table if not exists link(game text, a integer, b integer, phrase integer, weight real, site integer, a_ab text, b_ab text);
         create index if not exists la on link(game, a); create index if not exists lb on link(game, b);
         create index if not exists lp on link(phrase);""")
+    for col in ('a_ab', 'b_ab'):
+        if col not in [r[1] for r in L.execute('pragma table_info(link)')]: L.execute(f'alter table link add column {col} text')
     for g in games: build(c, L, g); L.commit()
     L.execute('delete from phrase where id not in (select phrase from link)'); L.commit(); L.execute('vacuum')
     print(f'links.sqlite: {os.path.getsize(os.path.join(HERE, "links.sqlite")) / 1e6:.1f} MB')
