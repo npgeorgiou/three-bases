@@ -74,11 +74,14 @@ How a value is made (all agreed with Kaptain, 9 Nov 2026):
 - Radii that work together (Kaptain, 10 Nov 2026: the wheel must be a base for 20 factions with overlaps, so its radii
   must be things that can overlap and act on each other). The page's fourth view and `radius_links` in axes.py: for
   every two radii, how much more often than chance the library links a card of one with a card of the other in the
-  same game (1 = chance; a number only when chance alone would give 20 linked pairs). On 10 Nov 2026 every pair of
-  neighbours on the circle is at chance or above (0.93 to 4.5), so the circle order holds. Highest: damage from spells
-  with rewards playing spells 4.5, brings back with a few big units 2.4, brings back with spends them 2.4, kills
-  outright with spends them 2.2. Lowest: kills outright with stops them 0.56, damage from spells with stops them 0.58.
-  "Rewards playing spells" is high with nearly everything, because such a card links to every spell. Strength,
+  same game, counted through what of each card made the link (1 = chance; a number only when chance alone would give 20
+  linked pairs). 12 of the 18 pairs of neighbours on the circle are at chance or above; under it: kills outright with
+  damage from units' text 0.80 and with many at once 0.68, many at once with damage from spells 0.84, damage from
+  spells with rewards playing spells 0.18, rewards playing spells with stops them 0.42, grows defence with protects
+  them 0.99. Highest: more supply with a few big units 5.4, kills outright with spends them 5.0, cheaper or stronger
+  hand with a few big units 4.8. Lowest: brings back with a few big units 0.09, rewards playing spells with more
+  supply 0.09.
+  "Rewards playing spells" is judged by real decks only, because such a card links to every spell. Strength,
   defence and "position and combos" are numbers, not cards, and are not in the table: they shape a faction but are
   not mechanics two factions can share.
   "Cards in top decks" (Kaptain, 10 Nov 2026: how often radii appear in the same real decks, linked or not; the
@@ -99,7 +102,7 @@ How a value is made (all agreed with Kaptain, 9 Nov 2026):
   against all factions of all games; Kaptain thinks the answer may be a more accurate mapping of cards to axes.
 
 Redo it (after a new game, changed library cards, changed concepts or links). From library/cards_db:
-1. `python3 links.py` (rebuilds links.sqlite, not committed; about 2 minutes, Runeterra alone 9).
+1. `PYTHONHASHSEED=0 python3 links.py` (rebuilds links.sqlite, not committed; about 4 minutes).
 2. `python3 axes.py`. It prints "CHECK FAILED" if one of Kaptain's points breaks (CHECKS, GAPS and HAS in axes.py; add
    one for every point he raises, e.g. Faeria Red high on damage from units' text and on strikes).
 3. Check what each concept catches: `python3 axes.py --cards <file>` writes, per radius, concept and game, how many cards

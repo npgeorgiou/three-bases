@@ -1,6 +1,7 @@
-# Handover: fix the links, then design the 20 factions again (written 15 Nov 2026)
-One file for the next chat. Read it whole first, then CLAUDE.md's rules. Do Part 1, then Part 2, in order. Part 3 is
-what Kaptain decided and what was learned: never undo it. Clone with the library (`git sparse-checkout disable`).
+# Handover: design the 20 factions again
+One file for the next chat. Read it whole first, then CLAUDE.md's rules. Part 1 is how the library's numbers are made;
+Part 2 is the work, in order; Part 3 is what Kaptain decided and what was learned: never undo it. Clone with the library
+(`git sparse-checkout disable`).
 
 ## Rules for this work (Kaptain)
 - **No card reading to judge links or combos.** The database already holds what every card does; scripts query it.
@@ -11,90 +12,35 @@ what Kaptain decided and what was learned: never undo it. Clone with the library
 - Plan first, in plain words with one example; build only after "go". One question at a time.
 - Docs are written cleanly, as if things had always been this way: no history, no "formerly", no archaeology.
 
-## Part 1. Fix the links (library/cards_db)
-Database work: read START_DATABASE.md for it; the START_DESIGN files are read only when Part 2 starts.
-Read first: `library/cards_db/START_DATABASE.md` Part 1 (rules for changing the database), `LINE_RULES.md` only if a line
-itself must change (it must not here).
-
-### The problem, with real cards
-A link joins two cards of one game when a rule in `network.py` matches an effect of card A with an effect of card B.
-The link is stored as (game, a, b, phrase, weight, site); it does NOT store which effect of each card made it. The wheel
-(`mechanics_wheel.py links` and `--radii`) then takes all cards of mechanic A and all cards of mechanic B (by their
-concepts) and counts every link between them. A card has many effects, so links made by OTHER effects are counted:
-- Marvel Snap: Ghost Rider ("Bring back one of your discarded cards to this location") x Vibro-Shock Gauntlets ("+2 Power
-  to your highest card here. +1 Energy next turn"). Link: "puts your units there, and Gauntlets act on units in its
-  lane". It was made by the +2 Power, but it was counted as "comes back + extra supply", because the Gauntlets also
-  give Energy.
-- Slay the Spire: Ritual Dagger ("Deal 15 damage; if it kills, grows") x Nunchaku ("every 10 Attacks, gain 1 energy").
-  Link: "is an Attack it needs played for its count". Counted as "gains when it kills + supply"; it has nothing to do
-  with killing.
-- Monster Train: Mine Collapse x Kindle: "more energy: a bigger X". Counted as "kill + supply".
-So the database is right; the count gives links to the wrong mechanics. The link's kind does not tell a real link from
-a false one (both are about 95% "combo" kinds); only storing the effect fixes it.
-
-### The fix
-1. Every link also stores the ability of A and the ability of B that made it (`ability.id`; each ability's rows in
-   `flat_do` / `flat_if` carry `concept`, so the wheel can tell which mechanic made the link). Where a rule uses no
-   ability (a printed keyword, a type, a stat, a game rule), store that instead (keyword id, 'type', 'rule'), never NULL
-   without a reason.
-2. Where: links are drawn by 68 rules in `network.py` (3,284 lines); `Out.append` already notes each rule's code line in
-   `SITE`. Each rule must pass its two effects on. The 6 biggest rules make about 70% of the links; do them first and
-   show Kaptain (sites by link count, 15 Nov 2026: line 737 = 128k links ("A makes it happen, B reacts or needs it",
-   with 732 and 736 next to it), 1954 = 41k, 789 = 23k, 1628 = 20k, 1619 = 14k, 2243 = 12k; site 0 = 32k links with no
-   site: find why). Line numbers move when the file changes: find them by `SITE`.
-3. `links.py` writes the new columns into links.sqlite (table link: add `a_ab`, `b_ab`; same rows as now).
-4. Proof nothing else changed: dump every link before and after (`dump_lines.py`; the "before" from the code just
-   before the change) and compare by script: the same pairs, phrases and weights. Only the new columns may differ.
-5. Many test cases (Kaptain: "important, add many"), in `cases/links.tsv` with new columns for the expected ability or
-   concept on each side: Ghost Rider x Gauntlets (A: revive, B: the +2 Power, never energy); Ritual Dagger x Nunchaku
-   (A: is an Attack, never kill); Mine Collapse x Kindle (never kill); at least one case per rule changed (about 70),
-   one per game, and one per similar error found. `links.py` runs the cases at the end.
-6. Known before this work: lk96 (Monster Train, Vinemother -> Wyldenten) already fails; leave it.
-Costs: `links.py` about 4 minutes; `check_all.py` 7 (start in background mode, START_DATABASE rule 4).
-
-### Where Part 1 stands (16 Nov 2026)
-- Done: every rule. All 374,236 links have both sources; links, phrases and weights are unchanged (proof below).
-  a_ab/b_ab hold an effect row `ability.seq` where the rule knows it (Gauntlets' +2 Power and +1 Energy are one ability),
-  else the ability, `kw<id>`, `c:<concept>` (a concept read from the whole card: cheat_death, x_cost), `type` (the card
-  only by what it is), `rule`. Rules that append after a cleanup rebuilt the pair's list use `note()`; a reason joined from
-  two lines takes the sources of both (links.py `src_by`).
-- Cases lk145-lk390 (`a_side`, `b_side`: a concept that must be there, `!concept` that must not): the three examples and
-  one per rule and game. All pass; lk96 fixed too (a free made card counts as more cards to play; cases lk391-lk394).
-- Proof: build before and after with the same `PYTHONHASHSEED=0`, then `python3 factions/wheel/work/links_same.py before after`.
-  Without a fixed seed two builds of the same code differ in ~460 links (which reason a pair keeps follows Python's set order).
-- Site 0 (32k links): the rule notes the sentence before the card names are filled in and before move reasons are joined;
-  links.py looks up the final sentence. Sources are carried over; the site column is left as it was.
-- Next: the wheel's count below.
-
-### Then the wheel's count
-Done (16 Nov 2026): a link counts for mechanic X only through what of the card made it (`axes.side_concepts`: each card's
-concepts know the ability, effect row or keyword that gives them, `axes.SOURCES`). Cases `cases/wheel.tsv` (the three
-examples, on mechanics and radii) run at the end of `mechanics_wheel.py links`; all pass. Real-deck numbers are unchanged.
-Chance is counted the same way: the old chance x the share of A's cards' links made by their A part x the same for B,
-so 1 still means chance. Joins use `level` (Kaptain, 16 Nov 2026: a pairing rare in the ten games can be splendid here):
-`links` = the linked card pairs made by the two, `level` 0 / 1 link = 1 / 10 = 2 / 100+ = 3; mechanics joined = level 1+ or
-decks 1.5+ (`work/borrow.py`, `signatures.py`, `check_assign.py`, `wheel_table_check.py`); radii joined = cards 1.2+ or decks
-1.5+ (step 3; Kaptain, 16 Nov 2026). Mechanic pairs with level 0: 420 of
-1,378; every radii pair has 10+ links.
-Checked by script (no reading), the biggest drops (shield+haste 762 -> 0, area+pick, pick+haste) and every mechanic's share
-of links made by its own part: the lost links were made by other effects of the card (about 90%) or name a card only by
-what it is ("is a spell it counts"), as they should. Fixed: a keyword's own effect counts for the keyword (`axes.KW_AB`,
-51 pairs, cases w07-w11); a game rule's ability is stored as 'rule' (links.py `as_src`, checked by `foreign_sides` at the
-end of links.py: 397 sides until links.py runs again; no number changes); a 'c:' concept counts as read.
+## Part 1. The numbers the wheel uses (library/cards_db)
+- `links.sqlite` is not in git: build it first in every new chat, `PYTHONHASHSEED=0 python3 links.py` (about 4 minutes:
+  tell Kaptain and wait for his OK). It ends with cases/links.tsv and the sides check (START_DATABASE.md, check D).
+- A link joins two cards of one game when a rule in `network.py` matches an effect of card A with an effect of card B. It
+  keeps what of each card made it (`a_ab`, `b_ab`): an effect row, an ability, a keyword, a concept read from the whole
+  card, the card by what it is, or the game's rules.
+- The wheel's count (`mechanics_wheel.py links`, `links --radii`; the count itself is `axes.radius_links`) counts a link
+  for two mechanics or radii only through what of each card made it. Example: Ghost Rider brings a card back and
+  Vibro-Shock Gauntlets give +2 Power to it: revive with the +2 Power, never revive with supply, though the Gauntlets also
+  give Energy. Per pair it writes:
+  - `cards`: how much more often than chance (1 = chance; chance is counted through what made the links too);
+  - `decks`: how much more real decks heavy in one hold the other (1 = as usual);
+  - `links`: the linked card pairs made by the two; `level`: that count growing slowly (0 links = 0, 1 = 1, 10 = 2, 100+ = 3).
+- Joined: mechanics by `level` 1+ (any link) or `decks` 1.5+; radii by `cards` 1.2+ or `decks` 1.5+.
+- Cases: cases/wheel.tsv (run at the end of `mechanics_wheel.py links`).
+- A mechanic pair you expect to work together shows 0 links: check that one pair by script (what made each of the links
+  between their cards) before trusting it; a wrong source is fixed for every card, with cases. Never read cards for it.
 
 ## Part 2. Design the 20 factions again
-Steps of `factions/START_DESIGN-1-wheel.md`. What stays and what is redone:
-0. Docs: done (16 Nov 2026).
-1. Radii: STAY (shares of cards, no links).
-2. Radii that work together: REDO, numbers only (`mechanics_wheel.py links --radii`).
-3. The 20 shapes: re-check every join with the new numbers (`tools/wheel_table_check.py`); change only shapes whose
-   join falls away (`axes.py --near` for the check against real factions).
+Steps of `factions/START_DESIGN-1-wheel.md`. Done: 0 (docs), 1 (radii: they stay), 2 (radii that work together:
+`wheel/radius_links.tsv`), and the numbers of step 6 (`wheel/links.tsv`). Next:
+3. The 20 shapes: re-check every join (`tools/wheel_table_check.py`); change only shapes whose join falls away
+   (`axes.py --near` for the check against real factions). Now: B "spends them", P "tall" and S "supply" have no join.
 4. Mechanics list: STAYS (Kaptain agreed it at Stop A: `STOPA.md`, `mechanics.tsv`, 53 mechanics).
 5. Each faction's mechanics: REDO by script (`work/signatures.py --write`, `work/borrow.py --write`, `check_assign.py`).
-6. Links between mechanics: numbers only (`mechanics_wheel.py links`).
-7. Theme, then tools (`START_DESIGN-1-wheel.md` step 7): new for all 20, the step changed. `tools/wheel_table_check.py`
-   and `work/make_stop1.py` already read `themes.tsv` and `tools.tsv` (they fail until step 7 writes them).
-8. Combos on this board, from the tools: all 190 pairs, since every faction's tools are new. Agents, Kaptain's OK first.
+6. Links between mechanics: `wheel/links.tsv`; `apart.py` for the pairs real factions keep apart.
+7. Theme, then tools (`START_DESIGN-1-wheel.md` step 7): new for all 20. `tools/wheel_table_check.py` and
+   `work/make_stop1.py` read `themes.tsv` and `tools.tsv` (they fail until step 7 writes them).
+8. Combos on this board, from the tools: all 190 pairs. Agents, Kaptain's OK first.
 9. Seven answers from the tools, check script, Stop 1 pages (`work/make_stop1.py`). Then Stop 1 with Kaptain.
 
 ## Part 3. What Kaptain decided and what was learned (never lose)
@@ -124,6 +70,8 @@ Steps of `factions/START_DESIGN-1-wheel.md`. What stays and what is redone:
   special part works by whether I hold the lane's base, helps take and keep a lane, never wins harder in a won lane;
   nine kinds, mixed in each faction (START_DESIGN-2, "What a faction has").
 - Countdowns ("at 3 counters...") very sparingly. A lane never holds more than 12 supply (summary/05).
+- A pairing rare in the ten games can be splendid on this board: mechanics join by any link (`level` 1+). Radii have
+  links enough for the chance number, so they join by `cards` 1.2+ (Part 1).
 - Draw on a kill is allowed: killing an enemy is something the player makes happen (START_DESIGN-2).
 - "This round" effects that set up another effect of the same round are chains and wanted (START_DESIGN-3).
 - Reading cards for a faction: at most 100 (steps 6 and 7 together), logged in `factions/read-cards.tsv`, never read
@@ -131,5 +79,4 @@ Steps of `factions/START_DESIGN-1-wheel.md`. What stays and what is redone:
   card does, so fewer cards need reading.
 - The check script fails on words that break the game's rules ("move first", "strikes first", "placed at round end").
 - Earlier chats wasted tokens on readers and on running everything in one long chat: keep chats short, scripts first.
-- Where the work stood: steps 1-9 were done once on the old counts (STOP1.md and STOP1-1..5.md exist, check passes);
-  they will be replaced by Part 2.
+- STOP1.md and STOP1-1..5.md are from an earlier round of steps 1-9; Part 2 replaces them.

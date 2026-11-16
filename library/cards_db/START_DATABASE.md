@@ -58,7 +58,7 @@ The rules for lines (L1-L28) are in LINE_RULES.md: read it before judging a line
 | Chat 2 agents and their files | checks/LINE_READER_JOB.md, LINE_VERIFIER_JOB.md, LINE_FIXER_JOB.md, causes.py; work files and PROGRESS.md in checks/<game>/ |
 | Values and concepts | vocab.tsv, library/concept_tree.txt |
 | Build: rows -> cards.sqlite | run.py (one game), check_all.py (all games), load.py, flat.py, refs.py |
-| Lines between cards | network.py; why one line exists: pair.py; all lines: links.py -> links.sqlite (not in git) |
+| Lines between cards | network.py; why one line exists: pair.py; all lines: links.py -> links.sqlite (not in git; each link keeps what of each card made it: a_ab, b_ab) |
 | Decks | decks.tsv, cases/decks.tsv; pages network.html (network_page.py) |
 | Questions | ask.py, mechanics.py, connections.py, deck_analysis.py; factions/START_DESIGN-4-asking.md, QUESTION_BANK.md |
 | Each game's rules, terms, sources, real-world cases | library/games/<game>.md |
@@ -90,6 +90,11 @@ every gone and new reason group); `deck_audit.py <game>` for each game whose lin
 of every deck against both cards; `realworld.py` for all games (no case that held may break). After a change to the deck pages:
 `network_page.py`, load network.html in the browser (Playwright, every deck, no script errors, one hover and click on a line),
 push, give network.html to Kaptain.
+
+**D. The links** (`links.py`, about 4 minutes, after any change to network.py or the cards): at its end cases/links.tsv
+(a link that must exist or must not, and what of each card must have made it: a_side, b_side) and the sides check (no link
+names an effect of another card). The wheel's count (`mechanics_wheel.py links`, a minute) runs cases/wheel.tsv: a linked
+pair that must or must not count for two mechanics or radii.
 
 **The game itself** has its own: tools/build.py, tools/simtest.js, tools/smoke.js (CLAUDE.md).
 

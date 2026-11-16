@@ -3,10 +3,10 @@ Reads factions/wheel/mechanics.tsv (key, sentence, concepts as in axes.py SPOKES
 Usage (from library/cards_db):
   mechanics_wheel.py measure          -> library/cards_db/wheel/measured.tsv: cards, games with 10+, top factions, biggest real
                                          faction's count (30+ wanted), radii it serves (share of its cards per radius)
-  mechanics_wheel.py links            -> library/cards_db/wheel/links.tsv: per pair, linked x chance in all cards (a link counts
-                                         for a mechanic only through what of each card made it: links.sqlite a_ab, b_ab), and in real
-                                         decks; links = the linked card pairs made by the two mechanics, level = that
-                                         count growing slowly (level()); runs cases/wheel.tsv
+  mechanics_wheel.py links            -> library/cards_db/wheel/links.tsv: per pair, cards (linked x chance in all cards), decks
+                                         (in real decks), links (the linked card pairs the two made), level (links growing
+                                         slowly); a link counts only through what of each card made it (axes.radius_links);
+                                         then cases/wheel.tsv
   mechanics_wheel.py cards <file>     -> per mechanic 8 cards with text (for an agent to read)
   mechanics_wheel.py pairs A+B,C+D <file> -> linked card pairs of A with B, their link reasons and texts (for an agent)
   --radii after the command: the wheel's radii (axes.SPOKES, not the numbers) in place of the mechanics; links writes
@@ -54,14 +54,6 @@ def members(mechs, con, pools):
     return {k: {g: [i for i in pools[g] if axes.counts(con[i], g, cons)] for g in pools} for k, _, cons, *_ in mechs}
 
 
-def link_pairs():
-    """linked card pair (lower id first) -> {(what of the first card made a link, what of the second)}"""
-    pairs = collections.defaultdict(set)
-    for a, b, sa, sb in sqlite3.connect(os.path.join(HERE, 'links.sqlite')).execute('select a, b, a_ab, b_ab from link'):
-        if a != b: pairs[(min(a, b), max(a, b))].add((sa, sb) if a < b else (sb, sa))
-    return pairs
-
-
 def case_failures(c, con, keys, pairs):
     """cases/wheel.tsv: a linked pair that must (count) or must not (none) count for mechanic a on card from and b on card to
     ('*': any); only the cases whose keys are in this run (the mechanics or the radii)"""
@@ -106,7 +98,7 @@ def links(mechs, c, games, x, con, pools):
     """as axes.radius_links, with the mechanics in place of the radii"""
     saved = axes.SPOKES
     axes.SPOKES = [(k, 0, '', k, cons, '') for k, _, cons, *_ in mechs]
-    pairs = link_pairs()
+    pairs = axes.link_pairs()
     deck_lists = collections.defaultdict(list)
     with open(os.path.join(HERE, 'decks.tsv'), encoding='utf-8') as f:
         next(f)

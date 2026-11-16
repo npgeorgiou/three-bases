@@ -137,13 +137,15 @@ def counts(ks, game, concepts):
     return False
 
 
-SOURCES = collections.defaultdict(lambda: collections.defaultdict(set))  # card -> concept -> what of the card gives it (tag): an effect
-# row 'ability.seq', an ability 'ability' (its conditions and triggers), 'kw<id>' (a keyword it has); none: the card by what it is
+# What of a card makes a link (links.sqlite a_ab / b_ab, written by links.py): an effect row 'ability.seq', an ability, 'kw<id>'
+# (a keyword it has), 'c:<concept>' (a concept read from the whole card), 'type' (the card by what it is), 'rule' (the game's
+# rules). A link counts for a radius or mechanic only through the concepts of what made it on each side (side_concepts).
+SOURCES = collections.defaultdict(lambda: collections.defaultdict(set))  # card -> concept -> what of the card gives it (tag);
+# a concept with no source (unit stats, cost, health) belongs to the card by what it is
+KW_AB = collections.defaultdict(set)  # (card, ability) -> 'kw<id>' of the keywords it has whose own ability that is
+SIDE = {}  # (card, side, keys) -> the keys that side counts for (side_keys)
 DO_SRC = "ability || '.' || seq, 'kw' || via"  # flat_do columns naming a row's source
 IF_SRC = "ability, 'kw' || via"  # flat_if / flat_when: an ability's conditions and triggers (a keyword's when no ability)
-
-
-KW_AB = collections.defaultdict(set)  # (card, ability) -> 'kw<id>' of the keywords it has whose own ability that is
 
 
 def note_src(card, k, *srcs):
@@ -152,9 +154,9 @@ def note_src(card, k, *srcs):
 
 
 def row_sources(c):
-    """SOURCES of the concepts flat.py's derive writes into flat_concept from rows, keywords and its RULES"""
+    """SOURCES of the concepts flat.py's derive writes into flat_concept (rows, keywords, its RULES), and KW_AB"""
     import flat
-    KW_AB.clear()
+    SOURCES.clear(); KW_AB.clear(); SIDE.clear()
     for t in ('flat_do', 'flat_if', 'flat_when'):
         for card, ab, via in c.execute(f"select distinct card, ability, via from {t} where origin='has_keyword' and ability is not null and via is not null"):
             KW_AB[(card, ab)].add(f'kw{via}')
@@ -172,14 +174,14 @@ def row_sources(c):
 
 
 def side_concepts(card, src, con):
-    """the concepts of a card that a link's side (links.sqlite a_ab / b_ab: 'ability.seq', ability, 'kw<id>', 'c:<concept>', 'type',
-    'rule'; several joined by ';') comes from: a link counts for a mechanic only through what of the card made it"""
+    """the concepts of a card that one side of a link comes from (its sources joined by ';'): an effect row gives its own
+    concepts and its ability's conditions and triggers; an ability all of them; a keyword's own effect also the keyword"""
     out = set()
     parts = [t for t in (src or '').split(';') if t]
-    parts += [k for t in parts if t[0].isdigit() for k in KW_AB.get((card, int(t.split('.')[0])), ())]  # a keyword's own effect: the keyword made it
+    parts += [k for t in parts if t[0].isdigit() for k in KW_AB.get((card, int(t.split('.')[0])), ())]
     for s in parts:
         if s == 'rule': continue
-        if s.startswith('c:'): out.add(s[2:]); continue  # a concept the rule read from the whole card
+        if s.startswith('c:'): out.add(s[2:]); continue
         for k in con[card]:
             got = SOURCES[card].get(k)
             if s == 'type': hit = not got
@@ -191,10 +193,14 @@ def side_concepts(card, src, con):
     return out
 
 
+def star_of(card, ks, star, by):
+    """a starred concept the card has for holding concepts of `by`: it comes from what gives those"""
+    ks.add(star); note_src(card, star, *{t for k in ks & set(by) for t in SOURCES[card].get(k, ())})
+
+
 def tag(c, x, games):
     """card -> its concepts, plus the starred ones this file adds; SOURCES: what of each card gives each concept"""
     con = collections.defaultdict(set)
-    SOURCES.clear()
     row_sources(c)
     for card, k in c.execute('select card, concept from flat_concept'):
         con[card].add(k)
@@ -245,10 +251,9 @@ def tag(c, x, games):
         hi = third(lambda t: sum(1 for v in costs if v >= t))  # (when most units share one cost, cheap is under it and dear is over it)
         for i in pool:
             ks, v = con[i], stats[i][1]
-            from_ = lambda star, ks_: (ks.add(star), note_src(i, star, *{t for k in ks_ for t in SOURCES[i].get(k, ())}))  # a star from other concepts: their sources
-            if ks & set(STOP_ALWAYS): from_('stop*', ks & set(STOP_ALWAYS))
-            if ks & set(DISRUPT_ALWAYS) or ('junk_cards' in ks and g in JUNK_GAMES): from_('disrupt*', ks & set(DISRUPT_ALWAYS + ['junk_cards']))
-            if ks & set(POSITION) and g in POSITION_GAMES: from_('position*', ks & set(POSITION))
+            if ks & set(STOP_ALWAYS): star_of(i, ks, 'stop*', STOP_ALWAYS)
+            if ks & set(DISRUPT_ALWAYS) or ('junk_cards' in ks and g in JUNK_GAMES): star_of(i, ks, 'disrupt*', DISRUPT_ALWAYS + ['junk_cards'])
+            if ks & set(POSITION) and g in POSITION_GAMES: star_of(i, ks, 'position*', POSITION)
             if stats[i][0] not in UNIT_CATS or v is None or lo is None or lo >= hi: continue
             if v <= lo: ks.add('cheapunit*')
             if v >= hi: ks.add('dearunit*')
@@ -267,9 +272,7 @@ def main():
              sum(1 for i in pools[g] if stats[i][2 + NUMERIC[s[0]]] is not None and stats[i][0] in UNIT_CATS) if s[0] in NUMERIC
              else sum(1 for i in pools[g] if counts(con[i], g, s[4]))) < MIN_GAME_CARDS}
     no_pos = {g for g in games if sum(1 for i in pools[g] if 'position*' in con[i]) < MIN_GAME_CARDS}
-    pairs = set()
-    for a, b in sqlite3.connect('links.sqlite').execute('select a, b from link'):
-        if a != b: pairs.add((min(a, b), max(a, b)))
+    pairs = link_pairs()
     deck_n = collections.Counter()  # card -> decks that play it
     deck_lists = collections.defaultdict(list)  # game -> every deck of decks.tsv, as its set of cards
     unknown = collections.Counter()
@@ -342,21 +345,28 @@ def main():
     print(len(rows), 'factions;', sum(1 for r in rows if r['decks']), 'with decks')
 
 
-def side_keys(card, src, game, keys, con, cache={}):
-    """the radii (or mechanics) a link's side of this card counts for (side_concepts)"""
+def link_pairs():
+    """linked card pair (lower id first) -> {(what of the first card made a link, what of the second)}"""
+    pairs = collections.defaultdict(set)
+    for a, b, sa, sb in sqlite3.connect(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'links.sqlite')).execute('select a, b, a_ab, b_ab from link'):
+        if a != b: pairs[(min(a, b), max(a, b))].add((sa, sb) if a < b else (sb, sa))
+    return pairs
+
+
+def side_keys(card, src, game, keys, con):
+    """the radii (or mechanics) one side of a link counts for on this card (side_concepts)"""
     key = (card, src, tuple(k[0] for k in keys))
-    if key not in cache:
+    if key not in SIDE:
         ks = side_concepts(card, src, con)
-        cache[key] = [k[0] for k in keys if counts(ks, game, k[4])]
-    return cache[key]
+        SIDE[key] = [k[0] for k in keys if counts(ks, game, k[4])]
+    return SIDE[key]
 
 
 def radius_links(games, pools, con, pairs, deck_lists=None, plain=None):
     """All cards (no deck_lists): how much more often than chance the library links a card of one radius with a card of the
-    other (1 = chance = the share of all card pairs of the game that the library links). pairs as a dict (card pair -> the
-    sides of its links): a link counts for two radii only through what of each card made it (side_concepts), and chance
-    likewise: the old chance x the share of A's cards' links that A makes x the same share for B.
-    plain (a Counter): filled with the linked card pairs of each two radii (sorted keys), counted once per pair.
+    other, counted through what of each card made the link (link_pairs, side_concepts). 1 = chance: the share of the game's
+    card pairs the library links x the share of A's cards' link ends that A's own part makes x the same share for B.
+    plain (a Counter): filled with the linked card pairs of each two radii (sorted keys), each pair once.
     Decks (deck_lists given; Kaptain, 10 Nov 2026: how often radii appear in the same real decks, linked or not): per deck,
     the share of its cards that count for each radius; for two radii A and B, the average of (A share x B share) over the
     game's decks divided by (average A share x average B share). 1 = decks heavy in A hold as much B as usual; 2 = twice as
@@ -387,24 +397,21 @@ def radius_links(games, pools, con, pairs, deck_lists=None, plain=None):
         dens = sum(1 for a, b in pairs if a in of and b in of) / (len(ids) * (len(ids) - 1) / 2)
         n = collections.Counter(k for i in ids for k in of[i])
         both = collections.Counter((ka, kb) for i in ids for ka in of[i] for kb in of[i])
-        ends, through = collections.Counter(), collections.Counter()  # per radius: link ends on its cards, and those made by it
-        for a, b in pairs:
+        ends, made = collections.Counter(), collections.Counter()  # per radius: link ends on its cards, and those its own part made
+        for (a, b), sides in pairs.items():
             if a in of and b in of:
-                if not isinstance(pairs, dict):
-                    both_ = {(ka, kb) for ka in of[a] for kb in of[b]}
-                else:
-                    on_a = {k for sa, _ in pairs[(a, b)] for k in side_keys(a, sa, g, keys, con)}
-                    on_b = {k for _, sb in pairs[(a, b)] for k in side_keys(b, sb, g, keys, con)}
-                    both_ = {(ka, kb) for sa, sb in pairs[(a, b)] for ka in side_keys(a, sa, g, keys, con) for kb in side_keys(b, sb, g, keys, con)}
-                    for i, on in ((a, on_a), (b, on_b)):
-                        for k in of[i]: ends[k] += 1; through[k] += k in on
-                for ka, kb in both_: obs[(ka, kb)] += 1; obs[(kb, ka)] += 1
+                on = {a: set(), b: set()}; linked = set()
+                for sa, sb in sides:
+                    ka_, kb_ = side_keys(a, sa, g, keys, con), side_keys(b, sb, g, keys, con)
+                    on[a].update(ka_); on[b].update(kb_); linked |= {(ka, kb) for ka in ka_ for kb in kb_}
+                for i in (a, b):
+                    for k in of[i]: ends[k] += 1; made[k] += k in on[i]
+                for ka, kb in linked: obs[(ka, kb)] += 1; obs[(kb, ka)] += 1
                 if plain is not None:
-                    for ka, kb in {tuple(sorted(t)) for t in both_}: plain[(ka, kb)] += 1
-        # chance through the sides: a link of a card of A is made by its A part in share(A) of its links (1 without sides)
-        share = lambda k: through[k] / ends[k] if isinstance(pairs, dict) and ends[k] else 0 if isinstance(pairs, dict) else 1
+                    for t in {tuple(sorted(t)) for t in linked}: plain[t] += 1
+        share = {k: made[k] / ends[k] if ends[k] else 0 for k in ends}
         for sa in keys:
-            for sb in keys: exp[(sa[0], sb[0])] += (n[sa[0]] * n[sb[0]] - both[(sa[0], sb[0])]) * dens * share(sa[0]) * share(sb[0])
+            for sb in keys: exp[(sa[0], sb[0])] += (n[sa[0]] * n[sb[0]] - both[(sa[0], sb[0])]) * dens * share.get(sa[0], 0) * share.get(sb[0], 0)
     return {a[0]: {b[0]: round(obs[(a[0], b[0])] / exp[(a[0], b[0])], 2) if exp[(a[0], b[0])] >= MIN_LINKS else None for b in keys} for a in keys}
 
 
