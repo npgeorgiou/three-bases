@@ -55,8 +55,8 @@ How a value is made (all agreed with Kaptain, 9 Nov 2026):
   average shows as 2.8.
 - A game with under 10 cards for a radius gives its factions no value there (a dashed dot on the rim with its reason).
   With 5, two cards of a small game gave one of the highest values of the wheel (Inscryption Beast, breaks their plan).
-  10 Nov 2026, with 24 radii: Duelyst 1 gap, Gwent 1, Faeria 4, Inscryption 10, Stormbound 11, Slay the Spire 11 (it
-  has no units), Into the Breach 16. Read the small games' shapes with care. The page shows each gap with its reason.
+  Radii with no value: Duelyst 1, Gwent 1, Faeria 3, Inscryption 9, Stormbound 11, Slay the Spire 11 (it has no
+  units), Into the Breach 15. Read the small games' shapes with care. The page shows each gap with its reason.
 - Two counts: all cards; or each card weighted by how many decks of decks.tsv play it (only factions with 10+ cards in
   decks). Deck lists hold each card once, without copies.
 - 23 radii in 8 areas (Kaptain, 9 Nov 2026: broad radii hid how factions differ, e.g. Freljord sets enemy strength to 0
