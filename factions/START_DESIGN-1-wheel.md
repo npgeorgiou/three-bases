@@ -85,7 +85,9 @@ faction's radii.
    Stormbound, Into the Breach, Inscryption) and real things that act on their own (Slay the Spire's orbs: placed in
    slots, each acts every turn); no source = Claude's; a rule the game lacks = NEW RULE. **No two factions have the
    same tool doing the same job, compared by what the card does and looks like, not by mechanic name**: one Egg in
-   the whole wheel. A whole faction may stand on one board thing (all Immobile).
+   the whole wheel. A whole faction may stand on one board thing (all Immobile). Written to `factions/wheel/themes.tsv`
+   (faction, theme) and `factions/wheel/tools.tsv` (faction, tool, mechanic, the tools it feeds, the cell-by-cell line,
+   source: a library card or CLAUDE, NEW RULE).
    The old candidates (commit d4a3de0^, `factions/3-candidates/`) are read last, only to see that no idea Kaptain
    liked is missing.
 8. **Combos on this board.** Agents rate every pair of factions (190) from their tools and mechanics, with

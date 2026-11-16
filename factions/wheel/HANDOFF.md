@@ -77,8 +77,8 @@ example above (the pair must not count). Then the docs (Part 2 step 0).
 Steps of `factions/START_DESIGN-1-wheel.md`. What stays and what is redone:
 0. Docs first, cleanly: `START_DESIGN-1-wheel.md` (steps 2 and 6 = numbers only), `PIPELINE.md`,
    `START_DESIGN-4-asking.md`, `library/README.md`, START_DATABASE's links part (the new columns). Remove the reading
-   files no step uses any more (`work/radius_verdicts.tsv`, `work/mechanic_pair_verdicts.tsv`, the reading prompts) and
-   the check script's use of them.
+   files no step uses any more (`work/radius_verdicts.tsv`, `work/mechanic_pair_verdicts.tsv`, the reading prompts); the check
+   script no longer uses them.
 1. Radii: STAY (shares of cards, no links).
 2. Radii that work together: REDO, numbers only (`mechanics_wheel.py links --radii`).
 3. The 20 shapes: re-check every join with the new numbers (`tools/wheel_table_check.py`); change only shapes whose
@@ -86,9 +86,8 @@ Steps of `factions/START_DESIGN-1-wheel.md`. What stays and what is redone:
 4. Mechanics list: STAYS (Kaptain agreed it at Stop A: `STOPA.md`, `mechanics.tsv`, 53 mechanics).
 5. Each faction's mechanics: REDO by script (`work/signatures.py --write`, `work/borrow.py --write`, `check_assign.py`).
 6. Links between mechanics: numbers only (`mechanics_wheel.py links`).
-7. Theme, then tools (`START_DESIGN-1-wheel.md` step 7): new for all 20, the step changed. First change `tools/wheel_table_check.py`
-   and `work/make_stop1.py` to read a tools file in place of `board.tsv` (per tool: faction, tool, mechanic, the tools
-   it feeds, the cell-by-cell line, source) and check what step 7 and "The check script" say.
+7. Theme, then tools (`START_DESIGN-1-wheel.md` step 7): new for all 20, the step changed. `tools/wheel_table_check.py`
+   and `work/make_stop1.py` already read `themes.tsv` and `tools.tsv` (they fail until step 7 writes them).
 8. Combos on this board, from the tools: all 190 pairs, since every faction's tools are new. Agents, Kaptain's OK first.
 9. Seven answers from the tools, check script, Stop 1 pages (`work/make_stop1.py`). Then Stop 1 with Kaptain.
 

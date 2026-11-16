@@ -1,6 +1,6 @@
 # Checks the wheel chat's files on real numbers (factions/START_DESIGN-1-wheel.md, "The check script"). Run from the
 # repo root; prints FAIL lines and PASS or FAILED.
-import csv,collections,itertools,re
+import csv,collections,itertools,re,os
 R='factions/wheel/'; W='library/cards_db/wheel/'
 fails=[]
 def fail(s): fails.append(s)
@@ -9,8 +9,6 @@ strong=lambda n:n[0]>=1.5 or (n[0]>=1.2 and n[1]>=1.2)
 RL={}
 for x in csv.DictReader(open(W+'radius_links.tsv'),delimiter='\t'):
     c=float(x['cards'] or 0); d=float(x['decks'] or 0); RL[(x['a'],x['b'])]=RL[(x['b'],x['a'])]=(d if 'spellpay' in (x['a'],x['b']) else c,d)
-for p in [l.rstrip('\n').split('\t') for l in open(R+'work/radius_verdicts.tsv')]:
-    if p[2]=='DROP': a,b=p[0].split('+'); RL[(a,b)]=RL[(b,a)]=(1.0,RL.get((a,b),(0,0))[1])
 ML={}
 for x in csv.DictReader(open(W+'links.tsv'),delimiter='\t'):
     ML[(x['a'],x['b'])]=ML[(x['b'],x['a'])]=(float(x['cards'] or 0),float(x['decks'] or 0))
@@ -57,16 +55,36 @@ for k in CIRC:
     while st:
         for y in g[st.pop()]-seen: seen.add(y); st.append(y)
     if len(seen)<len(A[k]): fail(f'{k}: mechanics not joined: {sorted(set(A[k])-seen)}')
-# board versions: 1-3 per faction, one BACKROW, one LANES, one IDEA, none the same text
-B=tsv(R+'board.tsv'); cnt=collections.Counter((p[0],p[1]) for p in B)
+# themes (step 7): one per faction, all different
+import os
+def need(f):
+    if os.path.exists(R+f): return tsv(R+f)
+    fail(f'{f} missing (step 7 not done)'); return []
+TH={p[0]:p[1] for p in need('themes.tsv') if len(p)>1}
 for k in CIRC:
-    if not 1<=cnt[(k,'VERSION')]<=3: fail(f'{k}: {cnt[(k,"VERSION")]} board versions')
-    for kind in ('BACKROW','LANES','IDEA'):
-        if cnt[(k,kind)]!=1: fail(f'{k}: {cnt[(k,kind)]} {kind} lines')
-for p in B:
-    if p[1]=='VERSION' and p[2] not in A[p[0]]: fail(f'{p[0]}: board version on {p[2]}, not its mechanic')
-for v,n in collections.Counter(p[4].lower() for p in B).items():
-    if n>1: fail(f'board text on {n} lines: {v[:60]}')
+    if not TH.get(k,'').strip(): fail(f'{k}: no theme')
+for v,n in collections.Counter(t.lower() for t in TH.values()).items():
+    if n>1: fail(f'theme of {n} factions: {v}')
+# tools (step 7): faction, tool, mechanic, feeds (tools of the same faction), cells (played out cell by cell), source, new rule
+TOOLS=collections.defaultdict(dict)
+CELLS=r"front|middle|back|row|cell|column|lane"
+for p in need('tools.tsv'):
+    p+=['']*(7-len(p)); k,t,m,feeds,cells,src=p[:6]
+    if k not in A: fail(f'tools.tsv: no faction {k}'); continue
+    if t.lower() in TOOLS[k]: fail(f'{k}: tool {t} twice')
+    TOOLS[k][t.lower()]=(m,[x.strip().lower() for x in feeds.split(',') if x.strip()],cells,src)
+for k in CIRC:
+    T=TOOLS[k]
+    if not 2<=len(T)<=4: fail(f'{k}: {len(T)} tools')
+    for t,(m,feeds,cells,src) in T.items():
+        if m not in A[k]: fail(f'{k}: tool {t} grows from {m}, not its mechanic')
+        if not any(f in T and f!=t for f in feeds): fail(f'{k}: tool {t} feeds no other tool of its faction')
+        if len(cells)<40 or not re.search(CELLS,cells,re.I): fail(f'{k}: tool {t} not played out cell by cell')
+        if not src.strip(): fail(f'{k}: tool {t} has no source (a library card or CLAUDE)')
+    for m in OWN[k]:
+        if not any(v[0]==m for v in T.values()): fail(f'{k}: signature {m} has no tool')
+for t,n in collections.Counter(t for k in CIRC for t in TOOLS[k]).items():
+    if n>1: fail(f'tool {t} in {n} factions')
 # combos: every pair rated once, 10+ partners (STRONG or OK)
 C=tsv(R+'combos.tsv'); best={}
 order={'STRONG':4,'OK':3,'WEAK':2,'NONE':1,'AGAINST':0}
@@ -102,8 +120,8 @@ import re
 BAD=r"(move|moves|play|plays|act|acts|go|goes) first|strikes? (him |it |them )?first|first strike|placed at round end|place[sd]? .{0,20}at round end"
 for t in ('so I move first next round','my hidden unit strikes him first','a unit placed at round end has struck'):
     assert re.search(BAD,t,re.I), t  # the three errors Kaptain's Stop 1 had (15 Nov 2026)
-for f in ('answers.tsv','board.tsv'):
-    for row in tsv(R+f):
+for f in ('answers.tsv','tools.tsv','themes.tsv'):
+    for row in (tsv(R+f) if os.path.exists(R+f) else []):
         for cell in row:
             if re.search(BAD,cell,re.I): fail(f'{f} {row[0]}: breaks a rule of this game: {cell[:70]}')
 for s in fails: print('FAIL',s)

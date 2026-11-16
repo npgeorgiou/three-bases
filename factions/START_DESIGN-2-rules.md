@@ -68,8 +68,9 @@ More text: `summary/09-card-design-rules.txt`
 - 2-3 keywords of its own. A keyword serves a mechanic: Barrage serves "guns in the back rows bombard the rear".
 - 5 Leaders (`leader: true`; they are the only cards with a golden border). Each has a special part that works by
   whether I hold its lane's base. It helps me take a lane I don't hold and keep one I hold; it never just makes me
-  stronger in a lane already won. The five are spread over the costs, from cheap to expensive, and over the faction's
-  ways to play, and each is a focus for designing cards: cheaper cards make what it needs. A faction's five mix these
+  stronger in a lane already won. The five are spread over the faction's ways to play, and their costs follow its
+  playstyle and curve: one faction may have mostly cheap and middle Leaders, another middle and expensive ones; never
+  one per cost by rule. Each is a focus for designing cards: cheaper cards make what it needs. A faction's five mix these
   kinds (variety is wanted):
   1. Two sides: helps take while the enemy holds the lane; only defends while I hold it.
   2. On the change: acts once when I take the base and once when I lose it.
