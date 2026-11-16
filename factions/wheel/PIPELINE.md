@@ -32,6 +32,9 @@ is written in that step's chat, from the rules of the step, and its line here is
 - Candidates: every 3-6 of a real faction's radii valued 1.2+ whose radii are all joined (step 2), with that faction's
   values. Picking: a search over 20 candidates, at most one per real faction; misses of the rules count 100 each, and
   sameness (shared radii between two shapes, squared) decides the rest. Four fixed seeds, so every run gives the same.
+  A shape's highest radius must give it a kind of play; a radius fewer than 2 real factions are strong at (strength,
+  defence) only has to stay under 5 shapes. It then prints the rules missed and the kind-of-play concepts with under a
+  quarter of their cards on that kind's radii.
 - The kinds of play: `factions/wheel/archetypes.tsv` (key, what it is, its radii, its concepts).
 
 ## Step 4. The usable concepts
