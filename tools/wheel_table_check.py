@@ -31,7 +31,7 @@ for k in CIRC:
     r=[x for x in SHAPE[k] if x not in NUM]
     if not 3<=len(SHAPE[k])<=6: fail(f'{k}: {len(SHAPE[k])} radii')
     for a in r:
-        if not any(rjoin(RL.get((a,b),(0,0))) or ('radius',k,a,b) in ARG for b in r if b!=a): fail(f'{k}: radius {a} joined to nothing')
+        if not any(rjoin(RL.get((a,b),(0,0))) for b in r if b!=a): fail(f'{k}: radius {a} joined to nothing')
 for x,y in itertools.combinations(CIRC,2):
     if SHAPE[x]==SHAPE[y]: fail(f'{x}={y}: same shape')
 # signatures and extras
@@ -51,7 +51,7 @@ for k in CIRC:
     g=collections.defaultdict(set)
     for a,b in itertools.combinations(A[k],2):
         n=ML.get((a,b),(0,0))
-        if strong(n) or n[1]>=1.5 or ('mechanic',k,a,b) in ARG: g[a].add(b); g[b].add(a)
+        if strong(n) or n[1]>=1.5 or ('mechanic',k,a,b) in ARG or ('mechanic','-',a,b) in ARG: g[a].add(b); g[b].add(a)
     seen={A[k][0]}; st=[A[k][0]]
     while st:
         for y in g[st.pop()]-seen: seen.add(y); st.append(y)

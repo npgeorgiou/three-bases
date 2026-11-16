@@ -6,54 +6,54 @@ or `cards.sqlite`: `PYTHONHASHSEED=0 python3 links.py` (about 7 minutes; tell Ka
 links.sqlite.gz too). A step is redone only when what it uses changes, and then only for the parts that
 changed. Each step says what a script does and what is judgment.
 
-## Step 1. The radii (made 9-10 Nov 2026, before the wheel chats)
+## Step 1. The radii
 - What: 24 radii (`SPOKES` in axes.py: key, name, the library concepts that count a card for it). A faction's value
   on a radius = its share of such cards / its game's average share (1 = average). 43 real factions of 8 games.
 - Script: `python3 axes.py` -> `axes.tsv`, `factions/wheel-axes.html`. How the values are made: `factions/13`.
 - Judgment: which concepts belong to each radius (checked by agents reading cards, `axes.py --cards <file>`).
 
-## Step 2. The radii that work together (second try, 14 Nov 2026)
-- Numbers: `python3 mechanics_wheel.py links --radii` -> `wheel/radius_links.tsv`. Per pair of radii: `cards` = how
-  much more often than chance the library links a card of one with a card of the other (same game); `decks` = how much
-  more decks heavy in one hold the other. 1 = chance. `links` = the linked card pairs made by the two; `level` = that
+## Step 2. The radii that work together
+- Numbers: `python3 mechanics_wheel.py links --radii` -> `wheel/radius_links.tsv` (`axes.radius_links`). Per pair of
+  radii: `cards` = how much more often than chance the library links a card of one with a card of the other (same
+  game); `decks` = how much more decks heavy in one hold the other. 1 = chance. Both are worked out per game and
+  averaged over the games, so each game counts the same (`cards`: games where chance gives 5+ linked pairs, 20+ in all;
+  `decks`: games with enough decks holding both). `links` = the linked card pairs made by the two; `level` = that
   count growing slowly (0, 1 link = 1, 10 = 2, 100+ = 3). "Rewards playing spells" is judged by `decks` only.
 - Radii joined = `cards` 1.2 or more, or `decks` 1.5 or more. Mechanics joined (steps 5-6) = `level` 1 or more (the library
   links them at all), or `decks` 1.5 or more.
 - A link counts for a radius only when the effect that made it, on that card's side, belongs to the radius (the links'
-  `a_ab`/`b_ab` columns), for chance too (the share of a radius' cards' links its own effects make). Numbers only: nobody reads card pairs.
+  `a_ab`/`b_ab` columns), for chance too (the share of a radius' cards' links its own effects make). Numbers only:
+  nobody reads card pairs. Checked by `cases/wheel.tsv` (run at the end).
 
-## Step 3. The 20 factions as shapes (second try)
-- What: each faction = 3-6 radii with uneven values, like real factions. Each radius joined to at least one other of
-  the same faction by a strong number (step 2), or by an argument from this game's rules
-  (`factions/wheel/arguments.tsv`: L, M, Q, T).
-- How: `python3 ../../factions/wheel/work/shapes.py [--write]` from library/cards_db (its header says how it picks). Each shape checked against the real factions:
-  `python3 axes.py --near "wide=1.4,spends=1.9,back=1.6"` (closest real faction 0.24-0.81 away).
-- Output: `factions/wheel/work/shapes.tsv` (letter A-T, radius=value list). Why each shape was chosen is not saved.
+## Step 3. The 20 factions as shapes
+- Script: `python3 ../../factions/wheel/work/shapes.py --write` (about 2 minutes) -> `factions/wheel/work/shapes.tsv`
+  (letter A-T, radius=value list). Without `--write` it only prints the 20, their real factions and the archetypes
+  each carries.
+- Candidates: every 3-6 of a real faction's radii valued 1.2+ ("cards" values in axes.tsv) whose radii are all joined
+  (step 2), with that faction's values. "One chosen" is left out.
+- Picking: a search over 20 candidates, at most one per real faction; misses of the rules count 100 each (every
+  radius in 2-5 shapes; every archetype of `factions/wheel/archetypes.tsv` carried by 2+ shapes, a shape carrying at
+  most 2 through its two highest values), and sameness (shared radii between two shapes, squared) decides the rest.
+  Four fixed seeds, so the result is the same each run.
 - Checked by: `python3 tools/wheel_table_check.py` (from the repo root; 3-6 radii, each joined, no two shapes the same).
 
-## Step 4. The mechanics list (second try; checked again 15 Nov 2026)
-- Start: the first try's 44 mechanics, plus offering, roundstart, leave, hide,
-  bigstrength: 48 mechanics, one line each, never two merged (Kaptain).
-- File: `factions/wheel/mechanics.tsv`, columns: key; sentence "I do X -> I gain from X"; concepts (the library
-  concepts that count a card as this mechanic; `concept@game,game` counts only in those games); NEW RULE mark;
-  "made by" concepts (cards that make it happen, counted with it); size (SMALL = under 30 right cards in every real
-  faction).
-- Reading: `python3 mechanics_wheel.py cards <file>` writes 8 cards per mechanic, taken from cards.sqlite: game,
-  the card's concepts, name, the first 220 letters of its text. Agents read the texts and said how many of the 8 are
-  really this mechanic, and which concepts to add, drop or limit to some games.
-  Output: `factions/wheel/work/concept_fixes_round1.tsv` (47 mechanics), `round2.tsv` (33 again after the change).
-- What changed: only the concepts column of mechanics.tsv. The card database (cards.sqlite) was not changed.
+## Step 4. The mechanics list
+- File: `factions/wheel/mechanics.tsv`, one line per mechanic, never two merged: key; sentence "I do X -> I gain from
+  X"; concepts (the library concepts that count a card as this mechanic; `concept@game,game` counts only in those
+  games); NEW RULE mark; "made by" concepts (cards that make it happen, counted with it); size (SMALL = under 30 right
+  cards in every real faction).
+- Reading: `python3 mechanics_wheel.py cards <file>` writes 8 cards per mechanic from cards.sqlite (game, the card's
+  concepts, name, the first 220 letters of its text). Agents read them and say how many of the 8 are really this
+  mechanic and which concepts to add, drop or limit to some games (`work/concept_fixes_*.tsv`,
+  `work/newmech_verdicts*.tsv`). Only the concepts column changes; cards.sqlite is not changed.
+- Rule check against this game's rules (summary/03-07) and the archetype check against `archetypes.tsv`
+  (START_DESIGN-1-wheel.md step 4).
 - Then: `python3 mechanics_wheel.py measure` -> `wheel/measured.tsv` (per mechanic: cards, games with 10+, the biggest
   real faction's count, the real factions with the highest share, the radii it serves) and
   `python3 mechanics_wheel.py links` -> `wheel/links.tsv` (per pair of mechanics, the same numbers as step 2).
-- Not saved: the agents' prompt of this step.
+- Stop A: `STOPA.md` shows the list to Kaptain in plain words.
 
-- Rule and archetype check (15 Nov 2026): each mechanic checked against this game's rules (summary/03-07); dropped:
-  strike twice or first, lock for good, who acts first; added: steal, place units in the enemy camp, attack the turn
-  it is placed, my unit acts again, mark an enemy, hit from afar. Agents read 8 real cards of each new or changed
-  mechanic only (`work/newmech_verdicts*.tsv`). 53 mechanics; Kaptain agreed them at Stop A (`STOPA.md`).
-
-## Step 5. Each faction's mechanics (15 Nov 2026)
+## Step 5. Each faction's mechanics
 - Scripts, no reading: `cd factions/wheel/work && python3 signatures.py --write` (2 signatures per faction, best fit,
   each fits its faction 0.8+, the two linked) then `python3 borrow.py --write` (2-4 extras by fit, each in at most
   3 factions) -> `work/assign.tsv`. Checked by `work/check_assign.py`.
@@ -82,7 +82,7 @@ changed. Each step says what a script does and what is judgment.
 |---|---|---|---|
 | 1 | cards.sqlite, links.sqlite | axes.py | axes.tsv, factions/wheel-axes.html |
 | 2 | links.sqlite | mechanics_wheel.py links --radii | wheel/radius_links.tsv |
-| 3 | step 2 | by hand, axes.py --near | work/shapes.tsv, arguments.tsv |
+| 3 | steps 1-2, archetypes.tsv | work/shapes.py | work/shapes.tsv |
 | 4 | mechanics.tsv | mechanics_wheel.py cards, agents, measure, links | mechanics.tsv, work/concept_fixes_*.tsv, wheel/measured.tsv, wheel/links.tsv |
 | 5 | steps 3-4 | work/signatures.py, work/borrow.py | work/assign.tsv |
 | 6 | links.sqlite | mechanics_wheel.py links, apart.py | wheel/links.tsv |

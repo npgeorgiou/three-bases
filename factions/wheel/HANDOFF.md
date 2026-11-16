@@ -27,6 +27,7 @@ Part 2 is the work, in order; Part 3 is what Kaptain decided and what was learne
   give Energy. Per pair it writes:
   - `cards`: how much more often than chance (1 = chance; chance is counted through what made the links too);
   - `decks`: how much more real decks heavy in one hold the other (1 = as usual);
+  - both worked out in each game alone and averaged, so each game counts the same, whatever its size;
   - `links`: the linked card pairs made by the two; `level`: that count growing slowly (0 links = 0, 1 = 1, 10 = 2, 100+ = 3).
 - Joined: mechanics by `level` 1+ (any link) or `decks` 1.5+; radii by `cards` 1.2+ or `decks` 1.5+.
 - Cases: cases/wheel.tsv (run at the end of `mechanics_wheel.py links`).
@@ -34,14 +35,13 @@ Part 2 is the work, in order; Part 3 is what Kaptain decided and what was learne
   between their cards) before trusting it; a wrong source is fixed for every card, with cases. Never read cards for it.
 
 ## Part 2. Design the 20 factions again
-Steps of `factions/START_DESIGN-1-wheel.md`. Done: 0 (docs), 1 (radii: they stay), 2 (radii that work together:
-`wheel/radius_links.tsv`), and the numbers of step 6 (`wheel/links.tsv`). Next:
-3. The 20 shapes: re-check every join (`tools/wheel_table_check.py`); change only shapes whose join falls away
-   (`axes.py --near` for the check against real factions). Now: B "spends them", P "tall" and S "supply" have no join.
-   When Kaptain agrees the 20 shapes: remind him to ask for the process to be saved in the docs (the new step 3: shapes.py,
-   archetypes.tsv, "one chosen" left out), written as the process is, with no history.
-4. Mechanics list: STAYS (Kaptain agreed it at Stop A: `STOPA.md`, `mechanics.tsv`, 53 mechanics).
-5. Each faction's mechanics: REDO by script (`work/signatures.py --write`, `work/borrow.py --write`, `check_assign.py`).
+Steps of `factions/START_DESIGN-1-wheel.md`. Done: 1 (radii), 2 (`wheel/radius_links.tsv`), 3 (the 20 shapes,
+`work/shapes.tsv`, agreed by Kaptain), 4 (the 53 mechanics, Stop A), and the numbers of step 6 (`wheel/links.tsv`).
+Next:
+5. Each faction's mechanics, by script (`work/signatures.py --write`, `work/borrow.py --write`, `check_assign.py`), for
+   the new shapes. First make the scripts follow every rule of step 5, including: every mechanic is a signature or an
+   extra of at least one faction, and a faction's mechanics fit the archetypes it carries (`shapes.py` prints them).
+   Show Kaptain the plan for the script change before building it.
 6. Links between mechanics: `wheel/links.tsv`; `apart.py` for the pairs real factions keep apart.
 7. Theme, then tools (`START_DESIGN-1-wheel.md` step 7): new for all 20. `tools/wheel_table_check.py` and
    `work/make_stop1.py` read `themes.tsv` and `tools.tsv` (they fail until step 7 writes them).
@@ -58,6 +58,12 @@ Steps of `factions/START_DESIGN-1-wheel.md`. Done: 0 (docs), 1 (radii: they stay
   (commit d4a3de0^, `factions/3-candidates/`, e.g. C17 Dot Brokers, C12 Monoliths) are read last, only to check no idea
   Kaptain liked is missing.
 - Damage over time and my units changing form are possibilities for cards, not mechanics or archetypes.
+- Every game counts the same in every number, whatever its size: a game's share, never its card count.
+- Shapes come from real factions (step 3), so a game with no factions (Marvel Snap) gives no shape; its cards still
+  count in every number and in the mechanics.
+- Archetypes (`archetypes.tsv`): each carried by 2-3 shapes, each shape carries at most 2, so factions are varied.
+- "One chosen" target is the default for every faction, in no shape.
+- Every mechanic of the list is a signature or an extra of at least one faction.
 - An all-Immobile faction is allowed (the old rule against it is deleted).
 - Each faction answers seven questions, one line each: how it wins, how it removes the front unit, how it MAINLY removes
   back-row units, how it MAINLY acts between lanes, how it holds a base, its best Place effect, its blind spot.
@@ -85,4 +91,4 @@ Steps of `factions/START_DESIGN-1-wheel.md`. Done: 0 (docs), 1 (radii: they stay
   card does, so fewer cards need reading.
 - The check script fails on words that break the game's rules ("move first", "strikes first", "placed at round end").
 - Earlier chats wasted tokens on readers and on running everything in one long chat: keep chats short, scripts first.
-- STOP1.md and STOP1-1..5.md are from an earlier round of steps 1-9; Part 2 replaces them.
+- STOP1.md and STOP1-1..5.md are rewritten at step 9.

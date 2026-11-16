@@ -71,16 +71,12 @@ How a value is made (all agreed with Kaptain, 9 Nov 2026):
   Many units and dying: many cheap units, spends them. Together: position and combos.
   Staying alive: heals them, grows defence, protects them, defence, a few big units.
   Not split, too few games with 10+ cards: "weakens enemy units" (3 games), "hurts its own units" (2 games).
-- Radii that work together (Kaptain, 10 Nov 2026: the wheel must be a base for 20 factions with overlaps, so its radii
-  must be things that can overlap and act on each other). The page's fourth view and `radius_links` in axes.py: for
-  every two radii, how much more often than chance the library links a card of one with a card of the other in the
-  same game, counted through what of each card made the link (1 = chance; a number only when chance alone would give 20
-  linked pairs). 12 of the 18 pairs of neighbours on the circle are at chance or above; under it: kills outright with
-  damage from units' text 0.80 and with many at once 0.68, many at once with damage from spells 0.84, damage from
-  spells with rewards playing spells 0.18, rewards playing spells with stops them 0.42, grows defence with protects
-  them 0.99. Highest: more supply with a few big units 5.4, kills outright with spends them 5.0, cheaper or stronger
-  hand with a few big units 4.8. Lowest: brings back with a few big units 0.09, rewards playing spells with more
-  supply 0.09.
+- Radii that work together (the wheel is a base for 20 factions with overlaps, so its radii must be things that can
+  overlap and act on each other). The page's fourth view and `radius_links` in axes.py: for every two radii, how much
+  more often than chance the library links a card of one with a card of the other in the same game, counted through
+  what of each card made the link (1 = chance). Worked out per game (games where chance alone gives 5+ linked pairs)
+  and averaged, so each game counts the same; a number only when chance gives 20+ linked pairs in all. The numbers:
+  `library/cards_db/wheel/radius_links.tsv`.
   "Rewards playing spells" is judged by real decks only, because such a card links to every spell. Strength,
   defence and "position and combos" are numbers, not cards, and are not in the table: they shape a faction but are
   not mechanics two factions can share.

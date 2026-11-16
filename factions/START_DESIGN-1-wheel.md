@@ -12,8 +12,8 @@ Faction text uses plain words Kaptain uses (no library names like "ping" or "ove
 the hit goes into the unit behind").
 
 ## The whole process and its stops
-- Wheel chat (this file): steps 1-9. **Stop A: Kaptain agrees the mechanics list (step 4).** **Stop 1: Kaptain agrees
-  the 20 factions (step 9).**
+- Wheel chat (this file): steps 1-9. **Kaptain agrees the 20 shapes (step 3).** **Stop A: Kaptain agrees the mechanics
+  list (step 4).** **Stop 1: Kaptain agrees the 20 factions (step 9).**
 - One chat per faction (two can run at the same time): steps 1-6 of START_DESIGN.md (theme facts from the wheel's
   theme, then up to the ways to play).
   **Stop 2: Kaptain agrees them.** Then cards, the gate, `wheel_check.js`, the separate agent's review.
@@ -26,23 +26,32 @@ A step uses only what the steps before it made. Steps 1-3 are the wheel; the mec
 faction's radii.
 
 1. **The radii.** The 24 radii of `factions/13-wheel-measurement.txt`, measured on 43 real factions (`axes.py`).
-2. **The radii that work together.** For every two radii, the library's number in all cards and in real decks: how much
-   more often than chance a card of one is linked with a card of the other (1 = chance), counted only where the
-   link's own effects belong to the two radii (the links store which effect of each card made them); and `links`, the
-   linked card pairs made by the two, with `level` = that count growing slowly (0 links = 0, 1 = 1, 10 = 2, 100+ = 3;
-   Kaptain, 16 Nov 2026: a pairing rare in the ten games can be splendid on this board, so for mechanics any link joins). Numbers only,
-   nobody reads card pairs. "Rewards playing spells" is judged by its deck number only, because such a card links to
-   every spell.
-3. **The 20 factions as shapes.** Each faction is 3-6 strong radii with uneven values, as real factions have. Each
-   radius is joined to another of the same faction by step 2: `cards` 1.2+ (radii have links enough for the chance
-   number; Kaptain, 16 Nov 2026), or `decks` 1.5+ (one makes what the other needs:
-   "spends them" makes deaths, "brings back" uses them), or by an argument from this game's rules, written in
-   `arguments.tsv`. Each shape is checked against the real factions (`axes.py --near`). No two shapes are the same. Every archetype of
-   `factions/wheel/archetypes.tsv` (this game's kinds of play, each with its radii and mechanics) is a main strength
-   (highest or second value) of at least one shape. "One chosen" is in no shape: choosing the target is the default
-   (Kaptain, 16 Nov 2026). Picked by `work/shapes.py`.
-   A radius that only exists by another game's rules is never a faction's base (see step 4's rule check).
-4. **The mechanics list** (agreed at Stop A, 53 mechanics in `mechanics.tsv`; kept, not redone). Each mechanic is written "I do X -> I gain from X" on this game's things (units, rows,
+2. **The radii that work together.** For every two radii, the library's numbers (`mechanics_wheel.py links --radii`):
+   - `cards`: how much more often than chance a card of one is linked with a card of the other (1 = chance). A link
+     counts only where the effects that made it belong to the two radii (the links store which effect of each card
+     made them). Worked out in each game alone, then averaged, so each game counts the same: a game of 300 cards
+     weighs as much as one of 2,600.
+   - `decks`: how much more often real decks heavy in one hold the other (1 = as usual), also per game and averaged.
+   - `links`: the linked card pairs made by the two; `level` = that count growing slowly (0 links = 0, 1 = 1, 10 = 2,
+     100+ = 3).
+   Two radii are joined by `cards` 1.2+ or `decks` 1.5+. "Rewards playing spells" is judged by `decks` only, because
+   such a card links to every spell. Numbers only: nobody reads card pairs.
+3. **The 20 factions as shapes** (`work/shapes.py`, by script). A shape is 3-6 radii a faction is strong at, with
+   uneven values. Each shape is taken from one real faction: some of its radii valued 1.2+, with that faction's values,
+   so every shape exists in a real game. The rules:
+   - every radius is joined (step 2) to another radius of the same shape; strength, defence and "position and combos"
+     only give a faction its shape and need no join;
+   - at most one shape per real faction, and no two shapes the same;
+   - every radius is a strength of 2-5 shapes;
+   - `archetypes.tsv` lists this game's 18 kinds of play (swarm, sacrifice, bringing back, control, damage, aggro,
+     scaling, grows when hit, fortress, sustain, spells, ramp, position, enemy camp, disruption, steal, cards,
+     carrying), each with its radii and its mechanics. A shape carries an archetype when one of the archetype's radii
+     is among its two highest values. Each shape carries at most 2 archetypes and each archetype is carried by 2-3
+     shapes, so every kind of play has factions and none is crowded;
+   - within these rules, the shapes are as different from each other as possible;
+   - "One chosen" is in no shape: choosing the target is the default for every faction.
+   Output: `work/shapes.tsv`. **Kaptain agrees the 20 shapes.**
+4. **The mechanics list** (`mechanics.tsv`, 53 mechanics). Each mechanic is written "I do X -> I gain from X" on this game's things (units, rows,
    columns, front cells, dots, supply per lane, carry-over, hand, discard pile), with the library concepts that catch
    its cards. For each mechanic, in this order:
    - an agent reads 8 of its real cards and fixes the concept list until it catches the right cards;
@@ -51,9 +60,10 @@ faction's radii.
      (only Riposte does), so "strike first" means nothing here and is not a mechanic; who acts first is random in
      round 1 and then alternates; units are placed only in my own camp. A mechanic that needs a rule the game lacks is
      kept and marked NEW RULE.
-   - **the archetype check**: the list covers every kind of play the library's concept list has, including the small
-     ones: steal (take the enemy's unit or card), units that grow when they are hit and survive, my units placed in
-     the enemy camp, kill spells, bringing back. A mechanic small in the library (under 30 right cards in every real
+   - **the archetype check**: every mechanic belongs to an archetype of `archetypes.tsv`, and every archetype has its
+     mechanics, including the small ones: steal (take the enemy's unit or card), units that grow when they are hit and
+     survive, my units placed in the enemy camp, kill spells, bringing back. Damage over time and my units changing
+     form are possibilities for cards, not mechanics. A mechanic small in the library (under 30 right cards in every real
      faction, marked SMALL) can still be a faction's base; SMALL only says there are few real cards to learn from.
    Each mechanic keeps its own line; two are never merged. **Stop A: Kaptain agrees the list.**
 5. **Each faction's mechanics.**

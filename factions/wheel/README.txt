@@ -6,9 +6,10 @@ tools.tsv       step 7: 2-4 tools per faction (mechanic, the tools it feeds, the
 combos.tsv      step 8: every pair of factions rated on this board, with a test column for playtests
 answers.tsv     step 9: the seven answers per faction
 mechanics.tsv   the 53 mechanics: "I do X -> I gain from X", the library concepts that catch their cards, NEW RULE, size
-arguments.tsv   joins with no strong library number, argued from this game's rules (Claude's)
-PIPELINE.md     how every step was made (a record, not a to-do)
-HANDOFF.md      the next chat's whole job: fix the links, then design the factions again; all decisions
-work/           inputs and scripts: shapes.tsv (the 20 shapes), concept_fixes_*.tsv, newmech_verdicts*.tsv,
+archetypes.tsv  this game's 18 kinds of play, each with its radii and mechanics (steps 3 and 4)
+arguments.tsv   joins of two mechanics with no library link, argued from this game's rules (Claude's; step 5)
+PIPELINE.md     the commands of every step and what each makes
+HANDOFF.md      the next chat's job and all of Kaptain's decisions
+work/           inputs and scripts: shapes.py and shapes.tsv (the 20 shapes), concept_fixes_*.tsv, newmech_verdicts*.tsv,
                 assign.tsv, signatures.py, borrow.py, check_assign.py, make_stop1.py, the agents' prompts (combo_prompt.txt,
                 answers_prompt.txt)
