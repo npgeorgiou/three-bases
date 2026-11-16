@@ -40,3 +40,17 @@ Work not done yet. Kaptain's requests in his own words where he gave them. Remov
    - Arcanists: why Arcane Missiles hits the enemy with the least defence; more imaginative spells and spell/unit play; Dean of Battle Magic (melee buffs) does not fit.
    - Remove all flavour text. The 5 special units per faction get a special symbol, maybe a gold border.
 10. **Old factions' rules code.** Tagma, the Horde, the Exanimati and the five factions of 3 Nov 2026 were removed from the game (4 Nov 2026, Kaptain: "remove old factions"); the rules code written only for their cards (per-card abilities in abilities.js, TACTICS in tactics.js, Exanimati death rules, Ogre Thrower, Link, Revenant, Plague...) is still in src/game/js/rules/ and no card uses it. Remove it in one refactor, keeping what fx.js uses (spawn, kill, auras, strikes).
+
+## Wheel: open points (16 Nov 2026 chat; solve one by one)
+1. Kinds of play of the shapes: A's highest value (stops 3.1) gives it no kind of play; A and K both got disruption and
+   steal, which join each other only through kill. Is this wrong?
+2. 124 library concepts have cards but are in no mechanic, 113 of them in no radius either: the wheel never sees them.
+   Sort them again by script (`work/concept_sort.tsv`; the first sort was Claude's judgment and partly wrong).
+3. "See the enemy's hand" (information, 42 cards): how does it enter the game (join steal and hand, or other)?
+4. The 13 candidate mechanics (`work/newmech_verdicts3.tsv`): the agent judged without keyword meanings ("can't move"
+   was wrong: Provoke and Taunt do pin). Judge again; then add the real ones to mechanics.tsv, Stop A again.
+5. "Can't act" and "can't attack" are close; the agent tied "can't attack" to cells.
+6. Library entries the readings call wrong: none fixed; only "can't move" checked (the library was right).
+7. Step 5 scripts: rules agreed in the docs (one algorithm for all 20, fit plus link strength, every mechanic used);
+   not built. Still to agree: at least one signature from a kind of play the faction carries, every kind of play it
+   carries among its mechanics; `check_assign.py` drops the old circle check.
