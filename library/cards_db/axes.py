@@ -54,6 +54,7 @@ SHOWN = {'multiply_own*': 'a stat of my own unit doubled or multiplied', 'stop*'
          'strength*': 'its units\' strength per supply (Stormbound: the one number; Gwent: power)',
          'defence*': 'its units\' defence per supply (Stormbound: the one number; Gwent: power + armour)'}
 NUMERIC = {'strong': 0, 'tough': 1}  # spokes measured from unit stats per supply, not from card effects
+SPELL_SPOKES = ('spelldmg', 'spellpay')  # a game with no spells has no value there (Into the Breach's boosted weapons are no spells)
 MIN_GAME_CARDS = 10  # with 5, two cards of a small game gave one of the highest values of the wheel (Inscryption Beast, breaks their plan)
 SHRINK = 5  # smoothing: every faction counts as if it had 5 more cards at its game's average (small factions swing less)
 POWER = 0.75  # smoothing: values are raised to this power (4 times the average shows as 2.8, a quarter as 0.35)
@@ -69,7 +70,7 @@ CHECKS = [  # Kaptain's points: (game, faction, spoke, lowest value it must have
     ('runeterra', 'Demacia', 'many', 0.1),  # 14 Nov 2026: Judgment, one ally strikes all battling enemies (aoe_damage); 0.06 without
     ('inscryption', 'Undead', 'strong', 0.9),  # 0.75 when 4 Bones counted as 4 Blood (SUPPLIES)
 ]
-GAPS = [('inscryption', 'disrupts'), ('sts1', 'tall')]  # must have no value: 5 cards in the whole game; a game with no units
+GAPS = [('inscryption', 'disrupts'), ('sts1', 'tall'), ('into_the_breach', 'spellpay'), ('inscryption', 'spellpay')]  # must have no value: 5 cards in the whole game; a game with no units; games with no spells
 HAS = [('into_the_breach', 'textdmg'),  # weapons' damage on a tile counts as damage on enemies (DAMAGE_NO_SIDE_GAMES, 14 Nov 2026)
        ('gwent', 'grows'), ('gwent', 'growsdef'),  # must have a value: growth of Gwent's one number counts as both
        ('duelyst', 'pos'), ('faeria', 'pos'), ('stormbound', 'pos')]  # position in the board games
@@ -269,7 +270,8 @@ def main():
         return dump(c, x, games, con, pools, sys.argv[sys.argv.index('--cards') + 1])
     lacks = {(g, s[0]) for g in games for s in SPOKES if s[0] != 'together' and (
              sum(1 for i in pools[g] if stats[i][2 + NUMERIC[s[0]]] is not None and stats[i][0] in UNIT_CATS) if s[0] in NUMERIC
-             else sum(1 for i in pools[g] if counts(con[i], g, s[4]))) < MIN_GAME_CARDS}
+             else sum(1 for i in pools[g] if counts(con[i], g, s[4]))) < MIN_GAME_CARDS
+             or (s[0] in SPELL_SPOKES and sum(1 for i in pools[g] if stats[i][0] == 'spell') < MIN_GAME_CARDS)}
     no_pos = {g for g in games if sum(1 for i in pools[g] if 'position*' in con[i]) < MIN_GAME_CARDS}
     pairs = link_pairs()
     deck_n = collections.Counter()  # card -> decks that play it
