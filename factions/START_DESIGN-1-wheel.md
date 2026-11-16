@@ -15,13 +15,19 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 - **Radius**: a list of concepts that measures what real factions are strong at (23 radii, `axes.py` `SPOKES`).
 - **Shape**: one faction's 3-6 strong radii with their values, taken from one real faction.
 - **Kind of play** (`wheel/archetypes.tsv`): swarm, sacrifice, bringing back... each with its radii and concepts.
-- **Group**: the concepts a faction builds on: 2 pillars and 2-4 others.
+- **Group**: the concepts a faction builds on: 2 pillars and 2-4 others. It is the faction's character (what it is
+  strongest at, what its tools grow from), never all its cards use: its cards draw on every usable concept and helper.
+- **Helper**: a concept that only says when or how a card acts ("when played", "at end of round", "choose one"), one
+  of the game's own things (carry-over, lanes), or a thing for single cards (used once, a drawback). Never in a group;
+  every faction's list holds them (step 6).
 - **Mechanic**: a link between two concepts of a group, shown by real card pairs, with the text of the link: "makes
-  your units die: the other card brings them back (2,328 pairs)". A mechanic is never written by hand.
+  your units die: the other card brings them back (in 7 of 10 games, 3.1 times chance)". A mechanic is never written
+  by hand.
 
 ## Rules for every step (Kaptain)
 - Every game counts the same in every number: worked out in each game alone, then averaged. A combo is judged by how
-  much more often than chance its cards link, never by its raw size; the count of pairs only breaks ties.
+  much more often than chance its cards link; ties are broken by how many games show it. A raw count of pairs is never
+  used: a game with many cards would drown the others.
 - A concept needs 10+ real cards in the library (all games together).
 - Scripts, no reading agents. Card texts are read only where a card's rows can't answer: at most 500 cards for the
   whole wheel, by a low-cost model; count them and get Kaptain's OK first.
@@ -54,8 +60,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    "grows strength"; "can't act" and "can't attack" stay two concepts ("can't act" is the wider one).
 2. **The radii and how they work together.** `axes.py` measures the 43 real factions on the 23 radii (1 = the average
    faction of its game). For every two radii (`mechanics_wheel.py links --radii`): `cards` = how much more often than
-   chance their cards are linked; `decks` = how much more often real decks heavy in one hold the other; `links` = the
-   linked pairs; `level` = that count growing slowly (0, 1, 10, 100+ pairs = 0-3). Joined: `cards` 1.2+ or `decks`
+   chance their cards are linked; `decks` = how much more often real decks heavy in one hold the other; `games` = in
+   how many games real cards link them. Joined: `cards` 1.2+ or `decks`
    1.5+; "rewards playing spells" by `decks` only (such a card links to every spell).
 3. **The 20 shapes** (`work/shapes.py`). Each shape is 3-6 radii of one real faction valued 1.2+, with its values.
    Every radius in a shape is joined to another of the same shape (strength, defence and "position and combos" need no
@@ -65,14 +71,21 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    play's concepts sit on its radii, and that every shape's highest radius gives it a kind of play.
    **Kaptain agrees the 20 shapes.**
 4. **The usable concepts** (`work/concept_catch.py` -> `work/concepts.tsv`). Every concept with 10+ real cards, with
-   its card count and the share of its cards on each radius. Left out, each with its reason (Claude's, in
-   `work/concept_verdicts.tsv`): it says when or if a card acts (on play, turn end); it is not in this game (player
-   health, blocking, answers on the enemy's turn, unit types, shops); it is one of the game's own things (lanes, the
-   3x3 camp, carry-over, bases); Kaptain ruled it out (randomness, my units changing form, countdowns); every card does it (choosing the target);
-   it is a possibility for single cards (a wall that can't attack); or it is a parent whose children carry its cards
-   ("buff" when "attack_gain" carries them), so no effect counts twice.
+   its card count, its games and the share of its cards on each radius, sorted into three kinds (Claude's, in
+   `work/concept_verdicts.tsv`, each with its reason):
+   - Usable: a faction can build on it. It says what a card does ("brings back a dead unit"), or reacts to something
+     the player makes happen or builds up ("when a card is drawn", "when it becomes a target", "if your hand holds 5
+     cards").
+   - Helper: it only says when or how a card acts, never what the player builds ("when played", "at end of round",
+     "once per game", "choose one of two effects"); or it is one of the game's own things (lanes, bases, carry-over,
+     cells and rows, the 3x3 camp, unit cost); or it is a thing for single cards (used once, a drawback, a wall that
+     can't attack, choosing the target).
+   - Out: it is not in this game (player health, blocking, answers on the enemy's turn, unit types, shops, supply
+     that grows by itself) or Kaptain ruled it out (randomness, my units changing form, countdowns).
+   A concept that only says what kind of record a card is (an "ability" record) is a library error, removed from the
+   library. A parent in the concept tree keeps only the cards none of its children carry, so no effect counts twice.
 5. **The links between concepts** (`mechanics_wheel.py`, concept mode -> `wheel/concept_links.tsv`). For every two
-   usable concepts, by the same count as step 2: `cards`, `decks`, `links`, `level`; which one makes and which one uses
+   usable concepts and helpers, by the same count as step 2: `cards`, `decks`, `games`; which one makes and which one uses
    (the side of the link); the most common link texts. A game counts for `cards` when chance alone gives it 5+ linked
    pairs. Joined: `cards` 1.2+, or `decks` 1.5+, or, where chance stays under 5 pairs in every game, 3+ real pairs at
    3+ times chance. `apart.py` lists the concept pairs real factions keep apart.
@@ -88,14 +101,17 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
      grows when hurt + I damage my own units.
    - A group holding both ends of a pair real factions keep apart (`apart.py`) is shown to Kaptain.
    - Kaptain sees per faction: its concepts in plain words, and its mechanics (each joined pair: the real link text
-     and its count); one sentence per faction, written from those texts. `tools/wheel_table_check.py` checks every
-     rule above from the files. **Kaptain agrees the 20 groups.**
+     with its times chance and games); one sentence per faction, written from those texts. `tools/wheel_table_check.py`
+     checks every rule above from the files. **Kaptain agrees the 20 groups.**
+   - Then each faction's list (`work/concept_list.py` -> `work/lists/<letter>.tsv`): every usable concept and every
+     helper, sorted by its fit to the faction, with beside it how strongly it links to the faction's group (times
+     chance, games). Step 7 and the faction's chat use it: nothing usable is hidden from any faction.
 7. **Theme, then tools.** First each faction gets a real theme (World War I artillery, the Zulu regiments) picked for
    its group; the 20 themes all differ; the theme is a source of tools, never a reason for one. Then 2-4 tools per
    faction: a tool is a new kind of thing or rule that makes the group's mechanics happen on this game's own things
    (dots and front cells, rows, columns, lanes, the 3x3 camp, unit size, supply per lane, carry-over, round start and
    end, one action per turn, moving, reach, strikes and fixed damage, the hand, the discard pile, Immobile), carried by
-   many of its cards. Each tool names the mechanic it grows from; each pillar has a tool; each tool feeds another (one
+   many of its cards; the faction's list (step 6) shows the helpers and other concepts a tool can use. Each tool names the mechanic it grows from; each pillar has a tool; each tool feeds another (one
    makes what the other uses); each is played out cell by cell (which cell, what happens, what the enemy does with his
    one action between; two tools needing the same cell clash). The linked card pairs of the mechanic are its source
    cards. No two factions have the same tool doing the same job, compared by what the card does: one Egg in the whole

@@ -21,7 +21,7 @@ is written in that step's chat, from the rules of the step, and its line here is
   on a radius = its share of such cards / its game's average share (1 = average). 43 real factions of 8 games.
 - `python3 axes.py` -> `axes.tsv`, `factions/wheel-axes.html`. How the values are made: `factions/13`.
 - `python3 mechanics_wheel.py links --radii` -> `wheel/radius_links.tsv` (`axes.radius_links`): per pair of radii
-  `cards`, `decks`, `links`, `level`, each worked out per game and averaged (`cards`: games where chance gives 5+ linked
+  `cards`, `decks`, `games` (in how many games real cards link them), worked out per game and averaged (`cards`: games where chance gives 5+ linked
   pairs, 20+ in all; `decks`: games with 5+ decks holding both). A link counts for a radius only when the effect that
   made it, on that card's side, belongs to the radius (the links' `a_ab`/`b_ab`), for chance too. Checked by
   `cases/wheel.tsv`.
@@ -39,20 +39,23 @@ is written in that step's chat, from the rules of the step, and its line here is
 
 ## Step 4. The usable concepts
 - `python3 ../../factions/wheel/work/concept_catch.py` (a second) -> `work/concepts.tsv`: every concept with 10+
-  real cards, its cards, its games, the share of its cards on each radius (per game, averaged; strength and defence come
-  from unit stats, so no share); a parent in `library/concept_tree.txt` keeps only the cards none of its children carry.
-  Left out, with the reason in the same file: the concepts in `work/concept_verdicts.tsv`, player_<concept>, and a
-  parent left with under 10 cards. Usable concepts come first.
+  real cards, its card count, its games, its kind (usable, helper, out) and reason, the share of its cards on each
+  radius (per game, averaged; strength and defence come from unit stats, so no share); a parent in
+  `library/concept_tree.txt` keeps only the cards none of its children carry. Kinds and reasons: `work/concept_verdicts.tsv`
+  (a concept not in it is usable); player_<concept> and a parent left with under 10 cards are out.
 
 ## Step 5. The links between concepts
 - `python3 mechanics_wheel.py links --concepts` (to write; the same count as `--radii`) -> `wheel/concept_links.tsv`:
-  per pair of usable concepts `cards`, `decks`, `links`, `level`, which one makes and which one uses, the top link texts.
+  per pair of usable concepts and helpers `cards`, `decks`, `games`, which one makes and which one uses, the top link
+  texts.
   `python3 apart.py` gives the pairs real factions keep apart.
 
 ## Step 6. The 20 groups
 - `python3 factions/wheel/work/groups.py --write` (to write; an exact solver for all 20) -> `factions/wheel/work/groups.tsv`
   (faction, pillars, others, its mechanics with link texts and counts). `python3 tools/wheel_table_check.py` (to
   rewrite) checks the rules of the step from the files.
+- `python3 ../../factions/wheel/work/concept_list.py` (to write) -> `factions/wheel/work/lists/<letter>.tsv`: per
+  faction every usable concept and helper, by fit (step 6), with its links to the group (times chance, games).
 
 ## Step 7. Theme, then tools
 - Claude -> `factions/wheel/themes.tsv` (faction, theme) and `factions/wheel/tools.tsv` (faction, tool, mechanic, the

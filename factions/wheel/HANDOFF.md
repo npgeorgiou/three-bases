@@ -16,10 +16,8 @@ One chat does one step; at its end, mark the step done here.
 | 8. Combos on this board | to do | |
 | 9. The seven answers, Stop 1 | to do; `work/make_stop1.py` to rewrite | |
 
-Inputs ready: for step 5 `work/concepts.tsv`. Kinds of play whose concepts are no library concept with 10+ cards
-(step 6 must handle them): the starred radius groups countboard*, kill*, weaken*, spelldmg*, position*, and polymorph,
-piercing, cross_lane (under 10 cards). Step 3's check: 26 kind-of-play concepts have under a quarter of their cards on
-that kind's radii (`shapes.py` prints them); Kaptain decides on them before step 6.
+For step 6: some kinds of play (`archetypes.tsv`) name concepts that are no library concept with 10+ cards: the
+starred radius groups countboard*, kill*, weaken*, spelldmg*, position*, and polymorph, piercing, cross_lane.
 
 ## Agreed 17 Nov 2026: do this next, in this order (one chat; read START_DATABASE.md whole first: it changes the library)
 1. Library: the concept "Skill" (spell_or_skill) goes. It only says a card record's kind is "ability" (`flat.py`, the
@@ -49,7 +47,12 @@ that kind's radii (`shapes.py` prints them); Kaptain decides on them before step
 6. After step 6, a script writes per faction ONE list of every usable concept and helper, sorted by fit (step 6's
    fit), with beside each how strongly it links to the faction's group (times chance, in how many games). Step 7 and
    the faction's card chat must read it: write that into START_DESIGN-1-wheel.md step 7 and START_DESIGN.md steps 5-8.
-7. Report to Kaptain: what removing Skill changed and any shape that moved; the concepts by kind in plain words
+7. The docs already describe this way (START_DESIGN-1 words and steps 2, 4-7, PIPELINE, START_DESIGN step 3); make the
+   scripts and files match them: `concept_catch.py` kinds, `mechanics_wheel.py` `games` column, `concept_list.py`.
+8. Open for Kaptain (ask before step 6): START_DESIGN-2 "How cards fit together" lets a concept outside the group be
+   only a one-off ("ONE unit that comes back"); does that still hold now that the faction's list is open to its cards?
+   And the 26 kind-of-play concepts with under a quarter of their cards on that kind's radii (`shapes.py` prints them).
+9. Report to Kaptain: what removing Skill changed and any shape that moved; the concepts by kind in plain words
    with card count and games; the new step 4 rule. Push; handoff.
 
 ## The numbers (library/cards_db)
