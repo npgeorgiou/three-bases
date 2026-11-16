@@ -167,7 +167,7 @@ lk166	inscryption	Hammer	Ouroboros	line	kills it for its death effect	links fix 
 lk167	into_the_breach	Titan Fist	Cascading Resonator	line	makes enemy units die	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	damage !forced_movement	damage !cant_attack
 lk168	marvel_snap	Adam Warlock	Punisher War Machine	line	makes you draw cards	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	draw !stat_gain	mark_target !resource_gain
 lk169	monster_train	Hornbreaker Prince	Last Stand	line	has Rage	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	temporary_buff !attack_now	on_play !exhaust
-lk170	runeterra	Yasuo	The Howling Abyss	line	makes champions level up	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	upgrade !damage	generate_cards !cant_attack
+lk170	runeterra	Yasuo	The Howling Abyss	line	makes champions level up	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	level_up !damage	generate_cards !cant_attack
 lk171	stormbound	Copperskin Ranger	Soap Cleanse	line	makes units get Poison	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	damage_over_time !damage	on_play !turn_start
 lk172	sts1	Acrobatics	Endless Agony	line	makes you draw cards	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	draw !discard	copy !activated
 lk173	duelyst	Zurael, the Lifegiver	Meltwater Moose	line	brings it back: its summon effect goes off	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 822)	revive !on_play	on_ally_play !cant_attack
@@ -222,12 +222,12 @@ lk221	gwent	Regis	Nekurat	line	is a Vampire whose playing sets off its effect	li
 lk222	marvel_snap	Aero	Shadowlands Daredevil	line	is a card whose drawing sets off its effect	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2025)	type !combo_sequence	on_draw !generate_cards
 lk223	monster_train	Primordium	Morsel-Made	line	is a unit whose summoning sets off its effect	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2025)	type !buff	on_ally_play !on_sacrifice
 lk224	runeterra	Twin Disciplines	Lux	line	is a spell it needs played for its count (levels it up)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2025)	type !modal_choice	passive !damage_reduction
-lk225	sts1	Acrobatics	Escape Plan	line	is a Skill whose drawing sets off its effect	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2025)	type !discard	block_armor !damage_reduction
+lk225	sts1	Acrobatics	Escape Plan	line	is a Skill whose drawing sets off its effect	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2025)	type !discard	player_block_armor !damage_reduction
 lk226	duelyst	Primordial Gazer	Oropsisaur	line	more health or protection: survives damage	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2330)	stat_gain !on_play	on_damaged !turn_start
 lk227	faeria	Syland Horsemaster	Triton Sanctuary	line	moves it where it must be	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2330)	movement !on_play	on_harvest !activated
 lk228	inscryption	Wiseclock	Good Fish	line	moves it where it must be	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2330)	forced_movement !on_play	damage !attack_now
 lk229	into_the_breach	Vice Fist	Rosie Rivets	line	moves it where it must be	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2330)	forced_movement !cant_attack	heal
-lk230	marvel_snap	Blink	Hercules	line	moves it where it must be	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2330)	swap !combo_sequence	forced_movement
+lk230	marvel_snap	Blink	Hercules	line	moves it where it must be	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2330)	swap !combo_sequence	movement
 lk231	runeterra	Twin Disciplines	Braum	line	more health or protection: survives damage (levels it up)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2330)	stat_gain !modal_choice	on_damaged !forced_attack
 lk232	stormbound	Temple of Time	Faithless Prophets	line	more health or protection: survives damage	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2330)	heal !mark_target	donate
 lk233	monster_train	Mine Collapse	Kindle	line	more energy: a bigger X	Kaptain 15 Nov 2026: the energy Mine Collapse gains makes Kindle's X bigger; its kill is not what links them	resource_gain !on_kill	x_cost
@@ -267,7 +267,7 @@ lk266	inscryption	Bleene's Mox	Skelemagus	line	is a Mox Card it asks for	links f
 lk267	monster_train	Antumbra Morsel	Penumbra	line	is a Morsel it asks for	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 989)	type !on_sacrifice	on_sacrifice !board_limit
 lk268	runeterra	Nimble Poro	Call the Wild	line	is a Poro it asks for	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 989)	type !first_strike	draw !on_play
 lk269	stormbound	Fragmented Essences	Stream of Consciousness	line	is an Ancient it asks for	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 989)	type !copy	destroy !free_play
-lk270	sts1	Ascender's Bane	Du-Vu Doll	line	is a Curse it asks for	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 989)	type !cant_attack	attack_gain !passive
+lk270	sts1	Ascender's Bane	Du-Vu Doll	line	is a Curse it asks for	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 989)	type !cant_attack	player_attack_gain !passive
 lk271	duelyst	Panddo	Eternity Painter	line	is the {A} it names	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1000)	type !cant_attack	cant_attack !polymorph
 lk272	faeria	Day of the Dragons	Fugoro, Merchant of Wonders	line	makes the Crystal Dragon it names	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1000)	generate_cards !cost_reduction	draw !modal_choice
 lk273	gwent	Ele'yas	Vernossiel	line	makes the Elven Deadeye it names	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1000)	summon !destroy	damage !summon
@@ -278,7 +278,7 @@ lk277	sts1	Burning Blood	Black Blood	line	is the {A} it names	links fix 16 Nov 2
 lk278	marvel_snap	Agamotto	Basic Arrow	line	makes more cards to play	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2052)	generate_cards !start_of_game	on_ally_play !buff
 lk279	monster_train	Wyldenten	Glacial Seal	line	makes more cards to play	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2052)	generate_cards !aoe_damage	damage_over_time !damage
 lk280	runeterra	Insight of Ages	Vi	line	makes more cards to play	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2052)	generate_cards !on_play	on_play !damage_reduction
-lk281	sts1	Blade Dance	After Image	line	makes more cards to play	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2052)	generate_cards !on_play	block_armor !combat_start
+lk281	sts1	Blade Dance	After Image	line	makes more cards to play	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2052)	generate_cards !on_play	player_block_armor !combat_start
 lk282	duelyst	Duskweaver	Firestarter	line	makes a spell whose playing sets off its effect	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2080)	generate_cards !death_trigger	on_spell !on_play
 lk283	gwent	Aguara: True Form	Alzur	line	makes a spell whose playing sets off its effect	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2080)	generate_cards !free_play	on_spell !countdown
 lk284	marvel_snap	Scarlet Witch Queen of Chaos	Nicholas Scratch	line	makes a spell whose playing sets off its effect	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2080)	generate_cards !cost_set	on_spell
@@ -301,18 +301,18 @@ lk300	duelyst	Matter Shaper	Auroras Tears	line	makes a equipment it asks for	lin
 lk301	gwent	Summoning Circle	Pavko Gale	line	makes a unit it asks for	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2177)	selection !cant_attack	activated !cant_attack
 lk302	marvel_snap	Aero	Kingpin	line	moves it where it must be	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2388)	forced_movement !combo_sequence	stat_gain
 lk303	duelyst	Trinity Oath	Theobule	line	fills your hand	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2422)	draw !heal	draw
-lk304	faeria	Healing Song	Radiance, Imperial Airship	line	fills your hand	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2422)	draw !heal	heal !cost_set
+lk304	faeria	Healing Song	Radiance, Imperial Airship	line	fills your hand	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2422)	draw !heal	player_heal !cost_set
 lk305	gwent	Ciri: Dash	Doppler	line	fills your hand	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2422)	draw !countdown	on_play !variety_payoff
 lk306	inscryption	Magpie's Lens	Hand Tentacle	line	fills your hand	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2422)	draw !on_play	passive
 lk307	marvel_snap	Adam Warlock	Red Wolf Fractured Frontier	line	fills your hand	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2422)	draw !stat_gain	on_play !on_draw
 lk308	runeterra	Karma	Chemtech Drake	line	fills your hand	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2422)	generate_cards !passive	damage !draw
 lk309	stormbound	First Mutineer	Northsea Dogs	line	empties your hand	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2422)	discard !on_play	on_play
-lk310	sts1	Acrobatics	Cloak Clasp	line	fills your hand	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2422)	draw !discard	block_armor !damage_reduction
+lk310	sts1	Acrobatics	Cloak Clasp	line	fills your hand	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2422)	draw !discard	player_block_armor !damage_reduction
 lk311	duelyst	Ethereal Blades	Thunderhorn	line	more power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2438)	stat_gain !on_play	damage
 lk312	faeria	Steam Forge	Boulder Thrower	line	more power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2438)	stat_gain !turn_start	damage !attack_now
 lk313	marvel_snap	Adamantium Infusion	Askani'son	line	more power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2438)	stat_gain !banish	spell_power !activated
 lk314	monster_train	Spike of the Hellhorned	Symphony of the Soul	line	more power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2438)	stat_gain !block_armor	block_armor !cost_type
-lk315	runeterra	Twin Disciplines	Revitalizing Roar	line	more power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2438)	stat_gain !modal_choice	heal !cost_set
+lk315	runeterra	Twin Disciplines	Revitalizing Roar	line	more power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2438)	stat_gain !modal_choice	player_heal !cost_set
 lk316	duelyst	Auryn Nexus	Divine Bond	line	more health	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2449)	stat_gain !on_play	on_play
 lk317	faeria	Campfire	Apex Predator	line	more health	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2449)	stat_gain !on_play	on_play !movement
 lk318	runeterra	Twin Disciplines	Zed	line	more health	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2449)	stat_gain !modal_choice	attack_now !first_strike
@@ -335,8 +335,8 @@ lk334	faeria	Falcon Dive	Hilltop Archer	line	clears its line of fire	links fix 1
 lk335	faeria	Sagami Grovecaller	Hilltop Archer	line	moves it without using its move	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2549)	movement !on_play	kw !attack_now
 lk336	faeria	Syland Horsemaster	Mistral Guide	line	moves it where the units summoned next to it are needed	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2583)	movement !on_play	movement !forced_movement
 lk337	faeria	Syland Horsemaster	Mystic Beast	line	moves my units or land forward: it can enter where it needs to be	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2586)	movement !on_play	movement !passive
-lk338	sts1	Barricade	Entrench	line	keeps your Block: it counts more of it	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2597)	cant_attack !passive	block_armor !damage_reduction
-lk339	sts1	Barricade	Armaments	line	keeps the Block it gives	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2602)	cant_attack !passive	block_armor !activated
+lk338	sts1	Barricade	Entrench	line	keeps your Block: it counts more of it	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2597)	cant_attack !passive	player_block_armor !damage_reduction
+lk339	sts1	Barricade	Armaments	line	keeps the Block it gives	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2602)	cant_attack !passive	player_block_armor !activated
 lk340	sts1	Melter	All for One	line	removes their Block: its damage gets through	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2623)	block_armor !damage	damage !on_play
 lk341	sts1	Bash	Reaper	line	gives Vulnerable: its damage is bigger	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2641)	debuff !damage	damage !activated
 lk342	duelyst	Golem Metallurgist	Golem Vanquisher	line	makes it cheaper when it comes	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2739)	cost_reduction !on_play	type !cant_attack
@@ -352,7 +352,7 @@ lk351	runeterra	Frightened Ibex	Lulu	line	gives it more power and health (when i
 lk352	inscryption	Child 13	Adder	line	pays for it again and again: it is sacrificed and does not die	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2790)	cheat_death !cant_attack	rule !destroy
 lk353	gwent	Ulula	Hjalmar an Craite	line	its damage gets 1 more	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2818)	damage !activated	damage !activated
 lk354	runeterra	Funsmith	Ghost	line	its damage gets 1 more	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2818)	damage !on_damaged	cant_attack !evasion
-lk355	sts1	Reprogram	Reinforced Body	line	makes the Block it gives bigger	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2833)	spell_power !attack_gain	block_armor !damage_reduction
+lk355	sts1	Reprogram	Reinforced Body	line	makes the Block it gives bigger	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2833)	spell_power !attack_gain	player_block_armor !damage_reduction
 lk356	duelyst	Tempest (Bloodbound Spell)	Lionheart Blessing	line	damages units or players (for the ability it gives)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2850)	damage !on_play	draw !buff
 lk357	faeria	Storyteller	Spring Mochi	line	makes you draw cards (for the ability it gives)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2850)	draw !heal	cost_reduction !buff
 lk358	gwent	Cantarella	Eternal Eclipse Initiate	line	is played (for the ability it gives)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2850)	free_play !donate	damage !activated
@@ -390,5 +390,5 @@ lk389	runeterra	Karma	Ballistic Bot	line	creates a card, which sets off its Augm
 lk390	runeterra	Piltover Peacemaker	Braum	line	through Flashbomb Trap: damages it without killing it, for its effect (levels it up)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 3174)	trap_secret !activated	on_damaged !forced_attack
 lk391	runeterra	Draven	Vi	line	makes more cards to play	lk96 fix 16 Nov 2026: a single made card that costs 0 is one more play	generate_cards	on_play
 lk392	marvel_snap	Beta Ray Bill	Agony	line	makes more cards to play	lk96 fix 16 Nov 2026: a single made card that costs 0 is one more play	generate_cards	merge_attach
-lk393	sts1	Cloak and Dagger	After Image	line	makes more cards to play	lk96 fix 16 Nov 2026: a single made card that costs 0 is one more play	generate_cards	block_armor
+lk393	sts1	Cloak and Dagger	After Image	line	makes more cards to play	lk96 fix 16 Nov 2026: a single made card that costs 0 is one more play	generate_cards	player_block_armor
 lk394	monster_train	Vinemother	Solgard the Martyr	line	makes more cards to play	lk96 fix 16 Nov 2026: a single made card that costs 0 is one more play	generate_cards	on_spell

@@ -13,7 +13,7 @@ base_resource_gain	same		Runeterra spell mana is the main supply by Kaptain's de
 upgrade	split	a unit levels up on the board / a card is upgraded in the deck	Runeterra level_up 125; Slay the Spire keyword_action on cards 22
 self_destruct	same		Runeterra Fleeting: dies at the end of the turn (Kaptain, 28 Oct 2026)
 forced_movement	fix	my own unit moved is movement; an enemy moved is forced_movement	side mine: Marvel Snap 19, Gwent 20, Slay the Spire 12, Duelyst 7, Runeterra 7, Stormbound 5, Faeria 3, Monster Train 1; and enemy moves the movement rule counted (Gwent 23)
-movement	rows can't tell	Slay the Spire	no board; 26 movement and 59 forced_movement cards say a board move with no target: about 85 to read
+movement	fix	a card or an orb moved between piles or slots is no unit moving	Slay the Spire: 27 orbs into slots, 27 cards into the hand, 11 cards to the deck; Gwent 30 cards between piles: their movement concepts go (no reading needed)
 adjacency	same		one rule (bordering) in every game
 aoe_damage	same		rows on any unit; Duelyst's player rows are its General (see the note)
 cost_reduction	same		cost -1/-2 in Inscryption as elsewhere

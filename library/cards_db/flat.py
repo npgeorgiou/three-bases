@@ -278,8 +278,8 @@ RULES = [
     ('death_count', 'flat_if', "event='dies' and test in ('event_count','amount_event_count','amount_count')"),
     ('combo_sequence', 'flat_if', "test='first_card' or (event='played' and span in ('this_round','last_round'))"),
     ('adjacency', 'flat_do', "on_pick in ('right_of_self','left_of_self')"),
-    ('movement', 'flat_do', "act in ('swap','move') and coalesce(on_zone,eff_zone,'board')='board' and coalesce(on_side,'mine')!='enemy'"),
-    ('forced_movement', 'flat_do', "act in ('swap','move') and coalesce(on_zone,eff_zone,'board')='board' and on_side='enemy'"),
+    ('movement', 'flat_do', "act in ('swap','move') and coalesce(on_zone,eff_zone,'board')='board' and coalesce(on_kind,'') not in ('card','keyword','spell') and coalesce(on_side,'mine')!='enemy'"),
+    ('forced_movement', 'flat_do', "act in ('swap','move') and coalesce(on_zone,eff_zone,'board')='board' and coalesce(on_kind,'') not in ('card','keyword','spell') and on_side='enemy'"),
     ('board_presence', 'flat_if', "test in ('count','amount_count') and of_zone='board' and of_side='mine'"),
     ('count_payoff', 'flat_if', "test in ('amount_count','amount_event_count')"),
     # conditions and kinds of card that any game can have (29 Oct 2026, Kaptain's review of the Runeterra keyword concepts)
@@ -338,6 +338,9 @@ def derive(c):
     c.execute(f"update flat_do set concept='player_' || concept where on_kind='player' and concept in ({ks}) and not {BODY}")
     c.execute(f"update flat_when set concept='player_damaged' where concept='on_damaged' and obj_kind='player' and not {BODY}")
     c.execute("update flat_do set concept='movement' where concept='forced_movement' and on_side='mine'")
+    # a card or an orb moved between piles or slots (Slay the Spire) is no unit moving on the board
+    c.execute("update flat_do set concept=null where act in ('move','swap') and concept in ('movement','forced_movement') and "
+              "(coalesce(on_kind,'') in ('card','keyword','spell') or coalesce(eff_zone,'board')!='board')")
     c.execute("update flat_do set concept='level_up' where act='level_up'")
     c.execute("insert into flat_concept select distinct card, concept, 'row' from flat_do where concept is not null and concept!=''")
     c.execute(f"insert into flat_concept select distinct card, 'player_' || concept, 'row' from flat_do where on_kind='player' and concept in ({ks}) and {BODY}")

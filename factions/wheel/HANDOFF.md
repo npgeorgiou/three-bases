@@ -6,8 +6,8 @@ One chat does one step; at its end, mark the step done here.
 ## The steps
 | step | state | what it made |
 |---|---|---|
-| 1. Fix the library's concepts | splits written, rebuild next (`library/cards_db/checks/wheel_step1/PROGRESS.md`) | `work/suspect_verdicts.tsv` |
-| 2. The radii and how they work together | to redo after step 1 | `axes.tsv`, `wheel/radius_links.tsv` |
+| 1. Fix the library's concepts | done 16 Nov 2026 | concepts split by whom a row acts on (player, my unit, cards between piles), radii without game limits; `work/suspect_verdicts.tsv` |
+| 2. The radii and how they work together | NEXT | `axes.tsv`, `wheel/radius_links.tsv` |
 | 3. The 20 shapes | to redo after step 2; Kaptain agrees them again | `work/shapes.tsv` |
 | 4. The usable concepts | to do; `work/concept_catch.py` is written for it | |
 | 5. The links between concepts | to do; `mechanics_wheel.py` gets a concept mode | |
@@ -16,8 +16,7 @@ One chat does one step; at its end, mark the step done here.
 | 8. Combos on this board | to do | |
 | 9. The seven answers, Stop 1 | to do; `work/make_stop1.py` is rewritten for it | |
 
-Inputs ready: for step 1 `work/suspects.tsv` (46 concepts counted only in some games); for step 4
-`work/concept_verdicts.tsv` (68 concepts left out, each with its reason; Claude's).
+Inputs ready: for step 4 `work/concept_verdicts.tsv` (68 concepts left out, each with its reason; Claude's).
 
 ## The numbers (library/cards_db)
 - `links.sqlite` is rebuilt only after `network.py` or `cards.sqlite` changed: `PYTHONHASHSEED=0 python3 links.py`
@@ -40,6 +39,8 @@ Inputs ready: for step 1 `work/suspects.tsv` (46 concepts counted only in some g
 - The wheel is general; step 7 turns each faction's group into these own things, from scratch.
 - Every game counts the same in every number. Shapes come from real factions, so a game with no factions (Marvel Snap)
   gives no shape; its cards still count in every number.
+- Interactions with the player (heal, Block, strength on the player; the player hurt) stay off the radii: no player
+  health here. They stay in the library as player_<concept>.
 - Damage over time and my units changing form are possibilities for cards, not concepts a faction builds on.
 - An all-Immobile faction is allowed.
 - Must stay in: G = grows when hurt + I damage my own units; steal; kill spells; placing units in the enemy camp;
