@@ -3,10 +3,10 @@ W='/home/claude/three-bases/library/cards_db/wheel/'
 LK={}
 for x in csv.DictReader(open(W+'links.tsv'),delimiter='\t'):
     a,b=x['a'],x['b']; f=lambda v: float(v) if v else None
-    LK[(a,b)]=LK[(b,a)]=(f(x['cards']),f(x['decks']))
+    LK[(a,b)]=LK[(b,a)]=(f(x['level']),f(x['decks']))
 def strong(a,b):
     c,d=LK.get((a,b),(None,None)); c=c or 0; d=d or 0
-    return c>=1.5 or (c>=1.2 and d>=1.2)
+    return c>=1  # the library links them at all (level 1+)
 def deck(a,b):
     c,d=LK.get((a,b),(None,None)); return (d or 0)>=1.5
 CIRC='A T I L M E D J H Q G F R N P C S B K O'.split()

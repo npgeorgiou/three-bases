@@ -5,12 +5,13 @@ Usage (from library/cards_db):
                                          faction's count (30+ wanted), radii it serves (share of its cards per radius)
   mechanics_wheel.py links            -> library/cards_db/wheel/links.tsv: per pair, linked x chance in all cards (a link counts
                                          for a mechanic only through what of each card made it: links.sqlite a_ab, b_ab), and in real
-                                         decks; runs cases/wheel.tsv
+                                         decks; links = the linked card pairs made by the two mechanics, level = that
+                                         count growing slowly (level()); runs cases/wheel.tsv
   mechanics_wheel.py cards <file>     -> per mechanic 8 cards with text (for an agent to read)
   mechanics_wheel.py pairs A+B,C+D <file> -> linked card pairs of A with B, their link reasons and texts (for an agent)
   --radii after the command: the wheel's radii (axes.SPOKES, not the numbers) in place of the mechanics; links writes
                                          library/cards_db/wheel/radius_links.tsv (step 2)"""
-import collections, csv, os, sqlite3, sys
+import collections, csv, math, os, sqlite3, sys
 import axes, faction_asks, mechanics, deck_analysis
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -114,17 +115,25 @@ def links(mechs, c, games, x, con, pools):
             if len(p) >= 4 and p[0] in pools:
                 ids, _ = deck_analysis.parse_deck(c, p[0], p[3])
                 deck_lists[p[0]].append({i for i in ids if i in pools[p[0]]})
-    cards = axes.radius_links(games, pools, con, pairs)
+    plain = collections.Counter()
+    cards = axes.radius_links(games, pools, con, pairs, plain=plain)
     decks = axes.radius_links(games, pools, con, pairs, deck_lists)
     bad = case_failures(c, con, axes.SPOKES, pairs)
     axes.SPOKES = saved
     keys = [m[0] for m in mechs]
     with open(os.path.join(OUT, 'radius_links.tsv' if keys == [r[0] for r in radii()] else 'links.tsv'), 'w', encoding='utf-8') as f:
-        f.write('a\tb\tcards\tdecks\n')
+        f.write('a\tb\tcards\tdecks\tlinks\tlevel\n')
         for n, a in enumerate(keys):
             for b in keys[n:]:
-                f.write(f"{a}\t{b}\t{'' if cards[a][b] is None else cards[a][b]}\t{'' if decks[a][b] is None else decks[a][b]}\n")
+                k = plain[tuple(sorted((a, b)))]
+                f.write(f"{a}\t{b}\t{'' if cards[a][b] is None else cards[a][b]}\t{'' if decks[a][b] is None else decks[a][b]}\t{k}\t{level(k)}\n")
     print('cases/wheel.tsv: ' + ('all pass' if not bad else f'{len(bad)} fail\n' + '\n'.join(bad)))
+
+
+def level(links):
+    """the plain count of linked card pairs as a level that grows slowly (Kaptain, 16 Nov 2026: a pairing rare in the ten
+    games can be splendid on this board): 0 links = 0, 1 = 1, 10 = 2, 100 or more = 3"""
+    return 0 if not links else round(min(3, 1 + math.log10(links)), 2)
 
 
 def cards(mechs, c, games, x, con, pools, path, per=8):

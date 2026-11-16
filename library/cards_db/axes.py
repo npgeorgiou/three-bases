@@ -342,11 +342,12 @@ def side_keys(card, src, game, keys, con, cache={}):
     return cache[key]
 
 
-def radius_links(games, pools, con, pairs, deck_lists=None):
+def radius_links(games, pools, con, pairs, deck_lists=None, plain=None):
     """All cards (no deck_lists): how much more often than chance the library links a card of one radius with a card of the
     other (1 = chance = the share of all card pairs of the game that the library links). pairs as a dict (card pair -> the
     sides of its links): a link counts for two radii only through what of each card made it (side_concepts), and chance
     likewise: the old chance x the share of A's cards' links that A makes x the same share for B.
+    plain (a Counter): filled with the linked card pairs of each two radii (sorted keys), counted once per pair.
     Decks (deck_lists given; Kaptain, 10 Nov 2026: how often radii appear in the same real decks, linked or not): per deck,
     the share of its cards that count for each radius; for two radii A and B, the average of (A share x B share) over the
     game's decks divided by (average A share x average B share). 1 = decks heavy in A hold as much B as usual; 2 = twice as
@@ -389,6 +390,8 @@ def radius_links(games, pools, con, pairs, deck_lists=None):
                     for i, on in ((a, on_a), (b, on_b)):
                         for k in of[i]: ends[k] += 1; through[k] += k in on
                 for ka, kb in both_: obs[(ka, kb)] += 1; obs[(kb, ka)] += 1
+                if plain is not None:
+                    for ka, kb in {tuple(sorted(t)) for t in both_}: plain[(ka, kb)] += 1
         # chance through the sides: a link of a card of A is made by its A part in share(A) of its links (1 without sides)
         share = lambda k: through[k] / ends[k] if isinstance(pairs, dict) and ends[k] else 0 if isinstance(pairs, dict) else 1
         for sa in keys:

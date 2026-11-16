@@ -5,13 +5,13 @@ R='factions/wheel/'; W='library/cards_db/wheel/'
 fails=[]
 def fail(s): fails.append(s)
 def tsv(p): return [l.rstrip('\n').split('\t') for l in open(p)][1:]
-strong=lambda n:n[0]>=1.5 or (n[0]>=1.2 and n[1]>=1.2)
+strong=lambda n:n[0]>=1 or n[1]>=1.5  # joined: the library links them at all (level 1+, any link made by the two) or real decks 1.5+
 RL={}
 for x in csv.DictReader(open(W+'radius_links.tsv'),delimiter='\t'):
-    c=float(x['cards'] or 0); d=float(x['decks'] or 0); RL[(x['a'],x['b'])]=RL[(x['b'],x['a'])]=(d if 'spellpay' in (x['a'],x['b']) else c,d)
+    c=float(x['level'] or 0); d=float(x['decks'] or 0); RL[(x['a'],x['b'])]=RL[(x['b'],x['a'])]=((d>=1.2)*1 if 'spellpay' in (x['a'],x['b']) else c,d)
 ML={}
 for x in csv.DictReader(open(W+'links.tsv'),delimiter='\t'):
-    ML[(x['a'],x['b'])]=ML[(x['b'],x['a'])]=(float(x['cards'] or 0),float(x['decks'] or 0))
+    ML[(x['a'],x['b'])]=ML[(x['b'],x['a'])]=(float(x['level'] or 0),float(x['decks'] or 0))
 ARG=set()
 for k,a,b,f,_ in tsv(R+'arguments.tsv'): ARG|={(k,f,a,b),(k,f,b,a)}
 MECH={p[0] for p in tsv(R+'mechanics.tsv')}

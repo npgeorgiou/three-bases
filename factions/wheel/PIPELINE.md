@@ -14,10 +14,11 @@ changed. Each step says what a script does and what is judgment.
 ## Step 2. The radii that work together (second try, 14 Nov 2026)
 - Numbers: `python3 mechanics_wheel.py links --radii` -> `wheel/radius_links.tsv`. Per pair of radii: `cards` = how
   much more often than chance the library links a card of one with a card of the other (same game); `decks` = how much
-  more decks heavy in one hold the other. 1 = chance. "Rewards playing spells" is judged by `decks` only.
-- Strong = `cards` 1.5 or more, or `cards` and `decks` both 1.2 or more.
+  more decks heavy in one hold the other. 1 = chance. `links` = the linked card pairs made by the two; `level` = that
+  count growing slowly (0, 1 link = 1, 10 = 2, 100+ = 3). "Rewards playing spells" is judged by `decks` only.
+- Joined = `level` 1 or more (the library links them at all), or `decks` 1.5 or more.
 - A link counts for a radius only when the effect that made it, on that card's side, belongs to the radius (the links'
-  `a_ab`/`b_ab` columns; HANDOFF Part 1, "the wheel's count"). Numbers only: nobody reads card pairs.
+  `a_ab`/`b_ab` columns), for chance too (the share of a radius' cards' links its own effects make). Numbers only: nobody reads card pairs.
 
 ## Step 3. The 20 factions as shapes (second try)
 - What: each faction = 3-6 radii with uneven values, like real factions. Each radius joined to at least one other of
@@ -42,7 +43,7 @@ changed. Each step says what a script does and what is judgment.
 - What changed: only the concepts column of mechanics.tsv. The card database (cards.sqlite) was not changed.
 - Then: `python3 mechanics_wheel.py measure` -> `wheel/measured.tsv` (per mechanic: cards, games with 10+, the biggest
   real faction's count, the real factions with the highest share, the radii it serves) and
-  `python3 mechanics_wheel.py links` -> `wheel/links.tsv` (per pair of mechanics, the same two numbers as step 2).
+  `python3 mechanics_wheel.py links` -> `wheel/links.tsv` (per pair of mechanics, the same numbers as step 2).
 - Not saved: the agents' prompt of this step.
 
 - Rule and archetype check (15 Nov 2026): each mechanic checked against this game's rules (summary/03-07); dropped:
@@ -56,7 +57,7 @@ changed. Each step says what a script does and what is judgment.
   3 factions) -> `work/assign.tsv`. Checked by `work/check_assign.py`.
 
 ## Step 6. Links between mechanics
-- Numbers only: `python3 mechanics_wheel.py links` -> `wheel/links.tsv` (per pair of mechanics, the same two numbers as
+- Numbers only: `python3 mechanics_wheel.py links` -> `wheel/links.tsv` (per pair of mechanics, the same numbers as
   step 2, counted by the links' own effects). `python3 apart.py` gives the pairs real factions keep apart.
 
 ## Step 7. Theme, then tools
