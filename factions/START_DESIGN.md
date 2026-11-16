@@ -26,11 +26,12 @@ take a base, hold it, or take it from the enemy?
 ## THE THINKING PROCESS (in this order; no step skipped)
 Step 0 (Kaptain, 9 Nov 2026): the faction's place on the mechanical wheel (`factions/12-mechanical-wheel.txt`) comes
 first. Its radii, signature mechanics, blind spots, mechanics shared with other factions and how it differs from every other
-faction are decided there, for all 20 factions together, not in the faction's chat. The theme comes last and fits the
-mechanics.
+faction are decided there, for all 20 factions together, not in the faction's chat, and so are its theme (picked
+after the mechanics) and its tools.
 Steps 1-6 come from the library, never from memory. Run the queries below on all games (`ask.py all ...` from
 `library/cards_db/`; a faction name used by two games, such as Ironclad, needs the game: `ask.py sts1 lacks Ironclad`),
-read 5-10 card texts behind every count, and write the sources (game: card) next to each answer of steps 2, 3, 5 and 6.
+and write the sources (game: card) next to each answer of steps 2, 3, 5 and 6. `ways` and `curve` show what each card
+does; card texts are read only within the faction's 100 (START_DESIGN-3, "Reading cards").
 - Step 1: list the factions of every game (section 3) and pick the 6-10 closest to the faction's place on the wheel (the
   closest factions in `factions/wheel-axes.html`; for the planned shape itself `python3 axes.py --near`, see
   `START_DESIGN-1-wheel.md`; not the theme), at least one per board game
@@ -46,11 +47,13 @@ read 5-10 card texts behind every count, and write the sources (game: card) next
   A deck is a small part of what a faction is (decks.tsv: about 80-100 top decks each for Runeterra, Duelyst, Faeria,
   Marvel Snap; fewer for the others): decks show which cards are played together, never prove alone that two
   mechanics fit; the card-by-card queries of steps 2-5 come first.
-1. **Name, icon, theme** (chosen after the wheel gave the mechanics). A real theme (World War I artillery, the Zulu regiments, Babylonian astrologers), with 10+ facts
-   about how they fight, live, trade, believe, what they fear and what they lack. Each fact is a source of cards later.
-2. **Kaptain's seven questions**, answered before any card:
+1. **Name, icon, theme.** The theme comes from the wheel (a real one: World War I artillery, the Zulu regiments,
+   Babylonian astrologers). Write 10+ facts about how they fight, live, trade, believe, what they fear and what they
+   lack. Each fact is a source of cards later.
+2. **Kaptain's seven questions**, answered before any card. Start from the wheel's answers (`factions/wheel/answers.tsv`)
+   and sharpen them with the library:
    1. Identity: one sentence saying how the faction wins. Good: "units die, and every death feeds the others". Bad: "a
-      flexible faction with many tools" (it could be any faction).
+      flexible faction with many options" (it could be any faction).
    2. Front removal: how it gets rid of an enemy unit that holds a base, in a way no other faction does. Examples: push
       it out of the front row, so it stops cancelling your dot; take its strength away for good; kill it only by letting
       an ally die. "Can't attack this round" is not removal: the enemy just waits a round.
@@ -62,15 +65,15 @@ read 5-10 card texts behind every count, and write the sources (game: card) next
       or hit by enemy spells".
    6. The play that feels good: what its units do the moment they are placed. Example: "Place: push the enemy facing me
       one row back".
-   7. Blind spot: the one tool it never gets, on any card. Example: a swarm faction never restores shields.
+   7. Blind spot: the one thing it never gets, on any card. Example: a swarm faction never restores shields.
 3. **Signature mechanics and blind spots** (taken from the wheel). 2 signature mechanics: the faction builds on them;
-   other factions may have them as extras or one-offs. A list of tools it never has; its cards never make up for them,
+   other factions may have them as extras or one-offs. A list of things it never has; its cards never make up for them,
    it plays around them. A blind spot is never one of the two things every faction needs (hold dots, remove enemies),
    only one way of doing them: "no kill spells" is a blind spot, "no removal" is not.
 4. **How it differs from each other faction** (from the wheel; check it with the closest factions on the page). Kaptain's example: a swarm that fills the front rows with many cheap weak
    units, against a fortress that never has more than 3 units and moves defence between them. Write one sentence per
    other faction saying why a game between the two feels different.
-5. **Mechanics (4-6)**, each written "I do X -> I gain from X" ("my units die -> my other units grow"). A mechanic is
+5. **Mechanics (4-6: the wheel's 2 signatures and 2-4 extras) and its 2-4 tools**, each mechanic written "I do X -> I gain from X" ("my units die -> my other units grow"). A mechanic is
    broad: 30+ cards can make it happen or use it. One card's effect ("a gun fires") is not a mechanic. Each mechanic
    grows in at least one of three ways:
    - Chain: an effect gets bigger when something else happened first. "Deal 1 damage. If you cast another spell this
@@ -80,12 +83,13 @@ read 5-10 card texts behind every count, and write the sources (game: card) next
    - Turning point: once a condition is met, the board works differently. "While you have twice as many units in my lane
      as the enemy, my allies here strike twice."
 6. **Three to five ways to play**, as many as the closest real factions show (never filler). They are built around the
-   faction's tools from the wheel (`START_DESIGN-1-wheel.md` step 7): the tools are its backbone, not all of its cards. Each builds a different board and asks for different decisions. For each, write which rows and
-   cells it fills, its cost 1-4 opening, its 4-6 middle, its 6+ finish, and its leader. Test: two ways that put the same
+   faction's tools from the wheel (`START_DESIGN-1-wheel.md` step 7): the tools are its backbone, not all of its cards.
+   Each way builds a different board and asks for different decisions. For each, write which rows and cells it fills,
+   its cost 1-4 opening, its 4-6 middle, its 6+ finish, and its Leaders (the 5 are spread over the ways). Test: two ways that put the same
    kind of units in the same cells and win the same way are one way.
 7. **The library, card by card.** For each way to play, 20+ real cards from the closest factions of ALL games
    (`ask.py all ways`, `palette`, `curve`, `spells`, `removal`, `protect`: section 3). At most 100 cards are read for the
-   whole faction, steps 6 and 7 together; a card already in `factions/read-cards.tsv` is used from its line, never read
+   whole faction, the wheel's tools and steps 6 and 7 together; a card already in `factions/read-cards.tsv` is used from its line, never read
    again (part 3, "Reading cards"). For each card write one line: the
    decision the player makes when playing it. Save the lines in `factions/designs/<faction>-library.txt` (the gate reads
    it: "WAY <name>" lines, then "<game> | <card> | <the decision>").

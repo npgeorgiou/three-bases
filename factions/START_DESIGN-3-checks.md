@@ -54,7 +54,8 @@ How to ask: part 4, `START_DESIGN-4-asking.md`. Run from `library/cards_db/`.
   (what a faction never has: its blind spots).
 - For a mechanic: `compare`, `factions`, `fed`, `feeds`, `together`, `chains`, `both`. Read 5-10 card texts before trusting
   a count.
-- Reading cards: at most 100 per faction, the key cards of the closest real factions' ways (`ask.py all ways`). First
+- Reading cards: at most 100 per faction, for its tools (the wheel's step 7) and its ways to play (steps 6-7) together;
+  the key cards of the closest real factions' ways first (`ask.py all ways` shows what each key card does). First
   look up `factions/read-cards.tsv`: a card listed there is never read again, its line says which way it showed. Every
   card read gets a line there (game, card, faction it was read for, the way it showed). When a card's text shows
   something its database rows or links get wrong or leave out, the database or the link script is fixed in the same

@@ -4,8 +4,8 @@ what Kaptain decided and what was learned: never undo it. Clone with the library
 
 ## Rules for this work (Kaptain)
 - **No card reading to judge links or combos.** The database already holds what every card does; scripts query it.
-  Reading is only for a faction's ways to play (START_DESIGN step 6): at most 100 cards per faction, the key cards of
-  the closest real factions' ways, logged in `factions/read-cards.tsv` (never read a card listed there again). A text that shows the database or the
+  Reading is only for a faction's tools and ways to play: at most 100 cards per faction, the key cards of the closest
+  real factions' ways, logged in `factions/read-cards.tsv` (never read a card listed there again). A text that shows the database or the
   links wrong gets them fixed, with test cases (START_DESIGN-3).
 - Before any agent runs: say how many, the cost (about 110k tokens each) and wait for Kaptain's OK.
 - Plan first, in plain words with one example; build only after "go". One question at a time.
@@ -75,7 +75,7 @@ example above (the pair must not count). Then the docs (Part 2 step 0).
 
 ## Part 2. Design the 20 factions again
 Steps of `factions/START_DESIGN-1-wheel.md`. What stays and what is redone:
-0. Docs first, cleanly: `START_DESIGN-1-wheel.md` (step 6 = numbers only; no reading anywhere), `PIPELINE.md`,
+0. Docs first, cleanly: `START_DESIGN-1-wheel.md` (steps 2 and 6 = numbers only), `PIPELINE.md`,
    `START_DESIGN-4-asking.md`, `library/README.md`, START_DATABASE's links part (the new columns). Remove the reading
    files no step uses any more (`work/radius_verdicts.tsv`, `work/mechanic_pair_verdicts.tsv`, the reading prompts) and
    the check script's use of them.
@@ -86,7 +86,7 @@ Steps of `factions/START_DESIGN-1-wheel.md`. What stays and what is redone:
 4. Mechanics list: STAYS (Kaptain agreed it at Stop A: `STOPA.md`, `mechanics.tsv`, 53 mechanics).
 5. Each faction's mechanics: REDO by script (`work/signatures.py --write`, `work/borrow.py --write`, `check_assign.py`).
 6. Links between mechanics: numbers only (`mechanics_wheel.py links`).
-7. Tools (`START_DESIGN-1-wheel.md` step 7): new for all 20, the step changed. First change `tools/wheel_table_check.py`
+7. Theme, then tools (`START_DESIGN-1-wheel.md` step 7): new for all 20, the step changed. First change `tools/wheel_table_check.py`
    and `work/make_stop1.py` to read a tools file in place of `board.tsv` (per tool: faction, tool, mechanic, the tools
    it feeds, the cell-by-cell line, source) and check what step 7 and "The check script" say.
 8. Combos on this board, from the tools: all 190 pairs, since every faction's tools are new. Agents, Kaptain's OK first.
@@ -113,8 +113,8 @@ Steps of `factions/START_DESIGN-1-wheel.md`. What stays and what is redone:
 - A faction is built from 2-4 tools that feed each other, each from one of its mechanics, played out cell by cell
   (`START_DESIGN-1-wheel.md` step 7). The tools are the backbone, not all 100 cards: 3-5 ways to play are built around
   them, as many as the closest real factions show (START_DESIGN.md step 6). One idea is never the whole faction.
-- Open, not agreed: whether the theme is chosen after step 6 and before step 7, so tools come from one picture
-  (Claude's suggestion).
+- The theme is picked in the wheel chat after step 6, before the tools, for the faction's mechanics; a tool that
+  fits the theme but grows from no mechanic is dropped.
 - Leaders: 5 per faction, the only cards with a golden border, spread over the costs and the ways to play; their
   special part works by whether I hold the lane's base, helps take and keep a lane, never wins harder in a won lane;
   nine kinds, mixed in each faction (START_DESIGN-2, "What a faction has").

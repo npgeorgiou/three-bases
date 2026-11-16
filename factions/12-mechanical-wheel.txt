@@ -2,8 +2,8 @@
 12. THE MECHANICAL WHEEL: designing 20 factions together
 ==================================================================
 Why: designing factions one by one from a theme loses what makes each faction unique and how its mechanics connect.
-Mechanics, identity and Kaptain's seven questions come first for all 20 factions at once; the theme comes last, per
-faction, as inspiration. The wheel is made by calculation, research and intuition. The steps, in order, with their
+Mechanics, identity and Kaptain's seven questions come first for all 20 factions at once; the theme comes after the
+mechanics, as a source of each faction's tools. The wheel is made by calculation, research and intuition. The steps, in order, with their
 stops: factions/START_DESIGN-1-wheel.md. Commands: factions/wheel/PIPELINE.md.
 
 Principles
@@ -14,7 +14,8 @@ Principles
    on the circle. Real factions do the same: of the 27 with a value on 20+ radii, 19 are strong on 3-6 radii, only 3
    have them side by side, and opposite radii are not kept apart (correlation 0.01). No two factions sit on the same
    place.
-3. A faction builds on 2 signature mechanics and 2-4 extras; any card may carry a one-off from any mechanic.
+3. A faction builds on 2 signature mechanics and 2-4 extras, turned into 2-4 tools that feed each other; any card may
+   carry a one-off from any mechanic.
 4. Every faction differs from every other in each of the seven answers.
 5. Combos are trigger -> payoff between factions: a card of one makes the thing a card of another gains from. Every
    faction combines well with at least 10 others. Planned combos are only part of the hooks; each faction's chat adds
