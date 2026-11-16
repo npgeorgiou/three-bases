@@ -9,8 +9,8 @@ One chat does one step; at its end, mark the step done here.
 | 1. Fix the library's concepts | done 16 Nov 2026 | concepts split by whom a row acts on (player, my unit, cards between piles), radii without game limits; `work/suspect_verdicts.tsv` |
 | 2. The radii and how they work together | done 16 Nov 2026 | `axes.tsv`, `wheel/radius_links.tsv` |
 | 3. The 20 shapes | done 17 Nov 2026, Kaptain agreed them | `work/shapes.tsv` |
-| 4. The usable concepts | done 17 Nov 2026 | `work/concepts.tsv` (123 usable, 72 left out) |
-| 5. The links between concepts | NEXT; `mechanics_wheel.py` gets a concept mode | |
+| 4. The usable concepts | REDO, see "Agreed 17 Nov 2026" below | `work/concepts.tsv` |
+| 5. The links between concepts | to do, after the redo; `mechanics_wheel.py` gets a concept mode | |
 | 6. The 20 groups | to do; `work/groups.py` to write, `tools/wheel_table_check.py` to rewrite | |
 | 7. Theme, then tools | to do | |
 | 8. Combos on this board | to do | |
@@ -20,6 +20,37 @@ Inputs ready: for step 5 `work/concepts.tsv`. Kinds of play whose concepts are n
 (step 6 must handle them): the starred radius groups countboard*, kill*, weaken*, spelldmg*, position*, and polymorph,
 piercing, cross_lane (under 10 cards). Step 3's check: 26 kind-of-play concepts have under a quarter of their cards on
 that kind's radii (`shapes.py` prints them); Kaptain decides on them before step 6.
+
+## Agreed 17 Nov 2026: do this next, in this order (one chat; read START_DATABASE.md whole first: it changes the library)
+1. Library: the concept "Skill" (spell_or_skill) goes. It only says a card record's kind is "ability" (`flat.py`, the
+   line giving it to every category='ability' card; Into the Breach weapons, Runeterra skills); its cards keep what
+   their rows say. Remove it from `library/concept_tree.txt` too; cases. Rebuild links (`links.py`, about 7 minutes).
+2. Redo step 2 (`axes.py`, `mechanics_wheel.py links --radii`) and step 3 (`shapes.py --write`). If a shape moved,
+   show Kaptain the old and the new line to agree again.
+3. No raw pair counts anywhere (a big game would drown the others): `links` and `level` in steps 2 and 5, the
+   "count of pairs only breaks ties" rule and the link texts get "in how many games" (of 10) beside "times chance"
+   (per game, averaged); ties broken by games. Link text: "... (in 7 of 10 games, 3.1 times chance)". Docs too.
+4. Redo step 4 with the new rule (rewrite step 4 in START_DESIGN-1-wheel.md to it): a concept is USABLE when a
+   faction can build on it: it says what a card does, or reacts to something the player makes happen or builds up. A
+   concept that only says when or how a card acts is a HELPER, as are the game's own things and things for single
+   cards: never in a group; after step 6 each faction gets them in its list (6). OUT for good: not in this game,
+   Kaptain's rulings. A concept that only says what kind of record a card is, is a library error (removed, as Skill).
+   - Usable now: on_draw, on_targeted, on_enemy_enter (Kaptain: keep), on_lifegain, hand_size, variety_payoff,
+     condition_life, count_payoff, deck_position, card_presence_condition, cost_condition, condition_count.
+   - Out: max_mana_condition (supply does not grow by itself). Find the library's concept for supply gained
+     (Runeterra: leftover mana saved as spell mana); if there is none, tell Kaptain.
+   - Helpers: on_play, turn_end, start_of_game, combat_start, once_per_game, passive, activated, cooldowns, delayed,
+     play_timing_condition, modal_choice, symmetric_effect, aura; the game's own things (lanes, zone_control,
+     resource_banking, round_carryover, positional, board_limit, high_cost, on_harvest); single cards (exhaust,
+     drawback, cant_attack, slots_queue, target_choice).
+   - `concept_catch.py` writes the three kinds (`concept_verdicts.tsv` gets a kind column); the card-count column
+     gets its own name (it clashes with the radius "cards").
+5. Step 5 counts the helpers' links too.
+6. After step 6, a script writes per faction ONE list of every usable concept and helper, sorted by fit (step 6's
+   fit), with beside each how strongly it links to the faction's group (times chance, in how many games). Step 7 and
+   the faction's card chat must read it: write that into START_DESIGN-1-wheel.md step 7 and START_DESIGN.md steps 5-8.
+7. Report to Kaptain: what removing Skill changed and any shape that moved; the concepts by kind in plain words
+   with card count and games; the new step 4 rule. Push; handoff.
 
 ## The numbers (library/cards_db)
 - `links.sqlite` is rebuilt only after `network.py` or `cards.sqlite` changed: `PYTHONHASHSEED=0 python3 links.py`
@@ -49,6 +80,8 @@ that kind's radii (`shapes.py` prints them); Kaptain decides on them before step
 - Must stay in: G = grows when hurt + I damage my own units; steal; kill spells; placing units in the enemy camp;
   bringing back without an Egg. Only one Egg in the whole wheel: look-alikes are compared by what the card does.
   "Strike first" is not a plan here. "Ping" is a library word: say "small hits".
+- A faction's 100 cards draw on every usable concept and trigger of the library, never only its group: the group is
+  its character (what it is strongest at, what its tools grow from), not all it may use.
 - A faction is built from 2-4 tools that feed each other, played out cell by cell. The tools are the backbone, not all
   100 cards: 3-5 ways to play are built around them, as many as the closest real factions show. One idea is never the
   whole faction. The theme is picked after the group, before the tools; a tool that fits the theme but grows from no
