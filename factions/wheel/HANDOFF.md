@@ -112,7 +112,8 @@ If many factions change, Kaptain may say redo 7-9 for all: ask.
 - A faction is built from 2-4 tools: each a new kind of thing or rule that makes the faction's plan happen, grown from
   one of its mechanics (or joining two), carried by many cards, feeding at least one other tool; no two factions have
   the same tool doing the same job. A faction holds together because its tools feed each other, never because one idea
-  is on every card. The seven answers (how it wins, front removal, back-row removal, between lanes, holding, Place,
+  is on every card. Every chain of tools is played out cell by cell before it is written: which cell, what happens
+  there, what the enemy does in between (two tools that need the same cell clash). The seven answers (how it wins, front removal, back-row removal, between lanes, holding, Place,
   blind spot) are built from the tools together. Claude's examples of tools, not yet checked in the library: edicts
   (a lasting rule on a lane), trophies (a card for killing a marked enemy), debts (supply from next round), graves
   (a dead unit's cell passes its Death on), banners (a claimed column shares damage), oaths (sworn on a lane at round
