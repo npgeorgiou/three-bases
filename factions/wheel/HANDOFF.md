@@ -63,7 +63,8 @@ Next: first the open points in `todo.md` ("Wheel: open points"), one by one, the
 - Shapes come from real factions (step 3), so a game with no factions (Marvel Snap) gives no shape; its cards still
   count in every number and in the mechanics.
 - Archetypes (`archetypes.tsv`): each carried by 2-3 shapes, each shape carries at most 2, so factions are varied.
-- "One chosen" target is the default for every faction, in no shape.
+- "One chosen" is dropped (Kaptain): every card lets the player pick its target, so it says nothing about a faction.
+  `axes.py` still measures it as a radius; it is never used, shown or named to Kaptain.
 - Every mechanic of the list is a signature or an extra of at least one faction.
 - An all-Immobile faction is allowed (the old rule against it is deleted).
 - Each faction answers seven questions, one line each: how it wins, how it removes the front unit, how it MAINLY removes
