@@ -30,6 +30,16 @@ def src_of(origin, ab, via):
     return 'rule' if origin == 'game' else str(ab) if ab is not None else f'kw{via}'
 
 
+def note(a, b, y, a_src, b_src):
+    """SRC for a line appended where the pair's lines are a plain list (after a cleanup that rebuilt them)"""
+    SRC[(a, b, y)].add((';'.join(sorted(a_src)), ';'.join(sorted(b_src))))
+
+
+def rows_of(c, a, sql, *args):
+    """the effect rows ('ability.seq') of card a that fit a flat_do condition (SRC); none: the card itself"""
+    return {f'{x}.{y}' for x, y in c.execute(f'select ability, seq from flat_do where card=? and {sql}', (a,) + args)} or {'type'}
+
+
 def row_src(c, ab, h):
     """the effect rows ('ability.seq') of an ability that make happening h (vocab `causes`, as refs.py reads them); the
     ability when none is found: the wheel tells "+2 Power" from "+1 Energy next turn" of one ability (Vibro-Shock Gauntlets)"""
@@ -769,14 +779,17 @@ def lines_of(c, game):
                 elif cheap: out[(m, t)].append(('cheaper', w, say), src)  # "costs 1 less for each card discarded"
                 else: out[(m, t)].append(('waits' if role == 'trigger' else 'type', w, say), src)  # a reaction is triggered; a count or a
                 # state it needs is enabled (Kaptain, 30 Oct 2026: "triggers" and "enables")
-    put = [(m, ref, act) for m, ref, act in c.execute(f"""select card, card_ref, act from flat_do where act in ({','.join('?' * len(PUTS))})
-           and not (act in ('summon','create','copy') and 'enemy' in (coalesce(on_side,''), coalesce(to_side,'')))""", PUTS)  # a unit made on
+    put_src = collections.defaultdict(set)  # (m, ref, act) -> the effect rows that put it (SRC)
+    put = []
+    for m, ref, act, r_ in c.execute(f"""select card, card_ref, act, ability || '.' || seq from flat_do where act in ({','.join('?' * len(PUTS))})
+           and not (act in ('summon','create','copy') and 'enemy' in (coalesce(on_side,''), coalesce(to_side,'')))""", PUTS):  # a unit made on
            # the enemy's side (Cuckoo's Broken Egg) is not mine; a card planted in the enemy deck (Poison Puffcap) is my act
-           if m in cards and ref in cards and m != ref]
+        if m in cards and ref in cards and m != ref: put.append((m, ref, act)); put_src[(m, ref, act)].add(r_)
     mk_kws = {v for (v,) in c.execute("select distinct via from flat_do where origin='uses_keyword' and act in ('create','summon','choose_card')")}
-    for m, kw_, w_ in c.execute("select card, keyword_ref, on_with from flat_do where act='keyword_action' and origin='own' and on_with like '%card is %'"):
+    for m, kw_, w_, r_ in c.execute("select card, keyword_ref, on_with, ability || '.' || seq from flat_do where act='keyword_action' and origin='own' and on_with like '%card is %'"):
         if kw_ in mk_kws and m in cards:  # "Manifest an Otterpus or ...": it makes the card it names
-            put += [(m, int(x), 'create') for x in re.findall(r'card is (\d+)', w_) if int(x) in cards and int(x) != m]
+            new_ = [(m, int(x), 'create') for x in re.findall(r'card is (\d+)', w_) if int(x) in cards and int(x) != m]; put += new_
+            for e_ in new_: put_src[e_].add(r_)
     gen_ = {(m, ref) for m, ref in c.execute("select src, dst from card_link where rel='generates'")}
     lv_ = collections.defaultdict(set)
     for m, b in c.execute("select src, dst from card_link where rel='transforms_into'"): lv_[m].add(b)
@@ -789,15 +802,18 @@ def lines_of(c, game):
                                                            "and s.category='leader'") if m in cards and ref in cards]  # a General's spell
     # a card made by its name, not its id ("you draw a Pelt card": Skinning Knife; "create a Poro"; one of a set:
     # Kate Bishop's "add 2 Arrows"): the cards whose name fits
-    for m, act, k, w in c.execute("""select card, act, on_kind, on_with from flat_do where act in ('create','summon') and card_ref is null
+    for m, act, k, w, r_ in c.execute("""select card, act, on_kind, on_with, ability || '.' || seq from flat_do where act in ('create','summon') and card_ref is null
             and origin in ('own','gives') and (on_with like '%name_has is%' or on_with like '%card is%' or on_with like '%card in%')""").fetchall():
         # also inside an ability the card gives ("your cards have: Quickdraw: Thanos loads an Infinity Shot"), as by card_ref above
-        if m in cards: put += [(m, t, act) for t, x in cards.items() if t != m and matches(c, game, x, k if k in KIND_CAT else 'any', w)]
+        if m in cards:
+            new_ = [(m, t, act) for t, x in cards.items() if t != m and matches(c, game, x, k if k in KIND_CAT else 'any', w)]; put += new_
+            for e_ in new_: put_src[e_].add(r_)
     putters = collections.Counter(ref for _, ref in {(m, ref) for m, ref, _ in put})
     for m, ref, act in put:
         out[(m, ref)].append(('puts', 1.0 / putters[ref], {'summon': 'summons', 'create': 'creates', 'copy': 'copies', 'revive': 'brings back',
                                                            'play_card': 'plays', 'keyword_action': 'plants', 'skill': 'casts its skill',
-                                                           'own_spell': 'casts its own spell'}[act]))
+                                                           'own_spell': 'casts its own spell'}[act]),
+                                ((put_src[(m, ref, act)] or {'type'}), {'type'}))  # a skill or a General's spell: the card itself (card_link)
     # my units put into play by kind, from the discard, deck or hand ("revive the 6 strongest allies", "summon a unit from your
     # deck"): its own "when I'm summoned" goes off again (The Harrowing -> Captain Farron); a Play effect does not
     entry, entry_ab = collections.defaultdict(set), collections.defaultdict(set)  # entry_ab: (card, event) -> its abilities that go off
@@ -823,23 +839,29 @@ def lines_of(c, game):
                                            'summon': 'puts it into play: its summon effect goes off', 'play_card': 'plays it: its effect goes off'}[act]),
                                           ({f'{ab}.{sq}'}, {x for e in entry[t] & want for x in entry_ab[(t, e)]}))
     # my card shuffled into my deck is the move a card waits for that acts when it is moved to the deck top (Strays of Spalla -> Albrich)
+    tops_ab = collections.defaultdict(set)
+    for t_, ab_ in c.execute("""select w.card, w.ability from flat_when w join flat_if i on i.card=w.card and i.ability=w.ability where w.origin='own'
+             and w.event='moves' and w.obj_pick='self' and i.test='have' and i.of_pick='self' and i.of_zone='deck_top'"""): tops_ab[t_].add(str(ab_))
     tops = {t for (t,) in c.execute("""select w.card from flat_when w join flat_if i on i.card=w.card and i.ability=w.ability where w.origin='own'
              and w.event='moves' and w.obj_pick='self' and i.test='have' and i.of_pick='self' and i.of_zone='deck_top'""") if t in cards}
-    for m in {m for (m,) in c.execute("""select card from flat_do where origin='own' and act='shuffle_into_deck' and coalesce(on_side,'mine')='mine'
-                                       and coalesce(on_pick,'')!='self'""") if m in cards}:
-        for t in tops - {m}: out[(m, t)].append(('waits', 0.5 / len(tops), 'shuffles a card into the deck: its move effect goes off'))
+    shuf = collections.defaultdict(set)
+    for m, r_ in c.execute("""select card, ability || '.' || seq from flat_do where origin='own' and act='shuffle_into_deck' and coalesce(on_side,'mine')='mine'
+                                       and coalesce(on_pick,'')!='self'"""):
+        if m in cards: shuf[m].add(r_)
+    for m in shuf:
+        for t in tops - {m}: out[(m, t)].append(('waits', 0.5 / len(tops), 'shuffles a card into the deck: its move effect goes off'), (shuf[m], tops_ab[t]))
     # a draw that names what it takes from the deck ("draw the top legend", "draw a Beast") finds those cards
     # (and a summon from the hand or deck by what it is: "summon a minion with Dying Wish from your action bar", Unseven); "a copy
     # of it" is a card the earlier effect can pick (Lifestream heals a minion, then draws a copy of it: minions only)
     # "draw 4, discard those that do not cost 0" (Scrape): it draws and keeps the cards the discard does not hit
-    for m, w in c.execute("""select d.card, x.on_with from flat_do d join flat_do x on x.card=d.card and x.ability=d.ability and x.seq>d.seq
+    for m, w, r_ in c.execute("""select d.card, x.on_with, d.ability || '.' || d.seq from flat_do d join flat_do x on x.card=d.card and x.ability=d.ability and x.seq>d.seq
             where d.origin='own' and d.act='draw' and coalesce(d.on_side,'mine')='mine' and x.act='discard' and x.on_pick='it'
             and coalesce(x.on_with,'')!=''""").fetchall():
         if m not in cards or all(q.split(' ')[0] in ('category', 'kind') for q in w.split(';') if q): continue  # it keeps cards by kind
         # only (Realm Warp discards the followers drawn): any card of that kind can be drawn (L1b)
         kept = [t for t, x in cards.items() if t != m and x['cat'] in KIND_CAT['spell'] | KIND_CAT['unit'] and x['cost'] is not None
                 and not matches(c, game, x, 'any', w)]
-        for t in kept: out[(m, t)].append(('puts', 1.0 / max(1, len(kept)), 'draws it and keeps it'))
+        for t in kept: out[(m, t)].append(('puts', 1.0 / max(1, len(kept)), 'draws it and keeps it'), ({r_}, {'type'}))
     tutors = [(m, ab, sq, act, k, z, w) for m, ab, sq, act, k, z, w in c.execute("""select card, ability, seq, act, on_kind, on_zone, on_with from flat_do
               where origin='own' and coalesce(on_side,'mine')='mine' and coalesce(on_with,'')!='' and (act='draw' or (act in
               ('summon','play_card') and on_zone in ('hand','deck') and card_ref is null) or (act='choose_card' and on_zone='deck'))""") if m in cards]
@@ -860,30 +882,33 @@ def lines_of(c, game):
         # (Treasurous Bosuns) finds almost any card: every card can be drawn (L1)
         say = 'draws it from the deck' if act == 'draw' else 'picks it from the deck' if act == 'choose_card' else \
             f"puts it into play from {'the hand' if z == 'hand' else 'the deck'}"
-        for t in hit: out[(m, t)].append(('puts', 1.0 / max(1, len(hit)), say))
+        for t in hit: out[(m, t)].append(('puts', 1.0 / max(1, len(hit)), say),
+                                         ({f'{ab}.{sq}'}, {x for e in entry.get(t, set()) & {'played', 'summoned'} for x in entry_ab[(t, e)]} if act in ('summon', 'play_card') else {'type'}))
     for a, b in c.execute("select src, dst from card_link where rel='transforms_into'"):
-        if a in cards and b in cards: out[(a, b)].append(('levelsinto', 1.0, 'levels into'))
+        if a in cards and b in cards: out[(a, b)].append(('levelsinto', 1.0, 'levels into'), ({'type'}, {'type'}))  # the card's level-up form
     # repeats: Allied Attack effects activate twice -> every card with its own Attack effect
     trig = {k: e for k, e in c.execute('select t.keyword, v.event from keyword_trigger t join event v on v.id=t.event')}
     rep = collections.defaultdict(set)
-    for card, w in c.execute("select card, on_with from flat_do where act in ('repeat','increase_effect')"):
+    rep_src = collections.defaultdict(set)  # (card, keyword) -> the repeat rows (SRC)
+    for card, w, r_ in c.execute("select card, on_with, ability || '.' || seq from flat_do where act in ('repeat','increase_effect')"):
         if card not in cards: continue
         for p in (w or '').split(';'):
             b = p.split(' ')
-            if len(b) == 3 and b[0] == 'keyword' and b[1] == 'is' and b[2].isdigit() and int(b[2]) in trig: rep[trig[int(b[2])]].add((card, int(b[2])))
+            if len(b) == 3 and b[0] == 'keyword' and b[1] == 'is' and b[2].isdigit() and int(b[2]) in trig: rep[trig[int(b[2])]].add((card, int(b[2]))); rep_src[(card, int(b[2]))].add(r_)
     # a repeat of the card played just before ("if the last card played has On Reveal", Absorbing Man) names its keyword in the IF: the same repeat
-    for card, w in c.execute("select f.card, f.of_with from flat_if f join flat_do d on d.card=f.card and d.ability=f.ability and d.act='repeat' where f.test='last_card'"):
+    for card, w, r_ in c.execute("select f.card, f.of_with, d.ability || '.' || d.seq from flat_if f join flat_do d on d.card=f.card and d.ability=f.ability and d.act='repeat' where f.test='last_card'"):
         for p in (w or '').split(';'):
             b = p.split(' ')
-            if card in cards and len(b) == 3 and b[0] == 'keyword' and b[1] == 'is' and b[2].isdigit() and int(b[2]) in trig: rep[trig[int(b[2])]].add((card, int(b[2])))
+            if card in cards and len(b) == 3 and b[0] == 'keyword' and b[1] == 'is' and b[2].isdigit() and int(b[2]) in trig: rep[trig[int(b[2])]].add((card, int(b[2]))); rep_src[(card, int(b[2]))].add(r_)
     for ev, ms in rep.items():
-        users = {t for (t,) in c.execute("select card from flat_when where event=? and origin='own' and (actor_pick='self' or obj_pick='self')", (ev,))
-                 if t in cards}
+        users, users_ab = set(), collections.defaultdict(set)
+        for t, ab_ in c.execute("select card, ability from flat_when where event=? and origin='own' and (actor_pick='self' or obj_pick='self')", (ev,)):
+            if t in cards: users.add(t); users_ab[t].add(str(ab_))
         for m, k in ms:
             has = {t for t in users if k in cards[t]['kws']}  # the cards with that keyword: "repeat all Summon effects" helps the
             # Summon units, not every spell played (Transcendimp -> Imp-pressive)
             for t in (has or users) - {m} - drawback_cards(c):  # a card that only gives itself away: repeating it is no help (L5)
-                out[(m, t)].append(('repeats', 2.0 / len(ms), f'repeats its {mechanics.name(c, k)} effects'))
+                out[(m, t)].append(('repeats', 2.0 / len(ms), f'repeats its {mechanics.name(c, k)} effects'), (rep_src[(m, k)], users_ab[t]))
     # types: a card that asks for a type is fed by cards of that type and cards that make them
     asks, named, need_all = collections.defaultdict(set), collections.defaultdict(set), collections.defaultdict(set)  # named: a card it names ("if a Chime is attacked")
     asked = collections.defaultdict(set)  # named by a trigger or condition: it waits for or asks for that card
@@ -901,14 +926,15 @@ def lines_of(c, game):
     counted = {(a, ab): ev for a, ab, ev in c.execute("""select card, ability, event from flat_if where test in ('event_count','amount_event_count')
                and ev_obj_with like '%type %' and event is not null""") if (ab, ev) not in capped(c)}  # played, summoned, drawn: played_lines
     cnt = collections.defaultdict(dict)
-    for card, w, src, act, kw, ps, via in c.execute("""select card, coalesce(on_with,'') || ';' || coalesce(to_with,''), 'do', act, keyword_ref, params,
-                                case when origin='uses_keyword' then via end from flat_do where coalesce(on_side,'mine')!='enemy'
+    ask_src = collections.defaultdict(set)  # (asking card, type or named card) -> its rows that ask (SRC)
+    for card, w, src, act, kw, ps, via, r_ in c.execute("""select card, coalesce(on_with,'') || ';' || coalesce(to_with,''), 'do', act, keyword_ref, params,
+                                case when origin='uses_keyword' then via end, ability || '.' || seq from flat_do where coalesce(on_side,'mine')!='enemy'
                                 and act not in ('create','summon','transform','copy','choose_card','play_card','revive','repeat','increase_effect')
                                 -- what an effect repeats or makes bigger is what it helps (aimed_rows), not what it asks for (Strength: Attacks)
-                                union all select card, obj_with, 'when', null, null, ability, null from flat_when
+                                union all select card, obj_with, 'when', null, null, ability, null, ability from flat_when
                                 where event not in ('played','summoned','drawn')  -- played_lines reads these triggers (one rule per need)
                                 union all select card, coalesce(of_with,'') || ';' ||
-                                coalesce(ev_obj_with,''), 'if', of_zone, null, ability, null from flat_if where coalesce(of_side,'mine')!='enemy'"""):
+                                coalesce(ev_obj_with,''), 'if', of_zone, null, ability, null, ability from flat_if where coalesce(of_side,'mine')!='enemy'"""):
         if src == 'when' and ps in help_abilities(c): continue
         if src == 'do' and act == 'keyword_action' and kw in making_kws: continue  # "Invoke a Celestial": what it makes, no ask
         if src == 'do' and card in picked: continue  # Bottled Flame gives the Attack it picked
@@ -923,28 +949,29 @@ def lines_of(c, game):
             b = part.removeprefix('of:').split(' ')
             if len(b) == 3 and b[0] == 'type' and b[1] in ('is', 'in') and b[2].isdigit():
                 if src == 'if' and counted.get((card, ps)) in ('played', 'summoned', 'drawn'): continue  # played_lines says it, with the type
-                asks[int(b[2])].add(card)
+                asks[int(b[2])].add(card); ask_src[(card, 't', int(b[2]))].add(str(r_))
                 if b[1] == 'is' and len(both) > 1: need_all[(card, int(b[2]))] |= both  # "a Mecha Yordle": both types
                 if src == 'if' and (card, ps) in counted: cnt[int(b[2])][card] = counted[(card, ps)]
             if len(b) == 3 and b[0] == 'card' and b[1] in ('is', 'in') and b[2].isdigit():
-                named[int(b[2])].add(card)
+                named[int(b[2])].add(card); ask_src[(card, 'c', int(b[2]))].add(str(r_))
                 if (src == 'when' and ps not in cleanup) or (src == 'if' and act in (None, 'board') and ps not in harm_abilities(c)):  # "if you have another
                     asked[int(b[2])].add(card)  # Wraithling"; not "if Krog is in your deck, draw him", nor "if Krog is here, destroy this"
     has = collections.defaultdict(set)
     for i, x in cards.items():
         for t in x['types']: has[t].add((i, 'is'))
-    for m, ref in c.execute(f"select card, card_ref from flat_do where act in ({','.join('?' * len(PUTS))}) and card_ref is not null", PUTS):
+    has_src = collections.defaultdict(set)  # (card, type) -> the rows that make a card of it (SRC)
+    for m, ref, r_ in c.execute(f"select card, card_ref, ability || '.' || seq from flat_do where act in ({','.join('?' * len(PUTS))}) and card_ref is not null", PUTS):
         if m in cards and ref in cards:
-            for t in cards[ref]['types']: has[t].add((m, 'makes'))
+            for t in cards[ref]['types']: has[t].add((m, 'makes')); has_src[(m, t)].add(r_)
     # cards made by description ("2 random Imps", "a random Celestial card") are of the type they name
-    for m, w in c.execute(f"select card, on_with from flat_do where act in ({','.join('?' * len(PUTS))}, 'choose_card') and card_ref is null "
+    for m, w, r_ in c.execute(f"select card, on_with, ability || '.' || seq from flat_do where act in ({','.join('?' * len(PUTS))}, 'choose_card') and card_ref is null "
                           "and on_with like '%type is%' and coalesce(on_side,'mine') in ('mine','any') "
                           "and not (act='choose_card' and coalesce(on_zone,'') in ('deck','hand','discard'))", PUTS):  # picking a card
         # already in my deck makes none (Bottled Flame: "choose an Attack" for the run)
         if m in cards:
             for p in w.split(';'):
                 b = p.split(' ')
-                if len(b) == 3 and b[:2] == ['type', 'is'] and b[2].isdigit(): has[int(b[2])].add((m, 'makes'))
+                if len(b) == 3 and b[:2] == ['type', 'is'] and b[2].isdigit(): has[int(b[2])].add((m, 'makes')); has_src[(m, int(b[2]))].add(r_)
     for t, ts in asks.items():
         tn = c.execute('select name from type where id=?', (t,)).fetchone()
         if tn and EVERY_DECK_TYPE.get(game) == tn[0]: continue  # every squad is Mechs: Psionic Receiver asks for none (L1)
@@ -957,8 +984,11 @@ def lines_of(c, game):
                 if not is_ and (m, 'makes') not in has[t]: continue
                 how = 'is' if is_ else 'makes'  # it is one itself and makes one too: said once, as "is" (Rek'Sai is a Lurker)
                 what = f'{"is" if how == "is" else "makes"} {"an" if tn and tn[0][:1] in "AEIOU" else "a"} {tn[0] if tn else "card of the type"}'
-                if x in cnt[t]: out[(m, x)].append(('waits', 1.0 / len(ts), f'{what} it counts when {cnt[t][x]}'))
-                else: out[(m, x)].append(('type', 1.0 / len(ts), what + ' it asks for'))
+                src = ({'type'} if how == 'is' else has_src[(m, t)], ask_src[(x, 't', t)])
+                if x in cnt[t]: out[(m, x)].append(('waits', 1.0 / len(ts), f'{what} it counts when {cnt[t][x]}'), src)
+                else: out[(m, x)].append(('type', 1.0 / len(ts), what + ' it asks for'), src)
+    put_by = collections.defaultdict(set)  # (maker, card made) -> the rows that make it (SRC)
+    for (m_, r_, _), v_ in put_src.items(): put_by[(m_, r_)] |= v_
     for t, ts in named.items():  # the named card itself, or a card that makes it
         name = cards[t]['name'] if t in cards else None
         if not name: continue
@@ -967,7 +997,7 @@ def lines_of(c, game):
             for x in ts - {m} - (own - asked[t]):
                 if x in asked[t] or not any(l[0] == 'puts' for l in out.get((x, m), ())):  # what it makes itself is no help to it,
                     # unless it asks for another one ("if you have another Wraithling")
-                    out[(m, x)].append(('type', 1.0 / len(ts), f'{how} the {name} it names'))
+                    out[(m, x)].append(('type', 1.0 / len(ts), f'{how} the {name} it names'), ({'type'} if how == 'is' else put_by[(m, t)] or {'type'}, ask_src[(x, 'c', t)]))
     for k_, ls in out.items():  # one reason said once; a cost cut said as "makes cheaper", not also as "enables"
         cheap = {y for kd, _, y in ls if kd == 'cheaper'}
         keep = []
@@ -976,8 +1006,12 @@ def lines_of(c, game):
         out[k_] = keep
     pushers = {a for (a,) in c.execute("""select distinct card from flat_ref where role='makes' and happening='moves' and origin in ('own','uses_keyword')
                and coalesce(side,'') in ('enemy','','any') and coalesce(pick,'') not in ('self')""") if a in cards}
+    push_src = lambda m: {x for (ab_,) in c.execute("""select distinct ability from flat_ref where card=? and role='makes' and happening='moves' and origin in ('own','uses_keyword')
+               and coalesce(side,'') in ('enemy','','any') and coalesce(pick,'') not in ('self') and ability is not null""", (m,)) for x in row_src(c, ab_, 'moves')} or {'type'}
     for t in {a_ for ab_, a_ in bump_abs.items() if ab_ not in protect_abilities(c)} & set(cards):  # Stabilizers keeps damage off
-        for m in pushers - {t}: out[(m, t)].append(('waits', 1.0 / len(pushers), '{A} pushes enemy units into things (bump damage)'))
+        for m in pushers - {t}:
+            out[(m, t)].append(('waits', 1.0 / len(pushers), '{A} pushes enemy units into things (bump damage)'))
+            note(m, t, '{A} pushes enemy units into things (bump damage)', push_src(m), {str(ab_) for ab_, a_ in bump_abs.items() if a_ == t})
     # a card that puts a status on itself which damage takes off (Cryo-Launcher freezes the Ice Mech; Frozen ends when damaged):
     # a card that can hit my units frees it; a card that shields my units stops it (Energy Shield keeps new bad statuses off)
     freed = {k for (k,) in c.execute("""select distinct w.card from flat_when w join flat_do d on d.card=w.card and d.ability=w.ability
@@ -993,13 +1027,18 @@ def lines_of(c, game):
                      if a in cards and k in blockers}  # a shield on buildings (Grid Repulse, Critical Shields) reaches no mech
         for t, k in selfstat:
             kn = mechanics.name(c, k)
-            for m in hitters_ - {t}: out[(m, t)].append(('heals', 0.5 / len(hitters_), f'{{A}} can hit {{Bc}} while it is {kn}: the hit frees it'))
-            for m in shielders - {t}: out[(m, t)].append(('keyword', 0.5 / max(1, len(shielders)), f'{{A}} can shield {{Bc}}: the Shield keeps {kn} off it'))
+            b_ = rows_of(c, t, "act='give_keyword' and on_pick='self' and keyword_ref=?", k)
+            for m in hitters_ - {t}:
+                out[(m, t)].append(('heals', 0.5 / len(hitters_), f'{{A}} can hit {{Bc}} while it is {kn}: the hit frees it'))
+                note(m, t, f'{{A}} can hit {{Bc}} while it is {kn}: the hit frees it', rows_of(c, m, "act='damage' and origin='own' and on_side is null"), b_)
+            for m in shielders - {t}:
+                out[(m, t)].append(('keyword', 0.5 / max(1, len(shielders)), f'{{A}} can shield {{Bc}}: the Shield keeps {kn} off it'))
+                note(m, t, f'{{A}} can shield {{Bc}}: the Shield keeps {kn} off it', rows_of(c, m, "act='give_keyword' and origin='own'"), b_)
     # ground that kills what is pushed onto it (the game's rules, DEADLY_GROUND): a card that makes it enables every pusher
-    for m, w_ in c.execute("select card, to_with from flat_do where act='set_terrain' and origin='own'").fetchall():
+    for m, w_, r_ in c.execute("select card, to_with, ability || '.' || seq from flat_do where act='set_terrain' and origin='own'").fetchall():
         say = next((v for k, v in DEADLY_GROUND.get(game, {}).items() if f'terrain is {k}' in (w_ or '')), None)
         if not say or m not in cards: continue
-        for t in pushers - {m}: out[(m, t)].append(('type', 1.0 / len(pushers), say))
+        for t in pushers - {m}: out[(m, t)].append(('type', 1.0 / len(pushers), say)); note(m, t, say, {r_}, push_src(t))
     CACHE[('lines', game)] = out
     return out
 
@@ -1808,7 +1847,8 @@ def doer_help_lines(c, game, nodes):
                  ('own','uses_keyword') and card in ({marks})""", [h] + L)}
         for m in doers:
             if m != a and m in cards and matches(c, game, as_doer(c, game, cards[m]), kind if kind in KIND_CAT else 'any', w):
-                out[(a, m)].append(('boosts', 1.0 / max(1, len(doers)), '{A} ' + ', '.join(dict.fromkeys(w_.replace(' it', ' {Bc}') for w_ in whys)) + f' when it {DOES.get(h, h.replace("_", " "))}'))
+                out[(a, m)].append(('boosts', 1.0 / max(1, len(doers)), '{A} ' + ', '.join(dict.fromkeys(w_.replace(' it', ' {Bc}') for w_ in whys)) + f' when it {DOES.get(h, h.replace("_", " "))}'),
+                                   (rows_of(c, a, "ability=? and origin='own'", ab_), {x for (r_,) in c.execute("select distinct ability from flat_ref where card=? and role='makes' and happening=? and ability is not null", (m, h)) for x in row_src(c, r_, h)} or {'type'}))
     return out
 
 
@@ -1934,13 +1974,14 @@ def made_cards(c):
     """cards that make a card by description, not by name: (card, kind, filter) ("Manifest a 6+ cost spell", "create a random
     landmark"); a kind written as a filter ("card", "category is spell") is read as that kind"""
     if 'made_desc' in CACHE: return CACHE['made_desc']
-    out = []
-    for a, k, w in c.execute("""select card, on_kind, on_with from flat_do where act in ('create','summon','choose_card','random_one')
+    out = []; CACHE['made_src'] = collections.defaultdict(set)  # (card, kind, filter) -> the rows that make it (SRC)
+    for a, k, w, r_ in c.execute("""select card, on_kind, on_with, ability || '.' || seq from flat_do where act in ('create','summon','choose_card','random_one')
             and card_ref is null and origin in ('own','uses_keyword','has_keyword') and coalesce(on_side,'mine') in ('mine','any') and coalesce(on_pick,'') != 'it'"""):
         parts = [p for p in (w or '').split(';') if p]
         cat = next((p.split(' ')[2] for p in parts if p.startswith('category is ')), None)
         k = {'spell': 'spell', 'unit': 'unit', 'follower': 'unit', 'landmark': 'landmark', 'equipment': 'equipment'}.get(cat, k) if k in (None, 'card', 'any') else k
-        if k in ('unit', 'spell', 'landmark', 'equipment'): out.append((a, k, ';'.join(p for p in parts if not p.startswith('category '))))
+        if k in ('unit', 'spell', 'landmark', 'equipment'):
+            e_ = (a, k, ';'.join(p for p in parts if not p.startswith('category '))); out.append(e_); CACHE['made_src'][e_].add(r_)
     CACHE['made_desc'] = out
     return out
 
@@ -1997,14 +2038,19 @@ def played_lines(c, game, nodes, broad):
             if h == 'played' and role == 'trigger' and broad:  # "whenever you play a card" (A Thousand Cuts): not every card, but
                 # Kaptain's nst26 keeps it (Blade Dance -> A Thousand Cuts)
                 # the cards that make more cards to play (Blade Dance's Shivs) set it off more
-                mk = {a for a, ref, ok in c.execute(f"""select distinct card, card_ref, on_kind from flat_do where origin='own' and act in ('create','copy')
+                fits_ = lambda ref, ok: k in ('card', 'any', 'anything', None) or k in every_card_kinds(c, game) or ok == k or (ref in cards and cards[ref]['cat'] in KIND_CAT.get(k, {k}))
+                mk_src = collections.defaultdict(set)  # the rows that make the cards (SRC)
+                for a, ref, ok, r_ in c.execute(f"""select distinct card, card_ref, on_kind, ability || '.' || seq from flat_do where origin='own' and act in ('create','copy')
                       and coalesce(on_side,'mine')='mine' and coalesce(on_zone,'hand') in ('hand') and (params like '%amount=x%' or cast(substr(params,
-                      instr(params,'amount=')+7) as real) >= 2) and card in ({marks})""", list(nodes))  # several cards (Blade Dance's 3 Shivs);
+                      instr(params,'amount=')+7) as real) >= 2) and card in ({marks})""", list(nodes)):  # several cards (Blade Dance's 3 Shivs);
                       # one more card is no more plays (Beta -> After Image+, Annie -> Breakneck Husk)
-                      if k in ('card', 'any', 'anything', None) or k in every_card_kinds(c, game) or ok == k or (ref in cards and cards[ref]['cat'] in KIND_CAT.get(k, {k}))} - {t}
+                    if fits_(ref, ok): mk_src[a].add(r_)
+                mk = {t_ for t_ in mk_src} - {t}
                 # "whenever you play a spell": only what makes spells (Vinemother's Stings) sets it off more
                 for a in mk:
-                    if ('waits', 0.5 / len(mk), 'makes more cards to play') not in out[(a, t)]: out[(a, t)].append(('waits', 0.5 / len(mk), 'makes more cards to play'))
+                    if ('waits', 0.5 / len(mk), 'makes more cards to play') not in out[(a, t)]:
+                        out[(a, t)].append(('waits', 0.5 / len(mk), 'makes more cards to play'), (mk_src[a], {str(ab)}))
+                    else: SRC[(a, t, 'makes more cards to play')].add((';'.join(sorted(mk_src[a])), str(ab)))
             continue
         n = kind_count(c, game, 'any' if k == 'card' else k, w)
         for a in nodes:
@@ -2031,24 +2077,30 @@ def played_lines(c, game, nodes, broad):
                 if a == t or a not in nodes or a not in cards or not made_fits(c, k, w, mk, mw): continue
                 say = f'makes a {mk} whose {GERUND.get(h, h)} sets off its effect' if role == 'trigger' else f'makes a {mk} it needs {h} for its count'
                 if not any(l[2].startswith(say) for l in out[(a, t)]):
-                    out[(a, t)].append(('levels', 1.0 / n, say + ' (levels it up)') if ab in lvl else ('waits' if role == 'trigger' else 'type', 0.5 / n, say))
+                    out[(a, t)].append(('levels', 1.0 / n, say + ' (levels it up)') if ab in lvl else ('waits' if role == 'trigger' else 'type', 0.5 / n, say),
+                                       (CACHE['made_src'][(a, mk, mw)], {str(ab)}))
     for t, ab in c.execute(f"""select card, ability from flat_if where test in ('amount_distinct','distinct') and attr='region'
             and card in ({marks})""", list(nodes)).fetchall():  # "allies from 10 regions" (The Bandle Tree): cards that make
         # multi-region or other-region cards bring more regions (L17)
-        for (a,) in c.execute(f"""select distinct card from flat_do where origin='own' and act in ('create','summon','keyword_action')
+        rg = collections.defaultdict(set)
+        for a, r_ in c.execute(f"""select card, ability || '.' || seq from flat_do where origin='own' and act in ('create','summon','keyword_action')
                 and coalesce(on_side,'mine')='mine' and (on_with like '%multi_region%' or on_with like '%region not own_regions%') and card in ({marks})""", list(nodes)):
+            rg[a].add(r_)
+        for a in rg:
             if a != t: out[(a, t)].append(('levels' if ab in lvl else 'type', 0.5, 'makes a card from more regions: more regions for its count' +
-                                           (' (levels it up)' if ab in lvl else '')))
+                                           (' (levels it up)' if ab in lvl else '')), (rg[a], {str(ab)}))
     for t, ab in c.execute(f"""select card, ability from flat_if where test in ('amount_distinct','distinct') and event='played'
             and card in ({marks})""", list(nodes)).fetchall():
         # cards that make cards I then play: not planted Chimes or traps, which go off by themselves when drawn and are never
         # played (Esmus plants a Chime: no more names for Zoe)
-        for (a,) in c.execute(f"""select distinct d.card from flat_do d where d.act in ('create','copy') and d.origin in ('own','uses_keyword')
+        cr = collections.defaultdict(set)
+        for a, r_ in c.execute(f"""select d.card, d.ability || '.' || d.seq from flat_do d where d.act in ('create','copy') and d.origin in ('own','uses_keyword')
                 and coalesce(d.on_side,'mine')='mine' and not exists (select 1 from flat_do p where p.card=d.card and p.origin='own'
                 and p.act='keyword_action' and p.card_ref is not null and d.origin='uses_keyword' and p.keyword_ref=d.via)
-                and d.card in ({marks})""", list(nodes)):
+                and d.card in ({marks})""", list(nodes)): cr[a].add(r_)
+        for a in cr:
             if a != t: out[(a, t)].append(('levels' if ab in lvl else 'type', 0.2, 'creates cards: more different cards to play' +
-                                           (' (levels it up)' if ab in lvl else '')))
+                                           (' (levels it up)' if ab in lvl else '')), (cr[a], {str(ab)}))
     return out
 
 
@@ -2056,20 +2108,21 @@ def need_lines(c, game, nodes, broad):
     """a card that needs a kind of card on my side: measured from it ("units surrounding a friendly structure") or counted or
     tested ("if you have a structure"); fed by cards of that kind"""
     cards = cards_of(c, game); out = Lines(); marks = ','.join('?' * len(nodes)); needs = []
-    for t, w, side in c.execute(f"select card, coalesce(on_with,'') || ';' || coalesce(to_with,''), on_side from flat_do where card in ({marks})", list(nodes)):
+    need_src = collections.defaultdict(set)  # (card, kind, filter) -> its rows that need it (SRC)
+    for t, w, side, r_ in c.execute(f"select card, coalesce(on_with,'') || ';' || coalesce(to_with,''), on_side, ability || '.' || seq from flat_do where card in ({marks})", list(nodes)):
         parts = (w or '').split(';')
         of = [p[3:] for p in parts if p.startswith('of:')]
         kind = next((p.split(' ')[2] for p in of if p.startswith('kind is ')), None)
         rest_ = [p for p in of if not p.startswith('kind')]
         if kind == 'any' and not rest_: continue  # a place measured from any card ("in front of each enemy minion", Star's Fury): no need
-        if kind and kind not in ('unit', 'player', 'unit_or_structure'): needs.append((t, kind, ';'.join(rest_)))
+        if kind and kind not in ('unit', 'player', 'unit_or_structure'): needs.append((t, kind, ';'.join(rest_))); need_src[needs[-1]].add(r_)
         # any unit (or structure) fits a place measured from it ("the tile beyond the pushed unit"): no need
     # a count of what happens to my cards of a kind ("you've destroyed 4+ allied landmarks"): fed by cards of that kind
-    for t, kind, w in c.execute(f"""select card, ev_obj_kind, ev_obj_with from flat_if where card in ({marks}) and test in ('event_count','amount_event_count')
+    for t, kind, w, r_ in c.execute(f"""select card, ev_obj_kind, ev_obj_with, ability from flat_if where card in ({marks}) and test in ('event_count','amount_event_count')
             and ev_obj_side='mine' and ev_obj_kind in ('landmark','equipment','spell')
             and coalesce(event,'') not in ('played','summoned','drawn')""", list(nodes)).fetchall():  # played_lines counts those (one rule per need)
-        needs.append((t, kind, (w or '') + ';counted'))
-    for t, test, kind, side, op, n, w, pick_ in c.execute(f"""select card, test, of_kind, of_side, op, n, of_with, of_pick from flat_if where card in ({marks})
+        needs.append((t, kind, (w or '') + ';counted')); need_src[needs[-1]].add(str(r_))
+    for t, test, kind, side, op, n, w, pick_, r_ in c.execute(f"""select card, test, of_kind, of_side, op, n, of_with, of_pick, ability from flat_if where card in ({marks})
             and test in ('have','count','amount_count','last_card') and coalesce(of_side,'mine') in ('mine','any','')""", list(nodes)):  # last_card: "if the last card played was an Ongoing unit" needs such a card
         if op == 'not' or (op in ('eq', 'le', 'lt') and not n): continue  # "no units around": nothing to feed
         # "non-X" narrows nothing; nor does what a place is measured from ("near your General": of:kind is player)
@@ -2081,19 +2134,21 @@ def need_lines(c, game, nodes, broad):
         # need (L1); its tribes are
         if narrowed and kind in KIND_CAT and kind_count(c, game, kind, w) >= 0.5 * kind_count(c, game, kind, None): narrowed = False  # most
         # creatures pass the filter ("a creature with higher Attack than Life", Shedim Pest, read as any): no deck choice
-        if kind in KIND_CAT and kind != 'player' and (narrowed or kind != 'unit'): needs.append((t, kind, w))  # a player is always there
+        if kind in KIND_CAT and kind != 'player' and (narrowed or kind != 'unit'): needs.append((t, kind, w)); need_src[needs[-1]].add(str(r_))  # a player is always there
         elif kind in (None, 'card') and narrowed and kind_count(c, game, 'any', w) < 0.5 * kind_count(c, game, 'any', None):
-            needs.append((t, 'any', w))  # "if you have an 8+ cost card" (Faces of the Old Ones), "a Nightfall card" (The Sky Shadows):
+            needs.append((t, 'any', w)); need_src[needs[-1]].add(str(r_))  # "if you have an 8+ cost card" (Faces of the Old Ones), "a Nightfall card" (The Sky Shadows):
             # a minority of cards is a deck choice (L1b, L21)
     # a keyword's effects acted on ("activate the effects of all traps"): the cards that carry the keyword
-    for t, k in c.execute(f"""select card, keyword_ref from flat_do where act='keyword_action' and card_ref is null and keyword_ref is not null
+    for t, k, r_ in c.execute(f"""select card, keyword_ref, ability || '.' || seq from flat_do where act='keyword_action' and card_ref is null and keyword_ref is not null
             and on_kind is null and origin='own' and card in ({marks})""", list(nodes)).fetchall():
-        if any(k in cards[a]['kws'] for a in nodes if a in cards and a != t): needs.append((t, 'any', f'keyword is {k}'))
+        if any(k in cards[a]['kws'] for a in nodes if a in cards and a != t): needs.append((t, 'any', f'keyword is {k}')); need_src[needs[-1]].add(r_)
     # cards that make a card of a kind by description ("create a random landmark that costs 2 or less", Bomber Twins)
     described = collections.defaultdict(set); described_w = collections.defaultdict(list)
     for a, k, mw_ in made_cards(c):  # "create a random landmark", "Manifest a 6+ cost spell" (a kind written as a filter too)
         if a in nodes: described[k].add(a); described_w[(a, k)].append(mw_ or '')
     for t, kind, w in needs:
+        b_src = need_src[(t, kind, w)]
+        made_src = lambda a: {x for mw_ in described_w[(a, kind)] for x in CACHE['made_src'][(a, kind, mw_)]}
         counted = (w or '').endswith(';counted'); w = (w or '').removesuffix(';counted')  # "each event you've played": it counts what
         # happens: "enables" (a count, no reaction)
         cnt = kind_count(c, game, kind, w)
@@ -2110,16 +2165,16 @@ def need_lines(c, game, nodes, broad):
         for a in nodes:
             if a == t or a not in cards: continue
             if counted:
-                if matches(c, game, cards[a], kind, w): out[(a, t)].append(('type', 1.0 / cnt, f'is a {kind} it counts'))
+                if matches(c, game, cards[a], kind, w): out[(a, t)].append(('type', 1.0 / cnt, f'is a {kind} it counts'), ({'type'}, b_src))
                 elif a in described.get(kind, ()) and not any(p.split(' ')[0] in ('card', 'name_has', 'type') for p in (w or '').split(';')):
-                    out[(a, t)].append(('type', 0.5 / cnt, f'makes a {"landmark or structure" if kind == "landmark" else kind} it counts'))
+                    out[(a, t)].append(('type', 0.5 / cnt, f'makes a {"landmark or structure" if kind == "landmark" else kind} it counts'), (made_src(a), b_src))
                 continue
-            if matches(c, game, cards[a], kind, w): out[(a, t)].append(('type', 1.0 / cnt, 'is ' + what))
+            if matches(c, game, cards[a], kind, w): out[(a, t)].append(('type', 1.0 / cnt, 'is ' + what), ({'type'}, b_src))
             elif a in described.get(kind, ()) and not any(p.split(' ')[0] in ('card', 'name_has', 'type') for p in (w or '').split(';')) \
                     and any(all(p in mw_.split(';') for p in (w or '').split(';') if p.startswith('keyword is ')) and not made_clash(w, mw_)
                             for mw_ in described_w[(a, kind)]):  # a made Scoiatael unit is no Neutral unit (L20; Loc Feainn -> Pavko Gale)
                 # a unit made at random or by cost is no unit with the needed keyword (Sub-Mariner -> Mystique): the making must name it
-                out[(a, t)].append(('type', 0.5 / cnt, 'makes ' + what))
+                out[(a, t)].append(('type', 0.5 / cnt, 'makes ' + what), (made_src(a), b_src))
     return out
 
 
@@ -2171,6 +2226,8 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
     def reaches(a, t):
         return not reach.get(a) or any(matches(c, game, cards[t], k if k in KIND_CAT else 'unit', w) for k, w in reach[a])
     joins = {a for (a,) in c.execute(f"select card from ({JOINS}) where card in ({marks})", L)}
+    def act_rows(a, acts, extra=''):  # the card's effect rows doing one of acts (SRC); none found: the card itself
+        return {f'{x}.{y}' for x, y in c.execute(f"select ability, seq from flat_do where card=? and act in ({','.join('?' * len(acts))}) {extra}", (a,) + tuple(acts))} or {'type'}
     help_src = collections.defaultdict(set)  # (concepts, card) -> what of the card gives that help (SRC)
     def having(concepts, units_too):
         q = ','.join('?' * len(concepts))
@@ -2329,7 +2386,8 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
                 # who must do it ("Zed or allied Living Shadows strike the Nexus"): the help must land on such a card
                 if aw and pick != 'self' and not can_aim_at(c, game, a, ak if ak in KIND_CAT else 'any', aw): continue
                 out[(a, t)].append(('levels' if lv else 'moves' if concepts == ('movement',) else 'waits' if role == 'trigger' else 'type', (1.0 if lv else 0.5) / n,
-                                    why.rstrip('*') + (' (levels it up)' if lv else '')), (help_src[(concepts, hs[0] == 'nexus_damaged', a)], {str(ab) if ab is not None else f'kw{kw_need.get((t, h), "")}'}))  # it makes what the card waits for happen more
+                                    why.rstrip('*') + (' (levels it up)' if lv else '')), (help_src[(concepts, hs[0] == 'nexus_damaged', a)] or (act_rows(a, ('move', 'swap')) if concepts == ('movement',) and side == 'enemy' and h in ('moves', 'moves_onto') else set()),
+                                    {str(ab) if ab is not None else f'kw{kw_need.get((t, h), "")}'}))  # it makes what the card waits for happen more
     # how many cards are in my hand ("played as the last card from your hand", "10+ cards in hand", "for each card in hand")
     hand = lambda acts, zone, kw='': {a for (a,) in c.execute(f"""select card from flat_do where act in ({','.join('?' * len(acts))}) and origin in
             ('own','uses_keyword',?) and coalesce(on_side,'mine')='mine' and (coalesce(on_zone,'')='hand' or coalesce(eff_zone,'')='hand' or ?)
@@ -2361,7 +2419,8 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
             helpers = {a for a in helpers if any(all(p_ in (w_ or '') for p_ in named) for (w_,) in c.execute(
                        "select on_with from flat_do where card=? and act in ('draw','create','copy','return_to_hand')", (a,)))}
         for a in helpers - {t}:
-            out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.3, ('empties your hand' if few else 'fills your hand') + (' (levels it up)' if ab in lvl else '')))
+            out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.3, ('empties your hand' if few else 'fills your hand') + (' (levels it up)' if ab in lvl else '')),
+                               (act_rows(a, ('discard',) if few else ('create', 'copy', 'return_to_hand', 'draw', 'cant')), {str(ab)}))
     # a stat it tests ("an ally with 5+ Power"): more of that stat
     power = having(('attack_gain',), False)
     unreached = lambda ab, ok: ok == 'player' or c.execute("select 1 from flat_do where ability=? and on_zone='deck' and act!='draw'", (ab,)).fetchone()
@@ -2376,7 +2435,7 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
             # it reads the power of one named card (Zombie Giant-Man: Zombie Hulk): only a power gain aimed at that card feeds it
             if named_ and not all(c.execute("select 1 from flat_do where card=? and act='stat_change' and on_with like ?", (a, '%' + p_ + '%')).fetchone() for p_ in named_): continue
             # a named card's power: the help already aims at that card, so it need not land on t (Hunger -> Zombie Giant-Man)
-            if aim_fits(a, t, given=not named_) and (fp != 'self' or reaches(a, t)) and (a, t) not in stat_help: out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.5 / count(('attack_gain',)), 'more power' + (' (levels it up)' if ab in lvl else '')))
+            if aim_fits(a, t, given=not named_) and (fp != 'self' or reaches(a, t)) and (a, t) not in stat_help: out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.5 / count(('attack_gain',)), 'more power' + (' (levels it up)' if ab in lvl else '')), (help_src[(('attack_gain',), False, a)], {str(ab)}))
     # a stat it tests high or uses as an amount ("a creature with 5+ Life", "faeria equal to its Life"): more of that stat
     health = having(('defence_gain',), False)
     for t, ab, fp, ok in c.execute(f"""select card, ability, of_pick, of_kind from flat_if where attr in ('health', 'total_stats') and (test='amount_stat' or
@@ -2387,7 +2446,7 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
         if unreached(ab, ok): continue
         for a in health - {t}:
             if aim_fits(a, t) and (fp != 'self' or reaches(a, t)) and (a, t) not in stat_help:  # its own stat: the gain must reach it
-                out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.5 / count(('defence_gain',)), 'more health' + (' (levels it up)' if ab in lvl else '')))
+                out[(a, t)].append(('levels' if ab in lvl else 'boosts', 0.5 / count(('defence_gain',)), 'more health' + (' (levels it up)' if ab in lvl else '')), (help_src[(('defence_gain',), False, a)], {str(ab)}))
     # where my units may enter (Wind Gate: "summon creatures on spaces adjacent to this"): helps a card whose entry asks for a
     # place ("Gift - gains +1/+1 if summoned adjacent to an opponent's well")
     placers = {a for (a,) in c.execute(f"""select card from flat_do where act='can' and param_event in ('summoned','played') and
@@ -2396,7 +2455,9 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
         for (t,) in c.execute(f"""select distinct i.card from flat_if i join flat_when w on w.ability=i.ability where w.event in
                 ('played','summoned') and w.obj_pick='self' and (coalesce(i.of_with,'') like '%position %' or i.of_kind='position')
                 and i.card in ({marks})""", L).fetchall():
-            for a in placers - {t}: out[(a, t)].append(('boosts', 0.5 / len(placers), 'lets it enter where it needs to be'))
+            b_ = {str(x) for (x,) in c.execute("""select distinct i.ability from flat_if i join flat_when w on w.ability=i.ability where w.event in
+                ('played','summoned') and w.obj_pick='self' and (coalesce(i.of_with,'') like '%position %' or i.of_kind='position') and i.card=?""", (t,))}
+            for a in placers - {t}: out[(a, t)].append(('boosts', 0.5 / len(placers), 'lets it enter where it needs to be'), (act_rows(a, ('can',)), b_))
     # units whose keywords use their power (Challenger, Overwhelm, Quick Attack, Elusive, Double Attack, Ranged), and units whose
     # own effect makes them fight (Faeria "This fights an enemy creature"): power makes them hit harder
     for (t,) in c.execute(f"""select distinct ck.card from card_keyword ck join card k on k.id=ck.keyword join vocab v on v.field='keyword'
@@ -2409,7 +2470,8 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
         # read the damage it deals (Kaptain 2 Nov 2026)
         for a in power - {t}:
             if not aim_fits(a, t, True) or not reaches(a, t) or (a, t) in stat_help: continue
-            if not any(k in ('boosts', 'levels') for k, *_ in out[(a, t)]): out[(a, t)].append(('boosts', 0.25 / count(('attack_gain',)), 'more power: its text uses the damage it deals'))
+            if not any(k in ('boosts', 'levels') for k, *_ in out[(a, t)]): out[(a, t)].append(('boosts', 0.25 / count(('attack_gain',)), 'more power: its text uses the damage it deals'),
+                                                                                         (help_src[(('attack_gain',), False, a)], use_src(c, t, 'more power: its text uses the damage')))
     q = lambda sql, *a: {x for (x,) in c.execute(sql.format(marks=marks), list(a) + L * sql.count('{marks}'))}
     movers_mine = q("""select card from flat_do where origin='own' and act in ('move','swap') and coalesce(on_side,'mine') in ('mine','any')
             and coalesce(on_kind,'unit') in ('unit','any') and coalesce(on_pick,'') not in ('self') and card in ({marks})""")
@@ -2419,14 +2481,15 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
     enemy_movers_in = q("""select card from flat_do where origin='own' and act='move' and on_side='enemy' and on_kind='unit'
             and coalesce(on_pick,'') not in ('self') and card in ({marks})""")
     for t in row_hazard:
-        for a in enemy_movers_in - {t}: out[(a, t)].append(('boosts', 0.5 / max(1, len(enemy_movers_in)), 'moves an enemy unit into the row it hits'))
+        for a in enemy_movers_in - {t}: out[(a, t)].append(('boosts', 0.5 / max(1, len(enemy_movers_in)), 'moves an enemy unit into the row it hits'),
+                                                             (act_rows(a, ('move',)), act_rows(t, ('give_keyword',))))
     # paying for big cards: more mana, or a cost cut on my cards, helps the game's expensive cards (EXPENSIVE, set per game:
     # Faeria 7+) when it pays at least a third of the card's cost (Red Devil's 5 faeria for Krog's 12; 2 faeria in a fight
     # does not pay for anything), and only the cards the cut names ("Your Krog costs 7 less": Krog only)
     high = EXPENSIVE.get(game)
     if high:
-        pays = Lines()
-        for a, act, ps, w_, res in c.execute(f"""select card, act, params, on_with, coalesce(on_kind, 'mana') from flat_do where origin='own' and ((act in ('mana_gain','max_mana_change')
+        pays, pay_src = Lines(), collections.defaultdict(set)  # pay_src: the rows that pay (SRC)
+        for a, act, ps, w_, res, r_ in c.execute(f"""select card, act, params, on_with, coalesce(on_kind, 'mana'), ability || '.' || seq from flat_do where origin='own' and ((act in ('mana_gain','max_mana_change')
                 and coalesce(on_side,'mine')='mine') or (act in ('cost_change','cost_set') and coalesce(on_side,'mine') in ('mine','any')
                 and coalesce(on_pick,'') not in ('self','it'))) and card in ({marks})""", L):
             p = dict(x.split('=', 1) for x in (ps or '').split(';') if '=' in x)
@@ -2441,32 +2504,34 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
             if act in ('mana_gain', 'max_mana_change'): w_ = ';'.join(x_ for x_ in (w_, 'paid in mana') if x_)
             who = ';'.join(q_ for q_ in (w_ or '').split(';') if q_.split(' ')[:2] in (['card', 'is'], ['type', 'is'], ['type', 'in'],
                            ['name_has', 'is'], ['keyword', 'is'], ['region', 'is'], ['category', 'is']))
-            pays[a].append((act, n_, who, 'paid in mana' in (w_ or '')))
+            pays[a].append((act, n_, who, 'paid in mana' in (w_ or ''))); pay_src[(a, len(pays[a]) - 1)].add(r_)
         # an Orb the card puts in play that gives energy (Plasma: Meteor Strike channels 3): it pays like energy the card gives
-        for a, k, ps, pps in c.execute(f"""select distinct p.card, d.card, d.params, p.params from flat_do p join flat_do d on d.origin='own' and d.act='mana_gain'
+        for a, k, ps, pps, r_ in c.execute(f"""select distinct p.card, d.card, d.params, p.params, p.ability || '.' || p.seq from flat_do p join flat_do d on d.origin='own' and d.act='mana_gain'
                 and (';' || coalesce(p.on_with,'') || ';') like '%;keyword is ' || d.card || ';%' join card kk on kk.id=d.card and kk.is_keyword=1
                 where p.act='keyword_action' and p.origin='own' and p.card in ({marks})""", L):
             num = lambda t: (lambda x: float(x) if x.replace('.', '', 1).isdigit() else None)(dict(q_.split('=', 1) for q_ in (t or '').split(';') if '=' in q_).get('amount', ''))
             each, orbs = num(ps), num(pps) or 1.0
-            pays[a].append(('mana_gain', (each or 1.0) * orbs, '', True))  # an Orb's unstated energy counts as at least 1, once per Orb put in
+            pays[a].append(('mana_gain', (each or 1.0) * orbs, '', True)); pay_src[(a, len(pays[a]) - 1)].add(r_)  # an Orb's unstated energy counts as at least 1, once per Orb put in
         # a status the card gives me that sets my drawn cards' costs (Confused, Snecko Eye: a random cost 0-3): it pays for big cards
-        for a, via in c.execute(f"""select distinct d.card, d.via from flat_do d where d.origin='uses_keyword' and d.act='cost_set'
+        for a, via, r_ in c.execute(f"""select distinct d.card, d.via, d.ability || '.' || d.seq from flat_do d where d.origin='uses_keyword' and d.act='cost_set'
                 and coalesce(d.on_side,'mine')='mine' and d.card in ({marks})""", L):
             if c.execute("select 1 from flat_do where card=? and act='give_keyword' and keyword_ref=? and origin='own' and coalesce(on_side,'mine')='mine'",
-                         (a, via)).fetchone(): pays[a].append(('cost_set', None, '', False))
+                         (a, via)).fetchone(): pays[a].append(('cost_set', None, '', False)); pay_src[(a, len(pays[a]) - 1)].add(r_)
         for t in nodes:
             cost = cards.get(t, {}).get('cost') or 0
             if t in cards and cards[t]['x_cost']:  # "X times" (Conjure Blade, Whirlwind): every energy gained makes X bigger
                 for a, rs in pays.items():
                     if a != t and any(act in ('mana_gain', 'max_mana_change') for act, *_ in rs):
-                        out[(a, t)].append(('boosts', 0.5 / max(1, len(pays)), 'more energy: a bigger X'))
+                        out[(a, t)].append(('boosts', 0.5 / max(1, len(pays)), 'more energy: a bigger X'),
+                                           ({x for i_, (act, *_) in enumerate(rs) if act in ('mana_gain', 'max_mana_change') for x in pay_src[(a, i_)]}, {'c:x_cost'}))
                 continue
             if t not in cards or cost < high: continue
             for a, rs in pays.items():
                 if a == t: continue
                 if any((n_ is None and act == 'cost_set') or (n_ is not None and n_ * 3 >= cost) for act, n_, who, mana in rs
                        if (not who or matches(c, game, cards[t], 'any', who)) and not (mana and other_resource(c, t))):
-                    if (a, t) not in cost_help: out[(a, t)].append(('boosts', 0.5 / max(1, len(pays)), 'pays for it: more mana or a lower cost'))  # a
+                    if (a, t) not in cost_help: out[(a, t)].append(('boosts', 0.5 / max(1, len(pays)), 'pays for it: more mana or a lower cost'),
+                                                                    ({x for v_ in (pay_src[(a, i_)] for i_ in range(len(rs))) for x in v_}, {'type'}))  # B: a big card by its cost  # a
                     # cut aimed at it already says so
     # a straight line of fire (a keyword whose strike hits the nearest enemy in a straight line: Faeria Ranged): what removes or
     # moves enemy units clears the line; what moves my unit by an effect places it without using its move
@@ -2478,8 +2543,10 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
                 'return_to_hand') and (on_side='enemy' or (coalesce(on_side,'')='' and on_pick in ('chosen','all','random')))
                 and coalesce(on_kind,'unit') in ('unit','any','anything','unit_or_structure') and card in ({marks})""")
         for t in shooters:
-            for a in clear - {t}: out[(a, t)].append(('boosts', 0.5 / max(1, len(clear)), 'clears its line of fire'))
-            for a in movers_mine - {t}: out[(a, t)].append(('boosts', 0.5 / max(1, len(movers_mine)), 'moves it without using its move'))
+            lk_ = {f'kw{k}' for k in cards[t]['kws'] & line_kw}  # its line-of-fire keyword
+            for a in clear - {t}: out[(a, t)].append(('boosts', 0.5 / max(1, len(clear)), 'clears its line of fire'),
+                                                     (act_rows(a, ('damage', 'kill', 'obliterate', 'capture', 'move', 'swap', 'transform', 'return_to_hand'), "and origin='own'"), lk_))
+            for a in movers_mine - {t}: out[(a, t)].append(('boosts', 0.5 / max(1, len(movers_mine)), 'moves it without using its move'), (act_rows(a, ('move', 'swap')), lk_))
     # a board that grows from my units (a game rule: land or entry spaces next to my units, Faeria): whatever moves my units or
     # my land, or puts units that move far, helps the cards whose entry asks for a place (Bomb Slinger's adjacent enemy, Axe
     # Grinder next to an enemy well, Mistral Guide's units summoned next to it)
@@ -2509,23 +2576,30 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
         # and cards that need my units deep in enemy ground: harvesting enemy wells (Wavecrash Colossus), moving onto enemy land
         deep = q("""select card from flat_ref where role!='makes' and origin in ('own','has_keyword') and happening in ('harvests','moves_onto')
                 and (side='enemy' or coalesce(obj_with,'') like '%enemy%') and card in ({marks})""")
+        mv_ = lambda a: act_rows(a, ('move', 'swap', 'give_keyword'), "and origin='own'")
+        b_place = lambda t: {str(x) for (x,) in c.execute("""select ability from flat_when where card=? and origin='own' and event in ('summoned','played')
+                             union select ability from flat_ref where card=? and role!='makes' and happening in ('harvests','moves_onto')""", (t, t))} or {'type'}
         for t in near_me:  # what moves this card, or lets it move far, chooses where the units summoned next to it appear
-            for a in (movers_mine | givers) - {t}: out[(a, t)].append(('boosts', 0.5 / max(1, len(movers_mine | givers)), 'moves it where the units summoned next to it are needed'))
+            for a in (movers_mine | givers) - {t}: out[(a, t)].append(('boosts', 0.5 / max(1, len(movers_mine | givers)), 'moves it where the units summoned next to it are needed'), (mv_(a), b_place(t)))
         for t in (place | deep) - near_me:
             why = 'moves my units or land forward: it can enter where it needs to be' if t in place else 'moves my units or land forward: they reach enemy ground'
-            for a in growers - {t}: out[(a, t)].append(('boosts', 0.5 / max(1, len(growers)), why))
+            for a in growers - {t}: out[(a, t)].append(('boosts', 0.5 / max(1, len(growers)), why), (mv_(a), b_place(t)))
     # a keyword of mine that is not removed any more (Barricade: Block is not removed at turn start): it piles up for the cards
     # that count it (Body Slam deals damage equal to your Block, Entrench doubles it)
-    for a, w_ in c.execute(f"""select card, on_with from flat_do where origin='own' and act='cant' and param_event='keyword_removed'
+    for a, w_, r_ in c.execute(f"""select card, on_with, ability || '.' || seq from flat_do where origin='own' and act='cant' and param_event='keyword_removed'
             and coalesce(on_side,'mine')='mine' and on_with like 'keyword is %' and card in ({marks})""", L).fetchall():
         k = w_.split(';')[0].split(' ')[2]
-        users = {t for (t,) in c.execute(f"""select distinct card from flat_if where origin='own' and test in ('amount_count','count','have')
+        u_ab = collections.defaultdict(set)
+        for t, ab_ in c.execute(f"""select card, ability from flat_if where origin='own' and test in ('amount_count','count','have')
                  and coalesce(of_side,'mine')='mine' and coalesce(of_pick,'') not in ('self','chosen') and (';' || of_with || ';') like ?
-                 and card in ({marks})""", [f'%;keyword is {k};%'] + L)} - {a}
-        for t in users: out[(a, t)].append(('boosts', 0.5 / len(users), f'keeps your {mechanics.name(c, int(k))}: it counts more of it'))
-        givers = {m for (m,) in c.execute(f"""select distinct card from flat_ref where role='makes' and happening='given_keyword' and keyword=?
-                  and origin='own' and side='mine' and coalesce(pick,'') not in ('self','it') and card in ({marks})""", [int(k)] + L)} - {a} - users
-        for m in givers: out[(a, m)].append(('boosts', 0.5 / len(givers), f'keeps the {mechanics.name(c, int(k))} it gives'))
+                 and card in ({marks})""", [f'%;keyword is {k};%'] + L): u_ab[t].add(str(ab_))
+        users = {t_ for t_ in u_ab} - {a}
+        for t in users: out[(a, t)].append(('boosts', 0.5 / len(users), f'keeps your {mechanics.name(c, int(k))}: it counts more of it'), ({r_}, u_ab[t]))
+        g_ab = collections.defaultdict(set)
+        for m, ab_ in c.execute(f"""select card, ability from flat_ref where role='makes' and happening='given_keyword' and keyword=?
+                  and origin='own' and side='mine' and coalesce(pick,'') not in ('self','it') and card in ({marks})""", [int(k)] + L): g_ab[m] |= row_src(c, ab_, 'given_keyword')
+        givers = {t_ for t_ in g_ab} - {a} - users
+        for m in givers: out[(a, m)].append(('boosts', 0.5 / len(givers), f'keeps the {mechanics.name(c, int(k))} it gives'), ({r_}, g_ab[m]))
     # more room for what my cards put in a slot (Capacitor: 2 more Orb slots): the cards that put Orbs in keep more of them
     roomy = {a for (a,) in c.execute(f"""select distinct card from flat_do where origin='own' and act='capacity_change' and on_kind='slot'
              and coalesce(on_side,'mine')='mine' and card in ({marks})""", L)}
@@ -2535,7 +2609,8 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
                     act='move' and on_kind='keyword' and origin='uses_keyword'""") for x in __import__('re').findall(r'keyword is (\d+)', w or '')}
         fillers = set().union(*[givers_of(c, game, k, L) for k in slot_kws]) if slot_kws else set()
         for a in roomy:
-            for t in fillers - {a}: out[(a, t)].append(('boosts', 0.5 / len(fillers), 'more slots: it keeps more of what it puts in'))
+            for t in fillers - {a}: out[(a, t)].append(('boosts', 0.5 / len(fillers), 'more slots: it keeps more of what it puts in'),
+                                                       (act_rows(a, ('capacity_change',)), act_rows(t, ('give_keyword', 'keyword_action'))))
     # what strips the enemy's Block (Melter) helps the cards that want damage to get through it (Envenom, The Boot: "unblocked")
     strip = {a for (a,) in c.execute(f"""select distinct d.card from flat_do d join card k on k.id=d.keyword_ref where d.origin='own'
              and d.act='remove_keyword' and d.on_side='enemy' and d.card in ({marks}) and exists (select 1 from flat_do g where
@@ -2545,7 +2620,8 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
              from flat_do where origin='own' and act='damage' and on_side='enemy' and card in ({marks})""", L)}  # and every card of mine
              # that deals damage: with the Block gone it hits in full (Kaptain 30 Oct 2026, Melter)
     for a in strip:
-        for t in wants - {a}: out[(a, t)].append(('boosts', 0.5 / len(wants), 'removes their Block: its damage gets through'))
+        for t in wants - {a}: out[(a, t)].append(('boosts', 0.5 / len(wants), 'removes their Block: its damage gets through'),
+                                                 (act_rows(a, ('remove_keyword',)), act_rows(t, ('damage',), "and origin='own'")))
     # a status that makes damage bigger (Vulnerable on an enemy: it takes more; Wrath on me: I deal more): the cards that give it
     # make every card of mine that deals damage stronger
     orbs = {k for (k,) in c.execute("""select distinct d.card from flat_do d join card k on k.id=d.card where k.is_keyword=1 and k.game=?
@@ -2562,7 +2638,8 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
         # every damage card hit harder: any card can be the one (L14; Kaptain 2 Nov 2026); kept for a card that gets something back
         # from its damage (Reaper heals by it; Kaptain 30 Oct 2026: Bag of Marbles -> Reaper); one that reads the status (Brilliance:
         # Mantra) has its own line
-        for m in hitters: out[(a, m)].append(('boosts', 0.5 / len(hitters), f'gives {kname}: its damage is bigger'))
+        for m in hitters: out[(a, m)].append(('boosts', 0.5 / len(hitters), f'gives {kname}: its damage is bigger'),
+                                             (act_rows(a, ('give_keyword',)), act_rows(m, ('damage', 'keyword_action'), "and origin='own'")))
     return out
 
 
@@ -2636,14 +2713,16 @@ def object_help_lines(c, game, nodes, broad):
         # cards are Skills; "summoned near your General" (Call to Arms): what the place is measured from narrows no card
         narrowed = bool(arrive_kws) or any(p and p.split(' ')[0] not in PLAY_STATE and p.split(' ')[1:2] != ['not'] and not bt(p) for p in (w or '').split(';'))
         if not narrowed and not broad: continue  # Echo Form repeats any card: only the cards that use it (below) get a line
-        whys = []
-        for act, kw, ps in c.execute("select act, keyword_ref, params from flat_do where card=? and ability=? and origin=? and on_pick='it'", (a, ab, origin)):
+        whys = []; a_rows = set()  # a_rows: its help rows (SRC)
+        for act, kw, ps, sq_ in c.execute("select act, keyword_ref, params, seq from flat_do where card=? and ability=? and origin=? and on_pick='it'", (a, ab, origin)):
+            n_w = len(whys)
             if act in ('stat_change', 'grow') and '=-' not in (ps or ''): whys.append((stats_said(ps), act, kw, ps))
             elif act == 'cost_change' and '=-' in (ps or ''): whys.append(('makes it cheaper', act, kw, ps))
             elif act == 'give_keyword' and kw and buff_keyword(c, kw): whys.append((f'gives it {mechanics.name(c, kw)}', act, kw, ps))
             elif act == 'heal': whys.append(('heals it', act, kw, ps))
             elif act == 'repeat' and boosts_it(act, ps): whys.append(('plays it again', act, kw, ps))
             elif act == 'increase_effect' and boosts_it(act, ps): whys.append(('makes its effect bigger', act, kw, ps))
+            if len(whys) > n_w: a_rows.add(f'{ab}.{sq_}')
         if not whys: continue
         sharp = bool(arrive_kws) or any(p and p.split(' ')[0] not in PLAY_STATE + ('region', 'category') and p.split(' ')[1:2] != ['not']
                                         and not bt(p) for p in (w or '').split(';'))  # "a Demacia ally": any ally of the deck
@@ -2656,7 +2735,8 @@ def object_help_lines(c, game, nodes, broad):
             # you summon an ally, grant it +1|+1": only the units that use it (Kaptain 1 Nov 2026)
             if not ws: continue
             when = '' if all(y.startswith(('plays it again', 'makes its effect bigger', 'hits several', 'its damage is bigger')) for y in ws) else ' when it comes'  # it is played: it comes
-            out[(a, b)].append(('boosts', 0.5 / max(1, len(hits)), ', '.join(dict.fromkeys(ws)) + when))
+            b_ = {x for y, act, kw, ps in whys if not loose(act, ps) and uses_help(c, game, b, act, kw, ps) for x in use_src(c, b, use_of(c, game, b, act, kw, ps) or '', kw)}
+            out[(a, b)].append(('boosts', 0.5 / max(1, len(hits)), ', '.join(dict.fromkeys(ws)) + when), (a_rows, b_ or {'type'}))
     return out
 
 
@@ -2664,10 +2744,10 @@ def state_giver_lines(c, game, nodes):
     """a card that gives my units a keyword another card's need asks for ("You've attacked with 7+ Ephemeral allies": Mark of
     the Isles grants an ally Ephemeral, so it feeds Hecarim's level-up)"""
     cards = cards_of(c, game); out = Lines(); marks = ','.join('?' * len(nodes)); L = list(nodes); lvl = level_abilities(c)
-    gives = collections.defaultdict(set)
-    for a, k in c.execute(f"""select card, keyword_ref from flat_do where act='give_keyword' and origin='own' and coalesce(on_side,'mine')
+    gives, give_src = collections.defaultdict(set), collections.defaultdict(set)
+    for a, k, r_ in c.execute(f"""select card, keyword_ref, ability || '.' || seq from flat_do where act='give_keyword' and origin='own' and coalesce(on_side,'mine')
             in ('mine','any') and coalesce(on_pick,'') not in ('self','owner') and (coalesce(on_kind,'unit') in ('unit','any','anything')
-            or (on_kind='card' and on_pick='it')) and card in ({marks})""", L): gives[k].add(a)  # "copy it, it is Ephemeral" (Stalking
+            or (on_kind='card' and on_pick='it')) and card in ({marks})""", L): gives[k].add(a); give_src[(a, k)].add(r_)  # "copy it, it is Ephemeral" (Stalking
             # Shadows): the follower it draws
     for t, ab, role, aw, ow in c.execute(f"""select card, ability, role, actor_with, obj_with from flat_ref where role in ('condition','trigger')
             and origin='own' and coalesce(side,'mine') in ('mine','any','') and card in ({marks})""", L).fetchall():
@@ -2676,7 +2756,7 @@ def state_giver_lines(c, game, nodes):
                 if a not in cards: continue
                 lv = ab in lvl; say = f'makes your units {mechanics.name(c, k)}' + (' (levels it up)' if lv else '')
                 if not any(l[2] == say for l in out[(a, t)]):
-                    out[(a, t)].append(('levels' if lv else 'waits' if role == 'trigger' else 'type', 0.5 / len(gives[k]), say))
+                    out[(a, t)].append(('levels' if lv else 'waits' if role == 'trigger' else 'type', 0.5 / len(gives[k]), say), (give_src[(a, k)], {str(ab)}))
     return out
 
 
@@ -2685,23 +2765,29 @@ def actor_help_lines(c, game, nodes):
     the card it pays for costs 2 less; Morsel: that card gets its stats): it helps every card of the deck that needs that
     happening (the Blood cards that need sacrifices)"""
     cards = cards_of(c, game); out = Lines(); marks = ','.join('?' * len(nodes)); L = list(nodes)
-    for a, act, ps, ev in c.execute(f"""select distinct d.card, d.act, d.params, w.event from flat_do d join flat_when w on w.card=d.card
+    for a, act, ps, ev, r_ in c.execute(f"""select distinct d.card, d.act, d.params, w.event, d.ability || '.' || d.seq from flat_do d join flat_when w on w.card=d.card
             and w.ability=d.ability where d.on_pick='actor' and w.obj_pick='self' and d.origin in ('own','has_keyword')
             and d.act in ('cost_change','stat_change','give_keyword') and d.card in ({marks})""", L).fetchall():
-        takers = {t for (t,) in c.execute(f"""select distinct card from flat_ref where role in ('condition','trigger') and happening=?
-                  and coalesce(side,'') in ('mine','any','') and coalesce(pick,'') not in ('self','actor_self') and card in ({marks})""", [ev] + L)} - {a}
+        t_ab = collections.defaultdict(set)
+        for t, ab_ in c.execute(f"""select card, coalesce(ability, 'kw' || via) from flat_ref where role in ('condition','trigger') and happening=?
+                  and coalesce(side,'') in ('mine','any','') and coalesce(pick,'') not in ('self','actor_self') and card in ({marks})""", [ev] + L): t_ab[t].add(str(ab_))
+        takers = {t_ for t_ in t_ab} - {a}
         why = 'makes it cheaper' if act == 'cost_change' and '=-' in (ps or '') else ('help ' + stats_said(ps))[5:] if act == 'stat_change' else 'gives it a keyword'
         for t in takers:
-            if t in cards: out[(a, t)].append(('boosts', 1.0 / len(takers), why + f' (when it is {ev.replace("_", " ")} for it)'))
+            if t in cards: out[(a, t)].append(('boosts', 1.0 / len(takers), why + f' (when it is {ev.replace("_", " ")} for it)'), ({r_}, t_ab[t]))
     # a card that is sacrificed and does not die (Many Lives: Cat) pays the Blood of every card that needs sacrifices, again and
     # again (Kaptain 31 Oct 2026: Cat -> Urayuli)
     for (a,) in c.execute(f"""select distinct d.card from flat_do d join flat_when w on w.card=d.card and w.ability=d.ability where
             d.act='cant' and d.on_pick='self' and d.params like '%event=dies%' and w.event='sacrificed' and w.obj_pick='self'
             and d.origin in ('own','has_keyword') and d.card in ({marks})""", L).fetchall():
-        takers = {t for (t,) in c.execute(f"""select distinct card from flat_ref where role='condition' and happening='sacrificed'
-                  and coalesce(side,'') in ('mine','any','') and coalesce(pick,'') not in ('self','actor_self') and card in ({marks})""", L)} - {a}
+        a_ = {f'{x}.{y}' if o_ == 'own' else f'kw{v_}' for x, y, o_, v_ in c.execute("""select d.ability, d.seq, d.origin, d.via from flat_do d join flat_when w on w.card=d.card
+              and w.ability=d.ability where d.act='cant' and d.on_pick='self' and d.params like '%event=dies%' and w.event='sacrificed' and d.card=?""", (a,))}
+        t_ab = collections.defaultdict(set)
+        for t, ab_ in c.execute(f"""select card, coalesce(ability, 'kw' || via) from flat_ref where role='condition' and happening='sacrificed'
+                  and coalesce(side,'') in ('mine','any','') and coalesce(pick,'') not in ('self','actor_self') and card in ({marks})""", L): t_ab[t].add(str(ab_))
+        takers = {t_ for t_ in t_ab} - {a}
         for t in takers:
-            if t in cards: out[(a, t)].append(('boosts', 1.0 / len(takers), 'pays for it again and again: it is sacrificed and does not die'))
+            if t in cards: out[(a, t)].append(('boosts', 1.0 / len(takers), 'pays for it again and again: it is sacrificed and does not die'), (a_, t_ab[t]))
     return out
 
 
@@ -2713,8 +2799,13 @@ def gives_lines(c, game, nodes):
     cards = cards_of(c, game); out = Lines(); marks = ','.join('?' * len(nodes)); L = list(nodes)
     doers = lambda h: {m for (m,) in c.execute(f"""select distinct card from flat_ref where role='makes' and happening=? and
             origin in ('own','uses_keyword') and coalesce(pick,'') not in ('self','it') and coalesce(side,'')!='mine' and card in ({marks})""", [h] + L)}
+    def doer_src(m, h):  # the rows of m that make h (SRC); a unit only by what it is
+        return {x for (ab_,) in c.execute("""select distinct ability from flat_ref where role='makes' and happening=? and card=? and ability is not null
+                and origin in ('own','uses_keyword')""", (h, m)) for x in row_src(c, ab_, h)} or {'type'}
+    adder_rows = lambda a, ab, act: {f'{ab}.{sq}' for (sq,) in c.execute('select seq from flat_do where card=? and ability=? and act=?', (a, ab, act))} or {str(ab)}
     # damage to my own cards is a drawback: more of it helps nothing (L5: The Dreadway -> Darkwater Scourge, no line)
     found = adders(c, game); n = collections.Counter(h for _, _, h, *_ in found)
+    act_rows_ = lambda m, k: {f'{x}.{y}' for x, y in c.execute("select ability, seq from flat_do where card=? and act='give_keyword' and keyword_ref=?", (m, k))} or {'type'}
     for a, ab, h, kind, w, (act, ps) in found:
         if a not in nodes: continue
         amount = dict(p.split('=', 1) for p in (ps or '').split(';') if '=' in p).get('amount', '').removesuffix('.0')
@@ -2724,7 +2815,7 @@ def gives_lines(c, game, nodes):
             if kind == 'unit' and h in ('damaged', 'strikes') else set()  # every unit deals damage when it strikes: only units that use
         # more damage (Overwhelm, Elusive; Kaptain 1 Nov 2026), like more power
         for m in doers(h) | units:
-            if m != a and m in cards and matches(c, game, cards[m], kind, w): out[(a, m)].append(('boosts', 1.0 / n[h], why))
+            if m != a and m in cards and matches(c, game, cards[m], kind, w): out[(a, m)].append(('boosts', 1.0 / n[h], why), (adder_rows(a, ab, act), doer_src(m, h)))
     for a, ab, k, side, kind, ak in keyword_adders(c, game):  # Snecko Skull -> the cards that apply Poison; Footwork -> the Block cards
         if a not in nodes: continue
         gs = {m for (m,) in c.execute(f"""select distinct card from flat_ref where role='makes' and happening='given_keyword' and keyword=?
@@ -2739,7 +2830,8 @@ def gives_lines(c, game, nodes):
         gs = {m for m in gs if c.execute("select 1 from flat_do where card=? and act='give_keyword' and keyword_ref=? and params like '%times=%'",
                                           (m, k)).fetchone()}  # each card that gives Block or Poison gets the same +1: only one that
         # gives it several times in one go gets more from it (Kaptain 2 Nov 2026)
-        for m in gs: out[(a, m)].append(('boosts', 1.0 / len(gs), f'makes the {mechanics.name(c, k)} it gives bigger'))
+        for m in gs: out[(a, m)].append(('boosts', 1.0 / len(gs), f'makes the {mechanics.name(c, k)} it gives bigger'),
+                                        ({str(ab)}, act_rows_(m, k)))
     skip = adder_abilities(c, game)
     named_to = collections.defaultdict(list)
     for a, w_ in c.execute(f"select card, on_with from flat_do where act='give_ability' and origin='own' and on_with like '%card is %' and card in ({marks})", L):
@@ -2755,7 +2847,7 @@ def gives_lines(c, game, nodes):
             if ks and not any(k in cards[m]['kws'] or m in givers_of(c, game, k, L) for k in ks): continue  # only Power from Hallowed ()
             if named_to.get(a) and not any(matches(c, game, cards[m], 'any', w_) for w_ in named_to[a]): continue  # the ability goes to the
             # cards it names (Twisted Catalyzer: Darkness); only they set it off, not every card that deals damage ()
-            out[(m, a)].append(('waits', 0.1, f'{say} (for the ability it gives)'))
+            out[(m, a)].append(('waits', 0.1, f'{say} (for the ability it gives)'), (doer_src(m, h), {str(ab)}))
     return out
 
 
@@ -2807,7 +2899,9 @@ def flood_lines(c, game, nodes):
             and card in ({marks})""", L)]
     for a in blockers:
         for b in summoners:
-            if a != b: out[(a, b)].append(('type', 0.5, 'stops cards being played, but a summon is not played: it still fills the place'))
+            if a != b: out[(a, b)].append(('type', 0.5, 'stops cards being played, but a summon is not played: it still fills the place'),
+                                          ({f'{x}.{y}' for x, y in c.execute("select ability, seq from flat_do where card=? and act='cant' and param_event='played'", (a,))},
+                                           {f'{x}.{y}' for x, y in c.execute("select ability, seq from flat_do where card=? and act='summon' and origin='own'", (b,))}))
     return out
 
 
@@ -2826,7 +2920,7 @@ def spent_lines(c, game, nodes):
             if x['x_cost'] or (x['cost'] is not None and n is not None and x['cost'] >= n):
                 lv = ab in lvl
                 say = ('has a variable cost: pays it alone' if x['x_cost'] else f'costs {int(x["cost"])}: pays it alone') + (' (levels it up)' if lv else '')
-                out[(a, t)].append(('levels' if lv else 'type', 1.0 if lv else 0.5, say))
+                out[(a, t)].append(('levels' if lv else 'type', 1.0 if lv else 0.5, say), ({'c:x_cost'} if x['x_cost'] else {'type'}, {str(ab)}))  # A: its cost
     return out
 
 
@@ -2834,7 +2928,7 @@ def stat_reader_lines(c, game, nodes):
     """an effect that raises a unit's stat by another of its stats (Gabrian Enchantment: "a creature's Attack becomes equal to its
     Life"; Bayou Brunch doubles it) gets more from a unit that grows that stat itself (Oak Father: +0/+1 for each forest)"""
     cards = cards_of(c, game); out = Lines(); marks = ','.join('?' * len(nodes)); L = list(nodes)
-    readers = c.execute(f"""select distinct b.card, e.act, p.param, a.attr from param p join amount a on a.id=p.amount join effect e on e.id=p.effect
+    readers = c.execute(f"""select distinct b.card, e.act, p.param, a.attr, b.id || '.' || e.seq from param p join amount a on a.id=p.amount join effect e on e.id=p.effect
               join ability b on b.id=e.ability join target t on t.id=a.of_target join target o on o.id=e.on_target
               where a.x='stat' and t.pick='it' and o.pick in ('chosen','it','all') and coalesce(o.side,'mine') in ('mine','any')
               and e.act in ('stat_change','stat_set') and p.param in ('power','health') and a.attr in ('power','health')
@@ -2844,12 +2938,16 @@ def stat_reader_lines(c, game, nodes):
     floors = {t for (t,) in c.execute(f"""select card from flat_if where test in ('count','amount_count','have') and coalesce(of_side,'mine')='mine'
               and of_with like '%power ge %' and card in ({marks})""", L)} | {t for (t,) in c.execute(f"""select card from flat_do
               where params like '%count of%' and on_with is not null and params like '%power ge %' and card in ({marks})""", L)}
+    floor_src = lambda t: {str(x) for (x,) in c.execute("""select ability from flat_if where card=? and test in ('count','amount_count','have') and of_with like '%power ge %'
+              union select ability || '.' || seq from flat_do where card=? and params like '%count of%' and params like '%power ge %'""", (t, t))}
+    stat_rows = lambda a, sql: {f'{x}.{y}' for x, y, ps in c.execute(sql, (a,)) if re.search(r'(power|health)=\d', ps or '')} or {'type'}
     if floors:
         raisers = {a for a, ps in c.execute(f"""select card, params from flat_do where origin='own' and act in ('stat_change','grow')
                    and coalesce(on_side,'mine')='mine' and coalesce(on_pick,'') not in ('self') and coalesce(on_kind,'unit') in ('unit','any')
                    and card in ({marks})""", L) if re.search(r'power=\d', ps or '')}
         for t in floors:
-            for a in raisers - {t}: out[(a, t)].append(('stronger', 0.3, 'raises my units to the power it counts'))
+            for a in raisers - {t}: out[(a, t)].append(('stronger', 0.3, 'raises my units to the power it counts'),
+                                                       (stat_rows(a, "select ability, seq, params from flat_do where card=? and origin='own' and act in ('stat_change','grow') and coalesce(on_pick,'')!='self'"), floor_src(t)))
     if not readers: return out
     grows = collections.defaultdict(set)  # unit -> stats it raises on itself
     for t, ps in c.execute(f"""select card, params from flat_do d where origin='own' and on_pick='self' and act in ('stat_change','grow')
@@ -2858,11 +2956,12 @@ def stat_reader_lines(c, game, nodes):
         for x in (ps or '').split(';'):
             if '=' in x and not x.split('=', 1)[1].startswith('-'): grows[t].add(x.split('=', 1)[0])
     word = {'power': 'Attack', 'health': 'Life'} if game == 'faeria' else {'power': 'Power', 'health': 'Health'}
-    for a, act, stat, read in readers:
+    for a, act, stat, read, r_ in readers:
         if act == 'stat_set' and stat == read: continue  # "set its Power to its Power" changes nothing
         for t in nodes:
             if t == a or cards.get(t, {}).get('cat') not in KIND_CAT['unit']: continue
-            if read in grows.get(t, ()): out[(a, t)].append(('stronger', 0.5, f"turns the {word[read]} it grows into {word[stat]}"))
+            if read in grows.get(t, ()): out[(a, t)].append(('stronger', 0.5, f"turns the {word[read]} it grows into {word[stat]}"),
+                                                            ({r_}, stat_rows(t, "select ability, seq, params from flat_do where card=? and origin='own' and on_pick='self' and act in ('stat_change','grow')")))
             # a printed stat is no link: every unit has Life (a line comes from what a card does, not what every card is)
     return out
 
@@ -2887,20 +2986,21 @@ def self_harm_lines(c, game, nodes):
     Lord of the Wastes -> Village Elder). A card that counts friendly deaths (Soul Eater) gets nothing from either-side harm."""
     cards = cards_of(c, game); out = Lines(); marks = ','.join('?' * len(nodes)); L = list(nodes)
     wants = self_gains(c, nodes)
-    harms = c.execute(f"""select card, act, on_kind, on_with, params from flat_do where origin='own' and act in ('damage','kill','sacrifice')
+    harms = c.execute(f"""select card, act, on_kind, on_with, params, ability || '.' || seq from flat_do where origin='own' and act in ('damage','kill','sacrifice')
             and coalesce(on_side,'') in ('','any','mine') and on_pick in ('chosen','random','all') and coalesce(on_kind,'unit') in
             ('unit','any','anything','unit_or_structure') and card in ({marks})""", L).fetchall()
     for t, hs in wants.items():
         life = cards.get(t, {}).get('health') or cards.get(t, {}).get('strength')
-        for a, act, k, w, ps in harms:
+        for a, act, k, w, ps, r_ in harms:
+            sg = lambda h_: ({r_}, {str(x) for (x,) in c.execute("select ability from flat_when where card=? and obj_pick='self' and event in (?, ?)", (t,) + ((h_, 'killed') if h_ == 'dies' else (h_, h_)))} or {'type'})
             if a == t or a not in cards or not matches(c, game, cards[t], 'unit', w): continue
             x = dict(q.split('=', 1) for q in (ps or '').split(';') if '=' in q).get('amount', '')
             dmg = float(x) if x.replace('.', '', 1).isdigit() else None
             kills = act in ('kill', 'sacrifice') or (dmg is not None and life and dmg >= life)
-            if kills and hs & {'dies', 'killed'}: out[(a, t)].append(('waits', 0.5, ACT_SELF['dies']))
-            elif kills and 'sacrificed' in hs and act == 'sacrifice': out[(a, t)].append(('waits', 0.5, ACT_SELF['sacrificed']))
-            elif act == 'damage' and 'damaged' in hs: out[(a, t)].append(('waits', 0.5, ACT_SELF['damaged']))
-            elif act == 'damage' and 'survives_damage' in hs and not kills: out[(a, t)].append(('waits', 0.5, ACT_SELF['survives_damage']))
+            if kills and hs & {'dies', 'killed'}: out[(a, t)].append(('waits', 0.5, ACT_SELF['dies']), sg('dies'))
+            elif kills and 'sacrificed' in hs and act == 'sacrifice': out[(a, t)].append(('waits', 0.5, ACT_SELF['sacrificed']), sg('sacrificed'))
+            elif act == 'damage' and 'damaged' in hs: out[(a, t)].append(('waits', 0.5, ACT_SELF['damaged']), sg('damaged'))
+            elif act == 'damage' and 'survives_damage' in hs and not kills: out[(a, t)].append(('waits', 0.5, ACT_SELF['survives_damage']), sg('survives_damage'))
     return out
 
 
@@ -2917,13 +3017,17 @@ def kill_food_lines(c, game, nodes):
         for (a,) in c.execute(f"""select distinct card from flat_do where origin='own' and card in ({marks}) and card!=?
                 and act='damage' and on_pick in ('all','random') and coalesce(on_side,'') in ('','enemy','any','mine')
                 and params not like '%amount=1.0%'""", L + [k]):
-            out[(a, k)].append(('waits', 0.5, 'leaves weak units for its kill'))
+            out[(a, k)].append(('waits', 0.5, 'leaves weak units for its kill'),
+                               ({f'{x}.{y}' for x, y in c.execute("select ability, seq from flat_do where card=? and origin='own' and act='damage' and on_pick in ('all','random')", (a,))},
+                                {str(x) for (x,) in c.execute("select ability from flat_ref where card=? and origin='own' and role='trigger' and happening='killed' and pick='actor_self'", (k,))}))
     # a 1-damage ping (Kaedweni Revenant, Redanian Archer) kills an enemy another card sets to strength 1 (Vincent Meis; C81, C82; L2: a strike now)
     pings = [i for (i,) in c.execute(f"select distinct card from flat_do where origin='own' and act='damage' and on_pick='chosen' and coalesce(on_side,'') in ('','enemy','any') and params like '%amount=1.0%' and card in ({marks})", L)]
     setters = [i for (i,) in c.execute(f"select distinct card from flat_do where origin='own' and act='stat_set' and on_pick='chosen' and on_side='enemy' and params like '%strength=1.0%' and card in ({marks})", L)]
     for k in pings:
         for a in setters:
-            if a != k: out[(k, a)].append(('waits', 0.5, 'its 1 damage kills what it sets to strength 1'))
+            if a != k: out[(k, a)].append(('waits', 0.5, 'its 1 damage kills what it sets to strength 1'),
+                                          ({f'{x}.{y}' for x, y in c.execute("select ability, seq from flat_do where card=? and origin='own' and act='damage' and on_pick='chosen' and params like '%amount=1.0%'", (k,))},
+                                           {f'{x}.{y}' for x, y in c.execute("select ability, seq from flat_do where card=? and origin='own' and act='stat_set' and on_side='enemy'", (a,))}))
     return out
 
 
@@ -2938,6 +3042,7 @@ def keyword_chain_lines(c, game, nodes):
     card -> Naiad Fledgling: "whenever your Symbiosis is triggered"). Only a narrow kind is a real trigger: "a unit with more
     power" (Thrive) is any unit (L1, L21)"""
     out = Lines(); cards = cards_of(c, game); L = list(nodes); marks = ','.join('?' * len(L)); best = {}; said = {}
+    chain_src = collections.defaultdict(set)  # (a, t, keyword) -> the rows of a that make the card (SRC)
     for k, kname, h, kind, w in c.execute("""select r.card, k.name, r.happening, r.kind, coalesce(r.obj_with,'') from flat_ref r join card k on k.id=r.card
             where k.game=? and k.category='keyword' and r.origin='own' and r.role='trigger' and r.happening in ('played','summoned')
             and coalesce(r.pick,'') not in ('self','actor_self','attached_to','owner') and coalesce(r.side,'') in ('','mine','any')""", (game,)).fetchall():
@@ -2958,7 +3063,7 @@ def keyword_chain_lines(c, game, nodes):
         tn = next((c.execute('select name from type where id=?', (int(p.split(' ')[2]),)).fetchone() for p in rest.split(';')
                    if p.split(' ')[:2] == ['type', 'is'] and p.split(' ')[2].isdigit()), None)
         what = f"{'an' if tn and tn[0][:1] in 'AEIOU' else 'a'} {tn[0]} card" if tn else 'a card'
-        for a, ah, mk, mw, ref in c.execute(f"""select distinct r.card, r.happening, r.kind, coalesce(r.obj_with,''), r.ref from flat_ref r where r.origin='own'
+        for a, ah, mk, mw, ref, rab in c.execute(f"""select distinct r.card, r.happening, r.kind, coalesce(r.obj_with,''), r.ref, r.ability from flat_ref r where r.origin='own'
                 and r.role='makes' and r.happening in ('played','created','summoned') and coalesce(r.side,'') in ('','mine','any') and r.card in ({marks})
                 and (r.happening!='created' or exists (select 1 from flat_do d where d.card=r.card and d.ability=r.ability and d.origin='own'
                 and d.act in ('create','copy') and coalesce(d.eff_zone, case when d.act='create' then 'hand' end) in ('hand','deck','deck_top','deck_bottom')
@@ -2976,10 +3081,12 @@ def keyword_chain_lines(c, game, nodes):
             for t in (holders | waiters) - {a, ref}:
                 if VERB_RANK[verb] > VERB_RANK.get(best.get((a, t, k)), -1): best[(a, t, k)] = verb  # "creates and plays": said once, as plays
                 said[(a, t, k)] = (what, kname, t in holders)
+                chain_src[(a, t, k)] |= row_src(c, rab, ah)
     for (a, t, k), verb in best.items():
         what, kname, held = said[(a, t, k)]
+        b_ = {f'kw{k}'} if held else {str(x) for (x,) in c.execute("select ability from flat_ref where card=? and origin='own' and role='trigger' and happening='keyword_used' and keyword=?", (t, k))}
         out[(a, t)].append(('waits', 0.5, f"{verb} {what}, which sets off its {kname}" if held else
-                            f"{verb} {what}, which sets off {kname}: {{B}} waits for {kname} to go off"))
+                            f"{verb} {what}, which sets off {kname}: {{B}} waits for {kname} to go off"), (chain_src[(a, t, k)], b_ or {f'kw{k}'}))
     return out
 
 
@@ -2991,7 +3098,7 @@ def copies_lines(c, game, nodes):
     selfcopy = {i for (i,) in c.execute(f"""select distinct card from flat_do where origin='own' and coalesce(to_side,'mine') in ('mine','any')
                 and ((act='copy' and on_pick='self') or (act in ('summon','create') and card_ref=card)) and card in ({marks})""", L)}
     if not selfcopy: return out
-    for a, act, k, w, ps, kw in c.execute(f"""select distinct card, act, on_kind, on_with, params, keyword_ref from flat_do where origin='own'
+    for a, act, k, w, ps, kw, r_ in c.execute(f"""select distinct card, act, on_kind, on_with, params, keyword_ref, ability || '.' || seq from flat_do where origin='own'
             and act in ('stat_change','give_keyword') and coalesce(on_side,'mine') in ('mine','any') and on_with like '%state is copy_of_it%'
             and card in ({marks})""", L).fetchall():
         if act == 'stat_change' and not stats_said(ps).startswith('gives it more'): continue
@@ -3005,7 +3112,9 @@ def copies_lines(c, game, nodes):
         for t in selfcopy - {a}:
             if t not in cards or not matches(c, game, cards[t], k if k in KIND_CAT else 'unit', rest): continue
             why = f"gives a unit's copies {say}, and {{B}} copies itself"
-            if not any(l[2] == why for l in out[(a, t)]): out[(a, t)].append(('stronger' if act == 'stat_change' else 'keyword', 0.5, why))
+            src = ({r_}, rows_of(c, t, "origin='own' and ((act='copy' and on_pick='self') or (act in ('summon','create') and card_ref=card))"))
+            if not any(l[2] == why for l in out[(a, t)]): out[(a, t)].append(('stronger' if act == 'stat_change' else 'keyword', 0.5, why), src)
+            else: note(a, t, why, *src)
     return out
 
 
@@ -3062,7 +3171,10 @@ def network(c, game, ids, broad=True):
                     # only what levels a champion up is passed on (other lines through a made card stay on it), one step (not
                     # through two made cards), and only what the maker does not already do itself (Trundle hits the Nexus too)
                     if k == 'levels' and not why.startswith('through '):
-                        lines[(p, b)].append((k, w * 0.5, f'through {mechanics.name(c, m)}: {why}'))
+                        lines[(p, b)].append((k, w * 0.5, f'through {mechanics.name(c, m)}: {why}'))  # SRC A: what makes m; B: what levels up from m
+                        SRC[(p, b, f'through {mechanics.name(c, m)}: {why}')].add((
+                            ';'.join(sorted({f'{x}.{y}' for x, y in c.execute('select ability, seq from flat_do where card=? and card_ref=?', (p, m))} or {'type'})),
+                            ';'.join(sorted({x for _, bs in SRC.get((m, b, why), ()) for x in bs.split(';') if x} or {'type'}))))
     # "makes the Wraithling it asks for": when the Wraithling is drawn too, the maker puts it into play and the Wraithling enables
     # the card; no line from the maker straight to the card (Lilithe -> Wraithling -> Inkling Surge)
     enables_from = collections.defaultdict(set)  # m -> the cards m enables by being there ("is a Wraithling it asks for")

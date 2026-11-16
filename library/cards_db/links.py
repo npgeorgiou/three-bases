@@ -117,6 +117,8 @@ def build(c, L, game):
     print(game, 'sample:', ', '.join(names[i] for i in random.Random(1).sample(ids, min(10, len(ids)))))
     only = only_made(c, game, mine)  # as in a deck: a card only other cards make is "made" (Wraithling, Chime, a level-up form)
     nodes, lines = network.network(c, game, [i for i in ids if i not in only])
+    src_by = collections.defaultdict(list)  # (a, b) -> [(sentence, sources)]: for a reason joined from two lines
+    for (a, b, z), v in network.SRC.items(): src_by[(a, b)].append((z, v))
     phr = {(k, x): i for i, k, x in L.execute('select id, kind, text from phrase')}
     L.execute('delete from link where game=?', (game,)); pairs = rows = 0
     for (a, b), ls in lines.items():
@@ -128,7 +130,9 @@ def build(c, L, game):
             if key not in phr:
                 phr[key] = L.execute('insert into phrase(kind, text) values (?, ?)', key).lastrowid
             site = min(network.SITE.get((a, b, part)) or network.SITE.get((a, b, why)) or {0})
-            src = network.SRC.get((a, b, part)) or network.SRC.get((a, b, why)) or set()  # what of A and of B made it
+            src = network.SRC.get((a, b, part)) or network.SRC.get((a, b, why)) or \
+                {x for z, v in src_by.get((a, b), ()) if z in why or part in z for x in v}  # what of A and of B made it; a reason joined from
+            # two (one_link: "brings it back" + "its summon effect goes off"): the lines it was joined from
             a_ab = ';'.join(sorted({x for s_, _ in src for x in s_.split(';') if x})) or None
             b_ab = ';'.join(sorted({x for _, s_ in src for x in s_.split(';') if x})) or None
             L.execute('insert into link values (?, ?, ?, ?, ?, ?, ?, ?)', (game, a, b, phr[key], weight, site, a_ab, b_ab)); rows += 1; got = True
