@@ -21,11 +21,8 @@ ARG={(l.split('\t')[1],l.split('\t')[2]) for l in list(open(F+'arguments.tsv'))[
 ARG|={(b,a) for a,b in ARG}
 linked=lambda a,b: ok(LK.get((a,b),(0,0))) or (a,b) in ARG
 MIN,MAX,CAP=25,4,3  # CAP: an extra in at most 3 factions (Kaptain, 15 Nov 2026); factions with the fewest choices pick first
-# partners second: a tie on radii is broken by how many factions a read combo (KEEP/WEAK, strong number) joins it to
-V=set()
-for l in open(F+'work/mechanic_pair_verdicts.tsv'):
-    p=l.rstrip('\n').split('\t'); a,b=p[0].split('+')
-    if p[2] in ('KEEP','WEAK') and ok(LK.get((a,b),(0,0))): V|={(a,b),(b,a)}
+# partners second: a tie on radii is broken by how many factions a strong library number joins it to (numbers only)
+V={(a,b) for (a,b),n in LK.items() if ok(n)}
 def partners(k,m): return len({j for j in OWN if j!=k and any((m,o) in V for o in OWN[j])})
 CANDS={}
 for k in OWN:

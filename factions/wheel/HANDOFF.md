@@ -12,6 +12,7 @@ what Kaptain decided and what was learned: never undo it. Clone with the library
 - Docs are written cleanly, as if things had always been this way: no history, no "formerly", no archaeology.
 
 ## Part 1. Fix the links (library/cards_db)
+Database work: read START_DATABASE.md for it; the START_DESIGN files are read only when Part 2 starts.
 Read first: `library/cards_db/START_DATABASE.md` Part 1 (rules for changing the database), `LINE_RULES.md` only if a line
 itself must change (it must not here).
 
@@ -75,10 +76,10 @@ example above (the pair must not count). Then the docs (Part 2 step 0).
 
 ## Part 2. Design the 20 factions again
 Steps of `factions/START_DESIGN-1-wheel.md`. What stays and what is redone:
-0. Docs first, cleanly: `START_DESIGN-1-wheel.md` (steps 2 and 6 = numbers only), `PIPELINE.md`,
+0. Docs first, cleanly (done 16 Nov 2026, except removing the files named below): `START_DESIGN-1-wheel.md` (steps 2 and 6 = numbers only), `PIPELINE.md`,
    `START_DESIGN-4-asking.md`, `library/README.md`, START_DATABASE's links part (the new columns). Remove the reading
-   files no step uses any more (`work/radius_verdicts.tsv`, `work/mechanic_pair_verdicts.tsv`, the reading prompts); the check
-   script no longer uses them.
+   files no step uses any more (`work/radius_verdicts.tsv`, `work/mechanic_pair_verdicts.tsv`, the reading prompts, and `work/kind_test.py`, which
+   only tested them); the check script and `work/borrow.py` no longer use them.
 1. Radii: STAY (shares of cards, no links).
 2. Radii that work together: REDO, numbers only (`mechanics_wheel.py links --radii`).
 3. The 20 shapes: re-check every join with the new numbers (`tools/wheel_table_check.py`); change only shapes whose

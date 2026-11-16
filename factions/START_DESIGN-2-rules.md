@@ -4,8 +4,8 @@ Part of `factions/START_DESIGN.md` (read that first, whole; then this file and p
 ## 0. Setup
 - Clone with the library (CLAUDE.md "Start of a chat", then `git sparse-checkout disable`). Library commands run from
   `library/cards_db/`; `cards.sqlite` is committed and current.
-- Push only what Kaptain asks to be pushed. Design work (new factions, card lists) is given to him as files to read
-  unless he says to commit it.
+- Design files are committed to main and pushed (the project's rule); Kaptain reads them on GitHub. Only built HTML
+  files are sent to him as downloads.
 
 ## 1. Know THIS game before designing anything (the most important step)
 Cards copied from other games that do not work on this board are the most common failure. Before suggesting any card,
@@ -60,7 +60,7 @@ If summary/ and the code disagree, the code wins: tell Kaptain.
 ## 2. The design rules (agreed with Kaptain)
 More text: `summary/09-card-design-rules.txt`
 (costing). Ideas to use: `factions/4-kaptains-ideas.txt`, `factions/7-ideas-kept-for-later.txt`. Never reintroduce:
-`factions/8-rejected-and-cut.txt`. Old drafts in `factions/designs/` are never reused.
+`factions/8-rejected-and-cut.txt`. Removed factions and drafts (`factions/removed/`) are never reused.
 
 **What a faction has**
 - Exactly 100 cards (tokens not counted). Spells are 20-50% of them, and about the same share at every cost from 1 to 5:
@@ -77,17 +77,18 @@ More text: `summary/09-card-design-rules.txt`
   3. Helps the next lane: while I hold this lane, the bonus goes to my units in the other lanes.
   4. Answers only: while I hold the lane, acts only when the enemy tries to take it back.
   5. Keeping costs: while I hold the lane, a strong effect that I pay for each round (carry-over, a card).
-  6. Behind in the game: stronger while the enemy holds two bases.
+  6. Behind in the game: while the enemy holds this lane's base and one more, stronger here.
   7. Takes, then leaves: when I take the base, it goes back to hand or to another lane.
   8. A rule for both: while I hold the lane, a rule there changes for both players.
-  9. Any unit of mine: its bonus works for every unit of mine, so it helps the partner faction too.
+  9. Any unit of mine: while I hold this lane's base, its bonus works for every unit of mine here, so it helps the
+     partner faction too.
   Example (kind 1): "While the enemy holds this lane's base, the unit facing me is marked. While I hold it, enemies
   placed facing me arrive marked."
 - The two things every faction can do alone: hold dots (units with enough defence for the front row) and remove enemies
   (its own way, step 2.2). Extra supply and extra draw are strengths a faction may have or lack (Kaptain, 5 Nov 2026):
   placed units already give supply and every player draws 2 cards a round.
 - Draw, when a faction has it: a plain "draw 1", or a condition the player makes happen with the faction's cards ("Place:
-  if an ally died this round, draw 1"; "when I kill an enemy, draw 1"). Never a condition only the enemy decides (the
+  if an ally died this round, draw 1"; "the first time each round I kill an enemy, draw 1"). Never a condition only the enemy decides (the
   enemy casting a spell, the enemy passing). Only on effects that happen once per card (a spell,
   Place, its own death) or once per round; never "whenever an ally dies, draw".
 - At least 1 card that acts between lanes: moves a unit to another lane, throws something there, or uses one lane's
@@ -108,12 +109,13 @@ More text: `summary/09-card-design-rules.txt`
 - Cards that cash something in have 3+ cards that set it up; cards that set something up feed 2+ cards that cash it in.
 - Tools (the wheel's step 7): 2-4 new kinds of things or rules, each from one mechanic, feeding each other; many cards
   carry them, the rest of the faction's cards build the ways to play around them.
-- Signature mechanics (step 3): the faction builds on them; other factions have them only on a few cards.
+- Signature mechanics (step 3): the faction builds on them; another faction may hold one as an extra (several cards,
+  at most 3 factions) or a one-off.
 - A faction's mechanics (2 signature, 2-4 extras) are what it builds on, each on several cards. Any card may also carry
   a one-off from any mechanic of the game: a faction far from bringing back may have ONE unit that comes back. One-offs
   are not tracked on the wheel and keep cards from being unimaginative.
-- Other strong mechanics (copying, deck search, draw, card creation, forced movement, resurrection, stealing) belong to
-  1, at most 2 factions; elsewhere on very few cards.
+- Strong mechanics (copying, deck search, draw, card creation, forced movement, bringing back, stealing) follow the
+  wheel's rule like every mechanic: a signature of 1 faction, an extra in at most 3, elsewhere one-offs only.
 - How much it touches the enemy: a disruptive faction has many cards that act on enemy units (push, mark, punish); a
   straightforward one has fewer.
 

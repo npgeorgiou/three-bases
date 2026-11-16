@@ -6,7 +6,7 @@ question ("how do games do X?"). Changing the database (importing a game, fixing
 (this game's rules, the design rules), `START_DESIGN-3-checks.md` (the lessons, searching the library, the checks before
 sending) and `START_DESIGN-4-asking.md` (how to ask the library and shape an answer). A plain question skips the steps of
 building a faction below and answers in the shape of part 4, with the board and player checks of part 4. Every line in
-the four files is either something to do, with an example from this game, or a check that `tools/design_gate.py` runs.
+the four files (this one, -2, -3, -4; the wheel chat also has `START_DESIGN-1-wheel.md`) is either something to do, with an example from this game, or a check that `tools/design_gate.py` runs.
 
 ## Who you are
 You are the Lead Systems and Balance Designer of a serious, highly competitive card game. The rules are fixed (summary/);
@@ -32,17 +32,17 @@ Steps 1-6 come from the library, never from memory. Run the queries below on all
 `library/cards_db/`; a faction name used by two games, such as Ironclad, needs the game: `ask.py sts1 lacks Ironclad`),
 and write the sources (game: card) next to each answer of steps 2, 3, 5 and 6. `ways` and `curve` show what each card
 does; card texts are read only within the faction's 100 (START_DESIGN-3, "Reading cards").
-- Step 1: list the factions of every game (section 3) and pick the 6-10 closest to the faction's place on the wheel (the
+- Queries for step 1: list the factions of every game (START_DESIGN-3, section 3) and pick the 6-10 closest to the faction's place on the wheel (the
   closest factions in `factions/wheel-axes.html`; for the planned shape itself `python3 axes.py --near`, see
   `START_DESIGN-1-wheel.md`; not the theme), at least one per board game
   (Duelyst, Faeria, Stormbound, Into the Breach, Inscryption); run `curve` on each to see what its cards do.
-- Step 2: `removal <game>` and `protect <game>` for all games, `palette place` and `palette death`: which ways to remove and
+- Queries for step 2: `removal <game>` and `protect <game>` for all games, `palette place` and `palette death`: which ways to remove and
   hold exist, and which the other factions of the wheel already use (the wheel's table).
-- Step 3: `only <game>` for all games (monopolies real factions have) and `lacks "<faction>"` for the closest factions
+- Queries for step 3: `only <game>` for all games (monopolies real factions have) and `lacks "<faction>"` for the closest factions
   (their blind spots).
-- Step 5: for each mechanic `compare`, `factions`, `fed`, `feeds`, `together`, `chains`, and `both` with each other
+- Queries for step 5: for each mechanic `compare`, `factions`, `fed`, `feeds`, `together`, `chains`, and `both` with each other
   mechanic; `analyze` the closest real faction to count how many of its cards make and use the mechanic (30+ wanted).
-- Step 6: `ways "<faction>"` of the closest factions, and `network` / `analyze` on their real decks in `decks.tsv`, to see
+- Queries for step 6: `ways "<faction>"` of the closest factions, and `network` / `analyze` on their real decks in `decks.tsv`, to see
   which cards actually combo in played decks; each way to play names the real ways and combos it comes from.
   A deck is a small part of what a faction is (decks.tsv: about 80-100 top decks each for Runeterra, Duelyst, Faeria,
   Marvel Snap; fewer for the others): decks show which cards are played together, never prove alone that two
@@ -67,13 +67,14 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
       one row back".
    7. Blind spot: the one thing it never gets, on any card. Example: a swarm faction never restores shields.
 3. **Signature mechanics and blind spots** (taken from the wheel). 2 signature mechanics: the faction builds on them;
-   other factions may have them as extras or one-offs. A list of things it never has; its cards never make up for them,
+   other factions may have them as extras or one-offs. Its blind spot (step 2.7) plus any other things the wheel says it never has; its cards never make up for them,
    it plays around them. A blind spot is never one of the two things every faction needs (hold dots, remove enemies),
    only one way of doing them: "no kill spells" is a blind spot, "no removal" is not.
 4. **How it differs from each other faction** (from the wheel; check it with the closest factions on the page). Kaptain's example: a swarm that fills the front rows with many cheap weak
    units, against a fortress that never has more than 3 units and moves defence between them. Write one sentence per
    other faction saying why a game between the two feels different.
-5. **Mechanics (4-6: the wheel's 2 signatures and 2-4 extras) and its 2-4 tools**, each mechanic written "I do X -> I gain from X" ("my units die -> my other units grow"). A mechanic is
+5. **Mechanics and tools, taken from the wheel** (2 signatures, 2-4 extras, 2-4 tools; never new ones here), each
+   mechanic written "I do X -> I gain from X" ("my units die -> my other units grow"). A mechanic is
    broad: 30+ cards can make it happen or use it. One card's effect ("a gun fires") is not a mechanic. Each mechanic
    grows in at least one of three ways:
    - Chain: an effect gets bigger when something else happened first. "Deal 1 damage. If you cast another spell this
@@ -88,12 +89,14 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    its cost 1-4 opening, its 4-6 middle, its 6+ finish, and its Leaders (the 5 are spread over the ways). Test: two ways that put the same
    kind of units in the same cells and win the same way are one way.
 7. **The library, card by card.** For each way to play, 20+ real cards from the closest factions of ALL games
-   (`ask.py all ways`, `palette`, `curve`, `spells`, `removal`, `protect`: section 3). At most 100 cards are read for the
+   (`ask.py all ways`, `palette`, `curve`, `spells`, `removal`, `protect`: START_DESIGN-3, section 3). At most 100 cards are read for the
    whole faction, the wheel's tools and steps 6 and 7 together; a card already in `factions/read-cards.tsv` is used from its line, never read
    again (part 3, "Reading cards"). For each card write one line: the
    decision the player makes when playing it. Save the lines in `factions/designs/<faction>-library.txt` (the gate reads
    it: "WAY <name>" lines, then "<game> | <card> | <the decision>").
-8. **Cards.** Each card grows from one library line or from Claude's own idea, and says which (`src: '<game>: <card>'`
+8. **Cards**, written to `factions/designs/<faction>-cards.txt` (mechanics and ways to play in
+   `factions/designs/<faction>.txt`; format in `tools/network_check.py`), then into the game with two premade decks in
+   `js/cards/decks-premade.js`. Each card grows from one library line or from Claude's own idea, and says which (`src: '<game>: <card>'`
    or `src: 'own'`; own ideas are welcome). Template:
    - Card Name: [name]
    - Resource Cost: [supply]
@@ -106,8 +109,9 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    the new one only changes numbers, stats, cost or ON WHOM, it is the same card: drop it and use another library line.
    The failure this stops: 14 Horologers said "round end: I strike the nearest enemy", with different stats. The gate
    fails two cards whose WHEN + WHAT + ON WHOM are all the same, and one WHEN + WHAT on more than 3 cards.
-10. **Checks**: sections 2-5, then `python3 tools/design_gate.py <letter>` until it prints PASS. Then measure the faction on
-   the wheel's radii (`node tools/wheel_check.js <letter> "<its planned values>"`): it must land where the wheel put it;
+10. **Checks**: START_DESIGN-2 section 2 and START_DESIGN-3 sections 2b-5, then `python3 tools/design_gate.py <letter>` until it prints PASS. Then measure the faction on
+   the wheel's radii (`node tools/wheel_check.js <letter> "<its planned values>"`; the letter is the faction's letter in the game, the
+   values are its shape in `factions/wheel/work/shapes.tsv`): it must land where the wheel put it;
    if it drifted, fix the faction, not the wheel. Code only after Kaptain
    agreed steps 1-6.
 
@@ -132,7 +136,7 @@ randomness: no coin flips, random targets or random cards.
    of the theme and made it everything. Stops it: step 6.
 6. **Spells all "+strength" and "kill"** (Sunfeeders). Why: as in 1. Stops it: step 9 on spells too; `ask.py all spells`
    shows what real factions' spells do (bring back, give cards, weaken for later, give units to the enemy...).
-7. **Round-end damage on many cards**: too strong, the enemy can't answer at round end (section 1b). Stops it: step 9.
+7. **Round-end damage on many cards**: too strong, the enemy can't answer at round end (START_DESIGN-2, 1b). Stops it: step 9.
 8. **Stats changed off the budget** (+1 / -1 defence) to move Benchmark win rates. Why: a number is the fastest fix.
    Stops it: the budget of summary/09 is exact (the gate checks it); balance by changing what cards do.
 9. **A crash shipped**: removed cards were still used in the code, and the only test loaded the page without playing.
@@ -140,7 +144,7 @@ randomness: no coin flips, random targets or random cards.
 10. **Invented words** ("break" for dies) **and rule words without hover** (wind without [[Wind]]). Stops it: only the
    game's words; the gate checks every keyword word is linked.
 11. **Leaders marked only in the design files.** Stops it: `leader: true` on the card (the gate checks it).
-12. **Spells piled at cost 1-2, units at 3-4.** Stops it: section 2, the spell share at every cost (the gate checks it).
+12. **Spells piled at cost 1-2, units at 3-4.** Stops it: START_DESIGN-2 section 2, the spell share at every cost (the gate checks it).
 13. **Answers that deflect.** "Because I did X" is no reason: say why Claude did X and what Claude can't do.
 14. **Rules in docs get skipped.** Stops it: what must happen is a check in `tools/design_gate.py`; the pre-commit hook
    refuses commits that change how a faction's cards play while it fails. Never commit with `--no-verify`.

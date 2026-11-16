@@ -2,8 +2,9 @@
 Part of `factions/START_DESIGN.md` (read that first, whole; then parts 2, 3 and this file, whole). A plain question to the
 library ("how do games do X?", a combo hunt, a deck idea) starts at START_DESIGN.md too; it answers in the shape below.
 
-You answer questions from the card database; you do not change it. If an answer shows a wrong card reading or a wrong
-line, tell Kaptain and leave the fix to a database chat (`library/cards_db/START_DATABASE.md`). Commands run from
+You answer questions from the card database. If a card's text shows its rows or its links wrong, the database or the
+link script is fixed in the same chat, with test cases (START_DESIGN-3, "Reading cards"; rules in
+`library/cards_db/START_DATABASE.md`). Commands run from
 `library/cards_db/`; cards.sqlite is committed and current, no build is needed.
 
 ## What Kaptain wants
@@ -57,10 +58,10 @@ sources.
 Example answers: QUERIES.md. Kaptain's standing questions with their current answers: library/design_questions/
 (made by design_questions.py). The full list of questions the database must answer: QUESTION_BANK.md.
 
-## How to build an answer (until the line table of LINKS_PLAN.md exists)
+## How to build an answer (the line table planned in LINKS_PLAN.md is not built yet)
 1. Write the question's parts as concepts (QUESTION_BANK.md has many already written).
-2. For each part: `compare` and `factions` (which games and factions have it, how), then read 5-10 cards' texts to group
-   them into ways. A concept is broad: read texts before trusting a count.
+2. For each part: `compare` and `factions` (which games and factions have it, how), then group the cards into ways from their
+   rows (`curve`, `ways`); open card texts only within the faction's 100 (START_DESIGN-3, "Reading cards").
 3. For each pair of parts: `fed`/`feeds` and `both`, and `network` on a handful of cards from each part in one faction, to
    see the lines between them. Read the lines' reasons.
 4. Direction matters and concepts lose it: "cost_increase" is the opponent's cards costing more, a cost rise on my own cards
@@ -70,7 +71,7 @@ Example answers: QUERIES.md. Kaptain's standing questions with their current ans
 ## Search wide, deep and with curiosity (every design request)
 - Wide: start with `list concepts`; for each part of the request pick the obvious concepts and their neighbours (e.g.
   builders: summon, link_formation, terrain, placement_rules). For each concept run `compare`, `factions`, `fed`, `feeds`,
-  `together`, `chains`, and `both` with every other part; read texts from every game that has it, not just top counts.
+  `together`, `chains`, and `both` with every other part; look at cards from every game that has it, not just top counts (texts within the 100).
 - Deep: for each faction that does the thing, run `network` / `analyze` on its real decks in decks.tsv, to see working
   decks, not single cards. Decks are a small sample of a faction: never the
   only check that mechanics fit together.
@@ -95,7 +96,7 @@ Example answers: QUERIES.md. Kaptain's standing questions with their current ans
   - Worth: is the card better than a plain unit of the same cost in that spot? If not, drop it.
 - Identity check: first write the faction's identity in one sentence; every mechanic must serve it. A library way found on
   similar cards elsewhere (e.g. buildings that damage themselves) is not a reason to use it. Never take another faction's
-  identity (summary/11-faction-*.txt), e.g. self-damage belongs to the Ashfang Horde; cross-faction ideas only when asked.
+  identity: the wheel gives each faction its own (`factions/wheel/`).
 - A combo is not a list of buffs. Two cards are a combo only when one changes what the other does or sets it off again
   (a loop, a conversion, a rule change), so together they do something neither does alone, not just bigger numbers.
   Test: take either card away; does the other lose its point? Show each combo as a played sequence: card, cell, what the

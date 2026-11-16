@@ -2,7 +2,7 @@
 
 Read `factions/START_DESIGN.md` and its parts 2-4 whole first, then `factions/12-mechanical-wheel.txt` (why the wheel
 and its radii) and `factions/wheel/PIPELINE.md` (the commands of every step). Start with `python3 links.py` in
-`library/cards_db` (about 4 minutes; the file is not in git). The chat writes no cards, no stats and no code for the
+`library/cards_db` (about 4 minutes; the file is not in git; tell Kaptain and wait for his OK, CLAUDE.md). The chat writes no cards, no stats and no code for the
 game; it picks the 20 themes (step 7).
 
 Three Bases is a game of combos: decks mix 2 factions. Every faction combines well with at least 10 others. Every
@@ -27,11 +27,13 @@ faction's radii.
 1. **The radii.** The 24 radii of `factions/13-wheel-measurement.txt`, measured on 43 real factions (`axes.py`).
 2. **The radii that work together.** For every two radii, the library's number in all cards and in real decks: how much
    more often than chance a card of one is linked with a card of the other (1 = chance), counted only where the
-   link's own effects belong to the two radii (the links store which effect of each card made them). Numbers only,
+   link's own effects belong to the two radii (the links store which effect of each card made them; the count uses
+   them once HANDOFF Part 1, "the wheel's count", is done). Numbers only,
    nobody reads card pairs. "Rewards playing spells" is judged by its deck number only, because such a card links to
    every spell.
 3. **The 20 factions as shapes.** Each faction is 3-6 strong radii with uneven values, as real factions have. Each
-   radius is joined to another of the same faction by a strong number of step 2 (one makes what the other needs:
+   radius is joined to another of the same faction by a strong number of step 2 (`cards` 1.5+, or
+   `cards` and `decks` both 1.2+) (one makes what the other needs:
    "spends them" makes deaths, "brings back" uses them), or by an argument from this game's rules, written in
    `arguments.tsv`. Each shape is checked against the real factions (`axes.py --near`). No two shapes are the same.
    A radius that only exists by another game's rules is never a faction's base (see step 4's rule check).
@@ -62,7 +64,8 @@ faction's radii.
      come back", another "my unit goes back to hand").
 6. **Links between mechanics.** For every two mechanics, the library's numbers (`mechanics_wheel.py links`), by script
    only. Nobody reads card pairs here (Kaptain, 15 Nov 2026): the database already holds what each card does, and
-   whether two factions really combo on this board is judged once, in step 8. `apart.py` gives the pairs
+   whether two factions really make a combo on this board is judged once, in step 8 ("links" are between mechanics,
+   "combos" between factions). `apart.py` gives the pairs
    real factions keep apart; a faction that holds both ends of such a pair is shown to Kaptain.
 7. **Theme, then tools.** First each faction gets a real theme (START_DESIGN.md step 1: World War I artillery, the
    Zulu regiments), picked for its mechanics; the 20 themes all differ. The theme is a source of tools, never a reason
@@ -72,7 +75,8 @@ faction's radii.
    supply per lane, carry-over, round start and round end, one action per turn, moving, reach, strikes and fixed
    damage, the hand, the discard pile, Immobile), carried by many of its cards. Examples (Claude's): eggs (my dead unit
    leaves an egg in its cell that turns back into it at round end), trophies (the first time each round I kill a marked enemy, I get a card),
-   edicts (a lasting rule on a lane), graves, debts, banners, oaths, tunnels, hostages, echoes. Each tool:
+   edicts (a lasting rule on a lane), graves, debts, banners, oaths, tunnels, hostages, echoes; examples only, each
+   kind of tool once in the wheel. Countdowns very sparingly; a lane never holds more than 12 supply. Each tool:
    - names the mechanic it grows from; each signature has a tool; an extra joins a tool or sits only on cards;
    - feeds at least one other tool (one makes what the other uses): faction A's eggs keep the front cell after a
      death, and its departures make the touching allies strike when a unit leaves; take one away and the other loses
@@ -93,7 +97,7 @@ faction's radii.
 8. **Combos on this board.** Agents rate every pair of factions (190) from their tools and mechanics, with
    step 6's numbers as sources: STRONG (both halves on many cards, helps take or hold a base, the enemy's one action
    between can't easily stop it), OK (real but breakable), WEAK, NONE, AGAINST. Partners = STRONG or OK; every faction
-   has 10+. A faction under 10 goes back to step 5 (other extras), then step 3. `combos.tsv` has a test column that
+   has 10+. A faction under 10 goes back to step 5 (other extras), then step 3, and steps 6-8 are redone for it. `combos.tsv` has a test column that
    playtests fill; what doesn't work in play is dropped.
 9. **The seven answers** (START_DESIGN.md step 2) for all 20, made from the tools: how it wins, how it
    removes a front unit, how it mainly removes back-row units, how it mainly acts between lanes, how it holds a base,
@@ -106,7 +110,7 @@ It reads the files of steps 2-9 and checks real numbers, not only columns: every
 per faction, each a signature once; extras 2-4, each in at most 3 factions; each faction's mechanics joined; 10+
 partners; a theme per faction, all different; 2-4 tools per faction, each naming its mechanic and feeding another,
 every signature with a tool, none the same; all seven answers present and different; removals by the
-faction's own mechanics; blind spots outside its mechanics. It fails loudly; a failure is fixed, never argued away.
+faction's own mechanics; blind spots outside its mechanics. It fails loudly; a failure is fixed, never argued away. It fails until step 7 writes `themes.tsv` and `tools.tsv`.
 
 ## What Kaptain sees at Stop 1
 `factions/wheel/STOP1.md` and its parts: per faction, in plain words, its strong radii, its signatures and extras, its
@@ -114,7 +118,8 @@ theme, its tools and how they feed each other, the seven answers, and its partne
 under 150 lines (split them); the CLAUDE.md map names them.
 
 ## How to read the wheel
-24 radii in 8 areas, measured on 43 real factions of 8 games. A value compares a faction with the average faction of
+24 radii in 8 areas, measured on 43 real factions of 8 games (Duelyst, Faeria, Gwent, Inscryption, Into the Breach,
+Runeterra, Stormbound, Slay the Spire; Marvel Snap has no factions, Monster Train is left out). A value compares a faction with the average faction of
 its own game (1 = average), so compare factions of different games loosely. Into the Breach, Stormbound, Slay the Spire
 and Inscryption have no value on 10 or more radii. Strength, defence and the two width radii give a faction its shape;
 they are not mechanics.

@@ -10,6 +10,7 @@ mechanics.tsv   the 53 mechanics: "I do X -> I gain from X", the library concept
 arguments.tsv   joins with no strong library number, argued from this game's rules (Claude's)
 PIPELINE.md     how every step was made (a record, not a to-do)
 HANDOFF.md      the next chat's whole job: fix the links, then design the factions again; all decisions
-work/           inputs and scripts: shapes.tsv (the 20 shapes), radius_verdicts.tsv, mechanic_pair_verdicts.tsv
-                (agents' reads of real card pairs), concept_fixes_*.tsv, newmech_verdicts*.tsv, assign.tsv, borrow.py,
-                check_assign.py, the agents' prompts
+work/           inputs and scripts: shapes.tsv (the 20 shapes), concept_fixes_*.tsv, newmech_verdicts*.tsv,
+                assign.tsv, signatures.py, borrow.py, check_assign.py, make_stop1.py, the agents' prompts (combo_prompt.txt,
+                answers_prompt.txt); radius_verdicts.tsv, mechanic_pair_verdicts.tsv and board_prompt.txt are from the first
+                round and are removed (HANDOFF Part 2 step 0)

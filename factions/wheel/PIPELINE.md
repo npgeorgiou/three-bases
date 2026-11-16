@@ -1,7 +1,8 @@
 # The wheel pipeline, steps 1-9: how each result was made
 Commands run from `library/cards_db/` unless they start with `factions/`.
 Before anything: `python3 links.py` (about 4 minutes; makes links.sqlite, not in git; every number below needs it).
-This is a record of what was done, not a to-do: nothing here is read again. A step is redone only when what it
+A record of how each result of the first round was made, with its commands; the next round follows
+START_DESIGN-1-wheel.md (steps 2 and 6 by numbers only, step 7 = theme and tools). A step is redone only when what it
 uses changes, and then only for the parts that changed. Each step says what a script did and what was judgment.
 
 ## Step 1. The radii (made 9-10 Nov 2026, before the wheel chats)
@@ -31,7 +32,7 @@ uses changes, and then only for the parts that changed. Each step says what a sc
 - Checked by: `python3 tools/wheel_table_check.py` (from the repo root; 3-6 radii, each joined, no two shapes the same).
 
 ## Step 4. The mechanics list (second try; checked again 15 Nov 2026)
-- Start: the first try's 44 mechanics (`HANDOFF.md`, "What can be reused"), plus offering, roundstart, leave, hide,
+- Start: the first try's 44 mechanics, plus offering, roundstart, leave, hide,
   bigstrength: 48 mechanics, one line each, never two merged (Kaptain).
 - File: `factions/wheel/mechanics.tsv`, columns: key; sentence "I do X -> I gain from X"; concepts (the library
   concepts that count a card as this mechanic; `concept@game,game` counts only in those games); NEW RULE mark;
@@ -57,7 +58,7 @@ uses changes, and then only for the parts that changed. Each step says what a sc
   each fits its faction 0.8+, the two linked) then `python3 borrow.py --write` (2-4 extras by fit, each in at most
   3 factions) -> `work/assign.tsv`. Checked by `work/check_assign.py`.
 
-## Step 6. Combos between mechanics (15 Nov 2026)
+## Step 6. Links between mechanics (15 Nov 2026)
 - From 15 Nov 2026 on, step 6 is numbers only (Kaptain): the reads below were done before that and are not redone.
 - Numbers: `links.tsv` (step 4). Agents read 4 real card pairs per strong mechanic pair (8 if the first 4 say KEEP):
   is it a real combo? -> `work/mechanic_pair_verdicts.tsv`. Each pair is read once: only pairs the new assignment
