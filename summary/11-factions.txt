@@ -28,4 +28,4 @@ Immobile       | -2          | Can't move.
 Fading         | -2          | Dies at the end of the round in which it was placed.
 Reckless       | -2          | Dies right after it attacks.
 
-Units whose text checks "you hold this lane's base" have a golden border in the game.
+Leaders (5 per faction) have a golden border in the game, on the card and on the board; no other card has one.

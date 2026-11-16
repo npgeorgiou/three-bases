@@ -47,7 +47,7 @@ const FLAG = { bonus: ['supply'], guard: ['protects'], armoured: ['protects'], e
   charge: ['strikes'], flurry: ['strikes'], riposte: ['strikes'], retaliate: ['strikes'], reckless: ['spends'], offering: ['spends', 'supply', 'pos'],
   reserve: ['spends'], seeds: ['spends', 'wide'], salvage: ['spends', 'cards'], augur: ['spellpay'], roots: ['textdmg'], barrage: ['textdmg'],
   push: ['disrupts'], wall: ['growsdef', 'pos'], geared: ['pos'] };
-const NONE = ['name', 'text', 'art', 'fac', 'net', 'size', 'sup', 'str', 'def', 'fx', 'tactic', 'cost', 'cast', 'aura', 'champion', 'token', 'fixed', 'ranged',
+const NONE = ['name', 'text', 'art', 'fac', 'net', 'size', 'sup', 'str', 'def', 'fx', 'tactic', 'cost', 'cast', 'aura', 'leader', 'token', 'fixed', 'ranged',
   'wound', 'outrider', 'reach', 'shellCard', 'lesser', 'lightfooted', 'moves', 'part', 'fade', 'src', 'tv', 'noAgain', 'key', 'k', 'lane', 'all'];
 // words beside the effect word in one effect: who, how much, how long
 const MOD = ['to', 'if', 'rnd', 'max', 'min', 'per', 'lim', 'x', 'plus', 'n', 'first', 'lane', 'all', 'at', 'of', 'from', 'kw', 'count', 'back', 'stat', 'lanes'];

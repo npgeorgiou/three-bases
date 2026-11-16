@@ -3,7 +3,7 @@
    Game: for each faction, its two premade decks against each other (the player's actions are picked from listActions,
    the computer plays itself), up to N player actions. Scenarios: loads every board and plays a few actions on it.
    Card checks (first, in a started game): every card's text renders live; deck lists are sorted by cost, then name;
-   each faction shows exactly 5 champions on its cards and deck items; every keyword word in a text has its hover.
+   each faction shows exactly 5 leaders on its cards and deck items; every keyword word in a text has its hover.
      node tools/playtest.js [faction letters, e.g. cd] [--actions N]   (default: all factions, 20 actions)
    Needs puppeteer-core (or puppeteer) and a Chrome, as tools/smoke.js. */
 'use strict';
@@ -48,8 +48,8 @@ const CARD_CHECKS = () => {
       const A = CARDS[list[i - 1]], B = CARDS[list[i]];
       if (cardCost(A) === cardCost(B) && A.name.localeCompare(B.name) > 0) { bad.push(`deck order, faction ${f}: ${A.name} before ${B.name}`); break; }
     }
-    const champs = list.filter(k => /class="card [^"]*\bchamp\b/.test(cardHtml(k)) && /\bchamp\b/.test(deckItemHtml(k, 1, false)));
-    if (list.some(k => CARDS[k].champion) && champs.length !== 5) bad.push(`faction ${f}: ${champs.length} champions shown, need 5`);
+    const leaders = list.filter(k => /class="card [^"]*\bleader\b/.test(cardHtml(k)) && /\bleader\b/.test(deckItemHtml(k, 1, false)));
+    if (list.some(k => CARDS[k].leader) && leaders.length !== 5) bad.push(`faction ${f}: ${leaders.length} leaders shown, need 5`);
   }
   const forms = w => (w === 'Wind' ? 'wind|winds|winding' : w === 'Strike' ? 'strike|strikes' : w.replace(/-/g, '\\-'));
   for (const k of keys) {

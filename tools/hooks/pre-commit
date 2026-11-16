@@ -1,6 +1,6 @@
 #!/bin/sh
 # Refuses a commit that changes how a faction's cards play (cost, stats, keywords, effects) unless that faction passes
-# tools/design_gate.py. Text, hover links, art and champion marks don't count (tools/hooks/gameplay_changed.js).
+# tools/design_gate.py. Text, hover links, art and leader marks don't count (tools/hooks/gameplay_changed.js).
 # Turned on at the start of every chat: git config core.hooksPath tools/hooks (CLAUDE.md). Never commit with --no-verify.
 cd "$(git rev-parse --show-toplevel)" || exit 1
 git diff --cached --name-only | grep -q '^src/game/js/cards/' || exit 0

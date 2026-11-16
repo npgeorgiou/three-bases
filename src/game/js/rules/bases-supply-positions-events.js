@@ -27,6 +27,12 @@ function pay(s, lane, n) {
   pool[lane] -= fromLane;
   s.players[s.cur].reserve -= n - fromLane;
 }
+/** Adds supply to a lane this round, never above LANE_SUPPLY_MAX; returns what was added. */
+function gainSupply(s, p, lane, n, start = true) {
+  const add = Math.max(0, Math.min(n, LANE_SUPPLY_MAX - s.pool[p][lane]));
+  s.pool[p][lane] += add; if (start) s.poolStart[p][lane] += add;
+  return add;
+}
 const carryOrder = p => (p === 0 ? [0, 1, 2] : [2, 1, 0]);
 
 /** Carry-over p would have next round if the round ended now. */

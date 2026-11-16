@@ -11,7 +11,7 @@ Checks (rules from factions/START_DESIGN.md and summary/09; numbers marked "Clau
   5  twins       START_DESIGN step 9: no two cards whose WHEN + WHAT + ON WHOM parts are all the same; no WHEN + WHAT on more than 3 cards
                  (read from the cards' effect data; keyword effects not counted)
   6  spells      at each cost 1-5 with 4+ cards, the spell share is within 15 points of the faction's share (Claude's 15)
-  7  champions   exactly 5 cards with champion: true
+  7  leaders   exactly 5 cards with leader: true
   8  hovers      every keyword word in a card text is linked ([[Word]]) at least once in that text
   9  network     tools/network_check.py on the entry and cards files: 0 problems
   10 play        tools/playtest.js <letter>: real games and every scenario in a browser without script errors
@@ -161,8 +161,8 @@ def main():
                 probs.append(f'cost {k}: {round(100 * sh)}% spells, faction {round(100 * share)}%')
     check('spells', probs, f'{round(100 * share)}% spells')
 
-    ch = [c['name'] for c in cards if c.get('champion') is True]
-    check('champions', [] if len(ch) == 5 else [f'{len(ch)} cards with champion: true, need 5'])
+    ch = [c['name'] for c in cards if c.get('leader') is True]
+    check('leaders', [] if len(ch) == 5 else [f'{len(ch)} cards with leader: true, need 5'])
 
     probs = []
     for c in cards:

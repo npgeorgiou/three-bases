@@ -196,10 +196,12 @@ function unitsBehind(s, u) {
 
 /** Supply a unit adds to its lane at the start of each round. */
 const unitIncome = u => Math.max(0, unitSupply(u) + (cardOf(u).bonus || 0) + (cardOf(u).backBonus && inBack(u) ? cardOf(u).backBonus : 0) - (u.blight ? 1 : 0));
+/** No lane holds more than this much supply for one player. */
+const LANE_SUPPLY_MAX = 12;
 /** Supply a lane gives its owner at the start of each round. */
 function laneSupply(s, p, lane) {
   let sum = 0;
   for (const u of s.units) if (ctl(u) === p && u.lane === lane) sum += unitIncome(u);
-  return sum;
+  return Math.min(LANE_SUPPLY_MAX, sum);
 }
 

@@ -19,7 +19,7 @@ for (const [k, c] of Object.entries(ctx.C)) {
   const lines = [`CARD ${c.name}`, cost, plain(c.text), `mech: ${mech}`];
   if (makes && makes !== '-') lines.push(`makes: ${makes.replace(/^makes\s*/, '')}`);
   if (needs && needs !== '-') lines.push(`needs: ${needs.replace(/^needs\s*/, '')}`);
-  if (c.champion) lines.push('champion');
+  if (c.leader) lines.push('leader');
   out.push(lines.join(' | '));
 }
 console.log(out.join('\n'));

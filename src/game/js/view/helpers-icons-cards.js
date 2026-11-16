@@ -88,9 +88,9 @@ function cardText(c, u) {
   }).replace(/\{\{card:(\w+)\|([^}]+)\}\}/g, (m, k, n) => `<span class="cref" data-c="${k}">${n}</span>`);
   return keywordHtml(text.replace(/\{\{(\d+|\+)\}\}/g, (m, n) => (n === '+' ? (bonus > 0 ? `, plus ${up(bonus)}` : '') : up(Math.max(0, +n + bonus)))));
 }
-/** Cards that check whether you hold the lane's base get a golden border (card and unit). */
-const BASE_BOUND = new Set(Object.keys(CARDS).filter(k => /"hold":/.test(JSON.stringify([CARDS[k].fx, CARDS[k].aura, CARDS[k].cast]))));
-const bbCls = k => (BASE_BOUND.has(baseKey(k)) ? ' bb' : '') + (CARDS[baseKey(k)] && CARDS[baseKey(k)].champion ? ' champ' : '');
+/** Leaders get a golden border (card and unit). */
+const isLeader = k => !!(CARDS[baseKey(k)] && CARDS[baseKey(k)].leader);
+const bbCls = k => (isLeader(k) ? ' leader' : '');
 function cardHtml(k, u) {
   const c = CARDS[k];
   const text = c.text ? `<span class="ab">${cardText(c, u)}</span>` : '';

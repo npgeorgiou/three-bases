@@ -7,6 +7,7 @@
 - A player can PASS instead of acting (Space = Pass). When both players pass in a row, the round ends. If a player can't take any action, they pass automatically.
 - Who acts first in round 1 is random (AGREED, October 2026); after that the starting player alternates each round.
 - Round start: each player gets, per lane, supply equal to their units' supply there; each player draws 2 cards (not in round 1). Drawing from an empty deck draws nothing.
+- A lane never holds more than 12 supply for one player: round-start supply above 12 is lost, and cards that add supply stop at 12 (Kaptain, 16 Nov 2026).
 - A hand holds at most 10 cards; with 10 in hand you draw nothing.
 - Supply of a lane is spent only in that lane; carry-over can be used in any lane. Payment uses the lane first, then carry-over.
 - Deploying, moving and attacking each cost the unit's supply.

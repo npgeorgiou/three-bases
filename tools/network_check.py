@@ -19,10 +19,10 @@ def parse(path):
         if line.startswith('MECHANIC ') or line.startswith('CARD '):
             kind, rest = line.split(' ', 1)
             parts = [p.strip() for p in rest.split(' | ')]
-            e = {'name': parts[0], 'makes': set(), 'needs': set(), 'mech': [], 'cost': '', 'text': '', 'champ': False}
+            e = {'name': parts[0], 'makes': set(), 'needs': set(), 'mech': [], 'cost': '', 'text': '', 'leader': False}
             free = []
             for p in parts[1:]:
-                if p == 'champion': e['champ'] = True; continue
+                if p == 'leader': e['leader'] = True; continue
                 m = re.match(r'(makes|needs|mech):\s*(.*)$', p)
                 if m:
                     vals = [v.strip() for v in m.group(2).split(',') if v.strip()]
@@ -106,15 +106,15 @@ def main():
             part[c['name']] = {o['name'] for o in cl if o is not c and ((o['makes'] & c['needs']) or (c['makes'] & o['needs']))}
         avg = sum(len(v) for v in part.values()) / len(cl)
         out.append(f"  partners per card: average {avg:.1f}; fewest: " + ', '.join(f"{n} {len(part[n])}" for n in sorted(part, key=lambda n: len(part[n]))[:8]))
-        champs = [c for c in cl if c['champ']]
-        out.append("  champions: " + (', '.join(f"{c['name']} {len(part[c['name']])}" for c in champs) or 'none marked'))
-        if len(champs) != 5: problems.append(f"{len(champs)} champions marked (5 wanted)")
-        for c in champs:
-            if len(part[c['name']]) < max(15, avg): problems.append(f"champion with few partners: {c['name']} ({len(part[c['name']])}; average {avg:.1f})")
-        for i, a in enumerate(champs):
-            for b in champs[i + 1:]:
+        leaders = [c for c in cl if c['leader']]
+        out.append("  leaders: " + (', '.join(f"{c['name']} {len(part[c['name']])}" for c in leaders) or 'none marked'))
+        if len(leaders) != 5: problems.append(f"{len(leaders)} leaders marked (5 wanted)")
+        for c in leaders:
+            if len(part[c['name']]) < max(15, avg): problems.append(f"leader with few partners: {c['name']} ({len(part[c['name']])}; average {avg:.1f})")
+        for i, a in enumerate(leaders):
+            for b in leaders[i + 1:]:
                 sa, sb = part[a['name']], part[b['name']]
-                if sa and sb and len(sa & sb) > 0.8 * min(len(sa), len(sb)): problems.append(f"champions gather the same cards (no distinct way to play): {a['name']}, {b['name']}")
+                if sa and sb and len(sa & sb) > 0.8 * min(len(sa), len(sb)): problems.append(f"leaders gather the same cards (no distinct way to play): {a['name']}, {b['name']}")
         if avg < 8: problems.append(f"thin network: {avg:.1f} partners per card on average (8 or more wanted)")
         lone = [n for n in part if len(part[n]) < 3]
         if lone: problems.append(f"cards with fewer than 3 partners: {', '.join(lone)}")

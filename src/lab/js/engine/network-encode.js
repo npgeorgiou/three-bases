@@ -22,7 +22,7 @@ const NET_CARD_INDEX = Object.fromEntries(NET_CARD_KEYS.map((k, i) => [k, i]));
  * amounts; auras ("aura:s", "aura>adj") and spells ("cast:dmg"). A reworked card is a new mix of known parts;
  * only a word no card had before is new to the network.
  */
-const NET_SKIP = new Set(['name', 'fac', 'art', 'text', 'net', 'fx', 'aura', 'cast', 'champion']);
+const NET_SKIP = new Set(['name', 'fac', 'art', 'text', 'net', 'fx', 'aura', 'cast', 'leader']);
 function cardFeatures(c) {
   const f = new Map(), add = (k, v) => { if (v) f.set(k, (f.get(k) || 0) + v); };
   const val = v => (v === true ? 1 : typeof v === 'number' ? Math.abs(v) : v ? 1 : 0);

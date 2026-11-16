@@ -132,7 +132,7 @@ const FX_OPS = {
   heal(s, c, o) { for (const t of fxSel(s, c, o.to)) restoreShields(s, t, fxAmount(s, c, o.heal), c.label); },
   draw(s, c, o) { drawFor(s, c.p, fxAmount(s, c, o.draw), c.label); },
   carry(s, c, o) { const P = s.players[c.p]; P.reserve = Math.min(MAX_CARRY, P.reserve + fxAmount(s, c, o.carry)); log(s, `${c.label}: carry-over ${P.reserve}.`); },
-  pool(s, c, o) { const l = o.lane === 'it' && c.t ? c.t.lane : c.lane; s.pool[c.p][l] += fxAmount(s, c, o.pool); log(s, `${c.label}: +${fxAmount(s, c, o.pool)} supply in lane ${l + 1} this round.`); },
+  pool(s, c, o) { const l = o.lane === 'it' && c.t ? c.t.lane : c.lane; const got = gainSupply(s, c.p, l, fxAmount(s, c, o.pool), false); log(s, `${c.label}: +${got} supply in lane ${l + 1} this round.`); },
   token(s, c, o) {
     const n = fxAmount(s, c, o.n ?? 1), lanes = o.lanes === 'all' ? LANES : o.lanes === 'other' ? LANES.filter(l => l !== c.lane) : [c.lane];
     for (const l of lanes) for (let i = 0; i < n; i++) {

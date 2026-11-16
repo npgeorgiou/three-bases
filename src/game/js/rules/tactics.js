@@ -145,7 +145,7 @@ function exitGame(s, u, why) {
   applyAuras(s);
 }
 const TACTICS = {
-  annona(s, p, a, lane) { s.pool[p][lane] += 3; s.poolStart[p][lane] += 3; log(s, `Grain reaches lane ${lane + 1}: +3 supply.`); },
+  annona(s, p, a, lane) { gainSupply(s, p, lane, 3); log(s, `Grain reaches lane ${lane + 1}: +3 supply.`); },
   reform(s, p, a, lane) { s.pending = { k: 'free', p, lane, n: 2, ex: null }; },
   monomachia(s, p, a, lane) { s.pending = { k: 'duel', p, lane, vid: a.vid }; },
   synaspismos(s, p, a, lane) { s.pending = { k: 'pair', p, lane, vid: a.vid }; },
@@ -196,7 +196,7 @@ const TACTICS = {
     if (byId(s, v.id)) kill(s, v, 'Martyrdom');
   },
   burnbridges(s, p, a, lane) {
-    s.pool[p][lane] += 3; s.poolStart[p][lane] += 3;
+    gainSupply(s, p, lane, 3);
     log(s, `The bridges burn in lane ${lane + 1}: +3 supply.`);
     for (const u of spellTargets(s, p, 'burnbridges', a)) {
       if (!byId(s, u.id)) continue;
@@ -230,7 +230,7 @@ const TACTICS = {
   },
   rainblood(s, p, a) { for (const u of spellTargets(s, p, 'rainblood', a)) hitUnit(s, 1, u, 'Rain of Blood', null); },
   decapitate(s, p, a) { kill(s, byId(s, a.tid), 'Decapitate'); },
-  sceptre(s, p, a, lane) { s.pool[p][lane] += 1; s.poolStart[p][lane] += 1; log(s, `The Sceptre commands lane ${lane + 1}: +1 supply.`); },
+  sceptre(s, p, a, lane) { gainSupply(s, p, lane, 1); log(s, `The Sceptre commands lane ${lane + 1}: +1 supply.`); },
   blade(s, p, a) { hitUnit(s, 2, byId(s, a.tid), 'Blade of Aurelius', null); },
   hymn(s, p, a) { const t = byId(s, a.tid); t.ts = (t.ts || 0) - 3; log(s, `${unitName(t)} withers: -3 strength until round end.`); },
   ashen(s, p, a) { const t = byId(s, a.tid); t.blight = true; log(s, `${unitName(t)} is Blighted.`); },

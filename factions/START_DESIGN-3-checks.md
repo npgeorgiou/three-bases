@@ -13,8 +13,9 @@ Part of `factions/START_DESIGN.md` (read that first, whole; then parts 2, 3 and 
 - Before any card, count how many cards each mechanic can give: 100 must fit without filler.
 - Never turn each fact of the theme into its own small rule. "Bombs" and "gears" are a few cards inside a mechanic.
 - No unit types or card kinds that split the deck (no "crew", no Yin/Yang).
-- Kaptain's own ideas (Projectiles, Mark, back-in-time) are a few cards or one mechanic, never a
-  whole faction.
+- Kaptain's own ideas (Projectiles, Mark, back-in-time) are a few cards or one tool of a faction, never a whole faction.
+  A faction holds together because several tools from different mechanics feed each other, never because one idea is
+  on every card.
 - A mechanic that limits the player (an order to follow, a card kind, a position) must pay back a lot, or nobody plays it.
 - Strong at / a little / weak at, written in the entry. No card gives the faction what its weak list says (a spell faction
   with "weak at melee" gets no melee buffs).
@@ -62,7 +63,7 @@ Part 4, "Think it through like a player" (hand, board, enemy, timing, worth, wha
 ## 5. Before sending
 - `python3 tools/network_check.py factions/designs/<faction>.txt factions/designs/<faction>-cards.txt`: 0 problems. It
   checks that every need has a maker and counts each card's partners (cards that make what it needs or need what it
-  makes). Each champion must have many partners and gather its own way to play; other cards also link to each other.
+  makes). Each leader must have many partners and gather its own way to play; other cards also link to each other.
 - `node tools/cardstats.js <letter>`: Benchmark games with the faction's premades; cards that are never played or never
   fire are changed or cut. Never fix a win rate by changing stats off the budget.
 - `python3 tools/design_gate.py <letter>`: PASS (it runs the network check and the browser play test too).

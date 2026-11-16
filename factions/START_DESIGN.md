@@ -80,7 +80,7 @@ read 5-10 card texts behind every count, and write the sources (game: card) next
    - Turning point: once a condition is met, the board works differently. "While you have twice as many units in my lane
      as the enemy, my allies here strike twice."
 6. **Five ways to play.** Each builds a different board and asks for different decisions. For each, write which rows and
-   cells it fills, its cost 1-4 opening, its 4-6 middle, its 6+ finish, and its champion. Test: two ways that put the same
+   cells it fills, its cost 1-4 opening, its 4-6 middle, its 6+ finish, and its leader. Test: two ways that put the same
    kind of units in the same cells and win the same way are one way.
 7. **The library, card by card.** For each way to play, read 30-50 real cards from the closest factions of ALL games
    (`ask.py all ways`, `palette`, `curve`, `spells`, `removal`, `protect`: section 3). For each card write one line: the
@@ -132,7 +132,7 @@ randomness: no coin flips, random targets or random cards.
    Why: Claude counted "it builds and loads" as "it works". Stops it: `find.py` every removed name; `node tools/playtest.js`.
 10. **Invented words** ("break" for dies) **and rule words without hover** (wind without [[Wind]]). Stops it: only the
    game's words; the gate checks every keyword word is linked.
-11. **Champions marked only in the design files.** Stops it: `champion: true` on the card (the gate checks it).
+11. **Leaders marked only in the design files.** Stops it: `leader: true` on the card (the gate checks it).
 12. **Spells piled at cost 1-2, units at 3-4.** Stops it: section 2, the spell share at every cost (the gate checks it).
 13. **Answers that deflect.** "Because I did X" is no reason: say why Claude did X and what Claude can't do.
 14. **Rules in docs get skipped.** Stops it: what must happen is a check in `tools/design_gate.py`; the pre-commit hook

@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /* Prints the faction letters whose cards changed in play between HEAD and the staged files (used by pre-commit).
-   Play = everything on a card except its text, net line, art and champion mark: cost, stats, size, keywords, effects.
-   So hover links, wording and champion marks never set off the design gate.   node tools/hooks/gameplay_changed.js */
+   Play = everything on a card except its text, net line, art and leader mark: cost, stats, size, keywords, effects.
+   So hover links, wording and leader marks never set off the design gate.   node tools/hooks/gameplay_changed.js */
 'use strict';
 const { execSync } = require('child_process'), vm = require('vm');
 const git = a => { try { return execSync('git ' + a, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], maxBuffer: 1 << 28 }); } catch (e) { return null; } };
 const parts = (git('show :src/game/parts.txt') || '').split('\n').map(s => s.trim()).filter(n => /^js\/cards\//.test(n) && !/art\.js$/.test(n));
-const LOOKS = new Set(['text', 'net', 'art', 'champion']);
+const LOOKS = new Set(['text', 'net', 'art', 'leader']);
 function play(ref) {  // ref '' = the staged files
   const src = parts.map(n => git(`show ${ref}:src/game/${n}`) || '').join('\n');
   const ctx = {}; vm.createContext(ctx);

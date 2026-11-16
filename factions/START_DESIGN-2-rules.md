@@ -27,7 +27,7 @@ If summary/ and the code disagree, the code wins: tell Kaptain.
 **1b. What the rules mean for card design** (check every card and deck against this list):
 - Supply comes only from your units in that lane (each unit gives its supply each round), plus carry-over (at most 5,
   start 4). A lane with no units has no income. Killing an enemy unit also cuts its lane's income. A spell is paid from
-  the lane it is cast in, then carry-over.
+  the lane it is cast in, then carry-over. A lane never holds more than 12 supply (summary/05).
 - A unit's supply is its cost to deploy AND to every move and every attack. A 6-supply unit costs 6 to move. Moving and
   attacking are two separate actions (two turns, two payments). Big units act rarely.
 - Dots are only the 3 front-row cells of each camp. A unit in the facing enemy front cell cancels the dot. Back rows
@@ -66,20 +66,35 @@ More text: `summary/09-card-design-rules.txt`
 - Exactly 100 cards (tokens not counted). Spells are 20-50% of them, and about the same share at every cost from 1 to 5:
   if 30% of the faction is spells, then about 30% of the cost-2 cards are spells too. Cost 6+ may be mostly units.
 - 2-3 keywords of its own. A keyword serves a mechanic: Barrage serves "guns in the back rows bombard the rear".
-- 5 champions (`champion: true`). Each is the strongest reason to play one way, and is also used by a second way.
-  Example: a champion that grows when allies die is the centre of the death way and also pays off the sacrifice way.
+- 5 Leaders (`leader: true`; they are the only cards with a golden border). Each has a special part that works by
+  whether I hold its lane's base. It helps me take a lane I don't hold and keep one I hold; it never just makes me
+  stronger in a lane already won. The five are spread over the costs, from cheap to expensive, and over the faction's
+  ways to play, and each is a focus for designing cards: cheaper cards make what it needs. A faction's five mix these
+  kinds (variety is wanted):
+  1. Two sides: helps take while the enemy holds the lane; only defends while I hold it.
+  2. On the change: acts once when I take the base and once when I lose it.
+  3. Helps the next lane: while I hold this lane, the bonus goes to my units in the other lanes.
+  4. Answers only: while I hold the lane, acts only when the enemy tries to take it back.
+  5. Keeping costs: while I hold the lane, a strong effect that I pay for each round (carry-over, a card).
+  6. Behind in the game: stronger while the enemy holds two bases.
+  7. Takes, then leaves: when I take the base, it goes back to hand or to another lane.
+  8. A rule for both: while I hold the lane, a rule there changes for both players.
+  9. Any unit of mine: its bonus works for every unit of mine, so it helps the partner faction too.
+  Example (kind 1): "While the enemy holds this lane's base, the unit facing me is marked. While I hold it, enemies
+  placed facing me arrive marked."
 - The two things every faction can do alone: hold dots (units with enough defence for the front row) and remove enemies
   (its own way, step 2.2). Extra supply and extra draw are strengths a faction may have or lack (Kaptain, 5 Nov 2026):
   placed units already give supply and every player draws 2 cards a round.
-- Draw, when a faction has it: a plain "draw 1", or a condition from the faction's mechanics ("Place: if an ally died this round, draw 1").
-  Never a condition the player can't arrange (an enemy's death). Only on effects that happen once per card (a spell,
+- Draw, when a faction has it: a plain "draw 1", or a condition the player makes happen with the faction's cards ("Place:
+  if an ally died this round, draw 1"; "when I kill an enemy, draw 1"). Never a condition only the enemy decides (the
+  enemy casting a spell, the enemy passing). Only on effects that happen once per card (a spell,
   Place, its own death) or once per round; never "whenever an ally dies, draw".
 - At least 1 card that acts between lanes: moves a unit to another lane, throws something there, or uses one lane's
   supply in another. Spells paid in one lane and cast in another are extremely rare; cast in all lanes, very rare.
 - Back rows: melee units in rows 2-3 reach nothing (1b), so the faction needs cards that work from there. Example: a gun
   with Barrage 1 in row 3 hits the enemy furthest back at each round end.
 - Lane control: some cards check "while you hold this lane's base", some "while you don't", some do one thing in each
-  case. Never a bonus from one specific base (bases are random each game). These cards get a golden border.
+  case. Never a bonus from one specific base (bases are random each game).
 - Almost every card has a keyword or text; almost none is only stats.
 - Hooks for two-faction decks (decks will mix 2 factions later): the combos planned on the wheel with other factions,
   and more (Kaptain, 9 Nov 2026: hooks made only from planned overlaps are poor; what else goes in is worked out in the

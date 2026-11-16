@@ -109,6 +109,21 @@ If many factions change, Kaptain may say redo 7-9 for all: ask.
 - Things that were missing and must stay in: G = grows when hurt + I damage my own units; steal; kill spells; placing
   units in the enemy camp; bringing back without an Egg. Only one Egg in the whole wheel: look-alikes are compared by
   what the card does, not by mechanic name. "Strike first" is not a mechanic. "Ping" is a library word: say "small hits".
+- A faction is built from 2-4 tools: each a new kind of thing or rule that makes the faction's plan happen, grown from
+  one of its mechanics (or joining two), carried by many cards, feeding at least one other tool; no two factions have
+  the same tool doing the same job. A faction holds together because its tools feed each other, never because one idea
+  is on every card. The seven answers (how it wins, front removal, back-row removal, between lanes, holding, Place,
+  blind spot) are built from the tools together. Claude's examples of tools, not yet checked in the library: edicts
+  (a lasting rule on a lane), trophies (a card for killing a marked enemy), debts (supply from next round), graves
+  (a dead unit's cell passes its Death on), banners (a claimed column shares damage), oaths (sworn on a lane at round
+  start), tunnels (two cells in different lanes linked), hostages (an enemy unit taken into my hand), echoes (a spell
+  repeats on the next spell in that lane). Step 7 and the check script still ask for "1-3 board versions and one
+  faction idea": they change to this once Kaptain agrees how.
+- Leaders: 5 per faction, the only cards with a golden border, spread over the costs and the ways to play; their
+  special part works by whether I hold the lane's base, helps take and keep a lane, never wins harder in a won lane;
+  nine kinds, mixed in each faction (START_DESIGN-2, "What a faction has").
+- Countdowns ("at 3 counters...") very sparingly. A lane never holds more than 12 supply (summary/05).
+- Draw on a kill is allowed: killing an enemy is something the player makes happen (START_DESIGN-2).
 - The check script fails on words that break the game's rules ("move first", "strikes first", "placed at round end").
 - Earlier chats wasted tokens on readers and on running everything in one long chat: keep chats short, scripts first.
 - Where the work stood: steps 1-9 were done once on the old counts (STOP1.md and STOP1-1..5.md exist, check passes);
