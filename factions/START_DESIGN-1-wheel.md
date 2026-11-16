@@ -26,6 +26,8 @@ A step uses only what the steps before it made. Steps 1-3 are the wheel; the mec
 faction's radii.
 
 1. **The radii.** The 23 radii of `factions/13-wheel-measurement.txt`, measured on 43 real factions (`axes.py`).
+   A radius is a list of library concepts. Changing a list changes the values, the joins (step 2) and so the shapes
+   (step 3): before changing one, tell Kaptain that the agreed shapes will be redone, and change it only on his OK.
 2. **The radii that work together.** For every two radii, the library's numbers (`mechanics_wheel.py links --radii`):
    - `cards`: how much more often than chance a card of one is linked with a card of the other (1 = chance). A link
      counts only where the effects that made it belong to the two radii (the links store which effect of each card
