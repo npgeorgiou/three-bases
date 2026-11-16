@@ -55,6 +55,7 @@ Steps of `factions/START_DESIGN-1-wheel.md`. Done: 0 (docs), 1 (radii: they stay
 - The wheel is general; step 7 turns each faction's mechanics into these own things, from scratch. The old candidates
   (commit d4a3de0^, `factions/3-candidates/`, e.g. C17 Dot Brokers, C12 Monoliths) are read last, only to check no idea
   Kaptain liked is missing.
+- Damage over time and my units changing form are possibilities for cards, not mechanics or archetypes.
 - An all-Immobile faction is allowed (the old rule against it is deleted).
 - Each faction answers seven questions, one line each: how it wins, how it removes the front unit, how it MAINLY removes
   back-row units, how it MAINLY acts between lanes, how it holds a base, its best Place effect, its blind spot.
