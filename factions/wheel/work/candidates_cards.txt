@@ -1,0 +1,128 @@
+
+## rule_change: 583 cards
+  duelyst | Excelsious | Keywords: Provoke, Celerity. This minion gains +1/+1 for each time you healed anything this game.
+  duelyst | Hatefurnace | Trial: Cast 7 spells that cause a minion to gain +Attack. Destiny: Minions summoned from your action bar gain Rush and Frenzy.
+  faeria | Triton Banquet | Give a creature +1/+1 and Jump.
+  faeria | Spirit Theft | Drain 1 life from an enemy creature. If you kill it, add a copy of it to your hand. It becomes wild land.
+  gwent | Miruna | Deathwish: Seize a random enemy unit with 4 or less power.
+  gwent | Pincer Maneuver | Order: Draw a non-Neutral card of your choice, then shuffle a card from your hand back into the deck and Spawn a Volunteer on your Melee row. Charges: 2 This ability adds 15 provisions to your deck's provisions limit.
+  gwent | King Radovid V | Deploy: If the base version of your leader ability has more than 1 Charge, give it an additional Charge. Order: Repeat the Deploy ability.
+  into_the_breach | Shield-Tank | Deploy a Shield-Tank that can give Shields to allies. Single-use. The unit it deploys has Health 1, move 3. Power: 2 Reactor Cores. Upgrades: +2 Health (1 Reactor Core): Increases the Shield-Tank's max health to 3; Pr...
+
+## combo_sequence: 119 cards
+  duelyst | Alcuin Fugitive | At the end of any turn you cast a spell, put a copy of the most recently cast spell into your action bar.
+  marvel_snap | Drax, Avatar Of Life | End of Turn: +3 Power if your opponent played a card with greater Power this turn. Move to that card if you'd be winning its location.
+  marvel_snap | Moondragon | End of Turn: +2 Power if you played 1 card this turn and spent all your Energy.
+  runeterra | Aphelios | Nightfall: Pick a Moon Weapon to create in hand. Each round, the first time you play 2 other cards, create the Phased Moon Weapon in hand if you don't already have one. Level up: You've played 4+ Moon Weapons.
+  runeterra | Moondreamer | Play: Invoke. Nightfall: Reduce that card's cost by 1.
+  runeterra | Heavens Aligned | Daybreak: Create a random Nightfall card in hand. Nightfall: Create a random Daybreak card in hand.
+  runeterra | Caustic Riff | Keywords: Flow. Flow: I cost 2 less. Deal 1 to all enemies.
+  runeterra | Nocturne (level 2) | Keywords: Fearsome, Missing Translation. Nightfall: Grant an enemy Vulnerable and give enemies -1|-0 this round. Other allies have Fearsome. When you summon another ally, give enemies -1|-0 this round.
+
+## repeat_trigger: 113 cards
+  faeria | Imperial Engineer | Gift - Trigger all friendly production abilities.
+  gwent | Ard Feainn Light Cavalry | Flanking. Barricade: At the end of your turn, damage the last unit played by your opponent by 1.
+  marvel_snap | Valhalla | After turn 4, cards here repeat their On Reveal abilities.
+  marvel_snap | Stryfe | Objective: Play 3 On Reveal cards Use the highest-Cost On Reveal in your hand. (0/3)
+  runeterra | Sputtering Songspinner | Pick one of two new 2 cost spells to create in hand and set its cost to 0 this round. Repeat two more times.
+  stormbound | Final Sacrifice | Trigger the ability of a friendly non-legendary unit with up to 3/4/5/6/7 strength, then destroy that unit
+  sts1 | Electrodynamics | Lightning now hits ALL enemies. Channel 2 Lightning.
+  sts1 | Frozen Core | Replaces Cracked Core. If you end your turn with any empty Orb slots, Channel 1 Frost.
+
+## immobilize: 101 cards
+  duelyst | Excelsious | Keywords: Provoke, Celerity. This minion gains +1/+1 for each time you healed anything this game.
+  duelyst | Treant | Keywords: Provoke.
+  duelyst | Dioltas | Dying Wish: Summon a 0/8 Tombstone minion with Provoke near your General.
+  duelyst | Spriggin | Keywords: Provoke. Opening Gambit: Each player summons three Spriggin Kin nearby their General.
+  duelyst | Ki Beholder | Keywords: Ranged. Opening Gambit: An enemy minion cannot move next turn.
+  faeria | Imperial Guard | Taunt Last Words - Gain 2 Life.
+  faeria | Grove Guardian | Taunt
+  faeria | Nekomata | Taunt Corrupt - Double this creature's Attack.
+
+## disable: 98 cards
+  duelyst | Frigid Corona | Stun an enemy minion. Draw a card.
+  duelyst | Lacerating Frost | Keywords: Bloodbound Spell. Deal 2 damage to the enemy General and stun all nearby enemy minions.
+  monster_train | Dripfall | Descend a unit and apply Dazed 1.
+  runeterra | Riptide | Stun an enemy. Place that unit into the enemy deck if you have a Nautilus.
+  runeterra | Ground Slam | Stun an enemy. Deal 3 to it if you've summoned a landmark this game.
+  runeterra | Lawkeeper | Play: Stun enemies with less Power than me.
+  runeterra | Yasuo's Steel Tempest | Keywords: Fast. Stun an attacking enemy. Create a Yasuo in your deck.
+  runeterra | Sett's Facebreaker | Keywords: Slow. Stun 2 enemies and create a Coin in hand. Create a Sett in your deck.
+
+## play_restriction: 79 cards
+  duelyst | Fifth Canopic | The enemy General cannot cast their Bloodbound Spell.
+  marvel_snap | Hellfire Club | Cards that cost 1 can't be played here.
+  marvel_snap | Sanctum Snaptorem | You can't play cards here unless you Snapped last turn.
+  marvel_snap | Goblin Queen | On Reveal: Other cards can't be revealed this turn.
+  marvel_snap | Sentry | You can't play this at the right location. On Reveal: Add a -9 Power Void to the right location.
+  monster_train | Proclamation | Attuned. Extract 2. / Deal 50 damage to the front enemy unit.
+  monster_train | Deadweight | Unplayable. Unpurgeable.
+  sts1 | Deus Ex Machina | Keywords: Unplayable. When you draw this card, add 2 Miracles to your hand and Exhaust.
+
+## cheat_death: 77 cards
+  duelyst | Young Silithar | Keywords: Rebirth.
+  duelyst | Eternal Heart | Your General cannot die.
+  faeria | Aryana, Soul of Gagana | Flying Gift - Add a Treasure Map to the top of your deck. Last Words - Return Aryana to your hand.
+  inscryption | Child 13 | Keywords: Many Lives. Special behaviour: When a card is sacrificed, it switches between portraits and receives/loses temporary modifier that increases Power by 2 and adds Airborne Sigil. Sacrificing for 14th time will...
+  marvel_snap | Armor | Ongoing: Cards here can't be destroyed.
+  marvel_snap | Soul Stone | On Reveal: Draw a card. Ongoing: Thanos can't be discarded or destroyed.
+  runeterra | Survival Skills | Allies can't drop below 1 health this round. When discarded, your strongest ally can't drop below 1 health this round.
+  runeterra | Amalgamation Of Vile Rites | Keywords: Last Breath, Deathless. To play me, kill an ally. Last Breath: Heal your Nexus 2.
+
+## donate: 54 cards
+  duelyst | Synaptic Arbitrage | Give your opponent a minion to take control of nearby enemy minions with less Attack.
+  gwent | Vattier de Rideaux | Order: Lock an enemy unit. Conspiracy: Seize it instead.
+  gwent | Treason | Give Spying to an enemy unit and damage adjacent units by its power.
+  gwent | Roderick of Dun Tynne | Disloyal. Deploy: Look at 2 random gold cards from your deck, then play 1 of them.
+  gwent | Amnesty | Seize an enemy unit with 3 or less power. Conspiracy: Also boost it by 2. Devotion: Always trigger the Conspiracy ability.
+  gwent | Master of Puppets | Order: Seize a bronze enemy unit, then move self to the opposite row. Cooldown: 2
+  gwent | Torres var Emreis: Founder | Doomed. Deploy: Give Spying to 3 units with provision costs of 10 or less from your opponent's deck, then Spawn base copies of them into your deck. Boost self by 1 for each provision below the limit. Order: Banish up ...
+  gwent | Cow Carcass | Doomed. Disloyal. At the end of your turn, Poison adjacent units and destroy self.
+
+## information: 42 cards
+  gwent | Triss Merigold | Deploy (Ranged): Reveal a random unit from your deck and damage an enemy unit by its power.
+  gwent | Summoning Circle | Resilience. Deploy: Look at the units in your deck in order from top to bottom, then choose a unit from your deck and set the Counter equal to that unit's provision cost. Before the end of your turn, remove a Counter ...
+  gwent | Isbel of Hagge | Order: (Ranged): If your opponent's hand is not full, look at the top card from both decks. Keep one and give the other to your opponent.
+  gwent | Courier | Deploy (Melee): Look at the top 3 cards from your opponent's deck and move one to the top. Deploy (Ranged): Look at the top 3 cards from your deck and move one to the top.
+  gwent | Viper Witcher Alchemist | Deploy (Melee): Reveal a random unit from your opponent's deck and boost self by its power.
+  gwent | Sticky Situation | Ambush: When your opponent plays a unit with 4 or less power, flip self. At the end of your turn, boost adjacent units by [2]. When your opponent passes while this card is face-up, Lock self. Spring: Boost a unit in y...
+  marvel_snap | Uatu the Watcher | Game Start: You can see the unrevealed locations.
+  runeterra | The Tidedancer | When I'm summoned, draw a Nilah. Each round, when you play your third card, give other allies +2|+0 and Brash this round. When I would gain Fleeting, reveal me instead.
+
+## stances: 38 cards
+  inscryption | GR1ZZ | Keywords: Transformer.
+  inscryption | S0N1A | Keywords: Transformer.
+  runeterra | Crescendum | Keywords: Slow. Summon a random 2 cost follower from your regions. Phase Calibrum or Severum.
+  runeterra | Gravitum | Keywords: Slow. Stun an enemy. If it's a follower, Stun it again at the next Round Start. Phase Infernum or Crescendum.
+  sts1 | Devotion | At the start of your turn, gain 2 Mantra.
+  sts1 | Eruption | Deal 9 damage. Enter Wrath.
+  sts1 | Meditate | Put a card from your discard pile into your hand and Retain it. Enter Calm. End your turn.
+  sts1 | Simmering Fury | At the start of your next turn, enter Wrath and draw 2 cards.
+
+## board_clog: 33 cards
+  gwent | Vilgefortz | Deploy (Melee): Destroy an enemy unit, then your opponent Summons the top bronze unit from their deck to their random row. Deploy (Ranged): Destroy an allied unit, then Summon the top unit from your deck to a random a...
+  gwent | Zoltan: Warrior | Deploy: Damage 2 enemy units by 3. For each unit that survived, Spawn a Rowdy Dwarf on this row. Barricade: At the end of your turn, damage a random enemy unit by 1.
+  gwent | Gerd | Deploy: Spawn a Deafening Siren on the opposite row and damage all units on that row by 1. Adrenaline 3: Spawn a Deafening Siren on the opposite row and damage it by 1 instead.
+  gwent | Feral Bond | Spawn Skellige Wolves on an enemy row and damage it by 1, then Create a bronze Skellige Warrior that was not in your starting deck. Bloodthirst 3: You may Spawn and play any bronze Skellige Warrior that was not in you...
+  inscryption | Cuckoo | Keywords: Airborne, Brood Parasite.
+  marvel_snap | Eternity Range | After turn 3, add a Rock to the losing player's side.
+  marvel_snap | Project Unicorn | Add Gwenpool to both sides.
+  marvel_snap | X-Mansion | After turn 3, add a random card here for each player.
+
+## attack_lock: 26 cards
+  duelyst | Frigid Corona | Stun an enemy minion. Draw a card.
+  duelyst | Crystallize | Keywords: Bloodbound Spell. Stun a nearby enemy minion.
+  duelyst | Permafrost | Stun an enemy minion. Stunned enemy minions Stun a nearby enemy.
+  duelyst | Icy | Opening Gambit: Stun a nearby enemy.
+  into_the_breach | Smoke Tile | Most units cannot attack in Smoke. Units in Smoke cannot attack or repair. A Sand Tile that is hit by weapon damage will turn into a Smoke Tile. Some weapons and enemy attacks are capable of creating their own Smoke T...
+  into_the_breach | Guided Missile | A projectile that can turn once before hitting its target. Damage: 2. Power: 1 Reactor Core. Upgrades: +1 Damage (3 Reactor Cores): +1 Damage to the target; Smoke Line (1 Reactor Core): After turning, adds Smoke to ea...
+  into_the_breach | Smoldering Shells | Damage and apply Fire to a tile while adding Smoke to adjacent tiles (vertical). Damage: 1. Power: 1 Reactor Core. Upgrades: More Smoke (2 Reactor Cores): Adds Smoke to more tiles (in 4 directions); +2 Damage (3 React...
+  into_the_breach | Smoke Drop | Drops Smoke on 5 tiles anywhere on the map. Single-use. Power: Free.
+
+## mill: 6 cards
+  duelyst | Mnemovore | Whenever you summon a minion, burn three cards from your opponent's deck.
+  marvel_snap | Hotel Inferno | After you play a card here this turn, banish the top card of your opponent's deck.
+  marvel_snap | Yondu | On Reveal: Banish the card that costs the least in your opponent's deck.
+  runeterra | Watery Grave | Obliterate 6 cards from the bottom of the enemy deck.
+  runeterra | Maokai (level 2) | Keywords: Regeneration. When I level up, Obliterate the enemy deck, leaving 4 non-champions. Round Start: Summon a Sapling.
+  runeterra | Watcher | I cost 0 if you've summoned 5+ allies that cost 8+ this game. Attack: Obliterate the enemy deck, leaving 3 non-champions.

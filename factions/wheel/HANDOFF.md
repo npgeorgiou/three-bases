@@ -39,8 +39,9 @@ Steps of `factions/START_DESIGN-1-wheel.md`. Done: 1 (radii), 2 (`wheel/radius_l
 `work/shapes.tsv`, agreed by Kaptain), 4 (the 53 mechanics, Stop A), and the numbers of step 6 (`wheel/links.tsv`).
 Next:
 5. Each faction's mechanics, by script (`work/signatures.py --write`, `work/borrow.py --write`, `check_assign.py`), for
-   the new shapes. First make the scripts follow every rule of step 5, including: every mechanic is a signature or an
-   extra of at least one faction, and a faction's mechanics fit the archetypes it carries (`shapes.py` prints them).
+   the new shapes and the new mechanics of `work/newmech_verdicts3.tsv`, by all the rules of step 5: one algorithm for
+   all 20 factions that finds the best fit to radii and archetypes together with the strongest links between each
+   faction's mechanics (library and decks); every mechanic a signature or an extra of at least one faction.
    Show Kaptain the plan for the script change before building it.
 6. Links between mechanics: `wheel/links.tsv`; `apart.py` for the pairs real factions keep apart.
 7. Theme, then tools (`START_DESIGN-1-wheel.md` step 7): new for all 20. `tools/wheel_table_check.py` and

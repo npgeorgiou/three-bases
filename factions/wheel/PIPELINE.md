@@ -56,9 +56,10 @@ changed. Each step says what a script does and what is judgment.
 - Stop A: `STOPA.md` shows the list to Kaptain in plain words.
 
 ## Step 5. Each faction's mechanics
-- Scripts, no reading: `cd factions/wheel/work && python3 signatures.py --write` (2 signatures per faction, best fit,
-  each fits its faction 0.8+, the two linked) then `python3 borrow.py --write` (2-4 extras by fit, each in at most
-  3 factions) -> `work/assign.tsv`. Checked by `work/check_assign.py`.
+- Scripts, no reading: `cd factions/wheel/work && python3 signatures.py --write` then `python3 borrow.py --write`
+  -> `work/assign.tsv`; checked by `work/check_assign.py`. Both solve all 20 factions at once (an exact solver): the
+  score of a choice is its fit to the faction's radii and archetypes plus how strongly the faction's mechanics are linked
+  (`wheel/links.tsv`: `cards` and `decks`), under the rules of START_DESIGN-1-wheel.md step 5.
 
 ## Step 6. Links between mechanics
 - Numbers only: `python3 mechanics_wheel.py links` -> `wheel/links.tsv` (per pair of mechanics, the same numbers as

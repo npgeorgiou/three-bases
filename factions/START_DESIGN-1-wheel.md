@@ -56,7 +56,8 @@ faction's radii.
    its cards. The list starts from all the library's concepts, not from the archetypes: every concept with real cards is
    a mechanic, part of one, or listed with the reason it is not (`work/concept_sort.tsv`: trigger or condition, a radius,
    one of the game's own things, not in this game, ruled out by Kaptain). For each mechanic, in this order:
-   - an agent reads 8 of its real cards and fixes the concept list until it catches the right cards;
+   - an agent reads 8 of its real cards, each with the meaning of its keywords (`library/cards_db/vocab.tsv`: Provoke also
+     stops nearby enemies moving), and fixes the concept list until it catches the right cards;
    - it is measured: the real factions built on it, the radii its cards sit on;
    - **the rule check**: it must work by this game's rules (`summary/03` to `07`). An attacked unit doesn't hit back
      (only Riposte does), so "strike first" means nothing here and is not a mechanic; who acts first is random in
@@ -68,13 +69,17 @@ faction's radii.
      form are possibilities for cards, not mechanics. A mechanic small in the library (under 30 right cards in every real
      faction, marked SMALL) can still be a faction's base; SMALL only says there are few real cards to learn from.
    Each mechanic keeps its own line; two are never merged. **Stop A: Kaptain agrees the list.**
-5. **Each faction's mechanics.**
+5. **Each faction's mechanics.** All 20 factions get their mechanics at once, from one algorithm that finds the best
+   whole: the best fit of every faction's mechanics to its radii and archetypes, together with how strongly its
+   mechanics work together, by the library's numbers (step 6's `cards`: linked more often than chance; `decks`: real
+   decks heavy in one hold the other). No faction is filled first and none is fixed by hand, except G (hurt and selfhurt).
    - 2 signature mechanics: the faction builds on them. Each is a signature of one faction only. Both sit on the
      faction's radii and are joined to each other or through an extra (step 2 numbers or an argument).
-   - 2-4 extras: other mechanics on several cards, chosen by fit first and partners second (`work/borrow.py`): at
-     least a quarter of its cards sit on one of the faction's radii, and the library links it with a signature
-     mechanic; ties go to the one with more partners. Any mechanic may be an extra, a signature of another faction
-     too, but each extra is in at most 3 factions. The mechanic the faction's removal needs is kept.
+   - 2-4 extras: other mechanics on several cards. At least a quarter of an extra's cards sit on one of the faction's
+     radii, and the library links it with a signature mechanic. Any mechanic may be an extra, a signature of another
+     faction too, but each extra is in at most 3 factions. The mechanic the faction's removal needs is kept.
+   - Archetypes: at least one signature is a mechanic of an archetype the faction carries, and every archetype it
+     carries has a mechanic among its signatures and extras.
    - One-offs: any card may carry a one-off from any mechanic (a faction far from bringing back may have one unit that
      comes back). One-offs are not planned here; they keep cards from being unimaginative.
    - Every mechanic of the list is a signature or an extra of at least one faction (Kaptain, 16 Nov 2026).
