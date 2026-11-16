@@ -37,7 +37,7 @@ Part 2 is the work, in order; Part 3 is what Kaptain decided and what was learne
 ## Part 2. Design the 20 factions again
 Steps of `factions/START_DESIGN-1-wheel.md`. Done: 1 (radii), 2 (`wheel/radius_links.tsv`), 3 (the 20 shapes,
 `work/shapes.tsv`, agreed by Kaptain), 4 (the 53 mechanics, Stop A), and the numbers of step 6 (`wheel/links.tsv`).
-Next:
+Next: first the open points in `todo.md` ("Wheel: open points"), one by one, then:
 5. Each faction's mechanics, by script (`work/signatures.py --write`, `work/borrow.py --write`, `check_assign.py`), for
    the new shapes and the new mechanics of `work/newmech_verdicts3.tsv`, by all the rules of step 5: one algorithm for
    all 20 factions that finds the best fit to radii and archetypes together with the strongest links between each
