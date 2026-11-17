@@ -18,7 +18,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   reanimator, theft...). `wheel/archetypes.tsv` says for each one whether it can exist in this game and, if it can,
   its concepts and its radii.
 - **Radius**: one direction of the wheel, such as "more supply" (23 radii, `axes.py` `SPOKES`). Every usable concept
-  belongs to exactly one radius. A faction's value on a radius is the share of its concept instances that belong to
+  belongs to exactly one radius, except "deal damage": on a spell it belongs to "damage from spells", on any other
+  card to "damage from units' text" (Kaptain). A faction's value on a radius is the share of its concept instances that belong to
   that radius; the card itself goes nowhere.
 - **Shape**: one faction's 3-6 strong radii with their values, taken from one real faction.
 - **Group**: the 4-6 concepts a faction builds on: 2 pillars and 2-4 others. It is the faction's character (what it is
@@ -86,7 +87,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    `vocab.tsv` keywords by meaning (Runeterra's Formidable is "strikes with its defence"): a keyword on a loose concept
    is a library error, fixed as `START_DATABASE.md` says.
    **Kaptain agrees the archetypes.**
-4. **The radii and how they work together.** Every usable concept is put on exactly one radius (`axes.SPOKES`); each
+4. **The radii and how they work together.** Every usable concept is put on exactly one radius (`axes.SPOKES`; "deal damage" by card type, as in "The words"); each
    archetype's concepts go on that archetype's radii ("moving my units" belongs to "position and combos"). **Kaptain
    agrees the concepts on each radius**, and every later move. Then `axes.py` measures the 43 real factions: a
    faction's value on a radius = the share of its concept instances on that radius, divided by its game's average
