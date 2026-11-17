@@ -29,6 +29,11 @@ One chat does one step; at its end, mark the step done here and say what it left
   deck_condition).
 - Step 4, agreed with Kaptain: on_ally_play is split in the library by what it reacts to: playing a unit (on "many units on my
   side", the radius once called "many cheap units"; it still counts cheap units too) and playing any card (on "rewards playing spells").
+- Step 4, agreed with Kaptain: the radius once called "more cards" is "more cards in hand" (draw, on_draw, hand_size,
+  generate_cards). rule_change is split in the library by the rule it changes: how my unit moves or where it may be
+  placed (on "position and combos"), how it attacks or how often its ability is used (on "strikes more or first").
+  card_presence_condition goes on "position and combos", on_enemy_enter on "breaks their plan in other ways". The wheel
+  describes the examined games: nothing is left out because this game lacks it; that is decided in later steps.
 - Step 4: `axes.py` still uses stat_multiply in `DISRUPT_ON_ENEMY` and its "multiply_own" measure; since 17 Nov 2026 a stat
   set on an enemy is stat_loss and a stat set to a number is stat_fixed: the rewrite uses the concepts as they are now.
 - Step 5: 47 archetypes can exist, each carried by 2-3 shapes, but 20 shapes carry at most 2 each (40 places): ask
