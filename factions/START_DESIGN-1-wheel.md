@@ -81,7 +81,10 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 3. **The archetypes** (`wheel/archetypes.tsv`, from `wheel/archetypes_kaptain.txt`). For every archetype of Kaptain's
    list: whether it can exist in this game (Three Bases has no lands, no player life, no poison, no planeswalkers, no
    multiplayer, no answers on the enemy's turn: the reason when it can't); for each one that can, what it is in this
-   game, its usable concepts (step 2) and its radii (the radii its concepts belong to, step 4). Claude's, marked.
+   game, its usable concepts (step 2) and its radii (the radii its concepts belong to, step 4). Claude's, marked. Each
+   concept is checked against its definition in `library/concept_tree.txt`; before saying no concept fits, search
+   `vocab.tsv` keywords by meaning (Runeterra's Formidable is "strikes with its defence"): a keyword on a loose concept
+   is a library error, fixed as `START_DATABASE.md` says.
    **Kaptain agrees the archetypes.**
 4. **The radii and how they work together.** Every usable concept is put on exactly one radius (`axes.SPOKES`); each
    archetype's concepts go on that archetype's radii ("moving my units" belongs to "position and combos"). **Kaptain
