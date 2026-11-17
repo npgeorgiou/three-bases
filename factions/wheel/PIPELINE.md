@@ -50,9 +50,11 @@ is written in that step's chat, from the rules of the step, and its line here is
   the pairs real factions keep apart.
 
 ## Step 6. The archetype map
-- `python3 ../../factions/wheel/work/archetype_map.py` (to write) -> `factions/wheel/work/archetype_map.tsv` (archetype,
-  concept a, concept b, `cards`, `games`, `level`, top link text, one real card pair, from `wheel/concept_links.tsv`)
-  and `factions/wheel-archetypes.html` (the nodes and edges, one archetype or all).
+- `python3 ../../factions/wheel/work/archetype_map.py` (about 10 seconds; needs links.sqlite) ->
+  `factions/wheel/work/archetype_map.tsv` (archetype, its two engine parts, concept a, concept b, `cards`, `decks`,
+  `games`, `level`, top link text, the real card pair of its strongest link, from `wheel/concept_links.tsv`; a pair
+  joined only by real decks has no card pair), `work/archetype_gaps.tsv` (two engine parts with no joined edge, shown to
+  Kaptain with the numbers) and `factions/wheel-archetypes.html` (page template `work/archetype_map_template.html`).
 
 ## Step 7. The 20 factions and their lists
 - `python3 ../../factions/wheel/work/factions.py` (to write, after Kaptain agrees its rules) ->
