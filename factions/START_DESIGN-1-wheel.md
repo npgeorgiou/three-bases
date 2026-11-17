@@ -87,7 +87,9 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    `vocab.tsv` keywords by meaning (Runeterra's Formidable is "strikes with its defence"): a keyword on a loose concept
    is a library error, fixed as `START_DATABASE.md` says.
    **Kaptain agrees the archetypes.**
-4. **The radii and how they work together.** Every usable concept is put on exactly one radius (`axes.SPOKES`; "deal damage" by card type, as in "The words"); each
+4. **The radii and how they work together.** Every usable concept is put on exactly one radius (`axes.SPOKES`; "deal damage" by card type, as in "The words"); a concept goes only on a radius whose name says what
+   the concept does (copying a unit is no draw); how often real cards link two concepts decides only between radii that
+   fit; each
    archetype's concepts go on that archetype's radii ("moving my units" belongs to "position and combos"). **Kaptain
    agrees the concepts on each radius**, and every later move. Then `axes.py` measures the 43 real factions: a
    faction's value on a radius = the share of its concept instances on that radius, divided by its game's average
