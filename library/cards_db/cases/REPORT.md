@@ -1,7 +1,7 @@
 # Case tests: runeterra
 
 Made by `cases/run.py runeterra`.
-**443 of 443 cases pass.**
+**450 of 450 cases pass.**
 
 **Cases whose reason no line says any more (rewrite them): n56, n352, n378, n669**
 
@@ -108,6 +108,13 @@ Made by `cases/run.py runeterra`.
 | wc18 | Lifesteal heals the Nexus: player_lifesteal (wheel step 1, Kaptain 16 Nov 2026) | 17 | 17 | 100% | 37 | yes |
 | wc19 | Lifesteal to the Nexus is no drain to a unit (wheel step 1, Kaptain 16 Nov 2026) | 17 | 17 | 100% | 2468 | yes |
 | wc25 | Runeterra: a Skill keeps only what its rows say; no concept says it is a Skill (wheel step 4, Kaptain 17 Nov 2026) | 15 | 15 | 100% | 2470 | yes |
+| wc27 | Runeterra: Formidable strikes with its defence (wheel step 3, Kaptain 17 Nov 2026) | 8 | 8 | 100% | 3 | yes |
+| wc28 | Runeterra: Formidable is not doubling a stat (wheel step 3, Kaptain 17 Nov 2026) | 8 | 8 | 100% | 2449 | yes |
+| wc29 | attack equal to its own health is strikes with its defence (wheel step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 11 | yes |
+| wc30 | doubling a unit's own stat is stat_multiply (wheel step 3, Kaptain 17 Nov 2026) | 2 | 2 | 100% | 26 | yes |
+| wc31 | a stat set to a number is stat_fixed, or stat_loss on an enemy (wheel step 3, Kaptain 17 Nov 2026) | 1 | 1 | 100% | 108 | yes |
+| wc32 | a stat set to the number of something is variable_stats (wheel step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 53 | yes |
+| wc33 | a stat set to a number is not doubling (wheel step 3, Kaptain 17 Nov 2026) | 1 | 1 | 100% | 2456 | yes |
 
 ## Combos (the enabler must set off the payoff)
 
@@ -185,7 +192,7 @@ Made by `cases/run.py runeterra`.
 | r26 | Bandle City | signature (library tags) | discard | 6 | 20 | yes |
 | r27 | Bandle City | signature (library tags) | on_attack | 36 | 90 | yes |
 | r28 | Bandle City | signature (library tags) | transform | 8 | 14 | yes |
-| r29 | Bandle City | splash (library tags) | stat_gain | 2 | 75 | yes |
+| r29 | Bandle City | splash (library tags) | stat_gain | 2 | 69 | yes |
 | r30 | Bandle City | splash (library tags) | on_spell | 2 | 6 | yes |
 | r31 | Bandle City | splash (library tags) | resource_gain | 4 | 8 | yes |
 | r32 | Bandle City | splash (library tags) | turn_start | 10 | 18 | yes |
@@ -198,7 +205,7 @@ Made by `cases/run.py runeterra`.
 | r39 | Bilgewater | splash (library tags) | turn_start | 10 | 18 | yes |
 | r40 | Bilgewater | splash (library tags) | summon | 19 | 43 | yes |
 | r41 | Demacia | signature (library tags) | damage_reduction | 10 | 38 | yes |
-| r42 | Demacia | signature (library tags) | stat_gain | 7 | 75 | yes |
+| r42 | Demacia | signature (library tags) | stat_gain | 7 | 72 | yes |
 | r43 | Demacia | signature (library tags) | multi_attack | 4 | 21 | yes |
 | r44 | Demacia | splash (library tags) | merge_attach | 6 | 13 | yes |
 | r45 | Demacia | splash (library tags) | on_ally_play | 6 | 43 | yes |
@@ -265,7 +272,7 @@ Made by `cases/run.py runeterra`.
 | r109 | Bilgewater | archetype (library) | chaos | 30 | 73 | yes |
 | r110 | Bilgewater | archetype (library) | ramp | 17 | 40 | yes |
 | r111 | Bilgewater | archetype (library) | graveyard | 4 | 39 | yes |
-| r112 | Demacia | archetype (library) | scaling | 21 | 35 | yes |
+| r112 | Demacia | archetype (library) | scaling | 21 | 36 | yes |
 | r113 | Demacia | archetype (library) | fortress | 22 | 54 | yes |
 | r114 | Freljord | archetype (library) | sustain | 14 | 20 | yes |
 | r115 | Freljord | archetype (library) | transformation | 11 | 22 | yes |

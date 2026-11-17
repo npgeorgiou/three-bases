@@ -310,7 +310,7 @@ lk309	stormbound	First Mutineer	Northsea Dogs	line	empties your hand	links fix 1
 lk310	sts1	Acrobatics	Cloak Clasp	line	fills your hand	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2422)	draw !discard	player_block_armor !damage_reduction
 lk311	duelyst	Ethereal Blades	Thunderhorn	line	more power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2438)	stat_gain !on_play	damage
 lk312	faeria	Steam Forge	Boulder Thrower	line	more power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2438)	stat_gain !turn_start	damage !attack_now
-lk313	marvel_snap	Adamantium Infusion	Askani'son	line	more power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2438)	stat_gain !banish	spell_power !activated
+lk313	marvel_snap	Adamantium Infusion	Askani'son	line	more power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2438)	stat_multiply !banish	spell_power !activated
 lk314	monster_train	Spike of the Hellhorned	Symphony of the Soul	line	more power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2438)	stat_gain !block_armor	block_armor !cost_type
 lk315	runeterra	Twin Disciplines	Revitalizing Roar	line	more power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2438)	stat_gain !modal_choice	player_heal !cost_set
 lk316	duelyst	Auryn Nexus	Divine Bond	line	more health	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2449)	stat_gain !on_play	on_play
@@ -362,10 +362,10 @@ lk361	marvel_snap	Professor X	Air-Walker	line	stops cards being played, but a su
 lk362	runeterra	Shadow Flare	Lux	line	costs 6: pays it alone (levels it up)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2923)	type !destroy	passive !damage_reduction
 lk363	marvel_snap	Archangel Horseman of Death	Skaar	line	raises my units to the power it counts	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2949)	stat_gain !other_death_trigger	cost_reduction
 lk364	runeterra	Keeper of Masks	Reckoning	line	raises my units to the power it counts	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2949)	stat_gain !on_ally_play	destroy
-lk365	duelyst	Divine Bond	Excelsious	line	turns the Health it grows into Power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2963)	stat_gain !on_play	type !cant_attack
-lk366	faeria	Gabrian Enchantress	Unlikely Hero	line	turns the Life it grows into Attack	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2963)	stat_multiply !on_play	stat_gain !movement
-lk367	marvel_snap	Adamantium Infusion	Adam Warlock	line	turns the Power it grows into Power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2963)	stat_gain !banish	stat_gain !draw
-lk368	runeterra	Redoubled Valor	Sparring Student	line	turns the Power it grows into Power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2963)	stat_gain !heal	stat_gain !on_ally_play
+lk365	duelyst	Divine Bond	Excelsious	line	turns the Health it grows into Power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2963)	strikes_with_defence !on_play	type !cant_attack
+lk366	faeria	Gabrian Enchantress	Unlikely Hero	line	turns the Life it grows into Attack	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2963)	strikes_with_defence !on_play	stat_gain !movement
+lk367	marvel_snap	Adamantium Infusion	Adam Warlock	line	turns the Power it grows into Power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2963)	stat_multiply !banish	stat_gain !draw
+lk368	runeterra	Redoubled Valor	Sparring Student	line	turns the Power it grows into Power	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2963)	stat_multiply !heal	stat_gain !on_ally_play
 lk369	duelyst	Draining Wave	Dioltas	line	kills it for its death effect	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 3000)	damage !on_play	death_trigger !cant_attack
 lk370	faeria	Falcon Dive	Annoying Gnat	line	kills it for its death effect	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 3000)	damage !on_play	damage !cant_attack
 lk371	gwent	Epidemic	Foglet	line	kills it for its death effect	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 3000)	destroy !on_play	death_trigger !damage
@@ -384,7 +384,7 @@ lk383	stormbound	Marked as Prey	Beards of Crowglyph	line	damages it without kill
 lk384	gwent	Yennefer of Vengerberg	Dol Blathanna Archer	line	leaves weak units for its kill	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 3020)	damage !on_play	on_kill !damage
 lk385	into_the_breach	Flame Thrower	Fissure Fist	line	leaves weak units for its kill	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 3020)	damage !damage_over_time	on_kill !damage
 lk386	runeterra	Corina Veraza	Parrrley	line	leaves weak units for its kill	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 3020)	damage !banish	damage !on_play
-lk387	gwent	Ciri	Vincent Meis	line	its 1 damage kills what it sets to strength 1	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 3028)	damage !on_play	stat_multiply !activated
+lk387	gwent	Ciri	Vincent Meis	line	its 1 damage kills what it sets to strength 1	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 3028)	damage !on_play	stat_loss !activated
 lk388	gwent	Ragh Nar Roog	Artorius Vigo	line	creates a card, which sets off its Assimilate	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 3088)	generate_cards !banish	kw !free_play
 lk389	runeterra	Karma	Ballistic Bot	line	creates a card, which sets off its Augment	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 3088)	generate_cards !passive	kw !generate_cards
 lk390	runeterra	Piltover Peacemaker	Braum	line	through Flashbomb Trap: damages it without killing it, for its effect (levels it up)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 3174)	trap_secret !activated	on_damaged !forced_attack

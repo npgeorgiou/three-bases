@@ -1,6 +1,6 @@
 # Step 4: the concepts by kind (made by concept_catch.py; cards, in how many of 10 games)
 
-## usable (118)
+## usable (120)
 Damage to many at once (411, 9); Help from nearby allies (assists) (35, 1); Attack gain (+attack) (1772, 9); Can't
 attack (lock on an enemy) (30, 3); Attack right away (232, 7); Attack set to 0 (22, 1); Banish / exile (gone for good)
 (304, 8); More or faster base resource (ramp) (262, 9); Block points that wear off (97, 3); Clog the opponent's board
@@ -32,12 +32,12 @@ to hand (147, 6); Bring back dead units (revive) (92, 6); Row-wide lasting effec
 game's rules (635, 9); Sacrifice my own units (221, 9); Look at cards and pick (scry) (143, 6); Destroys itself /
 temporary unit (272, 9); Fill my own discard pile (self-mill) (13, 1); Absorb one hit (shield, ward) (191, 8); Silence
 (abilities removed) (86, 6); My spells and abilities get stronger (220, 7); Enough spells played (34, 4); Stats matter
-(highest, lowest) (72, 2); Stat gain (+power, +health) (149, 10); Stat loss (-power, -health) (178, 10); Double or
-multiply stats (222, 9); Steal from the opponent (49, 8); Stealth / hidden until it acts (24, 4); Summon units /
-tokens (773, 9); Swap positions (45, 7); Tank / wall (303, 6); Taunt (enemies must attack it) (81, 3); Terrain / board
-features (149, 4); In or entering enemy territory (29, 3); Search the deck for a card (tutor) (57, 7); Ready a used
-unit again (untap) (11, 2); Upgrade a card (53, 3); Stats equal to a count (309, 8); Variety matters (all different)
-(71, 6)
+(highest, lowest) (72, 2); Set stats to a number (148, 8); Stat gain (+power, +health) (149, 10); Stat loss (-power,
+-health) (178, 10); Double or multiply stats (98, 7); Steal from the opponent (49, 8); Stealth / hidden until it acts
+(24, 4); Strikes with its defence (18, 4); Summon units / tokens (773, 9); Swap positions (45, 7); Tank / wall (303,
+6); Taunt (enemies must attack it) (81, 3); Terrain / board features (149, 4); In or entering enemy territory (29, 3);
+Search the deck for a card (tutor) (57, 7); Ready a used unit again (untap) (11, 2); Upgrade a card (53, 3); Stats
+equal to a count (325, 8); Variety matters (all different) (71, 6)
 
 ## helper (41)
 a thing for single cards (Claude's): Can't move (my own unit) (16, 5); Limit what can be played (79, 5)

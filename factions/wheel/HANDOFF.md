@@ -8,8 +8,8 @@ One chat does one step; at its end, mark the step done here and say what it left
 |---|---|---|
 | 1. Fix the library's concepts | done | concepts split by whom a row acts on; "Skill" removed; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
 | 2. The usable concepts | done; `concept_catch.py` still writes the share of each concept's cards on each radius: drop those columns in step 4 | `work/concepts.tsv`, `work/concepts.md` |
-| 3. The archetypes | **next** | |
-| 4. The radii and how they work together | to do | |
+| 3. The archetypes | done | `archetypes.tsv`: 71 archetypes, 47 can exist, each with its concepts (radii in step 4); Formidable fixed in the library (strikes_with_defence, stat_fixed) |
+| 4. The radii and how they work together | **next** | |
 | 5. The 20 shapes | to do | |
 | 6. The links between concepts | to do | |
 | 7. The 20 groups and each faction's list | to do | |
@@ -18,15 +18,14 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 10. The seven answers, Stop 1 | to do | |
 
 ## What the next steps find in the files
-- Step 3: `archetypes.tsv` still holds an older list of 18 archetypes; step 3 replaces it whole with one line per
-  archetype of `archetypes_kaptain.txt`. Show Kaptain the table in plain words (each archetype: can it exist here, and
-  if so its concepts) and wait for his OK.
 - Step 4: `axes.py` still counts cards, not concept instances, and its `SPOKES` hold measurements that are no
   concepts (`position*` = "an effect on my own units beside it"): step 4 rewrites both as START_DESIGN-1 says. First
-  show Kaptain every usable concept with the radius it goes on, in plain words, and wait for his OK. Before measuring,
-  build the spell mana rule: `check_all.py runeterra`, then `PYTHONHASHSEED=0 python3 links.py` (about 20 minutes in
-  all; tell Kaptain and wait for his OK). `axes.tsv`, `wheel-axes.html`, `wheel/radius_links.tsv` and
+  show Kaptain every usable concept with the radius it goes on, in plain words, and wait for his OK. `axes.tsv`, `wheel-axes.html`, `wheel/radius_links.tsv` and
   `work/shapes.tsv` are from the old count and are all made again (steps 4 and 5).
+- Step 4: `axes.py` still uses stat_multiply in `DISRUPT_ON_ENEMY` and its "multiply_own" measure; since 17 Nov 2026 a stat
+  set on an enemy is stat_loss and a stat set to a number is stat_fixed: the rewrite uses the concepts as they are now.
+- Step 5: 47 archetypes can exist, each carried by 2-3 shapes, but 20 shapes carry at most 2 each (40 places): ask
+  Kaptain which rule gives before making the shapes.
 - Step 6: `mechanics_wheel.py` has the radius mode only; the concept mode is written there, with the same count.
 - Step 7: `groups.py` and `concept_list.py` are written; `tools/wheel_table_check.py` (it reads an old file) is
   rewritten.
@@ -34,7 +33,7 @@ One chat does one step; at its end, mark the step done here and say what it left
 
 ## The numbers (library/cards_db)
 - `links.sqlite` is rebuilt only after `network.py` or `cards.sqlite` changed: `PYTHONHASHSEED=0 python3 links.py`
-  (about 7 minutes: tell Kaptain and wait for his OK); it ends with `cases/links.tsv` and the sides check.
+  (about 6 minutes; with `check_all.py` 14 more: tell Kaptain and wait for his OK); it ends with `cases/links.tsv` and the sides check.
 - Radius keys are not plain words: look up each one's name before talking about it
   (`python3 -c "import axes; [print(s[0], s[3]) for s in axes.SPOKES]"`). `many` is "many at once", `wide` is "many
   cheap units", `back` is "brings back".

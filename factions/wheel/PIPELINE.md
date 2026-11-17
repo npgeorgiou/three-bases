@@ -1,7 +1,7 @@
 # The wheel pipeline: the commands of each step and what each makes
 Commands run from `library/cards_db/` unless they start with `factions/` or `tools/`. The rules of each step are in
 `factions/START_DESIGN-1-wheel.md`; this file says how each result is made. Before anything: `gunzip -kf links.sqlite.gz`.
-After a change to `network.py` or `cards.sqlite`: `PYTHONHASHSEED=0 python3 links.py` (about 7 minutes; tell Kaptain and
+After a change to `network.py` or `cards.sqlite`: `PYTHONHASHSEED=0 python3 links.py` (about 6 minutes, after `check_all.py` 14; tell Kaptain and
 wait for his OK; it writes links.sqlite.gz too). A step is redone when what it uses changes. A script marked "to write"
 is written in that step's chat, from the rules of the step, and its line here is then filled in.
 

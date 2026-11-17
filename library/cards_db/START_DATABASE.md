@@ -25,7 +25,7 @@ first and wait. Never invent rules or mechanics; mark suggestions as yours.
    `line` or `none`, only for lines checked against both cards. A fix without cases comes back broken.
 3. **Dump all lines before and after** (`PYTHONHASHSEED=0 python3 dump_lines.py`: without the seed a reason's wording can
    change between runs; the before dump is made from the code as it is just before the change, never an older dump file) and read EVERY gone and new reason group in every game.
-4. **One rebuild per round**: `check_all.py <game>` loads all games once (about 7 minutes); after a change to network.py only,
+4. **One rebuild per round**: `check_all.py <game>` loads all games once (about 14 minutes); after a change to network.py only,
    `check_all.py --no-load` (about 2 minutes). Never `run.py` once per game, never a rebuild between single edits.
    Start it only with the Bash tool's background mode (run_in_background), never with `&` or nohup (the shell stops those a
    few minutes after a reply ends); never stop a running build; wait for its notice and work on findings meanwhile, never
@@ -124,6 +124,13 @@ pair that must or must not count for two mechanics or radii.
   (Inscryption) also its Bones and Mox gems (flat.py SEVERAL_SUPPLIES); Gwent's coins and Monster Train's Echo are not.
 - No concept says only what kind of record a card is (17 Nov 2026, Kaptain): Skill (spell_or_skill) went; Runeterra
   Skills and Into the Breach weapons keep what their rows say (cases wc25, wc26).
+- A stat change takes its concept by what it does (17 Nov 2026, Kaptain; flat.py derive, cases wc27-wc33): a unit's hits
+  from its own health or armour are strikes_with_defence (Formidable); doubled or halved, or raised by its own stat, is
+  stat_multiply; set to a count is variable_stats; set to a number or another unit's stat is stat_fixed; on an enemy
+  stat_loss.
+- Timing a concept fix for Kaptain (17 Nov 2026): baseline `check_all.py --no-load` 8 min, `dump_lines.py`
+  about 10 min each (before and after), `check_all.py` 14 min, `links.py` 6 min: about an hour per round in all. Say
+  the whole hour before starting, and look for a smaller way first.
 - Lines: links.sqlite rows per game (counts change with every rebuild; `status.py`). The next case id is n700.
 - Known gaps with no fix planned: Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain);
   Monster Train's Olde Magic record lists the wiki's choices with no numbers; Stormbound's Fort of Ebonrock has no ability.
@@ -409,7 +416,7 @@ Each chat writes only its own game's files (read/, input/, second/, fixes/<game>
    `dump_lines.py --table`) in the scratchpad. A case failing after the rebuild is this chat's only if it passed in that
    baseline; never trust "State" alone (the REPORT_<game>.md files are not in git, and the clone is shallow). Then fix it or
    write it in "State" as already failing.
-4. One rebuild: `check_all.py <game>` (about 7 minutes). Before it `dump_lines.py`, after it `--diff`: read every gone and new
+4. One rebuild: `check_all.py <game>` (about 14 minutes). Before it `dump_lines.py`, after it `--diff`: read every gone and new
    reason group. Then all cases of every game pass, and the three audits print nothing unexplained. A new family found here
    is fixed in the same way and rebuilt once more; never a rebuild per family.
 5. **Decks.** Find at least 20 decks (Kaptain, 30 Oct 2026), spread over its factions and mechanics (Duelyst: every

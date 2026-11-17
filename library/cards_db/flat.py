@@ -346,6 +346,20 @@ def derive(c):
     c.execute("update flat_do set concept=null where act in ('move','swap') and concept in ('movement','forced_movement') and "
               "(coalesce(on_kind,'') in ('card','keyword','spell') or coalesce(eff_zone,'board')!='board')")
     c.execute("update flat_do set concept='level_up' where act='level_up'")
+    # a stat set takes its concept by what is set (Kaptain 17 Nov 2026): on an enemy it is stat_loss;
+    # doubled or halved, or equal to a count; otherwise a number or another unit's stat (stat_fixed)
+    c.execute("update flat_do set concept='stat_loss' where act='stat_set' and on_side='enemy'")
+    c.execute("update flat_do set concept='stat_multiply' where act='stat_set' and coalesce(on_side,'')!='enemy' and (params like '%=double%' or params like '%=half%')")
+    c.execute("update flat_do set concept='variable_stats' where act='stat_set' and coalesce(on_side,'')!='enemy' and (params like '%=count%' or params like '%=event_count%' or params like '%=event_amount%' or params like '%=distinct%' or params like '%=sum%' or params like '%=lane_power%')")
+    # a stat raised by itself (power +X equal to its own power) is doubled
+    c.execute("""update flat_do set concept='stat_multiply' where act='stat_change' and coalesce(on_side,'')!='enemy' and exists (
+                 select 1 from effect e join param p on p.effect=e.id join amount a on a.id=p.amount join target t on t.id=a.of_target
+                 where e.ability=flat_do.ability and e.seq=flat_do.seq and e.act='stat_change' and a.attr=p.param and t.pick in ('self','it'))""")
+    # hits that grow from its own health or armour: power set to or raised by it, damage equal to it (Formidable's look-alikes)
+    c.execute("""update flat_do set concept='strikes_with_defence' where coalesce(on_side,'')!='enemy' and exists (
+                 select 1 from effect e join param p on p.effect=e.id join amount a on a.id=p.amount join target t on t.id=a.of_target
+                 where e.ability=flat_do.ability and e.seq=flat_do.seq and e.act=flat_do.act and a.attr in ('health','armor') and t.pick in ('self','it')
+                 and ((e.act in ('stat_set','stat_change') and p.param in ('power','strength')) or (e.act='damage' and p.param='amount' and t.pick='self')))""")
     c.execute("insert into flat_concept select distinct card, concept, 'row' from flat_do where concept is not null and concept!=''")
     c.execute(f"insert into flat_concept select distinct card, 'player_' || concept, 'row' from flat_do where on_kind='player' and concept in ({ks}) and {BODY}")
     c.execute(f"insert into flat_concept select distinct card, 'player_damaged', 'row' from flat_when where concept='on_damaged' and obj_kind='player' and {BODY}")

@@ -39,7 +39,7 @@ act	heal	restore Health or player life	heal	healed	27 Oct 2026, v1
 act	kill	kill (destroy) without damage	destroy	dies;killed;leaves_play	27 Oct 2026, v1
 act	obliterate	remove from the game; no death effects	banish	obliterated;leaves_play	27 Oct 2026, v1
 act	stat_change	change Power and/or Health by the params (signed)	stat_gain	stat_changed	27 Oct 2026, v1
-act	stat_set	set Power and/or Health to the params	stat_multiply	stat_changed	27 Oct 2026, v1
+act	stat_set	set Power and/or Health to the params	stat_fixed	stat_changed	27 Oct 2026, v1; concept 17 Nov 2026 (Kaptain): by what is set, flat.py derive
 act	give_keyword	give the target the linked keyword	buff	given_keyword	27 Oct 2026, v1
 act	remove_keyword	remove the linked keyword from the target	debuff	keyword_removed	27 Oct 2026, v1
 act	silence	remove all keywords, abilities and ongoing effects	silence		27 Oct 2026, v1
@@ -231,7 +231,7 @@ act	first_strike	the target strikes before the unit it fights (Quick Attack)	fir
 act	double_strike	the target strikes before and together with the unit it fights (Double Attack)	multi_attack	strikes	27 Oct 2026, v2
 act	excess_damage	damage beyond what kills the struck unit goes to the target (Overwhelm: target enemy player)	excess_damage	damaged;nexus_damaged	27 Oct 2026, v2
 act	damage_reduction	damage the target takes is reduced by param amount (Tough)	damage_reduction		27 Oct 2026, v2
-act	strike_with	the target strikes with the stat in param attr instead of Power (Formidable)	stat_multiply		27 Oct 2026, v2
+act	strike_with	the target strikes with the stat in param attr instead of Power (Formidable)	strikes_with_defence		27 Oct 2026, v2; concept 17 Nov 2026 (Kaptain)
 event	mana_spent	mana is spent (object: what it was spent on)			27 Oct 2026, v2
 event	keyword_used	an action keyword is used (object carries the keyword filter: Plant, Toss, Predict...)			27 Oct 2026, v2
 x	full	the amount needed to fill up (heal fully)			27 Oct 2026, v2
@@ -317,7 +317,7 @@ keyword	Quick Attack	concept of having, using or giving this keyword	first_strik
 keyword	Double Attack	concept of having, using or giving this keyword	multi_attack		28 Oct 2026, v3
 keyword	Fury	concept of having, using or giving this keyword	permanent_growth		28 Oct 2026, v3
 keyword	Evolve	concept of having, using or giving this keyword	variety_payoff		28 Oct 2026, v3
-keyword	Formidable	concept of having, using or giving this keyword	stat_multiply		28 Oct 2026, v3
+keyword	Formidable	concept of having, using or giving this keyword	strikes_with_defence		28 Oct 2026, v3; concept 17 Nov 2026 (Kaptain)
 keyword	Immobile	concept of having, using or giving this keyword	cant_attack		28 Oct 2026, v3
 keyword	Landmark	concept of using or giving this keyword (Kaptain, 28 Oct 2026: not a unit: a building with no attack or health, destroyed only by cards that target landmarks, gives a benefit; 30 Oct 2026: takes one of the 6 board slots shared with units)	board_limit		28 Oct 2026, v3
 keyword	Attach	concept of having, using or giving this keyword	merge_attach		28 Oct 2026, v3

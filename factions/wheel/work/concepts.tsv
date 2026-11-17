@@ -1,61 +1,61 @@
 concept	card_count	games	kind	reason	grows	strikes	textdmg	kills	many	spelldmg	spellpay	stops	disrupts	supply	cheaper	cards	picks	back	wide	spends	together	heals	growsdef	protects	tall
 aoe_damage	411	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound,sts1	usable		0.08	0.23	0.44	0.01	1.00	0.26	0.07	0.03	0.04	0.00	0.02	0.04	0.00	0.00	0.13	0.43	0.09	0.01	0.07	0.08	0.18
-assists_support	35	runeterra	usable		0.66	0.17	0.03	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.14	0.09	0.06	0.40	0.06	0.69	0.06	0.49	0.29	0.09
+assists_support	35	runeterra	usable		0.54	0.17	0.03	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.14	0.09	0.06	0.40	0.06	0.69	0.06	0.49	0.29	0.09
 attack_gain	1772	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		1.00	0.10	0.03	0.01	0.10	0.01	0.14	0.02	0.03	0.06	0.08	0.05	0.02	0.05	0.21	0.12	0.07	0.02	0.53	0.10	0.20
 attack_lock	30	duelyst,into_the_breach,monster_train	usable		0.10	0.34	0.17	0.00	0.27	0.03	0.07	0.93	0.25	0.00	0.00	0.03	0.00	0.00	0.03	0.00	0.02	0.03	0.00	0.10	0.00
-attack_now	232	duelyst,faeria,inscryption,into_the_breach,monster_train,runeterra,stormbound	usable		0.15	1.00	0.29	0.01	0.21	0.06	0.03	0.03	0.03	0.02	0.02	0.04	0.02	0.01	0.28	0.06	0.00	0.00	0.06	0.11	0.22
+attack_now	232	duelyst,faeria,inscryption,into_the_breach,monster_train,runeterra,stormbound	usable		0.14	1.00	0.29	0.01	0.21	0.06	0.03	0.03	0.03	0.02	0.02	0.04	0.02	0.01	0.28	0.06	0.00	0.00	0.06	0.11	0.22
 attack_zero	22	runeterra	usable		0.05	0.23	0.00	0.05	0.05	0.05	0.00	0.00	0.95	0.00	0.00	0.18	0.05	0.00	0.14	0.00	0.00	0.00	0.05	0.05	0.23
-banish	304	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,sts1	usable		0.16	0.04	0.01	0.21	0.11	0.03	0.01	0.00	0.08	0.02	0.04	0.13	0.07	0.04	0.17	0.12	0.01	0.01	0.10	0.10	0.16
-base_resource_gain	262	duelyst,faeria,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.22	0.09	0.01	0.00	0.03	0.06	0.06	0.04	0.03	1.00	0.03	0.13	0.01	0.02	0.16	0.18	0.00	0.01	0.06	0.13	0.08
+banish	304	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,sts1	usable		0.15	0.04	0.01	0.21	0.11	0.03	0.01	0.00	0.08	0.02	0.04	0.13	0.07	0.04	0.17	0.12	0.01	0.01	0.10	0.10	0.16
+base_resource_gain	262	duelyst,faeria,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.08	0.09	0.01	0.00	0.03	0.06	0.06	0.04	0.03	1.00	0.03	0.13	0.01	0.02	0.16	0.18	0.00	0.01	0.06	0.13	0.08
 block_armor	97	gwent,monster_train,sts1	usable		0.30	0.08	0.40	0.01	0.12	0.04	0.04	0.00	0.04	0.00	0.05	0.03	0.02	0.02	0.17	0.05	0.05	0.04	0.20	1.00	0.08
-board_clog	33	gwent,inscryption,marvel_snap,stormbound	usable		0.16	0.25	0.05	0.17	0.06	0.02	0.00	0.00	1.00	0.02	0.05	0.05	0.03	0.00	1.00	0.39	0.00	0.00	0.02	0.16	0.12
-board_presence	151	duelyst,faeria,gwent,inscryption,marvel_snap,runeterra,stormbound	usable		0.57	0.11	0.13	0.02	0.71	0.02	0.00	0.01	0.05	0.05	0.06	0.12	0.03	0.01	0.20	0.12	0.19	0.06	0.32	0.05	0.20
+board_clog	33	gwent,inscryption,marvel_snap,stormbound	usable		0.02	0.25	0.05	0.17	0.06	0.02	0.00	0.00	1.00	0.02	0.05	0.05	0.03	0.00	1.00	0.39	0.00	0.00	0.02	0.16	0.12
+board_presence	151	duelyst,faeria,gwent,inscryption,marvel_snap,runeterra,stormbound	usable		0.52	0.11	0.13	0.02	0.71	0.02	0.00	0.01	0.05	0.05	0.06	0.12	0.03	0.01	0.20	0.12	0.19	0.06	0.32	0.05	0.20
 board_wipe	69	duelyst,faeria,gwent,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable		0.21	0.06	0.12	0.87	1.00	0.02	0.00	0.01	0.03	0.00	0.14	0.15	0.02	0.02	0.24	0.71	0.00	0.01	0.17	0.05	0.25
 bounce_enemy	13	duelyst,gwent,runeterra	usable		0.00	0.12	0.03	0.00	0.39	0.03	0.00	0.21	1.00	0.00	0.03	0.39	0.00	0.06	0.03	0.00	0.00	0.00	0.00	0.06	0.73
 buff	144	duelyst,faeria,gwent,into_the_breach,marvel_snap,runeterra,stormbound,sts1	usable		0.00	0.12	0.10	0.02	0.11	0.03	0.05	0.02	0.04	0.04	0.14	0.11	0.03	0.02	0.35	0.27	0.01	0.00	0.00	0.09	0.31
 card_presence_condition	596	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,runeterra,stormbound,sts1	usable		0.30	0.17	0.06	0.02	0.15	0.03	0.05	0.02	0.05	0.04	0.08	0.14	0.04	0.03	0.28	0.14	0.08	0.04	0.17	0.12	0.21
 card_quality	26	sts1	usable		0.00	0.00	0.00	0.00	0.12	0.12	0.15	0.00	0.04	0.00	0.08	0.46	0.04	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00
-cheat_death	81	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable		0.36	0.25	0.04	0.00	0.08	0.00	0.00	0.00	0.01	0.01	0.03	0.08	0.18	0.41	0.54	0.83	0.00	0.02	0.07	1.00	0.22
+cheat_death	81	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable		0.22	0.25	0.04	0.00	0.08	0.00	0.00	0.00	0.01	0.01	0.03	0.08	0.18	0.41	0.54	0.83	0.00	0.02	0.07	1.00	0.22
 combat_damage_threshold	14	runeterra	usable		0.07	1.00	0.00	0.00	0.00	0.21	0.07	0.00	0.00	0.00	0.86	0.29	0.14	0.00	0.14	0.00	0.00	0.00	0.07	0.07	0.21
 combo_sequence	74	duelyst,faeria,gwent,marvel_snap,runeterra,sts1	usable		0.30	0.06	0.02	0.00	0.03	0.13	0.62	0.02	0.08	0.07	0.31	0.07	0.07	0.02	0.24	0.01	0.00	0.06	0.17	0.07	0.38
 condition_count	17	gwent	usable		0.12	0.00	0.24	0.06	0.24	0.12	0.00	0.06	0.06	0.00	0.18	0.18	0.06	0.12	0.53	0.24	0.00	0.00	0.12	0.06	0.12
 condition_life	67	duelyst,gwent,into_the_breach,monster_train,runeterra	usable		0.15	0.21	0.29	0.11	0.30	0.01	0.20	0.30	0.01	0.00	0.08	0.06	0.01	0.01	0.11	0.25	0.03	0.07	0.13	0.11	0.14
-copy	268	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.14	0.12	0.01	0.01	0.08	0.04	0.02	0.01	0.03	0.00	0.17	0.04	1.00	0.03	0.17	0.12	0.01	0.02	0.07	0.06	0.24
+copy	268	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.09	0.12	0.01	0.01	0.08	0.04	0.02	0.01	0.03	0.00	0.17	0.04	1.00	0.03	0.17	0.12	0.01	0.02	0.07	0.06	0.24
 cost_condition	32	faeria,gwent,marvel_snap,runeterra	usable		0.55	0.11	0.06	0.05	0.06	0.00	0.11	0.01	0.05	0.05	0.15	0.08	0.00	0.00	0.16	0.05	0.00	0.04	0.34	0.08	0.20
 cost_increase	13	duelyst,faeria,marvel_snap,runeterra	usable		0.00	0.12	0.00	0.00	0.00	0.00	0.00	0.00	0.85	0.00	1.00	0.20	0.00	0.00	0.05	0.15	0.00	0.00	0.00	0.38	0.23
-cost_reduction	316	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.16	0.07	0.05	0.02	0.08	0.08	0.04	0.01	0.03	0.09	1.00	0.20	0.15	0.04	0.17	0.13	0.00	0.00	0.11	0.07	0.23
-cost_set	92	duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.28	0.04	0.01	0.03	0.01	0.00	0.05	0.02	0.01	0.01	1.00	0.37	0.21	0.13	0.03	0.27	0.00	0.00	0.25	0.12	0.35
+cost_reduction	316	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.15	0.07	0.05	0.02	0.08	0.08	0.04	0.01	0.03	0.09	1.00	0.20	0.15	0.04	0.17	0.13	0.00	0.00	0.11	0.07	0.23
+cost_set	92	duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.25	0.04	0.01	0.03	0.01	0.00	0.05	0.02	0.01	0.01	1.00	0.37	0.21	0.13	0.03	0.27	0.00	0.00	0.25	0.12	0.35
 cost_type	25	faeria,monster_train	usable		0.13	0.00	0.00	0.00	0.05	0.08	0.05	0.05	0.57	0.00	0.28	0.25	0.33	0.00	0.07	0.00	0.00	0.05	0.12	0.13	0.03
-count_payoff	655	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.47	0.12	0.11	0.01	0.37	0.06	0.07	0.03	0.05	0.03	0.12	0.11	0.02	0.03	0.19	0.09	0.04	0.03	0.23	0.14	0.28
+count_payoff	655	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.40	0.12	0.11	0.01	0.37	0.06	0.07	0.03	0.05	0.03	0.12	0.11	0.02	0.03	0.19	0.09	0.04	0.03	0.23	0.14	0.28
 counterattack	15	inscryption,monster_train,sts1	usable		0.15	1.00	0.12	0.00	0.04	0.04	0.00	0.00	0.04	0.00	0.00	0.07	0.07	0.04	0.16	0.04	0.00	0.07	0.15	0.04	0.17
-damage	555	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound,sts1	usable		0.06	0.24	0.19	0.01	0.08	0.20	0.05	0.03	0.04	0.02	0.03	0.06	0.03	0.03	0.14	0.21	0.01	0.02	0.04	0.07	0.07
-damage_reduction	217	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra	usable		0.18	0.17	0.04	0.01	0.11	0.01	0.02	0.05	0.01	0.02	0.03	0.10	0.02	0.02	0.19	0.14	0.04	0.00	0.14	1.00	0.25
+damage	555	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound,sts1	usable		0.05	0.24	0.19	0.01	0.08	0.20	0.05	0.03	0.04	0.02	0.03	0.06	0.03	0.03	0.14	0.21	0.01	0.02	0.04	0.07	0.07
+damage_reduction	217	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra	usable		0.17	0.17	0.04	0.01	0.11	0.01	0.02	0.05	0.01	0.02	0.03	0.10	0.02	0.02	0.19	0.14	0.04	0.00	0.14	1.00	0.25
 death_count	51	faeria,gwent,marvel_snap,monster_train,runeterra,stormbound	usable		0.32	0.07	0.00	0.01	0.23	0.11	0.03	0.04	0.01	0.06	0.13	0.02	0.00	0.05	0.35	1.00	0.00	0.00	0.17	0.06	0.27
-death_trigger	313	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.20	0.13	0.07	0.03	0.16	0.01	0.00	0.02	0.02	0.07	0.04	0.11	0.05	0.13	0.49	1.00	0.02	0.03	0.11	0.21	0.18
-deathtouch	12	faeria,inscryption	usable		0.08	0.58	0.08	1.00	0.00	0.00	0.00	0.00	0.08	0.00	0.00	0.00	0.00	0.00	0.58	0.33	0.00	0.00	0.00	0.25	0.17
+death_trigger	313	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.18	0.13	0.07	0.03	0.16	0.01	0.00	0.02	0.02	0.07	0.04	0.11	0.05	0.13	0.49	1.00	0.02	0.03	0.11	0.21	0.18
+deathtouch	12	faeria,inscryption	usable		0.00	0.58	0.08	1.00	0.00	0.00	0.00	0.00	0.08	0.00	0.00	0.00	0.00	0.00	0.58	0.33	0.00	0.00	0.00	0.25	0.17
 debuff	76	gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound,sts1	usable		0.23	0.22	0.05	0.01	0.14	0.11	0.19	0.00	0.37	0.01	0.01	0.00	0.00	0.00	0.20	0.11	0.00	0.02	0.23	0.28	0.05
-deck_condition	43	gwent,runeterra	usable		0.63	0.09	0.11	0.08	0.14	0.02	0.00	0.00	0.05	0.00	0.15	0.21	0.09	0.00	0.26	0.20	0.02	0.05	0.61	0.12	0.65
+deck_condition	43	gwent,runeterra	usable		0.61	0.09	0.11	0.08	0.14	0.02	0.00	0.00	0.05	0.00	0.15	0.21	0.09	0.00	0.26	0.20	0.02	0.05	0.61	0.12	0.65
 deck_position	10	runeterra	usable		0.40	0.30	0.10	0.00	0.00	0.00	0.00	0.00	0.10	0.00	0.30	0.40	0.10	0.00	0.30	0.00	0.00	0.00	0.40	0.00	0.00
-defence_gain	1203	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound	usable		0.80	0.17	0.05	0.02	0.11	0.00	0.03	0.02	0.01	0.07	0.11	0.06	0.02	0.07	0.31	0.16	0.06	0.02	1.00	0.15	0.19
+defence_gain	1203	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound	usable		0.78	0.17	0.05	0.02	0.11	0.00	0.03	0.02	0.01	0.07	0.11	0.06	0.02	0.07	0.31	0.16	0.06	0.02	1.00	0.15	0.19
 destroy	525	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.14	0.16	0.03	0.40	0.19	0.01	0.07	0.01	0.02	0.09	0.06	0.06	0.07	0.06	0.24	0.65	0.01	0.01	0.11	0.08	0.12
 disable	113	duelyst,inscryption,into_the_breach,monster_train,runeterra,stormbound	usable		0.07	0.18	0.06	0.00	0.20	0.07	0.10	0.97	0.08	0.05	0.01	0.05	0.01	0.01	0.09	0.05	0.00	0.01	0.03	0.18	0.03
 discard	213	gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.09	0.03	0.02	0.01	0.10	0.10	0.03	0.03	0.04	0.02	0.04	0.52	0.07	0.06	0.12	0.12	0.00	0.00	0.04	0.01	0.21
-donate	55	duelyst,gwent,marvel_snap,stormbound	usable		0.13	0.06	0.02	0.01	0.10	0.00	0.01	0.02	0.33	0.01	0.07	0.02	0.04	0.00	0.40	0.15	0.01	0.00	0.12	0.08	0.22
-draw	503	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.11	0.07	0.02	0.01	0.05	0.04	0.03	0.01	0.03	0.06	0.12	1.00	0.04	0.11	0.17	0.09	0.01	0.02	0.07	0.06	0.17
+donate	55	duelyst,gwent,marvel_snap,stormbound	usable		0.12	0.06	0.02	0.01	0.10	0.00	0.01	0.02	0.33	0.01	0.07	0.02	0.04	0.00	0.40	0.15	0.01	0.00	0.12	0.08	0.22
+draw	503	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.10	0.07	0.02	0.01	0.05	0.04	0.03	0.01	0.03	0.06	0.12	1.00	0.04	0.11	0.17	0.09	0.01	0.02	0.07	0.06	0.17
 excess_damage	154	gwent,monster_train,runeterra	usable		0.31	1.00	0.36	0.00	0.02	0.00	0.00	0.00	0.02	0.00	0.02	0.03	0.01	0.01	0.13	0.12	0.00	0.10	0.24	0.25	0.25
 extra_turn	47	faeria,marvel_snap,runeterra,sts1	usable		0.03	0.20	0.00	0.00	0.00	0.01	0.00	0.01	0.01	0.00	0.02	0.04	0.00	0.02	0.05	0.03	0.00	0.02	0.03	0.06	0.11
 fight_enemy	64	duelyst,faeria,runeterra,stormbound	usable		0.12	1.00	0.73	0.01	0.02	0.27	0.01	0.01	0.02	0.00	0.02	0.06	0.00	0.00	0.18	0.02	0.00	0.01	0.02	0.03	0.24
-forced_attack	96	runeterra	usable		0.19	1.00	0.03	0.00	0.01	0.02	0.06	0.02	0.65	0.00	0.03	0.17	0.04	0.04	0.29	0.10	0.00	0.05	0.15	0.17	0.38
-forced_movement	293	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,stormbound	usable		0.14	0.21	0.15	0.01	0.23	0.03	0.03	0.08	0.29	0.00	0.04	0.04	0.01	0.00	0.19	0.08	0.03	0.02	0.08	0.13	0.21
-free_play	231	duelyst,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.07	0.05	0.00	0.00	0.15	0.09	0.07	0.12	0.09	0.00	1.00	0.10	0.05	0.02	0.16	0.09	0.10	0.00	0.03	0.14	0.38
+forced_attack	96	runeterra	usable		0.17	1.00	0.03	0.00	0.01	0.02	0.06	0.02	0.65	0.00	0.03	0.17	0.04	0.04	0.29	0.10	0.00	0.05	0.15	0.17	0.38
+forced_movement	293	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,stormbound	usable		0.13	0.21	0.15	0.01	0.23	0.03	0.03	0.08	0.29	0.00	0.04	0.04	0.01	0.00	0.19	0.08	0.03	0.02	0.08	0.13	0.21
+free_play	231	duelyst,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.03	0.05	0.00	0.00	0.15	0.09	0.07	0.12	0.09	0.00	1.00	0.10	0.05	0.02	0.16	0.09	0.10	0.00	0.03	0.14	0.38
 friendly_fire	225	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable		0.14	0.16	0.23	0.32	0.86	0.07	0.02	0.01	0.01	0.01	0.08	0.08	0.01	0.01	0.22	1.00	0.08	0.01	0.10	0.07	0.15
-generate_cards	873	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.09	0.06	0.01	0.04	0.06	0.03	0.03	0.01	0.06	0.01	0.20	1.00	0.04	0.02	0.26	0.22	0.00	0.01	0.05	0.06	0.15
-hand_disruption	27	duelyst,gwent,marvel_snap,runeterra	usable		0.08	0.08	0.00	0.09	0.17	0.00	0.00	0.00	1.00	0.00	0.04	0.36	0.00	0.00	0.20	0.02	0.00	0.02	0.00	0.00	0.34
-hand_size	80	duelyst,faeria,gwent,inscryption,marvel_snap,runeterra,stormbound,sts1	usable		0.51	0.11	0.08	0.00	0.07	0.09	0.03	0.02	0.02	0.00	0.12	0.27	0.01	0.08	0.21	0.02	0.00	0.03	0.23	0.12	0.34
+generate_cards	873	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.08	0.06	0.01	0.04	0.06	0.03	0.03	0.01	0.06	0.01	0.20	1.00	0.04	0.02	0.26	0.22	0.00	0.01	0.05	0.06	0.15
+hand_disruption	27	duelyst,gwent,marvel_snap,runeterra	usable		0.00	0.08	0.00	0.09	0.17	0.00	0.00	0.00	1.00	0.00	0.04	0.36	0.00	0.00	0.20	0.02	0.00	0.02	0.00	0.00	0.34
+hand_size	80	duelyst,faeria,gwent,inscryption,marvel_snap,runeterra,stormbound,sts1	usable		0.38	0.11	0.08	0.00	0.07	0.09	0.03	0.02	0.02	0.00	0.12	0.27	0.01	0.08	0.21	0.02	0.00	0.03	0.23	0.12	0.34
 haste	155	duelyst,faeria,gwent	usable		0.20	0.17	0.12	0.03	0.19	0.00	0.01	0.01	0.03	0.00	0.02	0.11	0.03	0.05	0.48	0.17	0.05	0.01	0.18	0.15	0.29
-heal	133	duelyst,gwent,into_the_breach,monster_train,runeterra	usable		0.13	0.21	0.08	0.00	0.18	0.07	0.10	0.01	0.03	0.02	0.02	0.14	0.01	0.03	0.12	0.14	0.06	1.00	0.09	0.12	0.09
+heal	133	duelyst,gwent,into_the_breach,monster_train,runeterra	usable		0.11	0.21	0.08	0.00	0.18	0.07	0.10	0.01	0.03	0.02	0.02	0.14	0.01	0.03	0.12	0.14	0.06	1.00	0.09	0.12	0.09
 immobilize	95	duelyst,faeria,into_the_breach,marvel_snap,monster_train	usable		0.16	0.35	0.02	0.00	0.19	0.00	0.10	0.82	0.00	0.01	0.03	0.22	0.00	0.01	0.28	0.07	0.02	0.00	0.15	0.16	0.15
-immunity	133	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train	usable		0.46	0.15	0.20	0.05	0.29	0.00	0.19	0.12	0.03	0.00	0.02	0.05	0.01	0.01	0.44	0.20	0.01	0.01	0.31	1.00	0.21
+immunity	133	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train	usable		0.33	0.15	0.20	0.05	0.29	0.00	0.19	0.12	0.03	0.00	0.02	0.05	0.01	0.01	0.44	0.20	0.01	0.01	0.31	1.00	0.21
 in_hand_buff	228	duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,sts1	usable		0.38	0.07	0.05	0.02	0.05	0.00	0.03	0.02	0.02	0.00	1.00	0.19	0.20	0.03	0.17	0.12	0.01	0.00	0.27	0.10	0.19
 information	41	gwent,marvel_snap,runeterra,sts1	usable		0.11	0.05	0.02	0.02	0.06	0.08	0.00	0.00	0.03	0.00	0.16	0.27	0.76	0.20	0.23	0.06	0.01	0.01	0.06	0.01	0.08
 junk_cards	45	faeria,gwent,marvel_snap,runeterra,stormbound	usable		0.05	0.05	0.01	0.03	0.06	0.00	0.03	0.00	0.99	0.00	0.16	0.83	0.16	0.03	0.24	0.07	0.00	0.00	0.05	0.00	0.11
@@ -65,131 +65,133 @@ lifesteal	16	duelyst,gwent,monster_train,stormbound	usable		0.38	0.29	0.23	0.00	
 mark_target	24	duelyst,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.10	0.11	0.10	0.11	0.35	0.23	0.07	0.04	0.02	0.04	0.02	0.02	0.07	0.00	0.13	0.15	0.14	0.14	0.06	0.12	0.13
 merge_attach	150	duelyst,inscryption,marvel_snap,runeterra	usable		0.12	0.19	0.01	0.08	0.09	0.00	0.01	0.00	0.03	0.03	0.06	0.05	0.03	0.16	0.23	0.30	0.00	0.01	0.05	0.14	0.15
 movement	464	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable		0.19	0.22	0.09	0.04	0.19	0.01	0.02	0.06	0.07	0.00	0.03	0.09	0.01	0.00	0.23	0.09	0.04	0.03	0.12	0.15	0.17
-multi_attack	106	duelyst,inscryption,monster_train,runeterra,sts1	usable		0.18	1.00	0.03	0.02	0.11	0.20	0.06	0.05	0.03	0.02	0.02	0.05	0.03	0.04	0.23	0.11	0.01	0.01	0.11	0.23	0.32
+multi_attack	106	duelyst,inscryption,monster_train,runeterra,sts1	usable		0.16	1.00	0.03	0.02	0.11	0.20	0.06	0.05	0.03	0.02	0.02	0.05	0.03	0.04	0.23	0.11	0.01	0.01	0.11	0.23	0.32
 multi_target_attack	49	duelyst,faeria,gwent,into_the_breach,runeterra	usable		0.05	0.24	0.43	0.01	1.00	0.34	0.01	0.01	0.01	0.00	0.01	0.03	0.01	0.00	0.03	0.01	0.00	0.00	0.05	0.07	0.14
-on_ally_play	719	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra	usable		0.43	0.09	0.10	0.06	0.12	0.00	0.02	0.04	0.03	0.02	0.15	0.16	0.08	0.03	0.26	0.18	0.03	0.00	0.30	0.10	0.31
-on_attack	1050	duelyst,faeria,inscryption,into_the_breach,monster_train,runeterra,stormbound,sts1	usable		0.20	1.00	0.14	0.04	0.20	0.01	0.04	0.04	0.04	0.02	0.03	0.07	0.03	0.02	0.26	0.14	0.02	0.03	0.10	0.14	0.20
-on_damaged	588	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound,sts1	usable		0.20	0.18	0.13	0.04	0.12	0.02	0.07	0.03	0.05	0.02	0.04	0.08	0.02	0.01	0.20	0.08	0.02	0.03	0.15	0.51	0.26
-on_discard	55	gwent,marvel_snap,monster_train,runeterra,sts1	usable		0.15	0.11	0.14	0.00	0.18	0.18	0.07	0.00	0.23	0.11	0.25	0.19	0.04	0.09	0.29	0.21	0.00	0.00	0.03	0.04	0.17
-on_draw	77	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,sts1	usable		0.35	0.03	0.02	0.00	0.03	0.08	0.07	0.05	0.05	0.01	0.17	0.28	0.19	0.13	0.20	0.03	0.00	0.00	0.25	0.02	0.07
-on_enemy_enter	28	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,runeterra	usable		0.10	0.02	0.17	0.19	0.05	0.00	0.00	0.06	0.08	0.00	0.09	0.02	0.02	0.00	0.34	0.09	0.02	0.00	0.06	0.17	0.28
+on_ally_play	719	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra	usable		0.41	0.09	0.10	0.06	0.12	0.00	0.02	0.04	0.03	0.02	0.15	0.16	0.08	0.03	0.26	0.18	0.03	0.00	0.30	0.10	0.31
+on_attack	1050	duelyst,faeria,inscryption,into_the_breach,monster_train,runeterra,stormbound,sts1	usable		0.17	1.00	0.14	0.04	0.20	0.01	0.04	0.04	0.04	0.02	0.03	0.07	0.03	0.02	0.26	0.14	0.02	0.03	0.10	0.14	0.20
+on_damaged	588	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound,sts1	usable		0.19	0.18	0.13	0.04	0.12	0.02	0.07	0.03	0.05	0.02	0.04	0.08	0.02	0.01	0.20	0.08	0.02	0.03	0.15	0.51	0.26
+on_discard	55	gwent,marvel_snap,monster_train,runeterra,sts1	usable		0.13	0.11	0.14	0.00	0.18	0.18	0.07	0.00	0.23	0.11	0.25	0.19	0.04	0.09	0.29	0.21	0.00	0.00	0.03	0.04	0.17
+on_draw	77	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,sts1	usable		0.34	0.03	0.02	0.00	0.03	0.08	0.07	0.05	0.05	0.01	0.17	0.28	0.19	0.13	0.20	0.03	0.00	0.00	0.25	0.02	0.07
+on_enemy_enter	28	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,runeterra	usable		0.08	0.02	0.17	0.19	0.05	0.00	0.00	0.06	0.08	0.00	0.09	0.02	0.02	0.00	0.34	0.09	0.02	0.00	0.06	0.17	0.28
 on_fight	17	faeria	usable		0.18	1.00	0.24	0.00	0.06	0.00	0.00	0.18	0.00	0.24	0.18	0.24	0.00	0.00	0.18	0.00	0.00	0.00	0.12	0.47	0.65
 on_kill	160	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound,sts1	usable		0.35	0.17	0.19	0.01	0.26	0.18	0.06	0.00	0.07	0.15	0.03	0.04	0.05	0.04	0.12	0.18	0.01	0.04	0.18	0.19	0.32
 on_lifegain	56	duelyst,gwent,into_the_breach,monster_train,runeterra,sts1	usable		0.23	0.23	0.14	0.00	0.33	0.02	0.03	0.05	0.00	0.00	0.00	0.10	0.00	0.00	0.27	0.04	0.07	0.29	0.21	0.13	0.07
-on_sacrifice	22	inscryption,monster_train	usable		0.41	0.21	0.04	0.00	0.04	0.00	0.00	0.00	0.00	0.04	0.19	0.00	0.00	0.00	0.60	1.00	0.00	0.14	0.31	0.39	0.27
-on_spell	202	duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,sts1	usable		0.43	0.10	0.08	0.01	0.12	0.03	1.00	0.02	0.04	0.03	0.14	0.13	0.05	0.02	0.39	0.02	0.00	0.02	0.16	0.12	0.21
-on_targeted	72	gwent,inscryption,runeterra	usable		0.56	0.35	0.13	0.12	0.00	0.00	0.01	0.00	0.12	0.01	0.15	0.17	0.13	0.01	0.26	0.15	0.01	0.11	0.32	0.62	0.11
-other_death_trigger	115	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,sts1	usable		0.29	0.06	0.15	0.02	0.21	0.08	0.02	0.02	0.01	0.10	0.10	0.11	0.01	0.07	0.23	1.00	0.03	0.03	0.17	0.11	0.24
+on_sacrifice	22	inscryption,monster_train	usable		0.35	0.21	0.04	0.00	0.04	0.00	0.00	0.00	0.00	0.04	0.19	0.00	0.00	0.00	0.60	1.00	0.00	0.14	0.31	0.39	0.27
+on_spell	202	duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,sts1	usable		0.42	0.10	0.08	0.01	0.12	0.03	1.00	0.02	0.04	0.03	0.14	0.13	0.05	0.02	0.39	0.02	0.00	0.02	0.16	0.12	0.21
+on_targeted	72	gwent,inscryption,runeterra	usable		0.43	0.35	0.13	0.12	0.00	0.00	0.01	0.00	0.12	0.01	0.15	0.17	0.13	0.01	0.26	0.15	0.01	0.11	0.32	0.62	0.11
+other_death_trigger	115	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,sts1	usable		0.26	0.06	0.15	0.02	0.21	0.08	0.02	0.02	0.01	0.10	0.10	0.11	0.01	0.07	0.23	1.00	0.03	0.03	0.17	0.11	0.24
 other_leave_trigger	77	gwent,runeterra	usable		0.63	0.20	0.02	0.00	0.00	0.00	0.02	0.00	0.00	0.02	0.04	0.05	0.02	0.93	0.06	0.05	0.01	0.01	0.59	0.03	0.51
 permanent_growth	776	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.77	0.13	0.05	0.01	0.13	0.00	0.14	0.02	0.01	0.01	0.03	0.04	0.02	0.03	0.22	0.09	0.05	0.01	0.54	0.17	0.25
-ping	573	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound,sts1	usable		0.08	0.22	0.41	0.02	0.31	0.17	0.07	0.02	0.04	0.02	0.02	0.11	0.01	0.01	0.19	0.18	0.02	0.02	0.06	0.06	0.15
+ping	573	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound,sts1	usable		0.07	0.22	0.41	0.02	0.31	0.17	0.07	0.02	0.04	0.02	0.02	0.11	0.01	0.01	0.19	0.18	0.02	0.02	0.06	0.06	0.15
 protection	28	gwent,inscryption	usable		0.17	0.00	0.02	0.02	0.15	0.04	0.00	0.00	0.00	0.02	0.02	0.00	0.00	0.00	0.67	0.06	0.04	0.06	0.17	1.00	0.02
-recycle	130	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.27	0.03	0.01	0.02	0.02	0.04	0.01	0.02	0.00	0.04	0.18	0.44	0.11	1.00	0.12	0.25	0.00	0.00	0.19	0.16	0.37
+recycle	130	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.25	0.03	0.01	0.02	0.02	0.04	0.01	0.02	0.00	0.04	0.18	0.44	0.11	1.00	0.12	0.25	0.00	0.00	0.19	0.16	0.37
 regeneration	72	duelyst,gwent,into_the_breach,monster_train,runeterra,stormbound,sts1	usable		0.26	0.12	0.02	0.02	0.11	0.03	0.01	0.00	0.05	0.00	0.00	0.05	0.04	0.01	0.13	0.06	0.21	1.00	0.17	0.19	0.10
 repeat_trigger	115	faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.12	0.01	0.05	0.04	0.07	0.02	0.07	0.00	0.00	0.02	0.02	0.08	0.07	0.07	0.25	0.18	0.08	0.01	0.12	0.08	0.16
 resource_gain	128	faeria,gwent,monster_train,runeterra,sts1	usable		0.18	0.14	0.10	0.01	0.08	0.03	0.02	0.01	0.17	0.05	0.05	0.29	0.00	0.01	0.25	0.27	0.00	0.15	0.08	0.12	0.08
 return_to_hand	147	duelyst,gwent,inscryption,marvel_snap,runeterra,stormbound	usable		0.44	0.06	0.05	0.00	0.02	0.06	0.03	0.01	0.00	0.00	0.20	0.07	0.02	1.00	0.31	0.27	0.02	0.02	0.33	0.26	0.22
-revive	92	duelyst,gwent,inscryption,marvel_snap,runeterra,stormbound	usable		0.26	0.09	0.03	0.02	0.14	0.00	0.01	0.00	0.01	0.02	0.02	0.02	0.02	1.00	0.20	0.59	0.03	0.02	0.06	0.29	0.36
+revive	92	duelyst,gwent,inscryption,marvel_snap,runeterra,stormbound	usable		0.11	0.09	0.03	0.02	0.14	0.00	0.01	0.00	0.01	0.02	0.02	0.02	0.02	1.00	0.20	0.59	0.03	0.02	0.06	0.29	0.36
 row_effects	35	gwent	usable		0.23	0.00	0.17	0.00	1.00	0.00	0.06	0.00	0.11	0.00	0.17	0.09	0.06	0.06	0.40	0.31	0.03	0.03	0.23	0.09	0.34
-rule_change	635	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,sts1	usable		0.21	0.23	0.07	0.03	0.09	0.00	0.07	0.02	0.04	0.00	0.03	0.06	0.02	0.02	0.30	0.24	0.02	0.01	0.14	0.21	0.21
-sacrifice	221	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable		0.22	0.21	0.04	0.06	0.10	0.02	0.01	0.00	0.01	0.04	0.15	0.09	0.06	0.09	0.30	1.00	0.03	0.02	0.18	0.11	0.14
-selection	143	faeria,gwent,inscryption,marvel_snap,runeterra,sts1	usable		0.10	0.01	0.01	0.01	0.03	0.02	0.00	0.00	0.05	0.00	0.22	0.23	1.00	0.03	0.21	0.02	0.02	0.01	0.10	0.03	0.04
+rule_change	635	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,sts1	usable		0.20	0.23	0.07	0.03	0.09	0.00	0.07	0.02	0.04	0.00	0.03	0.06	0.02	0.02	0.30	0.24	0.02	0.01	0.14	0.21	0.21
+sacrifice	221	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable		0.21	0.21	0.04	0.06	0.10	0.02	0.01	0.00	0.01	0.04	0.15	0.09	0.06	0.09	0.30	1.00	0.03	0.02	0.18	0.11	0.14
+selection	143	faeria,gwent,inscryption,marvel_snap,runeterra,sts1	usable		0.08	0.01	0.01	0.01	0.03	0.02	0.00	0.00	0.05	0.00	0.22	0.23	1.00	0.03	0.21	0.02	0.02	0.01	0.10	0.03	0.04
 self_destruct	272	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable		0.11	0.25	0.13	0.09	0.25	0.01	0.01	0.00	0.02	0.07	0.07	0.06	0.07	0.06	0.38	1.00	0.01	0.01	0.11	0.12	0.05
 self_mill	13	runeterra	usable		0.15	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.23	0.00	0.00	0.38	0.38	0.00	0.15	0.15	0.00	0.08
-shield	191	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,sts1	usable		0.21	0.21	0.02	0.03	0.09	0.04	0.02	0.03	0.02	0.02	0.02	0.10	0.01	0.01	0.18	0.11	0.04	0.01	0.15	1.00	0.20
+shield	191	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,sts1	usable		0.18	0.21	0.02	0.03	0.09	0.04	0.02	0.03	0.02	0.02	0.02	0.10	0.01	0.01	0.18	0.11	0.04	0.01	0.15	1.00	0.20
 silence	86	duelyst,gwent,marvel_snap,monster_train,runeterra,stormbound	usable		0.06	0.04	0.05	0.02	0.13	0.06	0.01	0.98	0.08	0.04	0.01	0.01	0.19	0.06	0.15	0.04	0.00	0.00	0.06	0.01	0.13
-spell_power	220	duelyst,gwent,into_the_breach,marvel_snap,monster_train,runeterra,sts1	usable		0.14	0.22	0.10	0.01	0.21	0.13	1.00	0.05	0.08	0.02	0.08	0.08	0.01	0.02	0.10	0.08	0.01	0.05	0.09	0.06	0.18
+spell_power	220	duelyst,gwent,into_the_breach,marvel_snap,monster_train,runeterra,sts1	usable		0.13	0.22	0.10	0.01	0.21	0.13	1.00	0.05	0.08	0.02	0.08	0.08	0.01	0.02	0.10	0.08	0.01	0.05	0.09	0.06	0.18
 spells_played_condition	34	duelyst,faeria,runeterra,sts1	usable		0.06	0.10	0.03	0.00	0.06	0.16	1.00	0.03	0.04	0.08	0.47	0.10	0.08	0.03	0.33	0.01	0.00	0.08	0.01	0.11	0.24
 stat_condition	72	gwent,runeterra	usable		0.59	0.40	0.12	0.01	0.20	0.00	0.02	0.00	0.02	0.00	0.09	0.06	0.00	0.00	0.37	0.13	0.04	0.13	0.54	0.29	0.40
-stat_gain	149	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.01	0.07	0.00	0.04	0.10	0.01	0.08	0.02	0.09	0.00	0.06	0.09	0.03	0.03	0.13	0.09	0.02	0.03	0.00	0.08	0.22
-stat_loss	178	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.24	0.17	0.02	0.08	0.16	0.02	0.13	0.01	0.28	0.00	0.02	0.07	0.02	0.01	0.14	0.01	0.01	0.11	0.04	0.13	0.19
-stat_multiply	222	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,runeterra,stormbound,sts1	usable		0.79	0.18	0.01	0.03	0.14	0.00	0.02	0.01	0.20	0.06	0.05	0.06	0.08	0.05	0.22	0.08	0.01	0.01	0.12	0.20	0.23
+stat_fixed	148	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,runeterra,stormbound	usable		0.08	0.17	0.01	0.03	0.10	0.00	0.02	0.00	0.01	0.07	0.06	0.05	0.10	0.07	0.24	0.11	0.01	0.02	0.13	0.20	0.23
+stat_gain	149	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.00	0.07	0.00	0.04	0.10	0.01	0.08	0.02	0.09	0.00	0.06	0.09	0.03	0.03	0.13	0.09	0.02	0.03	0.00	0.08	0.22
+stat_loss	178	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable		0.19	0.17	0.02	0.08	0.16	0.02	0.13	0.01	0.28	0.00	0.02	0.07	0.02	0.01	0.14	0.01	0.01	0.11	0.04	0.13	0.19
+stat_multiply	98	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra	usable		1.00	0.12	0.01	0.06	0.11	0.00	0.00	0.02	0.01	0.00	0.03	0.03	0.02	0.05	0.39	0.51	0.06	0.01	0.55	0.29	0.24
 steal	49	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,runeterra,stormbound	usable		0.03	0.14	0.00	0.02	0.15	0.00	0.00	0.02	1.00	0.01	0.03	0.08	0.00	0.00	0.09	0.03	0.00	0.00	0.03	0.03	0.19
 stealth	24	inscryption,into_the_breach,monster_train,runeterra	usable		0.08	0.41	0.00	0.03	0.25	0.00	0.00	0.00	0.03	0.03	0.00	0.03	0.03	0.00	0.26	0.42	0.00	0.00	0.00	0.28	0.08
-summon	773	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable		0.10	0.18	0.03	0.03	0.14	0.01	0.02	0.02	0.06	0.01	0.02	0.04	0.02	0.03	1.00	0.31	0.01	0.01	0.08	0.12	0.25
-swap	45	duelyst,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra	usable		0.06	0.20	0.10	0.00	0.03	0.00	0.00	0.07	0.00	0.00	0.01	0.02	0.02	0.02	0.10	0.03	0.02	0.23	0.05	0.12	0.26
-tank	303	duelyst,faeria,inscryption,into_the_breach,monster_train,runeterra	usable		0.18	0.21	0.05	0.02	0.06	0.00	0.03	0.06	0.05	0.01	0.08	0.09	0.02	0.01	0.11	0.11	0.01	0.04	0.08	1.00	0.60
+strikes_with_defence	18	duelyst,faeria,gwent,runeterra	usable		0.42	0.07	0.00	0.00	0.08	0.00	0.00	0.00	0.00	0.00	0.00	0.08	0.00	0.00	0.05	0.00	0.15	0.02	0.26	0.20	0.30
+summon	773	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable		0.07	0.18	0.03	0.03	0.14	0.01	0.02	0.02	0.06	0.01	0.02	0.04	0.02	0.03	1.00	0.31	0.01	0.01	0.08	0.12	0.25
+swap	45	duelyst,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra	usable		0.03	0.20	0.10	0.00	0.03	0.00	0.00	0.07	0.00	0.00	0.01	0.02	0.02	0.02	0.10	0.03	0.02	0.23	0.05	0.12	0.26
+tank	303	duelyst,faeria,inscryption,into_the_breach,monster_train,runeterra	usable		0.15	0.21	0.05	0.02	0.06	0.00	0.03	0.06	0.05	0.01	0.08	0.09	0.02	0.01	0.11	0.11	0.01	0.04	0.08	1.00	0.60
 taunt	81	duelyst,faeria,gwent	usable		0.10	0.09	0.04	0.01	0.38	0.00	0.01	0.67	0.00	0.01	0.10	0.08	0.00	0.01	0.22	0.07	0.03	0.01	0.09	0.32	0.53
-terrain	149	duelyst,faeria,into_the_breach,marvel_snap	usable		0.13	0.18	0.07	0.06	0.21	0.02	0.03	0.05	0.02	0.00	0.02	0.07	0.00	0.01	0.21	0.21	0.00	0.02	0.09	0.11	0.13
-territory_trigger	29	duelyst,faeria,inscryption	usable		0.24	0.18	0.33	0.08	0.02	0.00	0.00	0.02	0.04	0.07	0.04	0.18	0.00	0.05	0.40	0.07	0.02	0.00	0.06	0.16	0.36
+terrain	149	duelyst,faeria,into_the_breach,marvel_snap	usable		0.12	0.18	0.07	0.06	0.21	0.02	0.03	0.05	0.02	0.00	0.02	0.07	0.00	0.01	0.21	0.21	0.00	0.02	0.09	0.11	0.13
+territory_trigger	29	duelyst,faeria,inscryption	usable		0.22	0.18	0.33	0.08	0.02	0.00	0.00	0.02	0.04	0.07	0.04	0.18	0.00	0.05	0.40	0.07	0.02	0.00	0.06	0.16	0.36
 tutor	57	faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,sts1	usable		0.26	0.22	0.00	0.01	0.03	0.11	0.04	0.00	0.00	0.00	0.25	0.60	1.00	0.25	0.18	0.16	0.00	0.01	0.09	0.01	0.14
 untap	11	duelyst,into_the_breach	usable		0.05	0.50	0.05	0.00	0.10	0.00	0.00	0.00	0.10	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00
 upgrade	53	monster_train,runeterra,sts1	usable		0.07	0.20	0.01	0.02	0.02	0.02	0.02	0.01	0.03	0.00	0.01	0.30	0.03	0.02	0.44	0.36	0.00	0.03	0.03	0.07	0.26
-variable_stats	309	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound	usable		0.96	0.16	0.06	0.02	0.28	0.00	0.02	0.02	0.03	0.01	0.03	0.04	0.01	0.02	0.23	0.14	0.05	0.01	0.50	0.12	0.42
+variable_stats	325	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound	usable		0.86	0.18	0.06	0.03	0.27	0.00	0.03	0.02	0.04	0.00	0.03	0.04	0.01	0.02	0.24	0.13	0.05	0.01	0.50	0.14	0.41
 variety_payoff	71	duelyst,gwent,marvel_snap,runeterra,stormbound,sts1	usable		0.45	0.07	0.13	0.01	0.07	0.17	0.00	0.01	0.04	0.01	0.18	0.30	0.04	0.03	0.19	0.01	0.00	0.00	0.33	0.09	0.43
 cant_move	16	duelyst,faeria,into_the_breach,marvel_snap,stormbound	helper	a thing for single cards (Claude's)	0.03	0.23	0.00	0.00	0.20	0.00	0.00	0.27	0.03	0.00	0.00	0.03	0.00	0.00	0.50	0.20	0.00	0.00	0.03	0.43	0.03
 play_restriction	79	duelyst,marvel_snap,monster_train,runeterra,sts1	helper	a thing for single cards (Claude's)	0.04	0.00	0.00	0.00	0.03	0.03	0.07	0.03	1.00	0.04	0.12	0.13	0.00	0.00	0.02	0.10	0.00	0.01	0.01	0.17	0.19
-cant_attack	1078	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	a thing for single cards (Kaptain)	0.13	0.19	0.07	0.02	0.14	0.05	0.05	0.31	0.05	0.07	0.06	0.09	0.10	0.02	0.27	0.14	0.01	0.01	0.09	0.21	0.14
+cant_attack	1078	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	a thing for single cards (Kaptain)	0.12	0.19	0.07	0.02	0.14	0.05	0.05	0.31	0.05	0.07	0.06	0.09	0.10	0.02	0.27	0.14	0.01	0.01	0.09	0.21	0.14
 drawback	17	marvel_snap,monster_train,sts1	helper	a thing for single cards (Kaptain)	0.00	0.00	0.00	0.00	0.02	0.02	0.09	0.00	0.64	0.04	0.00	0.02	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00
-exhaust	306	duelyst,gwent,monster_train,sts1	helper	a thing for single cards (Kaptain)	0.12	0.03	0.03	0.02	0.09	0.07	0.06	0.01	0.03	0.07	0.15	0.17	0.08	0.08	0.05	0.06	0.01	0.02	0.07	0.31	0.06
+exhaust	306	duelyst,gwent,monster_train,sts1	helper	a thing for single cards (Kaptain)	0.11	0.03	0.03	0.02	0.09	0.07	0.06	0.01	0.03	0.07	0.15	0.17	0.08	0.08	0.05	0.06	0.01	0.02	0.07	0.31	0.06
 slots_queue	29	sts1	helper	a thing for single cards (Kaptain)	0.00	0.00	0.00	0.00	0.10	0.14	0.34	0.00	0.00	0.17	0.00	0.07	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00
-target_choice	133	inscryption,runeterra	helper	a thing for single cards (Kaptain)	0.09	0.88	0.26	0.00	0.00	0.01	0.03	0.01	0.23	0.00	0.02	0.08	0.02	0.02	0.13	0.07	0.00	0.02	0.06	0.07	0.40
+target_choice	133	inscryption,runeterra	helper	a thing for single cards (Kaptain)	0.08	0.88	0.26	0.00	0.00	0.01	0.03	0.01	0.23	0.00	0.02	0.08	0.02	0.02	0.13	0.07	0.00	0.02	0.06	0.07	0.40
 area_templates	127	duelyst,faeria,into_the_breach,marvel_snap,stormbound	helper	how a card acts (Claude's)	0.43	0.20	0.10	0.11	1.00	0.10	0.03	0.06	0.00	0.00	0.00	0.00	0.20	0.04	0.07	0.20	0.00	0.02	0.22	0.06	0.08
 kicker	10	gwent	helper	how a card acts (Claude's)	0.40	0.00	0.20	0.00	0.50	0.00	0.00	0.00	0.10	0.10	0.00	0.00	0.00	0.00	0.80	0.20	0.00	0.10	0.40	0.00	0.50
 stacking_keyword	95	monster_train,runeterra	helper	how a card acts (Claude's)	0.47	0.33	0.70	0.00	0.51	0.01	0.31	0.01	0.02	0.01	0.04	0.06	0.01	0.03	0.36	0.26	0.01	0.01	0.44	0.29	0.09
-temporary_buff	196	duelyst,faeria,into_the_breach,monster_train,runeterra	helper	how a card acts (Claude's)	0.77	0.34	0.00	0.00	0.02	0.01	0.26	0.00	0.02	0.03	0.00	0.05	0.01	0.00	0.27	0.04	0.07	0.13	0.12	0.16	0.06
+temporary_buff	196	duelyst,faeria,into_the_breach,monster_train,runeterra	helper	how a card acts (Claude's)	0.76	0.34	0.00	0.00	0.02	0.01	0.26	0.00	0.02	0.03	0.00	0.05	0.01	0.00	0.27	0.04	0.07	0.13	0.12	0.16	0.06
 aura	100	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra	helper	how a card acts (Kaptain)	0.68	0.21	0.06	0.00	0.16	0.00	0.09	0.09	0.01	0.10	0.08	0.11	0.00	0.01	0.30	0.06	0.09	0.16	0.41	0.16	0.18
-modal_choice	156	duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,sts1	helper	how a card acts (Kaptain)	0.41	0.17	0.11	0.03	0.04	0.18	0.04	0.01	0.16	0.01	0.27	0.42	0.04	0.03	0.07	0.06	0.00	0.25	0.11	0.18	0.04
-symmetric_effect	38	duelyst,faeria,gwent,inscryption,runeterra	helper	how a card acts (Kaptain)	0.15	0.23	0.00	0.08	0.33	0.00	0.01	0.00	0.03	0.07	0.03	0.23	0.01	0.02	0.35	0.30	0.00	0.03	0.13	0.30	0.21
-adjacency	687	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,runeterra,stormbound	helper	one of the game's own things (Claude's)	0.28	0.33	0.14	0.02	0.23	0.02	0.02	0.09	0.03	0.00	0.09	0.02	0.02	0.13	0.40	0.14	0.29	0.02	0.12	0.13	0.18
-flanking	17	duelyst	helper	one of the game's own things (Claude's)	0.24	0.88	0.00	0.00	0.00	0.00	0.00	0.06	0.06	0.00	0.00	0.06	0.00	0.00	0.24	0.00	0.12	0.00	0.06	0.06	0.06
+modal_choice	156	duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,sts1	helper	how a card acts (Kaptain)	0.40	0.17	0.11	0.03	0.04	0.18	0.04	0.01	0.16	0.01	0.27	0.42	0.04	0.03	0.07	0.06	0.00	0.25	0.11	0.18	0.04
+symmetric_effect	38	duelyst,faeria,gwent,inscryption,runeterra	helper	how a card acts (Kaptain)	0.13	0.23	0.00	0.08	0.33	0.00	0.01	0.00	0.03	0.07	0.03	0.23	0.01	0.02	0.35	0.30	0.00	0.03	0.13	0.30	0.21
+adjacency	687	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,runeterra,stormbound	helper	one of the game's own things (Claude's)	0.27	0.33	0.14	0.02	0.23	0.02	0.02	0.09	0.03	0.00	0.09	0.02	0.02	0.13	0.40	0.14	0.29	0.02	0.12	0.13	0.18
+flanking	17	duelyst	helper	one of the game's own things (Claude's)	0.12	0.88	0.00	0.00	0.00	0.00	0.00	0.06	0.06	0.00	0.00	0.06	0.00	0.00	0.24	0.00	0.12	0.00	0.06	0.06	0.06
 link_formation	10	inscryption	helper	one of the game's own things (Claude's)	0.20	0.10	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.10	0.00	0.10	0.00	0.00	0.30	0.10	0.10	0.00	0.00	0.00	0.20
-placement_rules	65	duelyst,faeria,gwent,marvel_snap,monster_train	helper	one of the game's own things (Claude's)	0.12	0.04	0.01	0.00	0.19	0.10	0.10	0.14	0.41	0.01	0.12	0.02	0.04	0.00	0.24	0.13	0.09	0.00	0.09	0.12	0.25
-ranged	42	duelyst,faeria	helper	one of the game's own things (Claude's)	0.21	0.59	0.12	0.00	0.13	0.00	0.05	0.02	0.00	0.05	0.05	0.02	0.00	0.00	0.42	0.00	0.03	0.03	0.05	0.12	0.24
+placement_rules	65	duelyst,faeria,gwent,marvel_snap,monster_train	helper	one of the game's own things (Claude's)	0.09	0.04	0.01	0.00	0.19	0.10	0.10	0.14	0.41	0.01	0.12	0.02	0.04	0.00	0.24	0.13	0.09	0.00	0.09	0.12	0.25
+ranged	42	duelyst,faeria	helper	one of the game's own things (Claude's)	0.20	0.59	0.12	0.00	0.13	0.00	0.05	0.02	0.00	0.05	0.05	0.02	0.00	0.00	0.42	0.00	0.03	0.03	0.05	0.12	0.24
 retain	23	monster_train,sts1	helper	one of the game's own things (Claude's)	0.00	0.03	0.00	0.00	0.00	0.26	0.13	0.12	0.00	0.18	0.33	0.03	1.00	0.05	0.00	0.00	0.00	0.00	0.00	0.00	0.00
 round_passing	14	gwent	helper	one of the game's own things (Claude's)	0.71	0.00	0.07	0.00	0.07	0.00	0.14	0.00	0.00	0.00	0.21	0.21	0.07	0.07	0.14	0.07	0.07	0.00	0.71	0.07	0.43
-rows	424	duelyst,gwent,into_the_breach,stormbound	helper	one of the game's own things (Claude's)	0.26	0.41	0.35	0.01	1.00	0.03	0.30	0.03	0.04	0.00	0.08	0.02	0.07	0.01	0.30	0.31	0.01	0.03	0.18	0.05	0.21
-board_limit	115	inscryption,monster_train,runeterra,sts1	helper	one of the game's own things (Kaptain)	0.39	0.38	0.01	0.01	0.04	0.06	0.06	0.01	0.03	0.05	0.04	0.12	0.04	0.01	0.08	0.09	0.00	0.07	0.08	0.32	0.06
-high_cost	1053	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	one of the game's own things (Kaptain)	0.21	0.13	0.07	0.03	0.16	0.11	0.08	0.04	0.06	0.03	0.17	0.11	0.04	0.04	0.11	0.11	0.02	0.01	0.13	0.20	0.67
-lanes	562	duelyst,inscryption,into_the_breach,marvel_snap,monster_train,stormbound	helper	one of the game's own things (Kaptain)	0.17	0.32	0.22	0.04	0.31	0.03	0.08	0.08	0.11	0.02	0.03	0.03	0.02	0.02	0.23	0.15	0.08	0.01	0.07	0.13	0.17
+rows	424	duelyst,gwent,into_the_breach,stormbound	helper	one of the game's own things (Claude's)	0.18	0.41	0.35	0.01	1.00	0.03	0.30	0.03	0.04	0.00	0.08	0.02	0.07	0.01	0.30	0.31	0.01	0.03	0.18	0.05	0.21
+board_limit	115	inscryption,monster_train,runeterra,sts1	helper	one of the game's own things (Kaptain)	0.38	0.38	0.01	0.01	0.04	0.06	0.06	0.01	0.03	0.05	0.04	0.12	0.04	0.01	0.08	0.09	0.00	0.07	0.08	0.32	0.06
+high_cost	1053	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	one of the game's own things (Kaptain)	0.19	0.13	0.07	0.03	0.16	0.11	0.08	0.04	0.06	0.03	0.17	0.11	0.04	0.04	0.11	0.11	0.02	0.01	0.13	0.20	0.67
+lanes	562	duelyst,inscryption,into_the_breach,marvel_snap,monster_train,stormbound	helper	one of the game's own things (Kaptain)	0.15	0.32	0.22	0.04	0.31	0.03	0.08	0.08	0.11	0.02	0.03	0.03	0.02	0.02	0.23	0.15	0.08	0.01	0.07	0.13	0.17
 on_harvest	10	faeria	helper	one of the game's own things (Kaptain)	0.40	0.00	0.20	0.00	0.00	0.00	0.00	0.10	0.00	0.10	0.20	0.10	0.00	0.00	0.40	0.20	0.00	0.00	0.50	0.20	0.10
 positional	223	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,stormbound	helper	one of the game's own things (Kaptain)	0.18	0.12	0.11	0.05	0.30	0.07	0.02	0.06	0.03	0.02	0.08	0.07	0.05	0.05	0.51	0.37	0.00	0.02	0.10	0.11	0.15
 resource_banking	11	gwent	helper	one of the game's own things (Kaptain)	0.27	0.00	0.27	0.00	0.27	0.00	0.00	0.00	0.00	1.00	0.09	0.00	0.09	0.09	0.64	0.00	0.00	0.00	0.27	0.00	0.09
-round_carryover	40	gwent	helper	one of the game's own things (Kaptain)	0.35	0.00	0.07	0.03	0.20	0.00	0.03	0.00	0.00	0.03	0.42	0.40	0.12	0.05	0.20	0.07	0.07	0.07	0.33	0.28	0.20
-zone_control	157	duelyst,faeria,gwent,into_the_breach,marvel_snap,runeterra,stormbound	helper	one of the game's own things (Kaptain)	0.09	0.12	0.05	0.01	0.13	0.02	0.01	0.01	0.12	0.01	0.05	0.07	0.04	0.01	0.55	0.11	0.01	0.01	0.08	0.31	0.20
-turn_start	718	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	when a card acts (Claude's)	0.26	0.11	0.12	0.04	0.17	0.02	0.04	0.03	0.05	0.09	0.07	0.12	0.04	0.06	0.21	0.17	0.02	0.04	0.15	0.12	0.14
-activated	1076	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	when a card acts (Kaptain)	0.23	0.05	0.04	0.12	0.10	0.03	0.03	0.03	0.06	0.04	0.09	0.15	0.10	0.07	0.21	0.15	0.01	0.02	0.18	0.09	0.10
+round_carryover	40	gwent	helper	one of the game's own things (Kaptain)	0.33	0.00	0.07	0.03	0.20	0.00	0.03	0.00	0.00	0.03	0.42	0.40	0.12	0.05	0.20	0.07	0.07	0.07	0.33	0.28	0.20
+zone_control	157	duelyst,faeria,gwent,into_the_breach,marvel_snap,runeterra,stormbound	helper	one of the game's own things (Kaptain)	0.08	0.12	0.05	0.01	0.13	0.02	0.01	0.01	0.12	0.01	0.05	0.07	0.04	0.01	0.55	0.11	0.01	0.01	0.08	0.31	0.20
+turn_start	718	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	when a card acts (Claude's)	0.23	0.11	0.12	0.04	0.17	0.02	0.04	0.03	0.05	0.09	0.07	0.12	0.04	0.06	0.21	0.17	0.02	0.04	0.15	0.12	0.14
+activated	1076	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	when a card acts (Kaptain)	0.21	0.05	0.04	0.12	0.10	0.03	0.03	0.03	0.06	0.04	0.09	0.15	0.10	0.07	0.21	0.15	0.01	0.02	0.18	0.09	0.10
 combat_start	67	monster_train,sts1	helper	when a card acts (Kaptain)	0.51	0.01	0.51	0.25	0.53	0.02	0.37	0.00	0.03	0.05	0.28	0.42	0.04	0.00	0.50	0.25	0.00	0.00	0.50	0.26	0.00
-cooldowns	92	duelyst,faeria,gwent	helper	when a card acts (Kaptain)	0.10	0.00	0.08	0.02	0.16	0.00	0.01	0.00	0.01	0.01	0.03	0.01	0.02	0.01	0.31	0.07	0.03	0.02	0.09	0.05	0.28
+cooldowns	92	duelyst,faeria,gwent	helper	when a card acts (Kaptain)	0.09	0.00	0.08	0.02	0.16	0.00	0.01	0.00	0.01	0.01	0.03	0.01	0.02	0.01	0.31	0.07	0.03	0.02	0.09	0.05	0.28
 delayed	8	gwent,monster_train,runeterra	helper	when a card acts (Kaptain)	0.40	0.33	0.33	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.07	0.77	0.37	0.00	0.00	0.40	0.07	0.23
-on_play	4459	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	when a card acts (Kaptain)	0.22	0.07	0.05	0.04	0.14	0.09	0.04	0.04	0.07	0.07	0.11	0.18	0.07	0.04	0.22	0.09	0.03	0.02	0.15	0.06	0.16
-once_per_game	112	faeria,gwent,inscryption,into_the_breach,marvel_snap,runeterra,sts1	helper	when a card acts (Kaptain)	0.34	0.17	0.07	0.02	0.10	0.02	0.10	0.04	0.04	0.02	0.19	0.18	0.02	0.02	0.28	0.17	0.00	0.02	0.29	0.21	0.28
-passive	2315	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	when a card acts (Kaptain)	0.22	0.18	0.05	0.02	0.15	0.04	0.08	0.17	0.07	0.06	0.09	0.09	0.03	0.02	0.23	0.12	0.02	0.02	0.11	0.19	0.16
+on_play	4459	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	when a card acts (Kaptain)	0.20	0.07	0.05	0.04	0.14	0.09	0.04	0.04	0.07	0.07	0.11	0.18	0.07	0.04	0.22	0.09	0.03	0.02	0.15	0.06	0.16
+once_per_game	112	faeria,gwent,inscryption,into_the_breach,marvel_snap,runeterra,sts1	helper	when a card acts (Kaptain)	0.33	0.17	0.07	0.02	0.10	0.02	0.10	0.04	0.04	0.02	0.19	0.18	0.02	0.02	0.28	0.17	0.00	0.02	0.29	0.21	0.28
+passive	2315	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	when a card acts (Kaptain)	0.19	0.18	0.05	0.02	0.15	0.04	0.08	0.17	0.07	0.06	0.09	0.09	0.03	0.02	0.23	0.12	0.02	0.02	0.11	0.19	0.16
 play_timing_condition	52	gwent,marvel_snap,runeterra	helper	when a card acts (Kaptain)	0.11	0.09	0.00	0.20	0.27	0.07	0.07	0.05	0.35	0.00	0.10	0.12	0.05	0.07	0.08	0.21	0.00	0.00	0.09	0.04	0.20
-start_of_game	45	gwent,inscryption,into_the_breach,marvel_snap,runeterra,sts1	helper	when a card acts (Kaptain)	0.14	0.03	0.06	0.01	0.07	0.00	0.03	0.00	0.00	0.10	0.04	0.43	0.03	0.00	0.32	0.06	0.00	0.02	0.09	0.08	0.22
-turn_end	807	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	when a card acts (Kaptain)	0.19	0.09	0.10	0.03	0.17	0.04	0.05	0.01	0.04	0.04	0.06	0.14	0.06	0.04	0.27	0.31	0.13	0.15	0.12	0.14	0.16
+start_of_game	45	gwent,inscryption,into_the_breach,marvel_snap,runeterra,sts1	helper	when a card acts (Kaptain)	0.09	0.03	0.06	0.01	0.07	0.00	0.03	0.00	0.00	0.10	0.04	0.43	0.03	0.00	0.32	0.06	0.00	0.02	0.09	0.08	0.22
+turn_end	807	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	when a card acts (Kaptain)	0.17	0.09	0.10	0.03	0.17	0.04	0.05	0.01	0.04	0.04	0.06	0.14	0.06	0.04	0.27	0.31	0.13	0.15	0.12	0.14	0.16
 removal	0		out	a parent: its children carry its cards	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00
 deck_modification	15	duelyst,gwent,sts1	out	not in this game: a deck changed between battles	0.38	0.00	0.06	0.00	0.00	0.00	0.13	0.06	0.08	0.08	0.06	0.19	0.15	0.07	0.37	0.00	0.00	0.00	0.32	0.07	0.24
 hero_power	47	duelyst	out	not in this game: a hero with its own power	0.06	0.00	0.00	0.00	0.06	0.09	0.02	0.06	0.00	0.00	0.00	0.06	0.00	0.00	0.62	0.06	0.02	0.04	0.04	0.00	0.00
 run_structure	66	sts1	out	not in this game: a run of fights	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.11	0.00	0.18	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00
 counter_spell	16	gwent,runeterra,sts1	out	not in this game: answers on the enemy's turn	0.00	0.07	0.00	0.00	0.00	0.05	0.05	0.02	1.00	0.02	0.00	0.38	0.00	0.00	0.40	0.38	0.00	0.00	0.00	0.02	0.00
-reactions	63	duelyst,gwent,runeterra	out	not in this game: answers on the enemy's turn	0.18	0.11	0.18	0.09	0.12	0.00	0.04	0.01	0.18	0.01	0.08	0.04	0.02	0.01	0.13	0.24	0.05	0.00	0.13	0.37	0.15
-spell_speed	375	runeterra	out	not in this game: answers on the enemy's turn	0.22	0.18	0.00	0.06	0.06	0.14	0.01	0.05	0.06	0.02	0.07	0.46	0.10	0.04	0.07	0.22	0.00	0.03	0.15	0.03	0.01
-trap_secret	75	duelyst,gwent,runeterra	out	not in this game: answers on the enemy's turn	0.48	0.16	0.12	0.07	0.12	0.01	0.18	0.01	0.14	0.02	0.07	0.38	0.07	0.01	0.17	0.06	0.04	0.02	0.18	0.01	0.03
-blocking	22	inscryption,runeterra	out	not in this game: blocking	0.55	0.19	0.05	0.07	0.00	0.00	0.00	0.00	0.02	0.00	0.00	0.05	0.00	0.00	0.17	0.10	0.00	0.00	0.50	0.17	0.10
-cant_block_self	128	duelyst,runeterra	out	not in this game: blocking	0.13	0.10	0.02	0.02	0.01	0.00	0.02	0.01	0.01	0.03	0.07	0.14	0.07	0.04	0.67	0.16	0.00	0.02	0.08	0.02	0.00
-evasion	251	duelyst,inscryption,runeterra	out	not in this game: blocking	0.12	0.44	0.02	0.01	0.03	0.00	0.01	0.02	0.03	0.01	0.02	0.12	0.04	0.03	0.22	0.10	0.00	0.01	0.05	0.09	0.38
-direct_damage	578	duelyst,faeria,inscryption,into_the_breach,monster_train,runeterra,stormbound,sts1	out	not in this game: player health	0.05	0.13	0.46	0.01	0.10	0.06	0.02	0.01	0.01	0.02	0.02	0.06	0.00	0.01	0.08	0.19	0.00	0.02	0.03	0.19	0.11
+reactions	63	duelyst,gwent,runeterra	out	not in this game: answers on the enemy's turn	0.12	0.11	0.18	0.09	0.12	0.00	0.04	0.01	0.18	0.01	0.08	0.04	0.02	0.01	0.13	0.24	0.05	0.00	0.13	0.37	0.15
+spell_speed	375	runeterra	out	not in this game: answers on the enemy's turn	0.20	0.18	0.00	0.06	0.06	0.14	0.01	0.05	0.06	0.02	0.07	0.46	0.10	0.04	0.07	0.22	0.00	0.03	0.15	0.03	0.01
+trap_secret	75	duelyst,gwent,runeterra	out	not in this game: answers on the enemy's turn	0.19	0.16	0.12	0.07	0.12	0.01	0.18	0.01	0.14	0.02	0.07	0.38	0.07	0.01	0.17	0.06	0.04	0.02	0.18	0.01	0.03
+blocking	22	inscryption,runeterra	out	not in this game: blocking	0.52	0.19	0.05	0.07	0.00	0.00	0.00	0.00	0.02	0.00	0.00	0.05	0.00	0.00	0.17	0.10	0.00	0.00	0.50	0.17	0.10
+cant_block_self	128	duelyst,runeterra	out	not in this game: blocking	0.11	0.10	0.02	0.02	0.01	0.00	0.02	0.01	0.01	0.03	0.07	0.14	0.07	0.04	0.67	0.16	0.00	0.02	0.08	0.02	0.00
+evasion	251	duelyst,inscryption,runeterra	out	not in this game: blocking	0.10	0.44	0.02	0.01	0.03	0.00	0.01	0.02	0.03	0.01	0.02	0.12	0.04	0.03	0.22	0.10	0.00	0.01	0.05	0.09	0.38
+direct_damage	578	duelyst,faeria,inscryption,into_the_breach,monster_train,runeterra,stormbound,sts1	out	not in this game: player health	0.04	0.13	0.46	0.01	0.10	0.06	0.02	0.01	0.01	0.02	0.02	0.06	0.00	0.01	0.08	0.19	0.00	0.02	0.03	0.19	0.11
 life_payment	61	duelyst,faeria,gwent,into_the_breach,monster_train,runeterra,stormbound,sts1	out	not in this game: player health	0.07	0.08	0.06	0.05	0.10	0.01	0.02	0.00	0.02	0.04	0.03	0.09	0.02	0.00	0.19	0.19	0.00	0.00	0.07	0.18	0.08
-nexus_damage_condition	48	faeria,runeterra	out	not in this game: player health	0.14	0.65	0.01	0.00	0.00	0.00	0.00	0.02	0.05	0.02	0.61	0.13	0.02	0.02	0.16	0.01	0.00	0.02	0.06	0.54	0.66
-on_life_loss	52	faeria,runeterra	out	not in this game: player health	0.15	0.66	0.03	0.00	0.01	0.00	0.00	0.03	0.06	0.02	0.61	0.15	0.02	0.02	0.14	0.01	0.00	0.02	0.08	0.55	0.66
+nexus_damage_condition	48	faeria,runeterra	out	not in this game: player health	0.13	0.65	0.01	0.00	0.00	0.00	0.00	0.02	0.05	0.02	0.61	0.13	0.02	0.02	0.16	0.01	0.00	0.02	0.06	0.54	0.66
+on_life_loss	52	faeria,runeterra	out	not in this game: player health	0.14	0.66	0.03	0.00	0.01	0.00	0.00	0.03	0.06	0.02	0.61	0.15	0.02	0.02	0.14	0.01	0.00	0.02	0.08	0.55	0.66
 player_attack_gain	63	duelyst,monster_train,stormbound,sts1	out	not in this game: player health (Kaptain)	0.32	0.03	0.00	0.00	0.01	0.00	0.26	0.02	0.01	0.00	0.00	0.00	0.00	0.00	0.03	0.00	0.01	0.03	0.08	0.03	0.13
 player_block_armor	99	sts1	out	not in this game: player health (Kaptain)	0.00	0.01	0.00	0.00	0.02	0.06	0.23	0.00	0.01	0.05	0.03	0.10	0.06	0.02	0.00	0.00	0.00	0.00	0.00	0.00	0.00
 player_damage_reduction	20	duelyst,faeria,runeterra,sts1	out	not in this game: player health (Kaptain)	0.19	0.04	0.00	0.00	0.04	0.00	0.00	0.00	0.00	0.00	0.08	0.17	0.00	0.00	0.33	0.33	0.00	0.00	0.12	0.67	0.15
 player_damaged	32	duelyst,faeria,sts1	out	not in this game: player health (Kaptain)	0.26	0.02	0.04	0.00	0.00	0.03	0.13	0.00	0.02	0.13	0.00	0.12	0.02	0.02	0.15	0.11	0.00	0.04	0.00	0.30	0.22
 player_defence_gain	17	duelyst,stormbound,sts1	out	not in this game: player health (Kaptain)	0.42	0.33	0.00	0.00	0.33	0.03	0.00	0.00	0.00	0.00	0.00	0.17	0.00	0.00	0.00	0.00	0.00	0.00	0.42	0.33	0.50
-player_heal	105	duelyst,faeria,into_the_breach,monster_train,runeterra,sts1	out	not in this game: player health (Kaptain)	0.07	0.22	0.22	0.02	0.05	0.05	0.04	0.03	0.10	0.01	0.05	0.12	0.02	0.01	0.07	0.08	0.00	0.23	0.06	0.06	0.10
-player_lifesteal	62	duelyst,faeria,runeterra	out	not in this game: player health (Kaptain)	0.12	0.09	0.26	0.01	0.09	0.29	0.12	0.00	0.02	0.00	0.01	0.04	0.10	0.12	0.11	0.22	0.01	0.34	0.02	0.22	0.15
+player_heal	105	duelyst,faeria,into_the_breach,monster_train,runeterra,sts1	out	not in this game: player health (Kaptain)	0.05	0.22	0.22	0.02	0.05	0.05	0.04	0.03	0.10	0.01	0.05	0.12	0.02	0.01	0.07	0.08	0.00	0.23	0.06	0.06	0.10
+player_lifesteal	62	duelyst,faeria,runeterra	out	not in this game: player health (Kaptain)	0.04	0.09	0.26	0.01	0.09	0.29	0.12	0.00	0.02	0.00	0.01	0.04	0.10	0.12	0.11	0.22	0.01	0.34	0.02	0.22	0.15
 shop_gold	34	inscryption,monster_train,sts1	out	not in this game: shops	0.07	0.07	0.00	0.00	0.00	0.15	0.01	0.00	0.07	0.00	0.00	0.20	0.00	0.00	0.00	0.07	0.00	0.07	0.00	0.07	0.00
 max_mana_condition	17	marvel_snap,runeterra	out	not in this game: supply that grows by itself (Kaptain)	0.59	0.06	0.03	0.00	0.06	0.03	0.00	0.00	0.00	0.03	0.09	0.28	0.00	0.03	0.06	0.06	0.00	0.00	0.09	0.03	0.19
-tribal	792	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	out	not in this game: unit types	0.26	0.10	0.06	0.02	0.12	0.04	0.09	0.01	0.03	0.02	0.11	0.29	0.06	0.03	0.24	0.14	0.08	0.06	0.18	0.11	0.19
-type_grant	52	duelyst,gwent,runeterra	out	not in this game: unit types	0.70	0.23	0.03	0.00	0.11	0.00	0.01	0.00	0.03	0.04	0.19	0.06	0.02	0.08	0.30	0.09	0.05	0.05	0.26	0.16	0.11
+tribal	792	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	out	not in this game: unit types	0.25	0.10	0.06	0.02	0.12	0.04	0.09	0.01	0.03	0.02	0.11	0.29	0.06	0.03	0.24	0.14	0.08	0.06	0.18	0.11	0.19
+type_grant	52	duelyst,gwent,runeterra	out	not in this game: unit types	0.41	0.23	0.03	0.00	0.11	0.00	0.01	0.00	0.03	0.04	0.19	0.06	0.02	0.08	0.30	0.09	0.05	0.05	0.26	0.16	0.11
 coin_economy	21	gwent	out	not in this game: units have no abilities you press (Claude's)	0.24	0.00	0.10	0.10	0.29	0.10	0.05	0.00	0.10	1.00	0.05	0.05	0.00	0.00	0.29	0.57	0.05	0.00	0.24	0.05	0.24
-first_strike	114	monster_train,runeterra	out	ruled out by Kaptain: "strike first" is not a plan here	0.41	1.00	0.04	0.01	0.14	0.00	0.17	0.13	0.03	0.01	0.08	0.28	0.14	0.17	0.38	0.19	0.02	0.00	0.29	0.02	0.07
+first_strike	114	monster_train,runeterra	out	ruled out by Kaptain: "strike first" is not a plan here	0.40	1.00	0.04	0.01	0.14	0.00	0.17	0.13	0.03	0.01	0.08	0.28	0.14	0.17	0.38	0.19	0.02	0.00	0.29	0.02	0.07
 damage_over_time	101	gwent,into_the_breach,monster_train,stormbound,sts1	out	ruled out by Kaptain: a possibility for cards, not a concept a faction builds on	0.09	0.20	0.46	0.00	0.47	0.23	0.07	0.04	0.05	0.00	0.02	0.01	0.01	0.00	0.28	0.16	0.01	0.04	0.07	0.09	0.04
 stances	38	inscryption,runeterra,sts1	out	ruled out by Kaptain: a possibility for cards, not a concept a faction builds on	0.13	0.16	0.00	0.00	0.00	0.05	0.20	0.07	0.01	0.23	0.00	0.05	0.41	0.04	0.07	0.00	0.00	0.00	0.13	0.12	0.25
-transform	255	duelyst,faeria,gwent,inscryption,marvel_snap,runeterra,sts1	out	ruled out by Kaptain: a possibility for cards, not a concept a faction builds on	0.14	0.08	0.02	0.00	0.07	0.01	0.01	0.01	0.03	0.01	0.03	0.07	0.03	0.05	0.20	0.08	0.01	0.01	0.06	0.08	0.24
-countdown	133	duelyst,gwent,monster_train,runeterra	out	ruled out by Kaptain: countdowns very sparingly, on cards	0.47	0.10	0.07	0.05	0.15	0.00	0.03	0.01	0.03	0.04	0.14	0.11	0.09	0.14	0.37	0.34	0.05	0.04	0.23	0.15	0.10
+transform	255	duelyst,faeria,gwent,inscryption,marvel_snap,runeterra,sts1	out	ruled out by Kaptain: a possibility for cards, not a concept a faction builds on	0.06	0.08	0.02	0.00	0.07	0.01	0.01	0.01	0.03	0.01	0.03	0.07	0.03	0.05	0.20	0.08	0.01	0.01	0.06	0.08	0.24
+countdown	133	duelyst,gwent,monster_train,runeterra	out	ruled out by Kaptain: countdowns very sparingly, on cards	0.25	0.10	0.07	0.05	0.15	0.00	0.03	0.01	0.03	0.04	0.14	0.11	0.09	0.14	0.37	0.34	0.05	0.04	0.23	0.15	0.10
 random_ability	28	duelyst,inscryption,marvel_snap,runeterra,stormbound	out	ruled out by Kaptain: no randomness	0.09	0.04	0.00	0.00	0.00	0.00	0.02	0.02	0.00	0.00	0.01	0.00	0.00	0.00	0.46	0.01	0.00	0.00	0.06	0.05	0.31
-random_effect	522	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	out	ruled out by Kaptain: no randomness	0.13	0.04	0.07	0.01	0.05	0.03	0.03	0.01	0.08	0.01	0.24	0.52	0.07	0.08	0.22	0.15	0.00	0.00	0.07	0.10	0.19
+random_effect	522	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	out	ruled out by Kaptain: no randomness	0.10	0.04	0.07	0.01	0.05	0.03	0.03	0.01	0.08	0.01	0.24	0.52	0.07	0.08	0.22	0.15	0.00	0.00	0.07	0.10	0.19
 random_target	174	duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1	out	ruled out by Kaptain: no randomness	0.35	0.09	0.15	0.06	0.08	0.20	0.06	0.01	0.03	0.02	0.19	0.11	0.01	0.07	0.16	0.22	0.05	0.02	0.28	0.05	0.17

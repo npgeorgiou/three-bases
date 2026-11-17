@@ -15,7 +15,7 @@ bogles	Hexproof Auras (Bogles)	yes		Voltron on a unit the enemy can't target	imm
 counters	+1/+1 Counters	yes		units grow again and again, and the growth is doubled or spread	permanent_growth,stat_gain,stat_multiply,repeat_trigger		Claude
 infect	Infect / Toxic / Poison	no	it wins with poison counters on the player: no player life and no poison here				Claude
 extra_combats	Extra Combats	yes		units attack more than once, or again right away	multi_attack,attack_now,untap,extra_turn		Claude
-toughness	Defenders / Toughness Matters	yes		walls with high defence that hit with their defence	tank,defence_gain,variable_stats,stat_condition,taunt,counterattack		Claude
+toughness	Defenders / Toughness Matters	yes		walls with high defence that hit with their defence	tank,defence_gain,strikes_with_defence,taunt,counterattack		Claude
 mutate	Mutate	yes		units stacked onto one unit, which gets all their abilities	merge_attach,on_ally_play		Claude
 ninjutsu	Ninjutsu	no	it swaps attackers the enemy didn't block: no blocking here				Claude
 face_down	Face-down (Morph / Disguise)	no	the card flips into another one: Kaptain ruled out my units changing form (hidden units stay possible: stealth)				Claude

@@ -63,7 +63,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    player rows both concepts. Rows that can't tell: read, within the 500. A concept that only says what kind of record
    a card is (an "ability" record) is a library error and is removed. A rule of a game that no card text says
    (Runeterra: up to 3 unspent mana is kept as spell mana) is a record in its `game_rules.jsonl`, with its source, on
-   the cards it concerns. Then `links.py` is rebuilt (about 7 minutes, Kaptain's OK first).
+   the cards it concerns. Then `check_all.py` (about 14 minutes) and `links.py` (about 6) are rebuilt, Kaptain's OK first.
 2. **The usable concepts** (`work/concept_catch.py` -> `work/concepts.tsv`, `work/concepts.md`). Every concept with
    10+ real cards, with its card count (`card_count`) and its games, sorted into three kinds
    (`work/concept_verdicts.tsv`: kind and reason, each marked Kaptain's or Claude's; a concept not in it is usable):

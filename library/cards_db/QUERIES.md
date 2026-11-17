@@ -176,12 +176,12 @@ What "disable" (stop a unit acting) is built with, on the same cards (`ask.py al
 
 Mechanics that feed "units dying" payoffs, inside each game (`ask.py all fed death_trigger`):
 
-- destroy: duelyst 3172 pairs, e.g. Simulacra Obelysk -> Khanuum-ka; faeria 1015 pairs, e.g. Doomgate, Door to Oblivion -> Long-horned Yak; gwent 4622 pairs, e.g. Moreelse -> Purge; inscryption 466 pairs, e.g. Skel-e-latcher -> Pack Mule; into_the_breach 10 pairs, e.g. Bomb Dispenser -> Marked tile; marvel_snap 604 pairs, e.g. Gambit -> Marrow; monster_train 348 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 22558 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 264 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- sacrifice: duelyst 1521 pairs, e.g. Simulacra Obelysk -> Khanuum-ka; faeria 387 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; gwent 2518 pairs, e.g. Moreelse -> Purge; inscryption 54 pairs, e.g. Necromancer -> Explode Bot; into_the_breach 6 pairs, e.g. Arachnoid Injector -> Marked tile; marvel_snap 375 pairs, e.g. Tombstone -> Marrow; monster_train 305 pairs, e.g. Primordium -> Devourer of Death; runeterra 8133 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Spare Dragonling
-- self_destruct: duelyst 1189 pairs, e.g. Star's Fury -> Khanuum-ka; faeria 653 pairs, e.g. Doomgate, Door to Oblivion -> Long-horned Yak; gwent 1389 pairs, e.g. Salamandra Hideout -> Call of the Depths; inscryption 431 pairs, e.g. Skel-e-latcher -> Pack Mule; into_the_breach 8 pairs, e.g. Bomb Dispenser -> Marked tile; marvel_snap 60 pairs, e.g. Ice Cube -> Marrow; monster_train 296 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 19820 pairs, e.g. Eternal Dancers -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
-- friendly_fire: duelyst 1153 pairs, e.g. Necrotic Sphere -> Rage Reactor; faeria 160 pairs, e.g. Doomsday -> Ruunin, the Relentless; gwent 3084 pairs, e.g. Regis -> Call of the Depths; inscryption 186 pairs, e.g. Hammer -> Pack Mule; into_the_breach 58 pairs, e.g. Thermal Discharger -> Marked tile; marvel_snap 90 pairs, e.g. Murderworld -> Marrow; monster_train 34 pairs, e.g. Inferno -> Little Fade; runeterra 7878 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 238 pairs, e.g. Broken Earth Drakes -> Spare Dragonling
-- board_wipe: duelyst 330 pairs, e.g. Necrotic Sphere -> Rage Reactor; faeria 97 pairs, e.g. Doomsday -> Ruunin, the Relentless; marvel_snap 105 pairs, e.g. Murderworld -> Marrow; monster_train 16 pairs, e.g. Shardtail Queen -> Little Fade; runeterra 1370 pairs, e.g. Mordekaiser -> Bladepierced Revenant; stormbound 22 pairs, e.g. Wetland Deceivers -> Crimson Sentry
-- cheat_death: duelyst 302 pairs, e.g. Gor -> Fog; faeria 64 pairs, e.g. Aryana, Soul of Gagana -> Kobold Smuggler; gwent 525 pairs, e.g. The Eternal Eclipse -> Call of the Depths; marvel_snap 70 pairs, e.g. Wolverine -> Marrow; runeterra 1498 pairs, e.g. Anivia's Harsh Winds -> Shackled Ghasts; stormbound 38 pairs, e.g. Diehards -> Crimson Sentry
+- destroy: duelyst 3172 pairs, e.g. Windstorm Obelysk -> Khanuum-ka; faeria 1015 pairs, e.g. Krog's Dinner -> Long-horned Yak; gwent 4622 pairs, e.g. Moreelse -> Purge; inscryption 466 pairs, e.g. Skel-e-latcher -> Pack Mule; into_the_breach 10 pairs, e.g. Bombling Mech -> Ice Tile; marvel_snap 604 pairs, e.g. Gambit -> Muramasa Shard; monster_train 348 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 22558 pairs, e.g. Shark Chariot -> Bladepierced Revenant; stormbound 264 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- sacrifice: duelyst 1521 pairs, e.g. Windstorm Obelysk -> Khanuum-ka; faeria 387 pairs, e.g. Rakoan Cannoneer -> Rakoan Shield Mates; gwent 2518 pairs, e.g. Moreelse -> Purge; inscryption 54 pairs, e.g. Necromancer -> Librarian; into_the_breach 6 pairs, e.g. Arachnoid Injector -> Ice Tile; marvel_snap 375 pairs, e.g. Annihilus -> Air-Walker; monster_train 305 pairs, e.g. Primordium -> Devourer of Death; runeterra 8133 pairs, e.g. Ekko (level 2) -> Bladepierced Revenant; stormbound 140 pairs, e.g. Yowling Weavers -> Dreadful Keepers
+- self_destruct: duelyst 1189 pairs, e.g. Wind Dervish -> Khanuum-ka; faeria 653 pairs, e.g. Krog's Dinner -> Long-horned Yak; gwent 1389 pairs, e.g. Aen Elle Conqueror -> Call of the Depths; inscryption 431 pairs, e.g. Skel-e-latcher -> Pack Mule; into_the_breach 8 pairs, e.g. Bombling Mech -> Ice Tile; marvel_snap 60 pairs, e.g. Widow's Kiss -> Air-Walker; monster_train 296 pairs, e.g. Bogdeep Cocoon -> Echowright; runeterra 19820 pairs, e.g. Shark Chariot -> Bladepierced Revenant; stormbound 20 pairs, e.g. Powder Tower -> Marked as Prey
+- friendly_fire: duelyst 1153 pairs, e.g. Necrotic Sphere -> Rage Reactor; faeria 160 pairs, e.g. Doomsday -> Ruunin, the Relentless; gwent 3084 pairs, e.g. Harald Houndsnout -> Call of the Depths; inscryption 186 pairs, e.g. Bomb Latcher -> Pack Mule; into_the_breach 58 pairs, e.g. Thermal Discharger -> Ice Tile; marvel_snap 90 pairs, e.g. Murderworld -> Air-Walker; monster_train 34 pairs, e.g. Shardtail Queen -> Little Fade; runeterra 7878 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 238 pairs, e.g. Broken Earth Drakes -> Dreadful Keepers
+- board_wipe: duelyst 330 pairs, e.g. Necrotic Sphere -> Rage Reactor; faeria 97 pairs, e.g. Doomsday -> Ruunin, the Relentless; marvel_snap 105 pairs, e.g. Murderworld -> Air-Walker; monster_train 16 pairs, e.g. Shardtail Queen -> Little Fade; runeterra 1370 pairs, e.g. Mordekaiser (level 2) -> Bladepierced Revenant; stormbound 22 pairs, e.g. Avian Stalkers -> Marked as Prey
+- cheat_death: duelyst 302 pairs, e.g. Gor -> Fog; faeria 64 pairs, e.g. Aryana, Soul of Gagana -> Kobold Smuggler; gwent 525 pairs, e.g. The Eternal Eclipse -> Call of the Depths; marvel_snap 70 pairs, e.g. Deadpool -> Air-Walker; runeterra 1498 pairs, e.g. Anivia -> Bladepierced Revenant; stormbound 38 pairs, e.g. Diehards -> Snowmasons
 
 Families of three mechanics that feed each other, starting from "summon" (`ask.py all chains summon`):
 
@@ -206,7 +206,7 @@ Supports your units (stats, protection, combat keywords): Lucian, Senna, Senna, 
 Card flow (draw, create, choose): Glimpse Beyond, Lonely Chimeslime, Senna, Spirit Leech.
 Puts extra units into play: Cursed Keeper, Hapless Aristocrat, The Undying.
 Units that support cards can target: 9 (Cursed Keeper, Hapless Aristocrat, Lonely Chimeslime, Lucian, Ravenous Butcher, Senna, Senna, Sentinel of Light, Spirit Leech, The Undying).
-Key cards (in most of the plan): Senna, The Ruination, Spirit Leech, Crumble, Ravenous Butcher.
+Key cards (in most of the plan): Senna, Spirit Leech, The Ruination, Crumble, Ravenous Butcher.
 Weak spots: none found.
 ```
 
@@ -251,19 +251,19 @@ select distinct card from flat_do where act='copy_keywords'
 - duelyst Boss: on_enemy_enter (4), merge_attach (4), multi_attack (6), turn_start (16), area_templates (6)
 - duelyst Tutorial: tank (4), on_play (4)
 - faeria Neutral (Human): death_count (4), cost_set (6), damage_reduction (8), shield (7), immobilize (16)
-- faeria Blue: cant_move (6), control_reward (4), on_harvest (5), stat_multiply (6), turn_end (10)
+- faeria Blue: cant_move (6), control_reward (4), on_harvest (5), turn_end (10), transform (4)
 - faeria Green: random_target (5), taunt (12), immobilize (12), random_effect (12), defence_gain (35)
 - faeria Red: on_fight (10), aoe_damage (13), ranged (5), direct_damage (11), damage (32)
 - faeria Yellow: temporary_buff (4), life_payment (4), sacrifice (6), on_attack (14), haste (6)
 - faeria Pandora: modal_choice (5), removal (4), aoe_damage (6), destroy (7), zone_control (7)
 - gwent Neutral: play_timing_condition (5), cost_condition (4), draw (20), board_wipe (4), removal (29)
-- gwent Monster: targeting_rules (4), sacrifice (29), cheat_death (4), death_trigger (27), row_effects (15)
+- gwent Monster: targeting_rules (4), stat_multiply (29), sacrifice (29), cheat_death (4), death_trigger (27)
 - gwent Skellige: condition_count (17), on_discard (4), condition_life (38), discard (9), heal (15)
 - gwent Northern Realms: shield (16), haste (48), spell_power (9), buff (4), stat_condition (19)
 - gwent Syndicate: life_payment (6), coin_economy (21), kicker (10), resource_banking (11), resource_gain (100)
 - gwent Nilfgaard: junk_cards (6), donate (28), steal (9), swap (5), silence (12)
 - gwent Scoiatael: trap_secret (9), variety_payoff (17), regeneration (17), reactions (4), in_hand_buff (14)
-- inscryption Beast: free_play (4), multi_attack (8), stealth (8), immunity (6), variable_stats (8)
+- inscryption Beast: free_play (4), multi_attack (8), stealth (8), immunity (6), tank (18)
 - inscryption Technology: stances (8), territory_trigger (4), high_cost (15), aoe_damage (4), link_formation (10)
 - inscryption Magick: aura (6), defence_gain (5), draw (4), self_destruct (4), card_presence_condition (5)
 - into_the_breach Prime: tank (9), lanes (4), forced_movement (15), friendly_fire (10), aoe_damage (10)
@@ -280,7 +280,7 @@ select distinct card from flat_do where act='copy_keywords'
 - monster_train Clanless: direct_damage (5), life_payment (5), banish (10), turn_end (8), cant_attack (4)
 - runeterra Ionia: bounce_enemy (11), leave_trigger (10), spells_played_condition (12), silence (17), max_mana_condition (8)
 - runeterra Noxus: combat_damage_threshold (9), on_discard (10), drawback (7), condition_life (9), friendly_fire (22)
-- runeterra Demacia: extra_turn (23), multi_attack (19), damage_reduction (38), spell_power (8), forced_attack (34)
+- runeterra Demacia: strikes_with_defence (9), extra_turn (23), multi_attack (19), damage_reduction (38), spell_power (8)
 - runeterra Piltover & Zaun: junk_cards (13), on_draw (18), recycle (12), cost_condition (6), on_spell (27)
 - runeterra Freljord: attack_zero (21), regeneration (16), max_mana_condition (7), cost_condition (7), friendly_fire (22)
 - runeterra Shadow Isles: death_count (23), revive (20), sacrifice (48), other_death_trigger (25), self_mill (7)
