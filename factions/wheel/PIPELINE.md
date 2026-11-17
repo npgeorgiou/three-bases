@@ -25,9 +25,9 @@ is written in that step's chat, from the rules of the step, and its line here is
   are out. `work/concepts.md`: the same by kind in plain words, for Kaptain.
 
 ## Step 3. The archetypes
-- Claude -> `factions/wheel/archetypes.tsv`: one line per archetype of `archetypes_kaptain.txt` (key, its name in
-  Kaptain's list, can it exist here, the reason if not, what it is in this game, its needs (need = the concepts that
-  can meet it; `radius:<key>` = a radius measured from the units' numbers), the radii of each need).
+- Claude -> `factions/wheel/archetypes.tsv`: one line per part of each archetype of `archetypes_kaptain.txt`
+  (archetype key, its name in Kaptain's list, can it exist here, the reason if not, what it is in this game, the part
+  in plain words, engine or brick, the usable concepts that can do it).
 
 ## Step 4. The radii and how they work together
 - `work/radii.tsv`: every usable concept, the radius it goes on (key and name), the part of it that counts there, and
@@ -48,23 +48,24 @@ is written in that step's chat, from the rules of the step, and its line here is
   decks link: `cards`, `decks`, `games`, `level`, `rare`, `makes`, the top three link texts. `python3 apart.py` gives
   the pairs real factions keep apart.
 
-## Step 6. The 20 groups
-- `python3 ../../factions/wheel/work/groups.py --write` (seconds; scipy's exact solver over every group of 3-6
-  directions) -> `factions/wheel/work/groups.tsv` (group, pillars, others, strength). Without `--write` it prints the
-  20, the directions in no group and how many groups each direction is in. `python3 tools/wheel_table_check.py` (to
-  rewrite) checks the rules of the step from the files.
+## Step 6. The archetype map
+- `python3 ../../factions/wheel/work/archetype_map.py` (to write) -> `factions/wheel/work/archetype_map.tsv` (archetype,
+  concept a, concept b, `cards`, `games`, `level`, top link text, one real card pair, from `wheel/concept_links.tsv`)
+  and `factions/wheel-archetypes.html` (the nodes and edges, one archetype or all).
 
-## Step 7. Each faction's list
+## Step 7. The 20 factions and their lists
+- `python3 ../../factions/wheel/work/factions.py` (to write, after Kaptain agrees its rules) ->
+  `factions/wheel/work/factions.tsv` (faction letter, its archetypes, their concepts, its mechanics).
 - `python3 ../../factions/wheel/work/concept_list.py` (to write) -> `factions/wheel/work/lists/<letter>.tsv`: per
-  faction every concept with 10+ cards and its score ((real + 1) / (chance + 1) links with the group per game,
-  averaged over the games where both appear), its `level` and its games, sorted by score.
+  faction every concept with 10+ cards and its score ((real + 1) / (chance + 1) links with the concepts of its
+  archetypes per game, averaged over the games where both appear), its `level` and its games, sorted by score.
 
 ## Step 8. Theme, then tools
 - Claude -> `factions/wheel/themes.tsv` (faction, theme) and `factions/wheel/tools.tsv` (faction, tool, mechanic, the
   tools it feeds, the cell-by-cell line, source: a library card or CLAUDE, NEW RULE).
 
 ## Step 9. Combos on this board
-- A script (to write) counts the joins between every two groups (step 5 numbers); Claude rates the pairs on the board
+- A script (to write) counts the joins between the concepts of every two factions' archetypes (step 5 numbers); Claude rates the pairs on the board
   -> `factions/wheel/combos.tsv` (pair, STRONG/OK/WEAK/NONE/AGAINST, how it plays, the numbers, a test column).
 
 ## Step 10. The seven answers and Stop 1

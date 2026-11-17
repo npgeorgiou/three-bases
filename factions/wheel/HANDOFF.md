@@ -8,31 +8,31 @@ One chat does one step; at its end, mark the step done here and say what it left
 |---|---|---|
 | 1. Fix the library's concepts | done | concepts split by whom a row acts on; "Skill" removed; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
 | 2. The usable concepts | done | `work/concepts.tsv`, `work/concepts.md`: 117 usable, 44 helpers, 35 out |
-| 3. The archetypes | done | `archetypes.tsv`: 71 archetypes, 47 can exist, each with its needs (the concepts that can meet each, and their radii); Formidable fixed in the library (strikes_with_defence, stat_fixed) |
+| 3. The archetypes | **next** | `archetypes_kaptain.txt` cleaned (general ways to play only); to write: `archetypes.tsv`, each archetype's parts (engine or brick) and the concepts that can do each, for Kaptain's OK |
 | 4. The radii and how they work together | done | `work/radii.tsv` (every usable concept on its radius, agreed with Kaptain); `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` from concept instances |
 | 5. The links between concepts | done | `library/cards_db/wheel/concept_links.tsv` (`mechanics_wheel.py links --concepts`, about a minute) |
-| 6. The 20 groups | **next**: show Kaptain each group with its top 5 concepts, for his OK | `work/groups.tsv` from `work/groups.py` |
-| 7. Each faction's list | to do | |
+| 6. The archetype map | to do | |
+| 7. The 20 factions and their lists | to do | |
 | 8. Theme, then tools | to do | |
 | 9. Combos on this board | to do | |
 | 10. The seven answers, Stop 1 | to do | |
 
 ## What the next steps find in the files
-- How the wheel works: a faction is what it is strong at, in directions (the 23 radii of `work/radii.tsv`: "kills
-  outright", "spends them", "reuses cards"...). Concepts are how its cards do it: triggers and conditions ("when one of
-  my units dies") sit under the direction of what they react to. So the 20 groups are made from directions and the
-  card links between them (step 6), and each faction's concepts come from its list (step 7).
-- Step 6: `work/groups.tsv` holds 20 groups of directions, optimal, from 5268 candidates; 18 have 3 directions, 2 have
-  4. "Rewards playing spells" is in none: real cards join it to "picks cards" only. "Picks cards" and "more cards in
-  hand" are in one group each (joined to 3 others only). Next: write `work/concept_list.py` (step 7), then show Kaptain
-  each group in plain words with the 5 concepts of its list that link most strongly with it (e.g. which group gets
-  stealing, which copying), and wait for his OK.
-- `archetypes.tsv` (step 3) is used by no later step; Kaptain decides whether it stays.
+- How the wheel works: a faction is what it is strong at. It plays one or, better, more archetypes (ways to play from
+  Kaptain's list). Each archetype is made of parts, each a set of alternative concepts: an engine part works through
+  links with another part ("my units die" -> "my units gain when an ally dies"), a brick works alone and links to
+  nothing (disruption). The 23 radii of `work/radii.tsv` stay as the wheel picture: they show each faction's shape and
+  check that the 20 differ.
+- Step 3: write `archetypes.tsv` from the words of each line of `archetypes_kaptain.txt`; show Kaptain each archetype
+  with its parts in plain words and wait for his OK.
+- Step 7's rules are agreed with Kaptain before the script is written. Claude's suggestion, not agreed: two archetypes
+  share a faction when their concepts overlap or link strongly; 2-4 archetypes per faction; every archetype in at least
+  one faction; no two factions with the same archetypes; one exact solver for the 20.
 - Counts whose rows don't say what they count are counted nowhere: 200 instances of "grows with what happened" and 36
   of "counts and thresholds" (`axes.py` prints them). Most are counts of enemy units or of a keyword the rows don't name.
 - `tools/wheel_check.js` (this game's factions on the wheel) counts whole cards, not concept instances: before step 8
   uses it, it counts the same way as `axes.py`.
-- `tools/wheel_table_check.py` and `work/make_stop1.py` are written for the groups when step 6 and step 10 need them.
+- `tools/wheel_table_check.py` and `work/make_stop1.py` are rewritten for the factions when step 7 and step 10 need them.
 
 ## The numbers (library/cards_db)
 - `links.sqlite` is rebuilt only after `network.py` or `cards.sqlite` changed: `PYTHONHASHSEED=0 python3 links.py`
@@ -53,22 +53,26 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
   Pike, Ranged), strikes and fixed damage, the hand and the discard pile, Immobile.
 - Not in the game: player health, answers on the enemy's turn, supply that grows by itself, unit types, who acts first
   (random in round 1, then alternating), attacked units hitting back (only Riposte), placing at round end.
-- The wheel is general; step 8 turns each faction's group into these own things, from scratch.
+- The wheel is general; step 8 turns each faction's archetypes into these own things, from scratch.
 - Every game counts the same in every number, games with no factions (Marvel Snap) too.
-- The 20 groups are made from the directions and the card links between them; triggers and conditions are how cards
-  work, not what a faction is; real factions inspire, they are never copied (17 Nov 2026).
+- Factions are made by script to play one or, better, more archetypes. Each archetype is a group of engines and
+  bricks and can be played using different tools (concepts). A map of nodes (each node a concept) shows each
+  archetype's concepts with the links between them and the strengths we know. Only general archetypes; any specific to
+  one game (planeswalkers) is off the list. Triggers and conditions are how cards work, not what a faction is; real
+  factions inspire, they are never copied (17 Nov 2026).
+- Real factions' shapes vary inside each game: the wheel is lax about a faction's shape (17 Nov 2026).
 - Interactions with the player (heal, Block, strength on the player; the player hurt) stay off the radii: no player
   health here. They stay in the library as player_<concept>.
 - Damage over time and my units changing form are possibilities for cards, not concepts a faction builds on.
 - An all-Immobile faction is allowed.
 - "Strike first" is not a plan here. "Ping" is a library word: say "small hits". One Egg in the
   whole wheel: look-alikes are compared by what the card does.
-- A faction's 100 cards use its list a lot (every concept of the library, by how strongly it links with the group):
-  the group is its character (what it is strongest at, what its tools grow from), not all it may use.
+- A faction's 100 cards use its list a lot (every concept of the library, by how strongly it links with the concepts
+  of its archetypes): its archetypes are its character (what it is strongest at, what its tools grow from), not all it may use.
 - A faction is built from 2-4 tools that feed each other, played out cell by cell. The tools are the backbone, not all
   100 cards: 3-5 ways to play are built around them, as many as the closest real factions show. One idea is never the
-  whole faction. The theme is picked after the group, before the tools; a tool that fits the theme but grows from no
-  mechanic of the group is dropped.
+  whole faction. The theme is picked after the archetypes, before the tools; a tool that fits the theme but grows from no
+  mechanic of its archetypes is dropped.
 - Each faction answers seven questions, one line each: how it wins, how it removes the front unit, how it MAINLY
   removes back-row units, how it MAINLY acts between lanes, how it holds a base, its best Place effect, its blind spot.
 - Stop 1 pages: juicy and easy to read; one line per answer; one line per partner faction saying HOW the combo plays.
