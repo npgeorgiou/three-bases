@@ -28,6 +28,7 @@ is written in that step's chat, from the rules of the step, and its line here is
 - Claude -> `factions/wheel/archetypes.tsv`: one line per part of each archetype of `archetypes_kaptain.txt` that
   can exist here (archetype key, its name in Kaptain's list, what it is in this game, the part
   in plain words, engine or brick, the usable concepts that can do it).
+- `python3 work/archetypes_plain.py` -> `factions/wheel/archetypes.md`: the same in plain words, for Kaptain's OK.
 
 ## Step 4. The radii and how they work together
 - `work/radii.tsv`: every usable concept, the radius it goes on (key and name), the part of it that counts there, and

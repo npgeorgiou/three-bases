@@ -2,6 +2,7 @@ THE WHEEL'S FILES (factions/START_DESIGN-1-wheel.md has the steps; HANDOFF.md sa
 HANDOFF.md      where the wheel stands, step by step, and Kaptain's standing decisions
 PIPELINE.md     the commands of every step and what each makes
 archetypes_kaptain.txt  Kaptain's list of archetypes (the source of step 3)
+archetypes.md   archetypes.tsv in plain words, for Kaptain (work/archetypes_plain.py)
 archetypes.tsv  the archetypes that can exist in this game: their parts (engine or brick) and the concepts that can do each (step 3)
 work/radii.tsv  every usable concept and the radius it goes on, with the part of it that counts there (step 4)
 work/           suspects.tsv, suspect_verdicts.tsv, concept_games.py (-> concept_games.tsv, --all -> concept_games_all.tsv)
