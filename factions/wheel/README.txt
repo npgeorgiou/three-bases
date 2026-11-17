@@ -1,5 +1,6 @@
 THE WHEEL'S FILES (factions/START_DESIGN-1-wheel.md has the steps; HANDOFF.md says which step is next)
 HANDOFF.md      where the wheel stands, step by step, and Kaptain's standing decisions
+RECHECK.md      the recheck of steps 3 and 6: what was found, its stages and their state
 PIPELINE.md     the commands of every step and what each makes
 archetypes_kaptain.txt  Kaptain's list of archetypes (the source of step 3)
 archetypes.md   archetypes.tsv in plain words, for Kaptain (work/archetypes_plain.py)
