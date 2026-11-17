@@ -89,7 +89,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    **Kaptain agrees the archetypes.**
 4. **The radii and how they work together.** Every usable concept is put on exactly one radius (`axes.SPOKES`; "deal damage" by card type, as in "The words"); a concept goes only on a radius whose name says what
    the concept does (copying a unit is no draw); how often real cards link two concepts decides only between radii that
-   fit; each
+   fit; a trigger or a condition goes on the radius of the thing it reacts to ("when a unit dies" on
+   "spends them"; a count by what it counts, from its rows: "if 3 allies died" on "spends them"); each
    archetype's concepts go on that archetype's radii ("moving my units" belongs to "position and combos"). **Kaptain
    agrees the concepts on each radius**, and every later move. Then `axes.py` measures the 43 real factions: a
    faction's value on a radius = the share of its concept instances on that radius, divided by its game's average
