@@ -81,11 +81,14 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
      grows by itself) or Kaptain ruled it out (randomness, my units changing form, countdowns).
    A parent in the concept tree keeps only the cards none of its children carry, so no effect counts twice.
    `work/concepts.md` shows the kinds in plain words for Kaptain.
-3. **The archetypes** (`wheel/archetypes_kaptain.txt` -> `wheel/archetypes.tsv`). For every archetype of Kaptain's
-   list: whether it can exist in this game (Three Bases has no lands, no player life, no poison, no planeswalkers, no
-   multiplayer, no answers on the enemy's turn: the reason when it can't); for each one that can, what it is in this
-   game and its parts, read from the words of its line: each part in plain words, engine or brick, with every usable
-   concept (step 2) that can do it. Claude's, marked. Each concept is checked against its definition in
+3. **The archetypes** (`wheel/archetypes_kaptain.txt` -> `wheel/archetypes.tsv`). Only the archetypes of Kaptain's
+   list that can exist in this game go in (Three Bases has no lands, no player life, no poison, no planeswalkers, no
+   multiplayer, no unit types, no randomness, no answers on the enemy's turn); for each, what it is in this game and its
+   parts, read from the words of its line and from how real games play it: each part in plain words, engine or brick,
+   with every usable concept (step 2) that can do it. A part is never left to "the units' own numbers": cheap, big or
+   strong units are made by concepts too (cards cost less, cost matters, stats equal to a count). For each engine part,
+   `wheel/concept_links.tsv` shows which concepts real cards link with the other part's; those that fit the part by
+   meaning go in. Claude's, marked. Each concept is checked against its definition in
    `library/concept_tree.txt`; before saying no concept fits, search `vocab.tsv` keywords by meaning (Runeterra's
    Formidable is "strikes with its defence"): a keyword on a loose concept is a library error, fixed as
    `START_DATABASE.md` says. A part with no concept is shown to Kaptain, never filled by guessing.

@@ -25,8 +25,8 @@ is written in that step's chat, from the rules of the step, and its line here is
   are out. `work/concepts.md`: the same by kind in plain words, for Kaptain.
 
 ## Step 3. The archetypes
-- Claude -> `factions/wheel/archetypes.tsv`: one line per part of each archetype of `archetypes_kaptain.txt`
-  (archetype key, its name in Kaptain's list, can it exist here, the reason if not, what it is in this game, the part
+- Claude -> `factions/wheel/archetypes.tsv`: one line per part of each archetype of `archetypes_kaptain.txt` that
+  can exist here (archetype key, its name in Kaptain's list, what it is in this game, the part
   in plain words, engine or brick, the usable concepts that can do it).
 
 ## Step 4. The radii and how they work together

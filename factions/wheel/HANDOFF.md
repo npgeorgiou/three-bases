@@ -8,7 +8,7 @@ One chat does one step; at its end, mark the step done here and say what it left
 |---|---|---|
 | 1. Fix the library's concepts | done | concepts split by whom a row acts on; "Skill" removed; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
 | 2. The usable concepts | done | `work/concepts.tsv`, `work/concepts.md`: 117 usable, 44 helpers, 35 out |
-| 3. The archetypes | **next** | `archetypes_kaptain.txt` cleaned (general ways to play only); to write: `archetypes.tsv`, each archetype's parts (engine or brick) and the concepts that can do each, for Kaptain's OK |
+| 3. The archetypes | **next: Kaptain's OK** | `archetypes.tsv`: the 38 archetypes that can exist here, 91 parts, engine or brick, every usable concept in at least one part |
 | 4. The radii and how they work together | done | `work/radii.tsv` (every usable concept on its radius, agreed with Kaptain); `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` from concept instances |
 | 5. The links between concepts | done | `library/cards_db/wheel/concept_links.tsv` (`mechanics_wheel.py links --concepts`, about a minute) |
 | 6. The archetype map | to do | |
