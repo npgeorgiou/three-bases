@@ -69,7 +69,7 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
 3. **Its group and blind spots** (taken from the wheel). Its group of concepts: 2 pillars (no other faction builds on
    them) and 2-4 others (in at most 3 factions). The group is its character, not all its cards use: its list from the
    wheel (`factions/wheel/work/lists/<letter>.tsv`, every usable concept and helper by fit, with its links to the group)
-   is open to its cards (how often a concept outside the group: START_DESIGN-2, "How cards fit together"); the
+   is used a lot by its cards, to serve the group (START_DESIGN-2, "How cards fit together"); the
    triggers and helpers (when played, round end, when a card is drawn) to any card. Its blind spot (step 2.7) plus any other things the wheel says it never has; its cards never make up for them,
    it plays around them. A blind spot is never one of the two things every faction needs (hold dots, remove enemies),
    only one way of doing them: "no kill spells" is a blind spot, "no removal" is not.

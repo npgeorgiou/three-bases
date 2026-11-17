@@ -110,11 +110,13 @@ More text: `summary/09-card-design-rules.txt`
 - Tools (the wheel's step 7): 2-4 new kinds of things or rules, each from one mechanic of the group, feeding each
   other; many cards carry them, the rest of the faction's cards build the ways to play around them.
 - The group (the wheel's step 6): 2 pillars only this faction builds on, and 2-4 other concepts, each in at most 3
-  factions; its mechanics are the links between them, each on several cards. Any card may also carry a one-off from
-  any concept of the library: a faction far from bringing back may have ONE unit that comes back. One-offs are not
-  tracked on the wheel and keep cards from being unimaginative.
-- Strong concepts (copying, deck search, draw, card creation, forced movement, bringing back, stealing) follow the
-  same rule: a pillar of 1 faction, in the group of at most 3, elsewhere one-offs only.
+  factions; its mechanics are the links between them, each on several cards. The faction's list (every usable concept
+  and helper, strongest links to the group first) is used A LOT, by most cards: a concept from it makes the group's
+  concepts possible, starts them or makes them stronger (Kaptain). Example (Claude's): a faction built on units dying
+  has units that come back, so more units can die. The list is not tracked on the wheel; without it cards are poorly
+  designed.
+- Strong concepts (copying, deck search, draw, card creation, forced movement, bringing back, stealing): a pillar of 1
+  faction, in the group of at most 3; elsewhere only from the list, to serve the group.
 - How much it touches the enemy: a disruptive faction has many cards that act on enemy units (push, mark, punish); a
   straightforward one has fewer.
 

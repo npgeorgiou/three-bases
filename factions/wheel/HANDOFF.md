@@ -19,13 +19,12 @@ One chat does one step; at its end, mark the step done here.
 For step 6: some kinds of play (`archetypes.tsv`) name concepts that are no library concept with 10+ cards: the
 starred radius groups countboard*, kill*, weaken*, spelldmg*, position*, and polymorph, piercing, cross_lane.
 
-## Open for Kaptain (ask before step 6, one at a time)
-1. START_DESIGN-2 "How cards fit together" lets a concept outside the group be only a one-off ("ONE unit that comes
-   back"); does that still hold now that the faction's list is open to its cards?
+## Open for Kaptain (asked 17 Nov 2026, all at once)
+1. Spell mana: how to record Runeterra's "up to 3 unspent mana is kept for spells" (source: Riot support, "Let's Talk
+   About Mana"). Game rules today are rows copied onto every card of a kind, which fits no player-wide rule.
 2. The 26 kind-of-play concepts with under a quarter of their cards on that kind's radii (`shapes.py` prints them).
-3. Claude's kinds in `work/concept_verdicts.tsv` (those not marked Kaptain) are shown to Kaptain with `work/concepts.md`.
-- The library's concept for supply gained is base_resource_gain (usable). Leftover supply saved is resource_banking (a
-  helper): only Gwent's cards carry it; Runeterra's "unspent mana becomes spell mana" is no record in its game rules.
+3. Claude's kinds in `work/concept_verdicts.tsv` (those not marked Kaptain), shown with `work/concepts.md`.
+4. Step 5 joins rare pairs by "3+ real pairs at 3+ times chance", a raw count.
 
 ## The numbers (library/cards_db)
 - `links.sqlite` is rebuilt only after `network.py` or `cards.sqlite` changed: `PYTHONHASHSEED=0 python3 links.py`
