@@ -10,25 +10,25 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 2. The usable concepts | done | `work/concepts.tsv`, `work/concepts.md`: 117 usable, 44 helpers, 35 out |
 | 3. The archetypes | done | `archetypes.tsv`: 71 archetypes, 47 can exist, each with its needs (the concepts that can meet each, and their radii); Formidable fixed in the library (strikes_with_defence, stat_fixed) |
 | 4. The radii and how they work together | done | `work/radii.tsv` (every usable concept on its radius, agreed with Kaptain); `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` from concept instances |
-| 5. The 20 shapes | **next**: show Kaptain the 20 shapes for his OK | `work/shapes.tsv` (inspired by real factions, not copied; every shape fits 2+ archetypes) |
-| 6. The links between concepts | to do | |
-| 7. The 20 groups and each faction's list | to do | |
+| 5. The links between concepts | done | `library/cards_db/wheel/concept_links.tsv` (`mechanics_wheel.py links --concepts`, about a minute) |
+| 6. The 20 groups | **next**: settle how the solver places the standard concepts, then show Kaptain the 20 | `work/groups.py` (exact solver, scipy); first run below |
+| 7. Each faction's list | to do | |
 | 8. Theme, then tools | to do | |
 | 9. Combos on this board | to do | |
 | 10. The seven answers, Stop 1 | to do | |
 
 ## What the next steps find in the files
-- Step 5: `shapes.py` gives 20 shapes from 1661 candidates with no rule missed, each fitting 2-12 archetypes; 7
-  archetypes fit no shape (combo, prison, reanimator, storm, cheat, discard_enemy, turbo_fog). Strength is in 1 shape
-  and defence in none: only Inscryption Beast is strong at strength, no real faction at defence. Show Kaptain
-  each shape in plain words (its radii by name and value, the archetypes it fits, the real factions that inspired it) and wait for his OK.
+- Step 6: `groups.py` gives 20 groups, optimal, in seconds. 99 of 117 usable concepts are in a group, but 8 of the 56
+  standard concepts (in 7+ of the 10 games) are in none: summon, cost_reduction, cost_set, on_ally_play, on_enemy_enter,
+  damage_reduction, card_presence_condition, variable_stats; and groups S and T are weak (strength 0.89, 0.54).
+  Cause: a link's strength is how much more often than chance real cards link two concepts, and a concept on most
+  cards is close to chance with everything. Kaptain decides how standard concepts are placed before the 20 are shown.
 - Counts whose rows don't say what they count are counted nowhere: 200 instances of "grows with what happened" and 36
   of "counts and thresholds" (`axes.py` prints them). Most are counts of enemy units or of a keyword the rows don't name.
 - `tools/wheel_check.js` (this game's factions on the wheel) still counts whole cards, not concept instances: before
   step 8 uses it, it counts the same way as `axes.py`.
-- Step 6: `mechanics_wheel.py` has the radius mode only; the concept mode is written there, with the same count.
-- Step 7: `groups.py` and `concept_list.py` are written; `tools/wheel_table_check.py` (it reads an old file) is
-  rewritten.
+- Step 7: `concept_list.py` is to write; `tools/wheel_table_check.py` and `work/make_stop1.py` read an old file and are
+  rewritten for the groups.
 - Step 10: `make_stop1.py` is rewritten.
 
 ## The numbers (library/cards_db)
@@ -44,22 +44,21 @@ One chat does one step; at its end, mark the step done here and say what it left
   their cards) before trusting it; a wrong source is fixed for every card, with cases. Never read cards for it.
 
 ## Kaptain's standing decisions
+Only what Kaptain said himself goes here, in his words; Claude's own rules go elsewhere.
 - The game's own things: dots and front cells, rows (front/middle/back), columns, 3 lanes, the 3x3 camp, shapes and
   size, supply per lane, carry-over, round start and round end, one action per turn, moving and turning, reach (melee,
   Pike, Ranged), strikes and fixed damage, the hand and the discard pile, Immobile.
 - Not in the game: player health, answers on the enemy's turn, supply that grows by itself, unit types, who acts first
   (random in round 1, then alternating), attacked units hitting back (only Riposte), placing at round end.
 - The wheel is general; step 8 turns each faction's group into these own things, from scratch.
-- Every game counts the same in every number. Shapes are inspired by real factions, never copied from one (17 Nov 2026):
-  every two radii of a shape are strong together in some real faction. A game with no factions (Marvel Snap) inspires
-  no shape; its cards still count in every number.
+- Every game counts the same in every number, games with no factions (Marvel Snap) too.
+- The 20 groups come straight from the concept links; real factions inspire, they are never copied (17 Nov 2026).
 - Interactions with the player (heal, Block, strength on the player; the player hurt) stay off the radii: no player
   health here. They stay in the library as player_<concept>.
 - Damage over time and my units changing form are possibilities for cards, not concepts a faction builds on.
 - An all-Immobile faction is allowed.
-- Must stay in: G = grows when hurt + I damage my own units; steal; kill spells; placing units in the enemy camp;
-  bringing back without an Egg. Only one Egg in the whole wheel: look-alikes are compared by what the card does.
-  "Strike first" is not a plan here. "Ping" is a library word: say "small hits".
+- "Strike first" is not a plan here. "Ping" is a library word: say "small hits". One Egg in the
+  whole wheel: look-alikes are compared by what the card does.
 - A faction's 100 cards use its list a lot (every concept of the library, by how strongly it links with the group):
   the group is its character (what it is strongest at, what its tools grow from), not all it may use.
 - A faction is built from 2-4 tools that feed each other, played out cell by cell. The tools are the backbone, not all

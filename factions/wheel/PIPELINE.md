@@ -42,27 +42,21 @@ is written in that step's chat, from the rules of the step, and its line here is
   with 5+ decks holding both). A link counts for a radius only when the effect that made it, on that card's side,
   belongs to the radius (the links' `a_ab`/`b_ab`), for chance too. Checked by `cases/wheel.tsv`.
 
-## Step 5. The 20 shapes
-- `python3 ../../factions/wheel/work/shapes.py --write` (under a minute) -> `factions/wheel/work/shapes.tsv` (letter
-  A-T, radius=value list). Without `--write` it prints the 20, their real factions, the archetypes each fits and the
-  archetypes that fit no shape.
-- Candidates: every 3-6 radii where every two are strong (1.2+) together in some real faction, all joined (step 4),
-  fitting at least 2 archetypes (every need of the archetype has a radius among the candidate's); values are averages
-  over the real factions that show the pairs (its inspiration). Picking: a search over 20 candidates; misses of the
-  rules count 100 each, and sameness (shared
-  radii between two shapes, squared) decides the rest. Four fixed seeds, so every run gives the same. A radius fewer
-  than 2 candidates have only has to stay under 5 shapes. It prints the rules missed.
+## Step 5. The links between concepts
+- `python3 mechanics_wheel.py links --concepts` (about a minute; the same count as `--radii`, every game including
+  those with no factions) -> `wheel/concept_links.tsv`: per pair of concepts of `work/concepts.tsv` that real cards or
+  decks link: `cards`, `decks`, `games`, `level`, `rare`, `makes`, the top three link texts. `python3 apart.py` gives
+  the pairs real factions keep apart.
 
-## Step 6. The links between concepts
-- `python3 mechanics_wheel.py links --concepts` (to write; the same count as `--radii`, every game including those
-  with no factions) -> `wheel/concept_links.tsv`: per pair of concepts with 10+ cards `cards`, `decks`, `games`,
-  `level`, which one makes and which one uses, the top link texts. `python3 apart.py` gives the pairs real factions
-  keep apart.
+## Step 6. The 20 groups
+- `python3 ../../factions/wheel/work/groups.py --write` (seconds; scipy's exact solver for all 20) ->
+  `factions/wheel/work/groups.tsv` (group, pillars, others, strength). Without `--write` it prints the 20, the standard
+  concepts (7+ games) in no group and every usable concept left out. `python3 tools/wheel_table_check.py` (to rewrite)
+  checks the rules of the step from the files.
+- Candidates: for every joined pair as pillars, the others from the 10 concepts most strongly linked to both, every
+  2-4 of them, each concept joined to 2+ others in it; per pillar pair and size the 3 strongest.
 
-## Step 7. The 20 groups and each faction's list
-- `python3 factions/wheel/work/groups.py --write` (to write; an exact solver for all 20) -> `factions/wheel/work/groups.tsv`
-  (faction, pillars, others, its mechanics with link texts and numbers). `python3 tools/wheel_table_check.py` (to
-  rewrite) checks the rules of the step from the files.
+## Step 7. Each faction's list
 - `python3 ../../factions/wheel/work/concept_list.py` (to write) -> `factions/wheel/work/lists/<letter>.tsv`: per
   faction every concept with 10+ cards and its score ((real + 1) / (chance + 1) links with the group per game,
   averaged over the games where both appear), its `level` and its games, sorted by score.
@@ -72,7 +66,7 @@ is written in that step's chat, from the rules of the step, and its line here is
   tools it feeds, the cell-by-cell line, source: a library card or CLAUDE, NEW RULE).
 
 ## Step 9. Combos on this board
-- A script (to write) counts the joins between every two groups (step 6 numbers); Claude rates the pairs on the board
+- A script (to write) counts the joins between every two groups (step 5 numbers); Claude rates the pairs on the board
   -> `factions/wheel/combos.tsv` (pair, STRONG/OK/WEAK/NONE/AGAINST, how it plays, the numbers, a test column).
 
 ## Step 10. The seven answers and Stop 1

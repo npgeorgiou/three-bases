@@ -23,7 +23,6 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   count on two, each instance by what its rows say (deal damage: on a spell for "damage from spells", on any other card
   for "damage from units' text"). A faction's value on a radius is the share of its concept instances that belong to
   that radius; the card itself goes nowhere.
-- **Shape**: one faction's 3-6 strong radii with their values, taken from one real faction.
 - **Group**: the 4-6 concepts a faction builds on: 2 pillars and 2-4 others. It is the faction's character (what it is
   strongest at, what its tools grow from).
 - **The faction's list**: every concept of the library (usable, helpers and out), each with its score for how strongly
@@ -37,7 +36,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 ## Rules for every step (Kaptain)
 - Every game counts the same in every number: worked out in each game alone, then averaged. Games with no factions
   (Marvel Snap, Inscryption, Into the Breach, Slay the Spire, Monster Train) count in every number about concepts and
-  their links; they give no shape.
+  their links.
 - How well two things link is judged by how much more often than chance real cards link them, worked out per game;
   ties are broken by how many games show it. The linked pairs themselves count only as a level that grows slowly
   (`level`: 1 pair = 1, 10 = 2, 100 or more = 3), so a big game cannot drown the others and a pairing rare in the ten
@@ -49,8 +48,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   never limited to some games in a list.
 
 ## The stops
-- **Kaptain agrees the archetypes** (step 3), **the concepts on each radius** (step 4), **the 20 shapes** (step 5) and
-  **the 20 groups** (step 7). **Stop 1: Kaptain agrees the 20 factions** (step 10).
+- **Kaptain agrees the archetypes** (step 3), **the concepts on each radius** (step 4) and
+  **the 20 groups** (step 6). **Stop 1: Kaptain agrees the 20 factions** (step 10).
 - Then one chat per faction (two can run at once): steps 1-6 of `START_DESIGN.md`. **Stop 2: Kaptain agrees them.**
   Then cards, the gate, `wheel_check.js`, a separate agent's review. **Stop 3: Kaptain gets the finished faction.**
 - Pilot: the first two factions are a pair with a STRONG combo; their premades play each other (`cardstats.js`) and
@@ -106,40 +105,31 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    often real decks heavy in one hold the other; `games` = in how many games real cards link them; `level` = the
    linked pairs as the slow level. Joined: `cards` 1.2+ or `decks` 1.5+; "rewards playing spells" by `decks` only
    (such a card links to every spell).
-5. **The 20 shapes** (`work/shapes.py`). Real factions inspire the shapes; none is copied. Each shape is 3-6 radii where
-   every two are strong (1.2+) together in at least one real faction; a radius's value is its average over those
-   factions, which are listed as the shape's inspiration. Every radius in a shape is joined to another of the same shape
-   (strength, defence, "a few big units" and "position and combos" need no join: no card text gives the first three).
-   No two alike; every radius a strength of 2-5 shapes. Every shape fits at least two archetypes that can exist here, which proves a
-   faction like it is workable: a shape fits an archetype when every need of the archetype has a concept on one of the
-   shape's radii; an archetype may fit several shapes or none. Within that, the shapes are as different as possible.
-   **Kaptain agrees the 20 shapes.**
-6. **The links between concepts** (`mechanics_wheel.py links --concepts` -> `wheel/concept_links.tsv`). For every two
-   concepts with 10+ cards (usable, helpers and out), by the same count as step 4: `cards`, `decks`, `games`, `level`;
-   which one makes and which one uses (the side of the link); the most common link texts. A game counts for `cards`
-   when chance alone gives it 5+ linked pairs. Joined: `cards` 1.2+, or `decks` 1.5+, or, where chance stays under 5
-   pairs in every game, a `level` of 1+ at 3+ times chance. `apart.py` lists the concept pairs real factions keep
-   apart.
-7. **The 20 groups** (one exact solver for all 20 at once, `work/groups.py` -> `work/groups.tsv`).
-   - A concept fits a faction when a radius it is on is one of the faction's shape radii; its fit is the shape's value there.
-   - A group: 2 pillars joined to each other directly, plus 2-4 others; every concept joined (step 6) to another of
-     the group; every concept that uses something has a concept in the group that makes it. Only usable concepts.
-   - A pillar belongs to one faction only; another concept is in at most 3 factions; every usable concept with joins
-     is in at least one group (those that fit nowhere are shown to Kaptain, not forced in).
-   - The group meets every need of at least two of the archetypes that fit the shape (a concept of each need), and one
-     pillar belongs to one of them.
-   - Score: the strength of the joins inside each group plus the fit, summed over all 20. Fixed by Kaptain: G = grows
-     when hurt + I damage my own units.
+5. **The links between concepts** (`mechanics_wheel.py links --concepts` -> `wheel/concept_links.tsv`). For every two
+   concepts of `work/concepts.tsv` (usable, helpers and out), by the same count as step 4: `cards`, `decks`, `games`,
+   `level`; `rare` for a pair chance gives under 5 linked pairs in every game (all linked pairs over all chance);
+   `makes` (the share of the pair's links where a's card sets off or feeds b's card); the three most common link
+   texts. Joined: `cards` 1.2+, or `decks` 1.5+, or `rare` 3+ with a `level` of 1+. `apart.py` lists the concept pairs
+   real factions keep apart.
+6. **The 20 groups** (one exact solver for all 20 at once, `work/groups.py` -> `work/groups.tsv`), made straight from
+   the concept links; real factions are not copied.
+   - A group: 4-6 usable concepts, each joined (step 5) to at least 2 others of the group; its pillars are its two most
+     strongly linked concepts. A concept that mostly uses what others make has a concept in the group that makes for it.
+   - Two groups share at most one concept; a pillar is a pillar of one group only; a concept is in at most 3 groups;
+     every usable concept is wanted in a group (those left out are shown to Kaptain).
+   - Score: the strength of the links inside each group (how much more often than chance real cards link them), summed
+     over all 20, plus every concept placed.
+   - Check: the standard concepts (in 7+ of the 10 games) are each in a group; one left out means the solver is fixed.
    - A group holding both ends of a pair real factions keep apart (`apart.py`) is shown to Kaptain.
    - Kaptain sees per faction: its concepts in plain words, and its mechanics (each joined pair: the real link text
      with its times chance and games); one sentence per faction, written from those texts.
      `tools/wheel_table_check.py` checks every rule above from the files. **Kaptain agrees the 20 groups.**
-   - Then each faction's list (`work/concept_list.py` -> `work/lists/<letter>.tsv`): every concept with 10+ cards
-     (usable, helpers and out), each with its score. In each game alone: real links between the concept's instances
-     and the instances of any concept of the group, against the links chance alone gives there; the game's score =
-     (real + 1) / (chance + 1), so a single rare link doesn't look huge and a big count is almost untouched; the score
-     = the average over the games where the concept and the group both appear (every game weighs the same). Beside it:
-     the `level` and in how many games. Sorted by score.
+7. **Each faction's list** (`work/concept_list.py` -> `work/lists/<letter>.tsv`): every concept with 10+ cards
+   (usable, helpers and out), each with its score. In each game alone: real links between the concept's instances
+   and the instances of any concept of the group, against the links chance alone gives there; the game's score =
+   (real + 1) / (chance + 1), so a single rare link doesn't look huge and a big count is almost untouched; the score
+   = the average over the games where the concept and the group both appear (every game weighs the same). Beside it:
+   the `level` and in how many games. Sorted by score.
 8. **Theme, then tools.** First each faction gets a real theme (World War I artillery, the Zulu regiments) picked for
    its group; the 20 themes all differ; the theme is a source of tools, never a reason for one. Then 2-4 tools per
    faction: a tool is a new kind of thing or rule that makes the group's mechanics happen on this game's own things
@@ -154,13 +144,13 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    `wheel/tools.tsv`. The old candidates (commit d4a3de0^, `factions/3-candidates/`) are read last, only to see that
    no idea Kaptain liked is missing.
 9. **Combos on this board.** For every pair of factions (190), the joins between the concepts of one group and the
-   other's (step 6 numbers), by script. Claude rates each pair with numbers on the board, from the two factions'
+   other's (step 5 numbers), by script. Claude rates each pair with numbers on the board, from the two factions'
    tools: STRONG (both halves on many cards, helps take or hold a base, the enemy's one action between can't easily
    stop it), OK (real but breakable), WEAK, NONE, AGAINST. Partners = STRONG or OK; every faction has 10+; one under
-   10 goes back to step 7. `wheel/combos.tsv` has a test column that playtests fill.
+   10 goes back to step 6. `wheel/combos.tsv` has a test column that playtests fill.
 10. **The seven answers** for all 20, made from the tools: how it wins, how it removes a front unit, how it mainly
    removes back-row units, how it mainly acts between lanes, how it holds a base, its best Place effect, its blind spot.
    Every answer differs from every other faction's; each removal uses one of its mechanics; a blind spot never touches
    its group. Then `tools/wheel_table_check.py` and the Stop 1 pages (`work/make_stop1.py` -> `wheel/STOP1*.md`:
-   per faction its radii, group and mechanics, theme, tools and how they feed each other, the seven answers, and one
+   per faction its group and mechanics, theme, tools and how they feed each other, the seven answers, and one
    line per partner saying how the combo plays). Files under 150 lines.

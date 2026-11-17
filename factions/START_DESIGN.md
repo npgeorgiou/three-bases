@@ -33,8 +33,7 @@ Steps 1-6 come from the library, never from memory. Run the queries below on all
 and write the sources (game: card) next to each answer of steps 2, 3, 5 and 6. `ways` and `curve` show what each card
 does; card texts are read only within the faction's 100 (START_DESIGN-3, "Reading cards").
 - Queries for step 1: list the factions of every game (START_DESIGN-3, section 3) and pick the 6-10 closest to the faction's place on the wheel (the
-  closest factions in `factions/wheel-axes.html`; for the planned shape itself `python3 axes.py --near`, see
-  `START_DESIGN-1-wheel.md`; not the theme), at least one per board game
+  real factions strongest at its group's concepts, `factions/wheel-axes.html`; not the theme), at least one per board game
   (Duelyst, Faeria, Stormbound, Into the Breach, Inscryption); run `curve` on each to see what its cards do.
 - Queries for step 2: `removal <game>` and `protect <game>` for all games, `palette place` and `palette death`: which ways to remove and
   hold exist, and which the other factions of the wheel already use (the wheel's table).
@@ -115,9 +114,9 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    The failure this stops: 14 Horologers said "round end: I strike the nearest enemy", with different stats. The gate
    fails two cards whose WHEN + WHAT + ON WHOM are all the same, and one WHEN + WHAT on more than 3 cards.
 10. **Checks**: START_DESIGN-2 section 2 and START_DESIGN-3 sections 2b-5, then `python3 tools/design_gate.py <letter>` until it prints PASS. Then measure the faction on
-   the wheel's radii (`node tools/wheel_check.js <letter> "<its planned values>"`; the letter is the faction's letter in the game, the
-   values are its shape in `factions/wheel/work/shapes.tsv`): it must land where the wheel put it;
-   if it drifted, fix the faction, not the wheel. Code only after Kaptain
+   the wheel's radii (`node tools/wheel_check.js <letter>`; the letter is the faction's letter in the game): its
+   strongest radii must be those of its group's concepts (`factions/wheel/work/groups.tsv`); if it drifted, fix the
+   faction, not the wheel. Code only after Kaptain
    agreed steps 1-6.
 
 Absolute limits (Kaptain): no rarities (Common, Rare, Legendary...); every card is balanced by its cost alone. No

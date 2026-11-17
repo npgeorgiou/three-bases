@@ -3,7 +3,11 @@ their cards are linked (cards), how much more often real decks heavy in one hold
 real cards link them (games), and the linked card pairs as a level that grows slowly (level, Kaptain: a pairing rare in the
 ten games can be splendid on this board); a link counts only through what of each card made it
 (axes.radius_links). Needs links.sqlite (links.py).
-Usage (from library/cards_db): mechanics_wheel.py links --radii -> wheel/radius_links.tsv, then cases/wheel.tsv"""
+Concepts (--concepts): every concept of factions/wheel/work/concepts.tsv (usable, helpers and out), the same count, plus
+rare (for a pair chance gives under 5 linked pairs in every game: all linked pairs over all chance), which one makes and which one uses (makes: the share of the pair's links where a's card is the one that sets off or feeds
+b's card) and the three most common link texts.
+Usage (from library/cards_db): mechanics_wheel.py links --radii -> wheel/radius_links.tsv, then cases/wheel.tsv;
+mechanics_wheel.py links --concepts -> wheel/concept_links.tsv"""
 import collections, csv, math, os, sqlite3, sys
 import axes, faction_asks, deck_analysis
 
@@ -40,8 +44,8 @@ def case_failures(c, con, keys, pairs):
     return bad
 
 
-def links(spokes, c, games, x, con, pools):
-    """per pair of keys (radii): cards, decks, games, level; then the cases"""
+def links(spokes, c, games, x, con, pools, out='radius_links.tsv'):
+    """per pair of keys (radii or concepts): cards, decks, games, level; for concepts also makes and texts; then the cases"""
     saved = axes.SPOKES
     axes.SPOKES = [(k, 0, '', k, cons, '') for k, _, cons, *_ in spokes]
     pairs = axes.link_pairs()
@@ -53,18 +57,48 @@ def links(spokes, c, games, x, con, pools):
             if len(p) >= 4 and p[0] in pools:
                 ids, _ = deck_analysis.parse_deck(c, p[0], p[3])
                 deck_lists[p[0]].append({i for i in ids if i in pools[p[0]]})
-    seen, plain = collections.Counter(), collections.Counter()
-    cards = axes.radius_links(games, pools, con, pairs, seen=seen, plain=plain)
+    seen, plain, pooled = collections.Counter(), collections.Counter(), {}
+    cards = axes.radius_links(games, pools, con, pairs, seen=seen, plain=plain, pooled=pooled)
     decks = axes.radius_links(games, pools, con, pairs, deck_lists)
     bad = case_failures(c, con, axes.SPOKES, pairs)
     axes.SPOKES = saved
     keys = [m[0] for m in spokes]
-    with open(os.path.join(OUT, 'radius_links.tsv'), 'w', encoding='utf-8') as f:
-        f.write('a\tb\tcards\tdecks\tgames\tlevel\n')
+    conc = out != 'radius_links.tsv'
+    if conc: made, texts = directed(c, con, spokes)
+    with open(os.path.join(OUT, out), 'w', encoding='utf-8') as f:
+        f.write('a\tb\tcards\tdecks\tgames\tlevel' + ('\trare\tmakes\ttexts' if conc else '') + '\n')
         for n, a in enumerate(keys):
             for b in keys[n:]:
-                f.write(f"{a}\t{b}\t{'' if cards[a][b] is None else cards[a][b]}\t{'' if decks[a][b] is None else decks[a][b]}\t{seen[tuple(sorted((a, b)))]}\t{level(plain[tuple(sorted((a, b)))])}\n")
+                t = tuple(sorted((a, b)))
+                if conc and not plain[t] and cards[a][b] is None and decks[a][b] is None: continue
+                row = f"{a}\t{b}\t{'' if cards[a][b] is None else cards[a][b]}\t{'' if decks[a][b] is None else decks[a][b]}\t{seen[t]}\t{level(plain[t])}"
+                if conc:
+                    ab, ba = made[(a, b)], made[(b, a)]
+                    row += f"\t{pooled.get((a, b), '')}\t{round(ab / (ab + ba), 2) if ab + ba else ''}\t{' | '.join(x for x, _ in texts[t].most_common(3))}"
+                f.write(row + '\n')
     print('cases/wheel.tsv: ' + ('all pass' if not bad else f'{len(bad)} fail\n' + '\n'.join(bad)))
+
+
+def directed(c, con, spokes):
+    """per ordered pair of concepts: links where a's card sets off or feeds b's card ({A} acts, {B} answers); per pair the link texts"""
+    keys = [(k, 0, '', k, cons, '') for k, _, cons, *_ in spokes]
+    made, texts = collections.Counter(), collections.defaultdict(collections.Counter)
+    L = sqlite3.connect(os.path.join(HERE, 'links.sqlite'))
+    for g, a, b, sa, sb, kind, text in L.execute('select l.game, a, b, a_ab, b_ab, p.kind, p.text from link l join phrase p on p.id=l.phrase where a != b'):
+        ka, kb = axes.side_keys(a, sa, g, keys, con), axes.side_keys(b, sb, g, keys, con)
+        for x in ka:
+            for y in kb:
+                made[(x, y)] += 1
+                texts[tuple(sorted((x, y)))][f'{kind}: {text}'] += 1
+    return made, texts
+
+
+def concepts(con):
+    """every concept of concepts.tsv as a key: its own name and its parts on each radius (name@radius)"""
+    allk = {k for ks in con.values() for k in ks}
+    with open(os.path.join(HERE, '..', '..', 'factions', 'wheel', 'work', 'concepts.tsv'), encoding='utf-8') as f:
+        names = [r['concept'] for r in csv.DictReader(f, delimiter='\t')]
+    return [(n, n, {k for k in allk if k == n or k.startswith(n + '@')}, '', []) for n in names]
 
 
 def level(links):
@@ -78,6 +112,7 @@ def radii():
 
 
 if __name__ == '__main__':
-    if sys.argv[1:] != ['links', '--radii']: sys.exit('usage: mechanics_wheel.py links --radii (the concepts come in wheel step 6)')
+    if sys.argv[1:] not in (['links', '--radii'], ['links', '--concepts']): sys.exit('usage: mechanics_wheel.py links --radii|--concepts')
     ctx = setup()
-    links(radii(), *ctx[:4], ctx[4])
+    if sys.argv[2] == '--radii': links(radii(), *ctx[:4], ctx[4])
+    else: links(concepts(ctx[3]), *ctx[:4], ctx[4], out='concept_links.tsv')

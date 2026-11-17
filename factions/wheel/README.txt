@@ -7,7 +7,6 @@ work/radii.tsv  every usable concept and the radius it goes on, with the part of
 work/           suspects.tsv, suspect_verdicts.tsv, concept_games.py (-> concept_games.tsv, --all -> concept_games_all.tsv)
                 (step 1: concepts counted only in some games, their verdicts, per concept and game where its rows act);
                 links_same.py (checks that two links.sqlite files hold the same links); concept_catch.py and
-                concept_verdicts.tsv (step 2: the kinds, with reasons); shapes.py (step 5); make_stop1.py (step 10)
+                concept_verdicts.tsv (step 2: the kinds, with reasons); groups.py (step 6); make_stop1.py (step 10)
 Made by the steps: work/concepts.tsv and work/concepts.md (2), library/cards_db/axes.tsv, wheel/radius_links.tsv and
-factions/wheel-axes.html (4), work/shapes.tsv (5), library/cards_db/wheel/concept_links.tsv (6), work/groups.tsv and
-work/lists/ (7), themes.tsv and tools.tsv (8), combos.tsv (9), answers.tsv and STOP1*.md (10).
+factions/wheel-axes.html (4), library/cards_db/wheel/concept_links.tsv (5), work/groups.tsv (6), work/lists/ (7), themes.tsv and tools.tsv (8), combos.tsv (9), answers.tsv and STOP1*.md (10).
