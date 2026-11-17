@@ -115,8 +115,6 @@ More text: `summary/09-card-design-rules.txt`
   concepts possible, starts them or makes them stronger (Kaptain). Example (Claude's): a faction built on units dying
   has units that come back, so more units can die. The list is not tracked on the wheel; without it cards are poorly
   designed.
-- Strong concepts (copying, deck search, draw, card creation, forced movement, bringing back, stealing): a pillar of 1
-  faction, in the group of at most 3; elsewhere only from the list, to serve the group.
 - How much it touches the enemy: a disruptive faction has many cards that act on enemy units (push, mark, punish); a
   straightforward one has fewer.
 

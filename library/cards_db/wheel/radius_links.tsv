@@ -1,211 +1,211 @@
-a	b	cards	decks	games
-grows	grows	1.61	1.4	8
-grows	strikes	1.2	1.0	7
-grows	textdmg	1.02	0.93	7
-grows	kills	1.13	0.81	8
-grows	many	1.11	0.92	8
-grows	spelldmg	0.75	0.89	6
-grows	spellpay	0.58	0.93	7
-grows	stops	1.69	0.91	5
-grows	disrupts	0.96	0.88	8
-grows	supply	0.56	0.88	8
-grows	cheaper	1.18	0.98	8
-grows	cards	1.05	0.93	8
-grows	picks	0.98	0.93	8
-grows	back	0.85	1.07	8
-grows	wide	1.62	1.08	8
-grows	spends	1.29	1.03	8
-grows	heals	1.32	1.04	5
-grows	growsdef	1.72	1.31	7
-grows	protects	0.89	1.11	7
-grows	tall	1.39	1.1	7
-strikes	strikes	1.72	1.85	6
-strikes	textdmg	1.5	1.23	8
-strikes	kills	1.47	0.92	6
-strikes	many	1.64	0.97	8
-strikes	spelldmg	1.87	0.9	7
-strikes	spellpay	0.21	0.95	4
-strikes	stops	1.12	0.91	6
-strikes	disrupts	1.96	1.08	7
-strikes	supply	0.61	0.87	6
-strikes	cheaper	0.72	0.96	7
-strikes	cards	0.55	0.92	7
-strikes	picks	0.54	0.93	6
-strikes	back	0.85	0.9	6
-strikes	wide	0.97	1.03	8
-strikes	spends	1.27	0.97	9
-strikes	heals	1.02	0.86	6
-strikes	growsdef	1.21	1.02	7
-strikes	protects	0.92	1.1	7
-strikes	tall	1.23	1.11	5
-textdmg	textdmg	0.61	2.29	7
-textdmg	kills	1.38	0.97	7
-textdmg	many	1.43	1.32	8
-textdmg	spelldmg	2.07	1.11	6
-textdmg	spellpay	0.26	0.74	4
-textdmg	stops	0.62	0.88	6
-textdmg	disrupts	2.52	0.93	7
-textdmg	supply	0.54	0.77	8
-textdmg	cheaper	1.06	0.88	7
-textdmg	cards	0.64	0.84	5
-textdmg	picks	0.25	0.82	5
-textdmg	back	0.81	0.87	5
-textdmg	wide	0.95	1.0	8
-textdmg	spends	1.21	1.03	9
-textdmg	heals	1.53	0.9	6
-textdmg	growsdef	1.05	0.93	7
-textdmg	protects	0.28	0.98	5
-textdmg	tall	0.53	1.1	4
-kills	kills	0.68	3.86	4
-kills	many	1.13	1.47	8
-kills	spelldmg	1.06	1.05	5
-kills	spellpay	0.3	1.0	4
-kills	stops	0.21	1.0	3
-kills	disrupts	1.89	1.0	5
-kills	supply	1.07	1.36	9
-kills	cheaper	1.06	0.99	6
-kills	cards	0.83	0.92	8
-kills	picks	0.57	0.96	6
-kills	back	3.52	0.98	7
-kills	wide	2.05	0.92	8
-kills	spends	3.95	1.45	9
-kills	heals	0.61	1.31	4
-kills	growsdef	1.27	0.75	7
-kills	protects	1.1	1.01	7
-kills	tall	0.83	1.08	2
-many	many	1.18	2.12	9
-many	spelldmg	0.77	1.58	7
-many	spellpay	0.45	0.84	6
-many	stops	1.83	1.02	8
-many	disrupts	2.2	0.91	9
-many	supply	1.09	1.18	8
-many	cheaper	1.13	1.02	7
-many	cards	0.96	0.88	8
-many	picks	0.76	0.83	7
-many	back	1.8	0.92	8
-many	wide	1.78	0.94	9
-many	spends	2.08	1.21	10
-many	heals	1.54	1.3	6
-many	growsdef	1.01	0.99	7
-many	protects	0.87	1.09	9
-many	tall	1.04	1.07	8
-spelldmg	spelldmg	1.61	3.07	5
-spelldmg	spellpay	0.55	1.09	5
-spelldmg	stops	3.06	1.13	5
-spelldmg	disrupts	3.3	0.95	7
-spelldmg	supply	0.96	1.27	6
-spelldmg	cheaper	0.72	1.44	5
-spelldmg	cards	1.06	1.01	6
-spelldmg	picks	0.45	1.21	6
-spelldmg	back	1.06	0.84	4
-spelldmg	wide	0.63	0.84	6
-spelldmg	spends	1.53	0.82	7
-spelldmg	heals	1.76	1.19	4
-spelldmg	growsdef	0.75	0.88	5
-spelldmg	protects	0.82	1.0	6
-spelldmg	tall	0.92	0.97	4
-spellpay	spellpay	0.28	4.46	5
-spellpay	stops	0.24	1.04	4
-spellpay	disrupts	0.48	1.21	5
-spellpay	supply	0.18	1.19	5
-spellpay	cheaper	1.31	1.27	6
-spellpay	cards	0.76	1.23	6
-spellpay	picks	0.26	1.34	4
-spellpay	back	0.39	0.93	5
-spellpay	wide	0.13	0.93	5
-spellpay	spends	0.71	0.68	6
-spellpay	heals	0.26	0.78	4
-spellpay	growsdef	0.33	0.87	4
-spellpay	protects	0.26	0.76	6
-spellpay	tall	0.62	0.83	3
-stops	stops	0.04	3.44	3
-stops	disrupts	1.31	0.92	6
-stops	supply	0.15	2.04	3
-stops	cheaper	1.23	0.96	6
-stops	cards	0.09	1.2	4
-stops	picks	0.31	1.06	3
-stops	back	1.11	1.14	4
-stops	wide	0.76	0.93	6
-stops	spends	0.76	0.73	8
-stops	heals	0.2	1.23	4
-stops	growsdef	3.7	0.95	5
-stops	protects	0.62	1.02	4
-stops	tall	0.5	1.06	2
-disrupts	disrupts	3.1	2.81	8
-disrupts	supply	0.41	0.93	7
-disrupts	cheaper	0.66	0.93	7
-disrupts	cards	0.6	1.02	7
-disrupts	picks	0.63	1.08	5
-disrupts	back	0.79	1.02	6
-disrupts	wide	0.48	0.96	7
-disrupts	spends	0.83	0.9	8
-disrupts	heals	0.17	0.81	4
-disrupts	growsdef	0.95	0.88	6
-disrupts	protects	0.59	0.89	5
-disrupts	tall	0.09	1.05	1
-supply	supply	0.91	5.57	3
-supply	cheaper	0.43	1.12	5
-supply	cards	0.25	1.07	5
-supply	picks	0.13	0.94	3
-supply	back	1.04	1.31	5
-supply	wide	0.41	0.92	6
-supply	spends	0.66	1.37	9
-supply	heals	0.28	0.94	2
-supply	growsdef	0.65	0.9	5
-supply	protects	1.75	1.05	6
-supply	tall	7.57	1.01	5
-cheaper	cheaper	0.75	3.56	4
-cheaper	cards	1.41	1.19	7
-cheaper	picks	1.24	2.0	6
-cheaper	back	1.18	1.33	7
-cheaper	wide	0.92	0.93	6
-cheaper	spends	1.18	1.11	9
-cheaper	heals	0.68	0.92	4
-cheaper	growsdef	1.2	1.06	6
-cheaper	protects	1.84	1.04	6
-cheaper	tall	5.9	1.08	7
-cards	cards	2.09	2.34	7
-cards	picks	2.85	1.2	6
-cards	back	2.42	1.44	7
-cards	wide	0.48	0.99	8
-cards	spends	0.8	0.85	8
-cards	heals	0.3	0.92	4
-cards	growsdef	0.97	1.02	5
-cards	protects	0.46	0.79	7
-cards	tall	1.0	0.88	6
-picks	picks	2.5	4.77	5
-picks	back	1.5	1.2	7
-picks	wide	0.39	0.95	5
-picks	spends	0.89	0.83	8
-picks	heals	0.26	0.94	5
-picks	growsdef	1.17	0.83	5
-picks	protects	0.35	0.92	5
-picks	tall	0.5	0.98	4
-back	back	1.79	5.11	5
-back	wide	0.79	1.1	6
-back	spends	3.44	1.5	8
-back	heals	0.8	0.77	3
-back	growsdef	0.8	0.97	6
-back	protects	1.35	1.34	7
-back	tall	0.16	1.05	4
-wide	wide	0.39	1.3	8
-wide	spends	2.12	1.14	9
-wide	heals	0.45	0.91	5
-wide	growsdef	1.73	1.03	6
-wide	protects	0.66	0.95	7
-wide	tall	0.2	1.03	8
-spends	spends	4.96	2.16	10
-spends	heals	0.77	0.9	5
-spends	growsdef	1.38	1.0	7
-spends	protects	1.72	1.25	8
-spends	tall	0.43	1.03	6
-heals	heals	0.67	4.02	3
-heals	growsdef	1.24	1.04	5
-heals	protects	0.51	1.09	4
-heals	tall	2.58	1.03	3
-growsdef	growsdef	1.68	1.7	6
-growsdef	protects	0.73	1.06	5
-growsdef	tall	1.25	1.07	5
-protects	protects	0.88	2.26	5
-protects	tall	0.3	1.19	4
-tall	tall	1.1	1.6	3
+a	b	cards	decks	games	level
+grows	grows	1.61	1.4	8	3
+grows	strikes	1.2	1.0	7	3
+grows	textdmg	1.02	0.93	7	3
+grows	kills	1.13	0.81	8	3
+grows	many	1.11	0.92	8	3
+grows	spelldmg	0.75	0.89	6	3
+grows	spellpay	0.58	0.93	7	3
+grows	stops	1.69	0.91	5	3
+grows	disrupts	0.96	0.88	8	3
+grows	supply	0.56	0.88	8	3
+grows	cheaper	1.18	0.98	8	3
+grows	cards	1.05	0.93	8	3
+grows	picks	0.98	0.93	8	3
+grows	back	0.85	1.07	8	3
+grows	wide	1.62	1.08	8	3
+grows	spends	1.29	1.03	8	3
+grows	heals	1.32	1.04	5	3
+grows	growsdef	1.72	1.31	7	3
+grows	protects	0.89	1.11	7	3
+grows	tall	1.39	1.1	7	3
+strikes	strikes	1.72	1.85	6	3
+strikes	textdmg	1.5	1.23	8	3
+strikes	kills	1.47	0.92	6	3
+strikes	many	1.64	0.97	8	3
+strikes	spelldmg	1.87	0.9	7	3
+strikes	spellpay	0.21	0.95	4	3
+strikes	stops	1.12	0.91	6	3
+strikes	disrupts	1.96	1.08	7	3
+strikes	supply	0.61	0.87	6	3
+strikes	cheaper	0.72	0.96	7	3
+strikes	cards	0.55	0.92	7	3
+strikes	picks	0.54	0.93	6	3
+strikes	back	0.85	0.9	6	3
+strikes	wide	0.97	1.03	8	3
+strikes	spends	1.27	0.97	9	3
+strikes	heals	1.02	0.86	6	3
+strikes	growsdef	1.21	1.02	7	3
+strikes	protects	0.92	1.1	7	3
+strikes	tall	1.23	1.11	5	3
+textdmg	textdmg	0.61	2.29	7	3
+textdmg	kills	1.38	0.97	7	3
+textdmg	many	1.43	1.32	8	3
+textdmg	spelldmg	2.07	1.11	6	3
+textdmg	spellpay	0.26	0.74	4	3
+textdmg	stops	0.62	0.88	6	3
+textdmg	disrupts	2.52	0.93	7	3
+textdmg	supply	0.54	0.77	8	3
+textdmg	cheaper	1.06	0.88	7	3
+textdmg	cards	0.64	0.84	5	3
+textdmg	picks	0.25	0.82	5	3
+textdmg	back	0.81	0.87	5	3
+textdmg	wide	0.95	1.0	8	3
+textdmg	spends	1.21	1.03	9	3
+textdmg	heals	1.53	0.9	6	3
+textdmg	growsdef	1.05	0.93	7	3
+textdmg	protects	0.28	0.98	5	3
+textdmg	tall	0.53	1.1	4	3
+kills	kills	0.68	3.86	4	2.89
+kills	many	1.13	1.47	8	3
+kills	spelldmg	1.06	1.05	5	3
+kills	spellpay	0.3	1.0	4	3
+kills	stops	0.21	1.0	3	2.67
+kills	disrupts	1.89	1.0	5	3
+kills	supply	1.07	1.36	9	3
+kills	cheaper	1.06	0.99	6	3
+kills	cards	0.83	0.92	8	3
+kills	picks	0.57	0.96	6	3
+kills	back	3.52	0.98	7	3
+kills	wide	2.05	0.92	8	3
+kills	spends	3.95	1.45	9	3
+kills	heals	0.61	1.31	4	2.95
+kills	growsdef	1.27	0.75	7	3
+kills	protects	1.1	1.01	7	3
+kills	tall	0.83	1.08	2	3
+many	many	1.18	2.12	9	3
+many	spelldmg	0.77	1.58	7	3
+many	spellpay	0.45	0.84	6	3
+many	stops	1.83	1.02	8	3
+many	disrupts	2.2	0.91	9	3
+many	supply	1.09	1.18	8	3
+many	cheaper	1.13	1.02	7	3
+many	cards	0.96	0.88	8	3
+many	picks	0.76	0.83	7	3
+many	back	1.8	0.92	8	3
+many	wide	1.78	0.94	9	3
+many	spends	2.08	1.21	10	3
+many	heals	1.54	1.3	6	3
+many	growsdef	1.01	0.99	7	3
+many	protects	0.87	1.09	9	3
+many	tall	1.04	1.07	8	3
+spelldmg	spelldmg	1.61	3.07	5	3
+spelldmg	spellpay	0.55	1.09	5	3
+spelldmg	stops	3.06	1.13	5	3
+spelldmg	disrupts	3.3	0.95	7	3
+spelldmg	supply	0.96	1.27	6	3
+spelldmg	cheaper	0.72	1.44	5	3
+spelldmg	cards	1.06	1.01	6	3
+spelldmg	picks	0.45	1.21	6	3
+spelldmg	back	1.06	0.84	4	3
+spelldmg	wide	0.63	0.84	6	3
+spelldmg	spends	1.53	0.82	7	3
+spelldmg	heals	1.76	1.19	4	3
+spelldmg	growsdef	0.75	0.88	5	3
+spelldmg	protects	0.82	1.0	6	3
+spelldmg	tall	0.92	0.97	4	2.87
+spellpay	spellpay	0.28	4.46	5	3
+spellpay	stops	0.24	1.04	4	2.83
+spellpay	disrupts	0.48	1.21	5	3
+spellpay	supply	0.18	1.19	5	2.68
+spellpay	cheaper	1.31	1.27	6	3
+spellpay	cards	0.76	1.23	6	3
+spellpay	picks	0.26	1.34	4	3
+spellpay	back	0.39	0.93	5	3
+spellpay	wide	0.13	0.93	5	3
+spellpay	spends	0.71	0.68	6	3
+spellpay	heals	0.26	0.78	4	2.79
+spellpay	growsdef	0.33	0.87	4	3
+spellpay	protects	0.26	0.76	6	3
+spellpay	tall	0.62	0.83	3	2.97
+stops	stops	0.04	3.44	3	2.2
+stops	disrupts	1.31	0.92	6	3
+stops	supply	0.15	2.04	3	2.52
+stops	cheaper	1.23	0.96	6	3
+stops	cards	0.09	1.2	4	2.81
+stops	picks	0.31	1.06	3	2.67
+stops	back	1.11	1.14	4	3
+stops	wide	0.76	0.93	6	3
+stops	spends	0.76	0.73	8	3
+stops	heals	0.2	1.23	4	2.15
+stops	growsdef	3.7	0.95	5	3
+stops	protects	0.62	1.02	4	3
+stops	tall	0.5	1.06	2	2.38
+disrupts	disrupts	3.1	2.81	8	3
+disrupts	supply	0.41	0.93	7	2.94
+disrupts	cheaper	0.66	0.93	7	3
+disrupts	cards	0.6	1.02	7	3
+disrupts	picks	0.63	1.08	5	3
+disrupts	back	0.79	1.02	6	3
+disrupts	wide	0.48	0.96	7	3
+disrupts	spends	0.83	0.9	8	3
+disrupts	heals	0.17	0.81	4	2.64
+disrupts	growsdef	0.95	0.88	6	3
+disrupts	protects	0.59	0.89	5	3
+disrupts	tall	0.09	1.05	1	2.38
+supply	supply	0.91	5.57	3	3
+supply	cheaper	0.43	1.12	5	3
+supply	cards	0.25	1.07	5	3
+supply	picks	0.13	0.94	3	2.86
+supply	back	1.04	1.31	5	3
+supply	wide	0.41	0.92	6	3
+supply	spends	0.66	1.37	9	3
+supply	heals	0.28	0.94	2	2.53
+supply	growsdef	0.65	0.9	5	3
+supply	protects	1.75	1.05	6	3
+supply	tall	7.57	1.01	5	3
+cheaper	cheaper	0.75	3.56	4	3
+cheaper	cards	1.41	1.19	7	3
+cheaper	picks	1.24	2.0	6	3
+cheaper	back	1.18	1.33	7	3
+cheaper	wide	0.92	0.93	6	3
+cheaper	spends	1.18	1.11	9	3
+cheaper	heals	0.68	0.92	4	3
+cheaper	growsdef	1.2	1.06	6	3
+cheaper	protects	1.84	1.04	6	3
+cheaper	tall	5.9	1.08	7	3
+cards	cards	2.09	2.34	7	3
+cards	picks	2.85	1.2	6	3
+cards	back	2.42	1.44	7	3
+cards	wide	0.48	0.99	8	3
+cards	spends	0.8	0.85	8	3
+cards	heals	0.3	0.92	4	3
+cards	growsdef	0.97	1.02	5	3
+cards	protects	0.46	0.79	7	3
+cards	tall	1.0	0.88	6	3
+picks	picks	2.5	4.77	5	3
+picks	back	1.5	1.2	7	3
+picks	wide	0.39	0.95	5	3
+picks	spends	0.89	0.83	8	3
+picks	heals	0.26	0.94	5	2.79
+picks	growsdef	1.17	0.83	5	3
+picks	protects	0.35	0.92	5	3
+picks	tall	0.5	0.98	4	3
+back	back	1.79	5.11	5	3
+back	wide	0.79	1.1	6	3
+back	spends	3.44	1.5	8	3
+back	heals	0.8	0.77	3	3
+back	growsdef	0.8	0.97	6	3
+back	protects	1.35	1.34	7	3
+back	tall	0.16	1.05	4	2.32
+wide	wide	0.39	1.3	8	3
+wide	spends	2.12	1.14	9	3
+wide	heals	0.45	0.91	5	3
+wide	growsdef	1.73	1.03	6	3
+wide	protects	0.66	0.95	7	3
+wide	tall	0.2	1.03	8	3
+spends	spends	4.96	2.16	10	3
+spends	heals	0.77	0.9	5	3
+spends	growsdef	1.38	1.0	7	3
+spends	protects	1.72	1.25	8	3
+spends	tall	0.43	1.03	6	3
+heals	heals	0.67	4.02	3	2.2
+heals	growsdef	1.24	1.04	5	3
+heals	protects	0.51	1.09	4	3
+heals	tall	2.58	1.03	3	3
+growsdef	growsdef	1.68	1.7	6	3
+growsdef	protects	0.73	1.06	5	3
+growsdef	tall	1.25	1.07	5	3
+protects	protects	0.88	2.26	5	3
+protects	tall	0.3	1.19	4	3
+tall	tall	1.1	1.6	3	2.81

@@ -26,8 +26,9 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 
 ## Rules for every step (Kaptain)
 - Every game counts the same in every number: worked out in each game alone, then averaged. A combo is judged by how
-  much more often than chance its cards link; ties are broken by how many games show it. A raw count of pairs is never
-  used: a game with many cards would drown the others.
+  much more often than chance its cards link; ties are broken by how many games show it. The linked pairs count only
+  as a level that grows slowly (1 pair = 1, 10 = 2, 100 or more = 3), so a game with many cards cannot drown the
+  others and a pairing rare in the ten games is never lost (Kaptain).
 - A concept needs 10+ real cards in the library (all games together).
 - Scripts, no reading agents. Card texts are read only where a card's rows can't answer: at most 500 cards for the
   whole wheel, by a low-cost model; count them and get Kaptain's OK first.
@@ -61,7 +62,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 2. **The radii and how they work together.** `axes.py` measures the 43 real factions on the 23 radii (1 = the average
    faction of its game). For every two radii (`mechanics_wheel.py links --radii`): `cards` = how much more often than
    chance their cards are linked; `decks` = how much more often real decks heavy in one hold the other; `games` = in
-   how many games real cards link them. Joined: `cards` 1.2+ or `decks`
+   how many games real cards link them; `level` = the linked pairs as that slow level. Joined: `cards` 1.2+ or `decks`
    1.5+; "rewards playing spells" by `decks` only (such a card links to every spell).
 3. **The 20 shapes** (`work/shapes.py`). Each shape is 3-6 radii of one real faction valued 1.2+, with its values.
    Every radius in a shape is joined to another of the same shape (strength, defence and "position and combos" need no
@@ -86,7 +87,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    A concept that only says what kind of record a card is (an "ability" record) is a library error, removed from the
    library. A parent in the concept tree keeps only the cards none of its children carry, so no effect counts twice.
 5. **The links between concepts** (`mechanics_wheel.py`, concept mode -> `wheel/concept_links.tsv`). For every two
-   usable concepts and helpers, by the same count as step 2: `cards`, `decks`, `games`; which one makes and which one uses
+   usable concepts and helpers, by the same count as step 2: `cards`, `decks`, `games`, `level`; which one makes and which one uses
    (the side of the link); the most common link texts. A game counts for `cards` when chance alone gives it 5+ linked
    pairs. Joined: `cards` 1.2+, or `decks` 1.5+, or, where chance stays under 5 pairs in every game, 3+ real pairs at
    3+ times chance. `apart.py` lists the concept pairs real factions keep apart.

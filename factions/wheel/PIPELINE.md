@@ -21,7 +21,7 @@ is written in that step's chat, from the rules of the step, and its line here is
   on a radius = its share of such cards / its game's average share (1 = average). 43 real factions of 8 games.
 - `python3 axes.py` -> `axes.tsv`, `factions/wheel-axes.html`. How the values are made: `factions/13`.
 - `python3 mechanics_wheel.py links --radii` -> `wheel/radius_links.tsv` (`axes.radius_links`): per pair of radii
-  `cards`, `decks`, `games` (in how many games real cards link them), worked out per game and averaged (`cards`: games where chance gives 5+ linked
+  `cards`, `decks`, `games` (in how many games real cards link them), `level` (the linked pairs: 1 = 1, 10 = 2, 100+ = 3), worked out per game and averaged (`cards`: games where chance gives 5+ linked
   pairs, 20+ in all; `decks`: games with 5+ decks holding both). A link counts for a radius only when the effect that
   made it, on that card's side, belongs to the radius (the links' `a_ab`/`b_ab`), for chance too. Checked by
   `cases/wheel.tsv`.
@@ -47,7 +47,7 @@ is written in that step's chat, from the rules of the step, and its line here is
 
 ## Step 5. The links between concepts
 - `python3 mechanics_wheel.py links --concepts` (to write; the same count as `--radii`) -> `wheel/concept_links.tsv`:
-  per pair of usable concepts and helpers `cards`, `decks`, `games`, which one makes and which one uses, the top link
+  per pair of usable concepts and helpers `cards`, `decks`, `games`, `level`, which one makes and which one uses, the top link
   texts.
   `python3 apart.py` gives the pairs real factions keep apart.
 
