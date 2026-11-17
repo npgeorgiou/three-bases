@@ -6,7 +6,7 @@ through its main strengths (the highest and second value), its highest radius gi
 then as different from each other as possible. A radius fewer than 2 real factions are strong at is only kept under 5.
 python3 ../../factions/wheel/work/shapes.py [--write]: prints the 20; --write writes factions/wheel/work/shapes.tsv."""
 import csv, itertools, random, sys
-NUM = {'strong', 'tough', 'together'}  # strength, defence, position and combos: need no join
+NUM = {'strong', 'tough', 'tall', 'together'}  # strength, defence, a few big units, position and combos: need no join
 AROWS = list(csv.DictReader(open('../../factions/wheel/archetypes.tsv'), delimiter='\t'))
 ARCH = [r['radii (main strength of 1+ shape)'].split(',') for r in AROWS]
 def carry(pick, caps):

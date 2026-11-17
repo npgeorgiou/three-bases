@@ -98,8 +98,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    linked pairs as the slow level. Joined: `cards` 1.2+ or `decks` 1.5+; "rewards playing spells" by `decks` only
    (such a card links to every spell).
 5. **The 20 shapes** (`work/shapes.py`). Each shape is 3-6 radii of one real faction valued 1.2+, with its values.
-   Every radius in a shape is joined to another of the same shape (strength, defence and "position and combos" need no
-   join); at most one shape per real faction, no two alike; every radius a strength of 2-5 shapes; a shape carries an
+   Every radius in a shape is joined to another of the same shape (strength, defence, "a few big units" and "position and
+   combos" need no join: no card text gives the first three, Kaptain); at most one shape per real faction, no two alike; every radius a strength of 2-5 shapes; a shape carries an
    archetype when one of the archetype's radii is among the shape's two highest; each shape carries at most 2, each
    archetype that can exist here is carried by 2-3 shapes; within that, the shapes are as different as possible; every
    shape's highest radius gives it an archetype. **Kaptain agrees the 20 shapes.**
