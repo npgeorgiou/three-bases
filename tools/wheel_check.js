@@ -14,11 +14,11 @@
 const fs = require('fs'), path = require('path'), vm = require('vm');
 const ROOT = path.join(__dirname, '..'), SRC = path.join(ROOT, 'src', 'game');
 const DRIFT = 0.4, SHRINK = 5, POWER = 0.75;  // DRIFT is Claude's number; the other two are axes.py's
-const RADII = [['strong', 'strength'], ['grows', 'grows strength'], ['strikes', 'strikes more or first'], ['textdmg', 'damage from units\' text'],
+const RADII = [['strong', 'strength'], ['grows', 'grows strength'], ['strikes', 'strikes more'], ['textdmg', 'damage from units\' text'],
   ['kills', 'kills outright'], ['many', 'many at once'], ['spelldmg', 'damage from spells'], ['spellpay', 'rewards playing spells'],
   ['stops', 'stops them'], ['disrupts', 'breaks their plan in other ways'], ['supply', 'more supply'],
-  ['cheaper', 'cheaper or stronger hand'], ['cards', 'more cards'], ['picks', 'picks and copies'], ['back', 'brings back'],
-  ['wide', 'many cheap units'], ['spends', 'spends them'], ['together', 'position and combos'], ['heals', 'heals them'],
+  ['cheaper', 'cheaper or stronger hand'], ['cards', 'more cards in hand'], ['picks', 'picks cards'], ['back', 'reuses cards'],
+  ['wide', 'many units on my side'], ['spends', 'spends them'], ['together', 'position and combos'], ['heals', 'heals them'],
   ['growsdef', 'grows defence'], ['protects', 'protects them'], ['tough', 'defence'], ['tall', 'a few big units']];
 const OWN_NUMBERS = ['strong', 'tough', 'wide', 'tall'];
 

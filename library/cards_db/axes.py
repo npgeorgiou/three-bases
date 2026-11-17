@@ -1,57 +1,34 @@
-"""The wheel axes (factions/12-mechanical-wheel.txt) measured for every real faction of the library, one spoke per end.
+"""The wheel's radii (factions/START_DESIGN-1-wheel.md) measured for every real faction of the library.
 
 Run from library/cards_db: python3 axes.py  ->  axes.tsv and ../../factions/wheel-axes.html
-        python3 axes.py --cards <file>  ->  per spoke, concept and game, the cards that concept catches (for the check)
-Each spoke is one end of an axis: a list of library concepts (Claude's choice, checked against the cards they catch).
-A card counts for a spoke if it has any of its concepts. A faction's value on a spoke = the share of its cards that count,
-divided by the average share of the factions of its game (0 = none, 1 = average), then smoothed: each faction counts as if
-it had SHRINK more cards at the average, and the value is raised to POWER, so very high and very low values are pulled in.
-Unit stats (spokes in NUMERIC) are strength and defence per supply; unit_stats() reads each game's own stat fields.
-A game with fewer than MIN_GAME_CARDS cards for a spoke gives its factions no value on it (a gap, not 0).
+        python3 axes.py --cards <file>  ->  per radius, concept and game, the cards that concept catches (for the check)
+Every usable concept goes on one radius (factions/wheel/work/radii.tsv, agreed with Kaptain); a few go on two radii by what
+each of their rows says (PART). A card holds one instance of a concept for each row, ability or keyword of the card that
+gives it (SOURCES; one when the concept comes from what the card is). A faction's share on a radius = its instances on the
+radius / all its instances of usable concepts; its value = that share divided by the average share of the factions of its
+game (0 = none, 1 = average), then smoothed: each faction counts as if it had SHRINK more cards at the average, and the
+value is raised to POWER, so very high and very low values are pulled in.
+Strength and defence (NUMERIC) are the units' strength and defence per supply; unit_stats() reads each game's own stat
+fields. "A few big units" is the share of its cards that are units in the dearest third of its game's units; "many units
+on my side" is the average of its concepts' value and the value of its units in the cheapest third; "position and
+combos" the average of its concepts' value and combos (the share of the faction's card pairs that links.sqlite links;
+run links.py first).
+A game with fewer than MIN_GAME_CARDS cards for a radius gives its factions no value on it (a gap, not 0).
 A game with several kinds of supply (SUPPLIES) has each unit's cost divided by the average cost of its kind.
-Axes 4, 5 and 8 have one spoke each: their other end (units now, works alone, plays what it draws) is a low value.
 Two counts: "cards" = every card of the faction once; "decks" = each card weighted by how many of the library's top
 decks (decks.tsv) play it; factions with fewer than MIN_DECK_CARDS cards in decks get no deck count.
-"With others" = the average of two values: position cards (BESIDE, the same in every game) and combos (the share of the faction's card pairs
-that links.sqlite links; run links.py first).
 """
-import collections, json, math, os, sqlite3, sys
+import collections, csv, json, math, os, sqlite3, sys
 import deck_analysis
 import faction_asks, mechanics
 
-STOP_ON_ENEMY = ['disable', 'silence', 'immobilize', 'cant_move', 'attack_lock']  # stops enemy units; the other ways to break their plan follow
-STOP_ALWAYS = ['immobilize', 'attack_lock', 'silence', 'disable']
-DISRUPT_ON_ENEMY = ['stat_loss', 'forced_attack', 'forced_movement', 'debuff', 'steal', 'attack_zero', 'stat_multiply', 'bounce_enemy',
-                    'polymorph', 'discard', 'counter_spell', 'transform', 'return_to_hand']
-DISRUPT_ALWAYS = ['hand_disruption', 'mill', 'board_clog', 'cost_increase', 'play_restriction', 'counter_spell', 'steal', 'bounce_enemy', 'junk_cards']
+HERE = os.path.dirname(os.path.abspath(__file__))
+RADII_FILE = os.path.join(HERE, '..', '..', 'factions', 'wheel', 'work', 'radii.tsv')
 NOT_MEASURED = ('monster_train',)  # Kaptain, 9 Nov 2026: a different kind of game, not on the page (Marvel Snap has no factions)
-KILL_ON_ENEMY = ['destroy', 'banish']  # kills outright; damage is its own two radii
-DAMAGE_ON_ENEMY = ('damage', 'damage_over_time')  # the card's own text deals damage to an enemy unit or player (a unit's strike is no row)
-DAMAGE_NO_SIDE_GAMES = ('into_the_breach',)  # weapon cards (category ability) deal damage to a tile, friend or enemy (Artemis Artillery); the records keep the text and name no side
-DAMAGE_BY_CONCEPT = ('fight_enemy',)  # damage to an enemy that no damage row carries: my unit is made to fight / strike a chosen enemy (Faeria Hunt Down, Runeterra Single Combat)
-NEAR = ' or '.join("W like '%position " + w + "%'" for w in ('% bordering', '% surrounding', '% sides', '% diagonal', 'is behind', '% in_circuit'))
-BESIDE = [  # my own units by where they stand next to this card (any game): an effect on them, a condition on them, an event of theirs
-    "select card from flat_do where on_side='mine' and (" + NEAR.replace('W', "(coalesce(on_with,'')||coalesce(to_with,''))") + ") and ",
-    "select card from flat_if where of_side='mine' and (" + NEAR.replace('W', "(coalesce(of_with,'')||coalesce(ev_obj_with,''))") + ") and ",
-    "select card from flat_when where obj_side='mine' and (" + NEAR.replace('W', "coalesce(obj_with,'')") + ") and ",
-    "select card from flat_do where coalesce(on_side,'mine')='mine' and on_pick in ('right_of_self','left_of_self') and "]  # its neighbour in its own row
-CANT = ('attacks', 'moves')  # an enemy unit that can't do these is stopped (Kaptain, 9 Nov 2026: "can't block" does not;
-# "can't strike" is Inscryption's Waterborne: the enemy can't strike this unit, which protects it)
 SUPPLIES = {'inscryption': ('blood', 'energy', 'bones', 'mox')}  # games whose cards are paid in different kinds of supply
 UNIT_CATS = ('unit', 'hero', 'leader')
-SHOWN = {'multiply_own*': 'a stat of my own unit doubled or multiplied', 'stop*': 'an effect on enemies: ' + ', '.join(STOP_ON_ENEMY) + ', can\'t attack, can\'t move; or any card with: ' + ', '.join(STOP_ALWAYS),
-         'disrupt*': 'an effect on enemies: ' + ', '.join(DISRUPT_ON_ENEMY) + '; or any card with: ' + ', '.join(DISRUPT_ALWAYS),
-         'kill*': 'an effect on enemies: ' + ', '.join(KILL_ON_ENEMY),
-         'weaken*': 'an enemy unit made weaker (debuff on an enemy)',
-         'spelldmg*': 'a spell whose text deals damage to an enemy',
-         'textdmg*': 'a unit (or building, item, weapon) whose text deals damage to an enemy',
-         'position*': 'position: an effect or condition on its own units beside, around or behind it, or on the unit to its right or left',
-         'countboard*': 'counts the units on the board',
-         'combo*': 'combos: the share of the faction\'s card pairs the library links',
-         'cheapunit*': 'a unit in the cheapest third of its game\'s units', 'dearunit*': 'a unit in the dearest third of its game\'s units',
-         'strength*': 'its units\' strength per supply (Stormbound: the one number; Gwent: power)',
-         'defence*': 'its units\' defence per supply (Stormbound: the one number; Gwent: power + armour)'}
-NUMERIC = {'strong': 0, 'tough': 1}  # spokes measured from unit stats per supply, not from card effects
+NUMERIC = {'strong': 0, 'tough': 1}  # radii measured from unit stats per supply, not from card effects
+MIXED = {'wide': 'cheapunit*', 'together': 'combo*'}  # radii that average their concepts' value with a second value
 SPELL_SPOKES = ('spelldmg', 'spellpay')  # a game with no spells has no value there (Into the Breach's boosted weapons are no spells)
 MIN_GAME_CARDS = 10  # with 5, two cards of a small game gave one of the highest values of the wheel (Inscryption Beast, breaks their plan)
 SHRINK = 5  # smoothing: every faction counts as if it had 5 more cards at its game's average (small factions swing less)
@@ -60,62 +37,69 @@ NO_VALUE = {('into_the_breach', 'strong'): 'its units\' damage comes from weapon
             ('into_the_breach', 'wide'): 'its units have no cost', ('into_the_breach', 'tall'): 'its units have no cost',
             **{(g, k): 'the game has no spells' for g in ('inscryption', 'into_the_breach') for k in ('spelldmg', 'spellpay')},
             **{('sts1', k): 'the player has no units' for k in ('strong', 'tough', 'wide', 'tall', 'spends', 'heals', 'growsdef', 'protects', 'textdmg')}}
-CHECKS = [  # Kaptain's points: (game, faction, spoke, lowest value it must have)
+CHECKS = [  # Kaptain's points: (game, faction, radius, lowest value it must have)
     ('faeria', 'Red', 'textdmg', 1.5),  # 9 Nov 2026: Red is Faeria's fixed-damage faction (its units' text deals it)
     ('faeria', 'Red', 'strikes', 1.0),  # and its units strike too; one number used to hide that
-    ('faeria', 'Green', 'textdmg', 0.3),  # 14 Nov 2026: Green kills by making its unit fight a chosen enemy (Deepwood Stalker, Frog-Tosser; fight_enemy), 0.13 without
-    ('into_the_breach', 'Ranged', 'textdmg', 0.5),  # 14 Nov 2026: weapon damage hits enemies (Artemis Artillery); the radius had no value before
-    ('runeterra', 'Demacia', 'many', 0.1),  # 14 Nov 2026: Judgment, one ally strikes all battling enemies (aoe_damage); 0.06 without
+    ('faeria', 'Green', 'textdmg', 0.3),  # 14 Nov 2026: Green kills by making its unit fight a chosen enemy (Deepwood Stalker, Frog-Tosser; fight_enemy)
+    ('into_the_breach', 'Ranged', 'textdmg', 0.5),  # 14 Nov 2026: weapon damage hits enemies (Artemis Artillery)
+    ('runeterra', 'Demacia', 'many', 0.1),  # 14 Nov 2026: Judgment, one ally strikes all battling enemies (aoe_damage)
     ('inscryption', 'Undead', 'strong', 0.9),  # 0.75 when 4 Bones counted as 4 Blood (SUPPLIES)
 ]
-CARD_CASES = [  # (game, card, starred concept, whether it must have it): every game counts the same (16 Nov 2026)
-    ('duelyst', 'Roar', 'position*', True), ('stormbound', 'Doctor Mia', 'position*', True),  # an effect on my own units beside it
-    ('duelyst', 'Excelsious', 'position*', False), ('stormbound', 'Dubious Hags', 'position*', False),  # only enemies beside it: an area hit
-    ('runeterra', 'Legion Drummer', 'position*', True),  # its neighbour to the right in its own row
-    ('runeterra', 'Puffcap Peddler', 'disrupt*', True), ('faeria', None, 'disrupt*', True)]  # junk cards given to the enemy, in every game
-GAPS = [('inscryption', 'disrupts'), ('sts1', 'tall'), ('into_the_breach', 'spellpay'), ('inscryption', 'spellpay')]  # must have no value: 5 cards in the whole game; a game with no units; games with no spells
-HAS = [('into_the_breach', 'textdmg'),  # weapons' damage on a tile counts as damage on enemies (DAMAGE_NO_SIDE_GAMES, 14 Nov 2026)
-       ('gwent', 'grows'), ('gwent', 'growsdef'),  # must have a value: growth of Gwent's one number counts as both
-       ('duelyst', 'pos'), ('faeria', 'pos'), ('stormbound', 'pos')]  # position in the board games
+CARD_CASES = [  # (game, card, radius, whether the card must count for it): every game counts the same
+    ('runeterra', 'Puffcap Peddler', 'disrupts', True), ('faeria', None, 'disrupts', True),  # junk cards given to the enemy, in every game
+    ('runeterra', 'Mystic Shot', 'spelldmg', True), ('runeterra', 'Mystic Shot', 'textdmg', False),  # 17 Nov 2026: a spell's damage
+    ('runeterra', 'Chempunk Shredder', 'textdmg', True),  # a unit's own text deals it
+    ('runeterra', 'Legion Saboteur', 'textdmg', False),  # it only hits the enemy Nexus: no player health here
+    ('runeterra', 'Elixir of Iron', 'growsdef', True),  # +defence counts on grows defence
+    ('runeterra', 'Greenglade Duo', 'wide', True),  # reacts to a unit played: many units on my side
+    ('runeterra', 'The Arsenal', 'spends', True)]  # counts deaths: a count goes with what it counts
+GAPS = [('sts1', 'tall'), ('into_the_breach', 'spellpay'), ('inscryption', 'spellpay')]  # must have no value: a game with no units; games with no spells
+HAS = [('into_the_breach', 'textdmg'),  # weapons' damage on a tile counts as damage from units' text (no spells)
+       ('gwent', 'grows'), ('gwent', 'growsdef')]  # must have a value: growth of Gwent's one number counts as both
 MIN_DECK_CARDS = 10
 MIN_DECKS_BOTH = 5  # a game gives a decks value for two radii only when at least 5 of its decks hold both
 MIN_LINKS_GAME = 5  # a game counts for two radii only when chance alone would give it 5 linked pairs
 MIN_LINKS = 20  # two radii get a "work together" number only when chance alone would give 20 linked pairs  # Faeria Pandora has 1 card in decks
-SPOKES = [  # (key, axis number, axis name, this radius, concepts, area of the circle); every concept counts in every game
-    # in circle order: neighbours belong together, and the radii of one area sit side by side
-    ('strong', 9, 'Unit stats', 'strength', ['strength*'], 'Fighting'),
-    ('grows', 3, 'Damage', 'grows strength', ['attack_gain', 'multiply_own*'], 'Fighting'),
-    ('strikes', 3, 'Damage', 'strikes more or first', ['on_attack',
-        'multi_attack', 'first_strike', 'attack_now', 'excess_damage', 'counterattack', 'on_fight', 'piercing'], 'Fighting'),
-    ('textdmg', 3, 'Damage', 'damage from units\' text', ['textdmg*'], 'Damage'),
-    ('kills', 2, 'Enemy units', 'kills outright', ['kill*', 'removal', 'deathtouch'], 'Damage'),
-    ('many', 6, 'Targets', 'many at once', ['aoe_damage',
-        'board_wipe', 'multi_target_attack', 'rows', 'row_effects', 'area_templates', 'countboard*'], 'Damage'),
-    ('spelldmg', 3, 'Damage', 'damage from spells', ['spelldmg*'], 'Spells'),
-    ('spellpay', 3, 'Damage', 'rewards playing spells', ['on_spell', 'spells_played_condition', 'spell_power'], 'Spells'),
-    ('stops', 2, 'Enemy units', 'stops them', ['stop*'], 'Control'),
-    ('disrupts', 2, 'Enemy units', 'breaks their plan in other ways', ['disrupt*', 'disruption'], 'Control'),
-    ('supply', 4, 'Supply and cards', 'more supply', ['base_resource_gain', 'resource_banking', 'coin_economy'], 'Cards and supply'),
-    ('cheaper', 4, 'Supply and cards', 'cheaper or stronger hand', ['cost_reduction',
-        'free_play', 'cost_set', 'in_hand_buff'], 'Cards and supply'),
-    ('cards', 4, 'Supply and cards', 'more cards', ['draw', 'generate_cards'], 'Cards and supply'),
-    ('picks', 8, 'Hand and discard pile', 'picks and copies', ['copy', 'tutor', 'retain', 'selection'], 'Cards and supply'),
-    ('back', 8, 'Hand and discard pile', 'brings back', ['recycle', 'return_to_hand', 'revive'], 'Cards and supply'),
-    ('wide', 7, 'Width', 'many cheap units', ['cheapunit*', 'summon'], 'Many units and dying'),
-    ('spends', 1, 'Own units', 'spends them', ['sacrifice', 'self_destruct',
-        'death_trigger',
-        'other_death_trigger', 'on_sacrifice',
-        'death_count', 'friendly_fire'], 'Many units and dying'),
-    ('together', 5, 'Works with others', 'position and combos', ['position*', 'combo*'], 'Together'),
-    ('heals', 1, 'Own units', 'heals them', ['heal',
-        'regeneration'], 'Staying alive'),
-    ('growsdef', 1, 'Own units', 'grows defence', ['defence_gain'], 'Staying alive'),
-    ('protects', 1, 'Own units', 'protects them', ['shield', 'protection',
-        'immunity', 'cheat_death',
-        'damage_reduction', 'block_armor', 'tank'], 'Staying alive'),
-    ('tough', 9, 'Unit stats', 'defence', ['defence*'], 'Staying alive'),
-    ('tall', 7, 'Width', 'a few big units', ['dearunit*'], 'Staying alive'),
-]
+LOOK = {  # radius key -> (axis number, axis name, area of the circle), in circle order: neighbours belong together
+    'strong': (9, 'Unit stats', 'Fighting'), 'grows': (3, 'Damage', 'Fighting'), 'strikes': (3, 'Damage', 'Fighting'),
+    'textdmg': (3, 'Damage', 'Damage'), 'kills': (2, 'Enemy units', 'Damage'), 'many': (6, 'Targets', 'Damage'),
+    'spelldmg': (3, 'Damage', 'Spells'), 'spellpay': (3, 'Damage', 'Spells'), 'stops': (2, 'Enemy units', 'Control'),
+    'disrupts': (2, 'Enemy units', 'Control'), 'supply': (4, 'Supply and cards', 'Cards and supply'),
+    'cheaper': (4, 'Supply and cards', 'Cards and supply'), 'cards': (4, 'Supply and cards', 'Cards and supply'),
+    'picks': (8, 'Hand and discard pile', 'Cards and supply'), 'back': (8, 'Hand and discard pile', 'Cards and supply'),
+    'wide': (7, 'Width', 'Many units and dying'), 'spends': (1, 'Own units', 'Many units and dying'),
+    'together': (5, 'Works with others', 'Together'), 'heals': (1, 'Own units', 'Staying alive'),
+    'growsdef': (1, 'Own units', 'Staying alive'), 'protects': (1, 'Own units', 'Staying alive'),
+    'tough': (9, 'Unit stats', 'Staying alive'), 'tall': (7, 'Width', 'Staying alive')}
+NAMES = {'strong': 'strength', 'tough': 'defence', 'tall': 'a few big units'}  # the radii measured from the units' numbers
+NUMBER_CONCEPTS = {'strong': ['strength*'], 'tough': ['defence*'], 'tall': ['dearunit*']}
+
+
+def load_radii():
+    """radii.tsv -> {radius: name}, {concept: [radii]}: a concept on two radii counts on each by PART"""
+    names, of = dict(NAMES), collections.defaultdict(list)
+    with open(RADII_FILE, encoding='utf-8') as f:
+        for r in csv.DictReader(f, delimiter='\t'):
+            if r['radius'].startswith('(') or not r['concept']: continue
+            names[r['radius']] = r['name']
+            if r['radius'] not in of[r['concept']]: of[r['concept']].append(r['radius'])
+    return names, dict(of)
+
+
+RNAME, CONCEPT_RADII = load_radii()
+COUNTED = ('count_payoff', 'condition_count', 'variable_stats')  # a count goes on the radius of what it counts (count_radius)
+
+
+def concept_key(k, r):
+    """the name a concept counts under on radius r: itself, or concept@radius when it is on two radii or is a count"""
+    return k if len(CONCEPT_RADII.get(k, ())) == 1 and k not in COUNTED else f'{k}@{r}'
+
+
+SPOKES = [  # (key, axis number, axis name, this radius, concepts, area of the circle)
+    (k, LOOK[k][0], LOOK[k][1], RNAME[k],
+     NUMBER_CONCEPTS.get(k, []) + [concept_key(c, k) for c, rs in CONCEPT_RADII.items() if k in rs]
+     + [f'{c}@{k}' for c in COUNTED], LOOK[k][2]) for k in LOOK]
+USABLE = {k for s in SPOKES if s[0] not in NUMBER_CONCEPTS for k in s[4]}  # the concept names a faction's instances are counted over
 
 
 def unit_stats(game, power, health, st):
@@ -193,9 +177,81 @@ def side_concepts(card, src, con):
     return out
 
 
-def star_of(card, ks, star, by):
-    """a starred concept the card has for holding concepts of `by`: it comes from what gives those"""
-    ks.add(star); note_src(card, star, *{t for k in ks & set(by) for t in SOURCES[card].get(k, ())})
+STAT_PART = {'power': ('grows',), 'health': ('growsdef',), 'armor': ('growsdef',), 'strength': ('grows', 'growsdef'),
+             'size': ('grows', 'growsdef'), 'base_power': ('grows',)}  # Gwent's and Stormbound's one number grows both
+DAMAGE = ('damage', 'ping', 'mark_target')  # by the card: a spell's on damage from spells; on the player: nowhere
+RULE_PART = {'moves': 'together', 'summoned': 'together'}  # how a unit moves or where it may be placed; any other rule: strikes
+COUNT_EVENT = {'dies': 'spends', 'killed': 'spends', 'sacrificed': 'spends', 'damaged': 'spends', 'drawn': 'cards',
+               'discarded': 'back', 'recalled': 'back', 'summoned': 'wide', 'attacks': 'strikes', 'healed': 'heals', 'moves': 'together'}
+COUNT_ZONE = {'hand': 'cards', 'deck': 'picks', 'discard': 'back'}
+COUNT_KIND = {'lane_resource': 'supply', 'mana': 'supply', 'secondary_resource': 'supply', 'position': 'together'}
+
+
+def kw_concepts(c):
+    """keyword card id -> its concept (vocab tree)"""
+    return {kw: k for kw, k in c.execute("select k.id, v.tree from card k join vocab v on v.field='keyword' and v.value=coalesce((select s.value "
+                                         "from vocab s where s.field='keyword' and s.value=k.game || ':' || k.name), k.name) where v.tree!=''")}
+
+
+def count_radius(row, kws):
+    """the radius of what a count row of flat_if counts (Kaptain, 17 Nov 2026: a count goes with what it counts), or None"""
+    test, event, kind, side, zone, ev_kind, with_ = row
+    if test == 'amount_event_count':
+        if event == 'played': return 'wide' if ev_kind in UNIT_CATS else 'spellpay'
+        return COUNT_EVENT.get(event)
+    if kind == 'keyword' and (with_ or '').startswith('keyword is '):
+        k = kws.get(int(with_.split()[-1])) if with_.split()[-1].isdigit() else None
+        rs = CONCEPT_RADII.get(k, ())
+        return rs[0] if rs else None
+    if zone in COUNT_ZONE: return COUNT_ZONE[zone]
+    if kind in COUNT_KIND: return COUNT_KIND[kind]
+    if kind == 'unit' and side != 'enemy' and zone in (None, 'board'): return 'wide'
+    return None
+
+
+def split_concepts(c, con):
+    """a concept on two radii, and a count, become concept@radius on each card, with the sources of that part (PART):
+    damage by the card (a spell's on "damage from spells"; damage to the player counts nowhere), a stat by the number
+    it changes, on_ally_play by what is played, rule_change by the rule it changes, a count by what it counts. A source the rows don't place goes on the
+    concept's first radius; stats equal to a count the rows don't place grow strength; any other count they don't place
+    counts nowhere (UNPLACED)."""
+    cat = dict(c.execute('select id, category from card'))
+    on_player = {(card, f'{ab}.{seq}') for card, ab, seq in c.execute("select card, ability, seq from flat_do where on_kind='player'")}
+    kws = kw_concepts(c)
+    place = collections.defaultdict(dict)  # (card, concept) -> source -> radii
+    for card, ab, seq, via, k, params, ev in c.execute("select card, ability, seq, via, concept, params, param_event from flat_do where "
+                                                             "concept in ('stat_gain','stat_multiply','stat_fixed','rule_change')"):
+        src = f'{ab}.{seq}' if ab is not None else f'kw{via}'
+        if k == 'rule_change': rs = (RULE_PART.get(ev, 'strikes'),)
+        else: rs = tuple(sorted({r for p in (params or '').split(';') for r in STAT_PART.get(p.split('=')[0], ())}))
+        if rs: place[(card, k)][src] = rs
+    for t, kcol in (('flat_when', 'obj_kind'), ('flat_if', 'ev_obj_kind')):
+        for card, ab, via, kind in c.execute(f"select card, ability, via, {kcol} from {t} where concept='on_ally_play'"):
+            place[(card, 'on_ally_play')][str(ab) if ab is not None else f'kw{via}'] = ('wide',) if kind in UNIT_CATS else ('spellpay',)
+    counts_of = collections.defaultdict(set)  # (card, ability) -> radii its counts count
+    for card, ab, via, *row in c.execute("select card, ability, via, test, event, of_kind, of_side, of_zone, ev_obj_kind, of_with from flat_if "
+                                         "where test in ('amount_count','amount_event_count')"):
+        r = count_radius(row, kws)
+        if r:
+            for key in {str(ab) if ab is not None else None, f'kw{via}' if via is not None else None} - {None}: counts_of[(card, key)].add(r)
+    for card in list(con):
+        for k in list(con[card]):
+            rs_all = CONCEPT_RADII.get(k, ())
+            if k not in COUNTED and len(rs_all) < 2: continue
+            for src in SOURCES[card].get(k, ()) or ('',):
+                if k in DAMAGE: rs = ('none',) if (card, src) in on_player else ('spelldmg' if cat.get(card) == 'spell' else 'textdmg',)
+                elif k in COUNTED:
+                    rs = tuple(counts_of.get((card, src.split('.')[0]), ()))
+                    if not rs and k == 'variable_stats': rs = ('grows',)  # what it counts is not in the rows: its stats still grow
+                    if not rs: UNPLACED[k] += 1
+                else: rs = place.get((card, k), {}).get(src) or rs_all[:1]
+                for r in rs:
+                    if r == 'none': continue  # damage to the player: no player health here (Kaptain)
+                    con[card].add(f'{k}@{r}')
+                    if src: note_src(card, f'{k}@{r}', src)
+
+
+UNPLACED = collections.Counter()  # count instances whose rows don't say what they count
 
 
 def tag(c, x, games):
@@ -204,37 +260,7 @@ def tag(c, x, games):
     row_sources(c)
     for card, k in c.execute('select card, concept from flat_concept'):
         con[card].add(k)
-    for card, k, *src in c.execute(f"select card, concept, {DO_SRC} from flat_do where on_side='enemy' and coalesce(on_kind,'')!='player' and "
-                                   + faction_asks.ROW_ORIGIN):
-        for star, ks in (('stop*', STOP_ON_ENEMY), ('disrupt*', DISRUPT_ON_ENEMY), ('kill*', KILL_ON_ENEMY)):
-            if k in ks: con[card].add(star); note_src(card, star, *src)
-    for card, *src in c.execute(f"select card, {DO_SRC} from flat_do where concept='stat_multiply' and coalesce(on_side,'mine')!='enemy' and "
-                                + faction_asks.ROW_ORIGIN):  # doubling my own unit's stat grows it (Kaptain)
-        con[card].add('multiply_own*'); note_src(card, 'multiply_own*', *src)
-    for card, k, side, *src in c.execute(f"select card, concept, on_side, {DO_SRC} from flat_do where concept='debuff' and "
-                                         + faction_asks.ROW_ORIGIN):
-        if k == 'debuff' and side == 'enemy': con[card].add('weaken*'); note_src(card, 'weaken*', *src)
-    for card, *src in c.execute(f"select card, {IF_SRC} from flat_if where test='amount_count' and of_kind='unit' and of_zone='board' and " + faction_asks.ROW_ORIGIN):
-        con[card].add('countboard*'); note_src(card, 'countboard*', *src)
-    for card, *src in c.execute(f"select card, {DO_SRC} from flat_do where on_side='enemy' and coalesce(on_kind,'')!='player' and act='cant' and param_event in "
-                                + repr(CANT) + " and " + faction_asks.ROW_ORIGIN):
-        con[card].add('stop*'); note_src(card, 'stop*', *src)
-    for q, cols in zip(BESIDE, (DO_SRC, IF_SRC, IF_SRC, DO_SRC)):
-        for card, *src in c.execute(q.replace('select card from', f'select card, {cols} from', 1) + faction_asks.ROW_ORIGIN):
-            con[card].add('position*'); note_src(card, 'position*', *src)
-    dmg = collections.defaultdict(set)
-    for card, *src in c.execute(f"select card, {DO_SRC} from flat_do where on_side='enemy' and concept in " + repr(DAMAGE_ON_ENEMY) + " and " + faction_asks.ROW_ORIGIN):
-        dmg[card] |= {str(v) for v in src if v is not None}
-    # a game whose weapons hit the tile aimed at, whoever stands there: its damage rows name no side and count too
-    for card, *src in c.execute(f"select f.card, f.ability || '.' || f.seq, 'kw' || f.via from flat_do f join card k on k.id=f.card where f.on_side is null and k.game in ("
-                                + ','.join(repr(g) for g in DAMAGE_NO_SIDE_GAMES) + ") and k.category='ability' and f.concept in " + repr(DAMAGE_ON_ENEMY)):
-        dmg[card] |= {str(v) for v in src if v is not None}
-    for (card,) in c.execute("select card from flat_concept where concept in (" + ','.join(repr(k) for k in DAMAGE_BY_CONCEPT) + ")"):
-        dmg[card] |= {t for k in DAMAGE_BY_CONCEPT for t in SOURCES[card].get(k, ())}
-    for i, cat in c.execute('select id, category from card'):
-        if i in dmg:
-            star = 'spelldmg*' if cat == 'spell' else 'textdmg*'
-            con[i].add(star); note_src(i, star, *dmg[i])
+    split_concepts(c, con)
     pools = {g: x.pool(g) for g in games}
     raw = {i: (g, cat, cost, unit_stats(g, p, h, st), (ct or '').lower()) for i, g, cat, cost, p, h, st, ct in
            c.execute('select id, game, category, cost, power, health, stats, cost_text from card')}
@@ -254,8 +280,6 @@ def tag(c, x, games):
         hi = third(lambda t: sum(1 for v in costs if v >= t))  # (when most units share one cost, cheap is under it and dear is over it)
         for i in pool:
             ks, v = con[i], stats[i][1]
-            if ks & set(STOP_ALWAYS): star_of(i, ks, 'stop*', STOP_ALWAYS)
-            if ks & set(DISRUPT_ALWAYS): star_of(i, ks, 'disrupt*', DISRUPT_ALWAYS)
             if stats[i][0] not in UNIT_CATS or v is None or lo is None or lo >= hi: continue
             if v <= lo: ks.add('cheapunit*')
             if v >= hi: ks.add('dearunit*')
@@ -270,11 +294,10 @@ def main():
     con, pools, stats = tag(c, x, games)
     if '--cards' in sys.argv:
         return dump(c, x, games, con, pools, sys.argv[sys.argv.index('--cards') + 1])
-    lacks = {(g, s[0]) for g in games for s in SPOKES if s[0] != 'together' and (
+    lacks = {(g, s[0]) for g in games for s in SPOKES if (
              sum(1 for i in pools[g] if stats[i][2 + NUMERIC[s[0]]] is not None and stats[i][0] in UNIT_CATS) if s[0] in NUMERIC
              else sum(1 for i in pools[g] if counts(con[i], g, s[4]))) < MIN_GAME_CARDS
              or (s[0] in SPELL_SPOKES and sum(1 for i in pools[g] if stats[i][0] == 'spell') < MIN_GAME_CARDS)}
-    no_pos = {g for g in games if sum(1 for i in pools[g] if 'position*' in con[i]) < MIN_GAME_CARDS}
     pairs = link_pairs()
     deck_n = collections.Counter()  # card -> decks that play it
     deck_lists = collections.defaultdict(list)  # game -> every deck of decks.tsv, as its set of cards
@@ -299,13 +322,13 @@ def main():
                    'cards': shares({i: 1 for i in ids}, con, pairs, g, stats),
                    'decks': shares(w_decks, con, pairs, g, stats) if len(w_decks) >= MIN_DECK_CARDS else None}
             for m in ('cards', 'decks'):
-                for g2, k in lacks | {(p, 'pos') for p in no_pos}:
+                for g2, k in lacks:
                     if g2 == g and rec[m]: rec[m][k] = None
             rows.append(rec)
     for mode in ('cards', 'decks'):
         for g in games:
             ms = [r[mode] for r in rows if r['game'] == g and r[mode]]
-            for k in [s[0] for s in SPOKES if s[0] != 'together'] + ['pos', 'combo']:
+            for k in [s[0] for s in SPOKES] + ['cheap', 'combo']:
                 vals = [q[k] for q in ms if q[k] is not None]
                 avg = sum(vals) / len(vals) if vals else 0
                 for q in ms:
@@ -313,9 +336,9 @@ def main():
                     share = q[k] if k in ('combo',) + tuple(NUMERIC) else (q[k] * q['_n'] + SHRINK * avg) / (q['_n'] + SHRINK)
                     q[k + '_v'] = share / avg
             for q in ms:
-                both = [q[k] for k in ('pos_v', 'combo_v') if q[k] is not None]
-                q['together_v'] = sum(both) / len(both) if both else None
-                q['together'] = None
+                for k, second in (('wide', 'cheap'), ('together', 'combo')):  # MIXED: the average of the two values
+                    both = [q[t + '_v'] for t in (k, second) if q[t + '_v'] is not None]
+                    q[k + '_v'] = sum(both) / len(both) if both else None
                 for sk in SPOKES:  # the final smoothing (POWER)
                     v = q[sk[0] + '_v']
                     q[sk[0] + '_v'] = None if v is None else round(v ** POWER, 3)
@@ -342,9 +365,11 @@ def main():
         v = next((r['cards'][key + '_v'] for r in rows if r['game'] == g and r['faction'] == fac), None)
         if v is None or v < low: print(f'CHECK FAILED: {g} {fac} {key} is {v}, should be at least {low}')
     names = {(g, n): i for i, g, n in c.execute('select id, game, name from card')}
+    rad = {s[0]: s[4] for s in SPOKES}
     for g, n, k, want in CARD_CASES:
         ids = [names[(g, n)]] if n else [i for i in pools[g] if 'junk_cards' in con[i]]
-        if not ids or any((k in con[i]) != want for i in ids): print(f'CHECK FAILED: {g} {n or "junk cards"} should {"" if want else "not "}have {k}')
+        if not ids or any(counts(con[i], g, rad[k]) != want for i in ids): print(f'CHECK FAILED: {g} {n or "junk cards"} should {"" if want else "not "}count for {k}')
+    if UNPLACED: print('counts whose rows do not say what they count (counted nowhere):', dict(UNPLACED))
     for want, pairs_ in ((False, GAPS), (True, HAS)):
         for g, key in pairs_:
             if any((r['cards'][key + '_v'] is not None) != want for r in rows if r['game'] == g):
@@ -450,19 +475,38 @@ def near(arg):
 
 
 def shown(k):
-    return SHOWN.get(k, k)
+    """a concept as the page lists it: a part of one that is on two radii, and a count, say so"""
+    base = k.split('@')[0]
+    return base + (' (by what it counts)' if base in COUNTED else ' (its part here)' if '@' in k else '')
 
 
 def fmt(v): return '' if v is None else f'{v:.4f}'
 def per_spoke(m, suf): return None if not m else {**{s[0]: m.get(s[0] + suf) for s in SPOKES}, **({'lean': m.get('lean_v')} if suf else {})}
 
 
+def instances(card, k):
+    """how many abilities or keywords of the card give it concept k (one when it comes from what the card is)"""
+    units = set()
+    for t in SOURCES[card].get(k, ()):
+        if t.startswith('kw'): units.add(t); continue
+        ab = int(t.split('.')[0])
+        units |= KW_AB.get((card, ab)) or {f'ab{ab}'}
+    return len(units) or 1
+
+
 def shares(w, con, pairs, game, stats):
-    """per spoke, the share of the faction's cards (weighted) that count for it; unit stats per supply for NUMERIC"""
-    tot = sum(w.values())
+    """per radius, the faction's share of its instances of usable concepts (weighted) that are on it; unit stats per
+    supply for NUMERIC; for "a few big units" and the cheap part of "many units on my side", the share of its cards"""
+    inst = {i: {k: instances(i, k) for k in con[i] & USABLE} for i in w}
+    tot = sum(n * sum(inst[i].values()) for i, n in w.items()) or 1
+    cards = sum(w.values())
     out = {'_n': len(w)}
-    out.update({s[0]: sum(n for i, n in w.items() if counts(con[i], game, s[4])) / tot for s in SPOKES
-                if s[0] != 'together' and s[0] not in NUMERIC})
+    for s in SPOKES:
+        if s[0] in NUMERIC: continue
+        if s[0] == 'tall': out['tall'] = sum(n for i, n in w.items() if 'dearunit*' in con[i]) / cards; continue
+        ks = set(s[4])
+        out[s[0]] = sum(n * sum(v for k, v in inst[i].items() if k in ks) for i, n in w.items()) / tot
+    out['cheap'] = sum(n for i, n in w.items() if 'cheapunit*' in con[i]) / cards
     for key, j in NUMERIC.items():
         us = [(stats[i][2 + j], stats[i][1], n) for i, n in w.items() if stats[i][0] in UNIT_CATS and stats[i][2 + j] is not None]
         paid = [(v, cost, n) for v, cost, n in us if cost]
@@ -470,10 +514,9 @@ def shares(w, con, pairs, game, stats):
             out[key] = sum(v * n for v, _, n in paid) / sum(cost * n for _, cost, n in paid)
         else:
             out[key] = sum(v * n for v, _, n in us) / sum(n for *_, n in us) if us else None
-    out['pos'] = sum(n for i, n in w.items() if 'position*' in con[i]) / tot
     ids = sorted(w)
     linked = sum(w[a] * w[b] for k, a in enumerate(ids) for b in ids[k + 1:] if (a, b) in pairs)
-    allp = (tot * tot - sum(n * n for n in w.values())) / 2
+    allp = (cards * cards - sum(n * n for n in w.values())) / 2
     out['combo'] = linked / allp if allp else 0
     return out
 
@@ -496,7 +539,7 @@ def dump(c, x, games, con, pools, path, per=4):
         for key, n, axis, end, cons, _ in SPOKES:
             for k in cons:
                 if k == 'combo*': continue
-                f.write(f'\n## spoke {n} {axis}: {end} | concept {shown(k)}\n')
+                f.write(f'\n## spoke {n} {axis}: {end} | concept {k}\n')
                 for g in games:
                     ids = sorted(i for i in pools[g] if counts(con[i], g, [k]))
                     if not ids: continue

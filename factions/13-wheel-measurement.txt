@@ -1,5 +1,5 @@
 ==================================================================
-13. THE WHEEL MEASUREMENT: how the radii are measured, and how to redo it (9 Nov 2026)
+13. THE WHEEL MEASUREMENT: how the radii are measured, and how to redo it
 ==================================================================
 What it is: `library/cards_db/axes.py` measures every real faction of the library (10+ cards; 43 factions of 8 games on 9 Nov 2026; Monster Train is left out, NOT_MEASURED in axes.py: Kaptain, 9 Nov
 2026, a different kind of game; Marvel Snap has no factions)
@@ -8,44 +8,32 @@ on the radii of factions/12 and writes `library/cards_db/axes.tsv` and `factions
 off, the map of factions (the two directions in which factions differ most), the numbers table, the closest factions,
 and a switch between all cards and cards in top decks.
 
-How a value is made (all agreed with Kaptain, 9 Nov 2026):
+How a value is made (all agreed with Kaptain):
 - Each end of an axis is its own radius: one number per axis (one end minus the other) hid factions strong at both ends
-  (Faeria Red has the most damage from its units' text and also strikes). Axes 4, 5 and 8 have a radius for their first end only: the
-  other end (units on the board now, works alone, plays what it draws) is a low value on that radius.
-- Every usable concept belongs to exactly one radius (SPOKES in axes.py; shown on hover in the page). Each concept
-  instance (one effect of one card that gives the concept) counts for its concept's radius; the card itself goes
-  nowhere: "deal 2, then draw a card" puts one instance on damage and one on more cards. A concept counts the same in
-  every game; one that meant two things was split in the library (heal on the player is
-  player_heal, Slay the Spire's Block is player_block_armor). "More supply" counts supply that pays for cards (base_resource_gain: mana,
-  spell mana, faeria, and Inscryption's Bones and Mox gems), not a resource spent by effects (Gwent's coins, Monster
-  Train's Echo); "grows strength" also counts my own unit's stat doubled.
-  A game with fewer than 10 spells (Into the Breach, Inscryption, Marvel Snap) has no value on the two spell radii
-  (SPELL_SPOKES): Into the Breach's boosted weapons are no spells.
-- Damage (Kaptain, 10 Nov 2026: "fixed damage" counted the wrong things and spells had no radius). The old radius went
-  by marks that differ per game, missed 158 of Gwent's 259 damage cards, shared half its cards with "kills them" and
-  counted cards that destroy everything. Now three radii that share no mark: "damage from units' text" (a unit,
-  building, item or weapon whose own text deals damage to an enemy), "damage from spells" (a spell that does), both
-  read from the card's rows (DAMAGE_ON_ENEMY in axes.py; a unit's strike is no row), and "kills outright" (destroy,
-  banish, removal, deathtouch: no damage).
-- Fights and tiles (14 Nov 2026). A card that makes my unit strike or fight a chosen enemy (concept fight_enemy: Faeria
-  Hunt Down, Runeterra Single Combat) counts as damage: from units' text on a unit, from spells on a spell. Into the
-  Breach weapons hit a tile, friend or enemy, and their records name no side: their damage counts as damage on enemies
-  (DAMAGE_NO_SIDE_GAMES in axes.py). One unit striking all enemies is "many at once" (Runeterra Judgment).
-- "Rewards playing spells": cards that react when a spell is played, count the spells played, or make spells
-  stronger (the last only in Duelyst and Runeterra; in Slay the Spire that mark is on 131 cards and was not checked).
-  A plain share of spells is no radius: inside a game the factions have nearly the same share (Duelyst 40-46%,
-  Runeterra 34-44%, Gwent 10-18%).
-- Growth (more strength, more defence on its own units) counts for "units' own strikes" and for "keeps them alive" in
-  every game with units; in Gwent the one number grows, so its growth counts for both (the rule of axis 9).
-- "Breaks their plan" also counts an enemy unit that can't attack or can't move (CANT in axes.py). Kaptain, 9 Nov 2026:
-  "can't block" does not count. "Can't strike" does not either: it is Inscryption's Waterborne, which protects the unit.
-- "Many at once" also counts a card whose amount is the number of units on the board (countboard* in axes.py).
-- Position in every game: moving my units, and an effect or condition on its OWN units beside, around or behind it (BESIDE in axes.py,
-  read from the side written in the card's rows, so area hits and pushes on enemies stay out), or on its neighbour to
-  the right or left in its own row (Runeterra's Support). A game with under 10 such cards measures combos only.
-  Junk cards given to the enemy count for "breaks their plan in other ways" in every game. Cases: CARD_CASES in axes.py.
-- A faction's value = its share of concept instances on the radius, divided by its game's average share (0 = none,
-  1 = average), so games that mark more concepts per card don't stand out.
+  (Faeria Red has the most damage from its units' text and also strikes). Axes 4, 5 and 8 have a radius for their first
+  end only: the other end (units on the board now, works alone, plays what it draws) is a low value on that radius.
+- Every usable concept is on one radius (`factions/wheel/work/radii.tsv`; axes.py builds SPOKES from it, shown on hover
+  in the page). A card holds one instance of a concept for each of its abilities or keywords that gives it (one when the
+  concept comes from what the card is): "deal 2, then draw a card" puts one instance on damage and one on more cards in
+  hand. A faction's share on a radius = its instances there / all its instances of usable concepts.
+- A few concepts count on two radii, each instance by what its rows say: deal damage, small hits and an enemy marked
+  for later hits go on "damage from spells" on a spell and on "damage from units' text" on any other card (Into the
+  Breach's weapons hit a tile and are no spells); a stat change by the number it changes (strength on "grows
+  strength", defence on "grows defence"; Gwent's and Stormbound's one number on both); "when I play another card" on
+  "many units on my side" when it reacts to a unit, else on "rewards playing spells"; "a rule changed for both players"
+  on "position and combos" when the rule is how a unit moves or where it may be placed, else on "strikes more".
+- A trigger or a condition goes on the radius of what it reacts to; a count goes with what it counts, read from its rows
+  (count_radius in axes.py: "if 3 allies died" on "spends them", "for each card in my hand" on "more cards in hand", a
+  keyword counted on that keyword's radius). A count whose rows don't say what it counts goes nowhere (axes.py prints how
+  many); stats equal to such a count still grow strength.
+- Damage to the player counts nowhere (no player health here); junk cards given to the enemy count for "breaks their
+  plan in other ways" in every game. Cases: CARD_CASES, CHECKS, GAPS and HAS in axes.py.
+- "More supply" counts supply that pays for cards (base_resource_gain: mana, spell mana, faeria, and Inscryption's Bones
+  and Mox gems), not a resource spent by effects (Gwent's coins, Monster Train's Echo).
+- A game with fewer than 10 spells (Into the Breach, Inscryption, Marvel Snap) has no value on the two spell radii
+  (SPELL_SPOKES).
+- A faction's value = its share divided by its game's average share (0 = none, 1 = average), so games that mark more
+  concepts per card don't stand out.
 - Unit stats are numbers, not concepts: strength and defence per supply (per unit where a game's units mostly have no
   cost). unit_stats() reads each game's own fields: Stormbound's one number counts as both; Gwent's power is strength and
   power + armour is defence; Into the Breach has only defence (its damage is in weapons). A game paid in several kinds of
@@ -53,28 +41,26 @@ How a value is made (all agreed with Kaptain, 9 Nov 2026):
   kind, so 4 Bones is not counted as 4 Blood.
 - Width: a cheap unit and a big unit are a unit up to, or from, the cost that cuts nearest to a third of its game's
   units (when most units share one cost, cheap is under it and big is over it). Spells never count as big units.
-- Lean = the strength value minus the defence value (axes.tsv, and the last column of the Numbers table).
-- "Position and combos" = the average of the position value and the combos value (the share of the faction's card pairs
+  "A few big units" = the share of the faction's cards that are big units. "Many units on my side" = the average of its
+  concepts' value (new units made, when I play a unit) and the value of its cheap units' share.
+- "Position and combos" = the average of its concepts' value (moving my units, swaps, help from allies beside it, board
+  features, the enemy camp, a named card in play or in hand) and the combos value (the share of the faction's card pairs
   that links.sqlite links).
+- Lean = the strength value minus the defence value (axes.tsv, and the last column of the Numbers table).
 - Smoothing (Kaptain: shapes looked like hedgehogs, then too flat): each faction counts as if it had SHRINK (5) more
-  concept instances at its game's average (not for unit stats and combos), then values are raised to POWER (0.75): 4 times the
+  cards at its game's average (not for unit stats and combos), then values are raised to POWER (0.75): 4 times the
   average shows as 2.8.
-- A game with under 10 concept instances for a radius gives its factions no value there (a dashed dot on the rim with its reason).
-  With 5, two cards of a small game gave one of the highest values of the wheel (Inscryption Beast, breaks their plan).
-  Radii with no value: Duelyst 1, Gwent 1, Faeria 3, Inscryption 9, Stormbound 11, Slay the Spire 11 (it has no
-  units), Into the Breach 15. Read the small games' shapes with care. The page shows each gap with its reason.
+- A game with under 10 cards for a radius gives its factions no value there (a dashed dot on the rim with its reason):
+  with 5, two cards of a small game gave one of the highest values of the wheel. Read the small games' shapes with care.
 - Two counts: all cards; or each card weighted by how many decks of decks.tsv play it (only factions with 10+ cards in
   decks). Deck lists hold each card once, without copies.
-- 23 radii in 8 areas (Kaptain, 9 Nov 2026: broad radii hid how factions differ, e.g. Freljord sets enemy strength to 0
-  and Noxus switches enemies off, both were "breaks their plan"; so five radii are split where most games have 10+
-  cards per part, and neighbours form areas drawn as coloured arcs; the area names are Claude's). In circle order:
-  Fighting: strength, grows strength, strikes more or first. Damage: damage from units' text, kills outright, many at
-  once. Spells: damage from spells, rewards playing spells.
-  Control: stops them (switch off, silence, can't attack, can't move), breaks their plan in other ways.
-  Cards and supply: more supply, cheaper or stronger hand, more cards, picks and copies, brings back.
-  Many units and dying: many cheap units, spends them. Together: position and combos.
+- 23 radii in 8 areas (broad radii hid how factions differ: Freljord sets enemy strength to 0 and Noxus switches enemies
+  off; neighbours form areas drawn as coloured arcs; the area names are Claude's). In circle order:
+  Fighting: strength, grows strength, strikes more. Damage: damage from units' text, kills outright, many at once.
+  Spells: damage from spells, rewards playing spells. Control: stops them, breaks their plan in other ways.
+  Cards and supply: more supply, cheaper or stronger hand, more cards in hand, picks cards, reuses cards.
+  Many units and dying: many units on my side, spends them. Together: position and combos.
   Staying alive: heals them, grows defence, protects them, defence, a few big units.
-  Not split, too few games with 10+ cards: "weakens enemy units" (3 games), "hurts its own units" (2 games).
 - Radii that work together (the wheel is a base for 20 factions with overlaps, so its radii must be things that can
   overlap and act on each other). The page's fourth view and `radius_links` in axes.py: for every two radii, how much
   more often than chance the library links an instance of one with an instance of the other in the same game, counted
@@ -82,9 +68,8 @@ How a value is made (all agreed with Kaptain, 9 Nov 2026):
   level that grows slowly (1 = 1, 10 = 2, 100+ = 3). Worked out per game (games where chance alone gives 5+ linked pairs)
   and averaged, so each game counts the same; a number only when chance gives 20+ linked pairs in all. The numbers:
   `library/cards_db/wheel/radius_links.tsv`.
-  "Rewards playing spells" is judged by real decks only, because such a card links to every spell. Strength,
-  defence and "position and combos" are numbers, not cards, and are not in the table: they shape a faction but are
-  not mechanics two factions can share.
+  "Rewards playing spells" is judged by real decks only, because such a card links to every spell. Strength, defence
+  and "position and combos" are not in the table: the first two are numbers, and combos are links themselves.
   "Cards in top decks" (Kaptain, 10 Nov 2026: how often radii appear in the same real decks, linked or not; the
   earlier version counted library links inside decks and every value came out above 1): per deck, the share of its
   concept instances in each radius; for radii A and B, the average of (A share x B share) over a game's decks divided by (average

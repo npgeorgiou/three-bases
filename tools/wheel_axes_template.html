@@ -50,7 +50,7 @@ const has=f=>!!Z(f);
 const ns='http://www.w3.org/2000/svg';
 function el(t,a,p){const e=document.createElementNS(ns,t);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
 function fmtRaw(a,v){if(a.key==='together')return'average of its position value and its combos value';return v==null?'–':Math.round(v*100)+'% of its cards'}
-function conc(a){return `<b>${a.n}. ${a.axis}: ${a.end}</b><br>Counts cards with: ${a.concepts.join('; ')}`}
+function conc(a){return `<b>${a.n}. ${a.axis}: ${a.end}</b><br>Counts the instances of: ${a.concepts.join('; ')}`}
 const valTxt=(v,f,a)=>v==null?'No value: '+f.why[a.key]:'Value '+v.toFixed(2)+' (0 = none, 1 = its game\'s average, after smoothing)';
 
 function buildFacs(){const box=document.getElementById('facs');box.innerHTML='';

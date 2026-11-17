@@ -26,28 +26,31 @@ is written in that step's chat, from the rules of the step, and its line here is
 
 ## Step 3. The archetypes
 - Claude -> `factions/wheel/archetypes.tsv`: one line per archetype of `archetypes_kaptain.txt` (key, its name in
-  Kaptain's list, can it exist here, the reason if not, what it is in this game, its needs (need = the concepts that can meet it; `radius:<key>` = a radius measured from the
-  units' numbers), the radii of each need).
+  Kaptain's list, can it exist here, the reason if not, what it is in this game, its needs (need = the concepts that
+  can meet it; `radius:<key>` = a radius measured from the units' numbers), the radii of each need).
 
 ## Step 4. The radii and how they work together
-- `SPOKES` in axes.py: key, name, the usable concepts that belong to the radius (each usable concept in exactly one).
+- `work/radii.tsv`: every usable concept, the radius it goes on (key and name), the part of it that counts there, and
+  whose decision it is; helpers kept off the radii; the radii measured from the units' numbers. `axes.py` builds
+  `SPOKES` from it (a concept on two radii counts as concept@radius, each instance where its rows put it: PART).
   A faction's value on a radius = its share of concept instances on the radius / its game's average share (1 =
-  average). 43 real factions of 8 games.
+  average). 43 real factions of 8 games. About 30 seconds.
 - `python3 axes.py` -> `axes.tsv`, `factions/wheel-axes.html`. How the values are made: `factions/13`.
-- `python3 mechanics_wheel.py links --radii` -> `wheel/radius_links.tsv` (`axes.radius_links`): per pair of radii
-  `cards`, `decks`, `games` (in how many games real cards link them), `level` (the linked pairs: 1 = 1, 10 = 2, 100+ =
+- `python3 mechanics_wheel.py links --radii` (about 30 seconds) -> `wheel/radius_links.tsv` (`axes.radius_links`): per
+  pair of radii `cards`, `decks`, `games` (in how many games real cards link them), `level` (the linked pairs: 1 = 1, 10 = 2, 100+ =
   3), worked out per game and averaged (`cards`: games where chance gives 5+ linked pairs, 20+ in all; `decks`: games
   with 5+ decks holding both). A link counts for a radius only when the effect that made it, on that card's side,
   belongs to the radius (the links' `a_ab`/`b_ab`), for chance too. Checked by `cases/wheel.tsv`.
 
 ## Step 5. The 20 shapes
-- `python3 ../../factions/wheel/work/shapes.py --write` (about 2 minutes) -> `factions/wheel/work/shapes.tsv` (letter
-  A-T, radius=value list). Without `--write` it prints the 20, their real factions, the archetypes each fits and the archetypes that fit no shape.
+- `python3 ../../factions/wheel/work/shapes.py --write` (under a minute) -> `factions/wheel/work/shapes.tsv` (letter
+  A-T, radius=value list). Without `--write` it prints the 20, their real factions, the archetypes each fits and the
+  archetypes that fit no shape.
 - Candidates: every 3-6 of a real faction's radii valued 1.2+ whose radii are all joined (step 4), with that faction's
-  values, that fit at least 2 archetypes (every need of the archetype has a radius among the candidate's). Picking: a search over 20 candidates, at most one per real faction; misses of the rules count 100 each, and
-  sameness (shared radii between two shapes, squared) decides the rest. Four fixed seeds, so every run gives the same.
-  A radius fewer than 2 real factions are strong at (strength,
-  defence) only has to stay under 5 shapes. It prints the rules missed.
+  values, that fit at least 2 archetypes (every need of the archetype has a radius among the candidate's). Picking: a
+  search over 20 candidates, at most one per real faction; misses of the rules count 100 each, and sameness (shared
+  radii between two shapes, squared) decides the rest. Four fixed seeds, so every run gives the same. A radius fewer
+  than 2 real factions are strong at only has to stay under 5 shapes. It prints the rules missed.
 
 ## Step 6. The links between concepts
 - `python3 mechanics_wheel.py links --concepts` (to write; the same count as `--radii`, every game including those

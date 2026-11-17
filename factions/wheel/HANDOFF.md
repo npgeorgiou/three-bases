@@ -7,10 +7,10 @@ One chat does one step; at its end, mark the step done here and say what it left
 | step | state | what it made |
 |---|---|---|
 | 1. Fix the library's concepts | done | concepts split by whom a row acts on; "Skill" removed; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
-| 2. The usable concepts | done; `concept_catch.py` still writes the share of each concept's cards on each radius: drop those columns in step 4 | `work/concepts.tsv`, `work/concepts.md` |
+| 2. The usable concepts | done | `work/concepts.tsv`, `work/concepts.md`: 117 usable, 44 helpers, 35 out |
 | 3. The archetypes | done | `archetypes.tsv`: 71 archetypes, 47 can exist, each with its needs (the concepts that can meet each, and their radii); Formidable fixed in the library (strikes_with_defence, stat_fixed) |
-| 4. The radii and how they work together | **next** | |
-| 5. The 20 shapes | to do | |
+| 4. The radii and how they work together | done | `work/radii.tsv` (every usable concept on its radius, agreed with Kaptain); `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` from concept instances |
+| 5. The 20 shapes | **next**: show Kaptain the 20 shapes for his OK | `work/shapes.tsv` (made on the step 4 numbers; every shape fits 2+ archetypes) |
 | 6. The links between concepts | to do | |
 | 7. The 20 groups and each faction's list | to do | |
 | 8. Theme, then tools | to do | |
@@ -18,18 +18,13 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 10. The seven answers, Stop 1 | to do | |
 
 ## What the next steps find in the files
-- Step 4: `axes.py` still counts cards, not concept instances, and its `SPOKES` hold measurements that are no
-  concepts (`position*` = "an effect on my own units beside it"): step 4 rewrites both as START_DESIGN-1 says. First
-  show Kaptain every usable concept with the radius it goes on, in plain words, and wait for his OK. `axes.tsv`, `wheel-axes.html`, `wheel/radius_links.tsv` and
-  `work/shapes.tsv` are from the old count and are all made again (steps 4 and 5).
-- Step 4: every usable concept and its radius, with the part of it that counts there: `work/radii.tsv` (the radii's
-  names are there too). Library splits it needs first: on_ally_play (a unit played / any card played), rule_change (moving
-  and placing / attacking and abilities). The wheel describes the examined games: nothing is left out because this game
-  lacks it; that is decided in later steps.
-- Step 4: `axes.py` still uses stat_multiply in `DISRUPT_ON_ENEMY` and its "multiply_own" measure; since 17 Nov 2026 a stat
-  set on an enemy is stat_loss and a stat set to a number is stat_fixed: the rewrite uses the concepts as they are now.
-- Step 5: `shapes.py` keeps only candidates that fit 2+ archetypes; run on the old numbers it gave 20 shapes, each
-  fitting 2-14 archetypes, and 14 archetypes fitting no shape: it runs again on the step 4 numbers.
+- Step 5: run on the step 4 numbers, `shapes.py` gives 20 shapes with no rule missed, each fitting 2-13 archetypes; 8
+  archetypes fit no shape (tempo, combo, reanimator, storm, cheat, discard_enemy, turbo_fog, hatebears). Show Kaptain
+  each shape in plain words (its real faction, its radii by name and value, the archetypes it fits) and wait for his OK.
+- Counts whose rows don't say what they count are counted nowhere: 200 instances of "grows with what happened" and 36
+  of "counts and thresholds" (`axes.py` prints them). Most are counts of enemy units or of a keyword the rows don't name.
+- `tools/wheel_check.js` (this game's factions on the wheel) still counts whole cards, not concept instances: before
+  step 8 uses it, it counts the same way as `axes.py`.
 - Step 6: `mechanics_wheel.py` has the radius mode only; the concept mode is written there, with the same count.
 - Step 7: `groups.py` and `concept_list.py` are written; `tools/wheel_table_check.py` (it reads an old file) is
   rewritten.
@@ -39,8 +34,8 @@ One chat does one step; at its end, mark the step done here and say what it left
 - `links.sqlite` is rebuilt only after `network.py` or `cards.sqlite` changed: `PYTHONHASHSEED=0 python3 links.py`
   (about 6 minutes; with `check_all.py` 14 more: tell Kaptain and wait for his OK); it ends with `cases/links.tsv` and the sides check.
 - Radius keys are not plain words: look up each one's name before talking about it
-  (`python3 -c "import axes; [print(s[0], s[3]) for s in axes.SPOKES]"`). `many` is "many at once", `wide` is "many
-  cheap units", `back` is "brings back".
+  (`work/radii.tsv`). `many` is "many at once", `wide` is "many units on my side", `back` is "reuses cards",
+  `cards` is "more cards in hand", `picks` is "picks cards".
 - A link counts for two concepts or radii only through what of each card made it. Example: Ghost Rider brings a card
   back and Vibro-Shock Gauntlets give +2 Power to it: revive with +2 Power, never revive with supply, though the
   Gauntlets also give Energy. Cases: `cases/wheel.tsv`.

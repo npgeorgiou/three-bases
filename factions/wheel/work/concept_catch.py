@@ -1,6 +1,5 @@
-"""Step 4 (START_DESIGN-1-wheel.md): the usable concepts. Run from library/cards_db.
-Every library concept with 10+ real cards (all games together): its cards, the games it is in, and the share of its cards
-on each radius (worked out in each game alone, then averaged over the games that have it); a parent in the concept tree
+"""Step 2 (START_DESIGN-1-wheel.md): the usable concepts. Run from library/cards_db.
+Every library concept with 10+ real cards (all games together): its cards and the games it is in; a parent in the concept tree
 keeps only the cards none of its children carry. Each gets a kind with its reason: usable (a faction can build on it),
 helper or out, from concept_verdicts.tsv (a concept not in it is usable); player_<concept> is out (no player health,
 Kaptain), and so is a parent left with under 10 cards (its children carry its cards, so no effect counts twice).
@@ -15,12 +14,11 @@ c = sqlite3.connect('cards.sqlite')
 games = sorted({g for (g,) in c.execute('select distinct game from card')})
 con, pools, _ = axes.tag(c, faction_asks.Ctx(c, games, None, {}), games)
 real = {i: g for i, g in c.execute('select id, game from card where coalesce(is_keyword,0)=0 and coalesce(is_stub,0)=0')}
-RADII = [s for s in axes.SPOKES if s[0] not in axes.NUMERIC]  # strength and defence come from unit stats, not concepts
 
 cards = collections.defaultdict(list)  # concept -> its real cards
 for i, g in real.items():
     for k in con[i]:
-        if not k.endswith('*'): cards[k].append(i)
+        if not k.endswith('*') and '@' not in k: cards[k].append(i)  # the measure's own names (axes.py) are no concepts
 cards = {k: v for k, v in cards.items() if len(v) >= 10}
 
 kids = collections.defaultdict(set)  # concept -> the concepts under it in the tree, at any depth
@@ -44,21 +42,15 @@ for k in list(cards):  # a parent keeps only the cards none of its children carr
     sub = below(k)
     if sub: cards[k] = [i for i in cards[k] if not con[i] & sub]
 
-def shares(k):
-    per = collections.defaultdict(list)
-    for i in cards[k]: per[real[i]].append(i)
-    return {s[0]: sum(sum(axes.counts(con[i], g, s[4]) for i in ids) / len(ids) for g, ids in per.items()) / max(1, len(per)) for s in RADII}, sorted(per)
-
 rows = []
 for k in cards:
-    sh, gs = shares(k)
-    rows.append((reason(k), k, len(cards[k]), ','.join(gs), sh))
+    rows.append((reason(k), k, len(cards[k]), ','.join(sorted({real[i] for i in cards[k]}))))
 KINDS = ['usable', 'helper', 'out']
 rows.sort(key=lambda r: (KINDS.index(r[0][0]), r[0][1], r[1]))
 with open(os.path.join(HERE, 'concepts.tsv'), 'w', encoding='utf-8') as o:
-    o.write('\t'.join(['concept', 'card_count', 'games', 'kind', 'reason'] + [s[0] for s in RADII]) + '\n')
-    for (kind, why), k, n, gs, sh in rows:
-        o.write('\t'.join([k, str(n), gs, kind, why] + [f'{sh[s[0]]:.2f}' for s in RADII]) + '\n')
+    o.write('\t'.join(['concept', 'card_count', 'games', 'kind', 'reason']) + '\n')
+    for (kind, why), k, n, gs in rows:
+        o.write('\t'.join([k, str(n), gs, kind, why]) + '\n')
 print(', '.join(f'{sum(1 for r in rows if r[0][0] == t)} {t}' for t in KINDS) + ';',
       'verdicts for concepts under 10 cards:', ', '.join(sorted(set(verdict) - set(cards))) or 'none')
 
@@ -67,10 +59,10 @@ for line in open('../concept_tree.txt', encoding='utf-8'):
     p = [t.strip() for t in line.split('|')]
     if len(p) > 1 and not line.startswith('#'): plain[p[0]] = p[1]
 with open(os.path.join(HERE, 'concepts.md'), 'w', encoding='utf-8') as o:
-    o.write('# Step 4: the concepts by kind (made by concept_catch.py; cards, in how many of 10 games)\n')
+    o.write('# Step 2: the concepts by kind (made by concept_catch.py; cards, in how many of 10 games)\n')
     for t in KINDS:
         rs = [r for r in rows if r[0][0] == t]
         o.write(f'\n## {t} ({len(rs)})\n')
         for why in sorted({r[0][1] for r in rs}, key=lambda w: [r[0][1] for r in rs].index(w)):
-            items = '; '.join(f"{plain.get(k, k)} ({n}, {len(gs.split(','))})" for (_, w), k, n, gs, _ in rs if w == why)
+            items = '; '.join(f"{plain.get(k, k)} ({n}, {len(gs.split(','))})" for (_, w), k, n, gs in rs if w == why)
             o.write('\n'.join(textwrap.wrap((why + ': ' if why else '') + items, 118)) + '\n')
