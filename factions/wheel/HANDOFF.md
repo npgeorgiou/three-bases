@@ -7,10 +7,10 @@ One chat does one step; at its end, mark the step done here.
 | step | state | what it made |
 |---|---|---|
 | 1. Fix the library's concepts | done 16 Nov 2026 | concepts split by whom a row acts on (player, my unit, cards between piles), radii without game limits; `work/suspect_verdicts.tsv` |
-| 2. The radii and how they work together | done 16 Nov 2026 | `axes.tsv`, `wheel/radius_links.tsv` |
-| 3. The 20 shapes | done 17 Nov 2026, Kaptain agreed them | `work/shapes.tsv` |
+| 2. The radii and how they work together | redo (Agreed 17 Nov, items 2-3) | `axes.tsv`, `wheel/radius_links.tsv` |
+| 3. The 20 shapes | redo (Agreed 17 Nov, items 1-3) | `work/shapes.tsv` |
 | 4. The usable concepts | done 17 Nov 2026 (redone: kinds usable, helper, out; Skill removed from the library; steps 2-3 redone, nothing moved) | `work/concepts.tsv`, `work/concepts.md` |
-| 5. The links between concepts | next; `mechanics_wheel.py` gets a concept mode (usable concepts and helpers; `cards`, `decks`, `games`, never a raw pair count) | |
+| 5. The links between concepts | to do (Agreed 17 Nov, item 4); `mechanics_wheel.py` gets a concept mode (usable concepts and helpers; `cards`, `decks`, `games`, never a raw pair count) | |
 | 6. The 20 groups | to do; `work/groups.py` and `work/concept_list.py` to write, `tools/wheel_table_check.py` to rewrite (it still reads the old `level`) | |
 | 7. Theme, then tools | to do | |
 | 8. Combos on this board | to do | |
@@ -19,12 +19,28 @@ One chat does one step; at its end, mark the step done here.
 For step 6: some archetypes (`archetypes.tsv`) name concepts that are no library concept with 10+ cards: the
 starred radius groups countboard*, kill*, weaken*, spelldmg*, position*, and polymorph, piercing, cross_lane.
 
-## Open for Kaptain (asked 17 Nov 2026, all at once)
-1. Spell mana: how to record Runeterra's "up to 3 unspent mana is kept for spells" (source: Riot support, "Let's Talk
-   About Mana"). Game rules today are rows copied onto every card of a kind, which fits no player-wide rule.
-2. The 26 archetype concepts with under a quarter of their cards on that archetype's radii (`shapes.py` prints them).
-3. Claude's kinds in `work/concept_verdicts.tsv` (those not marked Kaptain), shown with `work/concepts.md`.
-4. Step 5 joins rare pairs by "3+ real pairs at 3+ times chance", a raw count.
+## Agreed 17 Nov 2026 (Kaptain approved; do in this order, each with Kaptain's OK before the next)
+1. **Archetypes from Kaptain's list** (`archetypes_kaptain.txt`) replace the 18 in `archetypes.tsv`. For each one: can
+   it exist in this game (no lands, poison, player life, planeswalkers, multiplayer...; the reason when not); for the
+   others its library concepts and its radius (Claude's, marked). Show Kaptain the table; he approves.
+2. **Every usable concept on one radius** (a radius is defined by its concepts, `axes.SPOKES`), starting with "moving my
+   units" (movement) on "position and combos"; each archetype's concepts on its radius. Show Kaptain; he approves.
+3. **Radii measured by concept instances, not cards:** every instance of a concept in the database (one row that gives
+   it) goes to its concept's radius; a faction's value = the share of its instances on that radius; the card itself
+   goes nowhere ("deal 2, then draw" = one instance on damage, one on more cards). Strength and defence stay measured
+   from the units' numbers. Rewrite `axes.py` and the docs (START_DESIGN-1 steps 2 and 6, 13-wheel-measurement.txt),
+   redo step 2 and step 3 (the shapes may change; Kaptain approves them again).
+4. **Step 5** with `cards`, `decks`, `games` and the slow `level` (1 pair = 1, 10 = 2, 100+ = 3); rare links are never
+   lost. Games with no factions (Marvel Snap, Inscryption, Into the Breach, Slay the Spire, Monster Train...) count in
+   every concept-pair number like the others.
+5. **Step 6 and each faction's list:** the list holds every concept (on radii, helpers, out: all); each has a score of
+   how often its instances link with the faction's group (any of its 4-6 concepts), per game:
+   (real links + 1) / (chance links + 1), then averaged over the games where it and the group both appear (every game
+   weighs the same; games with no factions count). Shown with it: the slow level and in how many games. Step 7 (tools)
+   and START_DESIGN steps 5-8 (cards) use the list a lot.
+- Spell mana (Runeterra) is recorded (`read/runeterra/game_rules.jsonl`, `kind_has`), not yet built: rebuild
+  `check_all.py runeterra` and `PYTHONHASHSEED=0 links.py` (about 20 minutes, Kaptain's OK first) before step 3's
+  measuring.
 
 ## The numbers (library/cards_db)
 - `links.sqlite` is rebuilt only after `network.py` or `cards.sqlite` changed: `PYTHONHASHSEED=0 python3 links.py`
