@@ -29,7 +29,7 @@ One chat does one step; at its end, mark the step done here and say what it left
 - Step 4: `axes.py` still uses stat_multiply in `DISRUPT_ON_ENEMY` and its "multiply_own" measure; since 17 Nov 2026 a stat
   set on an enemy is stat_loss and a stat set to a number is stat_fixed: the rewrite uses the concepts as they are now.
 - Step 5: `shapes.py` still makes each archetype fit 2-3 shapes through the shape's two highest radii; it is rewritten
-  to the rule in START_DESIGN-1 step 5 (every shape fits an archetype: all of the archetype's concepts on its radii).
+  to the rule in START_DESIGN-1 step 5 (every shape fits two archetypes: all of the archetype's concepts on its radii).
 - Step 6: `mechanics_wheel.py` has the radius mode only; the concept mode is written there, with the same count.
 - Step 7: `groups.py` and `concept_list.py` are written; `tools/wheel_table_check.py` (it reads an old file) is
   rewritten.
