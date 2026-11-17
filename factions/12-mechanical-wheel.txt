@@ -56,6 +56,9 @@ Not radii, and why (don't reintroduce):
   lanes), random effects (not allowed), this-round effects (worth little).
 
 Reading the numbers:
+- Values compare a faction with the average faction of its own game (1 = average), so compare factions of different games
+  loosely. Into the Breach, Stormbound, Slay the Spire and Inscryption have no value on 9 or more radii. Strength, defence
+  and the two width radii give a faction its shape; they are not plans.
 - Which ends go together is judged by play: one end makes what the other needs, or undoes it (library fed/feeds/both).
   A correlation across real factions only shows what those games did, never that two ends can't work (damaging or
   killing your own units to set off effects, locking enemies while moving: all sound plays).
