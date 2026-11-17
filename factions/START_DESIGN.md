@@ -137,7 +137,7 @@ randomness: no coin flips, random targets or random cards.
 4. **The library not read card by card** (although the old card design method said so). Why: reading is slow and shows no
    output, so Claude skipped it and took only mechanic names, almost only from Runeterra, the game it knows best.
    Stops it: step 7 and the library file the gate checks.
-5. **One mechanic carried a faction** (the clockwork faction was only wind and gears). Why: Claude took the first idea
+5. **A whole faction was one mechanic** (the clockwork faction was only wind and gears). Why: Claude took the first idea
    of the theme and made it everything. Stops it: step 6.
 6. **Spells all "+strength" and "kill"** (Sunfeeders). Why: as in 1. Stops it: step 9 on spells too; `ask.py all spells`
    shows what real factions' spells do (bring back, give cards, weaken for later, give units to the enemy...).

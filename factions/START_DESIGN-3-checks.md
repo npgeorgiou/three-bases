@@ -6,7 +6,7 @@ Part of `factions/START_DESIGN.md` (read that first, whole; then parts 2, 3 and 
 - A thin theme gives no cards. "Clockwork" alone gave only winding; the clock city's guilds, apprentices, spare parts,
   commissions and fear of rust each could have given a different kind of card.
 - A mechanic is broad: in Runeterra, Shadow Isles' "units die" is made by 103 and used by 55 of its 221 cards. Measure a
-  real faction of the same kind (`analyze`, section 3) and match it. If a mechanic could not carry 30+ cards, it is only
+  real faction of the same kind (`analyze`, section 3) and match it. If a mechanic could not be used on 30+ cards, it is only
   an interaction between a few cards.
 - Mechanics are built on the game's basic things: units die, damage, supply and carry-over, cells, rows, the front row,
   dots, round end, cards in hand, the discard pile, moves, spells cast. Buffs and stats alone are not mechanics.

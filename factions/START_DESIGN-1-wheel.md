@@ -118,7 +118,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
      the group; every concept that uses something has a concept in the group that makes it. Only usable concepts.
    - A pillar belongs to one faction only; another concept is in at most 3 factions; every usable concept with joins
      is in at least one group (those that fit nowhere are shown to Kaptain, not forced in).
-   - Every archetype the shape carries has a concept in the group, and one pillar belongs to one of them.
+   - Every archetype that fits the shape has a concept in the group, and one pillar belongs to one of them.
    - Score: the strength of the joins inside each group plus the fit, summed over all 20. Fixed by Kaptain: G = grows
      when hurt + I damage my own units.
    - A group holding both ends of a pair real factions keep apart (`apart.py`) is shown to Kaptain.
@@ -135,8 +135,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    its group; the 20 themes all differ; the theme is a source of tools, never a reason for one. Then 2-4 tools per
    faction: a tool is a new kind of thing or rule that makes the group's mechanics happen on this game's own things
    (dots and front cells, rows, columns, lanes, the 3x3 camp, unit size, supply per lane, carry-over, round start and
-   end, one action per turn, moving, reach, strikes and fixed damage, the hand, the discard pile, Immobile), carried
-   by many of its cards, built with the concepts of its list, highest scores first. Each tool names the mechanic it
+   end, one action per turn, moving, reach, strikes and fixed damage, the hand, the discard pile, Immobile), used
+   on many of its cards, built with the concepts of its list, highest scores first. Each tool names the mechanic it
    grows from; each pillar has a tool; each tool feeds another (one makes what the other uses); each is played out
    cell by cell (which cell, what happens, what the enemy does with his one action between; two tools needing the same
    cell clash). The linked card pairs of the mechanic are its source cards. No two factions have the same tool doing

@@ -108,7 +108,7 @@ More text: `summary/09-card-design-rules.txt`
   that makes it. Example: Toll Warrior needs units to die this round; Willing Victim (dies when offered) makes it.
 - Cards that cash something in have 3+ cards that set it up; cards that set something up feed 2+ cards that cash it in.
 - Tools (the wheel's step 8): 2-4 new kinds of things or rules, each from one mechanic of the group, feeding each
-  other; many cards carry them, the rest of the faction's cards build the ways to play around them.
+  other; many cards use them, the rest of the faction's cards build the ways to play around them.
 - The group (the wheel's step 7): 2 pillars only this faction builds on, and 2-4 other concepts, each in at most 3
   factions; its mechanics are the links between them, each on several cards.
 - The faction's list (the wheel's step 7: every concept of the library, highest score for linking with the group
