@@ -75,3 +75,6 @@ random_effect	out	ruled out by Kaptain: no randomness
 random_target	out	ruled out by Kaptain: no randomness
 random_ability	out	ruled out by Kaptain: no randomness
 first_strike	out	ruled out by Kaptain: "strike first" is not a plan here
+tank	helper	only says the unit has a lot of defence; its defence numbers count already (Kaptain)
+board_presence	helper	only says the card helps go wide; the units it makes count already (Kaptain)
+merge_attach	helper	attaching only says how a card acts; the attached card counts by its own effects (Kaptain)

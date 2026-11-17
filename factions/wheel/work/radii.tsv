@@ -84,7 +84,6 @@ back	reuses cards	self_mill		Kaptain
 back	reuses cards	copy		Kaptain
 back	reuses cards	repeat_trigger		Kaptain
 wide	many units on my side	summon		Claude
-wide	many units on my side	board_presence		Claude
 wide	many units on my side	on_ally_play	reacts to a unit played	Kaptain
 spends	spends them	sacrifice		Claude
 spends	spends them	self_destruct		Claude
@@ -120,7 +119,6 @@ protects	protects them	immunity		Claude
 protects	protects them	cheat_death		Claude
 protects	protects them	damage_reduction		Claude
 protects	protects them	block_armor		Claude
-protects	protects them	tank		Claude
 protects	protects them	taunt		Claude
 protects	protects them	stealth		Claude
 protects	protects them	on_targeted		Claude
@@ -128,4 +126,6 @@ protects	protects them	on_targeted		Claude
 (counted)	(the radius of what it counts)	count_payoff	by what it counts (rows)	Kaptain
 (counted)	(the radius of what it counts)	condition_count	by what it counts (rows)	Kaptain
 (helper)	(off the radii)	merge_attach	attaching only says how a card acts; the attached card counts by its own effects	Kaptain
+(helper)	(off the radii)	tank	only says the unit has a lot of defence: its defence numbers count already	Kaptain
+(helper)	(off the radii)	board_presence	only says the card helps go wide: the units it makes count already	Kaptain
 (numbers)	strength, defence, a few big units		from the units' printed numbers; many units on my side also counts cheap units	Kaptain

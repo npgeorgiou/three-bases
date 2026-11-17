@@ -8,15 +8,15 @@ aggro_combo	Aggro-Combo	yes		early units in the lanes, then one sudden big turn	
 control_combo	Control-Combo	yes		removes the enemy early, then one sudden big turn	destroy,board_wipe,disable,combo_sequence,tutor,repeat_trigger		Claude
 prison	Prison / Stax	yes		enemy units can't attack, move or act, and enemy cards cost more	attack_lock,attack_zero,immobilize,disable,cost_increase,board_clog		Claude
 draw_go	Draw-Go / Flash	no	it acts only on the enemy's turn: no answers on the enemy's turn here				Claude
-go_wide	Tokens / Go-Wide	yes		many small units, and cards that make all of them stronger or count them	summon,board_presence,buff,variable_stats,on_ally_play		Claude
+go_wide	Tokens / Go-Wide	yes		many small units, and cards that make all of them stronger or count them	summon,buff,variable_stats,on_ally_play		Claude
 tribal	Tribal / Typal	no	no unit types here				Claude
-voltron	Voltron	yes		piles strength and attached cards onto one unit	merge_attach,buff,stat_gain,attack_gain,defence_gain,shield		Claude
-bogles	Hexproof Auras (Bogles)	yes		Voltron on a unit the enemy can't target	immunity,stealth,merge_attach,buff,stat_gain		Claude
+voltron	Voltron	yes		piles strength and attached cards onto one unit	buff,stat_gain,attack_gain,defence_gain,shield		Claude
+bogles	Hexproof Auras (Bogles)	yes		Voltron on a unit the enemy can't target	immunity,stealth,buff,stat_gain		Claude
 counters	+1/+1 Counters	yes		units grow again and again, and the growth is doubled or spread	permanent_growth,stat_gain,stat_multiply,repeat_trigger		Claude
 infect	Infect / Toxic / Poison	no	it wins with poison counters on the player: no player life and no poison here				Claude
 extra_combats	Extra Combats	yes		units attack more than once, or again right away	multi_attack,attack_now,untap,extra_turn		Claude
-toughness	Defenders / Toughness Matters	yes		walls with high defence that hit with their defence	tank,defence_gain,strikes_with_defence,taunt,counterattack		Claude
-mutate	Mutate	yes		units stacked onto one unit, which gets all their abilities	merge_attach,on_ally_play		Claude
+toughness	Defenders / Toughness Matters	yes		walls with high defence that hit with their defence	defence_gain,strikes_with_defence,taunt,counterattack		Claude
+mutate	Mutate	yes		units stacked onto one unit, which gets all their abilities	on_ally_play		Claude
 ninjutsu	Ninjutsu	no	it swaps attackers the enemy didn't block: no blocking here				Claude
 face_down	Face-down (Morph / Disguise)	no	the card flips into another one: Kaptain ruled out my units changing form (hidden units stay possible: stealth)				Claude
 toolbox	Toolbox	yes		finds the right card for each situation from the deck	tutor,selection,generate_cards,deck_condition		Claude
@@ -39,11 +39,11 @@ cascade	Cascade / Discover	yes		a card puts another one into play free, or offer
 copy	Clone / Copy	yes		copies the best units and spells	copy		Claude
 cheat	Cheat-into-Play	yes		puts big units into play without paying for them	free_play,cost_set,tutor		Claude
 energy	Energy	yes		banks a second resource and spends it	resource_gain		Claude
-vehicles	Vehicles	yes		a unit works only when other units power it	assists_support,merge_attach		Claude
+vehicles	Vehicles	yes		a unit works only when other units power it	assists_support		Claude
 legends	Legends / Historic	no	payoffs for a kind of card: like unit types, not here				Claude
 eggs	Eggs	yes		cheap units that die and come back again and again (only one Egg faction in the whole wheel)	self_destruct,sacrifice,death_trigger,recycle,revive		Claude
 ramp	Ramp	yes		more supply early, into expensive cards	base_resource_gain,resource_gain		Claude
-stompy	Stompy	yes		more supply early, into a few big units	base_resource_gain,resource_gain,attack_gain,defence_gain,tank		Claude
+stompy	Stompy	yes		more supply early, into a few big units	base_resource_gain,resource_gain,attack_gain,defence_gain		Claude
 tron	Tron / Big Mana	no	it needs special lands: no lands here				Claude
 landfall	Landfall	no	no lands here				Claude
 land_destruction	Land Destruction / Ponza	no	no lands here (making enemy cards cost more is Prison)				Claude
@@ -58,7 +58,7 @@ cycling	Cycling	yes		swaps cards in hand for new ones, and the swaps pay off	dis
 domain	Domain	no	it counts land types: no lands here				Claude
 devotion	Devotion	no	it counts coloured mana symbols: no such costs here				Claude
 snow	Snow	no	payoffs for a kind of card: like unit types, not here				Claude
-pillowfort	Pillowfort	yes		makes attacks on my base costly or useless (no player life: the base and its units)	tank,taunt,damage_reduction,shield,block_armor		Claude
+pillowfort	Pillowfort	yes		makes attacks on my base costly or useless (no player life: the base and its units)	taunt,damage_reduction,shield,block_armor		Claude
 turbo_fog	Turbo-Fog	yes		stops enemy attacks again and again to stall until round end	attack_lock,attack_zero,disable,damage_reduction,immunity		Claude
 hatebears	Hatebears / Death & Taxes	yes		small units that make the enemy's cards weaker or dearer	cost_increase,silence,disable,attack_lock		Claude
 group_hug	Group Hug	no	it needs several opponents: no multiplayer here				Claude
