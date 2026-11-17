@@ -49,12 +49,10 @@ is written in that step's chat, from the rules of the step, and its line here is
   the pairs real factions keep apart.
 
 ## Step 6. The 20 groups
-- `python3 ../../factions/wheel/work/groups.py --write` (seconds; scipy's exact solver for all 20) ->
-  `factions/wheel/work/groups.tsv` (group, pillars, others, strength). Without `--write` it prints the 20, the standard
-  concepts (7+ games) in no group and every usable concept left out. `python3 tools/wheel_table_check.py` (to rewrite)
-  checks the rules of the step from the files.
-- Candidates: for every joined pair as pillars, the others from the 10 concepts most strongly linked to both, every
-  2-4 of them, each concept joined to 2+ others in it; per pillar pair and size the 3 strongest.
+- `python3 ../../factions/wheel/work/groups.py --write` (seconds; scipy's exact solver over every group of 3-6
+  directions) -> `factions/wheel/work/groups.tsv` (group, pillars, others, strength). Without `--write` it prints the
+  20, the directions in no group and how many groups each direction is in. `python3 tools/wheel_table_check.py` (to
+  rewrite) checks the rules of the step from the files.
 
 ## Step 7. Each faction's list
 - `python3 ../../factions/wheel/work/concept_list.py` (to write) -> `factions/wheel/work/lists/<letter>.tsv`: per

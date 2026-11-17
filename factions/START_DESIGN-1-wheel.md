@@ -23,8 +23,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   count on two, each instance by what its rows say (deal damage: on a spell for "damage from spells", on any other card
   for "damage from units' text"). A faction's value on a radius is the share of its concept instances that belong to
   that radius; the card itself goes nowhere.
-- **Group**: the 4-6 concepts a faction builds on: 2 pillars and 2-4 others. It is the faction's character (what it is
-  strongest at, what its tools grow from).
+- **Group**: the 3-6 directions (radii) a faction builds on: 2 pillars and 1-4 others. It is the faction's character
+  (what it is strongest at, what its tools grow from); the concepts on those directions are how its cards make it work.
 - **The faction's list**: every concept of the library (usable, helpers and out), each with its score for how strongly
   it links with the faction's group. The faction's cards use it a lot, to make the group's concepts possible, start
   them or make them stronger.
@@ -111,22 +111,22 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    `makes` (the share of the pair's links where a's card sets off or feeds b's card); the three most common link
    texts. Joined: `cards` 1.2+, or `decks` 1.5+, or `rare` 3+ with a `level` of 1+. `apart.py` lists the concept pairs
    real factions keep apart.
-6. **The 20 groups** (one exact solver for all 20 at once, `work/groups.py` -> `work/groups.tsv`), made straight from
-   the concept links; real factions are not copied.
-   - A group: 4-6 usable concepts, each joined (step 5) to at least 2 others of the group; its pillars are its two most
-     strongly linked concepts. A concept that mostly uses what others make has a concept in the group that makes for it.
-   - Two groups share at most one concept; a pillar is a pillar of one group only; a concept is in at most 3 groups;
-     every usable concept is wanted in a group (those left out are shown to Kaptain).
+6. **The 20 groups** (one exact solver for all 20 at once, `work/groups.py` -> `work/groups.tsv`), made from the
+   directions and the card links between them (step 4 numbers); real factions are not copied. Strength, defence and
+   "position and combos" have no card links and are in no group.
+   - A group: 3-6 directions, each joined (step 4) to at least 2 others of the group; its pillars are its two most
+     strongly linked directions.
+   - Two groups share at most one direction; every direction is in 2-5 groups (one joined to only 2-3 others can be in
+     one group only, and is; one joined to fewer than 2 others is in none and is shown to Kaptain).
    - Score: the strength of the links inside each group (how much more often than chance real cards link them), summed
-     over all 20, plus every concept placed.
-   - Check: the standard concepts (in 7+ of the 10 games) are each in a group; one left out means the solver is fixed.
+     over all 20.
    - A group holding both ends of a pair real factions keep apart (`apart.py`) is shown to Kaptain.
-   - Kaptain sees per faction: its concepts in plain words, and its mechanics (each joined pair: the real link text
-     with its times chance and games); one sentence per faction, written from those texts.
+   - Kaptain sees per faction: its directions in plain words, the concepts on them, and its mechanics (each joined
+     pair: the real link text with its times chance and games); one sentence per faction, written from those texts.
      `tools/wheel_table_check.py` checks every rule above from the files. **Kaptain agrees the 20 groups.**
 7. **Each faction's list** (`work/concept_list.py` -> `work/lists/<letter>.tsv`): every concept with 10+ cards
    (usable, helpers and out), each with its score. In each game alone: real links between the concept's instances
-   and the instances of any concept of the group, against the links chance alone gives there; the game's score =
+   and the instances of any concept on the group's directions, against the links chance alone gives there; the game's score =
    (real + 1) / (chance + 1), so a single rare link doesn't look huge and a big count is almost untouched; the score
    = the average over the games where the concept and the group both appear (every game weighs the same). Beside it:
    the `level` and in how many games. Sorted by score.

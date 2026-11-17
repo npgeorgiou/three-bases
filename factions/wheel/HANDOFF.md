@@ -11,18 +11,16 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 3. The archetypes | done | `archetypes.tsv`: 71 archetypes, 47 can exist, each with its needs (the concepts that can meet each, and their radii); Formidable fixed in the library (strikes_with_defence, stat_fixed) |
 | 4. The radii and how they work together | done | `work/radii.tsv` (every usable concept on its radius, agreed with Kaptain); `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` from concept instances |
 | 5. The links between concepts | done | `library/cards_db/wheel/concept_links.tsv` (`mechanics_wheel.py links --concepts`, about a minute) |
-| 6. The 20 groups | **next**: settle how the solver places the standard concepts, then show Kaptain the 20 | `work/groups.py` (exact solver, scipy); first run below |
+| 6. The 20 groups | **next**: Kaptain's OK on the 20 | `work/groups.tsv` from `work/groups.py` (directions, exact solver) |
 | 7. Each faction's list | to do | |
 | 8. Theme, then tools | to do | |
 | 9. Combos on this board | to do | |
 | 10. The seven answers, Stop 1 | to do | |
 
 ## What the next steps find in the files
-- Step 6: `groups.py` gives 20 groups, optimal, in seconds. 99 of 117 usable concepts are in a group, but 8 of the 56
-  standard concepts (in 7+ of the 10 games) are in none: summon, cost_reduction, cost_set, on_ally_play, on_enemy_enter,
-  damage_reduction, card_presence_condition, variable_stats; and groups S and T are weak (strength 0.89, 0.54).
-  Cause: a link's strength is how much more often than chance real cards link two concepts, and a concept on most
-  cards is close to chance with everything. Kaptain decides how standard concepts are placed before the 20 are shown.
+- Step 6: `groups.py` gives 20 groups of directions, optimal, from 5268 candidates; 18 have 3 directions, 2 have 4.
+  "Rewards playing spells" is in none: real cards join it to "picks cards" only. "Picks cards" and "more cards in
+  hand" are in one group each (joined to 3 others only).
 - Counts whose rows don't say what they count are counted nowhere: 200 instances of "grows with what happened" and 36
   of "counts and thresholds" (`axes.py` prints them). Most are counts of enemy units or of a keyword the rows don't name.
 - `tools/wheel_check.js` (this game's factions on the wheel) still counts whole cards, not concept instances: before
@@ -52,7 +50,8 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
   (random in round 1, then alternating), attacked units hitting back (only Riposte), placing at round end.
 - The wheel is general; step 8 turns each faction's group into these own things, from scratch.
 - Every game counts the same in every number, games with no factions (Marvel Snap) too.
-- The 20 groups come straight from the concept links; real factions inspire, they are never copied (17 Nov 2026).
+- The 20 groups are made from the directions and the card links between them; triggers and conditions are how cards
+  work, not what a faction is; real factions inspire, they are never copied (17 Nov 2026).
 - Interactions with the player (heal, Block, strength on the player; the player hurt) stay off the radii: no player
   health here. They stay in the library as player_<concept>.
 - Damage over time and my units changing form are possibilities for cards, not concepts a faction builds on.
