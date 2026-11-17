@@ -1,19 +1,72 @@
-key	archetype in this game	radii (main strength of 1+ shape)	concepts (library concepts of its archetype; step 3 checks them)	from
-swarm	many cheap units, cards that gain from numbers	wide	summon,countboard*,on_ally_play	realworld swarm
-sacrifice	my units die on purpose and the death pays	spends	other_death_trigger,death_count,death_trigger,sacrifice,self_destruct,on_sacrifice,leave_trigger	realworld sacrifice
-bringback	my dead or spent cards come back	back	revive,recycle,return_to_hand	realworld graveyard
-control	enemy units are removed or switched off for good	kills,stops	kill*,deathtouch,silence,stat_loss,weaken*,polymorph,mark_target	realworld control
-damage	small hits and area damage remove enemies, also in the back rows (no player to hit)	textdmg,spelldmg,many	ping,damage_over_time,aoe_damage,rows,row_effects,area_templates,board_wipe,multi_target_attack,excess_damage,piercing,ranged,spelldmg*	realworld burn
-aggro	act fast and hit hard: attack bonuses, units that act again	strikes,strong	on_attack,on_fight,on_kill,fight_enemy,forced_attack,haste,untap,extra_turn,multi_attack,stat_condition,combat_damage_threshold	realworld aggro_tempo
-scaling	units and cards grow over the rounds	grows	in_hand_buff,upgrade,turn_start	realworld scaling
-hurt	units grow when hit and survive; I damage my own units	growsdef,grows	on_damaged,counterattack,friendly_fire	Kaptain (HANDOFF Part 3)
-fortress	front units that are hard to remove	protects,tough,growsdef	shield,damage_reduction,block_armor,taunt,stealth,immunity	realworld fortress
-sustain	wounded units are healed and hold longer	heals	heal,regeneration	realworld sustain
-spells	spells chain and feed units	spellpay	on_spell,spells_played_condition,spell_power	realworld spellslinger
-ramp	extra supply and cheaper cards bring big units early	supply,cheaper,tall	resource_gain,base_resource_gain,cost_reduction,free_play,cost_set	realworld ramp
-position	cells, rows and moves matter	together	adjacency,link_formation,position*,movement,swap,forced_movement,bounce_enemy,terrain,territory_trigger,cross_lane	realworld positional
-invade	my units placed in the enemy camp	together	placement_rules	Kaptain (HANDOFF Part 3)
-disruption	the enemy's hand and plan are broken	disrupts	hand_disruption,cost_increase,junk_cards	realworld disruption
-steal	I take an enemy unit or card	disrupts	steal	Kaptain (HANDOFF Part 3)
-cards	more and better cards	cards,picks	draw,generate_cards,copy,tutor,selection,retain,discard,on_discard,self_mill	realworld card_advantage
-equip	units carry other units or items	together	merge_attach	realworld transformation (merge)
+key	archetype (archetypes_kaptain.txt)	can exist	reason if not	what it is in this game	usable concepts (step 2)	radii (step 4)	by
+aggro	Aggro	yes		cheap strong units take lanes early, before the enemy settles	haste,attack_now,attack_gain,excess_damage,board_presence		Claude
+control	Control	yes		removes every enemy unit, then holds lanes late with a few big units	destroy,board_wipe,aoe_damage,damage,disable,silence,draw		Claude
+midrange	Midrange	yes		sturdy units that pay off when they arrive or leave, plus flexible removal	stat_gain,defence_gain,leave_trigger,fight_enemy,destroy,damage		Claude
+tempo	Tempo	yes		cheap units kept alive by cheap pushes, stuns and send-backs	bounce_enemy,forced_movement,disable,immobilize,attack_lock,shield		Claude
+combo	Combo	yes		specific cards together make one sudden big swing in a lane (no instant win: there is no player life)	combo_sequence,tutor,repeat_trigger,free_play,cost_reduction,untap,extra_turn		Claude
+aggro_combo	Aggro-Combo	yes		early units in the lanes, then one sudden big turn	haste,attack_now,attack_gain,combo_sequence,repeat_trigger,extra_turn		Claude
+control_combo	Control-Combo	yes		removes the enemy early, then one sudden big turn	destroy,board_wipe,disable,combo_sequence,tutor,repeat_trigger		Claude
+prison	Prison / Stax	yes		enemy units can't attack, move or act, and enemy cards cost more	attack_lock,attack_zero,immobilize,disable,cost_increase,forced_attack,board_clog,rule_change		Claude
+draw_go	Draw-Go / Flash	no	it acts only on the enemy's turn: no answers on the enemy's turn here				Claude
+go_wide	Tokens / Go-Wide	yes		many small units, and cards that make all of them stronger or count them	summon,board_presence,buff,count_payoff,on_ally_play		Claude
+tribal	Tribal / Typal	no	no unit types here				Claude
+voltron	Voltron	yes		piles strength and attached cards onto one unit	merge_attach,buff,stat_gain,attack_gain,defence_gain,shield		Claude
+bogles	Hexproof Auras (Bogles)	yes		Voltron on a unit the enemy can't target	immunity,stealth,merge_attach,buff,stat_gain		Claude
+counters	+1/+1 Counters	yes		units grow again and again, and the growth is doubled or spread	permanent_growth,stat_gain,stat_multiply,repeat_trigger,level_up		Claude
+infect	Infect / Toxic / Poison	no	it wins with poison counters on the player: no player life and no poison here				Claude
+extra_combats	Extra Combats	yes		units attack more than once, or again right away	multi_attack,attack_now,untap,extra_turn		Claude
+toughness	Defenders / Toughness Matters	yes		walls with high defence that hit with their defence	tank,defence_gain,variable_stats,stat_condition,taunt,counterattack		Claude
+mutate	Mutate	yes		units stacked onto one unit, which gets all their abilities	merge_attach,upgrade,on_ally_play		Claude
+ninjutsu	Ninjutsu	no	it swaps attackers the enemy didn't block: no blocking here				Claude
+face_down	Face-down (Morph / Disguise)	no	the card flips into another one: Kaptain ruled out my units changing form (hidden units stay possible: stealth)				Claude
+toolbox	Toolbox	yes		finds the right card for each situation from the deck	tutor,selection,generate_cards,deck_condition		Claude
+aristocrats	Aristocrats	yes		my units die on purpose and each death pays	sacrifice,death_trigger,other_death_trigger,on_sacrifice,death_count,self_destruct,leave_trigger		Claude
+reanimator	Reanimator	yes		big units go to the discard pile, then come back cheaply	discard,self_mill,revive,free_play		Claude
+dredge	Dredge / Self-Mill	yes		fills my discard pile, which feeds cards that work from it	self_mill,discard,recycle,revive		Claude
+threshold	Delirium / Threshold	yes		a full or varied discard pile turns on bonuses	self_mill,discard,condition_count,count_payoff,variety_payoff		Claude
+recursion	Graveyard Recursion	yes		plays cards again from the discard pile	recycle,revive,free_play,return_to_hand		Claude
+madness	Madness	yes		discarding a card lets it be played cheaply	discard,on_discard,cost_reduction,free_play		Claude
+loam	Lands / Loam	no	no lands here				Claude
+spellslinger	Spellslinger / Prowess	yes		many cheap spells, and units that gain from each one	on_spell,spells_played_condition,spell_power,cost_reduction,generate_cards		Claude
+storm	Storm	yes		spells played this round add up to one big effect	spells_played_condition,on_spell,count_payoff,cost_reduction,combo_sequence		Claude
+burn	Burn	no	it hits the player: no player life here (damage spells at units are Control and Spellslinger)				Claude
+artifacts	Artifacts / Affinity	no	no artifacts here: cards are units and spells				Claude
+artifact_tokens	Artifact Tokens	yes		created cards that give supply or cards when played	generate_cards,resource_gain,draw		Claude
+enchantress	Enchantress	no	no enchantments here: cards are units and spells				Claude
+superfriends	Superfriends	no	no planeswalkers here				Claude
+blink	Blink / Flicker	yes		my units go back to hand and are played again for their Place effect	return_to_hand,free_play,repeat_trigger		Claude
+cascade	Cascade / Discover	yes		a card puts another one into play free, or offers a choice of new cards (without the random part: no randomness here)	free_play,generate_cards,selection		Claude
+copy	Clone / Copy	yes		copies the best units and spells	copy		Claude
+cheat	Cheat-into-Play	yes		puts big units into play without paying for them	free_play,cost_set,tutor		Claude
+energy	Energy	yes		banks a second resource and spends it	resource_gain,count_payoff		Claude
+vehicles	Vehicles	yes		a unit works only when other units power it	assists_support,merge_attach		Claude
+legends	Legends / Historic	no	payoffs for a kind of card: like unit types, not here				Claude
+eggs	Eggs	yes		cheap units that die and come back again and again (only one Egg faction in the whole wheel)	self_destruct,sacrifice,death_trigger,recycle,return_to_hand		Claude
+ramp	Ramp	yes		more supply early, into expensive cards	base_resource_gain,resource_gain		Claude
+stompy	Stompy	yes		more supply early, into a few big units	base_resource_gain,resource_gain,attack_gain,defence_gain,tank		Claude
+tron	Tron / Big Mana	no	it needs special lands: no lands here				Claude
+landfall	Landfall	no	no lands here				Claude
+land_destruction	Land Destruction / Ponza	no	no lands here (making enemy cards cost more is Prison)				Claude
+wildfire	Wildfire	no	no lands here				Claude
+lifegain	Lifegain / Drain	yes		my units heal and drain, and healing pays off (no player life: units only)	heal,regeneration,lifesteal,on_lifegain		Claude
+life_resource	Life-as-Resource	yes		my own units' health is the cost: I damage my units and they grow when hurt (no player life: units only)	friendly_fire,on_damaged,condition_life		Claude
+mill	Mill	no	an empty deck only draws nothing, so emptying the enemy's deck doesn't win				Claude
+discard_enemy	Discard / 8-Rack	yes		empties the enemy's hand and gains when it is small	hand_disruption,hand_size		Claude
+wheels	Wheels	yes		the whole hand is swapped for new cards, and drawing and discarding pay off	draw,discard,on_draw,on_discard,hand_size		Claude
+top_deck	Miracles / Top-Deck	yes		sets the deck's top card and gains from the card drawn	deck_position,selection,on_draw		Claude
+cycling	Cycling	yes		swaps cards in hand for new ones, and the swaps pay off	discard,draw,on_discard,on_draw		Claude
+domain	Domain	no	it counts land types: no lands here				Claude
+devotion	Devotion	no	it counts coloured mana symbols: no such costs here				Claude
+snow	Snow	no	payoffs for a kind of card: like unit types, not here				Claude
+pillowfort	Pillowfort	yes		makes attacks on my base costly or useless (no player life: the base and its units)	tank,taunt,damage_reduction,shield,block_armor		Claude
+turbo_fog	Turbo-Fog	yes		stops enemy attacks again and again to stall until round end	attack_lock,attack_zero,disable,damage_reduction,immunity		Claude
+hatebears	Hatebears / Death & Taxes	yes		small units that make the enemy's cards weaker or dearer	cost_increase,silence,disable,rule_change,attack_lock		Claude
+group_hug	Group Hug	no	it needs several opponents: no multiplayer here				Claude
+group_slug	Group Slug	yes		effects that hurt both sides, built so my side bears them better	aoe_damage,friendly_fire,board_wipe,rule_change		Claude
+goad	Goad	no	it makes opponents attack each other: no multiplayer here (forcing enemy attacks is Prison)				Claude
+theft	Theft	yes		steals the enemy's units and cards, or copies them	steal,copy		Claude
+aikido	Aikido / Judo	yes		turns the enemy's hits and units against it	counterattack,on_damaged,on_targeted,forced_attack,swap		Claude
+monarch	Monarch / Initiative	no	it fights over a title that gives cards: holding bases is already the game itself				Claude
+chaos	Chaos	no	no randomness here				Claude
+extra_turns	Extra Turns	yes		takes more than one action in a row	extra_turn,untap		Claude
+alt_win	Alternate Win	no	how a player wins is one of the game's own things (bases)				Claude
