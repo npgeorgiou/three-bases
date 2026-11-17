@@ -16,13 +16,13 @@ One chat does one step; at its end, mark the step done here.
 | 8. Combos on this board | to do | |
 | 9. The seven answers, Stop 1 | to do; `work/make_stop1.py` to rewrite | |
 
-For step 6: some kinds of play (`archetypes.tsv`) name concepts that are no library concept with 10+ cards: the
+For step 6: some archetypes (`archetypes.tsv`) name concepts that are no library concept with 10+ cards: the
 starred radius groups countboard*, kill*, weaken*, spelldmg*, position*, and polymorph, piercing, cross_lane.
 
 ## Open for Kaptain (asked 17 Nov 2026, all at once)
 1. Spell mana: how to record Runeterra's "up to 3 unspent mana is kept for spells" (source: Riot support, "Let's Talk
    About Mana"). Game rules today are rows copied onto every card of a kind, which fits no player-wide rule.
-2. The 26 kind-of-play concepts with under a quarter of their cards on that kind's radii (`shapes.py` prints them).
+2. The 26 archetype concepts with under a quarter of their cards on that archetype's radii (`shapes.py` prints them).
 3. Claude's kinds in `work/concept_verdicts.tsv` (those not marked Kaptain), shown with `work/concepts.md`.
 4. Step 5 joins rare pairs by "3+ real pairs at 3+ times chance", a raw count.
 

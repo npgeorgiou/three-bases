@@ -4,7 +4,7 @@ cards 1.2+ or decks 1.5+; spellpay by decks); its values are that faction's. The
 per real faction: every radius a strength of 2-5 shapes, each shape carries at most 2 archetypes of factions/wheel/archetypes.tsv
 through its main strengths (the highest and second value), its highest radius giving it one, each archetype carried by 2-3 shapes,
 then as different from each other as possible. A radius fewer than 2 real factions are strong at is only kept under 5.
-Then checks that every kind of play's concepts sit on its radii.
+Then checks that every archetype's concepts sit on its radii.
 python3 ../../factions/wheel/work/shapes.py [--write]: prints the 20; --write writes factions/wheel/work/shapes.tsv."""
 import csv, itertools, random, sys
 NUM = {'strong', 'tough', 'together'}  # strength, defence, position and combos: need no join
@@ -52,7 +52,7 @@ def score(pick):
         for a in cands[i][1]: cnt[a] += 1
     got = carry(pick, (2, 3))
     bad = sum(max(0, 2 - len(g)) for g in got.values()) + sum(max(0, LO - c) * (a not in FEW) + max(0, c - HI) for a, c in cnt.items())
-    bad += sum(not any(i in got[a] and set(ARCH[a]) & top[i] for a in got) for i in pick)  # its highest radius gives it a kind of play
+    bad += sum(not any(i in got[a] and set(ARCH[a]) & top[i] for a in got) for i in pick)  # its highest radius gives it an archetype
     same = sum((len(set(cands[i][1]) & set(cands[j][1])) / len(set(cands[i][1]) | set(cands[j][1]))) ** 2 for i, j in itertools.combinations(pick, 2))
     return bad * 100 + same + 100 * (len(pick) - len({cands[i][0] for i in pick}))
 def search(seed):
@@ -76,21 +76,21 @@ for a, g in got.items(): print(AROWS[a]['key'], ''.join(sorted('ABCDEFGHIJKLMNOP
 L = 'ABCDEFGHIJKLMNOPQRST'; order = sorted(pick, key=lambda x: -max(cands[x][1].values()))
 miss = [f'{AROWS[a]["key"]} carried by {len(g)}' for a, g in got.items() if len(g) < 2]
 miss += [f'{a} in {c} shapes' for a, c in cnt.items() if (c < LO and a not in FEW) or c > HI]
-miss += [f'{L[order.index(i)]}: highest radius gives no kind of play' for i in pick if not any(i in got[a] and set(ARCH[a]) & top[i] for a in got)]
+miss += [f'{L[order.index(i)]}: highest radius gives no archetype' for i in pick if not any(i in got[a] and set(ARCH[a]) & top[i] for a in got)]
 miss += [f'{f} twice' for f in {cands[i][0] for i in pick} if sum(cands[j][0] == f for j in pick) > 1]
 print('rules missed:', '; '.join(miss) or 'none', '| strong at by too few real factions:', ', '.join(sorted(FEW)))
 print('radius in how many shapes:', ', '.join(f'{a} {c}' for a, c in sorted(cnt.items(), key=lambda t: -t[1])))
-# every kind of play's concepts sit on its radii: the share of a concept's cards that count for one of them, per game, averaged
+# every archetype's concepts sit on its radii: the share of a concept's cards that count for one of them, per game, averaged
 # (a quarter, as a concept needs on a faction's radii in step 6)
 import sqlite3; sys.path.insert(0, '.'); import axes, faction_asks
 db = sqlite3.connect('cards.sqlite'); games = sorted({g for (g,) in db.execute('select distinct game from card')})
 con, pools, _ = axes.tag(db, faction_asks.Ctx(db, games, None, {}), games); SP = {x[0]: x[4] for x in axes.SPOKES}
 off = []
 for a, rad in zip(AROWS, ARCH):
-    for k in a['concepts (library concepts of its kind of play; step 3 checks them)'].split(','):
+    for k in a['concepts (library concepts of its archetype; step 3 checks them)'].split(','):
         sh = [sum(any(axes.counts(con[i], g, SP[r]) for r in rad) for i in ids) / len(ids) for g in games for ids in [[i for i in pools[g] if k in con[i]]] if ids]
         if not sh or sum(sh) / len(sh) < 0.25: off.append(f"{a['key']} {k} {sum(sh) / len(sh) if sh else 0:.2f}")
-print('kind-of-play concepts with under a quarter of their cards on its radii:', '; '.join(off) or 'none')
+print('archetype concepts with under a quarter of their cards on its radii:', '; '.join(off) or 'none')
 if '--write' in sys.argv:
     with open('../../factions/wheel/work/shapes.tsv', 'w') as o:
         for k, (f, sh) in zip('ABCDEFGHIJKLMNOPQRST', rows):

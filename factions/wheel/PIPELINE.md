@@ -28,14 +28,14 @@ is written in that step's chat, from the rules of the step, and its line here is
 
 ## Step 3. The 20 shapes
 - `python3 ../../factions/wheel/work/shapes.py --write` (about 2 minutes) -> `factions/wheel/work/shapes.tsv` (letter
-  A-T, radius=value list). Without `--write` it prints the 20, their real factions and the kinds of play each carries.
+  A-T, radius=value list). Without `--write` it prints the 20, their real factions and the archetypes each carries.
 - Candidates: every 3-6 of a real faction's radii valued 1.2+ whose radii are all joined (step 2), with that faction's
   values. Picking: a search over 20 candidates, at most one per real faction; misses of the rules count 100 each, and
   sameness (shared radii between two shapes, squared) decides the rest. Four fixed seeds, so every run gives the same.
-  A shape's highest radius must give it a kind of play; a radius fewer than 2 real factions are strong at (strength,
-  defence) only has to stay under 5 shapes. It then prints the rules missed and the kind-of-play concepts with under a
-  quarter of their cards on that kind's radii.
-- The kinds of play: `factions/wheel/archetypes.tsv` (key, what it is, its radii, its concepts).
+  A shape's highest radius must give it an archetype; a radius fewer than 2 real factions are strong at (strength,
+  defence) only has to stay under 5 shapes. It then prints the rules missed and the archetype concepts with under a
+  quarter of their cards on that archetype's radii.
+- The archetypes: `factions/wheel/archetypes.tsv` (key, what it is, its radii, its concepts).
 
 ## Step 4. The usable concepts
 - `python3 ../../factions/wheel/work/concept_catch.py` (a second) -> `work/concepts.tsv`: every concept with 10+

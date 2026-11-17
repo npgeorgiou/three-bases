@@ -14,7 +14,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   (`links.sqlite`). Each link keeps which effect of each card made it, so it counts only for those effects' concepts.
 - **Radius**: a list of concepts that measures what real factions are strong at (23 radii, `axes.py` `SPOKES`).
 - **Shape**: one faction's 3-6 strong radii with their values, taken from one real faction.
-- **Kind of play** (`wheel/archetypes.tsv`): swarm, sacrifice, bringing back... each with its radii and concepts.
+- **Archetype** (`wheel/archetypes.tsv`): swarm, sacrifice, bringing back... each with its radii and concepts.
 - **Group**: the concepts a faction builds on: 2 pillars and 2-4 others. It is the faction's character (what it is
   strongest at, what its tools grow from), never all its cards use: its cards draw on every usable concept and helper.
 - **Helper**: a concept that only says when or how a card acts ("when played", "at end of round", "choose one"), one
@@ -66,9 +66,9 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 3. **The 20 shapes** (`work/shapes.py`). Each shape is 3-6 radii of one real faction valued 1.2+, with its values.
    Every radius in a shape is joined to another of the same shape (strength, defence and "position and combos" need no
    join); at most one shape per real faction, no two alike; every radius a strength of 2-5 shapes; a shape carries a
-   kind of play when one of its radii is among the shape's two highest; each shape carries at most 2, each kind of play
+   archetype when one of its radii is among the shape's two highest; each shape carries at most 2, each archetype
    is carried by 2-3 shapes; within that, the shapes are as different as possible. Check by script that every kind of
-   play's concepts sit on its radii, and that every shape's highest radius gives it a kind of play.
+   play's concepts sit on its radii, and that every shape's highest radius gives it an archetype.
    **Kaptain agrees the 20 shapes.**
 4. **The usable concepts** (`work/concept_catch.py` -> `work/concepts.tsv`). Every concept with 10+ real cards, with
    its card count (`card_count`), its games and the share of its cards on each radius, sorted into three kinds
@@ -97,7 +97,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
      the group; every concept that uses something has a concept in the group that makes it.
    - A pillar belongs to one faction only; another concept is in at most 3 factions; every usable concept with joins
      is in at least one group (those that fit nowhere are shown to Kaptain, not forced in).
-   - Every kind of play the shape carries has a concept in the group, and one pillar belongs to one of them.
+   - Every archetype the shape carries has a concept in the group, and one pillar belongs to one of them.
    - Score: the strength of the joins inside each group plus the fit, summed over all 20. Fixed by Kaptain: G =
      grows when hurt + I damage my own units.
    - A group holding both ends of a pair real factions keep apart (`apart.py`) is shown to Kaptain.

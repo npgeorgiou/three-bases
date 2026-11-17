@@ -1,4 +1,4 @@
-key	archetype in this game	radii (main strength of 1+ shape)	concepts (library concepts of its kind of play; step 3 checks them)	from
+key	archetype in this game	radii (main strength of 1+ shape)	concepts (library concepts of its archetype; step 3 checks them)	from
 swarm	many cheap units, cards that gain from numbers	wide	summon,countboard*,on_ally_play	realworld swarm
 sacrifice	my units die on purpose and the death pays	spends	other_death_trigger,death_count,death_trigger,sacrifice,self_destruct,on_sacrifice,leave_trigger	realworld sacrifice
 bringback	my dead or spent cards come back	back	revive,recycle,return_to_hand	realworld graveyard

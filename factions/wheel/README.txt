@@ -1,7 +1,7 @@
 THE WHEEL'S FILES (factions/START_DESIGN-1-wheel.md has the steps; HANDOFF.md says which step is next)
 HANDOFF.md      where the wheel stands, step by step, and Kaptain's standing decisions
 PIPELINE.md     the commands of every step and what each makes
-archetypes.tsv  this game's 18 kinds of play, each with its radii and its library concepts (steps 3 and 6)
+archetypes.tsv  this game's 18 archetypes, each with its radii and its library concepts (steps 3 and 6)
 work/           shapes.py and shapes.tsv (step 3: the 20 shapes); suspects.tsv (step 1: concepts counted only in some
                 games); concept_verdicts.tsv (step 4: helpers and concepts out, with reasons); make_stop1.py (step 9);
                 links_same.py (checks that two links.sqlite files hold the same links); concept_games.py (step 1:
