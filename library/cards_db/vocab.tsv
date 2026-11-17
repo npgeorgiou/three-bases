@@ -1044,3 +1044,4 @@ keyword	Reset	concept of having, using or giving this keyword (Gwent: restore a 
 keyword	Reveal	concept of having, using or giving this keyword (Gwent: show a card to both players, then hide it again in the hand or deck)	information		6 Nov 2026 (Gwent keyword text)
 keyword	Shield	concept of having, using or giving this keyword (Gwent: status that blocks the next instance of damage dealt to the unit)	shield		6 Nov 2026 (Gwent keyword text)
 keyword	Timer	concept of having, using or giving this keyword (Gwent: lowered by 1 before the end of your turn; at 0 the ability triggers)	countdown		6 Nov 2026 (Gwent keyword text)
+act	bank_mana	unspent mana is kept for later (Runeterra: up to 3 unspent mana becomes spell mana at round end, for spells only)	resource_banking	mana_refilled	17 Nov 2026 (Runeterra game rule, Kaptain)

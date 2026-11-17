@@ -17,6 +17,9 @@ One file per game: the game, its factions, the source summary, the mechanics (pa
 - Attack token: the player on attack acts first in a round; roles swap in the next round (round FAQ).
 - Attacking: units are moved onto the battlefield and fight the defenders' blockers; an attacker that is not blocked strikes the
   opponent's Nexus (round FAQ). Win by bringing the enemy Nexus to 0.
+- Spell mana: at the end of a round up to 3 unused mana is banked as spell mana, usable by spells only
+  (support.riotgames.com/en-us/legends-of-runeterra/gameplay/let-s-talk-about-mana). Written onto the cards whose rows name
+  spell mana only (kind_has, Kaptain 17 Nov 2026), so it does not drown the other games.
 
 ## Deck rule (deck_analysis.DECK_RULES, can_share; 31 Oct 2026)
 A deck is 40 cards of two regions; a Runeterra champion's Origin takes one of the two region slots: 2 origins,

@@ -255,7 +255,7 @@ def build(c):
             ins(card, o, v, ab, 'state', 'moves', to_k, s, None, w=to_w)                # ("Pelt Lice in adjacent slots") needs no moves
     # the game's rules (read/<game>/game_rules.jsonl): what every card of a category does without its text saying so (an
     # attacking unit hits the enemy Nexus when it is not blocked); its makes rows, about "self", become every such card's own
-    for e, cat, cost_has in c.execute('select entry, category, cost_has from game_rule').fetchall():
+    for e, cat, cost_has, kind_has in c.execute('select entry, category, cost_has, kind_has from game_rule').fetchall():
         # a rule about a cost ("Bones costs": the card needs Bones) is a need of every card whose cost names it; other rules make
         rows = c.execute("select ability, happening, kind, side, pick, keyword, concept, obj_with, ref, role from flat_ref where card=? and role in "
                          + ("('makes','condition','trigger')" if cost_has else "('makes')"), (e,)).fetchall()
@@ -268,8 +268,9 @@ def build(c):
         never |= {a for (a, ev) in c.execute("""select card, param_event from flat_do where origin='own' and act='cant' and on_pick='self'
                  and to_kind is null and coalesce(lasts,'while') in ('while','permanent')""") if ev in made or (fights and ev == 'attacks')}
         for (card,) in c.execute("select id from card where category=? and game=(select game from card where id=?) and is_stub=0 and "
-                                 "(? is null or (lower(coalesce(cost_text,'')) like '%' || lower(?) || '%' and coalesce(cost, 1) > 0))",  # "0 Blood" costs nothing
-                                 (cat, e, cost_has, cost_has)).fetchall():
+                                 "(? is null or (lower(coalesce(cost_text,'')) like '%' || lower(?) || '%' and coalesce(cost, 1) > 0)) and "  # "0 Blood" costs nothing
+                                 "(? is null or exists (select 1 from flat_ref r where r.card=card.id and r.kind=? and r.origin!='game'))",
+                                 (cat, e, cost_has, cost_has, kind_has, kind_has)).fetchall():
             if card in never: continue
             ckind = KIND_OF_CAT.get(c.execute('select category from card where id=?', (card,)).fetchone()[0])
             for ab, h, k, sd, pk, kw, con, w, ref, role in rows:

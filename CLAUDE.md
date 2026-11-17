@@ -7,6 +7,7 @@ Kaptain's browser card game. Work on the clone and commit to `main`; push only w
 - Talk no more than necessary: the fewest lines the answer needs. No explanations, options or background Kaptain didn't ask for.
 - Never use words Kaptain hasn't used or agreed to (no "happening", "payoff", "generic layer", "flat_ref", etc.); explain with a card example instead.
 - A problem is explained from the big picture down: which step, what that step is for, what went wrong, then the numbers.
+- Every question and answer must make sense to someone who has not read the files. Never use a word from the files or scripts (list, kind of play, radius, one-off, raw count, pairs, "sits on") without saying in the same message, in one plain sentence, what it is, with one example. Say what each answer would change. Before sending, read each sentence as Kaptain would: if any word needs the files to be understood, rewrite it.
 - One question at a time, answerable with yes/no or a choice. Put it last, alone, clearly marked as the question.
 - No recaps, no lists of everything done, no caveats unless they change what Kaptain must decide.
 - When a mistake is found, fix its cause in the docs (this file or the entry file the task uses) in the same turn, then say in one line what changed; never only admit it.
