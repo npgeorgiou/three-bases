@@ -76,7 +76,10 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
 4. **How it differs from each other faction** (from the wheel; check it with the closest factions on the page). Kaptain's example: a swarm that fills the front rows with many cheap weak
    units, against a fortress that never has more than 3 units and moves defence between them. Write one sentence per
    other faction saying why a game between the two feels different.
-5. **Mechanics and tools, from the wheel** (never new ones here). A mechanic is a link real cards show between two
+5. **Mechanics and tools, from the wheel** (never new ones here). Steps 5-8 read the faction's list
+   (`factions/wheel/work/lists/<letter>.tsv`: every usable concept and helper by fit, with how strongly it links to the
+   group, times chance and in how many games): what a card may draw on beyond the group comes from it, strongest links
+   first. A mechanic is a link real cards show between two
    concepts of the group; write each from its link texts as "I do X -> I gain from X" ("my units die -> my other units
    grow"). A mechanic is broad: 30+ of the faction's cards can make it happen or use it. One card's effect ("a gun fires") is not a mechanic. Each mechanic
    grows in at least one of three ways:
@@ -87,17 +90,18 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    - Turning point: once a condition is met, the board works differently. "While you have twice as many units in my lane
      as the enemy, my allies here strike twice."
 6. **Three to five ways to play**, as many as the closest real factions show (never filler). They are built around the
-   faction's tools from the wheel (`START_DESIGN-1-wheel.md` step 7): the tools are its backbone, not all of its cards.
+   faction's tools from the wheel (`START_DESIGN-1-wheel.md` step 7): the tools are its backbone, not all of its cards;
+   the rest of each way comes from the faction's list.
    Each way builds a different board and asks for different decisions. For each, write which rows and cells it fills,
    its cost 1-4 opening, its 4-6 middle, its 6+ finish, and its Leaders (the 5 are spread over the ways). Test: two ways that put the same
    kind of units in the same cells and win the same way are one way.
-7. **The library, card by card.** For each way to play, 20+ real cards from the closest factions of ALL games
+7. **The library, card by card.** For each way to play, 20+ real cards, for the concepts of the group and of the list from the closest factions of ALL games
    (`ask.py all ways`, `palette`, `curve`, `spells`, `removal`, `protect`: START_DESIGN-3, section 3). At most 100 cards are read for the
    whole faction, the wheel's tools and steps 6 and 7 together; a card already in `factions/read-cards.tsv` is used from its line, never read
    again (part 3, "Reading cards"). For each card write one line: the
    decision the player makes when playing it. Save the lines in `factions/designs/<faction>-library.txt` (the gate reads
    it: "WAY <name>" lines, then "<game> | <card> | <the decision>").
-8. **Cards**, written to `factions/designs/<faction>-cards.txt` (mechanics and ways to play in
+8. **Cards** (each card's concepts from the group or the list), written to `factions/designs/<faction>-cards.txt` (mechanics and ways to play in
    `factions/designs/<faction>.txt`; format in `tools/network_check.py`), then into the game with two premade decks in
    `js/cards/decks-premade.js`. Each card grows from one library line or from Claude's own idea, and says which (`src: '<game>: <card>'`
    or `src: 'own'`; own ideas are welcome). Template:

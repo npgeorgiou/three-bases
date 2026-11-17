@@ -353,7 +353,6 @@ def derive(c):
     c.execute("insert into flat_concept select distinct card, concept, 'row' from flat_if where concept is not null and concept!=''")
     c.execute("insert into flat_concept select distinct ck.card, v.tree, 'keyword' from card_keyword ck join card k on k.id=ck.keyword "
               "join vocab v on v.field='keyword' and v.value=coalesce((select s.value from vocab s where s.field='keyword' and s.value=k.game || ':' || k.name), k.name) where v.tree!=''")
-    c.execute("insert into flat_concept select id, 'spell_or_skill', 'rule spell_or_skill' from card where category='ability'")  # skills
     # a keyword condition the card uses (Plunder, Reputation, Allegiance ...) gives the card that keyword's concept
     c.execute("insert into flat_concept select distinct a.card, v.tree, 'keyword condition' from cond cd join ability a on a.id=cd.ability "
               "join card k on k.id=cd.ref_keyword join vocab v on v.field='keyword' and v.value=coalesce((select s.value from vocab s where "

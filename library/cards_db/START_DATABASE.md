@@ -23,7 +23,8 @@ first and wait. Never invent rules or mechanics; mark suggestions as yours.
    errors", Part 2).
 2. **Every fix gets test cases** (31 Oct 2026): one `cases/network.tsv` row per point Kaptain made and per similar error found,
    `line` or `none`, only for lines checked against both cards. A fix without cases comes back broken.
-3. **Dump all lines before and after** (`dump_lines.py`; the before dump is made from the code as it is just before the change, never an older dump file) and read EVERY gone and new reason group in every game.
+3. **Dump all lines before and after** (`PYTHONHASHSEED=0 python3 dump_lines.py`: without the seed a reason's wording can
+   change between runs; the before dump is made from the code as it is just before the change, never an older dump file) and read EVERY gone and new reason group in every game.
 4. **One rebuild per round**: `check_all.py <game>` loads all games once (about 7 minutes); after a change to network.py only,
    `check_all.py --no-load` (about 2 minutes). Never `run.py` once per game, never a rebuild between single edits.
    Start it only with the Bash tool's background mode (run_in_background), never with `&` or nohup (the shell stops those a
@@ -121,6 +122,8 @@ pair that must or must not count for two mechanics or radii.
   life goes to the player is player_lifesteal, to the unit that dealt the damage lifesteal.
   base_resource_gain is any resource that pays for cards: in a game whose cards are paid in several kinds of supply
   (Inscryption) also its Bones and Mox gems (flat.py SEVERAL_SUPPLIES); Gwent's coins and Monster Train's Echo are not.
+- No concept says only what kind of record a card is (17 Nov 2026, Kaptain): Skill (spell_or_skill) went; Runeterra
+  Skills and Into the Breach weapons keep what their rows say (cases wc25, wc26).
 - Lines: links.sqlite rows per game (counts change with every rebuild; `status.py`). The next case id is n700.
 - Known gaps with no fix planned: Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain);
   Monster Train's Olde Magic record lists the wiki's choices with no numbers; Stormbound's Fort of Ebonrock has no ability.

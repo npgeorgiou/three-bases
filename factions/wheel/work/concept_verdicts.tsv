@@ -1,73 +1,77 @@
-concept	reason it is left out (Claude's; step 4)
-on_play	trigger or condition: when or if a card acts
-passive	trigger or condition: when or if a card acts
-activated	trigger or condition: when or if a card acts
-turn_end	trigger or condition: when or if a card acts
-count_payoff	trigger or condition: when or if a card acts
-card_presence_condition	trigger or condition: when or if a card acts
-cooldowns	trigger or condition: when or if a card acts
-once_per_game	trigger or condition: when or if a card acts
-on_draw	trigger or condition: when or if a card acts
-variety_payoff	trigger or condition: when or if a card acts
-combat_start	trigger or condition: when or if a card acts
-condition_life	trigger or condition: when or if a card acts
-play_timing_condition	trigger or condition: when or if a card acts
-cost_condition	trigger or condition: when or if a card acts
-on_enemy_enter	trigger or condition: when or if a card acts
-condition_count	trigger or condition: when or if a card acts
-deck_position	trigger or condition: when or if a card acts
-game_end_trigger	trigger or condition: when or if a card acts
-hand_size	trigger or condition: when or if a card acts
-delayed	trigger or condition: when or if a card acts
-modal_choice	trigger or condition: when or if a card acts
-aura	trigger or condition: when or if a card acts
-symmetric_effect	trigger or condition: when or if a card acts
-on_lifegain	trigger or condition: when or if a card acts
-spell_speed	not in this game (answers on the enemy's turn)
-trap_secret	not in this game (answers on the enemy's turn)
-cant_block_self	not in this game (blocking)
-blocking	not in this game (blocking)
-direct_damage	not in this game (player health)
-on_life_loss	not in this game (player health)
-life_payment	not in this game (player health)
-nexus_damage_condition	not in this game (player health)
-hero_power	not in this game (a hero with its own power)
-tribal	not in this game (unit types)
-type_grant	not in this game (unit types)
-run_structure	not in this game (a run of fights)
-shop_gold	not in this game (shops)
-deck_modification	not in this game (a deck changed between battles)
-permanent_loss	not in this game (losses beyond the battle)
-enemy_benefit	a possibility for cards (a drawback that helps the enemy)
-random_effect	ruled out by Kaptain (no randomness)
-random_target	ruled out by Kaptain (no randomness)
-random_ability	ruled out by Kaptain (no randomness)
-transform	ruled out by Kaptain (my units changing form is for cards)
-countdown	ruled out by Kaptain (countdowns very sparingly, on cards)
-positional	one of the game's own things (cells, rows, columns)
-lanes	one of the game's own things (3 lanes)
-zone_control	one of the game's own things (bases per lane)
-board_limit	one of the game's own things (the 3x3 camp)
-round_carryover	one of the game's own things (carry-over)
-high_cost	one of the game's own things (unit cost)
-cant_attack	a possibility for cards (my own unit can't attack: a wall, paid by its budget)
-drawback	a possibility for cards (a drawback gives a negative tv)
-exhaust	a possibility for cards (a card gone for good after one use)
-slots_queue	a source for a tool in step 7 (Slay the Spire's orbs)
-deck_condition	trigger or condition: when or if a card acts
-round_passing	not in this game (passing a round)
-max_mana_condition	trigger or condition: when or if a card acts
-evasion	not in this game (blocking: can't be blocked)
-spell_or_skill	not in this game (answers on the enemy's turn)
-on_block	not in this game (blocking)
-low_life	not in this game (player health)
-win_condition	one of the game's own things (bases)
-control_reward	one of the game's own things (bases per lane)
-targeting_rules	one of the game's own things (reach)
-on_harvest	one of the game's own things (Faeria's wells are like cells)
-start_of_game	trigger or condition: when or if a card acts
-target_choice	every card does it (choosing the target)
-reactions	not in this game (answers on the enemy's turn)
-on_targeted	trigger or condition: when or if a card acts
-resource_banking	one of the game's own things (carry-over)
-stances	ruled out by Kaptain (my units changing form is for cards)
+concept	kind	reason (a concept not here is usable)
+on_play	helper	when a card acts (Kaptain)
+turn_end	helper	when a card acts (Kaptain)
+start_of_game	helper	when a card acts (Kaptain)
+combat_start	helper	when a card acts (Kaptain)
+once_per_game	helper	when a card acts (Kaptain)
+passive	helper	when a card acts (Kaptain)
+activated	helper	when a card acts (Kaptain)
+cooldowns	helper	when a card acts (Kaptain)
+delayed	helper	when a card acts (Kaptain)
+play_timing_condition	helper	when a card acts (Kaptain)
+modal_choice	helper	how a card acts (Kaptain)
+symmetric_effect	helper	how a card acts (Kaptain)
+aura	helper	how a card acts (Kaptain)
+lanes	helper	one of the game's own things (Kaptain)
+zone_control	helper	one of the game's own things (Kaptain)
+resource_banking	helper	one of the game's own things (Kaptain)
+round_carryover	helper	one of the game's own things (Kaptain)
+positional	helper	one of the game's own things (Kaptain)
+board_limit	helper	one of the game's own things (Kaptain)
+high_cost	helper	one of the game's own things (Kaptain)
+on_harvest	helper	one of the game's own things (Kaptain)
+exhaust	helper	a thing for single cards (Kaptain)
+drawback	helper	a thing for single cards (Kaptain)
+cant_attack	helper	a thing for single cards (Kaptain)
+slots_queue	helper	a thing for single cards (Kaptain)
+target_choice	helper	a thing for single cards (Kaptain)
+max_mana_condition	out	not in this game: supply that grows by itself (Kaptain)
+turn_start	helper	when a card acts (Claude's)
+game_end_trigger	helper	when a card acts (Claude's)
+temporary_buff	helper	how a card acts (Claude's)
+kicker	helper	how a card acts (Claude's)
+stacking_keyword	helper	how a card acts (Claude's)
+area_templates	helper	how a card acts (Claude's)
+win_condition	helper	one of the game's own things (Claude's)
+control_reward	helper	one of the game's own things (Claude's)
+targeting_rules	helper	one of the game's own things (Claude's)
+rows	helper	one of the game's own things (Claude's)
+ranged	helper	one of the game's own things (Claude's)
+placement_rules	helper	one of the game's own things (Claude's)
+adjacency	helper	one of the game's own things (Claude's)
+flanking	helper	one of the game's own things (Claude's)
+link_formation	helper	one of the game's own things (Claude's)
+round_passing	helper	one of the game's own things (Claude's)
+retain	helper	one of the game's own things (Claude's)
+enemy_benefit	helper	a thing for single cards (Claude's)
+cant_move	helper	a thing for single cards (Claude's)
+play_restriction	helper	a thing for single cards (Claude's)
+damage_over_time	out	ruled out by Kaptain: a possibility for cards, not a concept a faction builds on
+transform	out	ruled out by Kaptain: a possibility for cards, not a concept a faction builds on
+stances	out	ruled out by Kaptain: a possibility for cards, not a concept a faction builds on
+countdown	out	ruled out by Kaptain: countdowns very sparingly, on cards
+spell_speed	out	not in this game: answers on the enemy's turn
+trap_secret	out	not in this game: answers on the enemy's turn
+reactions	out	not in this game: answers on the enemy's turn
+counter_spell	out	not in this game: answers on the enemy's turn
+cant_block_self	out	not in this game: blocking
+blocking	out	not in this game: blocking
+on_block	out	not in this game: blocking
+evasion	out	not in this game: blocking
+direct_damage	out	not in this game: player health
+on_life_loss	out	not in this game: player health
+life_payment	out	not in this game: player health
+nexus_damage_condition	out	not in this game: player health
+low_life	out	not in this game: player health
+hero_power	out	not in this game: a hero with its own power
+tribal	out	not in this game: unit types
+type_grant	out	not in this game: unit types
+run_structure	out	not in this game: a run of fights
+shop_gold	out	not in this game: shops
+deck_modification	out	not in this game: a deck changed between battles
+permanent_loss	out	not in this game: losses beyond the battle
+coin_economy	out	not in this game: units have no abilities you press (Claude's)
+random_effect	out	ruled out by Kaptain: no randomness
+random_target	out	ruled out by Kaptain: no randomness
+random_ability	out	ruled out by Kaptain: no randomness
+first_strike	out	ruled out by Kaptain: "strike first" is not a plan here

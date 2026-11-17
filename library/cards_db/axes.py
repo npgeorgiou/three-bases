@@ -369,12 +369,12 @@ def side_keys(card, src, game, keys, con):
     return SIDE[key]
 
 
-def radius_links(games, pools, con, pairs, deck_lists=None, plain=None):
+def radius_links(games, pools, con, pairs, deck_lists=None, seen=None):
     """All cards (no deck_lists): how much more often than chance the library links a card of one radius with a card of the
     other, counted through what of each card made the link (link_pairs, side_concepts). 1 = chance: the share of the game's
     card pairs the library links x the share of A's cards' link ends that A's own part makes x the same share for B.
     Worked out per game, then averaged over the games where chance gives MIN_LINKS_GAME+ pairs: each game counts the same.
-    plain (a Counter): filled with the linked card pairs of each two radii (sorted keys), each pair once.
+    seen (a Counter): filled with the number of games in which real cards link each two radii (sorted keys).
     Decks (deck_lists given; Kaptain, 10 Nov 2026: how often radii appear in the same real decks, linked or not): per deck,
     the share of its cards that count for each radius; for two radii A and B, the average of (A share x B share) over the
     game's decks divided by (average A share x average B share). 1 = decks heavy in A hold as much B as usual; 2 = twice as
@@ -416,8 +416,8 @@ def radius_links(games, pools, con, pairs, deck_lists=None, plain=None):
                 for i in (a, b):
                     for k in of[i]: ends[k] += 1; made[k] += k in on[i]
                 for ka, kb in linked: obs[(ka, kb)] += 1; obs[(kb, ka)] += 1
-                if plain is not None:
-                    for t in {tuple(sorted(t)) for t in linked}: plain[t] += 1
+        if seen is not None:
+            for t in {tuple(sorted(k)) for k, v in obs.items() if v}: seen[t] += 1
         share = {k: made[k] / ends[k] if ends[k] else 0 for k in ends}
         for sa in keys:
             for sb in keys: exp[(sa[0], sb[0])] += (n[sa[0]] * n[sb[0]] - both[(sa[0], sb[0])]) * dens * share.get(sa[0], 0) * share.get(sb[0], 0)

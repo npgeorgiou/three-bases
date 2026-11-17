@@ -1,7 +1,7 @@
 # Case tests: runeterra
 
 Made by `cases/run.py runeterra`.
-**442 of 442 cases pass.**
+**443 of 443 cases pass.**
 
 **Cases whose reason no line says any more (rewrite them): n56, n352, n378, n669**
 
@@ -107,6 +107,7 @@ Made by `cases/run.py runeterra`.
 | wc12 | spell mana is the main supply (base_resource_gain) (wheel step 1, Kaptain 16 Nov 2026) | 13 | 13 | 100% | 54 | yes |
 | wc18 | Lifesteal heals the Nexus: player_lifesteal (wheel step 1, Kaptain 16 Nov 2026) | 17 | 17 | 100% | 37 | yes |
 | wc19 | Lifesteal to the Nexus is no drain to a unit (wheel step 1, Kaptain 16 Nov 2026) | 17 | 17 | 100% | 2468 | yes |
+| wc25 | Runeterra: a Skill keeps only what its rows say; no concept says it is a Skill (wheel step 4, Kaptain 17 Nov 2026) | 15 | 15 | 100% | 2470 | yes |
 
 ## Combos (the enabler must set off the payoff)
 

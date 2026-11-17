@@ -39,10 +39,11 @@ is written in that step's chat, from the rules of the step, and its line here is
 
 ## Step 4. The usable concepts
 - `python3 ../../factions/wheel/work/concept_catch.py` (a second) -> `work/concepts.tsv`: every concept with 10+
-  real cards, its card count, its games, its kind (usable, helper, out) and reason, the share of its cards on each
+  real cards, its card count (`card_count`), its games, its kind (usable, helper, out) and reason, the share of its cards on each
   radius (per game, averaged; strength and defence come from unit stats, so no share); a parent in
   `library/concept_tree.txt` keeps only the cards none of its children carry. Kinds and reasons: `work/concept_verdicts.tsv`
-  (a concept not in it is usable); player_<concept> and a parent left with under 10 cards are out.
+  (a concept not in it is usable); player_<concept> and a parent left with under 10 cards are out. `work/concepts.md`:
+  the same by kind in plain words, for Kaptain.
 
 ## Step 5. The links between concepts
 - `python3 mechanics_wheel.py links --concepts` (to write; the same count as `--radii`) -> `wheel/concept_links.tsv`:

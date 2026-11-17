@@ -291,7 +291,6 @@ zone_of_control | Zones of control (leaving is punished) | structure | positiona
 ## Triggers
 trigger | Triggers & timing | trigger |  | When an effect happens. | What it does is an effect.
 activated | Activated ability (pay to use) | trigger | trigger | The player chooses when to use an ability: activate, tap, pay to use. | Abilities that fire on their own are triggers.
-spell_or_skill | Skill (a unit's spell-like effect) | trigger | trigger | A unit's own effect that goes on the stack like a spell, so the opponent can react (Runeterra Skill, Elemental Skill). (Added 29 Oct 2026, Kaptain's decision; Claude's wording.) | An ability the player chooses to use is activated.
 aura | Aura (ongoing effect on others) | trigger | passive | While the source is in play, other units are continuously changed: anthem, lord. | A one-time change is the effect itself.
 combat_start | Start of combat | trigger | trigger | Effects at the start of combat or before a fight. | Start of turn is turn_start.
 death_trigger | When it dies (deathrattle) | trigger | death,trigger | Effects when this unit dies or is destroyed: its own death. (Narrowed 20 Oct 2026, Kaptain's decision.) | Another unit dying is other_death_trigger; leaving play by other means is leave_trigger.

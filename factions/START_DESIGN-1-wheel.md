@@ -71,15 +71,16 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    play's concepts sit on its radii, and that every shape's highest radius gives it a kind of play.
    **Kaptain agrees the 20 shapes.**
 4. **The usable concepts** (`work/concept_catch.py` -> `work/concepts.tsv`). Every concept with 10+ real cards, with
-   its card count, its games and the share of its cards on each radius, sorted into three kinds (Claude's, in
-   `work/concept_verdicts.tsv`, each with its reason):
+   its card count (`card_count`), its games and the share of its cards on each radius, sorted into three kinds
+   (`work/concept_verdicts.tsv`: kind and reason, Kaptain's rulings and Claude's; a concept not in it is usable):
    - Usable: a faction can build on it. It says what a card does ("brings back a dead unit"), or reacts to something
      the player makes happen or builds up ("when a card is drawn", "when it becomes a target", "if your hand holds 5
      cards").
    - Helper: it only says when or how a card acts, never what the player builds ("when played", "at end of round",
      "once per game", "choose one of two effects"); or it is one of the game's own things (lanes, bases, carry-over,
      cells and rows, the 3x3 camp, unit cost); or it is a thing for single cards (used once, a drawback, a wall that
-     can't attack, choosing the target).
+     can't attack, choosing the target). A helper is never in a group; after step 6 each faction gets every helper in
+     its list.
    - Out: it is not in this game (player health, blocking, answers on the enemy's turn, unit types, shops, supply
      that grows by itself) or Kaptain ruled it out (randomness, my units changing form, countdowns).
    A concept that only says what kind of record a card is (an "ability" record) is a library error, removed from the
@@ -111,7 +112,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    faction: a tool is a new kind of thing or rule that makes the group's mechanics happen on this game's own things
    (dots and front cells, rows, columns, lanes, the 3x3 camp, unit size, supply per lane, carry-over, round start and
    end, one action per turn, moving, reach, strikes and fixed damage, the hand, the discard pile, Immobile), carried by
-   many of its cards; the faction's list (step 6) shows the helpers and other concepts a tool can use. Each tool names the mechanic it grows from; each pillar has a tool; each tool feeds another (one
+   many of its cards; step 7 reads the faction's list (step 6): the helpers and other concepts a tool can use, strongest
+   links to the group first. Each tool names the mechanic it grows from; each pillar has a tool; each tool feeds another (one
    makes what the other uses); each is played out cell by cell (which cell, what happens, what the enemy does with his
    one action between; two tools needing the same cell clash). The linked card pairs of the mechanic are its source
    cards. No two factions have the same tool doing the same job, compared by what the card does: one Egg in the whole
