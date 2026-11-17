@@ -46,11 +46,12 @@ is written in that step's chat, from the rules of the step, and its line here is
 - `python3 ../../factions/wheel/work/shapes.py --write` (under a minute) -> `factions/wheel/work/shapes.tsv` (letter
   A-T, radius=value list). Without `--write` it prints the 20, their real factions, the archetypes each fits and the
   archetypes that fit no shape.
-- Candidates: every 3-6 of a real faction's radii valued 1.2+ whose radii are all joined (step 4), with that faction's
-  values, that fit at least 2 archetypes (every need of the archetype has a radius among the candidate's). Picking: a
-  search over 20 candidates, at most one per real faction; misses of the rules count 100 each, and sameness (shared
+- Candidates: every 3-6 radii where every two are strong (1.2+) together in some real faction, all joined (step 4),
+  fitting at least 2 archetypes (every need of the archetype has a radius among the candidate's); values are averages
+  over the real factions that show the pairs (its inspiration). Picking: a search over 20 candidates; misses of the
+  rules count 100 each, and sameness (shared
   radii between two shapes, squared) decides the rest. Four fixed seeds, so every run gives the same. A radius fewer
-  than 2 real factions are strong at only has to stay under 5 shapes. It prints the rules missed.
+  than 2 candidates have only has to stay under 5 shapes. It prints the rules missed.
 
 ## Step 6. The links between concepts
 - `python3 mechanics_wheel.py links --concepts` (to write; the same count as `--radii`, every game including those

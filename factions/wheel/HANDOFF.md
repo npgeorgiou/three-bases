@@ -10,7 +10,7 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 2. The usable concepts | done | `work/concepts.tsv`, `work/concepts.md`: 117 usable, 44 helpers, 35 out |
 | 3. The archetypes | done | `archetypes.tsv`: 71 archetypes, 47 can exist, each with its needs (the concepts that can meet each, and their radii); Formidable fixed in the library (strikes_with_defence, stat_fixed) |
 | 4. The radii and how they work together | done | `work/radii.tsv` (every usable concept on its radius, agreed with Kaptain); `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` from concept instances |
-| 5. The 20 shapes | **next**: show Kaptain the 20 shapes for his OK | `work/shapes.tsv` (made on the step 4 numbers; every shape fits 2+ archetypes) |
+| 5. The 20 shapes | **next**: show Kaptain the 20 shapes for his OK | `work/shapes.tsv` (inspired by real factions, not copied; every shape fits 2+ archetypes) |
 | 6. The links between concepts | to do | |
 | 7. The 20 groups and each faction's list | to do | |
 | 8. Theme, then tools | to do | |
@@ -18,9 +18,10 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 10. The seven answers, Stop 1 | to do | |
 
 ## What the next steps find in the files
-- Step 5: run on the step 4 numbers, `shapes.py` gives 20 shapes with no rule missed, each fitting 2-13 archetypes; 8
-  archetypes fit no shape (tempo, combo, reanimator, storm, cheat, discard_enemy, turbo_fog, hatebears). Show Kaptain
-  each shape in plain words (its real faction, its radii by name and value, the archetypes it fits) and wait for his OK.
+- Step 5: `shapes.py` gives 20 shapes from 1661 candidates with no rule missed, each fitting 2-12 archetypes; 7
+  archetypes fit no shape (combo, prison, reanimator, storm, cheat, discard_enemy, turbo_fog). Strength is in 1 shape
+  and defence in none: only Inscryption Beast is strong at strength, no real faction at defence. Show Kaptain
+  each shape in plain words (its radii by name and value, the archetypes it fits, the real factions that inspired it) and wait for his OK.
 - Counts whose rows don't say what they count are counted nowhere: 200 instances of "grows with what happened" and 36
   of "counts and thresholds" (`axes.py` prints them). Most are counts of enemy units or of a keyword the rows don't name.
 - `tools/wheel_check.js` (this game's factions on the wheel) still counts whole cards, not concept instances: before
@@ -49,8 +50,9 @@ One chat does one step; at its end, mark the step done here and say what it left
 - Not in the game: player health, answers on the enemy's turn, supply that grows by itself, unit types, who acts first
   (random in round 1, then alternating), attacked units hitting back (only Riposte), placing at round end.
 - The wheel is general; step 8 turns each faction's group into these own things, from scratch.
-- Every game counts the same in every number. Shapes come from real factions, so a game with no factions (Marvel Snap)
-  gives no shape; its cards still count in every number.
+- Every game counts the same in every number. Shapes are inspired by real factions, never copied from one (17 Nov 2026):
+  every two radii of a shape are strong together in some real faction. A game with no factions (Marvel Snap) inspires
+  no shape; its cards still count in every number.
 - Interactions with the player (heal, Block, strength on the player; the player hurt) stay off the radii: no player
   health here. They stay in the library as player_<concept>.
 - Damage over time and my units changing form are possibilities for cards, not concepts a faction builds on.
