@@ -343,11 +343,14 @@ def derive(c):
     c.execute(f"update flat_when set concept='player_damaged' where concept='on_damaged' and obj_kind='player' and not {BODY}")
     c.execute("update flat_do set concept='movement' where concept='forced_movement' and on_side='mine'")
     # removal and harm done to my own side are not removal (Kaptain 17 Nov 2026): my unit killed or banished is a
-    # sacrifice (itself: self_destruct), my unit damaged or weakened is friendly_fire, my player damaged is life_payment
+    # sacrifice (itself: self_destruct; a spell removing itself: drawback), my unit or itself damaged or weakened is friendly_fire, my player damaged is life_payment
     # (a game whose player is a unit on the board: friendly_fire), my cards or resources lost are a drawback
-    own = "on_side='mine' and concept in ('destroy','banish','damage','debuff','stat_loss')"
+    own = "(on_side='mine' or (on_side is null and on_pick='self')) and concept in ('destroy','banish','damage','debuff','stat_loss')"
     unit = "coalesce(on_kind,'unit') in ('unit','unit_or_structure','landmark','any','minion','structure')"
+    spell = "card in (select id from card where category='spell')"
+    c.execute(f"update flat_do set concept='drawback' where {own} and concept in ('destroy','banish') and on_pick='self' and {spell}")
     c.execute(f"update flat_do set concept='self_destruct' where {own} and concept in ('destroy','banish') and on_pick='self'")
+    c.execute(f"update flat_do set concept='friendly_fire' where {own} and concept in ('damage','debuff','stat_loss') and on_pick='self'")
     c.execute(f"update flat_do set concept='sacrifice' where {own} and concept in ('destroy','banish') and {unit} "
               "and coalesce(on_zone,eff_zone,'board')='board'")
     c.execute(f"update flat_do set concept='friendly_fire' where {own} and concept in ('damage','debuff','stat_loss') and ({unit} or {BODY})")

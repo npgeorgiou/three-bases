@@ -24,7 +24,9 @@ stage ends with a commit and a push, and its line here marked done with what it 
 1. **Library: split by side** every concept of the hurts_enemy branch whose rows also act on my own units (found by
    script, not only the three above), by `START_DATABASE.md`'s fix rules, with test cases. State: in progress. `flat.py` derive maps my own unit killed or banished to sacrifice (itself:
    self_destruct), damaged or weakened to friendly_fire, my player damaged to life_payment, my cards lost to drawback;
-   cases w12-w16 in `cases/wheel.tsv`. Lines dumped before (`checks/side_split/before.tsv`); the rebuilt database is
+   a row on the card itself with no side ("destroy me", "deal 2 to me") is my side too. Cases w12-w16 in
+   `cases/wheel.tsv`; cases/links.tsv lk152-lk372 now name the new concepts. destroy, damage and banish keep only rows on
+   the enemy or with no side (a target the player picks). Lines dumped before (`checks/side_split/before.tsv`); the rebuilt database is
    tried on a copy (`checks/side_split/cards_new.sqlite`) before it replaces cards.sqlite.
 2. **Rebuild** `check_all.py` (about 14 min), `links.py` (about 6), `mechanics_wheel.py links --concepts`, step 2's
    `concept_catch.py`. New concepts go on a radius in `work/radii.tsv` by step 4's rule (Kaptain sees them). State:
