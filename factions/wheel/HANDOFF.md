@@ -22,7 +22,7 @@ One chat does one step; at its end, mark the step done here and say what it left
   concepts (`position*` = "an effect on my own units beside it"): step 4 rewrites both as START_DESIGN-1 says. First
   show Kaptain every usable concept with the radius it goes on, in plain words, and wait for his OK. `axes.tsv`, `wheel-axes.html`, `wheel/radius_links.tsv` and
   `work/shapes.tsv` are from the old count and are all made again (steps 4 and 5).
-- Step 4, agreed with Kaptain: the radius "brings back" becomes "reuses my cards" (return_to_hand, recycle,
+- Step 4, agreed with Kaptain: the radius "brings back" becomes "reuses cards" (mine or the enemy's) (return_to_hand, recycle,
   leave_trigger, discard, on_discard, self_mill, copy of a card or a unit, repeat_trigger: the same card or effect used
   again); revive and other_leave_trigger go on "spends them" (my units die, and
   come back). Picks keeps only choosing a card (tutor, selection, card_quality, information, deck_position,
