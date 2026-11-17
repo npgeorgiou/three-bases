@@ -3,6 +3,7 @@ HANDOFF.md      where the wheel stands, step by step, and Kaptain's standing dec
 PIPELINE.md     the commands of every step and what each makes
 archetypes_kaptain.txt  Kaptain's list of archetypes (the source of step 3)
 archetypes.tsv  the archetypes in this game: can each exist here, its concepts and radii (step 3)
+work/radii.tsv  every usable concept and the radius it goes on, with the part of it that counts there (step 4)
 work/           suspects.tsv, suspect_verdicts.tsv, concept_games.py (-> concept_games.tsv, --all -> concept_games_all.tsv)
                 (step 1: concepts counted only in some games, their verdicts, per concept and game where its rows act);
                 links_same.py (checks that two links.sqlite files hold the same links); concept_catch.py and
