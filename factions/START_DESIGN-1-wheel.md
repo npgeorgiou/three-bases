@@ -85,9 +85,9 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    **Kaptain agrees the archetypes.**
 4. **The radii and how they work together.** Every usable concept is put on exactly one radius (`axes.SPOKES`); each
    archetype's concepts go on that archetype's radii ("moving my units" belongs to "position and combos"). **Kaptain
-   agrees the concepts on each radius**, and every later move. Then `axes.py` measures the 43 real factions: a faction's value on a radius =
-   the share of its concept instances on that radius, divided by its game's average share (1 = the average faction of
-   its game). Strength, defence, "many cheap units", "a few big units" and the combos part of "position and combos"
+   agrees the concepts on each radius**, and every later move. Then `axes.py` measures the 43 real factions: a
+   faction's value on a radius = the share of its concept instances on that radius, divided by its game's average
+   share (1 = the average faction of its game). Strength, defence, "many cheap units", "a few big units" and the combos part of "position and combos"
    come from the units' numbers and the card links, not from concepts. For every two radii (`mechanics_wheel.py links
    --radii`): `cards` = how much more often than chance their concepts' instances are linked; `decks` = how much more
    often real decks heavy in one hold the other; `games` = in how many games real cards link them; `level` = the
