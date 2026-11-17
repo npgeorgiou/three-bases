@@ -22,6 +22,10 @@ One chat does one step; at its end, mark the step done here and say what it left
   concepts (`position*` = "an effect on my own units beside it"): step 4 rewrites both as START_DESIGN-1 says. First
   show Kaptain every usable concept with the radius it goes on, in plain words, and wait for his OK. `axes.tsv`, `wheel-axes.html`, `wheel/radius_links.tsv` and
   `work/shapes.tsv` are from the old count and are all made again (steps 4 and 5).
+- Step 4, agreed with Kaptain: the radius "brings back" becomes "reuses my cards" (return_to_hand, recycle,
+  leave_trigger, discard, on_discard, self_mill); revive and other_leave_trigger go on "spends them" (my units die, and
+  come back). Picks keeps only choosing a card (tutor, selection, card_quality, information, deck_position,
+  deck_condition, repeat_trigger).
 - Step 4: `axes.py` still uses stat_multiply in `DISRUPT_ON_ENEMY` and its "multiply_own" measure; since 17 Nov 2026 a stat
   set on an enemy is stat_loss and a stat set to a number is stat_fixed: the rewrite uses the concepts as they are now.
 - Step 5: 47 archetypes can exist, each carried by 2-3 shapes, but 20 shapes carry at most 2 each (40 places): ask
