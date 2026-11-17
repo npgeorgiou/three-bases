@@ -16,7 +16,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   (`links.sqlite`). Each link keeps which effect of each card made it, so it counts only for those effects' concepts.
 - **Archetype**: a way to play from Kaptain's list (`wheel/archetypes_kaptain.txt`: aggro, control, aristocrats,
   reanimator, theft...). `wheel/archetypes.tsv` says for each one whether it can exist in this game and, if it can,
-  its concepts and its radii.
+  its needs: each need is what the way to play must have, with the concepts that can each meet it (control: "removes
+  enemy units" = destroy, damage, board wipe...; "gets more cards" = draw...), and the radii of each need.
 - **Radius**: one direction of the wheel, such as "more supply" (23 radii, `axes.py` `SPOKES`). Every usable concept
   belongs to exactly one radius, except "deal damage": on a spell it belongs to "damage from spells", on any other
   card to "damage from units' text" (Kaptain). A faction's value on a radius is the share of its concept instances that belong to
@@ -82,7 +83,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 3. **The archetypes** (`wheel/archetypes.tsv`, from `wheel/archetypes_kaptain.txt`). For every archetype of Kaptain's
    list: whether it can exist in this game (Three Bases has no lands, no player life, no poison, no planeswalkers, no
    multiplayer, no answers on the enemy's turn: the reason when it can't); for each one that can, what it is in this
-   game, its usable concepts (step 2) and its radii (the radii its concepts belong to, step 4). Claude's, marked. Each
+   game, its needs, each with the usable concepts (step 2) that can meet it, or a radius measured from the units'
+   numbers ("strong cheap units" = strength), and its radii (the radii those concepts belong to, step 4). Claude's, marked. Each
    concept is checked against its definition in `library/concept_tree.txt`; before saying no concept fits, search
    `vocab.tsv` keywords by meaning (Runeterra's Formidable is "strikes with its defence"): a keyword on a loose concept
    is a library error, fixed as `START_DATABASE.md` says.
@@ -90,8 +92,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 4. **The radii and how they work together.** Every usable concept is put on exactly one radius (`axes.SPOKES`; "deal damage" by card type, as in "The words"); a concept goes only on a radius whose name says what
    the concept does (copying a unit is no draw); how often real cards link two concepts decides only between radii that
    fit; a trigger or a condition goes on the radius of the thing it reacts to ("when a unit dies" on
-   "spends them"; a count by what it counts, from its rows: "if 3 allies died" on "spends them"); each
-   archetype's concepts go on that archetype's radii ("moving my units" belongs to "position and combos"). **Kaptain
+   "spends them"; a count by what it counts, from its rows: "if 3 allies died" on "spends them"); then
+   each archetype's needs get their radii. **Kaptain
    agrees the concepts on each radius**, and every later move. Then `axes.py` measures the 43 real factions: a
    faction's value on a radius = the share of its concept instances on that radius, divided by its game's average
    share (1 = the average faction of its game). Strength, defence, "many cheap units", "a few big units" and the combos part of "position and combos"
@@ -103,9 +105,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 5. **The 20 shapes** (`work/shapes.py`). Each shape is 3-6 radii of one real faction valued 1.2+, with its values.
    Every radius in a shape is joined to another of the same shape (strength, defence, "a few big units" and "position and
    combos" need no join: no card text gives the first three, Kaptain); at most one shape per real faction, no two alike; every radius a strength of 2-5 shapes; every shape fits at least two archetypes that can
-   exist here, which proves a faction like it is workable: a shape fits an archetype when every concept of the
-   archetype is on one of the shape's radii (Kaptain; how strong each of those radii must be is still to agree); an
-   archetype may fit several shapes or none; within that, the shapes are as different as possible. **Kaptain agrees the 20 shapes.**
+   exist here, which proves a faction like it is workable: a shape fits an archetype when every need of the archetype
+   has a concept on one of the shape's radii (valued 1.2+; Kaptain); an archetype may fit several shapes or none; within that, the shapes are as different as possible. **Kaptain agrees the 20 shapes.**
 6. **The links between concepts** (`mechanics_wheel.py links --concepts` -> `wheel/concept_links.tsv`). For every two
    concepts with 10+ cards (usable, helpers and out), by the same count as step 4: `cards`, `decks`, `games`, `level`;
    which one makes and which one uses (the side of the link); the most common link texts. A game counts for `cards`
@@ -118,7 +119,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
      the group; every concept that uses something has a concept in the group that makes it. Only usable concepts.
    - A pillar belongs to one faction only; another concept is in at most 3 factions; every usable concept with joins
      is in at least one group (those that fit nowhere are shown to Kaptain, not forced in).
-   - Every archetype that fits the shape has a concept in the group, and one pillar belongs to one of them.
+   - The group meets every need of at least two of the archetypes that fit the shape (a concept of each need), and one
+     pillar belongs to one of them.
    - Score: the strength of the joins inside each group plus the fit, summed over all 20. Fixed by Kaptain: G = grows
      when hurt + I damage my own units.
    - A group holding both ends of a pair real factions keep apart (`apart.py`) is shown to Kaptain.

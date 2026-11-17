@@ -1,29 +1,18 @@
 """Step 5 (START_DESIGN-1-wheel.md): the 20 shapes from today's numbers. Run from library/cards_db.
 A candidate is 3-6 of one real faction's strong radii (value 1.2+), every radius joined to another of them (radius_links.tsv:
-cards 1.2+ or decks 1.5+; spellpay by decks); its values are that faction's. The 20 are picked from the candidates, at most one
-per real faction: every radius a strength of 2-5 shapes, each shape carries at most 2 archetypes of factions/wheel/archetypes.tsv
-through its main strengths (the highest and second value), its highest radius giving it one, each archetype carried by 2-3 shapes,
-then as different from each other as possible. A radius fewer than 2 real factions are strong at is only kept under 5.
+cards 1.2+ or decks 1.5+; spellpay by decks); its values are that faction's. A candidate fits an archetype of
+factions/wheel/archetypes.tsv when every need of the archetype has a radius among the candidate's; a candidate that fits fewer
+than 2 archetypes is no candidate. The 20 are picked from the candidates, at most one per real faction: every radius a strength
+of 2-5 shapes, then as different from each other as possible. A radius fewer than 2 real factions are strong at is only kept under 5.
 python3 ../../factions/wheel/work/shapes.py [--write]: prints the 20; --write writes factions/wheel/work/shapes.tsv."""
 import csv, itertools, random, sys
 NUM = {'strong', 'tough', 'tall', 'together'}  # strength, defence, a few big units, position and combos: need no join
-AROWS = list(csv.DictReader(open('../../factions/wheel/archetypes.tsv'), delimiter='\t'))
-ARCH = [r['radii (main strength of 1+ shape)'].split(',') for r in AROWS]
-def carry(pick, caps):
-    # which archetypes each picked shape carries: at most 2 per shape; first up to 2 shapes per archetype, then up to 3
-    got = {a: [] for a in range(len(ARCH))}; fill = {i: 0 for i in pick}
-    def put(i, seen):
-        for a in sorted(range(len(ARCH)), key=lambda a: not set(ARCH[a]) & top[i]):  # through the highest radius first
-            if a in seen or not set(ARCH[a]) & main[i] or i in got[a]: continue
-            seen.add(a)
-            if len(got[a]) < cap: got[a].append(i); return True
-            for j in got[a]:
-                if j != i and fill[j] >= 0 and put(j, seen): got[a].remove(j); got[a].append(i); return True
-        return False
-    for cap in caps:
-        for i in pick:
-            while fill[i] < 2 and put(i, set()): fill[i] += 1
-    return got
+AROWS = [r for r in csv.DictReader(open('../../factions/wheel/archetypes.tsv'), delimiter='\t') if r['can exist'] == 'yes']
+ARCH = [[set(n.split('/')) for n in r['radii of each need'].split('; ')] for r in AROWS]  # per archetype: the radii each need can use
+MIN_FITS = 2
+def fits(sh):
+    """the archetypes a shape fits: every need has a radius among the shape's"""
+    return [a for a, needs in enumerate(ARCH) if all(n & set(sh) for n in needs)]
 STRONG, LO, HI, N = 1.2, 2, 5, 20
 RL = {}
 for x in csv.DictReader(open('wheel/radius_links.tsv'), delimiter='\t'):
@@ -39,19 +28,15 @@ for r in csv.DictReader(open('axes.tsv'), delimiter='\t'):
     v = {k[:-6]: float(x) for k, x in r.items() if k.endswith('_value') and x and float(x) >= STRONG}
     for n in range(3, min(6, len(v)) + 1):
         for s in itertools.combinations(sorted(v), n):
-            if holds(s): cands.append((f"{r['game']}: {r['faction']}", {k: v[k] for k in s}))
+            if holds(s) and len(fits(s)) >= MIN_FITS: cands.append((f"{r['game']}: {r['faction']}", {k: v[k] for k in s}))
 RADII = sorted({a for a, b in RL} | NUM)
-main = [set(sorted(sh, key=lambda a: -sh[a])[:2]) for f, sh in cands]
-top = [{a for a in sh if sh[a] == max(sh.values())} for f, sh in cands]
 # a radius fewer than LO real factions are strong at can't be in LO shapes: it is only kept under HI
 FEW = {a for a in RADII if len({f for f, sh in cands if a in sh}) < LO}
 def score(pick):
     cnt = {a: 0 for a in RADII}
     for i in pick:
         for a in cands[i][1]: cnt[a] += 1
-    got = carry(pick, (2, 3))
-    bad = sum(max(0, 2 - len(g)) for g in got.values()) + sum(max(0, LO - c) * (a not in FEW) + max(0, c - HI) for a, c in cnt.items())
-    bad += sum(not any(i in got[a] and set(ARCH[a]) & top[i] for a in got) for i in pick)  # its highest radius gives it an archetype
+    bad = sum(max(0, LO - c) * (a not in FEW) + max(0, c - HI) for a, c in cnt.items())
     same = sum((len(set(cands[i][1]) & set(cands[j][1])) / len(set(cands[i][1]) | set(cands[j][1]))) ** 2 for i, j in itertools.combinations(pick, 2))
     return bad * 100 + same + 100 * (len(pick) - len({cands[i][0] for i in pick}))
 def search(seed):
@@ -69,13 +54,11 @@ cnt = {a: sum(a in cands[i][1] for i in pick) for a in RADII}
 print(f'{len(cands)} candidates; score {s:.2f} (coverage misses x100 + sameness)')
 rows = sorted((cands[i] for i in pick), key=lambda c: -max(c[1].values()))
 for k, (f, sh) in zip('ABCDEFGHIJKLMNOPQRST', rows):
-    print(k, ','.join(f'{a}={v:.1f}' for a, v in sorted(sh.items(), key=lambda t: -t[1])), '|', f)
-got = carry(pick, (2, 3))
-for a, g in got.items(): print(AROWS[a]['key'], ''.join(sorted('ABCDEFGHIJKLMNOPQRST'[[cands[x] for x in sorted(pick, key=lambda x: -max(cands[x][1].values()))].index(cands[i])] for i in g)))
+    print(k, ','.join(f'{a}={v:.1f}' for a, v in sorted(sh.items(), key=lambda t: -t[1])), '|', f, '| fits:', ', '.join(AROWS[a]['key'] for a in fits(sh)))
 L = 'ABCDEFGHIJKLMNOPQRST'; order = sorted(pick, key=lambda x: -max(cands[x][1].values()))
-miss = [f'{AROWS[a]["key"]} carried by {len(g)}' for a, g in got.items() if len(g) < 2]
-miss += [f'{a} in {c} shapes' for a, c in cnt.items() if (c < LO and a not in FEW) or c > HI]
-miss += [f'{L[order.index(i)]}: highest radius gives no archetype' for i in pick if not any(i in got[a] and set(ARCH[a]) & top[i] for a in got)]
+fit = {AROWS[a]['key'] for i in pick for a in fits(cands[i][1])}
+print('archetypes that fit no shape:', ', '.join(r['key'] for r in AROWS if r['key'] not in fit) or 'none')
+miss = [f'{a} in {c} shapes' for a, c in cnt.items() if (c < LO and a not in FEW) or c > HI]
 miss += [f'{f} twice' for f in {cands[i][0] for i in pick} if sum(cands[j][0] == f for j in pick) > 1]
 print('rules missed:', '; '.join(miss) or 'none', '| strong at by too few real factions:', ', '.join(sorted(FEW)))
 print('radius in how many shapes:', ', '.join(f'{a} {c}' for a, c in sorted(cnt.items(), key=lambda t: -t[1])))
