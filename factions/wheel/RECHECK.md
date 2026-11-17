@@ -26,13 +26,21 @@ stage ends with a commit and a push, and its line here marked done with what it 
    self_destruct), damaged or weakened to friendly_fire, my player damaged to life_payment, my cards lost to drawback;
    a row on the card itself with no side ("destroy me", "deal 2 to me") is my side too. Cases w12-w16 in
    `cases/wheel.tsv`; cases/links.tsv lk152-lk372 now name the new concepts. destroy, damage and banish keep only rows on
-   the enemy or with no side (a target the player picks). Lines dumped before (`checks/side_split/before.tsv`); the rebuilt database is
+   the enemy or with no side (a target the player picks). State: **done**. All cases pass (check_all, links, wheel);
+   the deck lines are the same before and after (only concept names changed); concept_tree.txt says it for each. Lines dumped before (`checks/side_split/before.tsv`); the rebuilt database is
    tried on a copy (`checks/side_split/cards_new.sqlite`) before it replaces cards.sqlite.
 2. **Rebuild** `check_all.py` (about 14 min), `links.py` (about 6), `mechanics_wheel.py links --concepts`, step 2's
-   `concept_catch.py`. New concepts go on a radius in `work/radii.tsv` by step 4's rule (Kaptain sees them). State:
+   `concept_catch.py`. New concepts go on a radius in `work/radii.tsv` by step 4's rule (Kaptain sees them). State: **done**. No new concept (the rows went to sacrifice, self_destruct,
+   friendly_fire, life_payment, drawback), so the radii are unchanged; concepts.tsv, concept_links.tsv, radius_links.tsv,
+   axes.tsv and wheel-axes.html rebuilt. destroy -> counts deaths fell from 17 to 11 times chance: the rest are cards
+   that kill any unit, mine or his (Reckoning), which are both.
 3. **Archetypes redone** (`archetypes.tsv`, `archetypes.md`) by step 3's rules, with the findings above. State: drafted in
    `work/archetypes_make.py` (106 parts, every archetype with 2+ engine parts, no concept twice in one archetype); run it
-   after stage 2, then check every engine pair's edges.
+   after stage 2, then check every engine pair's edges. State: **done**, waiting for Kaptain (stage 5).
 4. **Map redone** (`archetype_map.py`): edges whose link text is about hitting the player, and deck-only edges, are
-   marked; the cards behind most edges are counted. State:
-5. **Kaptain's OK** on the redone archetypes and the map. State:
+   marked; the cards behind most edges are counted. State: **done**: 720 edges.
+5. **Kaptain's OK** on the redone archetypes and the map. State: waiting. Open, for him: thin networks the 10 games
+   barely show (Pillowfort 1 edge, Prison 2, Extra Turns 2: "hits back" cards live only in Monster Train, Inscryption
+   and Slay the Spire, "must attack this" only in Faeria, Gwent, Duelyst, Runeterra, so real cards can never link them);
+   and a possible link rule missing: "a rule or row effect on both players" and "my unit immune to it" are in the same 7
+   games but no real card pair is ever linked (network.py has no rule for "B is immune to what A makes").

@@ -88,20 +88,20 @@ stances | Switch stances or forms | effect | flexibility | The owner switches a 
 steal | Steal from the opponent | effect | helps_me,hurts_enemy | The owner takes the opponent's units, cards, resources or text for themselves. | Destroying them instead is removal.
 
 ## Hurts the enemy
-damage | Deal damage | effect | hurts_enemy | Damage is dealt to a unit, player or base. | Killing regardless of health is destroy; damage to my own side is friendly_fire.
+damage | Deal damage | effect | hurts_enemy | Damage is dealt to a unit, player or base. | Killing regardless of health is destroy; damage to my own side or to itself is friendly_fire; to my player, life_payment.
 aoe_damage | Damage to many at once | effect | damage,scope_multi | Damage reaches several units without the player choosing each: around the target, a row, a lane, an area or all. Full or reduced damage both count. | If the targets are named one by one it is multi_target_attack; random targets are random_target.
 damage_over_time | Damage over time (poison, burn) | effect | damage | Damage repeats over turns: poison, burn, bleed. | One-time damage is damage.
 direct_damage | Damage to the player or base | effect | damage | Damage goes straight to the enemy player, hero or base. | Damage to units is damage.
 ping | Small repeatable damage | effect | damage | A small amount of damage (1 or 2) that can be dealt again and again. | One big hit is damage.
 collision_damage | Bump damage (pushed into something) | combat | forced_movement,damage | A unit takes damage from being pushed into a unit, wall or obstacle. | Damage from the push effect itself is damage.
 removal | Remove an enemy unit | effect | hurts_enemy | An enemy unit leaves the board: destroyed, exiled, sent to hand or deck, or turned into something harmless. | Weakening it but leaving it there is debuff.
-destroy | Destroy outright | effect | removal | A unit is destroyed or killed regardless of its health. | Killing by damage is damage; destroying my own unit for value is sacrifice.
-banish | Banish / exile (gone for good) | effect | removal | A unit or card is removed from the game for good, beyond the discard pile. | Leaving and coming back is blink.
+destroy | Destroy outright | effect | removal | A unit is destroyed or killed regardless of its health. | Killing by damage is damage; destroying my own unit is sacrifice; destroying itself is self_destruct.
+banish | Banish / exile (gone for good) | effect | removal | A unit or card is removed from the game for good, beyond the discard pile. | Leaving and coming back is blink; my own unit banished is sacrifice, itself self_destruct; my own cards banished are drawback.
 board_wipe | Board wipe | effect | removal,scope_multi | Most or all units on the board, or in a lane, are destroyed or removed. | Damage to several that may leave survivors is aoe_damage.
 bounce_enemy | Send an enemy unit back (bounce) | effect | removal,tempo | An enemy unit is returned to its owner's hand or deck. | Returning my own unit is return_to_hand.
 polymorph | Turn an enemy into something weaker | effect | removal | An enemy unit is turned into a weaker or harmless card or unit. | My own card turning into another is transform.
-debuff | Make a unit weaker (debuff) | effect | hurts_enemy | A unit loses stats or gets a combat penalty. | Stopping it from acting is suppress.
-stat_loss | Stat loss (-power, -health) | effect | debuff | A unit's power, attack, health or other stat goes down, or is set or swapped to a lower value. | Not being able to attack is attack_lock or cant_attack.
+debuff | Make a unit weaker (debuff) | effect | hurts_enemy | A unit loses stats or gets a combat penalty. | Stopping it from acting is suppress; weakening my own unit is friendly_fire.
+stat_loss | Stat loss (-power, -health) | effect | debuff | A unit's power, attack, health or other stat goes down, or is set or swapped to a lower value. | Not being able to attack is attack_lock or cant_attack; on my own unit it is friendly_fire.
 attack_zero | Attack set to 0 | effect | no_damage_output,debuff | A unit's attack, power or strength becomes 0. | Lowered by an amount but above 0 is stat_loss.
 mark_target | Mark a target for later hits | effect | hurts_enemy,condition | A target is marked so that later effects or attacks hit it harder. | A lasting stat loss is stat_loss.
 suppress | Stop an enemy unit from acting | effect | hurts_enemy | An enemy unit can't attack, deal damage, block, move, use abilities, or act at all. | Lowering its stats is debuff.

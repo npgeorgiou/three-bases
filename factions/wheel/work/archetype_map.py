@@ -1,6 +1,6 @@
 """Step 6, the archetype map (factions/START_DESIGN-1-wheel.md): each concept of an archetype's parts is a node; between
 the concepts of two engine parts of one archetype, an edge with the step 5 numbers (cards, games, level), the top link
-text and one real card pair (the strongest link of that text). A pair joined only by real decks has no card pair. Bricks are nodes with no edges.
+text, one real card pair and a note when the edge is weak (about the player, or decks only) (the strongest link of that text). A pair joined only by real decks has no card pair. Bricks are nodes with no edges.
 Writes work/archetype_map.tsv, work/archetype_gaps.tsv (engine parts whose concepts have no joined edge) and
 factions/wheel-archetypes.html. Run from library/cards_db: python3 ../../factions/wheel/work/archetype_map.py"""
 import collections, csv, html, itertools, json, os, sqlite3, sys
@@ -9,6 +9,17 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(HERE, '..', '..', '..', 'library', 'cards_db')
 sys.path.insert(0, DB)
 import axes, mechanics_wheel
+
+
+PLAYER = ('player', 'nexus', 'leader', 'hero', 'face')  # link texts about hitting the player: no player health here
+
+
+def note(r, pair):
+    """why an edge is weak: its top link text is about the player, or only real decks join it (no card pair)"""
+    text = (r['texts'].split(' | ')[0] if r['texts'] else '').lower()
+    if any(w in text for w in PLAYER): return 'about the player'
+    if not pair: return 'decks only'
+    return ''
 
 
 def joined(r):
@@ -40,16 +51,20 @@ def main():
                              if links.get(frozenset((a, b))) and float(links[frozenset((a, b))]['level'] or 0) > 0)
                 gaps.append((key, x['part'], y['part'], len(x['concepts'].split(',')) * len(y['concepts'].split(',')), linked))
     examples = card_pairs(wanted)
+    behind = collections.Counter()  # the cards behind the most edges (one card can carry many)
     with open(os.path.join(HERE, 'archetype_map.tsv'), 'w', encoding='utf-8') as f:
-        f.write('archetype\tpart_a\ta\tpart_b\tb\tcards\tdecks\tgames\tlevel\ttext\tcard_pair\n')
+        f.write('archetype\tpart_a\ta\tpart_b\tb\tcards\tdecks\tgames\tlevel\ttext\tcard_pair\tnote\n')
         for key, pa, a, pb, b, r in edges:
             text = r['texts'].split(' | ')[0] if r['texts'] else ''
-            f.write('\t'.join([key, pa, a, pb, b, r['cards'], r['decks'], r['games'], r['level'], text, examples.get((frozenset((a, b)), text)) or examples.get((frozenset((a, b)), ''), '')]) + '\n')
+            pair = examples.get((frozenset((a, b)), text)) or examples.get((frozenset((a, b)), ''), '')
+            f.write('\t'.join([key, pa, a, pb, b, r['cards'], r['decks'], r['games'], r['level'], text, pair, note(r, pair)]) + '\n')
+            for card in pair.split(': ', 1)[-1].split(' + ') if pair else (): behind[card] += 1
     with open(os.path.join(HERE, 'archetype_gaps.tsv'), 'w', encoding='utf-8') as f:
         f.write('archetype\tpart_a\tpart_b\tconcept_pairs\tpairs_with_any_link\n')
         for g in gaps: f.write('\t'.join(map(str, g)) + '\n')
     page(arch, edges, examples)
     print(f'{len(edges)} edges, {len(gaps)} engine part pairs with no joined edge')
+    print('cards behind the most edges: ' + ', '.join(f'{k} {n}' for k, n in behind.most_common(8)))
 
 
 def card_pairs(wanted):
@@ -83,7 +98,8 @@ def page(arch, edges, examples):
     for key, pa, a, pb, b, r in edges:
         text = r['texts'].split(' | ')[0] if r['texts'] else ''
         data['edges'].append({'arch': key, 'a': a, 'b': b, 'cards': r['cards'], 'decks': r['decks'], 'games': r['games'], 'level': r['level'],
-                              'text': text, 'pair': examples.get((frozenset((a, b)), text)) or examples.get((frozenset((a, b)), ''), '')})
+                              'text': text, 'pair': examples.get((frozenset((a, b)), text)) or examples.get((frozenset((a, b)), ''), ''),
+                              'note': note(r, examples.get((frozenset((a, b)), text)) or examples.get((frozenset((a, b)), ''), ''))})
     data['names'] = names
     tpl = open(os.path.join(HERE, 'archetype_map_template.html'), encoding='utf-8').read()
     out = os.path.join(HERE, '..', '..', 'wheel-archetypes.html')

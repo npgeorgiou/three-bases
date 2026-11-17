@@ -5,7 +5,7 @@ attack_gain	1772	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,rune
 attack_lock	30	duelyst,into_the_breach,monster_train	usable	
 attack_now	232	duelyst,faeria,inscryption,into_the_breach,monster_train,runeterra,stormbound	usable	
 attack_zero	22	runeterra	usable	
-banish	304	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,sts1	usable	
+banish	84	duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,sts1	usable	
 base_resource_gain	262	duelyst,faeria,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
 block_armor	97	gwent,monster_train,sts1	usable	
 board_clog	33	gwent,inscryption,marvel_snap,stormbound	usable	
@@ -27,16 +27,16 @@ cost_set	92	duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,
 cost_type	25	faeria,monster_train	usable	
 count_payoff	655	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
 counterattack	15	inscryption,monster_train,sts1	usable	
-damage	555	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound,sts1	usable	
+damage	505	duelyst,faeria,gwent,into_the_breach,monster_train,runeterra,stormbound,sts1	usable	
 damage_reduction	217	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra	usable	
 death_count	51	faeria,gwent,marvel_snap,monster_train,runeterra,stormbound	usable	
 death_trigger	313	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
 deathtouch	12	faeria,inscryption	usable	
-debuff	76	gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound,sts1	usable	
+debuff	59	gwent,inscryption,into_the_breach,monster_train,runeterra,sts1	usable	
 deck_condition	43	gwent,runeterra	usable	
 deck_position	10	runeterra	usable	
 defence_gain	1203	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound	usable	
-destroy	525	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
+destroy	240	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
 disable	113	duelyst,inscryption,into_the_breach,monster_train,runeterra,stormbound	usable	
 discard	213	gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
 donate	55	duelyst,gwent,marvel_snap,stormbound	usable	
@@ -47,7 +47,7 @@ fight_enemy	64	duelyst,faeria,runeterra,stormbound	usable
 forced_attack	96	runeterra	usable	
 forced_movement	293	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,stormbound	usable	
 free_play	231	duelyst,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
-friendly_fire	225	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
+friendly_fire	338	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
 generate_cards	873	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
 hand_disruption	27	duelyst,gwent,marvel_snap,runeterra	usable	
 hand_size	80	duelyst,faeria,gwent,inscryption,marvel_snap,runeterra,stormbound,sts1	usable	
@@ -90,9 +90,9 @@ return_to_hand	147	duelyst,gwent,inscryption,marvel_snap,runeterra,stormbound	us
 revive	92	duelyst,gwent,inscryption,marvel_snap,runeterra,stormbound	usable	
 row_effects	35	gwent	usable	
 rule_change	635	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,sts1	usable	
-sacrifice	221	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
+sacrifice	258	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
 selection	143	faeria,gwent,inscryption,marvel_snap,runeterra,sts1	usable	
-self_destruct	272	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
+self_destruct	356	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
 self_mill	13	runeterra	usable	
 shield	191	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,sts1	usable	
 silence	86	duelyst,gwent,marvel_snap,monster_train,runeterra,stormbound	usable	
@@ -101,7 +101,7 @@ spells_played_condition	34	duelyst,faeria,runeterra,sts1	usable
 stat_condition	72	gwent,runeterra	usable	
 stat_fixed	148	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,runeterra,stormbound	usable	
 stat_gain	149	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
-stat_loss	178	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
+stat_loss	169	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
 stat_multiply	98	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra	usable	
 steal	49	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,runeterra,stormbound	usable	
 stealth	24	inscryption,into_the_breach,monster_train,runeterra	usable	
@@ -119,7 +119,7 @@ variety_payoff	71	duelyst,gwent,marvel_snap,runeterra,stormbound,sts1	usable
 cant_move	16	duelyst,faeria,into_the_breach,marvel_snap,stormbound	helper	a thing for single cards (Claude's)
 play_restriction	79	duelyst,marvel_snap,monster_train,runeterra,sts1	helper	a thing for single cards (Claude's)
 cant_attack	1078	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	a thing for single cards (Kaptain)
-drawback	17	marvel_snap,monster_train,sts1	helper	a thing for single cards (Kaptain)
+drawback	82	duelyst,gwent,inscryption,marvel_snap,monster_train,runeterra,sts1	helper	a thing for single cards (Kaptain)
 exhaust	306	duelyst,gwent,monster_train,sts1	helper	a thing for single cards (Kaptain)
 slots_queue	29	sts1	helper	a thing for single cards (Kaptain)
 target_choice	133	inscryption,runeterra	helper	a thing for single cards (Kaptain)

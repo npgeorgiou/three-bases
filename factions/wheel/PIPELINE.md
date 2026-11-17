@@ -28,6 +28,7 @@ is written in that step's chat, from the rules of the step, and its line here is
 - Claude -> `factions/wheel/archetypes.tsv`: one line per part of each archetype of `archetypes_kaptain.txt` that
   can exist here (archetype key, its name in Kaptain's list, what it is in this game, the part
   in plain words, engine or brick, the usable concepts that can do it).
+- `python3 work/archetypes_make.py work/concepts.tsv archetypes.tsv` writes it (the parts are in the script).
 - `python3 work/archetypes_plain.py` -> `factions/wheel/archetypes.md`: the same in plain words, for Kaptain's OK.
 
 ## Step 4. The radii and how they work together
@@ -53,7 +54,8 @@ is written in that step's chat, from the rules of the step, and its line here is
 - `python3 ../../factions/wheel/work/archetype_map.py` (about 10 seconds; needs links.sqlite) ->
   `factions/wheel/work/archetype_map.tsv` (archetype, its two engine parts, concept a, concept b, `cards`, `decks`,
   `games`, `level`, top link text, the real card pair of its strongest link, from `wheel/concept_links.tsv`; a pair
-  joined only by real decks has no card pair), `work/archetype_gaps.tsv` (two engine parts with no joined edge, shown to
+  joined only by real decks has no card pair; `note`: "about the player" when the top link text is about hitting the
+  player, "decks only" when no card pair; it prints the cards behind the most edges), `work/archetype_gaps.tsv` (two engine parts with no joined edge, shown to
   Kaptain with the numbers) and `factions/wheel-archetypes.html` (page template `work/archetype_map_template.html`).
 
 ## Step 7. The 20 factions and their lists

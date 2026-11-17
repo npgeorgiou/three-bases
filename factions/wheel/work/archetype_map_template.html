@@ -9,7 +9,7 @@ main{display:grid;grid-template-columns:minmax(560px,1fr) 420px;gap:16px;padding
 #map{background:#fff;border:1px solid #ddd;border-radius:8px}
 #side{background:#fff;border:1px solid #ddd;border-radius:8px;padding:12px 14px;max-height:84vh;overflow:auto}
 .part{margin:0 0 10px}.part b{display:block}
-.engine{color:#1f6f8b}.brick{color:#8b5a1f}
+.engine{color:#1f6f8b}.weak{color:#b23a48}.brick{color:#8b5a1f}
 table{border-collapse:collapse;width:100%;font-size:12px;margin-top:8px}
 td,th{border-bottom:1px solid #eee;padding:3px 4px;text-align:left;vertical-align:top}
 .note{color:#666;font-size:12px}
@@ -21,7 +21,7 @@ circle{cursor:pointer}
 </style></head><body>
 <header><h1>The wheel: archetype map</h1>
 <select id="pick"></select>
-<span class="note">&nbsp; Each dot is a concept. A line joins concepts of two engine parts that real cards link; thicker = more times chance. Brown dots are bricks (no lines). Click a dot to light its lines.</span>
+<span class="note">&nbsp; Each dot is a concept. A line joins concepts of two engine parts that real cards link; thicker = more times chance; dashed = weak (about the player, or only in decks). Brown dots are bricks (no lines). Click a dot to light its lines.</span>
 </header>
 <main><svg id="map" viewBox="0 0 1100 1100"></svg><div id="side"></div></main>
 <script>
@@ -40,7 +40,7 @@ function draw(){
   svg.innerHTML='';const seen=new Set(),lines=[];
   for(const e of edges){const id=[e.a,e.b].sort().join('|');if(seen.has(id))continue;seen.add(id);
     const w=Math.max(.6,Math.min(8,Math.log2(1+Math.max(+e.cards||0,+e.decks||0))*1.6));
-    const l=el('line',{x1:pos[e.a][0],y1:pos[e.a][1],x2:pos[e.b][0],y2:pos[e.b][1],'stroke-width':w});
+    const l=el('line',{'stroke-dasharray':e.note?'4 4':'',x1:pos[e.a][0],y1:pos[e.a][1],x2:pos[e.b][0],y2:pos[e.b][1],'stroke-width':w});
     l.dataset.a=e.a;l.dataset.b=e.b;l.append(el('title',{}));l.firstChild.textContent=`${nm(e.a)} — ${nm(e.b)}\n${e.cards||'-'}x chance in cards, ${e.decks||'-'}x in decks, ${e.games} games\n${e.text}\n${e.pair}`;
     svg.append(l);lines.push(l)}
   for(const c of nodes){const [x,y,t]=pos[c],ci=el('circle',{cx:x,cy:y,r:6,fill:kind[c]==='engine'?'#1f6f8b':'#8b5a1f'});
@@ -52,7 +52,7 @@ function draw(){
   if(key!=='*'){const a=D.archetypes[key];h+=`<h3>${esc(a.name)}</h3><p>${esc(a.what)}.</p>`;
     for(const p of a.parts)h+=`<div class="part"><b class="${p.kind}">${esc(p.part)} (${p.kind})</b>${p.concepts.map(nm).map(esc).join('; ')}</div>`}
   h+=`<p class="note">${nodes.length} concepts, ${seen.size} lines.</p><table><tr><th>concepts</th><th>x chance (cards / decks)</th><th>games</th><th>real link and card pair</th></tr>`;
-  for(const e of edges.slice().sort((x,y)=>y.cards-x.cards))h+=`<tr><td>${esc(nm(e.a))} — ${esc(nm(e.b))}${key==='*'?'<br><span class="note">'+esc(D.archetypes[e.arch].name)+'</span>':''}</td><td>${e.cards||'-'} / ${e.decks||'-'}</td><td>${e.games}</td><td>${esc(e.text)}<br><span class="note">${esc(e.pair||'no card pair: only real decks hold them together')}</span></td></tr>`;
+  for(const e of edges.slice().sort((x,y)=>y.cards-x.cards))h+=`<tr><td>${esc(nm(e.a))} — ${esc(nm(e.b))}${key==='*'?'<br><span class="note">'+esc(D.archetypes[e.arch].name)+'</span>':''}</td><td>${e.cards||'-'} / ${e.decks||'-'}</td><td>${e.games}</td><td>${esc(e.text)}<br><span class="note">${esc(e.pair||'no card pair: only real decks hold them together')}</span>${e.note?'<br><b class="weak">weak: '+esc(e.note)+'</b>':''}</td></tr>`;
   side.innerHTML=h+'</table>'}
 pick.onchange=draw;draw();
 </script></body></html>

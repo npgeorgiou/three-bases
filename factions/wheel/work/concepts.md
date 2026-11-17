@@ -3,19 +3,19 @@
 ## usable (117)
 Damage to many at once (411, 9); Help from nearby allies (assists) (35, 1); Attack gain (+attack) (1772, 9); Can't
 attack (lock on an enemy) (30, 3); Attack right away (232, 7); Attack set to 0 (22, 1); Banish / exile (gone for good)
-(304, 8); More or faster base resource (ramp) (262, 9); Block points that wear off (97, 3); Clog the opponent's board
+(84, 7); More or faster base resource (ramp) (262, 9); Block points that wear off (97, 3); Clog the opponent's board
 (33, 4); Board wipe (69, 8); Send an enemy unit back (bounce) (13, 3); Make a unit stronger (buff) (144, 8); Having a
 card in play or hand (596, 9); Better or chosen cards (26, 1); Cheat death (survive lethal) (81, 9); Strikes of a
 given size (14, 1); Order of my plays matters (combo) (74, 6); Counts / thresholds (17, 1); Damaged unit matters (67,
 5); Copy cards or units (268, 9); Cost matters (32, 4); Make the opponent's cards cost more (13, 4); Cards cost less
 (316, 9); Set a cost to a fixed number (92, 8); Alternative costs (25, 2); Grows with what happened this game (655,
-9); Strike back when attacked (counterattack, thorns) (15, 3); Deal damage (555, 9); Take less damage (armour) (217,
+9); Strike back when attacked (counterattack, thorns) (15, 3); Deal damage (505, 8); Take less damage (armour) (217,
 7); Counts deaths (51, 6); When it dies (deathrattle) (313, 10); Any damage kills (deathtouch, poisonous) (12, 2);
-Make a unit weaker (debuff) (76, 7); Deck contents matter (43, 2); Top or bottom of the deck matters (10, 1); Defence
-gain (+health) (1203, 8); Destroy outright (525, 10); Can't act at all (stun, freeze) (113, 6); Discard my own cards
+Make a unit weaker (debuff) (59, 6); Deck contents matter (43, 2); Top or bottom of the deck matters (10, 1); Defence
+gain (+health) (1203, 8); Destroy outright (240, 10); Can't act at all (stun, freeze) (113, 6); Discard my own cards
 (213, 7); Give my units or cards to the opponent (55, 4); Draw cards (503, 9); Excess damage carries on (trample)
 (154, 3); Extra turns or actions (47, 4); My unit fights a chosen enemy (64, 4); Force enemy units to attack (96, 1);
-Move enemy units (push, pull) (293, 8); Put into play for free (231, 8); Hits my own side too (225, 9); Create new
+Move enemy units (push, pull) (293, 8); Put into play for free (231, 8); Hits my own side too (338, 9); Create new
 cards (873, 10); Attack the opponent's hand (27, 4); Hand size matters (80, 8); Act the turn it arrives (haste, rush)
 (155, 3); Restore health (heal) (133, 5); Can't move (root) (95, 5); Immune / can't be targeted (133, 6); Improve
 cards in hand or deck (228, 7); Hidden and revealed information (41, 4); Junk cards into a deck or hand (45, 5); When
@@ -28,11 +28,11 @@ When it becomes a target (72, 3); When another unit dies (115, 9); When another 
 and again (776, 10); Small repeatable damage (573, 9); Keep my units alive (protection) (28, 2); Reuse my cards
 (shuffle back) (130, 9); Heal every turn (regeneration) (72, 7); Repeat or double triggers (115, 8); Gain resources
 (ramp) (128, 5); Return my unit to hand (147, 6); Bring back dead units (revive) (92, 6); Row-wide lasting effects
-(weather) (35, 1); Change the game's rules (635, 9); Sacrifice my own units (221, 9); Look at cards and pick (scry)
-(143, 6); Destroys itself / temporary unit (272, 9); Fill my own discard pile (self-mill) (13, 1); Absorb one hit
+(weather) (35, 1); Change the game's rules (635, 9); Sacrifice my own units (258, 9); Look at cards and pick (scry)
+(143, 6); Destroys itself / temporary unit (356, 9); Fill my own discard pile (self-mill) (13, 1); Absorb one hit
 (shield, ward) (191, 8); Silence (abilities removed) (86, 6); My spells and abilities get stronger (220, 7); Enough
 spells played (34, 4); Stats matter (highest, lowest) (72, 2); Set stats to a number (148, 8); Stat gain (+power,
-+health) (149, 10); Stat loss (-power, -health) (178, 10); Double or multiply stats (98, 7); Steal from the opponent
++health) (149, 10); Stat loss (-power, -health) (169, 10); Double or multiply stats (98, 7); Steal from the opponent
 (49, 8); Stealth / hidden until it acts (24, 4); Strikes with its defence (18, 4); Summon units / tokens (773, 9);
 Swap positions (45, 7); Taunt (enemies must attack it) (81, 3); Terrain / board features (149, 4); In or entering
 enemy territory (29, 3); Search the deck for a card (tutor) (57, 7); Ready a used unit again (untap) (11, 2); Upgrade
@@ -40,7 +40,7 @@ a card (53, 3); Stats equal to a count (325, 8); Variety matters (all different)
 
 ## helper (44)
 a thing for single cards (Claude's): Can't move (my own unit) (16, 5); Limit what can be played (79, 5)
-a thing for single cards (Kaptain): Can't attack (my own unit) (1078, 10); Hurts my side (drawback) (17, 3); One use
+a thing for single cards (Kaptain): Can't attack (my own unit) (1078, 10); Hurts my side (drawback) (82, 7); One use
 (exhausted for the battle) (306, 4); Slots that fill and fire (orbs) (29, 1); Choose attack targets (133, 2)
 attaching only says how a card acts; the attached card counts by its own effects (Kaptain): Attach or merge onto a
 unit (150, 4)
