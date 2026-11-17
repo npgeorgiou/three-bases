@@ -88,7 +88,11 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    with every usable concept (step 2) that can do it. A part is never left to "the units' own numbers": cheap, big or
    strong units are made by concepts too (cards cost less, cost matters, stats equal to a count). For each engine part,
    `wheel/concept_links.tsv` shows which concepts real cards link with the other part's; those that fit the part by
-   meaning go in. Claude's, marked. Each concept is checked against its definition in
+   meaning go in. Every archetype has at least two engine parts that feed each other (Aggro: "cheap units" feeds "units
+   that gain when I play another"). A concept goes in a part only when its definition does that part's job on the
+   right side (rule_change binds both players, so it is never "binds only the enemy"; donate gives my units away, so it
+   is never "use what I took"); a trigger or a condition goes only in a part that reacts or counts. Each edge's link
+   text is read: a link about my own units dying, or about hitting the player, never counts for removal or pressure. Claude's, marked. Each concept is checked against its definition in
    `library/concept_tree.txt`; before saying no concept fits, search `vocab.tsv` keywords by meaning (Runeterra's
    Formidable is "strikes with its defence"): a keyword on a loose concept is a library error, fixed as
    `START_DATABASE.md` says. A part with no concept is shown to Kaptain, never filled by guessing.

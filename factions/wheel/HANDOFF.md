@@ -32,6 +32,10 @@ One chat does one step; at its end, mark the step done here and say what it left
   uses it, it counts the same way as `axes.py`.
 - `tools/wheel_table_check.py` and `work/make_stop1.py` are rewritten for the factions when step 7 and step 10 need them.
 
+- Recheck of steps 3 and 6 (17 Nov 2026), waiting for Kaptain: destroy, damage and banish also count my own units
+  (destroy: 202 cards on mine, 100 on the enemy), so step 1's split by whom is not done for them; Aggro, Tempo,
+  Pillowfort and Hatebears have under two engine parts; several parts hold concepts that don't do their job.
+
 ## The numbers (library/cards_db)
 - `links.sqlite` is rebuilt only after `network.py` or `cards.sqlite` changed: `PYTHONHASHSEED=0 python3 links.py`
   (about 6 minutes; with `check_all.py` 14 more: tell Kaptain and wait for his OK); it ends with `cases/links.tsv` and the sides check.
