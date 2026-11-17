@@ -22,10 +22,15 @@ stage ends with a commit and a push, and its line here marked done with what it 
 
 ## Stages
 1. **Library: split by side** every concept of the hurts_enemy branch whose rows also act on my own units (found by
-   script, not only the three above), by `START_DATABASE.md`'s fix rules, with test cases. State:
+   script, not only the three above), by `START_DATABASE.md`'s fix rules, with test cases. State: in progress. `flat.py` derive maps my own unit killed or banished to sacrifice (itself:
+   self_destruct), damaged or weakened to friendly_fire, my player damaged to life_payment, my cards lost to drawback;
+   cases w12-w16 in `cases/wheel.tsv`. Lines dumped before (`checks/side_split/before.tsv`); the rebuilt database is
+   tried on a copy (`checks/side_split/cards_new.sqlite`) before it replaces cards.sqlite.
 2. **Rebuild** `check_all.py` (about 14 min), `links.py` (about 6), `mechanics_wheel.py links --concepts`, step 2's
    `concept_catch.py`. New concepts go on a radius in `work/radii.tsv` by step 4's rule (Kaptain sees them). State:
-3. **Archetypes redone** (`archetypes.tsv`, `archetypes.md`) by step 3's rules, with the findings above. State:
+3. **Archetypes redone** (`archetypes.tsv`, `archetypes.md`) by step 3's rules, with the findings above. State: drafted in
+   `work/archetypes_make.py` (106 parts, every archetype with 2+ engine parts, no concept twice in one archetype); run it
+   after stage 2, then check every engine pair's edges.
 4. **Map redone** (`archetype_map.py`): edges whose link text is about hitting the player, and deck-only edges, are
    marked; the cards behind most edges are counted. State:
 5. **Kaptain's OK** on the redone archetypes and the map. State:

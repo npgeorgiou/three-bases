@@ -10,3 +10,8 @@ w08	faeria	Boulder Thrower	Blood Obelisk	reach	deathfeed	count	the same family
 w09	gwent	Mage Infiltrator	Thanedd Turncoat	enemyside	ping	count	the same family
 w10	inscryption	Adder	Raccoon	kill	deathfeed	count	the same family
 w11	runeterra	Yuumi (level 2)	Legion General	attach	leave	count	the same family
+w12	marvel_snap	Kid Omega	Archangel Horseman of Death	destroy	death_count	none	Kaptain 17 Nov 2026: my own units killed are a sacrifice, never removal
+w13	marvel_snap	Kid Omega	Archangel Horseman of Death	sacrifice	death_count	count	the same family
+w14	gwent	Cyclops	Dagon: Risen	destroy	revive	none	the same family
+w15	gwent	Cyclops	Dagon: Risen	sacrifice	revive	count	the same family
+w16	runeterra	Mark of the Isles	Xolaani the Bloodweaver	destroy	count_payoff	none	the same family
