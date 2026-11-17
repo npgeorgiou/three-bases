@@ -56,17 +56,17 @@ for k in CIRC:
     while st:
         for y in g[st.pop()]-seen: seen.add(y); st.append(y)
     if len(seen)<len(A[k]): fail(f'{k}: mechanics not joined: {sorted(set(A[k])-seen)}')
-# themes (step 7): one per faction, all different
+# themes (step 8): one per faction, all different
 import os
 def need(f):
     if os.path.exists(R+f): return tsv(R+f)
-    fail(f'{f} missing (step 7 not done)'); return []
+    fail(f'{f} missing (step 8 not done)'); return []
 TH={p[0]:p[1] for p in need('themes.tsv') if len(p)>1}
 for k in CIRC:
     if not TH.get(k,'').strip(): fail(f'{k}: no theme')
 for v,n in collections.Counter(t.lower() for t in TH.values()).items():
     if n>1: fail(f'theme of {n} factions: {v}')
-# tools (step 7): faction, tool, mechanic, feeds (tools of the same faction), cells (played out cell by cell), source, new rule
+# tools (step 8): faction, tool, mechanic, feeds (tools of the same faction), cells (played out cell by cell), source, new rule
 TOOLS=collections.defaultdict(dict)
 CELLS=r"front|middle|back|row|cell|column|lane"
 for p in need('tools.tsv'):

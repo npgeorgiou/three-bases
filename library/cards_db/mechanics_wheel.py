@@ -1,4 +1,4 @@
-"""The wheel's link counts (factions/START_DESIGN-1-wheel.md step 2): for every two radii, how much more often than chance
+"""The wheel's link counts (factions/START_DESIGN-1-wheel.md steps 4 and 6): for every two radii, how much more often than chance
 their cards are linked (cards), how much more often real decks heavy in one hold the other (decks), in how many games
 real cards link them (games), and the linked card pairs as a level that grows slowly (level, Kaptain: a pairing rare in the
 ten games can be splendid on this board); a link counts only through what of each card made it
@@ -78,6 +78,6 @@ def radii():
 
 
 if __name__ == '__main__':
-    if sys.argv[1:] != ['links', '--radii']: sys.exit('usage: mechanics_wheel.py links --radii (the concepts come in wheel step 5)')
+    if sys.argv[1:] != ['links', '--radii']: sys.exit('usage: mechanics_wheel.py links --radii (the concepts come in wheel step 6)')
     ctx = setup()
     links(radii(), *ctx[:4], ctx[4])

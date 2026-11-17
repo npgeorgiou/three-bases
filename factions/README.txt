@@ -6,20 +6,20 @@ Work plan (Kaptain, 14 Nov 2026): the wheel chat designs 20 factions together, t
 
 Files (lines, then contents). Read only the file a task needs; find lines across files with: python3 tools/find.py doc <text>
 
-START_DESIGN.md                   141  START HERE for every chat that uses the library (faction and card design, every question to the library): the thinking process, NEVER DO
-START_DESIGN-1-wheel.md            117  its part 1: the wheel (20 factions, their groups of concepts and combos), its steps and the stops of the whole process
-START_DESIGN-2-rules.md           114  its part 2: setup, this game's rules for design, the design rules
-START_DESIGN-3-checks.md           71  its part 3: Kaptain's checks, self-critique, library search, before sending
-START_DESIGN-4-asking.md          105  its part 4: how to ask the library, the shape of an answer, searching wide, thinking like a player
+START_DESIGN.md                   160  START HERE for every chat that uses the library (faction and card design, every question to the library): the thinking process, NEVER DO
+START_DESIGN-1-wheel.md            159  its part 1: the wheel (20 factions, their groups of concepts and combos), its steps and the stops of the whole process
+START_DESIGN-2-rules.md           136  its part 2: setup, this game's rules for design, the design rules
+START_DESIGN-3-checks.md           81  its part 3: Kaptain's checks, self-critique, library search, before sending
+START_DESIGN-4-asking.md          109  its part 4: how to ask the library, the shape of an answer, searching wide, thinking like a player
 LESSONS.md                         17  lessons for future factions from building, playtesting and AI-testing (one entry per lesson)
 read-cards.tsv                     99  every library card read for a design, with the way it showed (never read one twice)
-4-kaptains-ideas.txt                64  4. KAPTAIN'S IDEAS (11 Oct 2026, written while reading Runeterra's Noxus and Faeria's red 
+4-kaptains-ideas.txt                68  4. KAPTAIN'S IDEAS (11 Oct 2026, written while reading Runeterra's Noxus and Faeria's red 
 7-ideas-kept-for-later.txt          18  7. IDEAS KEPT FOR LATER (moved from summary/, 12 Oct 2026)
 8-rejected-and-cut.txt               6  8. REJECTED AND CUT (don't reintroduce without asking)
 10-outside-design-guides.txt        79  10. What outside design guides teach (Hearthstone, Rosewater, Slay the Spire...) and what they mean here
-12-mechanical-wheel.txt             81  12. The mechanical wheel: designing 20 factions together; its radii and the agreed design process
-13-wheel-measurement.txt            113  13. How the wheel's radii are measured (axes.py, wheel-axes.html) and how to redo it
-wheel/README.txt                    9  the wheel's files: where it stands (HANDOFF.md), commands (PIPELINE.md), archetypes, work files
+12-mechanical-wheel.txt             63  12. The mechanical wheel: designing 20 factions together; its radii and the agreed design process
+13-wheel-measurement.txt            125  13. How the wheel's radii are measured (axes.py, wheel-axes.html) and how to redo it
+wheel/README.txt                    12  the wheel's files: where it stands (HANDOFF.md), commands (PIPELINE.md), archetypes, work files
 removed/                                The removed factions (Tagma, Ashfang Horde, Exanimati): their summary card files, and
                                         their rulings, keyword values and texts and premade decks (rulings-keywords-decks.txt)
 

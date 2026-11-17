@@ -26,7 +26,9 @@ Principles
    must land where the wheel put it; if it drifted, the faction is fixed, not the wheel.
 
 The axes. On the page the ends below are split into 23 radii in 8 areas (factions/13-wheel-measurement.txt), measured
-by axes.py on 43 factions of 8 games (Marvel Snap has no factions; Monster Train is a different kind of game).
+by axes.py on 43 factions of 8 games (Marvel Snap has no factions; Monster Train is a different kind of game). Every
+usable concept belongs to one radius; a faction's value on it is the share of its concept instances there (one card
+with two effects puts one instance on each of two radii).
 1.  Own units: spends them (deaths, sacrifice, trading a unit for value) or keeps them alive (heal, more defence,
     shields, protection, grow).
 2.  Disruption: breaks the enemy's plan (their hand, costs, abilities, attacks, positions, spells) or only kills units.
@@ -34,18 +36,19 @@ by axes.py on 43 factions of 8 games (Marvel Snap has no factions; Monster Train
 4.  Supply and cards: income, carry-over, draws, cheaper cards; or units on the board now.
     Axes 4, 5 and 8 are measured at their first end only: a low value there is the second end.
 5.  Works with other cards (a positional combo is a kind of combo): units that gain from the allies beside or behind
-    them, and cards that make what other cards of the faction need; or cards that work alone.
+    them, units that move, and cards that make what other cards of the faction need; or cards that work alone.
 6.  How many targets: many at once and counting the board, or one precise target.
 7.  Width: many cheap units and cards that make units, or a few big ones.
 8.  Hand and discard pile: picks, copies and brings back its own cards, or plays what it draws.
 9.  Unit stats: strength and defence per supply, two radii; a faction's lean is the strength value minus the defence
     value. Games with one number for both (Stormbound) count it as both.
-A game with under 10 cards for a radius gives its factions no value on it, not 0.
+A game with under 10 concept instances for a radius gives its factions no value on it, not 0.
 
 Not radii, and why (don't reintroduce):
 - Sets the pace or answers: most library games have no answering on the enemy's turn; it only repeats removal.
 - Early or late: can't be measured (right in only 63 of 149 Faeria deck pairs).
-- Moving: most library games have no moving. Repair or prevent: only places factions that keep units.
+- Moving as a radius of its own: most library games have no moving; moving my units belongs to "position and combos".
+- Repair or prevent: only places factions that keep units.
 - Rows and areas: "one cell or a row" repeats axis 6; "front or back rows" is a design question per faction.
 - What cards react to (placed, attacking, hit, dying): a list, not a scale, covered by axes 1 and 3.
 - How hard it is to play; locks enemies or outmoves them.

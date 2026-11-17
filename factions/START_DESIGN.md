@@ -67,18 +67,16 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
       one row back".
    7. Blind spot: the one thing it never gets, on any card. Example: a swarm faction never restores shields.
 3. **Its group and blind spots** (taken from the wheel). Its group of concepts: 2 pillars (no other faction builds on
-   them) and 2-4 others (in at most 3 factions). The group is its character, not all its cards use: its list from the
-   wheel (`factions/wheel/work/lists/<letter>.tsv`, every usable concept and helper by fit, with its links to the group)
-   is used a lot by its cards, to serve the group (START_DESIGN-2, "How cards fit together"); the
-   triggers and helpers (when played, round end, when a card is drawn) to any card. Its blind spot (step 2.7) plus any other things the wheel says it never has; its cards never make up for them,
+   them) and 2-4 others (in at most 3 factions). The group is its character, not all its cards use: its cards use its
+   list a lot (START_DESIGN-2, "How cards fit together"). Its blind spot (step 2.7) plus any other things the wheel says it never has; its cards never make up for them,
    it plays around them. A blind spot is never one of the two things every faction needs (hold dots, remove enemies),
    only one way of doing them: "no kill spells" is a blind spot, "no removal" is not.
 4. **How it differs from each other faction** (from the wheel; check it with the closest factions on the page). Kaptain's example: a swarm that fills the front rows with many cheap weak
    units, against a fortress that never has more than 3 units and moves defence between them. Write one sentence per
    other faction saying why a game between the two feels different.
 5. **Mechanics and tools, from the wheel** (never new ones here). Steps 5-8 read the faction's list
-   (`factions/wheel/work/lists/<letter>.tsv`: every usable concept and helper by fit, with how strongly it links to the
-   group, times chance and in how many games): what a card may draw on beyond the group comes from it, strongest links
+   (`factions/wheel/work/lists/<letter>.tsv`: every concept of the library with its score for how strongly it links to
+   the group, its level and in how many games): what a card draws on beyond the group comes from it, highest scores
    first. A mechanic is a link real cards show between two
    concepts of the group; write each from its link texts as "I do X -> I gain from X" ("my units die -> my other units
    grow"). A mechanic is broad: 30+ of the faction's cards can make it happen or use it. One card's effect ("a gun fires") is not a mechanic. Each mechanic
@@ -90,7 +88,7 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    - Turning point: once a condition is met, the board works differently. "While you have twice as many units in my lane
      as the enemy, my allies here strike twice."
 6. **Three to five ways to play**, as many as the closest real factions show (never filler). They are built around the
-   faction's tools from the wheel (`START_DESIGN-1-wheel.md` step 7): the tools are its backbone, not all of its cards;
+   faction's tools from the wheel (`START_DESIGN-1-wheel.md` step 8): the tools are its backbone, not all of its cards;
    the rest of each way comes from the faction's list.
    Each way builds a different board and asks for different decisions. For each, write which rows and cells it fills,
    its cost 1-4 opening, its 4-6 middle, its 6+ finish, and its Leaders (the 5 are spread over the ways). Test: two ways that put the same
