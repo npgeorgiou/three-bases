@@ -121,7 +121,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    - Score: the strength of the links inside each group (how much more often than chance real cards link them), summed
      over all 20.
    - A group holding both ends of a pair real factions keep apart (`apart.py`) is shown to Kaptain.
-   - Kaptain sees per faction: its directions in plain words, the concepts on them, and its mechanics (each joined
+   - Kaptain sees per faction: its directions in plain words, the 5 concepts of its list (step 7) that link most
+     strongly with it, and its mechanics (each joined
      pair: the real link text with its times chance and games); one sentence per faction, written from those texts.
      `tools/wheel_table_check.py` checks every rule above from the files. **Kaptain agrees the 20 groups.**
 7. **Each faction's list** (`work/concept_list.py` -> `work/lists/<letter>.tsv`): every concept with 10+ cards

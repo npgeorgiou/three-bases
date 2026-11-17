@@ -11,23 +11,28 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 3. The archetypes | done | `archetypes.tsv`: 71 archetypes, 47 can exist, each with its needs (the concepts that can meet each, and their radii); Formidable fixed in the library (strikes_with_defence, stat_fixed) |
 | 4. The radii and how they work together | done | `work/radii.tsv` (every usable concept on its radius, agreed with Kaptain); `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` from concept instances |
 | 5. The links between concepts | done | `library/cards_db/wheel/concept_links.tsv` (`mechanics_wheel.py links --concepts`, about a minute) |
-| 6. The 20 groups | **next**: Kaptain's OK on the 20 | `work/groups.tsv` from `work/groups.py` (directions, exact solver) |
+| 6. The 20 groups | **next**: show Kaptain each group with its top 5 concepts, for his OK | `work/groups.tsv` from `work/groups.py` |
 | 7. Each faction's list | to do | |
 | 8. Theme, then tools | to do | |
 | 9. Combos on this board | to do | |
 | 10. The seven answers, Stop 1 | to do | |
 
 ## What the next steps find in the files
-- Step 6: `groups.py` gives 20 groups of directions, optimal, from 5268 candidates; 18 have 3 directions, 2 have 4.
-  "Rewards playing spells" is in none: real cards join it to "picks cards" only. "Picks cards" and "more cards in
-  hand" are in one group each (joined to 3 others only).
+- How the wheel works: a faction is what it is strong at, in directions (the 23 radii of `work/radii.tsv`: "kills
+  outright", "spends them", "reuses cards"...). Concepts are how its cards do it: triggers and conditions ("when one of
+  my units dies") sit under the direction of what they react to. So the 20 groups are made from directions and the
+  card links between them (step 6), and each faction's concepts come from its list (step 7).
+- Step 6: `work/groups.tsv` holds 20 groups of directions, optimal, from 5268 candidates; 18 have 3 directions, 2 have
+  4. "Rewards playing spells" is in none: real cards join it to "picks cards" only. "Picks cards" and "more cards in
+  hand" are in one group each (joined to 3 others only). Next: write `work/concept_list.py` (step 7), then show Kaptain
+  each group in plain words with the 5 concepts of its list that link most strongly with it (e.g. which group gets
+  stealing, which copying), and wait for his OK.
+- `archetypes.tsv` (step 3) is used by no later step; Kaptain decides whether it stays.
 - Counts whose rows don't say what they count are counted nowhere: 200 instances of "grows with what happened" and 36
   of "counts and thresholds" (`axes.py` prints them). Most are counts of enemy units or of a keyword the rows don't name.
-- `tools/wheel_check.js` (this game's factions on the wheel) still counts whole cards, not concept instances: before
-  step 8 uses it, it counts the same way as `axes.py`.
-- Step 7: `concept_list.py` is to write; `tools/wheel_table_check.py` and `work/make_stop1.py` read an old file and are
-  rewritten for the groups.
-- Step 10: `make_stop1.py` is rewritten.
+- `tools/wheel_check.js` (this game's factions on the wheel) counts whole cards, not concept instances: before step 8
+  uses it, it counts the same way as `axes.py`.
+- `tools/wheel_table_check.py` and `work/make_stop1.py` are written for the groups when step 6 and step 10 need them.
 
 ## The numbers (library/cards_db)
 - `links.sqlite` is rebuilt only after `network.py` or `cards.sqlite` changed: `PYTHONHASHSEED=0 python3 links.py`
