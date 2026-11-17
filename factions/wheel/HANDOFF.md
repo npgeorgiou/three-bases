@@ -11,8 +11,8 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 3. The archetypes | done | `archetypes.tsv` (agreed with Kaptain): the 38 archetypes that can exist here, 91 parts, engine or brick, every usable concept in at least one part; `archetypes.md` the same in plain words |
 | 4. The radii and how they work together | done | `work/radii.tsv` (every usable concept on its radius, agreed with Kaptain); `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` from concept instances |
 | 5. The links between concepts | done | `library/cards_db/wheel/concept_links.tsv` (`mechanics_wheel.py links --concepts`, about a minute) |
-| 6. The archetype map | **next: Kaptain's look** | `work/archetype_map.tsv`: 693 edges between the concepts of engine parts; `factions/wheel-archetypes.html`; one gap (`work/archetype_gaps.tsv`): Discard / 8-Rack |
-| 7. The 20 factions and their lists | to do | |
+| 6. The archetype map | done | `work/archetype_map.tsv`: 693 edges between the concepts of engine parts; `factions/wheel-archetypes.html`; one gap (`work/archetype_gaps.tsv`): Discard / 8-Rack |
+| 7. The 20 factions and their lists | **next** | |
 | 8. Theme, then tools | to do | |
 | 9. Combos on this board | to do | |
 | 10. The seven answers, Stop 1 | to do | |
@@ -23,8 +23,6 @@ One chat does one step; at its end, mark the step done here and say what it left
   links with another part ("my units die" -> "my units gain when an ally dies"), a brick works alone and links to
   nothing (disruption). The 23 radii of `work/radii.tsv` stay as the wheel picture: they show each faction's shape and
   check that the 20 differ.
-- Step 6: Kaptain decides Discard / 8-Rack: its two parts ("take his cards" and "punish a small hand") have no joined
-  edge; the closest, attacks on his hand with hand size matters, has 16 linked card pairs in 3 games, under the join.
 - Step 7's rules are agreed with Kaptain before the script is written. Claude's suggestion, not agreed: two archetypes
   share a faction when their concepts overlap or link strongly; 2-4 archetypes per faction; every archetype in at least
   one faction; no two factions with the same archetypes; one exact solver for the 20.
@@ -60,6 +58,8 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
   archetype's concepts with the links between them and the strengths we know. Only general archetypes; any specific to
   one game (planeswalkers) is off the list. Triggers and conditions are how cards work, not what a faction is; real
   factions inspire, they are never copied (17 Nov 2026).
+- Discard / 8-Rack stays an archetype although real cards don't link its two parts: future improved games will beef it
+  up (17 Nov 2026).
 - Real factions' shapes vary inside each game: the wheel is lax about a faction's shape (17 Nov 2026).
 - Interactions with the player (heal, Block, strength on the player; the player hurt) stay off the radii: no player
   health here. They stay in the library as player_<concept>.
