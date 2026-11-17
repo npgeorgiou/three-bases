@@ -65,6 +65,7 @@ Game source is `src/game/`, joined in `src/game/parts.txt` order by `python3 too
 4. **Claude's memory — only how to work with Kaptain.** No game content in memory.
 5. **This file — how Claude works on the files.**
 When something changes state (an idea gets built, a to-do gets decided), move it to its home in the same turn.
+When Kaptain agrees a plan or a decision, rewrite every doc it touches in that same turn, before any handoff, as the one way things are done (never as a list of changes); a handoff never lists doc rewrites as work for later, only code or results not made yet.
 
 ## Workflow
 - summary/ is the source of truth for rules and UI: never contradict it without telling Kaptain. Never invent rules, stats or mechanics; mark suggestions as Claude's. Design answers never come from general knowledge: every suggested mechanic starts from what the library found, and anything with no library source is marked as Claude's.
