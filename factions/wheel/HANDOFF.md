@@ -18,8 +18,8 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 10. Stop 1 | to do | |
 
 ## What the next steps find in the files
-- How the wheel works: a faction is what it is strong at. It plays 2 or 3 archetypes (ways to play from Kaptain's
-  list). Each archetype is made of parts, each a set of alternative concepts: an engine part works through links with
+- How the wheel works: a faction is what it is strong at. It plays 2 or 3 archetypes from Kaptain's
+  list. Each archetype is made of parts, each a set of alternative concepts: an engine part works through links with
   another part ("my units die" -> "my units gain when an ally dies"), a brick works alone and links to nothing
   (disruption). The 23 radii of `work/radii.tsv` show how the 43 real factions spread (`factions/wheel-axes.html`);
   nothing is designed from them.

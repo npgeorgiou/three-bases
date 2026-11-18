@@ -14,7 +14,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   then draw a card" is two instances: one of damage, one of drawing.
 - **Card link**: two real cards of one game where an effect of one sets off or feeds an effect of the other
   (`links.sqlite`). Each link keeps which effect of each card made it, so it counts only for those effects' concepts.
-- **Archetype**: a general way to play from Kaptain's list (`wheel/archetypes_kaptain.txt`: aggro, control,
+- **Archetype**: an archetype from Kaptain's list (`wheel/archetypes_kaptain.txt`: aggro, control,
   aristocrats, reanimator, theft...); none is tied to one game's card types, resources, keywords or multiplayer. One
   archetype can be played with different concepts, so it is made of parts, each a set of alternative concepts that can do
   it. A part is an **engine** (it works through links with another part: "my units die" -> "my units gain when an ally

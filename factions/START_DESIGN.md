@@ -25,7 +25,7 @@ take a base, hold it, or take it from the enemy?
 
 ## THE THINKING PROCESS (in this order; no step skipped)
 Step 0 (Kaptain, 9 Nov 2026): the faction's place on the mechanical wheel (`factions/12-mechanical-wheel.txt`) comes
-first. Its 2 or 3 archetypes (the ways to play it is made of), their concepts and synergies, its extras, theme, seven
+first. Its 2 or 3 archetypes, their concepts and synergies, its extras, theme, seven
 answers, partners, game plan and keywords are decided there, for all 20 factions together, not in the faction's chat
 (`START_DESIGN-1-wheel.md`, steps 7-10).
 Steps 1-6 come from the library, never from memory. Run the queries below on all games (`ask.py all ...` from
@@ -65,8 +65,8 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    6. The play that feels good: what its units do the moment they are placed. Example: "Place: push the enemy facing me
       one row back".
    7. Blind spot: the one thing it never gets, on any card. Example: a swarm faction never restores shields.
-3. **Its archetypes and blind spots** (taken from the wheel). Its archetypes: the one or more ways to play it is made
-   of, each of engines (concepts that work through links: my units die -> my units gain when an ally dies) and bricks
+3. **Its archetypes and blind spots** (taken from the wheel). Its archetypes: the 2 or 3 archetypes it is made of, each
+   of engines (concepts that work through links: my units die -> my units gain when an ally dies) and bricks
    (concepts that work alone: disruption). They are its character, not all its cards use: its cards use its
    list a lot (START_DESIGN-2, "How cards fit together"). Its blind spot (step 2.7) plus any other things the wheel says it never has; its cards never make up for them,
    it plays around them. A blind spot is never one of the two things every faction needs (hold dots, remove enemies),
