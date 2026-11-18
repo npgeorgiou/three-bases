@@ -37,7 +37,10 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 - **Keyword** (in industry words, a mechanic): a word on many cards that stands for one rule (Magic's Exploit,
   Hearthstone's Overload).
 - **The seven answers**: how a faction wins, removes a front unit, MAINLY removes back-row units, MAINLY acts between
-  lanes, holds a base, which of the game's own things it cares about most, its blind spot.
+  lanes, holds a base, which of the game's own things it cares about most, its blind spot. Removing: the enemy unit
+  leaves its cell (it dies, goes back to hand, is banished, pushed away, taken or turned into a cocoon). Holding: the
+  enemy unit stays, but the base stays mine (my units survive or come back, his units are frozen, his cells filled,
+  his cards cost more).
 
 ## Rules for every step (Kaptain)
 - Every game counts the same in every number: worked out in each game alone, then averaged. Games with no factions
@@ -150,14 +153,17 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       the average over the games where the concept and those concepts both appear (every game weighs the same). Beside
       it: the `level` and in how many games.
    4. Its extras, picked from the list by these goals in this order: (a) each of the seven answers its archetypes don't
-      give gets the highest-scoring concept that gives it (which concepts give which answer: a table Kaptain agrees
-      first, e.g. "removes a front unit": destroy, damage, fight a chosen enemy, push); (b) then the highest-scoring
+      give gets the highest-scoring way that gives it in `work/answer_concepts.tsv` (agreed with Kaptain; per answer
+      its ways, each a concept, two concepts real cards link, or a removal on a spell); (b) then the highest-scoring
       concepts that link with at least 2 of its archetype concepts, links into engine parts counting more; (c) one
       extra goes to only a few factions; (d) the theme breaks ties. A faction gets a fixed number of extras, set by
       Kaptain.
-   5. Its seven answers, each given by one of its concepts; which of the game's own things it cares about most is the
-      highest-scoring helper of its list that is one of the game's own things (rows, lanes, carry-over, the hand). An answer no concept gives is fixed first in (4) with
-      another extra; only when its list has no concept for it does the faction go back to (1).
+   5. Its seven answers, from `work/answer_concepts.tsv`: how it wins is the line of its archetypes in
+      `archetypes.tsv`; removing a front unit, removing back-row units, acting between lanes and holding a base are
+      each a way its concepts give; what it cares about most is the highest-scoring of the game's own things on its
+      list (factions may share it); its blind spot is a way of the removal, lanes and holding answers that none of its
+      concepts give and that touches none of its archetypes. An answer no concept gives is fixed first in (4) with
+      another extra; only when its list has no way for it does the faction go back to (1).
 8. **Combos on this board.** For every pair of factions (190), the joins between the two factions' concepts (archetypes
    and extras; step 5 numbers), by script. Claude rates each pair with numbers on the board: STRONG (both halves on many
    cards, helps take or hold a base, the enemy's one action between can't easily stop it), OK (real but breakable),

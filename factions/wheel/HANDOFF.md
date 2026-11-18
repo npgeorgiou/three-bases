@@ -12,7 +12,7 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 4. The radii and how they work together | done | `work/radii.tsv` (every usable concept on its radius, agreed with Kaptain); `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` from concept instances |
 | 5. The links between concepts | done | `library/cards_db/wheel/concept_links.tsv` (`mechanics_wheel.py links --concepts`, about a minute) |
 | 6. The archetype map | done, approved by Kaptain (18 Nov 2026; `RECHECK.md`) | `work/archetype_map.tsv`: 724 edges between the concepts of engine parts; `factions/wheel-archetypes.html`; one gap (`work/archetype_gaps.tsv`): Discard / 8-Rack |
-| 7. The 20 factions | **next** | |
+| 7. The 20 factions | **next**: its table of answers agreed | `work/answer_concepts.tsv`: per answer its ways |
 | 8. Combos on this board | to do | |
 | 9. Game plan, then keywords | to do | |
 | 10. Stop 1 | to do | |
@@ -23,8 +23,7 @@ One chat does one step; at its end, mark the step done here and say what it left
   another part ("my units die" -> "my units gain when an ally dies"), a brick works alone and links to nothing
   (disruption). The 23 radii of `work/radii.tsv` show how the 43 real factions spread (`factions/wheel-axes.html`);
   nothing is designed from them.
-- Before step 7's script: Kaptain agrees its rules, the table of which concepts give which of the seven answers
-  (`work/answer_concepts.tsv`) and the number of extras per faction.
+- Before step 7's script: Kaptain agrees the number of extras per faction and the rest of its rules.
 - Still open from the recheck (`RECHECK.md` stage 6): thin maps (Pillowfort, Prison, Extra Turns, Discard / 8-Rack);
   89 "instead" cards not read.
 - Counts whose rows don't say what they count are counted nowhere: 189 instances of "grows with what happened" and 36
@@ -86,7 +85,9 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
   100 cards: 3-5 ways to play are built around them, as many as the closest real factions show. One idea is never the
   whole faction. A keyword that fits the theme but grows from no synergy of the factions that carry it is never made.
 - Each faction answers seven questions, one line each: how it wins, how it removes the front unit, how it MAINLY
-  removes back-row units, how it MAINLY acts between lanes, how it holds a base, which of the game's own things it cares about most, its blind spot.
+  removes back-row units, how it MAINLY acts between lanes, how it holds a base, which of the game's own things it
+  cares about most (factions may share it), its blind spot. Removing: his unit leaves its cell; holding: his unit
+  stays, but the base stays mine (18 Nov 2026).
 - Stop 1 pages: juicy and easy to read; one line per answer; one line per partner faction saying HOW the combo plays.
 - Combos are judged once, on this board (step 8): STRONG / OK / WEAK / NONE / AGAINST; partners =
   STRONG or OK, 7+ each; `combos.tsv` has a test column, and what doesn't work in play is dropped.

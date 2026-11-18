@@ -53,16 +53,17 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    and sharpen them with the library:
    1. Identity: one sentence saying how the faction wins. Good: "units die, and every death feeds the others". Bad: "a
       flexible faction with many options" (it could be any faction).
-   2. Front removal: how it gets rid of an enemy unit that holds a base, in a way no other faction does. Examples: push
-      it out of the front row, so it stops cancelling your dot; take its strength away for good; kill it only by letting
-      an ally die. "Can't attack this round" is not removal: the enemy just waits a round.
+   2. Front removal: how it makes an enemy unit that holds a base leave its cell, in a way no other faction does.
+      Examples: push it out of the front row, so it stops cancelling your dot; turn it into a cocoon; kill it only by
+      letting an ally die. "Can't attack this round" is not removal: the enemy just waits a round.
    3. Back-row removal: how it mainly gets rid of enemy units in the back rows, out of most units' reach. Example:
       the rest of a hit goes into the unit behind.
    4. Between lanes: how it mainly acts across lanes. Examples: throw a unit into another lane; spend one lane's supply
       in another.
-   5. Holding: how it keeps a base once it has it. Example: an Immobile unit that says "allies in my lane can't be moved
+   5. Holding: how it keeps a base once it has it: his units stay, but the base stays mine. Example: an Immobile unit that says "allies in my lane can't be moved
       or hit by enemy spells".
-   6. What it cares about: which of the game's own things it cares about most. Example: the discard pile.
+   6. What it cares about: which of the game's own things it cares about most; factions may share it. Example: the
+      discard pile.
    7. Blind spot: the one thing it never gets, on any card. Example: a swarm faction never restores shields.
 3. **Its archetypes and blind spots** (taken from the wheel). Its archetypes: the 2 or 3 archetypes it is made of, each
    of engines (concepts that work through links: my units die -> my units gain when an ally dies) and bricks

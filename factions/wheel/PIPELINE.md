@@ -66,7 +66,8 @@ is written in that step's chat, from the rules of the step, and its line here is
 - `python3 ../../factions/wheel/work/concept_list.py` -> `factions/wheel/work/lists/<letter>.tsv`: per faction every
   concept with 5+ cards except its archetypes' own, its score ((real + 1) / (chance + 1) links with the concepts of
   its archetypes per game, averaged over the games where both appear), its `level` and its games, sorted by score.
-- `factions/wheel/work/answer_concepts.tsv` (agreed with Kaptain): which concepts give which of the seven answers.
+- `factions/wheel/work/answer_concepts.tsv` (agreed with Kaptain): per answer its ways (answer, the way in plain words,
+  its concepts: one, two that real cards link with their times chance and games, or removals on a spell; whose).
 
 ## Step 8. Combos on this board
 - A script counts the joins between every two factions' concepts (archetypes and extras; step 5 numbers); Claude rates
