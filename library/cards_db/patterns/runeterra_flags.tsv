@@ -1,2 +1,15 @@
 card	name	pattern	requires	text
+750908	Eye of the Dragon	T14	name:flow	round start: flow: summon a  # .
+750913	Deep Meditation	T14	name:flow	flow: i cost 2 less. draw 2 other s
 751404	The Arsenal	T24	value:discard|dies	r each allied landmark you've destroyed this game. when you destroy an allied l
+751745	The Spirit of Wuju	T14	name:flow	flow: i cost 2 less. when i'm summo
+751747	Soul Sword	T14	name:flow	flow: i cost 2 less.
+751749	Master Yi	T14	name:flow	a spell in your hand by 1 and flow: grant all allied  #  everywhe
+751752	The Witness	T14	name:flow	flow: i cost 2 less. play: stun an 
+751758	Unworthy Soul	T14	name:flow	flow: i cost 2 less. recall a unit 
+751760	Dragoncaller	T14	name:flow	round start: flow: summon  #  and grant it ephem
+751774	Drum Solo	T14	name:flow	draw 2. flow: reduce those cards' costs by 
+751775	Crowd Pleaser	T14	name:flow	 and quick attack this round. flow: create a new 2 cost spell in 
+751777	Caustic Riff	T14	name:flow	flow: i cost 2 less. deal 1 to all 
+751779	Zaun Bouncer	T14	name:flow	round start: flow: refill 2 spell mana.
+796572	Master Yi (level 2)	T14	name:flow	a spell in your hand by 1 and flow: grant all allied  #  everywhe
