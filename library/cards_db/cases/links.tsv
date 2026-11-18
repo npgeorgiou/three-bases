@@ -165,7 +165,7 @@ lk164	faeria	Hilltop Archer	Flying Piranha	line	makes units die	links fix 16 Nov
 lk165	gwent	Ciri	Djenge Frett	line	damages enemy units or players	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	damage !on_play	on_play !passive
 lk166	inscryption	Hammer	Ouroboros	line	kills it for its death effect	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770); my own side is no removal (Kaptain 17 Nov 2026)	friendly_fire !on_play	death_trigger
 lk167	into_the_breach	Titan Fist	Cascading Resonator	line	makes enemy units die	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	damage !forced_movement	damage !cant_attack
-lk168	marvel_snap	Adam Warlock	Punisher War Machine	line	makes you draw cards	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	draw !stat_gain	mark_target !resource_gain
+lk168	marvel_snap	Adam Warlock	Punisher War Machine	line	makes you draw cards	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	draw !stat_gain	on_draw !resource_gain
 lk169	monster_train	Hornbreaker Prince	Last Stand	line	has Rage	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	temporary_buff !attack_now	on_play !exhaust
 lk170	runeterra	Yasuo	The Howling Abyss	line	makes champions level up	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	level_up !damage	generate_cards !cant_attack
 lk171	stormbound	Copperskin Ranger	Soap Cleanse	line	makes units get Poison	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 770)	damage_over_time !damage	on_play !turn_start
@@ -299,7 +299,7 @@ lk298	stormbound	Qordia’s Nest	Fortification Tonic	line	is a landmark or struc
 lk299	sts1	Pommel Strike	Perfected Strike	line	is a card it acts on	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2172)	type !damage	damage
 lk300	duelyst	Matter Shaper	Auroras Tears	line	makes a equipment it asks for	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2177)	generate_cards !destroy	on_play
 lk301	gwent	Summoning Circle	Pavko Gale	line	makes a unit it asks for	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2177)	selection !cant_attack	activated !cant_attack
-lk302	marvel_snap	Aero	Kingpin	line	moves it where it must be	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2388)	forced_movement !combo_sequence	stat_gain
+lk302	marvel_snap	Aero	Kingpin	line	moves it where it must be	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2388)	forced_movement !combo_sequence	stat_loss
 lk303	duelyst	Trinity Oath	Theobule	line	fills your hand	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2422)	draw !heal	draw
 lk304	faeria	Healing Song	Radiance, Imperial Airship	line	fills your hand	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2422)	draw !heal	player_heal !cost_set
 lk305	gwent	Ciri: Dash	Doppler	line	fills your hand	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2422)	draw !countdown	on_play !variety_payoff
@@ -398,3 +398,4 @@ lk397	gwent	Gaetan	Cat Witcher	line	acts on units	Kaptain 18 Nov 2026, wheel pro
 lk400	gwent	Cursed Scroll	Cow Carcass	none	acts on units	Kaptain 18 Nov 2026, wheel probe: a card moved from hand to the deck puts no unit next to another		
 lk401	gwent	Blightmaker	Cow Carcass	line	puts your units there	Kaptain 18 Nov 2026, wheel probe: a card that also puts units there keeps that link when its other move is in the deck		
 lk402	marvel_snap	Doctor Octopus	Alioth	line	moves enemy units	Kaptain 18 Nov 2026, wheel probe: cards pulled from the enemy hand onto a location are units moved there		
+lk403	marvel_snap	Mirage	Iron Patriot	none	more power	Kaptain 19 Nov 2026, wheel tag check: Mirage's +2 Power lands only on its copy of an enemy card		

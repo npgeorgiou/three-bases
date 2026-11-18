@@ -1,7 +1,8 @@
 """tag_read_input.py (run from library/cards_db): the reader's inputs for work/tag_reads.tsv. Per family: the concept's
 definition and what it is not (concept tree); per card: its text, keywords and rows, its keywords' entries (their rules in
 its game) and the cards it names or makes (rows.py). Writes work/reads/batch_NN.md, about 20 cards each, families kept
-whole; the reader writes work/reads/batch_NN.verdicts.tsv (card id, verdict, why)."""
+whole; the reader writes work/reads/batch_NN.verdicts.tsv (card id, verdict, why). With `tag_reads2.tsv round2`: the
+second reading's cards not read yet, into work/reads/round2_NN.md."""
 import contextlib, csv, io, os, sqlite3, sys
 sys.path.insert(0, os.getcwd())
 import rows
@@ -18,12 +19,16 @@ for l in open('../concept_tree.txt'):
 
 def show(i):
     f = io.StringIO()
-    with contextlib.redirect_stdout(f): rows.show(i)
+    try:
+        with contextlib.redirect_stdout(f): rows.show(i)
+    except TypeError: return f'(card {i} has no text in the library)\n'  # a card the library has rows for but no text
     return f.getvalue()
 
 
 fams = {}
-for r in csv.DictReader(open(os.path.join(HERE, 'tag_reads.tsv')), delimiter='\t'):
+SRC, PRE = (sys.argv[1], sys.argv[2]) if len(sys.argv) > 2 else ('tag_reads.tsv', 'batch')
+for r in csv.DictReader(open(os.path.join(HERE, SRC)), delimiter='\t'):
+    if r.get('verdict'): continue  # read before
     fams.setdefault((r['concept'], r['family'], r['why suspect']), []).append(r)
 batches, cur = [], []
 for k, rs in fams.items():
@@ -46,5 +51,5 @@ for n, b in enumerate(batches, 1):
         for k2 in kws[:4]: out += ['Keyword entry:', show(k2)]
         refs = [x for (x,) in c.execute('select distinct card_ref from effect e join ability a on a.id=e.ability where a.card=? and card_ref is not null and card_ref!=?', (i, i))]
         for x in refs[:3]: out += ['Card it names or makes:', show(x)]
-    open(os.path.join(OUT, f'batch_{n:02d}.md'), 'w').write('\n'.join(out) + '\n')
+    open(os.path.join(OUT, f'{PRE}_{n:02d}.md'), 'w').write('\n'.join(out) + '\n')
 print(len(batches), 'batches', sum(len(b) for b in batches), 'cards')

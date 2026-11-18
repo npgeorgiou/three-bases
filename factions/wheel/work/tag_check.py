@@ -4,7 +4,7 @@ whether the card's own text or a keyword gave it), the keyword, or the general r
 A group is suspect when it acts on the wrong side (it helps the enemy, or hurts me) or when its rows match what the
 concept's definition gives to another concept (CHECKS below). Writes tag_groups.tsv (every group) and tag_reads.tsv
 (5 cards per suspect family: one concept, one action or test, one reason; spread over the games; verdict and
-why left empty, for the reader)."""
+why left empty, for the reader) only with --reads; always tag_cards.tsv (every card of every suspect family)."""
 import collections, os, random, re, sqlite3, sys
 sys.path.insert(0, os.getcwd())
 import flat
@@ -123,6 +123,13 @@ for (k, what, why), cs in sorted(fam.items()):
         for g in sorted(by_game):
             if by_game[g] and len(pick) < 5: pick.append(by_game[g].pop(rnd.randrange(len(by_game[g]))))
     for i in pick: reads.append([k, what, why, seen[i], real[i][0], real[i][1], str(i), '', ''])
+with open(os.path.join(HERE, 'tag_cards.tsv'), 'w') as f:  # every card of every suspect family, with its group
+    f.write('concept\tfamily\twhy suspect\tgroup\tgame\tcard\tcard id\n')
+    for (k, what, why), cs in sorted(fam.items()):
+        seen = {}
+        for i, g in cs: seen.setdefault(i, g)
+        for i in sorted(seen): f.write('\t'.join([k, what, why, seen[i], real[i][0], real[i][1], str(i)]) + '\n')
+if '--reads' not in sys.argv: sys.exit(print(f'{len(out)} groups, {sum(1 for r in out if r[9])} suspect in {len(fam)} families (tag_cards.tsv; --reads writes tag_groups.tsv and tag_reads.tsv)'))
 with open(os.path.join(HERE, 'tag_groups.tsv'), 'w') as f:
     f.write('concept\tsource\twhat\ton (kind/side/pick, to or by whose side)\tzone\twhen\tgiven by\tcards\tgames\tsuspect\twhy\texamples\n')
     for r in out: f.write('\t'.join(r) + '\n')

@@ -16,14 +16,18 @@ is written in that step's chat, from the rules of the step, and its line here is
   case first; a card read (within the wheel's 500, low-cost model, Kaptain's OK first) only where its rows can't
   tell. A game rule no card text says goes into `read/<game>/game_rules.jsonl` (`applies_to`; `kind_has` puts it only
   on the cards whose own rows name that kind, as Runeterra's spell mana).
-- Tags: `python3 ../../factions/wheel/work/tag_check.py` (a second) -> `work/tag_groups.tsv` (per usable concept of
+- Tags: `python3 ../../factions/wheel/work/tag_check.py` (a second) -> `work/tag_cards.tsv` (every card of every
+  suspect family, with its group); with `--reads` also `work/tag_groups.tsv` (per usable concept of
   `work/concepts.tsv`, its real cards grouped by what put the tag on: the row's table and action, test or event, whom it
   acts on (kind/side/pick, and to or by whose side), from where, when it fires, and the card or the keyword that gave it;
   or the keyword; or the general rule of `flat.py` and the row that set it off; with cards, games, suspect and why) and
   `work/tag_reads.tsv` (the reading: a family is one concept, one action or test and one reason; 5 of its cards spread
   over the games, with the group each came from; then the reader's verdict and one line why). `python3 ../../factions/wheel/work/tag_read_input.py`
   -> `work/reads/batch_NN.md` (the reader's inputs, about 20 cards each; low-cost model readers, 4 batches each) and
-  the readers' `work/reads/batch_NN.verdicts.tsv` (card id, verdict, why). The reasons are in its
+  the readers' `work/reads/batch_NN.verdicts.tsv` (card id, verdict, why). `work/tag_read_sum.py` -> `work/tag_verdicts.tsv` (per family: fix,
+  stays or mixed). `work/tag_split.py` -> `work/tag_reads2.tsv`: each mixed family split by the one detail that best
+  keeps the cards read right apart from those read wrong, 5 cards per half (the ones read keep their verdict); its new
+  cards read the same way (`tag_read_input.py tag_reads2.tsv round2` -> `work/reads/round2_NN.md` and their verdicts). The reasons are in its
   `checks`: a good action on an enemy or a bad one on my side for a concept the concept tree puts under helps_me or
   hurts_enemy, a thing put on the enemy side, a trigger of mine firing on the enemy's action, and the rows that match
   what a concept's definition gives to another concept. Fixes go into `flat.py` derive with cases in

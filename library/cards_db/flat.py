@@ -195,8 +195,8 @@ def build(c):
 # Concepts derived from the shape of a row (Claude's rules from the concept tree's definitions, 28 Oct 2026). Each rule: concept,
 # table, SQL condition on that table. A card gets the concept when any of its rows matches.
 RULES = [
-    ('permanent_growth', 'flat_do', "act='stat_change' and on_pick='self' and lasts in ('permanent','while') and params not like '%=-%'"),
-    ('permanent_growth', 'flat_do', "act='give_keyword' and concept in ('attack_gain','defence_gain','stat_gain') and lasts='permanent' and (on_pick='self' or (on_kind='player' and on_side='mine')) and coalesce(params,'') not like '%=-%'"),  # Strength on the player (Slay the Spire Inflame)
+    ('permanent_growth', 'flat_do', "act='stat_change' and on_pick='self' and lasts in ('permanent','while') and params not like '%=-%' and not exists (select 1 from flat_when w where w.card=flat_do.card and w.ability=flat_do.ability and w.event in ('played','summoned','dies','killed') and w.obj_pick='self')"),
+    ('permanent_growth', 'flat_do', "act='give_keyword' and concept in ('attack_gain','defence_gain','stat_gain') and lasts='permanent' and (on_pick='self' or (on_kind='player' and on_side='mine')) and coalesce(params,'') not like '%=-%' and not exists (select 1 from flat_when w where w.card=flat_do.card and w.ability=flat_do.ability and w.event in ('played','summoned','dies','killed') and w.obj_pick='self')"),  # Strength on the player (Slay the Spire Inflame)
     ('multi_attack', 'flat_do', "params like '%times=%' and params not like '%times=1.0%' and coalesce(on_side,'enemy')!='mine' and (act='strike' or (act='damage' and card in (select ct.card from card_type ct join type t on t.id=ct.type where t.name='Attack')))"),  # an attack that hits more than once (Twin Strike), not a spell's repeated damage (Gouge)
     # my unit strikes / fights enemy units because the card says so (Faeria Hunt Down, Runeterra Single Combat); a unit's own plain attack is no row, a keyword card's rows do not count
     ('fight_enemy', 'flat_do', "act in ('strike','start_attack') and origin='own' and to_side='enemy' and to_kind in ('unit','unit_or_structure') and coalesce(to_pick,'')!='nearest' and coalesce(on_side,'mine')!='enemy' and card in (select id from card where is_keyword=0 and id>0)"),
@@ -211,7 +211,7 @@ RULES = [
     ('stat_loss', 'flat_do', "(act='stat_change' and params like '%=-%') or (act='stat_set' and on_side='enemy')"),
     ('aoe_damage', 'flat_do', "act='damage' and on_pick='all'"),
     ('direct_damage', 'flat_do', "act in ('damage','excess_damage') and on_kind in ('player','any')"),
-    ('ping', 'flat_do', "act='damage' and params like 'amount=1.0%'"),
+    ('ping', 'flat_do', "act='damage' and params like 'amount=1.0%' and not exists (select 1 from flat_when w where w.card=flat_do.card and w.ability=flat_do.ability and w.event in ('played','summoned','dies','killed') and w.obj_pick='self')"),  # can be dealt again: not a one-time hit when played or when it dies
     ('board_limit', 'flat_do', "act in ('stat_change','stat_set') and (params like 'size=%' or params like '%;size=%')"),  # the room a unit takes (Monster Train size, The Moon's whole side)
     ('self_destruct', 'flat_do', "act='kill' and on_pick='self'"),
     ('sacrifice', 'flat_do', "act='kill' and on_side='mine' and coalesce(on_pick,'')!='self' and coalesce(on_kind,'')!='player'"),
@@ -228,7 +228,7 @@ RULES = [
     ('cheat_death', 'flat_do', "(act='cant' and param_event='dies' and coalesce(on_side,'mine')!='enemy') or (act in ('summon','revive','return_to_hand','copy','return_card') and (card_ref=card or on_pick='self') and coalesce(to_side,'mine')!='enemy' and exists (select 1 from flat_when w where w.card=flat_do.card and w.ability=flat_do.ability and w.event='dies' and w.obj_pick='self'))"),
     ('cant_move', 'flat_do', "act='cant' and param_event='moves' and on_pick='self'"),
     ('immobilize', 'flat_do', "act='cant' and param_event='moves' and on_side='enemy'"),
-    ('bounce_enemy', 'flat_do', "act='return_to_hand' and on_side='enemy'"),
+    ('bounce_enemy', 'flat_do', "act='return_to_hand' and (on_side='enemy' or (on_side is null and on_pick in ('chosen','all','random')))"),  # a unit of either side (Will of Ionia)
     ('polymorph', 'flat_do', "act='transform' and on_side='enemy'"),
     ('information', 'flat_do', "act in ('reveal','look')"),
     ('random_effect', 'flat_do', "on_pick='random' or act='give_random_keyword'"),
@@ -375,11 +375,27 @@ def derive(c):
     c.execute("update flat_do set concept='hand_deck_swap' where concept='swap' and act='swap' and coalesce(on_kind,'') in ('card','spell')")
     # my unit back to hand, by what its rows say (Kaptain 18 Nov 2026): when it dies or leaves play, or from the board by an
     # effect or its own ability; a row that says neither whose unit nor from where keeps return_to_hand
-    mine_back = "concept='return_to_hand' and (on_side='mine' or (on_side is null and on_pick='self'))"
+    mine_back = "concept='return_to_hand' and (on_side='mine' or (on_side is null and on_pick in ('self','left_of_self','right_of_self','chosen','all','random')))"
     c.execute(f"update flat_do set concept='return_on_leave' where {mine_back} and exists (select 1 from flat_when w where "
               "w.card=flat_do.card and w.ability=flat_do.ability and w.event in ('dies','killed','leaves_play'))")
     c.execute(f"update flat_do set concept='return_from_board' where {mine_back} and coalesce(on_zone,eff_zone,'board')='board' "
               "and coalesce(on_kind,'unit') not in ('spell','card')")
+    c.execute("update flat_do set concept='recycle' where concept='return_to_hand' and on_kind='spell' and on_side='mine'")  # a spell back to hand (Puzzling Signposts)
+    # the second tag reading (Kaptain 19 Nov 2026): a stat gain whose amounts are all lowered is stat_loss (Disarm, Sap, Stinky); a buff
+    # given to an enemy weakens it (Spirit Fire); a unit played from the enemy's discard pile comes back (revive); my own unit marked
+    # is no mark for later hits; all units moved to the enemy's side are moved by force (Nivellen); an enemy unit shuffled or put on
+    # top of a deck from the board is sent back (Riptide, Keeper's Verdict); a unit summoned for the enemy with no place named clogs
+    # its board (Dubious Hags); a spell aimed at it cancelled guards the unit (SpellShield: protection, Claude's choice)
+    lowered = "(params like '%=-%' or params like '%=minus%') and params not glob '*=[0-9]*' and params not glob '*=[a-ln-z]*'"
+    c.execute(f"update flat_do set concept='stat_loss' where concept in ('stat_gain','attack_gain','defence_gain','buff') and act in ('stat_change','give_keyword') and {lowered}")
+    c.execute("update flat_do set concept='debuff' where concept='buff' and act in ('give_keyword','give_ability') and on_side='enemy'")
+    c.execute("update flat_do set concept='revive' where concept='free_play' and act='play_card' and coalesce(on_zone,eff_zone)='discard' and on_kind='unit'")
+    c.execute("update flat_do set concept=null where concept='mark_target' and on_side='mine'")
+    c.execute("update flat_do set concept='forced_movement' where concept='movement' and act='move' and on_side is null and on_pick='all' and to_side='enemy'")
+    c.execute("update flat_do set concept='bounce_enemy' where concept in ('recycle','tutor') and act in ('shuffle_into_deck','put_on_top') and on_side='enemy' "
+              "and on_kind='unit' and coalesce(on_zone,'board')='board'")
+    c.execute("update flat_do set concept='board_clog' where concept='summon' and on_side='enemy' and to_side is null and on_pick is null")
+    c.execute("update flat_do set concept='protection' where concept='shield' and act='counter'")
     # "can": a card may do what is normally forbidden (Kaptain 18 Nov 2026). A rule for everyone (on all units of both sides, a
     # location's "cards can move here") is rule_change; a "can" a keyword brings takes that keyword's concept (Flying: movement);
     # the card's own "can" takes the concept of what it may do (Prime Spear may hit 3 tiles away: ranged; Push Beam any number of

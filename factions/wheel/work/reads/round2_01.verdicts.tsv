@@ -1,0 +1,16 @@
+card id	verdict	why
+7000134	wrong: should be stat_loss (this turn)	"Enemy loses 9 Strength this turn": a strength loss, not a gain.
+5000461	wrong: should be an ability given to a player (not buff)	"The enemy General gains" a trigger; the General is a player, not a unit.
+751586	unsure	"Frostbite me at the next Round Start": Frostbite's rules are not in the file, so its effect on the unit is unknown.
+796730	wrong: should be stun (harm to the enemy, not buff)	"Stun it again at the next Round Start": disables the enemy follower; nothing is made stronger.
+8000362	right	"Your opponent draws 2 cards": cards come from their deck into their hand.
+8000103	right	"Each player draws a card": both players draw from their decks into hand.
+796502	unsure	"I Dragon's Rage enemies": Dragon's Rage is played, but no cost waiver is stated in text or rows.
+751997	right	"Play Relentless Storm 3 times": an effect plays spells with no cost stated.
+796582	right	"Play or Attack: Play Relentless Storm 3 times": an effect plays spells with no cost stated.
+750821	right	"Plunder: Play Cannon Barrage 7 times": an effect plays spells with no cost stated.
+757416	right	"Play a unit ... from their deck": the unit enters play from the deck with no cost paid.
+756487	wrong: should be revive	"Play a Bronze unit from your opponent's graveyard": a dead unit coming back is revive.
+757293	right	"Play a bronze special card from your opponent's graveyard": an effect plays it with no cost stated.
+8000740	wrong: should be marked for transform (not hit harder)	"Transform those cards into copies of this": the mark sets up a transform, not a stronger hit.
+8000462	wrong: should be location marked for an objective (not hit harder)	"Objective: Win that location": the mark sets a win objective; later hits are not stronger.

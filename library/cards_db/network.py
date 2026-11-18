@@ -2241,11 +2241,13 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
         q = ','.join('?' * len(concepts))
         acting = {a for (a,) in c.execute(f"""select card from flat_do where origin in ('own','uses_keyword') and coalesce(on_side,'mine') in ('mine','any')
                 and act not in ('create','summon','choose_card','keyword_action','copy','draw') and coalesce(on_pick,'') not in ('self','owner')
+                and not (on_pick='it' and exists (select 1 from flat_do m where m.card=flat_do.card and m.ability=flat_do.ability and m.seq<flat_do.seq
+                and m.act='copy' and m.on_side='enemy'))
                 and not (origin='uses_keyword' and exists (select 1 from flat_do k where k.card=flat_do.card and k.act='keyword_action' and k.keyword_ref=flat_do.via)
                 and not exists (select 1 from flat_do k where k.card=flat_do.card and k.act='keyword_action' and k.keyword_ref=flat_do.via and coalesce(k.on_pick,'')!='self'))
                 and not (coalesce(on_kind,'') = 'player' and act in ('heal','stat_change','grow',
                 'negate_damage','damage_reduction','give_keyword','give_ability')) and card in ({marks})""", L)}  # on my
-        # units: healing itself and my Nexus helps no other unit (Cosmic Youngling); Rally on the player does (another attack); making a
+        # units: healing itself and my Nexus helps no other unit (Cosmic Youngling); a gain on its copy of an enemy card lands only on that copy (Mirage); Rally on the player does (another attack); making a
         # card is no help, the made card helps; a keyword it uses only on itself (Ornn level 2 forges himself) helps no other ()
         # (L3: Aurelion Sol makes Celestial cards, he does not help Braum); what a keyword the
         # card has does to others is the keyword's rule (L15: Scout readies Scouts: Greathorn Companion -> Greenfang Warden, no line)  # it acts on other cards of mine, not only on itself
@@ -2256,6 +2258,8 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
             p = dict(x.split('=', 1) for x in (ps or '').split(';') if '=' in x)
             return act in ('stat_change', 'grow') and any(k in p and raises(p[k]) for k in want)
         rows = [(a, own, ab_) for a, own, act, ps, con, k, w, ab_ in c.execute(f"""select card, coalesce(on_pick,'') in ('self','owner','actor') or act='counter' or origin='has_keyword'
+                or (on_pick='it' and exists (select 1 from flat_do m where m.card=flat_do.card and m.ability=flat_do.ability and m.seq<flat_do.seq
+                and m.act='copy' and m.on_side='enemy'))
                 or (origin='uses_keyword' and exists (select 1 from flat_do k where k.card=flat_do.card and k.act='keyword_action' and k.keyword_ref=flat_do.via)
                 and not exists (select 1 from flat_do k where k.card=flat_do.card and k.act='keyword_action' and k.keyword_ref=flat_do.via and coalesce(k.on_pick,'')!='self'))
                 or coalesce(on_side,'mine') not in
