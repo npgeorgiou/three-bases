@@ -38,7 +38,7 @@ stage ends with a commit and a push, and its line here marked done with what it 
    `work/archetypes_make.py` (106 parts, every archetype with 2+ engine parts, no concept twice in one archetype); run it
    after stage 2, then check every engine pair's edges. State: **done**, waiting for Kaptain (stage 5).
 4. **Map redone** (`archetype_map.py`): edges whose link text is about hitting the player, and deck-only edges, are
-   marked; the cards behind most edges are counted. State: **done**: 719 edges after stage 6.
+   marked; the cards behind most edges are counted. State: **done**: 724 edges after stage 6.
 5. **Kaptain's OK** on the redone archetypes and the map. State: **done** (Kaptain approved, 18 Nov 2026).
 6. **Probes and fixes** (Kaptain's go, 18 Nov 2026; 300 card reads at most, 183 used, all in `factions/read-cards.tsv`).
    State: **done**. A script counted, for the thin archetypes and every engine concept pair with no link, the cards

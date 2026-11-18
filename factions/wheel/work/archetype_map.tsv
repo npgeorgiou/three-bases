@@ -14,7 +14,9 @@ aggro	units that gain when I play another card	count_payoff	clear the unit cance
 aggro	units that gain when I play another card	count_payoff	clear the unit cancelling my dot	ping	1.24	0.85	7	3	type: damages enemy units or players	gwent: Regis + Madman Lugos	about the player
 aggro	units that gain when I play another card	count_payoff	clear the unit cancelling my dot	fight_enemy	2.08	0.85	4	3	type: makes your units die	runeterra: Gentlemen's Duel + Xolaani the Bloodweaver	
 aggro	units that gain when I play another card	count_payoff	clear the unit cancelling my dot	forced_movement	2.6	1.09	6	3	type: {A} moves enemy units, and {B} acts on units next to it	gwent: Frenzied D'ao + Fringilla Vigo	
+aggro	units that gain when I play another card	count_payoff	clear the unit cancelling my dot	polymorph		1.52	1	1.78	stronger: can give it more strength	gwent: Farseer + Hostage Taker	
 aggro	units that gain when I play another card	cost_condition	clear the unit cancelling my dot	forced_movement	1.71	0.9	2	2.58	type: {A} moves enemy units, and {B} acts on units in its lane	marvel_snap: Winds of Watoomb + Lockheed	
+aggro	units that gain when I play another card	cost_condition	clear the unit cancelling my dot	polymorph			1	1.0	waits: plays it: its effect goes off	gwent: Golden Nekker + Hostage Taker	
 control	answers to every enemy unit	destroy	hits that set up the next one	mark_target		2.61	2	2.11	waits: makes enemy units die	duelyst: Punish + Infest	
 control	answers to every enemy unit	destroy	hits that set up the next one	ping	1.63	0.89	5	3	waits: kills it for its death effect	runeterra: Fracture + Caustic Cask	about the player
 control	answers to every enemy unit	damage	hits that set up the next one	condition_life	5.8	1.43	5	3	type: damages enemy units or players	gwent: Regis + Madman Lugos	about the player
@@ -70,6 +72,7 @@ control	answers to every enemy unit	disable	cards keep coming from the removal	c
 control	answers to every enemy unit	forced_movement	cards keep coming from the removal	on_kill	2.02	1.34	3	3	type: {A} moves enemy units, and {B} acts on units next to its target	gwent: Philippa Eilhart + Devil's Puffball	
 control	answers to every enemy unit	forced_movement	cards keep coming from the removal	other_death_trigger	3.81	1.2	6	3	type: {A} moves {B} and units, and {B} acts on units in its lane	monster_train: Hosting Kin + Devourer of Death	
 control	answers to every enemy unit	forced_movement	cards keep coming from the removal	count_payoff	2.6	1.09	6	3	type: {A} moves enemy units, and {B} acts on units next to it	gwent: Frenzied D'ao + Fringilla Vigo	
+control	answers to every enemy unit	polymorph	cards keep coming from the removal	count_payoff		1.52	1	1.78	stronger: can give it more strength	gwent: Farseer + Hostage Taker	
 control	hits that set up the next one	mark_target	cards keep coming from the removal	on_kill		3.73	1	1.0	waits: plays it: its effect goes off	gwent: Sihil + Giantslayer	
 control	hits that set up the next one	condition_life	cards keep coming from the removal	on_kill	2.4	1.6	3	3	type: damages enemy units or players	gwent: Arachas Venom + Eist Tuirseach	about the player
 control	hits that set up the next one	condition_life	cards keep coming from the removal	other_death_trigger	1.49	2.31	3	2.99	waits: makes units die	duelyst: Punish + Soul Grimwar	
@@ -105,6 +108,7 @@ tempo	cheap units that act at once	movement	cheap cards that send back, move or 
 tempo	cheap units that act at once	movement	cheap cards that send back, move or stop enemy units	silence	3.34	1.39	4	3	type: {A} moves {B}, and {B} acts on units in the back row or in the front row	gwent: Baccalà + Van Moorlehem Hunter	
 tempo	cheap units that act at once	movement	cheap cards that send back, move or stop enemy units	stat_loss	2.76	0.98	3	3	type: {A} moves {B}, and {B} acts on units in its lane	marvel_snap: Grapple Arrow + Lockheed	
 tempo	cheap units that act at once	movement	cheap cards that send back, move or stop enemy units	hand_disruption	0.24	2.96	3	2.62	type: {A} moves {B}, and {B} acts on units in the back row	gwent: Baccalà + Stregobor	
+tempo	cheap units that act at once	cross_lane	cheap cards that send back, move or stop enemy units	forced_movement			1	1.0	type: {A} moves {B}, and {B} acts on units in its circuit	inscryption: Wiseclock + Splinter Cell	
 combo	a card that resets or repeats another card	repeat_trigger	a card that gains each time the first one works	on_draw	1.79	1.77	1	2.52	repeats: repeats its On Reveal effects	marvel_snap: Misery + Jane Foster Fractured Frontier	
 combo	a card that resets or repeats another card	repeat_trigger	a card that gains each time the first one works	combo_sequence	2.05	3.13	3	3	repeats: repeats its On Reveal effects	marvel_snap: Misery + Shou-Lao the Undying	
 combo	a card that resets or repeats another card	repeat_trigger	a card that gains each time the first one works	count_payoff	1.77	1.01	6	3	repeats: repeats its On Reveal effects	marvel_snap: Misery + Shou-Lao the Undying	
@@ -527,6 +531,7 @@ storm	play many cards	resource_gain	gain from how many	spells_played_condition	0
 storm	play many cards	extra_turn	gain from how many	count_payoff	2.78	0.37	2	3	waits: makes it attack for its effect	runeterra: Champions' Strength + Trundle (level 2)	
 storm	play many cards	extra_turn	gain from how many	variable_stats	5.07	1.08	1	3	waits: makes it attack for its effect	runeterra: Sion Returned + Atakhan, Bringer of Ruin	
 storm	play many cards	extra_turn	gain from how many	permanent_growth	1.98	0.89	2	3	waits: makes it attack for its effect	runeterra: Sion Returned + Atakhan, Bringer of Ruin	
+storm	play many cards	overload_debt	gain from how many	permanent_growth			1	1.0	rules: gives it Emberdrain	monster_train: Soul Siphon + Primordium	
 blink	the unit leaves and comes back	return_to_hand	what fires again	leave_trigger	10.68	5.16	3	3	waits: returns it to hand for its effect	marvel_snap: Toxin + Kitty Pryde	
 blink	the unit leaves and comes back	return_to_hand	what fires again	other_leave_trigger	1.54	3.19	2	3	waits: makes cards leave play	runeterra: Recall + Rainbowfish (created)	
 blink	the unit leaves and comes back	return_to_hand	what fires again	on_ally_play	2.84	1.26	4	3	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Keeper of Masks	

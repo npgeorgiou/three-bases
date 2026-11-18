@@ -18,6 +18,7 @@ strikes	strikes more	untap		Claude
 strikes	strikes more	extra_turn		Claude
 strikes	strikes more	on_kill		Claude
 strikes	strikes more	combat_damage_threshold		Claude
+strikes	strikes more	piercing		Claude
 textdmg	damage from units' text	damage	on a card that is no spell	Kaptain
 textdmg	damage from units' text	ping	on a card that is no spell	Claude: by the damage rule
 textdmg	damage from units' text	mark_target	on a card that is no spell	Claude: by the damage rule
@@ -25,6 +26,7 @@ textdmg	damage from units' text	fight_enemy		Claude
 kills	kills outright	destroy		Claude
 kills	kills outright	banish		Claude
 kills	kills outright	deathtouch		Claude
+kills	kills outright	polymorph		Claude
 many	many at once	aoe_damage		Claude
 many	many at once	board_wipe		Claude
 many	many at once	multi_target_attack		Claude
@@ -54,6 +56,9 @@ disrupts	breaks their plan in other ways	junk_cards		Claude
 disrupts	breaks their plan in other ways	board_clog		Claude
 disrupts	breaks their plan in other ways	donate		Claude
 disrupts	breaks their plan in other ways	on_enemy_enter		Kaptain
+disrupts	breaks their plan in other ways	mill		Claude
+disrupts	breaks their plan in other ways	disruption		Claude
+disrupts	breaks their plan in other ways	rule_change		Claude
 supply	more supply	base_resource_gain		Claude
 supply	more supply	resource_gain		Claude
 cheaper	cheaper or stronger hand	cost_reduction		Claude
@@ -63,6 +68,7 @@ cheaper	cheaper or stronger hand	in_hand_buff		Claude
 cheaper	cheaper or stronger hand	cost_type		Claude
 cheaper	cheaper or stronger hand	upgrade		Claude
 cheaper	cheaper or stronger hand	cost_condition		Claude
+cheaper	cheaper or stronger hand	overload_debt		Claude
 cards	more cards in hand	draw		Kaptain
 cards	more cards in hand	on_draw		Kaptain
 cards	more cards in hand	hand_size		Kaptain
@@ -101,6 +107,7 @@ together	position and combos	assists_support		Claude
 together	position and combos	terrain		Claude
 together	position and combos	territory_trigger		Claude
 together	position and combos	card_presence_condition		Kaptain
+together	position and combos	cross_lane		Claude
 heals	heals them	heal		Claude
 heals	heals them	regeneration		Claude
 heals	heals them	lifesteal		Claude
@@ -123,6 +130,7 @@ protects	protects them	on_targeted		Claude
 (counted)	(the radius of what it counts)	variable_stats	by what it counts (rows)	Kaptain
 (counted)	(the radius of what it counts)	count_payoff	by what it counts (rows)	Kaptain
 (counted)	(the radius of what it counts)	condition_count	by what it counts (rows)	Kaptain
+(counted)	(the radius of what it counts)	quests	by what it counts (rows)	Claude
 (helper)	(off the radii)	merge_attach	attaching only says how a card acts; the attached card counts by its own effects	Kaptain
 (helper)	(off the radii)	tank	only says the unit has a lot of defence: its defence numbers count already	Kaptain
 (helper)	(off the radii)	board_presence	only says the card helps go wide: the units it makes count already	Kaptain

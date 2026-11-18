@@ -4,17 +4,17 @@ import sys
 R=[]
 def A(key,name,what,parts):
     for p,k,c in parts: R.append([key,name,what,p,k,c])
-ANS='destroy,damage,aoe_damage,board_wipe,fight_enemy,multi_target_attack,deathtouch,stat_loss,debuff,attack_zero,silence,disable,bounce_enemy,banish,forced_movement'
+ANS='destroy,damage,aoe_damage,board_wipe,fight_enemy,multi_target_attack,deathtouch,stat_loss,debuff,attack_zero,silence,disable,bounce_enemy,banish,forced_movement,polymorph'
 FIND=('find the pieces','brick','tutor,draw,selection,card_quality,deck_position')
-LOOP1=('a card that resets or repeats another card','engine','repeat_trigger,untap,return_to_hand,recycle,revive,free_play,cost_set,cost_reduction,copy,extra_turn')
+LOOP1=('a card that resets or repeats another card','engine','repeat_trigger,untap,return_to_hand,recycle,revive,free_play,cost_set,cost_reduction,copy,extra_turn,rule_change')
 LOOP2=('a card that gains each time the first one works','engine','on_ally_play,on_spell,death_trigger,other_death_trigger,on_sacrifice,leave_trigger,other_leave_trigger,on_draw,on_discard,combo_sequence,count_payoff,permanent_growth')
 NEED=('a card that needs the other piece in play or in hand','engine','card_presence_condition')
 FILL='self_mill,discard,sacrifice,self_destruct,friendly_fire'
 A('aggro','Aggro','cheap units take two bases in rounds 1-2, before the enemy has a board; each enemy removed also cuts his supply in that lane',[
- ('cheap units that hit at once','brick','haste,attack_now,attack_gain,excess_damage,territory_trigger'),
- ('cheap units, many of them','engine','summon,cost_reduction,cost_set'),
+ ('cheap units that hit at once','brick','haste,attack_now,attack_gain,excess_damage,territory_trigger,piercing'),
+ ('cheap units, many of them','engine','summon,cost_reduction,cost_set,overload_debt'),
  ('units that gain when I play another card','engine','on_ally_play,count_payoff,cost_condition'),
- ('clear the unit cancelling my dot','engine','damage,ping,fight_enemy,forced_movement,bounce_enemy')])
+ ('clear the unit cancelling my dot','engine','damage,ping,fight_enemy,forced_movement,bounce_enemy,polymorph')])
 A('control','Control','remove every enemy unit that comes, then hold the bases late with a few big units',[
  ('answers to every enemy unit','engine',ANS),
  ('hits that set up the next one','engine','mark_target,condition_life,ping'),
@@ -25,7 +25,7 @@ A('midrange','Midrange','units that are hard to remove and give more than one ca
  ('units that give more than their body','engine','summon,draw,generate_cards,death_trigger,copy,permanent_growth'),
  ('removal for any enemy, much of it by my units fighting','engine','fight_enemy,destroy,damage,multi_target_attack,stat_loss,silence,bounce_enemy,on_kill')])
 A('tempo','Tempo','cheap units take the front cells; cheap cards send back or stop the enemy units that could remove them, so he spends his supply and actions again',[
- ('cheap units that act at once','engine','haste,attack_now,attack_gain,stealth,cost_reduction,movement'),
+ ('cheap units that act at once','engine','haste,attack_now,attack_gain,stealth,cost_reduction,movement,cross_lane'),
  ('cheap cards that send back, move or stop enemy units','engine','bounce_enemy,forced_movement,swap,attack_lock,disable,immobilize,silence,stat_loss,attack_zero,cost_increase,hand_disruption'),
  ('cheap cards that keep my units alive','brick','protection,shield,immunity,return_to_hand')])
 A('combo','Combo','a game is won only by holding bases, so the combo is two cards that set each other off again and again inside one action, and the loop takes the lane',[FIND,LOOP1,LOOP2,NEED])
@@ -36,7 +36,7 @@ A('control_combo','Control-Combo','remove every enemy unit early, then the loop 
 A('prison','Prison / Stax','a lock on both players that my cards ignore, plus locks only on him',[
  ('a lock on both players','engine','row_effects,terrain'),
  ('my cards ignore the lock','engine','immunity,free_play,cost_type,stealth'),
- ('locks only on him','brick','cost_increase,attack_lock,disable,immobilize,silence,attack_zero,hand_disruption,board_clog,junk_cards,donate')])
+ ('locks only on him','brick','cost_increase,attack_lock,disable,immobilize,silence,attack_zero,hand_disruption,board_clog,junk_cards,donate,disruption')])
 A('go_wide','Tokens / Go-Wide','many small units in a lane (each also gives supply there), and cards that make all of them stronger',[
  ('many small units','engine','summon,copy,generate_cards,revive,cost_reduction'),
  ('bonuses for all of them','engine','attack_gain,defence_gain,stat_gain,buff,assists_support,variable_stats,condition_count,count_payoff,on_ally_play,row_effects')])
@@ -59,7 +59,7 @@ A('defenders','Defenders / Toughness Matters','units with high defence that hit 
  ('heal, and gain when healed','engine','heal,regeneration,on_lifegain')])
 A('toolbox','Toolbox','fetch from the deck the unit that answers what the enemy has',[
  ('fetch a chosen card from the deck','engine','tutor,selection,deck_position,card_quality'),
- ('a different answer on each unit','brick','destroy,damage,aoe_damage,silence,disable,bounce_enemy,forced_movement,protection,shield,heal'),
+ ('a different answer on each unit','brick','destroy,damage,aoe_damage,silence,disable,bounce_enemy,forced_movement,protection,shield,heal,polymorph'),
  ('fetch it again','engine','recycle,return_to_hand,revive')])
 A('aristocrats','Aristocrats','I kill my own units, and other cards gain each time one dies',[
  ('units to kill: cheap, made or coming back','engine','summon,revive,self_destruct'),
@@ -73,7 +73,7 @@ A('self_mill','Dredge / Self-Mill','cards go from my deck and hand to my discard
  ('use the cards there','engine','recycle,revive,return_to_hand,free_play,count_payoff,condition_count')])
 A('delirium','Delirium / Threshold','once my discard pile holds enough cards, or enough different ones, or my deck is small, cards get a bonus',[
  ('fill my discard pile','engine',FILL),
- ('a bonus past a number','engine','condition_count,variety_payoff,count_payoff,death_count,level_up,variable_stats,deck_condition')])
+ ('a bonus past a number','engine','condition_count,variety_payoff,count_payoff,death_count,level_up,variable_stats,deck_condition,quests')])
 A('recursion','Graveyard Recursion','cards come back from the discard pile and are played again',[
  ('play cards again from the discard pile','engine','recycle,return_to_hand,revive,free_play,cost_reduction'),
  ('cards worth playing again','engine','summon,draw,damage,aoe_damage,resource_gain,death_trigger,on_ally_play')])
@@ -86,7 +86,7 @@ A('spellslinger','Spellslinger / Prowess','many cheap spells, and units that gai
  ('gain from each spell','engine','on_spell,spells_played_condition,spell_power,count_payoff,combo_sequence,permanent_growth'),
  ('spells cast again or for free','engine','free_play,repeat_trigger,recycle,copy')])
 A('storm','Storm','one action per turn, so "one turn" becomes one round: gains from how many cards I played this round',[
- ('play many cards','engine','cost_reduction,cost_set,free_play,draw,generate_cards,copy,return_to_hand,resource_gain,extra_turn'),
+ ('play many cards','engine','cost_reduction,cost_set,free_play,draw,generate_cards,copy,return_to_hand,resource_gain,extra_turn,overload_debt'),
  ('gain from how many','engine','count_payoff,combo_sequence,on_ally_play,on_spell,spells_played_condition,condition_count,variable_stats,permanent_growth')])
 A('blink','Blink / Flicker','a unit leaves and comes back, and its Place fires again (Place fires every time a unit enters)',[
  ('the unit leaves and comes back','engine','return_to_hand,revive,recycle,repeat_trigger,copy,free_play,cost_reduction'),
@@ -113,7 +113,7 @@ A('stompy','Stompy','aggro with cheap units that are big for their cost, made bi
  ('bonuses on them','engine','attack_gain,defence_gain,buff,excess_damage,permanent_growth'),
  ('keep them alive','brick','protection,shield,immunity')])
 A('discard_8rack','Discard / 8-Rack','empty the enemy\'s hand, then punish him for holding few cards',[
- ('take, see, discard or tax the cards in his hand','engine','hand_disruption,information,steal,cost_increase'),
+ ('take, see, discard or tax the cards in his hand','engine','hand_disruption,information,steal,cost_increase,mill'),
  ('punish a small hand','engine','hand_size,condition_count')])
 A('wheels','Wheels','discard my hand and draw a new one, and cards gain from each draw and discard (hand limit 10)',[
  ('draw and discard many','engine','draw,discard,hand_size,recycle,generate_cards'),
@@ -130,9 +130,9 @@ A('turbo_fog','Turbo-Fog','no answers on the enemy\'s turn: with units already o
  ('get those cards again','engine','recycle,return_to_hand,copy,draw,generate_cards'),
  ('units that hold the bases','brick','defence_gain,taunt,regeneration')])
 A('hatebears','Hatebears / Death & Taxes','small units that each bind the enemy, while mine come in anyway; his units gone cut his supply',[
- ('small units that tax or stop him','engine','cost_increase,silence,attack_lock,immobilize,disable,hand_disruption,stat_loss,on_enemy_enter'),
+ ('small units that tax or stop him','engine','cost_increase,silence,attack_lock,immobilize,disable,hand_disruption,stat_loss,on_enemy_enter,disruption'),
  ('my units come in anyway','engine','free_play,cost_reduction,haste'),
- ('his units gone, his supply down','brick','destroy,damage,ping,bounce_enemy,banish,steal'),
+ ('his units gone, his supply down','brick','destroy,damage,ping,bounce_enemy,banish,steal,polymorph'),
  ('keep my small units alive','brick','protection,shield')])
 A('theft','Theft','take the enemy\'s units or cards for myself',[
  ('take or copy enemy units or cards','engine','steal,copy,hand_disruption'),

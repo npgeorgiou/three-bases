@@ -7,11 +7,11 @@ One chat does one step; at its end, mark the step done here and say what it left
 | step | state | what it made |
 |---|---|---|
 | 1. Fix the library's concepts | done | concepts split by whom a row acts on; "Skill" removed; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
-| 2. The usable concepts | done | `work/concepts.tsv`, `work/concepts.md`: 117 usable, 44 helpers, 35 out |
+| 2. The usable concepts | done | `work/concepts.tsv`, `work/concepts.md`: 124 usable, 47 helpers, 37 out (a concept needs 5+ real cards) |
 | 3. The archetypes | done | `archetypes.tsv` (agreed with Kaptain): the 38 archetypes that can exist here, 91 parts, engine or brick, every usable concept in at least one part; `archetypes.md` the same in plain words |
 | 4. The radii and how they work together | done | `work/radii.tsv` (every usable concept on its radius, agreed with Kaptain); `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` from concept instances |
 | 5. The links between concepts | done | `library/cards_db/wheel/concept_links.tsv` (`mechanics_wheel.py links --concepts`, about a minute) |
-| 6. The archetype map | done, approved by Kaptain (18 Nov 2026; `RECHECK.md`) | `work/archetype_map.tsv`: 719 edges between the concepts of engine parts; `factions/wheel-archetypes.html`; one gap (`work/archetype_gaps.tsv`): Discard / 8-Rack |
+| 6. The archetype map | done, approved by Kaptain (18 Nov 2026; `RECHECK.md`) | `work/archetype_map.tsv`: 724 edges between the concepts of engine parts; `factions/wheel-archetypes.html`; one gap (`work/archetype_gaps.tsv`): Discard / 8-Rack |
 | 7. The 20 factions | **next** | |
 | 8. Combos on this board | to do | |
 | 9. Game plan, then keywords | to do | |
@@ -27,7 +27,7 @@ One chat does one step; at its end, mark the step done here and say what it left
   (`work/answer_concepts.tsv`) and the number of extras per faction.
 - Still open from the recheck (`RECHECK.md` stage 6): thin maps (Pillowfort, Prison, Extra Turns, Discard / 8-Rack);
   89 "instead" cards not read.
-- Counts whose rows don't say what they count are counted nowhere: 200 instances of "grows with what happened" and 36
+- Counts whose rows don't say what they count are counted nowhere: 189 instances of "grows with what happened" and 36
   of "counts and thresholds" (`axes.py` prints them). Most are counts of enemy units or of a keyword the rows don't name.
 - The faction check (a finished faction's cards against its archetypes' concepts and extras) and
   `tools/wheel_table_check.py` (the 20 factions' archetypes, extras and answers) are written when step 10 and Stop 3

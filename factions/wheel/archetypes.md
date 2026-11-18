@@ -5,15 +5,15 @@ Engine: a part that works by feeding another part of the same archetype. Brick: 
 ## Aggro
 Cheap units take two bases in rounds 1-2, before the enemy has a board; each enemy removed also cuts his supply in that lane.
 
-- **cheap units that hit at once** (brick): Act the turn it arrives (haste, rush); Attack right away; Attack gain (+attack); Excess damage carries on (trample); In or entering enemy territory.
-- **cheap units, many of them** (engine): Summon units / tokens; Cards cost less; Set a cost to a fixed number.
+- **cheap units that hit at once** (brick): Act the turn it arrives (haste, rush); Attack right away; Attack gain (+attack); Excess damage carries on (trample); In or entering enemy territory; Ignore armour or defence.
+- **cheap units, many of them** (engine): Summon units / tokens; Cards cost less; Set a cost to a fixed number; Pay later (overload, debt).
 - **units that gain when I play another card** (engine): When I play another card; Grows with what happened this game; Cost matters.
-- **clear the unit cancelling my dot** (engine): Deal damage; Small repeatable damage; My unit fights a chosen enemy; Move enemy units (push, pull); Send an enemy unit back (bounce).
+- **clear the unit cancelling my dot** (engine): Deal damage; Small repeatable damage; My unit fights a chosen enemy; Move enemy units (push, pull); Send an enemy unit back (bounce); Turn an enemy into something weaker.
 
 ## Control
 Remove every enemy unit that comes, then hold the bases late with a few big units.
 
-- **answers to every enemy unit** (engine): Destroy outright; Deal damage; Damage to many at once; Board wipe; My unit fights a chosen enemy; Damage to several separate targets; Any damage kills (deathtouch, poisonous); Stat loss (-power, -health); Make a unit weaker (debuff); Attack set to 0; Silence (abilities removed); Can't act at all (stun, freeze); Send an enemy unit back (bounce); Banish / exile (gone for good); Move enemy units (push, pull).
+- **answers to every enemy unit** (engine): Destroy outright; Deal damage; Damage to many at once; Board wipe; My unit fights a chosen enemy; Damage to several separate targets; Any damage kills (deathtouch, poisonous); Stat loss (-power, -health); Make a unit weaker (debuff); Attack set to 0; Silence (abilities removed); Can't act at all (stun, freeze); Send an enemy unit back (bounce); Banish / exile (gone for good); Move enemy units (push, pull); Turn an enemy into something weaker.
 - **hits that set up the next one** (engine): Mark a target for later hits; Damaged unit matters; Small repeatable damage.
 - **cards keep coming from the removal** (engine): When it kills; When another unit dies; Counts deaths; Grows with what happened this game; Draw cards; Create new cards; Look at cards and pick (scry); Reuse my cards (shuffle back).
 - **a few finishers that are hard to answer** (brick): Stats equal to a count; Grows again and again; Immune / can't be targeted; Keep my units alive (protection); Absorb one hit (shield, ward); Heal every turn (regeneration); Cheat death (survive lethal).
@@ -28,7 +28,7 @@ Units that are hard to remove and give more than one card's worth, with removal 
 ## Tempo
 Cheap units take the front cells; cheap cards send back or stop the enemy units that could remove them, so he spends his supply and actions again.
 
-- **cheap units that act at once** (engine): Act the turn it arrives (haste, rush); Attack right away; Attack gain (+attack); Stealth / hidden until it acts; Cards cost less; Move my units (reposition).
+- **cheap units that act at once** (engine): Act the turn it arrives (haste, rush); Attack right away; Attack gain (+attack); Stealth / hidden until it acts; Cards cost less; Move my units (reposition); Reaches other lanes.
 - **cheap cards that send back, move or stop enemy units** (engine): Send an enemy unit back (bounce); Move enemy units (push, pull); Swap positions; Can't attack (lock on an enemy); Can't act at all (stun, freeze); Can't move (root); Silence (abilities removed); Stat loss (-power, -health); Attack set to 0; Make the opponent's cards cost more; Attack the opponent's hand.
 - **cheap cards that keep my units alive** (brick): Keep my units alive (protection); Absorb one hit (shield, ward); Immune / can't be targeted; Return my unit to hand.
 
@@ -36,7 +36,7 @@ Cheap units take the front cells; cheap cards send back or stop the enemy units 
 A game is won only by holding bases, so the combo is two cards that set each other off again and again inside one action, and the loop takes the lane.
 
 - **find the pieces** (brick): Search the deck for a card (tutor); Draw cards; Look at cards and pick (scry); Better or chosen cards; Top or bottom of the deck matters.
-- **a card that resets or repeats another card** (engine): Repeat or double triggers; Ready a used unit again (untap); Return my unit to hand; Reuse my cards (shuffle back); Bring back dead units (revive); Put into play for free; Set a cost to a fixed number; Cards cost less; Copy cards or units; Extra turns or actions.
+- **a card that resets or repeats another card** (engine): Repeat or double triggers; Ready a used unit again (untap); Return my unit to hand; Reuse my cards (shuffle back); Bring back dead units (revive); Put into play for free; Set a cost to a fixed number; Cards cost less; Copy cards or units; Extra turns or actions; Change the game's rules.
 - **a card that gains each time the first one works** (engine): When I play another card; When a spell is played; When it dies (deathrattle); When another unit dies; When a unit is sacrificed; When it leaves play; When another unit leaves play; When a card is drawn; When a card is discarded; Order of my plays matters (combo); Grows with what happened this game; Grows again and again.
 - **a card that needs the other piece in play or in hand** (engine): Having a card in play or hand.
 
@@ -49,9 +49,9 @@ Cheap units take lanes early, then one play makes them much stronger at once and
 ## Control-Combo
 Remove every enemy unit early, then the loop of Combo.
 
-- **answers to every enemy unit** (brick): Destroy outright; Deal damage; Damage to many at once; Board wipe; My unit fights a chosen enemy; Damage to several separate targets; Any damage kills (deathtouch, poisonous); Stat loss (-power, -health); Make a unit weaker (debuff); Attack set to 0; Silence (abilities removed); Can't act at all (stun, freeze); Send an enemy unit back (bounce); Banish / exile (gone for good); Move enemy units (push, pull).
+- **answers to every enemy unit** (brick): Destroy outright; Deal damage; Damage to many at once; Board wipe; My unit fights a chosen enemy; Damage to several separate targets; Any damage kills (deathtouch, poisonous); Stat loss (-power, -health); Make a unit weaker (debuff); Attack set to 0; Silence (abilities removed); Can't act at all (stun, freeze); Send an enemy unit back (bounce); Banish / exile (gone for good); Move enemy units (push, pull); Turn an enemy into something weaker.
 - **find the pieces** (brick): Search the deck for a card (tutor); Draw cards; Look at cards and pick (scry); Better or chosen cards; Top or bottom of the deck matters.
-- **a card that resets or repeats another card** (engine): Repeat or double triggers; Ready a used unit again (untap); Return my unit to hand; Reuse my cards (shuffle back); Bring back dead units (revive); Put into play for free; Set a cost to a fixed number; Cards cost less; Copy cards or units; Extra turns or actions.
+- **a card that resets or repeats another card** (engine): Repeat or double triggers; Ready a used unit again (untap); Return my unit to hand; Reuse my cards (shuffle back); Bring back dead units (revive); Put into play for free; Set a cost to a fixed number; Cards cost less; Copy cards or units; Extra turns or actions; Change the game's rules.
 - **a card that gains each time the first one works** (engine): When I play another card; When a spell is played; When it dies (deathrattle); When another unit dies; When a unit is sacrificed; When it leaves play; When another unit leaves play; When a card is drawn; When a card is discarded; Order of my plays matters (combo); Grows with what happened this game; Grows again and again.
 - **a card that needs the other piece in play or in hand** (engine): Having a card in play or hand.
 
@@ -60,7 +60,7 @@ A lock on both players that my cards ignore, plus locks only on him.
 
 - **a lock on both players** (engine): Row-wide lasting effects (weather); Terrain / board features.
 - **my cards ignore the lock** (engine): Immune / can't be targeted; Put into play for free; Alternative costs; Stealth / hidden until it acts.
-- **locks only on him** (brick): Make the opponent's cards cost more; Can't attack (lock on an enemy); Can't act at all (stun, freeze); Can't move (root); Silence (abilities removed); Attack set to 0; Attack the opponent's hand; Clog the opponent's board; Junk cards into a deck or hand; Give my units or cards to the opponent.
+- **locks only on him** (brick): Make the opponent's cards cost more; Can't attack (lock on an enemy); Can't act at all (stun, freeze); Can't move (root); Silence (abilities removed); Attack set to 0; Attack the opponent's hand; Clog the opponent's board; Junk cards into a deck or hand; Give my units or cards to the opponent; Disrupt the opponent's plans.
 
 ## Tokens / Go-Wide
 Many small units in a lane (each also gives supply there), and cards that make all of them stronger.
@@ -101,7 +101,7 @@ Units with high defence that hit with their defence.
 Fetch from the deck the unit that answers what the enemy has.
 
 - **fetch a chosen card from the deck** (engine): Search the deck for a card (tutor); Look at cards and pick (scry); Top or bottom of the deck matters; Better or chosen cards.
-- **a different answer on each unit** (brick): Destroy outright; Deal damage; Damage to many at once; Silence (abilities removed); Can't act at all (stun, freeze); Send an enemy unit back (bounce); Move enemy units (push, pull); Keep my units alive (protection); Absorb one hit (shield, ward); Restore health (heal).
+- **a different answer on each unit** (brick): Destroy outright; Deal damage; Damage to many at once; Silence (abilities removed); Can't act at all (stun, freeze); Send an enemy unit back (bounce); Move enemy units (push, pull); Keep my units alive (protection); Absorb one hit (shield, ward); Restore health (heal); Turn an enemy into something weaker.
 - **fetch it again** (engine): Reuse my cards (shuffle back); Return my unit to hand; Bring back dead units (revive).
 
 ## Aristocrats
@@ -127,7 +127,7 @@ Cards go from my deck and hand to my discard pile, and other cards use them from
 Once my discard pile holds enough cards, or enough different ones, or my deck is small, cards get a bonus.
 
 - **fill my discard pile** (engine): Fill my own discard pile (self-mill); Discard my own cards; Sacrifice my own units; Destroys itself / temporary unit; Hits my own side too.
-- **a bonus past a number** (engine): Counts / thresholds; Variety matters (all different); Grows with what happened this game; Counts deaths; A unit levels up on the board; Stats equal to a count; Deck contents matter.
+- **a bonus past a number** (engine): Counts / thresholds; Variety matters (all different); Grows with what happened this game; Counts deaths; A unit levels up on the board; Stats equal to a count; Deck contents matter; Quests / objectives with rewards.
 
 ## Graveyard Recursion
 Cards come back from the discard pile and are played again.
@@ -152,7 +152,7 @@ Many cheap spells, and units that gain from each.
 ## Storm
 One action per turn, so "one turn" becomes one round: gains from how many cards I played this round.
 
-- **play many cards** (engine): Cards cost less; Set a cost to a fixed number; Put into play for free; Draw cards; Create new cards; Copy cards or units; Return my unit to hand; Gain resources (ramp); Extra turns or actions.
+- **play many cards** (engine): Cards cost less; Set a cost to a fixed number; Put into play for free; Draw cards; Create new cards; Copy cards or units; Return my unit to hand; Gain resources (ramp); Extra turns or actions; Pay later (overload, debt).
 - **gain from how many** (engine): Grows with what happened this game; Order of my plays matters (combo); When I play another card; When a spell is played; Enough spells played; Counts / thresholds; Stats equal to a count; Grows again and again.
 
 ## Blink / Flicker
@@ -203,7 +203,7 @@ Aggro with cheap units that are big for their cost, made bigger.
 ## Discard / 8-Rack
 Empty the enemy's hand, then punish him for holding few cards.
 
-- **take, see, discard or tax the cards in his hand** (engine): Attack the opponent's hand; Hidden and revealed information; Steal from the opponent; Make the opponent's cards cost more.
+- **take, see, discard or tax the cards in his hand** (engine): Attack the opponent's hand; Hidden and revealed information; Steal from the opponent; Make the opponent's cards cost more; Mill the opponent's deck.
 - **punish a small hand** (engine): Hand size matters; Counts / thresholds.
 
 ## Wheels
@@ -235,9 +235,9 @@ No answers on the enemy's turn: with units already on the bases, on my turn I st
 ## Hatebears / Death & Taxes
 Small units that each bind the enemy, while mine come in anyway; his units gone cut his supply.
 
-- **small units that tax or stop him** (engine): Make the opponent's cards cost more; Silence (abilities removed); Can't attack (lock on an enemy); Can't move (root); Can't act at all (stun, freeze); Attack the opponent's hand; Stat loss (-power, -health); When an enemy arrives.
+- **small units that tax or stop him** (engine): Make the opponent's cards cost more; Silence (abilities removed); Can't attack (lock on an enemy); Can't move (root); Can't act at all (stun, freeze); Attack the opponent's hand; Stat loss (-power, -health); When an enemy arrives; Disrupt the opponent's plans.
 - **my units come in anyway** (engine): Put into play for free; Cards cost less; Act the turn it arrives (haste, rush).
-- **his units gone, his supply down** (brick): Destroy outright; Deal damage; Small repeatable damage; Send an enemy unit back (bounce); Banish / exile (gone for good); Steal from the opponent.
+- **his units gone, his supply down** (brick): Destroy outright; Deal damage; Small repeatable damage; Send an enemy unit back (bounce); Banish / exile (gone for good); Steal from the opponent; Turn an enemy into something weaker.
 - **keep my small units alive** (brick): Keep my units alive (protection); Absorb one hit (shield, ward).
 
 ## Theft
