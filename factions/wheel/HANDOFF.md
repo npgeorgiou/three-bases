@@ -37,6 +37,10 @@ One chat does one step; at its end, mark the step done here and say what it left
 - `work/factions.py` and `work/concept_list.py` work (about 6 minutes; `concept_list.Library` scores a set of concepts
   in under a second). `factions.py` still has the main radius limit: change it to the limits of step 7.1. Its last
   output (`work/factions.tsv`) is from the deck archetypes and is remade.
+- Open with Kaptain, decided when step 3 starts: is a faction archetype a whole faction (a group of real factions
+  strong at the same things; then a faction plays 1) or a smaller piece (concepts the same real factions of 2+ games
+  are strong in together, linked or not, so bricks belong; then a faction plays 2, as step 7 says)? The pieces would
+  be cut by script, the cut-offs agreed with Kaptain.
 - Open with Kaptain: the concept "First strike" is out by a rule Kaptain removed ("strike first is not a plan");
   ask whether it becomes usable in step 2.
 - Counts whose rows don't say what they count are counted nowhere: 189 instances of "grows with what happened" and 36
