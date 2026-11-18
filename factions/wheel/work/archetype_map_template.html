@@ -33,6 +33,7 @@ map to zoom, drag to move, click a dot to see its lines.</p>
 </div>
 <script>
 const D=/*DATA*/null;
+if(!D){document.body.innerHTML='<p style="padding:20px">This is the page template, with no data. Open <b>factions/wheel-archetypes.html</b> (written from it by <code>work/archetype_map.py</code>).</p>';throw new Error('template opened without data')}
 const NS='http://www.w3.org/2000/svg',svg=document.getElementById('map'),info=document.getElementById('info');
 const nm=c=>D.names[c]||c,short=c=>nm(c).replace(/ \(.*\)$/,'');
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
