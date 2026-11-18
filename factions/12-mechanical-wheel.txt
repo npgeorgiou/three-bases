@@ -2,7 +2,7 @@
 12. THE MECHANICAL WHEEL: designing 20 factions together
 ==================================================================
 Why: designing factions one by one from a theme loses what makes each faction unique and how its cards connect.
-Each faction's archetypes, extras, six answers, partners, game plan and keywords come first, for all 20 factions at
+Each faction's archetypes, extras, seven answers, partners, game plan and keywords come first, for all 20 factions at
 once; the theme comes right after the archetypes. The steps, in order, with their stops:
 factions/START_DESIGN-1-wheel.md. Commands: factions/wheel/PIPELINE.md.
 
@@ -11,9 +11,9 @@ Principles
    Each archetype is a set of parts on it; a faction plays 2 or 3 archetypes that link strongly, and its synergies are
    the links real cards show between their concepts.
 2. A faction is strong at what its archetypes do. Its extras come from its list (every other concept, scored by its
-   real links with the archetypes' concepts): first for the six answers its archetypes don't give, then to feed its
+   real links with the archetypes' concepts): first for the seven answers its archetypes don't give, then to feed its
    archetypes' engines.
-3. Every faction differs from every other in each of the six answers.
+3. Every faction differs from every other in each of the seven answers.
 4. Combos are trigger -> payoff between factions: a card of one makes the thing a card of another gains from. Every
    faction combines well with at least 7 others. Shared keywords are the main source of combos; every faction also
    has at least 1 keyword of its own. Each faction's chat adds more hooks.
