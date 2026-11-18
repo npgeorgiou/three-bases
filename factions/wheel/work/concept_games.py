@@ -2,7 +2,7 @@
 For each suspect concept (suspects.tsv) and each game: its real cards; where its rows act (kind, side, zone of the
 target or the trigger); the concepts its cards link to (through what of each card made the link, axes.side_concepts),
 as lift over what the game links anyway, and how alike that is to the other games together (cosine, 1 = the same partners). Writes concept_games.tsv;
---all: every concept with 10+ real cards, into concept_games_all.tsv."""
+--all: every concept with 5+ real cards, into concept_games_all.tsv."""
 import collections, math, os, sqlite3, sys
 sys.path.insert(0, os.getcwd())
 import axes, faction_asks
@@ -22,10 +22,10 @@ for t, cols in (('flat_do', "coalesce(on_kind,'-') || '/' || coalesce(on_side,'-
     for card, k, w in c.execute(f'select distinct card, concept, {cols} from {t} where concept in ({",".join("?" * len(want))})', list(want)):
         if card in real: where[(k, real[card])][w] += 1
 
-ALL = '--all' in sys.argv  # every concept with 10+ real cards, not only the suspects
+ALL = '--all' in sys.argv  # every concept with 5+ real cards, not only the suspects
 if ALL:
     n = collections.Counter(k for i in real for k in con[i])
-    want = {k: set(games) for k, v in n.items() if v >= 10 and not k.endswith('*')}
+    want = {k: set(games) for k, v in n.items() if v >= 5 and not k.endswith('*')}
 kws = collections.defaultdict(collections.Counter)  # (concept, game) -> the keywords that give the concept
 for card, k, kw in c.execute("select distinct ck.card, v.tree, k.name from card_keyword ck join card k on k.id=ck.keyword join vocab v on "
                              "v.field='keyword' and v.value=coalesce((select s.value from vocab s where s.field='keyword' and s.value=k.game || ':' || k.name), k.name) where v.tree!=''"):

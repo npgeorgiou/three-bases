@@ -1,8 +1,8 @@
 """Step 2 (START_DESIGN-1-wheel.md): the usable concepts. Run from library/cards_db.
-Every library concept with 10+ real cards (all games together): its cards and the games it is in; a parent in the concept tree
+Every library concept with 5+ real cards (all games together): its cards and the games it is in; a parent in the concept tree
 keeps only the cards none of its children carry. Each gets a kind with its reason: usable (a faction can build on it),
 helper or out, from concept_verdicts.tsv (a concept not in it is usable); player_<concept> is out (no player health,
-Kaptain), and so is a parent left with under 10 cards (its children carry its cards, so no effect counts twice).
+Kaptain), and so is a parent left with under 5 cards (its children carry its cards, so no effect counts twice).
 python3 ../../factions/wheel/work/concept_catch.py -> factions/wheel/work/concepts.tsv (usable, then helpers, then out) and
 concepts.md (the same by kind in plain words: the concept tree's name, cards, games; for Kaptain)."""
 import collections, csv, os, sqlite3, sys, textwrap
@@ -19,7 +19,7 @@ cards = collections.defaultdict(list)  # concept -> its real cards
 for i, g in real.items():
     for k in con[i]:
         if not k.endswith('*') and '@' not in k: cards[k].append(i)  # the measure's own names (axes.py) are no concepts
-cards = {k: v for k, v in cards.items() if len(v) >= 10}
+cards = {k: v for k, v in cards.items() if len(v) >= 5}
 
 kids = collections.defaultdict(set)  # concept -> the concepts under it in the tree, at any depth
 for line in open('../concept_tree.txt', encoding='utf-8'):
@@ -35,7 +35,7 @@ verdict = {r['concept']: (r['kind'], r[list(r)[2]]) for r in csv.DictReader(open
 def reason(k):
     if k in verdict: return verdict[k]
     if k.startswith('player_'): return 'out', 'not in this game: player health (Kaptain)'
-    if len(cards[k]) < 10: return 'out', 'a parent: its children carry its cards'
+    if len(cards[k]) < 5: return 'out', 'a parent: its children carry its cards'
     return 'usable', ''
 
 for k in list(cards):  # a parent keeps only the cards none of its children carry
@@ -52,7 +52,7 @@ with open(os.path.join(HERE, 'concepts.tsv'), 'w', encoding='utf-8') as o:
     for (kind, why), k, n, gs in rows:
         o.write('\t'.join([k, str(n), gs, kind, why]) + '\n')
 print(', '.join(f'{sum(1 for r in rows if r[0][0] == t)} {t}' for t in KINDS) + ';',
-      'verdicts for concepts under 10 cards:', ', '.join(sorted(set(verdict) - set(cards))) or 'none')
+      'verdicts for concepts under 5 cards:', ', '.join(sorted(set(verdict) - set(cards))) or 'none')
 
 plain = {}
 for line in open('../concept_tree.txt', encoding='utf-8'):

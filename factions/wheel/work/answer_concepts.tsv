@@ -15,7 +15,10 @@ front	back to his hand	bounce_enemy		Claude's
 front	gone for good	banish		Claude's
 front	take it	steal		Claude's
 front	swap it away	swap		Claude's
-backrow	any removal of the front list on a spell (destroy, damage, bounce, banish, steal: a spell picks any cell)	destroy|damage|bounce_enemy|banish|steal on a spell		Claude's
+front	his unit dies attacking mine (strike back, riposte)	counterattack		Claude's
+front	turn it into something harmless (a cocoon)	polymorph		Claude's
+front	hits that ignore its defence	piercing		Claude's
+backrow	any removal of the front list on a spell (destroy, damage, bounce, banish, steal, cocoon: a spell picks any cell)	destroy|damage|bounce_enemy|banish|steal|polymorph on a spell		Claude's
 backrow	the rest of the hit goes into the unit behind	excess_damage		Claude's
 backrow	a big hit goes through	excess_damage+attack_gain	1.63, 3 games	Claude's
 backrow	push or pull, then hit along the line	forced_movement+damage	5.56, 7 games	Claude's
@@ -26,7 +29,6 @@ backrow	a hidden unit walks in	stealth		Claude's
 backrow	several separate targets	multi_target_attack		Claude's
 backrow	small hits anywhere	ping		Claude's
 backrow	mark a target for later hits	mark_target		Claude's
-backrow	stronger spells	spell_power+damage	1.25, 4 games	Claude's
 backrow	many at once	aoe_damage		Claude's
 backrow	my unit dies and blasts around it	death_trigger+aoe_damage	2.91, 7 games	Claude's
 backrow	everything at once	board_wipe		Claude's
@@ -47,6 +49,7 @@ lanes	counts deaths in every lane	death_count		Claude's
 lanes	stats equal to a count over the board	variable_stats		Claude's
 lanes	reacts when another unit dies anywhere	other_death_trigger		Claude's
 lanes	reacts when an enemy arrives anywhere	on_enemy_enter		Claude's
+lanes	reaches other lanes	cross_lane		Claude's
 holds	hard to kill	shield|cheat_death|regeneration|damage_reduction|defence_gain		Claude's
 holds	spells can't touch it	immunity		Claude's
 holds	keep my units alive	protection		Claude's
@@ -67,6 +70,7 @@ holds	from far: allies near it help it	assists_support		Claude's
 holds	from far: heal or make it stronger from another cell	heal|buff		Claude's
 holds	from far: his cards cost more	cost_increase		Claude's
 holds	from far: attack his hand	hand_disruption		Claude's
+holds	hurts whoever attacks it (strike back, riposte)	counterattack		Claude's
 cares	neighbours	adjacency		Claude's
 cares	facing and turning	flanking		Claude's
 cares	formations	link_formation		Claude's
@@ -86,4 +90,5 @@ cares	round end	turn_end		Claude's
 cares	hand size	hand_size		Claude's
 cares	the discard pile	self_mill|discard		Claude's
 cares	Immobile	cant_move		Claude's
+cares	rewards for holding a lane	control_reward		Claude's
 blind	one way of the four removal, lanes and holding answers that none of its concepts give and that touches none of its archetypes	any way above		Claude's

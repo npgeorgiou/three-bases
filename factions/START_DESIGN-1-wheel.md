@@ -47,7 +47,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   ties are broken by how many games show it. The linked pairs themselves count only as a level that grows slowly
   (`level`: 1 pair = 1, 10 = 2, 100 or more = 3), so a big game cannot drown the others and a pairing rare in the ten
   games is never lost.
-- A concept needs 10+ real cards in the library (all games together).
+- A concept needs 5+ real cards in the library (all games together).
 - Scripts, no reading agents. Card texts are read only where a card's rows can't answer: at most 500 cards for the
   whole wheel, by a low-cost model; count them and get Kaptain's OK first.
 - A concept that means two things in different games is a library error: it is split in the library, with test cases,
@@ -74,7 +74,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    (Runeterra: up to 3 unspent mana is kept as spell mana) is a record in its `game_rules.jsonl`, with its source, on
    the cards it concerns. Then `check_all.py` (about 14 minutes) and `links.py` (about 6) are rebuilt, Kaptain's OK first.
 2. **The usable concepts** (`work/concept_catch.py` -> `work/concepts.tsv`, `work/concepts.md`). Every concept with
-   10+ real cards, with its card count (`card_count`) and its games, sorted into three kinds
+   5+ real cards, with its card count (`card_count`) and its games, sorted into three kinds
    (`work/concept_verdicts.tsv`: kind and reason, each marked Kaptain's or Claude's; a concept not in it is usable):
    - Usable: a faction can build on it. It says what a card does ("brings back a dead unit"), or reacts to something
      the player makes happen or builds up ("when a card is drawn", "when it becomes a target", "if your hand holds 5
@@ -144,7 +144,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       sentence written from those texts.
    2. A real theme (World War I artillery, the Zulu regiments) picked for its archetypes; the 20 themes all differ. The
       theme only breaks ties between concepts that score about the same.
-   3. Its list: every concept with 10+ cards (usable, helpers and out) except its archetypes' own, each with its score.
+   3. Its list: every concept with 5+ cards (usable, helpers and out) except its archetypes' own, each with its score.
       In each game alone: real links between the concept's instances and the instances of the faction's archetype
       concepts, against the links chance alone gives there; the game's score = (real + 1) / (chance + 1); the score =
       the average over the games where the concept and those concepts both appear (every game weighs the same). Beside

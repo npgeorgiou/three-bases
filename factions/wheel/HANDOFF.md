@@ -63,7 +63,7 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
   size, supply per lane, carry-over, round start and round end, one action per turn, moving and turning, reach (melee,
   Ranged), strikes and fixed damage, the hand and the discard pile, Immobile.
 - Not in the game: player health, answers on the enemy's turn, supply that grows by itself, unit types, who acts first
-  (random in round 1, then alternating), attacked units hitting back, placing at round end.
+  (random in round 1, then alternating), placing at round end.
 - The wheel is general; step 9 turns each faction's archetypes into these own things, from scratch.
 - Every game counts the same in every number, games with no factions (Marvel Snap) too.
 - Factions are made by script to play 2 or 3 archetypes. Each archetype is a group of engines and

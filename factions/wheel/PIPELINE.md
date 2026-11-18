@@ -8,7 +8,7 @@ is written in that step's chat, from the rules of the step, and its line here is
 ## Step 1. Fix the library's concepts
 - Suspects: `factions/wheel/work/suspects.tsv` (concept, the games it is counted in, the games left out, where it
   was limited). `python3 ../../factions/wheel/work/concept_games.py [--all]` -> `work/concept_games.tsv` (`--all`:
-  `concept_games_all.tsv`, every concept with 10+ cards): per concept and game, where its rows act (kind, side, zone),
+  `concept_games_all.tsv`, every concept with 5+ cards): per concept and game, where its rows act (kind, side, zone),
   the keywords that give it, its link partners and how alike they are to the other games' (too noisy to decide alone;
   the rows decide). Verdicts: `work/suspect_verdicts.tsv`.
 - Fixes: split by the card's rows in `flat.py` derive (ON_PLAYER, BODY, SEVERAL_SUPPLIES; the database's rules in
@@ -18,10 +18,10 @@ is written in that step's chat, from the rules of the step, and its line here is
   on the cards whose own rows name that kind, as Runeterra's spell mana). Then `check_all.py <game>` and `links.py`.
 
 ## Step 2. The usable concepts
-- `python3 ../../factions/wheel/work/concept_catch.py` (a second) -> `work/concepts.tsv`: every concept with 10+
+- `python3 ../../factions/wheel/work/concept_catch.py` (a second) -> `work/concepts.tsv`: every concept with 5+
   real cards, its card count (`card_count`), its games, its kind (usable, helper, out) and reason; a parent in
   `library/concept_tree.txt` keeps only the cards none of its children carry. Kinds and reasons:
-  `work/concept_verdicts.tsv` (a concept not in it is usable); player_<concept> and a parent left with under 10 cards
+  `work/concept_verdicts.tsv` (a concept not in it is usable); player_<concept> and a parent left with under 5 cards
   are out. `work/concepts.md`: the same by kind in plain words, for Kaptain.
 
 ## Step 3. The archetypes
@@ -64,7 +64,7 @@ is written in that step's chat, from the rules of the step, and its line here is
   (faction letter, its 2-3 archetypes, their concepts, its synergies, its theme, its extras, the concept for each of
   its seven answers).
 - `python3 ../../factions/wheel/work/concept_list.py` -> `factions/wheel/work/lists/<letter>.tsv`: per faction every
-  concept with 10+ cards except its archetypes' own, its score ((real + 1) / (chance + 1) links with the concepts of
+  concept with 5+ cards except its archetypes' own, its score ((real + 1) / (chance + 1) links with the concepts of
   its archetypes per game, averaged over the games where both appear), its `level` and its games, sorted by score.
 - `factions/wheel/work/answer_concepts.tsv` (agreed with Kaptain): which concepts give which of the seven answers.
 

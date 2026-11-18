@@ -115,8 +115,8 @@ for i,c in enumerate(cols):
     if c in ('front_key','cares'): continue  # factions may share what they care about most (Kaptain)
     for v,n in collections.Counter(ANS[k][i+1].lower() for k in ANS).items():
         if n>1: fail(f'{c} on {n} factions: {v[:60]}')
-# 10. rule check of the words: things this game doesn't have (summary/05-06: who starts alternates, an attacked unit
-#     doesn't hit back, nothing is placed at round end)
+# 10. rule check of the words: things this game doesn't have (summary/05-06: who starts alternates, nothing is
+#     placed at round end)
 import re
 BAD=r"(move|moves|play|plays|act|acts|go|goes) first|strikes? (him |it |them )?first|first strike|placed at round end|place[sd]? .{0,20}at round end"
 for t in ('so I move first next round','my hidden unit strikes him first','a unit placed at round end has struck'):
