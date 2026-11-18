@@ -79,9 +79,10 @@ def build(c):
         ok, os_, op, _ = tgt(obj)
         return e, ok, os_, op, withs(obj), actor
 
-    def when_concept(e, okind, owith, opick):
+    def when_concept(e, okind, owith, opick, oside=None):
         if e in ('played', 'spell_resolves') and (okind == 'spell' or 'spell' in (owith or '')): return 'on_spell'
-        if e in ('summoned', 'played') and opick != 'self' and okind == 'unit': return 'on_ally_play'
+        if e in ('summoned', 'played') and opick != 'self' and okind == 'unit':
+            return 'on_enemy_enter' if oside == 'enemy' else 'on_ally_play'  # an enemy unit arriving (Crimson Oculus)
         if e == 'dies' and (opick not in ('self', None) or okind == 'unit'): return 'other_death_trigger'  # another unit dies (concept tree: death_trigger is its own death)
         if e == 'leaves_play' and opick != 'self': return 'other_leave_trigger'
         return tree.get(('event', e))
@@ -110,7 +111,7 @@ def build(c):
         if ev:
             e, ok, os_, op, ow, actor = event_info(ev); ak, as_, ap, _ = tgt(actor)
             c.execute('insert into flat_when values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
-                      (card, origin, via, aid, e, when_concept(e, ok, ow, op), ak, fl(as_), ap, ok, fl(os_), op, lim, ow, withs(actor)))
+                      (card, origin, via, aid, e, when_concept(e, ok, ow, op, fl(os_)), ak, fl(as_), ap, ok, fl(os_), op, lim, ow, withs(actor)))
         for test, of, op, n, span, cev, at in c.execute('select test, of_target, op, n, span, event, attr from cond where ability=?', (aid,)).fetchall():
             k, s, p, z = tgt(of); e, ek, es, ep, ew, ea = event_info(cev)
             c.execute('insert into flat_if values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
@@ -138,6 +139,7 @@ def build(c):
             last_self = p == 'self' and act in ('revive', 'summon', 'return_to_hand', 'play_card') and not cref  # it came back itself
             if act in ('summon', 'create', 'copy', 'revive', 'play_card') and cref:  # "summon a Demon Wing ..., give it Flying": that card
                 last = ('unit' if act in ('summon', 'revive') else (k or 'card'), s or 'mine', f'card is {cref}')
+            elif act == 'copy' and s == 'enemy': last = (k, tgt(to)[1] or 'mine', w)  # a copy of an enemy's card is made on my side unless put elsewhere (Unleash the Evil)
             elif p != 'it': last = (k, s, w)
             if act == 'create' and ez == 'hand' and not to and s == 'enemy': last = (last[0], 'mine', last[2])  # "Create and play a card from your opponent's hand": the card is made into my hand, I play it
             if applied_to and (p == 'self' or (p == 'it' and action) or (k, s, p) == (None, None, None)): k, s, p, z, w = applied_to
@@ -202,10 +204,10 @@ RULES = [
     ('multi_target_attack', 'flat_do', "act in ('strike','start_attack') and origin='own' and to_side='enemy' and to_kind in ('unit','unit_or_structure') and coalesce(to_pick,'')!='nearest' and coalesce(on_side,'mine')!='enemy' and card in (select id from card where is_keyword=0 and id>0) and to_pick in ('highest','lowest','chosen') and exists (select 1 from flat_do y where y.card=flat_do.card and y.ability=flat_do.ability and y.seq!=flat_do.seq and y.act in ('strike','start_attack') and y.origin='own' and y.to_side='enemy' and y.to_kind in ('unit','unit_or_structure') and y.to_pick in ('highest','lowest','chosen') and y.to_pick!=flat_do.to_pick and y.on_side is flat_do.on_side)"),  # Boomerang Blade: the strongest and the weakest enemy
     ('temporary_buff', 'flat_do', "act='stat_change' and lasts in ('this_round','next_round','n_rounds','next_own_turn') and coalesce(on_side,'mine')!='enemy' and params not like '%=-%'"),
     # stats by role, whatever a game calls them (Power / Health, or one strength stat that is both)
-    ('attack_gain', 'flat_do', "act in ('stat_change','grow') and (params glob '*power=[1-9a-z]*' or params glob '*strength=[1-9a-z]*') and coalesce(on_side,'mine')!='enemy' and (coalesce(on_kind,'')!='player' or " + BODY + ")"),
-    ('defence_gain', 'flat_do', "act in ('stat_change','grow') and (params glob '*health=[1-9a-z]*' or params glob '*strength=[1-9a-z]*') and coalesce(on_side,'mine')!='enemy' and (coalesce(on_kind,'')!='player' or " + BODY + ")"),
-    ('player_attack_gain', 'flat_do', "act in ('stat_change','grow') and (params glob '*power=[1-9a-z]*' or params glob '*strength=[1-9a-z]*') and coalesce(on_side,'mine')!='enemy' and on_kind='player'"),
-    ('player_defence_gain', 'flat_do', "act in ('stat_change','grow') and (params glob '*health=[1-9a-z]*' or params glob '*strength=[1-9a-z]*') and coalesce(on_side,'mine')!='enemy' and on_kind='player'"),
+    ('attack_gain', 'flat_do', "act in ('stat_change','grow') and (params glob '*power=[1-9a-z]*' or params glob '*strength=[1-9a-z]*') and params not like '%=minus%' and coalesce(on_side,'mine')!='enemy' and (coalesce(on_kind,'')!='player' or " + BODY + ")"),
+    ('defence_gain', 'flat_do', "act in ('stat_change','grow') and (params glob '*health=[1-9a-z]*' or params glob '*strength=[1-9a-z]*') and params not like '%=minus%' and coalesce(on_side,'mine')!='enemy' and (coalesce(on_kind,'')!='player' or " + BODY + ")"),
+    ('player_attack_gain', 'flat_do', "act in ('stat_change','grow') and (params glob '*power=[1-9a-z]*' or params glob '*strength=[1-9a-z]*') and params not like '%=minus%' and coalesce(on_side,'mine')!='enemy' and on_kind='player'"),
+    ('player_defence_gain', 'flat_do', "act in ('stat_change','grow') and (params glob '*health=[1-9a-z]*' or params glob '*strength=[1-9a-z]*') and params not like '%=minus%' and coalesce(on_side,'mine')!='enemy' and on_kind='player'"),
     ('stat_loss', 'flat_do', "(act='stat_change' and params like '%=-%') or (act='stat_set' and on_side='enemy')"),
     ('aoe_damage', 'flat_do', "act='damage' and on_pick='all'"),
     ('direct_damage', 'flat_do', "act in ('damage','excess_damage') and on_kind in ('player','any')"),
@@ -223,7 +225,7 @@ RULES = [
     ('disable', 'flat_do', "act='cant' and on_side='enemy' and to_with is null and to_pick is null and to_kind is null and to_side is null and (param_event in ('turn_start','acts') or (param_event='attacks' and exists (select 1 from flat_do d2 where d2.card=flat_do.card and d2.ability=flat_do.ability and d2.act='cant' and d2.param_event='moves' and d2.on_side='enemy')))"),
     # staying power (Kaptain 30 Oct 2026): healing itself or my units every turn; can't die, or coming back when it dies
     ('regeneration', 'flat_do', "act='heal' and (on_pick='self' or coalesce(on_side,'')='mine') and coalesce(on_kind,'unit')!='player' and exists (select 1 from flat_when w where w.card=flat_do.card and w.ability=flat_do.ability and w.event in ('turn_start','turn_end','round_start','round_end'))"),
-    ('cheat_death', 'flat_do', "(act='cant' and param_event='dies' and coalesce(on_side,'mine')!='enemy') or (act in ('summon','revive','return_to_hand','copy','return_card') and (card_ref=card or on_pick='self') and exists (select 1 from flat_when w where w.card=flat_do.card and w.ability=flat_do.ability and w.event='dies' and w.obj_pick='self'))"),
+    ('cheat_death', 'flat_do', "(act='cant' and param_event='dies' and coalesce(on_side,'mine')!='enemy') or (act in ('summon','revive','return_to_hand','copy','return_card') and (card_ref=card or on_pick='self') and coalesce(to_side,'mine')!='enemy' and exists (select 1 from flat_when w where w.card=flat_do.card and w.ability=flat_do.ability and w.event='dies' and w.obj_pick='self'))"),
     ('cant_move', 'flat_do', "act='cant' and param_event='moves' and on_pick='self'"),
     ('immobilize', 'flat_do', "act='cant' and param_event='moves' and on_side='enemy'"),
     ('bounce_enemy', 'flat_do', "act='return_to_hand' and on_side='enemy'"),
@@ -285,7 +287,8 @@ RULES = [
     ('movement', 'flat_do', "act in ('swap','move') and coalesce(on_zone,eff_zone,'board')='board' and coalesce(on_kind,'') not in ('card','keyword','spell') and coalesce(on_side,'mine')!='enemy'"),
     ('forced_movement', 'flat_do', "act in ('swap','move') and coalesce(on_zone,eff_zone,'board')='board' and coalesce(on_kind,'') not in ('card','keyword','spell') and on_side='enemy'"),
     ('board_presence', 'flat_if', "test in ('count','amount_count') and of_zone='board' and of_side='mine'"),
-    ('count_payoff', 'flat_if', "test in ('amount_count','amount_event_count')"),
+    ('count_payoff', 'flat_if', "test='amount_event_count'"),
+    ('condition_count', 'flat_if', "test='amount_count'"),  # an amount counting what is there now (Rakoan Champion)
     # conditions and kinds of card that any game can have (29 Oct 2026, Kaptain's review of the Runeterra keyword concepts)
     ('countdown', 'flat_do', "act='countdown_advance'"),
     ('countdown', 'flat_when', "event in ('counts_down','countdown_done')"),
@@ -360,6 +363,16 @@ def derive(c):
     c.execute("update flat_do set concept=null where act in ('move','swap') and concept in ('movement','forced_movement') and "
               "(coalesce(on_kind,'') in ('card','keyword','spell') or coalesce(eff_zone,'board')!='board')")
     c.execute("update flat_do set concept='level_up' where act='level_up'")
+    # a thing made for the enemy (Kaptain 18 Nov 2026, wheel tag check): a copy put into the enemy's deck or hand is given to the
+    # opponent (drawback); a unit summoned onto the enemy's side clogs it (board_clog); a cost raised is cost_increase on the
+    # enemy, a drawback on mine and no concept of its own on both sides (symmetric_effect); cards traded between the players' piles are hand_deck_swap
+    c.execute("update flat_do set concept='drawback' where concept='copy' and to_side='enemy' "
+              "and coalesce(on_zone,eff_zone,'') in ('deck','deck_top','deck_bottom','hand')")
+    c.execute("update flat_do set concept='board_clog' where concept='summon' and to_side='enemy'")
+    c.execute("update flat_do set concept=case when on_side='enemy' then 'cost_increase' when on_side='mine' or (on_side is null and on_pick in ('self','it')) "
+              "then 'drawback' end where concept='cost_reduction' "
+              "and params like 'cost=%' and params not like 'cost=-%' and params not like 'cost=minus%'")
+    c.execute("update flat_do set concept='hand_deck_swap' where concept='swap' and act='swap' and coalesce(on_kind,'') in ('card','spell')")
     # my unit back to hand, by what its rows say (Kaptain 18 Nov 2026): when it dies or leaves play, or from the board by an
     # effect or its own ability; a row that says neither whose unit nor from where keeps return_to_hand
     mine_back = "concept='return_to_hand' and (on_side='mine' or (on_side is null and on_pick='self'))"

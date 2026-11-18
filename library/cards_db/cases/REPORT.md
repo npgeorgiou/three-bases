@@ -1,7 +1,7 @@
 # Case tests: runeterra
 
 Made by `cases/run.py runeterra`.
-**450 of 452 cases pass.**
+**462 of 462 cases pass.**
 
 **Cases whose reason no line says any more (rewrite them): n56, n352, n378, n669**
 
@@ -81,7 +81,7 @@ Made by `cases/run.py runeterra`.
 | m69 | Fury grows on kills | 28 | 28 | 100% | 8 | yes |
 | m70 | transforms | 60 | 60 | 100% | 23 | yes |
 | m71 | Capture | 18 | 18 | 100% | 4 | yes |
-| m72 | Deathless / cheat death | 3 | 3 | 100% | 23 | yes |
+| m72 | Deathless / cheat death | 3 | 3 | 100% | 21 | yes |
 | m73 | Nab | 4 | 4 | 100% | 0 | yes |
 | m74 | Flow | 13 | 13 | 100% | 0 | yes |
 | m75 | Support | 34 | 34 | 100% | 1 | yes |
@@ -117,6 +117,14 @@ Made by `cases/run.py runeterra`.
 | wc33 | a stat set to a number is not doubling (wheel step 3, Kaptain 17 Nov 2026) | 1 | 1 | 100% | 2456 | yes |
 | wc38 | Runeterra: "your level 2 allies are level 3" levels them up (Restored Sun Disc) (Kaptain 18 Nov 2026, wheel probe) | 1 | 1 | 100% | 122 | yes |
 | wc39 | Runeterra: Flow counts the spells played last round (Kaptain 18 Nov 2026, wheel probe) | 13 | 13 | 100% | 200 | yes |
+| wc40 | Runeterra: Attach comes back to hand when its ally leaves play (wheel step 1, Kaptain 18 Nov 2026) | 10 | 10 | 100% | 57 | yes |
+| wc41 | Runeterra: Equipment comes back to hand when its unit leaves play (wheel step 1, Kaptain 18 Nov 2026) | 56 | 56 | 100% | 11 | yes |
+| wc43 | Runeterra: recalling an ally returns my unit from the board (wheel step 1, Kaptain 18 Nov 2026) | 23 | 22 | 96% | 19 | yes |
+| wc46 | raising the cost of the opponent's cards is no cost reduction (wheel step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 2334 | yes |
+| wc47 | raising the cost of the opponent's cards is cost_increase (wheel step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 2 | yes |
+| wc50 | when the opponent summons: an enemy arrives (wheel step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 3 | yes |
+| wc51 | when the opponent summons is not when I play another card (wheel step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 2085 | yes |
+| wc52 | copies of me put into the opponent's deck are given to the opponent (wheel step 1 tag check, Kaptain 18 Nov 2026) | 2 | 2 | 100% | 61 | yes |
 
 ## Combos (the enabler must set off the payoff)
 
@@ -226,7 +234,7 @@ Made by `cases/run.py runeterra`.
 | r59 | Ionia | signature (library tags) | attack_now | 5 | 19 | yes |
 | r60 | Ionia | signature (library tags) | disable | 14 | 16 | yes |
 | r61 | Ionia | splash (library tags) | turn_end | 8 | 32 | yes |
-| r62 | Ionia | splash (library tags) | cost_reduction | 6 | 23 | yes |
+| r62 | Ionia | splash (library tags) | cost_reduction | 6 | 22 | yes |
 | r63 | Ionia | splash (library tags) | resource_gain | 4 | 8 | yes |
 | r64 | Ionia | splash (library tags) | summon | 18 | 32 | yes |
 | r65 | Noxus | signature (library tags) | excess_damage | 18 | 37 | yes |
@@ -239,7 +247,7 @@ Made by `cases/run.py runeterra`.
 | r72 | Noxus | splash (library tags) | on_play | 26 | 126 | yes |
 | r73 | Piltover & Zaun | signature (library tags) | trap_secret | 6 | 17 | yes |
 | r74 | Piltover & Zaun | signature (library tags) | discard | 6 | 31 | yes |
-| r75 | Piltover & Zaun | signature (library tags) | cost_reduction | 12 | 38 | yes |
+| r75 | Piltover & Zaun | signature (library tags) | cost_reduction | 12 | 36 | yes |
 | r76 | Piltover & Zaun | signature (library tags) | on_spell | 4 | 28 | yes |
 | r77 | Piltover & Zaun | splash (library tags) | resource_gain | 4 | 10 | yes |
 | r78 | Piltover & Zaun | splash (library tags) | damage | 14 | 55 | yes |
@@ -259,13 +267,13 @@ Made by `cases/run.py runeterra`.
 | r93 | Shurima | splash (library tags) | attack_now | 4 | 18 | yes |
 | r94 | Shurima | splash (library tags) | excess_damage | 11 | 22 | yes |
 | r95 | Shurima | splash (library tags) | copy | 8 | 13 | yes |
-| r96 | Shurima | splash (library tags) | on_ally_play | 6 | 50 | yes |
+| r96 | Shurima | splash (library tags) | on_ally_play | 6 | 49 | yes |
 | r97 | Targon | signature (library tags) | silence | 2 | 5 | yes |
 | r98 | Targon | signature (library tags) | selection | 8 | 29 | yes |
 | r99 | Targon | signature (library tags) | heal | 9 | 15 | yes |
 | r100 | Targon | signature (library tags) | disable | 15 | 28 | yes |
 | r101 | Targon | splash (library tags) | delayed | 4 | 7 | yes |
-| r102 | Targon | splash (library tags) | cost_reduction | 6 | 22 | yes |
+| r102 | Targon | splash (library tags) | cost_reduction | 6 | 21 | yes |
 | r104 | Targon | splash (library tags) | discard | 2 | 8 | yes |
 | r105 | Bandle City | archetype (library) | scaling | 34 | 77 | yes |
 | r106 | Bandle City | archetype (library) | chaos | 28 | 87 | yes |
@@ -280,18 +288,18 @@ Made by `cases/run.py runeterra`.
 | r115 | Freljord | archetype (library) | transformation | 11 | 22 | yes |
 | r116 | Ionia | archetype (library) | positional | 8 | 12 | yes |
 | r117 | Ionia | archetype (library) | control | 38 | 77 | yes |
-| r118 | Ionia | archetype (library) | ramp | 14 | 33 | yes |
+| r118 | Ionia | archetype (library) | ramp | 14 | 32 | yes |
 | r119 | Ionia | archetype (library) | card_advantage | 30 | 42 | yes |
 | r120 | Piltover & Zaun | archetype (library) | chaos | 24 | 81 | yes |
 | r121 | Piltover & Zaun | archetype (library) | trickery | 6 | 17 | yes |
-| r122 | Piltover & Zaun | archetype (library) | ramp | 18 | 46 | yes |
-| r123 | Piltover & Zaun | archetype (library) | spellslinger | 14 | 45 | yes |
+| r122 | Piltover & Zaun | archetype (library) | ramp | 18 | 44 | yes |
+| r123 | Piltover & Zaun | archetype (library) | spellslinger | 14 | 44 | yes |
 | r124 | Shadow Isles | archetype (library) | sacrifice | 47 | 102 | yes |
 | r125 | Shadow Isles | archetype (library) | graveyard | 14 | 31 | yes |
-| r126 | Shadow Isles | archetype (library) | sustain | 17 | 41 | yes |
+| r126 | Shadow Isles | archetype (library) | sustain | 17 | 40 | yes |
 | r127 | Shadow Isles | archetype (library) | swarm | 36 | 71 | yes |
 | r128 | Shurima | archetype (library) | trickery | 5 | 8 | yes |
-| r129 | Shurima | archetype (library) | swarm | 30 | 88 | yes |
+| r129 | Shurima | archetype (library) | swarm | 30 | 87 | yes |
 | r130 | Targon | archetype (library) | spellslinger | 18 | 39 | yes |
 | r131 | Targon | archetype (library) | card_advantage | 15 | 44 | yes |
 
@@ -330,7 +338,7 @@ Made by `cases/run.py runeterra`.
 | n33 | Darius Gnar | Yadulski Snowdog | Darius | line  | stronger: can give it more power and health | yes |
 | n34 | Darius Gnar | Brothers' Bond | Darius | line  | stronger: can give it more power | yes |
 | n35 | Darius Gnar | Darius | Mega Gnar (level 2) | none  | - | yes |
-| n36 | Ashe LeBlanc | Avarosan Hearthguard | Trifarian Gloryseeker | none  | stronger: gives it more power and health | NO |
+| n36 | Ashe LeBlanc | Avarosan Hearthguard | Trifarian Gloryseeker | none  | - | yes |
 | n37 | Ashe LeBlanc | Incisive Tactician | Ashe | line  | levels: makes it attack for its effect (it levels up from what it then does) | yes |
 | n38 | Braum Zoe | Cosmic Youngling | Braum | none  | - | yes |
 | n39 | Braum Zoe | Targonian Tellstones | Zoe | line  | levels: creates cards: more different cards to play (levels it up) | yes |
@@ -478,7 +486,9 @@ Made by `cases/run.py runeterra`.
 | n670 | Void Seeker, Parrrley | Void Seeker | Parrrley | none leaves weak units for its kill | - | yes |
 | n692 | Benemone, Ballistic Bot | Benemone | Ballistic Bot | line sets off its Augment | waits: creates a card, which sets off its Augment | yes |
 | n695 | Bladebound Berserker, Ballistic Bot | Bladebound Berserker | Ballistic Bot | none  | - | yes |
-| n696 | Iceborn Legacy, Silverwing Vanguard | Iceborn Legacy | Silverwing Vanguard | line copies itself | stronger: can give it more power and health | NO |
+| n696 | Iceborn Legacy, Silverwing Vanguard | Iceborn Legacy | Silverwing Vanguard | line copies itself | stronger: gives a unit's copies more power and health, and Silverwing Vanguard c | yes |
 | n702 | Garen Kayle Jarvan | Kayle (level 2) | Xolaani the Bloodweaver | none changes your units' stats | levels: gives it more power and health: helps it level up | yes |
 | n703 | Garen Kayle Jarvan | Kayle (level 2) | Xolaani the Bloodweaver | line helps it level up | levels: gives it more power and health: helps it level up | yes |
 | n704 | Homecoming, Eye of the Dragon | Homecoming | Eye of the Dragon | line goes off again | waits: returns it to hand: its Play or summon effect goes off again | yes |
+| n705 | Zoe Lee Sin | Dragon's Rage | Deep Meditation | line spell it needs played | cheaper: is a spell it needs played for its count | yes |
+| n707 | Garen Jarvan IV Galio | Tattered Banner | Galio (level 2) | line damages your units | waits: damages your units or players | yes |
