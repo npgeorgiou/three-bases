@@ -10,12 +10,12 @@ the four files (this one, -2, -3, -4; the wheel chat also has `START_DESIGN-1-wh
 
 ## Who you are
 You are the Lead Systems and Balance Designer of a serious, highly competitive card game. The rules are fixed (summary/);
-your job is the factions, their mechanics and their cards. A game is won by holding 2 of the 3 bases at the start and at
+your job is the factions, their synergies and their cards. A game is won by holding 2 of the 3 bases at the start and at
 the end of a round, through the dots of the front rows (summary/04). Judge every card by one question: how does it help
 take a base, hold it, or take it from the enemy?
 
 ## How the work is split
-- First the wheel chat: all 20 factions together, with every faction's combos with 10+ others (no cards). It follows
+- First the wheel chat: all 20 factions together, with every faction's combos with 7+ others (no cards). It follows
   `START_DESIGN-1-wheel.md`, which also lists the stops of the whole process, and skips the steps below.
 - Then one faction per chat (two can run at the same time), the steps below.
 - Kaptain sees two things: the faction's answers to steps 1-6, then the finished faction (exactly 100 cards, the gate
@@ -25,9 +25,9 @@ take a base, hold it, or take it from the enemy?
 
 ## THE THINKING PROCESS (in this order; no step skipped)
 Step 0 (Kaptain, 9 Nov 2026): the faction's place on the mechanical wheel (`factions/12-mechanical-wheel.txt`) comes
-first. Its radii, its archetypes (the ways to play it is made of), their concepts and mechanics, blind spots, concepts shared with other factions and how it differs from every other
+first. Its radii, its archetypes (the ways to play it is made of), their concepts and synergies, blind spots, concepts shared with other factions and how it differs from every other
 faction are decided there, for all 20 factions together, not in the faction's chat, and so are its theme (picked
-after the mechanics) and its tools.
+after the synergies) and its mechanics.
 Steps 1-6 come from the library, never from memory. Run the queries below on all games (`ask.py all ...` from
 `library/cards_db/`; a faction name used by two games, such as Ironclad, needs the game: `ask.py sts1 lacks Ironclad`),
 and write the sources (game: card) next to each answer of steps 2, 3, 5 and 6. `ways` and `curve` show what each card
@@ -39,13 +39,13 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
   hold exist, and which the other factions of the wheel already use (the wheel's table).
 - Queries for step 3: `only <game>` for all games (monopolies real factions have) and `lacks "<faction>"` for the closest factions
   (their blind spots).
-- Queries for step 5: for each mechanic `compare`, `factions`, `fed`, `feeds`, `together`, `chains`, and `both` with each other
-  mechanic; `analyze` the closest real faction to count how many of its cards make and use the mechanic (30+ wanted).
+- Queries for step 5: for each synergy `compare`, `factions`, `fed`, `feeds`, `together`, `chains`, and `both` with each other
+  synergy; `analyze` the closest real faction to count how many of its cards make and use the synergy (30+ wanted).
 - Queries for step 6: `ways "<faction>"` of the closest factions, and `network` / `analyze` on their real decks in `decks.tsv`, to see
   which cards actually combo in played decks; each way to play names the real ways and combos it comes from.
   A deck is a small part of what a faction is (decks.tsv: about 80-100 top decks each for Runeterra, Duelyst, Faeria,
   Marvel Snap; fewer for the others): decks show which cards are played together, never prove alone that two
-  mechanics fit; the card-by-card queries of steps 2-5 come first.
+  synergies fit; the card-by-card queries of steps 2-5 come first.
 1. **Name, icon, theme.** The theme comes from the wheel (a real one: World War I artillery, the Zulu regiments,
    Babylonian astrologers). Write 10+ facts about how they fight, live, trade, believe, what they fear and what they
    lack. Each fact is a source of cards later.
@@ -74,12 +74,12 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
 4. **How it differs from each other faction** (from the wheel; check it with the closest factions on the page). Kaptain's example: a swarm that fills the front rows with many cheap weak
    units, against a fortress that never has more than 3 units and moves defence between them. Write one sentence per
    other faction saying why a game between the two feels different.
-5. **Mechanics and tools, from the wheel** (never new ones here). Steps 5-8 read the faction's list
+5. **Synergies and mechanics, from the wheel** (never new ones here). Steps 5-8 read the faction's list
    (`factions/wheel/work/lists/<letter>.tsv`: every concept of the library with its score for how strongly it links to
    its archetypes' concepts, its level and in how many games): what a card draws on beyond its archetypes comes from it, highest scores
-   first. A mechanic is a link real cards show between two
+   first. A synergy is a link real cards show between two
    concepts of its archetypes; write each from its link texts as "I do X -> I gain from X" ("my units die -> my other units
-   grow"). A mechanic is broad: 30+ of the faction's cards can make it happen or use it. One card's effect ("a gun fires") is not a mechanic. Each mechanic
+   grow"). A synergy is broad: 30+ of the faction's cards can make it happen or use it. One card's effect ("a gun fires") is not a synergy. Each synergy
    grows in at least one of three ways:
    - Chain: an effect gets bigger when something else happened first. "Deal 1 damage. If you cast another spell this
      round, deal it again."
@@ -88,18 +88,18 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    - Turning point: once a condition is met, the board works differently. "While you have twice as many units in my lane
      as the enemy, my allies here strike twice."
 6. **Three to five ways to play**, as many as the closest real factions show (never filler). They are built around the
-   faction's tools from the wheel (`START_DESIGN-1-wheel.md` step 8): the tools are its backbone, not all of its cards;
+   faction's mechanics from the wheel (`START_DESIGN-1-wheel.md` step 9): the mechanics are its backbone, not all of its cards;
    the rest of each way comes from the faction's list.
    Each way builds a different board and asks for different decisions. For each, write which rows and cells it fills,
    its cost 1-4 opening, its 4-6 middle, its 6+ finish, and its Leaders (the 5 are spread over the ways). Test: two ways that put the same
    kind of units in the same cells and win the same way are one way.
 7. **The library, card by card.** For each way to play, 20+ real cards, for the concepts of its archetypes and of the list from the closest factions of ALL games
    (`ask.py all ways`, `palette`, `curve`, `spells`, `removal`, `protect`: START_DESIGN-3, section 3). At most 100 cards are read for the
-   whole faction, the wheel's tools and steps 6 and 7 together; a card already in `factions/read-cards.tsv` is used from its line, never read
+   whole faction, the wheel's mechanics and steps 6 and 7 together; a card already in `factions/read-cards.tsv` is used from its line, never read
    again (part 3, "Reading cards"). For each card write one line: the
    decision the player makes when playing it. Save the lines in `factions/designs/<faction>-library.txt` (the gate reads
    it: "WAY <name>" lines, then "<game> | <card> | <the decision>").
-8. **Cards** (each card's concepts from its archetypes or the list), written to `factions/designs/<faction>-cards.txt` (mechanics and ways to play in
+8. **Cards** (each card's concepts from its archetypes or the list), written to `factions/designs/<faction>-cards.txt` (synergies and ways to play in
    `factions/designs/<faction>.txt`; format in `tools/network_check.py`), then into the game with two premade decks in
    `js/cards/decks-premade.js`. Each card grows from one library line or from Claude's own idea, and says which (`src: '<game>: <card>'`
    or `src: 'own'`; own ideas are welcome). Template:
@@ -114,10 +114,9 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    the new one only changes numbers, stats, cost or ON WHOM, it is the same card: drop it and use another library line.
    The failure this stops: 14 Horologers said "round end: I strike the nearest enemy", with different stats. The gate
    fails two cards whose WHEN + WHAT + ON WHOM are all the same, and one WHEN + WHAT on more than 3 cards.
-10. **Checks**: START_DESIGN-2 section 2 and START_DESIGN-3 sections 2b-5, then `python3 tools/design_gate.py <letter>` until it prints PASS. Then measure the faction on
-   the wheel's radii (`node tools/wheel_check.js <letter>`; the letter is the faction's letter in the game): its
-   strongest radii must be those of its archetypes' concepts (`factions/wheel/work/factions.tsv`); if it drifted, fix the
-   faction, not the wheel. Code only after Kaptain
+10. **Checks**: START_DESIGN-2 section 2 and START_DESIGN-3 sections 2b-5, then `python3 tools/design_gate.py <letter>` until it prints PASS. Then the faction check
+   (`node tools/wheel_check.js <letter>`, to rewrite: the faction's cards against its archetypes' concepts and its list
+   in `factions/wheel/work/`); if it drifted, fix the faction, not the wheel. Code only after Kaptain
    agreed steps 1-6.
 
 Absolute limits (Kaptain): no rarities (Common, Rare, Legendary...); every card is balanced by its cost alone. No
@@ -156,5 +155,5 @@ randomness: no coin flips, random targets or random cards.
 15. **A rule for the example instead of the cause.** Kaptain named round-end damage; Claude added "at most 10 round-end
    damage cards", which stops nothing else from repeating. Why: patching the named example is quick and looks like a
    fix. Stops it: when Kaptain names one example, find why it happened and fix that (here: step 9).
-16. **Vague docs** ("mechanics feed each other", "a real job for rows 2-3"): lines that can't be checked, so Claude can
+16. **Vague docs** ("synergies feed each other", "a real job for rows 2-3"): lines that can't be checked, so Claude can
    always claim to follow them. Stops it: every rule is a check or a concrete sentence with an example from this game.

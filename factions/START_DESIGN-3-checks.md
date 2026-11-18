@@ -5,18 +5,18 @@ Part of `factions/START_DESIGN.md` (read that first, whole; then parts 2, 3 and 
 **The faction**
 - A thin theme gives no cards. "Clockwork" alone gave only winding; the clock city's guilds, apprentices, spare parts,
   commissions and fear of rust each could have given a different kind of card.
-- A mechanic is broad: in Runeterra, Shadow Isles' "units die" is made by 103 and used by 55 of its 221 cards. Measure a
-  real faction of the same kind (`analyze`, section 3) and match it. If a mechanic could not be used on 30+ cards, it is only
+- A synergy is broad: in Runeterra, Shadow Isles' "units die" is made by 103 and used by 55 of its 221 cards. Measure a
+  real faction of the same kind (`analyze`, section 3) and match it. If a synergy could not be used on 30+ cards, it is only
   an interaction between a few cards.
-- Mechanics are built on the game's basic things: units die, damage, supply and carry-over, cells, rows, the front row,
-  dots, round end, cards in hand, the discard pile, moves, spells cast. Buffs and stats alone are not mechanics.
-- Before any card, count how many cards each mechanic can give: 100 must fit without filler.
-- Never turn each fact of the theme into its own small rule. "Bombs" and "gears" are a few cards inside a mechanic.
+- Synergies are built on the game's basic things: units die, damage, supply and carry-over, cells, rows, the front row,
+  dots, round end, cards in hand, the discard pile, moves, spells cast. Buffs and stats alone are not synergies.
+- Before any card, count how many cards each synergy can give: 100 must fit without filler.
+- Never turn each fact of the theme into its own small rule. "Bombs" and "gears" are a few cards inside a synergy.
 - No unit types or card kinds that split the deck (no "crew", no Yin/Yang).
-- Kaptain's own ideas (Projectiles, Mark, back-in-time) are a few cards or one tool of a faction, never a whole faction.
-  A faction holds together because several tools from different mechanics feed each other, never because one idea is
+- Kaptain's own ideas (Projectiles, Mark, back-in-time) are a few cards or one mechanic of a faction, never a whole faction.
+  A faction holds together because several mechanics from different synergies feed each other, never because one idea is
   on every card.
-- A mechanic that limits the player (an order to follow, a card kind, a position) must pay back a lot, or nobody plays it.
+- A synergy that limits the player (an order to follow, a card kind, a position) must pay back a lot, or nobody plays it.
 - Strong at / a little / weak at, written in the entry. No card gives the faction what its weak list says (a spell faction
   with "weak at melee" gets no melee buffs).
 - Conditions come from the identity: "the enemy with the least defence" only in a faction about hunting weak units.
@@ -52,10 +52,10 @@ How to ask: part 4, `START_DESIGN-4-asking.md`. Run from `library/cards_db/`.
   Use it at step 9: it lists WHATs you haven't used yet.
 - For boundaries: `ask.py all only <game>` (what only one faction has: its monopolies), `ask.py all lacks "<faction>"`
   (what a faction never has: its blind spots).
-- For a mechanic: `compare`, `factions`, `fed`, `feeds`, `together`, `chains`, `both`. Look at the cards' rows before
+- For a synergy: `compare`, `factions`, `fed`, `feeds`, `together`, `chains`, `both`. Look at the cards' rows before
   trusting a count; open texts only within the 100 (below).
 - Reading cards = opening a card's text. Lines from `ask.py` output (a card's rows: when -> what -> on whom) are not
-  reading and are free. At most 100 card texts per faction, for its tools (the wheel's step 8) and its ways to play (steps 6-7) together;
+  reading and are free. At most 100 card texts per faction, for its mechanics (the wheel's step 9) and its ways to play (steps 6-7) together;
   the key cards of the closest real factions' ways first (`ask.py all ways` shows what each key card does). First
   look up `factions/read-cards.tsv`: a card listed there is never read again, its line says which way it showed. Every
   card read gets a line there (game, card, faction it was read for, the way it showed). When a card's text shows
@@ -77,5 +77,5 @@ Part 4, "Think it through like a player" (hand, board, enemy, timing, worth, wha
   fire are changed or cut. Never fix a win rate by changing stats off the budget.
 - `python3 tools/design_gate.py <letter>`: PASS (it runs the network check and the browser play test too).
 - The separate agent's line-by-line check against the four files.
-- Tell Kaptain, per mechanic, which library cards it came from and which parts are Claude's own. If the library could
+- Tell Kaptain, per synergy, which library cards it came from and which parts are Claude's own. If the library could
   not answer something the design needed, say so. Talk as CLAUDE.md says: short, plain, one question at a time, last.

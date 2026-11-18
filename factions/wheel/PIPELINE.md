@@ -59,22 +59,24 @@ is written in that step's chat, from the rules of the step, and its line here is
   Kaptain with the numbers) and `factions/wheel-archetypes.html` (page template `work/archetype_map_template.html`; the concepts' places by
   networkx's spring layout over every joined pair of usable concepts, seed 7).
 
-## Step 7. The 20 factions and their lists
+## Step 7. The 20 factions, their themes and their lists
 - `python3 ../../factions/wheel/work/factions.py` (to write, after Kaptain agrees its rules) ->
-  `factions/wheel/work/factions.tsv` (faction letter, its archetypes, their concepts, its mechanics).
+  `factions/wheel/work/factions.tsv` (faction letter, its 2-3 archetypes, their concepts, its synergies, its theme).
 - `python3 ../../factions/wheel/work/concept_list.py` (to write) -> `factions/wheel/work/lists/<letter>.tsv`: per
-  faction every concept with 10+ cards and its score ((real + 1) / (chance + 1) links with the concepts of its
-  archetypes per game, averaged over the games where both appear), its `level` and its games, sorted by score.
+  faction every concept with 10+ cards except its archetypes' own, and its score ((real + 1) / (chance + 1) links with
+  the concepts of its archetypes per game, averaged over the games where both appear), its `level` and its games,
+  sorted by score; and the concepts that give each of its seven answers.
 
-## Step 8. Theme, then tools
-- Claude -> `factions/wheel/themes.tsv` (faction, theme) and `factions/wheel/tools.tsv` (faction, tool, mechanic, the
-  tools it feeds, the cell-by-cell line, source: a library card or CLAUDE, NEW RULE).
+## Step 8. Combos on this board
+- A script (to write, after Kaptain agrees which list concepts count) counts the joins between every two factions'
+  concepts (step 5 numbers); Claude rates the pairs on the board -> `factions/wheel/combos.tsv` (pair,
+  STRONG/OK/WEAK/NONE/AGAINST, how it plays, the numbers, a test column). Every faction needs 7+ partners.
 
-## Step 9. Combos on this board
-- A script (to write) counts the joins between the concepts of every two factions' archetypes (step 5 numbers); Claude rates the pairs on the board
-  -> `factions/wheel/combos.tsv` (pair, STRONG/OK/WEAK/NONE/AGAINST, how it plays, the numbers, a test column).
+## Step 9. Mechanics (being worked out with Kaptain)
+- Claude -> `factions/wheel/mechanics.tsv` (faction, mechanic, the synergy it grows from, its source card pairs, NEW
+  RULE), once Kaptain agrees how this step works.
 
 ## Step 10. The seven answers and Stop 1
-- Claude -> `factions/wheel/answers.tsv`, from the tools. `python3 tools/wheel_table_check.py` checks steps 4-10,
-  including words that break this game's rules. `python3 factions/wheel/work/make_stop1.py` (to rewrite) writes
-  `STOP1.md` and `STOP1-1..5.md`.
+- Claude -> `factions/wheel/answers.tsv`, from step 7's concepts and the mechanics. `python3 tools/wheel_table_check.py`
+  (to rewrite: against each faction's archetypes, list and answers). `python3 factions/wheel/work/make_stop1.py` (to
+  rewrite) writes `STOP1.md` and `STOP1-1..5.md`.

@@ -16,7 +16,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   (`links.sqlite`). Each link keeps which effect of each card made it, so it counts only for those effects' concepts.
 - **Archetype**: a general way to play from Kaptain's list (`wheel/archetypes_kaptain.txt`: aggro, control,
   aristocrats, reanimator, theft...); none is tied to one game's card types, resources, keywords or multiplayer. One
-  archetype can be played with different tools, so it is made of parts, each a set of alternative concepts that can do
+  archetype can be played with different concepts, so it is made of parts, each a set of alternative concepts that can do
   it. A part is an **engine** (it works through links with another part: "my units die" -> "my units gain when an ally
   dies") or a **brick** (it works alone and links to nothing: disruption, removal).
 - **Radius**: one direction of the wheel, such as "more supply" (23 radii; their names and concepts are in
@@ -25,13 +25,13 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   for "damage from units' text"). A faction's value on a radius is the share of its concept instances that belong to
   that radius; the card itself goes nowhere.
 - **The faction's archetypes**: the one or, better, more archetypes a faction plays (step 7). Their concepts are its
-  character (what it is strongest at, what its tools grow from).
+  character (what it is strongest at, what its mechanics grow from).
 - **The faction's list**: every concept of the library (usable, helpers and out), each with its score for how strongly
   it links with the concepts of the faction's archetypes. The faction's cards use it a lot, to make those concepts
   possible, start them or make them stronger.
 - **Helper**: a concept that only says when or how a card acts, one of the game's own things, or a thing for single
   cards (step 2). Never a part of an archetype; always on the faction's list.
-- **Mechanic**: a link between two concepts of the faction's archetypes, shown by real card pairs, never written by hand: "makes your
+- **Synergy**: a link between two concepts of the faction's archetypes, shown by real card pairs, never written by hand: "makes your
   units die: the other card brings them back (in 7 of 10 games, 3.1 times chance)".
 
 ## Rules for every step (Kaptain)
@@ -52,7 +52,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 - **Kaptain agrees the archetypes and their parts** (step 3), **the concepts on each radius** (step 4) and
   **the 20 factions' archetypes** (step 7). **Stop 1: Kaptain agrees the 20 factions** (step 10).
 - Then one chat per faction (two can run at once): steps 1-6 of `START_DESIGN.md`. **Stop 2: Kaptain agrees them.**
-  Then cards, the gate, `wheel_check.js`, a separate agent's review. **Stop 3: Kaptain gets the finished faction.**
+  Then cards, the gate, the faction check (`wheel_check.js`, to rewrite: the cards against the faction's archetypes and
+  list), a separate agent's review. **Stop 3: Kaptain gets the finished faction.**
 - Pilot: the first two factions are a pair with a STRONG combo; their premades play each other (`cardstats.js`) and
   one mixed deck shows whether the combo fires. **Stop 4: Kaptain decides whether the rest is built.**
 
@@ -128,38 +129,40 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    often link sit close); Kaptain ticks one or more archetypes to light their concepts and edges, and between ticked
    archetypes the page draws every real link from a concept of one to a concept of another (any part), to see whether
    archetypes fit together in one faction.
-7. **The 20 factions and their lists** (by script, from the archetype map; `work/factions.py` ->
-   `work/factions.tsv`). Each faction plays one or, better, more archetypes that work together as one, judged by the
-   strengths of the map. The rules the script follows are agreed with Kaptain before it is written. Kaptain sees per
-   faction: its archetypes in plain words, their concepts, and its mechanics (each edge: the real link text with its
-   times chance and games); one sentence per faction, written from those texts. **Kaptain agrees the 20 factions'
-   archetypes.** Then each faction's list (`work/concept_list.py` -> `work/lists/<letter>.tsv`): every concept with
-   10+ cards (usable, helpers and out), each with its score. In each game alone: real links between the concept's
-   instances and the instances of the concepts of the faction's archetypes, against the links chance alone gives there;
-   the game's score = (real + 1) / (chance + 1), so a single rare link doesn't look huge and a big count is almost
-   untouched; the score = the average over the games where the concept and those concepts both appear (every game
-   weighs the same). Beside it: the `level` and in how many games. Sorted by score.
-8. **Theme, then tools.** First each faction gets a real theme (World War I artillery, the Zulu regiments) picked for
-   its archetypes; the 20 themes all differ; the theme is a source of tools, never a reason for one. Then 2-4 tools per
-   faction: a tool is a new kind of thing or rule that makes its mechanics happen on this game's own things
-   (dots and front cells, rows, columns, lanes, the 3x3 camp, unit size, supply per lane, carry-over, round start and
-   end, one action per turn, moving, reach, strikes and fixed damage, the hand, the discard pile, Immobile), used
-   on many of its cards, built with the concepts of its list, highest scores first. Each tool names the mechanic it
-   grows from; each tool feeds another (one makes what the other uses); each is played out
-   cell by cell (which cell, what happens, what the enemy does with his one action between; two tools needing the same
-   cell clash). The linked card pairs of the mechanic are its source cards. No two factions have the same tool doing
-   the same job, compared by what the card does: one Egg in the whole wheel. Countdowns very sparingly; a lane never
-   holds more than 12 supply. A rule the game lacks is marked NEW RULE. Written to `wheel/themes.tsv` and
-   `wheel/tools.tsv`. The old candidates (commit d4a3de0^, `factions/3-candidates/`) are read last, only to see that
-   no idea Kaptain liked is missing.
-9. **Combos on this board.** For every pair of factions (190), the joins between the concepts of one faction's archetypes
-   and the other's (step 5 numbers), by script. Claude rates each pair with numbers on the board, from the two factions'
-   tools: STRONG (both halves on many cards, helps take or hold a base, the enemy's one action between can't easily
-   stop it), OK (real but breakable), WEAK, NONE, AGAINST. Partners = STRONG or OK; every faction has 10+; one under
-   10 goes back to step 7. `wheel/combos.tsv` has a test column that playtests fill.
-10. **The seven answers** for all 20, made from the tools: how it wins, how it removes a front unit, how it mainly
-   removes back-row units, how it mainly acts between lanes, how it holds a base, its best Place effect, its blind spot.
-   Every answer differs from every other faction's; each removal uses one of its mechanics; a blind spot never touches
-   its archetypes. Then `tools/wheel_table_check.py` and the Stop 1 pages (`work/make_stop1.py` -> `wheel/STOP1*.md`:
-   per faction its archetypes and mechanics, theme, tools and how they feed each other, the seven answers, and one
-   line per partner saying how the combo plays). Files under 150 lines.
+7. **The 20 factions, their themes and their lists** (by script, from the archetype map; `work/factions.py` ->
+   `work/factions.tsv`). Each faction plays 2 or 3 archetypes that work together as one, judged by the links between
+   them on the map (many strong links between their concepts). The rules the script follows are agreed with Kaptain
+   before it is written. Kaptain sees per faction: its archetypes in plain words, their concepts, and its synergies
+   (each edge: the real link text with its times chance and games); one sentence per faction, written from those texts.
+   **Kaptain agrees the 20 factions' archetypes.** Then each faction gets a real theme (World War I artillery, the Zulu
+   regiments) picked for its archetypes; the 20 themes all differ; the theme breaks ties between concepts that score
+   about the same, never against the scores. Then each faction's list (`work/concept_list.py` ->
+   `work/lists/<letter>.tsv`): every concept with 10+ cards (usable, helpers and out) except its archetypes' own, each
+   with its score. In each game alone: real links between the concept's instances and the instances of the concepts of
+   the faction's archetypes, against the links chance alone gives there; the game's score = (real + 1) / (chance + 1),
+   so a single rare link doesn't look huge and a big count is almost untouched; the score = the average over the games
+   where the concept and those concepts both appear (every game weighs the same). Beside it: the `level` and in how
+   many games. Sorted by score. Then, per faction, the concepts that give each of the seven answers (step 10) from its
+   archetypes and its list; a faction with an answer no concept gives goes back to its archetypes.
+8. **Combos on this board.** For every pair of factions (190), the joins between the concepts of one faction (its
+   archetypes' and its list's) and the other's (step 5 numbers), by script; the rule for which list concepts count is
+   agreed with Kaptain before the script is written. Claude rates each pair with numbers on the board: STRONG (both
+   halves on many cards, helps take or hold a base, the enemy's one action between can't easily stop it), OK (real but
+   breakable), WEAK, NONE, AGAINST. Partners = STRONG or OK; every faction has 7+; one under 7 goes back to step 7.
+   `wheel/combos.tsv` has a test column that playtests fill.
+9. **Mechanics** (being worked out with Kaptain; nothing is built from this step until he agrees it). A mechanic is a
+   keyword or rule used on many of a faction's cards (Magic's Exploit, Hearthstone's Overload), built on this game's
+   own things (dots and front cells, rows, columns, lanes, the 3x3 camp, unit size, supply per lane, carry-over, round
+   start and end, one action per turn, moving, reach, strikes and fixed damage, the hand, the discard pile, Immobile)
+   with the concepts of its archetypes and list. Each names the synergy it grows from; the linked card pairs of that
+   synergy are its source cards. No two factions have the same mechanic doing the same job; one Egg in the whole wheel.
+   Countdowns very sparingly; a lane never holds more than 12 supply. A rule the game lacks is marked NEW RULE. Written
+   to `wheel/mechanics.tsv`. The old candidates (commit d4a3de0^, `factions/3-candidates/`) are
+   read last, only to see that no idea Kaptain liked is missing.
+10. **The seven answers and Stop 1** for all 20: how it wins, how it removes a front unit, how it mainly removes
+   back-row units, how it mainly acts between lanes, how it holds a base, its best Place effect, its blind spot; each
+   from the concepts found in step 7 and the mechanics. Every answer differs from every other faction's; a blind spot
+   never touches its archetypes. Then the check script (`tools/wheel_table_check.py`, to rewrite: against each
+   faction's archetypes, list and answers) and the Stop 1 pages (`work/make_stop1.py` -> `wheel/STOP1*.md`: per
+   faction its archetypes and synergies, theme, mechanics, the seven answers, and one line per partner saying how the
+   combo plays). Files under 150 lines.

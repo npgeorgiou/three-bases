@@ -16,7 +16,7 @@ for (const [k, c] of Object.entries(ctx.C)) {
   if (c.fac !== fac || c.token || !c.net) continue;
   const [mech, makes, needs] = c.net.split('/').map(x => x.trim());
   const cost = c.tactic ? `spell ${c.cost}` : `${c.sup} - ${c.str}|${c.def}${SIZE[c.size] || ''}`;
-  const lines = [`CARD ${c.name}`, cost, plain(c.text), `mech: ${mech}`];
+  const lines = [`CARD ${c.name}`, cost, plain(c.text), `syn: ${mech}`];
   if (makes && makes !== '-') lines.push(`makes: ${makes.replace(/^makes\s*/, '')}`);
   if (needs && needs !== '-') lines.push(`needs: ${needs.replace(/^needs\s*/, '')}`);
   if (c.leader) lines.push('leader');

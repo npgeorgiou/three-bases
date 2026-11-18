@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Network check for Three Bases faction designs: are the mechanics and cards a thick web?
+"""Network check for Three Bases faction designs: are the synergies and cards a thick web?
 
 Reads a design file (factions/designs/<faction>.txt). Lines it reads (anything else is ignored):
-  MECHANIC <name> | makes: a, b | needs: c, d
-  CARD <name> | <cost - str|def, size> | <text> | mech: M1, M2 | makes: a, b | needs: c
+  SYNERGY <name> | makes: a, b | needs: c, d
+  CARD <name> | <cost - str|def, size> | <text> | syn: S1, S2 | makes: a, b | needs: c
   DECK <name>: card, card x3, ...
 "makes" and "needs" are short tags for things in play (projectile-dies, lodged, enemy-front-packed ...).
 Usage: python3 tools/network_check.py factions/designs/<faction>.txt [more files of the same faction] [--quiet]
@@ -13,27 +13,27 @@ import re, sys
 from collections import defaultdict
 
 def parse(path):
-    mechs, cards, decks = {}, {}, {}
+    syns, cards, decks = {}, {}, {}
     for raw in open(path, encoding='utf-8'):
         line = raw.strip()
-        if line.startswith('MECHANIC ') or line.startswith('CARD '):
+        if line.startswith('SYNERGY ') or line.startswith('CARD '):
             kind, rest = line.split(' ', 1)
             parts = [p.strip() for p in rest.split(' | ')]
-            e = {'name': parts[0], 'makes': set(), 'needs': set(), 'mech': [], 'cost': '', 'text': '', 'leader': False}
+            e = {'name': parts[0], 'makes': set(), 'needs': set(), 'syn': [], 'cost': '', 'text': '', 'leader': False}
             free = []
             for p in parts[1:]:
                 if p == 'leader': e['leader'] = True; continue
-                m = re.match(r'(makes|needs|mech):\s*(.*)$', p)
+                m = re.match(r'(makes|needs|syn):\s*(.*)$', p)
                 if m:
                     vals = [v.strip() for v in m.group(2).split(',') if v.strip()]
-                    if m.group(1) == 'mech': e['mech'] = vals
+                    if m.group(1) == 'syn': e['syn'] = vals
                     else: e[m.group(1)] = set(vals)
                 else: free.append(p)
             if kind == 'CARD':
                 e['cost'] = free[0] if free else ''
                 e['text'] = free[1] if len(free) > 1 else ''
                 cards[e['name']] = e
-            else: mechs[e['name']] = e
+            else: syns[e['name']] = e
         elif line.startswith('DECK '):
             name, lst = line[5:].split(':', 1)
             items = []
@@ -43,10 +43,10 @@ def parse(path):
                 m = re.match(r'(.*?)\s+x(\d)$', it)
                 items.append((m.group(1), int(m.group(2))) if m else (it, 1))
             decks[name.strip()] = items
-    return mechs, cards, decks
+    return syns, cards, decks
 
 def web(entries, label, out):
-    """Setup/cash-in counts over one set of entries (mechanics, a faction's cards, or a deck)."""
+    """Setup/cash-in counts over one set of entries (synergies, a faction's cards, or a deck)."""
     makers, users = defaultdict(list), defaultdict(list)
     for e in entries:
         for t in e['makes']: makers[t].append(e['name'])
@@ -54,7 +54,7 @@ def web(entries, label, out):
     problems = []
     for t in sorted(users):
         if not makers[t]: problems.append(f"need with no maker: {t} (needed by {', '.join(users[t])})")
-    if label != 'mechanics':
+    if label != 'synergies':
         for e in entries:
             for t in e['needs']:
                 base = lambda x: x.split('#')[0]
@@ -70,35 +70,35 @@ def web(entries, label, out):
 
 def main():
     path = sys.argv[1]; quiet = '--quiet' in sys.argv
-    mechs, cards, decks = {}, {}, {}
+    syns, cards, decks = {}, {}, {}
     for f in [a for a in sys.argv[1:] if not a.startswith('--')]:
-        m, c, d = parse(f); mechs.update(m); cards.update(c); decks.update(d)
+        m, c, d = parse(f); syns.update(m); cards.update(c); decks.update(d)
     out, problems = [], []
-    if mechs:
-        problems += web(list(mechs.values()), 'mechanics', out)
-        for m in mechs.values():
-            feeds = sorted(o['name'] for o in mechs.values() if o is not m and m['makes'] & o['needs'])
-            fedby = sorted(o['name'] for o in mechs.values() if o is not m and o['makes'] & m['needs'])
+    if syns:
+        problems += web(list(syns.values()), 'synergies', out)
+        for m in syns.values():
+            feeds = sorted(o['name'] for o in syns.values() if o is not m and m['makes'] & o['needs'])
+            fedby = sorted(o['name'] for o in syns.values() if o is not m and o['makes'] & m['needs'])
             out.append(f"  {m['name']}: feeds {', '.join(feeds) or '-'}; fed by {', '.join(fedby) or '-'}")
-            if not feeds: problems.append(f"mechanic feeds no other mechanic: {m['name']}")
-            if not fedby: problems.append(f"mechanic fed by no other mechanic: {m['name']}")
+            if not feeds: problems.append(f"synergy feeds no other synergy: {m['name']}")
+            if not fedby: problems.append(f"synergy fed by no other synergy: {m['name']}")
     if cards:
         cl = list(cards.values())
         problems += web(cl, 'cards', out)
-        two = [c for c in cl if len(c['mech']) >= 2]
-        out.append(f"  cards in two or more mechanics: {len(two)} of {len(cl)} ({100*len(two)//len(cl)}%)")
-        if len(two) * 3 < len(cl): problems.append("fewer than a third of the cards are in two mechanics")
-        unknown = sorted({m for c in cl for m in c['mech']} - set(mechs)) if mechs else []
-        if unknown: problems.append(f"cards name mechanics not listed: {', '.join(unknown)}")
+        two = [c for c in cl if len(c['syn']) >= 2]
+        out.append(f"  cards in two or more synergies: {len(two)} of {len(cl)} ({100*len(two)//len(cl)}%)")
+        if len(two) * 3 < len(cl): problems.append("fewer than a third of the cards are in two synergies")
+        unknown = sorted({m for c in cl for m in c['syn']} - set(syns)) if syns else []
+        if unknown: problems.append(f"cards name synergies not listed: {', '.join(unknown)}")
         seen = defaultdict(list)
         for c in cl:
             key = (c['cost'].split(' - ')[0], tuple(sorted(c['makes'])), tuple(sorted(c['needs'])))
             seen[key].append(c['name'])
         for k, names in seen.items():
             if len(names) > 1 and (k[1] or k[2]): problems.append(f"possible twins (same cost, same lines): {', '.join(names)}")
-        if mechs:
-            for m in mechs:
-                n = len([c for c in cl if m in c['mech']])
+        if syns:
+            for m in syns:
+                n = len([c for c in cl if m in c['syn']])
                 out.append(f"  cards in {m}: {n}")
         # partners: cards that make what a card needs, or need what it makes
         part = {}

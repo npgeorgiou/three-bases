@@ -12,9 +12,9 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 4. The radii and how they work together | done | `work/radii.tsv` (every usable concept on its radius, agreed with Kaptain); `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` from concept instances |
 | 5. The links between concepts | done | `library/cards_db/wheel/concept_links.tsv` (`mechanics_wheel.py links --concepts`, about a minute) |
 | 6. The archetype map | done | `work/archetype_map.tsv`: 693 edges between the concepts of engine parts; `factions/wheel-archetypes.html`; one gap (`work/archetype_gaps.tsv`): Discard / 8-Rack |
-| 7. The 20 factions and their lists | **next** | |
-| 8. Theme, then tools | to do | |
-| 9. Combos on this board | to do | |
+| 7. The 20 factions, their themes and their lists | **next** | |
+| 8. Combos on this board | to do | |
+| 9. Mechanics | being worked out with Kaptain | |
 | 10. The seven answers, Stop 1 | to do | |
 
 ## What the next steps find in the files
@@ -49,6 +49,12 @@ One chat does one step; at its end, mark the step done here and say what it left
   their cards) before trusting it; a wrong source is fixed for every card, with cases. Never read cards for it.
 
 ## Kaptain's standing decisions
+- Industry words (18 Nov 2026): a **synergy** is a link real cards show between two concepts ("my units die -> my other
+  units grow"); a **mechanic** is a keyword or rule used on many of a faction's cards (Magic's Exploit).
+- Each faction plays 2 or 3 archetypes; its theme is picked right after its archetypes and breaks ties between concepts
+  that score about the same; its list leaves out its archetypes' own concepts; the concepts for its seven answers are
+  found in step 7, not at the end; combos (step 8) come before mechanics (step 9); the radius checks are replaced by
+  checks against the faction's archetypes and list (18 Nov 2026).
 Only what Kaptain said himself goes here, in his words; Claude's own rules go elsewhere.
 - The game's own things: dots and front cells, rows (front/middle/back), columns, 3 lanes, the 3x3 camp, shapes and
   size, supply per lane, carry-over, round start and round end, one action per turn, moving and turning, reach (melee,
@@ -58,7 +64,7 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
 - The wheel is general; step 8 turns each faction's archetypes into these own things, from scratch.
 - Every game counts the same in every number, games with no factions (Marvel Snap) too.
 - Factions are made by script to play one or, better, more archetypes. Each archetype is a group of engines and
-  bricks and can be played using different tools (concepts). A map of nodes (each node a concept) shows each
+  bricks and can be played using different concepts. A map of nodes (each node a concept) shows each
   archetype's concepts with the links between them and the strengths we know. Only general archetypes; any specific to
   one game (planeswalkers) is off the list. Triggers and conditions are how cards work, not what a faction is; real
   factions inspire, they are never copied (17 Nov 2026).
@@ -72,16 +78,16 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
 - "Strike first" is not a plan here. "Ping" is a library word: say "small hits". One Egg in the
   whole wheel: look-alikes are compared by what the card does.
 - A faction's 100 cards use its list a lot (every concept of the library, by how strongly it links with the concepts
-  of its archetypes): its archetypes are its character (what it is strongest at, what its tools grow from), not all it may use.
-- A faction is built from 2-4 tools that feed each other, played out cell by cell. The tools are the backbone, not all
+  of its archetypes): its archetypes are its character (what it is strongest at, what its mechanics grow from), not all it may use.
+- A faction is built from 2-4 mechanics that feed each other, played out cell by cell. The mechanics are the backbone, not all
   100 cards: 3-5 ways to play are built around them, as many as the closest real factions show. One idea is never the
-  whole faction. The theme is picked after the archetypes, before the tools; a tool that fits the theme but grows from no
-  mechanic of its archetypes is dropped.
+  whole faction. The theme is picked after the archetypes, before the mechanics; a mechanic that fits the theme but grows from no
+  synergy of its archetypes is dropped.
 - Each faction answers seven questions, one line each: how it wins, how it removes the front unit, how it MAINLY
   removes back-row units, how it MAINLY acts between lanes, how it holds a base, its best Place effect, its blind spot.
 - Stop 1 pages: juicy and easy to read; one line per answer; one line per partner faction saying HOW the combo plays.
-- Combos are judged once, on this board (step 9): STRONG / OK / WEAK / NONE / AGAINST; partners = STRONG or OK, 10+
-  each; `combos.tsv` has a test column, and what doesn't work in play is dropped.
+- Combos are judged once, on this board (step 8, before the mechanics): STRONG / OK / WEAK / NONE / AGAINST; partners =
+  STRONG or OK, 7+ each; `combos.tsv` has a test column, and what doesn't work in play is dropped.
 - Leaders: 5 per faction, the only cards with a golden border, spread over the costs and the ways to play; their
   special part works by whether I hold the lane's base, helps take and keep a lane, never wins harder in a won lane;
   nine kinds, mixed in each faction (START_DESIGN-2, "What a faction has").

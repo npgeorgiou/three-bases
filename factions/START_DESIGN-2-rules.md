@@ -65,7 +65,7 @@ More text: `summary/09-card-design-rules.txt`
 **What a faction has**
 - Exactly 100 cards (tokens not counted). Spells are 20-50% of them, and about the same share at every cost from 1 to 5:
   if 30% of the faction is spells, then about 30% of the cost-2 cards are spells too. Cost 6+ may be mostly units.
-- 2-3 keywords of its own. A keyword serves a mechanic: Barrage serves "guns in the back rows bombard the rear".
+- 2-3 keywords of its own. A keyword serves a synergy: Barrage serves "guns in the back rows bombard the rear".
 - 5 Leaders (`leader: true`; they are the only cards with a golden border). Each has a special part that works by
   whether I hold its lane's base. It helps me take a lane I don't hold and keep one I hold; it never just makes me
   stronger in a lane already won. The five are spread over the faction's ways to play, and their costs follow its
@@ -107,10 +107,10 @@ More text: `summary/09-card-design-rules.txt`
 - Every card says what it makes happen and what it needs (its `net` line), and each "needs" has a card in the faction
   that makes it. Example: Toll Warrior needs units to die this round; Willing Victim (dies when offered) makes it.
 - Cards that cash something in have 3+ cards that set it up; cards that set something up feed 2+ cards that cash it in.
-- Tools (the wheel's step 8): 2-4 new kinds of things or rules, each from one mechanic of its archetypes, feeding each
+- Mechanics (the wheel's step 9): 2-4 new kinds of things or rules, each from one synergy of its archetypes, feeding each
   other; many cards use them, the rest of the faction's cards build the ways to play around them.
 - Its archetypes (the wheel's step 7): the one or more ways to play it is made of, each of engines and bricks; its
-  mechanics are the links between their concepts, each on several cards.
+  synergies are the links between their concepts, each on several cards.
 - The faction's list (the wheel's step 7: every concept of the library, highest score for linking with its archetypes' concepts
   first) is used A LOT, by most cards: a concept from it makes its archetypes' concepts possible, starts them or makes them
   stronger. Example: a faction built on units dying has units that come back, so more units can die. Cards built only
