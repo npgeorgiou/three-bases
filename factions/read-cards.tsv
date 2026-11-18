@@ -97,3 +97,96 @@ sts1	Seek	D	no fit (player health, block)
 sts1	Reboot	D	no fit (player health, block)
 sts1	Buffer	D	no fit (player health, block)
 sts1	Self Repair	D	no fit (player health, block)
+duelyst	Wind Stopper	wheel probe	taunt
+duelyst	Frostiva	wheel probe	on_damaged
+duelyst	Treant	wheel probe	taunt
+duelyst	Horn of the Forsaken	wheel probe	on_damaged
+faeria	Shamanic Dance	wheel probe	taunt
+faeria	King's Faithful	wheel probe	on_damaged
+faeria	Shifting Octopus	wheel probe	taunt
+faeria	Possessed Ursus	wheel probe	on_damaged
+gwent	Cave Troll	wheel probe	taunt
+gwent	Kelpie	wheel probe	on_damaged
+gwent	Ffion var Gaernel	wheel probe	taunt
+gwent	Hefty Helge	wheel probe	on_damaged
+runeterra	Confront	wheel probe	forced_attack
+runeterra	Legion Veteran	wheel probe	on_damaged
+runeterra	Diana (level 2)	wheel probe	forced_attack
+runeterra	Gwen	wheel probe	on_damaged
+runeterra	The Serpent	wheel probe	forced_attack
+runeterra	Towering Stonehorn	wheel probe	on_damaged
+faeria	Shimmering Statue	wheel probe	taunt
+faeria	Lion Fish	wheel probe	deathtouch
+faeria	Death Walker	wheel probe	deathtouch
+gwent	Usurper: Officer	wheel probe	rule_change
+gwent	Sove	wheel probe	immunity
+gwent	Cintrian Artificer	wheel probe	rule_change
+gwent	Stolen Mutagens	wheel probe	immunity
+into_the_breach	Prospero	wheel probe	rule_change
+into_the_breach	Area Shift	wheel probe	immunity
+into_the_breach	Control Mech	wheel probe	rule_change
+into_the_breach	Camila Vera	wheel probe	immunity
+faeria	Manta Rider	wheel probe	rule_change
+faeria	Divine Guardian	wheel probe	immunity
+faeria	Oradrim Fanatic	wheel probe	rule_change
+faeria	Kaios, Demented Overmind	wheel probe	immunity
+gwent	Dragon's Dream	wheel probe	row_effects
+gwent	Traveling Priestess	wheel probe	immunity
+gwent	Little Havfrue	wheel probe	row_effects
+gwent	Ancient Foglet	wheel probe	immunity
+runeterra	Restored Sun Disc	wheel probe	rule_change
+runeterra	Pakaa Cub	wheel probe	stealth
+runeterra	Sejuani	wheel probe	rule_change
+runeterra	Towering Pairofant	wheel probe	stealth
+duelyst	Joseki	wheel probe	hand_disruption
+duelyst	Dark Seed	wheel probe	hand_size
+duelyst	Scroll Bandit	wheel probe	hand_disruption
+duelyst	Upper Hand	wheel probe	hand_size
+runeterra	Watery Grave	wheel probe	hand_disruption
+runeterra	Trundle (level 2)	wheel probe	hand_size
+runeterra	Maokai (level 2)	wheel probe	hand_disruption
+runeterra	Tianna Crownguard	wheel probe	extra_turn
+runeterra	Call the Wild	wheel probe	recycle
+runeterra	Yordle Ranger	wheel probe	extra_turn
+runeterra	Station Archivist	wheel probe	recycle
+faeria	Shaytan Assassin	wheel probe	deathtouch
+faeria	Soul Eater	wheel probe	death_count
+faeria	Swarming Carassius	wheel probe	death_count
+duelyst	Makantor Warbeast	wheel probe	haste
+duelyst	Vaath's Brutality	wheel probe	attack_lock
+duelyst	Elucidator	wheel probe	haste
+duelyst	Saurian Finality	wheel probe	attack_lock
+duelyst	Homeostatic Rebuke	wheel probe	attack_now
+duelyst	Lavaslasher	wheel probe	attack_now
+duelyst	Vorpal Reaver	wheel probe	multi_attack
+duelyst	Desolator	wheel probe	lifesteal
+runeterra	Spirit's Refuge	wheel probe	damage_reduction
+runeterra	Thresh	wheel probe	forced_attack
+runeterra	Fleetfeather Tracker	wheel probe	forced_attack
+runeterra	Chain Vest	wheel probe	damage_reduction
+faeria	Gabrian Enchantress	wheel probe	strikes_with_defence
+faeria	Gabrian Enchantment	wheel probe	strikes_with_defence
+faeria	Living Willow	wheel probe	taunt
+runeterra	Petricite Hound	wheel probe	strikes_with_defence
+runeterra	Mageseeker Inquisitor	wheel probe	forced_attack
+runeterra	Galio	wheel probe	strikes_with_defence
+runeterra	Enraged Firespitter	wheel probe	forced_attack
+runeterra	Jarvan IV	wheel probe	forced_attack
+runeterra	Garen	wheel probe	regeneration
+runeterra	Swiftwing Lancer	wheel probe	forced_attack
+runeterra	Braum	wheel probe	forced_attack
+runeterra	Trundle	wheel probe	regeneration
+faeria	Time of Legends	wheel probe	cost_type
+faeria	Message in a Bottle	wheel probe	generate_cards
+faeria	Seek Shelter	wheel probe	cost_type
+faeria	Ruunin's Presence	wheel probe	generate_cards
+faeria	Magda, Queen of Meroval	wheel probe	cost_type
+faeria	Bloomsprite	wheel probe	generate_cards
+duelyst	Alcuin Loremaster	wheel probe	copy
+duelyst	Icy	wheel probe	attack_lock
+duelyst	Essence Sculpt	wheel probe	copy
+marvel_snap	Yondu	wheel probe	hand_disruption
+marvel_snap	Venom	wheel probe	sacrifice
+gwent	Matta Hu'uri	wheel probe	hand_disruption
+gwent	Giant Toad	wheel probe	sacrifice
+gwent	Barghest	wheel probe	sacrifice
