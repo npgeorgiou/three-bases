@@ -150,10 +150,8 @@ function describeAction(s, a, who) {
   const unit = id => { const u = byId(s, id); return u ? CARDS[u.card].name : 'a unit'; };
   if (a.t === 'pass') return `${who} passes.`;
   if (a.t === 'deploy') return `${who} deploys ${CARDS[s.players[s.cur].hand[a.hi]].name} in lane ${a.lane + 1}.`;
-  if (a.t === 'tactic') return `${who} casts ${CARDS[s.players[s.cur].hand[a.hi]].name}${a.lane !== undefined ? ' on lane ' + (a.lane + 1) : a.vid ? ' on ' + unit(a.vid) : ''}.`;
   if (a.t === 'attack') return `${who}: ${unit(a.id)} attacks ${unit(a.tid)}.`;
-  if (a.t === 'move') return `${who} moves ${unit(a.id)}.`;
-  return `${who}: ${unit(a.id)} uses ${a.t}.`;
+  return `${who} moves ${unit(a.id)}.`;
 }
 function logWatch(text) {
   const li = document.createElement('li');

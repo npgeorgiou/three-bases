@@ -24,10 +24,9 @@ function onKey(e) {
   if (e.code === 'Space' && !e.repeat) { e.preventDefault(); passOrDone(); }
 }
 
-/** Space / the Pass button: pass, or finish a follow-up choice that allows it. */
+/** Space / the Pass button: pass. */
 function passOrDone() {
   if (!myTurn()) return;
-  if (game.pending) { if (listActions(game).some(a => a.t === 'done')) act({ t: 'done' }); return; }
   act({ t: 'pass' });
 }
 

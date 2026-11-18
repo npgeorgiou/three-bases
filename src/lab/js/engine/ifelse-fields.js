@@ -32,7 +32,6 @@ const IFELSE_BASE_FIELDS = [
   ['thMineOpp', 'Opponent to move: weight of own exposure', 'num', 1], ['thTheirsOpp', 'Opponent to move: weight of its exposure', 'num', 0.3],
   ['thTheirsMe', 'Own move: weight of the opponent\'s exposure', 'num', 0.9], ['thMineMe', 'Own move: weight of own exposure', 'num', 0.3],
   ['tOnce', 'Threat: each attacker once, supply shared (1 = yes)', 'switch', 1],
-  ['tGuards', 'Threat: Bodyguards protect neighbours (1 = yes)', 'switch', 1],
   ['tActed', 'Threat: units that attacked this round threaten nothing (1 = yes)', 'switch', 1],
   ['danger0', 'Out of supply with no units left', 'num', 1000], ['danger1', 'Out of supply with 1 unit left', 'num', 300],
   ['danger2', 'Out of supply with 2 units left', 'num', 100], ['draw', 'Worth of a draw', 'num', -500],
@@ -43,7 +42,6 @@ const IFELSE_BASE_FIELDS = [
   ['needSupply', 'Goal lanes: per own lane supply (less needed)', 'num', 0.2],
   ['killPref', 'First move: extra per worth of the enemy units it kills', 'num', 1],
   ['passPen', 'First move: passing right after the opponent passed counts less by', 'num', 40],
-  ['freeCheck', 'Skip free moves that don\'t make the round better (1 = yes)', 'switch', 1],
 ];
 /** Keyword values: one per line of KW_RULES (keyword-worth.js) whose keyword is in the game's cards (kw_<field>, starts at 0). */
 const IFELSE_KW_FIELDS = KW_RULES.filter(kwInGame)

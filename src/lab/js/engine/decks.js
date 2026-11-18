@@ -31,8 +31,8 @@ for (let n = 0; n <= 12; n++) {
   CARDS['lab_plain' + n] = { name: `Plain unit (${n})`, fac: 'lab', size: 1, sup: n, cost: n, str: Math.floor(b / 2), def: Math.ceil(b / 2), art: 'helm', text: 'A plain unit for card tests.' };
 }
 const plainFor = key => 'lab_plain' + Math.min(12, Math.max(0, Math.round(CARDS[key].cost || CARDS[key].sup || 0)));
-/** The cards a deck of this faction may hold: its own, no tokens, no lab cards. */
-const factionCards = fac => Object.keys(CARDS).filter(k => CARDS[k].fac === fac && !CARDS[k].token).sort();
+/** The cards a deck of this faction may hold: its own. */
+const factionCards = fac => Object.keys(CARDS).filter(k => CARDS[k].fac === fac).sort();
 /** Makes a deck known under a key (lab decks are sent to the workers with each game). */
 const labDeck = (key, name, fac, list) => (DECKS[key] = { name, fac, list: list.map(([k, n]) => [k, n]) });
 

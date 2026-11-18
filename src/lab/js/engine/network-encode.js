@@ -16,13 +16,10 @@ const NET_CARD_KEYS = Object.keys(CARDS).sort();
 const NET_CARD_INDEX = Object.fromEntries(NET_CARD_KEYS.map((k, i) => [k, i]));
 
 /**
- * What a card is and does, by name, with no card names: its numbers and keywords (cost, size, strength, defence,
- * Geared ...), and its effects in parts: when + what ("roundEnd:strike"), what + on whom ("strike>nearest"), the whole
- * part ("roundEnd:strike>nearest"), with
- * amounts; auras ("aura:s", "aura>adj") and spells ("cast:dmg"). A reworked card is a new mix of known parts;
- * only a word no card had before is new to the network.
+ * What a card is, by name, with no card names: its numbers and keywords (cost, size, strength, defence, Pike ...).
+ * A reworked card is a new mix of known values; only a word no card had before is new to the network.
  */
-const NET_SKIP = new Set(['name', 'fac', 'art', 'text', 'net', 'fx', 'aura', 'cast', 'leader']);
+const NET_SKIP = new Set(['name', 'fac', 'art', 'text', 'net', 'leader']);
 function cardFeatures(c) {
   const f = new Map(), add = (k, v) => { if (v) f.set(k, (f.get(k) || 0) + v); };
   const val = v => (v === true ? 1 : typeof v === 'number' ? Math.abs(v) : v ? 1 : 0);
@@ -31,32 +28,15 @@ function cardFeatures(c) {
     if (v && typeof v === 'object' && !Array.isArray(v)) { for (const [sk, sv] of Object.entries(v)) add(k + '.' + sk, val(sv)); }
     else add(k, val(v));
   }
-  const ops = (when, list) => {
-    for (const op of list || []) {
-      const to = typeof op.to === 'string' ? op.to : 'self';
-      for (const [k, v] of Object.entries(op)) {
-        if (k === 'to' || k === 'if') continue;
-        if (k === 'kw' && typeof v === 'string') add(when + ':kw:' + v, 1);
-        else if (v && typeof v === 'object' && !('count' in v)) for (const [sk, sv] of Object.entries(v)) add(when + ':' + k + '.' + sk, val(sv));
-        else add(when + ':' + k, val(v));
-        add(k + '>' + to, 1);
-        if (k !== 'kw') add(when + ':' + k + '>' + to, val(v) || 1);   // the whole part: when, what, on whom, how much
-      }
-      if (op.if) add(when + ':if', 1);
-    }
-  };
-  for (const e of c.fx || []) { ops(e.on, e.do); if (e.lim) add(e.on + ':once', 1); if (e.if || e.of) add(e.on + ':if', 1); }
-  if (c.cast) { ops('cast', c.cast.do); if (c.cast.need) add('cast:need', 1); }
-  for (const a of c.aura || []) { const to = a.to || 'self'; add('aura:s', val(a.s)); add('aura:d', val(a.d)); add('aura>' + to, 1); add('aura:s>' + to, val(a.s)); add('aura:d>' + to, val(a.d)); if (a.if) add('aura:if', 1); }
   return f;
 }
 const NET_FEATURES = NET_CARD_KEYS.map(k => cardFeatures(CARDS[k]));
 const NET_PROPERTIES = [...new Set(NET_FEATURES.flatMap(m => [...m.keys()]))].sort();
-/* ---------- network format 3 (version 7): cards by what they are and do, shared cell layer, hand slots, pile totals ----------
+/* ---------- network format 3 (version 9): cards by what they are, shared cell layer, hand slots, pile totals ----------
    A position is recorded as decimals (NUMS) and card numbers (CARDS: card + 1, 0 = none).
    NUMS: for each of the 54 cells (2 sides x 3 lanes x 3 rows from the front x 3 columns), 20 values:
-     unit anchored here; its current strength, defence, damage, strength and defence build-up, temporary
-     strength; moved; attacked; turned upright; cell covered by a unit anchored elsewhere; which of the 9 cells
+     unit anchored here; its current strength, defence, damage; three values that stay 0 (no rule changes a unit's
+     stats in play but damage); moved; attacked; turned upright; cell covered by a unit anchored elsewhere; which of the 9 cells
      (row from the front x 3 + column) that anchor is.
    then per lane (3 x 17): the 3 dots (mine / theirs / crossed out), base owner (mine / theirs), supply left
      in the lane this round (mine / theirs), supply the lane started the round with (mine / theirs), lane supply
@@ -65,8 +45,8 @@ const NET_PROPERTIES = [...new Set(NET_FEATURES.flatMap(m => [...m.keys()]))].so
    the game: round, I started the round, it is my turn, I passed, they passed, rounds in a row without any
      action / 3, actions this round, how many cards they redrew / 3 (known once the battle has begun);
    four piles: my deck, their unseen cards (hand and deck), my dealt starting hand, the cards I redrew (put back);
-     each as its card count and the totals of its cards' printed values / 10 (e.g. how many Place damage effects
-     are still in my deck).
+     each as its card count and the totals of its cards' printed values / 10 (e.g. how much Pike is still in
+     my deck).
    CARDS: the unit anchored in each cell, then my hand (up to 10 cards, in card-list order); a card number only
      picks the card's printed values (cardFeatures) for the cell layer and the hand slots: no card has weights.
    Values with no firm limit use sq(x) = square root of x / 10 (x below 0 counts as 0): 1 -> 0.10, 2 -> 0.14,
@@ -74,20 +54,17 @@ const NET_PROPERTIES = [...new Set(NET_FEATURES.flatMap(m => [...m.keys()]))].so
    distinctly, and nothing is capped. Values with a firm rule limit are divided by that limit. All values are
    stored as decimals. */
 const sq = v => Math.sqrt(Math.max(0, v || 0)) / 10;
-/** A unit's state that changed in play and its printed values don't show: each keyword as it is now minus as
- *  printed (gained or moved away), keywords for this round, Armoured used, moves and attacks made, deployed this
- *  round, charged, blighted. Cell numbers 20 on. */
+/** A unit's state that its printed values don't show: each keyword as it is now minus as printed, deployed this
+ *  round. Cell numbers 20 on. */
 const F3_UNIT_NOW = [...KW_FLAGS.map(f => ['kw:' + f, u => kw(u, f) - (cardOf(u)[f] || 0)]),
-  ['incorpRound', u => (u.tInc ? 1 : 0)], ['armouredRound', u => (u.tArm || u.ent ? 1 : 0)], ['reckless', u => (u.reck ? 1 : 0)],
-  ['armouredUsed', u => (u.armUsed ? 1 : 0)], ['moves', u => sq(u.mv)], ['attacks', u => sq(u.atk)],
-  ['deployedNow', (u, s) => (u.born === s.round ? 1 : 0)], ['charged', u => (u.chg ? 1 : 0)], ['blighted', u => (u.blight ? 1 : 0)]];
+  ['deployedNow', (u, s) => (u.born === s.round ? 1 : 0)]];
 /** Their names: saved with a network, so a keyword added to or removed from the rules later keeps what it learned. */
 const F3_UNIT_NAMES = F3_UNIT_NOW.map(x => x[0]);
 const F3 = (() => {
   const cards = NET_CARD_KEYS.slice(), props = NET_PROPERTIES;
   const NCELL = 2 * LANES.length * ROWS * COLS, HS = HAND_LIMIT, CS = 20 + F3_UNIT_NOW.length;
-  const LANEN = 17, PILES = 4, FIXED = LANES.length * LANEN + 8 + 8 + 4, NREST = FIXED + PILES * (1 + props.length);
-  return { version: 8, PILES, cards, props, DE: 0, CO: 16, CS, NCELL, HS, LANEN, FIXED, NREST, RECN: NCELL * CS + NREST, NK: NCELL + HS, hidden: [128, 64] };
+  const LANEN = 17, PILES = 4, FIXED = LANES.length * LANEN + 8 + 8, NREST = FIXED + PILES * (1 + props.length);
+  return { version: 9, PILES, cards, props, DE: 0, CO: 16, CS, NCELL, HS, LANEN, FIXED, NREST, RECN: NCELL * CS + NREST, NK: NCELL + HS, hidden: [128, 64] };
 })();
 /** A card's printed values: abilities and effect parts as numbers on the square-root scale (true counts 1). */
 const F3_PRINTED = NET_FEATURES.map(m => F3.props.map(pk => sq(m.get(pk) || 0)));
@@ -102,7 +79,7 @@ function encode3(s, me, into) {
   let k = 0;
   for (const side of [me, opp]) for (const lane of LANES) {
     const at = new Array(ROWS * COLS);                          // which unit covers each cell (as occupancy, without text keys)
-    for (const x of s.units) if (ctl(x) === side && x.lane === lane)
+    for (const x of s.units) if (x.owner === side && x.lane === lane)
       for (const cell of cellsOf(x)) if (cell[0] >= 0 && cell[0] < ROWS && cell[1] >= 0 && cell[1] < COLS) at[cell[0] * COLS + cell[1]] = x;
     for (let fromFront = 0; fromFront < ROWS; fromFront++) for (let c = 0; c < COLS; c++, k++) {
       const r = side === 0 ? fromFront : ROWS - 1 - fromFront, u = at[r * COLS + c], o = k * F3.CS;
@@ -110,7 +87,6 @@ function encode3(s, me, into) {
       if (u.r === r && u.c === c) {
         nums[o] = 1;
         nums[o + 1] = sq(strengthOf(u)); nums[o + 2] = sq(defenceOf(u)); nums[o + 3] = sq(u.dmg);
-        nums[o + 4] = sq(u.bs); nums[o + 5] = sq(u.bd); nums[o + 6] = sq(u.ts);
         nums[o + 7] = u.moved ? 1 : 0; nums[o + 8] = u.attacked ? 1 : 0; nums[o + 9] = u.o === 'v' ? 1 : 0;
         cards[k] = NET_CARD_INDEX[u.card] + 1;
         for (let t = 0; t < F3_UNIT_NOW.length; t++) nums[o + 20 + t] = F3_UNIT_NOW[t][1](u, s);
@@ -138,10 +114,6 @@ function encode3(s, me, into) {
   put(sq(s.round)); put(s.starter === me ? 1 : 0); put(s.cur === me ? 1 : 0); put(s.passed === me ? 1 : 0); put(s.passed === opp ? 1 : 0);
   put((s.quietRounds || 0) / 3); put(sq(s.acts));
   put(s.redrawDone ? (s.players[opp].redrawn || []).length / MAX_REDRAW : 0);
-  for (const side of [me, opp]) {                              // this round's counts that some effects use
-    const P = s.players[side];
-    put(sq(P.deathsR === s.round ? P.deaths : 0)); put(sq(P.spR === s.round ? P.spN : 0));
-  }
   // the four piles, each as its size and its cards' printed-value totals
   const pile = counts => {                                     // counts: [card number, copies] pairs
     F3_PILE.fill(0);

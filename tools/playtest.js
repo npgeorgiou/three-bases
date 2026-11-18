@@ -25,10 +25,10 @@ const PLAY = async (n, seed) => {
   let x = seed;
   const rnd = k => { x = (x * 1103515245 + 12345) % 2147483648; return x % k; };
   let done = 0;
-  for (; done < n || (game && game.pending && done < n + 5); done++) {  // finish an open choice before stopping
+  for (; done < n; done++) {
     if (!await wait(() => game && (game.winner != null || (game.cur === 0 && !busy && !aiThinking)))) return `stuck after ${done} actions`;
     if (game.winner != null) break;
-    const acts = listActions(game, false).filter(a => a.t !== 'pass');
+    const acts = listActions(game).filter(a => a.t !== 'pass');
     const a = acts.length && rnd(4) ? acts[rnd(acts.length)] : { t: 'pass' };
     await act(a);
   }
@@ -51,13 +51,13 @@ const CARD_CHECKS = () => {
     const leaders = list.filter(k => /class="card [^"]*\bleader\b/.test(cardHtml(k)) && /\bleader\b/.test(deckItemHtml(k, 1, false)));
     if (list.some(k => CARDS[k].leader) && leaders.length !== 5) bad.push(`faction ${f}: ${leaders.length} leaders shown, need 5`);
   }
-  const forms = w => (w === 'Wind' ? 'wind|winds|winding' : w === 'Strike' ? 'strike|strikes' : w.replace(/-/g, '\\-'));
+  const forms = w => (w === 'Strike' ? 'strike|strikes' : w.replace(/-/g, '\\-'));
   for (const k of keys) {
     const c = CARDS[k]; if (!c.text) continue;
     const shown = cardText(c).replace(/<span class="kw"[^>]*>[^<]*<\/span>/g, '').replace(/<[^>]*>[^<]*<\/span>/g, '');
     const hov = new Set([...cardText(c).matchAll(/data-k="([^"]+)"/g)].map(m => m[1].toLowerCase()));
     for (const w of Object.keys(KEYWORDS))
-      if (!hov.has(w.toLowerCase()) && new RegExp('\\b(' + forms(w) + ')\\b', 'i').test(shown.replace(/\b(am|is|are|was|be|been|gets|get) wound\b/gi, ''))) bad.push(`${c.name}: '${w}' has no hover`);
+      if (!hov.has(w.toLowerCase()) && new RegExp('\\b(' + forms(w) + ')\\b', 'i').test(shown)) bad.push(`${c.name}: '${w}' has no hover`);
   }
   return bad;
 };

@@ -43,22 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setupDeckPages();
   for (const b of $$('[data-mode]')) b.addEventListener('click', () => pressToggle('mode', b.dataset.mode));
   $('#passBtn').addEventListener('click', passOrDone);
-  $('#prompt').addEventListener('click', e => {
-    const b = e.target.closest('button');
-    if (!b || !myTurn()) return;
-    if (b.dataset.p === 'done') act({ t: 'done' });
-    if (b.dataset.p === 'g') act({ t: 'gpick', key: b.dataset.k });
-    if (b.dataset.p === 'k') act({ t: 'kpick', f: b.dataset.f });
-  });
-  $('#gravePick').addEventListener('click', e => {
-    const b = e.target.closest('button.gpc');
-    if (b && !b.disabled && myTurn()) { ui.gk = null; act({ t: 'gpick', key: b.dataset.k }); }
-  });
-  $('#gravePick').addEventListener('mouseover', e => {
-    const b = e.target.closest('button.gpc'), k = b && !b.disabled ? b.dataset.k : null;
-    if (k !== ui.gk) { ui.gk = k; renderBoard(); }
-  });
-  $('#gravePick').addEventListener('mouseleave', () => { if (ui.gk) { ui.gk = null; renderBoard(); } });
   $('#infoBtn').addEventListener('click', toggleInfoPanel);
   $('#startBtn').addEventListener('click', () => { enterFullscreen(); startGame(); });
   $('#fsBtn').addEventListener('click', () => (document.fullscreenElement ? document.exitFullscreen() : enterFullscreen()));

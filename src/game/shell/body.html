@@ -16,7 +16,7 @@
           <button class="iconbtn" id="quitBtn" aria-label="Withdraw from the battle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M18 12H9"/></svg><span class="qtip">Click again to withdraw</span></button>
           <button class="iconbtn" id="fsBtn" aria-pressed="false" aria-label="Full screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fs-in" d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/><path class="fs-out" d="M9 4v5H4M20 9h-5V4M15 20v-5h5M4 15h5v5"/></svg></button>
         </div>
-        <div class="pile" id="pileOpp"></div><div class="spellslot" id="spellSlot"><span>Spells</span></div><div class="pile" id="pileMe"></div>
+        <div class="pile" id="pileOpp"></div><div class="pile" id="pileMe"></div>
       </div>
       <aside class="side" id="infoPanel" hidden>
       <div class="topbar"><span id="status" aria-live="polite"></span><button class="hbtn" id="newBtn">New game</button></div>
@@ -37,7 +37,7 @@
   </div>
   <div id="handStrip"><div id="hand"></div></div>
 </div>
-<div id="toast" hidden></div><div id="prompt" hidden></div><div id="gravePick" hidden></div><div id="fcWin" hidden></div><div id="fxLayer"></div><div id="kwtip" hidden></div><div id="tip" hidden></div><div id="replayBar" hidden>
+<div id="toast" hidden></div><div id="fcWin" hidden></div><div id="fxLayer"></div><div id="kwtip" hidden></div><div id="tip" hidden></div><div id="replayBar" hidden>
   <div class="rbtop"><b>Replay</b><span id="rbStep"></span></div>
   <input type="range" id="rbSlider" min="0" max="0" value="0" step="1" aria-label="Replay position">
   <div class="rbbtns"><button id="rbPlay">Play</button><button id="rbNext">Next</button><button id="rbRestart">Restart</button><button id="rbExit">Exit</button></div>
@@ -86,7 +86,7 @@
     <div class="dlist" id="bList"></div>
     <div class="bbtns"><button class="go" id="bSave">Save</button><button id="bEmpty">Empty deck</button><button id="bBack">Back</button><button id="bDel" class="danger">Delete</button></div>
   </aside>
-  <main class="bcards"><div class="bbar"><div class="bfacs" id="bFacs" role="group" aria-label="Show factions"></div><div class="bfacs btypes" id="bTypes" role="group" aria-label="Show card types"></div><span class="sbox"><input id="bSearch" type="search" placeholder="Search: words or phrases, separated by commas" aria-label="Search cards"><button id="bClear" type="button" aria-label="Clear the search" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6L18 18M18 6L6 18"/></svg></button></span><button id="bMode" class="bmode" aria-pressed="false" aria-label="Include or exclude matches">Include</button></div><div id="bCards"></div></main>
+  <main class="bcards"><div class="bbar"><div class="bfacs" id="bFacs" role="group" aria-label="Show factions"></div><span class="sbox"><input id="bSearch" type="search" placeholder="Search: words or phrases, separated by commas" aria-label="Search cards"><button id="bClear" type="button" aria-label="Clear the search" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6L18 18M18 6L6 18"/></svg></button></span><button id="bMode" class="bmode" aria-pressed="false" aria-label="Include or exclude matches">Include</button></div><div id="bCards"></div></main>
 </div></div>
 <div class="overlay" id="mull" hidden><div class="dlg center">
   <h2>Starting hand · <span id="mullName"></span></h2>

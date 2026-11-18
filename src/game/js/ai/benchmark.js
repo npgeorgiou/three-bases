@@ -1,7 +1,7 @@
 /* =====================================================================
    THE BENCHMARK: the AI lab's ifelse AI with its tuned values ("ifelse AI gen 18")
    ===================================================================== */
-const BENCH_VALUES = {"depth": 3, "w1": 16, "w2": 16, "w3": 1, "w4": 1, "w5": 1, "skipPointless": 1, "base": 52.24794805722803, "dot": 68.51388494977554, "secondBase": 102.66407646583588, "twoBases": 177.25361791861496, "twoBasesOpp": 199.7574182161945, "income": 31.656078857105964, "incomeCap": 2, "safeIncome": 0.05504762091184498, "pool": 2.741304155326895, "carry": 30, "hand": 4.633833562934903, "handCost": 2.8042200628587772, "uSup": 12.07189493456142, "uStr": 1.5479816366387755, "uDef": 1.8437067986291322, "uSupBonus": 6.622116494092802, "front": 28.969241514744198, "safeHolders": 1, "safeExtra": 0.04993113138665096, "armyStep": 0.8376563975571105, "armyFloor": 0.0812832334017826, "threat": 5.16860316310796, "kill": 0.45887300525839325, "damage": 0.8280634749424957, "thMineOpp": 1.6299806213311494, "thTheirsOpp": 0.5824609790085519, "thTheirsMe": 0.9561631170420163, "thMineMe": 0.2500662829114908, "tOnce": 1, "tGuards": 1, "tActed": 1, "danger0": 1451.988204947475, "danger1": 165.23566872600335, "danger2": 25.633149570136343, "draw": -985.4667485840048, "goals": 0, "offGoal": 0.3452749916684562, "stick": 2.0893563598964398, "needDots": 1.774190115518511, "needEnemyDots": 0.8208140494071128, "needEnemyPower": 0.27442838218710763, "needOwnPower": 0.04135135057152874, "needSupply": 0.06097458844391373, "killPref": 1, "passPen": 40, "freeCheck": 1};
+const BENCH_VALUES = {"depth": 3, "w1": 16, "w2": 16, "w3": 1, "w4": 1, "w5": 1, "skipPointless": 1, "base": 52.24794805722803, "dot": 68.51388494977554, "secondBase": 102.66407646583588, "twoBases": 177.25361791861496, "twoBasesOpp": 199.7574182161945, "income": 31.656078857105964, "incomeCap": 2, "safeIncome": 0.05504762091184498, "pool": 2.741304155326895, "carry": 30, "hand": 4.633833562934903, "handCost": 2.8042200628587772, "uSup": 12.07189493456142, "uStr": 1.5479816366387755, "uDef": 1.8437067986291322, "uSupBonus": 6.622116494092802, "front": 28.969241514744198, "safeHolders": 1, "safeExtra": 0.04993113138665096, "armyStep": 0.8376563975571105, "armyFloor": 0.0812832334017826, "threat": 5.16860316310796, "kill": 0.45887300525839325, "damage": 0.8280634749424957, "thMineOpp": 1.6299806213311494, "thTheirsOpp": 0.5824609790085519, "thTheirsMe": 0.9561631170420163, "thMineMe": 0.2500662829114908, "tOnce": 1, "tActed": 1, "danger0": 1451.988204947475, "danger1": 165.23566872600335, "danger2": 25.633149570136343, "draw": -985.4667485840048, "goals": 0, "offGoal": 0.3452749916684562, "stick": 2.0893563598964398, "needDots": 1.774190115518511, "needEnemyDots": 0.8208140494071128, "needEnemyPower": 0.27442838218710763, "needOwnPower": 0.04135135057152874, "needSupply": 0.06097458844391373, "killPref": 1, "passPen": 40};
 const ifelseConfig = cfg => ({ ...cfg });
 
 /** A unit's worth: its supply, stats and keywords (keyword-worth.js), each times its value. */
@@ -24,10 +24,9 @@ function ifelseArmy(s, side, lane, c, safe = isSafeLane(s, side, lane)) {
  *  most damaging first, each attacker once, paid from its lane's supply and then the shared reserve, and
  *  several attackers may finish one target together. */
 function ifelseThreat(s, victim, c) {
-  const att = other(victim), canHit = (a, u) => !isIncorp(u) && reaches(a, u);
-  const targets = s.units.filter(u => ctl(u) === victim && !(c.tGuards && !cardOf(u).guard
-    && s.units.some(g => ctl(g) === victim && g !== u && cardOf(g).guard && adjacent(u, g))));
-  const attackers = s.units.filter(a => ctl(a) === att && strengthOf(a) > 0 && !(c.tActed && a.attacked));
+  const att = other(victim), canHit = (a, u) => reaches(a, u);
+  const targets = s.units.filter(u => u.owner === victim);
+  const attackers = s.units.filter(a => a.owner === att && strengthOf(a) > 0 && !(c.tActed && a.attacked));
   if (!c.tOnce) {
     const reserve = s.players[att].reserve;
     let loss = 0;
@@ -104,10 +103,10 @@ function ifelseEval(s, p, goal, c) {
 }
 /** The side to move's best `width` options by a score (the quick score: the position right after the move; or `score`),
  *  always including passing. `keep` (the skip test) is asked best first and only until `width` options are kept: the same
- *  options as asking it of every move, with less work. `noMoves`: plain moves of a unit are left out (deploys, spells,
- *  attacks and passing stay), unless a choice is pending or nothing else is left. */
+ *  options as asking it of every move, with less work. `noMoves`: plain moves of a unit are left out (deploys,
+ *  attacks and passing stay), unless nothing else is left. */
 function ifelseOptions(t, goals, c, width, keep, score, noMoves) {
-  const side = t.cur, scored = [], all = listActions(t), rest = noMoves && !t.pending ? all.filter(a => a.t !== 'move') : all;
+  const side = t.cur, scored = [], all = listActions(t), rest = noMoves ? all.filter(a => a.t !== 'move') : all;
   for (const a of rest.length ? rest : all) {
     const n = cloneState(t);
     applyAction(n, a);
@@ -143,7 +142,7 @@ function ifelseSearch(t, me, left, level, goals, c, alpha = -Infinity, beta = In
 /** Root-only preferences: killing enemy units (by their worth), and not passing just because the opponent passed. */
 function rootPref(s, o, me, c) {
   let v = 0;
-  if (c.killPref) for (const u of s.units) if (ctl(u) !== me && !byId(o.t, u.id)) v += c.killPref * ifelseWorth(s, u, c);
+  if (c.killPref) for (const u of s.units) if (u.owner !== me && !byId(o.t, u.id)) v += c.killPref * ifelseWorth(s, u, c);
   if (c.passPen && o.a.t === 'pass' && s.passed === other(me)) v -= c.passPen;
   return v;
 }
@@ -163,16 +162,15 @@ function chooseIfelseAction(s, cfg) {
   // rootRound: the first moves are picked by their value after the round end is played out, so a move that pays off
   // only at round end (a round-end strike) is not dropped before the search looks at it
   const left = Math.max(0, Math.round(c.depth) - 1), endScore = c.rootRound ? n => ifelseEnd(n, me, goals, c) : null;
-  for (const o of ifelseOptions(root, goals, c, c.w1, c.skipPointless ? (a, t) => !isPointless(root, a, t, now, c) : null, endScore)) {
+  for (const o of ifelseOptions(root, goals, c, c.w1, c.skipPointless ? (a, t) => !isPointless(root, a, t, now) : null, endScore)) {
     let value = endScore && left === 0 ? o.v : ifelseSearch(o.t, me, left, 2, goals, c, best ? best.value - 2e-6 - prefMax : -Infinity), cost = actionCost(root, o.a);
     value += rootPref(root, o, me, c);
     if (!best || value > best.value + 1e-6 || (Math.abs(value - best.value) <= 1e-6 && cost < best.cost)) best = { a: o.a, value, cost };
   }
-  if (!best && s.pending) return listActions(s)[0];   // a choice must be made even when every option looked pointless
   return best ? best.a : { t: 'pass' };
 }
 
-/** The Random player's move: a kind of move at random (deploy, move, attack, spell, pass...), then one of that kind. */
+/** The Random player's move: a kind of move at random (deploy, move, attack, pass), then one of that kind. */
 function randomMove(options) {
   const kinds = new Map();
   for (const o of options) (kinds.get(o.a.t) || kinds.set(o.a.t, []).get(o.a.t)).push(o);

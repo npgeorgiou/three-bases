@@ -4,7 +4,7 @@ function keywordPanel(k, extra = '', states = []) {
   return keywords.length || refs.length ? `<span class="kwcol ${extra}">${keywords.map(n => `<span class="kwbox"><b>${n}</b>${KEYWORDS[n]}</span>`).join('')}`
     + refs.map(r => `<span class="kwref">${cardHtml(r)}</span>`).join('') + '</span>' : '';
 }
-/** Cards a card's text names (Shade, Abomination, Doux...), each once: shown beside it with its keywords. */
+/** Cards a card's text names, each once: shown beside it with its keywords. */
 /** Cards a card names, each once: linked ({{card:…}}, {{need:…}}) or named by plain name in its text or in its keywords' texts. */
 let NAME_RE = null;
 function cardRefs(k) {
@@ -19,14 +19,12 @@ function cardRefs(k) {
 
 /** Hovering a placed unit: its card, its state this round and its keywords explained. */
 function showUnitTip(u, x, y) {
-  const tip = $('#tip'), key = [u.id, u.card, u.dmg || 0, u.mv || 0, u.attacked ? 1 : 0, strengthOf(u), defenceOf(u), u.blight ? 1 : 0, JSON.stringify(u.kw || {})].join(':');
+  const tip = $('#tip'), key = [u.id, u.card, u.dmg || 0, u.mv || 0, u.attacked ? 1 : 0, strengthOf(u), defenceOf(u)].join(':');
   if (tip.dataset.k !== key) {
     const used = usedThisRound(u);
     const notes = (u.dmg > 0 ? `<div class="dmgnote">${u.dmg} shield${u.dmg > 1 ? 's' : ''} lost</div>` : '')
       + (used.length ? `<div class="dmgnote">This round: ${used.join(', ')}</div>` : '');
-    const printed = keywordsOf(u.card), gained = KW_FLAGS.filter(f => u.kw && u.kw[f] && !printed.includes(KW_NAME[f])).map(f => KW_NAME[f]).filter(n => KEYWORDS[n]);
-    const states = [isBloodied(u) && 'Bloodied', u.blight && 'Blighted', u.tInc && !kw(u, 'incorp') && 'Incorporeal', ...gained].filter(Boolean);
-    const boxes = keywordPanel(u.card, '', states);
+    const boxes = keywordPanel(u.card, '', []);
     tip.innerHTML = `<div class="tipw"><div>${cardHtml(u.card, u)}${notes}</div>${boxes}</div>`;
     tip.dataset.k = key;
   }

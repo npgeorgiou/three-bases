@@ -49,19 +49,9 @@ function updateCarryPreview() {
   }
 }
 
-function cardPlayable(i) {
-  if (game.pending) return false;
-  const k = handCard(i), c = CARDS[k];
-  if (!c.tactic) return LANES.some(l => canDeployInLane(i, l));
-  return spellOptions(game, game.cur, k, false).length > 0;
-}
+const cardPlayable = i => LANES.some(l => canDeployInLane(i, l));
 /** Can hand card i be played in `lane`? */
-function cardFitsLane(i, lane) {
-  if (game.pending) return false;
-  const k = game.players[viewer()].hand[i], c = CARDS[k];
-  if (!c.tactic) return canDeployInLane(i, lane);
-  return spellOptions(game, game.cur, k, false).some(o => spellLane(game, o) === lane);
-}
+const cardFitsLane = (i, lane) => canDeployInLane(i, lane);
 
 function renderHand() {
   const v = viewer(), show = myTurn() || settings.mode === 'ai' || busy;
@@ -111,28 +101,20 @@ function sideTags(p) {
 }
 
 const HELP = {
-  idle: 'Each action is one turn: deploy, move, attack or play a tactic, then the other side acts. Unit actions cost the unit\'s supply. Each lane\'s supply is used in that lane; carry-over works anywhere. Pass when you\'re done; when both sides pass in a row, the round ends. Space = Pass.',
+  idle: 'Each action is one turn: deploy, move or attack, then the other side acts. Unit actions cost the unit\'s supply. Each lane\'s supply is used in that lane; carry-over works anywhere. Pass when you\'re done; when both sides pass in a row, the round ends. Space = Pass.',
   deploy: 'Drag the card into a camp with a blue border, or click a cell there.',
-  lane: 'Hover a lane to see who is affected, then click it.',
-  column: 'Hover a column of an enemy camp, then click it.',
-  own: 'Pick one of your units (orange outline).',
-  enemy: 'Pick an enemy unit (orange outline).',
-  any: 'Pick a unit (orange outline).',
-  throw: 'Click a free cell or a unit in this lane, in either camp, to throw the ally there.',
 };
 const rotateButton = () => `<button data-a="rotate">Rotate` + (ui.o === 'h' ? ' · horizontal' : ui.o === 'v' ? ' · vertical' : '') + '</button>';
-const usedThisRound = u => [(u.mv || 0) > 0 && (u.mv >= maxMoves(u) ? 'moved' : 'moved once'), u.attacked && 'attacked'].filter(Boolean);
+const usedThisRound = u => [u.moved && 'moved', u.attacked && 'attacked'].filter(Boolean);
 
 function selectedUnitHelp(u) {
   const c = cardOf(u), used = usedThisRound(u);
-  if (ui.free) return `<p class="hint"><b>${c.name}</b> selected. Green cells: where it can go, free of charge (R or mouse wheel rotates).</p><div class="btns">${orientationsOf(u).length > 1 ? rotateButton() : ''}</div>`;
-  let text = `<b>${c.name}</b> selected. Each action costs its supply (${unitSupply(u)}). It can move ${maxMoves(u) > 1 ? 'twice' + (c.lightfooted ? ' (the second move is free)' : '') : 'once'} and attack once per round`
+  let text = `<b>${c.name}</b> selected. Each action costs its supply (${unitSupply(u)}). It can move once and attack once per round`
     + (used.length ? ` (already ${used.join(' and ')})` : '') + '. Green cells: where it can move (R or mouse wheel rotates). ';
   text += c.fixed ? 'It can\'t move. ' : '';
   text += strengthOf(u) > 0
     ? `Click an orange-outlined enemy to attack${c.ranged ? ' (ranged: any enemy in this lane)' : ' (melee: the cells around it; from your front row also the enemy front-row cells facing it' + (c.reach ? ', and as a Pike also from your second row' : '') + ')'}; a red outline means it dies. `
     : 'It can\'t attack. ';
-  if (c.thrower) text += 'Click an orange-outlined adjacent ally to throw it instead of attacking. ';
   return `<p class="hint">${text}</p><div class="btns">${orientationsOf(u).length > 1 ? rotateButton() : ''}</div>`;
 }
 
@@ -140,7 +122,6 @@ function renderSide() {
   const sel = selectedUnit();
   let html;
   if (!myTurn()) html = `<p class="hint">${game.winner !== null ? '' : busy && isHuman(game.cur) ? 'Resolving…' : 'The other side is acting.'}</p>`;
-  else if (pend() && !(ui.mode === 'unit' && sel)) html = `<p class="hint">${pendingPrompt(game)}</p>`;
   else if (ui.mode === 'unit' && sel) html = selectedUnitHelp(sel);
   else if (ui.mode) {
     const k = handCard(ui.hi), rotatable = ui.mode === 'deploy' && k && (CARDS[k].size === 2 || CARDS[k].size === 3);
@@ -150,7 +131,6 @@ function renderSide() {
   if (ui.err) html += `<p class="err" role="alert">${ui.err}</p>`;
   $('#panel').innerHTML = html;
   renderPassButton();
-  renderPrompt();
   showToast(ui.err);
 
   $('#log').innerHTML = game.log.slice(0, 40).map(x =>
@@ -164,50 +144,9 @@ function renderSide() {
 }
 
 function renderPassButton() {
-  const b = $('#passBtn'), mine = myTurn(), P = pend();
-  const canDone = P && listActions(game).some(a => a.t === 'done');
-  b.disabled = !mine || (P && !canDone);
-  b.textContent = !mine ? (game.winner !== null ? 'Battle over' : 'Waiting…') : P ? (canDone ? 'Done' : 'Choose…') : game.passed !== null ? 'Pass · end round' : 'Pass';
-}
-
-/** The floating prompt over the board: what a follow-up choice asks for. */
-function renderPrompt() {
-  const el = $('#prompt');
-  let html = '';
-  if (game && myTurn()) {
-    const P = pend();
-    const esc = `<small class="esc">Esc: ${listActions(game).some(a => a.t === 'done') ? 'done' : 'take back'}</small>`;
-    if (P && !(ui.mode === 'unit' && ui.free)) html = `<span>${pendingPrompt(game)}</span>`
-      + listActions(game).map(a => a.t === 'gpick' && !P.pool ? `<button data-p="g" data-k="${a.key}">${CARDS[a.key].name}</button>` : a.t === 'kpick' ? `<button data-p="k" data-f="${a.f}">${KW_NAME[a.f]}</button>` : '').join('')
-      + (listActions(game).some(a => a.t === 'done') ? '<button data-p="done">Done</button>' : '') + esc;
-    else if (P) html = `<span>Click a green cell to move it there.</span><button data-p="done">Done</button><small class="esc">Esc: back</small>`;
-  }
-  renderGravePick();
-  if (html === el.dataset.html) return;
-  el.dataset.html = html;
-  el.innerHTML = html;
-  el.hidden = !html;
-  if (html) {
-    const r = $('#board').getBoundingClientRect();
-    el.style.left = r.left + r.width / 2 + 'px';
-    el.style.top = '2px';
-  }
-}
-
-/** Aurelius' pick: the top units of the discard pile as cards over the board (unavailable ones greyed). */
-function renderGravePick() {
-  const el = $('#gravePick'), P = game && myTurn() ? pend() : null;
-  const pool = P && P.k === 'grave' && P.pool ? P.pool : null;
-  const key = pool ? pool.join() + '|' + P.left : '';
-  if (key === el.dataset.key) return;
-  el.dataset.key = key;
-  el.hidden = !pool;
-  if (!pool) { el.innerHTML = ''; ui.gk = null; return; }
-  const ok = new Set(listActions(game).filter(a => a.t === 'gpick').map(a => a.key));
-  el.innerHTML = pool.map(k => `<button class="gpc" data-k="${k}"${ok.has(k) ? '' : ' disabled'} aria-label="${CARDS[k].name}">${cardHtml(k)}</button>`).join('');
-  const r = $('#board').getBoundingClientRect();
-  el.style.left = r.left + r.width / 2 + 'px';
-  el.style.top = r.top + r.height * 0.27 + 'px';   // over the enemy camps, so your own camp stays in view
+  const b = $('#passBtn'), mine = myTurn();
+  b.disabled = !mine;
+  b.textContent = !mine ? (game.winner !== null ? 'Battle over' : 'Waiting…') : game.passed !== null ? 'Pass · end round' : 'Pass';
 }
 
 /** Refusal reasons show briefly over the board (the info panel may be closed). */

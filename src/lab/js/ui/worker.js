@@ -50,10 +50,10 @@ function labWorker() {
       if (replay) { if (i >= replay.length) break; c = { a: replay[i], random: false }; }   // the library game's next move
       else c = choose(spec, s);
       time[side] += performance.now() - t0; moves[side]++;
-      if (msg.agree && !s.pending) { asked++; if (JSON.stringify(choose(specs[1 - side], s).a) === JSON.stringify(c.a)) same++; }   // would the other AI play the same?
+      if (msg.agree) { asked++; if (JSON.stringify(choose(specs[1 - side], s).a) === JSON.stringify(c.a)) same++; }   // would the other AI play the same?
       if (record && msg.search > 0 && spec.kind === 'net' && spec.net === 'train' && spec.play && spec.play.replies && !c.random && Number.isFinite(c.v)) sv[sv.length - 1] = c.v;   // its search's value of this position
       if (c.random) randoms++;
-      if ((c.a.t === 'deploy' || c.a.t === 'tactic') && s.players[side].hand[c.a.hi]) played[side].push(s.players[side].hand[c.a.hi]);
+      if (c.a.t === 'deploy' && s.players[side].hand[c.a.hi]) played[side].push(s.players[side].hand[c.a.hi]);
       applyAction(s, c.a);
     }
     const out = { type: 'game', key: msg.key, winner: s.winner === null ? 'none' : s.winner, rounds: s.round, randoms, played, asked, same,

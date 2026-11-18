@@ -8,14 +8,14 @@ code paths are relative to src/game/, other paths to the repository root).
   python3 tools/find.py doc <text>             lines in summary/ and factions/ containing the text (case-insensitive)
 
 A keyword's flag is worked out from the card data: the flags shared by every card whose text shows
-[[Keyword]] (e.g. Shield wall -> wall). Card art (js/cards/art.js) is never searched.
+[[Keyword]] (e.g. Pike -> reach). Card art (js/cards/art.js) is never searched.
 """
 import glob, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JS = os.path.join(ROOT, 'src', 'game', 'js')
-CARD_FILES = [os.path.join(JS, 'cards', f + '.js') for f in ('tagma', 'ashfang', 'exanimati')]
-BASE_FIELDS = {'name', 'fac', 'size', 'sup', 'str', 'def', 'art', 'text', 'cost', 'tactic', 'costLabel', 'spell', 'shape'}
+CARD_FILES = sorted(glob.glob(os.path.join(JS, 'cards', 'new-*.js')))
+BASE_FIELDS = {'name', 'fac', 'size', 'sup', 'str', 'def', 'art', 'text', 'cost'}
 W = 130
 
 

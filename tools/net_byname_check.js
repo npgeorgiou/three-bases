@@ -12,8 +12,8 @@ vm.runInContext(code+'\n;globalThis.G={newGame,applyAction,listActions,cloneStat
 // a saved network whose unit-state list differs (one keyword gone, order changed) still loads and keeps its weights by name
 const G=ctx.G;const F3=G.F3;const n=G.net3Create(F3.hidden);const d=G.net3ToData(n);
 const L=G.net3Layout(F3.props.length,F3.hidden),WC=L.blocks.WC.o,CO=F3.CO;n.views&&n.views();const w=Float32Array.from(n.w);
-// old list: without 'kw:ranged', 'moves' moved to the end
-const names=G.F3_UNIT_NAMES,oldNames=[...names.filter(k=>k!=='kw:ranged'&&k!=='moves'),'moves'];
+// old list: without 'kw:ranged', 'deployedNow' moved to the end
+const names=G.F3_UNIT_NAMES,oldNames=[...names.filter(k=>k!=='kw:ranged'&&k!=='deployedNow'),'deployedNow'];
 const csO=20+oldNames.length,Lo=G.net3Layout(F3.props.length,F3.hidden,csO),old=new Float32Array(Lo.total);
 const row=(arr,base,r)=>arr.subarray(base+r*CO,base+(r+1)*CO);
 for(let j=0;j<20;j++)old.set(row(w,WC,j),Lo.blocks.WC.o+j*CO);
@@ -26,4 +26,4 @@ console.log('valid',G.net3Valid(od,F3.hidden));const m=G.net3FromData(od);m.view
 let same=true;oldNames.forEach(k=>{const a=row(m.w,WC,20+names.indexOf(k)),b=row(w,WC,20+names.indexOf(k));for(let i=0;i<CO;i++)if(a[i]!==b[i])same=false;});
 const r0=row(m.w,WC,20+names.indexOf('kw:ranged'));console.log('kept by name',same,'new one starts at zero',r0.every(x=>x===0),'rest same',m.w.subarray(L.blocks.W0.o).every((x,i)=>x===w[L.blocks.W0.o+i]));
 const card=Object.keys(G.CARDS).find(k=>G.CARDS[k].sup&&Number(G.CARDS[k].ranged)===1);
-console.log('keyword worth works',G.kwWorth(null,{card},{})===0&&G.kwWorth(null,{card},{kw_ranged:5})===5);
+console.log('keyword worth works',card?G.kwWorth(null,{card},{})===0&&G.kwWorth(null,{card},{kw_ranged:5})===5:'(no Ranged card in the game)');

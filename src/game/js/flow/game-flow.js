@@ -13,18 +13,11 @@ async function act(action) {
 /** Apply an action and play its animations. */
 async function perform(action) {
   const current = game, round = game.round, side = game.cur;
-  const played = action.t === 'tactic' && game.cur === viewer() ? $('#hand').children[action.hi] : null;
-  spellOrigin = played ? (played.querySelector('.card') || played).getBoundingClientRect() : null;
   aiThinking = false;
   if (forecasting) { forecasting = false; $('#eye').classList.remove('on'); $('#fcWin').hidden = true; }
   busy = true;
-  if (action.t === 'pick' && game.pending && game.pending.src && isHuman(game.cur)) await flashPick(action.tid);
-  if (game !== current) return;
-  const before = isHuman(game.cur) && !game.pending ? structuredClone(game) : null;
   applyAction(game, action);
   if (!replay && game.history) game.history.push(action);
-  if (!game.pending || !isHuman(game.cur)) undoState = null;
-  else if (before) undoState = before;
   const events = game.fx;
   game.fx = [];
   renderSide();
@@ -57,7 +50,7 @@ function afterAction(action) {
     setTimeout(async () => {       // let the last animation settle on screen, then think
       if (game !== current) return;
       const started = performance.now();
-      const idle = game.test && testIdle && !game.pending;   // a test game whose opponent doesn't act
+      const idle = game.test && testIdle;   // a test game whose opponent doesn't act
       const move = idle ? { t: 'pass' } : chooseComputerMove(game);
       await sleep(idle ? 300 : Math.max(0, 1000 - (performance.now() - started)) + (move.t === 'pass' ? 1000 : 0));
       if (game !== current) return;
@@ -67,7 +60,7 @@ function afterAction(action) {
     }, 50);
     return;
   }
-  if (settings.mode === 'hot' && action && !game.pending) { showCover(game.cur); return; }
+  if (settings.mode === 'hot' && action) { showCover(game.cur); return; }
   autoPassIfStuck();
 }
 

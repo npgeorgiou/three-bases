@@ -17,8 +17,9 @@ function play(ref) {  // ref '' = the staged files
 }
 const a = play('HEAD'), b = play('');
 const letters = new Set();
-if (!a || !b) 'cdabsol'.split('').forEach(f => letters.add(f));  // a file that doesn't load: check every faction
+// a file that doesn't load: check every faction of the side that does
+if (!a || !b) for (const c of Object.values(a || b || {})) letters.add(c.fac);
 else for (const k of new Set([...Object.keys(a), ...Object.keys(b)])) {
   if (!a[k] || !b[k] || a[k].sig !== b[k].sig) letters.add((b[k] || a[k]).fac);
 }
-console.log([...letters].filter(f => f && 'cdabsol'.includes(f)).join(' '));
+console.log([...letters].filter(Boolean).join(' '));

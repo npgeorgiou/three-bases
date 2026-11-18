@@ -17,7 +17,7 @@ const PREMADE_SAVED = (() => {
 if (PREMADE_SAVED && PREMADE_SAVED.decks) for (const fac of Object.values(DECKS).map(d => d.fac)) for (let i = 1; i <= PREMADE_PER_FACTION; i++) {
   const id = `p-${fac}${i}`, s = PREMADE_SAVED.decks[id];
   if (!s || !s.cards) continue;
-  const cards = Object.fromEntries(Object.entries(s.cards).filter(([k, n]) => CARDS[k] && !CARDS[k].token && CARDS[k].fac === fac && n > 0));
+  const cards = Object.fromEntries(Object.entries(s.cards).filter(([k, n]) => CARDS[k] && CARDS[k].fac === fac && n > 0));
   const n = Object.values(cards).reduce((a, b) => a + b, 0);
   if (n < 30 || n > 40 || Object.values(cards).some(x => x > 3)) continue;
   const d = PREMADE.find(x => x.id === id);

@@ -14,7 +14,6 @@ function startReplay() {
   replay = { i: 0, playing: false };
   game = structuredClone(lastReplay.start);
   game.fx = [];
-  prevStats = new Map(); animFx = null;
   resetUi(); hideTip();
   busy = false;
   $('#replayBar').hidden = false;
@@ -61,7 +60,7 @@ function replayJump(i) {
   g.fx = [];
   for (let j = 0; j < i; j++) { applyAction(g, lastReplay.actions[j]); g.fx = []; }
   game = g; replay.i = i;
-  $('#fxLayer').innerHTML = ''; stagedSpell = null; animFx = null; prevStats = new Map();
+  $('#fxLayer').innerHTML = '';
   resetUi(); hideTip(); render(); renderReplayBar();
 }
 function exitReplay() {
@@ -74,21 +73,8 @@ function exitReplay() {
   showEnd();
 }
 
-/** The game as it was before a human action that opened a follow-up choice (Esc takes the action back). */
-let undoState = null;
-/** Esc during a follow-up choice: finish it if it may be skipped, otherwise take back the whole action. */
-function exitPending() {
-  if (listActions(game).some(a => a.t === 'done')) { act({ t: 'done' }); return; }
-  if (!undoState) return;
-  game = undoState;
-  undoState = null;
-  resetUi();
-  render();
-  showToast('Taken back.', 'info');
-}
-
 let autoPassTimer = null;
-const onlyPassLeft = () => !game.pending && !listActions(game).some(a => a.t !== 'pass');
+const onlyPassLeft = () => !listActions(game).some(a => a.t !== 'pass');
 function autoPassIfStuck() {
   clearTimeout(autoPassTimer);
   if (!myTurn() || !onlyPassLeft()) return;
@@ -121,7 +107,6 @@ function startGame() {
   replay = null;
   $('#replayBar').hidden = true;
   $('#fxLayer').innerHTML = '';
-  stagedSpell = null; animFx = null; prevStats = new Map();
   const ready = deckStore.decks.filter(x => deckPlayable(x));
   const mine = deckById(deckStore.pick), theirs = deckStore.opp === 'random' ? randomDeck(ready) : deckById(deckStore.opp);
   if (!mine || !theirs || !deckPlayable(mine) || !deckPlayable(theirs)) return;

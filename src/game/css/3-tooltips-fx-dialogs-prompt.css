@@ -28,7 +28,7 @@ body.dragging, body.dragging * { cursor: grabbing !important; }
 .flycard .back { box-shadow: 0 6px 18px rgba(0,0,0,.4); }
 .flyunit { position: fixed; border-radius: 9px; border: 2px solid; transform-origin: 0 0; display: grid; place-items: center; }
 .flyunit .art { width: 50%; height: 50%; }
-.rbanner { position: fixed; transform: translate(-50%,-50%); background: var(--panel); border: 3px solid var(--tl); border-radius: 16px; padding: 14px 34px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,.45); }
+.rbanner { position: fixed; transform: translate(-50%,-50%); background: var(--panel); border: 3px solid var(--accent); border-radius: 16px; padding: 14px 34px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,.45); }
 .rbanner b { display: block; font: 400 44px/1.1 var(--disp); }
 .rbanner span { font-size: 20px; color: var(--muted); }
 
@@ -68,7 +68,6 @@ button.danger { background: transparent; border: 2px solid #B4483C; color: #E07A
 .dli { display: flex; align-items: center; gap: 8px; }
 .dlit { flex: 1; min-width: 0; display: flex; align-items: center; gap: 7px; height: 42px; padding: 0 8px; border-radius: 10px; border: 2px solid;
   background: var(--fill); border-color: var(--line); color: var(--text); text-align: left; }
-.dlit.tac { background: var(--spell); }
 button.dlit:hover { filter: brightness(1.15); }
 .dlit .ico { width: 28px; height: 28px; flex: 0 0 auto; display: block; filter: drop-shadow(0 1px 2px rgba(0,0,0,.5)); }
 .dlit .dn { flex: 1; min-width: 0; font: 400 17px/1.1 var(--disp); overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow-wrap: anywhere; }
@@ -80,7 +79,7 @@ button.dlit:hover { filter: brightness(1.15); }
 /* decks page */
 #deckTiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; }
 .dtile { background: var(--panel); border-radius: 14px; padding: 8px 18px 16px; border-top: 16px solid var(--fill, var(--cellb)); display: flex; flex-direction: column; gap: 8px; }
-.dtile.on { outline: 3px solid var(--tl); }
+.dtile.on { outline: 3px solid var(--accent); }
 .dtile.pickable { cursor: pointer; } .dtile.pickable:hover { filter: brightness(1.04); box-shadow: 0 4px 14px rgba(0,0,0,.18); }
 .dtile b { font: 400 22px var(--disp); }
 .dtile .choice { margin: 4px 0 0; }
@@ -103,10 +102,6 @@ button.dlit:hover { filter: brightness(1.15); }
 .bfac .art { width: 28px; height: 28px; }
 .bfac:hover { opacity: .8; }
 .bfac[aria-pressed="true"] { opacity: 1; box-shadow: 0 0 0 3px var(--ink); }
-.btypes { margin-right: 18px; }
-.btype { height: 42px; padding: 0 14px; border-radius: 10px; border: 2px solid var(--cellb); background: var(--cell); font: 400 18px var(--disp); opacity: .6; }
-.btype:hover { opacity: .85; }
-.btype[aria-pressed="true"] { opacity: 1; box-shadow: 0 0 0 3px var(--ink); }
 .bmode { height: 42px; min-width: 96px; padding: 0 14px; border: none; border-radius: 10px; background: #2E8B47; color: #fff; font-weight: 700; }
 .bmode.ex { background: #B4483C; }
 .sbox { position: relative; display: flex; width: min(520px, 100%); flex: 1 1 260px; }
@@ -133,10 +128,10 @@ button.dlit:hover { filter: brightness(1.15); }
 .dlg h2 { font: 400 30px/1.1 var(--disp); margin: 0 0 6px; }
 .choice { display: flex; gap: 10px; flex-wrap: wrap; margin: 8px 0 16px; }
 .choice button { background: var(--cell); border: 2px solid var(--cellb); border-radius: 10px; padding: 9px 16px; }
-.choice button[aria-pressed="true"] { border-color: var(--tl); }
+.choice button[aria-pressed="true"] { border-color: var(--accent); }
 .choice select { background: var(--cell); border: 2px solid var(--cellb); border-radius: 10px; padding: 9px 12px; color: inherit; font: inherit; max-width: 100%; }
 .go:disabled { opacity: .45; cursor: not-allowed; }
-.go { background: var(--tl); color: var(--tf); border: none; border-radius: 10px; padding: 11px 22px; font-weight: 700; }
+.go { background: var(--accent); color: var(--accent-ink); border: none; border-radius: 10px; padding: 11px 22px; font-weight: 700; }
 #mullCards { display: flex; gap: calc(var(--bs) * 0.9); flex-wrap: wrap; justify-content: center; padding: calc(var(--bs) * 0.6) 8px 8px; }
 #mullGo { margin-top: 34px; }
 .mc { background: none; border: none; padding: 0; position: relative; transition: transform .15s; }
@@ -147,24 +142,4 @@ button.dlit:hover { filter: brightness(1.15); }
 @keyframes swapin { 0% { transform: rotateY(90deg); } 100% { transform: rotateY(0); } }
 .mc .rd { position: absolute; left: 50%; bottom: -26px; transform: translateX(-50%); font-size: 14px; color: var(--muted); white-space: nowrap; }
 
-/* ============ Follow-up prompt (picks, free moves, X cost) ============ */
-#prompt { position: fixed; transform: translateX(-50%); z-index: 260; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center;
-  max-width: 94vw; white-space: nowrap; background: rgba(20,24,30,.95); color: #fff; border: 2px solid var(--tl); border-radius: 10px; padding: 2px 10px;
-  font-size: 14px; box-shadow: 0 6px 20px rgba(0,0,0,.3); animation: promptin .25s ease-out; }
-#prompt span { margin-right: 4px; }
-#prompt .esc { opacity: .65; font-size: 12px; margin-left: 4px; }
-#prompt button { background: var(--tl); color: var(--tf); border: none; border-radius: 7px; padding: 2px 9px; font-weight: 700; min-width: 30px; }
-#prompt button:hover { filter: brightness(1.12); transform: translateY(-1px); }
-@keyframes promptin { from { opacity: 0; transform: translate(-50%, -6px); } to { opacity: 1; transform: translate(-50%, 0); } }
-/* Aurelius: the units it may resurrect, shown as cards over the board */
-#gravePick { position: fixed; z-index: 255; transform: translate(-50%, -50%); display: flex; gap: calc(var(--bs) * 1.25); padding: calc(var(--bs) * 0.6) 18px 16px;
-  background: rgba(16,18,22,.82); border: 2px solid var(--tl); border-radius: 16px; box-shadow: 0 12px 34px rgba(0,0,0,.5); animation: promptin .25s ease-out; }
-#gravePick .gpc { background: none; border: 0; padding: 0; transition: transform .14s ease-out; }
-#gravePick .gpc:hover:not(:disabled) { transform: translateY(-8px); }
-#gravePick .gpc:hover:not(:disabled) .card { box-shadow: 0 0 0 3px #fff; }
-#gravePick .gpc:disabled { cursor: default; }
-#gravePick .gpc:disabled .card { filter: grayscale(.9); opacity: .45; }
-#board .colhl { fill: rgba(224,64,47,.16); stroke: #E0402F; stroke-width: 2; stroke-dasharray: 5 4; }
-#board .colhl.no { fill: none; stroke: var(--muted); }
-.blocknum { position: fixed; color: #fff; background: #3A6FB0; border-radius: 8px; font-weight: 700; font-size: 13px; padding: 2px 6px; z-index: 250; pointer-events: none; display: grid; place-items: center; }
 @media (prefers-reduced-motion: reduce) { .cardbtn { transition: none; } }

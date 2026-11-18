@@ -27,7 +27,7 @@ const harness = `
     for (const p of [0, 1]) aiMulligan(s, p);
     s.redrawDone = true;
     for (let i = 0; i < 400 && s.winner === null && out.length < n; i++) {
-      if (i % 9 === 5 && !s.pending) out.push(cloneState(s));
+      if (i % 9 === 5) out.push(cloneState(s));
       applyAction(s, chooseIfelseAction(s, { ...BENCH_VALUES, depth: 1 }));
     }
   }

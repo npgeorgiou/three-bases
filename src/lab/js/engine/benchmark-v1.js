@@ -14,13 +14,13 @@ function unitValue(u) {
 function threatAgainst(s, victim) {
   const attacker = other(victim), reserve = s.players[attacker].reserve;
   let loss = 0;
-  for (const u of s.units.filter(x => ctl(x) === victim)) {
+  for (const u of s.units.filter(x => x.owner === victim)) {
     const budget = s.pool[attacker][u.lane] + reserve;
     let best = 0;
     for (const a of unitsIn(s, attacker, u.lane)) {
       const c = cardOf(a);
       if (strengthOf(a) <= 0 || budget < c.sup) continue;
-      if (!isIncorp(u) && reaches(a, u)) best = Math.max(best, strengthOf(a));
+      if (reaches(a, u)) best = Math.max(best, strengthOf(a));
     }
     loss += best >= defenceOf(u) ? unitValue(u) * 0.6 : best * 2;
   }
@@ -73,7 +73,7 @@ function evaluationTerms(s, p) {
   const danger = side => {
     const carry = s.carried ? s.carried[side] : projectedCarry(s, side);
     if (carry > 0) return 0;
-    const n = s.units.filter(u => ctl(u) === side).length;
+    const n = s.units.filter(u => u.owner === side).length;
     return n === 0 ? 1000 : n === 1 ? 300 : n === 2 ? 100 : 0;
   };
   t.lifeline = danger(q) - danger(p);

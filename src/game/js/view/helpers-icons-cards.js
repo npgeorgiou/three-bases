@@ -34,7 +34,7 @@ const artSvg = key => `<svg viewBox="0 0 100 100" class="art" aria-hidden="true"
 /** A card's icon (inner SVG): one glyph per card; every unit has a glyph of its own. */
 const artInner = k => `<path d="${ART[CARDS[k].art]}"/>`;
 const cardArt = k => `<svg viewBox="0 0 100 100" class="art" aria-hidden="true">${artInner(k)}</svg>`;
-const deckArt = fac => artSvg(FAC_GLYPH[fac] || 'shield');
+const deckArt = fac => artSvg(FAC_ART[fac]);
 
 /* ---------- keywords ---------- */
 const KEYWORD_RE = /\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g;
@@ -59,10 +59,10 @@ function statBadge(kind, n) {
   return `<svg viewBox="0 0 24 24" class="ico bdg sq k-${kind}" aria-label="${n}"><rect class="b" x="1.5" y="1.5" width="21" height="21" rx="6"/>`
     + `<text x="12" y="12" dy=".36em" class="numc w" font-size="${digits(n) > 1 ? 11 : 15}">${n}</text></svg>`;
 }
-/** Bread with a number: yellow for supply, red for a tactic's cost. */
-function supplyBadge(n, isCost) {
-  return `<svg viewBox="0 0 24 24" class="ico bdg k-${isCost ? 'cost' : 'sup'}" aria-label="${n}"><path class="b" d="${BREAD_PLAIN}"/>`
-    + `<text x="12" y="12.9" dy=".36em" class="numc${isCost ? ' lt' : ''}" font-size="${digits(n) > 1 ? 10 : 13}">${n}</text></svg>`;
+/** Bread with a number: a card's supply. */
+function supplyBadge(n) {
+  return `<svg viewBox="0 0 24 24" class="ico bdg k-sup" aria-label="${n}"><path class="b" d="${BREAD_PLAIN}"/>`
+    + `<text x="12" y="12.9" dy=".36em" class="numc" font-size="${digits(n) > 1 ? 10 : 13}">${n}</text></svg>`;
 }
 /** Small picture of a unit's shape. */
 function shapeMini(card) {
@@ -80,7 +80,7 @@ const cornerStat = (pos, kind, n, ref = n) => `<span class="cs ${pos} k-${kind}$
 let textSide = null;
 function cardText(c, u) {
   const bonus = u ? strengthOf(u) - printedStr(u) : 0, up = n => (bonus > 0 ? `<b class="hup">${n}</b>` : n);
-  const side = u && game ? ctl(u) : textSide, live = side !== null && game;
+  const side = u && game ? u.owner : textSide, live = side !== null && game;
   // {{need:k}}: whether that card is in the discard pile now
   const text = c.text.replace(/\{\{need:(\w+)\}\}/g, (m, k) => {
     const name = CARDS[k].name.split(' ')[0];
@@ -89,18 +89,14 @@ function cardText(c, u) {
   return keywordHtml(text.replace(/\{\{(\d+|\+)\}\}/g, (m, n) => (n === '+' ? (bonus > 0 ? `, plus ${up(bonus)}` : '') : up(Math.max(0, +n + bonus)))));
 }
 /** Leaders get a golden border (card and unit). */
-const isLeader = k => !!(CARDS[baseKey(k)] && CARDS[baseKey(k)].leader);
+const isLeader = k => !!(CARDS[k] && CARDS[k].leader);
 const bbCls = k => (isLeader(k) ? ' leader' : '');
 function cardHtml(k, u) {
   const c = CARDS[k];
   const text = c.text ? `<span class="ab">${cardText(c, u)}</span>` : '';
-  if (c.tactic) {
-    return `<div class="card f-${c.fac} tac${bbCls(k)}">${corner('tm', supplyBadge(c.costLabel || c.cost, true))}`
-      + `<span class="nm">${c.name}</span>${cardArt(k)}${text}</div>`;
-  }
   return `<div class="card f-${c.fac}${bbCls(k)}">${corner('tm', supplyBadge(c.sup))}`
-    + (c.str || (c.mods && c.mods.ps) ? cornerStat('tl', 'str', Math.max(0, c.str + ((c.mods && c.mods.ps) || 0)), c.str) : '')
-    + (c.def ? cornerStat('tr', 'def', Math.max(1, c.def + ((c.mods && c.mods.pd) || 0)), c.def) : '')
+    + (c.str ? cornerStat('tl', 'str', c.str, c.str) : '')
+    + (c.def ? cornerStat('tr', 'def', c.def, c.def) : '')
     + `<span class="shape">${shapeMini(c)}</span><span class="nm">${c.name}</span>${cardArt(k)}${text}</div>`;
 }
 

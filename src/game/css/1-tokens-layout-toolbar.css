@@ -7,10 +7,7 @@
   --plate: #5E5647; --platec: #7A705E; --ink: #ECE6DA; --muted: #A9A396;
   --act: #2E3441; --danger: #E0674F; --ok: #8BC48A;
   --bme: #4C6A4D; --bmel: #82A47F; --bop: #77473F; --bopl: #B27B6E;   /* base held: you (bottom), opponent (top) */
-  --tf: #4A2560; --tl: #D8B24A; --ti: #F4E7C2;   /* Tagma: fill, line, ink */
-  --hf: #6C2A1C; --hl: #E0D0AE; --hi: #F5ECDB;   /* Horde: fill, line, ink */
-  --xf: #132225; --xl: #A8DCCB; --xi: #E3F2EE;   /* Exanimati: fill, line, ink */
-  --ts: #6B4384; --hs: #8E4634; --xs: #2D4A4F;   /* spells: a lighter shade of each faction's fill */
+  --accent: #D8B24A; --accent-ink: #4A2560;   /* buttons, focus rings, highlights */
   --str: #E07B1A; --def: #2D6BCB; --up: #2E9E4F; --down: #C8372D;
   --bread: #E9C46A; --cost: #D9443A; --iline: #1C1712;
   --edge: #2a2530; --edge2: #6d6272;
@@ -35,7 +32,7 @@
 html, body { height: 100%; margin: 0; overflow: hidden; }
 body { background: var(--bg); color: var(--ink); font: 18px/1.4 var(--body); }
 button { font: inherit; color: inherit; cursor: pointer; }
-button:focus-visible { outline: 3px solid var(--tl); outline-offset: 2px; }
+button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 [hidden] { display: none !important; }
 
 /* ============ Layout ============ */
@@ -77,34 +74,8 @@ button:focus-visible { outline: 3px solid var(--tl); outline-offset: 2px; }
 .eye circle { fill: #3F8EF0; stroke: var(--ink); stroke-width: 1.2; }
 .eye .pupil { fill: #111; stroke: none; }
 .eye:hover, .eye.on { border-color: #3F8EF0; color: var(--ink); box-shadow: 0 0 0 3px rgba(63,142,240,.35); }
-.spellslot { width: calc(var(--cw) + 30px); height: 40px; margin-left: 15px; border: 2px dashed var(--cellb); border-radius: 12px; display: grid; place-items: center; font-size: 12px; color: var(--muted); }
-.spellcard { position: fixed; z-index: 255; width: var(--cw); height: var(--ch); perspective: 900px; }
-.spellcard .flip { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; }
-.spellcard .face { position: absolute; inset: 0; backface-visibility: hidden; }
-.spellcard .backface { transform: rotateY(180deg); }
-.spellcard .back { width: 100%; height: 100%; }
-.spellcard .card { box-shadow: 0 10px 30px rgba(0,0,0,.5); transition: box-shadow .3s; }
-.spellcard.cast .card { box-shadow: 0 0 0 4px #F5C518, 0 0 34px 10px rgba(245,197,24,.65); }
-
-/* ============ Faction colours (cards, backs, units, flyers) ============ */
-.f-t { --fill: var(--tf); --line: var(--tl); --text: var(--ti); --spell: var(--ts); }
-.f-h { --fill: var(--hf); --line: var(--hl); --text: var(--hi); --spell: var(--hs); }
-.f-x { --fill: var(--xf); --line: var(--xl); --text: var(--xi); --spell: var(--xs); }
-.f-c { --fill: #2E3A46; --line: #D9B45A; --text: #F4ECD6; --spell: #44546A; }   /* Horologers */
-.f-d { --fill: #241E22; --line: #F29A2E; --text: #FBE7CF; --spell: #3E3036; }   /* Sunfeeders */
-.f-a { --fill: #6A3E1E; --line: #F2C78A; --text: #FBEEDC; --spell: #885530; }   /* Impi */
-.f-b { --fill: #6B1E24; --line: #F4F1EA; --text: #FFF6F0; --spell: #8A2F36; }   /* Hospice Knights */
-.f-s { --fill: #1E2F6E; --line: #F2CC5C; --text: #F1EEDD; --spell: #2E4594; }   /* Star Priests */
-.f-o { --fill: #2F4A26; --line: #B8D98A; --text: #EDF5E2; --spell: #43663A; }   /* Rootkin */
-.f-l { --fill: #474A42; --line: #CFC08A; --text: #EEEBDD; --spell: #61655A; }   /* Long Guns */
-.unit.ghost > .ubody { fill-opacity: .62; stroke-dasharray: 5 3; }
-.unit.ghost > .uart { opacity: .7; }
-.unit .ctlmark { fill: none; stroke-width: 3.5; pointer-events: none; }
-.unit .ctlmark.me { stroke: var(--bmel); }
-.unit .ctlmark.op { stroke: var(--bopl); }
-.unit .stm { stroke: rgba(0,0,0,.55); stroke-width: 1.5; pointer-events: none; }
-.unit .stm.plague { fill: #8BC34A; }
-.unit .stm.blight { fill: #8A6A3B; }
+/* ============ Faction colours (cards, backs, units, flyers): one line per faction ============
+   .f-<letter> { --fill: …; --line: …; --text: … } */
 .back, .oback, .flyunit { background: var(--fill); border-color: var(--line); }
 .art path, .uart path { fill: none; stroke: var(--line); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
 
@@ -140,15 +111,15 @@ button:focus-visible { outline: 3px solid var(--tl); outline-offset: 2px; }
 .line { font-size: 16px; color: var(--muted); }
 .line b { font: 400 19px var(--disp); color: var(--ink); margin-right: 4px; }
 .tagp { font-size: 13px; border-radius: 6px; padding: 1px 7px; margin-left: 6px; background: var(--cell); }
-.tagp.go1 { background: var(--tl); color: var(--tf); }
+.tagp.go1 { background: var(--accent); color: var(--accent-ink); }
 .hint { margin: 0; color: var(--muted); }
 .hint b { color: var(--ink); }
 .err { margin: 0; color: var(--danger); }
 .btns { display: flex; flex-wrap: wrap; gap: 8px; }
 .btns button { background: var(--cell); border: 1px solid var(--cellb); border-radius: 8px; padding: 6px 11px; }
-.btns button:hover { border-color: var(--tl); }
+.btns button:hover { border-color: var(--accent); }
 .btns .quiet { background: none; }
-.btns .go { background: var(--tl); color: var(--tf); border: none; font-weight: 700; }
+.btns .go { background: var(--accent); color: var(--accent-ink); border: none; font-weight: 700; }
 details summary { cursor: pointer; font: 400 19px var(--disp); }
 details ul { padding-left: 18px; margin: 6px 0 0; font-size: 16px; }
 .logtitle { font: 400 19px var(--disp); margin: 0 0 4px; }

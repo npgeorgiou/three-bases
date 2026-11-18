@@ -17,7 +17,7 @@ const deckStore = (() => {
   // new premade lists replace the stored copies of the premade decks (the player's own decks are kept)
   const savedStamp = (PREMADE_SAVED && PREMADE_SAVED.stamp) || '';   // decks saved from the AI lab, or the built-in lists again
   if (st.preVer !== PREMADE_VERSION || (st.preSaved || '') !== savedStamp) { st.preSaved = savedStamp; for (const d of PREMADE) { const i = st.decks.findIndex(x => x.id === d.id); if (i >= 0) st.decks[i] = copy(d); else st.decks.push(copy(d)); } st.preVer = PREMADE_VERSION; }
-  for (const d of st.decks) for (const k of Object.keys(d.cards)) if (!CARDS[k] || CARDS[k].token || !FAC_DECK[CARDS[k].fac]) delete d.cards[k];
+  for (const d of st.decks) for (const k of Object.keys(d.cards)) if (!CARDS[k] || !FAC_DECK[CARDS[k].fac]) delete d.cards[k];
   // premade decks of factions no longer in the game are dropped
   st.decks = st.decks.filter(d => !d.id.startsWith('p-') || PREMADE.some(x => x.id === d.id));
   if (!st.decks.some(d => d.id === st.pick)) st.pick = (PREMADE[0] || {}).id || null;
@@ -38,8 +38,8 @@ function setTestGames(on) { testGames = on; try { localStorage.setItem(TEST_STOR
 const deckPlayable = d => (testGames ? deckCount(d) > 0 : deckReady(d));
 const deckById = id => deckStore.decks.find(d => d.id === id) || null;
 const facName = f => (f && FAC_DECK[f] ? DECKS[FAC_DECK[f]].name : 'No faction yet');
-/** Deck order: cost (a unit's supply, a tactic's cost), then strength, then defence, then name. */
-const cardCost = c => (c.tactic ? (typeof c.cost === 'number' ? c.cost : 0) : c.sup);
+/** Deck order: cost (a unit's supply), then strength, then defence, then name. */
+const cardCost = c => c.sup;
 const byDeckOrder = (a, b) => {
   const A = CARDS[a], B = CARDS[b];
   return cardCost(A) - cardCost(B) || A.name.localeCompare(B.name);
@@ -53,10 +53,10 @@ function dliShape(card) {
 /** A card drawn as an oblong deck-list-item; as a button when it can be clicked. */
 function deckItemHtml(k, n, clickable) {
   const c = CARDS[k], tag = clickable ? 'button' : 'div';
-  const inner = (c.tactic ? supplyBadge(c.costLabel || c.cost, true) : supplyBadge(c.sup))
-    + `<span class="dn">${c.name}</span>${cardArt(k)}${c.tactic ? '' : dliShape(c)}`
+  const inner = supplyBadge(c.sup)
+    + `<span class="dn">${c.name}</span>${cardArt(k)}${dliShape(c)}`
     + (c.str ? statBadge('str', c.str) : '') + (c.def ? statBadge('def', c.def) : '');
-  return `<div class="dli"><${tag} class="dlit f-${c.fac}${c.tactic ? ' tac' : ''}${c.leader ? ' leader' : ''}" data-k="${k}"${clickable ? `` : ''}>${inner}</${tag}><span class="dc">×${n}</span></div>`;
+  return `<div class="dli"><${tag} class="dlit f-${c.fac}${c.leader ? ' leader' : ''}" data-k="${k}"${clickable ? `` : ''}>${inner}</${tag}><span class="dc">×${n}</span></div>`;
 }
 const deckListHtml = (d, clickable) => {
   const keys = Object.keys(d.cards).filter(k => d.cards[k] > 0).sort(byDeckOrder);
@@ -120,8 +120,9 @@ function deleteDeck(id) {
 /* ---------- deck builder ---------- */
 let edit = null;   // { id, name, cards, dirty }
 /** Each faction's symbol (an existing card art) and the factions the card list shows (none picked: all). */
-const FAC_ART = { ...FAC_GLYPH };
-const bFacs = new Set(), dFacs = new Set(), bTypes = new Set();   // bTypes: 'u' units, 's' spells (none picked: both)
+/** Each faction's glyph (an ART key), one line per faction. */
+const FAC_ART = {};
+const bFacs = new Set(), dFacs = new Set();
 let bExclude = false;   // search toggle: include (green) or exclude (red) the matches   // the builder's and the decks page's faction filters
 function openBuilder(id) {
   const d = id ? deckById(id) : null;
@@ -138,10 +139,9 @@ function renderBuilder() {
   $('#bDel').hidden = !edit.id;
   $('#bClear').hidden = !$('#bSearch').value;
   const total = deckCount(edit), terms = $('#bSearch').value.toLowerCase().split(',').map(t => t.trim()).filter(Boolean);
-  const shown = k => (!bTypes.size || bTypes.has(CARDS[k].tactic ? 's' : 'u')) && (!terms.length || terms.some(t => cardMatches(k, t)) !== bExclude);
+  const shown = k => (!terms.length || terms.some(t => cardMatches(k, t)) !== bExclude);
   const facs = Object.values(FAC_DECK).map(key => DECKS[key]);
   $('#bFacs').innerHTML = facs.map(D => `<button class="bfac f-${D.fac}" data-fac="${D.fac}" aria-pressed="${bFacs.has(D.fac)}">${artSvg(FAC_ART[D.fac])}${D.name}</button>`).join('');
-  $('#bTypes').innerHTML = [['u', 'Units'], ['s', 'Spells']].map(([t, n]) => `<button class="btype" data-t="${t}" aria-pressed="${bTypes.has(t)}">${n}</button>`).join('');
   $('#bMode').classList.toggle('ex', bExclude); $('#bMode').textContent = bExclude ? 'Exclude' : 'Include'; $('#bMode').setAttribute('aria-pressed', bExclude);
   $('#bCards').innerHTML = (facs.filter(D => !bFacs.size || bFacs.has(D.fac)).map(D => {
     const keys = Object.keys(CARDS).filter(k => CARDS[k].fac === D.fac && !CARDS[k].token && !CARDS[k].base && shown(k)).sort(byDeckOrder);
@@ -194,7 +194,6 @@ function setupDeckPages() {
   $('#editDeckBtn').addEventListener('click', () => { if (deckById(deckStore.pick)) { builderReturn = '#setup'; openBuilder(deckStore.pick); } });
   $('#endEditBtn').addEventListener('click', () => { if (!deckById(deckStore.pick)) return; $('#endDlg').hidden = true; builderReturn = '#setup'; openBuilder(deckStore.pick); });
   $('#bEmpty').addEventListener('click', () => { if (!deckCount(edit)) return; edit.cards = {}; edit.dirty = true; renderBuilder(); });
-  $('#bTypes').addEventListener('click', e => { const b = e.target.closest('.btype'); if (!b) return; const t = b.dataset.t; if (bTypes.has(t)) bTypes.delete(t); else bTypes.add(t); renderBuilder(); });
   $('#bMode').addEventListener('click', () => { bExclude = !bExclude; renderBuilder(); });
   $('#decksNew').addEventListener('click', () => { builderReturn = '#decksPage'; openBuilder(null); });
   $('#decksBack').addEventListener('click', () => { showPage('#setup'); renderHome(); });

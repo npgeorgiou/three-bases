@@ -33,7 +33,7 @@ const netPresets = n => [                      // (the reply-check version was r
 /** The players. */
 const PRESETS = [
   { id: 'bench', name: 'Benchmark', kind: 'bench', desc: 'The game\'s AI. Sees the opponent\'s hand.' },
-  { id: 'random', name: 'Random player', kind: 'random', desc: 'A baseline. Picks a kind of move at random (deploy, move, attack, spell or pass), then a move of that kind.' },
+  { id: 'random', name: 'Random player', kind: 'random', desc: 'A baseline. Picks a kind of move at random (deploy, move, attack or pass), then a move of that kind.' },
   { id: 'ifelse', name: 'ifelse AI', kind: 'ifelse', desc: 'Sees both hands and searches the real position; every judgement is a weighted term, with the values found by its tuning (the starting values until it finds better).',
     get cfg() { return ifelseAsTuned(); } },
   ...NETS.flatMap(netPresets),

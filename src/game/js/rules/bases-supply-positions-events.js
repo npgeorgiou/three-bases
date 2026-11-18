@@ -5,7 +5,7 @@ function dotState(s, lane) {
   for (const u of s.units) {
     if (u.lane !== lane) continue;
     const fr = frontRow(u.owner);
-    for (const cell of cellsOf(u)) if (cell[0] === fr) { if (ctl(u) === 0) m0 |= 1 << cell[1]; else m1 |= 1 << cell[1]; }
+    for (const cell of cellsOf(u)) if (cell[0] === fr) { if (u.owner === 0) m0 |= 1 << cell[1]; else m1 |= 1 << cell[1]; }
   }
   const out = new Array(COLS);
   for (let c = 0; c < COLS; c++) {
@@ -27,12 +27,6 @@ function pay(s, lane, n) {
   pool[lane] -= fromLane;
   s.players[s.cur].reserve -= n - fromLane;
 }
-/** Adds supply to a lane this round, never above LANE_SUPPLY_MAX; returns what was added. */
-function gainSupply(s, p, lane, n, start = true) {
-  const add = Math.max(0, Math.min(n, LANE_SUPPLY_MAX - s.pool[p][lane]));
-  s.pool[p][lane] += add; if (start) s.poolStart[p][lane] += add;
-  return add;
-}
 const carryOrder = p => (p === 0 ? [0, 1, 2] : [2, 1, 0]);
 
 /** Carry-over p would have next round if the round ended now. */
@@ -47,37 +41,6 @@ function projectedCarry(s, p) {
   return reserve;
 }
 
-/* ---------- positioning effects (recomputed whenever units change) ---------- */
-/** Cards whose position effects applyAuras computes (the others are skipped there). */
-const AURA_CARDS = new Set(Object.keys(CARDS).filter(k => ['wall', 'rowAura', 'frontBuff', 'bleed', 'gorged', 'shadeAura', 'overseer', 'pack', 'skirm', 'adjAura'].some(f => CARDS[k][f])));
-function applyAuras(s) {
-  const units = s.units, before = units.map(u => u.bd || 0);
-  for (const u of units) { u.bs = 0; u.bd = 0; }
-  for (const u of units) {
-    if (!AURA_CARDS.has(baseKey(u.card))) continue;
-    const c = cardOf(u);
-    if (c.wall) u.bd += targetsOf(s, u, 'wall').length;
-    if (c.rowAura) for (const a of targetsOf(s, u, 'rowAura')) { a.bs += c.rowAura.s; a.bd += c.rowAura.d; }
-    if (c.frontBuff && targetsOf(s, u, 'frontBuff').length) u.bs += c.frontBuff;
-    if (c.bleed) u.bs += Math.max(0, u.dmg || 0);
-    if (c.gorged) u.bs += Math.max(0, (u.pd || 0) - (u.dmg || 0));
-    if (c.shadeAura) for (const a of targetsOf(s, u, 'shadeAura')) { a.bs += 1; a.bd += 1; }
-    if (c.overseer) for (const a of targetsOf(s, u, 'overseer')) { a.bs += 1; a.bd += 1; }
-    if (c.pack || c.skirm || c.adjAura) {
-      const near = adjacentAllies(s, u);
-      if (c.pack) u.bs += c.pack * near.length;
-      if (c.skirm && !near.length) u.bd += c.skirm;
-      if (c.adjAura) for (const a of near) { a.bs += c.adjAura.s; a.bd += c.adjAura.d; }
-    }
-  }
-  fxAuras(s);
-  // a lost defence bonus never takes shields away: defence left = min(what it had, its defence without the bonus)
-  for (let i = 0; i < units.length; i++) {
-    const u = units[i], lost = before[i] - u.bd;
-    if (lost > 0 && u.dmg > 0) u.dmg = Math.max(0, u.dmg - lost);
-  }
-}
-
 /* ---------- state, log and animation events ---------- */
 function newGame(deck0, deck1, test = false) {
   const first = Math.random() < 0.5 ? 0 : 1;   // who acts first in round 1 is random
@@ -87,10 +50,10 @@ function newGame(deck0, deck1, test = false) {
   });
   const s = {
     players: [player(deck0), player(deck1)], units: [], nid: 1,
-    round: 1, turn: 1, starter: first, cur: first, passed: null, actor: null, pending: null,
+    round: 1, turn: 1, starter: first, cur: first, passed: null, actor: null,
     owner: [null, null, null], ownerStart: [null, null, null], winner: null, quietRounds: 0, acts: 0,
     pool: [[0, 0, 0], [0, 0, 0]], poolStart: [[0, 0, 0], [0, 0, 0]],
-    log: [], fx: [], ev: [], test,
+    log: [], fx: [], test,
   };
   drawCards(s, 0, START_HAND);
   drawCards(s, 1, START_HAND);
@@ -128,7 +91,7 @@ function log(s, msg) {
 
 function snapshot(s) {
   return JSON.parse(JSON.stringify({
-    units: s.units, tombs: s.tombs || [], resNow: (s.resStack || []).slice(-1)[0], owner: s.owner, ownerStart: s.ownerStart, pool: s.pool, poolStart: s.poolStart,
+    units: s.units, owner: s.owner, ownerStart: s.ownerStart, pool: s.pool, poolStart: s.poolStart,
     cur: s.cur, round: s.round, starter: s.starter, passed: s.passed,
     players: s.players.map(P => ({ deck: P.deck, discard: P.discard, reserve: P.reserve, drawN: P.draw.length, handN: P.hand.length })),
   }));
@@ -136,7 +99,6 @@ function snapshot(s) {
 /** Queue an animation event with a snapshot of the state at that moment. */
 function emit(s, event) {
   if (s.noFx) return;
-  if (event.hit) event.grp = s.grp || 0;   // hits of one step share a group: the screen plays them at once
   event.snap = snapshot(s);
   s.fx.push(event);
 }

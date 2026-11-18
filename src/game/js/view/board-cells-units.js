@@ -15,8 +15,7 @@ function drawCampCells(svg, B, p, lane) {
   // one merged cell under each unit
   for (const u of B.units) if (u.owner === p && u.lane === lane) {
     const [x0, y0, w, h] = unitRect(u), cls = 'mcell' + (inFront(u) ? ' frontrow' : '');
-    if (cellsOf(u).length !== (w / CELL) * (h / CELL)) svgEl('path', { d: shapeOutline(u, 2), class: cls }, svg);   // a non-rectangular shape
-    else svgEl('rect', { x: x0 + 2, y: y0 + 2, width: w - 4, height: h - 4, rx: 6, class: cls }, svg);
+    svgEl('rect', { x: x0 + 2, y: y0 + 2, width: w - 4, height: h - 4, rx: 6, class: cls }, svg);
   }
 }
 
@@ -74,11 +73,9 @@ function drawBase(svg, B, lane) {
 }
 
 /** A number badge on a unit: 'str' / 'def' / 'empty' squares or a 'sup' bread; tone 'up' (green) or 'down' (red). */
-const SHIELD = 'M12 1L22.5 4.5V11.5C22.5 17.5 17.8 21.3 12 23C6.2 21.3 1.5 17.5 1.5 11.5V4.5Z';
-function unitBadge(g, kind, x, y, size, n, textClass, tone, shield) {
+function unitBadge(g, kind, x, y, size, n, textClass, tone) {
   const icon = svgEl('svg', { x, y, width: size, height: size, viewBox: '0 0 24 24', class: 'ico bdg sq k-' + kind + (tone ? ' ' + tone : '') }, g);
   if (kind === 'sup') svgEl('path', { class: 'b', d: BREAD_PLAIN }, icon);
-  else if (shield) svgEl('path', { class: 'b', d: SHIELD }, icon);
   else svgEl('rect', { class: 'b', x: 1, y: 1, width: 22, height: 22, rx: 5 }, icon);
   const text = svgEl('text', { x: 12, y: kind === 'sup' ? 12.9 : 12, dy: '.36em',
     class: 'numc' + (kind === 'sup' ? '' : ' w') + ' ' + textClass, 'font-size': digits(n) > 1 ? 12 : 16 }, icon);
@@ -87,11 +84,6 @@ function unitBadge(g, kind, x, y, size, n, textClass, tone, shield) {
 /** Green if a stat is above its reference, red if below, plain otherwise. */
 const tone = (n, ref) => (n > ref ? 'up' : n < ref ? 'down' : '');
 
-/** Green rings burst from a stat badge that just went up. */
-function gainPuff(g, badge) {
-  const x = +badge.getAttribute('x'), y = +badge.getAttribute('y'), w = +badge.getAttribute('width');
-  for (let i = 0; i < 2; i++) svgEl('circle', { cx: x + w / 2, cy: y + w / 2, r: w / 2 + 1, class: 'puff gainp', style: `animation-delay:${i * 140}ms` }, g);
-}
 function drawSpawnBurst(g, x0, y0, w, h) {
   const cx = x0 + w / 2, cy = y0 + h / 2, r = Math.max(w, h) / 2;
   for (let i = 0; i < 3; i++) svgEl('circle', { cx, cy, r, class: 'puff', style: `animation-delay:${i * 110}ms` }, g);
@@ -141,22 +133,15 @@ function drawMark(svg, u, role) {
  * ref: the values its stats are compared with for colour (default: the printed card; in a preview: the current values).
  */
 function drawUnit(svg, u, extraClasses = '', ref = null) {
-  let [x0, y0, w, h] = unitRect(u);
+  const [x0, y0, w, h] = unitRect(u);
   const c = cardOf(u);
-  const cls = ['unit', 'f-' + c.fac, !canMoveAgain(u) && 'nomove', !canAttackAgain(u) && 'noatk', isIncorp(u) && 'ghost', isLeader(u.card) && 'leader']
+  const cls = ['unit', 'f-' + c.fac, u.moved && 'nomove', u.attacked && 'noatk', isLeader(u.card) && 'leader']
     .filter(Boolean).join(' ') + extraClasses;
-  const g = svgEl('g', { class: cls, 'data-id': u.id }, svg);
-  if (u.sh && cellsOf(u).length !== (w / CELL) * (h / CELL)) {
-    // an amorphous (non-rectangular) unit: one outlined body; badges and art in its own cell
-    svgEl('path', { d: shapeOutline(u, 2), class: 'ubody' }, g);
-    const own = cellsOf(u).map(([r, c]) => cellXY(u.lane, u.owner, r, c)).sort((a, b) => a[1] - b[1] || a[0] - b[0])[0];   // its top-left cell on screen
-    [x0, y0, w, h] = [...own, CELL, CELL];
-  } else svgEl('rect', { x: x0 + 2, y: y0 + 2, width: w - 4, height: h - 4, rx: 6, class: 'ubody' }, g);
+  const g = svgEl('g', { class: cls, 'data-id': u.id, 'data-owner': u.owner, 'data-card': u.card }, svg);
+  svgEl('rect', { x: x0 + 2, y: y0 + 2, width: w - 4, height: h - 4, rx: 6, class: 'ubody' }, g);
   // Immobile: a dashed inner border
   if (kw(u, 'fixed')) svgEl('rect', { x: x0 + 7, y: y0 + 7, width: w - 14, height: h - 14, rx: 3, class: 'immo' }, g);
   const m = Math.min(w, h);
-  // a unit controlled from the other side's camp: an inner ring in its controller's colour
-  if (u.ctl !== undefined && u.ctl !== u.owner) svgEl('rect', { x: x0 + 1, y: y0 + 1, width: w - 2, height: h - 2, rx: 11, class: 'ctlmark ' + (u.ctl === viewer() ? 'me' : 'op') }, g);
 
   const badge = Math.min(28, (Math.min(w, CELL * 2) - 8) / 3);
   const art = Math.max(18, m * 0.56);
@@ -167,10 +152,7 @@ function drawUnit(svg, u, extraClasses = '', ref = null) {
   const refS = ref ? ref.s : printedStr(u), refD = ref ? ref.d : printedDef(u);
   if (str || c.str) unitBadge(g, 'str', x0 + 4, y0 + 4, badge, str, 'strnum', tone(str, refS));
   unitBadge(g, 'sup', x0 + w / 2 - badge / 2, y0 + 4, badge, unitSupply(u), 'supnum', tone(unitSupply(u), c.sup));
-  if (def || c.def) unitBadge(g, def > 0 ? 'def' : 'empty', x0 + w - 4 - badge, y0 + 4, badge, def, 'defnum', def > 0 ? tone(def, refD) : '', isArmoured(u) && !u.armUsed);
-  // state marks along the bottom-left: Plague (green), Blighted (brown), soul contract (violet)
-  [kw(u, 'plague') && 'plague', u.blight && 'blight'].filter(Boolean)
-    .forEach((k, i) => svgEl('circle', { cx: x0 + 12 + i * 12, cy: y0 + h - 12, r: 5, class: 'stm ' + k }, g));
+  if (def || c.def) unitBadge(g, def > 0 ? 'def' : 'empty', x0 + w - 4 - badge, y0 + 4, badge, def, 'defnum', def > 0 ? tone(def, refD) : '');
 
   if (kw(u, 'ranged') && (c.str > 0 || str > 0)) {
     const size = Math.max(16, Math.min(22, m * 0.3)), role = kw(u, 'ranged') ? 'ranged' : 'melee';
