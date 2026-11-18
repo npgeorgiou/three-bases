@@ -1,9 +1,11 @@
 """Step 6, the archetype map (factions/START_DESIGN-1-wheel.md): each concept of an archetype's parts is a node; between
-the concepts of two engine parts of one archetype, an edge with the step 5 numbers (cards, games, level), the top link
-text, one real card pair and a note when the edge is weak (about the player, or decks only) (the strongest link of that text). A pair joined only by real decks has no card pair. Bricks are nodes with no edges.
+the concepts of two engine parts of one archetype, an edge with the step 5 numbers (cards, decks, games, level), the top
+link text, the real card pair of its strongest link (none when only real decks join them) and a note when the edge is
+weak (about the player, or decks only). Bricks are nodes with no edges.
 Writes work/archetype_map.tsv, work/archetype_gaps.tsv (engine parts whose concepts have no joined edge) and
-factions/wheel-archetypes.html. Run from library/cards_db: python3 ../../factions/wheel/work/archetype_map.py"""
-import collections, csv, html, itertools, json, os, sqlite3, sys
+factions/wheel-archetypes.html (every usable concept at a fixed place, every joined pair between them for the links
+between ticked archetypes). Run from library/cards_db: python3 ../../factions/wheel/work/archetype_map.py"""
+import collections, csv, itertools, json, math, os, sqlite3, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(HERE, '..', '..', '..', 'library', 'cards_db')
@@ -50,6 +52,10 @@ def main():
                 linked = sum(1 for a in x['concepts'].split(',') for b in y['concepts'].split(',')
                              if links.get(frozenset((a, b))) and float(links[frozenset((a, b))]['level'] or 0) > 0)
                 gaps.append((key, x['part'], y['part'], len(x['concepts'].split(',')) * len(y['concepts'].split(',')), linked))
+    usable = [r['concept'] for r in csv.DictReader(open(os.path.join(HERE, 'concepts.tsv'), encoding='utf-8'), delimiter='\t')
+              if r['kind'] == 'usable']
+    every = [(p, r) for p, r in links.items() if len(p) == 2 and p <= set(usable) and joined(r)]
+    wanted |= {p for p, _ in every}
     examples = card_pairs(wanted)
     behind = collections.Counter()  # the cards behind the most edges (one card can carry many)
     with open(os.path.join(HERE, 'archetype_map.tsv'), 'w', encoding='utf-8') as f:
@@ -62,7 +68,7 @@ def main():
     with open(os.path.join(HERE, 'archetype_gaps.tsv'), 'w', encoding='utf-8') as f:
         f.write('archetype\tpart_a\tpart_b\tconcept_pairs\tpairs_with_any_link\n')
         for g in gaps: f.write('\t'.join(map(str, g)) + '\n')
-    page(arch, edges, examples)
+    page(arch, edges, examples, usable, every)
     print(f'{len(edges)} edges, {len(gaps)} engine part pairs with no joined edge')
     print('cards behind the most edges: ' + ', '.join(f'{k} {n}' for k, n in behind.most_common(8)))
 
@@ -85,8 +91,31 @@ def card_pairs(wanted):
     return {t: v[1] for t, v in best.items()}
 
 
-def page(arch, edges, examples):
-    """factions/wheel-archetypes.html: pick one archetype or all; nodes are concepts, edges carry the numbers"""
+def layout(nodes, every):
+    """fixed places for all usable concepts, pulled together by the real links between them (spring layout, seeded);
+    a concept with no link sits on a ring around the rest"""
+    import networkx as nx
+    G = nx.Graph()
+    G.add_nodes_from(nodes)
+    for p, r in every:
+        a, b = sorted(p)
+        G.add_edge(a, b, weight=math.log2(1 + max(float(r['cards'] or 0), float(r['decks'] or 0))))
+    linked = [c for c in nodes if G.degree(c)]
+    pos = nx.spring_layout(G.subgraph(linked), k=2.2 / math.sqrt(len(linked)), iterations=400, weight='weight', seed=7)
+    xs = sorted(v[0] for v in pos.values()); ys = sorted(v[1] for v in pos.values())
+    lo = lambda v: v[len(v) // 50]; hi = lambda v: v[-1 - len(v) // 50]
+    fit = lambda v, a, b, w: 60 + w * min(1, max(0, (v - a) / (b - a)))  # room on the right for the labels
+    out = {c: [round(fit(v[0], lo(xs), hi(xs), 760), 1), round(fit(v[1], lo(ys), hi(ys), 860), 1)] for c, v in pos.items()}
+    alone = [c for c in nodes if c not in out]
+    for i, c in enumerate(alone):
+        t = 2 * math.pi * i / max(1, len(alone))
+        out[c] = [round(440 + 420 * math.cos(t), 1), round(490 + 460 * math.sin(t), 1)]
+    return out
+
+
+def page(arch, edges, examples, usable, every):
+    """factions/wheel-archetypes.html: every usable concept at a fixed place; tick archetypes to light their concepts,
+    their lines, and the real links between the ticked archetypes"""
     names = {}
     for line in open(os.path.join(DB, '..', 'concept_tree.txt'), encoding='utf-8'):
         p = line.split(' | ')
@@ -101,6 +130,14 @@ def page(arch, edges, examples):
                               'text': text, 'pair': examples.get((frozenset((a, b)), text)) or examples.get((frozenset((a, b)), ''), ''),
                               'note': note(r, examples.get((frozenset((a, b)), text)) or examples.get((frozenset((a, b)), ''), ''))})
     data['names'] = names
+    data['pos'] = layout(usable, every)
+    data['links'] = []
+    for p, r in every:
+        a, b = sorted(p)
+        text = r['texts'].split(' | ')[0] if r['texts'] else ''
+        pair = examples.get((p, text)) or examples.get((p, ''), '')
+        data['links'].append({'a': a, 'b': b, 'cards': r['cards'], 'decks': r['decks'], 'games': r['games'], 'text': text,
+                              'pair': pair, 'note': note(r, pair)})
     tpl = open(os.path.join(HERE, 'archetype_map_template.html'), encoding='utf-8').read()
     out = os.path.join(HERE, '..', '..', 'wheel-archetypes.html')
     open(out, 'w', encoding='utf-8').write(tpl.replace('/*DATA*/null', json.dumps(data)))

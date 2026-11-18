@@ -124,7 +124,10 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    concepts of two engine parts of an archetype, an edge with the step 5 numbers: `cards` (how much more often than
    chance real cards link them), `games`, `level`, the top link text and one real card pair. Bricks are nodes with no
    edges. Two engine parts whose concepts real cards never link are shown to Kaptain with the numbers. On the page
-   Kaptain picks one archetype to see its nodes and edges, or all of them to see where archetypes touch.
+   every usable concept sits at a fixed place, laid out once from all real links between concepts (concepts real cards
+   often link sit close); Kaptain ticks one or more archetypes to light their concepts and edges, and between ticked
+   archetypes the page draws every real link from a concept of one to a concept of another (any part), to see whether
+   archetypes fit together in one faction.
 7. **The 20 factions and their lists** (by script, from the archetype map; `work/factions.py` ->
    `work/factions.tsv`). Each faction plays one or, better, more archetypes that work together as one, judged by the
    strengths of the map. The rules the script follows are agreed with Kaptain before it is written. Kaptain sees per

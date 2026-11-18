@@ -56,7 +56,8 @@ is written in that step's chat, from the rules of the step, and its line here is
   `games`, `level`, top link text, the real card pair of its strongest link, from `wheel/concept_links.tsv`; a pair
   joined only by real decks has no card pair; `note`: "about the player" when the top link text is about hitting the
   player, "decks only" when no card pair; it prints the cards behind the most edges), `work/archetype_gaps.tsv` (two engine parts with no joined edge, shown to
-  Kaptain with the numbers) and `factions/wheel-archetypes.html` (page template `work/archetype_map_template.html`).
+  Kaptain with the numbers) and `factions/wheel-archetypes.html` (page template `work/archetype_map_template.html`; the concepts' places by
+  networkx's spring layout over every joined pair of usable concepts, seed 7).
 
 ## Step 7. The 20 factions and their lists
 - `python3 ../../factions/wheel/work/factions.py` (to write, after Kaptain agrees its rules) ->
