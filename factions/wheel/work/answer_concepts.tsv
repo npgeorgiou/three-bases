@@ -1,63 +1,89 @@
-answer	way	concepts	cards	games	whose
-front	kill it	destroy			Claude's
-front	kill it	damage			Claude's
-front	any hit kills it	deathtouch			Claude's
-front	a small hit kills it	deathtouch+ping	rare 4.91	1	Claude's
-front	hurt it small, then finish the hurt unit	ping+condition_life	5.72	4	Claude's
-front	shrink it, then a small hit kills it	stat_loss+ping	1.21	2	Claude's
-front	my unit fights it	fight_enemy			Claude's
-front	my unit fights it and gains on each kill	fight_enemy+on_kill	4.62	3	Claude's
-front	strikes again after each kill	multi_attack+on_kill	1.51	2	Claude's
-front	let my unit die: its death hits the enemy	death_trigger+damage	3.43	8	Claude's
-front	push it out of the front	forced_movement			Claude's
-front	pull it in front of my unit, which fights it	forced_movement+fight_enemy	rare 7.14	2	Claude's
-front	send it back to hand	bounce_enemy			Claude's
-front	gone for good	banish			Claude's
-front	take it	steal			Claude's
-front	swap places with it	swap			Claude's
-backrow	the rest of the hit goes into the unit behind	excess_damage			Claude's
-backrow	a big hit goes through	excess_damage+attack_gain	1.63	3	Claude's
-backrow	push or pull, then hit along the line	forced_movement+damage	5.56	7	Claude's
-backrow	my unit moves and hits what is in its line	movement+on_attack	3.06	6	Claude's
-backrow	walk into his rows: effects there	movement+territory_trigger	8.0	3	Claude's
-backrow	lands and moves at once	haste+movement	2.99	2	Claude's
-backrow	a hidden unit walks in	stealth			Claude's
-backrow	damage to several separate targets	multi_target_attack			Claude's
-backrow	small hits anywhere	ping			Claude's
-backrow	mark a target for later hits	mark_target			Claude's
-backrow	stronger spells hit anywhere	spell_power+damage	1.25	4	Claude's
-backrow	many at once	aoe_damage			Claude's
-backrow	my unit dies and blasts around it	death_trigger+aoe_damage	2.91	7	Claude's
-backrow	a whole row	row_effects			Claude's
-lanes	my units travel	movement			Claude's
-lanes	swap places	swap			Claude's
-lanes	move his units	forced_movement			Claude's
-lanes	pick my unit up and play it again free elsewhere	return_to_hand+free_play	5.22	4	Claude's
-lanes	copy a unit and play it free elsewhere	copy+free_play	3.25	3	Claude's
-lanes	bring dead units back in another lane	revive			Claude's
-lanes	damage to several separate targets	multi_target_attack			Claude's
-lanes	a whole row	row_effects			Claude's
-holds	hard to kill	shield			Claude's
-holds	hard to kill	cheat_death			Claude's
-holds	hard to kill	regeneration			Claude's
-holds	hard to kill	damage_reduction			Claude's
-holds	hard to kill	defence_gain			Claude's
-holds	can't be hit by spells	immunity			Claude's
-holds	keep my units alive	protection			Claude's
-holds	enemies must hit my shielded unit	taunt+shield	rare 13.22	3	Claude's
-holds	my units die and come back	sacrifice+cheat_death	13.63	7	Claude's
-holds	heal, and heals feed more	heal+on_lifegain	decks 2.56	5	Claude's
-holds	pick a hurt unit up, play it again fresh	return_to_hand+heal	2.67	2	Claude's
-holds	hurts whoever attacks it	counterattack			Claude's
-holds	strikes with its defence	strikes_with_defence			Claude's
-holds	keep refilling	summon			Claude's
-holds	keep refilling	revive			Claude's
-holds	fill his cells	board_clog			Claude's
-holds	give him units that fill his cells	donate+board_clog	decks 2.9	1	Claude's
-holds	board features	terrain			Claude's
-holds	his units can't move	immobilize			Claude's
-holds	his units can't attack	attack_lock			Claude's
-holds	his units can't act	disable			Claude's
-holds	his cards cost more	cost_increase			Claude's
-holds	attack his hand	hand_disruption			Claude's
-holds	the holder grows each kill	level_up+on_kill	1.95	1	Claude's
+answer	way	concepts	link (times chance, games)	whose
+front	kill it	destroy		Claude's
+front	kill it	damage		Claude's
+front	any hit kills it	deathtouch		Claude's
+front	a small hit kills it	deathtouch+ping	rare 4.91, 1 game	Claude's
+front	hurt it small, then finish the hurt unit	ping+condition_life	5.72, 4 games	Claude's
+front	shrink it, then a small hit kills it	stat_loss+ping	1.21, 2 games	Claude's
+front	my unit fights it	fight_enemy		Claude's
+front	my unit fights it and gains on each kill	fight_enemy+on_kill	4.62, 3 games	Claude's
+front	strikes again after each kill	multi_attack+on_kill	1.51, 2 games	Claude's
+front	let my unit die: its death hits it	death_trigger+damage	3.43, 8 games	Claude's
+front	push it out of the cell	forced_movement		Claude's
+front	pull it in front of my unit, which fights it	forced_movement+fight_enemy	rare 7.14, 2 games	Claude's
+front	back to his hand	bounce_enemy		Claude's
+front	gone for good	banish		Claude's
+front	take it	steal		Claude's
+front	swap it away	swap		Claude's
+backrow	any removal of the front list on a spell (destroy, damage, bounce, banish, steal: a spell picks any cell)	destroy|damage|bounce_enemy|banish|steal on a spell		Claude's
+backrow	the rest of the hit goes into the unit behind	excess_damage		Claude's
+backrow	a big hit goes through	excess_damage+attack_gain	1.63, 3 games	Claude's
+backrow	push or pull, then hit along the line	forced_movement+damage	5.56, 7 games	Claude's
+backrow	my unit moves and hits what is in its line	movement+on_attack	3.06, 6 games	Claude's
+backrow	walk into his rows: effects there	movement+territory_trigger	8.0, 3 games	Claude's
+backrow	lands and moves at once	haste+movement	2.99, 2 games	Claude's
+backrow	a hidden unit walks in	stealth		Claude's
+backrow	several separate targets	multi_target_attack		Claude's
+backrow	small hits anywhere	ping		Claude's
+backrow	mark a target for later hits	mark_target		Claude's
+backrow	stronger spells	spell_power+damage	1.25, 4 games	Claude's
+backrow	many at once	aoe_damage		Claude's
+backrow	my unit dies and blasts around it	death_trigger+aoe_damage	2.91, 7 games	Claude's
+backrow	everything at once	board_wipe		Claude's
+backrow	a whole row	row_effects		Claude's
+lanes	my units travel	movement		Claude's
+lanes	swap places	swap		Claude's
+lanes	move his units	forced_movement		Claude's
+lanes	pick my unit up, play it again free in another lane	return_to_hand+free_play	5.22, 4 games	Claude's
+lanes	copy a unit, play the copy free elsewhere	copy+free_play	3.25, 3 games	Claude's
+lanes	bring dead units back in another lane	revive		Claude's
+lanes	several separate targets	multi_target_attack		Claude's
+lanes	a whole row	row_effects		Claude's
+lanes	many at once	aoe_damage		Claude's
+lanes	more supply, spent where needed	resource_gain		Claude's
+lanes	more supply each round	base_resource_gain		Claude's
+lanes	counts what happened in every lane	count_payoff		Claude's
+lanes	counts deaths in every lane	death_count		Claude's
+lanes	stats equal to a count over the board	variable_stats		Claude's
+lanes	reacts when another unit dies anywhere	other_death_trigger		Claude's
+lanes	reacts when an enemy arrives anywhere	on_enemy_enter		Claude's
+holds	hard to kill	shield|cheat_death|regeneration|damage_reduction|defence_gain		Claude's
+holds	spells can't touch it	immunity		Claude's
+holds	keep my units alive	protection		Claude's
+holds	enemies must hit my shielded unit	taunt+shield	rare 13.22, 3 games	Claude's
+holds	my units die and come back	sacrifice+cheat_death	13.63, 7 games	Claude's
+holds	heals feed more heals	heal+on_lifegain	decks 2.56, 5 games	Claude's
+holds	pick a hurt unit up, play it again fresh	return_to_hand+heal	2.67, 2 games	Claude's
+holds	strikes with its defence	strikes_with_defence		Claude's
+holds	keep refilling	summon|revive		Claude's
+holds	grows while it holds	permanent_growth|level_up		Claude's
+holds	fill his cells	board_clog		Claude's
+holds	give him units that fill his cells	donate+board_clog	decks 2.9, 1 game	Claude's
+holds	board features	terrain		Claude's
+holds	his units can't move, attack or act	immobilize|attack_lock|disable		Claude's
+holds	his units hit for nothing	attack_zero|stat_loss|debuff		Claude's
+holds	his units lose their text	silence		Claude's
+holds	from far: allies near it help it	assists_support		Claude's
+holds	from far: heal or make it stronger from another cell	heal|buff		Claude's
+holds	from far: his cards cost more	cost_increase		Claude's
+holds	from far: attack his hand	hand_disruption		Claude's
+cares	neighbours	adjacency		Claude's
+cares	facing and turning	flanking		Claude's
+cares	formations	link_formation		Claude's
+cares	where units are placed	placement_rules		Claude's
+cares	reach	ranged		Claude's
+cares	rows	rows		Claude's
+cares	lanes	lanes		Claude's
+cares	position and space	positional		Claude's
+cares	holding lanes	zone_control		Claude's
+cares	camp size	board_limit		Claude's
+cares	big units	high_cost		Claude's
+cares	carry-over	round_carryover		Claude's
+cares	saving supply	resource_banking		Claude's
+cares	keeping cards in hand	retain		Claude's
+cares	round start	turn_start		Claude's
+cares	round end	turn_end		Claude's
+cares	hand size	hand_size		Claude's
+cares	the discard pile	self_mill|discard		Claude's
+cares	Immobile	cant_move		Claude's
+blind	one way of the four removal, lanes and holding answers that none of its concepts give and that touches none of its archetypes	any way above		Claude's
