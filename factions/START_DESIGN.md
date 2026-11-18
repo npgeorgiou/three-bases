@@ -76,9 +76,9 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    other faction saying why a game between the two feels different.
 5. **Synergies, game plan and keywords, from the wheel** (never new ones here). Steps 5-8 use the faction's archetypes
    and extras (`factions/wheel/work/factions.tsv`) and read its list (`factions/wheel/work/lists/<letter>.tsv`: every
-   other concept of the library with its score for how strongly it links to its archetypes' concepts, its level and in
+   other concept of the library with its score for how strongly it links to its own concepts, its level and in
    how many games): what a card draws on beyond its archetypes and extras comes from it, highest scores first. A synergy is a link real cards show between two
-   concepts of its archetypes; write each from its link texts as "I do X -> I gain from X" ("my units die -> my other units
+   of its own concepts; write each from its link texts as "I do X -> I gain from X" ("my units die -> my other units
    grow"). A synergy is broad: 30+ of the faction's cards can make it happen or use it. One card's effect ("a gun fires") is not a synergy. Each synergy
    grows in at least one of three ways:
    - Chain: an effect gets bigger when something else happened first. "Deal 1 damage. If you cast another spell this

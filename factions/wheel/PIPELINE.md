@@ -60,17 +60,19 @@ is written in that step's chat, from the rules of the step, and its line here is
   networkx's spring layout over every joined pair of usable concepts, seed 7).
 
 ## Step 7. The 20 factions
-- `python3 ../../factions/wheel/work/factions.py` (rules agreed with Kaptain first) -> `factions/wheel/work/factions.tsv`
-  (faction letter, its 2-3 archetypes, their concepts, its synergies, its theme, its extras, the concept for each of
-  its seven answers).
+- `python3 ../../factions/wheel/work/factions.py` (rules: `START_DESIGN-1-wheel.md` step 7) ->
+  `factions/wheel/work/factions.tsv` (faction letter, its 2-3 archetypes, its concepts per part, its synergies, its
+  main radius, its theme, its extras, the way or concept for each of its seven answers, its blind spot radius). It
+  prints the 20 groups with their scores and the weakest; the run stops after 7.2 for Kaptain's OK of the archetypes,
+  then goes on with the themes written into `factions/wheel/work/themes.tsv` (faction letter, theme).
 - `python3 ../../factions/wheel/work/concept_list.py` -> `factions/wheel/work/lists/<letter>.tsv`: per faction every
-  concept with 5+ cards except its archetypes' own, its score ((real + 1) / (chance + 1) links with the concepts of
-  its archetypes per game, averaged over the games where both appear), its `level` and its games, sorted by score.
+  concept with 5+ cards except the faction's own concepts, its score ((real + 1) / (chance + 1) links with the
+  faction's concepts per game, averaged over the games where both appear), its `level` and its games, sorted by score.
 - `factions/wheel/work/answer_concepts.tsv` (agreed with Kaptain): per answer its ways (answer, the way in plain words,
   its concepts: one, two that real cards link with their times chance and games, or removals on a spell; whose).
 
 ## Step 8. Combos on this board
-- A script counts the joins between every two factions' concepts (archetypes and extras; step 5 numbers); Claude rates
+- A script counts the joins between every two factions' concepts (own concepts and extras; step 5 numbers); Claude rates
   the pairs on the board -> `factions/wheel/combos.tsv` (pair, STRONG/OK/WEAK/NONE/AGAINST, how it plays, the numbers,
   a test column). Every faction needs 7+ partners.
 

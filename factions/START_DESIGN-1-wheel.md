@@ -24,16 +24,19 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   count on two, each instance by what its rows say (deal damage: on a spell for "damage from spells", on any other card
   for "damage from units' text"). A faction's value on a radius is the share of its concept instances that belong to
   that radius; the card itself goes nowhere.
-- **The faction's archetypes**: the 2 or 3 archetypes a faction plays (step 7). Their concepts are its character (what
-  it is strongest at, what its keywords grow from).
-- **The faction's list**: every concept of the library (usable, helpers and out) except its archetypes' own, each with
-  its score for how strongly it links with the concepts of the faction's archetypes. The faction's cards use it a lot, to make those concepts
-  possible, start them or make them stronger.
+- **The faction's archetypes**: the 2 or 3 archetypes a faction plays (step 7).
+- **The faction's concepts**: the 1 or 2 concepts it plays from each part of its archetypes (step 7). They are its
+  character (what it is strongest at, what its keywords grow from); the other concepts of those parts are not its own.
+- **The faction's list**: every concept of the library (usable, helpers and out) except the faction's concepts, each
+  with its score for how strongly it links with them. The faction's cards use it a lot, to make its concepts possible,
+  start them or make them stronger.
 - **Helper**: a concept that only says when or how a card acts, one of the game's own things, or a thing for single
   cards (step 2). Never a part of an archetype; always on the faction's list.
-- **Synergy**: a link between two concepts of the faction's archetypes, shown by real card pairs, never written by hand: "makes your
-  units die: the other card brings them back (in 7 of 10 games, 3.1 times chance)".
-- **Extras**: the concepts of a faction's list that step 7 gives it besides its archetypes' concepts.
+- **Strong link**: two concepts joined by the step 5 rule through real card pairs: `cards` 1.2+, or `rare` 3+ with a
+  `level` of 1+. A pair joined only by real decks is not a strong link.
+- **Synergy**: a strong link between two of the faction's concepts, shown by real card pairs, never written by hand:
+  "makes your units die: the other card brings them back (in 7 of 10 games, 3.1 times chance)".
+- **Extras**: the concepts of a faction's list that step 7 gives it besides its own concepts.
 - **Keyword** (in industry words, a mechanic): a word on many cards that stands for one rule (Magic's Exploit,
   Hearthstone's Overload).
 - **The seven answers**: how a faction wins, removes a front unit, MAINLY removes back-row units, MAINLY acts between
@@ -139,36 +142,45 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    often link sit close); Kaptain ticks one or more archetypes to light their concepts and edges, and between ticked
    archetypes the page draws every real link from a concept of one to a concept of another (any part), to see whether
    archetypes fit together in one faction.
-7. **The 20 factions** (by script, from the archetype map; `work/factions.py` -> `work/factions.tsv`, and
-   `work/concept_list.py` -> `work/lists/<letter>.tsv`). The script's rules are agreed with Kaptain before it is
-   written. In this order:
-   1. Each faction plays 2 or 3 archetypes. A group of archetypes scores by the strong real links between their
-      concepts, counted per concept, so a big archetype does not win by its size. The 20 groups are picked so the
-      weakest faction is as strong as possible: a group is swapped for another while that lifts the weakest. No
-      archetype is in more than 3 factions, no two factions share more than one archetype, and each faction is
-      strongest on a different radius where it can. **Kaptain agrees the 20 factions' archetypes**, seeing per faction
-      its archetypes in plain words, their concepts, its synergies (the real link text, times chance, games) and one
-      sentence written from those texts.
-   2. A real theme (World War I artillery, the Zulu regiments) picked for its archetypes; the 20 themes all differ. The
-      theme only breaks ties between concepts that score about the same.
-   3. Its list: every concept with 5+ cards (usable, helpers and out) except its archetypes' own, each with its score.
-      In each game alone: real links between the concept's instances and the instances of the faction's archetype
-      concepts, against the links chance alone gives there; the game's score = (real + 1) / (chance + 1); the score =
-      the average over the games where the concept and those concepts both appear (every game weighs the same). Beside
-      it: the `level` and in how many games.
-   4. Its extras, picked from the list by these goals in this order: (a) each of the four answers about the board (removing a front
-      unit, removing back-row units, acting between lanes, holding a base) its archetypes don't give gets the highest-scoring way that gives it in `work/answer_concepts.tsv` (agreed with Kaptain; per answer
-      its ways, each a concept, two concepts real cards link, or a removal on a spell); (b) then the highest-scoring
-      concepts that link with at least 2 of its archetype concepts, links into engine parts counting more; (c) the theme breaks ties. Every faction gets the same number of extras, 8 to 12
-      (a real faction of about 100 cards mostly uses about 20 concepts), so its strength comes from its archetypes.
-   5. Its seven answers, from `work/answer_concepts.tsv`: how it wins is the line of its archetypes in
+7. **The 20 factions** (by script, from the archetype map and `wheel/concept_links.tsv`; `work/factions.py` ->
+   `work/factions.tsv`, and `work/concept_list.py` -> `work/lists/<letter>.tsv`). Every tie in this step is broken by
+   the archetype or concept key in alphabetical order, so every run gives the same result. In this order:
+   1. **The archetypes.** A group of 2 or 3 archetypes scores the strong links between concepts of different
+      archetypes of the group, divided by the number of different concepts in the group (so a big archetype does not
+      win by its size). A group of 3 counts only when it scores at least as much as its best 2. The 20 groups are
+      picked so the weakest faction is as strong as possible: start from the 20 best groups that keep the limits, then
+      swap one group for another while that lifts the weakest score, until no swap does. Limits: no archetype in more
+      than 3 factions; no two factions share more than one archetype; each faction's main radius (the radius holding
+      most of its concepts, from 7.2) differs from every other faction's where it can. An archetype may stay unused.
+      **Kaptain agrees the 20 factions' archetypes**, seeing per faction its archetypes in plain words, its concepts,
+      its synergies (the real link text, times chance, games) and one sentence written from those texts.
+   2. **Its concepts.** From each engine part of its archetypes, the concept with the most strong links into the other
+      engine parts of its archetypes (ties: the higher sum of `cards`, then more games), and the second best when it
+      has at least half as many; from each brick, the concept with the highest score on the faction's list made from
+      its engine concepts. Example: Reanimator plays "sacrifice my units" and "bring dead units back", which real cards
+      link, not all 11 concepts of its two parts.
+   3. **A real theme** (World War I artillery, the Zulu regiments), written for its archetypes; the 20 themes all
+      differ. The theme only breaks ties between concepts that score within 0.1 of each other.
+   4. **Its list**: every concept with 5+ cards (usable, helpers and out) except its own concepts, each with its score.
+      In each game alone: real links between the concept's instances and the instances of the faction's concepts,
+      against the links chance alone gives there; the game's score = (real + 1) / (chance + 1); the score = the
+      average over the games where the concept and the faction's concepts both appear (every game weighs the same).
+      Beside it: the `level` and in how many games.
+   5. **Its extras**, the same number for every faction: 20 minus the most concepts any faction plays, at least 8 and at
+      most 12 (a real faction of about 100 cards mostly uses about 20 concepts). Picked from its list in this order:
+      (a) each of the four answers about the board (removing a front unit, removing back-row units, acting between
+      lanes, holding a base) that its concepts don't give gets the highest-scoring way that gives it in
+      `work/answer_concepts.tsv` (agreed with Kaptain: per answer its ways, each one concept, two concepts real cards
+      link, or a removal on a spell; a way of two concepts takes two extras); (b) the rest go to the highest-scoring
+      concepts with strong links to at least 2 of its concepts; (c) the theme breaks ties.
+   6. **Its seven answers**, from `work/answer_concepts.tsv`: how it wins is the line of its archetypes in
       `archetypes.tsv`; removing a front unit, removing back-row units, acting between lanes and holding a base are
-      each a way its concepts give; what it cares about most is the highest-scoring of the game's own things on its
-      list (factions may share it); its blind spot is a radius (`work/radii.tsv`: "more cards in hand", "heals them") on which none of
-      its archetypes' concepts and extras sit; it never gets that radius, on any card. An answer no concept gives is fixed first in (4) with
-      another extra; only when its list has no way for it does the faction go back to (1).
-8. **Combos on this board.** For every pair of factions (190), the joins between the two factions' concepts (archetypes
-   and extras; step 5 numbers), by script. Claude rates each pair with numbers on the board: STRONG (both halves on many
+      each the highest-scoring way its concepts and extras give; what it cares about most is the highest-scoring of
+      the game's own things on its list (factions may share it); its blind spot is the radius (`work/radii.tsv`) that
+      holds none of its concepts and extras and has the lowest average score on its list. An answer no way gives is
+      fixed first in (5) with another extra; only when its list has no way for it does the faction go back to (1).
+8. **Combos on this board.** For every pair of factions (190), the joins between the two factions' concepts (their own
+   concepts and extras; step 5 numbers), by script. Claude rates each pair with numbers on the board: STRONG (both halves on many
    cards, helps take or hold a base, the enemy's one action between can't easily stop it), OK (real but breakable),
    WEAK, NONE, AGAINST. Partners = STRONG or OK; every faction has 7+; one under 7 goes back to step 7.
    `wheel/combos.tsv` has a test column that playtests fill.

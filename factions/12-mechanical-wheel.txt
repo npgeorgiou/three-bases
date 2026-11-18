@@ -8,11 +8,11 @@ factions/START_DESIGN-1-wheel.md. Commands: factions/wheel/PIPELINE.md.
 
 Principles
 1. The map: concepts are nodes, and a line joins two concepts that real cards link (factions/wheel-archetypes.html).
-   Each archetype is a set of parts on it; a faction plays 2 or 3 archetypes that link strongly, and its synergies are
-   the links real cards show between their concepts.
-2. A faction is strong at what its archetypes do. Its extras come from its list (every other concept, scored by its
-   real links with the archetypes' concepts): first for the seven answers its archetypes don't give, then to feed its
-   archetypes' engines.
+   Each archetype is a set of parts on it; a faction plays 2 or 3 archetypes that link strongly, 1 or 2 concepts from
+   each part, and its synergies are the links real cards show between those concepts.
+2. A faction is strong at what its own concepts do. Its extras come from its list (every other concept, scored by its
+   real links with the faction's concepts): first for the answers about the board its concepts don't give, then to
+   feed its concepts. Its blind spot is a whole radius it never gets.
 3. Every faction differs from every other in each of the seven answers, except which of the game's own things it
    cares about most, which factions may share.
 4. Combos are trigger -> payoff between factions: a card of one makes the thing a card of another gains from. Every

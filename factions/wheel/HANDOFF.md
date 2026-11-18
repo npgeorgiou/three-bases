@@ -12,7 +12,7 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 4. The radii and how they work together | done | `work/radii.tsv` (every usable concept on its radius, agreed with Kaptain); `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` from concept instances |
 | 5. The links between concepts | done | `library/cards_db/wheel/concept_links.tsv` (`mechanics_wheel.py links --concepts`, about a minute) |
 | 6. The archetype map | done, approved by Kaptain (18 Nov 2026; `RECHECK.md`) | `work/archetype_map.tsv`: 724 edges between the concepts of engine parts; `factions/wheel-archetypes.html`; one gap (`work/archetype_gaps.tsv`): Discard / 8-Rack |
-| 7. The 20 factions | **next**: its table of answers agreed | `work/answer_concepts.tsv`: per answer its ways |
+| 7. The 20 factions | **next**: rules agreed, scripts to write | `work/answer_concepts.tsv` (agreed): per answer its ways |
 | 8. Combos on this board | to do | |
 | 9. Game plan, then keywords | to do | |
 | 10. Stop 1 | to do | |
@@ -23,7 +23,9 @@ One chat does one step; at its end, mark the step done here and say what it left
   another part ("my units die" -> "my units gain when an ally dies"), a brick works alone and links to nothing
   (disruption). The 23 radii of `work/radii.tsv` show how the 43 real factions spread (`factions/wheel-axes.html`);
   nothing is designed from them.
-- Before step 7's script: Kaptain agrees which concepts of each archetype part a faction plays.
+- Step 7: every rule is agreed (`START_DESIGN-1-wheel.md` step 7). Write `work/factions.py` and `work/concept_list.py`
+  exactly as it says, run them, and show Kaptain the 20 factions' archetypes and concepts (7.1-7.2) before themes,
+  lists, extras and answers.
 - Still open from the recheck (`RECHECK.md` stage 6): thin maps (Pillowfort, Prison, Extra Turns, Discard / 8-Rack);
   89 "instead" cards not read.
 - Counts whose rows don't say what they count are counted nowhere: 189 instances of "grows with what happened" and 36
@@ -48,10 +50,13 @@ One chat does one step; at its end, mark the step done here and say what it left
 ## Kaptain's standing decisions
 - Industry words: a **synergy** is a link real cards show between two concepts ("my units die -> my other units
   grow"); a **mechanic** is a keyword, a word on many cards that stands for one rule (Magic's Exploit) (18 Nov 2026).
-- Each faction plays 2 or 3 archetypes; one archetype is played by at most 3 factions. Its theme is picked right after
-  its archetypes and breaks ties between concepts that score about the same. Its list leaves out its archetypes' own
-  concepts. Its extras come from its list, first for the seven answers its archetypes don't give, then to feed its
-  archetypes; an answer no concept gives is fixed with another extra before the archetypes are picked again. Combos
+- Each faction plays 2 or 3 archetypes; one archetype is played by at most 3 factions; the 20 are picked so the
+  weakest is as strong as possible, while they stay varied. From each part of its archetypes it plays only 1 or 2
+  concepts, the ones real cards link best (no fruit salad). Its theme is picked right after and breaks ties between
+  concepts that score about the same. Its list leaves out its own concepts. Its extras, 8 to 12, the same number for
+  every faction, come from its list, first for the answers about the board its concepts don't give, then to feed its
+  concepts; an answer no concept gives is fixed with another extra before the archetypes are picked again. Its blind
+  spot is a whole radius it never gets ("never draws cards"). Combos
   (step 8) come before the game plan and keywords (step 9); 7+ partners each. A finished faction is checked against its
   archetypes and extras (18 Nov 2026).
 - Keywords are shared, which is what makes factions combo: no keyword is barred from any faction, each is mostly on the
