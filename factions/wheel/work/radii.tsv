@@ -18,7 +18,6 @@ strikes	strikes more	untap		Claude
 strikes	strikes more	extra_turn		Claude
 strikes	strikes more	on_kill		Claude
 strikes	strikes more	combat_damage_threshold		Claude
-strikes	strikes more	rule_change	the rules of how a unit attacks or how often its ability is used	Kaptain
 textdmg	damage from units' text	damage	on a card that is no spell	Kaptain
 textdmg	damage from units' text	ping	on a card that is no spell	Claude: by the damage rule
 textdmg	damage from units' text	mark_target	on a card that is no spell	Claude: by the damage rule
@@ -102,7 +101,6 @@ together	position and combos	assists_support		Claude
 together	position and combos	terrain		Claude
 together	position and combos	territory_trigger		Claude
 together	position and combos	card_presence_condition		Kaptain
-together	position and combos	rule_change	the rules of how a unit moves or where it may be placed	Kaptain
 heals	heals them	heal		Claude
 heals	heals them	regeneration		Claude
 heals	heals them	lifesteal		Claude

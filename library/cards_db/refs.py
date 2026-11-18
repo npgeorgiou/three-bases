@@ -52,9 +52,11 @@ def build(c):
     tree = {(f, v): t for f, v, t in c.execute("select field, value, tree from vocab where tree!=''")}
     kwname = {i: (f'{g}:{n}' if ('keyword', f'{g}:{n}') in tree else n) for i, g, n in c.execute('select id, game, name from card where is_keyword=1')}
 
-    def ins(card, origin, via, ab, role, ev, kind, side, pick, kw=None, state=None, w=None, ref=None, ak=None, aw=None):
+    def ins(card, origin, via, ab, role, ev, kind, side, pick, kw=None, state=None, w=None, ref=None, ak=None, aw=None, tile=False):
         if role == 'makes' and pick == 'self' and not side: side = 'mine'  # what a card does to itself happens on my side
-        if role == 'makes' and ev == 'given_keyword' and kind == 'position': kind = 'unit_or_structure'  # Smoke on a tile: the unit on it
+        if role == 'makes' and ev == 'given_keyword' and kind == 'position' and not tile:  # Smoke on a tile: the unit on it, and the
+            # tile itself, which a card that counts row effects waits for (Little Havfrue's Rain -> Ancient Foglet)
+            ins(card, origin, via, ab, role, ev, kind, side, pick, kw, state, w, ref, ak, aw, tile=True); kind = 'unit_or_structure'
         if ev == 'strikes_nexus' and kind == 'player': kind, side = 'unit', 'mine'  # one way: the unit that strikes, never the player struck
         if role == 'makes' and ((kind == 'player' and ev in UNIT_ONLY) or (kind not in OPEN_KINDS and ev in PLAYER_ONLY)): return
         if role == 'makes' and kind == 'equipment' and ev in NOT_UNIT_DEATH: return
@@ -236,6 +238,9 @@ def build(c):
             ins(card, o, v, ab, 'makes', 'trap_activated', 'card', s, None, w=f'card is {cref}', ref=cref)
         if kw and act in ('keyword_action', 'give_keyword'):  # what the keyword itself is (Predict: predicts)
             for ev, *kwn in causes.get(('keyword', kwname.get(kw, '')), []): ins(card, o, v, ab, 'makes', ev, k, s, p, kw, w=w)  # on what it is given to ("give the Demon Wing Flying")
+        if act == 'give_keyword' and kw and tree.get(('keyword', kwname.get(kw, ''))) in ('taunt', 'target_choice') and s != 'enemy' and p != 'self':
+            for ev in ('damaged', 'survives_damage'): ins(card, o, v, ab, 'makes', ev, k or 'unit', s or 'mine', p, w=w)  # Taunt or
+            # Challenger given to my unit makes it fight, so it takes hits (Confront -> Legion Veteran, Kaptain 18 Nov 2026)
         if act == 'cant' and pev == 'blocks' and s == 'enemy' and (p == 'self' or k in ('unit', None)):  # can't be blocked: hits the enemy player
             for ev in ('nexus_damaged', 'damaged'): ins(card, o, v, ab, 'makes', ev, 'player', 'enemy', None)
             ins(card, o, v, ab, 'makes', 'strikes_nexus', 'unit', 'mine', 'self')  # the unit itself strikes the Nexus (p is the enemies

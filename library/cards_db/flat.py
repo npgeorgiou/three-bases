@@ -360,6 +360,25 @@ def derive(c):
     c.execute("update flat_do set concept=null where act in ('move','swap') and concept in ('movement','forced_movement') and "
               "(coalesce(on_kind,'') in ('card','keyword','spell') or coalesce(eff_zone,'board')!='board')")
     c.execute("update flat_do set concept='level_up' where act='level_up'")
+    # "can": a card may do what is normally forbidden (Kaptain 18 Nov 2026). A rule for everyone (on all units of both sides, a
+    # location's "cards can move here") is rule_change; a "can" a keyword brings takes that keyword's concept (Flying: movement);
+    # the card's own "can" takes the concept of what it may do (Prime Spear may hit 3 tiles away: ranged; Push Beam any number of
+    # times: multi_attack); a "can" no concept says stays without one (Mighty Leap blocks flyers: blocking)
+    everyone = "on_pick='all' and on_side is null"
+    c.execute(f"""update flat_do set concept=(select v.tree from vocab v join card k on k.id=flat_do.via where v.field='keyword' and
+                 v.value in (k.game || ':' || k.name, k.name) and v.tree!='' order by v.value=k.name limit 1)
+                 where act='can' and origin in ('has_keyword','uses_keyword') and not ({everyone})""")
+    c.execute(f"""update flat_do set concept=case
+                 when param_event='moves' then 'movement'
+                 when param_event in ('attacks','strikes') and to_kind in ('position','landmark') then 'ranged'
+                 when param_event in ('attacks','strikes') then 'multi_attack'
+                 when param_event in ('summoned','played') and to_kind='position' then 'placement_rules'
+                 when param_event='harvests' then 'zone_control'
+                 when param_event='challenges' then 'target_choice'
+                 when param_event='blocks' then 'blocking'
+                 when param_event='activated' then 'activated'
+                 else null end where act='can' and origin='own' and not ({everyone})""")
+    c.execute("update flat_do set concept=null where act='become_leader'")  # a unit made the leader binds no player (Grandmaster Z'ir)
     # a stat set takes its concept by what is set (Kaptain 17 Nov 2026): on an enemy it is stat_loss;
     # doubled or halved, or equal to a count; otherwise a number or another unit's stat (stat_fixed)
     c.execute("update flat_do set concept='stat_loss' where act='stat_set' and on_side='enemy'")

@@ -128,8 +128,9 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 6. **The archetype map** (`work/archetype_map.py` -> `work/archetype_map.tsv` and `factions/wheel-archetypes.html`).
    Each concept of an archetype's parts is a node; a concept used by several archetypes is one node. Between the
    concepts of two engine parts of an archetype, an edge with the step 5 numbers: `cards` (how much more often than
-   chance real cards link them), `games`, `level`, the top link text and one real card pair. Bricks are nodes with no
-   edges. Two engine parts whose concepts real cards never link are shown to Kaptain with the numbers. On the page
+   chance real cards link them), `games`, `level`, the top link text and one real card pair. An edge is marked weak when
+   more than half of its card links are about hitting the player (no player health here), or when only real decks join
+   it (no card pair) (the half is Claude's). Bricks are nodes with no edges. Two engine parts whose concepts real cards never link are shown to Kaptain with the numbers. On the page
    every usable concept sits at a fixed place, laid out once from all real links between concepts (concepts real cards
    often link sit close); Kaptain ticks one or more archetypes to light their concepts and edges, and between ticked
    archetypes the page draws every real link from a concept of one to a concept of another (any part), to see whether

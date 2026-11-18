@@ -197,12 +197,12 @@ lk196	duelyst	Thraex	Hatefurnace	line	gives it more power	links fix 16 Nov 2026:
 lk197	faeria	Magda, Queen of Meroval	Magnus, King of Meroval	line	makes it cheaper	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	cost_reduction !cost_type	type !cost_set
 lk198	gwent	Iris von Everec	Redanian Knight	line	gives it more strength	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	stat_gain !activated	stat_gain !damage
 lk199	inscryption	Alpha	Daus	line	gives it more power (when next to it)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	stat_gain !passive	attack_now !on_play
-lk200	into_the_breach	Shield-Tank	Shield-Tank (unit)	line	lets it do more (attacks)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	rule_change !on_attack	type !damage_reduction
+lk200	into_the_breach	Shield-Tank	Shield-Tank (unit)	line	lets it do more (attacks)	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	ranged !on_attack	type !damage_reduction
 lk201	marvel_snap	Black Swan	Acid Arrow	line	sets its cost	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	cost_set !activated	type !donate
 lk202	monster_train	Branded Warrior	Crucible Collector	line	gives it Rage	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	temporary_buff !on_kill	lifesteal !heal
 lk203	runeterra	Greenglade Elder	Kinkou Lifeblade	line	gives it more power and health	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	stat_gain !on_ally_play	kw !cant_attack
 lk204	stormbound	Fortification Tonic	Snowdrifts	line	gives it more strength	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	stat_gain !on_play	damage
-lk205	sts1	Blue Candle	Ascender's Bane	line	lets it be played in more places	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	rule_change !damage	type !cant_attack
+lk205	sts1	Blue Candle	Ascender's Bane	line	lets it be played in more places	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1688)	!damage	type !cant_attack
 lk206	duelyst	Prism Barrier	Excelsious	line	keeps it alive in the fights it takes on	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1689)	shield !damage_reduction	kw !cant_attack
 lk207	faeria	Safeguard	Imperial Guard	line	keeps it alive in the fights it takes on	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1689)	shield !damage_reduction	kw !cant_attack
 lk208	gwent	Yennefer of Vengerberg	Redanian Knight	line	can give it more strength	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 1689)	stat_gain !damage	stat_gain !damage
@@ -316,8 +316,8 @@ lk315	runeterra	Twin Disciplines	Revitalizing Roar	line	more power	links fix 16 
 lk316	duelyst	Auryn Nexus	Divine Bond	line	more health	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2449)	stat_gain !on_play	on_play
 lk317	faeria	Campfire	Apex Predator	line	more health	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2449)	stat_gain !on_play	on_play !movement
 lk318	runeterra	Twin Disciplines	Zed	line	more health	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2449)	stat_gain !modal_choice	attack_now !first_strike
-lk319	faeria	Wind Gate	Mystic Beast	line	lets it enter where it needs to be	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2460)	rule_change !activated	movement !passive
-lk320	marvel_snap	War Machine	Mister Fantastic & Beast Doomsday	line	lets it enter where it needs to be	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2460)	rule_change !passive	generate_cards !passive
+lk319	faeria	Wind Gate	Mystic Beast	line	lets it enter where it needs to be	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2460)	placement_rules !activated	movement !passive
+lk320	marvel_snap	War Machine	Mister Fantastic & Beast Doomsday	line	lets it enter where it needs to be	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2460)	placement_rules !passive	generate_cards !passive
 lk321	duelyst	Consuming Rebirth	Bloodsworn Gambler	line	more power: its text uses the damage it deals	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2473)	stat_gain !destroy	attack_now !passive
 lk322	runeterra	Greenglade Elder	Pyke (level 2)	line	more power: its text uses the damage it deals	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2473)	stat_gain !on_ally_play	attack_now !first_strike
 lk323	gwent	Geralt: Aard	Skellige Storm	line	moves an enemy unit into the row it hits	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 2484)	forced_movement !damage	row_effects !damage
@@ -392,3 +392,9 @@ lk391	runeterra	Draven	Vi	line	makes more cards to play	lk96 fix 16 Nov 2026: a 
 lk392	marvel_snap	Beta Ray Bill	Agony	line	makes more cards to play	lk96 fix 16 Nov 2026: a single made card that costs 0 is one more play	generate_cards	merge_attach
 lk393	sts1	Cloak and Dagger	After Image	line	makes more cards to play	lk96 fix 16 Nov 2026: a single made card that costs 0 is one more play	generate_cards	player_block_armor
 lk394	monster_train	Vinemother	Solgard the Martyr	line	makes more cards to play	lk96 fix 16 Nov 2026: a single made card that costs 0 is one more play	generate_cards	on_spell
+lk395	runeterra	Confront	Legion Veteran	line		Kaptain 18 Nov 2026, wheel probe: Challenger given makes the ally fight; Legion Veteran grows an ally that survives damage		
+lk399	gwent	Maxii van Dekkar	Hammond	none	acts on units	Kaptain 18 Nov 2026, wheel probe: moving a card in the deck is no unit moving on the board		
+lk397	gwent	Gaetan	Cat Witcher	line	acts on units	Kaptain 18 Nov 2026, wheel probe: a card moving my units on the board still puts them where another card acts		
+lk400	gwent	Cursed Scroll	Cow Carcass	none	acts on units	Kaptain 18 Nov 2026, wheel probe: a card moved from hand to the deck puts no unit next to another		
+lk401	gwent	Blightmaker	Cow Carcass	line	puts your units there	Kaptain 18 Nov 2026, wheel probe: a card that also puts units there keeps that link when its other move is in the deck		
+lk402	marvel_snap	Doctor Octopus	Alioth	line	moves enemy units	Kaptain 18 Nov 2026, wheel probe: cards pulled from the enemy hand onto a location are units moved there		

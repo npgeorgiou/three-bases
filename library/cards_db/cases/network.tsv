@@ -682,3 +682,6 @@ n701	gwent	Pavko Gale, Mysteries of Loc Feainn	Pavko Gale	Mysteries of Loc Feain
 n702	runeterra	Garen Kayle Jarvan	Kayle (level 2)	Xolaani the Bloodweaver	none	changes your units' stats	Claude 2026-11-09, line check: Xolaani transforms when its power reaches a number: more power is help to level up, not a stat change for its effect (L24)
 n703	runeterra	Garen Kayle Jarvan	Kayle (level 2)	Xolaani the Bloodweaver	line	helps it level up	Claude 2026-11-09, line check: Kayle's more power and health levels Xolaani (L24, L18)
 n704	runeterra	Homecoming, Eye of the Dragon	Homecoming	Eye of the Dragon	line	goes off again	Kaptain 9 Nov 2026: Attune and keywords like it that go off when summoned are summon effects
+n705	runeterra	Zoe Lee Sin	Dragon's Rage	Deep Meditation	line	spell it needs played	Kaptain 18 Nov 2026, wheel probe: Flow counts the spells played last round
+n706	gwent	Дождь Rain	Little Havfrue	Rioghan the Undying	line	Rain	Kaptain 18 Nov 2026, wheel probe: Rain on a row feeds a card that counts hazards
+n707	runeterra	Garen Jarvan IV Galio	Tattered Banner	Galio (level 2)	line	damages your units	Kaptain 18 Nov 2026, wheel probe: Challenger given makes the ally fight and take damage

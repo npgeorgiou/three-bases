@@ -190,3 +190,93 @@ marvel_snap	Venom	wheel probe	sacrifice
 gwent	Matta Hu'uri	wheel probe	hand_disruption
 gwent	Giant Toad	wheel probe	sacrifice
 gwent	Barghest	wheel probe	sacrifice
+faeria	Khalim's Skyguard	wheel probe	can row
+faeria	Twinsoul Spirit	wheel probe	can row
+runeterra	Out Of The Way	wheel probe	can row
+marvel_snap	Jean Grey School	wheel probe	can row
+marvel_snap	Incursion Event	wheel probe	can row
+marvel_snap	New York	wheel probe	can row
+marvel_snap	Cloak	wheel probe	can row
+duelyst	Grandmaster Z'ir	wheel probe	can row
+duelyst	Grand Strategos	wheel probe	can row
+duelyst	Hideatsu the Ebon Ox	wheel probe	can row
+duelyst	Soulstealer	wheel probe	can row
+into_the_breach	Flame Thrower	wheel probe	can row
+into_the_breach	Prime Spear	wheel probe	can row
+into_the_breach	Push Beam	wheel probe	can row
+into_the_breach	Wind Torrent	wheel probe	can row
+sts1	Blue Candle	wheel probe	can row
+sts1	Medical Kit	wheel probe	can row
+runeterra	Ruthless Raider	wheel probe	damage_reduction
+runeterra	Whispered Words	wheel probe	draw
+faeria	Ulani, Defender of Oversky	wheel probe	damage_reduction
+faeria	Curious Biomancer	wheel probe	draw
+gwent	Hammond	wheel probe	damage
+gwent	Maxii van Dekkar	wheel probe	selection
+gwent	Prince Anséis	wheel probe	damage
+gwent	Cintrian Envoy	wheel probe	selection
+gwent	Redanian Knight	wheel probe	card_presence_condition
+gwent	Damsel in Distress	wheel probe	leave_trigger
+gwent	Siege	wheel probe	leave_trigger
+gwent	Roderick of Dun Tynne	wheel probe	free_play
+gwent	Aerondight	wheel probe	leave_trigger
+gwent	Elven Seer	wheel probe	free_play
+gwent	Spring Equinox	wheel probe	leave_trigger
+duelyst	Dauntless Advance	wheel probe	damage_reduction
+duelyst	Trinity Oath	wheel probe	heal
+duelyst	Lodestar	wheel probe	damage_reduction
+duelyst	Invigoration	wheel probe	heal
+runeterra	Otterpus	wheel probe	resource_gain
+runeterra	Veigar	wheel probe	spell_power
+sts1	Hyperbeam	wheel probe	spell_power
+gwent	Dimun Warship	wheel probe	friendly_fire
+gwent	Marlene de Trastamara	wheel probe	leave_trigger
+gwent	Kaer Trolde	wheel probe	friendly_fire
+gwent	Morkvarg	wheel probe	leave_trigger
+gwent	Dies Irae	wheel probe	recycle
+gwent	Fallen Knight	wheel probe	variable_stats
+gwent	Whoreson Senior	wheel probe	variable_stats
+gwent	The Maiden's Shield	wheel probe	damage_reduction
+gwent	Amphibious Assault	wheel probe	recycle
+gwent	Geralt: Quen	wheel probe	damage_reduction
+gwent	Delirium	wheel probe	recycle
+runeterra	Arachnoid Sentry	wheel probe	disable
+runeterra	Mountain Goat	wheel probe	generate_cards
+runeterra	Solari Sunhawk	wheel probe	disable
+runeterra	Katarina	wheel probe	generate_cards
+runeterra	Deep Meditation	wheel probe	cost_reduction
+runeterra	Concussive Palm	wheel probe	disable
+duelyst	Flash Reincarnation	wheel probe	cost_reduction
+duelyst	Healing Mystic	wheel probe	heal
+duelyst	Inquisitor Kron	wheel probe	taunt
+duelyst	Primus Shieldmaster	wheel probe	taunt
+gwent	Dwarven Skirmisher	wheel probe	damage_reduction
+gwent	Figgis Merluzzo	wheel probe	taunt
+faeria	Majinata, Spirit of Everlife	wheel probe	damage_reduction
+faeria	Khalim, Sky Prodigy	wheel probe	cost_set
+faeria	Wind Soldier	wheel probe	self_destruct
+runeterra	Treasured Trash	wheel probe	cost_set
+runeterra	Twin Wind Technique	wheel probe	self_destruct
+gwent	Oneiromancy	wheel probe	leave_trigger
+gwent	Ragh Nar Roog	wheel probe	leave_trigger
+duelyst	Abjudicator	wheel probe	cost_reduction
+duelyst	Abyssal Tormentor	wheel probe	spell_power
+duelyst	Mana Vortex	wheel probe	cost_reduction
+duelyst	Crescent Spear	wheel probe	spell_power
+faeria	Compass of Gagana	wheel probe	misreading fix
+runeterra	Volibear (level 2)	wheel probe	misreading fix
+marvel_snap	Cannonball	wheel probe	misreading fix
+runeterra	Delve Into The Past	wheel probe	misreading fix
+faeria	Exotic Pet	wheel probe	misreading fix
+runeterra	Curious Shellfolk	wheel probe	misreading fix
+runeterra	Anaakca	wheel probe	misreading fix
+runeterra	The Poro King's Decree	wheel probe	misreading fix
+gwent	Stockpile	wheel probe	misreading fix
+gwent	Ship Ballista	wheel probe	misreading fix
+into_the_breach	Beetle	wheel probe	misreading fix
+sts1	Cursed Key	wheel probe	misreading fix
+sts1	Matryoshka	wheel probe	misreading fix
+sts1	N'loth's Hungry Face	wheel probe	misreading fix
+sts1	Smoke Bomb	wheel probe	misreading fix
+runeterra	Blood for Blood	wheel probe	misreading fix
+runeterra	Heroic Charge	wheel probe	misreading fix

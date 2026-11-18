@@ -24,7 +24,7 @@ control_combo	Control-Combo	remove every enemy unit early, then the loop of Comb
 control_combo	Control-Combo	remove every enemy unit early, then the loop of Combo	a card that resets or repeats another card	engine	repeat_trigger,untap,return_to_hand,recycle,revive,free_play,cost_set,cost_reduction,copy,extra_turn	Claude's
 control_combo	Control-Combo	remove every enemy unit early, then the loop of Combo	a card that gains each time the first one works	engine	on_ally_play,on_spell,death_trigger,other_death_trigger,on_sacrifice,leave_trigger,other_leave_trigger,on_draw,on_discard,combo_sequence,count_payoff,permanent_growth	Claude's
 control_combo	Control-Combo	remove every enemy unit early, then the loop of Combo	a card that needs the other piece in play or in hand	engine	card_presence_condition	Claude's
-prison	Prison / Stax	a lock on both players that my cards ignore, plus locks only on him	a lock on both players	engine	rule_change,row_effects,terrain	Claude's
+prison	Prison / Stax	a lock on both players that my cards ignore, plus locks only on him	a lock on both players	engine	row_effects,terrain	Claude's
 prison	Prison / Stax	a lock on both players that my cards ignore, plus locks only on him	my cards ignore the lock	engine	immunity,free_play,cost_type,stealth	Claude's
 prison	Prison / Stax	a lock on both players that my cards ignore, plus locks only on him	locks only on him	brick	cost_increase,attack_lock,disable,immobilize,silence,attack_zero,hand_disruption,board_clog,junk_cards,donate	Claude's
 go_wide	Tokens / Go-Wide	many small units in a lane (each also gives supply there), and cards that make all of them stronger	many small units	engine	summon,copy,generate_cards,revive,cost_reduction	Claude's

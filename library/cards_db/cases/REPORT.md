@@ -1,7 +1,7 @@
 # Case tests: runeterra
 
 Made by `cases/run.py runeterra`.
-**450 of 450 cases pass.**
+**450 of 452 cases pass.**
 
 **Cases whose reason no line says any more (rewrite them): n56, n352, n378, n669**
 
@@ -24,7 +24,7 @@ Made by `cases/run.py runeterra`.
 | m12 | heals | 68 | 66 | 97% | 74 | yes |
 | m13 | discards | 40 | 39 | 98% | 108 | yes |
 | m14 | obliterates | 43 | 43 | 100% | 21 | yes |
-| m15 | levels up (champion level-up condition) | 119 | 118 | 99% | 4 | yes |
+| m15 | levels up (champion level-up condition) | 119 | 118 | 99% | 5 | yes |
 | m16 | grants lasting stats | 234 | 234 | 100% | 233 | yes |
 | m17 | gives Barrier (damage prevention) | 31 | 31 | 100% | 2 | yes |
 | m18 | Nexus Strike triggers | 32 | 32 | 100% | 1 | yes |
@@ -53,7 +53,7 @@ Made by `cases/run.py runeterra`.
 | m41 | triggers when you draw | 7 | 7 | 100% | 13 | yes |
 | m42 | When I'm summoned triggers | 288 | 288 | 100% | 30 | yes |
 | m43 | Strike triggers | 37 | 37 | 100% | 262 | yes |
-| m44 | gives Challenger | 25 | 25 | 100% | 45 | yes |
+| m44 | gives Challenger | 25 | 25 | 100% | 47 | yes |
 | m45 | gives Elusive | 16 | 16 | 100% | 8 | yes |
 | m46 | gives Vulnerable | 35 | 35 | 100% | 2 | yes |
 | m47 | Lifesteal units heal their Nexus | 17 | 17 | 100% | 37 | yes |
@@ -74,7 +74,7 @@ Made by `cases/run.py runeterra`.
 | m62 | Equipment attaches | 56 | 56 | 100% | 45 | yes |
 | m63 | Augment grows on created cards | 10 | 10 | 100% | 2 | yes |
 | m64 | Formidable strikes with Health | 8 | 8 | 100% | 2 | yes |
-| m65 | Reputation | 13 | 13 | 100% | 149 | yes |
+| m65 | Reputation | 13 | 13 | 100% | 136 | yes |
 | m66 | Allegiance | 10 | 10 | 100% | 18 | yes |
 | m67 | Enlightened | 15 | 15 | 100% | 1 | yes |
 | m68 | Empowered | 10 | 10 | 100% | 4 | yes |
@@ -115,6 +115,8 @@ Made by `cases/run.py runeterra`.
 | wc31 | a stat set to a number is stat_fixed, or stat_loss on an enemy (wheel step 3, Kaptain 17 Nov 2026) | 1 | 1 | 100% | 108 | yes |
 | wc32 | a stat set to the number of something is variable_stats (wheel step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 53 | yes |
 | wc33 | a stat set to a number is not doubling (wheel step 3, Kaptain 17 Nov 2026) | 1 | 1 | 100% | 2456 | yes |
+| wc38 | Runeterra: "your level 2 allies are level 3" levels them up (Restored Sun Disc) (Kaptain 18 Nov 2026, wheel probe) | 1 | 1 | 100% | 122 | yes |
+| wc39 | Runeterra: Flow counts the spells played last round (Kaptain 18 Nov 2026, wheel probe) | 13 | 13 | 100% | 200 | yes |
 
 ## Combos (the enabler must set off the payoff)
 
@@ -200,7 +202,7 @@ Made by `cases/run.py runeterra`.
 | r34 | Bilgewater | splash (library tags) | on_spell | 3 | 11 | yes |
 | r35 | Bilgewater | signature (library tags) | draw | 16 | 36 | yes |
 | r36 | Bilgewater | signature (library tags) | turn_end | 11 | 29 | yes |
-| r37 | Bilgewater | signature (library tags) | damage | 17 | 56 | yes |
+| r37 | Bilgewater | signature (library tags) | damage | 17 | 47 | yes |
 | r38 | Bilgewater | splash (library tags) | heal | 4 | 10 | yes |
 | r39 | Bilgewater | splash (library tags) | turn_start | 10 | 18 | yes |
 | r40 | Bilgewater | splash (library tags) | summon | 19 | 43 | yes |
@@ -214,7 +216,7 @@ Made by `cases/run.py runeterra`.
 | r49 | Freljord | signature (library tags) | on_damaged | 4 | 9 | yes |
 | r50 | Freljord | signature (library tags) | excess_damage | 18 | 35 | yes |
 | r51 | Freljord | signature (library tags) | damage_reduction | 4 | 10 | yes |
-| r52 | Freljord | signature (library tags) | banish | 4 | 9 | yes |
+| r52 | Freljord | signature (library tags) | banish | 4 | 8 | yes |
 | r53 | Freljord | splash (library tags) | heal | 4 | 18 | yes |
 | r54 | Freljord | splash (library tags) | resource_gain | 5 | 10 | yes |
 | r55 | Freljord | splash (library tags) | death_trigger | 6 | 7 | yes |
@@ -230,7 +232,7 @@ Made by `cases/run.py runeterra`.
 | r65 | Noxus | signature (library tags) | excess_damage | 18 | 37 | yes |
 | r66 | Noxus | signature (library tags) | disable | 10 | 18 | yes |
 | r67 | Noxus | signature (library tags) | discard | 4 | 16 | yes |
-| r68 | Noxus | signature (library tags) | damage | 18 | 68 | yes |
+| r68 | Noxus | signature (library tags) | damage | 18 | 59 | yes |
 | r69 | Noxus | splash (library tags) | first_strike | 7 | 16 | yes |
 | r70 | Noxus | splash (library tags) | cost_reduction | 5 | 12 | yes |
 | r71 | Noxus | splash (library tags) | on_attack | 12 | 88 | yes |
@@ -240,11 +242,11 @@ Made by `cases/run.py runeterra`.
 | r75 | Piltover & Zaun | signature (library tags) | cost_reduction | 12 | 38 | yes |
 | r76 | Piltover & Zaun | signature (library tags) | on_spell | 4 | 28 | yes |
 | r77 | Piltover & Zaun | splash (library tags) | resource_gain | 4 | 10 | yes |
-| r78 | Piltover & Zaun | splash (library tags) | damage | 14 | 57 | yes |
+| r78 | Piltover & Zaun | splash (library tags) | damage | 14 | 55 | yes |
 | r79 | Piltover & Zaun | splash (library tags) | generate_cards | 20 | 70 | yes |
 | r80 | Piltover & Zaun | splash (library tags) | transform | 4 | 9 | yes |
 | r81 | Shadow Isles | signature (library tags) | revive | 11 | 21 | yes |
-| r82 | Shadow Isles | signature (library tags) | destroy | 29 | 88 | yes |
+| r82 | Shadow Isles | signature (library tags) | destroy | 29 | 32 | yes |
 | r83 | Shadow Isles | signature (library tags) | death_trigger | 14 | 28 | yes |
 | r84 | Shadow Isles | signature (library tags) | summon | 34 | 45 | yes |
 | r85 | Shadow Isles | splash (library tags) | attack_now | 2 | 14 | yes |
@@ -277,7 +279,7 @@ Made by `cases/run.py runeterra`.
 | r114 | Freljord | archetype (library) | sustain | 14 | 20 | yes |
 | r115 | Freljord | archetype (library) | transformation | 11 | 22 | yes |
 | r116 | Ionia | archetype (library) | positional | 8 | 12 | yes |
-| r117 | Ionia | archetype (library) | control | 38 | 88 | yes |
+| r117 | Ionia | archetype (library) | control | 38 | 77 | yes |
 | r118 | Ionia | archetype (library) | ramp | 14 | 33 | yes |
 | r119 | Ionia | archetype (library) | card_advantage | 30 | 42 | yes |
 | r120 | Piltover & Zaun | archetype (library) | chaos | 24 | 81 | yes |
@@ -328,7 +330,7 @@ Made by `cases/run.py runeterra`.
 | n33 | Darius Gnar | Yadulski Snowdog | Darius | line  | stronger: can give it more power and health | yes |
 | n34 | Darius Gnar | Brothers' Bond | Darius | line  | stronger: can give it more power | yes |
 | n35 | Darius Gnar | Darius | Mega Gnar (level 2) | none  | - | yes |
-| n36 | Ashe LeBlanc | Avarosan Hearthguard | Trifarian Gloryseeker | none  | - | yes |
+| n36 | Ashe LeBlanc | Avarosan Hearthguard | Trifarian Gloryseeker | none  | stronger: gives it more power and health | NO |
 | n37 | Ashe LeBlanc | Incisive Tactician | Ashe | line  | levels: makes it attack for its effect (it levels up from what it then does) | yes |
 | n38 | Braum Zoe | Cosmic Youngling | Braum | none  | - | yes |
 | n39 | Braum Zoe | Targonian Tellstones | Zoe | line  | levels: creates cards: more different cards to play (levels it up) | yes |
@@ -476,7 +478,7 @@ Made by `cases/run.py runeterra`.
 | n670 | Void Seeker, Parrrley | Void Seeker | Parrrley | none leaves weak units for its kill | - | yes |
 | n692 | Benemone, Ballistic Bot | Benemone | Ballistic Bot | line sets off its Augment | waits: creates a card, which sets off its Augment | yes |
 | n695 | Bladebound Berserker, Ballistic Bot | Bladebound Berserker | Ballistic Bot | none  | - | yes |
-| n696 | Iceborn Legacy, Silverwing Vanguard | Iceborn Legacy | Silverwing Vanguard | line copies itself | stronger: gives a unit's copies more power and health, and Silverwing Vanguard c | yes |
+| n696 | Iceborn Legacy, Silverwing Vanguard | Iceborn Legacy | Silverwing Vanguard | line copies itself | stronger: can give it more power and health | NO |
 | n702 | Garen Kayle Jarvan | Kayle (level 2) | Xolaani the Bloodweaver | none changes your units' stats | levels: gives it more power and health: helps it level up | yes |
 | n703 | Garen Kayle Jarvan | Kayle (level 2) | Xolaani the Bloodweaver | line helps it level up | levels: gives it more power and health: helps it level up | yes |
 | n704 | Homecoming, Eye of the Dragon | Homecoming | Eye of the Dragon | line goes off again | waits: returns it to hand: its Play or summon effect goes off again | yes |

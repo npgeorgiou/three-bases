@@ -51,7 +51,7 @@ friendly_fire	338	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,m
 generate_cards	873	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
 hand_disruption	27	duelyst,gwent,marvel_snap,runeterra	usable	
 hand_size	80	duelyst,faeria,gwent,inscryption,marvel_snap,runeterra,stormbound,sts1	usable	
-haste	155	duelyst,faeria,gwent	usable	
+haste	167	duelyst,faeria,gwent	usable	
 heal	133	duelyst,gwent,into_the_breach,monster_train,runeterra	usable	
 immobilize	95	duelyst,faeria,into_the_breach,marvel_snap,monster_train	usable	
 immunity	133	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train	usable	
@@ -59,11 +59,11 @@ in_hand_buff	228	duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,sts1	u
 information	41	gwent,marvel_snap,runeterra,sts1	usable	
 junk_cards	45	faeria,gwent,marvel_snap,runeterra,stormbound	usable	
 leave_trigger	156	duelyst,gwent,marvel_snap,runeterra,sts1	usable	
-level_up	122	runeterra	usable	
+level_up	123	runeterra	usable	
 lifesteal	16	duelyst,gwent,monster_train,stormbound	usable	
 mark_target	24	duelyst,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
-movement	464	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
-multi_attack	106	duelyst,inscryption,monster_train,runeterra,sts1	usable	
+movement	494	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
+multi_attack	110	duelyst,inscryption,into_the_breach,monster_train,runeterra,sts1	usable	
 multi_target_attack	49	duelyst,faeria,gwent,into_the_breach,runeterra	usable	
 on_ally_play	719	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra	usable	
 on_attack	1050	duelyst,faeria,inscryption,into_the_breach,monster_train,runeterra,stormbound,sts1	usable	
@@ -89,7 +89,6 @@ resource_gain	128	faeria,gwent,monster_train,runeterra,sts1	usable
 return_to_hand	147	duelyst,gwent,inscryption,marvel_snap,runeterra,stormbound	usable	
 revive	92	duelyst,gwent,inscryption,marvel_snap,runeterra,stormbound	usable	
 row_effects	35	gwent	usable	
-rule_change	635	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,sts1	usable	
 sacrifice	258	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
 selection	143	faeria,gwent,inscryption,marvel_snap,runeterra,sts1	usable	
 self_destruct	356	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
@@ -125,7 +124,7 @@ slots_queue	29	sts1	helper	a thing for single cards (Kaptain)
 target_choice	133	inscryption,runeterra	helper	a thing for single cards (Kaptain)
 merge_attach	150	duelyst,inscryption,marvel_snap,runeterra	helper	attaching only says how a card acts; the attached card counts by its own effects (Kaptain)
 area_templates	127	duelyst,faeria,into_the_breach,marvel_snap,stormbound	helper	how a card acts (Claude's)
-kicker	10	gwent	helper	how a card acts (Claude's)
+kicker	11	gwent	helper	how a card acts (Claude's)
 stacking_keyword	95	monster_train,runeterra	helper	how a card acts (Claude's)
 temporary_buff	196	duelyst,faeria,into_the_breach,monster_train,runeterra	helper	how a card acts (Claude's)
 aura	100	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra	helper	how a card acts (Kaptain)
@@ -135,22 +134,22 @@ adjacency	687	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,runet
 flanking	17	duelyst	helper	one of the game's own things (Claude's)
 link_formation	10	inscryption	helper	one of the game's own things (Claude's)
 placement_rules	65	duelyst,faeria,gwent,marvel_snap,monster_train	helper	one of the game's own things (Claude's)
-ranged	42	duelyst,faeria	helper	one of the game's own things (Claude's)
+ranged	53	duelyst,faeria,into_the_breach	helper	one of the game's own things (Claude's)
 retain	23	monster_train,sts1	helper	one of the game's own things (Claude's)
 round_passing	14	gwent	helper	one of the game's own things (Claude's)
-rows	424	duelyst,gwent,into_the_breach,stormbound	helper	one of the game's own things (Claude's)
+rows	425	duelyst,gwent,into_the_breach,stormbound	helper	one of the game's own things (Claude's)
 board_limit	115	inscryption,monster_train,runeterra,sts1	helper	one of the game's own things (Kaptain)
 high_cost	1053	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	one of the game's own things (Kaptain)
 lanes	562	duelyst,inscryption,into_the_breach,marvel_snap,monster_train,stormbound	helper	one of the game's own things (Kaptain)
 on_harvest	10	faeria	helper	one of the game's own things (Kaptain)
-positional	223	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,stormbound	helper	one of the game's own things (Kaptain)
+positional	218	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,stormbound	helper	one of the game's own things (Kaptain)
 resource_banking	11	gwent	helper	one of the game's own things (Kaptain)
 round_carryover	40	gwent	helper	one of the game's own things (Kaptain)
 zone_control	157	duelyst,faeria,gwent,into_the_breach,marvel_snap,runeterra,stormbound	helper	one of the game's own things (Kaptain)
 board_presence	151	duelyst,faeria,gwent,inscryption,marvel_snap,runeterra,stormbound	helper	only says the card helps go wide; the units it makes count already (Kaptain)
 tank	303	duelyst,faeria,inscryption,into_the_breach,monster_train,runeterra	helper	only says the unit has a lot of defence; its defence numbers count already (Kaptain)
 turn_start	718	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	when a card acts (Claude's)
-activated	1076	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	when a card acts (Kaptain)
+activated	1077	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	when a card acts (Kaptain)
 combat_start	67	monster_train,sts1	helper	when a card acts (Kaptain)
 cooldowns	92	duelyst,faeria,gwent	helper	when a card acts (Kaptain)
 delayed	8	gwent,monster_train,runeterra	helper	when a card acts (Kaptain)

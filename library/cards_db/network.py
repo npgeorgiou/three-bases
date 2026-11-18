@@ -457,6 +457,8 @@ def lines_of(c, game):
             e_ = (card, 'mine', None, 'card', 'self', None, card, False); makes['discarded'].add(e_); src_m[('discarded', e_)].add(str(ab_))
             own_makes[card].add('discarded'); made_by[(card, 'discarded')].add('own')
     grave_kill = {(k_, a_) for k_, a_ in c.execute("select card, ability from flat_do where act in ('kill','obliterate') and on_zone='discard'")}
+    pile_movers = {k_ for (k_,) in c.execute("select card from flat_do where act in ('move','swap') and on_kind='card' and coalesce(on_zone,'board') in ('deck','deck_top','deck_bottom','hand','discard')")} - \
+        {k_ for (k_,) in c.execute("select card from flat_do where act in ('move','swap') and (coalesce(on_zone,'board')='board' or to_kind='position')")}  # a card moved only in a pile (Maxii van Dekkar); Gaetan moves units on the board, Doctor Octopus pulls cards from hand onto it
     enemy_kw = {(a_, k_) for a_, k_ in c.execute("select card, keyword_ref from flat_do where origin='own' and act='give_keyword' and on_side='enemy'")} - \
         {(a_, k_) for a_, k_ in c.execute("select card, keyword_ref from flat_do where origin='own' and act='give_keyword' and coalesce(on_side,'')!='enemy'")}  # keywords only given to enemies
     entry_rules = {a_ for (a_,) in c.execute("""select ability from flat_do group by ability having sum(case when act in ('cant','can')
@@ -702,6 +704,8 @@ def lines_of(c, game):
                 if mpick == 'self':  # what a card does to itself feeds only a need its own kind fits ("the strongest friendly Dragon")
                     own = ';'.join(p for p in (tw or '').split(';') if p.split(' ')[:2] in (['type', 'is'], ['type', 'in'], ['card', 'is'], ['name_has', 'is'], ['keyword', 'is']))
                     if own and not matches(c, game, cards[m], 'any', own): continue
+                if role == 'state' and h in ('moves', 'moves_onto') and mpick != 'placed' and m in pile_movers: continue  # a card moved only in the deck, hand
+                # or discard pile puts no unit where another card acts by place (Maxii van Dekkar -> Hammond; Albrich still waits for it)
                 if mpick == 'self' and role == 'state' and h in ('moves', 'moves_onto'): continue  # a card moving itself puts no unit
                 # where another card acts: every unit moves (Kaptain 3 Nov 2026: Dragonlark -> Vigilator, Azurite Lion -> Roar: no line)
                 if mpick == 'placed' and (role != 'state' or tpick == 'self' or not place_of(tw) or not put_fits(m, t, tw)): continue  # a unit put there did not move, nor did this card
@@ -1284,7 +1288,8 @@ def circuit_ends(c, game):
 POWER_USE = ('lifesteal',)  # keywords whose own text reads the damage dealt (Lifesteal heals by it). More power for anything
 # else is generic (Kaptain 2 Nov 2026): Overwhelm, Elusive, Double Attack, "Strike:" or a kill hit harder only by the game's goal,
 # not by their text; a text that needs one big strike (Vi: 10+ damage) or gets something from the damage (Reaper) keeps it
-GUARD_USE = ('taunt',)  # keywords that make a unit take or seek fights: more health or protection keeps it there
+GUARD_USE = ('taunt',)  # keywords that make a unit take fights: more health or protection keeps it there, and Taunt given
+# to a unit whose damage kills makes enemies fight it (a Challenger seeking fights is no such use: n36)
 DEFENCE_KW = ('shield', 'damage_reduction', 'immunity', 'regeneration', 'block_armor', 'cheat_death', 'defence_gain', 'protection', 'heal')
 FIGHT_EVENTS = ('strikes', 'attacks', 'attack_done', 'fights', 'challenges', 'activated', 'strikes_nexus')
 # what each help makes happen, for a card that waits for it or levels from it ("when I'm healed", "Level up: allies given Barrier")
@@ -1436,6 +1441,8 @@ def use_of(c, game, b, act, kw, ps, w=None):
     if up('health') or act in ('negate_damage', 'damage_reduction') or (act == 'give_keyword' and tree in DEFENCE_KW) \
             or (act == 'cant' and pev in ('dies', 'targeted')):  # "can't drop below 1 health" (Survival Skills)
         if u['trees'] & set(GUARD_USE): return 'keeps it alive in the fights it takes on'
+    if act == 'give_keyword' and tree in GUARD_USE:  # Taunt given makes enemies fight it
+        if 'deathtouch' in u['trees']: return f'gives it {kwn}: enemies fight it, and its damage kills them'  # Shamanic Dance -> Death Walker
     if act == 'repeat' and b in doublers(c, game): return 'plays it again: its doubling doubles again'  # Burst -> Catalyst
     if act == 'increase_effect' and b in gains_back(c, game): return 'its damage is bigger, and so is what it gets back from it'  # Strength -> Reaper
     # a repeat or a bigger effect for any card ("trigger the ability of a friendly unit", "double the buffs") is generic: any card

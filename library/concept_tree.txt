@@ -136,7 +136,7 @@ cant_move | Can't move (my own unit) | combat | drawback | The unit itself can't
 donate | Give my units or cards to the opponent | effect | drawback | The owner gives their own units or cards to the opponent. | Putting harmful units on their side is board_clog.
 
 ## Neutral game rules
-rule_change | Change the game's rules | effect | game_rules,structure | An effect changes a rule of the game or of a zone for everyone. | A rule that binds only the opponent is disruption.
+rule_change | Change the game's rules | effect | game_rules,structure | An effect changes a rule of the game or of a zone for everyone (a location where all cards may move). | A rule that binds only the opponent is disruption; what one card may do itself (fly, hit from afar, be placed anywhere) is the concept of that thing.
 play_restriction | Limit what can be played | effect | game_rules | Where, what or how many cards can be played is limited: can't be played here, only N per turn. | Cancelling a play already made is counter_spell.
 lane_closure | Close or ruin a lane | effect | play_restriction,rule_change,lanes | A lane, location or zone stops being usable: flooded, destroyed, locked. | A lane with an extra rule is lane_rule.
 forced_placement | Force where cards go | effect | play_restriction,placement_rules | Where units are played or end up is dictated: all cards must be played here, played cards move here. | A unit moved after it was placed is movement or forced_movement.

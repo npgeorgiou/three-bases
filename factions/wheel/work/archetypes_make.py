@@ -34,7 +34,7 @@ A('aggro_combo','Aggro-Combo','cheap units take lanes early, then one play makes
  ('the sudden finish: grows with the units already there','engine','variable_stats,condition_count,count_payoff,stat_multiply,attack_gain,multi_attack,attack_now')])
 A('control_combo','Control-Combo','remove every enemy unit early, then the loop of Combo',[('answers to every enemy unit','brick',ANS),FIND,LOOP1,LOOP2,NEED])
 A('prison','Prison / Stax','a lock on both players that my cards ignore, plus locks only on him',[
- ('a lock on both players','engine','rule_change,row_effects,terrain'),
+ ('a lock on both players','engine','row_effects,terrain'),
  ('my cards ignore the lock','engine','immunity,free_play,cost_type,stealth'),
  ('locks only on him','brick','cost_increase,attack_lock,disable,immobilize,silence,attack_zero,hand_disruption,board_clog,junk_cards,donate')])
 A('go_wide','Tokens / Go-Wide','many small units in a lane (each also gives supply there), and cards that make all of them stronger',[

@@ -11,7 +11,7 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 3. The archetypes | done | `archetypes.tsv` (agreed with Kaptain): the 38 archetypes that can exist here, 91 parts, engine or brick, every usable concept in at least one part; `archetypes.md` the same in plain words |
 | 4. The radii and how they work together | done | `work/radii.tsv` (every usable concept on its radius, agreed with Kaptain); `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` from concept instances |
 | 5. The links between concepts | done | `library/cards_db/wheel/concept_links.tsv` (`mechanics_wheel.py links --concepts`, about a minute) |
-| 6. The archetype map | done, waiting for Kaptain's OK (`RECHECK.md`) | `work/archetype_map.tsv`: 720 edges between the concepts of engine parts; `factions/wheel-archetypes.html`; one gap (`work/archetype_gaps.tsv`): Discard / 8-Rack |
+| 6. The archetype map | done, waiting for Kaptain's OK (`RECHECK.md`) | `work/archetype_map.tsv`: 719 edges between the concepts of engine parts; `factions/wheel-archetypes.html`; one gap (`work/archetype_gaps.tsv`): Discard / 8-Rack |
 | 7. The 20 factions | **next** | |
 | 8. Combos on this board | to do | |
 | 9. Game plan, then keywords | to do | |

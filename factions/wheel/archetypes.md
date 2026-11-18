@@ -58,7 +58,7 @@ Remove every enemy unit early, then the loop of Combo.
 ## Prison / Stax
 A lock on both players that my cards ignore, plus locks only on him.
 
-- **a lock on both players** (engine): Change the game's rules; Row-wide lasting effects (weather); Terrain / board features.
+- **a lock on both players** (engine): Row-wide lasting effects (weather); Terrain / board features.
 - **my cards ignore the lock** (engine): Immune / can't be targeted; Put into play for free; Alternative costs; Stealth / hidden until it acts.
 - **locks only on him** (brick): Make the opponent's cards cost more; Can't attack (lock on an enemy); Can't act at all (stun, freeze); Can't move (root); Silence (abilities removed); Attack set to 0; Attack the opponent's hand; Clog the opponent's board; Junk cards into a deck or hand; Give my units or cards to the opponent.
 

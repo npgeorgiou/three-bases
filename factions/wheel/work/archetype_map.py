@@ -16,10 +16,9 @@ import axes, mechanics_wheel
 PLAYER = ('player', 'nexus', 'leader', 'hero', 'face')  # link texts about hitting the player: no player health here
 
 
-def note(r, pair):
-    """why an edge is weak: its top link text is about the player, or only real decks join it (no card pair)"""
-    text = (r['texts'].split(' | ')[0] if r['texts'] else '').lower()
-    if any(w in text for w in PLAYER): return 'about the player'
+def note(p, pair, player):
+    """why an edge is weak: most of its card links are about the player, or only real decks join it (no card pair)"""
+    if player.get(p, 0) > 0.5: return 'about the player'
     if not pair: return 'decks only'
     return ''
 
@@ -56,39 +55,42 @@ def main():
               if r['kind'] == 'usable']
     every = [(p, r) for p, r in links.items() if len(p) == 2 and p <= set(usable) and joined(r)]
     wanted |= {p for p, _ in every}
-    examples = card_pairs(wanted)
+    examples, player = card_pairs(wanted)
     behind = collections.Counter()  # the cards behind the most edges (one card can carry many)
     with open(os.path.join(HERE, 'archetype_map.tsv'), 'w', encoding='utf-8') as f:
         f.write('archetype\tpart_a\ta\tpart_b\tb\tcards\tdecks\tgames\tlevel\ttext\tcard_pair\tnote\n')
         for key, pa, a, pb, b, r in edges:
             text = r['texts'].split(' | ')[0] if r['texts'] else ''
             pair = examples.get((frozenset((a, b)), text)) or examples.get((frozenset((a, b)), ''), '')
-            f.write('\t'.join([key, pa, a, pb, b, r['cards'], r['decks'], r['games'], r['level'], text, pair, note(r, pair)]) + '\n')
+            f.write('\t'.join([key, pa, a, pb, b, r['cards'], r['decks'], r['games'], r['level'], text, pair, note(frozenset((a, b)), pair, player)]) + '\n')
             for card in pair.split(': ', 1)[-1].split(' + ') if pair else (): behind[card] += 1
     with open(os.path.join(HERE, 'archetype_gaps.tsv'), 'w', encoding='utf-8') as f:
         f.write('archetype\tpart_a\tpart_b\tconcept_pairs\tpairs_with_any_link\n')
         for g in gaps: f.write('\t'.join(map(str, g)) + '\n')
-    page(arch, edges, examples, usable, every)
+    page(arch, edges, examples, player, usable, every)
     print(f'{len(edges)} edges, {len(gaps)} engine part pairs with no joined edge')
     print('cards behind the most edges: ' + ', '.join(f'{k} {n}' for k, n in behind.most_common(8)))
 
 
 def card_pairs(wanted):
-    """per concept pair and link text (and per pair alone, text ''): the real card pair of its strongest link, 'game: A + B'"""
+    """per concept pair and link text (and per pair alone, text ''): the real card pair of its strongest link, 'game: A + B';
+    per concept pair, the share of its card links whose text is about hitting the player"""
     c, games, x, con, pools, stats = mechanics_wheel.setup()
     keys = [(k, 0, '', k, cons, '') for k, _, cons, *_ in mechanics_wheel.concepts(con)]
     name = dict(((i), (g, n)) for i, g, n in c.execute('select id, game, name from card'))
-    best = {}
+    best, total, onplayer = {}, collections.Counter(), collections.Counter()
     L = sqlite3.connect(os.path.join(DB, 'links.sqlite'))
     for g, a, b, sa, sb, w, kind, text in L.execute(
             'select l.game, a, b, a_ab, b_ab, weight, p.kind, p.text from link l join phrase p on p.id=l.phrase where a != b'):
         ka, kb = axes.side_keys(a, sa, g, keys, con), axes.side_keys(b, sb, g, keys, con)
+        about = any(x in text.lower() for x in PLAYER)
         for p in {frozenset((u, v)) for u in ka for v in kb if u != v} & wanted:
+            total[p] += 1; onplayer[p] += about
             t = (p, f'{kind}: {text}')
             for t in (t, (p, '')):
                 if t not in best or (w or 0) > best[t][0]:
                     best[t] = (w or 0, f'{g}: {name[a][1]} + {name[b][1]}')
-    return {t: v[1] for t, v in best.items()}
+    return {t: v[1] for t, v in best.items()}, {p: onplayer[p] / total[p] for p in total}
 
 
 def layout(nodes, every):
@@ -113,7 +115,7 @@ def layout(nodes, every):
     return out
 
 
-def page(arch, edges, examples, usable, every):
+def page(arch, edges, examples, player, usable, every):
     """factions/wheel-archetypes.html: every usable concept at a fixed place; tick archetypes to light their concepts,
     their lines, and the real links between the ticked archetypes"""
     names = {}
@@ -128,7 +130,7 @@ def page(arch, edges, examples, usable, every):
         text = r['texts'].split(' | ')[0] if r['texts'] else ''
         data['edges'].append({'arch': key, 'a': a, 'b': b, 'cards': r['cards'], 'decks': r['decks'], 'games': r['games'], 'level': r['level'],
                               'text': text, 'pair': examples.get((frozenset((a, b)), text)) or examples.get((frozenset((a, b)), ''), ''),
-                              'note': note(r, examples.get((frozenset((a, b)), text)) or examples.get((frozenset((a, b)), ''), ''))})
+                              'note': note(frozenset((a, b)), examples.get((frozenset((a, b)), text)) or examples.get((frozenset((a, b)), ''), ''), player)})
     data['names'] = names
     data['pos'] = layout(usable, every)
     data['links'] = []
@@ -137,7 +139,7 @@ def page(arch, edges, examples, usable, every):
         text = r['texts'].split(' | ')[0] if r['texts'] else ''
         pair = examples.get((p, text)) or examples.get((p, ''), '')
         data['links'].append({'a': a, 'b': b, 'cards': r['cards'], 'decks': r['decks'], 'games': r['games'], 'text': text,
-                              'pair': pair, 'note': note(r, pair)})
+                              'pair': pair, 'note': note(p, pair, player)})
     tpl = open(os.path.join(HERE, 'archetype_map_template.html'), encoding='utf-8').read()
     out = os.path.join(HERE, '..', '..', 'wheel-archetypes.html')
     open(out, 'w', encoding='utf-8').write(tpl.replace('/*DATA*/null', json.dumps(data)))

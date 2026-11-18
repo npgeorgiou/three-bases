@@ -38,9 +38,17 @@ stage ends with a commit and a push, and its line here marked done with what it 
    `work/archetypes_make.py` (106 parts, every archetype with 2+ engine parts, no concept twice in one archetype); run it
    after stage 2, then check every engine pair's edges. State: **done**, waiting for Kaptain (stage 5).
 4. **Map redone** (`archetype_map.py`): edges whose link text is about hitting the player, and deck-only edges, are
-   marked; the cards behind most edges are counted. State: **done**: 720 edges.
-5. **Kaptain's OK** on the redone archetypes and the map. State: waiting. Open, for him: thin networks the 10 games
-   barely show (Pillowfort 1 edge, Prison 2, Extra Turns 2: "hits back" cards live only in Monster Train, Inscryption
-   and Slay the Spire, "must attack this" only in Faeria, Gwent, Duelyst, Runeterra, so real cards can never link them);
-   and a possible link rule missing: "a rule or row effect on both players" and "my unit immune to it" are in the same 7
-   games but no real card pair is ever linked (network.py has no rule for "B is immune to what A makes").
+   marked; the cards behind most edges are counted. State: **done**: 719 edges after stage 6.
+5. **Kaptain's OK** on the redone archetypes and the map. State: waiting (the page for it is made by script from
+   `archetypes.tsv` and `work/archetype_map.tsv`, with the probes' results).
+6. **Probes and fixes** (Kaptain's go, 18 Nov 2026; 300 card reads at most, 183 used, all in `factions/read-cards.tsv`).
+   State: **done**. A script counted, for the thin archetypes and every engine concept pair with no link, the cards
+   of each game with both and the links between them; helpers read 90 real card pairs and 41 single cards (text next to rows,
+   `library/cards_db/checks/wheel_probe/`). Fixed for every card, with cases (START_DATABASE.md "State"): "can" rows by
+   what they allow (rule_change keeps only rules on both players: 669 cards -> 7, so it is out of the usable concepts,
+   off the radii "strikes more" and "position and combos" and out of Prison's "lock on both"); Taunt or Challenger given
+   makes my unit take hits; Taunt given to a unit whose damage kills; a keyword given to a space (Rain) is on the space
+   too; a card moved only inside a pile puts no unit anywhere; Runeterra Flow counts spells; 21 misread cards. A map
+   edge is weak "about the player" only when more than half its card links are. Still thin, because the 10 games hold
+   few such cards: Pillowfort (2 edges), Prison (2), Extra Turns (2), Discard / 8-Rack (0). Not fixed: 89 cards with
+   "instead" whose rows show no OR or IF (not read).

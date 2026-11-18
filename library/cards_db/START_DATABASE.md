@@ -131,8 +131,21 @@ pair that must or must not count for two mechanics or radii.
 - Timing a concept fix for Kaptain (17 Nov 2026): baseline `check_all.py --no-load` 8 min, `dump_lines.py`
   about 10 min each (before and after), `check_all.py` 14 min, `links.py` 6 min: about an hour per round in all. Say
   the whole hour before starting, and look for a smaller way first.
-- Lines: links.sqlite rows per game (counts change with every rebuild; `status.py`). The next case id is n700.
-- Known gaps with no fix planned: Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain);
+- A "can" row (a card may do what is normally forbidden) takes its concept by what it allows (18 Nov 2026, Kaptain;
+  flat.py derive, cases wc34-wc37): a rule on all units of both sides or a location's "cards can move here" is
+  rule_change; a "can" a keyword brings takes that keyword's concept (Flying: movement); the card's own "can" takes what
+  it may do (moves: movement; hits from afar: ranged; again: multi_attack; placed: placement_rules; harvests:
+  zone_control; challenges: target_choice; blocks: blocking; activated); a unit made the leader has no concept.
+- Lines from the wheel probes (18 Nov 2026, Kaptain): Taunt or Challenger given to my unit makes it fight, so it takes
+  hits (refs.py; lk395, n707); Taunt given to a unit whose damage kills draws enemies onto it (network.py use_of); a
+  keyword given to a space is on the unit there and on the space itself (refs.py; Rain -> Rioghan the Undying, n706); a
+  card moved only inside a pile puts no unit where another card acts by place (network.py pile_movers; lk397, lk399-lk402).
+  Runeterra's Flow is "2+ spells or skills played last round" on every Flow card (fixes/runeterra/v65.py; wc39, n705).
+  The probes' cards, readings and fixes: checks/wheel_probe/.
+- Lines: links.sqlite rows per game (counts change with every rebuild; `status.py`). The next case ids are n708, lk403, wc40.
+- Known gaps with no fix planned: Runeterra Anaakca's "follower or non-champion Darkin" has no OR filter; "if it
+  survived" for one step of a card (Blood for Blood, Heroic Charge) has no form; 89 cards say "instead" with no OR or IF
+  in their rows (not checked); Adaptive Mutation's stat swap has no line; Monster Train has no full decks as text (ask Kaptain);
   Monster Train's Olde Magic record lists the wiki's choices with no numbers; Stormbound's Fort of Ebonrock has no ability.
 
 ## Choosing the next game (Kaptain, 3 Nov 2026)
