@@ -57,6 +57,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 - A concept needs 5+ real cards in the library (all games together).
 - Scripts, no reading agents. Card texts are read only where a card's rows can't answer: at most 500 cards for the
   whole wheel, by a low-cost model; count them and get Kaptain's OK first.
+- A card's concept is judged with the rules of its keywords, not its printed text alone (Monster Train's Offering plays
+  the card for free when it is discarded), and with the rows that gave it the concept.
 - A concept that means two things in different games is a library error: it is split in the library, with test cases,
   never limited to some games in a list.
 
