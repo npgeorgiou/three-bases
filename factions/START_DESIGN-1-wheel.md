@@ -24,15 +24,20 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   count on two, each instance by what its rows say (deal damage: on a spell for "damage from spells", on any other card
   for "damage from units' text"). A faction's value on a radius is the share of its concept instances that belong to
   that radius; the card itself goes nowhere.
-- **The faction's archetypes**: the one or, better, more archetypes a faction plays (step 7). Their concepts are its
-  character (what it is strongest at, what its mechanics grow from).
-- **The faction's list**: every concept of the library (usable, helpers and out), each with its score for how strongly
-  it links with the concepts of the faction's archetypes. The faction's cards use it a lot, to make those concepts
+- **The faction's archetypes**: the 2 or 3 archetypes a faction plays (step 7). Their concepts are its character (what
+  it is strongest at, what its keywords grow from).
+- **The faction's list**: every concept of the library (usable, helpers and out) except its archetypes' own, each with
+  its score for how strongly it links with the concepts of the faction's archetypes. The faction's cards use it a lot, to make those concepts
   possible, start them or make them stronger.
 - **Helper**: a concept that only says when or how a card acts, one of the game's own things, or a thing for single
   cards (step 2). Never a part of an archetype; always on the faction's list.
 - **Synergy**: a link between two concepts of the faction's archetypes, shown by real card pairs, never written by hand: "makes your
   units die: the other card brings them back (in 7 of 10 games, 3.1 times chance)".
+- **Extras**: the concepts of a faction's list that step 7 gives it besides its archetypes' concepts.
+- **Keyword** (in industry words, a mechanic): a word on many cards that stands for one rule (Magic's Exploit,
+  Hearthstone's Overload).
+- **The seven answers**: how a faction wins, removes a front unit, MAINLY removes back-row units, MAINLY acts between
+  lanes, holds a base, its best Place effect, its blind spot.
 
 ## Rules for every step (Kaptain)
 - Every game counts the same in every number: worked out in each game alone, then averaged. Games with no factions
@@ -52,8 +57,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 - **Kaptain agrees the archetypes and their parts** (step 3), **the concepts on each radius** (step 4) and
   **the 20 factions' archetypes** (step 7). **Stop 1: Kaptain agrees the 20 factions** (step 10).
 - Then one chat per faction (two can run at once): steps 1-6 of `START_DESIGN.md`. **Stop 2: Kaptain agrees them.**
-  Then cards, the gate, the faction check (`wheel_check.js`, to rewrite: the cards against the faction's archetypes and
-  list), a separate agent's review. **Stop 3: Kaptain gets the finished faction.**
+  Then cards, the gate, the faction check (`wheel_check.js`: the cards against the faction's archetypes and
+  extras), a separate agent's review. **Stop 3: Kaptain gets the finished faction.**
 - Pilot: the first two factions are a pair with a STRONG combo; their premades play each other (`cardstats.js`) and
   one mixed deck shows whether the combo fires. **Stop 4: Kaptain decides whether the rest is built.**
 
@@ -129,42 +134,51 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    often link sit close); Kaptain ticks one or more archetypes to light their concepts and edges, and between ticked
    archetypes the page draws every real link from a concept of one to a concept of another (any part), to see whether
    archetypes fit together in one faction.
-7. **The 20 factions, their themes and their lists** (by script, from the archetype map; `work/factions.py` ->
-   `work/factions.tsv`). Each faction plays 2 or 3 archetypes that work together as one, judged by the links between
-   them on the map (many strong links between their concepts); one archetype is played by at most 3 factions. The rules the script follows are agreed with Kaptain
-   before it is written. Kaptain sees per faction: its archetypes in plain words, their concepts, and its synergies
-   (each edge: the real link text with its times chance and games); one sentence per faction, written from those texts.
-   **Kaptain agrees the 20 factions' archetypes.** Then each faction gets a real theme (World War I artillery, the Zulu
-   regiments) picked for its archetypes; the 20 themes all differ; the theme breaks ties between concepts that score
-   about the same, never against the scores. Then each faction's list (`work/concept_list.py` ->
-   `work/lists/<letter>.tsv`): every concept with 10+ cards (usable, helpers and out) except its archetypes' own, each
-   with its score. In each game alone: real links between the concept's instances and the instances of the concepts of
-   the faction's archetypes, against the links chance alone gives there; the game's score = (real + 1) / (chance + 1),
-   so a single rare link doesn't look huge and a big count is almost untouched; the score = the average over the games
-   where the concept and those concepts both appear (every game weighs the same). Beside it: the `level` and in how
-   many games. Sorted by score. Then, per faction, the concepts that give each of the seven answers (step 10) from its
-   archetypes and its list; a faction with an answer no concept gives goes back to its archetypes.
-8. **Combos on this board.** For every pair of factions (190), the joins between the concepts of one faction (its
-   archetypes' and its list's) and the other's (step 5 numbers), by script; the rule for which list concepts count is
-   agreed with Kaptain before the script is written. Claude rates each pair with numbers on the board: STRONG (both
-   halves on many cards, helps take or hold a base, the enemy's one action between can't easily stop it), OK (real but
-   breakable), WEAK, NONE, AGAINST. Partners = STRONG or OK; every faction has 7+; one under 7 goes back to step 7.
+7. **The 20 factions** (by script, from the archetype map; `work/factions.py` -> `work/factions.tsv`, and
+   `work/concept_list.py` -> `work/lists/<letter>.tsv`). The script's rules are agreed with Kaptain before it is
+   written. In this order:
+   1. Each faction plays 2 or 3 archetypes that link strongly on the map (many strong links between their concepts);
+      one archetype is played by at most 3 factions. **Kaptain agrees the 20 factions' archetypes**, seeing per faction
+      its archetypes in plain words, their concepts, its synergies (the real link text, times chance, games) and one
+      sentence written from those texts.
+   2. A real theme (World War I artillery, the Zulu regiments) picked for its archetypes; the 20 themes all differ. The
+      theme only breaks ties between concepts that score about the same.
+   3. Its list: every concept with 10+ cards (usable, helpers and out) except its archetypes' own, each with its score.
+      In each game alone: real links between the concept's instances and the instances of the faction's archetype
+      concepts, against the links chance alone gives there; the game's score = (real + 1) / (chance + 1); the score =
+      the average over the games where the concept and those concepts both appear (every game weighs the same). Beside
+      it: the `level` and in how many games.
+   4. Its extras, picked from the list by these goals in this order: (a) each of the seven answers its archetypes don't
+      give gets the highest-scoring concept that gives it (which concepts give which answer: a table Kaptain agrees
+      first, e.g. "removes a front unit": destroy, damage, fight a chosen enemy, push); (b) then the highest-scoring
+      concepts that link with at least 2 of its archetype concepts, links into engine parts counting more; (c) one
+      extra goes to only a few factions; (d) the theme breaks ties. A faction gets a fixed number of extras, set by
+      Kaptain.
+   5. Its seven answers, each given by one of its concepts. An answer no concept gives is fixed first in (4) with
+      another extra; only when its list has no concept for it does the faction go back to (1).
+8. **Combos on this board.** For every pair of factions (190), the joins between the two factions' concepts (archetypes
+   and extras; step 5 numbers), by script. Claude rates each pair with numbers on the board: STRONG (both halves on many
+   cards, helps take or hold a base, the enemy's one action between can't easily stop it), OK (real but breakable),
+   WEAK, NONE, AGAINST. Partners = STRONG or OK; every faction has 7+; one under 7 goes back to step 7.
    `wheel/combos.tsv` has a test column that playtests fill.
-9. **Mechanics** (being worked out with Kaptain; nothing is built from this step until he agrees it). A mechanic is a
-   keyword or rule used on many of a faction's cards (Magic's Exploit, Hearthstone's Overload), built on this game's
-   own things (dots and front cells, rows, columns, lanes, the 3x3 camp, unit size, supply per lane, carry-over, round
-   start and end, one action per turn, moving, reach, strikes and fixed damage, the hand, the discard pile, Immobile)
-   with the concepts of its archetypes and list. Each names the synergy it grows from; the linked card pairs of that
-   synergy are its source cards. Keywords are shared: no keyword is barred from any faction; each keyword
-   is mostly on the factions that obviously gain from it, and every faction has at least 1 keyword of its own that no
-   other faction has; one Egg in the whole wheel.
-   Countdowns very sparingly; a lane never holds more than 12 supply. A rule the game lacks is marked NEW RULE. Written
-   to `wheel/mechanics.tsv`. The old candidates (commit d4a3de0^, `factions/3-candidates/`) are
-   read last, only to see that no idea Kaptain liked is missing.
-10. **The seven answers and Stop 1** for all 20: how it wins, how it removes a front unit, how it mainly removes
-   back-row units, how it mainly acts between lanes, how it holds a base, its best Place effect, its blind spot; each
-   from the concepts found in step 7 and the mechanics. Every answer differs from every other faction's; a blind spot
-   never touches its archetypes. Then the check script (`tools/wheel_table_check.py`, to rewrite: against each
-   faction's archetypes, list and answers) and the Stop 1 pages (`work/make_stop1.py` -> `wheel/STOP1*.md`: per
-   faction its archetypes and synergies, theme, mechanics, the seven answers, and one line per partner saying how the
-   combo plays). Files under 150 lines.
+9. **Game plan, then keywords** (`wheel/plans.tsv`, `wheel/keywords.tsv`).
+   1. Each faction's game plan: how it takes and holds 2 bases over a few turns with its synergies, walked through on
+      the board (which cell, what happens, what the enemy does with his one action between).
+   2. The keywords of all 20 factions are made together, as one pool, on this game's own things (dots and front cells,
+      rows, columns, lanes, the 3x3 camp, unit size, supply per lane, carry-over, round start and end, one action per
+      turn, moving, reach, strikes and fixed damage, the hand, the discard pile, Immobile). Each grows from a synergy
+      and names the real card pairs of that synergy (2+ games) as its sources.
+   3. Keywords are shared: one built on a synergy several factions have is on all of them, a lot on those that
+      obviously gain from it, a little on the others; none is barred from any faction. Where it can, one faction makes
+      what a keyword needs and a partner gains from it. Every faction has at least 1 keyword of its own, from a synergy
+      only it has.
+   4. A script checks: every faction has a keyword of its own; no shared keyword is on one faction only; every keyword
+      uses only concepts of the factions that carry it. One Egg in the whole wheel. Countdowns very sparingly; a lane
+      never holds more than 12 supply. A rule the game lacks is marked NEW RULE.
+   5. Before all 20: on one faction, each new keyword carries 12+ different cards (cost 1 to 6, never the same card
+      with other numbers); Kaptain judges.
+10. **Stop 1** for all 20: the seven answers made final from the game plan and keywords (every answer differs from
+   every other faction's; a blind spot never touches its archetypes), the check script (`tools/wheel_table_check.py`:
+   against each faction's archetypes, extras and answers) and the Stop 1 pages (`work/make_stop1.py` ->
+   `wheel/STOP1*.md`: per faction its archetypes and synergies, theme, game plan, keywords, the seven answers, and one
+   line per partner saying how the combo plays). Files under 150 lines.

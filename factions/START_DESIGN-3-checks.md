@@ -55,7 +55,7 @@ How to ask: part 4, `START_DESIGN-4-asking.md`. Run from `library/cards_db/`.
 - For a synergy: `compare`, `factions`, `fed`, `feeds`, `together`, `chains`, `both`. Look at the cards' rows before
   trusting a count; open texts only within the 100 (below).
 - Reading cards = opening a card's text. Lines from `ask.py` output (a card's rows: when -> what -> on whom) are not
-  reading and are free. At most 100 card texts per faction, for its mechanics (the wheel's step 9) and its ways to play (steps 6-7) together;
+  reading and are free. At most 100 card texts per faction, for its keywords (the wheel's step 9) and its ways to play (steps 6-7) together;
   the key cards of the closest real factions' ways first (`ask.py all ways` shows what each key card does). First
   look up `factions/read-cards.tsv`: a card listed there is never read again, its line says which way it showed. Every
   card read gets a line there (game, card, faction it was read for, the way it showed). When a card's text shows

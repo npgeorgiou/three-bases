@@ -1,30 +1,25 @@
 ==================================================================
 12. THE MECHANICAL WHEEL: designing 20 factions together
 ==================================================================
-Why: designing factions one by one from a theme loses what makes each faction unique and how its mechanics connect.
-Each faction's archetypes, identity and Kaptain's seven questions come first for all 20 factions at once; the
-theme comes after the archetypes, as a source of each faction's tools. The wheel is made by calculation, research and intuition. The steps, in order, with their
-stops: factions/START_DESIGN-1-wheel.md. Commands: factions/wheel/PIPELINE.md.
+Why: designing factions one by one from a theme loses what makes each faction unique and how its cards connect.
+Each faction's archetypes, extras, seven answers, partners, game plan and keywords come first, for all 20 factions at
+once; the theme comes right after the archetypes. The steps, in order, with their stops:
+factions/START_DESIGN-1-wheel.md. Commands: factions/wheel/PIPELINE.md.
 
 Principles
-1. The wheel is a start for exploring: factions are painted on a circle of radii, and the radii that work together
-   are found. Each faction's archetypes come after, from the archetype map; its mechanics are the links real
-   cards show between their concepts. Factions have no neighbours; the circle only shows the radii.
-2. A faction is strong on the radii its archetypes' concepts sit on, joined by trigger -> payoff (one radius makes
-   what another needs), wherever they sit on the circle. Its shape is free: inside one game real factions differ, one
-   sharp peak and many mild radii (Gwent's Syndicate), several peaks (Gwent's Skellige) or broad and flat (Duelyst's
-   Magmar). Opposite radii are not kept apart (correlation 0.01). No two factions sit on the same
-   place.
-3. A faction plays one or, better, more archetypes, turned into 2-4 tools that feed each other; its cards use its
-   list (every usable concept and helper) a lot, to serve its archetypes.
-4. Every faction differs from every other in each of the seven answers.
-5. Combos are trigger -> payoff between factions: a card of one makes the thing a card of another gains from. Every
-   faction combines well with at least 10 others. Planned combos are only part of the hooks; each faction's chat adds
-   more. Shared cards (one card in two factions) are one source of combos, never the only one.
-6. A graph check: concepts are nodes, a line where real cards of one make what cards of another use; each faction's
-   engines are connected (the archetype map, wheel step 6).
-7. Each faction, once built, is measured on the radii (`node tools/wheel_check.js <letter> "<planned values>"`): it
-   must land where the wheel put it; if it drifted, the faction is fixed, not the wheel.
+1. The map: concepts are nodes, and a line joins two concepts that real cards link (factions/wheel-archetypes.html).
+   Each archetype is a set of parts on it; a faction plays 2 or 3 archetypes that link strongly, and its synergies are
+   the links real cards show between their concepts.
+2. A faction is strong at what its archetypes do. Its extras come from its list (every other concept, scored by its
+   real links with the archetypes' concepts): first for the seven answers its archetypes don't give, then to feed its
+   archetypes' engines.
+3. Every faction differs from every other in each of the seven answers.
+4. Combos are trigger -> payoff between factions: a card of one makes the thing a card of another gains from. Every
+   faction combines well with at least 7 others. Shared keywords are the main source of combos; every faction also
+   has at least 1 keyword of its own. Each faction's chat adds more hooks.
+5. Each faction, once built, is checked against its archetypes and extras (`node tools/wheel_check.js <letter>`); if it
+   drifted, the faction is fixed, not the wheel.
+6. The radii below show how the 43 real factions spread; nothing is designed from them.
 
 The axes. On the page the ends below are split into 23 radii in 8 areas (factions/13-wheel-measurement.txt), measured
 by axes.py on 43 factions of 8 games (Marvel Snap has no factions; Monster Train is a different kind of game). Every

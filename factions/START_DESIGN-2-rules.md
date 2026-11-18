@@ -107,12 +107,12 @@ More text: `summary/09-card-design-rules.txt`
 - Every card says what it makes happen and what it needs (its `net` line), and each "needs" has a card in the faction
   that makes it. Example: Toll Warrior needs units to die this round; Willing Victim (dies when offered) makes it.
 - Cards that cash something in have 3+ cards that set it up; cards that set something up feed 2+ cards that cash it in.
-- Mechanics (the wheel's step 9): 2-4 new kinds of things or rules, each from one synergy of its archetypes, feeding each
-  other; many cards use them, the rest of the faction's cards build the ways to play around them.
-- Its archetypes (the wheel's step 7): the one or more ways to play it is made of, each of engines and bricks; its
-  synergies are the links between their concepts, each on several cards.
-- The faction's list (the wheel's step 7: every concept of the library, highest score for linking with its archetypes' concepts
-  first) is used A LOT, by most cards: a concept from it makes its archetypes' concepts possible, starts them or makes them
+- Keywords (the wheel's step 9): its own keyword and the shared ones it carries, each from a synergy; many cards use
+  them, the rest of the faction's cards build the ways to play around them.
+- Its archetypes (the wheel's step 7): the 2 or 3 ways to play it is made of, each of engines and bricks; its
+  synergies are the links between their concepts, each on several cards. Its extras (step 7) feed them.
+- The faction's list (the wheel's step 7: every other concept of the library, highest score for linking with its
+  archetypes' concepts first) is used A LOT, by most cards: a concept from it makes its archetypes' concepts possible, starts them or makes them
   stronger. Example: a faction built on units dying has units that come back, so more units can die. Cards built only
   from its archetypes are poorly designed.
 - How much it touches the enemy: a disruptive faction has many cards that act on enemy units (push, mark, punish); a

@@ -17,7 +17,7 @@ read-cards.tsv                     99  every library card read for a design, wit
 7-ideas-kept-for-later.txt          18  7. IDEAS KEPT FOR LATER (moved from summary/, 12 Oct 2026)
 8-rejected-and-cut.txt               6  8. REJECTED AND CUT (don't reintroduce without asking)
 10-outside-design-guides.txt        79  10. What outside design guides teach (Hearthstone, Rosewater, Slay the Spire...) and what they mean here
-12-mechanical-wheel.txt             63  12. The mechanical wheel: designing 20 factions together; its radii and the agreed design process
+12-mechanical-wheel.txt             62  12. The mechanical wheel: designing 20 factions together; its principles and the radii of real factions
 13-wheel-measurement.txt            125  13. How the wheel's radii are measured (axes.py, wheel-axes.html) and how to redo it
 wheel/README.txt                    12  the wheel's files: where it stands (HANDOFF.md), commands (PIPELINE.md), archetypes, work files
 removed/                                The removed factions (Tagma, Ashfang Horde, Exanimati): their summary card files, and
