@@ -6,29 +6,39 @@ One chat does one step; at its end, mark the step done here and say what it left
 ## The steps
 | step | state | what it made |
 |---|---|---|
-| 1. Fix the library's concepts | done | concepts split by whom a row acts on; "Skill" removed; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
-| 2. The usable concepts | done | `work/concepts.tsv`, `work/concepts.md`: 124 usable, 47 helpers, 37 out (a concept needs 5+ real cards) |
-| 3. The archetypes | done | `archetypes.tsv` (agreed with Kaptain): the 38 archetypes that can exist here, 91 parts, engine or brick, every usable concept in at least one part; `archetypes.md` the same in plain words |
-| 4. The radii and how they work together | done | `work/radii.tsv` (every usable concept on its radius, agreed with Kaptain); `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` from concept instances |
-| 5. The links between concepts | done | `library/cards_db/wheel/concept_links.tsv` (`mechanics_wheel.py links --concepts`, about a minute) |
-| 6. The archetype map | done, approved by Kaptain (18 Nov 2026; `RECHECK.md`) | `work/archetype_map.tsv`: 724 edges between the concepts of engine parts; `factions/wheel-archetypes.html`; one gap (`work/archetype_gaps.tsv`): Discard / 8-Rack |
-| 7. The 20 factions | **next**: 7.1-7.2 run, waiting for Kaptain's OK of the archetypes | `work/factions.py`, `work/concept_list.py` written; `work/factions.tsv` (7.1-7.2); `work/answer_concepts.tsv` (agreed): per answer its ways |
+| 1. Fix the library's concepts | **next**: the tag check and the split of "Return my unit to hand" | earlier: concepts split by whom a row acts on; "Skill" removed; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
+| 2. The usable concepts | redo after step 1 | `work/concepts.tsv`, `work/concepts.md` |
+| 3. The faction archetypes | to do (`work/faction_archetypes.py` to write) | `archetypes.tsv` and `archetypes.md` hold the deck archetypes' parts until step 3 replaces them |
+| 4. The radii and how they work together | redo: the new concepts of step 1 get a radius (Kaptain agrees), then `axes.py` | `work/radii.tsv`, `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` |
+| 5. The links between concepts | redo | `library/cards_db/wheel/concept_links.tsv` |
+| 6. The archetype map | redo with the faction archetypes | `work/archetype_map.tsv`, `factions/wheel-archetypes.html` |
+| 7. The 20 factions | redo: `work/factions.py` (2 archetypes) gets the new limits; `work/concept_list.py` written | `work/answer_concepts.tsv` (agreed): per answer its ways |
 | 8. Combos on this board | to do | |
 | 9. Game plan, then keywords | to do | |
 | 10. Stop 1 | to do | |
 
 ## What the next steps find in the files
-- How the wheel works: a faction is what it is strong at. It plays 2 archetypes from Kaptain's
-  list. Each archetype is made of parts, each a set of alternative concepts: an engine part works through links with
-  another part ("my units die" -> "my units gain when an ally dies"), a brick works alone and links to nothing
-  (disruption). The 23 radii of `work/radii.tsv` show how the 43 real factions spread (`factions/wheel-axes.html`);
-  nothing is designed from them.
-- Step 7, before `work/factions.py` (about 6 minutes) runs again: (1) the tags of the 20 concepts most used in
-  archetype parts are checked (script groups found, a cheap model reads 3 cards per suspect group, after Kaptain's OK);
-  (2) the archetype parts get a second look (Claude's suggestions shown to Kaptain); (3) variety is measured by how
-  different the factions' archetypes and concepts are, with blind spots in mind (plan to agree with Kaptain); then 7.3-7.6.
-- Still open from the recheck (`RECHECK.md` stage 6): thin maps (Pillowfort, Prison, Extra Turns, Discard / 8-Rack);
-  89 "instead" cards not read.
+- How the wheel works: a faction is what it is strong at. It plays 2 faction archetypes, each what a group of real
+  factions from 2+ games is strong at. Each archetype is made of parts, each a set of alternative concepts: an engine
+  part works through links with another part ("my units die" -> "my units gain when an ally dies"), a brick works
+  alone (disruption). Kaptain's list (`archetypes_kaptain.txt`) holds deck archetypes: what a pair of factions plays
+  together (step 8). The 23 radii of `work/radii.tsv` show how the 43 real factions spread (`factions/wheel-axes.html`).
+- Step 1, the tag check, starts from what the last chat found by script (no card read yet):
+  "Grows with what happened this game": 554 of its 687 cards are tagged only because an amount counts what is on the
+  board now (`flat.py`: `('count_payoff', 'flat_if', "test in ('amount_count','amount_event_count')")`), which the
+  concept tree gives to "Counts / thresholds"; "Grows again and again" (rule in `flat.py`): up to 301 of 779 may grow
+  once, when played (a single lasting bonus is "Stat gain"); "Absorb one hit": 62 cards from cancelling a spell, 70 from
+  removing a keyword; "Immune": 97 from "can't" rows; wrong side: 15 summon onto the enemy's side, 41 make cards for the
+  enemy, 30 make the enemy draw, 6 give the enemy attack, 18 make enemy cards cheaper, 35 "Cards cost less" rows raise
+  a cost, 9 "When I play another card" fire on enemy plays; "Return my unit to hand": 96 rows without whose unit, most
+  without from where; when they fire is known (69 when it leaves play, 59 activated). Rainbow and Gifts for a Guard
+  are known wrong cards; Titanstooth (Offering) and Swinging Glaive (Equipment) are right. These are a start: the
+  script looks at every usable concept.
+- `work/factions.py` and `work/concept_list.py` work (about 6 minutes; `concept_list.Library` scores a set of concepts
+  in under a second). `factions.py` still has the main radius limit: change it to the limits of step 7.1. Its last
+  output (`work/factions.tsv`) is from the deck archetypes and is remade.
+- Open with Kaptain: the concept "First strike" is out by a rule Kaptain removed ("strike first is not a plan");
+  ask whether it becomes usable in step 2.
 - Counts whose rows don't say what they count are counted nowhere: 189 instances of "grows with what happened" and 36
   of "counts and thresholds" (`axes.py` prints them). Most are counts of enemy units or of a keyword the rows don't name.
 - The faction check (a finished faction's cards against its archetypes' concepts and extras) and
@@ -52,7 +62,13 @@ One chat does one step; at its end, mark the step done here and say what it left
 - Industry words: a **synergy** is a link real cards show between two concepts ("my units die -> my other units
   grow"); a **mechanic** is a keyword, a word on many cards that stands for one rule (Magic's Exploit) (18 Nov 2026).
 - Each faction plays 2 archetypes; one archetype is played by at most 3 factions; the 20 are picked so the
-  weakest is as strong as possible, while they stay varied. From each part of its archetypes it plays only 1 or 2
+  weakest is as strong as possible, while they stay varied: two factions share at most half of their own concepts,
+  every faction keeps a blind spot, and some archetypes stay unused (18 Nov 2026).
+- Faction archetypes come from real factions; Kaptain's list holds deck archetypes, played by a pair of factions.
+  Combo, Control-Combo and Extra Turns are off the list (other archetypes make their own combos); Cycling is part of
+  Wheels (18 Nov 2026).
+- Cards tagged with the wrong concept are examined and fixed; "Return my unit to hand" is split into smaller concepts
+  (18 Nov 2026). From each part of its archetypes it plays only 1 or 2
   concepts, the ones real cards link best (no fruit salad). Its theme is picked right after and breaks ties between
   concepts that score about the same. Its list leaves out its own concepts. Its extras, 8 to 12, the same number for
   every faction, come from its list, first for the answers about the board its concepts don't give, then to feed its
@@ -76,7 +92,7 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
   archetype's concepts with the links between them and the strengths we know. Only general archetypes; any specific to
   one game (planeswalkers) is off the list. Triggers and conditions are how cards work, not what a faction is; real
   factions inspire, they are never copied (17 Nov 2026).
-- Discard / 8-Rack stays an archetype although real cards don't link its two parts: future improved games will beef it
+- Discard / 8-Rack stays a deck archetype although real cards don't link its two parts: future improved games will beef it
   up (17 Nov 2026).
 - Real factions' shapes vary inside each game: the wheel is lax about a faction's shape (17 Nov 2026).
 - Interactions with the player (heal, Block, strength on the player; the player hurt) stay off the radii: no player

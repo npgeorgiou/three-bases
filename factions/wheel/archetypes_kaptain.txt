@@ -4,9 +4,7 @@ Aggro: cheap, efficient threats that win before the opponent stabilizes.
 Control: answers everything, then wins late with a few finishers.
 Midrange: resilient, high-value threats plus flexible removal.
 Tempo: cheap threats protected by cheap disruption.
-Combo: assembles specific cards to win instantly or go infinite.
 Aggro-Combo: early pressure with a sudden combo kill.
-Control-Combo: controls the early game, then wins with a combo.
 Prison / Stax: locks opponents out through asymmetric restrictions.
 Draw-Go / Flash: holds up mana and acts only at instant speed.
 
@@ -48,8 +46,7 @@ Lifegain / Drain: gains life and converts it into a win.
 Life-as-Resource: pays life to power cheap threats.
 Mill: empties the opponent’s library.
 Discard / 8-Rack: empties hands and punishes having none.
-Wheels: mass draw-seven effects plus draw and discard payoffs.
-Cycling: swaps unwanted cards for new ones, with payoffs.
+Wheels: mass draw-seven effects plus draw and discard payoffs; swaps unwanted cards for new ones.
 
 Defensive, multiplayer & alt-win
 
@@ -59,5 +56,4 @@ Hatebears / Death & Taxes: disruptive small creatures plus mana denial.
 Theft: steals opponents’ cards.
 Aikido / Judo: turns the opponent’s own damage and spells against them.
 Chaos: randomizes the game to disrupt plans.
-Extra Turns: chains extra-turn spells.
 Alternate Win: “you win the game” cards.

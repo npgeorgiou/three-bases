@@ -15,7 +15,12 @@ is written in that step's chat, from the rules of the step, and its line here is
   `START_DATABASE.md`), each with cases (`cases/mechanics.tsv` wc01-wc26); tried on a copy of cards.sqlite with every
   case first; a card read (within the wheel's 500, low-cost model, Kaptain's OK first) only where its rows can't
   tell. A game rule no card text says goes into `read/<game>/game_rules.jsonl` (`applies_to`; `kind_has` puts it only
-  on the cards whose own rows name that kind, as Runeterra's spell mana). Then `check_all.py <game>` and `links.py`.
+  on the cards whose own rows name that kind, as Runeterra's spell mana).
+- Tags: `python3 ../../factions/wheel/work/tag_check.py` (to write) -> `work/tag_groups.tsv` (concept, what put the tag
+  on (row action or test, side, trigger, zone; or the general rule and its row), cards, suspect and why) and
+  `work/tag_reads.tsv` (5 cards per suspect group to read: game, card, the reader's inputs; then its verdict and one line
+  why). Fixes go into `flat.py` derive with cases in `cases/mechanics.tsv`; the split of return_to_hand into smaller
+  concepts goes into `library/concept_tree.txt` and `flat.py`, with cases. Then `check_all.py` and `links.py`.
 
 ## Step 2. The usable concepts
 - `python3 ../../factions/wheel/work/concept_catch.py` (a second) -> `work/concepts.tsv`: every concept with 5+
@@ -24,11 +29,11 @@ is written in that step's chat, from the rules of the step, and its line here is
   `work/concept_verdicts.tsv` (a concept not in it is usable); player_<concept> and a parent left with under 5 cards
   are out. `work/concepts.md`: the same by kind in plain words, for Kaptain.
 
-## Step 3. The archetypes
-- Claude -> `factions/wheel/archetypes.tsv`: one line per part of each archetype of `archetypes_kaptain.txt` that
-  can exist here (archetype key, its name in Kaptain's list, what it is in this game, the part
-  in plain words, engine or brick, the usable concepts that can do it).
-- `python3 work/archetypes_make.py work/concepts.tsv archetypes.tsv` writes it (the parts are in the script).
+## Step 3. The faction archetypes
+- `python3 ../../factions/wheel/work/faction_archetypes.py` (to write; uses `axes.py`'s real factions and concept
+  instances) -> `factions/wheel/work/faction_strong.tsv` (real faction, its strong concepts, their value against its
+  game's average) and `factions/wheel/archetypes.tsv` (archetype key, name, the real factions of its group, the part in
+  plain words, the usable concepts that can do it; engine or brick is filled by step 6).
 - `python3 work/archetypes_plain.py` -> `factions/wheel/archetypes.md`: the same in plain words, for Kaptain's OK.
 
 ## Step 4. The radii and how they work together
@@ -57,7 +62,8 @@ is written in that step's chat, from the rules of the step, and its line here is
   joined only by real decks has no card pair; `note`: "about the player" when more than half of its card links are about
   hitting the player, "decks only" when no card pair; it prints the cards behind the most edges), `work/archetype_gaps.tsv` (two engine parts with no joined edge, shown to
   Kaptain with the numbers) and `factions/wheel-archetypes.html` (page template `work/archetype_map_template.html`; the concepts' places by
-  networkx's spring layout over every joined pair of usable concepts, seed 7).
+  networkx's spring layout over every joined pair of usable concepts, seed 7). It writes engine or brick for each part
+  into `archetypes.tsv`.
 
 ## Step 7. The 20 factions
 - `python3 ../../factions/wheel/work/factions.py` (rules: `START_DESIGN-1-wheel.md` step 7) ->
@@ -74,7 +80,8 @@ is written in that step's chat, from the rules of the step, and its line here is
 ## Step 8. Combos on this board
 - A script counts the joins between every two factions' concepts (own concepts and extras; step 5 numbers); Claude rates
   the pairs on the board -> `factions/wheel/combos.tsv` (pair, STRONG/OK/WEAK/NONE/AGAINST, how it plays, the numbers,
-  a test column). Every faction needs 7+ partners.
+  a test column). Every faction needs 7+ partners. The same script lists per pair the deck archetypes of
+  `archetypes_kaptain.txt` the two factions can play together -> `factions/wheel/deck_archetypes.tsv`.
 
 ## Step 9. Game plan, then keywords
 - Claude -> `factions/wheel/plans.tsv` (faction, its game plan turn by turn on the board).
