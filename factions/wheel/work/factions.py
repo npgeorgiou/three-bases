@@ -1,9 +1,8 @@
 """The 20 factions (factions/START_DESIGN-1-wheel.md step 7, 7.1 and 7.2), from wheel/archetypes.tsv,
 work/radii.tsv and library/cards_db/wheel/concept_links.tsv. Every tie is broken by the archetype or concept key in
 alphabetical order, so every run gives the same result.
-7.1 A group of 2 or 3 archetypes scores the strong links between concepts of different archetypes of the group (each two
-concepts once), divided by the number of different concepts in the group. A group of 3 counts only when it scores at
-least as much as its best 2. Start from the 20 best groups that keep the limits, then swap one group for another while
+7.1 A group of 2 archetypes scores the strong links between concepts of one archetype and concepts of the other (each two
+concepts once), divided by the number of different concepts in the group. Start from the 20 best groups that keep the limits, then swap one group for another while
 that lifts the weakest score (the scores from lowest up compared in order), until no swap does. Limits: no archetype in
 more than 3 factions; no two factions share more than one archetype; each faction's main radius (the radius holding most
 of its concepts, 7.2) differs from every other faction's; only when 20 groups can't keep that is it dropped.
@@ -52,7 +51,7 @@ def concepts_of(arch): return {c for _, _, cs in ARCH[arch] for c in cs}
 
 
 def score(group):
-    """strong links between concepts of different archetypes of the group / different concepts in the group"""
+    """strong links between concepts of one archetype and concepts of the other / different concepts in the group"""
     sets = [concepts_of(a) for a in group]
     pairs = set()
     for i, j in itertools.combinations(range(len(sets)), 2):
@@ -135,11 +134,7 @@ def main():
     import concept_list
     lib = concept_list.Library()
     archs = sorted(ARCH)
-    two = {g: score(g) for g in itertools.combinations(archs, 2)}
-    cands = [(s, g) for g, s in two.items()]
-    for g in itertools.combinations(archs, 3):
-        s = score(g)
-        if s >= max(two[x] for x in itertools.combinations(g, 2)): cands.append((s, g))
+    cands = [(score(g), g) for g in itertools.combinations(archs, 2)]
     cands = [(round(s, 6), g) for s, g in cands if s > 0]
     cands.sort(key=lambda t: (-t[0], t[1]))
     print(f'{len(cands)} groups score above 0')

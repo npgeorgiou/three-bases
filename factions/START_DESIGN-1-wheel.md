@@ -24,12 +24,11 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   count on two, each instance by what its rows say (deal damage: on a spell for "damage from spells", on any other card
   for "damage from units' text"). A faction's value on a radius is the share of its concept instances that belong to
   that radius; the card itself goes nowhere.
-- **The faction's archetypes**: the 2 or 3 archetypes a faction plays (step 7).
+- **The faction's archetypes**: the 2 archetypes a faction plays (step 7).
 - **The faction's concepts**: the 1 or 2 concepts it plays from each part of its archetypes (step 7). They are its
   character (what it is strongest at, what its keywords grow from); the other concepts of those parts are not its own.
 - **The faction's list**: every concept of the library (usable, helpers and out) except the faction's concepts, each
-  with its score for how strongly it links with them. The faction's cards use it a lot, to make its concepts possible,
-  start them or make them stronger.
+  with its score for how strongly it links with them.
 - **Helper**: a concept that only says when or how a card acts, one of the game's own things, or a thing for single
   cards (step 2). Never a part of an archetype; always on the faction's list.
 - **Strong link**: two concepts joined by the step 5 rule through real card pairs: `cards` 1.2+, or `rare` 3+ with a
@@ -147,9 +146,9 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 7. **The 20 factions** (by script, from the archetype map and `wheel/concept_links.tsv`; `work/factions.py` ->
    `work/factions.tsv`, and `work/concept_list.py` -> `work/lists/<letter>.tsv`). Every tie in this step is broken by
    the archetype or concept key in alphabetical order, so every run gives the same result. In this order:
-   1. **The archetypes.** A group of 2 or 3 archetypes scores the strong links between concepts of different
-      archetypes of the group, divided by the number of different concepts in the group (so a big archetype does not
-      win by its size). A group of 3 counts only when it scores at least as much as its best 2. The 20 groups are
+   1. **The archetypes.** A group of 2 archetypes scores the strong links between concepts of one archetype and
+      concepts of the other, divided by the number of different concepts in the group (so a big archetype does not
+      win by its size). The 20 groups are
       picked so the weakest faction is as strong as possible: start from the 20 best groups that keep the limits, then
       swap one group for another while that lifts the weakest score, until no swap does. Limits: no archetype in more
       than 3 factions; no two factions share more than one archetype; each faction's main radius (the radius holding
@@ -198,7 +197,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       what a keyword needs and a partner gains from it. Every faction has at least 1 keyword of its own, from a synergy
       only it has.
    4. A script checks: every faction has a keyword of its own; no shared keyword is on one faction only; every keyword
-      uses only concepts of the factions that carry it. One Egg in the whole wheel. Countdowns very sparingly; a lane
+      uses only concepts of the factions that carry it. Countdowns very sparingly; a lane
       never holds more than 12 supply. A rule the game lacks is marked NEW RULE.
    5. Before all 20: on one faction, each new keyword carries 12+ different cards (cost 1 to 6, never the same card
       with other numbers); Kaptain judges.

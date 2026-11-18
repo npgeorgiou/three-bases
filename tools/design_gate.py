@@ -3,7 +3,7 @@
    python3 tools/design_gate.py <faction letter> [--no-play]
 Checks (rules from factions/START_DESIGN.md and summary/09; numbers marked "Claude's" are open to Kaptain's change):
   1  count       exactly 100 cards
-  2  library     factions/designs/<file>-library.txt: 3-5 ways to play ("WAY <name>" lines), each with 20+ library cards
+  2  library     factions/designs/<file>-library.txt: 3 ways to play ("WAY <name>" lines), each with 20+ library cards
                  ("<game> | <card> | <play pattern>"); every card found in library/cards_db/cards.sqlite, any of the 8 games
   3  source      every card has src: 'own' (Claude's own idea) or '<game>: <card>' (a library card that exists)
   4  budget      every unit: strength + defence = budget(supply) - size - keyword values - tv (tv = value of its text;
@@ -94,8 +94,8 @@ def main():
                     probs.append(f'not in the library: {g} | {n}')
                 if len(pat) < 15:
                     probs.append(f'no play pattern written: {n}')
-        if not 3 <= len(ways) <= 5:
-            probs.append(f'{len(ways)} ways to play, need 3-5')
+        if len(ways) != 3:
+            probs.append(f'{len(ways)} ways to play, need 3')
         probs += [f'way "{w}": {len(ns)} library cards, need 20' for w, ns in ways.items() if len(ns) < 20]
     check('library', probs)
 

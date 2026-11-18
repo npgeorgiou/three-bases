@@ -18,15 +18,15 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 10. Stop 1 | to do | |
 
 ## What the next steps find in the files
-- How the wheel works: a faction is what it is strong at. It plays 2 or 3 archetypes from Kaptain's
+- How the wheel works: a faction is what it is strong at. It plays 2 archetypes from Kaptain's
   list. Each archetype is made of parts, each a set of alternative concepts: an engine part works through links with
   another part ("my units die" -> "my units gain when an ally dies"), a brick works alone and links to nothing
   (disruption). The 23 radii of `work/radii.tsv` show how the 43 real factions spread (`factions/wheel-axes.html`);
   nothing is designed from them.
-- Step 7: `work/factions.py` (about 6 minutes) wrote `work/factions.tsv` for 7.1-7.2. Real groups reach 17 main radii at
-  most, so main radii repeat; keeping as many different as possible makes the weakest score 2.9, letting them repeat
-  makes it 4.0 with 11 of 20 on "spends my units". Kaptain picks; then themes (7.3), `concept_list.py` for the lists
-  (7.4), extras (7.5) and answers (7.6), still to write into `factions.py`.
+- Step 7, before `work/factions.py` (about 6 minutes) runs again: (1) the tags of the 20 concepts most used in
+  archetype parts are checked (script groups found, a cheap model reads 3 cards per suspect group, after Kaptain's OK);
+  (2) the archetype parts get a second look (Claude's suggestions shown to Kaptain); (3) variety is measured by how
+  different the factions' archetypes and concepts are, with blind spots in mind (plan to agree with Kaptain); then 7.3-7.6.
 - Still open from the recheck (`RECHECK.md` stage 6): thin maps (Pillowfort, Prison, Extra Turns, Discard / 8-Rack);
   89 "instead" cards not read.
 - Counts whose rows don't say what they count are counted nowhere: 189 instances of "grows with what happened" and 36
@@ -51,7 +51,7 @@ One chat does one step; at its end, mark the step done here and say what it left
 ## Kaptain's standing decisions
 - Industry words: a **synergy** is a link real cards show between two concepts ("my units die -> my other units
   grow"); a **mechanic** is a keyword, a word on many cards that stands for one rule (Magic's Exploit) (18 Nov 2026).
-- Each faction plays 2 or 3 archetypes; one archetype is played by at most 3 factions; the 20 are picked so the
+- Each faction plays 2 archetypes; one archetype is played by at most 3 factions; the 20 are picked so the
   weakest is as strong as possible, while they stay varied. From each part of its archetypes it plays only 1 or 2
   concepts, the ones real cards link best (no fruit salad). Its theme is picked right after and breaks ties between
   concepts that score about the same. Its list leaves out its own concepts. Its extras, 8 to 12, the same number for
@@ -71,7 +71,7 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
   (random in round 1, then alternating), placing at round end.
 - The wheel is general; step 9 turns each faction's archetypes into these own things, from scratch.
 - Every game counts the same in every number, games with no factions (Marvel Snap) too.
-- Factions are made by script to play 2 or 3 archetypes. Each archetype is a group of engines and
+- Factions are made by script to play 2 archetypes. Each archetype is a group of engines and
   bricks and can be played using different concepts. A map of nodes (each node a concept) shows each
   archetype's concepts with the links between them and the strengths we know. Only general archetypes; any specific to
   one game (planeswalkers) is off the list. Triggers and conditions are how cards work, not what a faction is; real
@@ -81,14 +81,8 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
 - Real factions' shapes vary inside each game: the wheel is lax about a faction's shape (17 Nov 2026).
 - Interactions with the player (heal, Block, strength on the player; the player hurt) stay off the radii: no player
   health here. They stay in the library as player_<concept>.
-- Damage over time and my units changing form are possibilities for cards, not concepts a faction builds on.
-- An all-Immobile faction is allowed.
-- "Strike first" is not a plan here. "Ping" is a library word: say "small hits". One Egg in the
-  whole wheel: look-alikes are compared by what the card does.
-- A faction's 100 cards use its list a lot (every concept of the library, by how strongly it links with the concepts
-  of its archetypes): its archetypes are its character (what it is strongest at, what its keywords grow from), not all it may use.
 - A faction is built from a game plan played out cell by cell and its keywords. The keywords are the backbone, not all
-  100 cards: 3-5 ways to play are built around them, as many as the closest real factions show. One idea is never the
+  100 cards: 3 ways to play are built around them. One idea is never the
   whole faction. A keyword that fits the theme but grows from no synergy of the factions that carry it is never made.
 - Each faction answers seven questions, one line each: how it wins, how it removes the front unit, how it MAINLY
   removes back-row units, how it MAINLY acts between lanes, how it holds a base, which of the game's own things it
@@ -101,9 +95,8 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
 - Leaders: 5 per faction, the only cards with a golden border, spread over the costs and the ways to play; their
   special part works by whether I hold the lane's base, helps take and keep a lane, never wins harder in a won lane;
   nine kinds, mixed in each faction (START_DESIGN-2, "What a faction has").
-- Countdowns very sparingly. A lane never holds more than 12 supply (summary/05).
-- Draw on a kill is allowed: killing an enemy is something the player makes happen.
-- "This round" effects that set up another effect of the same round are chains and wanted.
+- Countdowns very sparingly.
+- A lane never holds more than 12 supply (summary/05).
 - Reading cards for one faction's chat: at most 100 (its steps 6 and 7), logged in `factions/read-cards.tsv`, never
   read twice. The wheel reads at most 500 cards in all, by a low-cost model, only where a card's rows can't answer.
 - The check script fails on words that break the game's rules ("move first", "strikes first", "placed at round end").

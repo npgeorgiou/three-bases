@@ -25,7 +25,7 @@ take a base, hold it, or take it from the enemy?
 
 ## THE THINKING PROCESS (in this order; no step skipped)
 Step 0 (Kaptain, 9 Nov 2026): the faction's place on the mechanical wheel (`factions/12-mechanical-wheel.txt`) comes
-first. Its 2 or 3 archetypes, their concepts and synergies, its extras, theme, six
+first. Its 2 archetypes, their concepts and synergies, its extras, theme, six
 answers, partners, game plan and keywords are decided there, for all 20 factions together, not in the faction's chat
 (`START_DESIGN-1-wheel.md`, steps 7-10).
 Steps 1-6 come from the library, never from memory. Run the queries below on all games (`ask.py all ...` from
@@ -65,7 +65,7 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    6. What it cares about: which of the game's own things it cares about most; factions may share it. Example: the
       discard pile.
    7. Blind spot: a whole radius of the wheel it never gets, on any card. Example: it never draws cards.
-3. **Its archetypes and blind spots** (taken from the wheel). Its archetypes: the 2 or 3 archetypes it is made of, each
+3. **Its archetypes and blind spots** (taken from the wheel). Its archetypes: the 2 archetypes it is made of, each
    of engines (concepts that work through links: my units die -> my units gain when an ally dies) and bricks
    (concepts that work alone: disruption). They are its character, not all its cards use: its cards use its
    list a lot (START_DESIGN-2, "How cards fit together"). Its blind spot (step 2.7) plus any other things the wheel says it never has; its cards never make up for them,
@@ -87,7 +87,7 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
      carry-over, a card in hand, defence, a cell. "Place: the ally behind me dies; its supply goes to your carry-over."
    - Turning point: once a condition is met, the board works differently. "While you have twice as many units in my lane
      as the enemy, my allies here strike twice."
-6. **Three to five ways to play**, as many as the closest real factions show (never filler). They are built around the
+6. **Three ways to play** (never filler). They are built around the
    faction's game plan and keywords from the wheel (`START_DESIGN-1-wheel.md` step 9): the keywords are its backbone,
    not all of its cards; the rest of each way comes from its extras and its list.
    Each way builds a different board and asks for different decisions. For each, write which rows and cells it fills,

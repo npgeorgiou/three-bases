@@ -24,8 +24,7 @@ Part of `factions/START_DESIGN.md` (read that first, whole; then parts 2, 3 and 
 **The cards**
 - Every effect changes something that would not happen anyway. Empty example: in a faction whose units all act at
   round end, "when one acts at round end, the touching ones act too" adds nothing.
-- "This round" effects that set up another effect of the same round are chains and wanted ("this round the enemy unit
-  takes 1 more damage", then a hit). A main removal is never "this round" only.
+- A main removal is never "this round" only.
 - Worth on this board: "this round" penalties (-1 strength, can't attack) are worth almost nothing (the enemy waits);
   "can't move" is near nothing (units rarely move). Effects that last or act now are worth something.
 - Rule-bending keywords (moving between lanes) sit on a few cards only. A keyword is on a card only if

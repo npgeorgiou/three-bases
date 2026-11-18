@@ -61,7 +61,7 @@ is written in that step's chat, from the rules of the step, and its line here is
 
 ## Step 7. The 20 factions
 - `python3 ../../factions/wheel/work/factions.py` (rules: `START_DESIGN-1-wheel.md` step 7) ->
-  `factions/wheel/work/factions.tsv` (faction letter, its 2-3 archetypes, its concepts per part, its synergies, its
+  `factions/wheel/work/factions.tsv` (faction letter, its 2 archetypes, its concepts per part, its synergies, its
   main radius, its theme, its extras, the way or concept for each of its seven answers, its blind spot radius). It
   prints the 20 groups with their scores and the weakest; the run stops after 7.2 for Kaptain's OK of the archetypes,
   then goes on with the themes written into `factions/wheel/work/themes.tsv` (faction letter, theme).
