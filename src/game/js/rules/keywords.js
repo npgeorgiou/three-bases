@@ -1,5 +1,5 @@
 /* ---------- keywords a unit has, strength and defence, costs ---------- */
-const KW_FLAGS = ['ranged', 'reach', 'fixed'];
+const KW_FLAGS = ['ranged', 'fixed'];
 /** The value of keyword flag f on unit u (its card's). */
 const kw = (u, f) => cardOf(u)[f] || 0;
 

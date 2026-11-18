@@ -23,7 +23,7 @@ GAME = {'slay the spire': 'sts1', 'slay_the_spire': 'sts1', 'legends of runeterr
 BUDGET = {0: 0, 1: 3, 2: 5, 3: 7, 4: 8, 5: 10}
 SIZE = {1: 0, 2: 1, 3: 2, 4: 3}
 # values in the supply budget (summary/06): card property -> value per point (N: n * per + plus)
-KW = {'ranged': (3, 0), 'bonus': (3, 0), 'reach': (1, 0), 'fixed': (-2, 0)}
+KW = {'ranged': (3, 0), 'bonus': (3, 0), 'fixed': (-2, 0)}
 DUMP = r"""
 const fs=require('fs'),vm=require('vm'),P=process.argv[1]+'/src/game/';
 const parts=fs.readFileSync(P+'parts.txt','utf8').split('\n').map(s=>s.trim()).filter(n=>/^js\/cards\//.test(n));

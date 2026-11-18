@@ -1,19 +1,17 @@
 /* =====================================================================
    KEYWORD WORTH: what each keyword on a unit is worth to the ifelse AI, by how much it is working right now
-   (Pike counts only from the second row). One line per keyword; the
+   (a keyword that works only in some positions counts only there). One line per keyword; the
    AI lab makes one tunable value per line whose keyword is in the game's cards (kw_<field>, start 0), so a keyword
    added to or removed from the cards needs only its line here. tools/ifelse_speed.js lists keywords on unit cards
    that have neither a line here nor a line in KW_NOT_VALUED.
    ===================================================================== */
 /** "Always": the keyword counts the same wherever the unit stands. */
 const KW_ALWAYS = () => 1;
-const kwSecondRow = u => rowsOf(u).includes(u.owner === 0 ? 1 : ROWS - 2);
 /** [card field, keyword, how much it works now (a number; 1 = always), and optionally the card's number when it is not
  *  the field (e.g. an effect on a trigger)]. Its worth: the value x the card's number x how much it works now. */
 const KW_RULES = [
   ['ranged', 'Ranged', KW_ALWAYS],
   ['fixed', 'Immobile', KW_ALWAYS],
-  ['reach', 'Pike', (s, u) => (kwSecondRow(u) ? 1 : 0)],                       // attacks the enemy front row from the second row
 ];
 /** The card's number for a rule: its own way, or the field. */
 const kwAmount = (u, rule) => (rule[3] ? rule[3](cardOf(u)) : Number(kw(u, rule[0])) || 0);

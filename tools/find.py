@@ -8,7 +8,7 @@ code paths are relative to src/game/, other paths to the repository root).
   python3 tools/find.py doc <text>             lines in summary/ and factions/ containing the text (case-insensitive)
 
 A keyword's flag is worked out from the card data: the flags shared by every card whose text shows
-[[Keyword]] (e.g. Pike -> reach). Card art (js/cards/art.js) is never searched.
+[[Keyword]] (e.g. Immobile -> fixed). Card art (js/cards/art.js) is never searched.
 """
 import glob, os, re, sys
 

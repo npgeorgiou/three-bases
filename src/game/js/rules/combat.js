@@ -23,19 +23,16 @@ function hitUnit(s, str, target, source, sourceId) {
 /**
  * Reach (AGREED, October 2026). A lane's two camps form one column of 6 rows (top camp rows 0-2, bottom camp rows 3-5),
  * so the two front rows touch across the base. A melee unit reaches every cell adjacent to one of its cells (diagonals
- * included); Pike also reaches the opposite camp's front-row cells two rows ahead of it (column ±1). Ranged units reach
+ * included). Ranged units reach
  * every cell of their lane. A strike (an attack with the unit's strength) only hits enemies in reach.
  */
 const laneRow = (owner, r) => (owner === 1 ? r : ROWS + r);
 function reachesCell(u, owner, r, c) {
   if (kw(u, 'ranged')) return true;
-  const f = u.owner === 0 ? -1 : 1;   // toward the other camp, in lane rows
-  const R = laneRow(owner, r), pikeRow = laneRow(other(u.owner), frontRow(other(u.owner)));
+  const R = laneRow(owner, r);
   return cellsOf(u).some(([ur, uc]) => {
     const G = laneRow(u.owner, ur);
-    if (Math.abs(c - uc) > 1) return false;
-    if ((G !== R || uc !== c || owner !== u.owner) && Math.abs(G - R) <= 1) return true;
-    return kw(u, 'reach') && R === G + 2 * f && R === pikeRow;
+    return Math.abs(c - uc) <= 1 && Math.abs(G - R) <= 1 && (G !== R || uc !== c || owner !== u.owner);
   });
 }
 /** Whether u could strike t now by position: t is in its lane and one of t's cells is in u's reach. */

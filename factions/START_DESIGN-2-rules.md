@@ -35,7 +35,7 @@ If summary/ and the code disagree, the code wins: tell Kaptain.
 - Each camp is 3x3 = 9 cells. Count the cells a deck's units fill in one lane: a 2x2 unit takes 4 cells and 2 of the 3
   front cells.
 - Melee reach: only the cells around the unit; the two front rows touch across the base. A melee unit in row 2 or 3
-  reaches nothing in the enemy camp (Pike: from row 2 only). Deeper enemy rows are reached only by Ranged, spells,
+  reaches nothing in the enemy camp. Deeper enemy rows are reached only by Ranged, spells,
   abilities and fixed damage. An attack picks any enemy in reach (front units do not protect back units from a Ranged
   attack); strikes made by abilities and spells hit the nearest enemy in reach.
 - No hits between lanes. Units change lane only by special moves.
@@ -46,7 +46,7 @@ If summary/ and the code disagree, the code wins: tell Kaptain.
 - Hand: start 5, redraw up to 3, 2 draws per round (none in round 1), hand limit 10. Decks 30-40 cards, at most 3
   copies. A card is rarely in hand exactly when wanted; a combo of two named cards is rare.
 - Units have no active abilities you press (summary/06). An action that replaces the unit's attack and costs what an
-  attack costs is allowed (the throw of the removed Ogre Thrower). Counters and timers ("at 3 counters...") very sparingly. Round-end abilities,
+  attack costs is allowed. Counters and timers ("at 3 counters...") very sparingly. Round-end abilities,
   Place effects, Death effects, reactions and position bonuses are wanted.
 - Place fires every time a unit enters the grid: from hand, defecting, resurrected, returning, a token.
 - What does NOT exist here, so never copy it from other games: hitting the enemy player or hero, instant-speed answers

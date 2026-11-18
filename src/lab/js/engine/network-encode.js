@@ -16,7 +16,7 @@ const NET_CARD_KEYS = Object.keys(CARDS).sort();
 const NET_CARD_INDEX = Object.fromEntries(NET_CARD_KEYS.map((k, i) => [k, i]));
 
 /**
- * What a card is, by name, with no card names: its numbers and keywords (cost, size, strength, defence, Pike ...).
+ * What a card is, by name, with no card names: its numbers and keywords (cost, size, strength, defence, Ranged ...).
  * A reworked card is a new mix of known values; only a word no card had before is new to the network.
  */
 const NET_SKIP = new Set(['name', 'fac', 'art', 'text', 'net', 'leader']);
@@ -45,7 +45,7 @@ const NET_PROPERTIES = [...new Set(NET_FEATURES.flatMap(m => [...m.keys()]))].so
    the game: round, I started the round, it is my turn, I passed, they passed, rounds in a row without any
      action / 3, actions this round, how many cards they redrew / 3 (known once the battle has begun);
    four piles: my deck, their unseen cards (hand and deck), my dealt starting hand, the cards I redrew (put back);
-     each as its card count and the totals of its cards' printed values / 10 (e.g. how much Pike is still in
+     each as its card count and the totals of its cards' printed values / 10 (e.g. how much Ranged is still in
      my deck).
    CARDS: the unit anchored in each cell, then my hand (up to 10 cards, in card-list order); a card number only
      picks the card's printed values (cardFeatures) for the cell layer and the hand slots: no card has weights.

@@ -9,8 +9,7 @@ const deckStore = (() => {
   try { st = JSON.parse(localStorage.getItem(DECK_STORE) || 'null'); } catch (e) { st = null; }
   const copy = d => ({ id: d.id, name: d.name, cards: { ...d.cards } });
   if (!st || !Array.isArray(st.decks)) st = { decks: PREMADE.map(copy), pick: (PREMADE[0] || {}).id || null, opp: (PREMADE[1] || PREMADE[0] || {}).id || null, seenPre: PREMADE.map(d => d.id) };
-  // the earlier placeholder premade decks are dropped; premade decks this browser hasn't seen yet join the list once
-  st.decks = st.decks.filter(d => !['pre-tagma', 'pre-horde', 'pre-exanimati'].includes(d.id));
+  // premade decks this browser hasn't seen yet join the list once
   delete st.seen;
   st.seenPre = st.seenPre || [];
   for (const d of PREMADE) if (!st.seenPre.includes(d.id)) { st.seenPre.push(d.id); if (!st.decks.some(x => x.id === d.id)) st.decks.push(copy(d)); }

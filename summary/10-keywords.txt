@@ -1,11 +1,10 @@
 ==================================================================
 10. KEYWORDS
 ==================================================================
-Rule words: their texts are shown on hover in the game (src/game/js/cards/keywords.js). Ranged, Pike and melee reach are
+Rule words: their texts are shown on hover in the game (src/game/js/cards/keywords.js). Ranged and melee reach are
 described in section 6, supply and carry-over in section 5; their values in the supply budget are in section 9.
 
 - Ranged: Can attack any enemy in its lane, from any row.
-- Pike: Can also attack the enemy front row from your second row.
 - Immobile: Can't move.
 - Supply: What cards cost; each lane has its own. A unit with Supply N adds N to its lane at each round start.
 - Carry-over: Supply you keep between rounds. At round end your unspent lane supply is added to it, up to 5 in total; you can spend it in any lane.

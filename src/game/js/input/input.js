@@ -7,7 +7,7 @@ function attackRefusal(u) {
   if (u.attacked) return 'This unit already attacked this round.';
   if (strengthOf(u) <= 0) return 'Units with no strength can\'t attack.';
   if (!canPay(game, u.lane, attackCost(u))) return `Attacking costs ${attackCost(u)} supply.`;
-  return 'Out of reach: a melee unit strikes only the cells around it; from your front row that reaches the three enemy front-row cells facing it (a Pike also from your second row).';
+  return 'Out of reach: a melee unit strikes only the cells around it; from your front row that reaches the three enemy front-row cells facing it.';
 }
 function moveRefusal(u) {
   if (cardOf(u).fixed) return 'This unit can\'t move.';

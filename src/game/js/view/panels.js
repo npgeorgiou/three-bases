@@ -113,7 +113,7 @@ function selectedUnitHelp(u) {
     + (used.length ? ` (already ${used.join(' and ')})` : '') + '. Green cells: where it can move (R or mouse wheel rotates). ';
   text += c.fixed ? 'It can\'t move. ' : '';
   text += strengthOf(u) > 0
-    ? `Click an orange-outlined enemy to attack${c.ranged ? ' (ranged: any enemy in this lane)' : ' (melee: the cells around it; from your front row also the enemy front-row cells facing it' + (c.reach ? ', and as a Pike also from your second row' : '') + ')'}; a red outline means it dies. `
+    ? `Click an orange-outlined enemy to attack${c.ranged ? ' (ranged: any enemy in this lane)' : ' (melee: the cells around it; from your front row also the enemy front-row cells facing it)'}; a red outline means it dies. `
     : 'It can\'t attack. ';
   return `<p class="hint">${text}</p><div class="btns">${orientationsOf(u).length > 1 ? rotateButton() : ''}</div>`;
 }

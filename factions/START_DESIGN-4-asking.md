@@ -83,7 +83,7 @@ Example answers: QUERIES.md. Kaptain's standing questions with their current ans
 - Board and rules check (Kaptain, 3 Nov 2026), before any card is suggested: read summary/ sections 03-08 and 10
   (board, winning, rounds, units, areas, rulings, keywords); a rule not written there is looked up quickly in the game code
   (map in CLAUDE.md). Test every card and deck against them: each lane camp is 3x3 with 3 front cells (the dots); melee
-  reaches only the enemy front row, deeper rows only Ranged, Pike, spells and abilities; front units never shield back units;
+  reaches only the enemy front row, deeper rows only Ranged, spells and abilities; front units never shield back units;
   count the cells a deck's units fill in one lane; check what each unit can still reach from where it must stand.
 - Think it through like a player (Kaptain, 3 Nov 2026), for every card and every combo, before suggesting it:
   - Hand: decks of 30-40 with 3 copies, 2 draws a round. Is the card in hand when it is needed? A setup of two named cards

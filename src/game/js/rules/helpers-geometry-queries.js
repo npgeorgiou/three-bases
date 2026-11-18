@@ -55,9 +55,6 @@ const offsetsOf = (u, o) => shapeCells(cardOf(u).size, o);
 const orientationsOf = u => orientations(cardOf(u).size);
 const frontRow = p => (p === 0 ? 0 : ROWS - 1);
 const inFront = u => cellsOf(u).some(([r]) => r === frontRow(u.owner));
-/** Rows a unit covers, worked out once per cell list (cell lists of standard shapes are shared and never change). */
-const ROWS_OF = new WeakMap();
-const rowsOf = u => { const cl = cellsOf(u); let r = ROWS_OF.get(cl); if (!r) { r = Object.freeze([...new Set(cl.map(x => x[0]))]); ROWS_OF.set(cl, r); } return r; };
 const inCamp = (r, c) => r >= 0 && c >= 0 && r < ROWS && c < COLS;
 
 /** The cells a shape would cover, or null if it leaves the camp. */
