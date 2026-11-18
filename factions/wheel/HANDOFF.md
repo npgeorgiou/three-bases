@@ -55,6 +55,9 @@ One chat does one step; at its end, mark the step done here and say what it left
   that score about the same; its list leaves out its archetypes' own concepts; the concepts for its seven answers are
   found in step 7, not at the end; combos (step 8) come before mechanics (step 9); the radius checks are replaced by
   checks against the faction's archetypes and list (18 Nov 2026).
+- One archetype is played by at most 3 factions. Keywords are shared, which is what makes factions combo: no keyword is
+  barred from any faction, each is mostly on the factions that obviously gain from it, and every faction has at least
+  1 keyword of its own (18 Nov 2026).
 Only what Kaptain said himself goes here, in his words; Claude's own rules go elsewhere.
 - The game's own things: dots and front cells, rows (front/middle/back), columns, 3 lanes, the 3x3 camp, shapes and
   size, supply per lane, carry-over, round start and round end, one action per turn, moving and turning, reach (melee,

@@ -131,7 +131,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    archetypes fit together in one faction.
 7. **The 20 factions, their themes and their lists** (by script, from the archetype map; `work/factions.py` ->
    `work/factions.tsv`). Each faction plays 2 or 3 archetypes that work together as one, judged by the links between
-   them on the map (many strong links between their concepts). The rules the script follows are agreed with Kaptain
+   them on the map (many strong links between their concepts); one archetype is played by at most 3 factions. The rules the script follows are agreed with Kaptain
    before it is written. Kaptain sees per faction: its archetypes in plain words, their concepts, and its synergies
    (each edge: the real link text with its times chance and games); one sentence per faction, written from those texts.
    **Kaptain agrees the 20 factions' archetypes.** Then each faction gets a real theme (World War I artillery, the Zulu
@@ -155,7 +155,9 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    own things (dots and front cells, rows, columns, lanes, the 3x3 camp, unit size, supply per lane, carry-over, round
    start and end, one action per turn, moving, reach, strikes and fixed damage, the hand, the discard pile, Immobile)
    with the concepts of its archetypes and list. Each names the synergy it grows from; the linked card pairs of that
-   synergy are its source cards. No two factions have the same mechanic doing the same job; one Egg in the whole wheel.
+   synergy are its source cards. Keywords are shared: no keyword is barred from any faction; each keyword
+   is mostly on the factions that obviously gain from it, and every faction has at least 1 keyword of its own that no
+   other faction has; one Egg in the whole wheel.
    Countdowns very sparingly; a lane never holds more than 12 supply. A rule the game lacks is marked NEW RULE. Written
    to `wheel/mechanics.tsv`. The old candidates (commit d4a3de0^, `factions/3-candidates/`) are
    read last, only to see that no idea Kaptain liked is missing.
