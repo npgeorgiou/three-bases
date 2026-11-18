@@ -280,3 +280,18 @@ sts1	N'loth's Hungry Face	wheel probe	misreading fix
 sts1	Smoke Bomb	wheel probe	misreading fix
 runeterra	Blood for Blood	wheel probe	misreading fix
 runeterra	Heroic Charge	wheel probe	misreading fix
+sts1	Rainbow	wheel step 7	example of "grows with what happened" (tag looks wrong)
+monster_train	Gifts for a Guard	wheel step 7	example of "grows with what happened" (tag looks wrong)
+gwent	Cintrian Royal Guard	wheel step 7	grows with each copy of itself in play
+runeterra	Ambush	wheel step 7	bonus if 2+ cards were added to hand this round
+marvel_snap	Mockingbird	wheel step 7	costs less per created card in play
+gwent	Fauve	wheel step 7	plays a card from the deck for free
+runeterra	The Darkin Fan	wheel step 7	summons for free on attack
+sts1	Omniscience	wheel step 7	plays a deck card twice for free
+monster_train	Titanstooth	wheel step 7	example of "put into play for free" (tag looks wrong)
+inscryption	Pelts (Wolf)	wheel step 7	plays copies for free when a card is played
+runeterra	Swinging Glaive	wheel step 7	example of "return my unit to hand" (tag looks wrong)
+marvel_snap	Falcon	wheel step 7	returns my cheap cards to hand
+duelyst	Orbrider	wheel step 7	returns a nearby ally to hand
+gwent	Bjorn Stormursson	wheel step 7	moves itself back to hand
+inscryption	Ourobot	wheel step 7	comes back to hand when it dies
