@@ -179,8 +179,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       never holds more than 12 supply. A rule the game lacks is marked NEW RULE.
    5. Before all 20: on one faction, each new keyword carries 12+ different cards (cost 1 to 6, never the same card
       with other numbers); Kaptain judges.
-10. **Stop 1** for all 20: the seven answers made final from the game plan and keywords (every answer differs from
-   every other faction's; a blind spot never touches its archetypes), the check script (`tools/wheel_table_check.py`:
+10. **Stop 1** for all 20: the seven answers made final from the game plan and keywords (every answer but which of the
+   game's own things it cares about most differs from every other faction's; a blind spot never touches its archetypes), the check script (`tools/wheel_table_check.py`:
    against each faction's archetypes, extras and answers) and the Stop 1 pages (`work/make_stop1.py` ->
    `wheel/STOP1*.md`: per faction its archetypes and synergies, theme, game plan, keywords, the seven answers, and one
    line per partner saying how the combo plays). Files under 150 lines.
