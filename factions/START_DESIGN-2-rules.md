@@ -37,8 +37,8 @@ If summary/ and the code disagree, the code wins: tell Kaptain.
 - Melee reach: only the cells around the unit; the two front rows touch across the base. A melee unit in row 2 or 3
   reaches nothing in the enemy camp (Pike: from row 2 only). Deeper enemy rows are reached only by Ranged, spells,
   abilities and fixed damage. An attack picks any enemy in reach (front units do not protect back units from a Ranged
-  attack); strikes made by abilities and spells hit the nearest enemy in reach (`src/game/js/rules/combat.js`).
-- No hits between lanes. Units change lane only by special moves (Outrider, throws).
+  attack); strikes made by abilities and spells hit the nearest enemy in reach.
+- No hits between lanes. Units change lane only by special moves.
 - Alternating single actions: every card you play gives the enemy one action to answer before your next one. Front-row
   units die easily. A setup of two cards is dead if the first dies before the second arrives.
 - Round end: both players pass in a row. Round-end effects happen when the enemy can no longer answer; carry-over is
@@ -65,7 +65,7 @@ More text: `summary/09-card-design-rules.txt`
 **What a faction has**
 - Exactly 100 cards (tokens not counted). Spells are 20-50% of them, and about the same share at every cost from 1 to 5:
   if 30% of the faction is spells, then about 30% of the cost-2 cards are spells too. Cost 6+ may be mostly units.
-- 2-3 keywords of its own. A keyword serves a synergy: Barrage serves "guns in the back rows bombard the rear".
+- 2-3 keywords of its own. A keyword serves a synergy: a keyword that lets back-row guns hit the enemy rear serves "guns in the back rows bombard the rear".
 - 5 Leaders (`leader: true`; they are the only cards with a golden border). Each has a special part that works by
   whether I hold its lane's base. It helps me take a lane I don't hold and keep one I hold; it never just makes me
   stronger in a lane already won. The five are spread over the faction's ways to play, and their costs follow its
@@ -94,14 +94,14 @@ More text: `summary/09-card-design-rules.txt`
 - At least 1 card that acts between lanes: moves a unit to another lane, throws something there, or uses one lane's
   supply in another. Spells paid in one lane and cast in another are extremely rare; cast in all lanes, very rare.
 - Back rows: melee units in rows 2-3 reach nothing (1b), so the faction needs cards that work from there. Example: a gun
-  with Barrage 1 in row 3 hits the enemy furthest back at each round end.
+  in row 3 that hits the enemy furthest back at each round end.
 - Lane control: some cards check "while you hold this lane's base", some "while you don't", some do one thing in each
   case. Never a bonus from one specific base (bases are random each game).
 - Almost every card has a keyword or text; almost none is only stats.
 - Hooks for two-faction decks (decks will mix 2 factions later): the combos planned on the wheel with other factions,
   and more (Kaptain, 9 Nov 2026: hooks made only from planned overlaps are poor; what else goes in is worked out in the
   wheel chat); also a few effects that work with any faction's units.
-  Example: a Spare Part winds any unit that has a round-end effect, not only Horologers.
+  Example: a spell that makes a unit's round-end effects happen now works with every faction that has round-end effects.
 
 **How cards fit together**
 - Every card says what it makes happen and what it needs (its `net` line), and each "needs" has a card in the faction

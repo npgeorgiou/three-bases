@@ -9,11 +9,10 @@ before coding (CLAUDE.md), and keep every speed or AI check to about a minute.
 - Files: `src/lab/js/engine/network-encode.js` (inputs, layout, saving and loading), `network-play.js` (choosing moves),
   `src/lab/js/ui/worker.js` (playing and learning in workers), `training-schedule.js`, `running.js`. Built into
   `three-bases-ai-lab.html` by `tools/build.py`; summary/16-ai-lab.txt describes the lab as it is.
-- Inputs (format 3, version 7): no card has weights of its own. A card is only its printed values (`cardFeatures`): its
-  numbers and keyword flags, and its effects in parts from the card data (`fx`, `aura`, `cast`): when + what
-  ("roundEnd:strike"), what + on whom ("strike>nearest"), the whole part ("roundEnd:strike>nearest"), with amounts. About
-  640 values on the cards of 5 Nov 2026. Saved networks are moved to a new value list by name (new values start at zero).
-- Per board cell (54): the unit anchored there (current strength, defence, damage, build-ups, moved, attacked, orientation,
+- Inputs (format 3, version 9): no card has weights of its own. A card is only its printed values (`cardFeatures`): its
+  numbers and keyword flags; card effects become parts of it (when + what, what + on whom, with amounts) once the
+  effect system is made (todo.md). Saved networks are moved to a new value list by name (new values start at zero).
+- Per board cell (54): the unit anchored there (current strength, defence, damage, three values that stay 0, moved, attacked, orientation,
   and its printed values) or "covered by a unit anchored at ...". Each cell goes through one shared cell layer (16 numbers),
   then the 54 results go side by side into the first main layer (128, then 64, then the output: chance to win), with
   separate weights for every cell. Hand: 10 slots of printed values. Piles (deck, the opponent's unseen cards, dealt hand,

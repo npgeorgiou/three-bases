@@ -1,5 +1,5 @@
 ==================================================================
-4. KAPTAIN'S IDEAS (11 Oct 2026, written while reading Runeterra's Noxus and Faeria's red cards; not all for the Horde)
+4. KAPTAIN'S IDEAS (11 Oct 2026, written while reading Runeterra's Noxus and Faeria's red cards)
 ==================================================================
 - unit: Deal double damage to large units (more than 1 cell)
 - Keyword: only units with 3 or more strength can hit me
@@ -12,7 +12,6 @@
 - units that do stuff when they survive damage
 - Units that drag opponent to first cell if possible, and strike it.
 - Units that summon the lowest cost unit in the opponents hand and strike each other, if placed on first lane, maybe gaining a bonus on kill
-- Horde needs some cards that also give def, with a sacrifice of course, but dont be afraid to add cards, generally speaking, for each faction, that give something maybe too strong and without an obvious drawback, if it means that it alleviates for some faction weeknesses.
 - Units that when summoned they create spells
 - spells that create copies of cards in hand. Actually I have not seen any of your factions playing with the ideas of creating copies of cards, own or enemies, of being focused on drawing cards, of searching in the deck to pick cards, and nifty things like that.
 - I also like the idea of a faction enhancing cards.
@@ -24,14 +23,11 @@
 - Units that on round end do a strike-each-other with enemies
 - Units that on summon deal a good amount of damage (3?) to friend and enemy
 - An xpensive ranged unit that also damaged adjacent units
-- More hit and push units for horde, to make their vulnerable front line units harder to reach, as the enemy would need to spent supply to move AND hit.
 - spell cards that are cast on own units and activate the THEN part of a card or keyword that has the structure IF -> THEN
 - Units that on hit or attach gain permanently 1/2 in own produced supply
 - cards that can reduce the cost of other cards
 - units that on placement can throw units to other cell in own lane
 - spells that deal damage of various amount, and inv arioso costs per faction, according to faction profile, and in various split configurations. Of course not all factions should ahve pure damage spells, but this holds for everything, not every faction can have everything
-- Some way for Horde to gain def as well, some small ways.
-- Also Horde gaining things from enemy deaths
 - An expensive but weak unit that gains +1|+1, in hand or in play, every time you summon another unit that fulfills a faction-specific role
 - Units that deal damage ON PLACEMENT
 - Damage that travels in reduced ways from unit to unit, if the unit is killed. Maybe only to edge-connected units
@@ -50,7 +46,6 @@ Ideas for a bigger change of rules (under discussion):
 - Planned: each base offers a different bonus to the side that holds it.
 
 More ideas (Kaptain, 3 Nov 2026):
-- Charge units in a back row can later move and attack in one go, paying the move and the attack cost together (an exception to "moving and attacking in one turn", Part 8).
 - A Ranged unit or spell with ricochet damage: hit a unit in a back row, then the damage bounces to the enemy in front of it.
 - A cannon-like unit that fires PROJECTILES, placed by the player in cells adjacent to it, at the enemy camp. Firing is an action that costs supply, not automatic (Claude's reading: like the Ogre Thrower's throw, it replaces the attack and costs what an attack costs). PROJECTILE is a keyword mostly of that faction but not only, so 2-faction decks can mix it.
 - Spells that create other, more powerful spells in the deck.
@@ -58,11 +53,9 @@ More ideas (Kaptain, 3 Nov 2026):
 - Link: keep it, but it only links units of the same kind (Claude's reading: the same card).
 - A unit may have Supply +/- N for balance, if it still does its job; rare.
 - Spells paid in one lane and cast in another: EXTREMELY rare. Paid in one lane and cast in ALL lanes: very rare.
-- Exanimati: a spell that resurrects all friendly units that died this round.
 - The most fitting faction: a spell that cancels the enemy's last action ("back in time").
 - Immobile buildings (pyramid, totem, obelisk...) that give benefits or react to what happens in their lane. Many factions can have one.
-- Tagma: Fryktoria, a building; with Fryktoria in two lanes, one benefits from (or helps with) what happens in the other, like the Byzantine beacon messages. Ideas to come once Tagma is sketched.
 
 PLANNED FACTIONS (Kaptain, before the wheel; moved from the README 14 Nov 2026: ideas for the wheel's themes and mechanics)
 THE ROTBORN: decay is transformation, not destruction ("Nothing dies. It becomes something else."). Mold, mushrooms, moss, swollen roots, decaying flesh, and rats (growth, spread, disease); magic of blight, fungal growth, regeneration, decomposition; spore priests, plague beasts, corpse-fungi, rot giants. Twist: their diseases can heal ecosystems and restore dead soil. Leaving remains behind is its main thing (AGREED, 10 Oct 2026): its units leave remains (e.g. Fungal Corpses: 0|0, Immobile, destroyed by any damage, holding dots) that its other cards feed on, sprout from or spread through; what remains do is to be designed. Moldering Pilgrim (2 - 2|2, leaves a Fungal Corpse) may return here. Has Blight too, so it synergises with the Exanimati.
-Other planned factions: a defence-heavy one, a supply-heavy one, one that mostly lowers defence, a precise one that fine-tunes (its X effects let the player choose exactly how much supply to spend), possibly a cold/ice one (Freeze was removed from the Exanimati), and one whose units are all Immobile (Kaptain's idea). Items (cards attached to units; Kaptain's idea) are in Part 7.
+Other planned factions: a defence-heavy one, a supply-heavy one, one that mostly lowers defence, a precise one that fine-tunes (its X effects let the player choose exactly how much supply to spend), possibly a cold/ice one, and one whose units are all Immobile (Kaptain's idea). Items (cards attached to units; Kaptain's idea) are in Part 7.

@@ -27,12 +27,11 @@ One chat does one step; at its end, mark the step done here and say what it left
   (`work/answer_concepts.tsv`) and the number of extras per faction.
 - The steps 3 and 6 recheck (`RECHECK.md`) waits for Kaptain's OK on `archetypes.md` and the map page; open in it: the
   library has no link rule for "B is immune to what A makes".
-- `todo.md` item 11 removes every deleted faction's code and words from the game; it comes before step 9's keywords.
 - Counts whose rows don't say what they count are counted nowhere: 200 instances of "grows with what happened" and 36
   of "counts and thresholds" (`axes.py` prints them). Most are counts of enemy units or of a keyword the rows don't name.
-- `tools/wheel_check.js` checks a finished faction's cards against its archetypes' concepts and extras, and
-  `tools/wheel_table_check.py` checks the 20 factions' archetypes, extras and answers: both are written when step 10
-  and Stop 3 need them (today they measure the radii).
+- The faction check (a finished faction's cards against its archetypes' concepts and extras) and
+  `tools/wheel_table_check.py` (the 20 factions' archetypes, extras and answers) are written when step 10 and Stop 3
+  need them; `wheel_table_check.py` today measures the radii.
 - `work/make_stop1.py` is written for step 10.
 
 ## The numbers (library/cards_db)
@@ -57,8 +56,8 @@ One chat does one step; at its end, mark the step done here and say what it left
   (step 8) come before the game plan and keywords (step 9); 7+ partners each. A finished faction is checked against its
   archetypes and extras (18 Nov 2026).
 - Keywords are shared, which is what makes factions combo: no keyword is barred from any faction, each is mostly on the
-  factions that obviously gain from it, and every faction has at least 1 keyword of its own. The deleted factions'
-  keywords are gone; all keywords are made new for the 20 (18 Nov 2026).
+  factions that obviously gain from it, and every faction has at least 1 keyword of its own. All keywords are made
+  new for the 20 (18 Nov 2026).
 Only what Kaptain said himself goes here, in his words; Claude's own rules go elsewhere.
 - The game's own things: dots and front cells, rows (front/middle/back), columns, 3 lanes, the 3x3 camp, shapes and
   size, supply per lane, carry-over, round start and round end, one action per turn, moving and turning, reach (melee,

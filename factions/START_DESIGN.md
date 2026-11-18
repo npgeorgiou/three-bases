@@ -112,11 +112,10 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    ally attacks...), WHAT (damage, kill, +strength, move, restore shields, supply, a card...), ON WHOM (the enemy facing
    me, the ally behind me, every enemy in the row...). Look at the cards already written with the same WHEN and WHAT. If
    the new one only changes numbers, stats, cost or ON WHOM, it is the same card: drop it and use another library line.
-   The failure this stops: 14 Horologers said "round end: I strike the nearest enemy", with different stats. The gate
-   fails two cards whose WHEN + WHAT + ON WHOM are all the same, and one WHEN + WHAT on more than 3 cards.
+   The failure this stops: 14 cards of one faction said "round end: I strike the nearest enemy", with different stats.
+   No two cards may have the same WHEN + WHAT + ON WHOM, and no WHEN + WHAT may be on more than 3 cards.
 10. **Checks**: START_DESIGN-2 section 2 and START_DESIGN-3 sections 2b-5, then `python3 tools/design_gate.py <letter>` until it prints PASS. Then the faction check
-   (`node tools/wheel_check.js <letter>`: the faction's cards against its archetypes' concepts and extras in
-   `factions/wheel/work/factions.tsv`); if it drifted, fix the faction, not the wheel. Code only after Kaptain
+   (the faction's cards against its archetypes' concepts and extras in `factions/wheel/work/factions.tsv`); if it drifted, fix the faction, not the wheel. Code only after Kaptain
    agreed steps 1-6.
 
 Absolute limits (Kaptain): no rarities (Common, Rare, Legendary...); every card is balanced by its cost alone. No
@@ -136,9 +135,9 @@ randomness: no coin flips, random targets or random cards.
 4. **The library not read card by card** (although the old card design method said so). Why: reading is slow and shows no
    output, so Claude skipped it and took only mechanic names, almost only from Runeterra, the game it knows best.
    Stops it: step 7 and the library file the gate checks.
-5. **A whole faction was one mechanic** (the clockwork faction was only wind and gears). Why: Claude took the first idea
+5. **A whole faction was one mechanic** (one faction was only one keyword and what it touched). Why: Claude took the first idea
    of the theme and made it everything. Stops it: step 6.
-6. **Spells all "+strength" and "kill"** (Sunfeeders). Why: as in 1. Stops it: step 9 on spells too; `ask.py all spells`
+6. **Spells all "+strength" and "kill"**. Why: as in 1. Stops it: step 9 on spells too; `ask.py all spells`
    shows what real factions' spells do (bring back, give cards, weaken for later, give units to the enemy...).
 7. **Round-end damage on many cards**: too strong, the enemy can't answer at round end (START_DESIGN-2, 1b). Stops it: step 9.
 8. **Stats changed off the budget** (+1 / -1 defence) to move Benchmark win rates. Why: a number is the fastest fix.

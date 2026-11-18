@@ -57,7 +57,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 - **Kaptain agrees the archetypes and their parts** (step 3), **the concepts on each radius** (step 4) and
   **the 20 factions' archetypes** (step 7). **Stop 1: Kaptain agrees the 20 factions** (step 10).
 - Then one chat per faction (two can run at once): steps 1-6 of `START_DESIGN.md`. **Stop 2: Kaptain agrees them.**
-  Then cards, the gate, the faction check (`wheel_check.js`: the cards against the faction's archetypes and
+  Then cards, the gate, the faction check (the cards against the faction's archetypes and
   extras), a separate agent's review. **Stop 3: Kaptain gets the finished faction.**
 - Pilot: the first two factions are a pair with a STRONG combo; their premades play each other (`cardstats.js`) and
   one mixed deck shows whether the combo fires. **Stop 4: Kaptain decides whether the rest is built.**

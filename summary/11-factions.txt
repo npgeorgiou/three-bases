@@ -1,31 +1,9 @@
 ==================================================================
 11. FACTIONS
 ==================================================================
-The game has no factions (14 Nov 2026: Kaptain deleted the seven factions; 20 new ones are designed by the wheel chat,
-factions/START_DESIGN-1-wheel.md). Their keyword rules are still in the engine.
-Ideas for new factions and redesigns are in factions/; the removed factions (Tagma, Ashfang Horde, Exanimati) are in
-factions/removed/.
+The game has no factions. 20 new ones are designed by the wheel (factions/START_DESIGN-1-wheel.md); ideas for factions
+are in factions/.
 
 Notation: supply - strength|defence, then the size: no mark 1 cell, ▪▪ line of 2, ▪▪▪ line of 3, ▪▪▪▪ 2x2.
-Value = stat points the keyword takes from the supply budget (negative = a drawback that buys stats). AGREED.
-
-General keywords (any faction may use them):
-Keyword        | Value       | Description
----------------+-------------+------------
-Ranged         | 3           | Can attack any enemy in its lane, from any row.
-Supply N       | 3 per point | Adds N supply to its lane at each round start.
-Armoured       | 2           | The first damage it takes each round is blocked.
-Charge         | 2           | When placed outside the front row, moves straight forward; if it reaches the front row, strikes the enemies right ahead.
-Riposte        | 2           | Strikes back an attacker when it survives.
-Flurry         | 3           | Attacks twice per round, pays once.
-Pike           | 1           | Can also attack the enemy front row from your second row.
-Lightfooted    | 1           | Moves twice per round, pays for the first move only.
-Shield wall    | 1           | Beside another Shield wall unit in its row: +1 defence.
-Push           | 1           | A surviving front-row enemy it strikes moves one row back.
-Outrider       | 1           | Can move to a free spot in another lane's camp.
-Bodyguard      | 1           | Takes the damage aimed at adjacent allies.
-Immobile       | -2          | Can't move.
-Fading         | -2          | Dies at the end of the round in which it was placed.
-Reckless       | -2          | Dies right after it attacks.
 
 Leaders (5 per faction) have a golden border in the game, on the card and on the board; no other card has one.

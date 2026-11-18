@@ -8,15 +8,15 @@ Files (lines, then contents). Read only the file a task needs; find lines across
 02-code-structure.txt             5  2. CODE STRUCTURE
 03-board-and-bases.txt            9  3. BOARD AND BASES
 04-winning.txt                    7  4. WINNING AND LOSING
-05-rounds-turns-supply.txt       15  5. ROUNDS, TURNS AND SUPPLY
+05-rounds-turns-supply.txt       16  5. ROUNDS, TURNS AND SUPPLY
 06-units-general.txt             13  6. UNITS — GENERAL RULES
-07-areas-resolution.txt          15  7. AREAS, POSITIONS AND RESOLUTION
-08-rulings.txt                   22  8. RULINGS
-09-card-design-rules.txt         18  9. CARD DESIGN RULES
-10-keywords.txt                  48  10. KEYWORDS
-11-factions.txt                  38  11. Factions: notation, general keyword values, no factions now
-12-decks-start-page.txt          25  12. DECKS AND START PAGE
-13-ui.txt                        52  13. UI
-14-animations-sound.txt          22  14. ANIMATIONS AND SOUND
-15-computer-opponents.txt        13  15. COMPUTER OPPONENTS
-16-ai-lab.txt                    46  16. AI LAB (three-bases-ai-lab.html)
+07-areas-resolution.txt          14  7. AREAS, POSITIONS AND RESOLUTION
+08-rulings.txt                    9  8. RULINGS
+09-card-design-rules.txt         17  9. CARD DESIGN RULES
+10-keywords.txt                  15  10. KEYWORDS: the rule words shown on hover
+11-factions.txt                   9  11. FACTIONS: notation and leaders (no factions now)
+12-decks-start-page.txt          11  12. DECKS AND START PAGE
+13-ui.txt                        45  13. UI
+14-animations-sound.txt          11  14. ANIMATIONS AND SOUND
+15-computer-opponents.txt        14  15. COMPUTER OPPONENTS
+16-ai-lab.txt                    58  16. AI LAB (three-bases-ai-lab.html)

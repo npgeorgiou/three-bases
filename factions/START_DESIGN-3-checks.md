@@ -22,14 +22,14 @@ Part of `factions/START_DESIGN.md` (read that first, whole; then parts 2, 3 and 
 - Conditions come from the identity: "the enemy with the least defence" only in a faction about hunting weak units.
 
 **The cards**
-- Every effect changes something that would not happen anyway. Empty example: all Horologers act at round end, so
-  "when one acts at round end, the touching ones act too" adds nothing.
+- Every effect changes something that would not happen anyway. Empty example: in a faction whose units all act at
+  round end, "when one acts at round end, the touching ones act too" adds nothing.
 - "This round" effects that set up another effect of the same round are chains and wanted ("this round the enemy unit
   takes 1 more damage", then a hit). A main removal is never "this round" only.
 - Worth on this board: "this round" penalties (-1 strength, can't attack) are worth almost nothing (the enemy waits);
   "can't move" is near nothing (units rarely move). Effects that last or act now are worth something.
-- Rule-bending keywords (Outrider, moving between lanes) sit on a few cards only. A keyword is on a card only if
-  something on it uses the keyword (two Push keywords on one card with nothing using Push: wrong).
+- Rule-bending keywords (moving between lanes) sit on a few cards only. A keyword is on a card only if
+  something on it uses the keyword (a keyword twice on one card with nothing using it: wrong).
 - Costing: a drawback buys more stats than the curve; Immobile's -2 is small (a cost-1 unit with 0|5 is too much
   defence); a card paid twice (placed, then thrown) is cheaper for it.
 - Only the game's own words ("dies", not "breaks"; no "wall"). No flavour text.

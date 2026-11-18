@@ -17,7 +17,7 @@ Principles
 4. Combos are trigger -> payoff between factions: a card of one makes the thing a card of another gains from. Every
    faction combines well with at least 7 others. Shared keywords are the main source of combos; every faction also
    has at least 1 keyword of its own. Each faction's chat adds more hooks.
-5. Each faction, once built, is checked against its archetypes and extras (`node tools/wheel_check.js <letter>`); if it
+5. Each faction, once built, is checked against its archetypes and extras; if it
    drifted, the faction is fixed, not the wheel.
 6. The radii below show how the 43 real factions spread; nothing is designed from them.
 

@@ -77,8 +77,6 @@ const Sound = (() => {
         burst(t + 0.01, 0.05, 0.03, 'highpass', 3000);
       }
     },
-    /** Soft chime: shields restored. */
-    heal() { const t = now(); if (t === null) return; tone(t, 0.5, 0.12, 'sine', 880, 1320); tone(t + 0.08, 0.5, 0.08, 'sine', 1320, 1760); },
     /** Clock tick: the turn passes to the other side. */
     tick() { const t = now(); if (t === null) return; tone(t, 0.035, 0.25, 'square', 2300, 1700); burst(t, 0.03, 0.12, 'highpass', 5000); tone(t + 0.11, 0.03, 0.15, 'square', 1900, 1500); },
     /** Gong: a new round begins. */

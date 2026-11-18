@@ -1,48 +1,15 @@
 ==================================================================
 10. KEYWORDS
 ==================================================================
-Texts shown on hover in the game (src/game/js/cards/keywords.js). Which faction has which, with values: section 11.
+Rule words: their texts are shown on hover in the game (src/game/js/cards/keywords.js). Ranged, Pike and melee reach are
+described in section 6, supply and carry-over in section 5; their values in the supply budget are in section 9.
 
-Rules words and general keywords:
 - Ranged: Can attack any enemy in its lane, from any row.
-- Supply: Adds supply to its lane at each round start.
-- Everywhere: Paid from one lane, it works in all three lanes.
-- Carry-over: Supply you keep between rounds. At round end your unspent lane supply is added to it, up to 5 in total; you can spend it in any lane.
-- Immobile: Can't move.
-- Strike: A hit with a unit's strength: its attacks and charges, and strikes with its strength from an ability or a spell. A melee unit strikes only what it could attack. Fixed amounts from abilities and spells are damage dealt, not strikes.
-- Fading: Dies at the end of the round in which it was placed.
-- Bloodied: Has less defence than its card shows. Defence gains that bring it back up to its card's value end it.
-- Lightfooted: Moves twice per round and pays only for the first move.
 - Pike: Can also attack the enemy front row from your second row.
-- Shield wall: Shield wall units standing directly beside each other in the same row give each other +1 defence.
-- Charge: When placed outside the front row, moves straight forward. If it reaches the front row, strikes the enemies right ahead.
-- Reckless: Dies right after it attacks (a charge strike counts).
-- Armoured: The first damage it takes each round is blocked, whatever its source (spells and your own strikes too).
-- Push: When its attack strikes a front-row enemy that survives, that enemy moves one row back, if the cells are free.
-- Outrider: Its move can also take it to a free spot in another lane's camp (paid from the lane it leaves).
-- Bodyguard: When an ally adjacent to it would take damage, it takes it instead.
-- Riposte: When it survives an attack, it strikes the attacker back with its strength.
-- Flurry: Attacks twice per round and pays only for the first attack.
+- Immobile: Can't move.
+- Supply: What cards cost; each lane has its own. A unit with Supply N adds N to its lane at each round start.
+- Carry-over: Supply you keep between rounds. At round end your unspent lane supply is added to it, up to 5 in total; you can spend it in any lane.
+- Strike: A hit with a unit's strength: its attacks, and strikes with its strength from an ability or a spell. A melee unit strikes only what it could attack. Fixed amounts from abilities and spells are damage dealt, not strikes.
 
-Keywords of the seven deleted factions (14 Nov 2026; their rules are still in the engine, no card uses them):
-- Geared: When I am wound, every Geared ally touching me is wound too (each one once per wind).
-- Wound: Place: my round-end effects happen now.
-- Salvage: Death: a Spare Part into your hand (a 0-cost spell: wind an ally and restore 1 of its shields).
-- Wind: Its round-end effects happen now, during the round (as often as it is wound).
-- Toll: Has +1 strength for each unit, on either side, that died this round.
-- Obsidian: When my strike leaves an enemy Bloodied (with less defence than its card shows), it dies.
-- Offering: Place: the ally directly behind me dies and its supply goes to your carry-over (up to 5). My "if offered" effects happen only if one did.
-- Onrush: Whenever another ally in my lane attacks, I gain +1 strength this round.
-- Flanker: Has +2 strength while in a side column of your front row.
-- Reserve: When an ally in my lane dies while I am outside the front row, I move straight forward as far as I can (free).
-- Harden: When I survive damage, I gain +1 defence.
-- Retaliate: When I survive damage from an enemy unit, I deal that much damage to it (the number on the card).
-- Vigil: Round end: restores that many of my shields (the number on the card).
-- Omen: What follows "Omen:" happens whenever one of your spells targets me.
-- Augur: Your spells deal that much more damage (the number on the card), in every lane.
-- Perennial: Round end: I gain +N|+N (the number on the card).
-- Seeds: Death: places that many Saplings in free cells of my lane, front row first.
-- Roots: Round end: deals that much damage to the enemy nearest the base in my column, from any row.
-- Marked: Strikes on it deal double damage. It stays Marked until it leaves the board.
-- Barrage: Round end: deals that much damage to the enemy furthest from the base in my lane (back row first).
-- Entrenched: While I am in your front row with an ally directly behind me, I am Armoured.
+Keywords are shared by the factions, and every faction has at least 1 of its own (factions/wheel/HANDOFF.md); they are made
+new for the 20 factions.
