@@ -1,0 +1,53 @@
+concept	family	why suspect	read	right	wrong	unsure	most said wrong as	result
+aoe_damage	do damage	hurts me: acts on my own side	5	4	1	0	single-target damage	stays
+attack_gain	do give_keyword	helps the enemy: acts on an enemy	5	2	3	0	stat_loss	mixed
+attack_gain	do stat_change	lowers a stat: that is stat_loss	3	0	3	0	stat_loss	mixed
+buff	do copy_keywords	helps the enemy: acts on an enemy	1	0	0	1		mixed
+buff	do give_ability	helps the enemy: acts on an enemy	5	1	4	0	debuff	mixed
+buff	do give_keyword	helps the enemy: acts on an enemy	5	1	4	0	debuff	mixed
+cheat_death	do copy	helps the enemy: puts it on the enemy side	2	0	2	0	enemy_benefit	fix
+copy	do copy	helps the enemy: puts it on the enemy side	5	1	4	0	enemy_benefit	fix
+cost_reduction	do cost_change	raises a cost	5	1	4	0	a cost increase	fix
+cost_set	do cost_set	helps the enemy: acts on an enemy	2	2	0	0		stays
+count_payoff	if amount_count	counts what is on the board now: that is condition_count	5	0	5	0	condition_count	fix
+defence_gain	do stat_change	lowers a stat: that is stat_loss	1	0	1	0	stat_gain	fix
+draw	do draw	helps the enemy: acts on an enemy	5	2	1	2	plain words, gives the opponent mana and a card	mixed
+free_play	do play_card	helps the enemy: acts on an enemy	5	3	1	1	revive	mixed
+generate_cards	do create	helps the enemy: acts on an enemy	5	5	0	0		stays
+generate_cards	do create	helps the enemy: puts it on the enemy side	1	1	0	0		stays
+haste	do can	helps the enemy: acts on an enemy	1	0	1	0	copy	fix
+haste	do give_keyword	helps the enemy: acts on an enemy	1	0	1	0	copy	fix
+heal	do heal	helps the enemy: acts on an enemy	3	2	1	0	stat_gain	mixed
+immunity	do cant	a "can't" row: check it guards my unit	5	5	0	0		stays
+immunity	do give_keyword	helps the enemy: acts on an enemy	1	1	0	0		stays
+lifesteal	do stat_change	helps the enemy: acts on an enemy	2	2	0	0		stays
+mark_target	do mark	hurts me: acts on my own side	5	0	5	0	copy	mixed
+movement	do can	helps the enemy: acts on an enemy	1	0	1	0	copy	fix
+movement	do move	helps the enemy: puts it on the enemy side	3	1	2	0	forced_movement	mixed
+on_ally_play	when played	fires on the enemy's action	5	0	4	1	plain words, fires on the enemy's play	mixed
+on_ally_play	when summoned	fires on the enemy's action	5	1	4	0	plain words, fires on the enemy's summons	fix
+on_draw	when drawn	fires on the enemy's action	5	5	0	0		stays
+permanent_growth	do give_keyword	grows once, when played: a single lasting bonus is stat_gain	5	5	0	0		stays
+permanent_growth	do give_keyword	helps the enemy: acts on an enemy	1	1	0	0		stays
+permanent_growth	do repeat	grows once, when played: a single lasting bonus is stat_gain	1	1	0	0		stays
+permanent_growth	do stat_change	grows once, when played: a single lasting bonus is stat_gain	5	3	2	0	stat_gain	mixed
+ping	do damage	hurts me: acts on my own side	5	2	2	1	damage	mixed
+recycle	do shuffle_into_deck	helps the enemy: acts on an enemy	5	2	3	0	bounce_enemy	mixed
+regeneration	do give_keyword	helps the enemy: acts on an enemy	1	1	0	0		stays
+repeat_trigger	do repeat	helps the enemy: acts on an enemy	5	3	1	1	copy	mixed
+resource_gain	do mana_gain	helps the enemy: acts on an enemy	5	4	1	0	plain words, gives the opponent mana and a card	stays
+resource_gain	do max_mana_change	helps the enemy: acts on an enemy	3	3	0	0		stays
+return_to_hand	do keyword_action	return to hand: its rows say neither whose unit nor from where (the rows that say go to return_from_board, return_on_leave)	5	0	0	5		mixed
+return_to_hand	do return_to_hand	return to hand: its rows say neither whose unit nor from where (the rows that say go to return_from_board, return_on_leave)	5	1	1	3	plain words, returns an own spell to hand	mixed
+revive	do revive	helps the enemy: acts on an enemy	4	4	0	0		stays
+shield	do counter	counter: cancelling a spell or removing a keyword is not absorbing a hit	5	0	5	0	plain words, spell negation	mixed
+shield	do remove_keyword	remove_keyword: cancelling a spell or removing a keyword is not absorbing a hit	5	5	0	0		stays
+spell_power	do increase_effect	helps the enemy: acts on an enemy	5	2	2	1	plain words, enemy general takes more damage	mixed
+stat_gain	do stat_change	helps the enemy: acts on an enemy	5	5	0	0		stays
+stat_gain	do stat_change	lowers a stat: that is stat_loss	5	2	3	0	stat_loss	mixed
+summon	do summon	helps the enemy: acts on an enemy	5	3	1	1	board_clog	mixed
+summon	do summon	helps the enemy: acts on an enemy; helps the enemy: puts it on the enemy side	5	0	3	2	board_clog	mixed
+summon	do summon	helps the enemy: puts it on the enemy side	5	0	4	1	board_clog	fix
+swap	do swap	helps the enemy: acts on an enemy	2	0	2	0	hand_deck_swap	fix
+tutor	do put_on_top	helps the enemy: acts on an enemy	4	0	4	0	plain words, return enemy unit to its deck	mixed
+untap	do ready	helps the enemy: acts on an enemy	1	1	0	0		stays

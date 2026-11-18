@@ -1,0 +1,18 @@
+card id	verdict	why
+5000650	right	Overdraw clause fires when the enemy draws, which the concept's any-player draw covers.
+750837	right	Triggers when you draw an enemy card, so the owner's draw is the trigger.
+5000238	right	Fires whenever the opponent draws; the concept counts any player drawing.
+751493	right	Whenever your opponent draws, plant a trap; the enemy draw is the trigger.
+5000793	right	Whenever your opponent draws a card, deal 2 damage; the enemy draw is the trigger.
+5000482	right	Grow gets bigger at the start of every turn and keeps the stats.
+757337	right	Thrive boosts this unit each time a higher-power unit is played; growth repeats.
+751115	right	Augment gives +1 power each time a created card is played, kept for good.
+1000084	right	Vitalize gains 1 strength at the start of each turn until poisoned.
+7000589	right	Ritual gains Strength at the end of every turn, so the growth repeats.
+1000120	right	Vitalize on the enemy unit adds 1 strength every turn until poisoned.
+756968	right	Thrive boosts this unit each time a higher-power unit is played.
+5000525	right	Gains +1/+1 whenever the opponent casts a spell; each trigger adds stats.
+741230	wrong: should be stat_gain	Gains +1/+1 once, when summoned next to a well; a single lasting bonus.
+756811	right	Harmony boosts self each time a unique non-Neutral unit is played.
+8000031	wrong: should be stat_gain	On Reveal gives +6 Power once, after the comparison; a single bonus.
+2000110	right	Incant adds +2/+2 each time the owner plays a spell in its lane.

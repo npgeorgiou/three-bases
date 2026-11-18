@@ -21,7 +21,9 @@ is written in that step's chat, from the rules of the step, and its line here is
   acts on (kind/side/pick, and to or by whose side), from where, when it fires, and the card or the keyword that gave it;
   or the keyword; or the general rule of `flat.py` and the row that set it off; with cards, games, suspect and why) and
   `work/tag_reads.tsv` (the reading: a family is one concept, one action or test and one reason; 5 of its cards spread
-  over the games, with the group each came from; then the reader's verdict and one line why). The reasons are in its
+  over the games, with the group each came from; then the reader's verdict and one line why). `python3 ../../factions/wheel/work/tag_read_input.py`
+  -> `work/reads/batch_NN.md` (the reader's inputs, about 20 cards each; low-cost model readers, 4 batches each) and
+  the readers' `work/reads/batch_NN.verdicts.tsv` (card id, verdict, why). The reasons are in its
   `checks`: a good action on an enemy or a bad one on my side for a concept the concept tree puts under helps_me or
   hurts_enemy, a thing put on the enemy side, a trigger of mine firing on the enemy's action, and the rows that match
   what a concept's definition gives to another concept. Fixes go into `flat.py` derive with cases in

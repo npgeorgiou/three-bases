@@ -6,7 +6,7 @@ One chat does one step; at its end, mark the step done here and say what it left
 ## The steps
 | step | state | what it made |
 |---|---|---|
-| 1. Fix the library's concepts | **next**: Kaptain's OK to read the 194 cards of `work/tag_reads.tsv`, then the fixes, then `check_all.py` and `links.py` | concepts split by whom a row acts on; "Skill" removed; "Return my unit to hand" split into return_from_board and return_on_leave; `work/tag_check.py`; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
+| 1. Fix the library's concepts | **next**: the fixes of the 11 "fix" families of `work/tag_verdicts.tsv`, the split and second reading of the 23 "mixed", then `check_all.py` and `links.py` | concepts split by whom a row acts on; "Skill" removed; "Return my unit to hand" split into return_from_board and return_on_leave; `work/tag_check.py`; the first reading (194 cards, 3 low-cost readers): `work/tag_verdicts.tsv`; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
 | 2. The usable concepts | redo after step 1 | `work/concepts.tsv`, `work/concepts.md` |
 | 3. The faction archetypes | to do (`work/faction_archetypes.py` to write) | `deck_archetypes.tsv` and `.md`: the deck archetypes' parts, for step 8 (checked once first, `PIPELINE.md` step 8) |
 | 4. The radii and how they work together | redo: the new concepts of step 1 get a radius (Kaptain agrees), then `axes.py` | `work/radii.tsv`, `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` |
@@ -24,14 +24,16 @@ One chat does one step; at its end, mark the step done here and say what it left
   alone (disruption). Kaptain's list (`archetypes_kaptain.txt`) holds deck archetypes: what a pair of factions plays
   together (step 8). The 23 radii of `work/radii.tsv` show how the 43 real factions spread (`factions/wheel-axes.html`).
 - Step 1, the tag check: `work/tag_check.py` groups every usable concept's cards by what put the tag on and marks the
-  suspect groups: 517 of 7628, in 52 families (a family: one concept, one action or test, one reason). `work/tag_reads.tsv`
-  holds 5 cards per family, spread over the games: 194 to read by a low-cost model, after Kaptain's OK. The biggest:
-  "Grows with what happened this game" from a count of what is on the board now (524 cards), "Grows again and again"
-  that grows once, when played (313), "Immune" from "can't" rows (90), "Stat gain" that lowers a stat (75) or acts on an
-  enemy (62), "Absorb one hit" from removing a keyword (65) or cancelling a spell (59), "Cards cost less" that raises a
-  cost (54), "Ping" on my own unit (47); then cards made for the enemy, the enemy drawing, units put on the enemy side,
-  "When I play another card" firing on enemy plays. Rainbow and Gifts for a Guard are known wrong cards; Titanstooth
-  (Offering) and Swinging Glaive (Equipment) are right.
+  suspect groups: 517 of 7628, in 52 families (a family: one concept, one action or test, one reason). 5 cards of each
+  family were read (`work/tag_reads.tsv`, verdicts in `work/reads/`), summed by `work/tag_read_sum.py` into
+  `work/tag_verdicts.tsv`: 18 families stay, 11 are fixed by one rule each, 23 are mixed. To fix: "Grows with what
+  happened this game" from a count of the board now is "Counts / thresholds"; "Cards cost less" that raises a cost; a
+  unit summoned or copied onto the enemy side; "When I play another card" firing on an enemy's summon; and smaller ones.
+  Families of 1 or 2 cards were judged on all of them; Kaptain decides whether that is enough. Mixed (split by one more
+  detail, 5 of each half read): "Absorb one hit" from cancelling a spell (5 of 5 wrong, but not the same way),
+  "Mark a target" on my side (5 wrong, different ways), "Grows again and again" that grows once (3 right, 2 wrong),
+  "Stat gain" that lowers a stat, buffs given to an enemy, "Ping" on my side, and the rest. Rainbow and Gifts for a
+  Guard are known wrong cards; Titanstooth (Offering) and Swinging Glaive (Equipment) are right.
 - "Return my unit to hand" is split by what its rows say: return_from_board (my unit in play goes back to hand by an
   effect or its own ability: Recall an ally, Boomerang; 57 cards) and return_on_leave (back to hand when it dies or leaves
   play: Unkillable, Attach, Equipment; 76). No row says "from the discard pile": those cards are recycle or revive. The 17

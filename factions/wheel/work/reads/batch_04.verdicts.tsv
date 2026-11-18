@@ -1,0 +1,20 @@
+card id	verdict	why
+741427	right	"Fill your opponent's hand with Ruby Fish" creates new cards in a hand.
+756503	right	"Create and play a unit from your opponent's starting deck" creates a new card in hand.
+8000316	right	"Shuffle a Rock into your opponent's deck" puts a new card into a deck.
+751738	right	"plant a Mysterious Portal and 3 Chimes" puts new cards into decks.
+1000210	right	"create a random single-use Malicious Card and put it in the enemy's deck" creates new cards.
+757417	right	"Spawn a Drone at the bottom of your opponent's deck" creates a new card in a deck.
+5000473	right	"Rush" lets the copied minion move and attack right away.
+5000473	right	"It gains Rush" so the unit can move and attack immediately.
+761017	right	"All other Vek heal 1 at the start of their turn" restores lost health.
+761097	wrong: should be buff	"All other Vek are Boosted, providing +1 damage to attacks" adds damage, not healing.
+761052	right	Regeneration heals every other Vek 1 each turn, restoring lost health.
+757095	right	"Give Veil to a unit": Veil "prevents unit from gaining other statuses", so it is status immunity.
+6000104	right	Upgraded Shield "Creates a personal Shield" that blocks damage and stops new negative statuses.
+757224	right	Green mutagen "give it Veil" so the allied unit blocks other statuses.
+6000070	right	Upgrade "Applies a Shield to buildings" that blocks damage and negative statuses.
+757130	right	"Veil" on itself stops it gaining other statuses.
+761098	right	"Fire Immunity": "This unit cannot be set on Fire."
+757353	right	"Drain an enemy unit by 3", then "boost self by the damage dealt"; Regis grows.
+756232	right	"Drain an enemy unit by the amount of boost it has", then boosts self by the damage dealt.

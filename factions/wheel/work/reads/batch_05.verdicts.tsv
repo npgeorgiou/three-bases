@@ -1,0 +1,20 @@
+card id	verdict	why
+757264	wrong: should be copy	Marks the chosen unit only so Timer spawns a copy; the mark adds no extra hits.
+8000539	wrong: should be plain words, tracks cards to merge later	Marks six cards so they can merge later; nothing is hit harder.
+796933	wrong: should be plain words, shields the picked ally	Marked ally is skipped by the 1 damage; the mark protects rather than adds hits.
+1000083	wrong: should be plain words, remembers state to restore later	Mark saves surrounding units' state at turn end; the heal restores them instead.
+8000201	wrong: should be plain words, tags the Herald unit	Marks the next played unit as Herald; the +2 Power goes to self, not the mark.
+5000473	wrong: should be copy	Summons a copy of the enemy's last minion and grants Rush and Flying; no unit moves.
+756544	wrong: should be forced_movement	Moves all units on an enemy row to the other row, so the moved units are enemies.
+1000105	right	Eloth moves itself to the first enemy in front; the push on that enemy is separate.
+757476	wrong: should be plain words, moves created cards between hand and deck	Moves created cards to hands and decks; no unit changes place on the board.
+5000696	wrong: should be plain words, fires on the enemy's play	Triggers when the enemy General plays a minion, not when the owner plays a card.
+756452	wrong: should be plain words, fires on the enemy's play	Triggers when your opponent plays a unit on their side, not the owner's plays.
+796327	unsure	Owner-play clause fits; the enemy-play clause fires on the enemy's plays, so mixed.
+752050	wrong: should be on_play	Triggers on Capsize's own play; the cost rise targets the enemy's next unit.
+5000692	wrong: should be plain words, fires on the enemy's play	Transforms enemy minions whenever the enemy General plays one; enemy's play triggers it.
+5000333	wrong: should be plain words, fires on the enemy's summons	Triggers whenever the opponent summons a minion; the trigger is the enemy's summon.
+741259	wrong: should be plain words, fires on the enemy's summons	Whenever your opponent summons a creature, deal 1 damage to this; enemy summon triggers it.
+4000029	wrong: should be plain words, fires on the enemy's summons	Guardian reacts when an opposing creature is placed; that is the enemy's summon.
+796835	wrong: should be plain words, fires on the enemy's summons	When an enemy is summoned, destroy me to grant it Vulnerable; the enemy's summon triggers it.
+5000650	wrong: should be plain words, fires on the enemy's summons	Whenever your opponent summons a minion, they draw; the enemy's summon is the trigger.

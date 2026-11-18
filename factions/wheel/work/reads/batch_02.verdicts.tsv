@@ -1,0 +1,20 @@
+card id	verdict	why
+7000758	wrong: should be block_armor	"Support Beam (defend, 12 block)" gives temporary Block that wears off next turn.
+7000792	wrong: should be debuff	"Constrict (strong debuff)" is applied to the enemy player; no unit gains a stat.
+7000803	wrong: should be debuff	"Lick (debuff)" and "Flame Tackle (attack debuff)" hit or weaken the enemy player.
+7000811	wrong: should be debuff	Most actions are attacks or debuffs on the player; the self Block wears off next turn.
+7000763	right	"Gain One Strength (buff)" is a self power gain, so the buff tag fits.
+751516	wrong: should be enemy_benefit	"Create a copy of me in the enemy deck" gives the opponent a copy; it is not survival.
+751057	wrong: should be enemy_benefit	"Create 2 copies of me in the enemy deck" gives the opponent copies; it is not survival.
+757418	wrong: should be enemy_benefit	"Spawn its base copy at the bottom of your opponent's deck" goes to the opponent.
+796247	wrong: should be enemy_benefit	"Add a copy to the opponent's hand" after you play a card here.
+751524	right	"Copy it targeting the enemy Nexus" copies your own Darkness; the enemy is only the target.
+757175	wrong: should be enemy_benefit	"Spawn a base copy of it on top of opponent's deck" goes to the opponent.
+751516	wrong: should be enemy_benefit	"Create a copy of me in the enemy deck" gives the opponent a copy; it is not survival.
+5000677	wrong: should be a cost increase	"The enemy General's artifacts cost 1 more" raises a cost rather than lowering it.
+741459	wrong: should be a cost increase	"Increase the cost of each card in your opponent's hand by 1" raises costs.
+757244	wrong: should be a cost increase	"Increase the cost by the total duration of Rain and Storm" raises a cost.
+8000722	wrong: should be a cost increase	"Increase its cost by 1" on the opponent's card raises a cost.
+752087	right	"Reduce its cost by 1" applies to your own Dream-Laden Bough.
+8000042	right	"The top card of your opponent's deck costs 6" is a fixed number.
+750952	right	"Reduce the cost of a random card ... to 0 this round" sets a fixed cost of 0.

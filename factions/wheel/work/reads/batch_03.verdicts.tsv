@@ -1,0 +1,17 @@
+card id	verdict	why
+5000651	wrong: should be condition_count	"Damage ... equal to their remaining mana" counts current mana, not past events.
+741425	wrong: should be condition_count	"+1/+1 for each other friendly Rakoan in play" counts the board now.
+757444	wrong: should be condition_count	"for each active Flanking unit on the opposite row" counts the board now.
+4000225	right	"per 5 damage taken since last turn" grows with what happened in the game.
+8000678	wrong: should be condition_count	"For each of your full locations" counts the board now.
+757196	wrong: should be stat_gain	"Boost all units in your deck by 1" names no stat, so the bonus stays stat_gain.
+5001059	right	"both players draw a card" from each player's own deck when a Mech is summoned.
+741116	right	"Your opponent draws a card" from their own deck on death.
+756545	right	"Each player draws a unit" from their own deck when the timer ends.
+796327	right	"draws a card" from the owner's deck when a lane gets exactly two cards.
+751124	unsure	Card text names only "Nab 1"; Nab's rules are not in the file, so any draw is unclear.
+756538	wrong: should be revive	"Play a unit from your opponent's graveyard" brings a dead unit back.
+900033	unsure	"Prank it" has no rules in the file; whether the enemy card is played for free is unclear.
+756480	right	"Play the top card from your opponent's deck" by effect, so no cost is paid.
+751131	right	"Play Cannon Barrage" by effect, so the spell is played without paying its cost.
+756794	right	"Spawn and play a base copy" of an enemy unit by effect, so no cost is paid.

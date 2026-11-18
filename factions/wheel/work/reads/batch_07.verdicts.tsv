@@ -1,0 +1,17 @@
+card id	verdict	why
+5000872	right	At end of turn, deal 1 damage to your General; this repeats every turn.
+756638	wrong: should be damage	Deploy deals 1 damage once; it is not dealt again and again.
+761051	right	All player units take 1 damage at the end of every turn.
+2000273	unsure	Reserve damage repeats only if the card stays in hand each turn; no Reserve rule given.
+750880	wrong: should be damage	Play deals 1 to an ally and 2 to the Nexus, once; nothing repeats.
+756472	right	Ranged clause shuffles the owner's graveyard card into the owner's deck.
+751512	wrong: should be bounce_enemy	Places an enemy follower into the enemy deck; the owner's cards are not involved.
+756372	wrong: should be plain words, reveals and reshuffles an enemy deck card	Reveals the top enemy unit and shuffles it back into the enemy deck.
+750852	wrong: should be bounce_enemy	Stuns an enemy and places it into the enemy deck if you have a Nautilus.
+813686	right	Shuffles an allied unit into your deck, then you play it from there.
+761052	right	Regeneration heals each enemy Vek 1 point at every turn start.
+756643	right	Duel repeats damage exchanges until one unit is destroyed.
+8000097	wrong: should be copy	Copies the bottom enemy card's text; no trigger happens again.
+796966	unsure	Activates enemy deck traps now; a repeat only if they had already fired.
+756797	right	Inspired makes this unit Duel an enemy, repeating damage until one falls.
+756899	right	Forces a Duel, which repeats damage exchanges until one unit is destroyed.
