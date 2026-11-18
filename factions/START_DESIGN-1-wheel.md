@@ -142,8 +142,11 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 7. **The 20 factions** (by script, from the archetype map; `work/factions.py` -> `work/factions.tsv`, and
    `work/concept_list.py` -> `work/lists/<letter>.tsv`). The script's rules are agreed with Kaptain before it is
    written. In this order:
-   1. Each faction plays 2 or 3 archetypes that link strongly on the map (many strong links between their concepts);
-      one archetype is played by at most 3 factions. **Kaptain agrees the 20 factions' archetypes**, seeing per faction
+   1. Each faction plays 2 or 3 archetypes. A group of archetypes scores by the strong real links between their
+      concepts, counted per concept, so a big archetype does not win by its size. The 20 groups are picked so the
+      weakest faction is as strong as possible: a group is swapped for another while that lifts the weakest. No
+      archetype is in more than 3 factions, no two factions share more than one archetype, and each faction is
+      strongest on a different radius where it can. **Kaptain agrees the 20 factions' archetypes**, seeing per faction
       its archetypes in plain words, their concepts, its synergies (the real link text, times chance, games) and one
       sentence written from those texts.
    2. A real theme (World War I artillery, the Zulu regiments) picked for its archetypes; the 20 themes all differ. The
@@ -156,8 +159,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    4. Its extras, picked from the list by these goals in this order: (a) each of the four answers about the board (removing a front
       unit, removing back-row units, acting between lanes, holding a base) its archetypes don't give gets the highest-scoring way that gives it in `work/answer_concepts.tsv` (agreed with Kaptain; per answer
       its ways, each a concept, two concepts real cards link, or a removal on a spell); (b) then the highest-scoring
-      concepts that link with at least 2 of its archetype concepts, links into engine parts counting more; (c) the theme breaks ties. A faction gets a fixed number of extras, set by
-      Kaptain.
+      concepts that link with at least 2 of its archetype concepts, links into engine parts counting more; (c) the theme breaks ties. Every faction gets the same number of extras, 8 to 12
+      (a real faction of about 100 cards mostly uses about 20 concepts), so its strength comes from its archetypes.
    5. Its seven answers, from `work/answer_concepts.tsv`: how it wins is the line of its archetypes in
       `archetypes.tsv`; removing a front unit, removing back-row units, acting between lanes and holding a base are
       each a way its concepts give; what it cares about most is the highest-scoring of the game's own things on its

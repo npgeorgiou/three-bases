@@ -23,7 +23,7 @@ One chat does one step; at its end, mark the step done here and say what it left
   another part ("my units die" -> "my units gain when an ally dies"), a brick works alone and links to nothing
   (disruption). The 23 radii of `work/radii.tsv` show how the 43 real factions spread (`factions/wheel-axes.html`);
   nothing is designed from them.
-- Before step 7's script: Kaptain agrees the number of extras per faction and the rest of its rules.
+- Before step 7's script: Kaptain agrees which concepts of each archetype part a faction plays.
 - Still open from the recheck (`RECHECK.md` stage 6): thin maps (Pillowfort, Prison, Extra Turns, Discard / 8-Rack);
   89 "instead" cards not read.
 - Counts whose rows don't say what they count are counted nowhere: 189 instances of "grows with what happened" and 36
