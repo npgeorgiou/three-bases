@@ -64,7 +64,7 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
       or hit by enemy spells".
    6. What it cares about: which of the game's own things it cares about most; factions may share it. Example: the
       discard pile.
-   7. Blind spot: the one thing it never gets, on any card. Example: a swarm faction never restores shields.
+   7. Blind spot: a whole radius of the wheel it never gets, on any card. Example: it never draws cards.
 3. **Its archetypes and blind spots** (taken from the wheel). Its archetypes: the 2 or 3 archetypes it is made of, each
    of engines (concepts that work through links: my units die -> my units gain when an ally dies) and bricks
    (concepts that work alone: disruption). They are its character, not all its cards use: its cards use its

@@ -91,4 +91,4 @@ cares	hand size	hand_size		Claude's
 cares	the discard pile	self_mill|discard		Claude's
 cares	Immobile	cant_move		Claude's
 cares	rewards for holding a lane	control_reward		Claude's
-blind	one way of the four removal, lanes and holding answers that none of its concepts give and that touches none of its archetypes	any way above		Claude's
+blind	a whole radius (work/radii.tsv) on which none of its archetypes' concepts and extras sit: never draws cards, never heals	any radius		Claude's

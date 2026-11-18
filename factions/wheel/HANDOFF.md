@@ -86,7 +86,8 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
   whole faction. A keyword that fits the theme but grows from no synergy of the factions that carry it is never made.
 - Each faction answers seven questions, one line each: how it wins, how it removes the front unit, how it MAINLY
   removes back-row units, how it MAINLY acts between lanes, how it holds a base, which of the game's own things it
-  cares about most (factions may share it), its blind spot. Removing: his unit leaves its cell; holding: his unit
+  cares about most (factions may share it), its blind spot (a whole radius it never gets: "never draws
+  cards"). Removing: his unit leaves its cell; holding: his unit
   stays, but the base stays mine (18 Nov 2026).
 - Stop 1 pages: juicy and easy to read; one line per answer; one line per partner faction saying HOW the combo plays.
 - Combos are judged once, on this board (step 8): STRONG / OK / WEAK / NONE / AGAINST; partners =
