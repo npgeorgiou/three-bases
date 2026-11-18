@@ -1,7 +1,8 @@
 THE WHEEL'S FILES (factions/START_DESIGN-1-wheel.md has the steps; HANDOFF.md says which step is next)
 HANDOFF.md      where the wheel stands, step by step, and Kaptain's standing decisions
 PIPELINE.md     the commands of every step and what each makes
-archetypes_kaptain.txt  Kaptain's list of deck archetypes (used in step 8)
+archetypes_kaptain.txt  Kaptain's list of deck archetypes
+deck_archetypes.tsv  the deck archetypes' parts and the concepts that can do each (step 8); deck_archetypes.md the same in plain words
 archetypes.md   archetypes.tsv in plain words, for Kaptain (work/archetypes_plain.py)
 archetypes.tsv  the faction archetypes from real factions: their parts (engine or brick) and the concepts that can do each (step 3)
 work/radii.tsv  every usable concept and the radius it goes on, with the part of it that counts there (step 4)

@@ -8,7 +8,7 @@ One chat does one step; at its end, mark the step done here and say what it left
 |---|---|---|
 | 1. Fix the library's concepts | **next**: the tag check and the split of "Return my unit to hand" | earlier: concepts split by whom a row acts on; "Skill" removed; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
 | 2. The usable concepts | redo after step 1 | `work/concepts.tsv`, `work/concepts.md` |
-| 3. The faction archetypes | to do (`work/faction_archetypes.py` to write) | `archetypes.tsv` and `archetypes.md` hold the deck archetypes' parts until step 3 replaces them |
+| 3. The faction archetypes | to do (`work/faction_archetypes.py` to write) | `deck_archetypes.tsv` and `.md`: the deck archetypes' parts, for step 8 (checked once first, `PIPELINE.md` step 8) |
 | 4. The radii and how they work together | redo: the new concepts of step 1 get a radius (Kaptain agrees), then `axes.py` | `work/radii.tsv`, `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` |
 | 5. The links between concepts | redo | `library/cards_db/wheel/concept_links.tsv` |
 | 6. The archetype map | redo with the faction archetypes | `work/archetype_map.tsv`, `factions/wheel-archetypes.html` |

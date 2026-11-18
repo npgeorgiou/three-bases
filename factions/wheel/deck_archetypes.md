@@ -1,4 +1,4 @@
-# The archetypes in this game (made from archetypes.tsv by work/archetypes_plain.py; all Claude's)
+# The deck archetypes in this game: their parts and the concepts that can do each (all Claude's; step 8 uses them)
 
 Engine: a part that works by feeding another part of the same archetype. Brick: a part that works alone.
 

@@ -80,8 +80,15 @@ is written in that step's chat, from the rules of the step, and its line here is
 ## Step 8. Combos on this board
 - A script counts the joins between every two factions' concepts (own concepts and extras; step 5 numbers); Claude rates
   the pairs on the board -> `factions/wheel/combos.tsv` (pair, STRONG/OK/WEAK/NONE/AGAINST, how it plays, the numbers,
-  a test column). Every faction needs 7+ partners. The same script lists per pair the deck archetypes of
-  `archetypes_kaptain.txt` the two factions can play together -> `factions/wheel/deck_archetypes.tsv`.
+  a test column). Every faction needs 7+ partners. The same script lists per pair the deck archetypes
+  (`factions/wheel/deck_archetypes.tsv`: their parts and the concepts that can do each) the two factions can play
+  together -> `factions/wheel/deck_pairs.tsv`.
+- Once, before the first run of step 8 (then this line goes): the concepts of each deck archetype part are checked
+  against the parts' job, each concept by its definition in `library/concept_tree.txt`; Claude's changes are shown to
+  Kaptain. Found so far: "Return my unit to hand" in 5 discard-pile parts (Toolbox, Reanimator, Self-Mill, Recursion,
+  Turbo-Fog); "Copy" in Blink, Storm and Turbo-Fog; "Put into play for free" in Discover; "Cards cost less" in Blink and
+  Recursion; Self-Mill, Reanimator and Recursion, Madness and Wheels, Aristocrats and Eggs, Stompy and Voltron, Control,
+  Midrange and Toolbox nearly the same concepts; Combo, Control-Combo and Extra Turns parts go.
 
 ## Step 9. Game plan, then keywords
 - Claude -> `factions/wheel/plans.tsv` (faction, its game plan turn by turn on the board).

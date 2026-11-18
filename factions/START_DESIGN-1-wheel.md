@@ -195,7 +195,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    concepts and extras; step 5 numbers), by script. Claude rates each pair with numbers on the board: STRONG (both halves on many
    cards, helps take or hold a base, the enemy's one action between can't easily stop it), OK (real but breakable),
    WEAK, NONE, AGAINST. Partners = STRONG or OK; every faction has 7+; one under 7 goes back to step 7. For every
-   pair the script also lists the deck archetypes (`wheel/archetypes_kaptain.txt`) the two factions' concepts can play
+   pair the script also lists the deck archetypes (`wheel/deck_archetypes.tsv`: the parts of those of
+   `wheel/archetypes_kaptain.txt` that can exist here, and the concepts that can do each) the two factions' concepts can play
    together (one discards, the other gains from discards: Madness); the 190 pairs should cover many of them.
    `wheel/combos.tsv` has a test column that playtests fill.
 9. **Game plan, then keywords** (`wheel/plans.tsv`, `wheel/keywords.tsv`).
