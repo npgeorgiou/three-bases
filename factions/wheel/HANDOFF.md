@@ -6,7 +6,7 @@ One chat does one step; at its end, mark the step done here and say what it left
 ## The steps
 | step | state | what it made |
 |---|---|---|
-| 1. Fix the library's concepts | **next**: the tag check and the split of "Return my unit to hand" | earlier: concepts split by whom a row acts on; "Skill" removed; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
+| 1. Fix the library's concepts | **next**: Kaptain's OK to read the 194 cards of `work/tag_reads.tsv`, then the fixes, then `check_all.py` and `links.py` | concepts split by whom a row acts on; "Skill" removed; "Return my unit to hand" split into return_from_board and return_on_leave; `work/tag_check.py`; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
 | 2. The usable concepts | redo after step 1 | `work/concepts.tsv`, `work/concepts.md` |
 | 3. The faction archetypes | to do (`work/faction_archetypes.py` to write) | `deck_archetypes.tsv` and `.md`: the deck archetypes' parts, for step 8 (checked once first, `PIPELINE.md` step 8) |
 | 4. The radii and how they work together | redo: the new concepts of step 1 get a radius (Kaptain agrees), then `axes.py` | `work/radii.tsv`, `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` |
@@ -23,17 +23,21 @@ One chat does one step; at its end, mark the step done here and say what it left
   part works through links with another part ("my units die" -> "my units gain when an ally dies"), a brick works
   alone (disruption). Kaptain's list (`archetypes_kaptain.txt`) holds deck archetypes: what a pair of factions plays
   together (step 8). The 23 radii of `work/radii.tsv` show how the 43 real factions spread (`factions/wheel-axes.html`).
-- Step 1, the tag check, starts from what the last chat found by script (no card read yet):
-  "Grows with what happened this game": 554 of its 687 cards are tagged only because an amount counts what is on the
-  board now (`flat.py`: `('count_payoff', 'flat_if', "test in ('amount_count','amount_event_count')")`), which the
-  concept tree gives to "Counts / thresholds"; "Grows again and again" (rule in `flat.py`): up to 301 of 779 may grow
-  once, when played (a single lasting bonus is "Stat gain"); "Absorb one hit": 62 cards from cancelling a spell, 70 from
-  removing a keyword; "Immune": 97 from "can't" rows; wrong side: 15 summon onto the enemy's side, 41 make cards for the
-  enemy, 30 make the enemy draw, 6 give the enemy attack, 18 make enemy cards cheaper, 35 "Cards cost less" rows raise
-  a cost, 9 "When I play another card" fire on enemy plays; "Return my unit to hand": 96 rows without whose unit, most
-  without from where; when they fire is known (69 when it leaves play, 59 activated). Rainbow and Gifts for a Guard
-  are known wrong cards; Titanstooth (Offering) and Swinging Glaive (Equipment) are right. These are a start: the
-  script looks at every usable concept.
+- Step 1, the tag check: `work/tag_check.py` groups every usable concept's cards by what put the tag on and marks the
+  suspect groups: 517 of 7628, in 52 families (a family: one concept, one action or test, one reason). `work/tag_reads.tsv`
+  holds 5 cards per family, spread over the games: 194 to read by a low-cost model, after Kaptain's OK. The biggest:
+  "Grows with what happened this game" from a count of what is on the board now (524 cards), "Grows again and again"
+  that grows once, when played (313), "Immune" from "can't" rows (90), "Stat gain" that lowers a stat (75) or acts on an
+  enemy (62), "Absorb one hit" from removing a keyword (65) or cancelling a spell (59), "Cards cost less" that raises a
+  cost (54), "Ping" on my own unit (47); then cards made for the enemy, the enemy drawing, units put on the enemy side,
+  "When I play another card" firing on enemy plays. Rainbow and Gifts for a Guard are known wrong cards; Titanstooth
+  (Offering) and Swinging Glaive (Equipment) are right.
+- "Return my unit to hand" is split by what its rows say: return_from_board (my unit in play goes back to hand by an
+  effect or its own ability: Recall an ally, Boomerang; 57 cards) and return_on_leave (back to hand when it dies or leaves
+  play: Unkillable, Attach, Equipment; 76). No row says "from the discard pile": those cards are recycle or revive. The 17
+  whose rows say neither whose unit nor from where (Will of Ionia, Defiant Dance, Ahri) keep return_to_hand and are in
+  the reading. The two new concepts are not in `work/concepts.tsv` until step 2 is redone, so the tag check does not
+  look at them yet.
 - `work/factions.py` and `work/concept_list.py` work (about 6 minutes; `concept_list.Library` scores a set of concepts
   in under a second). `factions.py` still has the main radius limit: change it to the limits of step 7.1. Its last
   output (`work/factions.tsv`) is from the deck archetypes and is remade.

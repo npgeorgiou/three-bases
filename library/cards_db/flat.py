@@ -360,6 +360,13 @@ def derive(c):
     c.execute("update flat_do set concept=null where act in ('move','swap') and concept in ('movement','forced_movement') and "
               "(coalesce(on_kind,'') in ('card','keyword','spell') or coalesce(eff_zone,'board')!='board')")
     c.execute("update flat_do set concept='level_up' where act='level_up'")
+    # my unit back to hand, by what its rows say (Kaptain 18 Nov 2026): when it dies or leaves play, or from the board by an
+    # effect or its own ability; a row that says neither whose unit nor from where keeps return_to_hand
+    mine_back = "concept='return_to_hand' and (on_side='mine' or (on_side is null and on_pick='self'))"
+    c.execute(f"update flat_do set concept='return_on_leave' where {mine_back} and exists (select 1 from flat_when w where "
+              "w.card=flat_do.card and w.ability=flat_do.ability and w.event in ('dies','killed','leaves_play'))")
+    c.execute(f"update flat_do set concept='return_from_board' where {mine_back} and coalesce(on_zone,eff_zone,'board')='board' "
+              "and coalesce(on_kind,'unit') not in ('spell','card')")
     # "can": a card may do what is normally forbidden (Kaptain 18 Nov 2026). A rule for everyone (on all units of both sides, a
     # location's "cards can move here") is rule_change; a "can" a keyword brings takes that keyword's concept (Flying: movement);
     # the card's own "can" takes the concept of what it may do (Prime Spear may hit 3 tiles away: ranged; Push Beam any number of

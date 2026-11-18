@@ -466,3 +466,7 @@ wc36	mechanic	Duelyst: Ranged is no rule for both players (Kaptain 18 Nov 2026, 
 wc37	mechanic	Gwent: Zeal is no rule for both players (Kaptain 18 Nov 2026, wheel probe)	kw:zeal	select id from card where id not in (select card from flat_concept where concept='rule_change')	gwent
 wc38	mechanic	Runeterra: "your level 2 allies are level 3" levels them up (Restored Sun Disc) (Kaptain 18 Nov 2026, wheel probe)	text:\blevel 2 \w+ allies are level 3\b	select card from flat_concept where concept='level_up'	runeterra
 wc39	mechanic	Runeterra: Flow counts the spells played last round (Kaptain 18 Nov 2026, wheel probe)	kw:flow	select a.card from cond cd join ability a on a.id=cd.ability where cd.test='event_count'	runeterra
+wc40	mechanic	Runeterra: Attach comes back to hand when its ally leaves play (wheel step 1, Kaptain 18 Nov 2026)	kw:attach	select card from flat_concept where concept='return_on_leave'	runeterra
+wc41	mechanic	Runeterra: Equipment comes back to hand when its unit leaves play (wheel step 1, Kaptain 18 Nov 2026)	kw:equipment	select card from flat_concept where concept='return_on_leave'	runeterra
+wc42	mechanic	Inscryption: Unkillable comes back to hand when it dies (wheel step 1, Kaptain 18 Nov 2026)	kw:unkillable	select card from flat_concept where concept='return_on_leave'	inscryption
+wc43	mechanic	Runeterra: recalling an ally returns my unit from the board (wheel step 1, Kaptain 18 Nov 2026)	text:\brecall (?:an?|target|your|another) (?:\w+ )?all(?:y|ies)\b	select card from flat_concept where concept='return_from_board'	runeterra

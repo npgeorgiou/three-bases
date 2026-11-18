@@ -54,7 +54,7 @@ r54	runeterra	Freljord	splash (library tags)	resource_gain	5	select card from fl
 r55	runeterra	Freljord	splash (library tags)	death_trigger	6	select card from flat_concept where concept='death_trigger'
 r56	runeterra	Freljord	splash (library tags)	delayed	3	select card from flat_concept where concept='delayed'
 r57	runeterra	Ionia	signature (library tags)	swap	2	select card from flat_concept where concept='swap'
-r58	runeterra	Ionia	signature (library tags)	return_to_hand	26	select card from flat_concept where concept='return_to_hand'
+r58	runeterra	Ionia	signature (library tags)	return_to_hand	26	select card from flat_concept where concept in ('return_to_hand','return_from_board','return_on_leave')
 r59	runeterra	Ionia	signature (library tags)	attack_now	5	select card from flat_concept where concept='attack_now'
 r60	runeterra	Ionia	signature (library tags)	disable	14	select card from flat_concept where concept='disable'
 r61	runeterra	Ionia	splash (library tags)	turn_end	8	select card from flat_concept where concept='turn_end'
@@ -111,7 +111,7 @@ r113	runeterra	Demacia	archetype (library)	fortress	22	select card from flat_con
 r114	runeterra	Freljord	archetype (library)	sustain	14	select card from flat_concept where concept in ('heal','lifesteal','regeneration','cheat_death')
 r115	runeterra	Freljord	archetype (library)	transformation	11	select card from flat_concept where concept in ('transform','polymorph','stances','merge_attach')
 r116	runeterra	Ionia	archetype (library)	positional	8	select card from flat_concept where concept in ('movement','forced_movement','adjacency','lanes','rows','rank_positions','zone_of_control','flanking','placement_rules')
-r117	runeterra	Ionia	archetype (library)	control	38	select card from flat_concept where concept in ('destroy','board_wipe','disable','silence','counter_spell','banish','return_to_hand','bounce_enemy')
+r117	runeterra	Ionia	archetype (library)	control	38	select card from flat_concept where concept in ('destroy','board_wipe','disable','silence','counter_spell','banish','return_to_hand','return_from_board','return_on_leave','bounce_enemy')
 r118	runeterra	Ionia	archetype (library)	ramp	14	select card from flat_concept where concept in ('resource_gain','cost_reduction','free_play','multiple_resources','coin_economy','kicker','resource_banking')
 r119	runeterra	Ionia	archetype (library)	card_advantage	30	select card from flat_concept where concept in ('draw','tutor','selection','recycle','bounce_enemy')
 r120	runeterra	Piltover & Zaun	archetype (library)	chaos	24	select card from flat_concept where concept in ('random_effect','random_ability','generate_cards')

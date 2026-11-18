@@ -699,7 +699,7 @@ keyword	Trifurcated When Powered	concept of having, using or giving this keyword
 keyword	Trinket Bearer	concept of having, using or giving this keyword (Inscryption: when played, you receive a random item if you have fewer than 3; concept is Claude's)	items_consumables		29 Oct 2026, v36 (Inscryption)
 keyword	True Scholar	concept of having, using or giving this keyword (Inscryption: activate with a Blue Gem: sacrifice it to draw 3 cards; concept is Claude's)	draw		29 Oct 2026, v36 (Inscryption)
 keyword	Uncuttable	concept of having, using or giving this keyword (Inscryption: a trait: cannot be cut, skinned or stolen by items; concept is Claude's)	immunity		29 Oct 2026, v36 (Inscryption)
-keyword	Unkillable	concept of having, using or giving this keyword (Inscryption: returns to its owner's hand after it dies; concept is Claude's)	return_to_hand		29 Oct 2026, v36 (Inscryption)
+keyword	Unkillable	concept of having, using or giving this keyword (Inscryption: returns to its owner's hand after it dies; concept is Claude's)	return_on_leave		29 Oct 2026, v36 (Inscryption)
 keyword	Vessel Printer	concept of having, using or giving this keyword (Inscryption: when struck, draw a card from your Empty Vessel pile; concept is Claude's)	draw		29 Oct 2026, v36 (Inscryption)
 keyword	Waterborne	concept of having, using or giving this keyword (Inscryption: submerged during the opponent's turn: opposing creatures skip over it; concept is Claude's)	stealth		29 Oct 2026, v36 (Inscryption)
 keyword	Worthy Sacrifice	concept of having, using or giving this keyword (Inscryption: counts as 3 Blood instead of 1 when sacrificed; concept is Claude's)	sacrifice		29 Oct 2026, v36 (Inscryption)

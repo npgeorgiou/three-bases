@@ -16,11 +16,18 @@ is written in that step's chat, from the rules of the step, and its line here is
   case first; a card read (within the wheel's 500, low-cost model, Kaptain's OK first) only where its rows can't
   tell. A game rule no card text says goes into `read/<game>/game_rules.jsonl` (`applies_to`; `kind_has` puts it only
   on the cards whose own rows name that kind, as Runeterra's spell mana).
-- Tags: `python3 ../../factions/wheel/work/tag_check.py` (to write) -> `work/tag_groups.tsv` (concept, what put the tag
-  on (row action or test, side, trigger, zone; or the general rule and its row), cards, suspect and why) and
-  `work/tag_reads.tsv` (5 cards per suspect group to read: game, card, the reader's inputs; then its verdict and one line
-  why). Fixes go into `flat.py` derive with cases in `cases/mechanics.tsv`; the split of return_to_hand into smaller
-  concepts goes into `library/concept_tree.txt` and `flat.py`, with cases. Then `check_all.py` and `links.py`.
+- Tags: `python3 ../../factions/wheel/work/tag_check.py` (a second) -> `work/tag_groups.tsv` (per usable concept of
+  `work/concepts.tsv`, its real cards grouped by what put the tag on: the row's table and action, test or event, whom it
+  acts on (kind/side/pick, and to or by whose side), from where, when it fires, and the card or the keyword that gave it;
+  or the keyword; or the general rule of `flat.py` and the row that set it off; with cards, games, suspect and why) and
+  `work/tag_reads.tsv` (the reading: a family is one concept, one action or test and one reason; 5 of its cards spread
+  over the games, with the group each came from; then the reader's verdict and one line why). The reasons are in its
+  `checks`: a good action on an enemy or a bad one on my side for a concept the concept tree puts under helps_me or
+  hurts_enemy, a thing put on the enemy side, a trigger of mine firing on the enemy's action, and the rows that match
+  what a concept's definition gives to another concept. Fixes go into `flat.py` derive with cases in
+  `cases/mechanics.tsv`. Then `check_all.py` and `links.py`.
+- Return my unit to hand: `flat.py` derive gives my unit's return its smaller concept by its rows (return_on_leave when
+  the ability fires as it dies or leaves play, return_from_board from the board); cases wc40-wc43.
 
 ## Step 2. The usable concepts
 - `python3 ../../factions/wheel/work/concept_catch.py` (a second) -> `work/concepts.tsv`: every concept with 5+

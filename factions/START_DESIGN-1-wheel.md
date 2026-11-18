@@ -89,7 +89,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    action or test, whose side, when it fires, from where; or the general rule and the row that set it off) and marks a
    group suspect when it acts on the wrong side (it helps the enemy) or matches what the concept's definition gives to
    another concept ("counts what is on the board now" is "Counts / thresholds", not "Grows with what happened this
-   game"). Kaptain sees how many cards that means first. A low-cost model reads 5 cards of each suspect group, given the
+   game"). Kaptain sees how many cards that means first. A low-cost model reads 5 cards of each suspect family (one concept, one action or test, one reason; spread over
+   the games), given the
    card's text, its keywords' rules from its game, the cards it names or makes, the rows that gave the tag and the
    concept's definition with the concepts it is not; per card it answers right, wrong (should be X) or unsure, with one
    line why. 4 or 5 wrong the same way: the group is fixed by one rule for all its cards, with test cases. 4 or 5
