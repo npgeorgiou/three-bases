@@ -62,11 +62,11 @@ is written in that step's chat, from the rules of the step, and its line here is
 ## Step 7. The 20 factions
 - `python3 ../../factions/wheel/work/factions.py` (rules agreed with Kaptain first) -> `factions/wheel/work/factions.tsv`
   (faction letter, its 2-3 archetypes, their concepts, its synergies, its theme, its extras, the concept for each of
-  its seven answers).
+  its six answers).
 - `python3 ../../factions/wheel/work/concept_list.py` -> `factions/wheel/work/lists/<letter>.tsv`: per faction every
   concept with 10+ cards except its archetypes' own, its score ((real + 1) / (chance + 1) links with the concepts of
   its archetypes per game, averaged over the games where both appear), its `level` and its games, sorted by score.
-- `factions/wheel/work/answer_concepts.tsv` (agreed with Kaptain): which concepts give which of the seven answers.
+- `factions/wheel/work/answer_concepts.tsv` (agreed with Kaptain): which concepts give which of the six answers.
 
 ## Step 8. Combos on this board
 - A script counts the joins between every two factions' concepts (archetypes and extras; step 5 numbers); Claude rates

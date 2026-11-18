@@ -25,7 +25,7 @@ take a base, hold it, or take it from the enemy?
 
 ## THE THINKING PROCESS (in this order; no step skipped)
 Step 0 (Kaptain, 9 Nov 2026): the faction's place on the mechanical wheel (`factions/12-mechanical-wheel.txt`) comes
-first. Its 2 or 3 archetypes, their concepts and synergies, its extras, theme, seven
+first. Its 2 or 3 archetypes, their concepts and synergies, its extras, theme, six
 answers, partners, game plan and keywords are decided there, for all 20 factions together, not in the faction's chat
 (`START_DESIGN-1-wheel.md`, steps 7-10).
 Steps 1-6 come from the library, never from memory. Run the queries below on all games (`ask.py all ...` from
@@ -49,7 +49,7 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
 1. **Name, icon, theme.** The theme comes from the wheel (a real one: World War I artillery, the Zulu regiments,
    Babylonian astrologers). Write 10+ facts about how they fight, live, trade, believe, what they fear and what they
    lack. Each fact is a source of cards later.
-2. **Kaptain's seven questions**, answered before any card. Start from the wheel's answers (`factions/wheel/answers.tsv`)
+2. **Kaptain's six questions**, answered before any card. Start from the wheel's answers (`factions/wheel/answers.tsv`)
    and sharpen them with the library:
    1. Identity: one sentence saying how the faction wins. Good: "units die, and every death feeds the others". Bad: "a
       flexible faction with many options" (it could be any faction).
@@ -62,9 +62,7 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
       in another.
    5. Holding: how it keeps a base once it has it. Example: an Immobile unit that says "allies in my lane can't be moved
       or hit by enemy spells".
-   6. The play that feels good: what its units do the moment they are placed. Example: "Place: push the enemy facing me
-      one row back".
-   7. Blind spot: the one thing it never gets, on any card. Example: a swarm faction never restores shields.
+   6. Blind spot: the one thing it never gets, on any card. Example: a swarm faction never restores shields.
 3. **Its archetypes and blind spots** (taken from the wheel). Its archetypes: the 2 or 3 archetypes it is made of, each
    of engines (concepts that work through links: my units die -> my units gain when an ally dies) and bricks
    (concepts that work alone: disruption). They are its character, not all its cards use: its cards use its

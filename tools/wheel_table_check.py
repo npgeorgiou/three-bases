@@ -101,9 +101,9 @@ for key,v in best.items():
         for k in key: P[k]+=1
 for k in CIRC:
     if P[k]<10: fail(f'{k}: {P[k]} partners')
-# the seven answers: present, all different, front removal by its own mechanic, blind spot outside its mechanics
+# the six answers: present, all different, front removal by its own mechanic, blind spot outside its mechanics
 ANS={p[0]:p for p in tsv(R+'answers.tsv')}
-cols=['archetype','wins','front','front_key','backrow','lanes','holds','place','blind_key','blind']
+cols=['archetype','wins','front','front_key','backrow','lanes','holds','blind_key','blind']
 for k in CIRC:
     if k not in ANS: fail(f'{k}: no answers'); continue
     a=dict(zip(cols,ANS[k][1:]))
