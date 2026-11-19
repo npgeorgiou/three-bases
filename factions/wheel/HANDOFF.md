@@ -2,7 +2,7 @@
 Read this, then `factions/START_DESIGN-1-wheel.md` (the steps, their rules and the stops), then only the step you are
 on. Clone with the library (`git sparse-checkout disable`); `gunzip -kf links.sqlite.gz` in `library/cards_db`.
 One chat does one step; at its end, mark the step done here and say what it left for the next.
-Before the wheel runs again from step 1: more deck lists and The Elder Scrolls: Legends (todo.md item 12).
+More deck lists (todo.md item 12) and The Elder Scrolls: Legends (item 13) each run step 3 again when done.
 
 ## The steps
 | step | state | what it made |
