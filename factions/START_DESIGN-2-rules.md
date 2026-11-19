@@ -109,12 +109,12 @@ More text: `summary/09-card-design-rules.txt`
 - Cards that cash something in have 3+ cards that set it up; cards that set something up feed 2+ cards that cash it in.
 - Keywords (the wheel's step 8): its own keyword and the shared ones it carries, each from a synergy; many cards use
   them, the rest of the faction's cards build the ways to play around them.
-- Its archetypes (the wheel's step 6): the 2 archetypes it is made of, each of engines and bricks; its
-  synergies are the links between their concepts, each on several cards. Its extras (step 6) feed them.
+- Its concepts (the wheel's step 6): its kernel (what it does), engines and bricks; its synergies are the links
+  between its concepts, each on several cards. Its extras (step 6) feed them.
 - The faction's list (the wheel's step 6: every other concept of the library, highest score for linking with its
-  archetypes' concepts first) is used A LOT, by most cards: a concept from it makes its archetypes' concepts possible, starts them or makes them
+  concepts first) is used A LOT, by most cards: a concept from it makes its own concepts possible, starts them or makes them
   stronger. Example: a faction built on units dying has units that come back, so more units can die. Cards built only
-  from its archetypes are poorly designed.
+  from its own concepts are poorly designed.
 - How much it touches the enemy: a disruptive faction has many cards that act on enemy units (push, mark, punish); a
   straightforward one has fewer.
 

@@ -7,54 +7,73 @@ The Elder Scrolls: Legends (todo.md item 12) runs step 3 again when done.
 ## The steps
 | step | state | what it made |
 |---|---|---|
-| 1. Fix the library's concepts | done (19 Nov 2026) | the library's concepts (`cards.sqlite`, `links.sqlite`) |
+| 1. Fix the library's concepts | done (19 Nov 2026); suspects from the reading of 20 Nov 2026 are open (below) | the library's concepts (`cards.sqlite`, `links.sqlite`) |
 | 2. The usable concepts | done (19 Nov 2026): 133 usable, 44 helper, 33 out; return_from_board (73 cards), return_on_leave (76) and hand_deck_swap (5, new over the bar) usable (Claude's) | `work/concepts.tsv`, `work/concepts.md` |
-| 3. The faction archetypes | done (19 Nov 2026): 17 groups by NMF from 3027 decks, the most stable number (0.96), Kaptain's (`work/deck_groups_nmf.py --groups 17`); each carries its design markers; its archetype's concepts are its 10 heaviest and base concepts (about 13), so most pairs share some; `work/make_faction.py` makes a faction from one or two concepts, from the decks alone | `work/deck_groups_nmf_17.tsv`, `.md`, `.json`, `work/step3_groups.py` |
-| 4. The links between concepts | done (19 Nov 2026, on 3027 decks): 15933 concept pairs, 3171 strong links; return_from_board has 101 strong links, return_on_leave 36, hand_deck_swap 3 | `library/cards_db/wheel/concept_links.tsv` |
-| 5. The archetype map | done (19 Nov 2026, on 3027 decks): 667 edges (37 decks only); 220 of the 222 parts are engines; the page shows design markers (brown), two ticked archetypes as one faction (only when they share a concept), and builds new archetypes | `work/archetype_parts.tsv`, `work/archetype_map.tsv`, `factions/wheel-archetypes.html` |
-| 6. The 20 factions | redo (next): `work/factions.py` (2 archetypes) gets the limits of step 6.1; `work/concept_list.py` written | `work/answer_concepts.tsv` (agreed): per answer its ways |
+| 3. What decks play together | done (19 Nov 2026): 3027 decks of 10 games; 17 groups by NMF, the most stable number (0.96), Kaptain's (`work/deck_groups_nmf.py --groups 17`) | `work/deck_groups_nmf_17.tsv`, `.md`, `.json` (every deck's card counts and the concepts it leans on, read by step 6) |
+| 4. The links between concepts | done (19 Nov 2026, on 3027 decks): 15933 concept pairs, 3171 strong links | `library/cards_db/wheel/concept_links.tsv` |
+| 5. The map of what decks play together | done (19 Nov 2026): a page to look at, no later step reads it | `factions/wheel-archetypes.html` |
+| 6. The factions, from what they do | in progress: the trial on 10 factions runs (`work/kernel_factions.py`); the work left is below | `work/kernel_factions.md` |
 | 7. Combos on this board | to do | |
 | 8. Game plan, then keywords | to do | |
 | 9. Stop 1 | to do | |
 
+## Where step 6 stands (20 Nov 2026)
+- How the wheel makes a faction (agreed with Kaptain 19-20 Nov 2026; the rules in `START_DESIGN-1-wheel.md` step 6):
+  an identity, what the faction DOES in plain words ("can't be broken"), made of concept-tree families; its kernel, the
+  effects of those families that 10+ decks lean on; its engines, the concepts real cards strongly link to 2+ kernel
+  concepts (links in 2+ games, played by the kernel's decks); its bricks, what the kernel's decks hold 1.5x+ as often as
+  their games with no card link (support: removal, protection); about 12 concepts; an engine pair each; at most half
+  shared; partners by real links between the two factions' concepts or by decks; each partner with a "how it plays"
+  line from its strongest real card pair. The 2-archetype factions, the pairing of step 3's groups and the deck
+  archetypes as building blocks are not part of the wheel.
+- `python3 factions/wheel/work/kernel_factions.py` (from the repo, about 10 seconds) runs the trial: 10 identities
+  (Claude's, in the script's `IDENTITIES`): Can't be broken, Kills brutally, Messes you up, Moves, Thrives on spells,
+  Waits, Swarms, Grows, Comes back, Eats its own. Waits and Swarms were thin (3 kernel concepts) and Claude widened them
+  by what their decks hold most (Waits: board wipe, look at cards and pick; Swarms: act the turn it arrives, +attack,
+  which went to Grows). Result: 6-12 concepts each (Waits 6, Swarms 7, Comes back 8), no two share over half, each
+  with its 5 strongest partners and their lines. Engines that fit well: Eats its own (cheat death, counts deaths, when
+  another unit dies), Can't be broken (taunt, grows again and again). Odd engines left: "when life or health is
+  restored" in Moves and in Kills brutally, "damage over time" in Moves; check them by their real card pairs.
+- In the script, against the rules: a brick more than 3 factions would take is dropped from all (silence was). The
+  rule is many-level sharing (step 6.5): the factions are filled level by level (kernels, engines, bricks); a concept
+  more than 3 factions want at one level goes to those it fits best and the others take their next best; it is never
+  dropped.
+
+## Work for the next chat, in this order
+1. **The library suspects, looked at again; budget 60 cards** (Kaptain, 20 Nov 2026; a low-cost model reads, the main
+   chat never reads card texts; each card logged in `factions/read-cards.tsv`, never read twice). On 20 Nov 2026, 20
+   cards were read: 10 card pairs behind engines; 8 did not work together as their link says (their lines are in
+   `factions/read-cards.tsv`, "wheel (kernel factions)"). Look at each again: is the card's concept wrong in the library
+   (fix it there, by its rows, with test cases: `library/cards_db/START_DATABASE.md`), or is the link right and only
+   the reader wrong (Lightbender's Dispel in Duelyst does remove abilities: the reader may be wrong there)?
+   - Erratic Raptyr (Duelyst) turns into an egg that hatches; hatching is NOT a summon (Kaptain). Find how the library
+     tags hatching and eggs in every game and fix it for every such card. That is how "mill his deck" became an engine
+     of Comes back (Mnemovore + Erratic Raptyr).
+   - Primordium + Soul Siphon (Monster Train): tagged "pay later"; the reader saw only a buff.
+   - Khanuum-ka + Circle of Desiccation (Duelyst): tagged "cheat death"; it summons a new one when it dies.
+   - Cloudbringer's Grace + Obeyed Order (Runeterra): tagged "force enemy units to attack"; Challenger picks the blocker.
+   - Hydra + Raccoon (Inscryption): tagged "reaches other lanes"; the texts are keyword names only: read their rules.
+   - Inner Focus + Lightbender (Duelyst), Conflicted Drakes + Dubious Hags (Stormbound), Joachim de Wett + Rosa and
+     Edna var Attre (Gwent): links the reader saw as accidental.
+   The 60 go to other cards of the same tags, to see whether a tag is wrong on many cards. After fixes: `check_all.py`
+   (about 14 minutes) and `PYTHONHASHSEED=0 python3 links.py` (about 6): tell Kaptain and wait for his OK; then step 4
+   again (`mechanics_wheel.py links --concepts`) and step 6 again.
+2. **`kernel_factions.py`: many-level sharing** (step 6.5), in place of dropping.
+3. **Fill the thin factions toward 12** (Waits, Swarms, Comes back) and check the odd engines by their card pairs.
+4. **Remove what the wheel does not use**, everywhere (code, files, docs): `work/factions.py` with `work/factions.tsv`
+   and its themes; the `--kernels` option of `deck_groups_nmf.py` with `work/deck_groups_nmf_kernels.*`;
+   `work/concept_list.py` reads its factions from `kernel_factions.py`'s `.tsv`.
+5. **The rest of step 6** in `kernel_factions.py`: a `.tsv` beside the `.md`; each faction's design markers (what its
+   kernel's decks are like, step 3's markers); the theme (6.8), its list (6.9, `concept_list.py`), its extras (6.10),
+   its answers made final (6.11).
+6. **Kaptain agrees the 10**, then the 20 identities (7+ partners each), then step 7.
+
 ## What the next steps find in the files
-- How the wheel works: a faction is what it is strong at. It plays 2 faction archetypes, each a way to play that decks
-  of 2+ games lean on (step 3, groups by NMF); real factions are only measured against them. Each archetype is made of
-  parts, each a set of alternative concepts: an engine part works through links with another part ("my units die" ->
-  "my units gain when an ally dies"), a brick works alone (disruption). Kaptain's list (`archetypes_kaptain.txt`) holds
-  deck archetypes: what a pair of factions plays together (step 7).
-- Open with Kaptain before step 6 runs (19 Nov 2026, not agreed): which two archetypes may form a faction (share 1 to 3
-  concepts; score only the links between concepts that only one of the two holds, since a shared concept counts on both
-  sides); how strong a link between two concepts is (both how many times above chance and how many real card pairs,
-  in how many games); whether step 5 cuts each archetype to the concepts with a strong card link to another concept
-  (inside it or in any archetype) before pairing; how many concepts a faction keeps (about 12 plus 8 extras is like a
-  real faction).
-- Groups started from chosen concepts (19 Nov 2026, an experiment, not agreed): 15 kernels picked by Claude (30+ decks lean on
-  each, in 4+ games, each a different way to play): `deck_groups_nmf.py --kernels sacrifice,on_spell,discard,summon,base_resource_gain,destroy,silence,revive,in_hand_buff,stat_loss,movement,damage_over_time,return_on_leave,adjacency,damage_reduction`
-  -> `work/deck_groups_nmf_kernels.*`: stable 0.96, 80% of decks fit a group, 9 of 15 fit a real faction; 9 kernels lead
-  their group, 3 sit low in it (summon, revive, adjacency), 3 are not in it (return_on_leave, in_hand_buff, movement); most
-  groups match one of the 17. Whether the wheel uses kernels is Kaptain's.
-- Whole factions from what they do (20 Nov 2026, process agreed, an experiment): `python3 factions/wheel/work/kernel_factions.py`
-  (about 10 seconds) -> `work/kernel_factions.md`: 10 identities (Claude's; Waits and Swarms widened by what their decks
-  hold most); kernel = their effects; engines from card links (to 2+ kernel concepts, each link shown in 2+ games, played by the kernel's decks at least as often as normal,
-  ranked so concepts linked to everything don't join every faction), each with the real card pair behind its strongest
-  kernel link; bricks from decks (held 1.5x+ by a quarter of the kernel's decks, no card link to the kernel; one more than
-  3 factions would take is dropped from all: silence); partners = each faction's 5 strongest pairs. Result: 6-12 concepts
-  each (Waits 6, Swarms 7); no two share over half. 20 cards read (10 engine card pairs, low-cost reader, `factions/read-cards.tsv`): 8 pairs
-  did not work together as their link says, so links seen in one game only no longer make engines. Open: some engines
-  still look odd (Moves: damage over time, when healed; Kills brutally: when healed); library suspects from the reading:
-  Primordium (Monster Train) tagged pay later, Khanuum-ka (Duelyst) tagged cheat death, Cloudbringer's Grace (Runeterra)
-  tagged force enemies to attack.
 - Runeterra's spell mana rule is written (`read/runeterra/game_rules.jsonl`) but not built into `cards.sqlite` yet.
-- `work/factions.py` and `work/concept_list.py` work (about 6 minutes; `concept_list.Library` scores a set of concepts
-  in under a second). `factions.py` keeps the limits of step 6.1. Open before it runs: how many own concepts a
-  faction keeps (a pair of archetypes holds about 24 that real cards link; a real faction uses about 21, extras included). Its last output (`work/factions.tsv`) is from the deck archetypes and is remade.
+- `work/concept_list.py`: `concept_list.Library` scores a set of concepts in under a second.
 - Step 2 left: rerun `work/concept_catch.py` from `library/cards_db` only after a change to the concepts or verdicts.
-  Counts moved after step 1's fixes (count_payoff 655 -> 132, condition_count 17 -> 531, permanent_growth 776 -> 584,
-  stat_gain 149 -> 59, ping 573 -> 394): steps 3-6 use the new counts.
-- The faction check (a finished faction's cards against its archetypes' concepts and extras) and
-  `tools/wheel_table_check.py` (the 20 factions' archetypes, extras and answers) are written when step 9 and Stop 3
-  need them.
+- The faction check (a finished faction's cards against its concepts and extras) and `tools/wheel_table_check.py`
+  (the 20 factions' concepts, extras and answers) are written when step 9 and Stop 3 need them.
 - `work/make_stop1.py` is written for step 9.
 
 ## The numbers (library/cards_db)
@@ -65,46 +84,53 @@ The Elder Scrolls: Legends (todo.md item 12) runs step 3 again when done.
   Gauntlets also give Energy. Cases: `cases/wheel.tsv`.
 - Two concepts you expect to work together show 0 links: check that one pair by script (what made each link between
   their cards) before trusting it; a wrong source is fixed for every card, with cases. Never read cards for it.
+- A link seen in one game only can be an accident: of 10 such card pairs read on 20 Nov 2026, 8 did not work together.
 
 ## Kaptain's standing decisions
+Only what Kaptain said himself goes here, in his words; Claude's own rules go elsewhere.
 - Industry words: a **synergy** is a link real cards show between two concepts ("my units die -> my other units
   grow"); a **mechanic** is a keyword, a word on many cards that stands for one rule (Magic's Exploit) (18 Nov 2026).
-- Each faction plays 2 archetypes; one archetype is played by at most 3 factions; the 20 are picked so the
-  weakest is as strong as possible, while they stay varied: two factions share at most half of their own concepts,
-  every faction keeps a blind spot, and some archetypes stay unused (18 Nov 2026).
-- Faction archetypes come from the ways to play decks lean on (step 3); Kaptain's list holds deck archetypes, played by a pair of factions.
-  Combo, Control-Combo and Extra Turns are off the list (other archetypes make their own combos); Cycling is part of
-  Wheels (18 Nov 2026).
+- "I want to create whole factions" (20 Nov 2026). A faction's kernel is what the faction DOES, never a trigger or a
+  condition ("when another unit dies"): "here is a faction that thrives on spells", "one that likes to KILL BRUTALLY",
+  "one that WAITS", "one that CAN'T BE BROKEN", "one that FUCKS YOU UP" (19 Nov 2026).
+- A faction is not made of 2 archetypes (20 Nov 2026: "is it still needed to be talking about 2 archetypes? this is
+  maybe leftover from a process that had a very different beginning").
+- Engines come from library links, bricks from deck links: "a faction that protects, its not gonna have any links to
+  anything, but it can protect"; the decks inform which supporting concepts go together (20 Nov 2026).
+- "A partner needs real library links between the 2 faction's concepts"; 5 partners each while we make 10 factions
+  (20 Nov 2026); 7+ partners each among the 20.
+- Concepts that land in many factions (silence) "shouldnt be dropped, just given to the most appropriate", maybe by a
+  many-level approach (20 Nov 2026).
+- No "2+ games" rule for a kernel: "we dont have many moving games, and my game is a moving game" (20 Nov 2026).
+- Claude does the bulk of the work (thin kernels are widened by Claude), "so we have something that more or less
+  works" (20 Nov 2026).
+- Step 3 is "what gets played together" (20 Nov 2026); the wheel keeps 17 groups (19 Nov 2026).
+- Hatching from an egg is NOT a summon (20 Nov 2026).
+- Reading budget for the next look at the library suspects: 60 cards (20 Nov 2026).
+- Two factions share at most half of their own concepts; every faction keeps a blind spot (18 Nov 2026). One idea per
+  faction, no fruit salad.
+- Kaptain's list holds deck archetypes, what a deck tries to do; a reference only. Combo, Control-Combo and Extra Turns
+  are off the list (other archetypes make their own combos); Cycling is part of Wheels (18 Nov 2026). Discard / 8-Rack
+  stays on it although real cards don't link its two parts: future improved games will beef it up (17 Nov 2026).
 - Cards tagged with the wrong concept are examined and fixed; "Return my unit to hand" is split into smaller concepts
-  (18 Nov 2026). From each part of its archetypes it plays only 1 or 2
-  concepts, the ones real cards link best (no fruit salad). Its theme is picked right after and breaks ties between
-  concepts that score about the same. Its list leaves out its own concepts. Its extras, 8 to 12, the same number for
-  every faction, come from its list, first for the answers about the board its concepts don't give, then to feed its
-  concepts; an answer no concept gives is fixed with another extra before the archetypes are picked again. Its blind
-  spot is what none of its concepts and extras give ("never draws cards"), named at step 9 (19 Nov 2026). Combos
-  (step 7) come before the game plan and keywords (step 8); 7+ partners each. A finished faction is checked against its
-  archetypes and extras (18 Nov 2026).
+  (18 Nov 2026). Its theme is picked right after its concepts and breaks ties between concepts that score about the
+  same. Its list leaves out its own concepts. Its extras, 8 to 12, the same number for every faction, come from its
+  list, first for the answers about the board its concepts don't give, then to feed its concepts; an answer no concept
+  gives is fixed with another extra. Its blind spot is what none of its concepts and extras give ("never draws cards"),
+  named at step 9 (19 Nov 2026). Combos (step 7) come before the game plan and keywords (step 8). A finished faction
+  is checked against its concepts and extras (18 Nov 2026).
 - Keywords are shared, which is what makes factions combo: no keyword is barred from any faction, each is mostly on the
   factions that obviously gain from it, and every faction has at least 1 keyword of its own. All keywords are made
   new for the 20 (18 Nov 2026).
-Only what Kaptain said himself goes here, in his words; Claude's own rules go elsewhere.
 - The game's own things: dots and front cells, rows (front/middle/back), columns, 3 lanes, the 3x3 camp, shapes and
   size, supply per lane, carry-over, round start and round end, one action per turn, moving and turning, reach (melee,
   Ranged), strikes and fixed damage, the hand and the discard pile, Immobile.
 - Not in the game: player health, answers on the enemy's turn, supply that grows by itself, unit types, who acts first
   (random in round 1, then alternating), placing at round end.
-- The wheel is general; step 8 turns each faction's archetypes into these own things, from scratch.
+- The wheel is general; step 8 turns each faction's concepts into these own things, from scratch.
 - Every game counts the same in every number, games with no factions (Marvel Snap) too.
-- Factions are made by script to play 2 archetypes. Each archetype is a group of engines and
-  bricks and can be played using different concepts. A map of nodes (each node a concept) shows each
-  archetype's concepts with the links between them and the strengths we know. Only general archetypes; any specific to
-  one game (planeswalkers) is off the list. Triggers and conditions are how cards work, not what a faction is; real
-  factions inspire, they are never copied (17 Nov 2026).
-- A faction's kernel is what the faction DOES, never a trigger or a condition ("when another unit dies"): "here is a faction
-  that thrives on spells", "one that likes to KILL BRUTALLY", "one that WAITS", "one that CAN'T BE BROKEN", "one that
-  FUCKS YOU UP" (19 Nov 2026).
-- Discard / 8-Rack stays a deck archetype although real cards don't link its two parts: future improved games will beef it
-  up (17 Nov 2026).
+- Only general ideas; anything specific to one game (planeswalkers) is off. Triggers and conditions are how cards
+  work, not what a faction is; real factions inspire, they are never copied (17 Nov 2026).
 - Real factions' shapes vary inside each game: the wheel is lax about a faction's shape (17 Nov 2026).
 - Interactions with the player (heal, Block, strength on the player; the player hurt) stay out of the wheel: no player
   health here. They stay in the library as player_<concept>.

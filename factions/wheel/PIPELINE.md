@@ -41,21 +41,18 @@ is written in that step's chat, from the rules of the step, and its line here is
   `work/concept_verdicts.tsv` (a concept not in it is usable); player_<concept> and a parent left with under 5 cards
   are out. `work/concepts.md`: the same by kind in plain words, for Kaptain.
 
-## Step 3. The faction archetypes
+## Step 3. What decks play together
 - `python3 ../../factions/wheel/work/deck_groups_nmf.py` (from `library/cards_db`, about 2.5 minutes, 2 cores) ->
   `factions/wheel/work/deck_groups_nmf.tsv` (per group: decks, games, concepts with the share of decks leaning on each,
   base concepts, unit numbers, design markers with how many times as often its decks have each, factions that fit), `.md` (the same in plain words, with the stability per number of
   groups, unknown deck cards, concepts in no group, groups no faction fits and factions that fit no group) and `.json`.
 - `python3 ../../factions/wheel/work/deck_groups_nmf.py --groups 17` (about 40 seconds) -> `deck_groups_nmf_17.tsv`, `.md`,
-  `.json`: the 17 groups Kaptain agreed, the wheel's archetypes (17: the most stable number on the 3027 decks). The number
-  is set once, in `work/step3_groups.py` (`GROUPS`); steps 5 and 6 read it from there.
-  `work/step3_groups.py` turns them into the archetypes' concepts and design markers for steps 5 and 6.
-- `python3 factions/wheel/work/make_faction.py "attach" ["discard"]` (from the repo, a second) -> a faction from one or
-  two concepts, from the decks that lean on them and never from the groups (its header says how), printed and written to
-  `factions/wheel/work/made/<concepts>.md`.
-- `python3 ../../factions/wheel/work/deck_groups_nmf.py --kernels sacrifice,on_spell,...` (about a minute) ->
-  `deck_groups_nmf_kernels.tsv`, `.md`, `.json`: one group started from each named concept (its kernel), then free to move
-  where the decks pull it, with its stability; each group says where its kernel ended up among its concepts.
+  `.json`: the 17 groups the wheel keeps (17: the most stable number on the 3027 decks), and every deck with its card
+  counts per concept and the concepts it leans on, read by step 6. The number is set once, in `work/step3_groups.py`
+  (`GROUPS`, `FILE`); steps 5 and 6 read it from there. `work/step3_groups.py` turns the groups into rows for the map.
+- `python3 factions/wheel/work/make_faction.py "attach" ["discard"]` (from the repo, a second) -> what the decks that
+  lean on one or two concepts play (its header says how), printed and written to `factions/wheel/work/made/<concepts>.md`;
+  a quick look, never a faction of the wheel.
 
 ## Step 4. The links between concepts
 - `python3 mechanics_wheel.py links --concepts` (about a minute; every game, those with no factions too) ->
@@ -67,40 +64,42 @@ is written in that step's chat, from the rules of the step, and its line here is
   too. Checked by `cases/wheel.tsv`. `python3 apart.py` gives
   the pairs real factions keep apart.
 
-## Step 5. The archetype map
+## Step 5. The map of what decks play together
 - `python3 ../../factions/wheel/work/archetype_map.py` (about 15 seconds; needs links.sqlite; reads the 17 groups of step 3
-  through `work/step3_groups.py`, and their decks and real factions from `work/deck_groups_nmf_17.json`) -> `factions/wheel/work/archetype_parts.tsv` (archetype, name, part, engine or brick,
-  concept; read by step 6), `factions/wheel/work/archetype_map.tsv` (archetype, its two engine parts, concept a, concept b, `cards`, `decks`,
-  `games`, `level`, top link text, the real card pair of its strongest link, from `wheel/concept_links.tsv`; a pair
-  joined only by real decks has no card pair; `note`: "about the player" when more than half of its card links are about
-  hitting the player, "decks only" when no card pair; it prints the cards behind the most edges), `work/archetype_gaps.tsv` (two engine parts with no joined edge, shown to
-  Kaptain with the numbers) and `factions/wheel-archetypes.html` (page template `work/archetype_map_template.html`; the concepts' places by
-  t-SNE over each concept's lift in the 17 groups' decks, seed 7, then moved apart until no two names overlap;
-  the page also holds every deck's concepts and every real faction's concept counts, for building an archetype). 
+  through `work/step3_groups.py`, and their decks and real factions from `work/deck_groups_nmf_17.json`) ->
+  `factions/wheel-archetypes.html` (page template `work/archetype_map_template.html`; the concepts' places by t-SNE over
+  each concept's lift in the 17 groups' decks, seed 7, then moved apart until no two names overlap; the page also holds
+  every deck's concepts and every real faction's concept counts, for building a set of concepts), with
+  `work/archetype_parts.tsv` (group, name, concept, linked or alone), `work/archetype_map.tsv` (group, concept a,
+  concept b, `cards`, `decks`, `games`, `level`, top link text, the real card pair of its strongest link; `note`: "about
+  the player" when more than half of its card links are about hitting the player, "decks only" when no card pair) and
+  `work/archetype_gaps.tsv`. A page to look at; no later step reads these files.
+  `archetype_map.card_pairs(pairs)` (run from `library/cards_db`) gives the real card pair behind any concept pairs; step
+  6 uses it.
 
-## Step 6. The 20 factions
-- `python3 ../../factions/wheel/work/factions.py` (rules: `START_DESIGN-1-wheel.md` step 6) ->
-  `factions/wheel/work/factions.tsv` (faction letter, its 2 archetypes, its concepts per part, its synergies, its theme, its extras, the way or concept for each of its answers). It
-  prints the 20 groups with their scores and the weakest; the run stops after 6.2 for Kaptain's OK of the archetypes,
-  then goes on with the themes written into `factions/wheel/work/themes.tsv` (faction letter, theme).
+## Step 6. The factions, from what they do
+- `python3 factions/wheel/work/kernel_factions.py` (from the repo, about 10 seconds; needs links.sqlite) ->
+  `factions/wheel/work/kernel_factions.md` (rules: `START_DESIGN-1-wheel.md` step 6). The identities are `IDENTITIES` in
+  its head (name, what it does, concept-tree families; Claude's). Per faction: its kernel with the decks leaning on each
+  concept, its engines with their kernel links and the real card pair behind the strongest, its bricks with how many
+  times as often its decks hold each, engines and bricks, the answers its concepts give and what is missing, its
+  partners with their strength and how each plays; then every pair. It reads `work/deck_groups_nmf_17.json` (decks),
+  `library/cards_db/wheel/concept_links.tsv` (strong links, their games), `library/concept_tree.txt` (families),
+  `work/concepts.tsv` (usable) and `work/answer_concepts.tsv` (the ways of each answer).
+  To write in it: many-level sharing (6.5), the theme (6.8), the extras (6.10), the answers made final (6.11), and a
+  `.tsv` beside the `.md` (faction, identity, kernel, engines, bricks, extras, partners) for steps 7-9.
 - `python3 ../../factions/wheel/work/concept_list.py` -> `factions/wheel/work/lists/<letter>.tsv`: per faction every
   concept with 5+ cards except the faction's own concepts, its score ((real + 1) / (chance + 1) links with the
   faction's concepts per game, averaged over the games where both appear), its `level` and its games, sorted by score.
+  To change: it reads the factions from `kernel_factions.py`'s `.tsv` (its `Library` scores any set of concepts in under a
+  second).
 - `factions/wheel/work/answer_concepts.tsv` (agreed with Kaptain): per answer its ways (answer, the way in plain words,
   its concepts: one, two that real cards link with their times chance and games, or removals on a spell; whose).
 
 ## Step 7. Combos on this board
-- A script counts the joins between every two factions' concepts (own concepts and extras; step 4 numbers); Claude rates
-  the pairs on the board -> `factions/wheel/combos.tsv` (pair, STRONG/OK/WEAK/NONE/AGAINST, how it plays, the numbers,
-  a test column). Every faction needs 7+ partners. The same script lists per pair the deck archetypes
-  (`factions/wheel/deck_archetypes.tsv`: their parts and the concepts that can do each) the two factions can play
-  together -> `factions/wheel/deck_pairs.tsv`.
-- Once, before the first run of step 7 (then this line goes): the concepts of each deck archetype part are checked
-  against the parts' job, each concept by its definition in `library/concept_tree.txt`; Claude's changes are shown to
-  Kaptain. Found so far: "Return my unit to hand" in 5 discard-pile parts (Toolbox, Reanimator, Self-Mill, Recursion,
-  Turbo-Fog); "Copy" in Blink, Storm and Turbo-Fog; "Put into play for free" in Discover; "Cards cost less" in Blink and
-  Recursion; Self-Mill, Reanimator and Recursion, Madness and Wheels, Aristocrats and Eggs, Stompy and Voltron, Control,
-  Midrange and Toolbox nearly the same concepts; Combo, Control-Combo and Extra Turns parts go.
+- Claude rates every two partners on the board -> `factions/wheel/combos.tsv` (pair, STRONG/OK/WEAK/NONE/AGAINST, how
+  it plays, the numbers from step 6, a test column). Every faction needs 7+ partners rated STRONG or OK (5 among the
+  10 of the trial).
 
 ## Step 8. Game plan, then keywords
 - Claude -> `factions/wheel/plans.tsv` (faction, its game plan turn by turn on the board).
@@ -109,5 +108,5 @@ is written in that step's chat, from the rules of the step, and its line here is
 
 ## Step 9. Stop 1
 - Claude -> `factions/wheel/answers.tsv`, from the game plan and keywords. `python3 tools/wheel_table_check.py`
-  (against each faction's archetypes, extras and answers). `python3 factions/wheel/work/make_stop1.py` writes `STOP1.md`
+  (against each faction's concepts, extras and answers). `python3 factions/wheel/work/make_stop1.py` writes `STOP1.md`
   and `STOP1-1..5.md`.

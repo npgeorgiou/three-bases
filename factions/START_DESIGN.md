@@ -25,7 +25,7 @@ take a base, hold it, or take it from the enemy?
 
 ## THE THINKING PROCESS (in this order; no step skipped)
 Step 0 (Kaptain, 9 Nov 2026): the faction's place on the mechanical wheel (`factions/12-mechanical-wheel.txt`) comes
-first. Its 2 archetypes, their concepts and synergies, its extras, theme, six
+first. Its identity (what it does), its concepts (kernel, engines, bricks) and synergies, its extras, theme, six
 answers, partners, game plan and keywords are decided there, for all 20 factions together, not in the faction's chat
 (`START_DESIGN-1-wheel.md`, steps 6-9).
 Steps 1-6 come from the library, never from memory. Run the queries below on all games (`ask.py all ...` from
@@ -33,7 +33,7 @@ Steps 1-6 come from the library, never from memory. Run the queries below on all
 and write the sources (game: card) next to each answer of steps 2, 3, 5 and 6. `ways` and `curve` show what each card
 does; card texts are read only within the faction's 100 (START_DESIGN-3, "Reading cards").
 - Queries for step 1: list the factions of every game (START_DESIGN-3, section 3) and pick the 6-10 closest to the faction's place on the wheel (the
-  real factions that fit its archetypes, `factions/wheel/work/deck_groups_nmf_17.md`; not the theme), at least one per board game
+  real factions whose cards hold its concepts most, `factions/wheel/work/kernel_factions.md`; not the theme), at least one per board game
   (Duelyst, Faeria, Stormbound, Into the Breach, Inscryption); run `curve` on each to see what its cards do.
 - Queries for step 2: `removal <game>` and `protect <game>` for all games, `palette place` and `palette death`: which ways to remove and
   hold exist, and which the other factions of the wheel already use (the wheel's table).
@@ -65,20 +65,21 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    6. What it cares about: which of the game's own things it cares about most; factions may share it. Example: the
       discard pile.
    7. Blind spot: what none of its concepts and extras give, on any card. Example: it never draws cards.
-3. **Its archetypes and blind spots** (taken from the wheel). Its archetypes: the 2 archetypes it is made of, each
-   of engines (concepts that work through links: my units die -> my units gain when an ally dies) and bricks
-   (concepts that work alone: disruption). They are its character, not all its cards use: its cards use its
-   list a lot (START_DESIGN-2, "How cards fit together"). Its design markers (the wheel's step 3: "many spells",
-   "cheap units", "low curve") set its cost curve, its spell share and its unit numbers. Its blind spot (step 2.7) plus any other things the wheel says it never has; its cards never make up for them,
+3. **Its identity, concepts and blind spots** (taken from the wheel). Its identity: what it does ("can't be broken").
+   Its concepts: its kernel (the effects that do it), engines (concepts that work through links: my units die -> my
+   units gain when an ally dies) and bricks (concepts its decks play that work alone: removal, protection). They are
+   its character, not all its cards use: its cards use its list a lot (START_DESIGN-2, "How cards fit together"). Its
+   design markers ("many spells", "cheap units", "low curve": what its kernel's decks are like) set its cost curve,
+   its spell share and its unit numbers. Its blind spot (step 2.7) plus any other things the wheel says it never has; its cards never make up for them,
    it plays around them. A blind spot is never one of the two things every faction needs (hold dots, remove enemies),
    only one way of doing them: "no kill spells" is a blind spot, "no removal" is not.
 4. **How it differs from each other faction** (from the wheel; check it with the closest factions on the page). Kaptain's example: a swarm that fills the front rows with many cheap weak
    units, against a fortress that never has more than 3 units and moves defence between them. Write one sentence per
    other faction saying why a game between the two feels different.
-5. **Synergies, game plan and keywords, from the wheel** (never new ones here). Steps 5-8 use the faction's archetypes
-   and extras (`factions/wheel/work/factions.tsv`) and read its list (`factions/wheel/work/lists/<letter>.tsv`: every
+5. **Synergies, game plan and keywords, from the wheel** (never new ones here). Steps 5-8 use the faction's concepts
+   and extras (`factions/wheel/work/kernel_factions.md`) and read its list (`factions/wheel/work/lists/<letter>.tsv`: every
    other concept of the library with its score for how strongly it links to its own concepts, its level and in
-   how many games): what a card draws on beyond its archetypes and extras comes from it, highest scores first. A synergy is a link real cards show between two
+   how many games): what a card draws on beyond its concepts and extras comes from it, highest scores first. A synergy is a link real cards show between two
    of its own concepts; write each from its link texts as "I do X -> I gain from X" ("my units die -> my other units
    grow"). A synergy is broad: 30+ of the faction's cards can make it happen or use it. One card's effect ("a gun fires") is not a synergy. Each synergy
    grows in at least one of three ways:
@@ -94,13 +95,13 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    Each way builds a different board and asks for different decisions. For each, write which rows and cells it fills,
    its cost 1-4 opening, its 4-6 middle, its 6+ finish, and its Leaders (the 5 are spread over the ways). Test: two ways that put the same
    kind of units in the same cells and win the same way are one way.
-7. **The library, card by card.** For each way to play, 20+ real cards, for the concepts of its archetypes and of the list from the closest factions of ALL games
+7. **The library, card by card.** For each way to play, 20+ real cards, for its concepts and the concepts of its list from the closest factions of ALL games
    (`ask.py all ways`, `palette`, `curve`, `spells`, `removal`, `protect`: START_DESIGN-3, section 3). At most 100 cards are read for the
    whole faction, the wheel's keywords and steps 6 and 7 together; a card already in `factions/read-cards.tsv` is used from its line, never read
    again (part 3, "Reading cards"). For each card write one line: the
    decision the player makes when playing it. Save the lines in `factions/designs/<faction>-library.txt` (the gate reads
    it: "WAY <name>" lines, then "<game> | <card> | <the decision>").
-8. **Cards** (each card's concepts from its archetypes or the list), written to `factions/designs/<faction>-cards.txt` (synergies and ways to play in
+8. **Cards** (each card's concepts from its own concepts or the list), written to `factions/designs/<faction>-cards.txt` (synergies and ways to play in
    `factions/designs/<faction>.txt`; format in `tools/network_check.py`), then into the game with two premade decks in
    `js/cards/decks-premade.js`. Each card grows from one library line or from Claude's own idea, and says which (`src: '<game>: <card>'`
    or `src: 'own'`; own ideas are welcome). Template:
@@ -116,7 +117,7 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    The failure this stops: 14 cards of one faction said "round end: I strike the nearest enemy", with different stats.
    No two cards may have the same WHEN + WHAT + ON WHOM, and no WHEN + WHAT may be on more than 3 cards.
 10. **Checks**: START_DESIGN-2 section 2 and START_DESIGN-3 sections 2b-5, then `python3 tools/design_gate.py <letter>` until it prints PASS. Then the faction check
-   (the faction's cards against its archetypes' concepts and extras in `factions/wheel/work/factions.tsv`); if it drifted, fix the faction, not the wheel. Code only after Kaptain
+   (the faction's cards against its concepts and extras in `factions/wheel/work/kernel_factions.md`); if it drifted, fix the faction, not the wheel. Code only after Kaptain
    agreed steps 1-6.
 
 Absolute limits (Kaptain): no rarities (Common, Rare, Legendary...); every card is balanced by its cost alone. No

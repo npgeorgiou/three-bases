@@ -2,14 +2,14 @@
 12. THE MECHANICAL WHEEL: designing 20 factions together
 ==================================================================
 Why: designing factions one by one from a theme loses what makes each faction unique and how its cards connect.
-Each faction's archetypes, extras, seven answers, partners, game plan and keywords come first, for all 20 factions at
-once; the theme comes right after the archetypes. The steps, in order, with their stops:
+Each faction's identity, concepts, extras, seven answers, partners, game plan and keywords come first, for all 20
+factions at once; the theme comes right after its concepts. The steps, in order, with their stops:
 factions/START_DESIGN-1-wheel.md. Commands: factions/wheel/PIPELINE.md.
 
 Principles
-1. The map: concepts are nodes, and a line joins two concepts that real cards link (factions/wheel-archetypes.html).
-   Each archetype is a set of parts on it; a faction plays 2 archetypes that link strongly, 1 or 2 concepts from
-   each part, and its synergies are the links real cards show between those concepts.
+1. A faction is what it DOES, one idea in plain words ("can't be broken"): its kernel is the effects that do it, its
+   engines the concepts real cards link to the kernel, its bricks what its decks play with it although no card links
+   them (removal, protection). Its synergies are the links real cards show between its concepts.
 2. A faction is strong at what its own concepts do. Its extras come from its list (every other concept, scored by its
    real links with the faction's concepts): first for the answers about the board its concepts don't give, then to
    feed its concepts. Its blind spot is what none of its concepts and extras give ("never draws cards").
@@ -18,6 +18,6 @@ Principles
 4. Combos are trigger -> payoff between factions: a card of one makes the thing a card of another gains from. Every
    faction combines well with at least 7 others. Shared keywords are the main source of combos; every faction also
    has at least 1 keyword of its own. Each faction's chat adds more hooks.
-5. Each faction, once built, is checked against its archetypes and extras; if it
+5. Each faction, once built, is checked against its concepts and extras; if it
    drifted, the faction is fixed, not the wheel.
 6. Identity also lives in the cost curve, the stats and how a faction feels to play, not only in what cards do.
