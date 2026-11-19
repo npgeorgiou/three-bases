@@ -379,7 +379,7 @@ def derive(c):
     c.execute(f"update flat_do set concept='return_on_leave' where {mine_back} and exists (select 1 from flat_when w where "
               "w.card=flat_do.card and w.ability=flat_do.ability and w.event in ('dies','killed','leaves_play'))")
     c.execute(f"update flat_do set concept='return_from_board' where {mine_back} and coalesce(on_zone,eff_zone,'board')='board' "
-              "and coalesce(on_kind,'unit') not in ('spell','card')")
+              "and coalesce(on_kind,'unit')!='spell'")  # a unit or landmark (Unworthy Soul)
     c.execute("update flat_do set concept='recycle' where concept='return_to_hand' and on_kind='spell' and on_side='mine'")  # a spell back to hand (Puzzling Signposts)
     # the second tag reading (Kaptain 19 Nov 2026): a stat gain whose amounts are all lowered is stat_loss (Disarm, Sap, Stinky); a buff
     # given to an enemy weakens it (Spirit Fire); a unit played from the enemy's discard pile comes back (revive); my own unit marked
