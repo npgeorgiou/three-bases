@@ -125,13 +125,17 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    2. Lines: for every two concepts, how much more often they are together in the same decks than chance gives within
       each game, from how common each is in the game's decks and the deck's size; each game weighs the square root of
       its deck count (Claude's). A line is kept when it is above chance by more than 1.96 (Claude's).
-   3. Groups: link clustering (Ahn, Bagrow and Lehmann, Nature 2010) groups the lines, so a concept can be in several
-      groups ("Draw cards" with the spells and with discard). The same table always gives the same groups. The tree of
-      lines is cut where the groups are densest, so the number of groups and their sizes come out by themselves.
+   3. Groups: Louvain community detection (Blondel et al. 2008): every concept starts alone and moves, in a fixed
+      order, into the group where its lines are thickest, until no move helps; then the groups join as blocks the same
+      way. The same table always gives the same groups. Each concept gets one home group; then a concept also joins
+      every other group whose concepts it is together with in the same decks more often than chance, by the same margin
+      as a line. One setting decides how big the groups get; the script takes the one where the most groups have 8 to
+      10 concepts (Kaptain), shared ones included. A group of another size is marked, so Kaptain judges whether it has a
+      very important reason to be that size.
    4. Decks and the 43 real factions of `axes.tsv` are never used to make the groups. Each is measured against each
-      group: the share of its cards' concepts on the group's concepts, against its game's average share; it fits the
-      group at 1.5 times the average or more (Claude's). The groups no faction fits and the factions that fit no group
-      are listed.
+      group: the share of its cards' concepts on the group's concepts, against its game's average share. It fits its
+      best 2 groups when its share there is at least twice the average (Claude's). The groups no faction fits and the
+      factions that fit no group are listed.
    5. Per group: its concepts, the decks that fit it most, the best-fitting factions.
    **Kaptain agrees the groups before anything else.** The page `factions/wheel-groups.html` is made in its own chat:
    concept nodes placed by how often decks use them together, coloured by group; selecting a faction or a deck lights

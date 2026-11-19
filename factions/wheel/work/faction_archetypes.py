@@ -19,7 +19,8 @@ import axes, deck_analysis, faction_asks
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BEYOND = 1.96  # a line is kept when it is above chance by more than this (Claude's)
-FIT = 1.5      # a deck or faction fits a group at 1.5 times its game's average share or more (Claude's)
+FIT = 2.0      # a deck or faction fits a group at twice its game's average share or more, its best BEST groups only (Claude's)
+BEST = 2
 TOP = 8
 UNIT = {'unit*': 'Unit', 'cheapunit*': 'Cheap unit', 'dearunit*': 'Expensive unit',
         'strongcost*': 'Strong for its cost', 'toughcost*': 'Tough for its cost'}
@@ -87,49 +88,65 @@ np.fill_diagonal(O, 0); np.fill_diagonal(E, 0)
 R = np.where(E > 0, (O - E) / np.sqrt(np.where(E > 0, E, 1)), 0)
 edges = [(a, b, R[a, b]) for a in range(len(nodes)) for b in range(a + 1, len(nodes)) if R[a, b] > BEYOND]
 
-# link clustering: two lines that share a concept are as alike as the neighbourhoods of their other two ends
-nbr = collections.defaultdict(dict)
-for a, b, wt in edges: nbr[a][b] = wt; nbr[b][a] = wt
-vecs = {}
-for i, nb in nbr.items():
-    v = dict(nb); v[i] = sum(nb.values()) / len(nb); vecs[i] = v
-def tanimoto(i, j):
-    vi, vj = vecs[i], vecs[j]
-    dot = sum(w * vj.get(k, 0) for k, w in vi.items())
-    return dot / (sum(w * w for w in vi.values()) + sum(w * w for w in vj.values()) - dot)
-eid = {}
-for n_, (a, b, _) in enumerate(edges): eid[(a, b)] = eid[(b, a)] = n_
-pairs = []
-for k, nb in nbr.items():
-    ns = sorted(nb)
-    for s in range(len(ns)):
-        for t in range(s + 1, len(ns)):
-            pairs.append((tanimoto(ns[s], ns[t]), eid[(ns[s], k)], eid[(ns[t], k)]))
-pairs.sort(key=lambda q: (-q[0], q[1], q[2]))
-M = len(edges)
-parent = list(range(M)); m = [1] * M; nset = [{a, b} for a, b, _ in edges]
-def find(e):
-    while parent[e] != e: parent[e] = parent[parent[e]]; e = parent[e]
-    return e
-def dens(mc, nc): return 0 if nc <= 2 else mc * (mc - nc + 1) / ((nc - 2) * (nc - 1))
-total = 0.0; bestD, best = -1, None
-for q, (s, e1, e2) in enumerate(pairs):
-    r1, r2 = find(e1), find(e2)
-    if r1 != r2:
-        total -= dens(m[r1], len(nset[r1])) + dens(m[r2], len(nset[r2]))
-        if len(nset[r1]) < len(nset[r2]): r1, r2 = r2, r1
-        parent[r2] = r1; m[r1] += m[r2]; nset[r1] |= nset[r2]; nset[r2] = set()
-        total += dens(m[r1], len(nset[r1]))
-    if q + 1 == len(pairs) or pairs[q + 1][0] != s:  # the end of one level of the tree
-        D = 2 * total / M
-        if D > bestD: bestD, best = D, [find(e) for e in range(M)]
-comm = collections.defaultdict(list)
-for e, r in enumerate(best or range(M)): comm[r].append(e)
+# Louvain (Blondel et al. 2008): every concept starts alone and moves, in a fixed order, to the group where its lines are
+# thickest, until no move helps; then the groups are joined as blocks the same way. GAMMA sets how much a move must gain.
+W = np.zeros_like(R)
+for a, b, wt in edges: W[a, b] = W[b, a] = wt
+def louvain(gamma):
+    label = list(range(len(nodes)))  # concept -> home group
+    A = W.copy(); members = [[i] for i in range(len(nodes))]
+    while True:
+        n = len(A); k = A.sum(1); m2 = k.sum()
+        if m2 == 0: break
+        com = list(range(n)); tot = k.copy(); moved_any = False
+        while True:
+            moved = False
+            for i in range(n):
+                ci = com[i]; tot[ci] -= k[i]
+                links = collections.defaultdict(float)
+                for j in np.nonzero(A[i])[0]:
+                    if j != i: links[com[j]] += A[i, j]
+                best, gain = ci, links.get(ci, 0) - gamma * tot[ci] * k[i] / m2
+                for cj in sorted(links):
+                    g = links[cj] - gamma * tot[cj] * k[i] / m2
+                    if g > gain + 1e-12: best, gain = cj, g
+                com[i] = best; tot[best] += k[i]
+                if best != ci: moved = moved_any = True
+            if not moved: break
+        if not moved_any: break
+        ids = {c_: n_ for n_, c_ in enumerate(sorted(set(com)))}
+        new_members = [[] for _ in ids]
+        for i in range(n): new_members[ids[com[i]]] += members[i]
+        B = np.zeros((len(ids), len(ids)))
+        for i in range(n):
+            for j in range(n): B[ids[com[i]], ids[com[j]]] += A[i, j]
+        A, members = B, new_members
+    for g_, ms in enumerate(members):
+        for i in ms: label[i] = g_
+    return label
 
-groups = []
-for es in comm.values():
-    cs = sorted({v for e in es for v in edges[e][:2]})
-    if len(cs) >= 3: groups.append({'concepts': cs, 'lines': len(es)})
+def joins(label):
+    """home groups, then every concept that is together with a group's concepts in the same decks more often than chance,
+    by the same margin as a line (pooled over the group's concepts), joins it too"""
+    home = collections.defaultdict(list)
+    for i, g_ in enumerate(label): home[g_].append(i)
+    out = []
+    for g_, cs in home.items():
+        if len(cs) < 2: continue
+        shared = []
+        for i in range(len(nodes)):
+            if i in cs: continue
+            o, e = O[i, cs].sum(), E[i, cs].sum()
+            if e > 0 and (o - e) / np.sqrt(e) > BEYOND: shared.append(i)
+        out.append({'home': sorted(cs), 'shared': shared, 'concepts': sorted(cs + shared)})
+    return out
+
+sweep = {}
+for gamma in [round(0.2 + 0.1 * t, 1) for t in range(49)]:
+    gs = joins(louvain(gamma))
+    sweep[gamma] = (sum(1 for gr in gs if 8 <= len(gr['concepts']) <= 10), gs)
+GAMMA = max(sweep, key=lambda g_: (sweep[g_][0], -g_))
+groups = [gr for gr in sweep[GAMMA][1] if len(gr['concepts']) >= 3]
 
 def share(v, cs): return v[cs].sum() / v.sum() if v.sum() else 0
 game_cards = {g: sum((cv[i] for i in pools[g]), np.zeros(len(nodes))) for g in games}
@@ -138,39 +155,56 @@ fvec = {(g, fa): sum((cv[i] for i, v in pools[g].items() if fa in v[3]), np.zero
 for gr in groups:
     cs = gr['concepts']
     avg = {g: np.mean([share(d[2], cs) for d in decks if d[0] == g]) for g in per_game}
-    gr['decks'] = sorted(((share(d[2], cs) / avg[d[0]] if avg[d[0]] else 0, n) for n, d in enumerate(decks)), reverse=True)
-    gr['fit_decks'] = [n for r, n in gr['decks'] if r >= FIT]
+    gr['ratio'] = [share(d[2], cs) / avg[d[0]] if avg[d[0]] else 0 for d in decks]
+    gr['fratio'] = {f: (share(fvec[f], cs) / share(game_cards[f[0]], cs) if share(game_cards[f[0]], cs) else 0) for f in facs}
+    gr['fshare'] = {f: share(fvec[f], cs) for f in facs}
+def best_of(r): return sorted(range(len(groups)), key=lambda q: -r[q])[:BEST]
+for n, d in enumerate(decks):  # a deck fits its best 2 groups, when at twice its game's average or more
+    for q in best_of([gr['ratio'][n] for gr in groups]):
+        if groups[q]['ratio'][n] >= FIT: groups[q].setdefault('fit', []).append(n)
+fits_f = collections.defaultdict(list)
+for f in facs:
+    for q in best_of([gr['fratio'][f] for gr in groups]):
+        if groups[q]['fratio'][f] >= FIT: fits_f[q].append(f)
+for q, gr in enumerate(groups):
+    gr['fit_decks'] = sorted(gr.get('fit', []), key=lambda n: -gr['ratio'][n])
+    gr['decks'] = [(gr['ratio'][n], n) for n in gr['fit_decks']]
     gr['games'] = collections.Counter(decks[n][0] for n in gr['fit_decks'])
-    gr['facs'] = sorted(((share(fvec[f], cs) / share(game_cards[f[0]], cs) if share(game_cards[f[0]], cs) else 0,
-                          share(fvec[f], cs), f) for f in facs), reverse=True)
+    gr['facs'] = sorted(((gr['fratio'][f], gr['fshare'][f], f) for f in fits_f[q]), reverse=True)
+    gr['near'] = sorted(((gr['fratio'][f], gr['fshare'][f], f) for f in facs), reverse=True)[:3]
 groups.sort(key=lambda gr: (-len(gr['games']), -len(gr['fit_decks'])))
 for n, gr in enumerate(groups, 1): gr['key'] = f'G{n:02d}'
-nofit = [gr['key'] for gr in groups if gr['facs'][0][0] < FIT]
-lonely = [f for f in facs if all(next(t[0] for t in gr['facs'] if t[2] == f) < FIT for gr in groups)]
+nofit = [gr['key'] for gr in groups if not gr['facs']]
+lonely = [f for f in facs if not any(f in fits_f[q] for q in range(len(groups)))]
 name = lambda j: plain.get(nodes[j], nodes[j])
 
+def cname(gr, j): return name(j) + (' (shared)' if j in gr['shared'] else '')
 with open(os.path.join(HERE, 'faction_archetypes.tsv'), 'w', encoding='utf-8') as o:
-    o.write('group\tconcepts\tlines\tfit_decks\tgames\ttop_decks\tbest_factions\n')
+    o.write('group\thome_concepts\tshared_concepts\tsize\tfit_decks\tgames\ttop_decks\tfit_factions\tnearest_factions\n')
     for gr in groups:
-        o.write('\t'.join([gr['key'], ','.join(nodes[j] for j in gr['concepts']), str(gr['lines']), str(len(gr['fit_decks'])),
+        o.write('\t'.join([gr['key'], ','.join(nodes[j] for j in gr['home']), ','.join(nodes[j] for j in gr['shared']),
+                           str(len(gr['concepts'])), str(len(gr['fit_decks'])),
                            ','.join(f'{g}:{k}' for g, k in sorted(gr['games'].items())),
                            '; '.join(f'{decks[n][0]}:{decks[n][1]}:{r:.2f}' for r, n in gr['decks'][:TOP]),
-                           '; '.join(f'{g}:{fa}:{s:.2f}:{r:.2f}' for r, s, (g, fa) in gr['facs'][:5])]) + '\n')
+                           '; '.join(f'{g}:{fa}:{s:.2f}:{r:.2f}' for r, s, (g, fa) in gr['facs']),
+                           '; '.join(f'{g}:{fa}:{s:.2f}:{r:.2f}' for r, s, (g, fa) in gr['near'])]) + '\n')
 
 with open(os.path.join(HERE, 'faction_archetypes.md'), 'w', encoding='utf-8') as o:
     o.write('# Step 3: the ways to play that decks put together (made by faction_archetypes.py)\n\n')
-    o.write(f'{len(decks)} decks of {len(per_game)} games, {len(nodes)} concepts, {M} lines above chance. '
-            f'{len(groups)} groups of 3+ concepts. A deck or faction fits a group when its share of concepts on the group '
-            f'is at least {FIT} times its game\'s average ("x1.5").\n\n')
+    o.write(f'{len(decks)} decks of {len(per_game)} games, {len(nodes)} concepts, {len(edges)} lines above chance. '
+            f'{len(groups)} groups (setting {GAMMA}: {sweep[GAMMA][0]} groups of 8 to 10 concepts). A deck or faction fits '
+            f'its best {BEST} groups when its share of their concepts is at least {FIT:g} times its game\'s average ("x2").\n\n')
     o.write('Deck card names the library does not know: ' +
             (', '.join(f'{g} {k}' for g, k in sorted(missing.items()) if k) or 'none') + '.\n\n')
     for gr in groups:
-        o.write(f"## {gr['key']}: {len(gr['concepts'])} concepts; {len(gr['fit_decks'])} decks fit "
+        size = len(gr['concepts']); flag = '' if 8 <= size <= 10 else f' **{"under" if size < 8 else "over"} 8 to 10**'
+        o.write(f"## {gr['key']}: {size} concepts{flag}; {len(gr['fit_decks'])} decks fit "
                 f"({', '.join(f'{g} {k}' for g, k in sorted(gr['games'].items())) or 'none'})\n")
-        o.write('- Concepts: ' + '; '.join(name(j) for j in gr['concepts']) + '\n')
-        o.write('- Decks: ' + '; '.join(f'{decks[n][1]} ({decks[n][0]}, x{r:.1f})' for r, n in gr['decks'][:TOP]) + '\n')
-        o.write('- Factions: ' + '; '.join(f'{fa} ({g}, {s:.0%}, x{r:.1f})' for r, s, (g, fa) in gr['facs'][:5]) + '\n\n')
+        o.write('- Concepts: ' + '; '.join(cname(gr, j) for j in gr['concepts']) + '\n')
+        o.write('- Decks: ' + ('; '.join(f'{decks[n][1]} ({decks[n][0]}, x{r:.1f})' for r, n in gr['decks'][:TOP]) or 'none') + '\n')
+        o.write('- Factions that fit: ' + ('; '.join(f'{fa} ({g}, {s:.0%}, x{r:.1f})' for r, s, (g, fa) in gr['facs']) or
+                'none; nearest ' + '; '.join(f'{fa} ({g}, x{r:.1f})' for r, s, (g, fa) in gr['near'])) + '\n\n')
     o.write('Groups no faction fits: ' + (', '.join(nofit) or 'none') + '.\n\n')
     o.write('Factions that fit no group: ' + (', '.join(f'{fa} ({g})' for g, fa in lonely) or 'none') + '.\n')
-print(len(decks), 'decks;', M, 'lines;', len(groups), 'groups;', len(nofit), 'with no faction;', len(lonely),
-      'factions with no group; unknown deck names', sum(missing.values()))
+print(len(decks), 'decks;', len(edges), 'lines; setting', GAMMA, ';', len(groups), 'groups,', sweep[GAMMA][0], 'of 8-10;',
+      len(nofit), 'with no faction;', len(lonely), 'factions with no group; unknown deck names', sum(missing.values()))

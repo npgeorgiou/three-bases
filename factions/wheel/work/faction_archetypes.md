@@ -1,224 +1,129 @@
 # Step 3: the ways to play that decks put together (made by faction_archetypes.py)
 
-1428 decks of 10 games, 138 concepts, 313 lines above chance. 43 groups of 3+ concepts. A deck or faction fits a group when its share of concepts on the group is at least 1.5 times its game's average ("x1.5").
+1428 decks of 10 games, 138 concepts, 313 lines above chance. 24 groups (setting 4.8: 5 groups of 8 to 10 concepts). A deck or faction fits its best 2 groups when its share of their concepts is at least 2 times its game's average ("x2").
 
 Deck card names the library does not know: none.
 
-## G01: 3 concepts; 370 decks fit (duelyst 35, faeria 78, gwent 68, inscryption 4, into_the_breach 1, marvel_snap 26, monster_train 5, runeterra 87, stormbound 60, sts1 6)
-- Concepts: Counts / thresholds; Heal every turn (regeneration); Stats equal to a count
-- Decks: Mist Eaters (into_the_breach, x23.0); Hybrid lilithe (duelyst, x13.5); Ghost Azalea (duelyst, x11.9); Biceps Discard (runeterra, x8.6); Flood Cassyva (duelyst, x8.5); Garen Jarvan IV Galio (runeterra, x7.6); Jarvan IV Garen (runeterra, x7.4); Brome We the People (duelyst, x7.3)
-- Factions: Abyssian Host (duelyst, 2%, x2.7); Freljord (runeterra, 2%, x2.4); Magick (inscryption, 4%, x2.1); Lyonar Kingdoms (duelyst, 1%, x1.7); Beast (inscryption, 4%, x1.6)
+## G01: 10 concepts; 119 decks fit (duelyst 10, faeria 26, gwent 6, inscryption 2, marvel_snap 12, monster_train 3, runeterra 31, stormbound 27, sts1 2)
+- Concepts: Block points that wear off (shared); Send an enemy unit back (bounce); Can't attack (my own unit) (shared); Top or bottom of the deck matters; Formations (pairs, chains); Return my unit from the board to hand; Silence (abilities removed) (shared); Enough spells played (shared); Switch stances or forms; Swap positions
+- Decks: Resurgence Tournament 07/2023 Winning deck (stormbound, x10.6); Frozen Fortress (stormbound, x9.4); Untitled Winter deck A (stormbound, x8.7); Everlasting Vision (stormbound, x8.5); Act III Mycobot (gamersdecide, core) (inscryption, x8.0); Sealed Tournament 07/2019 deck (stormbound, x7.9); Cursed Leeches (stormbound, x7.8); Drachenfruchtfleisch (stormbound, x7.7)
+- Factions that fit: Winter (stormbound, 9%, x6.1); Watcher (sts1, 14%, x2.6); Ionia (runeterra, 12%, x2.5)
 
-## G02: 3 concepts; 323 decks fit (duelyst 34, faeria 95, gwent 77, inscryption 5, into_the_breach 4, marvel_snap 19, monster_train 4, runeterra 44, stormbound 39, sts1 2)
-- Concepts: Damage over time (poison, burn); Lifesteal / drain; Stats equal to a count
-- Decks: Hybrid lilithe (duelyst, x12.8); Bandle Kayle Teemo (runeterra, x12.4); Ghost Azalea (duelyst, x11.3); Silent Poison (highgroundgaming) (sts1, x10.9); Silent Poison (gamersdecide) (sts1, x10.1); Bard Kayle (runeterra, x9.8); Teemo Tristana Elder Dragon (runeterra, x9.2); Garen Kayle Jarvan (runeterra, x9.0)
-- Factions: Silent (sts1, 5%, x4.4); Shadowfen (stormbound, 11%, x4.3); Abyssian Host (duelyst, 1%, x3.1); Bilgewater (runeterra, 1%, x2.0); Beast (inscryption, 2%, x1.8)
+## G02: 15 concepts **over 8 to 10**; 105 decks fit (duelyst 9, faeria 9, gwent 30, inscryption 3, marvel_snap 6, monster_train 3, runeterra 33, stormbound 10, sts1 2)
+- Concepts: Send an enemy unit back (bounce) (shared); Copy cards or units; Make the opponent's cards cost more; Alternative costs (shared); Give my units or cards to the opponent; Put into play for free; Create new cards (shared); Junk cards into a deck or hand; Move my units (reposition) (shared); Where units can be placed; Change the game's rules; Look at cards and pick (scry) (shared); Silence (abilities removed) (shared); Set stats to a number (shared); Steal from the opponent
+- Decks: Awoken Sting (monster_train, x8.2); Watcher Conjure Blade (slaythespire.info) (sts1, x4.7); Zoe Diana (3) (runeterra, x4.5); Teemo Caitlyn (runeterra, x4.4); Caitlyn Teemo (runeterra, x4.1); Midrange NG (Мидрейндж нильфы) (gwent, x4.0); NG TO PRO (gwent, x3.9); BC IO deck (runeterra, x3.7)
+- Factions that fit: Nilfgaard (gwent, 16%, x2.3)
 
-## G03: 4 concepts; 284 decks fit (duelyst 39, faeria 57, gwent 34, inscryption 4, into_the_breach 3, marvel_snap 23, monster_train 7, runeterra 76, stormbound 37, sts1 4)
-- Concepts: More or faster base resource (ramp); Can't attack (my own unit); Can't act at all (stun, freeze); Silence (abilities removed)
-- Decks: Resurgence Tournament 07/2023 Winning deck (stormbound, x9.0); Frozen Fortress (stormbound, x8.6); Everlasting Vision (stormbound, x8.4); Untitled Winter deck A (stormbound, x7.3); Drachenfruchtfleisch (stormbound, x7.0); Cursed Leeches (stormbound, x6.7); Slow & Sturdy (stormbound, x6.2); Equals guide deck 1xn1w1w2n6n8 (stormbound, x6.1)
-- Factions: Winter (stormbound, 17%, x6.8); Vanar Kindred (duelyst, 8%, x2.2); Magick (inscryption, 9%, x1.8); Ranged (into_the_breach, 10%, x1.7); Northern Realms (gwent, 8%, x1.7)
+## G03: 17 concepts **over 8 to 10**; 90 decks fit (duelyst 5, faeria 28, gwent 23, inscryption 1, marvel_snap 1, monster_train 1, runeterra 16, stormbound 13, sts1 2)
+- Concepts: Order of my plays matters (combo) (shared); Copy cards or units (shared); Cards cost less (shared); Alternative costs; Discard my own cards (shared); Give my units or cards to the opponent (shared); Put into play for free (shared); Create new cards; Improve cards in hand or deck (shared); Hidden and revealed information; Junk cards into a deck or hand (shared); When a spell is played (shared); Where units can be placed (shared); Look at cards and pick (scry); Silence (abilities removed) (shared); Enough spells played (shared); Switch stances or forms (shared)
+- Decks: Awoken Sting (monster_train, x7.1); Mantra (EurasianJay) (duelyst, x6.0); Counter All (stormbound, x5.6); Mantra (Niklaren) (duelyst, x5.6); Mantra (Fanggod, variant 2) (duelyst, x5.1); Mantra (Fanggod) (duelyst, x5.0); Treasure Yellow (faeria, x4.5); BGr Discovery (wild reavers!) (faeria, x4.3)
+- Factions that fit: Nilfgaard (gwent, 14%, x2.1)
 
-## G04: 3 concepts; 234 decks fit (duelyst 41, faeria 61, gwent 19, inscryption 4, into_the_breach 3, marvel_snap 13, monster_train 5, runeterra 48, stormbound 34, sts1 6)
-- Concepts: Attack gain (+attack); Having a card in play or hand; Excess damage carries on (trample)
-- Decks: Custom: Ice Swap Swap (into_the_breach, x9.2); Custom: Laser Boulder Swap (into_the_breach, x7.5); Flame Behemoths (into_the_breach, x6.3); Pyke Rek'Sai (runeterra, x5.8); Pyke Rek'Sai Bloodbait (runeterra, x5.5); Long-horned Barrensky OTK (faeria, x5.4); Pyke Rek'Sai Chronomancer (runeterra, x5.3); Pyke Rek'Sai (2) (runeterra, x5.0)
-- Factions: Science (into_the_breach, 1%, x6.6); Magick (inscryption, 12%, x3.7); Defect (sts1, 11%, x2.7); Magmar Aspects (duelyst, 9%, x1.8); Lyonar Kingdoms (duelyst, 8%, x1.7)
+## G04: 16 concepts **over 8 to 10**; 79 decks fit (duelyst 8, faeria 18, gwent 14, into_the_breach 4, marvel_snap 6, monster_train 2, runeterra 15, stormbound 10, sts1 2)
+- Concepts: Attack right away (shared); Board wipe (shared); Cheat death (survive lethal); Grows with what happened this game (shared); Counts deaths; Destroy outright (shared); When I play another card (shared); When a card is discarded (shared); When another unit dies; Back to hand when it dies or leaves play (shared); Bring back dead units (revive); Row-wide lasting effects (weather) (shared); Sacrifice my own units; Destroys itself / temporary unit; Double or multiply stats; Summon units / tokens (shared)
+- Decks: Silent Discard (gamersdecide) (sts1, x7.4); Bombermechs (into_the_breach, x6.9); Arachnophiles (into_the_breach, x6.0); Secret Squad (into_the_breach, x5.2); Cataclysm (into_the_breach, x5.0); spicy gnats (faeria, x3.9); Intens Bonecrusher Deck (duelyst, x3.8); Classic Death Knull (marvel_snap, x3.5)
+- Factions that fit: Silent (sts1, 5%, x2.9); Shadow Isles (runeterra, 29%, x2.1)
 
-## G05: 8 concepts; 212 decks fit (duelyst 27, faeria 53, gwent 37, inscryption 3, into_the_breach 1, marvel_snap 13, monster_train 4, runeterra 47, stormbound 26, sts1 1)
-- Concepts: Attack gain (+attack); Defence gain (+health); Improve cards in hand or deck; When I play another card; Grows again and again; Heal every turn (regeneration); Stats equal to a count; Variety matters (all different)
-- Decks: Mist Eaters (into_the_breach, x23.0); Silent Poison (gamersdecide) (sts1, x22.0); Long-horned Barrensky OTK (faeria, x4.2); Hyperfurnace (duelyst, x4.1); Manfurnace (duelyst, x2.9); Backstab only (duelyst, x2.8); Battle pet Madness (duelyst, x2.8); Slighhorn (duelyst, x2.8)
-- Factions: Magick (inscryption, 16%, x3.0); Magmar Aspects (duelyst, 18%, x1.7); Lyonar Kingdoms (duelyst, 17%, x1.6); Green (faeria, 21%, x1.5); Defect (sts1, 1%, x1.5)
+## G05: 17 concepts **over 8 to 10**; 57 decks fit (duelyst 2, faeria 3, gwent 9, inscryption 1, into_the_breach 1, marvel_snap 2, runeterra 31, stormbound 6, sts1 2)
+- Concepts: Help from nearby allies (assists) (shared); Attack gain (+attack) (shared); Attack right away (shared); Take less damage (armour); Defence gain (+health) (shared); Extra turns or actions; My unit fights a chosen enemy (shared); Force enemy units to attack; Hand size matters (shared); Act the turn it arrives (haste, rush) (shared); Attack more than once; Quests / objectives with rewards (shared); Absorb one hit (shield, ward); Stats matter (highest, lowest) (shared); Strikes with its defence; Taunt (enemies must attack it) (shared); Temporary bonus (this turn only) (shared)
+- Decks: Watcher Conjure Blade (slaythespire.info) (sts1, x7.3); Fiora Zed (runeterra, x4.8); Shen Galio (runeterra, x3.2); Shen Fiora (runeterra, x3.1); Fiora Shen Jarvan IV (runeterra, x3.0); Pantheon Shyvana (runeterra, x2.8); Ongoing Spectrum Punisher (marvel_snap, x2.8); Jarvan IV Shen Oracle (runeterra, x2.7)
+- Factions that fit: Demacia (runeterra, 34%, x2.1)
 
-## G06: 6 concepts; 121 decks fit (duelyst 10, faeria 30, gwent 5, inscryption 1, into_the_breach 1, marvel_snap 14, monster_train 3, runeterra 45, stormbound 7, sts1 5)
-- Concepts: Neighbours matter (adjacency); Damage to many at once; Restore health (heal); Expensive card; Expensive unit; Tough for its cost
-- Decks: Trundle Volibear (runeterra, x2.8); Tryndamere Volibear (runeterra, x2.5); Trundle Tryndamere (runeterra, x2.5); Aurelion Sol Braum (runeterra, x2.5); Trundle Sett Tryndamere (runeterra, x2.4); Tryndamere Trundle (runeterra, x2.4); Stygian Awoken Titan Sentry tank (monster_train, x2.3); Trundle Braum (runeterra, x2.3)
-- Factions: Ironclad (sts1, 17%, x1.7); Red (faeria, 30%, x1.5); Freljord (runeterra, 19%, x1.5); Prime (into_the_breach, 23%, x1.3); Skellige (gwent, 18%, x1.3)
+## G06: 6 concepts **under 8 to 10**; 191 decks fit (duelyst 23, faeria 49, gwent 20, inscryption 3, marvel_snap 12, monster_train 3, runeterra 41, stormbound 40)
+- Concepts: Attack set to 0; Countdown (shared); Set stats to a number; Stat loss (-power, -health); Stealth / hidden until it acts; Transform my card into another
+- Decks: BIG ASPECT (duelyst, x11.1); Gnar Nidalee (runeterra, x10.4); Buildmar (VBCFBHC) (duelyst, x10.2); Buildmar (TM25MD) (duelyst, x9.9); Buildmar (Ree69) (duelyst, x9.4); Counter All (stormbound, x9.0); Ciphyron Build (duelyst, x8.7); Troop of Jayce (runeterra, x8.6)
+- Factions that fit: Shurima (runeterra, 7%, x2.9); Freljord (runeterra, 7%, x2.7); Pandora (faeria, 2%, x2.5); Blue (faeria, 2%, x2.4); Vanar Kindred (duelyst, 6%, x2.1)
 
-## G07: 5 concepts; 347 decks fit (duelyst 49, faeria 75, gwent 74, inscryption 4, marvel_snap 18, monster_train 7, runeterra 72, stormbound 46, sts1 2)
-- Concepts: Cheat death (survive lethal); Counts deaths; When another unit dies; Bring back dead units (revive); Sacrifice my own units
-- Decks: Silent Poison (gamersdecide) (sts1, x12.0); Mordekaiser Morgana (runeterra, x11.0); Intens Bonecrusher Deck (duelyst, x10.7); Silent Poison (highgroundgaming) (sts1, x10.0); spicy gnats (faeria, x9.3); Nasus Thresh (runeterra, x8.8); Heart of the Sea (stormbound, x8.7); Viego Elder Dragon Mordekaiser (runeterra, x8.4)
-- Factions: Shadow Isles (runeterra, 11%, x5.7); Abyssian Host (duelyst, 7%, x3.5); Monster (gwent, 4%, x2.9); Undead (inscryption, 5%, x2.8); Magmar Aspects (duelyst, 5%, x2.3)
+## G07: 6 concepts **under 8 to 10**; 151 decks fit (duelyst 15, faeria 42, gwent 28, inscryption 2, monster_train 2, runeterra 40, stormbound 21, sts1 1)
+- Concepts: Deal damage (shared); Damage over time (poison, burn) (shared); Deck contents matter; Small repeatable damage (shared); Row-wide lasting effects (weather); Fill my own discard pile (self-mill)
+- Decks: Act II bones and skeletons (BEAR) (inscryption, x10.0); (Budget!) Collossus BURRRRRNNNN (non-meme) (faeria, x9.1); Devotion to Ignis (faeria, x9.1); Lord of Terror Burn (faeria, x8.7); Mono Red Burn (faeria, x7.7); Maokai Nautilus (runeterra, x7.5); Act II 666 damage (Steam guide, How to make Inscryption insanely easy) (inscryption, x7.0); Reignzu's Maskdancer (duelyst, x7.0)
+- Factions that fit: Songhai Empire (duelyst, 7%, x4.8); Red (faeria, 4%, x3.3); Bandle City (runeterra, 6%, x3.3); Shadowfen (stormbound, 9%, x2.6); Technology (inscryption, 2%, x2.6)
 
-## G08: 6 concepts; 336 decks fit (duelyst 44, faeria 75, gwent 52, inscryption 5, marvel_snap 21, monster_train 3, runeterra 68, stormbound 61, sts1 7)
-- Concepts: Copy cards or units; Give my units or cards to the opponent; Put into play for free; Create new cards; Junk cards into a deck or hand; Where units can be placed
-- Decks: Counter All (stormbound, x10.2); Awoken Sting (monster_train, x10.0); Tornado Tournament 10/2020 deck (3) (stormbound, x7.0); Treasure Yellow (faeria, x6.7); Minion Burn (duelyst, x6.5); Ultimate Kingdom 10/2020 deck (2) (stormbound, x6.3); ARCASTAR 1.95 (duelyst, x6.0); Mint tournament 05/2023 Winning deck (stormbound, x5.9)
-- Factions: Nilfgaard (gwent, 11%, x2.2); Songhai Empire (duelyst, 4%, x2.0); Pandora (faeria, 5%, x1.8); Piltover & Zaun (runeterra, 10%, x1.7); Yellow (faeria, 4%, x1.6)
+## G08: 13 concepts **over 8 to 10**; 104 decks fit (duelyst 11, faeria 19, gwent 38, inscryption 2, marvel_snap 1, monster_train 2, runeterra 17, stormbound 14)
+- Concepts: Board wipe; Make a unit stronger (buff); Cards cost less; Set a cost to a fixed number (shared); Destroy outright; Disrupt the opponent's plans; Expensive card (shared); When a card is drawn (shared); Gain resources (ramp); Sacrifice my own units (shared); Look at cards and pick (scry) (shared); Fill my own discard pile (self-mill) (shared); Enough spells played (shared)
+- Decks: Acherontia Ахеронтия (2) (gwent, x4.2); POISON IS BACK (gwent, x3.9); New Acherontia Новая Ахеронтия (gwent, x3.8); Black Sheep Tournament 06/2020 deck (2) (stormbound, x3.6); Snowball Tournament 2 12/2022 Winning deck (stormbound, x3.6); ACHERONTIA POISON LOOKS VERY PROMISING (gwent, x3.6); Salamander metabreaker (gwent, x3.6); Midrange SY (Мидрейндж Синдикат) (gwent, x3.6)
+- Factions that fit: Syndicate (gwent, 16%, x2.9)
 
-## G09: 3 concepts; 332 decks fit (duelyst 44, faeria 77, gwent 59, inscryption 3, into_the_breach 1, marvel_snap 20, runeterra 73, stormbound 53, sts1 2)
-- Concepts: Damaged unit matters; Hits my own side too; Small repeatable damage
-- Decks: Lord of Terror Burn (faeria, x13.4); Ironclad Pain (gamersdecide) (sts1, x12.9); BotG - Modgnik Red Blue Burn (faeria, x9.7); Silent Shiv (highgroundgaming) (sts1, x9.1); Crazy Bear (faeria, x8.9); Braum Vladimir (runeterra, x8.0); Soraka Tahm Kench (runeterra, x7.6); Ursus OTK (nerf soon) (faeria, x7.5)
-- Factions: Ironclad (sts1, 2%, x3.7); Shadowfen (stormbound, 8%, x3.4); Skellige (gwent, 11%, x3.0); Bandle City (runeterra, 5%, x2.8); Magmar Aspects (duelyst, 3%, x2.5)
+## G09: 12 concepts **over 8 to 10**; 97 decks fit (duelyst 13, faeria 10, gwent 12, inscryption 2, into_the_breach 3, marvel_snap 5, runeterra 22, stormbound 30)
+- Concepts: More or faster base resource (ramp) (shared); Better or chosen cards; Order of my plays matters (combo); Cost matters (shared); Cards cost less (shared); Grows with what happened this game (shared); Make a unit weaker (debuff); Create new cards (shared); When a spell is played; Keep my units alive (protection); My spells and abilities get stronger; Enough spells played
+- Decks: Mantra (EurasianJay) (duelyst, x8.9); Mantra (Niklaren) (duelyst, x7.6); Slow & Sturdy (stormbound, x7.1); Mantra (Fanggod, variant 2) (duelyst, x7.0); Blowdryer (stormbound, x5.8); Alphabet Soup Tournament 01/2023 Winning deck (stormbound, x5.8); ARCASTAR 1.95 (duelyst, x5.6); Frozen Fortress (stormbound, x5.4)
+- Factions that fit: Winter (stormbound, 5%, x3.9); Songhai Empire (duelyst, 11%, x2.8)
 
-## G10: 3 concepts; 317 decks fit (duelyst 47, faeria 65, gwent 64, inscryption 5, into_the_breach 4, marvel_snap 19, monster_train 5, runeterra 65, stormbound 43)
-- Concepts: Counts deaths; Sacrifice my own units; Summon units / tokens
-- Decks: Bombermechs (into_the_breach, x6.9); spicy gnats (faeria, x6.6); Arachnophiles (into_the_breach, x6.0); Gnatcrifice (faeria, x5.8); Doomgate Istanu (faeria, x5.6); Money Boi Swag (faeria, x5.5); Secret Squad (into_the_breach, x5.2); Cataclysm (into_the_breach, x5.0)
-- Factions: Shadow Isles (runeterra, 11%, x3.1); Undead (inscryption, 4%, x2.0); Vetruvian Imperium (duelyst, 8%, x1.9); Pandora (faeria, 4%, x1.9); Abyssian Host (duelyst, 8%, x1.9)
+## G10: 13 concepts **over 8 to 10**; 77 decks fit (duelyst 7, faeria 8, gwent 19, inscryption 2, marvel_snap 7, runeterra 20, stormbound 13, sts1 1)
+- Concepts: More or faster base resource (ramp) (shared); Cards cost less (shared); Grows with what happened this game; Discard my own cards; Draw cards; Create new cards (shared); Hand size matters (shared); Act the turn it arrives (haste, rush) (shared); When a card is discarded; When a card is drawn; Reuse my cards (shuffle back); Bring back dead units (revive) (shared); Search the deck for a card (tutor)
+- Decks: Frostfreibeuter (stormbound, x5.1); TurboSerq (stormbound, x4.7); Swarm Pirate (stormbound, x4.4); IC pirate (stormbound, x4.3); Implosion Tournament 05/2023 Winning deck (stormbound, x4.1); Silent Discard (gamersdecide) (sts1, x4.1); Renaissance Tournament 07/2020 deck (2) (stormbound, x4.0); Intens Bonecrusher Deck (duelyst, x4.0)
+- Factions that fit: Magick (inscryption, 16%, x2.3); Piltover & Zaun (runeterra, 24%, x2.0)
 
-## G11: 4 concepts; 314 decks fit (duelyst 38, faeria 73, gwent 69, inscryption 4, marvel_snap 16, monster_train 3, runeterra 71, stormbound 32, sts1 8)
-- Concepts: Alternative costs; Create new cards; Junk cards into a deck or hand; Look at cards and pick (scry)
-- Decks: Mint tournament 05/2023 Winning deck (stormbound, x13.1); Kara Arcanysts (duelyst, x11.2); Awoken Sting (monster_train, x10.9); Minion Burn (duelyst, x10.2); Arcanyst Shidai (AlphaCentury) (duelyst, x9.8); Treasure Yellow (faeria, x8.2); Hand Size Heroes (marvel_snap, x7.4); Yellow Hand Lock (faeria, x7.2)
-- Factions: Songhai Empire (duelyst, 3%, x3.0); Nilfgaard (gwent, 3%, x2.1); Pandora (faeria, 5%, x2.0); Piltover & Zaun (runeterra, 9%, x1.6); Bandle City (runeterra, 9%, x1.6)
+## G11: 4 concepts **under 8 to 10**; 205 decks fit (duelyst 24, faeria 69, gwent 46, inscryption 4, marvel_snap 15, monster_train 1, runeterra 46)
+- Concepts: Banish / exile (gone for good); Attack the opponent's hand; Mill the opponent's deck; Double or multiply stats (shared)
+- Decks: Umbra Primordium (monster_train, x18.0); Trundle Volibear (runeterra, x16.6); Trundle Sett Tryndamere (runeterra, x13.2); Twisted Fate Sejuani (runeterra, x11.6); Kaleos Trial of Songhai (duelyst, x11.5); Heimerdinger Jayce (2) (runeterra, x10.9); Aurelion Sol Braum (runeterra, x10.7); Reva Baconator (duelyst, x10.4)
+- Factions that fit: Monster (gwent, 3%, x4.1)
 
-## G12: 3 concepts; 312 decks fit (duelyst 45, faeria 69, gwent 63, inscryption 3, marvel_snap 15, monster_train 5, runeterra 55, stormbound 54, sts1 3)
-- Concepts: Discard my own cards; Draw cards; When a card is discarded
-- Decks: TurboSerq (stormbound, x12.4); Implosion Tournament 05/2023 Winning deck (stormbound, x10.3); Dracula Discard Collector (marvel_snap, x9.0); Dracula Morbius Daken (marvel_snap, x8.8); 2600+ 89% WR in pro rank druid guide (gwent, x8.8); Swarm Pirate (stormbound, x8.7); Silent Discard (gamersdecide) (sts1, x8.6); IC pirate (stormbound, x8.6)
-- Factions: Magick (inscryption, 4%, x5.1); Piltover & Zaun (runeterra, 8%, x2.3); Skellige (gwent, 2%, x2.3); Undead (inscryption, 2%, x2.2); Silent (sts1, 17%, x2.2)
+## G12: 5 concepts **under 8 to 10**; 183 decks fit (duelyst 17, faeria 56, gwent 52, marvel_snap 3, monster_train 3, runeterra 48, sts1 4)
+- Concepts: Cost matters; Countdown; When a spell is played (shared); Gain resources (ramp) (shared); Upgrade a card
+- Decks: Zombie Horde (marvel_snap, x28.4); Kluh Stardust (marvel_snap, x26.3); Horsemen Fin Fang Foom (marvel_snap, x25.3); Blue Yellow Events (Pew Pew) (faeria, x13.7); Yellow Events (Seasonal Cup Aurora 2020) (faeria, x13.4); PewPew (faeria, x12.0); Gravekper's Yellow Events (faeria, x11.3); YG Events (faeria, x10.9)
+- Factions that fit: Syndicate (gwent, 11%, x5.3); Blue (faeria, 1%, x2.4); Piltover & Zaun (runeterra, 4%, x2.1)
 
-## G13: 3 concepts; 310 decks fit (duelyst 45, faeria 80, gwent 74, inscryption 2, into_the_breach 1, monster_train 2, runeterra 66, stormbound 37, sts1 3)
-- Concepts: Damage over time (poison, burn); Lifesteal / drain; Small repeatable damage
-- Decks: Poppy Ziggs (2) (runeterra, x12.2); Poppy Ziggs (top decks) (runeterra, x11.6); Mantra (EurasianJay) (duelyst, x11.3); Lord of Terror Burn (faeria, x10.8); Mantra (Niklaren) (duelyst, x10.6); Sivir Tristana (runeterra, x10.4); The Hand of Pirates (runeterra, x10.4); Act II bones and skeletons (BEAR) (inscryption, x10.0)
-- Factions: Shadowfen (stormbound, 12%, x5.7); Bandle City (runeterra, 5%, x5.6); Songhai Empire (duelyst, 1%, x3.4); Silent (sts1, 5%, x3.3); Red (faeria, 2%, x3.0)
+## G13: 10 concepts; 56 decks fit (duelyst 3, faeria 16, into_the_breach 3, marvel_snap 2, runeterra 25, stormbound 2, sts1 5)
+- Concepts: Attack gain (+attack) (shared); Attack right away; Block points that wear off (shared); Having a card in play or hand; Defence gain (+health) (shared); Excess damage carries on (trample); My unit fights a chosen enemy; Attach or merge onto a unit (shared); When another unit leaves play (shared); Repeat or double triggers
+- Decks: Custom: Ice Swap Swap (into_the_breach, x9.2); Custom: Laser Boulder Swap (into_the_breach, x7.5); Flame Behemoths (into_the_breach, x6.3); Long-horned Barrensky OTK (faeria, x4.9); Defect Lightning (highgroundgaming) (sts1, x3.9); Pyke Rek'Sai (runeterra, x3.8); Defect Frost (highgroundgaming) (sts1, x3.5); Defect Orb (gamersdecide) (sts1, x3.5)
+- Factions that fit: Defect (sts1, 24%, x3.3); Magick (inscryption, 20%, x2.4)
 
-## G14: 3 concepts; 300 decks fit (duelyst 36, faeria 81, gwent 59, inscryption 6, marvel_snap 13, monster_train 6, runeterra 68, stormbound 24, sts1 7)
-- Concepts: Grows with what happened this game; Counts deaths; When another unit dies
-- Decks: Керис Конструкты Cerys Constructs (gwent, x16.5); THIS IS MY NEW FAVORITE NILFGAARD DECK (gwent, x15.0); Конструкты Constructs (gwent, x14.5); addi daddi (duelyst, x12.4); Mantra (EurasianJay) (duelyst, x12.1); MC17 - Shamanic Dance Sac (faeria, x10.5); Soul Feast (faeria, x10.3); Mantra (Fanggod) (duelyst, x10.1)
-- Factions: Ranged (into_the_breach, 1%, x6.7); Shadow Isles (runeterra, 5%, x4.1); Winter (stormbound, 1%, x3.6); Shadowfen (stormbound, 1%, x3.6); Abyssian Host (duelyst, 3%, x3.1)
+## G14: 16 concepts **over 8 to 10**; 44 decks fit (faeria 3, gwent 15, inscryption 1, marvel_snap 4, runeterra 15, stormbound 1, sts1 5)
+- Concepts: Neighbours matter (adjacency) (shared); Damage to many at once (shared); Clog the opponent's board; Counts / thresholds (shared); Damaged unit matters (shared); Damage over time (poison, burn); Deck contents matter (shared); Hits my own side too (shared); Lifesteal / drain; Small repeatable damage; Ranged attack / long reach; Row-wide lasting effects (weather) (shared); Stacking keywords / counters; Terrain / board features; Stats equal to a count (shared); Tough for its cost (shared)
+- Decks: Silent Poison (highgroundgaming) (sts1, x3.4); Braum Vladimir (runeterra, x3.3); Vladimir Braum (runeterra, x3.1); Silent Poison (gamersdecide) (sts1, x3.0); Poppy Ziggs (2) (runeterra, x2.9); Ironclad Body Slam (highgroundgaming) (sts1, x2.7); Vampires (marvel_snap, x2.7); Pantheon Soraka (runeterra, x2.7)
+- Factions that fit: none; nearest Bandle City (runeterra, x1.7); Skellige (gwent, x1.7); Shadowfen (stormbound, x1.5)
 
-## G15: 4 concepts; 299 decks fit (duelyst 31, faeria 65, gwent 65, inscryption 4, marvel_snap 16, monster_train 3, runeterra 77, stormbound 32, sts1 6)
-- Concepts: Order of my plays matters (combo); Create new cards; When a spell is played; Enough spells played
-- Decks: Arcanyst Shidai (Freud92) (duelyst, x9.9); Mint tournament 05/2023 Winning deck (stormbound, x8.9); Mantra (EurasianJay) (duelyst, x8.5); Awoken Sting (monster_train, x8.3); Mantra (Niklaren) (duelyst, x8.0); Y PewPew Sac (faeria, x7.9); ARCASTAR 1.95 (duelyst, x7.9); PewPew (faeria, x7.5)
-- Factions: Songhai Empire (duelyst, 7%, x3.2); Piltover & Zaun (runeterra, 11%, x1.8); Blue (faeria, 3%, x1.6); Yellow (faeria, 3%, x1.5); Nilfgaard (gwent, 2%, x1.5)
+## G15: 9 concepts; 34 decks fit (duelyst 2, faeria 3, gwent 4, marvel_snap 2, monster_train 2, runeterra 15, sts1 6)
+- Concepts: Neighbours matter (adjacency) (shared); Help from nearby allies (assists); Attack gain (+attack) (shared); Block points that wear off; Defence gain (+health) (shared); Improve cards in hand or deck (shared); Repeat or double triggers (shared); Stats matter (highest, lowest); Swap positions (shared)
+- Decks: Defect Lightning (highgroundgaming) (sts1, x4.2); Defect Frost (highgroundgaming) (sts1, x4.2); Defect Orb (gamersdecide) (sts1, x3.8); Bard Kayle (runeterra, x3.0); Targon Teemo (runeterra, x2.9); Braum Zoe (runeterra, x2.7); Illaoi (runeterra, x2.7); Zombie Galacti Wong (marvel_snap, x2.7)
+- Factions that fit: Defect (sts1, 14%, x3.8)
 
-## G16: 3 concepts; 298 decks fit (duelyst 40, faeria 74, gwent 59, inscryption 5, marvel_snap 15, monster_train 3, runeterra 64, stormbound 32, sts1 6)
-- Concepts: Draw cards; When a card is drawn; Reuse my cards (shuffle back)
-- Decks: Swarm Pirate (stormbound, x13.3); IC pirate (stormbound, x13.1); Implosion Tournament 05/2023 Winning deck (stormbound, x10.4); Reckless Draft 2 09/2020 Winning team's deck (3) (stormbound, x9.7); TurboSerq (stormbound, x9.5); Kluh Stardust (marvel_snap, x8.7); Zombie Galacti Wong (marvel_snap, x8.5); ABUSE NR(АБУЗНЫЙ СЕВЕР) (gwent, x8.4)
-- Factions: Magick (inscryption, 4%, x3.0); Piltover & Zaun (runeterra, 8%, x3.0); Bilgewater (runeterra, 4%, x1.8); Blue (faeria, 4%, x1.6); Songhai Empire (duelyst, 3%, x1.6)
+## G16: 8 concepts; 79 decks fit (duelyst 7, faeria 24, gwent 8, inscryption 1, marvel_snap 4, runeterra 35)
+- Concepts: Neighbours matter (adjacency) (shared); Aura (ongoing effect on others) (shared); Counts deaths (shared); Any damage kills (deathtouch, poisonous); Position and space; Quests / objectives with rewards; Sacrifice my own units (shared); Summon units / tokens
+- Decks: Evelynn Viego (runeterra, x4.7); Nasus Thresh (runeterra, x4.4); Quinn Gwen (runeterra, x4.3); Viego Elder Dragon Mordekaiser (runeterra, x4.1); Mordekaiser Morgana (runeterra, x4.1); Xerath Azir (runeterra, x4.0); Patriots, drones and clones (marvel_snap, x4.0); Evelynn Kalista (runeterra, x3.9)
+- Factions that fit: Shadow Isles (runeterra, 12%, x3.1)
 
-## G17: 3 concepts; 290 decks fit (duelyst 44, faeria 78, gwent 41, inscryption 4, marvel_snap 16, monster_train 6, runeterra 57, stormbound 40, sts1 4)
-- Concepts: Board wipe; Destroy outright; Expensive card
-- Decks: Tryndamere Volibear (runeterra, x6.7); Awoken unit stacking (monster_train, x5.1); Tryndamere Trundle (runeterra, x5.1); Bargain Rush (Seasonal Cup, first place) (faeria, x5.0); Bargain (Krog) (faeria, x5.0); Heimerdinger Jayce (2) (runeterra, x4.9); Trundle Volibear (runeterra, x4.6); Stygian spell weakness (monster_train, x4.6)
-- Factions: Pandora (faeria, 7%, x2.3); Undead (inscryption, 6%, x2.0); Technology (inscryption, 5%, x1.9); Ironclad (sts1, 13%, x1.8); Shadow Isles (runeterra, 7%, x1.6)
+## G17: 17 concepts **over 8 to 10**; 44 decks fit (duelyst 4, faeria 5, gwent 14, marvel_snap 11, monster_train 2, runeterra 8)
+- Concepts: Neighbours matter (adjacency) (shared); Damage to many at once (shared); Block points that wear off (shared); Counts / thresholds; Damaged unit matters; Strike back when attacked (counterattack, thorns); Deal damage; Discard my own cards (shared); Hits my own side too; Restore health (heal); Can't move (root) (shared); When life or health is restored; Small repeatable damage (shared); Heal every turn (regeneration) (shared); Row-wide lasting effects (weather) (shared); Taunt (enemies must attack it) (shared); Tough for its cost (shared)
+- Decks: Dracula Discard Collector (marvel_snap, x4.4); Hela Blink (marvel_snap, x3.9); Hela Glaive (marvel_snap, x3.7); Dracula Morbius Daken (marvel_snap, x3.6); Soraka Tahm Kench (runeterra, x3.5); Most played: Shadow King Mobius (marvel_snap, x3.4); Hela Lockjaw Gambit (marvel_snap, x3.3); Discard Hela (marvel_snap, x3.2)
+- Factions that fit: none; nearest Skellige (gwent, x1.8); Lyonar Kingdoms (duelyst, x1.5); Red (faeria, x1.4)
 
-## G18: 8 concepts; 276 decks fit (duelyst 40, faeria 57, gwent 34, inscryption 1, into_the_breach 6, marvel_snap 15, monster_train 4, runeterra 82, stormbound 37)
-- Concepts: Attack gain (+attack); Attack right away; Take less damage (armour); Defence gain (+health); My unit fights a chosen enemy; Force enemy units to attack; Absorb one hit (shield, ward); Temporary bonus (this turn only)
-- Decks: Long-horned Barrensky OTK (faeria, x4.8); Fiora Zed (runeterra, x4.8); YG Events (faeria, x3.2); Shen Fiora (runeterra, x3.2); Pantheon Shyvana (runeterra, x3.0); Shen Galio (runeterra, x3.0); GY Faeries (faeria, x3.0); Fiora Shen Jarvan IV (runeterra, x3.0)
-- Factions: Demacia (runeterra, 28%, x1.9); Magick (inscryption, 15%, x1.9); Magmar Aspects (duelyst, 17%, x1.7); Green (faeria, 18%, x1.5); Lyonar Kingdoms (duelyst, 15%, x1.5)
+## G18: 9 concepts; 23 decks fit (duelyst 11, gwent 7, marvel_snap 1, monster_train 1, runeterra 2, stormbound 1)
+- Concepts: Attack gain (+attack) (shared); Defence gain (+health) (shared); Move enemy units (push, pull); Move my units (reposition); When I play another card; Grows again and again; Heal every turn (regeneration) (shared); Stats equal to a count; Variety matters (all different)
+- Decks: Hyperfurnace (duelyst, x3.5); Mobility Man (duelyst, x2.8); Manfurnace (duelyst, x2.8); SCION'S RELIQ (duelyst, x2.8); Battle pet Madness (duelyst, x2.5); Classic Harmony Классик Гармония (gwent, x2.4); Call of Harmony: Scoia'tael Harmony is overtuned in June (gwent, x2.4); Zooforger (duelyst, x2.4)
+- Factions that fit: none; nearest Magick (inscryption, x1.7); Brute (into_the_breach, x1.5); Magmar Aspects (duelyst, x1.5)
 
-## G19: 3 concepts; 265 decks fit (duelyst 38, faeria 84, gwent 61, into_the_breach 9, marvel_snap 6, monster_train 1, runeterra 62, stormbound 3, sts1 1)
-- Concepts: Take less damage (armour); Hand size matters; Absorb one hit (shield, ward)
-- Decks: Casual Tournament 08/2023 2023 NO-RNG #1 (stormbound, x63.8); Swarm Pirate (stormbound, x63.8); IC pirate (stormbound, x62.4); Silent Discard (gamersdecide) (sts1, x22.0); Umbra Primordium (monster_train, x18.0); Moon Girl Devil Dinosaur (marvel_snap, x14.4); Control Thanos (marvel_snap, x14.1); Hand Size Heroes (marvel_snap, x13.8)
-- Factions: Demacia (runeterra, 6%, x3.3); Northern Realms (gwent, 3%, x2.4); Technology (inscryption, 2%, x1.9); Lyonar Kingdoms (duelyst, 2%, x1.9); Ionia (runeterra, 3%, x1.8)
+## G19: 12 concepts **over 8 to 10**; 30 decks fit (duelyst 4, faeria 4, marvel_snap 4, runeterra 14, stormbound 4)
+- Concepts: Attack gain (+attack) (shared); Cheat death (survive lethal) (shared); Defence gain (+health) (shared); My unit fights a chosen enemy (shared); Attach or merge onto a unit; When another unit leaves play; Back to hand when it dies or leaves play; Sacrifice my own units (shared); Stats matter (highest, lowest) (shared); Double or multiply stats (shared); Transform my card into another (shared); Stats equal to a count (shared)
+- Decks: Pantheon Yuumi (runeterra, x3.4); Bard Kayle (runeterra, x3.2); Morgana Pantheon (runeterra, x3.2); Self-destruction Deadpool (marvel_snap, x3.1); Vayne Illaoi (runeterra, x2.8); SCION'S RELIQ (duelyst, x2.6); Shuri Phoenix Force (marvel_snap, x2.5); Ragnora Egg (duelyst, x2.5)
+- Factions that fit: none; nearest Magick (inscryption, x1.9); Magmar Aspects (duelyst, x1.7); Green (faeria, x1.6)
 
-## G20: 4 concepts; 255 decks fit (duelyst 31, faeria 73, gwent 57, inscryption 5, marvel_snap 18, monster_train 3, runeterra 59, stormbound 4, sts1 5)
-- Concepts: Order of my plays matters (combo); Cards cost less; When a spell is played; Enough spells played
-- Decks: Implosion Tournament 05/2023 Winning deck (stormbound, x52.2); Counter All (stormbound, x52.2); Woolen Socks (stormbound, x49.7); Tornado Tournament 10/2020 deck (3) (stormbound, x36.0); Simlas Francesca and Alzur! (gwent, x26.6); Альзур Партизан (gwent, x22.7); Накер Альзур GN Alzur (Pajabol) (gwent, x21.7); Hyper control Гиперконтроль (gwent, x10.1)
-- Factions: Magick (inscryption, 3%, x3.8); Songhai Empire (duelyst, 6%, x3.0); Piltover & Zaun (runeterra, 7%, x2.8); Ionia (runeterra, 6%, x2.2); Scoiatael (gwent, 1%, x2.1)
+## G20: 12 concepts **over 8 to 10**; 24 decks fit (duelyst 9, faeria 3, into_the_breach 4, stormbound 8)
+- Concepts: Can't attack (lock on an enemy); More or faster base resource (ramp); Send an enemy unit back (bounce) (shared); Can't attack (my own unit) (shared); Can't act at all (stun, freeze); Disrupt the opponent's plans (shared); Create new cards (shared); Expensive card (shared); Look at cards and pick (scry) (shared); Silence (abilities removed); Enough spells played (shared); Switch stances or forms (shared)
+- Decks: Everlasting Vision (stormbound, x5.0); Resurgence Tournament 07/2023 Winning deck (stormbound, x4.7); Untitled Winter deck A (stormbound, x3.9); ICE AGE OTK 1.95 (duelyst, x3.7); Lodestah Stunnah (duelyst, x3.3); Winters Wake (Niklaren) (duelyst, x3.3); Winters Wake (Snowshot) (duelyst, x3.2); Faie Blood Taura (duelyst, x3.1)
+- Factions that fit: none; nearest Winter (stormbound, x3.2); Ranged (into_the_breach, x1.7); Vanar Kindred (duelyst, x1.6)
 
-## G21: 4 concepts; 218 decks fit (duelyst 41, faeria 7, gwent 59, inscryption 5, marvel_snap 18, monster_train 1, runeterra 54, stormbound 31, sts1 2)
-- Concepts: Cheat death (survive lethal); Discard my own cards; When a card is discarded; Bring back dead units (revive)
-- Decks: Money Boi Swag (faeria, x56.4); Gnats (faeria, x56.4); Gnatcrifice (faeria, x51.1); spicy gnats (faeria, x45.3); Treasure Yellow (faeria, x44.5); Captain Revisited (faeria, x32.1); Silent Discard (gamersdecide) (sts1, x18.5); Remnant Stygian totems (monster_train, x18.0)
-- Factions: Yellow (faeria, 1%, x6.6); Magmar Aspects (duelyst, 4%, x3.9); Skellige (gwent, 2%, x3.7); Silent (sts1, 8%, x3.4); Undead (inscryption, 3%, x3.0)
+## G21: 17 concepts **over 8 to 10**; 6 decks fit (monster_train 1, sts1 5)
+- Concepts: Neighbours matter (adjacency) (shared); Aura (ongoing effect on others) (shared); Can't attack (my own unit) (shared); Make the opponent's cards cost more (shared); Act the turn it arrives (haste, rush) (shared); Restore health (heal) (shared); Can't move (root) (shared); Ranged attack / long reach (shared); Silence (abilities removed) (shared); Double or multiply stats (shared); Taunt (enemies must attack it) (shared); Temporary bonus (this turn only) (shared); Unit; Cheap unit; Expensive unit (shared); Strong for its cost; Tough for its cost
+- Decks: Ironclad Barricade (Steam, Jeff) (sts1, x4.9); Watcher Stance Change (highgroundgaming) (sts1, x4.5); Ironclad Exhaust (gamersdecide) (sts1, x3.6); Watcher Divinity (gamersdecide) (sts1, x3.5); Ironclad Body Slam (highgroundgaming) (sts1, x3.4); Awoken rage (Adaptive Mutation) (monster_train, x2.1)
+- Factions that fit: Watcher (sts1, 5%, x2.0)
 
-## G22: 3 concepts; 218 decks fit (duelyst 35, faeria 53, gwent 7, inscryption 2, marvel_snap 13, monster_train 3, runeterra 66, stormbound 34, sts1 5)
-- Concepts: Set a cost to a fixed number; Expensive card; Expensive unit
-- Decks: Tryndamere Volibear (runeterra, x4.3); Stygian spell weakness (monster_train, x3.9); Trundle Volibear (runeterra, x3.7); Bargain Rush (Seasonal Cup, first place) (faeria, x3.3); Bargain (Krog) (faeria, x3.3); Snowball Tournament 08/2020 deck (stormbound, x3.2); Trundle Tryndamere (runeterra, x3.1); Galio Elder Dragon Morgana (runeterra, x3.0)
-- Factions: Red (faeria, 13%, x1.6); Freljord (runeterra, 12%, x1.5); Ironclad (sts1, 14%, x1.5); Technology (inscryption, 12%, x1.4); Winter (stormbound, 16%, x1.4)
+## G22: 25 concepts **over 8 to 10**; 0 decks fit (none)
+- Concepts: Neighbours matter (adjacency); Damage to many at once (shared); Attack gain (+attack) (shared); Attack right away (shared); Aura (ongoing effect on others); Can't attack (my own unit); Take less damage (armour) (shared); Defence gain (+health) (shared); Act the turn it arrives (haste, rush); Restore health (heal) (shared); Expensive card (shared); Can't move (root); Ranged attack / long reach (shared); Return my unit from the board to hand (shared); Absorb one hit (shield, ward) (shared); Silence (abilities removed) (shared); Switch stances or forms (shared); Stats matter (highest, lowest) (shared); Summon units / tokens (shared); Taunt (enemies must attack it); Temporary bonus (this turn only) (shared); Unit (shared); Cheap unit (shared); Expensive unit (shared); Tough for its cost (shared)
+- Decks: none
+- Factions that fit: none; nearest Watcher (sts1, x1.7); Ironclad (sts1, x1.3); Northern Realms (gwent, x1.2)
 
-## G23: 4 concepts; 215 decks fit (duelyst 22, faeria 57, gwent 38, inscryption 5, marvel_snap 15, monster_train 6, runeterra 59, stormbound 7, sts1 6)
-- Concepts: Neighbours matter (adjacency); Aura (ongoing effect on others); Can't attack (my own unit); Act the turn it arrives (haste, rush)
-- Decks: Spectrum Ongoing Onslaught (marvel_snap, x7.1); BW SH deck (runeterra, x6.3); Ongoing Spectrum Punisher (marvel_snap, x5.9); The Wong Spectrum (marvel_snap, x5.5); Ironclad Barricade (Steam, Jeff) (sts1, x4.9); Classic Shuri (marvel_snap, x4.5); Remnant stealth (Molten Encasement) (monster_train, x4.5); Watcher Stance Change (highgroundgaming) (sts1, x4.5)
-- Factions: Watcher (sts1, 5%, x2.0); Northern Realms (gwent, 14%, x1.9); Shadow Isles (runeterra, 7%, x1.8); Lyonar Kingdoms (duelyst, 15%, x1.4); Magick (inscryption, 9%, x1.3)
+## G23: 18 concepts **over 8 to 10**; 0 decks fit (none)
+- Concepts: Neighbours matter (adjacency) (shared); Damage to many at once; Attack set to 0 (shared); More or faster base resource (ramp) (shared); Board wipe (shared); Make a unit stronger (buff) (shared); Set a cost to a fixed number; Destroy outright (shared); Hits my own side too (shared); Restore health (heal) (shared); Expensive card; Can't move (root) (shared); Silence (abilities removed) (shared); Taunt (enemies must attack it) (shared); Unit (shared); Expensive unit; Strong for its cost (shared); Tough for its cost (shared)
+- Decks: none
+- Factions that fit: none; nearest Prime (into_the_breach, x1.4); Red (faeria, x1.3); Freljord (runeterra, x1.3)
 
-## G24: 4 concepts; 202 decks fit (duelyst 24, faeria 45, gwent 41, inscryption 2, into_the_breach 5, marvel_snap 20, monster_train 4, runeterra 47, stormbound 14)
-- Concepts: Damaged unit matters; Hits my own side too; Restore health (heal); Tough for its cost
-- Decks: Galactus Destroy (marvel_snap, x5.9); Cerebro 3 (marvel_snap, x5.2); Surfin' Sebastian (marvel_snap, x5.1); Sera Control Maximus (marvel_snap, x4.9); Hammer Control (marvel_snap, x4.6); Soraka Tahm Kench (runeterra, x4.5); Shadow King Drax (marvel_snap, x4.5); Self-destruction Deadpool (marvel_snap, x4.5)
-- Factions: Skellige (gwent, 16%, x2.0); Prime (into_the_breach, 9%, x1.4); Freljord (runeterra, 8%, x1.3); Lyonar Kingdoms (duelyst, 8%, x1.3); Magmar Aspects (duelyst, 8%, x1.3)
+## G24: 26 concepts **over 8 to 10**; 0 decks fit (none)
+- Concepts: Neighbours matter (adjacency) (shared); Help from nearby allies (assists) (shared); Attack gain (+attack); Attack right away (shared); Can't attack (my own unit) (shared); Having a card in play or hand (shared); Take less damage (armour) (shared); Defence gain (+health); Excess damage carries on (trample) (shared); Extra turns or actions (shared); My unit fights a chosen enemy (shared); Force enemy units to attack (shared); Hand size matters; Act the turn it arrives (haste, rush) (shared); Immune / can't be targeted (shared); Improve cards in hand or deck; Attach or merge onto a unit (shared); When I play another card (shared); When another unit leaves play (shared); Grows again and again (shared); Heal every turn (regeneration); Absorb one hit (shield, ward) (shared); Stats matter (highest, lowest) (shared); Temporary bonus (this turn only); Stats equal to a count (shared); Variety matters (all different) (shared)
+- Decks: none
+- Factions that fit: none; nearest Defect (sts1, x1.6); Magick (inscryption, x1.5); Lyonar Kingdoms (duelyst, x1.4)
 
-## G25: 3 concepts; 365 decks fit (duelyst 49, faeria 80, gwent 59, inscryption 5, marvel_snap 23, monster_train 4, runeterra 76, stormbound 69)
-- Concepts: Destroy outright; Gain resources (ramp); Sacrifice my own units
-- Decks: Implosion Tournament 05/2023 Winning deck (stormbound, x9.5); Heimerdinger Norra (runeterra, x8.0); Mordekaiser Morgana (runeterra, x7.3); Nasus Kindred (runeterra, x7.3); Intens Bonecrusher Deck (duelyst, x6.3); Nasus Thresh (runeterra, x6.2); Winterave (stormbound, x6.1); POISON IS BACK (gwent, x6.1)
-- Factions: Shadow Isles (runeterra, 7%, x5.0); Syndicate (gwent, 13%, x4.3); Pandora (faeria, 5%, x3.9); Abyssian Host (duelyst, 5%, x3.1); Watcher (sts1, 0%, x2.6)
+Groups no faction fits: G14, G17, G18, G19, G20, G22, G23, G24.
 
-## G26: 3 concepts; 365 decks fit (duelyst 35, faeria 84, gwent 84, inscryption 5, marvel_snap 21, monster_train 6, runeterra 87, stormbound 43)
-- Concepts: Set stats to a number; Stealth / hidden until it acts; Transform my card into another
-- Decks: Gnar Nidalee (runeterra, x32.2); Azir Renekton (runeterra, x13.4); Samira Akshan (runeterra, x13.0); BIG ASPECT (duelyst, x10.4); Blue Reaver (Seasonal Cup Aurora 2018) (faeria, x9.4); Cerebro 3 (marvel_snap, x9.4); Heart of the Sea (stormbound, x9.3); Jhin Gnar Norra (runeterra, x9.1)
-- Factions: Pandora (faeria, 2%, x3.3); Blue (faeria, 2%, x3.0); Shurima (runeterra, 3%, x2.7); Swarm (stormbound, 1%, x2.7); Ironclad (stormbound, 1%, x2.5)
-
-## G27: 3 concepts; 361 decks fit (duelyst 55, faeria 92, gwent 76, inscryption 5, marvel_snap 19, monster_train 5, runeterra 64, stormbound 45)
-- Concepts: Cheat death (survive lethal); Back to hand when it dies or leaves play; Sacrifice my own units
-- Decks: Mordekaiser Morgana (runeterra, x11.0); Money Boi Swag (faeria, x9.5); Gnatcrifice (faeria, x8.6); Nasus Kindred (runeterra, x8.5); Nasus Thresh (runeterra, x8.4); spicy gnats (faeria, x7.6); [NO DLC] The Yellow Fish Express: Destination Face (faeria, x7.4); Fast Rakoans (faeria, x7.1)
-- Factions: Shadow Isles (runeterra, 5%, x3.2); Monster (gwent, 3%, x3.2); Abyssian Host (duelyst, 4%, x3.2); Yellow (faeria, 2%, x2.8); Pandora (faeria, 2%, x2.4)
-
-## G28: 5 concepts; 329 decks fit (duelyst 49, faeria 73, gwent 62, inscryption 4, marvel_snap 17, monster_train 6, runeterra 63, stormbound 55)
-- Concepts: Cheat death (survive lethal); Counts deaths; Sacrifice my own units; Destroys itself / temporary unit; Double or multiply stats
-- Decks: Deathwish Завещания (gwent, x7.6); Hecarim Zed (runeterra, x7.3); 11.3 DW Aero Succ - Every Meta Deck (Part 1) (gwent, x7.3); Radeyah Deathwish Радея Завещания (gwent, x7.3); Quinn Gwen (runeterra, x7.1); Deathwish Завещание (gwent, x6.8); Mordekaiser Morgana (runeterra, x6.7); Dagon & Deathwish ДАГОН на ЗАВЕЩАНИЯХ (gwent, x6.5)
-- Factions: Shadow Isles (runeterra, 11%, x3.1); Abyssian Host (duelyst, 4%, x3.0); Monster (gwent, 7%, x2.7); Magick (inscryption, 7%, x2.4); Vetruvian Imperium (duelyst, 3%, x2.4)
-
-## G29: 7 concepts; 313 decks fit (duelyst 44, faeria 93, gwent 83, inscryption 5, into_the_breach 6, monster_train 5, runeterra 70, sts1 7)
-- Concepts: Take less damage (armour); Extra turns or actions; My unit fights a chosen enemy; Force enemy units to attack; Attack more than once; Absorb one hit (shield, ward); Temporary bonus (this turn only)
-- Decks: Shields to win (gwent, x16.4); SHIELD & SWORD WITCHERS (gwent, x14.3); Radovid shields! (gwent, x13.6); Shields UP (gwent, x11.6); Shieldwall: Roegner Ale Damsel (gwent, x9.2); РЫЦАРИ(гайд)/Knights (gwent, x8.5); The Best Northern Realms Deck! (gwent, x8.2); Spellweaver Кудесники (gwent, x8.0)
-- Factions: Northern Realms (gwent, 2%, x3.7); Demacia (runeterra, 18%, x3.3); Silent (sts1, 4%, x2.1); Ironclad (sts1, 3%, x1.8); Lyonar Kingdoms (duelyst, 4%, x1.7)
-
-## G30: 3 concepts; 263 decks fit (duelyst 36, faeria 59, gwent 39, inscryption 4, marvel_snap 15, monster_train 4, runeterra 68, stormbound 38)
-- Concepts: Attack gain (+attack); Defence gain (+health); Stats matter (highest, lowest)
-- Decks: Long-horned Barrensky OTK (faeria, x5.3); Backstab only (duelyst, x3.3); Hyperfurnace (duelyst, x3.2); Reva Baconator (duelyst, x3.1); [Pax East Blitz] GY Faeries (faeria, x3.0); Manfurnace (duelyst, x3.0); Fiora Zed (runeterra, x3.0); Mobility Man (duelyst, x3.0)
-- Factions: Magick (inscryption, 12%, x3.9); Magmar Aspects (duelyst, 13%, x1.8); Lyonar Kingdoms (duelyst, 12%, x1.7); Green (faeria, 17%, x1.7); Targon (runeterra, 14%, x1.5)
-
-## G31: 3 concepts; 194 decks fit (duelyst 18, faeria 5, gwent 77, into_the_breach 9, marvel_snap 24, monster_train 1, runeterra 54, sts1 6)
-- Concepts: Order of my plays matters (combo); My spells and abilities get stronger; Enough spells played
-- Decks: Event Wishes (faeria, x68.4); Noble Grandeur (faeria, x62.6); Triumvirate [Metashaker #3] [UPDATED] (faeria, x57.7); Abstract art (faeria, x56.0); Ruunin's Illusion (faeria, x55.2); Mantra (EurasianJay) (duelyst, x25.9); Mantra (Fanggod, variant 2) (duelyst, x25.1); Mantra (Niklaren) (duelyst, x24.3)
-- Factions: Blue (faeria, 1%, x6.1); Ionia (runeterra, 2%, x4.2); Songhai Empire (duelyst, 1%, x3.4); Piltover & Zaun (runeterra, 1%, x2.4); Northern Realms (gwent, 1%, x2.1)
-
-## G32: 3 concepts; 179 decks fit (duelyst 24, gwent 49, inscryption 1, marvel_snap 15, monster_train 1, runeterra 59, stormbound 28, sts1 2)
-- Concepts: Damaged unit matters; Discard my own cards; When a card is discarded
-- Decks: Silent Discard (gamersdecide) (sts1, x18.5); Remnant Stygian totems (monster_train, x18.0); Act II Grimora (gamersdecide, core) (inscryption, x17.0); TurboSerq (stormbound, x13.4); Patricidal Fury: RnR Seagulls Sove Compass (gwent, x12.4); Intens Bonecrusher Deck (duelyst, x11.9); Ghost Azalea (duelyst, x11.3); ПИРАТЫ(гайд)/pirates (gwent, x10.9)
-- Factions: Undead (inscryption, 1%, x10.0); Ranged (into_the_breach, 1%, x6.7); Skellige (gwent, 5%, x6.5); Silent (sts1, 8%, x3.4); Lyonar Kingdoms (duelyst, 0%, x3.1)
-
-## G33: 3 concepts; 297 decks fit (duelyst 50, faeria 59, gwent 77, marvel_snap 22, monster_train 2, runeterra 54, stormbound 33)
-- Concepts: Board wipe; Destroy outright; Fill my own discard pile (self-mill)
-- Decks: Winterave (stormbound, x18.3); Implosion Tournament 05/2023 Winning deck (stormbound, x14.1); Maokai Nautilus (runeterra, x13.1); [MC XII] GY Haste Combo (faeria, x12.6); Heart of the Sea (stormbound, x12.0); FMC2 Y Fly Control by Donpork (faeria, x11.2); Tryndamere Volibear (runeterra, x11.1); Budget F2P to Godrank with Yellow Rush (faeria, x10.3)
-- Factions: Watcher (sts1, 0%, x5.2); Pandora (faeria, 3%, x5.1); Shadow Isles (runeterra, 4%, x4.6); Yellow (faeria, 2%, x2.6); Abyssian Host (duelyst, 3%, x2.1)
-
-## G34: 3 concepts; 276 decks fit (duelyst 50, faeria 65, gwent 50, marvel_snap 22, monster_train 3, runeterra 53, stormbound 33)
-- Concepts: Board wipe; Destroy outright; Gain resources (ramp)
-- Decks: Winterave (stormbound, x18.3); Implosion Tournament 05/2023 Winning deck (stormbound, x14.1); Heart of the Sea (stormbound, x12.0); Husky (faeria, x11.7); Tryndamere Volibear (runeterra, x11.6); [MC XII] GY Haste Combo (faeria, x11.2); Heimerdinger Norra (runeterra, x10.7); FMC2 Y Fly Control by Donpork (faeria, x10.0)
-- Factions: Syndicate (gwent, 11%, x5.2); Pandora (faeria, 4%, x5.1); Shadow Isles (runeterra, 4%, x4.3); Watcher (sts1, 0%, x2.6); Yellow (faeria, 2%, x2.2)
-
-## G35: 3 concepts; 251 decks fit (duelyst 49, faeria 86, inscryption 3, into_the_breach 2, monster_train 5, runeterra 73, stormbound 33)
-- Concepts: Attack right away; My unit fights a chosen enemy; Temporary bonus (this turn only)
-- Decks: Run: Rift Walkers (Sevastromo, Unfair) (into_the_breach, x15.1); Booming Rush (stormbound, x11.5); Frostschutzmittel (stormbound, x11.5); Odd & Even Tournament 09/2020 deck (stormbound, x9.3); Heat Sinkers (into_the_breach, x7.9); Run'n'gun (stormbound, x7.3); YG Events (faeria, x7.2); BGr Discovery (wild reavers!) (faeria, x6.5)
-- Factions: Yellow (faeria, 2%, x2.0); Demacia (runeterra, 6%, x2.0); Vetruvian Imperium (duelyst, 3%, x2.0); Magmar Aspects (duelyst, 2%, x1.7); Noxus (runeterra, 5%, x1.5)
-
-## G36: 3 concepts; 194 decks fit (duelyst 31, faeria 36, gwent 43, marvel_snap 22, monster_train 3, runeterra 54, sts1 5)
-- Concepts: Order of my plays matters (combo); When a spell is played; Enough spells played
-- Decks: Simlas Francesca and Alzur! (gwent, x34.3); Альзур Партизан (gwent, x29.2); Накер Альзур GN Alzur (Pajabol) (gwent, x27.9); Event Wishes (faeria, x18.0); Blue Yellow Events (Pew Pew) (faeria, x16.9); Yellow Events (Seasonal Cup Aurora 2020) (faeria, x16.6); Ryze (runeterra, x16.0); PewPew (faeria, x14.9)
-- Factions: Blue (faeria, 1%, x3.8); Songhai Empire (duelyst, 4%, x3.3); Ionia (runeterra, 4%, x3.2); Piltover & Zaun (runeterra, 4%, x3.2); Scoiatael (gwent, 1%, x2.6)
-
-## G37: 3 concepts; 131 decks fit (duelyst 25, gwent 52, into_the_breach 4, marvel_snap 5, monster_train 2, stormbound 41, sts1 2)
-- Concepts: Clog the opponent's board; Damage over time (poison, burn); Lifesteal / drain
-- Decks: Sera Control Maximus (marvel_snap, x19.2); Ghost Azalea (duelyst, x16.8); Bounce Bishop (marvel_snap, x16.4); Wong Namora (marvel_snap, x16.0); Thanos Control Okoye (marvel_snap, x15.4); Save your MO MMR in 2022! Incubus Vamps is BUSTED! (gwent, x14.9); VAMPIRES ARE BACK (gwent, x13.1); Merge Man-Spider (marvel_snap, x13.0)
-- Factions: Shadowfen (stormbound, 8%, x7.3); Abyssian Host (duelyst, 0%, x5.8); Silent (sts1, 5%, x4.4); Songhai Empire (duelyst, 0%, x3.6); Beast (inscryption, 0%, x2.0)
-
-## G38: 3 concepts; 148 decks fit (duelyst 43, faeria 5, gwent 16, marvel_snap 24, runeterra 55, sts1 5)
-- Concepts: Send an enemy unit back (bounce); Order of my plays matters (combo); Enough spells played
-- Decks: Event Wishes (faeria, x68.4); Noble Grandeur (faeria, x62.6); Triumvirate [Metashaker #3] [UPDATED] (faeria, x57.7); Abstract art (faeria, x56.0); Ruunin's Illusion (faeria, x55.2); Doulbe Cross: Ivo Microassimilate 2500+ (gwent, x35.7); Ryze (runeterra, x24.3); СОЛДАТЫ 9.5 / SOLDIERS 9.5 (gwent, x21.1)
-- Factions: Ionia (runeterra, 4%, x6.3); Blue (faeria, 1%, x6.1); Nilfgaard (gwent, 0%, x3.7); Vanar Kindred (duelyst, 1%, x2.6); Songhai Empire (duelyst, 1%, x2.2)
-
-## G39: 3 concepts; 271 decks fit (duelyst 45, gwent 106, marvel_snap 33, runeterra 48, stormbound 39)
-- Concepts: Send an enemy unit back (bounce); Return my unit from the board to hand; Silence (abilities removed)
-- Decks: Kennen Ahri (2) (runeterra, x13.6); Kennen Ahri (runeterra, x11.8); TWO SCENARIOS (JOIN THE CULT) (gwent, x10.7); Ahri Katarina (runeterra, x10.7); Resurgence Tournament 07/2023 Winning deck (stormbound, x10.1); Kennen Ahri (5) (runeterra, x9.6); Kennen Ahri (3) (runeterra, x9.5); Karma Zoe (runeterra, x9.4)
-- Factions: Ionia (runeterra, 6%, x6.8); Winter (stormbound, 4%, x5.1); Nilfgaard (gwent, 1%, x3.7); Vetruvian Imperium (duelyst, 1%, x2.3); Bandle City (runeterra, 1%, x1.4)
-
-## G40: 3 concepts; 108 decks fit (duelyst 40, gwent 1, inscryption 3, marvel_snap 13, runeterra 51)
-- Concepts: Attach or merge onto a unit; When another unit leaves play; Back to hand when it dies or leaves play
-- Decks: Sihil NG Сигилль НГ (gwent, x300.0); Morgana Pantheon (runeterra, x17.0); Pantheon Yuumi (runeterra, x17.0); Fiora Vayne (runeterra, x14.2); Merge Man-Spider (marvel_snap, x13.3); Akshan Jack (runeterra, x12.9); Akshan Morgana (runeterra, x11.8); Samira Akshan (2) (runeterra, x11.0)
-- Factions: Vetruvian Imperium (duelyst, 1%, x5.1); Skellige (gwent, 0%, x3.6); Technology (inscryption, 1%, x2.3); Bandle City (runeterra, 4%, x1.7); Shurima (runeterra, 2%, x0.9)
-
-## G41: 3 concepts; 21 decks fit (duelyst 3, faeria 3, monster_train 2, runeterra 12, stormbound 1)
-- Concepts: Neighbours matter (adjacency); Unit; Cheap unit
-- Decks: post traumatic spirittheft disorder (faeria, x2.3); Gnar Ziggs (runeterra, x1.8); Ziggs Sivir (runeterra, x1.8); The Hand of Pirates (runeterra, x1.8); Darius Jinx (runeterra, x1.7); Poppy Ziggs (runeterra, x1.7); Elise (runeterra, x1.7); Remnant Awoken Reform (Legion of Wax) (monster_train, x1.6)
-- Factions: Prime (into_the_breach, 15%, x1.2); Brute (into_the_breach, 14%, x1.2); Swarm (stormbound, 37%, x1.2); Piltover & Zaun (runeterra, 18%, x1.1); Bandle City (runeterra, 18%, x1.1)
-
-## G42: 3 concepts; 156 decks fit (duelyst 14, faeria 69, gwent 2, runeterra 71)
-- Concepts: My unit fights a chosen enemy; Force enemy units to attack; Strikes with its defence
-- Decks: THIS IS MY NEW FAVORITE NILFGAARD DECK (gwent, x169.3); Накер Краснолюды Nekker Dwarves (gwent, x130.7); Midrange Vaath (duelyst, x15.8); Eggs (Niklaren) (duelyst, x15.8); Eggs (Seedy) (duelyst, x15.5); Cascadehorn (duelyst, x15.2); Deci-Spikes (AlphaCentury) (duelyst, x14.7); The Definitive Divine Bond (duelyst, x14.5)
-- Factions: Lyonar Kingdoms (duelyst, 0%, x4.6); Demacia (runeterra, 6%, x4.0); Scoiatael (gwent, 0%, x3.5); Magmar Aspects (duelyst, 0%, x2.1); Blue (faeria, 1%, x2.0)
-
-## G43: 11 concepts; 17 decks fit (faeria 7, monster_train 2, runeterra 4, sts1 4)
-- Concepts: Neighbours matter (adjacency); Can't attack (my own unit); Restore health (heal); Expensive card; Can't move (root); Silence (abilities removed); Taunt (enemies must attack it); Unit; Expensive unit; Strong for its cost; Tough for its cost
-- Decks: Ironclad Barricade (Steam, Jeff) (sts1, x2.2); Ironclad Exhaust (gamersdecide) (sts1, x2.1); Awoken rage (Adaptive Mutation) (monster_train, x1.9); Watcher Omniscience (slaythespire.info) (sts1, x1.7); Defect Snecko Eye (gamersdecide) (sts1, x1.7); Green Rush (SO1, first place) (faeria, x1.6); Draven Darius (runeterra, x1.6); 21 hour to godrank (faeria, x1.6)
-- Factions: Ironclad (sts1, 14%, x1.5); Watcher (sts1, 14%, x1.5); Red (faeria, 55%, x1.2); Ranged (into_the_breach, 22%, x1.2); Noxus (runeterra, 38%, x1.1)
-
-Groups no faction fits: G41, G43.
-
-Factions that fit no group: Brute (into_the_breach), Prime (into_the_breach).
+Factions that fit no group: Abyssian Host (duelyst), Lyonar Kingdoms (duelyst), Magmar Aspects (duelyst), Vetruvian Imperium (duelyst), Green (faeria), Yellow (faeria), Northern Realms (gwent), Scoiatael (gwent), Skellige (gwent), Beast (inscryption), Undead (inscryption), Brute (into_the_breach), Prime (into_the_breach), Ranged (into_the_breach), Science (into_the_breach), Bilgewater (runeterra), Noxus (runeterra), Targon (runeterra), Ironclad (stormbound), Swarm (stormbound), Ironclad (sts1).
