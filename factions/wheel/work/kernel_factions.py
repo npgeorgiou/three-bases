@@ -1,26 +1,51 @@
-"""Experiment (not agreed): factions built from halves of Kaptain's deck archetypes (factions/wheel/deck_archetypes.tsv).
-python3 factions/wheel/work/kernel_factions.py [N]  (from the repo; N factions, default 5) -> factions/wheel/work/kernel_factions.md
-1. A half: one part of a deck archetype (combo, control_combo and extra_turns are off the list). Each deck archetype is cut
-   in two at the two parts real cards link most (strong links of step 4); its half's concept is the part's concept with
-   the most strong links into the other half, among concepts 10+ decks lean on (ties: more decks; Claude's).
-2. The N factions make N(N-1)/2 pairs; each pair gets one deck archetype, one half to each faction, so each faction holds
-   N-1 halves, its kernels. A seeded search picks the deck archetypes and their sides: the most strong card links
-   between the two halves of every pair and inside every faction's kernels, no kernel concept in two factions (Claude's).
-3. Each faction is filled out from its decks (make_faction.py's rule: the decks that lean on a kernel, the concepts they
-   lean on 3 times as often as their games' decks and by 8% of them), up to OWN concepts, kernels first.
-4. Card links split them: an engine has a strong card link with another of the faction's concepts, a brick has none.
-5. Checks: two factions share at most half of their concepts; per pair, the strong card links between their concepts and
-   the deck archetypes they can play together (a half of it in each)."""
-import csv, json, math, os, random, sys
+"""Experiment (not agreed): factions whose kernel is what the faction DOES (Kaptain, 19 Nov 2026), in plain words.
+python3 factions/wheel/work/kernel_factions.py  (from the repo, a few seconds) -> factions/wheel/work/kernel_factions.md
+1. Each identity (IDENTITIES, Claude's) names families or concepts of library/concept_tree.txt; its kernel is their usable
+   concepts (work/concepts.tsv) that are effects, never a trigger, a condition or a drawback (but for Eats its own), that MIN_LEAN+ decks lean on, the KERNEL
+   most leaned on. A concept goes to the first identity that names it.
+2. Filled out from its decks (make_faction.py's rule: the decks that lean on a kernel concept; the concepts they lean on
+   LIFT times as often as their games' decks and by SHARE of them), up to OWN concepts, kernel first, no other faction's
+   kernel concept.
+3. Card links split them: an engine has a strong card link (step 4) with another of the faction's concepts; a brick none.
+4. The answers (work/answer_concepts.tsv): per question the ways its concepts give ('+' all needed, '|' any one).
+5. Per pair: concepts shared, strong card links between their own concepts, and the deck archetypes of
+   factions/wheel/deck_archetypes.tsv they can play together (each covers a part the other lacks, and together every
+   engine part). A partner: 1+ deck archetype and PARTNER_LINKS+ links (Claude's)."""
+import csv, json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, '..', '..', '..')
 sys.path.insert(0, HERE)
 import step3_groups
-N = int(sys.argv[1]) if len(sys.argv) > 1 else 5
-OWN, MIN_LEAN, LIFT, SHARE, MIN_DECKS = 12, 10, 3.0, 0.08, 3  # Claude's
+OWN, KERNEL, MIN_LEAN, LIFT, SHARE, MIN_DECKS, PARTNER_LINKS = 12, 6, 10, 3.0, 0.08, 3, 5  # Claude's
 OFF = ('combo', 'control_combo', 'extra_turns')
+IDENTITIES = [  # (name, what it does, families or concepts of the concept tree); Claude's
+    ("Can't be broken", 'its units do not die', ['protection', 'heal', 'defence_gain']),
+    ('Kills brutally', 'removes enemy units, many and hard', ['removal', 'damage']),
+    ('Messes you up', "breaks the enemy's units and plans", ['disruption', 'suppress', 'debuff', 'steal']),
+    ('Moves', 'wins by where its units and his stand', ['positional']),
+    ('Thrives on spells', 'spells that get stronger, cheaper and more of them', ['spell_power', 'card_advantage', 'cost_reduction', 'cost_set']),
+    ('Waits', 'gets bigger every round, then plays huge cards', ['base_resource_gain', 'resource_gain', 'high_cost', 'countdown']),
+    ('Swarms', 'fills the board with many units', ['summon', 'copy', 'free_play']),
+    ('Grows', 'its units get bigger and bigger', ['buff', 'in_hand_buff']),
+    ('Comes back', 'what it loses returns', ['revive', 'return_to_hand', 'recycle']),
+    ('Eats its own', 'kills and spends its own units and cards for power', ['sacrifice', 'friendly_fire', 'self_destruct', 'discard']),
+]
 D = json.load(open(step3_groups.FILE, encoding='utf-8'))
 plain, decks, UNIT = D['plain'], D['decks'], set(D['unit'])
+tree, facet = {}, {}
+for line in open(os.path.join(ROOT, 'library/concept_tree.txt'), encoding='utf-8'):
+    if line.startswith('#') or '|' not in line: continue
+    p = [x.strip() for x in line.split('|')]
+    tree[p[0]] = [q for q in p[3].split(',') if q]; facet[p[0]] = p[2]
+usable = {r['concept'] for r in csv.DictReader(open(os.path.join(HERE, 'concepts.tsv'), encoding='utf-8'), delimiter='\t') if r['kind'] == 'usable'}
+def under(x):
+    out, grew = {x}, True
+    while grew:
+        grew = False
+        for k, ps in tree.items():
+            if k not in out and any(p in out for p in ps): out.add(k); grew = True
+    return out
+drawbacks = under('drawback')
 lean = {}
 for d in decks:
     for c in d['z']: lean[c] = lean.get(c, 0) + 1
@@ -30,74 +55,19 @@ for r in csv.DictReader(open(os.path.join(ROOT, 'library/cards_db/wheel/concept_
     if cards >= 1.2 or (rare >= 3 and level >= 1): strong[frozenset((r['a'], r['b']))] = (cards, r['texts'].split(' | ')[0])
 def linked(a, b): return a != b and frozenset((a, b)) in strong
 
-parts = {}
-for r in csv.DictReader(open(os.path.join(HERE, '..', 'deck_archetypes.tsv'), encoding='utf-8'), delimiter='\t'):
-    if r['key'] in OFF: continue
-    parts.setdefault(r['key'], (r['name'], []))[1].append((r['part'], [c for c in r['concepts'].split(',') if c]))
-halves = {}  # deck archetype -> ((part name, concept), (part name, concept), links between the halves)
-for k, (name, ps) in parts.items():
-    best = None
-    for i in range(len(ps)):
-        for j in range(i + 1, len(ps)):
-            n = sum(linked(a, b) for a in ps[i][1] for b in ps[j][1])
-            if n and (best is None or n > best[0]): best = (n, i, j)
-    if not best: continue
-    _, i, j = best
-    def pick(mine, other):
-        cs = [c for c in mine if lean.get(c, 0) >= MIN_LEAN]
-        return max(cs, key=lambda c: (sum(linked(c, o) for o in other), lean[c])) if cs else None
-    a, b = pick(ps[i][1], ps[j][1]), pick(ps[j][1], ps[i][1])
-    if a and b and a != b: halves[k] = ((ps[i][0], a), (ps[j][0], b))
-
-pairs = [(x, y) for x in range(N) for y in range(x + 1, N)]
-def kernels(state):
-    ks = [[] for _ in range(N)]
-    for (x, y), (k, flip) in zip(pairs, state):
-        h = halves[k]
-        ks[x].append((k, h[flip])); ks[y].append((k, h[1 - flip]))
-    return ks
-def score(state):
-    if len({k for k, _ in state}) < len(state): return -1e9
-    ks = kernels(state)
-    seen, s = {}, 0.0
-    for f, kk in enumerate(ks):
-        cs = [c for _, (_, c) in kk]
-        if len(set(cs)) < len(cs): s -= 50
-        for c in set(cs):
-            if c in seen: s -= 50
-            seen[c] = f
-        s += sum(linked(a, b) for i, a in enumerate(cs) for b in cs[i + 1:])
-    for k, _ in state:
-        a, b = halves[k][0][1], halves[k][1][1]
-        s += 2 if linked(a, b) else 0
-    return s
-rng = random.Random(7)
-keys = sorted(halves)
-best_state, best_s = None, -1e18
-for start in range(40):
-    state = [(k, rng.randrange(2)) for k in rng.sample(keys, len(pairs))]
-    s = score(state)
-    for _ in range(4000):
-        t = list(state); q = rng.randrange(len(t))
-        t[q] = (rng.choice(keys), rng.randrange(2)) if rng.random() < 0.7 else (t[q][0], 1 - t[q][1])
-        ts = score(t)
-        if ts >= s: state, s = t, ts
-    if s > best_s: best_state, best_s = state, s
-
 games = sorted({d['game'] for d in decks})
 game_n = {g: sum(d['game'] == g for d in decks) for g in games}
 game_lean = {g: {} for g in games}
 for d in decks:
     for c in d['z']: game_lean[d['game']][c] = game_lean[d['game']].get(c, 0) + 1
-def fill(kernel):
-    """make_faction.py's rule on the decks that lean on any of the kernels"""
+def fill(kernel, barred):
     ns = [n for n, d in enumerate(decks) if any(c in d['z'] for c in kernel)]
     by_game = {}
     for n in ns: by_game.setdefault(decks[n]['game'], []).append(n)
     use = {g: v for g, v in by_game.items() if len(v) >= MIN_DECKS} or by_game
     found = []
     for c in D['nodes']:
-        if c in UNIT or c in kernel: continue
+        if c in UNIT or c in kernel or c in barred: continue
         shares, lifts = [], []
         for g, v in use.items():
             s = sum(c in decks[n]['z'] for n in v) / len(v); base = game_lean[g].get(c, 0) / game_n[g]
@@ -105,37 +75,76 @@ def fill(kernel):
             if base: lifts.append(s / base)
         share, lift = sum(shares) / len(shares), (sum(lifts) / len(lifts) if lifts else 0)
         if share >= SHARE and lift >= LIFT: found.append((share, c))
-    return list(kernel) + [c for _, c in sorted(found, reverse=True)][:OWN - len(kernel)], len(ns)
+    return [c for _, c in sorted(found, reverse=True)][:OWN - len(kernel)], len(ns)
 
-ks = kernels(best_state)
-fac = []
-for f in range(N):
-    kernel = list(dict.fromkeys(c for _, (_, c) in ks[f]))
-    cs, nd = fill(kernel)
-    eng = [c for c in cs if any(linked(c, o) for o in cs)]
-    fac.append({'kernel': kernel, 'concepts': cs, 'decks': nd, 'engines': eng, 'halves': ks[f]})
-L = 'ABCDEFGHIJKLMNOPQRST'
-out = ['# Factions from halves of the deck archetypes (an experiment; made by kernel_factions.py)', '',
-       f'{N} factions; each pair of factions shares one deck archetype, one half in each. Kernels: the concept of each half.',
-       'Engines have a strong card link with another of the faction\'s concepts; bricks have none.', '']
-for f, x in enumerate(fac):
-    out.append(f"## Faction {L[f]} ({x['decks']} decks lean on its kernels)")
-    out.append('- Halves: ' + '; '.join(f"{parts[k][0]}: {p} ({plain[c]})" for k, (p, c) in x['halves']))
-    out.append('- Engines: ' + '; '.join(plain[c] + (' (kernel)' if c in x['kernel'] else '') for c in x['engines']))
-    out.append('- Bricks: ' + ('; '.join(plain[c] + (' (kernel)' if c in x['kernel'] else '') for c in x['concepts'] if c not in x['engines']) or 'none'))
+taken, fac = set(), []
+for name, does, fams in IDENTITIES:
+    cs = set().union(*(under(f) for f in fams)) & usable
+    own_cost = name == 'Eats its own'  # only this identity takes drawbacks (losses on my own side)
+    cs = [c for c in cs if facet.get(c) not in ('trigger', 'condition') and lean.get(c, 0) >= MIN_LEAN and c not in taken
+          and (own_cost or c not in drawbacks)]
+    kernel = sorted(cs, key=lambda c: -lean[c])[:KERNEL]
+    taken |= set(kernel)
+    fac.append({'name': name, 'does': does, 'kernel': kernel})
+all_kernel = set(taken)
+for x in fac:
+    extra, x['decks'] = fill(x['kernel'], all_kernel - set(x['kernel']))
+    x['concepts'] = x['kernel'] + extra
+    x['engines'] = [c for c in x['concepts'] if any(linked(c, o) for o in x['concepts'])]
+
+ways = {}
+for r in csv.DictReader(open(os.path.join(HERE, 'answer_concepts.tsv'), encoding='utf-8'), delimiter='\t'):
+    if r['answer'] in ('blind',): continue
+    need = [[a.split(' ')[0] for a in part.split('|')] for part in r['concepts'].split('+')]
+    ways.setdefault(r['answer'], []).append((r['way'], need))
+QUESTION = {'front': 'removes the front unit', 'backrow': 'mainly removes back-row units', 'lanes': 'mainly acts between lanes',
+            'holds': 'holds a base', 'cares': 'the game thing it cares about'}
+def answers(cs):
+    s = set(cs)
+    return {q: [w for w, need in ws if all(any(a in s for a in alt) for alt in need)] for q, ws in ways.items() if q in QUESTION}
+
+parts = {}
+for r in csv.DictReader(open(os.path.join(HERE, '..', 'deck_archetypes.tsv'), encoding='utf-8'), delimiter='\t'):
+    if r['key'] in OFF or r['kind'] != 'engine': continue
+    parts.setdefault(r['key'], (r['name'], []))[1].append(set(c for c in r['concepts'].split(',') if c))
+def playable(a, b):
+    sa, sb, out = set(a), set(b), []
+    for k, (name, ps) in parts.items():
+        if len(ps) < 2: continue
+        ca, cb = [bool(p & sa) for p in ps], [bool(p & sb) for p in ps]
+        if all(x or y for x, y in zip(ca, cb)) and any(x and not y for x, y in zip(ca, cb)) and any(y and not x for x, y in zip(ca, cb)):
+            out.append(name)
+    return out
+
+out = ['# Ten factions from what they do (an experiment; made by kernel_factions.py)', '',
+       'Kernel: the concepts that do what the faction does (concept tree families; effects only, never a trigger or a condition, '
+       f'{MIN_LEAN}+ decks leaning, the {KERNEL} most leaned on). The rest come from its decks. Engines link to another of its concepts '
+       'by real cards; bricks link to none. Answers: the ways its concepts already give; extras fill the rest later.', '']
+partners = {i: [] for i in range(len(fac))}
+pair_lines = []
+for i in range(len(fac)):
+    for j in range(i + 1, len(fac)):
+        a, b = fac[i]['concepts'], fac[j]['concepts']
+        shared = [c for c in a if c in b]
+        links = sorted({frozenset((p, q)) for p in a for q in b if linked(p, q) and p not in b and q not in a}, key=lambda s: -strong[s][0])
+        dk = playable(a, b)
+        if dk and len(links) >= PARTNER_LINKS: partners[i].append(j); partners[j].append(i)
+        ex = links[0] if links else None
+        pair_lines.append(f"- {fac[i]['name']} + {fac[j]['name']}: {len(links)} card links" +
+                          (f" (strongest {plain[list(ex)[0]]} + {plain[list(ex)[1]]}: \"{strong[ex][1]}\")" if ex else '') +
+                          f"; deck archetypes: {', '.join(dk) or 'none'}" + (f"; shares {len(shared)}" if shared else ''))
+for i, x in enumerate(fac):
+    out.append(f"## {x['name']}: {x['does']} ({x['decks']} decks lean on its kernel)")
+    out.append('- Kernel: ' + '; '.join(f'{plain[c]} ({lean[c]} decks)' for c in x['kernel']))
+    out.append('- From its decks: ' + ('; '.join(plain[c] for c in x['concepts'] if c not in x['kernel']) or 'nothing'))
+    out.append('- Engines: ' + ('; '.join(plain[c] for c in x['engines']) or 'none') + '. Bricks: ' +
+               ('; '.join(plain[c] for c in x['concepts'] if c not in x['engines']) or 'none'))
+    for q, ws in answers(x['concepts']).items():
+        out.append(f'- {QUESTION[q]}: ' + ('; '.join(ws) if ws else '**missing**'))
+    out.append(f"- Partners ({len(partners[i])}): " + (', '.join(fac[j]['name'] for j in partners[i]) or 'none'))
     out.append('')
 out.append('## Pairs')
-for (x, y), (k, _) in zip(pairs, best_state):
-    a, b = fac[x]['concepts'], fac[y]['concepts']
-    shared = [c for c in a if c in b]
-    links = sorted({frozenset((p, q)) for p in a for q in b if linked(p, q) and p not in b and q not in a}, key=lambda s: -strong[s][0])
-    both = [parts[d][0] for d, h in halves.items() if any(h[0][1] == c for c in a) and any(h[1][1] == c for c in b)
-            or any(h[1][1] == c for c in a) and any(h[0][1] == c for c in b)]
-    ex = links[0] if links else None
-    out.append(f"- {L[x]}+{L[y]}: shares {len(shared)} of {min(len(a), len(b))} concepts" + (' (over half)' if len(shared) * 2 > min(len(a), len(b)) else '') +
-               f"; {len(links)} strong card links between their own concepts" +
-               (f" (strongest: {' + '.join(plain[c] for c in ex)}, \"{strong[ex][1]}\")" if ex else '') +
-               f"; deck archetypes they can play: {', '.join(sorted(set(both)))} (planned: {parts[k][0]})")
+out += pair_lines
 text = '\n'.join(out) + '\n'
 open(os.path.join(HERE, 'kernel_factions.md'), 'w', encoding='utf-8').write(text)
 print(text)

@@ -34,11 +34,12 @@ The Elder Scrolls: Legends (todo.md item 12) runs step 3 again when done.
   -> `work/deck_groups_nmf_kernels.*`: stable 0.96, 80% of decks fit a group, 9 of 15 fit a real faction; 9 kernels lead
   their group, 3 sit low in it (summon, revive, adjacency), 3 are not in it (return_on_leave, in_hand_buff, movement); most
   groups match one of the 17. Whether the wheel uses kernels is Kaptain's.
-- Factions from halves of the deck archetypes (19 Nov 2026, an experiment, not agreed): `python3 factions/wheel/work/kernel_factions.py 5`
-  -> `work/kernel_factions.md`: 5 factions, each pair shares one deck archetype (a half in each). Every pair has 6-18
-  strong card links and 1-4 deck archetypes to play; only one pair shares half its concepts. But each faction holds 4
-  halves of 4 deck archetypes, so it has no one idea, and its decks add only 1-6 concepts (5-10 in all, not 12); with 20
-  factions each would hold 19 halves.
+- Factions from what they do (19 Nov 2026, an experiment, not agreed): `python3 factions/wheel/work/kernel_factions.py` ->
+  `work/kernel_factions.md`: 10 identities (Claude's: Can't be broken, Kills brutally, Messes you up, Moves, Thrives on
+  spells, Waits, Swarms, Grows, Comes back, Eats its own), each a kernel of concept-tree families. Kernels of 3-6
+  concepts, 161-329 decks each; their decks add 0-2 concepts (decks lean on about one concept each), so 3-8 in all, not 12;
+  Messes you up has no engines (its concepts link to nothing on cards); partners 2-9 (Can't be broken 2, Comes back 9);
+  some pairs with many card links fit no deck archetype on the list (Kills brutally + Moves: 25 links, none).
 - Runeterra's spell mana rule is written (`read/runeterra/game_rules.jsonl`) but not built into `cards.sqlite` yet.
 - `work/factions.py` and `work/concept_list.py` work (about 6 minutes; `concept_list.Library` scores a set of concepts
   in under a second). `factions.py` keeps the limits of step 6.1. Open before it runs: how many own concepts a
