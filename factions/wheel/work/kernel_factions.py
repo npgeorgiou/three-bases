@@ -5,7 +5,8 @@ python3 factions/wheel/work/kernel_factions.py  (from the repo, a few seconds) -
    and that MIN_LEAN+ decks lean on, at most KERNEL. A concept two identities want goes to the one whose other kernel
    concepts' decks hold it more. A kernel under MIN_KERNEL concepts is marked thin: Kaptain widens it.
 2. Engines come from card links: the usable concepts (triggers and conditions too) with a strong card link (step 4) to 2+ kernel
-   concepts, at most ENGINES, ranked by its kernel links times the share of its links that go to this kernel (so a
+   concepts, each of those links shown in ENGINE_GAMES+ games (one game's few pairs can be an accident: 8 of 10 such
+   pairs read on 20 Nov 2026 did not work together), at most ENGINES, ranked by its kernel links times the share of its links that go to this kernel (so a
    concept real cards link to everything does not join every faction, nor a rare one with two links). Bricks come from decks: the concepts the kernel's decks hold more
    often than their game's cards (share of cards against the game's share, per game with MIN_DECKS+ of its decks,
    averaged; DECK_LIFT+), held by HELD+ of those decks, that no strong card link joins to the kernel (another faction's kernel concepts too: support), the most first,
@@ -23,16 +24,16 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, '..', '..', '..')
 sys.path.insert(0, HERE)
 import step3_groups
-OWN, KERNEL, MIN_KERNEL, MIN_LEAN, ENGINES, MIN_DECKS = 12, 6, 4, 10, 4, 3  # Claude's
+OWN, KERNEL, MIN_KERNEL, MIN_LEAN, ENGINES, ENGINE_GAMES, MIN_DECKS = 12, 6, 4, 10, 4, 2, 3  # Claude's
 DECK_LIFT, HELD, MAX_BRICK, PARTNERS = 1.5, 0.25, 3, 5                              # Claude's; 5 partners: Kaptain
-IDENTITIES = [  # (name, what it does, families or concepts of the concept tree); Claude's
+IDENTITIES = [  # (name, what it does, families or concepts of the concept tree); Claude's. Waits and Swarms widened by what their decks hold most
     ("Can't be broken", 'its units do not die', ['protection', 'heal', 'defence_gain']),
     ('Kills brutally', 'removes enemy units, many and hard', ['removal', 'damage']),
     ('Messes you up', "breaks the enemy's units and plans", ['disruption', 'suppress', 'debuff', 'steal']),
     ('Moves', 'wins by where its units and his stand', ['positional']),
     ('Thrives on spells', 'spells that get stronger, cheaper and more of them', ['spell_power', 'card_advantage', 'cost_reduction', 'cost_set']),
-    ('Waits', 'gets bigger every round, then plays huge cards', ['base_resource_gain', 'resource_gain', 'high_cost']),
-    ('Swarms', 'fills the board with many units', ['summon', 'copy', 'free_play']),
+    ('Waits', 'gets bigger every round, clears the board, then plays huge cards', ['base_resource_gain', 'resource_gain', 'high_cost', 'board_wipe', 'selection']),
+    ('Swarms', 'fills the board with many units that hit at once', ['summon', 'copy', 'free_play', 'haste', 'attack_gain']),
     ('Grows', 'its units get bigger and bigger', ['buff', 'in_hand_buff']),
     ('Comes back', 'what it loses returns', ['revive', 'return_to_hand', 'recycle']),
     ('Eats its own', 'kills and spends its own units and cards for power', ['sacrifice', 'friendly_fire', 'self_destruct', 'discard']),
@@ -59,7 +60,9 @@ for d in decks:
 strong = {}
 for r in csv.DictReader(open(os.path.join(ROOT, 'library/cards_db/wheel/concept_links.tsv'), encoding='utf-8'), delimiter='\t'):
     cards, rare, level = float(r['cards'] or 0), float(r['rare'] or 0), float(r['level'] or 0)
-    if cards >= 1.2 or (rare >= 3 and level >= 1): strong[frozenset((r['a'], r['b']))] = (cards, r['texts'].split(' | ')[0])
+    if cards >= 1.2 or (rare >= 3 and level >= 1):
+        strong[frozenset((r['a'], r['b']))] = (cards, r['texts'].split(' | ')[0], int(float(r['games'] or 0)))
+def wide(a, b): return linked(a, b) and strong[frozenset((a, b))][2] >= ENGINE_GAMES  # shown in ENGINE_GAMES+ games
 def linked(a, b): return a != b and frozenset((a, b)) in strong
 reach = {c: max(1, sum(linked(c, o) for o in usable)) for c in usable}  # how many usable concepts real cards link it to
 game_tot = {g: sum(v.values()) for g, v in D['game_counts'].items()}
@@ -102,8 +105,8 @@ for x in fac:
 kernels = set().union(*(set(x['kernel']) for x in fac))
 for x in fac:
     k = x['kernel']
-    eng = [c for c in usable if c not in kernels and sum(linked(c, q) for q in k) >= 2]
-    eng = sorted(eng, key=lambda c: (-sum(linked(c, q) for q in k) ** 2 / reach[c], c))[:ENGINES]
+    eng = [c for c in usable if c not in kernels and sum(wide(c, q) for q in k) >= 2]
+    eng = sorted(eng, key=lambda c: (-sum(wide(c, q) for q in k) ** 2 / reach[c], c))[:ENGINES]
     x['decks'] = decks_of(k)
     lift = deck_lift(x['decks']); x['lift'] = lift
     held = {c: sum(decks[n]['counts'].get(c, 0) > 0 for n in x['decks']) / max(1, len(x['decks'])) for c in lift}
@@ -125,12 +128,12 @@ for x in fac:
 sys.path.insert(0, os.path.join(ROOT, 'library', 'cards_db'))
 here = os.getcwd(); os.chdir(os.path.join(ROOT, 'library', 'cards_db'))
 import archetype_map
-wanted = {frozenset((c, q)) for x in fac for c in x['from_links'] for q in x['kernel'] if linked(c, q)}
+wanted = {frozenset((c, q)) for x in fac for c in x['from_links'] for q in x['kernel'] if wide(c, q)}
 pair_of = archetype_map.card_pairs(wanted)[0]
 os.chdir(here)
 def behind(c, k):
     """the real card pair behind c's strongest link to the kernel k"""
-    q = max((q for q in k if linked(c, q)), key=lambda q: strong[frozenset((c, q))][0])
+    q = max((q for q in k if wide(c, q)), key=lambda q: strong[frozenset((c, q))][0])
     return plain[q], pair_of.get((frozenset((c, q)), ''), 'no card pair')
 ways = {}
 for r in csv.DictReader(open(os.path.join(HERE, 'answer_concepts.tsv'), encoding='utf-8'), delimiter='\t'):
@@ -178,7 +181,7 @@ for i, x in enumerate(fac):
     out.append('- From card links:' + ('' if x['from_links'] else ' nothing'))
     for c in x['from_links']:
         q, pair = behind(c, x['kernel'])
-        out.append(f"  - {plain[c]} ({sum(linked(c, o) for o in x['kernel'])} kernel links; strongest with {q}: {pair})")
+        out.append(f"  - {plain[c]} ({sum(wide(c, o) for o in x['kernel'])} kernel links; strongest with {q}: {pair})")
     out.append('- From decks: ' + ('; '.join(f"{plain.get(c, c)} x{x['lift'][c]:.1f}" for c in x['from_decks']) or 'nothing'))
     out.append(f"- {len(x['concepts'])} concepts. Engines: " + ('; '.join(plain.get(c, c) for c in x['engines']) or '**none: no engine pair**')
                + '. Bricks: ' + ('; '.join(plain.get(c, c) for c in x['concepts'] if c not in x['engines']) or 'none'))

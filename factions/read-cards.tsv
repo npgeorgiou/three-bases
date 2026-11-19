@@ -295,3 +295,23 @@ marvel_snap	Falcon	wheel step 7	returns my cheap cards to hand
 duelyst	Orbrider	wheel step 7	returns a nearby ally to hand
 gwent	Bjorn Stormursson	wheel step 7	moves itself back to hand
 inscryption	Ourobot	wheel step 7	comes back to hand when it dies
+monster_train	Soul Siphon	wheel (kernel factions)	wheel kernel factions: Pay later (overload, debt) with Make a unit stronger (buff): wrong: Neither card makes a unit pay later. Primordium's Eaten adds its stats to the eater, a buff only.
+monster_train	Primordium	wheel (kernel factions)	wheel kernel factions: Pay later (overload, debt) with Make a unit stronger (buff): wrong: Neither card makes a unit pay later. Primordium's Eaten adds its stats to the eater, a buff only.
+duelyst	Erratic Raptyr	wheel (kernel factions)	wheel kernel factions: Mill the opponent's deck with Bring back dead units (revive): wrong: Mnemovore mills the opponent's deck; Raptyr turns into an Egg after attacking, not back from dead. No reviva
+duelyst	Mnemovore	wheel (kernel factions)	wheel kernel factions: Mill the opponent's deck with Bring back dead units (revive): wrong: Mnemovore mills the opponent's deck; Raptyr turns into an Egg after attacking, not back from dead. No reviva
+runeterra	Cloudbringer's Grace	wheel (kernel factions)	wheel kernel factions: Force enemy units to attack with Deal damage: wrong: Neither card forces attacks. Cloudbringer's Grace grants Challenger; Obeyed Order deals 3 damage to a blocker or Nexus.
+runeterra	Obeyed Order	wheel (kernel factions)	wheel kernel factions: Force enemy units to attack with Deal damage: wrong: Neither card forces attacks. Cloudbringer's Grace grants Challenger; Obeyed Order deals 3 damage to a blocker or Nexus.
+stormbound	Conflicted Drakes	wheel (kernel factions)	wheel kernel factions: Clog the opponent's board with Damage to many at once: wrong: Hags clog the board on death; Drakes' damage hits on play only, so the link is incidental.
+stormbound	Dubious Hags	wheel (kernel factions)	wheel kernel factions: Clog the opponent's board with Damage to many at once: wrong: Hags clog the board on death; Drakes' damage hits on play only, so the link is incidental.
+duelyst	Circle of Desiccation	wheel (kernel factions)	wheel kernel factions: Cheat death (survive lethal) with Destroy outright: wrong: Nothing survives lethal: Khanuum-ka's Dying Wish summons a new one after death, and Circle destroys all.
+duelyst	Khanuum-ka	wheel (kernel factions)	wheel kernel factions: Cheat death (survive lethal) with Destroy outright: wrong: Nothing survives lethal: Khanuum-ka's Dying Wish summons a new one after death, and Circle destroys all.
+duelyst	Inner Focus	wheel (kernel factions)	wheel kernel factions: Ready a used unit again (untap) with Silence (abilities removed): wrong: Inner Focus reactivates a unit; Lightbender dispels spaces around it, not unit abilities, so no silence.
+duelyst	Lightbender	wheel (kernel factions)	wheel kernel factions: Ready a used unit again (untap) with Silence (abilities removed): wrong: Inner Focus reactivates a unit; Lightbender dispels spaces around it, not unit abilities, so no silence.
+gwent	Fulmar	wheel (kernel factions)	wheel kernel factions: Row-wide lasting effects (weather) with Put into play for free: right
+gwent	Tears of Siren	wheel (kernel factions)	wheel kernel factions: Row-wide lasting effects (weather) with Put into play for free: right
+gwent	Joachim de Wett	wheel (kernel factions)	wheel kernel factions: Give my units or cards to the opponent with Put into play for free: wrong: Rosa spawns an opponent-faction copy on the opposite row; Joachim plays your own top unit. Nothing pas
+gwent	Rosa and Edna var Attre	wheel (kernel factions)	wheel kernel factions: Give my units or cards to the opponent with Put into play for free: wrong: Rosa spawns an opponent-faction copy on the opposite row; Joachim plays your own top unit. Nothing pas
+monster_train	Wyldenten	wheel (kernel factions)	wheel kernel factions: Mark a target for later hits with Position and space: right
+monster_train	Icy Cilophyte	wheel (kernel factions)	wheel kernel factions: Mark a target for later hits with Position and space: right
+inscryption	Hydra	wheel (kernel factions)	wheel kernel factions: Reaches other lanes with More or faster base resource (ramp): wrong: Texts show only keyword names; neither card states lane reach or extra resources, so no link.
+inscryption	Raccoon	wheel (kernel factions)	wheel kernel factions: Reaches other lanes with More or faster base resource (ramp): wrong: Texts show only keyword names; neither card states lane reach or extra resources, so no link.
