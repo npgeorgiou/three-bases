@@ -1,6 +1,6 @@
 """A faction from one or two concepts, out of the NMF groups (deck_groups_nmf.json; run deck_groups_nmf.py first).
-python3 factions/wheel/work/make_faction.py "attach" ["discard"]  -> prints the faction and writes it to
-factions/wheel/work/made/<concepts>.md. A concept is named by its key or by words of its plain name.
+python3 factions/wheel/work/make_faction.py "attach" ["discard"] [--groups N]  -> prints the faction and writes it to
+factions/wheel/work/made/<concepts>.md (with --groups N: from deck_groups_nmf_N.json, written to <concepts>_N.md). A concept is named by its key or by words of its plain name.
 1. Each named concept: the decks that lean on it (score above the strong mark); its group is the one those decks mix in
    most. With one concept, the second group is the one those decks mix in most after it, lowered by the share of
    concepts it shares with the first (Claude's); with two, each concept brings its own group.
@@ -10,7 +10,11 @@ factions/wheel/work/made/<concepts>.md. A concept is named by its key or by word
 4. The real decks with the most of both groups, and the real factions that fit them best."""
 import json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
-D = json.load(open(os.path.join(HERE, 'deck_groups_nmf.json'), encoding='utf-8'))
+ARGS = [a for a in sys.argv[1:] if not a.startswith('--')]
+FORCED = sys.argv[sys.argv.index('--groups') + 1] if '--groups' in sys.argv else ''
+if FORCED: ARGS.remove(FORCED)
+SUFFIX = f'_{FORCED}' if FORCED else ''
+D = json.load(open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.json'), encoding='utf-8'))
 plain, groups, decks = D['plain'], {g['key']: g for g in D['groups']}, D['decks']
 CARRY = 0.30
 
@@ -29,7 +33,7 @@ def avg_mix(ns):
 
 out, names = [], []
 picked = []
-for word in sys.argv[1:3]:
+for word in ARGS[:2]:
     k, other = find(word)
     names.append(k)
     ns = leaning(k)
@@ -77,7 +81,7 @@ out.append('\n## Closest real factions (share of the group\'s concepts against t
 out.append('; '.join(f"{f['faction']} ({f['game']}, x{f['fit'][a]:.1f} {a}, x{f['fit'][b]:.1f} {b})" for f in facs))
 text = '\n'.join(out)
 os.makedirs(os.path.join(HERE, 'made'), exist_ok=True)
-path = os.path.join(HERE, 'made', re.sub(r'[^a-z0-9]+', '_', '_'.join(names).lower()).strip('_') + '.md')
+path = os.path.join(HERE, 'made', re.sub(r'[^a-z0-9]+', '_', '_'.join(names).lower()).strip('_') + SUFFIX + '.md')
 open(path, 'w', encoding='utf-8').write(f"# A faction from {', '.join(plain[k] for k in names)} (made by make_faction.py)\n\n" + text + '\n')
 print(text)
 print('\nwritten to', os.path.relpath(path, os.path.join(HERE, '..', '..', '..')))

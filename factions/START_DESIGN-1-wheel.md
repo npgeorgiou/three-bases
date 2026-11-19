@@ -125,19 +125,19 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       2008) against all the cards of its game (Claude's), as a z-score; above 1.96 the deck leans on it. Deck cards the
       library does not know are counted and reported, never guessed. Monster Train and Marvel Snap decks are in
       (Claude's).
-   3. Groups: NMF on the deck rows only, with the positive scores, each deck scaled to the same length (Claude's); each
-      game weighs the square root of its deck count. The first guess comes from the data (NNDSVD), so one run gives the
+   3. Groups: NMF on the deck rows only, with the positive scores; each game weighs the square root of its deck count. The first guess comes from the data (NNDSVD), so one run gives the
       result. The number of groups, from 14 (20 factions of 2 archetypes, each in at most 3 factions) to 30 (Claude's),
       is the one whose groups stay most alike when the run is repeated on 90% of the decks, 10 times (Claude's). A deck
-      fits a group that is at least 30% of its mix (Claude's).
+      fits a group that is at least 30% of its mix (Claude's). A second version with more groups is made with a set
+      number (`--groups N`): the most stable number above 20 (Claude's).
    4. Per group: its 10 heaviest concepts, each with the share of its decks that lean on it; its base concepts (more
       than half of its decks have them, more often than their game's decks, Claude's), like "Deal damage"; its unit
       numbers against their games; a group whose decks are 80% or more from one game is marked (Claude's).
    5. The real factions are never rows of the NMF. A faction fits its best 2 groups when its share of their concepts
       is at least twice its game's average (Claude's). The groups no faction fits, the factions that fit no group and
       the concepts in no group are listed.
-   **Kaptain agrees the groups before anything else.** `work/make_faction.py "<concept>" ["<concept>"]` makes a faction
-   from one or two concepts out of these groups (its header says how). The page `factions/wheel-groups.html` is made
+   **Kaptain agrees the groups before anything else.** `work/make_faction.py "<concept>" ["<concept>"] [--groups N]` makes a
+   faction from one or two concepts out of these groups (its header says how). The page `factions/wheel-groups.html` is made
    in its own chat: concept nodes placed by how often decks use them together, coloured by group; selecting a faction
    or a deck lights its concepts; building or changing a group by selecting nodes shows which decks and factions fit it.
 4. **The radii and how they work together** (`wheel/work/radii.tsv`). Every usable concept is put on one radius whose

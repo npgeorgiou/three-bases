@@ -1,14 +1,14 @@
 """Step 3 (START_DESIGN-1-wheel.md): the ways to play that decks lean on, by NMF; they become our factions' archetypes.
-Run from library/cards_db: python3 ../../factions/wheel/work/deck_groups_nmf.py  (about 2 minutes, 2 cores)
+Run from library/cards_db: python3 ../../factions/wheel/work/deck_groups_nmf.py [--groups N]  (about 2.5 minutes, 2 cores;
+ with --groups, N groups and no stability runs, a few seconds)
  -> factions/wheel/work/deck_groups_nmf.tsv (one row per group), deck_groups_nmf.md (the same in plain words) and
-    deck_groups_nmf.json (groups, decks and factions, read by make_faction.py).
+    deck_groups_nmf.json (groups, decks and factions, read by make_faction.py); with --groups N the files end in _N.
 1. Concepts: the usable concepts of concepts.tsv (a card counts each once; a parent only on cards none of its children
    carry), plus five unit concepts against the card's game: unit, cheap unit, expensive unit (axes.py), strong for its
    cost and tough for its cost (above the game's straight line of strength or defence by cost).
 2. Scores: every deck of decks.tsv (all its cards) and every real faction of axes.tsv, per concept: the log-odds ratio
    with a prior (Monroe et al. 2008) against all the cards of its game, as a z-score; above STRONG the deck leans on it.
-3. Groups: NMF on the deck rows only (scores below 0 set to 0, each deck scaled to the same length); each game weighs the
-   square root of its deck count. The first guess comes from the data (NNDSVD, Boutsidis and Gallopoulos 2008), so one
+3. Groups: NMF on the deck rows only (scores below 0 set to 0); each game weighs the square root of its deck count. The first guess comes from the data (NNDSVD, Boutsidis and Gallopoulos 2008), so one
    run gives the result. The number of groups (MIN_K to MAX_K) is the one whose groups stay most alike when the run is
    repeated on 90% of the decks, RESAMPLES times. A deck fits a group that is at least CARRY of its mix.
 4. Per group: its TOP heaviest concepts, with the share of its decks that lean on each; the base concepts (more than half of its decks have them,
@@ -99,7 +99,6 @@ facs = sorted({(r['game'], r['faction']) for r in csv.DictReader(open('axes.tsv'
 fcount = {(g, fa): sum((cv[i] for i, v in pools[g].items() if fa in v[3]), np.zeros(len(nodes))) for g, fa in facs}
 
 X = np.array([np.maximum(d['z'], 0) for d in decks])
-X = X / (np.linalg.norm(X, axis=1, keepdims=True) + 1e-12)  # every deck the same length: only its leaning counts
 per_game = collections.Counter(d['game'] for d in decks)
 w = np.array([np.sqrt(per_game[d['game']]) / per_game[d['game']] for d in decks]); w = w / w.mean()
 
@@ -141,11 +140,17 @@ def runs(k):
     rng = np.random.default_rng(k)  # the same 90% samples every time
     sims = [alike(full[1], nmf(np.sort(rng.choice(len(X), int(0.9 * len(X)), replace=False)), k)[1]) for _ in range(RESAMPLES)]
     return k, float(np.mean(sims)), full
-with multiprocessing.get_context('fork').Pool(2) as pool:
-    res = pool.map(runs, range(MIN_K, MAX_K + 1))
-stab = {k: s for k, s, _ in res}
-K = max(stab, key=lambda k: (round(stab[k], 3), k))
-W, H = next(r for k, _, r in res if k == K)
+FORCED = int(sys.argv[sys.argv.index('--groups') + 1]) if '--groups' in sys.argv else None
+SUFFIX = f'_{FORCED}' if FORCED else ''
+if FORCED:
+    stab, K = {}, FORCED
+    W, H = nmf(np.arange(len(X)), K)
+else:
+    with multiprocessing.get_context('fork').Pool(2) as pool:
+        res = pool.map(runs, range(MIN_K, MAX_K + 1))
+    stab = {k: s for k, s, _ in res}
+    K = max(stab, key=lambda k: (round(stab[k], 3), k))
+    W, H = next(r for k, _, r in res if k == K)
 mix = W / (W.sum(1, keepdims=True) + 1e-12)
 
 Z = np.array([d['z'] for d in decks])
@@ -190,7 +195,7 @@ left = [t for t in range(len(nodes)) if not any(t in gr['concepts'] for gr in gr
 name = lambda t: plain.get(nodes[t], nodes[t])
 def units_line(gr): return '; '.join(f'{UNIT[k]} x{v:.1f}' for k, v in gr['units'].items())
 
-with open(os.path.join(HERE, 'deck_groups_nmf.tsv'), 'w', encoding='utf-8') as o:
+with open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.tsv'), 'w', encoding='utf-8') as o:
     o.write('group\tdecks\tgames\tone_game\tconcepts\tbase_concepts\tunits\tfit_factions\n')
     for gr in groups:
         o.write('\t'.join([gr['key'], str(len(gr['fit'])), ','.join(f'{g}:{k}' for g, k in sorted(gr['games'].items())),
@@ -199,16 +204,17 @@ with open(os.path.join(HERE, 'deck_groups_nmf.tsv'), 'w', encoding='utf-8') as o
                            ','.join(f'{k}:{v:.2f}' for k, v in gr['units'].items()),
                            '; '.join(f'{g}:{fa}:{r:.2f}' for r, (g, fa) in gr['facs'])]) + '\n')
 
-with open(os.path.join(HERE, 'deck_groups_nmf.md'), 'w', encoding='utf-8') as o:
+with open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.md'), 'w', encoding='utf-8') as o:
     o.write('# Step 3: the ways to play that decks lean on, by NMF (made by deck_groups_nmf.py)\n\n')
-    o.write(f'{len(decks)} decks of {len(per_game)} games, {len(nodes)} concepts. {K} groups: the number from {MIN_K} to {MAX_K} '
-            f'whose groups stay most alike on 90% of the decks ({stab[K]:.2f}; 1 = the same). A deck fits a group that is '
+    o.write(f'{len(decks)} decks of {len(per_game)} games, {len(nodes)} concepts. {K} groups' +
+            (' (set by hand). ' if FORCED else f': the number from {MIN_K} to {MAX_K} whose groups stay most alike on 90% of '
+             f'the decks ({stab[K]:.2f}; 1 = the same). ') + f'A deck fits a group that is '
             f'{CARRY:.0%} or more of its mix. Concepts: the group\'s 10 heaviest, with the share of its decks that lean on each. '
             f'Base concepts: what more than half of its decks have. Units: against their games (x1 = as usual). A faction fits '
             f'its best {BEST} groups at {FIT:g} times its game\'s average share of their concepts ("x2").\n\n')
     o.write('Deck card names the library does not know: ' +
             (', '.join(f'{g} {k}' for g, k in sorted(missing.items()) if k) or 'none') + '.\n\n')
-    o.write('Stability by number of groups: ' + ', '.join(f'{k} {v:.2f}' for k, v in stab.items()) + '.\n\n')
+    if stab: o.write('Stability by number of groups: ' + ', '.join(f'{k} {v:.2f}' for k, v in stab.items()) + '.\n\n')
     for gr in groups:
         o.write(f"## {gr['key']}: {len(gr['fit'])} decks ({', '.join(f'{g} {k}' for g, k in sorted(gr['games'].items()))})"
                 + (' **one game**' if gr['one_game'] else '') + '\n')
@@ -234,6 +240,6 @@ json.dump({'nodes': nodes, 'plain': {k: plain.get(k, k) for k in nodes}, 'unit':
                       'z': {nodes[t]: round(float(v), 2) for t, v in enumerate(d['z']) if v > STRONG}} for n, d in enumerate(decks)],
            'factions': [{'game': g, 'faction': fa, 'fit': {gr['key']: round(gr['fratio'][(g, fa)], 2) for gr in groups}}
                         for g, fa in facs]},
-          open(os.path.join(HERE, 'deck_groups_nmf.json'), 'w', encoding='utf-8'))
+          open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.json'), 'w', encoding='utf-8'))
 print(len(decks), 'decks;', K, 'groups;', sum(gr['one_game'] for gr in groups), 'one game;', len(nofit), 'with no faction;',
       len(lonely), 'factions with no group;', len(left), 'concepts in no group; unknown deck names', sum(missing.values()))

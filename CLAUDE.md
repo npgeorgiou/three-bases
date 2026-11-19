@@ -49,7 +49,7 @@ Game source is `src/game/`, joined in `src/game/parts.txt` order by `python3 too
 - `python3 tools/find.py card <name>` — the card's data line and its summary lines.
 - `python3 tools/find.py where <identifier>` — definition and uses in the game code.
 - `python3 tools/find.py doc <text>` — matching lines in summary/ and factions/.
-- `python3 factions/wheel/work/make_faction.py "<concept>" ["<concept>"]` — a faction from one or two concepts out of the wheel's NMF groups ("make a faction with attaching"); written to `factions/wheel/work/made/`.
+- `python3 factions/wheel/work/make_faction.py "<concept>" ["<concept>"] [--groups 25]` — a faction from one or two concepts out of the wheel's NMF groups (15, or 25 with `--groups 25`) ("make a faction with attaching"); written to `factions/wheel/work/made/`.
 - `python3 tools/network_check.py factions/designs/<faction>.txt` — the network check of a faction design (synergies, cards, decks: setups per cash-in, cards in two synergies, needs with no maker, twins). Format in the tool's header.
 - `node tools/cardstats.js <letter>` — Benchmark games with the faction's decks; per card: games, plays, effects fired, win rate.
 - `node tools/net_byname_check.js` — a saved network still loads, by name, after the printed values or the rules' keyword list change.

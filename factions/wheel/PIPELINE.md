@@ -47,8 +47,10 @@ is written in that step's chat, from the rules of the step, and its line here is
   `factions/wheel/work/deck_groups_nmf.tsv` (per group: decks, games, concepts with the share of decks leaning on each,
   base concepts, unit numbers, factions that fit), `.md` (the same in plain words, with the stability per number of
   groups, unknown deck cards, concepts in no group, groups no faction fits and factions that fit no group) and `.json`.
-- `python3 factions/wheel/work/make_faction.py "attach" ["discard"]` (from the repo, a second) -> a faction from one or
-  two concepts, printed and written to `factions/wheel/work/made/<concepts>.md`.
+- `python3 ../../factions/wheel/work/deck_groups_nmf.py --groups 25` (a few seconds) -> `deck_groups_nmf_25.tsv`, `.md`,
+  `.json`: the version with more groups (25: the most stable number above 20).
+- `python3 factions/wheel/work/make_faction.py "attach" ["discard"] [--groups 25]` (from the repo, a second) -> a faction
+  from one or two concepts, printed and written to `factions/wheel/work/made/<concepts>[_25].md`.
 
 ## Step 4. The radii and how they work together
 - `work/radii.tsv`: every usable concept, the radius it goes on (key and name), the part of it that counts there, and
