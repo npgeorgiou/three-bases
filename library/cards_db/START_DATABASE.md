@@ -34,6 +34,8 @@ first and wait. Never invent rules or mechanics; mark suggestions as yours.
    Try a change on a copy of cards.sqlite first (drop the flat_ tables, then flat.build, flat.derive, refs.build, about
    2 minutes), put the copy in place of cards.sqlite and run `check_all.py --no-load` (every case of every game, not
    only the new ones), and start the build only when all pass.
+   A change that moves a few rows' concepts (one card, one rule's leftovers): change the rule in `flat.py` and make the
+   same change in cards.sqlite with one SQL update (flat_do, then flat_concept); check it with its case; no build.
 5. **Read cards like a player**: what does it need, who gives it that, what does it make, what does that card do. A keyword
    counts as a summon, play or trigger effect only if the game's glossary (vocab.tsv) says it goes off then (Gwent's Zeal: no; L27).
 6. **A check is done only when all its output was read.** Never sample less, skip a game or hand over because the output is
