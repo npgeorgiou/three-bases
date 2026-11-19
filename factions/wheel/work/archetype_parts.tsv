@@ -1,338 +1,337 @@
 key	name	part	kind	concepts
-G01	Deal damage + Damage to several separate targets	Deal damage	engine	damage
-G01	Deal damage + Damage to several separate targets	Damage to several separate targets	engine	multi_target_attack
-G01	Deal damage + Damage to several separate targets	Small repeatable damage	engine	ping
-G01	Deal damage + Damage to several separate targets	Damage to many at once	engine	aoe_damage
-G01	Deal damage + Damage to several separate targets	A unit levels up on the board	engine	level_up
-G01	Deal damage + Damage to several separate targets	Stat loss (-power, -health)	engine	stat_loss
-G01	Deal damage + Damage to several separate targets	Expensive card	engine	high_cost
-G01	Deal damage + Damage to several separate targets	Neighbours matter (adjacency)	engine	adjacency
-G01	Deal damage + Damage to several separate targets	Hits my own side too	engine	friendly_fire
-G01	Deal damage + Damage to several separate targets	Create new cards	brick	generate_cards
-G02	More or faster base resource (ramp) + Can't act at all (stun, freeze)	More or faster base resource (ramp)	engine	base_resource_gain
-G02	More or faster base resource (ramp) + Can't act at all (stun, freeze)	Can't act at all (stun, freeze)	engine	disable
-G02	More or faster base resource (ramp) + Can't act at all (stun, freeze)	Can't attack (my own unit)	engine	cant_attack
-G02	More or faster base resource (ramp) + Can't act at all (stun, freeze)	Silence (abilities removed)	engine	silence
-G02	More or faster base resource (ramp) + Can't act at all (stun, freeze)	Stat gain (+power, +health)	engine	stat_gain
-G02	More or faster base resource (ramp) + Can't act at all (stun, freeze)	Grows with what happened this game	engine	count_payoff
-G02	More or faster base resource (ramp) + Can't act at all (stun, freeze)	Disrupt the opponent's plans	engine	disruption
-G02	More or faster base resource (ramp) + Can't act at all (stun, freeze)	Can't attack (lock on an enemy)	engine	attack_lock
-G02	More or faster base resource (ramp) + Can't act at all (stun, freeze)	Expensive card	engine	high_cost
-G02	More or faster base resource (ramp) + Can't act at all (stun, freeze)	Position and space	engine	positional
-G02	More or faster base resource (ramp) + Can't act at all (stun, freeze)	Neighbours matter (adjacency)	engine	adjacency
-G02	More or faster base resource (ramp) + Can't act at all (stun, freeze)	Damage to many at once	engine	aoe_damage
-G02	More or faster base resource (ramp) + Can't act at all (stun, freeze)	Deal damage	engine	damage
-G03	Gain resources (ramp) + Destroy outright	Gain resources (ramp)	engine	resource_gain
-G03	Gain resources (ramp) + Destroy outright	Destroy outright	engine	destroy
-G03	Gain resources (ramp) + Destroy outright	Sacrifice my own units	engine	sacrifice
-G03	Gain resources (ramp) + Destroy outright	Hidden and revealed information	engine	information
-G03	Gain resources (ramp) + Destroy outright	Look at cards and pick (scry)	engine	selection
-G03	Gain resources (ramp) + Destroy outright	Cards cost less	engine	cost_reduction
-G03	Gain resources (ramp) + Destroy outright	Bring back dead units (revive)	engine	revive
-G03	Gain resources (ramp) + Destroy outright	Make a unit weaker (debuff)	engine	debuff
-G03	Gain resources (ramp) + Destroy outright	Deck contents matter	engine	deck_condition
-G03	Gain resources (ramp) + Destroy outright	Immune / can't be targeted	engine	immunity
-G03	Gain resources (ramp) + Destroy outright	Can't attack (my own unit)	engine	cant_attack
-G03	Gain resources (ramp) + Destroy outright	Deal damage	engine	damage
-G03	Gain resources (ramp) + Destroy outright	Counts / thresholds	engine	condition_count
-G03	Gain resources (ramp) + Destroy outright	Reuse my cards (shuffle back)	engine	recycle
-G03	Gain resources (ramp) + Destroy outright	Stats equal to a count	engine	variable_stats
-G03	Gain resources (ramp) + Destroy outright	Countdown	engine	countdown
-G04	My unit fights a chosen enemy + Attack right away	My unit fights a chosen enemy	engine	fight_enemy
-G04	My unit fights a chosen enemy + Attack right away	Attack right away	engine	attack_now
-G04	My unit fights a chosen enemy + Attack right away	Temporary bonus (this turn only)	engine	temporary_buff
-G04	My unit fights a chosen enemy + Attack right away	Strikes with its defence	engine	strikes_with_defence
-G04	My unit fights a chosen enemy + Attack right away	A unit levels up on the board	engine	level_up
-G04	My unit fights a chosen enemy + Attack right away	Extra turns or actions	engine	extra_turn
-G04	My unit fights a chosen enemy + Attack right away	Force enemy units to attack	engine	forced_attack
-G04	My unit fights a chosen enemy + Attack right away	When I play another card	engine	on_ally_play
-G04	My unit fights a chosen enemy + Attack right away	Attack more than once	engine	multi_attack
-G04	My unit fights a chosen enemy + Attack right away	Take less damage (armour)	engine	damage_reduction
-G04	My unit fights a chosen enemy + Attack right away	Absorb one hit (shield, ward)	engine	shield
-G05	Having a card in play or hand + Stat gain (+power, +health)	Having a card in play or hand	engine	card_presence_condition
-G05	Having a card in play or hand + Stat gain (+power, +health)	Stat gain (+power, +health)	engine	stat_gain
-G05	Having a card in play or hand + Stat gain (+power, +health)	Search the deck for a card (tutor)	engine	tutor
-G05	Having a card in play or hand + Stat gain (+power, +health)	Repeat or double triggers	engine	repeat_trigger
-G05	Having a card in play or hand + Stat gain (+power, +health)	My unit fights a chosen enemy	engine	fight_enemy
-G05	Having a card in play or hand + Stat gain (+power, +health)	Attack right away	engine	attack_now
-G05	Having a card in play or hand + Stat gain (+power, +health)	Expensive card	engine	high_cost
-G05	Having a card in play or hand + Stat gain (+power, +health)	Hits my own side too	engine	friendly_fire
-G05	Having a card in play or hand + Stat gain (+power, +health)	Neighbours matter (adjacency)	engine	adjacency
-G06	Return my unit from the board to hand + Send an enemy unit back (bounce)	Return my unit from the board to hand	engine	return_from_board
-G06	Return my unit from the board to hand + Send an enemy unit back (bounce)	Send an enemy unit back (bounce)	engine	bounce_enemy
-G06	Return my unit from the board to hand + Send an enemy unit back (bounce)	Silence (abilities removed)	engine	silence
-G06	Return my unit from the board to hand + Send an enemy unit back (bounce)	Neighbours matter (adjacency)	engine	adjacency
-G06	Return my unit from the board to hand + Send an enemy unit back (bounce)	Swap positions	engine	swap
-G06	Return my unit from the board to hand + Send an enemy unit back (bounce)	Turn an enemy into something weaker	engine	polymorph
-G06	Return my unit from the board to hand + Send an enemy unit back (bounce)	Steal from the opponent	engine	steal
-G06	Return my unit from the board to hand + Send an enemy unit back (bounce)	Temporary bonus (this turn only)	engine	temporary_buff
-G06	Return my unit from the board to hand + Send an enemy unit back (bounce)	Act the turn it arrives (haste, rush)	engine	haste
-G06	Return my unit from the board to hand + Send an enemy unit back (bounce)	Summon units / tokens	engine	summon
-G06	Return my unit from the board to hand + Send an enemy unit back (bounce)	Draw cards	engine	draw
-G06	Return my unit from the board to hand + Send an enemy unit back (bounce)	Can't attack (my own unit)	engine	cant_attack
-G06	Return my unit from the board to hand + Send an enemy unit back (bounce)	Destroy outright	engine	destroy
-G06	Return my unit from the board to hand + Send an enemy unit back (bounce)	Terrain / board features	engine	terrain
-G07	Hits my own side too + Restore health (heal)	Hits my own side too	engine	friendly_fire
-G07	Hits my own side too + Restore health (heal)	Restore health (heal)	engine	heal
-G07	Hits my own side too + Restore health (heal)	Damage to many at once	engine	aoe_damage
-G07	Hits my own side too + Restore health (heal)	Damaged unit matters	engine	condition_life
-G07	Hits my own side too + Restore health (heal)	When life or health is restored	engine	on_lifegain
-G07	Hits my own side too + Restore health (heal)	Small repeatable damage	engine	ping
-G07	Hits my own side too + Restore health (heal)	Bring back dead units (revive)	engine	revive
-G07	Hits my own side too + Restore health (heal)	Terrain / board features	engine	terrain
-G07	Hits my own side too + Restore health (heal)	Neighbours matter (adjacency)	engine	adjacency
-G07	Hits my own side too + Restore health (heal)	Can't attack (my own unit)	engine	cant_attack
-G07	Hits my own side too + Restore health (heal)	Draw cards	engine	draw
-G07	Hits my own side too + Restore health (heal)	Deal damage	engine	damage
-G08	When a spell is played + Order of my plays matters (combo)	When a spell is played	engine	on_spell
-G08	When a spell is played + Order of my plays matters (combo)	Order of my plays matters (combo)	engine	combo_sequence
-G08	When a spell is played + Order of my plays matters (combo)	Enough spells played	engine	spells_played_condition
-G08	When a spell is played + Order of my plays matters (combo)	Grows with what happened this game	engine	count_payoff
-G08	When a spell is played + Order of my plays matters (combo)	Cards cost less	engine	cost_reduction
-G08	When a spell is played + Order of my plays matters (combo)	Create new cards	engine	generate_cards
-G08	When a spell is played + Order of my plays matters (combo)	More or faster base resource (ramp)	engine	base_resource_gain
-G08	When a spell is played + Order of my plays matters (combo)	My spells and abilities get stronger	engine	spell_power
-G08	When a spell is played + Order of my plays matters (combo)	Draw cards	engine	draw
-G08	When a spell is played + Order of my plays matters (combo)	A unit levels up on the board	engine	level_up
-G08	When a spell is played + Order of my plays matters (combo)	Can't attack (my own unit)	engine	cant_attack
-G09	Discard my own cards + When a card is discarded	Discard my own cards	engine	discard
-G09	Discard my own cards + When a card is discarded	When a card is discarded	engine	on_discard
-G09	Discard my own cards + When a card is discarded	Bring back dead units (revive)	engine	revive
-G09	Discard my own cards + When a card is discarded	Cheat death (survive lethal)	engine	cheat_death
-G09	Discard my own cards + When a card is discarded	Draw cards	engine	draw
-G09	Discard my own cards + When a card is discarded	Position and space	engine	positional
-G09	Discard my own cards + When a card is discarded	Damaged unit matters	engine	condition_life
-G09	Discard my own cards + When a card is discarded	Hand size matters	engine	hand_size
-G09	Discard my own cards + When a card is discarded	Counts / thresholds	engine	condition_count
-G09	Discard my own cards + When a card is discarded	Create new cards	engine	generate_cards
-G09	Discard my own cards + When a card is discarded	Deal damage	engine	damage
+G01	Temporary bonus (this turn only) + Attack right away	Temporary bonus (this turn only)	engine	temporary_buff
+G01	Temporary bonus (this turn only) + Attack right away	Attack right away	engine	attack_now
+G01	Temporary bonus (this turn only) + Attack right away	When I play another card	engine	on_ally_play
+G01	Temporary bonus (this turn only) + Attack right away	Grows again and again	engine	permanent_growth
+G01	Temporary bonus (this turn only) + Attack right away	A unit levels up on the board	engine	level_up
+G01	Temporary bonus (this turn only) + Attack right away	Return my unit from the board to hand	engine	return_from_board
+G01	Temporary bonus (this turn only) + Attack right away	Defence gain (+health)	engine	defence_gain
+G02	Set a cost to a fixed number + Cards cost less	Set a cost to a fixed number	engine	cost_set
+G02	Set a cost to a fixed number + Cards cost less	Cards cost less	engine	cost_reduction
+G02	Set a cost to a fixed number + Cards cost less	Make a unit stronger (buff)	engine	buff
+G02	Set a cost to a fixed number + Cards cost less	Cost matters	engine	cost_condition
+G02	Set a cost to a fixed number + Cards cost less	Board wipe	engine	board_wipe
+G02	Set a cost to a fixed number + Cards cost less	Damage to many at once	engine	aoe_damage
+G02	Set a cost to a fixed number + Cards cost less	Set stats to a number	brick	stat_fixed
+G02	Set a cost to a fixed number + Cards cost less	More or faster base resource (ramp)	engine	base_resource_gain
+G02	Set a cost to a fixed number + Cards cost less	Can't attack (my own unit)	engine	cant_attack
+G02	Set a cost to a fixed number + Cards cost less	When I play another card	engine	on_ally_play
+G03	Having a card in play or hand + Repeat or double triggers	Having a card in play or hand	engine	card_presence_condition
+G03	Having a card in play or hand + Repeat or double triggers	Repeat or double triggers	engine	repeat_trigger
+G03	Having a card in play or hand + Repeat or double triggers	Variety matters (all different)	engine	variety_payoff
+G03	Having a card in play or hand + Repeat or double triggers	Keep my units alive (protection)	engine	protection
+G03	Having a card in play or hand + Repeat or double triggers	Stat gain (+power, +health)	engine	stat_gain
+G03	Having a card in play or hand + Repeat or double triggers	Transform my card into another	engine	transform
+G03	Having a card in play or hand + Repeat or double triggers	Block points that wear off	engine	block_armor
+G03	Having a card in play or hand + Repeat or double triggers	Mark a target for later hits	engine	mark_target
+G03	Having a card in play or hand + Repeat or double triggers	Strike back when attacked (counterattack, thorns)	engine	counterattack
+G03	Having a card in play or hand + Repeat or double triggers	My spells and abilities get stronger	engine	spell_power
+G03	Having a card in play or hand + Repeat or double triggers	Reuse my cards (shuffle back)	engine	recycle
+G03	Having a card in play or hand + Repeat or double triggers	Order of my plays matters (combo)	engine	combo_sequence
+G03	Having a card in play or hand + Repeat or double triggers	Enough spells played	engine	spells_played_condition
+G04	Discard my own cards + When a card is discarded	Discard my own cards	engine	discard
+G04	Discard my own cards + When a card is discarded	When a card is discarded	engine	on_discard
+G04	Discard my own cards + When a card is discarded	Draw cards	engine	draw
+G04	Discard my own cards + When a card is discarded	Bring back dead units (revive)	engine	revive
+G04	Discard my own cards + When a card is discarded	Cheat death (survive lethal)	engine	cheat_death
+G04	Discard my own cards + When a card is discarded	Position and space	engine	positional
+G04	Discard my own cards + When a card is discarded	Row-wide lasting effects (weather)	engine	row_effects
+G04	Discard my own cards + When a card is discarded	Hand size matters	engine	hand_size
+G04	Discard my own cards + When a card is discarded	Damaged unit matters	engine	condition_life
+G04	Discard my own cards + When a card is discarded	Counts / thresholds	engine	condition_count
+G04	Discard my own cards + When a card is discarded	When I play another card	engine	on_ally_play
+G04	Discard my own cards + When a card is discarded	Grows again and again	engine	permanent_growth
+G04	Discard my own cards + When a card is discarded	Deal damage	engine	damage
+G05	Hits my own side too + Damage to many at once	Hits my own side too	engine	friendly_fire
+G05	Hits my own side too + Damage to many at once	Damage to many at once	engine	aoe_damage
+G05	Hits my own side too + Damage to many at once	Restore health (heal)	engine	heal
+G05	Hits my own side too + Damage to many at once	Damaged unit matters	engine	condition_life
+G05	Hits my own side too + Damage to many at once	Board wipe	engine	board_wipe
+G05	Hits my own side too + Damage to many at once	Destroy outright	engine	destroy
+G05	Hits my own side too + Damage to many at once	When life or health is restored	engine	on_lifegain
+G05	Hits my own side too + Damage to many at once	Small repeatable damage	engine	ping
+G05	Hits my own side too + Damage to many at once	Bring back dead units (revive)	engine	revive
+G05	Hits my own side too + Damage to many at once	Neighbours matter (adjacency)	engine	adjacency
+G06	Silence (abilities removed) + Return my unit from the board to hand	Silence (abilities removed)	engine	silence
+G06	Silence (abilities removed) + Return my unit from the board to hand	Return my unit from the board to hand	engine	return_from_board
+G06	Silence (abilities removed) + Return my unit from the board to hand	Send an enemy unit back (bounce)	engine	bounce_enemy
+G06	Silence (abilities removed) + Return my unit from the board to hand	Swap positions	engine	swap
+G06	Silence (abilities removed) + Return my unit from the board to hand	Neighbours matter (adjacency)	engine	adjacency
+G06	Silence (abilities removed) + Return my unit from the board to hand	Restore health (heal)	engine	heal
+G06	Silence (abilities removed) + Return my unit from the board to hand	Can't act at all (stun, freeze)	engine	disable
+G06	Silence (abilities removed) + Return my unit from the board to hand	Can't attack (my own unit)	engine	cant_attack
+G06	Silence (abilities removed) + Return my unit from the board to hand	Terrain / board features	engine	terrain
+G06	Silence (abilities removed) + Return my unit from the board to hand	Can't move (root)	engine	immobilize
+G06	Silence (abilities removed) + Return my unit from the board to hand	Draw cards	engine	draw
+G06	Silence (abilities removed) + Return my unit from the board to hand	Create new cards	engine	generate_cards
+G06	Silence (abilities removed) + Return my unit from the board to hand	Destroy outright	engine	destroy
+G07	Draw cards + When a card is drawn	Draw cards	engine	draw
+G07	Draw cards + When a card is drawn	When a card is drawn	engine	on_draw
+G07	Draw cards + When a card is drawn	Reuse my cards (shuffle back)	engine	recycle
+G07	Draw cards + When a card is drawn	Make a unit stronger (buff)	engine	buff
+G07	Draw cards + When a card is drawn	Counts / thresholds	engine	condition_count
+G07	Draw cards + When a card is drawn	Cards cost less	engine	cost_reduction
+G07	Draw cards + When a card is drawn	Act the turn it arrives (haste, rush)	brick	haste
+G07	Draw cards + When a card is drawn	Can't attack (my own unit)	engine	cant_attack
+G07	Draw cards + When a card is drawn	Copy cards or units	engine	copy
+G07	Draw cards + When a card is drawn	Hand size matters	engine	hand_size
+G07	Draw cards + When a card is drawn	More or faster base resource (ramp)	engine	base_resource_gain
+G07	Draw cards + When a card is drawn	Create new cards	engine	generate_cards
+G08	More or faster base resource (ramp) + Can't attack (my own unit)	More or faster base resource (ramp)	engine	base_resource_gain
+G08	More or faster base resource (ramp) + Can't attack (my own unit)	Can't attack (my own unit)	engine	cant_attack
+G08	More or faster base resource (ramp) + Can't attack (my own unit)	Can't act at all (stun, freeze)	engine	disable
+G08	More or faster base resource (ramp) + Can't attack (my own unit)	Stat gain (+power, +health)	engine	stat_gain
+G08	More or faster base resource (ramp) + Can't attack (my own unit)	Switch stances or forms	engine	stances
+G08	More or faster base resource (ramp) + Can't attack (my own unit)	Grows with what happened this game	engine	count_payoff
+G08	More or faster base resource (ramp) + Can't attack (my own unit)	Disrupt the opponent's plans	engine	disruption
+G08	More or faster base resource (ramp) + Can't attack (my own unit)	Damage to many at once	engine	aoe_damage
+G08	More or faster base resource (ramp) + Can't attack (my own unit)	Having a card in play or hand	engine	card_presence_condition
+G08	More or faster base resource (ramp) + Can't attack (my own unit)	Can't attack (lock on an enemy)	engine	attack_lock
+G08	More or faster base resource (ramp) + Can't attack (my own unit)	Deal damage	engine	damage
+G08	More or faster base resource (ramp) + Can't attack (my own unit)	Neighbours matter (adjacency)	engine	adjacency
+G08	More or faster base resource (ramp) + Can't attack (my own unit)	Defence gain (+health)	engine	defence_gain
+G08	More or faster base resource (ramp) + Can't attack (my own unit)	Draw cards	engine	draw
+G09	Put into play for free + Give my units or cards to the opponent	Put into play for free	engine	free_play
+G09	Put into play for free + Give my units or cards to the opponent	Give my units or cards to the opponent	engine	donate
+G09	Put into play for free + Give my units or cards to the opponent	Where units can be placed	engine	placement_rules
+G09	Put into play for free + Give my units or cards to the opponent	Copy cards or units	engine	copy
+G09	Put into play for free + Give my units or cards to the opponent	Steal from the opponent	engine	steal
+G09	Put into play for free + Give my units or cards to the opponent	Hidden and revealed information	engine	information
+G09	Put into play for free + Give my units or cards to the opponent	Send an enemy unit back (bounce)	engine	bounce_enemy
+G09	Put into play for free + Give my units or cards to the opponent	Set stats to a number	engine	stat_fixed
+G09	Put into play for free + Give my units or cards to the opponent	Create new cards	engine	generate_cards
+G09	Put into play for free + Give my units or cards to the opponent	Make a unit weaker (debuff)	engine	debuff
+G09	Put into play for free + Give my units or cards to the opponent	Can't attack (my own unit)	engine	cant_attack
+G09	Put into play for free + Give my units or cards to the opponent	Summon units / tokens	engine	summon
+G09	Put into play for free + Give my units or cards to the opponent	Move my units (reposition)	engine	movement
+G09	Put into play for free + Give my units or cards to the opponent	Move enemy units (push, pull)	engine	forced_movement
+G09	Put into play for free + Give my units or cards to the opponent	Deal damage	engine	damage
 G10	Move my units (reposition) + Move enemy units (push, pull)	Move my units (reposition)	engine	movement
 G10	Move my units (reposition) + Move enemy units (push, pull)	Move enemy units (push, pull)	engine	forced_movement
-G10	Move my units (reposition) + Move enemy units (push, pull)	Position and space	engine	positional
-G10	Move my units (reposition) + Move enemy units (push, pull)	Act the turn it arrives (haste, rush)	engine	haste
 G10	Move my units (reposition) + Move enemy units (push, pull)	Hand size matters	engine	hand_size
-G10	Move my units (reposition) + Move enemy units (push, pull)	Neighbours matter (adjacency)	engine	adjacency
 G10	Move my units (reposition) + Move enemy units (push, pull)	Set stats to a number	engine	stat_fixed
+G10	Move my units (reposition) + Move enemy units (push, pull)	Position and space	engine	positional
+G10	Move my units (reposition) + Move enemy units (push, pull)	Destroy outright	engine	destroy
+G10	Move my units (reposition) + Move enemy units (push, pull)	Terrain / board features	engine	terrain
 G10	Move my units (reposition) + Move enemy units (push, pull)	Immune / can't be targeted	engine	immunity
-G10	Move my units (reposition) + Move enemy units (push, pull)	Can't attack (my own unit)	engine	cant_attack
-G10	Move my units (reposition) + Move enemy units (push, pull)	When a spell is played	engine	on_spell
-G10	Move my units (reposition) + Move enemy units (push, pull)	Expensive card	engine	high_cost
-G10	Move my units (reposition) + Move enemy units (push, pull)	Small repeatable damage	engine	ping
-G11	Absorb one hit (shield, ward) + Take less damage (armour)	Absorb one hit (shield, ward)	engine	shield
-G11	Absorb one hit (shield, ward) + Take less damage (armour)	Take less damage (armour)	engine	damage_reduction
-G11	Absorb one hit (shield, ward) + Take less damage (armour)	Taunt (enemies must attack it)	engine	taunt
-G11	Absorb one hit (shield, ward) + Take less damage (armour)	Hand size matters	engine	hand_size
-G11	Absorb one hit (shield, ward) + Take less damage (armour)	Can't attack (my own unit)	engine	cant_attack
-G11	Absorb one hit (shield, ward) + Take less damage (armour)	Act the turn it arrives (haste, rush)	brick	haste
-G11	Absorb one hit (shield, ward) + Take less damage (armour)	Stats matter (highest, lowest)	engine	stat_condition
-G12	Sacrifice my own units + Double or multiply stats	Sacrifice my own units	engine	sacrifice
-G12	Sacrifice my own units + Double or multiply stats	Double or multiply stats	engine	stat_multiply
-G12	Sacrifice my own units + Double or multiply stats	Bring back dead units (revive)	engine	revive
-G12	Sacrifice my own units + Double or multiply stats	Cheat death (survive lethal)	engine	cheat_death
-G12	Sacrifice my own units + Double or multiply stats	Destroys itself / temporary unit	engine	self_destruct
-G12	Sacrifice my own units + Double or multiply stats	Back to hand when it dies or leaves play	engine	return_on_leave
-G12	Sacrifice my own units + Double or multiply stats	When I play another card	engine	on_ally_play
-G12	Sacrifice my own units + Double or multiply stats	Stats equal to a count	engine	variable_stats
-G12	Sacrifice my own units + Double or multiply stats	Attach or merge onto a unit	engine	merge_attach
-G12	Sacrifice my own units + Double or multiply stats	Expensive card	engine	high_cost
-G12	Sacrifice my own units + Double or multiply stats	Summon units / tokens	engine	summon
-G12	Sacrifice my own units + Double or multiply stats	Having a card in play or hand	engine	card_presence_condition
-G12	Sacrifice my own units + Double or multiply stats	Copy cards or units	engine	copy
-G13	Destroy outright + Board wipe	Destroy outright	engine	destroy
-G13	Destroy outright + Board wipe	Board wipe	engine	board_wipe
-G13	Destroy outright + Board wipe	Expensive card	engine	high_cost
-G13	Destroy outright + Board wipe	Hits my own side too	engine	friendly_fire
-G13	Destroy outright + Board wipe	Stat loss (-power, -health)	engine	stat_loss
-G13	Destroy outright + Board wipe	Banish / exile (gone for good)	engine	banish
-G13	Destroy outright + Board wipe	Attack set to 0	engine	attack_zero
-G13	Destroy outright + Board wipe	Set a cost to a fixed number	engine	cost_set
-G13	Destroy outright + Board wipe	Damage to many at once	engine	aoe_damage
-G13	Destroy outright + Board wipe	Summon units / tokens	engine	summon
-G13	Destroy outright + Board wipe	Draw cards	engine	draw
-G13	Destroy outright + Board wipe	Can't attack (my own unit)	engine	cant_attack
-G13	Destroy outright + Board wipe	Create new cards	engine	generate_cards
-G13	Destroy outright + Board wipe	More or faster base resource (ramp)	engine	base_resource_gain
-G14	Damage over time (poison, burn) + Small repeatable damage	Damage over time (poison, burn)	engine	damage_over_time
-G14	Damage over time (poison, burn) + Small repeatable damage	Small repeatable damage	engine	ping
-G14	Damage over time (poison, burn) + Small repeatable damage	Lifesteal / drain	engine	lifesteal
-G14	Damage over time (poison, burn) + Small repeatable damage	Clog the opponent's board	engine	board_clog
-G14	Damage over time (poison, burn) + Small repeatable damage	Stat gain (+power, +health)	engine	stat_gain
-G14	Damage over time (poison, burn) + Small repeatable damage	Make a unit weaker (debuff)	engine	debuff
-G14	Damage over time (poison, burn) + Small repeatable damage	Row-wide lasting effects (weather)	engine	row_effects
-G14	Damage over time (poison, burn) + Small repeatable damage	Damage to many at once	engine	aoe_damage
-G14	Damage over time (poison, burn) + Small repeatable damage	Keep my units alive (protection)	engine	protection
-G14	Damage over time (poison, burn) + Small repeatable damage	Counts / thresholds	engine	condition_count
-G14	Damage over time (poison, burn) + Small repeatable damage	Summon units / tokens	engine	summon
-G14	Damage over time (poison, burn) + Small repeatable damage	Neighbours matter (adjacency)	engine	adjacency
-G14	Damage over time (poison, burn) + Small repeatable damage	Stats equal to a count	engine	variable_stats
-G14	Damage over time (poison, burn) + Small repeatable damage	Hits my own side too	engine	friendly_fire
-G15	Look at cards and pick (scry) + Create new cards	Look at cards and pick (scry)	engine	selection
-G15	Look at cards and pick (scry) + Create new cards	Create new cards	engine	generate_cards
-G15	Look at cards and pick (scry) + Create new cards	Silence (abilities removed)	engine	silence
-G15	Look at cards and pick (scry) + Create new cards	Junk cards into a deck or hand	engine	junk_cards
-G15	Look at cards and pick (scry) + Create new cards	Hidden and revealed information	engine	information
-G15	Look at cards and pick (scry) + Create new cards	A unit levels up on the board	engine	level_up
-G15	Look at cards and pick (scry) + Create new cards	Restore health (heal)	engine	heal
-G15	Look at cards and pick (scry) + Create new cards	Variety matters (all different)	engine	variety_payoff
-G15	Look at cards and pick (scry) + Create new cards	Draw cards	engine	draw
-G15	Look at cards and pick (scry) + Create new cards	Cards cost less	engine	cost_reduction
-G15	Look at cards and pick (scry) + Create new cards	Improve cards in hand or deck	engine	in_hand_buff
-G15	Look at cards and pick (scry) + Create new cards	Discard my own cards	engine	discard
-G15	Look at cards and pick (scry) + Create new cards	Deal damage	engine	damage
-G16	Draw cards + Reuse my cards (shuffle back)	Draw cards	engine	draw
-G16	Draw cards + Reuse my cards (shuffle back)	Reuse my cards (shuffle back)	engine	recycle
-G16	Draw cards + Reuse my cards (shuffle back)	When a card is drawn	engine	on_draw
-G16	Draw cards + Reuse my cards (shuffle back)	Act the turn it arrives (haste, rush)	engine	haste
-G16	Draw cards + Reuse my cards (shuffle back)	Hand size matters	engine	hand_size
-G16	Draw cards + Reuse my cards (shuffle back)	Counts / thresholds	engine	condition_count
-G16	Draw cards + Reuse my cards (shuffle back)	Destroys itself / temporary unit	engine	self_destruct
-G16	Draw cards + Reuse my cards (shuffle back)	Can't attack (my own unit)	engine	cant_attack
-G16	Draw cards + Reuse my cards (shuffle back)	Hidden and revealed information	engine	information
-G16	Draw cards + Reuse my cards (shuffle back)	More or faster base resource (ramp)	engine	base_resource_gain
-G16	Draw cards + Reuse my cards (shuffle back)	Expensive card	engine	high_cost
-G16	Draw cards + Reuse my cards (shuffle back)	Create new cards	engine	generate_cards
-G16	Draw cards + Reuse my cards (shuffle back)	Terrain / board features	engine	terrain
-G17	When another unit dies + Counts deaths	When another unit dies	engine	other_death_trigger
-G17	When another unit dies + Counts deaths	Counts deaths	engine	death_count
-G17	When another unit dies + Counts deaths	Grows with what happened this game	engine	count_payoff
-G17	When another unit dies + Counts deaths	Stats equal to a count	engine	variable_stats
-G17	When another unit dies + Counts deaths	Sacrifice my own units	engine	sacrifice
-G17	When another unit dies + Counts deaths	Hits my own side too	engine	friendly_fire
-G17	When another unit dies + Counts deaths	Back to hand when it dies or leaves play	engine	return_on_leave
-G17	When another unit dies + Counts deaths	Destroys itself / temporary unit	engine	self_destruct
-G17	When another unit dies + Counts deaths	Bring back dead units (revive)	engine	revive
-G17	When another unit dies + Counts deaths	Mill the opponent's deck	engine	mill
-G17	When another unit dies + Counts deaths	Summon units / tokens	engine	summon
-G17	When another unit dies + Counts deaths	Cards cost less	engine	cost_reduction
-G17	When another unit dies + Counts deaths	Destroy outright	engine	destroy
-G18	Cards cost less + Make a unit stronger (buff)	Cards cost less	engine	cost_reduction
-G18	Cards cost less + Make a unit stronger (buff)	Make a unit stronger (buff)	engine	buff
-G18	Cards cost less + Make a unit stronger (buff)	Expensive card	engine	high_cost
-G18	Cards cost less + Make a unit stronger (buff)	When a card is drawn	engine	on_draw
-G18	Cards cost less + Make a unit stronger (buff)	When I play another card	engine	on_ally_play
-G18	Cards cost less + Make a unit stronger (buff)	Transform my card into another	engine	transform
-G18	Cards cost less + Make a unit stronger (buff)	Copy cards or units	engine	copy
-G18	Cards cost less + Make a unit stronger (buff)	Set a cost to a fixed number	engine	cost_set
-G18	Cards cost less + Make a unit stronger (buff)	Terrain / board features	engine	terrain
-G18	Cards cost less + Make a unit stronger (buff)	Draw cards	engine	draw
-G18	Cards cost less + Make a unit stronger (buff)	Move my units (reposition)	engine	movement
-G18	Cards cost less + Make a unit stronger (buff)	More or faster base resource (ramp)	engine	base_resource_gain
-G18	Cards cost less + Make a unit stronger (buff)	Improve cards in hand or deck	engine	in_hand_buff
-G18	Cards cost less + Make a unit stronger (buff)	Neighbours matter (adjacency)	engine	adjacency
-G18	Cards cost less + Make a unit stronger (buff)	Damage to many at once	engine	aoe_damage
-G19	Put into play for free + Give my units or cards to the opponent	Put into play for free	engine	free_play
-G19	Put into play for free + Give my units or cards to the opponent	Give my units or cards to the opponent	engine	donate
-G19	Put into play for free + Give my units or cards to the opponent	Where units can be placed	engine	placement_rules
-G19	Put into play for free + Give my units or cards to the opponent	Copy cards or units	engine	copy
-G19	Put into play for free + Give my units or cards to the opponent	Create new cards	engine	generate_cards
-G19	Put into play for free + Give my units or cards to the opponent	Junk cards into a deck or hand	engine	junk_cards
-G19	Put into play for free + Give my units or cards to the opponent	Set stats to a number	engine	stat_fixed
-G19	Put into play for free + Give my units or cards to the opponent	Stats equal to a count	engine	variable_stats
-G19	Put into play for free + Give my units or cards to the opponent	Send an enemy unit back (bounce)	engine	bounce_enemy
-G19	Put into play for free + Give my units or cards to the opponent	Steal from the opponent	engine	steal
-G19	Put into play for free + Give my units or cards to the opponent	Deal damage	engine	damage
-G19	Put into play for free + Give my units or cards to the opponent	Reuse my cards (shuffle back)	engine	recycle
-G19	Put into play for free + Give my units or cards to the opponent	Search the deck for a card (tutor)	engine	tutor
-G19	Put into play for free + Give my units or cards to the opponent	Move my units (reposition)	engine	movement
-G19	Put into play for free + Give my units or cards to the opponent	Move enemy units (push, pull)	engine	forced_movement
-G19	Put into play for free + Give my units or cards to the opponent	Silence (abilities removed)	engine	silence
-G19	Put into play for free + Give my units or cards to the opponent	Look at cards and pick (scry)	engine	selection
-G19	Put into play for free + Give my units or cards to the opponent	Neighbours matter (adjacency)	engine	adjacency
-G19	Put into play for free + Give my units or cards to the opponent	Transform my card into another	engine	transform
-G20	Countdown + Set stats to a number	Countdown	engine	countdown
-G20	Countdown + Set stats to a number	Set stats to a number	engine	stat_fixed
-G20	Countdown + Set stats to a number	Stat loss (-power, -health)	engine	stat_loss
-G20	Countdown + Set stats to a number	Transform my card into another	engine	transform
-G20	Countdown + Set stats to a number	When I play another card	engine	on_ally_play
-G20	Countdown + Set stats to a number	Upgrade a card	engine	upgrade
-G20	Countdown + Set stats to a number	Search the deck for a card (tutor)	engine	tutor
-G20	Countdown + Set stats to a number	Can't attack (my own unit)	engine	cant_attack
-G20	Countdown + Set stats to a number	Stealth / hidden until it acts	engine	stealth
-G20	Countdown + Set stats to a number	A unit levels up on the board	engine	level_up
-G20	Countdown + Set stats to a number	Summon units / tokens	engine	summon
-G20	Countdown + Set stats to a number	Draw cards	engine	draw
-G20	Countdown + Set stats to a number	Create new cards	engine	generate_cards
-G20	Countdown + Set stats to a number	Attack right away	engine	attack_now
-G20	Countdown + Set stats to a number	Having a card in play or hand	engine	card_presence_condition
-G20	Countdown + Set stats to a number	Hits my own side too	engine	friendly_fire
-G21	Summon units / tokens + Position and space	Summon units / tokens	engine	summon
-G21	Summon units / tokens + Position and space	Position and space	engine	positional
-G21	Summon units / tokens + Position and space	Transform my card into another	engine	transform
-G21	Summon units / tokens + Position and space	Make a unit stronger (buff)	engine	buff
-G21	Summon units / tokens + Position and space	Quests / objectives with rewards	brick	quests
-G21	Summon units / tokens + Position and space	Aura (ongoing effect on others)	engine	aura
-G21	Summon units / tokens + Position and space	Any damage kills (deathtouch, poisonous)	engine	deathtouch
-G21	Summon units / tokens + Position and space	Hidden and revealed information	engine	information
-G21	Summon units / tokens + Position and space	Expensive card	engine	high_cost
-G21	Summon units / tokens + Position and space	Neighbours matter (adjacency)	engine	adjacency
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	Search the deck for a card (tutor)	engine	tutor
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	Banish / exile (gone for good)	engine	banish
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	Reuse my cards (shuffle back)	engine	recycle
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	Stats matter (highest, lowest)	engine	stat_condition
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	Row-wide lasting effects (weather)	engine	row_effects
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	My spells and abilities get stronger	engine	spell_power
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	Make a unit weaker (debuff)	engine	debuff
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	Hidden and revealed information	engine	information
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	Put into play for free	engine	free_play
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	Keep my units alive (protection)	engine	protection
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	Summon units / tokens	engine	summon
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	Deal damage	engine	damage
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	Sacrifice my own units	engine	sacrifice
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	Act the turn it arrives (haste, rush)	engine	haste
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	Block points that wear off	engine	block_armor
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	Transform my card into another	engine	transform
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	Destroys itself / temporary unit	engine	self_destruct
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	Position and space	engine	positional
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	Copy cards or units	engine	copy
-G22	Search the deck for a card (tutor) + Banish / exile (gone for good)	Neighbours matter (adjacency)	engine	adjacency
-G23	Improve cards in hand or deck + Hand size matters	Improve cards in hand or deck	engine	in_hand_buff
-G23	Improve cards in hand or deck + Hand size matters	Hand size matters	engine	hand_size
-G23	Improve cards in hand or deck + Hand size matters	Heal every turn (regeneration)	engine	regeneration
-G23	Improve cards in hand or deck + Hand size matters	Immune / can't be targeted	brick	immunity
-G23	Improve cards in hand or deck + Hand size matters	Block points that wear off	engine	block_armor
-G23	Improve cards in hand or deck + Hand size matters	Stat loss (-power, -health)	engine	stat_loss
-G23	Improve cards in hand or deck + Hand size matters	Cards cost less	engine	cost_reduction
-G23	Improve cards in hand or deck + Hand size matters	Lifesteal / drain	engine	lifesteal
-G23	Improve cards in hand or deck + Hand size matters	Expensive card	engine	high_cost
-G23	Improve cards in hand or deck + Hand size matters	Can't attack (my own unit)	engine	cant_attack
-G23	Improve cards in hand or deck + Hand size matters	Create new cards	engine	generate_cards
-G23	Improve cards in hand or deck + Hand size matters	Draw cards	engine	draw
-G23	Improve cards in hand or deck + Hand size matters	Deal damage	engine	damage
-G23	Improve cards in hand or deck + Hand size matters	Having a card in play or hand	engine	card_presence_condition
-G23	Improve cards in hand or deck + Hand size matters	When I play another card	engine	on_ally_play
-G23	Improve cards in hand or deck + Hand size matters	Transform my card into another	engine	transform
-G23	Improve cards in hand or deck + Hand size matters	Counts / thresholds	engine	condition_count
-G23	Improve cards in hand or deck + Hand size matters	Act the turn it arrives (haste, rush)	brick	haste
-G24	Cost matters + When a spell is played	Cost matters	engine	cost_condition
-G24	Cost matters + When a spell is played	When a spell is played	engine	on_spell
-G24	Cost matters + When a spell is played	Make a unit stronger (buff)	engine	buff
-G24	Cost matters + When a spell is played	My spells and abilities get stronger	engine	spell_power
-G24	Cost matters + When a spell is played	Upgrade a card	engine	upgrade
-G24	Cost matters + When a spell is played	Immune / can't be targeted	engine	immunity
-G24	Cost matters + When a spell is played	Expensive card	engine	high_cost
-G24	Cost matters + When a spell is played	Damage to several separate targets	engine	multi_target_attack
-G24	Cost matters + When a spell is played	More or faster base resource (ramp)	engine	base_resource_gain
-G24	Cost matters + When a spell is played	Put into play for free	engine	free_play
-G24	Cost matters + When a spell is played	When I play another card	engine	on_ally_play
-G24	Cost matters + When a spell is played	Draw cards	engine	draw
-G24	Cost matters + When a spell is played	Deal damage	engine	damage
-G24	Cost matters + When a spell is played	Destroys itself / temporary unit	engine	self_destruct
-G24	Cost matters + When a spell is played	Look at cards and pick (scry)	engine	selection
-G25	Variety matters (all different) + Stats equal to a count	Variety matters (all different)	engine	variety_payoff
-G25	Variety matters (all different) + Stats equal to a count	Stats equal to a count	engine	variable_stats
-G25	Variety matters (all different) + Stats equal to a count	Heal every turn (regeneration)	engine	regeneration
-G25	Variety matters (all different) + Stats equal to a count	When I play another card	engine	on_ally_play
-G25	Variety matters (all different) + Stats equal to a count	Put into play for free	engine	free_play
-G25	Variety matters (all different) + Stats equal to a count	Stats matter (highest, lowest)	engine	stat_condition
-G25	Variety matters (all different) + Stats equal to a count	Counts / thresholds	engine	condition_count
-G25	Variety matters (all different) + Stats equal to a count	Expensive card	engine	high_cost
-G25	Variety matters (all different) + Stats equal to a count	Summon units / tokens	engine	summon
-G25	Variety matters (all different) + Stats equal to a count	Deal damage	engine	damage
-G25	Variety matters (all different) + Stats equal to a count	Transform my card into another	engine	transform
-G25	Variety matters (all different) + Stats equal to a count	Move my units (reposition)	engine	movement
-G25	Variety matters (all different) + Stats equal to a count	Having a card in play or hand	engine	card_presence_condition
-G25	Variety matters (all different) + Stats equal to a count	Small repeatable damage	engine	ping
-G25	Variety matters (all different) + Stats equal to a count	Create new cards	engine	generate_cards
-G25	Variety matters (all different) + Stats equal to a count	Act the turn it arrives (haste, rush)	engine	haste
-G25	Variety matters (all different) + Stats equal to a count	Hits my own side too	engine	friendly_fire
-G25	Variety matters (all different) + Stats equal to a count	Move enemy units (push, pull)	engine	forced_movement
+G10	Move my units (reposition) + Move enemy units (push, pull)	Set a cost to a fixed number	engine	cost_set
+G10	Move my units (reposition) + Move enemy units (push, pull)	Act the turn it arrives (haste, rush)	engine	haste
+G10	Move my units (reposition) + Move enemy units (push, pull)	Neighbours matter (adjacency)	engine	adjacency
+G11	Deal damage + Damage to several separate targets	Deal damage	engine	damage
+G11	Deal damage + Damage to several separate targets	Damage to several separate targets	engine	multi_target_attack
+G11	Deal damage + Damage to several separate targets	Damaged unit matters	engine	condition_life
+G11	Deal damage + Damage to several separate targets	Small repeatable damage	engine	ping
+G11	Deal damage + Damage to several separate targets	Damage to many at once	engine	aoe_damage
+G11	Deal damage + Damage to several separate targets	Can't act at all (stun, freeze)	engine	disable
+G11	Deal damage + Damage to several separate targets	Deck contents matter	engine	deck_condition
+G11	Deal damage + Damage to several separate targets	Position and space	engine	positional
+G11	Deal damage + Damage to several separate targets	Neighbours matter (adjacency)	engine	adjacency
+G11	Deal damage + Damage to several separate targets	Grows again and again	engine	permanent_growth
+G12	Gain resources (ramp) + Destroy outright	Gain resources (ramp)	engine	resource_gain
+G12	Gain resources (ramp) + Destroy outright	Destroy outright	engine	destroy
+G12	Gain resources (ramp) + Destroy outright	Cards cost less	engine	cost_reduction
+G12	Gain resources (ramp) + Destroy outright	Look at cards and pick (scry)	engine	selection
+G12	Gain resources (ramp) + Destroy outright	Hidden and revealed information	engine	information
+G12	Gain resources (ramp) + Destroy outright	Make a unit weaker (debuff)	engine	debuff
+G12	Gain resources (ramp) + Destroy outright	Reuse my cards (shuffle back)	engine	recycle
+G12	Gain resources (ramp) + Destroy outright	Deck contents matter	engine	deck_condition
+G12	Gain resources (ramp) + Destroy outright	Immune / can't be targeted	engine	immunity
+G12	Gain resources (ramp) + Destroy outright	Board wipe	engine	board_wipe
+G12	Gain resources (ramp) + Destroy outright	Defence gain (+health)	engine	defence_gain
+G12	Gain resources (ramp) + Destroy outright	Can't attack (my own unit)	engine	cant_attack
+G12	Gain resources (ramp) + Destroy outright	Deal damage	engine	damage
+G12	Gain resources (ramp) + Destroy outright	Grows again and again	engine	permanent_growth
+G12	Gain resources (ramp) + Destroy outright	Summon units / tokens	engine	summon
+G12	Gain resources (ramp) + Destroy outright	Counts / thresholds	engine	condition_count
+G12	Gain resources (ramp) + Destroy outright	Sacrifice my own units	engine	sacrifice
+G12	Gain resources (ramp) + Destroy outright	Stats equal to a count	engine	variable_stats
+G12	Gain resources (ramp) + Destroy outright	Countdown	engine	countdown
+G12	Gain resources (ramp) + Destroy outright	Bring back dead units (revive)	engine	revive
+G13	Sacrifice my own units + Bring back dead units (revive)	Sacrifice my own units	engine	sacrifice
+G13	Sacrifice my own units + Bring back dead units (revive)	Bring back dead units (revive)	engine	revive
+G13	Sacrifice my own units + Bring back dead units (revive)	Cheat death (survive lethal)	engine	cheat_death
+G13	Sacrifice my own units + Bring back dead units (revive)	Double or multiply stats	engine	stat_multiply
+G13	Sacrifice my own units + Bring back dead units (revive)	Destroy outright	engine	destroy
+G13	Sacrifice my own units + Bring back dead units (revive)	Destroys itself / temporary unit	engine	self_destruct
+G13	Sacrifice my own units + Bring back dead units (revive)	Back to hand when it dies or leaves play	engine	return_on_leave
+G13	Sacrifice my own units + Bring back dead units (revive)	Board wipe	engine	board_wipe
+G13	Sacrifice my own units + Bring back dead units (revive)	Copy cards or units	engine	copy
+G13	Sacrifice my own units + Bring back dead units (revive)	Stats equal to a count	engine	variable_stats
+G13	Sacrifice my own units + Bring back dead units (revive)	When I play another card	engine	on_ally_play
+G13	Sacrifice my own units + Bring back dead units (revive)	Summon units / tokens	engine	summon
+G13	Sacrifice my own units + Bring back dead units (revive)	Grows again and again	engine	permanent_growth
+G13	Sacrifice my own units + Bring back dead units (revive)	Defence gain (+health)	engine	defence_gain
+G14	Take less damage (armour) + Absorb one hit (shield, ward)	Take less damage (armour)	engine	damage_reduction
+G14	Take less damage (armour) + Absorb one hit (shield, ward)	Absorb one hit (shield, ward)	engine	shield
+G14	Take less damage (armour) + Absorb one hit (shield, ward)	Defence gain (+health)	engine	defence_gain
+G14	Take less damage (armour) + Absorb one hit (shield, ward)	Act the turn it arrives (haste, rush)	brick	haste
+G14	Take less damage (armour) + Absorb one hit (shield, ward)	Taunt (enemies must attack it)	engine	taunt
+G14	Take less damage (armour) + Absorb one hit (shield, ward)	Stats matter (highest, lowest)	engine	stat_condition
+G14	Take less damage (armour) + Absorb one hit (shield, ward)	Can't attack (my own unit)	engine	cant_attack
+G14	Take less damage (armour) + Absorb one hit (shield, ward)	My unit fights a chosen enemy	engine	fight_enemy
+G14	Take less damage (armour) + Absorb one hit (shield, ward)	Force enemy units to attack	engine	forced_attack
+G14	Take less damage (armour) + Absorb one hit (shield, ward)	When I play another card	engine	on_ally_play
+G15	Create new cards + Junk cards into a deck or hand	Create new cards	engine	generate_cards
+G15	Create new cards + Junk cards into a deck or hand	Junk cards into a deck or hand	engine	junk_cards
+G15	Create new cards + Junk cards into a deck or hand	Look at cards and pick (scry)	engine	selection
+G15	Create new cards + Junk cards into a deck or hand	Copy cards or units	engine	copy
+G15	Create new cards + Junk cards into a deck or hand	Silence (abilities removed)	engine	silence
+G15	Create new cards + Junk cards into a deck or hand	Hidden and revealed information	engine	information
+G15	Create new cards + Junk cards into a deck or hand	A unit levels up on the board	engine	level_up
+G15	Create new cards + Junk cards into a deck or hand	Cards cost less	engine	cost_reduction
+G15	Create new cards + Junk cards into a deck or hand	Alternative costs	engine	cost_type
+G15	Create new cards + Junk cards into a deck or hand	Grows again and again	engine	permanent_growth
+G15	Create new cards + Junk cards into a deck or hand	Counts / thresholds	engine	condition_count
+G15	Create new cards + Junk cards into a deck or hand	Improve cards in hand or deck	engine	in_hand_buff
+G15	Create new cards + Junk cards into a deck or hand	Draw cards	engine	draw
+G15	Create new cards + Junk cards into a deck or hand	Stats equal to a count	engine	variable_stats
+G16	Damage over time (poison, burn) + Small repeatable damage	Damage over time (poison, burn)	engine	damage_over_time
+G16	Damage over time (poison, burn) + Small repeatable damage	Small repeatable damage	engine	ping
+G16	Damage over time (poison, burn) + Small repeatable damage	Lifesteal / drain	engine	lifesteal
+G16	Damage over time (poison, burn) + Small repeatable damage	Clog the opponent's board	engine	board_clog
+G16	Damage over time (poison, burn) + Small repeatable damage	Stat gain (+power, +health)	engine	stat_gain
+G16	Damage over time (poison, burn) + Small repeatable damage	Make a unit weaker (debuff)	engine	debuff
+G16	Damage over time (poison, burn) + Small repeatable damage	Stats equal to a count	engine	variable_stats
+G16	Damage over time (poison, burn) + Small repeatable damage	Counts / thresholds	engine	condition_count
+G16	Damage over time (poison, burn) + Small repeatable damage	Damage to many at once	engine	aoe_damage
+G16	Damage over time (poison, burn) + Small repeatable damage	Keep my units alive (protection)	engine	protection
+G16	Damage over time (poison, burn) + Small repeatable damage	Defence gain (+health)	engine	defence_gain
+G16	Damage over time (poison, burn) + Small repeatable damage	Summon units / tokens	engine	summon
+G16	Damage over time (poison, burn) + Small repeatable damage	Grows again and again	engine	permanent_growth
+G16	Damage over time (poison, burn) + Small repeatable damage	Hits my own side too	engine	friendly_fire
+G16	Damage over time (poison, burn) + Small repeatable damage	Sacrifice my own units	engine	sacrifice
+G17	Order of my plays matters (combo) + Enough spells played	Order of my plays matters (combo)	engine	combo_sequence
+G17	Order of my plays matters (combo) + Enough spells played	Enough spells played	engine	spells_played_condition
+G17	Order of my plays matters (combo) + Enough spells played	When a spell is played	engine	on_spell
+G17	Order of my plays matters (combo) + Enough spells played	Cards cost less	engine	cost_reduction
+G17	Order of my plays matters (combo) + Enough spells played	Return my unit from the board to hand	engine	return_from_board
+G17	Order of my plays matters (combo) + Enough spells played	Send an enemy unit back (bounce)	engine	bounce_enemy
+G17	Order of my plays matters (combo) + Enough spells played	Switch stances or forms	engine	stances
+G17	Order of my plays matters (combo) + Enough spells played	Draw cards	engine	draw
+G17	Order of my plays matters (combo) + Enough spells played	Transform my card into another	engine	transform
+G17	Order of my plays matters (combo) + Enough spells played	More or faster base resource (ramp)	engine	base_resource_gain
+G17	Order of my plays matters (combo) + Enough spells played	Create new cards	engine	generate_cards
+G17	Order of my plays matters (combo) + Enough spells played	My spells and abilities get stronger	engine	spell_power
+G18	Improve cards in hand or deck + Defence gain (+health)	Improve cards in hand or deck	engine	in_hand_buff
+G18	Improve cards in hand or deck + Defence gain (+health)	Defence gain (+health)	engine	defence_gain
+G18	Improve cards in hand or deck + Defence gain (+health)	Cards cost less	engine	cost_reduction
+G18	Improve cards in hand or deck + Defence gain (+health)	Heal every turn (regeneration)	engine	regeneration
+G18	Improve cards in hand or deck + Defence gain (+health)	Stats matter (highest, lowest)	engine	stat_condition
+G18	Improve cards in hand or deck + Defence gain (+health)	Hand size matters	engine	hand_size
+G18	Improve cards in hand or deck + Defence gain (+health)	Copy cards or units	engine	copy
+G18	Improve cards in hand or deck + Defence gain (+health)	Block points that wear off	engine	block_armor
+G18	Improve cards in hand or deck + Defence gain (+health)	Look at cards and pick (scry)	engine	selection
+G18	Improve cards in hand or deck + Defence gain (+health)	Create new cards	engine	generate_cards
+G18	Improve cards in hand or deck + Defence gain (+health)	Draw cards	engine	draw
+G18	Improve cards in hand or deck + Defence gain (+health)	Grows again and again	engine	permanent_growth
+G18	Improve cards in hand or deck + Defence gain (+health)	Having a card in play or hand	engine	card_presence_condition
+G19	Summon units / tokens + Position and space	Summon units / tokens	engine	summon
+G19	Summon units / tokens + Position and space	Position and space	engine	positional
+G19	Summon units / tokens + Position and space	Make a unit stronger (buff)	engine	buff
+G19	Summon units / tokens + Position and space	Neighbours matter (adjacency)	engine	adjacency
+G19	Summon units / tokens + Position and space	Aura (ongoing effect on others)	engine	aura
+G19	Summon units / tokens + Position and space	Act the turn it arrives (haste, rush)	engine	haste
+G19	Summon units / tokens + Position and space	Transform my card into another	engine	transform
+G19	Summon units / tokens + Position and space	Attack right away	engine	attack_now
+G19	Summon units / tokens + Position and space	Quests / objectives with rewards	engine	quests
+G19	Summon units / tokens + Position and space	When I play another card	engine	on_ally_play
+G20	When a spell is played + Cost matters	When a spell is played	engine	on_spell
+G20	When a spell is played + Cost matters	Cost matters	engine	cost_condition
+G20	When a spell is played + Cost matters	Grows with what happened this game	engine	count_payoff
+G20	When a spell is played + Cost matters	Put into play for free	engine	free_play
+G20	When a spell is played + Cost matters	Create new cards	engine	generate_cards
+G20	When a spell is played + Cost matters	My spells and abilities get stronger	engine	spell_power
+G20	When a spell is played + Cost matters	Upgrade a card	engine	upgrade
+G20	When a spell is played + Cost matters	Destroy outright	engine	destroy
+G20	When a spell is played + Cost matters	Immune / can't be targeted	engine	immunity
+G20	When a spell is played + Cost matters	Temporary bonus (this turn only)	engine	temporary_buff
+G20	When a spell is played + Cost matters	Defence gain (+health)	engine	defence_gain
+G20	When a spell is played + Cost matters	Grows again and again	engine	permanent_growth
+G20	When a spell is played + Cost matters	Deal damage	engine	damage
+G20	When a spell is played + Cost matters	Cards cost less	engine	cost_reduction
+G21	When another unit dies + Counts deaths	When another unit dies	engine	other_death_trigger
+G21	When another unit dies + Counts deaths	Counts deaths	engine	death_count
+G21	When another unit dies + Counts deaths	Grows with what happened this game	engine	count_payoff
+G21	When another unit dies + Counts deaths	Stats equal to a count	engine	variable_stats
+G21	When another unit dies + Counts deaths	My unit fights a chosen enemy	engine	fight_enemy
+G21	When another unit dies + Counts deaths	Fill my own discard pile (self-mill)	engine	self_mill
+G21	When another unit dies + Counts deaths	A unit levels up on the board	engine	level_up
+G21	When another unit dies + Counts deaths	Attack right away	engine	attack_now
+G21	When another unit dies + Counts deaths	Sacrifice my own units	engine	sacrifice
+G21	When another unit dies + Counts deaths	Mill the opponent's deck	engine	mill
+G21	When another unit dies + Counts deaths	Grows again and again	engine	permanent_growth
+G21	When another unit dies + Counts deaths	Summon units / tokens	engine	summon
+G21	When another unit dies + Counts deaths	Cards cost less	engine	cost_reduction
+G21	When another unit dies + Counts deaths	Defence gain (+health)	engine	defence_gain
+G21	When another unit dies + Counts deaths	Destroy outright	engine	destroy
+G22	Stat loss (-power, -health) + Attack set to 0	Stat loss (-power, -health)	engine	stat_loss
+G22	Stat loss (-power, -health) + Attack set to 0	Attack set to 0	engine	attack_zero
+G22	Stat loss (-power, -health) + Attack set to 0	Upgrade a card	engine	upgrade
+G22	Stat loss (-power, -health) + Attack set to 0	Set stats to a number	engine	stat_fixed
+G22	Stat loss (-power, -health) + Attack set to 0	Counts / thresholds	engine	condition_count
+G22	Stat loss (-power, -health) + Attack set to 0	Transform my card into another	engine	transform
+G22	Stat loss (-power, -health) + Attack set to 0	Strikes of a given size	engine	combat_damage_threshold
+G22	Stat loss (-power, -health) + Attack set to 0	Stacking keywords / counters	engine	stacking_keyword
+G22	Stat loss (-power, -health) + Attack set to 0	Board wipe	engine	board_wipe
+G22	Stat loss (-power, -health) + Attack set to 0	A unit levels up on the board	engine	level_up
+G22	Stat loss (-power, -health) + Attack set to 0	Can't attack (my own unit)	engine	cant_attack
+G22	Stat loss (-power, -health) + Attack set to 0	Draw cards	engine	draw
+G22	Stat loss (-power, -health) + Attack set to 0	Summon units / tokens	engine	summon
+G23	Banish / exile (gone for good) + Double or multiply stats	Banish / exile (gone for good)	engine	banish
+G23	Banish / exile (gone for good) + Double or multiply stats	Double or multiply stats	engine	stat_multiply
+G23	Banish / exile (gone for good) + Double or multiply stats	Stats matter (highest, lowest)	engine	stat_condition
+G23	Banish / exile (gone for good) + Double or multiply stats	Block points that wear off	engine	block_armor
+G23	Banish / exile (gone for good) + Double or multiply stats	Row-wide lasting effects (weather)	engine	row_effects
+G23	Banish / exile (gone for good) + Double or multiply stats	Taunt (enemies must attack it)	engine	taunt
+G23	Banish / exile (gone for good) + Double or multiply stats	When I play another card	engine	on_ally_play
+G23	Banish / exile (gone for good) + Double or multiply stats	Hidden and revealed information	engine	information
+G23	Banish / exile (gone for good) + Double or multiply stats	Reuse my cards (shuffle back)	engine	recycle
+G23	Banish / exile (gone for good) + Double or multiply stats	Defence gain (+health)	engine	defence_gain
+G23	Banish / exile (gone for good) + Double or multiply stats	Can't attack (my own unit)	engine	cant_attack
+G23	Banish / exile (gone for good) + Double or multiply stats	Summon units / tokens	engine	summon
+G23	Banish / exile (gone for good) + Double or multiply stats	Grows again and again	engine	permanent_growth
+G23	Banish / exile (gone for good) + Double or multiply stats	Put into play for free	engine	free_play
+G23	Banish / exile (gone for good) + Double or multiply stats	Stats equal to a count	engine	variable_stats
+G23	Banish / exile (gone for good) + Double or multiply stats	Sacrifice my own units	engine	sacrifice
+G23	Banish / exile (gone for good) + Double or multiply stats	Create new cards	engine	generate_cards
+G23	Banish / exile (gone for good) + Double or multiply stats	Act the turn it arrives (haste, rush)	engine	haste
+G23	Banish / exile (gone for good) + Double or multiply stats	Destroys itself / temporary unit	engine	self_destruct
+G23	Banish / exile (gone for good) + Double or multiply stats	Search the deck for a card (tutor)	engine	tutor
+G23	Banish / exile (gone for good) + Double or multiply stats	Copy cards or units	engine	copy
+G23	Banish / exile (gone for good) + Double or multiply stats	Position and space	engine	positional
+G23	Banish / exile (gone for good) + Double or multiply stats	Neighbours matter (adjacency)	engine	adjacency
+G23	Banish / exile (gone for good) + Double or multiply stats	Immune / can't be targeted	engine	immunity
+G23	Banish / exile (gone for good) + Double or multiply stats	Move enemy units (push, pull)	engine	forced_movement
+G23	Banish / exile (gone for good) + Double or multiply stats	Destroy outright	engine	destroy
+G23	Banish / exile (gone for good) + Double or multiply stats	Transform my card into another	engine	transform
+G24	Search the deck for a card (tutor) + Countdown	Search the deck for a card (tutor)	engine	tutor
+G24	Search the deck for a card (tutor) + Countdown	Countdown	engine	countdown
+G24	Search the deck for a card (tutor) + Countdown	Reuse my cards (shuffle back)	engine	recycle
+G24	Search the deck for a card (tutor) + Countdown	Transform my card into another	engine	transform
+G24	Search the deck for a card (tutor) + Countdown	Upgrade a card	engine	upgrade
+G24	Search the deck for a card (tutor) + Countdown	Copy cards or units	engine	copy
+G24	Search the deck for a card (tutor) + Countdown	Can't attack (my own unit)	engine	cant_attack
+G24	Search the deck for a card (tutor) + Countdown	Stealth / hidden until it acts	engine	stealth
+G24	Search the deck for a card (tutor) + Countdown	Set stats to a number	engine	stat_fixed
+G24	Search the deck for a card (tutor) + Countdown	A unit levels up on the board	engine	level_up
+G24	Search the deck for a card (tutor) + Countdown	Summon units / tokens	engine	summon
+G24	Search the deck for a card (tutor) + Countdown	Create new cards	engine	generate_cards
+G24	Search the deck for a card (tutor) + Countdown	Draw cards	engine	draw
+G24	Search the deck for a card (tutor) + Countdown	Sacrifice my own units	engine	sacrifice
+G25	Variety matters (all different) + Grows again and again	Variety matters (all different)	engine	variety_payoff
+G25	Variety matters (all different) + Grows again and again	Grows again and again	engine	permanent_growth
+G25	Variety matters (all different) + Grows again and again	Stats equal to a count	engine	variable_stats
+G25	Variety matters (all different) + Grows again and again	When I play another card	engine	on_ally_play
+G25	Variety matters (all different) + Grows again and again	Defence gain (+health)	engine	defence_gain
+G25	Variety matters (all different) + Grows again and again	Heal every turn (regeneration)	engine	regeneration
+G25	Variety matters (all different) + Grows again and again	Put into play for free	engine	free_play
+G25	Variety matters (all different) + Grows again and again	Stacking keywords / counters	engine	stacking_keyword
+G25	Variety matters (all different) + Grows again and again	Look at cards and pick (scry)	engine	selection
+G25	Variety matters (all different) + Grows again and again	Summon units / tokens	engine	summon
+G25	Variety matters (all different) + Grows again and again	Move my units (reposition)	engine	movement
+G25	Variety matters (all different) + Grows again and again	Counts / thresholds	engine	condition_count
+G25	Variety matters (all different) + Grows again and again	Deal damage	engine	damage
+G25	Variety matters (all different) + Grows again and again	Improve cards in hand or deck	engine	in_hand_buff
+G25	Variety matters (all different) + Grows again and again	Having a card in play or hand	engine	card_presence_condition
+G25	Variety matters (all different) + Grows again and again	Destroy outright	engine	destroy
+G25	Variety matters (all different) + Grows again and again	Move enemy units (push, pull)	engine	forced_movement

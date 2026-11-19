@@ -1,1127 +1,1171 @@
 archetype	part_a	part_b	concept_pairs	pairs_with_any_link
-G01	Deal damage	Stat loss (-power, -health)	1	1
-G01	Deal damage	Expensive card	1	1
-G01	Deal damage	Hits my own side too	1	1
-G01	Damage to several separate targets	Damage to many at once	1	1
-G01	Damage to several separate targets	Stat loss (-power, -health)	1	1
-G01	Damage to several separate targets	Expensive card	1	0
-G01	Damage to several separate targets	Hits my own side too	1	1
-G01	Small repeatable damage	Stat loss (-power, -health)	1	1
-G01	Small repeatable damage	Expensive card	1	1
-G01	Damage to many at once	Stat loss (-power, -health)	1	1
-G01	Damage to many at once	Expensive card	1	1
-G01	Stat loss (-power, -health)	Expensive card	1	1
-G01	Stat loss (-power, -health)	Neighbours matter (adjacency)	1	1
-G01	Stat loss (-power, -health)	Hits my own side too	1	1
-G01	Expensive card	Neighbours matter (adjacency)	1	1
-G01	Expensive card	Hits my own side too	1	1
-G02	More or faster base resource (ramp)	Stat gain (+power, +health)	1	1
-G02	More or faster base resource (ramp)	Can't attack (lock on an enemy)	1	0
-G02	More or faster base resource (ramp)	Position and space	1	1
-G02	More or faster base resource (ramp)	Neighbours matter (adjacency)	1	1
-G02	Can't act at all (stun, freeze)	Stat gain (+power, +health)	1	1
-G02	Can't act at all (stun, freeze)	Expensive card	1	1
-G02	Can't attack (my own unit)	Disrupt the opponent's plans	1	0
-G02	Can't attack (my own unit)	Expensive card	1	1
-G02	Can't attack (my own unit)	Position and space	1	1
-G02	Can't attack (my own unit)	Neighbours matter (adjacency)	1	1
-G02	Silence (abilities removed)	Stat gain (+power, +health)	1	1
-G02	Silence (abilities removed)	Disrupt the opponent's plans	1	0
-G02	Silence (abilities removed)	Can't attack (lock on an enemy)	1	0
-G02	Silence (abilities removed)	Expensive card	1	1
-G02	Stat gain (+power, +health)	Grows with what happened this game	1	1
-G02	Stat gain (+power, +health)	Disrupt the opponent's plans	1	1
-G02	Stat gain (+power, +health)	Can't attack (lock on an enemy)	1	0
-G02	Stat gain (+power, +health)	Expensive card	1	1
-G02	Stat gain (+power, +health)	Damage to many at once	1	1
-G02	Stat gain (+power, +health)	Deal damage	1	1
-G02	Grows with what happened this game	Disrupt the opponent's plans	1	0
-G02	Grows with what happened this game	Can't attack (lock on an enemy)	1	0
-G02	Disrupt the opponent's plans	Position and space	1	1
-G02	Disrupt the opponent's plans	Neighbours matter (adjacency)	1	1
-G02	Disrupt the opponent's plans	Damage to many at once	1	0
-G02	Disrupt the opponent's plans	Deal damage	1	0
-G02	Can't attack (lock on an enemy)	Damage to many at once	1	1
-G02	Can't attack (lock on an enemy)	Deal damage	1	1
-G02	Expensive card	Position and space	1	1
-G02	Expensive card	Neighbours matter (adjacency)	1	1
-G02	Expensive card	Damage to many at once	1	1
-G02	Expensive card	Deal damage	1	1
-G03	Gain resources (ramp)	Make a unit weaker (debuff)	1	1
-G03	Gain resources (ramp)	Reuse my cards (shuffle back)	1	1
-G03	Gain resources (ramp)	Stats equal to a count	1	1
-G03	Gain resources (ramp)	Countdown	1	1
-G03	Destroy outright	Sacrifice my own units	1	1
-G03	Destroy outright	Hidden and revealed information	1	0
-G03	Destroy outright	Look at cards and pick (scry)	1	1
-G03	Destroy outright	Cards cost less	1	1
-G03	Destroy outright	Make a unit weaker (debuff)	1	1
-G03	Destroy outright	Deck contents matter	1	1
-G03	Destroy outright	Immune / can't be targeted	1	0
-G03	Destroy outright	Can't attack (my own unit)	1	1
-G03	Destroy outright	Counts / thresholds	1	1
-G03	Destroy outright	Reuse my cards (shuffle back)	1	1
-G03	Destroy outright	Stats equal to a count	1	1
-G03	Destroy outright	Countdown	1	1
-G03	Sacrifice my own units	Look at cards and pick (scry)	1	1
-G03	Sacrifice my own units	Deck contents matter	1	1
-G03	Sacrifice my own units	Immune / can't be targeted	1	0
-G03	Sacrifice my own units	Can't attack (my own unit)	1	1
-G03	Sacrifice my own units	Deal damage	1	1
-G03	Hidden and revealed information	Cards cost less	1	0
-G03	Hidden and revealed information	Make a unit weaker (debuff)	1	0
-G03	Hidden and revealed information	Deck contents matter	1	1
-G03	Hidden and revealed information	Immune / can't be targeted	1	0
-G03	Hidden and revealed information	Deal damage	1	0
-G03	Hidden and revealed information	Counts / thresholds	1	1
-G03	Hidden and revealed information	Stats equal to a count	1	0
-G03	Hidden and revealed information	Countdown	1	1
-G03	Look at cards and pick (scry)	Cards cost less	1	1
-G03	Look at cards and pick (scry)	Make a unit weaker (debuff)	1	1
-G03	Look at cards and pick (scry)	Deck contents matter	1	1
-G03	Look at cards and pick (scry)	Immune / can't be targeted	1	1
-G03	Look at cards and pick (scry)	Can't attack (my own unit)	1	1
-G03	Look at cards and pick (scry)	Deal damage	1	1
-G03	Look at cards and pick (scry)	Counts / thresholds	1	1
-G03	Look at cards and pick (scry)	Stats equal to a count	1	1
-G03	Look at cards and pick (scry)	Countdown	1	1
-G03	Cards cost less	Make a unit weaker (debuff)	1	1
-G03	Cards cost less	Deck contents matter	1	1
-G03	Cards cost less	Immune / can't be targeted	1	1
-G03	Cards cost less	Can't attack (my own unit)	1	1
-G03	Cards cost less	Deal damage	1	1
-G03	Cards cost less	Counts / thresholds	1	1
-G03	Cards cost less	Reuse my cards (shuffle back)	1	1
-G03	Cards cost less	Stats equal to a count	1	1
-G03	Cards cost less	Countdown	1	1
-G03	Bring back dead units (revive)	Make a unit weaker (debuff)	1	1
-G03	Bring back dead units (revive)	Deck contents matter	1	1
-G03	Bring back dead units (revive)	Immune / can't be targeted	1	1
-G03	Bring back dead units (revive)	Can't attack (my own unit)	1	1
-G03	Make a unit weaker (debuff)	Deck contents matter	1	1
-G03	Make a unit weaker (debuff)	Immune / can't be targeted	1	0
-G03	Make a unit weaker (debuff)	Can't attack (my own unit)	1	1
-G03	Make a unit weaker (debuff)	Deal damage	1	1
-G03	Make a unit weaker (debuff)	Reuse my cards (shuffle back)	1	1
-G03	Make a unit weaker (debuff)	Stats equal to a count	1	1
-G03	Deck contents matter	Immune / can't be targeted	1	1
-G03	Deck contents matter	Can't attack (my own unit)	1	1
-G03	Deck contents matter	Reuse my cards (shuffle back)	1	1
-G03	Deck contents matter	Stats equal to a count	1	1
-G03	Immune / can't be targeted	Can't attack (my own unit)	1	0
-G03	Immune / can't be targeted	Deal damage	1	1
-G03	Immune / can't be targeted	Counts / thresholds	1	1
-G03	Immune / can't be targeted	Reuse my cards (shuffle back)	1	1
-G03	Immune / can't be targeted	Stats equal to a count	1	0
-G03	Immune / can't be targeted	Countdown	1	1
-G03	Can't attack (my own unit)	Counts / thresholds	1	1
-G03	Can't attack (my own unit)	Reuse my cards (shuffle back)	1	1
-G03	Can't attack (my own unit)	Stats equal to a count	1	1
-G03	Can't attack (my own unit)	Countdown	1	1
-G03	Deal damage	Reuse my cards (shuffle back)	1	1
-G03	Deal damage	Stats equal to a count	1	1
-G03	Deal damage	Countdown	1	1
-G03	Counts / thresholds	Countdown	1	1
-G03	Reuse my cards (shuffle back)	Stats equal to a count	1	1
-G03	Stats equal to a count	Countdown	1	1
-G04	Attack right away	When I play another card	1	1
-G04	Temporary bonus (this turn only)	When I play another card	1	1
-G04	Temporary bonus (this turn only)	Absorb one hit (shield, ward)	1	1
-G04	Strikes with its defence	A unit levels up on the board	1	1
-G04	Strikes with its defence	When I play another card	1	1
-G04	Extra turns or actions	When I play another card	1	1
-G04	Force enemy units to attack	When I play another card	1	1
-G04	When I play another card	Take less damage (armour)	1	1
-G04	When I play another card	Absorb one hit (shield, ward)	1	1
-G05	Having a card in play or hand	Stat gain (+power, +health)	1	1
-G05	Having a card in play or hand	Hits my own side too	1	1
-G05	Having a card in play or hand	Neighbours matter (adjacency)	1	1
-G05	Stat gain (+power, +health)	Search the deck for a card (tutor)	1	1
-G05	Stat gain (+power, +health)	Repeat or double triggers	1	1
-G05	Stat gain (+power, +health)	Expensive card	1	1
-G05	Stat gain (+power, +health)	Hits my own side too	1	1
-G05	Search the deck for a card (tutor)	My unit fights a chosen enemy	1	1
-G05	Search the deck for a card (tutor)	Attack right away	1	1
-G05	Search the deck for a card (tutor)	Expensive card	1	0
-G05	Search the deck for a card (tutor)	Hits my own side too	1	1
-G05	Search the deck for a card (tutor)	Neighbours matter (adjacency)	1	1
-G05	Repeat or double triggers	My unit fights a chosen enemy	1	1
-G05	Repeat or double triggers	Attack right away	1	1
-G05	My unit fights a chosen enemy	Expensive card	1	1
-G05	My unit fights a chosen enemy	Hits my own side too	1	1
-G05	Attack right away	Expensive card	1	1
-G05	Expensive card	Hits my own side too	1	1
-G05	Expensive card	Neighbours matter (adjacency)	1	1
-G06	Return my unit from the board to hand	Can't attack (my own unit)	1	1
-G06	Send an enemy unit back (bounce)	Neighbours matter (adjacency)	1	1
-G06	Send an enemy unit back (bounce)	Act the turn it arrives (haste, rush)	1	0
-G06	Send an enemy unit back (bounce)	Can't attack (my own unit)	1	1
-G06	Send an enemy unit back (bounce)	Destroy outright	1	1
-G06	Silence (abilities removed)	Turn an enemy into something weaker	1	0
-G06	Silence (abilities removed)	Steal from the opponent	1	1
-G06	Silence (abilities removed)	Temporary bonus (this turn only)	1	0
-G06	Silence (abilities removed)	Act the turn it arrives (haste, rush)	1	1
-G06	Silence (abilities removed)	Summon units / tokens	1	1
-G06	Silence (abilities removed)	Draw cards	1	1
-G06	Silence (abilities removed)	Destroy outright	1	1
+G01	Temporary bonus (this turn only)	When I play another card	1	1
+G01	Temporary bonus (this turn only)	Defence gain (+health)	1	1
+G01	Attack right away	When I play another card	1	1
+G01	Attack right away	Grows again and again	1	1
+G01	When I play another card	Grows again and again	1	1
+G01	When I play another card	Defence gain (+health)	1	1
+G01	Grows again and again	A unit levels up on the board	1	1
+G01	Grows again and again	Return my unit from the board to hand	1	1
+G01	Grows again and again	Defence gain (+health)	1	1
+G01	A unit levels up on the board	Return my unit from the board to hand	1	1
+G02	Set a cost to a fixed number	Damage to many at once	1	1
+G02	Set a cost to a fixed number	Can't attack (my own unit)	1	0
+G02	Set a cost to a fixed number	When I play another card	1	1
+G02	Cards cost less	Make a unit stronger (buff)	1	1
+G02	Cards cost less	Cost matters	1	1
+G02	Cards cost less	Board wipe	1	1
+G02	Cards cost less	Damage to many at once	1	1
+G02	Cards cost less	More or faster base resource (ramp)	1	1
+G02	Cards cost less	Can't attack (my own unit)	1	1
+G02	Cards cost less	When I play another card	1	1
+G02	Make a unit stronger (buff)	More or faster base resource (ramp)	1	1
+G02	Make a unit stronger (buff)	Can't attack (my own unit)	1	1
+G02	Cost matters	Can't attack (my own unit)	1	0
+G02	Board wipe	Damage to many at once	1	1
+G02	Board wipe	When I play another card	1	1
+G02	Damage to many at once	When I play another card	1	1
+G02	More or faster base resource (ramp)	When I play another card	1	1
+G03	Having a card in play or hand	Repeat or double triggers	1	1
+G03	Having a card in play or hand	Variety matters (all different)	1	1
+G03	Having a card in play or hand	Keep my units alive (protection)	1	1
+G03	Having a card in play or hand	Stat gain (+power, +health)	1	1
+G03	Having a card in play or hand	Transform my card into another	1	1
+G03	Having a card in play or hand	Strike back when attacked (counterattack, thorns)	1	0
+G03	Having a card in play or hand	My spells and abilities get stronger	1	1
+G03	Having a card in play or hand	Reuse my cards (shuffle back)	1	1
+G03	Having a card in play or hand	Order of my plays matters (combo)	1	1
+G03	Having a card in play or hand	Enough spells played	1	1
+G03	Repeat or double triggers	Stat gain (+power, +health)	1	1
+G03	Repeat or double triggers	My spells and abilities get stronger	1	1
+G03	Repeat or double triggers	Enough spells played	1	0
+G03	Variety matters (all different)	Stat gain (+power, +health)	1	1
+G03	Variety matters (all different)	Transform my card into another	1	1
+G03	Variety matters (all different)	Block points that wear off	1	1
+G03	Variety matters (all different)	Strike back when attacked (counterattack, thorns)	1	0
+G03	Variety matters (all different)	My spells and abilities get stronger	1	1
+G03	Variety matters (all different)	Reuse my cards (shuffle back)	1	1
+G03	Variety matters (all different)	Order of my plays matters (combo)	1	1
+G03	Variety matters (all different)	Enough spells played	1	1
+G03	Keep my units alive (protection)	Stat gain (+power, +health)	1	1
+G03	Keep my units alive (protection)	Transform my card into another	1	1
+G03	Keep my units alive (protection)	Block points that wear off	1	1
+G03	Keep my units alive (protection)	Strike back when attacked (counterattack, thorns)	1	0
+G03	Keep my units alive (protection)	My spells and abilities get stronger	1	1
+G03	Keep my units alive (protection)	Reuse my cards (shuffle back)	1	0
+G03	Keep my units alive (protection)	Order of my plays matters (combo)	1	0
+G03	Keep my units alive (protection)	Enough spells played	1	0
+G03	Stat gain (+power, +health)	Transform my card into another	1	1
+G03	Stat gain (+power, +health)	Mark a target for later hits	1	1
+G03	Stat gain (+power, +health)	Strike back when attacked (counterattack, thorns)	1	1
+G03	Stat gain (+power, +health)	My spells and abilities get stronger	1	1
+G03	Stat gain (+power, +health)	Reuse my cards (shuffle back)	1	1
+G03	Stat gain (+power, +health)	Order of my plays matters (combo)	1	1
+G03	Stat gain (+power, +health)	Enough spells played	1	1
+G03	Transform my card into another	Block points that wear off	1	1
+G03	Transform my card into another	Strike back when attacked (counterattack, thorns)	1	0
+G03	Transform my card into another	My spells and abilities get stronger	1	1
+G03	Transform my card into another	Reuse my cards (shuffle back)	1	1
+G03	Transform my card into another	Order of my plays matters (combo)	1	1
+G03	Block points that wear off	Strike back when attacked (counterattack, thorns)	1	1
+G03	Block points that wear off	My spells and abilities get stronger	1	1
+G03	Block points that wear off	Reuse my cards (shuffle back)	1	0
+G03	Block points that wear off	Order of my plays matters (combo)	1	1
+G03	Mark a target for later hits	My spells and abilities get stronger	1	0
+G03	Mark a target for later hits	Reuse my cards (shuffle back)	1	1
+G03	Mark a target for later hits	Order of my plays matters (combo)	1	0
+G03	Mark a target for later hits	Enough spells played	1	0
+G03	Strike back when attacked (counterattack, thorns)	My spells and abilities get stronger	1	0
+G03	Strike back when attacked (counterattack, thorns)	Reuse my cards (shuffle back)	1	0
+G03	Strike back when attacked (counterattack, thorns)	Order of my plays matters (combo)	1	0
+G03	Strike back when attacked (counterattack, thorns)	Enough spells played	1	0
+G03	My spells and abilities get stronger	Reuse my cards (shuffle back)	1	1
+G03	Reuse my cards (shuffle back)	Order of my plays matters (combo)	1	1
+G03	Reuse my cards (shuffle back)	Enough spells played	1	1
+G04	Discard my own cards	Position and space	1	1
+G04	Discard my own cards	Counts / thresholds	1	1
+G04	Discard my own cards	When I play another card	1	1
+G04	When a card is discarded	Position and space	1	1
+G04	When a card is discarded	When I play another card	1	1
+G04	When a card is discarded	Deal damage	1	1
+G04	Draw cards	Cheat death (survive lethal)	1	1
+G04	Draw cards	Position and space	1	1
+G04	Draw cards	Row-wide lasting effects (weather)	1	0
+G04	Draw cards	Damaged unit matters	1	1
+G04	Draw cards	When I play another card	1	1
+G04	Cheat death (survive lethal)	Position and space	1	1
+G04	Cheat death (survive lethal)	Counts / thresholds	1	1
+G04	Cheat death (survive lethal)	Grows again and again	1	1
+G04	Position and space	Hand size matters	1	1
+G04	Position and space	Grows again and again	1	1
+G04	Row-wide lasting effects (weather)	Hand size matters	1	1
+G04	Row-wide lasting effects (weather)	Counts / thresholds	1	1
+G04	Row-wide lasting effects (weather)	When I play another card	1	1
+G04	Row-wide lasting effects (weather)	Grows again and again	1	1
+G04	Hand size matters	Grows again and again	1	1
+G04	Hand size matters	Deal damage	1	1
+G04	Damaged unit matters	When I play another card	1	1
+G04	Damaged unit matters	Grows again and again	1	1
+G04	Counts / thresholds	Grows again and again	1	1
+G04	When I play another card	Grows again and again	1	1
+G04	When I play another card	Deal damage	1	1
+G04	Grows again and again	Deal damage	1	1
+G05	Damage to many at once	Board wipe	1	1
+G05	Restore health (heal)	Board wipe	1	1
+G05	Restore health (heal)	Destroy outright	1	1
+G05	Restore health (heal)	Bring back dead units (revive)	1	1
+G05	Damaged unit matters	Board wipe	1	1
+G05	Damaged unit matters	Destroy outright	1	1
+G05	Board wipe	When life or health is restored	1	1
+G05	Board wipe	Small repeatable damage	1	1
+G05	Destroy outright	When life or health is restored	1	1
+G05	When life or health is restored	Bring back dead units (revive)	1	1
+G06	Silence (abilities removed)	Swap positions	1	1
+G06	Silence (abilities removed)	Restore health (heal)	1	0
 G06	Silence (abilities removed)	Terrain / board features	1	1
-G06	Neighbours matter (adjacency)	Turn an enemy into something weaker	1	1
-G06	Neighbours matter (adjacency)	Temporary bonus (this turn only)	1	1
-G06	Neighbours matter (adjacency)	Act the turn it arrives (haste, rush)	1	1
-G06	Neighbours matter (adjacency)	Draw cards	1	1
-G06	Neighbours matter (adjacency)	Can't attack (my own unit)	1	1
-G06	Swap positions	Steal from the opponent	1	1
-G06	Swap positions	Act the turn it arrives (haste, rush)	1	0
-G06	Swap positions	Summon units / tokens	1	1
-G06	Swap positions	Destroy outright	1	1
+G06	Silence (abilities removed)	Draw cards	1	1
+G06	Silence (abilities removed)	Create new cards	1	1
+G06	Silence (abilities removed)	Destroy outright	1	1
+G06	Return my unit from the board to hand	Can't attack (my own unit)	1	1
+G06	Return my unit from the board to hand	Can't move (root)	1	0
+G06	Send an enemy unit back (bounce)	Neighbours matter (adjacency)	1	1
+G06	Send an enemy unit back (bounce)	Restore health (heal)	1	1
+G06	Send an enemy unit back (bounce)	Can't attack (my own unit)	1	1
+G06	Send an enemy unit back (bounce)	Can't move (root)	1	0
+G06	Send an enemy unit back (bounce)	Destroy outright	1	1
+G06	Swap positions	Restore health (heal)	1	1
+G06	Swap positions	Can't act at all (stun, freeze)	1	1
 G06	Swap positions	Terrain / board features	1	1
-G06	Turn an enemy into something weaker	Temporary bonus (this turn only)	1	0
-G06	Turn an enemy into something weaker	Summon units / tokens	1	0
-G06	Turn an enemy into something weaker	Draw cards	1	0
-G06	Turn an enemy into something weaker	Can't attack (my own unit)	1	1
-G06	Turn an enemy into something weaker	Destroy outright	1	0
-G06	Turn an enemy into something weaker	Terrain / board features	1	0
-G06	Steal from the opponent	Act the turn it arrives (haste, rush)	1	0
-G06	Steal from the opponent	Summon units / tokens	1	1
-G06	Steal from the opponent	Draw cards	1	1
-G06	Steal from the opponent	Can't attack (my own unit)	1	1
-G06	Steal from the opponent	Destroy outright	1	1
-G06	Steal from the opponent	Terrain / board features	1	1
-G06	Temporary bonus (this turn only)	Draw cards	1	1
-G06	Temporary bonus (this turn only)	Can't attack (my own unit)	1	1
-G06	Temporary bonus (this turn only)	Destroy outright	1	1
-G06	Temporary bonus (this turn only)	Terrain / board features	1	1
-G06	Act the turn it arrives (haste, rush)	Draw cards	1	1
-G06	Act the turn it arrives (haste, rush)	Can't attack (my own unit)	1	0
-G06	Act the turn it arrives (haste, rush)	Destroy outright	1	1
-G06	Act the turn it arrives (haste, rush)	Terrain / board features	1	1
-G06	Summon units / tokens	Draw cards	1	1
-G06	Summon units / tokens	Can't attack (my own unit)	1	1
-G06	Summon units / tokens	Terrain / board features	1	1
-G06	Draw cards	Can't attack (my own unit)	1	1
-G06	Draw cards	Destroy outright	1	1
-G06	Draw cards	Terrain / board features	1	1
-G06	Can't attack (my own unit)	Destroy outright	1	1
+G06	Swap positions	Can't move (root)	1	1
+G06	Swap positions	Create new cards	1	1
+G06	Swap positions	Destroy outright	1	1
+G06	Neighbours matter (adjacency)	Can't attack (my own unit)	1	1
+G06	Neighbours matter (adjacency)	Draw cards	1	1
+G06	Neighbours matter (adjacency)	Create new cards	1	1
+G06	Restore health (heal)	Can't act at all (stun, freeze)	1	1
+G06	Restore health (heal)	Can't attack (my own unit)	1	1
+G06	Restore health (heal)	Terrain / board features	1	1
+G06	Restore health (heal)	Can't move (root)	1	0
+G06	Restore health (heal)	Draw cards	1	1
+G06	Restore health (heal)	Create new cards	1	1
+G06	Restore health (heal)	Destroy outright	1	1
+G06	Can't act at all (stun, freeze)	Terrain / board features	1	0
+G06	Can't act at all (stun, freeze)	Draw cards	1	1
+G06	Can't act at all (stun, freeze)	Create new cards	1	0
+G06	Can't act at all (stun, freeze)	Destroy outright	1	1
 G06	Can't attack (my own unit)	Terrain / board features	1	1
-G06	Destroy outright	Terrain / board features	1	1
-G07	Hits my own side too	Deal damage	1	1
-G07	Restore health (heal)	Terrain / board features	1	1
-G07	Restore health (heal)	Can't attack (my own unit)	1	1
-G07	Restore health (heal)	Draw cards	1	1
-G07	Damaged unit matters	When life or health is restored	1	1
-G07	Damaged unit matters	Can't attack (my own unit)	1	1
-G07	Damaged unit matters	Draw cards	1	1
-G07	When life or health is restored	Bring back dead units (revive)	1	1
-G07	When life or health is restored	Can't attack (my own unit)	1	1
-G07	When life or health is restored	Draw cards	1	1
-G07	Small repeatable damage	Terrain / board features	1	1
-G07	Small repeatable damage	Can't attack (my own unit)	1	1
-G07	Small repeatable damage	Draw cards	1	1
-G07	Bring back dead units (revive)	Terrain / board features	1	1
-G07	Bring back dead units (revive)	Can't attack (my own unit)	1	1
-G07	Terrain / board features	Can't attack (my own unit)	1	1
-G07	Terrain / board features	Draw cards	1	1
-G07	Terrain / board features	Deal damage	1	1
-G07	Neighbours matter (adjacency)	Can't attack (my own unit)	1	1
-G07	Neighbours matter (adjacency)	Draw cards	1	1
-G07	Can't attack (my own unit)	Draw cards	1	1
-G08	When a spell is played	Cards cost less	1	1
-G08	When a spell is played	More or faster base resource (ramp)	1	1
-G08	When a spell is played	Draw cards	1	1
-G08	When a spell is played	A unit levels up on the board	1	1
-G08	When a spell is played	Can't attack (my own unit)	1	1
-G08	Order of my plays matters (combo)	More or faster base resource (ramp)	1	1
-G08	Order of my plays matters (combo)	Draw cards	1	1
-G08	Order of my plays matters (combo)	A unit levels up on the board	1	1
-G08	Order of my plays matters (combo)	Can't attack (my own unit)	1	1
-G08	Enough spells played	Draw cards	1	1
-G08	Enough spells played	A unit levels up on the board	1	1
-G08	Enough spells played	Can't attack (my own unit)	1	1
-G08	Grows with what happened this game	Create new cards	1	1
-G08	Grows with what happened this game	Draw cards	1	1
-G08	Grows with what happened this game	A unit levels up on the board	1	1
-G08	Cards cost less	More or faster base resource (ramp)	1	1
-G08	Cards cost less	A unit levels up on the board	1	1
-G08	Cards cost less	Can't attack (my own unit)	1	1
-G08	Create new cards	More or faster base resource (ramp)	1	1
-G08	Create new cards	A unit levels up on the board	1	1
-G08	Create new cards	Can't attack (my own unit)	1	1
+G06	Can't attack (my own unit)	Draw cards	1	1
+G06	Can't attack (my own unit)	Create new cards	1	1
+G06	Can't attack (my own unit)	Destroy outright	1	1
+G06	Terrain / board features	Can't move (root)	1	1
+G06	Terrain / board features	Draw cards	1	1
+G06	Terrain / board features	Create new cards	1	1
+G06	Terrain / board features	Destroy outright	1	1
+G06	Can't move (root)	Create new cards	1	1
+G06	Can't move (root)	Destroy outright	1	0
+G06	Draw cards	Destroy outright	1	1
+G06	Create new cards	Destroy outright	1	1
+G07	Draw cards	Make a unit stronger (buff)	1	1
+G07	Draw cards	Can't attack (my own unit)	1	1
+G07	Draw cards	More or faster base resource (ramp)	1	1
+G07	When a card is drawn	Can't attack (my own unit)	1	1
+G07	When a card is drawn	More or faster base resource (ramp)	1	1
+G07	When a card is drawn	Create new cards	1	1
+G07	Reuse my cards (shuffle back)	Make a unit stronger (buff)	1	1
+G07	Reuse my cards (shuffle back)	Counts / thresholds	1	1
+G07	Reuse my cards (shuffle back)	Can't attack (my own unit)	1	1
+G07	Reuse my cards (shuffle back)	Copy cards or units	1	1
+G07	Reuse my cards (shuffle back)	More or faster base resource (ramp)	1	1
+G07	Make a unit stronger (buff)	Cards cost less	1	1
+G07	Make a unit stronger (buff)	Can't attack (my own unit)	1	1
+G07	Make a unit stronger (buff)	Copy cards or units	1	1
+G07	Make a unit stronger (buff)	Hand size matters	1	1
+G07	Make a unit stronger (buff)	More or faster base resource (ramp)	1	1
+G07	Make a unit stronger (buff)	Create new cards	1	1
+G07	Counts / thresholds	Cards cost less	1	1
+G07	Counts / thresholds	Can't attack (my own unit)	1	1
+G07	Counts / thresholds	Copy cards or units	1	1
+G07	Cards cost less	Can't attack (my own unit)	1	1
+G07	Cards cost less	Hand size matters	1	1
+G07	Cards cost less	More or faster base resource (ramp)	1	1
+G07	Can't attack (my own unit)	Copy cards or units	1	1
+G07	Can't attack (my own unit)	Create new cards	1	1
+G07	Copy cards or units	More or faster base resource (ramp)	1	1
+G07	Hand size matters	More or faster base resource (ramp)	1	1
+G07	More or faster base resource (ramp)	Create new cards	1	1
+G08	More or faster base resource (ramp)	Stat gain (+power, +health)	1	1
+G08	More or faster base resource (ramp)	Having a card in play or hand	1	1
+G08	More or faster base resource (ramp)	Can't attack (lock on an enemy)	1	0
+G08	More or faster base resource (ramp)	Neighbours matter (adjacency)	1	1
+G08	More or faster base resource (ramp)	Defence gain (+health)	1	1
 G08	More or faster base resource (ramp)	Draw cards	1	1
-G08	More or faster base resource (ramp)	A unit levels up on the board	1	1
-G08	My spells and abilities get stronger	Draw cards	1	1
-G08	My spells and abilities get stronger	A unit levels up on the board	1	1
-G08	My spells and abilities get stronger	Can't attack (my own unit)	1	0
-G08	Draw cards	A unit levels up on the board	1	1
-G08	Draw cards	Can't attack (my own unit)	1	1
-G09	Discard my own cards	Position and space	1	1
-G09	Discard my own cards	Create new cards	1	1
-G09	When a card is discarded	Position and space	1	1
-G09	When a card is discarded	Create new cards	1	1
-G09	When a card is discarded	Deal damage	1	1
-G09	Cheat death (survive lethal)	Draw cards	1	1
-G09	Cheat death (survive lethal)	Position and space	1	1
-G09	Cheat death (survive lethal)	Counts / thresholds	1	1
-G09	Cheat death (survive lethal)	Create new cards	1	1
-G09	Draw cards	Position and space	1	1
-G09	Draw cards	Damaged unit matters	1	1
-G09	Position and space	Hand size matters	1	1
-G09	Position and space	Create new cards	1	1
-G09	Damaged unit matters	Create new cards	1	1
-G09	Hand size matters	Deal damage	1	1
+G08	Can't attack (my own unit)	Disrupt the opponent's plans	1	0
+G08	Can't attack (my own unit)	Having a card in play or hand	1	1
+G08	Can't attack (my own unit)	Neighbours matter (adjacency)	1	1
+G08	Can't attack (my own unit)	Draw cards	1	1
+G08	Can't act at all (stun, freeze)	Stat gain (+power, +health)	1	1
+G08	Can't act at all (stun, freeze)	Switch stances or forms	1	0
+G08	Can't act at all (stun, freeze)	Having a card in play or hand	1	1
+G08	Can't act at all (stun, freeze)	Defence gain (+health)	1	1
+G08	Can't act at all (stun, freeze)	Draw cards	1	1
+G08	Stat gain (+power, +health)	Switch stances or forms	1	0
+G08	Stat gain (+power, +health)	Grows with what happened this game	1	1
+G08	Stat gain (+power, +health)	Disrupt the opponent's plans	1	1
+G08	Stat gain (+power, +health)	Damage to many at once	1	1
+G08	Stat gain (+power, +health)	Having a card in play or hand	1	1
+G08	Stat gain (+power, +health)	Can't attack (lock on an enemy)	1	0
+G08	Stat gain (+power, +health)	Deal damage	1	1
+G08	Stat gain (+power, +health)	Draw cards	1	1
+G08	Switch stances or forms	Disrupt the opponent's plans	1	0
+G08	Switch stances or forms	Damage to many at once	1	1
+G08	Switch stances or forms	Can't attack (lock on an enemy)	1	0
+G08	Switch stances or forms	Deal damage	1	1
+G08	Switch stances or forms	Neighbours matter (adjacency)	1	0
+G08	Switch stances or forms	Defence gain (+health)	1	0
+G08	Switch stances or forms	Draw cards	1	1
+G08	Grows with what happened this game	Disrupt the opponent's plans	1	0
+G08	Grows with what happened this game	Having a card in play or hand	1	1
+G08	Grows with what happened this game	Can't attack (lock on an enemy)	1	0
+G08	Grows with what happened this game	Defence gain (+health)	1	1
+G08	Grows with what happened this game	Draw cards	1	1
+G08	Disrupt the opponent's plans	Damage to many at once	1	0
+G08	Disrupt the opponent's plans	Deal damage	1	0
+G08	Disrupt the opponent's plans	Neighbours matter (adjacency)	1	1
+G08	Disrupt the opponent's plans	Defence gain (+health)	1	0
+G08	Disrupt the opponent's plans	Draw cards	1	1
+G08	Damage to many at once	Having a card in play or hand	1	1
+G08	Damage to many at once	Can't attack (lock on an enemy)	1	1
+G08	Damage to many at once	Defence gain (+health)	1	1
+G08	Having a card in play or hand	Can't attack (lock on an enemy)	1	0
+G08	Having a card in play or hand	Deal damage	1	1
+G08	Having a card in play or hand	Neighbours matter (adjacency)	1	1
+G08	Having a card in play or hand	Defence gain (+health)	1	1
+G08	Having a card in play or hand	Draw cards	1	1
+G08	Can't attack (lock on an enemy)	Deal damage	1	1
+G08	Can't attack (lock on an enemy)	Defence gain (+health)	1	0
+G08	Deal damage	Defence gain (+health)	1	1
+G08	Neighbours matter (adjacency)	Draw cards	1	1
+G08	Defence gain (+health)	Draw cards	1	1
+G09	Put into play for free	Where units can be placed	1	1
+G09	Put into play for free	Make a unit weaker (debuff)	1	1
+G09	Give my units or cards to the opponent	Set stats to a number	1	0
+G09	Give my units or cards to the opponent	Make a unit weaker (debuff)	1	0
+G09	Give my units or cards to the opponent	Can't attack (my own unit)	1	0
+G09	Give my units or cards to the opponent	Move my units (reposition)	1	1
+G09	Give my units or cards to the opponent	Move enemy units (push, pull)	1	1
+G09	Where units can be placed	Set stats to a number	1	0
+G09	Where units can be placed	Create new cards	1	1
+G09	Where units can be placed	Can't attack (my own unit)	1	0
+G09	Where units can be placed	Move my units (reposition)	1	1
+G09	Where units can be placed	Move enemy units (push, pull)	1	1
+G09	Where units can be placed	Deal damage	1	1
+G09	Copy cards or units	Steal from the opponent	1	1
+G09	Copy cards or units	Make a unit weaker (debuff)	1	1
+G09	Copy cards or units	Can't attack (my own unit)	1	1
+G09	Copy cards or units	Summon units / tokens	1	1
+G09	Copy cards or units	Move my units (reposition)	1	1
+G09	Copy cards or units	Move enemy units (push, pull)	1	1
+G09	Copy cards or units	Deal damage	1	1
+G09	Steal from the opponent	Hidden and revealed information	1	0
+G09	Steal from the opponent	Create new cards	1	0
+G09	Steal from the opponent	Make a unit weaker (debuff)	1	0
+G09	Steal from the opponent	Can't attack (my own unit)	1	1
+G09	Steal from the opponent	Summon units / tokens	1	1
+G09	Hidden and revealed information	Set stats to a number	1	0
+G09	Hidden and revealed information	Create new cards	1	1
+G09	Hidden and revealed information	Make a unit weaker (debuff)	1	0
+G09	Hidden and revealed information	Summon units / tokens	1	1
+G09	Hidden and revealed information	Move my units (reposition)	1	1
+G09	Hidden and revealed information	Move enemy units (push, pull)	1	1
+G09	Hidden and revealed information	Deal damage	1	0
+G09	Send an enemy unit back (bounce)	Can't attack (my own unit)	1	1
+G09	Set stats to a number	Create new cards	1	1
+G09	Set stats to a number	Can't attack (my own unit)	1	1
+G09	Set stats to a number	Move my units (reposition)	1	1
+G09	Set stats to a number	Move enemy units (push, pull)	1	1
+G09	Set stats to a number	Deal damage	1	1
+G09	Create new cards	Make a unit weaker (debuff)	1	1
+G09	Create new cards	Can't attack (my own unit)	1	1
+G09	Create new cards	Summon units / tokens	1	1
+G09	Create new cards	Move my units (reposition)	1	1
+G09	Create new cards	Move enemy units (push, pull)	1	1
 G09	Create new cards	Deal damage	1	1
+G09	Make a unit weaker (debuff)	Can't attack (my own unit)	1	1
+G09	Make a unit weaker (debuff)	Summon units / tokens	1	1
+G09	Make a unit weaker (debuff)	Deal damage	1	1
+G09	Can't attack (my own unit)	Summon units / tokens	1	1
 G10	Move my units (reposition)	Set stats to a number	1	1
-G10	Move my units (reposition)	Expensive card	1	1
+G10	Move my units (reposition)	Set a cost to a fixed number	1	1
 G10	Move enemy units (push, pull)	Hand size matters	1	1
 G10	Move enemy units (push, pull)	Set stats to a number	1	1
-G10	Move enemy units (push, pull)	When a spell is played	1	1
-G10	Move enemy units (push, pull)	Expensive card	1	1
-G10	Position and space	Act the turn it arrives (haste, rush)	1	1
-G10	Position and space	Hand size matters	1	1
-G10	Position and space	Set stats to a number	1	1
-G10	Position and space	Immune / can't be targeted	1	1
-G10	Position and space	Can't attack (my own unit)	1	1
-G10	Position and space	When a spell is played	1	1
-G10	Position and space	Expensive card	1	1
-G10	Act the turn it arrives (haste, rush)	Hand size matters	1	1
-G10	Act the turn it arrives (haste, rush)	Neighbours matter (adjacency)	1	1
-G10	Act the turn it arrives (haste, rush)	Set stats to a number	1	1
-G10	Act the turn it arrives (haste, rush)	Immune / can't be targeted	1	0
-G10	Act the turn it arrives (haste, rush)	Can't attack (my own unit)	1	0
-G10	Act the turn it arrives (haste, rush)	When a spell is played	1	1
-G10	Act the turn it arrives (haste, rush)	Expensive card	1	1
-G10	Act the turn it arrives (haste, rush)	Small repeatable damage	1	1
-G10	Hand size matters	Neighbours matter (adjacency)	1	1
+G10	Move enemy units (push, pull)	Set a cost to a fixed number	1	1
 G10	Hand size matters	Set stats to a number	1	1
+G10	Hand size matters	Position and space	1	1
+G10	Hand size matters	Destroy outright	1	1
+G10	Hand size matters	Terrain / board features	1	1
 G10	Hand size matters	Immune / can't be targeted	1	1
-G10	Hand size matters	When a spell is played	1	1
-G10	Hand size matters	Small repeatable damage	1	1
-G10	Neighbours matter (adjacency)	Immune / can't be targeted	1	1
-G10	Neighbours matter (adjacency)	Can't attack (my own unit)	1	1
-G10	Neighbours matter (adjacency)	When a spell is played	1	1
-G10	Neighbours matter (adjacency)	Expensive card	1	1
+G10	Hand size matters	Set a cost to a fixed number	1	0
+G10	Hand size matters	Act the turn it arrives (haste, rush)	1	1
+G10	Hand size matters	Neighbours matter (adjacency)	1	1
+G10	Set stats to a number	Position and space	1	1
+G10	Set stats to a number	Destroy outright	1	1
+G10	Set stats to a number	Terrain / board features	1	0
 G10	Set stats to a number	Immune / can't be targeted	1	0
-G10	Set stats to a number	Can't attack (my own unit)	1	1
-G10	Set stats to a number	When a spell is played	1	1
-G10	Set stats to a number	Expensive card	1	1
-G10	Immune / can't be targeted	Can't attack (my own unit)	1	0
-G10	Immune / can't be targeted	Expensive card	1	0
-G10	Immune / can't be targeted	Small repeatable damage	1	1
-G10	Can't attack (my own unit)	When a spell is played	1	1
-G10	Can't attack (my own unit)	Expensive card	1	1
-G10	Can't attack (my own unit)	Small repeatable damage	1	1
-G10	When a spell is played	Small repeatable damage	1	1
-G10	Expensive card	Small repeatable damage	1	1
-G11	Take less damage (armour)	Taunt (enemies must attack it)	1	0
-G11	Take less damage (armour)	Hand size matters	1	0
-G11	Take less damage (armour)	Can't attack (my own unit)	1	0
-G11	Taunt (enemies must attack it)	Hand size matters	1	1
-G11	Taunt (enemies must attack it)	Stats matter (highest, lowest)	1	1
-G11	Hand size matters	Stats matter (highest, lowest)	1	1
-G11	Can't attack (my own unit)	Stats matter (highest, lowest)	1	1
-G12	Sacrifice my own units	When I play another card	1	1
-G12	Sacrifice my own units	Expensive card	1	1
-G12	Sacrifice my own units	Having a card in play or hand	1	1
-G12	Double or multiply stats	Expensive card	1	1
-G12	Double or multiply stats	Summon units / tokens	1	1
-G12	Double or multiply stats	Copy cards or units	1	1
-G12	Bring back dead units (revive)	Expensive card	1	1
-G12	Bring back dead units (revive)	Summon units / tokens	1	1
-G12	Bring back dead units (revive)	Copy cards or units	1	1
-G12	Cheat death (survive lethal)	Stats equal to a count	1	1
-G12	Cheat death (survive lethal)	Attach or merge onto a unit	1	1
-G12	Cheat death (survive lethal)	Expensive card	1	1
-G12	Cheat death (survive lethal)	Summon units / tokens	1	1
-G12	Cheat death (survive lethal)	Having a card in play or hand	1	1
-G12	Cheat death (survive lethal)	Copy cards or units	1	1
-G12	Destroys itself / temporary unit	Stats equal to a count	1	1
-G12	Destroys itself / temporary unit	Attach or merge onto a unit	1	1
-G12	Destroys itself / temporary unit	Expensive card	1	1
-G12	Destroys itself / temporary unit	Having a card in play or hand	1	1
-G12	Back to hand when it dies or leaves play	When I play another card	1	1
-G12	Back to hand when it dies or leaves play	Expensive card	1	0
-G12	Back to hand when it dies or leaves play	Summon units / tokens	1	1
-G12	Back to hand when it dies or leaves play	Copy cards or units	1	1
-G12	When I play another card	Attach or merge onto a unit	1	1
-G12	When I play another card	Having a card in play or hand	1	1
-G12	Stats equal to a count	Having a card in play or hand	1	1
-G12	Stats equal to a count	Copy cards or units	1	1
-G12	Attach or merge onto a unit	Expensive card	1	1
-G12	Attach or merge onto a unit	Copy cards or units	1	1
-G12	Expensive card	Summon units / tokens	1	1
-G12	Expensive card	Copy cards or units	1	1
-G12	Summon units / tokens	Having a card in play or hand	1	1
-G12	Summon units / tokens	Copy cards or units	1	1
-G12	Having a card in play or hand	Copy cards or units	1	1
-G13	Destroy outright	Expensive card	1	1
-G13	Destroy outright	Stat loss (-power, -health)	1	1
-G13	Destroy outright	Banish / exile (gone for good)	1	1
-G13	Destroy outright	Attack set to 0	1	0
-G13	Destroy outright	Draw cards	1	1
-G13	Destroy outright	Can't attack (my own unit)	1	1
-G13	Destroy outright	Create new cards	1	1
-G13	Board wipe	Draw cards	1	1
-G13	Board wipe	Create new cards	1	1
-G13	Expensive card	Hits my own side too	1	1
-G13	Expensive card	Stat loss (-power, -health)	1	1
-G13	Expensive card	Damage to many at once	1	1
-G13	Expensive card	Summon units / tokens	1	1
-G13	Expensive card	Draw cards	1	1
-G13	Expensive card	Can't attack (my own unit)	1	1
-G13	Expensive card	Create new cards	1	1
-G13	Hits my own side too	Stat loss (-power, -health)	1	1
-G13	Hits my own side too	Set a cost to a fixed number	1	1
-G13	Hits my own side too	Create new cards	1	1
-G13	Hits my own side too	More or faster base resource (ramp)	1	1
-G13	Stat loss (-power, -health)	Set a cost to a fixed number	1	1
-G13	Stat loss (-power, -health)	Damage to many at once	1	1
-G13	Stat loss (-power, -health)	Draw cards	1	1
-G13	Stat loss (-power, -health)	Can't attack (my own unit)	1	1
-G13	Stat loss (-power, -health)	Create new cards	1	1
-G13	Stat loss (-power, -health)	More or faster base resource (ramp)	1	1
-G13	Banish / exile (gone for good)	Draw cards	1	1
-G13	Banish / exile (gone for good)	Can't attack (my own unit)	1	1
-G13	Banish / exile (gone for good)	Create new cards	1	1
-G13	Attack set to 0	Summon units / tokens	1	1
-G13	Attack set to 0	Draw cards	1	1
-G13	Attack set to 0	Can't attack (my own unit)	1	1
-G13	Attack set to 0	Create new cards	1	0
-G13	Set a cost to a fixed number	Summon units / tokens	1	1
-G13	Set a cost to a fixed number	Draw cards	1	0
-G13	Set a cost to a fixed number	Can't attack (my own unit)	1	0
-G13	Set a cost to a fixed number	Create new cards	1	1
-G13	Damage to many at once	Create new cards	1	1
-G13	Summon units / tokens	Draw cards	1	1
-G13	Summon units / tokens	Can't attack (my own unit)	1	1
-G13	Summon units / tokens	Create new cards	1	1
-G13	Summon units / tokens	More or faster base resource (ramp)	1	1
-G13	Draw cards	Can't attack (my own unit)	1	1
-G13	Draw cards	More or faster base resource (ramp)	1	1
-G13	Can't attack (my own unit)	Create new cards	1	1
-G13	Create new cards	More or faster base resource (ramp)	1	1
-G14	Damage over time (poison, burn)	Stat gain (+power, +health)	1	1
-G14	Damage over time (poison, burn)	Damage to many at once	1	1
-G14	Damage over time (poison, burn)	Keep my units alive (protection)	1	1
-G14	Small repeatable damage	Stat gain (+power, +health)	1	1
-G14	Small repeatable damage	Make a unit weaker (debuff)	1	0
-G14	Small repeatable damage	Keep my units alive (protection)	1	1
-G14	Small repeatable damage	Counts / thresholds	1	1
-G14	Lifesteal / drain	Damage to many at once	1	1
-G14	Lifesteal / drain	Summon units / tokens	1	1
-G14	Lifesteal / drain	Neighbours matter (adjacency)	1	1
-G14	Lifesteal / drain	Hits my own side too	1	1
-G14	Clog the opponent's board	Stat gain (+power, +health)	1	1
-G14	Clog the opponent's board	Make a unit weaker (debuff)	1	0
-G14	Clog the opponent's board	Row-wide lasting effects (weather)	1	1
-G14	Clog the opponent's board	Keep my units alive (protection)	1	1
-G14	Clog the opponent's board	Summon units / tokens	1	1
-G14	Stat gain (+power, +health)	Row-wide lasting effects (weather)	1	1
-G14	Stat gain (+power, +health)	Damage to many at once	1	1
-G14	Stat gain (+power, +health)	Keep my units alive (protection)	1	1
-G14	Stat gain (+power, +health)	Counts / thresholds	1	1
-G14	Stat gain (+power, +health)	Hits my own side too	1	1
-G14	Make a unit weaker (debuff)	Row-wide lasting effects (weather)	1	0
-G14	Make a unit weaker (debuff)	Damage to many at once	1	1
-G14	Make a unit weaker (debuff)	Summon units / tokens	1	1
-G14	Make a unit weaker (debuff)	Neighbours matter (adjacency)	1	1
-G14	Make a unit weaker (debuff)	Stats equal to a count	1	1
-G14	Make a unit weaker (debuff)	Hits my own side too	1	1
-G14	Row-wide lasting effects (weather)	Keep my units alive (protection)	1	0
-G14	Row-wide lasting effects (weather)	Counts / thresholds	1	1
-G14	Row-wide lasting effects (weather)	Neighbours matter (adjacency)	1	1
-G14	Row-wide lasting effects (weather)	Stats equal to a count	1	1
-G14	Damage to many at once	Keep my units alive (protection)	1	0
-G14	Keep my units alive (protection)	Counts / thresholds	1	1
-G14	Keep my units alive (protection)	Summon units / tokens	1	1
-G14	Keep my units alive (protection)	Neighbours matter (adjacency)	1	1
-G14	Keep my units alive (protection)	Stats equal to a count	1	1
-G14	Keep my units alive (protection)	Hits my own side too	1	0
-G14	Counts / thresholds	Neighbours matter (adjacency)	1	1
-G14	Counts / thresholds	Hits my own side too	1	1
-G15	Look at cards and pick (scry)	Silence (abilities removed)	1	0
-G15	Look at cards and pick (scry)	A unit levels up on the board	1	1
-G15	Look at cards and pick (scry)	Restore health (heal)	1	1
-G15	Look at cards and pick (scry)	Draw cards	1	1
-G15	Look at cards and pick (scry)	Cards cost less	1	1
-G15	Look at cards and pick (scry)	Improve cards in hand or deck	1	1
-G15	Look at cards and pick (scry)	Discard my own cards	1	1
-G15	Look at cards and pick (scry)	Deal damage	1	1
+G10	Set stats to a number	Set a cost to a fixed number	1	0
+G10	Set stats to a number	Act the turn it arrives (haste, rush)	1	1
+G10	Position and space	Immune / can't be targeted	1	1
+G10	Position and space	Set a cost to a fixed number	1	1
+G10	Position and space	Act the turn it arrives (haste, rush)	1	1
+G10	Destroy outright	Terrain / board features	1	1
+G10	Destroy outright	Immune / can't be targeted	1	0
+G10	Destroy outright	Act the turn it arrives (haste, rush)	1	1
+G10	Terrain / board features	Immune / can't be targeted	1	1
+G10	Terrain / board features	Set a cost to a fixed number	1	1
+G10	Terrain / board features	Act the turn it arrives (haste, rush)	1	1
+G10	Immune / can't be targeted	Set a cost to a fixed number	1	0
+G10	Immune / can't be targeted	Neighbours matter (adjacency)	1	1
+G10	Set a cost to a fixed number	Act the turn it arrives (haste, rush)	1	0
+G10	Set a cost to a fixed number	Neighbours matter (adjacency)	1	1
+G10	Act the turn it arrives (haste, rush)	Neighbours matter (adjacency)	1	1
+G11	Deal damage	Deck contents matter	1	1
+G11	Deal damage	Grows again and again	1	1
+G11	Damage to several separate targets	Damage to many at once	1	1
+G11	Damage to several separate targets	Deck contents matter	1	1
+G11	Damage to several separate targets	Grows again and again	1	1
+G11	Damaged unit matters	Deck contents matter	1	1
+G11	Damaged unit matters	Grows again and again	1	1
+G11	Small repeatable damage	Can't act at all (stun, freeze)	1	1
+G11	Small repeatable damage	Deck contents matter	1	1
+G11	Small repeatable damage	Grows again and again	1	1
+G11	Damage to many at once	Grows again and again	1	1
+G11	Can't act at all (stun, freeze)	Deck contents matter	1	0
+G11	Can't act at all (stun, freeze)	Grows again and again	1	1
+G11	Deck contents matter	Position and space	1	1
+G11	Deck contents matter	Neighbours matter (adjacency)	1	1
+G11	Position and space	Grows again and again	1	1
+G12	Gain resources (ramp)	Make a unit weaker (debuff)	1	1
+G12	Gain resources (ramp)	Reuse my cards (shuffle back)	1	1
+G12	Gain resources (ramp)	Deck contents matter	1	1
+G12	Gain resources (ramp)	Defence gain (+health)	1	1
+G12	Gain resources (ramp)	Can't attack (my own unit)	1	1
+G12	Gain resources (ramp)	Grows again and again	1	1
+G12	Gain resources (ramp)	Summon units / tokens	1	1
+G12	Gain resources (ramp)	Stats equal to a count	1	1
+G12	Gain resources (ramp)	Countdown	1	1
+G12	Destroy outright	Cards cost less	1	1
+G12	Destroy outright	Look at cards and pick (scry)	1	1
+G12	Destroy outright	Hidden and revealed information	1	0
+G12	Destroy outright	Make a unit weaker (debuff)	1	1
+G12	Destroy outright	Reuse my cards (shuffle back)	1	1
+G12	Destroy outright	Deck contents matter	1	1
+G12	Destroy outright	Immune / can't be targeted	1	0
+G12	Destroy outright	Can't attack (my own unit)	1	1
+G12	Destroy outright	Grows again and again	1	1
+G12	Destroy outright	Counts / thresholds	1	1
+G12	Destroy outright	Stats equal to a count	1	1
+G12	Destroy outright	Countdown	1	1
+G12	Cards cost less	Look at cards and pick (scry)	1	1
+G12	Cards cost less	Hidden and revealed information	1	0
+G12	Cards cost less	Make a unit weaker (debuff)	1	1
+G12	Cards cost less	Deck contents matter	1	1
+G12	Cards cost less	Immune / can't be targeted	1	1
+G12	Cards cost less	Board wipe	1	1
+G12	Cards cost less	Defence gain (+health)	1	1
+G12	Cards cost less	Can't attack (my own unit)	1	1
+G12	Cards cost less	Deal damage	1	1
+G12	Cards cost less	Grows again and again	1	1
+G12	Cards cost less	Summon units / tokens	1	1
+G12	Cards cost less	Counts / thresholds	1	1
+G12	Cards cost less	Stats equal to a count	1	1
+G12	Cards cost less	Countdown	1	1
+G12	Look at cards and pick (scry)	Make a unit weaker (debuff)	1	1
+G12	Look at cards and pick (scry)	Deck contents matter	1	1
+G12	Look at cards and pick (scry)	Immune / can't be targeted	1	1
+G12	Look at cards and pick (scry)	Board wipe	1	1
+G12	Look at cards and pick (scry)	Defence gain (+health)	1	1
+G12	Look at cards and pick (scry)	Can't attack (my own unit)	1	1
+G12	Look at cards and pick (scry)	Deal damage	1	1
+G12	Look at cards and pick (scry)	Grows again and again	1	1
+G12	Look at cards and pick (scry)	Summon units / tokens	1	1
+G12	Look at cards and pick (scry)	Counts / thresholds	1	1
+G12	Look at cards and pick (scry)	Sacrifice my own units	1	1
+G12	Look at cards and pick (scry)	Stats equal to a count	1	1
+G12	Look at cards and pick (scry)	Countdown	1	1
+G12	Hidden and revealed information	Make a unit weaker (debuff)	1	0
+G12	Hidden and revealed information	Deck contents matter	1	1
+G12	Hidden and revealed information	Immune / can't be targeted	1	0
+G12	Hidden and revealed information	Deal damage	1	0
+G12	Hidden and revealed information	Grows again and again	1	1
+G12	Hidden and revealed information	Summon units / tokens	1	1
+G12	Hidden and revealed information	Counts / thresholds	1	1
+G12	Hidden and revealed information	Stats equal to a count	1	0
+G12	Hidden and revealed information	Countdown	1	1
+G12	Make a unit weaker (debuff)	Reuse my cards (shuffle back)	1	1
+G12	Make a unit weaker (debuff)	Deck contents matter	1	1
+G12	Make a unit weaker (debuff)	Immune / can't be targeted	1	0
+G12	Make a unit weaker (debuff)	Board wipe	1	1
+G12	Make a unit weaker (debuff)	Can't attack (my own unit)	1	1
+G12	Make a unit weaker (debuff)	Deal damage	1	1
+G12	Make a unit weaker (debuff)	Grows again and again	1	1
+G12	Make a unit weaker (debuff)	Summon units / tokens	1	1
+G12	Make a unit weaker (debuff)	Stats equal to a count	1	1
+G12	Make a unit weaker (debuff)	Bring back dead units (revive)	1	1
+G12	Reuse my cards (shuffle back)	Deck contents matter	1	1
+G12	Reuse my cards (shuffle back)	Immune / can't be targeted	1	1
+G12	Reuse my cards (shuffle back)	Board wipe	1	1
+G12	Reuse my cards (shuffle back)	Defence gain (+health)	1	1
+G12	Reuse my cards (shuffle back)	Can't attack (my own unit)	1	1
+G12	Reuse my cards (shuffle back)	Deal damage	1	1
+G12	Reuse my cards (shuffle back)	Grows again and again	1	1
+G12	Reuse my cards (shuffle back)	Summon units / tokens	1	1
+G12	Reuse my cards (shuffle back)	Counts / thresholds	1	1
+G12	Reuse my cards (shuffle back)	Stats equal to a count	1	1
+G12	Reuse my cards (shuffle back)	Countdown	1	1
+G12	Deck contents matter	Immune / can't be targeted	1	1
+G12	Deck contents matter	Board wipe	1	1
+G12	Deck contents matter	Defence gain (+health)	1	1
+G12	Deck contents matter	Can't attack (my own unit)	1	1
+G12	Deck contents matter	Deal damage	1	1
+G12	Deck contents matter	Summon units / tokens	1	1
+G12	Deck contents matter	Counts / thresholds	1	1
+G12	Deck contents matter	Sacrifice my own units	1	1
+G12	Deck contents matter	Stats equal to a count	1	1
+G12	Deck contents matter	Countdown	1	1
+G12	Deck contents matter	Bring back dead units (revive)	1	1
+G12	Immune / can't be targeted	Board wipe	1	0
+G12	Immune / can't be targeted	Deal damage	1	1
+G12	Immune / can't be targeted	Grows again and again	1	1
+G12	Immune / can't be targeted	Summon units / tokens	1	1
+G12	Immune / can't be targeted	Counts / thresholds	1	1
+G12	Immune / can't be targeted	Sacrifice my own units	1	0
+G12	Immune / can't be targeted	Stats equal to a count	1	0
+G12	Immune / can't be targeted	Countdown	1	1
+G12	Immune / can't be targeted	Bring back dead units (revive)	1	1
+G12	Board wipe	Deal damage	1	1
+G12	Board wipe	Grows again and again	1	1
+G12	Board wipe	Stats equal to a count	1	1
+G12	Defence gain (+health)	Deal damage	1	1
+G12	Defence gain (+health)	Grows again and again	1	1
+G12	Defence gain (+health)	Counts / thresholds	1	1
+G12	Defence gain (+health)	Countdown	1	1
+G12	Can't attack (my own unit)	Grows again and again	1	1
+G12	Can't attack (my own unit)	Summon units / tokens	1	1
+G12	Can't attack (my own unit)	Counts / thresholds	1	1
+G12	Can't attack (my own unit)	Sacrifice my own units	1	1
+G12	Can't attack (my own unit)	Stats equal to a count	1	1
+G12	Can't attack (my own unit)	Countdown	1	1
+G12	Can't attack (my own unit)	Bring back dead units (revive)	1	1
+G12	Deal damage	Grows again and again	1	1
+G12	Deal damage	Sacrifice my own units	1	1
+G12	Deal damage	Stats equal to a count	1	1
+G12	Deal damage	Countdown	1	1
+G12	Grows again and again	Counts / thresholds	1	1
+G12	Grows again and again	Countdown	1	1
+G12	Summon units / tokens	Bring back dead units (revive)	1	1
+G12	Counts / thresholds	Countdown	1	1
+G12	Stats equal to a count	Countdown	1	1
+G13	Sacrifice my own units	When I play another card	1	1
+G13	Bring back dead units (revive)	Copy cards or units	1	1
+G13	Bring back dead units (revive)	Summon units / tokens	1	1
+G13	Cheat death (survive lethal)	Copy cards or units	1	1
+G13	Cheat death (survive lethal)	Stats equal to a count	1	1
+G13	Cheat death (survive lethal)	Summon units / tokens	1	1
+G13	Cheat death (survive lethal)	Grows again and again	1	1
+G13	Cheat death (survive lethal)	Defence gain (+health)	1	1
+G13	Double or multiply stats	Copy cards or units	1	1
+G13	Double or multiply stats	Summon units / tokens	1	1
+G13	Destroy outright	Destroys itself / temporary unit	1	1
+G13	Destroy outright	Copy cards or units	1	1
+G13	Destroy outright	Stats equal to a count	1	1
+G13	Destroy outright	When I play another card	1	1
+G13	Destroy outright	Grows again and again	1	1
+G13	Destroys itself / temporary unit	Board wipe	1	1
+G13	Destroys itself / temporary unit	Copy cards or units	1	1
+G13	Destroys itself / temporary unit	Stats equal to a count	1	1
+G13	Back to hand when it dies or leaves play	Copy cards or units	1	1
+G13	Back to hand when it dies or leaves play	When I play another card	1	1
+G13	Back to hand when it dies or leaves play	Summon units / tokens	1	1
+G13	Back to hand when it dies or leaves play	Grows again and again	1	1
+G13	Back to hand when it dies or leaves play	Defence gain (+health)	1	1
+G13	Board wipe	Stats equal to a count	1	1
+G13	Board wipe	When I play another card	1	1
+G13	Board wipe	Grows again and again	1	1
+G13	Copy cards or units	Stats equal to a count	1	1
+G13	Copy cards or units	Summon units / tokens	1	1
+G13	Copy cards or units	Grows again and again	1	1
+G13	When I play another card	Grows again and again	1	1
+G13	When I play another card	Defence gain (+health)	1	1
+G13	Grows again and again	Defence gain (+health)	1	1
+G14	Take less damage (armour)	Taunt (enemies must attack it)	1	0
+G14	Take less damage (armour)	Stats matter (highest, lowest)	1	0
+G14	Take less damage (armour)	Can't attack (my own unit)	1	0
+G14	Take less damage (armour)	When I play another card	1	1
+G14	Absorb one hit (shield, ward)	Stats matter (highest, lowest)	1	1
+G14	Absorb one hit (shield, ward)	When I play another card	1	1
+G14	Defence gain (+health)	Force enemy units to attack	1	0
+G14	Defence gain (+health)	When I play another card	1	1
+G14	Taunt (enemies must attack it)	Stats matter (highest, lowest)	1	1
+G14	Taunt (enemies must attack it)	My unit fights a chosen enemy	1	1
+G14	Taunt (enemies must attack it)	Force enemy units to attack	1	0
+G14	Stats matter (highest, lowest)	Can't attack (my own unit)	1	1
+G14	Stats matter (highest, lowest)	My unit fights a chosen enemy	1	0
+G14	Stats matter (highest, lowest)	Force enemy units to attack	1	0
+G14	Can't attack (my own unit)	My unit fights a chosen enemy	1	1
+G14	Can't attack (my own unit)	Force enemy units to attack	1	0
+G14	Force enemy units to attack	When I play another card	1	1
 G15	Create new cards	Silence (abilities removed)	1	1
 G15	Create new cards	Hidden and revealed information	1	1
 G15	Create new cards	A unit levels up on the board	1	1
-G15	Create new cards	Restore health (heal)	1	1
 G15	Create new cards	Improve cards in hand or deck	1	1
-G15	Create new cards	Discard my own cards	1	1
-G15	Create new cards	Deal damage	1	1
-G15	Silence (abilities removed)	Hidden and revealed information	1	0
-G15	Silence (abilities removed)	Restore health (heal)	1	0
-G15	Silence (abilities removed)	Draw cards	1	1
-G15	Silence (abilities removed)	Cards cost less	1	1
-G15	Silence (abilities removed)	Improve cards in hand or deck	1	0
-G15	Silence (abilities removed)	Discard my own cards	1	0
-G15	Junk cards into a deck or hand	Restore health (heal)	1	0
-G15	Junk cards into a deck or hand	Variety matters (all different)	1	1
-G15	Junk cards into a deck or hand	Draw cards	1	1
+G15	Create new cards	Stats equal to a count	1	1
+G15	Junk cards into a deck or hand	Silence (abilities removed)	1	1
 G15	Junk cards into a deck or hand	Cards cost less	1	1
+G15	Junk cards into a deck or hand	Grows again and again	1	1
 G15	Junk cards into a deck or hand	Improve cards in hand or deck	1	1
-G15	Junk cards into a deck or hand	Discard my own cards	1	0
-G15	Junk cards into a deck or hand	Deal damage	1	1
+G15	Junk cards into a deck or hand	Draw cards	1	1
+G15	Junk cards into a deck or hand	Stats equal to a count	1	1
+G15	Look at cards and pick (scry)	Silence (abilities removed)	1	0
+G15	Look at cards and pick (scry)	A unit levels up on the board	1	1
+G15	Look at cards and pick (scry)	Cards cost less	1	1
+G15	Look at cards and pick (scry)	Grows again and again	1	1
+G15	Look at cards and pick (scry)	Counts / thresholds	1	1
+G15	Look at cards and pick (scry)	Improve cards in hand or deck	1	1
+G15	Look at cards and pick (scry)	Draw cards	1	1
+G15	Look at cards and pick (scry)	Stats equal to a count	1	1
+G15	Copy cards or units	Silence (abilities removed)	1	1
+G15	Copy cards or units	Grows again and again	1	1
+G15	Copy cards or units	Counts / thresholds	1	1
+G15	Copy cards or units	Stats equal to a count	1	1
+G15	Silence (abilities removed)	Hidden and revealed information	1	0
+G15	Silence (abilities removed)	Cards cost less	1	1
+G15	Silence (abilities removed)	Alternative costs	1	0
+G15	Silence (abilities removed)	Grows again and again	1	1
+G15	Silence (abilities removed)	Counts / thresholds	1	1
+G15	Silence (abilities removed)	Improve cards in hand or deck	1	0
+G15	Silence (abilities removed)	Draw cards	1	1
+G15	Silence (abilities removed)	Stats equal to a count	1	1
 G15	Hidden and revealed information	A unit levels up on the board	1	0
-G15	Hidden and revealed information	Restore health (heal)	1	0
-G15	Hidden and revealed information	Variety matters (all different)	1	1
-G15	Hidden and revealed information	Draw cards	1	0
 G15	Hidden and revealed information	Cards cost less	1	0
+G15	Hidden and revealed information	Alternative costs	1	0
+G15	Hidden and revealed information	Grows again and again	1	1
+G15	Hidden and revealed information	Counts / thresholds	1	1
 G15	Hidden and revealed information	Improve cards in hand or deck	1	1
-G15	Hidden and revealed information	Discard my own cards	1	0
-G15	Hidden and revealed information	Deal damage	1	0
-G15	A unit levels up on the board	Draw cards	1	1
+G15	Hidden and revealed information	Draw cards	1	0
+G15	Hidden and revealed information	Stats equal to a count	1	0
 G15	A unit levels up on the board	Cards cost less	1	1
-G15	Restore health (heal)	Variety matters (all different)	1	1
-G15	Restore health (heal)	Draw cards	1	1
-G15	Restore health (heal)	Cards cost less	1	1
-G15	Restore health (heal)	Improve cards in hand or deck	1	1
-G15	Variety matters (all different)	Draw cards	1	1
-G15	Variety matters (all different)	Deal damage	1	1
-G15	Draw cards	Improve cards in hand or deck	1	1
-G15	Cards cost less	Discard my own cards	1	1
-G15	Cards cost less	Deal damage	1	1
-G15	Improve cards in hand or deck	Discard my own cards	1	1
-G15	Improve cards in hand or deck	Deal damage	1	1
-G16	Draw cards	Act the turn it arrives (haste, rush)	1	1
-G16	Draw cards	Destroys itself / temporary unit	1	1
-G16	Draw cards	Can't attack (my own unit)	1	1
-G16	Draw cards	Hidden and revealed information	1	0
-G16	Draw cards	More or faster base resource (ramp)	1	1
-G16	Draw cards	Expensive card	1	1
-G16	Draw cards	Terrain / board features	1	1
-G16	Reuse my cards (shuffle back)	Act the turn it arrives (haste, rush)	1	0
-G16	Reuse my cards (shuffle back)	Can't attack (my own unit)	1	1
-G16	Reuse my cards (shuffle back)	Expensive card	1	1
-G16	Reuse my cards (shuffle back)	Terrain / board features	1	1
-G16	When a card is drawn	Destroys itself / temporary unit	1	1
-G16	When a card is drawn	Can't attack (my own unit)	1	1
-G16	When a card is drawn	Create new cards	1	1
-G16	When a card is drawn	Terrain / board features	1	1
-G16	Act the turn it arrives (haste, rush)	Hand size matters	1	1
-G16	Act the turn it arrives (haste, rush)	Counts / thresholds	1	1
-G16	Act the turn it arrives (haste, rush)	Can't attack (my own unit)	1	0
-G16	Act the turn it arrives (haste, rush)	Hidden and revealed information	1	0
-G16	Act the turn it arrives (haste, rush)	More or faster base resource (ramp)	1	0
-G16	Act the turn it arrives (haste, rush)	Expensive card	1	1
-G16	Act the turn it arrives (haste, rush)	Create new cards	1	1
-G16	Act the turn it arrives (haste, rush)	Terrain / board features	1	1
-G16	Hand size matters	Destroys itself / temporary unit	1	1
-G16	Hand size matters	Hidden and revealed information	1	1
-G16	Hand size matters	More or faster base resource (ramp)	1	1
-G16	Hand size matters	Terrain / board features	1	1
-G16	Counts / thresholds	Can't attack (my own unit)	1	1
-G16	Counts / thresholds	Hidden and revealed information	1	1
-G16	Destroys itself / temporary unit	More or faster base resource (ramp)	1	1
-G16	Destroys itself / temporary unit	Expensive card	1	1
-G16	Destroys itself / temporary unit	Create new cards	1	1
-G16	Destroys itself / temporary unit	Terrain / board features	1	1
-G16	Can't attack (my own unit)	Expensive card	1	1
-G16	Can't attack (my own unit)	Create new cards	1	1
-G16	Can't attack (my own unit)	Terrain / board features	1	1
-G16	Hidden and revealed information	More or faster base resource (ramp)	1	0
-G16	Hidden and revealed information	Expensive card	1	1
-G16	Hidden and revealed information	Create new cards	1	1
-G16	Hidden and revealed information	Terrain / board features	1	0
-G16	More or faster base resource (ramp)	Create new cards	1	1
-G16	More or faster base resource (ramp)	Terrain / board features	1	1
-G16	Expensive card	Create new cards	1	1
-G16	Expensive card	Terrain / board features	1	0
-G16	Create new cards	Terrain / board features	1	1
-G17	When another unit dies	Mill the opponent's deck	1	1
-G17	When another unit dies	Summon units / tokens	1	1
-G17	When another unit dies	Cards cost less	1	1
-G17	Counts deaths	Mill the opponent's deck	1	0
-G17	Counts deaths	Cards cost less	1	1
-G17	Grows with what happened this game	Destroys itself / temporary unit	1	1
-G17	Grows with what happened this game	Mill the opponent's deck	1	1
-G17	Stats equal to a count	Destroys itself / temporary unit	1	1
-G17	Stats equal to a count	Mill the opponent's deck	1	0
-G17	Stats equal to a count	Cards cost less	1	1
-G17	Stats equal to a count	Destroy outright	1	1
-G17	Sacrifice my own units	Hits my own side too	1	1
-G17	Sacrifice my own units	Mill the opponent's deck	1	0
-G17	Sacrifice my own units	Destroy outright	1	1
-G17	Hits my own side too	Destroys itself / temporary unit	1	1
-G17	Hits my own side too	Mill the opponent's deck	1	0
-G17	Back to hand when it dies or leaves play	Summon units / tokens	1	1
-G17	Destroys itself / temporary unit	Mill the opponent's deck	1	0
-G17	Destroys itself / temporary unit	Destroy outright	1	1
-G17	Bring back dead units (revive)	Summon units / tokens	1	1
-G17	Mill the opponent's deck	Summon units / tokens	1	1
-G17	Mill the opponent's deck	Cards cost less	1	0
-G17	Mill the opponent's deck	Destroy outright	1	0
-G17	Summon units / tokens	Cards cost less	1	1
-G17	Cards cost less	Destroy outright	1	1
-G18	Cards cost less	When I play another card	1	1
-G18	Cards cost less	Transform my card into another	1	1
-G18	Cards cost less	Set a cost to a fixed number	1	1
-G18	Cards cost less	Terrain / board features	1	1
-G18	Cards cost less	Move my units (reposition)	1	1
-G18	Cards cost less	More or faster base resource (ramp)	1	1
-G18	Cards cost less	Neighbours matter (adjacency)	1	1
-G18	Cards cost less	Damage to many at once	1	1
-G18	Make a unit stronger (buff)	Expensive card	1	1
-G18	Make a unit stronger (buff)	Transform my card into another	1	1
-G18	Make a unit stronger (buff)	Copy cards or units	1	1
-G18	Make a unit stronger (buff)	Terrain / board features	1	1
-G18	Make a unit stronger (buff)	Draw cards	1	1
-G18	Make a unit stronger (buff)	More or faster base resource (ramp)	1	1
-G18	Expensive card	Transform my card into another	1	1
-G18	Expensive card	Copy cards or units	1	1
-G18	Expensive card	Terrain / board features	1	0
-G18	Expensive card	Draw cards	1	1
-G18	Expensive card	Move my units (reposition)	1	1
-G18	Expensive card	Neighbours matter (adjacency)	1	1
-G18	Expensive card	Damage to many at once	1	1
-G18	When a card is drawn	Transform my card into another	1	1
-G18	When a card is drawn	Terrain / board features	1	1
-G18	When a card is drawn	Move my units (reposition)	1	1
-G18	When a card is drawn	Improve cards in hand or deck	1	1
-G18	When a card is drawn	Neighbours matter (adjacency)	1	1
-G18	When a card is drawn	Damage to many at once	1	1
-G18	When I play another card	Transform my card into another	1	1
-G18	When I play another card	Set a cost to a fixed number	1	1
-G18	When I play another card	Terrain / board features	1	1
-G18	When I play another card	Draw cards	1	1
-G18	When I play another card	Move my units (reposition)	1	1
-G18	When I play another card	More or faster base resource (ramp)	1	1
-G18	When I play another card	Improve cards in hand or deck	1	1
-G18	When I play another card	Damage to many at once	1	1
-G18	Transform my card into another	Copy cards or units	1	1
-G18	Transform my card into another	Set a cost to a fixed number	1	0
-G18	Transform my card into another	Terrain / board features	1	1
-G18	Transform my card into another	More or faster base resource (ramp)	1	1
-G18	Copy cards or units	Set a cost to a fixed number	1	1
-G18	Copy cards or units	Terrain / board features	1	1
-G18	Copy cards or units	Move my units (reposition)	1	1
-G18	Copy cards or units	More or faster base resource (ramp)	1	1
-G18	Copy cards or units	Neighbours matter (adjacency)	1	1
-G18	Copy cards or units	Damage to many at once	1	1
-G18	Set a cost to a fixed number	Terrain / board features	1	1
-G18	Set a cost to a fixed number	Draw cards	1	0
-G18	Set a cost to a fixed number	Move my units (reposition)	1	1
-G18	Set a cost to a fixed number	Improve cards in hand or deck	1	1
-G18	Set a cost to a fixed number	Neighbours matter (adjacency)	1	1
-G18	Terrain / board features	Draw cards	1	1
-G18	Terrain / board features	More or faster base resource (ramp)	1	1
-G18	Terrain / board features	Improve cards in hand or deck	1	1
-G18	Draw cards	More or faster base resource (ramp)	1	1
-G18	Draw cards	Improve cards in hand or deck	1	1
-G18	Draw cards	Neighbours matter (adjacency)	1	1
-G18	Move my units (reposition)	More or faster base resource (ramp)	1	1
-G18	Move my units (reposition)	Improve cards in hand or deck	1	1
-G18	More or faster base resource (ramp)	Improve cards in hand or deck	1	1
-G18	More or faster base resource (ramp)	Neighbours matter (adjacency)	1	1
-G18	Improve cards in hand or deck	Neighbours matter (adjacency)	1	1
-G18	Improve cards in hand or deck	Damage to many at once	1	1
-G19	Put into play for free	Search the deck for a card (tutor)	1	1
-G19	Put into play for free	Transform my card into another	1	1
-G19	Give my units or cards to the opponent	Reuse my cards (shuffle back)	1	0
-G19	Give my units or cards to the opponent	Search the deck for a card (tutor)	1	0
-G19	Give my units or cards to the opponent	Transform my card into another	1	1
-G19	Where units can be placed	Create new cards	1	1
-G19	Where units can be placed	Set stats to a number	1	0
-G19	Where units can be placed	Stats equal to a count	1	1
-G19	Where units can be placed	Deal damage	1	1
-G19	Where units can be placed	Reuse my cards (shuffle back)	1	0
-G19	Where units can be placed	Search the deck for a card (tutor)	1	0
-G19	Where units can be placed	Move my units (reposition)	1	1
-G19	Where units can be placed	Move enemy units (push, pull)	1	1
-G19	Where units can be placed	Neighbours matter (adjacency)	1	1
-G19	Where units can be placed	Transform my card into another	1	0
-G19	Copy cards or units	Stats equal to a count	1	1
-G19	Copy cards or units	Steal from the opponent	1	1
-G19	Copy cards or units	Deal damage	1	1
-G19	Copy cards or units	Search the deck for a card (tutor)	1	1
-G19	Copy cards or units	Move my units (reposition)	1	1
-G19	Copy cards or units	Move enemy units (push, pull)	1	1
-G19	Copy cards or units	Silence (abilities removed)	1	1
-G19	Copy cards or units	Neighbours matter (adjacency)	1	1
-G19	Copy cards or units	Transform my card into another	1	1
-G19	Create new cards	Set stats to a number	1	1
-G19	Create new cards	Stats equal to a count	1	1
-G19	Create new cards	Steal from the opponent	1	0
-G19	Create new cards	Deal damage	1	1
-G19	Create new cards	Search the deck for a card (tutor)	1	1
-G19	Create new cards	Move my units (reposition)	1	1
-G19	Create new cards	Move enemy units (push, pull)	1	1
-G19	Create new cards	Silence (abilities removed)	1	1
-G19	Create new cards	Neighbours matter (adjacency)	1	1
-G19	Create new cards	Transform my card into another	1	1
-G19	Junk cards into a deck or hand	Deal damage	1	1
-G19	Junk cards into a deck or hand	Search the deck for a card (tutor)	1	0
-G19	Junk cards into a deck or hand	Move enemy units (push, pull)	1	1
-G19	Junk cards into a deck or hand	Neighbours matter (adjacency)	1	1
-G19	Junk cards into a deck or hand	Transform my card into another	1	1
-G19	Set stats to a number	Stats equal to a count	1	1
-G19	Set stats to a number	Deal damage	1	1
-G19	Set stats to a number	Reuse my cards (shuffle back)	1	1
-G19	Set stats to a number	Move my units (reposition)	1	1
-G19	Set stats to a number	Move enemy units (push, pull)	1	1
-G19	Set stats to a number	Silence (abilities removed)	1	0
-G19	Set stats to a number	Look at cards and pick (scry)	1	1
-G19	Stats equal to a count	Steal from the opponent	1	0
-G19	Stats equal to a count	Deal damage	1	1
-G19	Stats equal to a count	Reuse my cards (shuffle back)	1	1
-G19	Stats equal to a count	Search the deck for a card (tutor)	1	0
-G19	Stats equal to a count	Silence (abilities removed)	1	1
-G19	Stats equal to a count	Look at cards and pick (scry)	1	1
-G19	Stats equal to a count	Transform my card into another	1	1
-G19	Send an enemy unit back (bounce)	Look at cards and pick (scry)	1	1
-G19	Send an enemy unit back (bounce)	Neighbours matter (adjacency)	1	1
-G19	Steal from the opponent	Reuse my cards (shuffle back)	1	0
-G19	Steal from the opponent	Search the deck for a card (tutor)	1	0
-G19	Steal from the opponent	Silence (abilities removed)	1	1
-G19	Steal from the opponent	Look at cards and pick (scry)	1	0
-G19	Steal from the opponent	Transform my card into another	1	1
-G19	Deal damage	Reuse my cards (shuffle back)	1	1
-G19	Deal damage	Search the deck for a card (tutor)	1	1
-G19	Deal damage	Look at cards and pick (scry)	1	1
-G19	Reuse my cards (shuffle back)	Move my units (reposition)	1	1
-G19	Reuse my cards (shuffle back)	Move enemy units (push, pull)	1	1
-G19	Reuse my cards (shuffle back)	Silence (abilities removed)	1	1
-G19	Reuse my cards (shuffle back)	Neighbours matter (adjacency)	1	1
-G19	Reuse my cards (shuffle back)	Transform my card into another	1	1
-G19	Search the deck for a card (tutor)	Silence (abilities removed)	1	0
-G19	Search the deck for a card (tutor)	Neighbours matter (adjacency)	1	1
-G19	Move enemy units (push, pull)	Look at cards and pick (scry)	1	1
-G19	Silence (abilities removed)	Look at cards and pick (scry)	1	0
-G19	Silence (abilities removed)	Transform my card into another	1	1
-G19	Look at cards and pick (scry)	Neighbours matter (adjacency)	1	1
-G19	Look at cards and pick (scry)	Transform my card into another	1	1
-G20	Countdown	Stat loss (-power, -health)	1	1
-G20	Countdown	When I play another card	1	1
-G20	Countdown	Can't attack (my own unit)	1	1
-G20	Countdown	A unit levels up on the board	1	1
-G20	Countdown	Draw cards	1	1
-G20	Countdown	Having a card in play or hand	1	1
-G20	Countdown	Hits my own side too	1	1
-G20	Set stats to a number	When I play another card	1	1
-G20	Set stats to a number	Upgrade a card	1	1
-G20	Set stats to a number	Can't attack (my own unit)	1	1
-G20	Set stats to a number	Stealth / hidden until it acts	1	0
-G20	Set stats to a number	A unit levels up on the board	1	1
-G20	Set stats to a number	Draw cards	1	1
-G20	Set stats to a number	Create new cards	1	1
-G20	Set stats to a number	Attack right away	1	1
-G20	Set stats to a number	Having a card in play or hand	1	1
-G20	Set stats to a number	Hits my own side too	1	1
-G20	Stat loss (-power, -health)	Transform my card into another	1	1
-G20	Stat loss (-power, -health)	When I play another card	1	1
-G20	Stat loss (-power, -health)	Can't attack (my own unit)	1	1
-G20	Stat loss (-power, -health)	Stealth / hidden until it acts	1	1
-G20	Stat loss (-power, -health)	Draw cards	1	1
-G20	Stat loss (-power, -health)	Create new cards	1	1
-G20	Stat loss (-power, -health)	Attack right away	1	1
-G20	Stat loss (-power, -health)	Having a card in play or hand	1	1
-G20	Stat loss (-power, -health)	Hits my own side too	1	1
-G20	Transform my card into another	When I play another card	1	1
-G20	Transform my card into another	A unit levels up on the board	1	1
-G20	Transform my card into another	Create new cards	1	1
-G20	Transform my card into another	Attack right away	1	1
-G20	Transform my card into another	Having a card in play or hand	1	1
-G20	When I play another card	Upgrade a card	1	1
-G20	When I play another card	Search the deck for a card (tutor)	1	1
-G20	When I play another card	Stealth / hidden until it acts	1	1
-G20	When I play another card	Draw cards	1	1
-G20	When I play another card	Create new cards	1	1
-G20	When I play another card	Attack right away	1	1
-G20	When I play another card	Having a card in play or hand	1	1
-G20	When I play another card	Hits my own side too	1	1
-G20	Upgrade a card	Can't attack (my own unit)	1	1
-G20	Upgrade a card	Stealth / hidden until it acts	1	1
-G20	Upgrade a card	Summon units / tokens	1	1
-G20	Upgrade a card	Draw cards	1	1
-G20	Upgrade a card	Having a card in play or hand	1	1
-G20	Upgrade a card	Hits my own side too	1	1
-G20	Search the deck for a card (tutor)	Can't attack (my own unit)	1	0
-G20	Search the deck for a card (tutor)	Stealth / hidden until it acts	1	0
-G20	Search the deck for a card (tutor)	A unit levels up on the board	1	0
-G20	Search the deck for a card (tutor)	Summon units / tokens	1	1
-G20	Search the deck for a card (tutor)	Draw cards	1	0
-G20	Search the deck for a card (tutor)	Create new cards	1	1
-G20	Search the deck for a card (tutor)	Attack right away	1	1
-G20	Search the deck for a card (tutor)	Hits my own side too	1	1
-G20	Can't attack (my own unit)	Summon units / tokens	1	1
-G20	Can't attack (my own unit)	Draw cards	1	1
-G20	Can't attack (my own unit)	Create new cards	1	1
-G20	Can't attack (my own unit)	Attack right away	1	1
-G20	Can't attack (my own unit)	Having a card in play or hand	1	1
-G20	Stealth / hidden until it acts	A unit levels up on the board	1	1
-G20	Stealth / hidden until it acts	Summon units / tokens	1	1
-G20	Stealth / hidden until it acts	Draw cards	1	1
-G20	Stealth / hidden until it acts	Create new cards	1	1
-G20	Stealth / hidden until it acts	Attack right away	1	1
-G20	Stealth / hidden until it acts	Having a card in play or hand	1	1
-G20	Stealth / hidden until it acts	Hits my own side too	1	1
-G20	A unit levels up on the board	Draw cards	1	1
-G20	A unit levels up on the board	Create new cards	1	1
-G20	Summon units / tokens	Draw cards	1	1
-G20	Summon units / tokens	Create new cards	1	1
-G20	Summon units / tokens	Having a card in play or hand	1	1
-G20	Draw cards	Attack right away	1	1
-G20	Draw cards	Having a card in play or hand	1	1
-G20	Create new cards	Attack right away	1	1
-G20	Create new cards	Having a card in play or hand	1	1
-G20	Create new cards	Hits my own side too	1	1
-G20	Having a card in play or hand	Hits my own side too	1	1
-G21	Summon units / tokens	Expensive card	1	1
-G21	Position and space	Hidden and revealed information	1	1
-G21	Position and space	Expensive card	1	1
-G21	Transform my card into another	Make a unit stronger (buff)	1	1
-G21	Transform my card into another	Aura (ongoing effect on others)	1	1
-G21	Transform my card into another	Any damage kills (deathtouch, poisonous)	1	1
-G21	Transform my card into another	Hidden and revealed information	1	1
-G21	Transform my card into another	Expensive card	1	1
-G21	Make a unit stronger (buff)	Any damage kills (deathtouch, poisonous)	1	1
-G21	Make a unit stronger (buff)	Expensive card	1	1
-G21	Aura (ongoing effect on others)	Any damage kills (deathtouch, poisonous)	1	1
-G21	Any damage kills (deathtouch, poisonous)	Hidden and revealed information	1	0
-G21	Any damage kills (deathtouch, poisonous)	Expensive card	1	0
-G21	Any damage kills (deathtouch, poisonous)	Neighbours matter (adjacency)	1	1
-G21	Hidden and revealed information	Expensive card	1	1
-G21	Hidden and revealed information	Neighbours matter (adjacency)	1	1
-G21	Expensive card	Neighbours matter (adjacency)	1	1
-G22	Search the deck for a card (tutor)	Banish / exile (gone for good)	1	0
-G22	Search the deck for a card (tutor)	Stats matter (highest, lowest)	1	1
-G22	Search the deck for a card (tutor)	Row-wide lasting effects (weather)	1	0
-G22	Search the deck for a card (tutor)	My spells and abilities get stronger	1	0
-G22	Search the deck for a card (tutor)	Hidden and revealed information	1	0
-G22	Search the deck for a card (tutor)	Put into play for free	1	1
-G22	Search the deck for a card (tutor)	Keep my units alive (protection)	1	0
-G22	Search the deck for a card (tutor)	Summon units / tokens	1	1
-G22	Search the deck for a card (tutor)	Deal damage	1	1
-G22	Search the deck for a card (tutor)	Sacrifice my own units	1	1
-G22	Search the deck for a card (tutor)	Act the turn it arrives (haste, rush)	1	0
-G22	Search the deck for a card (tutor)	Destroys itself / temporary unit	1	1
-G22	Search the deck for a card (tutor)	Position and space	1	1
-G22	Search the deck for a card (tutor)	Copy cards or units	1	1
-G22	Search the deck for a card (tutor)	Neighbours matter (adjacency)	1	1
-G22	Banish / exile (gone for good)	Reuse my cards (shuffle back)	1	1
-G22	Banish / exile (gone for good)	Stats matter (highest, lowest)	1	1
-G22	Banish / exile (gone for good)	Row-wide lasting effects (weather)	1	0
-G22	Banish / exile (gone for good)	My spells and abilities get stronger	1	0
-G22	Banish / exile (gone for good)	Make a unit weaker (debuff)	1	0
-G22	Banish / exile (gone for good)	Hidden and revealed information	1	0
-G22	Banish / exile (gone for good)	Keep my units alive (protection)	1	0
-G22	Banish / exile (gone for good)	Deal damage	1	1
-G22	Banish / exile (gone for good)	Sacrifice my own units	1	1
-G22	Banish / exile (gone for good)	Act the turn it arrives (haste, rush)	1	0
-G22	Banish / exile (gone for good)	Block points that wear off	1	0
-G22	Banish / exile (gone for good)	Transform my card into another	1	1
-G22	Banish / exile (gone for good)	Copy cards or units	1	1
-G22	Reuse my cards (shuffle back)	Stats matter (highest, lowest)	1	1
-G22	Reuse my cards (shuffle back)	Row-wide lasting effects (weather)	1	0
-G22	Reuse my cards (shuffle back)	Make a unit weaker (debuff)	1	1
-G22	Reuse my cards (shuffle back)	Keep my units alive (protection)	1	0
-G22	Reuse my cards (shuffle back)	Summon units / tokens	1	1
-G22	Reuse my cards (shuffle back)	Deal damage	1	1
-G22	Reuse my cards (shuffle back)	Act the turn it arrives (haste, rush)	1	0
-G22	Reuse my cards (shuffle back)	Block points that wear off	1	0
-G22	Reuse my cards (shuffle back)	Transform my card into another	1	1
-G22	Reuse my cards (shuffle back)	Position and space	1	1
-G22	Reuse my cards (shuffle back)	Neighbours matter (adjacency)	1	1
-G22	Stats matter (highest, lowest)	My spells and abilities get stronger	1	1
-G22	Stats matter (highest, lowest)	Make a unit weaker (debuff)	1	1
-G22	Stats matter (highest, lowest)	Hidden and revealed information	1	1
-G22	Stats matter (highest, lowest)	Put into play for free	1	1
-G22	Stats matter (highest, lowest)	Keep my units alive (protection)	1	1
-G22	Stats matter (highest, lowest)	Summon units / tokens	1	1
-G22	Stats matter (highest, lowest)	Deal damage	1	1
-G22	Stats matter (highest, lowest)	Sacrifice my own units	1	1
-G22	Stats matter (highest, lowest)	Act the turn it arrives (haste, rush)	1	1
-G22	Stats matter (highest, lowest)	Destroys itself / temporary unit	1	1
-G22	Stats matter (highest, lowest)	Position and space	1	1
-G22	Stats matter (highest, lowest)	Copy cards or units	1	1
-G22	Row-wide lasting effects (weather)	My spells and abilities get stronger	1	1
-G22	Row-wide lasting effects (weather)	Make a unit weaker (debuff)	1	0
-G22	Row-wide lasting effects (weather)	Hidden and revealed information	1	0
-G22	Row-wide lasting effects (weather)	Keep my units alive (protection)	1	0
-G22	Row-wide lasting effects (weather)	Sacrifice my own units	1	1
-G22	Row-wide lasting effects (weather)	Act the turn it arrives (haste, rush)	1	0
-G22	Row-wide lasting effects (weather)	Block points that wear off	1	0
-G22	Row-wide lasting effects (weather)	Transform my card into another	1	0
-G22	Row-wide lasting effects (weather)	Destroys itself / temporary unit	1	1
-G22	Row-wide lasting effects (weather)	Copy cards or units	1	1
-G22	Row-wide lasting effects (weather)	Neighbours matter (adjacency)	1	1
-G22	My spells and abilities get stronger	Hidden and revealed information	1	1
-G22	My spells and abilities get stronger	Keep my units alive (protection)	1	1
-G22	My spells and abilities get stronger	Summon units / tokens	1	1
-G22	My spells and abilities get stronger	Sacrifice my own units	1	1
-G22	My spells and abilities get stronger	Block points that wear off	1	1
-G22	My spells and abilities get stronger	Transform my card into another	1	1
-G22	My spells and abilities get stronger	Destroys itself / temporary unit	1	1
-G22	My spells and abilities get stronger	Position and space	1	1
-G22	My spells and abilities get stronger	Copy cards or units	1	1
-G22	My spells and abilities get stronger	Neighbours matter (adjacency)	1	1
-G22	Make a unit weaker (debuff)	Hidden and revealed information	1	0
-G22	Make a unit weaker (debuff)	Put into play for free	1	1
-G22	Make a unit weaker (debuff)	Summon units / tokens	1	1
-G22	Make a unit weaker (debuff)	Deal damage	1	1
-G22	Make a unit weaker (debuff)	Act the turn it arrives (haste, rush)	1	1
-G22	Make a unit weaker (debuff)	Block points that wear off	1	1
-G22	Make a unit weaker (debuff)	Transform my card into another	1	1
-G22	Make a unit weaker (debuff)	Destroys itself / temporary unit	1	1
-G22	Make a unit weaker (debuff)	Position and space	1	1
-G22	Make a unit weaker (debuff)	Copy cards or units	1	1
-G22	Make a unit weaker (debuff)	Neighbours matter (adjacency)	1	1
-G22	Hidden and revealed information	Keep my units alive (protection)	1	0
-G22	Hidden and revealed information	Deal damage	1	0
-G22	Hidden and revealed information	Act the turn it arrives (haste, rush)	1	0
-G22	Hidden and revealed information	Block points that wear off	1	1
-G22	Hidden and revealed information	Transform my card into another	1	1
-G22	Hidden and revealed information	Position and space	1	1
-G22	Hidden and revealed information	Neighbours matter (adjacency)	1	1
-G22	Put into play for free	Transform my card into another	1	1
-G22	Keep my units alive (protection)	Summon units / tokens	1	1
-G22	Keep my units alive (protection)	Deal damage	1	1
-G22	Keep my units alive (protection)	Sacrifice my own units	1	0
-G22	Keep my units alive (protection)	Act the turn it arrives (haste, rush)	1	0
-G22	Keep my units alive (protection)	Block points that wear off	1	1
-G22	Keep my units alive (protection)	Transform my card into another	1	1
-G22	Keep my units alive (protection)	Position and space	1	1
-G22	Keep my units alive (protection)	Copy cards or units	1	1
-G22	Keep my units alive (protection)	Neighbours matter (adjacency)	1	1
-G22	Summon units / tokens	Copy cards or units	1	1
-G22	Deal damage	Sacrifice my own units	1	1
-G22	Deal damage	Act the turn it arrives (haste, rush)	1	1
-G22	Deal damage	Block points that wear off	1	1
-G22	Deal damage	Destroys itself / temporary unit	1	1
-G22	Deal damage	Copy cards or units	1	1
-G22	Sacrifice my own units	Act the turn it arrives (haste, rush)	1	1
-G22	Sacrifice my own units	Block points that wear off	1	0
-G22	Act the turn it arrives (haste, rush)	Block points that wear off	1	0
-G22	Act the turn it arrives (haste, rush)	Transform my card into another	1	1
-G22	Act the turn it arrives (haste, rush)	Position and space	1	1
-G22	Act the turn it arrives (haste, rush)	Copy cards or units	1	1
-G22	Act the turn it arrives (haste, rush)	Neighbours matter (adjacency)	1	1
-G22	Block points that wear off	Transform my card into another	1	1
-G22	Block points that wear off	Destroys itself / temporary unit	1	1
-G22	Block points that wear off	Position and space	1	1
-G22	Block points that wear off	Copy cards or units	1	1
-G22	Block points that wear off	Neighbours matter (adjacency)	1	1
-G22	Transform my card into another	Destroys itself / temporary unit	1	1
-G22	Transform my card into another	Copy cards or units	1	1
-G22	Position and space	Copy cards or units	1	1
-G22	Copy cards or units	Neighbours matter (adjacency)	1	1
-G23	Improve cards in hand or deck	Stat loss (-power, -health)	1	1
-G23	Improve cards in hand or deck	Create new cards	1	1
-G23	Improve cards in hand or deck	Draw cards	1	1
-G23	Improve cards in hand or deck	Deal damage	1	1
-G23	Improve cards in hand or deck	Having a card in play or hand	1	1
-G23	Improve cards in hand or deck	When I play another card	1	1
-G23	Improve cards in hand or deck	Counts / thresholds	1	1
-G23	Hand size matters	Heal every turn (regeneration)	1	1
-G23	Hand size matters	Block points that wear off	1	1
-G23	Hand size matters	Cards cost less	1	1
-G23	Hand size matters	Lifesteal / drain	1	1
-G23	Hand size matters	Deal damage	1	1
-G23	Hand size matters	Having a card in play or hand	1	1
-G23	Hand size matters	Transform my card into another	1	1
-G23	Heal every turn (regeneration)	Block points that wear off	1	1
-G23	Heal every turn (regeneration)	Cards cost less	1	1
-G23	Heal every turn (regeneration)	Lifesteal / drain	1	1
-G23	Heal every turn (regeneration)	Can't attack (my own unit)	1	1
-G23	Heal every turn (regeneration)	Create new cards	1	1
-G23	Heal every turn (regeneration)	Draw cards	1	1
-G23	Heal every turn (regeneration)	Deal damage	1	1
-G23	Heal every turn (regeneration)	Having a card in play or hand	1	1
-G23	Heal every turn (regeneration)	When I play another card	1	1
-G23	Heal every turn (regeneration)	Transform my card into another	1	1
-G23	Block points that wear off	Stat loss (-power, -health)	1	1
-G23	Block points that wear off	Cards cost less	1	0
-G23	Block points that wear off	Lifesteal / drain	1	0
-G23	Block points that wear off	Expensive card	1	1
-G23	Block points that wear off	Can't attack (my own unit)	1	1
-G23	Block points that wear off	Create new cards	1	1
-G23	Block points that wear off	Draw cards	1	1
-G23	Block points that wear off	Deal damage	1	1
-G23	Block points that wear off	Having a card in play or hand	1	1
+G15	A unit levels up on the board	Alternative costs	1	0
+G15	A unit levels up on the board	Grows again and again	1	1
+G15	A unit levels up on the board	Draw cards	1	1
+G15	A unit levels up on the board	Stats equal to a count	1	1
+G15	Cards cost less	Alternative costs	1	0
+G15	Cards cost less	Grows again and again	1	1
+G15	Cards cost less	Counts / thresholds	1	1
+G15	Cards cost less	Stats equal to a count	1	1
+G15	Alternative costs	Grows again and again	1	1
+G15	Alternative costs	Counts / thresholds	1	1
+G15	Alternative costs	Improve cards in hand or deck	1	0
+G15	Alternative costs	Draw cards	1	0
+G15	Grows again and again	Counts / thresholds	1	1
+G15	Grows again and again	Improve cards in hand or deck	1	1
+G15	Counts / thresholds	Improve cards in hand or deck	1	1
+G15	Improve cards in hand or deck	Draw cards	1	1
+G15	Draw cards	Stats equal to a count	1	1
+G16	Damage over time (poison, burn)	Stat gain (+power, +health)	1	1
+G16	Damage over time (poison, burn)	Keep my units alive (protection)	1	1
+G16	Damage over time (poison, burn)	Defence gain (+health)	1	1
+G16	Damage over time (poison, burn)	Grows again and again	1	1
+G16	Small repeatable damage	Stat gain (+power, +health)	1	1
+G16	Small repeatable damage	Make a unit weaker (debuff)	1	0
+G16	Small repeatable damage	Counts / thresholds	1	1
+G16	Small repeatable damage	Keep my units alive (protection)	1	1
+G16	Small repeatable damage	Defence gain (+health)	1	1
+G16	Small repeatable damage	Grows again and again	1	1
+G16	Small repeatable damage	Sacrifice my own units	1	1
+G16	Lifesteal / drain	Damage to many at once	1	1
+G16	Lifesteal / drain	Keep my units alive (protection)	1	0
+G16	Lifesteal / drain	Defence gain (+health)	1	1
+G16	Lifesteal / drain	Summon units / tokens	1	1
+G16	Lifesteal / drain	Grows again and again	1	1
+G16	Lifesteal / drain	Hits my own side too	1	1
+G16	Clog the opponent's board	Stat gain (+power, +health)	1	1
+G16	Clog the opponent's board	Make a unit weaker (debuff)	1	0
+G16	Clog the opponent's board	Keep my units alive (protection)	1	1
+G16	Clog the opponent's board	Defence gain (+health)	1	1
+G16	Clog the opponent's board	Summon units / tokens	1	1
+G16	Clog the opponent's board	Grows again and again	1	1
+G16	Stat gain (+power, +health)	Counts / thresholds	1	1
+G16	Stat gain (+power, +health)	Damage to many at once	1	1
+G16	Stat gain (+power, +health)	Keep my units alive (protection)	1	1
+G16	Stat gain (+power, +health)	Grows again and again	1	1
+G16	Stat gain (+power, +health)	Hits my own side too	1	1
+G16	Make a unit weaker (debuff)	Stats equal to a count	1	1
+G16	Make a unit weaker (debuff)	Damage to many at once	1	1
+G16	Make a unit weaker (debuff)	Summon units / tokens	1	1
+G16	Make a unit weaker (debuff)	Grows again and again	1	1
+G16	Make a unit weaker (debuff)	Hits my own side too	1	1
+G16	Stats equal to a count	Keep my units alive (protection)	1	1
+G16	Counts / thresholds	Keep my units alive (protection)	1	1
+G16	Counts / thresholds	Defence gain (+health)	1	1
+G16	Counts / thresholds	Grows again and again	1	1
+G16	Counts / thresholds	Hits my own side too	1	1
+G16	Damage to many at once	Keep my units alive (protection)	1	0
+G16	Damage to many at once	Defence gain (+health)	1	1
+G16	Damage to many at once	Grows again and again	1	1
+G16	Keep my units alive (protection)	Defence gain (+health)	1	1
+G16	Keep my units alive (protection)	Summon units / tokens	1	1
+G16	Keep my units alive (protection)	Grows again and again	1	1
+G16	Keep my units alive (protection)	Hits my own side too	1	0
+G16	Keep my units alive (protection)	Sacrifice my own units	1	0
+G16	Defence gain (+health)	Grows again and again	1	1
+G16	Hits my own side too	Sacrifice my own units	1	1
+G17	Order of my plays matters (combo)	Switch stances or forms	1	0
+G17	Order of my plays matters (combo)	Draw cards	1	1
+G17	Order of my plays matters (combo)	Transform my card into another	1	1
+G17	Order of my plays matters (combo)	More or faster base resource (ramp)	1	1
+G17	Enough spells played	Switch stances or forms	1	0
+G17	Enough spells played	Draw cards	1	1
+G17	When a spell is played	Cards cost less	1	1
+G17	When a spell is played	Send an enemy unit back (bounce)	1	1
+G17	When a spell is played	Switch stances or forms	1	0
+G17	When a spell is played	Draw cards	1	1
+G17	When a spell is played	Transform my card into another	1	1
+G17	When a spell is played	More or faster base resource (ramp)	1	1
+G17	Cards cost less	Transform my card into another	1	1
+G17	Cards cost less	More or faster base resource (ramp)	1	1
+G17	Cards cost less	My spells and abilities get stronger	1	1
+G17	Return my unit from the board to hand	Switch stances or forms	1	0
+G17	Return my unit from the board to hand	My spells and abilities get stronger	1	1
+G17	Send an enemy unit back (bounce)	Switch stances or forms	1	0
+G17	Send an enemy unit back (bounce)	My spells and abilities get stronger	1	1
+G17	Switch stances or forms	Draw cards	1	1
+G17	Switch stances or forms	Transform my card into another	1	0
+G17	Switch stances or forms	Create new cards	1	0
+G17	Switch stances or forms	My spells and abilities get stronger	1	1
+G17	Draw cards	More or faster base resource (ramp)	1	1
+G17	Draw cards	My spells and abilities get stronger	1	1
+G17	Transform my card into another	More or faster base resource (ramp)	1	1
+G17	Transform my card into another	Create new cards	1	1
+G17	Transform my card into another	My spells and abilities get stronger	1	1
+G17	More or faster base resource (ramp)	Create new cards	1	1
+G17	More or faster base resource (ramp)	My spells and abilities get stronger	1	1
+G18	Improve cards in hand or deck	Defence gain (+health)	1	1
+G18	Improve cards in hand or deck	Hand size matters	1	1
+G18	Improve cards in hand or deck	Look at cards and pick (scry)	1	1
+G18	Improve cards in hand or deck	Create new cards	1	1
+G18	Improve cards in hand or deck	Draw cards	1	1
+G18	Improve cards in hand or deck	Grows again and again	1	1
+G18	Improve cards in hand or deck	Having a card in play or hand	1	1
+G18	Defence gain (+health)	Cards cost less	1	1
+G18	Defence gain (+health)	Hand size matters	1	1
+G18	Defence gain (+health)	Look at cards and pick (scry)	1	1
+G18	Defence gain (+health)	Create new cards	1	1
+G18	Defence gain (+health)	Draw cards	1	1
+G18	Defence gain (+health)	Grows again and again	1	1
+G18	Defence gain (+health)	Having a card in play or hand	1	1
+G18	Cards cost less	Heal every turn (regeneration)	1	1
+G18	Cards cost less	Stats matter (highest, lowest)	1	0
+G18	Cards cost less	Hand size matters	1	1
+G18	Cards cost less	Block points that wear off	1	0
+G18	Cards cost less	Look at cards and pick (scry)	1	1
+G18	Cards cost less	Grows again and again	1	1
+G18	Cards cost less	Having a card in play or hand	1	1
+G18	Heal every turn (regeneration)	Hand size matters	1	1
+G18	Heal every turn (regeneration)	Copy cards or units	1	1
+G18	Heal every turn (regeneration)	Block points that wear off	1	1
+G18	Heal every turn (regeneration)	Look at cards and pick (scry)	1	1
+G18	Heal every turn (regeneration)	Create new cards	1	1
+G18	Heal every turn (regeneration)	Draw cards	1	1
+G18	Heal every turn (regeneration)	Having a card in play or hand	1	1
+G18	Stats matter (highest, lowest)	Hand size matters	1	1
+G18	Stats matter (highest, lowest)	Copy cards or units	1	1
+G18	Stats matter (highest, lowest)	Look at cards and pick (scry)	1	1
+G18	Stats matter (highest, lowest)	Create new cards	1	1
+G18	Stats matter (highest, lowest)	Draw cards	1	1
+G18	Hand size matters	Block points that wear off	1	1
+G18	Hand size matters	Grows again and again	1	1
+G18	Hand size matters	Having a card in play or hand	1	1
+G18	Copy cards or units	Block points that wear off	1	1
+G18	Copy cards or units	Grows again and again	1	1
+G18	Copy cards or units	Having a card in play or hand	1	1
+G18	Block points that wear off	Look at cards and pick (scry)	1	1
+G18	Block points that wear off	Create new cards	1	1
+G18	Block points that wear off	Draw cards	1	1
+G18	Block points that wear off	Grows again and again	1	1
+G18	Look at cards and pick (scry)	Draw cards	1	1
+G18	Look at cards and pick (scry)	Grows again and again	1	1
+G18	Look at cards and pick (scry)	Having a card in play or hand	1	1
+G18	Create new cards	Having a card in play or hand	1	1
+G18	Draw cards	Having a card in play or hand	1	1
+G18	Grows again and again	Having a card in play or hand	1	1
+G19	Position and space	Act the turn it arrives (haste, rush)	1	1
+G19	Make a unit stronger (buff)	Aura (ongoing effect on others)	1	1
+G19	Make a unit stronger (buff)	Act the turn it arrives (haste, rush)	1	1
+G19	Make a unit stronger (buff)	Transform my card into another	1	1
+G19	Make a unit stronger (buff)	Quests / objectives with rewards	1	0
+G19	Neighbours matter (adjacency)	Act the turn it arrives (haste, rush)	1	1
+G19	Aura (ongoing effect on others)	Transform my card into another	1	1
+G19	Aura (ongoing effect on others)	Quests / objectives with rewards	1	0
+G19	Aura (ongoing effect on others)	When I play another card	1	1
+G19	Act the turn it arrives (haste, rush)	Transform my card into another	1	1
+G19	Act the turn it arrives (haste, rush)	Attack right away	1	0
+G19	Act the turn it arrives (haste, rush)	Quests / objectives with rewards	1	0
+G19	Act the turn it arrives (haste, rush)	When I play another card	1	1
+G19	Transform my card into another	Attack right away	1	1
+G19	Transform my card into another	Quests / objectives with rewards	1	0
+G19	Transform my card into another	When I play another card	1	1
+G19	Attack right away	When I play another card	1	1
+G19	Quests / objectives with rewards	When I play another card	1	0
+G20	When a spell is played	Upgrade a card	1	1
+G20	When a spell is played	Destroy outright	1	1
+G20	When a spell is played	Defence gain (+health)	1	1
+G20	When a spell is played	Grows again and again	1	1
+G20	When a spell is played	Deal damage	1	1
+G20	When a spell is played	Cards cost less	1	1
+G20	Cost matters	Grows with what happened this game	1	1
+G20	Cost matters	Destroy outright	1	1
+G20	Cost matters	Temporary bonus (this turn only)	1	1
+G20	Cost matters	Defence gain (+health)	1	1
+G20	Cost matters	Grows again and again	1	1
+G20	Cost matters	Deal damage	1	1
+G20	Cost matters	Cards cost less	1	1
+G20	Grows with what happened this game	Create new cards	1	1
+G20	Grows with what happened this game	Immune / can't be targeted	1	1
+G20	Grows with what happened this game	Temporary bonus (this turn only)	1	1
+G20	Grows with what happened this game	Defence gain (+health)	1	1
+G20	Put into play for free	Upgrade a card	1	1
+G20	Put into play for free	Temporary bonus (this turn only)	1	1
+G20	Create new cards	Destroy outright	1	1
+G20	Create new cards	Immune / can't be targeted	1	1
+G20	Create new cards	Temporary bonus (this turn only)	1	1
+G20	Create new cards	Defence gain (+health)	1	1
+G20	Create new cards	Deal damage	1	1
+G20	My spells and abilities get stronger	Upgrade a card	1	1
+G20	My spells and abilities get stronger	Destroy outright	1	1
+G20	My spells and abilities get stronger	Immune / can't be targeted	1	1
+G20	My spells and abilities get stronger	Temporary bonus (this turn only)	1	1
+G20	My spells and abilities get stronger	Defence gain (+health)	1	1
+G20	My spells and abilities get stronger	Cards cost less	1	1
+G20	Upgrade a card	Destroy outright	1	1
+G20	Upgrade a card	Immune / can't be targeted	1	0
+G20	Upgrade a card	Deal damage	1	1
+G20	Destroy outright	Immune / can't be targeted	1	0
+G20	Destroy outright	Temporary bonus (this turn only)	1	1
+G20	Destroy outright	Grows again and again	1	1
+G20	Destroy outright	Cards cost less	1	1
+G20	Immune / can't be targeted	Temporary bonus (this turn only)	1	0
+G20	Immune / can't be targeted	Grows again and again	1	1
+G20	Immune / can't be targeted	Deal damage	1	1
+G20	Immune / can't be targeted	Cards cost less	1	1
+G20	Temporary bonus (this turn only)	Defence gain (+health)	1	1
+G20	Temporary bonus (this turn only)	Deal damage	1	1
+G20	Temporary bonus (this turn only)	Cards cost less	1	1
+G20	Defence gain (+health)	Grows again and again	1	1
+G20	Defence gain (+health)	Deal damage	1	1
+G20	Defence gain (+health)	Cards cost less	1	1
+G20	Grows again and again	Deal damage	1	1
+G20	Grows again and again	Cards cost less	1	1
+G20	Deal damage	Cards cost less	1	1
+G21	When another unit dies	Fill my own discard pile (self-mill)	1	1
+G21	When another unit dies	A unit levels up on the board	1	1
+G21	When another unit dies	Grows again and again	1	1
+G21	When another unit dies	Cards cost less	1	1
+G21	When another unit dies	Defence gain (+health)	1	1
+G21	Counts deaths	Fill my own discard pile (self-mill)	1	1
+G21	Counts deaths	A unit levels up on the board	1	1
+G21	Counts deaths	Grows again and again	1	1
+G21	Counts deaths	Cards cost less	1	1
+G21	Counts deaths	Defence gain (+health)	1	1
+G21	Grows with what happened this game	A unit levels up on the board	1	1
+G21	Grows with what happened this game	Defence gain (+health)	1	1
+G21	Stats equal to a count	My unit fights a chosen enemy	1	1
+G21	Stats equal to a count	Fill my own discard pile (self-mill)	1	0
+G21	Stats equal to a count	A unit levels up on the board	1	1
+G21	Stats equal to a count	Mill the opponent's deck	1	0
+G21	Stats equal to a count	Cards cost less	1	1
+G21	Stats equal to a count	Destroy outright	1	1
+G21	My unit fights a chosen enemy	Fill my own discard pile (self-mill)	1	1
+G21	My unit fights a chosen enemy	Sacrifice my own units	1	1
+G21	My unit fights a chosen enemy	Mill the opponent's deck	1	1
+G21	My unit fights a chosen enemy	Summon units / tokens	1	1
+G21	My unit fights a chosen enemy	Destroy outright	1	1
+G21	Fill my own discard pile (self-mill)	A unit levels up on the board	1	1
+G21	Fill my own discard pile (self-mill)	Sacrifice my own units	1	1
+G21	Fill my own discard pile (self-mill)	Mill the opponent's deck	1	0
+G21	Fill my own discard pile (self-mill)	Grows again and again	1	0
+G21	Fill my own discard pile (self-mill)	Cards cost less	1	0
+G21	A unit levels up on the board	Mill the opponent's deck	1	1
+G21	A unit levels up on the board	Grows again and again	1	1
+G21	A unit levels up on the board	Cards cost less	1	1
+G21	Attack right away	Sacrifice my own units	1	1
+G21	Attack right away	Grows again and again	1	1
+G21	Mill the opponent's deck	Grows again and again	1	0
+G21	Mill the opponent's deck	Summon units / tokens	1	1
+G21	Mill the opponent's deck	Cards cost less	1	0
+G21	Mill the opponent's deck	Defence gain (+health)	1	0
+G21	Grows again and again	Cards cost less	1	1
+G21	Grows again and again	Defence gain (+health)	1	1
+G21	Grows again and again	Destroy outright	1	1
+G21	Summon units / tokens	Cards cost less	1	1
+G21	Cards cost less	Defence gain (+health)	1	1
+G21	Cards cost less	Destroy outright	1	1
+G22	Stat loss (-power, -health)	Upgrade a card	1	1
+G22	Stat loss (-power, -health)	Counts / thresholds	1	1
+G22	Stat loss (-power, -health)	Transform my card into another	1	1
+G22	Stat loss (-power, -health)	Can't attack (my own unit)	1	1
+G22	Stat loss (-power, -health)	Draw cards	1	1
+G22	Attack set to 0	Set stats to a number	1	0
+G22	Attack set to 0	Counts / thresholds	1	1
+G22	Attack set to 0	Transform my card into another	1	0
+G22	Attack set to 0	Stacking keywords / counters	1	1
+G22	Attack set to 0	A unit levels up on the board	1	1
+G22	Attack set to 0	Can't attack (my own unit)	1	1
+G22	Attack set to 0	Draw cards	1	1
+G22	Attack set to 0	Summon units / tokens	1	1
+G22	Upgrade a card	Set stats to a number	1	1
+G22	Upgrade a card	Counts / thresholds	1	1
+G22	Upgrade a card	Board wipe	1	1
+G22	Upgrade a card	Can't attack (my own unit)	1	1
+G22	Upgrade a card	Draw cards	1	1
+G22	Upgrade a card	Summon units / tokens	1	1
+G22	Set stats to a number	Counts / thresholds	1	1
+G22	Set stats to a number	Strikes of a given size	1	0
+G22	Set stats to a number	Board wipe	1	1
+G22	Set stats to a number	A unit levels up on the board	1	1
+G22	Set stats to a number	Can't attack (my own unit)	1	1
+G22	Set stats to a number	Draw cards	1	1
+G22	Counts / thresholds	Transform my card into another	1	1
+G22	Counts / thresholds	Can't attack (my own unit)	1	1
+G22	Transform my card into another	Strikes of a given size	1	1
+G22	Transform my card into another	Board wipe	1	1
+G22	Transform my card into another	A unit levels up on the board	1	1
+G22	Strikes of a given size	Stacking keywords / counters	1	1
+G22	Strikes of a given size	Board wipe	1	0
+G22	Strikes of a given size	A unit levels up on the board	1	1
+G22	Strikes of a given size	Can't attack (my own unit)	1	0
+G22	Strikes of a given size	Draw cards	1	0
+G22	Strikes of a given size	Summon units / tokens	1	1
+G22	Stacking keywords / counters	Board wipe	1	1
+G22	Stacking keywords / counters	Draw cards	1	1
+G22	Board wipe	Draw cards	1	1
+G22	A unit levels up on the board	Draw cards	1	1
+G22	Can't attack (my own unit)	Draw cards	1	1
+G22	Can't attack (my own unit)	Summon units / tokens	1	1
+G22	Draw cards	Summon units / tokens	1	1
+G23	Banish / exile (gone for good)	Stats matter (highest, lowest)	1	1
+G23	Banish / exile (gone for good)	Block points that wear off	1	0
+G23	Banish / exile (gone for good)	Taunt (enemies must attack it)	1	0
+G23	Banish / exile (gone for good)	When I play another card	1	1
+G23	Banish / exile (gone for good)	Reuse my cards (shuffle back)	1	1
+G23	Banish / exile (gone for good)	Defence gain (+health)	1	1
+G23	Banish / exile (gone for good)	Can't attack (my own unit)	1	1
+G23	Banish / exile (gone for good)	Grows again and again	1	1
+G23	Banish / exile (gone for good)	Stats equal to a count	1	0
+G23	Banish / exile (gone for good)	Sacrifice my own units	1	1
+G23	Banish / exile (gone for good)	Create new cards	1	1
+G23	Banish / exile (gone for good)	Act the turn it arrives (haste, rush)	1	0
+G23	Banish / exile (gone for good)	Search the deck for a card (tutor)	1	0
+G23	Banish / exile (gone for good)	Copy cards or units	1	1
+G23	Banish / exile (gone for good)	Immune / can't be targeted	1	0
+G23	Banish / exile (gone for good)	Move enemy units (push, pull)	1	1
+G23	Banish / exile (gone for good)	Destroy outright	1	1
+G23	Banish / exile (gone for good)	Transform my card into another	1	1
+G23	Double or multiply stats	Block points that wear off	1	1
+G23	Double or multiply stats	Taunt (enemies must attack it)	1	1
+G23	Double or multiply stats	Reuse my cards (shuffle back)	1	1
+G23	Double or multiply stats	Can't attack (my own unit)	1	1
+G23	Double or multiply stats	Summon units / tokens	1	1
+G23	Double or multiply stats	Create new cards	1	1
+G23	Double or multiply stats	Act the turn it arrives (haste, rush)	1	1
+G23	Double or multiply stats	Search the deck for a card (tutor)	1	0
+G23	Double or multiply stats	Copy cards or units	1	1
+G23	Double or multiply stats	Immune / can't be targeted	1	0
+G23	Double or multiply stats	Move enemy units (push, pull)	1	1
+G23	Stats matter (highest, lowest)	Taunt (enemies must attack it)	1	1
+G23	Stats matter (highest, lowest)	Hidden and revealed information	1	1
+G23	Stats matter (highest, lowest)	Reuse my cards (shuffle back)	1	1
+G23	Stats matter (highest, lowest)	Can't attack (my own unit)	1	1
+G23	Stats matter (highest, lowest)	Summon units / tokens	1	1
+G23	Stats matter (highest, lowest)	Put into play for free	1	1
+G23	Stats matter (highest, lowest)	Sacrifice my own units	1	1
+G23	Stats matter (highest, lowest)	Create new cards	1	1
+G23	Stats matter (highest, lowest)	Act the turn it arrives (haste, rush)	1	1
+G23	Stats matter (highest, lowest)	Destroys itself / temporary unit	1	1
+G23	Stats matter (highest, lowest)	Search the deck for a card (tutor)	1	1
+G23	Stats matter (highest, lowest)	Copy cards or units	1	1
+G23	Stats matter (highest, lowest)	Position and space	1	1
+G23	Stats matter (highest, lowest)	Immune / can't be targeted	1	1
+G23	Stats matter (highest, lowest)	Destroy outright	1	1
+G23	Block points that wear off	Row-wide lasting effects (weather)	1	0
 G23	Block points that wear off	When I play another card	1	1
+G23	Block points that wear off	Hidden and revealed information	1	1
+G23	Block points that wear off	Reuse my cards (shuffle back)	1	0
+G23	Block points that wear off	Can't attack (my own unit)	1	1
+G23	Block points that wear off	Grows again and again	1	1
+G23	Block points that wear off	Sacrifice my own units	1	0
+G23	Block points that wear off	Create new cards	1	1
+G23	Block points that wear off	Act the turn it arrives (haste, rush)	1	0
+G23	Block points that wear off	Destroys itself / temporary unit	1	1
+G23	Block points that wear off	Copy cards or units	1	1
+G23	Block points that wear off	Position and space	1	1
+G23	Block points that wear off	Neighbours matter (adjacency)	1	1
+G23	Block points that wear off	Immune / can't be targeted	1	0
+G23	Block points that wear off	Destroy outright	1	0
 G23	Block points that wear off	Transform my card into another	1	1
-G23	Stat loss (-power, -health)	Cards cost less	1	1
-G23	Stat loss (-power, -health)	Lifesteal / drain	1	1
-G23	Stat loss (-power, -health)	Expensive card	1	1
-G23	Stat loss (-power, -health)	Can't attack (my own unit)	1	1
-G23	Stat loss (-power, -health)	Create new cards	1	1
-G23	Stat loss (-power, -health)	Draw cards	1	1
-G23	Stat loss (-power, -health)	Deal damage	1	1
-G23	Stat loss (-power, -health)	Having a card in play or hand	1	1
-G23	Stat loss (-power, -health)	When I play another card	1	1
-G23	Stat loss (-power, -health)	Transform my card into another	1	1
-G23	Cards cost less	Can't attack (my own unit)	1	1
-G23	Cards cost less	Deal damage	1	1
-G23	Cards cost less	Having a card in play or hand	1	1
-G23	Cards cost less	When I play another card	1	1
-G23	Cards cost less	Transform my card into another	1	1
-G23	Cards cost less	Counts / thresholds	1	1
-G23	Lifesteal / drain	Expensive card	1	1
-G23	Lifesteal / drain	Can't attack (my own unit)	1	0
-G23	Lifesteal / drain	Create new cards	1	1
-G23	Lifesteal / drain	Draw cards	1	0
-G23	Lifesteal / drain	Having a card in play or hand	1	1
-G23	Lifesteal / drain	When I play another card	1	1
-G23	Lifesteal / drain	Transform my card into another	1	0
-G23	Expensive card	Can't attack (my own unit)	1	1
-G23	Expensive card	Create new cards	1	1
-G23	Expensive card	Draw cards	1	1
-G23	Expensive card	Deal damage	1	1
-G23	Expensive card	Transform my card into another	1	1
-G23	Can't attack (my own unit)	Create new cards	1	1
-G23	Can't attack (my own unit)	Draw cards	1	1
-G23	Can't attack (my own unit)	Having a card in play or hand	1	1
-G23	Can't attack (my own unit)	Counts / thresholds	1	1
-G23	Create new cards	Deal damage	1	1
-G23	Create new cards	Having a card in play or hand	1	1
-G23	Create new cards	When I play another card	1	1
-G23	Create new cards	Transform my card into another	1	1
-G23	Draw cards	Having a card in play or hand	1	1
-G23	Draw cards	When I play another card	1	1
-G23	Deal damage	Having a card in play or hand	1	1
-G23	Deal damage	When I play another card	1	1
-G23	Having a card in play or hand	When I play another card	1	1
-G23	Having a card in play or hand	Transform my card into another	1	1
-G23	Having a card in play or hand	Counts / thresholds	1	1
+G23	Row-wide lasting effects (weather)	Taunt (enemies must attack it)	1	0
+G23	Row-wide lasting effects (weather)	When I play another card	1	1
+G23	Row-wide lasting effects (weather)	Hidden and revealed information	1	0
+G23	Row-wide lasting effects (weather)	Reuse my cards (shuffle back)	1	0
+G23	Row-wide lasting effects (weather)	Defence gain (+health)	1	1
+G23	Row-wide lasting effects (weather)	Can't attack (my own unit)	1	0
+G23	Row-wide lasting effects (weather)	Grows again and again	1	1
+G23	Row-wide lasting effects (weather)	Stats equal to a count	1	1
+G23	Row-wide lasting effects (weather)	Sacrifice my own units	1	1
+G23	Row-wide lasting effects (weather)	Create new cards	1	1
+G23	Row-wide lasting effects (weather)	Act the turn it arrives (haste, rush)	1	0
+G23	Row-wide lasting effects (weather)	Copy cards or units	1	1
+G23	Row-wide lasting effects (weather)	Neighbours matter (adjacency)	1	1
+G23	Row-wide lasting effects (weather)	Immune / can't be targeted	1	0
+G23	Row-wide lasting effects (weather)	Destroy outright	1	1
+G23	Row-wide lasting effects (weather)	Transform my card into another	1	0
+G23	Taunt (enemies must attack it)	Hidden and revealed information	1	0
+G23	Taunt (enemies must attack it)	Reuse my cards (shuffle back)	1	1
+G23	Taunt (enemies must attack it)	Summon units / tokens	1	1
+G23	Taunt (enemies must attack it)	Grows again and again	1	1
+G23	Taunt (enemies must attack it)	Put into play for free	1	1
+G23	Taunt (enemies must attack it)	Stats equal to a count	1	1
+G23	Taunt (enemies must attack it)	Sacrifice my own units	1	1
+G23	Taunt (enemies must attack it)	Create new cards	1	1
+G23	Taunt (enemies must attack it)	Act the turn it arrives (haste, rush)	1	1
+G23	Taunt (enemies must attack it)	Destroys itself / temporary unit	1	1
+G23	Taunt (enemies must attack it)	Search the deck for a card (tutor)	1	0
+G23	Taunt (enemies must attack it)	Copy cards or units	1	1
+G23	Taunt (enemies must attack it)	Position and space	1	1
+G23	Taunt (enemies must attack it)	Immune / can't be targeted	1	0
+G23	Taunt (enemies must attack it)	Move enemy units (push, pull)	1	1
+G23	Taunt (enemies must attack it)	Destroy outright	1	1
+G23	Taunt (enemies must attack it)	Transform my card into another	1	1
+G23	When I play another card	Reuse my cards (shuffle back)	1	1
+G23	When I play another card	Defence gain (+health)	1	1
+G23	When I play another card	Grows again and again	1	1
+G23	When I play another card	Sacrifice my own units	1	1
+G23	When I play another card	Create new cards	1	1
+G23	When I play another card	Act the turn it arrives (haste, rush)	1	1
+G23	When I play another card	Search the deck for a card (tutor)	1	1
+G23	When I play another card	Immune / can't be targeted	1	1
+G23	When I play another card	Move enemy units (push, pull)	1	1
+G23	When I play another card	Destroy outright	1	1
 G23	When I play another card	Transform my card into another	1	1
-G23	Transform my card into another	Counts / thresholds	1	1
-G24	Cost matters	Draw cards	1	1
-G24	Cost matters	Deal damage	1	1
-G24	Cost matters	Destroys itself / temporary unit	1	1
-G24	Cost matters	Look at cards and pick (scry)	1	1
-G24	When a spell is played	Make a unit stronger (buff)	1	1
-G24	When a spell is played	Damage to several separate targets	1	1
-G24	When a spell is played	More or faster base resource (ramp)	1	1
-G24	When a spell is played	When I play another card	1	1
-G24	When a spell is played	Draw cards	1	1
-G24	When a spell is played	Deal damage	1	1
-G24	When a spell is played	Destroys itself / temporary unit	1	1
-G24	When a spell is played	Look at cards and pick (scry)	1	1
-G24	Make a unit stronger (buff)	Immune / can't be targeted	1	0
-G24	Make a unit stronger (buff)	Expensive card	1	1
-G24	Make a unit stronger (buff)	Damage to several separate targets	1	1
-G24	Make a unit stronger (buff)	More or faster base resource (ramp)	1	1
-G24	Make a unit stronger (buff)	Draw cards	1	1
-G24	Make a unit stronger (buff)	Deal damage	1	1
-G24	Make a unit stronger (buff)	Destroys itself / temporary unit	1	1
-G24	Make a unit stronger (buff)	Look at cards and pick (scry)	1	1
-G24	My spells and abilities get stronger	Immune / can't be targeted	1	1
-G24	My spells and abilities get stronger	When I play another card	1	1
-G24	My spells and abilities get stronger	Draw cards	1	1
-G24	My spells and abilities get stronger	Destroys itself / temporary unit	1	1
-G24	My spells and abilities get stronger	Look at cards and pick (scry)	1	1
-G24	Upgrade a card	Immune / can't be targeted	1	0
-G24	Upgrade a card	Expensive card	1	1
-G24	Upgrade a card	Damage to several separate targets	1	1
-G24	Upgrade a card	More or faster base resource (ramp)	1	1
-G24	Upgrade a card	Put into play for free	1	1
-G24	Upgrade a card	When I play another card	1	1
+G23	Hidden and revealed information	Summon units / tokens	1	1
+G23	Hidden and revealed information	Grows again and again	1	1
+G23	Hidden and revealed information	Stats equal to a count	1	0
+G23	Hidden and revealed information	Create new cards	1	1
+G23	Hidden and revealed information	Act the turn it arrives (haste, rush)	1	0
+G23	Hidden and revealed information	Search the deck for a card (tutor)	1	0
+G23	Hidden and revealed information	Position and space	1	1
+G23	Hidden and revealed information	Neighbours matter (adjacency)	1	1
+G23	Hidden and revealed information	Immune / can't be targeted	1	0
+G23	Hidden and revealed information	Move enemy units (push, pull)	1	1
+G23	Hidden and revealed information	Destroy outright	1	0
+G23	Hidden and revealed information	Transform my card into another	1	1
+G23	Reuse my cards (shuffle back)	Defence gain (+health)	1	1
+G23	Reuse my cards (shuffle back)	Can't attack (my own unit)	1	1
+G23	Reuse my cards (shuffle back)	Summon units / tokens	1	1
+G23	Reuse my cards (shuffle back)	Grows again and again	1	1
+G23	Reuse my cards (shuffle back)	Stats equal to a count	1	1
+G23	Reuse my cards (shuffle back)	Act the turn it arrives (haste, rush)	1	0
+G23	Reuse my cards (shuffle back)	Copy cards or units	1	1
+G23	Reuse my cards (shuffle back)	Position and space	1	1
+G23	Reuse my cards (shuffle back)	Neighbours matter (adjacency)	1	1
+G23	Reuse my cards (shuffle back)	Immune / can't be targeted	1	1
+G23	Reuse my cards (shuffle back)	Move enemy units (push, pull)	1	1
+G23	Reuse my cards (shuffle back)	Destroy outright	1	1
+G23	Reuse my cards (shuffle back)	Transform my card into another	1	1
+G23	Defence gain (+health)	Grows again and again	1	1
+G23	Defence gain (+health)	Create new cards	1	1
+G23	Defence gain (+health)	Act the turn it arrives (haste, rush)	1	1
+G23	Defence gain (+health)	Search the deck for a card (tutor)	1	1
+G23	Defence gain (+health)	Transform my card into another	1	1
+G23	Can't attack (my own unit)	Summon units / tokens	1	1
+G23	Can't attack (my own unit)	Grows again and again	1	1
+G23	Can't attack (my own unit)	Stats equal to a count	1	1
+G23	Can't attack (my own unit)	Sacrifice my own units	1	1
+G23	Can't attack (my own unit)	Create new cards	1	1
+G23	Can't attack (my own unit)	Act the turn it arrives (haste, rush)	1	0
+G23	Can't attack (my own unit)	Search the deck for a card (tutor)	1	0
+G23	Can't attack (my own unit)	Copy cards or units	1	1
+G23	Can't attack (my own unit)	Position and space	1	1
+G23	Can't attack (my own unit)	Neighbours matter (adjacency)	1	1
+G23	Can't attack (my own unit)	Destroy outright	1	1
+G23	Summon units / tokens	Create new cards	1	1
+G23	Summon units / tokens	Search the deck for a card (tutor)	1	1
+G23	Summon units / tokens	Copy cards or units	1	1
+G23	Summon units / tokens	Immune / can't be targeted	1	1
+G23	Grows again and again	Act the turn it arrives (haste, rush)	1	1
+G23	Grows again and again	Search the deck for a card (tutor)	1	0
+G23	Grows again and again	Copy cards or units	1	1
+G23	Grows again and again	Position and space	1	1
+G23	Grows again and again	Immune / can't be targeted	1	1
+G23	Grows again and again	Destroy outright	1	1
+G23	Grows again and again	Transform my card into another	1	1
+G23	Put into play for free	Sacrifice my own units	1	1
+G23	Put into play for free	Search the deck for a card (tutor)	1	1
+G23	Put into play for free	Transform my card into another	1	1
+G23	Stats equal to a count	Create new cards	1	1
+G23	Stats equal to a count	Act the turn it arrives (haste, rush)	1	1
+G23	Stats equal to a count	Destroys itself / temporary unit	1	1
+G23	Stats equal to a count	Search the deck for a card (tutor)	1	0
+G23	Stats equal to a count	Copy cards or units	1	1
+G23	Stats equal to a count	Immune / can't be targeted	1	0
+G23	Stats equal to a count	Destroy outright	1	1
+G23	Stats equal to a count	Transform my card into another	1	1
+G23	Sacrifice my own units	Act the turn it arrives (haste, rush)	1	1
+G23	Sacrifice my own units	Search the deck for a card (tutor)	1	1
+G23	Sacrifice my own units	Immune / can't be targeted	1	0
+G23	Create new cards	Act the turn it arrives (haste, rush)	1	1
+G23	Create new cards	Destroys itself / temporary unit	1	1
+G23	Create new cards	Position and space	1	1
+G23	Create new cards	Neighbours matter (adjacency)	1	1
+G23	Create new cards	Immune / can't be targeted	1	1
+G23	Create new cards	Move enemy units (push, pull)	1	1
+G23	Create new cards	Destroy outright	1	1
+G23	Create new cards	Transform my card into another	1	1
+G23	Act the turn it arrives (haste, rush)	Search the deck for a card (tutor)	1	0
+G23	Act the turn it arrives (haste, rush)	Copy cards or units	1	1
+G23	Act the turn it arrives (haste, rush)	Position and space	1	1
+G23	Act the turn it arrives (haste, rush)	Neighbours matter (adjacency)	1	1
+G23	Act the turn it arrives (haste, rush)	Destroy outright	1	1
+G23	Act the turn it arrives (haste, rush)	Transform my card into another	1	1
+G23	Destroys itself / temporary unit	Search the deck for a card (tutor)	1	1
+G23	Destroys itself / temporary unit	Copy cards or units	1	1
+G23	Destroys itself / temporary unit	Destroy outright	1	1
+G23	Destroys itself / temporary unit	Transform my card into another	1	1
+G23	Search the deck for a card (tutor)	Copy cards or units	1	1
+G23	Search the deck for a card (tutor)	Position and space	1	1
+G23	Search the deck for a card (tutor)	Neighbours matter (adjacency)	1	1
+G23	Search the deck for a card (tutor)	Immune / can't be targeted	1	0
+G23	Search the deck for a card (tutor)	Destroy outright	1	1
+G23	Search the deck for a card (tutor)	Transform my card into another	1	1
+G23	Copy cards or units	Position and space	1	1
+G23	Copy cards or units	Neighbours matter (adjacency)	1	1
+G23	Copy cards or units	Immune / can't be targeted	1	0
+G23	Copy cards or units	Move enemy units (push, pull)	1	1
+G23	Copy cards or units	Destroy outright	1	1
+G23	Copy cards or units	Transform my card into another	1	1
+G23	Position and space	Immune / can't be targeted	1	1
+G23	Neighbours matter (adjacency)	Immune / can't be targeted	1	1
+G23	Immune / can't be targeted	Destroy outright	1	0
+G23	Immune / can't be targeted	Transform my card into another	1	1
+G23	Destroy outright	Transform my card into another	1	1
+G24	Search the deck for a card (tutor)	Transform my card into another	1	1
+G24	Search the deck for a card (tutor)	Copy cards or units	1	1
+G24	Search the deck for a card (tutor)	Can't attack (my own unit)	1	0
+G24	Search the deck for a card (tutor)	Set stats to a number	1	0
+G24	Search the deck for a card (tutor)	A unit levels up on the board	1	0
+G24	Search the deck for a card (tutor)	Summon units / tokens	1	1
+G24	Search the deck for a card (tutor)	Draw cards	1	0
+G24	Search the deck for a card (tutor)	Sacrifice my own units	1	1
+G24	Countdown	Reuse my cards (shuffle back)	1	1
+G24	Countdown	Can't attack (my own unit)	1	1
+G24	Countdown	A unit levels up on the board	1	1
+G24	Countdown	Draw cards	1	1
+G24	Reuse my cards (shuffle back)	Transform my card into another	1	1
+G24	Reuse my cards (shuffle back)	Upgrade a card	1	1
+G24	Reuse my cards (shuffle back)	Copy cards or units	1	1
+G24	Reuse my cards (shuffle back)	Can't attack (my own unit)	1	1
+G24	Reuse my cards (shuffle back)	Set stats to a number	1	1
+G24	Reuse my cards (shuffle back)	A unit levels up on the board	1	1
+G24	Reuse my cards (shuffle back)	Summon units / tokens	1	1
+G24	Transform my card into another	Copy cards or units	1	1
+G24	Transform my card into another	A unit levels up on the board	1	1
+G24	Transform my card into another	Create new cards	1	1
+G24	Upgrade a card	Can't attack (my own unit)	1	1
+G24	Upgrade a card	Set stats to a number	1	1
+G24	Upgrade a card	Summon units / tokens	1	1
 G24	Upgrade a card	Draw cards	1	1
-G24	Upgrade a card	Deal damage	1	1
-G24	Upgrade a card	Look at cards and pick (scry)	1	1
-G24	Immune / can't be targeted	Expensive card	1	0
-G24	Immune / can't be targeted	Damage to several separate targets	1	1
-G24	Immune / can't be targeted	More or faster base resource (ramp)	1	0
-G24	Immune / can't be targeted	When I play another card	1	1
-G24	Immune / can't be targeted	Draw cards	1	1
-G24	Immune / can't be targeted	Deal damage	1	1
-G24	Immune / can't be targeted	Look at cards and pick (scry)	1	1
-G24	Expensive card	Damage to several separate targets	1	0
-G24	Expensive card	Put into play for free	1	1
-G24	Expensive card	Draw cards	1	1
-G24	Expensive card	Deal damage	1	1
-G24	Expensive card	Destroys itself / temporary unit	1	1
-G24	Damage to several separate targets	When I play another card	1	1
-G24	Damage to several separate targets	Draw cards	1	1
-G24	Damage to several separate targets	Destroys itself / temporary unit	1	1
-G24	Damage to several separate targets	Look at cards and pick (scry)	1	0
-G24	More or faster base resource (ramp)	When I play another card	1	1
-G24	More or faster base resource (ramp)	Draw cards	1	1
-G24	More or faster base resource (ramp)	Destroys itself / temporary unit	1	1
-G24	More or faster base resource (ramp)	Look at cards and pick (scry)	1	1
-G24	When I play another card	Draw cards	1	1
-G24	When I play another card	Deal damage	1	1
-G24	When I play another card	Look at cards and pick (scry)	1	1
-G24	Draw cards	Destroys itself / temporary unit	1	1
-G24	Draw cards	Look at cards and pick (scry)	1	1
-G24	Deal damage	Destroys itself / temporary unit	1	1
-G24	Deal damage	Look at cards and pick (scry)	1	1
-G24	Destroys itself / temporary unit	Look at cards and pick (scry)	1	1
+G24	Copy cards or units	Can't attack (my own unit)	1	1
+G24	Copy cards or units	Summon units / tokens	1	1
+G24	Can't attack (my own unit)	Set stats to a number	1	1
+G24	Can't attack (my own unit)	Summon units / tokens	1	1
+G24	Can't attack (my own unit)	Create new cards	1	1
+G24	Can't attack (my own unit)	Draw cards	1	1
+G24	Can't attack (my own unit)	Sacrifice my own units	1	1
+G24	Stealth / hidden until it acts	A unit levels up on the board	1	1
+G24	Stealth / hidden until it acts	Summon units / tokens	1	1
+G24	Stealth / hidden until it acts	Create new cards	1	1
+G24	Stealth / hidden until it acts	Draw cards	1	1
+G24	Set stats to a number	A unit levels up on the board	1	1
+G24	Set stats to a number	Create new cards	1	1
+G24	Set stats to a number	Draw cards	1	1
+G24	Set stats to a number	Sacrifice my own units	1	1
+G24	A unit levels up on the board	Create new cards	1	1
+G24	A unit levels up on the board	Draw cards	1	1
+G24	Summon units / tokens	Create new cards	1	1
+G24	Summon units / tokens	Draw cards	1	1
+G25	Variety matters (all different)	Grows again and again	1	1
+G25	Variety matters (all different)	Defence gain (+health)	1	1
+G25	Variety matters (all different)	Stacking keywords / counters	1	1
+G25	Variety matters (all different)	Look at cards and pick (scry)	1	1
 G25	Variety matters (all different)	Counts / thresholds	1	1
-G25	Variety matters (all different)	Expensive card	1	1
 G25	Variety matters (all different)	Deal damage	1	1
 G25	Variety matters (all different)	Having a card in play or hand	1	1
-G25	Variety matters (all different)	Small repeatable damage	1	1
-G25	Variety matters (all different)	Act the turn it arrives (haste, rush)	1	1
-G25	Variety matters (all different)	Hits my own side too	1	1
+G25	Variety matters (all different)	Destroy outright	1	1
+G25	Grows again and again	When I play another card	1	1
+G25	Grows again and again	Defence gain (+health)	1	1
+G25	Grows again and again	Look at cards and pick (scry)	1	1
+G25	Grows again and again	Counts / thresholds	1	1
+G25	Grows again and again	Deal damage	1	1
+G25	Grows again and again	Improve cards in hand or deck	1	1
+G25	Grows again and again	Having a card in play or hand	1	1
+G25	Grows again and again	Destroy outright	1	1
+G25	Stats equal to a count	Heal every turn (regeneration)	1	1
+G25	Stats equal to a count	Look at cards and pick (scry)	1	1
 G25	Stats equal to a count	Deal damage	1	1
-G25	Stats equal to a count	Transform my card into another	1	1
 G25	Stats equal to a count	Having a card in play or hand	1	1
-G25	Stats equal to a count	Create new cards	1	1
-G25	Stats equal to a count	Act the turn it arrives (haste, rush)	1	1
-G25	Heal every turn (regeneration)	When I play another card	1	1
-G25	Heal every turn (regeneration)	Stats matter (highest, lowest)	1	1
-G25	Heal every turn (regeneration)	Deal damage	1	1
-G25	Heal every turn (regeneration)	Transform my card into another	1	1
-G25	Heal every turn (regeneration)	Having a card in play or hand	1	1
-G25	Heal every turn (regeneration)	Small repeatable damage	1	1
-G25	Heal every turn (regeneration)	Create new cards	1	1
-G25	Heal every turn (regeneration)	Act the turn it arrives (haste, rush)	1	1
-G25	Heal every turn (regeneration)	Move enemy units (push, pull)	1	1
-G25	When I play another card	Deal damage	1	1
-G25	When I play another card	Transform my card into another	1	1
+G25	Stats equal to a count	Destroy outright	1	1
+G25	When I play another card	Defence gain (+health)	1	1
+G25	When I play another card	Heal every turn (regeneration)	1	1
+G25	When I play another card	Stacking keywords / counters	1	1
+G25	When I play another card	Look at cards and pick (scry)	1	1
 G25	When I play another card	Move my units (reposition)	1	1
+G25	When I play another card	Deal damage	1	1
+G25	When I play another card	Improve cards in hand or deck	1	1
 G25	When I play another card	Having a card in play or hand	1	1
-G25	When I play another card	Small repeatable damage	1	1
-G25	When I play another card	Create new cards	1	1
-G25	When I play another card	Act the turn it arrives (haste, rush)	1	1
-G25	When I play another card	Hits my own side too	1	1
+G25	When I play another card	Destroy outright	1	1
 G25	When I play another card	Move enemy units (push, pull)	1	1
-G25	Put into play for free	Stats matter (highest, lowest)	1	1
-G25	Put into play for free	Expensive card	1	1
-G25	Put into play for free	Transform my card into another	1	1
-G25	Put into play for free	Hits my own side too	1	1
-G25	Stats matter (highest, lowest)	Expensive card	1	1
-G25	Stats matter (highest, lowest)	Summon units / tokens	1	1
-G25	Stats matter (highest, lowest)	Deal damage	1	1
-G25	Stats matter (highest, lowest)	Small repeatable damage	1	1
-G25	Stats matter (highest, lowest)	Create new cards	1	1
-G25	Stats matter (highest, lowest)	Act the turn it arrives (haste, rush)	1	1
-G25	Stats matter (highest, lowest)	Hits my own side too	1	1
-G25	Counts / thresholds	Transform my card into another	1	1
-G25	Counts / thresholds	Having a card in play or hand	1	1
-G25	Counts / thresholds	Small repeatable damage	1	1
-G25	Counts / thresholds	Act the turn it arrives (haste, rush)	1	1
-G25	Counts / thresholds	Hits my own side too	1	1
-G25	Expensive card	Summon units / tokens	1	1
-G25	Expensive card	Deal damage	1	1
-G25	Expensive card	Transform my card into another	1	1
-G25	Expensive card	Move my units (reposition)	1	1
-G25	Expensive card	Small repeatable damage	1	1
-G25	Expensive card	Create new cards	1	1
-G25	Expensive card	Act the turn it arrives (haste, rush)	1	1
-G25	Expensive card	Hits my own side too	1	1
-G25	Expensive card	Move enemy units (push, pull)	1	1
+G25	Defence gain (+health)	Look at cards and pick (scry)	1	1
+G25	Defence gain (+health)	Counts / thresholds	1	1
+G25	Defence gain (+health)	Deal damage	1	1
+G25	Defence gain (+health)	Improve cards in hand or deck	1	1
+G25	Defence gain (+health)	Having a card in play or hand	1	1
+G25	Heal every turn (regeneration)	Stacking keywords / counters	1	1
+G25	Heal every turn (regeneration)	Look at cards and pick (scry)	1	1
+G25	Heal every turn (regeneration)	Counts / thresholds	1	1
+G25	Heal every turn (regeneration)	Deal damage	1	1
+G25	Heal every turn (regeneration)	Having a card in play or hand	1	1
+G25	Heal every turn (regeneration)	Destroy outright	1	1
+G25	Heal every turn (regeneration)	Move enemy units (push, pull)	1	1
+G25	Put into play for free	Stacking keywords / counters	1	1
+G25	Stacking keywords / counters	Look at cards and pick (scry)	1	1
+G25	Stacking keywords / counters	Move my units (reposition)	1	1
+G25	Stacking keywords / counters	Deal damage	1	1
+G25	Stacking keywords / counters	Improve cards in hand or deck	1	1
+G25	Stacking keywords / counters	Having a card in play or hand	1	1
+G25	Stacking keywords / counters	Destroy outright	1	1
+G25	Look at cards and pick (scry)	Summon units / tokens	1	1
+G25	Look at cards and pick (scry)	Counts / thresholds	1	1
+G25	Look at cards and pick (scry)	Deal damage	1	1
+G25	Look at cards and pick (scry)	Improve cards in hand or deck	1	1
+G25	Look at cards and pick (scry)	Having a card in play or hand	1	1
+G25	Look at cards and pick (scry)	Destroy outright	1	1
+G25	Look at cards and pick (scry)	Move enemy units (push, pull)	1	1
+G25	Summon units / tokens	Improve cards in hand or deck	1	1
 G25	Summon units / tokens	Having a card in play or hand	1	1
-G25	Summon units / tokens	Create new cards	1	1
+G25	Move my units (reposition)	Improve cards in hand or deck	1	1
+G25	Counts / thresholds	Improve cards in hand or deck	1	1
+G25	Counts / thresholds	Having a card in play or hand	1	1
+G25	Counts / thresholds	Destroy outright	1	1
+G25	Deal damage	Improve cards in hand or deck	1	1
 G25	Deal damage	Having a card in play or hand	1	1
-G25	Deal damage	Create new cards	1	1
-G25	Deal damage	Act the turn it arrives (haste, rush)	1	1
-G25	Deal damage	Hits my own side too	1	1
-G25	Transform my card into another	Having a card in play or hand	1	1
-G25	Transform my card into another	Create new cards	1	1
-G25	Transform my card into another	Act the turn it arrives (haste, rush)	1	1
-G25	Move my units (reposition)	Create new cards	1	1
-G25	Having a card in play or hand	Small repeatable damage	1	1
-G25	Having a card in play or hand	Create new cards	1	1
-G25	Having a card in play or hand	Act the turn it arrives (haste, rush)	1	1
-G25	Having a card in play or hand	Hits my own side too	1	1
-G25	Small repeatable damage	Create new cards	1	1
-G25	Small repeatable damage	Act the turn it arrives (haste, rush)	1	1
-G25	Create new cards	Act the turn it arrives (haste, rush)	1	1
-G25	Create new cards	Hits my own side too	1	1
-G25	Create new cards	Move enemy units (push, pull)	1	1
-G25	Act the turn it arrives (haste, rush)	Hits my own side too	1	1
+G25	Improve cards in hand or deck	Having a card in play or hand	1	1
+G25	Improve cards in hand or deck	Move enemy units (push, pull)	1	1
+G25	Having a card in play or hand	Destroy outright	1	1

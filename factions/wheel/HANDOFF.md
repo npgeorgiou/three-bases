@@ -9,9 +9,9 @@ The Elder Scrolls: Legends (todo.md item 12) runs step 3 again when done.
 |---|---|---|
 | 1. Fix the library's concepts | done (19 Nov 2026) | the library's concepts (`cards.sqlite`, `links.sqlite`) |
 | 2. The usable concepts | done (19 Nov 2026): 133 usable, 44 helper, 33 out; return_from_board (73 cards), return_on_leave (76) and hand_deck_swap (5, new over the bar) usable (Claude's) | `work/concepts.tsv`, `work/concepts.md` |
-| 3. The faction archetypes | done (19 Nov 2026): 25 groups by NMF from 3027 decks (Kaptain agreed 25 on 1428 decks; see the open questions) (`work/deck_groups_nmf.py --groups 25`); each carries its design markers; its archetype's concepts are its 10 heaviest and base concepts (about 13), so most pairs share some; `work/make_faction.py` makes a faction from one or two concepts | `work/deck_groups_nmf_25.tsv`, `.md`, `.json`, `work/step3_groups.py` |
-| 4. The links between concepts | done (19 Nov 2026): 14699 concept pairs, 3171 strong links; return_from_board has 101 strong links, return_on_leave 36, hand_deck_swap 3 | `library/cards_db/wheel/concept_links.tsv` |
-| 5. The archetype map | done (19 Nov 2026): 1041 edges; 99% of the parts are engines; the page shows design markers (brown), two ticked archetypes as one faction (only when they share a concept), and builds new archetypes | `work/archetype_parts.tsv`, `work/archetype_map.tsv`, `factions/wheel-archetypes.html` |
+| 3. The faction archetypes | done (19 Nov 2026): 25 groups by NMF from 3027 decks (Kaptain keeps 25; the most stable number is 17, 0.96 against 25's 0.87) (`work/deck_groups_nmf.py --groups 25`); each carries its design markers; its archetype's concepts are its 10 heaviest and base concepts (about 13), so most pairs share some; `work/make_faction.py` makes a faction from one or two concepts | `work/deck_groups_nmf_25.tsv`, `.md`, `.json`, `work/step3_groups.py` |
+| 4. The links between concepts | done (19 Nov 2026, on 3027 decks): 15933 concept pairs, 3171 strong links; return_from_board has 101 strong links, return_on_leave 36, hand_deck_swap 3 | `library/cards_db/wheel/concept_links.tsv` |
+| 5. The archetype map | done (19 Nov 2026, on 3027 decks): 1071 edges (69 decks only); 333 of the 336 parts are engines; the page shows design markers (brown), two ticked archetypes as one faction (only when they share a concept), and builds new archetypes | `work/archetype_parts.tsv`, `work/archetype_map.tsv`, `factions/wheel-archetypes.html` |
 | 6. The 20 factions | redo (next): `work/factions.py` (2 archetypes) gets the limits of step 6.1; `work/concept_list.py` written | `work/answer_concepts.tsv` (agreed): per answer its ways |
 | 7. Combos on this board | to do | |
 | 8. Game plan, then keywords | to do | |
@@ -28,7 +28,7 @@ The Elder Scrolls: Legends (todo.md item 12) runs step 3 again when done.
   sides); how strong a link between two concepts is (both how many times above chance and how many real card pairs,
   in how many games); whether step 5 cuts each archetype to the concepts with a strong card link to another concept
   (inside it or in any archetype) before pairing; how many concepts a faction keeps (about 12 plus 8 extras is like a
-  real faction). Step 3 on 3027 decks (19 Nov 2026): the most stable number of groups is 17 (0.96; 25 has 0.87); `deck_groups_nmf_25.*` holds 25 groups from these decks. Whether the wheel keeps 25 groups or takes 17 is Kaptain's; then steps 4-5 again.
+  real faction).
 - Runeterra's spell mana rule is written (`read/runeterra/game_rules.jsonl`) but not built into `cards.sqlite` yet.
 - `work/factions.py` and `work/concept_list.py` work (about 6 minutes; `concept_list.Library` scores a set of concepts
   in under a second). `factions.py` keeps the limits of step 6.1. Open before it runs: how many own concepts a

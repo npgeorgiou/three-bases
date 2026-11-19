@@ -127,7 +127,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       result. The number of groups, from 14 (20 factions of 2 archetypes, each in at most 3 factions) to 30 (Claude's),
       is the one whose groups stay most alike when the run is repeated on 90% of the decks, 10 times (Claude's). A deck
       fits a group that is at least 30% of its mix (Claude's). The wheel's archetypes are the version with 25 groups
-      (`--groups 25`, the most stable number above 20, Claude's; Kaptain agreed them, 19 Nov 2026).
+      (`--groups 25`; Kaptain agreed them, 19 Nov 2026). On the 3027 decks the most stable number is 17 (0.96; 25 has
+      0.87, and above 20 none passes 0.89): Kaptain keeps 25 (19 Nov 2026).
    4. Per group: its 10 heaviest concepts, each with the share of its decks that lean on it; its base concepts (more
       than half of its decks have them, more often than their game's decks, Claude's), like "Deal damage"; its unit
       numbers against their games; a group whose decks are 80% or more from one game is marked (Claude's).
