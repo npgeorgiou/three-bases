@@ -1,4 +1,4 @@
-"""The 20 factions (factions/START_DESIGN-1-wheel.md step 7, 7.1 and 7.2), from wheel/archetypes.tsv,
+"""The 20 factions (factions/START_DESIGN-1-wheel.md step 7, 7.1 and 7.2), from work/archetype_parts.tsv (step 6),
 work/radii.tsv and library/cards_db/wheel/concept_links.tsv. Every tie is broken by the archetype or concept key in
 alphabetical order, so every run gives the same result.
 7.1 A group of 2 archetypes scores the strong links between concepts of one archetype and concepts of the other (each two
@@ -29,7 +29,7 @@ def num(v): return float(v) if v else 0.0
 
 ARCH = collections.defaultdict(list)  # archetype -> [(part, engine|brick, [concepts])]
 NAME = {}
-for r in tsv(os.path.join(WHEEL, 'archetypes.tsv')):
+for r in tsv(os.path.join(HERE, 'archetype_parts.tsv')):
     ARCH[r['key']].append((r['part'], r['kind'], r['concepts'].split(',')))
     NAME[r['key']] = r['name']
 LINK = {}  # (a, b) both orders -> row

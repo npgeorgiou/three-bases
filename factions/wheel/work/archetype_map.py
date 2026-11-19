@@ -1,8 +1,10 @@
-"""Step 6, the archetype map (factions/START_DESIGN-1-wheel.md): each concept of an archetype's parts is a node; between
+"""Step 6, the archetype map (factions/START_DESIGN-1-wheel.md), from the archetypes of step 3 (step3_groups.py). A part
+whose concepts have a joined link with another part of the same archetype is an engine, any other part a brick; the parts
+with their kind go to work/archetype_parts.tsv. Each concept of an archetype's parts is a node; between
 the concepts of two engine parts of one archetype, an edge with the step 5 numbers (cards, decks, games, level), the top
 link text, the real card pair of its strongest link (none when only real decks join them) and a note when the edge is
 weak (about the player, or decks only). Bricks are nodes with no edges.
-Writes work/archetype_map.tsv, work/archetype_gaps.tsv (engine parts whose concepts have no joined edge) and
+Writes work/archetype_parts.tsv, work/archetype_map.tsv, work/archetype_gaps.tsv (engine parts whose concepts have no joined edge) and
 factions/wheel-archetypes.html (every usable concept at a fixed place, every joined pair between them for the links
 between ticked archetypes). Run from library/cards_db: python3 ../../factions/wheel/work/archetype_map.py"""
 import collections, csv, itertools, json, math, os, sqlite3, sys
@@ -11,6 +13,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(HERE, '..', '..', '..', 'library', 'cards_db')
 sys.path.insert(0, DB)
 import axes, mechanics_wheel
+sys.path.insert(0, HERE)
+import step3_groups
 
 
 PLAYER = ('player', 'nexus', 'leader', 'hero', 'face')  # link texts about hitting the player: no player health here
@@ -30,13 +34,21 @@ def joined(r):
 
 
 def main():
-    arch = list(csv.DictReader(open(os.path.join(HERE, '..', 'archetypes.tsv'), encoding='utf-8'), delimiter='\t'))
+    arch = step3_groups.rows()
     links = {}
     for r in csv.DictReader(open(os.path.join(DB, 'wheel', 'concept_links.tsv'), encoding='utf-8'), delimiter='\t'):
         links[frozenset((r['a'], r['b']))] = r
     parts = collections.defaultdict(list)
     for r in arch:
         parts[r['key']].append(r)
+    for ps in parts.values():  # engine: a joined link from one of its concepts to a concept of another part of the archetype
+        for x in ps:
+            x['kind'] = 'engine' if any(links.get(frozenset((a, b))) and joined(links[frozenset((a, b))])
+                                        for y in ps if y is not x for a in x['concepts'].split(',')
+                                        for b in y['concepts'].split(',') if a != b) else 'brick'
+    with open(os.path.join(HERE, 'archetype_parts.tsv'), 'w', encoding='utf-8') as f:
+        f.write('key\tname\tpart\tkind\tconcepts\n')
+        for r in arch: f.write('\t'.join([r['key'], r['name'], r['part'], r['kind'], r['concepts']]) + '\n')
     wanted, edges, gaps = set(), [], []
     for key, ps in parts.items():
         for x, y in itertools.combinations(ps, 2):

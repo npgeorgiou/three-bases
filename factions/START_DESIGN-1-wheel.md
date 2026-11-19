@@ -128,16 +128,16 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    3. Groups: NMF on the deck rows only, with the positive scores; each game weighs the square root of its deck count. The first guess comes from the data (NNDSVD), so one run gives the
       result. The number of groups, from 14 (20 factions of 2 archetypes, each in at most 3 factions) to 30 (Claude's),
       is the one whose groups stay most alike when the run is repeated on 90% of the decks, 10 times (Claude's). A deck
-      fits a group that is at least 30% of its mix (Claude's). A second version with more groups is made with a set
-      number (`--groups N`): the most stable number above 20 (Claude's).
+      fits a group that is at least 30% of its mix (Claude's). The wheel's archetypes are the version with 25 groups
+      (`--groups 25`, the most stable number above 20, Claude's; Kaptain agreed them, 19 Nov 2026).
    4. Per group: its 10 heaviest concepts, each with the share of its decks that lean on it; its base concepts (more
       than half of its decks have them, more often than their game's decks, Claude's), like "Deal damage"; its unit
       numbers against their games; a group whose decks are 80% or more from one game is marked (Claude's).
    5. The real factions are never rows of the NMF. A faction fits its best 2 groups when its share of their concepts
       is at least twice its game's average (Claude's). The groups no faction fits, the factions that fit no group and
       the concepts in no group are listed.
-   **Kaptain agrees the groups before anything else.** `work/make_faction.py "<concept>" ["<concept>"] [--groups N]` makes a
-   faction from one or two concepts out of these groups (its header says how). The page `factions/wheel-groups.html` is made
+   `work/make_faction.py "<concept>" ["<concept>"]` makes a faction from one or
+   two concepts out of the 25 groups (its header says how). The page `factions/wheel-groups.html` is made
    in its own chat: concept nodes placed by how often decks use them together, coloured by group; selecting a faction
    or a deck lights its concepts; building or changing a group by selecting nodes shows which decks and factions fit it.
 4. **The radii and how they work together** (`wheel/work/radii.tsv`). Every usable concept is put on one radius whose
@@ -162,7 +162,9 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    `makes` (the share of the pair's links where a's card sets off or feeds b's card); the three most common link
    texts. Joined: `cards` 1.2+, or `decks` 1.5+, or `rare` 3+ with a `level` of 1+. `apart.py` lists the concept pairs
    real factions keep apart.
-6. **The archetype map** (`work/archetype_map.py` -> `work/archetype_map.tsv` and `factions/wheel-archetypes.html`).
+6. **The archetype map** (`work/archetype_map.py` -> `work/archetype_parts.tsv`, `work/archetype_map.tsv` and
+   `factions/wheel-archetypes.html`), from the 25 groups of step 3 (`work/step3_groups.py`); each concept of a group is a
+   part of its own (Claude's), and the parts with their kind go to `work/archetype_parts.tsv` for step 7.
    Each concept of an archetype's parts is a node; a concept used by several archetypes is one node. A part whose
    concepts have strong links with another part of the same archetype is an engine; any other part is a brick. Between the
    concepts of two engine parts of an archetype, an edge with the step 5 numbers: `cards` (how much more often than
@@ -206,7 +208,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       link, or a removal on a spell; a way of two concepts takes two extras); (b) the rest go to the highest-scoring
       concepts with strong links to at least 2 of its concepts; (c) the theme breaks ties.
    6. **Its seven answers**, from `work/answer_concepts.tsv`: how it wins is the line of its archetypes in
-      `work/deck_groups_nmf.json`; removing a front unit, removing back-row units, acting between lanes and holding a base are
+      `work/archetype_parts.tsv`; removing a front unit, removing back-row units, acting between lanes and holding a base are
       each the highest-scoring way its concepts and extras give; what it cares about most is the highest-scoring of
       the game's own things on its list (factions may share it); its blind spot is the radius (`work/radii.tsv`) that
       holds none of its concepts and extras and has the lowest average score on its list. An answer no way gives is

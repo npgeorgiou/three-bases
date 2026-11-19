@@ -8,10 +8,10 @@ One chat does one step; at its end, mark the step done here and say what it left
 |---|---|---|
 | 1. Fix the library's concepts | done (19 Nov 2026) | concepts split by whom a row acts on; "Skill" removed; "Return my unit to hand" split into return_from_board and return_on_leave; the tag check (`work/tag_check.py`, two readings, 248 cards, fixes in `flat.py` with cases wc40-wc65, lk403); `check_all.py` and `links.py` rebuilt; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
 | 2. The usable concepts | done (19 Nov 2026): 133 usable, 44 helper, 33 out; return_from_board (73 cards), return_on_leave (76) and hand_deck_swap (5, new over the bar) usable (Claude's) | `work/concepts.tsv`, `work/concepts.md` |
-| 3. The faction archetypes | **made, Kaptain agrees the groups next**: 15 groups by NMF from 1428 decks (`work/deck_groups_nmf.py`, about 2.5 minutes), and a version with 25 (`--groups 25`); `work/make_faction.py` makes a faction from one or two concepts | `work/deck_groups_nmf.tsv`, `.md`, `.json` and `deck_groups_nmf_25.*`; then `factions/wheel-groups.html` in its own chat |
+| 3. The faction archetypes | done (19 Nov 2026): Kaptain agreed the 25 groups by NMF from 1428 decks (`work/deck_groups_nmf.py --groups 25`); `work/make_faction.py` makes a faction from one or two concepts | `work/deck_groups_nmf_25.tsv`, `.md`, `.json` |
 | 4. The radii and how they work together | first import The Elder Scrolls: Legends and run step 3 again (todo.md); then redo: the new concepts of step 1 get a radius (Kaptain agrees), then `axes.py` | `work/radii.tsv`, `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` |
 | 5. The links between concepts | redo | `library/cards_db/wheel/concept_links.tsv` |
-| 6. The archetype map | redo with the groups of step 3 (`work/deck_groups_nmf.json`; `archetype_map.py` and `factions.py` are changed to read it) | `work/archetype_map.tsv`, `factions/wheel-archetypes.html` |
+| 6. The archetype map | redo after step 5: `archetype_map.py` reads the 25 groups (`work/step3_groups.py`) and writes `work/archetype_parts.tsv`, which `factions.py` (step 7) reads | `work/archetype_map.tsv`, `factions/wheel-archetypes.html` |
 | 7. The 20 factions | redo: `work/factions.py` (2 archetypes) gets the new limits; `work/concept_list.py` written | `work/answer_concepts.tsv` (agreed): per answer its ways |
 | 8. Combos on this board | to do | |
 | 9. Game plan, then keywords | to do | |

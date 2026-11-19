@@ -48,9 +48,9 @@ is written in that step's chat, from the rules of the step, and its line here is
   base concepts, unit numbers, factions that fit), `.md` (the same in plain words, with the stability per number of
   groups, unknown deck cards, concepts in no group, groups no faction fits and factions that fit no group) and `.json`.
 - `python3 ../../factions/wheel/work/deck_groups_nmf.py --groups 25` (a few seconds) -> `deck_groups_nmf_25.tsv`, `.md`,
-  `.json`: the version with more groups (25: the most stable number above 20).
-- `python3 factions/wheel/work/make_faction.py "attach" ["discard"] [--groups 25]` (from the repo, a second) -> a faction
-  from one or two concepts, printed and written to `factions/wheel/work/made/<concepts>[_25].md`.
+  `.json`: the 25 groups Kaptain agreed, the wheel's archetypes (25: the most stable number above 20).
+- `python3 factions/wheel/work/make_faction.py "attach" ["discard"]` (from the repo, a second) -> a faction from one or
+  two concepts out of the 25 groups, printed and written to `factions/wheel/work/made/<concepts>_25.md`.
 
 ## Step 4. The radii and how they work together
 - `work/radii.tsv`: every usable concept, the radius it goes on (key and name), the part of it that counts there, and
@@ -72,14 +72,14 @@ is written in that step's chat, from the rules of the step, and its line here is
   the pairs real factions keep apart.
 
 ## Step 6. The archetype map
-- `python3 ../../factions/wheel/work/archetype_map.py` (about 10 seconds; needs links.sqlite) ->
-  `factions/wheel/work/archetype_map.tsv` (archetype, its two engine parts, concept a, concept b, `cards`, `decks`,
+- `python3 ../../factions/wheel/work/archetype_map.py` (about 10 seconds; needs links.sqlite; reads the 25 groups of step 3
+  through `work/step3_groups.py`) -> `factions/wheel/work/archetype_parts.tsv` (archetype, name, part, engine or brick,
+  concept; read by step 7), `factions/wheel/work/archetype_map.tsv` (archetype, its two engine parts, concept a, concept b, `cards`, `decks`,
   `games`, `level`, top link text, the real card pair of its strongest link, from `wheel/concept_links.tsv`; a pair
   joined only by real decks has no card pair; `note`: "about the player" when more than half of its card links are about
   hitting the player, "decks only" when no card pair; it prints the cards behind the most edges), `work/archetype_gaps.tsv` (two engine parts with no joined edge, shown to
   Kaptain with the numbers) and `factions/wheel-archetypes.html` (page template `work/archetype_map_template.html`; the concepts' places by
-  networkx's spring layout over every joined pair of usable concepts, seed 7). It writes engine or brick for each part
-  into `work/archetype_map.tsv`.
+  networkx's spring layout over every joined pair of usable concepts, seed 7). 
 
 ## Step 7. The 20 factions
 - `python3 ../../factions/wheel/work/factions.py` (rules: `START_DESIGN-1-wheel.md` step 7) ->
