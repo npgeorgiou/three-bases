@@ -1,13 +1,13 @@
 id	game	from	to	a	b	expect	source
 w01	marvel_snap	Ghost Rider	Vibro-Shock Gauntlets	revive	base_resource_gain	none	Kaptain 15 Nov 2026: the link is made by the +2 Power, never by the Energy
 w02	marvel_snap	Ghost Rider	Vibro-Shock Gauntlets	revive	resource_gain	none	the same family
-w03	sts1	Ritual Dagger	Nunchaku	onkill	*	none	Kaptain 15 Nov 2026: Ritual Dagger counts as an Attack, never as "gains when it kills"
-w05	monster_train	Mine Collapse	Kindle	kill	*	none	Kaptain 15 Nov 2026: the energy links them, not the kill
-w07	duelyst	Erratic Raptyr	Grailmaster	revive	allyplay	count	the link is made by a keyword's own effect: the keyword counts
-w08	faeria	Boulder Thrower	Blood Obelisk	reach	deathfeed	count	the same family
-w09	gwent	Mage Infiltrator	Thanedd Turncoat	enemyside	ping	count	the same family
-w10	inscryption	Adder	Raccoon	kill	deathfeed	count	the same family
-w11	runeterra	Yuumi (level 2)	Legion General	attach	leave	count	the same family
+w03	sts1	Ritual Dagger	Nunchaku	on_kill	*	none	Kaptain 15 Nov 2026: Ritual Dagger counts as an Attack, never as "gains when it kills"
+w05	monster_train	Mine Collapse	Kindle	destroy	*	none	Kaptain 15 Nov 2026: the energy links them, not the kill
+w07	duelyst	Erratic Raptyr	Grailmaster	revive	on_ally_play	count	the link is made by a keyword's own effect: the keyword counts
+w08	faeria	Boulder Thrower	Blood Obelisk	ranged	other_death_trigger	count	the same family
+w09	gwent	Mage Infiltrator	Thanedd Turncoat	donate	ping	count	the same family
+w10	inscryption	Adder	Raccoon	destroy	other_death_trigger	count	the same family
+w11	runeterra	Yuumi (level 2)	Legion General	merge_attach	leave_trigger	count	the same family
 w12	marvel_snap	Kid Omega	Archangel Horseman of Death	destroy	death_count	none	Kaptain 17 Nov 2026: my own units killed are a sacrifice, never removal
 w13	marvel_snap	Kid Omega	Archangel Horseman of Death	sacrifice	death_count	count	the same family
 w14	gwent	Cyclops	Dagon: Risen	destroy	revive	none	the same family

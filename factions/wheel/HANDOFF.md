@@ -10,8 +10,8 @@ More deck lists (todo.md item 12) and The Elder Scrolls: Legends (item 13) each 
 | 1. Fix the library's concepts | done (19 Nov 2026) | concepts split by whom a row acts on; "Skill" removed; "Return my unit to hand" split into return_from_board and return_on_leave; the tag check (`work/tag_check.py`, two readings, 248 cards, fixes in `flat.py` with cases wc40-wc65, lk403); `check_all.py` and `links.py` rebuilt; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
 | 2. The usable concepts | done (19 Nov 2026): 133 usable, 44 helper, 33 out; return_from_board (73 cards), return_on_leave (76) and hand_deck_swap (5, new over the bar) usable (Claude's) | `work/concepts.tsv`, `work/concepts.md` |
 | 3. The faction archetypes | done (19 Nov 2026): Kaptain agreed the 25 groups by NMF from 1428 decks (`work/deck_groups_nmf.py --groups 25`); `work/make_faction.py` makes a faction from one or two concepts | `work/deck_groups_nmf_25.tsv`, `.md`, `.json` |
-| 4. The links between concepts | redo (next) | `library/cards_db/wheel/concept_links.tsv` |
-| 5. The archetype map | redo after step 4: `archetype_map.py` reads the 25 groups (`work/step3_groups.py`) and writes `work/archetype_parts.tsv`, which `factions.py` (step 6) reads | `work/archetype_map.tsv`, `factions/wheel-archetypes.html` |
+| 4. The links between concepts | done (19 Nov 2026): 14699 concept pairs, 3171 strong links; return_from_board has 101 strong links, return_on_leave 36, hand_deck_swap 3 | `library/cards_db/wheel/concept_links.tsv` |
+| 5. The archetype map | redo (next): `archetype_map.py` reads the 25 groups (`work/step3_groups.py`) and writes `work/archetype_parts.tsv`, which `factions.py` (step 6) reads | `work/archetype_map.tsv`, `factions/wheel-archetypes.html` |
 | 6. The 20 factions | redo: `work/factions.py` (2 archetypes) gets the limits of step 6.1; `work/concept_list.py` written | `work/answer_concepts.tsv` (agreed): per answer its ways |
 | 7. Combos on this board | to do | |
 | 8. Game plan, then keywords | to do | |
