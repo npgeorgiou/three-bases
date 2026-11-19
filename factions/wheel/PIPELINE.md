@@ -6,11 +6,10 @@ wait for his OK; it writes links.sqlite.gz too). A step is redone when what it u
 is written in that step's chat, from the rules of the step, and its line here is then filled in.
 
 ## Step 1. Fix the library's concepts
-- Suspects: `factions/wheel/work/suspects.tsv` (concept, the games it is counted in, the games left out, where it
-  was limited). `python3 ../../factions/wheel/work/concept_games.py [--all]` -> `work/concept_games.tsv` (`--all`:
+- Suspects: `factions/wheel/work/suspects.tsv` (concept, the games it is counted in, the games left out). `python3 ../../factions/wheel/work/concept_games.py [--all]` -> `work/concept_games.tsv` (`--all`:
   `concept_games_all.tsv`, every concept with 5+ cards): per concept and game, where its rows act (kind, side, zone),
   the keywords that give it, its link partners and how alike they are to the other games' (too noisy to decide alone;
-  the rows decide). Verdicts: `work/suspect_verdicts.tsv`.
+  the rows decide).
 - Fixes: split by the card's rows in `flat.py` derive (ON_PLAYER, BODY, SEVERAL_SUPPLIES; the database's rules in
   `START_DATABASE.md`), each with cases (`cases/mechanics.tsv` wc01-wc26); tried on a copy of cards.sqlite with every
   case first; a card read (within the wheel's 500, low-cost model, Kaptain's OK first) only where its rows can't

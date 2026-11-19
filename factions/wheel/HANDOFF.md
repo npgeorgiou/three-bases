@@ -7,7 +7,7 @@ More deck lists (todo.md item 12) and The Elder Scrolls: Legends (item 13) each 
 ## The steps
 | step | state | what it made |
 |---|---|---|
-| 1. Fix the library's concepts | done (19 Nov 2026) | concepts split by whom a row acts on; "Skill" removed; "Return my unit to hand" split into return_from_board and return_on_leave; the tag check (`work/tag_check.py`, two readings, 248 cards, fixes in `flat.py` with cases wc40-wc65, lk403); `check_all.py` and `links.py` rebuilt; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
+| 1. Fix the library's concepts | done (19 Nov 2026) | the library's concepts (`cards.sqlite`, `links.sqlite`) |
 | 2. The usable concepts | done (19 Nov 2026): 133 usable, 44 helper, 33 out; return_from_board (73 cards), return_on_leave (76) and hand_deck_swap (5, new over the bar) usable (Claude's) | `work/concepts.tsv`, `work/concepts.md` |
 | 3. The faction archetypes | done (19 Nov 2026): Kaptain agreed the 25 groups by NMF from 1428 decks (`work/deck_groups_nmf.py --groups 25`); `work/make_faction.py` makes a faction from one or two concepts | `work/deck_groups_nmf_25.tsv`, `.md`, `.json` |
 | 4. The links between concepts | done (19 Nov 2026): 14699 concept pairs, 3171 strong links; return_from_board has 101 strong links, return_on_leave 36, hand_deck_swap 3 | `library/cards_db/wheel/concept_links.tsv` |
@@ -23,12 +23,7 @@ More deck lists (todo.md item 12) and The Elder Scrolls: Legends (item 13) each 
   parts, each a set of alternative concepts: an engine part works through links with another part ("my units die" ->
   "my units gain when an ally dies"), a brick works alone (disruption). Kaptain's list (`archetypes_kaptain.txt`) holds
   deck archetypes: what a pair of factions plays together (step 7).
-- Step 1 left: the tag check's families judged on the second reading as right or mixed stay as they are: "Draw" on
-  the enemy (both players draw), "Free play" of an enemy card, "Repeat" of a Duel, "Make my spells stronger" on enemy
-  cards, the Vek's own heals and summons in Into the Breach. A unit returned to hand from either side (Will of Ionia,
-  Recall a unit) counts both as return_from_board and as bounce_enemy. "Absorb one hit" from cancelling a spell aimed
-  at the unit (SpellShield) is "Keep my units alive" (Claude's choice). No row says "from the discard pile": those
-  cards are recycle or revive. Run `work/tag_check.py` again only after a change to the concepts' rules.
+- Runeterra's spell mana rule is written (`read/runeterra/game_rules.jsonl`) but not built into `cards.sqlite` yet.
 - `work/factions.py` and `work/concept_list.py` work (about 6 minutes; `concept_list.Library` scores a set of concepts
   in under a second). `factions.py` still lacks the limit of step 6.1 that two factions share at most half of
   their own concepts. Its last output (`work/factions.tsv`) is from the deck archetypes and is remade.
