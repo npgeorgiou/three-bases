@@ -43,10 +43,10 @@ is written in that step's chat, from the rules of the step, and its line here is
   are out. `work/concepts.md`: the same by kind in plain words, for Kaptain.
 
 ## Step 3. The faction archetypes
-- `python3 ../../factions/wheel/work/faction_archetypes.py` (from `library/cards_db`, about 5 minutes) ->
-  `factions/wheel/work/faction_archetypes.tsv` (per group: decks, games, top concepts, the decks that fit it most, the
-  best-fitting factions) and `faction_archetypes.md` (the same in plain words, with the stability per number of groups,
-  unknown deck cards, groups no faction fits and factions that fit no group), for Kaptain's OK.
+- `python3 ../../factions/wheel/work/faction_archetypes.py` (from `library/cards_db`, under a minute) ->
+  `factions/wheel/work/faction_archetypes.tsv` (per group: its concepts, lines, decks that fit, their games, the decks
+  that fit most, the best-fitting factions) and `faction_archetypes.md` (the same in plain words, with unknown deck
+  cards, groups no faction fits and factions that fit no group), for Kaptain's OK.
 
 ## Step 4. The radii and how they work together
 - `work/radii.tsv`: every usable concept, the radius it goes on (key and name), the part of it that counts there, and

@@ -102,32 +102,37 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    5+ real cards, with its card count (`card_count`) and its games, sorted into three kinds
    (`work/concept_verdicts.tsv`: kind and reason, each marked Kaptain's or Claude's; a concept not in it is usable):
    - Usable: a faction can build on it. It says what a card does ("brings back a dead unit"), or reacts to something
-     the player makes happen or builds up ("when a card is drawn", "when it becomes a target", "if your hand holds 5
-     cards").
-   - Helper: it only says when or how a card acts ("when played", "at end of round", "once per game", "choose one of
-     two effects"); or it is one of the game's own things (lanes, bases, carry-over, cells and rows, the 3x3 camp,
-     unit cost); or it is a thing for single cards (used once, a drawback, a wall that can't attack, choosing the
-     target).
+     other cards make happen or build up ("when a card is drawn", "when another unit dies", "if your hand holds 5
+     cards"). Where cards are placed and what they stand next to (neighbours, formations, position, long reach),
+     auras, attaching, stacking counters, bonuses for this turn, expensive cards and my units that can't attack are
+     usable too (Kaptain).
+   - Helper: it only says when or how a card acts: every "when" about the card itself ("when played", "when it dies",
+     "when it leaves play", "when it attacks", "when it is damaged", "when it becomes a target"; the effect after it
+     counts by its own concept), "at end of round", "once per game", "choose one of two effects"; or it is one of the
+     game's own things (lanes, bases, carry-over, rows); or it is a thing for single cards (used once, a drawback,
+     choosing the target).
    - Out: it is not in this game (player health, blocking, answers on the enemy's turn, unit types, shops, supply that
      grows by itself) or Kaptain ruled it out (randomness).
    A parent in the concept tree keeps only the cards none of its children carry, so no effect counts twice.
    `work/concepts.md` shows the kinds in plain words for Kaptain.
 3. **The faction archetypes** (`work/faction_archetypes.py` -> `work/faction_archetypes.tsv`, `work/faction_archetypes.md`).
-   Ways to play that decks group together; they become our factions' archetypes.
-   1. Scores: for every deck of `decks.tsv` (the whole deck, all its cards, neutrals and staples too, never split by
-      faction) and every real faction of `axes.tsv` (43), per usable concept (step 2): the log-odds ratio with a prior
-      (Monroe et al. 2008) against all the cards of its game (Claude's), as a z-score; above 1.96 is strong. Every card
-      counts; a parent concept counts only on cards none of its children carry.
-   2. Groups: NMF on the deck rows only, with the positive scores; each game weighs the square root of its deck count.
-      The number of groups is the one whose groups come back most alike over repeated runs with different seeds
-      (Claude's), at least 14 (20 factions of 2 archetypes, each archetype in at most 3 factions); more is fine. A deck
-      fits a group when the group is at least 30% of its mix (Claude's). A group is kept when decks of 2+ games fit it.
-      Monster Train and Marvel Snap decks are in (Claude's). Deck cards the library does not know are counted and
-      reported, never guessed.
-   3. Factions are never rows of the NMF. A faction's fit to a group is the cosine between its positive scores and the
-      group (Claude's; it fits at 0.5 or more, Claude's). The groups no faction fits and the factions that fit no group
+   The ways to play that decks put together; they become our factions' archetypes. Real factions are never copied.
+   1. Counts: every deck of `decks.tsv`, all its cards (neutrals and staples too, never split by faction): how many of
+      them have each usable concept (step 2; a card counts once per concept, Claude's). Five unit concepts are added,
+      each against the card's game: unit, cheap unit, expensive unit, strong for its cost, tough for its cost (above the
+      game's straight line of strength or defence by cost, Claude's). Deck cards the library does not know are counted
+      and reported, never guessed. Monster Train and Marvel Snap decks are in (Claude's).
+   2. Lines: for every two concepts, how much more often they are together in the same decks than chance gives within
+      each game, from how common each is in the game's decks and the deck's size; each game weighs the square root of
+      its deck count (Claude's). A line is kept when it is above chance by more than 1.96 (Claude's).
+   3. Groups: link clustering (Ahn, Bagrow and Lehmann, Nature 2010) groups the lines, so a concept can be in several
+      groups ("Draw cards" with the spells and with discard). The same table always gives the same groups. The tree of
+      lines is cut where the groups are densest, so the number of groups and their sizes come out by themselves.
+   4. Decks and the 43 real factions of `axes.tsv` are never used to make the groups. Each is measured against each
+      group: the share of its cards' concepts on the group's concepts, against its game's average share; it fits the
+      group at 1.5 times the average or more (Claude's). The groups no faction fits and the factions that fit no group
       are listed.
-   4. Per group: its top concepts, the decks that fit it most, the best-fitting factions.
+   5. Per group: its concepts, the decks that fit it most, the best-fitting factions.
    **Kaptain agrees the groups before anything else.** The page `factions/wheel-groups.html` is made in its own chat:
    concept nodes placed by how often decks use them together, coloured by group; selecting a faction or a deck lights
    its concepts; building or changing a group by selecting nodes shows which decks and factions fit it.
