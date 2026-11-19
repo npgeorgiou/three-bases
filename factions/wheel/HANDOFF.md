@@ -39,8 +39,6 @@ More deck lists (todo.md item 12) and The Elder Scrolls: Legends (item 13) each 
   `tools/wheel_table_check.py` (the 20 factions' archetypes, extras and answers) are written when step 9 and Stop 3
   need them.
 - `work/make_stop1.py` is written for step 9.
-- `cases/wheel.tsv`: w03-w11 name concepts that are not in `work/concepts.tsv` (onkill, kill, allyplay, deathfeed, reach,
-  enemyside, attach, leave), so step 4 skips them; give them today's concept names before step 4 runs.
 
 ## The numbers (library/cards_db)
 - `links.sqlite` is rebuilt only after `network.py` or `cards.sqlite` changed: `PYTHONHASHSEED=0 python3 links.py`
