@@ -8,7 +8,7 @@ One chat does one step; at its end, mark the step done here and say what it left
 |---|---|---|
 | 1. Fix the library's concepts | done (19 Nov 2026) | concepts split by whom a row acts on; "Skill" removed; "Return my unit to hand" split into return_from_board and return_on_leave; the tag check (`work/tag_check.py`, two readings, 248 cards, fixes in `flat.py` with cases wc40-wc65, lk403); `check_all.py` and `links.py` rebuilt; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
 | 2. The usable concepts | done (19 Nov 2026): 133 usable, 44 helper, 33 out; return_from_board (73 cards), return_on_leave (76) and hand_deck_swap (5, new over the bar) usable (Claude's) | `work/concepts.tsv`, `work/concepts.md` |
-| 3. The faction archetypes | **made, Kaptain judges the group sizes next**: 24 groups from 1428 decks, 5 of them 8 to 10 concepts (`work/faction_archetypes.py`, under a minute) | `work/faction_archetypes.tsv` and `.md`; then `factions/wheel-groups.html` in its own chat |
+| 3. The faction archetypes | **made, Kaptain judges the groups next**: 18 groups from 1428 decks, 17 of them 8 to 10 concepts; 31 concepts with lines in no group (`work/faction_archetypes.py`, under a minute) | `work/faction_archetypes.tsv` and `.md`; then `factions/wheel-groups.html` in its own chat |
 | 4. The radii and how they work together | redo: the new concepts of step 1 get a radius (Kaptain agrees), then `axes.py` | `work/radii.tsv`, `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` |
 | 5. The links between concepts | redo | `library/cards_db/wheel/concept_links.tsv` |
 | 6. The archetype map | redo with the faction archetypes | `work/archetype_map.tsv`, `factions/wheel-archetypes.html` |
