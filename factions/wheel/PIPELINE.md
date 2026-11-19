@@ -48,10 +48,14 @@ is written in that step's chat, from the rules of the step, and its line here is
   groups, unknown deck cards, concepts in no group, groups no faction fits and factions that fit no group) and `.json`.
 - `python3 ../../factions/wheel/work/deck_groups_nmf.py --groups 17` (about 40 seconds) -> `deck_groups_nmf_17.tsv`, `.md`,
   `.json`: the 17 groups Kaptain agreed, the wheel's archetypes (17: the most stable number on the 3027 decks). The number
-  is set once, in `work/step3_groups.py` (`GROUPS`); steps 5 and 6 and `make_faction.py` read it from there.
+  is set once, in `work/step3_groups.py` (`GROUPS`); steps 5 and 6 read it from there.
   `work/step3_groups.py` turns them into the archetypes' concepts and design markers for steps 5 and 6.
 - `python3 factions/wheel/work/make_faction.py "attach" ["discard"]` (from the repo, a second) -> a faction from one or
-  two concepts out of the 17 groups, printed and written to `factions/wheel/work/made/<concepts>_17.md`.
+  two concepts, from the decks that lean on them and never from the groups (its header says how), printed and written to
+  `factions/wheel/work/made/<concepts>.md`.
+- `python3 ../../factions/wheel/work/deck_groups_nmf.py --kernels sacrifice,on_spell,...` (about a minute) ->
+  `deck_groups_nmf_kernels.tsv`, `.md`, `.json`: one group started from each named concept (its kernel), then free to move
+  where the decks pull it, with its stability; each group says where its kernel ended up among its concepts.
 
 ## Step 4. The links between concepts
 - `python3 mechanics_wheel.py links --concepts` (about a minute; every game, those with no factions too) ->

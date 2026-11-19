@@ -149,7 +149,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       is at least twice its game's average (Claude's). The groups no faction fits, the factions that fit no group and
       the concepts in no group are listed.
    `work/make_faction.py "<concept>" ["<concept>"]` makes a faction from one or
-   two concepts out of the 17 groups (its header says how).
+   two concepts, from the decks that lean on them and never from the groups (its header says how).
 4. **The links between concepts** (`mechanics_wheel.py links --concepts` -> `wheel/concept_links.tsv`). For every two
    concepts of `work/concepts.tsv` (usable, helpers and out): `cards` = how much more often than chance their cards are
    linked, counted only through what of each card made the link; `decks` = how much more often real decks heavy in one
