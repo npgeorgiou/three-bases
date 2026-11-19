@@ -36,11 +36,11 @@ The Elder Scrolls: Legends (todo.md item 12) runs step 3 again when done.
   groups match one of the 17. Whether the wheel uses kernels is Kaptain's.
 - Whole factions from what they do (20 Nov 2026, process agreed, an experiment): `python3 factions/wheel/work/kernel_factions.py`
   (about 10 seconds) -> `work/kernel_factions.md`: 10 identities (Claude's; Waits and Swarms widened by what their decks
-  hold most); kernel = their effects; engines from card links (to 2+ kernel concepts, each link shown in 2+ games,
+  hold most); kernel = their effects; engines from card links (to 2+ kernel concepts, each link shown in 2+ games, played by the kernel's decks at least as often as normal,
   ranked so concepts linked to everything don't join every faction), each with the real card pair behind its strongest
   kernel link; bricks from decks (held 1.5x+ by a quarter of the kernel's decks, no card link to the kernel; one more than
-  3 factions would take is dropped from all: silence); partners = each faction's 5 strongest pairs. Result: 8-12 concepts
-  each; no two share over half. 20 cards read (10 engine card pairs, low-cost reader, `factions/read-cards.tsv`): 8 pairs
+  3 factions would take is dropped from all: silence); partners = each faction's 5 strongest pairs. Result: 6-12 concepts
+  each (Waits 6, Swarms 7); no two share over half. 20 cards read (10 engine card pairs, low-cost reader, `factions/read-cards.tsv`): 8 pairs
   did not work together as their link says, so links seen in one game only no longer make engines. Open: some engines
   still look odd (Moves: damage over time, when healed; Kills brutally: when healed); library suspects from the reading:
   Primordium (Monster Train) tagged pay later, Khanuum-ka (Duelyst) tagged cheat death, Cloudbringer's Grace (Runeterra)

@@ -5,7 +5,8 @@ python3 factions/wheel/work/kernel_factions.py  (from the repo, a few seconds) -
    and that MIN_LEAN+ decks lean on, at most KERNEL. A concept two identities want goes to the one whose other kernel
    concepts' decks hold it more. A kernel under MIN_KERNEL concepts is marked thin: Kaptain widens it.
 2. Engines come from card links: the usable concepts (triggers and conditions too) with a strong card link (step 4) to 2+ kernel
-   concepts, each of those links shown in ENGINE_GAMES+ games (one game's few pairs can be an accident: 8 of 10 such
+   concepts, that the kernel's decks hold at least PLAYED times as often as their games (real decks play it there too),
+   each of those links shown in ENGINE_GAMES+ games (one game's few pairs can be an accident: 8 of 10 such
    pairs read on 20 Nov 2026 did not work together), at most ENGINES, ranked by its kernel links times the share of its links that go to this kernel (so a
    concept real cards link to everything does not join every faction, nor a rare one with two links). Bricks come from decks: the concepts the kernel's decks hold more
    often than their game's cards (share of cards against the game's share, per game with MIN_DECKS+ of its decks,
@@ -24,7 +25,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, '..', '..', '..')
 sys.path.insert(0, HERE)
 import step3_groups
-OWN, KERNEL, MIN_KERNEL, MIN_LEAN, ENGINES, ENGINE_GAMES, MIN_DECKS = 12, 6, 4, 10, 4, 2, 3  # Claude's
+OWN, KERNEL, MIN_KERNEL, MIN_LEAN, ENGINES, ENGINE_GAMES, PLAYED, MIN_DECKS = 12, 6, 4, 10, 4, 2, 1.0, 3  # Claude's
 DECK_LIFT, HELD, MAX_BRICK, PARTNERS = 1.5, 0.25, 3, 5                              # Claude's; 5 partners: Kaptain
 IDENTITIES = [  # (name, what it does, families or concepts of the concept tree); Claude's. Waits and Swarms widened by what their decks hold most
     ("Can't be broken", 'its units do not die', ['protection', 'heal', 'defence_gain']),
@@ -105,10 +106,9 @@ for x in fac:
 kernels = set().union(*(set(x['kernel']) for x in fac))
 for x in fac:
     k = x['kernel']
-    eng = [c for c in usable if c not in kernels and sum(wide(c, q) for q in k) >= 2]
+    x['decks'] = decks_of(k); lift = deck_lift(x['decks']); x['lift'] = lift
+    eng = [c for c in usable if c not in kernels and sum(wide(c, q) for q in k) >= 2 and lift.get(c, 0) >= PLAYED]
     eng = sorted(eng, key=lambda c: (-sum(wide(c, q) for q in k) ** 2 / reach[c], c))[:ENGINES]
-    x['decks'] = decks_of(k)
-    lift = deck_lift(x['decks']); x['lift'] = lift
     held = {c: sum(decks[n]['counts'].get(c, 0) > 0 for n in x['decks']) / max(1, len(x['decks'])) for c in lift}
     x['brick_pool'] = [c for c in sorted(lift, key=lambda c: (-lift[c], c)) if lift[c] >= DECK_LIFT and held[c] >= HELD and c not in k
                        and c not in eng and c in usable and not any(linked(c, q) for q in k)]
