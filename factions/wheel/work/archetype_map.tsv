@@ -96,6 +96,14 @@ G05	Defence gain (+health)	defence_gain	My unit fights a chosen enemy	fight_enem
 G05	Defence gain (+health)	defence_gain	Attack right away	attack_now	1.81	1.05	4	3	stronger: more health	runeterra: Mountain Sojourners + Trevor Snoozebottom	
 G05	Search the deck for a card (tutor)	tutor	Repeat or double triggers	repeat_trigger		1.96	2	1.95	repeats: repeats its On Reveal effects	marvel_snap: Misery + Doctor Octopus Fractured Frontier	
 G05	My unit fights a chosen enemy	fight_enemy	Attack right away	attack_now	1.44	3.81	1	3	type: targets it for its effect	runeterra: Dragon's Rage (created) + Arrel the Tracker	
+G06	Return my unit from the board to hand	return_from_board	Send an enemy unit back (bounce)	bounce_enemy		5.63	2	2.97	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Minah Swiftfoot	
+G06	Return my unit from the board to hand	return_from_board	Silence (abilities removed)	silence		2.29	3	2.75	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Blinded Mystic	
+G06	Return my unit from the board to hand	return_from_board	Neighbours matter (adjacency)	adjacency	2.06	1.96	4	3	waits: returns it to hand: its Play or summon effect goes off again (when around it)	duelyst: Orbrider + Orb Weaver	
+G06	Return my unit from the board to hand	return_from_board	Swap positions	swap		6.31	3	3	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Slotbot	
+G06	Return my unit from the board to hand	return_from_board	Turn an enemy into something weaker	polymorph		2.54	0	0			decks only
+G06	Return my unit from the board to hand	return_from_board	Steal from the opponent	steal		2.83	3	2.81	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Yordle Grifter	
+G06	Return my unit from the board to hand	return_from_board	Temporary bonus (this turn only)	temporary_buff	2.48	1.3	2	3	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Keeper of Masks	
+G06	Return my unit from the board to hand	return_from_board	Act the turn it arrives (haste, rush)	haste		1.52	0	0			decks only
 G06	Send an enemy unit back (bounce)	bounce_enemy	Silence (abilities removed)	silence		2.85	2	1.95	waits: returns it to hand: its Play or summon effect goes off again	duelyst: Hailstone Prison + Ephemeral Shroud	
 G06	Send an enemy unit back (bounce)	bounce_enemy	Swap positions	swap		3.39	3	2.15	waits: returns it to hand: its Play or summon effect goes off again	duelyst: Hailstone Prison + Hearth-Sister	
 G06	Send an enemy unit back (bounce)	bounce_enemy	Turn an enemy into something weaker	polymorph		2.77	0	0			decks only
@@ -235,22 +243,29 @@ G12	Sacrifice my own units	sacrifice	Double or multiply stats	stat_multiply	2.38
 G12	Sacrifice my own units	sacrifice	Bring back dead units (revive)	revive	16.13	3.06	6	3	type: makes your units die: {B} brings them back	runeterra: The Iron Conquest + Undying Revenge	
 G12	Sacrifice my own units	sacrifice	Cheat death (survive lethal)	cheat_death	12.97	2.49	7	3	waits: kills it for its death effect	duelyst: Darkfire Sacrifice + Desolator	
 G12	Sacrifice my own units	sacrifice	Destroys itself / temporary unit	self_destruct	2.45	1.8	6	3	type: makes your units die: {B} brings them back	runeterra: The Iron Conquest + Undying Revenge	
+G12	Sacrifice my own units	sacrifice	Back to hand when it dies or leaves play	return_on_leave	7.61	2.91	3	3	waits: makes cards leave play	runeterra: Encroaching Shadows + Rainbowfish (created)	
 G12	Sacrifice my own units	sacrifice	Stats equal to a count	variable_stats	1.65	1.73	5	3	type: makes your units die	runeterra: Mark of the Isles + Xolaani the Bloodweaver	
 G12	Sacrifice my own units	sacrifice	Attach or merge onto a unit	merge_attach	1.6	2.16	3	3	waits: kills it for its death effect	duelyst: Arid Unmaking + Oserix	
 G12	Double or multiply stats	stat_multiply	Bring back dead units (revive)	revive	1.43	2.23	3	2.88	waits: brings it back: its summon effect goes off	runeterra: Harrowing Return + Cithria, Lady of Clouds	
 G12	Double or multiply stats	stat_multiply	Cheat death (survive lethal)	cheat_death	1.39	3.9	4	2.68	keyword: gives it Deathless, which it passes to its allies	runeterra: Legion of the Severed + Mask Mother	
 G12	Double or multiply stats	stat_multiply	Destroys itself / temporary unit	self_destruct	3.0	1.8	5	3	stronger: more health	runeterra: Cithria, Lady of Clouds + Breakneck Husk	
+G12	Double or multiply stats	stat_multiply	Back to hand when it dies or leaves play	return_on_leave	0.28	4.57	2	2.2	type: equips your units	runeterra: Quick Quill (created) + Sharesies	
 G12	Double or multiply stats	stat_multiply	When I play another card	on_ally_play	1.98	1.56	6	3	stronger: more health	runeterra: Cithria, Lady of Clouds + Mask Mother	
 G12	Double or multiply stats	stat_multiply	Stats equal to a count	variable_stats	2.1	1.64	6	3	stronger: more power	marvel_snap: Adamantium Infusion + Gambit & Shang-Chi Doomsday	
 G12	Double or multiply stats	stat_multiply	Attach or merge onto a unit	merge_attach	1.88	4.71	2	3	stronger: more health	runeterra: Cithria, Lady of Clouds + Rainbowfish (created)	
 G12	Bring back dead units (revive)	revive	Cheat death (survive lethal)	cheat_death	4.02	3.03	5	3	type: dies, comes back and dies again: {B} brings them back	duelyst: Khanuum-ka + Corpse Combustion	
 G12	Bring back dead units (revive)	revive	Destroys itself / temporary unit	self_destruct	4.92	2.26	5	3	type: dies by its own effect: {B} brings them back	duelyst: Wind Dervish + Corpse Combustion	
+G12	Bring back dead units (revive)	revive	Back to hand when it dies or leaves play	return_on_leave	0.41	2.29	3	2.53	type: dies, comes back and dies again: {B} brings them back	duelyst: Snow Chaser + Keeper of the Vale	
 G12	Bring back dead units (revive)	revive	When I play another card	on_ally_play	6.02	1.15	4	3	waits: brings it back: its summon effect goes off	duelyst: Zurael, the Lifegiver + Meltwater Moose	
 G12	Bring back dead units (revive)	revive	Stats equal to a count	variable_stats	3.26	1.79	4	3	waits: brings it back: its summon effect goes off	runeterra: Eternal Dancers + Legion General	
 G12	Bring back dead units (revive)	revive	Attach or merge onto a unit	merge_attach	2.95	1.99	2	3	waits: brings it back: its summon effect goes off	runeterra: Kalista (level 2) + Innovative Blacksmith	
 G12	Cheat death (survive lethal)	cheat_death	Destroys itself / temporary unit	self_destruct	0.67	1.67	4	2.76	keyword: gives it Deathless, which it passes to its allies	runeterra: Legion of the Severed + Breakneck Husk	
+G12	Cheat death (survive lethal)	cheat_death	Back to hand when it dies or leaves play	return_on_leave		3.7	1	1.95	keyword: gives it Deathless, which it passes to its allies	runeterra: Legion of the Severed + Rainbowfish (created)	
 G12	Cheat death (survive lethal)	cheat_death	When I play another card	on_ally_play	1.97	1.16	5	3	waits: puts your units into play	faeria: Annoying Gnat + Ancient Beastmaster	
+G12	Destroys itself / temporary unit	self_destruct	Back to hand when it dies or leaves play	return_on_leave	2.18	0.63	2	3	waits: makes cards leave play	runeterra: Encroaching Mist + Rainbowfish (created)	
 G12	Destroys itself / temporary unit	self_destruct	When I play another card	on_ally_play	1.24	1.28	4	3	stronger: more health	runeterra: Cithria, Lady of Clouds + Breakneck Husk	
+G12	Back to hand when it dies or leaves play	return_on_leave	Stats equal to a count	variable_stats	0.73	2.39	2	2.4	type: returns units to hand	runeterra: Yuumi (level 2) + Legion General	
+G12	Back to hand when it dies or leaves play	return_on_leave	Attach or merge onto a unit	merge_attach	3.43	7.06	2	3	type: equips your units	runeterra: Quick Quill (created) + Ambitious Cultist	
 G12	When I play another card	on_ally_play	Stats equal to a count	variable_stats	1.35	1.32	5	3	stronger: more power	marvel_snap: Shuri + Deadpool	
 G12	Stats equal to a count	variable_stats	Attach or merge onto a unit	merge_attach	0.6	1.93	3	2.91	type: equips your units	runeterra: Aatrox + Jax (level 2)	
 G13	Destroy outright	destroy	Board wipe	board_wipe	0.07	3.42	3	2.08	waits: kills it for its death effect	duelyst: Necrotic Sphere + Cacophynos	
@@ -343,24 +358,33 @@ G17	When another unit dies	other_death_trigger	Grows with what happened this gam
 G17	When another unit dies	other_death_trigger	Stats equal to a count	variable_stats	0.98	1.69	5	3	type: changes your units' stats	marvel_snap: Zombie Venom + Gilgamesh	
 G17	When another unit dies	other_death_trigger	Sacrifice my own units	sacrifice	18.67	2.34	8	3	waits: makes your units die	marvel_snap: Misery + Zombie Venom	
 G17	When another unit dies	other_death_trigger	Hits my own side too	friendly_fire	10.57	1.41	8	3	waits: makes your units die	runeterra: Eradication + Tomb-Raider Barbara	
+G17	When another unit dies	other_death_trigger	Back to hand when it dies or leaves play	return_on_leave	0.86	3.95	3	2.88	waits: dies, comes back and dies again	marvel_snap: Sabretooth + Firehair	
 G17	When another unit dies	other_death_trigger	Destroys itself / temporary unit	self_destruct	7.31	1.49	7	3	waits: dies by its own effect	monster_train: Lady of the Reformed + Rector Flicker	
 G17	When another unit dies	other_death_trigger	Bring back dead units (revive)	revive	1.67	2.86	3	3	waits: dies, comes back and dies again	marvel_snap: Wolverine + Firehair	
 G17	Counts deaths	death_count	Grows with what happened this game	count_payoff	1.12	3.34	4	2.85	type: changes your units' stats	runeterra: The Undying + Xolaani the Bloodweaver	
 G17	Counts deaths	death_count	Stats equal to a count	variable_stats	1.47	2.34	3	3	type: changes your units' stats	marvel_snap: Knull + Gilgamesh	
 G17	Counts deaths	death_count	Sacrifice my own units	sacrifice	23.57	3.29	6	3	type: makes your units die	marvel_snap: Kid Omega + Archangel Horseman of Death	
 G17	Counts deaths	death_count	Hits my own side too	friendly_fire	13.74	1.95	6	3	type: makes your units die	marvel_snap: Killmonger + Archangel Horseman of Death	
+G17	Counts deaths	death_count	Back to hand when it dies or leaves play	return_on_leave	0.85	6.23	2	2.59	type: dies, comes back and dies again	marvel_snap: Sabretooth + Archangel Horseman of Death	
 G17	Counts deaths	death_count	Destroys itself / temporary unit	self_destruct	8.88	1.85	6	3	type: dies by its own effect	marvel_snap: Ice Cube + Archangel Horseman of Death	
 G17	Counts deaths	death_count	Bring back dead units (revive)	revive	3.02	4.3	3	3	waits: brings it back: its summon effect goes off	runeterra: Eternal Dancers + Radiant Guardian	
 G17	Grows with what happened this game	count_payoff	Stats equal to a count	variable_stats	1.56	2.25	6	3	type: changes your units' stats	marvel_snap: Hydra Stomper + Gilgamesh	
 G17	Grows with what happened this game	count_payoff	Sacrifice my own units	sacrifice	3.02	1.47	7	3	type: makes your units die	runeterra: Mark of the Isles + Xolaani the Bloodweaver	
 G17	Grows with what happened this game	count_payoff	Hits my own side too	friendly_fire	2.31	1.03	7	3	type: makes your units die	runeterra: Wise Fry + Xolaani the Bloodweaver	
+G17	Grows with what happened this game	count_payoff	Back to hand when it dies or leaves play	return_on_leave	3.72	2.43	3	3	cheaper: targets your cards	runeterra: Sacred Shears + Arbiter of the Peak	
 G17	Grows with what happened this game	count_payoff	Bring back dead units (revive)	revive	3.55	1.48	5	3	levels: puts your units into play (levels it up)	runeterra: Anivia (level 2) + Nidalee	
 G17	Stats equal to a count	variable_stats	Sacrifice my own units	sacrifice	1.65	1.73	5	3	type: makes your units die	runeterra: Mark of the Isles + Xolaani the Bloodweaver	
 G17	Stats equal to a count	variable_stats	Hits my own side too	friendly_fire	1.42	1.2	6	3	type: makes your units die	runeterra: Wise Fry + Xolaani the Bloodweaver	
+G17	Stats equal to a count	variable_stats	Back to hand when it dies or leaves play	return_on_leave	0.73	2.39	2	2.4	type: returns units to hand	runeterra: Yuumi (level 2) + Legion General	
 G17	Stats equal to a count	variable_stats	Bring back dead units (revive)	revive	3.26	1.79	4	3	waits: brings it back: its summon effect goes off	runeterra: Eternal Dancers + Legion General	
+G17	Sacrifice my own units	sacrifice	Back to hand when it dies or leaves play	return_on_leave	7.61	2.91	3	3	waits: makes cards leave play	runeterra: Encroaching Shadows + Rainbowfish (created)	
 G17	Sacrifice my own units	sacrifice	Destroys itself / temporary unit	self_destruct	2.45	1.8	6	3	type: makes your units die: {B} brings them back	runeterra: The Iron Conquest + Undying Revenge	
 G17	Sacrifice my own units	sacrifice	Bring back dead units (revive)	revive	16.13	3.06	6	3	type: makes your units die: {B} brings them back	runeterra: The Iron Conquest + Undying Revenge	
+G17	Hits my own side too	friendly_fire	Back to hand when it dies or leaves play	return_on_leave	1.09	1.7	5	3	waits: kills it for its death effect	duelyst: Blistering Skorn + Snow Chaser	
 G17	Hits my own side too	friendly_fire	Bring back dead units (revive)	revive	10.21	1.35	6	3	type: makes your units die: {B} brings them back	gwent: Scorch + Dimun Warship	
+G17	Back to hand when it dies or leaves play	return_on_leave	Destroys itself / temporary unit	self_destruct	2.18	0.63	2	3	waits: makes cards leave play	runeterra: Encroaching Mist + Rainbowfish (created)	
+G17	Back to hand when it dies or leaves play	return_on_leave	Bring back dead units (revive)	revive	0.41	2.29	3	2.53	type: dies, comes back and dies again: {B} brings them back	duelyst: Snow Chaser + Keeper of the Vale	
+G17	Back to hand when it dies or leaves play	return_on_leave	Mill the opponent's deck	mill			1	1.95	waits: makes cards leave play	runeterra: Maokai (level 2) + Rainbowfish (created)	
 G17	Destroys itself / temporary unit	self_destruct	Bring back dead units (revive)	revive	4.92	2.26	5	3	type: dies by its own effect: {B} brings them back	duelyst: Wind Dervish + Corpse Combustion	
 G17	Bring back dead units (revive)	revive	Mill the opponent's deck	mill			2	2.28	waits: puts your units into play	duelyst: Erratic Raptyr + Mnemovore	
 G18	Cards cost less	cost_reduction	Make a unit stronger (buff)	buff	0.31	1.53	4	2.9	cheaper: makes units get Support	runeterra: The Undying + Arbiter of the Peak	

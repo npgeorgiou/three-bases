@@ -239,8 +239,9 @@ json.dump({'nodes': nodes, 'plain': {k: plain.get(k, k) for k in nodes}, 'unit':
                       'mix': {gr['key']: round(float(mix[n, gr['j']]), 3) for gr in groups if mix[n, gr['j']] >= 0.05},
                       'counts': {nodes[t]: int(v) for t, v in enumerate(d['counts']) if v},
                       'z': {nodes[t]: round(float(v), 2) for t, v in enumerate(d['z']) if v > STRONG}} for n, d in enumerate(decks)],
-           'factions': [{'game': g, 'faction': fa, 'fit': {gr['key']: round(gr['fratio'][(g, fa)], 2) for gr in groups}}
-                        for g, fa in facs]},
+           'factions': [{'game': g, 'faction': fa, 'fit': {gr['key']: round(gr['fratio'][(g, fa)], 2) for gr in groups},
+                         'counts': {nodes[t]: int(v) for t, v in enumerate(fcount[(g, fa)]) if v}} for g, fa in facs],
+           'game_counts': {g: {nodes[t]: int(v) for t, v in enumerate(game_tot[g]) if v} for g in game_tot}},
           open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.json'), 'w', encoding='utf-8'))
 print(len(decks), 'decks;', K, 'groups;', sum(gr['one_game'] for gr in groups), 'one game;', len(nofit), 'with no faction;',
       len(lonely), 'factions with no group;', len(left), 'concepts in no group; unknown deck names', sum(missing.values()))

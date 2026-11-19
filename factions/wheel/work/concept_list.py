@@ -29,7 +29,7 @@ class Library:
         os.chdir(cwd)
         rows = concept_rows()
         self.listed = [r['concept'] for r in rows if int(r['card_count']) >= 5]
-        keys = [(k, 0, '', k, cons, '') for k, _, cons, *_ in mechanics_wheel.concepts(con)]
+        keys = mechanics_wheel.concepts(con)
         pairs = concept_tags.link_pairs()
         self.games = {}
         for g in games:

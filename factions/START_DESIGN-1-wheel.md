@@ -132,9 +132,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       is at least twice its game's average (Claude's). The groups no faction fits, the factions that fit no group and
       the concepts in no group are listed.
    `work/make_faction.py "<concept>" ["<concept>"]` makes a faction from one or
-   two concepts out of the 25 groups (its header says how). The page `factions/wheel-groups.html` is made
-   in its own chat: concept nodes placed by how often decks use them together, coloured by group; selecting a faction
-   or a deck lights its concepts; building or changing a group by selecting nodes shows which decks and factions fit it.
+   two concepts out of the 25 groups (its header says how).
 4. **The links between concepts** (`mechanics_wheel.py links --concepts` -> `wheel/concept_links.tsv`). For every two
    concepts of `work/concepts.tsv` (usable, helpers and out): `cards` = how much more often than chance their cards are
    linked, counted only through what of each card made the link; `decks` = how much more often real decks heavy in one
@@ -151,10 +149,15 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    chance real cards link them), `games`, `level`, the top link text and one real card pair. An edge is marked weak when
    more than half of its card links are about hitting the player (no player health here), or when only real decks join
    it (no card pair) (the half is Claude's). Bricks are nodes with no edges. Two engine parts whose concepts real cards never link are shown to Kaptain with the numbers. On the page
-   every usable concept sits at a fixed place, laid out once from all real links between concepts (concepts real cards
-   often link sit close); Kaptain ticks one or more archetypes to light their concepts and edges, and between ticked
-   archetypes the page draws every real link from a concept of one to a concept of another (any part), to see whether
-   archetypes fit together in one faction.
+   every concept of step 3 sits at a fixed place, laid out once from the 25 groups of real decks: two concepts sit close
+   when the same groups' decks lean on them more than all decks do (t-SNE, seeded; Claude's). Kaptain ticks one or more
+   archetypes to light their concepts and edges; between ticked archetypes the page draws every real link from a concept
+   of one to a concept of another (any part), to see whether archetypes fit together in one faction. Two ticked
+   archetypes are also shown as one faction the way step 6 makes it: its score (6.1), its rank among all pairs, its
+   concepts and its synergies with their real card pairs. Building an archetype: Kaptain clicks concepts; the page shows
+   how many real decks lean on at least half of them (the half is Claude's) and in how many games, what else those
+   decks lean on, which real factions fit it (step 3's rule: its cards hold the concepts at least twice as much as its
+   game's cards) and which agreed archetypes are closest.
 6. **The 20 factions** (by script, from the archetype map and `wheel/concept_links.tsv`; `work/factions.py` ->
    `work/factions.tsv`, and `work/concept_list.py` -> `work/lists/<letter>.tsv`). Every tie in this step is broken by
    the archetype or concept key in alphabetical order, so every run gives the same result. In this order:

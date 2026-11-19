@@ -17,6 +17,7 @@ table{border-collapse:collapse;width:100%;font-size:12px;margin-top:4px}
 td,th{border-bottom:1px solid #eee;padding:3px 4px;text-align:left;vertical-align:top}
 th{background:#f3f2ee}
 .note{color:#666;font-size:11px}
+#build.on{background:#7b3fa0;color:#fff}
 svg text{font-size:10px;pointer-events:none;fill:#9a9a9a}
 svg text.on{fill:#222;font-size:11px;font-weight:600}
 circle{cursor:pointer}
@@ -24,11 +25,11 @@ circle{cursor:pointer}
 <svg id="map"></svg>
 <div id="side">
 <h1>The wheel: archetype map</h1>
-<p class="help">Every dot is one of the 117 concepts. Its place is fixed, made once from all real links between cards:
-concepts that real cards often link sit close together. Tick archetypes to light their concepts and lines. Scroll on the
-map to zoom, drag to move, click a dot to see its lines.</p>
+<p class="help">Every dot is one of the concepts of step 3. Its place is fixed, made once from the real decks: concepts
+that the same decks lean on sit close together (Claude's way of measuring it). Tick archetypes to light their concepts and
+lines; tick two to see them as one faction. Scroll on the map to zoom, drag to move, click a dot to see its lines.</p>
 <div id="picks"></div>
-<button id="none">Untick all</button>
+<button id="none">Untick all</button> <button id="build">Build an archetype: off</button> <button id="clear">Clear the built one</button>
 <div id="info"></div>
 </div>
 <script>
@@ -38,8 +39,18 @@ const NS='http://www.w3.org/2000/svg',svg=document.getElementById('map'),info=do
 const nm=c=>D.names[c]||c,short=c=>nm(c).replace(/ \(.*\)$/,'');
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const COL=['#1f6f8b','#d1495b','#2a9d8f','#8e44ad','#e09f3e','#3d5a80','#6a994e','#c05299'];
-const keys=Object.keys(D.archetypes),picked=[];let focus=null;
+const keys=Object.keys(D.archetypes),picked=[];let focus=null,build=false;const chosen=new Set();
 const linkOf={};for(const l of D.links)linkOf[[l.a,l.b].sort().join('|')]=l;
+const strong=l=>!!l&&((+l.cards||0)>=1.2||((+l.rare||0)>=3&&(+l.level||0)>=1));
+const conc=k=>[...new Set(D.archetypes[k].parts.flatMap(p=>p.concepts))];
+function together(a,b){const A=conc(a),B=conc(b),all=new Set([...A,...B]),pairs=new Set();
+  for(const x of A)for(const y of B)if(x!==y&&strong(linkOf[[x,y].sort().join('|')]))pairs.add([x,y].sort().join('|'));
+  return {score:pairs.size/all.size,all:[...all],n:pairs.size}}
+const ALLPAIRS=[];for(let i=0;i<keys.length;i++)for(let j=i+1;j<keys.length;j++)ALLPAIRS.push(together(keys[i],keys[j]).score);
+ALLPAIRS.sort((x,y)=>y-x);
+document.getElementById('build').onclick=()=>{build=!build;const b=document.getElementById('build');b.classList.toggle('on',build);
+  b.textContent='Build an archetype: '+(build?'on (click dots)':'off');draw()};
+document.getElementById('clear').onclick=()=>{chosen.clear();draw()};
 document.getElementById('picks').innerHTML=keys.map(k=>`<label><input type="checkbox" value="${k}"> <span class="sw"></span>${esc(D.archetypes[k].name)}</label>`).join('');
 document.querySelectorAll('#picks input').forEach(i=>i.onchange=()=>{const k=i.value;
   if(i.checked)picked.push(k);else picked.splice(picked.indexOf(k),1);focus=null;draw()});
@@ -77,10 +88,12 @@ function draw(){
   for(const c of Object.keys(P)){const on=!!uses[c],n=on?uses[c].size:0,[x,y]=P[c];
     const ci=el('circle',{cx:x,cy:y,r:on?(n>1?8:6):3.5,fill:on?(kind[c]==='engine'?'#1f6f8b':'#8b5a1f'):'#cfcfcf',stroke:n>1?'#e07a1f':'none','stroke-width':3});
     const t=el('title',{});t.textContent=nm(c);ci.append(t);
-    ci.onclick=e=>{e.stopPropagation();focus=focus===c?null:c;draw()};svg.append(ci);
+    if(chosen.has(c))svg.append(el('circle',{cx:x,cy:y,r:12,fill:'none',stroke:'#7b3fa0','stroke-width':3}));
+    ci.onclick=e=>{e.stopPropagation();if(build){chosen.has(c)?chosen.delete(c):chosen.add(c)}else focus=focus===c?null:c;draw()};svg.append(ci);
     const tx=el('text',{x:x+8,y:y+3.5,class:on?'on':''});tx.textContent=short(c);svg.append(tx)}
-  let h='';
-  if(!picked.length)h='<p class="help">Nothing ticked: all concepts are grey and unlinked.</p>';
+  let h=built();
+  if(picked.length===2)h+=asFaction(picked[0],picked[1]);
+  if(!picked.length&&!chosen.size)h+='<p class="help">Nothing ticked: all concepts are grey and unlinked.</p>';
   if(focus)h+=`<h2>${esc(nm(focus))}</h2><p class="help">Only the lines of this concept are drawn. Click it again to see all.</p>`;
   for(const k of picked){const a=D.archetypes[k];h+=`<h2>${esc(a.name)}</h2><p>${esc(a.what)}.</p>`;
     for(const p of a.parts)h+=`<div class="part"><b class="${p.kind}">${esc(p.part)} (${p.kind})</b>${p.concepts.map(c=>esc(short(c))).join('; ')}</div>`}
@@ -98,6 +111,32 @@ function draw(){
     real cards link, any part, bricks too. Many strong orange lines: the archetypes fit together in one faction; few: they stay apart.</p>
     <table>${TH}${C.map(l=>row(l,esc(l.tag))).join('')||'<tr><td colspan="4">none</td></tr>'}</table>`}
   info.innerHTML=h}
+function asFaction(a,b){const t=together(a,b),rank=ALLPAIRS.findIndex(s=>s<=t.score)+1;
+  const syn=[];for(let i=0;i<t.all.length;i++)for(let j=i+1;j<t.all.length;j++){const l=linkOf[[t.all[i],t.all[j]].sort().join('|')];if(strong(l))syn.push(l)}
+  syn.sort((x,y)=>(+y.cards||0)-(+x.cards||0));
+  return `<h2>The two as one faction (step 6)</h2><p class="help">Score ${t.score.toFixed(3)}: ${t.n} strong links between a concept of one and a
+  concept of the other, divided by the ${t.all.length} different concepts; number ${rank} of the ${ALLPAIRS.length} pairs of archetypes.
+  Each part of an archetype is one concept, so the faction plays all ${t.all.length}. Its synergies: every strong link between two of them
+  (real cards link them 1.2+ times more often than chance, or a rare pairing of 3+ times with real card pairs).</p>
+  <p>${t.all.map(c=>esc(short(c))).join('; ')}</p><table>${TH}${syn.map(l=>row(l,'')).join('')||'<tr><td colspan="4">none</td></tr>'}</table>`}
+function built(){if(!chosen.size)return build?'<h2>Build an archetype</h2><p class="help">Click dots to pick concepts.</p>':'';
+  const S=[...chosen],idx=S.map(c=>D.nodes.indexOf(c)),need=Math.ceil(S.length/2);
+  const fit=D.decks.filter(d=>idx.filter(i=>d[2].includes(i)).length>=need),games={};
+  fit.forEach(d=>games[d[0]]=(games[d[0]]||0)+1);
+  const share=(ds,i)=>ds.length?ds.filter(d=>d[2].includes(i)).length/ds.length:0;
+  const more=D.nodes.map((c,i)=>[c,share(fit,i),share(D.decks,i)]).filter(x=>!chosen.has(x[0])&&x[1]>x[2]).sort((x,y)=>y[1]-x[1]).slice(0,10);
+  const sum=(o,cs)=>cs.reduce((t,c)=>t+(o[c]||0),0),tot=o=>Object.values(o).reduce((t,v)=>t+v,0);
+  const facs=D.factions.map(([g,f,cn])=>{const gc=D.gameCounts[g],gs=sum(gc,S)/tot(gc);return [g,f,gs?(sum(cn,S)/tot(cn))/gs:0]}).sort((x,y)=>y[2]-x[2]);
+  const fits=facs.filter(x=>x[2]>=2),like=keys.map(k=>[k,conc(k).filter(c=>chosen.has(c)).length]).filter(x=>x[1]).sort((x,y)=>y[1]-x[1]).slice(0,3);
+  return `<h2>The archetype you built (${S.length} concepts)</h2><p>${S.map(c=>esc(short(c))).join('; ')}</p>
+  <p class="help">A deck leans on a concept when it holds it far more than its game's decks do (step 3's score above ${'1.96'}). It counts here
+  when it leans on at least half of these concepts (${need} of ${S.length}; the half is Claude's). An archetype needs decks of 2+ games.</p>
+  <p><b>${fit.length} of ${D.decks.length} real decks</b> in ${Object.keys(games).length} game${Object.keys(games).length===1?'':'s'}: ${Object.entries(games).sort((x,y)=>y[1]-x[1]).map(([g,n])=>esc(g)+' '+n).join(', ')||'none'}.</p>
+  <h3>What those decks lean on as well</h3><p class="help">Share of these decks that lean on it, and of all decks.</p>
+  <table>${more.map(([c,a,b])=>`<tr><td>${esc(nm(c))}</td><td>${Math.round(a*100)}%</td><td>${Math.round(b*100)}%</td></tr>`).join('')||'<tr><td>none</td></tr>'}</table>
+  <h3>Real factions that fit it</h3><p class="help">A faction fits when its cards hold these concepts at least twice as much as its game's
+  cards do (step 3's rule).</p><p>${(fits.length?fits:facs.slice(0,3)).map(([g,f,r])=>esc(f)+' ('+esc(g)+', x'+r.toFixed(1)+')').join('; ')}${fits.length?'':' (the nearest; none fits)'}</p>
+  <h3>The agreed archetypes closest to it</h3><p>${like.map(([k,n])=>esc(D.archetypes[k].name)+': '+n+' of its concepts').join('; ')||'none'}</p>`}
 svg.onclick=()=>{if(focus){focus=null;draw()}};
 draw();
 </script></body></html>

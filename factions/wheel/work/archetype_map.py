@@ -5,8 +5,9 @@ the concepts of two engine parts of one archetype, an edge with the step 4 numbe
 link text, the real card pair of its strongest link (none when only real decks join them) and a note when the edge is
 weak (about the player, or decks only). Bricks are nodes with no edges.
 Writes work/archetype_parts.tsv, work/archetype_map.tsv, work/archetype_gaps.tsv (engine parts whose concepts have no joined edge) and
-factions/wheel-archetypes.html (every usable concept at a fixed place, every joined pair between them for the links
-between ticked archetypes). Run from library/cards_db: python3 ../../factions/wheel/work/archetype_map.py"""
+factions/wheel-archetypes.html (every concept of step 3 at a fixed place, laid out from the real decks that lean on
+it; every joined pair between them for the links between ticked archetypes; two ticked archetypes as one faction, as
+step 6 makes it; concepts picked by hand checked against the real decks and factions, as step 3 does). Run from library/cards_db: python3 ../../factions/wheel/work/archetype_map.py"""
 import collections, csv, itertools, json, math, os, sqlite3, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -88,7 +89,7 @@ def card_pairs(wanted):
     """per concept pair and link text (and per pair alone, text ''): the real card pair of its strongest link, 'game: A + B';
     per concept pair, the share of its card links whose text is about hitting the player"""
     c, games, x, con, pools, stats = mechanics_wheel.setup()
-    keys = [(k, 0, '', k, cons, '') for k, _, cons, *_ in mechanics_wheel.concepts(con)]
+    keys = mechanics_wheel.concepts(con)
     name = dict(((i), (g, n)) for i, g, n in c.execute('select id, game, name from card'))
     best, total, onplayer = {}, collections.Counter(), collections.Counter()
     L = sqlite3.connect(os.path.join(DB, 'links.sqlite'))
@@ -105,26 +106,52 @@ def card_pairs(wanted):
     return {t: v[1] for t, v in best.items()}, {p: onplayer[p] / total[p] for p in total}
 
 
-def layout(nodes, every):
-    """fixed places for all usable concepts, pulled together by the real links between them (spring layout, seeded);
-    a concept with no link sits on a ring around the rest"""
-    import networkx as nx
-    G = nx.Graph()
-    G.add_nodes_from(nodes)
-    for p, r in every:
-        a, b = sorted(p)
-        G.add_edge(a, b, weight=math.log2(1 + max(float(r['cards'] or 0), float(r['decks'] or 0))))
-    linked = [c for c in nodes if G.degree(c)]
-    pos = nx.spring_layout(G.subgraph(linked), k=2.2 / math.sqrt(len(linked)), iterations=400, weight='weight', seed=7)
-    xs = sorted(v[0] for v in pos.values()); ys = sorted(v[1] for v in pos.values())
-    lo = lambda v: v[len(v) // 50]; hi = lambda v: v[-1 - len(v) // 50]
-    fit = lambda v, a, b, w: 60 + w * min(1, max(0, (v - a) / (b - a)))  # room on the right for the labels
-    out = {c: [round(fit(v[0], lo(xs), hi(xs), 760), 1), round(fit(v[1], lo(ys), hi(ys), 860), 1)] for c, v in pos.items()}
+def layout(D):
+    """fixed places for the concepts of step 3, by the 25 groups of real decks (Claude's): each concept is the list, per
+    group, of how much more often the group's decks lean on it than all decks do; two concepts are as close as those
+    lists are alike (cosine), so the concepts of one group sit together; t-SNE (seeded) lays them out. A concept no
+    deck leans on sits on a ring around the rest"""
+    import numpy as np
+    from sklearn.manifold import TSNE
+    nodes, decks, groups = D['nodes'], D['decks'], D['groups']
+    lean = np.array([[c in d['z'] for c in nodes] for d in decks], dtype=float)
+    every = lean.mean(0)
+    M = np.array([lean[g['decks']].mean(0) for g in groups]).T  # concept x group: share of the group's decks leaning on it
+    with np.errstate(divide='ignore', invalid='ignore'):
+        M = np.where(every[:, None] > 0, M / every[:, None], 0)
+    M = np.maximum(M - 1, 0)  # only what a group leans on more than all decks do
+    used = [i for i in range(len(nodes)) if M[i].any()]
+    U = M[used] / np.linalg.norm(M[used], axis=1, keepdims=True)
+    dist = np.clip(1 - U @ U.T, 0, None)
+    np.fill_diagonal(dist, 0)
+    xy = TSNE(n_components=2, metric='precomputed', init='random', perplexity=8, random_state=7).fit_transform(dist).astype(float)
+    lo, hi = np.percentile(xy, 2, axis=0), np.percentile(xy, 98, axis=0)  # a few far concepts are pulled to the edge
+    fit = lambda v, a, b, w: round(float(60 + w * min(1, max(0, (v - a) / (b - a)))), 1)
+    out = {nodes[i]: [fit(xy[n, 0], lo[0], hi[0], 760), fit(xy[n, 1], lo[1], hi[1], 860)] for n, i in enumerate(used)}
+    spread(out)
     alone = [c for c in nodes if c not in out]
     for i, c in enumerate(alone):
         t = 2 * math.pi * i / max(1, len(alone))
         out[c] = [round(440 + 420 * math.cos(t), 1), round(490 + 460 * math.sin(t), 1)]
     return out
+
+
+def spread(pos, gap=34, rounds=400):
+    """push dots that sit closer than gap apart, a little at a time, so every name can be read (Claude's)"""
+    ks = sorted(pos)
+    for _ in range(rounds):
+        moved = False
+        for i, a in enumerate(ks):
+            for b in ks[i + 1:]:
+                dx, dy = pos[b][0] - pos[a][0], pos[b][1] - pos[a][1]
+                d = math.hypot(dx, dy)
+                if d >= gap: continue
+                if d == 0: dx, dy, d = 1.0, 0.0, 1.0
+                push = (gap - d) / 2 / d
+                pos[a] = [pos[a][0] - dx * push, pos[a][1] - dy * push]; pos[b] = [pos[b][0] + dx * push, pos[b][1] + dy * push]
+                moved = True
+        if not moved: break
+    for k in ks: pos[k] = [round(min(940, max(40, pos[k][0])), 1), round(min(960, max(40, pos[k][1])), 1)]
 
 
 def page(arch, edges, examples, player, usable, every):
@@ -143,14 +170,22 @@ def page(arch, edges, examples, player, usable, every):
         data['edges'].append({'arch': key, 'a': a, 'b': b, 'cards': r['cards'], 'decks': r['decks'], 'games': r['games'], 'level': r['level'],
                               'text': text, 'pair': examples.get((frozenset((a, b)), text)) or examples.get((frozenset((a, b)), ''), ''),
                               'note': note(frozenset((a, b)), examples.get((frozenset((a, b)), text)) or examples.get((frozenset((a, b)), ''), ''), player)})
+    D = json.load(open(os.path.join(HERE, 'deck_groups_nmf_25.json'), encoding='utf-8'))
+    names.update({c: D['plain'][c] for c in D['nodes'] if c not in names})
     data['names'] = names
-    data['pos'] = layout(usable, every)
+    data['pos'] = layout(D)
+    col = {c: i for i, c in enumerate(D['nodes'])}
+    data['nodes'] = D['nodes']
+    data['decks'] = [[d['game'], d['name'], sorted(col[c] for c in d['z'])] for d in D['decks']]
+    data['factions'] = [[f['game'], f['faction'], f['counts']] for f in D['factions']]
+    data['gameCounts'] = D['game_counts']
     data['links'] = []
     for p, r in every:
         a, b = sorted(p)
         text = r['texts'].split(' | ')[0] if r['texts'] else ''
         pair = examples.get((p, text)) or examples.get((p, ''), '')
-        data['links'].append({'a': a, 'b': b, 'cards': r['cards'], 'decks': r['decks'], 'games': r['games'], 'text': text,
+        data['links'].append({'a': a, 'b': b, 'cards': r['cards'], 'decks': r['decks'], 'games': r['games'], 'rare': r['rare'],
+                              'level': r['level'], 'text': text,
                               'pair': pair, 'note': note(p, pair, player)})
     tpl = open(os.path.join(HERE, 'archetype_map_template.html'), encoding='utf-8').read()
     out = os.path.join(HERE, '..', '..', 'wheel-archetypes.html')
