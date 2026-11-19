@@ -126,14 +126,13 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    3. Groups: NMF on the deck rows only, with the positive scores; each game weighs the square root of its deck count. The first guess comes from the data (NNDSVD), so one run gives the
       result. The number of groups, from 14 (20 factions of 2 archetypes, each in at most 3 factions) to 30 (Claude's),
       is the one whose groups stay most alike when the run is repeated on 90% of the decks, 10 times (Claude's). A deck
-      fits a group that is at least 30% of its mix (Claude's). The wheel's archetypes are the version with 25 groups
-      (`--groups 25`; Kaptain agreed them, 19 Nov 2026). On the 3027 decks the most stable number is 17 (0.96; 25 has
-      0.87, and above 20 none passes 0.89): Kaptain keeps 25 (19 Nov 2026).
+      fits a group that is at least 30% of its mix (Claude's). The wheel's archetypes are the version with 17 groups
+      (`--groups 17`, the most stable number on the 3027 decks, 0.96; Kaptain agreed them, 19 Nov 2026).
    4. Per group: its 10 heaviest concepts, each with the share of its decks that lean on it; its base concepts (more
       than half of its decks have them, more often than their game's decks, Claude's), like "Deal damage"; its unit
       numbers against their games; a group whose decks are 80% or more from one game is marked (Claude's).
       Its archetype's concepts (`work/step3_groups.py`): its 10 heaviest and its base concepts, without the five unit
-      measures and without the concepts more than half of the 25 archetypes hold ("Attack gain": every faction has it
+      measures and without the concepts more than half of the archetypes hold ("Attack gain": every faction has it
       anyway; Claude's). Two archetypes then share concepts, which shows what joins them.
    5. Per group, its design markers. Each is one number per deck against its game's decks: a deck has the marker when
       its number is in the top quarter of its game's decks, its mirror when in the bottom quarter; a group carries a
@@ -150,7 +149,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       is at least twice its game's average (Claude's). The groups no faction fits, the factions that fit no group and
       the concepts in no group are listed.
    `work/make_faction.py "<concept>" ["<concept>"]` makes a faction from one or
-   two concepts out of the 25 groups (its header says how).
+   two concepts out of the 17 groups (its header says how).
 4. **The links between concepts** (`mechanics_wheel.py links --concepts` -> `wheel/concept_links.tsv`). For every two
    concepts of `work/concepts.tsv` (usable, helpers and out): `cards` = how much more often than chance their cards are
    linked, counted only through what of each card made the link; `decks` = how much more often real decks heavy in one
@@ -159,7 +158,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    texts. Joined: `cards` 1.2+, or `decks` 1.5+, or `rare` 3+ with a `level` of 1+. `apart.py` lists the concept pairs
    real factions keep apart.
 5. **The archetype map** (`work/archetype_map.py` -> `work/archetype_parts.tsv`, `work/archetype_map.tsv` and
-   `factions/wheel-archetypes.html`), from the 25 groups of step 3 (`work/step3_groups.py`); each concept of a group is a
+   `factions/wheel-archetypes.html`), from the 17 groups of step 3 (`work/step3_groups.py`); each concept of a group is a
    part of its own (Claude's), and the parts with their kind go to `work/archetype_parts.tsv` for step 6.
    Each concept of an archetype's parts is a node; a concept used by several archetypes is one node. A part whose
    concepts have strong links with another part of the same archetype is an engine; any other part is a brick. Between the
@@ -167,7 +166,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    chance real cards link them), `games`, `level`, the top link text and one real card pair. An edge is marked weak when
    more than half of its card links are about hitting the player (no player health here), or when only real decks join
    it (no card pair) (the half is Claude's). Bricks are nodes with no edges; an archetype's design markers are shown beside it, brown, and are no nodes. Two engine parts whose concepts real cards never link are shown to Kaptain with the numbers. On the page
-   every concept of step 3 sits at a fixed place, laid out once from the 25 groups of real decks: two concepts sit close
+   every concept of step 3 sits at a fixed place, laid out once from the 17 groups of real decks: two concepts sit close
    when the same groups' decks lean on them more than all decks do (t-SNE, seeded; Claude's). Kaptain ticks one or more
    archetypes to light their concepts and edges; between ticked archetypes the page draws every real link from a concept
    of one to a concept of another (any part), to see whether archetypes fit together in one faction. Two ticked

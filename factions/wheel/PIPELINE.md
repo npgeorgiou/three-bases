@@ -46,12 +46,12 @@ is written in that step's chat, from the rules of the step, and its line here is
   `factions/wheel/work/deck_groups_nmf.tsv` (per group: decks, games, concepts with the share of decks leaning on each,
   base concepts, unit numbers, design markers with how many times as often its decks have each, factions that fit), `.md` (the same in plain words, with the stability per number of
   groups, unknown deck cards, concepts in no group, groups no faction fits and factions that fit no group) and `.json`.
-- `python3 ../../factions/wheel/work/deck_groups_nmf.py --groups 25` (about 30 seconds) -> `deck_groups_nmf_25.tsv`, `.md`,
-  `.json`: the 25 groups Kaptain agreed, the wheel's archetypes (on 3027 decks 17 is the most stable, 0.96 against 25's 0.87;
-  Kaptain keeps 25).
+- `python3 ../../factions/wheel/work/deck_groups_nmf.py --groups 17` (about 40 seconds) -> `deck_groups_nmf_17.tsv`, `.md`,
+  `.json`: the 17 groups Kaptain agreed, the wheel's archetypes (17: the most stable number on the 3027 decks). The number
+  is set once, in `work/step3_groups.py` (`GROUPS`); steps 5 and 6 and `make_faction.py` read it from there.
   `work/step3_groups.py` turns them into the archetypes' concepts and design markers for steps 5 and 6.
 - `python3 factions/wheel/work/make_faction.py "attach" ["discard"]` (from the repo, a second) -> a faction from one or
-  two concepts out of the 25 groups, printed and written to `factions/wheel/work/made/<concepts>_25.md`.
+  two concepts out of the 17 groups, printed and written to `factions/wheel/work/made/<concepts>_17.md`.
 
 ## Step 4. The links between concepts
 - `python3 mechanics_wheel.py links --concepts` (about a minute; every game, those with no factions too) ->
@@ -64,14 +64,14 @@ is written in that step's chat, from the rules of the step, and its line here is
   the pairs real factions keep apart.
 
 ## Step 5. The archetype map
-- `python3 ../../factions/wheel/work/archetype_map.py` (about 15 seconds; needs links.sqlite; reads the 25 groups of step 3
-  through `work/step3_groups.py`, and their decks and real factions from `work/deck_groups_nmf_25.json`) -> `factions/wheel/work/archetype_parts.tsv` (archetype, name, part, engine or brick,
+- `python3 ../../factions/wheel/work/archetype_map.py` (about 15 seconds; needs links.sqlite; reads the 17 groups of step 3
+  through `work/step3_groups.py`, and their decks and real factions from `work/deck_groups_nmf_17.json`) -> `factions/wheel/work/archetype_parts.tsv` (archetype, name, part, engine or brick,
   concept; read by step 6), `factions/wheel/work/archetype_map.tsv` (archetype, its two engine parts, concept a, concept b, `cards`, `decks`,
   `games`, `level`, top link text, the real card pair of its strongest link, from `wheel/concept_links.tsv`; a pair
   joined only by real decks has no card pair; `note`: "about the player" when more than half of its card links are about
   hitting the player, "decks only" when no card pair; it prints the cards behind the most edges), `work/archetype_gaps.tsv` (two engine parts with no joined edge, shown to
   Kaptain with the numbers) and `factions/wheel-archetypes.html` (page template `work/archetype_map_template.html`; the concepts' places by
-  t-SNE over each concept's lift in the 25 groups' decks, seed 7, then moved apart until no two names overlap;
+  t-SNE over each concept's lift in the 17 groups' decks, seed 7, then moved apart until no two names overlap;
   the page also holds every deck's concepts and every real faction's concept counts, for building an archetype). 
 
 ## Step 6. The 20 factions

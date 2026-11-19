@@ -1,6 +1,6 @@
 """A faction from one or two concepts, out of the NMF groups (deck_groups_nmf.json; run deck_groups_nmf.py first).
 python3 factions/wheel/work/make_faction.py "attach" ["discard"] [--groups N]  -> prints the faction and writes it to
-factions/wheel/work/made/<concepts>_25.md, from the 25 groups Kaptain agreed (deck_groups_nmf_25.json; --groups N: another
+factions/wheel/work/made/<concepts>_17.md, from the 17 groups Kaptain agreed (deck_groups_nmf_17.json; --groups N: another
 version, deck_groups_nmf_N.json). A concept is named by its key or by words of its plain name.
 1. Each named concept: the decks that lean on it (score above the strong mark); its group is the one those decks mix in
    most. With one concept, the second group is the one those decks mix in most after it, lowered by the share of
@@ -11,8 +11,10 @@ version, deck_groups_nmf_N.json). A concept is named by its key or by words of i
 4. The real decks with the most of both groups, and the real factions that fit them best."""
 import json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+import step3_groups
 ARGS = [a for a in sys.argv[1:] if not a.startswith('--')]
-FORCED = sys.argv[sys.argv.index('--groups') + 1] if '--groups' in sys.argv else '25'
+FORCED = sys.argv[sys.argv.index('--groups') + 1] if '--groups' in sys.argv else str(step3_groups.GROUPS)
 if FORCED in ARGS: ARGS.remove(FORCED)
 SUFFIX = f'_{FORCED}'
 D = json.load(open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.json'), encoding='utf-8'))

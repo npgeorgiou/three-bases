@@ -107,7 +107,7 @@ def card_pairs(wanted):
 
 
 def layout(D):
-    """fixed places for the concepts of step 3, by the 25 groups of real decks (Claude's): each concept is the list, per
+    """fixed places for the concepts of step 3, by the groups of step 3 (Claude's): each concept is the list, per
     group, of how much more often the group's decks lean on it than all decks do; two concepts are as close as those
     lists are alike (cosine), so the concepts of one group sit together; t-SNE (seeded) lays them out. A concept no
     deck leans on sits on a ring around the rest"""
@@ -181,7 +181,7 @@ def page(arch, edges, examples, player, usable, every):
         data['edges'].append({'arch': key, 'a': a, 'b': b, 'cards': r['cards'], 'decks': r['decks'], 'games': r['games'], 'level': r['level'],
                               'text': text, 'pair': examples.get((frozenset((a, b)), text)) or examples.get((frozenset((a, b)), ''), ''),
                               'note': note(frozenset((a, b)), examples.get((frozenset((a, b)), text)) or examples.get((frozenset((a, b)), ''), ''), player)})
-    D = json.load(open(os.path.join(HERE, 'deck_groups_nmf_25.json'), encoding='utf-8'))
+    D = json.load(open(step3_groups.FILE, encoding='utf-8'))
     names.update({c: D['plain'][c] for c in D['nodes'] if c not in names})
     data['names'] = names
     data['pos'] = {c: v for c, v in layout(D).items() if c not in D['unit']}  # design markers are no dots
