@@ -44,9 +44,11 @@ is written in that step's chat, from the rules of the step, and its line here is
 
 ## Step 3. The faction archetypes
 - `python3 ../../factions/wheel/work/faction_archetypes.py` (from `library/cards_db`, under a minute) ->
-  `factions/wheel/work/faction_archetypes.tsv` (per group: its concepts, lines, decks that fit, their games, the decks
-  that fit most, the best-fitting factions) and `faction_archetypes.md` (the same in plain words, with unknown deck
-  cards, groups no faction fits and factions that fit no group), for Kaptain's OK.
+  `factions/wheel/work/faction_archetypes.tsv` (per group: concepts, base concepts, decks, games, factions that fit) and
+  `faction_archetypes.md` (the same in plain words, with unknown deck cards, concepts in no group, groups no faction
+  fits and factions that fit no group), for Kaptain's OK.
+- `python3 ../../factions/wheel/work/deck_groups_nmf.py` (about 2.5 minutes, 2 cores) -> `work/deck_groups_nmf.tsv` and
+  `.md`: the second view by NMF.
 
 ## Step 4. The radii and how they work together
 - `work/radii.tsv`: every usable concept, the radius it goes on (key and name), the part of it that counts there, and

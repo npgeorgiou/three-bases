@@ -117,24 +117,28 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    `work/concepts.md` shows the kinds in plain words for Kaptain.
 3. **The faction archetypes** (`work/faction_archetypes.py` -> `work/faction_archetypes.tsv`, `work/faction_archetypes.md`).
    The ways to play that decks put together; they become our factions' archetypes. Real factions are never copied.
-   1. Counts: every deck of `decks.tsv`, all its cards (neutrals and staples too, never split by faction): how many of
-      them have each usable concept (step 2; a card counts once per concept, Claude's). Five unit concepts are added,
-      each against the card's game: unit, cheap unit, expensive unit, strong for its cost, tough for its cost (above the
-      game's straight line of strength or defence by cost, Claude's). Deck cards the library does not know are counted
-      and reported, never guessed. Monster Train and Marvel Snap decks are in (Claude's).
-   2. Lines: for every two concepts, how much more often they are together in the same decks than chance gives within
-      each game, from how common each is in the game's decks and the deck's size; each game weighs the square root of
-      its deck count (Claude's). A line is kept when it is above chance by more than 1.96 (Claude's).
-   3. Groups, built one by one to 8 to 10 concepts (Kaptain): start from the thickest line whose two concepts are
-      not yet together in a group; add the concept with the thickest lines to the group's concepts, while it is
-      together with them in the same decks more often than chance by the same margin as a line, up to 10. A group that
-      stops under 8 is marked. A concept can be in several groups. A new group holding more than half of an existing
-      group's concepts is not made (Claude's). The same table always gives the same groups.
-   4. Decks and the 43 real factions of `axes.tsv` are never used to make the groups. Each is measured against each
-      group: the share of its cards' concepts on the group's concepts, against its game's average share. It fits its
-      best 2 groups when its share there is at least twice the average (Claude's). The groups no faction fits and the
-      factions that fit no group are listed.
-   5. Per group: its concepts, the decks that fit it most, the best-fitting factions.
+   1. Concepts: every deck of `decks.tsv`, all its cards (neutrals and staples too, never split by faction): the deck
+      has a concept when one of its cards has it (step 2). Five unit concepts are added, each against the card's game:
+      unit, cheap unit, expensive unit, strong for its cost, tough for its cost (above the game's straight line of
+      strength or defence by cost, Claude's). Deck cards the library does not know are counted and reported, never
+      guessed. Monster Train and Marvel Snap decks are in (Claude's).
+   2. Groups of 3 to 5 concepts (Kaptain), by association rules with lift (Agrawal et al. 1993): each concept, added in
+      turn, is in the decks that hold the rest of the group more often than chance (how often the game's decks have
+      it), by more than 1.96 (Claude's); the whole group is in 10 decks or more, of 2 or more games (Claude's). Every
+      such group is listed; a group whose one-bigger group is in at least half as many decks is left for that one.
+   3. Choosing: the group in the most decks first, then each next group in the most decks that brings at least 2
+      concepts no chosen group has yet (Claude's). A concept can be in several groups. The same table always gives the
+      same groups. The concepts left in no group are listed.
+   4. Base concepts: the common concepts at least half of a group's decks have, more often than their game's decks
+      (Claude's), with their share; they are what the group's decks are built on, like "Deal damage".
+      A deck fits a group when it has every concept of it. The 43 real factions of `axes.tsv` are never used to make
+      the groups: a faction fits its best 2 groups at twice its game's average share of their concepts or more
+      (Claude's). The groups no faction fits and the factions that fit no group are listed.
+   5. Per group: its concepts, its base concepts, its decks, the factions that fit it.
+   6. A second view, to set beside it (`work/deck_groups_nmf.py`): each deck's score per concept against its game's
+      average (log-odds with a prior, Monroe et al. 2008); NMF splits the decks into groups, where each deck is a mix
+      of groups; the number of groups is the one whose groups come back most alike over 10 runs with different
+      starts; a deck fits a group that is 30% or more of its mix; a faction fits a group by cosine (all Claude's).
    **Kaptain agrees the groups before anything else.** The page `factions/wheel-groups.html` is made in its own chat:
    concept nodes placed by how often decks use them together, coloured by group; selecting a faction or a deck lights
    its concepts; building or changing a group by selecting nodes shows which decks and factions fit it.
