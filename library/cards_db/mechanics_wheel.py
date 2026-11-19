@@ -23,12 +23,13 @@ def setup():
 
 def case_failures(c, con, keys, pairs):
     """cases/wheel.tsv: a linked pair that must (count) or must not (none) count for key a on card from and b on card to
-    ('*': any); only the cases whose keys are in this run"""
+    ('*': any); a case naming no concept of concepts.tsv fails"""
     names = [k[0] for k in keys]
     bad = []
     with open(os.path.join(HERE, 'cases', 'wheel.tsv'), encoding='utf-8') as f:
         for r in csv.DictReader(f, delimiter='\t'):
-            if any(k != '*' and k not in names for k in (r['a'], r['b'])): continue
+            gone = [k for k in (r['a'], r['b']) if k != '*' and k not in names]
+            if gone: bad.append(f"{r['id']}: {', '.join(gone)} is no concept of concepts.tsv"); continue
             ids = lambda n: [i for (i,) in c.execute('select id from card where game=? and name=?', (r['game'], n))]
             got = set()
             for i in ids(r['from']):
