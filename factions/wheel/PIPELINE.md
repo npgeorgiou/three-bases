@@ -69,7 +69,7 @@ is written in that step's chat, from the rules of the step, and its line here is
   joined only by real decks has no card pair; `note`: "about the player" when more than half of its card links are about
   hitting the player, "decks only" when no card pair; it prints the cards behind the most edges), `work/archetype_gaps.tsv` (two engine parts with no joined edge, shown to
   Kaptain with the numbers) and `factions/wheel-archetypes.html` (page template `work/archetype_map_template.html`; the concepts' places by
-  t-SNE over each concept's lift in the 25 groups' decks, seed 7, then pushed apart to 34 units so names can be read;
+  t-SNE over each concept's lift in the 25 groups' decks, seed 7, then moved apart until no two names overlap;
   the page also holds every deck's concepts and every real faction's concept counts, for building an archetype). 
 
 ## Step 6. The 20 factions

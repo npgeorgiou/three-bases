@@ -8,7 +8,7 @@ Writes work/archetype_parts.tsv, work/archetype_map.tsv, work/archetype_gaps.tsv
 factions/wheel-archetypes.html (every concept of step 3 at a fixed place, laid out from the real decks that lean on
 it; every joined pair between them for the links between ticked archetypes; two ticked archetypes as one faction, as
 step 6 makes it; concepts picked by hand checked against the real decks and factions, as step 3 does). Run from library/cards_db: python3 ../../factions/wheel/work/archetype_map.py"""
-import collections, csv, itertools, json, math, os, sqlite3, sys
+import collections, csv, itertools, json, math, os, re, sqlite3, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(HERE, '..', '..', '..', 'library', 'cards_db')
@@ -128,7 +128,6 @@ def layout(D):
     lo, hi = np.percentile(xy, 2, axis=0), np.percentile(xy, 98, axis=0)  # a few far concepts are pulled to the edge
     fit = lambda v, a, b, w: round(float(60 + w * min(1, max(0, (v - a) / (b - a)))), 1)
     out = {nodes[i]: [fit(xy[n, 0], lo[0], hi[0], 760), fit(xy[n, 1], lo[1], hi[1], 860)] for n, i in enumerate(used)}
-    spread(out)
     alone = [c for c in nodes if c not in out]
     for i, c in enumerate(alone):
         t = 2 * math.pi * i / max(1, len(alone))
@@ -136,22 +135,34 @@ def layout(D):
     return out
 
 
-def spread(pos, gap=34, rounds=400):
-    """push dots that sit closer than gap apart, a little at a time, so every name can be read (Claude's)"""
+def unclash(pos, names, rounds=3000):
+    """move dots apart until no two names on the page overlap (each name a box beside its dot, about 6.2 units a
+    letter); a little at a time, along the side where the boxes overlap least (Claude's)"""
+    short = lambda c: re.sub(r' \(.*\)$', '', names.get(c, c))
     ks = sorted(pos)
+    w = {k: 14 + 6.2 * len(short(k)) for k in ks}
+    box = lambda k: (pos[k][0] - 6, pos[k][1] - 9, pos[k][0] + w[k], pos[k][1] + 7)
     for _ in range(rounds):
         moved = False
         for i, a in enumerate(ks):
+            A = box(a)
             for b in ks[i + 1:]:
-                dx, dy = pos[b][0] - pos[a][0], pos[b][1] - pos[a][1]
-                d = math.hypot(dx, dy)
-                if d >= gap: continue
-                if d == 0: dx, dy, d = 1.0, 0.0, 1.0
-                push = (gap - d) / 2 / d
-                pos[a] = [pos[a][0] - dx * push, pos[a][1] - dy * push]; pos[b] = [pos[b][0] + dx * push, pos[b][1] + dy * push]
+                B = box(b)
+                ox, oy = min(A[2], B[2]) - max(A[0], B[0]), min(A[3], B[3]) - max(A[1], B[1])
+                if ox <= 0 or oy <= 0: continue
                 moved = True
+                if oy <= ox:
+                    d = (oy / 2 + 0.5) * (1 if pos[b][1] >= pos[a][1] else -1)
+                    pos[a][1] -= d; pos[b][1] += d
+                else:
+                    d = (ox / 2 + 0.5) * (1 if pos[b][0] >= pos[a][0] else -1)
+                    pos[a][0] -= d; pos[b][0] += d
+                A = box(a)
         if not moved: break
-    for k in ks: pos[k] = [round(min(940, max(40, pos[k][0])), 1), round(min(960, max(40, pos[k][1])), 1)]
+    xs = [v[0] for v in pos.values()]; ys = [v[1] for v in pos.values()]
+    right = max(pos[k][0] + w[k] for k in ks)
+    for k in ks: pos[k] = [round(pos[k][0], 1), round(pos[k][1], 1)]
+    return [round(min(xs) - 20, 1), round(min(ys) - 20, 1), round(right - min(xs) + 40, 1), round(max(ys) - min(ys) + 40, 1)]
 
 
 def page(arch, edges, examples, player, usable, every):
@@ -174,6 +185,7 @@ def page(arch, edges, examples, player, usable, every):
     names.update({c: D['plain'][c] for c in D['nodes'] if c not in names})
     data['names'] = names
     data['pos'] = layout(D)
+    data['view'] = unclash(data['pos'], names)
     col = {c: i for i, c in enumerate(D['nodes'])}
     data['nodes'] = D['nodes']
     data['decks'] = [[d['game'], d['name'], sorted(col[c] for c in d['z'])] for d in D['decks']]

@@ -2,35 +2,42 @@
 <html lang="en"><head><meta charset="utf-8"><title>The wheel: archetype map</title>
 <style>
 html,body{height:100%;margin:0}
-body{font:13px/1.45 system-ui,sans-serif;background:#f6f5f1;color:#222;display:grid;grid-template-columns:1fr 460px;overflow:hidden}
+body{font:13px/1.4 system-ui,sans-serif;background:#f6f5f1;color:#222;display:grid;grid-template-columns:1fr 440px;overflow:hidden}
 #map{width:100%;height:100vh;background:#fff;cursor:grab;display:block}
-#side{height:100vh;overflow:auto;border-left:1px solid #ddd;background:#fff;padding:12px 16px;box-sizing:border-box}
-h1{font-size:16px;margin:0 0 6px}h2{font-size:14px;margin:16px 0 4px}h3{font-size:13px;margin:12px 0 2px}
-.help{color:#555;font-size:12px;margin:4px 0 8px}
-#picks{columns:2;column-gap:12px;margin:6px 0}
-#picks label{display:block;break-inside:avoid;padding:1px 0;cursor:pointer}
-#picks .sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:-1px}
-button{font-size:12px;padding:2px 8px}
-.part{margin:0 0 6px}.part b{display:block}
-.engine{color:#1f6f8b}.brick{color:#8b5a1f}.weak{color:#b23a48}
-table{border-collapse:collapse;width:100%;font-size:12px;margin-top:4px}
+#side{height:100vh;display:flex;flex-direction:column;border-left:1px solid #ddd;background:#fff;box-sizing:border-box}
+#top{padding:10px 14px 6px;border-bottom:1px solid #eee}
+h1{font-size:15px;margin:0 0 2px}h2{font-size:13px;margin:14px 0 4px}h3{font-size:12px;margin:10px 0 2px;color:#555}
+.help{color:#666;font-size:12px;margin:2px 0}
+.bar{display:flex;gap:6px;margin-top:6px}
+button{font-size:12px;padding:2px 8px;cursor:pointer}
+#build.on{background:#7b3fa0;color:#fff;border-color:#7b3fa0}
+#picks{flex:0 0 auto;max-height:36vh;overflow-y:auto;scrollbar-gutter:stable;padding:6px 14px;border-bottom:1px solid #eee;
+  display:grid;grid-template-columns:1fr 1fr;gap:1px 10px}
+#picks label{display:flex;gap:4px;align-items:flex-start;cursor:pointer;font-size:12px;line-height:1.3;padding:2px 0}
+#picks .sw{flex:0 0 10px;height:10px;border-radius:2px;margin-top:3px;border:1px solid #ccc}
+#info{flex:1 1 auto;overflow-y:auto;scrollbar-gutter:stable;padding:4px 14px 20px}
+.chips{display:flex;flex-wrap:wrap;gap:3px}
+.chip{font-size:11px;padding:1px 6px;border-radius:9px;background:#eef4f7;color:#1f6f8b}
+.chip.brick{background:#f6efe6;color:#8b5a1f}
+.big{font-size:13px;margin:2px 0}
+.weak{color:#b23a48}
+details{margin:4px 0}summary{cursor:pointer;color:#555;font-size:12px}
+table{border-collapse:collapse;width:100%;font-size:12px;margin-top:2px}
 td,th{border-bottom:1px solid #eee;padding:3px 4px;text-align:left;vertical-align:top}
-th{background:#f3f2ee}
-.note{color:#666;font-size:11px}
-#build.on{background:#7b3fa0;color:#fff}
+th{background:#f3f2ee;font-weight:600}
+.note{color:#777;font-size:11px}
 svg text{font-size:10px;pointer-events:none;fill:#9a9a9a}
-svg text.on{fill:#222;font-size:11px;font-weight:600}
+svg text.on{fill:#222;font-weight:600}
 circle{cursor:pointer}
 </style></head><body>
 <svg id="map"></svg>
 <div id="side">
-<h1>The wheel: archetype map</h1>
-<p class="help">Every dot is one of the concepts of step 3. Its place is fixed, made once from the real decks: concepts
-that the same decks lean on sit close together (Claude's way of measuring it). Tick archetypes to light their concepts and
-lines; tick two to see them as one faction. Scroll on the map to zoom, drag to move, click a dot to see its lines.</p>
+<div id="top"><h1>The wheel: archetype map</h1>
+<p class="help">Concepts that the same archetypes lean on sit close. Tick archetypes to light them; tick two to see them as one faction.</p>
+<div class="bar"><button id="none">Untick all</button><button id="build">Build an archetype</button><button id="clear">Clear it</button></div></div>
 <div id="picks"></div>
-<button id="none">Untick all</button> <button id="build">Build an archetype: off</button> <button id="clear">Clear the built one</button>
 <div id="info"></div>
+</div>
 </div>
 <script>
 const D=/*DATA*/null;
@@ -49,13 +56,13 @@ function together(a,b){const A=conc(a),B=conc(b),all=new Set([...A,...B]),pairs=
 const ALLPAIRS=[];for(let i=0;i<keys.length;i++)for(let j=i+1;j<keys.length;j++)ALLPAIRS.push(together(keys[i],keys[j]).score);
 ALLPAIRS.sort((x,y)=>y-x);
 document.getElementById('build').onclick=()=>{build=!build;const b=document.getElementById('build');b.classList.toggle('on',build);
-  b.textContent='Build an archetype: '+(build?'on (click dots)':'off');draw()};
+  b.textContent=build?'Building: click dots':'Build an archetype';draw()};
 document.getElementById('clear').onclick=()=>{chosen.clear();draw()};
-document.getElementById('picks').innerHTML=keys.map(k=>`<label><input type="checkbox" value="${k}"> <span class="sw"></span>${esc(D.archetypes[k].name)}</label>`).join('');
+document.getElementById('picks').innerHTML=keys.map(k=>`<label><input type="checkbox" value="${k}"><span class="sw"></span><span>${esc(D.archetypes[k].name)}</span></label>`).join('');
 document.querySelectorAll('#picks input').forEach(i=>i.onchange=()=>{const k=i.value;
   if(i.checked)picked.push(k);else picked.splice(picked.indexOf(k),1);focus=null;draw()});
 document.getElementById('none').onclick=()=>{picked.length=0;document.querySelectorAll('#picks input').forEach(i=>i.checked=false);focus=null;draw()};
-let vb=[0,0,1000,1000];const setVB=()=>svg.setAttribute('viewBox',vb.join(' '));setVB();
+let vb=(D.view||[0,0,1000,1000]).slice();const setVB=()=>svg.setAttribute('viewBox',vb.join(' '));setVB();
 svg.addEventListener('wheel',e=>{e.preventDefault();const r=svg.getBoundingClientRect(),s=Math.min(vb[2]/r.width,vb[3]/r.height),
   x=vb[0]+(e.clientX-r.left)*s,y=vb[1]+(e.clientY-r.top)*s,f=e.deltaY>0?1.15:1/1.15;
   vb=[x-(x-vb[0])*f,y-(y-vb[1])*f,vb[2]*f,vb[3]*f];setVB()},{passive:false});
@@ -65,8 +72,8 @@ window.onmousemove=e=>{if(!drag)return;const r=svg.getBoundingClientRect(),s=Mat
   vb[0]=drag[2]-(e.clientX-drag[0])*s;vb[1]=drag[3]-(e.clientY-drag[1])*s;setVB()};
 function el(t,a){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);return e}
 function width(l){return Math.max(.8,Math.min(7,Math.log2(1+Math.max(+l.cards||0,+l.decks||0))*1.5))}
-function row(l,tag){return `<tr><td>${esc(short(l.a))} — ${esc(short(l.b))}${tag?'<br><span class="note">'+tag+'</span>':''}</td><td>${l.cards||'-'} / ${l.decks||'-'}</td><td>${l.games}</td><td>${esc(l.text)}<br><span class="note">${esc(l.pair||'no card pair: only real decks hold them together')}</span>${l.note?'<br><b class="weak">weak: '+esc(l.note)+'</b>':''}</td></tr>`}
-const TH='<tr><th>the two concepts</th><th>x chance: cards / decks</th><th>games</th><th>how real cards link them, and one real card pair</th></tr>';
+function row(l,tag){return `<tr><td><b>${esc(short(l.a))} — ${esc(short(l.b))}</b>${tag?' <span class="note">('+tag+')</span>':''}<div class="note">${esc(l.text)}${l.pair?' · '+esc(l.pair):' · only real decks hold them'}${l.note?' · <span class="weak">weak: '+esc(l.note)+'</span>':''}</div></td><td>${l.cards||'-'} / ${l.decks||'-'}</td><td>${l.games}</td></tr>`}
+const TH='<tr><th>the two concepts, how real cards link them</th><th>× chance cards / decks</th><th>games</th></tr>';
 function draw(){
   document.querySelectorAll('#picks label').forEach(lb=>{const k=lb.querySelector('input').value,i=picked.indexOf(k);
     lb.querySelector('.sw').style.background=i<0?'transparent':COL[i%COL.length]});
@@ -91,52 +98,47 @@ function draw(){
     if(chosen.has(c))svg.append(el('circle',{cx:x,cy:y,r:12,fill:'none',stroke:'#7b3fa0','stroke-width':3}));
     ci.onclick=e=>{e.stopPropagation();if(build){chosen.has(c)?chosen.delete(c):chosen.add(c)}else focus=focus===c?null:c;draw()};svg.append(ci);
     const tx=el('text',{x:x+8,y:y+3.5,class:on?'on':''});tx.textContent=short(c);svg.append(tx)}
+  const byLink=(x,y)=>Math.max(+y.cards||0,+y.decks||0)-Math.max(+x.cards||0,+x.decks||0),only=l=>!focus||l.a===focus||l.b===focus;
   let h=built();
   if(picked.length===2)h+=asFaction(picked[0],picked[1]);
-  if(!picked.length&&!chosen.size)h+='<p class="help">Nothing ticked: all concepts are grey and unlinked.</p>';
-  if(focus)h+=`<h2>${esc(nm(focus))}</h2><p class="help">Only the lines of this concept are drawn. Click it again to see all.</p>`;
-  for(const k of picked){const a=D.archetypes[k];h+=`<h2>${esc(a.name)}</h2><p>${esc(a.what)}.</p>`;
-    for(const p of a.parts)h+=`<div class="part"><b class="${p.kind}">${esc(p.part)} (${p.kind})</b>${p.concepts.map(c=>esc(short(c))).join('; ')}</div>`}
-  if(picked.length){
-    h+=`<h2>The lines</h2><p class="help">Each line joins two concepts from two engine parts of one archetype (engine: a part that works by feeding
-    another part; brick: a part that works alone, so it has no lines; Claude chose which is which). <b>x chance</b>: how many times more often
-    than chance real cards link the two (cards) or real decks hold both (decks); 23 / 3 means 23 times in cards, 3 in decks.
-    <b>games</b>: in how many of the 10 games such linked cards exist. Thicker line = more times chance; dashed = weak (its main link is about
-    hitting the player, or only real decks hold them). A dot with an orange ring is used by two or more ticked archetypes: one card can serve both.</p>`;
-    const L=lines.filter(l=>!focus||l.a===focus||l.b===focus).sort((x,y)=>Math.max(+y.cards||0,+y.decks||0)-Math.max(+x.cards||0,+x.decks||0));
-    h+=`<table>${TH}${L.map(l=>row(l,picked.length>1?esc(l.tag):'')).join('')}</table>`}
-  if(picked.length>1){
-    const C=cross.filter(l=>!focus||l.a===focus||l.b===focus).sort((x,y)=>Math.max(+y.cards||0,+y.decks||0)-Math.max(+x.cards||0,+x.decks||0));
-    h+=`<h2>Links between the ticked archetypes (orange)</h2><p class="help">A concept of one ticked archetype and a concept of another that
-    real cards link, any part, bricks too. Many strong orange lines: the archetypes fit together in one faction; few: they stay apart.</p>
-    <table>${TH}${C.map(l=>row(l,esc(l.tag))).join('')||'<tr><td colspan="4">none</td></tr>'}</table>`}
-  info.innerHTML=h}
+  if(focus)h+=`<p class="big">Showing only the lines of <b>${esc(nm(focus))}</b>. Click it again to see all.</p>`;
+  picked.forEach((k,i)=>{const a=D.archetypes[k];
+    h+=`<h2><span class="sw" style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${COL[i%COL.length]}"></span> ${esc(a.name)}</h2>
+    <div class="chips">${a.parts.map(p=>p.concepts.map(c=>`<span class="chip ${p.kind}">${esc(short(c))}</span>`).join('')).join('')}</div>`});
+  if(picked.length){const L=lines.filter(only).sort(byLink);h+=`<h3>Lines inside ${picked.length>1?'each archetype':'the archetype'} (${L.length})</h3>${table(L,picked.length>1)}`}
+  if(picked.length>1){const C=cross.filter(only).sort(byLink);h+=`<h3>Links between the ticked archetypes, orange (${C.length})</h3>${table(C,true)}`}
+  if(!h)h='<p class="help" style="margin-top:12px">Tick an archetype, or press "Build an archetype" and click dots.</p>';
+  info.innerHTML=h+HOW}
+function table(L,tag,n=8){if(!L.length)return '<p class="note">none</p>';
+  const r=x=>x.map(l=>row(l,tag?esc(l.tag):'')).join('');
+  return `<table>${TH}${r(L.slice(0,n))}</table>`+(L.length>n?`<details><summary>Show all ${L.length}</summary><table>${r(L.slice(n))}</table></details>`:'')}
 function asFaction(a,b){const t=together(a,b),rank=ALLPAIRS.findIndex(s=>s<=t.score)+1;
   const syn=[];for(let i=0;i<t.all.length;i++)for(let j=i+1;j<t.all.length;j++){const l=linkOf[[t.all[i],t.all[j]].sort().join('|')];if(strong(l))syn.push(l)}
   syn.sort((x,y)=>(+y.cards||0)-(+x.cards||0));
-  return `<h2>The two as one faction (step 6)</h2><p class="help">Score ${t.score.toFixed(3)}: ${t.n} strong links between a concept of one and a
-  concept of the other, divided by the ${t.all.length} different concepts; number ${rank} of the ${ALLPAIRS.length} pairs of archetypes.
-  Each part of an archetype is one concept, so the faction plays all ${t.all.length}. Its synergies: every strong link between two of them
-  (real cards link them 1.2+ times more often than chance, or a rare pairing of 3+ times with real card pairs).</p>
-  <p>${t.all.map(c=>esc(short(c))).join('; ')}</p><table>${TH}${syn.map(l=>row(l,'')).join('')||'<tr><td colspan="4">none</td></tr>'}</table>`}
-function built(){if(!chosen.size)return build?'<h2>Build an archetype</h2><p class="help">Click dots to pick concepts.</p>':'';
+  return `<h2>The two as one faction</h2><p class="big">Score <b>${t.score.toFixed(2)}</b> · number ${rank} of ${ALLPAIRS.length} pairs · ${t.all.length} concepts · ${t.n} strong links between the two</p>
+  <div class="chips">${t.all.map(c=>`<span class="chip">${esc(short(c))}</span>`).join('')}</div><h3>Its synergies (${syn.length})</h3>${table(syn,false)}`}
+function built(){if(!chosen.size)return build?'<h2>Your archetype</h2><p class="help">Click dots to pick its concepts.</p>':'';
   const S=[...chosen],idx=S.map(c=>D.nodes.indexOf(c)),need=Math.ceil(S.length/2);
   const fit=D.decks.filter(d=>idx.filter(i=>d[2].includes(i)).length>=need),games={};
   fit.forEach(d=>games[d[0]]=(games[d[0]]||0)+1);
   const share=(ds,i)=>ds.length?ds.filter(d=>d[2].includes(i)).length/ds.length:0;
-  const more=D.nodes.map((c,i)=>[c,share(fit,i),share(D.decks,i)]).filter(x=>!chosen.has(x[0])&&x[1]>x[2]).sort((x,y)=>y[1]-x[1]).slice(0,10);
+  const more=D.nodes.map((c,i)=>[c,share(fit,i),share(D.decks,i)]).filter(x=>!chosen.has(x[0])&&x[1]>x[2]).sort((x,y)=>y[1]-x[1]).slice(0,8);
   const sum=(o,cs)=>cs.reduce((t,c)=>t+(o[c]||0),0),tot=o=>Object.values(o).reduce((t,v)=>t+v,0);
   const facs=D.factions.map(([g,f,cn])=>{const gc=D.gameCounts[g],gs=sum(gc,S)/tot(gc);return [g,f,gs?(sum(cn,S)/tot(cn))/gs:0]}).sort((x,y)=>y[2]-x[2]);
   const fits=facs.filter(x=>x[2]>=2),like=keys.map(k=>[k,conc(k).filter(c=>chosen.has(c)).length]).filter(x=>x[1]).sort((x,y)=>y[1]-x[1]).slice(0,3);
-  return `<h2>The archetype you built (${S.length} concepts)</h2><p>${S.map(c=>esc(short(c))).join('; ')}</p>
-  <p class="help">A deck leans on a concept when it holds it far more than its game's decks do (step 3's score above ${'1.96'}). It counts here
-  when it leans on at least half of these concepts (${need} of ${S.length}; the half is Claude's). An archetype needs decks of 2+ games.</p>
-  <p><b>${fit.length} of ${D.decks.length} real decks</b> in ${Object.keys(games).length} game${Object.keys(games).length===1?'':'s'}: ${Object.entries(games).sort((x,y)=>y[1]-x[1]).map(([g,n])=>esc(g)+' '+n).join(', ')||'none'}.</p>
-  <h3>What those decks lean on as well</h3><p class="help">Share of these decks that lean on it, and of all decks.</p>
-  <table>${more.map(([c,a,b])=>`<tr><td>${esc(nm(c))}</td><td>${Math.round(a*100)}%</td><td>${Math.round(b*100)}%</td></tr>`).join('')||'<tr><td>none</td></tr>'}</table>
-  <h3>Real factions that fit it</h3><p class="help">A faction fits when its cards hold these concepts at least twice as much as its game's
-  cards do (step 3's rule).</p><p>${(fits.length?fits:facs.slice(0,3)).map(([g,f,r])=>esc(f)+' ('+esc(g)+', x'+r.toFixed(1)+')').join('; ')}${fits.length?'':' (the nearest; none fits)'}</p>
-  <h3>The agreed archetypes closest to it</h3><p>${like.map(([k,n])=>esc(D.archetypes[k].name)+': '+n+' of its concepts').join('; ')||'none'}</p>`}
+  const ng=Object.keys(games).length;
+  return `<h2>Your archetype</h2><div class="chips">${S.map(c=>`<span class="chip" style="background:#f1e8f6;color:#7b3fa0">${esc(short(c))}</span>`).join('')}</div>
+  <p class="big"><b>Decks:</b> ${fit.length} of ${D.decks.length}, in ${ng} game${ng===1?'':'s'}${ng?' ('+Object.entries(games).sort((x,y)=>y[1]-x[1]).map(([g,n])=>esc(g)+' '+n).join(', ')+')':''}${ng<2?' <span class="weak">· an archetype needs 2+ games</span>':''}</p>
+  <p class="big"><b>Factions that fit:</b> ${(fits.length?fits:facs.slice(0,3)).map(([g,f,r])=>esc(f)+' <span class="note">'+esc(g)+' ×'+r.toFixed(1)+'</span>').join(', ')}${fits.length?'':' <span class="note">(nearest; none fits)</span>'}</p>
+  <p class="big"><b>Closest agreed archetypes:</b> ${like.map(([k,n])=>esc(D.archetypes[k].name)+' <span class="note">'+n+' shared</span>').join(', ')||'none'}</p>
+  <h3>Those decks also lean on</h3><table><tr><th>concept</th><th>these decks</th><th>all decks</th></tr>${more.map(([c,a,b])=>`<tr><td>${esc(short(c))}</td><td>${Math.round(a*100)}%</td><td>${Math.round(b*100)}%</td></tr>`).join('')||'<tr><td colspan="3">none</td></tr>'}</table>`}
+const HOW=`<details style="margin-top:16px"><summary>How to read this page</summary><ul class="help" style="padding-left:16px">
+<li>Blue concepts are engines (they work by feeding another part of the archetype), brown are bricks (they work alone). Claude chose which is which.</li>
+<li><b>× chance</b>: how many times more often than chance real cards link the two (cards) or real decks hold both (decks). <b>games</b>: in how many of the 10 games such cards exist.</li>
+<li>Thicker line = more times chance. Dashed = weak: its main link is about hitting the player, or only real decks hold them. An orange ring: a concept two ticked archetypes share.</li>
+<li><b>Score</b> of two archetypes: strong links between a concept of one and a concept of the other, divided by their different concepts (step 6). A strong link: cards 1.2+, or a rare pairing of 3+.</li>
+<li><b>Your archetype</b>: a deck counts when it leans on at least half of the picked concepts (the half is Claude's); a deck leans on a concept when it holds it far more than its game's decks do (step 3). A faction fits when its cards hold the concepts at least twice as much as its game's cards (step 3's rule).</li>
+<li>The places: two concepts sit close when the same archetypes' decks lean on them (Claude's way of measuring it).</li></ul></details>`;
 svg.onclick=()=>{if(focus){focus=null;draw()}};
 draw();
 </script></body></html>
