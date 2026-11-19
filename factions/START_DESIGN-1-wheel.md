@@ -109,7 +109,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
      unit cost); or it is a thing for single cards (used once, a drawback, a wall that can't attack, choosing the
      target).
    - Out: it is not in this game (player health, blocking, answers on the enemy's turn, unit types, shops, supply that
-     grows by itself) or Kaptain ruled it out (randomness, my units changing form, countdowns).
+     grows by itself) or Kaptain ruled it out (randomness).
    A parent in the concept tree keeps only the cards none of its children carry, so no effect counts twice.
    `work/concepts.md` shows the kinds in plain words for Kaptain.
 3. **The faction archetypes** (`work/faction_archetypes.py` -> `work/faction_archetypes.tsv`, `work/faction_archetypes.md`).
@@ -222,8 +222,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       what a keyword needs and a partner gains from it. Every faction has at least 1 keyword of its own, from a synergy
       only it has.
    4. A script checks: every faction has a keyword of its own; no shared keyword is on one faction only; every keyword
-      uses only concepts of the factions that carry it. Countdowns very sparingly; a lane
-      never holds more than 12 supply. A rule the game lacks is marked NEW RULE.
+      uses only concepts of the factions that carry it. A lane never holds more than 12 supply. A rule the game lacks is marked NEW RULE.
    5. Before all 20: on one faction, each new keyword carries 12+ different cards (cost 1 to 6, never the same card
       with other numbers); Kaptain judges.
 10. **Stop 1** for all 20: the seven answers made final from the game plan and keywords (every answer but which of the

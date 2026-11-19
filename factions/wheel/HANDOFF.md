@@ -7,7 +7,7 @@ One chat does one step; at its end, mark the step done here and say what it left
 | step | state | what it made |
 |---|---|---|
 | 1. Fix the library's concepts | done (19 Nov 2026) | concepts split by whom a row acts on; "Skill" removed; "Return my unit to hand" split into return_from_board and return_on_leave; the tag check (`work/tag_check.py`, two readings, 248 cards, fixes in `flat.py` with cases wc40-wc65, lk403); `check_all.py` and `links.py` rebuilt; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
-| 2. The usable concepts | done (19 Nov 2026): 126 usable, 47 helper, 37 out; return_from_board (73 cards), return_on_leave (76) and hand_deck_swap (5, new over the bar) usable (Claude's) | `work/concepts.tsv`, `work/concepts.md` |
+| 2. The usable concepts | done (19 Nov 2026): 130 usable, 47 helper, 33 out; return_from_board (73 cards), return_on_leave (76) and hand_deck_swap (5, new over the bar) usable (Claude's) | `work/concepts.tsv`, `work/concepts.md` |
 | 3. The faction archetypes | **made, Kaptain agrees the groups next**: 16 groups from 1428 decks, all kept (`work/faction_archetypes.py`, about 5 minutes) | `work/faction_archetypes.tsv` and `.md`; then `factions/wheel-groups.html` in its own chat |
 | 4. The radii and how they work together | redo: the new concepts of step 1 get a radius (Kaptain agrees), then `axes.py` | `work/radii.tsv`, `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` |
 | 5. The links between concepts | redo | `library/cards_db/wheel/concept_links.tsv` |
@@ -107,7 +107,6 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
 - Leaders: 5 per faction, the only cards with a golden border, spread over the costs and the ways to play; their
   special part works by whether I hold the lane's base, helps take and keep a lane, never wins harder in a won lane;
   nine kinds, mixed in each faction (START_DESIGN-2, "What a faction has").
-- Countdowns very sparingly.
 - First strike stays out: it does not belong to our game rules (19 Nov 2026).
 - A lane never holds more than 12 supply (summary/05).
 - Reading cards for one faction's chat: at most 100 (its steps 6 and 7), logged in `factions/read-cards.tsv`, never

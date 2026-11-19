@@ -26,9 +26,11 @@ cost_reduction	287	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,ru
 cost_set	92	duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
 cost_type	25	faeria,monster_train	usable	
 count_payoff	132	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
+countdown	133	duelyst,gwent,monster_train,runeterra	usable	
 counterattack	15	inscryption,monster_train,sts1	usable	
 cross_lane	6	inscryption	usable	
 damage	561	duelyst,faeria,gwent,into_the_breach,monster_train,runeterra,stormbound,sts1	usable	
+damage_over_time	101	gwent,into_the_breach,monster_train,stormbound,sts1	usable	
 damage_reduction	217	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra	usable	
 death_count	51	faeria,gwent,marvel_snap,monster_train,runeterra,stormbound	usable	
 death_trigger	313	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
@@ -107,6 +109,7 @@ shield	184	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runete
 silence	86	duelyst,gwent,marvel_snap,monster_train,runeterra,stormbound	usable	
 spell_power	220	duelyst,gwent,into_the_breach,marvel_snap,monster_train,runeterra,sts1	usable	
 spells_played_condition	34	duelyst,faeria,runeterra,sts1	usable	
+stances	38	inscryption,runeterra,sts1	usable	
 stat_condition	72	gwent,runeterra	usable	
 stat_fixed	151	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,runeterra,stormbound	usable	
 stat_gain	59	duelyst,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
@@ -120,6 +123,7 @@ swap	41	duelyst,gwent,inscryption,into_the_breach,marvel_snap,monster_train,rune
 taunt	81	duelyst,faeria,gwent	usable	
 terrain	149	duelyst,faeria,into_the_breach,marvel_snap	usable	
 territory_trigger	29	duelyst,faeria,inscryption	usable	
+transform	255	duelyst,faeria,gwent,inscryption,marvel_snap,runeterra,sts1	usable	
 tutor	54	faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,sts1	usable	
 untap	11	duelyst,into_the_breach	usable	
 upgrade	53	monster_train,runeterra,sts1	usable	
@@ -202,10 +206,6 @@ max_mana_condition	17	marvel_snap,runeterra	out	not in this game: supply that gr
 tribal	792	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	out	not in this game: unit types
 type_grant	52	duelyst,gwent,runeterra	out	not in this game: unit types
 coin_economy	21	gwent	out	not in this game: units have no abilities you press (Claude's)
-damage_over_time	101	gwent,into_the_breach,monster_train,stormbound,sts1	out	ruled out by Kaptain: a possibility for cards, not a concept a faction builds on
-stances	38	inscryption,runeterra,sts1	out	ruled out by Kaptain: a possibility for cards, not a concept a faction builds on
-transform	255	duelyst,faeria,gwent,inscryption,marvel_snap,runeterra,sts1	out	ruled out by Kaptain: a possibility for cards, not a concept a faction builds on
-countdown	133	duelyst,gwent,monster_train,runeterra	out	ruled out by Kaptain: countdowns very sparingly, on cards
 random_ability	28	duelyst,inscryption,marvel_snap,runeterra,stormbound	out	ruled out by Kaptain: no randomness
 random_effect	522	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	out	ruled out by Kaptain: no randomness
 random_target	174	duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,stormbound,sts1	out	ruled out by Kaptain: no randomness

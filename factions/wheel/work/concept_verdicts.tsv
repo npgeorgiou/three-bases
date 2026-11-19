@@ -46,10 +46,6 @@ retain	helper	one of the game's own things (Claude's)
 enemy_benefit	helper	a thing for single cards (Claude's)
 cant_move	helper	a thing for single cards (Claude's)
 play_restriction	helper	a thing for single cards (Claude's)
-damage_over_time	out	ruled out by Kaptain: a possibility for cards, not a concept a faction builds on
-transform	out	ruled out by Kaptain: a possibility for cards, not a concept a faction builds on
-stances	out	ruled out by Kaptain: a possibility for cards, not a concept a faction builds on
-countdown	out	ruled out by Kaptain: countdowns very sparingly, on cards
 spell_speed	out	not in this game: answers on the enemy's turn
 trap_secret	out	not in this game: answers on the enemy's turn
 reactions	out	not in this game: answers on the enemy's turn
