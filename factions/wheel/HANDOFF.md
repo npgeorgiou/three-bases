@@ -8,7 +8,7 @@ One chat does one step; at its end, mark the step done here and say what it left
 |---|---|---|
 | 1. Fix the library's concepts | done (19 Nov 2026) | concepts split by whom a row acts on; "Skill" removed; "Return my unit to hand" split into return_from_board and return_on_leave; the tag check (`work/tag_check.py`, two readings, 248 cards, fixes in `flat.py` with cases wc40-wc65, lk403); `check_all.py` and `links.py` rebuilt; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
 | 2. The usable concepts | done (19 Nov 2026): 126 usable, 47 helper, 37 out; return_from_board (73 cards), return_on_leave (76) and hand_deck_swap (5, new over the bar) usable (Claude's) | `work/concepts.tsv`, `work/concepts.md` |
-| 3. The faction archetypes | **next** (`work/faction_archetypes.py` to write) | `deck_archetypes.tsv` and `.md`: the deck archetypes' parts, for step 8 (checked once first, `PIPELINE.md` step 8) |
+| 3. The faction archetypes | **made, Kaptain agrees the groups next**: 16 groups from 1428 decks, all kept (`work/faction_archetypes.py`, about 5 minutes) | `work/faction_archetypes.tsv` and `.md`; then `factions/wheel-groups.html` in its own chat |
 | 4. The radii and how they work together | redo: the new concepts of step 1 get a radius (Kaptain agrees), then `axes.py` | `work/radii.tsv`, `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` |
 | 5. The links between concepts | redo | `library/cards_db/wheel/concept_links.tsv` |
 | 6. The archetype map | redo with the faction archetypes | `work/archetype_map.tsv`, `factions/wheel-archetypes.html` |
@@ -32,10 +32,6 @@ One chat does one step; at its end, mark the step done here and say what it left
 - `work/factions.py` and `work/concept_list.py` work (about 6 minutes; `concept_list.Library` scores a set of concepts
   in under a second). `factions.py` still has the main radius limit: change it to the limits of step 7.1. Its last
   output (`work/factions.tsv`) is from the deck archetypes and is remade.
-- Open with Kaptain, decided when step 3 starts: is a faction archetype a whole faction (a group of real factions
-  strong at the same things; then a faction plays 1) or a smaller piece (concepts the same real factions of 2+ games
-  are strong in together, linked or not, so bricks belong; then a faction plays 2, as step 7 says)? The pieces would
-  be cut by script, the cut-offs agreed with Kaptain.
 - Step 2 left: rerun `work/concept_catch.py` from `library/cards_db` only after a change to the concepts or verdicts.
   Counts moved after step 1's fixes (count_payoff 655 -> 132, condition_count 17 -> 531, permanent_growth 776 -> 584,
   stat_gain 149 -> 59, ping 573 -> 394): steps 3-7 use the new counts.

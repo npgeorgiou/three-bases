@@ -43,11 +43,10 @@ is written in that step's chat, from the rules of the step, and its line here is
   are out. `work/concepts.md`: the same by kind in plain words, for Kaptain.
 
 ## Step 3. The faction archetypes
-- `python3 ../../factions/wheel/work/faction_archetypes.py` (to write; uses `axes.py`'s real factions and concept
-  instances) -> `factions/wheel/work/faction_strong.tsv` (real faction, its strong concepts, their value against its
-  game's average) and `factions/wheel/archetypes.tsv` (archetype key, name, the real factions of its group, the part in
-  plain words, the usable concepts that can do it; engine or brick is filled by step 6).
-- `python3 work/archetypes_plain.py` -> `factions/wheel/archetypes.md`: the same in plain words, for Kaptain's OK.
+- `python3 ../../factions/wheel/work/faction_archetypes.py` (from `library/cards_db`, about 5 minutes) ->
+  `factions/wheel/work/faction_archetypes.tsv` (per group: decks, games, top concepts, the decks that fit it most, the
+  best-fitting factions) and `faction_archetypes.md` (the same in plain words, with the stability per number of groups,
+  unknown deck cards, groups no faction fits and factions that fit no group), for Kaptain's OK.
 
 ## Step 4. The radii and how they work together
 - `work/radii.tsv`: every usable concept, the radius it goes on (key and name), the part of it that counts there, and

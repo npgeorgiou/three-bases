@@ -14,8 +14,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   then draw a card" is two instances: one of damage, one of drawing.
 - **Card link**: two real cards of one game where an effect of one sets off or feeds an effect of the other
   (`links.sqlite`). Each link keeps which effect of each card made it, so it counts only for those effects' concepts.
-- **Archetype** (faction archetype): what a group of real factions from 2+ games are strong at, taken from the
-  library's real factions (step 3); none is tied to one game's card types, resources, keywords or multiplayer. One
+- **Archetype** (faction archetype): a way to play that decks of 2+ games group together (step 3); real factions are
+  never copied, only measured against it. None is tied to one game's card types, resources, keywords or multiplayer. One
   archetype can be played with different concepts, so it is made of parts, each a set of alternative concepts that can do
   it. A part is an **engine** (it works through links with another part: "my units die" -> "my units gain when an ally
   dies") or a **brick** (it works alone and links to nothing: disruption, removal).
@@ -58,7 +58,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 - A concept needs 5+ real cards in the library (all games together).
 - Scripts, no reading agents. Card texts are read only where a card's rows can't answer: at most 500 cards for the
   whole wheel, by a low-cost model; count them and get Kaptain's OK first.
-- What belongs together in an archetype is decided by what real factions are strong at together, never by card links
+- What belongs together in an archetype is decided by what decks play together, never by card links
   alone: a brick (removal, protection) links to nothing and still belongs. Links decide only engine or brick.
 - A card's concept is judged with the rules of its keywords, not its printed text alone (Monster Train's Offering plays
   the card for free when it is discarded), and with the rows that gave it the concept.
@@ -112,17 +112,25 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
      grows by itself) or Kaptain ruled it out (randomness, my units changing form, countdowns).
    A parent in the concept tree keeps only the cards none of its children carry, so no effect counts twice.
    `work/concepts.md` shows the kinds in plain words for Kaptain.
-3. **The faction archetypes** (`work/faction_archetypes.py` -> `wheel/archetypes.tsv`, `wheel/archetypes.md`).
-   For each real faction of the library (the factions `axes.py` measures), its strong concepts: the usable concepts
-   (step 2) whose share of its concept instances is at least twice the average share of the factions of its game (the
-   2 is Claude's). Real factions whose strong concepts overlap most are grouped by script; a group holds factions of 2
-   or more games, so an archetype is never one game's thing. Each group is one archetype, described in plain words with
-   its real factions as examples ("the dead work for us": Abyssian Host, ...). Its concepts are the strong concepts at
-   least half of its factions share, sorted into parts by what they do, each part in plain words. A concept goes in a
-   part only when its definition does that part's job on the right side; a trigger or a condition only in a part that
-   reacts or counts. A part with no concept is shown to Kaptain, never filled by guessing. There are enough archetypes
-   for 20 factions of 2 (at least 14). The deck archetypes are not faction archetypes; step 8 uses them.
-   **Kaptain agrees the faction archetypes and their parts.**
+3. **The faction archetypes** (`work/faction_archetypes.py` -> `work/faction_archetypes.tsv`, `work/faction_archetypes.md`).
+   Ways to play that decks group together; they become our factions' archetypes.
+   1. Scores: for every deck of `decks.tsv` (the whole deck, all its cards, neutrals and staples too, never split by
+      faction) and every real faction of `axes.tsv` (43), per usable concept (step 2): the log-odds ratio with a prior
+      (Monroe et al. 2008) against all the cards of its game (Claude's), as a z-score; above 1.96 is strong. Every card
+      counts; a parent concept counts only on cards none of its children carry.
+   2. Groups: NMF on the deck rows only, with the positive scores; each game weighs the square root of its deck count.
+      The number of groups is the one whose groups come back most alike over repeated runs with different seeds
+      (Claude's), at least 14 (20 factions of 2 archetypes, each archetype in at most 3 factions); more is fine. A deck
+      fits a group when the group is at least 30% of its mix (Claude's). A group is kept when decks of 2+ games fit it.
+      Monster Train and Marvel Snap decks are in (Claude's). Deck cards the library does not know are counted and
+      reported, never guessed.
+   3. Factions are never rows of the NMF. A faction's fit to a group is the cosine between its positive scores and the
+      group (Claude's; it fits at 0.5 or more, Claude's). The groups no faction fits and the factions that fit no group
+      are listed.
+   4. Per group: its top concepts, the decks that fit it most, the best-fitting factions.
+   **Kaptain agrees the groups before anything else.** The page `factions/wheel-groups.html` is made in its own chat:
+   concept nodes placed by how often decks use them together, coloured by group; selecting a faction or a deck lights
+   its concepts; building or changing a group by selecting nodes shows which decks and factions fit it.
 4. **The radii and how they work together** (`wheel/work/radii.tsv`). Every usable concept is put on one radius whose
    name says what the concept does (copying a unit is no draw); how often real cards link two concepts decides only
    between radii that fit. A trigger or a condition goes on the radius of the thing it reacts to ("when a unit dies" on
