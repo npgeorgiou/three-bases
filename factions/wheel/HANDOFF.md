@@ -9,20 +9,21 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 1. Fix the library's concepts | done (19 Nov 2026) | concepts split by whom a row acts on; "Skill" removed; "Return my unit to hand" split into return_from_board and return_on_leave; the tag check (`work/tag_check.py`, two readings, 248 cards, fixes in `flat.py` with cases wc40-wc65, lk403); `check_all.py` and `links.py` rebuilt; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
 | 2. The usable concepts | done (19 Nov 2026): 133 usable, 44 helper, 33 out; return_from_board (73 cards), return_on_leave (76) and hand_deck_swap (5, new over the bar) usable (Claude's) | `work/concepts.tsv`, `work/concepts.md` |
 | 3. The faction archetypes | **made, Kaptain agrees the groups next**: 15 groups by NMF from 1428 decks (`work/deck_groups_nmf.py`, about 2.5 minutes), and a version with 25 (`--groups 25`); `work/make_faction.py` makes a faction from one or two concepts | `work/deck_groups_nmf.tsv`, `.md`, `.json` and `deck_groups_nmf_25.*`; then `factions/wheel-groups.html` in its own chat |
-| 4. The radii and how they work together | redo: the new concepts of step 1 get a radius (Kaptain agrees), then `axes.py` | `work/radii.tsv`, `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` |
+| 4. The radii and how they work together | first import The Elder Scrolls: Legends and run step 3 again (todo.md); then redo: the new concepts of step 1 get a radius (Kaptain agrees), then `axes.py` | `work/radii.tsv`, `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` |
 | 5. The links between concepts | redo | `library/cards_db/wheel/concept_links.tsv` |
-| 6. The archetype map | redo with the faction archetypes | `work/archetype_map.tsv`, `factions/wheel-archetypes.html` |
+| 6. The archetype map | redo with the groups of step 3 (`work/deck_groups_nmf.json`; `archetype_map.py` and `factions.py` are changed to read it) | `work/archetype_map.tsv`, `factions/wheel-archetypes.html` |
 | 7. The 20 factions | redo: `work/factions.py` (2 archetypes) gets the new limits; `work/concept_list.py` written | `work/answer_concepts.tsv` (agreed): per answer its ways |
 | 8. Combos on this board | to do | |
 | 9. Game plan, then keywords | to do | |
 | 10. Stop 1 | to do | |
 
 ## What the next steps find in the files
-- How the wheel works: a faction is what it is strong at. It plays 2 faction archetypes, each what a group of real
-  factions from 2+ games is strong at. Each archetype is made of parts, each a set of alternative concepts: an engine
-  part works through links with another part ("my units die" -> "my units gain when an ally dies"), a brick works
-  alone (disruption). Kaptain's list (`archetypes_kaptain.txt`) holds deck archetypes: what a pair of factions plays
-  together (step 8). The 23 radii of `work/radii.tsv` show how the 43 real factions spread (`factions/wheel-axes.html`).
+- How the wheel works: a faction is what it is strong at. It plays 2 faction archetypes, each a way to play that decks
+  of 2+ games lean on (step 3, groups by NMF); real factions are only measured against them. Each archetype is made of
+  parts, each a set of alternative concepts: an engine part works through links with another part ("my units die" ->
+  "my units gain when an ally dies"), a brick works alone (disruption). Kaptain's list (`archetypes_kaptain.txt`) holds
+  deck archetypes: what a pair of factions plays together (step 8). The 23 radii of `work/radii.tsv` show how the 43
+  real factions spread (`factions/wheel-axes.html`).
 - Step 1 left: the tag check's families judged on the second reading as right or mixed stay as they are: "Draw" on
   the enemy (both players draw), "Free play" of an enemy card, "Repeat" of a Duel, "Make my spells stronger" on enemy
   cards, the Vek's own heals and summons in Into the Breach. A unit returned to hand from either side (Will of Ionia,
@@ -60,7 +61,7 @@ One chat does one step; at its end, mark the step done here and say what it left
 - Each faction plays 2 archetypes; one archetype is played by at most 3 factions; the 20 are picked so the
   weakest is as strong as possible, while they stay varied: two factions share at most half of their own concepts,
   every faction keeps a blind spot, and some archetypes stay unused (18 Nov 2026).
-- Faction archetypes come from real factions; Kaptain's list holds deck archetypes, played by a pair of factions.
+- Faction archetypes come from the ways to play decks lean on (step 3); Kaptain's list holds deck archetypes, played by a pair of factions.
   Combo, Control-Combo and Extra Turns are off the list (other archetypes make their own combos); Cycling is part of
   Wheels (18 Nov 2026).
 - Cards tagged with the wrong concept are examined and fixed; "Return my unit to hand" is split into smaller concepts

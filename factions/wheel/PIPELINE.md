@@ -79,7 +79,7 @@ is written in that step's chat, from the rules of the step, and its line here is
   hitting the player, "decks only" when no card pair; it prints the cards behind the most edges), `work/archetype_gaps.tsv` (two engine parts with no joined edge, shown to
   Kaptain with the numbers) and `factions/wheel-archetypes.html` (page template `work/archetype_map_template.html`; the concepts' places by
   networkx's spring layout over every joined pair of usable concepts, seed 7). It writes engine or brick for each part
-  into `archetypes.tsv`.
+  into `work/archetype_map.tsv`.
 
 ## Step 7. The 20 factions
 - `python3 ../../factions/wheel/work/factions.py` (rules: `START_DESIGN-1-wheel.md` step 7) ->

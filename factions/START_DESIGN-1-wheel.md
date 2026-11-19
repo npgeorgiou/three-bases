@@ -14,8 +14,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   then draw a card" is two instances: one of damage, one of drawing.
 - **Card link**: two real cards of one game where an effect of one sets off or feeds an effect of the other
   (`links.sqlite`). Each link keeps which effect of each card made it, so it counts only for those effects' concepts.
-- **Archetype** (faction archetype): a way to play that decks of 2+ games group together (step 3); real factions are
-  never copied, only measured against it. None is tied to one game's card types, resources, keywords or multiplayer. One
+- **Archetype** (faction archetype): a way to play that decks of 2+ games lean on, found by NMF (step 3); real
+  factions are never copied, only measured against it. None is tied to one game's card types, resources, keywords or multiplayer. One
   archetype can be played with different concepts, so it is made of parts, each a set of alternative concepts that can do
   it. A part is an **engine** (it works through links with another part: "my units die" -> "my units gain when an ally
   dies") or a **brick** (it works alone and links to nothing: disruption, removal).
@@ -66,7 +66,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   never limited to some games in a list.
 
 ## The stops
-- **Kaptain agrees the faction archetypes and their parts** (step 3), **the concepts on each radius** (step 4) and
+- **Kaptain agrees the faction archetypes** (step 3), **the concepts on each radius** (step 4) and
   **the 20 factions' archetypes** (step 7). **Stop 1: Kaptain agrees the 20 factions** (step 10).
 - Then one chat per faction (two can run at once): steps 1-6 of `START_DESIGN.md`. **Stop 2: Kaptain agrees them.**
   Then cards, the gate, the faction check (the cards against the faction's archetypes and
@@ -206,7 +206,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       link, or a removal on a spell; a way of two concepts takes two extras); (b) the rest go to the highest-scoring
       concepts with strong links to at least 2 of its concepts; (c) the theme breaks ties.
    6. **Its seven answers**, from `work/answer_concepts.tsv`: how it wins is the line of its archetypes in
-      `archetypes.tsv`; removing a front unit, removing back-row units, acting between lanes and holding a base are
+      `work/deck_groups_nmf.json`; removing a front unit, removing back-row units, acting between lanes and holding a base are
       each the highest-scoring way its concepts and extras give; what it cares about most is the highest-scoring of
       the game's own things on its list (factions may share it); its blind spot is the radius (`work/radii.tsv`) that
       holds none of its concepts and extras and has the lowest average score on its list. An answer no way gives is
