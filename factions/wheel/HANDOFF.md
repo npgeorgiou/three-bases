@@ -94,6 +94,9 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
   archetype's concepts with the links between them and the strengths we know. Only general archetypes; any specific to
   one game (planeswalkers) is off the list. Triggers and conditions are how cards work, not what a faction is; real
   factions inspire, they are never copied (17 Nov 2026).
+- A faction's kernel is what the faction DOES, never a trigger or a condition ("when another unit dies"): "here is a faction
+  that thrives on spells", "one that likes to KILL BRUTALLY", "one that WAITS", "one that CAN'T BE BROKEN", "one that
+  FUCKS YOU UP" (19 Nov 2026).
 - Discard / 8-Rack stays a deck archetype although real cards don't link its two parts: future improved games will beef it
   up (17 Nov 2026).
 - Real factions' shapes vary inside each game: the wheel is lax about a faction's shape (17 Nov 2026).
