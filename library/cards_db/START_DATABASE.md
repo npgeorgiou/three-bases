@@ -107,15 +107,23 @@ pair that must or must not count for two concepts.
 
 ## State (7 Nov 2026)
 - All 10 games imported and checked; Kaptain counts them DONE (9 Nov 2026). He does not check deck pages.
-- Decks (10 Nov 2026): Gwent, Faeria and Runeterra have 300 each; Stormbound 190 and Duelyst 178 are all the good decks
-  online (Stormbound-Kitty is Stormbound's only deck source; duelspot's other Duelyst decks are pictures, reddit is blocked
-  in the browser). Kept apart: no two decks of a game share more than 80% of their cards. Five Gwent cards the v14.8 export
-  lacked were added for the decks (supplement_gwent.py; read in read/gwent/batch_009; Knickers' "raid the battlefield" is
-  Kaptain's definition, supplement/gwent_kaptain.jsonl). Not imported, because the library lacks a card: 13 Runeterra decks
-  (04PZ002, 06BC019, 01FR048, 04PZ015) and 12 Duelyst II decks. The fetch files and checks/decks300/build.py are in git
-  history (commit "Decks redone with the five Gwent cards ..."). The deck sites are reached only in the built-in browser; data is
-  moved to the workspace in compact form and checked with a checksum against the page before use. Questions over the real
-  decks: ask.py played / deckmates / deckconcepts (deck_asks.py; factions/START_DESIGN-4-asking.md).
+- Decks (19 Nov 2026, 3027 in decks.tsv): Marvel Snap, Runeterra, Gwent and Faeria 500 each; Duelyst and Stormbound 300;
+  Slay the Spire 314, Monster Train 45, Into the Breach 44, Inscryption 26. Picked by `checks/decks500/build.py`: top-rated
+  first, then variety (faction, average cost, key cards: champions, leader, general, archetype); no two decks of a game
+  share more than 80% of their cards. A deck card the library does not know keeps its name and counts 0 (parse_deck).
+  Sources: Marvel Snap, Untapped.gg archetype pages and Marvel Snap Zone tier-list and best-decks articles as the
+  Internet Archive kept them (the live sites stop the browser with a bot check), each MSZ deck scored by how many articles
+  show it; Runeterra, runeterra.ar's meta (each archetype's most played list and its best players' lists, deck codes
+  decoded by `checks/decks500/lor.py`); Gwent, playgwent.com's most voted guides; Faeria, every faeria.com hub deck with 2+
+  likes; Stormbound, every deck ever in Stormbound-Kitty's featured list and hall of fame (the site's GitHub history,
+  KittySparkles/stormbound-kitty, src/data); Duelyst, manaspring.ru deck lists by rating (Internet Archive; duelystdb.com's
+  archived decks have no votes, not used); Slay the Spire, the winning Ascension 20 runs (the Heart beaten) of top streamers
+  in github.com/MaT1g3R/Slay-the-Spire-data, each the run file's final deck and relics; Monster Train, Inscryption and
+  Into the Breach, guide and forum builds and winning runs read by agents (WebSearch and WebFetch; Steam guides, Steam
+  discussions, wikis, guide sites), most of them core cards. The deck sites are reached in the built-in browser; a page's
+  data comes back as one script result of 150-250 thousand characters (padded with "a"), which the tools save to a file
+  and never show in the chat; it is checked with a checksum; larger results are split. Questions over the real decks: ask.py
+  played / deckmates / deckconcepts (deck_asks.py; factions/START_DESIGN-4-asking.md).
 - lk96 (Monster Train, Vinemother -> Wyldenten) fixed 16 Nov 2026: a single made card that costs 0 counts as more cards to play.
 - Concepts by whom a row acts on (16 Nov 2026, Kaptain; flat.py derive, cases wc01-wc17): a heal, block, shield, immunity,
   strength or defence on the player is player_<concept>, the player hurt is player_damaged (a game whose rules give the
