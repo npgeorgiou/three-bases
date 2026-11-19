@@ -23,6 +23,12 @@ More deck lists (todo.md item 12) and The Elder Scrolls: Legends (item 13) each 
   parts, each a set of alternative concepts: an engine part works through links with another part ("my units die" ->
   "my units gain when an ally dies"), a brick works alone (disruption). Kaptain's list (`archetypes_kaptain.txt`) holds
   deck archetypes: what a pair of factions plays together (step 7).
+- Open with Kaptain before step 6 runs (19 Nov 2026, not agreed): which two archetypes may form a faction (share 1 to 3
+  concepts; score only the links between concepts that only one of the two holds, since a shared concept counts on both
+  sides); how strong a link between two concepts is (both how many times above chance and how many real card pairs,
+  in how many games); whether step 5 cuts each archetype to the concepts with a strong card link to another concept
+  (inside it or in any archetype) before pairing; how many concepts a faction keeps (about 12 plus 8 extras is like a
+  real faction). Kaptain wants more decks first (todo.md item 12), then steps 3-5 again.
 - Runeterra's spell mana rule is written (`read/runeterra/game_rules.jsonl`) but not built into `cards.sqlite` yet.
 - `work/factions.py` and `work/concept_list.py` work (about 6 minutes; `concept_list.Library` scores a set of concepts
   in under a second). `factions.py` keeps the limits of step 6.1. Open before it runs: how many own concepts a
