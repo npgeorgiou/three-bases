@@ -184,10 +184,12 @@ def page(arch, edges, examples, player, usable, every):
     D = json.load(open(os.path.join(HERE, 'deck_groups_nmf_25.json'), encoding='utf-8'))
     names.update({c: D['plain'][c] for c in D['nodes'] if c not in names})
     data['names'] = names
-    data['pos'] = layout(D)
+    data['pos'] = {c: v for c, v in layout(D).items() if c not in D['unit']}  # design markers are no dots
     data['view'] = unclash(data['pos'], names)
     col = {c: i for i, c in enumerate(D['nodes'])}
     data['nodes'] = D['nodes']
+    data['markerNames'] = D['markers']
+    for k, m in step3_groups.markers().items(): data['archetypes'][k]['markers'] = m
     data['decks'] = [[d['game'], d['name'], sorted(col[c] for c in d['z'])] for d in D['decks']]
     data['factions'] = [[f['game'], f['faction'], f['counts']] for f in D['factions']]
     data['gameCounts'] = D['game_counts']

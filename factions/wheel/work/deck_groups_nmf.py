@@ -95,7 +95,7 @@ with open('decks.tsv', encoding='utf-8') as f:
         ids = set(ids) & set(pools[p[0]])
         if ids:
             cnt = sum(cv[i] for i in ids)
-            decks.append({'game': p[0], 'name': p[1], 'size': len(ids), 'counts': cnt, 'z': score(cnt, p[0])})
+            decks.append({'game': p[0], 'name': p[1], 'size': len(ids), 'counts': cnt, 'z': score(cnt, p[0]), 'ids': ids})
 facs = sorted({(g, fa) for g in games if g not in NOT_FACTIONS for fa in x.factions(g)})
 fcount = {(g, fa): sum((cv[i] for i, v in pools[g].items() if fa in v[3]), np.zeros(len(nodes))) for g, fa in facs}
 
@@ -178,6 +178,74 @@ for j in range(K):
     groups.append({'j': j, 'concepts': cs, 'lean': {int(t): float(lean[t]) for t in cs}, 'base': base, 'fit': fit,
                    'games': gs, 'one_game': gs.most_common(1)[0][1] >= ONE_GAME * len(fit),
                    'units': {k: float(uu[q] / ug[q]) if ug[q] else 0 for q, k in enumerate(UNIT)}})
+# Design markers: what a deck's cards are like against its game's decks, never NMF input and never a faction concept.
+# A deck has a marker when its number is in the top quarter of its game's decks (its mirror: the bottom quarter); a group
+# carries a marker when its decks have it at least MARK_FIT times as often as their games' decks do (both Claude's).
+effects = collections.Counter(card for (card,) in c.execute('select card from ability'))
+summons = {card for (card,) in c.execute("select distinct card from flat_concept where concept='summon'")}
+def avg(v): return sum(v) / len(v) if v else None
+lines = {}
+for g in games:
+    us = [i for i in pools[g] if stats[i][0] in concept_tags.UNIT_CATS and stats[i][1] is not None]
+    for pos in (2, 3):
+        pts = [(stats[i][1], stats[i][pos]) for i in us if stats[i][pos] is not None]
+        lines[(g, pos)] = np.polyfit([q[0] for q in pts], [q[1] for q in pts], 1) if len(pts) >= 10 else None
+def above(i, pos):
+    g = cards_game[i]; ab = lines.get((g, pos))
+    return None if ab is None or stats[i][pos] is None or stats[i][1] is None else stats[i][pos] - (ab[0] * stats[i][1] + ab[1])
+cards_game = {i: g for g in games for i in pools[g]}
+def numbers(d):
+    """per deck: the numbers its markers come from (None when the deck has none of the cards a number needs)"""
+    ids = d['ids']; cat = lambda i: stats[i][0]
+    un = [i for i in ids if cat(i) in concept_tags.UNIT_CATS]; sp = [i for i in ids if cat(i) == 'spell']
+    cost = lambda xs: avg([stats[i][1] for i in xs if stats[i][1] is not None])
+    lean = [stats[i][2] - stats[i][3] for i in un if stats[i][2] is not None and stats[i][3] is not None]
+    return {'units': len(un) / len(ids), 'spells': len(sp) / len(ids),
+            'buildings': sum(1 for i in ids if cat(i) in ('building', 'terrain', 'item', 'relic')) / len(ids),
+            'curve': cost(ids), 'unitcost': cost(un), 'spellcost': cost(sp) if len(sp) >= 3 else None, 'unitcount': len(un),
+            'strong': avg([v for v in (above(i, 2) for i in un) if v is not None]),
+            'tough': avg([v for v in (above(i, 3) for i in un) if v is not None]),
+            'lean': avg(lean), 'text': avg([effects[i] for i in ids]),
+            'summoned': sum(1 for i in ids if i in summons) / len(un) if un else None}
+MARKERS = [  # (key, name, number, end): 'high' = top quarter of its game's decks, 'low' = bottom quarter
+    ('many_units', 'Many units', 'units', 'high'), ('many_spells', 'Many spells', 'spells', 'high'),
+    ('buildings', 'Many buildings (stay in play, never move)', 'buildings', 'high'),
+    ('low_curve', 'Low curve', 'curve', 'low'), ('high_curve', 'High curve', 'curve', 'high'),
+    ('cheap_units', 'Cheap units', 'unitcost', 'low'), ('expensive_units', 'Expensive units', 'unitcost', 'high'),
+    ('cheap_spells', 'Cheap spells', 'spellcost', 'low'), ('expensive_spells', 'Expensive spells', 'spellcost', 'high'),
+    ('few_big', 'Few big units', ('unitcount', 'unitcost'), ('low', 'high')),
+    ('many_small', 'Many small units', ('unitcount', 'unitcost'), ('high', 'low')),
+    ('strong', 'Strong for its cost', 'strong', 'high'), ('weak', 'Weak for its cost', 'strong', 'low'),
+    ('tough', 'Tough for its cost', 'tough', 'high'), ('fragile', 'Fragile for its cost', 'tough', 'low'),
+    ('hits', 'Hits more than it lasts', 'lean', 'high'), ('lasts', 'Lasts more than it hits', 'lean', 'low'),
+    ('plain', 'Plain cards (little text)', 'text', 'low'), ('busy', 'Busy cards (several effects each)', 'text', 'high'),
+    ('summoned', 'Mostly summoned units', 'summoned', 'high'), ('played', 'Mostly units played from hand', 'summoned', 'low')]
+MARK_FIT = 2.0
+nums = [numbers(d) for d in decks]
+cut = {}
+for g in per_game:
+    for k in nums[0]:
+        vs = sorted(nums[n][k] for n in range(len(decks)) if decks[n]['game'] == g and nums[n][k] is not None)
+        if len(vs) >= 8 and vs[len(vs) // 4] != vs[-1 - len(vs) // 4]: cut[(g, k)] = (vs[len(vs) // 4], vs[-1 - len(vs) // 4])
+def has(n, num, end):
+    if isinstance(num, tuple): return all(has(n, a, b) for a, b in zip(num, end))
+    g, v = decks[n]['game'], nums[n][num]
+    if v is None or (g, num) not in cut: return None
+    lo, hi = cut[(g, num)]
+    return v < lo if end == 'low' else v > hi
+HASM = {m[0]: [has(n, m[2], m[3]) for n in range(len(decks))] for m in MARKERS}
+def marks(fit):
+    out = {}
+    for key, _, num, end in MARKERS:
+        here = [HASM[key][n] for n in fit if HASM[key][n] is not None]
+        games_ = {decks[n]['game'] for n in fit}
+        every = [HASM[key][n] for n in range(len(decks)) if decks[n]['game'] in games_ and HASM[key][n] is not None]
+        if len(here) >= 5 and every and sum(every):
+            r = (sum(here) / len(here)) / (sum(every) / len(every))
+            if r >= MARK_FIT: out[key] = round(r, 2)
+    return out
+for gr in groups: gr['markers'] = marks(gr['fit'])
+MNAME = {m[0]: m[1] for m in MARKERS}
 groups.sort(key=lambda gr: -len(gr['fit']))
 for n, gr in enumerate(groups, 1): gr['key'] = f'G{n:02d}'
 for gr in groups:
@@ -197,12 +265,13 @@ name = lambda t: plain.get(nodes[t], nodes[t])
 def units_line(gr): return '; '.join(f'{UNIT[k]} x{v:.1f}' for k, v in gr['units'].items())
 
 with open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.tsv'), 'w', encoding='utf-8') as o:
-    o.write('group\tdecks\tgames\tone_game\tconcepts\tbase_concepts\tunits\tfit_factions\n')
+    o.write('group\tdecks\tgames\tone_game\tconcepts\tbase_concepts\tunits\tmarkers\tfit_factions\n')
     for gr in groups:
         o.write('\t'.join([gr['key'], str(len(gr['fit'])), ','.join(f'{g}:{k}' for g, k in sorted(gr['games'].items())),
                            'yes' if gr['one_game'] else '', ','.join(f"{nodes[t]}:{gr['lean'][t]:.2f}" for t in gr['concepts']),
                            ','.join(f'{nodes[t]}:{v:.2f}' for v, t in gr['base']),
                            ','.join(f'{k}:{v:.2f}' for k, v in gr['units'].items()),
+                           ','.join(f'{k}:{v:.2f}' for k, v in sorted(gr['markers'].items(), key=lambda t: -t[1])),
                            '; '.join(f'{g}:{fa}:{r:.2f}' for r, (g, fa) in gr['facs'])]) + '\n')
 
 with open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.md'), 'w', encoding='utf-8') as o:
@@ -222,6 +291,7 @@ with open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.md'), 'w', encoding='utf-
         o.write('- Concepts: ' + '; '.join(f"{name(t)} {gr['lean'][t]:.0%}" for t in gr['concepts']) + '\n')
         o.write('- Base concepts: ' + ('; '.join(f'{name(t)} {v:.0%}' for v, t in gr['base'][:10]) or 'none') + '\n')
         o.write('- Units: ' + units_line(gr) + '\n')
+        o.write('- Design markers: ' + ('; '.join(f'{MNAME[k]} x{v:.1f}' for k, v in sorted(gr['markers'].items(), key=lambda t: -t[1])) or 'none') + '\n')
         o.write('- Decks: ' + '; '.join(f"{decks[n]['name']} ({decks[n]['game']}, {mix[n, gr['j']]:.0%})" for n in gr['fit'][:6]) + '\n')
         o.write('- Factions that fit: ' + ('; '.join(f'{fa} ({g}, x{r:.1f})' for r, (g, fa) in gr['facs']) or
                 'none; nearest ' + '; '.join(f'{fa} ({g}, x{r:.1f})' for r, (g, fa) in gr['near'])) + '\n\n')
@@ -229,11 +299,11 @@ with open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.md'), 'w', encoding='utf-
     o.write('Groups no faction fits: ' + (', '.join(nofit) or 'none') + '.\n\n')
     o.write('Factions that fit no group: ' + (', '.join(f'{fa} ({g})' for g, fa in lonely) or 'none') + '.\n')
 
-json.dump({'nodes': nodes, 'plain': {k: plain.get(k, k) for k in nodes}, 'unit': list(UNIT), 'strong': STRONG,
+json.dump({'markers': {m[0]: m[1] for m in MARKERS}, 'nodes': nodes, 'plain': {k: plain.get(k, k) for k in nodes}, 'unit': list(UNIT), 'strong': STRONG,
            'groups': [{'key': gr['key'], 'concepts': [nodes[t] for t in gr['concepts']],
                        'lean': {nodes[t]: round(v, 3) for t, v in gr['lean'].items()},
                        'base': [[nodes[t], round(v, 3)] for v, t in gr['base']], 'units': gr['units'],
-                       'one_game': gr['one_game'], 'decks': gr['fit'],
+                       'one_game': gr['one_game'], 'decks': gr['fit'], 'markers': gr['markers'],
                        'factions': [[g, fa, round(r, 2)] for r, (g, fa) in gr['facs']]} for gr in groups],
            'decks': [{'game': d['game'], 'name': d['name'], 'size': d['size'],
                       'mix': {gr['key']: round(float(mix[n, gr['j']]), 3) for gr in groups if mix[n, gr['j']] >= 0.05},

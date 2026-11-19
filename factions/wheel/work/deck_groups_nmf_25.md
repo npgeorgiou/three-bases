@@ -8,6 +8,7 @@ Deck card names the library does not know: none.
 - Concepts: Deal damage 26%; Damage to several separate targets 8%; Cheap unit 8%; Strong for its cost 7%; Unit 0%; Small repeatable damage 7%; Damage to many at once 8%; Tough for its cost 0%; A unit levels up on the board 0%; Stat loss (-power, -health) 0%
 - Base concepts: Attack gain (+attack) 92%; Expensive card 82%; Neighbours matter (adjacency) 74%; Hits my own side too 54%; Create new cards 51%
 - Units: Unit x1.1; Cheap unit x1.1; Expensive unit x1.0; Strong for its cost x1.3; Tough for its cost x1.2
+- Design markers: Many small units x2.4; Plain cards (little text) x2.3
 - Decks: Red Combat (faeria, 63%); [MC XII] Mobility Burn (faeria, 59%); [MC9] R Combat (faeria, 57%); Khalim Seasonal Cup - 1st Place, Full Lineup (faeria, 57%); [Budget] Red Combat (faeria, 56%); Mono Red Burn (faeria, 55%)
 - Factions that fit: none; nearest Ironclad (sts1, x1.7); Prime (into_the_breach, x1.5); Silent (sts1, x1.3)
 
@@ -15,6 +16,7 @@ Deck card names the library does not know: none.
 - Concepts: More or faster base resource (ramp) 51%; Can't act at all (stun, freeze) 26%; Can't attack (my own unit) 17%; Silence (abilities removed) 15%; Stat gain (+power, +health) 8%; Grows with what happened this game 0%; Disrupt the opponent's plans 6%; Can't attack (lock on an enemy) 6%; Expensive card 0%; Position and space 4%
 - Base concepts: Neighbours matter (adjacency) 94%; Attack gain (+attack) 85%; Damage to many at once 83%; Defence gain (+health) 79%; Deal damage 74%
 - Units: Unit x0.9; Cheap unit x0.9; Expensive unit x1.0; Strong for its cost x1.0; Tough for its cost x1.0
+- Design markers: Mostly units played from hand x9.3
 - Decks: Resurgence Tournament 07/2023 Winning deck (stormbound, 84%); Drachenfruchtfleisch (stormbound, 74%); Cursed Leeches (stormbound, 70%); Equals guide deck 1xn1w1w2n6n8 (stormbound, 69%); Everlasting Vision (stormbound, 67%); Untitled Winter deck A (stormbound, 63%)
 - Factions that fit: Winter (stormbound, x3.2)
 
@@ -22,6 +24,7 @@ Deck card names the library does not know: none.
 - Concepts: Gain resources (ramp) 94%; Destroy outright 27%; Sacrifice my own units 17%; Hidden and revealed information 0%; Look at cards and pick (scry) 2%; Cards cost less 25%; Bring back dead units (revive) 0%; Make a unit weaker (debuff) 2%; Deck contents matter 0%; Immune / can't be targeted 4%
 - Base concepts: Defence gain (+health) 100%; Can't attack (my own unit) 100%; Attack gain (+attack) 100%; Deal damage 94%; Grows again and again 87%; Counts / thresholds 85%; Reuse my cards (shuffle back) 71%; Stats equal to a count 67%; Countdown 65%
 - Units: Unit x1.0; Cheap unit x0.8; Expensive unit x1.0; Strong for its cost x1.0; Tough for its cost x1.0
+- Design markers: none
 - Decks: Midrange SY (Мидрейндж Синдикат) (gwent, 75%); Bounty 9.0 (gwent, 73%); New Acherontia Новая Ахеронтия (gwent, 70%); Lined Pockets: Syndicate crimes are out of pocket (gwent, 68%); СИНДИКАТ ВЕЛИКОЛЕПНОГО tech_xx1 (gwent, 68%); Дани Борсоди OTB Borsodi (gwent, 66%)
 - Factions that fit: Syndicate (gwent, x3.0); Pandora (faeria, x2.8); Abyssian Host (duelyst, x2.7); Shadow Isles (runeterra, x2.5)
 
@@ -29,6 +32,7 @@ Deck card names the library does not know: none.
 - Concepts: My unit fights a chosen enemy 29%; Attack right away 16%; Temporary bonus (this turn only) 16%; Strikes with its defence 12%; A unit levels up on the board 0%; Extra turns or actions 16%; Force enemy units to attack 8%; Strong for its cost 4%; When I play another card 6%; Attack more than once 10%
 - Base concepts: Defence gain (+health) 98%; Attack gain (+attack) 98%; Take less damage (armour) 61%; Absorb one hit (shield, ward) 55%
 - Units: Unit x1.1; Cheap unit x0.9; Expensive unit x1.2; Strong for its cost x1.1; Tough for its cost x1.3
+- Design markers: none
 - Decks: Braum Galio (runeterra, 57%); Miss Fortune Quinn Scouts (runeterra, 56%); LeBlanc Vayne (runeterra, 56%); Udyr Galio (runeterra, 55%); Miss Fortune Quinn Sculptor (runeterra, 54%); Garen Jarvan IV Galio (runeterra, 52%)
 - Factions that fit: Silent (sts1, x2.1)
 
@@ -36,6 +40,7 @@ Deck card names the library does not know: none.
 - Concepts: Having a card in play or hand 32%; Attack gain (+attack) 10%; Cheap unit 2%; Stat gain (+power, +health) 0%; Defence gain (+health) 8%; Search the deck for a card (tutor) 12%; Repeat or double triggers 4%; My unit fights a chosen enemy 4%; Attack right away 0%; Unit 0%
 - Base concepts: Expensive card 80%; Hits my own side too 64%; Neighbours matter (adjacency) 64%
 - Units: Unit x1.0; Cheap unit x1.1; Expensive unit x0.8; Strong for its cost x0.8; Tough for its cost x1.1
+- Design markers: Lasts more than it hits x2.9; Mostly units played from hand x2.5; Many small units x2.2; Weak for its cost x2.1
 - Decks: Pyke Rek'Sai (2) (runeterra, 73%); Pyke Rek'Sai (runeterra, 73%); Pyke Rek'Sai Bloodbait (runeterra, 71%); Lurkers (runeterra, 70%); Pyke Rek'Sai Chronomancer (runeterra, 68%); Defect Lightning (highgroundgaming) (sts1, 62%)
 - Factions that fit: Defect (sts1, x3.0)
 
@@ -43,6 +48,7 @@ Deck card names the library does not know: none.
 - Concepts: Return my unit from the board to hand 31%; Send an enemy unit back (bounce) 4%; Silence (abilities removed) 15%; Neighbours matter (adjacency) 17%; Swap positions 10%; Cheap unit 2%; Turn an enemy into something weaker 2%; Steal from the opponent 8%; Temporary bonus (this turn only) 6%; Act the turn it arrives (haste, rush) 17%
 - Base concepts: Summon units / tokens 81%; Draw cards 81%; Defence gain (+health) 77%; Can't attack (my own unit) 73%; Destroy outright 54%; Terrain / board features 52%
 - Units: Unit x1.0; Cheap unit x1.2; Expensive unit x0.9; Strong for its cost x0.9; Tough for its cost x0.8
+- Design markers: none
 - Decks: Kennen Ahri (2) (runeterra, 82%); Kennen Ahri (5) (runeterra, 77%); Kennen Ahri (runeterra, 76%); Ahri Katarina (runeterra, 75%); Kennen Ahri (3) (runeterra, 73%); Ahri Kennen (runeterra, 63%)
 - Factions that fit: Ionia (runeterra, x2.2)
 
@@ -50,6 +56,7 @@ Deck card names the library does not know: none.
 - Concepts: Hits my own side too 50%; Restore health (heal) 40%; Damage to many at once 14%; Damaged unit matters 33%; When life or health is restored 24%; Small repeatable damage 2%; Bring back dead units (revive) 0%; Terrain / board features 0%; Neighbours matter (adjacency) 7%; Tough for its cost 0%
 - Base concepts: Attack gain (+attack) 90%; Can't attack (my own unit) 79%; Draw cards 71%; Grows again and again 64%; Deal damage 60%
 - Units: Unit x1.0; Cheap unit x1.0; Expensive unit x0.8; Strong for its cost x1.0; Tough for its cost x1.2
+- Design markers: Tough for its cost x2.1
 - Decks: Aggro Ziran (PowInTheKissa) (duelyst, 87%); Aggro Ziran (Ree69) (duelyst, 79%); Aggro Ziran (Kieran) (duelyst, 78%); Aggro Ziran (Niklaren) (duelyst, 77%); Tempo Argeon (Denoobz) (duelyst, 75%); Awoken Hollow (monster_train, 73%)
 - Factions that fit: none; nearest Skellige (gwent, x2.0); Ironclad (sts1, x1.9); Silent (sts1, x1.5)
 
@@ -57,6 +64,7 @@ Deck card names the library does not know: none.
 - Concepts: When a spell is played 75%; Order of my plays matters (combo) 50%; Enough spells played 52%; Grows with what happened this game 2%; Cards cost less 8%; Create new cards 2%; More or faster base resource (ramp) 10%; My spells and abilities get stronger 8%; Draw cards 8%; A unit levels up on the board 0%
 - Base concepts: Attack gain (+attack) 80%; Can't attack (my own unit) 75%
 - Units: Unit x0.8; Cheap unit x0.9; Expensive unit x0.6; Strong for its cost x0.6; Tough for its cost x0.5
+- Design markers: Many spells x3.1
 - Decks: Silent Shiv (gamersdecide) (sts1, 93%); Silent Shiv (highgroundgaming) (sts1, 77%); Watcher Stance Change (highgroundgaming) (sts1, 67%); Defect Claw (fantasywarden) (sts1, 61%); Gemstone Yi (runeterra, 58%); Master Yi Riven (runeterra, 57%)
 - Factions that fit: Songhai Empire (duelyst, x2.6)
 
@@ -64,6 +72,7 @@ Deck card names the library does not know: none.
 - Concepts: Discard my own cards 90%; When a card is discarded 70%; Bring back dead units (revive) 10%; Cheat death (survive lethal) 0%; Draw cards 28%; Position and space 12%; Strong for its cost 2%; Damaged unit matters 8%; Hand size matters 15%; Counts / thresholds 2%
 - Base concepts: Grows again and again 70%; Create new cards 70%; Deal damage 57%
 - Units: Unit x1.0; Cheap unit x1.2; Expensive unit x1.0; Strong for its cost x1.4; Tough for its cost x1.1
+- Design markers: none
 - Decks: Dracula Discard Collector (marvel_snap, 82%); Dracula Morbius Daken (marvel_snap, 78%); Silent Discard (gamersdecide) (sts1, 74%); Draven Sion (runeterra, 65%); Discard Hela (marvel_snap, 63%); Sion Draven (runeterra, 62%)
 - Factions that fit: none; nearest Ranged (into_the_breach, x1.7); Skellige (gwent, x1.6); Silent (sts1, x1.5)
 
@@ -71,6 +80,7 @@ Deck card names the library does not know: none.
 - Concepts: Move my units (reposition) 18%; Move enemy units (push, pull) 21%; Position and space 0%; Act the turn it arrives (haste, rush) 0%; Hand size matters 3%; Neighbours matter (adjacency) 0%; Set stats to a number 5%; Immune / can't be targeted 0%; Can't attack (my own unit) 0%; When a spell is played 3%
 - Base concepts: Expensive card 59%; Small repeatable damage 51%
 - Units: Unit x1.0; Cheap unit x0.8; Expensive unit x0.9; Strong for its cost x1.2; Tough for its cost x1.0
+- Design markers: none
 - Decks: Cerebro 5 Martyr (marvel_snap, 65%); Steel Judoka (into_the_breach, 63%); Rift Walkers (into_the_breach, 62%); Milva and Saskia movement! (gwent, 59%); MOVING FOR THE SAKE OF MOTION (gwent, 58%); Rusting Hulks (into_the_breach, 57%)
 - Factions that fit: none; nearest Ironclad (stormbound, x1.6); Northern Realms (gwent, x1.6); Shadow Isles (runeterra, x1.5)
 
@@ -78,6 +88,7 @@ Deck card names the library does not know: none.
 - Concepts: Absorb one hit (shield, ward) 66%; Take less damage (armour) 82%; Defence gain (+health) 3%; Taunt (enemies must attack it) 0%; Hand size matters 5%; Attack gain (+attack) 3%; Can't attack (my own unit) 0%; Act the turn it arrives (haste, rush) 3%; Stats matter (highest, lowest) 16%; Grows again and again 3%
 - Base concepts: none
 - Units: Unit x1.0; Cheap unit x1.0; Expensive unit x0.9; Strong for its cost x0.9; Tough for its cost x0.9
+- Design markers: none
 - Decks: Shields to win (gwent, 78%); Jarvan IV Shen Oracle (runeterra, 73%); Shields UP (gwent, 71%); Shen Jarvan (runeterra, 70%); Radovid shields! (gwent, 69%); Fiora Shen Jarvan IV (runeterra, 62%)
 - Factions that fit: none; nearest Magick (inscryption, x2.3); Watcher (sts1, x1.8); Lyonar Kingdoms (duelyst, x1.6)
 
@@ -85,6 +96,7 @@ Deck card names the library does not know: none.
 - Concepts: Sacrifice my own units 68%; Double or multiply stats 47%; Bring back dead units (revive) 16%; Cheat death (survive lethal) 8%; Destroys itself / temporary unit 5%; Back to hand when it dies or leaves play 3%; Cheap unit 3%; When I play another card 0%; Stats equal to a count 0%; Attach or merge onto a unit 3%
 - Base concepts: Attack gain (+attack) 97%; Expensive card 89%; Grows again and again 74%; Defence gain (+health) 74%; Summon units / tokens 71%; Having a card in play or hand 58%; Copy cards or units 53%
 - Units: Unit x1.0; Cheap unit x1.1; Expensive unit x1.0; Strong for its cost x1.1; Tough for its cost x1.1
+- Design markers: Many small units x2.8
 - Decks: Radeyah Deathwish Радея Завещания (gwent, 65%); Алое проклятие Жор (gwent, 63%); Phoenix Force Nimrod (marvel_snap, 60%); Deathwish Завещание (gwent, 60%); 11.3 DW Aero Succ - Every Meta Deck (Part 1) (gwent, 58%); DEATHWISH IS BACK (gwent, 57%)
 - Factions that fit: none; nearest Monster (gwent, x1.7); Shadow Isles (runeterra, x1.5); Yellow (faeria, x1.5)
 
@@ -92,6 +104,7 @@ Deck card names the library does not know: none.
 - Concepts: Destroy outright 35%; Board wipe 24%; Expensive card 14%; Hits my own side too 11%; Stat loss (-power, -health) 8%; Banish / exile (gone for good) 8%; Attack set to 0 14%; Set a cost to a fixed number 0%; Expensive unit 0%; Damage to many at once 8%
 - Base concepts: Summon units / tokens 65%; Draw cards 65%; Can't attack (my own unit) 59%; Create new cards 57%; More or faster base resource (ramp) 51%
 - Units: Unit x0.8; Cheap unit x0.6; Expensive unit x1.1; Strong for its cost x0.9; Tough for its cost x0.9
+- Design markers: Few big units x2.8; Expensive spells x2.7; Many spells x2.6; High curve x2.2
 - Decks: Tryndamere Volibear (runeterra, 57%); Tryndamere Trundle (runeterra, 54%); Sera Control Maximus (marvel_snap, 46%); Cerebro 3 (marvel_snap, 46%); Small Random Tournament 01/2020 deck (3) (stormbound, 44%); Trundle Tryndamere (runeterra, 43%)
 - Factions that fit: none; nearest Freljord (runeterra, x1.9); Prime (into_the_breach, x1.7); Red (faeria, x1.7)
 
@@ -99,6 +112,7 @@ Deck card names the library does not know: none.
 - Concepts: Damage over time (poison, burn) 46%; Small repeatable damage 24%; Lifesteal / drain 19%; Clog the opponent's board 0%; Stat gain (+power, +health) 0%; Make a unit weaker (debuff) 8%; Row-wide lasting effects (weather) 0%; Damage to many at once 0%; Keep my units alive (protection) 0%; Counts / thresholds 0%
 - Base concepts: Summon units / tokens 86%; Defence gain (+health) 86%; Attack gain (+attack) 86%; Neighbours matter (adjacency) 86%; Grows again and again 84%; Stats equal to a count 81%; Hits my own side too 81%
 - Units: Unit x1.0; Cheap unit x1.1; Expensive unit x1.0; Strong for its cost x1.2; Tough for its cost x1.2
+- Design markers: none
 - Decks: VAMPIRES ARE BACK (gwent, 76%); Silent Poison (highgroundgaming) (sts1, 75%); Vampires!!! (Tier 1)!!! (gwent, 74%); Blood Scent: Unseen Devotion Vampires (Lerio, August 2024) (gwent, 74%); КровотечениеКарга-Vi_Zet.26.05.2020 (gwent, 72%); Save your MO MMR in 2022! Incubus Vamps is BUSTED! (gwent, 69%)
 - Factions that fit: Bandle City (runeterra, x3.0); Red (faeria, x2.4); Shadowfen (stormbound, x2.3)
 
@@ -106,6 +120,7 @@ Deck card names the library does not know: none.
 - Concepts: Look at cards and pick (scry) 60%; Create new cards 43%; Silence (abilities removed) 20%; Junk cards into a deck or hand 14%; Hidden and revealed information 0%; A unit levels up on the board 0%; Restore health (heal) 11%; Cheap unit 0%; Unit 0%; Variety matters (all different) 0%
 - Base concepts: Draw cards 77%; Cards cost less 69%; Improve cards in hand or deck 63%; Discard my own cards 60%; Deal damage 54%; Grows again and again 51%
 - Units: Unit x1.0; Cheap unit x1.0; Expensive unit x0.9; Strong for its cost x0.8; Tough for its cost x0.9
+- Design markers: none
 - Decks: Zoe Diana (3) (runeterra, 67%); Teemo Caitlyn (runeterra, 57%); Zoe Aphelios (runeterra, 55%); Zoe Diana (2) (runeterra, 53%); Vi Viktor Heimerdinger (runeterra, 52%); Thresh Aurelion Sol (runeterra, 51%)
 - Factions that fit: none; nearest Watcher (sts1, x1.5); Bandle City (runeterra, x1.2); Yellow (faeria, x1.2)
 
@@ -113,6 +128,7 @@ Deck card names the library does not know: none.
 - Concepts: Draw cards 54%; Reuse my cards (shuffle back) 23%; When a card is drawn 26%; Act the turn it arrives (haste, rush) 14%; Hand size matters 9%; Counts / thresholds 3%; Destroys itself / temporary unit 0%; Can't attack (my own unit) 6%; Hidden and revealed information 0%; More or faster base resource (ramp) 0%
 - Base concepts: Attack gain (+attack) 94%; Expensive card 83%; Create new cards 69%; Terrain / board features 51%
 - Units: Unit x0.9; Cheap unit x1.0; Expensive unit x0.8; Strong for its cost x0.6; Tough for its cost x0.8
+- Design markers: Weak for its cost x2.2
 - Decks: SMOrcsilk Keeper [Metashaker #8] (faeria, 58%); Жрицы+Ренфри/Priestesses+Renfri (gwent, 57%); ABUSE NR(АБУЗНЫЙ СЕВЕР) (gwent, 55%); Test your physical ability "T6 Salmon OTK" (faeria, 55%); [Seifer Seasonal Cup] - Big Faerie Enchant (faeria, 47%); IC pirate (stormbound, 45%)
 - Factions that fit: none; nearest Winter (stormbound, x3.1); Magick (inscryption, x2.4); Piltover & Zaun (runeterra, x1.7)
 
@@ -120,6 +136,7 @@ Deck card names the library does not know: none.
 - Concepts: When another unit dies 55%; Counts deaths 74%; Grows with what happened this game 3%; Stats equal to a count 0%; Sacrifice my own units 26%; Hits my own side too 6%; Back to hand when it dies or leaves play 3%; Destroys itself / temporary unit 0%; Bring back dead units (revive) 3%; Mill the opponent's deck 3%
 - Base concepts: Attack gain (+attack) 97%; Grows again and again 84%; Summon units / tokens 74%; Cards cost less 65%; Defence gain (+health) 61%; Destroy outright 52%
 - Units: Unit x1.1; Cheap unit x1.3; Expensive unit x0.9; Strong for its cost x0.9; Tough for its cost x1.2
+- Design markers: Many small units x5.6; Many units x2.1
 - Decks: Deathpool self-destruction (marvel_snap, 45%); Knull Death Bucky (marvel_snap, 44%); Swarm - Heal (faeria, 44%); MC17 - Shamanic Dance Sac (faeria, 42%); YAK ATTACK! (faeria, 42%); Knull Galactus (marvel_snap, 40%)
 - Factions that fit: Shadow Isles (runeterra, x2.8); Abyssian Host (duelyst, x2.6); Silent (sts1, x2.3); Shadowfen (stormbound, x2.2)
 
@@ -127,6 +144,7 @@ Deck card names the library does not know: none.
 - Concepts: Cards cost less 26%; Make a unit stronger (buff) 35%; Expensive card 16%; When a card is drawn 10%; When I play another card 0%; Expensive unit 0%; Transform my card into another 6%; Copy cards or units 0%; Set a cost to a fixed number 0%; Terrain / board features 0%
 - Base concepts: Draw cards 77%; Move my units (reposition) 68%; More or faster base resource (ramp) 65%; Grows again and again 58%; Improve cards in hand or deck 58%; Neighbours matter (adjacency) 58%; Damage to many at once 55%
 - Units: Unit x1.1; Cheap unit x0.8; Expensive unit x1.6; Strong for its cost x1.1; Tough for its cost x1.2
+- Design markers: Expensive spells x3.0; Expensive units x2.9; High curve x2.8
 - Decks: Illusion of Colossi (faeria, 63%); Illusion of Colossi (2) (faeria, 63%); Illusion of Colossi MK2 (faeria, 61%); Negative Tribunal Zabu (marvel_snap, 51%); Negative Tribunal Psylocke (marvel_snap, 48%); Auroras Dreamer (faeria, 47%)
 - Factions that fit: none; nearest Ironclad (sts1, x1.6); Blue (faeria, x1.3); Winter (stormbound, x1.3)
 
@@ -134,6 +152,7 @@ Deck card names the library does not know: none.
 - Concepts: Put into play for free 72%; Give my units or cards to the opponent 72%; Where units can be placed 62%; Copy cards or units 28%; Create new cards 38%; Junk cards into a deck or hand 17%; Set stats to a number 7%; Stats equal to a count 3%; Send an enemy unit back (bounce) 28%; Steal from the opponent 10%
 - Base concepts: Grows again and again 86%; Deal damage 79%; Reuse my cards (shuffle back) 69%; Search the deck for a card (tutor) 62%; Move my units (reposition) 62%; Move enemy units (push, pull) 59%; Silence (abilities removed) 55%; Look at cards and pick (scry) 55%; Neighbours matter (adjacency) 55%; Transform my card into another 52%
 - Units: Unit x1.0; Cheap unit x1.0; Expensive unit x1.1; Strong for its cost x0.7; Tough for its cost x0.7
+- Design markers: Weak for its cost x2.9; Fragile for its cost x2.8; Mostly units played from hand x2.4; Few big units x2.3
 - Decks: Sihil NG Сигилль НГ (gwent, 69%); NG TO PRO (gwent, 69%); Midrange NG (Мидрейндж нильфы) (gwent, 68%); Assimilate (Spy bonus) (gwent, 66%); ASSIMILATE IS THE SHORTCUT TO PRO RANK (gwent, 63%); Новая Ассимка New Assimilate by Peefech (gwent, 62%)
 - Factions that fit: Nilfgaard (gwent, x2.0)
 
@@ -141,6 +160,7 @@ Deck card names the library does not know: none.
 - Concepts: Countdown 81%; Set stats to a number 23%; Stat loss (-power, -health) 12%; Transform my card into another 15%; When I play another card 8%; Upgrade a card 23%; Search the deck for a card (tutor) 27%; Can't attack (my own unit) 12%; Stealth / hidden until it acts 12%; A unit levels up on the board 4%
 - Base concepts: Summon units / tokens 92%; Defence gain (+health) 85%; Draw cards 81%; Create new cards 65%; Attack right away 65%; Having a card in play or hand 58%; Hits my own side too 54%
 - Units: Unit x1.0; Cheap unit x0.9; Expensive unit x1.0; Strong for its cost x1.0; Tough for its cost x1.1
+- Design markers: Busy cards (several effects each) x3.3; Many buildings (stay in play, never move) x2.2
 - Decks: Lissandra Taliyah (runeterra, 57%); BW SH deck (runeterra, 55%); BIG ASPECT (duelyst, 54%); Ciphyron Build (duelyst, 54%); Buildmar (VBCFBHC) (duelyst, 53%); Buildmar (Ree69) (duelyst, 53%)
 - Factions that fit: Winter (stormbound, x4.2)
 
@@ -148,6 +168,7 @@ Deck card names the library does not know: none.
 - Concepts: Summon units / tokens 46%; Position and space 0%; Transform my card into another 4%; Make a unit stronger (buff) 0%; Unit 0%; Quests / objectives with rewards 4%; Aura (ongoing effect on others) 4%; Any damage kills (deathtouch, poisonous) 0%; Expensive unit 0%; Hidden and revealed information 0%
 - Base concepts: Expensive card 79%; Neighbours matter (adjacency) 71%
 - Units: Unit x1.0; Cheap unit x1.0; Expensive unit x1.1; Strong for its cost x0.8; Tough for its cost x0.8
+- Design markers: Mostly summoned units x4.4
 - Decks: Patriots, drones and clones (marvel_snap, 56%); Kinbreads (stormbound, 51%); Kingdom Wars Tournament 09/2018 Winning team's deck (stormbound, 45%); Yellow (stormbound, 44%); Act II Undead starter (inscryption, 44%); Replace-A-Ton (duelyst, 42%)
 - Factions that fit: none; nearest Ranged (into_the_breach, x1.4); Watcher (sts1, x1.3); Swarm (stormbound, x1.2)
 
@@ -155,6 +176,7 @@ Deck card names the library does not know: none.
 - Concepts: Search the deck for a card (tutor) 62%; Banish / exile (gone for good) 38%; Reuse my cards (shuffle back) 33%; Stats matter (highest, lowest) 33%; Row-wide lasting effects (weather) 19%; My spells and abilities get stronger 5%; Make a unit weaker (debuff) 5%; Hidden and revealed information 0%; Put into play for free 5%; Keep my units alive (protection) 5%
 - Base concepts: Summon units / tokens 95%; Defence gain (+health) 95%; Attack gain (+attack) 95%; Deal damage 90%; Grows again and again 81%; Sacrifice my own units 71%; Act the turn it arrives (haste, rush) 67%; Block points that wear off 67%; Transform my card into another 57%; Destroys itself / temporary unit 57%
 - Units: Unit x1.0; Cheap unit x1.2; Expensive unit x0.9; Strong for its cost x1.1; Tough for its cost x1.1
+- Design markers: Expensive spells x2.4; Mostly units played from hand x2.0
 - Decks: White Frost: White Frost-EZ pro rank (gwent, 54%); WILD HUNT FROST BROKEN IN 10.3 (gwent, 53%); Jinx Ekko (runeterra, 46%); PRECISION STRIKE HAS ALMOST TOO MUCH CONTROL (gwent, 46%); Ядо-Монстры Poison Monsters (gwent, 45%); Relicts Реликты (gwent, 45%)
 - Factions that fit: Pandora (faeria, x2.3)
 
@@ -162,6 +184,7 @@ Deck card names the library does not know: none.
 - Concepts: Improve cards in hand or deck 90%; Hand size matters 10%; Defence gain (+health) 10%; Attack gain (+attack) 10%; Heal every turn (regeneration) 14%; Immune / can't be targeted 5%; Block points that wear off 0%; Stat loss (-power, -health) 0%; Cards cost less 5%; Lifesteal / drain 5%
 - Base concepts: Expensive card 100%; Can't attack (my own unit) 90%; Create new cards 76%; Draw cards 76%; Deal damage 76%; Having a card in play or hand 76%; When I play another card 67%; Transform my card into another 62%; Counts / thresholds 57%; Act the turn it arrives (haste, rush) 52%
 - Units: Unit x1.1; Cheap unit x1.1; Expensive unit x1.0; Strong for its cost x1.1; Tough for its cost x1.1
+- Design markers: Mostly units played from hand x3.7
 - Decks: Torque Handbuff is popping off (gwent, 69%); New Handbuff Хэндбафф (gwent, 69%); Torque handbuff! (gwent, 63%); ренфри хендбаф(гайд)/Renfri Handbuff (gwent, 58%); Zombie Galacti Wong (marvel_snap, 46%); Poor Man's Gwent - Season of the Griffin (gwent, 43%)
 - Factions that fit: Magick (inscryption, x3.3)
 
@@ -169,6 +192,7 @@ Deck card names the library does not know: none.
 - Concepts: Cost matters 100%; When a spell is played 56%; Make a unit stronger (buff) 12%; My spells and abilities get stronger 0%; Upgrade a card 25%; Immune / can't be targeted 6%; Expensive card 0%; Damage to several separate targets 0%; More or faster base resource (ramp) 0%; Put into play for free 6%
 - Base concepts: Defence gain (+health) 100%; Attack gain (+attack) 100%; When I play another card 88%; Draw cards 88%; Grows again and again 81%; Deal damage 81%; Destroys itself / temporary unit 56%; Look at cards and pick (scry) 56%
 - Units: Unit x0.9; Cheap unit x0.8; Expensive unit x1.1; Strong for its cost x1.3; Tough for its cost x1.0
+- Design markers: Expensive spells x2.4; Mostly units played from hand x2.3
 - Decks: Lux Jayce (runeterra, 58%); Lux Jayce (4) (runeterra, 47%); Lux Jayce (3) (runeterra, 47%); Jayce Lux (runeterra, 47%); Heimerdinger Jayce Shadows (runeterra, 40%); Jayce Sentinels (runeterra, 40%)
 - Factions that fit: none; nearest Winter (stormbound, x2.0); Science (into_the_breach, x1.9); Undead (inscryption, x1.7)
 
@@ -176,6 +200,7 @@ Deck card names the library does not know: none.
 - Concepts: Variety matters (all different) 64%; Stats equal to a count 29%; Heal every turn (regeneration) 36%; Grows again and again 14%; Defence gain (+health) 0%; When I play another card 36%; Attack gain (+attack) 0%; Put into play for free 7%; Stats matter (highest, lowest) 0%; Counts / thresholds 0%
 - Base concepts: Expensive card 93%; Summon units / tokens 86%; Deal damage 79%; Transform my card into another 71%; Move my units (reposition) 71%; Having a card in play or hand 71%; Small repeatable damage 64%; Create new cards 64%; Act the turn it arrives (haste, rush) 57%; Hits my own side too 57%
 - Units: Unit x1.0; Cheap unit x1.1; Expensive unit x0.9; Strong for its cost x0.9; Tough for its cost x1.1
+- Design markers: Busy cards (several effects each) x2.7
 - Decks: Classic Harmony Классик Гармония (gwent, 73%); Call of Harmony: Scoia'tael Harmony is overtuned in June (gwent, 68%); Schirrú Harmony Ширру Гармония (gwent, 65%); Гармония Симлас Harmony Simlas (gwent, 64%); Накер Гармония GN Harmony (gwent, 48%); Harmony Nekker Fauve 2560 fMMR (gwent, 42%)
 - Factions that fit: Magick (inscryption, x2.9)
 

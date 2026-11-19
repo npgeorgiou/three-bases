@@ -44,10 +44,11 @@ is written in that step's chat, from the rules of the step, and its line here is
 ## Step 3. The faction archetypes
 - `python3 ../../factions/wheel/work/deck_groups_nmf.py` (from `library/cards_db`, about 2.5 minutes, 2 cores) ->
   `factions/wheel/work/deck_groups_nmf.tsv` (per group: decks, games, concepts with the share of decks leaning on each,
-  base concepts, unit numbers, factions that fit), `.md` (the same in plain words, with the stability per number of
+  base concepts, unit numbers, design markers with how many times as often its decks have each, factions that fit), `.md` (the same in plain words, with the stability per number of
   groups, unknown deck cards, concepts in no group, groups no faction fits and factions that fit no group) and `.json`.
-- `python3 ../../factions/wheel/work/deck_groups_nmf.py --groups 25` (a few seconds) -> `deck_groups_nmf_25.tsv`, `.md`,
+- `python3 ../../factions/wheel/work/deck_groups_nmf.py --groups 25` (about 30 seconds) -> `deck_groups_nmf_25.tsv`, `.md`,
   `.json`: the 25 groups Kaptain agreed, the wheel's archetypes (25: the most stable number above 20).
+  `work/step3_groups.py` turns them into the archetypes' concepts and design markers for steps 5 and 6.
 - `python3 factions/wheel/work/make_faction.py "attach" ["discard"]` (from the repo, a second) -> a faction from one or
   two concepts out of the 25 groups, printed and written to `factions/wheel/work/made/<concepts>_25.md`.
 

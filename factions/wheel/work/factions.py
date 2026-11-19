@@ -3,8 +3,9 @@ and library/cards_db/wheel/concept_links.tsv. Every tie is broken by the archety
 alphabetical order, so every run gives the same result.
 6.1 A group of 2 archetypes scores the strong links between concepts of one archetype and concepts of the other (each two
 concepts once), divided by the number of different concepts in the group. Start from the 20 best groups that keep the limits, then swap one group for another while
-that lifts the weakest score (the scores from lowest up compared in order), until no swap does. Limits: no archetype in
-more than 3 factions; no two factions share more than one archetype.
+that lifts the weakest score (the scores from lowest up compared in order), until no swap does. Only groups whose two
+archetypes share at least one concept. Limits: no archetype in more than 3 factions; no two factions share more than one
+archetype; two factions share at most half of their own concepts (6.2).
 6.2 From each engine part, the concept with the most strong links into the other engine parts of the faction's
 archetypes (ties: the higher sum of cards, then more games), and the second best when it has at least half as many; from
 each brick, the concept with the highest score on the faction's list made from its engine concepts (concept_list.py).
@@ -82,10 +83,14 @@ def choose(group, lib, cache={}):
     return cache[group]
 
 
-def ok(groups, extra):
+def ok(groups, extra, lib):
     use = collections.Counter(a for g in groups for a in g) + collections.Counter(extra)
     if use and max(use.values()) > 3: return False
     if any(len(set(extra) & set(g)) > 1 for g in groups): return False
+    mine = set(choose(extra, lib)[1])
+    for g in groups:
+        theirs = set(choose(g, lib)[1])
+        if len(mine & theirs) * 2 > min(len(mine), len(theirs)): return False
     return True
 
 
@@ -95,7 +100,7 @@ def pick(cands, lib):
     chosen = []
     for s, g in cands:
         if len(chosen) == N: break
-        if not ok([x for _, x in chosen], g): continue
+        if not ok([x for _, x in chosen], g, lib): continue
         chosen.append((s, g))
     while True:
         now = sorted(s for s, _ in chosen)
@@ -104,7 +109,7 @@ def pick(cands, lib):
             rest = chosen[:i] + chosen[i + 1:]
             for s, g in cands:
                 if s <= chosen[i][0]: break
-                if (s, g) in chosen or not ok([x for _, x in rest], g): continue
+                if (s, g) in chosen or not ok([x for _, x in rest], g, lib): continue
                 new = sorted([x for x, _ in rest] + [s])
                 if new <= now or (best and new <= best[0]): continue
                 best = (new, i, (s, g))
@@ -118,9 +123,9 @@ def main():
     lib = concept_list.Library()
     archs = sorted(ARCH)
     cands = [(score(g), g) for g in itertools.combinations(archs, 2)]
-    cands = [(round(s, 6), g) for s, g in cands if s > 0]
+    cands = [(round(s, 6), g) for s, g in cands if s > 0 and concepts_of(g[0]) & concepts_of(g[1])]
     cands.sort(key=lambda t: (-t[0], t[1]))
-    print(f'{len(cands)} groups score above 0')
+    print(f'{len(cands)} groups share a concept and score above 0')
     chosen = pick(cands, lib)
     chosen.sort(key=lambda t: (-t[0], t[1]))
     with open(os.path.join(HERE, 'factions.tsv'), 'w', encoding='utf-8') as f:

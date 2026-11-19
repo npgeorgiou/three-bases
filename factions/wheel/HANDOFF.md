@@ -9,9 +9,9 @@ More deck lists (todo.md item 12) and The Elder Scrolls: Legends (item 13) each 
 |---|---|---|
 | 1. Fix the library's concepts | done (19 Nov 2026) | the library's concepts (`cards.sqlite`, `links.sqlite`) |
 | 2. The usable concepts | done (19 Nov 2026): 133 usable, 44 helper, 33 out; return_from_board (73 cards), return_on_leave (76) and hand_deck_swap (5, new over the bar) usable (Claude's) | `work/concepts.tsv`, `work/concepts.md` |
-| 3. The faction archetypes | done (19 Nov 2026): Kaptain agreed the 25 groups by NMF from 1428 decks (`work/deck_groups_nmf.py --groups 25`); `work/make_faction.py` makes a faction from one or two concepts | `work/deck_groups_nmf_25.tsv`, `.md`, `.json` |
+| 3. The faction archetypes | done (19 Nov 2026): Kaptain agreed the 25 groups by NMF from 1428 decks (`work/deck_groups_nmf.py --groups 25`); each carries its design markers; its archetype's concepts are its 10 heaviest and base concepts (about 13), so most pairs share some; `work/make_faction.py` makes a faction from one or two concepts | `work/deck_groups_nmf_25.tsv`, `.md`, `.json`, `work/step3_groups.py` |
 | 4. The links between concepts | done (19 Nov 2026): 14699 concept pairs, 3171 strong links; return_from_board has 101 strong links, return_on_leave 36, hand_deck_swap 3 | `library/cards_db/wheel/concept_links.tsv` |
-| 5. The archetype map | done (19 Nov 2026): 556 edges; 385 of 941 engine part pairs have no strong link (299 of them have weaker links), in `work/archetype_gaps.tsv`; the page places concepts by the 25 groups' decks, shows two ticked archetypes as one faction, and builds new archetypes | `work/archetype_parts.tsv`, `work/archetype_map.tsv`, `factions/wheel-archetypes.html` |
+| 5. The archetype map | done (19 Nov 2026): 1041 edges; 99% of the parts are engines; the page shows design markers (brown), two ticked archetypes as one faction (only when they share a concept), and builds new archetypes | `work/archetype_parts.tsv`, `work/archetype_map.tsv`, `factions/wheel-archetypes.html` |
 | 6. The 20 factions | redo (next): `work/factions.py` (2 archetypes) gets the limits of step 6.1; `work/concept_list.py` written | `work/answer_concepts.tsv` (agreed): per answer its ways |
 | 7. Combos on this board | to do | |
 | 8. Game plan, then keywords | to do | |
@@ -25,8 +25,8 @@ More deck lists (todo.md item 12) and The Elder Scrolls: Legends (item 13) each 
   deck archetypes: what a pair of factions plays together (step 7).
 - Runeterra's spell mana rule is written (`read/runeterra/game_rules.jsonl`) but not built into `cards.sqlite` yet.
 - `work/factions.py` and `work/concept_list.py` work (about 6 minutes; `concept_list.Library` scores a set of concepts
-  in under a second). `factions.py` still lacks the limit of step 6.1 that two factions share at most half of
-  their own concepts. Its last output (`work/factions.tsv`) is from the deck archetypes and is remade.
+  in under a second). `factions.py` keeps the limits of step 6.1. Open before it runs: how many own concepts a
+  faction keeps (a pair of archetypes holds about 24 that real cards link; a real faction uses about 21, extras included). Its last output (`work/factions.tsv`) is from the deck archetypes and is remade.
 - Step 2 left: rerun `work/concept_catch.py` from `library/cards_db` only after a change to the concepts or verdicts.
   Counts moved after step 1's fixes (count_payoff 655 -> 132, condition_count 17 -> 531, permanent_growth 776 -> 584,
   stat_gain 149 -> 59, ping 573 -> 394): steps 3-6 use the new counts.

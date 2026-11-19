@@ -68,7 +68,8 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
 3. **Its archetypes and blind spots** (taken from the wheel). Its archetypes: the 2 archetypes it is made of, each
    of engines (concepts that work through links: my units die -> my units gain when an ally dies) and bricks
    (concepts that work alone: disruption). They are its character, not all its cards use: its cards use its
-   list a lot (START_DESIGN-2, "How cards fit together"). Its blind spot (step 2.7) plus any other things the wheel says it never has; its cards never make up for them,
+   list a lot (START_DESIGN-2, "How cards fit together"). Its design markers (the wheel's step 3: "many spells",
+   "cheap units", "low curve") set its cost curve, its spell share and its unit numbers. Its blind spot (step 2.7) plus any other things the wheel says it never has; its cards never make up for them,
    it plays around them. A blind spot is never one of the two things every faction needs (hold dots, remove enemies),
    only one way of doing them: "no kill spells" is a blind spot, "no removal" is not.
 4. **How it differs from each other faction** (from the wheel; check it with the closest factions on the page). Kaptain's example: a swarm that fills the front rows with many cheap weak

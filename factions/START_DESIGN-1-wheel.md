@@ -14,6 +14,9 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   then draw a card" is two instances: one of damage, one of drawing.
 - **Card link**: two real cards of one game where an effect of one sets off or feeds an effect of the other
   (`links.sqlite`). Each link keeps which effect of each card made it, so it counts only for those effects' concepts.
+- **Design marker**: what an archetype's decks are like as a whole, read from their cards' type, cost, stats and text
+  against their game's decks ("many spells", "cheap units", "low curve"; step 3). Never a concept: it takes no place of
+  a faction, links to nothing, and goes to the later steps beside the faction's concepts.
 - **Archetype** (faction archetype): a way to play that decks of 2+ games lean on, found by NMF (step 3); real
   factions are never copied, only measured against it. None is tied to one game's card types, resources, keywords or multiplayer. One
   archetype can be played with different concepts, so it is made of parts, each a set of alternative concepts that can do
@@ -112,9 +115,9 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    `work/concepts.md` shows the kinds in plain words for Kaptain.
 3. **The faction archetypes** (`work/deck_groups_nmf.py` -> `work/deck_groups_nmf.tsv`, `.md`, `.json`).
    The ways to play that decks lean on; they become our factions' archetypes. Real factions are never copied.
-   1. Concepts: the usable concepts (step 2); a card counts each concept once (Claude's). Five unit concepts are added,
-      each against the card's game: unit, cheap unit, expensive unit, strong for its cost, tough for its cost (above
-      the game's straight line of strength or defence by cost, Claude's).
+   1. Concepts: the usable concepts (step 2); a card counts each concept once (Claude's). Five unit measures are added
+      to the NMF's input only, each against the card's game: unit, cheap unit, expensive unit, strong for its cost,
+      tough for its cost (above the game's straight line of strength or defence by cost, Claude's).
    2. Scores: every deck of `decks.tsv` (the whole deck, all its cards, neutrals and staples too, never split by
       faction) and every real faction (43; Monster Train's clans are not measured), per concept: the log-odds ratio with a prior (Monroe et al.
       2008) against all the cards of its game (Claude's), as a z-score; above 1.96 the deck leans on it. Deck cards the
@@ -128,7 +131,21 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    4. Per group: its 10 heaviest concepts, each with the share of its decks that lean on it; its base concepts (more
       than half of its decks have them, more often than their game's decks, Claude's), like "Deal damage"; its unit
       numbers against their games; a group whose decks are 80% or more from one game is marked (Claude's).
-   5. The real factions are never rows of the NMF. A faction fits its best 2 groups when its share of their concepts
+      Its archetype's concepts (`work/step3_groups.py`): its 10 heaviest and its base concepts, without the five unit
+      measures and without the concepts more than half of the 25 archetypes hold ("Attack gain": every faction has it
+      anyway; Claude's). Two archetypes then share concepts, which shows what joins them.
+   5. Per group, its design markers. Each is one number per deck against its game's decks: a deck has the marker when
+      its number is in the top quarter of its game's decks, its mirror when in the bottom quarter; a group carries a
+      marker when its decks have it at least twice as often as their games' decks (both Claude's). The markers, each
+      with its mirror: many units / many spells (share of units, of spells); many buildings, cards that stay in play
+      and never move (Immobile here; no mirror: almost every deck has few); low curve / high curve (the deck's average
+      cost); cheap units / expensive units; cheap spells / expensive spells; few big units / many small units (how many
+      units and their cost); strong for its cost / weak for its cost; tough for its cost / fragile for its cost (the
+      units against their game's straight line of strength or defence by cost); hits more than it lasts / lasts more
+      than it hits (strength against defence); plain cards / busy cards (effects per card); mostly summoned units /
+      mostly units played from hand (cards that summon against its unit cards). "Many spells", "few big units" and
+      "mostly summoned units" are Kaptain's, the rest Claude's.
+   6. The real factions are never rows of the NMF. A faction fits its best 2 groups when its share of their concepts
       is at least twice its game's average (Claude's). The groups no faction fits, the factions that fit no group and
       the concepts in no group are listed.
    `work/make_faction.py "<concept>" ["<concept>"]` makes a faction from one or
@@ -148,7 +165,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    concepts of two engine parts of an archetype, an edge with the step 4 numbers: `cards` (how much more often than
    chance real cards link them), `games`, `level`, the top link text and one real card pair. An edge is marked weak when
    more than half of its card links are about hitting the player (no player health here), or when only real decks join
-   it (no card pair) (the half is Claude's). Bricks are nodes with no edges. Two engine parts whose concepts real cards never link are shown to Kaptain with the numbers. On the page
+   it (no card pair) (the half is Claude's). Bricks are nodes with no edges; an archetype's design markers are shown beside it, brown, and are no nodes. Two engine parts whose concepts real cards never link are shown to Kaptain with the numbers. On the page
    every concept of step 3 sits at a fixed place, laid out once from the 25 groups of real decks: two concepts sit close
    when the same groups' decks lean on them more than all decks do (t-SNE, seeded; Claude's). Kaptain ticks one or more
    archetypes to light their concepts and edges; between ticked archetypes the page draws every real link from a concept
@@ -166,7 +183,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       concepts of the other, divided by the number of different concepts in the group (so a big archetype does not
       win by its size). The 20 groups are
       picked so the weakest faction is as strong as possible: start from the 20 best groups that keep the limits, then
-      swap one group for another while that lifts the weakest score, until no swap does. Limits: no archetype in more
+      swap one group for another while that lifts the weakest score, until no swap does. Only two archetypes that share
+      at least one concept make a faction: the shared concept joins them. Limits: no archetype in more
       than 3 factions; no two factions play the same 2 archetypes; two factions share at most half of their own
       concepts (6.2). An archetype may stay unused.
       **Kaptain agrees the 20 factions' archetypes**, seeing per faction its archetypes in plain words, its concepts
@@ -175,7 +193,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       engine parts of its archetypes (ties: the higher sum of `cards`, then more games), and the second best when it
       has at least half as many; from each brick, the concept with the highest score on the faction's list made from
       its engine concepts. Example: Reanimator plays "sacrifice my units" and "bring dead units back", which real cards
-      link, not all 11 concepts of its two parts.
+      link, not all 11 concepts of its two parts. Its design markers are those of its two archetypes.
    3. **A real theme** (World War I artillery, the Zulu regiments), written for its archetypes; the 20 themes all
       differ. The theme only breaks ties between concepts that score within 0.1 of each other.
    4. **Its list**: every concept with 5+ cards (usable, helpers and out) except its own concepts, each with its score.
@@ -204,7 +222,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    together (one discards, the other gains from discards: Madness); the 190 pairs should cover many of them.
    `wheel/combos.tsv` has a test column that playtests fill.
 8. **Game plan, then keywords** (`wheel/plans.tsv`, `wheel/keywords.tsv`).
-   1. Each faction's game plan: how it takes and holds 2 bases over a few turns with its synergies, walked through on
+   1. Each faction's game plan: how it takes and holds 2 bases over a few turns with its synergies and design markers, walked through on
       the board (which cell, what happens, what the enemy does with his one action between).
    2. The keywords of all 20 factions are made together, as one pool, on this game's own things (dots and front cells,
       rows, columns, lanes, the 3x3 camp, unit size, supply per lane, carry-over, round start and end, one action per
