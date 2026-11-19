@@ -3,14 +3,14 @@ python3 factions/wheel/work/kernel_factions.py  (from the repo, a few seconds) -
 1. Identity: what the faction DOES, in plain words (IDENTITIES, Claude's), made of families of library/concept_tree.txt.
    Its kernel: their usable concepts that are effects (never a trigger, a condition, or a drawback but for Eats its own)
    and that MIN_LEAN+ decks lean on, at most KERNEL. A concept two identities want goes to the one whose other kernel
-   concepts' decks hold it more. A kernel under MIN_KERNEL concepts takes one more family: the one whose concepts its
-   decks hold most (Claude's).
+   concepts' decks hold it more. A kernel under MIN_KERNEL concepts is marked thin: Kaptain widens it.
 2. Engines come from card links: the usable concepts (triggers and conditions too) with a strong card link (step 4) to 2+ kernel
    concepts, at most ENGINES, ranked by its kernel links times the share of its links that go to this kernel (so a
    concept real cards link to everything does not join every faction, nor a rare one with two links). Bricks come from decks: the concepts the kernel's decks hold more
    often than their game's cards (share of cards against the game's share, per game with MIN_DECKS+ of its decks,
    averaged; DECK_LIFT+), held by HELD+ of those decks, that no strong card link joins to the kernel (another faction's kernel concepts too: support), the most first,
-   until OWN concepts.
+   until OWN concepts. A brick more than MAX_BRICK factions would take is dropped from all (too common to tell them
+   apart), and the rest refilled. Each engine shows the real card pair behind its strongest link to the kernel.
    A concept is an engine when real cards link it to another of the faction's concepts, else a brick.
 3. A faction needs an engine pair (two of its concepts real cards link); one with none is marked.
 4. Different enough: two factions share at most half of their concepts.
@@ -18,13 +18,13 @@ python3 factions/wheel/work/kernel_factions.py  (from the repo, a few seconds) -
    own concepts, plus 3 for each of one's kernel concepts the other's decks hold DECK_LIFT times as often as their games
    (Claude's). Each partner gets a line on how it plays: its strongest card link, or what its decks hold.
 6. The answers (work/answer_concepts.tsv): per question the ways its concepts give, and what is missing."""
-import csv, json, os, sys
+import collections, csv, json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, '..', '..', '..')
 sys.path.insert(0, HERE)
 import step3_groups
 OWN, KERNEL, MIN_KERNEL, MIN_LEAN, ENGINES, MIN_DECKS = 12, 6, 4, 10, 4, 3  # Claude's
-DECK_LIFT, HELD, PARTNERS = 1.5, 0.25, 5                              # Claude's; 5 partners: Kaptain
+DECK_LIFT, HELD, MAX_BRICK, PARTNERS = 1.5, 0.25, 3, 5                              # Claude's; 5 partners: Kaptain
 IDENTITIES = [  # (name, what it does, families or concepts of the concept tree); Claude's
     ("Can't be broken", 'its units do not die', ['protection', 'heal', 'defence_gain']),
     ('Kills brutally', 'removes enemy units, many and hard', ['removal', 'damage']),
@@ -96,16 +96,9 @@ for x in fac:  # a shared concept goes to the identity whose other concepts' dec
             if y is x or c not in y['cand'] or c not in x['cand']: continue
             mine = deck_lift(decks_of(x['cand'] - {c})).get(c, 0); theirs = deck_lift(decks_of(y['cand'] - {c})).get(c, 0)
             (x if theirs > mine else y)['cand'].discard(c)
-families = [k for k, ps in tree.items() if facet.get(k) == 'effect' and any(p in ('helps_me', 'hurts_enemy') for p in ps)]
-taken = set().union(*(x['cand'] for x in fac))
 for x in fac:
-    if len(x['cand']) < MIN_KERNEL:
-        lift = deck_lift(decks_of(x['cand']))
-        best = max((f for f in families if f not in x['fams'] and candidates([f], x['name']) - taken),
-                   key=lambda f: max(lift.get(c, 0) for c in candidates([f], x['name']) - taken))
-        new = candidates([best], x['name']) - taken
-        x['fams'].append(best); x['cand'] |= new; taken |= new; x['widened'] = best
     x['kernel'] = sorted(x['cand'], key=lambda c: -lean[c])[:KERNEL]
+    x['thin'] = len(x['kernel']) < MIN_KERNEL
 kernels = set().union(*(set(x['kernel']) for x in fac))
 for x in fac:
     k = x['kernel']
@@ -114,13 +107,31 @@ for x in fac:
     x['decks'] = decks_of(k)
     lift = deck_lift(x['decks']); x['lift'] = lift
     held = {c: sum(decks[n]['counts'].get(c, 0) > 0 for n in x['decks']) / max(1, len(x['decks'])) for c in lift}
-    bricks = [c for c in sorted(lift, key=lambda c: (-lift[c], c)) if lift[c] >= DECK_LIFT and held[c] >= HELD and c not in k and c not in eng
-              and c in usable and not any(linked(c, q) for q in k)]
+    x['brick_pool'] = [c for c in sorted(lift, key=lambda c: (-lift[c], c)) if lift[c] >= DECK_LIFT and held[c] >= HELD and c not in k
+                       and c not in eng and c in usable and not any(linked(c, q) for q in k)]
     x['from_links'] = eng
-    x['from_decks'] = bricks[:max(0, OWN - len(k) - len(eng))]
-    x['concepts'] = k + eng + x['from_decks']
+common = set()
+while True:  # a brick 4+ factions would take is too common to tell them apart: dropped from all, the rest refilled
+    for x in fac:
+        x['from_decks'] = [c for c in x['brick_pool'] if c not in common][:max(0, OWN - len(x['kernel']) - len(x['from_links']))]
+    count = collections.Counter(c for x in fac for c in x['from_decks'])
+    more = {c for c, n in count.items() if n > MAX_BRICK}
+    if not more: break
+    common |= more
+for x in fac:
+    x['concepts'] = x['kernel'] + x['from_links'] + x['from_decks']
     x['engines'] = [c for c in x['concepts'] if any(linked(c, o) for o in x['concepts'])]
 
+sys.path.insert(0, os.path.join(ROOT, 'library', 'cards_db'))
+here = os.getcwd(); os.chdir(os.path.join(ROOT, 'library', 'cards_db'))
+import archetype_map
+wanted = {frozenset((c, q)) for x in fac for c in x['from_links'] for q in x['kernel'] if linked(c, q)}
+pair_of = archetype_map.card_pairs(wanted)[0]
+os.chdir(here)
+def behind(c, k):
+    """the real card pair behind c's strongest link to the kernel k"""
+    q = max((q for q in k if linked(c, q)), key=lambda q: strong[frozenset((c, q))][0])
+    return plain[q], pair_of.get((frozenset((c, q)), ''), 'no card pair')
 ways = {}
 for r in csv.DictReader(open(os.path.join(HERE, 'answer_concepts.tsv'), encoding='utf-8'), delimiter='\t'):
     if r['answer'] == 'blind': continue
@@ -157,13 +168,17 @@ out = ['# Ten whole factions from what they do (an experiment; made by kernel_fa
        'Kernel: the effects that do what the faction does. Engines: concepts real cards link to 2+ kernel concepts. Bricks: '
        f'what its decks hold {DECK_LIFT:g}x+ as often as their games, with no card link to the kernel. About {OWN} concepts. '
        f"Partners: its {PARTNERS} strongest pairs (card links between their concepts, plus 3 per kernel concept the other's decks hold "
-       f'{DECK_LIFT:g}x+).', '']
+       f'{DECK_LIFT:g}x+). Bricks taken by more than {MAX_BRICK} factions are dropped from all: '
+       + (', '.join(plain[c] for c in sorted(common)) or 'none') + '.', '']
 partners = {i: sorted((j for j in range(len(fac)) if j != i), key=lambda j: -strengths[(i, j)][0])[:PARTNERS] for i in range(len(fac))}
 for i, x in enumerate(fac):
     out.append(f"## {x['name']}: {x['does']} ({len(x['decks'])} decks lean on its kernel)")
-    if x.get('widened'): out.append(f"- Kernel was thin: widened with {x['widened']}")
+    if x['thin']: out.append(f"- **Thin kernel: under {MIN_KERNEL} concepts. Kaptain widens it.**")
     out.append('- Kernel: ' + '; '.join(f'{plain[c]} ({lean[c]} decks)' for c in x['kernel']))
-    out.append('- From card links: ' + ('; '.join(f"{plain.get(c, c)} ({sum(linked(c, q) for q in x['kernel'])} kernel links)" for c in x['from_links']) or 'nothing'))
+    out.append('- From card links:' + ('' if x['from_links'] else ' nothing'))
+    for c in x['from_links']:
+        q, pair = behind(c, x['kernel'])
+        out.append(f"  - {plain[c]} ({sum(linked(c, o) for o in x['kernel'])} kernel links; strongest with {q}: {pair})")
     out.append('- From decks: ' + ('; '.join(f"{plain.get(c, c)} x{x['lift'][c]:.1f}" for c in x['from_decks']) or 'nothing'))
     out.append(f"- {len(x['concepts'])} concepts. Engines: " + ('; '.join(plain.get(c, c) for c in x['engines']) or '**none: no engine pair**')
                + '. Bricks: ' + ('; '.join(plain.get(c, c) for c in x['concepts'] if c not in x['engines']) or 'none'))
