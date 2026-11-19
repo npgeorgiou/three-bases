@@ -1,6 +1,6 @@
 # Three Bases — rules for Claude
 
-Kaptain's browser card game. Work on the clone and commit to `main`; push only when Kaptain asks.
+Kaptain's browser card game. Work on the clone; commit to `main` and push after every change.
 
 ## How to talk to Kaptain
 - Short sentences. Plain everyday words. Say what happened and what you need, nothing else.
@@ -78,7 +78,7 @@ When Kaptain agrees a plan or a decision, rewrite every doc it touches in that s
 - Speed and AI checks stay short: about a minute each at most (e.g. 10 fixed positions, never whole Benchmark games at full depth). Before any run longer than 2 minutes, tell Kaptain how long it will take and wait for his OK.
 - After a code change: `python3 tools/build.py` (joins parts, syntax-checks, warns about oversized files), then `node tools/simtest.js` (headless games; prints a hash). A refactor must keep the hash; a rules change may change it, then check the changed behaviour with one short targeted test. UI changes: `node tools/smoke.js` (page loads without script errors). Paste no command output into replies.
 - When a push or rebase meets another chat's commit on the same file, read both versions, merge the good parts of each and tell Kaptain what came from which; never keep one side whole.
-- Commit; push only when Kaptain asks. Give Kaptain only the changed built HTML files (game, scenarios, AI lab) as downloads, never text files (he reads those on GitHub). Never publish anything as an artifact.
+- Commit and push to `main` after every change. Give Kaptain only the changed built HTML files (game, scenarios, AI lab) as downloads, never text files (he reads those on GitHub). Never publish anything as an artifact.
 - Summary updates are done in one pass after the current work: while game changes are not yet written into summary/, end every reply with a reminder that Kaptain should tell Claude to save the summary (= write those changes into summary/ and push). No unsaved changes, no reminder.
 
 ## Keeping the structure (check before every commit)

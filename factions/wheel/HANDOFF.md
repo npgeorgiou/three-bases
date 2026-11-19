@@ -7,8 +7,8 @@ One chat does one step; at its end, mark the step done here and say what it left
 | step | state | what it made |
 |---|---|---|
 | 1. Fix the library's concepts | done (19 Nov 2026) | concepts split by whom a row acts on; "Skill" removed; "Return my unit to hand" split into return_from_board and return_on_leave; the tag check (`work/tag_check.py`, two readings, 248 cards, fixes in `flat.py` with cases wc40-wc65, lk403); `check_all.py` and `links.py` rebuilt; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
-| 2. The usable concepts | **next**: redo (the new concepts return_from_board and return_on_leave get their kind) | `work/concepts.tsv`, `work/concepts.md` |
-| 3. The faction archetypes | to do (`work/faction_archetypes.py` to write) | `deck_archetypes.tsv` and `.md`: the deck archetypes' parts, for step 8 (checked once first, `PIPELINE.md` step 8) |
+| 2. The usable concepts | done (19 Nov 2026): 126 usable, 47 helper, 37 out; return_from_board (73 cards), return_on_leave (76) and hand_deck_swap (5, new over the bar) usable (Claude's) | `work/concepts.tsv`, `work/concepts.md` |
+| 3. The faction archetypes | **next** (`work/faction_archetypes.py` to write) | `deck_archetypes.tsv` and `.md`: the deck archetypes' parts, for step 8 (checked once first, `PIPELINE.md` step 8) |
 | 4. The radii and how they work together | redo: the new concepts of step 1 get a radius (Kaptain agrees), then `axes.py` | `work/radii.tsv`, `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` |
 | 5. The links between concepts | redo | `library/cards_db/wheel/concept_links.tsv` |
 | 6. The archetype map | redo with the faction archetypes | `work/archetype_map.tsv`, `factions/wheel-archetypes.html` |
@@ -36,8 +36,9 @@ One chat does one step; at its end, mark the step done here and say what it left
   strong at the same things; then a faction plays 1) or a smaller piece (concepts the same real factions of 2+ games
   are strong in together, linked or not, so bricks belong; then a faction plays 2, as step 7 says)? The pieces would
   be cut by script, the cut-offs agreed with Kaptain.
-- Open with Kaptain: the concept "First strike" is out by a rule Kaptain removed ("strike first is not a plan");
-  ask whether it becomes usable in step 2.
+- Step 2 left: rerun `work/concept_catch.py` from `library/cards_db` only after a change to the concepts or verdicts.
+  Counts moved after step 1's fixes (count_payoff 655 -> 132, condition_count 17 -> 531, permanent_growth 776 -> 584,
+  stat_gain 149 -> 59, ping 573 -> 394): steps 3-7 use the new counts.
 - Counts whose rows don't say what they count are counted nowhere: 189 instances of "grows with what happened" and 36
   of "counts and thresholds" (`axes.py` prints them). Most are counts of enemy units or of a keyword the rows don't name.
 - The faction check (a finished faction's cards against its archetypes' concepts and extras) and
@@ -111,6 +112,7 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
   special part works by whether I hold the lane's base, helps take and keep a lane, never wins harder in a won lane;
   nine kinds, mixed in each faction (START_DESIGN-2, "What a faction has").
 - Countdowns very sparingly.
+- First strike stays out: it does not belong to our game rules (19 Nov 2026).
 - A lane never holds more than 12 supply (summary/05).
 - Reading cards for one faction's chat: at most 100 (its steps 6 and 7), logged in `factions/read-cards.tsv`, never
   read twice. The wheel reads at most 500 cards in all, by a low-cost model, only where a card's rows can't answer.
