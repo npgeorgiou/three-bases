@@ -154,7 +154,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    archetypes to light their concepts and edges; between ticked archetypes the page draws every real link from a concept
    of one to a concept of another (any part), to see whether archetypes fit together in one faction. Two ticked
    archetypes are also shown as one faction the way step 6 makes it: its score (6.1), its rank among all pairs, its
-   concepts and its synergies with their real card pairs. Building an archetype: Kaptain clicks concepts; the page shows
+   concepts and its synergies with their real card pairs; three or more ticked: every pair of them by score. Building an
+   archetype: Kaptain clicks concepts (or adds the ticked archetypes' concepts); the page shows
    how many real decks lean on at least half of them (the half is Claude's) and in how many games, what else those
    decks lean on, which real factions fit it (step 3's rule: its cards hold the concepts at least twice as much as its
    game's cards) and which agreed archetypes are closest.
