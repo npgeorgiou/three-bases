@@ -7,18 +7,18 @@ python3 ../../factions/wheel/work/concept_catch.py -> factions/wheel/work/concep
 concepts.md (the same by kind in plain words: the concept tree's name, cards, games; for Kaptain)."""
 import collections, csv, os, sqlite3, sys, textwrap
 sys.path.insert(0, os.getcwd())
-import axes, faction_asks
+import concept_tags, faction_asks
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 c = sqlite3.connect('cards.sqlite')
 games = sorted({g for (g,) in c.execute('select distinct game from card')})
-con, pools, _ = axes.tag(c, faction_asks.Ctx(c, games, None, {}), games)
+con, pools, _ = concept_tags.tag(c, faction_asks.Ctx(c, games, None, {}), games)
 real = {i: g for i, g in c.execute('select id, game from card where coalesce(is_keyword,0)=0 and coalesce(is_stub,0)=0')}
 
 cards = collections.defaultdict(list)  # concept -> its real cards
 for i, g in real.items():
     for k in con[i]:
-        if not k.endswith('*') and '@' not in k: cards[k].append(i)  # the measure's own names (axes.py) are no concepts
+        if not k.endswith('*'): cards[k].append(i)  # the unit numbers of concept_tags.py are no concepts
 cards = {k: v for k, v in cards.items() if len(v) >= 5}
 
 kids = collections.defaultdict(set)  # concept -> the concepts under it in the tree, at any depth

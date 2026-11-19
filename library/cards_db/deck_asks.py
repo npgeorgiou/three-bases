@@ -8,7 +8,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 
 
 def decks(x, game):
-    """every deck of one game: (name, set of player card ids), parsed the way axes.py parses them"""
+    """every deck of one game: (name, set of player card ids), parsed by deck_analysis.parse_deck"""
     if not hasattr(x, '_decks'): x._decks = {}
     if game not in x._decks:
         pool = x.pool(game); out = []

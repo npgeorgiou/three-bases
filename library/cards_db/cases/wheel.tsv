@@ -1,10 +1,8 @@
 id	game	from	to	a	b	expect	source
-w01	marvel_snap	Ghost Rider	Vibro-Shock Gauntlets	revive	supply	none	Kaptain 15 Nov 2026: the link is made by the +2 Power, never by the Energy
-w02	marvel_snap	Ghost Rider	Vibro-Shock Gauntlets	back	supply	none	the same on the radii
+w01	marvel_snap	Ghost Rider	Vibro-Shock Gauntlets	revive	base_resource_gain	none	Kaptain 15 Nov 2026: the link is made by the +2 Power, never by the Energy
+w02	marvel_snap	Ghost Rider	Vibro-Shock Gauntlets	revive	resource_gain	none	the same family
 w03	sts1	Ritual Dagger	Nunchaku	onkill	*	none	Kaptain 15 Nov 2026: Ritual Dagger counts as an Attack, never as "gains when it kills"
-w04	sts1	Ritual Dagger	Nunchaku	kills	*	none	the same on the radii
 w05	monster_train	Mine Collapse	Kindle	kill	*	none	Kaptain 15 Nov 2026: the energy links them, not the kill
-w06	monster_train	Mine Collapse	Kindle	kills	*	none	the same on the radii
 w07	duelyst	Erratic Raptyr	Grailmaster	revive	allyplay	count	the link is made by a keyword's own effect: the keyword counts
 w08	faeria	Boulder Thrower	Blood Obelisk	reach	deathfeed	count	the same family
 w09	gwent	Mage Infiltrator	Thanedd Turncoat	enemyside	ping	count	the same family

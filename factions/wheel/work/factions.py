@@ -1,16 +1,15 @@
-"""The 20 factions (factions/START_DESIGN-1-wheel.md step 7, 7.1 and 7.2), from work/archetype_parts.tsv (step 6),
-work/radii.tsv and library/cards_db/wheel/concept_links.tsv. Every tie is broken by the archetype or concept key in
+"""The 20 factions (factions/START_DESIGN-1-wheel.md step 6, 6.1 and 6.2), from work/archetype_parts.tsv (step 5),
+and library/cards_db/wheel/concept_links.tsv. Every tie is broken by the archetype or concept key in
 alphabetical order, so every run gives the same result.
-7.1 A group of 2 archetypes scores the strong links between concepts of one archetype and concepts of the other (each two
+6.1 A group of 2 archetypes scores the strong links between concepts of one archetype and concepts of the other (each two
 concepts once), divided by the number of different concepts in the group. Start from the 20 best groups that keep the limits, then swap one group for another while
 that lifts the weakest score (the scores from lowest up compared in order), until no swap does. Limits: no archetype in
-more than 3 factions; no two factions share more than one archetype; each faction's main radius (the radius holding most
-of its concepts, 7.2) differs from every other faction's; only when 20 groups can't keep that is it dropped.
-7.2 From each engine part, the concept with the most strong links into the other engine parts of the faction's
+more than 3 factions; no two factions share more than one archetype.
+6.2 From each engine part, the concept with the most strong links into the other engine parts of the faction's
 archetypes (ties: the higher sum of cards, then more games), and the second best when it has at least half as many; from
 each brick, the concept with the highest score on the faction's list made from its engine concepts (concept_list.py).
 Usage (from library/cards_db): python3 ../../factions/wheel/work/factions.py -> factions/wheel/work/factions.tsv
-(letter, archetypes, concepts, concepts per part, main radius, score, synergies); it prints the 20 and stops after 7.2."""
+(letter, archetypes, score, concepts, concepts per part, synergies); it prints the 20 and stops after 6.2."""
 import collections, csv, itertools, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -42,11 +41,6 @@ def strong(a, b):
     return bool(r) and a != b and (num(r['cards']) >= 1.2 or (num(r['rare']) >= 3 and num(r['level']) >= 1))
 
 
-RADII = collections.defaultdict(set)  # concept -> its radii (concepts counted by what they count are on none)
-for r in tsv(os.path.join(HERE, 'radii.tsv')):
-    if not r['radius'].startswith('('): RADII[r['concept']].add(r['radius'])
-
-
 def concepts_of(arch): return {c for _, _, cs in ARCH[arch] for c in cs}
 
 
@@ -61,8 +55,8 @@ def score(group):
     return len(pairs) / len(set().union(*sets))
 
 
-def choose(group, lib, cache={}, radius_only=False):
-    """7.2: per part of the group's archetypes, the concepts the faction plays"""
+def choose(group, lib, cache={}):
+    """6.2: per part of the group's archetypes, the concepts the faction plays"""
     if group in cache: return cache[group]
     engines = [(a, p, cs) for a in group for p, k, cs in ARCH[a] if k == 'engine']
     picked = []
@@ -78,19 +72,13 @@ def choose(group, lib, cache={}, radius_only=False):
         picked.append((a, p, 'engine', got))
     own = {c for *_, got in picked for c in got}
     bricks = [(a, p, cs) for a in group for p, k, cs in ARCH[a] if k == 'brick']
-    if radius_only:  # the main radius alone, when the bricks' concepts can't change it
-        count = collections.Counter(r for c in own for r in RADII[c])
-        top = sorted(count.items(), key=lambda t: (-t[1], t[0])) + [('', 0), ('', 0)]
-        if top[0][1] - top[1][1] > len(bricks): return None, None, top[0][0]
     if bricks:
         sc = lib.scores(own, {c for *_, cs in bricks for c in cs})
         for a, p, cs in bricks:
             best = sorted(cs, key=lambda c: (c not in own, -sc.get(c, (0,))[0], c))[0]
             picked.append((a, p, 'brick', [best]))
     own = sorted({c for *_, got in picked for c in got})
-    count = collections.Counter(r for c in own for r in RADII[c])
-    main = sorted(count.items(), key=lambda t: (-t[1], t[0]))[0][0] if count else ''
-    cache[group] = (picked, own, main)
+    cache[group] = (picked, own)
     return cache[group]
 
 
@@ -102,17 +90,13 @@ def ok(groups, extra):
 
 
 def pick(cands, lib):
-    """the 20 best groups that keep the limits, as many main radii different as there can be; then swaps that lift the
-    weakest score (the scores from lowest up compared in order) and keep as many different main radii"""
-    radius = lambda g: choose(g, lib, radius_only=True)[2]
+    """the 20 best groups that keep the limits; then swaps that lift the weakest score (the scores from lowest up
+    compared in order)"""
     chosen = []
-    for distinct in (True, False):
-        for s, g in cands:
-            if len(chosen) == N: break
-            if (s, g) in chosen or not ok([x for _, x in chosen], g): continue
-            if distinct and radius(g) in {radius(x) for _, x in chosen}: continue
-            chosen.append((s, g))
-    kinds = len({radius(x) for _, x in chosen})
+    for s, g in cands:
+        if len(chosen) == N: break
+        if not ok([x for _, x in chosen], g): continue
+        chosen.append((s, g))
     while True:
         now = sorted(s for s, _ in chosen)
         best = None
@@ -123,7 +107,6 @@ def pick(cands, lib):
                 if (s, g) in chosen or not ok([x for _, x in rest], g): continue
                 new = sorted([x for x, _ in rest] + [s])
                 if new <= now or (best and new <= best[0]): continue
-                if len({radius(x) for _, x in rest} | {radius(g)}) < kinds: continue
                 best = (new, i, (s, g))
         if not best: return chosen
         chosen[best[1]] = best[2]
@@ -141,9 +124,9 @@ def main():
     chosen = pick(cands, lib)
     chosen.sort(key=lambda t: (-t[0], t[1]))
     with open(os.path.join(HERE, 'factions.tsv'), 'w', encoding='utf-8') as f:
-        f.write('letter\tarchetypes\tscore\tmain_radius\tconcepts\tparts\tsynergies\n')
+        f.write('letter\tarchetypes\tscore\tconcepts\tparts\tsynergies\n')
         for n, (s, g) in enumerate(chosen):
-            picked, own, main = choose(g, lib)
+            picked, own = choose(g, lib)
             parts = ' | '.join(f'{a}/{p} ({k}): {",".join(got)}' for a, p, k, got in picked)
             syn = []
             for a, b in itertools.combinations(own, 2):
@@ -151,9 +134,9 @@ def main():
                     r = LINK[(a, b)]
                     t = f"{r['cards']}x" if num(r['cards']) >= 1.2 else f"rare {r['rare']}"
                     syn.append(f"{a}+{b} ({t}, {r['games']} games): {r['texts'].split(' | ')[0]}")
-            f.write(f"{chr(65 + n)}\t{','.join(g)}\t{s}\t{main}\t{','.join(own)}\t{parts}\t{' || '.join(syn)}\n")
-            print(f"{chr(65 + n)} {s:.3f} {main:10} {' + '.join(NAME[a] for a in g)}")
-    print('weakest:', min(s for s, _ in chosen), '| different main radii:', len({choose(g, lib)[2] for _, g in chosen}))
+            f.write(f"{chr(65 + n)}\t{','.join(g)}\t{s}\t{','.join(own)}\t{parts}\t{' || '.join(syn)}\n")
+            print(f"{chr(65 + n)} {s:.3f} {' + '.join(NAME[a] for a in g)}")
+    print('weakest:', min(s for s, _ in chosen))
 
 
 if __name__ == '__main__':

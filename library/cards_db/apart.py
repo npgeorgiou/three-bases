@@ -1,4 +1,4 @@
-"""Concepts that real factions keep apart, and concepts they keep together (wheel step 5).
+"""Concepts that real factions keep apart, and concepts they keep together (wheel step 4).
 
 Run from library/cards_db: python3 apart.py [top]   (default top 25)
 For every concept, each real faction's share of cards with it, minus its game's average (so a game that marks a concept

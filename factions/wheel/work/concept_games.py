@@ -1,18 +1,18 @@
 """concept_games.py (run from library/cards_db): step 1, does a concept mean the same in every game?
 For each suspect concept (suspects.tsv) and each game: its real cards; where its rows act (kind, side, zone of the
-target or the trigger); the concepts its cards link to (through what of each card made the link, axes.side_concepts),
+target or the trigger); the concepts its cards link to (through what of each card made the link, concept_tags.side_concepts),
 as lift over what the game links anyway, and how alike that is to the other games together (cosine, 1 = the same partners). Writes concept_games.tsv;
 --all: every concept with 5+ real cards, into concept_games_all.tsv."""
 import collections, math, os, sqlite3, sys
 sys.path.insert(0, os.getcwd())
-import axes, faction_asks
+import concept_tags, faction_asks
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sus = [l.rstrip('\n').split('\t') for l in open(os.path.join(HERE, 'suspects.tsv'))][1:]
 want = {r[0]: set(r[1].split(',')) for r in sus}
 c = sqlite3.connect('cards.sqlite')
 games = sorted({g for (g,) in c.execute('select distinct game from card')})
-con, pools, stats = axes.tag(c, faction_asks.Ctx(c, games, None, {}), games)
+con, pools, stats = concept_tags.tag(c, faction_asks.Ctx(c, games, None, {}), games)
 real = {i: g for i, g in c.execute('select id, game from card where coalesce(is_keyword,0)=0 and coalesce(is_stub,0)=0')}
 
 where = collections.defaultdict(collections.Counter)  # (concept, game) -> where its rows act
@@ -32,11 +32,11 @@ for card, k, kw in c.execute("select distinct ck.card, v.tree, k.name from card_
     if card in real and k in want: kws[(k, real[card])][kw] += 1
 partners = collections.defaultdict(collections.Counter)  # (concept, game) -> concepts on the other side of its links
 base = collections.defaultdict(collections.Counter)  # game -> concepts on any side of its links (to divide out what the game links anyway)
-for (a, b), srcs in axes.link_pairs().items():
+for (a, b), srcs in concept_tags.link_pairs().items():
     if a not in real or b not in real: continue
     g = real[a]
     for sa, sb in srcs:
-        ka, kb = axes.side_concepts(a, sa, con), axes.side_concepts(b, sb, con)
+        ka, kb = concept_tags.side_concepts(a, sa, con), concept_tags.side_concepts(b, sb, con)
         for mine, other in ((ka, kb), (kb, ka)):
             base[g].update(other)
             for k in mine & want.keys():

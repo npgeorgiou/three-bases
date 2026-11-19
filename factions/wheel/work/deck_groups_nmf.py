@@ -4,9 +4,9 @@ Run from library/cards_db: python3 ../../factions/wheel/work/deck_groups_nmf.py 
  -> factions/wheel/work/deck_groups_nmf.tsv (one row per group), deck_groups_nmf.md (the same in plain words) and
     deck_groups_nmf.json (groups, decks and factions, read by make_faction.py); with --groups N the files end in _N.
 1. Concepts: the usable concepts of concepts.tsv (a card counts each once; a parent only on cards none of its children
-   carry), plus five unit concepts against the card's game: unit, cheap unit, expensive unit (axes.py), strong for its
+   carry), plus five unit concepts against the card's game: unit, cheap unit, expensive unit (concept_tags.py), strong for its
    cost and tough for its cost (above the game's straight line of strength or defence by cost).
-2. Scores: every deck of decks.tsv (all its cards) and every real faction of axes.tsv, per concept: the log-odds ratio
+2. Scores: every deck of decks.tsv (all its cards) and every real faction (Monster Train's clans left out, NOT_FACTIONS), per concept: the log-odds ratio
    with a prior (Monroe et al. 2008) against all the cards of its game, as a z-score; above STRONG the deck leans on it.
 3. Groups: NMF on the deck rows only (scores below 0 set to 0); each game weighs the square root of its deck count. The first guess comes from the data (NNDSVD, Boutsidis and Gallopoulos 2008), so one
    run gives the result. The number of groups (MIN_K to MAX_K) is the one whose groups stay most alike when the run is
@@ -19,7 +19,7 @@ import collections, csv, json, multiprocessing, os, sqlite3, sys
 import numpy as np
 from scipy.optimize import linear_sum_assignment
 sys.path.insert(0, os.getcwd())
-import axes, deck_analysis, faction_asks
+import concept_tags, deck_analysis, faction_asks
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PRIOR = 100.0       # the prior's size in concept instances (Claude's)
@@ -30,6 +30,7 @@ CARRY = 0.30        # a deck fits a group that is at least 30% of its mix (Claud
 TOP = 10            # a group lists its 10 heaviest concepts, each with the share of its decks that lean on it (Claude's)
 BASE = 0.5          # base concepts: more than half of the group's decks have them (Claude's)
 ONE_GAME = 0.8      # a group whose decks are 80% from one game is marked (Claude's)
+NOT_FACTIONS = ('monster_train',)  # Kaptain, 9 Nov 2026: a different kind of game, its clans are not measured
 FIT, BEST = 2.0, 2  # a faction fits its best 2 groups at twice its game's average share (Claude's)
 UNIT = {'unit*': 'Unit', 'cheapunit*': 'Cheap unit', 'dearunit*': 'Expensive unit',
         'strongcost*': 'Strong for its cost', 'toughcost*': 'Tough for its cost'}
@@ -37,7 +38,7 @@ UNIT = {'unit*': 'Unit', 'cheapunit*': 'Cheap unit', 'dearunit*': 'Expensive uni
 c = sqlite3.connect('cards.sqlite')
 games = sorted({g for (g,) in c.execute('select distinct game from card')})
 x = faction_asks.Ctx(c, games, None, {})
-con, pools, stats = axes.tag(c, x, games)
+con, pools, stats = concept_tags.tag(c, x, games)
 usable = [r['concept'] for r in csv.DictReader(open(os.path.join(HERE, 'concepts.tsv'), encoding='utf-8'), delimiter='\t')
           if r['kind'] == 'usable']
 kids, plain = collections.defaultdict(set), dict(UNIT)
@@ -56,7 +57,7 @@ sub.update({k: set() for k in UNIT})
 nodes = usable + list(UNIT)
 col = {k: j for j, k in enumerate(nodes)}
 for g in games:  # strong / tough for its cost: above the game's straight line of strength (defence) by cost
-    us = [i for i in pools[g] if stats[i][0] in axes.UNIT_CATS and stats[i][1] is not None]
+    us = [i for i in pools[g] if stats[i][0] in concept_tags.UNIT_CATS and stats[i][1] is not None]
     for i in us: con[i].add('unit*')
     for pos, key in ((2, 'strongcost*'), (3, 'toughcost*')):
         pts = [(stats[i][1], stats[i][pos], i) for i in us if stats[i][pos] is not None]
@@ -95,7 +96,7 @@ with open('decks.tsv', encoding='utf-8') as f:
         if ids:
             cnt = sum(cv[i] for i in ids)
             decks.append({'game': p[0], 'name': p[1], 'size': len(ids), 'counts': cnt, 'z': score(cnt, p[0])})
-facs = sorted({(r['game'], r['faction']) for r in csv.DictReader(open('axes.tsv', encoding='utf-8'), delimiter='\t')})
+facs = sorted({(g, fa) for g in games if g not in NOT_FACTIONS for fa in x.factions(g)})
 fcount = {(g, fa): sum((cv[i] for i, v in pools[g].items() if fa in v[3]), np.zeros(len(nodes))) for g, fa in facs}
 
 X = np.array([np.maximum(d['z'], 0) for d in decks])

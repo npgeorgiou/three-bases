@@ -10,21 +10,19 @@ More deck lists (todo.md item 12) and The Elder Scrolls: Legends (item 13) each 
 | 1. Fix the library's concepts | done (19 Nov 2026) | concepts split by whom a row acts on; "Skill" removed; "Return my unit to hand" split into return_from_board and return_on_leave; the tag check (`work/tag_check.py`, two readings, 248 cards, fixes in `flat.py` with cases wc40-wc65, lk403); `check_all.py` and `links.py` rebuilt; Runeterra's spell mana rule written (`read/runeterra/game_rules.jsonl`) but not built yet |
 | 2. The usable concepts | done (19 Nov 2026): 133 usable, 44 helper, 33 out; return_from_board (73 cards), return_on_leave (76) and hand_deck_swap (5, new over the bar) usable (Claude's) | `work/concepts.tsv`, `work/concepts.md` |
 | 3. The faction archetypes | done (19 Nov 2026): Kaptain agreed the 25 groups by NMF from 1428 decks (`work/deck_groups_nmf.py --groups 25`); `work/make_faction.py` makes a faction from one or two concepts | `work/deck_groups_nmf_25.tsv`, `.md`, `.json` |
-| 4. The radii and how they work together | redo: the new concepts of step 1 get a radius (Kaptain agrees), then `axes.py` | `work/radii.tsv`, `axes.tsv`, `factions/wheel-axes.html`, `wheel/radius_links.tsv` |
-| 5. The links between concepts | redo | `library/cards_db/wheel/concept_links.tsv` |
-| 6. The archetype map | redo after step 5: `archetype_map.py` reads the 25 groups (`work/step3_groups.py`) and writes `work/archetype_parts.tsv`, which `factions.py` (step 7) reads | `work/archetype_map.tsv`, `factions/wheel-archetypes.html` |
-| 7. The 20 factions | redo: `work/factions.py` (2 archetypes) gets the new limits; `work/concept_list.py` written | `work/answer_concepts.tsv` (agreed): per answer its ways |
-| 8. Combos on this board | to do | |
-| 9. Game plan, then keywords | to do | |
-| 10. Stop 1 | to do | |
+| 4. The links between concepts | redo (next) | `library/cards_db/wheel/concept_links.tsv` |
+| 5. The archetype map | redo after step 4: `archetype_map.py` reads the 25 groups (`work/step3_groups.py`) and writes `work/archetype_parts.tsv`, which `factions.py` (step 6) reads | `work/archetype_map.tsv`, `factions/wheel-archetypes.html` |
+| 6. The 20 factions | redo: `work/factions.py` (2 archetypes) gets the limits of step 6.1; `work/concept_list.py` written | `work/answer_concepts.tsv` (agreed): per answer its ways |
+| 7. Combos on this board | to do | |
+| 8. Game plan, then keywords | to do | |
+| 9. Stop 1 | to do | |
 
 ## What the next steps find in the files
 - How the wheel works: a faction is what it is strong at. It plays 2 faction archetypes, each a way to play that decks
   of 2+ games lean on (step 3, groups by NMF); real factions are only measured against them. Each archetype is made of
   parts, each a set of alternative concepts: an engine part works through links with another part ("my units die" ->
   "my units gain when an ally dies"), a brick works alone (disruption). Kaptain's list (`archetypes_kaptain.txt`) holds
-  deck archetypes: what a pair of factions plays together (step 8). The 23 radii of `work/radii.tsv` show how the 43
-  real factions spread (`factions/wheel-axes.html`).
+  deck archetypes: what a pair of factions plays together (step 7).
 - Step 1 left: the tag check's families judged on the second reading as right or mixed stay as they are: "Draw" on
   the enemy (both players draw), "Free play" of an enemy card, "Repeat" of a Duel, "Make my spells stronger" on enemy
   cards, the Vek's own heals and summons in Into the Breach. A unit returned to hand from either side (Will of Ionia,
@@ -32,25 +30,22 @@ More deck lists (todo.md item 12) and The Elder Scrolls: Legends (item 13) each 
   at the unit (SpellShield) is "Keep my units alive" (Claude's choice). No row says "from the discard pile": those
   cards are recycle or revive. Run `work/tag_check.py` again only after a change to the concepts' rules.
 - `work/factions.py` and `work/concept_list.py` work (about 6 minutes; `concept_list.Library` scores a set of concepts
-  in under a second). `factions.py` still has the main radius limit: change it to the limits of step 7.1. Its last
-  output (`work/factions.tsv`) is from the deck archetypes and is remade.
+  in under a second). `factions.py` still lacks the limit of step 6.1 that two factions share at most half of
+  their own concepts. Its last output (`work/factions.tsv`) is from the deck archetypes and is remade.
 - Step 2 left: rerun `work/concept_catch.py` from `library/cards_db` only after a change to the concepts or verdicts.
   Counts moved after step 1's fixes (count_payoff 655 -> 132, condition_count 17 -> 531, permanent_growth 776 -> 584,
-  stat_gain 149 -> 59, ping 573 -> 394): steps 3-7 use the new counts.
-- Counts whose rows don't say what they count are counted nowhere: 189 instances of "grows with what happened" and 36
-  of "counts and thresholds" (`axes.py` prints them). Most are counts of enemy units or of a keyword the rows don't name.
+  stat_gain 149 -> 59, ping 573 -> 394): steps 3-6 use the new counts.
 - The faction check (a finished faction's cards against its archetypes' concepts and extras) and
-  `tools/wheel_table_check.py` (the 20 factions' archetypes, extras and answers) are written when step 10 and Stop 3
-  need them; `wheel_table_check.py` today measures the radii.
-- `work/make_stop1.py` is written for step 10.
+  `tools/wheel_table_check.py` (the 20 factions' archetypes, extras and answers) are written when step 9 and Stop 3
+  need them.
+- `work/make_stop1.py` is written for step 9.
+- `cases/wheel.tsv`: w03-w11 name concepts that are not in `work/concepts.tsv` (onkill, kill, allyplay, deathfeed, reach,
+  enemyside, attach, leave), so step 4 skips them; give them today's concept names before step 4 runs.
 
 ## The numbers (library/cards_db)
 - `links.sqlite` is rebuilt only after `network.py` or `cards.sqlite` changed: `PYTHONHASHSEED=0 python3 links.py`
   (about 6 minutes; with `check_all.py` 14 more: tell Kaptain and wait for his OK); it ends with `cases/links.tsv` and the sides check.
-- Radius keys are not plain words: look up each one's name before talking about it
-  (`work/radii.tsv`). `many` is "many at once", `wide` is "many units on my side", `back` is "reuses cards",
-  `cards` is "more cards in hand", `picks` is "picks cards".
-- A link counts for two concepts or radii only through what of each card made it. Example: Ghost Rider brings a card
+- A link counts for two concepts only through what of each card made it. Example: Ghost Rider brings a card
   back and Vibro-Shock Gauntlets give +2 Power to it: revive with +2 Power, never revive with supply, though the
   Gauntlets also give Energy. Cases: `cases/wheel.tsv`.
 - Two concepts you expect to work together show 0 links: check that one pair by script (what made each link between
@@ -71,8 +66,8 @@ More deck lists (todo.md item 12) and The Elder Scrolls: Legends (item 13) each 
   concepts that score about the same. Its list leaves out its own concepts. Its extras, 8 to 12, the same number for
   every faction, come from its list, first for the answers about the board its concepts don't give, then to feed its
   concepts; an answer no concept gives is fixed with another extra before the archetypes are picked again. Its blind
-  spot is a whole radius it never gets ("never draws cards"). Combos
-  (step 8) come before the game plan and keywords (step 9); 7+ partners each. A finished faction is checked against its
+  spot is what none of its concepts and extras give ("never draws cards"), named at step 9 (19 Nov 2026). Combos
+  (step 7) come before the game plan and keywords (step 8); 7+ partners each. A finished faction is checked against its
   archetypes and extras (18 Nov 2026).
 - Keywords are shared, which is what makes factions combo: no keyword is barred from any faction, each is mostly on the
   factions that obviously gain from it, and every faction has at least 1 keyword of its own. All keywords are made
@@ -83,7 +78,7 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
   Ranged), strikes and fixed damage, the hand and the discard pile, Immobile.
 - Not in the game: player health, answers on the enemy's turn, supply that grows by itself, unit types, who acts first
   (random in round 1, then alternating), placing at round end.
-- The wheel is general; step 9 turns each faction's archetypes into these own things, from scratch.
+- The wheel is general; step 8 turns each faction's archetypes into these own things, from scratch.
 - Every game counts the same in every number, games with no factions (Marvel Snap) too.
 - Factions are made by script to play 2 archetypes. Each archetype is a group of engines and
   bricks and can be played using different concepts. A map of nodes (each node a concept) shows each
@@ -93,18 +88,18 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
 - Discard / 8-Rack stays a deck archetype although real cards don't link its two parts: future improved games will beef it
   up (17 Nov 2026).
 - Real factions' shapes vary inside each game: the wheel is lax about a faction's shape (17 Nov 2026).
-- Interactions with the player (heal, Block, strength on the player; the player hurt) stay off the radii: no player
+- Interactions with the player (heal, Block, strength on the player; the player hurt) stay out of the wheel: no player
   health here. They stay in the library as player_<concept>.
 - A faction is built from a game plan played out cell by cell and its keywords. The keywords are the backbone, not all
   100 cards: 3 ways to play are built around them. One idea is never the
   whole faction. A keyword that fits the theme but grows from no synergy of the factions that carry it is never made.
 - Each faction answers seven questions, one line each: how it wins, how it removes the front unit, how it MAINLY
   removes back-row units, how it MAINLY acts between lanes, how it holds a base, which of the game's own things it
-  cares about most (factions may share it), its blind spot (a whole radius it never gets: "never draws
+  cares about most (factions may share it), its blind spot (what none of its concepts and extras give: "never draws
   cards"). Removing: his unit leaves its cell; holding: his unit
   stays, but the base stays mine (18 Nov 2026).
 - Stop 1 pages: juicy and easy to read; one line per answer; one line per partner faction saying HOW the combo plays.
-- Combos are judged once, on this board (step 8): STRONG / OK / WEAK / NONE / AGAINST; partners =
+- Combos are judged once, on this board (step 7): STRONG / OK / WEAK / NONE / AGAINST; partners =
   STRONG or OK, 7+ each; `combos.tsv` has a test column, and what doesn't work in play is dropped.
 - Leaders: 5 per faction, the only cards with a golden border, spread over the costs and the ways to play; their
   special part works by whether I hold the lane's base, helps take and keep a lane, never wins harder in a won lane;

@@ -1,17 +1,17 @@
-"""A faction's list (factions/START_DESIGN-1-wheel.md step 7.4): every concept with 5+ cards (usable, helpers and out) except
+"""A faction's list (factions/START_DESIGN-1-wheel.md step 6.4): every concept with 5+ cards (usable, helpers and out) except
 the faction's own concepts, with its score for how strongly it links with them. In each game alone: real links between the
 concept's instances and the instances of the faction's concepts (the faction's concepts counted together as one key), against
-the links chance alone gives there (the same count as axes.radius_links); the game's score = (real + 1) / (chance + 1); the
+the links chance alone gives there (the same count as concept_tags.pair_links); the game's score = (real + 1) / (chance + 1); the
 score = the average over the games where the concept and the faction's concepts both appear. Beside it: the level
 (mechanics_wheel.level of the linked card pairs) and in how many games real cards link them.
 Usage (from library/cards_db): python3 ../../factions/wheel/work/concept_list.py -> factions/wheel/work/lists/<letter>.tsv
-for every faction of factions/wheel/work/factions.tsv. factions.py imports Library to score the bricks' concepts (7.2)."""
+for every faction of factions/wheel/work/factions.tsv. factions.py imports Library to score the bricks' concepts (6.2)."""
 import collections, csv, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(HERE, '..', '..', '..', 'library', 'cards_db')
 sys.path.insert(0, DB)
-import axes, mechanics_wheel  # noqa: E402
+import concept_tags, mechanics_wheel  # noqa: E402
 
 
 def concept_rows():
@@ -30,18 +30,18 @@ class Library:
         rows = concept_rows()
         self.listed = [r['concept'] for r in rows if int(r['card_count']) >= 5]
         keys = [(k, 0, '', k, cons, '') for k, _, cons, *_ in mechanics_wheel.concepts(con)]
-        pairs = axes.link_pairs()
+        pairs = concept_tags.link_pairs()
         self.games = {}
         for g in games:
             ids = list(pools[g]); idset = set(ids)
-            of = {i: {s[0] for s in keys if axes.counts(con[i], g, s[4])} for i in ids}
+            of = {i: {s[0] for s in keys if concept_tags.counts(con[i], g, s[4])} for i in ids}
             dens = sum(1 for a, b in pairs if a in idset and b in idset) / (len(ids) * (len(ids) - 1) / 2)
             plist = []  # (a, b, concepts a's side made, concepts b's side made, linked (ka, kb))
             for (a, b), sides in pairs.items():
                 if a in idset and b in idset:
                     on_a, on_b, linked = set(), set(), set()
                     for sa, sb in sides:
-                        ka_, kb_ = axes.side_keys(a, sa, g, keys, con), axes.side_keys(b, sb, g, keys, con)
+                        ka_, kb_ = concept_tags.side_keys(a, sa, g, keys, con), concept_tags.side_keys(b, sb, g, keys, con)
                         on_a.update(ka_); on_b.update(kb_); linked |= {(ka, kb) for ka in ka_ for kb in kb_}
                     plist.append((a, b, on_a, on_b, linked))
             ends, made = collections.Counter(), collections.Counter()

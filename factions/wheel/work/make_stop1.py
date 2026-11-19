@@ -18,14 +18,8 @@ roundstart='round start effects',leave='my units react when one leaves',bigstren
 offering='my unit dies for supply, a card or strength',steal='take an enemy unit or card (NEW RULE)',
 enemyside='place my units in the enemy camp (NEW RULE)',haste='attack the turn it is placed',extraact='my unit acts again',
 mark='mark an enemy for later hits',reach='hit from afar into the back rows')
-RAD=dict(strong='strength',grows='grows strength',strikes='strikes more',textdmg="damage from units' text",kills='kills outright',
-many='many at once',spelldmg='damage from spells',spellpay='rewards playing spells',stops='stops them',disrupts='breaks their plan',
-supply='more supply',cheaper='cheaper hand',cards='more cards',picks='picks and copies',back='brings back',
-wide='many cheap units',spends='spends them',together='position and combos',heals='heals them',growsdef='grows defence',
-protects='protects them',tough='defence',tall='a few big units')
 F='factions/wheel/'
 def tsv(p): return [l.rstrip('\n').split('\t') for l in open(p)][1:]
-SHAPE={l.split('\t')[0]:l.strip().split('\t')[1] for l in open(F+'work/shapes.tsv')}
 OWN={};EX={}
 for l in open(F+'work/assign.tsv'):
     k,o,s=l.rstrip('\n').split('\t'); OWN[k]=o.split(','); EX[k]=s.split(',')
@@ -39,7 +33,6 @@ for p in tsv(F+'combos.tsv'):
 def faction(k):
     a=ANS[k]; nr=lambda p: ' (NEW RULE)' if 'NEW RULE' in p[6] else ''
     o=[f'## {k}: {TH.get(k, "")}: {a[1]}',
-       '- Strong in: '+', '.join(f"{RAD[r.split('=')[0]]} {r.split('=')[1]}" for r in SHAPE[k].split(','))+'.',
        '- Builds on: '+'; '.join(NAME[m] for m in OWN[k])+'. Extras: '+'; '.join(NAME[m] for m in EX[k])+'.']
     o+=[f'- Tool, {p[1]} (from {NAME[p[2]]}; feeds {p[3]}): {p[4]}{nr(p)}' for p in TL[k]]
     o+=[f'- Wins: {a[2]}',f'- Removes the unit facing my dot: {a[3]}',f'- Removes back-row units: {a[5]}',
@@ -50,9 +43,9 @@ def faction(k):
     o.append(f'Combos with {len(best)} factions ({sum(p[2]=="STRONG" for p in best.values())} strong):')
     o+=[f'- {y} {p[2]}: {p[4]}' for y,p in sorted(best.items(),key=lambda t:(rank[t[1][2]],t[0]))]
     return o+['']
-L=list(SHAPE)
-idx=['# Stop 1: the 20 factions in plain words','Strong radii are measured on real factions; everything else is Claude\'s draft',
-'from the library and this board. Combos: STRONG = both halves on many cards, helps take or hold a base, the enemy\'s one',
+L=list(ANS)
+idx=['# Stop 1: the 20 factions in plain words','Everything here is Claude\'s draft from the library and this board.',
+'Combos: STRONG = both halves on many cards, helps take or hold a base, the enemy\'s one',
 'action between can\'t easily stop it; OK = real but breakable. Playtests decide later; what doesn\'t work is dropped.','']
 for i in range(5):
     part=L[i*4:(i+1)*4]; name=f'STOP1-{i+1}.md'; idx.append(f'- `{name}`: '+' '.join(part))

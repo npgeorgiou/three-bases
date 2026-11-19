@@ -1,6 +1,6 @@
-"""The faction archetypes of step 3 (the 25 NMF groups Kaptain agreed, deck_groups_nmf_25.json) as rows for steps 6 and 7:
-one row per part, each concept of a group a part of its own (Claude's); the kind (engine or brick) is set by step 6
-(archetype_map.py), which writes the rows with their kind to work/archetype_parts.tsv for step 7 (factions.py)."""
+"""The faction archetypes of step 3 (the 25 NMF groups Kaptain agreed, deck_groups_nmf_25.json) as rows for steps 5 and 6:
+one row per part, each concept of a group a part of its own (Claude's); the kind (engine or brick) is set by step 5
+(archetype_map.py), which writes the rows with their kind to work/archetype_parts.tsv for step 6 (factions.py)."""
 import json, os
 
 HERE = os.path.dirname(os.path.abspath(__file__))

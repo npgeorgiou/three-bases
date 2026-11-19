@@ -1,7 +1,7 @@
-"""Step 6, the archetype map (factions/START_DESIGN-1-wheel.md), from the archetypes of step 3 (step3_groups.py). A part
+"""Step 5, the archetype map (factions/START_DESIGN-1-wheel.md), from the archetypes of step 3 (step3_groups.py). A part
 whose concepts have a joined link with another part of the same archetype is an engine, any other part a brick; the parts
 with their kind go to work/archetype_parts.tsv. Each concept of an archetype's parts is a node; between
-the concepts of two engine parts of one archetype, an edge with the step 5 numbers (cards, decks, games, level), the top
+the concepts of two engine parts of one archetype, an edge with the step 4 numbers (cards, decks, games, level), the top
 link text, the real card pair of its strongest link (none when only real decks join them) and a note when the edge is
 weak (about the player, or decks only). Bricks are nodes with no edges.
 Writes work/archetype_parts.tsv, work/archetype_map.tsv, work/archetype_gaps.tsv (engine parts whose concepts have no joined edge) and
@@ -12,7 +12,7 @@ import collections, csv, itertools, json, math, os, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(HERE, '..', '..', '..', 'library', 'cards_db')
 sys.path.insert(0, DB)
-import axes, mechanics_wheel
+import concept_tags, mechanics_wheel
 sys.path.insert(0, HERE)
 import step3_groups
 
@@ -28,7 +28,7 @@ def note(p, pair, player):
 
 
 def joined(r):
-    """step 5's join: cards 1.2+, or decks 1.5+, or rare 3+ with a level of 1+"""
+    """step 4's join: cards 1.2+, or decks 1.5+, or rare 3+ with a level of 1+"""
     f = lambda k: float(r[k]) if r[k] else 0.0
     return f('cards') >= 1.2 or f('decks') >= 1.5 or (f('rare') >= 3 and f('level') >= 1)
 
@@ -94,7 +94,7 @@ def card_pairs(wanted):
     L = sqlite3.connect(os.path.join(DB, 'links.sqlite'))
     for g, a, b, sa, sb, w, kind, text in L.execute(
             'select l.game, a, b, a_ab, b_ab, weight, p.kind, p.text from link l join phrase p on p.id=l.phrase where a != b'):
-        ka, kb = axes.side_keys(a, sa, g, keys, con), axes.side_keys(b, sb, g, keys, con)
+        ka, kb = concept_tags.side_keys(a, sa, g, keys, con), concept_tags.side_keys(b, sb, g, keys, con)
         about = any(x in text.lower() for x in PLAYER)
         for p in {frozenset((u, v)) for u in ka for v in kb if u != v} & wanted:
             total[p] += 1; onplayer[p] += about

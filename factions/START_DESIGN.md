@@ -27,13 +27,13 @@ take a base, hold it, or take it from the enemy?
 Step 0 (Kaptain, 9 Nov 2026): the faction's place on the mechanical wheel (`factions/12-mechanical-wheel.txt`) comes
 first. Its 2 archetypes, their concepts and synergies, its extras, theme, six
 answers, partners, game plan and keywords are decided there, for all 20 factions together, not in the faction's chat
-(`START_DESIGN-1-wheel.md`, steps 7-10).
+(`START_DESIGN-1-wheel.md`, steps 6-9).
 Steps 1-6 come from the library, never from memory. Run the queries below on all games (`ask.py all ...` from
 `library/cards_db/`; a faction name used by two games, such as Ironclad, needs the game: `ask.py sts1 lacks Ironclad`),
 and write the sources (game: card) next to each answer of steps 2, 3, 5 and 6. `ways` and `curve` show what each card
 does; card texts are read only within the faction's 100 (START_DESIGN-3, "Reading cards").
 - Queries for step 1: list the factions of every game (START_DESIGN-3, section 3) and pick the 6-10 closest to the faction's place on the wheel (the
-  real factions strongest at its archetypes' concepts, `factions/wheel-axes.html`; not the theme), at least one per board game
+  real factions that fit its archetypes, `factions/wheel/work/deck_groups_nmf_25.md`; not the theme), at least one per board game
   (Duelyst, Faeria, Stormbound, Into the Breach, Inscryption); run `curve` on each to see what its cards do.
 - Queries for step 2: `removal <game>` and `protect <game>` for all games, `palette place` and `palette death`: which ways to remove and
   hold exist, and which the other factions of the wheel already use (the wheel's table).
@@ -64,7 +64,7 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
       or hit by enemy spells".
    6. What it cares about: which of the game's own things it cares about most; factions may share it. Example: the
       discard pile.
-   7. Blind spot: a whole radius of the wheel it never gets, on any card. Example: it never draws cards.
+   7. Blind spot: what none of its concepts and extras give, on any card. Example: it never draws cards.
 3. **Its archetypes and blind spots** (taken from the wheel). Its archetypes: the 2 archetypes it is made of, each
    of engines (concepts that work through links: my units die -> my units gain when an ally dies) and bricks
    (concepts that work alone: disruption). They are its character, not all its cards use: its cards use its
@@ -88,7 +88,7 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    - Turning point: once a condition is met, the board works differently. "While you have twice as many units in my lane
      as the enemy, my allies here strike twice."
 6. **Three ways to play** (never filler). They are built around the
-   faction's game plan and keywords from the wheel (`START_DESIGN-1-wheel.md` step 9): the keywords are its backbone,
+   faction's game plan and keywords from the wheel (`START_DESIGN-1-wheel.md` step 8): the keywords are its backbone,
    not all of its cards; the rest of each way comes from its extras and its list.
    Each way builds a different board and asks for different decisions. For each, write which rows and cells it fills,
    its cost 1-4 opening, its 4-6 middle, its 6+ finish, and its Leaders (the 5 are spread over the ways). Test: two ways that put the same

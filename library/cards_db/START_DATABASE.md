@@ -101,7 +101,7 @@ push, give network.html to Kaptain.
 **D. The links** (`links.py`, about 4 minutes, after any change to network.py or the cards): at its end cases/links.tsv
 (a link that must exist or must not, and what of each card must have made it: a_side, b_side) and the sides check (no link
 names an effect of another card). The wheel's count (`mechanics_wheel.py links`, a minute) runs cases/wheel.tsv: a linked
-pair that must or must not count for two mechanics or radii.
+pair that must or must not count for two concepts.
 
 **The game itself** has its own: tools/build.py, tools/simtest.js, tools/smoke.js (CLAUDE.md).
 

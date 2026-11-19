@@ -1,4 +1,4 @@
-# The deck archetypes in this game: their parts and the concepts that can do each (all Claude's; step 8 uses them)
+# The deck archetypes in this game: their parts and the concepts that can do each (all Claude's; step 7 uses them)
 
 Engine: a part that works by feeding another part of the same archetype. Brick: a part that works alone.
 

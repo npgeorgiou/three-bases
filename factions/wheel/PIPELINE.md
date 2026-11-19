@@ -52,40 +52,30 @@ is written in that step's chat, from the rules of the step, and its line here is
 - `python3 factions/wheel/work/make_faction.py "attach" ["discard"]` (from the repo, a second) -> a faction from one or
   two concepts out of the 25 groups, printed and written to `factions/wheel/work/made/<concepts>_25.md`.
 
-## Step 4. The radii and how they work together
-- `work/radii.tsv`: every usable concept, the radius it goes on (key and name), the part of it that counts there, and
-  whose decision it is; helpers kept off the radii; the radii measured from the units' numbers. `axes.py` builds
-  `SPOKES` from it (a concept on two radii counts as concept@radius, each instance where its rows put it: PART).
-  A faction's value on a radius = its share of concept instances on the radius / its game's average share (1 =
-  average). 43 real factions of 8 games. About 30 seconds.
-- `python3 axes.py` -> `axes.tsv`, `factions/wheel-axes.html`. How the values are made: `factions/13`.
-- `python3 mechanics_wheel.py links --radii` (about 30 seconds) -> `wheel/radius_links.tsv` (`axes.radius_links`): per
-  pair of radii `cards`, `decks`, `games` (in how many games real cards link them), `level` (the linked pairs: 1 = 1, 10 = 2, 100+ =
-  3), worked out per game and averaged (`cards`: games where chance gives 5+ linked pairs, 20+ in all; `decks`: games
-  with 5+ decks holding both). A link counts for a radius only when the effect that made it, on that card's side,
-  belongs to the radius (the links' `a_ab`/`b_ab`), for chance too. Checked by `cases/wheel.tsv`.
-
-## Step 5. The links between concepts
-- `python3 mechanics_wheel.py links --concepts` (about a minute; the same count as `--radii`, every game including
-  those with no factions) -> `wheel/concept_links.tsv`: per pair of concepts of `work/concepts.tsv` that real cards or
-  decks link: `cards`, `decks`, `games`, `level`, `rare`, `makes`, the top three link texts. `python3 apart.py` gives
+## Step 4. The links between concepts
+- `python3 mechanics_wheel.py links --concepts` (about a minute; every game, those with no factions too) ->
+  `wheel/concept_links.tsv` (`concept_tags.pair_links`): per pair of concepts of `work/concepts.tsv` that real cards or
+  decks link: `cards`, `decks`, `games` (in how many games real cards link them), `level` (the linked pairs: 1 = 1,
+  10 = 2, 100+ = 3), worked out per game and averaged (`cards`: games where chance gives 5+ linked pairs, 20+ in all;
+  `decks`: games with 5+ decks holding both); `rare`, `makes`, the top three link texts. A link counts for a concept
+  only when the effect that made it, on that card's side, gives the concept (the links' `a_ab`/`b_ab`), for chance
+  too. Checked by `cases/wheel.tsv`. `python3 apart.py` gives
   the pairs real factions keep apart.
 
-## Step 6. The archetype map
+## Step 5. The archetype map
 - `python3 ../../factions/wheel/work/archetype_map.py` (about 10 seconds; needs links.sqlite; reads the 25 groups of step 3
   through `work/step3_groups.py`) -> `factions/wheel/work/archetype_parts.tsv` (archetype, name, part, engine or brick,
-  concept; read by step 7), `factions/wheel/work/archetype_map.tsv` (archetype, its two engine parts, concept a, concept b, `cards`, `decks`,
+  concept; read by step 6), `factions/wheel/work/archetype_map.tsv` (archetype, its two engine parts, concept a, concept b, `cards`, `decks`,
   `games`, `level`, top link text, the real card pair of its strongest link, from `wheel/concept_links.tsv`; a pair
   joined only by real decks has no card pair; `note`: "about the player" when more than half of its card links are about
   hitting the player, "decks only" when no card pair; it prints the cards behind the most edges), `work/archetype_gaps.tsv` (two engine parts with no joined edge, shown to
   Kaptain with the numbers) and `factions/wheel-archetypes.html` (page template `work/archetype_map_template.html`; the concepts' places by
   networkx's spring layout over every joined pair of usable concepts, seed 7). 
 
-## Step 7. The 20 factions
-- `python3 ../../factions/wheel/work/factions.py` (rules: `START_DESIGN-1-wheel.md` step 7) ->
-  `factions/wheel/work/factions.tsv` (faction letter, its 2 archetypes, its concepts per part, its synergies, its
-  main radius, its theme, its extras, the way or concept for each of its seven answers, its blind spot radius). It
-  prints the 20 groups with their scores and the weakest; the run stops after 7.2 for Kaptain's OK of the archetypes,
+## Step 6. The 20 factions
+- `python3 ../../factions/wheel/work/factions.py` (rules: `START_DESIGN-1-wheel.md` step 6) ->
+  `factions/wheel/work/factions.tsv` (faction letter, its 2 archetypes, its concepts per part, its synergies, its theme, its extras, the way or concept for each of its answers). It
+  prints the 20 groups with their scores and the weakest; the run stops after 6.2 for Kaptain's OK of the archetypes,
   then goes on with the themes written into `factions/wheel/work/themes.tsv` (faction letter, theme).
 - `python3 ../../factions/wheel/work/concept_list.py` -> `factions/wheel/work/lists/<letter>.tsv`: per faction every
   concept with 5+ cards except the faction's own concepts, its score ((real + 1) / (chance + 1) links with the
@@ -93,25 +83,25 @@ is written in that step's chat, from the rules of the step, and its line here is
 - `factions/wheel/work/answer_concepts.tsv` (agreed with Kaptain): per answer its ways (answer, the way in plain words,
   its concepts: one, two that real cards link with their times chance and games, or removals on a spell; whose).
 
-## Step 8. Combos on this board
-- A script counts the joins between every two factions' concepts (own concepts and extras; step 5 numbers); Claude rates
+## Step 7. Combos on this board
+- A script counts the joins between every two factions' concepts (own concepts and extras; step 4 numbers); Claude rates
   the pairs on the board -> `factions/wheel/combos.tsv` (pair, STRONG/OK/WEAK/NONE/AGAINST, how it plays, the numbers,
   a test column). Every faction needs 7+ partners. The same script lists per pair the deck archetypes
   (`factions/wheel/deck_archetypes.tsv`: their parts and the concepts that can do each) the two factions can play
   together -> `factions/wheel/deck_pairs.tsv`.
-- Once, before the first run of step 8 (then this line goes): the concepts of each deck archetype part are checked
+- Once, before the first run of step 7 (then this line goes): the concepts of each deck archetype part are checked
   against the parts' job, each concept by its definition in `library/concept_tree.txt`; Claude's changes are shown to
   Kaptain. Found so far: "Return my unit to hand" in 5 discard-pile parts (Toolbox, Reanimator, Self-Mill, Recursion,
   Turbo-Fog); "Copy" in Blink, Storm and Turbo-Fog; "Put into play for free" in Discover; "Cards cost less" in Blink and
   Recursion; Self-Mill, Reanimator and Recursion, Madness and Wheels, Aristocrats and Eggs, Stompy and Voltron, Control,
   Midrange and Toolbox nearly the same concepts; Combo, Control-Combo and Extra Turns parts go.
 
-## Step 9. Game plan, then keywords
+## Step 8. Game plan, then keywords
 - Claude -> `factions/wheel/plans.tsv` (faction, its game plan turn by turn on the board).
 - Claude -> `factions/wheel/keywords.tsv` (keyword, its rule, the synergy it grows from, its source card pairs, the
-  factions that carry it and how much, own or shared, NEW RULE). A script checks the keyword rules of step 9.
+  factions that carry it and how much, own or shared, NEW RULE). A script checks the keyword rules of step 8.
 
-## Step 10. Stop 1
+## Step 9. Stop 1
 - Claude -> `factions/wheel/answers.tsv`, from the game plan and keywords. `python3 tools/wheel_table_check.py`
   (against each faction's archetypes, extras and answers). `python3 factions/wheel/work/make_stop1.py` writes `STOP1.md`
   and `STOP1-1..5.md`.
