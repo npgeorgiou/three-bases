@@ -115,33 +115,31 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
      grows by itself) or Kaptain ruled it out (randomness).
    A parent in the concept tree keeps only the cards none of its children carry, so no effect counts twice.
    `work/concepts.md` shows the kinds in plain words for Kaptain.
-3. **The faction archetypes** (`work/faction_archetypes.py` -> `work/faction_archetypes.tsv`, `work/faction_archetypes.md`).
-   The ways to play that decks put together; they become our factions' archetypes. Real factions are never copied.
-   1. Concepts: every deck of `decks.tsv`, all its cards (neutrals and staples too, never split by faction): the deck
-      has a concept when one of its cards has it (step 2). Five unit concepts are added, each against the card's game:
-      unit, cheap unit, expensive unit, strong for its cost, tough for its cost (above the game's straight line of
-      strength or defence by cost, Claude's). Deck cards the library does not know are counted and reported, never
-      guessed. Monster Train and Marvel Snap decks are in (Claude's).
-   2. Groups of 3 to 5 concepts (Kaptain), by association rules with lift (Agrawal et al. 1993): each concept, added in
-      turn, is in the decks that hold the rest of the group more often than chance (how often the game's decks have
-      it), by more than 1.96 (Claude's); the whole group is in 10 decks or more, of 2 or more games (Claude's). Every
-      such group is listed; a group whose one-bigger group is in at least half as many decks is left for that one.
-   3. Choosing: the group in the most decks first, then each next group in the most decks that brings at least 2
-      concepts no chosen group has yet (Claude's). A concept can be in several groups. The same table always gives the
-      same groups. The concepts left in no group are listed.
-   4. Base concepts: the common concepts at least half of a group's decks have, more often than their game's decks
-      (Claude's), with their share; they are what the group's decks are built on, like "Deal damage".
-      A deck fits a group when it has every concept of it. The 43 real factions of `axes.tsv` are never used to make
-      the groups: a faction fits its best 2 groups at twice its game's average share of their concepts or more
-      (Claude's). The groups no faction fits and the factions that fit no group are listed.
-   5. Per group: its concepts, its base concepts, its decks, the factions that fit it.
-   6. A second view, to set beside it (`work/deck_groups_nmf.py`): each deck's score per concept against its game's
-      average (log-odds with a prior, Monroe et al. 2008); NMF splits the decks into groups, where each deck is a mix
-      of groups; the number of groups is the one whose groups come back most alike over 10 runs with different
-      starts; a deck fits a group that is 30% or more of its mix; a faction fits a group by cosine (all Claude's).
-   **Kaptain agrees the groups before anything else.** The page `factions/wheel-groups.html` is made in its own chat:
-   concept nodes placed by how often decks use them together, coloured by group; selecting a faction or a deck lights
-   its concepts; building or changing a group by selecting nodes shows which decks and factions fit it.
+3. **The faction archetypes** (`work/deck_groups_nmf.py` -> `work/deck_groups_nmf.tsv`, `.md`, `.json`).
+   The ways to play that decks lean on; they become our factions' archetypes. Real factions are never copied.
+   1. Concepts: the usable concepts (step 2); a card counts each concept once (Claude's). Five unit concepts are added,
+      each against the card's game: unit, cheap unit, expensive unit, strong for its cost, tough for its cost (above
+      the game's straight line of strength or defence by cost, Claude's).
+   2. Scores: every deck of `decks.tsv` (the whole deck, all its cards, neutrals and staples too, never split by
+      faction) and every real faction of `axes.tsv` (43), per concept: the log-odds ratio with a prior (Monroe et al.
+      2008) against all the cards of its game (Claude's), as a z-score; above 1.96 the deck leans on it. Deck cards the
+      library does not know are counted and reported, never guessed. Monster Train and Marvel Snap decks are in
+      (Claude's).
+   3. Groups: NMF on the deck rows only, with the positive scores, each deck scaled to the same length (Claude's); each
+      game weighs the square root of its deck count. The first guess comes from the data (NNDSVD), so one run gives the
+      result. The number of groups, from 14 (20 factions of 2 archetypes, each in at most 3 factions) to 30 (Claude's),
+      is the one whose groups stay most alike when the run is repeated on 90% of the decks, 10 times (Claude's). A deck
+      fits a group that is at least 30% of its mix (Claude's).
+   4. Per group: its 10 heaviest concepts, each with the share of its decks that lean on it; its base concepts (more
+      than half of its decks have them, more often than their game's decks, Claude's), like "Deal damage"; its unit
+      numbers against their games; a group whose decks are 80% or more from one game is marked (Claude's).
+   5. The real factions are never rows of the NMF. A faction fits its best 2 groups when its share of their concepts
+      is at least twice its game's average (Claude's). The groups no faction fits, the factions that fit no group and
+      the concepts in no group are listed.
+   **Kaptain agrees the groups before anything else.** `work/make_faction.py "<concept>" ["<concept>"]` makes a faction
+   from one or two concepts out of these groups (its header says how). The page `factions/wheel-groups.html` is made
+   in its own chat: concept nodes placed by how often decks use them together, coloured by group; selecting a faction
+   or a deck lights its concepts; building or changing a group by selecting nodes shows which decks and factions fit it.
 4. **The radii and how they work together** (`wheel/work/radii.tsv`). Every usable concept is put on one radius whose
    name says what the concept does (copying a unit is no draw); how often real cards link two concepts decides only
    between radii that fit. A trigger or a condition goes on the radius of the thing it reacts to ("when a unit dies" on
