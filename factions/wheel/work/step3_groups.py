@@ -1,20 +1,17 @@
 """The faction archetypes of step 3 (the 25 NMF groups Kaptain agreed, deck_groups_nmf_25.json) as rows for steps 5 and 6:
-an archetype's concepts are its 10 heaviest concepts and its base concepts, without the five unit measures (they are
-design markers) and without the concepts more than half of the 25 archetypes hold (every faction has them anyway);
-one row per part, each concept a part of its own (Claude's); the kind (engine or brick) is set by step 5
+an archetype's concepts as deck_groups_nmf.py made them; one row per part, each concept a part of its own (Claude's); the kind (engine or brick) is set by step 5
 (archetype_map.py), which writes the rows with their kind to work/archetype_parts.tsv for step 6 (factions.py).
 markers(): per archetype its design markers, each with how many times as often its decks have it."""
-import collections, json, os
+import json, os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 D = json.load(open(os.path.join(HERE, 'deck_groups_nmf_25.json'), encoding='utf-8'))
 
 
 def concepts():
-    """archetype key -> its concepts, heaviest first, then its base concepts"""
-    raw = {g['key']: [c for c in g['concepts'] + [b for b, _ in g['base']] if c not in D['unit']] for g in D['groups']}
-    held = collections.Counter(c for cs in raw.values() for c in set(cs))
-    return {k: [c for c in dict.fromkeys(cs) if held[c] * 2 <= len(raw)] for k, cs in raw.items()}
+    """archetype key -> its concepts (deck_groups_nmf.py makes them: heaviest and base, without the unit measures and the
+    concepts more than half of the groups hold)"""
+    return {g['key']: g['archetype'] for g in D['groups']}
 
 
 def rows():

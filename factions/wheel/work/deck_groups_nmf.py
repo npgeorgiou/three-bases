@@ -246,6 +246,12 @@ def marks(fit):
     return out
 for gr in groups: gr['markers'] = marks(gr['fit'])
 MNAME = {m[0]: m[1] for m in MARKERS}
+# The archetype's concepts (what steps 5 and 6 use): its heaviest and base concepts, without the five unit measures (they
+# are design markers) and without the concepts more than half of the groups hold (every faction has them anyway; Claude's)
+raw = {gr['j']: [nodes[t] for t in gr['concepts']] + [nodes[t] for _, t in gr['base']] for gr in groups}
+raw = {j: [c for c in dict.fromkeys(cs) if c not in UNIT] for j, cs in raw.items()}
+held = collections.Counter(c for cs in raw.values() for c in cs)
+for gr in groups: gr['archetype'] = [c for c in raw[gr['j']] if held[c] * 2 <= len(groups)]
 groups.sort(key=lambda gr: -len(gr['fit']))
 for n, gr in enumerate(groups, 1): gr['key'] = f'G{n:02d}'
 for gr in groups:
@@ -262,7 +268,6 @@ nofit = [gr['key'] for gr in groups if not gr['facs']]
 lonely = [f for f in facs if not any(f in fits_f[q] for q in range(len(groups)))]
 left = [t for t in range(len(nodes)) if not any(t in gr['concepts'] for gr in groups)]
 name = lambda t: plain.get(nodes[t], nodes[t])
-def units_line(gr): return '; '.join(f'{UNIT[k]} x{v:.1f}' for k, v in gr['units'].items())
 
 with open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.tsv'), 'w', encoding='utf-8') as o:
     o.write('group\tdecks\tgames\tone_game\tconcepts\tbase_concepts\tunits\tmarkers\tfit_factions\n')
@@ -279,8 +284,9 @@ with open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.md'), 'w', encoding='utf-
     o.write(f'{len(decks)} decks of {len(per_game)} games, {len(nodes)} concepts. {K} groups' +
             (' (set by hand). ' if FORCED else f': the number from {MIN_K} to {MAX_K} whose groups stay most alike on 90% of '
              f'the decks ({stab[K]:.2f}; 1 = the same). ') + f'A deck fits a group that is '
-            f'{CARRY:.0%} or more of its mix. Concepts: the group\'s 10 heaviest, with the share of its decks that lean on each. '
-            f'Base concepts: what more than half of its decks have. Units: against their games (x1 = as usual). A faction fits '
+            f'{CARRY:.0%} or more of its mix. The archetype: the group\'s 10 heaviest and base concepts (more than half of its decks have them), '
+            f'without the five unit measures and without the concepts more than half of the groups hold. Design markers: what its '
+            f'decks are like, x2 = twice as often as their games\' decks. The 10 heaviest come with the share of its decks that lean on each. A faction fits '
             f'its best {BEST} groups at {FIT:g} times its game\'s average share of their concepts ("x2").\n\n')
     o.write('Deck card names the library does not know: ' +
             (', '.join(f'{g} {k}' for g, k in sorted(missing.items()) if k) or 'none') + '.\n\n')
@@ -288,10 +294,10 @@ with open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.md'), 'w', encoding='utf-
     for gr in groups:
         o.write(f"## {gr['key']}: {len(gr['fit'])} decks ({', '.join(f'{g} {k}' for g, k in sorted(gr['games'].items()))})"
                 + (' **one game**' if gr['one_game'] else '') + '\n')
-        o.write('- Concepts: ' + '; '.join(f"{name(t)} {gr['lean'][t]:.0%}" for t in gr['concepts']) + '\n')
-        o.write('- Base concepts: ' + ('; '.join(f'{name(t)} {v:.0%}' for v, t in gr['base'][:10]) or 'none') + '\n')
-        o.write('- Units: ' + units_line(gr) + '\n')
+        o.write('- The archetype (its concepts on the map and in steps 5 and 6): ' + '; '.join(plain.get(c, c) for c in gr['archetype']) + '\n')
         o.write('- Design markers: ' + ('; '.join(f'{MNAME[k]} x{v:.1f}' for k, v in sorted(gr['markers'].items(), key=lambda t: -t[1])) or 'none') + '\n')
+        o.write('- How NMF found it: its 10 heaviest concepts ' + '; '.join(f"{name(t)} {gr['lean'][t]:.0%}" for t in gr['concepts'])
+                + '; base concepts ' + ('; '.join(f'{name(t)} {v:.0%}' for v, t in gr['base']) or 'none') + '\n')
         o.write('- Decks: ' + '; '.join(f"{decks[n]['name']} ({decks[n]['game']}, {mix[n, gr['j']]:.0%})" for n in gr['fit'][:6]) + '\n')
         o.write('- Factions that fit: ' + ('; '.join(f'{fa} ({g}, x{r:.1f})' for r, (g, fa) in gr['facs']) or
                 'none; nearest ' + '; '.join(f'{fa} ({g}, x{r:.1f})' for r, (g, fa) in gr['near'])) + '\n\n')
@@ -303,7 +309,7 @@ json.dump({'markers': {m[0]: m[1] for m in MARKERS}, 'nodes': nodes, 'plain': {k
            'groups': [{'key': gr['key'], 'concepts': [nodes[t] for t in gr['concepts']],
                        'lean': {nodes[t]: round(v, 3) for t, v in gr['lean'].items()},
                        'base': [[nodes[t], round(v, 3)] for v, t in gr['base']], 'units': gr['units'],
-                       'one_game': gr['one_game'], 'decks': gr['fit'], 'markers': gr['markers'],
+                       'one_game': gr['one_game'], 'decks': gr['fit'], 'markers': gr['markers'], 'archetype': gr['archetype'],
                        'factions': [[g, fa, round(r, 2)] for r, (g, fa) in gr['facs']]} for gr in groups],
            'decks': [{'game': d['game'], 'name': d['name'], 'size': d['size'],
                       'mix': {gr['key']: round(float(mix[n, gr['j']]), 3) for gr in groups if mix[n, gr['j']] >= 0.05},
