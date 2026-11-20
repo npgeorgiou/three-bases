@@ -17,17 +17,14 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 9. Stop 1 | to do | |
 
 ## Work for the next chat, in this order
-0. **The answer table** (`work/answer_concepts.tsv`): Claude's proposal, waiting for Kaptain's go; on his go, change
-   the table, rerun step 6 and the map.
-   - Between lanes is moving to another lane, using supply from another lane, or holding lanes. Keep: my units travel,
-     swap places, move his units, pick my unit up and replay it in another lane, copy it and play the copy elsewhere,
-     bring dead units back in another lane, more supply. Add: holding lanes, rewards for holding a lane. Take out:
-     when an enemy arrives, when another unit dies, counts deaths, counts what happened, stats equal to a count,
-     reaches other lanes, several separate targets, a whole row, many at once.
-   - The back row is behind the front unit. Take out: banish, send back, take and cocoon from "a spell picks any cell"
-     (damage and destroy stay), blast everything around mine too, my unit dies and blasts around it.
-   - What it cares about: a concept answers only when 10+ real decks are built on it and it goes with another kernel
-     concept (the discard pile on Kills brutally has 4 decks).
+0. **Random answers in step 6**: Claude's proposal, waiting for Kaptain's go (20 Nov 2026). Cause: how well two
+   concepts go is the higher of card links and decks holding both, and every question must be answered, so one wrong
+   card-link number brings a concept real decks never play with the core (Swarms banish: cards 6x chance, decks 1.7x).
+   - How well two concepts go: the lower of the two, so cards and decks must agree.
+   - A question nothing really fits stays open, marked so, for the design to fill.
+   - Between lanes: no table; each faction's way is one of its core concepts acting in another lane (Swarms: summon
+     in another lane), the ways taken from Marvel Snap cards that act on other locations.
+   - The back row keeps its table.
 1. **Fix the library errors found on 20 Nov 2026**, each in the library with test cases (`library/cards_db/START_DATABASE.md`,
    "Fixing errors"; a reading budget from Kaptain):
    - A link does not reliably record which of its two cards acts and which answers (`links.sqlite`: a and b). So a

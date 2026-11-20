@@ -342,8 +342,8 @@ The Deep Bell: an old order inside the mountain that winds a vast clockwork for 
 ### Concepts
 
 - [K] Search the deck for a card
-- [K] More or faster base resource
 - [K] Gain resources
+- [K] More or faster base resource
 - [K] Look at cards and pick
 - [K] Expensive card
 - [K] Countdown
