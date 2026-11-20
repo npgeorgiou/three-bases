@@ -54,7 +54,6 @@ sources.
 | A faction's mechanics by how much players pick them in real decks (share of deck plays / share of its cards; above 1 = picked more than the pool offers) | `ask.py <game> deckconcepts "<faction>"` |
 | The values you can ask for | `ask.py all list concepts`, `ask.py all list happenings` |
 | Mechanics real factions keep apart (opposite sides of the roster) and together (neighbours) | `python3 apart.py [top]` |
-| The real factions that fit each of the 17 groups of what decks play together | `factions/roster/work/deck_groups_nmf_17.md` (the roster's step 3) |
 Example answers: QUERIES.md. Kaptain's standing questions with their current answers: library/design_questions/
 (made by design_questions.py). The full list of questions the database must answer: QUESTION_BANK.md.
 

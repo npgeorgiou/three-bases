@@ -17,9 +17,9 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   (`links.sqlite`). Each link keeps which effect of each card made it, so it counts only for those effects' concepts.
 - **Strong link**: two concepts joined by the step 4 rule through real card pairs: `cards` 1.2+, or `rare` 3+ with a
   `level` of 1+. A pair joined only by real decks is not a strong link.
-- **What decks play together**: step 3. A deck is **built on** a concept when it has so many more cards with it than
-  its game's decks that chance can't explain it (score 1.96 or more: 8 heal cards where its game's decks average 2); a deck **holds** a concept by its share of cards with it, against its game's share. The
-  17 groups of step 3 are concepts that real decks play together; they are not factions.
+- **Built on, holds**: step 3. A deck is **built on** a concept when it has so many more cards with it than its game's
+  decks that chance can't explain it (score 1.96 or more: 8 heal cards where its game's decks average 2). A deck
+  **holds** a concept when its share of cards with it is twice its game's average.
 - **Identity**: what a faction DOES, in plain words: "can't be broken", "kills brutally", "waits", "messes you up",
   "moves" (Kaptain). Never a trigger or a condition ("when another unit dies"): those are how its cards work.
 - **Kernel**: the concepts that do what the identity says: the effects of a few families of the concept tree
@@ -128,30 +128,20 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
      grows by itself) or Kaptain ruled it out (randomness).
    A parent in the concept tree keeps only the cards none of its children carry, so no effect counts twice.
    `work/concepts.md` shows the kinds in plain words for Kaptain.
-3. **What decks play together** (`work/deck_groups_nmf.py` -> `work/deck_groups_nmf.tsv`, `.md`, `.json`).
-   Every deck's scores per concept, and the groups of concepts that real decks play together. Step 6 uses the decks'
-   scores and cards (which decks lean on a kernel, what those decks hold); the groups are shown on the map (step 5)
-   and are no factions. Real factions are never copied.
-   1. Concepts: the usable concepts (step 2); a card counts each concept once (Claude's). Five unit measures are added
-      to the NMF's input only, each against the card's game: unit, cheap unit, expensive unit, strong for its cost,
-      tough for its cost (above the game's straight line of strength or defence by cost, Claude's).
+3. **The real decks' scores** (`work/deck_scores.py` -> `work/deck_scores.json`), read by step 6 and the map. Real
+   factions are never copied.
+   1. Concepts: the usable concepts (step 2); a card counts each concept once (Claude's). Five unit measures are added,
+      each against the card's game: unit, cheap unit, expensive unit, strong for its cost, tough for its cost (above
+      the game's straight line of strength or defence by cost, Claude's).
    2. Scores: every deck of `decks.tsv` (the whole deck, all its cards, neutrals and staples too, never split by
-      faction) and every real faction (43; Monster Train's clans are not measured), per concept: the log-odds ratio with a prior (Monroe et al.
-      2008) against all the cards of its game (Claude's), as a z-score; above 1.96 the deck leans on it. Deck cards the
-      library does not know are counted and reported, never guessed. Monster Train and Marvel Snap decks are in
-      (Claude's).
-   3. Groups: NMF (it splits each deck into a mix of a few groups of concepts) on the deck rows only, with the positive
-      scores; each game weighs the square root of its deck count. The first guess comes from the data (NNDSVD), so one run gives the
-      result. The number of groups, from 14 to 30 (Claude's),
-      is the one whose groups stay most alike when the run is repeated on 90% of the decks, 10 times (Claude's). A deck
-      fits a group that is at least 30% of its mix (Claude's). The roster keeps the version with 17 groups
-      (`--groups 17`, the most stable number on the 3027 decks, 0.96; Kaptain's, 19 Nov 2026).
-   4. Per group: its 10 heaviest concepts, each with the share of its decks that lean on it; its base concepts (more
-      than half of its decks have them, more often than their game's decks, Claude's), like "Deal damage"; its unit
-      numbers against their games; a group whose decks are 80% or more from one game is marked (Claude's).
-      Its concepts on the map (`work/step3_groups.py`): its 10 heaviest and its base concepts, without the five unit
-      measures and without the concepts more than half of the groups hold ("Attack gain"; Claude's).
-   5. Per group, its design markers. Each is one number per deck against its game's decks: a deck has the marker when
+      faction) and every real faction (43; Monster Train's clans are not measured), per concept: its cards with it,
+      and the log-odds ratio with a prior (Monroe et al. 2008) against all the cards of its game (Claude's), as a
+      z-score; 1.96 or more: the deck is built on it. Deck cards the library does not know are counted and reported,
+      never guessed. Monster Train and Marvel Snap decks are in (Claude's).
+   3. Design markers, per deck. Each is one number per deck against its game's decks: a deck has the marker when
+      its number is in the top quarter of its game's decks, its mirror when in the bottom quarter; a set of decks
+      carries a marker when its decks have it at least twice as often as their games' decks (both Claude's). The
+      markers, each with its mirror:
       its number is in the top quarter of its game's decks, its mirror when in the bottom quarter; a group carries a
       marker when its decks have it at least twice as often as their games' decks (both Claude's). The markers, each
       with its mirror: many units / many spells (share of units, of spells); many buildings, cards that stay in play
@@ -162,11 +152,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       than it hits (strength against defence); plain cards / busy cards (effects per card); mostly summoned units /
       mostly units played from hand (cards that summon against its unit cards). "Many spells", "few big units" and
       "mostly summoned units" are Kaptain's, the rest Claude's.
-   6. The real factions are never rows of the NMF. A faction fits its best 2 groups when its share of their concepts
-      is at least twice its game's average (Claude's). The groups no faction fits, the factions that fit no group and
-      the concepts in no group are listed.
-   `work/make_faction.py "<concept>" ["<concept>"]` shows what the decks that lean on one or two concepts play (its
-   header says how): a quick look, never a faction of the roster.
+   `work/make_faction.py` makes one faction from concepts Kaptain gives, the way step 6 does (its header says how).
 4. **The links between concepts** (`roster_links.py links --concepts` -> `roster/concept_links.tsv`). For every two
    concepts of `work/concepts.tsv` (usable, helpers and out): `cards` = how much more often than chance their cards are
    linked, counted only through what of each card made the link; `decks` = how much more often real decks heavy in one
@@ -174,18 +160,12 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    `makes` (the share of the pair's links where a's card sets off or feeds b's card); the three most common link
    texts. Joined: `cards` 1.2+, or `decks` 1.5+, or `rare` 3+ with a `level` of 1+. `apart.py` lists the concept pairs
    real factions keep apart.
-5. **The map of what decks play together** (`work/archetype_map.py` -> `factions/roster-map.html`, with
-   `work/archetype_parts.tsv`, `work/archetype_map.tsv` and `work/archetype_gaps.tsv`): a page for Kaptain to look at;
-   no later step reads it. Every concept of step 3 is a node at a fixed place, laid out once from the 17 groups of real
-   decks: two concepts sit close when the same groups' decks lean on them more than all decks do (t-SNE, seeded;
-   Claude's). Each group is a set of nodes; between two of its concepts that real cards link, an edge with the step 4
-   numbers (`cards`, `games`, `level`), the top link text and one real card pair; an edge is marked weak when more than
-   half of its card links are about hitting the player (no player health here), or when only real decks join it. A
-   group's design markers are shown beside it, brown. Kaptain ticks groups to light their concepts and edges; between
-   ticked groups the page draws every real link from a concept of one to a concept of another. Clicking concepts builds
-   a set: the page shows how many real decks lean on at least half of them and in how many games, what else those decks
-   lean on, which real factions fit it (its cards hold the concepts at least twice as much as its game's cards) and
-   which groups are closest.
+5. **The map** (`work/roster_map.py`, run after step 6 -> `factions/roster-map.html`): a page for Kaptain to look at;
+   no later step reads it. Every usable concept is a dot. Two concepts sit close when real decks hold both more often
+   than chance (a deck holds a concept when its share of cards with it is twice its game's average); springs lay the
+   dots out (that closeness pulls, every pair pushes alike), so the gaps are even. A dot has the colour of the faction
+   whose kernel holds it. Ticking factions lights their kernel, other concepts and extras, and draws in the faction's
+   colour the strong card links between its kernel and other concepts.
 6. **The factions, from what they do** (by script: `work/kernel_factions.py` -> `work/kernel_factions.md`, one sheet
    per faction for Kaptain, and `work/kernel_factions_check.md` with every number; `work/lists/<letter>.tsv`). Every
    tie is broken by the concept key in alphabetical order, so every run gives the same result. In this order:

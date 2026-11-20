@@ -8,9 +8,9 @@ One chat does one step; at its end, mark the step done here and say what it left
 |---|---|---|
 | 1. Fix the library's concepts | done | `cards.sqlite`, `links.sqlite` |
 | 2. The usable concepts | done: 131 usable, 44 helper, 33 out | `work/concepts.tsv`, `.md` |
-| 3. What decks play together | done: 3027 decks of 10 games, 17 groups | `work/deck_groups_nmf_17.*` |
+| 3. The real decks' scores | done: 3027 decks of 10 games | `work/deck_scores.json` |
 | 4. The links between concepts | done: 15745 concept pairs | `library/cards_db/roster/concept_links.tsv` |
-| 5. The map of what decks play together | done (a page only) | `factions/roster-map.html` |
+| 5. The map | done (a page only; made after step 6) | `factions/roster-map.html` |
 | 6. The factions, from what they do | the 10 of the trial made: core kernel plus answers, one ranked fill, new world; Kaptain checks them | `work/kernel_factions.md`, `.tsv`, `work/lists/` |
 | 7. Combos on this board | to do | |
 | 8. Game plan, then keywords | to do | |
@@ -64,7 +64,7 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
 - No "2+ games" rule for a kernel: "we dont have many moving games, and my game is a moving game" (20 Nov 2026).
 - Claude does the bulk of the work (thin kernels are widened by Claude), "so we have something that more or less
   works" (20 Nov 2026).
-- Step 3 is "what gets played together" (20 Nov 2026); the roster keeps 17 groups (19 Nov 2026).
+- Step 3 keeps only each real deck's scores; no groups of decks (20 Nov 2026).
 - Hatching from an egg is NOT a summon (20 Nov 2026).
 - Two factions share at most half of their own concepts; every faction keeps a blind spot (18 Nov 2026). One idea per
   faction, no fruit salad.

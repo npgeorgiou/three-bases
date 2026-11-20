@@ -42,19 +42,12 @@ is written in that step's chat, from the rules of the step, and its line here is
   `work/concept_verdicts.tsv` (a concept not in it is usable); player_<concept> and a parent left with under 5 cards
   are out. `work/concepts.md`: the same by kind in plain words, for Kaptain.
 
-## Step 3. What decks play together
-- `python3 ../../factions/roster/work/deck_groups_nmf.py` (from `library/cards_db`, about 2.5 minutes, 2 cores) ->
-  `factions/roster/work/deck_groups_nmf.tsv` (per group: decks, games, concepts with the share of decks leaning on each,
-  base concepts, unit numbers, design markers with how many times as often its decks have each, factions that fit), `.md` (for Kaptain, short lists only: per group its games, its 10
-  heaviest concepts and those most of its decks have, its design markers; then the concepts in no group; never deck
-  names or the factions that fit) and `.json`.
-- `python3 ../../factions/roster/work/deck_groups_nmf.py --groups 17` (about 40 seconds) -> `deck_groups_nmf_17.tsv`, `.md`,
-  `.json`: the 17 groups the roster keeps (17: the most stable number on the 3027 decks), and every deck with its card
-  counts per concept and the concepts it leans on, read by step 6. The number is set once, in `work/step3_groups.py`
-  (`GROUPS`, `FILE`); steps 5 and 6 read it from there. `work/step3_groups.py` turns the groups into rows for the map.
-- `python3 factions/roster/work/make_faction.py "attach" ["discard"]` (from the repo, a second) -> what the decks that
-  lean on one or two concepts play (its header says how), printed and written to `factions/roster/work/made/<concepts>.md`;
-  a quick look, never a faction of the roster.
+## Step 3. The real decks' scores
+- `python3 ../../factions/roster/work/deck_scores.py` (from `library/cards_db`, a few seconds) -> `work/deck_scores.json`:
+  every real deck's cards per concept, the concepts it is built on (score 1.96+) and its design markers; every real
+  faction's cards per concept; every game's cards per concept. Read by step 6, `make_faction.py` and the map.
+- `python3 factions/roster/work/make_faction.py ...` (from the repo): one faction from concepts Kaptain gives, the way
+  step 6 makes them (its header and `--help` say how).
 
 ## Step 4. The links between concepts
 - `python3 roster_links.py links --concepts` (about a minute; every game, those with no factions too) ->
@@ -66,19 +59,10 @@ is written in that step's chat, from the rules of the step, and its line here is
   too. Checked by `cases/roster.tsv`. `python3 apart.py` gives
   the pairs real factions keep apart.
 
-## Step 5. The map of what decks play together
-- `python3 ../../factions/roster/work/archetype_map.py` (about 15 seconds; needs links.sqlite; reads the 17 groups of step 3
-  through `work/step3_groups.py`, their decks and real factions from `work/deck_groups_nmf_17.json`, and step 6's factions
-  from `work/kernel_factions.tsv`; it runs again after every step 6 run, so the map shows the factions) ->
-  `factions/roster-map.html` (page template `work/archetype_map_template.html`; the concepts' places by t-SNE over
-  each concept's lift in the 17 groups' decks, seed 7, then moved apart until no two names overlap; the page also holds
-  every deck's concepts and every real faction's concept counts, for building a set of concepts), with
-  `work/archetype_parts.tsv` (group, name, concept, linked or alone), `work/archetype_map.tsv` (group, concept a,
-  concept b, `cards`, `decks`, `games`, `level`, top link text, the real card pair of its strongest link; `note`: "about
-  the player" when more than half of its card links are about hitting the player, "decks only" when no card pair) and
-  `work/archetype_gaps.tsv`. A page to look at; no later step reads these files.
-  `archetype_map.card_pairs(pairs)` (run from `library/cards_db`) gives the real card pair behind any concept pairs; step
-  6 uses it.
+## Step 5. The map
+- `python3 ../../factions/roster/work/roster_map.py` (from `library/cards_db`, about 20 seconds; after step 6) ->
+  `factions/roster-map.html` (page template `work/roster_map_template.html`). `roster_map.card_pairs(pairs)` gives the
+  real card pair behind any concept pair.
 
 ## Step 6. The factions, from what they do
 - `python3 factions/roster/work/kernel_factions.py` (from the repo, about a minute; needs links.sqlite) ->
@@ -91,7 +75,7 @@ is written in that step's chat, from the rules of the step, and its line here is
   their kernel links and the real card pair behind the strongest, its bricks with how many times as often its decks
   hold each, what its decks hold that real cards also link to its concepts (a faction still short of 12), its design
   markers, its extras with their list scores, its answers, its partners with their strength and how each plays; then
-  every pair. It reads `work/deck_groups_nmf_17.json` (decks and their design markers),
+  every pair. It reads `work/deck_scores.json` (decks and their design markers),
   `library/cards_db/roster/concept_links.tsv` (strong links, their games), `library/concept_tree.txt` (families),
   `work/concepts.tsv` (usable) and `work/answer_concepts.tsv` (the ways of each answer).
 - `python3 ../../factions/roster/work/concept_list.py` (from `library/cards_db`) -> `factions/roster/work/lists/<letter>.tsv`

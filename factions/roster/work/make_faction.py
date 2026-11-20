@@ -1,7 +1,7 @@
 """A faction from one or two concepts, made from what real decks play, never from step 3's groups.
 python3 factions/roster/work/make_faction.py "attach" ["discard"]  -> prints the faction and writes it to
 factions/roster/work/made/<concepts>.md. A concept is named by its key or by words of its plain name. The decks and their
-scores come from step 3's json (step3_groups.FILE).
+scores come from step 3's json (deck_scores.json).
 1. Each named concept: the decks that lean on it (score above the strong mark).
 2. Its two archetypes: with two concepts, the decks of each make one archetype; with one, its decks are split into the two
    ways they play it (NMF with 2 groups on those decks' scores, first guess from the data; each deck goes to the way it
@@ -16,9 +16,8 @@ import json, math, os, re, sys
 import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-import step3_groups
 LIFT, SHARE, MIN_DECKS, TOP = 3.0, 0.08, 3, 12  # Claude's
-D = json.load(open(step3_groups.FILE, encoding='utf-8'))
+D = json.load(open(os.path.join(HERE, 'deck_scores.json'), encoding='utf-8'))
 plain, decks, UNIT = D['plain'], D['decks'], set(D['unit'])
 ARGS = [a for a in sys.argv[1:] if not a.startswith('--')]
 

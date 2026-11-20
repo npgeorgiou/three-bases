@@ -40,7 +40,6 @@ import collections, csv, itertools, json, math, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, '..', '..', '..')
 sys.path.insert(0, HERE)
-import step3_groups
 OWN, KERNEL, MIN_KERNEL, MIN_LEAN, ENGINES, PLAYED, MIN_DECKS = 12, 6, 4, 10, 4, 1.0, 3  # Claude's
 PER_QUESTION, SYN, FULL, DECK_SHARE, WHOLE_LIST, COMMON = 2, 1 / 3, 8, 2, 30, 15  # real kernel: concepts per question (Kaptain), fits with another kernel concept, times chance that scores 1 (Claude's)
 DECK_LIFT, HELD, MAX_SHARE, PARTNERS = 1.5, 0.25, 3, 5                              # Claude's; 5 partners: Kaptain
@@ -82,7 +81,7 @@ THEMES = {  # per faction: its people in Veyl, the real-world model it is writte
     'Eats its own': ('The Ember Cult: fire-worshippers who feed their own to the furnace for power',
                      'the sacrifice priests of Tenochtitlan', ['death', 'drawback']),
 }
-D = json.load(open(step3_groups.FILE, encoding='utf-8'))
+D = json.load(open(os.path.join(HERE, 'deck_scores.json'), encoding='utf-8'))
 plain, decks, UNIT = dict(D['plain']), D['decks'], set(D['unit'])
 tree, facet = {}, {}
 for line in open(os.path.join(ROOT, 'library/concept_tree.txt'), encoding='utf-8'):
@@ -201,7 +200,7 @@ def share(pool, room, fit, add=True):
     return took
 sys.path.insert(0, os.path.join(ROOT, 'library', 'cards_db'))
 here = os.getcwd(); os.chdir(os.path.join(ROOT, 'library', 'cards_db'))
-import archetype_map
+import roster_map
 os.chdir(here)
 def behind(c, k):
     """the real card pair behind c's strongest link to the kernel k"""
@@ -254,7 +253,7 @@ def build():
 
     here = os.getcwd(); os.chdir(os.path.join(ROOT, 'library', 'cards_db'))
     wanted = {frozenset((c, q)) for x in fac for c in x['from_links'] for q in x['kernel'] if wide(c, q)}
-    pair_of = archetype_map.card_pairs(wanted)[0]
+    pair_of = roster_map.card_pairs(wanted)[0]
     os.chdir(here)
     pairs, strengths = [], {}
     for i in range(len(fac)):
