@@ -27,10 +27,8 @@ The Shellwardens of Kesh: a coastal people who grow living coral over their bodi
 - [K] Defence gain
 - [K] Block points that wear off
 - [K] Neighbours matter
-- [K] Deal damage
-- [K] Hits my own side too
-- [K] When an enemy arrives
-- [K] Bring back dead units
+- [K] Damage to several separate targets
+- [K] Swap positions
 - Stats matter
 - Damaged unit matters
 - Help from nearby allies
@@ -42,17 +40,18 @@ The Shellwardens of Kesh: a coastal people who grow living coral over their bodi
 - A unit levels up on the board
 - Immune / can't be targeted
 - Make a unit stronger
+- When an enemy arrives
+- My unit fights a chosen enemy
 
 ### Design answers
 
 - How it wins: its units do not die
 - Removes the front unit:
-  - Deal damage
+  - Swap positions
 - Mainly removes back-row units:
-  - Hits my own side too
+  - Damage to several separate targets
 - Mainly acts between lanes:
-  - When an enemy arrives
-  - Bring back dead units
+  - nothing in real cards
 - Holds a base:
   - Take less damage
   - Defence gain
@@ -61,13 +60,17 @@ The Shellwardens of Kesh: a coastal people who grow living coral over their bodi
 - The game thing it cares about:
   - Neighbours matter
 
+### Deck style: what its decks are like
+
+- nothing stands out
+
 ### Partners
 
 - Moves
-- Grows
+- Eats its own
 - Comes back
 - Kills brutally
-- Swarms
+- Grows
 
 ## Kills brutally
 
@@ -90,22 +93,22 @@ The Ashen Hunt: riders on burn-scarred lizards who sweep the dune seas and leave
 - [K] Damage to many at once
 - [K] Send an enemy unit back
 - [K] Small repeatable damage
-- [K] Attack set to 0
-- [K] Fill my own discard pile
+- [K] Neighbours matter
+- [K] A unit levels up on the board
 - [K] Summon units / tokens
 - Counts deaths
+- Return my unit from the board to hand
 - When another unit dies
+- Bring back dead units
 - Attack right away
 - Damaged unit matters
 - Move enemy units
+- Attack set to 0
 - Steal from the opponent
-- A unit levels up on the board
 - Move my units
 - Clog the opponent's board
 - Extra turns or actions
 - Swap positions
-- Cheat death
-- Damage to several separate targets
 
 ### Design answers
 
@@ -119,20 +122,26 @@ The Ashen Hunt: riders on burn-scarred lizards who sweep the dune seas and leave
   - Deal damage
   - Destroy outright
 - Mainly acts between lanes:
-  - Damage to many at once
+  - Destroy outright in another lane
 - Holds a base:
-  - Attack set to 0
+  - A unit levels up on the board
   - Summon units / tokens
 - The game thing it cares about:
-  - Fill my own discard pile
+  - Neighbours matter
+
+### Deck style: what its decks are like
+
+- Many spells
+- Few big units
+- Mostly summoned units
 
 ### Partners
 
-- Comes back
-- Messes you up
-- Can't be broken
 - Moves
+- Comes back
 - Swarms
+- Can't be broken
+- Grows
 
 ## Messes you up
 
@@ -157,22 +166,22 @@ The Whisper Choir: masked singers whose songs unknit memory, break oaths and tur
 - [K] Attack the opponent's hand
 - [K] Make a unit weaker
 - [K] Can't act at all
-- [K] Neighbours matter
 - [K] Deal damage
 - [K] Move enemy units
-- [K] Move my units
+- [K] Where units can be placed
 - [K] Steal from the opponent
 - Give my units or cards to the opponent
 - Send an enemy unit back
+- Move my units
 - Stacking keywords / counters
 - Change the game's rules
 - Make the opponent's cards cost more
-- Where units can be placed
 - Swap or replace hands or decks
 - When an enemy arrives
 - Look at cards and pick
 - Create new cards
 - Attack set to 0
+- Block points that wear off
 
 ### Design answers
 
@@ -184,19 +193,22 @@ The Whisper Choir: masked singers whose songs unknit memory, break oaths and tur
   - Deal damage
   - Steal from the opponent
 - Mainly acts between lanes:
-  - Move enemy units
-  - Move my units
+  - Make a unit weaker in another lane
 - Holds a base:
   - Can't act at all
 - The game thing it cares about:
-  - Neighbours matter
+  - Where units can be placed
+
+### Deck style: what its decks are like
+
+- Few big units
 
 ### Partners
 
+- Moves
 - Kills brutally
-- Comes back
 - Swarms
-- Eats its own
+- Can't be broken
 - Thrives on spells
 
 ## Moves
@@ -230,11 +242,11 @@ The Drift Clans: sky-raft nomads who ride the winds between floating islands and
 - Board wipe
 - Can't act at all
 - Having a card in play or hand
+- Hits my own side too
 - When another unit dies
 - Aura
 - Mill the opponent's deck
 - Stat loss
-- Ranged attack / long reach
 
 ### Design answers
 
@@ -244,18 +256,22 @@ The Drift Clans: sky-raft nomads who ride the winds between floating islands and
 - Mainly removes back-row units:
   - Damage to many at once
 - Mainly acts between lanes:
-  - Move my units
+  - Position and space in another lane
 - Holds a base:
   - Terrain / board features
 - The game thing it cares about:
   - Where units can be placed
 
+### Deck style: what its decks are like
+
+- Few big units
+
 ### Partners
 
-- Can't be broken
-- Eats its own
-- Comes back
 - Kills brutally
+- Comes back
+- Eats its own
+- Can't be broken
 - Swarms
 
 ## Thrives on spells
@@ -284,11 +300,10 @@ The Lantern Scribes: scholars who write with ink distilled from starlight; every
 - [K] My spells and abilities get stronger
 - [K] Can't attack
 - [K] Send an enemy unit back
+- [K] Hand size matters
 - [K] Expensive card
 - [K] Turn an enemy into something weaker
-- [K] Return my unit from the board to hand
 - Put into play for free
-- Hand size matters
 - Enough spells played
 - Cost matters
 - Ready a used unit again
@@ -298,6 +313,7 @@ The Lantern Scribes: scholars who write with ink distilled from starlight; every
 - Copy cards or units
 - Fill my own discard pile
 - Reuse my cards
+- Junk cards into a deck or hand
 
 ### Design answers
 
@@ -309,19 +325,27 @@ The Lantern Scribes: scholars who write with ink distilled from starlight; every
   - Send an enemy unit back
   - Turn an enemy into something weaker
 - Mainly acts between lanes:
-  - Return my unit from the board to hand
+  - nothing in real cards
 - Holds a base:
   - Can't attack
 - The game thing it cares about:
+  - Hand size matters
   - Expensive card
+
+### Deck style: what its decks are like
+
+- Many spells
+- High curve
+- Expensive units
+- Few big units
 
 ### Partners
 
 - Waits
-- Messes you up
-- Grows
+- Eats its own
 - Moves
-- Comes back
+- Grows
+- Kills brutally
 
 ## Waits
 
@@ -348,6 +372,7 @@ The Deep Bell: an old order inside the mountain that winds a vast clockwork for 
 - [K] Expensive card
 - [K] Countdown
 - [K] Damage over time
+- [K] Destroy outright
 - [K] Heal every turn
 - Enough spells played
 - Disrupt the opponent's plans
@@ -362,7 +387,6 @@ The Deep Bell: an old order inside the mountain that winds a vast clockwork for 
 - When an enemy arrives
 - Keep my units alive
 - Board wipe
-- Attack set to 0
 
 ### Design answers
 
@@ -370,22 +394,29 @@ The Deep Bell: an old order inside the mountain that winds a vast clockwork for 
 - Removes the front unit:
   - Damage over time
 - Mainly removes back-row units:
-  - Damage over time
+  - Destroy outright
 - Mainly acts between lanes:
-  - Gain resources
+  - nothing in real cards
 - Holds a base:
   - Countdown
   - Heal every turn
 - The game thing it cares about:
   - Expensive card
 
+### Deck style: what its decks are like
+
+- High curve
+- Expensive units
+- Expensive spells
+- Few big units
+
 ### Partners
 
-- Thrives on spells
+- Kills brutally
 - Comes back
 - Eats its own
-- Kills brutally
 - Swarms
+- Thrives on spells
 
 ## Swarms
 
@@ -437,20 +468,23 @@ The Hive of Many Mouths: insect folk who hatch by the thousand from amber nests 
 - Mainly removes back-row units:
   - Banish / exile
 - Mainly acts between lanes:
-  - Copy cards or units
-  - Put into play for free
+  - Summon units / tokens in another lane
 - Holds a base:
   - Summon units / tokens
 - The game thing it cares about:
   - Hand size matters
 
+### Deck style: what its decks are like
+
+- Mostly summoned units
+
 ### Partners
 
-- Messes you up
-- Eats its own
+- Kills brutally
 - Moves
-- Can't be broken
 - Comes back
+- Eats its own
+- Grows
 
 ## Grows
 
@@ -477,7 +511,6 @@ The Rootborn: walking tree-giants who swell with every season they survive.
 - [K] Attack gain
 - [K] Excess damage carries on
 - [K] My unit fights a chosen enemy
-- [K] Stats equal to a count
 - Help from nearby allies
 - Defence gain
 - Stats matter
@@ -489,6 +522,7 @@ The Rootborn: walking tree-giants who swell with every season they survive.
 - Attack more than once
 - Absorb one hit
 - Take less damage
+- Can't move
 
 ### Design answers
 
@@ -499,19 +533,23 @@ The Rootborn: walking tree-giants who swell with every season they survive.
   - Attack gain
   - Excess damage carries on
 - Mainly acts between lanes:
-  - Stats equal to a count
+  - Make a unit stronger in another lane
 - Holds a base:
   - Strikes with its defence
 - The game thing it cares about:
   - Neighbours matter
 
+### Deck style: what its decks are like
+
+- nothing stands out
+
 ### Partners
 
-- Eats its own
 - Comes back
-- Can't be broken
+- Eats its own
 - Kills brutally
-- Moves
+- Swarms
+- Can't be broken
 
 ## Comes back
 
@@ -536,44 +574,48 @@ The Returning Tide: drowned sailors the sea sends back to the shore every dawn.
 - [K] Board wipe
 - [K] Destroy outright
 - [K] Discard my own cards
-- [K] Swap positions
+- [K] Hits my own side too
 - Sacrifice my own units
 - Put into play for free
 - Attach or merge onto a unit
 - Destroys itself / temporary unit
 - When another unit leaves play
 - Grows with what happened this game
-- Hits my own side too
 - Top or bottom of the deck matters
 - Countdown
 - Stacking keywords / counters
 - Extra turns or actions
 - When I play another card
 - Absorb one hit
+- Damage to many at once
 - Stealth / hidden until it acts
 
 ### Design answers
 
 - How it wins: what it loses returns
 - Removes the front unit:
-  - Swap positions
+  - Destroy outright
 - Mainly removes back-row units:
   - Board wipe
-  - Destroy outright
+  - Hits my own side too
 - Mainly acts between lanes:
-  - Bring back dead units
+  - Bring back dead units in another lane
 - Holds a base:
   - Bring back dead units
 - The game thing it cares about:
   - Discard my own cards
 
+### Deck style: what its decks are like
+
+- Few big units
+
 ### Partners
 
-- Kills brutally
 - Grows
-- Can't be broken
+- Kills brutally
 - Moves
-- Messes you up
+- Can't be broken
+- Swarms
 
 ## Eats its own
 
@@ -596,12 +638,12 @@ The Ember Cult: fire-worshippers who feed their own to the furnace for power.
 - [K] Discard my own cards
 - [K] Hits my own side too
 - [K] Destroys itself / temporary unit
-- [K] Counts deaths
-- [K] Destroy outright
-- [K] When another unit dies
+- [K] Cheat death
+- [K] Deal damage
 - [K] Bring back dead units
+- Counts deaths
+- When another unit dies
 - Return my unit from the board to hand
-- Cheat death
 - Summon units / tokens
 - Row-wide lasting effects
 - Damaged unit matters
@@ -619,24 +661,28 @@ The Ember Cult: fire-worshippers who feed their own to the furnace for power.
 
 - How it wins: kills and spends its own units and cards for power
 - Removes the front unit:
-  - Destroy outright
+  - Deal damage
 - Mainly removes back-row units:
   - Hits my own side too
 - Mainly acts between lanes:
-  - Counts deaths
-  - When another unit dies
+  - Sacrifice my own units in another lane
 - Holds a base:
+  - Cheat death
   - Bring back dead units
 - The game thing it cares about:
   - Discard my own cards
+
+### Deck style: what its decks are like
+
+- nothing stands out
 
 ### Partners
 
 - Grows
 - Moves
-- Messes you up
-- Swarms
 - Can't be broken
+- Swarms
+- Waits
 
 ## In no faction yet
 
@@ -645,4 +691,5 @@ The Ember Cult: fire-worshippers who feed their own to the furnace for power.
 - Lifesteal / drain
 - Mark a target for later hits
 - Counts / thresholds
+- Stats equal to a count
 

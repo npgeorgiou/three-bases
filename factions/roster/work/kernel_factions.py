@@ -9,10 +9,13 @@
    fit2 to the core; the best fill the faction to OWN concepts, then its extras to OWN + EXTRAS. A concept is in at most
    MAX_SHARE factions (kernels, concepts and extras together; share()): it stays where it fits best.
 4. The real kernel: the core, plus for each question the core does not answer (work/answer_concepts.tsv: removes a front
-   unit, the back row, acts between lanes, holds a base, what it cares about) up to PER_QUESTION concepts of the fill or
+   unit, the back row, holds a base, what it cares about) up to PER_QUESTION concepts of the fill or
    the top WHOLE_LIST of its list that answer it, the ones that go best with the core and the other answers (choose());
    each added concept fits another kernel concept at SYN or more; no two factions answer a question with the same added
-   concept. Then 2 and 3 again on the real kernel.
+   concept. Between lanes is answered by the core alone (lane_way()): the core concept whose real cards most often act
+   in another lane (a row of the card on a unit or place in another lane than its own, LANE_CARDS+ cards; under a
+   concept counts its narrower concepts too), "<it> in another lane"; when no core concept has such cards it stays open.
+   Then 2 and 3 again on the real kernel.
 5. A concept COMMON+ decks are built on that no faction has replaces the weakest extra of the faction it fits best.
 6. Partners: its PARTNERS strongest pairs (strong card links between their concepts, plus 3 per kernel concept the
    other's decks hold DECK_LIFT times as often as their games). Design markers: what its decks are like (deck_scores.json).
@@ -21,7 +24,7 @@
 python3 factions/roster/work/kernel_factions.py (from the repo, about 2 minutes; needs links.sqlite) -> kernel_factions.md
 (one sheet per faction), kernel_factions.tsv (read by make_faction.py, the map
 and concept_list.py), kernel_factions_summary.json (the numbers to compare runs) and lists/."""
-import collections, csv, itertools, json, math, os, re, sys
+import collections, csv, itertools, json, math, os, re, sqlite3, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, '..', '..', '..')
 sys.path.insert(0, HERE)
@@ -72,6 +75,15 @@ for line in open(os.path.join(ROOT, 'library/concept_tree.txt'), encoding='utf-8
     if line.startswith('#') or '|' not in line: continue
     p = [x.strip() for x in line.split('|')]
     tree[p[0]] = [q for q in p[3].split(',') if q]; facet[p[0]] = p[2]; plain.setdefault(p[0], p[1])
+LANE_CARDS = 2  # Claude's
+OTHER_LANE = re.compile(r'position (not same_lane|is lane_right|in lane_right|is lane_left|in lane_left|is previous_lane|is next_lane|is each_lane|is edge_lane)')
+def lane_cards():
+    """concept -> the real cards with a row of it on a unit or place in another lane than the card's own"""
+    con = sqlite3.connect(os.path.join(ROOT, 'library', 'cards_db', 'cards.sqlite')); out = collections.defaultdict(set)
+    for card, c, on, to in con.execute('select d.card, d.concept, d.on_with, d.to_with from flat_do d join card k on k.id = d.card where k.is_keyword = 0'):
+        if c and OTHER_LANE.search((on or '') + ';' + (to or '')): out[c].add(card)
+    return out
+LANE = lane_cards()
 usable = {r['concept'] for r in csv.DictReader(open(os.path.join(HERE, 'concepts.tsv'), encoding='utf-8'), delimiter='\t') if r['kind'] == 'usable'}
 def under(x):
     out, grew = {x}, True
@@ -197,6 +209,11 @@ def pick(x, cands):
     if not cands: return None
     top = max(cands.values())
     return min((c for c in cands if cands[c] >= top - TIE), key=lambda c: (c not in x['theme_likes'], -cands[c], c))
+def lane_way(core):
+    """the core concept whose real cards most often act in another lane (with its narrower concepts), or None"""
+    n = {c: len(set().union(*(LANE.get(k, set()) for k in under(c)))) for c in core}
+    best = sorted((c for c in core if n[c] >= LANE_CARDS), key=lambda c: (-n[c], c))
+    return best[0] if best else None
 def best_way(x, q, have, score):
     """the way of question q that the concepts have give, or that takes the fewest, highest-scoring extras: (way, extras)"""
     found = []
@@ -209,6 +226,15 @@ def best_way(x, q, have, score):
             take.append(pick(x, got))
         else: found.append((len(take), -sum(score[a] for a in take) / max(1, len(take)), way, take))
     return min(found, key=lambda t: t[:3])[2:] if found else (None, [])
+def markers_of(ds):
+    """design markers: what the decks ds are like against all decks of their games (step 3), times as much"""
+    gs, out = {decks[n]['game'] for n in ds}, {}
+    for key in D['markers']:
+        here = [decks[n]['marks'][key] for n in ds if key in decks[n]['marks']]
+        every = [d['marks'][key] for d in decks if d['game'] in gs and key in d['marks']]
+        if len(here) >= 5 and sum(every) and (sum(here) / len(here)) / (sum(every) / len(every)) >= D['mark_fit']:
+            out[key] = round((sum(here) / len(here)) / (sum(every) / len(every)), 1)
+    return out
 def build():
     """one pass of step 6 on the factions' kernels: one ranked fill (concepts, then extras), partners, markers, list, answers"""
     global kernels, strengths, partners
@@ -238,16 +264,10 @@ def build():
 
     partners = {i: sorted((j for j in range(len(fac)) if j != i), key=lambda j: -strengths[(i, j)])[:PARTNERS] for i in range(len(fac))}
 
-    for i, x in enumerate(fac):  # design markers: what its kernel's decks are like against their games' decks (step 3)
-        gs = {decks[n]['game'] for n in x['decks']}
+    for i, x in enumerate(fac):
         x['letter'], (x['theme'], x['model'], tf) = LETTERS[i], THEMES[x['name']]
         x['theme_likes'] = set().union(*(under(f) for f in tf))
-        x['markers'] = {}
-        for key in D['markers']:
-            here = [decks[n]['marks'][key] for n in x['decks'] if key in decks[n]['marks']]
-            every = [d['marks'][key] for d in decks if d['game'] in gs and key in d['marks']]
-            if len(here) >= 5 and sum(every) and (sum(here) / len(here)) / (sum(every) / len(every)) >= D['mark_fit']:
-                x['markers'][key] = round((sum(here) / len(here)) / (sum(every) / len(every)), 1)
+        x['markers'] = markers_of(x['decks'])
     for i, x in enumerate(fac):
         x['list'] = lib.scores(x['concepts'])
         x['score'] = {c: v[0] for c, v in x['list'].items()}
@@ -258,9 +278,11 @@ def build():
         x['extras'] = ex = took[id(x)]; score = x['score']
         full = set(x['concepts'] + ex)
         x['answers'] = {}
-        for q in ('front', 'backrow', 'lanes', 'holds'):
+        for q in ('front', 'backrow', 'holds'):
             own = answers(x['concepts'])[q]
             x['answers'][q] = own[0] if own else (best_way(x, q, full, {})[0] or '**missing**')
+        lw = lane_way(x.get('core', x['kernel']))
+        x['answers']['lanes'] = f'{plain.get(lw, lw)} in another lane' if lw else 'nothing in real cards'
         mine = answers(x['concepts'])['cares']
         pool = {w: max((score[a] for alt in need for a in alt if a in score), default=0) for w, need in ways['cares']}
         x['answers']['cares'] = mine[0] if mine else (pick(x, pool) or '**missing**')
@@ -287,6 +309,9 @@ def choose(x, ban):
     have = answers(sorted(core))
     opts = {}
     for q in Q5:
+        if q == 'lanes':
+            lw = lane_way(sorted(core)); opts[q] = [frozenset([lw])] if lw else []
+            continue
         if have[q]:
             opts[q] = [frozenset(c for way, need in ways[q] if way == have[q][0] for alt in need for c in alt if c in core)]
             continue
@@ -307,6 +332,23 @@ def choose(x, ban):
     return cur
 def fits_in(c, k): return sum(fit2(c, o) for o in k if o != c) / max(1, len(k) - 1)
 def holders(c): return sum(c in x['concepts'] + x['extras'] for x in fac)
+
+name = lambda c: re.sub(r' \([^)]*\)', '', plain.get(c, c))  # plain name, nothing in brackets
+def sheet(title, does, theme, fams, kernel, others, by_q, markers, partner_names):
+    """one faction's page for Kaptain: a header per part, every item a list, plain names, no numbers"""
+    page = [f'## {title}', '']
+    if does: page += [f'{does.capitalize()}.', '']
+    if theme: page += ['### Who they are', '', f'{theme}.', '']
+    if fams: page += ['### Identity: its families of the concept tree', ''] + [f'- {name(f)}' for f in fams] + ['']
+    page += ['### Concepts', ''] + [f'- [K] {name(c)}' for c in kernel] + [f'- {name(c)}' for c in others if c not in kernel]
+    page += ['', '### Design answers', ''] + ([f'- How it wins: {does}'] if does else [])
+    for q in Q5:
+        add = ' in another lane' if q == 'lanes' else ''
+        page += [f'- {QUESTION[q].capitalize()}:'] + ([f'  - {name(c)}{add}' for c in sorted(by_q[q])]
+                                                      or ['  - nothing in real cards' if q == 'lanes' else '  - none yet'])
+    page += ['', '### Deck style: what its decks are like', ''] + ([f"- {D['markers'][k]}" for k in markers] or ['- nothing stands out'])
+    if partner_names: page += ['', '### Partners', ''] + [f'- {n}' for n in partner_names]
+    return page + ['']
 
 def run():
     """step 6 for the roster: the fill from the core, the kernels, the fill again from the kernels, the pages"""
@@ -354,22 +396,10 @@ def run():
                                ','.join(f'{k}:{v}' for k, v in x['markers'].items()), x['wins']] + [x['answers'][q] for q in ('front', 'backrow', 'lanes', 'holds', 'cares')]
                               + [','.join(fac[j]['letter'] for j in partners[i])] + [';'.join(q + ':' + '+'.join(sorted(x['by_question'][q])) for q in Q5)]) + '\n')
 
-    name = lambda c: re.sub(r' \([^)]*\)', '', plain.get(c, c))  # the page for Kaptain: one sheet per faction, plain names, every item a list, nothing in brackets, no numbers
     page = ['# The factions', '', f'The world: {WORLD}.', '', '[K] marks a kernel concept.', '']
     for i, x in enumerate(fac):
-        page += [f"## {x['name']}", '', f"{x['does'].capitalize()}.", '', '### Who they are', '', f"{x['theme']}.", '',
-                 '### Identity: its families of the concept tree', '']
-        page += [f'- {name(f)}' for f in x['fams']]
-        page += ['', '### Concepts', '']
-        page += [f'- [K] {name(c)}' for c in x['kernel']]
-        page += [f'- {name(c)}' for c in x['concepts'] + x['extras'] if c not in x['kernel']]
-        page += ['', '### Design answers', '', f"- How it wins: {x['does']}"]
-        for q in Q5:
-            page.append(f"- {QUESTION[q].capitalize()}:")
-            page += [f'  - {name(c)}' for c in sorted(x['by_question'][q])] or ['  - none yet']
-        page += ['', '### Partners', '']
-        page += [f"- {fac[j]['name']}" for j in partners[i]]
-        page.append('')
+        page += sheet(x['name'], x['does'], x['theme'], x['fams'], x['kernel'], x['concepts'] + x['extras'], x['by_question'],
+                      x['markers'], [fac[j]['name'] for j in partners[i]])
     if missed: page += ['## In no faction yet', ''] + [f'- {name(c)}' for c in missed] + ['']
     open(os.path.join(HERE, 'kernel_factions.md'), 'w', encoding='utf-8').write('\n'.join(page) + '\n')
     allc = {x['name']: set(x['concepts'] + x['extras']) for x in fac}

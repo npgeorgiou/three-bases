@@ -166,10 +166,12 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    real factions keep apart.
 5. **The map** (`work/roster_map.py`, run after step 6 -> `factions/roster-map.html`): a page for Kaptain to look at;
    no later step reads it. Every usable concept is a dot. Two concepts sit close when real decks hold both more often
-   than chance (a deck holds a concept when its share of cards with it is twice its game's average); springs lay the
-   dots out (that closeness pulls, every pair pushes alike), so the gaps are even. A dot has the colour of the faction
-   whose kernel holds it. Ticking factions lights their kernel, other concepts and extras, and draws in the faction's
-   colour the strong card links between its kernel and other concepts.
+   than chance (a deck holds a concept when it has 2 or more cards with it and their share is twice its game's
+   average); springs lay the dots out. The groups: concepts real decks play together (held together 1.5 times chance
+   or more by 10 or more decks, found by Louvain); with no faction ticked each dot has its group's colour, the groups
+   are listed on the right, and concepts in no group stand in a row at the bottom. Ticking factions lights their
+   kernel, other concepts and extras, draws in the faction's colour the strong card links between its concepts, and
+   shows its deck style (its design markers).
 6. **The factions, from what they do** (by script: `work/kernel_factions.py` -> `work/kernel_factions.md`, one sheet
    per faction for Kaptain; `work/kernel_factions_summary.json`, the
    numbers that compare two runs; `work/lists/<letter>.tsv`). Every tie is broken by the concept key in alphabetical
@@ -196,13 +198,16 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       (chance + 1); the score = the average over the games where the concept and the faction's concepts both appear
       (every game weighs the same). Beside it: the `level` and in how many games.
    7. **The kernel** (Kaptain): the core, plus for each question the core does not answer (removes a front unit,
-      mainly the back row, mainly acts between lanes, holds a base, what it cares about; the ways of each in
-      `work/answer_concepts.tsv`) up to 2 concepts that answer it (one way of two concepts, or two ways of one), from
+      mainly the back row, holds a base, what it cares about; the ways of each in `work/answer_concepts.tsv`) up to 2
+      concepts that answer it (one way of two concepts, or two ways of one), from
       its concepts and extras, and from the top 30 of its list when those give fewer than 3 options; a question none of
       them answers takes the best way from its list. It takes the options that fit best with the core and the other
       answers. Every added concept fits another kernel concept at a third or more; no two factions answer a question
       with the same added concept (it stays where it fits best; what it cares about may be shared); no kernel concept
-      is in more than 3 factions. Then 3 to 5 run again on the kernel, the fill still ranked by fit to the core.
+      is in more than 3 factions. Between lanes comes from the core alone, so it fits what the faction does: the core
+      concept whose real cards most often act on a unit or place in another lane than their own (2 or more cards; a
+      concept counts the narrower concepts under it), as "<it> in another lane" (Swarms: summon in another lane); when
+      no core concept has such cards, it stays open: "nothing in real cards". Then 3 to 5 run again on the kernel, the fill still ranked by fit to the core.
    8. **Missed concepts**: a concept 15+ decks are built on that no faction has replaces the weakest extra of the
       faction it fits best, when it fits at least 0.8 as well; what is still in no faction is listed on the page.
    9. **Its answers**: the kernel's concepts per question (7); how it wins, from its identity and its strongest pair

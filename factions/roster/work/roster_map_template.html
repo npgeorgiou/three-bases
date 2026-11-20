@@ -12,13 +12,14 @@ svg text{font-size:13px;pointer-events:none;fill:#333}
 .help{color:#666;font-size:14px}
 .chip{display:inline-block;font-size:13px;padding:1px 7px;border-radius:9px;margin:2px 2px 0 0;background:#eee}
 .chip.k{color:#fff;font-weight:600}
+ul.grp{margin:0 0 6px;padding-left:18px;font-size:14px}
 #tip{position:fixed;pointer-events:none;background:#222;color:#fff;font-size:13px;padding:3px 7px;border-radius:4px;display:none}
 </style></head><body>
 <div id="left"><h1>The roster: map</h1><button id="none">Clear all</button><div id="picks"></div></div>
 <svg id="map"></svg>
 <div id="side"><div id="info"></div>
 <h2>How to read it</h2>
-<p class="help">Each dot is a concept. Two dots sit close when real decks hold both more often than chance. A dot takes the colour of the faction whose kernel holds it; grey dots are in no kernel. Tick factions to light their concepts: big dots are the kernel, middle dots the other concepts, small dots the extras; lines, in the faction's colour, are strong card links between its kernel and other concepts. Drag to move, wheel to zoom, hover a dot for its name.</p></div>
+<p class="help">Each dot is a concept. Two dots sit close when real decks hold both more often than chance. With no faction ticked, a dot takes the colour of its group: concepts real decks play together (listed above); grey dots are in no group. Tick factions to light their concepts: big dots are the kernel, middle dots the other concepts, small dots the extras; lines, in the faction's colour, are strong card links between its concepts; its deck style is what its decks are like (many spells, few big units). Drag to move, wheel to zoom, hover a dot for its name.</p></div>
 <div id="tip"></div>
 <script>
 const D=/*DATA*/null;
@@ -38,14 +39,14 @@ function draw(){
     for(const [a,b] of D.links){if(own.has(a)&&own.has(b)){const p=D.pos[a],q=D.pos[b];svg.appendChild(el('line',{x1:p[0],y1:p[1],x2:q[0],y2:q[1],stroke:D.colours[i],'stroke-opacity':.35,'stroke-width':1.2}))}}}
   for(const c in D.pos){
     const [x,y]=D.pos[c],[r,who]=role(c),i=D.dot[c];
-    const fill=picked.size?(r?D.colours[who]:'#ddd'):(i===undefined?'#bbb':D.colours[i]);
+    const fill=picked.size?(r?D.colours[who]:'#ddd'):(i===undefined?'#bbb':D.group_colours[i%D.group_colours.length]);
     const dot=el('circle',{cx:x,cy:y,r:picked.size?[4,6,9,12][r]:7,fill,stroke:'#fff','stroke-width':1});
     dot.onmousemove=e=>{tip.style.display='block';tip.style.left=e.clientX+12+'px';tip.style.top=e.clientY+8+'px';tip.textContent=nm(c)};
     dot.onmouseleave=()=>tip.style.display='none';svg.appendChild(dot);
     if(r>=2){const t=el('text',{x:x+r*4+2,y:y+4});t.textContent=nm(c).replace(/ \(.*\)$/,'');svg.appendChild(t)}
   }
   document.getElementById('info').innerHTML=[...picked].map(i=>{const f=D.factions[i],ch=(cs,k)=>cs.map(c=>`<span class="chip ${k}" style="${k?'background:'+D.colours[i]:''}">${esc(nm(c))}</span>`).join('');
-    return `<h2 style="color:${D.colours[i]}">${esc(f.name)}</h2><p><b>What it does:</b> ${esc(f.does)}.<br><b>Who they are:</b> ${esc(f.theme)}.</p><p><b>Kernel:</b><br>${ch(f.kernel,'k')}</p><p><b>Also plays:</b><br>${ch(f.concepts,'')}</p><p><b>Extras:</b><br>${ch(f.extras,'')}</p>`}).join('')||'<p class="help">Tick a faction on the left.</p>';
+    return `<h2 style="color:${D.colours[i]}">${esc(f.name)}</h2><p><b>What it does:</b> ${esc(f.does)}.<br><b>Who they are:</b> ${esc(f.theme)}.</p><p><b>Kernel:</b><br>${ch(f.kernel,'k')}</p><p><b>Also plays:</b><br>${ch([...f.concepts,...f.extras],'')}</p><p><b>Deck style:</b><br>${f.style.length?ch(f.style,''):'nothing stands out'}</p>`}).join('')||D.groups.map((g,i)=>`<h2 style="color:${D.group_colours[i%D.group_colours.length]}">Group ${i+1}</h2><ul class="grp">${g.map(c=>`<li>${esc(nm(c).replace(/ \(.*\)$/,''))}</li>`).join('')}</ul>`).join('');
 }
 let drag=null;svg.onmousedown=e=>{e.preventDefault();drag=[e.clientX,e.clientY,vb[0],vb[1]];svg.style.cursor='grabbing'};
 window.onmouseup=()=>{drag=null;svg.style.cursor='grab'};

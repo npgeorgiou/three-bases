@@ -38,24 +38,6 @@ backrow	everything at once	board_wipe		Claude's
 backrow	a whole row	row_effects		Claude's
 backrow	burn reaches anywhere	damage_over_time		Claude's (Kaptain's go, 20 Nov 2026)
 backrow	blast everything around, mine too	friendly_fire		Claude's (Kaptain's go, 20 Nov 2026)
-lanes	my units travel	movement		Claude's
-lanes	swap places	swap		Claude's
-lanes	move his units	forced_movement		Claude's
-lanes	pick my unit up, play it again free in another lane	return_to_hand+free_play	5.22, 4 games	Claude's
-lanes	copy a unit, play the copy free elsewhere	copy+free_play	3.25, 3 games	Claude's
-lanes	bring dead units back in another lane	revive		Claude's
-lanes	several separate targets	multi_target_attack		Claude's
-lanes	a whole row	row_effects		Claude's
-lanes	many at once	aoe_damage		Claude's
-lanes	more supply, spent where needed	resource_gain		Claude's
-lanes	more supply each round	base_resource_gain		Claude's
-lanes	counts what happened in every lane	count_payoff		Claude's
-lanes	counts deaths in every lane	death_count		Claude's
-lanes	stats equal to a count over the board	variable_stats		Claude's
-lanes	reacts when another unit dies anywhere	other_death_trigger		Claude's
-lanes	reacts when an enemy arrives anywhere	on_enemy_enter		Claude's
-lanes	reaches other lanes	cross_lane		Claude's
-lanes	pick my unit up and replay it in another lane	return_from_board		Claude's (Kaptain's go, 20 Nov 2026)
 holds	hard to kill	shield|cheat_death|regeneration|damage_reduction|defence_gain		Claude's
 holds	spells can't touch it	immunity		Claude's
 holds	keep my units alive	protection		Claude's

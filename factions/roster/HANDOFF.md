@@ -17,17 +17,15 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 9. Stop 1 | to do | |
 
 ## Work for the next chat, in this order
-0. **Random answers in step 6 and a map with no groups**: tried 20 Nov 2026, waiting for Kaptain's choice.
+0. **Random answers in step 6**: tried 20 Nov 2026, waiting for Kaptain's choice.
    - Cause 1: how well two concepts go is the higher of card links and decks, so one wrong card-link number wins
-     (Swarms banish: cards 5.9x chance, decks 1.7x; send back scored 3.4x and 2.4x and lost).
-   - Cause 2: a deck counts as built around a concept with a single card, so each deck counts for about 10 concepts and
-     deck numbers blur. With 2 cards it is about 4.5, and the map's groups get clearer (group score 0.32 to 0.42).
+     (Swarms banish: with summon cards 5.9x chance, decks 1.1x; averaged over its 4 core concepts banish 0.37, send
+     back 0.35).
+   - Cause 2: a deck counts as built around a concept with a single card, so each deck counts for about 10 concepts.
    - Tried on the 10 (answers not backed by both cards and decks, of all added): higher of the two 14 of 38; lower 4
      of 17 (many questions left empty); the middle of the two 5 of 37; lower with 2-card decks 5 of 33.
-   - Games with one faction per deck (Gwent, Duelyst) group no better than Runeterra (two per deck), so more
-     single-faction decks would not help.
-   - Lanes: each faction's way is one of its core concepts acting in another lane, from Marvel Snap cards that act
-     on other locations (Claude's; not tried yet). The back row keeps its table.
+   - Swarms' removal: none of these gives it a good one; Claude's idea: measure which removal real swarm decks play.
+   - Plain attacking is no card effect, so no concept; "my unit fights it" is the closest way in the table.
 1. **Fix the library errors found on 20 Nov 2026**, each in the library with test cases (`library/cards_db/START_DATABASE.md`,
    "Fixing errors"; a reading budget from Kaptain):
    - A link does not reliably record which of its two cards acts and which answers (`links.sqlite`: a and b). So a
@@ -69,6 +67,10 @@ One chat does one step; at its end, mark the step done here and say what it left
 
 ## Kaptain's standing decisions
 Only what Kaptain said himself goes here, in his words; Claude's own rules go elsewhere.
+- "The interaction between lanes, for each faction, must be RELATED to their CORE": lane interaction is moving to
+  another lane, moving or using supply from another lane, "if you control another lane"; never an enemy summoned in
+  another lane (20 Nov 2026).
+- The back row is really behind the front; its answers stay, they must fit the faction (20 Nov 2026).
 - Industry words: a **synergy** is a link real cards show between two concepts ("my units die -> my other units
   grow"); a **mechanic** is a keyword, a word on many cards that stands for one rule (Magic's Exploit) (18 Nov 2026).
 - "I want to create whole factions" (20 Nov 2026). A faction's kernel is what the faction DOES, never a trigger or a

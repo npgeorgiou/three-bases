@@ -5,12 +5,14 @@ A concept is named by its key or by words of its plain name.
 1. Its kernel: the concepts given (its core); its decks: the real decks whose cards with any kernel concept make up twice
    the share its game's decks average or more.
 2. A first ranked fill: every other usable concept scored by how well it goes with the core (step 6, 4), the best 22.
-3. Its answers: for each question its core does not answer, up to 2 concepts that answer it, from the fill and the top of
+3. Its answers: between lanes from its core alone (step 6); for each other question its core does not answer, up to 2
+   concepts that answer it, from the fill and the top of
    its list, the ones that go best with the core (step 6, 12); they join the kernel.
 4. The ranked fill again, by fit to the core, outside the whole kernel: 12 concepts, then its extras to 22.
 5. With the roster (the default): a concept already in 3 of the roster's factions (work/kernel_factions.tsv) is not
    taken, no answer uses a concept a roster faction answers the same question with, and the page shows its strongest
-   partners and how much it shares with each faction. With --alone, the roster is not looked at."""
+   partners and the factions it shares most concepts with. With --alone, the roster is not looked at.
+The page is laid out like kernel_factions.md (K.sheet): concepts with [K] on the kernel, design answers, deck style."""
 import collections, csv, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -61,24 +63,17 @@ fit, order = ranked(kernel, core)
 concepts = order[:max(0, K.OWN - len(kernel))]; extras = order[len(concepts):len(concepts) + K.EXTRAS]
 decks = K.kernel_decks(kernel)
 
-nm = lambda cs: ', '.join(K.plain.get(c, c) for c in cs) or 'none'
-page = [f'# {name}', '', f'**Kernel:** {nm(kernel)}', '', '**Answers:**', '']
-page += [f"- **{K.QUESTION[q].capitalize()}:** " + (nm(sorted(by_q[q])) or 'none yet') for q in K.Q5]
-page += ['', f'**Also plays:** {nm(concepts)}', '', f'**Extras:** {nm(extras)}', '',
-         f'**Real decks behind it:** {len(decks)}. **How well its concepts go together:** {K.cohesion(kernel + concepts + extras):.2f} '
-         '(0 to 1: how much more often than chance real cards link them or real decks hold them together).', '']
+partner_names, shares = [], []
 if roster:
     mine = set(kernel + concepts + extras); rows = []
     for f in roster:
         theirs = set(f['concepts'].split(',') + [e for e in f['extras'].split(',') if e])
         links = sum(K.linked(a, b) for a in mine for b in theirs if a not in theirs and b not in mine)
         rows.append((links, len(mine & theirs), f['name']))
-    page += ['**Partners** (card links between its concepts and theirs):', '']
-    page += [f'- {n}: {l} links' for l, s, n in sorted(rows, reverse=True)[:K.PARTNERS]]
-    page += ['', '**Shared with the roster** (concepts both have):', '']
-    page += [f'- {n}: {s}' for l, s, n in sorted(rows, key=lambda t: -t[1]) if s]
-else:
-    page += ['Made alone: the roster was not looked at.']
+    partner_names = [n for l, s, n in sorted(rows, reverse=True)[:K.PARTNERS]]
+    shares = [n for l, s, n in sorted(rows, key=lambda t: -t[1]) if s][:3]
+page = ['[K] marks a kernel concept.', ''] + K.sheet(name, '', '', [], kernel, concepts + extras, by_q, K.markers_of(decks), partner_names)
+page += ['### Shares most concepts with', ''] + [f'- {n}' for n in shares] + [''] if roster else ['Made alone: the roster was not looked at.', '']
 os.makedirs(os.path.join(HERE, 'made'), exist_ok=True)
 out = os.path.join(HERE, 'made', re.sub(r'[^\w]+', '_', name.lower()).strip('_') + '.md')
 open(out, 'w', encoding='utf-8').write('\n'.join(page) + '\n')

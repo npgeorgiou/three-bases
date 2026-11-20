@@ -61,25 +61,27 @@ is written in that step's chat, from the rules of the step, and its line here is
 
 ## Step 5. The map
 - `python3 ../../factions/roster/work/roster_map.py` (from `library/cards_db`, about 20 seconds; after step 6) ->
-  `factions/roster-map.html` (page template `work/roster_map_template.html`).
+  `factions/roster-map.html` (page template `work/roster_map_template.html`): the 2-card closeness, its groups and
+  their colours, the factions with their deck style.
 
 ## Step 6. The factions, from what they do
 - `python3 factions/roster/work/kernel_factions.py` (from the repo, about 2 minutes; needs links.sqlite) ->
   `work/kernel_factions.md` (for Kaptain: one sheet per faction, every item a list, plain names with nothing in brackets,
   no numbers: who they are, its identity families, its concepts with [K] on the kernel ones, its design answers, its
-  partners; then the common concepts in no faction), `work/kernel_factions_summary.json` (the numbers that compare two runs), `work/kernel_factions.tsv` (one row per
+  deck style, its partners; then the common concepts in no faction), `work/kernel_factions_summary.json` (the numbers that compare two runs), `work/kernel_factions.tsv` (one row per
   faction: letter, name, what it does, people, kernel, engines, bricks, concepts, extras, design markers, how it wins,
   the five board answers, partners, the kernel's concepts per question; read by `make_faction.py`, the map and steps
   7-9) and `work/lists/<letter>.tsv` (rules: `START_DESIGN-1-roster.md` step 6). The identities are `IDENTITIES` in its
   head (name, what it does, concept-tree headings), the world `WORLD` and the peoples `THEMES` (people, the hidden
   real-world model, the headings it favours in a tie); all Claude's. It reads `work/deck_scores.json`,
-  `library/cards_db/roster/concept_links.tsv`, `library/concept_tree.txt`, `work/concepts.tsv` and
-  `work/answer_concepts.tsv`.
+  `library/cards_db/roster/concept_links.tsv`, `library/concept_tree.txt`, `work/concepts.tsv`,
+  `work/answer_concepts.tsv` and, for between lanes, the rows of `library/cards_db/cards.sqlite` that act in another
+  lane (`lane_cards()`).
 - `factions/roster/work/concept_list.py` (its `Library`, used by `kernel_factions.py`) makes each faction's list,
   `work/lists/<letter>.tsv`: every concept with 5+ cards except the faction's own concepts, its score
   ((real + 1) / (chance + 1) links with the faction's concepts per game, averaged over the games where both appear), its
   `level` and its games, sorted by score. Its `Library` scores any set of concepts in about a second.
-- `factions/roster/work/answer_concepts.tsv` (agreed with Kaptain): per answer its ways (answer, the way in plain words,
+- `factions/roster/work/answer_concepts.tsv` (agreed with Kaptain): per answer but between lanes its ways (answer, the way in plain words,
   its concepts: one, two that real cards link with their times chance and games, or removals on a spell; whose).
 
 ## Step 7. Combos on this board
