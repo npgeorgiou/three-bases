@@ -17,15 +17,16 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 9. Stop 1 | to do | |
 
 ## Work for the next chat, in this order
-0. **Random answers in step 6**: tried 20 Nov 2026, waiting for Kaptain's choice.
-   - Cause 1: how well two concepts go is the higher of card links and decks, so one wrong card-link number wins
-     (Swarms banish: with summon cards 5.9x chance, decks 1.1x; averaged over its 4 core concepts banish 0.37, send
-     back 0.35).
-   - Cause 2: a deck counts as built around a concept with a single card, so each deck counts for about 10 concepts.
-   - Tried on the 10 (answers not backed by both cards and decks, of all added): higher of the two 14 of 38; lower 4
-     of 17 (many questions left empty); the middle of the two 5 of 37; lower with 2-card decks 5 of 33.
-   - Swarms' removal: none of these gives it a good one; Claude's idea: measure which removal real swarm decks play.
-   - Plain attacking is no card effect, so no concept; "my unit fights it" is the closest way in the table.
+0. **Design answers in step 6**: Claude's proposal of 21 Nov 2026, waiting for Kaptain's go. Kaptain: the step that
+   adds answer concepts to the kernel and fills again messes things up, and the answer table is far too narrow
+   (removal can be steal, swap, moving my unit in to kill it, recall, silence, a bomb that forces a move, and more).
+   - The faction is the core and its fill, nothing added; the script picks no answers.
+   - The answers are written in design (Claude with Kaptain), each from the faction's own concepts and the game's
+     things (ranged units, rows, supply, lanes), as freely as the cards allow; the answer table is dropped.
+   - The script only flags a faction whose core and fill have nothing that acts on enemy units.
+   - Tried earlier on the 10: how well two concepts go is the higher of card links and decks, so one wrong card
+     number wins (Swarms banish with summon: cards 5.9x chance, decks 1.1x); the lower of the two, with decks counted
+     from 2 cards, left 5 of 33 picks unbacked.
 1. **Fix the library errors found on 20 Nov 2026**, each in the library with test cases (`library/cards_db/START_DATABASE.md`,
    "Fixing errors"; a reading budget from Kaptain):
    - A link does not reliably record which of its two cards acts and which answers (`links.sqlite`: a and b). So a
