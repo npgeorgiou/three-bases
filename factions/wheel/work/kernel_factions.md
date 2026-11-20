@@ -2,42 +2,43 @@
 
 Kernel: the effects that do what the faction does. Engines: concepts real cards link to 2+ kernel concepts. Bricks: what its decks hold 1.5x+ as often as their games, with no card link to the kernel. About 12 concepts. Partners: its 5 strongest pairs (card links between their concepts, plus 3 per kernel concept the other's decks hold 1.5x+). A concept more than 3 factions want at one level goes to the 3 it fits best.
 
-## Can't be broken: its units do not die (181 decks lean on its kernel)
-- Kernel: Take less damage (armour) (49 decks); Restore health (heal) (46 decks); Absorb one hit (shield, ward) (40 decks); Heal every turn (regeneration) (36 decks); Block points that wear off (29 decks); Defence gain (+health) (28 decks)
+## Can't be broken: its units do not die (172 decks lean on its kernel)
+- Kernel: Take less damage (armour) (49 decks); Restore health (heal) (44 decks); Absorb one hit (shield, ward) (38 decks); Heal every turn (regeneration) (36 decks); Defence gain (+health) (28 decks); Block points that wear off (25 decks)
 - From card links:
-  - Attack gain (+attack) (5 kernel links; strongest with Block points that wear off: gwent: Kaer Trolde + An Craite Armorsmith)
+  - Attack gain (+attack) (6 kernel links; strongest with Block points that wear off: gwent: Kaer Trolde + An Craite Armorsmith)
   - Taunt (enemies must attack it) (2 kernel links; strongest with Defence gain (+health): faeria: Shamanic Dance + Unlikely Hero)
   - Grows again and again (2 kernel links; strongest with Take less damage (armour): runeterra: Lord Eldred, Mageseeker Leader + Deathless Knight)
-  - Stats equal to a count (2 kernel links; strongest with Defence gain (+health): gwent: Uprising + Lyrian Scytheman)
-- From decks: Silence (abilities removed) x2.1; Force enemy units to attack x1.9
-- 12 concepts. Engines: Take less damage (armour); Restore health (heal); Absorb one hit (shield, ward); Heal every turn (regeneration); Block points that wear off; Defence gain (+health); Attack gain (+attack); Taunt (enemies must attack it); Grows again and again; Stats equal to a count. Bricks: Silence (abilities removed); Force enemy units to attack
+  - Attack more than once (2 kernel links; strongest with Restore health (heal): runeterra: King Jarvan III + Wish)
+- From decks: Silence (abilities removed) x2.0
+- From decks and card links: Stats matter (highest, lowest) x2.3
+- 12 concepts. Engines: Take less damage (armour); Restore health (heal); Absorb one hit (shield, ward); Heal every turn (regeneration); Defence gain (+health); Block points that wear off; Attack gain (+attack); Taunt (enemies must attack it); Grows again and again; Attack more than once; Stats matter (highest, lowest). Bricks: Silence (abilities removed)
 - Theme: the defenders of the Theodosian Walls of Constantinople. Design markers: none
-- Extras (10): My unit fights a chosen enemy 3.789; Deal damage 2.417; Stats matter (highest, lowest) 7.102; Double or multiply stats 5.684; Strikes with its defence 4.92; Alternative costs 3.251; Make a unit stronger (buff) 2.559; Can't move (root) 2.506; Help from nearby allies (assists) 2.195; Excess damage carries on (trample) 2.042
-- How it wins: its units do not die; Defence gain (+health) -> Taunt (enemies must attack it): "stronger: can give it more power and health"
-- removes the front unit: kill it
+- Extras (10): My unit fights a chosen enemy 3.872; Excess damage carries on (trample) 1.999; When another unit dies 2.048; Double or multiply stats 5.713; Strikes with its defence 4.921; Alternative costs 3.128; Make a unit stronger (buff) 2.549; Can't move (root) 2.476; Help from nearby allies (assists) 2.37; Put into play for free 2.306
+- How it wins: its units do not die; Defence gain (+health) -> Stats matter (highest, lowest): "type: changes its stats for its effect"
+- removes the front unit: my unit fights it
 - mainly removes back-row units: a big hit goes through
-- mainly acts between lanes: stats equal to a count over the board
+- mainly acts between lanes: reacts when another unit dies anywhere
 - holds a base: hard to kill
 - the game thing it cares about: neighbours
 - Partners (its 5 strongest; * = it is in their 5 too):
-  - Eats its own * (46): Force enemy units to attack + A unit levels up on the board: "levels: targets enemy cards (levels it up)"; Can't be broken decks hold its Hits my own side too x2.2
-  - Comes back * (44): Return my unit from the board to hand + Absorb one hit (shield, ward): "waits: returns it to hand: its Play or summon effect goes off again"
-  - Kills brutally * (43): Force enemy units to attack + A unit levels up on the board: "levels: targets enemy cards (levels it up)"; Kills brutally decks hold its Restore health (heal) x1.5
-  - Moves * (38): Move enemy units (push, pull) + Silence (abilities removed): "type: {A} moves enemy units, and {B} acts on units in its lane"; Can't be broken decks hold its Terrain / board features x2.1
-  - Grows * (31): Defence gain (+health) + Stats matter (highest, lowest): "type: changes its stats for its effect"; Can't be broken decks hold its Temporary bonus (this turn only) x1.6, Strikes with its defence x1.6
+  - Comes back * (44): Neighbours matter (adjacency) + Stats matter (highest, lowest): "type: changes its stats for its effect"
+  - Eats its own * (44): A unit levels up on the board + Heal every turn (regeneration): "type: makes champions level up"; Can't be broken decks hold its Hits my own side too x2.2
+  - Moves * (41): Neighbours matter (adjacency) + Stats matter (highest, lowest): "type: changes its stats for its effect"; Can't be broken decks hold its Terrain / board features x2.1
+  - Kills brutally * (39): A unit levels up on the board + Heal every turn (regeneration): "type: makes champions level up"; Kills brutally decks hold its Restore health (heal) x1.5
+  - Swarms * (28): Take less damage (armour) + Sacrifice my own units: "type: makes your units die"
 
 ## Kills brutally: removes enemy units, many and hard (329 decks lean on its kernel)
 - Kernel: Destroy outright (77 decks); Banish / exile (gone for good) (65 decks); Deal damage (64 decks); Damage to many at once (54 decks); Send an enemy unit back (bounce) (52 decks); Small repeatable damage (49 decks)
 - From card links:
   - Clog the opponent's board (4 kernel links; strongest with Damage to many at once: stormbound: Conflicted Drakes + Dubious Hags)
+  - Steal from the opponent (4 kernel links; strongest with Small repeatable damage: faeria: Celestial Tower + Imperial Trooper)
   - When life or health is restored (3 kernel links; strongest with Small repeatable damage: gwent: Havfrue Singer + Melusine)
   - Counts deaths (4 kernel links; strongest with Destroy outright: stormbound: Marked as Prey + Avian Stalkers)
-  - Damaged unit matters (3 kernel links; strongest with Damage to many at once: gwent: Regis + Madman Lugos)
 - From decks: nothing
 - From decks and card links: Hits my own side too x2.9; A unit levels up on the board x2.3
-- 12 concepts. Engines: Destroy outright; Banish / exile (gone for good); Deal damage; Damage to many at once; Send an enemy unit back (bounce); Small repeatable damage; Clog the opponent's board; When life or health is restored; Counts deaths; Damaged unit matters; Hits my own side too; A unit levels up on the board. Bricks: none
+- 12 concepts. Engines: Destroy outright; Banish / exile (gone for good); Deal damage; Damage to many at once; Send an enemy unit back (bounce); Small repeatable damage; Clog the opponent's board; Steal from the opponent; When life or health is restored; Counts deaths; Hits my own side too; A unit levels up on the board. Bricks: none
 - Theme: the Mongol tumens. Design markers: Few big units x2.2
-- Extras (10): When another unit dies 9.42; Block points that wear off 6.858; Back to hand when it dies or leaves play 6.093; Ranged attack / long reach 4.424; Move enemy units (push, pull) 3.869; Force enemy units to attack 3.136; Bring back dead units (revive) 2.862; Return my unit from the board to hand 2.852; Move my units (reposition) 2.711; Cheat death (survive lethal) 2.582
+- Extras (10): When another unit dies 9.514; Back to hand when it dies or leaves play 6.277; Ranged attack / long reach 4.588; Damaged unit matters 4.039; Move enemy units (push, pull) 3.968; Bring back dead units (revive) 3.075; Return my unit from the board to hand 3.027; Move my units (reposition) 2.7; Any damage kills (deathtouch, poisonous) 2.512; Cheat death (survive lethal) 2.436
 - How it wins: removes enemy units, many and hard; Counts deaths -> Hits my own side too: "type: makes your units die"
 - removes the front unit: kill it
 - mainly removes back-row units: any removal of the front list on a spell (destroy, damage, bounce, banish, steal, cocoon: a spell picks any cell)
@@ -45,33 +46,34 @@ Kernel: the effects that do what the faction does. Engines: concepts real cards 
 - holds a base: grows while it holds
 - the game thing it cares about: reach
 - Partners (its 5 strongest; * = it is in their 5 too):
-  - Moves * (66): Damage to many at once + Move enemy units (push, pull): "type: {A} moves units, and {B} acts on units in a line from it"; Moves decks hold its Deal damage x1.5, Send an enemy unit back (bounce) x3.4
-  - Comes back * (60): Counts deaths + Sacrifice my own units: "type: makes your units die"; Comes back decks hold its Banish / exile (gone for good) x1.8, Send an enemy unit back (bounce) x1.6
-  - Messes you up * (52): Can't attack (my own unit) + A unit levels up on the board: "levels: damages the enemy player (levels it up)"; Kills brutally decks hold its Silence (abilities removed) x2.2, Attack the opponent's hand x2.3
-  - Can't be broken * (43): Force enemy units to attack + A unit levels up on the board: "levels: targets enemy cards (levels it up)"; Kills brutally decks hold its Restore health (heal) x1.5
-  - Thrives on spells * (35): Send an enemy unit back (bounce) + Draw cards: "waits: returns it to hand: its Play or summon effect goes off again"
+  - Moves * (68): Damage to many at once + Move enemy units (push, pull): "type: {A} moves units, and {B} acts on units in a line from it"; Moves decks hold its Deal damage x1.5, Send an enemy unit back (bounce) x3.4
+  - Comes back * (60): Counts deaths + Sacrifice my own units: "type: makes your units die"; Comes back decks hold its Banish / exile (gone for good) x1.8, Send an enemy unit back (bounce) x1.7
+  - Can't be broken * (39): A unit levels up on the board + Heal every turn (regeneration): "type: makes champions level up"; Kills brutally decks hold its Restore health (heal) x1.5
+  - Thrives on spells * (34): Send an enemy unit back (bounce) + Draw cards: "waits: returns it to hand: its Play or summon effect goes off again"
+  - Swarms * (32): Counts deaths + Sacrifice my own units: "type: makes your units die"; Swarms decks hold its Send an enemy unit back (bounce) x2.3
 
-## Messes you up: breaks the enemy's units and plans (295 decks lean on its kernel)
-- Kernel: Silence (abilities removed) (103 decks); Stat loss (-power, -health) (64 decks); Junk cards into a deck or hand (58 decks); Attack the opponent's hand (41 decks); Can't act at all (stun, freeze) (36 decks); Steal from the opponent (33 decks)
+## Messes you up: breaks the enemy's units and plans (305 decks lean on its kernel)
+- Kernel: Silence (abilities removed) (104 decks); Stat loss (-power, -health) (64 decks); Junk cards into a deck or hand (58 decks); Attack the opponent's hand (41 decks); Make a unit weaker (debuff) (38 decks); Can't act at all (stun, freeze) (36 decks)
 - From card links:
   - Repeat or double triggers (3 kernel links; strongest with Silence (abilities removed): gwent: Syanna + Prophet)
-  - Neighbours matter (adjacency) (3 kernel links; strongest with Steal from the opponent: gwent: Cyclops + Miruna)
-- From decks: More or faster base resource (ramp) x2.0; Can't attack (my own unit) x1.7; Improve cards in hand or deck x1.6; Look at cards and pick (scry) x1.6
-- 12 concepts. Engines: Silence (abilities removed); Stat loss (-power, -health); Junk cards into a deck or hand; Can't act at all (stun, freeze); Steal from the opponent; Repeat or double triggers; Neighbours matter (adjacency); Can't attack (my own unit); Improve cards in hand or deck. Bricks: Attack the opponent's hand; More or faster base resource (ramp); Look at cards and pick (scry)
+  - Grows with what happened this game (2 kernel links; strongest with Can't act at all (stun, freeze): runeterra: Windswept Hillock + Yasuo)
+- From decks: Look at cards and pick (scry) x1.7
+- From decks and card links: A unit levels up on the board x2.3
+- 10 concepts. Engines: Silence (abilities removed); Stat loss (-power, -health); Junk cards into a deck or hand; Make a unit weaker (debuff); Can't act at all (stun, freeze); Repeat or double triggers; Grows with what happened this game; A unit levels up on the board. Bricks: Attack the opponent's hand; Look at cards and pick (scry)
 - Theme: the spies and poisoners of the Venetian Council of Ten. Design markers: none
-- Extras (10): Expensive card 4.507; Return my unit from the board to hand 3.055; Stats matter (highest, lowest) 3.007; Move enemy units (push, pull) 2.933; My unit fights a chosen enemy 2.598; Ready a used unit again (untap) 2.186; Move my units (reposition) 2.166; Send an enemy unit back (bounce) 2.07; Reaches other lanes 2.044; Damaged unit matters 1.958
+- Extras (10): Move enemy units (push, pull) 2.891; Send an enemy unit back (bounce) 1.975; Return my unit from the board to hand 2.467; Put into play for free 2.411; Ready a used unit again (untap) 2.127; Stacking keywords / counters 2.049; Upgrade a card 1.996; Move my units (reposition) 1.952; Expensive card 1.926; Swap positions 1.913
 - How it wins: breaks the enemy's units and plans; Repeat or double triggers -> Silence (abilities removed): "repeats: repeats its On Reveal effects"
-- removes the front unit: take it
+- removes the front unit: back to his hand
 - mainly removes back-row units: any removal of the front list on a spell (destroy, damage, bounce, banish, steal, cocoon: a spell picks any cell)
-- mainly acts between lanes: more supply each round
-- holds a base: his units can't move, attack or act
-- the game thing it cares about: neighbours
+- mainly acts between lanes: counts what happened in every lane
+- holds a base: grows while it holds
+- the game thing it cares about: Immobile
 - Partners (its 5 strongest; * = it is in their 5 too):
-  - Kills brutally * (52): Can't attack (my own unit) + A unit levels up on the board: "levels: damages the enemy player (levels it up)"; Kills brutally decks hold its Silence (abilities removed) x2.2, Attack the opponent's hand x2.3
-  - Comes back * (43): Return my unit from the board to hand + Look at cards and pick (scry): "waits: returns it to hand: its Play or summon effect goes off again"; Comes back decks hold its Silence (abilities removed) x2.0, Junk cards into a deck or hand x3.1
-  - Eats its own * (37): Can't attack (my own unit) + A unit levels up on the board: "levels: damages the enemy player (levels it up)"
-  - Moves * (34): Can't act at all (stun, freeze) + Move enemy units (push, pull): "type: {A} moves units, and {B} acts on units in a line from it"; Moves decks hold its Silence (abilities removed) x3.4, Junk cards into a deck or hand x1.5
-  - Thrives on spells * (30): Can't attack (my own unit) + Hand size matters: "waits: fills your hand"; Thrives on spells decks hold its Silence (abilities removed) x1.9, Junk cards into a deck or hand x2.9
+  - Comes back * (51): Return my unit from the board to hand + Look at cards and pick (scry): "waits: returns it to hand: its Play or summon effect goes off again"; Comes back decks hold its Silence (abilities removed) x1.9, Junk cards into a deck or hand x3.1, Make a unit weaker (debuff) x1.7
+  - Moves * (41): Can't act at all (stun, freeze) + Move enemy units (push, pull): "type: {A} moves units, and {B} acts on units in a line from it"; Moves decks hold its Silence (abilities removed) x3.4, Junk cards into a deck or hand x1.5, Make a unit weaker (debuff) x1.6
+  - Thrives on spells * (32): Grows with what happened this game + Put into play for free: "type: is played"; Thrives on spells decks hold its Silence (abilities removed) x1.9, Junk cards into a deck or hand x2.9
+  - Kills brutally (31): Damage to many at once + Grows with what happened this game: "type: damages enemy units or players"; Kills brutally decks hold its Silence (abilities removed) x2.2, Attack the opponent's hand x2.3, Make a unit weaker (debuff) x4.0
+  - Swarms * (28): Grows with what happened this game + Put into play for free: "type: is played"; Swarms decks hold its Silence (abilities removed) x1.6, Junk cards into a deck or hand x1.8
 
 ## Moves: wins by where its units and his stand (161 decks lean on its kernel)
 - Kernel: Where units can be placed (53 decks); Move my units (reposition) (41 decks); Move enemy units (push, pull) (28 decks); Terrain / board features (20 decks); Position and space (19 decks); Swap positions (17 decks)
@@ -84,7 +86,7 @@ Kernel: the effects that do what the faction does. Engines: concepts real cards 
 - From decks and card links: Give my units or cards to the opponent x2.1
 - 12 concepts. Engines: Where units can be placed; Move my units (reposition); Move enemy units (push, pull); Terrain / board features; Position and space; Swap positions; When life or health is restored; Having a card in play or hand; Damage to several separate targets; Neighbours matter (adjacency); Restore health (heal); Give my units or cards to the opponent. Bricks: none
 - Theme: the Comanche horse raiders. Design markers: Mostly units played from hand x3.7
-- Extras (10): Return my unit from the board to hand 2.916; Reaches other lanes 2.763; My unit fights a chosen enemy 2.782; Stats matter (highest, lowest) 2.529; Bring back dead units (revive) 2.5; Back to hand when it dies or leaves play 2.498; Damaged unit matters 2.483; Ranged attack / long reach 2.363; When another unit dies 2.288; Attack right away 2.093
+- Extras (10): Return my unit from the board to hand 2.957; My unit fights a chosen enemy 2.844; Bring back dead units (revive) 2.646; Stats matter (highest, lowest) 2.532; Back to hand when it dies or leaves play 2.5; Ranged attack / long reach 2.377; Damaged unit matters 2.387; When another unit dies 2.312; Attack right away 2.117; A unit levels up on the board 2.166
 - How it wins: wins by where its units and his stand; Neighbours matter (adjacency) -> Move enemy units (push, pull): "type: {A} moves units, and {B} acts on units in a line from it"
 - removes the front unit: push it out of the cell
 - mainly removes back-row units: several separate targets
@@ -92,22 +94,22 @@ Kernel: the effects that do what the faction does. Engines: concepts real cards 
 - holds a base: heals feed more heals
 - the game thing it cares about: neighbours
 - Partners (its 5 strongest; * = it is in their 5 too):
-  - Kills brutally * (66): Damage to many at once + Move enemy units (push, pull): "type: {A} moves units, and {B} acts on units in a line from it"; Moves decks hold its Deal damage x1.5, Send an enemy unit back (bounce) x3.4
+  - Kills brutally * (68): Damage to many at once + Move enemy units (push, pull): "type: {A} moves units, and {B} acts on units in a line from it"; Moves decks hold its Deal damage x1.5, Send an enemy unit back (bounce) x3.4
+  - Comes back * (47): Board wipe + Move enemy units (push, pull): "type: {A} moves units, and {B} acts on units next to it"; Moves decks hold its Return my unit from the board to hand x2.3, Back to hand when it dies or leaves play x2.4
   - Eats its own * (47): Hits my own side too + When life or health is restored: "type: damages your units or players"; Moves decks hold its Hits my own side too x1.6
-  - Comes back * (42): Board wipe + Move enemy units (push, pull): "type: {A} moves units, and {B} acts on units next to it"; Moves decks hold its Return my unit from the board to hand x2.3, Back to hand when it dies or leaves play x2.4
-  - Can't be broken * (38): Move enemy units (push, pull) + Silence (abilities removed): "type: {A} moves enemy units, and {B} acts on units in its lane"; Can't be broken decks hold its Terrain / board features x2.1
-  - Messes you up * (34): Can't act at all (stun, freeze) + Move enemy units (push, pull): "type: {A} moves units, and {B} acts on units in a line from it"; Moves decks hold its Silence (abilities removed) x3.4, Junk cards into a deck or hand x1.5
+  - Can't be broken * (41): Neighbours matter (adjacency) + Stats matter (highest, lowest): "type: changes its stats for its effect"; Can't be broken decks hold its Terrain / board features x2.1
+  - Messes you up * (41): Can't act at all (stun, freeze) + Move enemy units (push, pull): "type: {A} moves units, and {B} acts on units in a line from it"; Moves decks hold its Silence (abilities removed) x3.4, Junk cards into a deck or hand x1.5, Make a unit weaker (debuff) x1.6
 
-## Thrives on spells: spells that get stronger, cheaper and more of them (270 decks lean on its kernel)
-- Kernel: Draw cards (98 decks); Create new cards (87 decks); Cards cost less (63 decks); Set a cost to a fixed number (32 decks); My spells and abilities get stronger (16 decks)
+## Thrives on spells: spells that get stronger, cheaper and more of them (269 decks lean on its kernel)
+- Kernel: Draw cards (97 decks); Create new cards (87 decks); Cards cost less (62 decks); Set a cost to a fixed number (32 decks); My spells and abilities get stronger (16 decks)
 - From card links:
   - Hand size matters (2 kernel links; strongest with Draw cards: faeria: Gagana, Treasure Seeker + Gemshell Tortoise)
   - Counts / thresholds (2 kernel links; strongest with Draw cards: faeria: Gagana, Treasure Seeker + Gemshell Tortoise)
-- From decks: Improve cards in hand or deck x2.9
-- From decks and card links: When a card is drawn x3.3; Discard my own cards x2.2; Put into play for free x1.6
+- From decks: Improve cards in hand or deck x3.2
+- From decks and card links: When a card is drawn x3.4; Discard my own cards x2.2; Put into play for free x1.6
 - 11 concepts. Engines: Draw cards; Create new cards; Cards cost less; Set a cost to a fixed number; My spells and abilities get stronger; Hand size matters; Counts / thresholds; Improve cards in hand or deck; When a card is drawn; Discard my own cards; Put into play for free. Bricks: none
 - Theme: the alchemists of Rudolf II in Prague. Design markers: none
-- Extras (10): Send an enemy unit back (bounce) 1.975; Copy cards or units 1.789; Strike back when attacked (counterattack, thorns) 1.434; Reuse my cards (shuffle back) 3.753; When a card is discarded 2.922; Return my unit from the board to hand 2.814; Variety matters (all different) 2.69; Expensive card 2.372; Order of my plays matters (combo) 2.056; When a spell is played 1.603
+- Extras (10): Send an enemy unit back (bounce) 1.991; Copy cards or units 1.768; Strike back when attacked (counterattack, thorns) 1.434; Reuse my cards (shuffle back) 3.8; When a card is discarded 2.925; Return my unit from the board to hand 2.834; Variety matters (all different) 2.726; Expensive card 2.372; Order of my plays matters (combo) 2.062; Block points that wear off 1.75
 - How it wins: spells that get stronger, cheaper and more of them; Draw cards -> When a card is drawn: "waits: makes you draw cards"
 - removes the front unit: back to his hand
 - mainly removes back-row units: any removal of the front list on a spell (destroy, damage, bounce, banish, steal, cocoon: a spell picks any cell)
@@ -116,31 +118,31 @@ Kernel: the effects that do what the faction does. Engines: concepts real cards 
 - the game thing it cares about: hand size
 - Partners (its 5 strongest; * = it is in their 5 too):
   - Eats its own * (36): Counts / thresholds + Bring back dead units (revive): "waits: plays it: its effect goes off"; Thrives on spells decks hold its Discard my own cards x2.2
-  - Kills brutally * (35): Send an enemy unit back (bounce) + Draw cards: "waits: returns it to hand: its Play or summon effect goes off again"
-  - Comes back (31): Discard my own cards + Return my unit from the board to hand: "waits: returns it to hand: its Play or summon effect goes off again"; Comes back decks hold its Draw cards x1.7, Create new cards x1.6
-  - Messes you up * (30): Can't attack (my own unit) + Hand size matters: "waits: fills your hand"; Thrives on spells decks hold its Silence (abilities removed) x1.9, Junk cards into a deck or hand x2.9
-  - Waits * (28): Set a cost to a fixed number + Expensive card: "cheaper: pays for it: more mana or a lower cost"; Waits decks hold its Cards cost less x1.7, Set a cost to a fixed number x2.1
+  - Kills brutally * (34): Send an enemy unit back (bounce) + Draw cards: "waits: returns it to hand: its Play or summon effect goes off again"
+  - Messes you up * (32): Grows with what happened this game + Put into play for free: "type: is played"; Thrives on spells decks hold its Silence (abilities removed) x1.9, Junk cards into a deck or hand x2.9
+  - Comes back (26): Discard my own cards + Return my unit from the board to hand: "waits: returns it to hand: its Play or summon effect goes off again"; Comes back decks hold its Draw cards x1.7, Create new cards x1.6
+  - Waits * (24): Set a cost to a fixed number + Expensive card: "cheaper: pays for it: more mana or a lower cost"; Waits decks hold its Cards cost less x1.7, Set a cost to a fixed number x2.1
 
 ## Waits: gets bigger every round, clears the board, then plays huge cards (364 decks lean on its kernel)
-- Kernel: Search the deck for a card (tutor) (90 decks); Gain resources (ramp) (78 decks); More or faster base resource (ramp) (78 decks); Look at cards and pick (scry) (77 decks); Expensive card (67 decks)
+- Kernel: Search the deck for a card (tutor) (91 decks); More or faster base resource (ramp) (78 decks); Gain resources (ramp) (78 decks); Look at cards and pick (scry) (75 decks); Expensive card (67 decks)
 - From card links: nothing
-- From decks: Silence (abilities removed) x3.1; Can't attack (my own unit) x1.8
-- From decks and card links: Hidden and revealed information x4.8; A unit levels up on the board x2.3; Cards cost less x1.7
-- 10 concepts. Engines: Gain resources (ramp); More or faster base resource (ramp); Look at cards and pick (scry); Expensive card; Silence (abilities removed); Can't attack (my own unit); Hidden and revealed information; A unit levels up on the board; Cards cost less. Bricks: Search the deck for a card (tutor)
+- From decks: Silence (abilities removed) x3.0; Can't attack (my own unit) x1.8
+- From decks and card links: Hidden and revealed information x4.8; Cards cost less x1.7
+- 9 concepts. Engines: More or faster base resource (ramp); Gain resources (ramp); Look at cards and pick (scry); Expensive card; Hidden and revealed information; Cards cost less. Bricks: Search the deck for a card (tutor); Silence (abilities removed); Can't attack (my own unit)
 - Theme: World War I artillery. Design markers: none
-- Extras (10): Send an enemy unit back (bounce) 1.475; Cost matters 6.046; Enough spells played 3.84; Grows with what happened this game 2.667; Hand size matters 1.962; Improve cards in hand or deck 1.92; Defence gain (+health) 1.81; Aura (ongoing effect on others) 1.731; Reaches other lanes 1.666; Return my unit from the board to hand 1.543
+- Extras (10): Send an enemy unit back (bounce) 1.633; Cost matters 6.649; Enough spells played 4.166; Grows with what happened this game 2.718; Hand size matters 2.21; Improve cards in hand or deck 1.983; Return my unit from the board to hand 1.848; Defence gain (+health) 1.794; A unit levels up on the board 1.788; Aura (ongoing effect on others) 1.672
 - How it wins: gets bigger every round, clears the board, then plays huge cards; More or faster base resource (ramp) -> Expensive card: "cheaper: pays for it: more mana or a lower cost"
 - removes the front unit: back to his hand
 - mainly removes back-row units: any removal of the front list on a spell (destroy, damage, bounce, banish, steal, cocoon: a spell picks any cell)
 - mainly acts between lanes: more supply, spent where needed
-- holds a base: grows while it holds
+- holds a base: his units lose their text
 - the game thing it cares about: big units
 - Partners (its 5 strongest; * = it is in their 5 too):
-  - Comes back (38): Return my unit from the board to hand + Look at cards and pick (scry): "waits: returns it to hand: its Play or summon effect goes off again"; Waits decks hold its Back to hand when it dies or leaves play x3.2
-  - Moves (29): Move enemy units (push, pull) + Silence (abilities removed): "type: {A} moves enemy units, and {B} acts on units in its lane"; Moves decks hold its Look at cards and pick (scry) x1.8
-  - Thrives on spells * (28): Set a cost to a fixed number + Expensive card: "cheaper: pays for it: more mana or a lower cost"; Waits decks hold its Cards cost less x1.7, Set a cost to a fixed number x2.1
-  - Messes you up (25): Expensive card + Repeat or double triggers: "repeats: repeats its effects"; Messes you up decks hold its Search the deck for a card (tutor) x2.1, More or faster base resource (ramp) x2.0, Look at cards and pick (scry) x1.6
-  - Kills brutally (21): Hits my own side too + Silence (abilities removed): "type: damages enemy units or players"; Waits decks hold its Send an enemy unit back (bounce) x2.5
+  - Comes back (33): Return my unit from the board to hand + Look at cards and pick (scry): "waits: returns it to hand: its Play or summon effect goes off again"; Waits decks hold its Back to hand when it dies or leaves play x3.2
+  - Messes you up (26): Expensive card + Repeat or double triggers: "repeats: repeats its effects"; Messes you up decks hold its Search the deck for a card (tutor) x2.2, More or faster base resource (ramp) x1.5, Look at cards and pick (scry) x1.7
+  - Kills brutally (24): Can't attack (my own unit) + A unit levels up on the board: "levels: damages the enemy player (levels it up)"; Waits decks hold its Send an enemy unit back (bounce) x2.5
+  - Thrives on spells * (24): Set a cost to a fixed number + Expensive card: "cheaper: pays for it: more mana or a lower cost"; Waits decks hold its Cards cost less x1.7, Set a cost to a fixed number x2.1
+  - Moves (22): Move enemy units (push, pull) + Silence (abilities removed): "type: {A} moves enemy units, and {B} acts on units in its lane"; Moves decks hold its Look at cards and pick (scry) x1.8
 
 ## Swarms: fills the board with many units that hit at once (256 decks lean on its kernel)
 - Kernel: Summon units / tokens (86 decks); Put into play for free (84 decks); Act the turn it arrives (haste, rush) (66 decks); Copy cards or units (35 decks)
@@ -151,7 +153,7 @@ Kernel: the effects that do what the faction does. Engines: concepts real cards 
 - From decks and card links: Sacrifice my own units x2.1
 - 8 concepts. Engines: Summon units / tokens; Put into play for free; Act the turn it arrives (haste, rush); Copy cards or units; Variety matters (all different); Countdown; Sacrifice my own units. Bricks: Search the deck for a card (tutor)
 - Theme: the Zulu regiments. Design markers: Few big units x2.4; Mostly summoned units x2.2; Mostly units played from hand x2.8
-- Extras (10): Banish / exile (gone for good) 2.616; Counts deaths 4.504; Stacking keywords / counters 4.237; When another unit dies 3.401; Return my unit from the board to hand 3.278; Upgrade a card 3.254; When I play another card 3.222; Grows with what happened this game 3.145; Hits my own side too 2.518; Board wipe 2.489
+- Extras (10): Banish / exile (gone for good) 2.67; Counts deaths 4.665; Stacking keywords / counters 4.432; When another unit dies 3.516; Upgrade a card 3.356; Return my unit from the board to hand 3.302; When I play another card 3.274; Grows with what happened this game 2.887; Bring back dead units (revive) 2.552; Give my units or cards to the opponent 2.166
 - How it wins: fills the board with many units that hit at once; Sacrifice my own units -> Summon units / tokens: "waits: kills it for its death effect"
 - removes the front unit: gone for good
 - mainly removes back-row units: any removal of the front list on a spell (destroy, damage, bounce, banish, steal, cocoon: a spell picks any cell)
@@ -159,128 +161,129 @@ Kernel: the effects that do what the faction does. Engines: concepts real cards 
 - holds a base: keep refilling
 - the game thing it cares about: the discard pile
 - Partners (its 5 strongest; * = it is in their 5 too):
+  - Kills brutally * (32): Counts deaths + Sacrifice my own units: "type: makes your units die"; Swarms decks hold its Send an enemy unit back (bounce) x2.3
   - Moves (32): Give my units or cards to the opponent + Put into play for free: "waits: plays it: its effect goes off"
-  - Kills brutally (31): Counts deaths + Sacrifice my own units: "type: makes your units die"; Swarms decks hold its Send an enemy unit back (bounce) x2.3
-  - Messes you up (30): Put into play for free + Look at cards and pick (scry): "waits: plays it: its effect goes off"; Swarms decks hold its Silence (abilities removed) x1.6, Junk cards into a deck or hand x1.8
-  - Can't be broken (27): Take less damage (armour) + Sacrifice my own units: "type: makes your units die"
-  - Grows (23): When I play another card + Summon units / tokens: "waits: puts your units into play"; Swarms decks hold its Temporary bonus (this turn only) x2.6
+  - Can't be broken * (28): Take less damage (armour) + Sacrifice my own units: "type: makes your units die"
+  - Messes you up * (28): Grows with what happened this game + Put into play for free: "type: is played"; Swarms decks hold its Silence (abilities removed) x1.6, Junk cards into a deck or hand x1.8
+  - Grows * (24): When I play another card + Summon units / tokens: "waits: puts your units into play"; Swarms decks hold its Temporary bonus (this turn only) x2.6
 
 ## Grows: its units get bigger and bigger (293 decks lean on its kernel)
 - Kernel: Make a unit stronger (buff) (84 decks); Improve cards in hand or deck (62 decks); Double or multiply stats (54 decks); Temporary bonus (this turn only) (45 decks); Strikes with its defence (36 decks); Set stats to a number (27 decks)
 - From card links:
   - Stats matter (highest, lowest) (3 kernel links; strongest with Double or multiply stats: runeterra: Bayou Brunch + Kayle (level 2))
   - Attack gain (+attack) (4 kernel links; strongest with Strikes with its defence: duelyst: Divine Bond + Calculator)
+  - Damage to several separate targets (2 kernel links; strongest with Double or multiply stats: faeria: Seifer's Wrath + Possessed Ursus)
   - When I play another card (2 kernel links; strongest with Double or multiply stats: gwent: Syanna + Xarthisius)
 - From decks: nothing
-- 9 concepts. Engines: Make a unit stronger (buff); Improve cards in hand or deck; Double or multiply stats; Temporary bonus (this turn only); Strikes with its defence; Set stats to a number; Stats matter (highest, lowest); Attack gain (+attack); When I play another card. Bricks: none
+- 10 concepts. Engines: Make a unit stronger (buff); Improve cards in hand or deck; Double or multiply stats; Temporary bonus (this turn only); Strikes with its defence; Set stats to a number; Stats matter (highest, lowest); Attack gain (+attack); Damage to several separate targets; When I play another card. Bricks: none
 - Theme: the sumo stables of Edo. Design markers: none
-- Extras (10): My unit fights a chosen enemy 4.168; Excess damage carries on (trample) 2.751; Bring back dead units (revive) 2.278; Taunt (enemies must attack it) 3.889; Pay later (overload, debt) 3.389; Can't move (root) 2.476; Alternative costs 2.392; Return my unit from the board to hand 2.271; Put into play for free 1.894; Help from nearby allies (assists) 1.818
+- Extras (10): My unit fights a chosen enemy 4.212; Taunt (enemies must attack it) 3.865; Excess damage carries on (trample) 2.713; Bring back dead units (revive) 2.469; Can't move (root) 2.459; Alternative costs 2.384; Return my unit from the board to hand 2.28; Put into play for free 1.922; A unit levels up on the board 1.735; Move my units (reposition) 1.815
 - How it wins: its units get bigger and bigger; Stats matter (highest, lowest) -> Temporary bonus (this turn only): "type: changes its stats for its effect"
 - removes the front unit: my unit fights it
-- mainly removes back-row units: a big hit goes through
-- mainly acts between lanes: bring dead units back in another lane
+- mainly removes back-row units: several separate targets
+- mainly acts between lanes: several separate targets
 - holds a base: strikes with its defence
 - the game thing it cares about: neighbours
 - Partners (its 5 strongest; * = it is in their 5 too):
-  - Comes back * (39): Neighbours matter (adjacency) + Stats matter (highest, lowest): "type: changes its stats for its effect"
-  - Eats its own * (37): When I play another card + Bring back dead units (revive): "waits: brings it back: its summon effect goes off"; Grows decks hold its Sacrifice my own units x1.6
-  - Can't be broken * (31): Defence gain (+health) + Stats matter (highest, lowest): "type: changes its stats for its effect"; Can't be broken decks hold its Temporary bonus (this turn only) x1.6, Strikes with its defence x1.6
-  - Kills brutally (24): Send an enemy unit back (bounce) + When I play another card: "waits: returns it to hand: its Play or summon effect goes off again"
+  - Comes back * (45): Neighbours matter (adjacency) + Stats matter (highest, lowest): "type: changes its stats for its effect"
+  - Eats its own * (39): When I play another card + Bring back dead units (revive): "waits: brings it back: its summon effect goes off"; Grows decks hold its Sacrifice my own units x1.6
+  - Can't be broken (26): Defence gain (+health) + Strikes with its defence: "stronger: more health"; Can't be broken decks hold its Temporary bonus (this turn only) x1.6, Strikes with its defence x1.7
   - Moves (24): Neighbours matter (adjacency) + Stats matter (highest, lowest): "type: changes its stats for its effect"
+  - Swarms * (24): When I play another card + Summon units / tokens: "waits: puts your units into play"; Swarms decks hold its Temporary bonus (this turn only) x2.6
 
-## Comes back: what it loses returns (198 decks lean on its kernel)
-- Kernel: Bring back dead units (revive) (63 decks); Return my unit from the board to hand (53 decks); Reuse my cards (shuffle back) (44 decks); Back to hand when it dies or leaves play (38 decks)
+## Comes back: what it loses returns (194 decks lean on its kernel)
+- Kernel: Bring back dead units (revive) (59 decks); Return my unit from the board to hand (53 decks); Reuse my cards (shuffle back) (44 decks); Back to hand when it dies or leaves play (38 decks)
 - From card links:
   - When a card is drawn (2 kernel links; strongest with Return my unit from the board to hand: runeterra: Unworthy Soul + Slotbot)
-  - Cheat death (survive lethal) (2 kernel links; strongest with Bring back dead units (revive): runeterra: Amalgamation Of Vile Rites + Shackled Ghasts)
-  - Board wipe (2 kernel links; strongest with Bring back dead units (revive): duelyst: Plasma Storm + Young Silithar)
-  - Neighbours matter (adjacency) (3 kernel links; strongest with Return my unit from the board to hand: duelyst: Sunset Paragon + Sand Burrower)
+  - Board wipe (2 kernel links; strongest with Bring back dead units (revive): gwent: Scorch + Ruehin)
+  - Neighbours matter (adjacency) (3 kernel links; strongest with Bring back dead units (revive): gwent: Shani + King Henselt)
+  - Counts / thresholds (2 kernel links; strongest with Return my unit from the board to hand: duelyst: Fortified Assault + Sand Burrower)
 - From decks: nothing
 - From decks and card links: Search the deck for a card (tutor) x3.6; Put into play for free x3.2; Draw cards x1.7; Sacrifice my own units x1.7
-- 12 concepts. Engines: Bring back dead units (revive); Return my unit from the board to hand; Reuse my cards (shuffle back); Back to hand when it dies or leaves play; When a card is drawn; Cheat death (survive lethal); Board wipe; Neighbours matter (adjacency); Search the deck for a card (tutor); Put into play for free; Draw cards; Sacrifice my own units. Bricks: none
+- 12 concepts. Engines: Bring back dead units (revive); Return my unit from the board to hand; Reuse my cards (shuffle back); Back to hand when it dies or leaves play; When a card is drawn; Board wipe; Neighbours matter (adjacency); Counts / thresholds; Search the deck for a card (tutor); Put into play for free; Draw cards; Sacrifice my own units. Bricks: none
 - Theme: the embalmers of ancient Egypt. Design markers: none
-- Extras (10): Move enemy units (push, pull) 2.593; Counts deaths 4.307; Mill the opponent's deck 3.82; When another unit dies 3.424; Stacking keywords / counters 3.267; Ranged attack / long reach 3.021; Hand size matters 2.708; Grows with what happened this game 2.658; My unit fights a chosen enemy 2.293; Damaged unit matters 2.267
+- Extras (10): Move enemy units (push, pull) 2.769; Counts deaths 3.681; When another unit dies 3.568; Mill the opponent's deck 3.519; Ranged attack / long reach 2.997; Damaged unit matters 2.471; Hand size matters 2.365; Stacking keywords / counters 2.424; My unit fights a chosen enemy 2.263; Move my units (reposition) 2.247
 - How it wins: what it loses returns; Draw cards -> When a card is drawn: "waits: makes you draw cards"
 - removes the front unit: my unit fights it
 - mainly removes back-row units: everything at once
 - mainly acts between lanes: bring dead units back in another lane
-- holds a base: hard to kill
+- holds a base: keep refilling
 - the game thing it cares about: neighbours
 - Partners (its 5 strongest; * = it is in their 5 too):
-  - Kills brutally * (60): Counts deaths + Sacrifice my own units: "type: makes your units die"; Comes back decks hold its Banish / exile (gone for good) x1.8, Send an enemy unit back (bounce) x1.6
-  - Can't be broken * (44): Return my unit from the board to hand + Absorb one hit (shield, ward): "waits: returns it to hand: its Play or summon effect goes off again"
-  - Messes you up * (43): Return my unit from the board to hand + Look at cards and pick (scry): "waits: returns it to hand: its Play or summon effect goes off again"; Comes back decks hold its Silence (abilities removed) x2.0, Junk cards into a deck or hand x3.1
-  - Moves * (42): Board wipe + Move enemy units (push, pull): "type: {A} moves units, and {B} acts on units next to it"; Moves decks hold its Return my unit from the board to hand x2.3, Back to hand when it dies or leaves play x2.4
-  - Grows * (39): Neighbours matter (adjacency) + Stats matter (highest, lowest): "type: changes its stats for its effect"
+  - Kills brutally * (60): Counts deaths + Sacrifice my own units: "type: makes your units die"; Comes back decks hold its Banish / exile (gone for good) x1.8, Send an enemy unit back (bounce) x1.7
+  - Messes you up * (51): Return my unit from the board to hand + Look at cards and pick (scry): "waits: returns it to hand: its Play or summon effect goes off again"; Comes back decks hold its Silence (abilities removed) x1.9, Junk cards into a deck or hand x3.1, Make a unit weaker (debuff) x1.7
+  - Moves * (47): Board wipe + Move enemy units (push, pull): "type: {A} moves units, and {B} acts on units next to it"; Moves decks hold its Return my unit from the board to hand x2.3, Back to hand when it dies or leaves play x2.4
+  - Grows * (45): Neighbours matter (adjacency) + Stats matter (highest, lowest): "type: changes its stats for its effect"
+  - Can't be broken * (44): Neighbours matter (adjacency) + Stats matter (highest, lowest): "type: changes its stats for its effect"
 
-## Eats its own: kills and spends its own units and cards for power (296 decks lean on its kernel)
-- Kernel: Sacrifice my own units (110 decks); Discard my own cards (97 decks); Hits my own side too (92 decks); Destroys itself / temporary unit (11 decks)
+## Eats its own: kills and spends its own units and cards for power (287 decks lean on its kernel)
+- Kernel: Sacrifice my own units (103 decks); Discard my own cards (97 decks); Hits my own side too (90 decks); Destroys itself / temporary unit (11 decks)
 - From card links:
-  - Cheat death (survive lethal) (3 kernel links; strongest with Sacrifice my own units: duelyst: Darkfire Sacrifice + Desolator)
+  - When another unit dies (4 kernel links; strongest with Sacrifice my own units: marvel_snap: Misery + Zombie Venom)
   - Counts deaths (3 kernel links; strongest with Sacrifice my own units: runeterra: Black Spear + Bloodcursed Harpy)
   - Clog the opponent's board (2 kernel links; strongest with Hits my own side too: gwent: Scorch + Noonwraith)
-  - When another unit dies (3 kernel links; strongest with Sacrifice my own units: marvel_snap: Misery + Zombie Venom)
+  - Cheat death (survive lethal) (2 kernel links; strongest with Sacrifice my own units: duelyst: Darkfire Sacrifice + Sarlac the Eternal)
 - From decks: Act the turn it arrives (haste, rush) x1.5
-- From decks and card links: When a card is discarded x5.7; Bring back dead units (revive) x2.7; A unit levels up on the board x2.3
-- 12 concepts. Engines: Sacrifice my own units; Discard my own cards; Hits my own side too; Destroys itself / temporary unit; Cheat death (survive lethal); Counts deaths; Clog the opponent's board; When another unit dies; Act the turn it arrives (haste, rush); When a card is discarded; Bring back dead units (revive); A unit levels up on the board. Bricks: none
+- From decks and card links: When a card is discarded x5.8; Bring back dead units (revive) x2.5; A unit levels up on the board x2.3
+- 12 concepts. Engines: Sacrifice my own units; Discard my own cards; Hits my own side too; Destroys itself / temporary unit; When another unit dies; Counts deaths; Clog the opponent's board; Cheat death (survive lethal); Act the turn it arrives (haste, rush); When a card is discarded; Bring back dead units (revive); A unit levels up on the board. Bricks: none
 - Theme: the sacrifice priests of Tenochtitlan. Design markers: none
-- Extras (10): Any damage kills (deathtouch, poisonous) 3.666; Board wipe 2.701; Back to hand when it dies or leaves play 5.969; Stacking keywords / counters 4.002; When another unit leaves play 3.569; Grows with what happened this game 3.266; Damaged unit matters 2.841; Summon units / tokens 2.742; Mill the opponent's deck 2.504; Upgrade a card 2.492
+- Extras (10): Any damage kills (deathtouch, poisonous) 3.7; Board wipe 2.703; Back to hand when it dies or leaves play 6.113; Stacking keywords / counters 4.035; When another unit leaves play 3.662; Grows with what happened this game 3.273; Damaged unit matters 2.877; Mill the opponent's deck 2.606; Upgrade a card 2.516; Destroy outright 2.484
 - How it wins: kills and spends its own units and cards for power; Discard my own cards -> When a card is discarded: "waits: makes you discard cards"
 - removes the front unit: any hit kills it
-- mainly removes back-row units: everything at once
+- mainly removes back-row units: any removal of the front list on a spell (destroy, damage, bounce, banish, steal, cocoon: a spell picks any cell)
 - mainly acts between lanes: bring dead units back in another lane
 - holds a base: hard to kill
 - the game thing it cares about: the discard pile
 - Partners (its 5 strongest; * = it is in their 5 too):
   - Moves * (47): Hits my own side too + When life or health is restored: "type: damages your units or players"; Moves decks hold its Hits my own side too x1.6
-  - Can't be broken * (46): Force enemy units to attack + A unit levels up on the board: "levels: targets enemy cards (levels it up)"; Can't be broken decks hold its Hits my own side too x2.2
-  - Messes you up * (37): Can't attack (my own unit) + A unit levels up on the board: "levels: damages the enemy player (levels it up)"
-  - Grows * (37): When I play another card + Bring back dead units (revive): "waits: brings it back: its summon effect goes off"; Grows decks hold its Sacrifice my own units x1.6
+  - Can't be broken * (44): A unit levels up on the board + Heal every turn (regeneration): "type: makes champions level up"; Can't be broken decks hold its Hits my own side too x2.2
+  - Comes back (44): Board wipe + When another unit dies: "waits: makes your units die"; Comes back decks hold its Sacrifice my own units x1.7, Discard my own cards x1.7
+  - Grows * (39): When I play another card + Bring back dead units (revive): "waits: brings it back: its summon effect goes off"; Grows decks hold its Sacrifice my own units x1.6
   - Thrives on spells * (36): Counts / thresholds + Bring back dead units (revive): "waits: plays it: its effect goes off"; Thrives on spells decks hold its Discard my own cards x2.2
 
 ## Every pair
-- Can't be broken + Kills brutally: 40 card links; decks hold 0 / 1 of the other's kernel 2x+; strength 43
-- Can't be broken + Messes you up: 19 card links; decks hold 1 / 0 of the other's kernel 2x+; shares 1 of 12; strength 22
-- Can't be broken + Moves: 32 card links; decks hold 1 / 1 of the other's kernel 2x+; shares 1 of 12; strength 38
-- Can't be broken + Thrives on spells: 18 card links; decks hold 0 / 0 of the other's kernel 2x+; strength 18
-- Can't be broken + Waits: 20 card links; decks hold 0 / 0 of the other's kernel 2x+; shares 1 of 10; strength 20
-- Can't be broken + Swarms: 27 card links; decks hold 0 / 0 of the other's kernel 2x+; strength 27
-- Can't be broken + Grows: 25 card links; decks hold 2 / 0 of the other's kernel 2x+; shares 1 of 9; strength 31
+- Can't be broken + Kills brutally: 36 card links; decks hold 0 / 1 of the other's kernel 2x+; strength 39
+- Can't be broken + Messes you up: 17 card links; decks hold 1 / 0 of the other's kernel 2x+; shares 1 of 10; strength 20
+- Can't be broken + Moves: 35 card links; decks hold 1 / 1 of the other's kernel 2x+; shares 1 of 12; strength 41
+- Can't be broken + Thrives on spells: 17 card links; decks hold 0 / 0 of the other's kernel 2x+; strength 17
+- Can't be broken + Waits: 16 card links; decks hold 0 / 0 of the other's kernel 2x+; shares 1 of 9; strength 16
+- Can't be broken + Swarms: 28 card links; decks hold 0 / 0 of the other's kernel 2x+; strength 28
+- Can't be broken + Grows: 20 card links; decks hold 2 / 0 of the other's kernel 2x+; shares 2 of 10; strength 26
 - Can't be broken + Comes back: 44 card links; decks hold 0 / 0 of the other's kernel 2x+; strength 44
-- Can't be broken + Eats its own: 40 card links; decks hold 1 / 1 of the other's kernel 2x+; strength 46
-- Kills brutally + Messes you up: 43 card links; decks hold 2 / 1 of the other's kernel 2x+; strength 52
-- Kills brutally + Moves: 57 card links; decks hold 1 / 2 of the other's kernel 2x+; shares 1 of 12; strength 66
-- Kills brutally + Thrives on spells: 35 card links; decks hold 0 / 0 of the other's kernel 2x+; strength 35
-- Kills brutally + Waits: 18 card links; decks hold 0 / 1 of the other's kernel 2x+; shares 1 of 10; strength 21
-- Kills brutally + Swarms: 28 card links; decks hold 0 / 1 of the other's kernel 2x+; strength 31
-- Kills brutally + Grows: 24 card links; decks hold 0 / 0 of the other's kernel 2x+; strength 24
+- Can't be broken + Eats its own: 38 card links; decks hold 1 / 1 of the other's kernel 2x+; strength 44
+- Kills brutally + Messes you up: 19 card links; decks hold 3 / 1 of the other's kernel 2x+; shares 1 of 10; strength 31
+- Kills brutally + Moves: 59 card links; decks hold 1 / 2 of the other's kernel 2x+; shares 1 of 12; strength 68
+- Kills brutally + Thrives on spells: 34 card links; decks hold 0 / 0 of the other's kernel 2x+; strength 34
+- Kills brutally + Waits: 21 card links; decks hold 0 / 1 of the other's kernel 2x+; strength 24
+- Kills brutally + Swarms: 29 card links; decks hold 0 / 1 of the other's kernel 2x+; strength 32
+- Kills brutally + Grows: 23 card links; decks hold 0 / 0 of the other's kernel 2x+; strength 23
 - Kills brutally + Comes back: 54 card links; decks hold 0 / 2 of the other's kernel 2x+; strength 60
-- Kills brutally + Eats its own: 24 card links; decks hold 2 / 1 of the other's kernel 2x+; shares 4 of 12; strength 33
-- Messes you up + Moves: 25 card links; decks hold 1 / 2 of the other's kernel 2x+; shares 1 of 12; strength 34
-- Messes you up + Thrives on spells: 24 card links; decks hold 0 / 2 of the other's kernel 2x+; shares 1 of 11; strength 30
-- Messes you up + Waits: 10 card links; decks hold 3 / 2 of the other's kernel 2x+; shares 4 of 10; strength 25
-- Messes you up + Swarms: 24 card links; decks hold 0 / 2 of the other's kernel 2x+; strength 30
-- Messes you up + Grows: 11 card links; decks hold 1 / 1 of the other's kernel 2x+; shares 1 of 9; strength 17
-- Messes you up + Comes back: 37 card links; decks hold 0 / 2 of the other's kernel 2x+; shares 1 of 12; strength 43
-- Messes you up + Eats its own: 37 card links; decks hold 0 / 0 of the other's kernel 2x+; strength 37
-- Moves + Thrives on spells: 19 card links; decks hold 0 / 0 of the other's kernel 2x+; strength 19
-- Moves + Waits: 23 card links; decks hold 1 / 1 of the other's kernel 2x+; strength 29
+- Kills brutally + Eats its own: 22 card links; decks hold 2 / 1 of the other's kernel 2x+; shares 4 of 12; strength 31
+- Messes you up + Moves: 29 card links; decks hold 1 / 3 of the other's kernel 2x+; strength 41
+- Messes you up + Thrives on spells: 26 card links; decks hold 0 / 2 of the other's kernel 2x+; strength 32
+- Messes you up + Waits: 8 card links; decks hold 3 / 3 of the other's kernel 2x+; shares 2 of 9; strength 26
+- Messes you up + Swarms: 22 card links; decks hold 0 / 2 of the other's kernel 2x+; strength 28
+- Messes you up + Grows: 16 card links; decks hold 0 / 1 of the other's kernel 2x+; strength 19
+- Messes you up + Comes back: 42 card links; decks hold 0 / 3 of the other's kernel 2x+; strength 51
+- Messes you up + Eats its own: 18 card links; decks hold 0 / 1 of the other's kernel 2x+; shares 1 of 10; strength 21
+- Moves + Thrives on spells: 20 card links; decks hold 0 / 0 of the other's kernel 2x+; strength 20
+- Moves + Waits: 16 card links; decks hold 1 / 1 of the other's kernel 2x+; strength 22
 - Moves + Swarms: 32 card links; decks hold 0 / 0 of the other's kernel 2x+; strength 32
-- Moves + Grows: 24 card links; decks hold 0 / 0 of the other's kernel 2x+; strength 24
-- Moves + Comes back: 33 card links; decks hold 2 / 1 of the other's kernel 2x+; shares 1 of 12; strength 42
+- Moves + Grows: 24 card links; decks hold 0 / 0 of the other's kernel 2x+; shares 1 of 10; strength 24
+- Moves + Comes back: 38 card links; decks hold 2 / 1 of the other's kernel 2x+; shares 1 of 12; strength 47
 - Moves + Eats its own: 44 card links; decks hold 1 / 0 of the other's kernel 2x+; strength 47
-- Thrives on spells + Waits: 22 card links; decks hold 0 / 2 of the other's kernel 2x+; shares 1 of 10; strength 28
+- Thrives on spells + Waits: 18 card links; decks hold 0 / 2 of the other's kernel 2x+; shares 1 of 9; strength 24
 - Thrives on spells + Swarms: 19 card links; decks hold 1 / 0 of the other's kernel 2x+; shares 1 of 8; strength 22
-- Thrives on spells + Grows: 13 card links; decks hold 2 / 0 of the other's kernel 2x+; shares 1 of 9; strength 19
-- Thrives on spells + Comes back: 22 card links; decks hold 1 / 2 of the other's kernel 2x+; shares 3 of 11; strength 31
+- Thrives on spells + Grows: 15 card links; decks hold 2 / 0 of the other's kernel 2x+; shares 1 of 10; strength 21
+- Thrives on spells + Comes back: 17 card links; decks hold 1 / 2 of the other's kernel 2x+; shares 4 of 11; strength 26
 - Thrives on spells + Eats its own: 30 card links; decks hold 1 / 1 of the other's kernel 2x+; shares 1 of 11; strength 36
-- Waits + Swarms: 17 card links; decks hold 0 / 1 of the other's kernel 2x+; shares 1 of 8; strength 20
-- Waits + Grows: 14 card links; decks hold 0 / 0 of the other's kernel 2x+; strength 14
-- Waits + Comes back: 32 card links; decks hold 1 / 1 of the other's kernel 2x+; shares 1 of 10; strength 38
-- Waits + Eats its own: 18 card links; decks hold 0 / 0 of the other's kernel 2x+; shares 1 of 10; strength 18
-- Swarms + Grows: 20 card links; decks hold 1 / 0 of the other's kernel 2x+; strength 23
-- Swarms + Comes back: 16 card links; decks hold 0 / 1 of the other's kernel 2x+; shares 3 of 8; strength 19
-- Swarms + Eats its own: 17 card links; decks hold 1 / 1 of the other's kernel 2x+; shares 2 of 8; strength 23
-- Grows + Comes back: 39 card links; decks hold 0 / 0 of the other's kernel 2x+; strength 39
-- Grows + Eats its own: 34 card links; decks hold 1 / 0 of the other's kernel 2x+; strength 37
-- Comes back + Eats its own: 26 card links; decks hold 2 / 1 of the other's kernel 2x+; shares 3 of 12; strength 35
+- Waits + Swarms: 12 card links; decks hold 0 / 1 of the other's kernel 2x+; shares 1 of 8; strength 15
+- Waits + Grows: 13 card links; decks hold 0 / 0 of the other's kernel 2x+; strength 13
+- Waits + Comes back: 27 card links; decks hold 1 / 1 of the other's kernel 2x+; shares 1 of 9; strength 33
+- Waits + Eats its own: 20 card links; decks hold 0 / 0 of the other's kernel 2x+; strength 20
+- Swarms + Grows: 21 card links; decks hold 1 / 0 of the other's kernel 2x+; strength 24
+- Swarms + Comes back: 17 card links; decks hold 0 / 1 of the other's kernel 2x+; shares 3 of 8; strength 20
+- Swarms + Eats its own: 16 card links; decks hold 1 / 1 of the other's kernel 2x+; shares 2 of 8; strength 22
+- Grows + Comes back: 45 card links; decks hold 0 / 0 of the other's kernel 2x+; strength 45
+- Grows + Eats its own: 36 card links; decks hold 1 / 0 of the other's kernel 2x+; strength 39
+- Comes back + Eats its own: 35 card links; decks hold 2 / 1 of the other's kernel 2x+; shares 2 of 12; strength 44

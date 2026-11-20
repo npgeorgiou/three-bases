@@ -1,125 +1,195 @@
-# Case tests: inscryption
+# Case tests: monster_train
 
-Made by `cases/run.py inscryption`.
-**95 of 95 cases pass.**
+Made by `cases/run.py monster_train`.
+**165 of 165 cases pass.**
 
 
 ## Mechanics (expected cards from the texts)
 
 | case | question | expected | found | recall | extra | pass |
 |---|---|---|---|---|---|---|
-| mx01 | a trigger on another unit dying is other_death_trigger | 0 | 0 | 100% | 4 | yes |
-| mx02 | moving enemy units is forced_movement | 0 | 0 | 100% | 26 | yes |
-| mx03 | a plain draw is one form: zone deck_top, no pick top | 0 | 0 | 100% | 9 | yes |
-| mx10 | damage to the enemy player is Nexus damage (kinds kept, v30) | 0 | 0 | 100% | 223 | yes |
-| mx11 | moving or pushing units makes units move (positions change, v30) | 0 | 0 | 100% | 26 | yes |
-| mx12 | a unit that moves (onto a space) is the event's object, never its actor (N16, Sentry, v36, v38) | 4 | 4 | 100% | 0 | yes |
-| mi01 | Airborne: strikes the opponent directly | 20 | 20 | 100% | 14 | yes |
-| mi02 | Touch of Death: a creature it damages perishes | 4 | 4 | 100% | 15 | yes |
-| mi03 | Bone Digger: gives Bones | 3 | 3 | 100% | 10 | yes |
-| mi04 | Bone King: gives Bones when it dies | 5 | 5 | 100% | 8 | yes |
-| mi05 | Ant Spawner: creates an Ant in hand | 1 | 1 | 100% | 0 | yes |
-| mi06 | Fecundity: a copy in hand | 3 | 3 | 100% | 0 | yes |
-| mi07 | Dam Builder: Dams on the spaces beside it | 1 | 1 | 100% | 0 | yes |
-| mi08 | Sprinter: moves on its own each turn | 9 | 9 | 100% | 15 | yes |
-| mi09 | Fledgling: grows into another form | 8 | 8 | 100% | 13 | yes |
-| mi10 | Worthy Sacrifice: something happens when it is sacrificed | 3 | 3 | 100% | 4 | yes |
-| mi11 | Many Lives: does not perish when sacrificed | 4 | 4 | 100% | 3 | yes |
-| mi12 | Green Mox: gives a Green gem | 6 | 6 | 100% | 8 | yes |
-| mi13 | Gem Dependant: perishes without a Mox card | 5 | 5 | 100% | 8 | yes |
-| mi14 | Unkillable: back to hand when it dies | 3 | 3 | 100% | 0 | yes |
-| mi15 | Bifurcated Strike: strikes two spaces | 4 | 4 | 100% | 32 | yes |
-| mi16 | Ants: Power is the number of Ants | 3 | 3 | 100% | 6 | yes |
-| mi17 | Sharp Quills: damages its attacker | 4 | 4 | 100% | 11 | yes |
-| mi18 | Leader: adjacent creatures gain Power | 1 | 1 | 100% | 0 | yes |
-| mi19 | Stinky: the opposing creature loses Power | 2 | 2 | 100% | 3 | yes |
-| mi20 | Waterborne: submerged (cannot be attacked) on the enemy turn | 9 | 9 | 100% | 37 | yes |
+| mt01 | Summon triggers | 13 | 13 | 100% | 181 | yes |
+| mt02 | Strike triggers | 9 | 9 | 100% | 7 | yes |
+| mt03 | Revenge triggers | 7 | 7 | 100% | 33 | yes |
+| mt04 | Slay triggers | 14 | 14 | 100% | 0 | yes |
+| mt05 | Extinguish triggers | 11 | 11 | 100% | 4 | yes |
+| mt06 | Harvest triggers | 5 | 5 | 100% | 0 | yes |
+| mt07 | Incant triggers | 10 | 10 | 100% | 0 | yes |
+| mt08 | Rally triggers | 1 | 1 | 100% | 0 | yes |
+| mt09 | Rejuvenate triggers | 4 | 4 | 100% | 0 | yes |
+| mt10 | Resolve triggers | 8 | 8 | 100% | 15 | yes |
+| mt11 | Action triggers | 2 | 2 | 100% | 0 | yes |
+| mt12 | End of Turn triggers | 1 | 1 | 100% | 19 | yes |
+| mt13 | Gorge triggers | 7 | 7 | 100% | 0 | yes |
+| mt14 | Eaten triggers | 7 | 7 | 100% | 0 | yes |
+| mt15 | Hunger triggers | 1 | 1 | 100% | 1 | yes |
+| mt16 | Etch triggers | 4 | 4 | 100% | 0 | yes |
+| mt17 | Inspire triggers | 4 | 4 | 100% | 0 | yes |
+| mt18 | Reserve triggers | 6 | 6 | 100% | 0 | yes |
+| mt19 | Hatch triggers | 3 | 3 | 100% | 12 | yes |
+| mt20 | extra draw next turn | 6 | 6 | 100% | 44 | yes |
+| mt21 | deals damage | 53 | 52 | 98% | 33 | yes |
+| mt22 | restores health | 14 | 14 | 100% | 7 | yes |
+| mt23 | kills | 5 | 5 | 100% | 18 | yes |
+| mt24 | draws cards | 13 | 13 | 100% | 8 | yes |
+| mt25 | discards | 6 | 6 | 100% | 0 | yes |
+| mt26 | gains Ember | 15 | 15 | 100% | 23 | yes |
+| mt27 | gains gold | 5 | 5 | 100% | 0 | yes |
+| mt28 | changes floor capacity | 6 | 6 | 100% | 1 | yes |
+| mt29 | adds cards to hand | 14 | 14 | 100% | 12 | yes |
+| mt30 | damages its own Pyre | 5 | 5 | 100% | 0 | yes |
+| mt31 | X cost amounts | 17 | 17 | 100% | 1 | yes |
+| mt32 | hits the front enemy unit | 21 | 21 | 100% | 4 | yes |
+| mt33 | on this floor | 14 | 14 | 100% | 53 | yes |
+| mt34 | consumed cards matter | 6 | 6 | 100% | 4 | yes |
+| mt35 | permanent changes | 7 | 7 | 100% | 11 | yes |
+| mt36 | moves units | 4 | 4 | 100% | 10 | yes |
+| mt37 | doubles amounts | 4 | 4 | 100% | 16 | yes |
+| mt38 | Armor (gives, has or uses it) | 21 | 21 | 100% | 0 | yes |
+| mt39 | Rage (gives, has or uses it) | 17 | 17 | 100% | 0 | yes |
+| mt40 | Multistrike (gives, has or uses it) | 13 | 13 | 100% | 0 | yes |
+| mt41 | Burnout (gives, has or uses it) | 12 | 12 | 100% | 5 | yes |
+| mt42 | Frostbite (gives, has or uses it) | 12 | 12 | 100% | 0 | yes |
+| mt43 | Sap (gives, has or uses it) | 5 | 5 | 100% | 0 | yes |
+| mt44 | Dazed (gives, has or uses it) | 8 | 8 | 100% | 0 | yes |
+| mt45 | Spikes (gives, has or uses it) | 10 | 10 | 100% | 0 | yes |
+| mt46 | Regen (gives, has or uses it) | 5 | 5 | 100% | 0 | yes |
+| mt47 | Damage Shield (gives, has or uses it) | 8 | 8 | 100% | 0 | yes |
+| mt48 | Lifesteal (gives, has or uses it) | 4 | 4 | 100% | 0 | yes |
+| mt49 | Stealth (gives, has or uses it) | 3 | 3 | 100% | 0 | yes |
+| mt50 | Spell Weakness (gives, has or uses it) | 4 | 4 | 100% | 0 | yes |
+| mt51 | Melee Weakness (gives, has or uses it) | 2 | 2 | 100% | 0 | yes |
+| mt52 | Reap (gives, has or uses it) | 8 | 8 | 100% | 0 | yes |
+| mt53 | Emberdrain (gives, has or uses it) | 5 | 5 | 100% | 0 | yes |
+| mt54 | Rooted (gives, has or uses it) | 2 | 2 | 100% | 0 | yes |
+| mt55 | Quick (gives, has or uses it) | 4 | 4 | 100% | 0 | yes |
+| mt56 | Sweep (gives, has or uses it) | 7 | 7 | 100% | 0 | yes |
+| mt57 | Trample (gives, has or uses it) | 4 | 4 | 100% | 0 | yes |
+| mt58 | Endless (gives, has or uses it) | 3 | 3 | 100% | 0 | yes |
+| mt59 | Consume (gives, has or uses it) | 60 | 59 | 98% | 0 | yes |
+| mt60 | Purge (gives, has or uses it) | 11 | 11 | 100% | 0 | yes |
+| mt61 | Piercing (gives, has or uses it) | 5 | 5 | 100% | 0 | yes |
+| mt62 | Attuned (gives, has or uses it) | 6 | 6 | 100% | 0 | yes |
+| mt63 | Permafrost (gives, has or uses it) | 3 | 3 | 100% | 0 | yes |
+| mt64 | Frozen (gives, has or uses it) | 2 | 2 | 100% | 2 | yes |
+| mt65 | Offering (gives, has or uses it) | 3 | 3 | 100% | 0 | yes |
+| mt66 | Extract (gives, has or uses it) | 10 | 10 | 100% | 0 | yes |
+| mt67 | Infused (gives, has or uses it) | 2 | 2 | 100% | 0 | yes |
+| mt68 | Pyrebound (gives, has or uses it) | 2 | 2 | 100% | 0 | yes |
+| mt69 | Reform (gives, has or uses it) | 6 | 6 | 100% | 0 | yes |
+| mt70 | Ascend (gives, has or uses it) | 5 | 5 | 100% | 0 | yes |
+| mt71 | Descend (gives, has or uses it) | 5 | 5 | 100% | 0 | yes |
+| mt72 | Cultivate (gives, has or uses it) | 2 | 2 | 100% | 0 | yes |
+| mt73 | Sacrifice (gives, has or uses it) | 3 | 3 | 100% | 0 | yes |
+| mt74 | Magic Power (gives, has or uses it) | 3 | 3 | 100% | 6 | yes |
+| mt75 | Shell (gives, has or uses it) | 5 | 5 | 100% | 0 | yes |
+| mt76 | Fragile (gives, has or uses it) | 1 | 1 | 100% | 0 | yes |
+| mt77 | Unplayable (gives, has or uses it) | 2 | 2 | 100% | 0 | yes |
+| mx01 | a trigger on another unit dying is other_death_trigger | 5 | 5 | 100% | 3 | yes |
+| mx02 | moving enemy units is forced_movement | 3 | 3 | 100% | 11 | yes |
+| mx03 | a plain draw is one form: zone deck_top, no pick top | 10 | 10 | 100% | 11 | yes |
+| mx10 | damage to the enemy player is Nexus damage (kinds kept, v30) | 0 | 0 | 100% | 17 | yes |
+| mx11 | moving or pushing units makes units move (positions change, v30) | 0 | 0 | 100% | 14 | yes |
+| mx12 | a unit that moves (onto a space) is the event's object, never its actor (N16, Sentry, v36, v38) | 0 | 0 | 100% | 2 | yes |
 | mx13 | can't be targeted by spells: the cant is on the spells, the protected unit is "to" (N19, v37) | 0 | 0 | 100% | 0 | yes |
-| mx14 | a dead unit put into play is revive, never summon from the discard (N20, v37) | 0 | 0 | 100% | 1 | yes |
+| mx14 | a dead unit put into play is revive, never summon from the discard (N20, v37) | 0 | 0 | 100% | 0 | yes |
 | mx15 | a trigger that holds only "this turn" is an ability given to the player for this turn (v37, Duelyst) | 0 | 0 | 100% | 0 | yes |
-| mi21 | strikes at opposing spaces also hit the opponent (an empty space is struck: wiki Card Battle) | 4 | 4 | 100% | 30 | yes |
-| mx13 | an effect on the creature opposing it is about lanes (concept lanes from same_lane, v38) | 2 | 2 | 100% | 42 | yes |
-| mx17 | a strike on the spaces beside the opposing one is neighbours, not other lanes (adjacency; concept tree: several lanes away is cross_lane; wheel suspects 20 Nov 2026) | 2 | 2 | 100% | 33 | yes |
-| mx15 | within a circuit is a formation (link_formation, v38) | 1 | 1 | 100% | 9 | yes |
-| mx16 | more or faster base resource (base_resource_gain, v38) | 2 | 2 | 100% | 29 | yes |
-| mi22 | Burrower: moves to an empty space of its own side when it would be struck | 5 | 5 | 100% | 0 | yes |
-| mi23 | rotate one space clockwise: every unit moves to a bordering space | 1 | 1 | 100% | 1 | yes |
-| mi24 | a unit that takes every space of its side (room, size) | 2 | 2 | 100% | 0 | yes |
-| mi25 | an enemy attacking my unit is the enemy's attack (Daus), not mine | 2 | 2 | 100% | 0 | yes |
-| wc22 | Inscryption: a Mox gives a gem that pays for cards: base_resource_gain (wheel step 2, Kaptain 16 Nov 2026) | 6 | 6 | 100% | 25 | yes |
-| wc24 | Inscryption: Bone King gives Bones that pay for cards: base_resource_gain (wheel step 2, Kaptain 16 Nov 2026) | 5 | 5 | 100% | 26 | yes |
+| mx13 | an effect on the creature opposing it is about lanes (concept lanes from same_lane, v38) | 0 | 0 | 100% | 67 | yes |
+| mx17 | a strike on the spaces beside the opposing one is neighbours, not other lanes (adjacency; concept tree: several lanes away is cross_lane; wheel suspects 20 Nov 2026) | 0 | 0 | 100% | 0 | yes |
+| mx15 | within a circuit is a formation (link_formation, v38) | 0 | 0 | 100% | 0 | yes |
+| mx16 | more or faster base resource (base_resource_gain, v38) | 0 | 0 | 100% | 19 | yes |
 | wc29 | attack equal to its own health is strikes with its defence (wheel step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 0 | yes |
-| wc30 | doubling a unit's own stat is stat_multiply (wheel step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 2 | yes |
-| wc31 | a stat set to a number is stat_fixed, or stat_loss on an enemy (wheel step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 4 | yes |
-| wc32 | a stat set to the number of something is variable_stats (wheel step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 11 | yes |
-| wc33 | a stat set to a number is not doubling (wheel step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 293 | yes |
-| wc42 | Inscryption: Unkillable comes back to hand when it dies (wheel step 1, Kaptain 18 Nov 2026) | 3 | 3 | 100% | 0 | yes |
-| wc46 | raising the cost of the opponent's cards is no cost reduction (wheel step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 285 | yes |
+| wc30 | doubling a unit's own stat is stat_multiply (wheel step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 1 | yes |
+| wc31 | a stat set to a number is stat_fixed, or stat_loss on an enemy (wheel step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 8 | yes |
+| wc32 | a stat set to the number of something is variable_stats (wheel step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 7 | yes |
+| wc33 | a stat set to a number is not doubling (wheel step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 307 | yes |
+| wc46 | raising the cost of the opponent's cards is no cost reduction (wheel step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 302 | yes |
 | wc47 | raising the cost of the opponent's cards is cost_increase (wheel step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 0 | yes |
-| wc50 | when the opponent summons: an enemy arrives (wheel step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 7 | yes |
-| wc51 | when the opponent summons is not when I play another card (wheel step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 293 | yes |
-| wc52 | copies of me put into the opponent's deck are given to the opponent (wheel step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 2 | yes |
-| wc57 | Inscryption: Stinky lowers the opposing creature's Power (wheel step 1, second tag reading, Kaptain 19 Nov 2026) | 2 | 2 | 100% | 0 | yes |
-| wc70 | a unit that goes back to hand when it dies does not cheat death (wheel suspects, 20 Nov 2026) | 3 | 3 | 100% | 287 | yes |
+| wc50 | when the opponent summons: an enemy arrives (wheel step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 0 | yes |
+| wc51 | when the opponent summons is not when I play another card (wheel step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 305 | yes |
+| wc52 | copies of me put into the opponent's deck are given to the opponent (wheel step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 20 | yes |
 
 ## Combos (the enabler must set off the payoff)
 
 | case | enabler | payoff | why | found as | pass |
 |---|---|---|---|---|---|
-| ci01 | Necromancer | Broken Obol (Right) | the Obol dies twice, giving Bones twice (Bone King) | condition: mana_refilled | yes |
-| ci02 | Warren | Rabbit | Warren supplies Rabbits | makes | yes |
-| ci03 | Sapphire Mox | Blue Mage | Blue Mage needs the matching Mox | type: Mox Card | yes |
-| ci04 | Ruby Mox | Mage Knight | Mage Knight needs the matching Mox | type: Mox Card | yes |
-| ci05 | Emerald Mox | Junior Sage | Junior Sage needs the matching Mox | condition: mana_refilled | yes |
-| ci07 | Necromancer | Tomb Robber | Skeletons from Tomb Robber die twice with Necromancer: more Bones | condition: mana_refilled | yes |
-| ci08 | Necromancer | Bone Heap | the Bones loop pays for Bone Heap's Enlarge | condition: mana_refilled | yes |
+| cmt17 | Crystalline Seeds | Hoarfrost Effigy | Frostbite to gather and double | keyword: Frostbite | yes |
+| cmt18 | Titanstooth | Hoarfrost Effigy | Frostbite to gather and double | keyword: Frostbite | yes |
+| cmt28 | Cannibalize | Penumbra | Morsels for Penumbra to Gorge on | type: Morsel | yes |
+| cmt29 | Morselmaker | Penumbra | Morsels for Penumbra | type: Morsel | yes |
+| cmt36 | Molded | Rector Flicker | returns the fallen Flicker by Reform | event: kill -> dies | yes |
+| cmt37 | Crushing Demise | Rector Flicker | deaths feed the Accumulator Harvest | event: kill -> dies | yes |
+| cmt45 | Titan Sentry | Hoarfrost Effigy | Frostbite build: Frostbite to gather and double | keyword: Frostbite | yes |
+| cmt46 | Glacial Seal | Hoarfrost Effigy | Frostbite build: Frostbite to gather and double | keyword: Frostbite | yes |
+| cmt47 | Imp-in-a-Box | Imp-olate | Imp build: more Imps in the deck, more damage | type: Imp | yes |
+| cmt48 | Queen's Impling | Transcendimp | Imp build: Summon effects to repeat | trigger keyword: Summon | yes |
+| cmt49 | Impish Scholar | Transcendimp | Imp build: Summon effects to repeat | trigger keyword: Summon | yes |
+| cmt50 | Making of a Morsel | Penumbra | Morsel build: a Morsel Miner for Penumbra to eat | type: Morsel | yes |
+| cmt51 | Morsel Miner | Penumbra | Morsel build: Penumbra eats it for its bonus | type: Morsel | yes |
+| cmt52 | Rootseeds | Siren of the Sea | Stygian + Awoken: cheap Awoken spells set off Incant | is: playing Rootseeds is a played the payoff waits for | yes |
+| cmt53 | Steel Enhancer | Guard of the Unnamed | Stygian + Awoken: cheap Awoken spells set off Incant | is: playing Steel Enhancer is a played the payoff waits for | yes |
+| cmt54 | Molded | Queen's Impling | Hellhorned + Melting Remnant: Reform brings Imps back to replay their Summon | replay: back in hand, played again | yes |
+| cmt55 | Furnace Tap | Tethys Titansbane | Tethys + Umbra: Multistrike makes more Strikes that apply Frostbite | event: start_attack -> attacks | yes |
+| cmt56 | Ritual of Battle | Deranged Brute | Hellhorned rage: Rage on friendly units hits harder | state: given_keyword | yes |
+| cmt57 | Dark Deal | Deranged Brute | Hellhorned rage: Rage on friendly units hits harder | state: given_keyword | yes |
+| cmt58 | Railbeater | Battering Ram | Hellhorned armor: Armor turns into damage | keyword: Armor | yes |
+| cmt59 | Welder Helper | Battering Ram | Hellhorned armor: Armor turns into damage | keyword: Armor | yes |
+| cmt60 | Imp-in-a-Box | Imp-pressive | Hellhorned Imps: an Imp to sacrifice | target: type Imp | yes |
+| cmt61 | Imp-in-a-Box | Imp-portant Work | Hellhorned Imps: an Imp to sacrifice | target: type Imp | yes |
 
 ## Region identity (signature, splash, archetype)
 
 | case | region | kind | mechanic | need | found | pass |
 |---|---|---|---|---|---|---|
-| ri01 | Beast | signature (inscryption.md: Blood costs paid by sacrifice) | needs sacrifices to be played (Blood) | 20 | 73 | yes |
-| ri02 | Undead | signature (inscryption.md: Bones from Gravedigger and from cards that die) | gives Bones | 3 | 5 | yes |
-| ri03 | Undead | signature (inscryption.md: Bones as the cost) | paid with Bones | 10 | 21 | yes |
-| ri04 | Magick | signature (inscryption.md: Magick cards are paid with Mox gems) | paid with gems | 8 | 17 | yes |
-| ri05 | Beast | signature (inscryption.md: Warren puts a Rabbit in hand) | creates cards in hand | 4 | 8 | yes |
-| ri06 | Beast | signature (inscryption.md: Hawk hits past blockers) | strikes the opponent directly | 8 | 23 | yes |
-| ri07 | Magick | signature (inscryption.md: Blue Mage draws per Mox) | draws cards | 1 | 4 | yes |
-| ri08 | Technology | signature (wiki Energy: Battery Bearer raises Energy) | more or faster base resource | 2 | 9 | yes |
+| rmt01 | Hellhorned | signature (library) | Multistrike | 2 | 3 | yes |
+| rmt02 | Hellhorned | signature (library) | Rage | 8 | 11 | yes |
+| rmt03 | Hellhorned | signature (library) | Imps | 8 | 14 | yes |
+| rmt04 | Hellhorned | archetype (Claude) | Armor | 8 | 13 | yes |
+| rmt05 | Hellhorned | archetype (Claude) | Summon triggers | 6 | 31 | yes |
+| rmt06 | Awoken | signature (library) | Sweep | 3 | 3 | yes |
+| rmt07 | Awoken | archetype (Claude) | Spikes | 6 | 8 | yes |
+| rmt08 | Awoken | archetype (Claude) | healing | 6 | 11 | yes |
+| rmt09 | Awoken | archetype (Claude) | Rejuvenate | 3 | 4 | yes |
+| rmt10 | Awoken | archetype (Claude) | extra draw next turn | 5 | 11 | yes |
+| rmt11 | Stygian Guard | signature (library) | Frostbite | 7 | 11 | yes |
+| rmt12 | Stygian Guard | archetype (library) | spells: Incant | 5 | 9 | yes |
+| rmt13 | Stygian Guard | archetype (Claude) | discard and Offering | 4 | 9 | yes |
+| rmt14 | Stygian Guard | archetype (Claude) | Spell Weakness | 3 | 4 | yes |
+| rmt15 | Umbra | signature (library) | eating Morsels for their buffs | 5 | 14 | yes |
+| rmt16 | Umbra | signature (library) | units fed to other units | 4 | 16 | yes |
+| rmt17 | Umbra | archetype (Claude) | Morsels | 10 | 25 | yes |
+| rmt18 | Umbra | archetype (Claude) | Damage Shield | 4 | 7 | yes |
+| rmt19 | Umbra | archetype (Claude) | Emberdrain | 3 | 4 | yes |
+| rmt20 | Melting Remnant | signature (library) | death abilities | 6 | 15 | yes |
+| rmt21 | Melting Remnant | signature (library) | Reform | 4 | 6 | yes |
+| rmt22 | Melting Remnant | signature (library) | Burnout | 6 | 17 | yes |
+| rmt23 | Melting Remnant | signature (library) | Harvest | 3 | 5 | yes |
+| rmt24 | Wurmkin | signature (library) | Echo powers cards | 8 | 34 | yes |
+| rmt25 | Wurmkin | archetype (Claude) | Extract | 6 | 10 | yes |
+| rmt26 | Wurmkin | archetype (Claude) | Consume | 10 | 15 | yes |
+| rmt27 | Wurmkin | archetype (Claude) | Reap | 5 | 8 | yes |
+| rmt28 | Wurmkin | archetype (Claude) | Eggs and Shell | 3 | 5 | yes |
 
 ## Guide decks (the explanation must say what the guide says)
 
 | case | deck | must say | missing | pass |
 |---|---|---|---|---|
-| di01 | Act II Undead starter | second resource (Bones): made by;Gravedigger | - | yes |
-| di02 | Act II Beast starter | units are sacrificed;Warren | - | yes |
-| di03 | Act II Magick starter | gem (Mox): made by Emerald Mox, Ruby Mox, Sapphire Mox | - | yes |
-| di04 | Act II bones and sacrifice (Archeronline4U) | Tomb Robber;second resource (Bones) | - | yes |
+| dmt01 | Imp build (Shardtail Queen) | Imp cards;Transcendimp makes these cards' effects happen again: Impish Scholar, Queen's Impling | - | yes |
+| dmt02 | Frostbite build (Tethys) | get frostbite: made by Crystalline Seeds, Glacial Seal, Tethys Titansbane, Titan Sentry, Titanstooth. Use it: Hoarfrost Effigy | - | yes |
+| dmt03 | Morsel build (Penumbra) | Morsel cards;Eats: made by Morsel Miner, Morselmaker. Use it: Morsel Miner, Penumbra | - | yes |
+| dmt04 | Burnout and Reform build (Rector Flicker) | Your units die: made by Crushing Demise, Molded. Use it: Rector Flicker | - | yes |
+| dmt05 | Stygian and Awoken spells (Solgard) | Spells you play: Awoken's Rail Spike, Glimmer, Razorsharp Edge, Rootseeds, Steel Enhancer. Set off: Solgard the Martyr | - | yes |
+| dmt06 | Hellhorned rage | get rage: made by;Use it: Deranged Brute | - | yes |
+| dmt07 | Hellhorned armor | get armor: made by;Use it: Battering Ram | - | yes |
 
 ## Deck networks (a line must be there, or must not)
 
 | case | deck | from | to | expect | found | pass |
 |---|---|---|---|---|---|---|
-| ni01 | Act II Undead starter | Gravedigger | Zombie | line  | type: lets you gain the second resource (Bones) (pays its cost) | yes |
-| ni02 | Act II Undead starter | Skeleton | Frank & Stein | none  | - | yes |
-| ni03 | Squirrel, Stoat, Warren, Adder, Hawk | Squirrel | Hawk | none  | - | yes |
-| ni04 | Act II Magick starter | Emerald Mox | Junior Sage | line  | type: lets you gain a gem (Mox) (pays its cost) | yes |
-| ni05 | Act II Magick starter | Sapphire Mox | Junior Sage | none you gain a gem | - | yes |
-| ni06 | Act II bones and sacrifice (Archeronline4U) | M3atB0t | Urayuli | line  | cheaper: makes it cheaper (when it is sacrificed for it) | yes |
-| ni07 | Act II bones and sacrifice (Archeronline4U) | Bone Lord's Horn | Tomb Robber | line  | type: lets you gain the second resource (Bones) | yes |
-| ni08 | Raccoon, Dire Wolf Pup, Coyote, Pelts (Rabbit), Squirrel | Coyote | Pelts (Rabbit) | none sacrificed | - | yes |
-| ni09 | Ouroboros, Mantis God, Squirrel | Mantis God | Ouroboros | none  | - | yes |
-| ni10 | Ouroboros, Mantis God, Squirrel | Ouroboros | Mantis God | none  | - | yes |
-| ni11 | Ant Queen, Flying Ant, Skunk, Pelts (Rabbit), Squirrel | Ant Queen | Flying Ant | line  | type: is a unit with Ant it counts or asks for | yes |
-| ni12 | Black Goat, Moose Buck, Mole, Pelts (Rabbit), Squirrel | Moose Buck | Pelts (Rabbit) | none  | - | yes |
-| ni13 | Rabbit, Tadpole, Geck, Pelts (Rabbit), Squirrel | Rabbit | Bullfrog | none sacrificed | - | yes |
-| ni14 | Energy Bot, Shieldbot, Sniper Bot, Double Gunner, Empty Vessel | Sniper Bot | Double Gunner | none  | - | yes |
-| ni15 | Alpha, Wolf, Moose Buck | Alpha | Wolf | none  | - | yes |
-| ni16 | Daus, Bell Tentacle | Bell Tentacle | Daus | line  | type: is the Bell Tentacle it names | yes |
-| ni18 | Ouroboros, Mantis God, Squirrel | Mantis God | Ouroboros | none  | - | yes |
-| ni19 | Ouroboros, Mantis God, Squirrel | Squirrel | Mantis God | none  | - | yes |
-| ni20 | Black Goat, Moose Buck, Mole, Pelts (Rabbit), Squirrel | Mole | Moose Buck | none sacrificed | - | yes |
-| ni21 | Act II bones and sacrifice (Archeronline4U) | Urayuli | Bone Heap | none Bones | - | yes |
-| n293 | Kaycee's Mod Ants, built (wiki tips) | Ant Queen | Flying Ant | line Ant | type: is a unit with Ant it counts or asks for | yes |
-| n298 | Kaycee's Mod Mantis God (gamersdecide, core) | Mealworm | Mantis God | line more power and health | stronger: gives it more power and health (when it is sacrificed for it) | yes |
-| n299 | Act III Mycobot (gamersdecide, core) | Buff Conduit | Null Conduit | none  | - | yes |
+| n40 | Imp build (Shardtail Queen) | Queen's Impling | Transcendimp | none repeats | - | yes |
+| n41 | Frostbite build (Tethys) | Crystalline Seeds | Tethys Titansbane | none  | - | yes |
+| n42 | Frostbite build (Tethys) | Tethys Titansbane | Titan Sentry | none Frostbite | - | yes |
+| n47 | Hellhorned rage | Deranged Brute | Rage Serum | line  | stronger: makes the Rage it gives stronger | yes |
+| n51 | Imp build (Shardtail Queen) | Imp-in-a-Box | Shardtail Queen | line  | type: makes an Imp it asks for; also triggers: makes more cards to play | yes |
+| n57 | Imp build (Shardtail Queen) | Fledgling Imp | Impish Scholar | none  | - | yes |
+| n292 | Remnant Reform (Wickless Baron) | Dreg | Wickless Baron | line dies | waits: dies by its own effect | yes |

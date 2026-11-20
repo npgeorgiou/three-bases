@@ -3,13 +3,13 @@ adjacency	687	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,runet
 aoe_damage	411	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound,sts1	usable	
 assists_support	35	runeterra	usable	
 attack_gain	1764	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
-attack_lock	30	duelyst,into_the_breach,monster_train	usable	
+attack_lock	29	duelyst,into_the_breach,monster_train	usable	
 attack_now	232	duelyst,faeria,inscryption,into_the_breach,monster_train,runeterra,stormbound	usable	
 attack_zero	22	runeterra	usable	
 aura	100	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra	usable	
 banish	83	duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,sts1	usable	
 base_resource_gain	262	duelyst,faeria,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
-block_armor	97	gwent,monster_train,sts1	usable	
+block_armor	91	gwent,monster_train,sts1	usable	
 board_clog	36	gwent,inscryption,into_the_breach,marvel_snap,stormbound	usable	
 board_wipe	69	duelyst,faeria,gwent,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
 bounce_enemy	34	duelyst,gwent,marvel_snap,runeterra	usable	
@@ -17,7 +17,7 @@ buff	109	duelyst,faeria,gwent,into_the_breach,marvel_snap,runeterra,stormbound,s
 cant_attack	1078	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
 card_presence_condition	596	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,runeterra,stormbound,sts1	usable	
 card_quality	26	sts1	usable	
-cheat_death	79	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
+cheat_death	69	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
 combat_damage_threshold	14	runeterra	usable	
 combo_sequence	74	duelyst,faeria,gwent,marvel_snap,runeterra,sts1	usable	
 condition_count	531	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
@@ -31,13 +31,12 @@ cost_type	25	faeria,monster_train	usable
 count_payoff	132	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
 countdown	133	duelyst,gwent,monster_train,runeterra	usable	
 counterattack	15	inscryption,monster_train,sts1	usable	
-cross_lane	6	inscryption	usable	
 damage	561	duelyst,faeria,gwent,into_the_breach,monster_train,runeterra,stormbound,sts1	usable	
-damage_over_time	101	gwent,into_the_breach,monster_train,stormbound,sts1	usable	
-damage_reduction	217	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra	usable	
+damage_over_time	99	gwent,into_the_breach,monster_train,stormbound,sts1	usable	
+damage_reduction	204	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra	usable	
 death_count	51	faeria,gwent,marvel_snap,monster_train,runeterra,stormbound	usable	
 deathtouch	12	faeria,inscryption	usable	
-debuff	103	duelyst,gwent,inscryption,into_the_breach,monster_train,runeterra,sts1	usable	
+debuff	141	duelyst,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound,sts1	usable	
 deck_condition	43	gwent,runeterra	usable	
 deck_position	10	runeterra	usable	
 defence_gain	1202	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound	usable	
@@ -50,7 +49,6 @@ draw	503	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,st
 excess_damage	154	gwent,monster_train,runeterra	usable	
 extra_turn	47	faeria,marvel_snap,runeterra,sts1	usable	
 fight_enemy	64	duelyst,faeria,runeterra,stormbound	usable	
-forced_attack	96	runeterra	usable	
 forced_movement	292	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,stormbound	usable	
 free_play	223	duelyst,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
 friendly_fire	338	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
@@ -72,7 +70,7 @@ link_formation	10	inscryption	usable
 mark_target	17	duelyst,gwent,monster_train,runeterra,sts1	usable	
 merge_attach	150	duelyst,inscryption,marvel_snap,runeterra	usable	
 mill	6	duelyst,marvel_snap,runeterra	usable	
-movement	494	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
+movement	493	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
 multi_attack	110	duelyst,inscryption,into_the_breach,monster_train,runeterra,sts1	usable	
 multi_target_attack	49	duelyst,faeria,gwent,into_the_breach,runeterra	usable	
 on_ally_play	688	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra	usable	
@@ -90,7 +88,7 @@ piercing	5	monster_train	usable
 ping	394	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra,stormbound,sts1	usable	
 placement_rules	65	duelyst,faeria,gwent,marvel_snap,monster_train	usable	
 polymorph	9	duelyst,faeria,gwent,runeterra	usable	
-positional	217	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,stormbound	usable	
+positional	216	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,stormbound	usable	
 protection	32	gwent,inscryption,sts1	usable	
 quests	8	duelyst	usable	
 ranged	53	duelyst,faeria,into_the_breach	usable	
@@ -100,19 +98,19 @@ repeat_trigger	115	faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,
 resource_gain	128	faeria,gwent,monster_train,runeterra,sts1	usable	
 return_from_board	73	duelyst,gwent,marvel_snap,runeterra,stormbound	usable	
 return_on_leave	76	duelyst,gwent,inscryption,marvel_snap,runeterra	usable	
-revive	100	duelyst,gwent,inscryption,marvel_snap,runeterra,stormbound	usable	
+revive	91	duelyst,gwent,inscryption,marvel_snap,runeterra,stormbound	usable	
 row_effects	35	gwent	usable	
 rule_change	7	gwent,marvel_snap	usable	
-sacrifice	259	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
+sacrifice	257	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
 selection	143	faeria,gwent,inscryption,marvel_snap,runeterra,sts1	usable	
-self_destruct	356	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
+self_destruct	353	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
 self_mill	13	runeterra	usable	
-shield	184	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra	usable	
-silence	86	duelyst,gwent,marvel_snap,monster_train,runeterra,stormbound	usable	
+shield	181	duelyst,faeria,gwent,inscryption,into_the_breach,monster_train,runeterra	usable	
+silence	85	duelyst,gwent,marvel_snap,monster_train,runeterra,stormbound	usable	
 spell_power	220	duelyst,gwent,into_the_breach,marvel_snap,monster_train,runeterra,sts1	usable	
 spells_played_condition	34	duelyst,faeria,runeterra,sts1	usable	
 stacking_keyword	95	monster_train,runeterra	usable	
-stances	38	inscryption,runeterra,sts1	usable	
+stances	35	inscryption,runeterra,sts1	usable	
 stat_condition	72	gwent,runeterra	usable	
 stat_fixed	151	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,runeterra,stormbound	usable	
 stat_gain	59	duelyst,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
@@ -121,12 +119,12 @@ stat_multiply	98	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,rune
 steal	49	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,runeterra,stormbound	usable	
 stealth	24	inscryption,into_the_breach,monster_train,runeterra	usable	
 strikes_with_defence	18	duelyst,faeria,gwent,runeterra	usable	
-summon	752	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
+summon	747	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound	usable	
 swap	41	duelyst,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra	usable	
 taunt	81	duelyst,faeria,gwent	usable	
 temporary_buff	196	duelyst,faeria,into_the_breach,monster_train,runeterra	usable	
 terrain	149	duelyst,faeria,into_the_breach,marvel_snap	usable	
-transform	255	duelyst,faeria,gwent,inscryption,marvel_snap,runeterra,sts1	usable	
+transform	268	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	usable	
 tutor	54	faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,sts1	usable	
 untap	11	duelyst,into_the_breach	usable	
 upgrade	53	monster_train,runeterra,sts1	usable	
@@ -137,7 +135,7 @@ play_restriction	79	duelyst,marvel_snap,monster_train,runeterra,sts1	helper	a th
 drawback	97	duelyst,gwent,inscryption,marvel_snap,monster_train,runeterra,sts1	helper	a thing for single cards (Kaptain)
 exhaust	306	duelyst,gwent,monster_train,sts1	helper	a thing for single cards (Kaptain)
 slots_queue	29	sts1	helper	a thing for single cards (Kaptain)
-target_choice	133	inscryption,runeterra	helper	a thing for single cards (Kaptain)
+target_choice	138	inscryption,runeterra	helper	a thing for single cards (Kaptain)
 area_templates	127	duelyst,faeria,into_the_breach,marvel_snap,stormbound	helper	how a card acts (Claude's)
 kicker	11	gwent	helper	how a card acts (Claude's)
 modal_choice	156	duelyst,faeria,gwent,marvel_snap,monster_train,runeterra,sts1	helper	how a card acts (Kaptain)
@@ -149,7 +147,7 @@ round_passing	14	gwent	helper	one of the game's own things (Claude's)
 rows	425	duelyst,gwent,into_the_breach,stormbound	helper	one of the game's own things (Claude's)
 win_condition	4	runeterra	helper	one of the game's own things (Claude's)
 board_limit	115	inscryption,monster_train,runeterra,sts1	helper	one of the game's own things (Kaptain)
-lanes	562	duelyst,inscryption,into_the_breach,marvel_snap,monster_train,stormbound	helper	one of the game's own things (Kaptain)
+lanes	568	duelyst,inscryption,into_the_breach,marvel_snap,monster_train,stormbound	helper	one of the game's own things (Kaptain)
 on_harvest	10	faeria	helper	one of the game's own things (Kaptain)
 resource_banking	11	gwent	helper	one of the game's own things (Kaptain)
 round_carryover	40	gwent	helper	one of the game's own things (Kaptain)
@@ -161,7 +159,7 @@ turn_start	718	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,mons
 activated	1077	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	when a card acts (Kaptain)
 combat_start	67	monster_train,sts1	helper	when a card acts (Kaptain)
 cooldowns	92	duelyst,faeria,gwent	helper	when a card acts (Kaptain)
-delayed	8	gwent,monster_train,runeterra	helper	when a card acts (Kaptain)
+delayed	6	gwent,monster_train,runeterra	helper	when a card acts (Kaptain)
 on_play	4459	duelyst,faeria,gwent,inscryption,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	when a card acts (Kaptain)
 once_per_game	112	faeria,gwent,inscryption,into_the_breach,marvel_snap,runeterra,sts1	helper	when a card acts (Kaptain)
 passive	2315	duelyst,faeria,gwent,inscryption,into_the_breach,marvel_snap,monster_train,runeterra,stormbound,sts1	helper	when a card acts (Kaptain)

@@ -1,7 +1,8 @@
 # The wheel pipeline: the commands of each step and what each makes
 Commands run from `library/cards_db/` unless they start with `factions/` or `tools/`. The rules of each step are in
 `factions/START_DESIGN-1-wheel.md`; this file says how each result is made. Before anything: `gunzip -kf links.sqlite.gz`.
-After a change to `network.py` or `cards.sqlite`: `PYTHONHASHSEED=0 python3 links.py` (about 6 minutes, after `check_all.py` 14; tell Kaptain and
+After a change to records, `vocab.tsv` or `flat.py`: `python3 check_all.py <any game>` (about 14 minutes; with no game it
+reloads nothing), then `PYTHONHASHSEED=0 python3 links.py` (about 6; after `network.py` alone, links.py only); tell Kaptain and
 wait for his OK; it writes links.sqlite.gz too). A step is redone when what it uses changes. A script marked "to write"
 is written in that step's chat, from the rules of the step, and its line here is then filled in.
 
@@ -30,7 +31,7 @@ is written in that step's chat, from the rules of the step, and its line here is
   `checks`: a good action on an enemy or a bad one on my side for a concept the concept tree puts under helps_me or
   hurts_enemy, a thing put on the enemy side, a trigger of mine firing on the enemy's action, and the rows that match
   what a concept's definition gives to another concept. Fixes go into `flat.py` derive with cases in
-  `cases/mechanics.tsv`. Then `check_all.py` and `links.py`.
+  `cases/mechanics.tsv`. Then `check_all.py <any game>` and `links.py`.
 - Return my unit to hand: `flat.py` derive gives my unit's return its smaller concept by its rows (return_on_leave when
   the ability fires as it dies or leaves play, return_from_board from the board); cases wc40-wc43.
 

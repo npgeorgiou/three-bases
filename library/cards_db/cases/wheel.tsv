@@ -3,7 +3,7 @@ w01	marvel_snap	Ghost Rider	Vibro-Shock Gauntlets	revive	base_resource_gain	none
 w02	marvel_snap	Ghost Rider	Vibro-Shock Gauntlets	revive	resource_gain	none	the same family
 w03	sts1	Ritual Dagger	Nunchaku	on_kill	*	none	Kaptain 15 Nov 2026: Ritual Dagger counts as an Attack, never as "gains when it kills"
 w05	monster_train	Mine Collapse	Kindle	destroy	*	none	Kaptain 15 Nov 2026: the energy links them, not the kill
-w07	duelyst	Erratic Raptyr	Grailmaster	revive	on_ally_play	count	the link is made by a keyword's own effect: the keyword counts
+w07	duelyst	Erratic Raptyr	Grailmaster	cheat_death	on_ally_play	count	the link is made by a keyword's own effect: the keyword counts (Rebirth's Egg at death; hatching is no revive, Kaptain 20 Nov 2026)
 w08	faeria	Boulder Thrower	Blood Obelisk	ranged	other_death_trigger	count	the same family
 w09	gwent	Mage Infiltrator	Thanedd Turncoat	donate	ping	count	the same family
 w10	inscryption	Adder	Raccoon	destroy	other_death_trigger	count	the same family

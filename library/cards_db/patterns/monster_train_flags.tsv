@@ -1,1 +1,4 @@
 card	name	pattern	requires	text
+2000224	Bog Chrysalis	V04	value:summon|copy|summoned|revive|summoned_this_round	shell 5. / hatch: summon 2  #  units.
+2000227	Kinhost Vessel	V04	value:summon|copy|summoned|revive|summoned_this_round	shell 8. / hatch: summon  # .
+2000243	Bogdeep Cocoon	V04	value:summon|copy|summoned|revive|summoned_this_round	shell 12. / hatch: summon  # 

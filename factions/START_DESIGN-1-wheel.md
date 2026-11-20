@@ -110,7 +110,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    right: it stays. Mixed: the script splits the group by one more detail and 5 cards of each half are read (the 4 of 5
    is Claude's). "Return my unit to hand" is split into smaller concepts by what its rows say (from the board, when it
    dies or leaves play, from the discard pile), and the reading gives the rows that lack whose unit or from where.
-   Then `check_all.py` (about 14 minutes) and `links.py` (about 6) are rebuilt, Kaptain's OK first.
+   Then `check_all.py <any game>` (about 14 minutes; with no game it reloads nothing) and `links.py` (about 6) are rebuilt, Kaptain's OK first.
 2. **The usable concepts** (`work/concept_catch.py` -> `work/concepts.tsv`, `work/concepts.md`). Every concept with
    5+ real cards, with its card count (`card_count`) and its games, sorted into three kinds
    (`work/concept_verdicts.tsv`: kind and reason, each marked Kaptain's or Claude's; a concept not in it is usable):

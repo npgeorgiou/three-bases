@@ -96,7 +96,7 @@ sb13	mechanic	cares about frozen units	text:\bfrozen\b	select card from flat_do 
 sb14	mechanic	confuses	text:\bconfuse\b	select card from flat_do where act='give_keyword' and keyword_ref=(select id from card where game='stormbound' and name='Confuse')	stormbound
 sb15	mechanic	cares about confused units	text:\bconfused\b	select card from flat_do where on_with like '%state is confused%' or to_with like '%state is confused%' union select card from flat_if where of_with like '%state is confused%' or ev_obj_with like '%state is confused%' union select card from flat_when where obj_with like '%state is confused%'	stormbound
 sb16	mechanic	disables abilities	text:\bdisable\b	select card from flat_do where act='give_keyword' and keyword_ref=(select id from card where game='stormbound' and name='Disable')	stormbound
-sb17	mechanic	spawns or builds	text:\bspawn|\bbuild\b	select card from flat_do where act in ('summon','revive')	stormbound
+sb17	mechanic	spawns or builds	text:(?<!hatch and )\bspawn|\bbuild\b	select card from flat_do where act in ('summon','revive')	stormbound
 sb18	mechanic	destroys	text:\bdestroys?\b	select card from flat_do where act='kill'	stormbound
 sb19	mechanic	converts enemies	text:\bconvert(?! itself)	select card from flat_do where act='steal'	stormbound
 sb20	mechanic	drains strength	text:\bdrain	select card from flat_do where act='damage'	stormbound
