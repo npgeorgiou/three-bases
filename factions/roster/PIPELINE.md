@@ -67,7 +67,10 @@ is written in that step's chat, from the rules of the step, and its line here is
 ## Step 6. The factions, from what they do
 - `python3 factions/roster/work/kernel_factions.py` (from the repo, about a minute; needs links.sqlite) ->
   `factions/roster/work/kernel_factions.md` (for Kaptain: one sheet per faction, plain names, no numbers),
-  `kernel_factions_check.md` (every number and where each concept came from), `kernel_factions.tsv` (one row per faction: letter, name,
+  `kernel_factions_check.md` (every number and where each concept came from), `kernel_factions_summary.json` (the numbers that compare
+  ways of making them), `kernel_factions.tsv`
+  (`ROSTER_VARIANT=B` or `C` makes the factions another way, into files ending in `_B` or `_C`: B keeps the kernel to
+  the identity's core and reads the answers off what the fill brings; C ranks the fill by fit to the core only) (one row per faction: letter, name,
   what it does, theme, kernel, engines, bricks, concepts, extras, design markers, how it wins, the five board answers,
   partners; read by steps 7-9) and `lists/<letter>.tsv` (rules: `START_DESIGN-1-roster.md` step 6). The identities are
   `IDENTITIES` in its head (name, what it does, concept-tree families) and the themes `THEMES` (theme, the families it

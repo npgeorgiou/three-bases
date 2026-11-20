@@ -41,7 +41,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, '..', '..', '..')
 sys.path.insert(0, HERE)
 OWN, KERNEL, MIN_KERNEL, MIN_LEAN, ENGINES, PLAYED, MIN_DECKS = 12, 6, 4, 10, 4, 1.0, 3  # Claude's
-PER_QUESTION, SYN, FULL, DECK_SHARE, WHOLE_LIST, COMMON = 2, 1 / 3, 8, 2, 30, 15  # real kernel: concepts per question (Kaptain), fits with another kernel concept, times chance that scores 1 (Claude's)
+PER_QUESTION, SYN, FULL, DECK_SHARE, WHOLE_LIST, COMMON = 2, 1 / 3, 8, 2, 30, 15
+# the way the factions are made (ROSTER_VARIANT; files end in _B or _C): A the agreed way; B the kernel stays the
+# identity's core and the answers are read off what the fill brings; C like A, but the fill ranks by fit to the core only
+VARIANT = os.environ.get('ROSTER_VARIANT', 'A'); SUFFIX = '' if VARIANT == 'A' else '_' + VARIANT  # real kernel: concepts per question (Kaptain), fits with another kernel concept, times chance that scores 1 (Claude's)
 DECK_LIFT, HELD, MAX_SHARE, PARTNERS = 1.5, 0.25, 3, 5                              # Claude's; 5 partners: Kaptain
 EXTRAS, TIE = 10, 0.1                                                                # Claude's (8-12, Kaptain); TIE: Kaptain
 IDENTITIES = [  # (name, what it does, families or concepts of the concept tree); Claude's. Waits and Swarms widened by what their decks hold most
@@ -242,7 +245,8 @@ def build():
     for x in fac:
         k = x['kernel']
         x['decks'] = kernel_decks(k); lift = deck_lift(x['decks']); x['lift'] = lift
-        x['fit'] = {c: sum(fit2(c, q) for q in k) / len(k) for c in usable if c not in k}  # how well it goes with the kernel
+        base = x['core'] if VARIANT == 'C' and 'core' in x else k
+        x['fit'] = {c: sum(fit2(c, q) for q in base) / len(base) for c in usable if c not in k}  # how well it goes with the kernel
         x['ranked'] = sorted(x['fit'], key=lambda c: (-x['fit'][c], c))
     took = share(lambda x: x['ranked'], lambda x: OWN - len(x['kernel']), lambda x, c: x['fit'][c])  # one ranked fill
     for x in fac:
@@ -307,11 +311,11 @@ def build():
         x['answers']['cares'] = mine[0] if mine else (pick(x, pool) or '**missing**')
         e = sorted((frozenset((a, b)) for a in x['concepts'] for b in x['concepts'] if a < b and linked(a, b)), key=lambda t: -strong[t][0])
         x['wins'] = x['does'] + ('; ' + ' -> '.join(plain.get(c, c) for c in sorted(e[0])) + f": \"{strong[e[0]][1]}\"" if e else '')
+        if SUFFIX: continue
         os.makedirs(os.path.join(HERE, 'lists'), exist_ok=True)
         with open(os.path.join(HERE, 'lists', x['letter'] + '.tsv'), 'w', encoding='utf-8') as w:
             w.write('concept\tscore\tlevel\tgames\n')
             for k, (sc, lv, gm) in sorted(x['list'].items(), key=lambda t: (-t[1][0], t[0])): w.write(f'{k}\t{sc}\t{lv}\t{gm}\n')
-build()  # first pass: kernels from the identities
 Q5 = ('front', 'backrow', 'lanes', 'holds', 'cares')
 def options(q, P, banned):
     """the ways the concepts P answer question q: one way (1-2 concepts), or two one-concept ways; at most PER_QUESTION"""
@@ -348,96 +352,127 @@ def choose(x, ban):
         if not changed: break
     return cur
 def fits_in(c, k): return sum(fit2(c, o) for o in k if o != c) / max(1, len(k) - 1)
-for x in fac: x['core'] = list(x['kernel'])
-core_of = {x['name']: set(x['core']) for x in fac}
-bans = {x['name']: {q: set() for q in Q5 + ('all',)} for x in fac}
-for _ in range(40):
-    cur = {x['name']: choose(x, bans[x['name']]) for x in fac}
-    kern = {x['name']: set(x['core']).union(*cur[x['name']].values()) for x in fac}
-    moved = False
-    for x in fac:  # (a) every kernel concept goes well with at least one other kernel concept
-        k = kern[x['name']]
-        for c in sorted(k - set(x['core'])):
-            if max(fit2(c, o) for o in k if o != c) < SYN: bans[x['name']]['all'].add(c); moved = True
-    for q in Q5[:-1]:  # (b) no two factions answer a question with the same concept: it stays where it fits best
-        users = collections.defaultdict(list)
-        for n, c in cur.items():
-            for k in c[q] - core_of[n]: users[k].append(n)
-        for k, ns in users.items():
-            for n in sorted(ns, key=lambda n: (-fits_in(k, kern[n]), n))[1:]: bans[n][q].add(k); moved = True
-    count = collections.defaultdict(list)  # (b) no kernel concept in more than MAX_SHARE factions
-    for n, k in kern.items():
-        for c in k: count[c].append(n)
-    for c, ns in count.items():
-        added = sorted((n for n in ns if c not in core_of[n]), key=lambda n: (-fits_in(c, kern[n]), n))
-        for n in added[max(0, MAX_SHARE - (len(ns) - len(added))):]: bans[n]['all'].add(c); moved = True
-    if not moved: break
-first = {x['name']: {'kernel': x['kernel'], 'concepts': x['concepts'], 'extras': x['extras']} for x in fac}
-for x in fac:  # second pass: the real kernel, then everything else again
-    x['by_question'] = cur[x['name']]; x['kernel'] = x['core'] + sorted(kern[x['name']] - set(x['core'])); x['first'] = first[x['name']]
-    x['thin'] = False
-    for k in ('concepts', 'extras', 'from_links', 'from_decks', 'from_both', 'engines'): x.pop(k, None)
-build()
+def read_off(x):
+    """variant B: per question the concepts of the way its answer names"""
+    have = set(x['concepts'] + x['extras']); out = {}
+    for q in Q5:
+        need = next((n for w, n in ways[q] if w == x['answers'].get(q)), [])
+        out[q] = frozenset(a for alt in need for a in alt if a in have)
+    return out
 def holders(c): return sum(c in x['concepts'] + x['extras'] for x in fac)
-for c in sorted((c for c in usable if lean.get(c, 0) >= COMMON and not holders(c)), key=lambda c: -lean[c]):
-    x = max(fac, key=lambda x: (x['fit'].get(c, 0), x['name']))  # a common concept no faction has replaces the weakest extra
-    weak = min(x['extras'], key=lambda o: x['fit'][o]) if x['extras'] else None  # of the faction it fits best, if it fits nearly as well
-    if weak and x['fit'].get(c, 0) >= 0.8 * x['fit'][weak]: x['extras'][x['extras'].index(weak)] = c
-missed = sorted((c for c in usable if lean.get(c, 0) >= MIN_LEAN and not holders(c)), key=lambda c: -lean[c])  # still in no faction
-with open(os.path.join(HERE, 'kernel_factions.tsv'), 'w', encoding='utf-8') as w:
-    w.write('letter\tname\tdoes\ttheme\tkernel\tengines\tbricks\tconcepts\textras\tmarkers\twins\tfront\tbackrow\tlanes\tholds\tcares\tpartners\n')
+
+def run():
+    """step 6 for the roster: the first pass, the real kernels, the second pass, the pages"""
+    global cur, kern, missed
+    build()  # first pass: kernels from the identities
+    for x in fac: x['core'] = list(x['kernel'])
+    core_of = {x['name']: set(x['core']) for x in fac}
+    bans = {x['name']: {q: set() for q in Q5 + ('all',)} for x in fac}
+    for _ in range(40 if VARIANT != 'B' else 0):
+        cur = {x['name']: choose(x, bans[x['name']]) for x in fac}
+        kern = {x['name']: set(x['core']).union(*cur[x['name']].values()) for x in fac}
+        moved = False
+        for x in fac:  # (a) every kernel concept goes well with at least one other kernel concept
+            k = kern[x['name']]
+            for c in sorted(k - set(x['core'])):
+                if max(fit2(c, o) for o in k if o != c) < SYN: bans[x['name']]['all'].add(c); moved = True
+        for q in Q5[:-1]:  # (b) no two factions answer a question with the same concept: it stays where it fits best
+            users = collections.defaultdict(list)
+            for n, c in cur.items():
+                for k in c[q] - core_of[n]: users[k].append(n)
+            for k, ns in users.items():
+                for n in sorted(ns, key=lambda n: (-fits_in(k, kern[n]), n))[1:]: bans[n][q].add(k); moved = True
+        count = collections.defaultdict(list)  # (b) no kernel concept in more than MAX_SHARE factions
+        for n, k in kern.items():
+            for c in k: count[c].append(n)
+        for c, ns in count.items():
+            added = sorted((n for n in ns if c not in core_of[n]), key=lambda n: (-fits_in(c, kern[n]), n))
+            for n in added[max(0, MAX_SHARE - (len(ns) - len(added))):]: bans[n]['all'].add(c); moved = True
+        if not moved: break
+    if VARIANT == 'B':
+        cur = {x['name']: read_off(x) for x in fac}; kern = {x['name']: set(x['core']) for x in fac}
+    first = {x['name']: {'kernel': x['kernel'], 'concepts': x['concepts'], 'extras': x['extras']} for x in fac}
+    for x in fac:  # second pass: the real kernel, then everything else again
+        x['by_question'] = cur[x['name']]; x['kernel'] = x['core'] + sorted(kern[x['name']] - set(x['core'])); x['first'] = first[x['name']]
+        x['thin'] = False
+        for k in ('concepts', 'extras', 'from_links', 'from_decks', 'from_both', 'engines'): x.pop(k, None)
+    build()
+    for c in sorted((c for c in usable if lean.get(c, 0) >= COMMON and not holders(c)), key=lambda c: -lean[c]):
+        x = max(fac, key=lambda x: (x['fit'].get(c, 0), x['name']))  # a common concept no faction has replaces the weakest extra
+        weak = min(x['extras'], key=lambda o: x['fit'][o]) if x['extras'] else None  # of the faction it fits best, if it fits nearly as well
+        if weak and x['fit'].get(c, 0) >= 0.8 * x['fit'][weak]: x['extras'][x['extras'].index(weak)] = c
+    missed = sorted((c for c in usable if lean.get(c, 0) >= MIN_LEAN and not holders(c)), key=lambda c: -lean[c])  # still in no faction
+    with open(os.path.join(HERE, f'kernel_factions{SUFFIX}.tsv'), 'w', encoding='utf-8') as w:
+        w.write('letter\tname\tdoes\ttheme\tkernel\tengines\tbricks\tconcepts\textras\tmarkers\twins\tfront\tbackrow\tlanes\tholds\tcares\tpartners\tby_question\n')
+        for i, x in enumerate(fac):
+            w.write('\t'.join([x['letter'], x['name'], x['does'], x['theme'], ','.join(x['kernel']), ','.join(c for c in x['concepts'] if c in x['engines']),
+                               ','.join(c for c in x['concepts'] if c not in x['engines']), ','.join(x['concepts']), ','.join(x['extras']),
+                               ','.join(f'{k}:{v}' for k, v in x['markers'].items()), x['wins']] + [x['answers'][q] for q in ('front', 'backrow', 'lanes', 'holds', 'cares')]
+                              + [','.join(fac[j]['letter'] for j in partners[i])] + [';'.join(q + ':' + '+'.join(sorted(x['by_question'][q])) for q in Q5)]) + '\n')
+
+    out = ['# The factions from what they do (made by kernel_factions.py)', '',
+           'Kernel: per question (removes the front unit, the back row, acts between lanes, holds a base, cares about), up to '
+           f'{PER_QUESTION} concepts of the first pass that answer it and go best together (cards linked or decks built on both). Engines: concepts real cards link to 2+ kernel concepts. Bricks: '
+           f'what its decks hold {DECK_LIFT:g}x+ as often as their games, with no card link to the kernel. About {OWN} concepts. '
+           f"Partners: its {PARTNERS} strongest pairs (card links between their concepts, plus 3 per kernel concept the other's decks hold "
+           f'{DECK_LIFT:g}x+). A concept more than {MAX_SHARE} factions want at one level goes to the {MAX_SHARE} it fits best.', '']
     for i, x in enumerate(fac):
-        w.write('\t'.join([x['letter'], x['name'], x['does'], x['theme'], ','.join(x['kernel']), ','.join(c for c in x['concepts'] if c in x['engines']),
-                           ','.join(c for c in x['concepts'] if c not in x['engines']), ','.join(x['concepts']), ','.join(x['extras']),
-                           ','.join(f'{k}:{v}' for k, v in x['markers'].items()), x['wins']] + [x['answers'][q] for q in ('front', 'backrow', 'lanes', 'holds', 'cares')]
-                          + [','.join(fac[j]['letter'] for j in partners[i])]) + '\n')
-
-out = ['# The factions from what they do (made by kernel_factions.py)', '',
-       'Kernel: per question (removes the front unit, the back row, acts between lanes, holds a base, cares about), up to '
-       f'{PER_QUESTION} concepts of the first pass that answer it and go best together (cards linked or decks built on both). Engines: concepts real cards link to 2+ kernel concepts. Bricks: '
-       f'what its decks hold {DECK_LIFT:g}x+ as often as their games, with no card link to the kernel. About {OWN} concepts. '
-       f"Partners: its {PARTNERS} strongest pairs (card links between their concepts, plus 3 per kernel concept the other's decks hold "
-       f'{DECK_LIFT:g}x+). A concept more than {MAX_SHARE} factions want at one level goes to the {MAX_SHARE} it fits best.', '']
-for i, x in enumerate(fac):
-    out.append(f"## {x['name']}: {x['does']} ({len(x['decks'])} decks with twice their game's share of kernel cards)")
-    out.append(f"- Kernel (cohesion {cohesion(x['kernel']):.2f}; first pass {', '.join(plain.get(c, c) for c in x['first']['kernel'])}):")
-    for q in Q5:
-        out.append(f"  - {QUESTION[q]}: " + (', '.join(f'{plain.get(c, c)} ({lean.get(c, 0)} decks)' for c in sorted(x['by_question'][q])) or '**none**'))
-    out.append('- From card links:' + ('' if x['from_links'] else ' nothing'))
-    for c in x['from_links']:
-        q, pair = behind(c, x['kernel'])
-        out.append(f"  - {plain[c]} ({sum(wide(c, o) for o in x['kernel'])} kernel links; strongest with {q}: {pair})")
-    out.append('- From decks: ' + ('; '.join(f"{plain.get(c, c)} x{x['lift'][c]:.1f}" for c in x['from_decks']) or 'nothing'))
-    if x['from_both']: out.append('- From decks and card links: ' + '; '.join(f"{plain.get(c, c)} x{x['lift'][c]:.1f}" for c in x['from_both']))
-    out.append(f"- {len(x['concepts'])} concepts. Engines: " + ('; '.join(plain.get(c, c) for c in x['engines']) or '**none: no engine pair**')
-               + '. Bricks: ' + ('; '.join(plain.get(c, c) for c in x['concepts'] if c not in x['engines']) or 'none'))
-    out.append(f"- Theme: {x['theme']}. Design markers: " + ('; '.join(f"{D['markers'][k]} x{v}" for k, v in x['markers'].items()) or 'none'))
-    out.append(f"- Extras ({len(x['extras'])}): " + '; '.join(f"{plain.get(c, c)} {x['list'][c][0]:g}" for c in x['extras']))
-    out.append(f"- How it wins: {x['wins']}")
-    for q in ('front', 'backrow', 'lanes', 'holds', 'cares'):
-        out.append(f"- {QUESTION[q]}: {x['answers'][q]}")
-    out.append(f'- Partners (its {PARTNERS} strongest; * = it is in their {PARTNERS} too):')
-    for j in partners[i]:
-        st, how = strengths[(i, j)]
-        out.append(f"  - {fac[j]['name']}{' *' if i in partners[j] else ''} ({st}): {how}")
+        out.append(f"## {x['name']}: {x['does']} ({len(x['decks'])} decks with twice their game's share of kernel cards)")
+        out.append(f"- Kernel (cohesion {cohesion(x['kernel']):.2f}; first pass {', '.join(plain.get(c, c) for c in x['first']['kernel'])}):")
+        for q in Q5:
+            out.append(f"  - {QUESTION[q]}: " + (', '.join(f'{plain.get(c, c)} ({lean.get(c, 0)} decks)' for c in sorted(x['by_question'][q])) or '**none**'))
+        out.append('- From card links:' + ('' if x['from_links'] else ' nothing'))
+        for c in x['from_links']:
+            q, pair = behind(c, x['kernel'])
+            out.append(f"  - {plain[c]} ({sum(wide(c, o) for o in x['kernel'])} kernel links; strongest with {q}: {pair})")
+        out.append('- From decks: ' + ('; '.join(f"{plain.get(c, c)} x{x['lift'][c]:.1f}" for c in x['from_decks']) or 'nothing'))
+        if x['from_both']: out.append('- From decks and card links: ' + '; '.join(f"{plain.get(c, c)} x{x['lift'][c]:.1f}" for c in x['from_both']))
+        out.append(f"- {len(x['concepts'])} concepts. Engines: " + ('; '.join(plain.get(c, c) for c in x['engines']) or '**none: no engine pair**')
+                   + '. Bricks: ' + ('; '.join(plain.get(c, c) for c in x['concepts'] if c not in x['engines']) or 'none'))
+        out.append(f"- Theme: {x['theme']}. Design markers: " + ('; '.join(f"{D['markers'][k]} x{v}" for k, v in x['markers'].items()) or 'none'))
+        out.append(f"- Extras ({len(x['extras'])}): " + '; '.join(f"{plain.get(c, c)} {x['list'][c][0]:g}" for c in x['extras']))
+        out.append(f"- How it wins: {x['wins']}")
+        for q in ('front', 'backrow', 'lanes', 'holds', 'cares'):
+            out.append(f"- {QUESTION[q]}: {x['answers'][q]}")
+        out.append(f'- Partners (its {PARTNERS} strongest; * = it is in their {PARTNERS} too):')
+        for j in partners[i]:
+            st, how = strengths[(i, j)]
+            out.append(f"  - {fac[j]['name']}{' *' if i in partners[j] else ''} ({st}): {how}")
+        out.append('')
+    out.append('## Concepts 10+ decks are built on that no faction has')
+    out += [f'- {plain.get(c, c)} ({lean[c]} decks)' for c in missed] or ['- none']
     out.append('')
-out.append('## Concepts 10+ decks are built on that no faction has')
-out += [f'- {plain.get(c, c)} ({lean[c]} decks)' for c in missed] or ['- none']
-out.append('')
-out.append('## Every pair')
-out += pairs
-text = '\n'.join(out) + '\n'
-open(os.path.join(HERE, 'kernel_factions_check.md'), 'w', encoding='utf-8').write(text)  # every number, for checking
+    out.append('## Every pair')
+    out += pairs
+    text = '\n'.join(out) + '\n'
+    open(os.path.join(HERE, f'kernel_factions{SUFFIX}_check.md'), 'w', encoding='utf-8').write(text)  # every number, for checking
 
-nm = lambda cs: ', '.join(plain.get(c, c) for c in cs)  # the page for Kaptain: one faction sheet each, no numbers
-page = ['# The factions', '', f'**The world:** {WORLD}.', '']
-for i, x in enumerate(fac):
-    page += [f"## {x['name']}", '', f"**What it does:** {x['does']}.", '', f"**Who they are:** {x['theme']}.", '',
-             f"**Kernel:** {nm(x['kernel'])}", '', '**Answers:**', '']
-    for q in Q5:
-        page.append(f"- **{QUESTION[q].capitalize()}:** " + (nm(sorted(x['by_question'][q])) or 'none yet'))
-    rest = [c for c in x['concepts'] if c not in x['kernel']]
-    page += ['', f"**Also plays:** {nm(rest)}", '', f"**Extras:** {nm(x['extras'])}", '',
-             f"**Partners:** {nm(fac[j]['name'] for j in partners[i])}", '']
-if missed: page += ['## In no faction yet', '', nm(missed[:20]), '']
-open(os.path.join(HERE, 'kernel_factions.md'), 'w', encoding='utf-8').write('\n'.join(page) + '\n')
+    nm = lambda cs: ', '.join(plain.get(c, c) for c in cs)  # the page for Kaptain: one faction sheet each, no numbers
+    page = ['# The factions', '', f'**The world:** {WORLD}.', '']
+    for i, x in enumerate(fac):
+        page += [f"## {x['name']}", '', f"**What it does:** {x['does']}.", '', f"**Who they are:** {x['theme']}.", '',
+                 f"**Kernel:** {nm(x['kernel'])}", '', '**Answers:**', '']
+        for q in Q5:
+            page.append(f"- **{QUESTION[q].capitalize()}:** " + (nm(sorted(x['by_question'][q])) or 'none yet'))
+        rest = [c for c in x['concepts'] if c not in x['kernel']]
+        page += ['', f"**Also plays:** {nm(rest)}", '', f"**Extras:** {nm(x['extras'])}", '',
+                 f"**Partners:** {nm(fac[j]['name'] for j in partners[i])}", '']
+    if missed: page += ['## In no faction yet', '', nm(missed[:20]), '']
+    open(os.path.join(HERE, f'kernel_factions{SUFFIX}.md'), 'w', encoding='utf-8').write('\n'.join(page) + '\n')
+    allc = {x['name']: set(x['concepts'] + x['extras']) for x in fac}
+    jac = [len(allc[a['name']] & allc[b['name']]) / len(allc[a['name']] | allc[b['name']]) for i, a in enumerate(fac) for b in fac[i + 1:]]
+    summary = {'variant': VARIANT,
+               'kernel cohesion': round(sum(cohesion(x['kernel']) for x in fac) / len(fac), 3),
+               'whole cohesion': round(sum(cohesion(allc[x['name']]) for x in fac) / len(fac), 3),
+               'questions answered': sum(bool(x['by_question'][q]) for x in fac for q in Q5),
+               'answers from rare concepts': sum(any(lean.get(c, 0) < MIN_LEAN for c in x['by_question'][q]) for x in fac for q in Q5),
+               'common concepts placed': sum(1 for c in usable if lean.get(c, 0) >= COMMON and holders(c)),
+               'common concepts': sum(1 for c in usable if lean.get(c, 0) >= COMMON),
+               'overlap mean': round(sum(jac) / len(jac), 3), 'overlap max': round(max(jac), 3),
+               'kernel size': [len(x['kernel']) for x in fac]}
+    json.dump(summary, open(os.path.join(HERE, f'kernel_factions{SUFFIX}_summary.json'), 'w'))
+
+
+
+if __name__ == '__main__':
+    run()
