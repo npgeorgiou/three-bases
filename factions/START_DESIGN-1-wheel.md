@@ -65,7 +65,9 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 - A concept needs 5+ real cards in the library (all games together).
 - Scripts, no reading agents. Card texts are read only where a card's rows can't answer: at most 500 cards for the
   whole wheel, by a low-cost model, within the budget Kaptain gives each time; logged in `factions/read-cards.tsv`,
-  never read twice.
+  never read twice. A reading agent is told its budget and every card already in `read-cards.tsv`, and never runs a
+  command that prints the texts of cards it did not name (a search over texts): such a search spent 10 texts at once
+  on 20 Nov 2026.
 - A faction is built at two levels: its engines come from card links (how its cards work through each other), its
   bricks from what its decks play (what goes with it although no card links them: removal, protection). Neither alone
   makes a faction.
