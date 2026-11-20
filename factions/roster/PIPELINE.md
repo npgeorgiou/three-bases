@@ -77,8 +77,8 @@ is written in that step's chat, from the rules of the step, and its line here is
   real-world model, the headings it favours in a tie); all Claude's. It reads `work/deck_scores.json`,
   `library/cards_db/roster/concept_links.tsv`, `library/concept_tree.txt`, `work/concepts.tsv` and
   `work/answer_concepts.tsv`.
-- `python3 ../../factions/roster/work/concept_list.py` (from `library/cards_db`) -> `factions/roster/work/lists/<letter>.tsv`
-  for every faction of `kernel_factions.tsv`: every concept with 5+ cards except the faction's own concepts, its score
+- `factions/roster/work/concept_list.py` (its `Library`, used by `kernel_factions.py`) makes each faction's list,
+  `work/lists/<letter>.tsv`: every concept with 5+ cards except the faction's own concepts, its score
   ((real + 1) / (chance + 1) links with the faction's concepts per game, averaged over the games where both appear), its
   `level` and its games, sorted by score. Its `Library` scores any set of concepts in about a second.
 - `factions/roster/work/answer_concepts.tsv` (agreed with Kaptain): per answer its ways (answer, the way in plain words,

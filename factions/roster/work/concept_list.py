@@ -4,8 +4,7 @@ concept's instances and the instances of the faction's concepts (the faction's c
 the links chance alone gives there (the same count as concept_tags.pair_links); the game's score = (real + 1) / (chance + 1); the
 score = the average over the games where the concept and the faction's concepts both appear. Beside it: the level
 (roster_links.level of the linked card pairs) and in how many games real cards link them.
-Usage (from library/cards_db): python3 ../../factions/roster/work/concept_list.py -> factions/roster/work/lists/<letter>.tsv
-for every faction of factions/roster/work/kernel_factions.tsv; kernel_factions.py imports Library and writes the same lists."""
+kernel_factions.py imports Library and writes each faction's list to factions/roster/work/lists/<letter>.tsv."""
 import collections, csv, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -83,21 +82,3 @@ class Library:
                 per[k].append((obs[k] + 1) / (exp + 1))
                 plain[k] += linked_pairs[k]; seen[k] += bool(linked_pairs[k])
         return {k: (round(sum(v) / len(v), 3), roster_links.level(plain[k]), seen[k]) for k, v in per.items()}
-
-
-def main():
-    lib = Library()
-    out = os.path.join(HERE, 'lists'); os.makedirs(out, exist_ok=True)
-    with open(os.path.join(HERE, 'kernel_factions.tsv'), encoding='utf-8') as f:
-        for r in csv.DictReader(f, delimiter='\t'):
-            own = r['concepts'].split(',')
-            sc = lib.scores(own)
-            with open(os.path.join(out, r['letter'] + '.tsv'), 'w', encoding='utf-8') as w:
-                w.write('concept\tscore\tlevel\tgames\n')
-                for k, (s, lv, gm) in sorted(sc.items(), key=lambda t: (-t[1][0], t[0])):
-                    w.write(f'{k}\t{s}\t{lv}\t{gm}\n')
-    print('lists written:', out)
-
-
-if __name__ == '__main__':
-    main()
