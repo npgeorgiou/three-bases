@@ -1,6 +1,6 @@
 # Step 3: the ways to play that decks lean on (made by deck_groups_nmf.py)
 
-- 3027 decks of 10 games, 136 concepts, 17 groups (set by hand)
+- 3027 decks of 10 games, 136 concepts, 17 groups (the number the stability check chose; this run takes it as given)
 - "Not on the map": a concept more than half of the groups hold, or a unit measure; the map and steps 5-6 leave it out
 - Design markers: what its decks are like; x2 = twice as often as their games' decks
 

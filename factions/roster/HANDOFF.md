@@ -1,5 +1,5 @@
-# The wheel: where we are
-Read this, then `factions/START_DESIGN-1-wheel.md` (the steps, their rules and the stops), then only the step you are
+# The roster: where we are
+Read this, then `factions/START_DESIGN-1-roster.md` (the steps, their rules and the stops), then only the step you are
 on. Clone with the library (`git sparse-checkout disable`); `gunzip -kf links.sqlite.gz` in `library/cards_db`.
 One chat does one step; at its end, mark the step done here and say what it left for the next.
 
@@ -9,8 +9,8 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 1. Fix the library's concepts | done | `cards.sqlite`, `links.sqlite` |
 | 2. The usable concepts | done: 131 usable, 44 helper, 33 out | `work/concepts.tsv`, `.md` |
 | 3. What decks play together | done: 3027 decks of 10 games, 17 groups | `work/deck_groups_nmf_17.*` |
-| 4. The links between concepts | done: 15745 concept pairs | `library/cards_db/wheel/concept_links.tsv` |
-| 5. The map of what decks play together | done (a page only) | `factions/wheel-archetypes.html` |
+| 4. The links between concepts | done: 15745 concept pairs | `library/cards_db/roster/concept_links.tsv` |
+| 5. The map of what decks play together | done (a page only) | `factions/roster-map.html` |
 | 6. The factions, from what they do | the 10 of the trial are made, 8-12 concepts each; Kaptain agrees them | `work/kernel_factions.md`, `.tsv`, `work/lists/` |
 | 7. Combos on this board | to do | |
 | 8. Game plan, then keywords | to do | |
@@ -31,7 +31,7 @@ One chat does one step; at its end, mark the step done here and say what it left
 ## What the next steps find in the files
 - Runeterra's spell mana rule is written (`read/runeterra/game_rules.jsonl`) but not built into `cards.sqlite` yet.
 - `work/concept_list.py`: `concept_list.Library` scores a set of concepts in under a second.
-- The faction check and `tools/wheel_table_check.py` are written when step 9 and Stop 3 need them.
+- The faction check and `tools/roster_table_check.py` are written when step 9 and Stop 3 need them.
 - `work/make_stop1.py` (step 9) reads files of an earlier way of working; step 9 rewrites it to read
   `work/kernel_factions.tsv`.
 
@@ -39,7 +39,7 @@ One chat does one step; at its end, mark the step done here and say what it left
 - After a change to records, `vocab.tsv` or `flat.py`: `python3 check_all.py <any game>` (about 14 minutes; with no
   game it reloads nothing), then `PYTHONHASHSEED=0 python3 links.py` (about 6); tell Kaptain and wait for his OK.
 - A link counts for two concepts only through what of each card made it (Ghost Rider brings a card back, Vibro-Shock
-  Gauntlets give it +2 Power: revive with +2 Power, never revive with supply). Cases: `cases/wheel.tsv`.
+  Gauntlets give it +2 Power: revive with +2 Power, never revive with supply). Cases: `cases/roster.tsv`.
 - Two concepts you expect to work together show 0 links: check that one pair by script before trusting it.
 - A link seen in one game only can be an accident: of 10 such card pairs read, 8 did not work together.
 
@@ -61,12 +61,12 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
 - No "2+ games" rule for a kernel: "we dont have many moving games, and my game is a moving game" (20 Nov 2026).
 - Claude does the bulk of the work (thin kernels are widened by Claude), "so we have something that more or less
   works" (20 Nov 2026).
-- Step 3 is "what gets played together" (20 Nov 2026); the wheel keeps 17 groups (19 Nov 2026).
+- Step 3 is "what gets played together" (20 Nov 2026); the roster keeps 17 groups (19 Nov 2026).
 - Hatching from an egg is NOT a summon (20 Nov 2026).
 - Two factions share at most half of their own concepts; every faction keeps a blind spot (18 Nov 2026). One idea per
   faction, no fruit salad.
 - Kaptain's list holds deck archetypes, what a deck tries to do; a reference only. Combo, Control-Combo and Extra Turns
-  are off the list (other archetypes make their own combos); Cycling is part of Wheels (18 Nov 2026). Discard / 8-Rack
+  are off the list (other archetypes make their own combos); Cycling is part of Rosters (18 Nov 2026). Discard / 8-Rack
   stays on it although real cards don't link its two parts: future improved games will beef it up (17 Nov 2026).
 - Cards tagged with the wrong concept are examined and fixed; "Return my unit to hand" is split into smaller concepts
   (18 Nov 2026). Its theme is picked right after its concepts and breaks ties between concepts that score about the
@@ -83,12 +83,12 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
   Ranged), strikes and fixed damage, the hand and the discard pile, Immobile.
 - Not in the game: player health, answers on the enemy's turn, supply that grows by itself, unit types, who acts first
   (random in round 1, then alternating), placing at round end.
-- The wheel is general; step 8 turns each faction's concepts into these own things, from scratch.
+- The roster is general; step 8 turns each faction's concepts into these own things, from scratch.
 - Every game counts the same in every number, games with no factions (Marvel Snap) too.
 - Only general ideas; anything specific to one game (planeswalkers) is off. Triggers and conditions are how cards
   work, not what a faction is; real factions inspire, they are never copied (17 Nov 2026).
-- Real factions' shapes vary inside each game: the wheel is lax about a faction's shape (17 Nov 2026).
-- Interactions with the player (heal, Block, strength on the player; the player hurt) stay out of the wheel: no player
+- Real factions' shapes vary inside each game: the roster is lax about a faction's shape (17 Nov 2026).
+- Interactions with the player (heal, Block, strength on the player; the player hurt) stay out of the roster: no player
   health here. They stay in the library as player_<concept>.
 - A faction is built from a game plan played out cell by cell and its keywords. The keywords are the backbone, not all
   100 cards: 3 ways to play are built around them. One idea is never the
@@ -107,6 +107,6 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
 - First strike stays out: it does not belong to our game rules (19 Nov 2026).
 - A lane never holds more than 12 supply (summary/05).
 - Reading cards for one faction's chat: at most 100 (its steps 6 and 7), logged in `factions/read-cards.tsv`, never
-  read twice. The wheel reads at most 500 cards in all, by a low-cost model, only where a card's rows can't answer.
+  read twice. The roster reads at most 500 cards in all, by a low-cost model, only where a card's rows can't answer.
 - The check script fails on words that break the game's rules ("move first", "strikes first", "placed at round end").
 - Keep chats short, scripts first.

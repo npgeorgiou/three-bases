@@ -10,5 +10,5 @@ described in section 6, supply and carry-over in section 5; their values in the 
 - Carry-over: Supply you keep between rounds. At round end your unspent lane supply is added to it, up to 5 in total; you can spend it in any lane.
 - Strike: A hit with a unit's strength: its attacks, and strikes with its strength from an ability or a spell. A melee unit strikes only what it could attack. Fixed amounts from abilities and spells are damage dealt, not strikes.
 
-Keywords are shared by the factions, and every faction has at least 1 of its own (factions/wheel/HANDOFF.md); they are made
+Keywords are shared by the factions, and every faction has at least 1 of its own (factions/roster/HANDOFF.md); they are made
 new for the 20 factions.

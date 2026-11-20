@@ -1,8 +1,8 @@
-# The wheel chat: 20 factions designed together, with their combos
+# The roster chat: 20 factions designed together, with their combos
 
-Read `factions/START_DESIGN.md` and its parts 2-4 whole first, then `factions/wheel/HANDOFF.md` (which step is next,
-Kaptain's standing decisions) and this file. Commands of every step: `factions/wheel/PIPELINE.md`. Library commands run
-from `library/cards_db/`; first `gunzip -kf links.sqlite.gz` there. The wheel writes no cards, no stats and no game code.
+Read `factions/START_DESIGN.md` and its parts 2-4 whole first, then `factions/roster/HANDOFF.md` (which step is next,
+Kaptain's standing decisions) and this file. Commands of every step: `factions/roster/PIPELINE.md`. Library commands run
+from `library/cards_db/`; first `gunzip -kf links.sqlite.gz` there. The roster writes no cards, no stats and no game code.
 
 Three Bases is a game of combos: decks mix 2 factions, and every faction combines well with at least 7 others (its
 partners). Every
@@ -42,8 +42,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   "makes your units die: the other card brings them back (in 7 of 10 games, 3.1 times chance)".
 - **Design marker**: what a group of decks is like as a whole, read from their cards' type, cost, stats and text
   against their game's decks ("many spells", "cheap units", "low curve"; step 3). Never a concept.
-- **Deck archetype**: what one deck tries to do, from Kaptain's list (`wheel/archetypes_kaptain.txt`,
-  `wheel/deck_archetypes.tsv`: Madness, Storm, Reanimator...). A reference only: factions, partners and combos are
+- **Deck archetype**: what one deck tries to do, from Kaptain's list (`roster/archetypes_kaptain.txt`,
+  `roster/deck_archetypes.tsv`: Madness, Storm, Reanimator...). A reference only: factions, partners and combos are
   never built from it.
 - **Keyword** (in industry words, a mechanic): a word on many cards that stands for one rule (Magic's Exploit,
   Hearthstone's Overload).
@@ -64,7 +64,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   games is never lost.
 - A concept needs 5+ real cards in the library (all games together).
 - Scripts, no reading agents. Card texts are read only where a card's rows can't answer: at most 500 cards for the
-  whole wheel, by a low-cost model, within the budget Kaptain gives each time; logged in `factions/read-cards.tsv`,
+  whole roster, by a low-cost model, within the budget Kaptain gives each time; logged in `factions/read-cards.tsv`,
   never read twice. A reading agent is told its budget and every card already in `read-cards.tsv`, and never runs a
   command that prints the texts of cards it did not name (a search over texts): such a search spent 10 texts at once
   on 20 Nov 2026.
@@ -88,7 +88,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   one mixed deck shows whether the combo fires. **Stop 4: Kaptain decides whether the rest is built.**
 
 ## Steps 1-9, in this order (each uses only what the steps before made)
-1. **Fix the library's concepts.** The suspects: every concept counted only in some games (`wheel/work/suspects.tsv`),
+1. **Fix the library's concepts.** The suspects: every concept counted only in some games (`roster/work/suspects.tsv`),
    and every concept whose cards link to quite different concepts in one game than in the others (by script). For
    each: if its cards in the other games do something else, split the concept by what the rows already say (on a unit
    on the board or on a card in hand; on an enemy or on my own unit; on the player or on a unit; the main supply or a
@@ -144,7 +144,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       scores; each game weighs the square root of its deck count. The first guess comes from the data (NNDSVD), so one run gives the
       result. The number of groups, from 14 to 30 (Claude's),
       is the one whose groups stay most alike when the run is repeated on 90% of the decks, 10 times (Claude's). A deck
-      fits a group that is at least 30% of its mix (Claude's). The wheel keeps the version with 17 groups
+      fits a group that is at least 30% of its mix (Claude's). The roster keeps the version with 17 groups
       (`--groups 17`, the most stable number on the 3027 decks, 0.96; Kaptain's, 19 Nov 2026).
    4. Per group: its 10 heaviest concepts, each with the share of its decks that lean on it; its base concepts (more
       than half of its decks have them, more often than their game's decks, Claude's), like "Deal damage"; its unit
@@ -166,15 +166,15 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       is at least twice its game's average (Claude's). The groups no faction fits, the factions that fit no group and
       the concepts in no group are listed.
    `work/make_faction.py "<concept>" ["<concept>"]` shows what the decks that lean on one or two concepts play (its
-   header says how): a quick look, never a faction of the wheel.
-4. **The links between concepts** (`mechanics_wheel.py links --concepts` -> `wheel/concept_links.tsv`). For every two
+   header says how): a quick look, never a faction of the roster.
+4. **The links between concepts** (`roster_links.py links --concepts` -> `roster/concept_links.tsv`). For every two
    concepts of `work/concepts.tsv` (usable, helpers and out): `cards` = how much more often than chance their cards are
    linked, counted only through what of each card made the link; `decks` = how much more often real decks heavy in one
    hold the other; `games` = in how many games real cards link them; `level` = the linked pairs as the slow level; `rare` for a pair chance gives under 5 linked pairs in every game (all linked pairs over all chance);
    `makes` (the share of the pair's links where a's card sets off or feeds b's card); the three most common link
    texts. Joined: `cards` 1.2+, or `decks` 1.5+, or `rare` 3+ with a `level` of 1+. `apart.py` lists the concept pairs
    real factions keep apart.
-5. **The map of what decks play together** (`work/archetype_map.py` -> `factions/wheel-archetypes.html`, with
+5. **The map of what decks play together** (`work/archetype_map.py` -> `factions/roster-map.html`, with
    `work/archetype_parts.tsv`, `work/archetype_map.tsv` and `work/archetype_gaps.tsv`): a page for Kaptain to look at;
    no later step reads it. Every concept of step 3 is a node at a fixed place, laid out once from the 17 groups of real
    decks: two concepts sit close when the same groups' decks lean on them more than all decks do (t-SNE, seeded;
@@ -242,8 +242,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 7. **Combos on this board.** For every two partners, Claude rates the combo with numbers on the board: STRONG (both
    halves on many cards, helps take or hold a base, the enemy's one action between can't easily stop it), OK (real but
    breakable), WEAK, NONE, AGAINST. Partners = STRONG or OK; every faction has 7+ (5 among 10); one short goes back to
-   step 6.10. `wheel/combos.tsv` (pair, rating, how it plays, the numbers, a test column that playtests fill).
-8. **Game plan, then keywords** (`wheel/plans.tsv`, `wheel/keywords.tsv`).
+   step 6.10. `roster/combos.tsv` (pair, rating, how it plays, the numbers, a test column that playtests fill).
+8. **Game plan, then keywords** (`roster/plans.tsv`, `roster/keywords.tsv`).
    1. Each faction's game plan: how it takes and holds 2 bases over a few turns with its synergies, walked through on
       the board (which cell, what happens, what the enemy does with his one action between).
    2. The keywords of all 20 factions are made together, as one pool, on this game's own things (dots and front cells,
@@ -260,7 +260,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       with other numbers); Kaptain judges.
 9. **Stop 1** for all 20: the seven answers made final from the game plan and keywords (every answer but which of the
    game's own things it cares about most differs from every other faction's; the blind spot is named from what none of
-   its concepts and extras give, "never draws cards"), the check script (`tools/wheel_table_check.py`:
+   its concepts and extras give, "never draws cards"), the check script (`tools/roster_table_check.py`:
    against each faction's concepts, extras and answers) and the Stop 1 pages (`work/make_stop1.py` ->
-   `wheel/STOP1*.md`: per faction its identity, concepts and synergies, theme, game plan, keywords, the seven answers,
+   `roster/STOP1*.md`: per faction its identity, concepts and synergies, theme, game plan, keywords, the seven answers,
    and one line per partner saying how the combo plays). Files under 150 lines.

@@ -1,16 +1,16 @@
-"""The wheel's link counts (factions/START_DESIGN-1-wheel.md step 4): for every two concepts of
-factions/wheel/work/concepts.tsv (usable, helpers and out), how much more often than chance their cards are linked (cards), how much more often real decks heavy in one hold the other (decks), in how many games
+"""The roster's link counts (factions/START_DESIGN-1-roster.md step 4): for every two concepts of
+factions/roster/work/concepts.tsv (usable, helpers and out), how much more often than chance their cards are linked (cards), how much more often real decks heavy in one hold the other (decks), in how many games
 real cards link them (games), and the linked card pairs as a level that grows slowly (level, Kaptain: a pairing rare in the
 ten games can be splendid on this board); a link counts only through what of each card made it
 (concept_tags.pair_links). Needs links.sqlite (links.py). Also
 rare (for a pair chance gives under 5 linked pairs in every game: all linked pairs over all chance), which one makes and which one uses (makes: the share of the pair's links where a's card is the one that sets off or feeds
 b's card) and the three most common link texts.
-Usage (from library/cards_db): mechanics_wheel.py links --concepts -> wheel/concept_links.tsv, then cases/wheel.tsv"""
+Usage (from library/cards_db): roster_links.py links --concepts -> roster/concept_links.tsv, then cases/roster.tsv"""
 import collections, csv, math, os, sqlite3, sys
 import concept_tags, faction_asks, deck_analysis
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(HERE, 'wheel')
+OUT = os.path.join(HERE, 'roster')
 
 
 def setup():
@@ -22,11 +22,11 @@ def setup():
 
 
 def case_failures(c, con, keys, pairs):
-    """cases/wheel.tsv: a linked pair that must (count) or must not (none) count for key a on card from and b on card to
+    """cases/roster.tsv: a linked pair that must (count) or must not (none) count for key a on card from and b on card to
     ('*': any); a case naming no concept of concepts.tsv fails"""
     names = [k[0] for k in keys]
     bad = []
-    with open(os.path.join(HERE, 'cases', 'wheel.tsv'), encoding='utf-8') as f:
+    with open(os.path.join(HERE, 'cases', 'roster.tsv'), encoding='utf-8') as f:
         for r in csv.DictReader(f, delimiter='\t'):
             gone = [k for k in (r['a'], r['b']) if k != '*' and k not in names]
             if gone: bad.append(f"{r['id']}: {', '.join(gone)} is no concept of concepts.tsv"); continue
@@ -70,7 +70,7 @@ def links(ckeys, c, games, x, con, pools):
                 ab, ba = made[(a, b)], made[(b, a)]
                 row += f"\t{pooled.get((a, b), '')}\t{round(ab / (ab + ba), 2) if ab + ba else ''}\t{' | '.join(x for x, _ in texts[t].most_common(3))}"
                 f.write(row + '\n')
-    print('cases/wheel.tsv: ' + ('all pass' if not bad else f'{len(bad)} fail\n' + '\n'.join(bad)))
+    print('cases/roster.tsv: ' + ('all pass' if not bad else f'{len(bad)} fail\n' + '\n'.join(bad)))
 
 
 def directed(c, con, keys):
@@ -88,7 +88,7 @@ def directed(c, con, keys):
 
 def concepts(con):
     """every concept of concepts.tsv as a key (name, _, _, _, {name})"""
-    with open(os.path.join(HERE, '..', '..', 'factions', 'wheel', 'work', 'concepts.tsv'), encoding='utf-8') as f:
+    with open(os.path.join(HERE, '..', '..', 'factions', 'roster', 'work', 'concepts.tsv'), encoding='utf-8') as f:
         names = [r['concept'] for r in csv.DictReader(f, delimiter='\t')]
     return [(n, 0, '', n, {n}) for n in names]
 
@@ -99,6 +99,6 @@ def level(links):
 
 
 if __name__ == '__main__':
-    if sys.argv[1:] != ['links', '--concepts']: sys.exit('usage: mechanics_wheel.py links --concepts')
+    if sys.argv[1:] != ['links', '--concepts']: sys.exit('usage: roster_links.py links --concepts')
     ctx = setup()
     links(concepts(ctx[3]), *ctx[:4], ctx[4])

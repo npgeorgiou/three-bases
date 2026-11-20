@@ -1,17 +1,17 @@
-"""A faction's list (factions/START_DESIGN-1-wheel.md step 6.4): every concept with 5+ cards (usable, helpers and out) except
+"""A faction's list (factions/START_DESIGN-1-roster.md step 6.4): every concept with 5+ cards (usable, helpers and out) except
 the faction's own concepts, with its score for how strongly it links with them. In each game alone: real links between the
 concept's instances and the instances of the faction's concepts (the faction's concepts counted together as one key), against
 the links chance alone gives there (the same count as concept_tags.pair_links); the game's score = (real + 1) / (chance + 1); the
 score = the average over the games where the concept and the faction's concepts both appear. Beside it: the level
-(mechanics_wheel.level of the linked card pairs) and in how many games real cards link them.
-Usage (from library/cards_db): python3 ../../factions/wheel/work/concept_list.py -> factions/wheel/work/lists/<letter>.tsv
-for every faction of factions/wheel/work/kernel_factions.tsv; kernel_factions.py imports Library and writes the same lists."""
+(roster_links.level of the linked card pairs) and in how many games real cards link them.
+Usage (from library/cards_db): python3 ../../factions/roster/work/concept_list.py -> factions/roster/work/lists/<letter>.tsv
+for every faction of factions/roster/work/kernel_factions.tsv; kernel_factions.py imports Library and writes the same lists."""
 import collections, csv, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(HERE, '..', '..', '..', 'library', 'cards_db')
 sys.path.insert(0, DB)
-import concept_tags, mechanics_wheel  # noqa: E402
+import concept_tags, roster_links  # noqa: E402
 
 
 def concept_rows():
@@ -25,11 +25,11 @@ class Library:
 
     def __init__(self):
         cwd = os.getcwd(); os.chdir(DB)
-        c, games, x, con, pools, _ = mechanics_wheel.setup()
+        c, games, x, con, pools, _ = roster_links.setup()
         os.chdir(cwd)
         rows = concept_rows()
         self.listed = [r['concept'] for r in rows if int(r['card_count']) >= 5]
-        keys = mechanics_wheel.concepts(con)
+        keys = roster_links.concepts(con)
         pairs = concept_tags.link_pairs()
         self.games = {}
         for g in games:
@@ -82,7 +82,7 @@ class Library:
                 exp = (n[k] * nf - both) * dens * share.get(k, 0) * sf
                 per[k].append((obs[k] + 1) / (exp + 1))
                 plain[k] += linked_pairs[k]; seen[k] += bool(linked_pairs[k])
-        return {k: (round(sum(v) / len(v), 3), mechanics_wheel.level(plain[k]), seen[k]) for k, v in per.items()}
+        return {k: (round(sum(v) / len(v), 3), roster_links.level(plain[k]), seen[k]) for k, v in per.items()}
 
 
 def main():

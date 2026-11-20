@@ -364,7 +364,7 @@ def derive(c):
     c.execute("update flat_do set concept=null where act in ('move','swap') and concept in ('movement','forced_movement') and "
               "(coalesce(on_kind,'') in ('card','keyword','spell') or coalesce(eff_zone,'board')!='board')")
     c.execute("update flat_do set concept='level_up' where act='level_up'")
-    # a thing made for the enemy (Kaptain 18 Nov 2026, wheel tag check): a copy put into the enemy's deck or hand is given to the
+    # a thing made for the enemy (Kaptain 18 Nov 2026, roster tag check): a copy put into the enemy's deck or hand is given to the
     # opponent (drawback); a unit summoned onto the enemy's side clogs it (board_clog); a cost raised is cost_increase on the
     # enemy, a drawback on mine and no concept of its own on both sides (symmetric_effect); cards traded between the players' piles are hand_deck_swap
     c.execute("update flat_do set concept='drawback' where concept='copy' and to_side='enemy' "

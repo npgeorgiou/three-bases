@@ -1,21 +1,21 @@
-"""Step 5, the archetype map (factions/START_DESIGN-1-wheel.md), from the archetypes of step 3 (step3_groups.py). A part
+"""Step 5, the archetype map (factions/START_DESIGN-1-roster.md), from the archetypes of step 3 (step3_groups.py). A part
 whose concepts have a joined link with another part of the same archetype is an engine, any other part a brick; the parts
 with their kind go to work/archetype_parts.tsv. Each concept of an archetype's parts is a node; between
 the concepts of two engine parts of one archetype, an edge with the step 4 numbers (cards, decks, games, level), the top
 link text, the real card pair of its strongest link (none when only real decks join them) and a note when the edge is
 weak (about the player, or decks only). Bricks are nodes with no edges.
-Step 6's factions (work/kernel_factions.tsv) are on the page too: each concept a part (core and engines blue, bricks
-grey, extras dashed), its lines the joined links between its core and engine concepts.
+Step 6's factions (work/kernel_factions.tsv) are on the page too: each concept a part (kernel red, engines blue, bricks
+grey, extras dashed), its lines the joined links between its kernel and engine concepts.
 Writes work/archetype_parts.tsv, work/archetype_map.tsv, work/archetype_gaps.tsv (engine parts whose concepts have no joined edge) and
-factions/wheel-archetypes.html (every concept of step 3 at a fixed place, laid out from the real decks that lean on
+factions/roster-map.html (every concept of step 3 at a fixed place, laid out from the real decks that lean on
 it; every joined pair between them for the links between ticked archetypes; two ticked archetypes as one faction, as
-step 6 makes it; concepts picked by hand checked against the real decks and factions, as step 3 does). Run from library/cards_db: python3 ../../factions/wheel/work/archetype_map.py"""
+step 6 makes it; concepts picked by hand checked against the real decks and factions, as step 3 does). Run from library/cards_db: python3 ../../factions/roster/work/archetype_map.py"""
 import collections, csv, itertools, json, math, os, re, sqlite3, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(HERE, '..', '..', '..', 'library', 'cards_db')
 sys.path.insert(0, DB)
-import concept_tags, mechanics_wheel
+import concept_tags, roster_links
 sys.path.insert(0, HERE)
 import step3_groups
 
@@ -39,7 +39,7 @@ def joined(r):
 def main():
     arch = step3_groups.rows()
     links = {}
-    for r in csv.DictReader(open(os.path.join(DB, 'wheel', 'concept_links.tsv'), encoding='utf-8'), delimiter='\t'):
+    for r in csv.DictReader(open(os.path.join(DB, 'roster', 'concept_links.tsv'), encoding='utf-8'), delimiter='\t'):
         links[frozenset((r['a'], r['b']))] = r
     parts = collections.defaultdict(list)
     for r in arch:
@@ -55,15 +55,15 @@ def main():
     for f in csv.DictReader(open(os.path.join(HERE, 'kernel_factions.tsv'), encoding='utf-8'), delimiter='\t'):  # step 6's factions
         key, eng = 'F' + f['letter'], f['engines'].split(',')
         for c in f['concepts'].split(',') + [x for x in f['extras'].split(',') if x]:
-            level = 'core' if c in f['kernel'].split(',') else 'engine' if c in eng else 'brick' if c in f['bricks'].split(',') else 'extra'
+            level = 'kernel' if c in f['kernel'].split(',') else 'engine' if c in eng else 'brick' if c in f['bricks'].split(',') else 'extra'
             r = {'key': key, 'name': f"Faction {f['letter']}: {f['name']}", 'part': level, 'concepts': c, 'in_this_game': f['does'],
-                 'kind': 'engine' if level in ('core', 'engine') else level, 'faction': True,
+                 'kind': level, 'faction': True,
                  'markers': dict(m.split(':') for m in f['markers'].split(',') if m)}
             arch.append(r); parts[key].append(r)
     wanted, edges, gaps = set(), [], []
     for key, ps in parts.items():
         for x, y in itertools.combinations(ps, 2):
-            if x['kind'] != 'engine' or y['kind'] != 'engine': continue
+            if x['kind'] not in ('engine', 'kernel') or y['kind'] not in ('engine', 'kernel'): continue
             n = 0
             for a in x['concepts'].split(','):
                 for b in y['concepts'].split(','):
@@ -98,8 +98,8 @@ def main():
 def card_pairs(wanted):
     """per concept pair and link text (and per pair alone, text ''): the real card pair of its strongest link, 'game: A + B';
     per concept pair, the share of its card links whose text is about hitting the player"""
-    c, games, x, con, pools, stats = mechanics_wheel.setup()
-    keys = mechanics_wheel.concepts(con)
+    c, games, x, con, pools, stats = roster_links.setup()
+    keys = roster_links.concepts(con)
     name = dict(((i), (g, n)) for i, g, n in c.execute('select id, game, name from card'))
     best, total, onplayer = {}, collections.Counter(), collections.Counter()
     L = sqlite3.connect(os.path.join(DB, 'links.sqlite'))
@@ -146,12 +146,12 @@ def layout(D):
 
 
 def unclash(pos, names, rounds=3000):
-    """move dots apart until no two names on the page overlap (each name a box beside its dot, about 6.2 units a
-    letter); a little at a time, along the side where the boxes overlap least (Claude's)"""
+    """move dots apart until no two names on the page overlap (each name a box beside its dot, about 7.4 units a
+    letter at the page's 12px); a little at a time, along the side where the boxes overlap least (Claude's)"""
     short = lambda c: re.sub(r' \(.*\)$', '', names.get(c, c))
     ks = sorted(pos)
-    w = {k: 14 + 6.2 * len(short(k)) for k in ks}
-    box = lambda k: (pos[k][0] - 6, pos[k][1] - 9, pos[k][0] + w[k], pos[k][1] + 7)
+    w = {k: 16 + 7.4 * len(short(k)) for k in ks}
+    box = lambda k: (pos[k][0] - 7, pos[k][1] - 11, pos[k][0] + w[k], pos[k][1] + 8)
     for _ in range(rounds):
         moved = False
         for i, a in enumerate(ks):
@@ -176,7 +176,7 @@ def unclash(pos, names, rounds=3000):
 
 
 def page(arch, edges, examples, player, usable, every):
-    """factions/wheel-archetypes.html: every usable concept at a fixed place; tick archetypes to light their concepts,
+    """factions/roster-map.html: every usable concept at a fixed place; tick archetypes to light their concepts,
     their lines, and the real links between the ticked archetypes"""
     names = {}
     for line in open(os.path.join(DB, '..', 'concept_tree.txt'), encoding='utf-8'):
@@ -215,7 +215,7 @@ def page(arch, edges, examples, player, usable, every):
                               'level': r['level'], 'text': text,
                               'pair': pair, 'note': note(p, pair, player)})
     tpl = open(os.path.join(HERE, 'archetype_map_template.html'), encoding='utf-8').read()
-    out = os.path.join(HERE, '..', '..', 'wheel-archetypes.html')
+    out = os.path.join(HERE, '..', '..', 'roster-map.html')
     open(out, 'w', encoding='utf-8').write(tpl.replace('/*DATA*/null', json.dumps(data)))
 
 

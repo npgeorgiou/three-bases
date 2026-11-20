@@ -1,4 +1,4 @@
-# Writes factions/wheel/STOP1.md (index) and STOP1-1..5.md: the 20 factions in plain words. Run from the repo root
+# Writes factions/roster/STOP1.md (index) and STOP1-1..5.md: the 20 factions in plain words. Run from the repo root
 # after themes.tsv, tools.tsv, combos.tsv and answers.tsv exist.
 import collections
 NAME=dict(deathfeed='my units grow from deaths',lastwords='Death effects',sacrifice='my unit dies and takes an enemy with it',
@@ -18,7 +18,7 @@ roundstart='round start effects',leave='my units react when one leaves',bigstren
 offering='my unit dies for supply, a card or strength',steal='take an enemy unit or card (NEW RULE)',
 enemyside='place my units in the enemy camp (NEW RULE)',haste='attack the turn it is placed',extraact='my unit acts again',
 mark='mark an enemy for later hits',reach='hit from afar into the back rows')
-F='factions/wheel/'
+F='factions/roster/'
 def tsv(p): return [l.rstrip('\n').split('\t') for l in open(p)][1:]
 OWN={};EX={}
 for l in open(F+'work/assign.tsv'):

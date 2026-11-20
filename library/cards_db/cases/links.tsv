@@ -145,7 +145,7 @@ lk144	faeria	Queen's Assassin	Shedim Pest	none	asks for	most creatures pass the 
 lk145	marvel_snap	Ghost Rider	Vibro-Shock Gauntlets	line	puts your units there	Kaptain 15 Nov 2026: the link is made by the revive and the +2 Power, never by the Energy	revive	stat_gain !resource_gain
 lk146	sts1	Ritual Dagger	Nunchaku	line	is an Attack it needs played for its count	Kaptain 15 Nov 2026: Ritual Dagger counts as an Attack, never as "gains when it kills"	type !on_kill	
 lk147	duelyst	Twilight Fox	Ephemeral Shroud	line	{A} moves enemy units, and {B} acts on units around it	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 0)	forced_movement !on_spell	silence !on_play
-lk148	faeria	Syland Horsemaster	Astral Weapon	none	{A} moves your units, and {B} acts on units next to it	wheel suspects 20 Nov 2026: Astral Weapon destroys all units next to it, mine too: moving my units there is no help		
+lk148	faeria	Syland Horsemaster	Astral Weapon	none	{A} moves your units, and {B} acts on units next to it	roster suspects 20 Nov 2026: Astral Weapon destroys all units next to it, mine too: moving my units there is no help		
 lk149	gwent	Geralt: Aard	Ocvist	line	{A} moves enemy units, and {B} acts on units in the row facing it	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 0)	forced_movement !damage	row_effects !countdown
 lk150	inscryption	Wiseclock	Buff Conduit	line	{A} moves {B}, and {B} acts on units in its circuit	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 0)	forced_movement !on_play	passive
 lk151	into_the_breach	Titan Fist	Flame Thrower	line	{A} moves enemy units, and {B} acts on units in a line from it	links fix 16 Nov 2026: what of each card made the link (rule at network.py line 0)	forced_movement !damage	damage !on_lifegain
@@ -392,15 +392,15 @@ lk391	runeterra	Draven	Vi	line	makes more cards to play	lk96 fix 16 Nov 2026: a 
 lk392	marvel_snap	Beta Ray Bill	Agony	line	makes more cards to play	lk96 fix 16 Nov 2026: a single made card that costs 0 is one more play	generate_cards	merge_attach
 lk393	sts1	Cloak and Dagger	After Image	line	makes more cards to play	lk96 fix 16 Nov 2026: a single made card that costs 0 is one more play	generate_cards	player_block_armor
 lk394	monster_train	Vinemother	Solgard the Martyr	line	makes more cards to play	lk96 fix 16 Nov 2026: a single made card that costs 0 is one more play	generate_cards	on_spell
-lk395	runeterra	Confront	Legion Veteran	line		Kaptain 18 Nov 2026, wheel probe: Challenger given makes the ally fight; Legion Veteran grows an ally that survives damage		
-lk399	gwent	Maxii van Dekkar	Hammond	none	acts on units	Kaptain 18 Nov 2026, wheel probe: moving a card in the deck is no unit moving on the board		
-lk397	gwent	Gaetan	Cat Witcher	line	acts on units	Kaptain 18 Nov 2026, wheel probe: a card moving my units on the board still puts them where another card acts		
-lk400	gwent	Cursed Scroll	Cow Carcass	none	acts on units	Kaptain 18 Nov 2026, wheel probe: a card moved from hand to the deck puts no unit next to another		
-lk401	gwent	Blightmaker	Cow Carcass	line	puts your units there	Kaptain 18 Nov 2026, wheel probe: a card that also puts units there keeps that link when its other move is in the deck		
-lk402	marvel_snap	Doctor Octopus	Alioth	line	moves enemy units	Kaptain 18 Nov 2026, wheel probe: cards pulled from the enemy hand onto a location are units moved there		
-lk403	marvel_snap	Mirage	Iron Patriot	none	more power	Kaptain 19 Nov 2026, wheel tag check: Mirage's +2 Power lands only on its copy of an enemy card		
-lk404	monster_train	Soul Siphon	Primordium	none	gives it Emberdrain	wheel suspects, 20 Nov 2026: Emberdrain on all my units is a drawback, no help		
-lk405	monster_train	Soul Siphon	Apex Imp	none	gives it Emberdrain	wheel suspects, 20 Nov 2026: the same family		
-lk406	duelyst	Inner Focus	Lightbender	none	moves your units	wheel suspects, 20 Nov 2026: Lightbender dispels all around it, my moved units too: only enemies moved there help		
-lk407	runeterra	Ranger's Resolve	Evelynn	none	which it passes to its allies	wheel suspects, 20 Nov 2026: a card that takes keywords from allies passes none on		
-lk408	runeterra	Golden Aegis	Sivir (level 2)	line	passes to its allies	wheel suspects, 20 Nov 2026: Sivir level 2 shares her keywords with attacking allies		
+lk395	runeterra	Confront	Legion Veteran	line		Kaptain 18 Nov 2026, roster probe: Challenger given makes the ally fight; Legion Veteran grows an ally that survives damage		
+lk399	gwent	Maxii van Dekkar	Hammond	none	acts on units	Kaptain 18 Nov 2026, roster probe: moving a card in the deck is no unit moving on the board		
+lk397	gwent	Gaetan	Cat Witcher	line	acts on units	Kaptain 18 Nov 2026, roster probe: a card moving my units on the board still puts them where another card acts		
+lk400	gwent	Cursed Scroll	Cow Carcass	none	acts on units	Kaptain 18 Nov 2026, roster probe: a card moved from hand to the deck puts no unit next to another		
+lk401	gwent	Blightmaker	Cow Carcass	line	puts your units there	Kaptain 18 Nov 2026, roster probe: a card that also puts units there keeps that link when its other move is in the deck		
+lk402	marvel_snap	Doctor Octopus	Alioth	line	moves enemy units	Kaptain 18 Nov 2026, roster probe: cards pulled from the enemy hand onto a location are units moved there		
+lk403	marvel_snap	Mirage	Iron Patriot	none	more power	Kaptain 19 Nov 2026, roster tag check: Mirage's +2 Power lands only on its copy of an enemy card		
+lk404	monster_train	Soul Siphon	Primordium	none	gives it Emberdrain	roster suspects, 20 Nov 2026: Emberdrain on all my units is a drawback, no help		
+lk405	monster_train	Soul Siphon	Apex Imp	none	gives it Emberdrain	roster suspects, 20 Nov 2026: the same family		
+lk406	duelyst	Inner Focus	Lightbender	none	moves your units	roster suspects, 20 Nov 2026: Lightbender dispels all around it, my moved units too: only enemies moved there help		
+lk407	runeterra	Ranger's Resolve	Evelynn	none	which it passes to its allies	roster suspects, 20 Nov 2026: a card that takes keywords from allies passes none on		
+lk408	runeterra	Golden Aegis	Sivir (level 2)	line	passes to its allies	roster suspects, 20 Nov 2026: Sivir level 2 shares her keywords with attacking allies		

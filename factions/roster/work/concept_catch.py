@@ -1,9 +1,9 @@
-"""Step 2 (START_DESIGN-1-wheel.md): the usable concepts. Run from library/cards_db.
+"""Step 2 (START_DESIGN-1-roster.md): the usable concepts. Run from library/cards_db.
 Every library concept with 5+ real cards (all games together): its cards and the games it is in; a parent in the concept tree
 keeps only the cards none of its children carry. Each gets a kind with its reason: usable (a faction can build on it),
 helper or out, from concept_verdicts.tsv (a concept not in it is usable); player_<concept> is out (no player health,
 Kaptain), and so is a parent left with under 5 cards (its children carry its cards, so no effect counts twice).
-python3 ../../factions/wheel/work/concept_catch.py -> factions/wheel/work/concepts.tsv (usable, then helpers, then out) and
+python3 ../../factions/roster/work/concept_catch.py -> factions/roster/work/concepts.tsv (usable, then helpers, then out) and
 concepts.md (the same by kind in plain words: the concept tree's name, cards, games; for Kaptain)."""
 import collections, csv, os, sqlite3, sys, textwrap
 sys.path.insert(0, os.getcwd())

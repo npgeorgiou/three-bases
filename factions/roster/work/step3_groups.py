@@ -5,7 +5,7 @@ markers(): per archetype its design markers, each with how many times as often i
 import json, os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-GROUPS = 17  # the wheel's number of groups (Kaptain's)
+GROUPS = 17  # the roster's number of groups (Kaptain's)
 FILE = os.path.join(HERE, f'deck_groups_nmf_{GROUPS}.json')
 D = json.load(open(FILE, encoding='utf-8'))
 

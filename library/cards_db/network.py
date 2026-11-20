@@ -42,7 +42,7 @@ def rows_of(c, a, sql, *args):
 
 def row_src(c, ab, h):
     """the effect rows ('ability.seq') of an ability that make happening h (vocab `causes`, as refs.py reads them); the
-    ability when none is found: the wheel tells "+2 Power" from "+1 Energy next turn" of one ability (Vibro-Shock Gauntlets)"""
+    ability when none is found: the roster tells "+2 Power" from "+1 Energy next turn" of one ability (Vibro-Shock Gauntlets)"""
     if 'causes' not in CACHE:
         CACHE['causes'] = {v: {x.split(':')[0] for x in cs.split(';')} for v, cs in c.execute("select value, causes from vocab where field='act' and coalesce(causes,'')!=''")}
     key = ('row_src', ab, h)

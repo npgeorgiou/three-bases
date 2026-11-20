@@ -1,4 +1,4 @@
-"""Step 6 of the wheel (factions/START_DESIGN-1-wheel.md): the factions from what they do.
+"""Step 6 of the roster (factions/START_DESIGN-1-roster.md): the factions from what they do.
 1. Identity: what the faction DOES, in plain words (IDENTITIES, Claude's), made of families of library/concept_tree.txt.
    Its kernel: their usable concepts that are effects (never a trigger, a condition, or a drawback but for Eats its own)
    and that MIN_LEAN+ decks lean on, at most KERNEL. A concept two identities want goes to the one whose other kernel
@@ -34,7 +34,7 @@
    units, acting between lanes and holding a base, each the first way of work/answer_concepts.tsv its own concepts give,
    else the way its extras give; what it cares about most, the first of the game's own things it has, else the one that
    scores highest on its list.
-python3 factions/wheel/work/kernel_factions.py (from the repo, about a minute; needs links.sqlite) -> kernel_factions.md
+python3 factions/roster/work/kernel_factions.py (from the repo, about a minute; needs links.sqlite) -> kernel_factions.md
 (for Kaptain), kernel_factions.tsv (one row per faction, read by concept_list.py) and lists/<letter>.tsv."""
 import collections, csv, json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -89,7 +89,7 @@ lean = {}
 for d in decks:
     for c in d['z']: lean[c] = lean.get(c, 0) + 1
 strong = {}
-for r in csv.DictReader(open(os.path.join(ROOT, 'library/cards_db/wheel/concept_links.tsv'), encoding='utf-8'), delimiter='\t'):
+for r in csv.DictReader(open(os.path.join(ROOT, 'library/cards_db/roster/concept_links.tsv'), encoding='utf-8'), delimiter='\t'):
     cards, rare, level = float(r['cards'] or 0), float(r['rare'] or 0), float(r['level'] or 0)
     if cards >= 1.2 or (rare >= 3 and level >= 1):
         strong[frozenset((r['a'], r['b']))] = (cards, r['texts'].split(' | ')[0], int(float(r['games'] or 0)))

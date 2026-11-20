@@ -98,20 +98,20 @@ More text: `summary/09-card-design-rules.txt`
 - Lane control: some cards check "while you hold this lane's base", some "while you don't", some do one thing in each
   case. Never a bonus from one specific base (bases are random each game).
 - Almost every card has a keyword or text; almost none is only stats.
-- Hooks for two-faction decks (decks will mix 2 factions later): the combos planned on the wheel with other factions,
+- Hooks for two-faction decks (decks will mix 2 factions later): the combos planned on the roster with other factions,
   and more (Kaptain, 9 Nov 2026: hooks made only from planned overlaps are poor; what else goes in is worked out in the
-  wheel chat); also a few effects that work with any faction's units.
+  roster chat); also a few effects that work with any faction's units.
   Example: a spell that makes a unit's round-end effects happen now works with every faction that has round-end effects.
 
 **How cards fit together**
 - Every card says what it makes happen and what it needs (its `net` line), and each "needs" has a card in the faction
   that makes it. Example: Toll Warrior needs units to die this round; Willing Victim (dies when offered) makes it.
 - Cards that cash something in have 3+ cards that set it up; cards that set something up feed 2+ cards that cash it in.
-- Keywords (the wheel's step 8): its own keyword and the shared ones it carries, each from a synergy; many cards use
+- Keywords (the roster's step 8): its own keyword and the shared ones it carries, each from a synergy; many cards use
   them, the rest of the faction's cards build the ways to play around them.
-- Its concepts (the wheel's step 6): its kernel (what it does), engines and bricks; its synergies are the links
+- Its concepts (the roster's step 6): its kernel (what it does), engines and bricks; its synergies are the links
   between its concepts, each on several cards. Its extras (step 6) feed them.
-- The faction's list (the wheel's step 6: every other concept of the library, highest score for linking with its
+- The faction's list (the roster's step 6: every other concept of the library, highest score for linking with its
   concepts first) is used A LOT, by most cards: a concept from it makes its own concepts possible, starts them or makes them
   stronger. Example: a faction built on units dying has units that come back, so more units can die. Cards built only
   from its own concepts are poorly designed.

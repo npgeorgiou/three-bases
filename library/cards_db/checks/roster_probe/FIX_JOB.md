@@ -1,4 +1,4 @@
-# Fixer job: wrong card readings found by the wheel probes (18 Nov 2026)
+# Fixer job: wrong card readings found by the roster probes (18 Nov 2026)
 
 You fix card records (rows) so that they say what the card text says. Budget: at most 30 tool calls; finish from call 25.
 Never run git, run.py, check_all.py, links.py or any rebuild; never edit network.py, flat.py or any other script; change only
@@ -44,5 +44,5 @@ change that does not do what you want is written as "STUCK: <card>: <what you sa
      and the rows and fix what is wrong, or say they are right.
 
 ## Report
-Write `library/cards_db/checks/wheel_probe/fix_report.md`: first line `FIXED <n> cards, STUCK <m>`; then one line per card:
+Write `library/cards_db/checks/roster_probe/fix_report.md`: first line `FIXED <n> cards, STUCK <m>`; then one line per card:
 the card, what was wrong, what the record says now (or "already right", or STUCK and why). Then reply with that first line.

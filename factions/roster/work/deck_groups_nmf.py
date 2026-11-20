@@ -1,7 +1,7 @@
-"""Step 3 (START_DESIGN-1-wheel.md): the ways to play that decks lean on, by NMF; they become our factions' archetypes.
-Run from library/cards_db: python3 ../../factions/wheel/work/deck_groups_nmf.py [--groups N]  (about 2.5 minutes, 2 cores;
+"""Step 3 (START_DESIGN-1-roster.md): the ways to play that decks lean on, by NMF; they become our factions' archetypes.
+Run from library/cards_db: python3 ../../factions/roster/work/deck_groups_nmf.py [--groups N]  (about 2.5 minutes, 2 cores;
  with --groups, N groups and no stability runs, a few seconds)
- -> factions/wheel/work/deck_groups_nmf.tsv (one row per group), deck_groups_nmf.md (the same in plain words) and
+ -> factions/roster/work/deck_groups_nmf.tsv (one row per group), deck_groups_nmf.md (the same in plain words) and
     deck_groups_nmf.json (groups, decks and factions, read by make_faction.py); with --groups N the files end in _N.
 1. Concepts: the usable concepts of concepts.tsv (a card counts each once; a parent only on cards none of its children
    carry), plus five unit concepts against the card's game: unit, cheap unit, expensive unit (concept_tags.py), strong for its
@@ -282,7 +282,7 @@ with open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.tsv'), 'w', encoding='utf
 with open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.md'), 'w', encoding='utf-8') as o:  # for Kaptain: short lists, no deck names
     o.write('# Step 3: the ways to play that decks lean on (made by deck_groups_nmf.py)\n\n')
     o.write(f'- {len(decks)} decks of {len(per_game)} games, {len(nodes)} concepts, {K} groups'
-            + (' (set by hand)' if FORCED else f' (the number from {MIN_K} to {MAX_K} that stays most alike: {stab[K]:.2f}, 1 = the same)') + '\n')
+            + (' (the number the stability check chose; this run takes it as given)' if FORCED else f' (the number from {MIN_K} to {MAX_K} that stays most alike: {stab[K]:.2f}, 1 = the same)') + '\n')
     o.write('- "Not on the map": a concept more than half of the groups hold, or a unit measure; the map and steps 5-6 leave it out\n')
     o.write(f'- Design markers: what its decks are like; x2 = twice as often as their games\' decks\n\n')
     for gr in groups:

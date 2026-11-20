@@ -97,278 +97,278 @@ sts1	Seek	D	no fit (player health, block)
 sts1	Reboot	D	no fit (player health, block)
 sts1	Buffer	D	no fit (player health, block)
 sts1	Self Repair	D	no fit (player health, block)
-duelyst	Wind Stopper	wheel probe	taunt
-duelyst	Frostiva	wheel probe	on_damaged
-duelyst	Treant	wheel probe	taunt
-duelyst	Horn of the Forsaken	wheel probe	on_damaged
-faeria	Shamanic Dance	wheel probe	taunt
-faeria	King's Faithful	wheel probe	on_damaged
-faeria	Shifting Octopus	wheel probe	taunt
-faeria	Possessed Ursus	wheel probe	on_damaged
-gwent	Cave Troll	wheel probe	taunt
-gwent	Kelpie	wheel probe	on_damaged
-gwent	Ffion var Gaernel	wheel probe	taunt
-gwent	Hefty Helge	wheel probe	on_damaged
-runeterra	Confront	wheel probe	forced_attack
-runeterra	Legion Veteran	wheel probe	on_damaged
-runeterra	Diana (level 2)	wheel probe	forced_attack
-runeterra	Gwen	wheel probe	on_damaged
-runeterra	The Serpent	wheel probe	forced_attack
-runeterra	Towering Stonehorn	wheel probe	on_damaged
-faeria	Shimmering Statue	wheel probe	taunt
-faeria	Lion Fish	wheel probe	deathtouch
-faeria	Death Walker	wheel probe	deathtouch
-gwent	Usurper: Officer	wheel probe	rule_change
-gwent	Sove	wheel probe	immunity
-gwent	Cintrian Artificer	wheel probe	rule_change
-gwent	Stolen Mutagens	wheel probe	immunity
-into_the_breach	Prospero	wheel probe	rule_change
-into_the_breach	Area Shift	wheel probe	immunity
-into_the_breach	Control Mech	wheel probe	rule_change
-into_the_breach	Camila Vera	wheel probe	immunity
-faeria	Manta Rider	wheel probe	rule_change
-faeria	Divine Guardian	wheel probe	immunity
-faeria	Oradrim Fanatic	wheel probe	rule_change
-faeria	Kaios, Demented Overmind	wheel probe	immunity
-gwent	Dragon's Dream	wheel probe	row_effects
-gwent	Traveling Priestess	wheel probe	immunity
-gwent	Little Havfrue	wheel probe	row_effects
-gwent	Ancient Foglet	wheel probe	immunity
-runeterra	Restored Sun Disc	wheel probe	rule_change
-runeterra	Pakaa Cub	wheel probe	stealth
-runeterra	Sejuani	wheel probe	rule_change
-runeterra	Towering Pairofant	wheel probe	stealth
-duelyst	Joseki	wheel probe	hand_disruption
-duelyst	Dark Seed	wheel probe	hand_size
-duelyst	Scroll Bandit	wheel probe	hand_disruption
-duelyst	Upper Hand	wheel probe	hand_size
-runeterra	Watery Grave	wheel probe	hand_disruption
-runeterra	Trundle (level 2)	wheel probe	hand_size
-runeterra	Maokai (level 2)	wheel probe	hand_disruption
-runeterra	Tianna Crownguard	wheel probe	extra_turn
-runeterra	Call the Wild	wheel probe	recycle
-runeterra	Yordle Ranger	wheel probe	extra_turn
-runeterra	Station Archivist	wheel probe	recycle
-faeria	Shaytan Assassin	wheel probe	deathtouch
-faeria	Soul Eater	wheel probe	death_count
-faeria	Swarming Carassius	wheel probe	death_count
-duelyst	Makantor Warbeast	wheel probe	haste
-duelyst	Vaath's Brutality	wheel probe	attack_lock
-duelyst	Elucidator	wheel probe	haste
-duelyst	Saurian Finality	wheel probe	attack_lock
-duelyst	Homeostatic Rebuke	wheel probe	attack_now
-duelyst	Lavaslasher	wheel probe	attack_now
-duelyst	Vorpal Reaver	wheel probe	multi_attack
-duelyst	Desolator	wheel probe	lifesteal
-runeterra	Spirit's Refuge	wheel probe	damage_reduction
-runeterra	Thresh	wheel probe	forced_attack
-runeterra	Fleetfeather Tracker	wheel probe	forced_attack
-runeterra	Chain Vest	wheel probe	damage_reduction
-faeria	Gabrian Enchantress	wheel probe	strikes_with_defence
-faeria	Gabrian Enchantment	wheel probe	strikes_with_defence
-faeria	Living Willow	wheel probe	taunt
-runeterra	Petricite Hound	wheel probe	strikes_with_defence
-runeterra	Mageseeker Inquisitor	wheel probe	forced_attack
-runeterra	Galio	wheel probe	strikes_with_defence
-runeterra	Enraged Firespitter	wheel probe	forced_attack
-runeterra	Jarvan IV	wheel probe	forced_attack
-runeterra	Garen	wheel probe	regeneration
-runeterra	Swiftwing Lancer	wheel probe	forced_attack
-runeterra	Braum	wheel probe	forced_attack
-runeterra	Trundle	wheel probe	regeneration
-faeria	Time of Legends	wheel probe	cost_type
-faeria	Message in a Bottle	wheel probe	generate_cards
-faeria	Seek Shelter	wheel probe	cost_type
-faeria	Ruunin's Presence	wheel probe	generate_cards
-faeria	Magda, Queen of Meroval	wheel probe	cost_type
-faeria	Bloomsprite	wheel probe	generate_cards
-duelyst	Alcuin Loremaster	wheel probe	copy
-duelyst	Icy	wheel probe	attack_lock
-duelyst	Essence Sculpt	wheel probe	copy
-marvel_snap	Yondu	wheel probe	hand_disruption
-marvel_snap	Venom	wheel probe	sacrifice
-gwent	Matta Hu'uri	wheel probe	hand_disruption
-gwent	Giant Toad	wheel probe	sacrifice
-gwent	Barghest	wheel probe	sacrifice
-faeria	Khalim's Skyguard	wheel probe	can row
-faeria	Twinsoul Spirit	wheel probe	can row
-runeterra	Out Of The Way	wheel probe	can row
-marvel_snap	Jean Grey School	wheel probe	can row
-marvel_snap	Incursion Event	wheel probe	can row
-marvel_snap	New York	wheel probe	can row
-marvel_snap	Cloak	wheel probe	can row
-duelyst	Grandmaster Z'ir	wheel probe	can row
-duelyst	Grand Strategos	wheel probe	can row
-duelyst	Hideatsu the Ebon Ox	wheel probe	can row
-duelyst	Soulstealer	wheel probe	can row
-into_the_breach	Flame Thrower	wheel probe	can row
-into_the_breach	Prime Spear	wheel probe	can row
-into_the_breach	Push Beam	wheel probe	can row
-into_the_breach	Wind Torrent	wheel probe	can row
-sts1	Blue Candle	wheel probe	can row
-sts1	Medical Kit	wheel probe	can row
-runeterra	Ruthless Raider	wheel probe	damage_reduction
-runeterra	Whispered Words	wheel probe	draw
-faeria	Ulani, Defender of Oversky	wheel probe	damage_reduction
-faeria	Curious Biomancer	wheel probe	draw
-gwent	Hammond	wheel probe	damage
-gwent	Maxii van Dekkar	wheel probe	selection
-gwent	Prince Anséis	wheel probe	damage
-gwent	Cintrian Envoy	wheel probe	selection
-gwent	Redanian Knight	wheel probe	card_presence_condition
-gwent	Damsel in Distress	wheel probe	leave_trigger
-gwent	Siege	wheel probe	leave_trigger
-gwent	Roderick of Dun Tynne	wheel probe	free_play
-gwent	Aerondight	wheel probe	leave_trigger
-gwent	Elven Seer	wheel probe	free_play
-gwent	Spring Equinox	wheel probe	leave_trigger
-duelyst	Dauntless Advance	wheel probe	damage_reduction
-duelyst	Trinity Oath	wheel probe	heal
-duelyst	Lodestar	wheel probe	damage_reduction
-duelyst	Invigoration	wheel probe	heal
-runeterra	Otterpus	wheel probe	resource_gain
-runeterra	Veigar	wheel probe	spell_power
-sts1	Hyperbeam	wheel probe	spell_power
-gwent	Dimun Warship	wheel probe	friendly_fire
-gwent	Marlene de Trastamara	wheel probe	leave_trigger
-gwent	Kaer Trolde	wheel probe	friendly_fire
-gwent	Morkvarg	wheel probe	leave_trigger
-gwent	Dies Irae	wheel probe	recycle
-gwent	Fallen Knight	wheel probe	variable_stats
-gwent	Whoreson Senior	wheel probe	variable_stats
-gwent	The Maiden's Shield	wheel probe	damage_reduction
-gwent	Amphibious Assault	wheel probe	recycle
-gwent	Geralt: Quen	wheel probe	damage_reduction
-gwent	Delirium	wheel probe	recycle
-runeterra	Arachnoid Sentry	wheel probe	disable
-runeterra	Mountain Goat	wheel probe	generate_cards
-runeterra	Solari Sunhawk	wheel probe	disable
-runeterra	Katarina	wheel probe	generate_cards
-runeterra	Deep Meditation	wheel probe	cost_reduction
-runeterra	Concussive Palm	wheel probe	disable
-duelyst	Flash Reincarnation	wheel probe	cost_reduction
-duelyst	Healing Mystic	wheel probe	heal
-duelyst	Inquisitor Kron	wheel probe	taunt
-duelyst	Primus Shieldmaster	wheel probe	taunt
-gwent	Dwarven Skirmisher	wheel probe	damage_reduction
-gwent	Figgis Merluzzo	wheel probe	taunt
-faeria	Majinata, Spirit of Everlife	wheel probe	damage_reduction
-faeria	Khalim, Sky Prodigy	wheel probe	cost_set
-faeria	Wind Soldier	wheel probe	self_destruct
-runeterra	Treasured Trash	wheel probe	cost_set
-runeterra	Twin Wind Technique	wheel probe	self_destruct
-gwent	Oneiromancy	wheel probe	leave_trigger
-gwent	Ragh Nar Roog	wheel probe	leave_trigger
-duelyst	Abjudicator	wheel probe	cost_reduction
-duelyst	Abyssal Tormentor	wheel probe	spell_power
-duelyst	Mana Vortex	wheel probe	cost_reduction
-duelyst	Crescent Spear	wheel probe	spell_power
-faeria	Compass of Gagana	wheel probe	misreading fix
-runeterra	Volibear (level 2)	wheel probe	misreading fix
-marvel_snap	Cannonball	wheel probe	misreading fix
-runeterra	Delve Into The Past	wheel probe	misreading fix
-faeria	Exotic Pet	wheel probe	misreading fix
-runeterra	Curious Shellfolk	wheel probe	misreading fix
-runeterra	Anaakca	wheel probe	misreading fix
-runeterra	The Poro King's Decree	wheel probe	misreading fix
-gwent	Stockpile	wheel probe	misreading fix
-gwent	Ship Ballista	wheel probe	misreading fix
-into_the_breach	Beetle	wheel probe	misreading fix
-sts1	Cursed Key	wheel probe	misreading fix
-sts1	Matryoshka	wheel probe	misreading fix
-sts1	N'loth's Hungry Face	wheel probe	misreading fix
-sts1	Smoke Bomb	wheel probe	misreading fix
-runeterra	Blood for Blood	wheel probe	misreading fix
-runeterra	Heroic Charge	wheel probe	misreading fix
-sts1	Rainbow	wheel step 7	example of "grows with what happened" (tag looks wrong)
-monster_train	Gifts for a Guard	wheel step 7	example of "grows with what happened" (tag looks wrong)
-gwent	Cintrian Royal Guard	wheel step 7	grows with each copy of itself in play
-runeterra	Ambush	wheel step 7	bonus if 2+ cards were added to hand this round
-marvel_snap	Mockingbird	wheel step 7	costs less per created card in play
-gwent	Fauve	wheel step 7	plays a card from the deck for free
-runeterra	The Darkin Fan	wheel step 7	summons for free on attack
-sts1	Omniscience	wheel step 7	plays a deck card twice for free
-monster_train	Titanstooth	wheel step 7	example of "put into play for free" (tag looks wrong)
-inscryption	Pelts (Wolf)	wheel step 7	plays copies for free when a card is played
-runeterra	Swinging Glaive	wheel step 7	example of "return my unit to hand" (tag looks wrong)
-marvel_snap	Falcon	wheel step 7	returns my cheap cards to hand
-duelyst	Orbrider	wheel step 7	returns a nearby ally to hand
-gwent	Bjorn Stormursson	wheel step 7	moves itself back to hand
-inscryption	Ourobot	wheel step 7	comes back to hand when it dies
-monster_train	Soul Siphon	wheel (kernel factions)	wheel kernel factions: Pay later (overload, debt) with Make a unit stronger (buff): wrong: Neither card makes a unit pay later. Primordium's Eaten adds its stats to the eater, a buff only.
-monster_train	Primordium	wheel (kernel factions)	wheel kernel factions: Pay later (overload, debt) with Make a unit stronger (buff): wrong: Neither card makes a unit pay later. Primordium's Eaten adds its stats to the eater, a buff only.
-duelyst	Erratic Raptyr	wheel (kernel factions)	wheel kernel factions: Mill the opponent's deck with Bring back dead units (revive): wrong: Mnemovore mills the opponent's deck; Raptyr turns into an Egg after attacking, not back from dead. No reviva
-duelyst	Mnemovore	wheel (kernel factions)	wheel kernel factions: Mill the opponent's deck with Bring back dead units (revive): wrong: Mnemovore mills the opponent's deck; Raptyr turns into an Egg after attacking, not back from dead. No reviva
-runeterra	Cloudbringer's Grace	wheel (kernel factions)	wheel kernel factions: Force enemy units to attack with Deal damage: wrong: Neither card forces attacks. Cloudbringer's Grace grants Challenger; Obeyed Order deals 3 damage to a blocker or Nexus.
-runeterra	Obeyed Order	wheel (kernel factions)	wheel kernel factions: Force enemy units to attack with Deal damage: wrong: Neither card forces attacks. Cloudbringer's Grace grants Challenger; Obeyed Order deals 3 damage to a blocker or Nexus.
-stormbound	Conflicted Drakes	wheel (kernel factions)	wheel kernel factions: Clog the opponent's board with Damage to many at once: wrong: Hags clog the board on death; Drakes' damage hits on play only, so the link is incidental.
-stormbound	Dubious Hags	wheel (kernel factions)	wheel kernel factions: Clog the opponent's board with Damage to many at once: wrong: Hags clog the board on death; Drakes' damage hits on play only, so the link is incidental.
-duelyst	Circle of Desiccation	wheel (kernel factions)	wheel kernel factions: Cheat death (survive lethal) with Destroy outright: wrong: Nothing survives lethal: Khanuum-ka's Dying Wish summons a new one after death, and Circle destroys all.
-duelyst	Khanuum-ka	wheel (kernel factions)	wheel kernel factions: Cheat death (survive lethal) with Destroy outright: wrong: Nothing survives lethal: Khanuum-ka's Dying Wish summons a new one after death, and Circle destroys all.
-duelyst	Inner Focus	wheel (kernel factions)	wheel kernel factions: Ready a used unit again (untap) with Silence (abilities removed): wrong: Inner Focus reactivates a unit; Lightbender dispels spaces around it, not unit abilities, so no silence.
-duelyst	Lightbender	wheel (kernel factions)	wheel kernel factions: Ready a used unit again (untap) with Silence (abilities removed): wrong: Inner Focus reactivates a unit; Lightbender dispels spaces around it, not unit abilities, so no silence.
-gwent	Fulmar	wheel (kernel factions)	wheel kernel factions: Row-wide lasting effects (weather) with Put into play for free: right
-gwent	Tears of Siren	wheel (kernel factions)	wheel kernel factions: Row-wide lasting effects (weather) with Put into play for free: right
-gwent	Joachim de Wett	wheel (kernel factions)	wheel kernel factions: Give my units or cards to the opponent with Put into play for free: wrong: Rosa spawns an opponent-faction copy on the opposite row; Joachim plays your own top unit. Nothing pas
-gwent	Rosa and Edna var Attre	wheel (kernel factions)	wheel kernel factions: Give my units or cards to the opponent with Put into play for free: wrong: Rosa spawns an opponent-faction copy on the opposite row; Joachim plays your own top unit. Nothing pas
-monster_train	Wyldenten	wheel (kernel factions)	wheel kernel factions: Mark a target for later hits with Position and space: right
-monster_train	Icy Cilophyte	wheel (kernel factions)	wheel kernel factions: Mark a target for later hits with Position and space: right
-inscryption	Hydra	wheel (kernel factions)	wheel kernel factions: Reaches other lanes with More or faster base resource (ramp): wrong: Texts show only keyword names; neither card states lane reach or extra resources, so no link.
-inscryption	Raccoon	wheel (kernel factions)	wheel kernel factions: Reaches other lanes with More or faster base resource (ramp): wrong: Texts show only keyword names; neither card states lane reach or extra resources, so no link.
-runeterra	The List	wheel (library suspects)	"Challenging" a Vulnerable enemy is Challenger, target_choice, not forced_attack
-runeterra	Shadowstep	wheel (library suspects)	free attack Challenging an enemy is Challenger, target_choice, not forced_attack
-runeterra	Cataclysm	wheel (library suspects)	free attack Challenging an enemy is Challenger, target_choice, not forced_attack; the second card of that name is a damage card, unrelated
-inscryption	Bifurcated Strike	wheel (library suspects)	hits the neighbouring lanes: adjacency, not cross_lane
-inscryption	Trifurcated Strike	wheel (library suspects)	hits the neighbouring lanes plus its own: adjacency, not cross_lane
-inscryption	Scavenger	wheel (library suspects)	enemy deaths give Bones: base_resource_gain is right
-runeterra	Anivia	wheel (library suspects)	real revive plus transform into Eggnivia; correct
-monster_train	Bog Chrysalis	wheel (library suspects)	Shell 5, Hatch: summon 2 Bog Fly; hatching is a transform, not a summon
-monster_train	Kinhost Vessel	wheel (library suspects)	Shell 8, Hatch: summon Kinhost Pupa; hatching is a transform, not a summon
-monster_train	Bogdeep Cocoon	wheel (library suspects)	Shell 12, Hatch: summon Bog Wurmling; hatching is a transform, not a summon
-into_the_breach	Spiderling Egg	wheel (library suspects)	hatch is kill self + summon Spiderling; hatching is a transform
-into_the_breach	Spider	wheel (library suspects)	throws an egg that hatches into a Spiderling; the egg is a real summon
-into_the_breach	Alpha Spider	wheel (library suspects)	same as Spider; the egg is a real summon
-into_the_breach	Spider Leader	wheel (library suspects)	throws Spiderling eggs; the eggs are a real summon
-into_the_breach	Arachnid Psion	wheel (library suspects)	other Vek spawn a Spiderling Egg on death; a real summon of eggs
-gwent	Harpy Egg	wheel (library suspects)	text says Spawn, not hatch; summon is right
-duelyst	Young Silithar	wheel (library suspects)	only Rebirth; revive came from the Rebirth keyword's concept, wrong: hatching is a transform
-duelyst	Chrysalis Egg	wheel (library suspects)	no text, no rows
-duelyst	Megapenti	wheel (library suspects)	gives Rebirth; revive came from the same keyword concept
-duelyst	Chrysalis Burst	wheel (library suspects)	summons Eggs; summon is right
-duelyst	Juggernaut	wheel (library suspects)	summons Golem Eggs when damaged; summon is right
-duelyst	Wild Inceptor	wheel (library suspects)	hatches a friendly Egg: transform, right
-gwent	Phoenix	wheel (library suspects)	spawns Phoenix Hatchling: summon, not hatching; right
-stormbound	Broodmother Qordia	wheel (library suspects)	spawns Nests: summon is right; the hatching is the Nests'
-monster_train	Accelerated Incubation	wheel (library suspects)	removes Shell from Eggs; no summon, no revive; right
-duelyst	Morin-Khur	wheel (library suspects)	hatches all Eggs: transform, right
-stormbound	Qordia’s Nest	wheel (library suspects)	hatches and spawns a Dragon: tagged summon, should be transform
-stormbound	Prime Oracle Bragda	wheel (library suspects)	matched a search for "hatch" by a word fragment; nothing about eggs
-monster_train	Furnace Tap	wheel (library suspects)	Emberdrain on a unit; overload_debt is right
-monster_train	Void Binding	wheel (library suspects)	Emberdrain on a chosen unit; overload_debt is right
-runeterra	Sivir (level 2)	wheel (library suspects)	"attacking allies have my keywords": shares its keywords
-runeterra	Zed (level 2)	wheel (library suspects)	gives its keywords to Living Shadow: shares
-runeterra	Luminosprite	wheel (library suspects)	gives its positive keywords to the supported ally: shares
-runeterra	Mechanized Mimic	wheel (library suspects)	takes allies' keywords: a taker, "passes to its allies" lines are wrong
-runeterra	Breakneck Husk	wheel (library suspects)	kills itself to grant a played ally its keywords: shares
-runeterra	Mask Mother	wheel (library suspects)	takes an ally's keywords: a taker
-stormbound	Timber Alchemists	wheel (library suspects)	steals statuses from friendly units: a taker
-duelyst	Sarlac the Eternal	wheel (library suspects)	Dying Wish re-summons itself at once: cheat_death is right
-into_the_breach	Spawner	wheel (library suspects)	spawns two Medium Goos on death, not itself: cheat_death looks wrong
-monster_train	Spikedriver Colony	wheel (library suspects)	adds a copy of itself to the discard pile: not a come-back, cheat_death is wrong
-gwent	Seize	wheel (library suspects)	takes an enemy unit; removing Spying is not donate
-gwent	Mage Infiltrator	wheel (library suspects)	returns itself home; removing Spying is not donate
-gwent	Count Caldwell	wheel (library suspects)	returns itself home; removing Spying is not donate
-into_the_breach	Harold Schmidt	wheel (library suspects)	real heal trigger; linked only through its push
-into_the_breach	Flame Thrower	wheel (library suspects)	pushes and sets Fire, real damage over time; its link is only the line
-into_the_breach	Aegon Mortar	wheel (library suspects)	pushes and damages two tiles; its link is the line
-faeria	Flame Thrower	wheel (library suspects)	read by its name by mistake; 1 damage to all enemies
-gwent	Havfrue Singer	wheel (library suspects)	real heal trigger; its link is its summon row
-duelyst	Sunriser	wheel (library suspects)	real heal trigger, 2 damage to nearby enemies; its link is the position
-duelyst	Lightbender	wheel (library suspects)	dispels all spaces around it, both sides: my units moved there is no help (read a second time by mistake)
-duelyst	Sunset Paragon	wheel (library suspects)	all nearby minions damage themselves, both sides: my units put there is no help
-duelyst	Aperion's Claim	wheel (library suspects)	destroys all in 3x3, both sides: my units put there is no help
-duelyst	Glacial Fissure	wheel (library suspects)	8 damage to everything in the centre column, both sides: my units put there is no help
-stormbound	Witches of the Wild	wheel (library suspects)	drains all bordering units, mine included: my units put there is no help
-stormbound	Spellbinder Zhevana	wheel (library suspects)	hits frozen units in front: only enemies gain from being put there
-stormbound	Conflicted Drakes	wheel (library suspects)	hits all non-Dragon units in front, mine included (read a second time by mistake)
-marvel_snap	Enchantress	wheel (library suspects)	silences all Ongoing cards here, both sides: my cards put there is no help
+duelyst	Wind Stopper	roster probe	taunt
+duelyst	Frostiva	roster probe	on_damaged
+duelyst	Treant	roster probe	taunt
+duelyst	Horn of the Forsaken	roster probe	on_damaged
+faeria	Shamanic Dance	roster probe	taunt
+faeria	King's Faithful	roster probe	on_damaged
+faeria	Shifting Octopus	roster probe	taunt
+faeria	Possessed Ursus	roster probe	on_damaged
+gwent	Cave Troll	roster probe	taunt
+gwent	Kelpie	roster probe	on_damaged
+gwent	Ffion var Gaernel	roster probe	taunt
+gwent	Hefty Helge	roster probe	on_damaged
+runeterra	Confront	roster probe	forced_attack
+runeterra	Legion Veteran	roster probe	on_damaged
+runeterra	Diana (level 2)	roster probe	forced_attack
+runeterra	Gwen	roster probe	on_damaged
+runeterra	The Serpent	roster probe	forced_attack
+runeterra	Towering Stonehorn	roster probe	on_damaged
+faeria	Shimmering Statue	roster probe	taunt
+faeria	Lion Fish	roster probe	deathtouch
+faeria	Death Walker	roster probe	deathtouch
+gwent	Usurper: Officer	roster probe	rule_change
+gwent	Sove	roster probe	immunity
+gwent	Cintrian Artificer	roster probe	rule_change
+gwent	Stolen Mutagens	roster probe	immunity
+into_the_breach	Prospero	roster probe	rule_change
+into_the_breach	Area Shift	roster probe	immunity
+into_the_breach	Control Mech	roster probe	rule_change
+into_the_breach	Camila Vera	roster probe	immunity
+faeria	Manta Rider	roster probe	rule_change
+faeria	Divine Guardian	roster probe	immunity
+faeria	Oradrim Fanatic	roster probe	rule_change
+faeria	Kaios, Demented Overmind	roster probe	immunity
+gwent	Dragon's Dream	roster probe	row_effects
+gwent	Traveling Priestess	roster probe	immunity
+gwent	Little Havfrue	roster probe	row_effects
+gwent	Ancient Foglet	roster probe	immunity
+runeterra	Restored Sun Disc	roster probe	rule_change
+runeterra	Pakaa Cub	roster probe	stealth
+runeterra	Sejuani	roster probe	rule_change
+runeterra	Towering Pairofant	roster probe	stealth
+duelyst	Joseki	roster probe	hand_disruption
+duelyst	Dark Seed	roster probe	hand_size
+duelyst	Scroll Bandit	roster probe	hand_disruption
+duelyst	Upper Hand	roster probe	hand_size
+runeterra	Watery Grave	roster probe	hand_disruption
+runeterra	Trundle (level 2)	roster probe	hand_size
+runeterra	Maokai (level 2)	roster probe	hand_disruption
+runeterra	Tianna Crownguard	roster probe	extra_turn
+runeterra	Call the Wild	roster probe	recycle
+runeterra	Yordle Ranger	roster probe	extra_turn
+runeterra	Station Archivist	roster probe	recycle
+faeria	Shaytan Assassin	roster probe	deathtouch
+faeria	Soul Eater	roster probe	death_count
+faeria	Swarming Carassius	roster probe	death_count
+duelyst	Makantor Warbeast	roster probe	haste
+duelyst	Vaath's Brutality	roster probe	attack_lock
+duelyst	Elucidator	roster probe	haste
+duelyst	Saurian Finality	roster probe	attack_lock
+duelyst	Homeostatic Rebuke	roster probe	attack_now
+duelyst	Lavaslasher	roster probe	attack_now
+duelyst	Vorpal Reaver	roster probe	multi_attack
+duelyst	Desolator	roster probe	lifesteal
+runeterra	Spirit's Refuge	roster probe	damage_reduction
+runeterra	Thresh	roster probe	forced_attack
+runeterra	Fleetfeather Tracker	roster probe	forced_attack
+runeterra	Chain Vest	roster probe	damage_reduction
+faeria	Gabrian Enchantress	roster probe	strikes_with_defence
+faeria	Gabrian Enchantment	roster probe	strikes_with_defence
+faeria	Living Willow	roster probe	taunt
+runeterra	Petricite Hound	roster probe	strikes_with_defence
+runeterra	Mageseeker Inquisitor	roster probe	forced_attack
+runeterra	Galio	roster probe	strikes_with_defence
+runeterra	Enraged Firespitter	roster probe	forced_attack
+runeterra	Jarvan IV	roster probe	forced_attack
+runeterra	Garen	roster probe	regeneration
+runeterra	Swiftwing Lancer	roster probe	forced_attack
+runeterra	Braum	roster probe	forced_attack
+runeterra	Trundle	roster probe	regeneration
+faeria	Time of Legends	roster probe	cost_type
+faeria	Message in a Bottle	roster probe	generate_cards
+faeria	Seek Shelter	roster probe	cost_type
+faeria	Ruunin's Presence	roster probe	generate_cards
+faeria	Magda, Queen of Meroval	roster probe	cost_type
+faeria	Bloomsprite	roster probe	generate_cards
+duelyst	Alcuin Loremaster	roster probe	copy
+duelyst	Icy	roster probe	attack_lock
+duelyst	Essence Sculpt	roster probe	copy
+marvel_snap	Yondu	roster probe	hand_disruption
+marvel_snap	Venom	roster probe	sacrifice
+gwent	Matta Hu'uri	roster probe	hand_disruption
+gwent	Giant Toad	roster probe	sacrifice
+gwent	Barghest	roster probe	sacrifice
+faeria	Khalim's Skyguard	roster probe	can row
+faeria	Twinsoul Spirit	roster probe	can row
+runeterra	Out Of The Way	roster probe	can row
+marvel_snap	Jean Grey School	roster probe	can row
+marvel_snap	Incursion Event	roster probe	can row
+marvel_snap	New York	roster probe	can row
+marvel_snap	Cloak	roster probe	can row
+duelyst	Grandmaster Z'ir	roster probe	can row
+duelyst	Grand Strategos	roster probe	can row
+duelyst	Hideatsu the Ebon Ox	roster probe	can row
+duelyst	Soulstealer	roster probe	can row
+into_the_breach	Flame Thrower	roster probe	can row
+into_the_breach	Prime Spear	roster probe	can row
+into_the_breach	Push Beam	roster probe	can row
+into_the_breach	Wind Torrent	roster probe	can row
+sts1	Blue Candle	roster probe	can row
+sts1	Medical Kit	roster probe	can row
+runeterra	Ruthless Raider	roster probe	damage_reduction
+runeterra	Whispered Words	roster probe	draw
+faeria	Ulani, Defender of Oversky	roster probe	damage_reduction
+faeria	Curious Biomancer	roster probe	draw
+gwent	Hammond	roster probe	damage
+gwent	Maxii van Dekkar	roster probe	selection
+gwent	Prince Anséis	roster probe	damage
+gwent	Cintrian Envoy	roster probe	selection
+gwent	Redanian Knight	roster probe	card_presence_condition
+gwent	Damsel in Distress	roster probe	leave_trigger
+gwent	Siege	roster probe	leave_trigger
+gwent	Roderick of Dun Tynne	roster probe	free_play
+gwent	Aerondight	roster probe	leave_trigger
+gwent	Elven Seer	roster probe	free_play
+gwent	Spring Equinox	roster probe	leave_trigger
+duelyst	Dauntless Advance	roster probe	damage_reduction
+duelyst	Trinity Oath	roster probe	heal
+duelyst	Lodestar	roster probe	damage_reduction
+duelyst	Invigoration	roster probe	heal
+runeterra	Otterpus	roster probe	resource_gain
+runeterra	Veigar	roster probe	spell_power
+sts1	Hyperbeam	roster probe	spell_power
+gwent	Dimun Warship	roster probe	friendly_fire
+gwent	Marlene de Trastamara	roster probe	leave_trigger
+gwent	Kaer Trolde	roster probe	friendly_fire
+gwent	Morkvarg	roster probe	leave_trigger
+gwent	Dies Irae	roster probe	recycle
+gwent	Fallen Knight	roster probe	variable_stats
+gwent	Whoreson Senior	roster probe	variable_stats
+gwent	The Maiden's Shield	roster probe	damage_reduction
+gwent	Amphibious Assault	roster probe	recycle
+gwent	Geralt: Quen	roster probe	damage_reduction
+gwent	Delirium	roster probe	recycle
+runeterra	Arachnoid Sentry	roster probe	disable
+runeterra	Mountain Goat	roster probe	generate_cards
+runeterra	Solari Sunhawk	roster probe	disable
+runeterra	Katarina	roster probe	generate_cards
+runeterra	Deep Meditation	roster probe	cost_reduction
+runeterra	Concussive Palm	roster probe	disable
+duelyst	Flash Reincarnation	roster probe	cost_reduction
+duelyst	Healing Mystic	roster probe	heal
+duelyst	Inquisitor Kron	roster probe	taunt
+duelyst	Primus Shieldmaster	roster probe	taunt
+gwent	Dwarven Skirmisher	roster probe	damage_reduction
+gwent	Figgis Merluzzo	roster probe	taunt
+faeria	Majinata, Spirit of Everlife	roster probe	damage_reduction
+faeria	Khalim, Sky Prodigy	roster probe	cost_set
+faeria	Wind Soldier	roster probe	self_destruct
+runeterra	Treasured Trash	roster probe	cost_set
+runeterra	Twin Wind Technique	roster probe	self_destruct
+gwent	Oneiromancy	roster probe	leave_trigger
+gwent	Ragh Nar Roog	roster probe	leave_trigger
+duelyst	Abjudicator	roster probe	cost_reduction
+duelyst	Abyssal Tormentor	roster probe	spell_power
+duelyst	Mana Vortex	roster probe	cost_reduction
+duelyst	Crescent Spear	roster probe	spell_power
+faeria	Compass of Gagana	roster probe	misreading fix
+runeterra	Volibear (level 2)	roster probe	misreading fix
+marvel_snap	Cannonball	roster probe	misreading fix
+runeterra	Delve Into The Past	roster probe	misreading fix
+faeria	Exotic Pet	roster probe	misreading fix
+runeterra	Curious Shellfolk	roster probe	misreading fix
+runeterra	Anaakca	roster probe	misreading fix
+runeterra	The Poro King's Decree	roster probe	misreading fix
+gwent	Stockpile	roster probe	misreading fix
+gwent	Ship Ballista	roster probe	misreading fix
+into_the_breach	Beetle	roster probe	misreading fix
+sts1	Cursed Key	roster probe	misreading fix
+sts1	Matryoshka	roster probe	misreading fix
+sts1	N'loth's Hungry Face	roster probe	misreading fix
+sts1	Smoke Bomb	roster probe	misreading fix
+runeterra	Blood for Blood	roster probe	misreading fix
+runeterra	Heroic Charge	roster probe	misreading fix
+sts1	Rainbow	roster step 7	example of "grows with what happened" (tag looks wrong)
+monster_train	Gifts for a Guard	roster step 7	example of "grows with what happened" (tag looks wrong)
+gwent	Cintrian Royal Guard	roster step 7	grows with each copy of itself in play
+runeterra	Ambush	roster step 7	bonus if 2+ cards were added to hand this round
+marvel_snap	Mockingbird	roster step 7	costs less per created card in play
+gwent	Fauve	roster step 7	plays a card from the deck for free
+runeterra	The Darkin Fan	roster step 7	summons for free on attack
+sts1	Omniscience	roster step 7	plays a deck card twice for free
+monster_train	Titanstooth	roster step 7	example of "put into play for free" (tag looks wrong)
+inscryption	Pelts (Wolf)	roster step 7	plays copies for free when a card is played
+runeterra	Swinging Glaive	roster step 7	example of "return my unit to hand" (tag looks wrong)
+marvel_snap	Falcon	roster step 7	returns my cheap cards to hand
+duelyst	Orbrider	roster step 7	returns a nearby ally to hand
+gwent	Bjorn Stormursson	roster step 7	moves itself back to hand
+inscryption	Ourobot	roster step 7	comes back to hand when it dies
+monster_train	Soul Siphon	roster (kernel factions)	roster kernel factions: Pay later (overload, debt) with Make a unit stronger (buff): wrong: Neither card makes a unit pay later. Primordium's Eaten adds its stats to the eater, a buff only.
+monster_train	Primordium	roster (kernel factions)	roster kernel factions: Pay later (overload, debt) with Make a unit stronger (buff): wrong: Neither card makes a unit pay later. Primordium's Eaten adds its stats to the eater, a buff only.
+duelyst	Erratic Raptyr	roster (kernel factions)	roster kernel factions: Mill the opponent's deck with Bring back dead units (revive): wrong: Mnemovore mills the opponent's deck; Raptyr turns into an Egg after attacking, not back from dead. No reviva
+duelyst	Mnemovore	roster (kernel factions)	roster kernel factions: Mill the opponent's deck with Bring back dead units (revive): wrong: Mnemovore mills the opponent's deck; Raptyr turns into an Egg after attacking, not back from dead. No reviva
+runeterra	Cloudbringer's Grace	roster (kernel factions)	roster kernel factions: Force enemy units to attack with Deal damage: wrong: Neither card forces attacks. Cloudbringer's Grace grants Challenger; Obeyed Order deals 3 damage to a blocker or Nexus.
+runeterra	Obeyed Order	roster (kernel factions)	roster kernel factions: Force enemy units to attack with Deal damage: wrong: Neither card forces attacks. Cloudbringer's Grace grants Challenger; Obeyed Order deals 3 damage to a blocker or Nexus.
+stormbound	Conflicted Drakes	roster (kernel factions)	roster kernel factions: Clog the opponent's board with Damage to many at once: wrong: Hags clog the board on death; Drakes' damage hits on play only, so the link is incidental.
+stormbound	Dubious Hags	roster (kernel factions)	roster kernel factions: Clog the opponent's board with Damage to many at once: wrong: Hags clog the board on death; Drakes' damage hits on play only, so the link is incidental.
+duelyst	Circle of Desiccation	roster (kernel factions)	roster kernel factions: Cheat death (survive lethal) with Destroy outright: wrong: Nothing survives lethal: Khanuum-ka's Dying Wish summons a new one after death, and Circle destroys all.
+duelyst	Khanuum-ka	roster (kernel factions)	roster kernel factions: Cheat death (survive lethal) with Destroy outright: wrong: Nothing survives lethal: Khanuum-ka's Dying Wish summons a new one after death, and Circle destroys all.
+duelyst	Inner Focus	roster (kernel factions)	roster kernel factions: Ready a used unit again (untap) with Silence (abilities removed): wrong: Inner Focus reactivates a unit; Lightbender dispels spaces around it, not unit abilities, so no silence.
+duelyst	Lightbender	roster (kernel factions)	roster kernel factions: Ready a used unit again (untap) with Silence (abilities removed): wrong: Inner Focus reactivates a unit; Lightbender dispels spaces around it, not unit abilities, so no silence.
+gwent	Fulmar	roster (kernel factions)	roster kernel factions: Row-wide lasting effects (weather) with Put into play for free: right
+gwent	Tears of Siren	roster (kernel factions)	roster kernel factions: Row-wide lasting effects (weather) with Put into play for free: right
+gwent	Joachim de Wett	roster (kernel factions)	roster kernel factions: Give my units or cards to the opponent with Put into play for free: wrong: Rosa spawns an opponent-faction copy on the opposite row; Joachim plays your own top unit. Nothing pas
+gwent	Rosa and Edna var Attre	roster (kernel factions)	roster kernel factions: Give my units or cards to the opponent with Put into play for free: wrong: Rosa spawns an opponent-faction copy on the opposite row; Joachim plays your own top unit. Nothing pas
+monster_train	Wyldenten	roster (kernel factions)	roster kernel factions: Mark a target for later hits with Position and space: right
+monster_train	Icy Cilophyte	roster (kernel factions)	roster kernel factions: Mark a target for later hits with Position and space: right
+inscryption	Hydra	roster (kernel factions)	roster kernel factions: Reaches other lanes with More or faster base resource (ramp): wrong: Texts show only keyword names; neither card states lane reach or extra resources, so no link.
+inscryption	Raccoon	roster (kernel factions)	roster kernel factions: Reaches other lanes with More or faster base resource (ramp): wrong: Texts show only keyword names; neither card states lane reach or extra resources, so no link.
+runeterra	The List	roster (library suspects)	"Challenging" a Vulnerable enemy is Challenger, target_choice, not forced_attack
+runeterra	Shadowstep	roster (library suspects)	free attack Challenging an enemy is Challenger, target_choice, not forced_attack
+runeterra	Cataclysm	roster (library suspects)	free attack Challenging an enemy is Challenger, target_choice, not forced_attack; the second card of that name is a damage card, unrelated
+inscryption	Bifurcated Strike	roster (library suspects)	hits the neighbouring lanes: adjacency, not cross_lane
+inscryption	Trifurcated Strike	roster (library suspects)	hits the neighbouring lanes plus its own: adjacency, not cross_lane
+inscryption	Scavenger	roster (library suspects)	enemy deaths give Bones: base_resource_gain is right
+runeterra	Anivia	roster (library suspects)	real revive plus transform into Eggnivia; correct
+monster_train	Bog Chrysalis	roster (library suspects)	Shell 5, Hatch: summon 2 Bog Fly; hatching is a transform, not a summon
+monster_train	Kinhost Vessel	roster (library suspects)	Shell 8, Hatch: summon Kinhost Pupa; hatching is a transform, not a summon
+monster_train	Bogdeep Cocoon	roster (library suspects)	Shell 12, Hatch: summon Bog Wurmling; hatching is a transform, not a summon
+into_the_breach	Spiderling Egg	roster (library suspects)	hatch is kill self + summon Spiderling; hatching is a transform
+into_the_breach	Spider	roster (library suspects)	throws an egg that hatches into a Spiderling; the egg is a real summon
+into_the_breach	Alpha Spider	roster (library suspects)	same as Spider; the egg is a real summon
+into_the_breach	Spider Leader	roster (library suspects)	throws Spiderling eggs; the eggs are a real summon
+into_the_breach	Arachnid Psion	roster (library suspects)	other Vek spawn a Spiderling Egg on death; a real summon of eggs
+gwent	Harpy Egg	roster (library suspects)	text says Spawn, not hatch; summon is right
+duelyst	Young Silithar	roster (library suspects)	only Rebirth; revive came from the Rebirth keyword's concept, wrong: hatching is a transform
+duelyst	Chrysalis Egg	roster (library suspects)	no text, no rows
+duelyst	Megapenti	roster (library suspects)	gives Rebirth; revive came from the same keyword concept
+duelyst	Chrysalis Burst	roster (library suspects)	summons Eggs; summon is right
+duelyst	Juggernaut	roster (library suspects)	summons Golem Eggs when damaged; summon is right
+duelyst	Wild Inceptor	roster (library suspects)	hatches a friendly Egg: transform, right
+gwent	Phoenix	roster (library suspects)	spawns Phoenix Hatchling: summon, not hatching; right
+stormbound	Broodmother Qordia	roster (library suspects)	spawns Nests: summon is right; the hatching is the Nests'
+monster_train	Accelerated Incubation	roster (library suspects)	removes Shell from Eggs; no summon, no revive; right
+duelyst	Morin-Khur	roster (library suspects)	hatches all Eggs: transform, right
+stormbound	Qordia’s Nest	roster (library suspects)	hatches and spawns a Dragon: tagged summon, should be transform
+stormbound	Prime Oracle Bragda	roster (library suspects)	matched a search for "hatch" by a word fragment; nothing about eggs
+monster_train	Furnace Tap	roster (library suspects)	Emberdrain on a unit; overload_debt is right
+monster_train	Void Binding	roster (library suspects)	Emberdrain on a chosen unit; overload_debt is right
+runeterra	Sivir (level 2)	roster (library suspects)	"attacking allies have my keywords": shares its keywords
+runeterra	Zed (level 2)	roster (library suspects)	gives its keywords to Living Shadow: shares
+runeterra	Luminosprite	roster (library suspects)	gives its positive keywords to the supported ally: shares
+runeterra	Mechanized Mimic	roster (library suspects)	takes allies' keywords: a taker, "passes to its allies" lines are wrong
+runeterra	Breakneck Husk	roster (library suspects)	kills itself to grant a played ally its keywords: shares
+runeterra	Mask Mother	roster (library suspects)	takes an ally's keywords: a taker
+stormbound	Timber Alchemists	roster (library suspects)	steals statuses from friendly units: a taker
+duelyst	Sarlac the Eternal	roster (library suspects)	Dying Wish re-summons itself at once: cheat_death is right
+into_the_breach	Spawner	roster (library suspects)	spawns two Medium Goos on death, not itself: cheat_death looks wrong
+monster_train	Spikedriver Colony	roster (library suspects)	adds a copy of itself to the discard pile: not a come-back, cheat_death is wrong
+gwent	Seize	roster (library suspects)	takes an enemy unit; removing Spying is not donate
+gwent	Mage Infiltrator	roster (library suspects)	returns itself home; removing Spying is not donate
+gwent	Count Caldwell	roster (library suspects)	returns itself home; removing Spying is not donate
+into_the_breach	Harold Schmidt	roster (library suspects)	real heal trigger; linked only through its push
+into_the_breach	Flame Thrower	roster (library suspects)	pushes and sets Fire, real damage over time; its link is only the line
+into_the_breach	Aegon Mortar	roster (library suspects)	pushes and damages two tiles; its link is the line
+faeria	Flame Thrower	roster (library suspects)	read by its name by mistake; 1 damage to all enemies
+gwent	Havfrue Singer	roster (library suspects)	real heal trigger; its link is its summon row
+duelyst	Sunriser	roster (library suspects)	real heal trigger, 2 damage to nearby enemies; its link is the position
+duelyst	Lightbender	roster (library suspects)	dispels all spaces around it, both sides: my units moved there is no help (read a second time by mistake)
+duelyst	Sunset Paragon	roster (library suspects)	all nearby minions damage themselves, both sides: my units put there is no help
+duelyst	Aperion's Claim	roster (library suspects)	destroys all in 3x3, both sides: my units put there is no help
+duelyst	Glacial Fissure	roster (library suspects)	8 damage to everything in the centre column, both sides: my units put there is no help
+stormbound	Witches of the Wild	roster (library suspects)	drains all bordering units, mine included: my units put there is no help
+stormbound	Spellbinder Zhevana	roster (library suspects)	hits frozen units in front: only enemies gain from being put there
+stormbound	Conflicted Drakes	roster (library suspects)	hits all non-Dragon units in front, mine included (read a second time by mistake)
+marvel_snap	Enchantress	roster (library suspects)	silences all Ongoing cards here, both sides: my cards put there is no help

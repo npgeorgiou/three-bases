@@ -1,6 +1,6 @@
 """A faction from one or two concepts, made from what real decks play, never from step 3's groups.
-python3 factions/wheel/work/make_faction.py "attach" ["discard"]  -> prints the faction and writes it to
-factions/wheel/work/made/<concepts>.md. A concept is named by its key or by words of its plain name. The decks and their
+python3 factions/roster/work/make_faction.py "attach" ["discard"]  -> prints the faction and writes it to
+factions/roster/work/made/<concepts>.md. A concept is named by its key or by words of its plain name. The decks and their
 scores come from step 3's json (step3_groups.FILE).
 1. Each named concept: the decks that lean on it (score above the strong mark).
 2. Its two archetypes: with two concepts, the decks of each make one archetype; with one, its decks are split into the two

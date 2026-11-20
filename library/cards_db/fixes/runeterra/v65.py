@@ -1,4 +1,4 @@
-"""Runeterra records, 18 Nov 2026 (v65), wheel probe fixes; safe to run twice.
+"""Runeterra records, 18 Nov 2026 (v65), roster probe fixes; safe to run twice.
 - Flow ("activates at Round Start if you played 2+ spells or skills last round") was keyword_condition Flow, which links to nothing:
   now event_count played spells/skills (mine) ge 2, span last_round (the shape of the 6/12 spells counts, with last_round).
 - Curious Shellfolk: "non-champion card" was lost: the event's object is now a non-champion card of mine.

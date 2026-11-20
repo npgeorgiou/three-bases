@@ -1,4 +1,4 @@
-"""Gwent records, 18 Nov 2026 (v86), wheel probe fixes; safe to run twice.
+"""Gwent records, 18 Nov 2026 (v86), roster probe fixes; safe to run twice.
 - Stockpile: "each non-Neutral unit on that row" had no target on the Cooldown step: now units of mine on the summoned unit's row, region not Neutral.
 - Whoreson Senior: Tribute 3 replaces the single transform: the single transform now holds only when Tribute is not paid (as Blindeye Apothecary);
   the Tribute ability spends 3 and transforms both neighbours."""

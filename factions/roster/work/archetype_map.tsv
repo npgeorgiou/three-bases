@@ -575,154 +575,154 @@ G17	Create new cards	generate_cards	Sacrifice my own units	sacrifice	1.47	0.96	6
 G17	Sacrifice my own units	sacrifice	Transform my card into another	transform	1.51	0.9	6	3	waits: kills it for its death effect	duelyst: Darkfire Sacrifice + Horror Burster	
 G17	Sacrifice my own units	sacrifice	Destroys itself / temporary unit	self_destruct	2.39	1.78	6	3	type: makes your units die: {B} brings them back	runeterra: The Iron Conquest + Undying Revenge	
 G17	Destroys itself / temporary unit	self_destruct	Act the turn it arrives (haste, rush)	haste	0.98	1.51	2	2.46	type: uses a keyword or status	gwent: Necromancer's Tome + Call of the Depths	
-FA	core	damage_reduction	core	shield	0.39	3.94	1	2.15	type: targets your cards	runeterra: Sacred Protector + Camphor, the Doubt	
-FA	core	damage_reduction	core	regeneration		1.93	1	1.0	waits: targets your cards	gwent: Armorer's Workshop + Prism Pendant	
-FA	core	damage_reduction	core	defence_gain	2.52	1.05	3	3	type: changes its stats for its effect	runeterra: Reaver's Row + Pouty Poro	
-FA	core	damage_reduction	core	block_armor		3.48	0	0			decks only
-FA	core	damage_reduction	engine	attack_gain	1.42	1.12	3	3	type: changes its stats for its effect	runeterra: Reaver's Row + Pouty Poro	
-FA	core	damage_reduction	engine	permanent_growth	2.17	1.13	3	3	waits: more health or protection: survives damage	faeria: Gabrian Warden + Unlikely Hero	
-FA	core	damage_reduction	engine	multi_attack		1.63	1	1.48	waits: damages it for its effect	runeterra: King Jarvan III + Kalista (level 2)	
-FA	core	heal	core	regeneration	0.13	2.76	2	1.48	type: changes its stats for its effect	runeterra: Hearthblood Mender + Pouty Poro	
-FA	core	heal	engine	attack_gain	1.31	0.82	5	3	stronger: more health	runeterra: Redoubled Valor + Illaoi (level 2)	
-FA	core	heal	engine	permanent_growth	1.31	0.92	5	3	waits: more health or protection: survives damage	runeterra: Redoubled Valor + Scarthane Steffen	
-FA	core	heal	engine	multi_attack	1.24	0.79	2	2.43	type: helps it hit the enemy player	runeterra: Champions' Strength + Citrus Courier	about the player
-FA	core	shield	core	defence_gain	1.34	1.06	4	3	type: changes its stats for its effect	gwent: Shieldwall + Windhalm of Attre	
-FA	core	shield	engine	attack_gain	1.25	1.09	5	3	type: changes its stats for its effect	gwent: Shieldwall + Windhalm of Attre	
-FA	core	shield	engine	taunt		1.34	3	3	stronger: keeps it alive in the fights it takes on	gwent: Watchman + Donimir of Troy	
-FA	core	shield	engine	multi_attack	1.22	1.68	2	2.54	type: makes your units get Barrier	runeterra: Riposte + Sacred Protector	
-FA	core	regeneration	core	defence_gain	1.7	1.45	5	3	type: changes its stats for its effect	runeterra: Reaver's Row + Pouty Poro	
-FA	core	regeneration	engine	attack_gain	1.67	1.35	5	3	type: changes its stats for its effect	runeterra: Reaver's Row + Pouty Poro	
-FA	core	regeneration	engine	taunt		1.78	1	2.2	stronger: keeps it alive in the fights it takes on	gwent: Inspirational Ballad + Figgis Merluzzo	
-FA	core	regeneration	engine	permanent_growth	0.96	1.54	4	2.97	type: changes its stats for its effect	runeterra: Aberrant Mageseeker + Pouty Poro	
-FA	core	regeneration	engine	multi_attack		2.15	2	1.6	type: {A} moves your units, and {B} acts on units around it	duelyst: Lionize + Lux Ignis	
-FA	core	regeneration	engine	stat_condition	0.27	2.71	1	2.18	type: gives it Armor for its effect	gwent: Mantlet + Mahakam Marauder	
-FA	core	defence_gain	core	block_armor	1.37	0.94	2	3	type: changes its stats for its effect	gwent: Inspirational Ballad + Covenant of Steel	
-FA	core	defence_gain	engine	attack_gain	1.64	1.42	6	3	stronger: more health	runeterra: Encroaching Shadows + Rainbowfish (created)	
-FA	core	defence_gain	engine	taunt	8.73	1.03	2	3	stronger: can give it more power and health	duelyst: Cosmic Flesh + Golden Justicar	
-FA	core	defence_gain	engine	stat_condition	9.1	1.76	2	3	type: changes its stats for its effect	gwent: The Maiden's Shield + Bronwen the Bold	
-FA	core	block_armor	engine	attack_gain	1.76	1.07	2	3	type: changes its stats for its effect	gwent: Inspirational Ballad + Covenant of Steel	
-FA	core	block_armor	engine	taunt		1.52	1	2.54	stronger: keeps it alive in the fights it takes on	gwent: Dwarven Agitator + Figgis Merluzzo	
-FA	core	block_armor	engine	stat_condition	2.94	1.86	1	3	type: gives it Armor for its effect	gwent: Mahakam Forge + Mahakam Marauder	
+FA	kernel	damage_reduction	kernel	shield	0.39	3.94	1	2.15	type: targets your cards	runeterra: Sacred Protector + Camphor, the Doubt	
+FA	kernel	damage_reduction	kernel	regeneration		1.93	1	1.0	waits: targets your cards	gwent: Armorer's Workshop + Prism Pendant	
+FA	kernel	damage_reduction	kernel	defence_gain	2.52	1.05	3	3	type: changes its stats for its effect	runeterra: Reaver's Row + Pouty Poro	
+FA	kernel	damage_reduction	kernel	block_armor		3.48	0	0			decks only
+FA	kernel	damage_reduction	engine	attack_gain	1.42	1.12	3	3	type: changes its stats for its effect	runeterra: Reaver's Row + Pouty Poro	
+FA	kernel	damage_reduction	engine	permanent_growth	2.17	1.13	3	3	waits: more health or protection: survives damage	faeria: Gabrian Warden + Unlikely Hero	
+FA	kernel	damage_reduction	engine	multi_attack		1.63	1	1.48	waits: damages it for its effect	runeterra: King Jarvan III + Kalista (level 2)	
+FA	kernel	heal	kernel	regeneration	0.13	2.76	2	1.48	type: changes its stats for its effect	runeterra: Hearthblood Mender + Pouty Poro	
+FA	kernel	heal	engine	attack_gain	1.31	0.82	5	3	stronger: more health	runeterra: Redoubled Valor + Illaoi (level 2)	
+FA	kernel	heal	engine	permanent_growth	1.31	0.92	5	3	waits: more health or protection: survives damage	runeterra: Redoubled Valor + Scarthane Steffen	
+FA	kernel	heal	engine	multi_attack	1.24	0.79	2	2.43	type: helps it hit the enemy player	runeterra: Champions' Strength + Citrus Courier	about the player
+FA	kernel	shield	kernel	defence_gain	1.34	1.06	4	3	type: changes its stats for its effect	gwent: Shieldwall + Windhalm of Attre	
+FA	kernel	shield	engine	attack_gain	1.25	1.09	5	3	type: changes its stats for its effect	gwent: Shieldwall + Windhalm of Attre	
+FA	kernel	shield	engine	taunt		1.34	3	3	stronger: keeps it alive in the fights it takes on	gwent: Watchman + Donimir of Troy	
+FA	kernel	shield	engine	multi_attack	1.22	1.68	2	2.54	type: makes your units get Barrier	runeterra: Riposte + Sacred Protector	
+FA	kernel	regeneration	kernel	defence_gain	1.7	1.45	5	3	type: changes its stats for its effect	runeterra: Reaver's Row + Pouty Poro	
+FA	kernel	regeneration	engine	attack_gain	1.67	1.35	5	3	type: changes its stats for its effect	runeterra: Reaver's Row + Pouty Poro	
+FA	kernel	regeneration	engine	taunt		1.78	1	2.2	stronger: keeps it alive in the fights it takes on	gwent: Inspirational Ballad + Figgis Merluzzo	
+FA	kernel	regeneration	engine	permanent_growth	0.96	1.54	4	2.97	type: changes its stats for its effect	runeterra: Aberrant Mageseeker + Pouty Poro	
+FA	kernel	regeneration	engine	multi_attack		2.15	2	1.6	type: {A} moves your units, and {B} acts on units around it	duelyst: Lionize + Lux Ignis	
+FA	kernel	regeneration	engine	stat_condition	0.27	2.71	1	2.18	type: gives it Armor for its effect	gwent: Mantlet + Mahakam Marauder	
+FA	kernel	defence_gain	kernel	block_armor	1.37	0.94	2	3	type: changes its stats for its effect	gwent: Inspirational Ballad + Covenant of Steel	
+FA	kernel	defence_gain	engine	attack_gain	1.64	1.42	6	3	stronger: more health	runeterra: Encroaching Shadows + Rainbowfish (created)	
+FA	kernel	defence_gain	engine	taunt	8.73	1.03	2	3	stronger: can give it more power and health	duelyst: Cosmic Flesh + Golden Justicar	
+FA	kernel	defence_gain	engine	stat_condition	9.1	1.76	2	3	type: changes its stats for its effect	gwent: The Maiden's Shield + Bronwen the Bold	
+FA	kernel	block_armor	engine	attack_gain	1.76	1.07	2	3	type: changes its stats for its effect	gwent: Inspirational Ballad + Covenant of Steel	
+FA	kernel	block_armor	engine	taunt		1.52	1	2.54	stronger: keeps it alive in the fights it takes on	gwent: Dwarven Agitator + Figgis Merluzzo	
+FA	kernel	block_armor	engine	stat_condition	2.94	1.86	1	3	type: gives it Armor for its effect	gwent: Mahakam Forge + Mahakam Marauder	
 FA	engine	attack_gain	engine	taunt	4.58	1.05	2	3	stronger: can give it more power and health	duelyst: Cosmic Flesh + Golden Justicar	
 FA	engine	attack_gain	engine	multi_attack	1.27	1.03	3	3	type: changes its stats for its effect	runeterra: Bayou Brunch + Kayle (level 2)	
 FA	engine	attack_gain	engine	stat_condition	8.75	1.62	2	3	type: changes its stats for its effect	gwent: The Maiden's Shield + Bronwen the Bold	
 FA	engine	taunt	engine	multi_attack		1.81	1	1.6	type: {A} moves your units, and {B} acts on units around it	duelyst: Lionize + Wood-Wen	
 FA	engine	permanent_growth	engine	stat_condition	1.89	1.43	2	3	type: changes its stats for its effect	runeterra: Ornn (level 2) + Kayle (level 2)	
-FB	core	destroy	core	damage	1.35	1.05	6	3	waits: damages units or players (for the ability it gives)	duelyst: Spell Damge + Deathstrike Seal	about the player
-FB	core	destroy	core	aoe_damage	1.43	1.09	6	3	waits: kills it for its death effect	duelyst: Circle of Desiccation + Gnasher	about the player
-FB	core	destroy	core	ping	1.66	0.88	5	3	type: damages enemy units or players: {B} kills them	gwent: Holger Blackhand + Junod of Belhaven	about the player
-FB	core	destroy	engine	board_clog	1.66	1.9	3	2.8	waits: kills it for its death effect	gwent: Scorch + Noonwraith	
-FB	core	destroy	engine	steal	0.51	1.72	2	2.2	waits: kills it for its death effect	gwent: Scorch + Miruna	
-FB	core	destroy	engine	death_count	11.55	1.57	6	3	type: makes your units die	marvel_snap: Killmonger + Archangel Horseman of Death	
-FB	core	destroy	engine	friendly_fire	1.24	1.6	5	3	type: damages enemy units or players: {B} kills them	duelyst: Blistering Skorn + Punish	about the player
-FB	core	destroy	engine	level_up	2.01	0.9	1	3	levels: makes your units die (levels it up)	runeterra: Overgrown Snapvine + Maokai	
-FB	core	banish	core	bounce_enemy		1.36	2	2.18	waits: returns it to hand: its Play or summon effect goes off again	duelyst: Hailstone Prison + Dagona	
-FB	core	banish	engine	board_clog		1.54	0	0			decks only
-FB	core	banish	engine	steal		2.0	0	0			decks only
-FB	core	banish	engine	death_count		2.52	1	1.48	type: puts units into play	runeterra: The Undying + Passage Unearned	
-FB	core	banish	engine	friendly_fire	0.34	1.84	1	2.15	type: makes enemy units die: {B} Banishes them	gwent: Scorch + Bleeding Effigy	
-FB	core	damage	core	aoe_damage	1.33	1.53	8	3	type: damages enemy units or players	gwent: Regis + Madman Lugos	
-FB	core	damage	core	bounce_enemy	1.31	0.72	3	3	waits: returns it to hand: its Play or summon effect goes off again	duelyst: Hailstone Prison + Frostbone Naga	
-FB	core	damage	core	ping	1.26	1.54	7	3	stronger: its damage gets 1 more	gwent: Ulula + Svalblod Ravager	
-FB	core	damage	engine	board_clog	2.15	1.12	2	3	type: damages enemy units or players	gwent: Telianyn aep Collen + Zoltan: Warrior	
-FB	core	damage	engine	steal	2.15	0.91	2	3	type: damages the enemy player	runeterra: Ebb + Pilfered Goods	about the player
-FB	core	damage	engine	on_lifegain	1.21	1.47	4	3	type: damages your units or players	runeterra: Vladimir (level 2) + Soraka (level 2)	about the player
-FB	core	damage	engine	death_count	4.69	1.12	5	3	type: makes your units die	runeterra: The Syren + Black Spear	
-FB	core	damage	engine	friendly_fire	1.24	1.35	8	3	type: damages enemy units or players	gwent: Regis + Madman Lugos	
-FB	core	damage	engine	level_up	2.78	1.0	1	3	levels: damages units or players (levels it up)	runeterra: The Leviathan + Swain	about the player
-FB	core	aoe_damage	core	bounce_enemy	2.23	0.88	2	2.57	waits: returns it to hand: its Play or summon effect goes off again	duelyst: Hailstone Prison + Frostbone Naga	
-FB	core	aoe_damage	core	ping	1.7	1.42	7	3	stronger: its damage gets 1 more	gwent: Ulula + Hemdall	
-FB	core	aoe_damage	engine	board_clog	3.96	1.4	2	2.92	type: damages enemy units or players	gwent: Ocvist + Zoltan: Warrior	
-FB	core	aoe_damage	engine	steal	2.45	1.08	3	2.94	type: damages the enemy player	runeterra: Magnum Opus + Pilfered Goods	about the player
-FB	core	aoe_damage	engine	on_lifegain	2.87	1.74	4	2.99	type: damages your units or players	runeterra: Vladimir (level 2) + Soraka (level 2)	about the player
-FB	core	aoe_damage	engine	death_count	8.95	1.25	5	3	type: makes your units die	runeterra: Wise Fry + Xolaani the Bloodweaver	
-FB	core	aoe_damage	engine	friendly_fire	1.25	1.82	8	3	type: damages enemy units or players	gwent: Svalblod + Sove	
-FB	core	aoe_damage	engine	level_up	2.52	0.94	1	3	levels: damages units or players (levels it up)	runeterra: Magnum Opus + Volibear	about the player
-FB	core	bounce_enemy	engine	steal		3.32	2	1.9	waits: returns it to hand: its Play or summon effect goes off again	duelyst: Hailstone Prison + Zen'Rui, the Blightspawned	
-FB	core	bounce_enemy	engine	level_up	2.8	0.95	1	2.92	levels: returns units to hand (levels it up)	runeterra: Tag Out! + Yasuo	
-FB	core	ping	engine	board_clog	1.3	2.28	2	2.66	type: damages enemy units or players	gwent: Ocvist + Zoltan: Warrior	about the player
-FB	core	ping	engine	steal	5.82	1.44	3	3	type: damages the enemy player	runeterra: Citybreaker + Pilfered Goods	about the player
-FB	core	ping	engine	on_lifegain	2.96	0.85	3	2.97	type: damages your units or players	runeterra: Vladimir (level 2) + Soraka (level 2)	
-FB	core	ping	engine	death_count	7.43	2.65	4	3	type: makes units die	stormbound: Copperskin Ranger + Marked as Prey	
-FB	core	ping	engine	friendly_fire	1.39	1.96	6	3	stronger: its damage gets 1 more	gwent: Ulula + Knut the Callous	
-FB	core	ping	engine	level_up	3.02	1.04	1	3	levels: damages units or players (levels it up)	runeterra: The Leviathan + Swain	about the player
+FB	kernel	destroy	kernel	damage	1.35	1.05	6	3	waits: damages units or players (for the ability it gives)	duelyst: Spell Damge + Deathstrike Seal	about the player
+FB	kernel	destroy	kernel	aoe_damage	1.43	1.09	6	3	waits: kills it for its death effect	duelyst: Circle of Desiccation + Gnasher	about the player
+FB	kernel	destroy	kernel	ping	1.66	0.88	5	3	type: damages enemy units or players: {B} kills them	gwent: Holger Blackhand + Junod of Belhaven	about the player
+FB	kernel	destroy	engine	board_clog	1.66	1.9	3	2.8	waits: kills it for its death effect	gwent: Scorch + Noonwraith	
+FB	kernel	destroy	engine	steal	0.51	1.72	2	2.2	waits: kills it for its death effect	gwent: Scorch + Miruna	
+FB	kernel	destroy	engine	death_count	11.55	1.57	6	3	type: makes your units die	marvel_snap: Killmonger + Archangel Horseman of Death	
+FB	kernel	destroy	engine	friendly_fire	1.24	1.6	5	3	type: damages enemy units or players: {B} kills them	duelyst: Blistering Skorn + Punish	about the player
+FB	kernel	destroy	engine	level_up	2.01	0.9	1	3	levels: makes your units die (levels it up)	runeterra: Overgrown Snapvine + Maokai	
+FB	kernel	banish	kernel	bounce_enemy		1.36	2	2.18	waits: returns it to hand: its Play or summon effect goes off again	duelyst: Hailstone Prison + Dagona	
+FB	kernel	banish	engine	board_clog		1.54	0	0			decks only
+FB	kernel	banish	engine	steal		2.0	0	0			decks only
+FB	kernel	banish	engine	death_count		2.52	1	1.48	type: puts units into play	runeterra: The Undying + Passage Unearned	
+FB	kernel	banish	engine	friendly_fire	0.34	1.84	1	2.15	type: makes enemy units die: {B} Banishes them	gwent: Scorch + Bleeding Effigy	
+FB	kernel	damage	kernel	aoe_damage	1.33	1.53	8	3	type: damages enemy units or players	gwent: Regis + Madman Lugos	
+FB	kernel	damage	kernel	bounce_enemy	1.31	0.72	3	3	waits: returns it to hand: its Play or summon effect goes off again	duelyst: Hailstone Prison + Frostbone Naga	
+FB	kernel	damage	kernel	ping	1.26	1.54	7	3	stronger: its damage gets 1 more	gwent: Ulula + Svalblod Ravager	
+FB	kernel	damage	engine	board_clog	2.15	1.12	2	3	type: damages enemy units or players	gwent: Telianyn aep Collen + Zoltan: Warrior	
+FB	kernel	damage	engine	steal	2.15	0.91	2	3	type: damages the enemy player	runeterra: Ebb + Pilfered Goods	about the player
+FB	kernel	damage	engine	on_lifegain	1.21	1.47	4	3	type: damages your units or players	runeterra: Vladimir (level 2) + Soraka (level 2)	about the player
+FB	kernel	damage	engine	death_count	4.69	1.12	5	3	type: makes your units die	runeterra: The Syren + Black Spear	
+FB	kernel	damage	engine	friendly_fire	1.24	1.35	8	3	type: damages enemy units or players	gwent: Regis + Madman Lugos	
+FB	kernel	damage	engine	level_up	2.78	1.0	1	3	levels: damages units or players (levels it up)	runeterra: The Leviathan + Swain	about the player
+FB	kernel	aoe_damage	kernel	bounce_enemy	2.23	0.88	2	2.57	waits: returns it to hand: its Play or summon effect goes off again	duelyst: Hailstone Prison + Frostbone Naga	
+FB	kernel	aoe_damage	kernel	ping	1.7	1.42	7	3	stronger: its damage gets 1 more	gwent: Ulula + Hemdall	
+FB	kernel	aoe_damage	engine	board_clog	3.96	1.4	2	2.92	type: damages enemy units or players	gwent: Ocvist + Zoltan: Warrior	
+FB	kernel	aoe_damage	engine	steal	2.45	1.08	3	2.94	type: damages the enemy player	runeterra: Magnum Opus + Pilfered Goods	about the player
+FB	kernel	aoe_damage	engine	on_lifegain	2.87	1.74	4	2.99	type: damages your units or players	runeterra: Vladimir (level 2) + Soraka (level 2)	about the player
+FB	kernel	aoe_damage	engine	death_count	8.95	1.25	5	3	type: makes your units die	runeterra: Wise Fry + Xolaani the Bloodweaver	
+FB	kernel	aoe_damage	engine	friendly_fire	1.25	1.82	8	3	type: damages enemy units or players	gwent: Svalblod + Sove	
+FB	kernel	aoe_damage	engine	level_up	2.52	0.94	1	3	levels: damages units or players (levels it up)	runeterra: Magnum Opus + Volibear	about the player
+FB	kernel	bounce_enemy	engine	steal		3.32	2	1.9	waits: returns it to hand: its Play or summon effect goes off again	duelyst: Hailstone Prison + Zen'Rui, the Blightspawned	
+FB	kernel	bounce_enemy	engine	level_up	2.8	0.95	1	2.92	levels: returns units to hand (levels it up)	runeterra: Tag Out! + Yasuo	
+FB	kernel	ping	engine	board_clog	1.3	2.28	2	2.66	type: damages enemy units or players	gwent: Ocvist + Zoltan: Warrior	about the player
+FB	kernel	ping	engine	steal	5.82	1.44	3	3	type: damages the enemy player	runeterra: Citybreaker + Pilfered Goods	about the player
+FB	kernel	ping	engine	on_lifegain	2.96	0.85	3	2.97	type: damages your units or players	runeterra: Vladimir (level 2) + Soraka (level 2)	
+FB	kernel	ping	engine	death_count	7.43	2.65	4	3	type: makes units die	stormbound: Copperskin Ranger + Marked as Prey	
+FB	kernel	ping	engine	friendly_fire	1.39	1.96	6	3	stronger: its damage gets 1 more	gwent: Ulula + Knut the Callous	
+FB	kernel	ping	engine	level_up	3.02	1.04	1	3	levels: damages units or players (levels it up)	runeterra: The Leviathan + Swain	about the player
 FB	engine	board_clog	engine	steal		4.62	0	0			decks only
 FB	engine	board_clog	engine	friendly_fire	2.4	1.57	3	2.96	waits: kills it for its death effect	gwent: Scorch + Noonwraith	
 FB	engine	on_lifegain	engine	friendly_fire	8.56	3.74	3	3	type: damages your units or players	runeterra: Vladimir (level 2) + Soraka (level 2)	about the player
 FB	engine	death_count	engine	friendly_fire	13.88	2.23	6	3	type: makes your units die	marvel_snap: Killmonger + Archangel Horseman of Death	
 FB	engine	friendly_fire	engine	level_up	3.41	0.99	1	3	levels: makes your units die (levels it up)	runeterra: Undergrowth + Maokai	
-FC	core	silence	core	disable		3.42	0	0			decks only
-FC	core	silence	engine	repeat_trigger	3.03	0.9	2	2.85	repeats: repeats its On Reveal effects	marvel_snap: Misery + Snowguard Hawk	
-FC	core	silence	engine	count_payoff		1.79	3	2.45	cheaper: targets your cards	runeterra: The Maker + Arbiter of the Peak	
-FC	core	silence	engine	level_up		0.96	1	2.66	levels: targets your cards (levels it up)	runeterra: The Maker + Pantheon	
-FC	core	stat_loss	engine	repeat_trigger	1.65	1.63	3	3	repeats: repeats its On Reveal effects	marvel_snap: Misery + Selene	
-FC	core	stat_loss	engine	level_up	2.4	0.97	1	3	levels: changes enemy units' stats (levels it up)	runeterra: Icevale Archer + Ashe	
-FC	core	junk_cards	core	hand_disruption		3.33	0	0			decks only
-FC	core	junk_cards	core	debuff		1.95	1	1.0	type: makes units get Trap	runeterra: Test of Spirit + Caitlyn (level 2)	
-FC	core	junk_cards	engine	repeat_trigger	1.28	1.18	2	2.45	repeats: repeats its On Reveal effects	marvel_snap: Misery + Korg	
-FC	core	junk_cards	engine	count_payoff	1.97	0.95	1	2.97	type: creates cards	runeterra: Advanced Intel + Sump Fumes	
-FC	core	junk_cards	engine	level_up	2.14	0.97	1	3	levels: through Flashbomb Trap: makes your units die (levels it up)	runeterra: Flashbomb Peddler + Mordekaiser	
-FC	core	hand_disruption	engine	count_payoff		1.64	2	2.63	type: makes you draw cards	runeterra: Yordle Grifter + Sump Fumes	
-FC	core	debuff	engine	count_payoff	1.38	0.7	4	2.54	type: makes units get a keyword or status	runeterra: Deathgrasp Cultist + Legion General	
-FC	core	disable	engine	count_payoff	1.91	4.24	4	3	levels: makes units get Stun (levels it up)	runeterra: Windswept Hillock + Yasuo	
+FC	kernel	silence	kernel	disable		3.42	0	0			decks only
+FC	kernel	silence	engine	repeat_trigger	3.03	0.9	2	2.85	repeats: repeats its On Reveal effects	marvel_snap: Misery + Snowguard Hawk	
+FC	kernel	silence	engine	count_payoff		1.79	3	2.45	cheaper: targets your cards	runeterra: The Maker + Arbiter of the Peak	
+FC	kernel	silence	engine	level_up		0.96	1	2.66	levels: targets your cards (levels it up)	runeterra: The Maker + Pantheon	
+FC	kernel	stat_loss	engine	repeat_trigger	1.65	1.63	3	3	repeats: repeats its On Reveal effects	marvel_snap: Misery + Selene	
+FC	kernel	stat_loss	engine	level_up	2.4	0.97	1	3	levels: changes enemy units' stats (levels it up)	runeterra: Icevale Archer + Ashe	
+FC	kernel	junk_cards	kernel	hand_disruption		3.33	0	0			decks only
+FC	kernel	junk_cards	kernel	debuff		1.95	1	1.0	type: makes units get Trap	runeterra: Test of Spirit + Caitlyn (level 2)	
+FC	kernel	junk_cards	engine	repeat_trigger	1.28	1.18	2	2.45	repeats: repeats its On Reveal effects	marvel_snap: Misery + Korg	
+FC	kernel	junk_cards	engine	count_payoff	1.97	0.95	1	2.97	type: creates cards	runeterra: Advanced Intel + Sump Fumes	
+FC	kernel	junk_cards	engine	level_up	2.14	0.97	1	3	levels: through Flashbomb Trap: makes your units die (levels it up)	runeterra: Flashbomb Peddler + Mordekaiser	
+FC	kernel	hand_disruption	engine	count_payoff		1.64	2	2.63	type: makes you draw cards	runeterra: Yordle Grifter + Sump Fumes	
+FC	kernel	debuff	engine	count_payoff	1.38	0.7	4	2.54	type: makes units get a keyword or status	runeterra: Deathgrasp Cultist + Legion General	
+FC	kernel	disable	engine	count_payoff	1.91	4.24	4	3	levels: makes units get Stun (levels it up)	runeterra: Windswept Hillock + Yasuo	
 FC	engine	repeat_trigger	engine	count_payoff	1.41	1.42	3	2.72	repeats: repeats its On Reveal effects	marvel_snap: Misery + Shou-Lao the Undying	
-FD	core	placement_rules	core	swap		1.83	1	1.48	type: {A} moves {B} and your units, and {B} acts on units in its lane	marvel_snap: Lockjaw + Professor X	
-FD	core	placement_rules	engine	card_presence_condition	2.34	1.07	3	2.79	type: has Spying	gwent: Mage Infiltrator + Angry Mob	
-FD	core	placement_rules	engine	donate		4.19	0	0			decks only
-FD	core	movement	core	forced_movement	3.01	3.07	7	3	type: {A} moves units, and {B} acts on units in a line from it	into_the_breach: Thermal Discharger + Flame Thrower	
-FD	core	movement	core	terrain	1.58	0.9	4	3	waits: moves it for its effect	faeria: Shifting Tide + Monstrous Hydra	
-FD	core	movement	core	positional	3.85	1.13	8	3	type: {A} moves units, and {B} acts on units in a line from it	into_the_breach: Prime Spear + Arachnoid Injector	
-FD	core	movement	core	swap	1.47	5.71	4	3	type: {A} moves units, and {B} acts on units next to it	into_the_breach: Aegon Mortar + Force Swap	
-FD	core	movement	engine	on_lifegain	1.56	0.93	4	2.95	type: {A} moves units, and {B} acts on units next to it	into_the_breach: Aegon Mortar + Harold Schmidt	
-FD	core	movement	engine	card_presence_condition	2.79	1.14	6	3	type: {A} moves {B}, and {B} acts on units in the back row or in the front row	gwent: Dol Dhu Lokke + Hybrid	
-FD	core	movement	engine	multi_target_attack	2.46	0.75	4	3	type: {A} moves enemy units, and {B} acts on units in a line from it	into_the_breach: Seismic Capacitor + Ricochet Rocket	
-FD	core	movement	engine	adjacency	3.39	1.44	8	3	type: {A} moves units, and {B} acts on units in a line from it	into_the_breach: Thermal Discharger + Flame Thrower	
-FD	core	forced_movement	core	terrain	2.06	1.27	4	3	moves: moves my units or land forward: they reach enemy ground	faeria: Shifting Tide + Monstrous Hydra	
-FD	core	forced_movement	core	positional	4.48	1.17	8	3	type: {A} moves units, and {B} acts on units in a line from it	into_the_breach: Prime Spear + Arachnoid Injector	
-FD	core	forced_movement	core	swap	1.86	0.8	3	3	type: {A} moves units, and {B} acts on units next to it	into_the_breach: Aegon Mortar + Force Swap	
-FD	core	forced_movement	engine	on_lifegain	2.13	0.79	4	2.97	type: {A} moves units, and {B} acts on units next to it	into_the_breach: Aegon Mortar + Harold Schmidt	
-FD	core	forced_movement	engine	card_presence_condition	2.06	1.1	5	3	type: {A} moves {B}, and {B} acts on units in the back row or in the front row	gwent: Paulie Dahlberg + Gabor Zigrin	
-FD	core	forced_movement	engine	multi_target_attack	3.55	0.86	2	3	type: {A} moves enemy units, and {B} acts on units in a line from it	into_the_breach: Seismic Capacitor + Ricochet Rocket	
-FD	core	forced_movement	engine	adjacency	5.42	1.22	7	3	type: {A} moves units, and {B} acts on units in a line from it	into_the_breach: Thermal Discharger + Flame Thrower	
-FD	core	terrain	core	positional	1.45	1.21	4	3	moves: moves it where it must be	faeria: Khalim's Training + Monstrous Hydra	
-FD	core	terrain	engine	on_lifegain		2.12	1	1.48	type: {A} cracks the ground (a hole once hit), and {B} pushes enemy units: a ground unit pushed into a hole dies	into_the_breach: Seismic Capacitor + Harold Schmidt	
-FD	core	terrain	engine	adjacency	1.61	1.21	4	3	type: {A} cracks the ground (a hole once hit), and {B} pushes enemy units: a ground unit pushed into a hole dies	into_the_breach: Seismic Capacitor + Ricochet Rocket	
-FD	core	terrain	engine	donate		1.72	0	0			decks only
-FD	core	positional	core	swap	2.53	0.96	4	3	type: {A} moves your units, and {B} acts on units in its lane	marvel_snap: Lockjaw + Spider Sense	
-FD	core	positional	engine	on_lifegain	1.21	1.02	4	3	type: {A} moves units, and {B} acts on units next to it	into_the_breach: Aegon Mortar + Harold Schmidt	
-FD	core	positional	engine	multi_target_attack	1.64	0.77	3	3	type: {A} moves enemy units, and {B} acts on units in a line from it	into_the_breach: Aegon Mortar + Ricochet Rocket	
-FD	core	positional	engine	adjacency	2.14	1.25	7	3	type: {A} moves units, and {B} acts on units in a line from it	into_the_breach: Prime Spear + Arachnoid Injector	
-FD	core	positional	engine	donate	1.26	0.94	4	3	type: {A} puts your units there, and {B} acts on units in its lane	marvel_snap: Malekith + Viper	
-FD	core	swap	engine	card_presence_condition	1.48	0.99	3	3	type: {A} moves {B}, and {B} acts on units in the back row or in the front row	gwent: Baccalà + Tourney Shaelmaar	
-FD	core	swap	engine	adjacency	2.45	2.02	4	3	type: {A} moves units, and {B} acts on units next to it	into_the_breach: Aegon Mortar + Force Swap	
-FD	core	swap	engine	donate		1.67	2	1.6	type: {A} moves your units, and {B} acts on units next to its target	gwent: Baccalà + Treason	
+FD	kernel	placement_rules	kernel	swap		1.83	1	1.48	type: {A} moves {B} and your units, and {B} acts on units in its lane	marvel_snap: Lockjaw + Professor X	
+FD	kernel	placement_rules	engine	card_presence_condition	2.34	1.07	3	2.79	type: has Spying	gwent: Mage Infiltrator + Angry Mob	
+FD	kernel	placement_rules	engine	donate		4.19	0	0			decks only
+FD	kernel	movement	kernel	forced_movement	3.01	3.07	7	3	type: {A} moves units, and {B} acts on units in a line from it	into_the_breach: Thermal Discharger + Flame Thrower	
+FD	kernel	movement	kernel	terrain	1.58	0.9	4	3	waits: moves it for its effect	faeria: Shifting Tide + Monstrous Hydra	
+FD	kernel	movement	kernel	positional	3.85	1.13	8	3	type: {A} moves units, and {B} acts on units in a line from it	into_the_breach: Prime Spear + Arachnoid Injector	
+FD	kernel	movement	kernel	swap	1.47	5.71	4	3	type: {A} moves units, and {B} acts on units next to it	into_the_breach: Aegon Mortar + Force Swap	
+FD	kernel	movement	engine	on_lifegain	1.56	0.93	4	2.95	type: {A} moves units, and {B} acts on units next to it	into_the_breach: Aegon Mortar + Harold Schmidt	
+FD	kernel	movement	engine	card_presence_condition	2.79	1.14	6	3	type: {A} moves {B}, and {B} acts on units in the back row or in the front row	gwent: Dol Dhu Lokke + Hybrid	
+FD	kernel	movement	engine	multi_target_attack	2.46	0.75	4	3	type: {A} moves enemy units, and {B} acts on units in a line from it	into_the_breach: Seismic Capacitor + Ricochet Rocket	
+FD	kernel	movement	engine	adjacency	3.39	1.44	8	3	type: {A} moves units, and {B} acts on units in a line from it	into_the_breach: Thermal Discharger + Flame Thrower	
+FD	kernel	forced_movement	kernel	terrain	2.06	1.27	4	3	moves: moves my units or land forward: they reach enemy ground	faeria: Shifting Tide + Monstrous Hydra	
+FD	kernel	forced_movement	kernel	positional	4.48	1.17	8	3	type: {A} moves units, and {B} acts on units in a line from it	into_the_breach: Prime Spear + Arachnoid Injector	
+FD	kernel	forced_movement	kernel	swap	1.86	0.8	3	3	type: {A} moves units, and {B} acts on units next to it	into_the_breach: Aegon Mortar + Force Swap	
+FD	kernel	forced_movement	engine	on_lifegain	2.13	0.79	4	2.97	type: {A} moves units, and {B} acts on units next to it	into_the_breach: Aegon Mortar + Harold Schmidt	
+FD	kernel	forced_movement	engine	card_presence_condition	2.06	1.1	5	3	type: {A} moves {B}, and {B} acts on units in the back row or in the front row	gwent: Paulie Dahlberg + Gabor Zigrin	
+FD	kernel	forced_movement	engine	multi_target_attack	3.55	0.86	2	3	type: {A} moves enemy units, and {B} acts on units in a line from it	into_the_breach: Seismic Capacitor + Ricochet Rocket	
+FD	kernel	forced_movement	engine	adjacency	5.42	1.22	7	3	type: {A} moves units, and {B} acts on units in a line from it	into_the_breach: Thermal Discharger + Flame Thrower	
+FD	kernel	terrain	kernel	positional	1.45	1.21	4	3	moves: moves it where it must be	faeria: Khalim's Training + Monstrous Hydra	
+FD	kernel	terrain	engine	on_lifegain		2.12	1	1.48	type: {A} cracks the ground (a hole once hit), and {B} pushes enemy units: a ground unit pushed into a hole dies	into_the_breach: Seismic Capacitor + Harold Schmidt	
+FD	kernel	terrain	engine	adjacency	1.61	1.21	4	3	type: {A} cracks the ground (a hole once hit), and {B} pushes enemy units: a ground unit pushed into a hole dies	into_the_breach: Seismic Capacitor + Ricochet Rocket	
+FD	kernel	terrain	engine	donate		1.72	0	0			decks only
+FD	kernel	positional	kernel	swap	2.53	0.96	4	3	type: {A} moves your units, and {B} acts on units in its lane	marvel_snap: Lockjaw + Spider Sense	
+FD	kernel	positional	engine	on_lifegain	1.21	1.02	4	3	type: {A} moves units, and {B} acts on units next to it	into_the_breach: Aegon Mortar + Harold Schmidt	
+FD	kernel	positional	engine	multi_target_attack	1.64	0.77	3	3	type: {A} moves enemy units, and {B} acts on units in a line from it	into_the_breach: Aegon Mortar + Ricochet Rocket	
+FD	kernel	positional	engine	adjacency	2.14	1.25	7	3	type: {A} moves units, and {B} acts on units in a line from it	into_the_breach: Prime Spear + Arachnoid Injector	
+FD	kernel	positional	engine	donate	1.26	0.94	4	3	type: {A} puts your units there, and {B} acts on units in its lane	marvel_snap: Malekith + Viper	
+FD	kernel	swap	engine	card_presence_condition	1.48	0.99	3	3	type: {A} moves {B}, and {B} acts on units in the back row or in the front row	gwent: Baccalà + Tourney Shaelmaar	
+FD	kernel	swap	engine	adjacency	2.45	2.02	4	3	type: {A} moves units, and {B} acts on units next to it	into_the_breach: Aegon Mortar + Force Swap	
+FD	kernel	swap	engine	donate		1.67	2	1.6	type: {A} moves your units, and {B} acts on units next to its target	gwent: Baccalà + Treason	
 FD	engine	on_lifegain	engine	adjacency	1.39	3.23	4	3	type: {A} moves units, and {B} acts on units next to it	into_the_breach: Aegon Mortar + Harold Schmidt	
 FD	engine	on_lifegain	engine	heal		6.12	5	3	waits: heals your units	gwent: Endless Voyage + Havfrue Singer	
 FD	engine	card_presence_condition	engine	donate	1.51	1.03	1	3	type: makes units get Spying	gwent: Master of Puppets + Angry Mob	
 FD	engine	multi_target_attack	engine	adjacency	1.56	0.97	4	3	type: {A} moves enemy units, and {B} acts on units in a line from it	into_the_breach: Aegon Mortar + Ricochet Rocket	
 FD	engine	adjacency	engine	heal	1.25	1.07	5	3	type: {A} puts your units there, and {B} acts on units around it	duelyst: Evolutionary Apex + Lux Ignis	
 FD	engine	adjacency	engine	donate	1.5	1.01	3	2.88	type: {A} puts your units there, and {B} acts on units around its target	duelyst: Superior Mirage + Synaptic Arbitrage	
-FE	core	draw	core	generate_cards	1.37	1.12	7	3	type: makes you draw cards	runeterra: The Dreadway + Sump Fumes	
-FE	core	draw	core	cost_reduction	1.29	0.96	3	3	cheaper: makes you draw cards	runeterra: The Dreadway + Divine Whirlwind	
-FE	core	draw	engine	hand_size	9.2	2.55	7	3	waits: fills your hand	duelyst: Planar Foundry + Theobule	
-FE	core	draw	engine	condition_count	2.59	1.41	8	3	waits: fills your hand	duelyst: Planar Foundry + Theobule	
-FE	core	draw	engine	on_draw	20.43	2.17	7	3	waits: makes you draw cards	runeterra: Augmented Clockling + Janna	
-FE	core	draw	engine	discard	1.39	1.88	3	2.99	waits: makes you discard cards	sts1: Concentrate + Reflex	
-FE	core	draw	engine	free_play	6.01	1.0	5	3	waits: plays it: its effect goes off	gwent: Unicorn + Chironex	
-FE	core	generate_cards	core	cost_reduction	1.4	1.14	5	3	type: creates cards: more different cards to play	runeterra: Senna (level 2) + Buster Shot	
-FE	core	generate_cards	core	spell_power	1.2	1.24	2	3	stronger: makes the Create it gives stronger	gwent: Runemage + Ragh Nar Roog	
-FE	core	generate_cards	engine	hand_size	7.59	1.4	7	3	waits: fills your hand	gwent: Count Reuven's Treasure + Halfling Safecracker	
-FE	core	generate_cards	engine	condition_count	2.18	0.97	8	3	waits: fills your hand	gwent: Count Reuven's Treasure + Halfling Safecracker	
-FE	core	generate_cards	engine	free_play	3.3	1.25	3	3	waits: plays it: its effect goes off	gwent: Joachim de Wett + Rosa and Edna var Attre	
-FE	core	cost_reduction	core	cost_set	0.02	2.86	1	1.0	cheaper: dies, comes back and dies again	marvel_snap: Sabretooth + Death	
-FE	core	cost_reduction	engine	in_hand_buff	0.29	2.52	2	2.97	stronger: more power	marvel_snap: America Chavez + Iron Patriot	
-FE	core	cost_reduction	engine	on_draw	0.34	2.12	3	2.49	type: helps it hit the enemy player	runeterra: Ambush + Pirouette	
-FE	core	cost_reduction	engine	free_play	2.8	1.17	3	3	cheaper: is played	sts1: Distilled Chaos + Force Field	
-FE	core	cost_set	engine	discard	1.0	1.88	1	2.53	type: makes you discard cards	marvel_snap: Colleen Wing + Stature	
-FE	core	cost_set	engine	free_play		1.38	3	2.49	waits: is played	sts1: Omniscience + Mummified Hand	
-FE	core	spell_power	engine	hand_size	0.43	1.99	3	1.95	waits: damages enemy units or players	gwent: Carlo Varese + King Bran	
-FE	core	spell_power	engine	on_draw		2.72	2	1.6	stronger: more power	marvel_snap: Jane Foster Fractured Frontier + Askani'son	
-FE	core	spell_power	engine	free_play	3.13	1.18	3	3	waits: plays it: its effect goes off	gwent: Ge'els + Eredin Bréacc Glas	
+FE	kernel	draw	kernel	generate_cards	1.37	1.12	7	3	type: makes you draw cards	runeterra: The Dreadway + Sump Fumes	
+FE	kernel	draw	kernel	cost_reduction	1.29	0.96	3	3	cheaper: makes you draw cards	runeterra: The Dreadway + Divine Whirlwind	
+FE	kernel	draw	engine	hand_size	9.2	2.55	7	3	waits: fills your hand	duelyst: Planar Foundry + Theobule	
+FE	kernel	draw	engine	condition_count	2.59	1.41	8	3	waits: fills your hand	duelyst: Planar Foundry + Theobule	
+FE	kernel	draw	engine	on_draw	20.43	2.17	7	3	waits: makes you draw cards	runeterra: Augmented Clockling + Janna	
+FE	kernel	draw	engine	discard	1.39	1.88	3	2.99	waits: makes you discard cards	sts1: Concentrate + Reflex	
+FE	kernel	draw	engine	free_play	6.01	1.0	5	3	waits: plays it: its effect goes off	gwent: Unicorn + Chironex	
+FE	kernel	generate_cards	kernel	cost_reduction	1.4	1.14	5	3	type: creates cards: more different cards to play	runeterra: Senna (level 2) + Buster Shot	
+FE	kernel	generate_cards	kernel	spell_power	1.2	1.24	2	3	stronger: makes the Create it gives stronger	gwent: Runemage + Ragh Nar Roog	
+FE	kernel	generate_cards	engine	hand_size	7.59	1.4	7	3	waits: fills your hand	gwent: Count Reuven's Treasure + Halfling Safecracker	
+FE	kernel	generate_cards	engine	condition_count	2.18	0.97	8	3	waits: fills your hand	gwent: Count Reuven's Treasure + Halfling Safecracker	
+FE	kernel	generate_cards	engine	free_play	3.3	1.25	3	3	waits: plays it: its effect goes off	gwent: Joachim de Wett + Rosa and Edna var Attre	
+FE	kernel	cost_reduction	kernel	cost_set	0.02	2.86	1	1.0	cheaper: dies, comes back and dies again	marvel_snap: Sabretooth + Death	
+FE	kernel	cost_reduction	engine	in_hand_buff	0.29	2.52	2	2.97	stronger: more power	marvel_snap: America Chavez + Iron Patriot	
+FE	kernel	cost_reduction	engine	on_draw	0.34	2.12	3	2.49	type: helps it hit the enemy player	runeterra: Ambush + Pirouette	
+FE	kernel	cost_reduction	engine	free_play	2.8	1.17	3	3	cheaper: is played	sts1: Distilled Chaos + Force Field	
+FE	kernel	cost_set	engine	discard	1.0	1.88	1	2.53	type: makes you discard cards	marvel_snap: Colleen Wing + Stature	
+FE	kernel	cost_set	engine	free_play		1.38	3	2.49	waits: is played	sts1: Omniscience + Mummified Hand	
+FE	kernel	spell_power	engine	hand_size	0.43	1.99	3	1.95	waits: damages enemy units or players	gwent: Carlo Varese + King Bran	
+FE	kernel	spell_power	engine	on_draw		2.72	2	1.6	stronger: more power	marvel_snap: Jane Foster Fractured Frontier + Askani'son	
+FE	kernel	spell_power	engine	free_play	3.13	1.18	3	3	waits: plays it: its effect goes off	gwent: Ge'els + Eredin Bréacc Glas	
 FE	engine	hand_size	engine	condition_count	1.27	3.48	7	3	type: damages enemy units or players	gwent: Gerd + Sove	
 FE	engine	hand_size	engine	on_draw		0.92	6	2.81	waits: makes you draw cards	gwent: Temple of Melitele: Congregation + Istredd	
 FE	engine	hand_size	engine	discard	1.3	3.69	5	2.99	waits: empties your hand	marvel_snap: Zombie Black Cat + Strong Guy	
@@ -733,87 +733,87 @@ FE	engine	in_hand_buff	engine	free_play	2.06	0.88	3	3	waits: plays it: its effec
 FE	engine	on_draw	engine	discard	0.47	1.52	2	2.0	stronger: more power	marvel_snap: Jane Foster Fractured Frontier + Dracula	
 FE	engine	on_draw	engine	free_play	0.12	2.41	3	1.85	waits: plays it: its effect goes off	marvel_snap: Agatha Harkness + Jane Foster Fractured Frontier	
 FE	engine	discard	engine	free_play	2.22	0.78	2	3	waits: plays it: its effect goes off	gwent: Harald: Warmonger + Tyr: Master of An Skellig	
-FF	core	tutor	core	selection		1.78	0	0			decks only
-FF	core	base_resource_gain	core	resource_gain	0.27	5.44	4	2.84	type: lets you gain mana	sts1: Sozu + Double Energy	
-FF	core	base_resource_gain	core	high_cost	15.28	1.39	6	3	cheaper: pays for it: more mana or a lower cost	inscryption: Extra Battery + Bolthound	
-FF	core	base_resource_gain	engine	information		1.63	0	0			decks only
-FF	core	resource_gain	core	selection	2.84	1.31	2	3	type: lets you gain the second resource (Bones)	gwent: Collusion + Sigi Reuven: Mastermind	
-FF	core	resource_gain	core	high_cost	10.76	1.26	7	3	cheaper: pays for it: more mana or a lower cost	inscryption: Extra Battery + Bolthound	
-FF	core	resource_gain	engine	information	5.95	1.57	2	3	type: lets you gain the second resource (Bones)	gwent: Collusion + Sigi Reuven: Mastermind	
-FF	core	resource_gain	engine	cost_reduction	0.23	1.99	2	2.73	cheaper: lets you gain mana	marvel_snap: Havok + She-Hulk	
-FF	core	selection	core	high_cost	1.39	0.96	3	3	waits: is a unit whose playing sets off its effect	runeterra: Elder Dragon + Aspect of the Dragon	
-FF	core	selection	engine	information		6.53	0	0			decks only
-FF	core	high_cost	engine	cost_reduction	8.79	1.22	7	3	cheaper: can make it cheaper	marvel_snap: Time Stone + Thanos	
-FG	core	summon	core	free_play	2.14	0.9	4	3	waits: plays it: its effect goes off	gwent: The Mushy Truffle + Crow Messenger	
-FG	core	summon	core	haste	1.63	1.24	2	3	waits: has Zeal	gwent: War Chariot + Redanian Secret Service	
-FG	core	summon	engine	variety_payoff	2.22	0.99	4	3	type: puts your units into play	runeterra: Sandcrafter + Handy Harness	
-FG	core	summon	engine	countdown	1.6	1.22	3	3	waits: puts your units into play	runeterra: Sandcrafter + Rockbear Shepherd	
-FG	core	summon	engine	sacrifice	5.25	1.44	7	3	waits: kills it for its death effect	gwent: Celaeno Harpy + Harpy Egg	
-FG	core	free_play	core	haste	2.0	0.91	1	3	waits: plays it: its effect goes off	gwent: Geralt: Quen + Geralt: Professional	
-FG	core	free_play	core	copy	3.35	1.18	3	3	waits: plays it: its effect goes off	gwent: Masterful Sihil + Illusionist	
-FG	core	free_play	engine	variety_payoff	4.95	1.85	4	3	waits: plays it: its effect goes off	gwent: Dandelion: Poet + Doppler	
-FG	core	free_play	engine	countdown	1.53	0.67	2	3	waits: is played	gwent: Lydia van Bredevoort + Eltibald	
-FG	core	copy	engine	variety_payoff	2.88	0.61	5	3	type: creates cards: more different cards to play	duelyst: Alcuin Loremaster + Hideatsu the Ebon Ox	
-FG	core	copy	engine	countdown	1.86	1.15	4	3	type: creates cards: {B} copys them	gwent: Arachas Queen + Dagon: Risen	
-FG	core	copy	engine	sacrifice	1.86	1.27	5	3	waits: kills it for its death effect	gwent: Overwhelming Hunger + Dagon: Risen	
+FF	kernel	tutor	kernel	selection		1.78	0	0			decks only
+FF	kernel	base_resource_gain	kernel	resource_gain	0.27	5.44	4	2.84	type: lets you gain mana	sts1: Sozu + Double Energy	
+FF	kernel	base_resource_gain	kernel	high_cost	15.28	1.39	6	3	cheaper: pays for it: more mana or a lower cost	inscryption: Extra Battery + Bolthound	
+FF	kernel	base_resource_gain	engine	information		1.63	0	0			decks only
+FF	kernel	resource_gain	kernel	selection	2.84	1.31	2	3	type: lets you gain the second resource (Bones)	gwent: Collusion + Sigi Reuven: Mastermind	
+FF	kernel	resource_gain	kernel	high_cost	10.76	1.26	7	3	cheaper: pays for it: more mana or a lower cost	inscryption: Extra Battery + Bolthound	
+FF	kernel	resource_gain	engine	information	5.95	1.57	2	3	type: lets you gain the second resource (Bones)	gwent: Collusion + Sigi Reuven: Mastermind	
+FF	kernel	resource_gain	engine	cost_reduction	0.23	1.99	2	2.73	cheaper: lets you gain mana	marvel_snap: Havok + She-Hulk	
+FF	kernel	selection	kernel	high_cost	1.39	0.96	3	3	waits: is a unit whose playing sets off its effect	runeterra: Elder Dragon + Aspect of the Dragon	
+FF	kernel	selection	engine	information		6.53	0	0			decks only
+FF	kernel	high_cost	engine	cost_reduction	8.79	1.22	7	3	cheaper: can make it cheaper	marvel_snap: Time Stone + Thanos	
+FG	kernel	summon	kernel	free_play	2.14	0.9	4	3	waits: plays it: its effect goes off	gwent: The Mushy Truffle + Crow Messenger	
+FG	kernel	summon	kernel	haste	1.63	1.24	2	3	waits: has Zeal	gwent: War Chariot + Redanian Secret Service	
+FG	kernel	summon	engine	variety_payoff	2.22	0.99	4	3	type: puts your units into play	runeterra: Sandcrafter + Handy Harness	
+FG	kernel	summon	engine	countdown	1.6	1.22	3	3	waits: puts your units into play	runeterra: Sandcrafter + Rockbear Shepherd	
+FG	kernel	summon	engine	sacrifice	5.25	1.44	7	3	waits: kills it for its death effect	gwent: Celaeno Harpy + Harpy Egg	
+FG	kernel	free_play	kernel	haste	2.0	0.91	1	3	waits: plays it: its effect goes off	gwent: Geralt: Quen + Geralt: Professional	
+FG	kernel	free_play	kernel	copy	3.35	1.18	3	3	waits: plays it: its effect goes off	gwent: Masterful Sihil + Illusionist	
+FG	kernel	free_play	engine	variety_payoff	4.95	1.85	4	3	waits: plays it: its effect goes off	gwent: Dandelion: Poet + Doppler	
+FG	kernel	free_play	engine	countdown	1.53	0.67	2	3	waits: is played	gwent: Lydia van Bredevoort + Eltibald	
+FG	kernel	copy	engine	variety_payoff	2.88	0.61	5	3	type: creates cards: more different cards to play	duelyst: Alcuin Loremaster + Hideatsu the Ebon Ox	
+FG	kernel	copy	engine	countdown	1.86	1.15	4	3	type: creates cards: {B} copys them	gwent: Arachas Queen + Dagon: Risen	
+FG	kernel	copy	engine	sacrifice	1.86	1.27	5	3	waits: kills it for its death effect	gwent: Overwhelming Hunger + Dagon: Risen	
 FG	engine	variety_payoff	engine	countdown	1.44	0.72	2	2.97	type: creates cards: more different cards to play	runeterra: God-Willow Seedling + Elder Dragon	
 FG	engine	variety_payoff	engine	sacrifice	1.41	0.72	3	2.64	type: makes your units die	marvel_snap: Kid Omega + Muse	
 FG	engine	countdown	engine	sacrifice	2.1	1.56	3	3	type: makes your units die: {B} brings them back	gwent: Overwhelming Hunger + Dagon: Risen	
-FH	core	buff	core	in_hand_buff	1.91	1.07	5	3	stronger: more health	runeterra: Encroaching Shadows + Rainbowfish (created)	
-FH	core	buff	core	stat_multiply	6.26	1.26	3	3	stronger: more health	runeterra: Cithria, Lady of Clouds + Rainbowfish (created)	
-FH	core	buff	core	temporary_buff	6.79	0.53	3	3	stronger: more health	runeterra: Sharesies + Mask Mother	
-FH	core	buff	engine	attack_gain	2.4	0.99	6	3	stronger: more health	runeterra: Encroaching Shadows + Rainbowfish (created)	
-FH	core	buff	engine	on_ally_play	1.44	1.57	6	3	stronger: more health	runeterra: Cithria, Lady of Clouds + Rainbowfish (created)	
-FH	core	in_hand_buff	core	stat_multiply	4.98	1.34	5	3	stronger: more health	runeterra: Encroaching Shadows + Rainbowfish (created)	
-FH	core	in_hand_buff	core	stat_fixed	2.26	0.86	3	3	stronger: more health	runeterra: Avarosan Outriders + Snowy Razorclaw	
-FH	core	in_hand_buff	engine	stat_condition	6.67	1.94	2	3	type: changes its stats for its effect	runeterra: Omen Hawk + Winged Messenger	
-FH	core	stat_multiply	core	temporary_buff	14.3	0.99	3	3	stronger: more health	runeterra: Sharesies + Mask Mother	
-FH	core	stat_multiply	core	strikes_with_defence		2.02	2	2.66	stronger: more power	runeterra: Consult the Heavens + Mask Mother	
-FH	core	stat_multiply	core	stat_fixed	2.49	1.73	2	3	stronger: more health	runeterra: Cithria, Lady of Clouds + Zed (level 2)	
-FH	core	stat_multiply	engine	stat_condition	10.38	1.95	2	3	type: changes its stats for its effect	runeterra: Bayou Brunch + Kayle (level 2)	
-FH	core	stat_multiply	engine	attack_gain	6.08	1.3	6	3	stronger: more health	runeterra: Encroaching Shadows + Rainbowfish (created)	
-FH	core	stat_multiply	engine	multi_target_attack	1.85	0.35	3	2.68	type: damages the enemy player	runeterra: Divine Whirlwind + Dashing Dandy	about the player
-FH	core	stat_multiply	engine	on_ally_play	1.98	1.66	6	3	stronger: more health	runeterra: Cithria, Lady of Clouds + Rainbowfish (created)	
-FH	core	temporary_buff	core	strikes_with_defence	8.1	1.53	1	3	stronger: more power	runeterra: Consult the Heavens + Illaoi	
-FH	core	temporary_buff	core	stat_fixed	6.78	0.67	2	3	stronger: more power	runeterra: Champions' Strength + Skulking String-Puller	
-FH	core	temporary_buff	engine	stat_condition	20.75	1.33	1	3	type: changes its stats for its effect	runeterra: Sharesies + Kayle (level 2)	
-FH	core	strikes_with_defence	core	stat_fixed		2.08	1	2.0	stronger: more power	runeterra: Consult the Heavens + Trevor Snoozebottom	
-FH	core	strikes_with_defence	engine	attack_gain	6.2	1.21	4	3	stronger: more health	faeria: Triton Banquet + Kaios, Demented Overmind	
-FH	core	stat_fixed	engine	stat_condition	3.68	1.16	2	3	type: changes its stats for its effect	runeterra: Glacial Fell + Kayle (level 2)	
-FH	core	stat_fixed	engine	attack_gain	2.39	0.83	6	3	stronger: more power	runeterra: Champions' Strength + Skulking String-Puller	
-FH	core	stat_fixed	engine	multi_target_attack	1.2	0.53	2	2.43	type: damages the enemy player	runeterra: Divine Whirlwind + Snowy Razorclaw	about the player
+FH	kernel	buff	kernel	in_hand_buff	1.91	1.07	5	3	stronger: more health	runeterra: Encroaching Shadows + Rainbowfish (created)	
+FH	kernel	buff	kernel	stat_multiply	6.26	1.26	3	3	stronger: more health	runeterra: Cithria, Lady of Clouds + Rainbowfish (created)	
+FH	kernel	buff	kernel	temporary_buff	6.79	0.53	3	3	stronger: more health	runeterra: Sharesies + Mask Mother	
+FH	kernel	buff	engine	attack_gain	2.4	0.99	6	3	stronger: more health	runeterra: Encroaching Shadows + Rainbowfish (created)	
+FH	kernel	buff	engine	on_ally_play	1.44	1.57	6	3	stronger: more health	runeterra: Cithria, Lady of Clouds + Rainbowfish (created)	
+FH	kernel	in_hand_buff	kernel	stat_multiply	4.98	1.34	5	3	stronger: more health	runeterra: Encroaching Shadows + Rainbowfish (created)	
+FH	kernel	in_hand_buff	kernel	stat_fixed	2.26	0.86	3	3	stronger: more health	runeterra: Avarosan Outriders + Snowy Razorclaw	
+FH	kernel	in_hand_buff	engine	stat_condition	6.67	1.94	2	3	type: changes its stats for its effect	runeterra: Omen Hawk + Winged Messenger	
+FH	kernel	stat_multiply	kernel	temporary_buff	14.3	0.99	3	3	stronger: more health	runeterra: Sharesies + Mask Mother	
+FH	kernel	stat_multiply	kernel	strikes_with_defence		2.02	2	2.66	stronger: more power	runeterra: Consult the Heavens + Mask Mother	
+FH	kernel	stat_multiply	kernel	stat_fixed	2.49	1.73	2	3	stronger: more health	runeterra: Cithria, Lady of Clouds + Zed (level 2)	
+FH	kernel	stat_multiply	engine	stat_condition	10.38	1.95	2	3	type: changes its stats for its effect	runeterra: Bayou Brunch + Kayle (level 2)	
+FH	kernel	stat_multiply	engine	attack_gain	6.08	1.3	6	3	stronger: more health	runeterra: Encroaching Shadows + Rainbowfish (created)	
+FH	kernel	stat_multiply	engine	multi_target_attack	1.85	0.35	3	2.68	type: damages the enemy player	runeterra: Divine Whirlwind + Dashing Dandy	about the player
+FH	kernel	stat_multiply	engine	on_ally_play	1.98	1.66	6	3	stronger: more health	runeterra: Cithria, Lady of Clouds + Rainbowfish (created)	
+FH	kernel	temporary_buff	kernel	strikes_with_defence	8.1	1.53	1	3	stronger: more power	runeterra: Consult the Heavens + Illaoi	
+FH	kernel	temporary_buff	kernel	stat_fixed	6.78	0.67	2	3	stronger: more power	runeterra: Champions' Strength + Skulking String-Puller	
+FH	kernel	temporary_buff	engine	stat_condition	20.75	1.33	1	3	type: changes its stats for its effect	runeterra: Sharesies + Kayle (level 2)	
+FH	kernel	strikes_with_defence	kernel	stat_fixed		2.08	1	2.0	stronger: more power	runeterra: Consult the Heavens + Trevor Snoozebottom	
+FH	kernel	strikes_with_defence	engine	attack_gain	6.2	1.21	4	3	stronger: more health	faeria: Triton Banquet + Kaios, Demented Overmind	
+FH	kernel	stat_fixed	engine	stat_condition	3.68	1.16	2	3	type: changes its stats for its effect	runeterra: Glacial Fell + Kayle (level 2)	
+FH	kernel	stat_fixed	engine	attack_gain	2.39	0.83	6	3	stronger: more power	runeterra: Champions' Strength + Skulking String-Puller	
+FH	kernel	stat_fixed	engine	multi_target_attack	1.2	0.53	2	2.43	type: damages the enemy player	runeterra: Divine Whirlwind + Snowy Razorclaw	about the player
 FH	engine	stat_condition	engine	attack_gain	8.75	1.62	2	3	type: changes its stats for its effect	gwent: The Maiden's Shield + Bronwen the Bold	
 FH	engine	stat_condition	engine	multi_target_attack	0.05	1.66	1	1.3	type: makes enemy units get Armor	gwent: Wagenburg + Stunning Blow	
 FH	engine	stat_condition	engine	on_ally_play	2.44	1.27	2	3	type: changes its stats for its effect	runeterra: Cithria, Lady of Clouds + Kayle (level 2)	
-FI	core	revive	core	return_from_board	3.14	0.42	4	3	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Chronicler of Ruin	
-FI	core	revive	core	recycle	2.06	2.15	3	2.86	waits: plays it: its effect goes off	gwent: Harald an Craite + Tyr: Master of An Skellig	
-FI	core	revive	core	return_on_leave	0.46	3.57	3	2.53	type: dies, comes back and dies again: {B} brings them back	duelyst: Snow Chaser + Keeper of the Vale	
-FI	core	revive	engine	on_draw	1.22	1.03	2	2.41	waits: brings it back: its summon effect goes off	runeterra: Harrowing Return + Slotbot	
-FI	core	revive	engine	board_wipe	9.7	1.73	5	3	type: makes your units die: {B} brings them back	gwent: Scorch + Dimun Warship	
-FI	core	revive	engine	adjacency	2.16	1.07	6	3	type: makes your units die: {B} brings them back	gwent: Cyclops + Dagon: Risen	
-FI	core	revive	engine	condition_count	3.21	0.73	4	3	waits: plays it: its effect goes off	gwent: Blood Eagle + Harald an Craite	
-FI	core	revive	engine	tutor		0.91	2	2.18	waits: brings it back: its summon effect goes off	runeterra: Harrowing Return + Draven's Biggest Fan	
-FI	core	revive	engine	draw	1.54	1.02	4	3	waits: brings it back: its summon effect goes off	runeterra: The Iron Conquest + Trifarian Assessor	
-FI	core	revive	engine	sacrifice	15.28	3.67	6	3	type: makes your units die: {B} brings them back	runeterra: The Iron Conquest + Undying Revenge	
-FI	core	return_from_board	core	return_on_leave	2.99	0.75	1	3	waits: makes cards leave play	runeterra: Recall + Rainbowfish (created)	
-FI	core	return_from_board	engine	on_draw	1.24		2	2.87	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Slotbot	
-FI	core	return_from_board	engine	board_wipe	2.71	0.52	3	2.81	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + She Who Wanders	
-FI	core	return_from_board	engine	adjacency	2.13	1.55	4	3	waits: returns it to hand: its Play or summon effect goes off again (when around it)	duelyst: Orbrider + Orb Weaver	
-FI	core	return_from_board	engine	condition_count	3.47	0.82	4	3	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Vladimir	
-FI	core	return_from_board	engine	tutor		0.86	2	2.51	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Draven's Biggest Fan	
-FI	core	return_from_board	engine	free_play	7.73	1.55	4	3	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Riptide Rex	
-FI	core	return_from_board	engine	draw	4.44	1.01	3	3	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Shadow Assassin	
-FI	core	return_from_board	engine	sacrifice	4.49	0.95	2	3	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Ancient Crocolith	
-FI	core	recycle	core	return_on_leave		4.64	1	1.48	waits: makes cards leave play	runeterra: Puzzling Signposts + Rainbowfish (created)	
-FI	core	recycle	engine	on_draw		3.02	3	1.6	waits: fills your hand	duelyst: Loreweaver + Theobule	
-FI	core	recycle	engine	tutor		1.67	1	1.0	waits: makes your units hit the enemy player	runeterra: Sion (level 2) + The Flight	about the player
-FI	core	recycle	engine	free_play	5.25	1.56	3	3	waits: plays it: its effect goes off	gwent: Harald: Warmonger + Tyr: Master of An Skellig	
-FI	core	recycle	engine	draw	2.74	2.6	4	3	waits: fills your hand	duelyst: Planar Foundry + Theobule	
-FI	core	recycle	engine	sacrifice	2.51	1.6	4	3	waits: kills it for its death effect	faeria: Shaytan Assassin + Aryana, Soul of Gagana	
-FI	core	return_on_leave	engine	board_wipe		2.45	3	2.88	waits: makes cards leave play	runeterra: Utter Devastation + Rainbowfish (created)	
-FI	core	return_on_leave	engine	adjacency	1.36	1.17	4	2.58	waits: kills it for its death effect	duelyst: Deepfire Devourer + Desolator	
-FI	core	return_on_leave	engine	condition_count	0.92	1.63	4	2.49	waits: makes cards leave play	runeterra: Unworthy + Rainbowfish (created)	
-FI	core	return_on_leave	engine	sacrifice	8.48	3.86	3	3	waits: makes cards leave play	runeterra: Encroaching Shadows + Rainbowfish (created)	
+FI	kernel	revive	kernel	return_from_board	3.14	0.42	4	3	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Chronicler of Ruin	
+FI	kernel	revive	kernel	recycle	2.06	2.15	3	2.86	waits: plays it: its effect goes off	gwent: Harald an Craite + Tyr: Master of An Skellig	
+FI	kernel	revive	kernel	return_on_leave	0.46	3.57	3	2.53	type: dies, comes back and dies again: {B} brings them back	duelyst: Snow Chaser + Keeper of the Vale	
+FI	kernel	revive	engine	on_draw	1.22	1.03	2	2.41	waits: brings it back: its summon effect goes off	runeterra: Harrowing Return + Slotbot	
+FI	kernel	revive	engine	board_wipe	9.7	1.73	5	3	type: makes your units die: {B} brings them back	gwent: Scorch + Dimun Warship	
+FI	kernel	revive	engine	adjacency	2.16	1.07	6	3	type: makes your units die: {B} brings them back	gwent: Cyclops + Dagon: Risen	
+FI	kernel	revive	engine	condition_count	3.21	0.73	4	3	waits: plays it: its effect goes off	gwent: Blood Eagle + Harald an Craite	
+FI	kernel	revive	engine	tutor		0.91	2	2.18	waits: brings it back: its summon effect goes off	runeterra: Harrowing Return + Draven's Biggest Fan	
+FI	kernel	revive	engine	draw	1.54	1.02	4	3	waits: brings it back: its summon effect goes off	runeterra: The Iron Conquest + Trifarian Assessor	
+FI	kernel	revive	engine	sacrifice	15.28	3.67	6	3	type: makes your units die: {B} brings them back	runeterra: The Iron Conquest + Undying Revenge	
+FI	kernel	return_from_board	kernel	return_on_leave	2.99	0.75	1	3	waits: makes cards leave play	runeterra: Recall + Rainbowfish (created)	
+FI	kernel	return_from_board	engine	on_draw	1.24		2	2.87	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Slotbot	
+FI	kernel	return_from_board	engine	board_wipe	2.71	0.52	3	2.81	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + She Who Wanders	
+FI	kernel	return_from_board	engine	adjacency	2.13	1.55	4	3	waits: returns it to hand: its Play or summon effect goes off again (when around it)	duelyst: Orbrider + Orb Weaver	
+FI	kernel	return_from_board	engine	condition_count	3.47	0.82	4	3	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Vladimir	
+FI	kernel	return_from_board	engine	tutor		0.86	2	2.51	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Draven's Biggest Fan	
+FI	kernel	return_from_board	engine	free_play	7.73	1.55	4	3	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Riptide Rex	
+FI	kernel	return_from_board	engine	draw	4.44	1.01	3	3	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Shadow Assassin	
+FI	kernel	return_from_board	engine	sacrifice	4.49	0.95	2	3	waits: returns it to hand: its Play or summon effect goes off again	runeterra: Unworthy Soul + Ancient Crocolith	
+FI	kernel	recycle	kernel	return_on_leave		4.64	1	1.48	waits: makes cards leave play	runeterra: Puzzling Signposts + Rainbowfish (created)	
+FI	kernel	recycle	engine	on_draw		3.02	3	1.6	waits: fills your hand	duelyst: Loreweaver + Theobule	
+FI	kernel	recycle	engine	tutor		1.67	1	1.0	waits: makes your units hit the enemy player	runeterra: Sion (level 2) + The Flight	about the player
+FI	kernel	recycle	engine	free_play	5.25	1.56	3	3	waits: plays it: its effect goes off	gwent: Harald: Warmonger + Tyr: Master of An Skellig	
+FI	kernel	recycle	engine	draw	2.74	2.6	4	3	waits: fills your hand	duelyst: Planar Foundry + Theobule	
+FI	kernel	recycle	engine	sacrifice	2.51	1.6	4	3	waits: kills it for its death effect	faeria: Shaytan Assassin + Aryana, Soul of Gagana	
+FI	kernel	return_on_leave	engine	board_wipe		2.45	3	2.88	waits: makes cards leave play	runeterra: Utter Devastation + Rainbowfish (created)	
+FI	kernel	return_on_leave	engine	adjacency	1.36	1.17	4	2.58	waits: kills it for its death effect	duelyst: Deepfire Devourer + Desolator	
+FI	kernel	return_on_leave	engine	condition_count	0.92	1.63	4	2.49	waits: makes cards leave play	runeterra: Unworthy + Rainbowfish (created)	
+FI	kernel	return_on_leave	engine	sacrifice	8.48	3.86	3	3	waits: makes cards leave play	runeterra: Encroaching Shadows + Rainbowfish (created)	
 FI	engine	on_draw	engine	condition_count	1.76	1.03	7	3	waits: makes you draw cards	inscryption: Blue Mage + Glitched card	
 FI	engine	on_draw	engine	free_play	0.12	2.41	3	1.85	waits: plays it: its effect goes off	marvel_snap: Agatha Harkness + Jane Foster Fractured Frontier	
 FI	engine	on_draw	engine	draw	20.43	2.17	7	3	waits: makes you draw cards	runeterra: Augmented Clockling + Janna	
@@ -828,35 +828,35 @@ FI	engine	condition_count	engine	draw	2.59	1.41	8	3	waits: fills your hand	duely
 FI	engine	condition_count	engine	sacrifice	1.34	1.2	6	3	type: makes your units die	runeterra: Gluttony + For The Fallen	
 FI	engine	free_play	engine	draw	6.01	1.0	5	3	waits: plays it: its effect goes off	gwent: Unicorn + Chironex	
 FI	engine	draw	engine	sacrifice	1.49	1.08	5	3	waits: kills it for its death effect	duelyst: Darkfire Sacrifice + Fog	
-FJ	core	sacrifice	core	self_destruct	2.39	1.78	6	3	type: makes your units die: {B} brings them back	runeterra: The Iron Conquest + Undying Revenge	
-FJ	core	sacrifice	engine	other_death_trigger	18.85	2.61	8	3	waits: makes your units die	marvel_snap: Misery + Zombie Venom	
-FJ	core	sacrifice	engine	death_count	23.89	3.87	6	3	type: makes your units die	marvel_snap: Kid Omega + Archangel Horseman of Death	
-FJ	core	sacrifice	engine	board_clog	2.33	1.46	3	2.77	waits: kills it for its death effect	gwent: Overwhelming Hunger + Noonwraith	
-FJ	core	sacrifice	engine	cheat_death	11.72	2.79	7	3	waits: kills it for its death effect	duelyst: Darkfire Sacrifice + Sarlac the Eternal	
-FJ	core	sacrifice	engine	revive	15.28	3.67	6	3	type: makes your units die: {B} brings them back	runeterra: The Iron Conquest + Undying Revenge	
-FJ	core	sacrifice	engine	level_up	3.9	0.98	1	3	levels: makes your units die (levels it up)	runeterra: Kalista (level 2) + Maokai	
-FJ	core	discard	core	friendly_fire	1.44	1.11	2	3	type: damages enemy units or players	gwent: Dimun Light Longship + Eist Tuirseach	
-FJ	core	discard	core	self_destruct	1.19	1.69	2	2.94	waits: makes you discard cards	runeterra: Lil Dipper + The Lady of Blood	
-FJ	core	discard	engine	other_death_trigger	1.2	1.57	2	2.4	type: makes you discard cards	marvel_snap: Colleen Wing + Fantomex	
-FJ	core	discard	engine	death_count	1.7	0.92	1	2.32	type: makes you discard cards	marvel_snap: Colleen Wing + Fantomex	
-FJ	core	discard	engine	cheat_death		2.89	2	2.74	waits: makes you discard cards	runeterra: Treasured Trash + Survival Skills	
-FJ	core	discard	engine	on_discard	68.28	8.81	4	3	waits: makes you discard cards	runeterra: Salt And Stitches + Reborn Grenadier	
-FJ	core	discard	engine	revive	3.84	2.68	3	3	type: makes you discard cards	marvel_snap: Colleen Wing + Khonshu Full	
-FJ	core	discard	engine	level_up	1.88	1.02	1	3	levels: makes you discard cards (levels it up)	runeterra: Arise! + Sion	
-FJ	core	friendly_fire	engine	other_death_trigger	10.8	1.8	8	3	waits: makes your units die	runeterra: Eradication + Tomb-Raider Barbara	
-FJ	core	friendly_fire	engine	death_count	13.88	2.23	6	3	type: makes your units die	marvel_snap: Killmonger + Archangel Horseman of Death	
-FJ	core	friendly_fire	engine	board_clog	2.4	1.57	3	2.96	waits: kills it for its death effect	gwent: Scorch + Noonwraith	
-FJ	core	friendly_fire	engine	cheat_death	5.7	1.4	7	3	waits: kills it for its death effect	duelyst: Flaming Stampede + Sarlac the Eternal	
-FJ	core	friendly_fire	engine	revive	11.93	1.23	6	3	type: makes your units die: {B} brings them back	gwent: Scorch + Dimun Warship	
-FJ	core	friendly_fire	engine	level_up	3.41	0.99	1	3	levels: makes your units die (levels it up)	runeterra: Undergrowth + Maokai	
-FJ	core	self_destruct	engine	other_death_trigger	7.47	1.72	7	3	waits: dies by its own effect	monster_train: Lady of the Reformed + Rector Flicker	
-FJ	core	self_destruct	engine	death_count	9.03	1.77	6	3	type: dies by its own effect	marvel_snap: Ice Cube + Archangel Horseman of Death	
-FJ	core	self_destruct	engine	board_clog		1.54	1	1.0	type: makes a Witcher it asks for	gwent: Armor Up + Berengar	
-FJ	core	self_destruct	engine	cheat_death	0.66	1.72	4	2.7	keyword: gives it Deathless, which it passes to its allies	runeterra: Legion of the Severed + Breakneck Husk	
-FJ	core	self_destruct	engine	haste	0.98	1.51	2	2.46	type: uses a keyword or status	gwent: Necromancer's Tome + Call of the Depths	
-FJ	core	self_destruct	engine	on_discard	1.4	1.58	2	2.83	stronger: more power	marvel_snap: Colonel America + Adamantium Infusion	
-FJ	core	self_destruct	engine	revive	4.99	2.06	5	3	type: dies by its own effect: {B} brings them back	duelyst: Wind Dervish + Corpse Combustion	
-FJ	core	self_destruct	engine	level_up	1.23	0.95	1	3	levels: dies by its own effect (levels it up)	runeterra: Shark Chariot + Maokai	
+FJ	kernel	sacrifice	kernel	self_destruct	2.39	1.78	6	3	type: makes your units die: {B} brings them back	runeterra: The Iron Conquest + Undying Revenge	
+FJ	kernel	sacrifice	engine	other_death_trigger	18.85	2.61	8	3	waits: makes your units die	marvel_snap: Misery + Zombie Venom	
+FJ	kernel	sacrifice	engine	death_count	23.89	3.87	6	3	type: makes your units die	marvel_snap: Kid Omega + Archangel Horseman of Death	
+FJ	kernel	sacrifice	engine	board_clog	2.33	1.46	3	2.77	waits: kills it for its death effect	gwent: Overwhelming Hunger + Noonwraith	
+FJ	kernel	sacrifice	engine	cheat_death	11.72	2.79	7	3	waits: kills it for its death effect	duelyst: Darkfire Sacrifice + Sarlac the Eternal	
+FJ	kernel	sacrifice	engine	revive	15.28	3.67	6	3	type: makes your units die: {B} brings them back	runeterra: The Iron Conquest + Undying Revenge	
+FJ	kernel	sacrifice	engine	level_up	3.9	0.98	1	3	levels: makes your units die (levels it up)	runeterra: Kalista (level 2) + Maokai	
+FJ	kernel	discard	kernel	friendly_fire	1.44	1.11	2	3	type: damages enemy units or players	gwent: Dimun Light Longship + Eist Tuirseach	
+FJ	kernel	discard	kernel	self_destruct	1.19	1.69	2	2.94	waits: makes you discard cards	runeterra: Lil Dipper + The Lady of Blood	
+FJ	kernel	discard	engine	other_death_trigger	1.2	1.57	2	2.4	type: makes you discard cards	marvel_snap: Colleen Wing + Fantomex	
+FJ	kernel	discard	engine	death_count	1.7	0.92	1	2.32	type: makes you discard cards	marvel_snap: Colleen Wing + Fantomex	
+FJ	kernel	discard	engine	cheat_death		2.89	2	2.74	waits: makes you discard cards	runeterra: Treasured Trash + Survival Skills	
+FJ	kernel	discard	engine	on_discard	68.28	8.81	4	3	waits: makes you discard cards	runeterra: Salt And Stitches + Reborn Grenadier	
+FJ	kernel	discard	engine	revive	3.84	2.68	3	3	type: makes you discard cards	marvel_snap: Colleen Wing + Khonshu Full	
+FJ	kernel	discard	engine	level_up	1.88	1.02	1	3	levels: makes you discard cards (levels it up)	runeterra: Arise! + Sion	
+FJ	kernel	friendly_fire	engine	other_death_trigger	10.8	1.8	8	3	waits: makes your units die	runeterra: Eradication + Tomb-Raider Barbara	
+FJ	kernel	friendly_fire	engine	death_count	13.88	2.23	6	3	type: makes your units die	marvel_snap: Killmonger + Archangel Horseman of Death	
+FJ	kernel	friendly_fire	engine	board_clog	2.4	1.57	3	2.96	waits: kills it for its death effect	gwent: Scorch + Noonwraith	
+FJ	kernel	friendly_fire	engine	cheat_death	5.7	1.4	7	3	waits: kills it for its death effect	duelyst: Flaming Stampede + Sarlac the Eternal	
+FJ	kernel	friendly_fire	engine	revive	11.93	1.23	6	3	type: makes your units die: {B} brings them back	gwent: Scorch + Dimun Warship	
+FJ	kernel	friendly_fire	engine	level_up	3.41	0.99	1	3	levels: makes your units die (levels it up)	runeterra: Undergrowth + Maokai	
+FJ	kernel	self_destruct	engine	other_death_trigger	7.47	1.72	7	3	waits: dies by its own effect	monster_train: Lady of the Reformed + Rector Flicker	
+FJ	kernel	self_destruct	engine	death_count	9.03	1.77	6	3	type: dies by its own effect	marvel_snap: Ice Cube + Archangel Horseman of Death	
+FJ	kernel	self_destruct	engine	board_clog		1.54	1	1.0	type: makes a Witcher it asks for	gwent: Armor Up + Berengar	
+FJ	kernel	self_destruct	engine	cheat_death	0.66	1.72	4	2.7	keyword: gives it Deathless, which it passes to its allies	runeterra: Legion of the Severed + Breakneck Husk	
+FJ	kernel	self_destruct	engine	haste	0.98	1.51	2	2.46	type: uses a keyword or status	gwent: Necromancer's Tome + Call of the Depths	
+FJ	kernel	self_destruct	engine	on_discard	1.4	1.58	2	2.83	stronger: more power	marvel_snap: Colonel America + Adamantium Infusion	
+FJ	kernel	self_destruct	engine	revive	4.99	2.06	5	3	type: dies by its own effect: {B} brings them back	duelyst: Wind Dervish + Corpse Combustion	
+FJ	kernel	self_destruct	engine	level_up	1.23	0.95	1	3	levels: dies by its own effect (levels it up)	runeterra: Shark Chariot + Maokai	
 FJ	engine	other_death_trigger	engine	death_count	0.43	9.97	1	2.18	type: changes your units' stats	runeterra: The Undying + Xolaani the Bloodweaver	
 FJ	engine	other_death_trigger	engine	cheat_death	3.32	2.27	4	3	waits: dies, comes back and dies again	duelyst: Gor + Hydrax	
 FJ	engine	other_death_trigger	engine	on_discard	0.88	3.21	2	2.3	type: comes back after it is discarded, to be discarded again	marvel_snap: Swarm + Fantomex	

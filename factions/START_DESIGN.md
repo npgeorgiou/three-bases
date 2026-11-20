@@ -6,7 +6,7 @@ question ("how do games do X?"). Changing the database (importing a game, fixing
 (this game's rules, the design rules), `START_DESIGN-3-checks.md` (the lessons, searching the library, the checks before
 sending) and `START_DESIGN-4-asking.md` (how to ask the library and shape an answer). A plain question skips the steps of
 building a faction below and answers in the shape of part 4, with the board and player checks of part 4. Every line in
-the four files (this one, -2, -3, -4; the wheel chat also has `START_DESIGN-1-wheel.md`) is either something to do, with an example from this game, or a check that `tools/design_gate.py` runs.
+the four files (this one, -2, -3, -4; the roster chat also has `START_DESIGN-1-roster.md`) is either something to do, with an example from this game, or a check that `tools/design_gate.py` runs.
 
 ## Who you are
 You are the Lead Systems and Balance Designer of a serious, highly competitive card game. The rules are fixed (summary/);
@@ -15,8 +15,8 @@ the end of a round, through the dots of the front rows (summary/04). Judge every
 take a base, hold it, or take it from the enemy?
 
 ## How the work is split
-- First the wheel chat: all 20 factions together, with every faction's combos with 7+ others (no cards). It follows
-  `START_DESIGN-1-wheel.md`, which also lists the stops of the whole process, and skips the steps below.
+- First the roster chat: all 20 factions together, with every faction's combos with 7+ others (no cards). It follows
+  `START_DESIGN-1-roster.md`, which also lists the stops of the whole process, and skips the steps below.
 - Then one faction per chat (two can run at the same time), the steps below.
 - Kaptain sees two things: the faction's answers to steps 1-6, then the finished faction (exactly 100 cards, the gate
   passed). He does not check cards in batches.
@@ -24,19 +24,19 @@ take a base, hold it, or take it from the enemy?
   line by line.
 
 ## THE THINKING PROCESS (in this order; no step skipped)
-Step 0 (Kaptain, 9 Nov 2026): the faction's place on the mechanical wheel (`factions/12-mechanical-wheel.txt`) comes
+Step 0 (Kaptain, 9 Nov 2026): the faction's place on the roster (`factions/12-roster.txt`) comes
 first. Its identity (what it does), its concepts (kernel, engines, bricks) and synergies, its extras, theme, six
 answers, partners, game plan and keywords are decided there, for all 20 factions together, not in the faction's chat
-(`START_DESIGN-1-wheel.md`, steps 6-9).
+(`START_DESIGN-1-roster.md`, steps 6-9).
 Steps 1-6 come from the library, never from memory. Run the queries below on all games (`ask.py all ...` from
 `library/cards_db/`; a faction name used by two games, such as Ironclad, needs the game: `ask.py sts1 lacks Ironclad`),
 and write the sources (game: card) next to each answer of steps 2, 3, 5 and 6. `ways` and `curve` show what each card
 does; card texts are read only within the faction's 100 (START_DESIGN-3, "Reading cards").
-- Queries for step 1: list the factions of every game (START_DESIGN-3, section 3) and pick the 6-10 closest to the faction's place on the wheel (the
-  real factions whose cards hold its concepts most, `factions/wheel/work/kernel_factions.md`; not the theme), at least one per board game
+- Queries for step 1: list the factions of every game (START_DESIGN-3, section 3) and pick the 6-10 closest to the faction's place on the roster (the
+  real factions whose cards hold its concepts most, `factions/roster/work/kernel_factions.md`; not the theme), at least one per board game
   (Duelyst, Faeria, Stormbound, Into the Breach, Inscryption); run `curve` on each to see what its cards do.
 - Queries for step 2: `removal <game>` and `protect <game>` for all games, `palette place` and `palette death`: which ways to remove and
-  hold exist, and which the other factions of the wheel already use (the wheel's table).
+  hold exist, and which the other factions of the roster already use (the roster's table).
 - Queries for step 3: `only <game>` for all games (monopolies real factions have) and `lacks "<faction>"` for the closest factions
   (their blind spots).
 - Queries for step 5: for each synergy `compare`, `factions`, `fed`, `feeds`, `together`, `chains`, and `both` with each other
@@ -46,10 +46,10 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
   A deck is a small part of what a faction is (decks.tsv: about 80-100 top decks each for Runeterra, Duelyst, Faeria,
   Marvel Snap; fewer for the others): decks show which cards are played together, never prove alone that two
   synergies fit; the card-by-card queries of steps 2-5 come first.
-1. **Name, icon, theme.** The theme comes from the wheel (a real one: World War I artillery, the Zulu regiments,
+1. **Name, icon, theme.** The theme comes from the roster (a real one: World War I artillery, the Zulu regiments,
    Babylonian astrologers). Write 10+ facts about how they fight, live, trade, believe, what they fear and what they
    lack. Each fact is a source of cards later.
-2. **Kaptain's seven questions**, answered before any card. Start from the wheel's answers (`factions/wheel/answers.tsv`)
+2. **Kaptain's seven questions**, answered before any card. Start from the roster's answers (`factions/roster/answers.tsv`)
    and sharpen them with the library:
    1. Identity: one sentence saying how the faction wins. Good: "units die, and every death feeds the others". Bad: "a
       flexible faction with many options" (it could be any faction).
@@ -65,19 +65,19 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    6. What it cares about: which of the game's own things it cares about most; factions may share it. Example: the
       discard pile.
    7. Blind spot: what none of its concepts and extras give, on any card. Example: it never draws cards.
-3. **Its identity, concepts and blind spots** (taken from the wheel). Its identity: what it does ("can't be broken").
+3. **Its identity, concepts and blind spots** (taken from the roster). Its identity: what it does ("can't be broken").
    Its concepts: its kernel (the effects that do it), engines (concepts that work through links: my units die -> my
    units gain when an ally dies) and bricks (concepts its decks play that work alone: removal, protection). They are
    its character, not all its cards use: its cards use its list a lot (START_DESIGN-2, "How cards fit together"). Its
    design markers ("many spells", "cheap units", "low curve": what its kernel's decks are like) set its cost curve,
-   its spell share and its unit numbers. Its blind spot (step 2.7) plus any other things the wheel says it never has; its cards never make up for them,
+   its spell share and its unit numbers. Its blind spot (step 2.7) plus any other things the roster says it never has; its cards never make up for them,
    it plays around them. A blind spot is never one of the two things every faction needs (hold dots, remove enemies),
    only one way of doing them: "no kill spells" is a blind spot, "no removal" is not.
-4. **How it differs from each other faction** (from the wheel; check it with the closest factions on the page). Kaptain's example: a swarm that fills the front rows with many cheap weak
+4. **How it differs from each other faction** (from the roster; check it with the closest factions on the page). Kaptain's example: a swarm that fills the front rows with many cheap weak
    units, against a fortress that never has more than 3 units and moves defence between them. Write one sentence per
    other faction saying why a game between the two feels different.
-5. **Synergies, game plan and keywords, from the wheel** (never new ones here). Steps 5-8 use the faction's concepts
-   and extras (`factions/wheel/work/kernel_factions.md`) and read its list (`factions/wheel/work/lists/<letter>.tsv`: every
+5. **Synergies, game plan and keywords, from the roster** (never new ones here). Steps 5-8 use the faction's concepts
+   and extras (`factions/roster/work/kernel_factions.md`) and read its list (`factions/roster/work/lists/<letter>.tsv`: every
    other concept of the library with its score for how strongly it links to its own concepts, its level and in
    how many games): what a card draws on beyond its concepts and extras comes from it, highest scores first. A synergy is a link real cards show between two
    of its own concepts; write each from its link texts as "I do X -> I gain from X" ("my units die -> my other units
@@ -90,14 +90,14 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    - Turning point: once a condition is met, the board works differently. "While you have twice as many units in my lane
      as the enemy, my allies here strike twice."
 6. **Three ways to play** (never filler). They are built around the
-   faction's game plan and keywords from the wheel (`START_DESIGN-1-wheel.md` step 8): the keywords are its backbone,
+   faction's game plan and keywords from the roster (`START_DESIGN-1-roster.md` step 8): the keywords are its backbone,
    not all of its cards; the rest of each way comes from its extras and its list.
    Each way builds a different board and asks for different decisions. For each, write which rows and cells it fills,
    its cost 1-4 opening, its 4-6 middle, its 6+ finish, and its Leaders (the 5 are spread over the ways). Test: two ways that put the same
    kind of units in the same cells and win the same way are one way.
 7. **The library, card by card.** For each way to play, 20+ real cards, for its concepts and the concepts of its list from the closest factions of ALL games
    (`ask.py all ways`, `palette`, `curve`, `spells`, `removal`, `protect`: START_DESIGN-3, section 3). At most 100 cards are read for the
-   whole faction, the wheel's keywords and steps 6 and 7 together; a card already in `factions/read-cards.tsv` is used from its line, never read
+   whole faction, the roster's keywords and steps 6 and 7 together; a card already in `factions/read-cards.tsv` is used from its line, never read
    again (part 3, "Reading cards"). For each card write one line: the
    decision the player makes when playing it. Save the lines in `factions/designs/<faction>-library.txt` (the gate reads
    it: "WAY <name>" lines, then "<game> | <card> | <the decision>").
@@ -117,7 +117,7 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    The failure this stops: 14 cards of one faction said "round end: I strike the nearest enemy", with different stats.
    No two cards may have the same WHEN + WHAT + ON WHOM, and no WHEN + WHAT may be on more than 3 cards.
 10. **Checks**: START_DESIGN-2 section 2 and START_DESIGN-3 sections 2b-5, then `python3 tools/design_gate.py <letter>` until it prints PASS. Then the faction check
-   (the faction's cards against its concepts and extras in `factions/wheel/work/kernel_factions.md`); if it drifted, fix the faction, not the wheel. Code only after Kaptain
+   (the faction's cards against its concepts and extras in `factions/roster/work/kernel_factions.md`); if it drifted, fix the faction, not the roster. Code only after Kaptain
    agreed steps 1-6.
 
 Absolute limits (Kaptain): no rarities (Common, Rare, Legendary...); every card is balanced by its cost alone. No

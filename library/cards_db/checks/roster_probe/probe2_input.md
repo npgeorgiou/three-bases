@@ -112,7 +112,7 @@
   Rows: WHEN dies of self DO summon self to mine position [position is front_row] THEN give_keyword self <Doomed> for permanent | WHEN dies of self DO summon self to mine position [position is front_row] THEN give_keyword it <Doomed> for permanent
 - Lines the library draws between them: waits: kills it for its death effect
 
-## D8: "recycle" + "variable_stats" (wheels, no link in the library; pairs from real decks)
+## D8: "recycle" + "variable_stats" (rosters, no link in the library; pairs from real decks)
 
 ### Pair 15 (gwent, deck SPAM/спам (гайд))
 - **Dies Irae** (has "recycle"). Text: "Echo. Damage an enemy unit by 3 and boost all allied Firesworn units by 1. Deathblow: Boost all allied units instead."

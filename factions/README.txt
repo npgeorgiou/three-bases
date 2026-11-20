@@ -1,13 +1,13 @@
 THREE BASES — FACTIONS
 The game as it might become: planned factions, faction candidates, card and rule ideas, the design method for new factions, and rejected ideas. The current factions and their cards are in summary/ section 11.
 Goal (AGREED, 11 Oct 2026): at least 100 cards per faction, usually more (3 Nov 2026); spells are 20% to 50% of a faction's cards, depending on its profile.
-Work plan (Kaptain, 14 Nov 2026): the wheel chat designs 20 factions together, then one chat per faction: START_DESIGN.md and its part 1.
+Work plan (Kaptain, 14 Nov 2026): the roster chat designs 20 factions together, then one chat per faction: START_DESIGN.md and its part 1.
 
 
 Files (lines, then contents). Read only the file a task needs; find lines across files with: python3 tools/find.py doc <text>
 
 START_DESIGN.md                   158  START HERE for every chat that uses the library (faction and card design, every question to the library): the thinking process, NEVER DO
-START_DESIGN-1-wheel.md            184  its part 1: the wheel (20 factions, their groups of concepts and combos), its steps and the stops of the whole process
+START_DESIGN-1-roster.md            184  its part 1: the roster (20 factions, their groups of concepts and combos), its steps and the stops of the whole process
 START_DESIGN-2-rules.md           136  its part 2: setup, this game's rules for design, the design rules
 START_DESIGN-3-checks.md           81  its part 3: Kaptain's checks, self-critique, library search, before sending
 START_DESIGN-4-asking.md          109  its part 4: how to ask the library, the shape of an answer, searching wide, thinking like a player
@@ -17,8 +17,8 @@ read-cards.tsv                     99  every library card read for a design, wit
 7-ideas-kept-for-later.txt          15  7. IDEAS KEPT FOR LATER (moved from summary/, 12 Oct 2026)
 8-rejected-and-cut.txt               5  8. REJECTED AND CUT (don't reintroduce without asking)
 10-outside-design-guides.txt        79  10. What outside design guides teach (Hearthstone, Rosewater, Slay the Spire...) and what they mean here
-12-mechanical-wheel.txt             23  12. The mechanical wheel: designing 20 factions together; its principles
-wheel/README.txt                    10  the wheel's files: where it stands (HANDOFF.md), commands (PIPELINE.md), archetypes, work files
+12-roster.txt             23  12. The roster: designing 20 factions together; its principles
+roster/README.txt                    10  the roster's files: where it stands (HANDOFF.md), commands (PIPELINE.md), archetypes, work files
 
 ==================================================================
 1. CURRENT FACTIONS

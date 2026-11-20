@@ -1,4 +1,4 @@
-"""Slay the Spire records, 18 Nov 2026 (v53), wheel probe fixes; safe to run twice.
+"""Slay the Spire records, 18 Nov 2026 (v53), roster probe fixes; safe to run twice.
 Cursed Key, Matryoshka, N'loth's Hungry Face (non-boss chest) and Smoke Bomb (non-boss combat): the "non-boss" was lost; the ability now
 has the condition it_matches state not boss (the shape of the boss condition on other cards)."""
 import glob, json, os, sys

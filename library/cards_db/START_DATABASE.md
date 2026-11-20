@@ -100,7 +100,7 @@ push, give network.html to Kaptain.
 
 **D. The links** (`links.py`, about 4 minutes, after any change to network.py or the cards): at its end cases/links.tsv
 (a link that must exist or must not, and what of each card must have made it: a_side, b_side) and the sides check (no link
-names an effect of another card). The wheel's count (`mechanics_wheel.py links`, a minute) runs cases/wheel.tsv: a linked
+names an effect of another card). The roster's count (`roster_links.py links`, a minute) runs cases/roster.tsv: a linked
 pair that must or must not count for two concepts.
 
 **The game itself** has its own: tools/build.py, tools/simtest.js, tools/smoke.js (CLAUDE.md).
@@ -146,12 +146,12 @@ pair that must or must not count for two concepts.
   rule_change; a "can" a keyword brings takes that keyword's concept (Flying: movement); the card's own "can" takes what
   it may do (moves: movement; hits from afar: ranged; again: multi_attack; placed: placement_rules; harvests:
   zone_control; challenges: target_choice; blocks: blocking; activated); a unit made the leader has no concept.
-- Lines from the wheel probes (18 Nov 2026, Kaptain): Taunt or Challenger given to my unit makes it fight, so it takes
+- Lines from the roster probes (18 Nov 2026, Kaptain): Taunt or Challenger given to my unit makes it fight, so it takes
   hits (refs.py; lk395, n707); Taunt given to a unit whose damage kills draws enemies onto it (network.py use_of); a
   keyword given to a space is on the unit there and on the space itself (refs.py; Rain -> Rioghan the Undying, n706); a
   card moved only inside a pile puts no unit where another card acts by place (network.py pile_movers; lk397, lk399-lk402).
   Runeterra's Flow is "2+ spells or skills played last round" on every Flow card (fixes/runeterra/v65.py; wc39, n705).
-  The probes' cards, readings and fixes: checks/wheel_probe/.
+  The probes' cards, readings and fixes: checks/roster_probe/.
 - Lines: links.sqlite rows per game (counts change with every rebuild; `status.py`). The next case ids are n708, lk403, wc40.
 - Known gaps with no fix planned: Runeterra Anaakca's "follower or non-champion Darkin" has no OR filter; "if it
   survived" for one step of a card (Blood for Blood, Heroic Charge) has no form; 89 cards say "instead" with no OR or IF

@@ -53,8 +53,8 @@ sources.
 | Cards players put in the same real decks as a card, with how much more often than chance (xN) | `ask.py <game> deckmates "<card>"` |
 | A faction's mechanics by how much players pick them in real decks (share of deck plays / share of its cards; above 1 = picked more than the pool offers) | `ask.py <game> deckconcepts "<faction>"` |
 | The values you can ask for | `ask.py all list concepts`, `ask.py all list happenings` |
-| Mechanics real factions keep apart (opposite sides of the wheel) and together (neighbours) | `python3 apart.py [top]` |
-| The real factions that fit each of the 17 groups of what decks play together | `factions/wheel/work/deck_groups_nmf_17.md` (the wheel's step 3) |
+| Mechanics real factions keep apart (opposite sides of the roster) and together (neighbours) | `python3 apart.py [top]` |
+| The real factions that fit each of the 17 groups of what decks play together | `factions/roster/work/deck_groups_nmf_17.md` (the roster's step 3) |
 Example answers: QUERIES.md. Kaptain's standing questions with their current answers: library/design_questions/
 (made by design_questions.py). The full list of questions the database must answer: QUESTION_BANK.md.
 
@@ -96,7 +96,7 @@ Example answers: QUERIES.md. Kaptain's standing questions with their current ans
   - Worth: is the card better than a plain unit of the same cost in that spot? If not, drop it.
 - Identity check: first write the faction's identity in one sentence; every mechanic must serve it. A library way found on
   similar cards elsewhere (e.g. buildings that damage themselves) is not a reason to use it. Never take another faction's
-  identity: the wheel gives each faction its own (`factions/wheel/`).
+  identity: the roster gives each faction its own (`factions/roster/`).
 - A combo is not a list of buffs. Two cards are a combo only when one changes what the other does or sets it off again
   (a loop, a conversion, a rule change), so together they do something neither does alone, not just bigger numbers.
   Test: take either card away; does the other lose its point? Show each combo as a played sequence: card, cell, what the

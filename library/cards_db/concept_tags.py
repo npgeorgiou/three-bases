@@ -4,7 +4,7 @@ tag(): card -> its concepts (flat_concept, plus cheapunit* and dearunit*: a unit
 its game's units); SOURCES: what of each card (an effect row, an ability, a keyword) gives each concept.
 pair_links(): for two keys (each a set of concepts), how much more often than chance real cards link them, or how much
 more often real decks heavy in one hold the other; a link counts only through what of each card made it (side_concepts).
-Used by the wheel's scripts (factions/wheel/PIPELINE.md) and mechanics_wheel.py. Needs links.sqlite for the links (links.py).
+Used by the roster's scripts (factions/roster/PIPELINE.md) and roster_links.py. Needs links.sqlite for the links (links.py).
 """
 import collections, json, os, sqlite3
 

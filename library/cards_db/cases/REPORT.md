@@ -95,19 +95,19 @@ Made by `cases/run.py monster_train`.
 | mx14 | a dead unit put into play is revive, never summon from the discard (N20, v37) | 0 | 0 | 100% | 0 | yes |
 | mx15 | a trigger that holds only "this turn" is an ability given to the player for this turn (v37, Duelyst) | 0 | 0 | 100% | 0 | yes |
 | mx13 | an effect on the creature opposing it is about lanes (concept lanes from same_lane, v38) | 0 | 0 | 100% | 67 | yes |
-| mx17 | a strike on the spaces beside the opposing one is neighbours, not other lanes (adjacency; concept tree: several lanes away is cross_lane; wheel suspects 20 Nov 2026) | 0 | 0 | 100% | 0 | yes |
+| mx17 | a strike on the spaces beside the opposing one is neighbours, not other lanes (adjacency; concept tree: several lanes away is cross_lane; roster suspects 20 Nov 2026) | 0 | 0 | 100% | 0 | yes |
 | mx15 | within a circuit is a formation (link_formation, v38) | 0 | 0 | 100% | 0 | yes |
 | mx16 | more or faster base resource (base_resource_gain, v38) | 0 | 0 | 100% | 19 | yes |
-| wc29 | attack equal to its own health is strikes with its defence (wheel step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 0 | yes |
-| wc30 | doubling a unit's own stat is stat_multiply (wheel step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 1 | yes |
-| wc31 | a stat set to a number is stat_fixed, or stat_loss on an enemy (wheel step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 8 | yes |
-| wc32 | a stat set to the number of something is variable_stats (wheel step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 7 | yes |
-| wc33 | a stat set to a number is not doubling (wheel step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 307 | yes |
-| wc46 | raising the cost of the opponent's cards is no cost reduction (wheel step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 302 | yes |
-| wc47 | raising the cost of the opponent's cards is cost_increase (wheel step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 0 | yes |
-| wc50 | when the opponent summons: an enemy arrives (wheel step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 0 | yes |
-| wc51 | when the opponent summons is not when I play another card (wheel step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 305 | yes |
-| wc52 | copies of me put into the opponent's deck are given to the opponent (wheel step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 20 | yes |
+| wc29 | attack equal to its own health is strikes with its defence (roster step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 0 | yes |
+| wc30 | doubling a unit's own stat is stat_multiply (roster step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 1 | yes |
+| wc31 | a stat set to a number is stat_fixed, or stat_loss on an enemy (roster step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 8 | yes |
+| wc32 | a stat set to the number of something is variable_stats (roster step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 7 | yes |
+| wc33 | a stat set to a number is not doubling (roster step 3, Kaptain 17 Nov 2026) | 0 | 0 | 100% | 307 | yes |
+| wc46 | raising the cost of the opponent's cards is no cost reduction (roster step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 302 | yes |
+| wc47 | raising the cost of the opponent's cards is cost_increase (roster step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 0 | yes |
+| wc50 | when the opponent summons: an enemy arrives (roster step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 0 | yes |
+| wc51 | when the opponent summons is not when I play another card (roster step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 305 | yes |
+| wc52 | copies of me put into the opponent's deck are given to the opponent (roster step 1 tag check, Kaptain 18 Nov 2026) | 0 | 0 | 100% | 20 | yes |
 
 ## Combos (the enabler must set off the payoff)
 

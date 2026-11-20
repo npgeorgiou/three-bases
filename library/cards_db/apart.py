@@ -1,10 +1,10 @@
-"""Concepts that real factions keep apart, and concepts they keep together (wheel step 4).
+"""Concepts that real factions keep apart, and concepts they keep together (roster step 4).
 
 Run from library/cards_db: python3 apart.py [top]   (default top 25)
 For every concept, each real faction's share of cards with it, minus its game's average (so a game that marks a concept
 often does not count). Concepts with at least MIN_SHARE of the cards in at least MIN_FACTIONS factions are compared in
 pairs: the correlation over all factions. Most negative = factions strong in one are weak in the other (opposite sides of
-the wheel); most positive = they come together (neighbours).
+the roster); most positive = they come together (neighbours).
 """
 import collections, math, sqlite3, sys
 import faction_asks
