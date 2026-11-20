@@ -61,15 +61,13 @@ is written in that step's chat, from the rules of the step, and its line here is
 
 ## Step 5. The map
 - `python3 ../../factions/roster/work/roster_map.py` (from `library/cards_db`, about 20 seconds; after step 6) ->
-  `factions/roster-map.html` (page template `work/roster_map_template.html`). `roster_map.card_pairs(pairs)` gives the
-  real card pair behind any concept pair.
+  `factions/roster-map.html` (page template `work/roster_map_template.html`).
 
 ## Step 6. The factions, from what they do
 - `python3 factions/roster/work/kernel_factions.py` (from the repo, about 2 minutes; needs links.sqlite) ->
-  `work/kernel_factions.md` (for Kaptain: one sheet per faction, plain names, no numbers), `work/kernel_factions_check.md`
-  (every number: per faction its decks, its kernel by question with deck counts, each other concept with its fit and
-  the real card pair that links it, design markers, extras, partners with how each plays; then every pair of factions),
-  `work/kernel_factions_summary.json` (the numbers that compare two runs), `work/kernel_factions.tsv` (one row per
+  `work/kernel_factions.md` (for Kaptain: one sheet per faction, every item a list, plain names with nothing in brackets,
+  no numbers: who they are, its identity families, its concepts with [K] on the kernel ones, its design answers, its
+  partners; then the common concepts in no faction), `work/kernel_factions_summary.json` (the numbers that compare two runs), `work/kernel_factions.tsv` (one row per
   faction: letter, name, what it does, people, kernel, engines, bricks, concepts, extras, design markers, how it wins,
   the five board answers, partners, the kernel's concepts per question; read by `make_faction.py`, the map and steps
   7-9) and `work/lists/<letter>.tsv` (rules: `START_DESIGN-1-roster.md` step 6). The identities are `IDENTITIES` in its

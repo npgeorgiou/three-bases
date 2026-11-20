@@ -1,44 +1,19 @@
 """Step 5, the map (factions/START_DESIGN-1-roster.md) -> factions/roster-map.html. Run from library/cards_db after step 6:
-python3 ../../factions/roster/work/roster_map.py  (about 20 seconds; needs links.sqlite)
+python3 ../../factions/roster/work/roster_map.py  (about 20 seconds)
 Every usable concept is a dot. Two concepts sit close when real decks hold both more often than chance (a deck holds a
 concept when its share of cards with it is DECK_SHARE times its game's average; work/deck_scores.json); the dots are
 laid out by springs (that closeness pulls, every pair pushes alike), so the gaps are even. Each faction of step 6
 (work/kernel_factions.tsv) has a colour: a dot takes the colour of the faction whose kernel holds it. Ticking factions
-lights their concepts (kernel, concepts, extras) and the strong card links between them (roster/concept_links.tsv).
-card_pairs() gives the real card pair behind any concept pair (used by kernel_factions.py)."""
-import collections, csv, json, math, os, sqlite3, sys
+lights their concepts (kernel, concepts, extras) and the strong card links between them (roster/concept_links.tsv)."""
+import csv, json, math, os
 import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(HERE, '..', '..', '..', 'library', 'cards_db')
-sys.path.insert(0, DB)
-import concept_tags, roster_links
 
 DECK_SHARE, ROUNDS = 2, 600  # Claude's
 COLOURS = ['#d62728', '#ff7f0e', '#9467bd', '#1f77b4', '#17becf', '#8c8c00', '#e377c2', '#2ca02c', '#8c564b', '#393b79',
            '#ad494a', '#e7969c', '#637939', '#7b4173', '#3182bd', '#e6550d', '#31a354', '#756bb1', '#636363', '#bd9e39']
-PLAYER = ('player', 'nexus', 'leader', 'hero', 'face')  # link texts about hitting the player: no player health here
-
-
-def card_pairs(wanted):
-    """per concept pair and link text (and per pair alone, text ''): the real card pair of its strongest link, 'game: A + B';
-    per concept pair, the share of its card links whose text is about hitting the player"""
-    c, games, x, con, pools, stats = roster_links.setup()
-    keys = roster_links.concepts(con)
-    name = dict(((i), (g, n)) for i, g, n in c.execute('select id, game, name from card'))
-    best, total, onplayer = {}, collections.Counter(), collections.Counter()
-    L = sqlite3.connect(os.path.join(DB, 'links.sqlite'))
-    for g, a, b, sa, sb, w, kind, text in L.execute(
-            'select l.game, a, b, a_ab, b_ab, weight, p.kind, p.text from link l join phrase p on p.id=l.phrase where a != b'):
-        ka, kb = concept_tags.side_keys(a, sa, g, keys, con), concept_tags.side_keys(b, sb, g, keys, con)
-        about = any(x in text.lower() for x in PLAYER)
-        for p in {frozenset((u, v)) for u in ka for v in kb if u != v} & wanted:
-            total[p] += 1; onplayer[p] += about
-            t = (p, f'{kind}: {text}')
-            for t in (t, (p, '')):
-                if t not in best or (w or 0) > best[t][0]:
-                    best[t] = (w or 0, f'{g}: {name[a][1]} + {name[b][1]}')
-    return {t: v[1] for t, v in best.items()}, {p: onplayer[p] / total[p] for p in total}
 
 
 def closeness(D, usable):

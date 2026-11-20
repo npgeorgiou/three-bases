@@ -19,9 +19,9 @@
    Its people (THEMES, Claude's): one new world, WORLD; their families break ties within TIE. Its list
    (concept_list.Library) -> lists/<letter>.tsv.
 python3 factions/roster/work/kernel_factions.py (from the repo, about 2 minutes; needs links.sqlite) -> kernel_factions.md
-(one sheet per faction), kernel_factions_check.md (every number), kernel_factions.tsv (read by make_faction.py, the map
+(one sheet per faction), kernel_factions.tsv (read by make_faction.py, the map
 and concept_list.py), kernel_factions_summary.json (the numbers to compare runs) and lists/."""
-import collections, csv, itertools, json, math, os, sys
+import collections, csv, itertools, json, math, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, '..', '..', '..')
 sys.path.insert(0, HERE)
@@ -180,13 +180,6 @@ def share(pool, room, fit, add=True):
         for x in fac: x['concepts'] = x.get('concepts', x['kernel']) + took[id(x)]
     return took
 sys.path.insert(0, os.path.join(ROOT, 'library', 'cards_db'))
-here = os.getcwd(); os.chdir(os.path.join(ROOT, 'library', 'cards_db'))
-import roster_map
-os.chdir(here)
-def behind(c, k):
-    """the real card pair behind c's strongest link to the kernel k"""
-    q = max((q for q in k if linked(c, q)), key=lambda q: strong[frozenset((c, q))][0])
-    return plain[q], pair_of.get((frozenset((c, q)), ''), 'no card pair')
 ways = {}
 for r in csv.DictReader(open(os.path.join(HERE, 'answer_concepts.tsv'), encoding='utf-8'), delimiter='\t'):
     if r['answer'] == 'blind': continue
@@ -218,7 +211,7 @@ def best_way(x, q, have, score):
     return min(found, key=lambda t: t[:3])[2:] if found else (None, [])
 def build():
     """one pass of step 6 on the factions' kernels: one ranked fill (concepts, then extras), partners, markers, list, answers"""
-    global kernels, pair_of, pairs, strengths, partners
+    global kernels, strengths, partners
     kernels = set().union(*(set(x['kernel']) for x in fac))
     for x in fac:
         k = x['kernel']
@@ -232,33 +225,18 @@ def build():
     for x in fac:
         x['engines'] = [c for c in x['concepts'] if any(linked(c, o) for o in x['concepts'])]
 
-    here = os.getcwd(); os.chdir(os.path.join(ROOT, 'library', 'cards_db'))
-    wanted = {frozenset((c, q)) for x in fac for c in x['linked'] for q in x['kernel'] if linked(c, q)}
-    pair_of = roster_map.card_pairs(wanted)[0]
-    os.chdir(here)
-    pairs, strengths = [], {}
+    strengths = {}
     for i in range(len(fac)):
         for j in range(i + 1, len(fac)):
             a, b = fac[i], fac[j]
             ca, cb = a['concepts'], b['concepts']
-            shared = [c for c in ca if c in cb]
             links = sorted({frozenset((p, q)) for p in ca for q in cb if linked(p, q) and p not in cb and q not in ca}, key=lambda s: -strong[s][0])
             sup_ab = [c for c in b['kernel'] if a['lift'].get(c, 0) >= DECK_LIFT]
             sup_ba = [c for c in a['kernel'] if b['lift'].get(c, 0) >= DECK_LIFT]
             strength = len(links) + 3 * (len(sup_ab) + len(sup_ba))
-            if links:
-                p, q = sorted(links[0]); how = f"{plain[p]} + {plain[q]}: \"{strong[links[0]][1]}\""
-            else: how = ''
-            if sup_ab or sup_ba:
-                s_, f_ = (sup_ab, a) if len(sup_ab) >= len(sup_ba) else (sup_ba, b)
-                how += ('; ' if how else '') + f"{f_['name']} decks hold its " + ', '.join(f"{plain[c]} x{f_['lift'][c]:.1f}" for c in s_)
-            strengths[(i, j)] = strengths[(j, i)] = (strength, how)
-            over = 2 * len(shared) > min(len(ca), len(cb))
-            pairs.append(f"- {a['name']} + {b['name']}: {len(links)} card links; decks hold {len(sup_ab)} / {len(sup_ba)} of the other's kernel 2x+"
-                         + (f"; shares {len(shared)} of {min(len(ca), len(cb))}" + (' **over half**' if over else '') if shared else '')
-                         + f"; strength {strength}")
+            strengths[(i, j)] = strengths[(j, i)] = strength
 
-    partners = {i: sorted((j for j in range(len(fac)) if j != i), key=lambda j: -strengths[(i, j)][0])[:PARTNERS] for i in range(len(fac))}
+    partners = {i: sorted((j for j in range(len(fac)) if j != i), key=lambda j: -strengths[(i, j)])[:PARTNERS] for i in range(len(fac))}
 
     for i, x in enumerate(fac):  # design markers: what its kernel's decks are like against their games' decks (step 3)
         gs = {decks[n]['game'] for n in x['decks']}
@@ -376,50 +354,23 @@ def run():
                                ','.join(f'{k}:{v}' for k, v in x['markers'].items()), x['wins']] + [x['answers'][q] for q in ('front', 'backrow', 'lanes', 'holds', 'cares')]
                               + [','.join(fac[j]['letter'] for j in partners[i])] + [';'.join(q + ':' + '+'.join(sorted(x['by_question'][q])) for q in Q5)]) + '\n')
 
-    out = ['# The factions: every number (made by kernel_factions.py)', '',
-           f"Fit: how well a concept goes with the faction's core, 0 to 1 (card links or decks holding both, {FULL} times chance = 1). "
-           f"Partners: its {PARTNERS} strongest pairs (card links between their concepts, plus 3 per kernel concept the other's decks "
-           f'hold {DECK_LIFT:g}x+). A concept is in at most {MAX_SHARE} factions.', '']
+    name = lambda c: re.sub(r' \([^)]*\)', '', plain.get(c, c))  # the page for Kaptain: one sheet per faction, plain names, every item a list, nothing in brackets, no numbers
+    page = ['# The factions', '', f'The world: {WORLD}.', '', '[K] marks a kernel concept.', '']
     for i, x in enumerate(fac):
-        out.append(f"## {x['name']}: {x['does']} ({len(x['decks'])} decks with twice their game's share of kernel cards)")
-        out.append(f"- Kernel (cohesion {cohesion(x['kernel']):.2f}; core {', '.join(plain.get(c, c) for c in x['core'])}):")
+        page += [f"## {x['name']}", '', f"{x['does'].capitalize()}.", '', '### Who they are', '', f"{x['theme']}.", '',
+                 '### Identity: its families of the concept tree', '']
+        page += [f'- {name(f)}' for f in x['fams']]
+        page += ['', '### Concepts', '']
+        page += [f'- [K] {name(c)}' for c in x['kernel']]
+        page += [f'- {name(c)}' for c in x['concepts'] + x['extras'] if c not in x['kernel']]
+        page += ['', '### Design answers', '', f"- How it wins: {x['does']}"]
         for q in Q5:
-            out.append(f"  - {QUESTION[q]}: " + (', '.join(f'{plain.get(c, c)} ({lean.get(c, 0)} decks)' for c in sorted(x['by_question'][q])) or '**none**'))
-        out.append('- Its other concepts, by fit:')
-        for c in x['concepts']:
-            if c in x['kernel']: continue
-            link = f"; real cards link it to the kernel: {behind(c, x['kernel'])[1]}" if c in x['linked'] else '; played with it in decks'
-            out.append(f"  - {plain.get(c, c)} {x['fit'][c]:.2f}{link}")
-        out.append(f"- {len(x['concepts'])} concepts; {len(x['engines'])} of them linked by real cards to another of its concepts")
-        out.append(f"- Theme: {x['theme']}. Design markers: " + ('; '.join(f"{D['markers'][k]} x{v}" for k, v in x['markers'].items()) or 'none'))
-        out.append(f"- Extras ({len(x['extras'])}): " + '; '.join(f"{plain.get(c, c)} {x['fit'].get(c, 0):.2f}" for c in x['extras']))
-        out.append(f"- How it wins: {x['wins']}")
-        for q in ('front', 'backrow', 'lanes', 'holds', 'cares'):
-            out.append(f"- {QUESTION[q]}: {x['answers'][q]}")
-        out.append(f'- Partners (its {PARTNERS} strongest; * = it is in their {PARTNERS} too):')
-        for j in partners[i]:
-            st, how = strengths[(i, j)]
-            out.append(f"  - {fac[j]['name']}{' *' if i in partners[j] else ''} ({st}): {how}")
-        out.append('')
-    out.append('## Concepts 10+ decks are built on that no faction has')
-    out += [f'- {plain.get(c, c)} ({lean[c]} decks)' for c in missed] or ['- none']
-    out.append('')
-    out.append('## Every pair')
-    out += pairs
-    text = '\n'.join(out) + '\n'
-    open(os.path.join(HERE, 'kernel_factions_check.md'), 'w', encoding='utf-8').write(text)  # every number, for checking
-
-    nm = lambda cs: ', '.join(plain.get(c, c) for c in cs)  # the page for Kaptain: one faction sheet each, no numbers
-    page = ['# The factions', '', f'**The world:** {WORLD}.', '']
-    for i, x in enumerate(fac):
-        page += [f"## {x['name']}", '', f"**What it does:** {x['does']}.", '', f"**Who they are:** {x['theme']}.", '',
-                 f"**Kernel:** {nm(x['kernel'])}", '', '**Answers:**', '']
-        for q in Q5:
-            page.append(f"- **{QUESTION[q].capitalize()}:** " + (nm(sorted(x['by_question'][q])) or 'none yet'))
-        rest = [c for c in x['concepts'] if c not in x['kernel']]
-        page += ['', f"**Also plays:** {nm(rest)}", '', f"**Extras:** {nm(x['extras'])}", '',
-                 f"**Partners:** {nm(fac[j]['name'] for j in partners[i])}", '']
-    if missed: page += ['## In no faction yet', '', nm(missed[:20]), '']
+            page.append(f"- {QUESTION[q].capitalize()}:")
+            page += [f'  - {name(c)}' for c in sorted(x['by_question'][q])] or ['  - none yet']
+        page += ['', '### Partners', '']
+        page += [f"- {fac[j]['name']}" for j in partners[i]]
+        page.append('')
+    if missed: page += ['## In no faction yet', ''] + [f'- {name(c)}' for c in missed] + ['']
     open(os.path.join(HERE, 'kernel_factions.md'), 'w', encoding='utf-8').write('\n'.join(page) + '\n')
     allc = {x['name']: set(x['concepts'] + x['extras']) for x in fac}
     jac = [len(allc[a['name']] & allc[b['name']]) / len(allc[a['name']] | allc[b['name']]) for i, a in enumerate(fac) for b in fac[i + 1:]]

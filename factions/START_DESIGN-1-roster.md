@@ -171,7 +171,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    whose kernel holds it. Ticking factions lights their kernel, other concepts and extras, and draws in the faction's
    colour the strong card links between its kernel and other concepts.
 6. **The factions, from what they do** (by script: `work/kernel_factions.py` -> `work/kernel_factions.md`, one sheet
-   per faction for Kaptain; `work/kernel_factions_check.md` with every number; `work/kernel_factions_summary.json`, the
+   per faction for Kaptain; `work/kernel_factions_summary.json`, the
    numbers that compare two runs; `work/lists/<letter>.tsv`). Every tie is broken by the concept key in alphabetical
    order, so every run gives the same result. In this order:
    1. **Identities.** Claude names what each faction does, in plain words, each made of headings of the concept tree

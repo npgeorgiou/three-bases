@@ -13,4 +13,4 @@ work/           suspects.tsv, concept_games.py, tag_check.py, tag_read_input.py,
                 answer_concepts.tsv (the ways of each answer, agreed)
 Made by the steps: work/concepts.tsv and work/concepts.md (2), work/deck_scores.json (3), library/cards_db/roster/concept_links.tsv (4),
 factions/roster-map.html (5),
-work/kernel_factions.md, work/kernel_factions_check.md, work/kernel_factions.tsv and work/lists/ (6), combos.tsv (7), plans.tsv and keywords.tsv (8), answers.tsv and STOP1*.md (9).
+work/kernel_factions.md, work/kernel_factions.tsv and work/lists/ (6), combos.tsv (7), plans.tsv and keywords.tsv (8), answers.tsv and STOP1*.md (9).

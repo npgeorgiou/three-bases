@@ -8,6 +8,7 @@ Kaptain's browser card game. Work on the clone; commit to `main` and push after 
 - Never use words Kaptain hasn't used or agreed to (no "happening", "payoff", "generic layer", "flat_ref", etc.); explain with a card example instead.
 - A problem is explained from the big picture down: which step, what that step is for, what went wrong, then the numbers.
 - Every question and answer must make sense to someone who has not read the files. Never use a word from the files or scripts (list, radius, one-off, raw count, pairs, "sits on") without saying in the same message, in one plain sentence, what it is, with one example. Say what each answer would change. Before sending, read each sentence as Kaptain would: if any word needs the files to be understood, rewrite it.
+- A page made for Kaptain to read (a results sheet, a faction page): a header per part, every set of items a list (one item per line), plain names with nothing in brackets, no numbers, stats or card examples unless he asked for them; numbers to compare runs go in a file for scripts.
 - Docs, scripts and replies are written in plain English: no word in an odd sense (never "a shape carries an archetype"; say "fits").
 - Ask only when a decision is Kaptain's and the work can't go on without it; never end a reply with a question by habit. Then one question, answerable with yes/no or a choice, last and alone.
 - No recaps, no lists of everything done, no caveats unless they change what Kaptain must decide.
