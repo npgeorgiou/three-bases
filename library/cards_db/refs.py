@@ -10,13 +10,16 @@ actor_with: who must do it, when the text says ("allied Pykes have dealt 15+ dam
 limited (either side). keyword: the keyword given or used, when the happening is about one (given_keyword Stun).
 concept: the same thing as a concept-tree concept, equal in every game: the keyword's concept (Stun, Freeze: disable), else
 the state's (stunned, frozen: disable), else the event's (round_start, turn_start: turn_start).
+seq: the effect row (flat_do ability, seq) the row is read from, so a link names that row and not the whole ability ("when
+repaired, push adjacent tiles": the push moves units, the repair moves none); empty for triggers and conditions (a cost
+paid by an effect row too: what it pays for is the whole ability).
 Payoff question ("cards that benefit from allies dying"):
   select distinct card from flat_ref where happening='dies' and role!='makes' and side in ('mine','any','')
 Called by load.py after flat.build."""
 import re
 
 SCHEMA = """create table flat_ref(card integer, origin text, via integer, ability integer, role text, happening text,
-  kind text, side text, pick text, keyword integer, concept text, obj_with text, ref integer, actor_kind text, actor_with text);
+  kind text, side text, pick text, keyword integer, concept text, obj_with text, ref integer, actor_kind text, actor_with text, seq integer);
 create index frh on flat_ref(happening, role); create index frc on flat_ref(card); create index frk on flat_ref(concept, role);"""
 
 
@@ -52,18 +55,20 @@ def build(c):
     tree = {(f, v): t for f, v, t in c.execute("select field, value, tree from vocab where tree!=''")}
     kwname = {i: (f'{g}:{n}' if ('keyword', f'{g}:{n}') in tree else n) for i, g, n in c.execute('select id, game, name from card where is_keyword=1')}
 
-    def ins(card, origin, via, ab, role, ev, kind, side, pick, kw=None, state=None, w=None, ref=None, ak=None, aw=None, tile=False):
+    row = {'seq': None}  # the flat_do row being read (flat_ref.seq)
+
+    def ins(card, origin, via, ab, role, ev, kind, side, pick, kw=None, state=None, w=None, ref=None, ak=None, aw=None, tile=False, of_row=True):
         if role == 'makes' and pick == 'self' and not side: side = 'mine'  # what a card does to itself happens on my side
         if role == 'makes' and ev == 'given_keyword' and kind == 'position' and not tile:  # Smoke on a tile: the unit on it, and the
             # tile itself, which a card that counts row effects waits for (Little Havfrue's Rain -> Ancient Foglet)
-            ins(card, origin, via, ab, role, ev, kind, side, pick, kw, state, w, ref, ak, aw, tile=True); kind = 'unit_or_structure'
+            ins(card, origin, via, ab, role, ev, kind, side, pick, kw, state, w, ref, ak, aw, tile=True, of_row=of_row); kind = 'unit_or_structure'
         if ev == 'strikes_nexus' and kind == 'player': kind, side = 'unit', 'mine'  # one way: the unit that strikes, never the player struck
         if role == 'makes' and ((kind == 'player' and ev in UNIT_ONLY) or (kind not in OPEN_KINDS and ev in PLAYER_ONLY)): return
         if role == 'makes' and kind == 'equipment' and ev in NOT_UNIT_DEATH: return
         if role == 'makes' and ev in ('summoned', 'revived') and not side: side = 'mine'  # a summon puts the unit on its owner's side
         con = (tree.get(('keyword', kwname.get(kw, ''))) if kw else None) or (tree.get(('state', state)) if state else None) \
             or tree.get(('event', ev))
-        c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (card, origin, via, ab, role, ev, kind, side or '', pick, kw, con, w, ref, ak, aw))
+        c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (card, origin, via, ab, role, ev, kind, side or '', pick, kw, con, w, ref, ak, aw, row['seq'] if of_row else None))
 
     cat = dict(c.execute('select id, category from card'))
     it_side = {(a, b): sd for a, b, sd in c.execute("select card, ability, on_side from flat_do where coalesce(seq,0)=0 and coalesce(on_pick,'') not in ('it','self')")}
@@ -195,8 +200,8 @@ def build(c):
     ev_of = {(a, b): e for a, b, e in c.execute("select card, ability, event from flat_when where actor_pick='self' and obj_pick is null")}
     planted = {(a, k): r for a, k, r in c.execute("select card, keyword_ref, card_ref from flat_do where origin='own' and act='keyword_action' and card_ref is not null")}
     for r in c.execute('select card, origin, via, ability, act, on_kind, on_side, on_pick, on_zone, on_with, keyword_ref, card_ref, '
-                       'param_event, to_kind, to_with, to_side, to_pick, params from flat_do').fetchall():
-        card, o, v, ab, act, k, s, p, z, w, kw, cref, pev, to_k, to_w, to_s, to_p, ps = r
+                       'param_event, to_kind, to_with, to_side, to_pick, params, seq from flat_do').fetchall():
+        card, o, v, ab, act, k, s, p, z, w, kw, cref, pev, to_k, to_w, to_s, to_p, ps, row['seq'] = r
         if not s and p == 'chosen' and act in HARM and k in ('unit', 'any', 'anything', 'unit_or_structure', None):
             s = 'enemy'  # "deal 2 to a creature" (either side): the player aims it at an enemy; it makes no friendly deaths
         if p == 'actor' and not (k or s): k, s = actor_of.get((card, ab), (None, None))
@@ -251,18 +256,20 @@ def build(c):
             ins(card, o, v, ab, 'makes', 'damaged', 'unit', 'enemy', None)
         if act == 'spend_mana' and k in ('mana', 'secondary_resource', 'gem', 'lane_resource') and s in ('mine', None):
             # an ability that spends a resource needs it ("Activate: Pay 2 Bones"): fed by gaining it; the card's own need
-            ins(card, o, v, None if o == 'has_keyword' else ab, 'condition', 'mana_refilled', k, 'mine', None, w=w)
+            ins(card, o, v, None if o == 'has_keyword' else ab, 'condition', 'mana_refilled', k, 'mine', None, w=w, of_row=False)  # a cost
+            # is a condition: the whole ability is what the resource pays for (Pay 2 Bones: destroy a unit)
         # an effect when the card enters on a unit next to it ("Opening Gambit: give a nearby minion +2"): where it enters decides
         state_rows(card, o, v, ab, k, s, p, w, z, entering=(card, ab) in entry_abs and not re.search(r'(?<![a-z:])position \w+ \w+ of ', w or ''),
                    helpful=(s in ('mine', None) and helps(act, ps)) or act in ('create', 'summon', 'choose_card', 'play_card', 'revive'))  # the
         # filter of what it makes or fetches ("create a follower with Challenger") is the card's own keyword: nothing must give it
         if to_w and to_k != 'position' and re.search(r'(?<![a-z:])position ', to_w) and act not in PLACES:  # a space is not moved into place  # "attack a bordering enemy"; where a new card is put
             ins(card, o, v, ab, 'state', 'moves', to_k, s, None, w=to_w)                # ("Pelt Lice in adjacent slots") needs no moves
+    row['seq'] = None
     # the game's rules (read/<game>/game_rules.jsonl): what every card of a category does without its text saying so (an
     # attacking unit hits the enemy Nexus when it is not blocked); its makes rows, about "self", become every such card's own
     for e, cat, cost_has, kind_has in c.execute('select entry, category, cost_has, kind_has from game_rule').fetchall():
         # a rule about a cost ("Bones costs": the card needs Bones) is a need of every card whose cost names it; other rules make
-        rows = c.execute("select ability, happening, kind, side, pick, keyword, concept, obj_with, ref, role from flat_ref where card=? and role in "
+        rows = c.execute("select ability, happening, kind, side, pick, keyword, concept, obj_with, ref, role, seq from flat_ref where card=? and role in "
                          + ("('makes','condition','trigger')" if cost_has else "('makes')"), (e,)).fetchall()
         # a unit that can never do what the rule makes does not follow it: Immobile, Inert, "I can't attack" skip the fight rule,
         # "Can't harvest faeria" the harvest rule; a "can't" limited to some targets ("can only attack gods") skips nothing
@@ -278,11 +285,11 @@ def build(c):
                                  (cat, e, cost_has, cost_has, kind_has, kind_has)).fetchall():
             if card in never: continue
             ckind = KIND_OF_CAT.get(c.execute('select category from card where id=?', (card,)).fetchone()[0])
-            for ab, h, k, sd, pk, kw, con, w, ref, role in rows:
+            for ab, h, k, sd, pk, kw, con, w, ref, role, sq in rows:
                 if pk == 'self' and not sd: sd = 'mine'  # what the card does to itself is on its owner's side
                 if pk == 'self' and not k: k = ckind  # a unit fights as a unit, a leader (Duelyst General) as its player
                 # (a leader attacks, strikes and kills as its player: "whenever your General attacks" waits for exactly that)
-                c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (card, 'game', e, ab, role, h, k, sd, pk, kw, con, w, ref, None, None))
+                c.execute('insert into flat_ref values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (card, 'game', e, ab, role, h, k, sd, pk, kw, con, w, ref, None, None, sq))
     # a unit that comes back when it dies (Ruunin: "Last Words - return Ruunin to your hand") dies again and again: its deaths
     # feed what counts my units dying (Shaytan Monstrosity), as a card that kills my units does (ref: the card itself)
     for card, ab in c.execute("""select distinct w.card, w.ability from flat_when w join flat_do d on d.card=w.card where w.event='dies'

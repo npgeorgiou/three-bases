@@ -372,3 +372,16 @@ stormbound	Witches of the Wild	roster (library suspects)	drains all bordering un
 stormbound	Spellbinder Zhevana	roster (library suspects)	hits frozen units in front: only enemies gain from being put there
 stormbound	Conflicted Drakes	roster (library suspects)	hits all non-Dragon units in front, mine included (read a second time by mistake)
 marvel_snap	Enchantress	roster (library suspects)	silences all Ongoing cards here, both sides: my cards put there is no help
+runeterra	Ascended's Call	roster (link sides)	Rally makes Jax attack; the summon and level-up rows are no part of that link
+runeterra	Jax (level 2)	roster (link sides)	Attack effect: set off by an extra attack
+runeterra	Black Powder Grenade	roster (link sides)	1 to an ally kills it; the 2 to the enemy Nexus kills no unit of mine
+runeterra	Maokai	roster (link sides)	levels from units that died: his level-up count is the side, kept
+runeterra	Stiffened Sinews	roster (link sides)	stuns an enemy: feeds a hit on Stunned enemies
+runeterra	Pyroclastic Arrival	roster (link sides)	only its hit on Stunned enemies needs the Stun; its own Stun needs none
+runeterra	Brightsteel Protector	roster (link sides)	gives an ally Barrier
+runeterra	Desperate Husk	roster (link sides)	passes its keywords to the played ally; its stats and its own kill are another row
+duelyst	Malice (Bloodbound Spell)	roster (link sides)	destroying a friendly minion is the kill; the 2 damage to my General is not
+duelyst	Nightmare Operant	roster (link sides)	Dying Wish: the trigger the kill sets off, kept on its side
+gwent	Smuggle	roster (link sides)	Profit 3: coins for Fee abilities
+gwent	The Scoundrel	roster (link sides)	Fee 1 pays for damage to the Bounty unit: a cost keeps the whole ability as side
+runeterra	Crawling Viperwyrm	roster (link sides)	its strike on an ally kills; the 3 to my Nexus kills nothing

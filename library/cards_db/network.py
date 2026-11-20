@@ -30,6 +30,29 @@ def src_of(origin, ab, via):
     return 'rule' if origin == 'game' else str(ab) if ab is not None else f'kw{via}'
 
 
+def ref_src(origin, ab, via, seq):
+    """what of a card a flat_ref row is read from: its effect row when it comes from one (flat_ref.seq: "when repaired, push
+    adjacent tiles" moves units by the push row, not by the repair), else as src_of (a trigger, a condition, a keyword, the rules)"""
+    return f'{ab}.{seq}' if origin != 'game' and ab is not None and seq is not None else src_of(origin, ab, via)
+
+
+def ref_srcs(c, sql, *args):
+    """ref_src of every flat_ref row a condition picks (sql: a where clause)"""
+    return {ref_src(o, ab, v, sq) for o, ab, v, sq in c.execute(f'select origin, ability, via, seq from flat_ref where {sql}', args)}
+
+
+def made_src(c, origin, ab, via, seq, h):
+    """what of a card makes happening h (a flat_ref makes row): its effect row; a row not read from one effect row (a death
+    it comes back from, Ruunin): the rows of the ability that make h (row_src)"""
+    return {ref_src(origin, ab, via, seq)} if seq is not None or origin == 'game' or ab is None else row_src(c, ab, h)
+
+
+def makes_src(c, card, h, extra='', *args):
+    """what of a card makes happening h (made_src of its flat_ref makes rows; extra: more of the where clause)"""
+    return {x for o, ab, v, sq in c.execute(f"""select origin, ability, via, seq from flat_ref where card=? and role='makes' and happening=?
+            and ability is not null {extra}""", (card, h) + args) for x in made_src(c, o, ab, v, sq, h)}
+
+
 def note(a, b, y, a_src, b_src):
     """SRC for a line appended where the pair's lines are a plain list (after a cleanup that rebuilt them)"""
     SRC[(a, b, y)].add((';'.join(sorted(a_src)), ';'.join(sorted(b_src))))
@@ -464,8 +487,8 @@ def lines_of(c, game):
     entry_rules = {a_ for (a_,) in c.execute("""select ability from flat_do group by ability having sum(case when act in ('cant','can')
                    and param_event in ('played','summoned') then 0 else 1 end)=0""")}  # abilities that only rule playing or summoning
     own_killers = {x for (x,) in c.execute("select card from flat_ref where origin='own' and role='trigger' and happening='killed' and pick='actor_self'")}  # Northern Wind
-    for card, origin, ab, role, h, side, kw, pick, kind, w, ref, ak, aw, via in c.execute(
-            'select card, origin, ability, role, happening, side, keyword, pick, kind, obj_with, ref, actor_kind, actor_with, via from flat_ref'):
+    for card, origin, ab, role, h, side, kw, pick, kind, w, ref, ak, aw, via, seq in c.execute(
+            'select card, origin, ability, role, happening, side, keyword, pick, kind, obj_with, ref, actor_kind, actor_with, via, seq from flat_ref'):
         if card not in cards: continue
         if role == 'state' and h == 'dies' and pick == 'it' and card in own_killers: continue  # banishes only its own kills: another card's death feeds nothing (L16, L3)
         if role == 'makes':
@@ -489,8 +512,8 @@ def lines_of(c, game):
             # card (Kaptain 3 Nov 2026: Dragonlark's Flying puts no other unit around Vigilator; L20)
             if pick == 'self' and not kind: kind = {'leader': 'player', 'hero': 'unit', 'pilot': 'unit'}.get(cards[card]['cat'], cards[card]['cat'])  # it
             # moves itself as what it is: Azurite Lion moving is no General moving (Zeal)
-            e_ = (card, side, kw, kind, pick, w, ref, rule_name.get(via, 'rules') if origin == 'game' else False); makes[h].add(e_); src_m[(h, e_)] |= row_src(c, ab, h) if origin != 'game' and ab is not None else {src_of(origin, ab, via)}
-            if h == 'attacks' and origin == 'own': e_ = (card, side, kw, kind, pick, w, ref, False); makes['strikes'].add(e_); src_m[('strikes', e_)] |= row_src(c, ab, h)  # an attack it gives
+            e_ = (card, side, kw, kind, pick, w, ref, rule_name.get(via, 'rules') if origin == 'game' else False); makes[h].add(e_); src_m[(h, e_)] |= made_src(c, origin, ab, via, seq, h)
+            if h == 'attacks' and origin == 'own': e_ = (card, side, kw, kind, pick, w, ref, False); makes['strikes'].add(e_); src_m[('strikes', e_)] |= made_src(c, origin, ab, via, seq, h)  # an attack it gives
             # (Rally) is a strike too: "when I strike" goes off (Golden Aegis -> Akshan; L2, L4)
             if origin != 'game': own_makes[card].add(h); made_by[(card, h)].add('fight_kw' if origin == 'has_keyword' and kw_tree(c, via) in HIT_KW + ('aoe_damage', 'deathtouch', 'lifesteal') else origin)
             ok_ = KW_NEEDS.get(kw_tree(c, via)) if origin == 'has_keyword' or (origin == 'uses_keyword' and (card, via) in grants) else None  # a
@@ -536,7 +559,7 @@ def lines_of(c, game):
         e_ = (card, 'mine' if pick == 'self' else side, kw, kind, pick, w, ab in lvl, role,
               (ak, aw, actor_side.get((card, ab)) if role == 'trigger' else None), cost, ab in cheap_abs,
               state_use.get((card, ab), '') if role == 'state' else '')
-        takes[h].add(e_); src_t[(h, e_)].add('rule' if cost else src_of(origin, ab, via))
+        takes[h].add(e_); src_t[(h, e_)].add('rule' if cost else ref_src(origin, ab, via, seq))
     # Kaptain 6 Nov 2026: what changes where units stand links with what acts on units by where they stand, in every game.
     # A card that puts units at a place by its text ("add a Rock here", "a DoomBot to each other location") changes who stands
     # there as a move does: pick 'placed', read only by needs of role 'state' (never "when a unit moves"; L2: a card played is no place change)
@@ -1010,8 +1033,7 @@ def lines_of(c, game):
         out[k_] = keep
     pushers = {a for (a,) in c.execute("""select distinct card from flat_ref where role='makes' and happening='moves' and origin in ('own','uses_keyword')
                and coalesce(side,'') in ('enemy','','any') and coalesce(pick,'') not in ('self')""") if a in cards}
-    push_src = lambda m: {x for (ab_,) in c.execute("""select distinct ability from flat_ref where card=? and role='makes' and happening='moves' and origin in ('own','uses_keyword')
-               and coalesce(side,'') in ('enemy','','any') and coalesce(pick,'') not in ('self') and ability is not null""", (m,)) for x in row_src(c, ab_, 'moves')} or {'type'}
+    push_src = lambda m: makes_src(c, m, 'moves', "and origin in ('own','uses_keyword') and coalesce(side,'') in ('enemy','','any') and coalesce(pick,'') not in ('self')") or {'type'}
     for t in {a_ for ab_, a_ in bump_abs.items() if ab_ not in protect_abilities(c)} & set(cards):  # Stabilizers keeps damage off
         for m in pushers - {t}:
             out[(m, t)].append(('waits', 1.0 / len(pushers), '{A} pushes enemy units into things (bump damage)'))
@@ -1581,18 +1603,18 @@ def numbered(c, game):
 
 
 def use_src(c, b, said, kw=None):
-    """what of card b uses the help that use_of (or a harm on it) said it uses: its abilities, or 'kw<id>' for a keyword it has (SRC)"""
+    """what of card b uses the help that use_of (or a harm on it) said it uses: the effect rows that use it, the abilities whose
+    trigger or condition waits for it, or 'kw<id>' for a keyword it has (SRC)"""
     q = lambda sql, *a: {str(x) for (x,) in c.execute(sql, (b,) + a) if x is not None}
     kws = lambda trees: {f'kw{k}' for (k,) in c.execute(f"""select ck.keyword from card_keyword ck join card k on k.id=ck.keyword join vocab v
                           on v.field='keyword' and v.value in (k.name, k.game || ':' || k.name) where ck.card=? and v.tree in ({','.join('?' * len(trees))})""", (b,) + tuple(trees))}
     when_self = lambda evs: q(f"""select ability from flat_when where card=? and origin in ('own','has_keyword') and (obj_pick in ('self','actor_self')
                                or (origin='has_keyword' and obj_pick is null)) and event in ({','.join('?' * len(evs))})""", *evs)
-    needs = lambda hs: q(f"""select coalesce(ability, 'kw' || via) from flat_ref where card=? and role!='makes' and origin in ('own','has_keyword')
-                          and happening in ({','.join('?' * len(hs))})""", *hs)
+    needs = lambda hs: ref_srcs(c, f"""card=? and role!='makes' and origin in ('own','has_keyword') and happening in ({','.join('?' * len(hs))})""", b, *hs)
     own = lambda: q("select distinct ability from flat_do where card=? and origin='own'")
-    stat = lambda: q("""select ability from flat_if where card=? and attr in ('power','strength') union select ability from flat_do
+    stat = lambda: q("""select ability from flat_if where card=? and attr in ('power','strength') union select ability || '.' || seq from flat_do
                       where card=? and origin='own' and (params like '%=stat%' or act in ('swap_stats','stat_set'))""", b)
-    gives = lambda: q("select ability from flat_do where card=? and act='give_keyword'" + (' and keyword_ref=?' if kw else ''), *((kw,) if kw else ()))
+    gives = lambda: q("select ability || '.' || seq from flat_do where card=? and act='give_keyword'" + (' and keyword_ref=?' if kw else ''), *((kw,) if kw else ()))
     m = re.match(r'does what it waits for or counts \((.*)\)$', said)
     if m: got = needs(tuple(x.strip().replace(' ', '_') for x in m.group(1).split(',')))
     elif said.startswith('returns it to hand'): got = when_self(('played', 'summoned'))
@@ -1602,15 +1624,15 @@ def use_src(c, b, said, kw=None):
     elif said.startswith('makes it strike'): got = q("select ability from flat_ref where card=? and origin='own' and role='trigger' and pick='actor_self' and happening in ('killed','damaged')")
     elif said.startswith('helps it near your leader'): got = q("select ability from flat_if where card=? and of_kind='player' and of_with like '%position %'")
     elif said.endswith('which it counts'): got = q("select ability from flat_if where card=? and of_with like ?", f'%keyword is {kw}%') | when_self(('given_keyword',))
-    elif said.endswith('own strength'): got = q("select ability from flat_do where card=? and act='remove_keyword'" + (' and keyword_ref=?' if kw else ''), *((kw,) if kw else ()))
-    elif said.endswith('passes to its allies'): got = q("select ability from flat_do where card=? and act='copy_keywords'")
+    elif said.endswith('own strength'): got = q("select ability || '.' || seq from flat_do where card=? and act='remove_keyword'" + (' and keyword_ref=?' if kw else ''), *((kw,) if kw else ()))
+    elif said.endswith('passes to its allies'): got = q("select ability || '.' || seq from flat_do where card=? and act='copy_keywords'")
     elif said.startswith('keeps the '): got = gives()
     elif said.endswith('gets through in full'): got = needs(('strikes_nexus', 'nexus_damaged', 'strikes'))
     elif said.startswith(('more power: it doubles', 'more strength', 'more power: its text reads')): got = stat()
-    elif said.startswith('more power: its text uses the damage'): got = kws(POWER_USE) | q("select ability from flat_do where card=? and origin='own' and act in ('start_attack','strike')") | needs(('strikes', 'nexus_damaged', 'strikes_nexus')) | stat()
+    elif said.startswith('more power: its text uses the damage'): got = kws(POWER_USE) | q("select ability || '.' || seq from flat_do where card=? and origin='own' and act in ('start_attack','strike')") | needs(('strikes', 'nexus_damaged', 'strikes_nexus')) | stat()
     elif said.startswith('keeps it alive'): got = kws(GUARD_USE)
     elif said.startswith('speeds up its countdown'): got = kws(('countdown',))
-    elif said.startswith('silences it'): got = q("select ability from flat_do where card=? and origin='own' and act='cant'")
+    elif said.startswith('silences it'): got = q("select ability || '.' || seq from flat_do where card=? and origin='own' and act='cant'")
     else: got = set()
     return got or own() or {'type'}  # no part found: its own text (doublings, a refresh), else only what it is
 
@@ -1857,7 +1879,7 @@ def doer_help_lines(c, game, nodes):
         for m in doers:
             if m != a and m in cards and matches(c, game, as_doer(c, game, cards[m]), kind if kind in KIND_CAT else 'any', w):
                 out[(a, m)].append(('boosts', 1.0 / max(1, len(doers)), '{A} ' + ', '.join(dict.fromkeys(w_.replace(' it', ' {Bc}') for w_ in whys)) + f' when it {DOES.get(h, h.replace("_", " "))}'),
-                                   (rows_of(c, a, "ability=? and origin='own'", ab_), {x for (r_,) in c.execute("select distinct ability from flat_ref where card=? and role='makes' and happening=? and ability is not null", (m, h)) for x in row_src(c, r_, h)} or {'type'}))
+                                   (rows_of(c, a, "ability=? and origin='own'", ab_), makes_src(c, m, h) or {'type'}))
     return out
 
 
@@ -2019,10 +2041,11 @@ def played_lines(c, game, nodes, broad):
     "Fast spells, Slow spells or Skills you've played"); only when the kind is narrowed past "any card" or "any unit".
     "N cards with different names" is helped by cards that create cards (more different cards to play)."""
     cards = cards_of(c, game); out = Lines(); marks = ','.join('?' * len(nodes)); lvl = level_abilities(c)
-    for t, ab, h, kind, side, pick, w, role in c.execute(f"""select card, ability, happening, kind, side, pick, obj_with, role from flat_ref where role!='makes'
+    for t, ab, h, kind, side, pick, w, role, o_, v_, sq_ in c.execute(f"""select card, ability, happening, kind, side, pick, obj_with, role, origin, via, seq from flat_ref where role!='makes'
             and origin in ('own','gives') and happening in ('played','summoned','drawn','mana_spent') and coalesce(pick,'')!='self' and side in ('mine','any','')
             and card in ({marks})""", list(nodes)).fetchall():
         if ab in harm_abilities(c) or ab in help_abilities(c) or (ab, h) in capped(c): continue
+        b_ = ref_src(o_, ab, v_, sq_)  # what of it counts or waits for the card (SRC)
         if not side and role == 'trigger' and ab in reacts_against(c, game): continue  # Sentinel, Night Watcher: the enemy's cards
         if c.execute("select 1 from flat_do f join flat_ref r on r.ability=f.ability and r.card=f.card where f.ability=? and r.origin='gives' "
                      "and f.on_pick='it' limit 1", (ab,)).fetchone(): continue  # a given "your next minion costs 2 less and takes 2 damage"
@@ -2059,8 +2082,8 @@ def played_lines(c, game, nodes, broad):
                 # "whenever you play a spell": only what makes spells (Vinemother's Stings) sets it off more
                 for a in mk:
                     if ('waits', 0.5 / len(mk), 'makes more cards to play') not in out[(a, t)]:
-                        out[(a, t)].append(('waits', 0.5 / len(mk), 'makes more cards to play'), (mk_src[a], {str(ab)}))
-                    else: SRC[(a, t, 'makes more cards to play')].add((';'.join(sorted(mk_src[a])), str(ab)))
+                        out[(a, t)].append(('waits', 0.5 / len(mk), 'makes more cards to play'), (mk_src[a], {b_}))
+                    else: SRC[(a, t, 'makes more cards to play')].add((';'.join(sorted(mk_src[a])), b_))
             continue
         n = kind_count(c, game, 'any' if k == 'card' else k, w)
         for a in nodes:
@@ -2077,10 +2100,10 @@ def played_lines(c, game, nodes, broad):
                 # event played": makes cheaper; a reaction ("every 3rd Attack"): triggers; a count it needs: enables (Kaptain 30 Oct)
                 line = ('levels', 2.0 / n, why + ' (levels it up)') if ab in lvl else (kind_, 1.0 / n, why)
                 have = [l for l in out[(a, t)] if l[2] == line[2]]
-                src = ({'type'}, {str(ab)})  # A is the kind of card B counts; B's ability counts it
+                src = ({'type'}, {b_})  # A is the kind of card B counts; B's ability counts it
                 if not have: out[(a, t)].append(line, src)
                 elif line[0] in ('cheaper', 'waits') and all(l[0] == 'type' for l in have):  # said once, by the stronger kind
-                    out[(a, t)] = [l for l in out[(a, t)] if l[2] != line[2]] + [line]; SRC[(a, t, line[2])].add(('type', str(ab)))
+                    out[(a, t)] = [l for l in out[(a, t)] if l[2] != line[2]] + [line]; SRC[(a, t, line[2])].add(('type', b_))
         if h in ('played', 'summoned'):  # a card that makes such a card gives it one more to play (Ferros Financier manifests a 6+ cost
             # spell: Jayce counts two 6+ cost spells played, Lux counts 6+ mana of spells)
             for a, mk, mw in made_cards(c):
@@ -2088,7 +2111,7 @@ def played_lines(c, game, nodes, broad):
                 say = f'makes a {mk} whose {GERUND.get(h, h)} sets off its effect' if role == 'trigger' else f'makes a {mk} it needs {h} for its count'
                 if not any(l[2].startswith(say) for l in out[(a, t)]):
                     out[(a, t)].append(('levels', 1.0 / n, say + ' (levels it up)') if ab in lvl else ('waits' if role == 'trigger' else 'type', 0.5 / n, say),
-                                       (CACHE['made_src'][(a, mk, mw)], {str(ab)}))
+                                       (CACHE['made_src'][(a, mk, mw)], {b_}))
     for t, ab in c.execute(f"""select card, ability from flat_if where test in ('amount_distinct','distinct') and attr='region'
             and card in ({marks})""", list(nodes)).fetchall():  # "allies from 10 regions" (The Bandle Tree): cards that make
         # multi-region or other-region cards bring more regions (L17)
@@ -2297,11 +2320,9 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
             CACHE[('n', game, concepts)] = max(1, len({a for (a,) in c.execute(
                 f"select card from flat_concept where concept in ({','.join('?' * len(concepts))})", concepts) if a in cards}))
         return CACHE[('n', game, concepts)]
-    needs = c.execute(f"""select card, ability, happening, side, role, pick, actor_kind, actor_with from flat_ref where role!='makes' and origin in
+    needs = c.execute(f"""select card, ability, happening, side, role, pick, actor_kind, actor_with, origin, via, seq from flat_ref where role!='makes' and origin in
             ('own','uses_keyword','has_keyword') and card in ({marks})""", L).fetchall()
     by_enemy = {(a_, h_) for a_, h_ in c.execute(f"""select ability, event from flat_if where ev_actor_side='enemy' and card in ({marks})""", L)}
-    kw_need = {(t_, h_): v_ for t_, h_, v_ in c.execute(f"""select card, happening, via from flat_ref where role!='makes' and ability is null
-               and card in ({marks})""", L)}  # a need of a keyword the card has, with no ability: that keyword (SRC)
     needs = [n_ for n_ in needs if (n_[1], n_[2]) not in by_enemy]  # "if you were attacked last turn" (Defender of the Homeland): the
     # enemy does it, my cards help nothing (L9)
     w_need = {(t_, ab_): w_ for t_, ab_, w_ in c.execute(f"""select card, ability, obj_with from flat_ref where role!='makes' and coalesce(obj_with,'')!=''
@@ -2368,7 +2389,7 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
                      v.field='keyword' and v.value in (k.name, k.game || ':' || k.name) where v.tree in ('evasion','excess_damage')
                      and ck.card in ({marks})""", L)}  # Elusive, Overwhelm: past blockers; Scout's second attack is no reach (L4)  # helps by its own keyword only (Young
         # Witch is Elusive): it helps a need that it can be the doer of, not "Zed or allied Living Shadows strike the Nexus"
-        for t, ab, h, side, role, pick, ak, aw in needs:
+        for t, ab, h, side, role, pick, ak, aw, o_, v_, sq_ in needs:
             if h not in hs or side not in sides: continue
             if role == 'condition' and h in ('killed', 'dies') and (t, ab, h) in self_kills: continue  # "gain 4 mana for each unit
             # destroyed" by its own damage (Spellbinder Zhevana): its own hit does the killing, more power on my units adds nothing
@@ -2401,7 +2422,7 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
                 if aw and pick != 'self' and not can_aim_at(c, game, a, ak if ak in KIND_CAT else 'any', aw): continue
                 out[(a, t)].append(('levels' if lv else 'moves' if concepts == ('movement',) else 'waits' if role == 'trigger' else 'type', (1.0 if lv else 0.5) / n,
                                     why.rstrip('*') + (' (levels it up)' if lv else '')), (help_src[(concepts, hs[0] == 'nexus_damaged', a)] or (act_rows(a, ('move', 'swap')) if concepts == ('movement',) and side == 'enemy' and h in ('moves', 'moves_onto') else set()),
-                                    {str(ab) if ab is not None else f'kw{kw_need.get((t, h), "")}'}))  # it makes what the card waits for happen more
+                                    {ref_src(o_, ab, v_, sq_)}))  # it makes what the card waits for happen more
     # how many cards are in my hand ("played as the last card from your hand", "10+ cards in hand", "for each card in hand")
     hand = lambda acts, zone, kw='': {a for (a,) in c.execute(f"""select card from flat_do where act in ({','.join('?' * len(acts))}) and origin in
             ('own','uses_keyword',?) and coalesce(on_side,'mine')='mine' and (coalesce(on_zone,'')='hand' or coalesce(eff_zone,'')='hand' or ?)
@@ -2591,8 +2612,8 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
         deep = q("""select card from flat_ref where role!='makes' and origin in ('own','has_keyword') and happening in ('harvests','moves_onto')
                 and (side='enemy' or coalesce(obj_with,'') like '%enemy%') and card in ({marks})""")
         mv_ = lambda a: act_rows(a, ('move', 'swap', 'give_keyword'), "and origin='own'")
-        b_place = lambda t: {str(x) for (x,) in c.execute("""select ability from flat_when where card=? and origin='own' and event in ('summoned','played')
-                             union select ability from flat_ref where card=? and role!='makes' and happening in ('harvests','moves_onto')""", (t, t))} or {'type'}
+        b_place = lambda t: ({str(x) for (x,) in c.execute("select ability from flat_when where card=? and origin='own' and event in ('summoned','played')", (t,))}
+                             | ref_srcs(c, "card=? and role!='makes' and happening in ('harvests','moves_onto')", t)) or {'type'}
         for t in near_me:  # what moves this card, or lets it move far, chooses where the units summoned next to it appear
             for a in (movers_mine | givers) - {t}: out[(a, t)].append(('boosts', 0.5 / max(1, len(movers_mine | givers)), 'moves it where the units summoned next to it are needed'), (mv_(a), b_place(t)))
         for t in (place | deep) - near_me:
@@ -2610,8 +2631,8 @@ def boost_lines(c, game, nodes, stat_help=frozenset(), cost_help=frozenset()):
         users = {t_ for t_ in u_ab} - {a}
         for t in users: out[(a, t)].append(('boosts', 0.5 / len(users), f'keeps your {mechanics.name(c, int(k))}: it counts more of it'), ({r_}, u_ab[t]))
         g_ab = collections.defaultdict(set)
-        for m, ab_ in c.execute(f"""select card, ability from flat_ref where role='makes' and happening='given_keyword' and keyword=?
-                  and origin='own' and side='mine' and coalesce(pick,'') not in ('self','it') and card in ({marks})""", [int(k)] + L): g_ab[m] |= row_src(c, ab_, 'given_keyword')
+        for m, ab_, v_, sq_ in c.execute(f"""select card, ability, via, seq from flat_ref where role='makes' and happening='given_keyword' and keyword=?
+                  and origin='own' and side='mine' and coalesce(pick,'') not in ('self','it') and card in ({marks})""", [int(k)] + L): g_ab[m] |= made_src(c, 'own', ab_, v_, sq_, 'given_keyword')
         givers = {t_ for t_ in g_ab} - {a} - users
         for m in givers: out[(a, m)].append(('boosts', 0.5 / len(givers), f'keeps the {mechanics.name(c, int(k))} it gives'), ({r_}, g_ab[m]))
     # more room for what my cards put in a slot (Capacitor: 2 more Orb slots): the cards that put Orbs in keep more of them
@@ -2783,8 +2804,8 @@ def actor_help_lines(c, game, nodes):
             and w.ability=d.ability where d.on_pick='actor' and w.obj_pick='self' and d.origin in ('own','has_keyword')
             and d.act in ('cost_change','stat_change','give_keyword') and d.card in ({marks})""", L).fetchall():
         t_ab = collections.defaultdict(set)
-        for t, ab_ in c.execute(f"""select card, coalesce(ability, 'kw' || via) from flat_ref where role in ('condition','trigger') and happening=?
-                  and coalesce(side,'') in ('mine','any','') and coalesce(pick,'') not in ('self','actor_self') and card in ({marks})""", [ev] + L): t_ab[t].add(str(ab_))
+        for t, o_, ab_, v_, sq_ in c.execute(f"""select card, origin, ability, via, seq from flat_ref where role in ('condition','trigger') and happening=?
+                  and coalesce(side,'') in ('mine','any','') and coalesce(pick,'') not in ('self','actor_self') and card in ({marks})""", [ev] + L): t_ab[t].add(ref_src(o_, ab_, v_, sq_))
         takers = {t_ for t_ in t_ab} - {a}
         why = 'makes it cheaper' if act == 'cost_change' and '=-' in (ps or '') else ('help ' + stats_said(ps))[5:] if act == 'stat_change' else 'gives it a keyword'
         for t in takers:
@@ -2797,8 +2818,8 @@ def actor_help_lines(c, game, nodes):
         a_ = {f'{x}.{y}' if o_ == 'own' else f'kw{v_}' for x, y, o_, v_ in c.execute("""select d.ability, d.seq, d.origin, d.via from flat_do d join flat_when w on w.card=d.card
               and w.ability=d.ability where d.act='cant' and d.on_pick='self' and d.params like '%event=dies%' and w.event='sacrificed' and d.card=?""", (a,))}
         t_ab = collections.defaultdict(set)
-        for t, ab_ in c.execute(f"""select card, coalesce(ability, 'kw' || via) from flat_ref where role='condition' and happening='sacrificed'
-                  and coalesce(side,'') in ('mine','any','') and coalesce(pick,'') not in ('self','actor_self') and card in ({marks})""", L): t_ab[t].add(str(ab_))
+        for t, o_, ab_, v_, sq_ in c.execute(f"""select card, origin, ability, via, seq from flat_ref where role='condition' and happening='sacrificed'
+                  and coalesce(side,'') in ('mine','any','') and coalesce(pick,'') not in ('self','actor_self') and card in ({marks})""", L): t_ab[t].add(ref_src(o_, ab_, v_, sq_))
         takers = {t_ for t_ in t_ab} - {a}
         for t in takers:
             if t in cards: out[(a, t)].append(('boosts', 1.0 / len(takers), 'pays for it again and again: it is sacrificed and does not die'), (a_, t_ab[t]))
@@ -2814,8 +2835,7 @@ def gives_lines(c, game, nodes):
     doers = lambda h: {m for (m,) in c.execute(f"""select distinct card from flat_ref where role='makes' and happening=? and
             origin in ('own','uses_keyword') and coalesce(pick,'') not in ('self','it') and coalesce(side,'')!='mine' and card in ({marks})""", [h] + L)}
     def doer_src(m, h):  # the rows of m that make h (SRC); a unit only by what it is
-        return {x for (ab_,) in c.execute("""select distinct ability from flat_ref where role='makes' and happening=? and card=? and ability is not null
-                and origin in ('own','uses_keyword')""", (h, m)) for x in row_src(c, ab_, h)} or {'type'}
+        return makes_src(c, m, h, "and origin in ('own','uses_keyword')") or {'type'}
     adder_rows = lambda a, ab, act: {f'{ab}.{sq}' for (sq,) in c.execute('select seq from flat_do where card=? and ability=? and act=?', (a, ab, act))} or {str(ab)}
     # damage to my own cards is a drawback: more of it helps nothing (L5: The Dreadway -> Darkwater Scourge, no line)
     found = adders(c, game); n = collections.Counter(h for _, _, h, *_ in found)

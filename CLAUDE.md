@@ -73,6 +73,7 @@ When Kaptain agrees a plan or a decision, rewrite every doc it touches in that s
 - summary/ is the source of truth for rules and UI: never contradict it without telling Kaptain. Never invent rules, stats or mechanics; mark suggestions as Claude's. Design answers never come from general knowledge: every suggested mechanic starts from what the library found, and anything with no library source is marked as Claude's.
 - Before proposing a rebuild, look for the smallest change that gives the same result (e.g. new inputs into the existing network instead of a new kind of network) and propose that first.
 - Never patch. When Kaptain drops or changes something, remove or change it everywhere it appears (code, data, tables, docs, pages; `grep -rn` the repo), remake what is made from it, and check that nothing else moved. Never leave it in with a note that it is dropped, never work around it in one place.
+- Renaming a term across the repo never touches card names or library data: list every hit first and skip those that are names ("Captain's Wheel" is a card).
 - Change only what was asked. Fix bugs generically: when one card shows a problem, check every card with the same problem (`find.py kw`).
 - Every fix gets test cases (Kaptain, 31 Oct 2026): one for each point Kaptain raised and one for each similar error found, so a later fix cannot quietly undo it (card database: `cases/network.tsv`; game: a scenario or simtest check).
 - Visuals (layout, readability, animations) must look deliberate and clear.

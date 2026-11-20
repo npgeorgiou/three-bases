@@ -56,7 +56,8 @@ Searches use the query layer, never keyword names.
 Anything a card can work with is a happening: an `event` value in vocab.tsv (dies, summoned, damaged, given_keyword,
 stat_changed, drawn, ...). flat_ref has one row for every way a card works with one: makes it, waits for it (trigger),
 tests or counts it (condition), or picks things it happened to (state: a state whose vocab `causes` names it, or a unit in
-zone discard = died). So one query finds them all, whatever the wording:
+zone discard = died); seq names the effect row a makes or state row is read from (a link's side is that row, not the
+whole ability). So one query finds them all, whatever the wording:
 `select distinct card from flat_ref where happening='dies' and role!='makes' and side in ('mine','any','')`
 (side '' = either side; add `and coalesce(pick,'')!='self'` for "other units"). Same as `ask.py all cares dies mine`.
 
