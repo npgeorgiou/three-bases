@@ -17,12 +17,11 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 9. Stop 1 | to do | |
 
 ## Work for the next chat, in this order
-1. **Kaptain checks the 10** (`work/kernel_factions.md`); the method stays on 10 factions until he is happy, then
-   20 with a limit of 4-5 factions per concept and 7 partners.
-2. **Then**: drop the 17 deck groups (step 3 keeps each deck's scores; its docs and `deck_groups_nmf.py` lose the
-   groups), the map placed by decks that hold both concepts and coloured by faction, and the "when" counting rule
-   (`concept_tags.side_concepts`: a card's "when..." part counts only when the other card sets it off), shown to
-   Kaptain before and after.
+1. **Kaptain picks a way of making the factions**: A (`work/kernel_factions.md`, agreed), B (`_B.md`, the kernel
+   stays the identity's core) or C (`_C.md`, the fill follows the core only); the numbers are in each
+   `kernel_factions*_summary.json`. Then the method stays on 10 factions until he is happy, then 20 with a limit of
+   4-5 factions per concept and 7 partners.
+2. **Kaptain brainstorms factions** with `work/make_faction.py` (one faction from concepts he gives).
 3. **Open library errors**, not fixed:
    - Into the Breach: repair that cures Fire or A.C.I.D. counts as "when health is restored" (36 cards).
    - Gwent: giving Spying counts as "give to the opponent" (44 cards) and Reset as heal; both unchecked.
@@ -43,6 +42,9 @@ One chat does one step; at its end, mark the step done here and say what it left
 - A link counts for two concepts only through what of each card made it (Ghost Rider brings a card back, Vibro-Shock
   Gauntlets give it +2 Power: revive with +2 Power, never revive with supply). Cases: `cases/roster.tsv`.
 - Two concepts you expect to work together show 0 links: check that one pair by script before trusting it.
+- A card's "when..." part counts for every link its sentence makes. Counting it only for the card the other one sets
+  off was tried (20 Nov 2026): the library does not keep which card acts reliably enough, and it lost real combos
+  (discard with "when a card is discarded").
 - Card pairs that look wrong are library errors: they are read, fixed in the library with test cases, and never
   filtered out by a rule (the 8 suspect pairs of 20 Nov 2026: 6 library errors, fixed; 2 real).
 
