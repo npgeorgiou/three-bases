@@ -18,6 +18,9 @@ front	swap it away	swap		Claude's
 front	his unit dies attacking mine (strike back, riposte)	counterattack		Claude's
 front	turn it into something harmless (a cocoon)	polymorph		Claude's
 front	hits that ignore its defence	piercing		Claude's
+front	poison it, it dies later	damage_over_time		Claude's (Kaptain's go, 20 Nov 2026)
+front	my unit fights it with a bonus for this turn	temporary_buff+fight_enemy		Claude's (Kaptain's go, 20 Nov 2026)
+front	double my unit, then it fights	stat_multiply+fight_enemy		Claude's (Kaptain's go, 20 Nov 2026)
 backrow	any removal of the front list on a spell (destroy, damage, bounce, banish, steal, cocoon: a spell picks any cell)	destroy|damage|bounce_enemy|banish|steal|polymorph on a spell		Claude's
 backrow	the rest of the hit goes into the unit behind	excess_damage		Claude's
 backrow	a big hit goes through	excess_damage+attack_gain	1.63, 3 games	Claude's
@@ -33,6 +36,8 @@ backrow	many at once	aoe_damage		Claude's
 backrow	my unit dies and blasts around it	death_trigger+aoe_damage	2.91, 7 games	Claude's
 backrow	everything at once	board_wipe		Claude's
 backrow	a whole row	row_effects		Claude's
+backrow	burn reaches anywhere	damage_over_time		Claude's (Kaptain's go, 20 Nov 2026)
+backrow	blast everything around, mine too	friendly_fire		Claude's (Kaptain's go, 20 Nov 2026)
 lanes	my units travel	movement		Claude's
 lanes	swap places	swap		Claude's
 lanes	move his units	forced_movement		Claude's
@@ -50,6 +55,7 @@ lanes	stats equal to a count over the board	variable_stats		Claude's
 lanes	reacts when another unit dies anywhere	other_death_trigger		Claude's
 lanes	reacts when an enemy arrives anywhere	on_enemy_enter		Claude's
 lanes	reaches other lanes	cross_lane		Claude's
+lanes	pick my unit up and replay it in another lane	return_from_board		Claude's (Kaptain's go, 20 Nov 2026)
 holds	hard to kill	shield|cheat_death|regeneration|damage_reduction|defence_gain		Claude's
 holds	spells can't touch it	immunity		Claude's
 holds	keep my units alive	protection		Claude's
@@ -71,6 +77,8 @@ holds	from far: heal or make it stronger from another cell	heal|buff		Claude's
 holds	from far: his cards cost more	cost_increase		Claude's
 holds	from far: attack his hand	hand_disruption		Claude's
 holds	hurts whoever attacks it (strike back, riposte)	counterattack		Claude's
+holds	heals itself by hitting	lifesteal		Claude's (Kaptain's go, 20 Nov 2026)
+holds	a timer: hold the base until it goes off	countdown		Claude's (Kaptain's go, 20 Nov 2026)
 cares	neighbours	adjacency		Claude's
 cares	facing and turning	flanking		Claude's
 cares	formations	link_formation		Claude's

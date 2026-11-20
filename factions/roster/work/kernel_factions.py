@@ -42,7 +42,7 @@ ROOT = os.path.join(HERE, '..', '..', '..')
 sys.path.insert(0, HERE)
 import step3_groups
 OWN, KERNEL, MIN_KERNEL, MIN_LEAN, ENGINES, PLAYED, MIN_DECKS = 12, 6, 4, 10, 4, 1.0, 3  # Claude's
-PER_QUESTION, SYN, FULL, DECK_SHARE = 2, 1 / 3, 8, 2  # real kernel: concepts per question (Kaptain), fits with another kernel concept, times chance that scores 1 (Claude's)
+PER_QUESTION, SYN, FULL, DECK_SHARE, WHOLE_LIST, COMMON = 2, 1 / 3, 8, 2, 30, 15  # real kernel: concepts per question (Kaptain), fits with another kernel concept, times chance that scores 1 (Claude's)
 DECK_LIFT, HELD, MAX_SHARE, PARTNERS = 1.5, 0.25, 3, 5                              # Claude's; 5 partners: Kaptain
 EXTRAS, TIE = 10, 0.1                                                                # Claude's (8-12, Kaptain); TIE: Kaptain
 IDENTITIES = [  # (name, what it does, families or concepts of the concept tree); Claude's. Waits and Swarms widened by what their decks hold most
@@ -50,7 +50,7 @@ IDENTITIES = [  # (name, what it does, families or concepts of the concept tree)
     ('Kills brutally', 'removes enemy units, many and hard', ['removal', 'damage']),
     ('Messes you up', "breaks the enemy's units and plans", ['disruption', 'suppress', 'debuff', 'steal']),
     ('Moves', 'wins by where its units and his stand', ['positional']),
-    ('Thrives on spells', 'spells that get stronger, cheaper and more of them', ['spell_power', 'card_advantage', 'cost_reduction', 'cost_set']),
+    ('Thrives on spells', 'spells that get stronger, cheaper and more of them', ['spell_power', 'card_advantage', 'cost_reduction', 'cost_set', 'on_spell']),
     ('Waits', 'gets bigger every round, clears the board, then plays huge cards', ['base_resource_gain', 'resource_gain', 'high_cost', 'board_wipe', 'selection']),
     ('Swarms', 'fills the board with many units that hit at once', ['summon', 'copy', 'free_play', 'haste', 'attack_gain']),
     ('Grows', 'its units get bigger and bigger', ['buff', 'in_hand_buff']),
@@ -58,17 +58,29 @@ IDENTITIES = [  # (name, what it does, families or concepts of the concept tree)
     ('Eats its own', 'kills and spends its own units and cards for power', ['sacrifice', 'friendly_fire', 'self_destruct', 'discard']),
 ]
 LETTERS = 'ABCDEFGHIJKLMNOPQRST'
-THEMES = {  # a real theme per faction, and the families of the concept tree it favours in a tie (Claude's)
-    "Can't be broken": ('the defenders of the Theodosian Walls of Constantinople', ['protection', 'terrain', 'heal']),
-    'Kills brutally': ('the Mongol tumens', ['damage', 'movement', 'removal']),
-    'Messes you up': ('the spies and poisoners of the Venetian Council of Ten', ['information', 'damage_over_time', 'steal']),
-    'Moves': ('the Comanche horse raiders', ['positional', 'speed']),
-    'Thrives on spells': ('the alchemists of Rudolf II in Prague', ['card_flow', 'transform', 'economy']),
-    'Waits': ('World War I artillery', ['ranged', 'delayed', 'scope_multi']),
-    'Swarms': ('the Zulu regiments', ['board_presence', 'speed', 'adjacency']),
-    'Grows': ('the sumo stables of Edo', ['stat_gain', 'card_quality']),
-    'Comes back': ('the embalmers of ancient Egypt', ['death', 'card_flow']),
-    'Eats its own': ('the sacrifice priests of Tenochtitlan', ['death', 'drawback']),
+WORLD = ('Veyl, a world of drowned continents, floating islands and storm-rivers, where ten peoples fight over the three '
+         'Wells that still give water')  # Claude's
+THEMES = {  # per faction: its people in Veyl, the real-world model it is written from (hidden, never shown), the families it favours in a tie
+    "Can't be broken": ('The Shellwardens of Kesh: a coastal people who grow living coral over their bodies and hold the tide-gates; '
+                        'they do not fall', 'the defenders of the walls of Constantinople', ['protection', 'terrain', 'heal']),
+    'Kills brutally': ('The Ashen Hunt: riders on burn-scarred lizards who sweep the dune seas and leave nothing standing',
+                       'the Mongol tumens', ['damage', 'movement', 'removal']),
+    'Messes you up': ('The Whisper Choir: masked singers whose songs unknit memory, break oaths and turn warriors against their orders',
+                      'the spies and poisoners of the Venetian Council of Ten', ['information', 'damage_over_time', 'steal']),
+    'Moves': ('The Drift Clans: sky-raft nomads who ride the winds between floating islands and shove their foes off the edges',
+              'the Comanche horse raiders', ['positional', 'speed']),
+    'Thrives on spells': ('The Lantern Scribes: scholars who write with ink distilled from starlight; every word they write makes the next one brighter',
+                          'the alchemists of Rudolf II in Prague', ['card_flow', 'transform', 'economy']),
+    'Waits': ('The Deep Bell: an old order inside the mountain that winds a vast clockwork for years, then rings the bell that flattens the valley',
+              'World War I artillery', ['ranged', 'delayed', 'scope_multi']),
+    'Swarms': ('The Hive of Many Mouths: insect folk who hatch by the thousand from amber nests and cover the ground at once',
+               'the Zulu regiments', ['board_presence', 'speed', 'adjacency']),
+    'Grows': ('The Rootborn: walking tree-giants who swell with every season they survive',
+              'the sumo stables of Edo', ['stat_gain', 'card_quality']),
+    'Comes back': ('The Returning Tide: drowned sailors the sea sends back to the shore every dawn',
+                   'the embalmers of ancient Egypt', ['death', 'card_flow']),
+    'Eats its own': ('The Ember Cult: fire-worshippers who feed their own to the furnace for power',
+                     'the sacrifice priests of Tenochtitlan', ['death', 'drawback']),
 }
 D = json.load(open(step3_groups.FILE, encoding='utf-8'))
 plain, decks, UNIT = dict(D['plain']), D['decks'], set(D['unit'])
@@ -158,7 +170,7 @@ def kernel_decks(k):
     return [n for n, d in enumerate(decks) if avg[d['game']] and share[n] >= DECK_SHARE * avg[d['game']]]
 def candidates(fams, name):
     cs = set().union(*(under(f) for f in fams)) & usable
-    return {c for c in cs if facet.get(c) not in ('trigger', 'condition') and lean.get(c, 0) >= MIN_LEAN
+    return {c for c in cs if facet.get(c) != 'condition' and lean.get(c, 0) >= MIN_LEAN  # a 'when...' under its headings may be kernel
             and (name == 'Eats its own' or c not in drawbacks)}
 
 fac = [{'name': n, 'does': does, 'fams': list(fams), 'cand': candidates(fams, n)} for n, does, fams in IDENTITIES]
@@ -225,27 +237,18 @@ def best_way(x, q, have, score):
         else: found.append((len(take), -sum(score[a] for a in take) / max(1, len(take)), way, take))
     return min(found, key=lambda t: t[:3])[2:] if found else (None, [])
 def build():
-    """one pass of step 6 on the factions' kernels: engines, bricks, filling, partners, markers, list, extras, answers"""
+    """one pass of step 6 on the factions' kernels: one ranked fill (concepts, then extras), partners, markers, list, answers"""
     global kernels, pair_of, pairs, strengths, partners
     kernels = set().union(*(set(x['kernel']) for x in fac))
     for x in fac:
         k = x['kernel']
         x['decks'] = kernel_decks(k); lift = deck_lift(x['decks']); x['lift'] = lift
-        eng = [c for c in usable if c not in kernels and sum(wide(c, q) for q in k) >= 2 and lift.get(c, 0) >= PLAYED]
-        x['engine_pool'] = sorted(eng, key=lambda c: (-sum(wide(c, q) for q in k) ** 2 / reach[c], c))
-        held = x['held'] = {c: sum(decks[n]['counts'].get(c, 0) > 0 for n in x['decks']) / max(1, len(x['decks'])) for c in lift}
-        x['brick_pool'] = [c for c in sorted(lift, key=lambda c: (-lift[c], c)) if lift[c] >= DECK_LIFT and held[c] >= HELD and c not in k
-                           and c not in eng and c in usable and not any(linked(c, q) for q in k)]
-    took = share(lambda x: x['engine_pool'], lambda x: ENGINES, lambda x, c: sum(wide(c, q) for q in x['kernel']))
-    for x in fac: x['from_links'] = took[id(x)]
-    took = share(lambda x: x['brick_pool'], lambda x: OWN - len(x['kernel']) - len(x['from_links']), lambda x, c: x['lift'][c])
-    for x in fac: x['from_decks'] = took[id(x)]
-    for x in fac:  # a faction still short of OWN: what its kernel's decks hold that real cards also link to its concepts
-        have = x['concepts']; lift = x['lift']
-        x['both_pool'] = [c for c in sorted(lift, key=lambda c: (-lift[c], c)) if lift[c] >= DECK_LIFT and x['held'][c] >= HELD
-                          and c in usable and c not in have and any(linked(c, q) for q in have)]
-    took = share(lambda x: x['both_pool'], lambda x: OWN - len(x['kernel']) - len(x['from_links']) - len(x['from_decks']), lambda x, c: x['lift'][c])
-    for x in fac: x['from_both'] = took[id(x)]
+        x['fit'] = {c: sum(fit2(c, q) for q in k) / len(k) for c in usable if c not in k}  # how well it goes with the kernel
+        x['ranked'] = sorted(x['fit'], key=lambda c: (-x['fit'][c], c))
+    took = share(lambda x: x['ranked'], lambda x: OWN - len(x['kernel']), lambda x, c: x['fit'][c])  # one ranked fill
+    for x in fac:
+        x['from_links'] = [c for c in took[id(x)] if any(linked(c, q) for q in x['kernel'])]
+        x['from_decks'] = [c for c in took[id(x)] if c not in x['from_links']]; x['from_both'] = []
     for x in fac:
         x['engines'] = [c for c in x['concepts'] if any(linked(c, o) for o in x['concepts'])]
 
@@ -279,7 +282,7 @@ def build():
 
     for i, x in enumerate(fac):  # design markers: what its kernel's decks are like against their games' decks (step 3)
         gs = {decks[n]['game'] for n in x['decks']}
-        x['letter'], (x['theme'], tf) = LETTERS[i], THEMES[x['name']]
+        x['letter'], (x['theme'], x['model'], tf) = LETTERS[i], THEMES[x['name']]
         x['theme_likes'] = set().union(*(under(f) for f in tf))
         x['markers'] = {}
         for key in D['markers']:
@@ -289,29 +292,10 @@ def build():
                 x['markers'][key] = round((sum(here) / len(here)) / (sum(every) / len(every)), 1)
     for i, x in enumerate(fac):
         x['list'] = lib.scores(x['concepts'])
-        score = {c: v[0] for c, v in x['list'].items()}
-        ex = []
-        for q in ('front', 'backrow', 'lanes', 'holds'):  # (a) the board answers its concepts don't give
-            if answers(x['concepts'] + ex)[q]: continue
-            way, take = best_way(x, q, set(x['concepts'] + ex), score)
-            if way: ex += [c for c in take if c not in ex]
-        have = [j for j in partners[i] if strengths[(i, j)][0] > 0]
-        others = [j for j in range(len(fac)) if j != i and j not in have]
-        while len(have) < PARTNERS and others and len(ex) < EXTRAS:  # (b) short of partners: link to a non-partner's kernel
-            got = {c: score[c] for c in score if c in usable and c not in ex for j in others if any(linked(c, k) for k in fac[j]['kernel'])}
-            c = pick(x, got)
-            if not c: break
-            ex.append(c)
-            new = [j for j in others if any(linked(c, k) for k in fac[j]['kernel'])]
-            have += new[:PARTNERS - len(have)]; others = [j for j in others if j not in new]
-        while len(ex) < 3 * EXTRAS:  # (c) the highest-scoring concepts that link to 2+ of its concepts (more than it takes, for the sharing)
-            got = {c: score[c] for c in score if c in usable and c not in ex and sum(linked(c, k) for k in x['concepts']) >= 2}
-            c = pick(x, got)
-            if not c: break
-            ex.append(c)
-        x['wish'], x['score'] = ex, score
+        x['score'] = {c: v[0] for c, v in x['list'].items()}
+        x['wish'] = [c for c in x['ranked'] if c not in x['concepts']]  # extras: the ranked fill goes on
     for x in fac: x.pop('extras', None)
-    took = share(lambda x: x['wish'], lambda x: EXTRAS, lambda x, c: x['score'].get(c, 0), add=False)  # extras count toward MAX_SHARE too
+    took = share(lambda x: x['wish'], lambda x: OWN + EXTRAS - len(x['concepts']), lambda x, c: x['fit'][c], add=False)  # extras count toward MAX_SHARE too
     for i, x in enumerate(fac):
         x['extras'] = ex = took[id(x)]; score = x['score']
         full = set(x['concepts'] + ex)
@@ -342,6 +326,7 @@ def choose(x, ban):
     """the real kernel: the core, plus per question the core does not answer the option that goes best with the core and
     the other answers (cohesion)"""
     core = set(x['core']); P = set(x['concepts'] + x['extras']) - core
+    top = [c for c, _ in sorted(x['score'].items(), key=lambda t: -t[1]) if c in usable][:WHOLE_LIST]
     have = answers(sorted(core))
     opts = {}
     for q in Q5:
@@ -349,6 +334,7 @@ def choose(x, ban):
             opts[q] = [frozenset(c for way, need in ways[q] if way == have[q][0] for alt in need for c in alt if c in core)]
             continue
         opts[q] = options(q, P, ban[q] | ban['all'])
+        if len(opts[q]) < 3: opts[q] = options(q, P | set(top), ban[q] | ban['all'])  # few options: the top of its whole list too
         if not opts[q]:  # none of its concepts answers it: the best way from its list
             way, take = best_way(x, q, set(), {c: v for c, v in x['score'].items() if c not in ban[q] | ban['all']})
             opts[q] = [frozenset(take)] if take else []
@@ -389,12 +375,16 @@ for _ in range(40):
     if not moved: break
 first = {x['name']: {'kernel': x['kernel'], 'concepts': x['concepts'], 'extras': x['extras']} for x in fac}
 for x in fac:  # second pass: the real kernel, then everything else again
-    x['by_question'] = cur[x['name']]; x['kernel'] = sorted(kern[x['name']]); x['first'] = first[x['name']]
+    x['by_question'] = cur[x['name']]; x['kernel'] = x['core'] + sorted(kern[x['name']] - set(x['core'])); x['first'] = first[x['name']]
     x['thin'] = False
     for k in ('concepts', 'extras', 'from_links', 'from_decks', 'from_both', 'engines'): x.pop(k, None)
 build()
-missed = sorted((c for c in usable if lean.get(c, 0) >= MIN_LEAN and not any(c in x['concepts'] + x['extras'] for x in fac)),
-                key=lambda c: -lean[c])  # concepts many decks are built on that no faction has
+def holders(c): return sum(c in x['concepts'] + x['extras'] for x in fac)
+for c in sorted((c for c in usable if lean.get(c, 0) >= COMMON and not holders(c)), key=lambda c: -lean[c]):
+    x = max(fac, key=lambda x: (x['fit'].get(c, 0), x['name']))  # a common concept no faction has replaces the weakest extra
+    weak = min(x['extras'], key=lambda o: x['fit'][o]) if x['extras'] else None  # of the faction it fits best, if it fits nearly as well
+    if weak and x['fit'].get(c, 0) >= 0.8 * x['fit'][weak]: x['extras'][x['extras'].index(weak)] = c
+missed = sorted((c for c in usable if lean.get(c, 0) >= MIN_LEAN and not holders(c)), key=lambda c: -lean[c])  # still in no faction
 with open(os.path.join(HERE, 'kernel_factions.tsv'), 'w', encoding='utf-8') as w:
     w.write('letter\tname\tdoes\ttheme\tkernel\tengines\tbricks\tconcepts\textras\tmarkers\twins\tfront\tbackrow\tlanes\tholds\tcares\tpartners\n')
     for i, x in enumerate(fac):
@@ -438,5 +428,17 @@ out.append('')
 out.append('## Every pair')
 out += pairs
 text = '\n'.join(out) + '\n'
-open(os.path.join(HERE, 'kernel_factions.md'), 'w', encoding='utf-8').write(text)
-print(text)
+open(os.path.join(HERE, 'kernel_factions_check.md'), 'w', encoding='utf-8').write(text)  # every number, for checking
+
+nm = lambda cs: ', '.join(plain.get(c, c) for c in cs)  # the page for Kaptain: one faction sheet each, no numbers
+page = ['# The factions', '', f'**The world:** {WORLD}.', '']
+for i, x in enumerate(fac):
+    page += [f"## {x['name']}", '', f"**What it does:** {x['does']}.", '', f"**Who they are:** {x['theme']}.", '',
+             f"**Kernel:** {nm(x['kernel'])}", '', '**Answers:**', '']
+    for q in Q5:
+        page.append(f"- **{QUESTION[q].capitalize()}:** " + (nm(sorted(x['by_question'][q])) or 'none yet'))
+    rest = [c for c in x['concepts'] if c not in x['kernel']]
+    page += ['', f"**Also plays:** {nm(rest)}", '', f"**Extras:** {nm(x['extras'])}", '',
+             f"**Partners:** {nm(fac[j]['name'] for j in partners[i])}", '']
+if missed: page += ['## In no faction yet', '', nm(missed[:20]), '']
+open(os.path.join(HERE, 'kernel_factions.md'), 'w', encoding='utf-8').write('\n'.join(page) + '\n')

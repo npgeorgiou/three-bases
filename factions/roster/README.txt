@@ -14,4 +14,4 @@ work/           suspects.tsv, concept_games.py, tag_check.py, tag_read_input.py,
 Made by the steps: work/concepts.tsv and work/concepts.md (2), work/deck_groups_nmf.tsv, .md and .json, and
 deck_groups_nmf_17.* with the 17 groups and every deck (3), library/cards_db/roster/concept_links.tsv (4),
 factions/roster-map.html with work/archetype_parts.tsv, work/archetype_map.tsv and work/archetype_gaps.tsv (5),
-work/kernel_factions.md, work/kernel_factions.tsv and work/lists/ (6), combos.tsv (7), plans.tsv and keywords.tsv (8), answers.tsv and STOP1*.md (9).
+work/kernel_factions.md, work/kernel_factions_check.md, work/kernel_factions.tsv and work/lists/ (6), combos.tsv (7), plans.tsv and keywords.tsv (8), answers.tsv and STOP1*.md (9).
