@@ -1,7 +1,6 @@
 """Step 3 (START_DESIGN-1-wheel.md): the ways to play that decks lean on, by NMF; they become our factions' archetypes.
 Run from library/cards_db: python3 ../../factions/wheel/work/deck_groups_nmf.py [--groups N]  (about 2.5 minutes, 2 cores;
- with --groups, N groups and no stability runs, a few seconds; with --kernels a,b,..., one group started from each named
- concept and its stability, about a minute; files end in _kernels)
+ with --groups, N groups and no stability runs, a few seconds)
  -> factions/wheel/work/deck_groups_nmf.tsv (one row per group), deck_groups_nmf.md (the same in plain words) and
     deck_groups_nmf.json (groups, decks and factions, read by make_faction.py); with --groups N the files end in _N.
 1. Concepts: the usable concepts of concepts.tsv (a card counts each once; a parent only on cards none of its children
@@ -57,10 +56,6 @@ sub = {k: below(k) for k in usable}
 sub.update({k: set() for k in UNIT})
 nodes = usable + list(UNIT)
 col = {k: j for j, k in enumerate(nodes)}
-KERNELS = sys.argv[sys.argv.index('--kernels') + 1].split(',') if '--kernels' in sys.argv else []
-for k in KERNELS:
-    if k not in col: sys.exit(f'--kernels: no usable concept {k}')
-KCOLS = [col[k] for k in KERNELS]
 for g in games:  # strong / tough for its cost: above the game's straight line of strength (defence) by cost
     us = [i for i in pools[g] if stats[i][0] in concept_tags.UNIT_CATS and stats[i][1] is not None]
     for i in us: con[i].add('unit*')
@@ -122,17 +117,9 @@ def nndsvd(A, k):
     avg = A.mean()
     return W + avg / 100, H + avg / 100  # a small floor so multiplicative updates can move every value
 
-def kernel_start(A, k):
-    """the first guess of --kernels: group j is its kernel concept alone, and each deck's share of it is its score there"""
-    avg = A.mean()
-    H = np.full((k, A.shape[1]), avg / 100); W = np.full((A.shape[0], k), avg / 100)
-    for j, t in enumerate(KCOLS): H[j, t] += 1; W[:, j] += A[:, t]
-    return W, H
-
 def nmf(rows, k, it=2000):
     A, D = X[rows], w[rows][:, None]
-    if KCOLS: W, H = kernel_start(A, k)
-    else: W, H = nndsvd(np.sqrt(D) * A, k); W = W / np.sqrt(D)
+    W, H = nndsvd(np.sqrt(D) * A, k); W = W / np.sqrt(D)
     last = None
     for t in range(it):
         H *= (W.T @ (D * A)) / (W.T @ (D * (W @ H)) + 1e-9)
@@ -156,11 +143,7 @@ def runs(k):
     return k, float(np.mean(sims)), full
 FORCED = int(sys.argv[sys.argv.index('--groups') + 1]) if '--groups' in sys.argv else None
 SUFFIX = f'_{FORCED}' if FORCED else ''
-if KERNELS:
-    SUFFIX = '_kernels'
-    K, s, (W, H) = runs(len(KCOLS))
-    stab = {K: s}
-elif FORCED:
+if FORCED:
     stab, K = {}, FORCED
     W, H = nmf(np.arange(len(X)), K)
 else:
@@ -192,7 +175,7 @@ for j in range(K):
     uu = np.array([[decks[n]['counts'][col[k]] / decks[n]['size'] for k in UNIT] for n in fit]).mean(0)
     ug = np.array([gunit[decks[n]['game']] for n in fit]).mean(0)
     gs = collections.Counter(decks[n]['game'] for n in fit)
-    groups.append({'j': j, 'kernel': KERNELS[j] if KERNELS else None, 'concepts': cs, 'lean': {int(t): float(lean[t]) for t in cs}, 'base': base, 'fit': fit,
+    groups.append({'j': j, 'concepts': cs, 'lean': {int(t): float(lean[t]) for t in cs}, 'base': base, 'fit': fit,
                    'games': gs, 'one_game': gs.most_common(1)[0][1] >= ONE_GAME * len(fit),
                    'units': {k: float(uu[q] / ug[q]) if ug[q] else 0 for q, k in enumerate(UNIT)}})
 # Design markers: what a deck's cards are like against its game's decks, never NMF input and never a faction concept.
@@ -299,8 +282,7 @@ with open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.tsv'), 'w', encoding='utf
 with open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.md'), 'w', encoding='utf-8') as o:
     o.write('# Step 3: the ways to play that decks lean on, by NMF (made by deck_groups_nmf.py)\n\n')
     o.write(f'{len(decks)} decks of {len(per_game)} games, {len(nodes)} concepts. {K} groups' +
-            (f', each started from one chosen concept ({stab[K]:.2f} alike on 90% of the decks; 1 = the same). ' if KERNELS else
-             ' (set by hand). ' if FORCED else f': the number from {MIN_K} to {MAX_K} whose groups stay most alike on 90% of '
+            (' (set by hand). ' if FORCED else f': the number from {MIN_K} to {MAX_K} whose groups stay most alike on 90% of '
              f'the decks ({stab[K]:.2f}; 1 = the same). ') + f'A deck fits a group that is '
             f'{CARRY:.0%} or more of its mix. The archetype: the group\'s 10 heaviest and base concepts (more than half of its decks have them), '
             f'without the five unit measures and without the concepts more than half of the groups hold. Design markers: what its '
@@ -308,14 +290,10 @@ with open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.md'), 'w', encoding='utf-
             f'its best {BEST} groups at {FIT:g} times its game\'s average share of their concepts ("x2").\n\n')
     o.write('Deck card names the library does not know: ' +
             (', '.join(f'{g} {k}' for g, k in sorted(missing.items()) if k) or 'none') + '.\n\n')
-    if stab and not KERNELS: o.write('Stability by number of groups: ' + ', '.join(f'{k} {v:.2f}' for k, v in stab.items()) + '.\n\n')
+    if stab: o.write('Stability by number of groups: ' + ', '.join(f'{k} {v:.2f}' for k, v in stab.items()) + '.\n\n')
     for gr in groups:
         o.write(f"## {gr['key']}: {len(gr['fit'])} decks ({', '.join(f'{g} {k}' for g, k in sorted(gr['games'].items()))})"
                 + (' **one game**' if gr['one_game'] else '') + '\n')
-        if gr['kernel']:
-            kt = col[gr['kernel']]
-            o.write(f"- Started from: {name(kt)} (" + (f"its {gr['concepts'].index(kt) + 1}. heaviest concept" if kt in gr['concepts'] else
-                    'not among its 10 heaviest') + ')\n')
         o.write('- The archetype (its concepts on the map and in steps 5 and 6): ' + '; '.join(plain.get(c, c) for c in gr['archetype']) + '\n')
         o.write('- Design markers: ' + ('; '.join(f'{MNAME[k]} x{v:.1f}' for k, v in sorted(gr['markers'].items(), key=lambda t: -t[1])) or 'none') + '\n')
         o.write('- How NMF found it: its 10 heaviest concepts ' + '; '.join(f"{name(t)} {gr['lean'][t]:.0%}" for t in gr['concepts'])
@@ -327,8 +305,8 @@ with open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.md'), 'w', encoding='utf-
     o.write('Groups no faction fits: ' + (', '.join(nofit) or 'none') + '.\n\n')
     o.write('Factions that fit no group: ' + (', '.join(f'{fa} ({g})' for g, fa in lonely) or 'none') + '.\n')
 
-json.dump({'markers': {m[0]: m[1] for m in MARKERS}, 'nodes': nodes, 'plain': {k: plain.get(k, k) for k in nodes}, 'unit': list(UNIT), 'strong': STRONG,
-           'groups': [{'key': gr['key'], 'kernel': gr['kernel'], 'concepts': [nodes[t] for t in gr['concepts']],
+json.dump({'markers': {m[0]: m[1] for m in MARKERS}, 'mark_fit': MARK_FIT, 'nodes': nodes, 'plain': {k: plain.get(k, k) for k in nodes}, 'unit': list(UNIT), 'strong': STRONG,
+           'groups': [{'key': gr['key'], 'concepts': [nodes[t] for t in gr['concepts']],
                        'lean': {nodes[t]: round(v, 3) for t, v in gr['lean'].items()},
                        'base': [[nodes[t], round(v, 3)] for v, t in gr['base']], 'units': gr['units'],
                        'one_game': gr['one_game'], 'decks': gr['fit'], 'markers': gr['markers'], 'archetype': gr['archetype'],
@@ -336,7 +314,8 @@ json.dump({'markers': {m[0]: m[1] for m in MARKERS}, 'nodes': nodes, 'plain': {k
            'decks': [{'game': d['game'], 'name': d['name'], 'size': d['size'],
                       'mix': {gr['key']: round(float(mix[n, gr['j']]), 3) for gr in groups if mix[n, gr['j']] >= 0.05},
                       'counts': {nodes[t]: int(v) for t, v in enumerate(d['counts']) if v},
-                      'z': {nodes[t]: round(float(v), 2) for t, v in enumerate(d['z']) if v > STRONG}} for n, d in enumerate(decks)],
+                      'z': {nodes[t]: round(float(v), 2) for t, v in enumerate(d['z']) if v > STRONG},
+                      'marks': {k: int(v[n]) for k, v in HASM.items() if v[n] is not None}} for n, d in enumerate(decks)],
            'factions': [{'game': g, 'faction': fa, 'fit': {gr['key']: round(gr['fratio'][(g, fa)], 2) for gr in groups},
                          'counts': {nodes[t]: int(v) for t, v in enumerate(fcount[(g, fa)]) if v}} for g, fa in facs],
            'game_counts': {g: {nodes[t]: int(v) for t, v in enumerate(game_tot[g]) if v} for g in game_tot}},

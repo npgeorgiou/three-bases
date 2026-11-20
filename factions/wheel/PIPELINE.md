@@ -78,21 +78,22 @@ is written in that step's chat, from the rules of the step, and its line here is
   6 uses it.
 
 ## Step 6. The factions, from what they do
-- `python3 factions/wheel/work/kernel_factions.py` (from the repo, about 10 seconds; needs links.sqlite) ->
-  `factions/wheel/work/kernel_factions.md` (rules: `START_DESIGN-1-wheel.md` step 6). The identities are `IDENTITIES` in
-  its head (name, what it does, concept-tree families; Claude's). Per faction: its kernel with the decks leaning on each
-  concept, its engines with their kernel links and the real card pair behind the strongest, its bricks with how many
-  times as often its decks hold each, engines and bricks, the answers its concepts give and what is missing, its
-  partners with their strength and how each plays; then every pair. It reads `work/deck_groups_nmf_17.json` (decks),
+- `python3 factions/wheel/work/kernel_factions.py` (from the repo, about a minute; needs links.sqlite) ->
+  `factions/wheel/work/kernel_factions.md` (for Kaptain), `kernel_factions.tsv` (one row per faction: letter, name,
+  what it does, theme, kernel, engines, bricks, concepts, extras, design markers, how it wins, the five board answers,
+  partners; read by steps 7-9) and `lists/<letter>.tsv` (rules: `START_DESIGN-1-wheel.md` step 6). The identities are
+  `IDENTITIES` in its head (name, what it does, concept-tree families) and the themes `THEMES` (theme, the families it
+  favours in a tie); both Claude's. Per faction: its kernel with the decks leaning on each concept, its engines with
+  their kernel links and the real card pair behind the strongest, its bricks with how many times as often its decks
+  hold each, what its decks hold that real cards also link to its concepts (a faction still short of 12), its design
+  markers, its extras with their list scores, its answers, its partners with their strength and how each plays; then
+  every pair. It reads `work/deck_groups_nmf_17.json` (decks and their design markers),
   `library/cards_db/wheel/concept_links.tsv` (strong links, their games), `library/concept_tree.txt` (families),
   `work/concepts.tsv` (usable) and `work/answer_concepts.tsv` (the ways of each answer).
-  To write in it: many-level sharing (6.5), the theme (6.8), the extras (6.10), the answers made final (6.11), and a
-  `.tsv` beside the `.md` (faction, identity, kernel, engines, bricks, extras, partners) for steps 7-9.
-- `python3 ../../factions/wheel/work/concept_list.py` -> `factions/wheel/work/lists/<letter>.tsv`: per faction every
-  concept with 5+ cards except the faction's own concepts, its score ((real + 1) / (chance + 1) links with the
-  faction's concepts per game, averaged over the games where both appear), its `level` and its games, sorted by score.
-  To change: it reads the factions from `kernel_factions.py`'s `.tsv` (its `Library` scores any set of concepts in under a
-  second).
+- `python3 ../../factions/wheel/work/concept_list.py` (from `library/cards_db`) -> `factions/wheel/work/lists/<letter>.tsv`
+  for every faction of `kernel_factions.tsv`: every concept with 5+ cards except the faction's own concepts, its score
+  ((real + 1) / (chance + 1) links with the faction's concepts per game, averaged over the games where both appear), its
+  `level` and its games, sorted by score. Its `Library` scores any set of concepts in about a second.
 - `factions/wheel/work/answer_concepts.tsv` (agreed with Kaptain): per answer its ways (answer, the way in plain words,
   its concepts: one, two that real cards link with their times chance and games, or removals on a spell; whose).
 

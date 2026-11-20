@@ -1,6 +1,6 @@
 """The faction archetypes of step 3 (the 17 NMF groups Kaptain agreed, deck_groups_nmf_17.json) as rows for steps 5 and 6:
 an archetype's concepts as deck_groups_nmf.py made them; one row per part, each concept a part of its own (Claude's); the kind (engine or brick) is set by step 5
-(archetype_map.py), which writes the rows with their kind to work/archetype_parts.tsv for step 6 (factions.py).
+(archetype_map.py), which writes the rows with their kind to work/archetype_parts.tsv for the map's parts.
 markers(): per archetype its design markers, each with how many times as often its decks have it."""
 import json, os
 

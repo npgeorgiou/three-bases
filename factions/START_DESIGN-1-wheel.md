@@ -204,10 +204,12 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    4. **Bricks, from decks**: the concepts the kernel's decks hold 1.5x+ as often as their game's cards (per game with
       3+ of its decks, averaged), held by a quarter of those decks, with no strong link to the kernel; another
       faction's kernel concept can be one (support: removal for "can't be broken"). Most held first, until about 12
-      concepts in all.
-   5. **Many-level sharing**: the factions are filled together, level by level (kernels, then engines, then bricks). A
-      concept more than 3 factions want at one level is never dropped: it goes to those it fits best (most kernel links
-      for an engine, most held for a brick), and the others take their next best.
+      concepts in all. A faction still under 12 then takes what its kernel's decks hold the same way that real cards
+      also link to its concepts (an engine past the 4, or another faction's kernel concept), most held first (Claude's).
+   5. **Many-level sharing**: the factions are filled together, level by level (kernels, then engines, then bricks,
+      then what decks hold and cards link). A concept that would then be in more than 3 factions, counting those that
+      have it from an earlier level, is never dropped: it goes to those it fits best (most kernel links for an engine,
+      most held otherwise), and the others take their next best.
    6. **Checks**: every faction has an engine pair (two of its concepts real cards link), or its identity is changed;
       two factions share at most half of their concepts.
    7. **Partners**: for every two factions, the strong links between their own concepts, plus 3 for each kernel concept
@@ -221,7 +223,7 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       of the faction's concepts, against the links chance alone gives there; the game's score = (real + 1) /
       (chance + 1); the score = the average over the games where the concept and the faction's concepts both appear
       (every game weighs the same). Beside it: the `level` and in how many games.
-   10. **Its extras**, the same number for every faction, 8 to 12 (a real faction of about 100 cards mostly uses about
+   10. **Its extras**, the same number for every faction, 8 to 12 (10, Claude's; a real faction of about 100 cards mostly uses about
       20 concepts). Picked from its list in this order: (a) each of the four answers about the board (removing a front
       unit, removing back-row units, acting between lanes, holding a base) that its concepts don't give gets the
       highest-scoring way that gives it in `work/answer_concepts.tsv` (agreed with Kaptain: per answer its ways, each
@@ -229,9 +231,9 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       (b) a faction short of partners: concepts that link to other factions' kernels; (c) the rest go to the
       highest-scoring concepts with strong links to at least 2 of its concepts; (d) the theme breaks ties.
    11. **Its answers**, from `work/answer_concepts.tsv`: how it wins comes from its identity and engines; removing a
-      front unit, removing back-row units, acting between lanes and holding a base are each the highest-scoring way its
-      concepts and extras give; what it cares about most is the highest-scoring of the game's own things on its list
-      (factions may share it); its blind spot is named at step 9. An answer no way gives is fixed first in (10) with
+      front unit, removing back-row units, acting between lanes and holding a base are each the first way of
+      `work/answer_concepts.tsv` its own concepts give, else the way its extras give; what it cares about most is the
+      first of the game's own things it has, else the highest-scoring on its list (factions may share it); its blind spot is named at step 9. An answer no way gives is fixed first in (10) with
       another extra; only when its list has no way for it is the identity changed.
    **Kaptain agrees the factions**, seeing per faction its identity, kernel, engines (with their real card pairs),
    bricks, partners with their lines, and answers.

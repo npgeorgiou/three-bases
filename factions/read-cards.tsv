@@ -315,3 +315,52 @@ monster_train	Wyldenten	wheel (kernel factions)	wheel kernel factions: Mark a ta
 monster_train	Icy Cilophyte	wheel (kernel factions)	wheel kernel factions: Mark a target for later hits with Position and space: right
 inscryption	Hydra	wheel (kernel factions)	wheel kernel factions: Reaches other lanes with More or faster base resource (ramp): wrong: Texts show only keyword names; neither card states lane reach or extra resources, so no link.
 inscryption	Raccoon	wheel (kernel factions)	wheel kernel factions: Reaches other lanes with More or faster base resource (ramp): wrong: Texts show only keyword names; neither card states lane reach or extra resources, so no link.
+runeterra	The List	wheel (library suspects)	"Challenging" a Vulnerable enemy is Challenger, target_choice, not forced_attack
+runeterra	Shadowstep	wheel (library suspects)	free attack Challenging an enemy is Challenger, target_choice, not forced_attack
+runeterra	Cataclysm	wheel (library suspects)	free attack Challenging an enemy is Challenger, target_choice, not forced_attack; the second card of that name is a damage card, unrelated
+inscryption	Bifurcated Strike	wheel (library suspects)	hits the neighbouring lanes: adjacency, not cross_lane
+inscryption	Trifurcated Strike	wheel (library suspects)	hits the neighbouring lanes plus its own: adjacency, not cross_lane
+inscryption	Scavenger	wheel (library suspects)	enemy deaths give Bones: base_resource_gain is right
+runeterra	Anivia	wheel (library suspects)	real revive plus transform into Eggnivia; correct
+monster_train	Bog Chrysalis	wheel (library suspects)	Shell 5, Hatch: summon 2 Bog Fly; hatching is a transform, not a summon
+monster_train	Kinhost Vessel	wheel (library suspects)	Shell 8, Hatch: summon Kinhost Pupa; hatching is a transform, not a summon
+monster_train	Bogdeep Cocoon	wheel (library suspects)	Shell 12, Hatch: summon Bog Wurmling; hatching is a transform, not a summon
+into_the_breach	Spiderling Egg	wheel (library suspects)	hatch is kill self + summon Spiderling; hatching is a transform
+into_the_breach	Spider	wheel (library suspects)	throws an egg that hatches into a Spiderling; the egg is a real summon
+into_the_breach	Alpha Spider	wheel (library suspects)	same as Spider; the egg is a real summon
+into_the_breach	Spider Leader	wheel (library suspects)	throws Spiderling eggs; the eggs are a real summon
+into_the_breach	Arachnid Psion	wheel (library suspects)	other Vek spawn a Spiderling Egg on death; a real summon of eggs
+gwent	Harpy Egg	wheel (library suspects)	text says Spawn, not hatch; summon is right
+duelyst	Young Silithar	wheel (library suspects)	only Rebirth; revive came from the Rebirth keyword's concept, wrong: hatching is a transform
+duelyst	Chrysalis Egg	wheel (library suspects)	no text, no rows
+duelyst	Megapenti	wheel (library suspects)	gives Rebirth; revive came from the same keyword concept
+duelyst	Chrysalis Burst	wheel (library suspects)	summons Eggs; summon is right
+duelyst	Juggernaut	wheel (library suspects)	summons Golem Eggs when damaged; summon is right
+duelyst	Wild Inceptor	wheel (library suspects)	hatches a friendly Egg: transform, right
+gwent	Phoenix	wheel (library suspects)	spawns Phoenix Hatchling: summon, not hatching; right
+stormbound	Broodmother Qordia	wheel (library suspects)	spawns Nests: summon is right; the hatching is the Nests'
+monster_train	Accelerated Incubation	wheel (library suspects)	removes Shell from Eggs; no summon, no revive; right
+duelyst	Morin-Khur	wheel (library suspects)	hatches all Eggs: transform, right
+stormbound	Qordia’s Nest	wheel (library suspects)	hatches and spawns a Dragon: tagged summon, should be transform
+stormbound	Prime Oracle Bragda	wheel (library suspects)	matched a search for "hatch" by a word fragment; nothing about eggs
+monster_train	Furnace Tap	wheel (library suspects)	Emberdrain on a unit; overload_debt is right
+monster_train	Void Binding	wheel (library suspects)	Emberdrain on a chosen unit; overload_debt is right
+runeterra	Sivir (level 2)	wheel (library suspects)	"attacking allies have my keywords": shares its keywords
+runeterra	Zed (level 2)	wheel (library suspects)	gives its keywords to Living Shadow: shares
+runeterra	Luminosprite	wheel (library suspects)	gives its positive keywords to the supported ally: shares
+runeterra	Mechanized Mimic	wheel (library suspects)	takes allies' keywords: a taker, "passes to its allies" lines are wrong
+runeterra	Breakneck Husk	wheel (library suspects)	kills itself to grant a played ally its keywords: shares
+runeterra	Mask Mother	wheel (library suspects)	takes an ally's keywords: a taker
+stormbound	Timber Alchemists	wheel (library suspects)	steals statuses from friendly units: a taker
+duelyst	Sarlac the Eternal	wheel (library suspects)	Dying Wish re-summons itself at once: cheat_death is right
+into_the_breach	Spawner	wheel (library suspects)	spawns two Medium Goos on death, not itself: cheat_death looks wrong
+monster_train	Spikedriver Colony	wheel (library suspects)	adds a copy of itself to the discard pile: not a come-back, cheat_death is wrong
+gwent	Seize	wheel (library suspects)	takes an enemy unit; removing Spying is not donate
+gwent	Mage Infiltrator	wheel (library suspects)	returns itself home; removing Spying is not donate
+gwent	Count Caldwell	wheel (library suspects)	returns itself home; removing Spying is not donate
+into_the_breach	Harold Schmidt	wheel (library suspects)	real heal trigger; linked only through its push
+into_the_breach	Flame Thrower	wheel (library suspects)	pushes and sets Fire, real damage over time; its link is only the line
+into_the_breach	Aegon Mortar	wheel (library suspects)	pushes and damages two tiles; its link is the line
+faeria	Flame Thrower	wheel (library suspects)	read by its name by mistake; 1 damage to all enemies
+gwent	Havfrue Singer	wheel (library suspects)	real heal trigger; its link is its summon row
+duelyst	Sunriser	wheel (library suspects)	real heal trigger, 2 damage to nearby enemies; its link is the position

@@ -5,7 +5,7 @@ the links chance alone gives there (the same count as concept_tags.pair_links); 
 score = the average over the games where the concept and the faction's concepts both appear. Beside it: the level
 (mechanics_wheel.level of the linked card pairs) and in how many games real cards link them.
 Usage (from library/cards_db): python3 ../../factions/wheel/work/concept_list.py -> factions/wheel/work/lists/<letter>.tsv
-for every faction of factions/wheel/work/factions.tsv. factions.py imports Library to score the bricks' concepts (6.2)."""
+for every faction of factions/wheel/work/kernel_factions.tsv; kernel_factions.py imports Library and writes the same lists."""
 import collections, csv, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -88,7 +88,7 @@ class Library:
 def main():
     lib = Library()
     out = os.path.join(HERE, 'lists'); os.makedirs(out, exist_ok=True)
-    with open(os.path.join(HERE, 'factions.tsv'), encoding='utf-8') as f:
+    with open(os.path.join(HERE, 'kernel_factions.tsv'), encoding='utf-8') as f:
         for r in csv.DictReader(f, delimiter='\t'):
             own = r['concepts'].split(',')
             sc = lib.scores(own)

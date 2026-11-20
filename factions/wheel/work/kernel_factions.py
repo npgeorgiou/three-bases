@@ -1,5 +1,4 @@
-"""Experiment (process agreed 20 Nov 2026): whole factions from what they do.
-python3 factions/wheel/work/kernel_factions.py  (from the repo, a few seconds) -> factions/wheel/work/kernel_factions.md
+"""Step 6 of the wheel (factions/START_DESIGN-1-wheel.md): the factions from what they do.
 1. Identity: what the faction DOES, in plain words (IDENTITIES, Claude's), made of families of library/concept_tree.txt.
    Its kernel: their usable concepts that are effects (never a trigger, a condition, or a drawback but for Eats its own)
    and that MIN_LEAN+ decks lean on, at most KERNEL. A concept two identities want goes to the one whose other kernel
@@ -11,22 +10,40 @@ python3 factions/wheel/work/kernel_factions.py  (from the repo, a few seconds) -
    concept real cards link to everything does not join every faction, nor a rare one with two links). Bricks come from decks: the concepts the kernel's decks hold more
    often than their game's cards (share of cards against the game's share, per game with MIN_DECKS+ of its decks,
    averaged; DECK_LIFT+), held by HELD+ of those decks, that no strong card link joins to the kernel (another faction's kernel concepts too: support), the most first,
-   until OWN concepts. A brick more than MAX_BRICK factions would take is dropped from all (too common to tell them
-   apart), and the rest refilled. Each engine shows the real card pair behind its strongest link to the kernel.
+   until OWN concepts. Each engine shows the real card pair behind its strongest link to the kernel.
+   Many-level sharing: the factions are filled together, level by level (engines, then bricks; kernels are never
+   shared). A concept more than MAX_SHARE factions want at one level goes to the MAX_SHARE it fits best (most kernel
+   links for an engine, most held for a brick) and the others take their next best; it is never dropped.
    A concept is an engine when real cards link it to another of the faction's concepts, else a brick.
 3. A faction needs an engine pair (two of its concepts real cards link); one with none is marked.
 4. Different enough: two factions share at most half of their concepts.
 5. Partners (PARTNERS each, Kaptain): a faction's strongest pairs. A pair's strength: the strong card links between their
    own concepts, plus 3 for each of one's kernel concepts the other's decks hold DECK_LIFT times as often as their games
    (Claude's). Each partner gets a line on how it plays: its strongest card link, or what its decks hold.
-6. The answers (work/answer_concepts.tsv): per question the ways its concepts give, and what is missing."""
+6. Design markers: what the kernel's decks are like (step 3's markers): a marker its decks have MARK_FIT times as often
+   as their games' decks.
+7. A real theme per faction (THEMES, Claude's), with the families it favours; the theme only breaks ties between
+   concepts that score within TIE of each other.
+8. Its list (concept_list.Library): every concept with 5+ cards but its own, with its score; written to lists/<letter>.tsv.
+9. Its extras, EXTRAS for every faction, from its usable list concepts: (a) each board answer (front, back row, between
+   lanes, holding) its concepts don't give gets the highest-scoring way that gives it (work/answer_concepts.tsv; a way
+   of two concepts takes two extras); (b) a faction with under PARTNERS partners takes concepts that link to the
+   kernels of the factions that are not its partners yet; (c) the rest go to the highest-scoring concepts with strong
+   links to 2+ of its concepts.
+10. Its answers: how it wins (its identity and its strongest engine pair); removing a front unit, removing back-row
+   units, acting between lanes and holding a base, each the first way of work/answer_concepts.tsv its own concepts give,
+   else the way its extras give; what it cares about most, the first of the game's own things it has, else the one that
+   scores highest on its list.
+python3 factions/wheel/work/kernel_factions.py (from the repo, about a minute; needs links.sqlite) -> kernel_factions.md
+(for Kaptain), kernel_factions.tsv (one row per faction, read by concept_list.py) and lists/<letter>.tsv."""
 import collections, csv, json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, '..', '..', '..')
 sys.path.insert(0, HERE)
 import step3_groups
 OWN, KERNEL, MIN_KERNEL, MIN_LEAN, ENGINES, ENGINE_GAMES, PLAYED, MIN_DECKS = 12, 6, 4, 10, 4, 2, 1.0, 3  # Claude's
-DECK_LIFT, HELD, MAX_BRICK, PARTNERS = 1.5, 0.25, 3, 5                              # Claude's; 5 partners: Kaptain
+DECK_LIFT, HELD, MAX_SHARE, PARTNERS = 1.5, 0.25, 3, 5                              # Claude's; 5 partners: Kaptain
+EXTRAS, TIE = 10, 0.1                                                                # Claude's (8-12, Kaptain); TIE: Kaptain
 IDENTITIES = [  # (name, what it does, families or concepts of the concept tree); Claude's. Waits and Swarms widened by what their decks hold most
     ("Can't be broken", 'its units do not die', ['protection', 'heal', 'defence_gain']),
     ('Kills brutally', 'removes enemy units, many and hard', ['removal', 'damage']),
@@ -39,6 +56,19 @@ IDENTITIES = [  # (name, what it does, families or concepts of the concept tree)
     ('Comes back', 'what it loses returns', ['revive', 'return_to_hand', 'recycle']),
     ('Eats its own', 'kills and spends its own units and cards for power', ['sacrifice', 'friendly_fire', 'self_destruct', 'discard']),
 ]
+LETTERS = 'ABCDEFGHIJKLMNOPQRST'
+THEMES = {  # a real theme per faction, and the families of the concept tree it favours in a tie (Claude's)
+    "Can't be broken": ('the defenders of the Theodosian Walls of Constantinople', ['protection', 'terrain', 'heal']),
+    'Kills brutally': ('the Mongol tumens', ['damage', 'movement', 'removal']),
+    'Messes you up': ('the spies and poisoners of the Venetian Council of Ten', ['information', 'damage_over_time', 'steal']),
+    'Moves': ('the Comanche horse raiders', ['positional', 'speed']),
+    'Thrives on spells': ('the alchemists of Rudolf II in Prague', ['card_flow', 'transform', 'economy']),
+    'Waits': ('World War I artillery', ['ranged', 'delayed', 'scope_multi']),
+    'Swarms': ('the Zulu regiments', ['board_presence', 'speed', 'adjacency']),
+    'Grows': ('the sumo stables of Edo', ['stat_gain', 'card_quality']),
+    'Comes back': ('the embalmers of ancient Egypt', ['death', 'card_flow']),
+    'Eats its own': ('the sacrifice priests of Tenochtitlan', ['death', 'drawback']),
+}
 D = json.load(open(step3_groups.FILE, encoding='utf-8'))
 plain, decks, UNIT = dict(D['plain']), D['decks'], set(D['unit'])
 tree, facet = {}, {}
@@ -104,25 +134,40 @@ for x in fac:
     x['kernel'] = sorted(x['cand'], key=lambda c: -lean[c])[:KERNEL]
     x['thin'] = len(x['kernel']) < MIN_KERNEL
 kernels = set().union(*(set(x['kernel']) for x in fac))
+def share(pool, room, fit):
+    """many-level sharing: each faction takes its first room(x) of pool(x); a concept that would then be in more than
+    MAX_SHARE factions (counting those that have it from an earlier level) stays with the ones it fits best (fit(x, c),
+    ties by name) and the others take their next best"""
+    banned = {id(x): set() for x in fac}
+    before = collections.Counter(c for x in fac for c in x.get('concepts', x['kernel']))
+    while True:
+        took = {id(x): [c for c in pool(x) if c not in banned[id(x)]][:max(0, room(x))] for x in fac}
+        crowded = sorted({c for v in took.values() for c in v if before[c] + sum(c in w for w in took.values()) > MAX_SHARE})
+        if not crowded: break
+        for c in crowded:
+            takers = sorted((x for x in fac if c in took[id(x)]), key=lambda x: (-fit(x, c), x['name']))
+            for x in takers[max(0, MAX_SHARE - before[c]):]: banned[id(x)].add(c)
+    for x in fac: x['concepts'] = x.get('concepts', x['kernel']) + took[id(x)]
+    return took
 for x in fac:
     k = x['kernel']
     x['decks'] = decks_of(k); lift = deck_lift(x['decks']); x['lift'] = lift
     eng = [c for c in usable if c not in kernels and sum(wide(c, q) for q in k) >= 2 and lift.get(c, 0) >= PLAYED]
-    eng = sorted(eng, key=lambda c: (-sum(wide(c, q) for q in k) ** 2 / reach[c], c))[:ENGINES]
-    held = {c: sum(decks[n]['counts'].get(c, 0) > 0 for n in x['decks']) / max(1, len(x['decks'])) for c in lift}
+    x['engine_pool'] = sorted(eng, key=lambda c: (-sum(wide(c, q) for q in k) ** 2 / reach[c], c))
+    held = x['held'] = {c: sum(decks[n]['counts'].get(c, 0) > 0 for n in x['decks']) / max(1, len(x['decks'])) for c in lift}
     x['brick_pool'] = [c for c in sorted(lift, key=lambda c: (-lift[c], c)) if lift[c] >= DECK_LIFT and held[c] >= HELD and c not in k
                        and c not in eng and c in usable and not any(linked(c, q) for q in k)]
-    x['from_links'] = eng
-common = set()
-while True:  # a brick 4+ factions would take is too common to tell them apart: dropped from all, the rest refilled
-    for x in fac:
-        x['from_decks'] = [c for c in x['brick_pool'] if c not in common][:max(0, OWN - len(x['kernel']) - len(x['from_links']))]
-    count = collections.Counter(c for x in fac for c in x['from_decks'])
-    more = {c for c, n in count.items() if n > MAX_BRICK}
-    if not more: break
-    common |= more
+took = share(lambda x: x['engine_pool'], lambda x: ENGINES, lambda x, c: sum(wide(c, q) for q in x['kernel']))
+for x in fac: x['from_links'] = took[id(x)]
+took = share(lambda x: x['brick_pool'], lambda x: OWN - len(x['kernel']) - len(x['from_links']), lambda x, c: x['lift'][c])
+for x in fac: x['from_decks'] = took[id(x)]
+for x in fac:  # a faction still short of OWN: what its kernel's decks hold that real cards also link to its concepts
+    have = x['concepts']; lift = x['lift']
+    x['both_pool'] = [c for c in sorted(lift, key=lambda c: (-lift[c], c)) if lift[c] >= DECK_LIFT and x['held'][c] >= HELD
+                      and c in usable and c not in have and any(linked(c, q) for q in have)]
+took = share(lambda x: x['both_pool'], lambda x: OWN - len(x['kernel']) - len(x['from_links']) - len(x['from_decks']), lambda x, c: x['lift'][c])
+for x in fac: x['from_both'] = took[id(x)]
 for x in fac:
-    x['concepts'] = x['kernel'] + x['from_links'] + x['from_decks']
     x['engines'] = [c for c in x['concepts'] if any(linked(c, o) for o in x['concepts'])]
 
 sys.path.insert(0, os.path.join(ROOT, 'library', 'cards_db'))
@@ -167,13 +212,87 @@ for i in range(len(fac)):
                      + (f"; shares {len(shared)} of {min(len(ca), len(cb))}" + (' **over half**' if over else '') if shared else '')
                      + f"; strength {strength}")
 
-out = ['# Ten whole factions from what they do (an experiment; made by kernel_factions.py)', '',
+partners = {i: sorted((j for j in range(len(fac)) if j != i), key=lambda j: -strengths[(i, j)][0])[:PARTNERS] for i in range(len(fac))}
+
+for i, x in enumerate(fac):  # design markers: what its kernel's decks are like against their games' decks (step 3)
+    gs = {decks[n]['game'] for n in x['decks']}
+    x['letter'], (x['theme'], tf) = LETTERS[i], THEMES[x['name']]
+    x['theme_likes'] = set().union(*(under(f) for f in tf))
+    x['markers'] = {}
+    for key in D['markers']:
+        here = [decks[n]['marks'][key] for n in x['decks'] if key in decks[n]['marks']]
+        every = [d['marks'][key] for d in decks if d['game'] in gs and key in d['marks']]
+        if len(here) >= 5 and sum(every) and (sum(here) / len(here)) / (sum(every) / len(every)) >= D['mark_fit']:
+            x['markers'][key] = round((sum(here) / len(here)) / (sum(every) / len(every)), 1)
+sys.path.insert(0, HERE); import concept_list
+lib = concept_list.Library()
+def pick(x, cands):
+    """the best of cands (concept -> score): within TIE of the top score, the theme's concept first, then the score, then the key"""
+    if not cands: return None
+    top = max(cands.values())
+    return min((c for c in cands if cands[c] >= top - TIE), key=lambda c: (c not in x['theme_likes'], -cands[c], c))
+def best_way(x, q, have, score):
+    """the way of question q that the concepts have give, or that takes the fewest, highest-scoring extras: (way, extras)"""
+    found = []
+    for way, need in ways[q]:
+        take = []
+        for alt in need:
+            if any(a in have for a in alt): continue
+            got = {a: score[a] for a in alt if a in score and a in usable}
+            if not got: break
+            take.append(pick(x, got))
+        else: found.append((len(take), -sum(score[a] for a in take) / max(1, len(take)), way, take))
+    return min(found, key=lambda t: t[:3])[2:] if found else (None, [])
+for i, x in enumerate(fac):
+    x['list'] = lib.scores(x['concepts'])
+    score = {c: v[0] for c, v in x['list'].items()}
+    ex = []
+    for q in ('front', 'backrow', 'lanes', 'holds'):  # (a) the board answers its concepts don't give
+        if answers(x['concepts'] + ex)[q]: continue
+        way, take = best_way(x, q, set(x['concepts'] + ex), score)
+        if way and len(ex) + len(take) <= EXTRAS: ex += [c for c in take if c not in ex]
+    have = [j for j in partners[i] if strengths[(i, j)][0] > 0]
+    others = [j for j in range(len(fac)) if j != i and j not in have]
+    while len(have) < PARTNERS and others and len(ex) < EXTRAS:  # (b) short of partners: link to a non-partner's kernel
+        got = {c: score[c] for c in score if c in usable and c not in ex for j in others if any(linked(c, k) for k in fac[j]['kernel'])}
+        c = pick(x, got)
+        if not c: break
+        ex.append(c)
+        new = [j for j in others if any(linked(c, k) for k in fac[j]['kernel'])]
+        have += new[:PARTNERS - len(have)]; others = [j for j in others if j not in new]
+    while len(ex) < EXTRAS:  # (c) the highest-scoring concepts that link to 2+ of its concepts
+        got = {c: score[c] for c in score if c in usable and c not in ex and sum(linked(c, k) for k in x['concepts']) >= 2}
+        c = pick(x, got)
+        if not c: break
+        ex.append(c)
+    x['extras'] = ex
+    full = set(x['concepts'] + ex)
+    x['answers'] = {}
+    for q in ('front', 'backrow', 'lanes', 'holds'):
+        own = answers(x['concepts'])[q]
+        x['answers'][q] = own[0] if own else (best_way(x, q, full, {})[0] or '**missing**')
+    mine = answers(x['concepts'])['cares']
+    pool = {w: max((score[a] for alt in need for a in alt if a in score), default=0) for w, need in ways['cares']}
+    x['answers']['cares'] = mine[0] if mine else (pick(x, pool) or '**missing**')
+    e = sorted((frozenset((a, b)) for a in x['concepts'] for b in x['concepts'] if a < b and linked(a, b)), key=lambda t: -strong[t][0])
+    x['wins'] = x['does'] + ('; ' + ' -> '.join(plain.get(c, c) for c in sorted(e[0])) + f": \"{strong[e[0]][1]}\"" if e else '')
+    os.makedirs(os.path.join(HERE, 'lists'), exist_ok=True)
+    with open(os.path.join(HERE, 'lists', x['letter'] + '.tsv'), 'w', encoding='utf-8') as w:
+        w.write('concept\tscore\tlevel\tgames\n')
+        for k, (sc, lv, gm) in sorted(x['list'].items(), key=lambda t: (-t[1][0], t[0])): w.write(f'{k}\t{sc}\t{lv}\t{gm}\n')
+with open(os.path.join(HERE, 'kernel_factions.tsv'), 'w', encoding='utf-8') as w:
+    w.write('letter\tname\tdoes\ttheme\tkernel\tengines\tbricks\tconcepts\textras\tmarkers\twins\tfront\tbackrow\tlanes\tholds\tcares\tpartners\n')
+    for i, x in enumerate(fac):
+        w.write('\t'.join([x['letter'], x['name'], x['does'], x['theme'], ','.join(x['kernel']), ','.join(c for c in x['concepts'] if c in x['engines']),
+                           ','.join(c for c in x['concepts'] if c not in x['engines']), ','.join(x['concepts']), ','.join(x['extras']),
+                           ','.join(f'{k}:{v}' for k, v in x['markers'].items()), x['wins']] + [x['answers'][q] for q in ('front', 'backrow', 'lanes', 'holds', 'cares')]
+                          + [','.join(fac[j]['letter'] for j in partners[i])]) + '\n')
+
+out = ['# The factions from what they do (made by kernel_factions.py)', '',
        'Kernel: the effects that do what the faction does. Engines: concepts real cards link to 2+ kernel concepts. Bricks: '
        f'what its decks hold {DECK_LIFT:g}x+ as often as their games, with no card link to the kernel. About {OWN} concepts. '
        f"Partners: its {PARTNERS} strongest pairs (card links between their concepts, plus 3 per kernel concept the other's decks hold "
-       f'{DECK_LIFT:g}x+). Bricks taken by more than {MAX_BRICK} factions are dropped from all: '
-       + (', '.join(plain[c] for c in sorted(common)) or 'none') + '.', '']
-partners = {i: sorted((j for j in range(len(fac)) if j != i), key=lambda j: -strengths[(i, j)][0])[:PARTNERS] for i in range(len(fac))}
+       f'{DECK_LIFT:g}x+). A concept more than {MAX_SHARE} factions want at one level goes to the {MAX_SHARE} it fits best.', '']
 for i, x in enumerate(fac):
     out.append(f"## {x['name']}: {x['does']} ({len(x['decks'])} decks lean on its kernel)")
     if x['thin']: out.append(f"- **Thin kernel: under {MIN_KERNEL} concepts. Kaptain widens it.**")
@@ -183,10 +302,14 @@ for i, x in enumerate(fac):
         q, pair = behind(c, x['kernel'])
         out.append(f"  - {plain[c]} ({sum(wide(c, o) for o in x['kernel'])} kernel links; strongest with {q}: {pair})")
     out.append('- From decks: ' + ('; '.join(f"{plain.get(c, c)} x{x['lift'][c]:.1f}" for c in x['from_decks']) or 'nothing'))
+    if x['from_both']: out.append('- From decks and card links: ' + '; '.join(f"{plain.get(c, c)} x{x['lift'][c]:.1f}" for c in x['from_both']))
     out.append(f"- {len(x['concepts'])} concepts. Engines: " + ('; '.join(plain.get(c, c) for c in x['engines']) or '**none: no engine pair**')
                + '. Bricks: ' + ('; '.join(plain.get(c, c) for c in x['concepts'] if c not in x['engines']) or 'none'))
-    for q, ws in answers(x['concepts']).items():
-        out.append(f'- {QUESTION[q]}: ' + ('; '.join(ws) if ws else '**missing**'))
+    out.append(f"- Theme: {x['theme']}. Design markers: " + ('; '.join(f"{D['markers'][k]} x{v}" for k, v in x['markers'].items()) or 'none'))
+    out.append(f"- Extras ({len(x['extras'])}): " + '; '.join(f"{plain.get(c, c)} {x['list'][c][0]:g}" for c in x['extras']))
+    out.append(f"- How it wins: {x['wins']}")
+    for q in ('front', 'backrow', 'lanes', 'holds', 'cares'):
+        out.append(f"- {QUESTION[q]}: {x['answers'][q]}")
     out.append(f'- Partners (its {PARTNERS} strongest; * = it is in their {PARTNERS} too):')
     for j in partners[i]:
         st, how = strengths[(i, j)]
