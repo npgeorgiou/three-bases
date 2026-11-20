@@ -45,8 +45,9 @@ is written in that step's chat, from the rules of the step, and its line here is
 ## Step 3. What decks play together
 - `python3 ../../factions/wheel/work/deck_groups_nmf.py` (from `library/cards_db`, about 2.5 minutes, 2 cores) ->
   `factions/wheel/work/deck_groups_nmf.tsv` (per group: decks, games, concepts with the share of decks leaning on each,
-  base concepts, unit numbers, design markers with how many times as often its decks have each, factions that fit), `.md` (the same in plain words, with the stability per number of
-  groups, unknown deck cards, concepts in no group, groups no faction fits and factions that fit no group) and `.json`.
+  base concepts, unit numbers, design markers with how many times as often its decks have each, factions that fit), `.md` (for Kaptain, short lists only: per group its games, its 10
+  heaviest concepts and those most of its decks have, its design markers; then the concepts in no group; never deck
+  names or the factions that fit) and `.json`.
 - `python3 ../../factions/wheel/work/deck_groups_nmf.py --groups 17` (about 40 seconds) -> `deck_groups_nmf_17.tsv`, `.md`,
   `.json`: the 17 groups the wheel keeps (17: the most stable number on the 3027 decks), and every deck with its card
   counts per concept and the concepts it leans on, read by step 6. The number is set once, in `work/step3_groups.py`
@@ -67,7 +68,8 @@ is written in that step's chat, from the rules of the step, and its line here is
 
 ## Step 5. The map of what decks play together
 - `python3 ../../factions/wheel/work/archetype_map.py` (about 15 seconds; needs links.sqlite; reads the 17 groups of step 3
-  through `work/step3_groups.py`, and their decks and real factions from `work/deck_groups_nmf_17.json`) ->
+  through `work/step3_groups.py`, their decks and real factions from `work/deck_groups_nmf_17.json`, and step 6's factions
+  from `work/kernel_factions.tsv`; it runs again after every step 6 run, so the map shows the factions) ->
   `factions/wheel-archetypes.html` (page template `work/archetype_map_template.html`; the concepts' places by t-SNE over
   each concept's lift in the 17 groups' decks, seed 7, then moved apart until no two names overlap; the page also holds
   every deck's concepts and every real faction's concept counts, for building a set of concepts), with

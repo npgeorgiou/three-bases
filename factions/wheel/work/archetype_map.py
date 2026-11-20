@@ -4,6 +4,8 @@ with their kind go to work/archetype_parts.tsv. Each concept of an archetype's p
 the concepts of two engine parts of one archetype, an edge with the step 4 numbers (cards, decks, games, level), the top
 link text, the real card pair of its strongest link (none when only real decks join them) and a note when the edge is
 weak (about the player, or decks only). Bricks are nodes with no edges.
+Step 6's factions (work/kernel_factions.tsv) are on the page too: each concept a part (core and engines blue, bricks
+grey, extras dashed), its lines the joined links between its core and engine concepts.
 Writes work/archetype_parts.tsv, work/archetype_map.tsv, work/archetype_gaps.tsv (engine parts whose concepts have no joined edge) and
 factions/wheel-archetypes.html (every concept of step 3 at a fixed place, laid out from the real decks that lean on
 it; every joined pair between them for the links between ticked archetypes; two ticked archetypes as one faction, as
@@ -50,6 +52,14 @@ def main():
     with open(os.path.join(HERE, 'archetype_parts.tsv'), 'w', encoding='utf-8') as f:
         f.write('key\tname\tpart\tkind\tconcepts\n')
         for r in arch: f.write('\t'.join([r['key'], r['name'], r['part'], r['kind'], r['concepts']]) + '\n')
+    for f in csv.DictReader(open(os.path.join(HERE, 'kernel_factions.tsv'), encoding='utf-8'), delimiter='\t'):  # step 6's factions
+        key, eng = 'F' + f['letter'], f['engines'].split(',')
+        for c in f['concepts'].split(',') + [x for x in f['extras'].split(',') if x]:
+            level = 'core' if c in f['kernel'].split(',') else 'engine' if c in eng else 'brick' if c in f['bricks'].split(',') else 'extra'
+            r = {'key': key, 'name': f"Faction {f['letter']}: {f['name']}", 'part': level, 'concepts': c, 'in_this_game': f['does'],
+                 'kind': 'engine' if level in ('core', 'engine') else level, 'faction': True,
+                 'markers': dict(m.split(':') for m in f['markers'].split(',') if m)}
+            arch.append(r); parts[key].append(r)
     wanted, edges, gaps = set(), [], []
     for key, ps in parts.items():
         for x, y in itertools.combinations(ps, 2):
@@ -60,7 +70,7 @@ def main():
                     r = links.get(frozenset((a, b)))
                     if a == b or not r or not joined(r): continue
                     edges.append((key, x['part'], a, y['part'], b, r)); wanted.add(frozenset((a, b))); n += 1
-            if not n:
+            if not n and not x.get('faction'):
                 linked = sum(1 for a in x['concepts'].split(',') for b in y['concepts'].split(',')
                              if links.get(frozenset((a, b))) and float(links[frozenset((a, b))]['level'] or 0) > 0)
                 gaps.append((key, x['part'], y['part'], len(x['concepts'].split(',')) * len(y['concepts'].split(',')), linked))
@@ -174,7 +184,8 @@ def page(arch, edges, examples, player, usable, every):
         if len(p) > 2 and not line.startswith('#'): names[p[0].strip()] = p[1].strip()
     data = {'archetypes': {}, 'edges': []}
     for r in arch:
-        a = data['archetypes'].setdefault(r['key'], {'name': r['name'], 'what': r['in_this_game'], 'parts': []})
+        a = data['archetypes'].setdefault(r['key'], {'name': r['name'], 'what': r['in_this_game'], 'parts': [],
+                                                     'faction': r.get('faction', False), 'markers': r.get('markers', {})})
         a['parts'].append({'part': r['part'], 'kind': r['kind'], 'concepts': r['concepts'].split(',')})
     for key, pa, a, pb, b, r in edges:
         text = r['texts'].split(' | ')[0] if r['texts'] else ''
@@ -190,6 +201,8 @@ def page(arch, edges, examples, player, usable, every):
     data['nodes'] = D['nodes']
     data['markerNames'] = D['markers']
     for k, m in step3_groups.markers().items(): data['archetypes'][k]['markers'] = m
+    for a in data['archetypes'].values():
+        if a['faction']: a['markers'] = {k: float(v) for k, v in a['markers'].items()}
     data['decks'] = [[d['game'], d['name'], sorted(col[c] for c in d['z'])] for d in D['decks']]
     data['factions'] = [[f['game'], f['faction'], f['counts']] for f in D['factions']]
     data['gameCounts'] = D['game_counts']

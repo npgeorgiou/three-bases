@@ -18,6 +18,8 @@ button{font-size:12px;padding:2px 8px;cursor:pointer}
 .chips{display:flex;flex-wrap:wrap;gap:3px}
 .chip{font-size:11px;padding:1px 6px;border-radius:9px;background:#eef4f7;color:#1f6f8b}
 .chip.brick{background:#eceef1;color:#5d6470}
+.chip.extra{background:#fff;color:#5d6470;border:1px dashed #9aa1ab}
+#picks h4{margin:8px 0 2px;font-size:12px;color:#555}
 .chip.mark{background:#f6efe6;color:#8b5a1f}
 .big{font-size:13px;margin:2px 0}
 .weak{color:#b23a48}
@@ -54,11 +56,13 @@ const conc=k=>[...new Set(D.archetypes[k].parts.flatMap(p=>p.concepts))];
 function together(a,b){const A=conc(a),B=conc(b),all=new Set([...A,...B]),pairs=new Set();
   for(const x of A)for(const y of B)if(x!==y&&strong(linkOf[[x,y].sort().join('|')]))pairs.add([x,y].sort().join('|'));
   return {score:pairs.size/all.size,all:[...all],n:pairs.size,shared:A.filter(x=>B.includes(x))}}
-const ALLPAIRS=[];for(let i=0;i<keys.length;i++)for(let j=i+1;j<keys.length;j++){const t=together(keys[i],keys[j]);if(t.shared.length)ALLPAIRS.push(t.score)}
+const AK=keys.filter(k=>!D.archetypes[k].faction),FK=keys.filter(k=>D.archetypes[k].faction);
+const ALLPAIRS=[];for(let i=0;i<AK.length;i++)for(let j=i+1;j<AK.length;j++){const t=together(AK[i],AK[j]);if(t.shared.length)ALLPAIRS.push(t.score)}
 ALLPAIRS.sort((x,y)=>y-x);
 document.getElementById('addticked').onclick=()=>{picked.forEach(k=>conc(k).forEach(c=>chosen.add(c)));draw()};
 document.getElementById('clear').onclick=()=>{chosen.clear();draw()};
-document.getElementById('picks').innerHTML=keys.map(k=>`<label><input type="checkbox" value="${k}"><span class="sw"></span><span>${esc(D.archetypes[k].name)}</span></label>`).join('');
+const pick=k=>`<label><input type="checkbox" value="${k}"><span class="sw"></span><span>${esc(D.archetypes[k].name)}</span></label>`;
+document.getElementById('picks').innerHTML=(FK.length?'<h4>The factions (step 6)</h4>'+FK.map(pick).join(''):'')+'<h4>What decks play together (step 3)</h4>'+AK.map(pick).join('');
 document.querySelectorAll('#picks input').forEach(i=>i.onchange=()=>{const k=i.value;
   if(i.checked)picked.push(k);else picked.splice(picked.indexOf(k),1);draw()});
 document.getElementById('none').onclick=()=>{picked.length=0;document.querySelectorAll('#picks input').forEach(i=>i.checked=false);draw()};
@@ -101,8 +105,9 @@ function draw(){
     const tx=el('text',{x:x+8,y:y+3.5,class:on?'on':''});tx.textContent=short(c);svg.append(tx);svg.append(hit)}
   const byLink=(x,y)=>Math.max(+y.cards||0,+y.decks||0)-Math.max(+x.cards||0,+x.decks||0),only=l=>!focus||l.a===focus||l.b===focus;
   let h=built();
-  if(picked.length===2)h+=asFaction(picked[0],picked[1]);
-  if(picked.length>2)h+=bestPairs();
+  const arch=picked.every(k=>!D.archetypes[k].faction);
+  if(arch&&picked.length===2)h+=asFaction(picked[0],picked[1]);
+  if(arch&&picked.length>2)h+=bestPairs();
   picked.forEach((k,i)=>{const a=D.archetypes[k];
     h+=`<h2><span class="sw" style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${COL[i%COL.length]}"></span> ${esc(a.name)}</h2>
     <div class="chips">${a.parts.map(p=>p.concepts.map(c=>`<span class="chip ${p.kind}">${esc(short(c))}</span>`).join('')).join('')}${marks([k])}</div>`});
@@ -142,6 +147,7 @@ function built(){if(!chosen.size)return '';
   <p class="big"><b>Closest agreed archetypes:</b> ${like.map(([k,n])=>esc(D.archetypes[k].name)+' <span class="note">'+n+' shared</span>').join(', ')||'none'}</p>
   <h3>Those decks also lean on</h3><table><tr><th>concept</th><th>these decks</th><th>all decks</th></tr>${more.map(([c,a,b])=>`<tr><td>${esc(short(c))}</td><td>${Math.round(a*100)}%</td><td>${Math.round(b*100)}%</td></tr>`).join('')||'<tr><td colspan="3">none</td></tr>'}</table>`}
 const HOW=`<details style="margin-top:16px"><summary>How to read this page</summary><ul class="help" style="padding-left:16px">
+<li>A faction (step 6): blue chips are its core and engines, grey its bricks, dashed its extras; its lines are the strong links between its core and engines; two ticked factions show the links between them in orange.</li>
 <li>Blue concepts are engines (they work by feeding another part of the archetype), grey are bricks (they work alone). Claude chose which is which.</li>
 <li>Brown tags are design markers: what the archetype's decks are like (many spells, cheap units, a low curve). They are no concepts and take no faction place; later steps get them.</li>
 <li><b>× chance</b>: how many times more often than chance real cards link the two (cards) or real decks hold both (decks). <b>games</b>: in how many of the 10 games such cards exist.</li>

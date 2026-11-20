@@ -279,31 +279,23 @@ with open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.tsv'), 'w', encoding='utf
                            ','.join(f'{k}:{v:.2f}' for k, v in sorted(gr['markers'].items(), key=lambda t: -t[1])),
                            '; '.join(f'{g}:{fa}:{r:.2f}' for r, (g, fa) in gr['facs'])]) + '\n')
 
-with open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.md'), 'w', encoding='utf-8') as o:
-    o.write('# Step 3: the ways to play that decks lean on, by NMF (made by deck_groups_nmf.py)\n\n')
-    o.write(f'{len(decks)} decks of {len(per_game)} games, {len(nodes)} concepts. {K} groups' +
-            (' (set by hand). ' if FORCED else f': the number from {MIN_K} to {MAX_K} whose groups stay most alike on 90% of '
-             f'the decks ({stab[K]:.2f}; 1 = the same). ') + f'A deck fits a group that is '
-            f'{CARRY:.0%} or more of its mix. The archetype: the group\'s 10 heaviest and base concepts (more than half of its decks have them), '
-            f'without the five unit measures and without the concepts more than half of the groups hold. Design markers: what its '
-            f'decks are like, x2 = twice as often as their games\' decks. The 10 heaviest come with the share of its decks that lean on each. A faction fits '
-            f'its best {BEST} groups at {FIT:g} times its game\'s average share of their concepts ("x2").\n\n')
-    o.write('Deck card names the library does not know: ' +
-            (', '.join(f'{g} {k}' for g, k in sorted(missing.items()) if k) or 'none') + '.\n\n')
-    if stab: o.write('Stability by number of groups: ' + ', '.join(f'{k} {v:.2f}' for k, v in stab.items()) + '.\n\n')
+with open(os.path.join(HERE, f'deck_groups_nmf{SUFFIX}.md'), 'w', encoding='utf-8') as o:  # for Kaptain: short lists, no deck names
+    o.write('# Step 3: the ways to play that decks lean on (made by deck_groups_nmf.py)\n\n')
+    o.write(f'- {len(decks)} decks of {len(per_game)} games, {len(nodes)} concepts, {K} groups'
+            + (' (set by hand)' if FORCED else f' (the number from {MIN_K} to {MAX_K} that stays most alike: {stab[K]:.2f}, 1 = the same)') + '\n')
+    o.write('- "Not on the map": a concept more than half of the groups hold, or a unit measure; the map and steps 5-6 leave it out\n')
+    o.write(f'- Design markers: what its decks are like; x2 = twice as often as their games\' decks\n\n')
     for gr in groups:
-        o.write(f"## {gr['key']}: {len(gr['fit'])} decks ({', '.join(f'{g} {k}' for g, k in sorted(gr['games'].items()))})"
-                + (' **one game**' if gr['one_game'] else '') + '\n')
-        o.write('- The archetype (its concepts on the map and in steps 5 and 6): ' + '; '.join(plain.get(c, c) for c in gr['archetype']) + '\n')
-        o.write('- Design markers: ' + ('; '.join(f'{MNAME[k]} x{v:.1f}' for k, v in sorted(gr['markers'].items(), key=lambda t: -t[1])) or 'none') + '\n')
-        o.write('- How NMF found it: its 10 heaviest concepts ' + '; '.join(f"{name(t)} {gr['lean'][t]:.0%}" for t in gr['concepts'])
-                + '; base concepts ' + ('; '.join(f'{name(t)} {v:.0%}' for v, t in gr['base']) or 'none') + '\n')
-        o.write('- Decks: ' + '; '.join(f"{decks[n]['name']} ({decks[n]['game']}, {mix[n, gr['j']]:.0%})" for n in gr['fit'][:6]) + '\n')
-        o.write('- Factions that fit: ' + ('; '.join(f'{fa} ({g}, x{r:.1f})' for r, (g, fa) in gr['facs']) or
-                'none; nearest ' + '; '.join(f'{fa} ({g}, x{r:.1f})' for r, (g, fa) in gr['near'])) + '\n\n')
-    o.write('Concepts in no group: ' + ('; '.join(name(t) for t in left) or 'none') + '.\n\n')
-    o.write('Groups no faction fits: ' + (', '.join(nofit) or 'none') + '.\n\n')
-    o.write('Factions that fit no group: ' + (', '.join(f'{fa} ({g})' for g, fa in lonely) or 'none') + '.\n')
+        o.write(f"## {gr['key']}: {len(gr['fit'])} decks" + (' (one game)' if gr['one_game'] else '') + '\n')
+        o.write('- Games: ' + ', '.join(f'{g} {k}' for g, k in sorted(gr['games'].items(), key=lambda t: -t[1])) + '\n')
+        off = lambda t: '' if nodes[t] in gr['archetype'] else ' (not on the map)'
+        o.write('- Its 10 heaviest concepts, heaviest first (share of its decks that lean on it):\n')
+        for t in gr['concepts']: o.write(f"  - {name(t)} {gr['lean'][t]:.0%}{off(t)}\n")
+        if gr['base']:
+            o.write('- Also in most of its decks (share of its decks that have it):\n')
+            for v, t in gr['base']: o.write(f"  - {name(t)} {v:.0%}{off(t)}\n")
+        o.write('- Design markers: ' + (', '.join(f'{MNAME[k]} x{v:.1f}' for k, v in sorted(gr['markers'].items(), key=lambda t: -t[1])) or 'none') + '\n\n')
+    o.write('## Concepts in no group\n' + (''.join(f'- {name(t)}\n' for t in left) or '- none\n'))
 
 json.dump({'markers': {m[0]: m[1] for m in MARKERS}, 'mark_fit': MARK_FIT, 'nodes': nodes, 'plain': {k: plain.get(k, k) for k in nodes}, 'unit': list(UNIT), 'strong': STRONG,
            'groups': [{'key': gr['key'], 'concepts': [nodes[t] for t in gr['concepts']],
