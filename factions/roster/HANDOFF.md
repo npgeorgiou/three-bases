@@ -11,30 +11,41 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 3. The real decks' scores | done: 3027 decks of 10 games | `work/deck_scores.json` |
 | 4. The links between concepts | done: 15745 concept pairs | `library/cards_db/roster/concept_links.tsv` |
 | 5. The map | done (a page only; made after step 6) | `factions/roster-map.html` |
-| 6. The factions, from what they do | the 10 of the trial made: core kernel plus answers, one ranked fill, new world; Kaptain checks them | `work/kernel_factions.md`, `.tsv`, `work/lists/` |
+| 6. The factions, from what they do | the 10 of the trial made the agreed way; Kaptain checks them | `work/kernel_factions.md`, `.tsv`, `work/lists/` |
 | 7. Combos on this board | to do | |
 | 8. Game plan, then keywords | to do | |
 | 9. Stop 1 | to do | |
 
 ## Work for the next chat, in this order
-1. **Kaptain picks a way of making the factions**: A (`work/kernel_factions.md`, agreed), B (`_B.md`, the kernel
-   stays the identity's core) or C (`_C.md`, the fill follows the core only); the numbers are in each
-   `kernel_factions*_summary.json`. Then the method stays on 10 factions until he is happy, then 20 with a limit of
-   4-5 factions per concept and 7 partners.
-2. **Kaptain brainstorms factions** with `work/make_faction.py` (one faction from concepts he gives).
-3. **Open library errors**, not fixed:
-   - Into the Breach: repair that cures Fire or A.C.I.D. counts as "when health is restored" (36 cards).
-   - Gwent: giving Spying counts as "give to the opponent" (44 cards) and Reset as heal; both unchecked.
-   - Spawner (Into the Breach) and Spikedriver Colony (Monster Train) count as cheating death.
+1. **Fix the library errors found on 20 Nov 2026**, each in the library with test cases (`library/cards_db/START_DATABASE.md`,
+   "Fixing errors"; a reading budget from Kaptain):
+   - A link does not reliably record which of its two cards acts and which answers (`links.sqlite`: a and b). So a
+     card's "when..." part counts for every link its sentence makes: Harold Schmidt pushes "when healed", his push
+     links him to Prime Spear's line hit, and "when health is restored" counts as linked to the line. That makes odd
+     links like "when health is restored" with moving units. Fix: every link records which card acts; then a card's
+     "when..." part counts only when the other card sets it off (a card that kills my unit with my "when a unit dies").
+     Before and after: real combos like discard with "when a card is discarded" must keep their links (`cases/roster.tsv`).
+   - Into the Breach: the repair that cures Fire or A.C.I.D. counts as "when health is restored" (36 cards).
+   - Gwent: giving Spying counts as "give to the opponent" (44 cards) and Reset counts as heal; both unchecked.
+   - Spawner (Into the Breach) and Spikedriver Colony (Monster Train) count as cheating death; neither comes back.
    - Marvel Snap: Lady Deathstrike lost 7 links (does she destroy only enemies?); Lockjaw -> Enchantress is new.
-   - A card that takes allies' keywords (Mask Mother) has no link to cards that give an ally a keyword (Claude's).
+   - A card that takes allies' keywords (Mask Mother) has no link to the cards that give an ally a keyword.
+   - Stormbound: "kills it" tests read a unit's first-level strength only (Dubious Hags 2/3/4/5/6).
+   - `roster/concept_links.tsv`: its `decks` column is empty for most pairs; step 6 counts decks itself. Make it the
+     same measure as step 6 or remove it.
+   Then rebuild (`check_all.py <any game>`, `links.py`) and rerun steps 2 to 6 and the map
+   (`factions/roster/PIPELINE.md`). Keep the old `work/kernel_factions.md` and `work/kernel_factions_summary.json`
+   before the rerun, compare both with the new ones, and show Kaptain what moved and why.
+2. **Kaptain checks the 10** (`work/kernel_factions.md`); the method stays on 10 factions until he is happy, then 20
+   with a limit of 4-5 factions per concept and 7 partners.
+3. **Kaptain brainstorms factions** with `work/make_faction.py` (one faction from concepts he gives).
+4. Odd answers to look at with Kaptain: Can't be broken removes back-row units with "hits my own side too"; Comes back
+   removes front units with "swap positions".
 
 ## What the next steps find in the files
 - Runeterra's spell mana rule is written (`read/runeterra/game_rules.jsonl`) but not built into `cards.sqlite` yet.
 - `work/concept_list.py`: `concept_list.Library` scores a set of concepts in under a second.
 - The faction check and `tools/roster_table_check.py` are written when step 9 and Stop 3 need them.
-- `work/make_stop1.py` (step 9) reads files of an earlier way of working; step 9 rewrites it to read
-  `work/kernel_factions.tsv`.
 
 ## The numbers (library/cards_db)
 - After a change to records, `vocab.tsv` or `flat.py`: `python3 check_all.py <any game>` (about 14 minutes; with no
@@ -42,9 +53,6 @@ One chat does one step; at its end, mark the step done here and say what it left
 - A link counts for two concepts only through what of each card made it (Ghost Rider brings a card back, Vibro-Shock
   Gauntlets give it +2 Power: revive with +2 Power, never revive with supply). Cases: `cases/roster.tsv`.
 - Two concepts you expect to work together show 0 links: check that one pair by script before trusting it.
-- A card's "when..." part counts for every link its sentence makes. Counting it only for the card the other one sets
-  off was tried (20 Nov 2026): the library does not keep which card acts reliably enough, and it lost real combos
-  (discard with "when a card is discarded").
 - Card pairs that look wrong are library errors: they are read, fixed in the library with test cases, and never
   filtered out by a rule (the 8 suspect pairs of 20 Nov 2026: 6 library errors, fixed; 2 real).
 
@@ -57,27 +65,29 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
   "one that WAITS", "one that CAN'T BE BROKEN", "one that FUCKS YOU UP" (19 Nov 2026).
 - A faction is not made of 2 archetypes (20 Nov 2026: "is it still needed to be talking about 2 archetypes? this is
   maybe leftover from a process that had a very different beginning").
-- Engines come from library links, bricks from deck links: "a faction that protects, its not gonna have any links to
+- Both card links and decks count: "a faction that protects, its not gonna have any links to
   anything, but it can protect"; the decks inform which supporting concepts go together (20 Nov 2026).
 - "A partner needs real library links between the 2 faction's concepts"; 5 partners each while we make 10 factions
   (20 Nov 2026); 7+ partners each among the 20.
-- Concepts that land in many factions (silence) "shouldnt be dropped, just given to the most appropriate", maybe by a
-  many-level approach (20 Nov 2026).
+- Concepts that land in many factions (silence) "shouldnt be dropped, just given to the most appropriate" (20 Nov 2026).
 - No "2+ games" rule for a kernel: "we dont have many moving games, and my game is a moving game" (20 Nov 2026).
-- Claude does the bulk of the work (thin kernels are widened by Claude), "so we have something that more or less
-  works" (20 Nov 2026).
+- Claude does the bulk of the work, "so we have something that more or less works" (20 Nov 2026).
 - Step 3 keeps only each real deck's scores; no groups of decks (20 Nov 2026).
+- The kernel is the identity's core plus, for each board question the core does not answer, about 2 concepts that
+  answer it; the rest of the faction is what fits the core best (20 Nov 2026: way C of three compared).
+- A deck counts for a faction when it holds the kernel's concepts together, as a share of its cards; fit counts both
+  card links and decks; extras count toward the limit of 3 factions per concept (20 Nov 2026).
+- The factions' peoples come from one new world, never a real one; a hidden real-world model is fine (20 Nov 2026).
+- The factions page is one plain sheet per faction; numbers go to a separate page (20 Nov 2026).
 - Hatching from an egg is NOT a summon (20 Nov 2026).
 - Two factions share at most half of their own concepts; every faction keeps a blind spot (18 Nov 2026). One idea per
   faction, no fruit salad.
 - Kaptain's list holds deck archetypes, what a deck tries to do; a reference only. Combo, Control-Combo and Extra Turns
-  are off the list (other archetypes make their own combos); Cycling is part of Rosters (18 Nov 2026). Discard / 8-Rack
+  are off the list (other archetypes make their own combos); Cycling is part of Wheels (18 Nov 2026). Discard / 8-Rack
   stays on it although real cards don't link its two parts: future improved games will beef it up (17 Nov 2026).
 - Cards tagged with the wrong concept are examined and fixed; "Return my unit to hand" is split into smaller concepts
   (18 Nov 2026). Its theme is picked right after its concepts and breaks ties between concepts that score about the
-  same. Its list leaves out its own concepts. Its extras, 8 to 12, the same number for every faction, come from its
-  list, first for the answers about the board its concepts don't give, then to feed its concepts; an answer no concept
-  gives is fixed with another extra. Its blind spot is what none of its concepts and extras give ("never draws cards"),
+  same. Its list leaves out its own concepts. Its extras, 8 to 12, the same number for every faction. Its blind spot is what none of its concepts and extras give ("never draws cards"),
   named at step 9 (19 Nov 2026). Combos (step 7) come before the game plan and keywords (step 8). A finished faction
   is checked against its concepts and extras (18 Nov 2026).
 - Keywords are shared, which is what makes factions combo: no keyword is barred from any faction, each is mostly on the

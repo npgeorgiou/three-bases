@@ -7,7 +7,7 @@ A concept is named by its key or by words of its plain name.
 2. A first ranked fill: every other usable concept scored by how well it goes with the core (step 6, 4), the best 22.
 3. Its answers: for each question its core does not answer, up to 2 concepts that answer it, from the fill and the top of
    its list, the ones that go best with the core (step 6, 12); they join the kernel.
-4. The ranked fill again from the whole kernel: 12 concepts, then its extras to 22.
+4. The ranked fill again, by fit to the core, outside the whole kernel: 12 concepts, then its extras to 22.
 5. With the roster (the default): a concept already in 3 of the roster's factions (work/kernel_factions.tsv) is not
    taken, no answer uses a concept a roster faction answers the same question with, and the page shows its strongest
    partners and how much it shares with each faction. With --alone, the roster is not looked at."""
@@ -57,7 +57,7 @@ x['score'] = {c: v[0] for c, v in K.lib.scores(x['concepts']).items()}
 ban = {q: set(taken.get(q, ())) if q != 'cares' else set() for q in K.Q5}; ban['all'] = set(full)
 by_q = K.choose(x, ban)
 kernel = core + sorted(set().union(*by_q.values()) - set(core))
-fit, order = ranked(kernel, kernel)
+fit, order = ranked(kernel, core)
 concepts = order[:max(0, K.OWN - len(kernel))]; extras = order[len(concepts):len(concepts) + K.EXTRAS]
 decks = K.kernel_decks(kernel)
 

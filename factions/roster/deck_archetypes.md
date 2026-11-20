@@ -206,7 +206,7 @@ Empty the enemy's hand, then punish him for holding few cards.
 - **take, see, discard or tax the cards in his hand** (engine): Attack the opponent's hand; Hidden and revealed information; Steal from the opponent; Make the opponent's cards cost more; Mill the opponent's deck.
 - **punish a small hand** (engine): Hand size matters; Counts / thresholds.
 
-## Rosters
+## Wheels
 Discard my hand and draw a new one, and cards gain from each draw and discard (hand limit 10).
 
 - **draw and discard many** (engine): Draw cards; Discard my own cards; Hand size matters; Reuse my cards (shuffle back); Create new cards.

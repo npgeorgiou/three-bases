@@ -18,11 +18,11 @@
 - **Holds a base:** Take less damage (armour), Defence gain (+health), Heal every turn (regeneration), Absorb one hit (shield, ward)
 - **The game thing it cares about:** Neighbours matter (adjacency)
 
-**Also plays:** Damaged unit matters
+**Also plays:** Stats matter (highest, lowest)
 
-**Extras:** Stats matter (highest, lowest), Move enemy units (push, pull), A unit levels up on the board, Move my units (reposition), Row-wide lasting effects (weather), Make a unit stronger (buff), Help from nearby allies (assists), Deck contents matter, When life or health is restored, Taunt (enemies must attack it)
+**Extras:** Damaged unit matters, Help from nearby allies (assists), Taunt (enemies must attack it), Quests / objectives with rewards, Strikes with its defence, Temporary bonus (this turn only), When life or health is restored, A unit levels up on the board, Immune / can't be targeted, Make a unit stronger (buff)
 
-**Partners:** Moves, Comes back, Grows, Kills brutally, Eats its own
+**Partners:** Moves, Grows, Comes back, Kills brutally, Swarms
 
 ## Kills brutally
 
@@ -42,9 +42,9 @@
 
 **Also plays:** Counts deaths, When another unit dies, Attack right away
 
-**Extras:** Board wipe, Damaged unit matters, Extra turns or actions, Grows with what happened this game, Steal from the opponent, Restore health (heal), A unit levels up on the board, Stacking keywords / counters, Excess damage carries on (trample), Transform my card into another
+**Extras:** Damaged unit matters, Move enemy units (push, pull), Steal from the opponent, A unit levels up on the board, Move my units (reposition), Clog the opponent's board, Extra turns or actions, Swap positions, Cheat death (survive lethal), Damage to several separate targets
 
-**Partners:** Comes back, Can't be broken, Messes you up, Moves, Eats its own
+**Partners:** Comes back, Messes you up, Can't be broken, Moves, Swarms
 
 ## Messes you up
 
@@ -62,11 +62,11 @@
 - **Holds a base:** Can't act at all (stun, freeze)
 - **The game thing it cares about:** Neighbours matter (adjacency)
 
-**Also plays:** Change the game's rules
+**Also plays:** Give my units or cards to the opponent
 
-**Extras:** Give my units or cards to the opponent, Send an enemy unit back (bounce), Ready a used unit again (untap), Damage over time (poison, burn), Where units can be placed, Can't attack (lock on an enemy), When an enemy arrives, Block points that wear off, Swap positions, Clog the opponent's board
+**Extras:** Send an enemy unit back (bounce), Stacking keywords / counters, Change the game's rules, Make the opponent's cards cost more, Where units can be placed, Swap or replace hands or decks, When an enemy arrives, Look at cards and pick (scry), Create new cards, Attack set to 0
 
-**Partners:** Comes back, Kills brutally, Moves, Eats its own, Thrives on spells
+**Partners:** Kills brutally, Comes back, Swarms, Eats its own, Thrives on spells
 
 ## Moves
 
@@ -84,11 +84,11 @@
 - **Holds a base:** Terrain / board features
 - **The game thing it cares about:** Where units can be placed
 
-**Also plays:** Attack right away, Change the game's rules, Damaged unit matters, Ready a used unit again (untap), Can't attack (lock on an enemy)
+**Also plays:** Change the game's rules, Attack right away, Ready a used unit again (untap), Can't attack (lock on an enemy), Steal from the opponent
 
-**Extras:** Silence (abilities removed), Steal from the opponent, Give my units or cards to the opponent, Can't act at all (stun, freeze), Having a card in play or hand, Damage to several separate targets, Ranged attack / long reach, Can't attack (my own unit), Take less damage (armour), Counts / thresholds
+**Extras:** Give my units or cards to the opponent, Silence (abilities removed), Board wipe, Can't act at all (stun, freeze), Having a card in play or hand, When another unit dies, Aura (ongoing effect on others), Mill the opponent's deck, Stat loss (-power, -health), Ranged attack / long reach
 
-**Partners:** Can't be broken, Comes back, Messes you up, Kills brutally, Grows
+**Partners:** Can't be broken, Eats its own, Comes back, Kills brutally, Swarms
 
 ## Thrives on spells
 
@@ -108,9 +108,9 @@
 
 **Also plays:** Put into play for free
 
-**Extras:** Enough spells played, Ready a used unit again (untap), Order of my plays matters (combo), Hand size matters, Cost matters, Improve cards in hand or deck, Can't act at all (stun, freeze), Copy cards or units, More or faster base resource (ramp), When a card is drawn
+**Extras:** Hand size matters, Enough spells played, Cost matters, Ready a used unit again (untap), When a card is drawn, Alternative costs, Upgrade a card, Copy cards or units, Fill my own discard pile (self-mill), Reuse my cards (shuffle back)
 
-**Partners:** Messes you up, Waits, Grows, Comes back, Moves
+**Partners:** Waits, Messes you up, Grows, Moves, Comes back
 
 ## Waits
 
@@ -118,7 +118,7 @@
 
 **Who they are:** The Deep Bell: an old order inside the mountain that winds a vast clockwork for years, then rings the bell that flattens the valley.
 
-**Kernel:** Search the deck for a card (tutor), Gain resources (ramp), More or faster base resource (ramp), Look at cards and pick (scry), Expensive card, Countdown, Damage over time (poison, burn), Heal every turn (regeneration)
+**Kernel:** Search the deck for a card (tutor), More or faster base resource (ramp), Gain resources (ramp), Look at cards and pick (scry), Expensive card, Countdown, Damage over time (poison, burn), Heal every turn (regeneration)
 
 **Answers:**
 
@@ -128,11 +128,11 @@
 - **Holds a base:** Countdown, Heal every turn (regeneration)
 - **The game thing it cares about:** Expensive card
 
-**Also plays:** Deck contents matter, Cost matters, Attack set to 0, Top or bottom of the deck matters
+**Also plays:** Enough spells played, Disrupt the opponent's plans, Cost matters, Order of my plays matters (combo)
 
-**Extras:** My spells and abilities get stronger, Hidden and revealed information, Enough spells played, When a spell is played, Keep my units alive (protection), Disrupt the opponent's plans, When an enemy arrives, Row-wide lasting effects (weather), Block points that wear off, Order of my plays matters (combo)
+**Extras:** Cards cost less, Hidden and revealed information, Deck contents matter, My spells and abilities get stronger, When a spell is played, Set a cost to a fixed number, When an enemy arrives, Keep my units alive (protection), Board wipe, Attack set to 0
 
-**Partners:** Thrives on spells, Eats its own, Comes back, Kills brutally, Swarms
+**Partners:** Thrives on spells, Comes back, Eats its own, Kills brutally, Swarms
 
 ## Swarms
 
@@ -150,11 +150,11 @@
 - **Holds a base:** Summon units / tokens
 - **The game thing it cares about:** Hand size matters
 
-**Also plays:** Alternative costs, Draw cards, When I play another card, Destroys itself / temporary unit, Create new cards
+**Also plays:** When I play another card, Destroys itself / temporary unit, Variety matters (all different), Draw cards, Grows with what happened this game
 
-**Extras:** Immune / can't be targeted, Cost matters, Position and space, Absorb one hit (shield, ward), Expensive card, Variety matters (all different), Double or multiply stats, Junk cards into a deck or hand, Make a unit stronger (buff), Reuse my cards (shuffle back)
+**Extras:** Cost matters, When a spell is played, Give my units or cards to the opponent, Repeat or double triggers, Sacrifice my own units, Make a unit stronger (buff), Alternative costs, Order of my plays matters (combo), Create new cards, Where units can be placed
 
-**Partners:** Comes back, Eats its own, Can't be broken, Messes you up, Moves
+**Partners:** Messes you up, Eats its own, Moves, Can't be broken, Comes back
 
 ## Grows
 
@@ -174,9 +174,9 @@
 
 **Also plays:** Help from nearby allies (assists)
 
-**Extras:** Defence gain (+health), Extra turns or actions, Stats matter (highest, lowest), Stat gain (+power, +health), When another unit leaves play, Stacking keywords / counters, Attack more than once, Can't move (root), A unit levels up on the board, Stealth / hidden until it acts
+**Extras:** Defence gain (+health), Stats matter (highest, lowest), Extra turns or actions, Stat gain (+power, +health), Attack right away, Expensive card, Stacking keywords / counters, Attack more than once, Absorb one hit (shield, ward), Take less damage (armour)
 
-**Partners:** Eats its own, Comes back, Can't be broken, Moves, Kills brutally
+**Partners:** Eats its own, Comes back, Can't be broken, Kills brutally, Moves
 
 ## Comes back
 
@@ -194,11 +194,11 @@
 - **Holds a base:** Bring back dead units (revive)
 - **The game thing it cares about:** Discard my own cards
 
-**Also plays:** Sacrifice my own units, Put into play for free, Grows with what happened this game, When another unit dies
+**Also plays:** Sacrifice my own units, Put into play for free, Attach or merge onto a unit, Destroys itself / temporary unit
 
-**Extras:** Counts deaths, Hits my own side too, When another unit leaves play, Destroys itself / temporary unit, Stacking keywords / counters, Attach or merge onto a unit, Cheat death (survive lethal), Top or bottom of the deck matters, Gain resources (ramp), Mark a target for later hits
+**Extras:** When another unit leaves play, Grows with what happened this game, Hits my own side too, Top or bottom of the deck matters, Countdown, Stacking keywords / counters, Extra turns or actions, When I play another card, Absorb one hit (shield, ward), Stealth / hidden until it acts
 
-**Partners:** Kills brutally, Grows, Messes you up, Can't be broken, Moves
+**Partners:** Kills brutally, Grows, Can't be broken, Moves, Messes you up
 
 ## Eats its own
 
@@ -216,13 +216,13 @@
 - **Holds a base:** Bring back dead units (revive)
 - **The game thing it cares about:** Discard my own cards
 
-**Also plays:** Return my unit from the board to hand, Cheat death (survive lethal), Board wipe, Attack right away
+**Also plays:** Return my unit from the board to hand, Cheat death (survive lethal), Summon units / tokens, Row-wide lasting effects (weather)
 
-**Extras:** Damage to many at once, Back to hand when it dies or leaves play, When another unit leaves play, Grows with what happened this game, Small repeatable damage, Mill the opponent's deck, Summon units / tokens, When a card is discarded, Row-wide lasting effects (weather), Fill my own discard pile (self-mill)
+**Extras:** Damaged unit matters, Grows with what happened this game, A unit levels up on the board, Back to hand when it dies or leaves play, Swap or replace hands or decks, When another unit leaves play, Reuse my cards (shuffle back), When a card is discarded, Grows again and again, Can't attack (my own unit)
 
-**Partners:** Grows, Messes you up, Swarms, Can't be broken, Comes back
+**Partners:** Grows, Moves, Messes you up, Swarms, Can't be broken
 
 ## In no faction yet
 
-Repeat or double triggers, Upgrade a card, Switch stances or forms, Lifesteal / drain, Grows again and again, Swap or replace hands or decks
+Transform my card into another, Switch stances or forms, Lifesteal / drain, Mark a target for later hits, Counts / thresholds
 

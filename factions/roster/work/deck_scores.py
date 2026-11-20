@@ -14,7 +14,7 @@ import concept_tags, deck_analysis, faction_asks
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PRIOR = 100.0       # the prior's size in concept instances (Claude's)
-STRONG = 1.96       # a deck leans on a concept above this score
+STRONG = 1.96       # a deck is built on a concept at this score or more
 NOT_FACTIONS = ('monster_train',)  # Kaptain, 9 Nov 2026: a different kind of game, its clans are not measured
 FIT, BEST = 2.0, 2  # a faction fits its best 2 groups at twice its game's average share (Claude's)
 UNIT = {'unit*': 'Unit', 'cheapunit*': 'Cheap unit', 'dearunit*': 'Expensive unit',

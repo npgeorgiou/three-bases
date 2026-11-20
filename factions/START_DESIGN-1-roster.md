@@ -22,25 +22,30 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   **holds** a concept when its share of cards with it is twice its game's average.
 - **Identity**: what a faction DOES, in plain words: "can't be broken", "kills brutally", "waits", "messes you up",
   "moves" (Kaptain). Never a trigger or a condition ("when another unit dies"): those are how its cards work.
-- **Kernel**: the concepts that do what the identity says: the effects of a few families of the concept tree
-  (`library/concept_tree.txt`; "can't be broken" = keep my units alive, heal, defence gain).
-- **Engine**: a concept of the faction that works through another of its concepts on real cards (a strong link):
-  "my units die" with "my units gain when an ally dies". Engines come from card links.
-- **Brick**: a concept of the faction that works alone and links to nothing, but that the kernel's decks play with
-  it: removal, protection, disruption. Bricks come from decks.
-- **The faction's concepts**: its kernel, engines and bricks, about 12. They are its character (what it is strongest
-  at, what its keywords grow from).
+- **Core**: the concepts that do what the identity says: the effects of a few headings of the concept tree
+  (`library/concept_tree.txt`; "can't be broken" = keep my units alive, heal, defence gain) that most decks are
+  built on.
+- **Kernel**: the core plus, for each board question the core does not answer, up to 2 concepts that answer it and
+  go best with the core (step 6).
+- **Fit**: how well two concepts go together, 0 to 1: the higher of how many times chance real cards link them and
+  real decks hold both (8 times chance = 1). Armour and shield are rarely linked by cards, but decks play them
+  together, so they fit.
+- **Engine**: a concept of the faction that real cards link to another of its concepts ("my units die" with "my units
+  gain when an ally dies"). **Brick**: one that links to nothing but that decks play with the faction's concepts
+  (removal, protection).
+- **The faction's concepts**: its kernel and the concepts that fit its core best, 12 in all. They are its character
+  (what it is strongest at, what its keywords grow from).
 - **Partner**: another faction its concepts combine with: real library links between the two factions' concepts, or
   one's decks holding the other's kernel (support: decks that buff also protect). Each partner has one line on how the
   combo plays, from its strongest real card pair.
 - **The faction's list**: every concept of the library (usable, helpers and out) except the faction's concepts, each
   with its score for how strongly it links with them.
-- **Extras**: the concepts of a faction's list that step 6 gives it besides its own concepts.
+- **Extras**: the next 10 concepts that fit its core best, after its own 12.
 - **Helper**: a concept that only says when or how a card acts, one of the game's own things, or a thing for single
-  cards (step 2). Never in a kernel; it can be an engine only if it is usable.
+  cards (step 2). Never in a faction.
 - **Synergy**: a strong link between two of the faction's concepts, shown by real card pairs, never written by hand:
   "makes your units die: the other card brings them back (in 7 of 10 games, 3.1 times chance)".
-- **Design marker**: what a group of decks is like as a whole, read from their cards' type, cost, stats and text
+- **Design marker**: what a set of decks is like as a whole, read from their cards' type, cost, stats and text
   against their game's decks ("many spells", "cheap units", "low curve"; step 3). Never a concept.
 - **Deck archetype**: what one deck tries to do, from Kaptain's list (`roster/archetypes_kaptain.txt`,
   `roster/deck_archetypes.tsv`: Madness, Storm, Reanimator...). A reference only: factions, partners and combos are
@@ -68,9 +73,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   never read twice. A reading agent is told its budget and every card already in `read-cards.tsv`, and never runs a
   command that prints the texts of cards it did not name (a search over texts): such a search spent 10 texts at once
   on 20 Nov 2026.
-- A faction is built at two levels: its engines come from card links (how its cards work through each other), its
-  bricks from what its decks play (what goes with it although no card links them: removal, protection). Neither alone
-  makes a faction.
+- A faction is built from two kinds of proof at once: card links (how its cards work through each other) and real
+  decks (what is played with it although no card links them: removal, protection). Fit takes the higher of the two.
 - A concept several factions want is never dropped: it goes to the faction it fits best, and the others take their
   next best.
 - A card's concept is judged with the rules of its keywords, not its printed text alone (Monster Train's Offering plays
@@ -167,64 +171,57 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    whose kernel holds it. Ticking factions lights their kernel, other concepts and extras, and draws in the faction's
    colour the strong card links between its kernel and other concepts.
 6. **The factions, from what they do** (by script: `work/kernel_factions.py` -> `work/kernel_factions.md`, one sheet
-   per faction for Kaptain, and `work/kernel_factions_check.md` with every number; `work/lists/<letter>.tsv`). Every
-   tie is broken by the concept key in alphabetical order, so every run gives the same result. In this order:
-   so every run gives the same result. In this order:
-   1. **Identities.** Claude names what each faction does, in plain words, each made of families of the concept tree
+   per faction for Kaptain; `work/kernel_factions_check.md` with every number; `work/kernel_factions_summary.json`, the
+   numbers that compare two runs; `work/lists/<letter>.tsv`). Every tie is broken by the concept key in alphabetical
+   order, so every run gives the same result. In this order:
+   1. **Identities.** Claude names what each faction does, in plain words, each made of headings of the concept tree
       (Claude's; the 10 of the trial are in the script). Each is one idea (no fruit salad); together they are spread
       over the seven answers, and the game is a moving game, so moving is one of them.
-   2. **The kernel**: the identity's usable concepts that are effects or "when..." (never a condition, nor a drawback
+   2. **The core**: the identity's usable concepts that are effects or "when..." (never a condition, nor a drawback
       unless the identity is about spending its own side) that 10+ decks are built on, the 6 with the most decks. No
       "2+ games" rule: few games move, and Three Bases does (Kaptain). A concept two identities want goes to the one
-      whose other kernel concepts' decks hold it more. A kernel under 4 concepts is widened by Claude with the family
-      whose concepts its decks hold most and that fits the identity.
+      whose other concepts' decks hold it more.
    3. **Its decks**: the decks whose cards with any kernel concept make up twice the share its game's decks average or
       more (8 armour, heal or shield cards where the game's decks average 3).
-   4. **One ranked fill**: every other usable concept scores how well it goes with the kernel, the average over the
-      kernel concepts of the higher of how many times chance real cards link the two and real decks hold both (a deck
-      holds a concept when its share of cards with it is twice its game's average; 8 times chance or more = 1; a brick
-      has no card links, so decks carry it). The best fill the faction to 12 concepts, then its extras to 22. A
-      concept real cards link to the kernel is an engine; the others are bricks.
-   5. **Sharing**: the factions are filled together; a concept that would then be in more than 3 factions (kernels,
-      concepts and extras together) goes to those it fits best and the others take their next best; it is never
-      dropped. Then every concept 15+ decks are built on that no faction has replaces the weakest extra of the faction
-      it fits best, when it fits at least 0.8 as well; what is still in no faction is listed on the page.
-   6. **Checks**: every faction has an engine pair (two of its concepts real cards link), or its identity is changed;
-      two factions share at most half of their concepts.
-   7. **Partners**: for every two factions, the strong links between their own concepts, plus 3 for each kernel concept
-      of one that the other's decks hold 1.5x+ (Claude's). A faction's partners are its strongest pairs: 5 each among
-      10 factions, 7+ among the 20 (Kaptain). Each gets its "how it plays" line from its strongest real card pair, or
-      from what its decks hold. A faction short of partners takes extras that link to others' kernels (6.10).
-   8. **Its people**: one new world for all factions (Veyl, Claude's), and per faction its people there, never a
-      real place or people; the real-world model each is written from stays in the script. Its families only break
-      ties between concepts that score within 0.1 of each other.
-   9. **Its list** (`work/concept_list.py`): every concept with 5+ cards (usable, helpers and out) except its own
+   4. **The ranked fill**: every other usable concept is ranked by its fit to the core, the average over the core
+      concepts (fit: the higher of how many times chance real cards link the two and real decks hold both; a deck holds
+      a concept when its share of cards with it is twice its game's average; 8 times chance or more = 1). The best fill
+      the faction to 12 concepts, then its extras to 22 (a real faction of about 100 cards mostly uses about 20
+      concepts). A concept real cards link to another of its concepts is an engine, any other a brick.
+   5. **Sharing**: the factions are filled together; a concept that would be in more than 3 factions (kernels, concepts
+      and extras together) stays with those it fits best, and the others take their next best; it is never dropped.
+   6. **Its list** (`work/concept_list.py`): every concept with 5+ cards (usable, helpers and out) except its own
       concepts, each with its score. In each game alone: real links between the concept's instances and the instances
       of the faction's concepts, against the links chance alone gives there; the game's score = (real + 1) /
       (chance + 1); the score = the average over the games where the concept and the faction's concepts both appear
       (every game weighs the same). Beside it: the `level` and in how many games.
-   10. **Its extras**: the ranked fill goes on from 12 to 22 concepts (4); a real faction of about 100 cards mostly
-      uses about 20 concepts.
-   11. **Its answers**, from `work/answer_concepts.tsv`: how it wins comes from its identity and engines; removing a
-      front unit, removing back-row units, acting between lanes and holding a base are each the first way of
-      `work/answer_concepts.tsv` its own concepts give, else the way its extras give; what it cares about most is the
-      first of the game's own things it has, else the highest-scoring on its list (factions may share it); its blind spot is named at step 9. An answer no way gives is fixed first in (10) with
-      another extra; only when its list has no way for it is the identity changed.
-   12. **The real kernel, then a second pass** (Kaptain): the kernel keeps its concepts; for each question they don't
-      answer (removes a front unit, the back row, acts between lanes, holds a base, what it cares about) it takes up to
-      2 of the faction's concepts and extras that answer it (one way of two concepts, or two ways of one); with fewer
-      than 3 such options, the top 30 of its list count too; a question none of them answers takes the best way from
-      its list. Each faction takes the options that go best with its kernel (how well two concepts go together: 4).
-      Every added concept goes with another kernel concept at a third of that or more; no two factions answer a
-      question with the same added concept (it stays where it fits best; what it cares about may be shared); no
-      kernel concept is in more than 3 factions. Steps 3 to 11 then run again on the real kernel; the identity's
-      families are not used again.
-   **Kaptain agrees the factions**, seeing per faction its identity, kernel, engines (with their real card pairs),
-   bricks, partners with their lines, and answers.
+   7. **The kernel** (Kaptain): the core, plus for each question the core does not answer (removes a front unit,
+      mainly the back row, mainly acts between lanes, holds a base, what it cares about; the ways of each in
+      `work/answer_concepts.tsv`) up to 2 concepts that answer it (one way of two concepts, or two ways of one), from
+      its concepts and extras, and from the top 30 of its list when those give fewer than 3 options; a question none of
+      them answers takes the best way from its list. It takes the options that fit best with the core and the other
+      answers. Every added concept fits another kernel concept at a third or more; no two factions answer a question
+      with the same added concept (it stays where it fits best; what it cares about may be shared); no kernel concept
+      is in more than 3 factions. Then 3 to 5 run again on the kernel, the fill still ranked by fit to the core.
+   8. **Missed concepts**: a concept 15+ decks are built on that no faction has replaces the weakest extra of the
+      faction it fits best, when it fits at least 0.8 as well; what is still in no faction is listed on the page.
+   9. **Its answers**: the kernel's concepts per question (7); how it wins, from its identity and its strongest pair
+      of concepts real cards link; its blind spot is named at step 9.
+   10. **Partners**: for every two factions, the strong links between their own concepts, plus 3 for each kernel
+      concept of one that the other's decks hold 1.5x+ (Claude's). A faction's partners are its strongest pairs: 5
+      each among 10 factions, 7+ among the 20 (Kaptain). Each gets its "how it plays" line from its strongest real
+      card pair, or from what its decks hold.
+   11. **Its people**: one new world for all factions (Veyl, Claude's), and per faction its people there, never a
+      real place or people; the real-world model each is written from stays in the script. Their headings only break
+      ties between concepts that score within 0.1 of each other.
+   12. **Checks**: every faction has an engine pair (two of its concepts real cards link), or its identity is changed;
+      two factions share at most half of their concepts.
+   **Kaptain agrees the factions**, seeing per faction its identity, people, kernel with its answers, other concepts,
+   extras and partners (`work/kernel_factions.md`).
 7. **Combos on this board.** For every two partners, Claude rates the combo with numbers on the board: STRONG (both
    halves on many cards, helps take or hold a base, the enemy's one action between can't easily stop it), OK (real but
    breakable), WEAK, NONE, AGAINST. Partners = STRONG or OK; every faction has 7+ (5 among 10); one short goes back to
-   step 6.10. `roster/combos.tsv` (pair, rating, how it plays, the numbers, a test column that playtests fill).
+   step 6 (its identity). `roster/combos.tsv` (pair, rating, how it plays, the numbers, a test column that playtests fill).
 8. **Game plan, then keywords** (`roster/plans.tsv`, `roster/keywords.tsv`).
    1. Each faction's game plan: how it takes and holds 2 bases over a few turns with its synergies, walked through on
       the board (which cell, what happens, what the enemy does with his one action between).
@@ -243,6 +240,6 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
 9. **Stop 1** for all 20: the seven answers made final from the game plan and keywords (every answer but which of the
    game's own things it cares about most differs from every other faction's; the blind spot is named from what none of
    its concepts and extras give, "never draws cards"), the check script (`tools/roster_table_check.py`:
-   against each faction's concepts, extras and answers) and the Stop 1 pages (`work/make_stop1.py` ->
+   against each faction's concepts, extras and answers) and the Stop 1 pages (written at step 9 from `work/kernel_factions.tsv`, the plans and the keywords ->
    `roster/STOP1*.md`: per faction its identity, concepts and synergies, theme, game plan, keywords, the seven answers,
    and one line per partner saying how the combo plays). Files under 150 lines.

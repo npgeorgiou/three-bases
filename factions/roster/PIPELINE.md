@@ -65,22 +65,18 @@ is written in that step's chat, from the rules of the step, and its line here is
   real card pair behind any concept pair.
 
 ## Step 6. The factions, from what they do
-- `python3 factions/roster/work/kernel_factions.py` (from the repo, about a minute; needs links.sqlite) ->
-  `factions/roster/work/kernel_factions.md` (for Kaptain: one sheet per faction, plain names, no numbers),
-  `kernel_factions_check.md` (every number and where each concept came from), `kernel_factions_summary.json` (the numbers that compare
-  ways of making them), `kernel_factions.tsv`
-  (`ROSTER_VARIANT=B` or `C` makes the factions another way, into files ending in `_B` or `_C`: B keeps the kernel to
-  the identity's core and reads the answers off what the fill brings; C ranks the fill by fit to the core only) (one row per faction: letter, name,
-  what it does, theme, kernel, engines, bricks, concepts, extras, design markers, how it wins, the five board answers,
-  partners; read by steps 7-9) and `lists/<letter>.tsv` (rules: `START_DESIGN-1-roster.md` step 6). The identities are
-  `IDENTITIES` in its head (name, what it does, concept-tree families) and the themes `THEMES` (theme, the families it
-  favours in a tie); both Claude's. Per faction: its kernel with the decks leaning on each concept, its engines with
-  their kernel links and the real card pair behind the strongest, its bricks with how many times as often its decks
-  hold each, what its decks hold that real cards also link to its concepts (a faction still short of 12), its design
-  markers, its extras with their list scores, its answers, its partners with their strength and how each plays; then
-  every pair. It reads `work/deck_scores.json` (decks and their design markers),
-  `library/cards_db/roster/concept_links.tsv` (strong links, their games), `library/concept_tree.txt` (families),
-  `work/concepts.tsv` (usable) and `work/answer_concepts.tsv` (the ways of each answer).
+- `python3 factions/roster/work/kernel_factions.py` (from the repo, about 2 minutes; needs links.sqlite) ->
+  `work/kernel_factions.md` (for Kaptain: one sheet per faction, plain names, no numbers), `work/kernel_factions_check.md`
+  (every number: per faction its decks, its kernel by question with deck counts, each other concept with its fit and
+  the real card pair that links it, design markers, extras, partners with how each plays; then every pair of factions),
+  `work/kernel_factions_summary.json` (the numbers that compare two runs), `work/kernel_factions.tsv` (one row per
+  faction: letter, name, what it does, people, kernel, engines, bricks, concepts, extras, design markers, how it wins,
+  the five board answers, partners, the kernel's concepts per question; read by `make_faction.py`, the map and steps
+  7-9) and `work/lists/<letter>.tsv` (rules: `START_DESIGN-1-roster.md` step 6). The identities are `IDENTITIES` in its
+  head (name, what it does, concept-tree headings), the world `WORLD` and the peoples `THEMES` (people, the hidden
+  real-world model, the headings it favours in a tie); all Claude's. It reads `work/deck_scores.json`,
+  `library/cards_db/roster/concept_links.tsv`, `library/concept_tree.txt`, `work/concepts.tsv` and
+  `work/answer_concepts.tsv`.
 - `python3 ../../factions/roster/work/concept_list.py` (from `library/cards_db`) -> `factions/roster/work/lists/<letter>.tsv`
   for every faction of `kernel_factions.tsv`: every concept with 5+ cards except the faction's own concepts, its score
   ((real + 1) / (chance + 1) links with the faction's concepts per game, averaged over the games where both appear), its
@@ -100,5 +96,5 @@ is written in that step's chat, from the rules of the step, and its line here is
 
 ## Step 9. Stop 1
 - Claude -> `factions/roster/answers.tsv`, from the game plan and keywords. `python3 tools/roster_table_check.py`
-  (against each faction's concepts, extras and answers). `python3 factions/roster/work/make_stop1.py` writes `STOP1.md`
-  and `STOP1-1..5.md`.
+  (against each faction's concepts, extras and answers), and a script written at step 9 that writes `STOP1.md` and
+  `STOP1-1..5.md` from `work/kernel_factions.tsv`, the plans and the keywords.

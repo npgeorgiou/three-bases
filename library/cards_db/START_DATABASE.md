@@ -301,6 +301,25 @@ An agent that writes nothing for 30 minutes is stopped (TaskStop) and started ag
 7. An effect on the enemy side takes the enemy concept (moving an enemy = forced_movement; flat.py ON_ENEMY).
 8. Card names are stored without trailing spaces (load.py); look names up the same way.
 9. Links between cards are made only inside one game; questions over several games add up, by concept, what each game shows.
+10. What the roster found wrong on 20 Nov 2026, so an import never makes it again (each has test cases):
+    - A keyword means what it does in its own game: Runeterra's Challenger lets the attacker pick the blocker
+      (target_choice), it forces no attack. Check every keyword's concept against the game's own file (rule 2).
+    - Hatching from an egg is transform (the egg turns into the unit), never summon or revive; the egg left when a unit
+      dies is the summon (Duelyst Rebirth, Monster Train Bog Chrysalis).
+    - Removing a keyword is not having it: a remove_keyword row never takes the removed keyword's concept (Gwent's Seize
+      removing Spying gives nothing to the opponent); on an enemy it is a debuff, on my own unit no concept.
+    - Going back to hand when it dies is return_on_leave, never cheat_death; cheat_death survives or comes back at once.
+    - Hitting the lanes beside its own is adjacency, never cross_lane (several lanes away).
+    - A harm on every unit of a place with no side (Lightbender dispels all around it) hits both sides: putting my own
+      units there is no help.
+    - A drawback given to my own units (Soul Siphon's Emberdrain) is no help; a card that takes keywords from allies
+      (Mechanized Mimic) passes none on.
+    - A link's sides name the exact sentence (row) that makes or needs it; a whole ability only for a trigger, a
+      condition or a cost the other card sets off or pays (Harold Schmidt's push, never his whole "when healed: push").
+    - A link must also record which card acts and which answers; until it does, a card's "when..." part counts for
+      every link its sentence makes (open: `factions/roster/HANDOFF.md`).
+    - Renaming a word across the repo never touches card names ("Captain's Wheel", the Wheels archetype).
+    - `check_all.py` with no game reloads nothing: a change to records, vocab.tsv or flat.py needs `check_all.py <any game>`.
 
 ## Two games at the same time (two chats, one per game)
 Each chat writes only its own game's files (read/, input/, second/, fixes/<game>/, supplement/<game>*, supplement_<game>.py).

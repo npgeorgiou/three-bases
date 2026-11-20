@@ -83,8 +83,8 @@ stompy	Stompy	aggro with cheap units that are big for their cost, made bigger	bo
 stompy	Stompy	aggro with cheap units that are big for their cost, made bigger	keep them alive	brick	protection,shield,immunity	Claude's
 discard_8rack	Discard / 8-Rack	empty the enemy's hand, then punish him for holding few cards	take, see, discard or tax the cards in his hand	engine	hand_disruption,information,steal,cost_increase,mill	Claude's
 discard_8rack	Discard / 8-Rack	empty the enemy's hand, then punish him for holding few cards	punish a small hand	engine	hand_size,condition_count	Claude's
-rosters	Rosters	discard my hand and draw a new one, and cards gain from each draw and discard (hand limit 10)	draw and discard many	engine	draw,discard,hand_size,recycle,generate_cards	Claude's
-rosters	Rosters	discard my hand and draw a new one, and cards gain from each draw and discard (hand limit 10)	gain from draws and discards	engine	on_draw,on_discard,count_payoff,permanent_growth,variable_stats	Claude's
+wheels	Wheels	discard my hand and draw a new one, and cards gain from each draw and discard (hand limit 10)	draw and discard many	engine	draw,discard,hand_size,recycle,generate_cards	Claude's
+wheels	Wheels	discard my hand and draw a new one, and cards gain from each draw and discard (hand limit 10)	gain from draws and discards	engine	on_draw,on_discard,count_payoff,permanent_growth,variable_stats	Claude's
 cycling	Cycling	swap a card I don't want for a new one, and gain from the swap	swap a card for a new one	engine	discard,draw,recycle	Claude's
 cycling	Cycling	swap a card I don't want for a new one, and gain from the swap	gain from the swap	engine	on_discard,on_draw,count_payoff,permanent_growth	Claude's
 pillowfort	Pillowfort	no player to attack: enemies must attack my strong unit, and the attacker pays	enemies must attack this unit	engine	taunt,forced_attack	Claude's

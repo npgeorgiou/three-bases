@@ -33,7 +33,8 @@ Steps 1-6 come from the library, never from memory. Run the queries below on all
 and write the sources (game: card) next to each answer of steps 2, 3, 5 and 6. `ways` and `curve` show what each card
 does; card texts are read only within the faction's 100 (START_DESIGN-3, "Reading cards").
 - Queries for step 1: list the factions of every game (START_DESIGN-3, section 3) and pick the 6-10 closest to the faction's place on the roster (the
-  real factions whose cards hold its concepts most, `factions/roster/work/kernel_factions.md`; not the theme), at least one per board game
+  real factions whose cards hold its concepts most against their game's cards, from `factions` in
+  `factions/roster/work/deck_scores.json`; not the theme), at least one per board game
   (Duelyst, Faeria, Stormbound, Into the Breach, Inscryption); run `curve` on each to see what its cards do.
 - Queries for step 2: `removal <game>` and `protect <game>` for all games, `palette place` and `palette death`: which ways to remove and
   hold exist, and which the other factions of the roster already use (the roster's table).
