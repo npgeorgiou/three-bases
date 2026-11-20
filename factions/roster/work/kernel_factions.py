@@ -42,7 +42,7 @@ ROOT = os.path.join(HERE, '..', '..', '..')
 sys.path.insert(0, HERE)
 import step3_groups
 OWN, KERNEL, MIN_KERNEL, MIN_LEAN, ENGINES, PLAYED, MIN_DECKS = 12, 6, 4, 10, 4, 1.0, 3  # Claude's
-PER_QUESTION, SYN, FULL = 2, 1 / 3, 8  # real kernel: concepts per question (Kaptain), fits with another kernel concept, times chance that scores 1 (Claude's)
+PER_QUESTION, SYN, FULL, DECK_SHARE = 2, 1 / 3, 8, 2  # real kernel: concepts per question (Kaptain), fits with another kernel concept, times chance that scores 1 (Claude's)
 DECK_LIFT, HELD, MAX_SHARE, PARTNERS = 1.5, 0.25, 3, 5                              # Claude's; 5 partners: Kaptain
 EXTRAS, TIE = 10, 0.1                                                                # Claude's (8-12, Kaptain); TIE: Kaptain
 IDENTITIES = [  # (name, what it does, families or concepts of the concept tree); Claude's. Waits and Swarms widened by what their decks hold most
@@ -130,8 +130,15 @@ def deck_lift(ns):
     return out
 def decks_of(cs): return [n for n, d in enumerate(decks) if any(c in d['z'] for c in cs)]
 def kernel_decks(k):
-    """the decks built on at least half of the kernel's concepts"""
-    return [n for n, d in enumerate(decks) if 2 * sum(c in d['z'] for c in k) >= len(k)]
+    """the decks whose cards with the kernel's concepts make up twice the share its game's decks average or more"""
+    k, share = set(k), {}
+    for n, d in enumerate(decks):
+        tot = sum(d['counts'].values())
+        share[n] = sum(v for c, v in d['counts'].items() if c in k) / tot if tot else 0
+    avg = collections.defaultdict(list)
+    for n, d in enumerate(decks): avg[d['game']].append(share[n])
+    avg = {g: sum(v) / len(v) for g, v in avg.items()}
+    return [n for n, d in enumerate(decks) if avg[d['game']] and share[n] >= DECK_SHARE * avg[d['game']]]
 def candidates(fams, name):
     cs = set().union(*(under(f) for f in fams)) & usable
     return {c for c in cs if facet.get(c) not in ('trigger', 'condition') and lean.get(c, 0) >= MIN_LEAN
@@ -315,45 +322,53 @@ def options(q, P, banned):
     single = [o for o in one if len(o) == 1]
     return sorted(one | {a | b for a, b in itertools.combinations(single, 2)}, key=sorted)
 def choose(x, ban):
-    """the real kernel: per question the option whose concepts go best together with the other questions' (cohesion)"""
-    P = set(x['concepts'] + x['extras']); every = set().union(*ban.values())
+    """the real kernel: the core, plus per question the core does not answer the option that goes best with the core and
+    the other answers (cohesion)"""
+    core = set(x['core']); P = set(x['concepts'] + x['extras']) - core
+    have = answers(sorted(core))
     opts = {}
     for q in Q5:
+        if have[q]:
+            opts[q] = [frozenset(c for way, need in ways[q] if way == have[q][0] for alt in need for c in alt if c in core)]
+            continue
         opts[q] = options(q, P, ban[q] | ban['all'])
         if not opts[q]:  # none of its concepts answers it: the best way from its list
             way, take = best_way(x, q, set(), {c: v for c, v in x['score'].items() if c not in ban[q] | ban['all']})
             opts[q] = [frozenset(take)] if take else []
-    cur = {q: (max(o, key=lambda op: (cohesion(op | P), sorted(op))) if o else frozenset()) for q, o in opts.items()}
+    cur = {q: (max(o, key=lambda op: (cohesion(op | core), sorted(op))) if o else frozenset()) for q, o in opts.items()}
     for _ in range(10):
         changed = False
         for q in Q5:
             if not opts[q]: continue
-            rest = set().union(*(cur[r] for r in Q5 if r != q))
+            rest = core | set().union(*(cur[r] for r in Q5 if r != q))
             best = max(opts[q], key=lambda op: (round(cohesion(rest | op), 6), len(op), sorted(op)))
             if best != cur[q]: cur[q], changed = best, True
         if not changed: break
     return cur
 def fits_in(c, k): return sum(fit2(c, o) for o in k if o != c) / max(1, len(k) - 1)
+for x in fac: x['core'] = list(x['kernel'])
+core_of = {x['name']: set(x['core']) for x in fac}
 bans = {x['name']: {q: set() for q in Q5 + ('all',)} for x in fac}
 for _ in range(40):
     cur = {x['name']: choose(x, bans[x['name']]) for x in fac}
-    kern = {n: set().union(*c.values()) for n, c in cur.items()}
+    kern = {x['name']: set(x['core']).union(*cur[x['name']].values()) for x in fac}
     moved = False
     for x in fac:  # (a) every kernel concept goes well with at least one other kernel concept
         k = kern[x['name']]
-        for c in sorted(k):
-            if len(k) > 1 and max(fit2(c, o) for o in k if o != c) < SYN: bans[x['name']]['all'].add(c); moved = True
+        for c in sorted(k - set(x['core'])):
+            if max(fit2(c, o) for o in k if o != c) < SYN: bans[x['name']]['all'].add(c); moved = True
     for q in Q5[:-1]:  # (b) no two factions answer a question with the same concept: it stays where it fits best
         users = collections.defaultdict(list)
         for n, c in cur.items():
-            for k in c[q]: users[k].append(n)
+            for k in c[q] - core_of[n]: users[k].append(n)
         for k, ns in users.items():
             for n in sorted(ns, key=lambda n: (-fits_in(k, kern[n]), n))[1:]: bans[n][q].add(k); moved = True
     count = collections.defaultdict(list)  # (b) no kernel concept in more than MAX_SHARE factions
     for n, k in kern.items():
         for c in k: count[c].append(n)
     for c, ns in count.items():
-        for n in sorted(ns, key=lambda n: (-fits_in(c, kern[n]), n))[MAX_SHARE:]: bans[n]['all'].add(c); moved = True
+        added = sorted((n for n in ns if c not in core_of[n]), key=lambda n: (-fits_in(c, kern[n]), n))
+        for n in added[max(0, MAX_SHARE - (len(ns) - len(added))):]: bans[n]['all'].add(c); moved = True
     if not moved: break
 first = {x['name']: {'kernel': x['kernel'], 'concepts': x['concepts'], 'extras': x['extras']} for x in fac}
 for x in fac:  # second pass: the real kernel, then everything else again
@@ -378,7 +393,7 @@ out = ['# The factions from what they do (made by kernel_factions.py)', '',
        f"Partners: its {PARTNERS} strongest pairs (card links between their concepts, plus 3 per kernel concept the other's decks hold "
        f'{DECK_LIFT:g}x+). A concept more than {MAX_SHARE} factions want at one level goes to the {MAX_SHARE} it fits best.', '']
 for i, x in enumerate(fac):
-    out.append(f"## {x['name']}: {x['does']} ({len(x['decks'])} decks built on half its kernel or more)")
+    out.append(f"## {x['name']}: {x['does']} ({len(x['decks'])} decks with twice their game's share of kernel cards)")
     out.append(f"- Kernel (cohesion {cohesion(x['kernel']):.2f}; first pass {', '.join(plain.get(c, c) for c in x['first']['kernel'])}):")
     for q in Q5:
         out.append(f"  - {QUESTION[q]}: " + (', '.join(f'{plain.get(c, c)} ({lean.get(c, 0)} decks)' for c in sorted(x['by_question'][q])) or '**none**'))

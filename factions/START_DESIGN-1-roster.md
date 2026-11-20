@@ -203,7 +203,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       by kernel links times the share of all its links that go to this kernel (so a concept real cards link to
       everything does not join every faction, nor a rare one with two links); at most 4. Each shows the real card pair
       behind its strongest kernel link.
-   4. **Bricks, from decks**: the kernel's decks are the decks built on at least half of its concepts (Kaptain). The
+   4. **Bricks, from decks**: the kernel's decks are the decks whose cards with any kernel concept make up twice the
+      share its game's decks average or more (8 armour, heal or shield cards where the game's decks average 3). The
       concepts the kernel's decks hold 1.5x+ as often as their game's cards (per game with
       3+ of its decks, averaged), held by a quarter of those decks, with no strong link to the kernel; another
       faction's kernel concept can be one (support: removal for "can't be broken"). Most held first, until about 12
@@ -238,10 +239,11 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       `work/answer_concepts.tsv` its own concepts give, else the way its extras give; what it cares about most is the
       first of the game's own things it has, else the highest-scoring on its list (factions may share it); its blind spot is named at step 9. An answer no way gives is fixed first in (10) with
       another extra; only when its list has no way for it is the identity changed.
-   12. **The real kernel, then a second pass** (Kaptain): from each faction's concepts and extras, per question (removes
-      a front unit, the back row, acts between lanes, holds a base, what it cares about) up to 2 concepts that answer
-      it (one way of two concepts, or two ways of one); a question none of them answers takes the best way from its
-      list. Each faction takes the options whose concepts go best together: two concepts score the higher of how many
+   12. **The real kernel, then a second pass** (Kaptain): the kernel keeps its concepts; for each question they don't
+      answer (removes a front unit, the back row, acts between lanes, holds a base, what it cares about) it takes up to
+      2 of the faction's concepts and extras that answer it (one way of two concepts, or two ways of one); a question
+      none of them answers takes the best way from its list. Each faction takes the options that go best with its
+      kernel: two concepts score the higher of how many
       times chance real cards link them and real decks are built on both (8 times chance or more = 1; a brick has no
       card links, so decks carry it). Every kernel concept goes with another at a third of that or more; no two
       factions answer a question with the same concept (it stays where it fits best; what it cares about may be
