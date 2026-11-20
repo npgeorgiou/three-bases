@@ -71,6 +71,7 @@ When Kaptain agrees a plan or a decision, rewrite every doc it touches in that s
 
 ## Workflow
 - summary/ is the source of truth for rules and UI: never contradict it without telling Kaptain. Never invent rules, stats or mechanics; mark suggestions as Claude's. Design answers never come from general knowledge: every suggested mechanic starts from what the library found, and anything with no library source is marked as Claude's.
+- Before agreeing a new method, measure what it will stand on with the data (how many decks pass a rule, how many concepts can fill a slot) and show Kaptain those numbers with the plan.
 - Before proposing a rebuild, look for the smallest change that gives the same result (e.g. new inputs into the existing network instead of a new kind of network) and propose that first.
 - Never patch. When Kaptain drops or changes something, remove or change it everywhere it appears (code, data, tables, docs, pages; `grep -rn` the repo), remake what is made from it, and check that nothing else moved. Never leave it in with a note that it is dropped, never work around it in one place.
 - Renaming a term across the repo never touches card names or library data: list every hit first and skip those that are names ("Captain's Wheel" is a card).
