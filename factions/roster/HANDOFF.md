@@ -17,14 +17,17 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 9. Stop 1 | to do | |
 
 ## Work for the next chat, in this order
-0. **Random answers in step 6**: Claude's proposal, waiting for Kaptain's go (20 Nov 2026). Cause: how well two
-   concepts go is the higher of card links and decks holding both, and every question must be answered, so one wrong
-   card-link number brings a concept real decks never play with the core (Swarms banish: cards 6x chance, decks 1.7x).
-   - How well two concepts go: the lower of the two, so cards and decks must agree.
-   - A question nothing really fits stays open, marked so, for the design to fill.
-   - Between lanes: no table; each faction's way is one of its core concepts acting in another lane (Swarms: summon
-     in another lane), the ways taken from Marvel Snap cards that act on other locations.
-   - The back row keeps its table.
+0. **Random answers in step 6 and a map with no groups**: tried 20 Nov 2026, waiting for Kaptain's choice.
+   - Cause 1: how well two concepts go is the higher of card links and decks, so one wrong card-link number wins
+     (Swarms banish: cards 5.9x chance, decks 1.7x; send back scored 3.4x and 2.4x and lost).
+   - Cause 2: a deck counts as built around a concept with a single card, so each deck counts for about 10 concepts and
+     deck numbers blur. With 2 cards it is about 4.5, and the map's groups get clearer (group score 0.32 to 0.42).
+   - Tried on the 10 (answers not backed by both cards and decks, of all added): higher of the two 14 of 38; lower 4
+     of 17 (many questions left empty); the middle of the two 5 of 37; lower with 2-card decks 5 of 33.
+   - Games with one faction per deck (Gwent, Duelyst) group no better than Runeterra (two per deck), so more
+     single-faction decks would not help.
+   - Lanes: each faction's way is one of its core concepts acting in another lane, from Marvel Snap cards that act
+     on other locations (Claude's; not tried yet). The back row keeps its table.
 1. **Fix the library errors found on 20 Nov 2026**, each in the library with test cases (`library/cards_db/START_DATABASE.md`,
    "Fixing errors"; a reading budget from Kaptain):
    - A link does not reliably record which of its two cards acts and which answers (`links.sqlite`: a and b). So a
