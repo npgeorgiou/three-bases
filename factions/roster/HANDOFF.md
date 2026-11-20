@@ -41,7 +41,8 @@ One chat does one step; at its end, mark the step done here and say what it left
 - A link counts for two concepts only through what of each card made it (Ghost Rider brings a card back, Vibro-Shock
   Gauntlets give it +2 Power: revive with +2 Power, never revive with supply). Cases: `cases/roster.tsv`.
 - Two concepts you expect to work together show 0 links: check that one pair by script before trusting it.
-- A link seen in one game only can be an accident: of 10 such card pairs read, 8 did not work together.
+- Card pairs that look wrong are library errors: they are read, fixed in the library with test cases, and never
+  filtered out by a rule (the 8 suspect pairs of 20 Nov 2026: 6 library errors, fixed; 2 real).
 
 ## Kaptain's standing decisions
 Only what Kaptain said himself goes here, in his words; Claude's own rules go elsewhere.
